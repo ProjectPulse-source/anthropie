@@ -19,6 +19,17 @@
             color: #1a1a1a;
             min-height: 100vh;
             line-height: 1.6;
+            text-align: justify;
+        }
+        
+        /* Justification du texte pour tous les paragraphes */
+        p, .entry-content p, .thesis, .livre-info p {
+            text-align: justify;
+        }
+        
+        /* Les titres restent centrés */
+        h1, h2, h3, h4, .section-title, .subtitle, .stat-label {
+            text-align: center;
         }
         
         /* Container principal */
@@ -154,6 +165,7 @@
             box-shadow: 0 10px 40px rgba(0,0,0,0.05);
             border: 1px solid rgba(198, 146, 20, 0.15);
             position: relative;
+            text-align: justify;
         }
         
         .thesis::before {
@@ -245,12 +257,14 @@
             font-size: 1.6em;
             margin-bottom: 20px;
             color: #333;
+            text-align: left;
         }
         
         .livre-info p {
             color: #555;
             margin-bottom: 15px;
             line-height: 1.8;
+            text-align: justify;
         }
         
         .livre-stats {
@@ -462,6 +476,7 @@
         .entry-content p {
             margin-bottom: 15px;
             line-height: 1.7;
+            text-align: justify;
         }
         
         .entry-categories {
@@ -640,21 +655,29 @@
         [lang]:not([lang="fr"]) {
             display: none;
         }
+        
+        /* Animation pour la notification */
+        @keyframes fadeInOut {
+            0% { opacity: 0; }
+            20% { opacity: 1; }
+            80% { opacity: 1; }
+            100% { opacity: 0; }
+        }
     </style>
 </head>
 <body>
     <!-- Boutons de partage -->
     <div class="share-buttons">
-        <a href="#" class="share-btn" onclick="shareOnTwitter()" title="Twitter">
+        <a href="#" class="share-btn" onclick="shareOnTwitter(); return false;" title="Twitter">
             <span>𝕏</span>
         </a>
-        <a href="#" class="share-btn" onclick="shareOnFacebook()" title="Facebook">
+        <a href="#" class="share-btn" onclick="shareOnFacebook(); return false;" title="Facebook">
             <span>f</span>
         </a>
-        <a href="#" class="share-btn" onclick="shareOnLinkedIn()" title="LinkedIn">
+        <a href="#" class="share-btn" onclick="shareOnLinkedIn(); return false;" title="LinkedIn">
             <span>in</span>
         </a>
-        <a href="#" class="share-btn" onclick="copyLink()" title="Copier le lien">
+        <a href="#" class="share-btn" onclick="copyLink(); return false;" title="Copier le lien">
             <span>🔗</span>
         </a>
     </div>
@@ -706,7 +729,6 @@
         <section class="livre-section active">
             <div class="livre-content">
                 <div class="livre-image">
-                    <!-- Placeholder pour l'image du livre -->
                     <img src="Couverture_Anthropie.png" alt="Anthropie - Liberté sous contrainte" class="book-cover" style="width: 300px; height: auto; margin: 0 auto; display: block;">
                 </div>
                 <div class="livre-info">
@@ -759,27 +781,27 @@
             </div>
             
             <div style="margin-top: 50px; padding: 30px; background: linear-gradient(135deg, #fafafa 0%, white 100%); border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-left: 4px solid #c69214;">
-                <h3 style="color: #333; margin-bottom: 20px; font-size: 1.3em;">
+                <h3 style="color: #333; margin-bottom: 20px; font-size: 1.3em; text-align: center;">
                     <span lang="fr">Le concept d'Anthropie</span>
                     <span lang="en" style="display:none">The Concept of Anthropie</span>
                     <span lang="es" style="display:none">El concepto de Antropía</span>
                 </h3>
-                <p lang="fr" style="color: #555; margin-bottom: 15px;">
+                <p lang="fr" style="color: #555; margin-bottom: 15px; text-align: justify;">
                     L'anthropie est au social ce que l'entropie est au physique : une mesure du désordre inévitable créé par tout effort d'ordre. Ce livre démontre comment chaque "progrès" de l'histoire humaine n'est qu'un déplacement de coûts — dans l'espace (colonisation), dans le temps (dette écologique), ou entre groupes (inégalités).
                 </p>
-                <p lang="en" style="display:none; color: #555; margin-bottom: 15px;">
+                <p lang="en" style="display:none; color: #555; margin-bottom: 15px; text-align: justify;">
                     Anthropie is to society what entropy is to physics: a measure of the inevitable disorder created by every effort at order. This book demonstrates how each "progress" in human history is merely a displacement of costs — in space (colonization), in time (ecological debt), or between groups (inequalities).
                 </p>
-                <p lang="es" style="display:none; color: #555; margin-bottom: 15px;">
+                <p lang="es" style="display:none; color: #555; margin-bottom: 15px; text-align: justify;">
                     La antropía es a lo social lo que la entropía es a lo físico: una medida del desorden inevitable creado por todo esfuerzo de orden. Este libro demuestra cómo cada "progreso" de la historia humana es solo un desplazamiento de costos — en el espacio (colonización), en el tiempo (deuda ecológica), o entre grupos (desigualdades).
                 </p>
-                <p lang="fr" style="color: #555;">
+                <p lang="fr" style="color: #555; text-align: justify;">
                     Le registre contenu dans ce livre cartographie 200 jalons de cette mécanique implacable, de la première pierre taillée aux algorithmes contemporains, révélant la grammaire secrète de notre civilisation : nous ne résolvons pas les problèmes, nous les déplaçons.
                 </p>
-                <p lang="en" style="display:none; color: #555;">
+                <p lang="en" style="display:none; color: #555; text-align: justify;">
                     The register contained in this book maps 200 milestones of this relentless mechanism, from the first carved stone to contemporary algorithms, revealing the secret grammar of our civilization: we don't solve problems, we displace them.
                 </p>
-                <p lang="es" style="display:none; color: #555;">
+                <p lang="es" style="display:none; color: #555; text-align: justify;">
                     El registro contenido en este libro cartografía 200 hitos de esta mecánica implacable, desde la primera piedra tallada hasta los algoritmos contemporáneos, revelando la gramática secreta de nuestra civilización: no resolvemos los problemas, los desplazamos.
                 </p>
             </div>
@@ -807,14 +829,14 @@
             
             <!-- Filtres par âge -->
             <div class="age-filters">
-                <button class="age-filter-btn active" onclick="filterByAge('all')">Tous</button>
-                <button class="age-filter-btn" onclick="filterByAge('age1')">Âge I</button>
-                <button class="age-filter-btn" onclick="filterByAge('age2')">Âge II</button>
-                <button class="age-filter-btn" onclick="filterByAge('age3')">Âge III</button>
-                <button class="age-filter-btn" onclick="filterByAge('age4')">Âge IV</button>
-                <button class="age-filter-btn" onclick="filterByAge('age5')">Âge V</button>
-                <button class="age-filter-btn" onclick="filterByAge('age6')">Âge VI</button>
-                <button class="age-filter-btn" onclick="filterByAge('age7')">Âge VII</button>
+                <button class="age-filter-btn active" onclick="filterByAge('all', event)">Tous</button>
+                <button class="age-filter-btn" onclick="filterByAge('age1', event)">Âge I</button>
+                <button class="age-filter-btn" onclick="filterByAge('age2', event)">Âge II</button>
+                <button class="age-filter-btn" onclick="filterByAge('age3', event)">Âge III</button>
+                <button class="age-filter-btn" onclick="filterByAge('age4', event)">Âge IV</button>
+                <button class="age-filter-btn" onclick="filterByAge('age5', event)">Âge V</button>
+                <button class="age-filter-btn" onclick="filterByAge('age6', event)">Âge VI</button>
+                <button class="age-filter-btn" onclick="filterByAge('age7', event)">Âge VII</button>
             </div>
             
             <!-- Barre de recherche -->
@@ -1231,7 +1253,7 @@
                 <span lang="en" style="display:none">Contact</span>
                 <span lang="es" style="display:none">Contacto</span>
             </h2>
-            <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <form class="contact-form" action="https://formspree.io/f/mblaprga" method="POST">
                 <div class="form-group">
                     <label class="form-label" for="name">
                         <span lang="fr">Nom</span>
@@ -1303,14 +1325,18 @@
         }
         
         // Filtre par âge
-        function filterByAge(age) {
+        function filterByAge(age, event) {
             const entries = document.querySelectorAll('.entry');
             
             // Mettre à jour les boutons de filtre
             document.querySelectorAll('.age-filter-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
-            event.currentTarget.classList.add('active');
+            
+            // Activer le bouton cliqué
+            if (event && event.target) {
+                event.target.classList.add('active');
+            }
             
             // Filtrer les entrées
             entries.forEach(entry => {
@@ -1426,18 +1452,3 @@
             });
             return false;
         }
-        
-        // Animation CSS pour la notification
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes fadeInOut {
-                0% { opacity: 0; }
-                20% { opacity: 1; }
-                80% { opacity: 1; }
-                100% { opacity: 0; }
-            }
-        `;
-        document.head.appendChild(style);
-    </script>
-</body>
-</html>
