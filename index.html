@@ -1237,7 +1237,7 @@
                 <span lang="en" style="display:none">Contact</span>
                 <span lang="es" style="display:none">Contacto</span>
             </h2>
-            <form class="contact-form" action="https://formspree.io/f/mblaprga" method="POST">
+            <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                 <div class="form-group">
                     <label class="form-label" for="name">
                         <span lang="fr">Nom</span>
@@ -1271,6 +1271,20 @@
     </div>
     
     <script>
+        // Détection automatique de la langue du navigateur
+        window.addEventListener('DOMContentLoaded', function() {
+            const userLang = navigator.language || navigator.userLanguage;
+            let defaultLang = 'fr';
+            
+            if (userLang.startsWith('en')) {
+                defaultLang = 'en';
+            } else if (userLang.startsWith('es')) {
+                defaultLang = 'es';
+            }
+            
+            setLanguage(defaultLang);
+        });
+        
         // Gestion des sections
         function showSection(sectionName) {
             // Masquer toutes les sections
@@ -1285,7 +1299,7 @@
             document.querySelectorAll('.nav-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
-            event.target.classList.add('active');
+            event.currentTarget.classList.add('active');
         }
         
         // Toggle des entrées du registre
@@ -1302,7 +1316,7 @@
             document.querySelectorAll('.age-filter-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
-            event.target.classList.add('active');
+            event.currentTarget.classList.add('active');
             
             // Filtrer les entrées
             entries.forEach(entry => {
@@ -1314,8 +1328,8 @@
             });
         }
         
-        // Système multilingue simple
-        function changeLanguage(lang) {
+        // Fonction pour définir la langue
+        function setLanguage(lang) {
             // Masquer tous les éléments de langue
             document.querySelectorAll('[lang]').forEach(el => {
                 el.style.display = 'none';
@@ -1323,34 +1337,55 @@
             
             // Afficher les éléments de la langue sélectionnée
             document.querySelectorAll('[lang="' + lang + '"]').forEach(el => {
-                el.style.display = el.tagName === 'SPAN' ? 'inline' : 'block';
+                if (el.tagName === 'SPAN') {
+                    el.style.display = 'inline';
+                } else {
+                    el.style.display = 'block';
+                }
             });
             
             // Mettre à jour les boutons de langue
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.remove('active');
+                if (btn.textContent.toLowerCase() === lang || 
+                    (btn.textContent === 'FR' && lang === 'fr') ||
+                    (btn.textContent === 'EN' && lang === 'en') ||
+                    (btn.textContent === 'ES' && lang === 'es')) {
+                    btn.classList.add('active');
+                }
             });
-            event.target.classList.add('active');
             
             // Mettre à jour le placeholder de recherche
             const searchInput = document.querySelector('.search-input');
-            const placeholders = {
-                'fr': 'Rechercher par date, concept ou catégorie...',
-                'en': 'Search by date, concept or category...',
-                'es': 'Buscar por fecha, concepto o categoría...'
-            };
-            searchInput.placeholder = placeholders[lang];
+            if (searchInput) {
+                const placeholders = {
+                    'fr': 'Rechercher par date, concept ou catégorie...',
+                    'en': 'Search by date, concept or category...',
+                    'es': 'Buscar por fecha, concepto o categoría...'
+                };
+                searchInput.placeholder = placeholders[lang];
+            }
+        }
+        
+        // Système multilingue avec clic sur les boutons
+        function changeLanguage(lang) {
+            setLanguage(lang);
         }
         
         // Recherche simple
-        document.querySelector('.search-input').addEventListener('input', function(e) {
-            const searchTerm = e.target.value.toLowerCase();
-            const entries = document.querySelectorAll('.entry');
-            
-            entries.forEach(entry => {
-                const text = entry.textContent.toLowerCase();
-                entry.style.display = text.includes(searchTerm) ? 'block' : 'none';
-            });
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.querySelector('.search-input');
+            if (searchInput) {
+                searchInput.addEventListener('input', function(e) {
+                    const searchTerm = e.target.value.toLowerCase();
+                    const entries = document.querySelectorAll('.entry');
+                    
+                    entries.forEach(entry => {
+                        const text = entry.textContent.toLowerCase();
+                        entry.style.display = text.includes(searchTerm) ? 'block' : 'none';
+                    });
+                });
+            }
         });
         
         // Fonctions de partage
@@ -1358,26 +1393,57 @@
             const url = window.location.href;
             const text = "Découvrez Anthropie : 3,3 millions d'années d'histoire humaine décryptés";
             window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(text), '_blank');
+            return false;
         }
         
         function shareOnFacebook() {
             const url = window.location.href;
             window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url), '_blank');
+            return false;
         }
         
         function shareOnLinkedIn() {
             const url = window.location.href;
             const title = "Anthropie - Liberté sous contrainte";
             window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url), '_blank');
+            return false;
         }
         
         function copyLink() {
             const url = window.location.href;
             navigator.clipboard.writeText(url).then(function() {
-                alert('Lien copié dans le presse-papier !');
+                // Créer une notification plus élégante
+                const notification = document.createElement('div');
+                notification.textContent = 'Lien copié !';
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: #333;
+                    color: white;
+                    padding: 15px 30px;
+                    border-radius: 8px;
+                    z-index: 10000;
+                    animation: fadeInOut 2s;
+                `;
+                document.body.appendChild(notification);
+                setTimeout(() => notification.remove(), 2000);
             });
+            return false;
         }
+        
+        // Animation CSS pour la notification
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeInOut {
+                0% { opacity: 0; }
+                20% { opacity: 1; }
+                80% { opacity: 1; }
+                100% { opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
     </script>
 </body>
-
 </html>
