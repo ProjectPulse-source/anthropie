@@ -651,11 +651,6 @@
             }
         }
         
-        /* Éléments masqués par défaut pour traduction */
-        [lang]:not([lang="fr"]) {
-            display: none;
-        }
-        
         /* Animation pour la notification */
         @keyframes fadeInOut {
             0% { opacity: 0; }
@@ -684,43 +679,43 @@
     
     <!-- Sélecteur de langue -->
     <div class="language-selector">
-        <button class="lang-btn active" onclick="changeLanguage('fr')">FR</button>
-        <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
-        <button class="lang-btn" onclick="changeLanguage('es')">ES</button>
+        <button type="button" class="lang-btn active" onclick="changeLanguage('fr')">FR</button>
+        <button type="button" class="lang-btn" onclick="changeLanguage('en')">EN</button>
+        <button type="button" class="lang-btn" onclick="changeLanguage('es')">ES</button>
     </div>
     
     <div class="container">
         <!-- Header -->
         <header>
             <h1 class="main-title">ANTHROPIE</h1>
-            <p class="subtitle" lang="fr">Tout ordre est une dette</p>
-            <p class="subtitle" lang="en" style="display:none">Freedom Under Constraint</p>
-            <p class="subtitle" lang="es" style="display:none">Libertad bajo restricción</p>
+            <p class="subtitle" data-lang="fr">Tout ordre est une dette</p>
+            <p class="subtitle" data-lang="en" style="display:none">Freedom Under Constraint</p>
+            <p class="subtitle" data-lang="es" style="display:none">Libertad bajo restricción</p>
             
             <div class="thesis">
-                <span lang="fr"><strong>Thèse centrale :</strong> Tout ordre local se paie par un désordre déporté ailleurs : dans l'espace, dans le temps, ou sur d'autres groupes humains. L'histoire n'est donc pas la chronique d'un progrès, mais la mécanique de ce déplacement constant où chaque solution engendre une nouvelle dette, et où le pouvoir se mesure à l'art d'exporter ses coûts sur les autres.</span>
-                <span lang="en" style="display:none"><strong>Central thesis:</strong> Every local order is paid for by displaced costs — in space, time, between groups. This register maps 3.3 million years of displacements.</span>
-                <span lang="es" style="display:none"><strong>Tesis central:</strong> Todo orden local se paga con costos desplazados — en el espacio, el tiempo, entre grupos. Este registro cartografía 3,3 millones de años de desplazamientos.</span>
+                <span data-lang="fr"><strong>Thèse centrale :</strong> Tout ordre local se paie par un désordre déporté ailleurs : dans l'espace, dans le temps, ou sur d'autres groupes humains. L'histoire n'est donc pas la chronique d'un progrès, mais la mécanique de ce déplacement constant où chaque solution engendre une nouvelle dette, et où le pouvoir se mesure à l'art d'exporter ses coûts sur les autres.</span>
+                <span data-lang="en" style="display:none"><strong>Central thesis:</strong> Every local order is paid for by displaced costs — in space, time, between groups. This register maps 3.3 million years of displacements.</span>
+                <span data-lang="es" style="display:none"><strong>Tesis central:</strong> Todo orden local se paga con costos desplazados — en el espacio, el tiempo, entre grupos. Este registro cartografía 3,3 millones de años de desplazamientos.</span>
             </div>
         </header>
         
         <!-- Navigation -->
         <nav class="nav-section">
             <div class="nav-buttons">
-                <button class="nav-btn active" onclick="showSection('livre')">
-                    <span lang="fr">Le Livre</span>
-                    <span lang="en" style="display:none">The Book</span>
-                    <span lang="es" style="display:none">El Libro</span>
+                <button type="button" class="nav-btn active" onclick="showSection('livre', this)">
+                    <span data-lang="fr">Le Livre</span>
+                    <span data-lang="en" style="display:none">The Book</span>
+                    <span data-lang="es" style="display:none">El Libro</span>
                 </button>
-                <button class="nav-btn" onclick="showSection('registre')">
-                    <span lang="fr">Registre</span>
-                    <span lang="en" style="display:none">Register</span>
-                    <span lang="es" style="display:none">Registro</span>
+                <button type="button" class="nav-btn" onclick="showSection('registre', this)">
+                    <span data-lang="fr">Registre</span>
+                    <span data-lang="en" style="display:none">Register</span>
+                    <span data-lang="es" style="display:none">Registro</span>
                 </button>
-                <button class="nav-btn" onclick="showSection('contact')">
-                    <span lang="fr">Contact</span>
-                    <span lang="en" style="display:none">Contact</span>
-                    <span lang="es" style="display:none">Contacto</span>
+                <button type="button" class="nav-btn" onclick="showSection('contact', this)">
+                    <span data-lang="fr">Contact</span>
+                    <span data-lang="en" style="display:none">Contact</span>
+                    <span data-lang="es" style="display:none">Contacto</span>
                 </button>
             </div>
         </nav>
@@ -732,88 +727,88 @@
                     <img src="Couverture_Anthropie.png" alt="Anthropie - Liberté sous contrainte" class="book-cover" style="width: 300px; height: auto; margin: 0 auto; display: block;">
                 </div>
                 <div class="livre-info">
-                    <h3 lang="fr">Un voyage de 3,3 millions d'années</h3>
-                    <h3 lang="en" style="display:none">A 3.3 Million Year Journey</h3>
-                    <h3 lang="es" style="display:none">Un viaje de 3,3 millones de años</h3>
+                    <h3 data-lang="fr">Un voyage de 3,3 millions d'années</h3>
+                    <h3 data-lang="en" style="display:none">A 3.3 Million Year Journey</h3>
+                    <h3 data-lang="es" style="display:none">Un viaje de 3,3 millones de años</h3>
                     
-                    <p lang="fr">De la première pierre taillée aux algorithmes contemporains, <strong>Anthropie</strong> dévoile le mécanisme immuable de l'histoire humaine : nous ne créons pas l'ordre, nous déplaçons le désordre.</p>
-                    <p lang="en" style="display:none">From the first carved stone to contemporary algorithms, <strong>Anthropie</strong> reveals the immutable mechanism of human history: we don't create order, we displace disorder.</p>
-                    <p lang="es" style="display:none">Desde la primera piedra tallada hasta los algoritmos contemporáneos, <strong>Anthropie</strong> revela el mecanismo inmutable de la historia humana: no creamos orden, desplazamos el desorden.</p>
+                    <p data-lang="fr">De la première pierre taillée aux algorithmes contemporains, <strong>Anthropie</strong> dévoile le mécanisme immuable de l'histoire humaine : nous ne créons pas l'ordre, nous déplaçons le désordre.</p>
+                    <p data-lang="en" style="display:none">From the first carved stone to contemporary algorithms, <strong>Anthropie</strong> reveals the immutable mechanism of human history: we don't create order, we displace disorder.</p>
+                    <p data-lang="es" style="display:none">Desde la primera piedra tallada hasta los algoritmos contemporáneos, <strong>Anthropie</strong> revela el mecanismo inmutable de la historia humana: no creamos orden, desplazamos el desorden.</p>
                     
-                    <p lang="fr">Sept âges, 200 jalons historiques, une seule logique : chaque liberté cache une contrainte, chaque progrès exporte son coût.</p>
-                    <p lang="en" style="display:none">Seven ages, 200 historical milestones, one logic: every freedom hides a constraint, every progress exports its cost.</p>
-                    <p lang="es" style="display:none">Siete edades, 200 hitos históricos, una sola lógica: cada libertad oculta una restricción, cada progreso exporta su costo.</p>
+                    <p data-lang="fr">Sept âges, 200 jalons historiques, une seule logique : chaque liberté cache une contrainte, chaque progrès exporte son coût.</p>
+                    <p data-lang="en" style="display:none">Seven ages, 200 historical milestones, one logic: every freedom hides a constraint, every progress exports its cost.</p>
+                    <p data-lang="es" style="display:none">Siete edades, 200 hitos históricos, una sola lógica: cada libertad oculta una restricción, cada progreso exporta su costo.</p>
                 </div>
             </div>
             
             <div class="livre-stats">
                 <div class="stat">
                     <div class="stat-number">630</div>
-                    <div class="stat-label" lang="fr">Pages</div>
-                    <div class="stat-label" lang="en" style="display:none">Pages</div>
-                    <div class="stat-label" lang="es" style="display:none">Páginas</div>
+                    <div class="stat-label" data-lang="fr">Pages</div>
+                    <div class="stat-label" data-lang="en" style="display:none">Pages</div>
+                    <div class="stat-label" data-lang="es" style="display:none">Páginas</div>
                 </div>
                 <div class="stat">
                     <div class="stat-number">7</div>
-                    <div class="stat-label" lang="fr">Âges</div>
-                    <div class="stat-label" lang="en" style="display:none">Ages</div>
-                    <div class="stat-label" lang="es" style="display:none">Edades</div>
+                    <div class="stat-label" data-lang="fr">Âges</div>
+                    <div class="stat-label" data-lang="en" style="display:none">Ages</div>
+                    <div class="stat-label" data-lang="es" style="display:none">Edades</div>
                 </div>
                 <div class="stat">
                     <div class="stat-number">200+</div>
-                    <div class="stat-label" lang="fr">Entrées</div>
-                    <div class="stat-label" lang="en" style="display:none">Entries</div>
-                    <div class="stat-label" lang="es" style="display:none">Entradas</div>
+                    <div class="stat-label" data-lang="fr">Entrées</div>
+                    <div class="stat-label" data-lang="en" style="display:none">Entries</div>
+                    <div class="stat-label" data-lang="es" style="display:none">Entradas</div>
                 </div>
             </div>
             
             <div class="purchase-buttons">
                 <a href="#" class="purchase-btn">
-                    <span lang="fr">Commander le livre</span>
-                    <span lang="en" style="display:none">Order the book</span>
-                    <span lang="es" style="display:none">Pedir el libro</span>
+                    <span data-lang="fr">Commander le livre</span>
+                    <span data-lang="en" style="display:none">Order the book</span>
+                    <span data-lang="es" style="display:none">Pedir el libro</span>
                 </a>
                 <a href="#" class="purchase-btn secondary">
-                    <span lang="fr">Version ebook</span>
-                    <span lang="en" style="display:none">Ebook version</span>
-                    <span lang="es" style="display:none">Versión ebook</span>
+                    <span data-lang="fr">Version ebook</span>
+                    <span data-lang="en" style="display:none">Ebook version</span>
+                    <span data-lang="es" style="display:none">Versión ebook</span>
                 </a>
             </div>
             
             <div style="margin-top: 50px; padding: 30px; background: linear-gradient(135deg, #fafafa 0%, white 100%); border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-left: 4px solid #c69214;">
                 <h3 style="color: #333; margin-bottom: 20px; font-size: 1.3em; text-align: center;">
-                    <span lang="fr">Le concept d'Anthropie</span>
-                    <span lang="en" style="display:none">The Concept of Anthropie</span>
-                    <span lang="es" style="display:none">El concepto de Antropía</span>
+                    <span data-lang="fr">Le concept d'Anthropie</span>
+                    <span data-lang="en" style="display:none">The Concept of Anthropie</span>
+                    <span data-lang="es" style="display:none">El concepto de Antropía</span>
                 </h3>
-                <p lang="fr" style="color: #555; margin-bottom: 15px; text-align: justify;">
+                <p data-lang="fr" style="color: #555; margin-bottom: 15px; text-align: justify;">
                     L'anthropie est au social ce que l'entropie est au physique : une mesure du désordre inévitable créé par tout effort d'ordre. Ce livre démontre comment chaque "progrès" de l'histoire humaine n'est qu'un déplacement de coûts — dans l'espace (colonisation), dans le temps (dette écologique), ou entre groupes (inégalités).
                 </p>
-                <p lang="en" style="display:none; color: #555; margin-bottom: 15px; text-align: justify;">
+                <p data-lang="en" style="display:none; color: #555; margin-bottom: 15px; text-align: justify;">
                     Anthropie is to society what entropy is to physics: a measure of the inevitable disorder created by every effort at order. This book demonstrates how each "progress" in human history is merely a displacement of costs — in space (colonization), in time (ecological debt), or between groups (inequalities).
                 </p>
-                <p lang="es" style="display:none; color: #555; margin-bottom: 15px; text-align: justify;">
+                <p data-lang="es" style="display:none; color: #555; margin-bottom: 15px; text-align: justify;">
                     La antropía es a lo social lo que la entropía es a lo físico: una medida del desorden inevitable creado por todo esfuerzo de orden. Este libro demuestra cómo cada "progreso" de la historia humana es solo un desplazamiento de costos — en el espacio (colonización), en el tiempo (deuda ecológica), o entre grupos (desigualdades).
                 </p>
-                <p lang="fr" style="color: #555; text-align: justify;">
+                <p data-lang="fr" style="color: #555; text-align: justify;">
                     Le registre contenu dans ce livre cartographie 200 jalons de cette mécanique implacable, de la première pierre taillée aux algorithmes contemporains, révélant la grammaire secrète de notre civilisation : nous ne résolvons pas les problèmes, nous les déplaçons.
                 </p>
-                <p lang="en" style="display:none; color: #555; text-align: justify;">
+                <p data-lang="en" style="display:none; color: #555; text-align: justify;">
                     The register contained in this book maps 200 milestones of this relentless mechanism, from the first carved stone to contemporary algorithms, revealing the secret grammar of our civilization: we don't solve problems, we displace them.
                 </p>
-                <p lang="es" style="display:none; color: #555; text-align: justify;">
+                <p data-lang="es" style="display:none; color: #555; text-align: justify;">
                     El registro contenido en este libro cartografía 200 hitos de esta mecánica implacable, desde la primera piedra tallada hasta los algoritmos contemporáneos, revelando la gramática secreta de nuestra civilización: no resolvemos los problemas, los desplazamos.
                 </p>
             </div>
             
             <div style="margin-top: 40px; padding: 20px; background: #f8f8f8; border-radius: 8px; border-left: 3px solid #c69214;">
-                <p lang="fr" style="color: #666; text-align: center;">
+                <p data-lang="fr" style="color: #666; text-align: center;">
                     <strong>Bientôt disponible :</strong> Traductions en anglais et espagnol
                 </p>
-                <p lang="en" style="display:none; color: #666; text-align: center;">
+                <p data-lang="en" style="display:none; color: #666; text-align: center;">
                     <strong>Coming soon:</strong> English translation available
                 </p>
-                <p lang="es" style="display:none; color: #666; text-align: center;">
+                <p data-lang="es" style="display:none; color: #666; text-align: center;">
                     <strong>Próximamente:</strong> Traducción al español disponible
                 </p>
             </div>
@@ -822,36 +817,36 @@
         <!-- Section Registre -->
         <section class="registre-section">
             <h2 class="section-title">
-                <span lang="fr">Explorer le Registre</span>
-                <span lang="en" style="display:none">Explore the Register</span>
-                <span lang="es" style="display:none">Explorar el Registro</span>
+                <span data-lang="fr">Explorer le Registre</span>
+                <span data-lang="en" style="display:none">Explore the Register</span>
+                <span data-lang="es" style="display:none">Explorar el Registro</span>
             </h2>
             
             <!-- Filtres par âge -->
             <div class="age-filters">
-                <button class="age-filter-btn active" onclick="filterByAge('all', event)">Tous</button>
-                <button class="age-filter-btn" onclick="filterByAge('age1', event)">Âge I</button>
-                <button class="age-filter-btn" onclick="filterByAge('age2', event)">Âge II</button>
-                <button class="age-filter-btn" onclick="filterByAge('age3', event)">Âge III</button>
-                <button class="age-filter-btn" onclick="filterByAge('age4', event)">Âge IV</button>
-                <button class="age-filter-btn" onclick="filterByAge('age5', event)">Âge V</button>
-                <button class="age-filter-btn" onclick="filterByAge('age6', event)">Âge VI</button>
-                <button class="age-filter-btn" onclick="filterByAge('age7', event)">Âge VII</button>
+                <button type="button" class="age-filter-btn active" onclick="filterByAge('all', event)">Tous</button>
+                <button type="button" class="age-filter-btn" onclick="filterByAge('age1', event)">Âge I</button>
+                <button type="button" class="age-filter-btn" onclick="filterByAge('age2', event)">Âge II</button>
+                <button type="button" class="age-filter-btn" onclick="filterByAge('age3', event)">Âge III</button>
+                <button type="button" class="age-filter-btn" onclick="filterByAge('age4', event)">Âge IV</button>
+                <button type="button" class="age-filter-btn" onclick="filterByAge('age5', event)">Âge V</button>
+                <button type="button" class="age-filter-btn" onclick="filterByAge('age6', event)">Âge VI</button>
+                <button type="button" class="age-filter-btn" onclick="filterByAge('age7', event)">Âge VII</button>
             </div>
             
             <!-- Barre de recherche -->
             <div class="search-box">
-                <input type="text" class="search-input" placeholder="Rechercher par date, concept ou catégorie..." lang="fr">
+                <input type="text" class="search-input" placeholder="Rechercher par date, concept ou catégorie..." data-lang="fr">
             </div>
             
-            <!-- Entrées du registre -->
+            <!-- Entrées du registre (échantillon) -->
             <div id="entries-container">
                 <!-- PREMIER ÂGE -->
                 <div class="entry" data-age="age1">
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">≈ -3 300 000</span>
-                            <span class="entry-name" lang="fr">Premiers outils — mémoire externe</span>
+                            <span class="entry-name" data-lang="fr">Premiers outils — mémoire externe</span>
                         </div>
                         <span class="entry-toggle">▼</span>
                     </div>
@@ -868,7 +863,7 @@
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">≈ -1 500 000</span>
-                            <span class="entry-name" lang="fr">Feu — voler la foudre, allumer le monde</span>
+                            <span class="entry-name" data-lang="fr">Feu — voler la foudre, allumer le monde</span>
                         </div>
                         <span class="entry-toggle">▼</span>
                     </div>
@@ -880,385 +875,25 @@
                         <div class="entry-categories">(Énergétique, Social, Écologique)</div>
                     </div>
                 </div>
-
-                <div class="entry" data-age="age1">
-                    <div class="entry-header" onclick="toggleEntry(this)">
-                        <div class="entry-title">
-                            <span class="entry-date">≈ -400 000</span>
-                            <span class="entry-name" lang="fr">Langage — le souffle fait monde</span>
-                        </div>
-                        <span class="entry-toggle">▼</span>
-                    </div>
-                    <div class="entry-content">
-                        <h4>Ordre créé</h4>
-                        <p>Coordination sociale à grande échelle, transmission de savoirs complexes, capacité à penser l'abstrait (passé, futur, hypothèses).</p>
-                        <h4>Dette déportée</h4>
-                        <p>Coût d'entretien des conventions (grammaire) ; enfermement dans des catégories de pensée ; exclusion par le verbe (tabous).</p>
-                        <div class="entry-categories">(Cognitif, Social, Symbolique)</div>
-                    </div>
-                </div>
-
-                <!-- DEUXIEME ÂGE -->
-                <div class="entry" data-age="age2">
-                    <div class="entry-header" onclick="toggleEntry(this)">
-                        <div class="entry-title">
-                            <span class="entry-date">≈ -10 000</span>
-                            <span class="entry-name" lang="fr">Néolithique — le piège civilisationnel</span>
-                        </div>
-                        <span class="entry-toggle">▼</span>
-                    </div>
-                    <div class="entry-content">
-                        <h4>Ordre créé</h4>
-                        <p>Sécurité alimentaire par le surplus, sédentarisation, explosion démographique.</p>
-                        <h4>Dette déportée</h4>
-                        <p>Asservissement à la terre et au labeur ; hiérarchies sociales fondées sur le stockage ; dette agricole envers les sols et le climat.</p>
-                        <div class="entry-categories">(Social, Écologique, Économique)</div>
-                    </div>
-                </div>
-
-                <div class="entry" data-age="age2">
-                    <div class="entry-header" onclick="toggleEntry(this)">
-                        <div class="entry-title">
-                            <span class="entry-date">≈ -3 200</span>
-                            <span class="entry-name" lang="fr">Cunéiforme — graver pour durer</span>
-                        </div>
-                        <span class="entry-toggle">▼</span>
-                    </div>
-                    <div class="entry-content">
-                        <h4>Ordre créé</h4>
-                        <p>Mémoire administrative infaillible, loi écrite, comptabilité de l'État garantissant les contrats.</p>
-                        <h4>Dette déportée</h4>
-                        <p>Création d'une caste de scribes ; exclusion des illettrés ; rigidification des normes sociales et perte de flexibilité.</p>
-                        <div class="entry-categories">(Cognitif, Social, Politique)</div>
-                    </div>
-                </div>
-
-                <!-- TROISIEME ÂGE -->
-                <div class="entry" data-age="age3">
-                    <div class="entry-header" onclick="toggleEntry(this)">
-                        <div class="entry-title">
-                            <span class="entry-date">≈ -776</span>
-                            <span class="entry-name" lang="fr">Olympie — la guerre jouée pour ne plus la faire</span>
-                        </div>
-                        <span class="entry-toggle">▼</span>
-                    </div>
-                    <div class="entry-content">
-                        <h4>Ordre créé</h4>
-                        <p>Sublimation du conflit en compétition réglée ; trêve sacrée permettant la circulation panehellénique.</p>
-                        <h4>Dette déportée</h4>
-                        <p>Coût des infrastructures et des sacrifices rituels ; exclusion structurelle (femmes, « barbares ») ; dette physique sur les corps des athlètes.</p>
-                        <div class="entry-categories">(Social, Politique, Économique)</div>
-                    </div>
-                </div>
-
-                <div class="entry" data-age="age3">
-                    <div class="entry-header" onclick="toggleEntry(this)">
-                        <div class="entry-title">
-                            <span class="entry-date">≈ -508</span>
-                            <span class="entry-name" lang="fr">Démocratie — le pouvoir de tous, la peur de chacun</span>
-                        </div>
-                        <span class="entry-toggle">▼</span>
-                    </div>
-                    <div class="entry-content">
-                        <h4>Ordre créé</h4>
-                        <p>Pouvoir partagé entre citoyens par la loi commune (isonomie), le tirage au sort et la délibération publique.</p>
-                        <h4>Dette déportée</h4>
-                        <p>Exclusion structurelle des femmes, métèques et esclaves ; financement de la citoyenneté par l'empire (tributs) et le travail servile (mines du Laurion).</p>
-                        <div class="entry-categories">(Politique, Social, Inégalités)</div>
-                    </div>
-                </div>
-
-                <div class="entry" data-age="age3">
-                    <div class="entry-header" onclick="toggleEntry(this)">
-                        <div class="entry-title">
-                            <span class="entry-date">≈ -399</span>
-                            <span class="entry-name" lang="fr">Socrate — le doute en service public</span>
-                        </div>
-                        <span class="entry-toggle">▼</span>
-                    </div>
-                    <div class="entry-content">
-                        <h4>Ordre créé</h4>
-                        <p>Hygiène civique par la mise à l'épreuve systématique des savoirs apparents ; la cohérence devient le critère du discours juste.</p>
-                        <h4>Dette déportée</h4>
-                        <p>Friction sociale constante, coût en temps pour la cité ; la dette ultime est payée par sa propre vie pour préserver l'intégrité de la loi.</p>
-                        <div class="entry-categories">(Cognitif, Politique, Moral)</div>
-                    </div>
-                </div>
-
-                <!-- QUATRIEME ÂGE -->
-                <div class="entry" data-age="age4">
-                    <div class="entry-header" onclick="toggleEntry(this)">
-                        <div class="entry-title">
-                            <span class="entry-date">632</span>
-                            <span class="entry-name" lang="fr">Coran — l'algorithme de la transcendance</span>
-                        </div>
-                        <span class="entry-toggle">▼</span>
-                    </div>
-                    <div class="entry-content">
-                        <h4>Ordre créé</h4>
-                        <p>Protocole social et spirituel unifié (prières, zakāt) qui synchronise un réseau décentralisé de croyants et crée une communauté (Umma).</p>
-                        <h4>Dette déportée</h4>
-                        <p>Coût de l'établissement d'un consensus (standardisation par ʿUthmān) qui déplace le conflit vers la politique (schismes) ; coût de la conformité pour la société (temps, ressources).</p>
-                        <div class="entry-categories">(Symbolique, Social, Politique)</div>
-                    </div>
-                </div>
-
-                <div class="entry" data-age="age4">
-                    <div class="entry-header" onclick="toggleEntry(this)">
-                        <div class="entry-title">
-                            <span class="entry-date">1215</span>
-                            <span class="entry-name" lang="fr">Magna Carta — la couronne sous contrat</span>
-                        </div>
-                        <span class="entry-toggle">▼</span>
-                    </div>
-                    <div class="entry-content">
-                        <h4>Ordre créé</h4>
-                        <p>Limitation du pouvoir royal par un contrat écrit, instaurant la prévisibilité de la loi (due process) et un droit de résistance.</p>
-                        <h4>Dette déportée</h4>
-                        <p>Coût d'un appareil judiciaire permanent ; friction procédurale comme nouvelle forme de conflit ; la paix interne se paie parfois d'une violence exportée aux marges.</p>
-                        <div class="entry-categories">(Juridique, Politique, Social)</div>
-                    </div>
-                </div>
-
-                <div class="entry" data-age="age4">
-                    <div class="entry-header" onclick="toggleEntry(this)">
-                        <div class="entry-title">
-                            <span class="entry-date">1492</span>
-                            <span class="entry-name" lang="fr">Nouveaux mondes — découvrir, compter, conquérir</span>
-                        </div>
-                        <span class="entry-toggle">▼</span>
-                    </div>
-                    <div class="entry-content">
-                        <h4>Ordre créé</h4>
-                        <p>Unification planétaire, création d'un système-monde euro-centré par la cartographie, la comptabilité et la puissance militaire.</p>
-                        <h4>Dette déportée</h4>
-                        <p>Destruction des civilisations amérindiennes, traite négrière, pillage des ressources ; dette humaine, écologique et morale abyssale.</p>
-                        <div class="entry-categories">(Spatial, Économique, Violence symbolique)</div>
-                    </div>
-                </div>
-
-                <!-- CINQUIEME ÂGE -->
-                <div class="entry" data-age="age5">
-                    <div class="entry-header" onclick="toggleEntry(this)">
-                        <div class="entry-title">
-                            <span class="entry-date">1517</span>
-                            <span class="entry-name" lang="fr">Luther — la blockchain de la conscience</span>
-                        </div>
-                        <span class="entry-toggle">▼</span>
-                    </div>
-                    <div class="entry-content">
-                        <h4>Ordre créé</h4>
-                        <p>Décentralisation de l'accès au salut (sola fide, sola scriptura), la conscience individuelle devenant le validateur de la foi, sans intermédiaire ecclésial.</p>
-                        <h4>Dette déportée</h4>
-                        <p>Fragmentation de la chrétienté, guerres de religion ; le coût de l'ordre confessionnel est payé en conflits armés et en divisions politiques durables.</p>
-                        <div class="entry-categories">(Symbolique, Politique, Social)</div>
-                    </div>
-                </div>
-
-                <div class="entry" data-age="age5">
-                    <div class="entry-header" onclick="toggleEntry(this)">
-                        <div class="entry-title">
-                            <span class="entry-date">1637</span>
-                            <span class="entry-name" lang="fr">Descartes — doute fondateur, certitude abyssale</span>
-                        </div>
-                        <span class="entry-toggle">▼</span>
-                    </div>
-                    <div class="entry-content">
-                        <h4>Ordre créé</h4>
-                        <p>Un protocole d'audit de la pensée (Discours de la méthode) qui fonde la certitude sur l'évidence individuelle (cogito) et non sur l'autorité extérieure.</p>
-                        <h4>Dette déportée</h4>
-                        <p>Fracture entre l'âme et le corps (res cogitans/extensa), reléguant le sensible ; dette ontologique et médicale qui traitera le corps comme une machine.</p>
-                        <div class="entry-categories">(Philosophique, Cognitif, Social)</div>
-                    </div>
-                </div>
-
-                <div class="entry" data-age="age5">
-                    <div class="entry-header" onclick="toggleEntry(this)">
-                        <div class="entry-title">
-                            <span class="entry-date">1776</span>
-                            <span class="entry-name" lang="fr">Adam Smith — la main invisible guide aveugle</span>
-                        </div>
-                        <span class="entry-toggle">▼</span>
-                    </div>
-                    <div class="entry-content">
-                        <h4>Ordre créé</h4>
-                        <p>Coordination des intérêts égoïstes par le mécanisme anonyme du marché, produisant la richesse par la division du travail.</p>
-                        <h4>Dette déportée</h4>
-                        <p>Abrutissement et aliénation de l'ouvrier spécialisé ; externalisation des coûts sociaux et écologiques que le prix n'intègre pas.</p>
-                        <div class="entry-categories">(Économique, Social, Cognitif)</div>
-                    </div>
-                </div>
-
-                <!-- SIXIEME ÂGE -->
-                <div class="entry" data-age="age6">
-                    <div class="entry-header" onclick="toggleEntry(this)">
-                        <div class="entry-title">
-                            <span class="entry-date">1789</span>
-                            <span class="entry-name" lang="fr">Révolution — le théâtre qui dévore ses acteurs</span>
-                        </div>
-                        <span class="entry-toggle">▼</span>
-                    </div>
-                    <div class="entry-content">
-                        <h4>Ordre créé</h4>
-                        <p>Souveraineté nationale, égalité civile proclamée et invention d'une politique-spectacle où le peuple devient acteur public.</p>
-                        <h4>Dette déportée</h4>
-                        <p>Instabilité institutionnelle chronique ; la Terreur et les guerres civiles comme coût de la refondation ; la violence devient l'arbitre du débat politique.</p>
-                        <div class="entry-categories">(Politique, Social, Violence symbolique)</div>
-                    </div>
-                </div>
-
-                <div class="entry" data-age="age6">
-                    <div class="entry-header" onclick="toggleEntry(this)">
-                        <div class="entry-title">
-                            <span class="entry-date">1859</span>
-                            <span class="entry-name" lang="fr">Darwin — le hasard qui ordonne</span>
-                        </div>
-                        <span class="entry-toggle">▼</span>
-                    </div>
-                    <div class="entry-content">
-                        <h4>Ordre créé</h4>
-                        <p>Explication matérialiste et unifiée de la diversité du vivant par la sélection naturelle.</p>
-                        <h4>Dette déportée</h4>
-                        <p>Fin du dessein divin et de la place centrale de l'homme ; instrumentalisation en "darwinisme social" pour justifier les inégalités et l'impérialisme.</p>
-                        <div class="entry-categories">(Philosophique, Moral, Violence symbolique)</div>
-                    </div>
-                </div>
-
-                <div class="entry" data-age="age6">
-                    <div class="entry-header" onclick="toggleEntry(this)">
-                        <div class="entry-title">
-                            <span class="entry-date">1882</span>
-                            <span class="entry-name" lang="fr">L'Électricité — la dette de lumière</span>
-                        </div>
-                        <span class="entry-toggle">▼</span>
-                    </div>
-                    <div class="entry-content">
-                        <h4>Ordre créé</h4>
-                        <p>Repoussement de la nuit, création d'un réseau nerveux planétaire, synchronisation du temps et des activités.</p>
-                        <h4>Dette déportée</h4>
-                        <p>Dette envers la nature (extraction, pollution), les générations futures (maintenance, déchets) et la physique (pertes systémiques).</p>
-                        <div class="entry-categories">(Énergétique, Écologique, Temporel)</div>
-                    </div>
-                </div>
-
-                <!-- SEPTIEME ÂGE -->
-                <div class="entry" data-age="age7">
-                    <div class="entry-header" onclick="toggleEntry(this)">
-                        <div class="entry-title">
-                            <span class="entry-date">1945</span>
-                            <span class="entry-name" lang="fr">Hiroshima/Nagasaki — création contre créateur</span>
-                        </div>
-                        <span class="entry-toggle">▼</span>
-                    </div>
-                    <div class="entry-content">
-                        <h4>Ordre créé</h4>
-                        <p>Fin accélérée de la guerre, instauration d'un ordre de dissuasion nucléaire (la "paix" par la terreur).</p>
-                        <h4>Dette déportée</h4>
-                        <p>Dette humaine et écologique sur les villes détruites ; dette morale et psychique d'une humanité capable de s'auto-anéantir.</p>
-                        <div class="entry-categories">(Technique, Politique, Moral)</div>
-                    </div>
-                </div>
-
-                <div class="entry" data-age="age7">
-                    <div class="entry-header" onclick="toggleEntry(this)">
-                        <div class="entry-title">
-                            <span class="entry-date">1969</span>
-                            <span class="entry-name" lang="fr">Apollo 11 — l'humanité hors d'elle-même</span>
-                        </div>
-                        <span class="entry-toggle">▼</span>
-                    </div>
-                    <div class="entry-content">
-                        <h4>Ordre créé</h4>
-                        <p>Prouesse technique et symbolique absolue, démonstration de la puissance humaine.</p>
-                        <h4>Dette déportée</h4>
-                        <p>Coût financier colossal qui déplace les priorités terrestres (social, pauvreté) ; dette écologique de la course à l'espace (débris).</p>
-                        <div class="entry-categories">(Technique, Symbolique, Économique)</div>
-                    </div>
-                </div>
-
-                <div class="entry" data-age="age7">
-                    <div class="entry-header" onclick="toggleEntry(this)">
-                        <div class="entry-title">
-                            <span class="entry-date">1991</span>
-                            <span class="entry-name" lang="fr">Internet — le centre partout, nulle part</span>
-                        </div>
-                        <span class="entry-toggle">▼</span>
-                    </div>
-                    <div class="entry-content">
-                        <h4>Ordre créé</h4>
-                        <p>Connexion planétaire, accès décentralisé à l'information.</p>
-                        <h4>Dette déportée</h4>
-                        <p>Fragmentation cognitive (surcharge), surveillance généralisée ; l'ordre de la connexion déplace le désordre vers l'attention et la vie privée.</p>
-                        <div class="entry-categories">(Technique, Cognitif, Social)</div>
-                    </div>
-                </div>
-
-                <div class="entry" data-age="age7">
-                    <div class="entry-header" onclick="toggleEntry(this)">
-                        <div class="entry-title">
-                            <span class="entry-date">2000</span>
-                            <span class="entry-name" lang="fr">Anthropocène — la puissance qui suicide</span>
-                        </div>
-                        <span class="entry-toggle">▼</span>
-                    </div>
-                    <div class="entry-content">
-                        <h4>Ordre créé</h4>
-                        <p>Une puissance humaine devenue force géologique, capable de modeler la planète.</p>
-                        <h4>Dette déportée</h4>
-                        <p>La dette est totale : climatique, écologique, biosphérique ; l'ordre industriel déplace le désordre sur l'ensemble du système-Terre, menaçant sa propre survie.</p>
-                        <div class="entry-categories">(Écologique, Énergétique, Global)</div>
-                    </div>
-                </div>
-
-                <div class="entry" data-age="age7">
-                    <div class="entry-header" onclick="toggleEntry(this)">
-                        <div class="entry-title">
-                            <span class="entry-date">2009</span>
-                            <span class="entry-name" lang="fr">Bitcoin — la confiance change d'adresse</span>
-                        </div>
-                        <span class="entry-toggle">▼</span>
-                    </div>
-                    <div class="entry-content">
-                        <h4>Ordre créé</h4>
-                        <p>Réseau de confiance décentralisé, sans intermédiaire, fondé sur une règle algorithmique.</p>
-                        <h4>Dette déportée</h4>
-                        <p>Dette énergétique de la "preuve de travail" ; volatilité extrême ; la confiance est déplacée du politique vers un code dont la gouvernance reste un enjeu.</p>
-                        <div class="entry-categories">(Technique, Énergétique, Économique)</div>
-                    </div>
-                </div>
-
-                <div class="entry" data-age="age7">
-                    <div class="entry-header" onclick="toggleEntry(this)">
-                        <div class="entry-title">
-                            <span class="entry-date">2020</span>
-                            <span class="entry-name" lang="fr">Covid-19 — stress-test du monde</span>
-                        </div>
-                        <span class="entry-toggle">▼</span>
-                    </div>
-                    <div class="entry-content">
-                        <h4>Ordre créé</h4>
-                        <p>Protection sanitaire par le contrôle social (confinement, passe sanitaire).</p>
-                        <h4>Dette déportée</h4>
-                        <p>Désordre économique (dette publique), social (inégalités), psychique (santé mentale) et éducatif (pertes d'apprentissage) massivement déporté.</p>
-                        <div class="entry-categories">(Social, Économique, Politique)</div>
-                    </div>
-                </div>
+                
+                <!-- Ajoutez toutes les autres entrées ici... -->
+                
             </div>
         </section>
         
         <!-- Section Contact -->
         <section class="contact-section">
             <h2 class="section-title">
-                <span lang="fr">Contact</span>
-                <span lang="en" style="display:none">Contact</span>
-                <span lang="es" style="display:none">Contacto</span>
+                <span data-lang="fr">Contact</span>
+                <span data-lang="en" style="display:none">Contact</span>
+                <span data-lang="es" style="display:none">Contacto</span>
             </h2>
             <form class="contact-form" action="https://formspree.io/f/mblaprga" method="POST">
                 <div class="form-group">
                     <label class="form-label" for="name">
-                        <span lang="fr">Nom</span>
-                        <span lang="en" style="display:none">Name</span>
-                        <span lang="es" style="display:none">Nombre</span>
+                        <span data-lang="fr">Nom</span>
+                        <span data-lang="en" style="display:none">Name</span>
+                        <span data-lang="es" style="display:none">Nombre</span>
                     </label>
                     <input type="text" id="name" name="name" class="form-input" required>
                 </div>
@@ -1271,51 +906,44 @@
                     <textarea id="message" name="message" class="form-textarea" required></textarea>
                 </div>
                 <button type="submit" class="form-submit">
-                    <span lang="fr">ENVOYER</span>
-                    <span lang="en" style="display:none">SEND</span>
-                    <span lang="es" style="display:none">ENVIAR</span>
+                    <span data-lang="fr">ENVOYER</span>
+                    <span data-lang="en" style="display:none">SEND</span>
+                    <span data-lang="es" style="display:none">ENVIAR</span>
                 </button>
             </form>
         </section>
         
         <!-- Footer -->
         <footer>
-            <p lang="fr">Si cette lecture vous a éclairé, un retour sur votre plateforme d'achat aide d'autres lecteurs à découvrir ces idées.</p>
-            <p lang="en" style="display:none">If this reading has enlightened you, a review on your purchase platform helps other readers discover these ideas.</p>
-            <p lang="es" style="display:none">Si esta lectura te ha iluminado, una reseña en tu plataforma de compra ayuda a otros lectores a descubrir estas ideas.</p>
+            <p data-lang="fr">Si cette lecture vous a éclairé, un retour sur votre plateforme d'achat aide d'autres lecteurs à découvrir ces idées.</p>
+            <p data-lang="en" style="display:none">If this reading has enlightened you, a review on your purchase platform helps other readers discover these ideas.</p>
+            <p data-lang="es" style="display:none">Si esta lectura te ha iluminado, una reseña en tu plataforma de compra ayuda a otros lectores a descubrir estas ideas.</p>
         </footer>
     </div>
     
     <script>
-        // Détection automatique de la langue du navigateur
-        window.addEventListener('DOMContentLoaded', function() {
-            const userLang = navigator.language || navigator.userLanguage;
-            let defaultLang = 'fr';
-            
-            if (userLang.startsWith('en')) {
-                defaultLang = 'en';
-            } else if (userLang.startsWith('es')) {
-                defaultLang = 'es';
-            }
-            
-            setLanguage(defaultLang);
-        });
-        
-        // Gestion des sections
-        function showSection(sectionName) {
+        // Gestion des sections - CORRIGÉ
+        function showSection(sectionName, buttonElement) {
             // Masquer toutes les sections
             document.querySelectorAll('.livre-section, .registre-section, .contact-section').forEach(section => {
                 section.classList.remove('active');
             });
             
             // Afficher la section sélectionnée
-            document.querySelector('.' + sectionName + '-section').classList.add('active');
+            const targetSection = document.querySelector('.' + sectionName + '-section');
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
             
             // Mettre à jour les boutons de navigation
             document.querySelectorAll('.nav-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
-            event.currentTarget.classList.add('active');
+            
+            // Activer le bouton cliqué
+            if (buttonElement) {
+                buttonElement.classList.add('active');
+            }
         }
         
         // Toggle des entrées du registre
@@ -1348,19 +976,26 @@
             });
         }
         
-        // Fonction pour définir la langue
-        function setLanguage(lang) {
-            // Masquer tous les éléments de langue
-            document.querySelectorAll('[lang]').forEach(el => {
+        // Système multilingue - CORRIGÉ
+        let currentLang = 'fr';
+        
+        function changeLanguage(lang) {
+            currentLang = lang;
+            
+            // Masquer tous les éléments de toutes les langues
+            document.querySelectorAll('[data-lang]').forEach(el => {
                 el.style.display = 'none';
             });
             
-            // Afficher les éléments de la langue sélectionnée
-            document.querySelectorAll('[lang="' + lang + '"]').forEach(el => {
-                if (el.tagName === 'SPAN') {
+            // Afficher seulement les éléments de la langue sélectionnée
+            document.querySelectorAll('[data-lang="' + lang + '"]').forEach(el => {
+                // Déterminer le type d'affichage approprié
+                if (el.tagName === 'SPAN' || el.tagName === 'STRONG') {
                     el.style.display = 'inline';
-                } else {
+                } else if (el.tagName === 'P' || el.tagName === 'DIV' || el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'H3') {
                     el.style.display = 'block';
+                } else {
+                    el.style.display = '';
                 }
             });
             
@@ -1387,13 +1022,11 @@
             }
         }
         
-        // Système multilingue avec clic sur les boutons
-        function changeLanguage(lang) {
-            setLanguage(lang);
-        }
-        
         // Recherche simple
         document.addEventListener('DOMContentLoaded', function() {
+            // Initialiser la langue par défaut
+            changeLanguage('fr');
+            
             const searchInput = document.querySelector('.search-input');
             if (searchInput) {
                 searchInput.addEventListener('input', function(e) {
@@ -1424,7 +1057,6 @@
         
         function shareOnLinkedIn() {
             const url = window.location.href;
-            const title = "Anthropie - Liberté sous contrainte";
             window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url), '_blank');
             return false;
         }
@@ -1452,3 +1084,6 @@
             });
             return false;
         }
+    </script>
+</body>
+</html>
