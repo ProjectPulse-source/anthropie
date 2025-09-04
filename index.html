@@ -3676,3 +3676,169 @@
             <p data-lang="es" style="display:none">Si esta lectura te ha iluminado, una reseña en tu plataforma de compra ayuda a otros lectores a descubrir estas ideas.</p>
         </footer>
     </div>
+<script>
+        // Gestion des sections - CORRIGÉ
+        function showSection(sectionName, buttonElement) {
+            // Masquer toutes les sections
+            document.querySelectorAll('.livre-section, .registre-section, .contact-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Afficher la section sélectionnée
+            const targetSection = document.querySelector('.' + sectionName + '-section');
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+            
+            // Mettre à jour les boutons de navigation
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Activer le bouton cliqué
+            if (buttonElement) {
+                buttonElement.classList.add('active');
+            }
+        }
+        
+        // Toggle des entrées du registre
+        function toggleEntry(header) {
+            const entry = header.parentElement;
+            entry.classList.toggle('active');
+        }
+        
+        // Filtre par âge
+        function filterByAge(age, event) {
+            const entries = document.querySelectorAll('.entry');
+            
+            // Mettre à jour les boutons de filtre
+            document.querySelectorAll('.age-filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Activer le bouton cliqué
+            if (event && event.target) {
+                event.target.classList.add('active');
+            }
+            
+            // Filtrer les entrées
+            entries.forEach(entry => {
+                if (age === 'all' || entry.dataset.age === age) {
+                    entry.style.display = 'block';
+                } else {
+                    entry.style.display = 'none';
+                }
+            });
+        }
+        
+        // Système multilingue - CORRIGÉ
+        let currentLang = 'fr';
+        
+        function changeLanguage(lang) {
+            currentLang = lang;
+            
+            // Masquer tous les éléments de toutes les langues
+            document.querySelectorAll('[data-lang]').forEach(el => {
+                el.style.display = 'none';
+            });
+            
+            // Afficher seulement les éléments de la langue sélectionnée
+            document.querySelectorAll('[data-lang="' + lang + '"]').forEach(el => {
+                // Déterminer le type d'affichage approprié
+                if (el.tagName === 'SPAN' || el.tagName === 'STRONG') {
+                    el.style.display = 'inline';
+                } else if (el.tagName === 'P' || el.tagName === 'DIV' || el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'H3') {
+                    el.style.display = 'block';
+                } else {
+                    el.style.display = '';
+                }
+            });
+            
+            // Mettre à jour les boutons de langue
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent.toLowerCase() === lang || 
+                    (btn.textContent === 'FR' && lang === 'fr') ||
+                    (btn.textContent === 'EN' && lang === 'en') ||
+                    (btn.textContent === 'ES' && lang === 'es')) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // Mettre à jour le placeholder de recherche
+            const searchInput = document.querySelector('.search-input');
+            if (searchInput) {
+                const placeholders = {
+                    'fr': 'Rechercher par date, concept ou catégorie...',
+                    'en': 'Search by date, concept or category...',
+                    'es': 'Buscar por fecha, concepto o categoría...'
+                };
+                searchInput.placeholder = placeholders[lang];
+            }
+        }
+        
+        // Recherche simple
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialiser la langue par défaut
+            changeLanguage('fr');
+            
+            const searchInput = document.querySelector('.search-input');
+            if (searchInput) {
+                searchInput.addEventListener('input', function(e) {
+                    const searchTerm = e.target.value.toLowerCase();
+                    const entries = document.querySelectorAll('.entry');
+                    
+                    entries.forEach(entry => {
+                        const text = entry.textContent.toLowerCase();
+                        entry.style.display = text.includes(searchTerm) ? 'block' : 'none';
+                    });
+                });
+            }
+        });
+        
+        // Fonctions de partage
+        function shareOnTwitter() {
+            const url = window.location.href;
+            const text = "Découvrez Anthropie : 3,3 millions d'années d'histoire humaine décryptés";
+            window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(text), '_blank');
+            return false;
+        }
+        
+        function shareOnFacebook() {
+            const url = window.location.href;
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url), '_blank');
+            return false;
+        }
+        
+        function shareOnLinkedIn() {
+            const url = window.location.href;
+            window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url), '_blank');
+            return false;
+        }
+        
+        function copyLink() {
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(function() {
+                // Créer une notification plus élégante
+                const notification = document.createElement('div');
+                notification.textContent = 'Lien copié !';
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: #333;
+                    color: white;
+                    padding: 15px 30px;
+                    border-radius: 8px;
+                    z-index: 10000;
+                    animation: fadeInOut 2s;
+                `;
+                document.body.appendChild(notification);
+                setTimeout(() => notification.remove(), 2000);
+            });
+            return false;
+        }
+    </script>
+</body>
+</html>
