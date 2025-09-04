@@ -1,42 +1,869 @@
-<div class="entry" data-age="age1">
-                    <div class="entry-header" onclick="toggleEntry(this)">
-                        <div class="entry-title">
-                            <span class="entry-date">≈ -3 300 000</span>
-                            <span class="entry-name" data-lang="fr">Premiers outils — mémoire externe</span>
-                        </div>
-                        <span class="entry-toggle">▼</span>
-                    </div>
-                    <div class="entry-content">
-                        <h4>Ordre créé</h4>
-                        <p>Externalisation de la mémoire et de l’intention dans des artefacts durables, créant un savoir transmissible indépendant du porteur.</p>
-                        <h4>Dette déportée</h4>
-                        <p>Dépendance aux matériaux et aux savoir-faire ; conversion d’un coût cognitif en coût thermodynamique pour l'extraction et le façonnage.</p>
-                        <div class="entry-categories">(Technique, Énergétique, Cognitif)</div>
-                    </div>
-                </div>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthropie - Liberté sous contrainte</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+            color: #1a1a1a;
+            min-height: 100vh;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        
+        p, .entry-content p, .thesis, .livre-info p {
+            text-align: justify;
+        }
+        
+        h1, h2, h3, h4, .section-title, .subtitle, .stat-label {
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+        
+        .share-buttons {
+            position: fixed;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 999;
+        }
+        
+        .share-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: white;
+            border: 2px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #666;
+            font-size: 1.2em;
+        }
+        
+        .share-btn:hover {
+            background: #c69214;
+            color: white;
+            border-color: #c69214;
+            transform: scale(1.1);
+            box-shadow: 0 5px 20px rgba(198, 146, 20, 0.3);
+        }
+        
+        .language-selector {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+            background: white;
+            padding: 8px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border: 1px solid rgba(198, 146, 20, 0.2);
+        }
+        
+        .lang-btn {
+            padding: 6px 12px;
+            background: transparent;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+        
+        .lang-btn:hover {
+            background: #f0f0f0;
+            border-color: #c69214;
+        }
+        
+        .lang-btn.active {
+            background: #333;
+            color: white;
+            border-color: #c69214;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 80px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .main-title {
+            font-family: 'Bauhaus 93', Impact, sans-serif;
+            font-size: 4em;
+            font-weight: normal;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #666 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            color: #666;
+            letter-spacing: 0.1em;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .subtitle::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #c69214, transparent);
+        }
+        
+        .thesis {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #333;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            border: 1px solid rgba(198, 146, 20, 0.15);
+            position: relative;
+            text-align: justify;
+        }
+        
+        .thesis::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 30%;
+            right: 30%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #c69214, transparent);
+        }
+        
+        .thesis strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        .nav-section {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-btn {
+            padding: 12px 30px;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+        }
+        
+        .nav-btn:hover,
+        .nav-btn.active {
+            background: #333;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-color: #c69214;
+        }
+        
+        .livre-section {
+            margin-bottom: 80px;
+            display: none;
+        }
+        
+        .livre-section.active {
+            display: block;
+        }
+        
+        .livre-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        
+        .livre-image {
+            text-align: center;
+        }
+        
+        .book-cover {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+            border: 2px solid rgba(198, 146, 20, 0.2);
+        }
+        
+        .book-cover:hover {
+            transform: scale(1.05);
+        }
+        
+        .livre-info h3 {
+            font-size: 1.6em;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: left;
+        }
+        
+        .livre-info p {
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+        
+        .livre-stats {
+            display: flex;
+            gap: 30px;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f8f8;
+            border-radius: 8px;
+            border-left: 3px solid #c69214;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 1.8em;
+            font-weight: 600;
+            background: linear-gradient(135deg, #333 0%, #c69214 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .stat-label {
+            font-size: 0.9em;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .purchase-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .purchase-btn {
+            padding: 14px 30px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .purchase-btn:hover {
+            background: #000;
+            transform: translateY(-2px);
+            box-shadow: 0 2px 0 #c69214;
+        }
+        
+        .purchase-btn.secondary {
+            background: white;
+            color: #333;
+            border: 2px solid #333;
+        }
+        
+        .purchase-btn.secondary:hover {
+            background: #f0f0f0;
+            border-color: #c69214;
+        }
+        
+        .registre-section {
+            margin-bottom: 80px;
+            display: none;
+        }
+        
+        .registre-section.active {
+            display: block;
+        }
+        
+        .section-title {
+            font-size: 1.8em;
+            font-weight: 300;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #333;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .age-filters {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        
+        .age-filter-btn {
+            padding: 8px 16px;
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85em;
+            transition: all 0.3s ease;
+        }
+        
+        .age-filter-btn:hover {
+            background: #f0f0f0;
+            border-color: #c69214;
+        }
+        
+        .age-filter-btn.active {
+            background: #333;
+            color: white;
+            border-color: #c69214;
+        }
+        
+        .search-box {
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 15px 50px 15px 20px;
+            font-size: 1em;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #c69214;
+            box-shadow: 0 5px 20px rgba(198, 146, 20, 0.1);
+        }
+        
+        .entry {
+            margin-bottom: 30px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .entry:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-left: 3px solid #c69214;
+        }
+        
+        .entry-header {
+            padding: 20px 25px;
+            background: linear-gradient(135deg, #f8f8f8 0%, white 100%);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .entry-title {
+            display: flex;
+            align-items: baseline;
+            gap: 20px;
+            flex: 1;
+        }
+        
+        .entry-date {
+            font-weight: 600;
+            color: #666;
+            min-width: 120px;
+        }
+        
+        .entry-name {
+            color: #333;
+            font-size: 1.1em;
+        }
+        
+        .entry-toggle {
+            color: #999;
+            transition: transform 0.3s ease;
+        }
+        
+        .entry.active .entry-toggle {
+            transform: rotate(180deg);
+        }
+        
+        .entry-content {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .entry.active .entry-content {
+            max-height: 800px;
+            padding: 25px;
+        }
+        
+        .entry-content h4 {
+            color: #c69214;
+            margin-bottom: 10px;
+            font-size: 0.95em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .entry-content p {
+            margin-bottom: 15px;
+            line-height: 1.7;
+            text-align: justify;
+        }
+        
+        .entry-categories {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e0e0e0;
+            font-size: 0.9em;
+            color: #999;
+            font-style: italic;
+        }
+        
+        .contact-section {
+            background: linear-gradient(135deg, white 0%, #fafafa 100%);
+            border-radius: 15px;
+            padding: 50px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            margin-bottom: 60px;
+            display: none;
+            border-top: 3px solid #c69214;
+        }
+        
+        .contact-section.active {
+            display: block;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 12px 18px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+        
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #c69214;
+        }
+        
+        .form-submit {
+            background: #333;
+            color: white;
+            padding: 14px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .form-submit::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(198, 146, 20, 0.3), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .form-submit:hover {
+            background: #000;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 1px solid #c69214;
+        }
+        
+        .form-submit:hover::before {
+            left: 100%;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 80px;
+            border-top: 1px solid #e0e0e0;
+            color: #666;
+        }
+        
+        footer::before {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: #c69214;
+            margin: 0 auto 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .share-buttons {
+                display: none;
+            }
+            
+            .container {
+                padding: 40px 20px;
+            }
+            
+            .main-title {
+                font-size: 2.5em;
+                letter-spacing: 0.1em;
+            }
+            
+            .thesis {
+                padding: 20px;
+            }
+            
+            .livre-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .livre-stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .contact-section {
+                padding: 30px 20px;
+            }
+            
+            .entry-title {
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            .language-selector {
+                top: 10px;
+                right: 10px;
+            }
+            
+            .age-filters {
+                gap: 5px;
+            }
+            
+            .age-filter-btn {
+                padding: 6px 10px;
+                font-size: 0.8em;
+            }
+        }
+        
+        @keyframes fadeInOut {
+            0% { opacity: 0; }
+            20% { opacity: 1; }
+            80% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Boutons de partage -->
+    <div class="share-buttons">
+        <a href="#" class="share-btn" onclick="shareOnTwitter(); return false;" title="Twitter">
+            <span>𝕏</span>
+        </a>
+        <a href="#" class="share-btn" onclick="shareOnFacebook(); return false;" title="Facebook">
+            <span>f</span>
+        </a>
+        <a href="#" class="share-btn" onclick="shareOnLinkedIn(); return false;" title="LinkedIn">
+            <span>in</span>
+        </a>
+        <a href="#" class="share-btn" onclick="copyLink(); return false;" title="Copier le lien">
+            <span>🔗</span>
+        </a>
+    </div>
+    
+    <!-- Sélecteur de langue -->
+    <div class="language-selector">
+        <button type="button" class="lang-btn active" onclick="changeLanguage('fr')">FR</button>
+        <button type="button" class="lang-btn" onclick="changeLanguage('en')">EN</button>
+        <button type="button" class="lang-btn" onclick="changeLanguage('es')">ES</button>
+    </div>
+    
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1 class="main-title">ANTHROPIE</h1>
+            <p class="subtitle" data-lang="fr">Tout ordre est une dette</p>
+            <p class="subtitle" data-lang="en" style="display:none">Freedom Under Constraint</p>
+            <p class="subtitle" data-lang="es" style="display:none">Libertad bajo restricción</p>
+            
+            <div class="thesis">
+                <span data-lang="fr"><strong>Thèse centrale :</strong> Tout ordre local se paie par un désordre déporté ailleurs : dans l'espace, dans le temps, ou sur d'autres groupes humains. L'histoire n'est donc pas la chronique d'un progrès, mais la mécanique de ce déplacement constant où chaque solution engendre une nouvelle dette, et où le pouvoir se mesure à l'art d'exporter ses coûts sur les autres.</span>
+                <span data-lang="en" style="display:none"><strong>Central thesis:</strong> Every local order is paid for by displaced costs — in space, time, between groups. This register maps 3.3 million years of displacements.</span>
+                <span data-lang="es" style="display:none"><strong>Tesis central:</strong> Todo orden local se paga con costos desplazados — en el espacio, el tiempo, entre grupos. Este registro cartografía 3,3 millones de años de desplazamientos.</span>
+            </div>
+        </header>
+        
+        <!-- Navigation -->
+        <nav class="nav-section">
+            <div class="nav-buttons">
+                <button type="button" class="nav-btn active" onclick="showSection('livre', this)">
+                    <span data-lang="fr">Le Livre</span>
+                    <span data-lang="en" style="display:none">The Book</span>
+                    <span data-lang="es" style="display:none">El Libro</span>
+                </button>
+                <button type="button" class="nav-btn" onclick="showSection('registre', this)">
+                    <span data-lang="fr">Registre</span>
+                    <span data-lang="en" style="display:none">Register</span>
+                    <span data-lang="es" style="display:none">Registro</span>
+                </button>
+                <button type="button" class="nav-btn" onclick="showSection('contact', this)">
+                    <span data-lang="fr">Contact</span>
+                    <span data-lang="en" style="display:none">Contact</span>
+                    <span data-lang="es" style="display:none">Contacto</span>
+                </button>
+            </div>
+        </nav>
+<!-- Section Livre -->
+        <section class="livre-section active">
+            <div class="livre-content">
+                <div class="livre-image">
+                    <img src="Couverture_Anthropie.png" alt="Anthropie - Liberté sous contrainte" class="book-cover" style="width: 300px; height: auto; margin: 0 auto; display: block;">
+                </div>
+                <div class="livre-info">
+                    <h3 data-lang="fr">Un voyage de 3,3 millions d'années</h3>
+                    <h3 data-lang="en" style="display:none">A 3.3 Million Year Journey</h3>
+                    <h3 data-lang="es" style="display:none">Un viaje de 3,3 millones de años</h3>
+                    
+                    <p data-lang="fr">De la première pierre taillée aux algorithmes contemporains, <strong>Anthropie</strong> dévoile le mécanisme immuable de l'histoire humaine : nous ne créons pas l'ordre, nous déplaçons le désordre.</p>
+                    <p data-lang="en" style="display:none">From the first carved stone to contemporary algorithms, <strong>Anthropie</strong> reveals the immutable mechanism of human history: we don't create order, we displace disorder.</p>
+                    <p data-lang="es" style="display:none">Desde la primera piedra tallada hasta los algoritmos contemporáneos, <strong>Anthropie</strong> revela el mecanismo inmutable de la historia humana: no creamos orden, desplazamos el desorden.</p>
+                    
+                    <p data-lang="fr">Sept âges, 200 jalons historiques, une seule logique : chaque liberté cache une contrainte, chaque progrès exporte son coût.</p>
+                    <p data-lang="en" style="display:none">Seven ages, 200 historical milestones, one logic: every freedom hides a constraint, every progress exports its cost.</p>
+                    <p data-lang="es" style="display:none">Siete edades, 200 hitos históricos, una sola lógica: cada libertad oculta una restricción, cada progreso exporta su costo.</p>
+                </div>
+            </div>
+            
+            <div class="livre-stats">
+                <div class="stat">
+                    <div class="stat-number">630</div>
+                    <div class="stat-label" data-lang="fr">Pages</div>
+                    <div class="stat-label" data-lang="en" style="display:none">Pages</div>
+                    <div class="stat-label" data-lang="es" style="display:none">Páginas</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">7</div>
+                    <div class="stat-label" data-lang="fr">Âges</div>
+                    <div class="stat-label" data-lang="en" style="display:none">Ages</div>
+                    <div class="stat-label" data-lang="es" style="display:none">Edades</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label" data-lang="fr">Entrées</div>
+                    <div class="stat-label" data-lang="en" style="display:none">Entries</div>
+                    <div class="stat-label" data-lang="es" style="display:none">Entradas</div>
+                </div>
+            </div>
+            
+            <div class="purchase-buttons">
+                <a href="#" class="purchase-btn">
+                    <span data-lang="fr">Commander le livre</span>
+                    <span data-lang="en" style="display:none">Order the book</span>
+                    <span data-lang="es" style="display:none">Pedir el libro</span>
+                </a>
+                <a href="#" class="purchase-btn secondary">
+                    <span data-lang="fr">Version ebook</span>
+                    <span data-lang="en" style="display:none">Ebook version</span>
+                    <span data-lang="es" style="display:none">Versión ebook</span>
+                </a>
+            </div>
+            
+            <div style="margin-top: 50px; padding: 30px; background: linear-gradient(135deg, #fafafa 0%, white 100%); border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-left: 4px solid #c69214;">
+                <h3 style="color: #333; margin-bottom: 20px; font-size: 1.3em; text-align: center;">
+                    <span data-lang="fr">Le concept d'Anthropie</span>
+                    <span data-lang="en" style="display:none">The Concept of Anthropie</span>
+                    <span data-lang="es" style="display:none">El concepto de Antropía</span>
+                </h3>
+                <p data-lang="fr" style="color: #555; margin-bottom: 15px; text-align: justify;">
+                    L'anthropie est au social ce que l'entropie est au physique : une mesure du désordre inévitable créé par tout effort d'ordre. Ce livre démontre comment chaque "progrès" de l'histoire humaine n'est qu'un déplacement de coûts — dans l'espace (colonisation), dans le temps (dette écologique), ou entre groupes (inégalités).
+                </p>
+                <p data-lang="en" style="display:none; color: #555; margin-bottom: 15px; text-align: justify;">
+                    Anthropie is to society what entropy is to physics: a measure of the inevitable disorder created by every effort at order. This book demonstrates how each "progress" in human history is merely a displacement of costs — in space (colonization), in time (ecological debt), or between groups (inequalities).
+                </p>
+                <p data-lang="es" style="display:none; color: #555; margin-bottom: 15px; text-align: justify;">
+                    La antropía es a lo social lo que la entropía es a lo físico: una medida del desorden inevitable creado por todo esfuerzo de orden. Este libro demuestra cómo cada "progreso" de la historia humana es solo un desplazamiento de costos — en el espacio (colonización), en el tiempo (deuda ecológica), o entre grupos (desigualdades).
+                </p>
+                <p data-lang="fr" style="color: #555; text-align: justify;">
+                    Le registre contenu dans ce livre cartographie 200 jalons de cette mécanique implacable, de la première pierre taillée aux algorithmes contemporains, révélant la grammaire secrète de notre civilisation : nous ne résolvons pas les problèmes, nous les déplaçons.
+                </p>
+                <p data-lang="en" style="display:none; color: #555; text-align: justify;">
+                    The register contained in this book maps 200 milestones of this relentless mechanism, from the first carved stone to contemporary algorithms, revealing the secret grammar of our civilization: we don't solve problems, we displace them.
+                </p>
+                <p data-lang="es" style="display:none; color: #555; text-align: justify;">
+                    El registro contenido en este libro cartografía 200 hitos de esta mecánica implacable, desde la primera piedra tallada hasta los algoritmos contemporáneos, revelando la gramática secreta de nuestra civilización: no resolvemos los problemas, los desplazamos.
+                </p>
+            </div>
+            
+            <div style="margin-top: 40px; padding: 20px; background: #f8f8f8; border-radius: 8px; border-left: 3px solid #c69214;">
+                <p data-lang="fr" style="color: #666; text-align: center;">
+                    <strong>Bientôt disponible :</strong> Traductions en anglais et espagnol
+                </p>
+                <p data-lang="en" style="display:none; color: #666; text-align: center;">
+                    <strong>Coming soon:</strong> English translation available
+                </p>
+                <p data-lang="es" style="display:none; color: #666; text-align: center;">
+                    <strong>Próximamente:</strong> Traducción al español disponible
+                </p>
+            </div>
+        </section>
+        
+        <!-- Section Registre -->
+        <section class="registre-section">
+            <h2 class="section-title">
+                <span data-lang="fr">Explorer le Registre</span>
+                <span data-lang="en" style="display:none">Explore the Register</span>
+                <span data-lang="es" style="display:none">Explorar el Registro</span>
+            </h2>
+            
+            <!-- Filtres par âge -->
+            <div class="age-filters">
+                <button type="button" class="age-filter-btn active" onclick="filterByAge('all', event)">Tous</button>
+                <button type="button" class="age-filter-btn" onclick="filterByAge('age1', event)">Âge I</button>
+                <button type="button" class="age-filter-btn" onclick="filterByAge('age2', event)">Âge II</button>
+                <button type="button" class="age-filter-btn" onclick="filterByAge('age3', event)">Âge III</button>
+                <button type="button" class="age-filter-btn" onclick="filterByAge('age4', event)">Âge IV</button>
+                <button type="button" class="age-filter-btn" onclick="filterByAge('age5', event)">Âge V</button>
+                <button type="button" class="age-filter-btn" onclick="filterByAge('age6', event)">Âge VI</button>
+                <button type="button" class="age-filter-btn" onclick="filterByAge('age7', event)">Âge VII</button>
+            </div>
+            
+            <!-- Barre de recherche -->
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Rechercher par date, concept ou catégorie..." data-lang="fr">
+            </div>
+            
+            <!-- Entrées du registre -->
+            <div id="entries-container">
+<!-- PREMIER ÂGE : Programmes fondateurs -->
+                <div class="entry" data-age="age1">
+                    <div class="entry-header" onclick="toggleEntry(this)">
+                        <div class="entry-title">
+                            <span class="entry-date">≈ -3 300 000</span>
+                            <span class="entry-name" data-lang="fr">Premiers outils — mémoire externe</span>
+                        </div>
+                        <span class="entry-toggle">▼</span>
+                    </div>
+                    <div class="entry-content">
+                        <h4>Ordre créé</h4>
+                        <p>Externalisation de la mémoire et de l'intention dans des artefacts durables, créant un savoir transmissible indépendant du porteur.</p>
+                        <h4>Dette déportée</h4>
+                        <p>Dépendance aux matériaux et aux savoir-faire ; conversion d'un coût cognitif en coût thermodynamique pour l'extraction et le façonnage.</p>
+                        <div class="entry-categories">(Technique, Énergétique, Cognitif)</div>
+                    </div>
+                </div>
 
-                <div class="entry" data-age="age1">
-                    <div class="entry-header" onclick="toggleEntry(this)">
-                        <div class="entry-title">
-                            <span class="entry-date">≈ -1 500 000</span>
-                            <span class="entry-name" data-lang="fr">Feu — voler la foudre, allumer le monde</span>
-                        </div>
-                        <span class="entry-toggle">▼</span>
-                    </div>
-                    <div class="entry-content">
-                        <h4>Ordre créé</h4>
-                        <p>Centre social sécurisé, digestion externalisée par la cuisson, allongement du temps utile en repoussant la nuit.</p>
-                        <h4>Dette déportée</h4>
-                        <p>Dette énergétique permanente envers le combustible ; coûts sanitaires (fumée) ; premier regard extractif sur la nature.</p>
-                        <div class="entry-categories">(Énergétique, Social, Écologique)</div>
-                    </div>
-                </div>
+                <div class="entry" data-age="age1">
+                    <div class="entry-header" onclick="toggleEntry(this)">
+                        <div class="entry-title">
+                            <span class="entry-date">≈ -1 500 000</span>
+                            <span class="entry-name" data-lang="fr">Feu — voler la foudre, allumer le monde</span>
+                        </div>
+                        <span class="entry-toggle">▼</span>
+                    </div>
+                    <div class="entry-content">
+                        <h4>Ordre créé</h4>
+                        <p>Centre social sécurisé, digestion externalisée par la cuisson, allongement du temps utile en repoussant la nuit.</p>
+                        <h4>Dette déportée</h4>
+                        <p>Dette énergétique permanente envers le combustible ; coûts sanitaires (fumée) ; premier regard extractif sur la nature.</p>
+                        <div class="entry-categories">(Énergétique, Social, Écologique)</div>
+                    </div>
+                </div>
 
                 <div class="entry" data-age="age1">
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">≈ -400 000</span>
-                            <span class="entry-name" data-lang="fr">Mort — l’archive des vivants</span>
+                            <span class="entry-name" data-lang="fr">Mort — l'archive des vivants</span>
                         </div>
                         <span class="entry-toggle">▼</span>
                     </div>
@@ -61,7 +888,7 @@
                         <h4>Ordre créé</h4>
                         <p>Coordination sociale à grande échelle, transmission de savoirs complexes, capacité à penser l'abstrait (passé, futur, hypothèses).</p>
                         <h4>Dette déportée</h4>
-                        <p>Coût d’entretien des conventions (grammaire) ; enfermement dans des catégories de pensée ; exclusion par le verbe (tabous).</p>
+                        <p>Coût d'entretien des conventions (grammaire) ; enfermement dans des catégories de pensée ; exclusion par le verbe (tabous).</p>
                         <div class="entry-categories">(Cognitif, Social, Symbolique)</div>
                     </div>
                 </div>
@@ -134,10 +961,11 @@
                     </div>
                 </div>
 
+                <!-- DEUXIÈME ÂGE : Le Piège néolithique -->
                 <div class="entry" data-age="age2">
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
-                            <span class="entry-date">≈ 10 000</span>
+                            <span class="entry-date">≈ -10 000</span>
                             <span class="entry-name" data-lang="fr">Néolithique — le piège civilisationnel</span>
                         </div>
                         <span class="entry-toggle">▼</span>
@@ -155,7 +983,7 @@
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">≈ -5 000</span>
-                            <span class="entry-name" data-lang="fr">La roue — l’éternel retour mécanique</span>
+                            <span class="entry-name" data-lang="fr">La roue — l'éternel retour mécanique</span>
                         </div>
                         <span class="entry-toggle">▼</span>
                     </div>
@@ -252,7 +1080,7 @@
                         <div class="entry-categories">(Symbolique, Politique, Social)</div>
                     </div>
                 </div>
-
+<!-- TROISIÈME ÂGE : Systèmes d'exploitation antiques -->
                 <div class="entry" data-age="age3">
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
@@ -280,7 +1108,7 @@
                     </div>
                     <div class="entry-content">
                         <h4>Ordre créé</h4>
-                        <p>Paix civique interne garantie par une frontière sacrée ( pomoerium ) qui définit un dedans et un dehors.</p>
+                        <p>Paix civique interne garantie par une frontière sacrée (pomoerium) qui définit un dedans et un dehors.</p>
                         <h4>Dette déportée</h4>
                         <p>Externalisation permanente de la violence vers l'extérieur (conquête) ou son retour périodique à l'intérieur (guerres civiles), reproduisant le meurtre fondateur.</p>
                         <div class="entry-categories">(Politique, Spatial, Symbolique)</div>
@@ -316,7 +1144,7 @@
                         <h4>Ordre créé</h4>
                         <p>Protocole de libération de la souffrance par la « désadhérence » aux désirs ; ordre mental et discipline intérieure.</p>
                         <h4>Dette déportée</h4>
-                        <p>Soutien matériel de la communauté monastique ( sa ṃ gha ) par le laïcat ; dette de temps et de ressources (aumônes, entretien) pour financer la paix intérieure des moines.</p>
+                        <p>Soutien matériel de la communauté monastique (saṃgha) par le laïcat ; dette de temps et de ressources (aumônes, entretien) pour financer la paix intérieure des moines.</p>
                         <div class="entry-categories">(Cognitif, Social, Économique)</div>
                     </div>
                 </div>
@@ -331,7 +1159,7 @@
                     </div>
                     <div class="entry-content">
                         <h4>Ordre créé</h4>
-                        <p>Ordre social fondé sur l'exemplarité des gestes ( li ) et des rôles, se propageant par imitation plutôt que par décret.</p>
+                        <p>Ordre social fondé sur l'exemplarité des gestes (li) et des rôles, se propageant par imitation plutôt que par décret.</p>
                         <h4>Dette déportée</h4>
                         <p>Coût en temps et en attention pour l'apprentissage et le maintien des rites ; financement des "modèles" par la communauté ; risque de rigidification en conformisme.</p>
                         <div class="entry-categories">(Social, Symbolique, Cognitif)</div>
@@ -342,7 +1170,7 @@
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">≈ -534</span>
-                            <span class="entry-name" data-lang="fr">Tragédie — l’invention du théâtre social</span>
+                            <span class="entry-name" data-lang="fr">Tragédie — l'invention du théâtre social</span>
                         </div>
                         <span class="entry-toggle">▼</span>
                     </div>
@@ -365,7 +1193,7 @@
                     </div>
                     <div class="entry-content">
                         <h4>Ordre créé</h4>
-                        <p>Pouvoir partagé entre citoyens par la loi commune ( isonomie ), le tirage au sort et la délibération publique.</p>
+                        <p>Pouvoir partagé entre citoyens par la loi commune (isonomie), le tirage au sort et la délibération publique.</p>
                         <h4>Dette déportée</h4>
                         <p>Exclusion structurelle des femmes, métèques et esclaves ; financement de la citoyenneté par l'empire (tributs) et le travail servile (mines du Laurion).</p>
                         <div class="entry-categories">(Politique, Social, Inégalités)</div>
@@ -376,7 +1204,7 @@
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">≈ -500</span>
-                            <span class="entry-name" data-lang="fr">Pythagore — le rêve mathématique d’un monde ordonné</span>
+                            <span class="entry-name" data-lang="fr">Pythagore — le rêve mathématique d'un monde ordonné</span>
                         </div>
                         <span class="entry-toggle">▼</span>
                     </div>
@@ -473,8 +1301,7 @@
                         <div class="entry-categories">(Politique, Social, Moral)</div>
                     </div>
                 </div>
-
-                <div class="entry" data-age="age3">
+<div class="entry" data-age="age3">
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">≈ -441</span>
@@ -535,7 +1362,7 @@
                     </div>
                     <div class="entry-content">
                         <h4>Ordre créé</h4>
-                        <p>Légitimation "naturelle" de la domination et de la maximisation des désirs ( pleonexia ) par une élite.</p>
+                        <p>Légitimation "naturelle" de la domination et de la maximisation des désirs (pleonexia) par une élite.</p>
                         <h4>Dette déportée</h4>
                         <p>Le fardeau de la modération et de la coopération est reporté sur les "faibles" ; l'ordre du fort se finance par l'épuisement et la servitude des autres.</p>
                         <div class="entry-categories">(Social, Politique, Violence symbolique)</div>
@@ -552,7 +1379,7 @@
                     </div>
                     <div class="entry-content">
                         <h4>Ordre créé</h4>
-                        <p>Paix intérieure ( ataraxie ) par la limitation des désirs et l'élimination des peurs (des dieux, de la mort).</p>
+                        <p>Paix intérieure (ataraxie) par la limitation des désirs et l'élimination des peurs (des dieux, de la mort).</p>
                         <h4>Dette déportée</h4>
                         <p>Le "vis caché" de la communauté épicurienne est subventionné par l'ordre et le travail de la cité qu'elle fuit ; dette de participation civique.</p>
                         <div class="entry-categories">(Cognitif, Social, Philosophique)</div>
@@ -603,7 +1430,7 @@
                     </div>
                     <div class="entry-content">
                         <h4>Ordre créé</h4>
-                        <p>Un système de classification universel (catégories, causes) qui rend le monde intelligible et gouvernable par la mesure et la prudence ( phronèsis ).</p>
+                        <p>Un système de classification universel (catégories, causes) qui rend le monde intelligible et gouvernable par la mesure et la prudence (phronèsis).</p>
                         <h4>Dette déportée</h4>
                         <p>Le savoir classificatoire, en devenant norme, exclut et pathologise les "écarts" ; la mesure devient instrument de normalisation.</p>
                         <div class="entry-categories">(Cognitif, Social, Violence symbolique)</div>
@@ -694,8 +1521,7 @@
                         <div class="entry-categories">(Politique, Culturel, Social)</div>
                     </div>
                 </div>
-
-                <div class="entry" data-age="age3">
+<div class="entry" data-age="age3">
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">≈ -49</span>
@@ -733,7 +1559,7 @@
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">105</span>
-                            <span class="entry-name" data-lang="fr">Papier (Han) — écrire l’État</span>
+                            <span class="entry-name" data-lang="fr">Papier (Han) — écrire l'État</span>
                         </div>
                         <span class="entry-toggle">▼</span>
                     </div>
@@ -756,7 +1582,7 @@
                     </div>
                     <div class="entry-content">
                         <h4>Ordre créé</h4>
-                        <p>Paix sociale par la distribution de nourriture ( panem ) et de divertissement ( circenses ), occupant les corps et l'attention du peuple.</p>
+                        <p>Paix sociale par la distribution de nourriture (panem) et de divertissement (circenses), occupant les corps et l'attention du peuple.</p>
                         <h4>Dette déportée</h4>
                         <p>Atrophie de la citoyenneté, transformée en clientèle passive ; coût logistique et financier colossal pour maintenir les flux de blé et les jeux.</p>
                         <div class="entry-categories">(Politique, Social, Cognitif)</div>
@@ -775,7 +1601,7 @@
                         <h4>Ordre créé</h4>
                         <p>Citadelle intérieure imprenable, liberté par la maîtrise des jugements et la discipline du désir.</p>
                         <h4>Dette déportée</h4>
-                        <p>Coût social de l'indifférence aux charges communes ; l' otium (temps libre) nécessaire à cette ascèse est financé par le travail d'autrui (esclaves, serviteurs).</p>
+                        <p>Coût social de l'indifférence aux charges communes ; l'otium (temps libre) nécessaire à cette ascèse est financé par le travail d'autrui (esclaves, serviteurs).</p>
                         <div class="entry-categories">(Cognitif, Social, Philosophique)</div>
                     </div>
                 </div>
@@ -797,6 +1623,7 @@
                     </div>
                 </div>
 
+                <!-- QUATRIÈME ÂGE : Réseaux transcontinentaux -->
                 <div class="entry" data-age="age4">
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
@@ -824,9 +1651,9 @@
                     </div>
                     <div class="entry-content">
                         <h4>Ordre créé</h4>
-                        <p>Cadre de vie stable et productif ( ora et labora ) qui transforme le temps par la discipline de la Règle, libérant l'énergie spirituelle et matérielle.</p>
+                        <p>Cadre de vie stable et productif (ora et labora) qui transforme le temps par la discipline de la Règle, libérant l'énergie spirituelle et matérielle.</p>
                         <h4>Dette déportée</h4>
-                        <p>Soutien matériel du monastère par des dons, des rentes et le travail de laïcs dépendants ( familia ) ; dette écologique sur les terres exploitées (peaux pour parchemins).</p>
+                        <p>Soutien matériel du monastère par des dons, des rentes et le travail de laïcs dépendants (familia) ; dette écologique sur les terres exploitées (peaux pour parchemins).</p>
                         <div class="entry-categories">(Social, Économique, Temporel)</div>
                     </div>
                 </div>
@@ -886,20 +1713,30 @@
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">1066</span>
-                            <span class="entry-name" data-lang="fr">Hastings — l’alchimie du bâtard</span>
+                            <span class="entry-name" data-lang="fr">Hastings — l'alchimie du bâtard</span>
                         </div>
                         <span class="entry-toggle">▼</span>
                     </div>
                     <div class="entry-content">
                         <h4>Ordre créé</h4>
-                        <p>Transformation d'une conquête violente en État administratif centralisé ( Domesday Book ) et en ordre juridique durable ( common law ).</p>
+                        <p>Transformation d'une conquête violente en État administratif centralisé (Domesday Book) et en ordre juridique durable (common law).</p>
                         <h4>Dette déportée</h4>
-                        <p>Expropriation massive de l'élite anglo-saxonne ; coût humain de la répression ( Harrying of the North ) ; violence symbolique par l'imposition de la langue et des lois normandes.</p>
+                        <p>Expropriation massive de l'élite anglo-saxonne ; coût humain de la répression (Harrying of the North) ; violence symbolique par l'imposition de la langue et des lois normandes.</p>
                         <div class="entry-categories">(Politique, Social, Violence symbolique)</div>
                     </div>
                 </div>
-
-                <div class="entry" data-age="age4">
+<div class="entry" data-age="age4">
+                    <div class="entry-header" onclick="toggleEntry(this)">
+                        <div class="entry-title">
+                            <span class="entry-date">1150</span>
+                            <span class="entry-name" data-lang="fr">Tolède — traduire pour transformer</span>
+                        </div>
+                        <span class="entry-toggle">▼</span>
+                    </div>
+                    <div class="entry-content">
+                        <h4>Ordre créé</h4>
+                        <p>Infrastructure de "compatibilité cognitive
+<div class="entry" data-age="age4">
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">1150</span>
@@ -926,7 +1763,7 @@
                     </div>
                     <div class="entry-content">
                         <h4>Ordre créé</h4>
-                        <p>Production de la vérité par la confrontation réglée ( disputatio ), créant une autorité intellectuelle autonome face au pouvoir politique et religieux.</p>
+                        <p>Production de la vérité par la confrontation réglée (disputatio), créant une autorité intellectuelle autonome face au pouvoir politique et religieux.</p>
                         <h4>Dette déportée</h4>
                         <p>Coût social de l'entretien d'une population étudiante improductive ; dette matérielle (collèges, livres) ; exclusion de ceux qui ne maîtrisent pas le code scolastique.</p>
                         <div class="entry-categories">(Cognitif, Social, Économique)</div>
@@ -960,7 +1797,7 @@
                     </div>
                     <div class="entry-content">
                         <h4>Ordre créé</h4>
-                        <p>Limitation du pouvoir royal par un contrat écrit, instaurant la prévisibilité de la loi ( due process ) et un droit de résistance.</p>
+                        <p>Limitation du pouvoir royal par un contrat écrit, instaurant la prévisibilité de la loi (due process) et un droit de résistance.</p>
                         <h4>Dette déportée</h4>
                         <p>Coût d'un appareil judiciaire permanent ; friction procédurale comme nouvelle forme de conflit ; la paix interne se paie parfois d'une violence exportée aux marges.</p>
                         <div class="entry-categories">(Juridique, Politique, Social)</div>
@@ -971,7 +1808,7 @@
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">1272</span>
-                            <span class="entry-name" data-lang="fr">Thomas d’Aquin — l'architecte des compatibilités</span>
+                            <span class="entry-name" data-lang="fr">Thomas d'Aquin — l'architecte des compatibilités</span>
                         </div>
                         <span class="entry-toggle">▼</span>
                     </div>
@@ -981,23 +1818,6 @@
                         <h4>Dette déportée</h4>
                         <p>Coût institutionnel (querelles universitaires) ; le conflit est déplacé vers des points techniques qui nourriront les schismes futurs ; la clarté se paie en exclusions conceptuelles.</p>
                         <div class="entry-categories">(Philosophique, Cognitif, Symbolique)</div>
-                    </div>
-                </div>
-
-                <div class="entry" data-age="age4">
-                    <div class="entry-header" onclick="toggleEntry(this)">
-                        <div class="entry-title">
-                            <span class="entry-date">1314</span>
-                            <span class="entry-name" data-lang="fr">Templiers — transformer le crédo en crédit</span>
-                        </div>
-                        <span class="entry-toggle">▼</span>
-                    </div>
-                    <div class="entry-content">
-                        <h4>Ordre créé</h4>
-                        <p>Réseau financier transnational où la confiance religieuse garantit la circulation de la valeur sans transport de métal (lettres de change).</p>
-                        <h4>Dette déportée</h4>
-                        <p>La centralisation de l'information financière par un ordre autonome devient une menace pour l'État, qui le détruit et s'approprie sa technologie de contrôle.</p>
-                        <div class="entry-categories">(Économique, Politique, Technique)</div>
                     </div>
                 </div>
 
@@ -1021,8 +1841,25 @@
                 <div class="entry" data-age="age4">
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
+                            <span class="entry-date">1314</span>
+                            <span class="entry-name" data-lang="fr">Templiers — transformer le crédo en crédit</span>
+                        </div>
+                        <span class="entry-toggle">▼</span>
+                    </div>
+                    <div class="entry-content">
+                        <h4>Ordre créé</h4>
+                        <p>Réseau financier transnational où la confiance religieuse garantit la circulation de la valeur sans transport de métal (lettres de change).</p>
+                        <h4>Dette déportée</h4>
+                        <p>La centralisation de l'information financière par un ordre autonome devient une menace pour l'État, qui le détruit et s'approprie sa technologie de contrôle.</p>
+                        <div class="entry-categories">(Économique, Politique, Technique)</div>
+                    </div>
+                </div>
+
+                <div class="entry" data-age="age4">
+                    <div class="entry-header" onclick="toggleEntry(this)">
+                        <div class="entry-title">
                             <span class="entry-date">1325</span>
-                            <span class="entry-name" data-lang="fr">Tombouctou — l’encre dans le sable</span>
+                            <span class="entry-name" data-lang="fr">Tombouctou — l'encre dans le sable</span>
                         </div>
                         <span class="entry-toggle">▼</span>
                     </div>
@@ -1045,7 +1882,7 @@
                     </div>
                     <div class="entry-content">
                         <h4>Ordre créé</h4>
-                        <p>Modèle cyclique de l'histoire qui rend intelligible la montée et la chute des dynasties par la force de cohésion sociale ( 'asabiyya ).</p>
+                        <p>Modèle cyclique de l'histoire qui rend intelligible la montée et la chute des dynasties par la force de cohésion sociale ('asabiyya).</p>
                         <h4>Dette déportée</h4>
                         <p>La lucidité sur la mécanique du pouvoir peut conduire au cynisme ou à la paralysie ; le cycle lui-même est une dette de sang et de ressources payée à chaque transition.</p>
                         <div class="entry-categories">(Politique, Philosophique, Social)</div>
@@ -1073,7 +1910,7 @@
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">1435</span>
-                            <span class="entry-name" data-lang="fr">Alberti — cadrer le monde, construire l’œil</span>
+                            <span class="entry-name" data-lang="fr">Alberti — cadrer le monde, construire l'œil</span>
                         </div>
                         <span class="entry-toggle">▼</span>
                     </div>
@@ -1119,7 +1956,7 @@
                         <div class="entry-categories">(Économique, Cognitif, Technique)</div>
                     </div>
                 </div>
-
+<!-- CINQUIÈME ÂGE : La machine-État moderne -->
                 <div class="entry" data-age="age5">
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
@@ -1130,7 +1967,7 @@
                     </div>
                     <div class="entry-content">
                         <h4>Ordre créé</h4>
-                        <p>Stabilité et pérennité de l'État par une technologie de la décision ( virtù ) qui juge les actes à leurs conséquences publiques, non à leur morale privée.</p>
+                        <p>Stabilité et pérennité de l'État par une technologie de la décision (virtù) qui juge les actes à leurs conséquences publiques, non à leur morale privée.</p>
                         <h4>Dette déportée</h4>
                         <p>Dette morale d'une cruauté devenue instrument de gouvernement ; coût humain et économique des "nécessités" payé par les populations civiles.</p>
                         <div class="entry-categories">(Politique, Moral, Social)</div>
@@ -1147,7 +1984,7 @@
                     </div>
                     <div class="entry-content">
                         <h4>Ordre créé</h4>
-                        <p>Rétablissement d'une vérité textuelle (Nouveau Testament) par la méthode philologique ( ad fontes ), fondant la critique moderne.</p>
+                        <p>Rétablissement d'une vérité textuelle (Nouveau Testament) par la méthode philologique (ad fontes), fondant la critique moderne.</p>
                         <h4>Dette déportée</h4>
                         <p>La remise en cause de la Vulgate fissure l'autorité de l'Église, fournissant les outils intellectuels de la Réforme et des guerres de religion qui s'ensuivent.</p>
                         <div class="entry-categories">(Cognitif, Symbolique, Politique)</div>
@@ -1164,7 +2001,7 @@
                     </div>
                     <div class="entry-content">
                         <h4>Ordre créé</h4>
-                        <p>Décentralisation de l'accès au salut ( sola fide, sola scriptura ), la conscience individuelle devenant le validateur de la foi, sans intermédiaire ecclésial.</p>
+                        <p>Décentralisation de l'accès au salut (sola fide, sola scriptura), la conscience individuelle devenant le validateur de la foi, sans intermédiaire ecclésial.</p>
                         <h4>Dette déportée</h4>
                         <p>Fragmentation de la chrétienté, guerres de religion ; le coût de l'ordre confessionnel est payé en conflits armés et en divisions politiques durables.</p>
                         <div class="entry-categories">(Symbolique, Politique, Social)</div>
@@ -1217,7 +2054,7 @@
                         <h4>Ordre créé</h4>
                         <p>Réseau commercial planétaire, financé par un capital liquide et anonyme (actions), doté de prérogatives régaliennes (armer, négocier).</p>
                         <h4>Dette déportée</h4>
-                        <p>Violence structurelle (massacre de Banda ), monocultures forcées, écocides inauguraux et externalisation des risques sur les populations colonisées.</p>
+                        <p>Violence structurelle (massacre de Banda), monocultures forcées, écocides inauguraux et externalisation des risques sur les populations colonisées.</p>
                         <div class="entry-categories">(Économique, Géopolitique, Écologique)</div>
                     </div>
                 </div>
@@ -1249,7 +2086,7 @@
                     </div>
                     <div class="entry-content">
                         <h4>Ordre créé</h4>
-                        <p>Un droit commun entre les nations, fondé sur la raison naturelle, qui encadre la guerre ( jus ad bellum, jus in bello ) et la rend procédurale.</p>
+                        <p>Un droit commun entre les nations, fondé sur la raison naturelle, qui encadre la guerre (jus ad bellum, jus in bello) et la rend procédurale.</p>
                         <h4>Dette déportée</h4>
                         <p>En "civilisant" la guerre, on la rend gouvernable et donc durable ; l'ordre juridique légitime la violence sous conditions, au détriment des populations civiles qui en paient le coût.</p>
                         <div class="entry-categories">(Juridique, Politique, Moral)</div>
@@ -1266,9 +2103,9 @@
                     </div>
                     <div class="entry-content">
                         <h4>Ordre créé</h4>
-                        <p>Un protocole d'audit de la pensée ( Discours de la méthode ) qui fonde la certitude sur l'évidence individuelle ( cogito ) et non sur l'autorité extérieure.</p>
+                        <p>Un protocole d'audit de la pensée (Discours de la méthode) qui fonde la certitude sur l'évidence individuelle (cogito) et non sur l'autorité extérieure.</p>
                         <h4>Dette déportée</h4>
-                        <p>Fracture entre l'âme et le corps ( res cogitans/extensa ), reléguant le sensible ; dette ontologique et médicale qui traitera le corps comme une machine.</p>
+                        <p>Fracture entre l'âme et le corps (res cogitans/extensa), reléguant le sensible ; dette ontologique et médicale qui traitera le corps comme une machine.</p>
                         <div class="entry-categories">(Philosophique, Cognitif, Social)</div>
                     </div>
                 </div>
@@ -1306,12 +2143,11 @@
                         <div class="entry-categories">(Politique, Social, Philosophique)</div>
                     </div>
                 </div>
-
-                <div class="entry" data-age="age5">
+<div class="entry" data-age="age5">
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">1661</span>
-                            <span class="entry-name" data-lang="fr">Raison d’État — le crime légitime</span>
+                            <span class="entry-name" data-lang="fr">Raison d'État — le crime légitime</span>
                         </div>
                         <span class="entry-toggle">▼</span>
                     </div>
@@ -1321,23 +2157,6 @@
                         <h4>Dette déportée</h4>
                         <p>Pression fiscale écrasante sur le peuple ; la gloire de l'État se finance par la misère organisée des campagnes et les guerres perpétuelles.</p>
                         <div class="entry-categories">(Politique, Économique, Social)</div>
-                    </div>
-                </div>
-
-                <div class="entry" data-age="age5">
-                    <div class="entry-header" onclick="toggleEntry(this)">
-                        <div class="entry-title">
-                            <span class="entry-date">1689</span>
-                            <span class="entry-name" data-lang="fr">Locke — obéir pour être libre</span>
-                        </div>
-                        <span class="entry-toggle">▼</span>
-                    </div>
-                    <div class="entry-content">
-                        <h4>Ordre créé</h4>
-                        <p>Un gouvernement légitime fondé sur le consentement et la garantie des droits naturels (vie, liberté, propriété), avec un droit de résistance inscrit.</p>
-                        <h4>Dette déportée</h4>
-                        <p>La liberté politique en métropole est financée par la servitude économique en colonie (esclavage, expropriation des terres).</p>
-                        <div class="entry-categories">(Politique, Économique, Inégalités)</div>
                     </div>
                 </div>
 
@@ -1355,6 +2174,23 @@
                         <h4>Dette déportée</h4>
                         <p>Le monde-horloge n'a plus besoin de l'hypothèse divine pour fonctionner ; le désordre est déplacé de la physique vers la métaphysique (désenchantement du monde).</p>
                         <div class="entry-categories">(Cognitif, Philosophique, Symbolique)</div>
+                    </div>
+                </div>
+
+                <div class="entry" data-age="age5">
+                    <div class="entry-header" onclick="toggleEntry(this)">
+                        <div class="entry-title">
+                            <span class="entry-date">1689</span>
+                            <span class="entry-name" data-lang="fr">Locke — obéir pour être libre</span>
+                        </div>
+                        <span class="entry-toggle">▼</span>
+                    </div>
+                    <div class="entry-content">
+                        <h4>Ordre créé</h4>
+                        <p>Un gouvernement légitime fondé sur le consentement et la garantie des droits naturels (vie, liberté, propriété), avec un droit de résistance inscrit.</p>
+                        <h4>Dette déportée</h4>
+                        <p>La liberté politique en métropole est financée par la servitude économique en colonie (esclavage, expropriation des terres).</p>
+                        <div class="entry-categories">(Politique, Économique, Inégalités)</div>
                     </div>
                 </div>
 
@@ -1396,7 +2232,7 @@
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">1755</span>
-                            <span class="entry-name" data-lang="fr">Voltaire — rien n’est si sûr que le doute</span>
+                            <span class="entry-name" data-lang="fr">Voltaire — rien n'est si sûr que le doute</span>
                         </div>
                         <span class="entry-toggle">▼</span>
                     </div>
@@ -1419,7 +2255,7 @@
                     </div>
                     <div class="entry-content">
                         <h4>Ordre créé</h4>
-                        <p>Première modélisation macroéconomique ( Tableau économique ), voyant l'économie comme un organisme dont la richesse provient de la terre.</p>
+                        <p>Première modélisation macroéconomique (Tableau économique), voyant l'économie comme un organisme dont la richesse provient de la terre.</p>
                         <h4>Dette déportée</h4>
                         <p>L'ordre libéralisé des flux (libre circulation du grain) déplace le désordre sur les prix, provoquant des émeutes de la faim ("guerre des farines").</p>
                         <div class="entry-categories">(Économique, Politique, Social)</div>
@@ -1464,7 +2300,7 @@
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">1762</span>
-                            <span class="entry-name" data-lang="fr">L’assurance — le code du risque</span>
+                            <span class="entry-name" data-lang="fr">L'assurance — le code du risque</span>
                         </div>
                         <span class="entry-toggle">▼</span>
                     </div>
@@ -1498,7 +2334,7 @@
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">1776</span>
-                            <span class="entry-name" data-lang="fr">Amérique — l’évangile du profit</span>
+                            <span class="entry-name" data-lang="fr">Amérique — l'évangile du profit</span>
                         </div>
                         <span class="entry-toggle">▼</span>
                     </div>
@@ -1527,7 +2363,7 @@
                         <div class="entry-categories">(Philosophique, Politique, Temporel)</div>
                     </div>
                 </div>
-
+<!-- SIXIÈME ÂGE : L'industrialisation et les nations -->
                 <div class="entry" data-age="age6">
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
@@ -1582,7 +2418,7 @@
                 <div class="entry" data-age="age6">
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
-                            <span class="entry-date">1791–1804</span>
+                            <span class="entry-date">1791-1804</span>
                             <span class="entry-name" data-lang="fr">Haïti — la liberté contre ses inventeurs</span>
                         </div>
                         <span class="entry-toggle">▼</span>
@@ -1600,7 +2436,7 @@
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">1792</span>
-                            <span class="entry-name" data-lang="fr">Olympe de Gouges — l’universel décapité</span>
+                            <span class="entry-name" data-lang="fr">Olympe de Gouges — l'universel décapité</span>
                         </div>
                         <span class="entry-toggle">▼</span>
                     </div>
@@ -1617,7 +2453,7 @@
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">1792</span>
-                            <span class="entry-name" data-lang="fr">L’Amour Romantique — le cœur code d’exclusion</span>
+                            <span class="entry-name" data-lang="fr">L'Amour Romantique — le cœur code d'exclusion</span>
                         </div>
                         <span class="entry-toggle">▼</span>
                     </div>
@@ -1718,8 +2554,8 @@
                 <div class="entry" data-age="age6">
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
-                            <span class="entry-date">1833–1865</span>
-                            <span class="entry-name" data-lang="fr">L'abolition de l'esclavage — l’humain proclamé</span>
+                            <span class="entry-date">1833-1865</span>
+                            <span class="entry-name" data-lang="fr">L'abolition de l'esclavage — l'humain proclamé</span>
                         </div>
                         <span class="entry-toggle">▼</span>
                     </div>
@@ -1731,8 +2567,7 @@
                         <div class="entry-categories">(Inégalités, Économique, Violence symbolique)</div>
                     </div>
                 </div>
-
-                <div class="entry" data-age="age6">
+<div class="entry" data-age="age6">
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">1835</span>
@@ -1753,7 +2588,7 @@
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">1835</span>
-                            <span class="entry-name" data-lang="fr">Télégraphe — l’humanité câblée</span>
+                            <span class="entry-name" data-lang="fr">Télégraphe — l'humanité câblée</span>
                         </div>
                         <span class="entry-toggle">▼</span>
                     </div>
@@ -1770,7 +2605,7 @@
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">1848</span>
-                            <span class="entry-name" data-lang="fr">Printemps 48 — l’échec simultané des peuples</span>
+                            <span class="entry-name" data-lang="fr">Printemps 48 — l'échec simultané des peuples</span>
                         </div>
                         <span class="entry-toggle">▼</span>
                     </div>
@@ -1786,8 +2621,8 @@
                 <div class="entry" data-age="age6">
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
-                            <span class="entry-date">1853–1870</span>
-                            <span class="entry-name" data-lang="fr">Haussmann — l’ordre dans la pierre</span>
+                            <span class="entry-date">1853-1870</span>
+                            <span class="entry-name" data-lang="fr">Haussmann — l'ordre dans la pierre</span>
                         </div>
                         <span class="entry-toggle">▼</span>
                     </div>
@@ -1872,7 +2707,7 @@
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">1868</span>
-                            <span class="entry-name" data-lang="fr">Meiji — devenir l’autre pour rester soi</span>
+                            <span class="entry-name" data-lang="fr">Meiji — devenir l'autre pour rester soi</span>
                         </div>
                         <span class="entry-toggle">▼</span>
                     </div>
@@ -1935,11 +2770,10 @@
                         <div class="entry-categories">(Énergétique, Écologique, Temporel)</div>
                     </div>
                 </div>
-
                 <div class="entry" data-age="age6">
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
-                            <span class="entry-date">1884 -1885</span>
+                            <span class="entry-date">1884-1885</span>
                             <span class="entry-name" data-lang="fr">Berlin — le monde découpé à la règle</span>
                         </div>
                         <span class="entry-toggle">▼</span>
@@ -1952,12 +2786,11 @@
                         <div class="entry-categories">(Géopolitique, Social, Spatial)</div>
                     </div>
                 </div>
-
-                <div class="entry" data-age="age6">
+<div class="entry" data-age="age6">
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">1887</span>
-                            <span class="entry-name" data-lang="fr">Nietzsche — l’homme-dynamite</span>
+                            <span class="entry-name" data-lang="fr">Nietzsche — l'homme-dynamite</span>
                         </div>
                         <span class="entry-toggle">▼</span>
                     </div>
@@ -1965,7 +2798,7 @@
                         <h4>Ordre créé</h4>
                         <p>Lucidité par la « réévaluation de toutes les valeurs » ; diagnostic de la « mort de Dieu » et de la morale du ressentiment.</p>
                         <h4>Dette déportée</h4>
-                        <p>Vide métaphysique comblé par des absolus de substitution (Nation, Race, Classe) ; la « faute » ( Schuld ) se déplace de la théologie vers la politique et l'économie.</p>
+                        <p>Vide métaphysique comblé par des absolus de substitution (Nation, Race, Classe) ; la « faute » (Schuld) se déplace de la théologie vers la politique et l'économie.</p>
                         <div class="entry-categories">(Moral, Philosophique, Politique)</div>
                     </div>
                 </div>
@@ -1973,7 +2806,7 @@
                 <div class="entry" data-age="age6">
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
-                            <span class="entry-date">1894–1906</span>
+                            <span class="entry-date">1894-1906</span>
                             <span class="entry-name" data-lang="fr">L'Affaire Dreyfus — la République face à son miroir brisé</span>
                         </div>
                         <span class="entry-toggle">▼</span>
@@ -1991,13 +2824,13 @@
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">1900</span>
-                            <span class="entry-name" data-lang="fr">Freud — l’inconscient comme scène</span>
+                            <span class="entry-name" data-lang="fr">Freud — l'inconscient comme scène</span>
                         </div>
                         <span class="entry-toggle">▼</span>
                     </div>
                     <div class="entry-content">
                         <h4>Ordre créé</h4>
-                        <p>Intelligibilité de la psyché par la cartographie de l'inconscient ; méthode thérapeutique ( talking cure ) qui donne un sens aux symptômes.</p>
+                        <p>Intelligibilité de la psyché par la cartographie de l'inconscient ; méthode thérapeutique (talking cure) qui donne un sens aux symptômes.</p>
                         <h4>Dette déportée</h4>
                         <p>L'ordre d'une défense (symptôme) déplace le désordre d'une pulsion ; la conscience est dépossédée de sa maîtrise ; dette psychique gérée mais jamais annulée.</p>
                         <div class="entry-categories">(Cognitif, Psychique, Social)</div>
@@ -2008,7 +2841,7 @@
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">1905</span>
-                            <span class="entry-name" data-lang="fr">La séparation des Églises et de l'État — la fille aînée s’émancipe</span>
+                            <span class="entry-name" data-lang="fr">La séparation des Églises et de l'État — la fille aînée s'émancipe</span>
                         </div>
                         <span class="entry-toggle">▼</span>
                     </div>
@@ -2021,10 +2854,11 @@
                     </div>
                 </div>
 
+                <!-- SEPTIÈME ÂGE : Le métaprogramme contemporain -->
                 <div class="entry" data-age="age7">
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
-                            <span class="entry-date">1905–1915</span>
+                            <span class="entry-date">1905-1915</span>
                             <span class="entry-name" data-lang="fr">Einstein — temps élastique, espace courbe</span>
                         </div>
                         <span class="entry-toggle">▼</span>
@@ -2041,7 +2875,7 @@
                 <div class="entry" data-age="age7">
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
-                            <span class="entry-date">1914–1918</span>
+                            <span class="entry-date">1914-1918</span>
                             <span class="entry-name" data-lang="fr">Guerre totale — la machine à broyer l'humain</span>
                         </div>
                         <span class="entry-toggle">▼</span>
@@ -2050,7 +2884,7 @@
                         <h4>Ordre créé</h4>
                         <p>Mobilisation intégrale de la société (usines, capitaux, esprits) pour une efficacité militaire maximale.</p>
                         <h4>Dette déportée</h4>
-                        <p>Dette humaine (millions de morts), psychique ( shell shock ), écologique (zones rouges) et politique (traités qui programment la guerre suivante).</p>
+                        <p>Dette humaine (millions de morts), psychique (shell shock), écologique (zones rouges) et politique (traités qui programment la guerre suivante).</p>
                         <div class="entry-categories">(Social, Écologique, Politique)</div>
                     </div>
                 </div>
@@ -2075,7 +2909,7 @@
                 <div class="entry" data-age="age7">
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
-                            <span class="entry-date">1922–1928</span>
+                            <span class="entry-date">1922-1928</span>
                             <span class="entry-name" data-lang="fr">Lippmann & Bernays — le consentement qui s'ignore</span>
                         </div>
                         <span class="entry-toggle">▼</span>
@@ -2092,7 +2926,7 @@
                 <div class="entry" data-age="age7">
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
-                            <span class="entry-date">1925–1927</span>
+                            <span class="entry-date">1925-1927</span>
                             <span class="entry-name" data-lang="fr">Quanta — un monde qui joue aux dés</span>
                         </div>
                         <span class="entry-toggle">▼</span>
@@ -2127,7 +2961,7 @@
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">1936</span>
-                            <span class="entry-name" data-lang="fr">Front populaire — prendre les symboles, céder l’essentiel</span>
+                            <span class="entry-name" data-lang="fr">Front populaire — prendre les symboles, céder l'essentiel</span>
                         </div>
                         <span class="entry-toggle">▼</span>
                     </div>
@@ -2143,7 +2977,7 @@
                 <div class="entry" data-age="age7">
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
-                            <span class="entry-date">1936–1944</span>
+                            <span class="entry-date">1936-1944</span>
                             <span class="entry-name" data-lang="fr">Industrie culturelle vs service public — la guerre des récits</span>
                         </div>
                         <span class="entry-toggle">▼</span>
@@ -2173,8 +3007,7 @@
                         <div class="entry-categories">(Géopolitique, Temporel, Moral)</div>
                     </div>
                 </div>
-
-                <div class="entry" data-age="age7">
+<div class="entry" data-age="age7">
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">1940</span>
@@ -2194,7 +3027,7 @@
                 <div class="entry" data-age="age7">
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
-                            <span class="entry-date">1940–1945</span>
+                            <span class="entry-date">1940-1945</span>
                             <span class="entry-name" data-lang="fr">Churchill — l'orateur qui parlait l'empire à mort</span>
                         </div>
                         <span class="entry-toggle">▼</span>
@@ -2280,7 +3113,7 @@
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">1948</span>
-                            <span class="entry-name" data-lang="fr">Shannon — tuer le sens, faire naître l’information</span>
+                            <span class="entry-name" data-lang="fr">Shannon — tuer le sens, faire naître l'information</span>
                         </div>
                         <span class="entry-toggle">▼</span>
                     </div>
@@ -2347,7 +3180,7 @@
                 <div class="entry" data-age="age7">
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
-                            <span class="entry-date">1958–1988</span>
+                            <span class="entry-date">1958-1988</span>
                             <span class="entry-name" data-lang="fr">Climat — mesurer pour ignorer</span>
                         </div>
                         <span class="entry-toggle">▼</span>
@@ -2365,7 +3198,7 @@
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">1960</span>
-                            <span class="entry-name" data-lang="fr">Afrique — l’an II des indépendances</span>
+                            <span class="entry-name" data-lang="fr">Afrique — l'an II des indépendances</span>
                         </div>
                         <span class="entry-toggle">▼</span>
                     </div>
@@ -2394,8 +3227,7 @@
                         <div class="entry-categories">(Social, Technique, Inégalités)</div>
                     </div>
                 </div>
-
-                <div class="entry" data-age="age7">
+<div class="entry" data-age="age7">
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">1962</span>
@@ -2509,7 +3341,7 @@
                         <h4>Ordre créé</h4>
                         <p>Cartographie de nos biais cognitifs, révélant une architecture prévisible de l'irrationalité humaine.</p>
                         <h4>Dette déportée</h4>
-                        <p>Ce savoir devient un outil de manipulation ( nudge ), déplaçant le désordre de nos erreurs vers une servitude consentie face à des "architectures de choix".</p>
+                        <p>Ce savoir devient un outil de manipulation (nudge), déplaçant le désordre de nos erreurs vers une servitude consentie face à des "architectures de choix".</p>
                         <div class="entry-categories">(Cognitif, Politique, Économique)</div>
                     </div>
                 </div>
@@ -2552,7 +3384,7 @@
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">1991</span>
-                            <span class="entry-name" data-lang="fr">URSS — l’empire qui s’est suicidé en voulant se soigner</span>
+                            <span class="entry-name" data-lang="fr">URSS — l'empire qui s'est suicidé en voulant se soigner</span>
                         </div>
                         <span class="entry-toggle">▼</span>
                     </div>
@@ -2615,8 +3447,7 @@
                         <div class="entry-categories">(Cognitif, Économique, Social)</div>
                     </div>
                 </div>
-
-                <div class="entry" data-age="age7">
+<div class="entry" data-age="age7">
                     <div class="entry-header" onclick="toggleEntry(this)">
                         <div class="entry-title">
                             <span class="entry-date">2000</span>
@@ -2802,3 +3633,46 @@
                         <div class="entry-categories">(Politique, Économique, Social)</div>
                     </div>
                 </div>
+
+            </div>
+        </section>
+        
+        <!-- Section Contact -->
+        <section class="contact-section">
+            <h2 class="section-title">
+                <span data-lang="fr">Contact</span>
+                <span data-lang="en" style="display:none">Contact</span>
+                <span data-lang="es" style="display:none">Contacto</span>
+            </h2>
+            <form class="contact-form" action="https://formspree.io/f/mblaprga" method="POST">
+                <div class="form-group">
+                    <label class="form-label" for="name">
+                        <span data-lang="fr">Nom</span>
+                        <span data-lang="en" style="display:none">Name</span>
+                        <span data-lang="es" style="display:none">Nombre</span>
+                    </label>
+                    <input type="text" id="name" name="name" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="message">Message</label>
+                    <textarea id="message" name="message" class="form-textarea" required></textarea>
+                </div>
+                <button type="submit" class="form-submit">
+                    <span data-lang="fr">ENVOYER</span>
+                    <span data-lang="en" style="display:none">SEND</span>
+                    <span data-lang="es" style="display:none">ENVIAR</span>
+                </button>
+            </form>
+        </section>
+        
+        <!-- Footer -->
+        <footer>
+            <p data-lang="fr">Si cette lecture vous a éclairé, un retour sur votre plateforme d'achat aide d'autres lecteurs à découvrir ces idées.</p>
+            <p data-lang="en" style="display:none">If this reading has enlightened you, a review on your purchase platform helps other readers discover these ideas.</p>
+            <p data-lang="es" style="display:none">Si esta lectura te ha iluminado, una reseña en tu plataforma de compra ayuda a otros lectores a descubrir estas ideas.</p>
+        </footer>
+    </div>
