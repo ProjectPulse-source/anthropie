@@ -647,16 +647,16 @@
 <body>
     <!-- Boutons de partage -->
     <div class="share-buttons">
-        <a href="#" class="share-btn" onclick="shareOnTwitter(); return false;" title="Twitter">
+        <a href="https://amzn.eu/d/9gnUgJB" class="share-btn" onclick="shareOnTwitter(); return false;" title="Twitter">
             <span>𝕏</span>
         </a>
-        <a href="#" class="share-btn" onclick="shareOnFacebook(); return false;" title="Facebook">
+        <a href="https://amzn.eu/d/9gnUgJB" class="share-btn" onclick="shareOnFacebook(); return false;" title="Facebook">
             <span>f</span>
         </a>
-        <a href="#" class="share-btn" onclick="shareOnLinkedIn(); return false;" title="LinkedIn">
+        <a href="https://amzn.eu/d/9gnUgJB" class="share-btn" onclick="shareOnLinkedIn(); return false;" title="LinkedIn">
             <span>in</span>
         </a>
-        <a href="#" class="share-btn" onclick="copyLink(); return false;" title="Copier le lien">
+        <a href="https://amzn.eu/d/9gnUgJB" class="share-btn" onclick="copyLink(); return false;" title="Copier le lien">
             <span>🔗</span>
         </a>
     </div>
@@ -803,18 +803,69 @@
             </div>
             
             <div class="purchase-buttons">
-                <a href="#" class="purchase-btn">
-                    <span data-lang="fr">Commander le livre</span>
-                    <span data-lang="en" style="display:none">Order the book</span>
-                    <span data-lang="es" style="display:none">Pedir el libro</span>
-                </a>
-                <a href="#" class="purchase-btn secondary">
-                    <span data-lang="fr">Version ebook</span>
-                    <span data-lang="en" style="display:none">Ebook version</span>
-                    <span data-lang="es" style="display:none">Versión ebook</span>
-                </a>
-            </div>
-            
+    <a href="https://amzn.eu/d/4ugnFIk" target="_blank" class="purchase-btn">
+        <span data-lang="fr">Commander le livre</span>
+        <span data-lang="en" style="display:none">Order the book</span>
+        <span data-lang="es" style="display:none">Pedir el libro</span>
+    </a>
+    <a href="https://amzn.eu/d/cik1rjP" target="_blank" class="purchase-btn secondary">
+        <span data-lang="fr">Version ebook</span>
+        <span data-lang="en" style="display:none">Ebook version</span>
+        <span data-lang="es" style="display:none">Versión ebook</span>
+    </a>
+</div>
+<!-- Section de partage premium -->
+<div style="margin-top: 50px; padding: 40px; background: linear-gradient(135deg, #f8f8f8 0%, white 100%); border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid rgba(198, 146, 20, 0.15); text-align: center;">
+    <h3 style="color: #333; margin-bottom: 10px; font-size: 1.4em; font-weight: 300; letter-spacing: 0.05em;">
+        <span data-lang="fr">Utile pour vous, précieux pour d'autres</span>
+        <span data-lang="en" style="display:none">Useful for you, valuable for others</span>
+        <span data-lang="es" style="display:none">Útil para ti, valioso para otros</span>
+    </h3>
+    
+    <p style="color: #666; margin-bottom: 25px; font-size: 1.1em;">
+        <strong data-lang="fr">Partagez sur :</strong>
+        <strong data-lang="en" style="display:none">Share on:</strong>
+        <strong data-lang="es" style="display:none">Compartir en:</strong>
+    </p>
+    
+    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px;">
+        <a href="#" onclick="shareOnLinkedInBook(); return false;" style="padding: 12px 25px; background: #0077b5; color: white; text-decoration: none; border-radius: 8px; font-weight: 500; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 8px;">
+            <span style="font-size: 1.2em;">in</span>
+            <span data-lang="fr">LinkedIn</span>
+            <span data-lang="en" style="display:none">LinkedIn</span>
+            <span data-lang="es" style="display:none">LinkedIn</span>
+        </a>
+        
+        <a href="#" onclick="shareOnTwitterBook(); return false;" style="padding: 12px 25px; background: #000; color: white; text-decoration: none; border-radius: 8px; font-weight: 500; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 8px;">
+            <span style="font-size: 1.2em;">𝕏</span>
+            <span data-lang="fr">Twitter</span>
+            <span data-lang="en" style="display:none">Twitter</span>
+            <span data-lang="es" style="display:none">Twitter</span>
+        </a>
+    </div>
+    
+    <p style="color: #666; margin-bottom: 20px; font-size: 1em;">
+        <strong data-lang="fr">Pas sur ces réseaux ?</strong>
+        <strong data-lang="en" style="display:none">Not on these networks?</strong>
+        <strong data-lang="es" style="display:none">¿No estás en estas redes?</strong>
+    </p>
+    
+    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+        <a href="#" onclick="copyBookLink(); return false;" style="padding: 12px 25px; background: white; color: #333; text-decoration: none; border: 2px solid #e0e0e0; border-radius: 8px; font-weight: 500; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 8px;">
+            <span style="font-size: 1.1em;">🔗</span>
+            <span data-lang="fr">Copier le lien</span>
+            <span data-lang="en" style="display:none">Copy link</span>
+            <span data-lang="es" style="display:none">Copiar enlace</span>
+        </a>
+        
+        <a href="#" onclick="shareByEmail(); return false;" style="padding: 12px 25px; background: white; color: #333; text-decoration: none; border: 2px solid #e0e0e0; border-radius: 8px; font-weight: 500; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 8px;">
+            <span style="font-size: 1.1em;">✉️</span>
+            <span data-lang="fr">Envoyer par email</span>
+            <span data-lang="en" style="display:none">Send by email</span>
+            <span data-lang="es" style="display:none">Enviar por email</span>
+        </a>
+    </div>
+</div>            
             <div style="margin-top: 50px; padding: 30px; background: linear-gradient(135deg, #fafafa 0%, white 100%); border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-left: 4px solid #c69214;">
                 <h3 style="color: #333; margin-bottom: 20px; font-size: 1.3em; text-align: center;">
                     <span data-lang="fr">Le concept d'Anthropie</span>
@@ -3891,11 +3942,61 @@ La entropía es inevitable; la antropía, política. Confundir ambas es tratar d
                 setTimeout(() => notification.remove(), 2000);
             });
             return false;
+// Fonctions de partage spécifiques au livre
+function shareOnLinkedInBook() {
+    const url = 'https://amzn.eu/d/4ugnFIk';
+    const text = '"Ordre ici. Dette ailleurs." ANTHROPIE révèle la mécanique cachée de nos sociétés : comment tout progrès exporte ses coûts. Une grille de lecture essentielle.';
+    window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url), '_blank');
+    return false;
+}
+
+function shareOnTwitterBook() {
+    const url = 'https://amzn.eu/d/4ugnFIk';
+    const text = 'Lu ANTHROPIE : enfin une grille pour décoder pourquoi toute "solution" empire le problème. Ordre ici. Dette ailleurs.';
+    window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text + ' ' + url), '_blank');
+    return false;
+}
+
+function copyBookLink() {
+    const url = 'https://amzn.eu/d/4ugnFIk';
+    navigator.clipboard.writeText(url).then(function() {
+        // Créer une notification élégante
+        const notification = document.createElement('div');
+        notification.textContent = 'Lien Amazon copié !';
+        notification.style.cssText = `
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #333;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            z-index: 10000;
+            animation: fadeInOut 2s;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        `;
+        document.body.appendChild(notification);
+        setTimeout(() => notification.remove(), 2000);
+    });
+    return false;
+}
+
+function shareByEmail() {
+    const subject = encodeURIComponent('Un livre qui décrypte nos systèmes');
+    const body = encodeURIComponent(`Je viens de terminer ANTHROPIE.
+
+La thèse : tout ordre créé quelque part génère une dette déplacée ailleurs. L'auteur retrace avec précision ce mécanisme sur 3 millions d'années, des premiers outils aux algorithmes actuels.
+
+Si le sujet t'intéresse : https://amzn.eu/d/4ugnFIk`);
+    
+    window.location.href = 'mailto:?subject=' + subject + '&body=' + body;
+    return false;
+}
         }
     </script>
 </body>
 </html>
-
 
 
 
