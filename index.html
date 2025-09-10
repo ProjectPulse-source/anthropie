@@ -3920,28 +3920,30 @@ La entropía es inevitable; la antropía, política. Confundir ambas es tratar d
             return false;
         }
         
-        function copyLink() {
-            const url = window.location.href;
-            navigator.clipboard.writeText(url).then(function() {
-                // Créer une notification plus élégante
-                const notification = document.createElement('div');
-                notification.textContent = 'Lien copié !';
-                notification.style.cssText = `
-                    position: fixed;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    background: #333;
-                    color: white;
-                    padding: 15px 30px;
-                    border-radius: 8px;
-                    z-index: 10000;
-                    animation: fadeInOut 2s;
-                `;
-                document.body.appendChild(notification);
-                setTimeout(() => notification.remove(), 2000);
-            });
-            return false;
+       function copyLink() {
+    const url = window.location.href;
+    navigator.clipboard.writeText(url).then(function() {
+        // Créer une notification plus élégante
+        const notification = document.createElement('div');
+        notification.textContent = 'Lien copié !';
+        notification.style.cssText = `
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #333;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            z-index: 10000;
+            animation: fadeInOut 2s;
+        `;
+        document.body.appendChild(notification);
+        setTimeout(() => notification.remove(), 2000);
+    });
+    return false;
+}  // <-- ACCOLADE AJOUTÉE ICI
+
 // Fonctions de partage spécifiques au livre
 function shareOnLinkedInBook() {
     const url = 'https://amzn.eu/d/4ugnFIk';
@@ -3993,8 +3995,7 @@ Si le sujet t'intéresse : https://amzn.eu/d/4ugnFIk`);
     window.location.href = 'mailto:?subject=' + subject + '&body=' + body;
     return false;
 }
-        }
-    </script>
+           </script>
 </body>
 </html>
 
