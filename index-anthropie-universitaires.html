@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANTHROPIE - Ressources universitaires & chercheurs</title>
+    <meta name="description" content="Ressources universitaires pour ANTHROPIE : Ordre ici. Dette ailleurs. par Stéphane LALUT – résumé académique, usages en séminaire, citation.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+            color: #1a1a1a;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        /* Container principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+        
+        /* Boutons de partage sociaux */
+        .share-buttons {
+            position: fixed;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 999;
+        }
+        
+        .share-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: white;
+            border: 2px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #666;
+            font-size: 1.2em;
+        }
+        
+        .share-btn:hover {
+            background: #c69214;
+            color: white;
+            border-color: #c69214;
+            transform: scale(1.1);
+            box-shadow: 0 5px 20px rgba(198, 146, 20, 0.3);
+        }
+        
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 80px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .press-tag {
+            display: inline-block;
+            background: #1a1a1a;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 0;
+            font-size: 0.75em;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        
+        /* Bloc rapide - sobre et premium */
+        .press-quick-info {
+            background: white;
+            padding: 50px;
+            border-radius: 2px;
+            margin-bottom: 40px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+        
+        .press-tag-large {
+            display: inline-block;
+            background: #1a1a1a;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 0;
+            font-size: 0.75em;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .press-tag-large::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: #c69214;
+        }
+        
+        .quick-facts-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .quick-fact {
+            background: #fafafa;
+            padding: 25px;
+            border-radius: 0;
+            border-left: 3px solid #c69214;
+            transition: all 0.3s ease;
+        }
+        
+        .quick-fact:hover {
+            background: white;
+        }
+        
+        .fact-label {
+            font-size: 0.75em;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #666;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .fact-value {
+            color: #1a1a1a;
+            line-height: 1.7;
+            font-size: 0.95em;
+        }
+        
+        .press-highlight {
+            background: #1a1a1a;
+            color: white;
+            padding: 25px 35px;
+            border-radius: 0;
+            text-align: center;
+            font-size: 1em;
+            line-height: 1.7;
+            border-left: 3px solid #c69214;
+        }
+        
+        .press-highlight strong {
+            color: white;
+            font-weight: 600;
+        }
+        
+        /* Angles / cartes génériques (réutilisées pour usages pédagogiques) */
+        .angles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            margin: 40px 0;
+            background: #e0e0e0;
+        }
+        
+        .angle-card {
+            background: white;
+            padding: 35px;
+            border-radius: 0;
+            transition: all 0.3s ease;
+            text-align: left;
+            border-bottom: 2px solid transparent;
+        }
+        
+        .angle-card:hover {
+            background: #fafafa;
+            border-bottom-color: #c69214;
+        }
+        
+        .angle-card:hover .angle-icon svg {
+            stroke: #c69214;
+        }
+        
+        .angle-icon {
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        
+        .angle-icon svg {
+            stroke: #1a1a1a;
+            transition: stroke 0.3s ease;
+        }
+        
+        .angle-card h3 {
+            color: #1a1a1a;
+            font-size: 1.05em;
+            margin-bottom: 12px;
+            line-height: 1.5;
+            font-weight: 600;
+        }
+        
+        .angle-card p {
+            color: #666;
+            font-size: 0.9em;
+            line-height: 1.7;
+            text-align: left;
+        }
+        
+        /* Questions d'interview (non utilisées ici, mais style conservé) */
+        .questions-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .question-item {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border-left: 5px solid #c69214;
+            display: flex;
+            gap: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .question-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 30px rgba(198, 146, 20, 0.15);
+        }
+        
+        .question-number {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #c69214 0%, #d4a325 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2em;
+        }
+        
+        .question-content h4 {
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 1.05em;
+            line-height: 1.5;
+        }
+        
+        .question-hint {
+            color: #999;
+            font-size: 0.9em;
+            font-style: italic;
+            margin: 0;
+        }
+        
+        /* Service box */
+        .service-presse-box {
+            background: #fafafa;
+            padding: 45px;
+            border-radius: 0;
+            margin-top: 50px;
+            border: 1px solid #e0e0e0;
+            border-left: 3px solid #1a1a1a;
+            text-align: center;
+        }
+        
+        .service-presse-box h3 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .service-presse-box p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .service-presse-box a {
+            color: #c69214;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .service-presse-box a:hover {
+            text-decoration: underline;
+        }
+        
+        
+        .main-title {
+            font-family: 'Bauhaus 93', Impact, sans-serif;
+            font-size: 4.5em;
+            font-weight: normal;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #666 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .subtitle {
+            font-size: 1.5em;
+            color: #666;
+            letter-spacing: 0.1em;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .subtitle::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #c69214, transparent);
+        }
+        
+        .author {
+            font-size: 1.3em;
+            color: #333;
+            font-weight: 500;
+            margin-top: 20px;
+        }
+        
+        /* Navigation rapide */
+        .quick-nav {
+            background: white;
+            padding: 35px;
+            border-radius: 0;
+            margin-bottom: 60px;
+            border: 1px solid #e0e0e0;
+            border-top: 2px solid #1a1a1a;
+        }
+        
+        .quick-nav h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-link {
+            padding: 10px 20px;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 0.9em;
+        }
+        
+        .nav-link:hover {
+            background: #333;
+            color: white;
+            border-color: #c69214;
+            transform: translateY(-2px);
+        }
+        
+        /* Sections */
+        section {
+            margin-bottom: 80px;
+        }
+        
+        .section-title {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 20px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #c69214, transparent);
+        }
+        
+        /* Grid 2 colonnes */
+        .two-col-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        /* Card */
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 0;
+            border: 1px solid #e0e0e0;
+            position: relative;
+            border-left: 2px solid #1a1a1a;
+        }
+        
+        .card h3 {
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .card p {
+            text-align: justify;
+            color: #333;
+            line-height: 1.8;
+        }
+        
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .card ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .card ul li:last-child {
+            border-bottom: none;
+        }
+        
+        .card ul li strong {
+            color: #c69214;
+            display: inline-block;
+            min-width: 120px;
+        }
+        
+        /* Hero avec image */
+        .hero-section {
+            background: white;
+            padding: 60px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            margin-bottom: 60px;
+            border: 1px solid rgba(198, 146, 20, 0.15);
+            display: grid;
+            grid-template-columns: 400px 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .book-cover {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+        
+        .hero-content h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .hero-content p {
+            text-align: justify;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        .hero-content .highlight {
+            background: linear-gradient(135deg, rgba(198, 146, 20, 0.1) 0%, rgba(198, 146, 20, 0.05) 100%);
+            padding: 20px;
+            border-left: 4px solid #c69214;
+            border-radius: 4px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        
+        /* Listes structurées */
+        .dimension-list, .simple-list {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+        
+        .dimension-list li, .simple-list li {
+            padding: 8px 0 8px 30px;
+            position: relative;
+            color: #333;
+        }
+        
+        .dimension-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #c69214;
+            font-weight: 700;
+        }
+        
+        .simple-list li::before {
+            content: "•";
+            position: absolute;
+            left: 10px;
+            color: #c69214;
+            font-weight: 700;
+            font-size: 1.2em;
+        }
+        
+        /* Citations */
+        .quote-box {
+            background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
+            color: white;
+            padding: 50px;
+            border-radius: 12px;
+            margin: 40px 0;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+        
+        .quote-box::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 6em;
+            opacity: 0.2;
+            font-family: Georgia, serif;
+        }
+        
+        .quote-box p {
+            font-size: 1.3em;
+            line-height: 1.8;
+            text-align: center;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .stat-box {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 0;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+        
+        .stat-box:hover {
+            border-bottom-color: #c69214;
+            background: #fafafa;
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: 300;
+            color: #1a1a1a;
+            display: block;
+            margin-bottom: 10px;
+            letter-spacing: -0.02em;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-weight: 500;
+        }
+        
+        /* Boutons d'action */
+        .action-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 15px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: #1a1a1a;
+            color: white;
+            border: 2px solid #1a1a1a;
+        }
+        
+        .btn-primary:hover {
+            background: white;
+            color: #1a1a1a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #333;
+            border: 2px solid #333;
+        }
+        
+        .btn-secondary:hover {
+            background: #333;
+            color: white;
+        }
+        
+        /* Contact */
+        .contact-box {
+            background: white;
+            padding: 50px;
+            border-radius: 0;
+            border: 1px solid #e0e0e0;
+            text-align: center;
+        }
+        
+        .contact-box h3 {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-item .icon {
+            width: 50px;
+            height: 50px;
+            background: #1a1a1a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5em;
+        }
+        
+        .contact-item a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .contact-item a:hover {
+            color: #c69214;
+        }
+        
+        /* Downloads */
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .download-card {
+            background: white;
+            padding: 35px;
+            border-radius: 0;
+            border: 1px solid #e0e0e0;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .download-card:hover {
+            border-color: #1a1a1a;
+            background: #fafafa;
+        }
+        
+        .download-card:hover .icon svg {
+            stroke: #c69214;
+        }
+        
+        .download-card .icon {
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        
+        .download-card .icon svg {
+            stroke: #1a1a1a;
+            transition: stroke 0.3s ease;
+        }
+        
+        .download-card h4 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .download-card p {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        /* Table des âges */
+        .ages-list {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            border: 1px solid rgba(198, 146, 20, 0.15);
+        }
+        
+        .age-item {
+            padding: 20px;
+            border-left: 4px solid #c69214;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, rgba(198, 146, 20, 0.05) 0%, transparent 100%);
+            border-radius: 4px;
+        }
+        
+        .age-item h4 {
+            color: #c69214;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        .age-item p {
+            color: #555;
+            text-align: justify;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 80px;
+            color: #666;
+        }
+        
+        /* Email links styling */
+        .email-link {
+            color: #c69214 !important;
+            text-decoration: underline;
+            transition: all 0.3s ease;
+        }
+        
+        .email-link:hover {
+            color: #a07810 !important;
+            text-decoration: none;
+        }
+        
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .two-col-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .angles-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .quick-facts-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .main-title {
+                font-size: 3em;
+            }
+            
+            .share-buttons {
+                position: static;
+                transform: none;
+                flex-direction: row;
+                justify-content: center;
+                margin-bottom: 30px;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .download-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .angles-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .quick-facts-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .main-title {
+                font-size: 2em;
+            }
+            
+            .subtitle {
+                font-size: 1.1em;
+            }
+            
+            .press-quick-info {
+                padding: 25px;
+            }
+            
+            .question-item {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+        
+        /* Styles pour l'impression PDF */
+        @media print {
+            /* Configuration générale */
+            @page {
+                margin: 1.5cm;
+                size: A4;
+            }
+            
+            body {
+                background: white;
+                color: black;
+                font-size: 10pt;
+                line-height: 1.4;
+            }
+            
+            .container {
+                max-width: 100%;
+                padding: 0;
+            }
+            
+            /* Masquer les éléments d'interface */
+            .share-buttons {
+                display: none !important;
+            }
+            
+            .action-buttons {
+                display: none !important;
+            }
+            
+            /* Masquer la navigation rapide en impression */
+            .quick-nav {
+                display: none !important;
+            }
+            
+            /* Header compact */
+            header {
+                margin-bottom: 20px;
+                padding-bottom: 15px;
+                border-bottom: 1px solid #ccc;
+            }
+            
+            .press-tag {
+                padding: 5px 12px;
+                font-size: 0.7em;
+                margin-bottom: 15px;
+            }
+            
+            .main-title {
+                font-size: 2.5em;
+                margin-bottom: 8px;
+                letter-spacing: 0.1em;
+            }
+            
+            .subtitle {
+                font-size: 1.1em;
+                margin-bottom: 8px;
+            }
+            
+            .subtitle::after {
+                display: none;
+            }
+            
+            .author {
+                font-size: 1em;
+                margin-top: 5px;
+                margin-bottom: 0;
+            }
+            
+            /* Section universitaires compacte */
+            .press-quick-info {
+                padding: 20px;
+                margin-bottom: 20px;
+                page-break-inside: auto;
+                break-inside: auto;
+            }
+            
+            .press-tag-large {
+                padding: 6px 15px;
+                font-size: 0.65em;
+                margin-bottom: 15px;
+            }
+            
+            .press-tag-large::after {
+                display: none;
+            }
+            
+            .quick-facts-grid {
+                gap: 10px;
+                margin-bottom: 15px;
+                page-break-inside: auto;
+                break-inside: auto;
+            }
+            
+            .quick-fact {
+                padding: 12px;
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            
+            .fact-label {
+                font-size: 0.65em;
+                margin-bottom: 5px;
+            }
+            
+            .fact-value {
+                font-size: 0.85em;
+                line-height: 1.5;
+            }
+            
+            .press-highlight {
+                padding: 15px 20px;
+                font-size: 0.9em;
+            }
+            
+            /* Gestion des sauts de page */
+            h1, h2, h3, h4, h5, h6 {
+                page-break-after: avoid;
+                break-after: avoid;
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            
+            section {
+                page-break-inside: auto;
+                break-inside: auto;
+                margin-bottom: 15px;
+            }
+            
+            .section-title {
+                font-size: 1.4em;
+                page-break-after: avoid;
+                break-after: avoid;
+                margin-top: 20px;
+                margin-bottom: 15px;
+            }
+            
+            .section-title::after {
+                display: none;
+            }
+            
+            /* Cards et éléments */
+            .card {
+                padding: 15px;
+                margin-bottom: 10px;
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            
+            .card h3 {
+                font-size: 1em;
+                margin-bottom: 10px;
+            }
+            
+            .card p {
+                font-size: 0.9em;
+                line-height: 1.5;
+            }
+            
+            /* Grilles en colonnes pour impression */
+            .two-col-grid {
+                gap: 15px;
+            }
+            
+            .angles-grid {
+                display: block;
+                background: none;
+            }
+            
+            .angle-card {
+                padding: 15px;
+                margin-bottom: 10px;
+                border: 1px solid #ddd;
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            
+            /* Stats compactes */
+            .stats-grid {
+                gap: 10px;
+                margin: 15px 0;
+            }
+            
+            .stat-box {
+                padding: 15px 10px;
+            }
+            
+            .stat-number {
+                font-size: 1.8em;
+            }
+            
+            .stat-label {
+                font-size: 0.7em;
+            }
+            
+            /* Âges */
+            .ages-list {
+                padding: 15px;
+            }
+            
+            .age-item {
+                padding: 10px;
+                margin-bottom: 10px;
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            
+            .age-item h4 {
+                font-size: 1em;
+                margin-bottom: 5px;
+            }
+            
+            .age-item p {
+                font-size: 0.85em;
+            }
+            
+            /* Extraits */
+            #extraits > div > div {
+                padding: 20px !important;
+                margin-bottom: 15px !important;
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            
+            /* Hero section */
+            .hero-section {
+                display: block;
+                padding: 20px;
+            }
+            
+            .book-cover {
+                display: none;
+            }
+            
+            .hero-content .highlight {
+                padding: 10px;
+                margin: 10px 0;
+            }
+            
+            /* Images */
+            img {
+                max-width: 100%;
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            
+            /* Liens */
+            a {
+                color: #1a1a1a;
+                text-decoration: none;
+            }
+            
+            a[href^="http"]:after {
+                content: " (" attr(href) ")";
+                font-size: 0.6em;
+                color: #666;
+                word-break: break-all;
+            }
+            
+            a[href^="#"]:after,
+            a[href^="javascript:"]:after,
+            a[href^="mailto:"]:after {
+                content: "";
+            }
+            
+            /* Downloads */
+            .download-grid {
+                gap: 10px;
+            }
+            
+            .download-card {
+                border: 1px solid #ddd;
+                padding: 12px;
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            
+            .download-card .icon {
+                display: none;
+            }
+            
+            /* Contact */
+            .contact-box {
+                padding: 20px;
+            }
+            
+            .contact-box h3 {
+                font-size: 1em;
+                margin-bottom: 15px;
+            }
+            
+            /* Footer */
+            footer {
+                margin-top: 20px;
+                padding-top: 15px;
+                page-break-inside: avoid;
+                break-inside: avoid;
+                font-size: 0.85em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Boutons de partage -->
+    <div class="share-buttons">
+        <a href="javascript:void(0);" class="share-btn" onclick="shareOnTwitter();" title="Partager sur Twitter">𝕏</a>
+        <a href="javascript:void(0);" class="share-btn" onclick="shareOnFacebook();" title="Partager sur Facebook">f</a>
+        <a href="javascript:void(0);" class="share-btn" onclick="shareOnLinkedIn();" title="Partager sur LinkedIn">in</a>
+        <a href="javascript:void(0);" class="share-btn" onclick="copyLink();" title="Copier le lien">🔗</a>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="press-tag">Ressources universitaires</div>
+            <h1 class="main-title">ANTHROPIE</h1>
+            <p class="subtitle">Ordre ici. Dette ailleurs.</p>
+            <p class="author">par Stéphane LALUT</p>
+        </header>
+
+        <!-- Bloc "Pour les universitaires" -->
+        <section class="press-quick-info">
+            <div class="press-tag-large">POUR LES UNIVERSITAIRES – REPÈRES RAPIDES</div>
+            
+            <div class="quick-facts-grid">
+                <div class="quick-fact">
+                    <div class="fact-label">Champs disciplinaires</div>
+                    <div class="fact-value">
+                        Histoire des techniques et des savoirs · Histoire environnementale · Économie politique de la dette · Études de l'Anthropocène · Science and Technology Studies (STS).
+                    </div>
+                </div>
+                
+                <div class="quick-fact">
+                    <div class="fact-label">Question centrale</div>
+                    <div class="fact-value">
+                        Comment les sociétés humaines produisent-elles de l'« ordre » (politique, technique, économique, numérique) en déplaçant systématiquement le « désordre » – énergétique, écologique, social – dans l'espace ou dans le temps ?
+                    </div>
+                </div>
+                
+                <div class="quick-fact">
+                    <div class="fact-label">Hypothèse</div>
+                    <div class="fact-value">
+                        Sur 3,3 millions d'années, les grandes ruptures historiques peuvent se lire comme des innovations dans l'art de déporter la « dette entropique » : de la maîtrise du feu aux data centers, chaque âge réorganise la géographie de la contrainte (qui paie ? où ? quand ?).
+                    </div>
+                </div>
+                
+                <div class="quick-fact">
+                    <div class="fact-label">Usages académiques</div>
+                    <div class="fact-value">
+                        Séminaires de recherche (Anthropocène, histoire globale, sociologie de la technique) · Enseignement (Licence/Master) · Notes de lecture et recensions · Appui à des enquêtes empiriques locales (territoires, secteurs, dispositifs).
+                    </div>
+                </div>
+                
+                <div class="quick-fact">
+                    <div class="fact-label">Niveau de lecture</div>
+                    <div class="fact-value">
+                        Public avancé : étudiant·es de Master, doctorant·es, chercheurs, enseignants-chercheurs, praticiens des politiques publiques et de la transition.
+                    </div>
+                </div>
+                
+                <div class="quick-fact">
+                    <div class="fact-label">Service de presse académique</div>
+                    <div class="fact-value">
+                        Exemplaire numérique intégral (Kindle) disponible pour usage académique (séminaires, recensions, cours) sur simple demande par courriel. Le lien est à usage unique et chargeable sur un seul compte.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="press-highlight">
+                <strong>Exemplaire intégral pour usage académique</strong><br>
+                Contactez <a href="mailto:stephane---l@outlook.fr" style="color: #c69214; text-decoration: underline;">stephane---l@outlook.fr</a> en précisant votre institution et l'usage envisagé (séminaire, compte rendu, cours).
+            </div>
+        </section>
+
+        <!-- Navigation rapide -->
+        <nav class="quick-nav">
+            <h3>Navigation rapide</h3>
+            <div class="nav-links">
+                <a href="#pourquoi" class="nav-link">Pourquoi ce livre ?</a>
+                <a href="#pour-uni" class="nav-link">Pour les chercheurs</a>
+                <a href="#resume-fr" class="nav-link">Résumé académique (FR)</a>
+                <a href="#abstract-en" class="nav-link">Academic abstract (EN)</a>
+                <a href="#contenu" class="nav-link">Structure (7 âges)</a>
+                <a href="#extraits" class="nav-link">Extraits choisis</a>
+                <a href="#usages" class="nav-link">Usages pédagogiques</a>
+                <a href="#infos" class="nav-link">Infos pratiques</a>
+                <a href="#citation" class="nav-link">Citation & accès</a>
+                <a href="#auteur" class="nav-link">L'auteur</a>
+                <a href="#downloads" class="nav-link">Ressources en ligne</a>
+            </div>
+        </nav>
+
+        <!-- Hero Section universitaire -->
+        <section id="pourquoi" class="hero-section">
+            <img src="ANTHROPIE-Couverture KINDLE.jpg" alt="Couverture ANTHROPIE" class="book-cover">
+            <div class="hero-content">
+                <h2>Une archéologie de la contrainte et de la dette entropique</h2>
+                
+                <p><strong>ANTHROPIE</strong> propose une histoire longue des sociétés humaines à partir d'un concept central : la « dette entropique ». Toute production d'ordre – institutionnel, économique, technique, numérique – repose sur le déplacement de formes de désordre (dissipation énergétique, dégradation écologique, instabilité sociale) vers d'autres territoires, populations ou générations.</p>
+                
+                <div class="highlight">
+                    L'ouvrage articule histoire des techniques, histoire environnementale, économie de la dette et études de l'Anthropocène. Il cherche moins à ajouter un « cas » de plus qu'à proposer un <strong>cadre unificateur</strong> permettant de lire conjointement dette publique, dette écologique et fragmentation sociale.
+                </div>
+                
+                <p>Sur sept « âges », de la domestication du feu aux architectures d'IA générative, ANTHROPIE suit les transformations des infrastructures matérielles (routes, empires, réseaux, machines, plateformes) et des imaginaires politiques qui les accompagnent.</p>
+                
+                <p>Le livre peut ainsi être mobilisé comme :</p>
+                <ul class="simple-list">
+                    <li>une synthèse problématisée pour séminaires et cours avancés,</li>
+                    <li>un répertoire de cas pour enquêtes empiriques ou travaux étudiants,</li>
+                    <li>un outil de mise en dialogue entre disciplines (histoire, économie, sociologie, philosophie politique).</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <div class="stats-grid">
+            <div class="stat-box">
+                <span class="stat-number">3,3M</span>
+                <span class="stat-label">Années d'histoire</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number">168</span>
+                <span class="stat-label">Entrées historiques</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number">606</span>
+                <span class="stat-label">Pages</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number">7</span>
+                <span class="stat-label">Âges analysés</span>
+            </div>
+        </div>
+
+        <!-- Pour les universitaires & chercheurs -->
+        <section id="pour-uni">
+            <h2 class="section-title">Pour les universitaires & chercheurs</h2>
+            
+            <div class="two-col-grid">
+                <div class="card">
+                    <h3>Positionnement</h3>
+                    <p><strong>Disciplines concernées :</strong> Histoire des techniques et des savoirs, histoire environnementale, économie politique, sociologie historique, philosophie politique, STS, études de l'Anthropocène.</p>
+                    <p><strong>Question centrale :</strong> Comment rendre visible la continuité d'une même mécanique de transfert de contrainte – énergétique, matérielle, sociale – sous des régimes politiques et économiques très différents ?</p>
+                    <p><strong>Ambition théorique :</strong> proposer un langage commun (« dette entropique », « âges de la contrainte ») pour faire dialoguer des travaux souvent séparés : dette souveraine, écologie politique, histoire globale, critique de la technique.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Méthode & matériaux</h3>
+                    <ul>
+                        <li><strong>Approche :</strong> Archéologie conceptuelle, croisant histoire matérielle, infrastructures, régimes de pouvoir et imaginaires symboliques.</li>
+                        <li><strong>Corpus :</strong> 168 entrées historiques, de l'outillage lithique à l'IA générative, en passant par l'empire romain, la traite esclavagiste, les révolutions industrielles, la planification étatique, l'informatique en réseau.</li>
+                        <li><strong>Organisation :</strong> 7 « âges » qui permettent de circuler entre échelles (micro, méso, macro) et temporalités longues.</li>
+                        <li><strong>Perspective :</strong> ni catastrophisme ni célébration du « progrès », mais articulation des bifurcations possibles avec les contraintes physiques et sociales.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Résumé académique FR -->
+        <section id="resume-fr">
+            <h2 class="section-title">Résumé académique (FR)</h2>
+            
+            <div class="card">
+                <p><strong>ANTHROPIE – Ordre ici. Dette ailleurs</strong> propose une histoire longue des sociétés humaines à partir d'un concept central : la « dette entropique ». L'ouvrage avance que toute production d'ordre – politique, économique, technique, numérique – repose sur le déplacement de formes de désordre (dissipation énergétique, atteintes écologiques, tensions sociales) vers d'autres espaces, d'autres populations ou d'autres temporalités.</p>
+                
+                <p>En sept « âges » couvrant 3,3 millions d'années, le livre articule histoire des techniques, histoire environnementale, économie de la dette et études de l'Anthropocène. Il s'appuie sur 168 entrées historiques documentées, qui vont de la domestication du feu et des premiers outils à l'essor des empires, de la machine-État moderne, de la mondialisation énergétique et des architectures numériques contemporaines.</p>
+                
+                <p>L'objectif théorique est double : (1) rendre visible la continuité d'une même mécanique de transfert de contrainte sous des régimes politiques très différents ; (2) proposer une grille de lecture unifiée des « crises » actuelles (dette publique, crise climatique, fragmentations sociales) comme manifestations d'un programme historique d'externalisation de la facture entropique. L'ouvrage se situe à l'intersection de l'histoire globale, de la sociologie de la technique et de l'économie politique critique, avec une vocation d'outil pour la recherche et l'enseignement supérieur.</p>
+            </div>
+        </section>
+
+        <!-- Academic abstract EN -->
+        <section id="abstract-en">
+            <h2 class="section-title">Academic abstract (EN)</h2>
+            
+            <div class="card">
+                <p><strong>ANTHROPIE – Order here. Debt elsewhere</strong> offers a long-term history of human societies through the lens of "entropic debt". Its central claim is that any form of social "order" – political, economic, technical or digital – is built by displacing disorder (energy dissipation, ecological damage, social instability) in space or time, onto other territories, bodies or generations.</p>
+                
+                <p>Across seven "ages" spanning 3.3 million years, the book weaves together history of technology, environmental history, political economy of debt and Anthropocene studies. It draws on 168 documented historical entries, from early fire control and lithic tools to imperial infrastructures, the modern machine-state, global energy systems and contemporary digital architectures (platforms, data centers, AI).</p>
+                
+                <p>The theoretical contribution is twofold: (1) to make visible the continuity of a single mechanics of constraint transfer across very different political regimes; (2) to provide a unifying framework for current "crises" – public debt, climate change, social fragmentation – understood as symptoms of a long-standing programme of externalising entropic costs. The book sits at the crossroads of global history, sociology of technology and critical political economy, and is designed to be mobilised in research seminars and advanced teaching.</p>
+            </div>
+        </section>
+
+        <!-- Structure : les 7 âges -->
+        <section id="contenu">
+            <h2 class="section-title">Structure de l'ouvrage : les 7 âges de l'anthropie</h2>
+            
+            <div class="ages-list">
+                <div class="age-item">
+                    <h4>Premier âge : Des programmes fondateurs (-3,3M à -10 000)</h4>
+                    <p>Outils, feu, langage, mort ritualisée : chaque innovation crée une mémoire externe qui libère des capacités cognitives tout en nouant de nouvelles dépendances matérielles.</p>
+                </div>
+                
+                <div class="age-item">
+                    <h4>Deuxième âge : Écriture, calcul, gouvernement (-10 000 à -800)</h4>
+                    <p>Sédentarisation agricole, comptabilité des stocks, premiers États hydrauliques : l'ordre se concentre dans les centres urbains, le désordre se déporte vers les campagnes, les corps serviles et les marges.</p>
+                </div>
+                
+                <div class="age-item">
+                    <h4>Troisième âge : Philosophie et empire (-800 à 476)</h4>
+                    <p>Rationalisation philosophique, routes impériales, monnaie : l'universalisme politique s'appuie sur des infrastructures qui unifient autant qu'elles hiérarchisent.</p>
+                </div>
+                
+                <div class="age-item">
+                    <h4>Quatrième âge : Réseaux transcontinentaux (476 à 1492)</h4>
+                    <p>Circulation des textes, commerce à longue distance, techniques de copie et d'imprimerie : l'accès différencié à l'écrit et au capital façonne de nouvelles lignes de fracture.</p>
+                </div>
+                
+                <div class="age-item">
+                    <h4>Cinquième âge : La machine-État moderne (1492 à 1945)</h4>
+                    <p>Colonisation, esclavage, révolutions industrielles : la dette entropique devient planétaire. Les métropoles centralisent l'ordre politique et économique, les périphéries encaissent la facture matérielle et humaine.</p>
+                </div>
+                
+                <div class="age-item">
+                    <h4>Sixième âge : L'accélération numérique (1945 à 2020)</h4>
+                    <p>Informatique, réseaux globaux, financiarisation : la vitesse et l'abstraction produisent des désordres invisibles, des dépendances logistiques et des vulnérabilités systémiques.</p>
+                </div>
+                
+                <div class="age-item">
+                    <h4>Septième âge : Architectures d'intelligence artificielle (2020 à aujourd'hui)</h4>
+                    <p>IA générative, infrastructures de données, automatisation décisionnelle : nous pilotons des architectures dont nous ne maîtrisons qu'une fraction décroissante, tandis que la facture énergétique et sociale se redistribue à l'échelle mondiale.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Extraits choisis -->
+        <section id="extraits">
+            <h2 class="section-title">Extraits choisis</h2>
+            
+            <div style="max-width: 900px; margin: 0 auto;">
+                <!-- Extrait 1 : libertés sous contrainte -->
+                <div style="background: #fafafa; padding: 50px; border-left: 4px solid #c69214; margin-bottom: 40px; position: relative;">
+                    <p style="font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.1em; color: #999; margin-bottom: 25px; font-weight: 600;">Extrait 1 – « Liberté sous contrainte »</p>
+                    
+                    <p style="font-size: 1.05em; line-height: 2; color: #1a1a1a; text-align: justify; margin-bottom: 20px;">
+                        <span style="font-size: 2.5em; color: #c69214; font-family: Georgia, serif; float: left; line-height: 0.8; margin-right: 10px; margin-top: 5px;">«</span>
+                        Trois heures du matin, vallée du silicium. Un développeur fixe son écran bleu. Le code devant lui n'a pas été écrit par un humain ; une intelligence artificielle l'a généré. Il débogue un système dont il ne possède plus les clés. Voilà notre condition : nous pilotons des architectures — économiques, numériques, climatiques — dont nous ne maîtrisons qu'une fraction décroissante.
+                    </p>
+                    
+                    <p style="font-size: 1.05em; line-height: 2; color: #1a1a1a; text-align: justify; margin-bottom: 20px;">
+                        Ici, le trading à haute fréquence tire en microsecondes et amorce des chaînes que nul n'anticipe ; là, des « villes intelligentes » confient aux capteurs le tri des flux — et déjà le plan d'ensemble se dérobe. Nous voilà gardiens de systèmes qui nous dépassent — responsables tout de même.
+                    </p>
+                    
+                    <p style="font-size: 1.05em; line-height: 2; color: #1a1a1a; text-align: justify;">
+                        Pourtant, l'histoire n'est pas une mécanique sans surprise. Des bifurcations surgissent : l'abolition de l'esclavage après des millénaires d'évidence acceptée ; la chute du mur de Berlin en 1989, impensable la veille encore ; l'Internet, projet militaire mué en système nerveux de l'humanité. À chaque rupture, l'imaginaire a devancé le réel : des poètes ont rêvé l'abolition avant les juristes ; des artistes ont abattu symboliquement un mur avant les maçons ; des écrivains de science-fiction ont esquissé Internet avant les ingénieurs. Le futur n'est pas une surprise pure : c'est un rêve rendu plausible. »
+                    </p>
+                </div>
+                
+                <!-- Extrait 2 : le mécanisme immuable -->
+                <div style="background: #1a1a1a; padding: 45px 50px; margin-bottom: 40px;">
+                    <p style="font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.1em; color: #c69214; margin-bottom: 20px; font-weight: 600; text-align: left;">
+                        Extrait 2 – « Le mécanisme immuable »
+                    </p>
+                    <p style="font-size: 1.05em; line-height: 2; color: #f5f5f5; text-align: justify;">
+                        « Aujourd'hui, sept codes coexistent et s'entrelacent. Le ressort central reste immuable : la dette entropique ne se répartit jamais uniformément. Le pouvoir, c'est trancher où déplacer son désordre. Les riches climatisent, les pauvres suffoquent. Les métropoles brillent, les périphéries extraient. Le Nord consomme, le Sud produit. Le présent jouit, le futur répare. Ce n'est pas un bug : c'est le système — des oasis d'ordre achetées au prix de déserts distants. Ainsi se mesure la liberté : qui tient les vannes, qui encaisse la facture. »
+                    </p>
+                </div>
+                
+                <!-- Extrait 3 : le feu, premier contrat social -->
+                <div style="background: #fafafa; padding: 50px; border-left: 4px solid #c69214; position: relative;">
+                    <p style="font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.1em; color: #999; margin-bottom: 25px; font-weight: 600;">Extrait 3 – « Le feu : premier contrat social »</p>
+                    
+                    <p style="font-size: 1.05em; line-height: 2; color: #1a1a1a; text-align: justify;">
+                        <span style="font-size: 2.5em; color: #c69214; font-family: Georgia, serif; float: left; line-height: 0.8; margin-right: 10px; margin-top: 5px;">«</span>
+                        Premier contrat social : qui veille, qui nourrit, qui dort. On signe au présent — par roulement de garde, par tours de collecte, par part de bois et part de soupe. La flamme oblige : droits (chaleur, protection, repas) contre devoirs (surveillance, approvisionnement, entretien). Les règles se disent à voix basse, près de l'âtre : ne pas souffler trop fort, ne pas gaspiller les bûches sèches, prévenir avant de quitter le cercle. La justice primitive est thermique : la négligence se paie en froid partagé, la vigilance se récompense en coupes plus pleines. Autour du foyer, la coopération cesse d'être vertu ; elle devient condition de survie. »
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Usages pédagogiques -->
+        <section id="usages">
+            <h2 class="section-title">Usages possibles en contexte académique</h2>
+            
+            <div class="angles-grid">
+                <div class="angle-card">
+                    <div class="angle-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3>Séminaires de recherche</h3>
+                    <p>Support de discussion dans des séminaires sur l'Anthropocène, l'histoire environnementale, la dette, la critique de la technique ou la sociologie historique de l'État.</p>
+                </div>
+                
+                <div class="angle-card">
+                    <div class="angle-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="4" y="4" width="16" height="16" rx="2" ry="2"/>
+                            <rect x="9" y="9" width="6" height="6"/>
+                            <line x1="9" y1="1" x2="9" y2="4"/>
+                            <line x1="15" y1="1" x2="15" y2="4"/>
+                            <line x1="9" y1="20" x2="9" y2="23"/>
+                            <line x1="15" y1="20" x2="15" y2="23"/>
+                            <line x1="20" y1="9" x2="23" y2="9"/>
+                            <line x1="20" y1="14" x2="23" y2="14"/>
+                            <line x1="1" y1="9" x2="4" y2="9"/>
+                            <line x1="1" y1="14" x2="4" y2="14"/>
+                        </svg>
+                    </div>
+                    <h3>Enseignement Licence / Master</h3>
+                    <p>Chapitres utilisables comme base de cours sur les transitions énergétiques, l'histoire globale, la géopolitique des infrastructures, la pensée écologique et les humanités numériques.</p>
+                </div>
+                
+                <div class="angle-card">
+                    <div class="angle-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                            <polyline points="17 6 23 6 23 12"/>
+                        </svg>
+                    </div>
+                    <h3>Travaux étudiants & enquêtes locales</h3>
+                    <p>Point de départ pour des mémoires et études de cas : qui assume la « dette entropique » d'un territoire, d'un secteur (transport, numérique, agriculture), d'un dispositif précis (barrage, data center, port) ?</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Informations pratiques -->
+        <section id="infos">
+            <h2 class="section-title">Informations pratiques</h2>
+            
+            <div class="two-col-grid">
+                <div class="card">
+                    <h3>Édition</h3>
+                    <ul>
+                        <li><strong>Format :</strong> Broché</li>
+                        <li><strong>Pages :</strong> 606 pages</li>
+                        <li><strong>Dimensions :</strong> 16,99 x 3,48 x 24,41 cm</li>
+                        <li><strong>ISBN :</strong> 978-2-9586347-2-8</li>
+                        <li><strong>Collection :</strong> L'odyssée des idées</li>
+                        <li><strong>Langue :</strong> Français</li>
+                        <li><strong>Date de publication :</strong> 9 septembre 2025</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Disponibilité</h3>
+                    <ul>
+                        <li><strong>Broché :</strong> 36,00 €</li>
+                        <li><strong>Numérique :</strong> 9,99 € (Kindle)</li>
+                        <li><strong>Distributeur :</strong> Amazon</li>
+                        <li><strong>Ressources en ligne :</strong> Registre complet des 168 entrées, extraits, actualités.</li>
+                    </ul>
+                    <div class="action-buttons" style="margin-top: 30px;">
+                        <a href="https://amzn.eu/d/cpbhB8y" class="btn btn-primary" target="_blank">Commander sur Amazon</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Citation & accès académique -->
+        <section id="citation">
+            <h2 class="section-title">Citation recommandée & accès académique</h2>
+            
+            <div class="card">
+                <h3>Référence pour citation</h3>
+                <p><strong>Format bibliographique (FR) :</strong></p>
+                <p style="margin-bottom: 20px;">
+                    Lalut, Stéphane. <em>Anthropie : Ordre ici. Dette ailleurs</em>. Paris : L'Odyssée des idées, 2025, 606 p. ISBN 978-2-9586347-2-8.
+                </p>
+                
+                <p><strong>Format bibliographique (EN) :</strong></p>
+                <p style="margin-bottom: 20px;">
+                    Lalut, Stéphane. <em>Anthropie: Order here. Debt elsewhere</em>. Paris: L'Odyssée des idées, 2025, 606 pp. ISBN 978-2-9586347-2-8.
+                </p>
+                
+                <h3 style="margin-top: 30px;">Accès pour séminaires et recensions</h3>
+                <p>Un <strong>exemplaire numérique intégral (Kindle)</strong> peut être fourni pour :</p>
+                <ul class="simple-list">
+                    <li>une utilisation en séminaire (circulation interne aux participant·es),</li>
+                    <li>la préparation d'une note de lecture ou d'une recension,</li>
+                    <li>la construction d'un syllabus de cours.</li>
+                </ul>
+                <p>Pour toute demande, écrire à : <a href="mailto:stephane---l@outlook.fr" class="email-link">stephane---l@outlook.fr</a></p>
+            </div>
+        </section>
+
+        <!-- L'auteur -->
+        <section id="auteur">
+            <h2 class="section-title">À propos de l'auteur</h2>
+            
+            <div class="card">
+                <h3>Stéphane LALUT</h3>
+                <p>Économiste de formation (Ph.D., 1990), Stéphane Lalut a mené sa carrière dans le secteur privé avant de se consacrer à la recherche indépendante et à la vulgarisation des mécanismes économiques et politiques. Pourquoi les crises se répètent-elles ? Pourquoi l'ordre ici engendre-t-il la dette ailleurs ? Il explore ces questions à travers ce qu'il nomme l'« archéologie conceptuelle » : une méthode qui fouille 3,3 millions d'années d'histoire humaine pour révéler les structures invisibles qui organisent notre monde.</p>
+                
+                <p>Fruit de sept années de travail, <em>ANTHROPIE</em> déploie cette enquête en 600 pages et 168 entrées documentées — de la domestication du feu aux algorithmes d'intelligence artificielle. Également auteur de <em>Dette Publique : Qui paie vraiment ?</em>, il défend une conception de la culture comme bien commun, reflétée dans un prix numérique volontairement accessible.</p>
+            </div>
+        </section>
+
+        <!-- Ressources en ligne -->
+        <section id="downloads">
+            <h2 class="section-title">Ressources en ligne</h2>
+            
+            <div class="download-grid">
+                <a href="javascript:void(0);" onclick="generatePDF();" class="download-card" style="cursor: pointer;">
+                    <div class="icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                        </svg>
+                    </div>
+                    <h4>Version imprimable (PDF)</h4>
+                    <p>Imprimer ou enregistrer cette page pour vos dossiers de séminaire.</p>
+                </a>
+                
+                <a href="ANTHROPIE-Couverture KINDLE.jpg" download class="download-card">
+                    <div class="icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <polyline points="21 15 16 10 5 21"/>
+                        </svg>
+                    </div>
+                    <h4>Couverture haute résolution</h4>
+                    <p>Pour supports de cours, annonces de séminaires, affiches.</p>
+                </a>
+                
+                <a href="https://projectpulse-source.github.io/anthropie/" target="_blank" class="download-card">
+                    <div class="icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <line x1="8" y1="6" x2="21" y2="6"/>
+                            <line x1="8" y1="12" x2="21" y2="12"/>
+                            <line x1="8" y1="18" x2="21" y2="18"/>
+                            <line x1="3" y1="6" x2="3.01" y2="6"/>
+                            <line x1="3" y1="12" x2="3.01" y2="12"/>
+                            <line x1="3" y1="18" x2="3.01" y2="18"/>
+                        </svg>
+                    </div>
+                    <h4>Registre complet en ligne</h4>
+                    <p>Accès aux 168 entrées historiques détaillées.</p>
+                </a>
+                
+                <a href="https://amzn.eu/d/cpbhB8y" target="_blank" class="download-card">
+                    <div class="icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                        </svg>
+                    </div>
+                    <h4>Fiche Amazon</h4>
+                    <p>Page de vente et aperçu du livre.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <h2 class="section-title">Contact auteur (universités & recherche)</h2>
+            
+            <div class="contact-box">
+                <h3>Pour toute demande de séminaire, d'intervention, de service de presse académique ou d'information complémentaire</h3>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="icon">✉️</div>
+                        <a href="mailto:stephane---l@outlook.fr" style="color: #c69214; text-decoration: underline;">stephane---l@outlook.fr</a>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="icon">🌐</div>
+                        <a href="https://projectpulse-source.github.io/anthropie/" target="_blank">Site web du livre</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to action final -->
+        <section style="text-align: center;">
+            <h2 class="section-title">Intégrer ANTHROPIE dans vos travaux</h2>
+            <div class="action-buttons">
+                <a href="mailto:stephane---l@outlook.fr?subject=Demande%20exemplaire%20acad%C3%A9mique%20ANTHROPIE" class="btn btn-primary">Demander un exemplaire académique</a>
+                <a href="https://projectpulse-source.github.io/anthropie/" class="btn btn-secondary" target="_blank">Explorer le registre en ligne</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>ANTHROPIE – Ordre ici. Dette ailleurs. © 2025 Stéphane LALUT</p>
+            <p style="margin-top: 15px; font-size: 0.9em;">Ressources universitaires mises à jour le 23 novembre 2025</p>
+        </footer>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Fonctions de partage
+        function shareOnTwitter() {
+            const url = window.location.href;
+            const text = "Ressources universitaires - ANTHROPIE : archéologie de la dette entropique par Stéphane LALUT";
+            window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(text), '_blank');
+            return false;
+        }
+        
+        function shareOnFacebook() {
+            const url = window.location.href;
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url), '_blank');
+            return false;
+        }
+        
+        function shareOnLinkedIn() {
+            const url = window.location.href;
+            window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url), '_blank');
+            return false;
+        }
+        
+        function copyLink() {
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(function() {
+                const notification = document.createElement('div');
+                notification.textContent = 'Lien copié !';
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: #333;
+                    color: white;
+                    padding: 15px 30px;
+                    border-radius: 8px;
+                    z-index: 10000;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+                `;
+                document.body.appendChild(notification);
+                
+                setTimeout(function() {
+                    notification.remove();
+                }, 2000);
+            });
+            return false;
+        }
+        
+        // Fonction de génération PDF
+        function generatePDF() {
+            const notification = document.createElement('div');
+            notification.textContent = 'Préparation de l\'impression…';
+            notification.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: #c69214;
+                color: white;
+                padding: 20px 40px;
+                border-radius: 8px;
+                z-index: 10000;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+                font-weight: 600;
+            `;
+            document.body.appendChild(notification);
+            
+            const shareButtons = document.querySelector('.share-buttons');
+            if (shareButtons) shareButtons.style.display = 'none';
+            
+            setTimeout(function() {
+                notification.remove();
+                window.print();
+                if (shareButtons) shareButtons.style.display = 'flex';
+            }, 500);
+        }
+    </script>
+</body>
+</html>
