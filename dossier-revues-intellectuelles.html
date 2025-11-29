@@ -346,6 +346,34 @@
             padding: 40px;
             border: 1px solid #e0e0e0;
             position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .diptyque-card .card-content {
+            flex: 1;
+        }
+        
+        .diptyque-card .card-link {
+            margin-top: auto;
+            padding-top: 15px;
+        }
+        
+        .diptyque-card .card-link a {
+            font-size: 0.85em;
+            text-decoration: none;
+        }
+        
+        .diptyque-card.matrice .card-link a {
+            color: #c69214;
+        }
+        
+        .diptyque-card.application .card-link a {
+            color: #b91c1c;
+        }
+        
+        .diptyque-card .card-link a:hover {
+            text-decoration: underline;
         }
         
         .diptyque-card::before {
@@ -1071,16 +1099,20 @@
             <div class="diptyque-grid">
                 <div class="diptyque-card matrice">
                     <div class="diptyque-label">Volume I — La matrice</div>
-                    <div style="display: flex; gap: 25px; align-items: flex-start;">
-                        <img src="ANTHROPIE-Couverture KINDLE.jpg" alt="Couverture ANTHROPIE" style="width: 100px; height: auto; box-shadow: 0 4px 15px rgba(0,0,0,0.15); flex-shrink: 0;">
-                        <div>
-                            <h3 style="margin-top: 0;">ANTHROPIE</h3>
-                            <p class="book-subtitle">Ordre ici. Dette ailleurs.</p>
-                            <p>Une archéologie conceptuelle de l'humanité. 168 entrées historiques — de la domestication du feu aux algorithmes d'intelligence artificielle — révèlent une constante&nbsp;: chaque «&nbsp;progrès&nbsp;» déplace ses coûts vers d'autres temps, d'autres lieux, d'autres groupes.</p>
+                    <div class="card-content">
+                        <div style="display: flex; gap: 25px; align-items: flex-start;">
+                            <img src="ANTHROPIE-Couverture KINDLE.jpg" alt="Couverture ANTHROPIE" style="width: 100px; height: auto; box-shadow: 0 4px 15px rgba(0,0,0,0.15); flex-shrink: 0;">
+                            <div>
+                                <h3 style="margin-top: 0;">ANTHROPIE</h3>
+                                <p class="book-subtitle">Ordre ici. Dette ailleurs.</p>
+                                <p>Une archéologie conceptuelle de l'humanité. 168 entrées historiques — de la domestication du feu aux algorithmes d'intelligence artificielle — révèlent une constante&nbsp;: chaque «&nbsp;progrès&nbsp;» déplace ses coûts vers d'autres temps, d'autres lieux, d'autres groupes.</p>
+                            </div>
                         </div>
+                        <p style="margin-top: 15px;">L'ouvrage propose le concept d'<strong>anthropie</strong>&nbsp;: l'entropie appliquée aux systèmes sociaux. Non comme loi physique, mais comme outil de vigilance politique.</p>
                     </div>
-                    <p style="margin-top: 15px;">L'ouvrage propose le concept d'<strong>anthropie</strong>&nbsp;: l'entropie appliquée aux systèmes sociaux. Non comme loi physique, mais comme outil de vigilance politique.</p>
-                    <p style="margin-top: 10px; font-size: 0.85em;"><a href="https://projectpulse-source.github.io/anthropie/" target="_blank" style="color: #c69214; text-decoration: none;">→ Consulter le registre des 168 entrées historiques</a></p>
+                    <div class="card-link">
+                        <a href="https://projectpulse-source.github.io/anthropie/" target="_blank">→ Consulter le registre des 168 entrées historiques</a>
+                    </div>
                     <div class="diptyque-stats">
                         <div class="diptyque-stat">
                             <div class="diptyque-stat-number">606</div>
@@ -1099,16 +1131,20 @@
                 
                 <div class="diptyque-card application">
                     <div class="diptyque-label">Volume II — L'application</div>
-                    <div style="display: flex; gap: 25px; align-items: flex-start;">
-                        <img src="Dette_publique-Couverture_KINDLE.jpg" alt="Couverture Dette Publique" style="width: 100px; height: auto; box-shadow: 0 4px 15px rgba(0,0,0,0.15); flex-shrink: 0;">
-                        <div>
-                            <h3 style="margin-top: 0;">Dette Publique</h3>
-                            <p class="book-subtitle">Qui paie vraiment&nbsp;?</p>
-                            <p>La grille anthropique appliquée à un objet politique majeur. L'enquête révèle comment la dette publique organise des transferts systématiques&nbsp;: du futur vers le présent, des services publics vers les rentiers, de la démocratie vers les marchés.</p>
+                    <div class="card-content">
+                        <div style="display: flex; gap: 25px; align-items: flex-start;">
+                            <img src="Dette_publique-Couverture_KINDLE.jpg" alt="Couverture Dette Publique" style="width: 100px; height: auto; box-shadow: 0 4px 15px rgba(0,0,0,0.15); flex-shrink: 0;">
+                            <div>
+                                <h3 style="margin-top: 0;">Dette Publique</h3>
+                                <p class="book-subtitle">Qui paie vraiment&nbsp;?</p>
+                                <p>La grille anthropique appliquée à un objet politique majeur. L'enquête révèle comment la dette publique organise des transferts systématiques&nbsp;: du futur vers le présent, des services publics vers les rentiers, de la démocratie vers les marchés.</p>
+                            </div>
                         </div>
+                        <p style="margin-top: 15px;">66 milliards d'euros d'intérêts par an — bientôt le premier poste budgétaire de l'État. Qui a décidé&nbsp;? Comment&nbsp;? Au bénéfice de qui&nbsp;?</p>
                     </div>
-                    <p style="margin-top: 15px;">66 milliards d'euros d'intérêts par an — bientôt le premier poste budgétaire de l'État. Qui a décidé&nbsp;? Comment&nbsp;? Au bénéfice de qui&nbsp;?</p>
-                    <p style="margin-top: 10px; font-size: 0.85em;"><a href="https://projectpulse-source.github.io/dette-publique-france/" target="_blank" style="color: #b91c1c; text-decoration: none;">→ Consulter le tableau de bord en temps réel</a></p>
+                    <div class="card-link">
+                        <a href="https://projectpulse-source.github.io/dette-publique-france/" target="_blank">→ Consulter le tableau de bord en temps réel</a>
+                    </div>
                     <div class="diptyque-stats">
                         <div class="diptyque-stat">
                             <div class="diptyque-stat-number">220</div>
@@ -1372,7 +1408,7 @@
                 <div class="contact-info">
                     <div class="contact-item">
                         <div class="icon">✉️</div>
-                        <a href="mailto:stephane---l@outlook.fr">stephane---l@outlook.fr</a>
+                        <a id="contact-email-dossier" href="#">stephane---l&#64;outlook.fr</a>
                     </div>
                 </div>
                 
@@ -1390,7 +1426,7 @@
                 Vous souhaitez publier une tribune ou un article autour de ces travaux&nbsp;? Contactez-moi pour discuter du format le plus adapté à votre ligne éditoriale.
             </p>
             <div class="action-buttons">
-                <a href="mailto:stephane---l@outlook.fr?subject=Proposition%20éditoriale" class="btn btn-primary">Proposer une collaboration</a>
+                <a id="btn-collaboration" href="#" class="btn btn-primary">Proposer une collaboration</a>
                 <a href="javascript:void(0);" onclick="generatePDF();" class="btn btn-secondary">Version imprimable</a>
             </div>
         </section>
@@ -1428,39 +1464,71 @@
         </footer>
     </div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
+        // URL de la page (fixe pour partage)
+        const PAGE_URL = 'https://projectpulse-source.github.io/anthropie/dossier-revues-intellectuelles.html';
+        
         // Fonctions de partage
         function shareOnTwitter() {
-            const url = window.location.href;
-            const text = "La dette entropique : un outil d'analyse pour penser les transferts invisibles – Stéphane LALUT";
-            window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(text), '_blank');
+            const text = "La dette entropique : un concept pour analyser les transferts invisibles — Stéphane Lalut, économiste";
+            window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(PAGE_URL) + '&text=' + encodeURIComponent(text), '_blank');
             return false;
         }
         
         function shareOnLinkedIn() {
-            const url = window.location.href;
-            window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url), '_blank');
+            window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(PAGE_URL), '_blank');
             return false;
         }
         
         function copyLink() {
-            const url = window.location.href;
-            navigator.clipboard.writeText(url).then(function() {
-                const notification = document.createElement('div');
-                notification.textContent = 'Lien copié !';
-                notification.style.cssText = `
-                    position: fixed;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    background: #333;
-                    color: white;
-                    padding: 15px 30px;
-                    border-radius: 8px;
-                    z-index: 10000;
-                    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-                `;
-                document.body.appendChild(notification);
-                
-                setTimeout(function() {
-     
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(PAGE_URL).then(function() {
+                    showNotification('Lien copié !');
+                }).catch(function() {
+                    fallbackCopy(PAGE_URL);
+                });
+            } else {
+                fallbackCopy(PAGE_URL);
+            }
+            return false;
+        }
+        
+        function fallbackCopy(text) {
+            var textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.position = "fixed";
+            textArea.style.left = "-999999px";
+            document.body.appendChild(textArea);
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showNotification('Lien copié !');
+            } catch (err) {
+                prompt('Copier ce lien :', text);
+            }
+            document.body.removeChild(textArea);
+        }
+        
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.textContent = message;
+            notification.style.cssText = 'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#333;color:white;padding:15px 30px;border-radius:4px;z-index:10000;font-family:Inter,sans-serif;';
+            document.body.appendChild(notification);
+            setTimeout(function() { notification.remove(); }, 2000);
+        }
+        
+        function generatePDF() {
+            window.print();
+        }
+        
+        // Anti-Cloudflare email protection
+        (function(){
+            var e = 'stephane---l' + '@' + 'outlook.fr';
+            var a = document.getElementById('contact-email-dossier');
+            if(a){ a.href = 'mailto:' + e; a.textContent = e; }
+            var btn = document.getElementById('btn-collaboration');
+            if(btn){ btn.href = 'mailto:' + e + '?subject=Proposition%20de%20collaboration'; }
+        })();
+    </script>
+</body>
+</html>
