@@ -3,8 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>ANTHROPIE - Ressources universitaires & chercheurs</title>
+    <meta property="og:title" content="ANTHROPIE — Ressources universitaires">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://projectpulse-source.github.io/anthropie/index-anthropie-universitaires.html">
+    <meta property="og:site_name" content="Stéphane Lalut — Recherche indépendante">
+    <meta property="og:locale" content="fr_FR">
+    
+    <meta property="og:image" content="https://projectpulse-source.github.io/anthropie/og-anthropie.jpg?v=1">
+    <meta property="og:image:secure_url" content="https://projectpulse-source.github.io/anthropie/og-anthropie.jpg?v=1">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="ANTHROPIE - Ordre ici. Dette ailleurs. par Stéphane Lalut">
+    
     <meta name="description" content="Ressources universitaires pour ANTHROPIE : Ordre ici. Dette ailleurs. par Stéphane LALUT – résumé académique, usages en séminaire, citation.">
+    <meta property="og:description" content="3,3 millions d'années, 168 entrées historiques, 1 constante : chaque progrès déplace ses coûts ailleurs. Qui paie vraiment ?">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ANTHROPIE — Ressources universitaires">
+    <meta name="twitter:description" content="3,3 millions d'années, 168 entrées historiques, 1 constante : chaque progrès déplace ses coûts ailleurs.">
+    <meta name="twitter:image" content="https://projectpulse-source.github.io/anthropie/og-anthropie.jpg?v=1">
+    <meta name="twitter:image:alt" content="ANTHROPIE - Ordre ici. Dette ailleurs. par Stéphane Lalut">
+
+    <meta name="author" content="Stéphane Lalut">
+    <meta property="article:author" content="Stéphane Lalut">
+    <meta property="article:published_time" content="2025-11-29">
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
         
@@ -1251,7 +1277,7 @@
             
             <div class="press-highlight">
                 <strong>Exemplaire intégral pour usage académique</strong><br>
-                Contactez <a href="mailto:stephane---l@outlook.fr" style="color: #c69214; text-decoration: underline;">stephane---l@outlook.fr</a> en précisant votre institution et l'usage envisagé (séminaire, compte rendu, cours).
+                Contactez <a id="email-contact-1" href="#" style="color: #c69214; text-decoration: underline;">stephane---l&#64;outlook.fr</a> en précisant votre institution et l'usage envisagé (séminaire, compte rendu, cours).
             </div>
         </section>
 
@@ -1557,7 +1583,7 @@
                     <li>la préparation d'une note de lecture ou d'une recension,</li>
                     <li>la construction d'un syllabus de cours.</li>
                 </ul>
-                <p>Pour toute demande, écrire à : <a href="mailto:stephane---l@outlook.fr" class="email-link">stephane---l@outlook.fr</a></p>
+                <p>Pour toute demande, écrire à : <a id="email-contact-2" href="#" class="email-link">stephane---l&#64;outlook.fr</a></p>
             </div>
         </section>
 
@@ -1639,7 +1665,7 @@
                 <div class="contact-info">
                     <div class="contact-item">
                         <div class="icon">✉️</div>
-                        <a href="mailto:stephane---l@outlook.fr" style="color: #c69214; text-decoration: underline;">stephane---l@outlook.fr</a>
+                        <a id="email-contact-3" href="#" style="color: #c69214; text-decoration: underline;">stephane---l&#64;outlook.fr</a>
                     </div>
                     
                     <div class="contact-item">
@@ -1654,7 +1680,7 @@
         <section style="text-align: center;">
             <h2 class="section-title">Intégrer ANTHROPIE dans vos travaux</h2>
             <div class="action-buttons">
-                <a href="mailto:stephane---l@outlook.fr?subject=Demande%20exemplaire%20acad%C3%A9mique%20ANTHROPIE" class="btn btn-primary">Demander un exemplaire académique</a>
+                <a id="btn-exemplaire" href="#" class="btn btn-primary">Demander un exemplaire académique</a>
                 <a href="https://projectpulse-source.github.io/anthropie/" class="btn btn-secondary" target="_blank">Explorer le registre en ligne</a>
             </div>
         </section>
@@ -1667,80 +1693,78 @@
     </div>
 
     <script>
+        // URL de la page (fixe pour partage)
+        const PAGE_URL = 'https://projectpulse-source.github.io/anthropie/index-anthropie-universitaires.html';
+        
         // Fonctions de partage
         function shareOnTwitter() {
-            const url = window.location.href;
-            const text = "Ressources universitaires - ANTHROPIE : archéologie de la dette entropique par Stéphane LALUT";
-            window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(text), '_blank');
+            const text = "ANTHROPIE : 3,3 millions d'années, 168 entrées historiques, 1 constante — chaque progrès déplace ses coûts ailleurs. Ressources universitaires :";
+            window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(PAGE_URL) + '&text=' + encodeURIComponent(text), '_blank');
             return false;
         }
         
         function shareOnFacebook() {
-            const url = window.location.href;
-            window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url), '_blank');
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(PAGE_URL), '_blank');
             return false;
         }
         
         function shareOnLinkedIn() {
-            const url = window.location.href;
-            window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url), '_blank');
+            window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(PAGE_URL), '_blank');
             return false;
         }
         
         function copyLink() {
-            const url = window.location.href;
-            navigator.clipboard.writeText(url).then(function() {
-                const notification = document.createElement('div');
-                notification.textContent = 'Lien copié !';
-                notification.style.cssText = `
-                    position: fixed;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    background: #333;
-                    color: white;
-                    padding: 15px 30px;
-                    border-radius: 8px;
-                    z-index: 10000;
-                    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-                `;
-                document.body.appendChild(notification);
-                
-                setTimeout(function() {
-                    notification.remove();
-                }, 2000);
-            });
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(PAGE_URL).then(function() {
+                    showNotification('Lien copié !');
+                }).catch(function() {
+                    fallbackCopy(PAGE_URL);
+                });
+            } else {
+                fallbackCopy(PAGE_URL);
+            }
             return false;
         }
         
-        // Fonction de génération PDF
-        function generatePDF() {
-            const notification = document.createElement('div');
-            notification.textContent = 'Préparation de l\'impression…';
-            notification.style.cssText = `
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background: #c69214;
-                color: white;
-                padding: 20px 40px;
-                border-radius: 8px;
-                z-index: 10000;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-                font-weight: 600;
-            `;
-            document.body.appendChild(notification);
-            
-            const shareButtons = document.querySelector('.share-buttons');
-            if (shareButtons) shareButtons.style.display = 'none';
-            
-            setTimeout(function() {
-                notification.remove();
-                window.print();
-                if (shareButtons) shareButtons.style.display = 'flex';
-            }, 500);
+        function fallbackCopy(text) {
+            var textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.position = "fixed";
+            textArea.style.left = "-999999px";
+            document.body.appendChild(textArea);
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showNotification('Lien copié !');
+            } catch (err) {
+                prompt('Copier ce lien :', text);
+            }
+            document.body.removeChild(textArea);
         }
+        
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.textContent = message;
+            notification.style.cssText = 'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#333;color:white;padding:15px 30px;border-radius:4px;z-index:10000;font-family:Inter,sans-serif;';
+            document.body.appendChild(notification);
+            setTimeout(function() { notification.remove(); }, 2000);
+        }
+        
+        function generatePDF() {
+            window.print();
+        }
+        
+        // Anti-Cloudflare email protection
+        (function(){
+            var e = 'stephane---l' + '@' + 'outlook.fr';
+            var ids = ['email-contact-1', 'email-contact-2', 'email-contact-3'];
+            ids.forEach(function(id) {
+                var a = document.getElementById(id);
+                if(a){ a.href = 'mailto:' + e; a.textContent = e; }
+            });
+            var btn = document.getElementById('btn-exemplaire');
+            if(btn){ btn.href = 'mailto:' + e + '?subject=Demande%20exemplaire%20académique%20ANTHROPIE'; }
+        })();
     </script>
 </body>
 </html>
