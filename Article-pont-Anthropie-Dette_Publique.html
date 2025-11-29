@@ -12,10 +12,13 @@
     <meta property="og:title" content="De la dette entropique à la dette publique — Stéphane Lalut">
     <meta property="og:description" content="66 milliards d'intérêts en 2025. Pourquoi le budget de l'État n'est qu'un cas particulier d'une logique vieille de 3,3 millions d'années.">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://projectpulse-source.github.io/anthropie/article-pont.html">
+    <meta property="og:url" content="https://projectpulse-source.github.io/anthropie/Article-pont-Anthropie-Dette_Publique.html">
     <meta property="og:image" content="https://projectpulse-source.github.io/anthropie/og-article-pont.jpg">
+    <meta property="og:image:secure_url" content="https://projectpulse-source.github.io/anthropie/og-article-pont.jpg">
+    <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Couvertures des livres ANTHROPIE et Dette Publique de Stéphane Lalut">
     <meta property="og:site_name" content="Stéphane Lalut — Recherche indépendante">
     <meta property="og:locale" content="fr_FR">
     <meta property="article:author" content="Stéphane Lalut">
@@ -26,6 +29,7 @@
     <meta name="twitter:title" content="De la dette entropique à la dette publique">
     <meta name="twitter:description" content="66 milliards d'intérêts en 2025. Le budget de l'État n'est qu'un cas particulier d'une logique vieille de 3,3 millions d'années.">
     <meta name="twitter:image" content="https://projectpulse-source.github.io/anthropie/og-article-pont.jpg">
+    <meta name="twitter:image:alt" content="Couvertures des livres ANTHROPIE et Dette Publique de Stéphane Lalut">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
         
@@ -1129,39 +1133,57 @@
         <footer>
             <p>Article de synthèse — Stéphane Lalut © 2025</p>
             <p style="margin-top: 10px; font-size: 0.9em; color: #999;">
-                URL&nbsp;: projectpulse-source.github.io/anthropie/article-pont.html
+                URL&nbsp;: projectpulse-source.github.io/anthropie/Article-pont-Anthropie-Dette_Publique.html
             </p>
         </footer>
     </main>
 
     <script>
+        // URL de la page (fixe pour partage)
+        const PAGE_URL = 'https://projectpulse-source.github.io/anthropie/Article-pont-Anthropie-Dette_Publique.html';
+        
         // Fonctions de partage
         function shareOnTwitter() {
-            const url = window.location.href;
             const text = "66 milliards € d'intérêts en 2025. Le budget de l'État n'est qu'un cas particulier d'une logique vieille de 3,3 millions d'années. À lire 👇";
-            window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(text), '_blank');
+            window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(PAGE_URL) + '&text=' + encodeURIComponent(text), '_blank');
             return false;
         }
         
         function shareOnLinkedIn() {
-            const url = window.location.href;
-            window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url), '_blank');
+            window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(PAGE_URL), '_blank');
             return false;
         }
         
         function copyLink() {
-            const url = window.location.href;
+            const url = PAGE_URL;
             
             if (navigator.clipboard && navigator.clipboard.writeText) {
                 navigator.clipboard.writeText(url).then(function() {
                     showNotification('Lien copié !');
                 }).catch(function() {
-                    prompt('Copier ce lien :', url);
+                    fallbackCopy(url);
                 });
             } else {
-                prompt('Copier ce lien :', url);
+                fallbackCopy(url);
             }
             return false;
+        }
+        
+        function fallbackCopy(text) {
+            // Fallback pour les contextes sans clipboard API
+            var textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.position = "fixed";
+            textArea.style.left = "-999999px";
+            document.body.appendChild(textArea);
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showNotification('Lien copié !');
+            } catch (err) {
+                prompt('Copier ce lien :', text);
+            }
+            document.body.removeChild(textArea);
         }
         
         function showNotification(message) {
