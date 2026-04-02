@@ -49,9 +49,9 @@
       display: block;
       font-size: 0.7rem;
       font-variant: small-caps;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.12em;
       font-weight: 400;
-      opacity: 0.75;
+      opacity: 0.6;
       margin-top: 0.1rem;
     }
   }
@@ -69,7 +69,7 @@
       transition: color 0.2s ease;
 
       &:hover {
-        color: white;
+        color: $color-accent;
         text-decoration: none;
       }
     }
