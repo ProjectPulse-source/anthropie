@@ -1,4 +1,4 @@
-baseURL = "https://anthropie.fr/"
+baseURL = "https://stephane-lalut.com/"
 languageCode = "fr-FR"
 title = "Anthropie — Stéphane Lalut"
 disableKinds = ["taxonomy", "term"]
