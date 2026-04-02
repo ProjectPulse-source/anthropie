@@ -1,0 +1,6 @@
+---
+title: "Comment les coûts du télétravail se sont déplacés vers les salariés"
+date: 2026-03-16
+revue: "Alternatives Économiques"
+url_externe: "https://www.alternatives-economiques.fr/comment-les-couts-du-teletravail-se-sont-deplaces-vers-les-salaries/00117769"
+---
