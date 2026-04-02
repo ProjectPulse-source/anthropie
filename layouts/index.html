@@ -1,0 +1,33 @@
+{{ define "main" }}
+
+<!-- Définition canonique -->
+<section class="hero-definition">
+  <p class="hero-definition__text">{{ .Site.Params.canonicalDefinition }}</p>
+  <a href="{{ "quest-ce-que-lanthropie/" | relURL }}" class="hero-definition__link">Lire la présentation complète →</a>
+</section>
+
+<!-- Présentation auteur -->
+<section class="author-intro">
+  <p>Stéphane Lalut, économiste et chercheur indépendant, développe depuis 2025 le cadre anthropique dans une série de working papers et deux ouvrages publiés.</p>
+  <p class="author-intro__orcid">
+    <a href="https://orcid.org/{{ .Site.Params.orcid }}" target="_blank" rel="noopener">ORCID {{ .Site.Params.orcid }}</a>
+  </p>
+</section>
+
+<!-- Série AWP -->
+<section class="home-section">
+  <h2 class="section-title">Anthropie Working Papers</h2>
+  {{ range where .Site.RegularPages "Type" "awp" }}
+    {{ partial "awp-card.html" . }}
+  {{ end }}
+</section>
+
+<!-- Livres -->
+<section class="home-section">
+  <h2 class="section-title">Publications</h2>
+  {{ range where .Site.RegularPages "Type" "livres" }}
+    {{ partial "livre-card.html" . }}
+  {{ end }}
+</section>
+
+{{ end }}

@@ -1,0 +1,90 @@
+// Academic-specific styles
+
+.keywords-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+
+  li {
+    background: $color-doi-bg;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.8rem;
+    font-family: $font-mono;
+    color: lighten($color-text, 20%);
+  }
+}
+
+.faq-section {
+  margin-top: 3rem;
+
+  .faq-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid $color-separator;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .faq-question {
+    font-family: $font-titles;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: $color-text;
+  }
+
+  .faq-answer {
+    line-height: 1.7;
+    color: lighten($color-text, 15%);
+  }
+}
+
+.orcid-link {
+  font-family: $font-mono;
+  font-size: 0.85rem;
+
+  &::before {
+    content: "ORCID: ";
+    font-variant: small-caps;
+    font-family: $font-body;
+    letter-spacing: 0.05em;
+  }
+}
+
+.about-section {
+  margin-bottom: 3rem;
+
+  h2 {
+    margin-top: 0;
+  }
+}
+
+.awp-list-compact {
+  list-style: none;
+  padding: 0;
+
+  li {
+    margin-bottom: 0.8rem;
+    padding-left: 0;
+
+    .awp-list-compact__number {
+      font-family: $font-titles;
+      font-weight: 900;
+      color: $color-accent;
+      margin-right: 0.3rem;
+    }
+
+    .awp-list-compact__doi {
+      display: block;
+      font-family: $font-mono;
+      font-size: 0.78rem;
+      color: $color-secondary;
+      margin-top: 0.2rem;
+    }
+  }
+}

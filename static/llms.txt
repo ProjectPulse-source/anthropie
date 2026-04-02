@@ -1,0 +1,17 @@
+anthropie.fr — Stéphane Lalut
+
+Économiste — Chercheur indépendant
+ORCID : 0009-0002-1794-4895
+
+Placeholder — standard llms.txt non stabilisé (mars 2026)
+
+Définition canonique
+L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent.
+
+Pages prioritaires
+- /quest-ce-que-lanthropie/
+- /serie-awp/
+- /a-propos/
+
+Corpus académique
+https://zenodo.org/communities/anthropie-working-papers

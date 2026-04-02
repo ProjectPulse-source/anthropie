@@ -1,0 +1,64 @@
+backend:
+  name: github
+  repo: "[USERNAME]/anthropie-site"
+  branch: main
+  base_url: "https://[NETLIFY-SITE].netlify.app"
+
+media_folder: static/images
+public_folder: /images
+
+collections:
+  - name: awp
+    label: "Billets AWP"
+    folder: content/awp
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Numéro AWP", name: "awp_number", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Brouillon", name: "draft", widget: "boolean", default: false }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "DOI Zenodo", name: "doi_zenodo", widget: "string" }
+      - { label: "URL Zenodo", name: "url_zenodo", widget: "string" }
+      - { label: "Codes JEL", name: "jel_codes", widget: "list" }
+      - { label: "Mots-clés FR", name: "keywords", widget: "list" }
+      - { label: "Keywords EN", name: "keywords_en", widget: "list" }
+      - label: "FAQ"
+        name: "faq"
+        widget: "list"
+        fields:
+          - { label: "Question", name: "question", widget: "string" }
+          - { label: "Réponse", name: "answer", widget: "text" }
+      - { label: "Contenu", name: "body", widget: "markdown" }
+
+  - name: livres
+    label: "Livres"
+    folder: content/livres
+    create: true
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "ISBN", name: "isbn", widget: "string" }
+      - { label: "Amazon France", name: "url_amazon_fr", widget: "string" }
+      - { label: "Amazon Canada", name: "url_amazon_ca", widget: "string" }
+      - { label: "Amazon USA", name: "url_amazon_com", widget: "string" }
+      - { label: "Amazon UK", name: "url_amazon_uk", widget: "string" }
+      - { label: "Amazon Allemagne", name: "url_amazon_de", widget: "string" }
+      - { label: "Image couverture", name: "image", widget: "image", required: false }
+      - { label: "Contenu", name: "body", widget: "markdown" }
+
+  - name: pages
+    label: "Pages statiques"
+    files:
+      - label: "À propos"
+        name: "a-propos"
+        file: "content/a-propos/_index.md"
+        fields:
+          - { label: "Contenu", name: "body", widget: "markdown" }
+      - label: "Glossaire"
+        name: "glossaire"
+        file: "content/glossaire/_index.md"
+        fields:
+          - { label: "Contenu", name: "body", widget: "markdown" }

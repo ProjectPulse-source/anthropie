@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.site-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header {
+  background-color: $color-dark;
+  color: $color-dark-text;
+  padding: 1rem 2rem;
+
+  .header-inner {
+    max-width: $site-max;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .site-title {
+    font-family: $font-titles;
+    font-size: 1.3rem;
+    font-weight: 700;
+
+    a {
+      color: $color-dark-text;
+      text-decoration: none;
+
+      &:hover {
+        color: lighten($color-dark-text, 10%);
+        text-decoration: none;
+      }
+    }
+  }
+
+  nav {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+
+    a {
+      color: $color-dark-text;
+      font-family: $font-body;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.site-main {
+  flex: 1;
+  max-width: $site-max;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  width: 100%;
+}
+
+.content-narrow {
+  max-width: $content-max;
+  margin: 0 auto;
+}
+
+.site-footer {
+  background-color: $color-dark;
+  color: $color-dark-text;
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+
+  a {
+    color: $color-dark-text;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  .footer-inner {
+    max-width: $site-max;
+    margin: 0 auto;
+  }
+
+  .footer-separator {
+    width: 60px;
+    height: 2px;
+    background-color: $color-accent;
+    margin: 1rem auto;
+  }
+}
+
+.section-title {
+  font-family: $font-titles;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid $color-accent;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    padding: 1rem;
+
+    .header-inner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    nav {
+      gap: 1rem;
+    }
+  }
+
+  .site-main {
+    padding: 2rem 1rem;
+  }
+
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.4rem; }
+}

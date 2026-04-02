@@ -1,0 +1,321 @@
+// DOI Box
+.doi-box {
+  background-color: $color-doi-bg;
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  border-radius: 4px;
+  page-break-inside: avoid;
+
+  .doi-box__title {
+    font-variant: small-caps;
+    letter-spacing: 0.05em;
+    font-family: $font-titles;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: $color-accent;
+  }
+
+  .doi-box__citation {
+    font-family: $font-mono;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    word-break: break-word;
+  }
+
+  .doi-box__link {
+    display: inline-block;
+    color: $color-accent;
+    border: 1px solid $color-accent;
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: $color-accent;
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+// Amazon Buttons
+.amazon-buttons {
+  margin: 2rem 0;
+
+  .amazon-buttons__title {
+    font-variant: small-caps;
+    letter-spacing: 0.05em;
+    font-family: $font-titles;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: $color-accent;
+  }
+
+  .amazon-buttons__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .amazon-btn {
+    display: inline-block;
+    border: 1px solid $color-accent;
+    color: $color-accent;
+    background: transparent;
+    padding: 0.5rem 1.2rem;
+    font-family: $font-body;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: $color-accent;
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+// AWP Card
+.awp-card {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid $color-separator;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .awp-card__number {
+    font-family: $font-titles;
+    font-size: 3rem;
+    font-weight: 900;
+    color: $color-accent;
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+
+  .awp-card__title {
+    font-family: $font-titles;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+
+    a {
+      color: $color-text;
+
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+
+  .awp-card__description {
+    font-size: 0.95rem;
+    color: lighten($color-text, 20%);
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+  }
+
+  .awp-card__doi {
+    font-family: $font-mono;
+    font-size: 0.8rem;
+    color: $color-secondary;
+  }
+}
+
+// Livre Card
+.livre-card {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid $color-separator;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .livre-card__title {
+    font-family: $font-titles;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+
+    a {
+      color: $color-text;
+
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+
+  .livre-card__description {
+    font-size: 0.95rem;
+    color: lighten($color-text, 20%);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+
+  .livre-card__isbn {
+    font-family: $font-mono;
+    font-size: 0.82rem;
+    color: $color-secondary;
+    margin-bottom: 1rem;
+  }
+}
+
+// Glossaire
+.glossaire-entry {
+  margin-bottom: 2rem;
+
+  dt {
+    font-family: $font-titles;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: $color-accent;
+    margin-bottom: 0.3rem;
+  }
+
+  dd {
+    margin-left: 0;
+    line-height: 1.7;
+    color: lighten($color-text, 10%);
+  }
+}
+
+// Hero / Home
+.hero-definition {
+  max-width: $content-max;
+  margin: 0 auto 3rem;
+  text-align: center;
+
+  .hero-definition__text {
+    font-family: $font-titles;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: $color-text;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-definition__link {
+    font-size: 1rem;
+    color: $color-accent;
+  }
+}
+
+.author-intro {
+  max-width: $content-max;
+  margin: 0 auto 3rem;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.8;
+
+  .author-intro__orcid {
+    font-family: $font-mono;
+    font-size: 0.82rem;
+    color: $color-secondary;
+    margin-top: 0.5rem;
+  }
+}
+
+.home-section {
+  max-width: $content-max;
+  margin: 0 auto 4rem;
+}
+
+// Contact form
+.contact-form {
+  max-width: $content-max;
+  margin: 0 auto;
+
+  label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    margin-top: 1rem;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid $color-separator;
+    background: white;
+    font-family: $font-body;
+    font-size: 1rem;
+    border-radius: 3px;
+
+    &:focus {
+      outline: 2px solid $color-accent;
+      border-color: $color-accent;
+    }
+  }
+
+  textarea {
+    min-height: 150px;
+    resize: vertical;
+  }
+
+  button {
+    margin-top: 1.5rem;
+    padding: 0.6rem 2rem;
+    background-color: $color-accent;
+    color: white;
+    border: none;
+    font-family: $font-body;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: darken($color-accent, 10%);
+    }
+  }
+}
+
+// AWP single page
+.awp-header {
+  margin-bottom: 2rem;
+
+  .awp-header__number {
+    font-family: $font-titles;
+    font-size: 4.5rem;
+    font-weight: 900;
+    color: $color-accent;
+    line-height: 1;
+  }
+
+  .awp-header__title {
+    font-family: $font-titles;
+    font-size: 2rem;
+    margin-top: 0.5rem;
+  }
+
+  .awp-header__meta {
+    font-size: 0.9rem;
+    color: lighten($color-text, 30%);
+    margin-top: 0.5rem;
+  }
+
+  .awp-header__jel {
+    font-family: $font-mono;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    color: $color-secondary;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-definition .hero-definition__text {
+    font-size: 1.8rem;
+  }
+
+  .awp-card .awp-card__number {
+    font-size: 2.2rem;
+  }
+
+  .awp-header .awp-header__number {
+    font-size: 3rem;
+  }
+}

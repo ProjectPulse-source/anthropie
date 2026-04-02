@@ -1,0 +1,40 @@
+{{ define "main" }}
+<article class="content-narrow">
+  <header class="awp-header">
+    <div class="awp-header__number">{{ .Params.awp_number }}</div>
+    <h1 class="awp-header__title">{{ .Title }}</h1>
+    <p class="awp-header__meta">{{ .Date.Format "2 January 2006" }} — Stéphane Lalut</p>
+    {{ with .Params.jel_codes }}
+      <p class="awp-header__jel">JEL : {{ delimit . ", " }}</p>
+    {{ end }}
+  </header>
+
+  {{ with .Params.keywords }}
+    <ul class="keywords-list">
+      {{ range . }}<li>{{ . }}</li>{{ end }}
+    </ul>
+  {{ end }}
+
+  {{ .Content }}
+
+  {{ if .Params.doi_zenodo }}
+    <div class="doi-box">
+      <p class="doi-box__title">Pour citer cet article</p>
+      <p class="doi-box__citation">Lalut, Stéphane ({{ .Date.Format "2006" }}). {{ .Title }}. {{ .Params.awp_number }}. Zenodo. https://doi.org/{{ .Params.doi_zenodo }}</p>
+      <a href="{{ .Params.url_zenodo }}" class="doi-box__link" target="_blank" rel="noopener">Consulter sur Zenodo →</a>
+    </div>
+  {{ end }}
+
+  {{ if .Params.faq }}
+    <section class="faq-section">
+      <h2>Questions fréquentes</h2>
+      {{ range .Params.faq }}
+        <div class="faq-item">
+          <h3 class="faq-question">{{ .question }}</h3>
+          <p class="faq-answer">{{ .answer }}</p>
+        </div>
+      {{ end }}
+    </section>
+  {{ end }}
+</article>
+{{ end }}

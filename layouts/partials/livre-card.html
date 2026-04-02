@@ -1,0 +1,16 @@
+<div class="livre-card">
+  <h3 class="livre-card__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+  <p class="livre-card__description">{{ .Description }}</p>
+  {{ with .Params.isbn }}<p class="livre-card__isbn">ISBN : {{ . }}</p>{{ end }}
+  {{ if or .Params.url_amazon_fr .Params.url_amazon_ca .Params.url_amazon_com .Params.url_amazon_uk .Params.url_amazon_de }}
+    <div class="amazon-buttons">
+      <div class="amazon-buttons__row">
+        {{ with .Params.url_amazon_fr }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.fr</a>{{ end }}
+        {{ with .Params.url_amazon_ca }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.ca</a>{{ end }}
+        {{ with .Params.url_amazon_com }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.com</a>{{ end }}
+        {{ with .Params.url_amazon_uk }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.co.uk</a>{{ end }}
+        {{ with .Params.url_amazon_de }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.de</a>{{ end }}
+      </div>
+    </div>
+  {{ end }}
+</div>

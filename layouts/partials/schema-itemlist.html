@@ -1,0 +1,26 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Anthropie Working Papers",
+  "description": "Série de working papers sur l'anthropie par Stéphane Lalut",
+  "itemListElement": [
+    {{ range $i, $page := where .Site.RegularPages "Type" "awp" }}{{ if $i }},{{ end }}
+    {
+      "@type": "ListItem",
+      "position": {{ add $i 1 }},
+      "item": {
+        "@type": "ScholarlyArticle",
+        "name": {{ $page.Title | jsonify }},
+        "url": "{{ $page.Permalink }}",
+        {{ with $page.Params.doi_zenodo }}"identifier": "https://doi.org/{{ . }}",{{ end }}
+        "author": {
+          "@type": "Person",
+          "name": "Stéphane Lalut"
+        }
+      }
+    }
+    {{ end }}
+  ]
+}
+</script>
