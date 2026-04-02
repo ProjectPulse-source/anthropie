@@ -73,6 +73,15 @@ pre {
   border-radius: 3px;
 }
 
+.content ul, .content ol {
+  padding-left: 2rem;
+  margin-left: 0.5rem;
+}
+
+.content li {
+  margin-bottom: 0.4rem;
+}
+
 .small-caps {
   font-variant: small-caps;
   letter-spacing: 0.05em;

@@ -32,7 +32,7 @@ description: "Glossaire des termes clés du cadre anthropique."
 
 <div class="glossaire-entry">
 <dt>Discipline du regard</dt>
-<dd>Posture analytique proposée par l'anthropie : devant tout ordre stable, demander où s'écoule le désordre.</dd>
+<dd>Posture analytique proposée par l'anthropie&nbsp;: devant tout ordre stable, demander où s'écoule le désordre.</dd>
 </div>
 
 <div class="glossaire-entry">
@@ -47,7 +47,7 @@ description: "Glossaire des termes clés du cadre anthropique."
 
 <div class="glossaire-entry">
 <dt>Effet boomerang</dt>
-<dd>Second critère de saturation : le désordre déporté revient au système émetteur.</dd>
+<dd>Second critère de saturation&nbsp;: le désordre déporté revient au système émetteur.</dd>
 </div>
 
 </dl>

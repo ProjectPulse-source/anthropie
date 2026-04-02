@@ -14,6 +14,6 @@ url_amazon_de: ""
 
 L'ouvrage fondateur du cadre anthropique.
 
-*ANTHROPIE – Ordre ici. Dette ailleurs* propose une hypothèse simple mais radicale : les systèmes sociaux ne résolvent pas le désordre, ils le déplacent. En 606 pages, Stéphane Lalut déploie cette hypothèse à travers l'histoire longue, l'économie, les finances publiques et l'épistémologie.
+*ANTHROPIE – Ordre ici. Dette ailleurs* propose une hypothèse simple mais radicale&nbsp;: les systèmes sociaux ne résolvent pas le désordre, ils le déplacent. En 606 pages, Stéphane Lalut déploie cette hypothèse à travers l'histoire longue, l'économie, les finances publiques et l'épistémologie.
 
 {{< amazon-buttons >}}

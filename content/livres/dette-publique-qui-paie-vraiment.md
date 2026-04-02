@@ -14,6 +14,6 @@ url_amazon_de: ""
 
 Application du cadre anthropique à la dette publique française.
 
-*Dette Publique : Qui paie vraiment ?* reprend et développe l'analyse amorcée dans le working paper AWP-03, en montrant que la question décisive n'est pas « combien ? » mais « qui paie ? ». Le livre examine les mécanismes de transfert temporel et social à l'œuvre dans la dette publique française.
+*Dette Publique&nbsp;: Qui paie vraiment ?* reprend et développe l'analyse amorcée dans le working paper AWP-03, en montrant que la question décisive n'est pas « combien ? » mais « qui paie ? ». Le livre examine les mécanismes de transfert temporel et social à l'œuvre dans la dette publique française.
 
 {{< amazon-buttons >}}

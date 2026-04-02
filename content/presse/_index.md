@@ -17,4 +17,4 @@ Cette page rassemble les éléments utiles pour toute demande d'information rela
 
 ## Contact presse
 
-Pour toute demande : [contact@anthropie.fr](mailto:contact@anthropie.fr)
+Pour toute demande&nbsp;: [contact@anthropie.fr](mailto:contact@anthropie.fr)

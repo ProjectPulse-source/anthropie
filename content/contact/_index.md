@@ -3,7 +3,7 @@ title: "Contact"
 description: "Contacter Stéphane Lalut."
 ---
 
-Pour toute question relative aux travaux sur l'anthropie, aux working papers ou aux ouvrages publiés :
+Pour toute question relative aux travaux sur l'anthropie, aux working papers ou aux ouvrages publiés&nbsp;:
 
 **contact@anthropie.fr**
 

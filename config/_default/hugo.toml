@@ -17,6 +17,9 @@ disableKinds = ["taxonomy", "term"]
   orcid = "0009-0002-1794-4895"
   zenodoCommunity = "https://zenodo.org/communities/anthropie-working-papers"
 
+[markup.goldmark.extensions]
+  typographer = true
+
 [markup.goldmark.renderer]
   unsafe = true
 
