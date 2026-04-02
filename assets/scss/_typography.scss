@@ -70,39 +70,43 @@ pre {
 }
 
 // Lists
-.content ol,
-.content ul {
+.content-narrow ol,
+.content-narrow ul {
   padding-left: 2.4rem;
   margin: 1.2rem 0 2rem 0;
   list-style-position: outside;
 }
 
-.content ol li,
-.content ul li {
+.content-narrow ol li,
+.content-narrow ul li {
   margin-bottom: 0.65rem;
   line-height: 1.85;
 }
 
-.content li::marker {
+.content-narrow li::marker {
   color: $color-accent;
 }
 
-.content ol li > p,
-.content ul li > p {
+.content-narrow ol li > p,
+.content-narrow ul li > p {
   margin: 0;
 }
 
-.content ol + p,
-.content ul + p {
+.content-narrow ol + p,
+.content-narrow ul + p {
   margin-top: 1.8rem;
 }
 
-.content p {
+.content-narrow p {
   line-height: 1.85;
 }
 
 // Table
-.content table {
+.content-narrow {
+  overflow-x: auto;
+}
+
+.content-narrow table {
   width: 100%;
   border-collapse: collapse;
   margin: 2rem 0;
@@ -110,7 +114,7 @@ pre {
   table-layout: auto;
 }
 
-.content table th {
+.content-narrow table th {
   text-align: left;
   font-weight: 600;
   padding: 0.75rem 1rem;
@@ -119,32 +123,27 @@ pre {
   letter-spacing: 0.05em;
 }
 
-.content table td {
+.content-narrow table td {
   padding: 0.9rem 1rem;
   vertical-align: top;
   border-bottom: 1px solid $color-separator;
   line-height: 1.65;
 }
 
-.content table tr:last-child td {
+.content-narrow table tr:last-child td {
   border-bottom: none;
 }
 
-.content table th:first-child,
-.content table td:first-child {
+.content-narrow table th:first-child,
+.content-narrow table td:first-child {
   font-weight: 600;
   white-space: nowrap;
   min-width: 11rem;
 }
 
-.content table th:nth-child(2),
-.content table td:nth-child(2) {
+.content-narrow table th:nth-child(2),
+.content-narrow table td:nth-child(2) {
   min-width: 12rem;
-}
-
-// Mobile table
-.table-wrap {
-  overflow-x: auto;
 }
 
 .small-caps {
