@@ -80,7 +80,7 @@
 
 // AWP Card
 .awp-card {
-  padding: 1.5rem;
+  padding: 2rem;
   border: 1px solid $color-separator;
   border-radius: 4px;
 
@@ -91,6 +91,7 @@
     color: $color-accent;
     line-height: 1;
     margin-bottom: 0.3rem;
+    letter-spacing: 0.04em;
   }
 
   .awp-card__title {
@@ -119,6 +120,8 @@
     font-family: $font-mono;
     font-size: 0.8rem;
     color: $color-secondary;
+    font-weight: 400;
+    opacity: 0.75;
   }
 }
 
@@ -182,6 +185,8 @@
     font-size: 0.82rem;
     color: $color-secondary;
     margin-bottom: 1rem;
+    font-weight: 400;
+    opacity: 0.75;
   }
 }
 
@@ -222,9 +227,9 @@
 
   .hero-definition__text {
     font-family: $font-titles;
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 4vw, 3.2rem);
     font-weight: 700;
-    line-height: 1.3;
+    line-height: 1.25;
     color: $color-text;
     margin-bottom: 1.5rem;
   }
@@ -253,7 +258,7 @@
 
 .home-section {
   max-width: $site-max;
-  margin: 0 auto 4rem;
+  margin: 0 auto 6rem;
   padding: 0 2rem;
 }
 
@@ -374,8 +379,8 @@
 
   .pub-card__revue {
     font-variant: small-caps;
-    letter-spacing: 0.04em;
-    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    font-size: 0.85rem;
     color: $color-accent;
     margin-bottom: 0.25rem;
   }
@@ -384,6 +389,8 @@
     font-size: 0.8rem;
     color: lighten($color-text, 40%);
     margin-bottom: 0.3rem;
+    font-weight: 400;
+    opacity: 0.75;
   }
 
   .pub-card__title {
@@ -421,9 +428,6 @@
     font-size: 1.4rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    padding-bottom: 0.3rem;
-    border-bottom: 2px solid $color-accent;
-    display: inline-block;
   }
 }
 

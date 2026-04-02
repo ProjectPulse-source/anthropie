@@ -32,11 +32,7 @@ h2 { font-size: 1.8rem; }
 h3 { font-size: 1.4rem; }
 h4 { font-size: 1.2rem; }
 
-h2 {
-  padding-bottom: 0.4rem;
-  border-bottom: 2px solid $color-accent;
-  display: inline-block;
-}
+// h2 hierarchy via Playfair Display only — no border
 
 p {
   margin-bottom: 1.2rem;
@@ -80,6 +76,11 @@ pre {
 
 .content li {
   margin-bottom: 0.4rem;
+  line-height: 1.85;
+}
+
+.content p {
+  line-height: 1.85;
 }
 
 .small-caps {
