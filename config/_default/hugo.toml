@@ -1,7 +1,11 @@
 baseURL = "https://stephane-lalut.com/"
-languageCode = "fr-FR"
 title = "Anthropie — Stéphane Lalut"
+defaultContentLanguage = "fr"
 disableKinds = ["taxonomy", "term"]
+
+[languages.fr]
+  languageCode = "fr-FR"
+  languageName = "Français"
 
 [author]
   name = "Stéphane Lalut"

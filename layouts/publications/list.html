@@ -6,7 +6,7 @@
   {{ range .Pages.ByDate.Reverse }}
   <div class="pub-card">
     {{ with .Params.revue }}<p class="pub-card__revue">{{ . }}</p>{{ end }}
-    <p class="pub-card__date">{{ .Date.Format "January 2006" }}</p>
+    <p class="pub-card__date">{{ time.Format "January 2006" .Date }}</p>
     <h2 class="pub-card__title">
       {{ with .Params.url_externe }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}
       {{ .Title }}

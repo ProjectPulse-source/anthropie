@@ -3,7 +3,7 @@
   <header class="awp-header">
     <div class="awp-header__number">{{ .Params.awp_number }}</div>
     <h1 class="awp-header__title">{{ .Title }}</h1>
-    <p class="awp-header__meta">{{ .Date.Format "2 January 2006" }} — Stéphane Lalut</p>
+    <p class="awp-header__meta">{{ time.Format ":date_long" .Date }} — Stéphane Lalut</p>
     {{ with .Params.jel_codes }}
       <p class="awp-header__jel">JEL : {{ delimit . ", " }}</p>
     {{ end }}

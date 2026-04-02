@@ -33,7 +33,8 @@
   {{ end }}
 
   <!-- Autres ouvrages -->
-  {{ $autres := where .Pages "Params.serie" "!=" "anthropie" }}
+  {{ $all := .Pages }}
+  {{ $autres := $all | complement $serie }}
   {{ if $autres }}
   <hr class="livres-divider">
   <div class="livres-section">
