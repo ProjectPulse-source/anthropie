@@ -27,8 +27,8 @@
 
   .site-title {
     font-family: $font-titles;
-    font-size: 1.3rem;
     font-weight: 700;
+    line-height: 1.2;
 
     a {
       color: $color-dark-text;
@@ -38,6 +38,21 @@
         color: lighten($color-dark-text, 10%);
         text-decoration: none;
       }
+    }
+
+    .site-title__name {
+      display: block;
+      font-size: 1.3rem;
+    }
+
+    .site-title__sub {
+      display: block;
+      font-size: 0.7rem;
+      font-variant: small-caps;
+      letter-spacing: 0.15em;
+      font-weight: 400;
+      opacity: 0.75;
+      margin-top: 0.1rem;
     }
   }
 
