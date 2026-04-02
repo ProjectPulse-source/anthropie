@@ -9,15 +9,18 @@
   <div class="livres-section">
     <h2 class="livres-section__title">Série anthropique</h2>
     {{ range $serie }}
-    <div class="livre-card">
+    <div class="livre-card livre-card--flex">
       {{ with .Params.image_url }}
-        <img class="livre-card__cover" src="{{ . }}" alt="Couverture — {{ $.Title }}">
+        <div class="livre-card__cover-wrap">
+          <img class="livre-card__cover" src="{{ . }}" alt="Couverture — {{ $.Title }}">
+        </div>
       {{ end }}
-      <h3 class="livre-card__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-      {{ with .Params.isbn }}<p class="livre-card__isbn">ISBN : {{ . }}</p>{{ end }}
-      <p class="livre-card__description">{{ .Description }}</p>
-      {{ if or .Params.url_amazon_fr .Params.url_amazon_ca .Params.url_amazon_com .Params.url_amazon_uk .Params.url_amazon_de }}
+      <div class="livre-card__body">
+        <h3 class="livre-card__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        {{ with .Params.isbn }}<p class="livre-card__isbn">ISBN&nbsp;: {{ . }}</p>{{ end }}
+        <p class="livre-card__description">{{ .Description }}</p>
         <div class="amazon-buttons">
+          <p class="amazon-buttons__title">Commander</p>
           <div class="amazon-buttons__row">
             {{ with .Params.url_amazon_fr }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.fr</a>{{ end }}
             {{ with .Params.url_amazon_ca }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.ca</a>{{ end }}
@@ -26,7 +29,7 @@
             {{ with .Params.url_amazon_de }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.de</a>{{ end }}
           </div>
         </div>
-      {{ end }}
+      </div>
     </div>
     {{ end }}
   </div>
@@ -40,15 +43,19 @@
   <div class="livres-section">
     <h2 class="livres-section__title">Autres ouvrages</h2>
     {{ range $autres }}
-    <div class="livre-card">
+    <div class="livre-card livre-card--flex">
       {{ with .Params.image_url }}
-        <img class="livre-card__cover" src="{{ . }}" alt="Couverture — {{ $.Title }}">
+        <div class="livre-card__cover-wrap">
+          <img class="livre-card__cover" src="{{ . }}" alt="Couverture — {{ $.Title }}">
+        </div>
       {{ end }}
-      <h3 class="livre-card__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-      {{ with .Params.isbn }}<p class="livre-card__isbn">ISBN : {{ . }}</p>{{ end }}
-      <p class="livre-card__description">{{ .Description }}</p>
-      {{ if or .Params.url_amazon_fr .Params.url_amazon_ca .Params.url_amazon_com .Params.url_amazon_uk .Params.url_amazon_de }}
+      <div class="livre-card__body">
+        <h3 class="livre-card__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        {{ with .Params.isbn }}<p class="livre-card__isbn">ISBN&nbsp;: {{ . }}</p>{{ end }}
+        <p class="livre-card__description">{{ .Description }}</p>
+        {{ if or .Params.url_amazon_fr .Params.url_amazon_ca .Params.url_amazon_com .Params.url_amazon_uk .Params.url_amazon_de }}
         <div class="amazon-buttons">
+          <p class="amazon-buttons__title">Commander</p>
           <div class="amazon-buttons__row">
             {{ with .Params.url_amazon_fr }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.fr</a>{{ end }}
             {{ with .Params.url_amazon_ca }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.ca</a>{{ end }}
@@ -57,7 +64,8 @@
             {{ with .Params.url_amazon_de }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.de</a>{{ end }}
           </div>
         </div>
-      {{ end }}
+        {{ end }}
+      </div>
     </div>
     {{ end }}
   </div>

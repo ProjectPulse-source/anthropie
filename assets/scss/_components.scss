@@ -132,11 +132,27 @@
     border-bottom: none;
   }
 
+  &--flex {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  .livre-card__cover-wrap {
+    flex-shrink: 0;
+    width: 180px;
+  }
+
   .livre-card__cover {
     width: 100%;
-    max-width: 230px;
     height: auto;
-    margin-bottom: 1rem;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .livre-card__body {
+    flex: 1;
+    min-width: 0;
   }
 
   .livre-card__title {
@@ -166,6 +182,16 @@
     font-size: 0.82rem;
     color: $color-secondary;
     margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .livre-card--flex {
+    flex-direction: column;
+  }
+
+  .livre-card .livre-card__cover-wrap {
+    width: 140px;
   }
 }
 

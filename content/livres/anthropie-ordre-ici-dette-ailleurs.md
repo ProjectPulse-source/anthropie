@@ -4,12 +4,12 @@ date: 2025-01-01
 description: "L'ouvrage fondateur du cadre anthropique. 606 pages. Stéphane Lalut, 2025."
 isbn: "978-2-9586347-2-8"
 serie: "anthropie"
-image_url: ""
-url_amazon_fr: ""
-url_amazon_ca: ""
-url_amazon_com: ""
-url_amazon_uk: ""
-url_amazon_de: ""
+image_url: "https://m.media-amazon.com/images/I/81kdsh4400L._SL1436_.jpg"
+url_amazon_fr: "#"
+url_amazon_ca: "#"
+url_amazon_com: "#"
+url_amazon_uk: "#"
+url_amazon_de: "#"
 ---
 
 L'ouvrage fondateur du cadre anthropique.

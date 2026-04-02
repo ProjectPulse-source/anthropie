@@ -4,12 +4,12 @@ date: 2025-01-01
 description: "Application du cadre anthropique à la dette publique française. Stéphane Lalut, 2025."
 isbn: "978-2-9586347-3-5"
 serie: "anthropie"
-image_url: ""
-url_amazon_fr: ""
-url_amazon_ca: ""
-url_amazon_com: ""
-url_amazon_uk: ""
-url_amazon_de: ""
+image_url: "https://m.media-amazon.com/images/I/613dYtFI5WL._SL1500_.jpg"
+url_amazon_fr: "#"
+url_amazon_ca: "#"
+url_amazon_com: "#"
+url_amazon_uk: "#"
+url_amazon_de: "#"
 ---
 
 Application du cadre anthropique à la dette publique française.
