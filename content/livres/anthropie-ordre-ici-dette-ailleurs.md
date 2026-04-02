@@ -5,11 +5,12 @@ description: "L'ouvrage fondateur du cadre anthropique. 606 pages. Stéphane Lal
 isbn: "978-2-9586347-2-8"
 serie: "anthropie"
 image_url: "https://m.media-amazon.com/images/I/81kdsh4400L._SL1436_.jpg"
-url_amazon_fr: "#"
-url_amazon_ca: "#"
-url_amazon_com: "#"
-url_amazon_uk: "#"
-url_amazon_de: "#"
+url_amazon_fr: "https://amzn.eu/d/0hfod6Wc"
+url_amazon_es: "https://amzn.eu/d/05Dd2qh4"
+url_amazon_com: "https://a.co/d/08HfFlLF"
+url_amazon_uk: "https://amzn.eu/d/0hKCJKTh"
+url_amazon_de: "https://amzn.eu/d/0iFQJmHF"
+url_amazon_it: "https://amzn.eu/d/0f0NFGYi"
 ---
 
 L'ouvrage fondateur du cadre anthropique.
