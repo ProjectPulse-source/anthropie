@@ -27,6 +27,17 @@
   {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
 
+<!-- Google Scholar -->
+{{ if and (eq .Type "awp") .IsPage .File }}
+<meta name="citation_title" content="{{ .Title }}">
+<meta name="citation_author" content="Lalut, Stéphane">
+<meta name="citation_publication_date" content="{{ .Date.Format "2006/01/02" }}">
+<meta name="citation_doi" content="{{ .Params.doi_zenodo }}">
+<meta name="citation_pdf_url" content="{{ .Params.url_zenodo }}/files/{{ .File.BaseFileName }}.pdf">
+<meta name="citation_language" content="fr">
+<meta name="citation_abstract_html_url" content="{{ .Permalink }}">
+{{ end }}
+
 <!-- Schema.org -->
 {{ if eq .Type "awp" }}
   {{- partial "schema-scholarly-article.html" . -}}

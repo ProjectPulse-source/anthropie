@@ -13,4 +13,4 @@ Allow: /
 User-agent: GoogleOther
 Allow: /
 
-Sitemap: https://anthropie.fr/sitemap.xml
+Sitemap: https://stephane-lalut.com/sitemap.xml
