@@ -69,15 +69,17 @@ pre {
   border-radius: 3px;
 }
 
-.content ul, .content ol {
-  padding-left: 2.5rem;
-  margin-left: 0;
-  margin-bottom: 2rem;
+// Lists
+.content ol,
+.content ul {
+  padding-left: 2.4rem;
+  margin: 1.2rem 0 2rem 0;
+  list-style-position: outside;
 }
 
-.content ol li, .content ul li {
-  padding-left: 0.5rem;
-  margin-bottom: 0.6rem;
+.content ol li,
+.content ul li {
+  margin-bottom: 0.65rem;
   line-height: 1.85;
 }
 
@@ -85,7 +87,13 @@ pre {
   color: $color-accent;
 }
 
-.content ol + p, .content ul + p {
+.content ol li > p,
+.content ul li > p {
+  margin: 0;
+}
+
+.content ol + p,
+.content ul + p {
   margin-top: 1.8rem;
 }
 
@@ -99,6 +107,7 @@ pre {
   border-collapse: collapse;
   margin: 2rem 0;
   font-size: 0.95rem;
+  table-layout: auto;
 }
 
 .content table th {
@@ -111,24 +120,31 @@ pre {
 }
 
 .content table td {
-  padding: 0.85rem 1rem;
+  padding: 0.9rem 1rem;
   vertical-align: top;
   border-bottom: 1px solid $color-separator;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .content table tr:last-child td {
   border-bottom: none;
 }
 
+.content table th:first-child,
 .content table td:first-child {
   font-weight: 600;
   white-space: nowrap;
-  width: 12%;
+  min-width: 11rem;
 }
 
+.content table th:nth-child(2),
 .content table td:nth-child(2) {
-  width: 30%;
+  min-width: 12rem;
+}
+
+// Mobile table
+.table-wrap {
+  overflow-x: auto;
 }
 
 .small-caps {
