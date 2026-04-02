@@ -3,7 +3,8 @@
   <h1>{{ .Title }}</h1>
   {{ .Content }}
 
-  {{ range .Pages.ByDate.Reverse }}
+  {{ $withUrl := where .Pages "Params.url_externe" "!=" nil }}
+  {{ range $withUrl.ByDate.Reverse }}
   <div class="pub-card">
     {{ with .Params.revue }}<p class="pub-card__revue">{{ . }}</p>{{ end }}
     <h2 class="pub-card__title">

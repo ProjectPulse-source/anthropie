@@ -29,8 +29,9 @@
 <section class="home-section">
   <h2 class="section-title">Contributions récentes</h2>
   {{ $pubs := where .Site.RegularPages "Type" "publications" }}
-  {{ $selected := where $pubs "Params.revue" "in" (slice "Alternatives Économiques" "La Vie des Idées" "Le Temps") }}
-  {{ range $selected.ByDate.Reverse }}
+  {{ $selected := where $pubs "Params.revue" "in" (slice "En attendant Nadeau" "Alternatives Économiques" "La Vie des Idées") }}
+  {{ $filtered := where $selected "Params.url_externe" "!=" nil }}
+  {{ range (sort $filtered "Date" "desc") | first 3 }}
   <div class="pub-card">
     <p class="pub-card__revue">{{ .Params.revue }}</p>
     <h3 class="pub-card__title">
