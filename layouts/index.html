@@ -17,9 +17,11 @@
 <!-- Série AWP -->
 <section class="home-section">
   <h2 class="section-title">Anthropie Working Papers</h2>
-  {{ range where .Site.RegularPages "Type" "awp" }}
-    {{ partial "awp-card.html" . }}
-  {{ end }}
+  <div class="awp-grid">
+    {{ range sort (where .Site.RegularPages "Type" "awp") "Params.awp_number" "asc" }}
+      {{ partial "awp-card.html" . }}
+    {{ end }}
+  </div>
 </section>
 
 <!-- Livres -->

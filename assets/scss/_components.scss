@@ -80,13 +80,9 @@
 
 // AWP Card
 .awp-card {
-  margin-bottom: 2.5rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid $color-separator;
-
-  &:last-child {
-    border-bottom: none;
-  }
+  padding: 1.5rem;
+  border: 1px solid $color-separator;
+  border-radius: 4px;
 
   .awp-card__number {
     font-family: $font-titles;
@@ -230,8 +226,21 @@
 }
 
 .home-section {
-  max-width: $content-max;
+  max-width: $site-max;
   margin: 0 auto 4rem;
+  padding: 0 2rem;
+}
+
+.awp-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .awp-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 // Contact form
