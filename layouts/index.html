@@ -8,7 +8,7 @@
 
 <!-- Présentation auteur -->
 <section class="author-intro">
-  <p>Stéphane Lalut, économiste et chercheur indépendant, développe depuis 2025 le cadre anthropique dans une série de working papers et deux ouvrages publiés.</p>
+  <p>Stéphane Lalut, économiste et chercheur indépendant, développe le cadre anthropique dans une série de working papers et deux ouvrages publiés.</p>
   <p class="author-intro__publications">Publie dans Alternatives Économiques, La Vie des Idées, En attendant Nadeau, Terrestres, Nonfiction, Le Temps.</p>
   <p class="author-intro__orcid">
     <a href="https://orcid.org/{{ .Site.Params.orcid }}" target="_blank" rel="noopener">ORCID {{ .Site.Params.orcid }}</a>
@@ -25,10 +25,29 @@
   </div>
 </section>
 
+<!-- Contributions récentes -->
+<section class="home-section">
+  <h2 class="section-title">Contributions récentes</h2>
+  {{ $pubs := where .Site.RegularPages "Type" "publications" }}
+  {{ $selected := where $pubs "Params.revue" "in" (slice "Alternatives Économiques" "La Vie des Idées" "Le Temps") }}
+  {{ range $selected.ByDate.Reverse }}
+  <div class="pub-card">
+    <p class="pub-card__revue">{{ .Params.revue }}</p>
+    <h3 class="pub-card__title">
+      {{ with .Params.url_externe }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}
+      {{ .Title }}
+      {{ with .Params.url_externe }}</a>{{ end }}
+    </h3>
+    <p class="pub-card__date">{{ time.Format ":date_long" .Date }}</p>
+  </div>
+  {{ end }}
+  <p style="margin-top: 1rem;"><a href="{{ "publications/" | relURL }}">Toutes les publications →</a></p>
+</section>
+
 <!-- Livres -->
 <section class="home-section">
-  <h2 class="section-title">Publications</h2>
-  {{ range where .Site.RegularPages "Type" "livres" }}
+  <h2 class="section-title">Livres</h2>
+  {{ range where (where .Site.RegularPages "Type" "livres") "Params.serie" "anthropie" }}
     {{ partial "livre-card.html" . }}
   {{ end }}
 </section>
