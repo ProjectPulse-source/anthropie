@@ -2,7 +2,7 @@
 title: "Dette Publique : Qui paie vraiment ?"
 date: 2025-01-01
 description: "Application du cadre anthropique à la dette publique française. Stéphane Lalut, 2025."
-isbn: ""
+isbn: "978-2-9586347-3-5"
 serie: "anthropie"
 image_url: ""
 url_amazon_fr: ""
