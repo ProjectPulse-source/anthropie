@@ -1,0 +1,12 @@
+{{ define "main" }}
+<div class="home-section">
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+
+  <div class="awp-grid">
+    {{ range sort (where .Site.RegularPages "Type" "awp") "Params.awp_number" "asc" }}
+      {{ partial "awp-card.html" . }}
+    {{ end }}
+  </div>
+</div>
+{{ end }}
