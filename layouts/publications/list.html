@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="content-narrow">
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+
+  {{ range .Pages.ByDate.Reverse }}
+  <div class="pub-card">
+    {{ with .Params.revue }}<p class="pub-card__revue">{{ . }}</p>{{ end }}
+    <p class="pub-card__date">{{ .Date.Format "January 2006" }}</p>
+    <h2 class="pub-card__title">
+      {{ with .Params.url_externe }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}
+      {{ .Title }}
+      {{ with .Params.url_externe }}</a>{{ end }}
+    </h2>
+    {{ with .Description }}<p class="pub-card__description">{{ . }}</p>{{ end }}
+  </div>
+  {{ end }}
+</div>
+{{ end }}

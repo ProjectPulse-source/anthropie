@@ -325,6 +325,122 @@
   }
 }
 
+// Reading font for long-form pages
+.content-reading {
+  > p, > ul, > ol, > blockquote, > dl {
+    font-family: $font-reading;
+  }
+
+  .faq-answer {
+    font-family: $font-reading;
+  }
+}
+
+// Publication card
+.pub-card {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid $color-separator;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .pub-card__revue {
+    font-variant: small-caps;
+    letter-spacing: 0.04em;
+    font-size: 0.82rem;
+    color: $color-accent;
+    margin-bottom: 0.25rem;
+  }
+
+  .pub-card__date {
+    font-size: 0.8rem;
+    color: lighten($color-text, 40%);
+    margin-bottom: 0.3rem;
+  }
+
+  .pub-card__title {
+    font-family: $font-titles;
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+
+    a {
+      color: $color-text;
+
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+
+  .pub-card__description {
+    font-size: 0.9rem;
+    color: lighten($color-text, 25%);
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+// Livre section divider
+.livres-section {
+  margin-bottom: 3rem;
+
+  .livres-section__title {
+    font-family: $font-titles;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid $color-accent;
+    display: inline-block;
+  }
+}
+
+.livres-divider {
+  border: none;
+  border-top: 1px solid $color-separator;
+  margin: 2.5rem 0;
+}
+
+// Presse page
+.presse-section {
+  margin-bottom: 2.5rem;
+
+  .presse-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid $color-separator;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .presse-item__icon {
+    font-size: 1.2rem;
+    color: $color-accent;
+    flex-shrink: 0;
+  }
+
+  .presse-item__link {
+    font-size: 0.95rem;
+  }
+}
+
+// Author publications line
+.author-intro__publications {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: lighten($color-text, 35%);
+  margin-top: 0.5rem;
+}
+
 @media (max-width: 768px) {
   .hero-definition .hero-definition__text {
     font-size: 1.8rem;
