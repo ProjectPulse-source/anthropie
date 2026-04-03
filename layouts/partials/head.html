@@ -81,15 +81,17 @@
   "author": {
     "@type": "Person",
     "name": "Stéphane Lalut",
-    "sameAs": "https://orcid.org/0009-0002-1794-4895"
+    "sameAs": "https://orcid.org/0009-0002-1794-4895",
+    "url": "https://stephane-lalut.com/a-propos/"
   },
-  "datePublished": {{ .Date.Format "2006-01-02T00:00:00+01:00" | jsonify }},
+  "datePublished": {{ .Date.Format "2006-01-02" | jsonify }},
   "publisher": {
     "@type": "Organization",
-    "name": "Zenodo"
+    "name": "Stéphane Lalut",
+    "url": "https://stephane-lalut.com"
   },
   "identifier": {{ .Params.doi_zenodo | jsonify }},
-  "url": {{ .Permalink | jsonify }},
+  "url": "{{ .Permalink }}",
   "inLanguage": "fr",
   "isAccessibleForFree": true,
   "license": "https://creativecommons.org/licenses/by/4.0/"
