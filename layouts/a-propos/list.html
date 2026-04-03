@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="content-narrow">
+  <h1>{{ .Title }}</h1>
+  {{ $parts := split .Content "<!-- AWP_LIST -->" }}
+  {{ index $parts 0 | safeHTML }}
+  {{- partial "awp-list.html" . -}}
+  {{ if gt (len $parts) 1 }}
+    {{ index $parts 1 | safeHTML }}
+  {{ end }}
+</div>
+{{ end }}

@@ -1,6 +1,7 @@
 ---
 title: "À propos"
 description: "Stéphane Lalut — Économiste et chercheur indépendant. Auteur du cadre anthropique."
+awp_list_after: "Anthropie Working Papers"
 ---
 
 ## Chercheur
@@ -13,13 +14,7 @@ description: "Stéphane Lalut — Économiste et chercheur indépendant. Auteur 
 
 ### Anthropie Working Papers
 
-<ul class="awp-list-compact">
-  <li><span class="awp-list-compact__number">AWP-01</span> — <a href="/awp/awp-01/">Qu'est-ce que l'anthropie ? Principes d'une hypothèse</a><span class="awp-list-compact__doi">DOI&nbsp;: <a href="https://doi.org/10.5281/zenodo.19266862" target="_blank" rel="noopener">10.5281/zenodo.19266862</a></span></li>
-  <li><span class="awp-list-compact__number">AWP-02</span> — <a href="/awp/awp-02/">3,3 millions d'années en un principe</a><span class="awp-list-compact__doi">DOI&nbsp;: <a href="https://doi.org/10.5281/zenodo.19268037" target="_blank" rel="noopener">10.5281/zenodo.19268037</a></span></li>
-  <li><span class="awp-list-compact__number">AWP-03</span> — <a href="/awp/awp-03/">Dette publique et anthropie&nbsp;: qui paie vraiment le désordre ?</a><span class="awp-list-compact__doi">DOI&nbsp;: <a href="https://doi.org/10.5281/zenodo.19268769" target="_blank" rel="noopener">10.5281/zenodo.19268769</a></span></li>
-  <li><span class="awp-list-compact__number">AWP-04</span> — <a href="/awp/awp-04/">Transition énergétique ou transfert entropique ?</a><span class="awp-list-compact__doi">DOI&nbsp;: <a href="https://doi.org/10.5281/zenodo.19269244" target="_blank" rel="noopener">10.5281/zenodo.19269244</a></span></li>
-  <li><span class="awp-list-compact__number">AWP-05</span> — <a href="/awp/awp-05/">Penser hors les murs&nbsp;: notes sur la recherche indépendante</a><span class="awp-list-compact__doi">DOI&nbsp;: <a href="https://doi.org/10.5281/zenodo.19269486" target="_blank" rel="noopener">10.5281/zenodo.19269486</a></span></li>
-</ul>
+<!-- AWP_LIST -->
 
 ---
 
@@ -57,15 +52,4 @@ Application du cadre anthropique à la dette publique française. Stéphane Lalu
 
 ## Contact
 
-<form class="contact-form" action="https://formspree.io/f/mblaprga" method="POST">
-  <label for="name">Nom</label>
-  <input type="text" id="name" name="name" required>
-
-  <label for="email">E-mail</label>
-  <input type="email" id="email" name="email" required>
-
-  <label for="message">Message</label>
-  <textarea id="message" name="message" required></textarea>
-
-  <button type="submit">Envoyer</button>
-</form>
+→ [Me contacter](/contact/)

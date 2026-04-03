@@ -1,0 +1,9 @@
+<ul class="awp-list-compact">
+{{ range sort (where .Site.RegularPages "Type" "awp") "Params.awp_number" "asc" }}
+<li>
+  <span class="awp-list-compact__number">{{ .Params.awp_number }}</span> —
+  <a href="{{ .Permalink }}">{{ .Title }}</a>
+  <span class="awp-list-compact__doi">DOI&nbsp;: <a href="https://doi.org/{{ .Params.doi_zenodo }}" target="_blank" rel="noopener">{{ .Params.doi_zenodo }}</a></span>
+</li>
+{{ end }}
+</ul>
