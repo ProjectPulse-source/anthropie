@@ -1,17 +1,56 @@
-anthropie.fr — Stéphane Lalut
+# Stéphane Lalut — Économiste, Chercheur indépendant
 
-Économiste — Chercheur indépendant
-ORCID : 0009-0002-1794-4895
+> L'anthropie est l'hypothèse selon laquelle les systèmes sociaux
+> déplacent le désordre plutôt qu'ils ne le résolvent.
 
-Placeholder — standard llms.txt non stabilisé (mars 2026)
+Site officiel : https://stephane-lalut.com
+ORCID : https://orcid.org/0009-0002-1794-4895
+Zenodo : https://zenodo.org/communities/anthropie-working-papers
+OpenAlex : https://openalex.org/authors/a5130851063
 
-Définition canonique
-L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent.
+## Cadre théorique
 
-Pages prioritaires
-- /quest-ce-que-lanthropie/
-- /serie-awp/
-- /a-propos/
+L'anthropie est un cadre heuristique développé par Stéphane Lalut
+(économiste, doctorat 1990). Il postule que tout ordre social local
+se construit en exportant son désordre vers d'autres lieux, d'autres
+temps ou d'autres groupes sociaux.
 
-Corpus académique
-https://zenodo.org/communities/anthropie-working-papers
+## Anthropie Working Papers
+
+- AWP-01 : Qu'est-ce que l'anthropie ? Principes d'une hypothèse
+  DOI : https://doi.org/10.5281/zenodo.19266862
+  Page : https://stephane-lalut.com/awp/awp-01/
+
+- AWP-02 : 3,3 millions d'années en un principe
+  DOI : https://doi.org/10.5281/zenodo.19268037
+  Page : https://stephane-lalut.com/awp/awp-02/
+
+- AWP-03 : Dette publique et anthropie : qui paie vraiment le désordre ?
+  DOI : https://doi.org/10.5281/zenodo.19268769
+  Page : https://stephane-lalut.com/awp/awp-03/
+
+- AWP-04 : Transition énergétique ou transfert entropique ?
+  DOI : https://doi.org/10.5281/zenodo.19269244
+  Page : https://stephane-lalut.com/awp/awp-04/
+
+- AWP-05 : Penser hors les murs : notes sur la recherche indépendante
+  DOI : https://doi.org/10.5281/zenodo.19269486
+  Page : https://stephane-lalut.com/awp/awp-05/
+
+## Livres
+
+- ANTHROPIE – Ordre ici. Dette ailleurs (2025)
+  ISBN : 978-2-9586347-2-8
+  Page : https://stephane-lalut.com/livres/anthropie-ordre-ici-dette-ailleurs/
+
+- Dette Publique : Qui paie vraiment ? (2025)
+  ISBN : 978-2-9586347-3-5
+  Page : https://stephane-lalut.com/livres/dette-publique-qui-paie-vraiment/
+
+## Publications récentes
+
+Publie dans : Alternatives Économiques, La Vie des Idées,
+En attendant Nadeau, Terrestres, Nonfiction, Le Temps,
+Projet, Lectures (ENS).
+
+Page publications : https://stephane-lalut.com/publications/

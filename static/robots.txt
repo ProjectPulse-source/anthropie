@@ -14,3 +14,6 @@ User-agent: GoogleOther
 Allow: /
 
 Sitemap: https://stephane-lalut.com/sitemap.xml
+
+# llms.txt
+Sitemap: https://stephane-lalut.com/llms.txt
