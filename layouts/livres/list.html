@@ -10,9 +10,9 @@
     <h2 class="livres-section__title">Série anthropique</h2>
     {{ range $serie }}
     <div class="livre-card livre-card--flex">
-      {{ with .Params.image_url }}
+      {{ if .Params.image_url }}
         <div class="livre-card__cover-wrap">
-          <img class="livre-card__cover" src="{{ . }}" alt="Couverture — {{ $.Title }}">
+          <img class="livre-card__cover" src="{{ .Params.image_url }}" alt="Couverture du livre {{ .Title }} de {{ .Params.auteur | default "Stéphane Lalut" }}">
         </div>
       {{ end }}
       <div class="livre-card__body">
@@ -46,9 +46,9 @@
     <h2 class="livres-section__title">Autres ouvrages</h2>
     {{ range $autres }}
     <div class="livre-card livre-card--flex">
-      {{ with .Params.image_url }}
+      {{ if .Params.image_url }}
         <div class="livre-card__cover-wrap">
-          <img class="livre-card__cover" src="{{ . }}" alt="Couverture — {{ $.Title }}">
+          <img class="livre-card__cover" src="{{ .Params.image_url }}" alt="Couverture du livre {{ .Title }} de {{ .Params.auteur | default "Stéphane Lalut" }}">
         </div>
       {{ end }}
       <div class="livre-card__body">
