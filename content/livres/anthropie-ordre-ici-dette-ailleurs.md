@@ -11,6 +11,7 @@ url_amazon_com: "https://a.co/d/08HfFlLF"
 url_amazon_uk: "https://amzn.eu/d/0hKCJKTh"
 url_amazon_de: "https://amzn.eu/d/0iFQJmHF"
 url_amazon_it: "https://amzn.eu/d/0f0NFGYi"
+url_amazon_ca: "https://a.co/d/09nBM1Rj"
 ---
 
 L'ouvrage fondateur du cadre anthropique.

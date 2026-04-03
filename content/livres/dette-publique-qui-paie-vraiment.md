@@ -11,6 +11,7 @@ url_amazon_com: "https://a.co/d/04hB4FsV"
 url_amazon_uk: "https://amzn.eu/d/09SXx0W5"
 url_amazon_de: "https://amzn.eu/d/0f0NFGYi"
 url_amazon_it: "https://amzn.eu/d/0f0NFGYi"
+url_amazon_ca: "https://a.co/d/0aLceVAe"
 ---
 
 Application du cadre anthropique à la dette publique française.
