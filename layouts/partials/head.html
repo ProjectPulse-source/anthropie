@@ -39,15 +39,86 @@
 {{ end }}
 
 <!-- Schema.org -->
-{{ if eq .Type "awp" }}
-  {{- partial "schema-scholarly-article.html" . -}}
-{{ end }}
 {{ if .Params.faq }}
   {{- partial "schema-faqpage.html" . -}}
 {{ end }}
-{{ if and .File (eq .File.Dir "a-propos/") }}
-  {{- partial "schema-person.html" . -}}
-{{ end }}
 {{ if and .File (eq .File.Dir "serie-awp/") }}
   {{- partial "schema-itemlist.html" . -}}
+{{ end }}
+
+<!-- Schema.org ProfilePage + Person -->
+{{ if eq .RelPermalink "/a-propos/" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Stéphane Lalut",
+    "url": "https://stephane-lalut.com",
+    "sameAs": [
+      "https://orcid.org/0009-0002-1794-4895",
+      "https://zenodo.org/communities/anthropie-working-papers",
+      "https://openalex.org/authors/a5130851063",
+      "https://independent.academia.edu/StéphaneLALUT"
+    ],
+    "jobTitle": "Économiste — Chercheur indépendant",
+    "description": "Économiste (doctorat, 1990), chercheur indépendant. Auteur du cadre anthropique.",
+    "knowsAbout": ["anthropie", "dette publique", "transition énergétique", "économie institutionnelle"]
+  }
+}
+</script>
+{{ end }}
+
+<!-- Schema.org ScholarlyArticle -->
+{{ if and (eq .Type "awp") .IsPage .File }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": {{ .Title | jsonify }},
+  "author": {
+    "@type": "Person",
+    "name": "Stéphane Lalut",
+    "sameAs": "https://orcid.org/0009-0002-1794-4895"
+  },
+  "datePublished": {{ .Date.Format "2006-01-02" | jsonify }},
+  "publisher": {
+    "@type": "Organization",
+    "name": "Zenodo"
+  },
+  "identifier": {{ .Params.doi_zenodo | jsonify }},
+  "url": {{ .Permalink | jsonify }},
+  "inLanguage": "fr",
+  "isAccessibleForFree": true,
+  "license": "https://creativecommons.org/licenses/by/4.0/"
+}
+</script>
+{{ end }}
+
+<!-- Schema.org ItemList Publications -->
+{{ if eq .RelPermalink "/publications/" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Publications de Stéphane Lalut",
+  "author": {
+    "@type": "Person",
+    "name": "Stéphane Lalut",
+    "sameAs": "https://orcid.org/0009-0002-1794-4895"
+  },
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Comment les coûts du télétravail se sont déplacés vers les salariés", "url": "https://www.alternatives-economiques.fr/comment-les-couts-du-teletravail-se-sont-deplaces-vers-les-salaries/00117769"},
+    {"@type": "ListItem", "position": 2, "name": "Qui paie la fluidité ? — Khalili, Extractive Capitalism", "url": "https://laviedesidees.fr/Laleh-Khalili-Extractive-Capitalism"},
+    {"@type": "ListItem", "position": 3, "name": "La limite retournée — Carton & Malm", "url": "https://www.en-attendant-nadeau.fr/2026/03/24/la-limite-retournee/"},
+    {"@type": "ListItem", "position": 4, "name": "Votations du 8 mars : quatre allègements, quatre coûts déplacés", "url": "https://www.letemps.ch/opinions/votations-du-8-mars-quatre-allegements-quatre-couts-deplaces"},
+    {"@type": "ListItem", "position": 5, "name": "La transition énergétique n'a jamais eu lieu — Fressoz", "url": "https://www.nonfiction.fr/article-12589-la-transition-energetique-na-jamais-eu-lieu.htm"},
+    {"@type": "ListItem", "position": 6, "name": "Le prix ne fait pas le profit — Brett Christophers", "url": "https://www.en-attendant-nadeau.fr/2026/01/20/le-prix-ne-fait-pas-le-profit-brett-christophers/"},
+    {"@type": "ListItem", "position": 7, "name": "Sous le cloud, la fournaise", "url": "https://www.terrestres.org/2026/01/22/resister-a-la-dematerialisation-depuis-marseille/"},
+    {"@type": "ListItem", "position": 8, "name": "Budget 2026 : la dette commande, les territoires patientent", "url": "https://blogs.mediapart.fr/stephane-lalut/blog/150126/budget-2026-la-dette-commande-les-territoires-patientent"},
+    {"@type": "ListItem", "position": 9, "name": "MaPrimeRénov' : l'arrêt faute de budget", "url": "https://blogs.mediapart.fr/stephane-lalut/blog/120126/maprimerenov-l-arret-faute-de-budget-les-menages-modestes-font-les-frais-du-gel"}
+  ]
+}
+</script>
 {{ end }}
