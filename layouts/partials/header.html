@@ -7,6 +7,13 @@
       {{ range .Site.Menus.main }}
         <a href="{{ .URL | relURL }}"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a>
       {{ end }}
+      <span class="lang-toggle">
+        {{ if eq .Lang "fr" }}
+          <span class="lang-toggle__active">fr</span><span class="lang-toggle__sep">/</span>{{ if .IsTranslated }}{{ range .Translations }}<a href="{{ .Permalink }}" onclick="localStorage.setItem('lang-choice','en')">en</a>{{ end }}{{ else }}<a href="/en/" onclick="localStorage.setItem('lang-choice','en')">en</a>{{ end }}
+        {{ else }}
+          {{ if .IsTranslated }}{{ range .Translations }}<a href="{{ .Permalink }}" onclick="localStorage.setItem('lang-choice','fr')">fr</a>{{ end }}{{ else }}<a href="/" onclick="localStorage.setItem('lang-choice','fr')">fr</a>{{ end }}<span class="lang-toggle__sep">/</span><span class="lang-toggle__active">en</span>
+        {{ end }}
+      </span>
     </nav>
   </div>
 </header>

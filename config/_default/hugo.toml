@@ -1,11 +1,52 @@
 baseURL = "https://stephane-lalut.com/"
 title = "Anthropie — Stéphane Lalut"
 defaultContentLanguage = "fr"
+defaultContentLanguageInSubdir = false
 disableKinds = ["taxonomy", "term"]
 
 [languages.fr]
+  weight = 1
   languageCode = "fr-FR"
   languageName = "Français"
+
+[languages.en]
+  weight = 2
+  languageCode = "en"
+  languageName = "English"
+
+[languages.en.params]
+  description = "Anthropy is the hypothesis that social systems displace disorder rather than resolve it. Research blog by Stéphane Lalut, economist and independent researcher."
+  canonicalDefinition = "Anthropy is the hypothesis that social systems displace disorder rather than resolve it."
+
+[[languages.en.menus.main]]
+  name = "Anthropy"
+  url = "/en/quest-ce-que-lanthropie/"
+  weight = 10
+
+[[languages.en.menus.main]]
+  name = "Working Papers"
+  url = "/en/serie-awp/"
+  weight = 20
+
+[[languages.en.menus.main]]
+  name = "Publications"
+  url = "/publications/"
+  weight = 25
+
+[[languages.en.menus.main]]
+  name = "Books"
+  url = "/livres/"
+  weight = 30
+
+[[languages.en.menus.main]]
+  name = "About"
+  url = "/en/a-propos/"
+  weight = 40
+
+[[languages.en.menus.main]]
+  name = "Contact"
+  url = "/en/contact/"
+  weight = 50
 
 [author]
   name = "Stéphane Lalut"

@@ -74,6 +74,35 @@
       }
     }
   }
+
+  .lang-toggle {
+    font-variant: small-caps;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    margin-left: 0.5rem;
+
+    a {
+      color: $color-dark-text;
+      opacity: 0.6;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+
+      &:hover {
+        opacity: 1;
+        color: $color-dark-text;
+      }
+    }
+
+    .lang-toggle__active {
+      color: $color-dark-text;
+      font-weight: 700;
+    }
+
+    .lang-toggle__sep {
+      opacity: 0.4;
+      margin: 0 0.15rem;
+    }
+  }
 }
 
 .site-main {

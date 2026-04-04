@@ -3,13 +3,22 @@
 <!-- Définition canonique -->
 <section class="hero-definition">
   <p class="hero-definition__text">{{ .Site.Params.canonicalDefinition }}</p>
-  <a href="{{ "quest-ce-que-lanthropie/" | relURL }}" class="hero-definition__link">Lire la présentation complète →</a>
+  {{ if eq .Lang "en" }}
+    <a href="{{ "quest-ce-que-lanthropie/" | relURL }}" class="hero-definition__link">Read the full presentation →</a>
+  {{ else }}
+    <a href="{{ "quest-ce-que-lanthropie/" | relURL }}" class="hero-definition__link">Lire la présentation complète →</a>
+  {{ end }}
 </section>
 
 <!-- Présentation auteur -->
 <section class="author-intro">
-  <p>Stéphane Lalut, économiste et chercheur indépendant, développe le cadre anthropique dans une série de working papers et deux ouvrages publiés.</p>
-  <p class="author-intro__publications">Publie dans Alternatives Économiques, La Vie des Idées, En attendant Nadeau, Terrestres, Nonfiction, Le Temps.</p>
+  {{ if eq .Lang "en" }}
+    <p>Stéphane Lalut, economist and independent researcher, develops the framework of anthropy through a series of working papers and two published books.</p>
+    <p class="author-intro__publications">Published in Alternatives Économiques, La Vie des Idées, En attendant Nadeau, Terrestres, Nonfiction, and Le Temps.</p>
+  {{ else }}
+    <p>Stéphane Lalut, économiste et chercheur indépendant, développe le cadre anthropique dans une série de working papers et deux ouvrages publiés.</p>
+    <p class="author-intro__publications">Publie dans Alternatives Économiques, La Vie des Idées, En attendant Nadeau, Terrestres, Nonfiction, Le Temps.</p>
+  {{ end }}
   <p class="author-intro__orcid">
     <a href="https://orcid.org/{{ .Site.Params.orcid }}" target="_blank" rel="noopener">ORCID {{ .Site.Params.orcid }}</a>
   </p>
@@ -25,10 +34,16 @@
   </div>
 </section>
 
-<!-- Contributions récentes -->
+<!-- Publications récentes -->
 <section class="home-section">
-  <h2 class="section-title">Publications récentes</h2>
-  {{ $pubs := where .Site.RegularPages "Type" "publications" }}
+  {{ if eq .Lang "en" }}
+    <h2 class="section-title">Recent publications</h2>
+  {{ else }}
+    <h2 class="section-title">Publications récentes</h2>
+  {{ end }}
+  {{/* Publications are FR-only — query French site */}}
+  {{ $frSite := index site.Sites 0 }}
+  {{ $pubs := where $frSite.RegularPages "Type" "publications" }}
   {{ $selected := where $pubs "Params.revue" "in" (slice "En attendant Nadeau" "Alternatives Économiques" "La Vie des Idées") }}
   {{ $filtered := where $selected "Params.url_externe" "!=" nil }}
   {{ range (sort $filtered "Date" "desc") | first 3 }}
@@ -42,13 +57,23 @@
     <p class="pub-card__date">{{ time.Format ":date_long" .Date }}</p>
   </div>
   {{ end }}
-  <p style="margin-top: 1rem;"><a href="{{ "publications/" | relURL }}">Toutes les publications →</a></p>
+  {{ if eq .Lang "en" }}
+    <p style="margin-top: 1rem;"><a href="/publications/">All publications →</a></p>
+  {{ else }}
+    <p style="margin-top: 1rem;"><a href="{{ "publications/" | relURL }}">Toutes les publications →</a></p>
+  {{ end }}
 </section>
 
 <!-- Livres -->
 <section class="home-section">
-  <h2 class="section-title">Livres</h2>
-  {{ range where (where .Site.RegularPages "Type" "livres") "Params.serie" "anthropie" }}
+  {{ if eq .Lang "en" }}
+    <h2 class="section-title">Books</h2>
+  {{ else }}
+    <h2 class="section-title">Livres</h2>
+  {{ end }}
+  {{/* Livres are FR-only — query French site */}}
+  {{ $frSite := index site.Sites 0 }}
+  {{ range where (where $frSite.RegularPages "Type" "livres") "Params.serie" "anthropie" }}
     {{ partial "livre-card.html" . }}
   {{ end }}
 </section>
