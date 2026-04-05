@@ -3,11 +3,14 @@
   <h1>{{ .Title }}</h1>
   {{ .Content }}
 
+  {{ $frSite := index site.Sites 0 }}
+  {{ $allLivres := where $frSite.RegularPages "Type" "livres" }}
+  {{ $serie := where $allLivres "Params.serie" "anthropie" }}
+
   <!-- Série anthropique -->
-  {{ $serie := where .Pages "Params.serie" "anthropie" }}
   {{ if $serie }}
   <div class="livres-section">
-    <h2 class="livres-section__title">Série anthropique</h2>
+    <h2 class="livres-section__title">{{ if eq .Lang "en" }}Anthropic series{{ else }}Série anthropique{{ end }}</h2>
     {{ range $serie }}
     <div class="livre-card livre-card--flex">
       {{ if .Params.image_url }}
@@ -20,7 +23,7 @@
         {{ with .Params.isbn }}<p class="livre-card__isbn">ISBN&nbsp;: {{ . }}</p>{{ end }}
         <p class="livre-card__description">{{ .Description }}</p>
         <div class="amazon-buttons">
-          <p class="amazon-buttons__title">Commander</p>
+          <p class="amazon-buttons__title">{{ if eq $.Lang "en" }}Order{{ else }}Commander{{ end }}</p>
           <div class="amazon-buttons__row">
             {{ with .Params.url_amazon_fr }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.fr</a>{{ end }}
             {{ with .Params.url_amazon_es }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.es</a>{{ end }}
@@ -38,12 +41,11 @@
   {{ end }}
 
   <!-- Autres ouvrages -->
-  {{ $all := .Pages }}
-  {{ $autres := $all | complement $serie }}
+  {{ $autres := $allLivres | complement $serie }}
   {{ if $autres }}
   <hr class="livres-divider">
   <div class="livres-section">
-    <h2 class="livres-section__title">Autres ouvrages</h2>
+    <h2 class="livres-section__title">{{ if eq .Lang "en" }}Other works{{ else }}Autres ouvrages{{ end }}</h2>
     {{ range $autres }}
     <div class="livre-card livre-card--flex">
       {{ if .Params.image_url }}
@@ -57,7 +59,7 @@
         <p class="livre-card__description">{{ .Description }}</p>
         {{ if or .Params.url_amazon_fr .Params.url_amazon_es .Params.url_amazon_com .Params.url_amazon_uk .Params.url_amazon_de .Params.url_amazon_it }}
         <div class="amazon-buttons">
-          <p class="amazon-buttons__title">Commander</p>
+          <p class="amazon-buttons__title">{{ if eq $.Lang "en" }}Order{{ else }}Commander{{ end }}</p>
           <div class="amazon-buttons__row">
             {{ with .Params.url_amazon_fr }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.fr</a>{{ end }}
             {{ with .Params.url_amazon_es }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.es</a>{{ end }}

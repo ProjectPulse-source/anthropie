@@ -2,15 +2,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
 
-<!-- Language detection -->
-<script src="/js/lang-detect.js"></script>
-
 <!-- hreflang -->
 {{ if .IsTranslated }}
 <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
 {{ range .Translations }}
 <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
 {{ end }}
+<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
 {{ end }}
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta name="author" content="Stéphane Lalut">
@@ -21,7 +19,7 @@
 <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
-<meta property="og:locale" content="fr_FR">
+<meta property="og:locale" content="{{ if eq .Lang "en" }}en_GB{{ else }}fr_FR{{ end }}">
 <meta property="og:site_name" content="{{ .Site.Title }}">
 
 <!-- Google Fonts -->
@@ -45,20 +43,22 @@
 <meta name="citation_publication_date" content="{{ .Date.Format "2006/01/02" }}">
 <meta name="citation_doi" content="{{ .Params.doi_zenodo }}">
 <meta name="citation_pdf_url" content="{{ .Params.url_zenodo }}/files/{{ .File.BaseFileName }}.pdf">
-<meta name="citation_language" content="fr">
+<meta name="citation_language" content="{{ .Language.Lang }}">
 <meta name="citation_abstract_html_url" content="{{ .Permalink }}">
 {{ end }}
 
-<!-- Schema.org -->
+<!-- Schema.org FAQ -->
 {{ if .Params.faq }}
   {{- partial "schema-faqpage.html" . -}}
 {{ end }}
+
+<!-- Schema.org ItemList série AWP -->
 {{ if and .File (eq .File.Dir "serie-awp/") }}
   {{- partial "schema-itemlist.html" . -}}
 {{ end }}
 
 <!-- Schema.org ProfilePage + Person -->
-{{ if eq .RelPermalink "/a-propos/" }}
+{{ if or (eq .RelPermalink "/a-propos/") (eq .RelPermalink "/en/a-propos/") }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -81,7 +81,7 @@
 </script>
 {{ end }}
 
-<!-- Schema.org ScholarlyArticle -->
+<!-- Schema.org ScholarlyArticle (merged) -->
 {{ if and (eq .Type "awp") .IsPage .File }}
 <script type="application/ld+json">
 {
@@ -89,6 +89,7 @@
   "@type": "ScholarlyArticle",
   "headline": {{ .Title | jsonify }},
   "image": "https://m.media-amazon.com/images/I/81kdsh4400L._SL1436_.jpg",
+  "description": {{ .Description | jsonify }},
   "author": {
     "@type": "Person",
     "name": "Stéphane Lalut",
@@ -101,17 +102,26 @@
     "name": "Stéphane Lalut",
     "url": "https://stephane-lalut.com"
   },
-  "identifier": {{ .Params.doi_zenodo | jsonify }},
+  "identifier": "https://doi.org/{{ .Params.doi_zenodo }}",
+  "sameAs": "https://doi.org/{{ .Params.doi_zenodo }}",
   "url": "{{ .Permalink }}",
-  "inLanguage": "fr",
+  "inLanguage": "{{ .Language.Lang }}",
+  {{ with .Params.keywords }}"keywords": {{ . | jsonify }},{{ end }}
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Anthropie Working Papers"
+  },
   "isAccessibleForFree": true,
   "license": "https://creativecommons.org/licenses/by/4.0/"
 }
 </script>
 {{ end }}
 
-<!-- Schema.org ItemList Publications -->
-{{ if eq .RelPermalink "/publications/" }}
+<!-- Schema.org ItemList Publications (dynamic) -->
+{{ if or (eq .RelPermalink "/publications/") (eq .RelPermalink "/en/publications/") }}
+{{ $frSite := index site.Sites 0 }}
+{{ $pubs := where $frSite.RegularPages "Type" "publications" }}
+{{ $withUrl := where $pubs "Params.url_externe" "!=" nil }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -123,15 +133,9 @@
     "sameAs": "https://orcid.org/0009-0002-1794-4895"
   },
   "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "Comment les coûts du télétravail se sont déplacés vers les salariés", "url": "https://www.alternatives-economiques.fr/comment-les-couts-du-teletravail-se-sont-deplaces-vers-les-salaries/00117769"},
-    {"@type": "ListItem", "position": 2, "name": "Qui paie la fluidité ? — Khalili, Extractive Capitalism", "url": "https://laviedesidees.fr/Laleh-Khalili-Extractive-Capitalism"},
-    {"@type": "ListItem", "position": 3, "name": "La limite retournée — Carton & Malm", "url": "https://www.en-attendant-nadeau.fr/2026/03/24/la-limite-retournee/"},
-    {"@type": "ListItem", "position": 4, "name": "Votations du 8 mars : quatre allègements, quatre coûts déplacés", "url": "https://www.letemps.ch/opinions/votations-du-8-mars-quatre-allegements-quatre-couts-deplaces"},
-    {"@type": "ListItem", "position": 5, "name": "La transition énergétique n'a jamais eu lieu — Fressoz", "url": "https://www.nonfiction.fr/article-12589-la-transition-energetique-na-jamais-eu-lieu.htm"},
-    {"@type": "ListItem", "position": 6, "name": "Le prix ne fait pas le profit — Brett Christophers", "url": "https://www.en-attendant-nadeau.fr/2026/01/20/le-prix-ne-fait-pas-le-profit-brett-christophers/"},
-    {"@type": "ListItem", "position": 7, "name": "Sous le cloud, la fournaise", "url": "https://www.terrestres.org/2026/01/22/resister-a-la-dematerialisation-depuis-marseille/"},
-    {"@type": "ListItem", "position": 8, "name": "Budget 2026 : la dette commande, les territoires patientent", "url": "https://blogs.mediapart.fr/stephane-lalut/blog/150126/budget-2026-la-dette-commande-les-territoires-patientent"},
-    {"@type": "ListItem", "position": 9, "name": "MaPrimeRénov' : l'arrêt faute de budget", "url": "https://blogs.mediapart.fr/stephane-lalut/blog/120126/maprimerenov-l-arret-faute-de-budget-les-menages-modestes-font-les-frais-du-gel"}
+    {{ range $i, $pub := $withUrl.ByDate.Reverse }}{{ if $i }},{{ end }}
+    {"@type": "ListItem", "position": {{ add $i 1 }}, "name": {{ $pub.Title | jsonify }}, "url": {{ $pub.Params.url_externe | jsonify }}}
+    {{ end }}
   ]
 }
 </script>

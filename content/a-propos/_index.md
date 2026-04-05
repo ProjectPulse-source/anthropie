@@ -10,7 +10,11 @@ awp_list_after: "Anthropie Working Papers"
 
 **Communauté Zenodo**&nbsp;: [Anthropie Working Papers](https://zenodo.org/communities/anthropie-working-papers)
 
-**Cadre théorique** — L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. Ce cadre permet d'analyser les mécanismes de transfert anthropique à travers les dimensions spatiale, temporelle et sociale.
+Stéphane Lalut est économiste (doctorat, 1990) et chercheur indépendant. Il développe le cadre anthropique — l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent — dans une série de working papers déposés sur Zenodo et deux ouvrages publiés.
+
+Ses travaux portent sur les mécanismes de transfert anthropique à travers les dimensions spatiale (externalisation territoriale), temporelle (dette, report sur les générations futures) et sociale (captation asymétrique des coûts). Il applique cette grille d'analyse aux finances publiques, à la transition énergétique et à l'organisation du champ académique.
+
+Il publie dans *Alternatives Économiques*, *La Vie des Idées*, *En attendant Nadeau*, *Terrestres*, *Nonfiction*, *Le Temps*, *Projet* et *Lectures* (ENS).
 
 ### Anthropie Working Papers
 

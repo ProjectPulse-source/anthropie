@@ -20,4 +20,26 @@
     </div>
   {{ end }}
 </article>
+
+<!-- Schema.org Book -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": {{ .Title | jsonify }},
+  "author": {
+    "@type": "Person",
+    "name": "Stéphane Lalut",
+    "sameAs": "https://orcid.org/0009-0002-1794-4895"
+  },
+  {{ with .Params.isbn }}"isbn": {{ . | jsonify }},{{ end }}
+  "description": {{ .Description | jsonify }},
+  "inLanguage": "fr",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Stéphane Lalut"
+  },
+  "url": "{{ .Permalink }}"
+}
+</script>
 {{ end }}

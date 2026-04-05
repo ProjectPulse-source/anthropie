@@ -17,6 +17,26 @@ faq:
     answer: "A working hypothesis with heuristic value. It makes it possible to ask questions that other frameworks do not formulate, without claiming the exhaustiveness of a finished theory."
 ---
 
-Anthropy is the hypothesis that every stable local social order is built by exporting its disorder to other places, other times, or other social groups.
+Anthropy is the hypothesis that every stable local social order is built by exporting its disorder to other places, other times, or other social groups. This founding text establishes the principles of the framework.
 
-This founding text establishes the principles of the framework of anthropy and argues that the displacement of disorder constitutes a structural mechanism observable in every configuration of stable order.
+## The starting point
+
+The initial observation is straightforward: social systems do not resolve disorder — they displace it. What appears as stable order within a given perimeter presupposes the existence of zones where the corresponding disorder has been transferred. This transfer operation constitutes the central mechanism of anthropy.
+
+The term itself does not claim the status of a finished concept. It designates a working hypothesis with heuristic value: a tool for asking questions that conventional analytical frameworks do not formulate, or tend to neutralise.
+
+## The three dimensions of transfer
+
+The framework of anthropy distinguishes three main axes of disorder displacement. Spatial transfer externalises costs to other places — offshored pollution, remote extraction, territorial relegation. Temporal transfer defers costs to the future — public debt, underinvestment, maintenance deficit. Social transfer displaces costs toward groups least able to escape — precarisation, exclusion, asymmetric cost capture.
+
+These three dimensions are not mutually exclusive. In most observable configurations, they combine and mutually reinforce one another.
+
+## The discipline of attention
+
+Anthropy proposes an analytical posture that can be summarised in a single formula: whenever confronted with a stable order, ask where disorder flows. This "discipline of attention" leads to systematically questioning what is rendered invisible by the apparent stability of a system.
+
+It does not consist in abstractly denouncing the disorder of the world. It aims instead to identify, in each concrete configuration, the mechanism by which a local order maintains itself by exporting part of its costs — and to make visible the mediations that render this transfer opaque.
+
+## Anthropy and entropy
+
+Anthropy is not to be confused with thermodynamic entropy. The term does not function as a physical metaphor: it designates a properly social and institutional mechanism. Entropy belongs to physics. Anthropy belongs to the analysis of social structures and their mechanisms of stabilisation through externalisation.

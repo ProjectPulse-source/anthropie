@@ -1,6 +1,20 @@
 ---
 title: "What is anthropy?"
+slug: "what-is-anthropy"
 description: "Anthropy is the hypothesis that social systems displace disorder rather than resolve it."
+faq:
+  - question: "What is anthropy in social science?"
+    answer: "Anthropy is the hypothesis that social systems displace disorder rather than resolve it. Every observable order in a system implies disorder exported elsewhere — spatially, temporally, or socially."
+  - question: "What is the difference between anthropy and entropy?"
+    answer: "Entropy belongs to physics and thermodynamics. Anthropy designates a social and institutional mechanism: the way in which human systems produce local order by displacing disorder outside the visible perimeter."
+  - question: "Is anthropy a theory or a hypothesis?"
+    answer: "A working hypothesis with heuristic value. It makes it possible to ask questions that other frameworks do not formulate, without claiming the exhaustiveness of a finished theory."
+  - question: "What is the discipline of attention?"
+    answer: "It is the analytical posture proposed by the framework of anthropy: whenever confronted with a stable order, ask where disorder is displaced. It leads us to interrogate the shadow zones of apparent stability."
+  - question: "How does anthropy apply to public debt?"
+    answer: "Public debt displaces the cost of present disorder toward future generations and social groups least able to escape it. It is a classic temporal and social transfer in the anthropic sense."
+  - question: "Who developed the framework of anthropy?"
+    answer: "Stéphane Lalut, economist and independent researcher, proposed the framework of anthropy from 2025 onwards in a series of working papers published on Zenodo under the label Anthropie Working Papers (AWP)."
 ---
 
 ## Definition

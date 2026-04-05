@@ -18,4 +18,19 @@ L'ouvrage fondateur du cadre anthropique.
 
 *ANTHROPIE – Ordre ici. Dette ailleurs* propose une hypothèse simple mais radicale&nbsp;: les systèmes sociaux ne résolvent pas le désordre, ils le déplacent. En 606 pages, Stéphane Lalut déploie cette hypothèse à travers l'histoire longue, l'économie, les finances publiques et l'épistémologie.
 
+## Argument
+
+L'ordre que nous observons autour de nous — dans les institutions, les territoires, les économies — n'est jamais un état spontané. Il est le produit d'une opération de transfert&nbsp;: le désordre n'est pas résolu, il est déplacé vers d'autres lieux, d'autres temps ou d'autres groupes sociaux. Ce livre développe cette hypothèse à travers sept configurations historiques, de l'outil paléolithique au métaprogramme numérique, et l'applique à trois domaines contemporains&nbsp;: la dette publique, la transition énergétique et la recherche académique.
+
+## Sommaire
+
+1. Les fondements de l'hypothèse anthropique
+2. Sept configurations&nbsp;: 3,3 millions d'années de transfert
+3. Les trois axes du déplacement&nbsp;: spatial, temporel, social
+4. La dette publique comme transfert entropique
+5. Transition énergétique ou reconfiguration du désordre ?
+6. L'ordre épistémique et ses marges
+7. Saturation et effets boomerang
+8. La discipline du regard
+
 {{< amazon-buttons >}}

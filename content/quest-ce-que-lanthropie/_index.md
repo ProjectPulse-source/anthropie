@@ -1,6 +1,19 @@
 ---
 title: "Qu'est-ce que l'anthropie ?"
 description: "L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent."
+faq:
+  - question: "Qu'est-ce que l'anthropie en sciences sociales ?"
+    answer: "L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. Tout ordre observable suppose un désordre exporté ailleurs — spatialement, temporellement ou socialement."
+  - question: "Quelle est la différence entre anthropie et entropie ?"
+    answer: "L'entropie relève de la physique et de la thermodynamique. L'anthropie désigne un mécanisme social et institutionnel : la manière dont des systèmes humains produisent de l'ordre local en déplaçant le désordre hors du périmètre visible."
+  - question: "L'anthropie est-elle une théorie ou une hypothèse ?"
+    answer: "Une hypothèse de travail à valeur heuristique. Elle permet de poser des questions que d'autres cadres ne formulent pas, sans prétendre à l'exhaustivité d'une théorie achevée."
+  - question: "Qu'est-ce que la discipline du regard ?"
+    answer: "C'est la posture analytique proposée par l'anthropie : devant tout ordre stable, demander où s'écoule le désordre. Elle conduit à interroger les zones d'ombre de la stabilité apparente."
+  - question: "Comment l'anthropie s'applique-t-elle à la dette publique ?"
+    answer: "La dette publique déplace le coût du désordre présent vers les générations futures et les groupes sociaux les moins capables de s'y soustraire. C'est un transfert temporel et social classique au sens anthropique."
+  - question: "Qui a développé le cadre anthropique ?"
+    answer: "Stéphane Lalut, économiste et chercheur indépendant, a proposé le cadre anthropique à partir de 2025 dans une série de working papers publiés sur Zenodo sous le label Anthropie Working Papers (AWP)."
 ---
 
 ## Définition

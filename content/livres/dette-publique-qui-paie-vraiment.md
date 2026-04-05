@@ -16,6 +16,21 @@ url_amazon_ca: "https://a.co/d/0aLceVAe"
 
 Application du cadre anthropique à la dette publique française.
 
-*Dette Publique&nbsp;: Qui paie vraiment ?* reprend et développe l'analyse amorcée dans le working paper AWP-03, en montrant que la question décisive n'est pas « combien ? » mais « qui paie ? ». Le livre examine les mécanismes de transfert temporel et social à l'œuvre dans la dette publique française.
+*Dette Publique&nbsp;: Qui paie vraiment ?* reprend et développe l'analyse amorcée dans le working paper AWP-03, en montrant que la question décisive n'est pas « combien ? » mais « qui paie ? ».
+
+## Argument
+
+La dette publique est habituellement discutée en termes de montants, de ratios et de soutenabilité. Ce livre déplace la question&nbsp;: il s'intéresse non pas au « combien » mais au « qui ». Qui supporte réellement le coût de la dette ? Vers quels groupes sociaux et vers quelles générations le fardeau est-il transféré ? Par quels mécanismes ce transfert devient-il invisible dans le débat public ?
+
+En appliquant le cadre anthropique aux finances publiques françaises, Stéphane Lalut montre que la dette fonctionne comme un dispositif de transfert temporel et social&nbsp;: elle reporte le coût du désordre présent vers les générations futures et les groupes les moins mobiles — ceux qui ne peuvent se soustraire ni fiscalement ni géographiquement au prélèvement.
+
+## Sommaire
+
+1. La dette comme mécanisme de transfert
+2. L'axe temporel&nbsp;: qui hérite du désordre ?
+3. L'axe social&nbsp;: groupes captifs et groupes mobiles
+4. Les finances publiques françaises au prisme de l'anthropie
+5. Ce que les ratios ne disent pas
+6. Le coût politique de la lisibilité
 
 {{< amazon-buttons >}}

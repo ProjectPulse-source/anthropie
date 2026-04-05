@@ -15,6 +15,26 @@ faq:
     answer: "They reduce the cost of marginality without abolishing its logic. They modify the form of transfer — from silent relegation to drowning in noise — not its nature."
 ---
 
-Does the academic field displace epistemic disorder toward its margins?
+Does the academic field displace epistemic disorder toward its margins? This working paper applies the framework of anthropy to the field itself.
 
-This working paper applies the framework of anthropy to the field itself, examines relegation mechanisms, and questions the role of open infrastructures (Zenodo, ORCID).
+## The academic field as a transfer system
+
+The academic field produces epistemic order — hierarchies of legitimacy, criteria of validity, circuits of recognition. This order, like all order in the anthropic sense, presupposes disorder exported elsewhere. Questions deemed out of scope, non-conforming formats, atypical postures are relegated to the margins of the system: non-indexed journals, self-publication, independent research.
+
+This relegation is not an accident or a failing of the system. It is a structural mechanism by which the field maintains its internal coherence by externalising what would destabilise it.
+
+## Independent research as margin
+
+Independent research occupies a structurally marginal position in the academic economy. It has neither institutional funding, nor peer-review circuits, nor the visibility that affiliations confer. This marginality is not merely a question of resources: it is functional. The field needs margins to absorb the disorder it cannot process internally.
+
+The independent researcher is the person onto whom the field deports part of its epistemic disorder: questions too transversal, hypotheses too risky, formats too heterodox.
+
+## Open infrastructures
+
+Do open infrastructures — Zenodo, ORCID, Creative Commons licences — change this transfer logic? This text argues they reconfigure it without abolishing it.
+
+Zenodo allows depositing a text with a permanent DOI, without going through the publisher filter. ORCID provides an academic identity independent of institutions. But these tools do not eliminate the asymmetry of recognition: they reduce the cost of marginality without abolishing its logic. The transfer changes form — from silent relegation to drowning in noise — not in nature.
+
+## Anthropy applied to itself
+
+This text constitutes a reflexive exercise: applying the framework of anthropy to the field in which it seeks to inscribe itself. If anthropy is correct, it must be able to account for its own marginal position — not as an accident, but as the product of an identifiable transfer mechanism.
