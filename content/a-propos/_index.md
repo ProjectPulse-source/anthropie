@@ -4,17 +4,17 @@ description: "Stéphane Lalut — Économiste et chercheur indépendant. Auteur 
 awp_list_after: "Anthropie Working Papers"
 ---
 
+Stéphane Lalut est économiste et chercheur indépendant. Il développe le cadre anthropique — l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent — dans une série de working papers et deux ouvrages publiés.
+
+Ses articles et recensions paraissent dans *Alternatives Économiques*, *La Vie des Idées*, *En attendant Nadeau*, *Terrestres*, *Nonfiction*, *Le Temps* et *Mediapart*.
+
+Il a exercé en direction marketing européenne, en conseil au secteur public et en entrepreneuriat international avant de se consacrer à la recherche et à l'écriture. Cette expérience à la croisée du privé, du public et de l'international informe une approche qui lie rigueur analytique et attention aux mécanismes concrets de déplacement des coûts.
+
 ## Chercheur
 
 <p class="orcid-link"><a href="https://orcid.org/0009-0002-1794-4895" target="_blank" rel="noopener">0009-0002-1794-4895</a></p>
 
 **Communauté Zenodo**&nbsp;: [Anthropie Working Papers](https://zenodo.org/communities/anthropie-working-papers)
-
-Stéphane Lalut est économiste (doctorat, 1990) et chercheur indépendant. Il développe le cadre anthropique — l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent — dans une série de working papers déposés sur Zenodo et deux ouvrages publiés.
-
-Ses travaux portent sur les mécanismes de transfert anthropique à travers les dimensions spatiale (externalisation territoriale), temporelle (dette, report sur les générations futures) et sociale (captation asymétrique des coûts). Il applique cette grille d'analyse aux finances publiques, à la transition énergétique et à l'organisation du champ académique.
-
-Il publie dans *Alternatives Économiques*, *La Vie des Idées*, *En attendant Nadeau*, *Terrestres*, *Nonfiction*, *Le Temps*, *Projet* et *Lectures* (ENS).
 
 ### Anthropie Working Papers
 

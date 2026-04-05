@@ -11,7 +11,7 @@ OpenAlex : https://openalex.org/authors/a5130851063
 ## Cadre théorique
 
 L'anthropie est un cadre heuristique développé par Stéphane Lalut
-(économiste, doctorat 1990). Il postule que tout ordre social local
+(économiste). Il postule que tout ordre social local
 se construit en exportant son désordre vers d'autres lieux, d'autres
 temps ou d'autres groupes sociaux.
 
