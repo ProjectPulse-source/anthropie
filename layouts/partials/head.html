@@ -40,11 +40,15 @@
 {{ if and (eq .Type "awp") .IsPage .File }}
 <meta name="citation_title" content="{{ .Title }}">
 <meta name="citation_author" content="Lalut, Stéphane">
-<meta name="citation_publication_date" content="{{ .Date.Format "2006/01/02" }}">
+<meta name="citation_publication_date" content="{{ with .Params.publication_date }}{{ . | time.Format "2006/01/02" }}{{ else }}{{ .Date.Format "2006/01/02" }}{{ end }}">
 <meta name="citation_doi" content="{{ .Params.doi_zenodo }}">
-<meta name="citation_pdf_url" content="{{ .Params.url_zenodo }}/files/{{ .File.BaseFileName }}.pdf">
-<meta name="citation_language" content="{{ .Language.Lang }}">
+<meta name="citation_pdf_url" content="{{ with .Params.pdf_url }}{{ . }}{{ else }}{{ .Params.url_zenodo }}/files/{{ .File.BaseFileName }}.pdf{{ end }}">
+<meta name="citation_language" content="{{ .Params.language | default .Language.Lang }}">
 <meta name="citation_abstract_html_url" content="{{ .Permalink }}">
+{{ with .Params.translation }}
+<link rel="alternate" hreflang="{{ if eq $.Params.language "fr" }}en{{ else }}fr{{ end }}" href="{{ .url | absURL }}">
+{{ end }}
+<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
 {{ end }}
 
 <!-- Schema.org FAQ -->
@@ -93,10 +97,11 @@
   "author": {
     "@type": "Person",
     "name": "Stéphane Lalut",
+    "identifier": "https://orcid.org/0009-0002-1794-4895",
     "sameAs": "https://orcid.org/0009-0002-1794-4895",
     "url": "https://stephane-lalut.com/a-propos/"
   },
-  "datePublished": {{ .Date.Format "2006-01-02" | jsonify }},
+  "datePublished": "{{ with .Params.publication_date }}{{ . }}{{ else }}{{ .Date.Format "2006-01-02" }}{{ end }}",
   "publisher": {
     "@type": "Organization",
     "name": "Stéphane Lalut",
@@ -105,12 +110,20 @@
   "identifier": "https://doi.org/{{ .Params.doi_zenodo }}",
   "sameAs": "https://doi.org/{{ .Params.doi_zenodo }}",
   "url": "{{ .Permalink }}",
-  "inLanguage": "{{ .Language.Lang }}",
+  "inLanguage": "{{ .Params.language | default .Language.Lang }}",
   {{ with .Params.keywords }}"keywords": {{ . | jsonify }},{{ end }}
   "isPartOf": {
     "@type": "CreativeWorkSeries",
     "name": "Anthropie Working Papers"
   },
+  {{ with .Params.translation }}
+  "{{ if eq $.Params.language "fr" }}workTranslation{{ else }}translationOfWork{{ end }}": {
+    "@type": "ScholarlyArticle",
+    "headline": {{ .title | jsonify }},
+    "identifier": "https://doi.org/{{ .doi }}",
+    "url": "{{ .url | absURL }}"
+  },
+  {{ end }}
   "isAccessibleForFree": true,
   "license": "https://creativecommons.org/licenses/by/4.0/"
 }

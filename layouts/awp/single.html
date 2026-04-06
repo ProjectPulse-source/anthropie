@@ -9,6 +9,10 @@
     {{ end }}
   </header>
 
+  {{ if eq .Params.language "fr" }}
+    {{- partial "cross-language-banner.html" . -}}
+  {{ end }}
+
   {{ with .Params.keywords }}
     <ul class="keywords-list">
       {{ range . }}<li>{{ . }}</li>{{ end }}
@@ -19,15 +23,15 @@
 
   {{ if .Params.doi_zenodo }}
     <div class="doi-box">
-      <p class="doi-box__title">Pour citer cet article</p>
+      <p class="doi-box__title">{{ i18n "cite_title" }}</p>
       <p class="doi-box__citation">Lalut, Stéphane ({{ .Date.Format "2006" }}). {{ .Title }}. {{ .Params.awp_number }}. Zenodo. https://doi.org/{{ .Params.doi_zenodo }}</p>
-      <a href="{{ .Params.url_zenodo }}" class="doi-box__link" target="_blank" rel="noopener">Consulter sur Zenodo →</a>
+      <a href="{{ .Params.url_zenodo }}" class="doi-box__link" target="_blank" rel="noopener">{{ i18n "view_zenodo" }}</a>
     </div>
   {{ end }}
 
   {{ if .Params.faq }}
     <section class="faq-section">
-      <h2>Questions fréquentes</h2>
+      <h2>{{ i18n "faq_title" }}</h2>
       {{ range .Params.faq }}
         <div class="faq-item">
           <h3 class="faq-question">{{ .question }}</h3>
@@ -35,6 +39,10 @@
         </div>
       {{ end }}
     </section>
+  {{ end }}
+
+  {{ if eq .Params.language "en" }}
+    {{- partial "cross-language-banner.html" . -}}
   {{ end }}
 </article>
 {{ end }}

@@ -4,9 +4,9 @@
 <section class="hero-definition">
   <p class="hero-definition__text">{{ .Site.Params.canonicalDefinition }}</p>
   {{ if eq .Lang "en" }}
-    <a href="{{ "quest-ce-que-lanthropie/" | relURL }}" class="hero-definition__link">Read the full presentation →</a>
+    <a href="/en/quest-ce-que-lanthropie/" class="hero-definition__link">Read the full presentation →</a>
   {{ else }}
-    <a href="{{ "quest-ce-que-lanthropie/" | relURL }}" class="hero-definition__link">Lire la présentation complète →</a>
+    <a href="/quest-ce-que-lanthropie/" class="hero-definition__link">Lire la présentation complète →</a>
   {{ end }}
 </section>
 
@@ -58,7 +58,7 @@
   </div>
   {{ end }}
   {{ if eq .Lang "en" }}
-    <p style="margin-top: 1rem;"><a href="/publications/">All publications →</a></p>
+    <p style="margin-top: 1rem;"><a href="/en/publications/">All publications →</a></p>
   {{ else }}
     <p style="margin-top: 1rem;"><a href="{{ "publications/" | relURL }}">Toutes les publications →</a></p>
   {{ end }}
