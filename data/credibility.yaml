@@ -1,0 +1,11 @@
+items:
+  - label: "ORCID 0009-0002-1794-4895"
+    url: "https://orcid.org/0009-0002-1794-4895"
+  - label: "Zenodo"
+    url: "https://zenodo.org/communities/anthropie"
+  - label: "OpenAlex"
+    url: "https://openalex.org/A5130851063"
+  - label: "Wikidata"
+    url: "https://www.wikidata.org/wiki/Q138909233"
+  - label: "RePEC"
+    url: "https://ideas.repec.org/"

@@ -1,6 +1,11 @@
 {{ define "main" }}
-<article class="content-narrow content-reading">
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
+<article class="article">
+  <header class="article__header">
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="article__lede">{{ . }}</p>{{ end }}
+  </header>
+  <div class="article__body content-narrow">
+    {{ .Content }}
+  </div>
 </article>
 {{ end }}

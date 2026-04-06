@@ -1,0 +1,17 @@
+{{- $title := .title -}}
+{{- $subtitle := .subtitle -}}
+{{- $author := .author -}}
+{{- $pages := .pages -}}
+{{- $url := .url -}}
+
+<a href="{{ $url }}" class="book-emblem" aria-label="{{ $title }}">
+  <div class="book-emblem__cover">
+    <div>
+      <p class="book-emblem__author">{{ $author }}</p>
+      <p class="book-emblem__title">{{ $title }}</p>
+      <hr class="book-emblem__rule">
+      <p class="book-emblem__subtitle">{{ $subtitle }}</p>
+    </div>
+    <p class="book-emblem__pages">{{ $pages }}</p>
+  </div>
+</a>

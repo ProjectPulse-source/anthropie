@@ -1,81 +1,56 @@
 {{ define "main" }}
 
-<!-- Définition canonique -->
-<section class="hero-definition">
-  <p class="hero-definition__text">{{ .Site.Params.canonicalDefinition }}</p>
-  {{ if eq .Lang "en" }}
-    <a href="/en/quest-ce-que-lanthropie/" class="hero-definition__link">Read the full presentation →</a>
-  {{ else }}
-    <a href="/quest-ce-que-lanthropie/" class="hero-definition__link">Lire la présentation complète →</a>
-  {{ end }}
-</section>
+{{- $def := .Site.Params.canonicalDefinition -}}
+{{- $defWithAccent := replace $def "déplacent" `<span class="hero__accent-wrap"><span class="hero__accent">déplacent</span><span class="hero__accent-rule" aria-hidden="true"></span></span>` -}}
 
-<!-- Présentation auteur -->
-<section class="author-intro">
-  {{ if eq .Lang "en" }}
-    <p>Stéphane Lalut, economist and independent researcher, develops the framework of anthropy through a series of working papers and two published books.</p>
-    <p class="author-intro__publications">Published in Alternatives Économiques, La Vie des Idées, En attendant Nadeau, Terrestres, Nonfiction, and Le Temps.</p>
-  {{ else }}
-    <p>Stéphane Lalut, économiste et chercheur indépendant, développe le cadre anthropique dans une série de working papers et deux ouvrages publiés.</p>
-    <p class="author-intro__publications">Publie dans Alternatives Économiques, La Vie des Idées, En attendant Nadeau, Terrestres, Nonfiction, Le Temps.</p>
-  {{ end }}
-  <p class="author-intro__orcid">
-    <a href="https://orcid.org/{{ .Site.Params.orcid }}" target="_blank" rel="noopener">ORCID {{ .Site.Params.orcid }}</a>
-  </p>
-</section>
-
-<!-- Série AWP -->
-<section class="home-section">
-  <h2 class="section-title">Anthropie Working Papers</h2>
-  <div class="awp-grid">
-    {{ range sort (where .Site.RegularPages "Type" "awp") "Params.awp_number" "asc" }}
-      {{ partial "awp-card.html" . }}
-    {{ end }}
+<section class="hero">
+  <canvas id="hero-flowfield" aria-hidden="true"></canvas>
+  <div class="hero__content">
+    <div class="hero__col-left">
+      <p class="eyebrow">{{ with .Site.Params.author.title }}{{ . }}{{ else }}Économiste · Chercheur indépendant{{ end }}</p>
+      <h1 class="hero__h1">{{ $defWithAccent | safeHTML }}</h1>
+      <p class="hero__lede">
+        {{ if eq .Lang "en" }}A working hypothesis in political economy, developed in five working papers and two books. Disorder is neither absorbed nor dissolved: it is transferred — in space, in time, or to other social groups.{{ else }}Une hypothèse de travail en économie politique, développée en cinq working papers et deux ouvrages. Le désordre n'est ni résorbé ni dissous&nbsp;: il est transféré — dans l'espace, dans le temps, ou vers d'autres groupes sociaux.{{ end }}
+      </p>
+      <div class="hero__cta-group">
+        <a href="{{ "/awp/awp-01/" | relURL }}" class="btn btn--primary">{{ if eq .Lang "en" }}Read AWP-01{{ else }}Lire AWP-01{{ end }} →</a>
+        <a href="{{ "/livres/anthropie-ordre-ici-dette-ailleurs/" | relURL }}" class="btn btn--secondary">{{ if eq .Lang "en" }}Discover the book{{ else }}Découvrir le livre{{ end }}</a>
+      </div>
+      <div class="credibility-strip">
+        {{ $items := .Site.Data.credibility.items }}
+        {{ range $i, $item := $items }}
+          {{ if $i }}<span class="credibility-strip__sep">·</span>{{ end }}
+          <a href="{{ $item.url }}" target="_blank" rel="noopener">{{ $item.label }}</a>
+        {{ end }}
+      </div>
+    </div>
+    <div class="hero__col-right">
+      {{ partial "livre-card-emblem.html" (dict
+        "title" "ANTHROPIE"
+        "subtitle" "Ordre ici. Dette ailleurs."
+        "author" (.Site.Params.author.name | default "Stéphane Lalut")
+        "pages" "606 pages"
+        "url" "/livres/anthropie-ordre-ici-dette-ailleurs/"
+      ) }}
+      <div class="hero__awp-wrap">
+        <p class="hero__awp-eyebrow">Working Papers</p>
+        <ul class="awp-list--compact">
+          {{ $keys := slice "awp-01" "awp-02" "awp-03" "awp-04" "awp-05" }}
+          {{ range $key := $keys }}
+            {{ $item := index $.Site.Data.awp_short_titles $key }}
+            <li class="awp-list__item">
+              <a href="{{ printf "/awp/%s/" $key | relURL }}">
+                <span class="awp-list__num">{{ $item.number }}</span>
+                <span class="awp-list__title">{{ $item.short }}</span>
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
   </div>
-</section>
-
-<!-- Publications récentes -->
-<section class="home-section">
-  {{ if eq .Lang "en" }}
-    <h2 class="section-title">Recent publications</h2>
-  {{ else }}
-    <h2 class="section-title">Publications récentes</h2>
-  {{ end }}
-  {{/* Publications are FR-only — query French site */}}
-  {{ $frSite := index site.Sites 0 }}
-  {{ $pubs := where $frSite.RegularPages "Type" "publications" }}
-  {{ $selected := where $pubs "Params.revue" "in" (slice "En attendant Nadeau" "Alternatives Économiques" "La Vie des Idées") }}
-  {{ $filtered := where $selected "Params.url_externe" "!=" nil }}
-  {{ range (sort $filtered "Date" "desc") | first 3 }}
-  <div class="pub-card">
-    <p class="pub-card__revue">{{ .Params.revue }}</p>
-    <h3 class="pub-card__title">
-      {{ with .Params.url_externe }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}
-      {{ .Title }}
-      {{ with .Params.url_externe }}</a>{{ end }}
-    </h3>
-    <p class="pub-card__date">{{ time.Format ":date_long" .Date }}</p>
-  </div>
-  {{ end }}
-  {{ if eq .Lang "en" }}
-    <p style="margin-top: 1rem;"><a href="/en/publications/">All publications →</a></p>
-  {{ else }}
-    <p style="margin-top: 1rem;"><a href="{{ "publications/" | relURL }}">Toutes les publications →</a></p>
-  {{ end }}
-</section>
-
-<!-- Livres -->
-<section class="home-section">
-  {{ if eq .Lang "en" }}
-    <h2 class="section-title">Books</h2>
-  {{ else }}
-    <h2 class="section-title">Livres</h2>
-  {{ end }}
-  {{/* Livres are FR-only — query French site */}}
-  {{ $frSite := index site.Sites 0 }}
-  {{ range where (where $frSite.RegularPages "Type" "livres") "Params.serie" "anthropie" }}
-    {{ partial "livre-card.html" . }}
-  {{ end }}
+  {{ $heroJs := resources.Get "js/hero-flowfield.js" | minify | fingerprint }}
+  <script src="{{ $heroJs.RelPermalink }}" defer></script>
 </section>
 
 {{ end }}

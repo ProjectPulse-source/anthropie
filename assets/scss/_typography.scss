@@ -1,72 +1,107 @@
+// =======================================================================
+// _typography.scss — Newsreader (serif) + Inter (sans) + JetBrains Mono
+// =======================================================================
+
 @font-face {
-  font-family: 'Playfair Display';
+  font-family: 'Newsreader';
+  src: url('/fonts/newsreader/Newsreader-Variable.woff2') format('woff2-variations');
+  font-weight: 200 800;
   font-style: normal;
-  font-weight: 400;
   font-display: swap;
-  src: url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap');
+}
+@font-face {
+  font-family: 'Newsreader';
+  src: url('/fonts/newsreader/Newsreader-Italic-Variable.woff2') format('woff2-variations');
+  font-weight: 200 800;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter/Inter-Variable.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }
 
-html {
-  font-size: $font-size-base;
-  line-height: $line-height-base;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  font-family: $font-body;
-  color: $color-text;
-  background-color: $color-bg;
+  font-family: var(--font-serif);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--color-text-body);
+  background: var(--color-bg);
+  font-feature-settings: 'kern', 'liga', 'onum', 'pnum';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: $font-titles;
-  font-weight: 700;
-  line-height: 1.25;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.018em;
+  line-height: var(--lh-tight);
+  color: var(--color-text);
 }
 
-h1 { font-size: 2.4rem; }
-h2 { font-size: 1.8rem; }
-h3 { font-size: 1.4rem; }
-h4 { font-size: 1.2rem; }
+h1 { font-size: var(--fs-h1-page); margin: 0 0 1.2em; }
+h2 { font-size: var(--fs-h2); margin: 2em 0 0.8em; }
+h3 { font-size: var(--fs-h3); margin: 1.6em 0 0.6em; }
 
-// h2 hierarchy via Playfair Display only — no border
+p { margin: 0 0 1.2em; }
 
-p {
-  margin-bottom: 1.2rem;
-}
+em, i { font-style: italic; }
 
 a {
-  color: $color-accent;
-  text-decoration: none;
-  transition: color 0.2s ease;
-
-  &:hover {
-    color: darken($color-accent, 15%);
-    text-decoration: underline;
-  }
+  color: var(--color-text);
+  text-decoration: underline;
+  text-decoration-color: var(--color-rule-medium);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s ease;
 }
+a:hover { text-decoration-color: var(--color-accent); }
 
 blockquote {
-  border-left: 3px solid $color-accent;
-  margin: 1.5rem 0;
-  padding: 0.5rem 1.5rem;
+  border-left: 2px solid var(--color-accent);
+  margin: 1.5em 0;
+  padding: 0.5em 1.5em;
   font-style: italic;
-  color: lighten($color-text, 20%);
+  color: var(--color-text-muted);
 }
 
 code, pre {
-  font-family: $font-mono;
-  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
 }
 
 pre {
-  background: $color-doi-bg;
-  padding: 1rem;
+  background: var(--color-bg-card);
+  padding: 1em;
   overflow-x: auto;
   border-radius: 3px;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--fs-tiny);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+  margin: 0 0 30px;
+}
+
+.doi {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  color: var(--color-text-mono);
+}
+
+// Content narrow for article pages
+.content-narrow {
+  max-width: 720px;
+  margin: 0 auto;
+  overflow-x: auto;
 }
 
 // Lists
@@ -84,28 +119,14 @@ pre {
 }
 
 .content-narrow li::marker {
-  color: $color-accent;
-}
-
-.content-narrow ol li > p,
-.content-narrow ul li > p {
-  margin: 0;
-}
-
-.content-narrow ol + p,
-.content-narrow ul + p {
-  margin-top: 1.8rem;
+  color: var(--color-accent);
 }
 
 .content-narrow p {
   line-height: 1.85;
 }
 
-// Table
-.content-narrow {
-  overflow-x: auto;
-}
-
+// Tables
 .content-narrow table {
   width: 100%;
   border-collapse: collapse;
@@ -118,15 +139,17 @@ pre {
   text-align: left;
   font-weight: 600;
   padding: 0.75rem 1rem;
-  border-bottom: 2px solid $color-accent;
-  font-variant: small-caps;
+  border-bottom: 2px solid var(--color-accent);
+  font-family: var(--font-sans);
+  font-size: var(--fs-tiny);
   letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .content-narrow table td {
   padding: 0.9rem 1rem;
   vertical-align: top;
-  border-bottom: 1px solid $color-separator;
+  border-bottom: 1px solid var(--color-rule-soft);
   line-height: 1.65;
 }
 
@@ -139,14 +162,4 @@ pre {
   font-weight: 600;
   white-space: nowrap;
   min-width: 11rem;
-}
-
-.content-narrow table th:nth-child(2),
-.content-narrow table td:nth-child(2) {
-  min-width: 12rem;
-}
-
-.small-caps {
-  font-variant: small-caps;
-  letter-spacing: 0.05em;
 }

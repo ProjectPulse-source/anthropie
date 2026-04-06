@@ -1,19 +1,21 @@
 <header class="site-header">
-  <div class="header-inner">
-    <div class="site-title">
-      <a href="{{ "/" | relURL }}"><span class="site-title__name">Stéphane Lalut</span><span class="site-title__sub">Anthropie</span></a>
-    </div>
-    <nav>
+  <div class="site-header__inner">
+    <a href="{{ "/" | relURL }}" class="wordmark">Stéphane <span class="wordmark__sep">·</span> Lalut</a>
+    <nav class="primary-nav">
       {{ range .Site.Menus.main }}
-        <a href="{{ .URL | relURL }}"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a>
+        <a href="{{ .URL | relURL }}"{{ if $.IsMenuCurrent "main" . }} class="is-active"{{ end }}>{{ .Name }}</a>
       {{ end }}
-      <span class="lang-toggle">
-        {{ if eq .Lang "fr" }}
-          <span class="lang-toggle__active">fr</span><span class="lang-toggle__sep">/</span>{{ if .IsTranslated }}{{ range .Translations }}<a href="{{ .Permalink }}" onclick="localStorage.setItem('lang-choice','en')">en</a>{{ end }}{{ else }}<a href="/en/" onclick="localStorage.setItem('lang-choice','en')">en</a>{{ end }}
-        {{ else }}
-          {{ if .IsTranslated }}{{ range .Translations }}<a href="{{ .Permalink }}" onclick="localStorage.setItem('lang-choice','fr')">fr</a>{{ end }}{{ else }}<a href="/" onclick="localStorage.setItem('lang-choice','fr')">fr</a>{{ end }}<span class="lang-toggle__sep">/</span><span class="lang-toggle__active">en</span>
-        {{ end }}
-      </span>
+      {{ if hugo.IsMultilingual }}
+        <span class="primary-nav__lang">
+          {{ if eq .Lang "fr" }}
+            <span class="primary-nav__lang-active">FR</span>
+            {{ if .IsTranslated }}{{ range .Translations }}<a href="{{ .Permalink }}">EN</a>{{ end }}{{ else }}<a href="/en/">EN</a>{{ end }}
+          {{ else }}
+            {{ if .IsTranslated }}{{ range .Translations }}<a href="{{ .Permalink }}">FR</a>{{ end }}{{ else }}<a href="/">FR</a>{{ end }}
+            <span class="primary-nav__lang-active">EN</span>
+          {{ end }}
+        </span>
+      {{ end }}
     </nav>
   </div>
 </header>

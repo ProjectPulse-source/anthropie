@@ -1,3 +1,6 @@
+{{- if and (eq .Lang "fr") (not (in .Site.Params.canonicalDefinition "déplacent")) -}}
+  {{- errorf "BUILD ERROR: params.canonicalDefinition must contain the word 'déplacent'. Current value: %q." .Site.Params.canonicalDefinition -}}
+{{- end -}}
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
 <head>

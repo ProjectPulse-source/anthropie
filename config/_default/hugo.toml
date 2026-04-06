@@ -58,6 +58,18 @@ disableKinds = ["taxonomy", "term"]
   orcid = "0009-0002-1794-4895"
   zenodoCommunity = "https://zenodo.org/communities/anthropie-working-papers"
 
+[params.author]
+  name = "Stéphane Lalut"
+  title = "Économiste · Chercheur indépendant"
+  orcid = "0009-0002-1794-4895"
+
+[params.design]
+  hero_h1_size = "clamp(36px, 5vw, 56px)"
+  book_emblem_width = "160px"
+  book_emblem_height = "232px"
+  book_emblem_rotation = "-3deg"
+  book_emblem_shadow_offset = "5px"
+
 [markup.goldmark.extensions]
   typographer = true
 

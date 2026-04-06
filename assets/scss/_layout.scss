@@ -1,8 +1,6 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+// =======================================================================
+// _layout.scss — Layout v3.1
+// =======================================================================
 
 .site-wrapper {
   min-height: 100vh;
@@ -10,166 +8,33 @@
   flex-direction: column;
 }
 
-.site-header {
-  background-color: $color-dark;
-  color: $color-dark-text;
-  padding: 1rem 2rem;
-
-  .header-inner {
-    max-width: $site-max;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
-  .site-title {
-    font-family: $font-titles;
-    font-weight: 700;
-    line-height: 1.2;
-
-    a {
-      color: $color-dark-text;
-      text-decoration: none;
-
-      &:hover {
-        color: lighten($color-dark-text, 10%);
-        text-decoration: none;
-      }
-    }
-
-    .site-title__name {
-      display: block;
-      font-size: 1.3rem;
-    }
-
-    .site-title__sub {
-      display: block;
-      font-size: 0.7rem;
-      font-variant: small-caps;
-      letter-spacing: 0.12em;
-      font-weight: 400;
-      opacity: 0.6;
-      margin-top: 0.1rem;
-    }
-  }
-
-  nav {
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-
-    a {
-      color: $color-dark-text;
-      font-family: $font-body;
-      font-size: 0.9rem;
-      text-decoration: none;
-      transition: color 0.2s ease;
-
-      &:hover {
-        color: $color-accent;
-        text-decoration: none;
-      }
-    }
-  }
-
-  .lang-toggle {
-    font-variant: small-caps;
-    font-size: 0.8rem;
-    letter-spacing: 0.08em;
-    margin-left: 0.5rem;
-
-    a {
-      color: $color-dark-text;
-      opacity: 0.6;
-      text-decoration: none;
-      transition: opacity 0.2s ease;
-
-      &:hover {
-        opacity: 1;
-        color: $color-dark-text;
-      }
-    }
-
-    .lang-toggle__active {
-      color: $color-dark-text;
-      font-weight: 700;
-    }
-
-    .lang-toggle__sep {
-      opacity: 0.4;
-      margin: 0 0.15rem;
-    }
-  }
-}
-
 .site-main {
   flex: 1;
-  max-width: $site-max;
+  max-width: var(--container-max);
   margin: 0 auto;
   padding: 3rem 2rem;
   width: 100%;
 }
 
-.content-narrow {
-  max-width: $content-max;
-  margin: 0 auto;
-}
-
-.site-footer {
-  background-color: $color-dark;
-  color: $color-dark-text;
-  padding: 2rem;
-  text-align: center;
-  font-size: 0.85rem;
-
-  a {
-    color: $color-dark-text;
-
-    &:hover {
-      color: white;
-    }
-  }
-
-  .footer-inner {
-    max-width: $site-max;
-    margin: 0 auto;
-  }
-
-  .footer-separator {
-    width: 60px;
-    height: 2px;
-    background-color: $color-accent;
-    margin: 1rem auto;
-  }
-}
-
 .section-title {
-  font-family: $font-titles;
-  font-size: 1.8rem;
+  font-family: var(--font-serif);
+  font-size: var(--fs-h2);
   margin-bottom: 2rem;
 }
 
+.home-section {
+  max-width: var(--container-max);
+  margin: 0 auto 6rem;
+  padding: 0 2rem;
+}
+
+.awp-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
 @media (max-width: 768px) {
-  .site-header {
-    padding: 1rem;
-
-    .header-inner {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    nav {
-      gap: 1rem;
-    }
-  }
-
-  .site-main {
-    padding: 2rem 1rem;
-  }
-
-  h1 { font-size: 1.8rem; }
-  h2 { font-size: 1.4rem; }
+  .site-main { padding: 2rem 1rem; }
+  .awp-grid { grid-template-columns: 1fr; }
 }

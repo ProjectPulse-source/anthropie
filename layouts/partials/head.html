@@ -22,10 +22,9 @@
 <meta property="og:locale" content="{{ if eq .Lang "en" }}en_GB{{ else }}fr_FR{{ end }}">
 <meta property="og:site_name" content="{{ .Site.Title }}">
 
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:wght@400;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<!-- Font preload -->
+<link rel="preload" href="/fonts/newsreader/Newsreader-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
 
 <!-- CSS -->
 {{ $style := resources.Get "scss/main.scss" | css.Sass (dict "targetPath" "css/style.css" "outputStyle" "compressed") }}
