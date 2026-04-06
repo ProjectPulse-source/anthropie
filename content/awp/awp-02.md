@@ -14,6 +14,13 @@ faq:
     answer: "La saturation désigne l'état d'un espace de déportation quand le coût marginal du transfert excède le bénéfice, ou quand le désordre déporté revient au système émetteur sous forme d'effet boomerang."
   - question: "Comment l'anthropie se distingue-t-elle de l'Anthropocène ?"
     answer: "L'Anthropocène désigne une ère géologique (Crutzen, 2000). L'anthropie désigne un mécanisme institutionnel qui précède l'Anthropocène de millions d'années et en éclaire la dynamique."
+pdf_url: "https://zenodo.org/records/19268037/files/AWP-02_anthropie_longue_duree.pdf"
+language: "fr"
+publication_date: "2026-02-15"
+translation:
+  doi: "10.5281/zenodo.19433086"
+  url: "/en/awp/awp-02/"
+  title: "3.3 million years in one principle"
 ---
 
 L'anthropie traverse 3,3 millions d'années d'histoire humaine en sept configurations — du premier outil taillé au métaprogramme numérique contemporain. Ce working paper soutient que le déplacement du désordre est un mécanisme structurel des sociétés humaines, pas un accident de la modernité.

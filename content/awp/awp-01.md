@@ -16,6 +16,13 @@ faq:
     answer: "L'anthropie n'est pas une métaphore physique. Elle désigne un mécanisme institutionnel observable : le déplacement délibéré ou structurel du désordre entre acteurs, territoires et générations."
   - question: "L'anthropie est-elle une théorie ou une hypothèse ?"
     answer: "Une hypothèse de travail à valeur heuristique. Elle permet de poser des questions que d'autres cadres ne formulent pas, sans prétendre à l'exhaustivité d'une théorie achevée."
+pdf_url: "https://zenodo.org/records/19266862/files/AWP-01_anthropie_principes_hypothese.pdf"
+language: "fr"
+publication_date: "2026-02-01"
+translation:
+  doi: "10.5281/zenodo.19431208"
+  url: "/en/awp/awp-01/"
+  title: "What is anthropy? Principles of a hypothesis"
 ---
 
 L'anthropie est l'hypothèse selon laquelle tout ordre social local se construit en exportant son désordre vers d'autres lieux, d'autres temps ou d'autres groupes sociaux. Ce texte fondateur pose les principes du cadre anthropique.
