@@ -8,5 +8,37 @@
       {{ partial "awp-card.html" . }}
     {{ end }}
   </div>
+
+  {{ if eq .Lang "fr" }}
+  <section style="margin-top: 3rem;">
+    <h2 class="section-title">{{ i18n "translations_available" }}</h2>
+    <ul class="awp-list-compact">
+      {{ range sort (where .Site.RegularPages "Type" "awp") "Params.awp_number" "asc" }}
+        {{ with .Params.translation }}
+        <li>
+          <span class="awp-list-compact__number">{{ $.Params.awp_number }}</span> —
+          <a href="{{ .url }}">{{ .title }}</a>
+          <span class="awp-list-compact__doi">DOI&nbsp;: <a href="https://doi.org/{{ .doi }}" target="_blank" rel="noopener">{{ .doi }}</a></span>
+        </li>
+        {{ end }}
+      {{ end }}
+    </ul>
+  </section>
+  {{ else }}
+  <section style="margin-top: 3rem;">
+    <h2 class="section-title">{{ i18n "original_versions" }}</h2>
+    <ul class="awp-list-compact">
+      {{ range sort (where .Site.RegularPages "Type" "awp") "Params.awp_number" "asc" }}
+        {{ with .Params.translation }}
+        <li>
+          <span class="awp-list-compact__number">{{ $.Params.awp_number }}</span> —
+          <a href="{{ .url }}">{{ .title }}</a>
+          <span class="awp-list-compact__doi">DOI&nbsp;: <a href="https://doi.org/{{ .doi }}" target="_blank" rel="noopener">{{ .doi }}</a></span>
+        </li>
+        {{ end }}
+      {{ end }}
+    </ul>
+  </section>
+  {{ end }}
 </div>
 {{ end }}
