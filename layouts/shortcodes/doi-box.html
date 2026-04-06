@@ -1,5 +1,5 @@
 <div class="doi-box">
-  <p class="doi-box__title">Pour citer cet article</p>
+  <p class="doi-box__title">{{ i18n "cite_title" }}</p>
   <p class="doi-box__citation">Lalut, Stéphane ({{ .Page.Date.Format "2006" }}). {{ .Page.Title }}. {{ .Page.Params.awp_number }}. Zenodo. https://doi.org/{{ .Page.Params.doi_zenodo }}</p>
-  <a href="{{ .Page.Params.url_zenodo }}" class="doi-box__link" target="_blank" rel="noopener">Consulter sur Zenodo →</a>
+  <a href="{{ .Page.Params.url_zenodo }}" class="doi-box__link" target="_blank" rel="noopener">{{ i18n "view_zenodo" }}</a>
 </div>

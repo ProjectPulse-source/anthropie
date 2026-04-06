@@ -7,7 +7,7 @@
 
   {{ if or .Params.url_amazon_fr .Params.url_amazon_es .Params.url_amazon_com .Params.url_amazon_uk .Params.url_amazon_de .Params.url_amazon_it }}
     <div class="amazon-buttons">
-      <p class="amazon-buttons__title">Commander ce livre</p>
+      <p class="amazon-buttons__title">{{ i18n "order_book" }}</p>
       <div class="amazon-buttons__row">
         {{ with .Params.url_amazon_fr }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.fr</a>{{ end }}
         {{ with .Params.url_amazon_es }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.es</a>{{ end }}
