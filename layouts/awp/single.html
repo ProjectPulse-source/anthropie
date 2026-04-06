@@ -9,6 +9,10 @@
     {{ end }}
   </header>
 
+  {{ if eq .Params.language "fr" }}
+    {{- partial "cross-language-banner.html" . -}}
+  {{ end }}
+
   {{ with .Params.keywords }}
     <ul class="keywords-list">
       {{ range . }}<li>{{ . }}</li>{{ end }}
@@ -35,6 +39,10 @@
         </div>
       {{ end }}
     </section>
+  {{ end }}
+
+  {{ if eq .Params.language "en" }}
+    {{- partial "cross-language-banner.html" . -}}
   {{ end }}
 </article>
 {{ end }}

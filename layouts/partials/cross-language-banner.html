@@ -1,0 +1,15 @@
+{{ with .Params.translation }}
+{{ if eq $.Params.language "fr" }}
+<aside class="cross-lang-banner cross-lang-banner--fr">
+  An English version of this paper is available —
+  <a href="{{ .url }}" hreflang="en">{{ .title }}</a>
+</aside>
+{{ else }}
+<aside class="cross-lang-banner cross-lang-banner--en">
+  <h3>Original French version</h3>
+  <p>This paper was originally written in French. When citing the canonical text, please reference the French version:</p>
+  <p><a href="{{ .url }}" hreflang="fr"><strong>{{ .title }}</strong></a><br>
+  DOI: <a href="https://doi.org/{{ .doi }}" target="_blank" rel="noopener">{{ .doi }}</a></p>
+</aside>
+{{ end }}
+{{ end }}

@@ -485,6 +485,31 @@
   margin-top: 0.5rem;
 }
 
+// Cross-language banner
+.cross-lang-banner {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border-radius: 6px;
+  font-size: 0.95em;
+}
+
+.cross-lang-banner--fr {
+  background: #f4f4f6;
+  border-left: 3px solid #888;
+}
+
+.cross-lang-banner--en {
+  background: #fafaf5;
+  border: 1px solid #d4d4c8;
+  padding: 1.5rem;
+
+  h3 {
+    margin-top: 0;
+    font-family: $font-titles;
+    font-size: 1.1rem;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-definition .hero-definition__text {
     font-size: 1.8rem;
