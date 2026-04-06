@@ -45,10 +45,6 @@
 <meta name="citation_pdf_url" content="{{ with .Params.pdf_url }}{{ . }}{{ else }}{{ .Params.url_zenodo }}/files/{{ .File.BaseFileName }}.pdf{{ end }}">
 <meta name="citation_language" content="{{ .Params.language | default .Language.Lang }}">
 <meta name="citation_abstract_html_url" content="{{ .Permalink }}">
-{{ with .Params.translation }}
-<link rel="alternate" hreflang="{{ if eq $.Params.language "fr" }}en{{ else }}fr{{ end }}" href="{{ .url | absURL }}">
-{{ end }}
-<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
 {{ end }}
 
 <!-- Schema.org FAQ -->
