@@ -4,7 +4,7 @@
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  opacity: 0.09;
+  opacity: 0.15;
   overflow: hidden;
 
   svg {
@@ -29,7 +29,7 @@ body::before {
 }
 
 @media (prefers-color-scheme: dark) {
-  .anthropie-bg { opacity: 0.12; }
+  .anthropie-bg { opacity: 0.18; }
   body::before {
     background: radial-gradient(
       ellipse at center,
