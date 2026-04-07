@@ -1,6 +1,7 @@
 ---
 title: "Books"
-description: "Books by Stéphane Lalut on anthropy."
+description: "Two books published in French, developing the anthropic framework."
+url: /en/books/
 ---
 
-The books below develop the framework of anthropy in long-form formats, accessible to a broader audience.
+Two books published in French, developing the anthropic framework — the hypothesis that social systems displace disorder rather than resolve it. English translations are not currently available; readers are welcome to [contact the author](/en/contact/) for citation queries or research collaboration.

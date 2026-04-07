@@ -6,31 +6,71 @@
   </header>
 
   <div class="article__body">
+    {{ .Content }}
+
+    {{/* Récupère les livres — cross-language si la section EN est vide */}}
+    {{ $livres := .Pages }}
+    {{ if eq (len $livres) 0 }}
+      {{ $frSite := index site.Sites 0 }}
+      {{ $livres = where $frSite.RegularPages "Type" "livres" }}
+    {{ end }}
 
     {{/* CORPUS PRINCIPAL — pages dont serie != autres-ouvrages */}}
+    {{ $isEN := eq .Lang "en" }}
     <section class="livres-grid">
-      {{ range .Pages.ByWeight }}
+      {{ range $livres.ByWeight }}
         {{ if ne .Params.serie "autres-ouvrages" }}
-          {{ partial "livre-card.html" . }}
+          <div class="livre-card">
+            {{ with .Params.image_url }}
+              <div class="livre-card__cover-wrap">
+                <img class="livre-card__cover" src="{{ . }}" alt="Couverture — {{ $.Title }}" loading="lazy">
+              </div>
+            {{ end }}
+            <h3 class="livre-card__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+            {{ if $isEN }}<p class="livre-card__lang-tag"><em>In French</em></p>{{ end }}
+            {{ with .Params.subtitle }}<p class="livre-card__subtitle">{{ . }}</p>{{ end }}
+            {{ if $isEN }}
+              {{ if eq .Params.isbn "978-2-9586347-2-8" }}
+                <p class="livre-card__description">The foundational work on the anthropic framework. Across 606 pages, the book develops the hypothesis that social systems do not resolve disorder but displace it — across space, across time, or onto other social groups. Drawing on economic history, public finance, and ecological economics, it argues that what appears as order in one location is sustained by debt — material, ecological, or moral — contracted elsewhere.</p>
+              {{ else if eq .Params.isbn "978-2-9586347-3-5" }}
+                <p class="livre-card__description">A focused application of the anthropic framework to the question of public debt. Who, ultimately, bears the cost of fiscal imbalances — present taxpayers, future generations, foreign creditors, or the ecological commons? The book maps the displacement chains by which sovereign debt redistributes disorder across time and across borders.</p>
+              {{ end }}
+            {{ else }}
+              <p class="livre-card__description">{{ .Description }}</p>
+            {{ end }}
+            {{ with .Params.isbn }}<p class="livre-card__isbn">ISBN&nbsp;: {{ . }}</p>{{ end }}
+            {{ if or .Params.url_amazon_fr .Params.url_amazon_com }}
+              <div class="amazon-buttons">
+                <div class="amazon-buttons__row">
+                  {{ with .Params.url_amazon_fr }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.fr</a>{{ end }}
+                  {{ with .Params.url_amazon_es }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.es</a>{{ end }}
+                  {{ with .Params.url_amazon_ca }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.ca</a>{{ end }}
+                  {{ with .Params.url_amazon_com }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.com</a>{{ end }}
+                  {{ with .Params.url_amazon_uk }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.co.uk</a>{{ end }}
+                  {{ with .Params.url_amazon_de }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.de</a>{{ end }}
+                  {{ with .Params.url_amazon_it }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.it</a>{{ end }}
+                </div>
+              </div>
+            {{ end }}
+          </div>
         {{ end }}
       {{ end }}
     </section>
 
     {{/* SECTION AUTRES OUVRAGES */}}
-    {{ $autres := where .Pages "Params.serie" "autres-ouvrages" }}
+    {{ $autres := where $livres "Params.serie" "autres-ouvrages" }}
     {{ if $autres }}
     <section class="livres-autres">
-      <h2 class="livres-autres__title">Autres ouvrages</h2>
+      <h2 class="livres-autres__title">{{ if $isEN }}Other works{{ else }}Autres ouvrages{{ end }}</h2>
       <div class="livres-grid">
         {{ range $autres.ByWeight }}
           {{ partial "livre-card.html" . }}
         {{ end }}
       </div>
 
-      {{/* Mention non cliquable de L'Odyssée des idées */}}
       <div class="livre-mention">
         <p class="livre-mention__title">L'Odyssée des idées</p>
-        <p class="livre-mention__status">Essai — nouvelle édition en préparation</p>
+        <p class="livre-mention__status">{{ if $isEN }}Essay — new edition in preparation{{ else }}Essai — nouvelle édition en préparation{{ end }}</p>
       </div>
     </section>
     {{ end }}

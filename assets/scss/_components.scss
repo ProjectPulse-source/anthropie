@@ -113,6 +113,7 @@
   color: var(--color-text-muted); margin: 0 0 8px;
 }
 .livre-card__isbn { font-family: var(--font-mono); font-size: var(--fs-micro); color: var(--color-text-mono); margin: 0 0 1rem; }
+.livre-card__lang-tag { font-family: var(--font-sans); font-size: var(--fs-tiny); color: var(--color-text-faint); margin: 0 0 8px; }
 
 @media (max-width: 600px) {
   .livre-card--flex { flex-direction: column; }

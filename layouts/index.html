@@ -15,7 +15,7 @@
       </p>
       <div class="hero__cta-group">
         <a href="{{ "/awp/awp-01/" | relLangURL }}" class="btn btn--primary">{{ if eq .Lang "en" }}Read AWP-01{{ else }}Lire AWP-01{{ end }} →</a>
-        <a href="{{ "/livres/anthropie-ordre-ici-dette-ailleurs/" | relLangURL }}" class="btn btn--secondary">{{ if eq .Lang "en" }}Discover the book{{ else }}Découvrir le livre{{ end }}</a>
+        <a href="/livres/anthropie-ordre-ici-dette-ailleurs/" class="btn btn--secondary">{{ if eq .Lang "en" }}Discover the book{{ else }}Découvrir le livre{{ end }}</a>
       </div>
       <div class="credibility-strip">
         {{ $items := .Site.Data.credibility.items }}

@@ -35,7 +35,7 @@ disableKinds = ["taxonomy", "term"]
 
 [[languages.en.menus.main]]
   name = "Books"
-  url = "/en/livres/"
+  url = "/en/books/"
   weight = 30
 
 [[languages.en.menus.main]]
