@@ -35,6 +35,8 @@
 }
 
 @media (max-width: 768px) {
-  .site-main { padding: 2rem 1rem; }
+  .site-main { padding: 2rem 20px; }
   .awp-grid { grid-template-columns: 1fr; }
+  .article { padding: 48px 20px; }
+  .content-narrow { max-width: 100%; }
 }

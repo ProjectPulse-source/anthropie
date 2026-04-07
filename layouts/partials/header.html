@@ -1,7 +1,7 @@
 <header class="site-header">
   <div class="site-header__inner">
-    <a href="{{ "/" | relURL }}" class="wordmark">Stéphane <span class="wordmark__sep">·</span> Lalut</a>
-    <nav class="primary-nav">
+    <a href="{{ "/" | relLangURL }}" class="wordmark">Stéphane <span class="wordmark__sep">·</span> Lalut</a>
+    <nav class="site-header__nav">
       {{ range .Site.Menus.main }}
         <a href="{{ .URL | relURL }}"{{ if $.IsMenuCurrent "main" . }} class="is-active"{{ end }}>{{ .Name }}</a>
       {{ end }}
@@ -15,6 +15,24 @@
             <span class="primary-nav__lang-active">EN</span>
           {{ end }}
         </span>
+      {{ end }}
+    </nav>
+    <button class="site-header__burger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+    <button class="mobile-menu__close" aria-label="{{ if eq .Lang "en" }}Close{{ else }}Fermer{{ end }}">✕</button>
+    <nav class="mobile-menu__nav">
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+      {{ end }}
+      {{ if hugo.IsMultilingual }}
+        {{ if eq .Lang "fr" }}
+          {{ if .IsTranslated }}{{ range .Translations }}<a href="{{ .Permalink }}">English</a>{{ end }}{{ else }}<a href="/en/">English</a>{{ end }}
+        {{ else }}
+          {{ if .IsTranslated }}{{ range .Translations }}<a href="{{ .Permalink }}">Français</a>{{ end }}{{ else }}<a href="/">Français</a>{{ end }}
+        {{ end }}
       {{ end }}
     </nav>
   </div>
