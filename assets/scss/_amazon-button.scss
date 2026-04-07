@@ -1,0 +1,63 @@
+.amazon-wrapper {
+  position: relative;
+  display: inline-block;
+  margin: 1rem 0;
+}
+
+.amazon-trigger {
+  background: #1a3a5c;
+  color: #ffffff;
+  border: 1px solid #1a3a5c;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+  font-family: inherit;
+
+  &:hover,
+  &[aria-expanded="true"] {
+    background: #ffffff;
+    color: #1a3a5c;
+  }
+}
+
+.amazon-popover {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 50;
+  background: #ffffff;
+  border: 0.5px solid rgba(26, 58, 92, 0.20);
+  border-radius: 6px;
+  padding: 8px 0;
+  min-width: 180px;
+  box-shadow: 0 8px 24px rgba(26, 58, 92, 0.12);
+
+  &[hidden] {
+    display: none;
+  }
+
+  a {
+    display: block;
+    padding: 10px 20px;
+    color: #1a3a5c;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.15s;
+
+    &:hover {
+      background: rgba(26, 58, 92, 0.06);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .amazon-popover {
+    left: 0;
+    right: auto;
+    min-width: 200px;
+  }
+}

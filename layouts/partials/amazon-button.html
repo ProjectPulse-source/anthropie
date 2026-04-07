@@ -1,57 +1,20 @@
 {{- $page := . -}}
-{{- $lang := .Lang -}}
-{{- $label := cond (eq $lang "en") "Amazon" "Amazon" -}}
-{{- $id := printf "amazon-panel-%s" .File.UniqueID -}}
+{{- $id := printf "amazon-pop-%s" .File.UniqueID -}}
 
-<div class="transmettre">
-  <button
-    type="button"
-    class="transmettre__button"
+<div class="amazon-wrapper">
+  <button class="amazon-trigger"
+    data-amazon-trigger
     aria-expanded="false"
-    aria-controls="{{ $id }}"
-    aria-label="{{ $label }}">
-    <span>{{ $label }}</span>
+    aria-controls="{{ $id }}">
+    Amazon
   </button>
-
-  <div
-    class="transmettre__panel"
-    id="{{ $id }}"
-    role="menu"
-    hidden>
-    {{ with $page.Params.url_amazon_fr }}
-    <a href="{{ . }}" class="transmettre__option" target="_blank" rel="noopener noreferrer" role="menuitem">
-      <span>Amazon.fr</span>
-    </a>
-    {{ end }}
-    {{ with $page.Params.url_amazon_es }}
-    <a href="{{ . }}" class="transmettre__option" target="_blank" rel="noopener noreferrer" role="menuitem">
-      <span>Amazon.es</span>
-    </a>
-    {{ end }}
-    {{ with $page.Params.url_amazon_ca }}
-    <a href="{{ . }}" class="transmettre__option" target="_blank" rel="noopener noreferrer" role="menuitem">
-      <span>Amazon.ca</span>
-    </a>
-    {{ end }}
-    {{ with $page.Params.url_amazon_com }}
-    <a href="{{ . }}" class="transmettre__option" target="_blank" rel="noopener noreferrer" role="menuitem">
-      <span>Amazon.com</span>
-    </a>
-    {{ end }}
-    {{ with $page.Params.url_amazon_uk }}
-    <a href="{{ . }}" class="transmettre__option" target="_blank" rel="noopener noreferrer" role="menuitem">
-      <span>Amazon.co.uk</span>
-    </a>
-    {{ end }}
-    {{ with $page.Params.url_amazon_de }}
-    <a href="{{ . }}" class="transmettre__option" target="_blank" rel="noopener noreferrer" role="menuitem">
-      <span>Amazon.de</span>
-    </a>
-    {{ end }}
-    {{ with $page.Params.url_amazon_it }}
-    <a href="{{ . }}" class="transmettre__option" target="_blank" rel="noopener noreferrer" role="menuitem">
-      <span>Amazon.it</span>
-    </a>
-    {{ end }}
+  <div class="amazon-popover" id="{{ $id }}" data-amazon-popover hidden>
+    {{ with $page.Params.url_amazon_fr }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.fr</a>{{ end }}
+    {{ with $page.Params.url_amazon_es }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.es</a>{{ end }}
+    {{ with $page.Params.url_amazon_ca }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.ca</a>{{ end }}
+    {{ with $page.Params.url_amazon_com }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.com</a>{{ end }}
+    {{ with $page.Params.url_amazon_uk }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.co.uk</a>{{ end }}
+    {{ with $page.Params.url_amazon_de }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.de</a>{{ end }}
+    {{ with $page.Params.url_amazon_it }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.it</a>{{ end }}
   </div>
 </div>
