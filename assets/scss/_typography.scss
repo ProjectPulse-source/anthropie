@@ -212,3 +212,62 @@ main table th:nth-child(2),
 main table td:nth-child(2) { width: 32%; }
 main table th:nth-child(3),
 main table td:nth-child(3) { width: 50%; }
+
+// =====================================================================
+// Tableaux responsive — bascule cartes sur mobile
+// =====================================================================
+
+@media (max-width: 768px) {
+  main table, main thead, main tbody, main th, main td, main tr {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  main thead {
+    display: none !important;
+  }
+
+  main table {
+    table-layout: auto !important;
+  }
+
+  main tr {
+    margin-bottom: 20px !important;
+    padding: 16px !important;
+    border: 0.5px solid rgba(26, 58, 92, 0.15) !important;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.6);
+  }
+
+  main td {
+    border: none !important;
+    padding: 6px 0 !important;
+    white-space: normal !important;
+    text-transform: none !important;
+    font-family: var(--font-serif) !important;
+    font-size: var(--fs-body) !important;
+    letter-spacing: normal !important;
+    color: var(--color-text-body) !important;
+
+    &:first-child {
+      font-weight: 500 !important;
+      color: #1a3a5c !important;
+      font-size: 14px !important;
+      letter-spacing: 0.06em !important;
+      text-transform: uppercase !important;
+      font-family: var(--font-sans) !important;
+      padding-bottom: 10px !important;
+      margin-bottom: 8px;
+      border-bottom: 0.5px solid rgba(26, 58, 92, 0.12) !important;
+    }
+  }
+
+  main table th:nth-child(1),
+  main table td:nth-child(1),
+  main table th:nth-child(2),
+  main table td:nth-child(2),
+  main table th:nth-child(3),
+  main table td:nth-child(3) {
+    width: 100% !important;
+  }
+}
