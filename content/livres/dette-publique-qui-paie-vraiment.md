@@ -32,5 +32,3 @@ En appliquant le cadre anthropique aux finances publiques françaises, Stéphane
 4. Les finances publiques françaises au prisme de l'anthropie
 5. Ce que les ratios ne disent pas
 6. Le coût politique de la lisibilité
-
-{{< amazon-buttons >}}

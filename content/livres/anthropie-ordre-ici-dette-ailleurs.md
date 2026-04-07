@@ -32,5 +32,3 @@ L'ordre que nous observons autour de nous — dans les institutions, les territo
 6. L'ordre épistémique et ses marges
 7. Saturation et effets boomerang
 8. La discipline du regard
-
-{{< amazon-buttons >}}

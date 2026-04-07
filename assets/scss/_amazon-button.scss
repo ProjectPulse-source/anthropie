@@ -4,10 +4,11 @@
   margin: 1rem 0;
 }
 
-.amazon-trigger {
-  background: #1a3a5c;
-  color: #ffffff;
-  border: 1px solid #1a3a5c;
+.amazon-wrapper .amazon-trigger,
+button.amazon-trigger {
+  background: #1a3a5c !important;
+  color: #ffffff !important;
+  border: 1px solid #1a3a5c !important;
   padding: 10px 22px;
   font-size: 14px;
   font-weight: 500;
@@ -16,12 +17,17 @@
   border-radius: 4px;
   transition: background 0.2s, color 0.2s;
   font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
 
-  &:hover,
-  &[aria-expanded="true"] {
-    background: #ffffff;
-    color: #1a3a5c;
-  }
+.amazon-wrapper .amazon-trigger:hover,
+.amazon-wrapper .amazon-trigger[aria-expanded="true"],
+button.amazon-trigger:hover,
+button.amazon-trigger[aria-expanded="true"] {
+  background: #ffffff !important;
+  color: #1a3a5c !important;
 }
 
 .amazon-popover {
