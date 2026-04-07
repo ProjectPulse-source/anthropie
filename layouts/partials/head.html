@@ -25,6 +25,7 @@
 <!-- Font preload -->
 <link rel="preload" href="/fonts/newsreader/Newsreader-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/inter/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="/images/livres/anthropie-cover.jpg" fetchpriority="high">
 
 <!-- CSS -->
 {{ $style := resources.Get "scss/main.scss" | css.Sass (dict "targetPath" "css/style.css" "outputStyle" "compressed") }}

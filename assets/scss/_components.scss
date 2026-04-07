@@ -19,18 +19,18 @@
 .site-header { border-bottom: 0.5px solid var(--color-rule-medium); background: var(--color-bg); }
 .site-header__inner {
   display: flex; justify-content: space-between; align-items: center;
-  padding: var(--nav-pad-y) var(--nav-pad-x);
+  padding: 24px var(--nav-pad-x);
   max-width: 1200px; margin: 0 auto; flex-wrap: wrap; gap: 16px;
 }
 .wordmark {
-  font-family: var(--font-sans); font-size: 13px; letter-spacing: 0.08em;
+  font-family: var(--font-sans); font-size: 15px; letter-spacing: 0.08em;
   text-transform: uppercase; font-weight: 500;
   color: var(--color-text); text-decoration: none;
 }
 .wordmark__sep { color: var(--color-accent); }
 .primary-nav {
-  display: flex; gap: 28px; font-family: var(--font-sans);
-  font-size: 13px; letter-spacing: 0.04em;
+  display: flex; gap: 32px; font-family: var(--font-sans);
+  font-size: 14px; letter-spacing: 0.04em;
   align-items: center; flex-wrap: wrap;
 }
 .primary-nav a { color: var(--color-text-muted); text-decoration: none; transition: color 0.2s ease; }
@@ -66,26 +66,22 @@
   font-size: 11px; color: rgba(201,201,204,0.7);
 }
 
-// ----- Book emblem -----
+// ----- Book emblem (image réelle) -----
 .book-emblem { display: block; perspective: 900px; margin: 0 0 36px; text-decoration: none; color: inherit; }
-.book-emblem__cover {
+.book-emblem__frame {
+  display: block;
   width: var(--book-emblem-width); height: var(--book-emblem-height);
-  margin: 0 auto; background: var(--color-bg-card);
-  border: 0.5px solid var(--color-accent); padding: 20px 16px;
+  margin: 0 auto;
   transform: rotateY(var(--book-emblem-rotation));
   box-shadow: var(--book-emblem-shadow);
-  display: flex; flex-direction: column; justify-content: space-between;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden; background: var(--color-bg-card);
 }
-.book-emblem:hover .book-emblem__cover {
+.book-emblem__frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.book-emblem:hover .book-emblem__frame {
   transform: rotateY(calc(var(--book-emblem-rotation) / 2)) translateY(-2px);
   box-shadow: var(--book-emblem-shadow-hover);
 }
-.book-emblem__author { font-family: var(--font-sans); font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-text-subtle); margin: 0 0 12px; }
-.book-emblem__title { font-family: var(--font-serif); font-size: 21px; line-height: 1.05; font-weight: 400; letter-spacing: -0.01em; color: var(--color-text); margin: 0; }
-.book-emblem__rule { width: 24px; height: 1px; background: var(--color-accent); border: none; margin: 11px 0; }
-.book-emblem__subtitle { font-family: var(--font-serif); font-size: 10px; line-height: 1.35; color: var(--color-text-muted); margin: 0; }
-.book-emblem__pages { font-family: var(--font-sans); font-size: 7px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-faint); margin: 0; }
 
 // ----- AWP card -----
 .awp-card { padding: 32px 0; border-top: 0.5px solid var(--color-rule-strong); }

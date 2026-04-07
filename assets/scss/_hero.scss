@@ -52,7 +52,11 @@
   color: var(--color-text);
 }
 
-.hero__accent-wrap { position: relative; display: inline-block; }
+.hero__accent-wrap {
+  position: relative; display: inline-block;
+  transform: translateX(0);
+  animation: hero-word-translate 700ms cubic-bezier(0.65,0,0.35,1) 800ms forwards;
+}
 .hero__accent { font-style: italic; color: var(--color-accent); }
 .hero__accent-rule {
   position: absolute; left: 0; bottom: -2px;
@@ -60,8 +64,10 @@
   animation: hero-rule-trace 700ms cubic-bezier(0.65,0,0.35,1) 800ms forwards;
 }
 
+@keyframes hero-word-translate { to { transform: translateX(12px); } }
 @keyframes hero-rule-trace { to { width: 100%; } }
 @media (prefers-reduced-motion: reduce) {
+  .hero__accent-wrap { animation: none; transform: translateX(12px); }
   .hero__accent-rule { animation: none; width: 100%; }
 }
 

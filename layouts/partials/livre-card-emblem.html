@@ -1,17 +1,12 @@
 {{- $title := .title -}}
-{{- $subtitle := .subtitle -}}
-{{- $author := .author -}}
-{{- $pages := .pages -}}
 {{- $url := .url -}}
+{{- $image := .image | default "/images/livres/anthropie-cover.jpg" -}}
+{{- $alt := .alt | default (printf "Couverture du livre %s" $title) -}}
 
 <a href="{{ $url }}" class="book-emblem" aria-label="{{ $title }}">
-  <div class="book-emblem__cover">
-    <div>
-      <p class="book-emblem__author">{{ $author }}</p>
-      <p class="book-emblem__title">{{ $title }}</p>
-      <hr class="book-emblem__rule">
-      <p class="book-emblem__subtitle">{{ $subtitle }}</p>
-    </div>
-    <p class="book-emblem__pages">{{ $pages }}</p>
-  </div>
+  <picture class="book-emblem__frame">
+    <source srcset="{{ replace $image ".jpg" ".avif" }}" type="image/avif">
+    <source srcset="{{ replace $image ".jpg" ".webp" }}" type="image/webp">
+    <img src="{{ $image }}" alt="{{ $alt }}" width="160" height="232" loading="eager">
+  </picture>
 </a>
