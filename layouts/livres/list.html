@@ -1,80 +1,40 @@
 {{ define "main" }}
-<div class="content-narrow">
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
+<article class="article">
+  <header class="article__header">
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="article__lede">{{ . }}</p>{{ end }}
+  </header>
 
-  {{ $frSite := index site.Sites 0 }}
-  {{ $allLivres := where $frSite.RegularPages "Type" "livres" }}
-  {{ $serie := where $allLivres "Params.serie" "anthropie" }}
+  <div class="article__body">
 
-  <!-- Série anthropique -->
-  {{ if $serie }}
-  <div class="livres-section">
-    <h2 class="livres-section__title">{{ if eq .Lang "en" }}Anthropic series{{ else }}Série anthropique{{ end }}</h2>
-    {{ range $serie }}
-    <div class="livre-card livre-card--flex">
-      {{ if .Params.image_url }}
-        <div class="livre-card__cover-wrap">
-          <img class="livre-card__cover" src="{{ .Params.image_url }}" alt="Couverture du livre {{ .Title }} de {{ .Params.auteur | default "Stéphane Lalut" }}">
-        </div>
+    {{/* CORPUS PRINCIPAL — pages dont serie != autres-ouvrages */}}
+    <section class="livres-grid">
+      {{ range .Pages.ByWeight }}
+        {{ if ne .Params.serie "autres-ouvrages" }}
+          {{ partial "livre-card.html" . }}
+        {{ end }}
       {{ end }}
-      <div class="livre-card__body">
-        <h3 class="livre-card__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-        {{ with .Params.isbn }}<p class="livre-card__isbn">ISBN&nbsp;: {{ . }}</p>{{ end }}
-        <p class="livre-card__description">{{ .Description }}</p>
-        <div class="amazon-buttons">
-          <p class="amazon-buttons__title">{{ if eq $.Lang "en" }}Order{{ else }}Commander{{ end }}</p>
-          <div class="amazon-buttons__row">
-            {{ with .Params.url_amazon_fr }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.fr</a>{{ end }}
-            {{ with .Params.url_amazon_es }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.es</a>{{ end }}
-            {{ with .Params.url_amazon_ca }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.ca</a>{{ end }}
-            {{ with .Params.url_amazon_com }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.com</a>{{ end }}
-            {{ with .Params.url_amazon_uk }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.co.uk</a>{{ end }}
-            {{ with .Params.url_amazon_de }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.de</a>{{ end }}
-            {{ with .Params.url_amazon_it }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.it</a>{{ end }}
-          </div>
-        </div>
-      </div>
-    </div>
-    {{ end }}
-  </div>
-  {{ end }}
+    </section>
 
-  <!-- Autres ouvrages -->
-  {{ $autres := $allLivres | complement $serie }}
-  {{ if $autres }}
-  <hr class="livres-divider">
-  <div class="livres-section">
-    <h2 class="livres-section__title">{{ if eq .Lang "en" }}Other works{{ else }}Autres ouvrages{{ end }}</h2>
-    {{ range $autres }}
-    <div class="livre-card livre-card--flex">
-      {{ if .Params.image_url }}
-        <div class="livre-card__cover-wrap">
-          <img class="livre-card__cover" src="{{ .Params.image_url }}" alt="Couverture du livre {{ .Title }} de {{ .Params.auteur | default "Stéphane Lalut" }}">
-        </div>
-      {{ end }}
-      <div class="livre-card__body">
-        <h3 class="livre-card__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-        {{ with .Params.isbn }}<p class="livre-card__isbn">ISBN&nbsp;: {{ . }}</p>{{ end }}
-        <p class="livre-card__description">{{ .Description }}</p>
-        {{ if or .Params.url_amazon_fr .Params.url_amazon_es .Params.url_amazon_com .Params.url_amazon_uk .Params.url_amazon_de .Params.url_amazon_it }}
-        <div class="amazon-buttons">
-          <p class="amazon-buttons__title">{{ if eq $.Lang "en" }}Order{{ else }}Commander{{ end }}</p>
-          <div class="amazon-buttons__row">
-            {{ with .Params.url_amazon_fr }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.fr</a>{{ end }}
-            {{ with .Params.url_amazon_es }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.es</a>{{ end }}
-            {{ with .Params.url_amazon_ca }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.ca</a>{{ end }}
-            {{ with .Params.url_amazon_com }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.com</a>{{ end }}
-            {{ with .Params.url_amazon_uk }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.co.uk</a>{{ end }}
-            {{ with .Params.url_amazon_de }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.de</a>{{ end }}
-            {{ with .Params.url_amazon_it }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.it</a>{{ end }}
-          </div>
-        </div>
+    {{/* SECTION AUTRES OUVRAGES */}}
+    {{ $autres := where .Pages "Params.serie" "autres-ouvrages" }}
+    {{ if $autres }}
+    <section class="livres-autres">
+      <h2 class="livres-autres__title">Autres ouvrages</h2>
+      <div class="livres-grid">
+        {{ range $autres.ByWeight }}
+          {{ partial "livre-card.html" . }}
         {{ end }}
       </div>
-    </div>
+
+      {{/* Mention non cliquable de L'Odyssée des idées */}}
+      <div class="livre-mention">
+        <p class="livre-mention__title">L'Odyssée des idées</p>
+        <p class="livre-mention__status">Essai — nouvelle édition en préparation</p>
+      </div>
+    </section>
     {{ end }}
+
   </div>
-  {{ end }}
-</div>
+</article>
 {{ end }}

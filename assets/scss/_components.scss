@@ -229,3 +229,45 @@
 .awp-header__title { font-family: var(--font-serif); font-size: var(--fs-h1-page); margin-top: 0.5rem; }
 .awp-header__meta { font-size: var(--fs-small); color: var(--color-text-faint); margin-top: 0.5rem; }
 .awp-header__jel { font-family: var(--font-mono); font-size: var(--fs-micro); margin-top: 0.5rem; color: var(--color-text-mono); }
+
+// =====================================================================
+// Section "Autres ouvrages" sur /livres/
+// =====================================================================
+
+.livres-grid {
+  margin-bottom: 2rem;
+}
+.livres-autres {
+  margin-top: 4em;
+  padding-top: 2.4em;
+  border-top: 0.5px solid var(--color-rule-strong);
+}
+.livres-autres__title {
+  font-family: var(--font-sans);
+  font-size: var(--fs-tiny);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+  font-weight: 500;
+  margin: 0 0 28px;
+}
+.livre-mention {
+  margin-top: 32px;
+  padding: 20px 0 0;
+  border-top: 0.5px solid var(--color-rule-soft);
+  opacity: 0.75;
+}
+.livre-mention__title {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h3);
+  margin: 0 0 4px;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+.livre-mention__status {
+  font-family: var(--font-sans);
+  font-size: var(--fs-tiny);
+  letter-spacing: 0.05em;
+  color: var(--color-text-faint);
+  margin: 0;
+}
