@@ -63,14 +63,7 @@
 
 // ----- Mobile menu -----
 .mobile-menu {
-  position: fixed; inset: 0;
-  background: #ffffff; z-index: 200;
-  display: flex; flex-direction: column;
-  padding: 80px 32px 32px;
-  transform: translateY(-100%);
-  transition: transform 0.3s ease;
-
-  &.is-open { transform: translateY(0); }
+  display: none;
 
   &__close {
     position: absolute; top: 24px; right: 32px;
@@ -94,6 +87,17 @@
   .site-header__nav { display: none; }
   .site-header__burger { display: flex; }
   .site-header__inner { padding: 16px 20px; }
+
+  .mobile-menu {
+    display: flex; flex-direction: column;
+    position: fixed; inset: 0;
+    background: #ffffff; z-index: 200;
+    padding: 80px 32px 32px;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+
+    &.is-open { transform: translateY(0); }
+  }
 }
 
 body.menu-open { overflow: hidden; }
