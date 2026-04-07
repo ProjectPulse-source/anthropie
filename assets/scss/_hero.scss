@@ -52,23 +52,35 @@
   color: var(--color-text);
 }
 
+// Effet marginalia : trait bleu nuit qui se trace sous "déplacent".
+// Le mot ne bouge pas. Une seule animation, jamais répétée.
 .hero__accent-wrap {
-  position: relative; display: inline-block;
-  transform: translateX(0);
-  animation: hero-word-translate 700ms cubic-bezier(0.65,0,0.35,1) 800ms forwards;
+  position: relative;
+  display: inline-block;
 }
-.hero__accent { font-style: italic; color: var(--color-accent); }
+.hero__accent {
+  font-style: italic;
+  color: var(--color-accent);
+}
 .hero__accent-rule {
-  position: absolute; left: 0; bottom: -2px;
-  height: 2px; width: 0; background: var(--color-accent);
-  animation: hero-rule-trace 700ms cubic-bezier(0.65,0,0.35,1) 800ms forwards;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 0;
+  background: var(--color-accent);
+  animation: hero-rule-trace 700ms cubic-bezier(0.65, 0, 0.35, 1) 800ms forwards;
 }
 
-@keyframes hero-word-translate { to { transform: translateX(12px); } }
-@keyframes hero-rule-trace { to { width: 100%; } }
+@keyframes hero-rule-trace {
+  to { width: 100%; }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .hero__accent-wrap { animation: none; transform: translateX(12px); }
-  .hero__accent-rule { animation: none; width: 100%; }
+  .hero__accent-rule {
+    animation: none;
+    width: 100%;
+  }
 }
 
 .hero__lede {
