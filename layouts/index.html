@@ -37,7 +37,7 @@
             <li class="awp-list__item">
               <a href="{{ .RelPermalink }}">
                 <span class="awp-list__num">{{ .Params.awp_number }}</span>
-                <span class="awp-list__title">{{ .Title }}</span>
+                <span class="awp-list__title">{{ partial "fr-typo.html" .Title }}</span>
               </a>
             </li>
           {{ end }}

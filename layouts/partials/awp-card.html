@@ -1,6 +1,6 @@
 <div class="awp-card">
   <div class="awp-card__number">{{ .Params.awp_number }}</div>
-  <h3 class="awp-card__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+  <h3 class="awp-card__title"><a href="{{ .Permalink }}">{{ partial "fr-typo.html" .Title }}</a></h3>
   <p class="awp-card__description">{{ .Description }}</p>
   <span class="awp-card__doi">DOI : <a href="https://doi.org/{{ .Params.doi_zenodo }}" target="_blank" rel="noopener">{{ .Params.doi_zenodo }}</a></span>
 </div>

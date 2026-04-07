@@ -4,7 +4,7 @@
       <img class="livre-card__cover" src="{{ . }}" alt="Couverture — {{ $.Title }}" loading="lazy">
     </div>
   {{ end }}
-  <h3 class="livre-card__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+  <h3 class="livre-card__title"><a href="{{ .Permalink }}">{{ partial "fr-typo.html" .Title }}</a></h3>
   {{ with .Params.subtitle }}<p class="livre-card__subtitle">{{ . }}</p>{{ end }}
   <p class="livre-card__description">{{ .Description }}</p>
   {{ with .Params.isbn }}<p class="livre-card__isbn">ISBN&nbsp;: {{ . }}</p>{{ end }}

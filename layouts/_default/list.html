@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="article">
-  <h1>{{ .Title }}</h1>
+  <h1>{{ partial "fr-typo.html" .Title }}</h1>
   {{ .Content }}
 
   {{ if eq .Section "livres" }}
@@ -10,7 +10,7 @@
   {{ else }}
     {{ range .Pages }}
       <article style="margin-bottom: 2rem;">
-        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <h2><a href="{{ .Permalink }}">{{ partial "fr-typo.html" .Title }}</a></h2>
         {{ with .Description }}<p>{{ . }}</p>{{ end }}
       </article>
     {{ end }}

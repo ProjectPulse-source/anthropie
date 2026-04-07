@@ -4,7 +4,7 @@
   var THIN_NBSP = '\u202F';
   var NBSP = '\u00A0';
 
-  var containers = document.querySelectorAll('main, article, .site-main, .hero');
+  var containers = document.querySelectorAll('body');
 
   function fix(text) {
     return text
@@ -21,7 +21,7 @@
       }
     } else if (node.nodeType === 1) {
       var tag = node.tagName.toLowerCase();
-      if (['code', 'pre', 'input', 'textarea', 'script', 'style'].indexOf(tag) !== -1) return;
+      if (['code', 'pre', 'input', 'textarea', 'script', 'style', 'meta', 'title', 'head'].indexOf(tag) !== -1) return;
       for (var i = 0; i < node.childNodes.length; i++) {
         walk(node.childNodes[i]);
       }

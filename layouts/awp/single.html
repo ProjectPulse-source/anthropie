@@ -2,7 +2,7 @@
 <article class="content-narrow content-reading">
   <header class="awp-header">
     <div class="awp-header__number">{{ .Params.awp_number }}</div>
-    <h1 class="awp-header__title">{{ .Title }}</h1>
+    <h1 class="awp-header__title">{{ partial "fr-typo.html" .Title }}</h1>
     <p class="awp-header__meta">{{ time.Format ":date_long" .Date }} — Stéphane Lalut</p>
     {{ with .Params.jel_codes }}
       <p class="awp-header__jel">JEL : {{ delimit . ", " }}</p>
