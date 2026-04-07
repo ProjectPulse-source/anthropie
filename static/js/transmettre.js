@@ -61,22 +61,24 @@
         break;
 
       case 'email':
+        var intro = option.dataset.emailIntro || '';
         var subject = encodeURIComponent(title);
-        var body = encodeURIComponent(title + '\n\n' + url);
+        var body = encodeURIComponent(intro + '\n\n' + title + '\n\n' + url);
         window.location.href = 'mailto:?subject=' + subject + '&body=' + body;
         break;
 
       case 'copy':
+        var label = option.querySelector('.transmettre__copy-label');
+        var original = label.textContent;
+        var copiedText = option.dataset.copiedLabel || 'Lien copié \u2713';
         navigator.clipboard.writeText(url).then(function() {
-          var label = option.querySelector('.transmettre__copy-label');
-          var original = label.textContent;
-          label.textContent = 'Lien copié \u2713';
+          label.textContent = copiedText;
           setTimeout(function() {
             label.textContent = original;
             closeAllPanels();
           }, 1500);
         }).catch(function() {
-          prompt('Copier ce lien :', url);
+          prompt('URL :', url);
         });
         return;
     }

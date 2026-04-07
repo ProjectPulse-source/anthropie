@@ -1,9 +1,10 @@
-<div class="transmettre">
+<div class="transmettre" data-lang="{{ .Language.Lang }}">
   <button
     type="button"
     class="transmettre__button"
     aria-expanded="false"
-    aria-controls="transmettre-panel-{{ .File.UniqueID }}">
+    aria-controls="transmettre-panel-{{ .File.UniqueID }}"
+    aria-label="{{ if eq .Language.Lang "en" }}Share this page{{ else }}Transmettre cette page{{ end }}">
     <svg class="transmettre__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <circle cx="18" cy="5" r="3"/>
       <circle cx="6" cy="12" r="3"/>
@@ -11,7 +12,7 @@
       <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
       <line x1="15.41" y1="6.51" x2="8.59" y2="11.49"/>
     </svg>
-    <span>Transmettre</span>
+    <span>{{ if eq .Language.Lang "en" }}Share{{ else }}Transmettre{{ end }}</span>
   </button>
 
   <div
@@ -48,6 +49,7 @@
       data-channel="email"
       data-title="{{ .Title }}"
       data-url="{{ .Permalink }}"
+      data-email-intro="{{ if eq .Language.Lang "en" }}I thought this might interest you:{{ else }}Je pense que ceci pourrait vous intéresser :{{ end }}"
       role="menuitem">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
@@ -60,12 +62,13 @@
       class="transmettre__option"
       data-channel="copy"
       data-url="{{ .Permalink }}"
+      data-copied-label="{{ if eq .Language.Lang "en" }}Link copied ✓{{ else }}Lien copié ✓{{ end }}"
       role="menuitem">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
         <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
       </svg>
-      <span class="transmettre__copy-label">Copier le lien</span>
+      <span class="transmettre__copy-label">{{ if eq .Language.Lang "en" }}Copy link{{ else }}Copier le lien{{ end }}</span>
     </button>
   </div>
 </div>
