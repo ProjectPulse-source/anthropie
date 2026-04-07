@@ -5,14 +5,8 @@
 
   {{ .Content }}
 
-  {{ if eq .Lang "en" }}
-    {{ with .Params.url_amazon_com }}
-      <a href="{{ . }}" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
-    {{ end }}
-  {{ else }}
-    {{ with .Params.url_amazon_fr }}
-      <a href="{{ . }}" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Acheter sur Amazon</a>
-    {{ end }}
+  {{ if or .Params.url_amazon_fr .Params.url_amazon_com }}
+    {{- partial "amazon-button.html" . -}}
   {{ end }}
 
   {{- partial "transmettre.html" . -}}
