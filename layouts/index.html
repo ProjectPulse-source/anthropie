@@ -2,6 +2,7 @@
 
 {{- $def := .Site.Params.canonicalDefinition -}}
 {{- $defWithAccent := replace $def "déplacent" `<span class="hero__accent-wrap"><em class="hero__accent">déplacent</em><em class="hero__accent-shadow-right" aria-hidden="true">déplacent</em><em class="hero__accent-shadow-down" aria-hidden="true">déplacent</em><span class="hero__accent-rule"></span></span>` -}}
+{{- $defWithAccent = replace $defWithAccent "displace" `<span class="hero__accent-wrap"><em class="hero__accent">displace</em><em class="hero__accent-shadow-right" aria-hidden="true">displace</em><em class="hero__accent-shadow-down" aria-hidden="true">displace</em><span class="hero__accent-rule"></span></span>` -}}
 
 <section class="hero">
   <canvas id="hero-flowfield" aria-hidden="true"></canvas>
@@ -13,8 +14,8 @@
         {{ if eq .Lang "en" }}A working hypothesis in political economy, developed in five working papers and two books. Disorder is neither absorbed nor dissolved: it is transferred — in space, in time, or to other social groups.{{ else }}Une hypothèse de travail en économie politique, développée en cinq working papers et deux ouvrages. Le désordre n'est ni résorbé ni dissous&nbsp;: il est transféré — dans l'espace, dans le temps, ou vers d'autres groupes sociaux.{{ end }}
       </p>
       <div class="hero__cta-group">
-        <a href="{{ "/awp/awp-01/" | relURL }}" class="btn btn--primary">{{ if eq .Lang "en" }}Read AWP-01{{ else }}Lire AWP-01{{ end }} →</a>
-        <a href="{{ "/livres/anthropie-ordre-ici-dette-ailleurs/" | relURL }}" class="btn btn--secondary">{{ if eq .Lang "en" }}Discover the book{{ else }}Découvrir le livre{{ end }}</a>
+        <a href="{{ "/awp/awp-01/" | relLangURL }}" class="btn btn--primary">{{ if eq .Lang "en" }}Read AWP-01{{ else }}Lire AWP-01{{ end }} →</a>
+        <a href="{{ "/livres/anthropie-ordre-ici-dette-ailleurs/" | relLangURL }}" class="btn btn--secondary">{{ if eq .Lang "en" }}Discover the book{{ else }}Découvrir le livre{{ end }}</a>
       </div>
       <div class="credibility-strip">
         {{ $items := .Site.Data.credibility.items }}
@@ -36,7 +37,7 @@
           {{ range $key := $keys }}
             {{ $item := index $.Site.Data.awp_short_titles $key }}
             <li class="awp-list__item">
-              <a href="{{ printf "/awp/%s/" $key | relURL }}">
+              <a href="{{ printf "/awp/%s/" $key | relLangURL }}">
                 <span class="awp-list__num">{{ $item.number }}</span>
                 <span class="awp-list__title">{{ $item.short }}</span>
               </a>
