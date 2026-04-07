@@ -6,6 +6,7 @@
   </header>
   <div class="article__body content-narrow">
     {{ .Content }}
+    {{- partial "transmettre.html" . -}}
   </div>
 </article>
 {{ end }}

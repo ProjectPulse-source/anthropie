@@ -271,3 +271,69 @@
   color: var(--color-text-faint);
   margin: 0;
 }
+
+// =====================================================================
+// Bouton "Transmettre" (partage social)
+// =====================================================================
+
+.transmettre {
+  position: relative;
+  display: inline-block;
+  margin: 1.5rem 0;
+}
+.transmettre__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  background: transparent;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.transmettre__button:hover,
+.transmettre__button[aria-expanded="true"] {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+.transmettre__icon { flex-shrink: 0; }
+.transmettre__panel {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0; z-index: 50;
+  min-width: 180px;
+  background: #fff;
+  border: 1px solid rgba(26, 35, 50, 0.15);
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 0.4rem 0;
+  display: flex;
+  flex-direction: column;
+}
+.transmettre__panel[hidden] { display: none; }
+.transmettre__option {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.6rem 1rem;
+  background: transparent;
+  border: none;
+  color: var(--color-accent);
+  font-family: inherit;
+  font-size: 0.875rem;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.transmettre__option:hover {
+  background: rgba(26, 35, 50, 0.05);
+}
+.transmettre__option svg { flex-shrink: 0; opacity: 0.75; }
+@media (max-width: 480px) {
+  .transmettre__panel { min-width: 160px; }
+}
