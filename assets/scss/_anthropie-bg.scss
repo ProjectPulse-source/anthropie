@@ -4,7 +4,7 @@
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  opacity: 0.22;
+  opacity: 0.38;
   overflow: hidden;
 
   svg {
@@ -20,21 +20,29 @@ body::before {
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(255, 255, 255, 0.25) 0%,
-    rgba(255, 255, 255, 0.10) 50%,
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 18%,
+    rgba(255, 255, 255, 0.85) 32%,
+    rgba(255, 255, 255, 0.92) 50%,
+    rgba(255, 255, 255, 0.85) 68%,
+    rgba(255, 255, 255, 0) 82%,
     rgba(255, 255, 255, 0) 100%
   );
 }
 
 @media (prefers-color-scheme: dark) {
-  .anthropie-bg { opacity: 0.26; }
+  .anthropie-bg { opacity: 0.42; }
   body::before {
-    background: radial-gradient(
-      ellipse at center,
-      rgba(20, 25, 35, 0.25) 0%,
-      rgba(20, 25, 35, 0.10) 50%,
+    background: linear-gradient(
+      to right,
+      rgba(20, 25, 35, 0) 0%,
+      rgba(20, 25, 35, 0) 18%,
+      rgba(20, 25, 35, 0.85) 32%,
+      rgba(20, 25, 35, 0.92) 50%,
+      rgba(20, 25, 35, 0.85) 68%,
+      rgba(20, 25, 35, 0) 82%,
       rgba(20, 25, 35, 0) 100%
     );
   }
