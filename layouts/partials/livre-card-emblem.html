@@ -1,12 +1,16 @@
 {{- $title := .title -}}
 {{- $url := .url -}}
-{{- $image := .image | default "/images/livres/anthropie-cover.jpg" -}}
-{{- $alt := .alt | default (printf "Couverture du livre %s" $title) -}}
+{{- $image := "" -}}
+{{- $book := .Site.GetPage (printf "/livres/%s" (path.Base $url)) -}}
+{{- if $book -}}
+  {{- $image = $book.Params.image_url -}}
+{{- end -}}
+{{- if not $image -}}
+  {{- $image = "https://m.media-amazon.com/images/I/81kdsh4400L._SL1436_.jpg" -}}
+{{- end -}}
 
-<a href="{{ $url }}" class="book-emblem" aria-label="{{ $title }}">
-  <picture class="book-emblem__frame">
-    <source srcset="{{ replace $image ".jpg" ".avif" }}" type="image/avif">
-    <source srcset="{{ replace $image ".jpg" ".webp" }}" type="image/webp">
-    <img src="{{ $image }}" alt="{{ $alt }}" width="160" height="232" loading="eager">
-  </picture>
+<a href="{{ $url | relLangURL }}" class="book-emblem" aria-label="Découvrir le livre {{ $title }}">
+  <div class="book-emblem__frame">
+    <img src="{{ $image }}" alt="Couverture du livre {{ $title }}" loading="eager" fetchpriority="high">
+  </div>
 </a>

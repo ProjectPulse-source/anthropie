@@ -104,159 +104,111 @@ pre {
   overflow-x: auto;
 }
 
-// Lists
-.content-narrow ol,
-.content-narrow ul {
-  padding-left: 2.4rem;
-  margin: 1.2rem 0 2rem 0;
-  list-style-position: outside;
-}
+// =====================================================================
+// Listes éditoriales — v3.1.3 force brute
+// =====================================================================
 
-.content-narrow ol li,
-.content-narrow ul li {
-  margin-bottom: 0.65rem;
-  line-height: 1.85;
+main ol,
+main ul {
+  padding-left: 1.6em !important;
+  margin: 1.4em 0 1.4em 0.4em !important;
+  list-style-position: outside !important;
 }
+main ol { list-style-type: decimal; }
+main ul { list-style-type: disc; }
 
-.content-narrow li::marker {
-  color: var(--color-accent);
-}
-
-.content-narrow p {
-  line-height: 1.85;
-}
-
-// Tables
-.content-narrow table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 2rem 0;
-  font-size: 0.95rem;
-  table-layout: auto;
-}
-
-.content-narrow table th {
-  text-align: left;
-  font-weight: 600;
-  padding: 0.75rem 1rem;
-  border-bottom: 2px solid var(--color-accent);
-  font-family: var(--font-sans);
-  font-size: var(--fs-tiny);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-.content-narrow table td {
-  padding: 0.9rem 1rem;
-  vertical-align: top;
-  border-bottom: 1px solid var(--color-rule-soft);
-  line-height: 1.65;
-}
-
-.content-narrow table tr:last-child td {
-  border-bottom: none;
-}
-
-.content-narrow table th:first-child,
-.content-narrow table td:first-child {
-  font-weight: 600;
-  white-space: nowrap;
-  min-width: 11rem;
-}
-
-// Listes éditoriales — alignement et espacement
-article.article ol,
-article.article ul,
-.article__body ol,
-.article__body ul {
-  padding-left: 1.6em;
-  margin: 1.4em 0 1.4em 0.4em;
-}
-article.article li,
-.article__body li {
-  margin-bottom: 0.8em;
-  padding-left: 0.5em;
-  line-height: var(--lh-body);
+main li {
+  margin-bottom: 0.8em !important;
+  padding-left: 0.6em !important;
+  line-height: var(--lh-body) !important;
   color: var(--color-text-body);
+  font-weight: 400 !important;
 }
-article.article li::marker,
-.article__body li::marker {
+
+main li::marker {
   color: var(--color-text-faint);
-  font-variant-numeric: tabular-nums;
   font-weight: 400;
+  font-variant-numeric: tabular-nums;
 }
-article.article li > p,
-.article__body li > p {
+
+main li > p {
   margin: 0.4em 0;
 }
-article.article li > p:first-child,
-.article__body li > p:first-child {
-  margin-top: 0;
-}
-article.article li > p:last-child,
-.article__body li > p:last-child {
-  margin-bottom: 0;
-}
-article.article ol li,
-.article__body ol li {
-  font-weight: 400;
-}
-article.article ol li strong,
-.article__body ol li strong {
+main li > p:first-child { margin-top: 0; }
+main li > p:last-child { margin-bottom: 0; }
+
+main ol li strong,
+main ul li strong {
   font-weight: 500;
+  color: var(--color-text);
 }
 
-// Tableaux éditoriaux — style revue savante, colonnes proportionnées
-article.article table,
-.article__body table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 2.4em 0;
+// =====================================================================
+// Tableaux éditoriaux — v3.1.3 force brute
+// =====================================================================
+
+main table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 2.4em 0 !important;
   font-size: var(--fs-small);
   font-family: var(--font-serif);
-  table-layout: auto;
+  table-layout: fixed !important;
 }
-article.article thead th,
-.article__body thead th {
-  text-align: left;
-  font-family: var(--font-sans);
-  font-size: var(--fs-tiny);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-text-faint);
-  font-weight: 500;
-  padding: 14px 20px 14px 0;
-  border-bottom: 0.5px solid var(--color-rule-strong);
-  vertical-align: bottom;
-  white-space: nowrap;
+
+main thead th {
+  text-align: left !important;
+  font-family: var(--font-sans) !important;
+  font-size: var(--fs-tiny) !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  color: var(--color-text-faint) !important;
+  font-weight: 500 !important;
+  padding: 14px 20px 14px 0 !important;
+  border-bottom: 0.5px solid var(--color-rule-strong) !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  vertical-align: bottom !important;
+  background: transparent !important;
 }
-article.article tbody td,
-.article__body tbody td {
-  padding: 16px 20px 16px 0;
-  border-bottom: 0.5px solid var(--color-rule-soft);
-  vertical-align: top;
-  line-height: 1.55;
-  color: var(--color-text-body);
-  font-weight: 400;
+
+main tbody td {
+  padding: 16px 20px 16px 0 !important;
+  border-bottom: 0.5px solid var(--color-rule-soft) !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  vertical-align: top !important;
+  line-height: 1.55 !important;
+  color: var(--color-text-body) !important;
+  font-weight: 400 !important;
+  background: transparent !important;
 }
-article.article tbody tr:last-child td,
-.article__body tbody tr:last-child td {
-  border-bottom: 0.5px solid var(--color-rule-strong);
+
+main tbody tr:last-child td {
+  border-bottom: 0.5px solid var(--color-rule-strong) !important;
 }
-article.article tbody td:first-child,
-.article__body tbody td:first-child {
-  font-family: var(--font-sans);
-  font-size: var(--fs-tiny);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--color-accent);
-  font-weight: 500;
-  white-space: nowrap;
-  padding-right: 32px;
-  vertical-align: top;
-  padding-top: 18px;
+
+main tbody td:first-child {
+  font-family: var(--font-sans) !important;
+  font-size: var(--fs-tiny) !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  color: var(--color-accent) !important;
+  font-weight: 500 !important;
+  padding-top: 18px !important;
+  padding-right: 24px !important;
 }
-article.article tbody td:last-child,
-.article__body tbody td:last-child {
-  padding-right: 0;
+
+main tbody td:last-child,
+main thead th:last-child {
+  padding-right: 0 !important;
 }
+
+main table th:nth-child(1),
+main table td:nth-child(1) { width: 18%; }
+main table th:nth-child(2),
+main table td:nth-child(2) { width: 32%; }
+main table th:nth-child(3),
+main table td:nth-child(3) { width: 50%; }
