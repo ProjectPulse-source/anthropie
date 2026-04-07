@@ -286,9 +286,9 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 0.9rem;
-  background: transparent;
+  background: var(--color-accent);
   border: 1px solid var(--color-accent);
-  color: var(--color-accent);
+  color: #fff;
   border-radius: 4px;
   font-family: inherit;
   font-size: 0.875rem;
@@ -297,8 +297,8 @@
 }
 .transmettre__button:hover,
 .transmettre__button[aria-expanded="true"] {
-  background: var(--color-accent);
-  color: var(--color-bg);
+  background: #fff;
+  color: var(--color-accent);
 }
 .transmettre__icon { flex-shrink: 0; }
 .transmettre__panel {
