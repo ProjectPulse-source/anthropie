@@ -1,35 +1,46 @@
+$amazon-blue: #1a3a5c;
+$amazon-gold: #c9a961;
+
 .amazon-wrapper {
   position: relative;
   display: block;
   width: 100%;
 }
 
-.amazon-wrapper .amazon-trigger,
-button.amazon-trigger {
-  background: #1a3a5c !important;
-  color: #ffffff !important;
-  border: 1px solid #1a3a5c !important;
-  padding: 10px 22px;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background 0.2s, color 0.2s;
-  font-family: inherit;
+.amazon-trigger {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  width: 100%;
   justify-content: center;
-}
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  background: $amazon-blue !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  text-decoration: none;
+  width: 100%;
+  box-sizing: border-box;
 
-.amazon-wrapper .amazon-trigger:hover,
-.amazon-wrapper .amazon-trigger[aria-expanded="true"],
-button.amazon-trigger:hover,
-button.amazon-trigger[aria-expanded="true"] {
-  background: #ffffff !important;
-  color: #1a3a5c !important;
+  &:hover {
+    background: #2a4a6c !important;
+  }
+  &:active {
+    transform: translateY(1px);
+  }
+
+  .amazon-icon {
+    color: $amazon-gold;
+    flex-shrink: 0;
+  }
+
+  span {
+    line-height: 1;
+  }
 }
 
 .amazon-popover {
@@ -63,12 +74,11 @@ button.amazon-trigger[aria-expanded="true"] {
   }
 }
 
-// Sidebar single livre : ouverture vers le haut
+// Sidebar : popover centré sous le bouton
 .book-single__sidebar .amazon-popover {
-  top: auto;
-  bottom: calc(100% + 0.5rem);
   left: 50%;
   transform: translateX(-50%);
+  right: auto;
 }
 
 @media (max-width: 480px) {
