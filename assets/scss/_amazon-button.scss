@@ -1,6 +1,7 @@
 .amazon-wrapper {
   position: relative;
-  display: inline-block;
+  display: block;
+  width: 100%;
 }
 
 .amazon-wrapper .amazon-trigger,
@@ -19,6 +20,8 @@ button.amazon-trigger {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  width: 100%;
+  justify-content: center;
 }
 
 .amazon-wrapper .amazon-trigger:hover,
@@ -39,7 +42,7 @@ button.amazon-trigger[aria-expanded="true"] {
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 6px;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
 
   &[hidden] {
     display: none;
@@ -47,11 +50,12 @@ button.amazon-trigger[aria-expanded="true"] {
 
   a {
     display: block;
-    padding: 0.5rem 1.25rem;
+    padding: 0.55rem 1.25rem;
     color: #1a1a2e;
     text-decoration: none;
     font-size: 0.92rem;
     white-space: nowrap;
+    text-align: left;
 
     &:hover {
       background: rgba(0, 0, 0, 0.05);
@@ -59,9 +63,22 @@ button.amazon-trigger[aria-expanded="true"] {
   }
 }
 
+// Sidebar single livre : ouverture vers le haut
+.book-single__sidebar .amazon-popover {
+  top: auto;
+  bottom: calc(100% + 0.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 @media (max-width: 480px) {
   .amazon-popover {
     left: auto;
     right: 0;
+  }
+  .book-single__sidebar .amazon-popover {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
   }
 }

@@ -1,27 +1,29 @@
 {{ define "main" }}
 <article class="article">
   <div class="book-single">
-    {{ with .Params.image_url }}
-    <aside class="book-single__cover">
-      <img src="{{ . }}"
-           alt="Couverture — {{ $.Title }}"
-           loading="lazy"
-           width="220" height="330">
-    </aside>
-    {{ end }}
     <div class="book-single__main content-narrow content-reading">
       <h1>{{ partial "fr-typo.html" .Title }}</h1>
       {{ with .Params.isbn }}<p class="livre-card__isbn">ISBN&nbsp;: {{ . }}</p>{{ end }}
 
       {{ .Content }}
+    </div>
 
+    <aside class="book-single__sidebar">
+      {{ with .Params.image_url }}
+      <div class="book-single__cover">
+        <img src="{{ . }}"
+             alt="Couverture — {{ $.Title }}"
+             loading="lazy"
+             width="180" height="270">
+      </div>
+      {{ end }}
       <div class="book-single__actions">
         {{- partial "transmettre.html" . -}}
         {{ if or .Params.url_amazon_fr .Params.url_amazon_com }}
           {{- partial "amazon-button.html" . -}}
         {{ end }}
       </div>
-    </div>
+    </aside>
   </div>
 </article>
 
