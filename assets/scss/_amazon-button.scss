@@ -3,7 +3,23 @@ $amazon-gold: #c9a961;
 
 .amazon-wrapper {
   position: relative;
+  display: inline-block;
+}
+
+// Sidebar single : pleine largeur
+.book-single__sidebar .amazon-wrapper {
   display: block;
+  width: 100%;
+}
+
+// Page liste livres : aligné sous la cover (180px)
+.livre-card .amazon-wrapper {
+  display: block;
+  width: 180px;
+  max-width: 100%;
+}
+
+.livre-card .amazon-trigger {
   width: 100%;
 }
 
