@@ -122,9 +122,11 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
   .site-footer { padding: 32px 20px; }
   .site-footer__inner { grid-template-columns: 1fr; gap: 32px; text-align: center; }
 }
-.site-footer h3 {
+.site-footer h3,
+.site-footer__heading {
   color: var(--color-bg); font-size: 14px; font-family: var(--font-sans);
   text-transform: uppercase; letter-spacing: 0.1em; margin: 0 0 14px;
+  font-weight: 500;
 }
 .site-footer p { margin: 0 0 6px; }
 .site-footer a { color: var(--color-bg-footer-text); text-decoration: none; transition: color 0.2s ease; }

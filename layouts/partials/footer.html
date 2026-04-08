@@ -1,17 +1,17 @@
 <footer class="site-footer">
   <div class="site-footer__inner">
     <div>
-      <h3>Stéphane Lalut</h3>
+      <p class="site-footer__heading">Stéphane Lalut</p>
       <p>{{ i18n "footer_role" }}</p>
       <p style="margin-top: 8px;"><a href="https://orcid.org/0009-0002-1794-4895" target="_blank" rel="noopener">ORCID 0009-0002-1794-4895</a></p>
     </div>
     <div>
-      <h3>Working Papers</h3>
+      <p class="site-footer__heading">Working Papers</p>
       <p><a href="{{ "/serie-awp/" | relURL }}">Anthropie Working Papers</a></p>
       <p><a href="{{ .Site.Params.zenodoCommunity }}" target="_blank" rel="noopener">Zenodo</a></p>
     </div>
     <div>
-      <h3>{{ if eq .Lang "en" }}Books{{ else }}Livres{{ end }}</h3>
+      <p class="site-footer__heading">{{ if eq .Lang "en" }}Books{{ else }}Livres{{ end }}</p>
       <p><a href="{{ if eq .Lang "en" }}/en/books/{{ else }}/livres/{{ end }}">{{ if eq .Lang "en" }}All books{{ else }}Tous les livres{{ end }}</a></p>
     </div>
   </div>
