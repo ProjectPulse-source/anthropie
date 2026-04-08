@@ -1,7 +1,7 @@
 ---
 title: "Livresque des mots"
 subtitle: "Anthologie inédite & éclectique de citations"
-description: "Florilège d'aphorismes, d'extraits de romans, articles, poésies, chansons, anecdotes littéraires, répliques de cinéma."
+description: "Une anthologie qui refuse l'ordre alphabétique et thématique pour privilégier la surprise des rencontres. 4 680 citations, 1 380 voix, 25 siècles de génie humain, tissés en un fil d'Ariane subtil. Quarante ans de passion littéraire pour offrir non un classement, mais un voyage."
 date: 2022-01-01
 isbn: "978-2-9586347-0-4"
 serie: "autres-ouvrages"

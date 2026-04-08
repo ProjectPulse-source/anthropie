@@ -1,7 +1,7 @@
 ---
 title: "ANTHROPIE – Ordre ici. Dette ailleurs"
 date: 2025-01-01
-description: "L'ouvrage fondateur du cadre anthropique. 606 pages. Stéphane Lalut, 2025."
+description: "L'ouvrage fondateur du cadre anthropique. En 606 pages, l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent est déployée à travers l'histoire longue, l'économie, les finances publiques et l'épistémologie. Ordre ici. Dette ailleurs."
 isbn: "978-2-9586347-2-8"
 serie: "anthropie"
 image_url: "https://m.media-amazon.com/images/I/81kdsh4400L._SL1436_.jpg"
