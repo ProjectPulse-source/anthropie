@@ -1,4 +1,5 @@
 // === Fond génératif Anthropie ===
+// Le site n'a pas de dark mode — le voile est toujours blanc.
 .anthropie-bg {
   position: fixed;
   inset: 0;
@@ -26,18 +27,6 @@ body::before {
     rgba(255, 255, 255, 0.78) 40%,
     rgba(255, 255, 255, 0) 100%
   );
-}
-
-@media (prefers-color-scheme: dark) {
-  .anthropie-bg { opacity: 0.42; }
-  body::before {
-    background: radial-gradient(
-      ellipse 70% 100% at center,
-      rgba(20, 25, 35, 0.78) 0%,
-      rgba(20, 25, 35, 0.78) 40%,
-      rgba(20, 25, 35, 0) 100%
-    );
-  }
 }
 
 @media (max-width: 768px) {
