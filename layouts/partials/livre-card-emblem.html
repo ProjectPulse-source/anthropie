@@ -8,9 +8,19 @@
 {{- if not $image -}}
   {{- $image = "https://m.media-amazon.com/images/I/81kdsh4400L._SL1436_.jpg" -}}
 {{- end -}}
+{{- /* Demander une version 480px au CDN Amazon (3x la taille affichée pour Retina) */ -}}
+{{- $imageSm := replaceRE `\._SL[0-9]+_\.` "._SL320_." $image -}}
+{{- $imageMd := replaceRE `\._SL[0-9]+_\.` "._SL480_." $image -}}
 
 <a href="{{ $url | relLangURL }}" class="book-emblem" aria-label="Découvrir le livre {{ $title }}">
   <div class="book-emblem__frame">
-    <img src="{{ $image }}" alt="Couverture du livre {{ $title }}" loading="eager" fetchpriority="high" width="160" height="232">
+    <img src="{{ $imageMd }}"
+         srcset="{{ $imageSm }} 320w, {{ $imageMd }} 480w, {{ $image }} 960w"
+         sizes="(max-width: 768px) 160px, 160px"
+         alt="Couverture du livre {{ $title }}"
+         loading="eager"
+         fetchpriority="high"
+         width="160"
+         height="232">
   </div>
 </a>
