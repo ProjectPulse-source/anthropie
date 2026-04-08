@@ -5,10 +5,6 @@
 
   {{ .Content }}
 
-  {{ if or .Params.url_amazon_fr .Params.url_amazon_com }}
-    {{- partial "amazon-button.html" . -}}
-  {{ end }}
-
   {{- partial "transmettre.html" . -}}
 </article>
 
