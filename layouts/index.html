@@ -1,8 +1,7 @@
 {{ define "main" }}
 
 {{- $def := .Site.Params.canonicalDefinition -}}
-{{- $defWithAccent := replace $def "déplacent" `<span class="hero__accent-wrap"><em class="hero__accent">déplacent</em><em class="hero__accent-shadow-right" aria-hidden="true">déplacent</em><em class="hero__accent-shadow-down" aria-hidden="true">déplacent</em><span class="hero__accent-rule"></span></span>` -}}
-{{- $defWithAccent = replace $defWithAccent "displace" `<span class="hero__accent-wrap"><em class="hero__accent">displace</em><em class="hero__accent-shadow-right" aria-hidden="true">displace</em><em class="hero__accent-shadow-down" aria-hidden="true">displace</em><span class="hero__accent-rule"></span></span>` -}}
+{{- $defWithAccent := $def -}}
 
 <section class="hero">
   <canvas id="hero-flowfield" aria-hidden="true"></canvas>
