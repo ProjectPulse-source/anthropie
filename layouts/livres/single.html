@@ -1,11 +1,28 @@
 {{ define "main" }}
-<article class="content-narrow content-reading">
-  <h1>{{ partial "fr-typo.html" .Title }}</h1>
-  {{ with .Params.isbn }}<p class="livre-card__isbn">ISBN&nbsp;: {{ . }}</p>{{ end }}
+<article class="article">
+  <div class="book-single">
+    <div class="book-single__main content-narrow content-reading">
+      <h1>{{ partial "fr-typo.html" .Title }}</h1>
+      {{ with .Params.isbn }}<p class="livre-card__isbn">ISBN&nbsp;: {{ . }}</p>{{ end }}
 
-  {{ .Content }}
+      {{ .Content }}
 
-  {{- partial "transmettre.html" . -}}
+      <div class="book-single__actions">
+        {{- partial "transmettre.html" . -}}
+        {{ if or .Params.url_amazon_fr .Params.url_amazon_com }}
+          {{- partial "amazon-button.html" . -}}
+        {{ end }}
+      </div>
+    </div>
+    {{ with .Params.image_url }}
+    <aside class="book-single__cover">
+      <img src="{{ . }}"
+           alt="Couverture — {{ $.Title }}"
+           loading="lazy"
+           width="280" height="420">
+    </aside>
+    {{ end }}
+  </div>
 </article>
 
 <!-- Schema.org Book -->
