@@ -1,0 +1,12 @@
+@techreport{lalut_{{ .Params.awp_number | lower | replaceRE "-" "_" }}_{{ .Date.Format "2006" }},
+  author       = {Lalut, Stéphane},
+  title        = { {{- .Title -}} },
+  year         = { {{- .Date.Format "2006" -}} },
+  number       = { {{- .Params.awp_number -}} },
+  institution  = {Anthropie Working Papers},
+  type         = {Working Paper},
+  doi          = { {{- .Params.doi_zenodo -}} },
+  url          = {https://doi.org/{{ .Params.doi_zenodo }}},
+  howpublished = {\url{ {{- .Permalink -}} }},
+  language     = { {{- .Lang -}} }
+}

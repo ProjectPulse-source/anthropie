@@ -29,6 +29,9 @@
     </div>
   {{ end }}
 
+  {{ partial "how-to-cite.html" . }}
+  {{ partial "related-awp.html" . }}
+
   {{- partial "transmettre.html" . -}}
 
   {{ if .Params.faq }}

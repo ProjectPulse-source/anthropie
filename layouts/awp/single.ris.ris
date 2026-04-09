@@ -1,0 +1,11 @@
+TY  - RPRT
+AU  - Lalut, Stéphane
+TI  - {{ .Title }}
+PY  - {{ .Date.Format "2006" }}
+DA  - {{ .Date.Format "2006/01/02" }}
+DO  - {{ .Params.doi_zenodo }}
+UR  - {{ .Permalink }}
+PB  - Anthropie Working Papers
+M3  - {{ .Params.awp_number }}
+LA  - {{ .Lang }}
+ER  -

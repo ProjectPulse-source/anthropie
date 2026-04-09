@@ -21,6 +21,10 @@ translation:
   doi: "10.5281/zenodo.19433086"
   url: "/en/awp/awp-02/"
   title: "3.3 million years in one principle"
+related:
+  - awp-01
+  - awp-04
+related_book: "anthropie-ordre-ici-dette-ailleurs"
 ---
 
 L'anthropie traverse 3,3 millions d'années d'histoire humaine en sept configurations — du premier outil taillé au métaprogramme numérique contemporain. Ce working paper soutient que le déplacement du désordre est un mécanisme structurel des sociétés humaines, pas un accident de la modernité.

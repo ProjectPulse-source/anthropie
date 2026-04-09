@@ -1,0 +1,41 @@
+{{- $isEn := eq .Lang "en" -}}
+{{- $current := . -}}
+
+{{ if .Params.related }}
+<aside class="related-awp" aria-labelledby="related-title">
+  <h2 id="related-title" class="related-awp__title">
+    {{ if $isEn }}Related working papers{{ else }}Working papers liés{{ end }}
+  </h2>
+
+  <ul class="related-awp__list">
+    {{- range .Params.related -}}
+      {{- $slug := . -}}
+      {{- $page := $current.Site.GetPage (printf "/awp/%s" $slug) -}}
+      {{- with $page -}}
+        <li>
+          <a href="{{ .RelPermalink }}">
+            <span class="related-awp__num">{{ .Params.awp_number }}</span>
+            <span class="related-awp__name">{{ .Title }}</span>
+          </a>
+        </li>
+      {{- end -}}
+    {{- end -}}
+  </ul>
+
+  {{- with $current.Params.related_book -}}
+    {{- $book := $current.Site.GetPage (printf "/livres/%s" .) -}}
+    {{- with $book -}}
+    <p class="related-awp__book">
+      {{ if $isEn }}This working paper is developed in the book{{ else }}Ce working paper est développé dans le livre{{ end }}
+      <a href="{{ .RelPermalink }}"><em>{{ .Title }}</em></a>.
+    </p>
+    {{- end -}}
+  {{- end -}}
+
+  <p class="related-awp__definition">
+    <a href="{{ "/quest-ce-que-lanthropie/" | relLangURL }}">
+      {{ if $isEn }}→ What is anthropy?{{ else }}→ Qu'est-ce que l'anthropie ?{{ end }}
+    </a>
+  </p>
+</aside>
+{{ end }}

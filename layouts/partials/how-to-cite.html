@@ -1,0 +1,44 @@
+{{- $isEn := eq .Lang "en" -}}
+{{- $bibURL := "" -}}
+{{- $risURL := "" -}}
+{{- with .OutputFormats.Get "BibTeX" -}}{{- $bibURL = .RelPermalink -}}{{- end -}}
+{{- with .OutputFormats.Get "RIS" -}}{{- $risURL = .RelPermalink -}}{{- end -}}
+
+{{- $citation := printf "Lalut, Stéphane (%s). « %s ». %s. Anthropie Working Papers. https://doi.org/%s"
+    (.Date.Format "2006")
+    .Title
+    .Params.awp_number
+    .Params.doi_zenodo -}}
+
+<aside class="how-to-cite" aria-labelledby="how-to-cite-title">
+  <h2 id="how-to-cite-title" class="how-to-cite__title">
+    {{ if $isEn }}How to cite{{ else }}Comment citer ce document{{ end }}
+  </h2>
+
+  <div class="how-to-cite__citation" id="citation-text">{{ $citation }}</div>
+
+  <div class="how-to-cite__actions">
+    <button type="button"
+            class="how-to-cite__btn"
+            data-copy-target="#citation-text"
+            data-copy-feedback="{{ if $isEn }}Copied!{{ else }}Copié !{{ end }}">
+      {{ if $isEn }}Copy citation{{ else }}Copier la citation{{ end }}
+    </button>
+
+    {{ if $bibURL }}
+    <a href="{{ $bibURL }}"
+       class="how-to-cite__btn how-to-cite__btn--secondary"
+       download="citation.bib">
+      BibTeX
+    </a>
+    {{ end }}
+
+    {{ if $risURL }}
+    <a href="{{ $risURL }}"
+       class="how-to-cite__btn how-to-cite__btn--secondary"
+       download="citation.ris">
+      RIS
+    </a>
+    {{ end }}
+  </div>
+</aside>

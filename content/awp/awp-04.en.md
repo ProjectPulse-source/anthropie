@@ -21,6 +21,10 @@ translation:
   url: "/awp/awp-04/"
   title: "Transition énergétique ou transfert entropique ?"
   is_canonical: true
+related:
+  - awp-02
+  - awp-03
+related_book: "anthropie-ordre-ici-dette-ailleurs"
 ---
 
 Does the energy transition reduce disorder or merely displace it? This working paper examines anthropic mechanisms in contemporary energy policies.

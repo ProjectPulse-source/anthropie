@@ -1,0 +1,53 @@
+.related-awp {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.related-awp__title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 1.25rem 0;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #1B2A4E;
+}
+.related-awp__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  display: grid;
+  gap: 0.6rem;
+}
+.related-awp__list a {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+  padding: 0.7rem 1rem;
+  background: rgba(27, 42, 78, 0.04);
+  border-radius: 4px;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s ease;
+}
+.related-awp__list a:hover {
+  background: rgba(27, 42, 78, 0.09);
+}
+.related-awp__num {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #1B2A4E;
+  flex-shrink: 0;
+}
+.related-awp__name { font-size: 0.95rem; }
+.related-awp__book {
+  font-size: 0.95rem;
+  margin: 0 0 0.75rem 0;
+  color: #444;
+}
+.related-awp__definition { margin: 0; font-size: 0.92rem; }
+.related-awp__definition a {
+  color: #1B2A4E;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}

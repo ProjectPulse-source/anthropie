@@ -21,6 +21,9 @@ translation:
   url: "/awp/awp-05/"
   title: "Penser hors les murs : notes sur la recherche indépendante"
   is_canonical: true
+related:
+  - awp-01
+related_book: "anthropie-ordre-ici-dette-ailleurs"
 ---
 
 Does the academic field displace epistemic disorder toward its margins? This working paper applies the framework of anthropy to the field itself.

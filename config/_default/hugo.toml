@@ -76,6 +76,26 @@ disableKinds = ["taxonomy", "term"]
 [markup.goldmark.renderer]
   unsafe = true
 
+[outputFormats]
+  [outputFormats.BibTeX]
+    name = "BibTeX"
+    mediaType = "application/x-bibtex"
+    baseName = "citation"
+    isPlainText = true
+    notAlternative = true
+  [outputFormats.RIS]
+    name = "RIS"
+    mediaType = "application/x-research-info-systems"
+    baseName = "citation"
+    isPlainText = true
+    notAlternative = true
+
+[mediaTypes]
+  [mediaTypes."application/x-bibtex"]
+    suffixes = ["bib"]
+  [mediaTypes."application/x-research-info-systems"]
+    suffixes = ["ris"]
+
 [outputs]
   home = ["HTML", "RSS"]
   section = ["HTML", "RSS"]

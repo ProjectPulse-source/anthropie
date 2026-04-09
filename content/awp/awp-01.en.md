@@ -23,6 +23,9 @@ translation:
   url: "/awp/awp-01/"
   title: "Qu'est-ce que l'anthropie ? Principes d'une hypothèse"
   is_canonical: true
+related:
+  - awp-02
+related_book: "anthropie-ordre-ici-dette-ailleurs"
 ---
 
 Anthropy is the hypothesis that every stable local social order is built by exporting its disorder to other places, other times, or other social groups. This founding text establishes the principles of the framework.

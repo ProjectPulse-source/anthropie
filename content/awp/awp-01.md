@@ -23,6 +23,9 @@ translation:
   doi: "10.5281/zenodo.19431208"
   url: "/en/awp/awp-01/"
   title: "What is anthropy? Principles of a hypothesis"
+related:
+  - awp-02
+related_book: "anthropie-ordre-ici-dette-ailleurs"
 ---
 
 L'anthropie est l'hypothèse selon laquelle tout ordre social local se construit en exportant son désordre vers d'autres lieux, d'autres temps ou d'autres groupes sociaux. Ce texte fondateur pose les principes du cadre anthropique.

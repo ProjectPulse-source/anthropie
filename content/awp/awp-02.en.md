@@ -21,6 +21,10 @@ translation:
   url: "/awp/awp-02/"
   title: "3,3 millions d'années en un principe"
   is_canonical: true
+related:
+  - awp-01
+  - awp-04
+related_book: "anthropie-ordre-ici-dette-ailleurs"
 ---
 
 Anthropy traverses 3.3 million years of human history across seven configurations — from the first knapped tool to the contemporary digital meta-programme. This working paper argues that the displacement of disorder is a structural mechanism of human societies, not an accident of modernity.

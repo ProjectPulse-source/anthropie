@@ -21,6 +21,9 @@ translation:
   doi: "10.5281/zenodo.19440866"
   url: "/en/awp/awp-05/"
   title: "Thinking outside the walls: notes on independent research"
+related:
+  - awp-01
+related_book: "anthropie-ordre-ici-dette-ailleurs"
 ---
 
 Le champ académique déplace-t-il du désordre épistémique vers ses marges ? Ce working paper applique le cadre anthropique au champ lui-même.

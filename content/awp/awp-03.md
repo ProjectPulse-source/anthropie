@@ -21,6 +21,10 @@ translation:
   doi: "10.5281/zenodo.19434094"
   url: "/en/awp/awp-03/"
   title: "Public debt and anthropy: who really pays for disorder?"
+related:
+  - awp-01
+  - awp-04
+related_book: "dette-publique-qui-paie-vraiment"
 ---
 
 La dette publique n'est pas un simple solde comptable&nbsp;: c'est un mécanisme de transfert entropique temporel et social. Ce working paper applique le cadre anthropique aux finances publiques françaises.

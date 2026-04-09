@@ -21,6 +21,10 @@ translation:
   doi: "10.5281/zenodo.19439921"
   url: "/en/awp/awp-04/"
   title: "Energy transition or entropic transfer?"
+related:
+  - awp-02
+  - awp-03
+related_book: "anthropie-ordre-ici-dette-ailleurs"
 ---
 
 La transition énergétique réduit-elle le désordre ou le déplace-t-elle ? Ce working paper examine les mécanismes anthropiques dans les politiques énergétiques contemporaines.

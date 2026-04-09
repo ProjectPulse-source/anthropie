@@ -21,6 +21,10 @@ translation:
   url: "/awp/awp-03/"
   title: "Dette publique et anthropie : qui paie vraiment le désordre ?"
   is_canonical: true
+related:
+  - awp-01
+  - awp-04
+related_book: "dette-publique-qui-paie-vraiment"
 ---
 
 Public debt is not a simple accounting balance: it is a mechanism of temporal and social entropic transfer. This working paper applies the framework of anthropy to French public finances.
