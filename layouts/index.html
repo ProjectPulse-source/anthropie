@@ -1,7 +1,8 @@
 {{ define "main" }}
 
 {{- $def := .Site.Params.canonicalDefinition -}}
-{{- $defWithAccent := $def -}}
+{{- $defWithAccent := replace $def "déplacent" `<span class="word-shift">déplacent</span>` -}}
+{{- $defWithAccent = replace $defWithAccent "displace" `<span class="word-shift">displace</span>` -}}
 
 <section class="hero">
   <canvas id="hero-flowfield" aria-hidden="true"></canvas>

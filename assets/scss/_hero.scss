@@ -52,7 +52,11 @@
   color: var(--color-text);
 }
 
-// Accent "déplacent" supprimé — le mot apparaît en texte brut dans le H1
+// Mot accentué "déplacent" / "displace" — italique bleu clair
+.word-shift {
+  font-style: italic;
+  color: #4a6fa5;
+}
 
 .hero__lede {
   font-family: var(--font-serif); font-size: var(--fs-body);
