@@ -28,7 +28,7 @@
     {{ if $bibURL }}
     <a href="{{ $bibURL }}"
        class="how-to-cite__btn how-to-cite__btn--secondary"
-       download="citation.bib">
+       download="lalut-{{ .Params.awp_number | lower }}-{{ .Date.Format "2006" }}.bib">
       BibTeX
     </a>
     {{ end }}
@@ -36,7 +36,7 @@
     {{ if $risURL }}
     <a href="{{ $risURL }}"
        class="how-to-cite__btn how-to-cite__btn--secondary"
-       download="citation.ris">
+       download="lalut-{{ .Params.awp_number | lower }}-{{ .Date.Format "2006" }}.ris">
       RIS
     </a>
     {{ end }}
