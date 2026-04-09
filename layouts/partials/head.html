@@ -167,3 +167,9 @@
 }
 </script>
 {{ end }}
+
+{{- /* GoatCounter — analytics RGPD-compliant, prod uniquement */ -}}
+{{- if hugo.IsProduction -}}
+<script data-goatcounter="https://lalut.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+{{- end -}}
