@@ -15,7 +15,7 @@ disableKinds = ["taxonomy", "term"]
   languageName = "English"
 
 [languages.en.params]
-  description = "Anthropy is the hypothesis that social systems displace disorder rather than resolve it. Research blog by Stéphane Lalut, economist and independent researcher."
+  description = "Anthropy: the hypothesis that social systems displace disorder rather than resolve it. Stéphane Lalut, independent economist and researcher."
   canonicalDefinition = "Anthropy is the hypothesis that social systems displace disorder rather than resolve it."
 
 [[languages.en.menus.main]]
@@ -53,7 +53,7 @@ disableKinds = ["taxonomy", "term"]
   orcid = "0009-0002-1794-4895"
 
 [params]
-  description = "L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. Blog de recherche de Stéphane Lalut, économiste et chercheur indépendant."
+  description = "L'anthropie : hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. Stéphane Lalut, économiste."
   canonicalDefinition = "L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent."
   orcid = "0009-0002-1794-4895"
   zenodoCommunity = "https://zenodo.org/communities/anthropie-working-papers"
