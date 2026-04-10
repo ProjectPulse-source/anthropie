@@ -1,22 +1,20 @@
 <article class="pub-card">
   {{ with .Params.image }}
   <div class="pub-thumb{{ if eq $.Params.image_type "logo" }} pub-thumb--logo{{ end }}">
-    <a href="{{ $.Params.url_externe }}" target="_blank" rel="noopener">
-      <img src="{{ . }}" alt="{{ $.Params.revue }}" loading="lazy" width="120" height="80">
-    </a>
+    <img src="{{ . }}" alt="{{ $.Params.revue }}" loading="lazy" width="140" height="94">
   </div>
   {{ end }}
   <div class="pub-body">
     <h2 class="pub-title">
-      <a href="{{ .Params.url_externe }}" target="_blank" rel="noopener">{{ partial "fr-typo.html" .Title }}</a>
+      <a href="{{ $.Params.url_externe }}" target="_blank" rel="noopener">{{ partial "fr-typo.html" $.Title }}</a>
     </h2>
-    {{ with .Params.chapo }}
+    {{ with $.Params.chapo }}
     <p class="pub-chapo">{{ . }}</p>
     {{ end }}
     <p class="pub-meta">
-      <span class="pub-revue">{{ .Params.revue }}</span>
+      <span class="pub-revue">{{ $.Params.revue }}</span>
       <span class="pub-dot">·</span>
-      <span>{{ time.Format ":date_long" .Date }}</span>
+      <time>{{ time.Format ":date_long" $.Date }}</time>
     </p>
   </div>
 </article>
