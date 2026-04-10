@@ -119,12 +119,6 @@ a.pub-card {
   letter-spacing: 0;
 }
 
-// Container plus large pour publications
-.publications-container {
-  max-width: 780px;
-  margin: 0 auto;
-}
-
 @media (max-width: 480px) {
   a.pub-card {
     flex-direction: column;
