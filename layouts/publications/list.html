@@ -6,15 +6,7 @@
   {{ $frSite := index site.Sites 0 }}
   {{ $pubs := where $frSite.RegularPages "Type" "publications" }}
   {{ range $pubs.ByDate.Reverse }}
-  <div class="pub-card">
-    {{ with .Params.revue }}<p class="pub-card__revue">{{ . }}</p>{{ end }}
-    <h2 class="pub-card__title">
-      {{ with .Params.url_externe }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}
-      {{ partial "fr-typo.html" .Title }}
-      {{ with .Params.url_externe }}</a>{{ end }}
-    </h2>
-    <p class="pub-card__date">{{ with .Params.date_affichage }}{{ . }}{{ else }}{{ time.Format ":date_long" .Date }}{{ end }}</p>
-  </div>
+    {{ partial "publication-card.html" . }}
   {{ end }}
 </div>
 {{ end }}
