@@ -6,4 +6,5 @@ url_externe: "https://www.alternatives-economiques.fr/comment-les-couts-du-telet
 image: "/img/publications/logo-alternatives-economiques.svg"
 image_type: "logo"
 chapo: "Le bureau a disparu, pas ses coûts. Chauffage, équipement, espace : le télétravail a déplacé la charge de l'employeur vers le salarié."
+chapo_en: "The office vanished, but not its costs. Heating, equipment, space — remote work shifted the burden from employer to employee."
 ---

@@ -6,4 +6,5 @@ url_externe: "https://www.letemps.ch/opinions/votations-du-8-mars-quatre-allegem
 image: "/img/publications/logo-le-temps.svg"
 image_type: "logo"
 chapo: "Quatre objets soumis au vote, quatre allègements promis — et quatre coûts déplacés vers d'autres groupes ou d'autres moments."
+chapo_en: "Four relief measures put to the Swiss vote — and four costs displaced onto other groups or other moments."
 ---

@@ -11,8 +11,10 @@
   {{ end }}
   <div class="pub-body">
     <h2 class="pub-title">{{ partial "fr-typo.html" $page.Title }}</h2>
-    {{ with $page.Params.chapo }}
-    <p class="pub-chapo">{{ . }}</p>
+    {{ if and $isEN $page.Params.chapo_en }}
+    <p class="pub-chapo">{{ $page.Params.chapo_en }}</p>
+    {{ else if $page.Params.chapo }}
+    <p class="pub-chapo">{{ $page.Params.chapo }}</p>
     {{ end }}
     <p class="pub-meta">
       <span class="pub-revue">{{ $page.Params.revue }}</span>
