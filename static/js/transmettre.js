@@ -60,6 +60,10 @@
         window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url), '_blank', 'noopener');
         break;
 
+      case 'x':
+        window.open('https://x.com/intent/tweet?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(title), '_blank', 'noopener');
+        break;
+
       case 'email':
         var intro = option.dataset.emailIntro || '';
         var subject = encodeURIComponent(title);
