@@ -1,17 +1,16 @@
 {{- $page := .Page -}}
 {{- $idx := .Index | default 99 -}}
 {{- $loading := cond (lt $idx 2) "eager" "lazy" -}}
+{{- $isEN := eq site.Language.Lang "en" -}}
 
-<article class="pub-card">
+<a href="{{ $page.Params.url_externe }}" target="_blank" rel="noopener" class="pub-card">
   {{ with $page.Params.image }}
   <div class="pub-thumb{{ if eq $page.Params.image_type "logo" }} pub-thumb--logo{{ end }}">
-    <img src="{{ . }}" alt="{{ $page.Params.revue }}" loading="{{ $loading }}" width="140" height="94">
+    <img src="{{ . }}" alt="{{ $page.Params.revue }}" loading="{{ $loading }}" width="160" height="107">
   </div>
   {{ end }}
   <div class="pub-body">
-    <h2 class="pub-title">
-      <a href="{{ $page.Params.url_externe }}" target="_blank" rel="noopener">{{ partial "fr-typo.html" $page.Title }}</a>
-    </h2>
+    <h2 class="pub-title">{{ partial "fr-typo.html" $page.Title }}</h2>
     {{ with $page.Params.chapo }}
     <p class="pub-chapo">{{ . }}</p>
     {{ end }}
@@ -19,6 +18,7 @@
       <span class="pub-revue">{{ $page.Params.revue }}</span>
       <span class="pub-dot">·</span>
       <time>{{ time.Format ":date_long" $page.Date }}</time>
+      {{ if $isEN }}<span class="pub-lang">In French</span>{{ end }}
     </p>
   </div>
-</article>
+</a>
