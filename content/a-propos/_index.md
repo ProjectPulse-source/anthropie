@@ -27,30 +27,12 @@ Il a exercé en direction marketing européenne, en conseil au secteur public et
 **ANTHROPIE – Ordre ici. Dette ailleurs** (ISBN 978-2-9586347-2-8)
 L'ouvrage fondateur du cadre anthropique. 606 pages. Stéphane Lalut, 2025.
 
-<div class="amazon-buttons">
-<div class="amazon-buttons__row">
-<a href="https://amzn.eu/d/0hfod6Wc" class="amazon-btn" target="_blank" rel="noopener">Amazon.fr</a>
-<a href="https://amzn.eu/d/05Dd2qh4" class="amazon-btn" target="_blank" rel="noopener">Amazon.es</a>
-<a href="https://a.co/d/08HfFlLF" class="amazon-btn" target="_blank" rel="noopener">Amazon.com</a>
-<a href="https://amzn.eu/d/0hKCJKTh" class="amazon-btn" target="_blank" rel="noopener">Amazon.co.uk</a>
-<a href="https://amzn.eu/d/0iFQJmHF" class="amazon-btn" target="_blank" rel="noopener">Amazon.de</a>
-<a href="https://amzn.eu/d/0f0NFGYi" class="amazon-btn" target="_blank" rel="noopener">Amazon.it</a>
-</div>
-</div>
+{{< amazon-dropdown "anthropie-ordre-ici-dette-ailleurs" >}}
 
 **Dette Publique&nbsp;: Qui paie vraiment ?** (ISBN 978-2-9586347-3-5)
 Application du cadre anthropique à la dette publique française. Stéphane Lalut, 2025.
 
-<div class="amazon-buttons">
-<div class="amazon-buttons__row">
-<a href="https://amzn.eu/d/01Z60i3H" class="amazon-btn" target="_blank" rel="noopener">Amazon.fr</a>
-<a href="https://amzn.eu/d/06oRn63g" class="amazon-btn" target="_blank" rel="noopener">Amazon.es</a>
-<a href="https://a.co/d/04hB4FsV" class="amazon-btn" target="_blank" rel="noopener">Amazon.com</a>
-<a href="https://amzn.eu/d/09SXx0W5" class="amazon-btn" target="_blank" rel="noopener">Amazon.co.uk</a>
-<a href="https://amzn.eu/d/0f0NFGYi" class="amazon-btn" target="_blank" rel="noopener">Amazon.de</a>
-<a href="https://amzn.eu/d/0f0NFGYi" class="amazon-btn" target="_blank" rel="noopener">Amazon.it</a>
-</div>
-</div>
+{{< amazon-dropdown "dette-publique-qui-paie-vraiment" >}}
 
 ---
 

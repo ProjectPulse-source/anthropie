@@ -1,0 +1,24 @@
+{{- $slug := .Get 0 -}}
+{{- $frSite := index site.Sites 0 -}}
+{{- $book := $frSite.GetPage (printf "/livres/%s" $slug) -}}
+{{- if $book -}}
+  {{- $id := printf "amazon-pop-sc-%s" $slug -}}
+  <div class="amazon-wrapper">
+    <button class="amazon-trigger"
+      data-amazon-trigger
+      aria-expanded="false"
+      aria-controls="{{ $id }}">
+      <svg class="amazon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <span>Amazon</span>
+    </button>
+    <div class="amazon-popover" id="{{ $id }}" data-amazon-popover hidden>
+      {{ with $book.Params.url_amazon_fr }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.fr</a>{{ end }}
+      {{ with $book.Params.url_amazon_es }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.es</a>{{ end }}
+      {{ with $book.Params.url_amazon_ca }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.ca</a>{{ end }}
+      {{ with $book.Params.url_amazon_com }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.com</a>{{ end }}
+      {{ with $book.Params.url_amazon_uk }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.co.uk</a>{{ end }}
+      {{ with $book.Params.url_amazon_de }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.de</a>{{ end }}
+      {{ with $book.Params.url_amazon_it }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.it</a>{{ end }}
+    </div>
+  </div>
+{{- end -}}
