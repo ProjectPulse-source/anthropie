@@ -5,8 +5,8 @@
 
   {{ $frSite := index site.Sites 0 }}
   {{ $pubs := where $frSite.RegularPages "Type" "publications" }}
-  {{ range $pubs.ByDate.Reverse }}
-    {{ partial "publication-card.html" . }}
+  {{ range $i, $pub := $pubs.ByDate.Reverse }}
+    {{ partial "publication-card.html" (dict "Page" $pub "Index" $i) }}
   {{ end }}
 </div>
 {{ end }}

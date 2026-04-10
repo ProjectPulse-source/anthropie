@@ -1,20 +1,24 @@
+{{- $page := .Page -}}
+{{- $idx := .Index | default 99 -}}
+{{- $loading := cond (lt $idx 2) "eager" "lazy" -}}
+
 <article class="pub-card">
-  {{ with .Params.image }}
-  <div class="pub-thumb{{ if eq $.Params.image_type "logo" }} pub-thumb--logo{{ end }}">
-    <img src="{{ . }}" alt="{{ $.Params.revue }}" loading="lazy" width="140" height="94">
+  {{ with $page.Params.image }}
+  <div class="pub-thumb{{ if eq $page.Params.image_type "logo" }} pub-thumb--logo{{ end }}">
+    <img src="{{ . }}" alt="{{ $page.Params.revue }}" loading="{{ $loading }}" width="140" height="94">
   </div>
   {{ end }}
   <div class="pub-body">
     <h2 class="pub-title">
-      <a href="{{ $.Params.url_externe }}" target="_blank" rel="noopener">{{ partial "fr-typo.html" $.Title }}</a>
+      <a href="{{ $page.Params.url_externe }}" target="_blank" rel="noopener">{{ partial "fr-typo.html" $page.Title }}</a>
     </h2>
-    {{ with $.Params.chapo }}
+    {{ with $page.Params.chapo }}
     <p class="pub-chapo">{{ . }}</p>
     {{ end }}
     <p class="pub-meta">
-      <span class="pub-revue">{{ $.Params.revue }}</span>
+      <span class="pub-revue">{{ $page.Params.revue }}</span>
       <span class="pub-dot">·</span>
-      <time>{{ time.Format ":date_long" $.Date }}</time>
+      <time>{{ time.Format ":date_long" $page.Date }}</time>
     </p>
   </div>
 </article>
