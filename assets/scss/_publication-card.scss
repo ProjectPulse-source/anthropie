@@ -91,9 +91,9 @@ a.pub-card {
   overflow: hidden;
 }
 
-// Harmonisé avec serie-awp : awp-card__doi = var(--fs-micro)
+// Métadonnées revue + date — texte éditorial lisible (pas technique comme les DOI)
 .pub-meta {
-  font-size: var(--fs-micro);
+  font-size: var(--fs-small);
   color: var(--color-text-faint);
   margin: 0;
   display: flex;
