@@ -50,12 +50,18 @@ a.pub-card {
   }
 
   &--logo {
+    width: 240px;
+    min-width: 240px;
+    height: auto;
+    min-height: 80px;
+    background: #fff;
+    padding: 12px 16px;
+
     img {
       object-fit: contain;
-      padding: 10px 14px;
-      width: 90%;
+      width: 100%;
       height: auto;
-      max-height: 70px;
+      max-height: 100px;
     }
   }
 }
@@ -132,5 +138,12 @@ a.pub-card {
     width: 100%;
     min-width: unset;
     height: 180px;
+
+    &--logo {
+      width: 100%;
+      min-width: unset;
+      height: auto;
+      min-height: 60px;
+    }
   }
 }
