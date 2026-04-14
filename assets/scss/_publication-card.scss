@@ -30,7 +30,7 @@ a.pub-card {
   }
 }
 
-// Photo cards — cadre compact arrondi
+// Gabarit unique pour toutes les cartes
 .pub-thumb {
   width: 160px;
   min-width: 160px;
@@ -51,22 +51,14 @@ a.pub-card {
   }
 }
 
-// Logo cards — cadre élargi, fond blanc, logo respire
-.pub-thumb.pub-thumb--logo {
-  width: 240px;
-  min-width: 240px;
-  height: auto;
-  min-height: 80px;
-  border-radius: 8px;
-  overflow: hidden;
+// Logos : même cadre, comportement image adapté
+.pub-thumb--logo {
   background: #faf8f3;
-  padding: 16px;
 
   img {
-    width: 100%;
-    height: auto;
-    max-height: 100px;
     object-fit: contain;
+    padding: 10px;
+    box-sizing: border-box;
   }
 }
 
@@ -142,11 +134,5 @@ a.pub-card {
     width: 100%;
     min-width: unset;
     height: 180px;
-  }
-  .pub-thumb.pub-thumb--logo {
-    width: 100%;
-    min-width: unset;
-    height: auto;
-    min-height: 60px;
   }
 }
