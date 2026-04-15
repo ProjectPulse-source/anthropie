@@ -1,0 +1,31 @@
+{{- $slug := .File.ContentBaseName -}}
+{{- $matches := slice -}}
+{{- $pubs := where site.RegularPages "Section" "publications" -}}
+{{- if not $pubs -}}
+  {{- range site.Sites -}}
+    {{- if eq .Language.Lang "fr" -}}
+      {{- $pubs = where .RegularPages "Section" "publications" -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- range $pubs -}}
+  {{- $pub := . -}}
+  {{- if $pub.Params.related -}}
+    {{- if in $pub.Params.related $slug -}}
+      {{- $matches = $matches | append $pub -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- with $matches -}}
+<section class="awp-in-press">
+  <h2>{{ i18n "awp_in_press" }}</h2>
+  <ul class="awp-in-press__list">
+    {{- range . }}
+    <li class="awp-in-press__item">
+      <a href="{{ .Params.url_externe }}" target="_blank" rel="noopener">{{ partial "fr-typo.html" .Title }}</a>
+      {{- with .Params.revue }} <span class="awp-in-press__revue">— {{ . }}</span>{{ end }}
+    </li>
+    {{- end }}
+  </ul>
+</section>
+{{- end -}}
