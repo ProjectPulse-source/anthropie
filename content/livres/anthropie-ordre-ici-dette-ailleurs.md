@@ -12,6 +12,17 @@ url_amazon_uk: "https://amzn.eu/d/0hKCJKTh"
 url_amazon_de: "https://amzn.eu/d/0iFQJmHF"
 url_amazon_it: "https://amzn.eu/d/0f0NFGYi"
 url_amazon_ca: "https://a.co/d/09nBM1Rj"
+related_awp:
+  - chapter: "Les fondements de l'hypothèse anthropique"
+    awp: "awp-01"
+  - chapter: "Sept configurations : 3,3 millions d'années de transfert"
+    awp: "awp-02"
+  - chapter: "La dette publique comme transfert entropique"
+    awp: "awp-03"
+  - chapter: "Transition énergétique ou reconfiguration du désordre ?"
+    awp: "awp-04"
+  - chapter: "L'ordre épistémique et ses marges"
+    awp: "awp-05"
 ---
 
 L'ouvrage fondateur du cadre anthropique.

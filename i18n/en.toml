@@ -24,3 +24,6 @@ other = "Extends:"
 
 [awp_in_press]
 other = "In the press"
+
+[book_related_awp]
+other = "In the Working Papers"

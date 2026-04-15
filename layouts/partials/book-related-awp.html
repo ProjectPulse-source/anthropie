@@ -1,0 +1,17 @@
+{{- with .Params.related_awp -}}
+<section class="book-related-awp">
+  <h2>{{ i18n "book_related_awp" }}</h2>
+  <ul class="book-related-awp__list">
+    {{- range . }}
+      {{- $awp := . -}}
+      {{- with site.GetPage (printf "/awp/%s" $awp.awp) }}
+      <li class="book-related-awp__item">
+        {{- with $awp.chapter }}<span class="book-related-awp__chapter">{{ . }}</span> — {{ end -}}
+        {{- with $awp.label }}<span class="book-related-awp__label">{{ . }}</span> — {{ end -}}
+        <a href="{{ .RelPermalink }}">{{ upper $awp.awp }}</a>
+      </li>
+      {{- end -}}
+    {{- end }}
+  </ul>
+</section>
+{{- end -}}
