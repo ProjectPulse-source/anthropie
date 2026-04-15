@@ -136,3 +136,76 @@ a.pub-card {
     height: 180px;
   }
 }
+
+// =======================================================================
+// Bloc « Prolonge : » — liens contextuels AWP / livre sous chaque carte.
+// La séparation visuelle inter-cartes est portée par .pub-card__wrap ;
+// le border-bottom de .pub-card est neutralisé via surcharge ciblée pour
+// éviter le doublon, sans modifier la règle d'origine.
+// =======================================================================
+.pub-card__wrap {
+  border-bottom: 1px solid var(--color-rule-soft, #eeebe6);
+
+  &:first-of-type {
+    border-top: 1px solid var(--color-rule-soft, #eeebe6);
+  }
+
+  > .pub-card {
+    border-bottom: none;
+
+    &:first-of-type {
+      border-top: none;
+    }
+  }
+}
+
+.pub-card__related {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1rem;
+  margin: 0 -0.75rem 0.5rem;
+  padding: 0 0.75rem 0.875rem calc(0.75rem + 160px + 1rem);
+  font-size: var(--fs-small);
+  font-family: var(--font-sans);
+  line-height: 1.4;
+}
+
+.pub-card__related-label {
+  font-variant: small-caps;
+  text-transform: lowercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  color: var(--color-text-subtle);
+  margin-right: 0.25rem;
+}
+
+.pub-card__related-awp,
+.pub-card__related-book {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.15s;
+
+  &:hover {
+    color: var(--color-accent-hover);
+    text-decoration: underline;
+  }
+}
+
+.pub-card__related-awp {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.pub-card__related-book {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+}
+
+@media (max-width: 480px) {
+  .pub-card__related {
+    padding-left: 0.75rem;
+  }
+}

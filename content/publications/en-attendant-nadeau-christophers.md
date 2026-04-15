@@ -7,4 +7,6 @@ image: "/img/publications/prix-profit-christophers.webp"
 image_type: "photo"
 chapo: "Le solaire coûte moins cher que le charbon. Mais le capital ne suit pas les prix : il suit les profits. Christophers explique pourquoi la transition bloque."
 chapo_en: "Solar is cheaper than coal. But capital doesn't follow prices — it follows profits. Christophers explains why the transition stalls."
+related: [awp-04]
+related_book: anthropie-ordre-ici-dette-ailleurs
 ---

@@ -7,4 +7,6 @@ image: "/img/publications/transition-fressoz.webp"
 image_type: "photo"
 chapo: "Les énergies ne se remplacent pas : elles s'empilent. Fressoz déconstruit le récit de la « transition » et oblige à repenser nos usages."
 chapo_en: "Energy sources don't replace each other: they pile up. Fressoz dismantles the \"transition\" narrative and forces a rethink of our energy use."
+related: [awp-04]
+related_book: anthropie-ordre-ici-dette-ailleurs
 ---

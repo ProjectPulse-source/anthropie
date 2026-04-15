@@ -3,6 +3,7 @@
 {{- $loading := cond (lt $idx 2) "eager" "lazy" -}}
 {{- $isEN := eq site.Language.Lang "en" -}}
 
+<div class="pub-card__wrap">
 <a href="{{ $page.Params.url_externe }}" target="_blank" rel="noopener" class="pub-card">
   {{ with $page.Params.image }}
   <div class="pub-thumb{{ if eq $page.Params.image_type "logo" }} pub-thumb--logo{{ end }}">
@@ -24,3 +25,19 @@
     </p>
   </div>
 </a>
+{{ if or $page.Params.related $page.Params.related_book }}
+<div class="pub-card__related">
+  <span class="pub-card__related-label">{{ i18n "pub_related_label" }}</span>
+  {{ range $slug := $page.Params.related }}
+    {{ with site.GetPage (printf "/awp/%s" $slug) }}
+    <a class="pub-card__related-awp" href="{{ .RelPermalink }}">{{ upper $slug }}</a>
+    {{ end }}
+  {{ end }}
+  {{ with $page.Params.related_book }}
+    {{ with site.GetPage (printf "/livres/%s" .) }}
+    <a class="pub-card__related-book" href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ end }}
+  {{ end }}
+</div>
+{{ end }}
+</div>

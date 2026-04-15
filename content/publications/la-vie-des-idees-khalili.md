@@ -7,4 +7,6 @@ image: "/img/publications/qui-paie-fluidite.webp"
 image_type: "photo"
 chapo: "80 % du commerce mondial transite par mer. Khalili montre que la fluidité des marchandises repose sur la captivité des corps et des territoires."
 chapo_en: "80% of world trade travels by sea. Khalili shows that the fluidity of goods depends on the captivity of bodies and territories."
+related: [awp-02]
+related_book: anthropie-ordre-ici-dette-ailleurs
 ---

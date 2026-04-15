@@ -7,4 +7,6 @@ image: "/img/publications/maprimerenov.webp"
 image_type: "photo"
 chapo: "Quand l'État gèle MaPrimeRénov', ce sont les ménages modestes qui paient la facture. Le coût de la rénovation ne disparaît pas : il change de porteur."
 chapo_en: "When the state freezes MaPrimeRénov', low-income households foot the bill. The cost of renovation doesn't vanish — it changes hands."
+related: [awp-03, awp-04]
+related_book: dette-publique-qui-paie-vraiment
 ---
