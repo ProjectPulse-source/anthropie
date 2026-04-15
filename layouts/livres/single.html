@@ -28,24 +28,17 @@
 </article>
 
 <!-- Schema.org Book -->
+{{- $book := dict
+  "@context" "https://schema.org"
+  "@type" "Book"
+  "name" .Title
+  "author" (dict "@type" "Person" "name" "Stéphane Lalut" "sameAs" "https://orcid.org/0009-0002-1794-4895")
+  "description" .Description
+  "inLanguage" "fr"
+  "publisher" (dict "@type" "Organization" "name" "Stéphane Lalut")
+  "url" .Permalink -}}
+{{- with .Params.isbn -}}{{- $book = merge $book (dict "isbn" .) -}}{{- end -}}
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Book",
-  "name": {{ .Title | jsonify }},
-  "author": {
-    "@type": "Person",
-    "name": "Stéphane Lalut",
-    "sameAs": "https://orcid.org/0009-0002-1794-4895"
-  },
-  {{ with .Params.isbn }}"isbn": {{ . | jsonify }},{{ end }}
-  "description": {{ .Description | jsonify }},
-  "inLanguage": "fr",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Stéphane Lalut"
-  },
-  "url": "{{ .Permalink }}"
-}
+{{ $book | jsonify (dict "indent" "  ") | safeJS }}
 </script>
 {{ end }}
