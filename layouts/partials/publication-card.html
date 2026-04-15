@@ -34,7 +34,16 @@
     {{ end }}
   {{ end }}
   {{ with $page.Params.related_book }}
-    {{ with site.GetPage (printf "/livres/%s" .) }}
+    {{ $slug := . }}
+    {{ $book := site.GetPage (printf "/livres/%s" $slug) }}
+    {{ if not $book }}
+      {{ range site.Sites }}
+        {{ if eq .Language.Lang "fr" }}
+          {{ $book = .GetPage (printf "/livres/%s" $slug) }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    {{ with $book }}
     <a class="pub-card__related-book" href="{{ .RelPermalink }}">{{ .Title }}</a>
     {{ end }}
   {{ end }}
