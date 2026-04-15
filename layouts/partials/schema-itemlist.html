@@ -1,26 +1,22 @@
+{{- $items := slice -}}
+{{- range $i, $page := where .Site.RegularPages "Type" "awp" -}}
+  {{- $item := dict
+      "@type" "ScholarlyArticle"
+      "name" $page.Title
+      "url" $page.Permalink
+      "author" (dict "@type" "Person" "name" "Stéphane Lalut") -}}
+  {{- with $page.Params.doi_zenodo -}}{{- $item = merge $item (dict "identifier" (printf "https://doi.org/%s" .)) -}}{{- end -}}
+  {{- $items = $items | append (dict
+      "@type" "ListItem"
+      "position" (add $i 1)
+      "item" $item) -}}
+{{- end -}}
+{{- $list := dict
+    "@context" "https://schema.org"
+    "@type" "ItemList"
+    "name" "Anthropie Working Papers"
+    "description" "Série de working papers sur l'anthropie par Stéphane Lalut"
+    "itemListElement" $items -}}
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Anthropie Working Papers",
-  "description": "Série de working papers sur l'anthropie par Stéphane Lalut",
-  "itemListElement": [
-    {{ range $i, $page := where .Site.RegularPages "Type" "awp" }}{{ if $i }},{{ end }}
-    {
-      "@type": "ListItem",
-      "position": {{ add $i 1 }},
-      "item": {
-        "@type": "ScholarlyArticle",
-        "name": {{ $page.Title | jsonify }},
-        "url": "{{ $page.Permalink }}",
-        {{ with $page.Params.doi_zenodo }}"identifier": "https://doi.org/{{ . }}",{{ end }}
-        "author": {
-          "@type": "Person",
-          "name": "Stéphane Lalut"
-        }
-      }
-    }
-    {{ end }}
-  ]
-}
+{{ $list | jsonify (dict "indent" "  ") | safeJS }}
 </script>

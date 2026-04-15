@@ -143,25 +143,25 @@
 
 <!-- Schema.org ItemList Publications (dynamic) -->
 {{ if or (eq .RelPermalink "/publications/") (eq .RelPermalink "/en/publications/") }}
-{{ $frSite := index site.Sites 0 }}
-{{ $pubs := where $frSite.RegularPages "Type" "publications" }}
-{{ $withUrl := where $pubs "Params.url_externe" "!=" nil }}
+{{- $frSite := index site.Sites 0 -}}
+{{- $pubs := where $frSite.RegularPages "Type" "publications" -}}
+{{- $withUrl := where $pubs "Params.url_externe" "!=" nil -}}
+{{- $items := slice -}}
+{{- range $i, $pub := $withUrl.ByDate.Reverse -}}
+  {{- $items = $items | append (dict
+      "@type" "ListItem"
+      "position" (add $i 1)
+      "name" $pub.Title
+      "url" $pub.Params.url_externe) -}}
+{{- end -}}
+{{- $list := dict
+    "@context" "https://schema.org"
+    "@type" "ItemList"
+    "name" "Publications de Stéphane Lalut"
+    "author" (dict "@type" "Person" "name" "Stéphane Lalut" "sameAs" "https://orcid.org/0009-0002-1794-4895")
+    "itemListElement" $items -}}
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Publications de Stéphane Lalut",
-  "author": {
-    "@type": "Person",
-    "name": "Stéphane Lalut",
-    "sameAs": "https://orcid.org/0009-0002-1794-4895"
-  },
-  "itemListElement": [
-    {{ range $i, $pub := $withUrl.ByDate.Reverse }}{{ if $i }},{{ end }}
-    {"@type": "ListItem", "position": {{ add $i 1 }}, "name": {{ $pub.Title | jsonify }}, "url": {{ $pub.Params.url_externe | jsonify }}}
-    {{ end }}
-  ]
-}
+{{ $list | jsonify (dict "indent" "  ") | safeJS }}
 </script>
 {{ end }}
 
