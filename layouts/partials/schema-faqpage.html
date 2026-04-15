@@ -1,20 +1,16 @@
 {{ if .Params.faq }}
+{{- $mainEntity := slice -}}
+{{- range .Params.faq -}}
+  {{- $mainEntity = $mainEntity | append (dict
+      "@type" "Question"
+      "name" .question
+      "acceptedAnswer" (dict "@type" "Answer" "text" .answer)) -}}
+{{- end -}}
+{{- $faq := dict
+    "@context" "https://schema.org"
+    "@type" "FAQPage"
+    "mainEntity" $mainEntity -}}
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {{ range $i, $faq := .Params.faq }}{{ if $i }},{{ end }}
-    {
-      "@type": "Question",
-      "name": {{ $faq.question | jsonify }},
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": {{ $faq.answer | jsonify }}
-      }
-    }
-    {{ end }}
-  ]
-}
+{{ $faq | jsonify (dict "indent" "  ") | safeJS }}
 </script>
 {{ end }}

@@ -111,46 +111,33 @@
 
 <!-- Schema.org ScholarlyArticle (merged) -->
 {{ if and (eq .Type "awp") .IsPage .File }}
+{{- $dp := "" -}}
+{{- with .Params.publication_date -}}{{- $dp = printf "%v" . -}}{{- end -}}
+{{- if not $dp -}}{{- $dp = .Date.Format "2006-01-02" -}}{{- end -}}
+{{- $article := dict
+    "@context" "https://schema.org"
+    "@type" "ScholarlyArticle"
+    "headline" .Title
+    "image" "https://m.media-amazon.com/images/I/81kdsh4400L._SL1436_.jpg"
+    "description" .Description
+    "author" (dict "@type" "Person" "name" "Stéphane Lalut" "identifier" "https://orcid.org/0009-0002-1794-4895" "sameAs" "https://orcid.org/0009-0002-1794-4895" "url" "https://stephane-lalut.com/a-propos/")
+    "datePublished" $dp
+    "publisher" (dict "@type" "Organization" "name" "Stéphane Lalut" "url" "https://stephane-lalut.com")
+    "identifier" (printf "https://doi.org/%s" .Params.doi_zenodo)
+    "sameAs" (printf "https://doi.org/%s" .Params.doi_zenodo)
+    "url" .Permalink
+    "inLanguage" (.Params.language | default .Language.Lang)
+    "isPartOf" (dict "@type" "CreativeWorkSeries" "name" "Anthropie Working Papers")
+    "isAccessibleForFree" true
+    "license" "https://creativecommons.org/licenses/by/4.0/" -}}
+{{- with .Params.keywords -}}{{- $article = merge $article (dict "keywords" .) -}}{{- end -}}
+{{- with .Params.translation -}}
+  {{- $key := cond (eq $.Params.language "fr") "workTranslation" "translationOfWork" -}}
+  {{- $tr := dict "@type" "ScholarlyArticle" "headline" .title "identifier" (printf "https://doi.org/%s" .doi) "url" (.url | absURL) -}}
+  {{- $article = merge $article (dict $key $tr) -}}
+{{- end -}}
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ScholarlyArticle",
-  "headline": {{ .Title | jsonify }},
-  "image": "https://m.media-amazon.com/images/I/81kdsh4400L._SL1436_.jpg",
-  "description": {{ .Description | jsonify }},
-  "author": {
-    "@type": "Person",
-    "name": "Stéphane Lalut",
-    "identifier": "https://orcid.org/0009-0002-1794-4895",
-    "sameAs": "https://orcid.org/0009-0002-1794-4895",
-    "url": "https://stephane-lalut.com/a-propos/"
-  },
-  "datePublished": "{{ with .Params.publication_date }}{{ . }}{{ else }}{{ .Date.Format "2006-01-02" }}{{ end }}",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Stéphane Lalut",
-    "url": "https://stephane-lalut.com"
-  },
-  "identifier": "https://doi.org/{{ .Params.doi_zenodo }}",
-  "sameAs": "https://doi.org/{{ .Params.doi_zenodo }}",
-  "url": "{{ .Permalink }}",
-  "inLanguage": "{{ .Params.language | default .Language.Lang }}",
-  {{ with .Params.keywords }}"keywords": {{ . | jsonify }},{{ end }}
-  "isPartOf": {
-    "@type": "CreativeWorkSeries",
-    "name": "Anthropie Working Papers"
-  },
-  {{ with .Params.translation }}
-  "{{ if eq $.Params.language "fr" }}workTranslation{{ else }}translationOfWork{{ end }}": {
-    "@type": "ScholarlyArticle",
-    "headline": {{ .title | jsonify }},
-    "identifier": "https://doi.org/{{ .doi }}",
-    "url": "{{ .url | absURL }}"
-  },
-  {{ end }}
-  "isAccessibleForFree": true,
-  "license": "https://creativecommons.org/licenses/by/4.0/"
-}
+{{ $article | jsonify (dict "indent" "  ") | safeJS }}
 </script>
 {{ end }}
 
