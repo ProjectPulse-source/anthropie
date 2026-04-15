@@ -1,0 +1,25 @@
+{{- $page := . -}}
+{{- $name := cond (eq .Lang "en") "Anthropic Glossary" "Glossaire anthropique" -}}
+{{- $content := .Content -}}
+{{- $pairs := findRESubmatch `(?s)<dt>(.*?)</dt>\s*<dd>(.*?)</dd>` $content -}}
+{{- $terms := slice -}}
+{{- range $pairs -}}
+  {{- $dt := index . 1 -}}
+  {{- $dd := index . 2 -}}
+  {{- $dt = replaceRE `<[^>]+>` "" $dt -}}
+  {{- $dd = replaceRE `<[^>]+>` "" $dd -}}
+  {{- $dt = replaceRE `&nbsp;` " " $dt -}}
+  {{- $dd = replaceRE `&nbsp;` " " $dd -}}
+  {{- $dt = replaceRE `\s+` " " $dt | strings.TrimSpace -}}
+  {{- $dd = replaceRE `\s+` " " $dd | strings.TrimSpace -}}
+  {{- $terms = $terms | append (dict "@type" "DefinedTerm" "name" $dt "description" $dd) -}}
+{{- end -}}
+{{- $jsonld := dict
+  "@context" "https://schema.org"
+  "@type" "DefinedTermSet"
+  "name" $name
+  "url" $page.Permalink
+  "hasDefinedTerm" $terms -}}
+<script type="application/ld+json">
+{{ $jsonld | jsonify (dict "indent" "  ") | safeJS }}
+</script>
