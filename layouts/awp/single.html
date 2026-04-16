@@ -1,54 +1,203 @@
 {{ define "main" }}
-<article class="home-section content-reading">
-  <header class="awp-header">
-    <div class="awp-header__number">{{ .Params.awp_number }}</div>
-    <h1 class="awp-header__title">{{ partial "fr-typo.html" .Title }}</h1>
-    <p class="awp-header__meta">{{ time.Format ":date_long" .Date }} — Stéphane Lalut</p>
-    {{ with .Params.jel_codes }}
-      <p class="awp-header__jel">JEL : {{ delimit . ", " }}</p>
-    {{ end }}
-  </header>
+{{- $isEn := eq .Params.language "en" -}}
+{{- $bibURL := "" -}}{{- with .OutputFormats.Get "BibTeX" -}}{{- $bibURL = .RelPermalink -}}{{- end -}}
+{{- $risURL := "" -}}{{- with .OutputFormats.Get "RIS" -}}{{- $risURL = .RelPermalink -}}{{- end -}}
+{{- $enwURL := "" -}}{{- with .OutputFormats.Get "EndNote" -}}{{- $enwURL = .RelPermalink -}}{{- end -}}
 
-  {{ if eq .Params.language "fr" }}
-    {{- partial "cross-language-banner.html" . -}}
-  {{ end }}
+<article class="awp-article">
+  {{/* ── Breadcrumb ── */}}
+  <nav class="awp-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="{{ "/" | relLangURL }}">{{ if $isEn }}Home{{ else }}Accueil{{ end }}</a></li>
+      <li><a href="{{ "/serie-awp/" | relLangURL }}">AWP</a></li>
+      <li aria-current="page">{{ .Params.awp_number }}</li>
+    </ol>
+  </nav>
 
-  {{ with .Params.keywords }}
-    <ul class="keywords-list">
-      {{ range . }}<li>{{ . }}</li>{{ end }}
-    </ul>
-  {{ end }}
+  <div class="awp-article__layout">
+    {{/* ══════════ MAIN COLUMN ══════════ */}}
+    <div class="awp-article__main content-reading">
 
-  {{ .Content }}
+      {{/* ── Header ── */}}
+      <header class="awp-article__header">
+        <div class="awp-article__number">{{ .Params.awp_number }}</div>
+        <h1 class="awp-article__title">{{ partial "fr-typo.html" .Title }}</h1>
+        <p class="awp-article__author">
+          Stéphane Lalut
+          <a href="https://orcid.org/0009-0002-1794-4895" target="_blank" rel="noopener" class="orcid-badge" title="ORCID">
+            <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID" width="16" height="16">
+          </a>
+        </p>
+        <p class="awp-article__date">{{ time.Format ":date_long" .Date }}</p>
+      </header>
 
-  {{ if .Params.doi_zenodo }}
-    <div class="doi-box">
-      <p class="doi-box__title">{{ i18n "cite_title" }}</p>
-      <p class="doi-box__citation">Lalut, Stéphane ({{ .Date.Format "2006" }}). {{ .Title }}. {{ .Params.awp_number }}. Zenodo. https://doi.org/{{ .Params.doi_zenodo }}</p>
-      <a href="{{ .Params.url_zenodo }}" class="doi-box__link" target="_blank" rel="noopener">{{ i18n "view_zenodo" }}</a>
-    </div>
-  {{ end }}
+      {{/* ── Résumé / Abstract ── */}}
+      <section class="awp-article__abstract">
+        <h2>{{ if $isEn }}Abstract{{ else }}Résumé{{ end }}</h2>
+        <p>{{ .Description }}</p>
 
-  {{ partial "how-to-cite.html" . }}
-  {{ partial "related-awp.html" . }}
-  {{ partial "awp-in-press.html" . }}
+        {{ with .Params.keywords }}
+        <ul class="awp-article__keywords">
+          {{ range . }}<li>{{ . }}</li>{{ end }}
+        </ul>
+        {{ end }}
 
-  {{- partial "transmettre.html" . -}}
+        {{ with .Params.jel_codes }}
+        <p class="awp-article__jel">JEL : {{ delimit . ", " }}</p>
+        {{ end }}
+      </section>
 
-  {{ if .Params.faq }}
-    <section class="faq-section">
-      <h2>{{ i18n "faq_title" }}</h2>
-      {{ range .Params.faq }}
-        <div class="faq-item">
-          <h3 class="faq-question">{{ .question }}</h3>
-          <p class="faq-answer">{{ .answer }}</p>
-        </div>
+      {{/* ── Abstract in the other language ── */}}
+      {{ with .Params.translation }}
+      <section class="awp-article__abstract awp-article__abstract--alt">
+        <h2>{{ if $isEn }}Résumé{{ else }}Abstract{{ end }}</h2>
+        {{- $tr := $.Site.GetPage .url -}}
+        {{ with $tr }}
+        <p>{{ .Description }}</p>
+        {{ end }}
+      </section>
       {{ end }}
-    </section>
-  {{ end }}
 
-  {{ if eq .Params.language "en" }}
-    {{- partial "cross-language-banner.html" . -}}
-  {{ end }}
+      {{/* ── Content ── */}}
+      <div class="awp-article__content">
+        {{ .Content }}
+      </div>
+
+      {{/* ── Bibliographic info ── */}}
+      <section class="awp-article__biblio">
+        <h2>{{ if $isEn }}Bibliographic information{{ else }}Informations bibliographiques{{ end }}</h2>
+        <dl class="awp-article__biblio-list">
+          <div>
+            <dt>{{ if $isEn }}Series{{ else }}Série{{ end }}</dt>
+            <dd>Anthropie Working Papers</dd>
+          </div>
+          <div>
+            <dt>{{ if $isEn }}Number{{ else }}Numéro{{ end }}</dt>
+            <dd>{{ .Params.awp_number }}</dd>
+          </div>
+          <div>
+            <dt>{{ if $isEn }}Published{{ else }}Publié{{ end }}</dt>
+            <dd>{{ time.Format ":date_long" .Date }}</dd>
+          </div>
+          <div>
+            <dt>{{ if $isEn }}Language{{ else }}Langue{{ end }}</dt>
+            <dd>{{ if $isEn }}English{{ else }}Français{{ end }}{{ with .Params.translation }} — <a href="{{ .url }}">{{ if $isEn }}FR{{ else }}EN{{ end }}</a>{{ end }}</dd>
+          </div>
+          <div>
+            <dt>{{ if $isEn }}License{{ else }}Licence{{ end }}</dt>
+            <dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC-BY 4.0</a></dd>
+          </div>
+          <div>
+            <dt>DOI</dt>
+            <dd><a href="https://doi.org/{{ .Params.doi_zenodo }}" target="_blank" rel="noopener">{{ .Params.doi_zenodo }}</a></dd>
+          </div>
+        </dl>
+      </section>
+
+      {{/* ── Preserved partials ── */}}
+      {{ if eq .Params.language "fr" }}
+        {{- partial "cross-language-banner.html" . -}}
+      {{ end }}
+
+      {{ partial "how-to-cite.html" . }}
+      {{ partial "related-awp.html" . }}
+      {{ partial "awp-in-press.html" . }}
+
+      {{- partial "transmettre.html" . -}}
+
+      {{ if .Params.faq }}
+      <section class="faq-section">
+        <h2>{{ i18n "faq_title" }}</h2>
+        {{ range .Params.faq }}
+          <div class="faq-item">
+            <h3 class="faq-question">{{ .question }}</h3>
+            <p class="faq-answer">{{ .answer }}</p>
+          </div>
+        {{ end }}
+      </section>
+      {{ end }}
+
+      {{ if eq .Params.language "en" }}
+        {{- partial "cross-language-banner.html" . -}}
+      {{ end }}
+
+    </div>
+
+    {{/* ══════════ SIDEBAR ══════════ */}}
+    <aside class="awp-article__sidebar">
+
+      {{/* ── Downloads ── */}}
+      <div class="awp-sidebar__block">
+        <h3 class="awp-sidebar__heading">{{ if $isEn }}Download{{ else }}Télécharger{{ end }}</h3>
+        {{ with .Params.pdf_url }}
+        <a href="{{ . }}" class="btn btn--primary awp-sidebar__btn" target="_blank" rel="noopener">
+          PDF{{ if $isEn }} (EN){{ else }} (FR){{ end }}
+        </a>
+        {{ end }}
+        {{ with .Params.translation }}
+          {{- $tr := $.Site.GetPage .url -}}
+          {{ with $tr }}{{ with .Params.pdf_url }}
+          <a href="{{ . }}" class="btn btn--secondary awp-sidebar__btn" target="_blank" rel="noopener">
+            PDF{{ if $isEn }} (FR){{ else }} (EN){{ end }}
+          </a>
+          {{ end }}{{ end }}
+        {{ end }}
+      </div>
+
+      {{/* ── Zenodo ── */}}
+      {{ with .Params.url_zenodo }}
+      <div class="awp-sidebar__block">
+        <h3 class="awp-sidebar__heading">{{ if $isEn }}Deposited on Zenodo{{ else }}Déposé sur Zenodo{{ end }}</h3>
+        <p class="awp-sidebar__doi">DOI : <a href="https://doi.org/{{ $.Params.doi_zenodo }}" target="_blank" rel="noopener">{{ $.Params.doi_zenodo }}</a></p>
+        <a href="{{ . }}" class="btn btn--secondary awp-sidebar__btn" target="_blank" rel="noopener">
+          {{ if $isEn }}View on Zenodo ↗{{ else }}Voir sur Zenodo ↗{{ end }}
+        </a>
+      </div>
+      {{ end }}
+
+      {{/* ── Citation exports ── */}}
+      <div class="awp-sidebar__block">
+        <h3 class="awp-sidebar__heading">{{ if $isEn }}Cite this paper{{ else }}Citer ce document{{ end }}</h3>
+        <p class="awp-sidebar__citation">Lalut, S. ({{ .Date.Format "2006" }}). {{ .Params.awp_number }}.</p>
+        <div class="awp-sidebar__exports">
+          {{ with $bibURL }}<a href="{{ . }}" class="awp-sidebar__export-btn" download>BibTeX</a>{{ end }}
+          {{ with $risURL }}<a href="{{ . }}" class="awp-sidebar__export-btn" download>RIS</a>{{ end }}
+          {{ with $enwURL }}<a href="{{ . }}" class="awp-sidebar__export-btn" download>EndNote</a>{{ end }}
+        </div>
+      </div>
+
+      {{/* ── Language switch ── */}}
+      {{ with .Params.translation }}
+      <div class="awp-sidebar__block">
+        <h3 class="awp-sidebar__heading">{{ if $isEn }}Languages{{ else }}Langues{{ end }}</h3>
+        <div class="awp-sidebar__langs">
+          {{ if $isEn }}
+            <a href="{{ .url }}" class="awp-sidebar__lang-btn">FR</a>
+            <span class="awp-sidebar__lang-btn awp-sidebar__lang-btn--active">EN</span>
+          {{ else }}
+            <span class="awp-sidebar__lang-btn awp-sidebar__lang-btn--active">FR</span>
+            <a href="{{ .url }}" class="awp-sidebar__lang-btn">EN</a>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+
+      {{/* ── Series nav ── */}}
+      <div class="awp-sidebar__block">
+        <h3 class="awp-sidebar__heading">{{ if $isEn }}In this series{{ else }}Dans cette série{{ end }}</h3>
+        <ul class="awp-sidebar__series">
+          {{ range sort (where $.Site.RegularPages "Section" "awp") "Params.awp_number" "asc" }}
+          <li class="{{ if eq .Params.awp_number $.Params.awp_number }}awp-sidebar__series--current{{ end }}">
+            <a href="{{ .RelPermalink }}">
+              <strong>{{ .Params.awp_number }}</strong>
+              <span>{{ .Title }}</span>
+            </a>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+
+    </aside>
+  </div>
 </article>
 {{ end }}

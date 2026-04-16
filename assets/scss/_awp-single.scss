@@ -1,0 +1,356 @@
+// =======================================================================
+// _awp-single.scss — AWP article layout (two-column with sticky sidebar)
+// =======================================================================
+
+// ── Breadcrumb ──
+.awp-breadcrumb {
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  color: var(--color-text-subtle);
+  margin-bottom: 2rem;
+
+  ol {
+    list-style: none;
+    display: flex;
+    gap: 0.4rem;
+    padding: 0;
+    margin: 0;
+  }
+  li + li::before {
+    content: '/';
+    margin-right: 0.4rem;
+    color: var(--color-text-faint);
+  }
+  a {
+    color: var(--color-text-subtle);
+    text-decoration: none;
+    &:hover { color: var(--color-accent); }
+  }
+  [aria-current] {
+    color: var(--color-text);
+    font-weight: 500;
+  }
+}
+
+// ── Article wrapper ──
+.awp-article {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.awp-article__layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 3rem;
+  align-items: start;
+}
+
+// ── Main column ──
+.awp-article__main {
+  min-width: 0;
+}
+
+.awp-article__header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--color-rule-soft);
+}
+
+.awp-article__number {
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.awp-article__title {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h1-page);
+  line-height: var(--lh-tight);
+  margin: 0 0 1rem;
+}
+
+.awp-article__author {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  color: var(--color-text-body);
+  margin: 0 0 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.orcid-badge {
+  display: inline-flex;
+  align-items: center;
+  img { display: block; }
+}
+
+.awp-article__date {
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  color: var(--color-text-subtle);
+  margin: 0;
+}
+
+// ── Abstract sections ──
+.awp-article__abstract {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--color-bg-card);
+  border-left: 3px solid var(--color-accent);
+
+  h2 {
+    font-family: var(--font-sans);
+    font-size: var(--fs-h3);
+    font-weight: 600;
+    margin: 0 0 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  p {
+    font-family: var(--font-serif);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    margin: 0 0 0.75rem;
+    &:last-child { margin-bottom: 0; }
+  }
+}
+
+.awp-article__abstract--alt {
+  background: transparent;
+  border-left-color: var(--color-rule-soft);
+}
+
+.awp-article__keywords {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0;
+  margin: 0.75rem 0 0;
+
+  li {
+    font-family: var(--font-sans);
+    font-size: var(--fs-small);
+    background: var(--color-accent-faint);
+    color: var(--color-accent);
+    padding: 0.2rem 0.6rem;
+    border-radius: 2px;
+  }
+}
+
+.awp-article__jel {
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  color: var(--color-text-subtle);
+  margin: 0.5rem 0 0;
+}
+
+// ── Content ──
+.awp-article__content {
+  margin-bottom: 3rem;
+}
+
+// ── Bibliographic info ──
+.awp-article__biblio {
+  margin-bottom: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-rule-soft);
+
+  h2 {
+    font-family: var(--font-sans);
+    font-size: var(--fs-h3);
+    font-weight: 600;
+    margin: 0 0 1rem;
+  }
+}
+
+.awp-article__biblio-list {
+  margin: 0;
+
+  > div {
+    display: flex;
+    gap: 1rem;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--color-rule-ghost);
+  }
+
+  dt {
+    font-family: var(--font-sans);
+    font-size: var(--fs-small);
+    font-weight: 600;
+    color: var(--color-text-subtle);
+    min-width: 100px;
+    flex-shrink: 0;
+  }
+
+  dd {
+    font-family: var(--font-sans);
+    font-size: var(--fs-small);
+    margin: 0;
+    a { color: var(--color-accent); }
+  }
+}
+
+// ══════════ SIDEBAR ══════════
+.awp-article__sidebar {
+  position: sticky;
+  top: 80px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+.awp-sidebar__block {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-rule-ghost);
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+}
+
+.awp-sidebar__heading {
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-subtle);
+  margin: 0 0 0.75rem;
+}
+
+.awp-sidebar__btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-size: var(--fs-small);
+
+  &:last-child { margin-bottom: 0; }
+}
+
+.awp-sidebar__doi {
+  font-family: var(--font-mono);
+  font-size: var(--fs-tiny);
+  color: var(--color-text-subtle);
+  margin: 0 0 0.75rem;
+  word-break: break-all;
+
+  a { color: var(--color-accent); }
+}
+
+.awp-sidebar__citation {
+  font-family: var(--font-serif);
+  font-size: var(--fs-small);
+  color: var(--color-text-body);
+  margin: 0 0 0.75rem;
+}
+
+.awp-sidebar__exports {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.awp-sidebar__export-btn {
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--color-rule-soft);
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: background 0.15s ease;
+
+  &:hover {
+    background: var(--color-accent-faint);
+  }
+}
+
+.awp-sidebar__langs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.awp-sidebar__lang-btn {
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--color-rule-soft);
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: background 0.15s ease;
+
+  &:hover { background: var(--color-accent-faint); }
+}
+
+.awp-sidebar__lang-btn--active {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border-color: var(--color-accent);
+  &:hover { background: var(--color-accent-hover); }
+}
+
+.awp-sidebar__series {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin-bottom: 0.4rem;
+  }
+
+  a {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem 0.6rem;
+    text-decoration: none;
+    font-size: var(--fs-small);
+    font-family: var(--font-sans);
+    color: var(--color-text-body);
+    border-left: 2px solid transparent;
+    transition: background 0.15s ease;
+
+    &:hover {
+      background: var(--color-accent-faint);
+    }
+
+    strong {
+      flex-shrink: 0;
+      color: var(--color-accent);
+      font-weight: 600;
+    }
+    span {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.awp-sidebar__series--current a {
+  background: var(--color-accent-faint);
+  border-left-color: var(--color-accent);
+  font-weight: 500;
+}
+
+// ══════════ RESPONSIVE ══════════
+@media (max-width: 768px) {
+  .awp-article__layout {
+    grid-template-columns: 1fr;
+  }
+  .awp-article__sidebar {
+    position: static;
+    max-height: none;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-rule-soft);
+  }
+}
