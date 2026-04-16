@@ -3,6 +3,10 @@ title: "Penser hors les murs : notes sur la recherche indépendante"
 awp_number: "AWP-05"
 date: 2026-03-20
 draft: false
+outputs:
+  - HTML
+  - BibTeX
+  - RIS
 description: "Le champ académique déplace-t-il du désordre épistémique vers ses marges ? Ce working paper applique le cadre anthropique au champ lui-même, examine les mécanismes de relégation et interroge le rôle des infrastructures ouvertes (Zenodo, ORCID)."
 doi_zenodo: "10.5281/zenodo.19269486"
 url_zenodo: "https://zenodo.org/records/19269486"

@@ -3,6 +3,10 @@ title: "Qu'est-ce que l'anthropie ? Principes d'une hypothèse"
 awp_number: "AWP-01"
 date: 2026-02-01
 draft: false
+outputs:
+  - HTML
+  - BibTeX
+  - RIS
 description: "L'anthropie est l'hypothèse selon laquelle tout ordre social local se construit en exportant son désordre vers d'autres lieux, d'autres temps ou d'autres groupes sociaux. Ce texte fondateur soutient que le déplacement du désordre constitue un mécanisme structurel observable dans toute configuration d'ordre stable."
 doi_zenodo: "10.5281/zenodo.19266862"
 url_zenodo: "https://zenodo.org/records/19266862"

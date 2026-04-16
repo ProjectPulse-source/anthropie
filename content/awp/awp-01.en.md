@@ -3,6 +3,10 @@ title: "What is anthropy? Principles of a hypothesis"
 awp_number: "AWP-01"
 date: 2026-02-05
 draft: false
+outputs:
+  - HTML
+  - BibTeX
+  - RIS
 description: "Anthropy is the hypothesis that every stable local social order is built by exporting its disorder to other places, other times, or other social groups. This founding text argues that the displacement of disorder constitutes a structural mechanism observable in every configuration of stable order."
 doi_zenodo: "10.5281/zenodo.19431208"
 url_zenodo: "https://zenodo.org/records/19431208"

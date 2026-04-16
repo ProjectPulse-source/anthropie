@@ -3,6 +3,10 @@ title: "Public debt and anthropy: who really pays for disorder?"
 awp_number: "AWP-03"
 date: 2026-03-06
 draft: false
+outputs:
+  - HTML
+  - BibTeX
+  - RIS
 description: "Public debt is not a simple accounting balance: it is a mechanism of temporal and social entropic transfer. This working paper applies the framework of anthropy to French public finances and shows that the question is not \"how much?\" but \"who pays?\""
 doi_zenodo: "10.5281/zenodo.19434094"
 url_zenodo: "https://zenodo.org/records/19434094"

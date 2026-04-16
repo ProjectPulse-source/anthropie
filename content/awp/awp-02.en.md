@@ -3,6 +3,10 @@ title: "3.3 million years in one principle"
 awp_number: "AWP-02"
 date: 2026-03-06
 draft: false
+outputs:
+  - HTML
+  - BibTeX
+  - RIS
 description: "Anthropy traverses 3.3 million years of human history across seven configurations — from the first tool to the digital meta-programme. The displacement of disorder is a structural mechanism of human societies, not an accident of modernity."
 doi_zenodo: "10.5281/zenodo.19433086"
 url_zenodo: "https://zenodo.org/records/19433086"

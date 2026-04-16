@@ -3,6 +3,10 @@ title: "Thinking outside the walls: notes on independent research"
 awp_number: "AWP-05"
 date: 2026-04-06
 draft: false
+outputs:
+  - HTML
+  - BibTeX
+  - RIS
 description: "Does the academic field displace epistemic disorder toward its margins? This working paper applies the framework of anthropy to the field itself, examines relegation mechanisms, and questions the role of open infrastructures (Zenodo, ORCID)."
 doi_zenodo: "10.5281/zenodo.19440866"
 url_zenodo: "https://zenodo.org/records/19440866"
