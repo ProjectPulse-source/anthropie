@@ -19,7 +19,9 @@ Aucun lint/test : pas de toolchain JS, pas de package.json. La validation est vi
 
 Config splittée dans `config/_default/` : `hugo.toml` (langues, outputs, markup), `menus.toml`, `params.toml`. Site bilingue **fr (default) / en**, sans préfixe pour le français (`defaultContentLanguageInSubdir = false`). Les pages anglaises vivent côte à côte en `*.en.md`.
 
-Output formats custom **BibTeX** (`citation.bib`) et **RIS** (`citation.ris`) déclarés pour la section `awp` — chaque working paper expose donc trois sorties : `single.html`, `single.bibtex.bib`, `single.ris.ris` (voir `layouts/awp/`).
+Output formats custom **BibTeX** (`citation.bib`), **RIS** (`citation.ris`) et **EndNote** (`citation.enw`) déclarés pour la section `awp` — chaque working paper expose donc quatre sorties : `single.html`, `single.bibtex.bib`, `single.ris.ris`, `single.endnote.enw` (voir `layouts/awp/`).
+
+L'URL `/awp/` redirige (meta-refresh via `aliases`) vers `/serie-awp/`, qui est le point d'entrée éditorial de la série. Les pages AWP individuelles restent à `/awp/awp-01/` etc.
 
 ## Architecture du contenu
 
@@ -38,13 +40,13 @@ Les sections `presse/`, `glossaire/`, `a-propos/`, `quest-ce-que-lanthropie/`, `
 - `partials/how-to-cite.html` → bloc citation (lié aux outputs BibTeX/RIS).
 - `partials/related-awp.html` + `partials/awp-card.html` → graphe de navigation entre working papers via le champ `related[]`.
 - `partials/schema-itemlist.html`, `schema-faqpage.html` → JSON-LD pour le SEO académique.
-- `partials/background-anthropie.html` + `assets/js/hero-flowfield.js` → animation de fond canvas (seul JS du site).
+- `partials/background-anthropie.html` → fond SVG décoratif. Le fichier `assets/js/hero-flowfield.js` existe dans le dépôt mais n'est plus chargé (canvas supprimé lors du redesign home).
 
 `data/awp_short_titles.yaml` mappe les slugs AWP vers leurs titres courts (utilisé par les cartes pour éviter de réimporter la page entière).
 
 ## CSS
 
-Point d'entrée `assets/scss/main.scss` qui importe les partials `_variables`, `_typography`, `_layout`, `_components`, `_hero`, `_academic`, `_book-single`, `_publication-card`, `_related-awp`, `_amazon-button`, `_anthropie-bg`, `_how-to-cite`. Les paramètres de design exposés à Hugo (taille H1 hero, gabarit emblème livre) vivent sous `[params.design]` dans `hugo.toml` — modifier là plutôt qu'en dur dans le SCSS quand la valeur est référencée par un template.
+Point d'entrée `assets/scss/main.scss` qui importe les partials `_variables`, `_typography`, `_layout`, `_components`, `_hero`, `_academic`, `_book-single`, `_publication-card`, `_related-awp`, `_amazon-button`, `_anthropie-bg`, `_how-to-cite`, `_awp-single`, `_serie-awp`, `_home`. Les paramètres de design exposés à Hugo (taille H1 hero, gabarit emblème livre) vivent sous `[params.design]` dans `hugo.toml` — modifier là plutôt qu'en dur dans le SCSS quand la valeur est référencée par un template.
 
 ## CMS
 
