@@ -4,6 +4,7 @@ date: 2025-01-01
 description: "L'ouvrage fondateur du cadre anthropique. En 606 pages, l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent est déployée à travers l'histoire longue, l'économie, les finances publiques et l'épistémologie. Ordre ici. Dette ailleurs."
 isbn: "978-2-9586347-2-8"
 serie: "anthropie"
+weight: 1
 image_url: "https://m.media-amazon.com/images/I/81kdsh4400L._SL1436_.jpg"
 url_amazon_fr: "https://amzn.eu/d/0hfod6Wc"
 url_amazon_es: "https://amzn.eu/d/05Dd2qh4"

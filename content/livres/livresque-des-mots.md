@@ -6,7 +6,7 @@ date: 2022-01-01
 isbn: "978-2-9586347-0-4"
 serie: "autres-ouvrages"
 image_url: "https://m.media-amazon.com/images/I/71j0iwWpe5L._SL1436_.jpg"
-weight: 100
+weight: 3
 url_amazon_fr: "https://amzn.eu/d/01Qvm7fF"
 url_amazon_ca: "https://amzn.eu/d/01Qvm7fF"
 url_amazon_com: "https://a.co/d/0geKRrgX"
