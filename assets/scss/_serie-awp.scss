@@ -1,0 +1,181 @@
+// =======================================================================
+// _serie-awp.scss — Series index grid layout
+// =======================================================================
+
+.serie-awp {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.serie-awp__header {
+  margin-bottom: 3rem;
+
+  h1 {
+    font-family: var(--font-serif);
+    font-size: var(--fs-h1-page);
+    line-height: var(--lh-tight);
+    margin: 0 0 1rem;
+  }
+}
+
+.serie-awp__intro {
+  font-family: var(--font-serif);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--color-text-body);
+  max-width: 720px;
+}
+
+// ── Grid ──
+.serie-awp__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+// ── AWP Card (enriched) ──
+.awp-card {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: var(--color-bg-card);
+  border-left: 3px solid var(--color-accent);
+  transition: box-shadow 0.15s ease;
+
+  &:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+}
+
+.awp-card__number {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 4vw, 48px);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-accent);
+  min-width: 60px;
+  flex-shrink: 0;
+}
+
+.awp-card__body {
+  min-width: 0;
+}
+
+.awp-card__meta {
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  color: var(--color-text-subtle);
+  margin: 0 0 0.5rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.awp-card__lang {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-accent);
+}
+
+.awp-card__title {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h3);
+  margin: 0 0 0.5rem;
+  line-height: 1.35;
+
+  a {
+    color: var(--color-text);
+    text-decoration: none;
+    &:hover { color: var(--color-accent); }
+  }
+}
+
+.awp-card__description {
+  font-family: var(--font-serif);
+  font-size: var(--fs-small);
+  line-height: var(--lh-body);
+  color: var(--color-text-body);
+  margin: 0 0 0.5rem;
+}
+
+.awp-card__doi {
+  font-family: var(--font-mono);
+  font-size: var(--fs-tiny);
+  color: var(--color-text-subtle);
+  margin: 0 0 0.75rem;
+
+  a { color: var(--color-accent); }
+}
+
+.awp-card__actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.awp-card__btn {
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid var(--color-rule-soft);
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: background 0.15s ease;
+
+  &:hover {
+    background: var(--color-accent-faint);
+  }
+}
+
+// ── About section ──
+.serie-awp__about {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-rule-soft);
+
+  h2 {
+    font-family: var(--font-serif);
+    font-size: var(--fs-h2);
+    margin: 0 0 1rem;
+  }
+
+  p {
+    font-family: var(--font-serif);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    color: var(--color-text-body);
+    max-width: 720px;
+  }
+}
+
+.serie-awp__meta-strip {
+  font-family: var(--font-sans) !important;
+  font-size: var(--fs-small) !important;
+  color: var(--color-text-subtle) !important;
+
+  a { color: var(--color-accent); }
+}
+
+.text-link {
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 500;
+
+  &:hover { text-decoration: underline; }
+}
+
+// ── Responsive ──
+@media (max-width: 768px) {
+  .awp-card {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .awp-card__number {
+    font-size: 32px;
+    min-width: auto;
+  }
+}
