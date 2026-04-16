@@ -1,0 +1,9 @@
+%0 Report
+%A Lalut, Stéphane
+%T {{ .Title }}
+%D {{ .Date.Format "2006" }}
+%N {{ .Params.awp_number }}
+%I Anthropie Working Papers
+%R {{ .Params.doi_zenodo }}
+%U {{ .Permalink }}
+%G {{ .Lang }}

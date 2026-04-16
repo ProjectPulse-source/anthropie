@@ -7,6 +7,7 @@ outputs:
   - HTML
   - BibTeX
   - RIS
+  - EndNote
 description: "La dette publique n'est pas un simple solde comptable : c'est un mécanisme de transfert entropique temporel et social. Ce working paper applique le cadre anthropique aux finances publiques françaises et montre que la question n'est pas \"combien ?\" mais \"qui paie ?\""
 doi_zenodo: "10.5281/zenodo.19268769"
 url_zenodo: "https://zenodo.org/records/19268769"

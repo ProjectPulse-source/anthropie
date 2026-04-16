@@ -7,6 +7,7 @@ outputs:
   - HTML
   - BibTeX
   - RIS
+  - EndNote
 description: "Public debt is not a simple accounting balance: it is a mechanism of temporal and social entropic transfer. This working paper applies the framework of anthropy to French public finances and shows that the question is not \"how much?\" but \"who pays?\""
 doi_zenodo: "10.5281/zenodo.19434094"
 url_zenodo: "https://zenodo.org/records/19434094"

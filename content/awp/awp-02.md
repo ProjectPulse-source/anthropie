@@ -7,6 +7,7 @@ outputs:
   - HTML
   - BibTeX
   - RIS
+  - EndNote
 description: "L'anthropie traverse 3,3 millions d'années d'histoire humaine en sept configurations — du premier outil au métaprogramme numérique. Le déplacement du désordre est un mécanisme structurel des sociétés humaines, pas un accident de la modernité."
 doi_zenodo: "10.5281/zenodo.19268037"
 url_zenodo: "https://zenodo.org/records/19268037"

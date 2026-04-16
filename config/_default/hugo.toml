@@ -89,12 +89,20 @@ disableKinds = ["taxonomy", "term"]
     baseName = "citation"
     isPlainText = true
     notAlternative = true
+  [outputFormats.EndNote]
+    name = "EndNote"
+    mediaType = "application/x-endnote-refer"
+    baseName = "citation"
+    isPlainText = true
+    notAlternative = true
 
 [mediaTypes]
   [mediaTypes."application/x-bibtex"]
     suffixes = ["bib"]
   [mediaTypes."application/x-research-info-systems"]
     suffixes = ["ris"]
+  [mediaTypes."application/x-endnote-refer"]
+    suffixes = ["enw"]
 
 [outputs]
   home = ["HTML", "RSS"]
