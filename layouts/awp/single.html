@@ -48,14 +48,13 @@
       </section>
 
       {{/* ── Abstract in the other language ── */}}
-      {{ with .Params.translation }}
+      {{ if .Translations }}
+      {{ range .Translations }}
       <section class="awp-article__abstract awp-article__abstract--alt">
         <h2>{{ if $isEn }}Résumé{{ else }}Abstract{{ end }}</h2>
-        {{- $tr := $.Site.GetPage .url -}}
-        {{ with $tr }}
         <p>{{ .Description }}</p>
-        {{ end }}
       </section>
+      {{ end }}
       {{ end }}
 
       {{/* ── Content ── */}}
