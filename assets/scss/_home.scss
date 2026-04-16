@@ -1,0 +1,224 @@
+// =======================================================================
+// _home.scss — Home page sections
+// =======================================================================
+
+// ── Section 1 — Hero ──
+.home-hero {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--hero-pad-top) 2rem var(--hero-pad-bottom);
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 3rem;
+  align-items: start;
+}
+
+.hero-main {
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: var(--fs-small);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-subtle);
+    margin: 0 0 1rem;
+  }
+
+  .hero__h1 {
+    font-family: var(--font-serif);
+    font-size: var(--fs-h1-hero);
+    line-height: var(--lh-tight);
+    margin: 0 0 1.5rem;
+    max-width: 640px;
+  }
+
+  .hero__lede {
+    font-family: var(--font-serif);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    color: var(--color-text-body);
+    max-width: 600px;
+    margin: 0 0 2rem;
+  }
+
+  .hero__cta-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+}
+
+.credibility-strip {
+  font-family: var(--font-sans);
+  font-size: var(--fs-tiny);
+  letter-spacing: 0.04em;
+  color: var(--color-text-faint);
+
+  a {
+    color: var(--color-text-subtle);
+    text-decoration: none;
+    &:hover { color: var(--color-accent); }
+  }
+
+  &__sep {
+    margin: 0 0.3rem;
+    color: var(--color-rule-soft);
+  }
+}
+
+.hero-aside {
+  padding: 1.5rem;
+  background: var(--color-bg-card);
+  border-left: 3px solid var(--color-accent);
+}
+
+.hero-aside__label {
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin: 0 0 0.75rem;
+}
+
+.hero-aside__title {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h3);
+  line-height: 1.35;
+  margin: 0 0 0.5rem;
+}
+
+.hero-aside__actions {
+  margin-top: 1rem;
+}
+
+// ── Section 2 — Axes ──
+.home-axes {
+  max-width: var(--container-max);
+  margin: 0 auto 4rem;
+  padding: 0 2rem;
+
+  h2 {
+    font-family: var(--font-serif);
+    font-size: var(--fs-h2);
+    margin: 0 0 0.75rem;
+  }
+}
+
+.section-intro {
+  font-family: var(--font-serif);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--color-text-body);
+  max-width: 720px;
+  margin-bottom: 2rem;
+}
+
+.axis-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.axis-card {
+  padding: 1.5rem;
+  background: var(--color-bg-card);
+  border-top: 3px solid var(--color-accent);
+
+  h3 {
+    font-family: var(--font-sans);
+    font-size: var(--fs-h3);
+    font-weight: 600;
+    margin: 0 0 0.25rem;
+  }
+
+  p {
+    font-family: var(--font-serif);
+    font-size: var(--fs-small);
+    line-height: var(--lh-body);
+    color: var(--color-text-body);
+    margin: 0 0 0.5rem;
+    &:last-child { margin-bottom: 0; }
+  }
+}
+
+.axis-direction {
+  font-family: var(--font-sans) !important;
+  font-size: var(--fs-small) !important;
+  font-weight: 500;
+  color: var(--color-accent) !important;
+  letter-spacing: 0.02em;
+}
+
+// ── Section 3 — AWP ──
+.home-awp {
+  max-width: var(--container-max);
+  margin: 0 auto 4rem;
+  padding: 0 2rem;
+
+  h2 {
+    font-family: var(--font-serif);
+    font-size: var(--fs-h2);
+    margin: 0 0 0.75rem;
+  }
+
+  .awp-grid {
+    margin-bottom: 1.5rem;
+  }
+}
+
+// ── Section 4 — Corpus ──
+.home-corpus {
+  max-width: var(--container-max);
+  margin: 0 auto 4rem;
+  padding: 0 2rem;
+
+  h2 {
+    font-family: var(--font-serif);
+    font-size: var(--fs-h2);
+    margin: 0 0 0.75rem;
+  }
+}
+
+.corpus-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.corpus-block {
+  h3 {
+    font-family: var(--font-serif);
+    font-size: var(--fs-h3);
+    margin: 0 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-rule-soft);
+  }
+
+  p {
+    font-family: var(--font-serif);
+    font-size: var(--fs-small);
+    line-height: var(--lh-body);
+    color: var(--color-text-body);
+  }
+}
+
+// ── Responsive ──
+@media (max-width: 768px) {
+  .home-hero {
+    grid-template-columns: 1fr;
+    padding: 48px 20px 40px;
+  }
+  .axis-grid {
+    grid-template-columns: 1fr;
+  }
+  .corpus-grid {
+    grid-template-columns: 1fr;
+  }
+  .home-awp .awp-grid {
+    grid-template-columns: 1fr;
+  }
+}
