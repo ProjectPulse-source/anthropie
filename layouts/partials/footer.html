@@ -1,21 +1,45 @@
+{{- $isEn := eq .Lang "en" -}}
 <footer class="site-footer">
   <div class="site-footer__inner">
-    <div>
+    {{/* ── Colonne 1 — Identité ── */}}
+    <div class="site-footer__col">
       <p class="site-footer__heading">Stéphane Lalut</p>
       <p>{{ i18n "footer_role" }}</p>
-      <p style="margin-top: 8px;"><a href="https://orcid.org/0009-0002-1794-4895" target="_blank" rel="noopener">ORCID 0009-0002-1794-4895</a></p>
+      <p><a href="https://orcid.org/0009-0002-1794-4895" target="_blank" rel="noopener">ORCID 0009-0002-1794-4895</a></p>
     </div>
-    <div>
-      <p class="site-footer__heading">Working Papers</p>
-      <p><a href="{{ "/serie-awp/" | relURL }}">Anthropie Working Papers</a></p>
-      <p><a href="{{ .Site.Params.zenodoCommunity }}" target="_blank" rel="noopener">Zenodo</a></p>
+
+    {{/* ── Colonne 2 — Corpus ── */}}
+    <div class="site-footer__col">
+      <p class="site-footer__heading">{{ if $isEn }}Corpus{{ else }}Corpus{{ end }}</p>
+      <ul class="site-footer__links">
+        <li><a href="{{ "/quest-ce-que-lanthropie/" | relLangURL }}">{{ if $isEn }}Anthropy{{ else }}Anthropie{{ end }}</a></li>
+        <li><a href="{{ "/serie-awp/" | relLangURL }}">{{ if $isEn }}Working Papers{{ else }}Série AWP{{ end }}</a></li>
+        <li><a href="{{ if $isEn }}/en/books/{{ else }}/livres/{{ end }}">{{ if $isEn }}Books{{ else }}Livres{{ end }}</a></li>
+        <li><a href="{{ "/publications/" | relLangURL }}">Publications</a></li>
+      </ul>
     </div>
-    <div>
-      <p class="site-footer__heading">{{ if eq .Lang "en" }}Books{{ else }}Livres{{ end }}</p>
-      <p><a href="{{ if eq .Lang "en" }}/en/books/{{ else }}/livres/{{ end }}">{{ if eq .Lang "en" }}All books{{ else }}Tous les livres{{ end }}</a></p>
+
+    {{/* ── Colonne 3 — Ressources ── */}}
+    <div class="site-footer__col">
+      <p class="site-footer__heading">{{ if $isEn }}Resources{{ else }}Ressources{{ end }}</p>
+      <ul class="site-footer__links">
+        <li><a href="https://orcid.org/0009-0002-1794-4895" target="_blank" rel="noopener">ORCID</a></li>
+        <li><a href="{{ .Site.Params.zenodoCommunity }}" target="_blank" rel="noopener">Zenodo</a></li>
+        <li><a href="{{ "/glossaire/" | relLangURL }}">{{ if $isEn }}Glossary{{ else }}Glossaire{{ end }}</a></li>
+        <li><a href="{{ "/contact/" | relLangURL }}">Contact</a></li>
+        {{ if .IsTranslated }}
+        <li>
+          {{ range .Translations }}
+          <a href="{{ .Permalink }}">{{ if eq .Lang "en" }}English version{{ else }}Version française{{ end }}</a>
+          {{ end }}
+        </li>
+        {{ end }}
+      </ul>
     </div>
   </div>
-  <div class="site-footer__legal" style="max-width: 1120px; margin: 32px auto 0;">
-    &copy; {{ now.Year }} Stéphane Lalut
+
+  {{/* ── Ligne légale ── */}}
+  <div class="site-footer__legal">
+    <p>&copy; {{ now.Year }} Stéphane Lalut — {{ if $isEn }}All rights reserved{{ else }}Tous droits réservés{{ end }}</p>
   </div>
 </footer>

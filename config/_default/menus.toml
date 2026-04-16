@@ -4,7 +4,7 @@
   weight = 10
 
 [[main]]
-  name = "Working Papers"
+  name = "Série AWP"
   url = "/serie-awp/"
   weight = 20
 
@@ -19,16 +19,6 @@
   weight = 30
 
 [[main]]
-  name = "Glossaire"
-  url = "/glossaire/"
-  weight = 35
-
-[[main]]
   name = "À propos"
   url = "/a-propos/"
   weight = 40
-
-[[main]]
-  name = "Contact"
-  url = "/contact/"
-  weight = 50

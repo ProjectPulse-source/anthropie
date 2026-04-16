@@ -43,11 +43,6 @@ disableKinds = ["taxonomy", "term"]
   url = "/en/a-propos/"
   weight = 40
 
-[[languages.en.menus.main]]
-  name = "Contact"
-  url = "/en/contact/"
-  weight = 50
-
 [author]
   name = "Stéphane Lalut"
   orcid = "0009-0002-1794-4895"
