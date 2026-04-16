@@ -1,6 +1,22 @@
+{{- $isEn := eq .Lang "en" -}}
+{{- $cardinal := strings.TrimPrefix "AWP-" .Params.awp_number -}}
 <div class="awp-card">
-  <div class="awp-card__number">{{ .Params.awp_number }}</div>
-  <h3 class="awp-card__title"><a href="{{ .Permalink }}">{{ partial "fr-typo.html" .Title }}</a></h3>
-  <p class="awp-card__description">{{ .Description }}</p>
-  <span class="awp-card__doi">DOI : <a href="https://doi.org/{{ .Params.doi_zenodo }}" target="_blank" rel="noopener">{{ .Params.doi_zenodo }}</a></span>
+  <div class="awp-card__number">{{ $cardinal }}</div>
+  <div class="awp-card__body">
+    <p class="awp-card__meta">
+      <time>{{ time.Format ":date_long" .Date }}</time>
+      <span class="awp-card__lang">FR / EN</span>
+    </p>
+    <h3 class="awp-card__title"><a href="{{ .RelPermalink }}">{{ partial "fr-typo.html" .Title }}</a></h3>
+    <p class="awp-card__description">{{ .Description | truncate 180 }}</p>
+    <p class="awp-card__doi">DOI : <a href="https://doi.org/{{ .Params.doi_zenodo }}" target="_blank" rel="noopener">{{ .Params.doi_zenodo }}</a></p>
+    <div class="awp-card__actions">
+      {{ with .Params.pdf_url }}
+      <a href="{{ . }}" class="awp-card__btn" target="_blank" rel="noopener">PDF</a>
+      {{ end }}
+      {{ with .Params.url_zenodo }}
+      <a href="{{ . }}" class="awp-card__btn" target="_blank" rel="noopener">Zenodo</a>
+      {{ end }}
+    </div>
+  </div>
 </div>

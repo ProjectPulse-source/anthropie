@@ -148,6 +148,7 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
 .site-footer {
   background: var(--color-bg-footer); color: var(--color-bg-footer-text);
   padding: 48px 40px 32px; margin-top: 80px;
+  border-top: 1px solid var(--color-rule-soft);
 }
 .site-footer__inner {
   max-width: 1120px; margin: 0 auto;
@@ -159,16 +160,22 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
 }
 .site-footer h3,
 .site-footer__heading {
-  color: var(--color-bg); font-size: 14px; font-family: var(--font-sans);
+  color: var(--color-text); font-size: 14px; font-family: var(--font-sans);
   text-transform: uppercase; letter-spacing: 0.1em; margin: 0 0 14px;
   font-weight: 500;
 }
 .site-footer p { margin: 0 0 6px; }
 .site-footer a { color: var(--color-bg-footer-text); text-decoration: none; transition: color 0.2s ease; }
-.site-footer a:hover { color: var(--color-bg); }
+.site-footer a:hover { color: var(--color-accent); }
+.site-footer__links {
+  list-style: none; padding: 0; margin: 0;
+  li { margin: 0 0 6px; }
+}
 .site-footer__legal {
-  padding-top: 24px; border-top: 0.5px solid rgba(255,255,255,0.15);
-  font-size: 11px; color: rgba(201,201,204,0.7);
+  max-width: 1120px; margin: 32px auto 0;
+  padding-top: 24px; border-top: 1px solid var(--color-rule-ghost);
+  font-size: 11px; color: var(--color-text-faint);
+  p { margin: 0; }
 }
 
 // ----- Book emblem (image réelle) -----

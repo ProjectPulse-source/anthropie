@@ -1,10 +1,6 @@
 ---
-title: "Anthropy Working Papers"
-cascade:
-  _target:
-    kind: page
-  outputs:
-    - HTML
-    - BibTeX
-    - RIS
+title: "AWP"
+_build:
+  render: false
+  list: never
 ---

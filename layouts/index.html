@@ -1,52 +1,161 @@
 {{ define "main" }}
 
-{{- $def := .Site.Params.canonicalDefinition -}}
-{{- $defWithAccent := replace $def "déplacent" `<span class="word-shift">déplacent</span>` -}}
-{{- $defWithAccent = replace $defWithAccent "displace" `<span class="word-shift">displace</span>` -}}
-
-<section class="hero">
-  <canvas id="hero-flowfield" aria-hidden="true"></canvas>
-  <div class="hero__content">
-    <div class="hero__col-left">
-      <p class="eyebrow">{{ with .Site.Params.author.title }}{{ . }}{{ else }}Économiste · Chercheur indépendant{{ end }}</p>
-      <h1 class="hero__h1">{{ $defWithAccent | safeHTML }}</h1>
-      <p class="hero__lede">
-        {{ if eq .Lang "en" }}A working hypothesis in political economy, developed in five working papers and two books. Disorder is neither absorbed nor dissolved: it is transferred — in space, in time, or to other social groups.{{ else }}Une hypothèse de travail en économie politique, développée en cinq working papers et deux ouvrages. Le désordre n'est ni résorbé ni dissous&nbsp;: il est transféré — dans l'espace, dans le temps, ou vers d'autres groupes sociaux.{{ end }}
-      </p>
-      <div class="hero__cta-group">
-        <a href="{{ "/awp/awp-01/" | relLangURL }}" class="btn btn--primary">{{ if eq .Lang "en" }}Read AWP-01{{ else }}Lire AWP-01{{ end }} →</a>
-        <a href="/livres/anthropie-ordre-ici-dette-ailleurs/" class="btn btn--secondary">{{ if eq .Lang "en" }}Discover the book{{ else }}Découvrir le livre{{ end }}</a>
-      </div>
-      <div class="credibility-strip">
-        {{ $items := .Site.Data.credibility.items }}
-        {{ range $i, $item := $items }}
-          {{ if $i }}<span class="credibility-strip__sep">·</span>{{ end }}
-          <a href="{{ $item.url }}" target="_blank" rel="noopener">{{ $item.label }}</a>
-        {{ end }}
-      </div>
+{{/* ══════════ Section 1 — Hero ══════════ */}}
+<section class="home-hero">
+  <div class="hero-main">
+    <p class="eyebrow">
+      {{ with .Site.Params.author.title }}{{ . }}{{ end }}
+    </p>
+    <h1 class="hero__h1">
+      {{ if eq .Lang "en" }}
+        Order is not created. Disorder is displaced.
+      {{ else }}
+        On ne crée pas l'ordre&nbsp;: on déplace le désordre.
+      {{ end }}
+    </h1>
+    <p class="hero__lede">
+      {{ if eq .Lang "en" }}
+        Anthropy is the hypothesis that social systems displace disorder rather than resolve it — in space, in time, or between social groups. This site gathers a research corpus devoted to testing this hypothesis: five <em>Anthropy Working Papers</em>, two books, publications and resources designed to be read, cited and discussed.
+      {{ else }}
+        L'anthropie est l'hypothèse selon laquelle les systèmes sociaux ne suppriment pas le désordre&nbsp;: ils le déplacent dans l'espace, dans le temps, ou entre groupes sociaux. Ce site rassemble un corpus de recherche qui la met à l'épreuve&nbsp;: cinq <em>Anthropie Working Papers</em>, deux livres, des publications et des ressources conçues pour être lues, citées et discutées.
+      {{ end }}
+    </p>
+    <div class="hero__cta-group">
+      <a href="{{ "/quest-ce-que-lanthropie/" | relLangURL }}" class="btn btn--primary">
+        {{ if eq .Lang "en" }}What is anthropy?{{ else }}Qu'est-ce que l'anthropie&nbsp;?{{ end }}
+      </a>
+      <a href="{{ "/serie-awp/" | relLangURL }}" class="btn btn--secondary">
+        {{ if eq .Lang "en" }}Discover the Working Papers{{ else }}Découvrir la série AWP{{ end }}
+      </a>
     </div>
-    <div class="hero__col-right">
-      {{ partial "livre-card-emblem.html" (dict
-        "title" "ANTHROPIE"
-        "url" "/livres/anthropie-ordre-ici-dette-ailleurs/"
-      ) }}
-      <div class="hero__awp-wrap">
-        <p class="hero__awp-eyebrow">Working Papers</p>
-        <ul class="awp-list--compact">
-          {{ range sort (where .Site.RegularPages "Section" "awp") "Params.awp_number" "asc" }}
-            <li class="awp-list__item">
-              <a href="{{ .RelPermalink }}">
-                <span class="awp-list__num">{{ .Params.awp_number }}</span>
-                <span class="awp-list__title">{{ partial "fr-typo.html" .Title }}</span>
-              </a>
-            </li>
-          {{ end }}
-        </ul>
-      </div>
+    <div class="credibility-strip">
+      {{ $items := .Site.Data.credibility.items }}
+      {{ range $i, $item := $items }}
+        {{ if $i }}<span class="credibility-strip__sep">·</span>{{ end }}
+        <a href="{{ $item.url }}" target="_blank" rel="noopener">{{ $item.label }}</a>
+      {{ end }}
     </div>
   </div>
-  {{ $heroJs := resources.Get "js/hero-flowfield.js" | minify | fingerprint }}
-  <script src="{{ $heroJs.RelPermalink }}" defer></script>
+
+  <aside class="hero-aside">
+    <h3 class="hero-aside__label">AWP-01</h3>
+    {{ if eq .Lang "en" }}
+      <p class="hero-aside__title">What is anthropy? Principles of a hypothesis</p>
+      <p>Definition, protocol, three questions, three dimensions of transfer.</p>
+    {{ else }}
+      <p class="hero-aside__title">Qu'est-ce que l'anthropie&nbsp;? Principes d'une hypothèse</p>
+      <p>Définition, protocole, trois questions, trois dimensions du transfert.</p>
+    {{ end }}
+    <div class="hero-aside__actions">
+      <a href="{{ "/awp/awp-01/" | relLangURL }}" class="text-link">
+        {{ if eq .Lang "en" }}Read AWP-01{{ else }}Lire l'AWP-01{{ end }}
+      </a>
+    </div>
+  </aside>
+</section>
+
+{{/* ══════════ Section 2 — Trois axes ══════════ */}}
+<section class="home-axes">
+  <h2>
+    {{ if eq .Lang "en" }}Three axes for reading transfers
+    {{ else }}Trois axes pour lire les transferts{{ end }}
+  </h2>
+  <p class="section-intro">
+    {{ if eq .Lang "en" }}
+      Disorder does not disappear. It shifts to another place, another time, or other groups. Anthropy aims to make these displacements visible.
+    {{ else }}
+      Le désordre ne disparaît pas. Il se déplace dans un lieu, dans un futur, ou vers d'autres groupes. L'anthropie propose de rendre ces déplacements visibles.
+    {{ end }}
+  </p>
+
+  <div class="axis-grid">
+    <article class="axis-card">
+      <h3>{{ if eq .Lang "en" }}Spatial{{ else }}Spatial{{ end }}</h3>
+      <p class="axis-direction">{{ if eq .Lang "en" }}Centre → periphery{{ else }}Centre → périphérie{{ end }}</p>
+      <p>{{ if eq .Lang "en" }}Local order is achieved by externalizing costs to other territories: extraction, waste, heat, pollution pushed beyond the visible perimeter.{{ else }}L'ordre local s'acquiert au prix d'une externalisation vers d'autres territoires&nbsp;: métropoles, zones de consommation, centres de décision d'un côté&nbsp;; extraction, déchets, chaleur, pollutions de l'autre.{{ end }}</p>
+    </article>
+
+    <article class="axis-card">
+      <h3>{{ if eq .Lang "en" }}Temporal{{ else }}Temporel{{ end }}</h3>
+      <p class="axis-direction">{{ if eq .Lang "en" }}Present → future{{ else }}Présent → futur{{ end }}</p>
+      <p>{{ if eq .Lang "en" }}The present consumes, the future compensates. Public debt, climate debt, nuclear waste and technological debt extend today's costs toward generations that had no say.{{ else }}Le présent consomme, le futur compense. Dette publique, dette climatique, déchets nucléaires ou dette technologique prolongent aujourd'hui leurs coûts vers des générations qui n'ont pas décidé.{{ end }}</p>
+    </article>
+
+    <article class="axis-card">
+      <h3>Social</h3>
+      <p class="axis-direction">{{ if eq .Lang "en" }}Mobile → captive{{ else }}Mobiles → captifs{{ end }}</p>
+      <p>{{ if eq .Lang "en" }}Those with financial, legal or residential mobility transfer burdens more easily toward those who cannot refuse them: users, precarious workers, taxpayers, subcontracted labour, relegated groups.{{ else }}Ceux qui disposent de mobilité financière, juridique ou résidentielle transfèrent plus facilement les charges vers ceux qui ne peuvent pas les refuser&nbsp;: usagers, précaires, contribuables, travailleurs sous-traités, groupes relégués.{{ end }}</p>
+    </article>
+  </div>
+
+  <p><a href="{{ "/quest-ce-que-lanthropie/" | relLangURL }}">
+    {{ if eq .Lang "en" }}Understand the full framework →{{ else }}Comprendre le cadre complet →{{ end }}
+  </a></p>
+</section>
+
+{{/* ══════════ Section 3 — Série AWP ══════════ */}}
+<section class="home-awp">
+  <h2>Anthropie Working Papers</h2>
+  <p class="section-intro">
+    {{ if eq .Lang "en" }}
+      The <em>Anthropy Working Papers</em> series formalises the hypothesis, tests it across deep history, and applies it to contemporary objects: public debt, the energy transition, independent research.
+    {{ else }}
+      La série <em>Anthropie Working Papers</em> formalise l'hypothèse, la met à l'épreuve dans la longue durée, puis l'applique à des objets contemporains&nbsp;: dette publique, transition énergétique, recherche indépendante.
+    {{ end }}
+  </p>
+
+  <div class="awp-grid">
+    {{ range sort (where .Site.RegularPages "Section" "awp") "Params.awp_number" "asc" }}
+      {{ partial "awp-card.html" . }}
+    {{ end }}
+  </div>
+
+  <p><a href="{{ "/serie-awp/" | relLangURL }}">
+    {{ if eq .Lang "en" }}View the full series →{{ else }}Voir la série complète →{{ end }}
+  </a></p>
+</section>
+
+{{/* ══════════ Section 4 — Le corpus ══════════ */}}
+<section class="home-corpus">
+  <h2>{{ if eq .Lang "en" }}The corpus{{ else }}Le corpus{{ end }}</h2>
+  <p class="section-intro">
+    {{ if eq .Lang "en" }}
+      The anthropic framework extends across several formats: working papers, books, reference pages and publications in the intellectual press. The aim is not to multiply formats but to make the same mechanism visible through different objects — debt, energy, deep history, epistemic order.
+    {{ else }}
+      Le cadre anthropique se déploie sur plusieurs supports&nbsp;: working papers, livres, pages de référence et publications dans la presse intellectuelle. L'enjeu n'est pas de multiplier les formats, mais de rendre visible un même mécanisme à travers des objets différents — dette, énergie, longue durée, ordre épistémique.
+    {{ end }}
+  </p>
+
+  <div class="corpus-grid">
+    <div class="corpus-block corpus-block--livres">
+      <h3>{{ if eq .Lang "en" }}Books{{ else }}Livres{{ end }}</h3>
+      {{- $livres := where .Site.RegularPages "Section" "livres" -}}
+      {{- if not $livres -}}
+        {{- range site.Sites -}}
+          {{- if eq .Language.Lang "fr" -}}
+            {{- $livres = where .RegularPages "Section" "livres" -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+      {{ range $livres }}
+        {{ partial "livre-card.html" . }}
+      {{ end }}
+    </div>
+
+    <div class="corpus-block corpus-block--publications">
+      <h3>Publications</h3>
+      <p>
+        {{ if eq .Lang "en" }}
+          Published and reviewed in <em>Alternatives Économiques</em>, <em>La Vie des idées</em>, <em>En attendant Nadeau</em>, <em>Terrestres</em>, <em>Nonfiction</em>, <em>Le Temps</em> and other intellectual press outlets.
+        {{ else }}
+          Publié et recensé dans <em>Alternatives Économiques</em>, <em>La Vie des idées</em>, <em>En attendant Nadeau</em>, <em>Terrestres</em>, <em>Nonfiction</em>, <em>Le Temps</em> et d'autres revues de la presse intellectuelle.
+        {{ end }}
+      </p>
+      <a href="{{ "/publications/" | relLangURL }}" class="text-link">
+        {{ if eq .Lang "en" }}View publications →{{ else }}Voir les publications →{{ end }}
+      </a>
+    </div>
+  </div>
 </section>
 
 {{ end }}

@@ -1,10 +1,6 @@
 ---
 title: "AWP"
-cascade:
-  _target:
-    kind: page
-  outputs:
-    - HTML
-    - BibTeX
-    - RIS
+_build:
+  render: false
+  list: never
 ---

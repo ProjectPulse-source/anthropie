@@ -3,6 +3,11 @@ title: "Transition énergétique ou transfert entropique ?"
 awp_number: "AWP-04"
 date: 2026-03-10
 draft: false
+outputs:
+  - HTML
+  - BibTeX
+  - RIS
+  - EndNote
 description: "La transition énergétique réduit-elle le désordre ou le déplace-t-elle ? Ce working paper examine les mécanismes anthropiques dans les politiques énergétiques contemporaines : extraction externalisée, déchets reportés, effet rebond non comptabilisé."
 doi_zenodo: "10.5281/zenodo.19269244"
 url_zenodo: "https://zenodo.org/records/19269244"
