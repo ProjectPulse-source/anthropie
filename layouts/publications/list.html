@@ -1,6 +1,13 @@
 {{ define "main" }}
+{{- $isEn := eq .Lang "en" -}}
 <div class="home-section">
-  <h1>{{ partial "fr-typo.html" .Title }}</h1>
+  <header class="page-header">
+    <h1 class="page-header__title">{{ partial "fr-typo.html" .Title }}</h1>
+    {{ with .Description }}
+    <p class="page-header__lede">{{ . }}</p>
+    {{ end }}
+  </header>
+
   {{ .Content }}
 
   {{ $frSite := index site.Sites 0 }}
@@ -8,5 +15,11 @@
   {{ range $i, $pub := $pubs.ByDate.Reverse }}
     {{ partial "publication-card.html" (dict "Page" $pub "Index" $i) }}
   {{ end }}
+
+  <div class="page-exit">
+    <a href="{{ "/serie-awp/" | relLangURL }}" class="text-link">
+      {{ if $isEn }}View the Working Papers →{{ else }}Voir la série AWP →{{ end }}
+    </a>
+  </div>
 </div>
 {{ end }}

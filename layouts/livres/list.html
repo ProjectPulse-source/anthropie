@@ -1,8 +1,11 @@
 {{ define "main" }}
+{{- $isEn := eq .Lang "en" -}}
 <article class="home-section">
-  <header class="article__header">
-    <h1>{{ partial "fr-typo.html" .Title }}</h1>
-    {{ with .Description }}<p class="article__lede">{{ . }}</p>{{ end }}
+  <header class="page-header">
+    <h1 class="page-header__title">{{ partial "fr-typo.html" .Title }}</h1>
+    {{ with .Description }}
+    <p class="page-header__lede">{{ . }}</p>
+    {{ end }}
   </header>
 
   <div class="article__body">
@@ -16,7 +19,6 @@
     {{ end }}
 
     {{/* CORPUS PRINCIPAL — pages dont serie != autres-ouvrages */}}
-    {{ $isEN := eq .Lang "en" }}
     <section class="livres-grid">
       {{ range $livres.ByWeight }}
         {{ if ne .Params.serie "autres-ouvrages" }}
@@ -27,9 +29,9 @@
               </div>
             {{ end }}
             <h3 class="livre-card__title"><a href="{{ .Permalink }}">{{ partial "fr-typo.html" .Title }}</a></h3>
-            {{ if $isEN }}<p class="livre-card__lang-tag"><em>In French</em></p>{{ end }}
+            {{ if $isEn }}<p class="livre-card__lang-tag"><em>In French</em></p>{{ end }}
             {{ with .Params.subtitle }}<p class="livre-card__subtitle">{{ . }}</p>{{ end }}
-            {{ if $isEN }}
+            {{ if $isEn }}
               {{ if eq .Params.isbn "978-2-9586347-2-8" }}
                 <p class="livre-card__description">The foundational work on the anthropic framework. Across 606 pages, the book develops the hypothesis that social systems do not resolve disorder but displace it — across space, across time, or onto other social groups. Drawing on economic history, public finance, and ecological economics, it argues that what appears as order in one location is sustained by debt — material, ecological, or moral — contracted elsewhere.</p>
               {{ else if eq .Params.isbn "978-2-9586347-3-5" }}
@@ -51,7 +53,7 @@
     {{ $autres := where $livres "Params.serie" "autres-ouvrages" }}
     {{ if $autres }}
     <section class="livres-autres">
-      <h2 class="livres-autres__title">{{ if $isEN }}Other works{{ else }}Autres ouvrages{{ end }}</h2>
+      <h2 class="livres-autres__title">{{ if $isEn }}Other works{{ else }}Autres ouvrages{{ end }}</h2>
       <div class="livres-grid">
         {{ range $autres.ByWeight }}
           {{ partial "livre-card.html" . }}
@@ -60,11 +62,16 @@
 
       <div class="livre-mention">
         <p class="livre-mention__title">L'Odyssée des idées</p>
-        <p class="livre-mention__status">{{ if $isEN }}Essay — new edition in preparation{{ else }}Essai — nouvelle édition en préparation{{ end }}</p>
+        <p class="livre-mention__status">{{ if $isEn }}Essay — new edition in preparation{{ else }}Essai — nouvelle édition en préparation{{ end }}</p>
       </div>
     </section>
     {{ end }}
 
+    <div class="page-exit">
+      <a href="{{ "/serie-awp/" | relLangURL }}" class="text-link">
+        {{ if $isEn }}View the Working Papers →{{ else }}Voir la série AWP →{{ end }}
+      </a>
+    </div>
   </div>
 </article>
 {{ end }}
