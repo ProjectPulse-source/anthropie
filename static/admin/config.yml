@@ -1,8 +1,9 @@
 backend:
   name: github
-  repo: "[USERNAME]/anthropie-site"
+  repo: "ProjectPulse-source/anthropie"
   branch: main
-  base_url: "https://[NETLIFY-SITE].netlify.app"
+  # base_url: Proxy OAuth Netlify non configuré — Decap CMS inactif
+  # Pour activer : créer un site Netlify, configurer le proxy OAuth, décommenter base_url
 
 media_folder: static/images
 public_folder: /images
