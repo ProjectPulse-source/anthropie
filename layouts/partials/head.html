@@ -81,7 +81,7 @@
 {{ end }}
 
 <!-- Schema.org ItemList série AWP -->
-{{ if and .File (eq .File.Dir "serie-awp/") }}
+{{ if eq .Section "serie-awp" }}
   {{- partial "schema-itemlist.html" . -}}
 {{ end }}
 
