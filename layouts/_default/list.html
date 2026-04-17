@@ -1,6 +1,17 @@
 {{ define "main" }}
+{{- $isEn := eq .Lang "en" -}}
 <div class="home-section">
+  {{ if not (in (slice "awp" "serie-awp") .Section) }}
+  <header class="page-header">
+    <h1 class="page-header__title">{{ partial "fr-typo.html" .Title }}</h1>
+    {{ with .Description }}
+    <p class="page-header__lede">{{ . }}</p>
+    {{ end }}
+  </header>
+  {{ else }}
   <h1>{{ partial "fr-typo.html" .Title }}</h1>
+  {{ end }}
+
   {{ .Content }}
 
   {{ if eq .Section "livres" }}
