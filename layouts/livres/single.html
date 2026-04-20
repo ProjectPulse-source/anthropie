@@ -38,8 +38,11 @@
   "description" .Description
   "inLanguage" "fr"
   "publisher" (dict "@type" "Organization" "name" "Stéphane Lalut")
-  "url" .Permalink -}}
+  "url" .Permalink
+  "datePublished" (.Date.Format "2006-01-02") -}}
 {{- with .Params.isbn -}}{{- $book = merge $book (dict "isbn" .) -}}{{- end -}}
+{{- with .Params.image_url -}}{{- $book = merge $book (dict "image" .) -}}{{- end -}}
+{{- with .Params.wikidata_qid -}}{{- $book = merge $book (dict "sameAs" (printf "https://www.wikidata.org/wiki/%s" .)) -}}{{- end -}}
 <script type="application/ld+json">
 {{ $book | jsonify (dict "indent" "  ") | safeJS }}
 </script>

@@ -5,6 +5,7 @@ description: "L'ouvrage fondateur du cadre anthropique. En 606 pages, l'hypothè
 isbn: "978-2-9586347-2-8"
 serie: "anthropie"
 weight: 1
+wikidata_qid: "Q138827344"
 image_url: "https://m.media-amazon.com/images/I/81kdsh4400L._SL1436_.jpg"
 url_amazon_fr: "https://amzn.eu/d/0hfod6Wc"
 url_amazon_es: "https://amzn.eu/d/05Dd2qh4"

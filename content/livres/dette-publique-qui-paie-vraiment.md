@@ -5,6 +5,7 @@ description: "La dette publique n'est pas un solde à contenir mais un mécanism
 isbn: "978-2-9586347-3-5"
 serie: "anthropie"
 weight: 2
+wikidata_qid: "Q138910896"
 image_url: "https://m.media-amazon.com/images/I/613dYtFI5WL._SL1500_.jpg"
 url_amazon_fr: "https://amzn.eu/d/01Z60i3H"
 url_amazon_es: "https://amzn.eu/d/06oRn63g"
