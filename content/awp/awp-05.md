@@ -19,7 +19,7 @@ faq:
     answer: "Le champ académique maintient son ordre en reléguant certaines questions, formats et postures vers ses marges — un mécanisme analogue au transfert anthropique social."
   - question: "Les infrastructures ouvertes résolvent-elles ce problème ?"
     answer: "Elles réduisent le coût de la marginalité sans en abolir la logique. Elles modifient la forme du transfert — de la relégation silencieuse à la noyade dans le bruit — pas sa nature."
-pdf_url: "https://zenodo.org/records/19269486/files/AWP-05_penser_hors_les_murs.pdf"
+pdf_url: "https://zenodo.org/records/19269487/files/AWP-05_penser_hors_les_murs.pdf"
 language: "fr"
 publication_date: "2026-03-20"
 translation:
