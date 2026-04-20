@@ -11,6 +11,7 @@ outputs:
 description: "Public debt is not a simple accounting balance: it is a mechanism of temporal and social entropic transfer. This working paper applies the framework of anthropy to French public finances and shows that the question is not \"how much?\" but \"who pays?\""
 doi_zenodo: "10.5281/zenodo.19434094"
 url_zenodo: "https://zenodo.org/records/19434094"
+ssrn_url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6615278"
 jel_codes: ["H63", "H62", "E62", "E58"]
 keywords: ["public debt", "anthropy", "temporal transfer", "public finance", "France"]
 faq:

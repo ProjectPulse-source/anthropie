@@ -130,12 +130,14 @@
     "datePublished" $dp
     "publisher" (dict "@type" "Organization" "name" "Stéphane Lalut" "url" "https://stephane-lalut.com")
     "identifier" (printf "https://doi.org/%s" .Params.doi_zenodo)
-    "sameAs" (printf "https://doi.org/%s" .Params.doi_zenodo)
     "url" .Permalink
     "inLanguage" (.Params.language | default .Language.Lang)
     "isPartOf" (dict "@type" "CreativeWorkSeries" "name" "Anthropie Working Papers")
     "isAccessibleForFree" true
     "license" "https://creativecommons.org/licenses/by/4.0/" -}}
+{{- $sameAs := slice (printf "https://doi.org/%s" .Params.doi_zenodo) -}}
+{{- with .Params.ssrn_url -}}{{- $sameAs = $sameAs | append . -}}{{- end -}}
+{{- $article = merge $article (dict "sameAs" $sameAs) -}}
 {{- with .Params.keywords -}}{{- $article = merge $article (dict "keywords" .) -}}{{- end -}}
 {{- with .Params.translation -}}
   {{- $key := cond (eq $.Params.language "fr") "workTranslation" "translationOfWork" -}}
