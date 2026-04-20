@@ -13,6 +13,12 @@ Allow: /
 User-agent: GoogleOther
 Allow: /
 
+User-agent: CCBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://stephane-lalut.com/sitemap.xml
 Sitemap: https://stephane-lalut.com/fr/sitemap.xml
 Sitemap: https://stephane-lalut.com/en/sitemap.xml
