@@ -1,6 +1,6 @@
 {{- $isEn := eq .Lang "en" -}}
 {{- $conceptName := cond $isEn "Anthropy" "Anthropie" -}}
-{{- $conceptURL := cond $isEn "https://stephane-lalut.com/en/what-is-anthropy/" "https://stephane-lalut.com/quest-ce-que-lanthropie/" -}}
+{{- $conceptURL := cond $isEn "https://stephane-lalut.com/en/quest-ce-que-lanthropie/" "https://stephane-lalut.com/quest-ce-que-lanthropie/" -}}
 {{- $conceptID := printf "%s#concept" $conceptURL -}}
 
 {{- $about := dict

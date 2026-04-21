@@ -134,9 +134,16 @@
     "identifier" (printf "https://doi.org/%s" .Params.doi_zenodo)
     "url" .Permalink
     "inLanguage" (.Params.language | default .Language.Lang)
-    "isPartOf" (dict "@type" "CreativeWorkSeries" "name" "Anthropie Working Papers")
     "isAccessibleForFree" true
-    "license" "https://creativecommons.org/licenses/by/4.0/" -}}
+    "license" "https://creativecommons.org/licenses/by/4.0/"
+    "mainEntityOfPage" .Permalink -}}
+{{- $isEn := eq (.Params.language | default .Language.Lang) "en" -}}
+{{- $seriesURL := cond $isEn "https://stephane-lalut.com/en/serie-awp/" "https://stephane-lalut.com/serie-awp/" -}}
+{{- $seriesName := cond $isEn "Anthropy Working Papers" "Anthropie Working Papers" -}}
+{{- $article = merge $article (dict "isPartOf" (dict "@type" "CreativeWorkSeries" "@id" (printf "%s#series" $seriesURL) "name" $seriesName "url" $seriesURL)) -}}
+{{- $conceptName := cond $isEn "Anthropy" "Anthropie" -}}
+{{- $conceptURL := cond $isEn "https://stephane-lalut.com/en/quest-ce-que-lanthropie/" "https://stephane-lalut.com/quest-ce-que-lanthropie/" -}}
+{{- $article = merge $article (dict "about" (dict "@type" "DefinedTerm" "@id" (printf "%s#concept" $conceptURL) "name" $conceptName "url" $conceptURL "sameAs" (slice "https://www.wikidata.org/entity/Q138827949"))) -}}
 {{- $sameAs := slice (printf "https://doi.org/%s" .Params.doi_zenodo) -}}
 {{- with .Params.ssrn_url -}}{{- $sameAs = $sameAs | append . -}}{{- end -}}
 {{- $article = merge $article (dict "sameAs" $sameAs) -}}
