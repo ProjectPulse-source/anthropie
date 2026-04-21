@@ -10,3 +10,6 @@ prompt_*.txt
 # Fichiers temporaires tokens Zenodo
 *ztk.txt
 *zenodo_token*
+
+# Rapports audit GEO (reproductibles)
+scripts/audit_geo_v2_*.md

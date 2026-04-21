@@ -54,6 +54,28 @@ Garde-fous internes :
 - Preservation totale des related_identifiers existants (jamais d'ecrasement)
 - Utilisation exclusive de /api/deposit/depositions/ pour les ecritures (format plat)
 
+## audit_geo_v2.py
+
+Audit GEO (Generative Engine Optimization) en lecture seule du site stephane-lalut.com. Version 2 refactoree suite a la contre-analyse methodologique du 20/04/2026.
+
+Ameliorations v2 vs v1 :
+- Phase de decouverte : les URLs a auditer sont derivees des sitemaps effectifs (fr/sitemap.xml, en/sitemap.xml), plus aucun chemin en dur
+- Parsing JSON-LD en Python avec gestion correcte des structures imbriquees (@graph, sameAs en string ou array)
+- Extraction des liens BibTeX/RIS/PDF depuis les pages HTML, au lieu de supposer des endpoints conventionnels
+- Structure a deux parties : Partie A "on-site reproductible" / Partie B "annexe ecosysteme dates"
+- Echelle a trois etats : present / manquant vs contrat / opportunite GEO 2026
+
+Usage :
+
+    PYTHONIOENCODING=utf-8 python scripts/audit_geo_v2.py > scripts/audit_geo_v2_latest.md
+    
+Sortie : rapport Markdown complet. Ne modifie rien sur le site.
+
+Utile pour :
+- Baseline comparative avant/apres chantier GEO
+- Detection des leviers restants (PublicationSeries, isPartOf, citation, mainEntityOfPage, feed RSS, markdown endpoints)
+- Audit trimestriel de la coherence semantique du corpus
+
 ## Notes techniques
 
 Endpoints Zenodo :
