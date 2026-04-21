@@ -84,9 +84,10 @@
   {{- partial "schema-faqpage.html" . -}}
 {{ end }}
 
-<!-- Schema.org ItemList série AWP -->
+<!-- Schema.org ItemList + CreativeWorkSeries série AWP -->
 {{ if eq .Section "serie-awp" }}
   {{- partial "schema-itemlist.html" . -}}
+  {{- partial "schema-creativeworkseries.html" . -}}
 {{ end }}
 
 <!-- Schema.org ProfilePage + Person -->

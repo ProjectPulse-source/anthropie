@@ -1,0 +1,41 @@
+{{- $isEn := eq .Lang "en" -}}
+{{- $conceptName := cond $isEn "Anthropy" "Anthropie" -}}
+{{- $conceptURL := cond $isEn "https://stephane-lalut.com/en/what-is-anthropy/" "https://stephane-lalut.com/quest-ce-que-lanthropie/" -}}
+{{- $conceptID := printf "%s#concept" $conceptURL -}}
+
+{{- $about := dict
+    "@type" "DefinedTerm"
+    "@id" $conceptID
+    "name" $conceptName
+    "url" $conceptURL
+    "sameAs" (slice "https://www.wikidata.org/entity/Q138827949") -}}
+
+{{- $publisher := dict
+    "@type" "Person"
+    "name" "Stéphane Lalut"
+    "sameAs" "https://orcid.org/0009-0002-1794-4895" -}}
+
+{{- $parts := slice -}}
+{{- range sort (where .Site.RegularPages "Section" "awp") "Params.awp_number" "asc" -}}
+  {{- $parts = $parts | append (dict
+      "@type" "ScholarlyArticle"
+      "@id" (printf "%s#article" .Permalink)
+      "url" .Permalink
+      "name" .Title) -}}
+{{- end -}}
+
+{{- $series := dict
+    "@context" "https://schema.org"
+    "@type" "CreativeWorkSeries"
+    "@id" (printf "%s#series" .Permalink)
+    "name" .Title
+    "alternateName" "AWP"
+    "url" .Permalink
+    "description" .Description
+    "inLanguage" .Lang
+    "publisher" $publisher
+    "about" $about
+    "hasPart" $parts -}}
+<script type="application/ld+json">
+{{ $series | jsonify (dict "indent" "  ") | safeJS }}
+</script>
