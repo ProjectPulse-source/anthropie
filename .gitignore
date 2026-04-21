@@ -6,3 +6,7 @@ resources/
 .claude/
 _prompt-*.txt
 prompt_*.txt
+
+# Fichiers temporaires tokens Zenodo
+*ztk.txt
+*zenodo_token*
