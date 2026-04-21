@@ -90,6 +90,11 @@
   {{- partial "schema-creativeworkseries.html" . -}}
 {{ end }}
 
+<!-- Schema.org WebSite (home only) -->
+{{ if .IsHome }}
+  {{- partial "schema-website.html" . -}}
+{{ end }}
+
 <!-- Schema.org ProfilePage + Person -->
 {{ if or (eq .RelPermalink "/a-propos/") (eq .RelPermalink "/en/a-propos/") }}
 <script type="application/ld+json">
@@ -98,6 +103,7 @@
   "@type": "ProfilePage",
   "mainEntity": {
     "@type": "Person",
+    "@id": "https://stephane-lalut.com/a-propos/#person",
     "name": "Stéphane Lalut",
     "url": "https://stephane-lalut.com",
     "sameAs": [
@@ -137,6 +143,7 @@
     "isAccessibleForFree" true
     "license" "https://creativecommons.org/licenses/by/4.0/"
     "mainEntityOfPage" .Permalink -}}
+{{- with (or .Params.abstract .Params.description) -}}{{- $article = merge $article (dict "abstract" .) -}}{{- end -}}
 {{- $isEn := eq (.Params.language | default .Language.Lang) "en" -}}
 {{- $seriesURL := cond $isEn "https://stephane-lalut.com/en/serie-awp/" "https://stephane-lalut.com/serie-awp/" -}}
 {{- $seriesName := cond $isEn "Anthropy Working Papers" "Anthropie Working Papers" -}}

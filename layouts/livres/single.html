@@ -43,6 +43,10 @@
 {{- with .Params.isbn -}}{{- $book = merge $book (dict "isbn" .) -}}{{- end -}}
 {{- with .Params.image_url -}}{{- $book = merge $book (dict "image" .) -}}{{- end -}}
 {{- with .Params.wikidata_qid -}}{{- $book = merge $book (dict "sameAs" (printf "https://www.wikidata.org/wiki/%s" .)) -}}{{- end -}}
+{{- $isEn := eq .Lang "en" -}}
+{{- $conceptName := cond $isEn "Anthropy" "Anthropie" -}}
+{{- $conceptURL := cond $isEn "https://stephane-lalut.com/en/quest-ce-que-lanthropie/" "https://stephane-lalut.com/quest-ce-que-lanthropie/" -}}
+{{- $book = merge $book (dict "about" (dict "@type" "DefinedTerm" "@id" (printf "%s#concept" $conceptURL) "name" $conceptName "url" $conceptURL "sameAs" (slice "https://www.wikidata.org/entity/Q138827949"))) -}}
 <script type="application/ld+json">
 {{ $book | jsonify (dict "indent" "  ") | safeJS }}
 </script>

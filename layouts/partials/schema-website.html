@@ -1,0 +1,22 @@
+{{- $isEn := eq .Lang "en" -}}
+{{- $siteName := cond $isEn "Stephane Lalut - Economist, independent researcher" "Stephane Lalut - Economiste, chercheur independant" -}}
+{{- $siteDesc := cond $isEn "Corpus on the anthropic hypothesis : social systems displace disorder rather than resolve it." "Corpus sur l'hypothese anthropique : les systemes sociaux deplacent le desordre plutot qu'ils ne le resolvent." -}}
+{{- $homeURL := cond $isEn "https://stephane-lalut.com/en/" "https://stephane-lalut.com/" -}}
+{{- $lang := cond $isEn "en" "fr" -}}
+{{- $personID := "https://stephane-lalut.com/a-propos/#person" -}}
+
+{{- $website := dict
+  "@context" "https://schema.org"
+  "@type" "WebSite"
+  "@id" (printf "%s#website" $homeURL)
+  "url" $homeURL
+  "name" $siteName
+  "description" $siteDesc
+  "inLanguage" $lang
+  "publisher" (dict "@id" $personID)
+  "author" (dict "@id" $personID)
+-}}
+
+<script type="application/ld+json">
+{{ $website | jsonify | safeJS }}
+</script>
