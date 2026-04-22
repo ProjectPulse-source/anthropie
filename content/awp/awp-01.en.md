@@ -1,7 +1,7 @@
 ---
 title: "What is anthropy? Principles of a hypothesis"
 awp_number: "AWP-01"
-date: 2026-02-05
+date: 2026-04-05
 draft: false
 outputs:
   - HTML
@@ -23,7 +23,7 @@ faq:
     answer: "A working hypothesis with heuristic value. It makes it possible to ask questions that other frameworks do not formulate, without claiming the exhaustiveness of a finished theory."
 pdf_url: "https://zenodo.org/records/19431208/files/AWP-01_What_is_Anthropy_Principle_of_a_hypothesis_EN.pdf"
 language: "en"
-publication_date: "2026-02-05"
+publication_date: "2026-04-05"
 translation:
   doi: "10.5281/zenodo.19266862"
   url: "/awp/awp-01/"

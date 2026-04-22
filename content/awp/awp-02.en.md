@@ -1,7 +1,7 @@
 ---
 title: "3.3 million years in one principle"
 awp_number: "AWP-02"
-date: 2026-03-06
+date: 2026-04-06
 draft: false
 outputs:
   - HTML
@@ -21,7 +21,7 @@ faq:
     answer: "The Anthropocene designates a geological era (Crutzen, 2000). Anthropy designates an institutional mechanism that precedes the Anthropocene by millions of years and illuminates its dynamics."
 pdf_url: "https://zenodo.org/records/19433086/files/AWP-02_anthropy_longue_duree_EN.pdf"
 language: "en"
-publication_date: "2026-03-06"
+publication_date: "2026-04-06"
 translation:
   doi: "10.5281/zenodo.19268037"
   url: "/awp/awp-02/"

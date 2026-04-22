@@ -1,7 +1,7 @@
 ---
 title: "Energy transition or entropic transfer?"
 awp_number: "AWP-04"
-date: 2026-03-06
+date: 2026-04-06
 draft: false
 outputs:
   - HTML
@@ -21,7 +21,7 @@ faq:
     answer: "The Jevons effect shows that improving energy efficiency tends to increase total consumption — an example of an anthropic boomerang effect where local order is built at the cost of global disorder."
 pdf_url: "https://zenodo.org/records/19439921/files/AWP-04_Energy_Transition_or_Anthtopic_Transfer_EN.pdf"
 language: "en"
-publication_date: "2026-03-06"
+publication_date: "2026-04-06"
 translation:
   doi: "10.5281/zenodo.19269244"
   url: "/awp/awp-04/"

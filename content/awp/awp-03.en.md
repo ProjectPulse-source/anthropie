@@ -1,7 +1,7 @@
 ---
 title: "Public debt and anthropy: who really pays for disorder?"
 awp_number: "AWP-03"
-date: 2026-03-06
+date: 2026-04-06
 draft: false
 outputs:
   - HTML
@@ -21,7 +21,7 @@ faq:
     answer: "The anthropic analysis shows that the cost is borne differently along temporal dimensions (future generations) and social dimensions (captive groups without fiscal or geographical mobility)."
 pdf_url: "https://zenodo.org/records/19434094/files/AWP-03_Public_Debt_and_Anthropy_EN.pdf"
 language: "en"
-publication_date: "2026-03-06"
+publication_date: "2026-04-06"
 translation:
   doi: "10.5281/zenodo.19268769"
   url: "/awp/awp-03/"
