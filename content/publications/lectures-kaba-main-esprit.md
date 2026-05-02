@@ -2,6 +2,7 @@
 title: "La main et l'esprit — Arnaud Kaba"
 date: 2026-04-14
 revue: "Lectures"
+source_type: "Revue"
 url_externe: "https://journals.openedition.org/lectures/70897"
 image: "/img/publications/lectures-logo.webp"
 image_type: "logo"

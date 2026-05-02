@@ -1,14 +1,23 @@
 {{- $page := .Page -}}
 {{- $idx := .Index | default 99 -}}
+{{- $variant := .LogoVariant | default "cream" -}}
 {{- $loading := cond (lt $idx 2) "eager" "lazy" -}}
 {{- $isEN := eq site.Language.Lang "en" -}}
 
 <div class="pub-card__wrap">
 <a href="{{ $page.Params.url_externe }}" target="_blank" rel="noopener" class="pub-card">
+  {{ if eq $page.Params.image_type "logo" }}
+  <div class="pub-thumb pub-thumb--logo pub-thumb--logo--{{ $variant }}">
+    <span class="pub-thumb__label">{{ $page.Params.source_type }}</span>
+    <span class="pub-thumb__name">{{ $page.Params.revue }}</span>
+    <span class="pub-thumb__rule" aria-hidden="true"></span>
+  </div>
+  {{ else }}
   {{ with $page.Params.image }}
-  <div class="pub-thumb{{ if eq $page.Params.image_type "logo" }} pub-thumb--logo{{ end }}">
+  <div class="pub-thumb">
     <img src="{{ . }}" alt="{{ $page.Params.revue }}" loading="{{ $loading }}" width="160" height="107">
   </div>
+  {{ end }}
   {{ end }}
   <div class="pub-body">
     <h2 class="pub-title">{{ partial "fr-typo.html" $page.Title }}</h2>

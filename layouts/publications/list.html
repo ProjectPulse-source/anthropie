@@ -12,8 +12,17 @@
 
   {{ $frSite := index site.Sites 0 }}
   {{ $pubs := where $frSite.RegularPages "Type" "publications" }}
+  {{- .Scratch.Set "logoIndex" 0 -}}
   {{ range $i, $pub := $pubs.ByDate.Reverse }}
-    {{ partial "publication-card.html" (dict "Page" $pub "Index" $i) }}
+    {{- $variant := "" -}}
+    {{- if eq $pub.Params.image_type "logo" -}}
+      {{- $.Scratch.Add "logoIndex" 1 -}}
+      {{- $variant = "cream" -}}
+      {{- if eq (mod ($.Scratch.Get "logoIndex") 2) 1 -}}
+        {{- $variant = "navy" -}}
+      {{- end -}}
+    {{- end -}}
+    {{ partial "publication-card.html" (dict "Page" $pub "Index" $i "LogoVariant" $variant) }}
   {{ end }}
 
   <div class="page-exit">
