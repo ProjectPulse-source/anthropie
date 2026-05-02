@@ -2,7 +2,7 @@
 
 > **À lire avant** : ajout de publication, modification de vignette, 
 > ou intervention sur le SCSS de cartes BEM.
-> Dernière mise à jour : mai 2026.
+> Dernière mise à jour : mai 2026 (après bascule complète du corpus en typographique).
 
 ## 1. Front matter publication — checklist
 
@@ -26,11 +26,17 @@ related_book: [slug-livre]
 
 ### Règles
 
-1. **`image_type: photo`** → ne PAS remplir `source_type` (champ ignoré).
-2. **`image_type: logo`** → `source_type` OBLIGATOIRE, valeur tirée de §2.
-3. **Revue absente de §2** → suivre la procédure §3 avant publication.
-4. **Revue universitaire à comité de lecture** → catégorie réservée 
+0. **Par défaut, toutes les nouvelles publications utilisent `image_type: logo`**
+   (rendu typographique). Le mode `image_type: photo` reste techniquement
+   supporté mais désormais déprécié — ne l'utiliser qu'en cas de décision
+   éditoriale explicite (ex. visuel d'article particulièrement signifiant
+   que l'on souhaite mettre en avant).
+1. **`image_type: logo`** → `source_type` OBLIGATOIRE, valeur tirée de §2.
+2. **Revue absente de §2** → suivre la procédure §3 avant publication.
+3. **Revue universitaire à comité de lecture** → catégorie réservée 
    « Académique », à activer avec accord explicite (voir §4).
+4. **`image_type: photo` (mode déprécié)** → ne PAS remplir `source_type`
+   (champ ignoré).
 
 ## 2. Table de mapping revue → source_type
 
