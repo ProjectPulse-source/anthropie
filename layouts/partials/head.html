@@ -97,30 +97,25 @@
 
 <!-- Schema.org ProfilePage + Person -->
 {{ if or (eq .RelPermalink "/a-propos/") (eq .RelPermalink "/en/a-propos/") }}
+{{- $isEn := eq .Lang "en" -}}
+{{- $author := site.Data.author.author -}}
+{{- $sameAsUrls := slice -}}
+{{- range $author.sameAs -}}{{- $sameAsUrls = $sameAsUrls | append .url -}}{{- end -}}
+{{- $person := dict
+    "@type" "Person"
+    "@id" $author.canonicalProfileUrl
+    "name" $author.name
+    "url" $author.url
+    "sameAs" $sameAsUrls
+    "jobTitle" (cond $isEn $author.jobTitleEn $author.jobTitleFr)
+    "description" (cond $isEn $author.descriptionEn $author.descriptionFr)
+    "knowsAbout" $author.knowsAbout -}}
+{{- $profile := dict
+    "@context" "https://schema.org"
+    "@type" "ProfilePage"
+    "mainEntity" $person -}}
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfilePage",
-  "mainEntity": {
-    "@type": "Person",
-    "@id": "https://stephane-lalut.com/a-propos/#person",
-    "name": "Stéphane Lalut",
-    "url": "https://stephane-lalut.com",
-    "sameAs": [
-      "https://orcid.org/0009-0002-1794-4895",
-      "https://zenodo.org/communities/anthropie-working-papers",
-      "https://openalex.org/authors/A5130851063",
-      "https://scholar.google.com/citations?user=J4NqzwSfrHAC",
-      "https://independent.academia.edu/StéphaneLALUT",
-      "https://www.wikidata.org/wiki/Q138909233",
-      "https://ssrn.com/author=11065608",
-      "https://www.idref.fr/283054085"
-    ],
-    "jobTitle": "Économiste — Chercheur indépendant et essayiste",
-    "description": "Économiste, chercheur indépendant et essayiste. Auteur du cadre anthropique.",
-    "knowsAbout": ["anthropie", "dette publique", "transition énergétique", "économie institutionnelle"]
-  }
-}
+{{ $profile | jsonify (dict "indent" "  ") | safeJS }}
 </script>
 {{ end }}
 

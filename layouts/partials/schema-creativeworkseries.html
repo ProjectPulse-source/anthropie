@@ -10,10 +10,14 @@
     "url" $conceptURL
     "sameAs" (slice "https://www.wikidata.org/entity/Q138827949") -}}
 
+{{- $orcidUrl := "" -}}
+{{- range site.Data.author.author.sameAs -}}
+  {{- if eq .key "orcid" -}}{{- $orcidUrl = .url -}}{{- end -}}
+{{- end -}}
 {{- $publisher := dict
     "@type" "Person"
-    "name" "Stéphane Lalut"
-    "sameAs" "https://orcid.org/0009-0002-1794-4895" -}}
+    "name" site.Data.author.author.name
+    "sameAs" $orcidUrl -}}
 
 {{- $parts := slice -}}
 {{- range sort (where .Site.RegularPages "Section" "awp") "Params.awp_number" "asc" -}}
