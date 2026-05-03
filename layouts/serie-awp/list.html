@@ -1,5 +1,9 @@
 {{ define "main" }}
 {{- $isEn := eq .Lang "en" -}}
+{{- $orcid := false -}}
+{{- range site.Data.author.author.sameAs -}}
+  {{- if eq .key "orcid" -}}{{- $orcid = . -}}{{- end -}}
+{{- end -}}
 
 <div class="serie-awp">
   {{/* ── Breadcrumb ── */}}
@@ -41,9 +45,9 @@
     </p>
     <p class="serie-awp__meta-strip">
       {{ if $isEn }}
-        Persistent DOIs (Zenodo) · CC-BY 4.0 licence · Bilingual collection (FR/EN) · Indexed: OpenAlex, RePEc, Google Scholar · ORCID: <a href="https://orcid.org/0009-0002-1794-4895" target="_blank" rel="noopener">0009-0002-1794-4895</a>
+        Persistent DOIs (Zenodo) · CC-BY 4.0 licence · Bilingual collection (FR/EN) · Indexed: OpenAlex, RePEc, Google Scholar · <a href="{{ $orcid.url }}" target="_blank" rel="noopener">{{ $orcid.labelLong }}</a>
       {{ else }}
-        DOIs pérennes (Zenodo) · Licence CC-BY 4.0 · Collection bilingue (FR/EN) · Indexation&nbsp;: OpenAlex, RePEc, Google Scholar · ORCID&nbsp;: <a href="https://orcid.org/0009-0002-1794-4895" target="_blank" rel="noopener">0009-0002-1794-4895</a>
+        DOIs pérennes (Zenodo) · Licence CC-BY 4.0 · Collection bilingue (FR/EN) · Indexation&nbsp;: OpenAlex, RePEc, Google Scholar · <a href="{{ $orcid.url }}" target="_blank" rel="noopener">{{ $orcid.labelLong }}</a>
       {{ end }}
     </p>
     <p>

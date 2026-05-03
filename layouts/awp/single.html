@@ -22,9 +22,13 @@
       <header class="awp-article__header">
         <div class="awp-article__number">{{ .Params.awp_number }}</div>
         <h1 class="awp-article__title">{{ partial "fr-typo.html" .Title }}</h1>
+        {{- $orcid := false -}}
+        {{- range site.Data.author.author.sameAs -}}
+          {{- if eq .key "orcid" -}}{{- $orcid = . -}}{{- end -}}
+        {{- end -}}
         <p class="awp-article__author">
-          Stéphane Lalut
-          <a href="https://orcid.org/0009-0002-1794-4895" target="_blank" rel="noopener" class="orcid-badge" title="ORCID">
+          {{ site.Data.author.author.name }}
+          <a href="{{ $orcid.url }}" target="_blank" rel="noopener" class="orcid-badge" title="ORCID">
             <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID" width="16" height="16">
           </a>
         </p>
