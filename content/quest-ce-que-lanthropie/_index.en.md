@@ -14,7 +14,7 @@ faq:
   - question: "How does anthropy apply to public debt?"
     answer: "Public debt displaces the cost of present disorder toward future generations and social groups least able to escape it. It is a classic temporal and social transfer in the anthropic sense."
   - question: "Who developed the framework of anthropy?"
-    answer: "Stéphane Lalut, economist and independent researcher, proposed the framework of anthropy from 2025 onwards in a series of working papers published on Zenodo under the label Anthropie Working Papers (AWP)."
+    answer: "Stéphane Lalut, economist, independent researcher and essayist, proposed the framework of anthropy from 2025 onwards in a series of working papers published on Zenodo under the label Anthropie Working Papers (AWP)."
 ---
 
 ## Definition

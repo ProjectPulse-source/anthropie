@@ -55,7 +55,7 @@ disableKinds = ["taxonomy", "term"]
 
 [params.author]
   name = "Stéphane Lalut"
-  title = "Économiste · Chercheur indépendant"
+  title = "Économiste — Chercheur indépendant et essayiste"
   orcid = "0009-0002-1794-4895"
 
 [params.design]

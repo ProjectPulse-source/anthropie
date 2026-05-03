@@ -13,7 +13,7 @@ faq:
   - question: "Comment l'anthropie s'applique-t-elle à la dette publique ?"
     answer: "La dette publique déplace le coût du désordre présent vers les générations futures et les groupes sociaux les moins capables de s'y soustraire. C'est un transfert temporel et social classique au sens anthropique."
   - question: "Qui a développé le cadre anthropique ?"
-    answer: "Stéphane Lalut, économiste et chercheur indépendant, a proposé le cadre anthropique à partir de 2025 dans une série de working papers publiés sur Zenodo sous le label Anthropie Working Papers (AWP)."
+    answer: "Stéphane Lalut, économiste, chercheur indépendant et essayiste, a proposé le cadre anthropique à partir de 2025 dans une série de working papers publiés sur Zenodo sous le label Anthropie Working Papers (AWP)."
 ---
 
 ## Définition

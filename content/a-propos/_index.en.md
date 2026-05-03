@@ -1,10 +1,10 @@
 ---
 title: "About"
-description: "Stéphane Lalut — Economist and independent researcher. Author of the framework of anthropy."
+description: "Stéphane Lalut — Economist, independent researcher and essayist. Author of the framework of anthropy."
 awp_list_after: "Anthropie Working Papers"
 ---
 
-Stéphane Lalut is an economist and independent researcher. He develops the framework of anthropy — the hypothesis that social systems displace disorder rather than resolve it — through a series of working papers and two published books.
+Stéphane Lalut is an economist, independent researcher and essayist. He develops the framework of anthropy — the hypothesis that social systems displace disorder rather than resolve it — through a series of working papers and two published books.
 
 His articles and reviews appear in *Alternatives Économiques*, *La Vie des Idées*, *En attendant Nadeau*, *Terrestres*, *Nonfiction*, *Le Temps*, and *Mediapart*.
 

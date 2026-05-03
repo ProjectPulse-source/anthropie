@@ -1,6 +1,6 @@
 ---
 title: "Anthropie Working Papers"
-description: "Série de working papers sur l'anthropie par Stéphane Lalut, économiste et chercheur indépendant."
+description: "Série de working papers sur l'anthropie par Stéphane Lalut, économiste, chercheur indépendant et essayiste."
 aliases:
   - /awp/
 ---

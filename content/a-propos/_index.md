@@ -1,10 +1,10 @@
 ---
 title: "À propos"
-description: "Stéphane Lalut — Économiste et chercheur indépendant. Auteur du cadre anthropique."
+description: "Stéphane Lalut — Économiste, chercheur indépendant et essayiste. Auteur du cadre anthropique."
 awp_list_after: "Anthropie Working Papers"
 ---
 
-Stéphane Lalut est économiste et chercheur indépendant. Il développe le cadre anthropique — l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent — dans une série de working papers et deux ouvrages publiés.
+Stéphane Lalut est économiste, chercheur indépendant et essayiste. Il développe le cadre anthropique — l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent — dans une série de working papers et deux ouvrages publiés.
 
 Ses articles et recensions paraissent dans *Alternatives Économiques*, *La Vie des Idées*, *En attendant Nadeau*, *Terrestres*, *Nonfiction*, *Le Temps* et *Mediapart*.
 
