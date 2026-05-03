@@ -1,0 +1,69 @@
+# data/author.toml
+# Source unique de vérité pour l'identité auteur.
+# Consommé par : à venir (phase 2 du refactor).
+# Toute modification d'un identifiant doit se faire ICI uniquement.
+
+[author]
+name = "Stéphane Lalut"
+url = "https://stephane-lalut.com"
+canonicalProfileUrl = "https://stephane-lalut.com/a-propos/#person"
+
+# Statut professionnel — utilisé pour JSON-LD jobTitle et eyebrow accueil
+jobTitleFr = "Économiste — Chercheur indépendant et essayiste"
+jobTitleEn = "Economist — Independent researcher and essayist"
+
+# Description courte — utilisée pour JSON-LD description
+descriptionFr = "Économiste, chercheur indépendant et essayiste. Auteur du cadre anthropique."
+descriptionEn = "Economist, independent researcher and essayist. Author of the framework of anthropy."
+
+# Domaines de compétence — utilisé pour JSON-LD knowsAbout
+knowsAbout = ["anthropie", "dette publique", "transition énergétique", "économie institutionnelle"]
+
+# Identifiants externes — ordre du sameAs JSON-LD actuel préservé
+[[author.sameAs]]
+key = "orcid"
+url = "https://orcid.org/0009-0002-1794-4895"
+label = "ORCID"
+labelLong = "ORCID 0009-0002-1794-4895"
+
+[[author.sameAs]]
+key = "zenodoCommunity"
+url = "https://zenodo.org/communities/anthropie-working-papers"
+label = "Zenodo"
+labelLong = "Communauté Zenodo"
+
+[[author.sameAs]]
+key = "openalex"
+url = "https://openalex.org/authors/A5130851063"
+label = "OpenAlex"
+labelLong = "OpenAlex A5130851063"
+
+[[author.sameAs]]
+key = "googleScholar"
+url = "https://scholar.google.com/citations?user=J4NqzwSfrHAC"
+label = "Google Scholar"
+labelLong = "Google Scholar"
+
+[[author.sameAs]]
+key = "academia"
+url = "https://independent.academia.edu/StéphaneLALUT"
+label = "Academia"
+labelLong = "Academia.edu"
+
+[[author.sameAs]]
+key = "wikidata"
+url = "https://www.wikidata.org/wiki/Q138909233"
+label = "Wikidata"
+labelLong = "Wikidata Q138909233"
+
+[[author.sameAs]]
+key = "ssrn"
+url = "https://ssrn.com/author=11065608"
+label = "SSRN"
+labelLong = "SSRN 11065608"
+
+[[author.sameAs]]
+key = "idref"
+url = "https://www.idref.fr/283054085"
+label = "IdRef"
+labelLong = "IdRef 283054085"
