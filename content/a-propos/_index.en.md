@@ -12,9 +12,7 @@ He has worked in European marketing management, public-sector consulting, and in
 
 ## Researcher
 
-<p class="orcid-link"><a href="https://orcid.org/0009-0002-1794-4895" target="_blank" rel="noopener">0009-0002-1794-4895</a></p>
-
-**Zenodo community**: [Anthropie Working Papers](https://zenodo.org/communities/anthropie-working-papers)
+<p class="orcid-link"><a href="https://orcid.org/0009-0002-1794-4895" target="_blank" rel="noopener">ORCID</a> · <a href="https://scholar.google.com/citations?user=J4NqzwSfrHAC" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://zenodo.org/communities/anthropie-working-papers" target="_blank" rel="noopener">Zenodo</a></p>
 
 ### Anthropie Working Papers
 
