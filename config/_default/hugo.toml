@@ -43,20 +43,9 @@ disableKinds = ["taxonomy", "term"]
   url = "/en/a-propos/"
   weight = 40
 
-[author]
-  name = "Stéphane Lalut"
-  orcid = "0009-0002-1794-4895"
-
 [params]
   description = "L'anthropie : hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. Stéphane Lalut, économiste."
   canonicalDefinition = "L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent."
-  orcid = "0009-0002-1794-4895"
-  zenodoCommunity = "https://zenodo.org/communities/anthropie-working-papers"
-
-[params.author]
-  name = "Stéphane Lalut"
-  title = "Économiste — Chercheur indépendant et essayiste"
-  orcid = "0009-0002-1794-4895"
 
 [params.design]
   hero_h1_size = "clamp(36px, 5vw, 56px)"

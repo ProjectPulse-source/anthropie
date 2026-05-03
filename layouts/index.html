@@ -3,9 +3,11 @@
 {{/* ══════════ Section 1 — Hero ══════════ */}}
 <section class="home-hero">
   <div class="hero-main">
-    <p class="eyebrow">
-      {{ with .Site.Params.author.title }}{{ . }}{{ end }}
-    </p>
+    {{- $jobTitle := site.Data.author.author.jobTitleFr -}}
+    {{- if eq .Lang "en" -}}
+      {{- $jobTitle = site.Data.author.author.jobTitleEn -}}
+    {{- end -}}
+    <p class="eyebrow">{{ $jobTitle }}</p>
     <h1 class="hero__h1">
       {{ if eq .Lang "en" }}
         Order is not created. Disorder is displaced.

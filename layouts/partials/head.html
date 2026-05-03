@@ -124,13 +124,18 @@
 {{- $dp := "" -}}
 {{- with .Params.publication_date -}}{{- $dp = printf "%v" . -}}{{- end -}}
 {{- if not $dp -}}{{- $dp = .Date.Format "2006-01-02" -}}{{- end -}}
+{{- $orcid := false -}}
+{{- range site.Data.author.author.sameAs -}}
+  {{- if eq .key "orcid" -}}{{- $orcid = . -}}{{- end -}}
+{{- end -}}
+{{- $authorProfileUrl := replace site.Data.author.author.canonicalProfileUrl "#person" "" -}}
 {{- $article := dict
     "@context" "https://schema.org"
     "@type" "ScholarlyArticle"
     "headline" .Title
     "image" "https://m.media-amazon.com/images/I/81kdsh4400L._SL1436_.jpg"
     "description" .Description
-    "author" (dict "@type" "Person" "name" "Stéphane Lalut" "identifier" "https://orcid.org/0009-0002-1794-4895" "sameAs" "https://orcid.org/0009-0002-1794-4895" "url" "https://stephane-lalut.com/a-propos/")
+    "author" (dict "@type" "Person" "name" site.Data.author.author.name "identifier" $orcid.url "sameAs" $orcid.url "url" $authorProfileUrl)
     "datePublished" $dp
     "publisher" (dict "@type" "Organization" "name" "Stéphane Lalut" "url" "https://stephane-lalut.com")
     "identifier" (printf "https://doi.org/%s" .Params.doi_zenodo)
@@ -174,11 +179,15 @@
       "name" $pub.Title
       "url" $pub.Params.url_externe) -}}
 {{- end -}}
+{{- $orcid := false -}}
+{{- range site.Data.author.author.sameAs -}}
+  {{- if eq .key "orcid" -}}{{- $orcid = . -}}{{- end -}}
+{{- end -}}
 {{- $list := dict
     "@context" "https://schema.org"
     "@type" "ItemList"
     "name" "Publications de Stéphane Lalut"
-    "author" (dict "@type" "Person" "name" "Stéphane Lalut" "sameAs" "https://orcid.org/0009-0002-1794-4895")
+    "author" (dict "@type" "Person" "name" site.Data.author.author.name "sameAs" $orcid.url)
     "itemListElement" $items -}}
 <script type="application/ld+json">
 {{ $list | jsonify (dict "indent" "  ") | safeJS }}
