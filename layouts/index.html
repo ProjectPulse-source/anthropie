@@ -29,10 +29,15 @@
       </a>
     </div>
     <div class="credibility-strip">
-      {{ $items := .Site.Data.credibility.items }}
-      {{ range $i, $item := $items }}
-        {{ if $i }}<span class="credibility-strip__sep">·</span>{{ end }}
-        <a href="{{ $item.url }}" target="_blank" rel="noopener">{{ $item.label }}</a>
+      {{ $visibleKeys := slice "orcid" "googleScholar" "zenodoCommunity" "openalex" "wikidata" }}
+      {{ $sameAs := site.Data.author.author.sameAs }}
+      {{ range $i, $key := $visibleKeys }}
+        {{ range $sameAs }}
+          {{ if eq .key $key }}
+            {{ if $i }}<span class="credibility-strip__sep">·</span>{{ end }}
+            <a href="{{ .url }}" target="_blank" rel="noopener">{{ .label }}</a>
+          {{ end }}
+        {{ end }}
       {{ end }}
     </div>
   </div>
