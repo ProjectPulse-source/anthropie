@@ -6,7 +6,7 @@
 Site officiel : https://stephane-lalut.com
 ORCID : https://orcid.org/0009-0002-1794-4895
 Zenodo : https://zenodo.org/communities/anthropie-working-papers
-OpenAlex : https://openalex.org/authors/a5130851063
+OpenAlex : https://openalex.org/authors/A5130851063
 
 ## Cadre théorique
 

@@ -30,15 +30,15 @@
 </article>
 
 <!-- Schema.org Book -->
-{{- $orcid := false -}}
+{{- $authorUrls := slice -}}
 {{- range site.Data.author.author.sameAs -}}
-  {{- if eq .key "orcid" -}}{{- $orcid = . -}}{{- end -}}
+  {{- $authorUrls = $authorUrls | append .url -}}
 {{- end -}}
 {{- $book := dict
   "@context" "https://schema.org"
   "@type" "Book"
   "name" .Title
-  "author" (dict "@type" "Person" "name" site.Data.author.author.name "sameAs" $orcid.url)
+  "author" (dict "@type" "Person" "name" site.Data.author.author.name "url" site.Data.author.author.url "sameAs" $authorUrls)
   "description" .Description
   "inLanguage" "fr"
   "publisher" (dict "@type" "Organization" "name" "Stéphane Lalut")
