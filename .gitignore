@@ -13,3 +13,6 @@ prompt_*.txt
 
 # Rapports audit GEO (reproductibles)
 scripts/audit_geo_v2_*.md
+
+# Audit reports (generated)
+reports/
