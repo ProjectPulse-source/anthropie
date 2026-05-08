@@ -84,4 +84,19 @@ Anthropy rests on a single hypothesis — social systems displace disorder rathe
 <dd>A particular historical arrangement of anthropic transfer mechanisms. The framework identifies seven major configurations over 3.3 million years. Transfer does not repeat identically: its forms migrate. From founding systems to ancient systems, transfer remains primarily spatial; from transcontinental networks to the Machine-State, the social takes over; from industrialisation to the digital metaprogramme, the temporal and cognitive prevail. See <a href="/en/awp/awp-02/">AWP-02</a>.</dd>
 </div>
 
+<div class="glossaire-entry">
+<dt>Derisking</dt>
+<dd>Mechanism by which the state alters the risk profile of a private investment to make it attractive to institutional capital (Daniela Gabor). Derisking operates the transformation of present cost into future debt: public guarantees, long-term commitment contracts, stabilisation devices. A conceptual pivot for understanding how the investability of digital infrastructures is constructed at the price of technological debt. See <a href="/en/awp/awp-06/">AWP-06</a>.</dd>
+</div>
+
+<div class="glossaire-entry">
+<dt>Negative commons</dt>
+<dd>Category introduced by Alexandre Monnin to designate what we inherit without having chosen: waste, ruins, obsolete infrastructures. Negative commons are not goods voluntarily shared, but burdens transmitted — an anthropic transfer crystallised in the materiality of the world. AWP-06 places digital technologies among candidate negative commons. See <a href="/en/awp/awp-06/">AWP-06</a>.</dd>
+</div>
+
+<div class="glossaire-entry">
+<dt>Coupled cost registers</dt>
+<dd>AWP-06's central contribution: a testable grid of four registers — energy, matter, territory, attention — showing how digital infrastructure simultaneously displaces disorder along several irreducible axes. These registers do not add up: they couple. Reducing one often displaces toward the three others. See <a href="/en/awp/awp-06/">AWP-06</a>.</dd>
+</div>
+
 </dl>
