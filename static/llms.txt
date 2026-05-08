@@ -37,6 +37,10 @@ temps ou d'autres groupes sociaux.
   DOI : https://doi.org/10.5281/zenodo.19269486
   Page : https://stephane-lalut.com/awp/awp-05/
 
+- AWP-06 : Infrastructures numériques et dette technologique
+  DOI : https://doi.org/10.5281/zenodo.20025421
+  Page : https://stephane-lalut.com/awp/awp-06/
+
 ## Livres
 
 - ANTHROPIE – Ordre ici. Dette ailleurs (2025)

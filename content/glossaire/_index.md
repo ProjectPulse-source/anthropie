@@ -84,4 +84,19 @@ L'anthropie repose sur une hypothèse unique — les systèmes sociaux déplacen
 <dd>Agencement historique particulier des mécanismes de transfert anthropique. Le cadre distingue sept configurations majeures sur 3,3 millions d'années. Le transfert ne se répète pas à l'identique&nbsp;: ses formes migrent. Des systèmes fondateurs aux systèmes antiques, le transfert reste principalement spatial&nbsp;; des réseaux transcontinentaux à la Machine-État, le social prend le dessus&nbsp;; de l'industrialisation au métaprogramme numérique, le temporel et le cognitif l'emportent. Voir <a href="/awp/awp-02/">AWP-02</a>.</dd>
 </div>
 
+<div class="glossaire-entry">
+<dt>Derisking</dt>
+<dd>Mécanisme par lequel l'État altère le profil de risque d'un investissement privé pour le rendre attractif aux capitaux institutionnels (Daniela Gabor). Le derisking opère le passage du coût présent à la dette future&nbsp;: garanties publiques, contrats d'engagement long terme, dispositifs de stabilisation. Pivot conceptuel pour comprendre comment l'investissabilité des infrastructures numériques se construit au prix d'une dette technologique. Voir <a href="/awp/awp-06/">AWP-06</a>.</dd>
+</div>
+
+<div class="glossaire-entry">
+<dt>Communs négatifs</dt>
+<dd>Catégorie introduite par Alexandre Monnin pour désigner ce dont nous héritons sans avoir choisi&nbsp;: déchets, ruines, infrastructures obsolètes. Les communs négatifs ne sont pas des biens partagés volontairement, mais des charges transmises&nbsp;— un transfert anthropique cristallisé dans la matérialité du monde. AWP-06 range les technologies numériques parmi les communs négatifs candidats. Voir <a href="/awp/awp-06/">AWP-06</a>.</dd>
+</div>
+
+<div class="glossaire-entry">
+<dt>Registres de coûts couplés</dt>
+<dd>Apport central d'AWP-06&nbsp;: grille testable des quatre registres&nbsp;— énergie, matière, territoire, attention&nbsp;— qui montre comment l'infrastructure numérique déplace simultanément le désordre selon plusieurs axes irréductibles. Ces registres ne s'additionnent pas&nbsp;: ils se couplent. Réduire l'un déplace souvent vers les trois autres. Voir <a href="/awp/awp-06/">AWP-06</a>.</dd>
+</div>
+
 </dl>
