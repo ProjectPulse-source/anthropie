@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Stack
 
-Static site for **anthropie.fr** (Stéphane Lalut, économiste). Hugo Extended **0.147.0**, Sass natif Hugo, vanilla JS, **zéro dépendance npm**. Decap CMS via GitHub backend + Netlify OAuth proxy. Déployé sur GitHub Pages via `.github/workflows/hugo.yml` à chaque push sur `main`.
+Static site for **anthropie.fr** (Stéphane Lalut, économiste). Hugo Extended **0.147.0**, Sass natif Hugo, vanilla JS, **zéro dépendance npm**. Déployé sur GitHub Pages via `.github/workflows/hugo.yml` à chaque push sur `main`.
 
 ## Commandes
 
@@ -47,10 +47,6 @@ Les sections `presse/`, `glossaire/`, `a-propos/`, `quest-ce-que-lanthropie/`, `
 ## CSS
 
 Point d'entrée `assets/scss/main.scss` qui importe les partials `_variables`, `_typography`, `_layout`, `_components`, `_hero`, `_academic`, `_book-single`, `_publication-card`, `_related-awp`, `_amazon-button`, `_anthropie-bg`, `_how-to-cite`, `_awp-single`, `_serie-awp`, `_home`. Les paramètres de design exposés à Hugo (taille H1 hero, gabarit emblème livre) vivent sous `[params.design]` dans `hugo.toml` — modifier là plutôt qu'en dur dans le SCSS quand la valeur est référencée par un template.
-
-## CMS
-
-`static/admin/config.yml` (Decap) référence `[USERNAME]` (compte GitHub) et `[NETLIFY-SITE]` (proxy OAuth) — placeholders à remplacer avant déploiement réel du CMS.
 
 ## Conventions de contenu
 
