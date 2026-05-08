@@ -30,6 +30,7 @@ translation:
 related:
   - awp-02
   - awp-03
+  - awp-06
 related_book: "anthropie-ordre-ici-dette-ailleurs"
 ---
 
