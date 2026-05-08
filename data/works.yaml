@@ -1,0 +1,601 @@
+# =============================================================================
+# data/works.yaml — Registre canonique des œuvres (v1.1)
+# =============================================================================
+#
+# SOURCE DE VÉRITÉ UNIQUE pour toutes les œuvres de Stéphane Lalut.
+# Maintenu MANUELLEMENT. Jamais régénéré automatiquement.
+# Le script d'audit lit ce fichier mais ne l'écrit JAMAIS.
+#
+# PORTÉE :
+#   - AWPs : tous (6)
+#   - Livres : tous (2)
+#   - Articles : publiés + acceptés_en_attente + in_review STRATÉGIQUES
+#     (anglophones internationaux, peer-reviewed académiques).
+#   - Le tracker complet (refusés, abandonnés, pitches, in_review autres)
+#     reste registre_soumissions_v73.xlsx.
+#
+# CONVENTIONS :
+#   - Dates : ISO 8601 (YYYY-MM-DD)
+#   - DOIs : sans préfixe https://doi.org/
+#   - URLs : https complet
+#   - Statuts : published | accepted_pending | in_review | deferred | rejected
+#   - "# verify" : valeur probable mais à confirmer
+#   - "# todo"   : valeur manquante à compléter
+#
+# Version : 1.1
+# Dernière mise à jour : 2026-05-08
+# Source registre : registre_soumissions_v73.xlsx
+# =============================================================================
+
+meta:
+  registry_version: "1.1"
+  last_updated: "2026-05-08"
+  maintainer: "Stéphane Lalut"
+  total_works: 32
+  source_registry: "registre_soumissions_v73.xlsx"
+  changelog:
+    v1_1: |
+      Intégration registre v73 (2026-05-08) :
+      - 5 articles ACCEPTÉS supplémentaires (Revue du MAUSS, Droit & Société,
+        Critique-Minuit, Raisons politiques, EaN Neel/Chavez)
+      - 4 articles in_review STRATÉGIQUES (NLR, Jacobin, Cahiers d'éco
+        politique, Économie et institutions)
+      - 1 recension imminente (Lectures Ridde, envoi prévu 25/05/2026)
+      - Correction URL Lectures Kaba : lectures/70897 (publi 2026-04-14)
+      - Correction titre Projet : "La commune, variable d'ajustement"
+
+# -----------------------------------------------------------------------------
+
+author:
+  canonical_name: "Stéphane Lalut"
+  affiliation_label: "Independent Researcher"
+  affiliation_label_fr: "Chercheur indépendant"
+  orcid: "0009-0002-1794-4895"
+  openalex: "A5130851063"
+  ssrn_profile: "11065608"
+  wikidata_person: "Q138909233"
+  wikidata_concept: "Q138827949"
+  google_scholar: "J4NqzwSfrHAC"
+  idref: "283054085"
+  email_public: "stephane-lalut@outlook.fr"
+  site: "https://stephane-lalut.com"
+
+# -----------------------------------------------------------------------------
+
+works:
+
+  # ===========================================================================
+  # ANTHROPIE WORKING PAPERS (6)
+  # ===========================================================================
+
+  - id: awp-01
+    type: awp
+    series: "Anthropie Working Papers"
+    series_number: 1
+    canonical_title:
+      fr: "Qu'est-ce que l'anthropie ? Principes d'une hypothèse"
+      en: "What is Anthropy? Principles of a Hypothesis"
+    publication_date: "2026-02-01"  # verify
+    license: "CC-BY 4.0"
+    abstract:
+      fr: "Présente le cadre théorique de l'anthropie : l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. Pose les trois questions opératoires : qui crée l'ordre, qui absorbe le désordre, quel dispositif rend ce transfert invisible."
+      en: "Introduces the theoretical framework of anthropy: the hypothesis that social systems displace disorder rather than resolve it."
+    keywords: [anthropie, anthropy, déplacement du désordre, hypothèse théorique, économie politique]
+    jel_codes: [B41, D62]  # verify
+    deposits:
+      zenodo_fr: { doi: "10.5281/zenodo.19266862", url: "https://doi.org/10.5281/zenodo.19266862", status: published }
+      zenodo_en: { doi: "10.5281/zenodo.19431208", url: "https://doi.org/10.5281/zenodo.19431208", status: published }
+      ssrn_en: { abstract_id: "6543618", doi: "10.2139/ssrn.6543618", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6543618", status: approved }
+      mpra_en: { item_id: "", url: "", status: in_review, deposit_date: "2026-04-07" }  # todo item_id
+    site_pages: { fr: "", en: "" }  # verify URLs
+    google_scholar:
+      visible: true
+      citations_observed: 4
+      citation_pattern: "auto-circulation présumée (cité par AWP-02 à 06)"
+    notes: "Premier AWP. Fondateur du cadre théorique."
+
+  - id: awp-02
+    type: awp
+    series: "Anthropie Working Papers"
+    series_number: 2
+    canonical_title:
+      fr: "3,3 millions d'années en un principe : l'anthropie dans la longue durée"
+      en: "3.3 million years distilled into one principle: anthropy in the longue durée"
+    publication_date: "2026-03"  # verify
+    license: "CC-BY 4.0"
+    abstract:
+      fr: "L'anthropie est observable sur 3,3 millions d'années (de l'outil de pierre au data center). Les modalités du transfert anthropique migrent à mesure que les espaces de déportation se saturent : du spatial au social, puis du social au temporel et cognitif."
+      en: "Anthropy is observable over 3.3 million years (from stone tools to data centres). Anthropic transfer modalities migrate as displacement spaces become saturated."
+    keywords: [anthropie, anthropy, longue durée, longue duration, histoire économique]
+    jel_codes: [B41, N00]  # verify
+    deposits:
+      zenodo_fr: { doi: "10.5281/zenodo.19268037", url: "https://doi.org/10.5281/zenodo.19268037", status: published }
+      zenodo_en: { doi: "10.5281/zenodo.19433086", url: "https://doi.org/10.5281/zenodo.19433086", status: published, date: "2026-04-06" }
+      ssrn_en: { abstract_id: "6615059", doi: "10.2139/ssrn.6615059", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6615059", status: approved }
+      mpra_en: { item_id: "", url: "", status: in_review, deposit_date: "2026-04-07" }  # todo
+    site_pages: { fr: "", en: "" }  # verify
+    google_scholar:
+      visible: true
+      citations_observed: 3
+      citation_pattern: "auto-circulation confirmée 2026-05-08 (cité par AWP-03/04/05). Fantôme fusionné."
+      title_drift_note: "Entrée fantôme 'Single Principle... Long Duration' fusionnée le 2026-05-08."
+    notes: "Pour AWPs futurs : titre canonique exact en référence bibliographique."
+
+  - id: awp-03
+    type: awp
+    series: "Anthropie Working Papers"
+    series_number: 3
+    canonical_title:
+      fr: "Dette publique et anthropie : qui paie vraiment le désordre ?"
+      en: "Public Debt and Anthropy: Who Really Pays for Disorder?"  # verify
+    publication_date: "2026-03"  # verify
+    license: "CC-BY 4.0"
+    abstract:
+      fr: "La dette publique française appliquée comme dispositif de transfert anthropique sur quatre circuits simultanés. Données INSEE, Cour des comptes, DREES, BCE."
+      en: "French public debt applied as an anthropic transfer apparatus across four simultaneous circuits."
+    keywords: [dette publique, public debt, anthropie, transfert]
+    jel_codes: [E62, H50, H60, H62, H63]  # verify
+    deposits:
+      zenodo_fr: { doi: "10.5281/zenodo.19268769", url: "https://doi.org/10.5281/zenodo.19268769", status: published }
+      zenodo_en: { doi: "10.5281/zenodo.19434094", url: "https://doi.org/10.5281/zenodo.19434094", status: published }
+      ssrn_en: { abstract_id: "6615278", doi: "10.2139/ssrn.6615278", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6615278", status: approved }
+      mpra_en: { item_id: "", url: "", status: in_review, deposit_date: "2026-04-07" }  # todo
+    site_pages: { fr: "", en: "" }  # verify
+    google_scholar:
+      visible: true
+      citations_observed: 2
+      citation_pattern: "auto-circulation présumée"
+    derived_articles: [art-economie-institutions-2026-04]
+    notes: "Base de la soumission peer-reviewed à Économie et institutions (item 50 du registre v73)."
+
+  - id: awp-04
+    type: awp
+    series: "Anthropie Working Papers"
+    series_number: 4
+    canonical_title:
+      fr: "Transition énergétique ou transfert entropique ?"
+      en: "Energy Transition, or Anthropic Transfer?"
+    publication_date: "2026-03"  # verify
+    license: "CC-BY 4.0"
+    abstract:
+      fr: "La transition énergétique reproduit le mécanisme anthropique (déplacement du fossile vers le minier, du carbone atmosphérique vers la dette technologique)."
+      en: "The energy transition reproduces the anthropic mechanism."
+    keywords: [transition énergétique, energy transition, anthropie, extractivisme, effet rebond]
+    jel_codes: [Q40, Q55, Q56]  # verify
+    deposits:
+      zenodo_fr: { doi: "10.5281/zenodo.19269244", url: "https://doi.org/10.5281/zenodo.19269244", status: published }
+      zenodo_en: { doi: "10.5281/zenodo.19439921", url: "https://doi.org/10.5281/zenodo.19439921", status: published }
+      ssrn_en: { abstract_id: "6615305", doi: "10.2139/ssrn.6615305", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6615305", status: approved }
+      mpra_en: { item_id: "", url: "", status: in_review, deposit_date: "2026-04-07" }  # todo
+    site_pages: { fr: "", en: "" }  # verify
+    google_scholar:
+      visible: true
+      citations_observed: 1
+      citation_pattern: "auto-circulation présumée"
+
+  - id: awp-05
+    type: awp
+    series: "Anthropie Working Papers"
+    series_number: 5
+    canonical_title:
+      fr: "Penser hors les murs : notes sur la recherche indépendante en économie"
+      en: "Thinking Beyond the Walls"
+    publication_date: "2026-03"  # verify
+    license: "CC-BY 4.0"
+    abstract:
+      fr: "Application réflexive du cadre anthropique au champ académique en sciences sociales. Cas empirique : controverse AFEP/CNU."
+      en: "Reflexive application of the anthropic framework to the academic field. Empirical case: AFEP/CNU controversy."
+    keywords: [recherche indépendante, sociologie des sciences, infrastructures ouvertes, AFEP, CNU]
+    jel_codes: [A11, B41]  # verify
+    deposits:
+      zenodo_fr: { doi: "10.5281/zenodo.19269486", url: "https://doi.org/10.5281/zenodo.19269486", status: published }
+      zenodo_en: { doi: "10.5281/zenodo.19440866", url: "https://doi.org/10.5281/zenodo.19440866", status: published }
+      ssrn_en: { abstract_id: "6615438", doi: "10.2139/ssrn.6615438", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6615438", status: approved }
+      mpra_en: { item_id: "", url: "", status: in_review, deposit_date: "2026-04-07" }  # todo
+    site_pages: { fr: "", en: "" }  # verify
+    google_scholar: { visible: true, citations_observed: 0 }
+    notes: "Charte stratégique implicite — toute action de diffusion doit rester défendable sous AWP-05."
+
+  - id: awp-06
+    type: awp
+    series: "Anthropie Working Papers"
+    series_number: 6
+    canonical_title:
+      fr: "Infrastructures numériques et dette technologique : data centers, IA et déplacement du désordre"
+      en: "Digital Infrastructures and Technological Debt: Data Centers, AI, and the Displacement of Disorder"
+    publication_date: "2026-05-07"
+    license: "CC-BY 4.0"
+    abstract:
+      fr: "Application du cadre anthropique aux infrastructures numériques contemporaines. Articulation derisking (Gabor) et État de marché à crédit discipliné (Lemoine). Grille testable des quatre registres de coûts couplés (énergie, matière, territoire, attention)."
+      en: "Application of the anthropic framework to contemporary digital infrastructures. A testable grid of four coupled cost registers."
+    keywords: [data centers, AI, anthropy, derisking, technological debt, digital infrastructures]
+    jel_codes: [L86, Q55, L96, Q56, O33]
+    deposits:
+      zenodo_fr: { doi: "10.5281/zenodo.20025421", url: "https://doi.org/10.5281/zenodo.20025421", status: published, date: "2026-05-07" }
+      zenodo_en: { doi: "10.5281/zenodo.20077993", url: "https://doi.org/10.5281/zenodo.20077993", status: published, date: "2026-05-08" }
+      ssrn_en: { abstract_id: "6735581", doi: "10.2139/ssrn.6735581", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6735581", status: in_review, submission_date: "2026-05-08" }
+      mpra_en: { item_id: "129034", url: "https://mpra.ub.uni-muenchen.de/id/eprint/129034", status: in_review, deposit_date: "2026-05-08" }
+    site_pages: { fr: "", en: "" }  # à créer
+    google_scholar: { visible: false, citations_observed: 0 }
+    notes: "AWP le plus récent. Bibliographies utilisent titres canoniques exacts."
+
+  # ===========================================================================
+  # LIVRES (2)
+  # ===========================================================================
+
+  - id: book-anthropie
+    type: book
+    canonical_title:
+      fr: "ANTHROPIE — Ordre ici. Dette ailleurs"
+      en: "ANTHROPY — Order Here, Debt Elsewhere"  # verify
+    publication_date: "2025-09"  # verify
+    isbn: "978-2-9586347-2-8"
+    pages: 606
+    publisher: "Auto-édition"
+    distribution: "Amazon KDP"
+    license: ""  # à préciser
+    wikidata: "Q138827344"
+    abstract:
+      fr: "Ouvrage fondateur du cadre anthropique. 606 pages avec applications historiques, économiques, politiques, écologiques."
+      en: ""  # à compléter
+    keywords: [anthropie, anthropy, économie politique, dette, ordre social, transfert]
+    site_pages: { fr: "", en: "" }  # à créer — chantier P3
+    purchase_url: ""  # todo
+    google_scholar:
+      visible: true
+      citations_observed: 4
+      title_observed: "ANTHROPY—Order here / Debt elsewhere"
+    notes: "Source longue du cadre. Stratégie : AWP EN → site → page livre EN → Amazon (sobre)."
+
+  - id: book-dette-publique
+    type: book
+    canonical_title:
+      fr: "Dette Publique : Qui paie vraiment ?"
+      en: "Public Debt: Who Really Pays?"  # verify
+    publication_date: "2025"  # verify
+    isbn: "978-2-9586347-3-5"
+    pages: 0  # todo
+    publisher: "Auto-édition"
+    distribution: "Amazon KDP"
+    license: ""  # à préciser
+    wikidata: ""  # à créer ou identifier
+    abstract:
+      fr: "Application focalisée du cadre anthropique à la dette publique française. Lien direct avec AWP-03."
+      en: ""  # à compléter
+    keywords: [dette publique, anthropie, transfert, économie publique, France]
+    site_pages: { fr: "", en: "" }  # à créer — chantier P3
+    purchase_url: ""  # todo
+    google_scholar:
+      visible: false
+      citations_observed: 0
+      notes: "Absent de Google Scholar — à investiguer après pages livres EN."
+    related_works: [awp-03]
+
+  # ===========================================================================
+  # ARTICLES PUBLIÉS — URL stable (10)
+  # ===========================================================================
+
+  - id: art-terrestres-2026-01
+    type: article
+    status: published
+    canonical_title: { fr: "Résister à la dématérialisation depuis Marseille" }
+    publication_date: "2026-01-22"
+    publisher: "Terrestres"
+    publisher_type: "revue"
+    url: "https://www.terrestres.org/2026/01/22/resister-a-la-dematerialisation-depuis-marseille/"
+    related_works: [awp-06]
+    notes: "Soumis 2025-12-02 sous titre initial 'Sous le cloud, la fournaise'."
+
+  - id: art-mediapart-maprimerenov-2026-01
+    type: article
+    status: published
+    canonical_title: { fr: "MaPrimeRénov' : l'arrêt faute de budget. Les ménages modestes font les frais du gel" }
+    publication_date: "2026-01-12"
+    publisher: "Mediapart"
+    publisher_type: "journal_blog"
+    url: "https://blogs.mediapart.fr/stephane-lalut/blog/120126/maprimerenov-l-arret-faute-de-budget-les-menages-modestes-font-les-frais-du-gel"
+    sign_count: 7000
+    related_works: [awp-03]
+
+  - id: art-mediapart-budget2026-2026-01
+    type: article
+    status: published
+    canonical_title: { fr: "Budget 2026 : la dette commande, les territoires patientent" }
+    publication_date: "2026-01-15"
+    publisher: "Mediapart"
+    publisher_type: "journal_blog"
+    url: "https://blogs.mediapart.fr/stephane-lalut/blog/150126/budget-2026-la-dette-commande-les-territoires-patientent"
+    sign_count: 6700
+    related_works: [awp-03]
+
+  - id: art-ean-christophers-2026-01
+    type: article
+    status: published
+    canonical_title: { fr: "Le prix ne fait pas le profit — Brett Christophers et l'impasse du capitalisme vert" }
+    publication_date: "2026-01-20"
+    publisher: "En attendant Nadeau"
+    publisher_type: "revue"
+    url: "https://www.en-attendant-nadeau.fr/2026/01/20/le-prix-ne-fait-pas-le-profit-brett-christophers/"
+    sign_count: 9000
+    related_works: [awp-04]
+    notes: "Recension The Price Is Wrong (Verso, 2024)."
+
+  - id: art-nonfiction-fressoz-2026-02
+    type: article
+    status: published
+    canonical_title: { fr: "La transition énergétique n'a jamais eu lieu" }
+    publication_date: "2026-02-04"  # verify
+    publisher: "Nonfiction"
+    publisher_type: "portail"
+    url: "https://www.nonfiction.fr/article-12589-la-transition-energetique-na-jamais-eu-lieu.htm"
+    related_works: [awp-04]
+    notes: "Recension Fressoz, Sans transition."
+
+  - id: art-letemps-suisse-2026-02
+    type: article
+    status: published
+    canonical_title: { fr: "Le 8 mars, la Suisse vote l'allègement — mais qui en supporte la charge ?" }
+    publication_date: "2026-02-26"  # verify
+    publisher: "Le Temps"
+    publisher_type: "quotidien"
+    url: ""  # todo : récupérer URL
+    sign_count: 8500
+    related_works: [awp-03]
+
+  - id: art-altecon-teletravail-2026-03
+    type: article
+    status: published
+    canonical_title: { fr: "Comment les coûts du télétravail se sont déplacés vers les salariés" }
+    publication_date: "2026-03-16"  # verify
+    publisher: "Alternatives Économiques"
+    publisher_type: "magazine"
+    url: "https://www.alternatives-economiques.fr/comment-les-couts-du-teletravail-se-sont-deplaces-vers-les-salaries/00117769"
+    sign_count: 8000
+
+  - id: art-laviedesidees-khalili-2026-03
+    type: article
+    status: published
+    canonical_title: { fr: "Qui paie la fluidité ?" }
+    publication_date: "2026-03-16"  # verify
+    publisher: "La Vie des Idées"
+    publisher_type: "revue"
+    url: "https://laviedesidees.fr/Laleh-Khalili-Extractive-Capitalism"
+    sign_count: 10000
+    related_works: [awp-04]
+    notes: "Recension Khalili, Extractive Capitalism (Profile Books, 2025)."
+
+  - id: art-ean-cartonmalm-2026-03
+    type: article
+    status: published
+    canonical_title: { fr: "La limite retournée" }
+    publication_date: "2026-03-24"
+    publisher: "En attendant Nadeau"
+    publisher_type: "revue"
+    url: "https://www.en-attendant-nadeau.fr/2026/03/24/la-limite-retournee/"
+    related_works: [awp-04]
+    notes: "Recension Carton & Malm, Overshoot."
+
+  - id: art-lectures-kaba-2026-04
+    type: article
+    status: published
+    canonical_title: { fr: "Arnaud Kaba, La main et l'esprit. Valeurs du travail chez les ouvriers métallurgistes de Bhopal" }
+    publication_date: "2026-04-14"
+    publisher: "Lectures"
+    publisher_type: "revue_acad"
+    url: "https://journals.openedition.org/lectures/70897"
+    doi: ""  # à compléter format DOI OpenEdition exact
+    sign_count: 7400
+    google_scholar: { visible: true, citations_observed: 0 }
+    notes: "Recension de commande. Visible sur Google Scholar."
+
+  # ===========================================================================
+  # ARTICLES ACCEPTÉS — EN ATTENTE DE PUBLICATION (9)
+  # ===========================================================================
+
+  - id: art-projet-municipales-2026-06
+    type: article
+    status: accepted_pending
+    canonical_title: { fr: "La commune, variable d'ajustement de la République" }  # titre final
+    publication_date: "2026-06"  # parution annoncée ~20 juin 2026
+    publisher: "Revue Projet"
+    publisher_type: "revue"
+    url: ""  # à compléter dès publication
+    notes: "Acceptation Benoît Hervieu-Léger. Copie éditée révisée 11/04/2026. Parution Variations juin-juillet."
+
+  - id: art-rfse-lemoine-2026
+    type: article
+    status: accepted_pending
+    canonical_title: { fr: "Recension Lemoine, Chasseurs d'États (La Découverte, 2024)" }
+    publication_date: ""
+    publisher: "RFSE"
+    publisher_type: "revue_acad"
+    url: ""
+    related_works: [awp-03]
+    notes: "Accepté Igor Martinache."
+
+  - id: art-regulation-aglietta-2026
+    type: article
+    status: accepted_pending
+    canonical_title: { fr: "De la tragédie des communs à la dette écologique : Aglietta et Espagne refondent l'économie politique de la nature" }
+    publication_date: ""
+    publisher: "Revue de la régulation"
+    publisher_type: "revue_acad"
+    url: ""
+    sign_count: 12500
+    related_works: [awp-04]
+
+  - id: art-mauss-dette-somatique-2026
+    type: article
+    status: accepted_pending
+    canonical_title: { fr: "La dette somatique" }
+    publication_date: ""
+    publisher: "Revue du MAUSS"
+    publisher_type: "revue_acad"
+    url: ""
+    notes: "Acceptée avec modifs mineures (Fabien Robertson). Version révisée envoyée 07/05/2026."
+
+  - id: art-droitsociete-contrat-travail-2026
+    type: article
+    status: accepted_pending
+    canonical_title: { fr: "Le contrat de travail comme dispositif d'allocation des risques. Subordination, plateformes et répartition des charges" }
+    publication_date: ""
+    publisher: "Droit & Société"
+    publisher_type: "revue_acad"
+    url: ""
+    sign_count: 41000
+    notes: "Évaluation pairs. Acceptée avec modifs majeures (synthèse L. Burlat 23/04/2026). Version révisée 08/06/2026."
+
+  - id: art-critique-minuit-sasson-2026
+    type: article
+    status: accepted_pending
+    canonical_title: { fr: "Justice sans État. Sur The Solidarity Economy de Tehila Sasson" }
+    publication_date: ""
+    publisher: "Critique"
+    publisher_type: "revue"
+    publisher_house: "Éditions de Minuit"
+    url: ""
+    sign_count: 13000
+    notes: "Recension-essai. Acceptation Thierry Hoquet 24/04/2026. Version définitive envoyée 27/04/2026."
+
+  - id: art-raisonspolitiques-jaeggi-2026
+    type: article
+    status: accepted_pending
+    canonical_title: { fr: "Rahel Jaeggi, Critique des formes de vie" }
+    publication_date: "2026"  # ~T3-T4 2026
+    publisher: "Raisons politiques"
+    publisher_type: "revue_acad"
+    publisher_house: "Presses de Sciences Po"
+    url: ""
+    sign_count: 15000
+    notes: "Lecture critique. Acceptation L. Antonicelli 08/05/2026."
+
+  - id: art-ean-welgryn-2026
+    type: article
+    status: accepted_pending
+    canonical_title: { fr: "IA : Le grand enfumage (Welgryn / Alves Da Costa)" }
+    publication_date: ""
+    publisher: "En attendant Nadeau"
+    publisher_type: "revue"
+    url: ""
+    sign_count: 9600
+    related_works: [awp-06]
+    notes: "Recension commandée. Texte finalisé 08/04/2026."
+
+  - id: art-ean-neelchavez-2026-05
+    type: article
+    status: accepted_pending
+    canonical_title: { fr: "Recension Neel & Chavez, Fabrique et forêt. Science et fiction du communisme" }
+    publication_date: ""
+    publisher: "En attendant Nadeau"
+    publisher_type: "revue"
+    url: ""
+    sign_count: 9430
+    notes: "Recension commande Marianne Dautrey. Envoi 11/05/2026."
+
+  # ===========================================================================
+  # ARTICLES IN_REVIEW STRATÉGIQUES (5)
+  # Manuscrits substantiels chez cibles haut-stake (anglophones internationaux,
+  # peer-reviewed académiques). Inclus car représentent trajectoires éditoriales
+  # engagées et significatives pour le graphe académique.
+  # ===========================================================================
+
+  - id: art-nlr-municipality-trap-2026-04
+    type: article
+    status: in_review
+    canonical_title: { en: "The Municipality Trap" }
+    submission_date: "2026-04-12"
+    publisher: "New Left Review"
+    publisher_type: "revue_int"
+    publisher_country: "UK"
+    url: ""
+    word_count: 3862
+    language: en
+    notes: "PREMIÈRE percée éditoriale anglophone substantielle. Politique NLR : 8 sem. silence = refus tacite (date limite 2026-06-07)."
+
+  - id: art-jacobin-decarbonization-2026-04
+    type: article
+    status: in_review
+    canonical_title: { en: "When the State Outsources Decarbonization, Households Pay" }
+    submission_date: "2026-04-14"
+    publisher: "Jacobin"
+    publisher_type: "magazine_int"
+    publisher_country: "US"
+    url: ""
+    word_count: 1574
+    language: en
+    notes: "Triangulation FR/UK/US sur rebate politics. Exclusivité formelle. Abandon prévu J+28 = 2026-05-12."
+
+  - id: art-cahiers-eco-pol-pigou-2026-04
+    type: article
+    status: in_review
+    canonical_title: { fr: "La commensurabilité comme condition de l'externalité : relire Pigou" }
+    submission_date: "2026-04-13"
+    publisher: "Cahiers d'économie politique"
+    publisher_type: "revue_acad"
+    publisher_house: "Hermann"
+    url: ""
+    word_count: 8700
+    jel_codes: [B31, B41, H23, Q58]
+    language: fr
+    notes: "Article HPE. Rang 3 CNRS section 37. Peer review double aveugle. PREMIÈRE soumission revue à comité théorique."
+
+  - id: art-economie-institutions-2026-04
+    type: article
+    status: in_review
+    canonical_title: { fr: "La dette publique comme configuration institutionnelle de transfert des coûts" }
+    submission_date: "2026-04-10"
+    publisher: "Économie et institutions"
+    publisher_type: "revue_acad"
+    url: ""
+    sign_count: 48000
+    language: fr
+    related_works: [awp-03]
+    notes: "Article peer-reviewed. Pré-publication Zenodo CC BY 4.0 explicitement référencée (AWP-03). Délai EI moyen 24 sem. PREMIÈRE soumission revue à comité explicitement adossée à un AWP."
+
+  - id: art-lectures-ridde-2026-05
+    type: article
+    status: in_review
+    canonical_title: { fr: "Recension Valéry Ridde — La financiarisation de la santé au Sénégal (1840-1960)" }
+    submission_date: "2026-05-25"  # envoi programmé
+    publisher: "Lectures"
+    publisher_type: "revue_acad"
+    url: ""
+    sign_count: 8970
+    notes: "2e parcours Lectures. Commande Barbara Blum. Manuscrit prêt (V1.6.2). Envoi programmé."
+
+# =============================================================================
+# CHANTIER DE COMPLETION (à faire par Stéphane)
+# =============================================================================
+#
+# CHAMPS À COMPLÉTER :
+#
+# 1. MPRA item_id pour AWP-01 à 05 (consultables sur ton compte MPRA)
+# 2. Dates publication précises AWPs FR (métadonnées Zenodo)
+# 3. Codes JEL exacts AWP-01 à 05 (depuis tes choix de dépôt)
+# 4. URLs pages site existantes pour chaque AWP
+# 5. ISBN, date précise, formulation EN canonique pour les 2 livres
+# 6. URL Le Temps pour article Suisse votations
+# 7. DOI OpenEdition exact pour Lectures Kaba
+#
+# PROTOCOLE DE MAINTENANCE PERMANENTE :
+#
+# 8. À chaque approbation/refus de soumission in_review : mettre à jour
+#    le status (in_review → published / accepted_pending / rejected).
+#    En cas de rejet : supprimer l'entrée du registre canonique (elle
+#    reste dans le registre Excel pour mémoire).
+#
+# 9. SSRN AWP-06 approuvé : modifier deposits.ssrn_en.status ; idem MPRA.
+#
+# 10. Nouvelle publication/acceptation : ajouter entrée. Mettre à jour
+#     total_works dans meta. Incrémenter registry_version.
+#
+# 11. À chaque mise à jour : changer last_updated.
+#
+# RAPPEL CRITIQUE :
+#
+# Le script d'audit (P2 à venir) LIT ce fichier et compare avec l'état
+# observé sur les plateformes (ORCID, OpenAlex, Google Scholar, Zenodo,
+# SSRN, MPRA). Il signale les divergences mais NE MODIFIE JAMAIS ce fichier.
+# La canonicité est humaine.
+#
+# =============================================================================
