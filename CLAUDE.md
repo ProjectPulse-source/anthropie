@@ -63,7 +63,7 @@ Procédure compacte documentée dans [`docs/CHECKLIST_AJOUT_AWP.md`](docs/CHECKL
 Ce dépôt suit la doctrine cross-projets définie dans
 `~/.claude/CLAUDE.md` (lue par Claude Code à chaque session).
 
-Avant tout patch, lecture obligatoire dans cet ordre :
+Avant tout patch substantiel, lecture obligatoire dans cet ordre :
 
 1. `PROJECT_STATUS.md`
 2. ce fichier (`CLAUDE.md`) pour les conventions locales
