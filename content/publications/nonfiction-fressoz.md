@@ -7,6 +7,6 @@ url_externe: "https://www.nonfiction.fr/article-12589-la-transition-energetique-
 image_type: "logo"
 chapo: "Les énergies ne se remplacent pas : elles s'empilent. Fressoz déconstruit le récit de la « transition » et oblige à repenser nos usages."
 chapo_en: "Energy sources don't replace each other: they pile up. Fressoz dismantles the \"transition\" narrative and forces a rethink of our energy use."
-related: [awp-04]
+related: [awp-04, awp-06]
 related_book: anthropie-ordre-ici-dette-ailleurs
 ---
