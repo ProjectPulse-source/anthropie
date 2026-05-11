@@ -46,6 +46,19 @@
   color: var(--color-pivot);
 }
 
+// Hero h1 — moitiés sémantiques (lead navy + statement italique pivot)
+.hero__lead {
+  // Hérite tout de .hero__h1 (font, size, color, line-height) ;
+  // structurel uniquement, aucune surcharge.
+}
+
+.hero__statement {
+  font-style: italic;
+  color: var(--color-pivot);
+  // Aucune surcharge de font-size, font-family, font-weight,
+  // line-height, letter-spacing, max-width.
+}
+
 .hero__lede {
   font-family: var(--font-serif); font-size: var(--fs-body);
   line-height: var(--lh-body); max-width: 540px;
