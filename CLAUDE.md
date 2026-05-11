@@ -58,6 +58,30 @@ Procédure compacte documentée dans [`docs/CHECKLIST_AJOUT_AWP.md`](docs/CHECKL
 4. **Maillage publications** : si l'AWP prolonge une fiche `content/publications/*.md`, ajouter `awp-NN` au champ `related:` du frontmatter, ordre chronologique croissant.
 5. **Pas de traduction `.en.md` pour `content/publications/`** : choix éditorial, fallback multilingue Hugo.
 
+## Méthodologie de patch
+
+Toute intervention non-triviale sur ce repo suit la doctrine globale
+définie dans `%USERPROFILE%\.claude\CLAUDE.md` (lue par Claude Code à
+chaque session) :
+
+- Lecture PROJECT_STATUS.md en phase 0
+- Audit pur en lecture seule avant tout patch
+- Arbitrage architectural validé par l'utilisateur
+- Patch en phases avec stop points [ATTENDS VALIDATION]
+- Diffs avant chaque commit
+- Mode validation manuelle obligatoire (pas d'auto-accept)
+- No blind fixes : investiguer avant corriger
+- Inférence latérale : un défaut signale une classe
+- Test de suppression sur tout ajout
+- Commits atomiques au format conventional
+- Aucun push automatique
+
+Contextualisations propres à ce repo :
+- Linter cohérence corpus : `scripts/check-corpus-counters.py`
+- Checklist d'ajout d'AWP : `docs/CHECKLIST_AJOUT_AWP.md`
+- Convention multilingue Hugo : suffixe `.en.md` (pas sous-dossier `content/en/`)
+- Source unique d'identité auteur : `data/author.toml`
+
 ## Conventions de contenu
 
 - Typographie française : espaces insécables (`&nbsp;`) avant `:`, `;`, `?`, `!` dans les `.md` français — voir `partials/fr-typo.html` et les fichiers AWP existants.
