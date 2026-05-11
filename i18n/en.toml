@@ -13,12 +13,6 @@ other = "Economist — Independent researcher and essayist"
 [order_book]
 other = "Order this book"
 
-[translations_available]
-other = "Translations available"
-
-[original_versions]
-other = "Versions originales en français"
-
 [pub_related_label]
 other = "Extends:"
 
