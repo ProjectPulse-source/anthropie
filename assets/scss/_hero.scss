@@ -43,7 +43,7 @@
 // Mot accentué "déplacent" / "displace" — italique bleu clair
 .word-shift {
   font-style: italic;
-  color: #4a6fa5;
+  color: var(--color-pivot);
 }
 
 .hero__lede {
