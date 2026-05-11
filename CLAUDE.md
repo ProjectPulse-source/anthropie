@@ -48,6 +48,16 @@ Les sections `presse/`, `glossaire/`, `a-propos/`, `quest-ce-que-lanthropie/`, `
 
 Point d'entrée `assets/scss/main.scss` qui importe les partials `_variables`, `_typography`, `_layout`, `_components`, `_hero`, `_academic`, `_book-single`, `_publication-card`, `_related-awp`, `_amazon-button`, `_anthropie-bg`, `_how-to-cite`, `_awp-single`, `_serie-awp`, `_home`. Les paramètres de design exposés à Hugo (taille H1 hero, gabarit emblème livre) vivent sous `[params.design]` dans `hugo.toml` — modifier là plutôt qu'en dur dans le SCSS quand la valeur est référencée par un template.
 
+## Ajout d'un nouvel AWP
+
+Procédure compacte documentée dans [`docs/CHECKLIST_AJOUT_AWP.md`](docs/CHECKLIST_AJOUT_AWP.md). Points sensibles à retenir :
+
+1. **Convention multilingue par suffixe** : créer `content/awp/awp-NN.md` (FR) + `content/awp/awp-NN.en.md` (EN). Pas de bundle `content/awp/awp-NN/index.md`.
+2. **Hero index à mettre à jour manuellement** : `layouts/index.html` lignes 18-22 contient le compteur AWP écrit en lettres (FR et EN). À incrémenter à chaque ajout.
+3. **Linter de cohérence** : `python scripts/check-corpus-counters.py` doit sortir 0 avant commit. Détecte les chiffres durs obsolètes (`cinq Anthropie Working Papers` quand on passe à 6, etc.).
+4. **Maillage publications** : si l'AWP prolonge une fiche `content/publications/*.md`, ajouter `awp-NN` au champ `related:` du frontmatter, ordre chronologique croissant.
+5. **Pas de traduction `.en.md` pour `content/publications/`** : choix éditorial, fallback multilingue Hugo.
+
 ## Conventions de contenu
 
 - Typographie française : espaces insécables (`&nbsp;`) avant `:`, `;`, `?`, `!` dans les `.md` français — voir `partials/fr-typo.html` et les fichiers AWP existants.
