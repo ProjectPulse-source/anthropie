@@ -33,7 +33,7 @@
       {{ range $i, $key := $visibleKeys }}
         {{ range $sameAs }}
           {{ if eq .key $key }}
-            {{ if $i }}<span class="credibility-strip__sep">·</span>{{ end }}
+            {{ if $i }}<span class="credibility-strip__sep" aria-hidden="true"></span>{{ end }}
             <a href="{{ .url }}" target="_blank" rel="noopener">{{ .label }}</a>
           {{ end }}
         {{ end }}

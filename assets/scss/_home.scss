@@ -61,8 +61,13 @@
   }
 
   &__sep {
-    margin: 0 0.3rem;
-    color: var(--color-rule-soft);
+    display: inline-block;
+    align-self: center;
+    width: 6px;
+    height: 6px;
+    border: 1px solid var(--color-accent);
+    border-radius: 50%;
+    opacity: 0.85;
   }
 }
 
