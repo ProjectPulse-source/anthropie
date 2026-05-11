@@ -122,34 +122,53 @@
   margin-bottom: 1.5rem;
 }
 
-.axis-card {
-  padding: 1.5rem;
-  background: var(--color-bg-card);
-  border-top: 3px solid var(--color-accent);
-
-  h3 {
-    font-family: var(--font-sans);
-    font-size: var(--fs-h3);
-    font-weight: 600;
-    margin: 0 0 0.25rem;
-  }
-
-  p {
-    font-family: var(--font-serif);
-    font-size: var(--fs-small);
-    line-height: var(--lh-body);
-    color: var(--color-text-body);
-    margin: 0 0 0.5rem;
-    &:last-child { margin-bottom: 0; }
-  }
+.axes-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.axis-direction {
-  font-family: var(--font-sans) !important;
-  font-size: var(--fs-small) !important;
+.axes-node__sphere {
+  width: 100%;
+  max-width: 220px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: var(--color-bg-card);
+  border: 1.5px solid var(--color-accent);
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.axes-node__label {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
   font-weight: 500;
-  color: var(--color-accent) !important;
+  color: var(--color-accent);
+  margin: 0;
+}
+
+.axes-node__direction {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-accent);
   letter-spacing: 0.02em;
+  margin: 4px 0 0;
+}
+
+.axes-node__body {
+  font-family: var(--font-serif);
+  font-size: var(--fs-small);
+  line-height: var(--lh-body);
+  color: var(--color-text-body);
+  text-align: left;
+  margin: 16px 0 0;
+  width: 100%;
 }
 
 // ── Section 3 — AWP ──
@@ -214,6 +233,9 @@
   }
   .axis-grid {
     grid-template-columns: 1fr;
+  }
+  .axes-node__sphere {
+    max-width: 240px;
   }
   .corpus-grid {
     grid-template-columns: 1fr;

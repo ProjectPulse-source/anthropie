@@ -73,23 +73,29 @@
   </p>
 
   <div class="axis-grid">
-    <article class="axis-card">
-      <h3>{{ if eq .Lang "en" }}Spatial{{ else }}Spatial{{ end }}</h3>
-      <p class="axis-direction">{{ if eq .Lang "en" }}Centre → periphery{{ else }}Centre → périphérie{{ end }}</p>
-      <p>{{ if eq .Lang "en" }}Local order is achieved by externalizing costs to other territories: extraction, waste, heat, pollution pushed beyond the visible perimeter.{{ else }}L'ordre local s'acquiert au prix d'une externalisation vers d'autres territoires&nbsp;: métropoles, zones de consommation, centres de décision d'un côté&nbsp;; extraction, déchets, chaleur, pollutions de l'autre.{{ end }}</p>
-    </article>
+    <div class="axes-node">
+      <div class="axes-node__sphere">
+        <p class="axes-node__label">{{ if eq .Lang "en" }}Spatial{{ else }}Spatial{{ end }}</p>
+        <p class="axes-node__direction">{{ if eq .Lang "en" }}Centre → periphery{{ else }}Centre → périphérie{{ end }}</p>
+      </div>
+      <p class="axes-node__body">{{ if eq .Lang "en" }}Local order is achieved by externalizing costs to other territories: extraction, waste, heat, pollution pushed beyond the visible perimeter.{{ else }}L'ordre local s'acquiert au prix d'une externalisation vers d'autres territoires&nbsp;: métropoles, zones de consommation, centres de décision d'un côté&nbsp;; extraction, déchets, chaleur, pollutions de l'autre.{{ end }}</p>
+    </div>
 
-    <article class="axis-card">
-      <h3>{{ if eq .Lang "en" }}Temporal{{ else }}Temporel{{ end }}</h3>
-      <p class="axis-direction">{{ if eq .Lang "en" }}Present → future{{ else }}Présent → futur{{ end }}</p>
-      <p>{{ if eq .Lang "en" }}The present consumes, the future compensates. Public debt, climate debt, nuclear waste and technological debt extend today's costs toward generations that had no say.{{ else }}Le présent consomme, le futur compense. Dette publique, dette climatique, déchets nucléaires ou dette technologique prolongent aujourd'hui leurs coûts vers des générations qui n'ont pas décidé.{{ end }}</p>
-    </article>
+    <div class="axes-node">
+      <div class="axes-node__sphere">
+        <p class="axes-node__label">{{ if eq .Lang "en" }}Temporal{{ else }}Temporel{{ end }}</p>
+        <p class="axes-node__direction">{{ if eq .Lang "en" }}Present → future{{ else }}Présent → futur{{ end }}</p>
+      </div>
+      <p class="axes-node__body">{{ if eq .Lang "en" }}The present consumes, the future compensates. Public debt, climate debt, nuclear waste and technological debt extend today's costs toward generations that had no say.{{ else }}Le présent consomme, le futur compense. Dette publique, dette climatique, déchets nucléaires ou dette technologique prolongent aujourd'hui leurs coûts vers des générations qui n'ont pas décidé.{{ end }}</p>
+    </div>
 
-    <article class="axis-card">
-      <h3>Social</h3>
-      <p class="axis-direction">{{ if eq .Lang "en" }}Mobile → captive{{ else }}Mobiles → captifs{{ end }}</p>
-      <p>{{ if eq .Lang "en" }}Those with financial, legal or residential mobility transfer burdens more easily toward those who cannot refuse them: users, precarious workers, taxpayers, subcontracted labour, relegated groups.{{ else }}Ceux qui disposent de mobilité financière, juridique ou résidentielle transfèrent plus facilement les charges vers ceux qui ne peuvent pas les refuser&nbsp;: usagers, précaires, contribuables, travailleurs sous-traités, groupes relégués.{{ end }}</p>
-    </article>
+    <div class="axes-node">
+      <div class="axes-node__sphere">
+        <p class="axes-node__label">Social</p>
+        <p class="axes-node__direction">{{ if eq .Lang "en" }}Mobile → captive{{ else }}Mobiles → captifs{{ end }}</p>
+      </div>
+      <p class="axes-node__body">{{ if eq .Lang "en" }}Those with financial, legal or residential mobility transfer burdens more easily toward those who cannot refuse them: users, precarious workers, taxpayers, subcontracted labour, relegated groups.{{ else }}Ceux qui disposent de mobilité financière, juridique ou résidentielle transfèrent plus facilement les charges vers ceux qui ne peuvent pas les refuser&nbsp;: usagers, précaires, contribuables, travailleurs sous-traités, groupes relégués.{{ end }}</p>
+    </div>
   </div>
 
   <p><a href="{{ "/quest-ce-que-lanthropie/" | relLangURL }}">
