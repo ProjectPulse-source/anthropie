@@ -135,7 +135,7 @@
 
 .axes-node__sphere {
   width: 100%;
-  max-width: 220px;
+  max-width: 270px;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   background: var(--color-bg-card);
@@ -151,7 +151,7 @@
 
 .axes-node__label {
   font-family: var(--font-sans);
-  font-size: var(--fs-body);
+  font-size: 20px;
   font-weight: 500;
   color: var(--color-accent);
   margin: 0;
@@ -159,7 +159,7 @@
 
 .axes-node__direction {
   font-family: var(--font-sans);
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 400;
   color: var(--color-accent);
   letter-spacing: 0.02em;
@@ -238,9 +238,6 @@
   }
   .axis-grid {
     grid-template-columns: 1fr;
-  }
-  .axes-node__sphere {
-    max-width: 240px;
   }
   .corpus-grid {
     grid-template-columns: 1fr;
