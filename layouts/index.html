@@ -9,11 +9,8 @@
     {{- end -}}
     <p class="eyebrow">{{ $jobTitle }}</p>
     <h1 class="hero__h1">
-      {{ if eq .Lang "en" }}
-        Order is not created. Disorder is displaced.
-      {{ else }}
-        On ne crée pas l'ordre&nbsp;: on déplace le désordre.
-      {{ end }}
+      <span class="hero__lead">{{ .Params.hero_lead | safeHTML }}</span>
+      <span class="hero__statement">{{ .Params.hero_statement | safeHTML }}</span>
     </h1>
     <p class="hero__lede">
       {{ if eq .Lang "en" }}
