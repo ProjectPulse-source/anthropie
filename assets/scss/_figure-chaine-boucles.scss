@@ -22,7 +22,8 @@
 
 @media (max-width: 768px) {
   .chaine-boucles {
+    display: none;        // la double lemniscate horizontale n'a plus de sens en stack vertical mobile
     height: auto;
-    bottom: 0;            // mobile : couvre l'ensemble du triad-wrapper (sphères empilées)
+    bottom: 0;
   }
 }
