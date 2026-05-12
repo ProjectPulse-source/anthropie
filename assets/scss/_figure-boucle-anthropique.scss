@@ -1,0 +1,37 @@
+.figure-boucle-anthropique {
+  width: 100%;
+  max-width: none;  /* alignement strict sur la largeur effective des <p> du conteneur */
+  margin: 3rem 0;
+}
+
+.figure-boucle-anthropique picture,
+.figure-boucle-anthropique img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.figure-boucle-anthropique__caption {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 0.95rem;
+  font-style: italic;
+  text-align: center;
+  opacity: 0.78;
+  max-width: 720px;
+  margin: 1.25rem auto 0;
+  padding: 0 1rem;
+  line-height: 1.55;
+  color: var(--color-text, #1B2A4E);
+}
+
+/* Mobile : full-bleed sur le SVG, légende reste contenue */
+@media (max-width: 768px) {
+  .figure-boucle-anthropique picture {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+}

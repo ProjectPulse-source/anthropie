@@ -53,6 +53,10 @@ The displacement of disorder can take several forms. The framework of anthropy d
 
 These three axes are not mutually exclusive. In many configurations, they combine.
 
+In the contemporary digital metaprogram, the three axes reach a receptacle that has become central: attention. Cognitive externalization is as old as the hand, the tool, and language; tool-mediated cognition has made it possible to extend the displacement of disorder across space, across time, and between social groups. In saturated form, however, this disorder turns back toward cognition in its concrete forms — captured attention, delegated judgment, and the devices that extend them. This is not a fourth axis, but an anthropic return toward the capacity that made displacement possible.
+
+{{< boucle-anthropique >}}
+
 ## Anthropy and entropy
 
 Anthropy is not to be confused with entropy.

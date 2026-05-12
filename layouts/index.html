@@ -103,6 +103,28 @@
   </a></p>
 </section>
 
+{{/* ══════════ Section 2 bis — Frontière contemporaine ══════════ */}}
+<section class="frontiere-contemporaine">
+  <div class="frontiere-contemporaine__inner">
+    <p class="frontiere-contemporaine__eyebrow">
+      {{ if eq .Lang "en" }}A contemporary frontier{{ else }}Une frontière contemporaine{{ end }}
+    </p>
+    <h2 class="frontiere-contemporaine__title">
+      {{ if eq .Lang "en" }}Attention as receptacle{{ else }}L'attention comme réceptacle{{ end }}
+    </h2>
+    <p class="frontiere-contemporaine__lede">
+      {{ if eq .Lang "en" }}
+        With data centers and generative AI, the three axes intersect in four coupled registers: energy, matter, territory, attention. The apparent order of the interface rests on burdens displaced offstage — and attention becomes one of the receptacles in which disorder is most immediately absorbed.
+      {{ else }}
+        Avec les data centers et l'IA générative, les trois axes se croisent dans quatre registres couplés&nbsp;: énergie, matière, territoire, attention. L'ordre apparent de l'interface repose sur des charges déplacées hors champ — et l'attention devient l'un des réceptacles où le désordre s'incorpore au plus près.
+      {{ end }}
+    </p>
+    <a class="frontiere-contemporaine__link" href="{{ "/awp/awp-06/" | relLangURL }}">
+      {{ if eq .Lang "en" }}Read AWP-06 — Digital Infrastructures and Technological Debt →{{ else }}Lire AWP-06 — Infrastructures numériques et dette technologique →{{ end }}
+    </a>
+  </div>
+</section>
+
 {{/* ══════════ Section 3 — Série AWP ══════════ */}}
 <section class="home-awp">
   <h2>Anthropie Working Papers</h2>

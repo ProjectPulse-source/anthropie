@@ -176,6 +176,55 @@
   width: 100%;
 }
 
+// ── Section 2 bis — Frontière contemporaine ──
+.frontiere-contemporaine {
+  max-width: var(--container-max);
+  margin: 0 auto 4rem;
+  padding: 0 2rem;
+}
+
+.frontiere-contemporaine__inner {
+  max-width: 720px;
+}
+
+.frontiere-contemporaine__eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--fs-micro);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+  margin: 0 0 14px;
+}
+
+.frontiere-contemporaine__title {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-tight);
+  margin: 0 0 1rem;
+  color: var(--color-text);
+}
+
+.frontiere-contemporaine__lede {
+  font-family: var(--font-serif);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--color-text-body);
+  margin: 0 0 1.5rem;
+}
+
+.frontiere-contemporaine__link {
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  color: var(--color-accent);
+  text-decoration: none;
+  border-bottom: 0.5px solid currentColor;
+  transition: border-color 0.2s ease;
+
+  &:hover {
+    border-bottom-color: var(--color-accent-hover);
+  }
+}
+
 // ── Section 3 — AWP ──
 .home-awp {
   max-width: var(--container-max);

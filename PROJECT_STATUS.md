@@ -5,6 +5,28 @@
 > en place, les chantiers en cours et les chantiers reportés.
 > Dernière mise à jour : mai 2026 (post bascule GEO/diffusion).
 
+## 0. Log chronologique
+
+### 2026-05-12 — Exception éditoriale d'alignement AWP-06
+
+Le gel 90 jours initié au commit 3975b24 (mai 2026) est interrompu pour une intervention éditoriale ciblée, explicitement validée par l'auteur, dont l'objectif est l'alignement du site avec AWP-06 avant la campagne de diffusion académique septembre-octobre 2026.
+
+**Périmètre exact :**
+
+- Home (`layouts/index.html`) : ajout d'un bloc texte « Une frontière contemporaine — L'attention comme réceptacle » sous la section des trois axes, avec lien sortant vers AWP-06 (`{{ "/awp/awp-06/" | relLangURL }}`). Bilingue FR + EN inline. Aucune illustration ajoutée sur la home.
+- Page « Qu'est-ce que l'anthropie ? » (FR `content/quest-ce-que-lanthropie/_index.md` + EN `_index.en.md`) : ajout d'un paragraphe théorique (extériorisation cognitive + retour anthropique) inséré entre la section des trois axes et la section « Anthropie et entropie », suivi de la figure « La boucle anthropique » via shortcode.
+- Assets SVG nouveaux (4) dans `static/img/figures/` : variantes FR par défaut + variantes `-en`, `boucle-anthropique-desktop[-en].svg` (lemniscate horizontale animée SMIL, viewBox 900×440) et `boucle-anthropique-mobile[-en].svg` (lemniscate verticale animée SMIL, viewBox 360×720). Comète + queue à 7 niveaux d'opacité sur les 4. `prefers-reduced-motion` respecté sur les 4.
+- Partial nouveau bilingue : `layouts/partials/figures/boucle-anthropique.html`, double bascule langue (`.Lang`) + viewport (`<picture><source media="(max-width:768px)">`).
+- Shortcode markdown nouveau : `layouts/shortcodes/boucle-anthropique.html` wrappant le partial avec contexte `.Page`.
+- Composant SCSS nouveau : `assets/scss/_figure-boucle-anthropique.scss`, figure alignée sur la largeur du gabarit texte en desktop, full-bleed en mobile (`@media (max-width: 768px)`), caption serif italique plafonnée à 720 px. Importé après `page-common` dans `main.scss`.
+- Bloc home « frontière contemporaine » : règles SCSS ajoutées dans `_home.scss` section 2 bis (tokens existants `--font-sans/serif`, `--fs-micro/h2/body/small`, `--color-text-*`, `--color-accent[-hover]` ; pas de nouveaux tokens introduits).
+
+**Modifications structurelles : aucune.** Routing, JSON-LD, métadonnées `citation_*`, schema.org, hreflang, sitemap, balises canonical : intacts. Aucune classe BEM existante modifiée hors `_home.scss`.
+
+**AWP : aucun modifié.** Le concept de boucle techno-cognitive introduit ici est inscrit dans le livre ANTHROPIE (606 p., ISBN 978-2-9586347-2-8) et préparé dans AWP-02 (migration des modalités vers le temporel et le cognitif) et AWP-06 (quatre registres couplés énergie/matière/territoire/attention). Un AWP-07 dédié pourra formaliser le concept lors d'une campagne de diffusion ultérieure distincte.
+
+**Reprise du gel :** la phase GEO/diffusion reprend après ce commit. Aucune autre intervention non bloquante prévue avant la fin de la fenêtre 90 jours (échéance approximative ~2026-08-12).
+
 ## 1. État de phase
 
 Le site est en **phase active GEO/diffusion 90 jours** (depuis mai 2026).

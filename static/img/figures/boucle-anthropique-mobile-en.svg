@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 10 360 710" role="img" aria-labelledby="bam-title bam-desc">
+  <title id="bam-title">The anthropic loop</title>
+  <desc id="bam-desc">Vertical asymmetric version of the anthropic loop for narrow screens. Tool-mediated cognition at top, cognitive return at bottom. Spatial in the upper, smaller loop, Temporal at the central node, Social in the lower, larger loop. A comet circulates slowly along the path.</desc>
+
+  <defs>
+    <path id="bam-path-shared" d="M 180 360 C 95 285, 95 130, 180 130 C 265 130, 265 285, 180 360 C 60 480, 60 670, 180 670 C 300 670, 300 480, 180 360 Z"/>
+    <style>
+      @media (prefers-reduced-motion: reduce) {
+        .bam-trail, .bam-comet { display: none; }
+        .bam-moving-segment animate { display: none; }
+        .bam-ghost { opacity: 0.5; }
+        .bam-moving-segment { stroke-dasharray: 0; opacity: 0.85; }
+      }
+    </style>
+  </defs>
+
+  <!-- Ghost path -->
+  <use href="#bam-path-shared" class="bam-ghost" fill="none" stroke="#1B2A4E" stroke-width="1.4" opacity="0.09"/>
+
+  <!-- Luminous segment (~780 px trail over ~1150 px path) -->
+  <path id="bam-path" class="bam-moving-segment"
+        d="M 180 360 C 95 285, 95 130, 180 130 C 265 130, 265 285, 180 360 C 60 480, 60 670, 180 670 C 300 670, 300 480, 180 360 Z"
+        fill="none" stroke="#1B2A4E" stroke-width="2.4" opacity="0.85"
+        stroke-dasharray="780 370" stroke-linecap="round">
+    <animate attributeName="stroke-dashoffset" from="780" to="-370" dur="16s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Comet: 6 trails + 1 head -->
+  <circle class="bam-trail" r="3" fill="#1B2A4E" opacity="0.08">
+    <animateMotion dur="16s" repeatCount="indefinite" begin="-14.8s"><mpath href="#bam-path"/></animateMotion>
+  </circle>
+  <circle class="bam-trail" r="3.5" fill="#1B2A4E" opacity="0.15">
+    <animateMotion dur="16s" repeatCount="indefinite" begin="-15.0s"><mpath href="#bam-path"/></animateMotion>
+  </circle>
+  <circle class="bam-trail" r="4" fill="#1B2A4E" opacity="0.25">
+    <animateMotion dur="16s" repeatCount="indefinite" begin="-15.2s"><mpath href="#bam-path"/></animateMotion>
+  </circle>
+  <circle class="bam-trail" r="4.5" fill="#1B2A4E" opacity="0.4">
+    <animateMotion dur="16s" repeatCount="indefinite" begin="-15.4s"><mpath href="#bam-path"/></animateMotion>
+  </circle>
+  <circle class="bam-trail" r="5" fill="#1B2A4E" opacity="0.6">
+    <animateMotion dur="16s" repeatCount="indefinite" begin="-15.6s"><mpath href="#bam-path"/></animateMotion>
+  </circle>
+  <circle class="bam-trail" r="5.5" fill="#1B2A4E" opacity="0.85">
+    <animateMotion dur="16s" repeatCount="indefinite" begin="-15.8s"><mpath href="#bam-path"/></animateMotion>
+  </circle>
+  <circle class="bam-comet" r="6.5" fill="#1B2A4E" opacity="1">
+    <animateMotion dur="16s" repeatCount="indefinite"><mpath href="#bam-path"/></animateMotion>
+  </circle>
+
+  <!-- Top/bottom poles -->
+  <text x="180" y="94" text-anchor="middle" font-family="Newsreader, Georgia, serif" font-size="13" fill="#1B2A4E" opacity="0.9">Tool-mediated cognition</text>
+  <text x="180" y="110" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#1B2A4E" opacity="0.6">hand · tool · language</text>
+
+  <!-- Canonical circles (above the comet) -->
+  <circle cx="180" cy="215" r="44" fill="#F2F0E8"/>
+  <text x="180" y="213" text-anchor="middle" font-family="Newsreader, Georgia, serif" font-size="13" fill="#1B2A4E" font-weight="500">Spatial</text>
+  <text x="180" y="228" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#1B2A4E" opacity="0.7">Center → periph.</text>
+
+  <circle cx="180" cy="360" r="52" fill="#F2F0E8" stroke="#1B2A4E" stroke-width="0.6"/>
+  <text x="180" y="354" text-anchor="middle" font-family="Newsreader, Georgia, serif" font-size="13" fill="#1B2A4E" font-weight="500">Temporal</text>
+  <text x="180" y="370" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#1B2A4E" opacity="0.7">Present → future</text>
+  <text x="180" y="385" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" fill="#1B2A4E" opacity="0.55" font-style="italic">pivot axis</text>
+
+  <circle cx="180" cy="560" r="62" fill="#F2F0E8"/>
+  <text x="180" y="557" text-anchor="middle" font-family="Newsreader, Georgia, serif" font-size="15" fill="#1B2A4E" font-weight="500">Social</text>
+  <text x="180" y="576" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#1B2A4E" opacity="0.7">Mobile → captive</text>
+
+  <text x="180" y="695" text-anchor="middle" font-family="Newsreader, Georgia, serif" font-size="13" fill="#1B2A4E" opacity="0.9">Cognitive return</text>
+  <text x="180" y="711" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#1B2A4E" opacity="0.6">attention · judgment · devices</text>
+</svg>

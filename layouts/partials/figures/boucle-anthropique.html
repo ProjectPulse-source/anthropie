@@ -1,0 +1,26 @@
+{{/*
+  Boucle anthropique — figure responsive bilingue
+  Bascule langue   : .Lang (fr par défaut / en si "en")
+  Bascule viewport : <picture> source mobile <= 768px
+  Accessibilité    : prefers-reduced-motion respecté dans le SVG desktop
+  Context attendu  : Page (depuis un layout ou via .Page dans un shortcode)
+*/}}
+{{- $isEn := eq .Lang "en" -}}
+{{- $desktop := cond $isEn "/img/figures/boucle-anthropique-desktop-en.svg" "/img/figures/boucle-anthropique-desktop.svg" -}}
+{{- $mobile  := cond $isEn "/img/figures/boucle-anthropique-mobile-en.svg"  "/img/figures/boucle-anthropique-mobile.svg" -}}
+{{- $caption := "La boucle anthropique : la cognition outillée étend les déplacements du désordre dans l'espace, le temps et le social ; lorsque ces espaces se saturent, la charge revient vers l'attention, le jugement et les dispositifs qui les prolongent." -}}
+{{- if $isEn -}}
+  {{- $caption = "The anthropic loop: tool-mediated cognition extends the displacement of disorder across space, across time, and between social groups; when these displacement spaces saturate, the charge turns back toward attention, judgment, and the devices that extend them." -}}
+{{- end -}}
+<figure class="figure-boucle-anthropique">
+  <picture>
+    <source media="(max-width: 768px)" srcset="{{ $mobile | relURL }}">
+    <img src="{{ $desktop | relURL }}"
+         alt="{{ $caption }}"
+         loading="lazy"
+         decoding="async">
+  </picture>
+  <figcaption class="figure-boucle-anthropique__caption">
+    <em>{{ $caption }}</em>
+  </figcaption>
+</figure>

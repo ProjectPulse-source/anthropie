@@ -52,6 +52,10 @@ Le déplacement du désordre peut prendre plusieurs formes. Le cadre anthropique
 
 Ces trois axes ne s'excluent pas. Dans de nombreuses configurations, ils se combinent.
 
+Dans le métaprogramme numérique contemporain, les trois axes atteignent un réceptacle devenu central&nbsp;: l'attention. L'extériorisation cognitive est aussi ancienne que l'outil, la main et le langage&nbsp;; la cognition outillée a permis d'étendre les déplacements du désordre dans l'espace, le temps et le social. Mais, sous forme saturée, ce désordre revient vers les prises concrètes de la cognition — attention captée, jugement délégué, dispositifs qui les prolongent. Il ne s'agit pas d'un quatrième axe, mais d'un retour anthropique vers la capacité qui avait rendu le déplacement possible.
+
+{{< boucle-anthropique >}}
+
 ## Anthropie et entropie
 
 L'anthropie ne se confond pas avec l'entropie.
