@@ -179,8 +179,8 @@
 // ── Section 2 bis — Frontière contemporaine ──
 .frontiere-contemporaine {
   max-width: var(--container-max);
-  margin: 0 auto 4rem;
-  padding: 0 2rem;
+  margin: 4rem auto;            // explicite, aligné avec .home-axes margin-bottom et .home-awp
+  padding: 0 2rem 1rem;         // padding-bottom : rythme intra-section (compense l'absence de <p> autour du link inline)
 }
 
 .frontiere-contemporaine__inner {
