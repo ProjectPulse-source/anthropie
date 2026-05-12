@@ -7,7 +7,24 @@
 
 ## 0. Log chronologique
 
-### 2026-05-12 — Exception éditoriale d'alignement AWP-06
+### 2026-05-12 — Chaîne de boucles sur la home (4e patch, conclusion alignement AWP-06)
+
+Quatrième et dernier commit de la fenêtre éditoriale d'alignement avec AWP-06 et la campagne de diffusion S9-S10 2026. Ajout d'une animation SVG cyclique (24 s desktop / 30 s mobile) qui suit littéralement le contour des cercles externes Spatial et Social sur la home, avec croisement en X au centre du cercle Temporel — overlay décoratif en background derrière les cercles HTML existants.
+
+**Justification doctrinale :** cohérence de grammaire visuelle (boucle anthropique) avec la page théorique, différenciation par le rythme (24 s desktop / 30 s mobile vs 16 s page théorique) et par la composition (4 lignes droites tangentes + 2 grands arcs contournant les sphères externes, croisement Temporel en X — vs lemniscate asymétrique simple en page théorique). Chaque page doit signifier seule pour des publics multiples (chercheurs, journalistes, éditeurs) qui ne suivent pas un parcours linéaire.
+
+**Périmètre :**
+
+- Assets : `static/img/figures/chaine-boucles-desktop.svg` (viewBox 1000×543, path `M…L…A…L…L…A…L…Z`, N=2295, K=1148) et `chaine-boucles-mobile.svg` (viewBox 360×900, path L+A équivalent vertical, N=2172, K=1086). Animation SMIL `stroke-dashoffset` + comet `animateMotion` synchronisés (K = N/2 exact). `prefers-reduced-motion` respecté sur les 2 SVG. Pas de texte dans les SVG (les textes des trois axes restent en HTML pour SEO et accessibilité).
+- Partial nouveau : `layouts/partials/figures/chaine-boucles.html`, bascule responsive via `<picture><source media="(max-width:768px)">`, `aria-hidden="true"` (overlay décoratif).
+- SCSS composant nouveau : `assets/scss/_figure-chaine-boucles.scss`. Desktop : `position:absolute; top:-135px; height:540px` (débord vertical pour arcs dépassant la rangée des sphères, total 540px = 270 sphères + 135 haut + 135 bas). Mobile (`@media max-width:768px`) : `height:auto; bottom:0` (overlay couvrant l'ensemble du triad-wrapper). Importé après `figure-boucle-anthropique` dans `main.scss`.
+- Intégration home (`layouts/index.html`) : ajout d'un wrapper `.axes-overlay-wrapper` autour de la grille `.axis-grid` existante. `.axis-grid` reçoit `position:relative; z-index:1` (additif, les cercles HTML passent devant l'overlay z-index:0). Aucune modification du markup ni des textes des trois cercles.
+
+**Modifications structurelles : aucune.** Routing, JSON-LD, `citation_*`, schema.org, hreflang, sitemap, canonical : intacts. Cercles HTML et leurs textes (Spatial / Temporel / Social, directions, body) : intacts.
+
+**Reprise du gel :** dernière intervention de la fenêtre d'alignement AWP-06. Le gel 90 jours reprend strictement après ce commit. Échéance approximative : 2026-08-12. Aucune intervention non bloquante prévue d'ici là.
+
+### 2026-05-12 — Boucle anthropique : home + page théorique (alignement AWP-06)
 
 Le gel 90 jours initié au commit 3975b24 (mai 2026) est interrompu pour une intervention éditoriale ciblée, explicitement validée par l'auteur, dont l'objectif est l'alignement du site avec AWP-06 avant la campagne de diffusion académique septembre-octobre 2026.
 

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 543" role="presentation" aria-hidden="true">
+  <defs>
+    <path id="cb-path" d="M 500 272 L 220.5 148.5 A 135 135 0 1 0 220.5 395.5 L 500 272 L 779.5 148.5 A 135 135 0 1 1 779.5 395.5 L 500 272 Z"/>
+    <style>
+      @media (prefers-reduced-motion: reduce) {
+        .cb-trail, .cb-comet { display: none; }
+        .cb-moving animate { display: none; }
+        .cb-moving { stroke-dasharray: 0; opacity: 0.6; }
+        .cb-ghost { opacity: 0.4; }
+      }
+    </style>
+  </defs>
+
+  <!-- Ghost path -->
+  <use href="#cb-path" class="cb-ghost" fill="none" stroke="#1B2A4E" stroke-width="1.2" opacity="0.08"/>
+
+  <!-- Moving segment -->
+  <path class="cb-moving" id="cb-anim-path"
+        d="M 500 272 L 220.5 148.5 A 135 135 0 1 0 220.5 395.5 L 500 272 L 779.5 148.5 A 135 135 0 1 1 779.5 395.5 L 500 272 Z"
+        fill="none" stroke="#1B2A4E" stroke-width="2" opacity="0.78"
+        stroke-dasharray="1148 1148" stroke-linecap="round">
+    <animate attributeName="stroke-dashoffset" from="1148" to="-1148" dur="24s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Comet : 5 trails + 1 head -->
+  <circle class="cb-trail" r="3" fill="#1B2A4E" opacity="0.1">
+    <animateMotion dur="24s" repeatCount="indefinite" begin="-23.5s"><mpath href="#cb-anim-path"/></animateMotion>
+  </circle>
+  <circle class="cb-trail" r="3.5" fill="#1B2A4E" opacity="0.2">
+    <animateMotion dur="24s" repeatCount="indefinite" begin="-23.6s"><mpath href="#cb-anim-path"/></animateMotion>
+  </circle>
+  <circle class="cb-trail" r="4" fill="#1B2A4E" opacity="0.35">
+    <animateMotion dur="24s" repeatCount="indefinite" begin="-23.7s"><mpath href="#cb-anim-path"/></animateMotion>
+  </circle>
+  <circle class="cb-trail" r="4.5" fill="#1B2A4E" opacity="0.55">
+    <animateMotion dur="24s" repeatCount="indefinite" begin="-23.8s"><mpath href="#cb-anim-path"/></animateMotion>
+  </circle>
+  <circle class="cb-trail" r="5" fill="#1B2A4E" opacity="0.8">
+    <animateMotion dur="24s" repeatCount="indefinite" begin="-23.9s"><mpath href="#cb-anim-path"/></animateMotion>
+  </circle>
+  <circle class="cb-comet" r="6" fill="#1B2A4E" opacity="1">
+    <animateMotion dur="24s" repeatCount="indefinite"><mpath href="#cb-anim-path"/></animateMotion>
+  </circle>
+</svg>

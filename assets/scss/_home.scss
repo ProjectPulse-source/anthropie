@@ -120,11 +120,18 @@
   margin-bottom: 2rem;
 }
 
+.axes-overlay-wrapper {
+  position: relative;
+  overflow: visible;
+}
+
 .axis-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;             // les cercles HTML passent devant l'overlay chaine-boucles (z-index 0)
 }
 
 .axes-node {

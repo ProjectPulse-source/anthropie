@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 900" role="presentation" aria-hidden="true">
+  <defs>
+    <path id="cb-path-m" d="M 180 450 L 300.56 210.75 A 135 135 0 1 1 59.44 210.75 L 180 450 L 300.56 689.25 A 135 135 0 1 0 59.44 689.25 L 180 450 Z"/>
+    <style>
+      @media (prefers-reduced-motion: reduce) {
+        .cb-trail, .cb-comet { display: none; }
+        .cb-moving animate { display: none; }
+        .cb-moving { stroke-dasharray: 0; opacity: 0.6; }
+        .cb-ghost { opacity: 0.4; }
+      }
+    </style>
+  </defs>
+
+  <!-- Ghost path -->
+  <use href="#cb-path-m" class="cb-ghost" fill="none" stroke="#1B2A4E" stroke-width="1.2" opacity="0.1"/>
+
+  <!-- Moving segment -->
+  <path class="cb-moving" id="cb-anim-path-m"
+        d="M 180 450 L 300.56 210.75 A 135 135 0 1 1 59.44 210.75 L 180 450 L 300.56 689.25 A 135 135 0 1 0 59.44 689.25 L 180 450 Z"
+        fill="none" stroke="#1B2A4E" stroke-width="1.8" opacity="0.78"
+        stroke-dasharray="1086 1086" stroke-linecap="round">
+    <animate attributeName="stroke-dashoffset" from="1086" to="-1086" dur="30s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Comet : 3 trails + 1 head -->
+  <circle class="cb-trail" r="3.5" fill="#1B2A4E" opacity="0.35">
+    <animateMotion dur="30s" repeatCount="indefinite" begin="-29.7s"><mpath href="#cb-anim-path-m"/></animateMotion>
+  </circle>
+  <circle class="cb-trail" r="4" fill="#1B2A4E" opacity="0.55">
+    <animateMotion dur="30s" repeatCount="indefinite" begin="-29.8s"><mpath href="#cb-anim-path-m"/></animateMotion>
+  </circle>
+  <circle class="cb-trail" r="4.5" fill="#1B2A4E" opacity="0.8">
+    <animateMotion dur="30s" repeatCount="indefinite" begin="-29.9s"><mpath href="#cb-anim-path-m"/></animateMotion>
+  </circle>
+  <circle class="cb-comet" r="5.5" fill="#1B2A4E" opacity="1">
+    <animateMotion dur="30s" repeatCount="indefinite"><mpath href="#cb-anim-path-m"/></animateMotion>
+  </circle>
+</svg>

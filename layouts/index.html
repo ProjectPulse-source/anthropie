@@ -72,7 +72,9 @@
     {{ end }}
   </p>
 
-  <div class="axis-grid">
+  <div class="axes-overlay-wrapper">
+    {{ partial "figures/chaine-boucles.html" . }}
+    <div class="axis-grid">
     <div class="axes-node">
       <div class="axes-node__sphere">
         <p class="axes-node__label">{{ if eq .Lang "en" }}Spatial{{ else }}Spatial{{ end }}</p>
@@ -95,6 +97,7 @@
         <p class="axes-node__direction">{{ if eq .Lang "en" }}Mobile → captive{{ else }}Mobiles → captifs{{ end }}</p>
       </div>
       <p class="axes-node__body">{{ if eq .Lang "en" }}Those with financial, legal or residential mobility transfer burdens more easily toward those who cannot refuse them: users, precarious workers, taxpayers, subcontracted labour, relegated groups.{{ else }}Ceux qui disposent de mobilité financière, juridique ou résidentielle transfèrent plus facilement les charges vers ceux qui ne peuvent pas les refuser&nbsp;: usagers, précaires, contribuables, travailleurs sous-traités, groupes relégués.{{ end }}</p>
+    </div>
     </div>
   </div>
 

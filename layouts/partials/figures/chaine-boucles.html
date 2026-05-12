@@ -1,0 +1,15 @@
+{{/*
+  Chaîne de boucles — animation home page (double lemniscate)
+  Superposée en background derrière les trois cercles HTML existants.
+  Bascule responsive desktop/mobile via <picture>.
+  aria-hidden="true" et alt="" : overlay purement décoratif.
+*/}}
+<div class="chaine-boucles" aria-hidden="true">
+  <picture>
+    <source media="(max-width: 768px)" srcset="{{ "/img/figures/chaine-boucles-mobile.svg" | relURL }}">
+    <img src="{{ "/img/figures/chaine-boucles-desktop.svg" | relURL }}"
+         alt=""
+         loading="lazy"
+         decoding="async">
+  </picture>
+</div>

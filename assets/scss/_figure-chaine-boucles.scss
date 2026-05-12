@@ -1,0 +1,28 @@
+// =======================================================================
+// _figure-chaine-boucles.scss — overlay home double lemniscate
+// =======================================================================
+
+.chaine-boucles {
+  position: absolute;
+  top: -135px;            // débord arc supérieur au-dessus de la rangée des sphères
+  left: 0;
+  right: 0;
+  height: 540px;          // fixe : 270 sphères + 135 débord haut + 135 débord bas
+  z-index: 0;
+  pointer-events: none;
+}
+
+.chaine-boucles picture,
+.chaine-boucles img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .chaine-boucles {
+    height: auto;
+    bottom: 0;            // mobile : couvre l'ensemble du triad-wrapper (sphères empilées)
+  }
+}
