@@ -101,3 +101,4 @@ The framework does not provide a single answer to these questions. It provides a
 - [AWP-03 — *Public debt and anthropy*](/en/awp/awp-03/)
 - [AWP-04 — *Energy transition or entropic transfer?*](/en/awp/awp-04/)
 - [AWP-05 — *Thinking outside the walls*](/en/awp/awp-05/)
+- [AWP-06 — *Digital Infrastructures and Technological Debt*](/en/awp/awp-06/)

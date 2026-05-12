@@ -100,3 +100,4 @@ Le cadre n'apporte pas une réponse unique à ces questions. Il fournit une mani
 - [AWP-03 — *Dette publique et anthropie*](/awp/awp-03/)
 - [AWP-04 — *Transition énergétique ou transfert entropique ?*](/awp/awp-04/)
 - [AWP-05 — *Penser hors les murs*](/awp/awp-05/)
+- [AWP-06 — *Infrastructures numériques et dette technologique*](/awp/awp-06/)
