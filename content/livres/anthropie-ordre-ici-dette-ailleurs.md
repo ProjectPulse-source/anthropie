@@ -15,16 +15,18 @@ url_amazon_de: "https://amzn.eu/d/0iFQJmHF"
 url_amazon_it: "https://amzn.eu/d/0f0NFGYi"
 url_amazon_ca: "https://a.co/d/09nBM1Rj"
 related_awp:
-  - chapter: "Les fondements de l'hypothèse anthropique"
+  - chapter: "Qu'est-ce que l'anthropie ? Principes d'une hypothèse"
     awp: "awp-01"
-  - chapter: "Sept configurations : 3,3 millions d'années de transfert"
+  - chapter: "3,3 millions d'années en un principe"
     awp: "awp-02"
-  - chapter: "La dette publique comme transfert entropique"
+  - chapter: "Dette publique et anthropie : qui paie vraiment le désordre ?"
     awp: "awp-03"
-  - chapter: "Transition énergétique ou reconfiguration du désordre ?"
+  - chapter: "Transition énergétique ou transfert entropique ?"
     awp: "awp-04"
-  - chapter: "L'ordre épistémique et ses marges"
+  - chapter: "Penser hors les murs : notes sur la recherche indépendante en économie"
     awp: "awp-05"
+  - chapter: "Infrastructures numériques et dette technologique"
+    awp: "awp-06"
 ---
 
 L'ouvrage fondateur du cadre anthropique.
@@ -37,11 +39,16 @@ L'ordre que nous observons autour de nous — dans les institutions, les territo
 
 ## Sommaire
 
-1. Les fondements de l'hypothèse anthropique
-2. Sept configurations&nbsp;: 3,3 millions d'années de transfert
-3. Les trois axes du déplacement&nbsp;: spatial, temporel, social
-4. La dette publique comme transfert entropique
-5. Transition énergétique ou reconfiguration du désordre ?
-6. L'ordre épistémique et ses marges
-7. Saturation et effets boomerang
-8. La discipline du regard
+Le livre traverse **sept Âges historiques** — de l'invention du feu aux algorithmes contemporains — pour montrer comment chaque civilisation a déplacé son désordre vers un ailleurs spatial, temporel ou social.
+
+1. *Liberté sous contrainte* — préface
+2. Âge 1 — Les programmes fondateurs (-3,3 M → -10&nbsp;000)
+3. Âge 2 — Le piège néolithique (-10&nbsp;000 → -1&nbsp;000)
+4. Âge 3 — Les systèmes d'exploitation antiques (-1&nbsp;000 → 500)
+5. Âge 4 — Les réseaux&nbsp;: routes, relais, relais de pouvoir (500 → 1500)
+6. Âge 5 — La machine-État moderne (1500 → 1800)
+7. Âge 6 — L'industrialisation et les nations (1800 → 1945)
+8. Âge 7 — Le métaprogramme contemporain (1945 → présent)
+9. *Contrainte en liberté* — épilogue, *Registre des coûts déportés* et *Postface&nbsp;: l'anthropie de l'anthropie*
+
+*ANTHROPIE pose le cadre dont la série Anthropie Working Papers développe les théorèmes et les applications.*
