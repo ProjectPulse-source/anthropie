@@ -1,5 +1,24 @@
 # Project Status — stephane-lalut.com
 
+## Bilan 2026-05-13 — Chantier diffusion clos
+
+Synthèse des 4 axes de diffusion exécutés en mai 2026 ; le chantier est désormais clos pour la durée de la fenêtre GEO/diffusion 90 jours.
+
+1. **Wikidata** : Phase A + B + C exécutées (lots `Lalut-Anthropie-PhaseA/B/C-2026-05-12/13`). 6 items AWP créés (`Q139771989` à `Q139771994`). Correction DOI Option B effectuée (12 suppressions manuelles). Script Python d'automatisation v1.0 dans `Wikidata/scripts/` (fetchers Zenodo/Crossref/OpenLibrary + generators awp/article/book + validators garde-fous P9934/P407).
+
+2. **SocArXiv** : 6 AWPs déposés sur `osf.io/ymkpj`. DOIs SocArXiv liés en P953 sur les 6 items AWP Wikidata. Profil OSF `ymkpj` rattaché à `Q138909233` (Stéphane Lalut) via P973.
+
+3. **OpenLibrary** : 4 fiches livre + page auteur enrichie. Author ID `OL16378291A`. Work IDs : Livresque `OL45424544W`, L'Odyssée `OL45424562W`, ANTHROPIE `OL45424565W`, Dette Publique `OL45424600W`. Batch 16 (P648 OpenLibrary IDs) transmis à Laura. 2 doublons OpenLibrary à fusionner après obtention du statut LIT (~1 semaine).
+
+4. **Externe** : BnF dépôt légal régularisé, Bing Webmaster Tools configuré (import Google Search Console + sitemap), GitHub Actions IndexNow + Wayback Machine opérationnels (commit `ab86532`).
+
+**Phrase de pilotage maintenue** : *« la prochaine preuve viendra des tiers ».*
+
+**Statut final** : chantier diffusion clos. Aucune action structurelle prévue pendant les 90 jours GEO/diffusion. Actions résiduelles passives :
+- Laura exécute le batch 16 OpenLibrary (~24h)
+- Stéphane fusionne les 2 doublons OpenLibrary après obtention du statut LIT (~1-2 semaines)
+- Surveillance Bing Webmaster Tools « AI Performance » + log mensuel Wayback Machine (`Wayback/archive-log.md`)
+
 ## Mise à jour 2026-05-13 — Workflows IndexNow + Wayback Machine
 
 - **`.github/workflows/indexnow.yml`** : notification temps réel à Bing/Yandex
