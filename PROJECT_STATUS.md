@@ -1,5 +1,28 @@
 # Project Status — stephane-lalut.com
 
+## Mise à jour 2026-05-13 — Workflows IndexNow + Wayback Machine
+
+- **`.github/workflows/indexnow.yml`** : notification temps réel à Bing/Yandex
+  après chaque push touchant `content/**`, `data/**`, `layouts/**`, ou la config.
+  Sécurité supplémentaire : run hebdomadaire le lundi.
+  La clé IndexNow est détectée dynamiquement depuis `static/<key>.txt`.
+
+- **`.github/workflows/wayback-archive.yml`** : archivage mensuel (1er du mois,
+  6h UTC) de toutes les URLs du sitemap sur Wayback Machine. Log cumulatif
+  committé dans `Wayback/archive-log.md`.
+
+Les deux workflows sont indépendants. IndexNow se déclenche à chaque push
+significatif (notification immédiate). Wayback s'exécute mensuellement
+(archivage long terme).
+
+**Status** : workflows créés, non encore poussés en production. Stéphane
+valide visuellement les YAML avant push manuel.
+
+**Premier test recommandé** : déclencher manuellement chaque workflow via
+l'onglet Actions du repo GitHub après push, pour vérifier que la chaîne
+complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
+
+
 > **À lire avant** : toute intervention sur le site, technique 
 > ou éditoriale. Décrit l'état architectural, les doctrines 
 > en place, les chantiers en cours et les chantiers reportés.

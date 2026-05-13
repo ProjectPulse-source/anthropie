@@ -1,0 +1,142 @@
+name: IndexNow notification
+
+# Notifie Bing/Yandex/Naver des URLs publiées via l'API IndexNow.
+# Déclenché : après chaque push modifiant le contenu, plus hebdomadaire de sécurité.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/**'
+      - 'data/**'
+      - 'layouts/**'
+      - 'config/**'
+      - 'hugo.toml'
+      - 'config.toml'
+  workflow_dispatch:
+  schedule:
+    - cron: '0 8 * * 1'  # Tous les lundis 8h UTC (sécurité)
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Détecter la clé IndexNow dans static/
+        id: detect-key
+        run: |
+          set -euo pipefail
+          KEY_FILE=$(find static -maxdepth 1 -type f -name "[a-z0-9]*.txt" \
+            -regextype posix-extended -regex 'static/[a-z0-9]{8,}\.txt' | head -1)
+          if [ -z "$KEY_FILE" ]; then
+            echo "::error::Aucun fichier clé IndexNow détecté dans static/"
+            echo "Le fichier attendu doit être nommé <clé>.txt avec une clé alphanumérique de 8+ caractères."
+            exit 1
+          fi
+          KEY=$(basename "$KEY_FILE" .txt)
+          echo "key=$KEY" >> "$GITHUB_OUTPUT"
+          echo "Clé IndexNow détectée: $KEY"
+
+      - name: Attendre le déploiement GitHub Pages (5 min)
+        if: github.event_name == 'push'
+        run: |
+          echo "Attente de 5 minutes pour laisser Hugo + GitHub Pages déployer..."
+          sleep 300
+
+      - name: Récupérer le sitemap et extraire les URLs
+        id: extract-urls
+        run: |
+          set -euo pipefail
+          SITEMAP_URL="https://stephane-lalut.com/sitemap.xml"
+          echo "Fetch sitemap: $SITEMAP_URL"
+          curl -fsSL -o sitemap.xml "$SITEMAP_URL"
+
+          python3 <<'PY'
+          import re
+          import json
+
+          with open("sitemap.xml", encoding="utf-8") as f:
+              content = f.read()
+
+          # Extraction des balises <loc>...</loc>
+          urls = re.findall(r"<loc>([^<]+)</loc>", content)
+          # Dédoublonnage et filtrage URLs internes uniquement
+          urls = sorted(set(u for u in urls if "stephane-lalut.com" in u))
+
+          if not urls:
+              print("::error::Aucune URL extraite du sitemap")
+              raise SystemExit(1)
+
+          print(f"URLs extraites du sitemap: {len(urls)}")
+          for u in urls[:5]:
+              print(f"  - {u}")
+          if len(urls) > 5:
+              print(f"  ... et {len(urls) - 5} autres")
+
+          # Sauvegarde pour l'étape suivante
+          with open("urls.json", "w", encoding="utf-8") as f:
+              json.dump(urls, f, ensure_ascii=False)
+          PY
+
+      - name: Envoyer le batch IndexNow
+        env:
+          KEY: ${{ steps.detect-key.outputs.key }}
+        run: |
+          set -euo pipefail
+
+          # Construction du payload JSON
+          python3 <<'PY'
+          import json
+          import os
+
+          with open("urls.json", encoding="utf-8") as f:
+              urls = json.load(f)
+
+          payload = {
+              "host": "stephane-lalut.com",
+              "key": os.environ["KEY"],
+              "keyLocation": f"https://stephane-lalut.com/{os.environ['KEY']}.txt",
+              "urlList": urls,
+          }
+
+          with open("payload.json", "w", encoding="utf-8") as f:
+              json.dump(payload, f, ensure_ascii=False, indent=2)
+
+          print(f"Payload IndexNow: {len(urls)} URLs")
+          PY
+
+          echo "Envoi du batch à api.indexnow.org..."
+          HTTP_CODE=$(curl -sS -o response.txt -w "%{http_code}" \
+            -X POST "https://api.indexnow.org/IndexNow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d @payload.json) || HTTP_CODE="000"
+
+          echo "HTTP $HTTP_CODE"
+          echo "Réponse:"
+          cat response.txt || true
+          echo ""
+
+          # 200, 202 = succès. 422 = clé invalide. 403 = key location invalide.
+          case "$HTTP_CODE" in
+            200|202)
+              echo "::notice::IndexNow notification envoyée avec succès"
+              ;;
+            422)
+              echo "::error::Clé IndexNow rejetée (422). Vérifier que le fichier .txt est bien accessible publiquement."
+              exit 1
+              ;;
+            403)
+              echo "::error::Key location rejetée (403). Vérifier l'URL du fichier .txt."
+              exit 1
+              ;;
+            *)
+              echo "::warning::HTTP $HTTP_CODE non standard. Voir la réponse ci-dessus."
+              # Non bloquant - les codes non-200 peuvent arriver sans pour autant être un échec définitif
+              ;;
+          esac

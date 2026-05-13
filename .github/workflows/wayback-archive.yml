@@ -1,0 +1,160 @@
+name: Wayback Machine archive
+
+# Archive mensuellement toutes les URLs du sitemap sur Internet Archive
+# via le endpoint Save Page Now. Commit un log dans Wayback/archive-log.md.
+
+on:
+  schedule:
+    - cron: '0 6 1 * *'  # Le 1er de chaque mois à 6h UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Récupérer le sitemap et extraire les URLs
+        id: extract
+        run: |
+          set -euo pipefail
+          SITEMAP_URL="https://stephane-lalut.com/sitemap.xml"
+          echo "Fetch sitemap: $SITEMAP_URL"
+          curl -fsSL -o sitemap.xml "$SITEMAP_URL"
+
+          python3 <<'PY'
+          import re
+          import json
+
+          with open("sitemap.xml", encoding="utf-8") as f:
+              content = f.read()
+
+          urls = re.findall(r"<loc>([^<]+)</loc>", content)
+          urls = sorted(set(u for u in urls if "stephane-lalut.com" in u))
+
+          if not urls:
+              print("::error::Aucune URL extraite du sitemap")
+              raise SystemExit(1)
+
+          print(f"URLs à archiver: {len(urls)}")
+
+          with open("urls.json", "w", encoding="utf-8") as f:
+              json.dump(urls, f, ensure_ascii=False)
+          PY
+
+      - name: Archiver chaque URL sur Wayback Machine
+        id: archive-urls
+        run: |
+          set -euo pipefail
+          mkdir -p Wayback
+
+          python3 <<'PY'
+          import json
+          import subprocess
+          import time
+          import re
+          from datetime import datetime, timezone
+
+          with open("urls.json", encoding="utf-8") as f:
+              urls = json.load(f)
+
+          results = []
+          now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+
+          for i, url in enumerate(urls, 1):
+              save_url = f"https://web.archive.org/save/{url}"
+              print(f"[{i}/{len(urls)}] Archivage : {url}")
+
+              try:
+                  result = subprocess.run(
+                      ["curl", "-sSL", "-o", "/dev/null",
+                       "-w", "%{http_code}|%{redirect_url}",
+                       "--max-time", "60",
+                       "-A", "Lalut-Anthropie-Archiver/1.0 (https://stephane-lalut.com)",
+                       save_url],
+                      capture_output=True, text=True, timeout=90
+                  )
+                  output = result.stdout.strip()
+                  http_code, redirect = (output.split("|", 1) + [""])[:2]
+
+                  # Extraction du snapshot timestamp depuis la redirection
+                  snapshot_match = re.search(r"/web/(\d{14})/", redirect)
+                  snapshot = snapshot_match.group(1) if snapshot_match else "n/a"
+
+                  status = "OK" if http_code in ("200", "302") else f"FAIL({http_code})"
+                  results.append({
+                      "url": url,
+                      "status": status,
+                      "http_code": http_code,
+                      "snapshot": snapshot,
+                  })
+                  print(f"  -> {status} | snapshot: {snapshot}")
+
+              except subprocess.TimeoutExpired:
+                  results.append({"url": url, "status": "TIMEOUT", "http_code": "0", "snapshot": "n/a"})
+                  print("  -> TIMEOUT")
+              except Exception as e:
+                  results.append({"url": url, "status": f"ERROR({type(e).__name__})", "http_code": "0", "snapshot": "n/a"})
+                  print(f"  -> ERROR: {e}")
+
+              # Politesse : 5 secondes entre chaque requête
+              if i < len(urls):
+                  time.sleep(5)
+
+          # Génération du log
+          ok_count = sum(1 for r in results if r["status"] == "OK")
+          fail_count = len(results) - ok_count
+
+          log_entry = f"\n## Run du {now}\n\n"
+          log_entry += f"- Total URLs : {len(urls)}\n"
+          log_entry += f"- Succès : {ok_count}\n"
+          log_entry += f"- Échecs : {fail_count}\n\n"
+          log_entry += "| URL | Status | Snapshot |\n"
+          log_entry += "|---|---|---|\n"
+          for r in results:
+              snap = f"`{r['snapshot']}`" if r["snapshot"] != "n/a" else "—"
+              log_entry += f"| {r['url']} | {r['status']} | {snap} |\n"
+
+          # Append au log existant (création si absent)
+          import os
+          log_path = "Wayback/archive-log.md"
+          if not os.path.exists(log_path):
+              header = "# Wayback Machine — Journal d'archivage\n\n"
+              header += "Ce fichier est généré automatiquement par le workflow `wayback-archive.yml`.\n"
+              header += "Chaque entrée correspond à un run mensuel (1er du mois) ou manuel.\n"
+              with open(log_path, "w", encoding="utf-8") as f:
+                  f.write(header)
+
+          with open(log_path, "a", encoding="utf-8") as f:
+              f.write(log_entry)
+
+          print(f"\n=== Résumé ===")
+          print(f"Total : {len(urls)} | OK : {ok_count} | Échec : {fail_count}")
+          print(f"Log mis à jour : {log_path}")
+
+          # Statut de sortie
+          if fail_count > len(urls) * 0.3:
+              print(f"::warning::Plus de 30% d'échecs ({fail_count}/{len(urls)})")
+          PY
+
+      - name: Commit du log Wayback
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if [ -n "$(git status --porcelain Wayback/)" ]; then
+              git add Wayback/
+              git commit -m "Wayback: archive run $(date -u '+%Y-%m-%d')"
+              git push origin main
+              echo "::notice::Log Wayback committé et poussé"
+          else
+              echo "Aucune modification du log à commiter"
+          fi
