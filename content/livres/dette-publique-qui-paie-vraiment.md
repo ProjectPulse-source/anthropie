@@ -15,8 +15,14 @@ url_amazon_de: "https://amzn.eu/d/0f0NFGYi"
 url_amazon_it: "https://amzn.eu/d/0f0NFGYi"
 url_amazon_ca: "https://a.co/d/0aLceVAe"
 related_awp:
-  - label: "Développement long de l'argument"
+  - label: "Qu'est-ce que l'anthropie ? Principes d'une hypothèse"
+    awp: "awp-01"
+  - label: "Dette publique et anthropie : qui paie vraiment le désordre ?"
     awp: "awp-03"
+  - label: "Transition énergétique ou transfert entropique ?"
+    awp: "awp-04"
+  - label: "Infrastructures numériques et dette technologique"
+    awp: "awp-06"
 ---
 
 Application du cadre anthropique à la dette publique française.
@@ -31,9 +37,29 @@ En appliquant le cadre anthropique aux finances publiques françaises, Stéphane
 
 ## Sommaire
 
-1. La dette comme mécanisme de transfert
-2. L'axe temporel&nbsp;: qui hérite du désordre ?
-3. L'axe social&nbsp;: groupes captifs et groupes mobiles
-4. Les finances publiques françaises au prisme de l'anthropie
-5. Ce que les ratios ne disent pas
-6. Le coût politique de la lisibilité
+Le livre se construit en deux temps&nbsp;: d'abord la **mécanique du transfert** anthropique appliquée aux finances publiques françaises, puis quatre **scénarios prospectifs** pour la décennie 2025-2035.
+
+### Partie I — La mécanique du transfert
+
+1. L'Ordre apparent — généalogie d'une machine
+2. Le Mécanisme anthropique — le grand transfert
+3. L'Engrenage français — les cadeaux fiscaux non compensés
+4. Les Architectes — ni complot, ni hasard
+5. Trois laboratoires — Grèce, Japon, USA
+   — *Interlude&nbsp;: La preuve par la Norvège*
+6. Le Méta-laboratoire chinois — l'anthropie autoritaire
+7. Une dette, trois visages — les créanciers invisibles
+8. La Dette écologique — le créancier ultime
+9. L'Anatomie du discours
+10. Accepter l'inacceptable — la fabrique du consentement
+
+### Partie II — Les scénarios du possible
+
+11. Scénario continuité — le rail sans bifurcation
+12. Scénario réforme européenne — la transformation négociée
+13. Les trois voies de rupture — quand l'Europe dit non
+14. Scénario accélération technologique — le joker productiviste
+
+*Conclusion&nbsp;: Le choix démocratique du désordre*
+
+*Le livre s'adosse à plusieurs Anthropie Working Papers, du cadre théorique général à ses applications connexes.*
