@@ -67,3 +67,9 @@ key = "idref"
 url = "https://www.idref.fr/283054085"
 label = "IdRef"
 labelLong = "IdRef 283054085"
+
+[[author.sameAs]]
+key = "socarxiv"
+url = "https://osf.io/ymkpj/"
+label = "SocArXiv"
+labelLong = "SocArXiv (OSF)"
