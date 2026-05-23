@@ -74,4 +74,28 @@
     </div>
   </div>
 </article>
+
+{{/* Schema.org ItemList des ouvrages — ordre aligné sur la liste visible (corpus par poids, puis autres-ouvrages) */}}
+{{- $items := slice -}}
+{{- $pos := 0 -}}
+{{- range $livres.ByWeight -}}
+  {{- if ne .Params.serie "autres-ouvrages" -}}
+    {{- $pos = add $pos 1 -}}
+    {{- $items = $items | append (dict "@type" "ListItem" "position" $pos "item" (dict "@type" "Book" "name" .Title "url" .Permalink)) -}}
+  {{- end -}}
+{{- end -}}
+{{- range $livres.ByWeight -}}
+  {{- if eq .Params.serie "autres-ouvrages" -}}
+    {{- $pos = add $pos 1 -}}
+    {{- $items = $items | append (dict "@type" "ListItem" "position" $pos "item" (dict "@type" "Book" "name" .Title "url" .Permalink)) -}}
+  {{- end -}}
+{{- end -}}
+{{- $itemList := dict
+    "@context" "https://schema.org"
+    "@type" "ItemList"
+    "name" .Title
+    "itemListElement" $items -}}
+<script type="application/ld+json">
+{{ $itemList | jsonify (dict "indent" "  ") | safeJS }}
+</script>
 {{ end }}
