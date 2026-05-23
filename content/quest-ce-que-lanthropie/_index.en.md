@@ -65,6 +65,16 @@ Entropy belongs to physics and thermodynamics. Anthropy designates a social and 
 
 The term therefore does not function as a decorative metaphor, but as an analytical hypothesis applied to social structures.
 
+## Anthropy and the Anthropocene
+
+Anthropy is not the Anthropocene.
+
+The Anthropocene names a geological epoch: the imprint that human societies leave in the planet's stratigraphy. Anthropy names a social mechanism: the way these societies produce their local orders by displacing disorder — toward other places, other times, other groups.
+
+One is a mark; the other is a mechanism. And the mechanism precedes the mark: anthropy can be traced as far back as the earliest technical programs of the species, across a 3.3-million-year depth, well before industrialization made the geological trace visible. It does not invalidate the Anthropocene. It clarifies its institutional dynamic, by showing through which transfers societies came to leave such a trace.
+
+See [AWP-02 — *3.3 million years in one principle*](https://stephane-lalut.com/en/awp/awp-02/) for the long-duration analysis.
+
 ## The discipline of attention
 
 The framework of anthropy proposes a simple analytical posture: whenever confronted with a stable order, ask where disorder is displaced.

@@ -64,6 +64,16 @@ L'entropie relève de la physique et de la thermodynamique. L'anthropie désigne
 
 Le terme ne vaut donc pas comme métaphore décorative, mais comme hypothèse analytique appliquée aux structures sociales.
 
+## Anthropie et Anthropocène
+
+L'anthropie ne se confond pas avec l'Anthropocène.
+
+L'Anthropocène nomme une ère géologique : la trace que les sociétés humaines impriment dans la stratigraphie de la planète. L'anthropie nomme un mécanisme social : la manière dont ces sociétés produisent leurs ordres locaux en déplaçant le désordre — vers d'autres lieux, vers d'autres temps, vers d'autres groupes.
+
+L'une est une marque ; l'autre est un mécanisme. Et le mécanisme précède la marque : l'anthropie peut se lire dès les premiers programmes techniques de l'espèce, sur une profondeur de 3,3 millions d'années, bien avant l'industrialisation qui rend la trace géologique visible. Elle n'invalide donc pas l'Anthropocène. Elle en éclaire la dynamique institutionnelle, en montrant par quels transferts les sociétés en sont venues à laisser une telle trace.
+
+Voir [AWP-02 — *3,3 millions d'années en un principe*](https://stephane-lalut.com/awp/awp-02/) pour l'analyse en longue durée.
+
 ## La discipline du regard
 
 L'anthropie propose une posture analytique simple&nbsp;: devant tout ordre stable, demander où s'écoule le désordre.
