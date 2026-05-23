@@ -5,7 +5,10 @@
 <link rel="icon" href="/favicon.png" type="image/png" sizes="48x48">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
+{{- /* Titre complet (H1 court + sous-titre) pour <title>, citation_title et JSON-LD headline, aligné sur Zenodo. Le H1 visible reste court. AWP sans subtitle et autres pages : inchangés. */ -}}
+{{- $fullTitle := .Title -}}
+{{- if and (eq .Type "awp") .Params.subtitle -}}{{- $fullTitle = printf "%s%s%s" .Title (cond (eq .Lang "en") ": " " : ") .Params.subtitle -}}{{- end -}}
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ $fullTitle }} — {{ .Site.Title }}{{ end }}</title>
 
 <!-- hreflang -->
 {{ if .IsTranslated }}
@@ -66,7 +69,7 @@
 
 <!-- Google Scholar -->
 {{ if and (eq .Type "awp") .IsPage .File }}
-<meta name="citation_title" content="{{ .Title }}">
+<meta name="citation_title" content="{{ $fullTitle }}">
 <meta name="citation_author" content="Lalut, Stéphane">
 <meta name="citation_publication_date" content="{{ with .Params.publication_date }}{{ . | time.Format "2006/01/02" }}{{ else }}{{ .Date.Format "2006/01/02" }}{{ end }}">
 <meta name="citation_doi" content="{{ .Params.doi_zenodo }}">
@@ -132,7 +135,7 @@
 {{- $article := dict
     "@context" "https://schema.org"
     "@type" "ScholarlyArticle"
-    "headline" .Title
+    "headline" $fullTitle
     "image" "https://m.media-amazon.com/images/I/81kdsh4400L._SL1436_.jpg"
     "description" .Description
     "author" (dict "@type" "Person" "name" site.Data.author.author.name "identifier" $orcid.url "sameAs" $orcid.url "url" $authorProfileUrl)

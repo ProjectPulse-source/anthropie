@@ -1,5 +1,6 @@
 ---
 title: "Digital Infrastructures and Technological Debt"
+subtitle: "Data Centers, AI, and the Displacement of Disorder"
 awp_number: "AWP-06"
 date: 2026-05-07
 draft: false

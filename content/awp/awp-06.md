@@ -1,5 +1,6 @@
 ---
 title: "Infrastructures numériques et dette technologique"
+subtitle: "data centers, IA et déplacement du désordre"
 awp_number: "AWP-06"
 date: 2026-05-07
 draft: false

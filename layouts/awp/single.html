@@ -22,6 +22,7 @@
       <header class="awp-article__header">
         <div class="awp-article__number">{{ .Params.awp_number }}</div>
         <h1 class="awp-article__title">{{ partial "fr-typo.html" .Title }}</h1>
+        {{ with .Params.subtitle }}<p class="awp-article__subtitle">{{ partial "fr-typo.html" . }}</p>{{ end }}
         {{- $orcid := false -}}
         {{- range site.Data.author.author.sameAs -}}
           {{- if eq .key "orcid" -}}{{- $orcid = . -}}{{- end -}}
