@@ -1,2 +1,6 @@
 description = "L'anthropie : hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. Stéphane Lalut, économiste."
+# IMPORTANT : la définition canonique est rendue par le partial canonical-definition.html (single-source).
+# Version FR ci-dessous ; version EN dans hugo.toml sous [languages.en.params] (MÊME clé canonicalDefinition,
+# résolue par langue via .Site.Params.canonicalDefinition — pas de clé suffixée canonicalDefinitionEN).
+# Garder les deux versions synchronisées : toute modification de l'une exige la modification simultanée de l'autre.
 canonicalDefinition = "L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent."

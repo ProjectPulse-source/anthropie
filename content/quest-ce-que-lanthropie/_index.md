@@ -18,7 +18,7 @@ faq:
 
 ## Définition
 
-L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent.
+{{< canonical-definition >}}
 
 Tout ordre observable dans un système social — qu'il s'agisse d'une institution, d'un territoire, d'une organisation ou d'une économie — suppose un désordre exporté ailleurs&nbsp;: vers d'autres lieux, vers d'autres temps ou vers d'autres groupes sociaux.
 

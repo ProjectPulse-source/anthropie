@@ -1,0 +1,11 @@
+{{- /*
+  Single-source de la définition canonique de l'anthropie.
+  Lit .Site.Params.canonicalDefinition, résolu automatiquement par langue par Hugo
+  (FR : config/_default/params.toml ; EN : config/_default/hugo.toml [languages.en.params]).
+  Rendu via .RenderString (inline) pour appliquer le même typographer Goldmark que le
+  corps markdown (apostrophes courbes identiques au verbatim d'origine).
+  Si la clé est vide/absente : ne rien rendre (pas de placeholder, pas d'erreur).
+  Contexte attendu : une Page (passé par le shortcode via .Page).
+*/ -}}
+{{- $def := .Site.Params.canonicalDefinition -}}
+{{- if $def -}}<p class="canonical-definition">{{ .RenderString $def }}</p>{{- end -}}
