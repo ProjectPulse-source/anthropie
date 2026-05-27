@@ -22,9 +22,9 @@
   <div class="pub-body">
     <h2 class="pub-title">{{ partial "fr-typo.html" $page.Title }}</h2>
     {{ if and $isEN $page.Params.chapo_en }}
-    <p class="pub-chapo">{{ $page.Params.chapo_en }}</p>
+    <p class="pub-chapo">{{ $page.Params.chapo_en | safeHTML }}</p>
     {{ else if $page.Params.chapo }}
-    <p class="pub-chapo">{{ $page.Params.chapo }}</p>
+    <p class="pub-chapo">{{ $page.Params.chapo | safeHTML }}</p>
     {{ end }}
     <p class="pub-meta">
       <span class="pub-revue">{{ $page.Params.revue }}</span>
