@@ -587,15 +587,19 @@ works:
 
   - id: art-ean-welgryn-2026
     type: article
-    status: accepted_pending
-    canonical_title: { fr: "IA : Le grand enfumage (Welgryn / Alves Da Costa)" }
-    publication_date: ""
+    status: published
+    canonical_title: { fr: "La nécessité fabriquée" }
+    publication_date: "2026-05-05"
     publisher: "En attendant Nadeau"
     publisher_type: "revue"
-    url: ""
+    source_type: "Revue"
+    url: "https://www.en-attendant-nadeau.fr/2026/05/05/le-grand-enfumage/"
+    chapo:
+      fr: "Welgryn et Alves Da Costa déconstruisent le récit qui rend l'IA inéluctable. La nécessité technologique n'est pas donnée : elle se fabrique. Recension du livre *IA. Le grand enfumage. Comprendre les enjeux, déconstruire les mythes, reprendre le pouvoir* (Payot, 240 p., 19,90 €)."
+      en: "Welgryn and Alves Da Costa deconstruct the narrative that renders AI inescapable. Technological necessity is not given — it is manufactured. Review of *IA. Le grand enfumage. Comprendre les enjeux, déconstruire les mythes, reprendre le pouvoir* (Payot, 240 p., €19.90)."
     sign_count: 9600
     related_works: [awp-06]
-    notes: "Recension commandée. Texte finalisé 08/04/2026."
+    notes: "Recension commandée, texte finalisé 08/04/2026, parue le 05/05/2026 sur EAN (slug URL : le-grand-enfumage). Titre paru retenu comme canonical : « La nécessité fabriquée »."
 
   - id: art-ean-neelchavez-2026-05
     type: article
