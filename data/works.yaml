@@ -22,7 +22,7 @@
 
 meta:
   registry_version: "1.2"
-  last_updated: "2026-05-08"
+  last_updated: "2026-05-27"
   maintainer: "Stéphane Lalut"
   total_works: 33
   source_registry: "registre_soumissions_v73.xlsx"
@@ -599,14 +599,19 @@ works:
 
   - id: art-ean-neelchavez-2026-05
     type: article
-    status: accepted_pending
-    canonical_title: { fr: "Recension Neel & Chavez, Fabrique et forêt. Science et fiction du communisme" }
-    publication_date: ""
+    status: published
+    canonical_title: { fr: "Le communisme tangible" }
+    publication_date: "2026-05-26"
     publisher: "En attendant Nadeau"
     publisher_type: "revue"
-    url: ""
+    source_type: "Revue"
+    url: "https://www.en-attendant-nadeau.fr/2026/05/26/le-communisme-tangible/"
+    chapo:
+      fr: "Et si le communisme devait d'abord passer par l'usine et la forêt ? Neel et Chavez soumettent la fiction du communisme aux contraintes du métabolisme matériel : une utopie anti-utopique, qui planifie par les limites avant de rêver l'abondance."
+      en: "What if communism had to pass through the factory and the forest first? Neel and Chavez submit the fiction of communism to the constraints of material metabolism — an anti-utopian utopia that plans by limits before dreaming of abundance."
+    related_works: [awp-06]
     sign_count: 9430
-    notes: "Recension commande Marianne Dautrey. Envoi 11/05/2026."
+    notes: "Recension de Phil A. Neel & Nick Chavez, Fabrique et forêt. Science et fiction du communisme (trad. Julien Guazzini, Sans soleil, coll. « µv », 130 p., 10 €). Commande Marianne Dautrey, envoi 11/05/2026, parue le 26/05/2026 (n° 245)."
 
   # ===========================================================================
   # ARTICLES IN_REVIEW STRATÉGIQUES (5)
