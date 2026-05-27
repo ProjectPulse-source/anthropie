@@ -1,5 +1,5 @@
 ---
-title: "La nécessité fabriquée"
+title: "La nécessité fabriquée — Welgryn & Alves Da Costa"
 date: 2026-05-05
 revue: "En attendant Nadeau"
 source_type: "Revue"
