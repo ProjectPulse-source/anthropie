@@ -37,6 +37,15 @@ related_book: [slug-livre]
    « Académique », à activer avec accord explicite (voir §4).
 4. **`image_type: photo` (mode déprécié)** → ne PAS remplir `source_type`
    (champ ignoré).
+5. **Synchronisation `data/works.yaml`** → publier une fiche
+   `content/publications/*.md` implique de mettre à jour, **dans le même
+   commit**, l'entrée correspondante de `data/works.yaml` (`status`
+   `accepted_pending`/`in_review` → `published`, renseigner `url`,
+   `publication_date`, `source_type`, `chapo.fr/.en`) et de bumper
+   `meta.last_updated`. Le registre étant maintenu manuellement, c'est le
+   seul garde-fou contre sa dérive par rapport au contenu en ligne.
+   *(Classe de défaut constatée mai 2026 : entrées EAN restées
+   `accepted_pending` après publication.)*
 
 ## 2. Table de mapping revue → source_type
 
