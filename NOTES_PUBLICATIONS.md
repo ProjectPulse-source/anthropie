@@ -46,6 +46,16 @@ related_book: [slug-livre]
    seul garde-fou contre sa dérive par rapport au contenu en ligne.
    *(Classe de défaut constatée mai 2026 : entrées EAN restées
    `accepted_pending` après publication.)*
+6. **Typographie des chapôs — titres d'œuvres en italique.** Les chapôs
+   (`chapo` / `chapo_en`) sont rendus en **texte brut** par
+   `layouts/partials/publication-card.html` (sortie `| safeHTML`, **non
+   markdownifiée**). Pour mettre un titre de livre en italique — convention
+   éditoriale française — utiliser `<em>Titre</em>`, **jamais** d'astérisques
+   markdown `*Titre*` (qui s'afficheraient littéralement sur la carte).
+   Appliquer le même balisage dans l'entrée `data/works.yaml` miroir.
+   Contrôle post-build : `grep "&lt;em&gt;" public/publications/index.html`
+   doit renvoyer `0`.
+   *(Bug constaté mai 2026 : astérisques littérales sur la carte Welgryn.)*
 
 ## 2. Table de mapping revue → source_type
 
