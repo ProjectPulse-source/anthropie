@@ -310,8 +310,12 @@ def check_citation_metadata(works: list[dict], state: AuditState, skip_network: 
             missing = []
             present = []
             for tag in REQUIRED_CITATION_TAGS:
-                # Détecte balises de la forme <meta name="citation_xxx" ...>
-                pattern = rf'<meta[^>]+name=[\"\']{re.escape(tag)}[\"\'][^>]*>'
+                # Détecte <meta name="citation_xxx" ...>. Les guillemets d'attribut
+                # sont OPTIONNELS : `hugo --minify` (cf. .github/workflows/hugo.yml)
+                # produit `name=citation_xxx` sans guillemets. Le délimiteur final
+                # [\s>] empêche un faux positif sur un tag dont le nom est préfixe
+                # d'un autre (p.ex. citation_doi vs citation_doi_x).
+                pattern = rf'<meta[^>]+name=[\"\']?{re.escape(tag)}[\"\']?[\s>]'
                 if re.search(pattern, body, re.IGNORECASE):
                     present.append(tag)
                 else:
