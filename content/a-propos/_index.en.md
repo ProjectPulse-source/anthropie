@@ -23,7 +23,7 @@ He has worked in European marketing management, public-sector consulting, and in
 ## Author
 
 **ANTHROPIE – Ordre ici. Dette ailleurs** (ISBN 978-2-9586347-2-8)
-The founding work of the framework of anthropy. 606 pages. Stéphane Lalut, 2025.
+The founding work of the framework of anthropy. 622 pages. Stéphane Lalut, 2025.
 
 {{< amazon-dropdown "anthropie-ordre-ici-dette-ailleurs" >}}
 

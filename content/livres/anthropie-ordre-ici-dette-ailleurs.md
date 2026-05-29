@@ -1,7 +1,7 @@
 ---
 title: "ANTHROPIE – Ordre ici. Dette ailleurs"
 date: 2025-09-09
-description: "L'ouvrage fondateur du cadre anthropique. En 606 pages, l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent est déployée à travers l'histoire longue, l'économie, les finances publiques et l'épistémologie. Ordre ici. Dette ailleurs."
+description: "L'ouvrage fondateur du cadre anthropique. En 622 pages, l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent est déployée à travers l'histoire longue, l'économie, les finances publiques et l'épistémologie. Ordre ici. Dette ailleurs."
 isbn: "978-2-9586347-2-8"
 serie: "anthropie"
 weight: 1
@@ -31,7 +31,7 @@ related_awp:
 
 L'ouvrage fondateur du cadre anthropique.
 
-*ANTHROPIE – Ordre ici. Dette ailleurs* propose une hypothèse simple mais radicale&nbsp;: les systèmes sociaux ne résolvent pas le désordre, ils le déplacent. En 606 pages, Stéphane Lalut déploie cette hypothèse à travers l'histoire longue, l'économie, les finances publiques et l'épistémologie.
+*ANTHROPIE – Ordre ici. Dette ailleurs* propose une hypothèse simple mais radicale&nbsp;: les systèmes sociaux ne résolvent pas le désordre, ils le déplacent. En 622 pages, Stéphane Lalut déploie cette hypothèse à travers l'histoire longue, l'économie, les finances publiques et l'épistémologie.
 
 ## Argument
 

@@ -23,7 +23,7 @@ Il a exercé en direction marketing européenne, en conseil au secteur public et
 ## Auteur
 
 **ANTHROPIE – Ordre ici. Dette ailleurs** (ISBN 978-2-9586347-2-8)
-L'ouvrage fondateur du cadre anthropique. 606 pages. Stéphane Lalut, 2025.
+L'ouvrage fondateur du cadre anthropique. 622 pages. Stéphane Lalut, 2025.
 
 {{< amazon-dropdown "anthropie-ordre-ici-dette-ailleurs" >}}
 
