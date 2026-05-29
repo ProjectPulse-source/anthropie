@@ -14,6 +14,14 @@ url_amazon_uk: "https://amzn.eu/d/09SXx0W5"
 url_amazon_de: "https://amzn.eu/d/0f0NFGYi"
 url_amazon_it: "https://amzn.eu/d/0f0NFGYi"
 url_amazon_ca: "https://a.co/d/0aLceVAe"
+# Recensions tierces réelles uniquement (source vérifiable). Pas de service de presse fait :
+# une seule recension à ce jour. Aucune note inventée, aucun aggregateRating importé d'Amazon.
+reviews:
+  - author: "Philippe Martin"
+    source: "Les blogs d'Alternatives Économiques — Parole de lecteurs"
+    url: "https://blogs.alternatives-economiques.fr/asso/2025/11/10/dette-publique-le-transfert-organise-du-desordre"
+    date: "2025-11-10"
+    quote: "Cette matrice de lecture fait de l'essai un outil majeur pour décrypter les arcanes budgétaires de la France contemporaine."
 related_awp:
   - label: "Qu'est-ce que l'anthropie ? Principes d'une hypothèse"
     awp: "awp-01"

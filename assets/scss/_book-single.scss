@@ -93,3 +93,52 @@
     flex-direction: column;
   }
 }
+
+// ----- Preuve sociale : recensions tierces réelles -----
+.book-reviews {
+  margin-top: 2.5rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--color-rule-soft);
+}
+
+.book-reviews__title {
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+  margin: 0 0 1.25rem;
+}
+
+.book-reviews__item {
+  margin: 0 0 1.5rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.book-reviews__quote {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  line-height: 1.5;
+  font-style: italic;
+  color: var(--color-text-body);
+  margin: 0 0 0.6rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--color-accent-rule);
+}
+
+.book-reviews__cite {
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  color: var(--color-text-muted);
+
+  a {
+    color: var(--color-accent);
+  }
+}
+
+.book-reviews__author {
+  font-weight: 600;
+}

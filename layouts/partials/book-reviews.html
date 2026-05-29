@@ -1,0 +1,21 @@
+{{- /*
+  Bloc "preuve sociale" : recensions tierces RÉELLES d'un livre.
+  Source unique = front matter `reviews[]` (author, source, url, date, quote).
+  Ne rend rien si `reviews` absent. Aucune donnée inventée ; les valeurs sont
+  saisies à la main depuis une recension vérifiable (cf. single.html pour le
+  schema.org Review correspondant).
+*/ -}}
+{{- $isEn := eq .Lang "en" -}}
+{{- with .Params.reviews -}}
+<section class="book-reviews" aria-labelledby="book-reviews-title">
+  <h2 id="book-reviews-title" class="book-reviews__title">{{ if $isEn }}What readers say{{ else }}Ce qu'on en dit{{ end }}</h2>
+  {{- range . }}
+  <figure class="book-reviews__item">
+    <blockquote class="book-reviews__quote">{{ .quote }}</blockquote>
+    <figcaption class="book-reviews__cite">
+      <span class="book-reviews__author">{{ .author }}</span>{{ with .source }}<span class="book-reviews__source">, {{ . }}</span>{{ end }}{{ with .url }} · <a href="{{ . }}" target="_blank" rel="noopener">{{ if $isEn }}Read the review{{ else }}Lire la recension{{ end }}</a>{{ end }}
+    </figcaption>
+  </figure>
+  {{- end }}
+</section>
+{{- end -}}

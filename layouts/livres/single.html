@@ -6,6 +6,8 @@
       {{ with .Params.isbn }}<p class="livre-card__isbn">ISBN&nbsp;: {{ . }}</p>{{ end }}
 
       {{ .Content }}
+
+      {{ partial "book-reviews.html" . }}
     </div>
 
     <aside class="book-single__sidebar">
@@ -63,6 +65,18 @@
       "url" $offerURL
       "seller" (dict "@type" "Organization" "name" "Amazon") -}}
   {{- $book = merge $book (dict "offers" $offer) -}}
+{{- end -}}
+{{- /* review : recensions tierces réelles (front matter reviews[]). Pas de reviewRating (aucune note explicite) ; pas d'aggregateRating importé. */ -}}
+{{- with .Params.reviews -}}
+  {{- $reviews := slice -}}
+  {{- range . -}}
+    {{- $rev := dict "@type" "Review" "author" (dict "@type" "Person" "name" .author) "reviewBody" .quote -}}
+    {{- with .date -}}{{- $rev = merge $rev (dict "datePublished" (printf "%v" .)) -}}{{- end -}}
+    {{- with .url -}}{{- $rev = merge $rev (dict "url" .) -}}{{- end -}}
+    {{- with .source -}}{{- $rev = merge $rev (dict "publisher" (dict "@type" "Organization" "name" .)) -}}{{- end -}}
+    {{- $reviews = $reviews | append $rev -}}
+  {{- end -}}
+  {{- $book = merge $book (dict "review" $reviews) -}}
 {{- end -}}
 {{- /* about=Anthropie réservé au corpus anthropique (cf. taxonomie serie de list.html) ; exclut les ouvrages hors corpus (serie=autres-ouvrages) pour éviter l'orphelin sémantique */ -}}
 {{- if ne .Params.serie "autres-ouvrages" -}}
