@@ -27,6 +27,8 @@
 {{ end }}
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta name="author" content="Stéphane Lalut">
+{{- /* noindex piloté par le front matter (ex. page presse vide). follow conservé pour ne pas casser le maillage sortant. */ -}}
+{{ if .Params.noindex }}<meta name="robots" content="noindex, follow">{{ end }}
 <link rel="canonical" href="{{ .Permalink }}">
 
 <!-- Open Graph -->
