@@ -49,6 +49,22 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-05-29 — Audit GEO/SEO/sécurité + 4 correctifs ciblés (intervention hors-gel, non structurelle)
+
+Audit read-only en 5 lots (GEO/IA, maillage, SEO, performance, sécurité) demandé par l'auteur. Verdict : **0 défaut bloquant** ; le gel 90 jours n'est donc pas rompu sur le fond. 4 commits atomiques appliqués sur des défauts *utiles* (non structurels) — routing, JSON-LD, `citation_*`, hreflang, canonical : **intacts**.
+
+**Correctifs (commits `0e4d026`, `60b1db8`, `75920d9`, `44fb770`) :**
+
+- **`/presse/`** (`fix(seo)`) : page orpheline (0 lien entrant), indexable et au sitemap, au contenu vacant et à l'e-mail `contact@anthropie.fr` **non délivrable** (domaine `anthropie.fr` sans enregistrement MX, vérifié par DNS ; le domaine vivant est `stephane-lalut.com`/OVH). Passée en `noindex` + sortie du sitemap (`_build.list: never`, `render: always`). **Mécanisme `noindex` créé** dans `head.html` (flag front matter `noindex: true` → `<meta name="robots" content="noindex, follow">`) — n'existait nulle part auparavant. E-mail mort remplacé par un lien vers `/contact/` (formulaire Formspree). *Étape B à la main de l'auteur : remplir le kit presse, retirer les 2 blocs front matter, ajouter le lien colonne « Ressources » du footer.*
+
+- **`scripts/audit_works.py`** (`fix(audit)`) : faux positifs `citation_*`. `hugo --minify` retire les guillemets d'attribut (`name=citation_title`) que la regex exigeait → 12 pages AWP conformes signalées à tort. Les 11 balises `citation_*` + le JSON-LD ScholarlyArticle sont bien présents (vérifié sur le live). Warnings : **18 → 6** (reste = DOI SSRN externes, attendus).
+
+- **CI** (`fix(ci)` + `chore(ci)`) : actions GitHub épinglées au **SHA** (étaient en tag mutable `@v4/@v3/@v7`) sur les 6 workflows, SHA résolus via l'API GitHub — durcissement supply-chain (reco OpenSSF, post-incident *tj-actions* 2025) sur des workflows à droits `pages:write`/`id-token:write`/`contents:write`. À rafraîchir au J+90 (rappel déjà outillé). Healthcheck mensuel : 403 anti-bot Academia rendu non bloquant (évite un faux positif/issue chaque mois) + casse URL alignée sur `author.toml`.
+
+**Laissés volontairement (test de suppression) :** subsetting polices, image LCP home en CDN Amazon, CSP `<meta>`, bascule DOI version→concept. Sur ce dernier point : les DOIs Zenodo exposés sont les **DOI de version** (ex. AWP-01 …862) ; le DOI concept (…861) existe à −1 et résout aussi — **ne pas « corriger » version→concept** sans décision éditoriale (casserait l'historique Scholar). Vérifié via `api.zenodo.org`.
+
+**Modifications structurelles : aucune.** Seul le sitemap perd `/presse/` (page non stratégique). Reprise du gel après ces commits.
+
 ### 2026-05-12 — Chaîne de boucles sur la home (4e patch, conclusion alignement AWP-06)
 
 Quatrième et dernier commit de la fenêtre éditoriale d'alignement avec AWP-06 et la campagne de diffusion S9-S10 2026. Ajout d'une animation SVG cyclique (24 s desktop / 30 s mobile) qui suit littéralement le contour des cercles externes Spatial et Social sur la home, avec croisement en X au centre du cercle Temporel — overlay décoratif en background derrière les cercles HTML existants.
