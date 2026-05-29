@@ -299,7 +299,7 @@ works:
     publication_date: "2025-10-17"
     isbn: "978-2-9586347-3-5"
     isbn_13_normalized: "9782958634735"
-    pages: 0  # todo : non renseigné en front matter du repo
+    pages: 224  # broché (fourni 2026-05-30 ; sync content/livres/dette-publique-qui-paie-vraiment.md)
     publisher: "Auto-édition"
     distribution: "Amazon KDP"
     asin_kindle: "B0FWW2HPZP"
@@ -696,7 +696,7 @@ works:
 #    - URLs Amazon (à récupérer depuis ton compte KDP)
 #    - Vérifier si une page existe sur le site stephane-lalut.com
 #
-# 2. book-dette-publique.pages : nombre exact de pages
+# 2. book-dette-publique.pages : FAIT (224, 2026-05-30)
 #
 # 3. book-anthropie / book-dette-publique : abstract_short EN canonique
 #    (en vue d'éventuelles pages livres EN — différé chantier P3)
