@@ -23,13 +23,19 @@ jobs:
             ["OSF/SocArXiv"]="https://osf.io/ymkpj/"
             ["IdRef"]="https://www.idref.fr/283054085"
             ["Google Scholar"]="https://scholar.google.com/citations?user=J4NqzwSfrHAC"
-            ["Academia"]="https://independent.academia.edu/StéphaneLalut"
+            ["Academia"]="https://independent.academia.edu/StéphaneLALUT"
           )
           PROBLEMS=""
           for name in "${!NODES[@]}"; do
             url="${NODES[$name]}"
             status=$(curl -s -L -o /dev/null -w "%{http_code}" --max-time 30 "$url")
             echo "$name : $url -> $status"
+            # Academia.edu renvoie 403 aux bots (anti-bot), comme SSRN : 403 attendu,
+            # non bloquant. Vérification manuelle au navigateur. Évite un faux positif mensuel.
+            if [[ "$name" == "Academia" && "$status" == "403" ]]; then
+              echo "  -> 403 attendu (anti-bot Academia), ignoré"
+              continue
+            fi
             # SSRN exclu volontairement (anti-bot 403 fréquent, vérification manuelle)
             # Codes acceptés : 200, 301, 302, 308 (redirections normales)
             if [[ ! "$status" =~ ^(200|301|302|308)$ ]]; then
@@ -46,7 +52,7 @@ jobs:
           fi
       - name: Créer une issue si anomalies
         if: steps.check.outputs.has_problems == 'true'
-        uses: actions/github-script@v7
+        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
         env:
           PROBLEMS: ${{ steps.check.outputs.problems }}
         with:
