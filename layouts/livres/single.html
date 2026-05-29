@@ -20,6 +20,8 @@
       </div>
       {{ end }}
       <div class="book-single__actions">
+        {{- /* Prix visible (broché). Doit refléter le schema.org Offer pour rester conforme. */ -}}
+        {{ with .Params.price }}<p class="book-single__price">{{ . }}&nbsp;€<span class="book-single__price-note">{{ if eq $.Lang "en" }}Paperback{{ else }}Broché{{ end }}</span></p>{{ end }}
         {{- partial "transmettre.html" . -}}
         {{ if or .Params.url_amazon_fr .Params.url_amazon_com }}
           {{- partial "amazon-button.html" . -}}

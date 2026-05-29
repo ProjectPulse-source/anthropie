@@ -94,6 +94,29 @@
   }
 }
 
+.book-single__price {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--color-text);
+  margin: 0 0 0.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.book-single__price-note {
+  font-family: var(--font-sans);
+  font-size: var(--fs-tiny);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+}
+
 // ----- Preuve sociale : recensions tierces réelles -----
 .book-reviews {
   margin-top: 2.5rem;
