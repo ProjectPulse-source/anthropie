@@ -3,6 +3,7 @@ title: "ANTHROPIE – Ordre ici. Dette ailleurs"
 date: 2025-09-09
 description: "L'ouvrage fondateur du cadre anthropique. En 622 pages, l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent est déployée à travers l'histoire longue, l'économie, les finances publiques et l'épistémologie. Ordre ici. Dette ailleurs."
 isbn: "978-2-9586347-2-8"
+description_en: "The foundational work on the anthropic framework. Across 622 pages, the book develops the hypothesis that social systems do not resolve disorder but displace it — across space, across time, or onto other social groups. Drawing on economic history, public finance, and ecological economics, it argues that what appears as order in one location is sustained by debt — material, ecological, or moral — contracted elsewhere."
 pages: 622  # sync data/works.yaml (book-anthropie.pages) — nombre de pages broché
 price: "36"  # prix broché EUR — affiché sur la page + schema.org Offer (priceCurrency EUR par défaut)
 serie: "anthropie"

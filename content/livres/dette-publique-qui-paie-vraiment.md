@@ -3,6 +3,7 @@ title: "Dette Publique : Qui paie vraiment ?"
 date: 2025-10-17
 description: "La dette publique n'est pas un solde à contenir mais un mécanisme de transfert. Ce livre pose la question non plus combien, mais qui paie — et par quels canaux le coût se déplace vers les générations futures et les groupes sociaux les moins mobiles."
 isbn: "978-2-9586347-3-5"
+description_en: "A focused application of the anthropic framework to the question of public debt. Who, ultimately, bears the cost of fiscal imbalances — present taxpayers, future generations, foreign creditors, or the ecological commons? The book maps the displacement chains by which sovereign debt redistributes disorder across time and across borders."
 price: "19"  # prix broché EUR — affiché sur la page + schema.org Offer
 serie: "anthropie"
 weight: 2

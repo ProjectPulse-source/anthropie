@@ -31,12 +31,8 @@
             <h3 class="livre-card__title"><a href="{{ .Permalink }}">{{ partial "fr-typo.html" .Title }}</a></h3>
             {{ if $isEn }}<p class="livre-card__lang-tag"><em>In French</em></p>{{ end }}
             {{ with .Params.subtitle }}<p class="livre-card__subtitle">{{ . }}</p>{{ end }}
-            {{ if $isEn }}
-              {{ if eq .Params.isbn "978-2-9586347-2-8" }}
-                <p class="livre-card__description">The foundational work on the anthropic framework. Across 622 pages, the book develops the hypothesis that social systems do not resolve disorder but displace it — across space, across time, or onto other social groups. Drawing on economic history, public finance, and ecological economics, it argues that what appears as order in one location is sustained by debt — material, ecological, or moral — contracted elsewhere.</p>
-              {{ else if eq .Params.isbn "978-2-9586347-3-5" }}
-                <p class="livre-card__description">A focused application of the anthropic framework to the question of public debt. Who, ultimately, bears the cost of fiscal imbalances — present taxpayers, future generations, foreign creditors, or the ecological commons? The book maps the displacement chains by which sovereign debt redistributes disorder across time and across borders.</p>
-              {{ end }}
+            {{ if and $isEn .Params.description_en }}
+              <p class="livre-card__description">{{ .Params.description_en }}</p>
             {{ else }}
               <p class="livre-card__description">{{ .Description }}</p>
             {{ end }}

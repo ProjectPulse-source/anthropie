@@ -4,6 +4,7 @@ subtitle: "Anthologie inédite & éclectique de citations"
 description: "Une anthologie qui refuse l'ordre alphabétique et thématique pour privilégier la surprise des rencontres. 4 680 citations, 1 380 voix, 25 siècles de génie humain, tissés en un fil d'Ariane subtil. Quarante ans de passion littéraire pour offrir non un classement, mais un voyage."
 date: 2022-12-20
 isbn: "978-2-9586347-0-4"
+description_en: "An anthology that refuses alphabetical and thematic order in favour of the surprise of unexpected encounters. 4,680 quotations, 1,380 voices, 25 centuries of human genius woven along a subtle thread. Forty years of literary passion, offering not a classification but a journey."
 price: "36"  # prix broché EUR — affiché sur la page + schema.org Offer
 serie: "autres-ouvrages"
 image_url: "https://m.media-amazon.com/images/I/71j0iwWpe5L._SL1436_.jpg"
