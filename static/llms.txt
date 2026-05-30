@@ -1,60 +1,53 @@
-# Stéphane Lalut — Économiste, Chercheur indépendant
+# Stéphane Lalut — Économiste, chercheur indépendant et essayiste
 
-> L'anthropie est l'hypothèse selon laquelle les systèmes sociaux
-> déplacent le désordre plutôt qu'ils ne le résolvent.
+> L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. (EN — Anthropy is the hypothesis that social systems displace disorder rather than resolve it.)
 
-Site officiel : https://stephane-lalut.com
-ORCID : https://orcid.org/0009-0002-1794-4895
-Zenodo : https://zenodo.org/communities/anthropie-working-papers
-OpenAlex : https://openalex.org/authors/A5130851063
+Stéphane Lalut développe le cadre de l'**anthropie** : tout ordre social local se construit en exportant son désordre vers d'autres lieux, d'autres temps ou d'autres groupes sociaux. Le cadre est déployé dans une série d'*Anthropie Working Papers* (Zenodo, CC-BY 4.0, bilingues FR/EN) et deux livres, et appliqué à la dette publique, la transition énergétique, les infrastructures numériques et la recherche indépendante.
 
-## Cadre théorique
+Site : https://stephane-lalut.com
 
-L'anthropie est un cadre heuristique développé par Stéphane Lalut
-(économiste). Il postule que tout ordre social local
-se construit en exportant son désordre vers d'autres lieux, d'autres
-temps ou d'autres groupes sociaux.
+## À ne pas confondre
 
-## Anthropie Working Papers
+- L'**anthropie** (mécanisme social) ≠ l'**entropie** (physique et thermodynamique).
+- ≠ l'**Anthropocène** (ère géologique) : l'anthropie est le mécanisme, l'Anthropocène la trace.
+- ≠ le **principe anthropique** (cosmologie ; Brandon Carter, 1973) : aucune filiation conceptuelle, seul le radical grec *ánthrôpos* est commun.
 
-- AWP-01 : Qu'est-ce que l'anthropie ? Principes d'une hypothèse
-  DOI : https://doi.org/10.5281/zenodo.19266862
-  Page : https://stephane-lalut.com/awp/awp-01/
+## Identifiants et profils
 
-- AWP-02 : 3,3 millions d'années en un principe
-  DOI : https://doi.org/10.5281/zenodo.19268037
-  Page : https://stephane-lalut.com/awp/awp-02/
+- [ORCID 0009-0002-1794-4895](https://orcid.org/0009-0002-1794-4895)
+- [Zenodo — communauté Anthropie Working Papers](https://zenodo.org/communities/anthropie-working-papers)
+- [OpenAlex A5130851063](https://openalex.org/authors/A5130851063)
+- [Google Scholar](https://scholar.google.com/citations?user=J4NqzwSfrHAC)
+- [Wikidata Q138909233](https://www.wikidata.org/wiki/Q138909233)
+- [IdRef 283054085](https://www.idref.fr/283054085)
+- [SSRN 11065608](https://ssrn.com/author=11065608)
+- [Academia](https://independent.academia.edu/StéphaneLALUT)
+- [SocArXiv / OSF](https://osf.io/ymkpj/)
 
-- AWP-03 : Dette publique et anthropie : qui paie vraiment le désordre ?
-  DOI : https://doi.org/10.5281/zenodo.19268769
-  Page : https://stephane-lalut.com/awp/awp-03/
+## Anthropie Working Papers (Zenodo, CC-BY 4.0)
 
-- AWP-04 : Transition énergétique ou transfert entropique ?
-  DOI : https://doi.org/10.5281/zenodo.19269244
-  Page : https://stephane-lalut.com/awp/awp-04/
+- [AWP-01 — Qu'est-ce que l'anthropie ? Principes d'une hypothèse](https://stephane-lalut.com/awp/awp-01/) — texte fondateur : tout ordre local se construit en exportant son désordre. DOI : https://doi.org/10.5281/zenodo.19266862
+- [AWP-02 — 3,3 millions d'années en un principe](https://stephane-lalut.com/awp/awp-02/) — l'anthropie sur la longue durée, sept configurations du premier outil au métaprogramme numérique. DOI : https://doi.org/10.5281/zenodo.19268037
+- [AWP-03 — Dette publique et anthropie : qui paie vraiment le désordre ?](https://stephane-lalut.com/awp/awp-03/) — la dette publique comme mécanisme de transfert entropique temporel et social. DOI : https://doi.org/10.5281/zenodo.19268769
+- [AWP-04 — Transition énergétique ou transfert entropique ?](https://stephane-lalut.com/awp/awp-04/) — extraction externalisée, déchets reportés, effet rebond non comptabilisé. DOI : https://doi.org/10.5281/zenodo.19269244
+- [AWP-05 — Penser hors les murs : notes sur la recherche indépendante en économie](https://stephane-lalut.com/awp/awp-05/) — le cadre anthropique appliqué au champ académique lui-même. DOI : https://doi.org/10.5281/zenodo.19269486
+- [AWP-06 — Infrastructures numériques et dette technologique](https://stephane-lalut.com/awp/awp-06/) — data centers, IA générative, derisking : le numérique n'a pas allégé la matière, il l'a déplacée. DOI : https://doi.org/10.5281/zenodo.20025421
 
-- AWP-05 : Penser hors les murs : notes sur la recherche indépendante
-  DOI : https://doi.org/10.5281/zenodo.19269486
-  Page : https://stephane-lalut.com/awp/awp-05/
-
-- AWP-06 : Infrastructures numériques et dette technologique
-  DOI : https://doi.org/10.5281/zenodo.20025421
-  Page : https://stephane-lalut.com/awp/awp-06/
+Chaque AWP a une version anglaise (DOI Zenodo distinct) et expose des sorties BibTeX / RIS / EndNote. Série indexée : https://stephane-lalut.com/serie-awp/
 
 ## Livres
 
-- ANTHROPIE – Ordre ici. Dette ailleurs (2025)
-  ISBN : 978-2-9586347-2-8
-  Page : https://stephane-lalut.com/livres/anthropie-ordre-ici-dette-ailleurs/
+- [ANTHROPIE — Ordre ici. Dette ailleurs](https://stephane-lalut.com/livres/anthropie-ordre-ici-dette-ailleurs/) (2025, 622 p.) — ISBN 978-2-9586347-2-8 ; Wikidata Q138827344. L'ouvrage fondateur du cadre anthropique.
+- [Dette Publique : Qui paie vraiment ?](https://stephane-lalut.com/livres/dette-publique-qui-paie-vraiment/) (2025, 224 p.) — ISBN 978-2-9586347-3-5 ; Wikidata Q138910896. Application du cadre à la dette publique française.
 
-- Dette Publique : Qui paie vraiment ? (2025)
-  ISBN : 978-2-9586347-3-5
-  Page : https://stephane-lalut.com/livres/dette-publique-qui-paie-vraiment/
+Autre ouvrage, hors cadre anthropique (anthologie de citations) : voir l'index https://stephane-lalut.com/livres/
 
-## Publications récentes
+## Publications (presse intellectuelle et revues)
 
-Publie dans : Alternatives Économiques, La Vie des Idées,
-En attendant Nadeau, Terrestres, Nonfiction, Le Temps,
-Projet, Lectures (ENS).
+Recensions et articles publiés dans : Alternatives Économiques, La Vie des Idées, En attendant Nadeau, Terrestres, Nonfiction, Le Temps, Mediapart, et Lectures (OpenEdition, avec DOI). Index complet : https://stephane-lalut.com/publications/
 
-Page publications : https://stephane-lalut.com/publications/
+## Pages de référence
+
+- [Qu'est-ce que l'anthropie ?](https://stephane-lalut.com/quest-ce-que-lanthropie/) — définition canonique, FAQ, trois axes de transfert (spatial, temporel, social)
+- [Série AWP](https://stephane-lalut.com/serie-awp/) — point d'entrée éditorial de la série
+- [À propos](https://stephane-lalut.com/a-propos/) — identité, profils, parcours
