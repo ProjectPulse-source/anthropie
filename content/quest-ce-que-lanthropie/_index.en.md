@@ -7,6 +7,8 @@ faq:
     answer: "Anthropy is the hypothesis that social systems displace disorder rather than resolve it. Every observable order in a system implies disorder exported elsewhere — spatially, temporally, or socially."
   - question: "What is the difference between anthropy and entropy?"
     answer: "Entropy belongs to physics and thermodynamics. Anthropy designates a social and institutional mechanism: the way in which human systems produce local order by displacing disorder outside the visible perimeter."
+  - question: "What is the difference between anthropy and the anthropic principle?"
+    answer: "No lineage — only the Greek root is shared. The anthropic principle is a cosmological thesis (Brandon Carter, 1973) holding that the universe we observe is necessarily compatible with the existence of observers. Anthropy, in Stéphane Lalut's sense, is a social mechanism — the displacement of disorder by human systems — and makes no claim about the physical universe."
   - question: "Is anthropy a theory or a hypothesis?"
     answer: "A working hypothesis with heuristic value. It makes it possible to ask questions that other frameworks do not formulate, without claiming the exhaustiveness of a finished theory."
   - question: "What is the discipline of attention?"
@@ -74,6 +76,14 @@ The Anthropocene names a geological epoch: the imprint that human societies leav
 One is a mark; the other is a mechanism. And the mechanism precedes the mark: anthropy can be traced as far back as the earliest technical programs of the species, across a 3.3-million-year depth, well before industrialization made the geological trace visible. It does not invalidate the Anthropocene. It clarifies its institutional dynamic, by showing through which transfers societies came to leave such a trace.
 
 See [AWP-02 — *3.3 million years in one principle*](https://stephane-lalut.com/en/awp/awp-02/) for the long-duration analysis.
+
+## Anthropy and the anthropic principle
+
+Anthropy should also not be confused with the *anthropic principle*.
+
+The anthropic principle belongs to cosmology. Formulated by the physicist Brandon Carter in 1973, it states that our observations of the universe are necessarily compatible with the existence of observers able to make them: the physical constants are as we measure them because, were it otherwise, no one would be there to measure them.
+
+Anthropy, by contrast, says nothing about the universe or its constants. It designates a social and institutional mechanism: the way human societies produce local order by displacing disorder. The proximity is merely lexical — both derive from the Greek *ánthrōpos*, "human being" — with no conceptual lineage.
 
 ## The discipline of attention
 

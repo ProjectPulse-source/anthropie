@@ -6,6 +6,8 @@ faq:
     answer: "L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. Tout ordre observable suppose un désordre exporté ailleurs — spatialement, temporellement ou socialement."
   - question: "Quelle est la différence entre anthropie et entropie ?"
     answer: "L'entropie relève de la physique et de la thermodynamique. L'anthropie désigne un mécanisme social et institutionnel : la manière dont des systèmes humains produisent de l'ordre local en déplaçant le désordre hors du périmètre visible."
+  - question: "Quelle est la différence entre l'anthropie et le principe anthropique ?"
+    answer: "Aucune filiation : seul le radical grec est commun. Le principe anthropique est une thèse de cosmologie (Brandon Carter, 1973) selon laquelle l'univers que nous observons est nécessairement compatible avec l'existence d'observateurs. L'anthropie, au sens de Stéphane Lalut, est un mécanisme social — le déplacement du désordre par les systèmes humains — et ne porte aucune affirmation sur l'univers physique."
   - question: "L'anthropie est-elle une théorie ou une hypothèse ?"
     answer: "Une hypothèse de travail à valeur heuristique. Elle permet de poser des questions que d'autres cadres ne formulent pas, sans prétendre à l'exhaustivité d'une théorie achevée."
   - question: "Qu'est-ce que la discipline du regard ?"
@@ -73,6 +75,14 @@ L'Anthropocène nomme une ère géologique : la trace que les sociétés humaine
 L'une est une marque ; l'autre est un mécanisme. Et le mécanisme précède la marque : l'anthropie peut se lire dès les premiers programmes techniques de l'espèce, sur une profondeur de 3,3 millions d'années, bien avant l'industrialisation qui rend la trace géologique visible. Elle n'invalide donc pas l'Anthropocène. Elle en éclaire la dynamique institutionnelle, en montrant par quels transferts les sociétés en sont venues à laisser une telle trace.
 
 Voir [AWP-02 — *3,3 millions d'années en un principe*](https://stephane-lalut.com/awp/awp-02/) pour l'analyse en longue durée.
+
+## Anthropie et principe anthropique
+
+L'anthropie ne doit pas non plus être confondue avec le *principe anthropique*.
+
+Le principe anthropique relève de la cosmologie. Formulé par le physicien Brandon Carter en 1973, il énonce que nos observations de l'univers sont nécessairement compatibles avec l'existence d'observateurs capables de les faire&nbsp;: les constantes physiques sont telles que nous les mesurons parce que, dans le cas contraire, nul ne serait là pour les mesurer.
+
+L'anthropie, elle, ne dit rien de l'univers ni de ses constantes. Elle désigne un mécanisme social et institutionnel&nbsp;: la manière dont les sociétés humaines produisent un ordre local en déplaçant le désordre. La proximité n'est que lexicale — l'un et l'autre dérivent du grec *ánthrôpos*, «&nbsp;l'être humain&nbsp;» —, sans aucune filiation conceptuelle.
 
 ## La discipline du regard
 
