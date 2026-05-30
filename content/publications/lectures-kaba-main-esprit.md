@@ -4,6 +4,7 @@ date: 2026-04-14
 revue: "Lectures"
 source_type: "Revue"
 url_externe: "https://journals.openedition.org/lectures/70897"
+doi: "10.4000/162f0"
 image: "/img/publications/lectures-logo.webp"
 image_type: "logo"
 chapo: "Bhopal, trente ans après : ce livre ne parle pas du désastre. Il montre comment les ouvriers métallurgistes construisent, dans l'ombre des ruines, identité professionnelle et dignité — par les gestes, les savoir-faire et les cultures du travail informel."

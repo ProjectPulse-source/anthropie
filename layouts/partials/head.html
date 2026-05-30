@@ -114,7 +114,7 @@
     "sameAs" $sameAsUrls
     "jobTitle" (cond $isEn $author.jobTitleEn $author.jobTitleFr)
     "description" (cond $isEn $author.descriptionEn $author.descriptionFr)
-    "knowsAbout" $author.knowsAbout -}}
+    "knowsAbout" (cond $isEn $author.knowsAboutEn $author.knowsAbout) -}}
 {{- $profile := dict
     "@context" "https://schema.org"
     "@type" "ProfilePage"

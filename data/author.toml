@@ -16,8 +16,9 @@ jobTitleEn = "Economist — Independent researcher and essayist"
 descriptionFr = "Économiste, chercheur indépendant et essayiste. Auteur du cadre anthropique."
 descriptionEn = "Economist, independent researcher and essayist. Author of the framework of anthropy."
 
-# Domaines de compétence — utilisé pour JSON-LD knowsAbout
+# Domaines de compétence — utilisé pour JSON-LD knowsAbout (résolu par langue dans head.html)
 knowsAbout = ["anthropie", "dette publique", "transition énergétique", "économie institutionnelle"]
+knowsAboutEn = ["anthropy", "public debt", "energy transition", "institutional economics"]
 
 # Identifiants externes — ordre du sameAs JSON-LD actuel préservé
 [[author.sameAs]]

@@ -201,6 +201,32 @@ a.pub-card {
   }
 }
 
+// DOI des recensions académiques (affiché seulement si la fiche porte un doi).
+// Aligné sous la colonne texte, registre technique discret (≠ méta éditoriale).
+.pub-card__doi {
+  margin: -0.25rem -0.75rem 0.75rem;
+  padding: 0 0.75rem 0 calc(0.75rem + 160px + 1rem);
+  font-family: var(--font-mono);
+  font-size: var(--fs-tiny);
+  letter-spacing: 0.02em;
+
+  a {
+    color: var(--color-text-mono);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-accent);
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .pub-card__doi {
+    padding-left: 0.75rem;
+  }
+}
+
 // === Vignette logo — traitement typographique ===
 // Le cadre 160×107 et le radius 8px sont définis ailleurs (règle d'or).
 // Ces règles ne touchent QUE le contenu intérieur et la palette.

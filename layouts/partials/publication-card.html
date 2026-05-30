@@ -58,4 +58,7 @@
   {{ end }}
 </div>
 {{ end }}
+{{ with $page.Params.doi }}
+<p class="pub-card__doi"><a href="https://doi.org/{{ . }}" target="_blank" rel="noopener noreferrer">{{ if $isEN }}DOI: {{ else }}DOI&nbsp;: {{ end }}{{ . }}</a></p>
+{{ end }}
 </div>
