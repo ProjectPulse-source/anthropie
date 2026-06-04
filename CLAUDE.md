@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Stack
 
-Static site for **anthropie.fr** (Stéphane Lalut, économiste). Hugo Extended **0.147.0**, Sass natif Hugo, vanilla JS, **zéro dépendance npm**. Déployé sur GitHub Pages via `.github/workflows/hugo.yml` à chaque push sur `main`.
+Static site for **stephane-lalut.com** (Stéphane Lalut, économiste). Hugo Extended **0.147.0**, Sass natif Hugo, vanilla JS, **zéro dépendance npm**. Déployé sur GitHub Pages via `.github/workflows/hugo.yml` à chaque push sur `main`. *(Le domaine anthropie.fr n'a jamais été détenu — aftermarket Premium GoDaddy, dossier clos 2026-06-04 : ne jamais le référencer comme site vivant.)*
 
 ## Commandes
 

@@ -1,6 +1,6 @@
 # Anthropie — Site de Stéphane Lalut
 
-Site statique Hugo pour [anthropie.fr](https://anthropie.fr).
+Site statique Hugo pour [stephane-lalut.com](https://stephane-lalut.com).
 
 ## Stack
 
