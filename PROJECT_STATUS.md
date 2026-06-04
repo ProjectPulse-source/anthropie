@@ -49,6 +49,27 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-06-04/05 — Liens Amazon canoniques + purge anthropie.fr (correctif bloquant hors-gel)
+
+Round `_Commandes-158` (audit READ_ONLY puis patch sur GO explicite). Deux défauts
+bloquants avérés corrigés, gel 90 j respecté (même classe que l'intervention du 29/05).
+
+- **`fix(livres)` `4341fd7`** : les 21 liens Amazon des 3 fiches livres étaient des
+  **shorteners** (`amzn.eu/d/…`, `a.co/…`) avec **collisions avérées** (Dette DE/IT
+  pointaient le shortener d'un autre livre ; Livresque CA = lien FR). Remplacés par
+  les **URL canoniques `/dp/<ASIN>`** + **boutons séparés Broché / Kindle par marché**
+  (`url_amazon_<mkt>` / `url_amazon_<mkt>_kindle`, partial `amazon-button.html`).
+  L'`Offer.url` du JSON-LD devient canonique. ASIN vérifiés contre les données de
+  compte KDP ; **vérifié en production** : 0 shortener, 5/5 liens échantillonnés
+  résolvent vers le bon livre (dont les ex-collisions .it/.ca et les Kindle .es).
+  Prérequis posé pour les tags **Amazon Attribution** (câblage prévu septembre 2026).
+- **`docs` `c2a77a2`** : purge des mentions « site pour anthropie.fr »
+  (CLAUDE.md/AGENTS.md/README → stephane-lalut.com). **Dossier domaine CLOS** :
+  anthropie.fr n'a jamais été détenu (aftermarket Premium GoDaddy) — aucun rachat,
+  aucune redirection. La production n'émettait aucune référence (vérifié :
+  sitemap/canonical/llms.txt = 0 hit). Les mentions historiques exactes
+  (§ correctif `/presse/` ci-dessous, docs/memo) sont conservées.
+
 ### 2026-05-29 — Audit GEO/SEO/sécurité + 4 correctifs ciblés (intervention hors-gel, non structurelle)
 
 Audit read-only en 5 lots (GEO/IA, maillage, SEO, performance, sécurité) demandé par l'auteur. Verdict : **0 défaut bloquant** ; le gel 90 jours n'est donc pas rompu sur le fond. 4 commits atomiques appliqués sur des défauts *utiles* (non structurels) — routing, JSON-LD, `citation_*`, hreflang, canonical : **intacts**.
