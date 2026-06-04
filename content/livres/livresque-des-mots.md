@@ -9,13 +9,23 @@ price: "36"  # prix broché EUR — affiché sur la page + schema.org Offer
 serie: "autres-ouvrages"
 image_url: "https://m.media-amazon.com/images/I/71j0iwWpe5L._SL1436_.jpg"
 weight: 3
-url_amazon_fr: "https://amzn.eu/d/01Qvm7fF"
-url_amazon_ca: "https://amzn.eu/d/01Qvm7fF"
-url_amazon_com: "https://a.co/d/0geKRrgX"
-url_amazon_uk: "https://amzn.eu/d/0fTRK3ak"
-url_amazon_de: "https://amzn.eu/d/09518Az2"
-url_amazon_it: "https://amzn.eu/d/0fQl5caq"
-url_amazon_es: "https://amzn.eu/d/06zTzk9Q"
+# Liens canoniques /dp/<ASIN broché 2958634701> — jamais de shortener amzn.eu/a.co
+# (l'ancien CA réutilisait le shortener FR — corrigé 2026-06-04).
+url_amazon_fr: "https://www.amazon.fr/dp/2958634701"
+url_amazon_ca: "https://www.amazon.ca/dp/2958634701"
+url_amazon_com: "https://www.amazon.com/dp/2958634701"
+url_amazon_uk: "https://www.amazon.co.uk/dp/2958634701"
+url_amazon_de: "https://www.amazon.de/dp/2958634701"
+url_amazon_it: "https://www.amazon.it/dp/2958634701"
+url_amazon_es: "https://www.amazon.es/dp/2958634701"
+# Édition Kindle (ASIN B0CW994YWH) — bouton séparé par marché
+url_amazon_fr_kindle: "https://www.amazon.fr/dp/B0CW994YWH"
+url_amazon_ca_kindle: "https://www.amazon.ca/dp/B0CW994YWH"
+url_amazon_com_kindle: "https://www.amazon.com/dp/B0CW994YWH"
+url_amazon_uk_kindle: "https://www.amazon.co.uk/dp/B0CW994YWH"
+url_amazon_de_kindle: "https://www.amazon.de/dp/B0CW994YWH"
+url_amazon_it_kindle: "https://www.amazon.it/dp/B0CW994YWH"
+url_amazon_es_kindle: "https://www.amazon.es/dp/B0CW994YWH"
 ---
 
 Une anthologie qui refuse l'ordre alphabétique.

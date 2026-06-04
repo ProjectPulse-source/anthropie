@@ -10,12 +10,21 @@
     <span>Amazon</span>
   </button>
   <div class="amazon-popover" id="{{ $id }}" data-amazon-popover hidden>
-    {{ with $page.Params.url_amazon_fr }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.fr</a>{{ end }}
-    {{ with $page.Params.url_amazon_es }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.es</a>{{ end }}
-    {{ with $page.Params.url_amazon_ca }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.ca</a>{{ end }}
-    {{ with $page.Params.url_amazon_com }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.com</a>{{ end }}
-    {{ with $page.Params.url_amazon_uk }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.co.uk</a>{{ end }}
-    {{ with $page.Params.url_amazon_de }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.de</a>{{ end }}
-    {{ with $page.Params.url_amazon_it }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.it</a>{{ end }}
+    {{/* Un lien par marché × format. Liens canoniques /dp/<ASIN> uniquement
+         (broché = url_amazon_<mkt>, Kindle = url_amazon_<mkt>_kindle). */}}
+    {{ with $page.Params.url_amazon_fr }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.fr · Broché</a>{{ end }}
+    {{ with $page.Params.url_amazon_fr_kindle }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.fr · Kindle</a>{{ end }}
+    {{ with $page.Params.url_amazon_es }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.es · Broché</a>{{ end }}
+    {{ with $page.Params.url_amazon_es_kindle }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.es · Kindle</a>{{ end }}
+    {{ with $page.Params.url_amazon_ca }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.ca · Broché</a>{{ end }}
+    {{ with $page.Params.url_amazon_ca_kindle }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.ca · Kindle</a>{{ end }}
+    {{ with $page.Params.url_amazon_com }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.com · Broché</a>{{ end }}
+    {{ with $page.Params.url_amazon_com_kindle }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.com · Kindle</a>{{ end }}
+    {{ with $page.Params.url_amazon_uk }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.co.uk · Broché</a>{{ end }}
+    {{ with $page.Params.url_amazon_uk_kindle }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.co.uk · Kindle</a>{{ end }}
+    {{ with $page.Params.url_amazon_de }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.de · Broché</a>{{ end }}
+    {{ with $page.Params.url_amazon_de_kindle }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.de · Kindle</a>{{ end }}
+    {{ with $page.Params.url_amazon_it }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.it · Broché</a>{{ end }}
+    {{ with $page.Params.url_amazon_it_kindle }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.it · Kindle</a>{{ end }}
   </div>
 </div>

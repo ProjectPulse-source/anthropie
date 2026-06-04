@@ -10,13 +10,23 @@ serie: "anthropie"
 weight: 2
 wikidata_qid: "Q138910896"
 image_url: "https://m.media-amazon.com/images/I/613dYtFI5WL._SL1500_.jpg"
-url_amazon_fr: "https://amzn.eu/d/01Z60i3H"
-url_amazon_es: "https://amzn.eu/d/06oRn63g"
-url_amazon_com: "https://a.co/d/04hB4FsV"
-url_amazon_uk: "https://amzn.eu/d/09SXx0W5"
-url_amazon_de: "https://amzn.eu/d/0f0NFGYi"
-url_amazon_it: "https://amzn.eu/d/0f0NFGYi"
-url_amazon_ca: "https://a.co/d/0aLceVAe"
+# Liens canoniques /dp/<ASIN broché 2958634736> — jamais de shortener amzn.eu/a.co
+# (les anciens DE/IT pointaient le shortener d'un AUTRE livre — collision corrigée 2026-06-04).
+url_amazon_fr: "https://www.amazon.fr/dp/2958634736"
+url_amazon_es: "https://www.amazon.es/dp/2958634736"
+url_amazon_com: "https://www.amazon.com/dp/2958634736"
+url_amazon_uk: "https://www.amazon.co.uk/dp/2958634736"
+url_amazon_de: "https://www.amazon.de/dp/2958634736"
+url_amazon_it: "https://www.amazon.it/dp/2958634736"
+url_amazon_ca: "https://www.amazon.ca/dp/2958634736"
+# Édition Kindle (ASIN B0FWW2HPZP) — bouton séparé par marché
+url_amazon_fr_kindle: "https://www.amazon.fr/dp/B0FWW2HPZP"
+url_amazon_es_kindle: "https://www.amazon.es/dp/B0FWW2HPZP"
+url_amazon_com_kindle: "https://www.amazon.com/dp/B0FWW2HPZP"
+url_amazon_uk_kindle: "https://www.amazon.co.uk/dp/B0FWW2HPZP"
+url_amazon_de_kindle: "https://www.amazon.de/dp/B0FWW2HPZP"
+url_amazon_it_kindle: "https://www.amazon.it/dp/B0FWW2HPZP"
+url_amazon_ca_kindle: "https://www.amazon.ca/dp/B0FWW2HPZP"
 # Recensions tierces réelles uniquement (source vérifiable). Pas de service de presse fait :
 # une seule recension à ce jour. Aucune note inventée, aucun aggregateRating importé d'Amazon.
 reviews:
