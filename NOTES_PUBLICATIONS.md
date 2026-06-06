@@ -66,6 +66,7 @@ related_book: [slug-livre]
 |---------------------------|---------------|---------------------------------------------|
 | Alternatives Économiques  | `Magazine`    | Mensuel + site, auto-désigné magazine       |
 | En attendant Nadeau       | `Revue`       | Choix éditorial Stéphane (Wikipédia : journal) |
+| La Grande Conversation    | `Revue`       | Auto-désignée « la revue intellectuelle et politique de Terra Nova » |
 | La Vie des Idées          | `Revue`       | Auto-désigné « la revue » sur leur site     |
 | Le Temps                  | `Quotidien`   | Quotidien suisse romand                     |
 | Lectures                  | `Revue`       | Revue électronique OpenEdition              |
