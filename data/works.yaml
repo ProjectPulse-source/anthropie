@@ -21,12 +21,18 @@
 # =============================================================================
 
 meta:
-  registry_version: "1.4"
-  last_updated: "2026-06-06"
+  registry_version: "1.5"
+  last_updated: "2026-06-08"
   maintainer: "Stéphane Lalut"
   total_works: 35
   source_registry: "registre_soumissions_v73.xlsx"
   changelog:
+    v1_5: |
+      Livresque des mots (2026-06-08) — ancrage des CHIFFRES CANONIQUES du corpus
+      dans book-livresque-des-mots.corpus_stats (source unique) : 4 658 citations,
+      1 388 auteurs, 25 siècles, 40 ans ; pages 0→672 ; publication_date, ASIN
+      broché, site_pages.fr et purchase_url complétés. Corrige l'ancien 4 680/1 380
+      propagé sur le site/Wikidata (dédoublonnage Wittgenstein du master P11).
     v1_4: |
       Ajout essai Lalut (2026-06-04) — La Grande Conversation (revue de Terra
       Nova), « Qui absorbe le coût de la dette française ? ». Article original
@@ -335,28 +341,42 @@ works:
     canonical_title:
       fr: "Livresque des mots"
       en: ""  # n/a
-    publication_date: ""  # todo
+    subtitle_fr: "Anthologie éclectique de citations"  # NB : « inédite » du sous-titre couverture = subjectif (KDP), évité ici
+    publication_date: "2022-12-20"  # source content/livres/livresque-des-mots.md
     isbn: "978-2-9586347-0-4"
     isbn_13_normalized: "9782958634704"
-    pages: 0  # todo
+    pages: 672  # broché, master P11 (2026-06-08) — était 0/todo
     publisher: "Auto-édition"
     distribution: "Amazon KDP"
     asin_kindle: "B0CW994YWH"
+    asin_broche: "2958634701"
     license: ""  # à préciser
     wikidata: ""  # à créer ou identifier
+    # ----- CHIFFRES CANONIQUES DU CORPUS — SOURCE UNIQUE -----
+    # Toute prose chiffrée DOIT refléter ces valeurs : fiche Amazon, fiche A+,
+    # content/livres/livresque-des-mots.md (description, description_en, corps),
+    # Wikidata/03_books.yaml (abstract_short_fr). Vérifiés sur le master P11
+    # après dédoublonnage (Wittgenstein). NE PAS recopier ces nombres ailleurs
+    # sans les corriger ici en premier.
+    corpus_stats:
+      citations: 4658
+      auteurs: 1388            # « voix »
+      siecles: 25              # de Homère/Confucius au présent (≈ conservateur)
+      annees_selection: 40
+      derniere_verif: "2026-06-08"
     abstract_short:
-      fr: ""  # todo
+      fr: ""  # todo (rédiger en RÉFÉRENÇANT corpus_stats, ne pas recopier les chiffres)
     keywords: []  # todo
     site_pages:
-      fr: ""  # todo (vérifier si page existe sur stephane-lalut.com)
+      fr: "https://stephane-lalut.com/livres/livresque-des-mots/"
       en: ""  # n/a
     purchase_url:
-      amazon_fr: ""  # todo
-      amazon_com: ""  # todo
+      amazon_fr: "https://www.amazon.fr/dp/2958634701"  # /dp canonique — jamais de shortener amzn.eu/a.co
+      amazon_com: "https://www.amazon.com/dp/2958634701"
     google_scholar:
       visible: false
       citations_observed: 0
-    notes: "Livre antérieur (hors série anthropie). Données minimales (ISBN + ASIN). Métadonnées complètes à ajouter si tu souhaites le rendre visible sur le site."
+    notes: "Livre antérieur (hors série anthropie). Chiffres canoniques du corpus ancrés dans corpus_stats — source unique pour la fiche Amazon, le site et Wikidata."
 
   # ===========================================================================
   # ARTICLES PUBLIÉS — URL stable (10)
@@ -730,9 +750,10 @@ works:
 # Restent à compléter (mineur, non-bloquant) :
 #
 # 1. book-livresque-des-mots :
-#    - publication_date, pages, abstract_short, keywords
-#    - URLs Amazon (à récupérer depuis ton compte KDP)
-#    - Vérifier si une page existe sur le site stephane-lalut.com
+#    - FAIT (2026-06-08) : pages 672, publication_date, ASIN broché, site_pages.fr,
+#      purchase_url, corpus_stats (chiffres canoniques 4 658/1 388/25/40)
+#    - Restent : abstract_short.fr (rédiger en référençant corpus_stats, sans
+#      recopier les chiffres) + keywords ; wikidata (à créer)
 #
 # 2. book-dette-publique.pages : FAIT (224, 2026-05-30)
 #
