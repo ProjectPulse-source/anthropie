@@ -32,9 +32,9 @@
             {{ if $isEn }}<p class="livre-card__lang-tag"><em>In French</em></p>{{ end }}
             {{ with .Params.subtitle }}<p class="livre-card__subtitle">{{ . }}</p>{{ end }}
             {{ if and $isEn .Params.description_en }}
-              <p class="livre-card__description">{{ .Params.description_en }}</p>
+              <p class="livre-card__description">{{ partial "desc-figures.html" (dict "text" .Params.description_en "isbn" .Params.isbn "sep" ",") }}</p>
             {{ else }}
-              <p class="livre-card__description">{{ .Description }}</p>
+              <p class="livre-card__description">{{ partial "desc-figures.html" (dict "text" .Description "isbn" .Params.isbn) }}</p>
             {{ end }}
             {{ with .Params.isbn }}<p class="livre-card__isbn">ISBN&nbsp;: {{ . }}</p>{{ end }}
             {{ if or .Params.url_amazon_fr .Params.url_amazon_com }}

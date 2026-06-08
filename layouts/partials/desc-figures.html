@@ -1,0 +1,21 @@
+{{- /* desc-figures.html — résout les CHIFFRES CANONIQUES dans une description.
+       Source unique : data/works.yaml -> works[].corpus_stats (par ISBN).
+       Remplace les placeholders {citations} {auteurs} {siecles} par les
+       valeurs formatées (séparateur de milliers configurable).
+       Entrée : dict { "text": <string>, "isbn": <isbn|nil>, "sep": <" "|","> }
+       Pages sans ISBN / sans corpus_stats / sans placeholder : NO-OP (texte
+       retourné inchangé). Évite toute recopie des chiffres dans la prose. */ -}}
+{{- $text := .text -}}
+{{- $sep := .sep | default " " -}}
+{{- with .isbn -}}
+  {{- range where site.Data.works.works "isbn" . -}}
+    {{- with .corpus_stats -}}
+      {{- $cit := printf "%d%s%03d" (int (div .citations 1000)) $sep (mod .citations 1000) -}}
+      {{- $aut := printf "%d%s%03d" (int (div .auteurs 1000)) $sep (mod .auteurs 1000) -}}
+      {{- $text = replace $text "{citations}" $cit -}}
+      {{- $text = replace $text "{auteurs}" $aut -}}
+      {{- $text = replace $text "{siecles}" (printf "%d" .siecles) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $text -}}

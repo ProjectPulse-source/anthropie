@@ -43,7 +43,7 @@
   "@type" "Book"
   "name" .Title
   "author" (dict "@type" "Person" "name" site.Data.author.author.name "url" site.Data.author.author.url "sameAs" $authorUrls)
-  "description" .Description
+  "description" (partial "desc-figures.html" (dict "text" .Description "isbn" .Params.isbn))
   "inLanguage" "fr"
   "publisher" (dict "@type" "Organization" "name" "Stéphane Lalut")
   "url" .Permalink

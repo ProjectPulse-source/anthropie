@@ -1,0 +1,17 @@
+{{- /* {{< stat "citations" >}} — émet un chiffre canonique du corpus depuis
+       data/works.yaml (corpus_stats, par ISBN de la page). citations/auteurs
+       sont groupés (milliers, séparateur arg 2, défaut espace) ; autres bruts. */ -}}
+{{- $key := .Get 0 -}}
+{{- $sep := .Get 1 | default " " -}}
+{{- with .Page.Params.isbn -}}
+  {{- range where site.Data.works.works "isbn" . -}}
+    {{- with .corpus_stats -}}
+      {{- $v := index . $key -}}
+      {{- if or (eq $key "citations") (eq $key "auteurs") -}}
+        {{- printf "%d%s%03d" (int (div $v 1000)) $sep (mod $v 1000) -}}
+      {{- else -}}
+        {{- printf "%d" $v -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

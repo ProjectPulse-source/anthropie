@@ -1,10 +1,10 @@
 ---
 title: "Livresque des mots"
 subtitle: "Anthologie inédite & éclectique de citations"
-description: "Une anthologie qui refuse l'ordre alphabétique et thématique pour privilégier la surprise des rencontres. 4 658 citations, 1 388 voix, 25 siècles de génie humain, tissés en un fil d'Ariane subtil. Quarante ans de passion littéraire pour offrir non un classement, mais un voyage."
+description: "Une anthologie qui refuse l'ordre alphabétique et thématique pour privilégier la surprise des rencontres. {citations} citations, {auteurs} voix, 25 siècles de génie humain, tissés en un fil d'Ariane subtil. Quarante ans de passion littéraire pour offrir non un classement, mais un voyage."
 date: 2022-12-20
 isbn: "978-2-9586347-0-4"
-description_en: "An anthology that refuses alphabetical and thematic order in favour of the surprise of unexpected encounters. 4,658 quotations, 1,388 voices, 25 centuries of human genius woven along a subtle thread. Forty years of literary passion, offering not a classification but a journey."
+description_en: "An anthology that refuses alphabetical and thematic order in favour of the surprise of unexpected encounters. {citations} quotations, {auteurs} voices, 25 centuries of human genius woven along a subtle thread. Forty years of literary passion, offering not a classification but a journey."
 price: "36"  # prix broché EUR — affiché sur la page + schema.org Offer
 serie: "autres-ouvrages"
 image_url: "https://m.media-amazon.com/images/I/71j0iwWpe5L._SL1436_.jpg"
@@ -30,7 +30,7 @@ url_amazon_es_kindle: "https://www.amazon.es/dp/B0CW994YWH"
 
 Une anthologie qui refuse l'ordre alphabétique.
 
-4 658 citations. 1 388 voix. 25 siècles. Aucun classement par thème, par auteur ou par lettre.
+{{< stat "citations" >}} citations. {{< stat "auteurs" >}} voix. 25 siècles. Aucun classement par thème, par auteur ou par lettre.
 
 Le pari : que le voisinage des phrases produit du sens là où le classement le fige. Un fragment de Juvénal y côtoie un mot d'Albert Brie ; un aphorisme du XVIIᵉ siècle se laisse rejoindre par une réplique de cinéma. À chaque page, des passerelles inattendues entre œuvres, époques et registres — aphorismes, extraits de romans, anecdotes littéraires, poésies, répliques choisies.
 
