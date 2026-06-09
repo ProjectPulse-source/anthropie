@@ -1,13 +1,13 @@
 ---
 title: "Livresque des mots"
-subtitle: "Anthologie inédite & éclectique de citations"
+subtitle: "Anthologie éclectique de citations"
 description: "Une anthologie qui refuse l'ordre alphabétique et thématique pour privilégier la surprise des rencontres. {citations} citations, {auteurs} voix, 25 siècles de génie humain, tissés en un fil d'Ariane subtil. Quarante ans de passion littéraire pour offrir non un classement, mais un voyage."
 date: 2022-12-20
 isbn: "978-2-9586347-0-4"
 description_en: "An anthology that refuses alphabetical and thematic order in favour of the surprise of unexpected encounters. {citations} quotations, {auteurs} voices, 25 centuries of human genius woven along a subtle thread. Forty years of literary passion, offering not a classification but a journey."
 price: "36"  # prix broché EUR — affiché sur la page + schema.org Offer
 serie: "autres-ouvrages"
-image_url: "https://m.media-amazon.com/images/I/71j0iwWpe5L._SL1436_.jpg"
+image_url: "https://stephane-lalut.com/images/livres/livresque-des-mots.jpg"  # nouvelle couverture (recto), hébergée localement static/images/livres/ — màj 2026-06-09
 weight: 3
 # Liens canoniques /dp/<ASIN broché 2958634701> — jamais de shortener amzn.eu/a.co
 # (l'ancien CA réutilisait le shortener FR — corrigé 2026-06-04).
@@ -64,4 +64,4 @@ Ce que cherche cette anthologie n'est pas la commodité de la consultation thém
 
 ---
 
-Édition 2022. Version papier pour la flânerie, version Kindle pour la recherche fine.
+Troisième édition, 2026. Version papier pour la flânerie, version Kindle pour la recherche fine.
