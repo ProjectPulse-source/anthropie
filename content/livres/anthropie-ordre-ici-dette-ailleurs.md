@@ -9,7 +9,7 @@ price: "36"  # prix broché EUR — affiché sur la page + schema.org Offer (pri
 serie: "anthropie"
 weight: 1
 wikidata_qid: "Q138827344"
-image_url: "https://m.media-amazon.com/images/I/81kdsh4400L._SL1436_.jpg"
+image_url: "https://stephane-lalut.com/images/livres/anthropie-ordre-ici-dette-ailleurs.jpg"  # nouvelle couverture typographique (recto), hébergée localement — màj 2026-06-09 ; basculer sur l'URL image Amazon quand disponible
 # Liens canoniques /dp/<ASIN broché 2958634728> — jamais de shortener amzn.eu/a.co
 # (redirections opaques, intaguables, collisions constatées — patch 2026-06-04).
 url_amazon_fr: "https://www.amazon.fr/dp/2958634728"
