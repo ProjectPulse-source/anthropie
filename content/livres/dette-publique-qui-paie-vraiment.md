@@ -9,7 +9,7 @@ price: "19"  # prix broché EUR — affiché sur la page + schema.org Offer
 serie: "anthropie"
 weight: 2
 wikidata_qid: "Q138910896"
-image_url: "https://m.media-amazon.com/images/I/613dYtFI5WL._SL1500_.jpg"
+image_url: "https://m.media-amazon.com/images/I/71Az02fHNNL._SL1500_.jpg"
 # Liens canoniques /dp/<ASIN broché 2958634736> — jamais de shortener amzn.eu/a.co
 # (les anciens DE/IT pointaient le shortener d'un AUTRE livre — collision corrigée 2026-06-04).
 url_amazon_fr: "https://www.amazon.fr/dp/2958634736"

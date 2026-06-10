@@ -329,7 +329,7 @@ works:
     purchase_url:
       amazon_fr: "https://amzn.eu/d/01Z60i3H"
       amazon_com: "https://a.co/d/04hB4FsV"
-    image_url: "https://m.media-amazon.com/images/I/613dYtFI5WL._SL1500_.jpg"
+    image_url: "https://m.media-amazon.com/images/I/71Az02fHNNL._SL1500_.jpg"
     google_scholar:
       visible: false
       citations_observed: 0
