@@ -7,7 +7,6 @@ isbn: "978-2-9586347-0-4"
 description_en: "An anthology that refuses alphabetical and thematic order in favour of the surprise of unexpected encounters. {citations} quotations, {auteurs} voices, 25 centuries of human genius woven along a subtle thread. Forty years of literary passion, offering not a classification but a journey."
 price: "36"  # prix broché EUR — affiché sur la page + schema.org Offer
 serie: "autres-ouvrages"
-image_url: "https://m.media-amazon.com/images/I/81QqCio6QwL._SL1500_.jpg"  # nouvelle couverture Amazon — màj 2026-06-09
 weight: 3
 # Liens canoniques /dp/<ASIN broché 2958634701> — jamais de shortener amzn.eu/a.co
 # (l'ancien CA réutilisait le shortener FR — corrigé 2026-06-04).

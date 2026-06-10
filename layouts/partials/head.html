@@ -55,7 +55,7 @@
 <!-- Font preload -->
 <link rel="preload" href="/fonts/newsreader/Newsreader-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/inter/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
-{{ if .IsHome }}<link rel="preload" as="image" href="https://m.media-amazon.com/images/I/81kdsh4400L._SL480_.jpg" fetchpriority="high">{{ end }}
+{{ if .IsHome }}{{ with partial "book-cover-resource.html" "anthropie-ordre-ici-dette-ailleurs" }}<link rel="preload" as="image" href="{{ (.Resize "480x q82").RelPermalink }}" fetchpriority="high">{{ end }}{{ end }}
 <script src="/js/transmettre.js" defer></script>
 <script src="/js/mobile-menu.js" defer></script>
 {{ if eq .Lang "fr" }}<script src="/js/french-typography.js" defer></script>{{ end }}
@@ -134,11 +134,13 @@
   {{- if eq .key "orcid" -}}{{- $orcid = . -}}{{- end -}}
 {{- end -}}
 {{- $authorProfileUrl := replace site.Data.author.author.canonicalProfileUrl "#person" "" -}}
+{{- $awpImage := "" -}}
+{{- with partial "book-cover-resource.html" "anthropie-ordre-ici-dette-ailleurs" -}}{{- $awpImage = .Permalink -}}{{- end -}}
 {{- $article := dict
     "@context" "https://schema.org"
     "@type" "ScholarlyArticle"
     "headline" $fullTitle
-    "image" "https://m.media-amazon.com/images/I/81kdsh4400L._SL1436_.jpg"
+    "image" $awpImage
     "description" .Description
     "author" (dict "@type" "Person" "name" site.Data.author.author.name "identifier" $orcid.url "sameAs" $orcid.url "url" $authorProfileUrl)
     "datePublished" $dp

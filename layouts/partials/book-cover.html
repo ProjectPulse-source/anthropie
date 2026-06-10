@@ -1,0 +1,30 @@
+{{- /* Couverture de livre responsive depuis assets/images/livres/<slug>.jpg.
+
+       Source unique = le fichier asset. Changer une couverture = remplacer ce
+       seul fichier ; aucune URL à éditer dans le contenu ou les templates.
+
+       L'original est référencé dans le srcset (donc publié par Hugo) à l'URL
+       stable /images/livres/<slug>.jpg : les références externes (works.yaml,
+       Wikidata) restent valides à travers un changement de couverture.
+
+       Rien n'est rendu si l'asset est absent.
+
+       Input dict :
+         slug          (req) slug du livre = nom de fichier sans extension
+         alt           (req) texte alternatif
+         wrapClass     (req) classe du <div> conteneur
+         class         (opt) classe du <img>
+         sizes         (opt) attribut sizes (défaut "180px")
+         loading       (opt) "lazy" (défaut) | "eager"
+         fetchpriority (opt) "high" pour l'image LCP */ -}}
+{{- $res := partial "book-cover-resource.html" .slug -}}
+{{- with $res -}}
+<div class="{{ $.wrapClass }}">
+  <img src="{{ (.Resize "480x q82").RelPermalink }}"
+       srcset="{{ (.Resize "320x q82").RelPermalink }} 320w, {{ (.Resize "480x q82").RelPermalink }} 480w, {{ .RelPermalink }} {{ .Width }}w"
+       sizes="{{ $.sizes | default "180px" }}"
+       alt="{{ $.alt }}"
+       width="{{ .Width }}" height="{{ .Height }}"
+       loading="{{ $.loading | default "lazy" }}"{{ with $.fetchpriority }} fetchpriority="{{ . }}"{{ end }}{{ with $.class }} class="{{ . }}"{{ end }}>
+</div>
+{{- end -}}

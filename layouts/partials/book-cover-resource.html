@@ -1,0 +1,5 @@
+{{- /* Retourne la ressource image de couverture d'un livre depuis
+       assets/images/livres/<slug>.jpg, ou nil si absente.
+       Source unique de vérité pour les couvertures : le fichier asset.
+       Input : le slug du livre (string). */ -}}
+{{- return (resources.Get (printf "images/livres/%s.jpg" .)) -}}

@@ -9,7 +9,6 @@ price: "36"  # prix broché EUR — affiché sur la page + schema.org Offer (pri
 serie: "anthropie"
 weight: 1
 wikidata_qid: "Q138827344"
-image_url: "https://m.media-amazon.com/images/I/71PfOopy7JL._SL1500_.jpg"  # couverture officielle Amazon (recto) — bascule demandée _Dette_Publique_03 (2026-06-10) ; ancienne locale : /images/livres/anthropie-ordre-ici-dette-ailleurs.jpg
 # Liens canoniques /dp/<ASIN broché 2958634728> — jamais de shortener amzn.eu/a.co
 # (redirections opaques, intaguables, collisions constatées — patch 2026-06-04).
 url_amazon_fr: "https://www.amazon.fr/dp/2958634728"

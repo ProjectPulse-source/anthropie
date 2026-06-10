@@ -11,14 +11,7 @@
     </div>
 
     <aside class="book-single__sidebar">
-      {{ with .Params.image_url }}
-      <div class="book-single__cover">
-        <img src="{{ . }}"
-             alt="Couverture — {{ $.Title }}"
-             loading="lazy"
-             width="180" height="270">
-      </div>
-      {{ end }}
+      {{ partial "book-cover.html" (dict "slug" .File.ContentBaseName "alt" (printf "Couverture — %s" .Title) "wrapClass" "book-single__cover" "sizes" "180px") }}
       <div class="book-single__actions">
         {{- /* Prix visible (broché). Doit refléter le schema.org Offer pour rester conforme. */ -}}
         {{ with .Params.price }}<p class="book-single__price">{{ . }}&nbsp;€<span class="book-single__price-note">{{ if eq $.Lang "en" }}Paperback{{ else }}Broché{{ end }}</span></p>{{ end }}
@@ -49,7 +42,7 @@
   "url" .Permalink
   "datePublished" (.Date.Format "2006-01-02") -}}
 {{- with .Params.isbn -}}{{- $book = merge $book (dict "isbn" .) -}}{{- end -}}
-{{- with .Params.image_url -}}{{- $book = merge $book (dict "image" .) -}}{{- end -}}
+{{- with (partial "book-cover-resource.html" .File.ContentBaseName) -}}{{- $book = merge $book (dict "image" .Permalink) -}}{{- end -}}
 {{- with .Params.wikidata_qid -}}{{- $book = merge $book (dict "sameAs" (printf "https://www.wikidata.org/wiki/%s" .)) -}}{{- end -}}
 {{- /* Enrichissements factuels (aucune valeur inventée). Tous les livres ont un ISBN = édition imprimée. */ -}}
 {{- $book = merge $book (dict "bookFormat" "https://schema.org/Paperback") -}}
