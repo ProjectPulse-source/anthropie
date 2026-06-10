@@ -108,3 +108,68 @@ $amazon-gold: #c9a961;
     transform: translateX(-50%);
   }
 }
+
+// ===== CTA direct (1 clic, marché de la langue) + repli « autres pays » =====
+.amazon-buy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  width: 100%;
+}
+.book-single__sidebar .amazon-buy { width: 100%; }
+.livre-card .amazon-buy { width: 180px; max-width: 100%; margin: 0 auto; }
+
+.amazon-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.1rem;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  width: 100%;
+  transition: background 0.2s ease, transform 0.1s ease;
+
+  &:active { transform: translateY(1px); }
+}
+
+.amazon-cta--primary {
+  background: $amazon-blue !important;
+  color: #fff !important;
+
+  .amazon-icon { color: $amazon-gold; flex-shrink: 0; }
+  &:hover { background: #2a4a6c !important; }
+}
+
+.amazon-cta--kindle {
+  background: transparent;
+  color: $amazon-blue !important;
+  border: 1px solid rgba(26, 58, 92, 0.4);
+  font-weight: 500;
+
+  &:hover { background: rgba(26, 58, 92, 0.06); }
+}
+
+.amazon-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  width: 100%;
+  padding: 0.35rem 0.5rem;
+  background: none;
+  border: none;
+  color: var(--color-text-subtle, #6a6a6a);
+  font-family: inherit;
+  font-size: 0.82rem;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover { color: var(--color-text, #1a1a1a); text-decoration: underline; }
+}

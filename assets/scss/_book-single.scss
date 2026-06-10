@@ -88,6 +88,10 @@
 }
 
 @media (max-width: 767px) {
+  // L'achat (couverture + prix + CTA) passe AVANT la description (au-dessus de la ligne de flottaison)
+  .book-single__sidebar {
+    order: -1;
+  }
   .book-single__actions {
     max-width: 200px;
     flex-direction: column;
