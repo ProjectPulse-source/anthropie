@@ -34,7 +34,9 @@ related:
 related_book: "anthropie-ordre-ici-dette-ailleurs"
 ---
 
-L'anthropie désigne le mécanisme par lequel les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. Cet article examine les infrastructures numériques contemporaines — data centers, IA générative, chaînes matérielles, territoires d'accueil, dispositifs de garantie publique — comme régime structuré de déplacement&nbsp;: le service numérique n'a pas allégé la matière, il a appris à la faire travailler ailleurs.
+{{< canonical-definition >}}
+
+Cet article examine les infrastructures numériques contemporaines — data centers, IA générative, chaînes matérielles, territoires d'accueil, dispositifs de garantie publique — comme régime structuré de déplacement&nbsp;: le service numérique n'a pas allégé la matière, il a appris à la faire travailler ailleurs.
 
 ## Le service numérique comme régime de déplacement
 

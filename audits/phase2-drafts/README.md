@@ -16,9 +16,9 @@ arbitrage par page.
 
 ## État des paires
 
-- [ ] Paire 1 — Accueil FR + EN (`layouts/index.html` — voir note ci-dessous)
-- [ ] Paire 2 — AWP-01 FR + EN (`content/awp/awp-01.md` + `.en.md`)
-- [ ] Paire 3 — AWP-06 FR + EN (`content/awp/awp-06.md` + `.en.md`)
+- [x] Paire 1 — Accueil (appliqué 2026-06-15) : FR aligné sur le verbatim inline (`layouts/index.html:19`) ; EN inchangé (1ʳᵉ phrase du lede = déjà le verbatim canonique).
+- [x] Paire 2 — AWP-01 FR + EN (appliqué 2026-06-15) : `{{< canonical-definition >}}` en tête + reformulation rétrogradée en « Plus précisément / More precisely ».
+- [x] Paire 3 — AWP-06 (appliqué 2026-06-15) : FR `{{< canonical-definition >}}` en tête + spécialisation numérique ; EN inchangé (verbatim déjà présent en incise).
 
 ## Note d'architecture importante (découverte au draft)
 

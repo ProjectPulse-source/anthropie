@@ -33,7 +33,9 @@ related:
 related_book: "anthropie-ordre-ici-dette-ailleurs"
 ---
 
-L'anthropie est l'hypothèse selon laquelle tout ordre social local se construit en exportant son désordre vers d'autres lieux, d'autres temps ou d'autres groupes sociaux. Ce texte fondateur pose les principes du cadre anthropique.
+{{< canonical-definition >}}
+
+Plus précisément&nbsp;: tout ordre social local se construit en exportant son désordre vers d'autres lieux, d'autres temps ou d'autres groupes sociaux. Ce texte fondateur pose les principes du cadre anthropique.
 
 ## Le point de départ
 

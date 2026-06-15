@@ -34,7 +34,9 @@ related:
 related_book: "anthropie-ordre-ici-dette-ailleurs"
 ---
 
-Anthropy is the hypothesis that every stable local social order is built by exporting its disorder to other places, other times, or other social groups. This founding text establishes the principles of the framework.
+{{< canonical-definition >}}
+
+More precisely: every stable local social order is built by exporting its disorder to other places, other times, or other social groups. This founding text establishes the principles of the framework.
 
 ## The starting point
 
