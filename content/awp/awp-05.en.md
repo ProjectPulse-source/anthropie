@@ -23,7 +23,7 @@ pdf_url: "https://zenodo.org/records/19440866/files/AWP-05_Thinking_Beyond_The_W
 language: "en"
 publication_date: "2026-04-06"
 translation:
-  doi: "10.5281/zenodo.19269486"
+  doi: "10.5281/zenodo.19269487"
   url: "/awp/awp-05/"
   title: "Penser hors les murs : notes sur la recherche indépendante"
   is_canonical: true
