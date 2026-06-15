@@ -49,6 +49,48 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-06-15 — Clôture du journal post-90j de l'audit GEO (harmonisation définition + DOI AWP-05)
+
+Round demandé par l'auteur : « faire toutes les améliorations nécessaires pour
+améliorer la visibilité GEO », sur la base de `audits/diagnostic-2026-05-23.md`.
+Gel 90 j **explicitement levé** pour ces items (la worklist GEO différée du
+journal post-90j *est* l'objet de la demande). Périmètre **non structurel** :
+routing, hreflang, sitemap, canonical, JSON-LD machine = intacts ; seuls du
+contenu/wording et un DOI de citation sont touchés.
+
+**Re-audit read-only préalable (clé) :** l'audit du 23/05 (`c8a44a3`) était
+largement périmé. **5 des 7 items du journal avaient déjà été traités** entre
+`c8a44a3` et `fd9c353` : distinction Anthropocène (page concept), 9ᵉ `sameAs`
+SocArXiv (`data/author.toml`), sous-titre AWP-06 propagé en `citation_title`/
+`headline`, `about=Anthropie` conditionné à `serie != autres-ouvrages`
+(`livres/single.html:77`), `ItemList` sur `/livres/` (`livres/list.html`).
+Seuls 2 chantiers restaient réellement ouverts.
+
+**Correctifs appliqués (2 commits atomiques) :**
+
+- **`feat(geo)` `e6c6b8a`** — single-source du **verbatim** de la définition
+  canonique (`canonicalDefinition` de `params.toml`/`hugo.toml`) sur les
+  surfaces à plus forte autorité : accueil FR (`layouts/index.html:19`, 1ʳᵉ
+  phrase du lede alignée sur le verbatim, nuance spatial/temporel/social
+  conservée, symétrie avec le lede EN déjà canonique) ; AWP-01 FR+EN et AWP-06
+  FR via `{{< canonical-definition >}}` en ouverture (paraphrase rétrogradée
+  en « Plus précisément / More precisely »). AWP-06 EN inchangé (verbatim déjà
+  en incise). Drafts `audits/phase2-drafts/` marqués appliqués. Closes l'item
+  n°1 (priorité GEO du journal). Build OK, verbatim rendu vérifié sur 4 surfaces.
+
+- **`content(awp)` `53c1c65`** — uniformisation du DOI exposé d'**AWP-05**
+  (seul des 6 à exposer son **concept** DOI `…19269486` au lieu du **version**
+  DOI `…19269487` de son `pdf_url` et des 5 autres). Aligné sur la convention
+  « version DOI » du 29/05 — sens qui *rentre* dans la convention, jamais
+  l'inverse (bascule version→concept toujours interdite). `awp-05.md`
+  (doi_zenodo + url_zenodo) et `awp-05.en.md` (translation.doi cross-link).
+  Version DOI vérifiée via `api.zenodo.org`. Closes l'item n°3.
+
+**Journal post-90j de `audits/diagnostic-2026-05-23.md` : intégralement clos**
+(5 items déjà faits + 2 ce jour). Reprise du gel jusqu'à l'échéance
+~2026-08-12. Les indicateurs externes du § 6 de l'audit restent à surveiller
+sans intervention (OpenAlex, téléchargements Zenodo, AI Performance).
+
 ### 2026-06-04/05 — Liens Amazon canoniques + purge anthropie.fr (correctif bloquant hors-gel)
 
 Round `_Commandes-158` (audit READ_ONLY puis patch sur GO explicite). Deux défauts
