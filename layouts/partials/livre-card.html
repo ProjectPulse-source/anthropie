@@ -5,6 +5,8 @@
   {{ with .Params.subtitle }}<p class="livre-card__subtitle">{{ . }}</p>{{ end }}
   <p class="livre-card__description">{{ if and (eq site.Language.Lang "en") .Params.description_en }}{{ partial "desc-figures.html" (dict "text" .Params.description_en "isbn" .Params.isbn "sep" ",") }}{{ else }}{{ partial "desc-figures.html" (dict "text" .Description "isbn" .Params.isbn) }}{{ end }}</p>
   {{ with .Params.isbn }}<p class="livre-card__isbn">ISBN&nbsp;: {{ . }}</p>{{ end }}
+  {{/* Affordance fiche — décorative (aria-hidden) : le lien réel est le titre, dont le ::after rend toute la carte cliquable. */}}
+  <p class="livre-card__see" aria-hidden="true">{{ if eq site.Language.Lang "en" }}About this book{{ else }}Consulter la fiche{{ end }} <span class="livre-card__see-arrow">→</span></p>
   {{ if or .Params.url_amazon_fr .Params.url_amazon_com }}
     {{- partial "amazon-button.html" . -}}
   {{ end }}

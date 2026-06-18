@@ -20,23 +20,10 @@
 
     {{/* CORPUS PRINCIPAL — pages dont serie != autres-ouvrages */}}
     <section class="livres-grid">
+      {{/* Source unique de la carte = partials/livre-card.html (corpus ET autres-ouvrages). */}}
       {{ range $livres.ByWeight }}
         {{ if ne .Params.serie "autres-ouvrages" }}
-          <div class="livre-card">
-            {{ partial "book-cover.html" (dict "slug" .File.ContentBaseName "alt" (printf "Couverture — %s" .Title) "wrapClass" "livre-card__cover-wrap" "class" "livre-card__cover" "sizes" "(max-width: 700px) 45vw, 220px") }}
-            <h3 class="livre-card__title"><a href="{{ .Permalink }}">{{ partial "fr-typo.html" .Title }}</a></h3>
-            {{ if $isEn }}<p class="livre-card__lang-tag"><em>In French</em></p>{{ end }}
-            {{ with .Params.subtitle }}<p class="livre-card__subtitle">{{ . }}</p>{{ end }}
-            {{ if and $isEn .Params.description_en }}
-              <p class="livre-card__description">{{ partial "desc-figures.html" (dict "text" .Params.description_en "isbn" .Params.isbn "sep" ",") }}</p>
-            {{ else }}
-              <p class="livre-card__description">{{ partial "desc-figures.html" (dict "text" .Description "isbn" .Params.isbn) }}</p>
-            {{ end }}
-            {{ with .Params.isbn }}<p class="livre-card__isbn">ISBN&nbsp;: {{ . }}</p>{{ end }}
-            {{ if or .Params.url_amazon_fr .Params.url_amazon_com }}
-              {{- partial "amazon-button.html" . -}}
-            {{ end }}
-          </div>
+          {{ partial "livre-card.html" . }}
         {{ end }}
       {{ end }}
     </section>

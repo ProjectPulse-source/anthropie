@@ -211,21 +211,45 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
 .awp-card__doi a { color: inherit; }
 
 // ----- Livre card -----
-.livre-card { margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--color-rule-soft); }
+.livre-card { position: relative; margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--color-rule-soft); }
 .livre-card:last-child { border-bottom: none; }
 .livre-card--flex { display: flex; gap: 2rem; align-items: flex-start; }
 .livre-card__cover-wrap { flex-shrink: 0; width: 180px; }
-.livre-card__cover { width: 100%; height: auto; border-radius: 2px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.livre-card__cover { width: 100%; height: auto; border-radius: 2px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: box-shadow 0.2s ease, transform 0.2s ease; }
 .livre-card__body { flex: 1; min-width: 0; }
 .livre-card__title { font-family: var(--font-serif); font-size: var(--fs-h3); margin: 0 0 4px; color: var(--color-text); }
-.livre-card__title a { color: var(--color-text); text-decoration: none; }
-.livre-card__title a:hover { text-decoration-color: var(--color-accent); }
+.livre-card__title a { color: var(--color-text); text-decoration: none; transition: color 0.2s ease; }
 .livre-card__description, .livre-card__subtitle {
   font-family: var(--font-serif); font-size: var(--fs-small);
   color: var(--color-text-muted); margin: 0 0 8px;
 }
 .livre-card__isbn { font-family: var(--font-mono); font-size: var(--fs-micro); color: var(--color-text-mono); margin: 0 0 1rem; }
 .livre-card__lang-tag { font-family: var(--font-sans); font-size: var(--fs-tiny); color: var(--color-text-faint); margin: 0 0 8px; }
+
+// Carte-fiche entièrement cliquable (stretched link, zéro JS, zéro lien imbriqué).
+// Le lien du titre porte un ::after qui étire la zone cliquable à toute la carte
+// (couverture comprise). Le bloc Amazon — seul autre interactif — repasse au-dessus
+// du calque via z-index : il reste cliquable sans imbrication de liens.
+.livre-card__title a::after { content: ""; position: absolute; inset: 0; z-index: 1; border-radius: 2px; }
+.livre-card__title a:focus-visible { outline: none; }
+.livre-card__title a:focus-visible::after { outline: 2px solid var(--color-accent); outline-offset: 4px; }
+.livre-card .amazon-buy { position: relative; z-index: 2; }
+
+// Affordance permanente « Consulter la fiche → » (idiome .text-link)
+.livre-card__see {
+  display: inline-flex; align-items: baseline; gap: 0.35em; margin: 0 0 1rem;
+  font-family: var(--font-sans); font-size: var(--fs-small); font-weight: 500;
+  color: var(--color-accent);
+}
+.livre-card__see-arrow { transition: transform 0.2s ease; }
+
+// Feedback survol / focus clavier porté par toute la carte
+.livre-card:hover .livre-card__cover,
+.livre-card:focus-within .livre-card__cover { box-shadow: 0 10px 28px rgba(0,0,0,0.20); transform: translateY(-4px) scale(1.012); }
+.livre-card:hover .livre-card__title a,
+.livre-card:focus-within .livre-card__title a { color: var(--color-accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.livre-card:hover .livre-card__see-arrow,
+.livre-card:focus-within .livre-card__see-arrow { transform: translateX(5px); }
 
 @media (max-width: 600px) {
   .livre-card--flex { flex-direction: column; }
