@@ -21,12 +21,19 @@
 # =============================================================================
 
 meta:
-  registry_version: "1.6"
-  last_updated: "2026-07-03"
+  registry_version: "1.7"
+  last_updated: "2026-07-04"
   maintainer: "Stéphane Lalut"
   total_works: 36
   source_registry: "registre_soumissions_v73.xlsx"
   changelog:
+    v1_7: |
+      Publication recension Ridde (2026-07-03) — Lectures (OpenEdition),
+      « Valéry Ridde, La financiarisation de la santé au Sénégal (1840-1960) »
+      (Science et bien commun, 2025). Entrée art-lectures-ridde-2026-05
+      basculée in_review → published ; DOI 10.4000/16ihm, maillage awp-03.
+      Fiche site content/publications/lectures-ridde-financiarisation-sante.md
+      créée le même jour. total_works inchangé (l'entrée existait déjà).
     v1_6: |
       Ajout 4e livre : L'Odyssée des idées (2026-07-03) — nouvelle édition
       entièrement recomposée (696 p., ISBN 978-2-9586347-4-2, broché 2958634744,
@@ -773,14 +780,21 @@ works:
 
   - id: art-lectures-ridde-2026-05
     type: article
-    status: in_review
-    canonical_title: { fr: "Recension Valéry Ridde — La financiarisation de la santé au Sénégal (1840-1960)" }
+    status: published
+    canonical_title: { fr: "Valéry Ridde, La financiarisation de la santé au Sénégal (1840-1960)" }
     submission_date: "2026-05-25"
+    publication_date: "2026-07-03"
     publisher: "Lectures"
     publisher_type: "revue_acad"
-    url: ""
+    source_type: "Revue"
+    url: "https://journals.openedition.org/lectures/71869"
+    doi: "10.4000/16ihm"
     sign_count: 8970
-    notes: "2e parcours Lectures. Commande Barbara Blum. Manuscrit prêt. Envoi programmé."
+    chapo:
+      fr: "Le paiement direct des soins n'est pas né des ajustements structurels des années 1980. Archives à l'appui, Valéry Ridde montre que le Sénégal colonial faisait déjà payer les patients africains — tarifs hospitaliers, taxes médicales, primes aux soignants — sous couvert de gratuité proclamée."
+      en: "Direct payment for healthcare did not begin with 1980s structural adjustment. Drawing on colonial archives, Valéry Ridde shows that colonial Senegal already charged African patients — hospital fees, medical taxes, provider bonuses — behind a proclaimed policy of free care."
+    related_works: [awp-03]
+    notes: "2e parcours Lectures. Commande Barbara Blum. Publiée 2026-07-03, recension du livre de Valéry Ridde (Science et bien commun, 2025). DOI au format compact OpenEdition (10.4000/16ihm)."
 
 # =============================================================================
 # CHANTIER DE COMPLETION RÉSIDUEL (v1.2)
