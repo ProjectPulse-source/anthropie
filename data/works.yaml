@@ -21,12 +21,19 @@
 # =============================================================================
 
 meta:
-  registry_version: "1.5"
-  last_updated: "2026-06-08"
+  registry_version: "1.6"
+  last_updated: "2026-07-03"
   maintainer: "Stéphane Lalut"
-  total_works: 35
+  total_works: 36
   source_registry: "registre_soumissions_v73.xlsx"
   changelog:
+    v1_6: |
+      Ajout 4e livre : L'Odyssée des idées (2026-07-03) — nouvelle édition
+      entièrement recomposée (696 p., ISBN 978-2-9586347-4-2, broché 2958634744,
+      Kindle B0CVXQSLBQ conservé de la 1re édition). Fiche site
+      content/livres/lodyssee-des-idees.md créée le même jour ; comble
+      l'absence signalée par le chantier Wikidata (Q138911733).
+      total_works 35 → 36.
     v1_5: |
       Livresque des mots (2026-06-08) — ancrage des CHIFFRES CANONIQUES du corpus
       dans book-livresque-des-mots.corpus_stats (source unique) : 4 658 citations,
@@ -271,7 +278,7 @@ works:
     notes: "JEL FR (2 codes) ≠ JEL EN (5 codes) : asymétrie observée dans le repo, intentionnelle ou à harmoniser ultérieurement."
 
   # ===========================================================================
-  # LIVRES (3)
+  # LIVRES (4)
   # ===========================================================================
 
   - id: book-anthropie
@@ -377,6 +384,38 @@ works:
       visible: false
       citations_observed: 0
     notes: "Livre antérieur (hors série anthropie). Chiffres canoniques du corpus ancrés dans corpus_stats — source unique pour la fiche Amazon, le site et Wikidata."
+
+  - id: book-lodyssee-des-idees
+    type: book
+    canonical_title:
+      fr: "L'Odyssée des idées"
+      en: ""  # n/a
+    subtitle_fr: "Culture, philosophie et science — de l'aube de l'humanité à l'intelligence artificielle"  # sous-titre canonique tranché 2026-07-03 (aligné intérieur + couverture + BO + site)
+    publication_date: "2026-07-03"  # nouvelle édition entièrement recomposée (696 p., nouvel ISBN) ; première édition 2023, ISBN 978-2-9586347-1-1 / broché 295863471X dépublié
+    isbn: "978-2-9586347-4-2"
+    isbn_13_normalized: "9782958634742"
+    pages: 696  # broché nouvelle édition (sync content/livres/lodyssee-des-idees.md)
+    publisher: "Auto-édition"
+    distribution: "Amazon KDP"
+    asin_kindle: "B0CVXQSLBQ"  # conservé de la première édition (ancre des avis lecteurs)
+    asin_broche: "2958634744"
+    license: ""  # à préciser
+    wikidata: "Q138911733"  # item existant — porte encore l'ISBN de la première édition (978-2-9586347-1-1), MAJ Wikidata à traiter dans le chantier dédié
+    abstract_short:
+      fr: "De l'aube de l'humanité à l'intelligence artificielle, 250 escales — œuvres, vies, inventions, crises, instants de bascule — et sept parcours relient les penseurs par-delà les siècles. Non pas un défilé chronologique, mais un réseau. Un instrument de curiosité, pas un réservoir de certitudes."
+      en: ""  # à compléter
+    keywords: [histoire des idées, histoire intellectuelle, philosophie, sciences, culture]
+    site_pages:
+      fr: "https://stephane-lalut.com/livres/lodyssee-des-idees/"
+      en: ""  # n/a
+    purchase_url:
+      amazon_fr: "https://www.amazon.fr/dp/2958634744"  # /dp canonique — jamais de shortener amzn.eu/a.co
+      amazon_com: "https://www.amazon.com/dp/2958634744"
+    image_url: "https://stephane-lalut.com/images/livres/lodyssee-des-idees.jpg"  # auto-hébergé (assets/images/livres/<slug>.jpg) — URL stable, indépendante du visuel
+    google_scholar:
+      visible: false
+      citations_observed: 0
+    notes: "Livre antérieur (hors série anthropie), nouvelle édition 2026. Fiche site créée 2026-07-03 (comblait l'absence signalée par le chantier Wikidata)."
 
   # ===========================================================================
   # ARTICLES PUBLIÉS — URL stable (10)
