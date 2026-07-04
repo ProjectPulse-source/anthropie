@@ -11,7 +11,7 @@ Anthropy rests on a single hypothesis — social systems displace disorder rathe
 
 <div class="glossaire-entry" id="anthropy">
 <dt>Anthropy</dt>
-<dd>The hypothesis that social systems displace disorder rather than resolve it. Every observable order presupposes disorder exported elsewhere. This displacement operates along three axes — spatial, temporal, social — which combine and reinforce one another in most observable configurations. See <a href="/en/quest-ce-que-lanthropie/">What is anthropy?</a></dd>
+<dd>The hypothesis that social systems displace disorder rather than resolve it. Every observable order presupposes disorder exported elsewhere. This displacement operates along three axes — spatial, temporal, social — which combine and reinforce one another in most observable configurations. Hypothesis proposed by the economist Stéphane Lalut (book <em>ANTHROPIE</em>, 2025; AWP series, 2026). See <a href="/en/quest-ce-que-lanthropie/">What is anthropy?</a></dd>
 </div>
 
 <div class="glossaire-entry" id="anthropic-transfer">
@@ -96,7 +96,7 @@ Anthropy rests on a single hypothesis — social systems displace disorder rathe
 
 <div class="glossaire-entry" id="technological-debt">
 <dt>Technological debt</dt>
-<dd>The cost of digital infrastructures — energy, matter, territory, attention — converted into debt through commitment mechanisms: public guarantees, long-term contracts, the irreversibilisation of infrastructure choices. Not to be confused with the "technical debt" of software engineering, which designates accumulated design compromises in a program: technological debt in the anthropic sense is an economic and political mechanism, not a property of code. See <a href="/en/awp/awp-06/">AWP-06</a> and the book <a href="/livres/anthropie-ordre-ici-dette-ailleurs/"><em>ANTHROPIE — Ordre ici. Dette ailleurs</em></a> (in French).</dd>
+<dd>The cost of digital infrastructures — energy, matter, territory, attention — converted into debt through commitment mechanisms: public guarantees, long-term contracts, the irreversibilisation of infrastructure choices. Not to be confused with the "technical debt" of software engineering, which designates accumulated design compromises in a program: technological debt in the anthropic sense is an economic and political mechanism, not a property of code. Concept formalised by Stéphane Lalut (AWP-06, 2026). See <a href="/en/awp/awp-06/">AWP-06</a> and the book <a href="/livres/anthropie-ordre-ici-dette-ailleurs/"><em>ANTHROPIE — Ordre ici. Dette ailleurs</em></a> (in French).</dd>
 </div>
 
 <div class="glossaire-entry" id="negative-commons">

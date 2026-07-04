@@ -11,7 +11,7 @@ L'anthropie repose sur une hypothèse unique — les systèmes sociaux déplacen
 
 <div class="glossaire-entry" id="anthropie">
 <dt>Anthropie</dt>
-<dd>Hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. Tout ordre observable suppose un désordre exporté ailleurs. Ce déplacement opère selon trois axes — spatial, temporel, social — qui se combinent et se renforcent mutuellement dans la plupart des configurations observables. Voir <a href="/quest-ce-que-lanthropie/">Qu'est-ce que l'anthropie&nbsp;?</a></dd>
+<dd>Hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. Tout ordre observable suppose un désordre exporté ailleurs. Ce déplacement opère selon trois axes — spatial, temporel, social — qui se combinent et se renforcent mutuellement dans la plupart des configurations observables. Hypothèse proposée par l'économiste Stéphane Lalut (livre <em>ANTHROPIE</em>, 2025&nbsp;; série AWP, 2026). Voir <a href="/quest-ce-que-lanthropie/">Qu'est-ce que l'anthropie&nbsp;?</a></dd>
 </div>
 
 <div class="glossaire-entry" id="transfert-anthropique">
@@ -96,7 +96,7 @@ L'anthropie repose sur une hypothèse unique — les systèmes sociaux déplacen
 
 <div class="glossaire-entry" id="dette-technologique">
 <dt>Dette technologique</dt>
-<dd>Coût des infrastructures numériques — énergie, matière, territoire, attention — transformé en dette par des mécanismes d'engagement&nbsp;: garanties publiques, contrats de long terme, irréversibilisation des choix d'infrastructure. À ne pas confondre avec la «&nbsp;dette technique&nbsp;» du génie logiciel, qui désigne l'accumulation de compromis dans la conception d'un programme&nbsp;: la dette technologique au sens anthropique est un mécanisme économique et politique, pas une propriété du code. Voir <a href="/awp/awp-06/">AWP-06</a> et le livre <a href="/livres/anthropie-ordre-ici-dette-ailleurs/"><em>ANTHROPIE — Ordre ici. Dette ailleurs</em></a>.</dd>
+<dd>Coût des infrastructures numériques — énergie, matière, territoire, attention — transformé en dette par des mécanismes d'engagement&nbsp;: garanties publiques, contrats de long terme, irréversibilisation des choix d'infrastructure. À ne pas confondre avec la «&nbsp;dette technique&nbsp;» du génie logiciel, qui désigne l'accumulation de compromis dans la conception d'un programme&nbsp;: la dette technologique au sens anthropique est un mécanisme économique et politique, pas une propriété du code. Concept formalisé par Stéphane Lalut (AWP-06, 2026). Voir <a href="/awp/awp-06/">AWP-06</a> et le livre <a href="/livres/anthropie-ordre-ici-dette-ailleurs/"><em>ANTHROPIE — Ordre ici. Dette ailleurs</em></a>.</dd>
 </div>
 
 <div class="glossaire-entry" id="communs-negatifs">
