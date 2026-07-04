@@ -29,7 +29,7 @@ url_amazon_it_kindle: "https://www.amazon.it/dp/B0CVXQSLBQ"
 url_amazon_ca_kindle: "https://www.amazon.ca/dp/B0CVXQSLBQ"
 ---
 
-Une traversée de l'histoire des idées, des premiers signes à l'intelligence artificielle.
+Une traversée de l'histoire des idées, des premiers signes à l'intelligence artificielle. Nouvelle édition entièrement recomposée (2026)&nbsp;: 250 escales, sept chemins de lecture, 696 pages.
 
 > « Ce que nous croyons penser pour la première fois a, presque toujours, déjà été pensé. »
 
