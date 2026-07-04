@@ -21,6 +21,10 @@ faq:
     answer: "It is the analytical posture proposed by the framework of anthropy: whenever confronted with a stable order, ask where disorder is displaced. It leads us to interrogate the shadow zones of apparent stability."
   - question: "How does anthropy apply to public debt?"
     answer: "Public debt displaces the cost of present disorder toward future generations and social groups least able to escape it. It is a classic temporal and social transfer in the anthropic sense."
+  - question: "What are the limits of the concept of anthropy?"
+    answer: "Anthropy presents itself as a working hypothesis, not a finished theory. Three limits are acknowledged: it extends existing traditions (externalities, K. W. Kapp's cost-shifting) whose cases it unifies; its generality requires observable criteria — rising marginal cost, boomerang effect — to remain falsifiable; and its contribution lies less in discovering transfer than in stabilising it operationally (canonical definition, vocabulary, criteria, dated corpus)."
+  - question: "How does anthropy differ from cost-shifting (K. W. Kapp)?"
+    answer: "Kapp's cost-shifting tradition showed as early as 1950 that shifting costs onto third parties is systemic rather than accidental. Anthropy embraces this lineage and extends it: it unifies spatial, temporal, and social displacement into a single mechanism, adds saturation criteria (rising marginal cost, boomerang effect), and focuses on the mediations that keep the transfer invisible."
   - question: "Who developed the framework of anthropy?"
     answer: "Stéphane Lalut, economist, independent researcher and essayist, proposed the framework of anthropy in 2025 in the book ANTHROPIE — Ordre ici. Dette ailleurs, then formalised it from 2026 onwards in a series of working papers published on Zenodo under the label Anthropie Working Papers (AWP)."
 ---
@@ -124,6 +128,16 @@ In other words, the challenge is not merely to observe that an order exists, but
 - what it rests on;
 - who bears its cost;
 - and through what mediations that cost becomes difficult to read, difficult to articulate, or politically secondary.
+
+## Objections and limits
+
+A hypothesis is also judged by what it concedes. Three objections recur — here they are, with what is sound in each.
+
+**"Anthropy merely renames externalities."** The objection has a real basis: economics has long described costs shifted onto third parties, and K. W. Kapp's *cost-shifting* tradition showed as early as 1950 that these transfers are systemic rather than accidental. The anthropic framework embraces this lineage. Its difference: where externality isolates cases of "market failure", anthropy unifies the three axes — spatial, temporal, social — into a single mechanism, and interrogates what externality leaves out of frame: the mediations that keep the transfer invisible.
+
+**"The hypothesis is too general to be falsifiable."** Concession: a grid that can reread everything risks explaining nothing. This is why the framework gives itself observable criteria — rising marginal cost of transfer, boomerang effect — that make it possible to say when a displacement space saturates, and presents itself as a working hypothesis with heuristic value, not a finished theory (see [AWP-01](/en/awp/awp-01/)).
+
+**"Nothing new: longue-durée history, world-systems theory, political ecology already said this."** Partly true — the framework explicitly dialogues with these traditions. The claimed contribution is not the discovery of transfer, but its operational stabilisation: a canonical definition, a vocabulary ([glossary](/en/glossaire/)), criteria, and a dated corpus that make it citable and testable.
 
 ## Some domains of application
 

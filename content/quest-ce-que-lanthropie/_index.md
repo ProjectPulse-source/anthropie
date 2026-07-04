@@ -18,6 +18,8 @@ faq:
     answer: "C'est la posture analytique proposée par l'anthropie : devant tout ordre stable, demander où s'écoule le désordre. Elle conduit à interroger les zones d'ombre de la stabilité apparente."
   - question: "Comment l'anthropie s'applique-t-elle à la dette publique ?"
     answer: "La dette publique déplace le coût du désordre présent vers les générations futures et les groupes sociaux les moins capables de s'y soustraire. C'est un transfert temporel et social classique au sens anthropique."
+  - question: "Quelles sont les limites du concept d'anthropie ?"
+    answer: "L'anthropie se présente comme une hypothèse de travail, non comme une théorie achevée. Trois limites sont assumées : elle prolonge des traditions existantes (externalités, cost-shifting de K. W. Kapp) dont elle unifie les cas ; sa généralité exige des critères observables — coût marginal croissant, effet boomerang — pour rester réfutable ; et son apport tient moins à la découverte du transfert qu'à sa stabilisation opératoire (définition canonique, vocabulaire, critères, corpus daté)."
   - question: "Qui a développé le cadre anthropique ?"
     answer: "Stéphane Lalut, économiste, chercheur indépendant et essayiste, a proposé le cadre anthropique en 2025 dans le livre ANTHROPIE — Ordre ici. Dette ailleurs, puis l'a formalisé à partir de 2026 dans une série de working papers publiés sur Zenodo sous le label Anthropie Working Papers (AWP)."
 ---
@@ -117,6 +119,16 @@ Autrement dit, l'enjeu n'est pas seulement de constater qu'un ordre existe, mais
 - sur quoi il repose&nbsp;;
 - qui en supporte le coût&nbsp;;
 - et par quelles médiations ce coût devient peu lisible, peu dicible ou politiquement secondaire.
+
+## Objections et limites
+
+Une hypothèse se juge aussi à ce qu'elle concède. Trois objections reviennent — les voici, avec ce qu'elles ont de fondé.
+
+**«&nbsp;L'anthropie ne fait que renommer les externalités.&nbsp;»** L'objection a un socle réel&nbsp;: l'économie décrit depuis longtemps les coûts reportés sur des tiers, et la tradition du *cost-shifting* de K. W. Kapp a montré dès 1950 que ces transferts sont systémiques plutôt qu'accidentels. Le cadre anthropique assume cette filiation. Sa différence&nbsp;: là où l'externalité isole des cas de «&nbsp;défaillance du marché&nbsp;», l'anthropie unifie les trois axes — spatial, temporel, social — en un mécanisme unique, et interroge ce que l'externalité laisse hors champ&nbsp;: les médiations qui rendent le transfert invisible.
+
+**«&nbsp;L'hypothèse est trop générale pour être réfutable.&nbsp;»** Concession&nbsp;: une grille qui peut tout relire risque de ne rien expliquer. C'est pourquoi le cadre se donne des critères observables — coût marginal croissant du transfert, effet boomerang — qui permettent de dire quand un espace de déportation sature, et se présente comme hypothèse de travail à valeur heuristique, non comme théorie achevée (voir [AWP-01](/awp/awp-01/)).
+
+**«&nbsp;Rien de neuf&nbsp;: la longue durée, les systèmes-mondes, l'écologie politique disaient déjà cela.&nbsp;»** En partie vrai — le cadre dialogue explicitement avec ces traditions. L'apport revendiqué n'est pas la découverte du transfert, mais sa stabilisation opératoire&nbsp;: une définition canonique, un vocabulaire ([glossaire](/glossaire/)), des critères et un corpus daté qui permettent de le citer et de le tester.
 
 ## Quelques domaines d'application
 
