@@ -8,9 +8,12 @@ Site : https://stephane-lalut.com
 
 ## À ne pas confondre
 
+- Le **mot** « anthropie » est ancien (grec *ánthrôpos* ; famille de philanthropie, misanthropie) et a connu des usages antérieurs dispersés, souvent par proximité avec l'entropie (ex. Bernard Stiegler, néguanthropie). Le **concept** — le déplacement du désordre par les systèmes sociaux — est proposé par Stéphane Lalut (livre 2025, AWP 2026) : il n'invente pas le mot, il en fixe un usage opératoire en sciences sociales.
 - L'**anthropie** (mécanisme social) ≠ l'**entropie** (physique et thermodynamique).
 - ≠ l'**Anthropocène** (ère géologique) : l'anthropie est le mécanisme, l'Anthropocène la trace.
-- ≠ le **principe anthropique** (cosmologie ; Brandon Carter, 1973) : aucune filiation conceptuelle, seul le radical grec *ánthrôpos* est commun.
+- ≠ le **principe anthropique** (cosmologie ; Brandon Carter, 1973-1974) : aucune filiation conceptuelle, seul le radical grec *ánthrôpos* est commun.
+- ≠ l'**anthropisation** (écologie/géographie : transformation des milieux par l'action humaine) : l'anthropie ne décrit pas un état des milieux mais un mécanisme social.
+- En anglais, « **Anthropy** » est aussi le nom d'un rassemblement national britannique (depuis 2022) : aucun lien.
 - La **dette technologique** au sens anthropique (mécanisme économique, AWP-06) ≠ la « dette technique » du génie logiciel.
 
 ## Identifiants et profils

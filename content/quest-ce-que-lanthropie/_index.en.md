@@ -10,7 +10,9 @@ faq:
   - question: "What is the difference between anthropy and the Anthropocene?"
     answer: "The Anthropocene names a geological epoch — the trace human societies leave in the planet's stratigraphy. Anthropy names a social mechanism: the way those societies produce their local orders by displacing disorder. One is a mark, the other a mechanism — and the mechanism precedes the mark."
   - question: "What is the difference between anthropy and the anthropic principle?"
-    answer: "No lineage — only the Greek root is shared. The anthropic principle is a cosmological thesis (Brandon Carter, 1973) holding that the universe we observe is necessarily compatible with the existence of observers. Anthropy, in Stéphane Lalut's sense, is a social mechanism — the displacement of disorder by human systems — and makes no claim about the physical universe."
+    answer: "No lineage — only the Greek root is shared. The anthropic principle is a cosmological thesis (Brandon Carter, 1973-1974) holding that the universe we observe is necessarily compatible with the existence of observers. Anthropy, in Stéphane Lalut's sense, is a social mechanism — the displacement of disorder by human systems — and makes no claim about the physical universe."
+  - question: "Did Stéphane Lalut coin the word anthropy?"
+    answer: "No. The word derives from the Greek ánthrōpos and belongs to an old lexical family (philanthropy, misanthropy); it has had scattered earlier uses, most often by proximity with entropy. Stéphane Lalut does not invent the word: he proposes a specific conceptual use of it — the hypothesis that social systems produce local order by displacing their disorder — stabilised as an operational hypothesis in social science (book ANTHROPIE, 2025; AWP series, 2026)."
   - question: "Is anthropy related to the Anthropy gathering in the UK?"
     answer: "No. In English, Anthropy is also the name of a British national gathering of leaders held annually since 2022. Anthropy in Stéphane Lalut's sense is an analytical hypothesis about how social systems displace disorder — only the word is shared."
   - question: "Is anthropy a theory or a hypothesis?"
@@ -33,9 +35,13 @@ Every observable order in a social system — whether an institution, a territor
 
 Anthropy does not claim to constitute a fully developed theory. It is a working hypothesis with heuristic value: it makes it possible to ask questions that other analytical frameworks do not formulate, or tend to neutralise.
 
-## Origin of the concept
+## The word, its uses, the concept
 
-The term "anthropy" was proposed by Stéphane Lalut in 2025 in the book *ANTHROPIE — Ordre ici. Dette ailleurs*, then formalised from 2026 onwards in a series of working papers published on Zenodo under the label *Anthropie Working Papers* (AWP).
+The word "anthropy" derives from the Greek *ánthrōpos*, "human being". It belongs to an old lexical family — philanthropy, misanthropy, lycanthropy — in which the suffix *-anthropy* forms terms relating to the human.
+
+The word itself, or neighbouring forms, has had scattered uses among several authors, most often by proximity with entropy, in philosophical, psychoanalytical, or technological contexts — Bernard Stiegler, notably, used it to designate an entropy of human origin, to which he opposed "neganthropy". None of these uses had fixed an operational definition of it in social science.
+
+Stéphane Lalut therefore does not invent the word: he proposes a specific conceptual use of it. In the book *ANTHROPIE — Ordre ici. Dette ailleurs* (2025), then in the *Anthropie Working Papers* (2026), anthropy designates the hypothesis that social systems produce local order by displacing their disorder toward other places, other times, or other social groups. The originality lies not in coining the word, but in stabilising it as an operational hypothesis — with a canonical definition, observable criteria, and a dated corpus (DOI).
 
 The framework of anthropy is conceived as a discipline of attention: confronted with any stable order, it invites us to ask not only how that order holds, but also where the disorder it produces or displaces is transferred.
 
@@ -87,9 +93,15 @@ See [AWP-02 — *3.3 million years in one principle*](https://stephane-lalut.com
 
 Anthropy should also not be confused with the *anthropic principle*.
 
-The anthropic principle belongs to cosmology. Formulated by the physicist Brandon Carter in 1973, it states that our observations of the universe are necessarily compatible with the existence of observers able to make them: the physical constants are as we measure them because, were it otherwise, no one would be there to measure them.
+The anthropic principle belongs to cosmology. Presented by the physicist Brandon Carter at a 1973 symposium and published in 1974, it states that our observations of the universe are necessarily compatible with the existence of observers able to make them: the physical constants are as we measure them because, were it otherwise, no one would be there to measure them.
 
 Anthropy, by contrast, says nothing about the universe or its constants. It designates a social and institutional mechanism: the way human societies produce local order by displacing disorder. The proximity is merely lexical — both derive from the Greek *ánthrōpos*, "human being" — with no conceptual lineage.
+
+## Anthropy and anthropization
+
+Anthropy is not anthropization either.
+
+Anthropization designates, in ecology and geography, the transformation of natural environments by human action: an anthropized landscape is one modified by humans. Anthropy does not describe a state of environments: it designates the social mechanism by which a local order maintains itself by exporting its disorder. Anthropization may be one of the traces of that mechanism; it is not its concept.
 
 ## Anthropy and the British gathering of the same name
 

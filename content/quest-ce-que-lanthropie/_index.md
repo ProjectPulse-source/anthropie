@@ -9,7 +9,9 @@ faq:
   - question: "Quelle est la différence entre anthropie et Anthropocène ?"
     answer: "L'Anthropocène nomme une ère géologique — la trace que les sociétés humaines impriment dans la stratigraphie de la planète. L'anthropie nomme un mécanisme social : la manière dont ces sociétés produisent leurs ordres locaux en déplaçant le désordre. L'une est une marque, l'autre est un mécanisme — et le mécanisme précède la marque."
   - question: "Quelle est la différence entre l'anthropie et le principe anthropique ?"
-    answer: "Aucune filiation : seul le radical grec est commun. Le principe anthropique est une thèse de cosmologie (Brandon Carter, 1973) selon laquelle l'univers que nous observons est nécessairement compatible avec l'existence d'observateurs. L'anthropie, au sens de Stéphane Lalut, est un mécanisme social — le déplacement du désordre par les systèmes humains — et ne porte aucune affirmation sur l'univers physique."
+    answer: "Aucune filiation : seul le radical grec est commun. Le principe anthropique est une thèse de cosmologie (Brandon Carter, 1973-1974) selon laquelle l'univers que nous observons est nécessairement compatible avec l'existence d'observateurs. L'anthropie, au sens de Stéphane Lalut, est un mécanisme social — le déplacement du désordre par les systèmes humains — et ne porte aucune affirmation sur l'univers physique."
+  - question: "Stéphane Lalut a-t-il inventé le mot « anthropie » ?"
+    answer: "Non. Le mot dérive du grec ánthrôpos et appartient à une famille lexicale ancienne (philanthropie, misanthropie) ; il a connu des usages antérieurs dispersés, le plus souvent par proximité avec l'entropie. Stéphane Lalut n'invente pas le mot : il en propose un usage conceptuel spécifique — l'hypothèse selon laquelle les systèmes sociaux produisent de l'ordre local en déplaçant leur désordre — stabilisée comme hypothèse opératoire en sciences sociales (livre ANTHROPIE, 2025 ; série AWP, 2026)."
   - question: "L'anthropie est-elle une théorie ou une hypothèse ?"
     answer: "Une hypothèse de travail à valeur heuristique. Elle permet de poser des questions que d'autres cadres ne formulent pas, sans prétendre à l'exhaustivité d'une théorie achevée."
   - question: "Qu'est-ce que la discipline du regard ?"
@@ -30,9 +32,13 @@ Tout ordre observable dans un système social — qu'il s'agisse d'une instituti
 
 L'anthropie ne prétend pas constituer une théorie achevée. Il s'agit d'une hypothèse de travail à valeur heuristique&nbsp;: elle permet de poser des questions que d'autres cadres analytiques ne formulent pas, ou qu'ils tendent à neutraliser.
 
-## Origine du concept
+## Le mot, ses usages, le concept
 
-Le terme « anthropie » est proposé par Stéphane Lalut en 2025 dans le livre *ANTHROPIE — Ordre ici. Dette ailleurs*, puis formalisé à partir de 2026 dans une série de working papers publiés sur Zenodo sous le label *Anthropie Working Papers* (AWP).
+Le mot « anthropie » dérive du grec *ánthrôpos*, «&nbsp;l'être humain&nbsp;». Il appartient à une famille lexicale ancienne — philanthropie, misanthropie, lycanthropie — où le suffixe *-anthropie* forme des termes relatifs à l'humain.
+
+Le mot lui-même, ou des formes voisines, a connu des usages dispersés chez plusieurs auteurs, le plus souvent par proximité avec l'entropie, dans des contextes philosophiques, psychanalytiques ou technologiques — Bernard Stiegler, notamment, l'a employé pour désigner une entropie d'origine humaine, à laquelle il opposait la «&nbsp;néguanthropie&nbsp;». Aucun de ces usages n'en avait fixé une définition opératoire en sciences sociales.
+
+Stéphane Lalut n'invente donc pas le mot&nbsp;: il en propose un usage conceptuel spécifique. Dans le livre *ANTHROPIE — Ordre ici. Dette ailleurs* (2025), puis dans les *Anthropie Working Papers* (2026), l'anthropie désigne l'hypothèse selon laquelle les systèmes sociaux produisent de l'ordre local en déplaçant leur désordre vers d'autres lieux, d'autres temps ou d'autres groupes sociaux. L'originalité ne tient pas à la création du mot, mais à sa stabilisation comme hypothèse opératoire — dotée d'une définition canonique, de critères observables et d'un corpus daté (DOI).
 
 Le cadre anthropique se construit comme une discipline du regard&nbsp;: devant tout ordre stable, il invite à demander non seulement comment cet ordre tient, mais aussi où s'écoule le désordre qu'il produit ou qu'il déplace.
 
@@ -84,9 +90,15 @@ Voir [AWP-02 — *3,3 millions d'années en un principe*](https://stephane-lalut
 
 L'anthropie ne doit pas non plus être confondue avec le *principe anthropique*.
 
-Le principe anthropique relève de la cosmologie. Formulé par le physicien Brandon Carter en 1973, il énonce que nos observations de l'univers sont nécessairement compatibles avec l'existence d'observateurs capables de les faire&nbsp;: les constantes physiques sont telles que nous les mesurons parce que, dans le cas contraire, nul ne serait là pour les mesurer.
+Le principe anthropique relève de la cosmologie. Présenté par le physicien Brandon Carter lors d'un symposium en 1973, puis publié en 1974, il énonce que nos observations de l'univers sont nécessairement compatibles avec l'existence d'observateurs capables de les faire&nbsp;: les constantes physiques sont telles que nous les mesurons parce que, dans le cas contraire, nul ne serait là pour les mesurer.
 
 L'anthropie, elle, ne dit rien de l'univers ni de ses constantes. Elle désigne un mécanisme social et institutionnel&nbsp;: la manière dont les sociétés humaines produisent un ordre local en déplaçant le désordre. La proximité n'est que lexicale — l'un et l'autre dérivent du grec *ánthrôpos*, «&nbsp;l'être humain&nbsp;» —, sans aucune filiation conceptuelle.
+
+## Anthropie et anthropisation
+
+L'anthropie ne se confond pas non plus avec l'anthropisation.
+
+L'anthropisation désigne, en écologie et en géographie, la transformation des milieux naturels par l'action humaine&nbsp;: un paysage anthropisé est un paysage modifié par l'homme. L'anthropie ne décrit pas un état des milieux&nbsp;: elle désigne le mécanisme social par lequel un ordre local se maintient en exportant son désordre. L'anthropisation peut être l'une des traces de ce mécanisme&nbsp;; elle n'en est pas le concept.
 
 ## La discipline du regard
 
