@@ -43,9 +43,21 @@ Chaque fait repose sur des sources vérifiées&nbsp;; là où le savoir hésite,
 
 ## Plusieurs livres en un
 
-On peut lire ce livre page après page, comme une traversée chronologique. On peut aussi l'ouvrir librement, au gré d'une date, d'un nom, d'une formule. On peut enfin le parcourir par **sept grands chemins** — les signes, le pouvoir, l'argent, la liberté, le sacré, l'opinion, la condition humaine — où les renvois font surgir échos, ruptures et filiations souterraines.
+On peut lire ce livre page après page, comme une traversée chronologique. On peut aussi l'ouvrir librement, au gré d'une date, d'un nom, d'une formule. On peut enfin le parcourir par **sept grands chemins**, où les renvois font surgir échos, ruptures et filiations souterraines&nbsp;:
+
+1. Les signes
+2. Le pouvoir
+3. L'argent
+4. La liberté
+5. Le sacré
+6. L'opinion
+7. La condition humaine
 
 696 pages, un index, une bibliographie de cœur, sept cartes. Pour qui veut comprendre le monde sans renoncer à penser.
+
+## Pour qui&nbsp;?
+
+Pour le lecteur curieux — de philosophie, de sciences, d'histoire — qui préfère un récit continu aux manuels à fiches&nbsp;; pour l'étudiant qui veut relier ce que les disciplines séparent&nbsp;; et pour qui cherche un livre à offrir&nbsp;: une fresque qui s'offre autant qu'elle se garde.
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Books"
-description: "Two books published in French, developing the anthropic framework."
+description: "Four books published in French: two developing the anthropic framework, and two from a separate editorial project."
 url: /en/books/
 aliases:
   - /en/livres/

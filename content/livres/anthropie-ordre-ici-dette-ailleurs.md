@@ -49,6 +49,12 @@ L'ouvrage fondateur du cadre anthropique.
 
 L'ordre que nous observons autour de nous — dans les institutions, les territoires, les économies — n'est jamais un état spontané. Il est le produit d'une opération de transfert&nbsp;: le désordre n'est pas résolu, il est déplacé vers d'autres lieux, d'autres temps ou d'autres groupes sociaux. Ce livre développe cette hypothèse à travers sept configurations historiques, de l'outil paléolithique au métaprogramme numérique, et l'applique à trois domaines contemporains&nbsp;: la dette publique, la transition énergétique et la recherche académique.
 
+La définition du cadre et son vocabulaire opératoire sont présentés sur la page [Qu'est-ce que l'anthropie&nbsp;?](/quest-ce-que-lanthropie/) et dans le [glossaire](/glossaire/).
+
+## Pour qui&nbsp;?
+
+Pour le lecteur d'essais qui cherche une grille de lecture d'ensemble — économie politique, histoire longue, écologie — plutôt qu'un traitement d'actualité. Aucun prérequis technique&nbsp;: l'appareil conceptuel est construit pas à pas. Les lecteurs des *Anthropie Working Papers* y trouveront le cadre complet dont chaque paper développe un théorème ou une application.
+
 ## Sommaire
 
 Le livre traverse **sept Âges historiques** — de l'invention du feu aux algorithmes contemporains — pour montrer comment chaque civilisation a déplacé son désordre vers un ailleurs spatial, temporel ou social.

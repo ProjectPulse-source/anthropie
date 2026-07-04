@@ -51,9 +51,15 @@ Application du cadre anthropique à la dette publique française.
 
 ## Argument
 
+À la question «&nbsp;qui paie vraiment la dette publique&nbsp;?&nbsp;», ce livre répond&nbsp;: les générations futures et les groupes sociaux les moins mobiles — ceux qui ne peuvent se soustraire ni fiscalement ni géographiquement au prélèvement.
+
 La dette publique est habituellement discutée en termes de montants, de ratios et de soutenabilité. Ce livre déplace la question&nbsp;: il s'intéresse non pas au « combien » mais au « qui ». Qui supporte réellement le coût de la dette ? Vers quels groupes sociaux et vers quelles générations le fardeau est-il transféré ? Par quels mécanismes ce transfert devient-il invisible dans le débat public ?
 
-En appliquant le cadre anthropique aux finances publiques françaises, Stéphane Lalut montre que la dette fonctionne comme un dispositif de transfert temporel et social&nbsp;: elle reporte le coût du désordre présent vers les générations futures et les groupes les moins mobiles — ceux qui ne peuvent se soustraire ni fiscalement ni géographiquement au prélèvement.
+En appliquant le cadre anthropique aux finances publiques françaises, Stéphane Lalut montre que la dette fonctionne comme un dispositif de transfert temporel et social&nbsp;: elle reporte le coût du désordre présent vers ceux qui n'ont pas voix au chapitre. Le cadre général est présenté sur la page [Qu'est-ce que l'anthropie&nbsp;?](/quest-ce-que-lanthropie/).
+
+## Pour qui&nbsp;?
+
+Pour le citoyen qui veut comprendre le débat budgétaire au-delà des ratios, l'étudiant en économie ou en science politique, et le lecteur de presse économique. Aucun prérequis&nbsp;: les mécanismes sont exposés à partir de cas concrets — France, Grèce, Japon, Norvège, Chine.
 
 ## Sommaire
 
