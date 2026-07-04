@@ -1,22 +1,96 @@
+# robots.txt — stephane-lalut.com
+# DOCTRINE (2026-07) : tout est autorisé, y compris l'entraînement des modèles.
+# Le site est conçu pour être cité par les moteurs IA (GEO) ; les livres ne sont
+# pas sur le site (extraits courts seulement). NE PAS ajouter de Disallow sans
+# décision éditoriale explicite.
+# Les sections nommées sont redondantes avec « * » : leur valeur est documentaire
+# et défensive (si une règle Disallow était un jour ajoutée à « * », les bots
+# critiques nommés garderaient leur section propre).
+
+# ── Défaut : tout le monde, tout le site ──────────────────────────────
 User-agent: *
 Allow: /
 
-User-agent: GPTBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
+# ── Moteurs classiques (socle des réponses IA) ────────────────────────
+# Googlebot et Bingbot sont couverts par « * ». Google AI Overviews / AI Mode
+# s'appuient sur Googlebot ; Bing Copilot sur Bingbot.
 User-agent: GoogleOther
 Allow: /
 
+# ── Bots de recherche / citation IA (réponse avec lien source) ────────
+# OpenAI — index de ChatGPT Search
+User-agent: OAI-SearchBot
+Allow: /
+
+# OpenAI — fetch à la demande d'un utilisateur ChatGPT
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic — index de Claude Search
+User-agent: Claude-SearchBot
+Allow: /
+
+# Anthropic — fetch à la demande d'un utilisateur Claude
+User-agent: Claude-User
+Allow: /
+
+# Perplexity — crawler d'index et fetch utilisateur
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# DuckDuckGo — réponses DuckAssist
+User-agent: DuckAssistBot
+Allow: /
+
+# Apple — Siri / Spotlight (recherche)
+User-agent: Applebot
+Allow: /
+
+# Mistral — citations Le Chat
+User-agent: MistralAI-User
+Allow: /
+
+# ── Bots d'entraînement (corpus des futurs modèles) — autorisés ───────
+# OpenAI — entraînement GPT
+User-agent: GPTBot
+Allow: /
+
+# Anthropic — entraînement Claude
+User-agent: ClaudeBot
+Allow: /
+
+# Google — entraînement Gemini (ne gouverne PAS AI Overviews)
+User-agent: Google-Extended
+Allow: /
+
+# Common Crawl — corpus ouvert utilisé par de nombreux modèles
 User-agent: CCBot
 Allow: /
 
-User-agent: Google-Extended
+# Apple — entraînement Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta — entraînement Llama
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# Amazon — Alexa / modèles Amazon
+User-agent: Amazonbot
+Allow: /
+
+# ByteDance
+User-agent: Bytespider
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
 Allow: /
 
 Sitemap: https://stephane-lalut.com/sitemap.xml
