@@ -49,6 +49,25 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-07-04 — MODIFICATION DURABLE DE LA RÈGLE : levée anticipée du gel structurel
+
+Décision explicite de l'auteur (session GEO du 04/07) : le gel structurel 90 j
+(échéance initiale ~2026-08-12) est **levé de manière anticipée et la règle est
+modifiée durablement**. Nouveau régime :
+
+- les interventions sur le site se font **à la demande de l'auteur**, validées
+  par diff avant commit (méthodologie inchangée) — plus de fenêtre calendaire ;
+- la doctrine de fond demeure : **diffusion > optimisation**, conversion par
+  autorité, pas de contenu creux, quota de pages maîtrisé, protocole de mesure
+  (`reports/geo_audit/GEO_PROTOCOLE_MESURE.md`) inchangé ;
+- conséquence immédiate : la « rafale » planifiée pour le 12-26 août est
+  **publiée ce jour** (2 pages-ponts + 2 pages offrir + GoatCounter events).
+
+Contexte : audit GEO complet + méta-analyse croisée du 04/07 (13 + 8 livrables,
+`reports/geo_audit/` et `reports/geo_authority_conversion_audit/`), 16 commits
+de phase 1/1-bis/GEO-01/QEA déployés le même jour, passe Zenodo (verbatim +
+dates) exécutée, dossier Wikidata prêt pour import.
+
 ### 2026-06-15 — Clôture du journal post-90j de l'audit GEO (harmonisation définition + DOI AWP-05)
 
 Round demandé par l'auteur : « faire toutes les améliorations nécessaires pour
@@ -167,11 +186,13 @@ Le gel 90 jours initié au commit 3975b24 (mai 2026) est interrompu pour une int
 
 ## 1. État de phase
 
-Le site est en **phase active GEO/diffusion 90 jours** (depuis mai 2026).
+**Depuis le 2026-07-04** : le gel calendaire est levé (voir log § 0) — le site
+est en régime « interventions à la demande, validées par diff », avec pour
+priorité d'énergie la **diffusion** (campagne académique, AWP-07, nœuds
+externes), pas l'optimisation on-site.
 
-La phase de construction infrastructurelle est **close**. Aucune 
-nouvelle session technique structurelle n'est prévue pendant les 
-90 jours sauf défaut bloquant détecté.
+*(Historique : phase active GEO/diffusion 90 jours de mai à juillet 2026 ;
+la phase de construction infrastructurelle initiale est close.)*
 
 L'audit de bascule a livré le verdict OUI sans correction obligatoire.
 Les 3 recommandations triviales (R1+R2+R3) ont été appliquées dans 
