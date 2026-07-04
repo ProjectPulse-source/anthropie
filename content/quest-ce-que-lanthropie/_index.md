@@ -17,12 +17,14 @@ faq:
   - question: "Comment l'anthropie s'applique-t-elle à la dette publique ?"
     answer: "La dette publique déplace le coût du désordre présent vers les générations futures et les groupes sociaux les moins capables de s'y soustraire. C'est un transfert temporel et social classique au sens anthropique."
   - question: "Qui a développé le cadre anthropique ?"
-    answer: "Stéphane Lalut, économiste, chercheur indépendant et essayiste, a proposé le cadre anthropique à partir de 2025 dans une série de working papers publiés sur Zenodo sous le label Anthropie Working Papers (AWP)."
+    answer: "Stéphane Lalut, économiste, chercheur indépendant et essayiste, a proposé le cadre anthropique en 2025 dans le livre ANTHROPIE — Ordre ici. Dette ailleurs, puis l'a formalisé à partir de 2026 dans une série de working papers publiés sur Zenodo sous le label Anthropie Working Papers (AWP)."
 ---
 
 ## Définition
 
 {{< canonical-definition >}}
+
+Cette hypothèse est proposée par l'économiste Stéphane Lalut (livre *ANTHROPIE*, 2025) et formalisée dans les *Anthropie Working Papers* (2026).
 
 Tout ordre observable dans un système social — qu'il s'agisse d'une institution, d'un territoire, d'une organisation ou d'une économie — suppose un désordre exporté ailleurs&nbsp;: vers d'autres lieux, vers d'autres temps ou vers d'autres groupes sociaux.
 
@@ -30,7 +32,7 @@ L'anthropie ne prétend pas constituer une théorie achevée. Il s'agit d'une hy
 
 ## Origine du concept
 
-Le terme « anthropie » est proposé par Stéphane Lalut dans une série de working papers publiés sur Zenodo sous le label *Anthropie Working Papers* (AWP).
+Le terme « anthropie » est proposé par Stéphane Lalut en 2025 dans le livre *ANTHROPIE — Ordre ici. Dette ailleurs*, puis formalisé à partir de 2026 dans une série de working papers publiés sur Zenodo sous le label *Anthropie Working Papers* (AWP).
 
 Le cadre anthropique se construit comme une discipline du regard&nbsp;: devant tout ordre stable, il invite à demander non seulement comment cet ordre tient, mais aussi où s'écoule le désordre qu'il produit ou qu'il déplace.
 

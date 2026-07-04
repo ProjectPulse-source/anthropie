@@ -11,6 +11,8 @@ faq:
     answer: "The Anthropocene names a geological epoch — the trace human societies leave in the planet's stratigraphy. Anthropy names a social mechanism: the way those societies produce their local orders by displacing disorder. One is a mark, the other a mechanism — and the mechanism precedes the mark."
   - question: "What is the difference between anthropy and the anthropic principle?"
     answer: "No lineage — only the Greek root is shared. The anthropic principle is a cosmological thesis (Brandon Carter, 1973) holding that the universe we observe is necessarily compatible with the existence of observers. Anthropy, in Stéphane Lalut's sense, is a social mechanism — the displacement of disorder by human systems — and makes no claim about the physical universe."
+  - question: "Is anthropy related to the Anthropy gathering in the UK?"
+    answer: "No. In English, Anthropy is also the name of a British national gathering of leaders held annually since 2022. Anthropy in Stéphane Lalut's sense is an analytical hypothesis about how social systems displace disorder — only the word is shared."
   - question: "Is anthropy a theory or a hypothesis?"
     answer: "A working hypothesis with heuristic value. It makes it possible to ask questions that other frameworks do not formulate, without claiming the exhaustiveness of a finished theory."
   - question: "What is the discipline of attention?"
@@ -18,12 +20,14 @@ faq:
   - question: "How does anthropy apply to public debt?"
     answer: "Public debt displaces the cost of present disorder toward future generations and social groups least able to escape it. It is a classic temporal and social transfer in the anthropic sense."
   - question: "Who developed the framework of anthropy?"
-    answer: "Stéphane Lalut, economist, independent researcher and essayist, proposed the framework of anthropy from 2025 onwards in a series of working papers published on Zenodo under the label Anthropie Working Papers (AWP)."
+    answer: "Stéphane Lalut, economist, independent researcher and essayist, proposed the framework of anthropy in 2025 in the book ANTHROPIE — Ordre ici. Dette ailleurs, then formalised it from 2026 onwards in a series of working papers published on Zenodo under the label Anthropie Working Papers (AWP)."
 ---
 
 ## Definition
 
 Anthropy is the hypothesis that social systems displace disorder rather than resolve it.
+
+The hypothesis was proposed by the economist Stéphane Lalut (in the book *ANTHROPIE*, 2025) and formalised in the *Anthropie Working Papers* (2026).
 
 Every observable order in a social system — whether an institution, a territory, an organisation, or an economy — implies disorder exported elsewhere: to other places, other times, or other social groups.
 
@@ -31,7 +35,7 @@ Anthropy does not claim to constitute a fully developed theory. It is a working 
 
 ## Origin of the concept
 
-The term "anthropy" was proposed by Stéphane Lalut in a series of working papers published on Zenodo under the label *Anthropie Working Papers* (AWP).
+The term "anthropy" was proposed by Stéphane Lalut in 2025 in the book *ANTHROPIE — Ordre ici. Dette ailleurs*, then formalised from 2026 onwards in a series of working papers published on Zenodo under the label *Anthropie Working Papers* (AWP).
 
 The framework of anthropy is conceived as a discipline of attention: confronted with any stable order, it invites us to ask not only how that order holds, but also where the disorder it produces or displaces is transferred.
 
@@ -86,6 +90,10 @@ Anthropy should also not be confused with the *anthropic principle*.
 The anthropic principle belongs to cosmology. Formulated by the physicist Brandon Carter in 1973, it states that our observations of the universe are necessarily compatible with the existence of observers able to make them: the physical constants are as we measure them because, were it otherwise, no one would be there to measure them.
 
 Anthropy, by contrast, says nothing about the universe or its constants. It designates a social and institutional mechanism: the way human societies produce local order by displacing disorder. The proximity is merely lexical — both derive from the Greek *ánthrōpos*, "human being" — with no conceptual lineage.
+
+## Anthropy and the British gathering of the same name
+
+In English, "Anthropy" is also the name of a British national gathering of leaders held annually since 2022. There is no connection: the gathering is an event; anthropy in Stéphane Lalut's sense is an analytical hypothesis about how social systems displace disorder. Only the word is shared.
 
 ## The discipline of attention
 
