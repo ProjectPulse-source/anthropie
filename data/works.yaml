@@ -310,8 +310,8 @@ works:
       fr: "https://stephane-lalut.com/livres/anthropie-ordre-ici-dette-ailleurs/"
       en: ""  # n/a — pas de page livre EN dédiée
     purchase_url:
-      amazon_fr: "https://amzn.eu/d/0hfod6Wc"
-      amazon_com: "https://a.co/d/08HfFlLF"
+      amazon_fr: "https://www.amazon.fr/dp/2958634728"  # /dp canonique — jamais de shortener amzn.eu/a.co (purge 2026-07-04)
+      amazon_com: "https://www.amazon.com/dp/2958634728"
     image_url: "https://stephane-lalut.com/images/livres/anthropie-ordre-ici-dette-ailleurs.jpg"  # auto-hébergé (assets/images/livres/<slug>.jpg) — URL stable, indépendante du visuel
     google_scholar:
       visible: true
@@ -341,8 +341,8 @@ works:
       fr: "https://stephane-lalut.com/livres/dette-publique-qui-paie-vraiment/"
       en: ""  # n/a
     purchase_url:
-      amazon_fr: "https://amzn.eu/d/01Z60i3H"
-      amazon_com: "https://a.co/d/04hB4FsV"
+      amazon_fr: "https://www.amazon.fr/dp/2958634736"  # /dp canonique — jamais de shortener amzn.eu/a.co (purge 2026-07-04)
+      amazon_com: "https://www.amazon.com/dp/2958634736"
     image_url: "https://stephane-lalut.com/images/livres/dette-publique-qui-paie-vraiment.jpg"  # auto-hébergé (assets/images/livres/<slug>.jpg) — URL stable, indépendante du visuel
     google_scholar:
       visible: false
