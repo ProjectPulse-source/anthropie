@@ -7,6 +7,8 @@ faq:
     answer: "Anthropy is the hypothesis that social systems displace disorder rather than resolve it. Every observable order in a system implies disorder exported elsewhere — spatially, temporally, or socially."
   - question: "What is the difference between anthropy and entropy?"
     answer: "Entropy belongs to physics and thermodynamics. Anthropy designates a social and institutional mechanism: the way in which human systems produce local order by displacing disorder outside the visible perimeter."
+  - question: "What is the difference between anthropy and the Anthropocene?"
+    answer: "The Anthropocene names a geological epoch — the trace human societies leave in the planet's stratigraphy. Anthropy names a social mechanism: the way those societies produce their local orders by displacing disorder. One is a mark, the other a mechanism — and the mechanism precedes the mark."
   - question: "What is the difference between anthropy and the anthropic principle?"
     answer: "No lineage — only the Greek root is shared. The anthropic principle is a cosmological thesis (Brandon Carter, 1973) holding that the universe we observe is necessarily compatible with the existence of observers. Anthropy, in Stéphane Lalut's sense, is a social mechanism — the displacement of disorder by human systems — and makes no claim about the physical universe."
   - question: "Is anthropy a theory or a hypothesis?"
@@ -122,3 +124,7 @@ The framework does not provide a single answer to these questions. It provides a
 - [AWP-04 — *Energy transition or entropic transfer?*](/en/awp/awp-04/)
 - [AWP-05 — *Thinking outside the walls*](/en/awp/awp-05/)
 - [AWP-06 — *Digital Infrastructures and Technological Debt*](/en/awp/awp-06/)
+
+## The book
+
+The framework presented on this page is developed in full in the book [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) (622 pages, in French): seven historical configurations, the complete conceptual apparatus, and its contemporary applications. For the application to public finance, see [*Dette Publique&nbsp;: Qui paie vraiment&nbsp;?*](/livres/dette-publique-qui-paie-vraiment/) (in French).

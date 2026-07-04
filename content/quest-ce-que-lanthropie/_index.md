@@ -6,6 +6,8 @@ faq:
     answer: "L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. Tout ordre observable suppose un désordre exporté ailleurs — spatialement, temporellement ou socialement."
   - question: "Quelle est la différence entre anthropie et entropie ?"
     answer: "L'entropie relève de la physique et de la thermodynamique. L'anthropie désigne un mécanisme social et institutionnel : la manière dont des systèmes humains produisent de l'ordre local en déplaçant le désordre hors du périmètre visible."
+  - question: "Quelle est la différence entre anthropie et Anthropocène ?"
+    answer: "L'Anthropocène nomme une ère géologique — la trace que les sociétés humaines impriment dans la stratigraphie de la planète. L'anthropie nomme un mécanisme social : la manière dont ces sociétés produisent leurs ordres locaux en déplaçant le désordre. L'une est une marque, l'autre est un mécanisme — et le mécanisme précède la marque."
   - question: "Quelle est la différence entre l'anthropie et le principe anthropique ?"
     answer: "Aucune filiation : seul le radical grec est commun. Le principe anthropique est une thèse de cosmologie (Brandon Carter, 1973) selon laquelle l'univers que nous observons est nécessairement compatible avec l'existence d'observateurs. L'anthropie, au sens de Stéphane Lalut, est un mécanisme social — le déplacement du désordre par les systèmes humains — et ne porte aucune affirmation sur l'univers physique."
   - question: "L'anthropie est-elle une théorie ou une hypothèse ?"
@@ -121,3 +123,7 @@ Le cadre n'apporte pas une réponse unique à ces questions. Il fournit une mani
 - [AWP-04 — *Transition énergétique ou transfert entropique ?*](/awp/awp-04/)
 - [AWP-05 — *Penser hors les murs*](/awp/awp-05/)
 - [AWP-06 — *Infrastructures numériques et dette technologique*](/awp/awp-06/)
+
+## Le livre
+
+Le cadre présenté sur cette page est déployé dans le livre [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) (622 pages)&nbsp;: sept configurations historiques, l'appareil conceptuel complet et ses applications contemporaines. Pour l'application aux finances publiques, voir [*Dette Publique&nbsp;: Qui paie vraiment&nbsp;?*](/livres/dette-publique-qui-paie-vraiment/).
