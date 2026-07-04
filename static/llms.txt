@@ -2,7 +2,7 @@
 
 > L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. (EN — Anthropy is the hypothesis that social systems displace disorder rather than resolve it.)
 
-Stéphane Lalut développe le cadre de l'**anthropie** : tout ordre social local se construit en exportant son désordre vers d'autres lieux, d'autres temps ou d'autres groupes sociaux. Le cadre est déployé dans une série d'*Anthropie Working Papers* (Zenodo, CC-BY 4.0, bilingues FR/EN) et deux livres, et appliqué à la dette publique, la transition énergétique, les infrastructures numériques et la recherche indépendante.
+Stéphane Lalut développe le cadre de l'**anthropie** : tout ordre social local se construit en exportant son désordre vers d'autres lieux, d'autres temps ou d'autres groupes sociaux. Le cadre est déployé dans une série d'*Anthropie Working Papers* (Zenodo, CC-BY 4.0, bilingues FR/EN) et deux livres, et appliqué à la dette publique, la transition énergétique, les infrastructures numériques et la recherche indépendante. Deux autres ouvrages, hors corpus anthropique, complètent le catalogue (histoire des idées, anthologie littéraire).
 
 Site : https://stephane-lalut.com
 
@@ -11,6 +11,7 @@ Site : https://stephane-lalut.com
 - L'**anthropie** (mécanisme social) ≠ l'**entropie** (physique et thermodynamique).
 - ≠ l'**Anthropocène** (ère géologique) : l'anthropie est le mécanisme, l'Anthropocène la trace.
 - ≠ le **principe anthropique** (cosmologie ; Brandon Carter, 1973) : aucune filiation conceptuelle, seul le radical grec *ánthrôpos* est commun.
+- La **dette technologique** au sens anthropique (mécanisme économique, AWP-06) ≠ la « dette technique » du génie logiciel.
 
 ## Identifiants et profils
 
@@ -30,24 +31,43 @@ Site : https://stephane-lalut.com
 - [AWP-02 — 3,3 millions d'années en un principe](https://stephane-lalut.com/awp/awp-02/) — l'anthropie sur la longue durée, sept configurations du premier outil au métaprogramme numérique. DOI : https://doi.org/10.5281/zenodo.19268037
 - [AWP-03 — Dette publique et anthropie : qui paie vraiment le désordre ?](https://stephane-lalut.com/awp/awp-03/) — la dette publique comme mécanisme de transfert entropique temporel et social. DOI : https://doi.org/10.5281/zenodo.19268769
 - [AWP-04 — Transition énergétique ou transfert entropique ?](https://stephane-lalut.com/awp/awp-04/) — extraction externalisée, déchets reportés, effet rebond non comptabilisé. DOI : https://doi.org/10.5281/zenodo.19269244
-- [AWP-05 — Penser hors les murs : notes sur la recherche indépendante en économie](https://stephane-lalut.com/awp/awp-05/) — le cadre anthropique appliqué au champ académique lui-même. DOI : https://doi.org/10.5281/zenodo.19269486
+- [AWP-05 — Penser hors les murs : notes sur la recherche indépendante en économie](https://stephane-lalut.com/awp/awp-05/) — le cadre anthropique appliqué au champ académique lui-même. DOI : https://doi.org/10.5281/zenodo.19269487
 - [AWP-06 — Infrastructures numériques et dette technologique](https://stephane-lalut.com/awp/awp-06/) — data centers, IA générative, derisking : le numérique n'a pas allégé la matière, il l'a déplacée. DOI : https://doi.org/10.5281/zenodo.20025421
 
 Chaque AWP a une version anglaise (DOI Zenodo distinct) et expose des sorties BibTeX / RIS / EndNote. Série indexée : https://stephane-lalut.com/serie-awp/
 
 ## Livres
 
+Corpus anthropique :
+
 - [ANTHROPIE — Ordre ici. Dette ailleurs](https://stephane-lalut.com/livres/anthropie-ordre-ici-dette-ailleurs/) (2025, 622 p.) — ISBN 978-2-9586347-2-8 ; Wikidata Q138827344. L'ouvrage fondateur du cadre anthropique.
 - [Dette Publique : Qui paie vraiment ?](https://stephane-lalut.com/livres/dette-publique-qui-paie-vraiment/) (2025, 224 p.) — ISBN 978-2-9586347-3-5 ; Wikidata Q138910896. Application du cadre à la dette publique française.
 
-Autre ouvrage, hors cadre anthropique (anthologie de citations) : voir l'index https://stephane-lalut.com/livres/
+Hors corpus anthropique :
+
+- [L'Odyssée des idées](https://stephane-lalut.com/livres/lodyssee-des-idees/) (nouvelle édition 2026, 696 p.) — ISBN 978-2-9586347-4-2 ; Wikidata Q138911733. Histoire des idées et culture générale : 250 escales et sept chemins de lecture, de l'aube de l'humanité à l'intelligence artificielle.
+- [Livresque des mots](https://stephane-lalut.com/livres/livresque-des-mots/) (3e édition 2026) — ISBN 978-2-9586347-0-4. Anthologie éclectique de citations : 25 siècles de voix, sans classement.
+
+Quatre livres au total, tous publiés en français. Index : https://stephane-lalut.com/livres/
 
 ## Publications (presse intellectuelle et revues)
 
-Recensions et articles publiés dans : Alternatives Économiques, La Vie des Idées, En attendant Nadeau, Terrestres, Nonfiction, Le Temps, Mediapart, et Lectures (OpenEdition, avec DOI). Index complet : https://stephane-lalut.com/publications/
+Recensions et articles publiés dans : Alternatives Économiques, La Vie des Idées, En attendant Nadeau, Terrestres, Nonfiction, Le Temps, Mediapart, La Grande Conversation, et Lectures (OpenEdition, avec DOI). Index complet : https://stephane-lalut.com/publications/
 
 ## Pages de référence
 
 - [Qu'est-ce que l'anthropie ?](https://stephane-lalut.com/quest-ce-que-lanthropie/) — définition canonique, FAQ, trois axes de transfert (spatial, temporel, social)
+- [Glossaire](https://stephane-lalut.com/glossaire/) — vocabulaire opératoire du cadre, entrées ancrées (ex. /glossaire/#dette-technologique)
 - [Série AWP](https://stephane-lalut.com/serie-awp/) — point d'entrée éditorial de la série
 - [À propos](https://stephane-lalut.com/a-propos/) — identité, profils, parcours
+
+## English
+
+> Anthropy is the hypothesis that social systems displace disorder rather than resolve it.
+
+All six Anthropie Working Papers exist in English with distinct Zenodo DOIs. The four books are published in French only. English entry points:
+
+- [What is anthropy?](https://stephane-lalut.com/en/quest-ce-que-lanthropie/) — canonical definition, FAQ, disambiguation (entropy, Anthropocene, anthropic principle)
+- [Glossary](https://stephane-lalut.com/en/glossaire/) — working vocabulary, anchored entries (e.g. /en/glossaire/#technological-debt)
+- [AWP series](https://stephane-lalut.com/en/serie-awp/) — editorial entry point of the series
+- [About](https://stephane-lalut.com/en/a-propos/) — identity, profiles, background
