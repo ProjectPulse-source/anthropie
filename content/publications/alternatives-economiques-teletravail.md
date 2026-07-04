@@ -10,4 +10,11 @@ chapo: "Le bureau a disparu, pas ses coûts. Chauffage, équipement, espace : le
 chapo_en: "The office vanished, but not its costs. Heating, equipment, space — remote work shifted the burden from employer to employee."
 related: [awp-01]
 related_book: anthropie-ordre-ici-dette-ailleurs
+# Fiche interne noindex + hors sitemap : la carte /publications/ pointe l'article
+# externe ; ce corps quasi vide ne doit pas diluer le sitemap (audit GEO 2026-07-04,
+# decision 1.3a). NB : PAS de _build.list ici (retirerait la carte de /publications/,
+# les templates iterent site.RegularPages). Retirer ce bloc si enrichissement post-gel.
+noindex: true
+sitemap:
+  disable: true
 ---

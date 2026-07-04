@@ -9,4 +9,11 @@ chapo: "L'entreprise moderne peut agir sans que personne n'en réponde. Vuilleme
 chapo_en: "The modern corporation can act without anyone being answerable. Vuillemey shows how limited liability severs acting from answering, shifting the damage onto the commons."
 related: [awp-01, awp-03]
 related_book: anthropie-ordre-ici-dette-ailleurs
+# Fiche interne noindex + hors sitemap : la carte /publications/ pointe l'article
+# externe ; ce corps quasi vide ne doit pas diluer le sitemap (audit GEO 2026-07-04,
+# decision 1.3a). NB : PAS de _build.list ici (retirerait la carte de /publications/,
+# les templates iterent site.RegularPages). Retirer ce bloc si enrichissement post-gel.
+noindex: true
+sitemap:
+  disable: true
 ---
