@@ -59,6 +59,14 @@ On peut lire ce livre page après page, comme une traversée chronologique. On p
 
 Pour le lecteur curieux — de philosophie, de sciences, d'histoire — qui préfère un récit continu aux manuels à fiches&nbsp;; pour l'étudiant qui veut relier ce que les disciplines séparent&nbsp;; et pour qui cherche un livre à offrir&nbsp;: une fresque qui s'offre autant qu'elle se garde.
 
+## Extrait
+
+La chute de l'escale «&nbsp;−399 · Socrate&nbsp;: le philosophe sans livre&nbsp;»&nbsp;:
+
+> Aucune réponse définitive. Aucune doctrine close. Rien qu'une manière de ne pas laisser les mots dormir en paix. Socrate n'a pas légué une vérité comme on lègue un bien&nbsp;; il a légué une inquiétude. Et c'est peut-être dans ce refus de conclure que tient sa victoire&nbsp;: vingt-quatre siècles plus tard, il ne nous apprend pas quoi penser. Il nous empêche de croire trop vite que nous pensons.
+
+Chaque escale suit ce fil&nbsp;: une scène, une bascule, une chute.
+
 ---
 
 Nouvelle édition entièrement recomposée, 2026. Version papier pour la traversée au long cours, version Kindle pour la navigation par renvois.

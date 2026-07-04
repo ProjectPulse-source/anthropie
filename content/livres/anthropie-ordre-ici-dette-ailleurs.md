@@ -55,6 +55,20 @@ La définition du cadre et son vocabulaire opératoire sont présentés sur la p
 
 Pour le lecteur d'essais qui cherche une grille de lecture d'ensemble — économie politique, histoire longue, écologie — plutôt qu'un traitement d'actualité. Aucun prérequis technique&nbsp;: l'appareil conceptuel est construit pas à pas. Les lecteurs des *Anthropie Working Papers* y trouveront le cadre complet dont chaque paper développe un théorème ou une application.
 
+## Que signifie «&nbsp;Ordre ici. Dette ailleurs.&nbsp;»&nbsp;?
+
+Le sous-titre condense l'hypothèse du livre. Le contresens fréquent consiste à y lire une dénonciation de l'ordre, ou un slogan sur la dette publique. La formule dit autre chose — une comptabilité&nbsp;: tout ordre local (une ville propre, un réseau qui fonctionne, un budget maîtrisé) est financé par un désordre déplacé ailleurs, vers d'autres lieux, d'autres temps ou d'autres groupes sociaux. «&nbsp;Ici&nbsp;» et «&nbsp;ailleurs&nbsp;» ne sont pas des lieux fixes&nbsp;: ce sont les deux bouts d'un transfert, que le livre suit sur sept âges historiques. La formule ne renvoie pas à *L'Ordre de la dette* de Benjamin Lemoine (2016), qui relève de la sociologie des marchés de dette souveraine&nbsp;: seule la proximité des mots les rapproche.
+
+## Extrait
+
+L'ouverture de la préface, «&nbsp;Liberté sous contrainte&nbsp;»&nbsp;:
+
+> À l'aube, le bâtiment respire — non, halète — comme une bête lovée dans son sommeil. Des grilles s'échappe une haleine tiède qui grimpe en panaches au-dessus de la neige, s'effiloche, se dissout. À l'intérieur : travées de machines au ronron métronomique, diodes qui papillonnent, air sec, calibré, et ce bourdonnement continu — un océan immobile, marée figée. Un technicien examine un collecteur, pose la paume sur un tuyau : sous la peau, il sent pulser une chaleur détournée de sa fonction première, une coulée discrète d'énergie. Dehors, à quelques centaines de mètres — pas davantage — cette même chaleur file, gagne des chambres d'enfants par le réseau des radiateurs. Plus loin, une péniche remonte le canal, lente, obstinée, charriant des déchets vers l'incinérateur dont la vapeur nourrira le même réseau. Alors l'évidence s'impose, nette : ici, l'ordre local tient — et ne tient que — par déplacement.
+
+## Réception
+
+Les premiers lecteurs saluent l'ampleur de la fresque — avec des comparaisons aux grandes synthèses de Jared Diamond ou de Yuval Noah Harari — et certains jugent le propos très détaillé et l'écriture exigeante&nbsp;: 622 pages qui prennent le temps de déplier chaque âge historique. Le livre assume ce parti&nbsp;: c'est un cadre complet, pas un essai d'intervention. Les recensions des travaux liés sont réunies sur la page [Publications](/publications/).
+
 ## Sommaire
 
 Le livre traverse **sept Âges historiques** — de l'invention du feu aux algorithmes contemporains — pour montrer comment chaque civilisation a déplacé son désordre vers un ailleurs spatial, temporel ou social.

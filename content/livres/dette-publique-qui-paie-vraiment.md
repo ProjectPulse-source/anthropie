@@ -61,6 +61,18 @@ En appliquant le cadre anthropique aux finances publiques françaises, Stéphane
 
 Pour le citoyen qui veut comprendre le débat budgétaire au-delà des ratios, l'étudiant en économie ou en science politique, et le lecteur de presse économique. Aucun prérequis&nbsp;: les mécanismes sont exposés à partir de cas concrets — France, Grèce, Japon, Norvège, Chine.
 
+## Extrait
+
+Du chapitre 7, «&nbsp;Une dette, trois visages — les créanciers invisibles&nbsp;»&nbsp;:
+
+> La dette publique française de 3 460 milliards n'est pas un bloc monolithique. Elle se divise en trois réalités aux destins opposés.
+>
+> La dette de l'État (2 800 milliards, 82% du total) a pris le large. Plus de la moitié appartient à des créanciers étrangers : fonds de pension américains, banques allemandes, assureurs japonais. Résultat : 30 milliards d'intérêts s'envolent chaque année hors de France — trois fois le budget de la Justice.
+>
+> La dette des collectivités locales (250 milliards, 7%) reste, elle, profondément française. Vos communes, départements et régions empruntent à 70% auprès de banques hexagonales, La Banque Postale en tête. Aucun fonds vautour new-yorkais ne spécule sur la dette de votre mairie.
+>
+> La dette sociale (300 milliards, 9%) finance hôpitaux et Sécurité sociale, avec un profil mixte entre les deux.
+
 ## Sommaire
 
 Le livre se construit en deux temps&nbsp;: d'abord la **mécanique du transfert** anthropique appliquée aux finances publiques françaises, puis quatre **scénarios prospectifs** pour la décennie 2025-2035.
