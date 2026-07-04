@@ -150,6 +150,8 @@ Le cadre n'apporte pas une réponse unique à ces questions. Il fournit une mani
 - [AWP-05 — *Penser hors les murs*](/awp/awp-05/)
 - [AWP-06 — *Infrastructures numériques et dette technologique*](/awp/awp-06/)
 
+Deux pages prolongent le cadre sur ses terrains d'application&nbsp;: [Qu'est-ce que la dette technologique&nbsp;?](/dette-technologique/) et [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/)
+
 ## Le livre
 
 Le cadre présenté sur cette page est déployé dans le livre [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) (622 pages)&nbsp;: sept configurations historiques, l'appareil conceptuel complet et ses applications contemporaines. Pour l'application aux finances publiques, voir [*Dette Publique&nbsp;: Qui paie vraiment&nbsp;?*](/livres/dette-publique-qui-paie-vraiment/).

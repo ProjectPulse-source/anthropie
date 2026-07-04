@@ -69,6 +69,8 @@ L'ouverture de la préface, «&nbsp;Liberté sous contrainte&nbsp;»&nbsp;:
 
 Les premiers lecteurs saluent l'ampleur de la fresque — avec des comparaisons aux grandes synthèses de Jared Diamond ou de Yuval Noah Harari — et certains jugent le propos très détaillé et l'écriture exigeante&nbsp;: 622 pages qui prennent le temps de déplier chaque âge historique. Le livre assume ce parti&nbsp;: c'est un cadre complet, pas un essai d'intervention. Les recensions des travaux liés sont réunies sur la page [Publications](/publications/).
 
+*Pour offrir la version Kindle par lien prépayé&nbsp;: [mode d'emploi](/offrir-un-livre-kindle/).*
+
 ## Sommaire
 
 Le livre traverse **sept Âges historiques** — de l'invention du feu aux algorithmes contemporains — pour montrer comment chaque civilisation a déplacé son désordre vers un ailleurs spatial, temporel ou social.

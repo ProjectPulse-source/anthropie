@@ -66,3 +66,5 @@ Ces quatre registres ne s'additionnent pas&nbsp;: ils se couplent. Réduire l'un
 Le passage du coût à la dette technologique opère en trois temps&nbsp;: l'engagement (contrats long terme, partenariats publics-privés), la garantie (dispositifs de derisking, garanties d'État), l'irréversibilisation (verrouillage des chaînes, dépendance opérationnelle).
 
 Le coût présent devient ainsi dette future inéluctable. Ce que les générations à venir hériteront n'aura pas été contracté par elles&nbsp;: c'est le mécanisme classique du transfert anthropique, transposé au numérique.
+
+Une présentation accessible du concept est disponible sur la page [Qu'est-ce que la dette technologique&nbsp;?](/dette-technologique/)

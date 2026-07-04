@@ -55,7 +55,7 @@ Application du cadre anthropique à la dette publique française.
 
 La dette publique est habituellement discutée en termes de montants, de ratios et de soutenabilité. Ce livre déplace la question&nbsp;: il s'intéresse non pas au « combien » mais au « qui ». Qui supporte réellement le coût de la dette ? Vers quels groupes sociaux et vers quelles générations le fardeau est-il transféré ? Par quels mécanismes ce transfert devient-il invisible dans le débat public ?
 
-En appliquant le cadre anthropique aux finances publiques françaises, Stéphane Lalut montre que la dette fonctionne comme un dispositif de transfert temporel et social&nbsp;: elle reporte le coût du désordre présent vers ceux qui n'ont pas voix au chapitre. Le cadre général est présenté sur la page [Qu'est-ce que l'anthropie&nbsp;?](/quest-ce-que-lanthropie/).
+En appliquant le cadre anthropique aux finances publiques françaises, Stéphane Lalut montre que la dette fonctionne comme un dispositif de transfert temporel et social&nbsp;: elle reporte le coût du désordre présent vers ceux qui n'ont pas voix au chapitre. La réponse en ligne, mécanisme par mécanisme&nbsp;: [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/) Le cadre général est présenté sur la page [Qu'est-ce que l'anthropie&nbsp;?](/quest-ce-que-lanthropie/).
 
 ## Pour qui&nbsp;?
 
@@ -72,6 +72,8 @@ Du chapitre 7, «&nbsp;Une dette, trois visages — les créanciers invisibles&n
 > La dette des collectivités locales (250 milliards, 7%) reste, elle, profondément française. Vos communes, départements et régions empruntent à 70% auprès de banques hexagonales, La Banque Postale en tête. Aucun fonds vautour new-yorkais ne spécule sur la dette de votre mairie.
 >
 > La dette sociale (300 milliards, 9%) finance hôpitaux et Sécurité sociale, avec un profil mixte entre les deux.
+
+*Pour offrir la version Kindle par lien prépayé&nbsp;: [mode d'emploi](/offrir-un-livre-kindle/).*
 
 ## Sommaire
 

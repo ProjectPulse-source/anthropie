@@ -67,6 +67,10 @@ La chute de l'escale «&nbsp;−399 · Socrate&nbsp;: le philosophe sans livre&n
 
 Chaque escale suit ce fil&nbsp;: une scène, une bascule, une chute.
 
+## Offrir ce livre
+
+Une fresque qui s'offre autant qu'elle se garde&nbsp;: pourquoi et à qui, sur la page [Offrir un livre de culture générale](/offrir-un-livre-de-culture-generale/). En version Kindle, le cadeau passe par un lien prépayé — [mode d'emploi](/offrir-un-livre-kindle/).
+
 ---
 
 Nouvelle édition entièrement recomposée, 2026. Version papier pour la traversée au long cours, version Kindle pour la navigation par renvois.
