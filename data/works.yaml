@@ -233,7 +233,7 @@ works:
     series_number: 5
     canonical_title:
       fr: "Penser hors les murs : notes sur la recherche indépendante en économie"
-      en: "Thinking Beyond the Walls"
+      en: "Thinking Beyond the Walls: Notes on Independent Research in Economics"  # aligné 2026-07-05 sur le record Zenodo 19440866 (T12)
     publication_date_fr: "2026-03-20"
     publication_date_en: "2026-04-06"
     license: "CC-BY 4.0"
@@ -245,7 +245,7 @@ works:
       en: [independent research, anthropy, epistemic order, academic legitimacy, open-access infrastructure]
     jel_codes: [A11, B41, I23]
     deposits:
-      zenodo_fr: { doi: "10.5281/zenodo.19269486", url: "https://doi.org/10.5281/zenodo.19269486", status: published }
+      zenodo_fr: { doi: "10.5281/zenodo.19269487", url: "https://doi.org/10.5281/zenodo.19269487", status: published }
       zenodo_en: { doi: "10.5281/zenodo.19440866", url: "https://doi.org/10.5281/zenodo.19440866", status: published }
       ssrn_en: { abstract_id: "6615438", doi: "10.2139/ssrn.6615438", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6615438", status: approved }
       mpra_en: { item_id: "128608", url: "https://mpra.ub.uni-muenchen.de/id/eprint/128608", status: in_review, deposit_date: "2026-04-07" }
@@ -284,6 +284,35 @@ works:
     google_scholar: { visible: false, citations_observed: 0 }
     notes: "JEL FR (2 codes) ≠ JEL EN (5 codes) : asymétrie observée dans le repo, intentionnelle ou à harmoniser ultérieurement."
 
+  - id: awp-07
+    type: awp
+    series: "Anthropie Working Papers"
+    series_number: 7
+    canonical_title:
+      fr: "La boucle anthropique : déplacement, saturation, retour — formaliser un mécanisme, de Kapp à Stiegler"
+      en: "The Anthropic Loop: Displacement, Saturation, Return — Formalizing a Mechanism, from Kapp to Stiegler"
+    publication_date_fr: "2026-07-05"
+    publication_date_en: "2026-07-05"
+    license: "CC-BY 4.0"
+    abstract_short:
+      fr: "L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. AWP-07 formalise la boucle anthropique — déplacement, accumulation, saturation, retour, re-déplacement — en machine à états conceptuelle, en dialogue avec Kapp, Georgescu-Roegen et Stiegler."
+      en: "Existing frameworks for tracking displaced costs describe segments of the displacement — the shift (Kapp), the aggregate balance (Georgescu-Roegen), the attentional toll (Stiegler) — but not the full cycle that links them. AWP-07 formalises the anthropic loop as a conceptual state machine: displacement, accumulation, saturation, return, re-displacement."
+    keywords:
+      fr: [anthropie, boucle anthropique, déplacement du désordre, coûts sociaux (cost-shifting), saturation, transmutation du retour]
+      en: [anthropy, anthropic loop, disorder displacement, social costs (cost-shifting), saturation, return transmutation]
+    jel_codes_fr: [B41, B52, D62, Q57]
+    jel_codes_en: [B41, B52, D62, Q57]
+    deposits:
+      zenodo_fr: { doi: "10.5281/zenodo.21200286", url: "https://doi.org/10.5281/zenodo.21200286", status: published, date: "2026-07-05" }
+      zenodo_en: { doi: "10.5281/zenodo.21200288", url: "https://doi.org/10.5281/zenodo.21200288", status: published, date: "2026-07-05" }
+      ssrn_en: { status: planned }
+      mpra_en: { status: planned }
+    site_pages:
+      fr: "https://stephane-lalut.com/awp/awp-07/"
+      en: "https://stephane-lalut.com/en/awp/awp-07/"
+    google_scholar: { visible: false, citations_observed: 0 }
+    notes: "Clé de voûte théorique de la série — formalise la boucle anthropique (E1-E5, spirale, transmutation du retour, C3, règle d'arrêt) ; adossements Kapp / Georgescu-Roegen / Stiegler (homonymie assumée) / Beck ; JEL FR = EN (4 codes). Dépôt Zenodo intégralement via API, DOI pré-réservés."
+
   # ===========================================================================
   # LIVRES (4)
   # ===========================================================================
@@ -292,7 +321,7 @@ works:
     type: book
     canonical_title:
       fr: "ANTHROPIE — Ordre ici. Dette ailleurs"
-      en: "ANTHROPY — Order Here, Debt Elsewhere"  # tentative, pas de page EN
+      en: "ANTHROPY — Order here. Debt elsewhere"  # aligné 2026-07-05 sur l'usage des 6 PDF EN de la série (T12) ; pas de page EN
     publication_date: "2025-09-09"
     isbn: "978-2-9586347-2-8"
     isbn_13_normalized: "9782958634728"
