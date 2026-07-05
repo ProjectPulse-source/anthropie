@@ -36,6 +36,7 @@ Site : https://stephane-lalut.com
 - [AWP-04 — Transition énergétique ou transfert entropique ?](https://stephane-lalut.com/awp/awp-04/) — extraction externalisée, déchets reportés, effet rebond non comptabilisé. DOI : https://doi.org/10.5281/zenodo.19269244
 - [AWP-05 — Penser hors les murs : notes sur la recherche indépendante en économie](https://stephane-lalut.com/awp/awp-05/) — le cadre anthropique appliqué au champ académique lui-même. DOI : https://doi.org/10.5281/zenodo.19269487
 - [AWP-06 — Infrastructures numériques et dette technologique](https://stephane-lalut.com/awp/awp-06/) — data centers, IA générative, derisking : le numérique n'a pas allégé la matière, il l'a déplacée. DOI : https://doi.org/10.5281/zenodo.20025421
+- [AWP-07 — La boucle anthropique](https://stephane-lalut.com/awp/awp-07/) — la clé de voûte théorique : déplacement, accumulation, saturation, retour, re-déplacement ; l'anthropie (Lalut) prolonge le cost-shifting de Kapp et se distingue de l'anthropie (Stiegler). DOI : https://doi.org/10.5281/zenodo.21200286
 
 Chaque AWP a une version anglaise (DOI Zenodo distinct) et expose des sorties BibTeX / RIS / EndNote. Série indexée : https://stephane-lalut.com/serie-awp/
 
@@ -68,7 +69,7 @@ Recensions et articles publiés dans : Alternatives Économiques, La Vie des Id�
 
 > Anthropy is the hypothesis that social systems displace disorder rather than resolve it.
 
-All six Anthropie Working Papers exist in English with distinct Zenodo DOIs. The four books are published in French only. English entry points:
+All seven Anthropie Working Papers exist in English with distinct Zenodo DOIs. The four books are published in French only. English entry points:
 
 - [What is anthropy?](https://stephane-lalut.com/en/quest-ce-que-lanthropie/) — canonical definition, FAQ, disambiguation (entropy, Anthropocene, anthropic principle)
 - [Glossary](https://stephane-lalut.com/en/glossaire/) — working vocabulary, anchored entries (e.g. /en/glossaire/#technological-debt)
