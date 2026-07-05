@@ -1,0 +1,253 @@
+// =======================================================================
+// _ressources-offertes.scss — page sur invitation /ressources-offertes/
+// Composants : chaîne causale, catalogue (gabarit emblème), transmission,
+// garanties, toast. Tokens exclusivement issus de _variables.scss.
+// =======================================================================
+
+.ressources-eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--fs-tiny);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-pivot);
+  margin-bottom: 12px;
+}
+
+.ressources-kicker {
+  font-family: var(--font-sans);
+  font-size: var(--fs-tiny);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--color-text-subtle);
+  margin: 0 0 12px;
+}
+
+// ----- Chaîne causale -----
+.ressources-chain-caption {
+  font-family: var(--font-sans);
+  font-size: var(--fs-micro);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-text-subtle);
+  margin: 28px 0 10px;
+}
+
+.ressources-chain {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  margin: 0 0 32px;
+  font-family: var(--font-sans);
+}
+.ressources-chain__node {
+  font-size: var(--fs-tiny);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--color-accent);
+  background: var(--color-accent-faint);
+  padding: 7px 12px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.ressources-chain__node--last {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+.ressources-chain__arrow {
+  color: var(--color-accent-rule);
+  font-size: var(--fs-small);
+}
+
+.ressources-intro {
+  max-width: 62ch;
+  margin-bottom: 16px;
+  font-size: 17px;
+  line-height: var(--lh-body);
+  em { color: var(--color-pivot); }
+}
+
+// ----- Fonctionnement -----
+.ressources-how {
+  border-left: 3px solid var(--color-accent-rule);
+  padding: 6px 0 6px 26px;
+  max-width: 66ch;
+  margin: 40px 0 10px;
+  p { margin-bottom: 10px; }
+}
+
+// ----- Catalogue -----
+.ressources-catalogue {
+  margin-top: 56px;
+  > h2 { margin-bottom: 6px; }
+}
+.ressources-rule {
+  width: 64px;
+  height: 2px;
+  background: var(--color-accent-rule);
+  margin: 12px 0 38px;
+}
+.ressources-books {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 52px 64px;
+  @media (max-width: 860px) { grid-template-columns: 1fr; }
+}
+.ressources-book {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 28px;
+  align-items: start;
+  @media (max-width: 520px) {
+    grid-template-columns: 1fr;
+    .ressources-book__emblem { margin: 0 auto; }
+  }
+}
+.ressources-book__emblem {
+  display: block;
+  perspective: 900px;
+  width: 200px;
+  text-decoration: none;
+}
+.ressources-book__cover {
+  display: block;
+  width: 200px;
+  transform: rotateY(var(--book-emblem-rotation));
+  box-shadow: var(--book-emblem-shadow);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  background: var(--color-bg-card);
+  img { width: 100%; height: auto; display: block; }
+}
+.ressources-book:hover .ressources-book__cover {
+  transform: rotateY(calc(var(--book-emblem-rotation) / 2)) translateY(-2px);
+  box-shadow: var(--book-emblem-shadow-hover);
+}
+.ressources-book__body {
+  h3 { font-size: 21px; font-weight: 500; line-height: 1.2; margin: 0 0 2px; }
+}
+.ressources-book__subtitle {
+  font-style: italic;
+  color: var(--color-pivot);
+  margin: 2px 0 9px;
+  font-size: var(--fs-body);
+}
+.ressources-book__meta {
+  font-family: var(--font-sans);
+  font-size: var(--fs-tiny);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-text-subtle);
+  margin-bottom: 11px;
+}
+.ressources-book__resume {
+  font-size: 15px;
+  margin-bottom: 14px;
+  max-width: 48ch;
+}
+.ressources-book__readmore {
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+// ----- Boutons -----
+.ressources-btn {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  letter-spacing: 0.02em;
+  padding: 11px 20px;
+  border: none;
+  cursor: pointer;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  text-decoration: none;
+  transition: background 0.25s ease;
+  &:hover { background: var(--color-accent-hover); color: var(--color-bg); }
+}
+.ressources-btn--outline {
+  background: transparent;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent-rule);
+  &:hover { background: var(--color-accent-faint); color: var(--color-accent); }
+}
+.ressources-btn-note {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: var(--color-text-subtle);
+  margin-top: 9px;
+  max-width: 42ch;
+}
+
+// ----- Transmission -----
+.ressources-transmit { margin: 64px 0 24px; }
+.ressources-transmit__inner {
+  background: var(--color-bg-elevated);
+  box-shadow: 0 1px 2px rgba(15, 15, 18, 0.05);
+  padding: 38px 42px;
+  max-width: 760px;
+  @media (max-width: 720px) { padding: 26px 21px; }
+  p { max-width: 58ch; margin-bottom: 22px; }
+}
+.ressources-transmit__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+}
+
+// ----- Garanties -----
+.ressources-legal {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 42px;
+  margin: 40px 0 10px;
+  @media (max-width: 860px) { grid-template-columns: 1fr; gap: 28px; }
+}
+.ressources-legal__block {
+  border-top: 2px solid var(--color-accent-rule);
+  padding-top: 16px;
+  .ressources-kicker { color: var(--color-accent); }
+  p { font-size: var(--fs-small); color: var(--color-text-muted); }
+}
+
+// ----- Contact -----
+.ressources-contact {
+  margin: 56px 0 30px;
+  text-align: center;
+  p { max-width: 52ch; margin: 0 auto 20px; }
+}
+
+// ----- Toast -----
+.ressources-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%) translateY(8px);
+  background: var(--color-accent);
+  color: var(--color-bg);
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  padding: 11px 19px;
+  border-radius: 2px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 50;
+  max-width: 90vw;
+  text-align: center;
+}
+.ressources-toast.is-visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ressources-book__cover,
+  .ressources-btn,
+  .ressources-toast { transition: none; }
+}

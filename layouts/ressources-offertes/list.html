@@ -1,0 +1,193 @@
+{{ define "main" }}
+{{- /* Page sur invitation (noindex, hors sitemap). Distribution PILOTÉE :
+       la demande passe par /contact/, le lien Kindle prépayé part ensuite
+       par e-mail personnel. AUCUN lien Amazon prépayé sur cette page —
+       les fonctions de partage ne véhiculent que l'URL de la page. */ -}}
+<article class="home-section ressources">
+
+  {{/* ── 1. Principe ── */}}
+  <header class="page-header">
+    <p class="ressources-eyebrow">Ressources offertes</p>
+    <h1 class="page-header__title">Exemplaires Kindle prépayés, transmis sur invitation</h1>
+  </header>
+
+  <p class="ressources-chain-caption">Le circuit d'un exemplaire</p>
+  <div class="ressources-chain">
+    <span class="ressources-chain__node">Vente</span><span class="ressources-chain__arrow" aria-hidden="true">→</span>
+    <span class="ressources-chain__node">Bénéfice</span><span class="ressources-chain__arrow" aria-hidden="true">→</span>
+    <span class="ressources-chain__node">Réinvestissement</span><span class="ressources-chain__arrow" aria-hidden="true">→</span>
+    <span class="ressources-chain__node">Exemplaire Kindle prépayé</span><span class="ressources-chain__arrow" aria-hidden="true">→</span>
+    <span class="ressources-chain__node">Lecteur invité</span><span class="ressources-chain__arrow" aria-hidden="true">→</span>
+    <span class="ressources-chain__node ressources-chain__node--last">Nouveau relais possible</span>
+  </div>
+
+  <p class="ressources-intro">Une partie des bénéfices issus des ventes de mes livres est
+  réinvestie dans leur diffusion. Chaque achat peut ainsi contribuer à financer un nouvel
+  exemplaire Kindle, transmis à un lecteur invité. Le principe est simple&nbsp;: faire
+  circuler le savoir hors des seuls circuits publicitaires, par une chaîne collaborative
+  de lecteurs, de relais et de prescripteurs.</p>
+  <p class="ressources-intro">Cette page permet d'obtenir, sur invitation, un exemplaire
+  Kindle prépayé. Le livre n'est pas <em>«&nbsp;gratuit&nbsp;»</em> au sens
+  commercial&nbsp;: il a été acheté en amont, puis remis en circulation pour atteindre
+  des lecteurs qui pourront, à leur tour, le faire connaître.</p>
+
+  {{/* ── 2. Fonctionnement ── */}}
+  <section class="ressources-how">
+    <h2 class="ressources-kicker">Comment cela fonctionne</h2>
+    <p>Vous avez reçu cette invitation parce qu'un lecteur, un relais ou l'auteur a
+    souhaité vous transmettre un livre. Un compte Amazon.fr est nécessaire. Chaque lien
+    est individuel, prépayé, utilisable une seule fois. Un même lecteur ne peut obtenir
+    qu'un exemplaire par livre. Aucune contrepartie n'est demandée.</p>
+    <p>Concrètement&nbsp;: le bouton d'un livre ouvre la page contact&nbsp;; vous
+    recevez ensuite votre lien individuel par e-mail, à activer sur Amazon.fr, sans
+    aucun paiement. Stock limité.</p>
+  </section>
+
+  {{/* ── 3. Catalogue — source unique : content/livres/ ── */}}
+  <section class="ressources-catalogue">
+    <h2>Les livres proposés</h2>
+    <div class="ressources-rule"></div>
+    <div class="ressources-books">
+      {{ $order := slice "lodyssee-des-idees" "anthropie-ordre-ici-dette-ailleurs" "dette-publique-qui-paie-vraiment" "livresque-des-mots" }}
+      {{ range $slug := $order }}
+        {{ with site.GetPage (printf "/livres/%s" $slug) }}
+        <article class="ressources-book">
+          <a href="{{ .RelPermalink }}" class="ressources-book__emblem" aria-hidden="true" tabindex="-1">
+            {{ partial "book-cover.html" (dict "slug" $slug "alt" .Title "wrapClass" "ressources-book__cover" "sizes" "200px") }}
+          </a>
+          <div class="ressources-book__body">
+            <h3>{{ .Title }}</h3>
+            {{ with .Params.subtitle }}<p class="ressources-book__subtitle">{{ partial "fr-typo.html" . }}</p>{{ end }}
+            {{ with .Params.pages }}<p class="ressources-book__meta">Édition Kindle · {{ . }} pages (version brochée)</p>{{ end }}
+            {{ with .Description }}<p class="ressources-book__resume">{{ partial "fr-typo.html" . }}</p>{{ end }}
+            <a class="ressources-book__readmore" href="{{ .RelPermalink }}">Lire plus</a>
+            <div>
+              <a class="ressources-btn" href="{{ "/contact/" | relLangURL }}">Demander cet exemplaire Kindle prépayé</a>
+              <p class="ressources-btn-note">Réponse personnelle&nbsp;: votre lien individuel
+              arrive par e-mail, à activer sur Amazon.fr, sans paiement.</p>
+            </div>
+          </div>
+        </article>
+        {{ end }}
+      {{ end }}
+    </div>
+  </section>
+
+  {{/* ── 4. Transmission ── */}}
+  <section class="ressources-transmit">
+    <div class="ressources-transmit__inner">
+      <h2 class="ressources-kicker">Transmettre cette invitation</h2>
+      <p>Vous pensez qu'un lecteur pourrait être intéressé&nbsp;? Transmettez-lui cette
+      page avec un court message. Aucune adresse e-mail n'est saisie ni conservée sur ce
+      site.</p>
+      <div class="ressources-transmit__buttons">
+        <button class="ressources-btn" id="ro-btn-copy" type="button">Copier le message</button>
+        <button class="ressources-btn ressources-btn--outline" id="ro-btn-mail" type="button">Envoyer par e-mail</button>
+        <button class="ressources-btn ressources-btn--outline" id="ro-btn-share" type="button">Partager</button>
+      </div>
+    </div>
+  </section>
+
+  {{/* ── 5. Garanties ── */}}
+  <section class="ressources-legal">
+    <div class="ressources-legal__block">
+      <h2 class="ressources-kicker">Amazon</h2>
+      <p>Le lien fourni permet d'accepter le livre via votre compte Amazon.fr. Il est
+      individuel, prépayé, à usage unique, et doit idéalement être activé immédiatement.
+      Ce dispositif utilise l'infrastructure Kindle comme canal technique de
+      transmission&nbsp;; il ne constitue pas un partenariat officiel avec Amazon.</p>
+    </div>
+    <div class="ressources-legal__block">
+      <h2 class="ressources-kicker">Libraires</h2>
+      <p>Ce dispositif ne remplace pas les libraires. Il ne concerne ni la vente
+      physique, ni le conseil, ni la prescription locale. Il s'agit d'un don numérique
+      ponctuel, destiné à faire circuler certains livres auprès de lecteurs invités.
+      Les lecteurs qui préfèrent le papier peuvent naturellement commander les versions
+      brochées par les circuits habituels.</p>
+    </div>
+    <div class="ressources-legal__block">
+      <h2 class="ressources-kicker">Confidentialité</h2>
+      <p>Ce site ne collecte pas les adresses e-mail des personnes auxquelles vous
+      transmettez l'invitation. Les boutons de transmission ouvrent votre propre
+      messagerie, copient un message ou utilisent les fonctions de partage de votre
+      appareil. Les éventuelles données techniques liées à l'attribution d'un exemplaire
+      sont limitées au fonctionnement du dispositif.</p>
+    </div>
+  </section>
+
+  {{/* ── 6. Contact ── */}}
+  <section class="ressources-contact">
+    <p>Pour toute question sur le dispositif, l'usage des données ou les livres proposés,
+    vous pouvez me contacter via la page contact du site.</p>
+    <a class="ressources-btn ressources-btn--outline" href="{{ "/contact/" | relLangURL }}">Me contacter</a>
+  </section>
+
+</article>
+
+<div class="ressources-toast" id="ro-toast" role="status" aria-live="polite"></div>
+
+<script>
+(function () {
+  // Règle absolue : le partage ne véhicule QUE l'URL de cette page,
+  // jamais un lien Kindle prépayé.
+  var PAGE_URL = {{ .Permalink | jsonify }};
+  var MAIL_SUBJECT = "Un livre Kindle prépayé vous est proposé";
+  var MAIL_BODY = "Bonjour,\n\n" +
+    "Je vous transmets cette invitation parce que ce livre pourrait vous intéresser.\n\n" +
+    "Stéphane Lalut propose certains de ses ouvrages sous forme d'exemplaires Kindle prépayés, financés à l'avance, afin de faire circuler le savoir au-delà des seuls circuits publicitaires.\n\n" +
+    "Vous pouvez consulter les livres disponibles ici :\n" + PAGE_URL + "\n\n" +
+    "Un compte Amazon.fr est nécessaire. Les liens sont individuels, à usage unique, et attribués dans la limite du stock disponible.\n\n" +
+    "Aucune contrepartie n'est demandée.";
+  var SHARE_TEXT = "Je vous transmets cette page : Stéphane Lalut propose certains livres en exemplaires Kindle prépayés, sur invitation, pour faire circuler le savoir. Aucune contrepartie demandée :\n" + PAGE_URL;
+
+  var toastTimer;
+  function toast(msg) {
+    var el = document.getElementById("ro-toast");
+    el.textContent = msg;
+    el.classList.add("is-visible");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { el.classList.remove("is-visible"); }, 4000);
+  }
+
+  function copyText(text, okMsg) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () { toast(okMsg); }, function () { fallbackCopy(text, okMsg); });
+    } else { fallbackCopy(text, okMsg); }
+  }
+  function fallbackCopy(text, okMsg) {
+    var ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.position = "fixed";
+    document.body.appendChild(ta);
+    ta.select();
+    var ok = false;
+    try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+    ta.remove();
+    toast(ok ? okMsg : "Copie impossible — sélectionnez le texte manuellement.");
+  }
+
+  document.getElementById("ro-btn-copy").addEventListener("click", function () {
+    copyText(MAIL_BODY, "Message copié. Vous pouvez le transmettre librement.");
+  });
+  document.getElementById("ro-btn-mail").addEventListener("click", function () {
+    window.location.href = "mailto:?subject=" + encodeURIComponent(MAIL_SUBJECT)
+      + "&body=" + encodeURIComponent(MAIL_BODY.replace(/\n/g, "\r\n"));
+    toast("Votre messagerie s'ouvre avec l'invitation prête à envoyer.");
+  });
+  document.getElementById("ro-btn-share").addEventListener("click", function () {
+    if (navigator.share) {
+      navigator.share({ title: MAIL_SUBJECT, text: SHARE_TEXT }).then(function () {
+        toast("Invitation prête à être partagée.");
+      }, function (e) {
+        if (!e || e.name !== "AbortError") {
+          copyText(SHARE_TEXT, "Message copié. Vous pouvez le transmettre librement.");
+        }
+      });
+    } else {
+      copyText(SHARE_TEXT, "Message copié. Vous pouvez le transmettre librement.");
+    }
+  });
+})();
+</script>
+{{ end }}
