@@ -7,7 +7,7 @@ url_externe: "https://www.nonfiction.fr/article-12742-quand-lentreprise-agit-qui
 image_type: "logo"
 chapo: "L'entreprise moderne peut agir sans que personne n'en réponde. Vuillemey montre comment la responsabilité limitée sépare l'agir du répondre, et reporte les dommages sur les biens communs."
 chapo_en: "The modern corporation can act without anyone being answerable. Vuillemey shows how limited liability severs acting from answering, shifting the damage onto the commons."
-related: [awp-01, awp-03]
+related: [awp-01, awp-03, awp-07]
 related_book: anthropie-ordre-ici-dette-ailleurs
 # Fiche interne noindex + hors sitemap : la carte /publications/ pointe l'article
 # externe ; ce corps quasi vide ne doit pas diluer le sitemap (audit GEO 2026-07-04,
