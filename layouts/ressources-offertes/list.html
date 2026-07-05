@@ -21,15 +21,14 @@
     <span class="ressources-chain__node ressources-chain__node--last">Nouveau relais possible</span>
   </div>
 
-  <p class="ressources-intro">Une partie des bénéfices issus des ventes de mes livres est
-  réinvestie dans leur diffusion. Chaque achat peut ainsi contribuer à financer un nouvel
-  exemplaire Kindle, transmis à un lecteur invité. Le principe est simple&nbsp;: faire
-  circuler le savoir hors des seuls circuits publicitaires, par une chaîne collaborative
-  de lecteurs, de relais et de prescripteurs.</p>
+  <p class="ressources-intro">Une partie des bénéfices de mes livres finance de nouveaux
+  exemplaires Kindle, offerts à des lecteurs invités. Chaque achat fait ainsi circuler
+  le savoir hors des seuls circuits publicitaires, par une chaîne de lecteurs, de relais
+  et de prescripteurs.</p>
   <p class="ressources-intro">Cette page permet d'obtenir, sur invitation, un exemplaire
   Kindle prépayé. Le livre n'est pas <em>«&nbsp;gratuit&nbsp;»</em> au sens
-  commercial&nbsp;: il a été acheté en amont, puis remis en circulation pour atteindre
-  des lecteurs qui pourront, à leur tour, le faire connaître.</p>
+  commercial&nbsp;: acheté en amont, il est remis en circulation — à vous, ensuite,
+  de le faire connaître.</p>
 
   {{/* ── 2. Fonctionnement ── */}}
   <section class="ressources-how">
@@ -83,7 +82,8 @@
       <div class="ressources-transmit__buttons">
         <button class="ressources-btn" id="ro-btn-copy" type="button">Copier le message</button>
         <button class="ressources-btn ressources-btn--outline" id="ro-btn-mail" type="button">Envoyer par e-mail</button>
-        <button class="ressources-btn ressources-btn--outline" id="ro-btn-share" type="button">Partager</button>
+        <button class="ressources-btn ressources-btn--outline" id="ro-btn-whatsapp" type="button">WhatsApp</button>
+        <button class="ressources-btn ressources-btn--outline" id="ro-btn-sms" type="button">SMS</button>
       </div>
     </div>
   </section>
@@ -175,19 +175,25 @@
       + "&body=" + encodeURIComponent(MAIL_BODY.replace(/\n/g, "\r\n"));
     toast("Votre messagerie s'ouvre avec l'invitation prête à envoyer.");
   });
-  document.getElementById("ro-btn-share").addEventListener("click", function () {
-    if (navigator.share) {
-      navigator.share({ title: MAIL_SUBJECT, text: SHARE_TEXT }).then(function () {
-        toast("Invitation prête à être partagée.");
-      }, function (e) {
-        if (!e || e.name !== "AbortError") {
-          copyText(SHARE_TEXT, "Message copié. Vous pouvez le transmettre librement.");
-        }
-      });
-    } else {
-      copyText(SHARE_TEXT, "Message copié. Vous pouvez le transmettre librement.");
-    }
+  // WhatsApp : wa.me ouvre l'application (mobile) ou WhatsApp Web (poste fixe)
+  // avec le message prérempli — pas de panneau de partage système.
+  document.getElementById("ro-btn-whatsapp").addEventListener("click", function () {
+    window.open("https://wa.me/?text=" + encodeURIComponent(SHARE_TEXT),
+                "_blank", "noopener");
+    toast("WhatsApp s'ouvre avec l'invitation prête à envoyer.");
   });
+
+  // SMS : uniquement sur appareil tactile (aucun client SMS sur poste fixe).
+  var smsBtn = document.getElementById("ro-btn-sms");
+  if (window.matchMedia && !window.matchMedia("(pointer: coarse)").matches) {
+    smsBtn.hidden = true;
+  } else {
+    smsBtn.addEventListener("click", function () {
+      var sep = /iPhone|iPad|iPod/i.test(navigator.userAgent) ? "&" : "?";
+      window.location.href = "sms:" + sep + "body=" + encodeURIComponent(SHARE_TEXT);
+      toast("Votre messagerie SMS s'ouvre avec l'invitation.");
+    });
+  }
 })();
 </script>
 {{ end }}
