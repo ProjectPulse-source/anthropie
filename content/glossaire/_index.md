@@ -71,7 +71,7 @@ L'anthropie repose sur une hypothèse unique — les systèmes sociaux déplacen
 
 <div class="glossaire-entry" id="boucle-anthropique">
 <dt>Boucle anthropique (retour anthropique)</dt>
-<dd>Retour du désordre déplacé vers la capacité qui avait rendu le déplacement possible&nbsp;: la cognition. L'extériorisation cognitive — l'outil, l'écriture, puis les dispositifs numériques — a permis d'étendre les transferts dans l'espace, le temps et le social&nbsp;; sous forme saturée, le désordre revient vers les prises concrètes de la cognition — attention captée, jugement délégué. Il ne s'agit pas d'un quatrième axe de transfert, mais d'un retour. Voir <a href="/quest-ce-que-lanthropie/">Qu'est-ce que l'anthropie&nbsp;?</a> et <a href="/awp/awp-06/">AWP-06</a>.</dd>
+<dd>Retour du désordre déplacé vers la capacité qui avait rendu le déplacement possible&nbsp;: la cognition. L'extériorisation cognitive — l'outil, l'écriture, puis les dispositifs numériques — a permis d'étendre les transferts dans l'espace, le temps et le social&nbsp;; sous forme saturée, le désordre revient vers les prises concrètes de la cognition — attention captée, jugement délégué. Il ne s'agit pas d'un quatrième axe de transfert, mais d'un retour. La boucle complète — déplacement, accumulation, saturation, retour, re-déplacement — est formalisée dans <a href="/awp/awp-07/">AWP-07</a>. Voir aussi <a href="/quest-ce-que-lanthropie/">Qu'est-ce que l'anthropie&nbsp;?</a> et <a href="/awp/awp-06/">AWP-06</a>.</dd>
 </div>
 
 <div class="glossaire-entry" id="ordre-epistemique">

@@ -70,6 +70,8 @@ Dans le métaprogramme numérique contemporain, les trois axes atteignent un ré
 
 {{< boucle-anthropique >}}
 
+Cette boucle — déplacement, accumulation, saturation, retour, re-déplacement — est formalisée dans [AWP-07 — *La boucle anthropique*](/awp/awp-07/), qui en donne les définitions, les états et les conditions de réfutation.
+
 ## Anthropie et entropie
 
 L'anthropie ne se confond pas avec l'entropie.
@@ -149,6 +151,7 @@ Le cadre n'apporte pas une réponse unique à ces questions. Il fournit une mani
 - [AWP-04 — *Transition énergétique ou transfert entropique ?*](/awp/awp-04/)
 - [AWP-05 — *Penser hors les murs*](/awp/awp-05/)
 - [AWP-06 — *Infrastructures numériques et dette technologique*](/awp/awp-06/)
+- [AWP-07 — *La boucle anthropique*](/awp/awp-07/)
 
 Deux pages prolongent le cadre sur ses terrains d'application&nbsp;: [Qu'est-ce que la dette technologique&nbsp;?](/dette-technologique/) et [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/)
 

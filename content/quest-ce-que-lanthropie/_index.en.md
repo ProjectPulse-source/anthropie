@@ -75,6 +75,8 @@ In the contemporary digital metaprogram, the three axes reach a receptacle that 
 
 {{< boucle-anthropique >}}
 
+This loop — displacement, accumulation, saturation, return, re-displacement — is formalised in [AWP-07 — *The Anthropic Loop*](/en/awp/awp-07/), which provides its definitions, states, and conditions of refutation.
+
 ## Anthropy and entropy
 
 Anthropy is not to be confused with entropy.
@@ -158,6 +160,7 @@ The framework does not provide a single answer to these questions. It provides a
 - [AWP-04 — *Energy transition or entropic transfer?*](/en/awp/awp-04/)
 - [AWP-05 — *Thinking outside the walls*](/en/awp/awp-05/)
 - [AWP-06 — *Digital Infrastructures and Technological Debt*](/en/awp/awp-06/)
+- [AWP-07 — *The Anthropic Loop*](/en/awp/awp-07/)
 
 ## The book
 
