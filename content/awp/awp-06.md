@@ -31,6 +31,7 @@ translation:
   title: "Digital Infrastructures and Technological Debt"
 related:
   - awp-04
+  - awp-07
 related_book: "anthropie-ordre-ici-dette-ailleurs"
 ---
 

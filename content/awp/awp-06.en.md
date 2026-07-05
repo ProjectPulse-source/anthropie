@@ -31,6 +31,7 @@ translation:
   is_canonical: true
 related:
   - awp-04
+  - awp-07
 related_book: "anthropie-ordre-ici-dette-ailleurs"
 ---
 

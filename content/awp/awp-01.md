@@ -30,6 +30,7 @@ translation:
   title: "What is anthropy? Principles of a hypothesis"
 related:
   - awp-02
+  - awp-07
 related_book: "anthropie-ordre-ici-dette-ailleurs"
 ---
 
