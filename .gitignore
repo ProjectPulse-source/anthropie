@@ -16,3 +16,12 @@ scripts/audit_geo_v2_*.md
 
 # Audit reports (generated)
 reports/
+
+# Plateforme promotionnelle Kindle — projet séparé (repo git propre dans app/),
+# NE JAMAIS committer dans le repo site public : contient secrets locaux
+# (token Cloudflare, clés, config SMTP) sous app/data/.
+Plateforme_Promotionnelle/
+# Ceinture-bretelles : tout fichier de secrets, où qu'il soit.
+**/cloudflare.toml
+**/notify.toml
+**/*.key

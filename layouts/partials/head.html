@@ -38,19 +38,21 @@
 <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}">
 <meta property="og:description" content="{{ with .Description }}{{ partial "desc-figures.html" (dict "text" . "isbn" $.Params.isbn) }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
-<meta property="og:image" content="{{ "images/og-image.jpg" | absURL }}">
-<meta property="og:image:secure_url" content="{{ "images/og-image.jpg" | absURL }}">
+{{- $ogImg := .Params.og_image | default "images/og-image.jpg" -}}
+{{- $ogAlt := .Params.og_image_alt | default "Stéphane Lalut — Anthropie : on ne crée pas l'ordre, on déplace le désordre." -}}
+<meta property="og:image" content="{{ $ogImg | absURL }}">
+<meta property="og:image:secure_url" content="{{ $ogImg | absURL }}">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Stéphane Lalut — Anthropie : on ne crée pas l'ordre, on déplace le désordre.">
+<meta property="og:image:alt" content="{{ $ogAlt }}">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}">
 <meta name="twitter:description" content="{{ with .Description }}{{ partial "desc-figures.html" (dict "text" . "isbn" $.Params.isbn) }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-<meta name="twitter:image" content="{{ "images/og-image.jpg" | absURL }}">
-<meta name="twitter:image:alt" content="Stéphane Lalut — Anthropie : on ne crée pas l'ordre, on déplace le désordre.">
+<meta name="twitter:image" content="{{ $ogImg | absURL }}">
+<meta name="twitter:image:alt" content="{{ $ogAlt }}">
 
 <!-- Font preload -->
 <link rel="preload" href="/fonts/newsreader/Newsreader-Variable.woff2" as="font" type="font/woff2" crossorigin>

@@ -1,5 +1,6 @@
 ---
 title: "ANTHROPIE – Ordre ici. Dette ailleurs"
+promo_slug: "anthropie"  # clé D1/books.toml pour /ressources-offertes (guichet Kindle)
 date: 2025-09-09
 description: "L'ouvrage fondateur du cadre anthropique. En 622 pages, l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent est déployée à travers l'histoire longue, l'économie, les finances publiques et l'épistémologie. Ordre ici. Dette ailleurs."
 isbn: "978-2-9586347-2-8"

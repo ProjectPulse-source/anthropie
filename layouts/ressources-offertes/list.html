@@ -8,52 +8,74 @@
   {{/* ── 1. Principe ── */}}
   <header class="page-header">
     <p class="ressources-eyebrow">Ressources offertes</p>
-    <h1 class="page-header__title">Exemplaires Kindle prépayés, transmis sur invitation</h1>
+    <h1 class="page-header__title">Des livres déjà financés, transmis aux lecteurs invités</h1>
+    <p class="ressources-tagline">Recevez un livre sans paiement, sans abonnement, sans contrepartie.</p>
   </header>
 
-  <p class="ressources-chain-caption">Le circuit d'un exemplaire</p>
-  <div class="ressources-chain">
-    <span class="ressources-chain__node">Vente</span><span class="ressources-chain__arrow" aria-hidden="true">→</span>
-    <span class="ressources-chain__node">Bénéfice</span><span class="ressources-chain__arrow" aria-hidden="true">→</span>
-    <span class="ressources-chain__node">Réinvestissement</span><span class="ressources-chain__arrow" aria-hidden="true">→</span>
-    <span class="ressources-chain__node">Exemplaire Kindle prépayé</span><span class="ressources-chain__arrow" aria-hidden="true">→</span>
-    <span class="ressources-chain__node">Lecteur invité</span><span class="ressources-chain__arrow" aria-hidden="true">→</span>
-    <span class="ressources-chain__node ressources-chain__node--last">Nouveau relais possible</span>
-  </div>
+  <p class="ressources-intro ressources-intro--lead">Ce livre ne vous est pas offert
+  parce qu'il ne vaut rien. Il vous est offert parce qu'il a <strong>déjà été
+  payé</strong>.</p>
 
-  <p class="ressources-intro">Une partie des bénéfices de mes livres finance de nouveaux
-  exemplaires Kindle, offerts à des lecteurs invités. Chaque achat fait ainsi circuler
-  le savoir hors des seuls circuits publicitaires, par une chaîne de lecteurs, de relais
-  et de prescripteurs.</p>
-  <p class="ressources-intro">Cette page permet d'obtenir, sur invitation, un exemplaire
-  Kindle prépayé. Le livre n'est pas <em>«&nbsp;gratuit&nbsp;»</em> au sens
-  commercial&nbsp;: acheté en amont, il est remis en circulation — à vous, ensuite,
-  de le faire connaître.</p>
+  {{/* Chaîne visuelle : ligne principale lisible + ligne détaillée */}}
+  <div class="ressources-chain ressources-chain--main">
+    <span class="ressources-chain__node">Un livre acheté</span><span class="ressources-chain__arrow" aria-hidden="true">→</span>
+    <span class="ressources-chain__node">un lecteur invité</span><span class="ressources-chain__arrow" aria-hidden="true">→</span>
+    <span class="ressources-chain__node ressources-chain__node--last">le savoir circule</span>
+  </div>
+  <p class="ressources-chain-detail">Vente&nbsp;→ réinvestissement&nbsp;→ livre
+  financé&nbsp;→ transmission&nbsp;→ nouveau relais possible</p>
+
+  <p class="ressources-intro">Un livre acheté peut ouvrir l'accès à un autre lecteur. Une
+  partie des bénéfices de mes ouvrages sert à financer de nouveaux exemplaires Kindle,
+  transmis à des lecteurs invités. Parce que je publie moi-même mes livres, j'en maîtrise
+  la chaîne d'édition&nbsp;: je peux réorienter une part de leur valeur vers leur
+  diffusion, ce qu'un circuit classique ne permet pas.</p>
+  <p class="ressources-intro">Le principe est volontairement alternatif&nbsp;: faire
+  circuler les livres par les lecteurs, les relais et les prescripteurs, plutôt que
+  dépendre uniquement des circuits publicitaires. Vous recevez un livre déjà financé,
+  directement accessible via Amazon.fr, sans inscription commerciale et sans demande
+  d'avis.</p>
+  <p class="ressources-intro">Cette logique rejoint mon travail sur l'anthropie&nbsp;:
+  toute organisation déplace un coût. Ici, une part de la valeur créée par les ventes est
+  déplacée vers l'accès au savoir, plutôt que vers la seule captation publicitaire. Le
+  lecteur ne devient pas une cible&nbsp;: il devient un relais possible.</p>
 
   {{/* ── 2. Fonctionnement ── */}}
   <section class="ressources-how">
     <h2 class="ressources-kicker">Comment cela fonctionne</h2>
     <p>Vous avez reçu cette invitation parce qu'un lecteur, un relais ou l'auteur a
-    souhaité vous transmettre un livre. Un compte Amazon.fr est nécessaire. Chaque lien
-    est individuel, prépayé, utilisable une seule fois. Chaque lecteur reçoit
-    <strong>un seul exemplaire</strong>&nbsp;: choisissez, parmi les livres proposés,
-    celui qui vous appelle. Aucune contrepartie n'est demandée.</p>
-    <p>Concrètement&nbsp;: le bouton d'un livre ouvre la page contact&nbsp;; vous
-    recevez ensuite votre lien individuel par e-mail, à activer sur Amazon.fr, sans
-    aucun paiement. Stock limité.</p>
+    souhaité vous donner accès à un livre déjà financé.</p>
+    <p>Choisissez le livre qui vous intéresse, puis cliquez sur «&nbsp;Obtenir mon
+    exemplaire Kindle prépayé&nbsp;». Le système vous attribue un lien individuel et
+    ouvre Amazon.fr. Connectez-vous à votre compte Amazon.fr pour accepter le livre,
+    sans paiement.</p>
+    <p>Chaque lien est prépayé, individuel et utilisable une seule fois. Dans cette
+    première phase, chaque lecteur ne peut recevoir qu'un seul livre parmi les titres
+    proposés.</p>
+    <p>Aucune contrepartie n'est demandée&nbsp;: ni avis, ni inscription commerciale, ni
+    abonnement. Si le livre vous paraît utile, vous êtes simplement libre de le lire, de
+    le recommander ou de le faire connaître.</p>
   </section>
 
-  {{/* ── 3. Catalogue — source unique : content/livres/ ── */}}
+  {{/* ── 3. Catalogue — source unique : content/livres/.
+         Ordre d'affichage = liste de slugs Hugo (une erreur ici = livre absent,
+         panne VISIBLE). data-book = promo_slug lu dans le front matter du livre
+         (clé D1/books.toml) : une seule autorité, pas de valeur dupliquée ici. */}}
   <section class="ressources-catalogue">
     <h2>Les livres proposés</h2>
     <div class="ressources-rule"></div>
+    <p class="ressources-controlled-note">Cette page présente le dispositif.
+    L'attribution d'un exemplaire reste limitée, contrôlée et soumise à
+    disponibilité.</p>
     <div class="ressources-books">
       {{ $order := slice "lodyssee-des-idees" "anthropie-ordre-ici-dette-ailleurs" "dette-publique-qui-paie-vraiment" "livresque-des-mots" }}
-      {{ range $slug := $order }}
-        {{ with site.GetPage (printf "/livres/%s" $slug) }}
-        <article class="ressources-book">
+      {{ range $hugo := $order }}
+        {{ with site.GetPage (printf "/livres/%s" $hugo) }}
+        {{ $promo := .Params.promo_slug }}
+        {{ if not $promo }}{{ errorf "ressources-offertes : /livres/%s sans promo_slug en front matter" $hugo }}{{ end }}
+        <article class="ressources-book" data-book="{{ $promo }}">
           <a href="{{ .RelPermalink }}" class="ressources-book__emblem" aria-hidden="true" tabindex="-1">
-            {{ partial "book-cover.html" (dict "slug" $slug "alt" .Title "wrapClass" "ressources-book__cover" "sizes" "200px") }}
+            {{ partial "book-cover.html" (dict "slug" $hugo "alt" .Title "wrapClass" "ressources-book__cover" "sizes" "200px") }}
           </a>
           <div class="ressources-book__body">
             <h3>{{ .Title }}</h3>
@@ -61,16 +83,30 @@
             {{ with .Params.pages }}<p class="ressources-book__meta">Édition Kindle · {{ . }} pages (version brochée)</p>{{ end }}
             {{ with .Description }}<p class="ressources-book__resume">{{ partial "fr-typo.html" . }}</p>{{ end }}
             <a class="ressources-book__readmore" href="{{ .RelPermalink }}">Lire plus</a>
-            <div>
-              <a class="ressources-btn" href="{{ "/contact/" | relLangURL }}">Demander cet exemplaire Kindle prépayé</a>
-              <p class="ressources-btn-note">Réponse personnelle&nbsp;: votre lien individuel
-              arrive par e-mail, à activer sur Amazon.fr, sans paiement.</p>
+
+            <div class="ressources-book__obtain">
+              <p class="ressources-book__state" data-role="state">Vérification du stock…</p>
+              <button class="ressources-btn ressources-book__cta" type="button" disabled>Obtenir mon exemplaire Kindle prépayé</button>
+              <p class="ressources-btn-note" data-role="note">Un clic vous attribue ce livre
+              et ouvre Amazon.fr. Un seul exemplaire offert par lecteur.</p>
+            </div>
+
+            <div class="ressources-book__assigned" hidden>
+              <p class="ressources-book__state ressources-book__state--ok">Vous avez choisi un livre.</p>
+              <p class="ressources-assigned-msg">Votre exemplaire Kindle prépayé a été
+              attribué. Amazon.fr s'est ouvert dans un nouvel onglet.</p>
+              <a class="ressources-btn ressources-btn--outline ressources-assigned-link" href="#" target="_blank" rel="noopener">Rouvrir le lien Amazon.fr</a>
             </div>
           </div>
         </article>
         {{ end }}
       {{ end }}
     </div>
+    <noscript>
+      <p class="ressources-noscript">L'attribution automatique nécessite JavaScript.
+      Vous pouvez aussi <a href="{{ "/contact/" | relLangURL }}">me contacter</a> pour
+      recevoir votre exemplaire.</p>
+    </noscript>
   </section>
 
   {{/* ── 4. Transmission ── */}}
@@ -78,13 +114,15 @@
     <div class="ressources-transmit__inner">
       <h2 class="ressources-kicker">Transmettre cette invitation</h2>
       <p>Vous pensez qu'un lecteur pourrait être intéressé&nbsp;? Transmettez-lui cette
-      page avec un court message. Aucune adresse e-mail n'est saisie ni conservée sur ce
-      site.</p>
+      page par le moyen le plus simple pour vous. Le message est prêt&nbsp;: vous n'avez
+      qu'à le copier, l'envoyer par e-mail, WhatsApp ou SMS. Aucune adresse e-mail ni
+      aucun numéro de téléphone n'est saisi ni conservé sur ce site.</p>
       <div class="ressources-transmit__buttons">
         <button class="ressources-btn" id="ro-btn-copy" type="button">Copier le message</button>
-        <button class="ressources-btn ressources-btn--outline" id="ro-btn-mail" type="button">Envoyer par e-mail</button>
         <button class="ressources-btn ressources-btn--outline" id="ro-btn-whatsapp" type="button">WhatsApp</button>
+        <button class="ressources-btn ressources-btn--outline" id="ro-btn-mail" type="button">Envoyer par e-mail</button>
         <button class="ressources-btn ressources-btn--outline" id="ro-btn-sms" type="button">SMS</button>
+        <button class="ressources-btn ressources-btn--outline" id="ro-btn-telegram" type="button">Telegram</button>
       </div>
     </div>
   </section>
@@ -139,7 +177,8 @@
     "Vous pouvez consulter les livres disponibles ici :\n" + PAGE_URL + "\n\n" +
     "Un compte Amazon.fr est nécessaire. Les liens sont individuels, à usage unique, et attribués dans la limite du stock disponible.\n\n" +
     "Aucune contrepartie n'est demandée.";
-  var SHARE_TEXT = "Je vous transmets cette page : Stéphane Lalut propose certains livres en exemplaires Kindle prépayés, sur invitation, pour faire circuler le savoir. Aucune contrepartie demandée :\n" + PAGE_URL;
+  var SHARE_TEXT = "Je vous transmets cette page : des livres déjà financés y sont proposés à des lecteurs invités, pour faire circuler le savoir :\n" + PAGE_URL;
+  var TELEGRAM_TEXT = "Je vous transmets cette page : des livres déjà financés y sont proposés à des lecteurs invités, pour faire circuler le savoir.";
 
   var toastTimer;
   function toast(msg) {
@@ -195,6 +234,156 @@
       toast("Votre messagerie SMS s'ouvre avec l'invitation.");
     });
   }
+
+  // Telegram : partage via t.me (url + texte séparés — Telegram ajoute l'URL).
+  document.getElementById("ro-btn-telegram").addEventListener("click", function () {
+    window.open("https://t.me/share/url?url=" + encodeURIComponent(PAGE_URL)
+      + "&text=" + encodeURIComponent(TELEGRAM_TEXT), "_blank", "noopener");
+    toast("Telegram s'ouvre avec l'invitation prête à envoyer.");
+  });
+
+  /* ─────────── Guichet d'attribution directe (Worker Cloudflare) ───────────
+     Le HTML ne contient AUCUN lien Amazon avant attribution : le lien est
+     retourné par le Worker au clic, pour ce seul visiteur, une seule fois.
+     Contrôle proportionné (un seul livre par lecteur) : identifiant technique
+     localStorage + verrou serveur (index UNIQUE côté D1). Fail-closed :
+     guichet fermé, stock vide ou réseau KO => « momentanément indisponibles ».*/
+  var WORKER = "https://gift-guichet.stephane-lalut.workers.dev";
+  var UNAVAIL = "Exemplaires momentanément indisponibles.";
+  var GENERR = "Impossible d'attribuer un lien pour le moment. Réessayez plus tard.";
+  var claimed = false;
+
+  function visitorId() {
+    var v = localStorage.getItem("ro-visitor");
+    if (!v) {
+      v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID()
+        : (Date.now() + "-" + Math.random().toString(36).slice(2));
+      v = v.replace(/[^A-Za-z0-9_-]/g, "").slice(0, 40);
+      localStorage.setItem("ro-visitor", v);
+    }
+    return v;
+  }
+  function setState(article, msg) {
+    var el = article.querySelector('[data-role="state"]');
+    if (!el) return;
+    el.textContent = msg || "";
+    el.hidden = !msg;
+  }
+  function books() { return document.querySelectorAll(".ressources-book"); }
+
+  function setAssignedLink(book, url) {
+    books().forEach(function (article) {
+      if (article.getAttribute("data-book") !== book) return;
+      var link = article.querySelector(".ressources-assigned-link");
+      if (!link) return;
+      if (url) { link.href = url; link.hidden = false; }
+      else { link.hidden = true; }
+    });
+  }
+  function applyClaimed(claim) {
+    claimed = true;
+    books().forEach(function (article) {
+      var b = article.getAttribute("data-book");
+      var obtain = article.querySelector(".ressources-book__obtain");
+      var assigned = article.querySelector(".ressources-book__assigned");
+      if (b === claim.book) {
+        if (obtain) obtain.hidden = true;
+        if (assigned) {
+          var link = assigned.querySelector(".ressources-assigned-link");
+          // On n'affiche le lien QUE si on l'a en main (claim frais). Au retour,
+          // il est ré-obtenu par reclaim() — jamais persisté en clair côté client.
+          if (link) { if (claim.url) { link.href = claim.url; link.hidden = false; } else { link.hidden = true; } }
+          assigned.hidden = false;
+        }
+      } else {
+        var cta = article.querySelector(".ressources-book__cta");
+        if (cta) { cta.disabled = true; cta.textContent = "Vous avez déjà reçu un exemplaire offert."; }
+        var note = article.querySelector('[data-role="note"]');
+        if (note) note.hidden = true;
+        setState(article, "");
+      }
+    });
+  }
+  // Retour d'un visiteur : re-obtient son lien via le Worker (idempotent par
+  // invite_code — même lien, jamais un second) pour peupler « Rouvrir ».
+  function reclaim(book) {
+    applyClaimed({ book: book, url: null });
+    fetch(WORKER + "/claim", {
+      method: "POST", cache: "no-store",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ book: book, visitor: visitorId() }),
+    })
+      .then(function (r) { return r.json(); })
+      .then(function (j) { if (j && j.ok && j.url) setAssignedLink(book, j.url); })
+      .catch(function () {});
+  }
+
+  function fetchStock() {
+    fetch(WORKER + "/stock", { cache: "no-store" })
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        books().forEach(function (article) {
+          var b = article.getAttribute("data-book");
+          var avail = j && j.ok && j.stock && j.stock[b] === true;
+          var cta = article.querySelector(".ressources-book__cta");
+          if (avail) { if (cta) cta.disabled = false; setState(article, ""); }
+          else { if (cta) cta.disabled = true; setState(article, UNAVAIL); }
+        });
+      })
+      .catch(function () {
+        books().forEach(function (article) {
+          var cta = article.querySelector(".ressources-book__cta");
+          if (cta) cta.disabled = true;
+          setState(article, UNAVAIL);
+        });
+      });
+  }
+
+  function onObtain(article, cta) {
+    if (claimed) return;
+    var book = article.getAttribute("data-book");
+    cta.disabled = true;
+    // Ouvre l'onglet SYNCHRONEMENT (geste utilisateur) pour éviter le blocage
+    // de pop-up ; on lui donnera l'URL une fois le Worker répondu.
+    var win = window.open("about:blank", "_blank");
+    if (win) { try { win.opener = null; } catch (e) {} }
+    fetch(WORKER + "/claim", {
+      method: "POST", cache: "no-store",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ book: book, visitor: visitorId() }),
+    })
+      .then(function (r) { return r.json().then(function (j) { return { status: r.status, j: j }; }); })
+      .then(function (res) {
+        if (res.j && res.j.ok && res.j.url) {
+          if (win) { win.location = res.j.url; } else { window.open(res.j.url, "_blank", "noopener"); }
+          // On ne persiste QUE le livre choisi, jamais l'URL en clair.
+          try { localStorage.setItem("ro-claim", JSON.stringify({ book: book })); } catch (e) {}
+          applyClaimed({ book: book, url: res.j.url });
+          toast("Votre exemplaire Kindle prépayé a été attribué. Amazon.fr s'est ouvert dans un nouvel onglet.");
+        } else {
+          if (win) win.close();
+          var msg = res.status === 409 ? UNAVAIL : GENERR;
+          setState(article, msg);
+          toast(msg);
+        }
+      })
+      .catch(function () {
+        if (win) win.close();
+        cta.disabled = false;
+        toast(GENERR);
+      });
+  }
+
+  books().forEach(function (article) {
+    var cta = article.querySelector(".ressources-book__cta");
+    if (cta) cta.addEventListener("click", function () { onObtain(article, cta); });
+  });
+
+  // Retour d'un visiteur ayant déjà choisi : on rétablit son état sans appel réseau.
+  var stored = null;
+  try { stored = JSON.parse(localStorage.getItem("ro-claim") || "null"); } catch (e) {}
+  if (stored && stored.book) { reclaim(stored.book); }
+  else { fetchStock(); }
 })();
 </script>
 {{ end }}

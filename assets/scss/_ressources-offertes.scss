@@ -23,6 +23,15 @@
   margin: 0 0 12px;
 }
 
+// ----- Accroche (tagline sous le titre) -----
+.ressources-tagline {
+  font-family: var(--font-serif);
+  font-size: clamp(19px, 2.6vw, 25px);
+  font-style: italic;
+  color: var(--color-pivot);
+  margin-top: 10px;
+}
+
 // ----- Chaîne causale -----
 .ressources-chain-caption {
   font-family: var(--font-sans);
@@ -40,6 +49,24 @@
   gap: 7px;
   margin: 0 0 32px;
   font-family: var(--font-sans);
+}
+// Ligne principale de la chaîne : plus grande, immédiatement lisible.
+.ressources-chain--main {
+  margin: 26px 0 10px;
+  .ressources-chain__node {
+    font-size: var(--fs-small);
+    padding: 9px 15px;
+    letter-spacing: 0.04em;
+    text-transform: none;
+  }
+}
+// Ligne secondaire, explicative et discrète.
+.ressources-chain-detail {
+  font-family: var(--font-sans);
+  font-size: var(--fs-tiny);
+  color: var(--color-text-subtle);
+  letter-spacing: 0.03em;
+  margin: 0 0 34px;
 }
 .ressources-chain__node {
   font-size: var(--fs-tiny);
@@ -67,6 +94,14 @@
   line-height: var(--lh-body);
   em { color: var(--color-pivot); }
 }
+// Accroche d'ouverture : l'antithèse qui reformule la gratuité.
+.ressources-intro--lead {
+  font-size: clamp(19px, 2.2vw, 23px);
+  line-height: 1.48;
+  color: var(--color-text);
+  margin: 26px 0;
+  strong { color: var(--color-pivot); font-weight: 600; }
+}
 
 // ----- Fonctionnement -----
 .ressources-how {
@@ -86,7 +121,14 @@
   width: 64px;
   height: 2px;
   background: var(--color-accent-rule);
-  margin: 12px 0 38px;
+  margin: 12px 0 20px;
+}
+.ressources-controlled-note {
+  font-size: var(--fs-small);
+  color: var(--color-text-subtle);
+  font-style: italic;
+  max-width: 60ch;
+  margin-bottom: 30px;
 }
 .ressources-books {
   display: grid;
@@ -153,6 +195,42 @@
   text-underline-offset: 3px;
   display: inline-block;
   margin-bottom: 16px;
+}
+
+// ----- États d'attribution (parcours direct) -----
+.ressources-book__cta[disabled] {
+  background: var(--color-rule-soft);
+  color: var(--color-text-subtle);
+  cursor: not-allowed;
+}
+.ressources-book__state {
+  font-family: var(--font-sans);
+  font-size: var(--fs-tiny);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-subtle);
+  margin-bottom: 8px;
+  &[hidden] { display: none; }
+}
+.ressources-book__state--ok {
+  color: var(--color-pivot);
+  font-weight: 600;
+}
+.ressources-book__assigned {
+  border: 1px solid var(--color-accent-soft);
+  background: var(--color-bg-elevated);
+  padding: 14px 16px;
+  max-width: 46ch;
+}
+.ressources-assigned-msg {
+  font-size: var(--fs-small);
+  color: var(--color-text-body);
+  margin-bottom: 12px;
+}
+.ressources-noscript {
+  font-size: var(--fs-small);
+  color: var(--color-text-muted);
+  margin-top: 8px;
 }
 
 // ----- Boutons -----

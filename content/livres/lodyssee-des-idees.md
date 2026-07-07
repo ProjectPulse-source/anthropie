@@ -1,5 +1,6 @@
 ---
 title: "L'Odyssée des idées"
+promo_slug: "odyssee-des-idees"  # clé D1/books.toml pour /ressources-offertes (guichet Kindle)
 subtitle: "Culture, philosophie et science — de l'aube de l'humanité à l'intelligence artificielle"
 description: "De l'aube de l'humanité à l'intelligence artificielle, 250 escales — œuvres, vies, inventions, crises, instants de bascule — et sept parcours relient les penseurs par-delà les siècles. Non pas un défilé chronologique, mais un réseau. Un instrument de curiosité, pas un réservoir de certitudes."
 date: 2026-07-03
