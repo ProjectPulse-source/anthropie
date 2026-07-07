@@ -11,7 +11,7 @@ og_description: "Recevez un livre sans paiement. Des ouvrages transmis sur invit
 twitter_title: "Ressources offertes — des livres déjà financés"
 twitter_description: "Recevez un livre sans paiement. Une chaîne de transmission du savoir."
 og_image: "images/og-ressources-offertes.jpg"
-og_image_alt: "Ressources offertes — des livres déjà financés, transmis aux lecteurs invités. L'Odyssée des idées, Anthropie et Livresque des mots."
+og_image_alt: "Ressources offertes — des livres numériques déjà financés, transmis aux lecteurs invités. L'Odyssée des idées, Anthropie et Livresque des mots."
 _build:
   list: never        # exclue du sitemap et des listes internes
   render: always     # l'URL reste servie pour qui possède le lien
