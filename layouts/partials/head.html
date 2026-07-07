@@ -35,8 +35,12 @@
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:site_name" content="Stéphane Lalut — Anthropie">
 <meta property="og:locale" content="{{ if eq .Lang "en" }}en_US{{ else }}fr_FR{{ end }}">
-<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}">
-<meta property="og:description" content="{{ with .Description }}{{ partial "desc-figures.html" (dict "text" . "isbn" $.Params.isbn) }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+{{- $defTitle := cond .IsHome .Site.Title (printf "%s — %s" .Title .Site.Title) -}}
+{{- $defDesc := "" -}}{{- with .Description -}}{{- $defDesc = partial "desc-figures.html" (dict "text" . "isbn" $.Params.isbn) -}}{{- else -}}{{- $defDesc = $.Site.Params.description -}}{{- end -}}
+{{- $ogTitle := .Params.og_title | default $defTitle -}}
+{{- $ogDesc := .Params.og_description | default $defDesc -}}
+<meta property="og:title" content="{{ $ogTitle }}">
+<meta property="og:description" content="{{ $ogDesc }}">
 <meta property="og:url" content="{{ .Permalink }}">
 {{- $ogImg := .Params.og_image | default "images/og-image.jpg" -}}
 {{- $ogAlt := .Params.og_image_alt | default "Stéphane Lalut — Anthropie : on ne crée pas l'ordre, on déplace le désordre." -}}
@@ -49,8 +53,8 @@
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}">
-<meta name="twitter:description" content="{{ with .Description }}{{ partial "desc-figures.html" (dict "text" . "isbn" $.Params.isbn) }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta name="twitter:title" content="{{ .Params.twitter_title | default $ogTitle }}">
+<meta name="twitter:description" content="{{ .Params.twitter_description | default $ogDesc }}">
 <meta name="twitter:image" content="{{ $ogImg | absURL }}">
 <meta name="twitter:image:alt" content="{{ $ogAlt }}">
 
