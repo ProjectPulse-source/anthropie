@@ -61,6 +61,7 @@
       {{ range $hugo := $order }}
         {{ with site.GetPage (printf "/livres/%s" $hugo) }}
         {{ $promo := .Params.promo_slug }}
+        {{ $isbn := .Params.isbn }}
         {{ if not $promo }}{{ errorf "ressources-offertes : /livres/%s sans promo_slug en front matter" $hugo }}{{ end }}
         <article class="ressources-book" data-book="{{ $promo }}">
           <a href="{{ .RelPermalink }}" class="ressources-book__emblem" aria-hidden="true" tabindex="-1">
@@ -70,7 +71,7 @@
             <h3>{{ .Title }}</h3>
             {{ with .Params.subtitle }}<p class="ressources-book__subtitle">{{ partial "fr-typo.html" . }}</p>{{ end }}
             {{ with .Params.pages }}<p class="ressources-book__meta">Édition Kindle · {{ . }} pages (version brochée)</p>{{ end }}
-            {{ with .Description }}<p class="ressources-book__resume">{{ partial "fr-typo.html" . }}</p>{{ end }}
+            {{ with .Description }}<p class="ressources-book__resume">{{ partial "fr-typo.html" (partial "desc-figures.html" (dict "text" . "isbn" $isbn)) }}</p>{{ end }}
             <a class="ressources-book__readmore" href="{{ .RelPermalink }}">Lire plus</a>
 
             <div class="ressources-book__obtain">
