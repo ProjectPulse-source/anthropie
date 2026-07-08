@@ -73,6 +73,7 @@ related_book: [slug-livre]
 | Mediapart                 | `Journal`     | Journal en ligne, auto-désigné              |
 | Nonfiction                | `Portail`     | Slogan officiel : « Le portail des livres » |
 | Revue de la régulation    | `Revue`       | Le terme est dans le titre                  |
+| Revue Projet              | `Revue`       | Le terme est dans le titre (revue du CERAS) |
 | Terrestres                | `Revue`       | Slogan : « La revue des écologies radicales » |
 
 ### Catégories actuelles
