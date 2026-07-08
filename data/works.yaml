@@ -21,12 +21,20 @@
 # =============================================================================
 
 meta:
-  registry_version: "1.7"
-  last_updated: "2026-07-04"
+  registry_version: "1.8"
+  last_updated: "2026-07-08"
   maintainer: "Stéphane Lalut"
   total_works: 36
   source_registry: "registre_soumissions_v73.xlsx"
   changelog:
+    v1_8: |
+      Publication essai « La commune, variable d'ajustement de la République ? »
+      (2026-07-08) — Revue Projet (revue). Entrée art-projet-municipales-2026-06
+      basculée accepted_pending → published ; url + chapo fr/en + source_type Revue
+      + maillage awp-01/awp-03/awp-07 (déplacement du désordre, dette publique,
+      boucle anthropique). Fiche site content/publications/revue-projet-commune-
+      republique.md créée le même jour. total_works inchangé (l'entrée existait déjà).
+      « Revue Projet » ajoutée à la table §2 de NOTES_PUBLICATIONS (commit docs séparé).
     v1_7: |
       Publication recension Ridde (2026-07-03) — Lectures (OpenEdition),
       « Valéry Ridde, La financiarisation de la santé au Sénégal (1840-1960) »
@@ -643,13 +651,18 @@ works:
 
   - id: art-projet-municipales-2026-06
     type: article
-    status: accepted_pending
-    canonical_title: { fr: "La commune, variable d'ajustement de la République" }
-    publication_date: "2026-06"
+    status: published
+    canonical_title: { fr: "La commune, variable d'ajustement de la République ?" }
+    publication_date: "2026-07-08"
     publisher: "Revue Projet"
     publisher_type: "revue"
-    url: ""
-    notes: "Acceptation Benoît Hervieu-Léger. Copie éditée révisée 11/04/2026. Parution Variations juin-juillet."
+    source_type: "Revue"
+    url: "https://www.revue-projet.com/articles/2026-07-lalut-variable-d-ajustement-de-la-republique/11589"
+    chapo:
+      fr: "L'État transfère aux communes des compétences sans les financements : réforme après réforme, la charge descend jusqu'aux ménages captifs, privés d'alternative. Derrière le solde de la dette publique se cache une géographie du pouvoir — qui fixe l'ordre ici, qui en absorbe la dette ailleurs ?"
+      en: "The state hands local councils new duties without the funding: reform after reform, the burden slides down to the captive households left without an alternative. Behind the public-debt balance lies a geography of power — who sets order here, and who absorbs the debt elsewhere?"
+    related_works: [awp-01, awp-03, awp-07]
+    notes: "Essai original appliquant le cadre anthropique aux finances locales (transfert État→communes→ménages captifs). Acceptation Benoît Hervieu-Léger, copie révisée 11/04/2026. Parue le 2026-07-08 (Revue Projet en ligne, dossier Variations juin-juillet). Titre H1 paru sans virgule (« Commune Variable d'ajustement de la République ? ») ; canonical conserve la forme propre de l'auteur. Fiche site content/publications/revue-projet-commune-republique.md."
 
   - id: art-rfse-lemoine-2026
     type: article
