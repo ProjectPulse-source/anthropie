@@ -60,17 +60,44 @@ jobs:
           python3 <<'PY'
           import re
           import json
+          import urllib.request
+
+          def fetch(url):
+              req = urllib.request.Request(url, headers={"User-Agent": "indexnow-workflow"})
+              with urllib.request.urlopen(req, timeout=30) as resp:
+                  return resp.read().decode("utf-8")
+
+          def extract_locs(xml):
+              return re.findall(r"<loc>([^<]+)</loc>", xml)
 
           with open("sitemap.xml", encoding="utf-8") as f:
               content = f.read()
 
-          # Extraction des balises <loc>...</loc>
-          urls = re.findall(r"<loc>([^<]+)</loc>", content)
-          # Dédoublonnage et filtrage URLs internes uniquement
-          urls = sorted(set(u for u in urls if "stephane-lalut.com" in u))
+          locs = extract_locs(content)
 
-          if not urls:
-              print("::error::Aucune URL extraite du sitemap")
+          # Site multilingue : la racine est un <sitemapindex> dont les <loc>
+          # pointent les sitemaps par langue. IndexNow n'expanse PAS les
+          # sitemaps soumis : il faut récurser pour soumettre les pages.
+          if "<sitemapindex" in content:
+              print(f"Sitemapindex détecté: {len(locs)} sous-sitemaps")
+              urls = []
+              for sub in locs:
+                  sub_locs = extract_locs(fetch(sub))
+                  print(f"  {sub}: {len(sub_locs)} URLs")
+                  urls.extend(sub_locs)
+          else:
+              urls = locs
+
+          # Dédoublonnage, filtrage URLs internes, exclusion des fichiers XML
+          urls = sorted(set(
+              u for u in urls
+              if "stephane-lalut.com" in u and not u.endswith(".xml")
+          ))
+
+          # Garde-fou anti-échec silencieux : le site compte plusieurs dizaines
+          # de pages ; un batch anormalement petit signale une régression.
+          if len(urls) < 10:
+              print(f"::error::Seulement {len(urls)} URL(s) de page extraites — régression probable de l'extraction sitemap")
               raise SystemExit(1)
 
           print(f"URLs extraites du sitemap: {len(urls)}")
