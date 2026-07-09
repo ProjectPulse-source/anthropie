@@ -2,11 +2,16 @@
 title: "Offrir un livre de culture générale : le choix d'un lecteur exigeant"
 description: "Quel livre de culture générale offrir à un lecteur curieux — philosophie, sciences, histoire ? Deux propositions argumentées : une fresque de l'histoire des idées en 250 escales, et une anthologie de citations sans classement."
 date: 2026-07-04
+# Chiffres canoniques Livresque : jamais en dur — placeholders {citations}/
+# {auteurs}/{siecles} (FAQ, résolus par schema-faqpage/desc-figures) et
+# shortcode stat (corps). Source unique works.yaml corpus_stats, via
+# stats_isbn car la page n'a pas d'ISBN propre.
+stats_isbn: "978-2-9586347-0-4"
 faq:
   - question: "Quel livre offrir à quelqu'un qui aime la philosophie et les sciences ?"
     answer: "Une fresque plutôt qu'un manuel : L'Odyssée des idées traverse l'histoire des idées en 250 escales — œuvres, vies, inventions, bascules — et sept chemins de lecture qui relient philosophie, sciences, politique, religion et économie. C'est un livre qui se lit, s'ouvre au hasard ou se parcourt par chemins : trois usages en un seul cadeau."
   - question: "Et pour quelqu'un qui aime les mots et les formules ?"
-    answer: "Livresque des mots : 4 658 citations, 1 388 voix, 25 siècles — sans classement thématique ni alphabétique. Le recueil se lit comme un roman, au fil des voisinages ; c'est un objet littéraire qui s'offre bien précisément parce qu'il ne ressemble pas à un dictionnaire."
+    answer: "Livresque des mots : {citations} citations, {auteurs} voix, {siecles} siècles — sans classement thématique ni alphabétique. Le recueil se lit comme un roman, au fil des voisinages ; c'est un objet littéraire qui s'offre bien précisément parce qu'il ne ressemble pas à un dictionnaire."
   - question: "Peut-on offrir ces livres en version numérique ?"
     answer: "Oui : les deux existent en Kindle, et Amazon permet d'offrir un ebook par lien prépayé (fonction « Acheter pour d'autres »). Le mode d'emploi complet est sur la page Offrir un livre Kindle."
 ---
@@ -23,7 +28,7 @@ Pour qui&nbsp;: le lecteur curieux de philosophie, de sciences ou d'histoire&nbs
 
 ## Pour l'amoureux des mots&nbsp;: une anthologie qui se lit comme un roman
 
-[*Livresque des mots*](/livres/livresque-des-mots/) est un recueil de citations qui refuse le classement — ni thèmes, ni ordre alphabétique, ni chronologie. 4&nbsp;658 citations, 1&nbsp;388 voix, 25 siècles, tissés pour que le sens naisse du voisinage&nbsp;: une réplique de cinéma à côté d'un moraliste, une chanson à côté d'un philosophe.
+[*Livresque des mots*](/livres/livresque-des-mots/) est un recueil de citations qui refuse le classement — ni thèmes, ni ordre alphabétique, ni chronologie. {{< stat "citations" "nbsp" >}} citations, {{< stat "auteurs" "nbsp" >}} voix, {{< stat "siecles" >}} siècles, tissés pour que le sens naisse du voisinage&nbsp;: une réplique de cinéma à côté d'un moraliste, une chanson à côté d'un philosophe.
 
 Ce qui en fait un cadeau&nbsp;: c'est un **objet littéraire**, pas un outil de recherche. On ne le consulte pas, on s'y promène — et c'est exactement ce qu'on souhaite à la personne à qui on l'offre. Pour l'amoureux de la langue, l'écrivain en quête de compagnie, le lecteur qui aime être surpris — [voir la fiche complète](/livres/livresque-des-mots/).
 

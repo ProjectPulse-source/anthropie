@@ -3,7 +3,12 @@
        sont groupés (milliers, séparateur arg 2, défaut espace) ; autres bruts. */ -}}
 {{- $key := .Get 0 -}}
 {{- $sep := .Get 1 | default " " -}}
-{{- with .Page.Params.isbn -}}
+{{- /* "nbsp" = espace insécable U+00A0 (l'entité &nbsp; passée en argument
+       serait échappée en &amp;nbsp; par Goldmark). */ -}}
+{{- if eq $sep "nbsp" -}}{{- $sep = " " -}}{{- end -}}
+{{- /* stats_isbn : fallback pour les pages sans ISBN propre qui citent les
+       chiffres d'un livre précis (ex. pages offrir). Même source unique. */ -}}
+{{- with or .Page.Params.isbn .Page.Params.stats_isbn -}}
   {{- range where site.Data.works.works "isbn" . -}}
     {{- with .corpus_stats -}}
       {{- $v := index . $key -}}
