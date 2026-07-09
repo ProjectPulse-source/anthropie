@@ -1,0 +1,230 @@
+# =============================================================================
+# MATRICE D'INTENTIONS GEO — plan de bataille éditorial versionné (GEO-04)
+# =============================================================================
+# DOCTRINE — à lire avant toute modification :
+#
+# 1. AUCUNE page ne se crée depuis ce fichier. Les requêtes « differee » ne
+#    sont PAS un backlog de pages : elles attendent un SIGNAL EXTERNE
+#    (doctrine PROJECT_STATUS §7 — pages-ponts en réaction, pas en
+#    anticipation). Les cercles 3-4 (culture large, cadeau) se captent par
+#    ENRICHISSEMENT des pages existantes, jamais par pages nouvelles.
+# 2. Statut par requête : couverte | enrichissement | differee | ecartee.
+# 3. Owner : l'auteur. Déclencheurs de mise à jour : ajout d'une œuvre
+#    (docs/CHECKLIST_AJOUT_LIVRE.md / _PUBLICATION.md / _CONCEPT.md) et
+#    routine GEO trimestrielle (lecture requête par requête de l'état).
+# 4. Aucun chiffre canonique en dur ici ni dans les faq[] des pages : la
+#    source unique est data/works.yaml (corpus_stats).
+# 5. Fichier INERTE côté build : aucun template Hugo ne le consomme à ce
+#    stade. Toute consommation future (blocs « à lire aussi », FAQ générées)
+#    est une décision séparée, à valider.
+#
+# risk : faible | moyen | doorway_a_eviter
+# conversion : faible | moyen | fort
+# autorite : primaire (page du site) | secondaire (page d'appui) | externe
+# =============================================================================
+
+version: "1.0 (2026-07-09, audit GEO-04)"
+
+entities:
+
+  # ---------------------------------------------------------------------------
+  concept-anthropie:
+    type: concept
+    pages:
+      fr: /quest-ce-que-lanthropie/
+      en: /en/quest-ce-que-lanthropie/   # alias /en/what-is-anthropy/ (Wikidata P973)
+    jsonld: "FAQPage ; DefinedTerm #concept à ancrer (lot 1, item 1)"
+    cercle_1_ultra_niche:
+      - q: "qu'est-ce que l'anthropie ?"
+        statut: couverte
+        risk: faible
+        conversion: faible
+        notes: "définition canonique en ouverture + 10 FAQ + distinctions (GEO-01)"
+      - q: "définition de l'anthropie selon Stéphane Lalut"
+        statut: couverte
+        risk: faible
+        conversion: faible
+      - q: "ordre ici dette ailleurs"
+        statut: couverte
+        risk: faible
+        conversion: fort
+        destination: /livres/anthropie-ordre-ici-dette-ailleurs/  # H2 dédié « Que signifie… »
+        notes: "désambiguïsation vs Benjamin Lemoine (L'ordre de la dette) faite"
+      - q: "déplacement du désordre"
+        statut: couverte
+        risk: faible
+        conversion: moyen
+      - q: "dette anthropique"
+        statut: enrichissement
+        risk: faible
+        conversion: moyen
+        notes: "terme présent dans le corpus AWP ; pas d'ancre H2/FAQ dédiée — bloc possible page concept, pas de page"
+    cercle_2_conceptuel_proche:
+      - q: "coûts cachés de l'intelligence artificielle"
+        statut: couverte
+        destination: /dette-technologique/
+        risk: faible
+        conversion: moyen
+        notes: "page pont 04/07 + AWP-06/07 (registres énergie/matière/attention)"
+      - q: "dette technique et dette écologique"
+        statut: couverte
+        destination: /dette-technologique/
+        risk: faible
+        conversion: moyen
+      - q: "coût environnemental des data centers"
+        statut: enrichissement
+        destination: /dette-technologique/
+        risk: faible
+        conversion: faible
+        notes: "traité par angle infrastructure ; pas de page dédiée (differee sans signal)"
+      - q: "externalités du numérique / cost-shifting (K. W. Kapp)"
+        statut: couverte
+        destination: /quest-ce-que-lanthropie/   # FAQ Kapp FR+EN
+        risk: faible
+        conversion: faible
+        notes: "pont EN principal = cost-shifting, pas externalities (doctrine 04/07)"
+      - q: "entropie et économie / Georgescu-Roegen"
+        statut: enrichissement
+        destination: /quest-ce-que-lanthropie/   # section anthropie/entropie existante
+        risk: faible
+        conversion: faible
+        notes: "adossement = stratégie de fond (boucle GEO) ; citations tierces > on-site"
+      - q: "concept pour penser la modernité / sciences sociales et dette"
+        statut: enrichissement
+        risk: moyen
+        conversion: faible
+        notes: "formulations génériques — ne jamais créer de page « concept fécond » (listicle interdit)"
+    cercle_5_oeuvres:
+      - q: "anthropie livre / ANTHROPIE Lalut"
+        statut: couverte
+        destination: /livres/anthropie-ordre-ici-dette-ailleurs/
+        risk: faible
+        conversion: fort
+        notes: "confusion concept/livre désambiguïsée : Wikidata Q138827949 (concept) ≠ Q138827344 (livre)"
+
+  # ---------------------------------------------------------------------------
+  book-anthropie:
+    type: book
+    pages: { fr: /livres/anthropie-ordre-ici-dette-ailleurs/, en: "" }  # EN sur édition réelle uniquement
+    jsonld: "Book + Offer + about DefinedTerm ; FAQ à rendre (lot 1)"
+    faq_sobres_proposees:
+      - "Que signifie « Ordre ici. Dette ailleurs. » ? (ancrée sur le H2 existant)"
+      - "Faut-il lire ANTHROPIE avant les working papers ?"
+      - "À qui s'adresse ce livre ?"
+    interdits:
+      - "aucune FAQ définitionnelle dette publique (propriété exclusive de /qui-paie-la-dette-publique/)"
+
+  # ---------------------------------------------------------------------------
+  book-livresque:
+    type: book
+    pages: { fr: /livres/livresque-des-mots/, en: "" }
+    cercle_1_ultra_niche:
+      - q: "anthologie de citations sans classement"
+        statut: couverte
+        risk: faible
+        conversion: fort
+        notes: "H2 dédié « Sans classement, à lire comme un roman » ; territoire différenciant acté (04/07)"
+    cercle_3_culture_large:
+      - q: "meilleure anthologie de citations"
+        statut: ecartee   # en direct
+        risk: doorway_a_eviter
+        conversion: fort
+        notes: "un site d'auteur n'est pas citable comme source neutre d'un « best of » ; capté indirectement (offrir + preuves externes). Vérité actée : l'utilitaire citations est saturé par le gratuit."
+      - q: "anthologie de citations littéraires / philosophiques / aphorismes / poésie"
+        statut: enrichissement
+        destination: /livres/livresque-des-mots/
+        risk: faible
+        conversion: fort
+        notes: "élargir la description des registres (déjà : aphorismes, romans, poésies, répliques) — pas de pages par registre"
+    cercle_4_cadeau:
+      - q: "livre de citations à offrir / livre pour qui aime les aphorismes"
+        statut: couverte
+        destination: /offrir-un-livre-de-culture-generale/
+        risk: faible
+        conversion: fort
+
+  # ---------------------------------------------------------------------------
+  book-odyssee:
+    type: book
+    pages: { fr: /livres/lodyssee-des-idees/, en: "" }
+    cercle_3_culture_large:
+      - q: "livre d'histoire des idées / livre de culture générale accessible"
+        statut: enrichissement
+        destination: /livres/lodyssee-des-idees/
+        risk: faible
+        conversion: fort
+        notes: "renforcer l'ancrage culture générale / histoire des idées dans la fiche (lot 1)"
+      - q: "meilleur livre de culture générale"
+        statut: ecartee   # en direct — même doctrine que « meilleure anthologie »
+        risk: doorway_a_eviter
+        conversion: fort
+      - q: "livre pour comprendre le monde contemporain"
+        statut: enrichissement
+        risk: moyen
+        conversion: moyen
+        notes: "formulation large — capter par la fiche + offrir, jamais par listicle"
+    cercle_4_cadeau:
+      - q: "livre de culture générale à offrir / livre pour lecteur curieux"
+        statut: couverte
+        destination: /offrir-un-livre-de-culture-generale/
+        risk: faible
+        conversion: fort
+
+  # ---------------------------------------------------------------------------
+  book-dette:
+    type: book
+    pages: { fr: /livres/dette-publique-qui-paie-vraiment/, en: "" }
+    cercle_1_ultra_niche:
+      - q: "qui paie la dette publique ?"
+        statut: couverte
+        destination: /qui-paie-la-dette-publique/   # PROPRIÉTÉ EXCLUSIVE de la page pont
+        risk: faible
+        conversion: fort
+        notes: "3 surfaces existent déjà (pont H1+FAQ, FAQ concept, titre livre) — ne JAMAIS ajouter une FAQ définitionnelle sur la fiche livre (cannibalisation, red team GEO-04)"
+      - q: "livre sur la dette publique / penser la dette publique autrement"
+        statut: enrichissement
+        destination: /livres/dette-publique-qui-paie-vraiment/
+        risk: faible
+        conversion: fort
+    cercle_2_conceptuel_proche:
+      - q: "dette publique et générations futures / économie politique de la dette"
+        statut: couverte
+        destination: /qui-paie-la-dette-publique/
+        risk: faible
+        conversion: moyen
+
+  # ---------------------------------------------------------------------------
+  serie-awp:
+    type: series
+    pages: { fr: /serie-awp/, en: /en/serie-awp/ }
+    notes: >
+      Autorité primaire académique (ScholarlyArticle, DOI, exports BibTeX/RIS,
+      citation_*). Les requêtes académiques (anthropie working papers, DOI,
+      auteurs adossés Kapp/Stiegler/Georgescu-Roegen) sont couvertes ; la
+      bascule de visibilité viendra des citations tierces (stratégie
+      d'adossement, hors périmètre on-site).
+
+  # ---------------------------------------------------------------------------
+  hubs-offrir:
+    type: hub
+    pages:
+      - /offrir-un-livre-kindle/            # « comment offrir un ebook Kindle » — couverte
+      - /offrir-un-livre-de-culture-generale/  # « livre intelligent à offrir » — couverte
+    risk: faible
+    conversion: fort
+    notes: >
+      Seules surfaces d'intention cadeau autorisées (silo réduit à 2 pages,
+      acté 04/07). ⚠ chiffres canoniques en dur détectés dans
+      offrir-un-livre-de-culture-generale (à résorber via shortcode stat —
+      hygiène lot 1). /ressources-offertes/ reste noindex (guichet privé).
+
+  # ---------------------------------------------------------------------------
+  en-adaptations:
+    type: strategie
+    doctrine: "adapter, pas traduire (04/07) ; fiches livres EN uniquement quand une édition EN existera comme produit (ASIN propre, inLanguage en)"
+    couvert:
+      - "what is anthropy (page concept EN, 13 FAQ, alias what-is-anthropy réparé)"
+      - "cost-shifting K. W. Kapp (FAQ EN)"
+    enrichissement:
+      - "« Order here. Debt elsewhere. » (surface EN du livre sur /en/livres/)"
+      - "commonplace book (1 phrase, présentation Livresque sur /en/livres/)"

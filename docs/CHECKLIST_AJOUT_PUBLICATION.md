@@ -32,6 +32,9 @@ Modèle : `revue-projet-commune-republique.md` (2026-07-07).
 
 - [ ] `data/works.yaml` : entrée/mise à jour de l'œuvre (cf. commit
       `470f6fa` qui touche la fiche ET works.yaml).
+- [ ] `data/intent_matrix.yaml` : si la publication ouvre ou renforce une
+      intention de requête, mettre à jour la matrice (doctrine en tête du
+      fichier).
 - [ ] `static/llms.txt` : section publications, à la main.
 - [ ] Typographie française : espaces insécables avant `: ; ? !`
       (cf. `partials/fr-typo.html` et fiches existantes).
