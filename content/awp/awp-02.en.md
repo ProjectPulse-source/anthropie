@@ -2,6 +2,7 @@
 title: "3.3 million years in one principle"
 awp_number: "AWP-02"
 date: 2026-04-06
+lastmod: 2026-07-05  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 draft: false
 outputs:
   - HTML

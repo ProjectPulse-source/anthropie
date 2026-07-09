@@ -4,6 +4,7 @@ promo_slug: "odyssee-des-idees"  # clé D1/books.toml pour /ressources-offertes 
 subtitle: "Culture, philosophie et science — de l'aube de l'humanité à l'intelligence artificielle"
 description: "De l'aube de l'humanité à l'intelligence artificielle, 250 escales — œuvres, vies, inventions, crises, instants de bascule — et sept parcours relient les penseurs par-delà les siècles. Non pas un défilé chronologique, mais un réseau. Un instrument de curiosité, pas un réservoir de certitudes."
 date: 2026-07-03
+lastmod: 2026-07-09  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 isbn: "978-2-9586347-4-2"
 pages: 696  # sync data/works.yaml (book-lodyssee-des-idees.pages) — nombre de pages broché
 description_en: "From the dawn of humanity to artificial intelligence, 250 ports of call — works, lives, inventions, crises, tipping points — and seven itineraries connect thinkers across the centuries. Not a chronological parade but a network. An instrument of curiosity, not a reservoir of certainties."

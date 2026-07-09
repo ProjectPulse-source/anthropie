@@ -2,6 +2,7 @@
 title: "Dette Publique : Qui paie vraiment ?"
 promo_slug: "dette-publique"  # clé D1/books.toml pour /ressources-offertes (guichet Kindle)
 date: 2025-10-17
+lastmod: 2026-07-09  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 description: "La dette publique n'est pas un solde à contenir mais un mécanisme de transfert. Ce livre pose la question non plus combien, mais qui paie — et par quels canaux le coût se déplace vers les générations futures et les groupes sociaux les moins mobiles."
 isbn: "978-2-9586347-3-5"
 pages: 224  # sync data/works.yaml (book-dette-publique.pages) — nombre de pages broché

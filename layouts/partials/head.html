@@ -178,6 +178,9 @@
     "isAccessibleForFree" true
     "license" "https://creativecommons.org/licenses/by/4.0/"
     "mainEntityOfPage" .Permalink -}}
+{{- /* dateModified : uniquement si un lastmod réel diffère de la date de
+       publication (fraîcheur légère GEO-04 — jamais de fausse fraîcheur). */ -}}
+{{- if ne .Lastmod .Date -}}{{- $article = merge $article (dict "dateModified" (.Lastmod.Format "2006-01-02")) -}}{{- end -}}
 {{- with (or .Params.abstract .Params.description) -}}{{- $article = merge $article (dict "abstract" .) -}}{{- end -}}
 {{- $isEn := eq (.Params.language | default .Language.Lang) "en" -}}
 {{- $seriesURL := cond $isEn "https://stephane-lalut.com/en/serie-awp/" "https://stephane-lalut.com/serie-awp/" -}}

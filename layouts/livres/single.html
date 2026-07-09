@@ -77,6 +77,9 @@
   "publisher" (dict "@type" "Organization" "name" "Stéphane Lalut")
   "url" .Permalink
   "datePublished" (.Date.Format "2006-01-02") -}}
+{{- /* dateModified : uniquement si un lastmod réel diffère de la date de
+       publication (fraîcheur légère GEO-04 — jamais de fausse fraîcheur). */ -}}
+{{- if ne .Lastmod .Date -}}{{- $book = merge $book (dict "dateModified" (.Lastmod.Format "2006-01-02")) -}}{{- end -}}
 {{- with .Params.isbn -}}{{- $book = merge $book (dict "isbn" .) -}}{{- end -}}
 {{- with (partial "book-cover-resource.html" .File.ContentBaseName) -}}{{- $book = merge $book (dict "image" .Permalink) -}}{{- end -}}
 {{- with .Params.wikidata_qid -}}{{- $book = merge $book (dict "sameAs" (printf "https://www.wikidata.org/wiki/%s" .)) -}}{{- end -}}

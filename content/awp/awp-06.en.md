@@ -3,6 +3,7 @@ title: "Digital Infrastructures and Technological Debt"
 subtitle: "Data Centers, AI, and the Displacement of Disorder"
 awp_number: "AWP-06"
 date: 2026-05-07
+lastmod: 2026-07-05  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 draft: false
 outputs:
   - HTML

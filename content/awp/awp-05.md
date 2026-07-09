@@ -2,6 +2,7 @@
 title: "Penser hors les murs : notes sur la recherche indépendante"
 awp_number: "AWP-05"
 date: 2026-03-20
+lastmod: 2026-06-15  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 draft: false
 outputs:
   - HTML
