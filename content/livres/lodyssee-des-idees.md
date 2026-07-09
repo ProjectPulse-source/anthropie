@@ -38,6 +38,11 @@ faq:
     answer: "Trois usages : page après page, comme une traversée chronologique ; au hasard, pour une escale de quelques minutes ; ou par chemins, en suivant les renvois qui font surgir échos, ruptures et filiations. C'est un récit continu, pas un manuel à fiches."
   - question: "À qui s'adresse L'Odyssée des idées ?"
     answer: "Au lecteur curieux — de philosophie, de sciences, d'histoire — qui préfère un récit aux manuels à fiches ; à l'étudiant qui veut relier ce que les disciplines séparent ; et à qui cherche un livre à offrir : une fresque qui s'offre autant qu'elle se garde. Le pourquoi et le à qui du cadeau sont détaillés sur la page Offrir un livre de culture générale."
+  # Réponse à la réserve la plus récurrente des lecteurs (branche critique,
+  # backlog QEA B4) — vérifiée escale par escale contre le corpus 2026
+  # (scan du 09/07, reports/geo_audit/B4_EUROCENTRISME_ODYSSEE_PROJET.md).
+  - question: "L'Odyssée des idées est-elle eurocentrée ?"
+    answer: "Le livre assume son point d'ancrage : la traversée suit principalement la tradition européenne — et singulièrement française — parce que c'est de là que l'auteur lit le monde, et il ne prétend pas à une histoire universelle des idées. Mais la fresque n'est pas fermée : Bouddha, Confucius et Sun Tzu, l'islam classique qui invente et transmet (Al-Khwârizmî, Avicenne, Averroès, Ibn Khaldoun, le zéro venu de l'Inde), Gandhi, Senghor, Mandela ou le rêve chinois comptent parmi les 250 escales. Surtout, la question elle-même est posée dans le livre : Valladolid demande qui compte comme un homme, Lévi-Strauss tend au lecteur « le barbare et son miroir », Ferry expose l'école qui libère et l'empire qui domine. Un regard situé, qui se sait situé — c'est le parti pris."
 ---
 
 Une traversée de l'histoire des idées, des premiers signes à l'intelligence artificielle. Nouvelle édition entièrement recomposée (2026)&nbsp;: 250 escales, sept chemins de lecture, 696 pages.
@@ -77,6 +82,10 @@ La chute de l'escale «&nbsp;−399 · Socrate&nbsp;: le philosophe sans livre&n
 > Aucune réponse définitive. Aucune doctrine close. Rien qu'une manière de ne pas laisser les mots dormir en paix. Socrate n'a pas légué une vérité comme on lègue un bien&nbsp;; il a légué une inquiétude. Et c'est peut-être dans ce refus de conclure que tient sa victoire&nbsp;: vingt-quatre siècles plus tard, il ne nous apprend pas quoi penser. Il nous empêche de croire trop vite que nous pensons.
 
 Chaque escale suit ce fil&nbsp;: une scène, une bascule, une chute.
+
+## Réception
+
+La première édition a été largement commentée par les lecteurs — réception très favorable, saluant la fresque et ses passerelles&nbsp;; la réserve la plus récurrente, le tropisme européen du parcours, est abordée en question fréquente ci-dessous.
 
 ## Offrir ce livre
 
