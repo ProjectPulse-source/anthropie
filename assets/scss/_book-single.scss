@@ -169,3 +169,49 @@
 .book-reviews__author {
   font-weight: 600;
 }
+
+/* ---------------------------------------------------------------------------
+   Du même auteur — maillage livre-livre (GEO-04 lot 1)
+   --------------------------------------------------------------------------- */
+
+.book-others {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-accent-rule);
+}
+
+.book-others__title {
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+  margin: 0 0 1.25rem;
+}
+
+.book-others__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.book-others__item {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin: 0 0 0.6rem;
+
+  a {
+    color: var(--color-accent);
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.book-others__subtitle {
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  color: var(--color-text-muted);
+}

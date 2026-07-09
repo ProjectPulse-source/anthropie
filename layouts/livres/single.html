@@ -40,6 +40,26 @@
   </div>
 
   {{ partial "book-related-awp.html" . }}
+
+  {{- /* Du même auteur — maillage livre↔livre généré depuis la section
+         (GEO-04 lot 1, item 4). Aucune donnée nouvelle : titres + sous-titres
+         des autres fiches. */ -}}
+  {{- $others := slice -}}
+  {{- range (where site.RegularPages "Type" "livres").ByWeight -}}
+    {{- if ne .Permalink $.Permalink -}}{{- $others = $others | append . -}}{{- end -}}
+  {{- end -}}
+  {{ if $others }}
+  <section class="book-others">
+    <h2 class="book-others__title">{{ i18n "book_same_author" }}</h2>
+    <ul class="book-others__list">
+      {{ range $others }}
+      <li class="book-others__item">
+        <a href="{{ .Permalink }}">{{ partial "fr-typo.html" .Title }}</a>{{ with .Params.subtitle }}<span class="book-others__subtitle"> — {{ . }}</span>{{ end }}
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+  {{ end }}
 </article>
 
 <!-- Schema.org Book -->
