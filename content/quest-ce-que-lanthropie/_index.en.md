@@ -1,6 +1,12 @@
 ---
 title: "What is anthropy?"
-slug: "what-is-anthropy"
+# slug: est ignoré par Hugo sur les _index.md de section — l'URL réelle reste
+# /en/quest-ce-que-lanthropie/. Les alias ci-dessous réparent le 404 de
+# /en/what-is-anthropy/, référencée par Wikidata Q138827949 (P973, batch
+# Phase A 2026-05) et les dossiers Wikidata/ du dépôt. Les chemins absolus
+# d'alias sont résolus depuis la racine du site (pas de préfixe de langue
+# automatique), d'où les deux entrées.
+aliases: ["/en/what-is-anthropy/", "/what-is-anthropy/"]
 description: "Anthropy is the hypothesis that social systems displace disorder rather than resolve it."
 faq:
   - question: "What is anthropy in social science?"
