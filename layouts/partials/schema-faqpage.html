@@ -1,10 +1,14 @@
 {{ if .Params.faq }}
+{{- /* Chiffres canoniques : les réponses peuvent contenir {citations}/{auteurs}/{siecles},
+       résolus depuis works.yaml (corpus_stats) via l'ISBN de la page — ou stats_isbn
+       pour les pages sans ISBN propre (ex. pages offrir). NO-OP sinon. */ -}}
+{{- $isbn := or .Params.isbn .Params.stats_isbn -}}
 {{- $mainEntity := slice -}}
 {{- range .Params.faq -}}
   {{- $mainEntity = $mainEntity | append (dict
       "@type" "Question"
       "name" .question
-      "acceptedAnswer" (dict "@type" "Answer" "text" .answer)) -}}
+      "acceptedAnswer" (dict "@type" "Answer" "text" (partial "desc-figures.html" (dict "text" .answer "isbn" $isbn)))) -}}
 {{- end -}}
 {{- $faq := dict
     "@context" "https://schema.org"

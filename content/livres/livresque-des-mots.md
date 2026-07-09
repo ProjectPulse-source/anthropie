@@ -26,6 +26,16 @@ url_amazon_uk_kindle: "https://www.amazon.co.uk/dp/B0CW994YWH"
 url_amazon_de_kindle: "https://www.amazon.de/dp/B0CW994YWH"
 url_amazon_it_kindle: "https://www.amazon.it/dp/B0CW994YWH"
 url_amazon_es_kindle: "https://www.amazon.es/dp/B0CW994YWH"
+# FAQ book-scoped (doctrine GEO-04). Chiffres canoniques : JAMAIS en dur —
+# placeholders {citations}/{auteurs}/{siecles} résolus par desc-figures
+# depuis data/works.yaml (corpus_stats), via l'ISBN de la page.
+faq:
+  - question: "Qu'est-ce qu'une anthologie de citations « sans classement » ?"
+    answer: "Un recueil sans ordre thématique, alphabétique ni chronologique : {citations} citations et {auteurs} voix tissées pour que le sens naisse du voisinage — une réplique de cinéma à côté d'un moraliste, une chanson à côté d'un philosophe. Le recueil se lit comme un roman : on avance de page en page, et la rencontre qu'aucune recherche par mot-clé n'aurait produite fait le sel de la lecture."
+  - question: "Combien de citations contient Livresque des mots ?"
+    answer: "{citations} citations, {auteurs} voix, {siecles} siècles — aphorismes, extraits de romans, anecdotes littéraires, poésies, répliques choisies. Derrière la sélection, quarante ans de lectures et une curation d'auteur : une voix qui choisit."
+  - question: "À qui offrir Livresque des mots ?"
+    answer: "À l'amoureux de la langue et des formules, à l'écrivain en quête de compagnie, au lecteur qui aime ouvrir un livre au hasard. Une anthologie sans ordre imposé se prête naturellement au cadeau ; en version Kindle, le cadeau passe par un lien prépayé (mode d'emploi sur la page Offrir un livre Kindle)."
 ---
 
 Une anthologie qui refuse l'ordre alphabétique.

@@ -35,6 +35,16 @@ reviews:
     url: "https://blogs.alternatives-economiques.fr/asso/2025/11/10/dette-publique-le-transfert-organise-du-desordre"
     date: "2025-11-10"
     quote: "Cette matrice de lecture fait de l'essai un outil majeur pour décrypter les arcanes budgétaires de la France contemporaine."
+# FAQ book-scoped uniquement (doctrine GEO-04) : la question « qui paie la dette
+# publique ? » est la propriété exclusive de la page pont /qui-paie-la-dette-publique/
+# (cannibalisation démontrée, red team GEO-04) — ne jamais l'ajouter ici.
+faq:
+  - question: "Que contient Dette Publique : Qui paie vraiment ?"
+    answer: "Deux temps : la mécanique du transfert anthropique appliquée aux finances publiques françaises — avec les cas Grèce, Japon, États-Unis, Norvège et Chine —, puis quatre scénarios prospectifs pour la décennie 2025-2035. Le livre déplace la question du « combien » (montants, ratios, soutenabilité) vers le « qui » : vers quels groupes et quelles générations le coût est transféré, et par quels mécanismes ce transfert devient invisible."
+  - question: "Quelle différence entre le livre et le working paper AWP-03 ?"
+    answer: "Le livre reprend et développe l'analyse amorcée dans le working paper AWP-03 (« Dette publique et anthropie : qui paie vraiment le désordre ? ») : 224 pages pour le lecteur non spécialiste, à partir de cas concrets, sans prérequis. Le paper formalise l'hypothèse en format académique ; le livre la déploie et la met en scénarios."
+  - question: "Faut-il avoir lu ANTHROPIE d'abord ?"
+    answer: "Non. Le livre est une application autonome du cadre anthropique : les mécanismes sont exposés à partir de cas concrets, sans prérequis. ANTHROPIE développe le cadre général — histoire longue, épistémologie — pour qui veut ensuite remonter à la fresque d'ensemble."
 related_awp:
   - label: "Qu'est-ce que l'anthropie ? Principes d'une hypothèse"
     awp: "awp-01"

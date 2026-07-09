@@ -27,6 +27,15 @@ url_amazon_uk_kindle: "https://www.amazon.co.uk/dp/B0FQ9PG246"
 url_amazon_de_kindle: "https://www.amazon.de/dp/B0FQ9PG246"
 url_amazon_it_kindle: "https://www.amazon.it/dp/B0FQ9PG246"
 url_amazon_ca_kindle: "https://www.amazon.ca/dp/B0FQ9PG246"
+# FAQ book-scoped uniquement (doctrine GEO-04) : les questions définitionnelles
+# (anthropie, dette publique) appartiennent à la page concept et aux pages ponts.
+faq:
+  - question: "Que signifie « Ordre ici. Dette ailleurs. » ?"
+    answer: "Le sous-titre condense l'hypothèse du livre : tout ordre local — une ville propre, un réseau qui fonctionne, un budget maîtrisé — est financé par un désordre déplacé ailleurs, vers d'autres lieux, d'autres temps ou d'autres groupes sociaux. C'est une comptabilité, pas une dénonciation de l'ordre. La formule ne renvoie pas à L'Ordre de la dette de Benjamin Lemoine (2016), qui relève de la sociologie des marchés de dette souveraine : seule la proximité des mots les rapproche."
+  - question: "Faut-il lire ANTHROPIE avant les Anthropie Working Papers ?"
+    answer: "Non, les deux entrées sont indépendantes. ANTHROPIE pose le cadre complet — sept âges historiques, 622 pages — dont chaque working paper développe ensuite un théorème ou une application (dette publique, transition énergétique, recherche académique). On peut commencer par la fresque ou par un paper."
+  - question: "À qui s'adresse ANTHROPIE ?"
+    answer: "Au lecteur d'essais qui cherche une grille de lecture d'ensemble — économie politique, histoire longue, écologie — plutôt qu'un traitement d'actualité. Aucun prérequis technique : l'appareil conceptuel est construit pas à pas, de l'outil paléolithique au métaprogramme numérique. Les premiers lecteurs le rapprochent des grandes synthèses de Jared Diamond ou de Yuval Noah Harari."
 related_awp:
   - chapter: "Qu'est-ce que l'anthropie ? Principes d'une hypothèse"
     awp: "awp-01"

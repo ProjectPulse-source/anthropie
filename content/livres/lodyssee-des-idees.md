@@ -28,6 +28,15 @@ url_amazon_uk_kindle: "https://www.amazon.co.uk/dp/B0CVXQSLBQ"
 url_amazon_de_kindle: "https://www.amazon.de/dp/B0CVXQSLBQ"
 url_amazon_it_kindle: "https://www.amazon.it/dp/B0CVXQSLBQ"
 url_amazon_ca_kindle: "https://www.amazon.ca/dp/B0CVXQSLBQ"
+# FAQ book-scoped uniquement (doctrine GEO-04). L'intention cadeau générique
+# appartient à /offrir-un-livre-de-culture-generale/ — la réponse y renvoie.
+faq:
+  - question: "Qu'est-ce que L'Odyssée des idées ?"
+    answer: "Une traversée de l'histoire des idées, des premiers signes à l'intelligence artificielle : 250 escales — une œuvre, une vie, une invention, une bascule — reliées par sept chemins de lecture (les signes, le pouvoir, l'argent, la liberté, le sacré, l'opinion, la condition humaine). Nouvelle édition entièrement recomposée, 696 pages (2026)."
+  - question: "Comment lire L'Odyssée des idées ?"
+    answer: "Trois usages : page après page, comme une traversée chronologique ; au hasard, pour une escale de quelques minutes ; ou par chemins, en suivant les renvois qui font surgir échos, ruptures et filiations. C'est un récit continu, pas un manuel à fiches."
+  - question: "À qui s'adresse L'Odyssée des idées ?"
+    answer: "Au lecteur curieux — de philosophie, de sciences, d'histoire — qui préfère un récit aux manuels à fiches ; à l'étudiant qui veut relier ce que les disciplines séparent ; et à qui cherche un livre à offrir : une fresque qui s'offre autant qu'elle se garde. Le pourquoi et le à qui du cadeau sont détaillés sur la page Offrir un livre de culture générale."
 ---
 
 Une traversée de l'histoire des idées, des premiers signes à l'intelligence artificielle. Nouvelle édition entièrement recomposée (2026)&nbsp;: 250 escales, sept chemins de lecture, 696 pages.
