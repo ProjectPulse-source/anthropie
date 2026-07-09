@@ -49,6 +49,48 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-07-09 — Rounds GEO-03/GEO-04 : indexation réparée, site-graphe ancré, lot 1 exécuté
+
+Missions `_Consignes_GEO-03/04/05.txt` (audits + GO auteur item par item).
+
+**GEO-03 (commis le 09/07, poussé sur GO)** : `fix(indexnow)` **2f3dae2** — le
+workflow soumettait les **2 sitemaps XML** au lieu des pages depuis le passage
+multilingue (la racine est un sitemapindex, IndexNow n'expanse pas) ; récursion
++ garde-fou <10 URLs = échec explicite. `docs(geo)` **d1785c6** checklists
+ajout livre/publication. `fix(seo)` **b250cdf** aliases
+`/en/what-is-anthropy/` (+ racine) — répare le **backlink Wikidata Q138827949
+P973** qui pointait un 404 depuis mai. ⚠ push bloqué : les jetons git/gh
+n'ont pas le scope `workflow` — `gh auth refresh -s workflow` requis.
+
+**GEO-04 (doctrine)** : `data/intent_matrix.yaml` (matrice d'intentions 5
+cercles, statuts, en-tête anti-doorway dur — AUCUNE page ne se crée depuis ce
+fichier), `docs/CHECKLIST_AJOUT_CONCEPT.md`, hooks checklists (**1098329**).
+Décision d'architecture : works.yaml reste le registre canonique unique —
+aucun des 10 fichiers YAML parallèles suggérés n'est créé. Rapport complet :
+`reports/geo_audit/GEO04_KNOWLEDGE_GRAPH_PROPAGATION.md` (local, gitignoré).
+
+**Lot 1 site-graphe (GO _Consignes_GEO-05, 6 commits atomiques)** :
+① **1b73852** nœud `DefinedTerm #concept` émis sur la page concept FR+EN —
+le sommet était référencé par AWP/livres/série mais défini nulle part ;
+② **6cc3beb** FAQ rendues sur les 4 fiches livres (book-scoped strict : la
+question « qui paie la dette publique ? » reste la propriété exclusive de la
+page pont) + `schema-faqpage` résout les placeholders `{citations}` via
+desc-figures ; ③ **4aeb00c** chiffres canoniques page offrir via source
+unique (shortcode stat : fallback `stats_isbn` + séparateur nommé `nbsp`) ;
+④ **750c7d3** bloc « Du même auteur » (BEM `.book-others`) ; ⑤ **5f76680**
+EN : « Order here. Debt elsewhere. » + « a quotation anthology in the
+lineage of the commonplace book » sur /en/books/ ; ⑥ **a387298** fraîcheur
+légère : `lastmod` manuel aux dates git réelles (concept, AWP-01/02/05/06,
+fiches livres) + `dateModified` JSON-LD conditionnel (`ne .Lastmod .Date`).
+**Jamais `enableGitInfo`** (checkout CI shallow = fake-freshness globale).
+⑦ BreadcrumbList **différé** (bénéfice quasi nul à 2 niveaux, décision auteur).
+
+Restent (hors dépôt ou à la demande) : run manuel IndexNow post-push (lire le
+nombre d'URLs au log), baseline GoatCounter clics amazon-outbound avant le
+23/09 (lancement AI Overviews France), T0 requêtes Google FR distinct des 18
+prompts assistants, item Wikidata Livresque à créer, lecture intent_matrix
+par la routine GEO trimestrielle (arbitrage auteur).
+
 ### 2026-07-04 — MODIFICATION DURABLE DE LA RÈGLE : levée anticipée du gel structurel
 
 Décision explicite de l'auteur (session GEO du 04/07) : le gel structurel 90 j
