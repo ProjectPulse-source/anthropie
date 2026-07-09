@@ -130,6 +130,27 @@
 </script>
 {{ end }}
 
+<!-- Schema.org DefinedTerm — nœud canonique du concept (ancre du site-graphe) -->
+{{ if or (eq .RelPermalink "/quest-ce-que-lanthropie/") (eq .RelPermalink "/en/quest-ce-que-lanthropie/") }}
+{{- $isEn := eq .Lang "en" -}}
+{{- /* @id strictement identique aux références "about" émises par les AWP (ci-dessous),
+       les livres (livres/single.html) et la série (schema-creativeworkseries.html) :
+       URL de production codée en dur — ne pas dériver de .Permalink, qui varie en dev. */ -}}
+{{- $conceptURL := cond $isEn "https://stephane-lalut.com/en/quest-ce-que-lanthropie/" "https://stephane-lalut.com/quest-ce-que-lanthropie/" -}}
+{{- $term := dict
+    "@context" "https://schema.org"
+    "@type" "DefinedTerm"
+    "@id" (printf "%s#concept" $conceptURL)
+    "name" (cond $isEn "Anthropy" "Anthropie")
+    "description" .Site.Params.canonicalDefinition
+    "url" $conceptURL
+    "inLanguage" (cond $isEn "en" "fr")
+    "sameAs" (slice "https://www.wikidata.org/entity/Q138827949") -}}
+<script type="application/ld+json">
+{{ $term | jsonify (dict "indent" "  ") | safeJS }}
+</script>
+{{ end }}
+
 <!-- Schema.org ScholarlyArticle (merged) -->
 {{ if and (eq .Type "awp") .IsPage .File }}
 {{- $dp := "" -}}
