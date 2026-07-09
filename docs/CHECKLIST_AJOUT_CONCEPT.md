@@ -54,8 +54,14 @@
 
 ## 4. Registres et maillage
 
-- [ ] `data/intent_matrix.yaml` : entrée du concept (cercles de requêtes,
-      statuts) — c'est le déclencheur de mise à jour prévu par sa doctrine.
+- [ ] **Inscription périphérie→centre** : un nouveau concept est un nœud
+      intermédiaire de l'arborescence — déclarer quels sujets d'entrée
+      périphériques il capte et vers quoi il remonte (anthropie, AWP,
+      livre). Le graphe converge vers le centre ; le concept ne crée pas
+      une seconde arborescence concurrente.
+- [ ] `data/intent_matrix.yaml` : entrée du concept (sujets d'entrée,
+      cercles de requêtes, statuts) — c'est le déclencheur de mise à jour
+      prévu par sa doctrine.
 - [ ] `static/llms.txt` : section concepts, à la main.
 - [ ] Maillage entrant : depuis les AWP/livres/pages qui mobilisent le
       concept. Maillage sortant : livre principal, AWP fondateur, concepts

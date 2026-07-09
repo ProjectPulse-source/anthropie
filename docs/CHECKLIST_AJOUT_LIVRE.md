@@ -35,9 +35,16 @@ Front matter — modèle : `anthropie-ordre-ici-dette-ailleurs.md` :
 
 - [ ] `data/works.yaml` : entrée du livre (registre canonique — audité par
       `scripts/audit_works.py`).
-- [ ] `data/intent_matrix.yaml` : entrée du livre (cercles de requêtes,
-      statuts couverte/enrichissement/différée — lire la doctrine en tête
-      du fichier : aucune page ne se crée depuis la matrice).
+- [ ] **Inscription périphérie→centre (OBLIGATOIRE, quelle que soit la
+      langue ou le sujet du livre)** : déclarer le ou les **sujets d'entrée
+      périphériques** du livre (dette, écologie, IA, citations, culture
+      générale…) et poser le **fil remontant** vers le cadre (lien vers la
+      page concept ou l'AWP pertinent dans le corps de la fiche). La fiche
+      doit valoir par son sujet propre ; l'anthropie est le fil, jamais une
+      étiquette plaquée.
+- [ ] `data/intent_matrix.yaml` : entrée du livre (sujets d'entrée, cercles
+      de requêtes, statuts couverte/enrichissement/différée — lire la
+      doctrine en tête du fichier : aucune page ne se crée depuis la matrice).
 - [ ] `static/llms.txt` : ajouter le livre (ISBN + Wikidata) à la main —
       la génération par template est un interdit acté.
 - [ ] Si `faq[]` ajoutée à la fiche : questions **book-scoped** uniquement

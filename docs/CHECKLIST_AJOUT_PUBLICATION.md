@@ -32,6 +32,12 @@ Modèle : `revue-projet-commune-republique.md` (2026-07-07).
 
 - [ ] `data/works.yaml` : entrée/mise à jour de l'œuvre (cf. commit
       `470f6fa` qui touche la fiche ET works.yaml).
+- [ ] **Inscription périphérie→centre (OBLIGATOIRE, quelle que soit la
+      langue ou le sujet)** : la publication entre dans l'arborescence par
+      son **sujet propre** (dette, écologie, IA, commune, citations…) et
+      porte son **fil remontant** : `related:` vers les AWP pertinents et
+      `related_book` — c'est ce maillage qui fait converger la périphérie
+      vers le centre.
 - [ ] `data/intent_matrix.yaml` : si la publication ouvre ou renforce une
       intention de requête, mettre à jour la matrice (doctrine en tête du
       fichier).

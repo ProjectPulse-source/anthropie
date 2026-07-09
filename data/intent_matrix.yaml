@@ -3,6 +3,20 @@
 # =============================================================================
 # DOCTRINE — à lire avant toute modification :
 #
+# 0. ARCHITECTURE PORTEUSE = PÉRIPHÉRIE → CENTRE (décision auteur 2026-07-09).
+#    La traction vient de la MULTIPLICITÉ des sujets d'entrée — dette,
+#    écologie, IA/numérique, citations, culture générale, histoire des idées —
+#    qui, si on remonte le fil, convergent vers l'anthropie (concept
+#    quasi-universel de grille de lecture). L'entrée directe par « anthropie »
+#    est le canal des CHERCHEURS, pas celui du volume. Conséquences :
+#    - chaque œuvre/publication nouvelle, QUELLE QUE SOIT sa langue ou son
+#      sujet, est inscrite ici avec son ou ses SUJETS D'ENTRÉE périphériques
+#      et son FIL REMONTANT (lien vers AWP/page concept) — jamais l'inverse ;
+#    - une page périphérique doit valoir PAR SON SUJET PROPRE ; l'anthropie
+#      est le fil qui remonte, jamais une étiquette plaquée (anti-doorway) ;
+#    - les cercles 2-4 sont le cœur du dispositif de traction, le cercle 1
+#      le baromètre académique.
+#
 # 1. AUCUNE page ne se crée depuis ce fichier. Les requêtes « differee » ne
 #    sont PAS un backlog de pages : elles attendent un SIGNAL EXTERNE
 #    (doctrine PROJECT_STATUS §7 — pages-ponts en réaction, pas en
