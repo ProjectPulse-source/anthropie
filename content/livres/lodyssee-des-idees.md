@@ -6,6 +6,8 @@ description: "De l'aube de l'humanité à l'intelligence artificielle, 250 escal
 date: 2026-07-03
 lastmod: 2026-07-09  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 isbn: "978-2-9586347-4-2"
+amazon_rating: 4.4       # note moyenne Amazon.fr — relevé 2026-07-10 (MAJ ~mensuelle, relecture Chrome)
+amazon_reviews: 161      # nb d'avis Amazon.fr ; omettre les 2 champs = pas d'étoiles sur /ressources-offertes
 pages: 696  # sync data/works.yaml (book-lodyssee-des-idees.pages) — nombre de pages broché
 description_en: "From the dawn of humanity to artificial intelligence, 250 ports of call — works, lives, inventions, crises, tipping points — and seven itineraries connect thinkers across the centuries. Not a chronological parade but a network. An instrument of curiosity, not a reservoir of certainties."
 price: "36"  # prix broché EUR — affiché sur la page + schema.org Offer

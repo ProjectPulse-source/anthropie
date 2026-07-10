@@ -64,9 +64,20 @@
         {{ $isbn := .Params.isbn }}
         {{ if not $promo }}{{ errorf "ressources-offertes : /livres/%s sans promo_slug en front matter" $hugo }}{{ end }}
         <article class="ressources-book" data-book="{{ $promo }}">
-          <a href="{{ .RelPermalink }}" class="ressources-book__emblem" aria-hidden="true" tabindex="-1">
-            {{ partial "book-cover.html" (dict "slug" $hugo "alt" .Title "wrapClass" "ressources-book__cover" "sizes" "200px") }}
-          </a>
+          <div class="ressources-book__aside">
+            <a href="{{ .RelPermalink }}" class="ressources-book__emblem" aria-hidden="true" tabindex="-1">
+              {{ partial "book-cover.html" (dict "slug" $hugo "alt" .Title "wrapClass" "ressources-book__cover" "sizes" "200px") }}
+            </a>
+            {{- /* Preuve sociale : note Amazon.fr, juste sous la couverture. Rendue UNIQUEMENT si
+                   amazon_rating ET amazon_reviews existent (front matter, source unique content/livres/) —
+                   absence des 2 champs = pas d'étoiles (évite la preuve sociale inversée sur un titre peu noté). */ -}}
+            {{ if and .Params.amazon_rating .Params.amazon_reviews }}
+            {{ $note := replace (printf "%.1f" .Params.amazon_rating) "." "," }}
+            <p class="ressources-book__rating" aria-label="Note moyenne {{ $note }} sur 5 — {{ .Params.amazon_reviews }} avis Amazon">
+              <span class="ressources-book__stars" aria-hidden="true">★</span><span class="ressources-book__rating-score">{{ $note }}</span><span class="ressources-book__rating-count"> · {{ .Params.amazon_reviews }}&nbsp;avis&nbsp;Amz</span>
+            </p>
+            {{ end }}
+          </div>
           <div class="ressources-book__body">
             <h3>{{ .Title }}</h3>
             {{ with .Params.subtitle }}<p class="ressources-book__subtitle">{{ partial "fr-typo.html" . }}</p>{{ end }}

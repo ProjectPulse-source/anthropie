@@ -143,8 +143,12 @@
   align-items: start;
   @media (max-width: 520px) {
     grid-template-columns: 1fr;
-    .ressources-book__emblem { margin: 0 auto; }
+    .ressources-book__aside { margin: 0 auto; }
   }
+}
+// Colonne gauche : couverture + preuve sociale (note Amazon) empilées.
+.ressources-book__aside {
+  width: 200px;
 }
 .ressources-book__emblem {
   display: block;
@@ -152,6 +156,25 @@
   width: 200px;
   text-decoration: none;
 }
+// Note Amazon.fr, juste sous la couverture (rendue seulement si le front matter la fournit).
+.ressources-book__rating {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 5px;
+  margin: 12px 0 0;
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  color: var(--color-text-body);
+  letter-spacing: 0.01em;
+}
+.ressources-book__stars {
+  color: var(--color-star);
+  font-size: 1.05em;
+  line-height: 1;
+}
+.ressources-book__rating-score { font-weight: 600; }
+.ressources-book__rating-count { color: var(--color-text-subtle); }
 .ressources-book__cover {
   display: block;
   width: 200px;
