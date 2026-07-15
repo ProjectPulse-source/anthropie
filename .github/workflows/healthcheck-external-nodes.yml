@@ -17,6 +17,15 @@ jobs:
         id: check
         run: |
           set +e
+          # Nœuds VÉRIFIABLES depuis un runner. Deux exclusions volontaires, à
+          # contrôler manuellement au navigateur (elles répondent 200 depuis un
+          # poste, mais sont invérifiables depuis une IP de datacenter) :
+          #   - SSRN  (profil 11065608)      : anti-bot 403 fréquent
+          #   - IdRef (283054085)            : retiré le 2026-07-15. HTTP 000 (aucune
+          #     réponse, paquets droppés) les 05/07 et 15/07, y compris après 3
+          #     tentatives ; 200 en 0,19 s depuis un poste. L'ABES a vraisemblablement
+          #     posé un filtre entre le 05/06 (dernier check vert) et le 05/07.
+          #     À retester : si 000 persiste, le blocage est permanent.
           declare -A NODES=(
             ["ORCID"]="https://orcid.org/0009-0002-1794-4895"
             ["Zenodo community"]="https://zenodo.org/communities/anthropie-working-papers"
@@ -25,7 +34,6 @@ jobs:
             ["Wikidata Anthropie ouvrage"]="https://www.wikidata.org/wiki/Q138827344"
             ["OpenLibrary auteur"]="https://openlibrary.org/authors/OL16378291A"
             ["OSF/SocArXiv"]="https://osf.io/ymkpj/"
-            ["IdRef"]="https://www.idref.fr/283054085"
             ["Google Scholar"]="https://scholar.google.com/citations?user=J4NqzwSfrHAC"
             ["Academia"]="https://independent.academia.edu/StéphaneLALUT"
           )
@@ -37,11 +45,14 @@ jobs:
           PROBLEMS=""
           for name in "${!NODES[@]}"; do
             url="${NODES[$name]}"
-            # Trois tentatives : une seule confond un hoquet réseau avec une panne.
-            # IdRef a répondu 000 le 05/07 depuis le runner, 200 depuis un poste.
+            # Trois tentatives : une mesure unique confond un hoquet (maintenance,
+            # 503 passager) avec une panne. Protège les nœuds joignables ci-dessus ;
+            # ne sauve PAS un blocage réseau stable — cf. IdRef, exclu plus haut.
             for attempt in 1 2 3; do
               status=$(curl -s -L -o /dev/null -w "%{http_code}" --max-time 30 "$url")
               [[ "$status" =~ ^(200|301|302|308)$ ]] && break
+              # Ne pas insister sur un anti-bot connu : son 403 est stable.
+              [[ "$ANTIBOT" == *"|$name|"* && "$status" == "403" ]] && break
               [ "$attempt" -lt 3 ] && sleep 5
             done
             echo "$name : $url -> $status"
