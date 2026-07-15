@@ -5,6 +5,10 @@ on:
     - cron: '0 8 5 * *'  # 5 du mois, 8h UTC
   workflow_dispatch:
 
+permissions:
+  contents: read
+  issues: write
+
 jobs:
   check:
     runs-on: ubuntu-latest

@@ -7,6 +7,10 @@ on:
     - cron: '0 8 21 8 *'   # J+90 : 21 août 2026
   workflow_dispatch:
 
+permissions:
+  contents: read
+  issues: write
+
 jobs:
   remind:
     runs-on: ubuntu-latest
