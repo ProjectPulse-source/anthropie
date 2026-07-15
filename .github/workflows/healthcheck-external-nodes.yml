@@ -29,15 +29,24 @@ jobs:
             ["Google Scholar"]="https://scholar.google.com/citations?user=J4NqzwSfrHAC"
             ["Academia"]="https://independent.academia.edu/StéphaneLALUT"
           )
+          # Nœuds à anti-bot connu : depuis une IP de datacenter, leur 403 est
+          # indiscernable d'un vrai refus, donc inexploitable. Vérification manuelle.
+          # Google Scholar y est entré le 2026-07-15 (403 le 05/07 depuis le runner,
+          # 200 depuis un poste : faux positif de même famille qu'Academia et SSRN).
+          ANTIBOT="|Academia|Google Scholar|"
           PROBLEMS=""
           for name in "${!NODES[@]}"; do
             url="${NODES[$name]}"
-            status=$(curl -s -L -o /dev/null -w "%{http_code}" --max-time 30 "$url")
+            # Trois tentatives : une seule confond un hoquet réseau avec une panne.
+            # IdRef a répondu 000 le 05/07 depuis le runner, 200 depuis un poste.
+            for attempt in 1 2 3; do
+              status=$(curl -s -L -o /dev/null -w "%{http_code}" --max-time 30 "$url")
+              [[ "$status" =~ ^(200|301|302|308)$ ]] && break
+              [ "$attempt" -lt 3 ] && sleep 5
+            done
             echo "$name : $url -> $status"
-            # Academia.edu renvoie 403 aux bots (anti-bot), comme SSRN : 403 attendu,
-            # non bloquant. Vérification manuelle au navigateur. Évite un faux positif mensuel.
-            if [[ "$name" == "Academia" && "$status" == "403" ]]; then
-              echo "  -> 403 attendu (anti-bot Academia), ignoré"
+            if [[ "$ANTIBOT" == *"|$name|"* && "$status" == "403" ]]; then
+              echo "  -> 403 attendu (anti-bot), ignoré"
               continue
             fi
             # SSRN exclu volontairement (anti-bot 403 fréquent, vérification manuelle)
