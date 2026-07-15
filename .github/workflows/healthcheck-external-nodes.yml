@@ -18,14 +18,16 @@ jobs:
         run: |
           set +e
           # Nœuds VÉRIFIABLES depuis un runner. Deux exclusions volontaires, à
-          # contrôler manuellement au navigateur (elles répondent 200 depuis un
-          # poste, mais sont invérifiables depuis une IP de datacenter) :
+          # contrôler manuellement au navigateur :
           #   - SSRN  (profil 11065608)      : anti-bot 403 fréquent
           #   - IdRef (283054085)            : retiré le 2026-07-15. HTTP 000 (aucune
-          #     réponse, paquets droppés) les 05/07 et 15/07, y compris après 3
-          #     tentatives ; 200 en 0,19 s depuis un poste. L'ABES a vraisemblablement
-          #     posé un filtre entre le 05/06 (dernier check vert) et le 05/07.
-          #     À retester : si 000 persiste, le blocage est permanent.
+          #     réponse, paquets droppés) depuis les runners les 05/07 et 15/07, y
+          #     compris après 3 tentatives — mais 200 en 0,19 s depuis un poste, 200
+          #     avec un UA Googlebot, et lecture OK depuis un autre datacenter. Le
+          #     filtre vise les plages IP GitHub, PAS les robots : robots.txt autorise
+          #     la fiche et le sitemap la contient (tranche start=283032240). Le nœud
+          #     est sain ; il est seulement invérifiable DEPUIS ICI. Ne pas en déduire
+          #     un problème d'indexation.
           declare -A NODES=(
             ["ORCID"]="https://orcid.org/0009-0002-1794-4895"
             ["Zenodo community"]="https://zenodo.org/communities/anthropie-working-papers"
