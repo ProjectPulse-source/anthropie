@@ -16,8 +16,9 @@
          class         (opt) classe du <img>
          sizes         (opt) attribut sizes (défaut "180px")
          loading       (opt) "lazy" (défaut) | "eager"
-         fetchpriority (opt) "high" pour l'image LCP */ -}}
-{{- $res := partial "book-cover-resource.html" .slug -}}
+         fetchpriority (opt) "high" pour l'image LCP
+         lang          (opt) langue de la page ; tente <slug>.<lang>.jpg d'abord */ -}}
+{{- $res := partial "book-cover-resource.html" (dict "slug" .slug "lang" (.lang | default "")) -}}
 {{- with $res -}}
 <div class="{{ $.wrapClass }}">
   <img src="{{ (.Resize "480x q82").RelPermalink }}"

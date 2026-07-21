@@ -164,15 +164,9 @@
   <div class="corpus-grid">
     <div class="corpus-block corpus-block--livres">
       <h3>{{ if eq .Lang "en" }}Books{{ else }}Livres{{ end }}</h3>
-      {{- $livres := where .Site.RegularPages "Section" "livres" -}}
-      {{- if not $livres -}}
-        {{- range site.Sites -}}
-          {{- if eq .Language.Lang "fr" -}}
-            {{- $livres = where .RegularPages "Section" "livres" -}}
-          {{- end -}}
-        {{- end -}}
-      {{- end -}}
-      {{ range sort $livres "Weight" "asc" }}
+      {{- /* Fusion FR/EN sans doublon : ANTHROPY (EN) remplace ANTHROPIE côté /en/,
+             les livres FR-only restent affichés via leur fiche FR. */ -}}
+      {{ range (partial "livres-merged.html" .) }}
         {{ partial "livre-card.html" . }}
       {{ end }}
     </div>

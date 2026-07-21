@@ -1,0 +1,22 @@
+{{- /* Fiches livres pour la langue courante, SANS doublon FR/EN.
+
+       Pour chaque livre (clé = slug), on retient la fiche NATIVE de la langue
+       courante si elle existe (ex. ANTHROPY, édition anglaise), sinon on
+       retombe sur la fiche FR (les autres livres ne sont publiés qu'en français).
+
+       Objectif : sur le site EN, ANTHROPY remplace ANTHROPIE dans les listings,
+       et les livres sans édition anglaise restent affichés via leur fiche FR —
+       aucune perte, aucun doublon. Sur le site FR, la native = la FR : neutre.
+
+       Retourne une slice de pages triée par Weight croissant. */ -}}
+{{- $frSite := index site.Sites 0 -}}
+{{- $frPages := where $frSite.RegularPages "Type" "livres" -}}
+{{- $native := dict -}}
+{{- range where site.RegularPages "Type" "livres" -}}
+  {{- $native = merge $native (dict .File.ContentBaseName .) -}}
+{{- end -}}
+{{- $out := slice -}}
+{{- range $frPages -}}
+  {{- $out = $out | append (or (index $native .File.ContentBaseName) .) -}}
+{{- end -}}
+{{- return (sort $out "Weight" "asc") -}}

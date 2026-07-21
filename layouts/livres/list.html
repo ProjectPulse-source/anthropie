@@ -11,17 +11,15 @@
   <div class="article__body">
     {{ .Content }}
 
-    {{/* Récupère les livres — cross-language si la section EN est vide */}}
-    {{ $livres := .Pages }}
-    {{ if eq (len $livres) 0 }}
-      {{ $frSite := index site.Sites 0 }}
-      {{ $livres = where $frSite.RegularPages "Type" "livres" }}
-    {{ end }}
+    {{/* Récupère les livres — fusion FR/EN sans doublon : fiche native de la
+         langue si elle existe (ex. ANTHROPY EN), sinon repli FR. Slice déjà
+         triée par Weight. */}}
+    {{ $livres := partial "livres-merged.html" . }}
 
     {{/* CORPUS PRINCIPAL — pages dont serie != autres-ouvrages */}}
     <section class="livres-grid">
       {{/* Source unique de la carte = partials/livre-card.html (corpus ET autres-ouvrages). */}}
-      {{ range $livres.ByWeight }}
+      {{ range $livres }}
         {{ if ne .Params.serie "autres-ouvrages" }}
           {{ partial "livre-card.html" . }}
         {{ end }}
@@ -52,13 +50,13 @@
 {{/* Schema.org ItemList des ouvrages — ordre aligné sur la liste visible (corpus par poids, puis autres-ouvrages) */}}
 {{- $items := slice -}}
 {{- $pos := 0 -}}
-{{- range $livres.ByWeight -}}
+{{- range $livres -}}
   {{- if ne .Params.serie "autres-ouvrages" -}}
     {{- $pos = add $pos 1 -}}
     {{- $items = $items | append (dict "@type" "ListItem" "position" $pos "item" (dict "@type" "Book" "name" .Title "url" .Permalink)) -}}
   {{- end -}}
 {{- end -}}
-{{- range $livres.ByWeight -}}
+{{- range $livres -}}
   {{- if eq .Params.serie "autres-ouvrages" -}}
     {{- $pos = add $pos 1 -}}
     {{- $items = $items | append (dict "@type" "ListItem" "position" $pos "item" (dict "@type" "Book" "name" .Title "url" .Permalink)) -}}

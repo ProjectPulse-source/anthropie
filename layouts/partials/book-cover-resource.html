@@ -1,5 +1,23 @@
 {{- /* Retourne la ressource image de couverture d'un livre depuis
        assets/images/livres/<slug>.jpg, ou nil si absente.
        Source unique de vérité pour les couvertures : le fichier asset.
-       Input : le slug du livre (string). */ -}}
-{{- return (resources.Get (printf "images/livres/%s.jpg" .)) -}}
+
+       Input : soit le slug du livre (string), soit un dict {slug, lang}.
+       Si lang est fourni et ≠ "fr", on tente d'abord une variante de langue
+       assets/images/livres/<slug>.<lang>.jpg (ex. couverture ANTHROPY EN),
+       avec repli sur la couverture par défaut. String seul = comportement
+       historique (aucune variante), donc site FR inchangé. */ -}}
+{{- $slug := . -}}
+{{- $lang := "" -}}
+{{- if reflect.IsMap . -}}
+  {{- $slug = .slug -}}
+  {{- $lang = .lang -}}
+{{- end -}}
+{{- $res := "" -}}
+{{- if and $lang (ne $lang "fr") -}}
+  {{- $res = resources.Get (printf "images/livres/%s.%s.jpg" $slug $lang) -}}
+{{- end -}}
+{{- if not $res -}}
+  {{- $res = resources.Get (printf "images/livres/%s.jpg" $slug) -}}
+{{- end -}}
+{{- return $res -}}

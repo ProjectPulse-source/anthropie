@@ -27,10 +27,11 @@
     </div>
 
     <aside class="book-single__sidebar">
-      {{ partial "book-cover.html" (dict "slug" .File.ContentBaseName "alt" (printf "Couverture — %s" .Title) "wrapClass" "book-single__cover" "sizes" "180px") }}
+      {{ partial "book-cover.html" (dict "slug" .File.ContentBaseName "alt" (printf "Couverture — %s" .Title) "wrapClass" "book-single__cover" "sizes" "180px" "lang" .Lang) }}
       <div class="book-single__actions">
-        {{- /* Prix visible (broché). Doit refléter le schema.org Offer pour rester conforme. */ -}}
-        {{ with .Params.price }}<p class="book-single__price">{{ . }}&nbsp;€<span class="book-single__price-note">{{ if eq $.Lang "en" }}Paperback{{ else }}Broché{{ end }}</span></p>{{ end }}
+        {{- /* Prix visible (broché). Doit refléter le schema.org Offer pour rester conforme.
+               Devise selon .Params.currency (défaut EUR) : USD -> $NN, sinon NN&nbsp;€. */ -}}
+        {{ with .Params.price }}{{ $cur := $.Params.currency | default "EUR" }}<p class="book-single__price">{{ if eq $cur "USD" }}${{ . }}{{ else }}{{ . }}&nbsp;€{{ end }}<span class="book-single__price-note">{{ if eq $.Lang "en" }}Paperback{{ else }}Broché{{ end }}</span></p>{{ end }}
         {{- partial "transmettre.html" . -}}
         {{ if or .Params.url_amazon_fr .Params.url_amazon_com }}
           {{- partial "amazon-button.html" . -}}
@@ -73,7 +74,7 @@
   "name" .Title
   "author" (dict "@type" "Person" "name" site.Data.author.author.name "url" site.Data.author.author.url "sameAs" $authorUrls)
   "description" (partial "desc-figures.html" (dict "text" .Description "isbn" .Params.isbn))
-  "inLanguage" "fr"
+  "inLanguage" (cond (eq .Lang "en") "en" "fr")
   "publisher" (dict "@type" "Organization" "name" "Stéphane Lalut")
   "url" .Permalink
   "datePublished" (.Date.Format "2006-01-02") -}}
@@ -81,7 +82,7 @@
        publication (fraîcheur légère GEO-04 — jamais de fausse fraîcheur). */ -}}
 {{- if ne .Lastmod .Date -}}{{- $book = merge $book (dict "dateModified" (.Lastmod.Format "2006-01-02")) -}}{{- end -}}
 {{- with .Params.isbn -}}{{- $book = merge $book (dict "isbn" .) -}}{{- end -}}
-{{- with (partial "book-cover-resource.html" .File.ContentBaseName) -}}{{- $book = merge $book (dict "image" .Permalink) -}}{{- end -}}
+{{- with (partial "book-cover-resource.html" (dict "slug" .File.ContentBaseName "lang" .Lang)) -}}{{- $book = merge $book (dict "image" .Permalink) -}}{{- end -}}
 {{- with .Params.wikidata_qid -}}{{- $book = merge $book (dict "sameAs" (printf "https://www.wikidata.org/wiki/%s" .)) -}}{{- end -}}
 {{- /* Enrichissements factuels (aucune valeur inventée). Tous les livres ont un ISBN = édition imprimée. */ -}}
 {{- $book = merge $book (dict "bookFormat" "https://schema.org/Paperback") -}}
@@ -90,7 +91,7 @@
 {{- with .Params.pages -}}{{- $book = merge $book (dict "numberOfPages" .) -}}{{- end -}}
 {{- /* offers : rendu UNIQUEMENT si un prix réel est fourni en front matter (price + currency). Pas de prix => pas d'Offer (jamais de prix inventé). */ -}}
 {{- with .Params.price -}}
-  {{- $offerURL := or $.Params.url_amazon_fr $.Params.url_amazon_com -}}
+  {{- $offerURL := cond (eq $.Lang "en") (or $.Params.url_amazon_com $.Params.url_amazon_fr) (or $.Params.url_amazon_fr $.Params.url_amazon_com) -}}
   {{- $offer := dict
       "@type" "Offer"
       "price" (printf "%v" .)
