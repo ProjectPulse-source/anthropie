@@ -435,7 +435,7 @@ works:
     asin_kindle: "B0CW994YWH"
     asin_broche: "2958634701"
     license: ""  # à préciser
-    wikidata: ""  # à créer ou identifier
+    wikidata: "Q140517745"  # CANONIQUE recommandé — créé par Laura 2026-07-09 (item riche+correct : ISBN/672p/ASIN 2958634701/OpenLibrary OL45424544W/sous-titre, label « mots » minuscule, desc exacte). ⚠ DOUBLON préexistant Q138911600 (label « Mots » majuscule, chiffres périmés 4680/1380, ISBN seul) À FUSIONNER Q138911600 → Q140517745 (survivant = Q140517745). Consigne Laura : Wikidata/Fusion_Livresque_2026-07-16/README_LAURA.md. Re-confirmer après fusion.
     # ----- CHIFFRES CANONIQUES DU CORPUS — SOURCE UNIQUE -----
     # Toute prose chiffrée DOIT refléter ces valeurs : fiche Amazon, fiche A+,
     # content/livres/livresque-des-mots.md (description, description_en, corps),
