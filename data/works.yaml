@@ -21,12 +21,17 @@
 # =============================================================================
 
 meta:
-  registry_version: "1.8"
-  last_updated: "2026-07-08"
+  registry_version: "1.9"
+  last_updated: "2026-07-23"
   maintainer: "Stéphane Lalut"
-  total_works: 36
+  total_works: 37
   source_registry: "registre_soumissions_v73.xlsx"
   changelog:
+    v1_9: |
+      Ajout AWP-08 « La réversibilité sociale comme dimension de l'inégalité »
+      (2026-07-23) — dépôts Zenodo FR 10.5281/zenodo.21506320 + EN
+      10.5281/zenodo.21507249 (publiés le jour même), pages site awp-08 FR/EN,
+      hero sept→huit, réciprocité related awp-01/awp-07. total_works 36 → 37.
     v1_8: |
       Publication essai « La commune, variable d'ajustement de la République ? »
       (2026-07-08) — Revue Projet (revue). Entrée art-projet-municipales-2026-06
@@ -320,6 +325,34 @@ works:
       en: "https://stephane-lalut.com/en/awp/awp-07/"
     google_scholar: { visible: false, citations_observed: 0 }
     notes: "Clé de voûte théorique de la série — formalise la boucle anthropique (E1-E5, spirale, transmutation du retour, C3, règle d'arrêt) ; adossements Kapp / Georgescu-Roegen / Stiegler (homonymie assumée) / Beck ; JEL FR = EN (4 codes). Dépôt Zenodo intégralement via API, DOI pré-réservés."
+
+
+  - id: awp-08
+    type: awp
+    series: "Anthropie Working Papers"
+    series_number: 8
+    canonical_title:
+      fr: "La réversibilité sociale comme dimension de l'inégalité — Repli, mémoire institutionnelle et agenda de mesure"
+      en: "Social Reversibility as a Dimension of Inequality — Fallback, Institutional Memory, and a Measurement Agenda"
+    publication_date_fr: "2026-07-23"
+    publication_date_en: "2026-07-23"
+    license: "CC-BY 4.0"
+    abstract_short:
+      fr: "L'inégalité se mesure en niveaux et positions observés à une date, presque jamais en réversibilité : ce qu'une personne peut se permettre de rater sans fermeture durable de son avenir. AWP-08 définit la réversibilité sociale comme profil conditionnel d'options récupérables (repli × mémoire institutionnelle de l'échec), en propose une architecture de mesure et quatre familles de propositions pré-spécifiées, avec quatre terrains français de quasi-expériences."
+      en: "Inequality is measured through levels and positions observed at a date, almost never through reversibility: what a person can afford to fail without a lasting closure of options. AWP-08 defines social reversibility as a conditional profile of recoverable options (fallback × institutional memory of failure), proposes a measurement architecture and four pre-specified families of propositions, with four French quasi-experimental settings."
+    keywords:
+      fr: [réversibilité sociale, capacité de repli, mémoire institutionnelle, réadmission, complémentarité, inégalité]
+      en: [social reversibility, fallback capacity, institutional memory, readmission, complementarity, inequality]
+    jel_codes_fr: [D63, D81, I32, J62, D31, I38]
+    jel_codes_en: [D63, D81, I32, J62, D31, I38]
+    deposits:
+      zenodo_fr: { doi: "10.5281/zenodo.21506320", url: "https://doi.org/10.5281/zenodo.21506320", status: published, date: "2026-07-23" }
+      zenodo_en: { doi: "10.5281/zenodo.21507249", url: "https://doi.org/10.5281/zenodo.21507249", status: published, date: "2026-07-23" }
+    site_pages:
+      fr: "https://stephane-lalut.com/awp/awp-08/"
+      en: "https://stephane-lalut.com/en/awp/awp-08/"
+    google_scholar: { visible: false, citations_observed: 0 }
+    notes: "Working paper de cadre et d'agenda, 2e intention du livre « La société du premier coup » (en préparation). 7 contre-expertises externes + 3 audits croisés + referee de novo ; dépôt Zenodo via API, DOI pré-réservés ; EN isDerivedFrom FR. JEL FR = EN (6 codes)."
 
   # ===========================================================================
   # LIVRES (4)
