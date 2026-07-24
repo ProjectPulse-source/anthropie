@@ -59,4 +59,4 @@ The formalisation holds in nine definitions, five states, three conditions — t
 
 Formalisation is only worth its cost if it increases refutability. The paper fixes an ex ante protocol — naming the receptacle and the order of magnitude of the expected latency before the analysis — which disciplines both directions: the assertion of a displacement and the certification of an internalisation. One case external to the corpus, asbestos, is coded end to end as a test of the apparatus.
 
-The general concept is presented on the page [What is anthropy?](/en/quest-ce-que-lanthropie/); the full framework is developed in the book [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) (in French).
+An accessible presentation of the loop is available on the page [What is the anthropic loop?](/en/anthropic-loop/); the general concept on the page [What is anthropy?](/en/quest-ce-que-lanthropie/); the full framework is developed in the book [*ANTHROPY – A Big History of Civilization's Hidden Costs*](/en/livres/anthropie-ordre-ici-dette-ailleurs/) (2026, 632 p.).

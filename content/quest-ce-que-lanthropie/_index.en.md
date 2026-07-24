@@ -184,6 +184,8 @@ The framework does not provide a single answer to these questions. It provides a
 - [AWP-07 — *The Anthropic Loop*](/en/awp/awp-07/)
 - [AWP-08 — *Social Reversibility as a Dimension of Inequality*](/en/awp/awp-08/)
 
+Two pages extend the framework in English: [What is the anthropic loop?](/en/anthropic-loop/) and [What is social reversibility?](/en/social-reversibility/)
+
 ## The book
 
-The framework presented on this page is developed in full in the book [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) (622 pages, in French): seven historical configurations, the complete conceptual apparatus, and its contemporary applications. For the application to public finance, see [*Dette Publique&nbsp;: Qui paie vraiment&nbsp;?*](/livres/dette-publique-qui-paie-vraiment/) (in French).
+The framework presented on this page is developed in full in the book [*ANTHROPY – A Big History of Civilization's Hidden Costs*](/en/livres/anthropie-ordre-ici-dette-ailleurs/) (2026, 632 pages): seven historical configurations, the complete conceptual apparatus, and its contemporary applications. For the application to public finance, see [*Dette Publique&nbsp;: Qui paie vraiment&nbsp;?*](/livres/dette-publique-qui-paie-vraiment/) (in French).

@@ -71,7 +71,7 @@ Anthropy rests on a single hypothesis — social systems displace disorder rathe
 
 <div class="glossaire-entry" id="anthropic-loop">
 <dt>Anthropic loop (anthropic return)</dt>
-<dd>The return of displaced disorder toward the very capacity that made displacement possible: cognition. Cognitive externalisation — the tool, writing, then digital devices — extended transfers across space, time, and the social; in saturated form, disorder returns toward the concrete holds of cognition — captured attention, delegated judgement. Not a fourth axis of transfer, but a return. The complete loop — displacement, accumulation, saturation, return, re-displacement — is formalised in <a href="/en/awp/awp-07/">AWP-07</a>. See also <a href="/en/quest-ce-que-lanthropie/">What is anthropy?</a> and <a href="/en/awp/awp-06/">AWP-06</a>.</dd>
+<dd>The return of displaced disorder toward the very capacity that made displacement possible: cognition. Cognitive externalisation — the tool, writing, then digital devices — extended transfers across space, time, and the social; in saturated form, disorder returns toward the concrete holds of cognition — captured attention, delegated judgement. Not a fourth axis of transfer, but a return. The complete loop — displacement, accumulation, saturation, return, re-displacement — is presented on the page <a href="/en/anthropic-loop/">What is the anthropic loop?</a> and formalised in <a href="/en/awp/awp-07/">AWP-07</a>. See also <a href="/en/quest-ce-que-lanthropie/">What is anthropy?</a> and <a href="/en/awp/awp-06/">AWP-06</a>.</dd>
 </div>
 
 <div class="glossaire-entry" id="epistemic-order">
