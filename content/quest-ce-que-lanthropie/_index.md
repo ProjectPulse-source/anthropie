@@ -1,6 +1,6 @@
 ---
 title: "Qu'est-ce que l'anthropie ?"
-lastmod: 2026-07-05  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-07-24  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 description: "L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent."
 faq:
   - question: "Qu'est-ce que l'anthropie en sciences sociales ?"
@@ -11,6 +11,10 @@ faq:
     answer: "L'Anthropocène nomme une ère géologique — la trace que les sociétés humaines impriment dans la stratigraphie de la planète. L'anthropie nomme un mécanisme social : la manière dont ces sociétés produisent leurs ordres locaux en déplaçant le désordre. L'une est une marque, l'autre est un mécanisme — et le mécanisme précède la marque."
   - question: "Quelle est la différence entre l'anthropie et le principe anthropique ?"
     answer: "Aucune filiation : seul le radical grec est commun. Le principe anthropique est une thèse de cosmologie (Brandon Carter, 1973-1974) selon laquelle l'univers que nous observons est nécessairement compatible avec l'existence d'observateurs. L'anthropie, au sens de Stéphane Lalut, est un mécanisme social — le déplacement du désordre par les systèmes humains — et ne porte aucune affirmation sur l'univers physique."
+  - question: "Quelle est la différence entre anthropie et anthropologie ?"
+    answer: "L'anthropologie est une discipline — la science des sociétés humaines ; l'anthropologie économique en étudie les modes de production et d'échange. L'anthropie n'est pas une discipline mais une hypothèse en sciences sociales : les systèmes sociaux produisent de l'ordre local en déplaçant leur désordre. Seul le radical grec ánthrôpos est commun."
+  - question: "L'anthropie a-t-elle un lien avec la société Anthropic ?"
+    answer: "Aucun. Anthropic est une entreprise américaine d'intelligence artificielle ; l'anthropie est un concept de sciences sociales proposé par Stéphane Lalut — l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. Seule la racine grecque est commune."
   - question: "Stéphane Lalut a-t-il inventé le mot « anthropie » ?"
     answer: "Non. Le mot dérive du grec ánthrôpos et appartient à une famille lexicale ancienne (philanthropie, misanthropie) ; il a connu des usages antérieurs dispersés, le plus souvent par proximité avec l'entropie. Stéphane Lalut n'invente pas le mot : il en propose un usage conceptuel spécifique — l'hypothèse selon laquelle les systèmes sociaux produisent de l'ordre local en déplaçant leur désordre — stabilisée comme hypothèse opératoire en sciences sociales (livre ANTHROPIE, 2025 ; série AWP, 2026)."
   - question: "L'anthropie est-elle une théorie ou une hypothèse ?"
@@ -105,6 +109,16 @@ L'anthropie ne se confond pas non plus avec l'anthropisation.
 
 L'anthropisation désigne, en écologie et en géographie, la transformation des milieux naturels par l'action humaine&nbsp;: un paysage anthropisé est un paysage modifié par l'homme. L'anthropie ne décrit pas un état des milieux&nbsp;: elle désigne le mécanisme social par lequel un ordre local se maintient en exportant son désordre. L'anthropisation peut être l'une des traces de ce mécanisme&nbsp;; elle n'en est pas le concept.
 
+## Anthropie et anthropologie
+
+L'anthropie ne doit pas être confondue avec l'anthropologie — ni le cadre anthropique avec l'anthropologie économique.
+
+L'anthropologie est une discipline&nbsp;: la science des sociétés humaines, de leurs pratiques et de leurs représentations&nbsp;; l'anthropologie économique en étudie les modes de production et d'échange, de Marcel Mauss à Maurice Godelier. L'anthropie n'est pas une discipline mais une hypothèse&nbsp;: le déplacement du désordre par les systèmes sociaux. Elle peut être discutée par l'anthropologie, comme par l'économie ou la sociologie&nbsp;; elle ne s'y substitue pas. La proximité des mots tient au seul radical grec commun, *ánthrôpos*.
+
+## Anthropie et Anthropic
+
+L'anthropie n'a aucun rapport avec Anthropic, l'entreprise américaine d'intelligence artificielle. «&nbsp;Anthropie&nbsp;» est un terme conceptuel de sciences sociales&nbsp;; «&nbsp;Anthropic&nbsp;» est une marque commerciale. Les moteurs de recherche conduisent parfois vers l'une quand on cherche l'autre — seule la racine grecque est commune.
+
 ## La discipline du regard
 
 L'anthropie propose une posture analytique simple&nbsp;: devant tout ordre stable, demander où s'écoule le désordre.
@@ -153,6 +167,7 @@ Le cadre n'apporte pas une réponse unique à ces questions. Il fournit une mani
 - [AWP-05 — *Penser hors les murs*](/awp/awp-05/)
 - [AWP-06 — *Infrastructures numériques et dette technologique*](/awp/awp-06/)
 - [AWP-07 — *La boucle anthropique*](/awp/awp-07/)
+- [AWP-08 — *La réversibilité sociale comme dimension de l'inégalité*](/awp/awp-08/)
 
 Deux pages prolongent le cadre sur ses terrains d'application&nbsp;: [Qu'est-ce que la dette technologique&nbsp;?](/dette-technologique/) et [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/)
 

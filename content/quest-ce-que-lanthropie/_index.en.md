@@ -1,6 +1,6 @@
 ---
 title: "What is anthropy?"
-lastmod: 2026-07-05  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-07-24  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 # slug: est ignoré par Hugo sur les _index.md de section — l'URL réelle reste
 # /en/quest-ce-que-lanthropie/. Les alias ci-dessous réparent le 404 de
 # /en/what-is-anthropy/, référencée par Wikidata Q138827949 (P973, batch
@@ -22,6 +22,10 @@ faq:
     answer: "No. The word derives from the Greek ánthrōpos and belongs to an old lexical family (philanthropy, misanthropy); it has had scattered earlier uses, most often by proximity with entropy. Stéphane Lalut does not invent the word: he proposes a specific conceptual use of it — the hypothesis that social systems produce local order by displacing their disorder — stabilised as an operational hypothesis in social science (book ANTHROPIE, 2025; AWP series, 2026)."
   - question: "Is anthropy related to the Anthropy gathering in the UK?"
     answer: "No. In English, Anthropy is also the name of a British national gathering of leaders held annually since 2022. Anthropy in Stéphane Lalut's sense is an analytical hypothesis about how social systems displace disorder — only the word is shared."
+  - question: "What is the difference between anthropy and anthropology?"
+    answer: "Anthropology is a discipline — the science of human societies; economic anthropology studies their modes of production and exchange. Anthropy is not a discipline but a hypothesis in social science: social systems produce local order by displacing their disorder. Only the Greek root ánthrōpos is shared."
+  - question: "Is anthropy related to the AI company Anthropic?"
+    answer: "No. Anthropic is an American artificial-intelligence company; anthropy is a social-science concept proposed by Stéphane Lalut — the hypothesis that social systems displace disorder rather than resolve it. Only the Greek root is shared."
   - question: "Is anthropy a theory or a hypothesis?"
     answer: "A working hypothesis with heuristic value. It makes it possible to ask questions that other frameworks do not formulate, without claiming the exhaustiveness of a finished theory."
   - question: "What is the discipline of attention?"
@@ -116,6 +120,16 @@ Anthropy is not anthropization either.
 
 Anthropization designates, in ecology and geography, the transformation of natural environments by human action: an anthropized landscape is one modified by humans. Anthropy does not describe a state of environments: it designates the social mechanism by which a local order maintains itself by exporting its disorder. Anthropization may be one of the traces of that mechanism; it is not its concept.
 
+## Anthropy and anthropology
+
+Anthropy should not be confused with anthropology — nor the framework of anthropy with economic anthropology.
+
+Anthropology is a discipline: the science of human societies, their practices and their representations; economic anthropology studies their modes of production and exchange, from Marcel Mauss to Maurice Godelier. Anthropy is not a discipline but a hypothesis: the displacement of disorder by social systems. It can be discussed by anthropology, as by economics or sociology; it does not substitute for them. The proximity of the words comes solely from the shared Greek root, *ánthrōpos*.
+
+## Anthropy and Anthropic
+
+Anthropy has no connection with Anthropic, the American artificial-intelligence company. "Anthropy" is a conceptual term in social science; "Anthropic" is a commercial brand. Search engines sometimes lead to one when looking for the other — only the Greek root is shared.
+
 ## Anthropy and the British gathering of the same name
 
 In English, "Anthropy" is also the name of a British national gathering of leaders held annually since 2022. There is no connection: the gathering is an event; anthropy in Stéphane Lalut's sense is an analytical hypothesis about how social systems displace disorder. Only the word is shared.
@@ -168,6 +182,7 @@ The framework does not provide a single answer to these questions. It provides a
 - [AWP-05 — *Thinking outside the walls*](/en/awp/awp-05/)
 - [AWP-06 — *Digital Infrastructures and Technological Debt*](/en/awp/awp-06/)
 - [AWP-07 — *The Anthropic Loop*](/en/awp/awp-07/)
+- [AWP-08 — *Social Reversibility as a Dimension of Inequality*](/en/awp/awp-08/)
 
 ## The book
 
