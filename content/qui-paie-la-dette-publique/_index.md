@@ -2,6 +2,7 @@
 title: "Qui paie vraiment la dette publique ?"
 description: "La dette publique est payée par ceux qui n'ont pas voix au chapitre : les générations futures et les groupes qui ne peuvent se soustraire ni fiscalement ni géographiquement au prélèvement. Réponse mécanisme par mécanisme."
 date: 2026-07-04
+lastmod: 2026-07-24
 faq:
   - question: "La dette publique est-elle vraiment un problème ?"
     answer: "L'argument rassurant est sérieux : tant que la croissance dépasse le taux d'intérêt, le poids relatif de la dette peut se stabiliser sans effort budgétaire. Mais la question du volume masque celle de la répartition : même une dette « soutenable » organise des transferts — du futur vers le présent, des services publics vers les créanciers, des groupes captifs vers les groupes mobiles. Le problème n'est pas d'abord « combien », mais « qui paie, et qui a choisi »."
@@ -16,6 +17,8 @@ faq:
 À la question «&nbsp;qui paie vraiment la dette publique&nbsp;?&nbsp;», la réponse tient en une phrase&nbsp;: **ceux qui n'ont pas voix au chapitre** — les générations futures et les groupes sociaux les moins mobiles, ceux qui ne peuvent se soustraire ni fiscalement ni géographiquement au prélèvement.
 
 Le débat public discute la dette en volumes, en ratios, en soutenabilité — «&nbsp;combien&nbsp;?&nbsp;». Cette page déplace la question, avec le cadre de l'anthropie&nbsp;: la dette publique fonctionne comme un **mécanisme de transfert**, et un transfert a toujours des destinataires. Les voici, mécanisme par mécanisme.
+
+Cette page donne l'essentiel de la réponse — le livre [*Dette Publique&nbsp;: Qui paie vraiment&nbsp;?*](/livres/dette-publique-qui-paie-vraiment/) (2025, 224&nbsp;p.) la déploie avec les données&nbsp;: mécanique du transfert, créanciers invisibles, scénarios 2025-2035.
 
 ## Les générations futures — le transfert temporel
 
