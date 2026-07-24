@@ -22,11 +22,11 @@ Cette page donne l'essentiel de la réponse — le livre [*Dette Publique&nbsp;:
 
 ## Les générations futures — le transfert temporel
 
-La dette convertit un coût présent en charge future&nbsp;: ceux qui hériteront du désordre n'ont pas contracté l'emprunt. Cette charge prendra l'une de deux formes — des impôts plus lourds pour servir la dette, ou des services publics dégradés si on ne la sert pas — et le plus souvent un mélange des deux. Le transfert est d'autant plus efficace qu'il est invisible&nbsp;: personne ne vote «&nbsp;contre&nbsp;» les générations futures&nbsp;; on vote pour des budgets qui leur transmettent la facture.
+La dette convertit un coût présent en charge future&nbsp;: ceux qui hériteront du désordre n'ont pas contracté l'emprunt. Cette charge prendra l'une de deux formes — des impôts plus lourds pour servir la dette, ou des services publics dégradés si on ne la sert pas — et le plus souvent un mélange des deux. Le transfert est d'autant plus efficace qu'il est invisible&nbsp;: personne ne vote «&nbsp;contre&nbsp;» les générations futures&nbsp;; on vote pour des budgets qui leur transmettent la facture. L'objection classique — «&nbsp;on se la doit à nous-mêmes&nbsp;» — et sa réponse sont développées argument par argument sur la page [La dette publique est-elle un fardeau pour les générations futures&nbsp;?](/dette-publique-generations-futures/)
 
 ## Les groupes captifs — le transfert social
 
-Tous les contribuables ne sont pas égaux devant le prélèvement. Les ménages et les entreprises **mobiles** peuvent optimiser, délocaliser, arbitrer&nbsp;; les groupes **captifs** — salariés, retraités, usagers des services publics — ne le peuvent pas. Quand l'ajustement budgétaire arrive, il suit la ligne de moindre résistance&nbsp;: il frappe ceux qui ne peuvent pas partir. La dette ne choisit pas ses payeurs au hasard&nbsp;: elle les choisit captifs.
+Tous les contribuables ne sont pas égaux devant le prélèvement. Les ménages et les entreprises **mobiles** peuvent optimiser, délocaliser, arbitrer&nbsp;; les groupes **captifs** — salariés, retraités, usagers des services publics — ne le peuvent pas. Quand l'ajustement budgétaire arrive, il suit la ligne de moindre résistance&nbsp;: il frappe ceux qui ne peuvent pas partir. La dette ne choisit pas ses payeurs au hasard&nbsp;: elle les choisit captifs. Le canal territorial de ce transfert — l'État reporte sa contrainte sur les communes, qui la reportent sur leurs habitants — est analysé sur la page [Dette publique&nbsp;: pourquoi les collectivités locales sont-elles la variable d'ajustement&nbsp;?](/dette-publique-collectivites-locales/)
 
 ## Les créanciers — détenir n'est pas payer
 
