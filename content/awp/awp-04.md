@@ -49,7 +49,7 @@ L'extraction externalisée transfère le coût environnemental et social de la p
 
 Les déchets reportés transfèrent le coût temporellement. Les infrastructures renouvelables ont une durée de vie limitée — panneaux, batteries, éoliennes — et leur recyclage demeure largement non résolu. Le désordre est reporté vers les décennies à venir.
 
-L'effet rebond (paradoxe de Jevons) constitue un effet boomerang anthropique&nbsp;: l'amélioration de l'efficacité énergétique, au lieu de réduire la consommation, tend à l'augmenter. Le gain d'efficacité produit un ordre local (moins d'énergie par unité) mais génère un désordre global (plus de consommation totale).
+L'[effet rebond (paradoxe de Jevons)](/effet-rebond/) constitue un effet boomerang anthropique&nbsp;: l'amélioration de l'efficacité énergétique, au lieu de réduire la consommation, tend à l'augmenter. Le gain d'efficacité produit un ordre local (moins d'énergie par unité) mais génère un désordre global (plus de consommation totale).
 
 ## Au-delà de l'opposition binaire
 

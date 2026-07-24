@@ -61,7 +61,7 @@ L'anthropie repose sur une hypothèse unique — les systèmes sociaux déplacen
 
 <div class="glossaire-entry" id="effet-jevons">
 <dt>Effet Jevons (paradoxe de Jevons)</dt>
-<dd>L'amélioration de l'efficacité d'une ressource tend à augmenter sa consommation totale plutôt qu'à la réduire. Exemple d'effet boomerang anthropique. Le gain d'efficacité ne résout pas le désordre&nbsp;: il déplace le seuil de saturation, ce qui ouvre de nouveaux espaces de transfert et accélère la consommation globale. Voir <a href="/awp/awp-04/">AWP-04</a>.</dd>
+<dd>L'amélioration de l'efficacité d'une ressource tend à augmenter sa consommation totale plutôt qu'à la réduire. Exemple d'effet boomerang anthropique. Le gain d'efficacité ne résout pas le désordre&nbsp;: il déplace le seuil de saturation, ce qui ouvre de nouveaux espaces de transfert et accélère la consommation globale. Voir la page <a href="/effet-rebond/">Qu'est-ce que l'effet rebond&nbsp;?</a> et <a href="/awp/awp-04/">AWP-04</a>.</dd>
 </div>
 
 <div class="glossaire-entry" id="metaprogramme">
@@ -71,7 +71,7 @@ L'anthropie repose sur une hypothèse unique — les systèmes sociaux déplacen
 
 <div class="glossaire-entry" id="boucle-anthropique">
 <dt>Boucle anthropique (retour anthropique)</dt>
-<dd>Retour du désordre déplacé vers la capacité qui avait rendu le déplacement possible&nbsp;: la cognition. L'extériorisation cognitive — l'outil, l'écriture, puis les dispositifs numériques — a permis d'étendre les transferts dans l'espace, le temps et le social&nbsp;; sous forme saturée, le désordre revient vers les prises concrètes de la cognition — attention captée, jugement délégué. Il ne s'agit pas d'un quatrième axe de transfert, mais d'un retour. La boucle complète — déplacement, accumulation, saturation, retour, re-déplacement — est formalisée dans <a href="/awp/awp-07/">AWP-07</a>. Voir aussi <a href="/quest-ce-que-lanthropie/">Qu'est-ce que l'anthropie&nbsp;?</a> et <a href="/awp/awp-06/">AWP-06</a>.</dd>
+<dd>Retour du désordre déplacé vers la capacité qui avait rendu le déplacement possible&nbsp;: la cognition. L'extériorisation cognitive — l'outil, l'écriture, puis les dispositifs numériques — a permis d'étendre les transferts dans l'espace, le temps et le social&nbsp;; sous forme saturée, le désordre revient vers les prises concrètes de la cognition — attention captée, jugement délégué. Il ne s'agit pas d'un quatrième axe de transfert, mais d'un retour. La boucle complète — déplacement, accumulation, saturation, retour, re-déplacement — est présentée sur la page <a href="/boucle-anthropique/">Qu'est-ce que la boucle anthropique&nbsp;?</a> et formalisée dans <a href="/awp/awp-07/">AWP-07</a>. Voir aussi <a href="/quest-ce-que-lanthropie/">Qu'est-ce que l'anthropie&nbsp;?</a> et <a href="/awp/awp-06/">AWP-06</a>.</dd>
 </div>
 
 <div class="glossaire-entry" id="ordre-epistemique">

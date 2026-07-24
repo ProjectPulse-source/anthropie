@@ -75,7 +75,7 @@ Dans le métaprogramme numérique contemporain, les trois axes atteignent un ré
 
 {{< boucle-anthropique >}}
 
-Cette boucle — déplacement, accumulation, saturation, retour, re-déplacement — est formalisée dans [AWP-07 — *La boucle anthropique*](/awp/awp-07/), qui en donne les définitions, les états et les conditions de réfutation.
+Cette boucle — déplacement, accumulation, saturation, retour, re-déplacement — est présentée sur la page [Qu'est-ce que la boucle anthropique&nbsp;?](/boucle-anthropique/) et formalisée dans [AWP-07 — *La boucle anthropique*](/awp/awp-07/), qui en donne les définitions, les états et les conditions de réfutation.
 
 ## Anthropie et entropie
 
@@ -169,7 +169,7 @@ Le cadre n'apporte pas une réponse unique à ces questions. Il fournit une mani
 - [AWP-07 — *La boucle anthropique*](/awp/awp-07/)
 - [AWP-08 — *La réversibilité sociale comme dimension de l'inégalité*](/awp/awp-08/)
 
-Deux pages prolongent le cadre sur ses terrains d'application&nbsp;: [Qu'est-ce que la dette technologique&nbsp;?](/dette-technologique/) et [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/)
+Plusieurs pages prolongent le cadre sur ses terrains d'application&nbsp;: [Qu'est-ce que la dette technologique&nbsp;?](/dette-technologique/), [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/), [Qu'est-ce que l'effet rebond&nbsp;?](/effet-rebond/), [Qu'est-ce que la boucle anthropique&nbsp;?](/boucle-anthropique/) et [Qu'est-ce que la réversibilité sociale&nbsp;?](/reversibilite-sociale/)
 
 ## Le livre
 

@@ -59,4 +59,4 @@ La formalisation tient en neuf définitions, cinq états, trois conditions — d
 
 La formalisation n'a de valeur que si elle augmente la réfutabilité. Le papier fixe un protocole ex ante — nommer le réceptacle et l'ordre de grandeur de la latence avant l'analyse — qui discipline les deux sens&nbsp;: l'affirmation d'un déplacement et la certification d'une internalisation. Un cas externe au corpus, l'amiante, est codé de bout en bout comme test de l'appareil.
 
-Le concept général est présenté sur la page [Qu'est-ce que l'anthropie&nbsp;?](/quest-ce-que-lanthropie/)&nbsp;; le cadre complet est développé dans le livre [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/).
+Une présentation accessible de la boucle est disponible sur la page [Qu'est-ce que la boucle anthropique&nbsp;?](/boucle-anthropique/)&nbsp;; le concept général sur la page [Qu'est-ce que l'anthropie&nbsp;?](/quest-ce-que-lanthropie/)&nbsp;; le cadre complet est développé dans le livre [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/).
