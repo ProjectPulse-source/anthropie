@@ -55,7 +55,7 @@ Pour l'amoureux de la langue et des formules, le lecteur qui aime ouvrir un livr
 
 ## Sans classement, à lire comme un roman
 
-«&nbsp;Anthologie de citations sans classement&nbsp;»&nbsp;: la formule décrit exactement le parti pris de *Livresque des mots* — {{< stat "citations" >}} citations, {{< stat "auteurs" >}} voix, sans ordre thématique, alphabétique ni chronologique. Le recueil se lit comme un roman&nbsp;: on avance de page en page, et le sens naît du voisinage. Qu'y trouve-t-on qu'on ne trouve ni dans les recueils classés ni sur les sites de citations&nbsp;? La rencontre qu'aucune recherche par mot-clé n'aurait produite — une réplique de cinéma à côté d'un moraliste, une chanson à côté d'un philosophe — et une curation d'auteur&nbsp;: quarante ans de lectures, une voix qui choisit.
+«&nbsp;Anthologie de citations sans classement&nbsp;»&nbsp;: la formule décrit exactement le parti pris de *Livresque des mots* — {{< stat "citations" >}} citations, {{< stat "auteurs" >}} voix, sans ordre thématique, alphabétique ni chronologique. Le recueil se lit comme un roman&nbsp;: on avance de page en page, et le sens naît du voisinage. Qu'y trouve-t-on qu'on ne trouve ni dans les recueils classés ni sur les sites de citations&nbsp;? La rencontre qu'aucune recherche par mot-clé n'aurait produite — une réplique de cinéma à côté d'un moraliste, une chanson à côté d'un philosophe — et une curation d'auteur&nbsp;: quarante ans de lectures, une voix qui choisit. Les chiffres exacts du corpus, leur histoire d'une édition à l'autre et la méthode de sélection sont détaillés sur la page [Méthode et corpus](/livresque/methode-et-corpus/).
 
 ## Offrir ce livre
 
