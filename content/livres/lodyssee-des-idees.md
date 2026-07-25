@@ -4,7 +4,7 @@ promo_slug: "odyssee-des-idees"  # clé D1/books.toml pour /ressources-offertes 
 subtitle: "Culture, philosophie et science — de l'aube de l'humanité à l'intelligence artificielle"
 description: "De l'aube de l'humanité à l'intelligence artificielle, 250 escales — œuvres, vies, inventions, crises, instants de bascule — et sept parcours relient les penseurs par-delà les siècles. Non pas un défilé chronologique, mais un réseau. Un instrument de curiosité, pas un réservoir de certitudes."
 date: 2026-07-03
-lastmod: 2026-07-09  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-07-25  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 isbn: "978-2-9586347-4-2"
 amazon_rating: 4.4       # note moyenne Amazon.fr — relevé 2026-07-10 (MAJ ~mensuelle, relecture Chrome)
 amazon_reviews: 161      # nb d'avis Amazon.fr ; omettre les 2 champs = pas d'étoiles sur /ressources-offertes
@@ -72,6 +72,8 @@ On peut lire ce livre page après page, comme une traversée chronologique. On p
 7. La condition humaine
 
 696 pages, un index, une bibliographie de cœur, sept cartes. Pour qui veut comprendre le monde sans renoncer à penser.
+
+Le premier de ces chemins — «&nbsp;Les signes&nbsp;» — a sa traversée sur le site&nbsp;: [Comment l'écriture a-t-elle transformé la pensée&nbsp;?](/comment-lecriture-a-transforme-la-pensee/)
 
 ## Pour qui&nbsp;?
 
