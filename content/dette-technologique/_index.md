@@ -2,6 +2,7 @@
 title: "Qu'est-ce que la dette technologique ?"
 description: "La dette technologique désigne le coût des infrastructures numériques — énergie, matière, territoire, attention — transformé en dette par des mécanismes d'engagement. À ne pas confondre avec la « dette technique » du génie logiciel."
 date: 2026-07-04
+lastmod: 2026-07-26
 faq:
   - question: "Quelle est la différence entre dette technologique et dette technique ?"
     answer: "La dette technique est une notion de génie logiciel : l'accumulation de compromis de conception dans un programme, qui rend son évolution de plus en plus coûteuse. La dette technologique, au sens de Stéphane Lalut (AWP-06, 2026), est un mécanisme économique et politique : le coût des infrastructures numériques — énergie, matière, territoire, attention — transformé en dette par des engagements de long terme. L'une est une propriété du code ; l'autre, une propriété du système économique."
@@ -39,7 +40,7 @@ Les data centers rendent le mécanisme visible. Leur promesse est immatérielle 
 
 {{< canonical-definition >}}
 
-La dette technologique est l'application de cette hypothèse aux infrastructures numériques&nbsp;: le numérique n'a pas allégé la matière, il l'a déplacée — dans l'espace (extraction, territoires d'accueil), dans le temps (engagements, équipements à démanteler) et vers l'attention. La définition courte est disponible dans le [glossaire](/glossaire/#dette-technologique)&nbsp;; l'analyse voisine de la transition énergétique dans [AWP-04](/awp/awp-04/).
+La dette technologique est l'application de cette hypothèse aux infrastructures numériques&nbsp;: le numérique n'a pas allégé la matière, il l'a déplacée — dans l'espace (extraction, territoires d'accueil), dans le temps (engagements, équipements à démanteler) et vers l'attention. La définition courte est disponible dans le [glossaire](/glossaire/#dette-technologique)&nbsp;; l'analyse voisine de la transition énergétique dans [AWP-04](/awp/awp-04/)&nbsp;; et ce que deviennent ces infrastructures en fin de vie — un héritage partagé dont personne ne veut — sur la page [Qu'est-ce que les communs négatifs&nbsp;?](/communs-negatifs/)
 
 ## Questions fréquentes
 

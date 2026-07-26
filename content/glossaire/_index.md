@@ -101,7 +101,7 @@ L'anthropie repose sur une hypothèse unique — les systèmes sociaux déplacen
 
 <div class="glossaire-entry" id="communs-negatifs">
 <dt>Communs négatifs</dt>
-<dd>Catégorie introduite par Alexandre Monnin pour désigner ce dont nous héritons sans avoir choisi&nbsp;: déchets, ruines, infrastructures obsolètes. Les communs négatifs ne sont pas des biens partagés volontairement, mais des charges transmises&nbsp;— un transfert anthropique cristallisé dans la matérialité du monde. AWP-06 range les technologies numériques parmi les communs négatifs candidats. Voir <a href="/awp/awp-06/">AWP-06</a>.</dd>
+<dd>Catégorie introduite par Alexandre Monnin pour désigner ce dont nous héritons sans avoir choisi&nbsp;: déchets, ruines, infrastructures obsolètes. Les communs négatifs ne sont pas des biens partagés volontairement, mais des charges transmises&nbsp;— un transfert anthropique cristallisé dans la matérialité du monde. AWP-06 range les technologies numériques parmi les communs négatifs candidats. Voir la page <a href="/communs-negatifs/">Qu'est-ce que les communs négatifs&nbsp;?</a> et <a href="/awp/awp-06/">AWP-06</a>.</dd>
 </div>
 
 <div class="glossaire-entry" id="registres-de-couts-couples">
