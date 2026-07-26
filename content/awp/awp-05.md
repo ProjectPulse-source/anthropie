@@ -55,3 +55,5 @@ Zenodo permet de déposer un texte avec un DOI permanent, sans passer par le fil
 ## L'anthropie appliquée à elle-même
 
 Ce texte constitue un exercice réflexif&nbsp;: appliquer le cadre anthropique au champ dans lequel il cherche à s'inscrire. Si l'anthropie est juste, elle doit pouvoir rendre compte de sa propre position marginale — non comme un accident, mais comme le produit d'un mécanisme de transfert identifiable.
+
+Le versant pratique — comment un chercheur indépendant publie des travaux citables&nbsp;: DOI, identifiants, préprints, exigences de méthode — est présenté sur la page [Chercheur indépendant&nbsp;: travailler et publier hors institution](/chercheur-independant/).
