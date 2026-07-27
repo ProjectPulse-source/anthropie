@@ -11,7 +11,7 @@ amazon_reviews: 82       # nb d'avis Amazon.fr ; omettre les 2 champs = pas d'é
 description_en: "An anthology that refuses alphabetical and thematic order in favour of the surprise of unexpected encounters. {citations} quotations, {auteurs} voices, 25 centuries of human genius woven along a subtle thread. Forty years of literary passion, offering not a classification but a journey."
 price: "36"  # prix broché EUR — affiché sur la page + schema.org Offer
 serie: "autres-ouvrages"
-weight: 3
+weight: 4
 # Liens canoniques /dp/<ASIN broché 2958634701> — jamais de shortener amzn.eu/a.co
 # (l'ancien CA réutilisait le shortener FR — corrigé 2026-06-04).
 url_amazon_fr: "https://www.amazon.fr/dp/2958634701"

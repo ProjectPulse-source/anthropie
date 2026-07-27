@@ -12,7 +12,7 @@ pages: 696  # sync data/works.yaml (book-lodyssee-des-idees.pages) — nombre de
 description_en: "From the dawn of humanity to artificial intelligence, 250 ports of call — works, lives, inventions, crises, tipping points — and seven itineraries connect thinkers across the centuries. Not a chronological parade but a network. An instrument of curiosity, not a reservoir of certainties."
 price: "36"  # prix broché EUR — affiché sur la page + schema.org Offer
 serie: "autres-ouvrages"
-weight: 4
+weight: 3
 wikidata_qid: "Q138911733"
 # Liens canoniques /dp/<ASIN broché 2958634744> — jamais de shortener amzn.eu/a.co
 # (nouvelle édition 2026, ISBN 978-2-9586347-4-2 ; l'ancien broché 295863471X est dépublié).
