@@ -70,11 +70,15 @@ Nommer l'objet **précis** contestable pour CE destinataire, pas un « si le cad
 - Titres d'ouvrages en *italique* (HTML `<i>`) ; titres d'articles entre « guillemets ».
 - Le convertisseur texte→HTML doit injecter ces insécables automatiquement. (Idéal : fine insécable U+202F avant `; ! ?` ; en pratique `&nbsp;` partout, pour un rendu fiable en messagerie et par cohérence avec le site.)
 
-## 8. Adresses — règles
+## 8. Adresses — règles (v2, 2026-07-31 — statuts alignés sur le module radar-contacts et son dictionnaire, qui fait foi pour le vocabulaire)
 
-- **Ne JAMAIS fabriquer une adresse** ni la déduire d'un pattern non confirmé. Lire l'adresse sur une page primaire, noter l'URL source.
-- Statuts : **GO** (adresse lue sur source institutionnelle fiable) · **GO prudent** (source secondaire : site perso, snapshot d'archive, gmail, adresse reconstruite/obfusquée — à re-vérifier au navigateur) · **HOLD** (aucune adresse exploitable — image anti-spam, formulaire, relais).
-- Pour une adresse incertaine en canal principal (ex. gmail), ajouter en note finale une formule sobre demandant l'adresse institutionnelle actuelle.
+- **Ne JAMAIS fabriquer une adresse** ni la déduire d'un pattern non confirmé. Lire l'adresse sur une page primaire, noter l'URL source. (`INFÉRÉE_*` = HOLD, sans exception.)
+- Statuts d'action et conduite associée :
+  - **GO_DIRECT** — adresse nominative lue sur source primaire actuelle, porte humaine passée → envoi manuel ou piloté après approbation auteur ;
+  - **GO_INDIRECT_OFFICIEL** — formulaire, portail de soumission, adresse fonctionnelle publiée (`livres@`, `opinions@`) : **voie prescrite par l'institution, pleinement légitime — ce n'est pas un repli dégradé** ;
+  - **GO_PRUDENT** — adresse vue sur source secondaire actuelle (site perso, gmail, adresse obfusquée reconstituée) → **brouillon manuel uniquement**, re-vérifier au navigateur ; en note finale, formule sobre demandant l'adresse institutionnelle actuelle ;
+  - **HOLD / HOLD_À_REVALIDER** (adresse vue seulement en archive) **/ HOLD_SANS_VOIE_EXPLOITABLE** — **aucune fabrication de message adressé à cet endpoint, aucun brouillon, aucune mise en file**. Utiliser la voie officielle de repli.
+- Mémoire inter-campagnes : consulter AVANT tout ciblage et tout envoi les registres du module radar-contacts (`_secrets\radar-contacts\` du control plane) — `REGISTRE_EVENEMENTS.csv` (exclusion : `next_contact_allowed_at`, envois programmés via `scheduled_at`) et `REGISTRE_OPPOSITION.csv` (liste repoussoir durable ; un bounce invalide l'endpoint, pas la personne ; la portée d'une opposition est celle du verbatim).
 
 ## 9. Mécanique d'envoi — Outlook (retenu) ou Gmail
 
@@ -87,7 +91,7 @@ Nommer l'objet **précis** contestable pour CE destinataire, pas un « si le cad
   - ⛔ **Envoi différé natif INUTILISABLE (constat dur, vérifié 07/07 sur compte outlook.fr).** Un item créé avec `.DeferredDeliveryTime` + `.Send()` reste dans la boîte d'envoi et **NE PART JAMAIS SEUL** une fois l'heure passée (ni synchro auto, ni F9, ni `SyncObjects.Start()`) ; le bit SUBMIT ne persiste pas. **Ne pas se fier au différé.**
   - ✅ **Seul motif fiable : PILOTER activement chaque envoi à son heure** — à l'instant T, retrouver l'item, **effacer la propriété de différé** (`PropertyAccessor.DeleteProperty('http://schemas.microsoft.com/mapi/proptag/0x3FEF0040')`), puis `.Save()` + `.Send()` + `SyncObjects.Start()`, et **vérifier le passage en « Éléments envoyés »**. Réf. scripts : `sender_wed_thu.ps1` (pilote multi-jours horodaté), `flush_outbox.ps1` (flush des échus, double-clic manuel).
   - ⚠ **Correspondance de l'item (piège vérifié 09/07)** : un pilote qui retrouve l'item par sous-chaîne DOIT matcher sur un **token unique de l'adresse réelle** (`.To`), **jamais sur le patronyme supposé** — une cible a été sautée car son adresse était à initiales (type `xy00@univ.ac.uk`), sans le patronyme. Construire la table de cibles depuis les adresses réelles ; **contrôle de fin : boîte d'envoi = 0** (tout résidu = cible non matchée à rattraper).
-  - Règle de sûreté : **piloter les adresses GO sûres, laisser en brouillon-manuel les GO prudent/HOLD** (évite un envoi auto vers une adresse douteuse). ⚠ Outlook doit rester **OUVERT** à l'heure d'envoi.
+  - Règle de sûreté (alignée §8 v2) : **piloter uniquement les GO_DIRECT/GO_INDIRECT_OFFICIEL approuvés ; GO_PRUDENT = brouillon manuel uniquement ; HOLD* = aucun brouillon, aucune mise en file.** Rien ne part sans approbation auteur explicite de la version exacte ; aucune modification après approbation ; jamais de relance autonome. ⚠ Outlook doit rester **OUVERT** à l'heure d'envoi.
 - **Rythme** : 2-3 (max 4) mails/jour, français d'abord si demandé. Jamais de CC. **Pas de relance automatique** ; relance unique éventuelle fin août pour les silences (surtout Scandinavie/été), jamais de 2ᵉ.
 - Gmail (repli) : brouillons via MCP `create_draft` — mais le token expire (à ré-autoriser) et l'identité d'expéditeur du compte connecté peut être inadaptée. Outlook + alias au nom de l'auteur est préférable pour une campagne académique.
 
@@ -113,4 +117,5 @@ Nommer l'objet **précis** contestable pour CE destinataire, pas un « si le cad
 
 ## 12. Journal d'amélioration (à enrichir à chaque campagne)
 
+- **2026-07-31 (module radar-contacts, V3)** — La découverte et la qualification des cibles (toutes familles : presse, académique, enseignants, syndicats, politiques nationaux/régionaux/locaux, instances) sont couvertes par le module `radar-contacts` du control plane (`00000-LIVRES\_CONTROL_PLANE_CHAINE_EDITORIALE\modules\radar-contacts\` — `RADAR_CONTACTS_V4.md` (V4.1) + dictionnaire v3.1, quatre contre-expertises externes intégrées ; gate temporel TEMPORAL_FIT ; contrat intermodule dans `CONTRATS_INTERMODULES.md`). Le radar remet des **opportunités de diffusion** qualifiées (vecteur d'intérêt, action attendue, route) ; **la présente doctrine reste l'autorité d'envoi**. Le §8 est passé en v2 (statuts GO_DIRECT / GO_INDIRECT_OFFICIEL / GO_PRUDENT / HOLD* ; adresse jamais vue = HOLD sans exception ; HOLD = aucun brouillon). Mémoire inter-campagnes : registres du module (`REGISTRE_EVENEMENTS.csv`, `REGISTRE_OPPOSITION.csv` durable, `REGISTRE_APPRENTISSAGE.csv`). NB : le gabarit de message §4-§6 est propre au profil ACADÉMIQUE ; les profils ARTICLE / SERVICE_DE_PRESSE restent à écrire avant tout pilote presse.
 - **2026-07 (AWP-07)** — Établissement de la doctrine. Apprentissages : (1) la disponibilité (émérite) est un axe distinct du statut, à ne pas écraser par « nouvelle trouvaille → septembre » ; (2) vérifier la citation dans le PDF, pas l'école (Elsner/Ramazzotti = concept, pas citation) ; (3) router vers la page AWP, pas la page-pont ni Zenodo ; (4) clôture ciblée >> générique ; (5) exactitude+cohérence œuvre↔AWP = facteur de survie du mail ; (6) Outlook COM + alias > Gmail MCP (identité, pas de token à ré-autoriser) ; (7) UTF-8 obligatoire pour corps/sujets lus par PS 5.1.
