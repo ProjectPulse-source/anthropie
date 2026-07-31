@@ -69,4 +69,15 @@ Vous pouvez exercer vos droits en répondant au message reçu ou par la
 [page Contact](/contact/). Vous pouvez également adresser une réclamation à la
 [CNIL](https://www.cnil.fr).
 
+## Dispositif «&nbsp;Ressources offertes&nbsp;» {#ressources-offertes}
+
+Lorsque vous demandez un exemplaire offert sur la page Ressources offertes, un
+identifiant aléatoire est enregistré dans votre navigateur (jusqu'à la suppression des
+données du site) afin d'éviter l'attribution de plusieurs exemplaires. Lorsqu'un
+exemplaire est attribué, cet identifiant et le livre choisi sont conservés sur notre
+infrastructure technique (Cloudflare) pendant la durée du dispositif, puis supprimés au
+plus tard trois mois après sa clôture. Cet identifiant ne contient ni votre nom ni
+votre adresse électronique. Il s'agit d'une mesure strictement nécessaire à la
+fourniture du service demandé&nbsp;; vos droits s'exercent comme indiqué ci-dessus.
+
 *Dernière mise à jour&nbsp;: 31 juillet 2026.*

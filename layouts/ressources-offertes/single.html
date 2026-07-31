@@ -34,13 +34,13 @@
           </a>
           {{ if and $book.Params.amazon_rating $book.Params.amazon_reviews }}
           {{ $note := replace (printf "%.1f" $book.Params.amazon_rating) "." "," }}
-          <p class="ressources-book__rating" aria-label="Note moyenne {{ $note }} sur 5 — {{ $book.Params.amazon_reviews }} avis Amazon">
-            <span class="ressources-book__stars" aria-hidden="true">★</span><span class="ressources-book__rating-score">{{ $note }}</span><span class="ressources-book__rating-count"> · {{ $book.Params.amazon_reviews }}&nbsp;avis&nbsp;Amz</span>
+          <p class="ressources-book__rating" aria-label="Note moyenne {{ $note }} sur 5 — {{ $book.Params.amazon_reviews }} avis sur Amazon.fr">
+            <span class="ressources-book__stars" aria-hidden="true">★</span><span class="ressources-book__rating-score">{{ $note }}/5</span><span class="ressources-book__rating-count"> · {{ $book.Params.amazon_reviews }}&nbsp;avis sur&nbsp;Amazon.fr</span>
           </p>
           {{ end }}
         </div>
         <div class="ressources-book__body">
-          {{ with $book.Params.pages }}<p class="ressources-book__meta">Édition Kindle · {{ . }} pages (version brochée)</p>{{ end }}
+          {{ with $book.Params.pages }}<p class="ressources-book__meta">Édition Kindle · Édition brochée&nbsp;: {{ . }} pages</p>{{ end }}
 
           <div class="ressources-book__obtain">
             <p class="ressources-book__state" data-role="state">Vérification du stock…</p>
@@ -51,9 +51,8 @@
           </div>
 
           <div class="ressources-book__assigned" hidden>
-            <p class="ressources-book__state ressources-book__state--ok">Vous avez choisi un livre.</p>
-            <p class="ressources-assigned-msg">Votre exemplaire Kindle prépayé a été
-            attribué. Amazon.fr s'est ouvert dans un nouvel onglet.</p>
+            <p class="ressources-book__state ressources-book__state--ok">Votre exemplaire vous a été attribué.</p>
+            <p class="ressources-assigned-msg">Amazon.fr s'est ouvert dans un nouvel onglet.</p>
             <a class="ressources-btn ressources-btn--outline ressources-assigned-link" href="#" target="_blank" rel="noopener">Rouvrir le lien Amazon.fr</a>
           </div>
 
@@ -77,11 +76,13 @@
     <div class="ressources-legal__block">
       <h2 class="ressources-kicker">Confidentialité</h2>
       <p>Pour éviter l'attribution de plusieurs exemplaires, un identifiant aléatoire
-      est généré dans votre navigateur au moment où vous demandez un exemplaire, puis
-      enregistré avec l'attribution sur notre infrastructure technique (Cloudflare),
-      le temps du fonctionnement du dispositif. Il ne permet pas de vous identifier
-      nominativement. Détails et droits&nbsp;:
-      <a href="{{ "/transparence-contacts/" | relLangURL }}">transparence et données</a>.</p>
+      est enregistré dans votre navigateur jusqu'à la suppression des données du site.
+      Lorsqu'un exemplaire est attribué, cet identifiant et le livre choisi sont
+      conservés sur notre infrastructure technique (Cloudflare) pendant la durée du
+      dispositif, puis supprimés au plus tard trois mois après sa clôture. Cet
+      identifiant ne contient ni votre nom ni votre adresse électronique. Détails et
+      droits&nbsp;:
+      <a href="{{ "/transparence-contacts/" | relLangURL }}#ressources-offertes">transparence et données</a>.</p>
     </div>
   </section>
 

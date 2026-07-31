@@ -15,11 +15,11 @@ _build:
 
 *ANTHROPIE – Ordre ici. Dette ailleurs* développe l'hypothèse selon laquelle les
 systèmes sociaux ne suppriment pas le désordre&nbsp;: ils le déplacent vers d'autres
-lieux, d'autres temps ou d'autres groupes sociaux. En 622 pages et sept âges
-historiques — de l'outil paléolithique aux infrastructures numériques —, le livre suit
-ce mécanisme à travers l'histoire longue, l'économie et les finances publiques.
+lieux, d'autres temps ou d'autres groupes sociaux. Sur 622 pages et à travers sept
+âges historiques, de l'outil paléolithique aux infrastructures numériques, le livre
+suit ce mécanisme dans l'histoire longue, l'économie et les finances publiques.
 
 Cet exemplaire numérique est **déjà financé**&nbsp;: une part des ventes sert à
 transmettre le livre à de nouveaux lecteurs.
 
-Aucune contrepartie n'est demandée — ni avis, ni inscription. Lisez, jugez.
+Aucune contrepartie n'est demandée — ni avis, ni inscription. **Lisez. Jugez.**

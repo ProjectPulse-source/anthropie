@@ -75,15 +75,15 @@
                    absence des 2 champs = pas d'étoiles (évite la preuve sociale inversée sur un titre peu noté). */ -}}
             {{ if and .Params.amazon_rating .Params.amazon_reviews }}
             {{ $note := replace (printf "%.1f" .Params.amazon_rating) "." "," }}
-            <p class="ressources-book__rating" aria-label="Note moyenne {{ $note }} sur 5 — {{ .Params.amazon_reviews }} avis Amazon">
-              <span class="ressources-book__stars" aria-hidden="true">★</span><span class="ressources-book__rating-score">{{ $note }}</span><span class="ressources-book__rating-count"> · {{ .Params.amazon_reviews }}&nbsp;avis&nbsp;Amz</span>
+            <p class="ressources-book__rating" aria-label="Note moyenne {{ $note }} sur 5 — {{ .Params.amazon_reviews }} avis sur Amazon.fr">
+              <span class="ressources-book__stars" aria-hidden="true">★</span><span class="ressources-book__rating-score">{{ $note }}/5</span><span class="ressources-book__rating-count"> · {{ .Params.amazon_reviews }}&nbsp;avis sur&nbsp;Amazon.fr</span>
             </p>
             {{ end }}
           </div>
           <div class="ressources-book__body">
             <h3>{{ .Title }}</h3>
             {{ with .Params.subtitle }}<p class="ressources-book__subtitle">{{ partial "fr-typo.html" . }}</p>{{ end }}
-            {{ with .Params.pages }}<p class="ressources-book__meta">Édition Kindle · {{ . }} pages (version brochée)</p>{{ end }}
+            {{ with .Params.pages }}<p class="ressources-book__meta">Édition Kindle · Édition brochée&nbsp;: {{ . }} pages</p>{{ end }}
             {{ with .Description }}<p class="ressources-book__resume">{{ partial "fr-typo.html" (partial "desc-figures.html" (dict "text" . "isbn" $isbn)) }}</p>{{ end }}
             <a class="ressources-book__readmore" href="{{ .RelPermalink }}">Lire plus</a>
 
@@ -162,11 +162,13 @@
       transmettez l'invitation. Les boutons de transmission ouvrent votre propre
       messagerie, copient un message ou utilisent les fonctions de partage de votre
       appareil. Pour éviter l'attribution de plusieurs exemplaires, un identifiant
-      aléatoire est généré dans votre navigateur au moment où vous demandez un
-      exemplaire, puis enregistré avec l'attribution sur notre infrastructure technique
-      (Cloudflare), le temps du fonctionnement du dispositif. Il ne permet pas de vous
-      identifier nominativement. Détails et droits&nbsp;:
-      <a href="{{ "/transparence-contacts/" | relLangURL }}">transparence et données</a>.</p>
+      aléatoire est enregistré dans votre navigateur jusqu'à la suppression des
+      données du site&nbsp;; lorsqu'un exemplaire est attribué, cet identifiant et le
+      livre choisi sont conservés sur notre infrastructure technique (Cloudflare)
+      pendant la durée du dispositif, puis supprimés au plus tard trois mois après sa
+      clôture. Cet identifiant ne contient ni votre nom ni votre adresse électronique.
+      Détails et droits&nbsp;:
+      <a href="{{ "/transparence-contacts/" | relLangURL }}#ressources-offertes">transparence et données</a>.</p>
     </div>
   </section>
 
