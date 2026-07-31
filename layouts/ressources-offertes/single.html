@@ -29,7 +29,9 @@
     <div class="ressources-books">
       <article class="ressources-book" data-book="{{ $promo }}">
         <div class="ressources-book__aside">
-          <a href="{{ $book.RelPermalink }}" class="ressources-book__emblem" aria-hidden="true" tabindex="-1">
+          {{- /* Les liens qui sortent de la page d'invitation ouvrent un NOUVEL
+                 onglet : le visiteur ne perd jamais la page ni son attribution. */ -}}
+          <a href="{{ $book.RelPermalink }}" target="_blank" rel="noopener" class="ressources-book__emblem" aria-hidden="true" tabindex="-1">
             {{ partial "book-cover.html" (dict "slug" $slug "alt" $book.Title "wrapClass" "ressources-book__cover" "sizes" "200px") }}
           </a>
           {{ if and $book.Params.amazon_rating $book.Params.amazon_reviews }}
@@ -57,9 +59,9 @@
           </div>
 
           <p class="ressources-book__links">
-            <a class="ressources-book__readmore" href="{{ $book.RelPermalink }}">Fiche complète du livre</a>
+            <a class="ressources-book__readmore" href="{{ $book.RelPermalink }}" target="_blank" rel="noopener">Fiche complète du livre <span aria-hidden="true">↗</span></a>
             &nbsp;·&nbsp;
-            <a class="ressources-book__readmore" href="{{ "/ressources-offertes/" | relLangURL }}">Tous les livres du dispositif</a>
+            <a class="ressources-book__readmore" href="{{ "/ressources-offertes/" | relLangURL }}" target="_blank" rel="noopener">Tous les livres du dispositif <span aria-hidden="true">↗</span></a>
           </p>
         </div>
       </article>
@@ -69,6 +71,21 @@
       Vous pouvez aussi <a href="{{ "/contact/" | relLangURL }}">me contacter</a> pour
       recevoir votre exemplaire.</p>
     </noscript>
+  </section>
+
+  {{/* Transmission — la circulation est le cœur du dispositif (registre lecteur) */}}
+  <section class="ressources-transmit">
+    <div class="ressources-transmit__inner">
+      <h2 class="ressources-kicker">Faire circuler ce livre</h2>
+      <p>Vous pensez à quelqu'un que ce livre pourrait intéresser&nbsp;? Transmettez-lui
+      cette page — le message est prêt. Aucune adresse n'est saisie ni conservée sur ce
+      site.</p>
+      <div class="ressources-transmit__buttons">
+        <button class="ressources-btn" id="ro-single-copy" type="button">Copier l'invitation</button>
+        <button class="ressources-btn ressources-btn--outline" id="ro-single-whatsapp" type="button">WhatsApp</button>
+        <button class="ressources-btn ressources-btn--outline" id="ro-single-mail" type="button">Envoyer par e-mail</button>
+      </div>
+    </div>
   </section>
 
   {{/* Confidentialité — même information que la page mère, condensée */}}
@@ -89,5 +106,42 @@
 </article>
 
 <div class="ressources-toast" id="ro-toast" role="status" aria-live="polite"></div>
+
+<script>
+(function () {
+  // Transmission de la page du livre — même règle absolue que la page mère :
+  // le partage ne véhicule QUE l'URL de la page, jamais un lien Kindle prépayé.
+  var PAGE_URL = {{ .Permalink | jsonify }};
+  var TITLE = {{ $book.Title | jsonify }};
+  var MAIL_SUBJECT = "Un livre vous est offert : " + TITLE;
+  var BODY = "Bonjour,\n\n" +
+    "Je vous transmets cette invitation : un exemplaire Kindle prépayé de « " + TITLE + " » est proposé, déjà financé, sans paiement ni contrepartie.\n\n" +
+    PAGE_URL + "\n\n" +
+    "Un compte Amazon.fr est nécessaire. Les liens sont individuels, à usage unique, attribués dans la limite du stock disponible.";
+  var toastTimer;
+  function toast(msg) {
+    var el = document.getElementById("ro-toast");
+    if (!el) return;
+    el.textContent = msg;
+    el.classList.add("is-visible");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { el.classList.remove("is-visible"); }, 4000);
+  }
+  document.getElementById("ro-single-copy").addEventListener("click", function () {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(BODY).then(function () { toast("Invitation copiée. Vous pouvez la transmettre librement."); });
+    }
+  });
+  document.getElementById("ro-single-whatsapp").addEventListener("click", function () {
+    window.open("https://wa.me/?text=" + encodeURIComponent(BODY), "_blank", "noopener");
+    toast("WhatsApp s'ouvre avec l'invitation prête à envoyer.");
+  });
+  document.getElementById("ro-single-mail").addEventListener("click", function () {
+    window.location.href = "mailto:?subject=" + encodeURIComponent(MAIL_SUBJECT)
+      + "&body=" + encodeURIComponent(BODY.replace(/\n/g, "\r\n"));
+    toast("Votre messagerie s'ouvre avec l'invitation prête à envoyer.");
+  });
+})();
+</script>
 {{ partial "ressources-guichet-script.html" . }}
 {{ end }}
