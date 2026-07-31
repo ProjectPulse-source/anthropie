@@ -301,6 +301,20 @@
   gap: 11px;
 }
 
+// Variante page par livre : le bloc transmission perd la carte (fond, ombre,
+// 760px) et s'aligne sur la largeur du bloc livre, avec le même filet accentué
+// que les blocs Garanties — cohérence verticale image / transmission / confidentialité.
+.ressources-transmit--single {
+  margin: 48px 0 8px;
+  .ressources-transmit__inner {
+    background: none;
+    box-shadow: none;
+    padding: 16px 0 0;
+    max-width: none;
+    border-top: 2px solid var(--color-accent-rule);
+  }
+}
+
 // ----- Garanties -----
 .ressources-legal {
   display: grid;
@@ -314,6 +328,11 @@
   padding-top: 16px;
   .ressources-kicker { color: var(--color-accent); }
   p { font-size: var(--fs-small); color: var(--color-text-muted); }
+}
+// Variante page par livre : un seul bloc => pleine largeur (pas de colonne 1/3).
+.ressources-legal--single {
+  grid-template-columns: 1fr;
+  .ressources-legal__block p { max-width: 72ch; }
 }
 
 // ----- Contact -----
