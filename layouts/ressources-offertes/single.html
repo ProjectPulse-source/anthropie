@@ -1,0 +1,92 @@
+{{ define "main" }}
+{{- /* Page par livre (pilote — arbitrage 31/07). Support LECTEUR / ENSEIGNANT /
+       TIERS-PRESCRIPTEUR uniquement : la presse passe par courriel + fiche
+       /livres/ + exemplaire sur demande, jamais par cette page. Même régime que
+       la page mère (noindex, hors sitemap, URL servie sur invitation) ; même
+       guichet Worker (partial ressources-guichet-script.html) ; toutes les
+       données du livre viennent de /livres/<slug> (source unique). */ -}}
+{{ $slug := .Params.livre }}
+{{ if not $slug }}{{ errorf "ressources-offertes/%s : front matter sans champ `livre`" .File.Path }}{{ end }}
+{{ $book := site.GetPage (printf "/livres/%s" $slug) }}
+{{ if not $book }}{{ errorf "ressources-offertes : /livres/%s introuvable" $slug }}{{ end }}
+{{ $promo := $book.Params.promo_slug }}
+{{ if not $promo }}{{ errorf "ressources-offertes : /livres/%s sans promo_slug" $slug }}{{ end }}
+<article class="home-section ressources ressources--single">
+
+  <header class="page-header">
+    <p class="ressources-eyebrow">Ressources offertes — un exemplaire pour vous</p>
+    <h1 class="page-header__title">{{ $book.Title }}</h1>
+    {{ with $book.Params.subtitle }}<p class="ressources-tagline">{{ partial "fr-typo.html" . }}</p>{{ end }}
+  </header>
+
+  {{/* Texte dédié (corps du .md — registre lecteur, jamais la description de la fiche) */}}
+  <div class="ressources-intro ressources-single__text">
+    {{ .Content }}
+  </div>
+
+  {{/* Guichet — même markup que la page mère, restreint à ce livre */}}
+  <section class="ressources-catalogue">
+    <div class="ressources-books">
+      <article class="ressources-book" data-book="{{ $promo }}">
+        <div class="ressources-book__aside">
+          <a href="{{ $book.RelPermalink }}" class="ressources-book__emblem" aria-hidden="true" tabindex="-1">
+            {{ partial "book-cover.html" (dict "slug" $slug "alt" $book.Title "wrapClass" "ressources-book__cover" "sizes" "200px") }}
+          </a>
+          {{ if and $book.Params.amazon_rating $book.Params.amazon_reviews }}
+          {{ $note := replace (printf "%.1f" $book.Params.amazon_rating) "." "," }}
+          <p class="ressources-book__rating" aria-label="Note moyenne {{ $note }} sur 5 — {{ $book.Params.amazon_reviews }} avis Amazon">
+            <span class="ressources-book__stars" aria-hidden="true">★</span><span class="ressources-book__rating-score">{{ $note }}</span><span class="ressources-book__rating-count"> · {{ $book.Params.amazon_reviews }}&nbsp;avis&nbsp;Amz</span>
+          </p>
+          {{ end }}
+        </div>
+        <div class="ressources-book__body">
+          {{ with $book.Params.pages }}<p class="ressources-book__meta">Édition Kindle · {{ . }} pages (version brochée)</p>{{ end }}
+
+          <div class="ressources-book__obtain">
+            <p class="ressources-book__state" data-role="state">Vérification du stock…</p>
+            <button class="ressources-btn ressources-book__cta" type="button" disabled>Obtenir mon exemplaire Kindle prépayé</button>
+            <p class="ressources-btn-note" data-role="note">Un clic vous attribue ce livre
+            et ouvre Amazon.fr — compte Amazon.fr requis, aucun paiement. Un seul
+            exemplaire offert par lecteur.</p>
+          </div>
+
+          <div class="ressources-book__assigned" hidden>
+            <p class="ressources-book__state ressources-book__state--ok">Vous avez choisi un livre.</p>
+            <p class="ressources-assigned-msg">Votre exemplaire Kindle prépayé a été
+            attribué. Amazon.fr s'est ouvert dans un nouvel onglet.</p>
+            <a class="ressources-btn ressources-btn--outline ressources-assigned-link" href="#" target="_blank" rel="noopener">Rouvrir le lien Amazon.fr</a>
+          </div>
+
+          <p class="ressources-book__links">
+            <a class="ressources-book__readmore" href="{{ $book.RelPermalink }}">Fiche complète du livre</a>
+            &nbsp;·&nbsp;
+            <a class="ressources-book__readmore" href="{{ "/ressources-offertes/" | relLangURL }}">Tous les livres du dispositif</a>
+          </p>
+        </div>
+      </article>
+    </div>
+    <noscript>
+      <p class="ressources-noscript">L'attribution automatique nécessite JavaScript.
+      Vous pouvez aussi <a href="{{ "/contact/" | relLangURL }}">me contacter</a> pour
+      recevoir votre exemplaire.</p>
+    </noscript>
+  </section>
+
+  {{/* Confidentialité — même information que la page mère, condensée */}}
+  <section class="ressources-legal">
+    <div class="ressources-legal__block">
+      <h2 class="ressources-kicker">Confidentialité</h2>
+      <p>Pour éviter l'attribution de plusieurs exemplaires, un identifiant aléatoire
+      est généré dans votre navigateur au moment où vous demandez un exemplaire, puis
+      enregistré avec l'attribution sur notre infrastructure technique (Cloudflare),
+      le temps du fonctionnement du dispositif. Il ne permet pas de vous identifier
+      nominativement. Détails et droits&nbsp;:
+      <a href="{{ "/transparence-contacts/" | relLangURL }}">transparence et données</a>.</p>
+    </div>
+  </section>
+
+</article>
+
+<div class="ressources-toast" id="ro-toast" role="status" aria-live="polite"></div>
+{{ partial "ressources-guichet-script.html" . }}
+{{ end }}

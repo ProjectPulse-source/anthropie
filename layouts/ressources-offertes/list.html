@@ -1,8 +1,10 @@
 {{ define "main" }}
-{{- /* Page sur invitation (noindex, hors sitemap). Distribution PILOTÉE :
-       la demande passe par /contact/, le lien Kindle prépayé part ensuite
-       par e-mail personnel. AUCUN lien Amazon prépayé sur cette page —
-       les fonctions de partage ne véhiculent que l'URL de la page. */ -}}
+{{- /* Page sur invitation (noindex, hors sitemap). Attribution DIRECTE par
+       Worker Cloudflare (guichet — voir partials/ressources-guichet-script.html,
+       composant unique partagé avec les pages par livre single.html) : le lien
+       Kindle prépayé est retourné au clic, pour ce visiteur, une seule fois.
+       AUCUN lien Amazon prépayé dans le HTML — les fonctions de partage ne
+       véhiculent que l'URL de la page. Fallback sans JS : /contact/. */ -}}
 <article class="home-section ressources">
 
   {{/* ── 1. Principe ── */}}
@@ -159,8 +161,12 @@
       <p>Ce site ne collecte pas les adresses e-mail des personnes auxquelles vous
       transmettez l'invitation. Les boutons de transmission ouvrent votre propre
       messagerie, copient un message ou utilisent les fonctions de partage de votre
-      appareil. Les éventuelles données techniques liées à l'attribution d'un exemplaire
-      sont limitées au fonctionnement du dispositif.</p>
+      appareil. Pour éviter l'attribution de plusieurs exemplaires, un identifiant
+      aléatoire est généré dans votre navigateur au moment où vous demandez un
+      exemplaire, puis enregistré avec l'attribution sur notre infrastructure technique
+      (Cloudflare), le temps du fonctionnement du dispositif. Il ne permet pas de vous
+      identifier nominativement. Détails et droits&nbsp;:
+      <a href="{{ "/transparence-contacts/" | relLangURL }}">transparence et données</a>.</p>
     </div>
   </section>
 
@@ -251,149 +257,7 @@
       + "&text=" + encodeURIComponent(TELEGRAM_TEXT), "_blank", "noopener");
     toast("Telegram s'ouvre avec l'invitation prête à envoyer.");
   });
-
-  /* ─────────── Guichet d'attribution directe (Worker Cloudflare) ───────────
-     Le HTML ne contient AUCUN lien Amazon avant attribution : le lien est
-     retourné par le Worker au clic, pour ce seul visiteur, une seule fois.
-     Contrôle proportionné (un seul livre par lecteur) : identifiant technique
-     localStorage + verrou serveur (index UNIQUE côté D1). Fail-closed :
-     guichet fermé, stock vide ou réseau KO => « momentanément indisponibles ».*/
-  var WORKER = "https://gift-guichet.stephane-lalut.workers.dev";
-  var UNAVAIL = "Exemplaires momentanément indisponibles.";
-  var GENERR = "Impossible d'attribuer un lien pour le moment. Réessayez plus tard.";
-  var claimed = false;
-
-  function visitorId() {
-    var v = localStorage.getItem("ro-visitor");
-    if (!v) {
-      v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID()
-        : (Date.now() + "-" + Math.random().toString(36).slice(2));
-      v = v.replace(/[^A-Za-z0-9_-]/g, "").slice(0, 40);
-      localStorage.setItem("ro-visitor", v);
-    }
-    return v;
-  }
-  function setState(article, msg) {
-    var el = article.querySelector('[data-role="state"]');
-    if (!el) return;
-    el.textContent = msg || "";
-    el.hidden = !msg;
-  }
-  function books() { return document.querySelectorAll(".ressources-book"); }
-
-  function setAssignedLink(book, url) {
-    books().forEach(function (article) {
-      if (article.getAttribute("data-book") !== book) return;
-      var link = article.querySelector(".ressources-assigned-link");
-      if (!link) return;
-      if (url) { link.href = url; link.hidden = false; }
-      else { link.hidden = true; }
-    });
-  }
-  function applyClaimed(claim) {
-    claimed = true;
-    books().forEach(function (article) {
-      var b = article.getAttribute("data-book");
-      var obtain = article.querySelector(".ressources-book__obtain");
-      var assigned = article.querySelector(".ressources-book__assigned");
-      if (b === claim.book) {
-        if (obtain) obtain.hidden = true;
-        if (assigned) {
-          var link = assigned.querySelector(".ressources-assigned-link");
-          // On n'affiche le lien QUE si on l'a en main (claim frais). Au retour,
-          // il est ré-obtenu par reclaim() — jamais persisté en clair côté client.
-          if (link) { if (claim.url) { link.href = claim.url; link.hidden = false; } else { link.hidden = true; } }
-          assigned.hidden = false;
-        }
-      } else {
-        var cta = article.querySelector(".ressources-book__cta");
-        if (cta) { cta.disabled = true; cta.textContent = "Vous avez déjà reçu un exemplaire offert."; }
-        var note = article.querySelector('[data-role="note"]');
-        if (note) note.hidden = true;
-        setState(article, "");
-      }
-    });
-  }
-  // Retour d'un visiteur : re-obtient son lien via le Worker (idempotent par
-  // invite_code — même lien, jamais un second) pour peupler « Rouvrir ».
-  function reclaim(book) {
-    applyClaimed({ book: book, url: null });
-    fetch(WORKER + "/claim", {
-      method: "POST", cache: "no-store",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ book: book, visitor: visitorId() }),
-    })
-      .then(function (r) { return r.json(); })
-      .then(function (j) { if (j && j.ok && j.url) setAssignedLink(book, j.url); })
-      .catch(function () {});
-  }
-
-  function fetchStock() {
-    fetch(WORKER + "/stock", { cache: "no-store" })
-      .then(function (r) { return r.json(); })
-      .then(function (j) {
-        books().forEach(function (article) {
-          var b = article.getAttribute("data-book");
-          var avail = j && j.ok && j.stock && j.stock[b] === true;
-          var cta = article.querySelector(".ressources-book__cta");
-          if (avail) { if (cta) cta.disabled = false; setState(article, ""); }
-          else { if (cta) cta.disabled = true; setState(article, UNAVAIL); }
-        });
-      })
-      .catch(function () {
-        books().forEach(function (article) {
-          var cta = article.querySelector(".ressources-book__cta");
-          if (cta) cta.disabled = true;
-          setState(article, UNAVAIL);
-        });
-      });
-  }
-
-  function onObtain(article, cta) {
-    if (claimed) return;
-    var book = article.getAttribute("data-book");
-    cta.disabled = true;
-    // Ouvre l'onglet SYNCHRONEMENT (geste utilisateur) pour éviter le blocage
-    // de pop-up ; on lui donnera l'URL une fois le Worker répondu.
-    var win = window.open("about:blank", "_blank");
-    if (win) { try { win.opener = null; } catch (e) {} }
-    fetch(WORKER + "/claim", {
-      method: "POST", cache: "no-store",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ book: book, visitor: visitorId() }),
-    })
-      .then(function (r) { return r.json().then(function (j) { return { status: r.status, j: j }; }); })
-      .then(function (res) {
-        if (res.j && res.j.ok && res.j.url) {
-          if (win) { win.location = res.j.url; } else { window.open(res.j.url, "_blank", "noopener"); }
-          // On ne persiste QUE le livre choisi, jamais l'URL en clair.
-          try { localStorage.setItem("ro-claim", JSON.stringify({ book: book })); } catch (e) {}
-          applyClaimed({ book: book, url: res.j.url });
-          toast("Votre exemplaire Kindle prépayé a été attribué. Amazon.fr s'est ouvert dans un nouvel onglet.");
-        } else {
-          if (win) win.close();
-          var msg = res.status === 409 ? UNAVAIL : GENERR;
-          setState(article, msg);
-          toast(msg);
-        }
-      })
-      .catch(function () {
-        if (win) win.close();
-        cta.disabled = false;
-        toast(GENERR);
-      });
-  }
-
-  books().forEach(function (article) {
-    var cta = article.querySelector(".ressources-book__cta");
-    if (cta) cta.addEventListener("click", function () { onObtain(article, cta); });
-  });
-
-  // Retour d'un visiteur ayant déjà choisi : on rétablit son état sans appel réseau.
-  var stored = null;
-  try { stored = JSON.parse(localStorage.getItem("ro-claim") || "null"); } catch (e) {}
-  if (stored && stored.book) { reclaim(stored.book); }
-  else { fetchStock(); }
 })();
 </script>
+{{ partial "ressources-guichet-script.html" . }}
 {{ end }}
