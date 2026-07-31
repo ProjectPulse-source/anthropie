@@ -1,48 +1,72 @@
 ---
 title: "Contacts professionnels — transparence et données"
-description: "Comment et pourquoi vos coordonnées professionnelles publiques peuvent être utilisées pour une prise de contact, et comment vous y opposer."
+description: "Comment et pourquoi vos coordonnées professionnelles publiques peuvent être utilisées pour une prise de contact individualisée, et comment vous y opposer."
 draft: false
 ---
 
 ## Pourquoi vous avez peut-être reçu un message
 
-Dans le cadre de mes travaux (livres, *Anthropie Working Papers*, articles), il m'arrive
-d'écrire à des professionnels — journalistes, chercheurs, enseignants, responsables de
-rubrique, élus ou institutions — dont le travail est en lien direct avec un texte, une
-donnée ou un ouvrage que je leur signale ou leur propose.
+Dans le cadre de mes livres, articles et *Anthropie Working Papers*, il m'arrive
+d'écrire individuellement à des professionnels — journalistes, chercheurs, enseignants,
+responsables éditoriaux, élus ou institutions — lorsque leur activité présente un lien
+direct avec le texte, la donnée, la ressource ou l'ouvrage signalé.
 
-## Responsable
+Ces messages sont adressés en faible nombre, sans achat de fichiers ni envoi de masse.
 
-Stéphane Lalut, économiste — chercheur indépendant. ORCID&nbsp;:
-[0009-0002-1794-4895](https://orcid.org/0009-0002-1794-4895). Contact&nbsp;: via la
-[page contact](/contact/).
+## Responsable du traitement
 
-## Quelles données, d'où viennent-elles
+Stéphane Lalut, économiste — chercheur indépendant.
+ORCID&nbsp;: [0009-0002-1794-4895](https://orcid.org/0009-0002-1794-4895).
 
-Uniquement des données professionnelles **publiques**&nbsp;: identité, fonction,
-institution, adresse professionnelle et publications, telles qu'elles figurent sur les
-pages officielles des médias, universités, laboratoires, revues, annuaires
-institutionnels ou publications signées. Aucune donnée privée n'est recherchée ni
-conservée&nbsp;; aucune adresse n'est achetée ni déduite.
+Vous pouvez me contacter en répondant au message reçu ou par la
+[page Contact](/contact/) du site.
 
-## Pour quelle finalité, sur quelle base
+## Données utilisées et sources
 
-Correspondance professionnelle individualisée&nbsp;: proposition éditoriale, service de
-presse, signalement d'un travail en lien avec votre activité, échange scientifique.
-Base juridique&nbsp;: intérêt légitime (article 6.1.f du RGPD), le message étant lié à
-votre fonction. Aucun envoi de masse, aucun profilage, aucune cession de données à des
-tiers.
+Seules les informations professionnelles nécessaires à la prise de contact sont
+utilisées&nbsp;: identité, fonction, institution, adresse professionnelle publiée,
+travaux ou activités en rapport avec le message, ainsi qu'un historique minimal des
+échanges.
 
-## Combien de temps
+Ces informations proviennent de sources professionnelles accessibles au public&nbsp;:
+sites institutionnels, médias, universités, laboratoires, revues, annuaires officiels
+ou publications signées.
 
-Les dossiers de recherche sont supprimés ou re-vérifiés au-delà de 90 jours.
-L'historique de correspondance est conservé le temps du suivi éditorial. Si vous
-demandez à ne plus être contacté, cette demande est conservée durablement (au moins
-trois ans), sous forme minimisée, à seule fin de la respecter.
+Aucune adresse privée n'est recherchée, achetée ou déduite d'une convention supposée.
+
+## Finalités et base juridique
+
+Ces données servent uniquement à adresser une correspondance professionnelle
+individualisée&nbsp;: proposition éditoriale, service de presse, signalement d'un
+travail documenté, échange scientifique ou partage d'une ressource.
+
+Le traitement repose sur mon intérêt légitime à faire connaître des travaux
+susceptibles d'être utiles à l'activité professionnelle du destinataire, conformément
+à l'article 6, paragraphe 1, point f du RGPD.
+
+Aucune décision produisant un effet juridique ou significatif n'est prise
+automatiquement. Les données ne sont ni vendues ni communiquées à des tiers pour leurs
+propres usages.
+
+## Conservation
+
+Les dossiers préparatoires sont supprimés au plus tard après 90 jours. L'historique
+minimal des échanges est conservé pendant la durée nécessaire à leur suivi.
+
+En cas d'opposition, une information minimisée est conservée pendant au moins trois
+ans, uniquement afin d'éviter tout nouveau contact.
 
 ## Vos droits
 
-Vous pouvez à tout moment demander l'accès, la rectification ou l'effacement de vos
-données, et **vous opposer à tout nouveau contact** — une simple réponse « ne plus me
-contacter » suffit et sera respectée définitivement. Voies de recours&nbsp;: la
+Vous pouvez demander l'accès, la rectification, l'effacement ou la limitation du
+traitement de vos données.
+
+Vous pouvez vous opposer à tout moment à un nouveau contact. Une simple réponse
+«&nbsp;ne plus me contacter&nbsp;» suffit. Une donnée minimale peut alors être
+conservée exclusivement pour respecter cette demande.
+
+Vous pouvez exercer vos droits en répondant au message reçu ou par la
+[page Contact](/contact/). Vous pouvez également adresser une réclamation à la
 [CNIL](https://www.cnil.fr).
+
+*Dernière mise à jour&nbsp;: 31 juillet 2026.*
