@@ -7,6 +7,9 @@ Rend EXÉCUTABLE la checklist d'assurance de couverture :
   3. chaque maille (section racine avec FAQ) est-elle fraîche (lastmod), maillée
      vers un hub (lien sortant /awp/ ou /livres/) et dotée d'une FAQ ?
   4. chaque publication est-elle rattachée (champ related non vide) ?
+  5. miroir EN : mêmes contrôles 1-3 sur le graphe /en/ EXISTANT (.en.md).
+     Mesure ce qui existe, n'exige jamais de page EN nouvelle — l'asymétrie
+     FR/EN est un choix éditorial (« adapter, pas traduire », intent_matrix).
 
 Rapport informatif : exit 0 toujours — les absences ACTÉES vivent dans
 NASSE_GEO_ETENDUE.md (hors dépôt), l'arbitrage reste humain.
@@ -141,8 +144,76 @@ def main() -> int:
     else:
         print("  ok   toutes rattachées")
 
+    warn += check_en_coverage(today)
+
     print(f"\nBilan : {warn} signal(aux). Les absences ACTÉES (avec leur raison) vivent dans NASSE_GEO_ETENDUE.md — comparer avant d'agir.")
     return 0
+
+
+def check_en_coverage(today: date) -> int:
+    """[5] Miroir EN des contrôles 1-3, restreint aux pages .en.md existantes."""
+    pages = {}
+    # Sections racines EN — URL = `url:` du front matter si présent, sinon /en/<section>/
+    for f in sorted(CONTENT.glob("*/_index.en.md")):
+        text = f.read_text(encoding="utf-8")
+        fm = front_matter(text)
+        url = norm(fm_value(fm, "url") or f"/en/{f.parent.name}/")
+        pages[url] = dict(file=f, fm=fm, body=text,
+                          faq=bool(re.search(r"^faq:", fm, re.M)),
+                          lastmod=parse_date(fm_value(fm, "lastmod") or fm_value(fm, "date")),
+                          section=f.parent.name)
+    awp, livres = {}, {}
+    for f in sorted((CONTENT / "awp").glob("awp-*.en.md")):
+        slug = f.name[:-len(".en.md")]
+        awp[norm(f"/en/awp/{slug}/")] = f
+        pages[norm(f"/en/awp/{slug}/")] = dict(file=f, body=f.read_text(encoding="utf-8"))
+    for f in sorted((CONTENT / "livres").glob("*.en.md")):
+        if f.name.startswith("_"):
+            continue
+        slug = f.name[:-len(".en.md")]
+        livres[norm(f"/en/livres/{slug}/")] = f
+        pages[norm(f"/en/livres/{slug}/")] = dict(file=f, body=f.read_text(encoding="utf-8"))
+
+    inbound: dict[str, set[str]] = {}
+    for src_url, page in pages.items():
+        for m in LINK_RE.finditer(page["body"]):
+            tgt = norm(m.group(1) or m.group(2))
+            inbound.setdefault(tgt, set()).add(src_url)
+
+    warn = 0
+    print("\n[5] Miroir EN (pages .en.md existantes — l'asymétrie FR/EN reste un choix acté)")
+    for url in sorted(awp):
+        srcs = {s for s in inbound.get(url, set()) if not s.startswith("/en/awp/")}
+        if not srcs:
+            warn += 1
+            print(f"  WARN {url} : aucune porte EN hors section AWP")
+        else:
+            print(f"  ok   {url} <- {len(srcs)} porte(s)")
+    for url in sorted(livres):
+        srcs = {s for s in inbound.get(url, set()) if not s.startswith("/en/livres/")}
+        if not srcs:
+            warn += 1
+            print(f"  WARN {url} : aucune porte EN hors /en/livres/")
+        else:
+            print(f"  ok   {url} <- {len(srcs)} porte(s)")
+    for url, p in sorted(pages.items()):
+        if "section" not in p or p["section"] in UTILITY or p["section"] in ("awp", "livres", "publications"):
+            continue
+        if not p.get("faq"):
+            continue
+        age = (today - p["lastmod"]).days if p.get("lastmod") else None
+        out_hub = bool(re.search(r"\((/en/awp/|/en/livres/|/en/books/|/en/serie-awp/)", p["body"]))
+        flags = []
+        if age is None or age > FRESHNESS_DAYS:
+            flags.append(f"lastmod {age if age is not None else '?'} j")
+        if not out_hub:
+            flags.append("aucun lien sortant vers un hub EN (/en/awp/, /en/livres/, /en/books/, /en/serie-awp/)")
+        if flags:
+            warn += 1
+            print(f"  WARN {url} : " + " ; ".join(flags))
+        else:
+            print(f"  ok   {url} (lastmod {age} j)")
+    return warn
 
 
 if __name__ == "__main__":
