@@ -1,6 +1,11 @@
 ---
 title: "Publications"
 description: "Articles and contributions by Stéphane Lalut in the press and reviews."
+og_image: "images/og-publications.en.jpg"
+og_image_alt: "Publications — Reviews & articles. Order here. Debt elsewhere."
+cascade:
+  og_image: "images/og-publications.en.jpg"
+  og_image_alt: "Publications — Reviews & articles. Order here. Debt elsewhere."
 ---
 
 This page brings together publications that have appeared in the intellectual press and in social science journals. They extend, in shorter formats, the theoretical work developed in the *Anthropie Working Papers* and in the books in the series. What holds them together is less a matter of genre — critical reviews, public interventions, current-affairs analyses — than a shared discipline of attention: returning, each time, to the question that dominant analytical frameworks sidestep or neutralise. Not *how much* a public policy costs, but *who* bears the cost. Not *whether* a transition is taking place, but *onto whom* the disorder it claims to resolve is displaced. Not *whether* an economic assessment is positive, but *under what conditions of invisibility* it remains so.

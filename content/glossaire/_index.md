@@ -1,6 +1,8 @@
 ---
 title: "Glossaire"
 description: "Glossaire des termes clés du cadre anthropique."
+og_image: "images/og-glossaire.jpg"
+og_image_alt: "Glossaire — Anthropie. On ne crée pas l'ordre, on déplace le désordre."
 ---
 
 Ce glossaire rassemble les termes propres au cadre anthropique. Il ne s'agit pas d'un dictionnaire général : chaque entrée désigne un concept forgé ou réapproprié dans le cadre de l'hypothèse anthropique, et n'a de sens précis que dans ce contexte théorique. Les définitions renvoient aux *Anthropie Working Papers* qui les formalisent et au livre [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) qui les déploie sur l'ensemble du cadre.

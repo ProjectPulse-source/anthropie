@@ -1,6 +1,13 @@
 ---
 title: "Publications"
 description: "Articles et contributions de Stéphane Lalut dans la presse et les revues."
+og_image: "images/og-publications.jpg"
+og_image_alt: "Publications — Recensions & articles. On ne crée pas l'ordre, on déplace le désordre."
+# cascade : les fiches de la section héritent de la carte og (une fiche peut
+# poser son propre og_image en front matter pour l'emporter sur l'héritage).
+cascade:
+  og_image: "images/og-publications.jpg"
+  og_image_alt: "Publications — Recensions & articles. On ne crée pas l'ordre, on déplace le désordre."
 ---
 
 Cette page rassemble les publications parues dans la presse intellectuelle et les revues de sciences sociales. Elles prolongent, dans des formats plus courts, le travail théorique développé dans les *Anthropie Working Papers* et les ouvrages de la série. Leur unité tient moins au genre — recensions critiques, textes d'intervention, articles de conjoncture — qu'à une même discipline du regard : remonter, chaque fois, à la question que les cadres d'analyse dominants évitent ou neutralisent. Non pas *combien* coûte une politique publique, mais *qui* en porte le coût. Non pas *si* une transition a lieu, mais *vers qui* se déplace le désordre qu'elle prétend résoudre. Non pas *si* un bilan économique est positif, mais *à quelles conditions d'invisibilité* il le reste.

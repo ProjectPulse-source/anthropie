@@ -1,6 +1,8 @@
 ---
 title: "Glossary"
 description: "Key terms of the anthropic framework."
+og_image: "images/og-glossaire.en.jpg"
+og_image_alt: "Glossary — Anthropy. Order here. Debt elsewhere."
 ---
 
 This glossary brings together the terms specific to the anthropic framework. It is not a general dictionary: each entry designates a concept coined or repurposed within the framework of the anthropic hypothesis, and carries its precise meaning only in that theoretical context. Definitions refer to the *Anthropie Working Papers* that formalise them and to the book [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) (in French) that develops them across the full scope of the framework.
