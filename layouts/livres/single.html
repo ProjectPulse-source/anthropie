@@ -82,7 +82,24 @@
        publication (fraîcheur légère GEO-04 — jamais de fausse fraîcheur). */ -}}
 {{- if ne .Lastmod .Date -}}{{- $book = merge $book (dict "dateModified" (.Lastmod.Format "2006-01-02")) -}}{{- end -}}
 {{- with .Params.isbn -}}{{- $book = merge $book (dict "isbn" .) -}}{{- end -}}
-{{- with (partial "book-cover-resource.html" (dict "slug" .File.ContentBaseName "lang" .Lang)) -}}{{- $book = merge $book (dict "image" .Permalink) -}}{{- end -}}
+{{- /* image : ImageObject complet (dims réelles + crédit) plutôt qu'une URL nue —
+       équivalent structured-data des métadonnées IPTC, sans toucher au binaire.
+       L'URL reste le permalink stable /images/livres/<slug>.jpg. */ -}}
+{{- with (partial "book-cover-resource.html" (dict "slug" .File.ContentBaseName "lang" .Lang)) -}}
+  {{- $caption := printf (cond (eq $.Lang "en") "Cover — %s" "Couverture — %s") $.Title -}}
+  {{- $img := dict
+      "@type" "ImageObject"
+      "url" .Permalink
+      "contentUrl" .Permalink
+      "width" .Width
+      "height" .Height
+      "caption" $caption
+      "representativeOfPage" true
+      "creator" (dict "@type" "Person" "name" site.Data.author.author.name)
+      "creditText" site.Data.author.author.name
+      "copyrightNotice" (printf "© %s" site.Data.author.author.name) -}}
+  {{- $book = merge $book (dict "image" $img) -}}
+{{- end -}}
 {{- with .Params.wikidata_qid -}}{{- $book = merge $book (dict "sameAs" (printf "https://www.wikidata.org/wiki/%s" .)) -}}{{- end -}}
 {{- /* Enrichissements factuels (aucune valeur inventée). Tous les livres ont un ISBN = édition imprimée. */ -}}
 {{- $book = merge $book (dict "bookFormat" "https://schema.org/Paperback") -}}

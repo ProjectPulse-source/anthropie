@@ -12,6 +12,20 @@
       l'`Offer` schema.org affiché à Google).
 - [ ] Couverture finale disponible : **un seul fichier**
       `assets/images/livres/<slug>.jpg` (le remplacer suffit à propager).
+      Spec GEO du fichier :
+      - portrait **2:3, 1000 × 1500 px** (gabarit des 4 couvertures en place),
+        JPEG, poids indicatif ≤ 250 KB — l'original est publié tel quel à
+        l'URL stable `/images/livres/<slug>.jpg` (référencée par works.yaml
+        et les registres externes) ;
+      - nom = **slug exact** de la fiche (`.File.ContentBaseName`) ;
+      - édition anglaise réelle : variante `assets/images/livres/<slug>.en.jpg`
+        (repli automatique sur la couverture FR si absente) ;
+      - la couverture est propagée automatiquement : JSON-LD `Book.image`
+        (ImageObject avec dims réelles + crédit), **og:image de la fiche**
+        (aperçu = la couverture ; `og_image` en front matter = opt-out),
+        cartes /livres/, emblème home, pages ressources. Rien à câbler.
+      - `data/works.yaml` : renseigner `image_url` avec l'URL stable
+        (consommée par les registres externes — Wikidata, OpenLibrary…).
 
 ## 1. Fiche `content/livres/<slug>.md`
 
