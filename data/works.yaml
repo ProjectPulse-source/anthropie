@@ -21,12 +21,20 @@
 # =============================================================================
 
 meta:
-  registry_version: "1.9"
-  last_updated: "2026-07-23"
+  registry_version: "1.10"
+  last_updated: "2026-08-01"
   maintainer: "Stéphane Lalut"
   total_works: 37
   source_registry: "registre_soumissions_v73.xlsx"
   changelog:
+    v1_10: |
+      Synchronisation édition anglaise ANTHROPY (2026-08-01) — l'édition réelle
+      publiée le 2026-07-21 (ANTHROPY – A Big History of Civilization's Hidden
+      Costs, ISBN 978-2-958634-75-9, 632 p., broché 2958634752 + Kindle
+      B0H9QMR1CN) entre au registre : bloc english_edition sous book-anthropie,
+      site_pages.en (fiche /en/livres/ en ligne depuis c67176e) et
+      abstract_short.en complétés. Édition du même work (Q138827344), pas de
+      nouvelle œuvre : total_works inchangé.
     v1_9: |
       Ajout AWP-08 « La réversibilité sociale comme dimension de l'inégalité »
       (2026-07-23) — dépôts Zenodo FR 10.5281/zenodo.21506320 + EN
@@ -362,7 +370,7 @@ works:
     type: book
     canonical_title:
       fr: "ANTHROPIE — Ordre ici. Dette ailleurs"
-      en: "ANTHROPY — Order here. Debt elsewhere"  # aligné 2026-07-05 sur l'usage des 6 PDF EN de la série (T12) ; pas de page EN
+      en: "ANTHROPY — Order here. Debt elsewhere"  # aligné 2026-07-05 sur l'usage des 6 PDF EN de la série (T12) ; forme canonique de citation — le titre commercial de l'édition EN vit dans english_edition
     publication_date: "2025-09-09"
     isbn: "978-2-9586347-2-8"
     isbn_13_normalized: "9782958634728"
@@ -374,14 +382,27 @@ works:
     wikidata: "Q138827344"
     abstract_short:
       fr: "L'ouvrage fondateur du cadre anthropique. En 622 pages, l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent est déployée à travers l'histoire longue, l'économie, les finances publiques et l'épistémologie. Ordre ici. Dette ailleurs."
-      en: ""  # à compléter pour future page livre EN
+      en: "The foundational work of the anthropic framework. Across 632 pages (English edition), the hypothesis that social systems displace disorder rather than resolve it is deployed through deep history, economics, public finance and epistemology. Order here. Debt elsewhere."  # sync fiche EN 2026-08-01
     keywords: [anthropie, anthropy, économie politique, dette, ordre social, transfert]
     site_pages:
       fr: "https://stephane-lalut.com/livres/anthropie-ordre-ici-dette-ailleurs/"
-      en: ""  # n/a — pas de page livre EN dédiée
+      en: "https://stephane-lalut.com/en/livres/anthropie-ordre-ici-dette-ailleurs/"  # fiche de l'édition EN réelle (en ligne, vérifiée 2026-08-01)
     purchase_url:
       amazon_fr: "https://www.amazon.fr/dp/2958634728"  # /dp canonique — jamais de shortener amzn.eu/a.co (purge 2026-07-04)
       amazon_com: "https://www.amazon.com/dp/2958634728"
+    # Édition anglaise — même œuvre (Q138827344), produit distinct (KDP 2026-07-21).
+    # Source : content/livres/anthropie-ordre-ici-dette-ailleurs.en.md (commit c67176e).
+    english_edition:
+      title: "ANTHROPY – A Big History of Civilization's Hidden Costs"
+      publication_date: "2026-07-21"
+      isbn: "978-2-958634-75-9"
+      isbn_13_normalized: "9782958634759"
+      pages: 632
+      asin_paperback: "2958634752"
+      asin_kindle: "B0H9QMR1CN"
+      purchase_url:
+        amazon_com: "https://www.amazon.com/dp/2958634752"
+        amazon_com_kindle: "https://www.amazon.com/dp/B0H9QMR1CN"
     image_url: "https://stephane-lalut.com/images/livres/anthropie-ordre-ici-dette-ailleurs.jpg"  # auto-hébergé (assets/images/livres/<slug>.jpg) — URL stable, indépendante du visuel
     google_scholar:
       visible: true
@@ -886,8 +907,10 @@ works:
 #
 # 2. book-dette-publique.pages : FAIT (224, 2026-05-30)
 #
-# 3. book-anthropie / book-dette-publique : abstract_short EN canonique
-#    (en vue d'éventuelles pages livres EN — différé chantier P3)
+# 3. book-anthropie : FAIT (2026-08-01) — abstract_short.en, site_pages.en et
+#    bloc english_edition (édition EN réelle du 2026-07-21). Reste :
+#    book-dette-publique abstract_short EN canonique (différé chantier P3,
+#    conditionné à une édition EN réelle — cf. doctrine intent_matrix).
 #
 # 4. awp-06 : harmoniser jel_codes_fr (2 codes) avec jel_codes_en (5 codes) ?
 #    Ou laisser l'asymétrie comme intentionnelle ?

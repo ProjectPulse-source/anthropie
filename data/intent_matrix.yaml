@@ -119,7 +119,7 @@ entities:
   # ---------------------------------------------------------------------------
   book-anthropie:
     type: book
-    pages: { fr: /livres/anthropie-ordre-ici-dette-ailleurs/, en: "" }  # EN sur édition réelle uniquement
+    pages: { fr: /livres/anthropie-ordre-ici-dette-ailleurs/, en: /en/livres/anthropie-ordre-ici-dette-ailleurs/ }  # édition EN réelle depuis 2026-07-21 (ASIN propre, inLanguage en) — condition doctrine remplie
     jsonld: "Book + Offer + about DefinedTerm ; FAQ à rendre (lot 1)"
     faq_sobres_proposees:
       - "Que signifie « Ordre ici. Dette ailleurs. » ? (ancrée sur le H2 existant)"
@@ -239,6 +239,7 @@ entities:
     couvert:
       - "what is anthropy (page concept EN, 13 FAQ, alias what-is-anthropy réparé)"
       - "cost-shifting K. W. Kapp (FAQ EN)"
+      - "fiche livre EN ANTHROPY (édition réelle 2026-07-21 — la condition doctrine est remplie pour ce seul livre ; les autres restent sans fiche EN)"
     enrichissement:
       - "« Order here. Debt elsewhere. » (surface EN du livre sur /en/livres/)"
       - "commonplace book (1 phrase, présentation Livresque sur /en/livres/)"
