@@ -72,10 +72,22 @@ Avant tout patch substantiel, lecture obligatoire dans cet ordre :
 Contextualisations propres à ce repo :
 
 - Linter cohérence corpus : `scripts/check-corpus-counters.py`
+- Linter couverture GEO (FR + miroir EN) : `scripts/check-geo-coverage.py`
 - Checklist d'ajout d'AWP : `docs/CHECKLIST_AJOUT_AWP.md`
 - Convention multilingue Hugo : suffixe `.en.md` (pas sous-dossier
   `content/en/`)
 - Source unique d'identité auteur : `data/author.toml`
+
+**Règle de fraîcheur d'état (« l'état écrit suit l'acte »)** : toute session
+qui exécute un travail met à jour, dans la même session, (1) le log § 0 de
+`PROJECT_STATUS.md`, (2) le statut des backlogs et registres touchés
+(`data/works.yaml`, `reports/**/12_IMPLEMENTATION_BACKLOG.md`, fiches de
+mission), (3) `static/llms.txt` si un fait qu'il énonce a changé. Symétrique :
+avant de reprendre un backlog ou une consigne, vérifier ses statuts contre le
+git log — un statut périmé provoque soit la re-exécution d'un acquis, soit
+l'abandon d'un travail cru fait. Constat fondateur (arbitrages GEO-01→03,
+2026-08-02) : la péremption d'état était l'unique défaut récurrent du
+système, retrouvé dans le backlog, works.yaml, llms.txt et la mémoire.
 
 ## Conventions de contenu
 

@@ -45,9 +45,59 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 > **À lire avant** : toute intervention sur le site, technique 
 > ou éditoriale. Décrit l'état architectural, les doctrines 
 > en place, les chantiers en cours et les chantiers reportés.
-> Dernière mise à jour : mai 2026 (post bascule GEO/diffusion).
+> Dernière mise à jour : 2026-08-02.
+> **Règle de fraîcheur** : l'état écrit suit l'acte — toute session qui
+> exécute met à jour ce log ET les statuts des registres/backlogs touchés
+> dans la même session. Un statut périmé vaut défaut : il provoque la
+> re-exécution de l'acquis ou l'abandon de travaux crus « déjà faits ».
 
 ## 0. Log chronologique
+
+### 2026-08-01/02 — Contrôle visibilité EN, sync registres, arbitrages GEO-01/02/03
+
+**Contrôle GEO EN (01/08, mode IA Google + WebSearch neutre)** : le concept
+est VISIBLE en anglais — « The Socioeconomic Hypothesis » (Lalut) en section 2
+du mode IA EN sur « anthropy » ; requête conceptuelle sans le mot entièrement
+construite sur l'hypothèse ; **SSRN 6543618 n°1 hors personnalisation** (le
+dépôt SSRN est devenu le premier actif EN). Nuance auteur : « Anthropy » nue
+en navigation privée FR = entités commerciales seules (bataille de fréquence
+de corpus — ne se corrige pas on-site). **Verdict : plateau on-site, maillage
+auto-génératif par inférence de requêtes REJETÉ** (anti-doorway, moratoire,
+non-cannibalisation). Topo : `Downloads/TOPO_GEO_EN_2026-08-01.md`.
+
+**Sync registres avec l'édition anglaise du 21/07 (3 commits)** :
+**9d106f2** `works.yaml` v1.10 (bloc `english_edition`, `site_pages.en`,
+`abstract_short.en`) + `intent_matrix.yaml` (condition doctrine remplie) ;
+**10cb115** `llms.txt` (AWP-08 manquant, « eight », édition EN) ;
+**912bf1d** `check-geo-coverage.py` section [5] miroir EN (12/12 ok).
+Hors dépôt : `08_ENGLISH_STRATEGY.md` interdit n°1 annoté caduc (ANTHROPIE
+seul) ; `12_IMPLEMENTATION_BACKLOG.md` statuts rafraîchis et sourcés (B8/C1/
+C2/C4/C6/D1/D4 = faits ; C5 seul incertain ; C7 échéance 24/08) ;
+fiche T1 `reports/geo_audit/T1_SONDES_EN_2026-09-15.md` (5 sondes, double
+lecture connecté/privé + instrumentation).
+
+**Arbitrage GEO-03 (02/08, investigation externe)** : déploiement France
+effectif le **22/07** (AI Mode généralisé, AIO sélectif) — le re-test
+« ~23/09 » est fusionné dans T1 15/09. Guide Google màj 10/07 : RAG sur
+ranking classique + query fan-out (pas de canal IA séparé) ; « no special
+schema.org markup needed » → **gel de tout schema motivé par l'IA** ;
+éligibilité snippets = condition d'inclusion (vérifié : 0 nosnippet sur le
+site). Search Console : rapports « Search generative AI » + toggle (défaut =
+inclus) à surveiller. Attente clics : **−30/−50 % de CTR** sur requêtes
+couvertes — piloter aux impressions/absorption, pas aux clics. Recherche
+2026 : réécritures « citables » agressives peuvent dégrader le retrieval
+(anti-surcouche corroboré) ; viser l'absorption (densité de preuves
+extractibles). GEO-01/02/03 : arbitrages rendus, notes closes.
+
+**Rattrapage log — vague « nasse » de juillet (post-09/07, cf. git log)** :
+mailles P0/P1 (fd041d7, 1692057), `/communs-negatifs/` (8d9492c),
+`/chercheur-independant/` (d5b0e4e), `/livresque/methode-et-corpus/`
+(affbc96), **linter `scripts/check-geo-coverage.py`** (318f703), **AWP-08**
+FR+EN (04456c9, 23/07), **édition anglaise ANTHROPY** sur le site
+(c67176e, 21/07), mailles EN (c2b1623, 1b6ba69), og:image par entité
+(f6fb13a, cc43dbe). Wikidata : import fait, état vérifié par API le 01/08
+(af4ba03). Obsolètes dans l'entrée du 09/07 : « baseline avant le 23/09 »
+(lancement advenu le 22/07) ; T0 requêtes = fait le 09/07.
 
 ### 2026-07-09 — Rounds GEO-03/GEO-04 : indexation réparée, site-graphe ancré, lot 1 exécuté
 
