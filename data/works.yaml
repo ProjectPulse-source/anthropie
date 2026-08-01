@@ -436,7 +436,7 @@ works:
     asin_broche: "2958634701"
     image_url: "https://stephane-lalut.com/images/livres/livresque-des-mots.jpg"  # auto-hébergé (assets/images/livres/<slug>.jpg) — URL stable, indépendante du visuel
     license: ""  # à préciser
-    wikidata: "Q140517745"  # CANONIQUE recommandé — créé par Laura 2026-07-09 (item riche+correct : ISBN/672p/ASIN 2958634701/OpenLibrary OL45424544W/sous-titre, label « mots » minuscule, desc exacte). ⚠ DOUBLON préexistant Q138911600 (label « Mots » majuscule, chiffres périmés 4680/1380, ISBN seul) À FUSIONNER Q138911600 → Q140517745 (survivant = Q140517745). Consigne Laura : Wikidata/Fusion_Livresque_2026-07-16/README_LAURA.md. Re-confirmer après fusion.
+    wikidata: "Q140517745"  # CANONIQUE — créé par Laura 2026-07-09 (item riche+correct : ISBN/672p/ASIN 2958634701/OpenLibrary OL45424544W/sous-titre). Fusion du doublon Q138911600 → Q140517745 VÉRIFIÉE le 2026-08-01 via l'API (Q138911600 redirige, item canonique 13 claims, bon ISBN).
     # ----- CHIFFRES CANONIQUES DU CORPUS — SOURCE UNIQUE -----
     # Toute prose chiffrée DOIT refléter ces valeurs : fiche Amazon, fiche A+,
     # content/livres/livresque-des-mots.md (description, description_en, corps),
@@ -478,7 +478,7 @@ works:
     asin_kindle: "B0CVXQSLBQ"  # conservé de la première édition (ancre des avis lecteurs)
     asin_broche: "2958634744"
     license: ""  # à préciser
-    wikidata: "Q138911733"  # item existant — porte encore l'ISBN de la première édition (978-2-9586347-1-1), MAJ Wikidata à traiter dans le chantier dédié
+    wikidata: "Q138911733"  # item À JOUR — VÉRIFIÉ le 2026-08-01 via l'API : ISBN nouvelle édition 978-2-9586347-4-2 (P212), 696 p. (P1104), date 2026 (P577)
     abstract_short:
       fr: "De l'aube de l'humanité à l'intelligence artificielle, 250 escales — œuvres, vies, inventions, crises, instants de bascule — et sept parcours relient les penseurs par-delà les siècles. Non pas un défilé chronologique, mais un réseau. Un instrument de curiosité, pas un réservoir de certitudes."
       en: ""  # à compléter
