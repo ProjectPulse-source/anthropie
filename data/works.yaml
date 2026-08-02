@@ -146,6 +146,7 @@ works:
       zenodo_en: { doi: "10.5281/zenodo.19431208", url: "https://doi.org/10.5281/zenodo.19431208", status: published }
       ssrn_en: { abstract_id: "6543618", doi: "10.2139/ssrn.6543618", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6543618", status: approved }
       mpra_en: { item_id: "128604", url: "https://mpra.ub.uni-muenchen.de/id/eprint/128604", status: in_review, deposit_date: "2026-04-07" }
+      socarxiv_en: { status: in_review, deposit_date: "2026-08-02" }  # soumis par l'auteur, pré-modération SocArXiv ; 1er d'une série échelonnée (AWP-01→05 puis 07/08)
     site_pages:
       fr: "https://stephane-lalut.com/awp/awp-01/"
       en: "https://stephane-lalut.com/en/awp/awp-01/"

@@ -41,7 +41,11 @@ MPRA = [("AWP-01", "128604"), ("AWP-02", "128605"), ("AWP-03", "128606"),
 MPRA_MANQUANTS = ["AWP-07", "AWP-08"]
 
 OSF_PROFIL = "ymkpj"
-OSF_ATTENDUS = 8  # objectif si SocArXiv est retenu comme canal actif
+# SocArXiv : canal RETENU (decision auteur 2026-08-02) — depots echelonnes.
+# Ordre de la file : AWP-01 -> 05, puis 07 et 08 (AWP-06 deja en ligne).
+OSF_FILE_ATTENTE = ["AWP-01", "AWP-02", "AWP-03", "AWP-04", "AWP-05",
+                    "AWP-07", "AWP-08"]
+OSF_EN_LIGNE_CONNUS = {"AWP-06": "z6x38_v1"}
 
 
 def http_status(url):
@@ -109,11 +113,21 @@ try:
         headers=UA)
     with urllib.request.urlopen(req, timeout=30, context=CTX) as r:
         d = json.loads(r.read())
-    n = len(d.get("data", []))
+    titres = []
     for p in d.get("data", []):
         a = p["attributes"]
-        print(f"   {p['id']:12} {a.get('title','')[:46]}")
-    print(f"   -> {n} preprint(s) en ligne (objectif si canal retenu : {OSF_ATTENDUS})")
+        titres.append((a.get("title", "") or "").lower())
+        print(f"   {p['id']:12} EN LIGNE  {a.get('title','')[:44]}")
+    n = len(titres)
+    # Un preprint accepte fait disparaitre son AWP de la file d'attente.
+    reste = []
+    for lab in OSF_FILE_ATTENTE:
+        num = lab.split("-")[1]
+        # heuristique : le titre d'un AWP en ligne contient un de ses mots-cles
+        if not any(k in t for t in titres for k in (lab.lower(),)):
+            reste.append(lab)
+    print(f"   -> {n} en ligne | file d'attente restante : {', '.join(reste) if reste else 'aucune'}")
+    print("   RAPPEL : ne deposer le suivant qu'apres ACCEPTATION du precedent.")
 except Exception as e:
     print(f"   ERREUR : {e}")
 
