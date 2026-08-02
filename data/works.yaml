@@ -297,7 +297,7 @@ works:
     deposits:
       zenodo_fr: { doi: "10.5281/zenodo.20025421", url: "https://doi.org/10.5281/zenodo.20025421", status: published, date: "2026-05-07" }
       zenodo_en: { doi: "10.5281/zenodo.20077993", url: "https://doi.org/10.5281/zenodo.20077993", status: published, date: "2026-05-08" }
-      ssrn_en: { abstract_id: "6735581", doi: "10.2139/ssrn.6735581", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6735581", status: in_review, submission_date: "2026-05-08" }
+      ssrn_en: { abstract_id: "6735581", doi: "10.2139/ssrn.6735581", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6735581", status: approved, submission_date: "2026-05-08", posted_date: "2026-05-22" }  # vérifié sur la page auteur SSRN le 2026-08-02 : en ligne, 26 téléchargements
       mpra_en: { item_id: "129034", url: "https://mpra.ub.uni-muenchen.de/id/eprint/129034", status: published, deposit_date: "2026-05-08", publication_date: "2026-05-15" }  # publié en 7 j par l'éditrice D. Cialfi (compte MPRA inspecté 2026-08-02) ; ⚠ AWP-01..05 (128604-608, déposés 07/04) toujours "Under Review" à 118 j — AUCUN rejet, AUCUN message, PDF conformes (21,4 kB = fichier Zenodo) : file de modération oubliée → relance préparée (Downloads/MPRA_RELANCE_A_ENVOYER.md). NE PAS déposer AWP-07/08 avant déblocage.
     site_pages:
       fr: "https://stephane-lalut.com/awp/awp-06/"
@@ -918,7 +918,18 @@ works:
 # PROTOCOLE DE MAINTENANCE PERMANENTE :
 #
 # - À chaque approbation/refus de soumission in_review : mettre à jour status.
-# - Une fois SSRN AWP-06 approuvé : modifier deposits.ssrn_en.status ; idem MPRA.
+# - SSRN AWP-06 : FAIT (approved, vérifié 2026-08-02). MPRA : voir alerte awp-06.
+#
+# AUDIT PLATEFORMES DU 2026-08-02 — trous constatés, à traiter (décision auteur) :
+#   SSRN      : 6 papiers en ligne (105 téléchargements) ; AWP-07 et AWP-08 ABSENTS.
+#               Titres dégradés à la soumission (ponctuation perdue) sur AWP-02 et AWP-03.
+#   OSF       : 1 SEUL preprint sur SocArXiv (AWP-06 EN, z6x38) — les 5 autres annoncés
+#               en mai n'existent pas ; licence non déclarée sur celui qui existe.
+#               (Wikidata ne porte aucun lien SocArXiv : pas de lien mort, bonne nouvelle.)
+#   OpenLib.  : 2 DOUBLONS jamais fusionnés (OL45424599W/OL45424600W « Dette Publique » ;
+#               OL45424564W/OL45424565W « ANTHROPIE ») ; 0 couverture sur les 6 works ;
+#               descriptions absentes sur 4 works. Liens d'autorité auteur (ORCID,
+#               Wikidata, VIAF) AJOUTÉS le 2026-08-02.
 # - Nouvelle publication/acceptation : ajouter entrée + total_works + bump
 #   registry_version + last_updated.
 #
