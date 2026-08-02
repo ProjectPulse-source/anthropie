@@ -88,6 +88,13 @@ git log — un statut périmé provoque soit la re-exécution d'un acquis, soit
 l'abandon d'un travail cru fait. Constat fondateur (arbitrages GEO-01→03,
 2026-08-02) : la péremption d'état était l'unique défaut récurrent du
 système, retrouvé dans le backlog, works.yaml, llms.txt et la mémoire.
+Complément (contre-expertise 02/08) : **l'état interne suit l'acte ;
+l'état externe expire** — tout relevé d'observation externe (SERP, mode IA,
+concurrent, plateforme) porte sa date, son contexte (pays/langue/connexion/
+moteur/requête exacte) et une durée de validité ; passé ce délai, il
+redevient une hypothèse à re-vérifier, pas un fait. Registre des collisions
+de nom/concept : `reports/geo_audit/REGISTRE_COLLISIONS.md` (hors dépôt) —
+input obligatoire de toute nouvelle langue ou surface.
 
 ## Conventions de contenu
 

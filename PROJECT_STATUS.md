@@ -113,6 +113,27 @@ d'ANTHROPIE annoncée par l'auteur (semaines à venir)** →
 `docs/CHECKLIST_AJOUT_LANGUE.md` créée (séquence entité → produit → dépôt
 tiers → surfaces → mesure, codifie le playbook EN ; contre-analyse GEO-04).
 
+**Contre-expertise externe (ChatGPT) intégrée le 02/08** — verdicts amendés
+et actés : moratoire on-site devient CONDITIONNEL (pages dérivées de
+requêtes interdites ; nouvelle page = objet autonome + besoin observé +
+lacune réelle) ; déclencheur langue assoupli (« actif public vérifiable »,
+3 états privé/pré-ancrage/déploiement — checklist amendée) ; sur-affirmation
+« SSRN n°1 mondial » corrigée (résultat daté/localisé, réplication sous
+contrôle) ; « chaque langue a son Kapp » → chaque COMMUNAUTÉ intellectuelle
+(ES : entrer par externalización de costes puis economía ecológica, CEPAL en
+voisin, jamais en filiation) ; Wikidata GO RESTREINT (corrections ES/DE/IT,
+labels latins par défaut ja/zh/ru/pt, AR/KO suspendus — addendum du dossier
+Downloads) ; règle complétée « l'état interne suit l'acte, l'état externe
+expire » (CLAUDE.md). **DÉCOUVERTE VÉRIFIÉE : collision de concept avec
+anthropie.org** (« L'Anthropie », édifice 12 couches, anonyme, CC0, GitHub
+créé 29/04/2026, 0 star, empreinte recherche quasi nulle au 02/08) →
+`reports/geo_audit/REGISTRE_COLLISIONS.md` créé (9 entrées), sonde S6 de
+veille ajoutée au T1, signature composée adoptée (« Anthropie — l'hypothèse
+du déplacement du désordre, formulée par Stéphane Lalut »). Grille de
+reprise en 4 niveaux (hébergement/mention/citation/application) intégrée
+au T1 — les mesures d'août prouvent la récupération machine, pas encore
+l'usage autonome par des tiers : c'est l'objectif des échéances 24/08+.
+
 ### 2026-07-09 — Rounds GEO-03/GEO-04 : indexation réparée, site-graphe ancré, lot 1 exécuté
 
 Missions `_Consignes_GEO-03/04/05.txt` (audits + GO auteur item par item).

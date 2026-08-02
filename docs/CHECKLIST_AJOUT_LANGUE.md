@@ -5,13 +5,27 @@ Complète `CHECKLIST_AJOUT_LIVRE.md` et `CHECKLIST_AJOUT_CONCEPT.md` (GEO-04 §7
 « lorsqu'on ajoute une traduction, le site doit se recalculer de façon
 cohérente »). Première application prévue : édition espagnole d'ANTHROPIE.
 
-**Déclencheur unique** : une édition traduite RÉELLE (ISBN/ASIN propres, en
-vente). Jamais de surface dans une langue sans produit — doctrine
-`intent_matrix.yaml` (en-adaptations), validée par le précédent EN.
+**Déclencheur public** *(amendé 02/08 après contre-expertise)* : un **actif
+linguistique réel et publiquement vérifiable** — édition avec ISBN et date
+stable, AWP publié dans la langue, article substantiel, recension autorisée.
+La mise en vente n'est pas le seul déclencheur légitime ; une langue sans
+AUCUN actif vérifiable reste sans surface (doctrine anti-doorway).
+
+**Trois états, jamais confondus** :
+- **A — Préparation privée** (possible à tout moment) : terminologie,
+  traduction, relecture native, cartographie des voisins, audit Hugo,
+  brouillons, sondes de référence. Rien d'indexé publiquement.
+- **B — Pré-ancrage public** (dès ISBN/DOI + date ferme + métadonnées
+  stables + version réellement relue) : fiche produit, extrait, informations
+  de citation, page de lancement minimale.
+- **C — Déploiement complet** (à la publication) : page concept adaptée,
+  AWP de référence, dépôt académique, maillage, mesure T+7/T+30.
 
 **Principe** : l'ancrage d'un hook dans une langue se fait dans cet ordre —
-**entité → produit → dépôt tiers → surfaces site → mesure**. Les pages
-viennent en quatrième, pas en premier.
+**entité → actif → dépôt tiers → surfaces site → mesure**. Les pages
+viennent en quatrième, pas en premier. Et l'unité d'analyse n'est pas la
+langue mais la **communauté intellectuelle** : « l'espagnol » recouvre
+l'Espagne, le Mexique, les Andes, le Cône Sud — des traditions distinctes.
 
 ---
 
@@ -25,11 +39,18 @@ viennent en quatrième, pas en premier.
   consignée dans `reports/geo_audit/` : qui occupe le MOT (ex. ES :
   « antropía » = sens anthropisation) et qui occupe le CONCEPT (ex. DE :
   Lessenich). Sans baseline, pas de mesure d'effet possible.
-- [ ] **Cartographie des voisins natifs à affronter** — chaque langue a son
-  Kapp : EN = cost-shifting (Kapp) ; DE = Externalisierungsgesellschaft
-  (Lessenich) ; ES = deuda ecológica, centro-periferia (Prebisch/CEPAL),
-  teoría de la dependencia. La page concept future se rend citable par la
-  CONFRONTATION de ces voisins, pas par la traduction du texte français.
+- [ ] **Cartographie des voisins natifs à affronter** — chaque communauté
+  intellectuelle a ses voisins dominants : EN = cost-shifting (Kapp) ;
+  DE = Externalisierungsgesellschaft (Lessenich). Pour l'ES, ordre d'entrée
+  arbitré (02/08) : **1er cercle** vocabulaire général (externalización de
+  costes, desplazamiento de cargas) ; **2e cercle** économie écologique
+  (intercambio ecológicamente desigual, deuda ecológica, metabolismo
+  social) ; **3e cercle** traditions latino-américaines (centro-periferia,
+  CEPAL, dependencia, extractivismo) présentées comme **voisins et
+  précédents partiels, jamais comme filiation** — un arrimage direct à la
+  CEPAL exposerait à la critique de reconditionnement. La page concept se
+  rend citable par la CONFRONTATION de ces voisins, pas par la traduction
+  du texte français. Alimenter `reports/geo_audit/REGISTRE_COLLISIONS.md`.
 
 ## Phase 1 — Décision structurelle site (arbitrage auteur obligatoire)
 
@@ -68,9 +89,13 @@ viennent en quatrième, pas en premier.
 - [ ] AWP-01 traduit dans la langue → Zenodo (DOI propre, `isDerivedFrom` la
   version FR, communauté anthropie-working-papers) — réplique la structure
   FR/EN existante.
-- [ ] SSRN (accepte les langues non anglaises) — le dépôt SSRN EN est devenu
-  n°1 mondial sur « anthropy » : c'est le geste au meilleur ratio
-  effort/rendement de toute la stratégie.
+- [ ] SSRN (accepte les langues non anglaises) — le dépôt SSRN EN était le
+  premier résultat observé le 01/08/2026 sur « anthropy » (recherche non
+  personnalisée, géolocalisée US) : expérience réussie **à reproduire sous
+  contrôle, plateforme par plateforme et langue par langue** — chaque dépôt
+  doit avoir une fonction propre (audience disciplinaire, indexation locale,
+  DOI, préservation) ; un doublon sans audience distincte fragmente les
+  versions et les métriques.
 - [ ] Infrastructure académique DE LA LANGUE si accessible (ES : Dialnet,
   SciELO, Redalyc ; DE : SSOAR ; etc.) — c'est l'équivalent local du
   pattern SSRN.
