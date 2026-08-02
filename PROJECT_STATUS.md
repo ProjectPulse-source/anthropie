@@ -99,6 +99,20 @@ FR+EN (04456c9, 23/07), **édition anglaise ANTHROPY** sur le site
 (af4ba03). Obsolètes dans l'entrée du 09/07 : « baseline avant le 23/09 »
 (lancement advenu le 22/07) ; T0 requêtes = fait le 09/07.
 
+### 2026-08-02 (suite) — Multilingue : sondes ES/DE, dossier Wikidata, checklist langue
+
+Sondes mode IA : ES = « antropía » occupé par le sens anthropisation, concept
+absent ; DE = requête conceptuelle résolue vers **Lessenich /
+Externalisierungsgesellschaft** (mêmes trois axes) — gate antériorité OK
+(AWP-07 le démarque déjà). Verdict : aucune page ES/DE/JA sans produit ;
+levier = entité Wikidata. Dossier de contre-expertise
+`Downloads/WIKIDATA_LANGUES_Q138827949_2026-08-02.md` (corrections ES/DE/IT
+dont dérive « mécanisme »→« hypothèse », ajouts it/pt/ja/zh/ru + ar/ko
+recommandés ; import via Laura après arbitrage auteur). **Édition ES
+d'ANTHROPIE annoncée par l'auteur (semaines à venir)** →
+`docs/CHECKLIST_AJOUT_LANGUE.md` créée (séquence entité → produit → dépôt
+tiers → surfaces → mesure, codifie le playbook EN ; contre-analyse GEO-04).
+
 ### 2026-07-09 — Rounds GEO-03/GEO-04 : indexation réparée, site-graphe ancré, lot 1 exécuté
 
 Missions `_Consignes_GEO-03/04/05.txt` (audits + GO auteur item par item).
