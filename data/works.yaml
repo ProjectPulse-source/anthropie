@@ -298,7 +298,7 @@ works:
       zenodo_fr: { doi: "10.5281/zenodo.20025421", url: "https://doi.org/10.5281/zenodo.20025421", status: published, date: "2026-05-07" }
       zenodo_en: { doi: "10.5281/zenodo.20077993", url: "https://doi.org/10.5281/zenodo.20077993", status: published, date: "2026-05-08" }
       ssrn_en: { abstract_id: "6735581", doi: "10.2139/ssrn.6735581", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6735581", status: in_review, submission_date: "2026-05-08" }
-      mpra_en: { item_id: "129034", url: "https://mpra.ub.uni-muenchen.de/id/eprint/129034", status: published, deposit_date: "2026-05-08", publication_date: "2026-05-15" }  # vérifié en ligne 2026-08-02 ; ⚠ 128604-608 (AWP-01..05) toujours 401 après 4 mois — vérifier le compte MPRA (modération bloquée ou rejet)
+      mpra_en: { item_id: "129034", url: "https://mpra.ub.uni-muenchen.de/id/eprint/129034", status: published, deposit_date: "2026-05-08", publication_date: "2026-05-15" }  # publié en 7 j par l'éditrice D. Cialfi (compte MPRA inspecté 2026-08-02) ; ⚠ AWP-01..05 (128604-608, déposés 07/04) toujours "Under Review" à 118 j — AUCUN rejet, AUCUN message, PDF conformes (21,4 kB = fichier Zenodo) : file de modération oubliée → relance préparée (Downloads/MPRA_RELANCE_A_ENVOYER.md). NE PAS déposer AWP-07/08 avant déblocage.
     site_pages:
       fr: "https://stephane-lalut.com/awp/awp-06/"
       en: "https://stephane-lalut.com/en/awp/awp-06/"
