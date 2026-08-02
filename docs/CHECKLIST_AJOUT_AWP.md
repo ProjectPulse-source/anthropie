@@ -33,6 +33,19 @@ Le script vérifie les 8 points ci-dessus plus la présence du fichier PDF, et d
 
 Outils de correction si l'audit signale un trou : `scripts/zenodo_fix_verbatim.py` (verbatim manquant) et `scripts/zenodo_link_translations.py` (liaison de traduction).
 
+### 1 quater. Dépôts sur les plateformes tierces — RÈGLE D'ÉCHELONNEMENT
+
+Zenodo mis à part (dépôt propre, sans modération), **toute plateforme à modération — SSRN, MPRA, SocArXiv — se traite un dépôt à la fois** :
+
+1. Déposer **un seul** papier.
+2. Surveiller : `python scripts/check_deposits_status.py` (détecte SSRN via Crossref, MPRA via le code HTTP, OSF via son API — aucun mot de passe requis).
+3. **Attendre l'acceptation** avant de poser le suivant. Compter quelques jours à deux semaines.
+4. Poser un rappel (RDV Outlook) plutôt que de surveiller à la main.
+
+**Pourquoi c'est une règle et pas un conseil** : le 07/04/2026, cinq AWP ont été déposés sur MPRA en dix-huit minutes. Ils sont restés bloqués **118 jours** sans message ni rejet. Un dépôt isolé, le 08/05, a été accepté en **sept jours**. Le dépôt groupé par un déposant récent est lu comme un signal de spam.
+
+**Corollaire** : ne jamais rattraper un retard en déposant en lot. C'est ce qui recrée le blocage qu'on cherche à résorber.
+
 ## 2. Création des fichiers content
 
 Convention multilingue Hugo **par suffixe** (pas par sous-dossier) :
