@@ -6,6 +6,33 @@ Procédure compacte pour ajouter un *Anthropie Working Paper* (AWP-NN) sur le si
 
 Dépôt FR sur la communauté Zenodo `anthropie-working-papers`, licence CC-BY 4.0. Dépôt EN en second pour obtenir un DOI EN distinct. Lier les deux dépôts via `isDerivedFrom` (FR canonique, EN traduction). Récupérer les deux DOIs `10.5281/zenodo.XXXXXXX` et les URLs `https://zenodo.org/records/XXXXXXX`.
 
+### 1 bis. Les 8 métadonnées Zenodo à ne jamais oublier
+
+**Pourquoi cette liste existe** : l'audit du 2026-08-02 a trouvé qu'AWP-08, déposé le 23/07, était sorti **sans ORCID et hors de la communauté de la série** — donc invisible depuis la vitrine Zenodo et non rattaché au profil auteur. Personne ne l'avait vu pendant dix jours. Les dépôts se font vite et à la main ; c'est là que se creusent les trous.
+
+À vérifier sur **chacun des deux records** (FR et EN) :
+
+1. **Verbatim canonique de la définition** en ouverture de la description — FR : « L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. » ; EN : « Anthropy is the hypothesis that social systems displace disorder rather than resolve it. » *(Le verbatim en incise dans le corps est accepté — conformité actée, commit `e6c6b8a`. Ne jamais employer de variante : « reroute », « reroutes », « shifts »… — un cas corrigé sur AWP-03 EN le 02/08.)*
+2. **ORCID** `0009-0002-1794-4895` **et** affiliation `Independent Researcher` sur le creator.
+3. **Licence** CC-BY-4.0.
+4. **Langue** déclarée, cohérente avec la version (fr / en).
+5. **Mots-clés** renseignés.
+6. **Communauté** `anthropie-working-papers`.
+7. **`isDescribedBy`** vers la page du site correspondante, **en https**.
+8. **Liaison de traduction réciproque** : la version EN porte `isDerivedFrom` → DOI FR, la version FR porte `isSourceOf` → DOI EN. *(Zenodo refuse `isTranslationOf`/`hasTranslation` de DataCite 4.6 — vérifié le 02/08.)*
+
+### 1 ter. Contrôle automatisé — obligatoire avant de clore l'ajout
+
+Ajouter la nouvelle paire dans la liste `PAIRS` de `scripts/zenodo_audit_complet.py`, puis lancer :
+
+```bash
+python scripts/zenodo_audit_complet.py
+```
+
+Le script vérifie les 8 points ci-dessus plus la présence du fichier PDF, et distingue **BLOQUANT** (à corriger) de **info** (champ décoratif, ex. `version`). **Ne pas clore l'ajout tant que le compte de bloquants n'est pas à 0.**
+
+Outils de correction si l'audit signale un trou : `scripts/zenodo_fix_verbatim.py` (verbatim manquant) et `scripts/zenodo_link_translations.py` (liaison de traduction).
+
 ## 2. Création des fichiers content
 
 Convention multilingue Hugo **par suffixe** (pas par sous-dossier) :

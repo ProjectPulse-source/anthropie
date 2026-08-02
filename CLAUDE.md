@@ -55,6 +55,7 @@ Procédure compacte documentée dans [`docs/CHECKLIST_AJOUT_AWP.md`](docs/CHECKL
 1. **Convention multilingue par suffixe** : créer `content/awp/awp-NN.md` (FR) + `content/awp/awp-NN.en.md` (EN). Pas de bundle `content/awp/awp-NN/index.md`.
 2. **Hero index à mettre à jour manuellement** : `layouts/index.html` lignes 18-22 contient le compteur AWP écrit en lettres (FR et EN). À incrémenter à chaque ajout.
 3. **Linter de cohérence** : `python scripts/check-corpus-counters.py` doit sortir 0 avant commit. Détecte les chiffres durs obsolètes (`cinq Anthropie Working Papers` quand on passe à 6, etc.).
+3 bis. **Audit Zenodo** : `python scripts/zenodo_audit_complet.py` doit sortir **0 bloquant** (ajouter la nouvelle paire dans `PAIRS` d'abord). Vérifie verbatim canonique, ORCID, licence, langue, mots-clés, communauté, `isDescribedBy` https et liaison de traduction réciproque. Motif : AWP-08 était sorti sans ORCID ni communauté (détecté et corrigé le 2026-08-02) — les dépôts manuels sont l'endroit où se creusent les trous.
 4. **Maillage publications** : si l'AWP prolonge une fiche `content/publications/*.md`, ajouter `awp-NN` au champ `related:` du frontmatter, ordre chronologique croissant.
 5. **Pas de traduction `.en.md` pour `content/publications/`** : choix éditorial, fallback multilingue Hugo.
 
