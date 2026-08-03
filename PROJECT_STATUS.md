@@ -53,6 +53,46 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-08-03 (fin) — AWP-01 ES **v2 publiée** ; pourquoi on ne supprime pas une v1
+
+**v2 publiée** : `10.5281/zenodo.21775366`. Corrige deux appels de note orphelins
+restés dans le corps après la fusion des blocs, dont **le second renvoyait à la
+mauvaise note** (la renumérotation avait déplacé la réfutabilité de la position 2
+à la 3). Diff : 2 lignes, **0 mot changé**. Trouvé par le manifeste de
+conservation, construit le jour même — aucun contrôle antérieur ne pouvait le voir.
+
+**Correction retenue : retirer les appels, pas les renuméroter.** Le PDF français
+de référence n'a aucun appel dans le corps ; ses notes sont des notes de fin
+flottantes. Fidèle au pivot, et la classe de défaut disparaît par construction.
+
+**Question tranchée : supprimer la v1 et republier sous un autre DOI ?** Non — et
+ce n'est pas un arbitrage de goût, c'est indisponible. Vérifié : (1) Zenodo
+n'offre au propriétaire qu'un `request_deletion` vers les curateurs, réservé aux
+motifs légaux/copyright/données personnelles, pas aux corrections éditoriales ;
+(2) **les deux DOI étaient `findable` chez DataCite une seconde après
+publication** — donc déjà exposés à OpenAIRE, BASE, CORE, OpenAlex. Le compteur
+à 0 téléchargement mesure des clics humains, pas la moisson machine, qui a déjà
+eu lieu ; (3) un DOI retiré ne disparaît jamais : il devient une pierre tombale,
+et une pierre tombale **se lit comme une rétractation** — le signal le plus
+lourd de l'édition académique, pour un renvoi de note. La chaîne v1→v2 est la
+vie normale d'un working paper ; le DOI de concept `21766183` résout vers la v2,
+donc quiconque cite le concept ne voit jamais la v1.
+
+**Réciprocité recalée** : le record français pointait sur `21766184`, DOI de
+**version**, qui fige la v1. Il pointe désormais sur le concept `21766183`.
+Règle : **une relation entre œuvres se pose sur le concept, une relation entre
+états sur la version.**
+
+**Convention mixte assumée dans `AWPS`** : l'espagnol est suivi par son concept
+(il a des versions), les autres par leur recid de version. Migration complète
+tentée le même jour, vérifiée sur les 16 records, et **revertée** : le contrôle
+de liaison de traduction compare les relations telles que les records les
+*déclarent*, et elles pointent vers des DOI de version — le passage au concept
+faisait passer 16 records sur 17 en bloquant sans qu'aucun dépôt n'ait changé.
+Leçon : **un registre doit parler la même langue que les données qu'il contrôle.**
+
+Audit : **0 bloquant sur 17 records**.
+
 ### 2026-08-03 (suite) — AWP-01 ES **PUBLIÉ**, et trois records qui se croyaient en communauté
 
 **Publié sur décision auteur** : `10.5281/zenodo.21766184`, 9 pages, communauté

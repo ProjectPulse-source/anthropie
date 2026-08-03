@@ -42,9 +42,32 @@ AS_JSON = "--json" in sys.argv
 # Un AWP = une langue SOURCE + N traductions. `records` : langue -> id Zenodo.
 # Une langue absente du dict n'est pas deposee ; elle n'est pas auditee et ce
 # n'est pas un trou. Tenir a jour a chaque nouveau depot.
+#
+# CONVENTION MIXTE, et c'est deliberé (2026-08-03) :
+#   - une oeuvre AVEC plusieurs versions est suivie par son recid de CONCEPT,
+#     qui resout toujours vers la derniere version publiee. L'auditeur suit
+#     alors l'oeuvre et non un etat fige : personne n'a a le remettre a jour
+#     quand une v2 parait. C'est le cas de l'espagnol (concept 21766183).
+#   - une oeuvre a version unique reste sur son recid de VERSION.
+#
+# Pourquoi ne pas tout passer au concept : essaye le meme jour, verifie sur les
+# 16 records, et REVERTE. Le controle 8 (liaison de traduction) compare les
+# relations telles que les records les DECLARENT — et elles pointent vers des
+# DOI de version. Basculer le registre au concept faisait passer 16 records sur
+# 17 en bloquant, sans qu'aucun depot n'ait change. Le registre doit parler la
+# meme langue que les donnees qu'il controle.
+#
+# Corollaire de comparaison : la liste des membres d'une communaute Zenodo porte
+# des recids de VERSION. Le controle 6 compare donc le record REELLEMENT RESOLU
+# (d["id"]), pas l'identifiant demande — sans quoi une entree au concept est
+# declaree hors communaute alors qu'elle en est membre (constate le 03/08).
+#
+# N'inscrire un id qu'une fois le record PUBLIE : un brouillon n'est pas
+# interrogeable par /records, et l'auditeur le compterait en echec alors que le
+# depot est simplement en cours.
 AWPS = [
     {"label": "AWP-01", "source": "fr",
-     "records": {"fr": "19266862", "en": "19431208", "es": "21766184"}},
+     "records": {"fr": "19266862", "en": "19431208", "es": "21766183"}},
     {"label": "AWP-02", "source": "fr", "records": {"fr": "19268037", "en": "19433086"}},
     {"label": "AWP-03", "source": "fr", "records": {"fr": "19268769", "en": "19434094"}},
     {"label": "AWP-04", "source": "fr", "records": {"fr": "19269244", "en": "19439921"}},
@@ -52,10 +75,8 @@ AWPS = [
     {"label": "AWP-06", "source": "fr", "records": {"fr": "20025421", "en": "20077993"}},
     {"label": "AWP-07", "source": "fr", "records": {"fr": "21200286", "en": "21200288"}},
     {"label": "AWP-08", "source": "fr", "records": {"fr": "21506320", "en": "21507249"}},
-    # AWP-01 espagnol publie le 2026-08-03 (DOI 10.5281/zenodo.21766184).
-    # Rappel pour les prochaines langues : n'inscrire un id ici qu'une fois le
-    # record PUBLIE — un brouillon n'est pas interrogeable par /records, et
-    # l'auditeur le compterait en echec alors que le depot est simplement en cours.
+    # AWP-01 espagnol : v1 publiee le 2026-08-03 (21766184), v2 le meme jour
+    # (21775366, correction de deux renvois de note). Le concept 21766183 suit.
 ]
 
 ORCID = "0009-0002-1794-4895"
@@ -193,7 +214,12 @@ def check(label, rec, lang, sibling_doi):
     # leur depot (demandes en attente), et l'auditeur les donnait conformes.
     # On interroge donc la liste des membres de la communaute : la seule
     # source qui distingue « a demande » de « est dedans ».
-    if str(rec) not in membres_communaute():
+    # On compare le record REELLEMENT RESOLU, pas l'identifiant demande : une
+    # entree du registre peut etre un recid de CONCEPT (qui resout vers la
+    # derniere version), tandis que la liste des membres de la communaute porte
+    # des recids de VERSION. Comparer les deux directement accusait a tort
+    # l'espagnol, membre reel, des que son entree est passee au concept.
+    if str(d.get("id", rec)) not in membres_communaute():
         holes.append(f"communaute {COMMUNITY} : record absent "
                      f"(demande d'inclusion peut-etre en attente d'acceptation)")
     # 7. SITE_RELATION — trois etats, voir docstring
