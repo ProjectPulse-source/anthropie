@@ -43,7 +43,8 @@ AS_JSON = "--json" in sys.argv
 # Une langue absente du dict n'est pas deposee ; elle n'est pas auditee et ce
 # n'est pas un trou. Tenir a jour a chaque nouveau depot.
 AWPS = [
-    {"label": "AWP-01", "source": "fr", "records": {"fr": "19266862", "en": "19431208"}},
+    {"label": "AWP-01", "source": "fr",
+     "records": {"fr": "19266862", "en": "19431208", "es": "21766184"}},
     {"label": "AWP-02", "source": "fr", "records": {"fr": "19268037", "en": "19433086"}},
     {"label": "AWP-03", "source": "fr", "records": {"fr": "19268769", "en": "19434094"}},
     {"label": "AWP-04", "source": "fr", "records": {"fr": "19269244", "en": "19439921"}},
@@ -51,8 +52,10 @@ AWPS = [
     {"label": "AWP-06", "source": "fr", "records": {"fr": "20025421", "en": "20077993"}},
     {"label": "AWP-07", "source": "fr", "records": {"fr": "21200286", "en": "21200288"}},
     {"label": "AWP-08", "source": "fr", "records": {"fr": "21506320", "en": "21507249"}},
-    # AWP-01 espagnol : brouillon non cree a ce jour. Ajouter "es": "<id>" ici
-    # une fois le record PUBLIE — un brouillon n'est pas interrogeable par /records.
+    # AWP-01 espagnol publie le 2026-08-03 (DOI 10.5281/zenodo.21766184).
+    # Rappel pour les prochaines langues : n'inscrire un id ici qu'une fois le
+    # record PUBLIE — un brouillon n'est pas interrogeable par /records, et
+    # l'auditeur le compterait en echec alors que le depot est simplement en cours.
 ]
 
 ORCID = "0009-0002-1794-4895"
@@ -122,6 +125,30 @@ def api(path):
         return json.loads(r.read())
 
 
+_MEMBRES = None
+
+
+def membres_communaute():
+    """Identifiants des records REELLEMENT admis dans la communaute.
+
+    Interroge la communaute, pas le record : un record peut declarer une
+    communaute qu'il n'a jamais integree (demande d'inclusion en attente).
+    Un seul appel par execution, memorise — le controle passe sur 17 records.
+    """
+    global _MEMBRES
+    if _MEMBRES is None:
+        # size est plafonne cote Zenodo (400 au-dela) : on pagine.
+        _MEMBRES, page = set(), 1
+        while True:
+            d = api(f"/communities/{COMMUNITY}/records?size=50&page={page}")
+            hits = d.get("hits", {}).get("hits", [])
+            _MEMBRES |= {str(h["id"]) for h in hits}
+            if len(_MEMBRES) >= d.get("hits", {}).get("total", 0) or not hits:
+                break
+            page += 1
+    return _MEMBRES
+
+
 def check(label, rec, lang, sibling_doi):
     """Retourne (liste de trous, dict d'infos)."""
     holes = []
@@ -154,11 +181,21 @@ def check(label, rec, lang, sibling_doi):
     # 5. mots-cles
     if not (m.get("keywords") or []):
         holes.append("aucun mot-cle")
-    # 6. communaute
-    comms = [c.get("id") if isinstance(c, dict) else c
-             for c in (d.get("metadata", {}).get("communities") or [])]
-    if COMMUNITY not in comms:
-        holes.append(f"communaute {COMMUNITY} absente")
+    # 6. communaute — APPARTENANCE REELLE, pas champ declare
+    #
+    # Ce controle lisait `metadata.communities` du record. Ce champ reflete la
+    # DEMANDE d'inclusion, pas l'admission : sur Zenodo, publier avec un champ
+    # `communities` ouvre une requete que la communaute doit ACCEPTER. Tant
+    # qu'elle dort, le record n'est dans aucune communaute — mais il declare
+    # la sienne, et l'audit passait au vert.
+    #
+    # Constate le 2026-08-03 : AWP-08 FR et EN etaient hors communaute depuis
+    # leur depot (demandes en attente), et l'auditeur les donnait conformes.
+    # On interroge donc la liste des membres de la communaute : la seule
+    # source qui distingue « a demande » de « est dedans ».
+    if str(rec) not in membres_communaute():
+        holes.append(f"communaute {COMMUNITY} : record absent "
+                     f"(demande d'inclusion peut-etre en attente d'acceptation)")
     # 7. SITE_RELATION — trois etats, voir docstring
     described = [str(i) for (r, i) in relset if r == "isDescribedBy"]
     site_state = "PASS"

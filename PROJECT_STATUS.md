@@ -53,7 +53,50 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
-### 2026-08-03 — Ouverture de l'espagnol : AWP-01 ES prêt au dépôt, générateur PDF durci
+### 2026-08-03 (suite) — AWP-01 ES **PUBLIÉ**, et trois records qui se croyaient en communauté
+
+**Publié sur décision auteur** : `10.5281/zenodo.21766184`, 9 pages, communauté
+admise, réciprocité `isSourceOf` posée sur le record français 19266862.
+Audit : **0 bloquant sur 17 records**. L'outillage n'a toujours pas de commande
+`--publish` — la publication a été faite par appel ponctuel, la doctrine tient.
+
+**Contre-expertise externe reçue avant publication : verdict PDF BLOCKING, et
+elle avait raison.** Huit défauts corrigés, dont deux que j'avais manqués et un
+que j'avais annoncé corrigé sans l'être :
+
+- `<html lang>` : mon patch avait un `replace(…, 1)` qui a frappé **le
+  commentaire explicatif que je venais d'insérer** — il contenait la chaîne en
+  exemple — au lieu du code, plus bas. J'avais vérifié la présence du drapeau
+  `--lang`, jamais le HTML émis. **Contrôler l'entrée ne vaut pas contrôler la
+  sortie** ;
+- **double frontmatter** sur trois pages : `extract_body` cherchait « Licence »
+  quand l'espagnol écrit « Licencia », et **renvoyait alors la source entière**
+  au lieu d'échouer. Un fail-open ; c'est lui qui fabriquait un document
+  plausible et faux. Rendu fail-closed ;
+- libellés JEL/citation/licence encore français en page 2 ; espace française
+  avant les deux-points (`ORCID :`) ; deux appareils de notes concurrents avec
+  la note de réfutabilité en double ; notice bibliographique auto-contradictoire ;
+  citation hors format de série (d'où la perte de l'italique du titre).
+
+**Trois arbitrages contre l'auditeur, sur preuve** : sa refonte de la page 2 est
+**refusée** — la page 2 quasi vide est la maquette de série, vérifiée sur le PDF
+français de référence ; son atténuation de « dicen los ingenieros » est
+**refusée** — le pivot français porte la même attribution ; son grief « deux
+sections Notas » était partiellement un artefact d'extraction, mais **le fond
+était juste** et le défaut réel a été corrigé.
+
+**Angle mort de l'auditeur Zenodo corrigé, et il cachait un vrai trou** : le
+contrôle de communauté lisait `metadata.communities` du record — c'est-à-dire la
+**demande** d'inclusion, pas l'admission. Publier avec ce champ ouvre une requête
+que la communauté doit accepter ; tant qu'elle dort, le record n'est dans aucune
+communauté mais déclare la sienne, et l'audit passait au vert. **AWP-08 FR et EN
+étaient hors communauté depuis leur dépôt du 02/08** — donc invisibles dans la
+collection — pendant que l'audit les donnait conformes. Trois demandes acceptées
+(AWP-01 ES, AWP-08 FR, AWP-08 EN) ; le contrôle interroge désormais la liste des
+membres, seule source qui distingue « a demandé » de « est dedans ». Éprouvé par
+corruption : un record hors communauté est bien signalé.
+
+### 2026-08-03 — Ouverture de l'espagnol : chaîne ES et générateur PDF durci
 
 **Chaîne complète exécutée** sur AWP-01 (`0000-TRADUCTIONS ESPAGNOL/AWP-01/`,
 hors dépôt) : P0 stabilisation de source → P1 traduction en trois lots →
