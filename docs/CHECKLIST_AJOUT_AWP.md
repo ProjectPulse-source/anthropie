@@ -46,6 +46,25 @@ Zenodo mis à part (dépôt propre, sans modération), **toute plateforme à mod
 
 **Corollaire** : ne jamais rattraper un retard en déposant en lot. C'est ce qui recrée le blocage qu'on cherche à résorber.
 
+### 1 quinquies. Avant TOUTE plateforme nouvelle : la clause d'exclusivité
+
+**Vérifier si la plateforme accepte un texte déjà rendu public ailleurs.** C'est un **critère d'éligibilité**, pas une formalité — et il se vérifie dans la *politique éditoriale*, pas seulement dans la checklist de soumission, qui est souvent plus étroite.
+
+État vérifié le 2026-08-03 (rappelé à chaque exécution de `check_deposits_status.py`) :
+
+| Plateforme | Texte déjà public ailleurs ? |
+|---|---|
+| SocArXiv / OSF | **Oui** — accepte à tout stade, aucune clause d'exclusivité |
+| SSRN | Oui |
+| MPRA | Oui |
+| **SciELO Preprints** | **NON** — « não será postado se já tiver sido […] postado **em outro local** » (21/05/2025) |
+
+**Cas d'école, à ne pas rejouer** : un dossier de dépôt SciELO complet avait été préparé pour l'AWP-01 espagnol, en s'appuyant sur la checklist étroite (« autre *serveur de preprints* ») et sur le fait que Zenodo est un dépôt généraliste typant le document en `working paper`. Exact, mais **non décisif** : la politique générale dit « posté ailleurs », sans condition sur le type de plateforme. Le dépôt était inéligible depuis le départ. Classé `NO_GO_PRIOR_PUBLIC_AVAILABILITY`.
+
+**Deux leçons** : (1) chercher la règle qui tranche, pas l'interprétation qui arrange ; (2) une déclaration de transparence dans un champ de commentaires **ne rend pas conforme** une soumission qui ne l'est pas, surtout à côté d'une case affirmant l'inverse.
+
+**Vérifier aussi les exigences du PDF lui-même** — elles ne sont pas dans le formulaire. SciELO impose par exemple, *dans le fichier* : titre/résumé/mots-clés **en anglais** pour un texte non anglophone, ORCID en lien actif en première page, déclaration de disponibilité des données, déclaration de contribution CRediT. Un dossier « prêt pour le formulaire » n'est pas un dossier prêt.
+
 ## 2. Création des fichiers content
 
 Convention multilingue Hugo **par suffixe** (pas par sous-dossier) :

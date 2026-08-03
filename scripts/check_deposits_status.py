@@ -131,7 +131,23 @@ try:
 except Exception as e:
     print(f"   ERREUR : {e}")
 
+# --- Politiques d'exclusivite (verifie 2026-08-03) ----------------------
+# CRITERE D'ELIGIBILITE, pas un detail administratif : certaines plateformes
+# refusent un texte deja rendu public ailleurs — y compris sur un depot
+# generaliste comme Zenodo. Verifier AVANT de preparer un depot.
+print("\n[POLITIQUES D'EXCLUSIVITE]  accepte un texte deja public ailleurs ?")
+for nom, ok, note in [
+    ("SocArXiv/OSF", True, "tout stade de publication ; aucune clause d'exclusivite"),
+    ("SSRN", True, "working papers deja diffuses acceptes"),
+    ("MPRA", True, "coexiste avec Zenodo depuis avril 2026"),
+    ("SciELO Preprints", False,
+     "NON — 'nao sera postado se ja tiver sido [...] postado em outro local'"
+     " (politique du 21/05/2025) => AWP-01 ES INELIGIBLE"),
+]:
+    print(f"   {'OUI' if ok else 'NON':4} {nom:18} {note}")
+
 # --- Rappel de doctrine -------------------------------------------------
 print("\n" + "=" * 70)
 print("REGLE : ne poser le depot suivant qu'apres ACCEPTATION du precedent.")
 print("Jamais plus de 1-2 depots simultanes sur une meme plateforme.")
+print("AVANT toute plateforme nouvelle : verifier sa clause d'exclusivite.")
