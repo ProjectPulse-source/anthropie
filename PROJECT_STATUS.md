@@ -45,13 +45,57 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 > **À lire avant** : toute intervention sur le site, technique 
 > ou éditoriale. Décrit l'état architectural, les doctrines 
 > en place, les chantiers en cours et les chantiers reportés.
-> Dernière mise à jour : 2026-08-02.
+> Dernière mise à jour : 2026-08-03.
 > **Règle de fraîcheur** : l'état écrit suit l'acte — toute session qui
 > exécute met à jour ce log ET les statuts des registres/backlogs touchés
 > dans la même session. Un statut périmé vaut défaut : il provoque la
 > re-exécution de l'acquis ou l'abandon de travaux crus « déjà faits ».
 
 ## 0. Log chronologique
+
+### 2026-08-03 — Ouverture de l'espagnol : AWP-01 ES prêt au dépôt, générateur PDF durci
+
+**Chaîne complète exécutée** sur AWP-01 (`0000-TRADUCTIONS ESPAGNOL/AWP-01/`,
+hors dépôt) : P0 stabilisation de source → P1 traduction en trois lots →
+P2 critique bilingue → P3 relecture native semi-aveugle → fabrication PDF →
+brouillon Zenodo **21766184** (DOI préréservé `10.5281/zenodo.21766184`,
+`language: spa`, communauté `anthropie-working-papers`, relation
+`isDerivedFrom → 10.5281/zenodo.19266862`, PDF attaché, ORCID au record).
+**Non publié — la publication reste un geste d'auteur, aucun script ne publie.**
+
+**Après publication, deux actes restent** : ajouter `"es": "21766184"` à `AWPS`
+dans `scripts/zenodo_audit_complet.py` (l'auditeur ne voit pas les brouillons —
+il porte 0 bloquant sur 16 records publiés, l'espagnol lui est encore invisible),
+et poser la réciprocité `isSourceOf` sur le record français 19266862.
+
+**Deux incidents de fabrication à retenir, de même famille** — un dispositif ne
+se tait pas parce que tout va bien, il se tait quand il n'a rien pour voir :
+
+1. *Une perte de 290 mots (10,5 % de l'article) n'a violé aucune règle écrite* :
+   tous les contrôles du moteur de traduction sont des **détecteurs de présence**,
+   aucun ne voit une absence. Cause immédiate : une extraction de source passée
+   par `head`. Rattrapée par les deux passes P2, indépendamment. Règle consignée
+   dans `stylecards/es_native.md`.
+2. *Le générateur PDF était monolingue sans le dire* : sur une source espagnole
+   il ne tombait pas en erreur, il sortait dix pages propres à l'œil et fausses
+   sur cinq points (césure sous dictionnaire français, étiquettes de front matter,
+   affiliation reconnue au mot « Économiste » — d'où **la ligne d'affiliation
+   rendue à la place de la date**, police substituée en silence par Times+Cambria,
+   flèche `↩` de note web embarquant une quatrième police). Corrigé, éprouvé,
+   documenté : `PROCEDURE DE FABRICATION AWP/ARCHIVES/PATCH_2026-08-03_MULTILINGUE_ES.md`.
+
+**Garde-fou ajouté au générateur** (extension de l'étape 8 existante, pas une
+couche neuve) : contrôle des polices réellement embarquées dans le PDF **fini**.
+Éprouvé par corruption sur les 14 PDF du corpus — 8 conformes, 6 alertes réelles.
+
+**Ce que ce contrôle a révélé, hors mission et non traité** : toute la série
+**anglaise publiée** (AWP-01, 02, 03, 04, 07) est composée en Times/Helvetica et
+non en EB Garamond, avec des polices **non embarquées** pour quatre records sur
+cinq (rendu variable selon le lecteur, hors profils d'archivage PDF/A) ; ces
+fichiers ne viennent pas de ce générateur. **AWP-02 FR** embarque DejaVu-Serif à
+côté d'EB Garamond (substitution partielle : un glyphe manquant). Records déjà
+publiés → reprise = arbitrage d'auteur, consigné ici pour ne pas être
+re-découvert dans six mois.
 
 ### 2026-08-01/02 — Contrôle visibilité EN, sync registres, arbitrages GEO-01/02/03
 
