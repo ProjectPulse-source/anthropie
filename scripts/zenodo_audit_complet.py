@@ -7,18 +7,28 @@ Ne modifie rien. A lancer :
   - avant toute campagne de diffusion ;
   - au relevé trimestriel.
 
-Controle, pour chaque record (FR et EN de chaque AWP) :
+Controle, pour chaque record de chaque AWP, dans toutes les langues declarees :
   1. verbatim canonique de la definition present (ouverture OU incise)
   2. ORCID de l'auteur renseigne
   3. licence CC-BY-4.0
-  4. langue declaree et coherente avec la version
+  4. langue declaree, NORMALISEE (es=spa, en=eng, fr=fra/fre) et coherente
   5. mots-cles presents
   6. communaute Zenodo `anthropie-working-papers`
-  7. isDescribedBy -> page du site, en https
-  8. liaison de traduction reciproque (isDerivedFrom / isSourceOf)
+  7. SITE_RELATION : PASS / N-A justifie / FAIL — voir ci-dessous
+  8. liaison de traduction (isDerivedFrom / isSourceOf) vers la version source
   9. type de ressource = publication/preprint (ou workingpaper)
  10. version declaree
  11. fichier PDF present
+
+Controle 7 — pourquoi il n'est plus universellement bloquant :
+  `related_identifiers` est un champ FACULTATIF de Zenodo. L'absence d'un
+  isDescribedBy n'est donc pas une incompletude du depot. Ce qui serait fautif,
+  c'est de DECLARER une relation vers une page qui ne decrit pas cette version —
+  par exemple faire pointer un depot espagnol vers la page francaise. D'ou :
+    PASS  la locale a une page, et le record la declare correctement ;
+    N-A   la locale n'a pas de page sur le site (site_policy: optional) ;
+    FAIL  une relation est declaree mais pointe vers une autre langue,
+          une autre version, ou est en http.
 
 Usage : python scripts/zenodo_audit_complet.py [--json]
 """
@@ -29,24 +39,72 @@ if not TOKEN:
     sys.exit("ERREUR : variable ZENODO_TOKEN absente")
 AS_JSON = "--json" in sys.argv
 
-# (label, record FR, record EN) — tenir a jour a chaque nouvel AWP.
-PAIRS = [
-    ("AWP-01", "19266862", "19431208"),
-    ("AWP-02", "19268037", "19433086"),
-    ("AWP-03", "19268769", "19434094"),
-    ("AWP-04", "19269244", "19439921"),
-    ("AWP-05", "19269487", "19440866"),
-    ("AWP-06", "20025421", "20077993"),
-    ("AWP-07", "21200286", "21200288"),
-    ("AWP-08", "21506320", "21507249"),
+# Un AWP = une langue SOURCE + N traductions. `records` : langue -> id Zenodo.
+# Une langue absente du dict n'est pas deposee ; elle n'est pas auditee et ce
+# n'est pas un trou. Tenir a jour a chaque nouveau depot.
+AWPS = [
+    {"label": "AWP-01", "source": "fr", "records": {"fr": "19266862", "en": "19431208"}},
+    {"label": "AWP-02", "source": "fr", "records": {"fr": "19268037", "en": "19433086"}},
+    {"label": "AWP-03", "source": "fr", "records": {"fr": "19268769", "en": "19434094"}},
+    {"label": "AWP-04", "source": "fr", "records": {"fr": "19269244", "en": "19439921"}},
+    {"label": "AWP-05", "source": "fr", "records": {"fr": "19269487", "en": "19440866"}},
+    {"label": "AWP-06", "source": "fr", "records": {"fr": "20025421", "en": "20077993"}},
+    {"label": "AWP-07", "source": "fr", "records": {"fr": "21200286", "en": "21200288"}},
+    {"label": "AWP-08", "source": "fr", "records": {"fr": "21506320", "en": "21507249"}},
+    # AWP-01 espagnol : brouillon non cree a ce jour. Ajouter "es": "<id>" ici
+    # une fois le record PUBLIE — un brouillon n'est pas interrogeable par /records.
 ]
 
-MARK = {"fr": "deplacent le desordre plutot qu",
-        "en": "displace disorder rather than resolve it"}
 ORCID = "0009-0002-1794-4895"
 COMMUNITY = "anthropie-working-papers"
-SITE = {"fr": "https://stephane-lalut.com/awp/",
-        "en": "https://stephane-lalut.com/en/awp/"}
+
+# Profil par langue. UNE table, pas deux paralleles : deux tables indexees par la
+# meme cle sont deux sources qui finissent par diverger.
+#   aliases     : codes acceptes par Zenodo/DataCite pour cette langue (ISO 639-1 et -2)
+#   mark        : verbatim canonique de la definition, forme normalisee (voir norm())
+#   site_policy : "required" si le site publie cette langue, "optional" sinon
+#   site_url    : prefixe de la page qui decrit cette version ; None si aucune
+LANG_PROFILES = {
+    "fr": {
+        "aliases": {"fr", "fra", "fre", "fr-fr"},
+        "mark": "deplacent le desordre plutot qu",
+        "site_policy": "required",
+        "site_url": "https://stephane-lalut.com/awp/",
+    },
+    "en": {
+        "aliases": {"en", "eng", "en-us", "en-gb"},
+        "mark": "displace disorder rather than resolve it",
+        "site_policy": "required",
+        "site_url": "https://stephane-lalut.com/en/awp/",
+    },
+    "es": {
+        "aliases": {"es", "spa", "es-es"},
+        # Verbatim canonique espagnol, arrete au cadrage du 2026-08-02 et employe
+        # a l'identique dans le corps du texte et dans la description du depot.
+        "mark": "desplazan el desorden en lugar de resolverlo",
+        # Le site ne declare que fr et en (config/_default/hugo.toml). Tant qu'il
+        # n'existe pas de /es/awp/, aucune page ne peut decrire cette version :
+        # le controle 7 rendra N-A, et surtout PAS un isDescribedBy vers la page
+        # francaise, qui serait une relation fausse.
+        "site_policy": "optional",
+        "site_url": None,
+    },
+}
+
+
+def profil(lang):
+    """FAIL-CLOSED : une langue inconnue arrete l'audit au lieu d'etre ignoree."""
+    p = LANG_PROFILES.get(lang)
+    if p is None:
+        sys.exit(f"ERREUR : langue {lang!r} absente de LANG_PROFILES. "
+                 f"Connues : {', '.join(sorted(LANG_PROFILES))}. "
+                 f"Ajouter son profil plutot que de contourner le controle.")
+    return p
+
+
+def langue_conforme(declaree, attendue):
+    """Normalise avant comparaison : es == spa, en == eng, fr == fra/fre."""
+    return str(declaree or "").strip().lower().replace("_", "-") in profil(attendue)["aliases"]
 
 
 def norm(s):
@@ -75,8 +133,9 @@ def check(label, rec, lang, sibling_doi):
     rels = m.get("related_identifiers", []) or []
     relset = {(r.get("relation"), r.get("identifier")) for r in rels}
 
+    prof = profil(lang)
     # 1. verbatim
-    if MARK[lang] not in norm(m.get("description")):
+    if prof["mark"] not in norm(m.get("description")):
         holes.append("verbatim canonique ABSENT")
     # 2. ORCID
     creators = m.get("creators", []) or []
@@ -87,9 +146,11 @@ def check(label, rec, lang, sibling_doi):
     lic = lic.get("id") if isinstance(lic, dict) else lic
     if str(lic).lower() not in ("cc-by-4.0", "cc-by-4.0", "cc-by"):
         holes.append(f"licence inattendue ({lic})")
-    # 4. langue
-    if (m.get("language") or "").lower()[:2] != ("fr" if lang == "fr" else "en"):
-        holes.append(f"langue declaree = {m.get('language')!r}")
+    # 4. langue — normalisee (le test sur les deux premieres lettres echouait
+    #    sur les codes ISO 639-2 : « spa » ne commence pas par « es »)
+    if not langue_conforme(m.get("language"), lang):
+        holes.append(f"langue declaree = {m.get('language')!r}, attendu "
+                     f"un alias de {lang} ({'/'.join(sorted(prof['aliases']))})")
     # 5. mots-cles
     if not (m.get("keywords") or []):
         holes.append("aucun mot-cle")
@@ -98,12 +159,27 @@ def check(label, rec, lang, sibling_doi):
              for c in (d.get("metadata", {}).get("communities") or [])]
     if COMMUNITY not in comms:
         holes.append(f"communaute {COMMUNITY} absente")
-    # 7. isDescribedBy vers le site en https
-    described = [i for (r, i) in relset if r == "isDescribedBy"]
-    if not any(str(i).startswith(SITE[lang]) for i in described):
-        holes.append("isDescribedBy vers la page du site absent/incorrect")
-    if any(str(i).startswith("http://") for i in described):
+    # 7. SITE_RELATION — trois etats, voir docstring
+    described = [str(i) for (r, i) in relset if r == "isDescribedBy"]
+    site_state = "PASS"
+    if any(i.startswith("http://") for i in described):
         holes.append("isDescribedBy en http (doit etre https)")
+        site_state = "FAIL"
+    if prof["site_url"]:
+        if not any(i.startswith(prof["site_url"]) for i in described):
+            holes.append("isDescribedBy vers la page du site absent/incorrect")
+            site_state = "FAIL"
+    else:
+        # Aucune page pour cette langue : l'absence est normale. Mais declarer
+        # une relation vers la page d'une AUTRE langue serait une relation fausse.
+        autres = [u for c, u in ((c, LANG_PROFILES[c]["site_url"]) for c in LANG_PROFILES)
+                  if c != lang and u]
+        if any(any(i.startswith(u) for u in autres) for i in described):
+            holes.append("isDescribedBy pointe vers la page d'une AUTRE langue "
+                         "(relation fausse : cette page ne decrit pas cette version)")
+            site_state = "FAIL"
+        elif site_state == "PASS":
+            site_state = "N-A"
     # 8. liaison de traduction
     if not any(r in ("isDerivedFrom", "isSourceOf") and i == sibling_doi
                for (r, i) in relset):
@@ -124,7 +200,7 @@ def check(label, rec, lang, sibling_doi):
         info.append("version non declaree (champ optionnel)")
 
     return holes, {"doi": d.get("doi"), "title": m.get("title", "")[:48],
-                   "info": info}
+                   "site_relation": site_state, "info": info}
 
 
 results = {}
@@ -133,9 +209,16 @@ total_info = 0
 print("=" * 74)
 print("AUDIT EXHAUSTIF DES RECORDS ZENODO — recherche de trous")
 print("=" * 74)
-for label, fr, en in PAIRS:
-    for lang, rec, sib in (("fr", fr, f"10.5281/zenodo.{en}"),
-                           ("en", en, f"10.5281/zenodo.{fr}")):
+for awp in AWPS:
+    label, src_lang, recs = awp["label"], awp["source"], awp["records"]
+    src_rec = recs.get(src_lang)
+    for lang, rec in recs.items():
+        # La source doit pointer vers ses traductions ; une traduction, vers la source.
+        if lang == src_lang:
+            autres = [r for l, r in recs.items() if l != src_lang]
+            sib = f"10.5281/zenodo.{autres[0]}" if autres else None
+        else:
+            sib = f"10.5281/zenodo.{src_rec}" if src_rec else None
         holes, meta = check(label, rec, lang, sib)
         key = f"{label} {lang.upper()}"
         results[key] = holes
@@ -148,7 +231,12 @@ for label, fr, en in PAIRS:
             for i in meta.get("info", []):
                 print(f"   - info     : {i}")
         else:
-            suffix = f"   (info : {len(meta.get('info', []))})" if meta.get("info") else ""
+            bits = []
+            if meta.get("site_relation") == "N-A":
+                bits.append("site N-A justifie")
+            if meta.get("info"):
+                bits.append(f"info : {len(meta['info'])}")
+            suffix = f"   ({' | '.join(bits)})" if bits else ""
             print(f"{key:12} OK{suffix}")
 
 print("\n" + "=" * 74)
