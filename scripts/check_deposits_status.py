@@ -131,23 +131,36 @@ try:
 except Exception as e:
     print(f"   ERREUR : {e}")
 
-# --- Politiques d'exclusivite (verifie 2026-08-03) ----------------------
-# CRITERE D'ELIGIBILITE, pas un detail administratif : certaines plateformes
-# refusent un texte deja rendu public ailleurs — y compris sur un depot
-# generaliste comme Zenodo. Verifier AVANT de preparer un depot.
-print("\n[POLITIQUES D'EXCLUSIVITE]  accepte un texte deja public ailleurs ?")
-for nom, ok, note in [
-    ("SocArXiv/OSF", True, "tout stade de publication ; aucune clause d'exclusivite"),
-    ("SSRN", True, "working papers deja diffuses acceptes"),
-    ("MPRA", True, "coexiste avec Zenodo depuis avril 2026"),
-    ("SciELO Preprints", False,
-     "NON — 'nao sera postado se ja tiver sido [...] postado em outro local'"
-     " (politique du 21/05/2025) => AWP-01 ES INELIGIBLE"),
+# --- Grille d'eligibilite ET de valeur marginale (verifie 2026-08-03) ----
+# Deux gates, pas un seul. La conformite ne suffit pas :
+#   ELIGIBLE MAIS SANS VALEUR MARGINALE = NO-GO.
+# Un depot de plus ne diffuse pas toujours davantage ; au-dela d'un seuil il
+# FRAGMENTE l'autorite du record canonique (deux DOI, deux compteurs, une
+# ambiguite de version, une maintenance en plus).
+print("\n[GRILLE DE DEPOT]  conformite | valeur marginale")
+for nom, verdict, note in [
+    ("Zenodo", "CANONIQUE",
+     "socle de toutes les langues — ne se discute pas"),
+    ("SocArXiv/OSF", "GO (EN)",
+     "accepte a tout stade ; apporte la communaute SHS internationale"),
+    ("MPRA/RePEc", "WAIT",
+     "conforme, mais lot d'avril encore bloque : rien de neuf avant deblocage"),
+    ("SSRN", "FIT INCERTAIN",
+     "guidelines du 03/08/2026 : 'Frameworks' listes en types REJETES, PDF"
+     " tout-anglais exige, rejets definitifs et non motives."
+     " 6 papiers deja acceptes (avant ce changement) => valeur marginale du 7e faible"),
+    ("SciELO Preprints", "NO-GO",
+     "'postado em outro local' (21/05/2025) => tout texte deja public exclu"),
+    ("Revues hispanophones", "NO-GO (strategique)",
+     "reconstruirait une carriere academique parallele ; hors objectif"),
 ]:
-    print(f"   {'OUI' if ok else 'NON':4} {nom:18} {note}")
+    print(f"   {verdict:20} {nom:22} {note}")
 
 # --- Rappel de doctrine -------------------------------------------------
 print("\n" + "=" * 70)
 print("REGLE : ne poser le depot suivant qu'apres ACCEPTATION du precedent.")
 print("Jamais plus de 1-2 depots simultanes sur une meme plateforme.")
-print("AVANT toute plateforme nouvelle : verifier sa clause d'exclusivite.")
+print("AVANT toute plateforme nouvelle : (1) clause d'exclusivite,")
+print("(2) type de contenu accepte, (3) langue, (4) VALEUR MARGINALE reelle.")
+print("Doctrine : un record canonique par langue + AU PLUS un relais")
+print("disciplinaire, et seulement s'il apporte une audience identifiable.")
