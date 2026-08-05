@@ -2,7 +2,7 @@
 title: "La financiarisation de la santé au Sénégal (1840-1960) — Valéry Ridde"
 date: 2026-07-03
 revue: "Lectures"
-source_type: "Revue"
+source_type: "Académique"
 url_externe: "https://journals.openedition.org/lectures/71869"
 doi: "10.4000/16ihm"
 image: "/img/publications/lectures-logo.webp"

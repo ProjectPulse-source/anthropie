@@ -2,7 +2,7 @@
 
 > **À lire avant** : ajout de publication, modification de vignette, 
 > ou intervention sur le SCSS de cartes BEM.
-> Dernière mise à jour : mai 2026 (après bascule complète du corpus en typographique).
+> Dernière mise à jour : août 2026 (activation de la catégorie « Académique », option b).
 
 ## 1. Front matter publication — checklist
 
@@ -69,19 +69,16 @@ related_book: [slug-livre]
 | La Grande Conversation    | `Revue`       | Auto-désignée « la revue intellectuelle et politique de Terra Nova » |
 | La Vie des Idées          | `Revue`       | Auto-désigné « la revue » sur leur site     |
 | Le Temps                  | `Quotidien`   | Quotidien suisse romand                     |
-| Lectures                  | `Revue`       | Revue électronique OpenEdition              |
+| Lectures                  | `Académique`  | Revue électronique OpenEdition, comité de lecture (reclassée 2026-08-05) |
 | Mediapart                 | `Journal`     | Journal en ligne, auto-désigné              |
 | Nonfiction                | `Portail`     | Slogan officiel : « Le portail des livres » |
-| Revue de la régulation    | `Revue`       | Le terme est dans le titre                  |
+| Revue de la régulation    | `Académique`  | Revue à comité de lecture (reclassée 2026-08-05) |
+| Revue Française de Socio-Économie | `Académique` | Revue à comité de lecture, éditée par La Découverte, diffusée sur Cairn |
 | Revue Projet              | `Revue`       | Le terme est dans le titre (revue du CERAS) |
 | Terrestres                | `Revue`       | Slogan : « La revue des écologies radicales » |
 
 ### Catégories actuelles
-`Revue` · `Magazine` · `Quotidien` · `Journal` · `Portail`
-
-### Catégorie réservée
-`Académique` — pour revues universitaires à comité de lecture 
-(à activer avec accord explicite, voir §4).
+`Académique` · `Revue` · `Magazine` · `Quotidien` · `Journal` · `Portail`
 
 ## 3. Qualification d'une nouvelle source
 
@@ -97,18 +94,20 @@ Quand une publication paraît dans une revue absente de §2 :
    demander arbitrage avant publication.
 6. Une fois validé, ajouter la ligne à la table §2.
 
-## 4. Bascule vers « Académique »
+## 4. Catégorie « Académique » — ACTIVÉE (2026-08-05)
 
-La catégorie `Académique` est réservée aux revues universitaires à 
-comité de lecture (peer-reviewed). Quand la première fiche concernée 
-arrive (ex. Droit et Société, Revue économique, Annales HSS) :
+Décision auteur du 2026-08-05, à l'occasion de la première fiche en revue
+universitaire à comité de lecture (Revue Française de Socio-Économie,
+recension Lemoine) : **option (b)** — activation de la catégorie ET
+reclassement rétroactif des sources objectivement académiques.
 
-- NE PAS basculer unilatéralement.
-- Demander arbitrage : faut-il reclasser rétroactivement Lectures 
-  et Revue de la régulation (qui sont objectivement académiques) 
-  ou maintenir leur étiquette `Revue` par cohérence d'usage ?
-- Une fois la décision prise, mettre à jour §2 ET les fiches existantes 
-  concernées en un seul commit atomique.
+- Reclassées : Lectures (OpenEdition) et Revue de la régulation.
+  Fiches existantes + miroirs `data/works.yaml` mis à jour dans le
+  même commit que la table §2.
+- Critère d'entrée : revue universitaire à comité de lecture
+  (peer-reviewed). Pour cette catégorie, la nature réelle de la source
+  prime sur son auto-désignation — la procédure §3 reste valable pour
+  les autres catégories.
 
 ## 5. Règle d'or SCSS BEM
 

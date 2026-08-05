@@ -21,12 +21,20 @@
 # =============================================================================
 
 meta:
-  registry_version: "1.10"
-  last_updated: "2026-08-01"
+  registry_version: "1.11"
+  last_updated: "2026-08-05"
   maintainer: "Stéphane Lalut"
   total_works: 37
   source_registry: "registre_soumissions_v73.xlsx"
   changelog:
+    v1_11: |
+      Parution RFSE (2026-08-04) — recension Lemoine, Chasseurs d'États,
+      bloc « Comptes rendus d'ouvrages », RFSE 2026/1 (n° 36), pp. 247-265,
+      DOI commun 10.3917/rfse.036.0247. Fiche site créée + activation de la
+      catégorie « Académique » (option b, décision auteur 2026-08-05) :
+      Lectures et Revue de la régulation reclassées. SocArXiv : AWP-01 EN
+      refusé le 2026-08-04 (2e refus sur le fond) — canal clos pour les
+      papiers conceptuels, file d'attente annulée, AWP-06 seul en ligne.
     v1_10: |
       Synchronisation édition anglaise ANTHROPY (2026-08-01) — l'édition réelle
       publiée le 2026-07-21 (ANTHROPY – A Big History of Civilization's Hidden
@@ -146,7 +154,7 @@ works:
       zenodo_en: { doi: "10.5281/zenodo.19431208", url: "https://doi.org/10.5281/zenodo.19431208", status: published }
       ssrn_en: { abstract_id: "6543618", doi: "10.2139/ssrn.6543618", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6543618", status: approved }
       mpra_en: { item_id: "128604", url: "https://mpra.ub.uni-muenchen.de/id/eprint/128604", status: in_review, deposit_date: "2026-04-07" }
-      socarxiv_en: { status: in_review, deposit_date: "2026-08-02" }  # soumis par l'auteur, pré-modération SocArXiv ; 1er d'une série échelonnée (AWP-01→05 puis 07/08)
+      socarxiv_en: { status: rejected, deposit_date: "2026-08-02", rejection_date: "2026-08-04" }  # 2e refus sur le fond (« does not meet our criteria for scholarly social science research ») après celui du 14/05 en lot (« Arts & Humanities » + suspicion « reference spamming »). Canal clos pour les papiers conceptuels — ne pas resoumettre, ne pas répondre au modérateur ; AWP-06 seul reste en ligne.
     site_pages:
       fr: "https://stephane-lalut.com/awp/awp-01/"
       en: "https://stephane-lalut.com/en/awp/awp-01/"
@@ -661,7 +669,7 @@ works:
     publication_date: "2026-04-14"
     publisher: "Lectures"
     publisher_type: "revue_acad"
-    source_type: "Revue"
+    source_type: "Académique"
     url: "https://journals.openedition.org/lectures/70897"
     doi: "10.4000/162f0"
     chapo:
@@ -722,14 +730,19 @@ works:
 
   - id: art-rfse-lemoine-2026
     type: article
-    status: accepted_pending
-    canonical_title: { fr: "Recension Lemoine, Chasseurs d'États (La Découverte, 2024)" }
-    publication_date: ""
-    publisher: "RFSE"
+    status: published
+    canonical_title: { fr: "Benjamin Lemoine, Chasseurs d'États. La fabrique juridique de la domination économique" }
+    publication_date: "2026-08-04"
+    publisher: "Revue Française de Socio-Économie"
     publisher_type: "revue_acad"
-    url: ""
+    source_type: "Académique"
+    url: "https://shs.cairn.info/revue-francaise-de-socio-economie-2026-1-page-247"
+    doi: "10.3917/rfse.036.0247"
+    chapo:
+      fr: "Une créance argentine rachetée 177 millions de dollars, remboursée 2,4 milliards par décision d'un tribunal de Manhattan. Benjamin Lemoine démonte la fabrique juridique de cette domination : des États qui signent eux-mêmes la levée de leur immunité, et des coûts d'ajustement que les populations absorbent."
+      en: "Argentine debt bought for $177 million and repaid at $2.4 billion by order of a Manhattan court. Benjamin Lemoine dissects the legal machinery of that domination: states signing away their own immunity, and adjustment costs their populations end up absorbing."
     related_works: [awp-03]
-    notes: "Accepté Igor Martinache."
+    notes: "Accepté Igor Martinache. Parue dans le bloc « Comptes rendus d'ouvrages », RFSE 2026/1 (n° 36), pp. 247-265 — bloc co-signé par 7 recenseurs, DOI commun 10.3917/rfse.036.0247. PREMIÈRE publication en revue à comité de lecture → activation catégorie « Académique » (option b, décision auteur 2026-08-05). Tiré à part électronique Cairn (accès libre) valable jusqu'au 03/09/2026 : réservé à la diffusion directe, ne pas le publier sur le site (lien expirant). Fiche site content/publications/rfse-lemoine-chasseurs-detats.md."
 
   - id: art-regulation-aglietta-2026
     type: article
@@ -884,7 +897,7 @@ works:
     publication_date: "2026-07-03"
     publisher: "Lectures"
     publisher_type: "revue_acad"
-    source_type: "Revue"
+    source_type: "Académique"
     url: "https://journals.openedition.org/lectures/71869"
     doi: "10.4000/16ihm"
     sign_count: 8970
