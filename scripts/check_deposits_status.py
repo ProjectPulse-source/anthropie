@@ -41,10 +41,12 @@ MPRA = [("AWP-01", "128604"), ("AWP-02", "128605"), ("AWP-03", "128606"),
 MPRA_MANQUANTS = ["AWP-07", "AWP-08"]
 
 OSF_PROFIL = "ymkpj"
-# SocArXiv : canal RETENU (decision auteur 2026-08-02) — depots echelonnes.
-# Ordre de la file : AWP-01 -> 05, puis 07 et 08 (AWP-06 deja en ligne).
-OSF_FILE_ATTENTE = ["AWP-01", "AWP-02", "AWP-03", "AWP-04", "AWP-05",
-                    "AWP-07", "AWP-08"]
+# SocArXiv : canal CLOS pour les papiers conceptuels (decision 2026-08-05).
+# AWP-01 EN refuse le 2026-08-04 ("does not meet our criteria for scholarly
+# social science research") apres le refus en lot du 2026-05-14 ("Arts &
+# Humanities" + suspicion "reference spamming"). Deux refus sur le fond =
+# ne plus soumettre ; file d'attente annulee ; AWP-06 seul reste en ligne.
+OSF_FILE_ATTENTE = []
 OSF_EN_LIGNE_CONNUS = {"AWP-06": "z6x38_v1"}
 
 

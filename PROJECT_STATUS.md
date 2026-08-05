@@ -53,6 +53,42 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-08-05 — SocArXiv clos pour les conceptuels ; RFSE parue → « Académique » activée ; navette Laura groupée
+
+**SocArXiv — AWP-01 EN refusé une 2e fois (digest OSF du 04/08)** : « does not
+meet our criteria for scholarly social science research ». Rapproché du refus
+en lot du 14/05 (« Arts & Humanities » + suspicion « reference spamming ») et
+de l'acceptation d'AWP-06 (09/05). Décision : **canal clos pour les papiers
+conceptuels** — pas de 3e tentative, pas de réponse au modérateur, dépôt
+AWP-02 prévu le 06/08 **annulé** (il était conditionné à l'acceptation
+d'AWP-01), file d'attente vidée dans `check_deposits_status.py`. AWP-06 reste
+en ligne (licence CC-BY 4.0 toujours à poser). Conséquence GEO : la
+découvrabilité d'AWP-01 ES repose sur site + Zenodo — le chantier `/es/`
+(Pareto point 2 du 03/08) monte en valeur marginale ; aucun dépôt plateforme
+à prévoir pour la version ES.
+
+**RFSE 2026/1 (n° 36) en ligne sur Cairn (04/08)** : recension Lemoine,
+*Chasseurs d'États*, dans le bloc « Comptes rendus d'ouvrages », pp. 247-265,
+DOI commun 10.3917/rfse.036.0247 (7 recenseurs). Fiche
+`content/publications/rfse-lemoine-chasseurs-detats.md` créée + `works.yaml`
+v1.11. **Décision auteur : option (b)** — catégorie « Académique » activée
+(première revue à comité de lecture), Lectures et Revue de la régulation
+reclassées (fiches + miroirs works.yaml + table §2 de NOTES_PUBLICATIONS.md).
+Le tiré à part Cairn (accès libre jusqu'au 03/09/2026) est réservé à la
+diffusion directe — jamais sur le site (lien expirant). `llms.txt` : liste des
+supports complétée (Revue Projet manquait — classe « péremption d'état » ; +
+RFSE).
+
+**Wikidata — navette Laura groupée** :
+`Wikidata/Import_Wikidata_Laura_2026-08-05_ES_RFSE/` (README + deep-link +
+bloc de repli). Bloc 1 = ES sur Q139771989, **P953 corrigé vers le concept
+21766183** (le batch du 03/08 dans Downloads figeait la v1 21766184, périmée
+depuis la v2 — il est remplacé par cette navette). Bloc 2 = création de
+l'item « Comptes rendus d'ouvrages » (P1433 Q3428732, P50 Q138909233 rang 4,
+P2093 pour les 6 co-recenseurs, DOI/pages/numéro). Pas de P921 (bloc
+multi-ouvrages, l'ouvrage recensé n'a pas d'item) ; pas de P973 vers la fiche
+site (noindex, corps quasi vide). **Transmission à Laura après push.**
+
 ### 2026-08-03 (fin) — AWP-01 ES **v2 publiée** ; pourquoi on ne supprime pas une v1
 
 **v2 publiée** : `10.5281/zenodo.21775366`. Corrige deux appels de note orphelins
