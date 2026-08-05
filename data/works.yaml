@@ -738,6 +738,7 @@ works:
     source_type: "Académique"
     url: "https://shs.cairn.info/revue-francaise-de-socio-economie-2026-1-page-247"
     doi: "10.3917/rfse.036.0247"
+    wikidata: "Q140892752"  # item du bloc « Comptes rendus d'ouvrages » (7 recenseurs), créé par Laura le 2026-08-05, readback API conforme
     chapo:
       fr: "Une créance argentine rachetée 177 millions de dollars, remboursée 2,4 milliards par décision d'un tribunal de Manhattan. Benjamin Lemoine démonte la fabrique juridique de cette domination : des États qui signent eux-mêmes la levée de leur immunité, et des coûts d'ajustement que les populations absorbent."
       en: "Argentine debt bought for $177 million and repaid at $2.4 billion by order of a Manhattan court. Benjamin Lemoine dissects the legal machinery of that domination: states signing away their own immunity, and adjustment costs their populations end up absorbing."

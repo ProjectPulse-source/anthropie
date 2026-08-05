@@ -89,6 +89,13 @@ P2093 pour les 6 co-recenseurs, DOI/pages/numéro). Pas de P921 (bloc
 multi-ouvrages, l'ouvrage recensé n'a pas d'item) ; pas de P973 vers la fiche
 site (noindex, corps quasi vide). **Transmission à Laura après push.**
 
+**Exécutée le jour même** : push auteur (`09529b3..3d7241b`, carte RFSE servie
+40 s après), navette exécutée par Laura, **item créé Q140892752**, readback
+API **23/23 conforme** (P50 rang 4 sourcé, DOI, P1433 Q3428732, 6 P2093,
+P953 Cairn). Q139771989 porte désormais label + description ES et le P953
+espagnol sur le concept 21766183 — **AWP-01 est trilingue sur Wikidata**.
+QID reporté dans `works.yaml` (art-rfse-lemoine-2026, champ `wikidata`).
+
 ### 2026-08-03 (fin) — AWP-01 ES **v2 publiée** ; pourquoi on ne supprime pas une v1
 
 **v2 publiée** : `10.5281/zenodo.21775366`. Corrige deux appels de note orphelins
