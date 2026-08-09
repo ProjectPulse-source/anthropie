@@ -56,15 +56,11 @@ European marketing management, public-sector consulting, international entrepren
 
 Each page sets out the book's argument, its contents and where to buy it.
 
----
-
 ## In the press and in journals
 
 {{< mur-presse >}}
 
 → [All publications](/en/publications/)
-
----
 
 ## Researcher
 
@@ -73,8 +69,6 @@ Each paper in the series is deposited on Zenodo with its own DOI.
 ### Anthropie Working Papers
 
 {{< liste-awp >}}
-
----
 
 ## Contact
 

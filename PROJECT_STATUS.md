@@ -100,6 +100,14 @@ le build CI aurait échoué au push.
 seul signal préexistant `la-societe-du-premier-coup` (livre encore en draft) ;
 17 liens du mur ↔ 17 ancres, correspondance exacte, en FR comme en EN.
 
+**Correctif d'affichage (même jour, apres mise en ligne)** : les trois `---` du
+markdown dessinaient un second filet horizontal par-dessus celui que
+`.home-section h2` porte deja (`border-top`, `_page-common.scss:70`) — trait
+double avant chaque section, dans les deux langues. Separateurs retires : le
+titre porte seul sa separation, comme sur toutes les autres pages du site. Les
+`---` des fiches livres sont conserves : ils y precedent un paragraphe, pas un
+`h2`, donc aucun doublon.
+
 **Reste ouvert** : les 17 « objets » (FR et EN) sont des brouillons machine à
 valider ; la phrase d'intro qui énumérait les médias a été supprimée au profit
 du mur — arbitrage GEO non tranché (une énumération en prose s'extrait mieux

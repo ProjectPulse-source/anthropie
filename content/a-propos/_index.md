@@ -68,15 +68,11 @@ Direction marketing européenne, conseil au secteur public, entrepreneuriat inte
 
 Chaque fiche présente l'argument du livre, son sommaire et ses liens d'achat.
 
----
-
 ## Dans la presse et les revues
 
 {{< mur-presse >}}
 
 → [Toutes les publications](/publications/)
-
----
 
 ## Chercheur
 
@@ -85,8 +81,6 @@ Comment ce travail se conduit et se publie hors institution — outils, exigence
 ### Anthropie Working Papers
 
 {{< liste-awp >}}
-
----
 
 ## Contact
 
