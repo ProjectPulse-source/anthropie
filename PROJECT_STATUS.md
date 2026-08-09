@@ -113,6 +113,23 @@ ajoutee dans `_page-common.scss` en miroir de celle des `h2`, portee a 21 px
 regle aux titres du markdown — tous les `h3` de gabarit portent une classe.
 Perimetre reel constate : `/a-propos/` FR et EN seulement.
 
+**Decision auteur — plus d'annee dans le mur Auteur (2026-08-09)** : le
+millesime de l'edition courante compressait une decennie de travail en deux ans
+(Livresque 1re ed. 2021 non deposee, L'Odyssee ecrite en 2022, ANTHROPIE mure
+sur des annees). J'avais recommande l'intervalle origine -> edition courante ;
+l'auteur a propose la suppression pure et simple, qui est le meilleur choix :
+elle supprime aussi le probleme de reconciliation. Les registres ne s'accordent
+pas — `works.yaml` donne Livresque au 2022-12-20 (edition deposee, pas la 1re)
+et commente L'Odyssee « premiere edition 2023 », la ou l'auteur retient 2022
+(ecriture) et debut 2024 (mise en ligne). Afficher une de ces annees creait une
+divergence visible avec Wikidata, la BnF et Amazon. Le rang d'edition
+(« 3e edition », « Nouvelle edition ») porte la duree sans nommer d'annee, et
+les dates exactes restent la ou elles font foi : `datePublished` schema.org de
+chaque fiche livre (verifie : Livresque 2022-12-20), `works.yaml`, Wikidata.
+Effet de bord favorable : la page ne vieillit plus toute seule.
+**Reste a arbitrer un jour** : l'ecart entre les annees d'origine reelles et les
+annees deposees n'est toujours pas documente dans `works.yaml`.
+
 **Reste ouvert** : les 17 « objets » (FR et EN) sont des brouillons machine à
 valider ; la phrase d'intro qui énumérait les médias a été supprimée au profit
 du mur — arbitrage GEO non tranché (une énumération en prose s'extrait mieux

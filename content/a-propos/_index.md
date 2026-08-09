@@ -12,21 +12,28 @@ description: "Stéphane Lalut — Économiste, chercheur indépendant et essayis
 # que la fiche apporte de plus). Jamais de définition de genre en tête. Test de
 # survie : aucune de ces lignes ne fonctionne si on change de livre.
 # ---------------------------------------------------------------------------
+# Pas d'annee dans `meta` : decision auteur 2026-08-09. Le millesime de
+# l'edition courante compressait une decennie de travail en deux ans, et il
+# aurait fallu arbitrer entre date d'ecriture, premiere edition et depot —
+# trois annees differentes selon la source pour L'Odyssee. Le rang d'edition
+# (« 3e edition », « Nouvelle edition ») dit la duree sans nommer d'annee. Les
+# dates exactes restent ou elles font foi : datePublished schema.org de chaque
+# fiche livre, data/works.yaml, Wikidata.
 wall_corpus_label: "Corpus anthropique"
 wall_corpus:
   - slug: "anthropie-ordre-ici-dette-ailleurs"
-    meta: "2025 · 622 pages"
+    meta: "622 pages"
     line: "Aucune société ne résout le désordre : elle le déplace — ailleurs, plus tard, sur d'autres. L'ouvrage qui pose le cadre et le met à l'épreuve de l'histoire longue."
   - slug: "dette-publique-qui-paie-vraiment"
-    meta: "2025 · 224 pages"
+    meta: "224 pages"
     line: "La vraie question n'est pas « qui rembourse ? » mais « qui absorbe le coût ? ». Le livre suit la chaîne, du contribuable d'aujourd'hui aux générations qui n'ont pas voté."
 wall_autres_label: "Hors corpus anthropique"
 wall_autres:
   - slug: "lodyssee-des-idees"
-    meta: "Nouvelle édition 2026 · 696 pages"
+    meta: "Nouvelle édition · 696 pages"
     line: "L'histoire des idées n'est pas un défilé chronologique : c'est un réseau. 250 escales et sept chemins de lecture, de l'aube de l'humanité à l'intelligence artificielle."
   - slug: "livresque-des-mots"
-    meta: "3ᵉ édition 2026"
+    meta: "3ᵉ édition"
     line: "Une anthologie sans classement, ni alphabétique ni thématique : le désordre est le principe. Vingt-cinq siècles de voix, à lire comme un roman plutôt qu'à consulter."
 # ---------------------------------------------------------------------------
 # MUR PRESSE — un ou deux mots nommant CE DONT parle le texte. Ce n'est pas le

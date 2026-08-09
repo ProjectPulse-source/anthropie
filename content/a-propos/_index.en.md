@@ -5,21 +5,28 @@ description: "Stéphane Lalut — Economist, independent researcher and essayist
 # La fiche NATIVE de la langue l'emporte quand elle existe — aujourd'hui
 # ANTHROPY seulement ; les trois autres restent des fiches FR et portent
 # automatiquement le marqueur « In French », comme sur /en/books/.
+# Pas d'annee dans `meta` : decision auteur 2026-08-09. Le millesime de
+# l'edition courante compressait une decennie de travail en deux ans, et il
+# aurait fallu arbitrer entre date d'ecriture, premiere edition et depot —
+# trois annees differentes selon la source pour L'Odyssee. Le rang d'edition
+# (« 3e edition », « Nouvelle edition ») dit la duree sans nommer d'annee. Les
+# dates exactes restent ou elles font foi : datePublished schema.org de chaque
+# fiche livre, data/works.yaml, Wikidata.
 wall_corpus_label: "The anthropic corpus"
 wall_corpus:
   - slug: "anthropie-ordre-ici-dette-ailleurs"
-    meta: "2026 · 632 pages"   # édition anglaise mise en vente le 21/07/2026 (≠ édition FR, 2025)
+    meta: "632 pages"
     line: "No society resolves disorder: it displaces it — elsewhere, later, onto others. The book that lays out the framework and tests it against long-range history."
   - slug: "dette-publique-qui-paie-vraiment"
-    meta: "2025 · 224 pages"
+    meta: "224 pages"
     line: "The real question is not who repays the debt, but who absorbs its cost. The book follows the chain, from today's taxpayers to generations that never voted."
 wall_autres_label: "Outside the anthropic corpus"
 wall_autres:
   - slug: "lodyssee-des-idees"
-    meta: "New edition 2026 · 696 pages"
+    meta: "New edition · 696 pages"
     line: "The history of ideas is not a chronological parade: it is a network. 250 ports of call and seven itineraries, from the dawn of humanity to artificial intelligence."
   - slug: "livresque-des-mots"
-    meta: "3rd edition 2026"
+    meta: "3rd edition"
     line: "An anthology with no classification, neither alphabetical nor thematic: disorder is the principle. Twenty-five centuries of voices, to be read like a novel rather than consulted."
 # Les fiches publications n'ont pas de version anglaise (choix éditorial) : le
 # mur lit toujours le corpus FR. Seul l'objet est traduit ; le titre révélé au
