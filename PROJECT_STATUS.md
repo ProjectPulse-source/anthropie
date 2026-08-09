@@ -106,7 +106,12 @@ markdown dessinaient un second filet horizontal par-dessus celui que
 double avant chaque section, dans les deux langues. Separateurs retires : le
 titre porte seul sa separation, comme sur toutes les autres pages du site. Les
 `---` des fiches livres sont conserves : ils y precedent un paragraphe, pas un
-`h2`, donc aucun doublon.
+`h2`, donc aucun doublon. Second correctif : les `h3` issus du markdown se
+rendaient a 18 px serif sans graisse, indiscernables du corps a 16 px ; regle
+ajoutee dans `_page-common.scss` en miroir de celle des `h2`, portee a 21 px
+(valeur deja en service dans `_ressources-offertes`). `:not([class])` limite la
+regle aux titres du markdown — tous les `h3` de gabarit portent une classe.
+Perimetre reel constate : `/a-propos/` FR et EN seulement.
 
 **Reste ouvert** : les 17 « objets » (FR et EN) sont des brouillons machine à
 valider ; la phrase d'intro qui énumérait les médias a été supprimée au profit

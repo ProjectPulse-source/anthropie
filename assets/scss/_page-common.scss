@@ -75,6 +75,24 @@
   border-top: 1px solid var(--color-rule-ghost);
 }
 
+// H3 — meme portee que la regle H2 ci-dessus. Sans elle, un sous-titre issu du
+// markdown se rend a 18px serif sans graisse : a l'oeil, indiscernable du corps
+// de texte (16px). 21px reprend la valeur deja en service dans
+// _ressources-offertes (.ressources-book__body h3) — pas de nouvelle graduation.
+// :not([class]) restreint la regle aux titres generes par le markdown : tous les
+// h3 des gabarits portent une classe (.livre-card__title, .faq-question…) et
+// gardent donc leur propre style.
+.content-reading h3:not([class]),
+.article__body h3:not([class]),
+.home-section h3:not([class]) {
+  font-family: var(--font-serif);
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-top: 2.25rem;
+  margin-bottom: 0.75rem;
+}
+
 // ── Page exit link ──
 .page-exit {
   margin-top: 3rem;
