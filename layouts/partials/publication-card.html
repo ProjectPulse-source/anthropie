@@ -4,7 +4,10 @@
 {{- $loading := cond (lt $idx 2) "eager" "lazy" -}}
 {{- $isEN := eq site.Language.Lang "en" -}}
 
-<div class="pub-card__wrap">
+{{- /* id = slug de la fiche : rend chaque carte adressable en profondeur
+       (/publications/#<slug>). Utilisé par le mur presse de /a-propos/ et
+       partageable tel quel pour pointer une recension précise. */ -}}
+<div class="pub-card__wrap" id="{{ $page.File.ContentBaseName }}">
 <a href="{{ $page.Params.url_externe }}" target="_blank" rel="noopener" class="pub-card">
   {{ if eq $page.Params.image_type "logo" }}
   <div class="pub-thumb pub-thumb--logo pub-thumb--logo--{{ $variant }}">

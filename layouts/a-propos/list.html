@@ -1,4 +1,7 @@
 {{ define "main" }}
+{{- /* Les blocs générés (mur des livres, mur presse, liste AWP) sont injectés
+       par shortcodes depuis le contenu — plus de découpage de .Content sur des
+       marqueurs HTML : trois injections ne tenaient pas sur ce mécanisme. */ -}}
 {{- $isEn := eq .Lang "en" -}}
 <div class="home-section">
   <header class="page-header">
@@ -8,12 +11,7 @@
     {{ end }}
   </header>
 
-  {{ $parts := split .Content "<!-- AWP_LIST -->" }}
-  {{ index $parts 0 | safeHTML }}
-  {{- partial "awp-list.html" . -}}
-  {{ if gt (len $parts) 1 }}
-    {{ index $parts 1 | safeHTML }}
-  {{ end }}
+  {{ .Content }}
 
   <div class="page-exit">
     <a href="{{ "/quest-ce-que-lanthropie/" | relLangURL }}" class="text-link">

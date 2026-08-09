@@ -1,0 +1,49 @@
+{{- /* Mur « Auteur » — vignettes de couverture + ligne éditoriale.
+
+       Source unique : la vignette, le titre et l'URL viennent de la fiche
+       content/livres/<slug>.md via partials/book-cover.html. La page appelante
+       ne fournit que l'ordre, la mention d'édition (`meta`) et la ligne (`line`),
+       car « À propos » cadre les livres autrement que leur fiche.
+
+       Résolution FR/EN : la fiche NATIVE de la langue courante l'emporte quand
+       elle existe (ANTHROPY sur le site EN), sinon repli sur la fiche FR. Même
+       règle que les listings — apparat existant, partials/livres-merged.html.
+       Aujourd'hui seul ANTHROPIE a une édition anglaise ; les trois autres
+       tuiles restent en français sur /en/, sans disparaître.
+
+       Input : la page (.Params.wall_corpus / .wall_autres + labels). */ -}}
+{{- $page := . -}}
+{{- $merged := dict -}}
+{{- range partial "livres-merged.html" $page -}}
+  {{- $merged = merge $merged (dict .File.ContentBaseName .) -}}
+{{- end -}}
+<section class="auteur-wall">
+  {{- range $groupKey := slice "corpus" "autres" -}}
+    {{- $items := index $page.Params (printf "wall_%s" $groupKey) -}}
+    {{- $label := index $page.Params (printf "wall_%s_label" $groupKey) -}}
+    {{- with $items }}
+  <div class="auteur-wall__group">
+    {{- with $label }}<p class="auteur-wall__label">{{ partial "fr-typo.html" . }}</p>{{ end }}
+    <div class="auteur-wall__grid">
+      {{- range . -}}
+        {{- $item := . -}}
+        {{- with index $merged $item.slug }}
+      <a class="wall-tile" href="{{ .RelPermalink }}">
+        {{ partial "book-cover.html" (dict "slug" $item.slug "alt" (printf "Couverture — %s" .Title) "wrapClass" "wall-tile__cover" "sizes" "96px" "lang" .Lang) }}
+        <span class="wall-tile__body">
+          <span class="wall-tile__title">{{ partial "fr-typo.html" .Title }}</span>
+          {{- /* Site EN + fiche restée française = édition anglaise inexistante.
+                 Même signal que partials/livre-card.html : ne pas laisser croire
+                 qu'une traduction existe. ANTHROPY, native EN, ne le porte pas. */ -}}
+          {{- if and (eq site.Language.Lang "en") (eq .Lang "fr") }}<span class="wall-tile__lang"><em>In French</em></span>{{ end }}
+          {{- with $item.meta }}<span class="wall-tile__meta">{{ partial "fr-typo.html" . }}</span>{{ end }}
+          {{- with $item.line }}<span class="wall-tile__line">{{ partial "fr-typo.html" . }}</span>{{ end }}
+        </span>
+      </a>
+        {{- end -}}
+      {{- end }}
+    </div>
+  </div>
+    {{- end -}}
+  {{- end }}
+</section>

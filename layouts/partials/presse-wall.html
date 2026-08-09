@@ -1,0 +1,41 @@
+{{- /* Mur presse — une tuile par texte, l'OBJET en grand.
+
+       Pourquoi l'objet et non le thème : le thème est invariant sur les dix-sept
+       textes (le déplacement du coût) et donnerait dix-sept étiquettes
+       identiques. C'est l'objet qui varie — et c'est lui qui montre l'étendue
+       du cadre appliqué.
+
+       Le survol ne porte qu'un bonus (le titre complet) : l'objet et la revue
+       restent lisibles sans souris, donc le mur fonctionne au tactile.
+
+       Gabarit de tuile réemployé de partials/publication-card.html
+       (.pub-thumb--logo, 160×107, alternance navy/crème) — aucun vocabulaire
+       visuel nouveau.
+
+       Le lien reste interne : /publications/#<slug> mène à la carte complète,
+       qui porte le chapô et le lien vers l'article externe.
+
+       Input dict : page (fournit .Params.presse_objets). */ -}}
+{{- $page := .page -}}
+{{- $objets := $page.Params.presse_objets -}}
+{{- $pubsURL := "/publications/" | relLangURL -}}
+{{- /* Les fiches publications n'ont pas de version .en.md (choix éditorial) :
+       elles sont absentes de site.RegularPages sur le site EN. On lit donc
+       toujours le site FR, comme le fait layouts/publications/list.html. */ -}}
+{{- $frSite := index site.Sites 0 -}}
+{{- $pubs := where $frSite.RegularPages "Type" "publications" -}}
+<div class="presse-wall">
+  {{- range $i, $p := $pubs.ByDate.Reverse -}}
+    {{- $slug := $p.File.ContentBaseName -}}
+    {{- $variant := cond (eq (mod $i 2) 0) "navy" "cream" -}}
+    {{- $objet := index $objets $slug -}}
+  <a class="presse-tile" href="{{ $pubsURL }}#{{ $slug }}">
+    <span class="pub-thumb pub-thumb--logo pub-thumb--logo--{{ $variant }} presse-tile__face">
+      <span class="pub-thumb__label">{{ $p.Params.revue }}</span>
+      <span class="pub-thumb__name presse-tile__objet">{{ partial "fr-typo.html" ($objet | default $p.Params.revue) }}</span>
+      <span class="pub-thumb__rule" aria-hidden="true"></span>
+      <span class="presse-tile__reveal"><span class="presse-tile__reveal-inner">{{ partial "fr-typo.html" $p.Title }}</span></span>
+    </span>
+  </a>
+  {{- end }}
+</div>

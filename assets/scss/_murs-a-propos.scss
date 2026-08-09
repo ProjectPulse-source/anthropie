@@ -1,0 +1,199 @@
+// =======================================================================
+// _murs-a-propos.scss — Les deux murs de la page « À propos ».
+//
+// 1. .auteur-wall  — vignette de couverture + hook + raison de cliquer.
+// 2. .presse-wall  — une tuile par texte publié, l'objet en grand.
+//
+// Le mur presse REMPLOIE le gabarit de tuile des cartes publications
+// (.pub-thumb--logo, 160×107, alternance navy/crème, cf. _publication-card).
+// Rien n'est redéfini ici de ce que ce fichier porte déjà : seule la mise en
+// grille et l'état de survol sont propres au mur.
+// =======================================================================
+
+// ── Mur « Auteur » ─────────────────────────────────────────────────────
+.auteur-wall { margin: 0.5rem 0 2.25rem; }
+.auteur-wall__group + .auteur-wall__group { margin-top: 2rem; }
+
+.auteur-wall__label {
+  font-family: var(--font-sans);
+  font-size: var(--fs-tiny);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-text-subtle);
+  margin: 0 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-rule-ghost);
+}
+
+.auteur-wall__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 26px;
+}
+
+.wall-tile {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 16px 18px;
+  text-decoration: none;
+  color: inherit;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-rule-ghost);
+  border-radius: 3px;
+  perspective: 900px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-3px);
+    border-color: var(--color-accent-soft);
+    box-shadow: 0 10px 24px rgba(15, 15, 18, 0.09);
+  }
+  &:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
+}
+
+.wall-tile__cover {
+  flex: 0 0 96px;
+  width: 96px;
+  background: var(--color-bg-card);
+  transform: rotateY(var(--book-emblem-rotation));
+  box-shadow: 4px 4px 0 0 var(--color-accent-soft);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  img { display: block; width: 100%; height: auto; }
+}
+.wall-tile:hover .wall-tile__cover {
+  transform: rotateY(calc(var(--book-emblem-rotation) / 2)) translateY(-2px);
+  box-shadow: 5px 6px 0 0 var(--color-accent-soft);
+}
+
+.wall-tile__body { display: block; min-width: 0; }
+
+.wall-tile__title {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 17px;
+  line-height: 1.25;
+  color: var(--color-text);
+  transition: color 0.2s ease;
+}
+.wall-tile:hover .wall-tile__title { color: var(--color-accent); }
+
+// Marqueur « In French » : site EN, fiche restée française.
+.wall-tile__lang {
+  display: block;
+  margin-top: 5px;
+  font-family: var(--font-sans);
+  font-size: var(--fs-tiny);
+  color: var(--color-text-faint);
+}
+
+.wall-tile__meta {
+  display: block;
+  margin-top: 6px;
+  font-family: var(--font-sans);
+  font-size: var(--fs-tiny);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-subtle);
+}
+
+.wall-tile__line {
+  display: block;
+  margin-top: 9px;
+  font-family: var(--font-serif);
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+// ── Mur « presse » ─────────────────────────────────────────────────────
+.presse-wall {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(158px, 1fr));
+  gap: 12px;
+  margin: 0 0 1.5rem;
+}
+
+.presse-tile {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+
+  &:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
+}
+
+.presse-wall .presse-tile__face {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  height: 107px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.presse-tile:hover .presse-tile__face,
+.presse-tile:focus-visible .presse-tile__face {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(15, 15, 18, 0.16);
+}
+
+.presse-wall .pub-thumb__label {
+  text-align: center;
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
+}
+.presse-wall .presse-tile__face .presse-tile__objet {
+  font-size: 17px;
+  line-height: 1.15;
+}
+
+// Le survol ne porte qu'un bonus (le titre complet) : l'objet et la revue
+// restent lisibles sans souris, donc le mur fonctionne au tactile.
+.presse-tile__reveal {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 13px;
+  // Bleu de la palette, mais l'AUTRE : --color-pivot (#4A6FA5) se détache des
+  // tuiles navy (#1B2A4E) comme des tuiles crème. Contraste texte ≈ 4,9:1 → AA.
+  background: var(--color-pivot);
+  color: #FAFAF6;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  pointer-events: none;
+}
+.presse-tile__reveal-inner {
+  font-family: var(--font-serif);
+  font-size: 14px;
+  line-height: 1.3;
+  text-align: center;
+}
+@media (hover: hover) {
+  .presse-tile:hover .presse-tile__reveal,
+  .presse-tile:focus-visible .presse-tile__reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// ── Adaptations ────────────────────────────────────────────────────────
+@media (max-width: 760px) {
+  .auteur-wall__grid { grid-template-columns: 1fr; }
+  .presse-wall { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 9px; }
+  .presse-wall .presse-tile__face .presse-tile__objet { font-size: 15px; }
+}
+@media (max-width: 420px) {
+  .wall-tile__cover { flex-basis: 78px; width: 78px; }
+}

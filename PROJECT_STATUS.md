@@ -53,6 +53,59 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-08-09 — /a-propos/ refondue : Auteur → Presse → Chercheur, deux murs de vignettes (FR + EN)
+
+**Ordre inversé.** La page déployait Chercheur avant Auteur. Nouvel ordre :
+Auteur (les 4 livres) → Dans la presse et les revues (les 17 textes) →
+Chercheur (AWP) → Contact. Gradient d'accessibilité et gradient de preuve.
+**La ligne ORCID · Google Scholar · Zenodo est remontée sous le premier
+paragraphe**, indépendamment de l'ordre des sections : ce sont les ancres
+d'identité les plus fortes de la page, les enterrer à trois écrans les
+affaiblit.
+
+**Mur Auteur** (`partials/auteur-wall.html`) : vignette de couverture +
+mention d'édition + une ligne montée en HOOK (loi contre-intuitive) puis
+RAISON DE CLIQUER. Titre, URL et vignette viennent de `content/livres/<slug>.md`
+via `livres-merged.html` — la fiche native de la langue l'emporte (ANTHROPY sur
+le site EN), sinon repli FR avec marqueur « In French ».
+
+**Mur presse** (`partials/presse-wall.html`) : une tuile par texte, l'**objet**
+en grand. Constat qui a décidé la forme — en lisant les 17 chapôs, *le thème
+est invariant* (le déplacement du coût) ; le réduire à un thème donnerait 17
+étiquettes identiques. C'est l'objet qui varie, et il montre l'étendue du cadre
+appliqué. Le survol ne porte qu'un **bonus** (le titre complet) : objet et revue
+restent lisibles sans souris, donc le mur fonctionne au tactile. Gabarit de
+tuile réemployé de `publication-card.html` (`.pub-thumb--logo`, alternance
+navy/crème) ; couleur de survol `--color-pivot` (#4A6FA5), le second bleu de la
+palette, contraste ≈ 4,9:1 (AA).
+
+**Effet de bord utile** : chaque carte de `/publications/` porte désormais
+`id="<slug>"` et un `scroll-margin-top` — **toute recension est adressable en
+profondeur** (`/publications/#rfse-lemoine-chasseurs-detats`). Le mur pointe
+vers ces ancres : 17 liens internes ajoutés, aucun lien sortant direct.
+
+**Mécanisme d'injection** : le découpage de `.Content` sur `<!-- AWP_LIST -->`
+est remplacé par trois shortcodes (`mur-livres`, `mur-presse`, `liste-awp`) —
+le marqueur tenait pour une injection, pas pour trois. `layouts/a-propos/list.html`
+se réduit à `.Content`.
+
+**Corrigé au passage** : `_components.scss:466` utilisait `rgb(0 0 0 / 18%)`
+(bloc `.companion-banner`, travail en cours non commité) — syntaxe refusée par
+le compilateur SCSS de Hugo 0.147, **tout `main.scss` cessait de compiler** et
+le build CI aurait échoué au push.
+
+**Vérifications** : build FR+EN sans erreur ; jeu de pages généré identique à
+`HEAD` (86 fichiers, aucun ajout ni perte, comparé par worktree) ;
+`check-corpus-counters.py` = 0 divergence ; `check-geo-coverage.py` = exit 0,
+seul signal préexistant `la-societe-du-premier-coup` (livre encore en draft) ;
+17 liens du mur ↔ 17 ancres, correspondance exacte, en FR comme en EN.
+
+**Reste ouvert** : les 17 « objets » (FR et EN) sont des brouillons machine à
+valider ; la phrase d'intro qui énumérait les médias a été supprimée au profit
+du mur — arbitrage GEO non tranché (une énumération en prose s'extrait mieux
+qu'une série de tuiles) ; `/en/independent-researcher/` n'existe pas, la
+section Researcher EN n'y renvoie donc pas.
+
 ### 2026-08-05 — SocArXiv clos pour les conceptuels ; RFSE parue → « Académique » activée ; navette Laura groupée
 
 **SocArXiv — AWP-01 EN refusé une 2e fois (digest OSF du 04/08)** : « does not
