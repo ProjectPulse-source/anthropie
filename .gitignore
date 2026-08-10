@@ -26,3 +26,12 @@ Plateforme_Promotionnelle/
 **/notify.toml
 **/*.key
 _depots_a_faire/
+
+# Ceinture elargie (panel 2026-08-05) : les motifs precedents ne
+# couvraient ni MP-Boite_Zimbra-OVH.txt ni API_GEO_Goatcounter.txt,
+# tous deux presents a la racine d'un depot PUBLIC.
+**/MP-*
+**/API_*
+**/*_token*
+**/*secret*
+**/*.pem
