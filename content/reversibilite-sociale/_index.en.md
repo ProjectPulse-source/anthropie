@@ -62,5 +62,6 @@ This is the link with the general framework of [anthropy](/en/quest-ce-que-lanth
 ## Further reading
 
 - [AWP-08 — *Social Reversibility as a Dimension of Inequality*](/en/awp/awp-08/) — the working paper that formalises the concept (DOI: 10.5281/zenodo.21507249, open-access PDF).
+- [*La Société du premier coup*](/livres/la-societe-du-premier-coup/) — the book that turns the question into narrative, through concrete cases and without formal apparatus. **In French**; its sourced figures are gathered on its [companion page](/premier-coup/).
 - [AWP-07 — *The Anthropic Loop*](/en/awp/awp-07/) — the general mechanism of which reversibility is the micro-institutional counterpart.
 - [What is anthropy?](/en/quest-ce-que-lanthropie/) — the concept page, and the [glossary](/en/glossaire/) of the framework.
