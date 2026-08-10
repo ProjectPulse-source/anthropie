@@ -78,11 +78,15 @@ le 10/08, aurait fait échouer le commit sans ces gestes. Registres synchronisé
 
 **Deux décisions du jour, notées pour ne pas les re-litiger :**
 
-1. **Page ressource offerte tenue hors ligne.** La fiche livre publiée activait
-   d'elle-même l'entrée du guichet (mécanisme C8) — or `/stock` du worker ne connaît
-   pas `premier-coup` : la carte aurait affiché « Exemplaires momentanément
-   indisponibles » en permanence. Slug retiré de `$order`, à remettre avec l'achat
-   des liens prépayés (étape B de la checklist diffusion).
+1. **Page ressource offerte : fermée puis ouverte le soir même.** À la publication de
+   la fiche, l'entrée du guichet s'activait d'elle-même (mécanisme C8) alors que
+   `/stock` ne connaissait pas `premier-coup` : carte « momentanément indisponibles »
+   sans stock derrière. Slug retiré. **Le soir, les 10 liens prépayés fournis par
+   l'auteur ont été importés** (`gift.py autopilot` : 10 importés, 0 doublon, fichier
+   source purgé, 8 poussés sur l'étagère, 2 en réserve ; `premier-coup` ouvert dans
+   `open_books`), et les deux surfaces ont été ouvertes : slug remis dans `$order` et
+   page propre `/ressources-offertes/la-societe-du-premier-coup/` sortie de draft
+   (noindex, hors sitemap et hors RSS, comme ses quatre sœurs).
 2. **Arbitrage « ne jamais inscrire ce livre à Select » supprimé** (décision auteur) :
    tous les titres sont en Select, Amazon est la seule place de distribution. La
    consigne traînait dans un bloc déjà marqué `[HISTORIQUE]` de

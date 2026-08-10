@@ -62,15 +62,11 @@
     L'attribution d'un exemplaire reste limitée, contrôlée et soumise à
     disponibilité.</p>
     <div class="ressources-books">
-      {{/* la-societe-du-premier-coup : RETIRÉ VOLONTAIREMENT le 2026-08-10, jour de la
-           mise en vente. La fiche /livres/ étant publiée, l'entrée s'activerait d'elle-même
-           (mécanisme C8) — mais le guichet n'a pas encore de stock pour `premier-coup`
-           (/stock : anthropie, dette-publique, livresque, odyssee-des-idees), et la carte
-           afficherait « Exemplaires momentanément indisponibles » en permanence.
-           À REMETTRE dans $order à l'étape B de la checklist diffusion, en même temps que
-           le passage de content/ressources-offertes/la-societe-du-premier-coup.md à
-           draft:false : liens prépayés achetés → inbox → `python gift.py autopilot`. */}}
-      {{ $order := slice "lodyssee-des-idees" "anthropie-ordre-ici-dette-ailleurs" "dette-publique-qui-paie-vraiment" "livresque-des-mots" }}
+      {{/* la-societe-du-premier-coup : REMIS le 2026-08-10 au soir, une fois le stock réel
+           en place (10 liens importés, `premier-coup: true` sur /stock du Worker). Il avait
+           été retiré quelques heures plus tôt, à la publication de la fiche, pour ne pas
+           exposer une carte « momentanément indisponibles » sans stock derrière. */}}
+      {{ $order := slice "lodyssee-des-idees" "anthropie-ordre-ici-dette-ailleurs" "dette-publique-qui-paie-vraiment" "livresque-des-mots" "la-societe-du-premier-coup" }}
       {{ range $hugo := $order }}
         {{ with site.GetPage (printf "/livres/%s" $hugo) }}
         {{ $promo := .Params.promo_slug }}

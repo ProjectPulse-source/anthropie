@@ -2,9 +2,6 @@
 title: "La Société du premier coup — un exemplaire vous est offert"
 description: "Un exemplaire Kindle prépayé de La Société du premier coup, transmis sans paiement ni contrepartie."
 livre: "la-societe-du-premier-coup"
-# CHECKLIST DIFFUSION C7/C9 : passer draft:false à la mise en vente KDP
-# (la fiche /livres/ doit être publiée d'abord, sinon build en erreur).
-draft: true
 noindex: true
 og_title: "La Société du premier coup — un exemplaire vous est offert"
 og_description: "Un exemplaire Kindle prépayé, déjà financé, transmis sans paiement ni contrepartie."
