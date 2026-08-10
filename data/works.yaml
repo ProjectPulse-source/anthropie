@@ -476,6 +476,12 @@ works:
     asin_kindle: "B0H1619K7W"   # Kindle SANS ISBN (ASIN) — ne jamais réutiliser 978-2-9586347-6-6
     license: ""  # à préciser
     wikidata: ""  # todo — item du livre à créer (scripts Wikidata/, import Laura)
+    openlibrary:
+      edition: "OL62424864M"   # créée 2026-08-10 (formulaire web, compte st_phane_lalut)
+      work: "OL45876839W"
+      author: "OL16378291A"    # auteur CANONIQUE (6 œuvres) — ⚠ l'autocomplétion propose
+                               # aussi OL16378292A, homonyme VIDE : ne jamais le choisir
+      cover_id: 15245108       # couverture téléversée le même jour (la seule du corpus)
     abstract_short:
       fr: "Nous ne disposons pas tous du même nombre d'essais. Le livre propose une grille pour rendre visible une dimension des inégalités que les colonnes habituelles — revenus, patrimoine, mobilité — laissent hors champ : ce qu'un échec coûte selon celui qui le commet, et combien de tentatives une trajectoire autorise réellement. Mise en récit de la réversibilité sociale formalisée par AWP-08."
       en: ""  # à compléter
@@ -987,9 +993,13 @@ works:
 #               en mai n'existent pas ; licence non déclarée sur celui qui existe.
 #               (Wikidata ne porte aucun lien SocArXiv : pas de lien mort, bonne nouvelle.)
 #   OpenLib.  : 2 DOUBLONS jamais fusionnés (OL45424599W/OL45424600W « Dette Publique » ;
-#               OL45424564W/OL45424565W « ANTHROPIE ») ; 0 couverture sur les 6 works ;
-#               descriptions absentes sur 4 works. Liens d'autorité auteur (ORCID,
-#               Wikidata, VIAF) AJOUTÉS le 2026-08-02.
+#               OL45424564W/OL45424565W « ANTHROPIE ») ; couverture sur 1 seul work
+#               (Premier coup, ajoutée le 10/08) ; descriptions absentes sur 4 works.
+#               Liens d'autorité auteur (ORCID, Wikidata, VIAF) AJOUTÉS le 2026-08-02.
+#               ⚠ TROISIÈME DOUBLON, découvert le 2026-08-10 à la création du Premier
+#               coup : un AUTEUR homonyme VIDE, OL16378292A, que l'autocomplétion
+#               propose AVANT le canonique OL16378291A (6 œuvres). Aucun livre ne lui est
+#               rattaché à ce jour ; à fusionner avec les deux doublons d'œuvres.
 # - Nouvelle publication/acceptation : ajouter entrée + total_works + bump
 #   registry_version + last_updated.
 #
