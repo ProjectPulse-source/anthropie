@@ -34,7 +34,7 @@ wall_lignes:
   la-societe-du-premier-coup:
     line: "Tout le monde tombe. Le privilège, c'est que les chutes ne collent pas. Le livre compte ce que les mesures d'inégalité laissent hors champ : le nombre d'essais dont dispose une trajectoire."
   lodyssee-des-idees:
-    meta: "Nouvelle édition · 696 pages"
+    meta: "Nouvelle édition"
     line: "L'histoire des idées n'est pas un défilé chronologique : c'est un réseau. 250 escales et sept chemins de lecture, de l'aube de l'humanité à l'intelligence artificielle."
   livresque-des-mots:
     meta: "3ᵉ édition"
@@ -67,7 +67,7 @@ presse_objets:
   mediapart-maprimerenov: "MaPrimeRénov'"
 ---
 
-Stéphane Lalut est économiste, chercheur indépendant et essayiste. Il développe le cadre anthropique — l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent — dans une série de working papers et deux ouvrages publiés. Il est par ailleurs l'auteur de deux autres livres, consacrés à l'histoire des idées et à la littérature.
+Stéphane Lalut est économiste, chercheur indépendant et essayiste. Il développe le cadre anthropique — l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent — dans une série de working papers et trois ouvrages publiés. Il est par ailleurs l'auteur de deux autres livres, consacrés à l'histoire des idées et à la littérature.
 
 <p class="orcid-link"><a href="https://orcid.org/0009-0002-1794-4895" target="_blank" rel="noopener">ORCID</a> · <a href="https://scholar.google.com/citations?user=J4NqzwSfrHAC" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://zenodo.org/communities/anthropie-working-papers" target="_blank" rel="noopener">Zenodo</a></p>
 

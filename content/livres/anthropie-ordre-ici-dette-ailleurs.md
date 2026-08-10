@@ -1,5 +1,6 @@
 ---
 title: "ANTHROPIE – Ordre ici. Dette ailleurs"
+subtitle: "Sept âges d'histoire pour une seule hypothèse : le désordre ne se résout pas, il se déplace."
 promo_slug: "anthropie"  # clé D1/books.toml pour /ressources-offertes (guichet Kindle)
 date: 2025-09-09
 lastmod: 2026-07-09  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)

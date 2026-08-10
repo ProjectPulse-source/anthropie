@@ -2,6 +2,7 @@
 title: "Livresque des mots"
 promo_slug: "livresque"  # clé D1/books.toml pour /ressources-offertes (guichet Kindle)
 subtitle: "Anthologie éclectique de citations"
+pages: 672  # sync data/works.yaml (book-livresque-des-mots.pages) — broché, master P11
 description: "Une anthologie qui refuse l'ordre alphabétique et thématique pour privilégier la surprise des rencontres. {citations} citations, {auteurs} voix, 25 siècles de génie humain, tissés en un fil d'Ariane subtil. Quarante ans de passion littéraire pour offrir non un classement, mais un voyage."
 date: 2022-12-20
 lastmod: 2026-07-09  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)

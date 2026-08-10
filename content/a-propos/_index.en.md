@@ -27,7 +27,7 @@ wall_lignes:
   la-societe-du-premier-coup:
     line: "Everyone falls. The privilege is that the falls do not stick. The book counts what inequality measures leave out of frame: how many attempts a trajectory actually allows."
   lodyssee-des-idees:
-    meta: "New edition · 696 pages"
+    meta: "New edition"
     line: "The history of ideas is not a chronological parade: it is a network. 250 ports of call and seven itineraries, from the dawn of humanity to artificial intelligence."
   livresque-des-mots:
     meta: "3rd edition"
@@ -55,7 +55,7 @@ presse_objets:
   mediapart-maprimerenov: "MaPrimeRénov'"
 ---
 
-Stéphane Lalut is an economist, independent researcher and essayist. He develops the framework of anthropy — the hypothesis that social systems displace disorder rather than resolve it — through a series of working papers and two published books. He is also the author of two further books, devoted to the history of ideas and to literature.
+Stéphane Lalut is an economist, independent researcher and essayist. He develops the framework of anthropy — the hypothesis that social systems displace disorder rather than resolve it — through a series of working papers and three published books. He is also the author of two further books, devoted to the history of ideas and to literature.
 
 <p class="orcid-link"><a href="https://orcid.org/0009-0002-1794-4895" target="_blank" rel="noopener">ORCID</a> · <a href="https://scholar.google.com/citations?user=J4NqzwSfrHAC" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://zenodo.org/communities/anthropie-working-papers" target="_blank" rel="noopener">Zenodo</a></p>
 

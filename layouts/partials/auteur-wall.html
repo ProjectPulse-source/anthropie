@@ -39,16 +39,20 @@
       {{- range $b := . -}}
         {{- $slug := $b.File.ContentBaseName -}}
         {{- $o := index $lignes $slug -}}
-        {{- $meta := "" -}}
+        {{- $rang := "" -}}
         {{- $line := "" -}}
         {{- with $o -}}
-          {{- $meta = index . "meta" -}}
+          {{- $rang = index . "meta" -}}
           {{- $line = index . "line" -}}
         {{- end -}}
-        {{- /* Repli de `meta` sur la pagination réelle de la fiche. */ -}}
-        {{- if not $meta -}}
-          {{- with $b.Params.pages }}{{ $meta = printf "%v pages" . }}{{ end -}}
-        {{- end -}}
+        {{- /* `meta` COMPOSE le rang d'édition et la pagination — il ne la remplace
+               pas. Corrigé le 2026-08-11 : « 3ᵉ édition » masquait les 672 pages de
+               Livresque, seule tuile du mur sans pagination. Le rang s'écrit à la
+               main (il ne se déduit pas), la pagination vient toujours de la fiche. */ -}}
+        {{- $parts := slice -}}
+        {{- with $rang }}{{ $parts = $parts | append . }}{{ end -}}
+        {{- with $b.Params.pages }}{{ $parts = $parts | append (printf "%v pages" .) }}{{ end -}}
+        {{- $meta := delimit $parts " · " -}}
         {{- /* Une ligne éditoriale ne se devine pas : on ne la fabrique pas, on
                la réclame. Non bloquant — mieux vaut une tuile nue qu'un livre absent. */ -}}
         {{- if not $line -}}

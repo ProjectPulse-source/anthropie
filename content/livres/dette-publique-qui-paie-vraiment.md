@@ -1,5 +1,6 @@
 ---
 title: "Dette Publique : Qui paie vraiment ?"
+subtitle: "La question n'est pas «&nbsp;combien&nbsp;?&nbsp;» mais «&nbsp;qui paie&nbsp;?&nbsp;» — et par quels canaux le coût se déplace."
 promo_slug: "dette-publique"  # clé D1/books.toml pour /ressources-offertes (guichet Kindle)
 date: 2025-10-17
 lastmod: 2026-07-09  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)

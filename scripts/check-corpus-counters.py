@@ -92,6 +92,21 @@ PATTERNS = [
         r"\b(two|three|four|five|six)\s+developing\s+the\s+anthropic\b",
         re.IGNORECASE,
     ), "en_word", "livre"),
+    # Le lookahead des deux motifs generiques ci-dessus exige « anthropi » APRES
+    # le compteur. Sur /a-propos/, la phrase le place AVANT (« Il developpe le
+    # cadre anthropique [...] dans une serie de working papers et deux ouvrages
+    # publies ») : le compteur y est reste faux apres la parution du 3e livre,
+    # dans les DEUX langues, sans que rien ne le signale. RE2/Python n'ont pas de
+    # lookbehind de longueur variable exploitable ici -> on ancre la formulation
+    # elle-meme, qui est stable et propre au corpus.  (2026-08-11)
+    (re.compile(
+        r"\b(deux|trois|quatre|cinq|six)\s+ouvrages?\s+publi",
+        re.IGNORECASE,
+    ), "fr_word", "livre"),
+    (re.compile(
+        r"\b(two|three|four|five|six)\s+published\s+books?\b",
+        re.IGNORECASE,
+    ), "en_word", "livre"),
 ]
 
 
