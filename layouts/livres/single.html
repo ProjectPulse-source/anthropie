@@ -3,6 +3,11 @@
   <div class="book-single">
     <div class="book-single__main content-narrow content-reading">
       <h1>{{ partial "fr-typo.html" .Title }}</h1>
+      {{- /* Sous-titre éditorial, même idiome que les AWP (titre médian : H1 court +
+             sous-titre). La carte /livres/ l'affichait déjà, la fiche non : pour un livre
+             dont le sous-titre porte l'argument, c'était la surface la plus lue qui le
+             perdait. Rendu si le champ existe — anthropie et dette n'en ont pas. */ -}}
+      {{ with .Params.subtitle }}<p class="book-single__subtitle">{{ partial "fr-typo.html" . }}</p>{{ end }}
       {{ with .Params.isbn }}<p class="livre-card__isbn">ISBN&nbsp;: {{ . }}</p>{{ end }}
 
       {{ .Content }}
@@ -30,8 +35,10 @@
       {{ partial "book-cover.html" (dict "slug" .File.ContentBaseName "alt" (printf "Couverture — %s" .Title) "wrapClass" "book-single__cover" "sizes" "180px" "lang" .Lang) }}
       <div class="book-single__actions">
         {{- /* Prix visible (broché). Doit refléter le schema.org Offer pour rester conforme.
-               Devise selon .Params.currency (défaut EUR) : USD -> $NN, sinon NN&nbsp;€. */ -}}
-        {{ with .Params.price }}{{ $cur := $.Params.currency | default "EUR" }}<p class="book-single__price">{{ if eq $cur "USD" }}${{ . }}{{ else }}{{ . }}&nbsp;€{{ end }}<span class="book-single__price-note">{{ if eq $.Lang "en" }}Paperback{{ else }}Broché{{ end }}</span></p>{{ end }}
+               Devise selon .Params.currency (défaut EUR) : USD -> $NN, sinon NN&nbsp;€.
+               `price` est stocké au format schema.org (séparateur décimal = point, ex. "13.90") :
+               l'affichage en euros passe donc en virgule hors anglais, sans toucher au JSON-LD. */ -}}
+        {{ with .Params.price }}{{ $cur := $.Params.currency | default "EUR" }}<p class="book-single__price">{{ if eq $cur "USD" }}${{ . }}{{ else }}{{ if eq $.Lang "en" }}{{ . }}{{ else }}{{ replace . "." "," }}{{ end }}&nbsp;€{{ end }}<span class="book-single__price-note">{{ if eq $.Lang "en" }}Paperback{{ else }}Broché{{ end }}</span></p>{{ end }}
         {{- partial "transmettre.html" . -}}
         {{ if or .Params.url_amazon_fr .Params.url_amazon_com }}
           {{- partial "amazon-button.html" . -}}

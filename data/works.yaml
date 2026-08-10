@@ -21,12 +21,22 @@
 # =============================================================================
 
 meta:
-  registry_version: "1.11"
-  last_updated: "2026-08-05"
+  registry_version: "1.12"
+  last_updated: "2026-08-10"
   maintainer: "Stéphane Lalut"
-  total_works: 37
+  total_works: 38
   source_registry: "registre_soumissions_v73.xlsx"
   changelog:
+    v1_12: |
+      Publication du 5e livre : « La Société du premier coup — Pourquoi certains
+      peuvent recommencer — et d'autres non » (mise en vente 2026-08-10, 138 p.,
+      ISBN 978-2-9586347-6-6, broché 2958634760 + Kindle B0H1619K7W, broché 13,90 €
+      / Kindle 5,99 €). Troisième livre du corpus anthropique : le compteur du site
+      passe de deux à trois livres (home FR/EN, /livres/_index*, llms.txt).
+      Bascule de la vague 2 (docs/ARCHITECTURE_GEO_PREMIER_COUP.md) : fiche livre
+      publiée, /premier-coup/ sorti de draft, maillage réciproque avec
+      /reversibilite-sociale/ et AWP-08 (related_book). Wikidata et OpenLibrary
+      restent à créer. total_works 37 → 38.
     v1_11: |
       Parution RFSE (2026-08-04) — recension Lemoine, Chasseurs d'États,
       bloc « Comptes rendus d'ouvrages », RFSE 2026/1 (n° 36), pp. 247-265,
@@ -369,7 +379,7 @@ works:
       fr: "https://stephane-lalut.com/awp/awp-08/"
       en: "https://stephane-lalut.com/en/awp/awp-08/"
     google_scholar: { visible: false, citations_observed: 0 }
-    notes: "Working paper de cadre et d'agenda, 2e intention du livre « La société du premier coup » (en préparation). 7 contre-expertises externes + 3 audits croisés + referee de novo ; dépôt Zenodo via API, DOI pré-réservés ; EN isDerivedFrom FR. JEL FR = EN (6 codes)."
+    notes: "Working paper de cadre et d'agenda, 2e intention du livre « La Société du premier coup » (publié le 2026-08-10, book-premier-coup). 7 contre-expertises externes + 3 audits croisés + referee de novo ; dépôt Zenodo via API, DOI pré-réservés ; EN isDerivedFrom FR. JEL FR = EN (6 codes)."
 
   # ===========================================================================
   # LIVRES (4)
@@ -449,6 +459,41 @@ works:
       citations_observed: 0
       notes: "Absent de Google Scholar — à investiguer après page livre EN éventuelle."
     related_works: [awp-03]
+
+  - id: book-premier-coup
+    type: book
+    canonical_title:
+      fr: "La Société du premier coup"
+      en: ""  # n/a — pas d'édition anglaise
+    subtitle_fr: "Pourquoi certains peuvent recommencer — et d'autres non"
+    publication_date: "2026-08-10"
+    isbn: "978-2-9586347-6-6"
+    isbn_13_normalized: "9782958634766"
+    pages: 138  # broché 5×8 po (sync content/livres/la-societe-du-premier-coup.md)
+    publisher: "Auto-édition"
+    distribution: "Amazon KDP"
+    asin_broche: "2958634760"   # = ISBN-10 du bloc AFNIL, clé de contrôle vérifiée
+    asin_kindle: "B0H1619K7W"   # Kindle SANS ISBN (ASIN) — ne jamais réutiliser 978-2-9586347-6-6
+    license: ""  # à préciser
+    wikidata: ""  # todo — item du livre à créer (scripts Wikidata/, import Laura)
+    abstract_short:
+      fr: "Nous ne disposons pas tous du même nombre d'essais. Le livre propose une grille pour rendre visible une dimension des inégalités que les colonnes habituelles — revenus, patrimoine, mobilité — laissent hors champ : ce qu'un échec coûte selon celui qui le commet, et combien de tentatives une trajectoire autorise réellement. Mise en récit de la réversibilité sociale formalisée par AWP-08."
+      en: ""  # à compléter
+    keywords: [réversibilité sociale, inégalités, secondes chances, mobilité sociale, anthropie]
+    site_pages:
+      fr: "https://stephane-lalut.com/livres/la-societe-du-premier-coup/"
+      en: ""  # n/a
+      compagnon: "https://stephane-lalut.com/premier-coup/"  # page compagnon, adresse imprimée p. 105 du livre
+    purchase_url:
+      amazon_fr: "https://www.amazon.fr/dp/2958634760"  # /dp canonique — jamais de shortener amzn.eu/a.co
+      amazon_com: "https://www.amazon.com/dp/2958634760"
+      amazon_fr_kindle: "https://www.amazon.fr/dp/B0H1619K7W"
+    image_url: "https://stephane-lalut.com/images/livres/la-societe-du-premier-coup.jpg"  # auto-hébergé (assets/images/livres/<slug>.jpg) — URL stable, indépendante du visuel
+    google_scholar:
+      visible: false
+      citations_observed: 0
+    related_works: [awp-08]
+    notes: "Troisième livre du corpus anthropique — vecteur « déplacement du désordre vers d'autres groupes sociaux ». Met en récit la réversibilité sociale formalisée par AWP-08 (2e intention du paper). Architecture GEO à quatre objets, arbitrée le 2026-07-29 : /reversibilite-sociale/ = racine conceptuelle (maille, faq) · /awp/awp-08/ = formalisation · fiche livre = objet commercial (hors nasse) · /premier-coup/ = compagnon documentaire, SANS faq, adresse imprimée p. 105. Voir docs/ARCHITECTURE_GEO_PREMIER_COUP.md."
 
   - id: book-livresque-des-mots
     type: book

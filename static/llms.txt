@@ -2,7 +2,7 @@
 
 > L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. (EN — Anthropy is the hypothesis that social systems displace disorder rather than resolve it.)
 
-Stéphane Lalut développe le cadre de l'**anthropie** : tout ordre social local se construit en exportant son désordre vers d'autres lieux, d'autres temps ou d'autres groupes sociaux. Le cadre est déployé dans une série d'*Anthropie Working Papers* (Zenodo, CC-BY 4.0, bilingues FR/EN) et deux livres, et appliqué à la dette publique, la transition énergétique, les infrastructures numériques et la recherche indépendante. Deux autres ouvrages, hors corpus anthropique, complètent le catalogue (histoire des idées, anthologie littéraire).
+Stéphane Lalut développe le cadre de l'**anthropie** : tout ordre social local se construit en exportant son désordre vers d'autres lieux, d'autres temps ou d'autres groupes sociaux. Le cadre est déployé dans une série d'*Anthropie Working Papers* (Zenodo, CC-BY 4.0, bilingues FR/EN) et trois livres, et appliqué à la dette publique, la transition énergétique, les infrastructures numériques, les inégalités et la recherche indépendante. Deux autres ouvrages, hors corpus anthropique, complètent le catalogue (histoire des idées, anthologie littéraire).
 
 Site : https://stephane-lalut.com
 
@@ -47,13 +47,14 @@ Corpus anthropique :
 
 - [ANTHROPIE — Ordre ici. Dette ailleurs](https://stephane-lalut.com/livres/anthropie-ordre-ici-dette-ailleurs/) (2025, 622 p.) — ISBN 978-2-9586347-2-8 ; Wikidata Q138827344. L'ouvrage fondateur du cadre anthropique. Édition anglaise : [ANTHROPY – A Big History of Civilization's Hidden Costs](https://stephane-lalut.com/en/livres/anthropie-ordre-ici-dette-ailleurs/) (2026, 632 p., ISBN 978-2-958634-75-9).
 - [Dette Publique : Qui paie vraiment ?](https://stephane-lalut.com/livres/dette-publique-qui-paie-vraiment/) (2025, 224 p.) — ISBN 978-2-9586347-3-5 ; Wikidata Q138910896. Application du cadre à la dette publique française.
+- [La Société du premier coup](https://stephane-lalut.com/livres/la-societe-du-premier-coup/) (2026, 138 p.) — ISBN 978-2-9586347-6-6. Sous-titre : « Pourquoi certains peuvent recommencer — et d'autres non ». Une grille pour lire ce qu'un échec coûte selon celui qui le commet, et le nombre d'essais dont une trajectoire dispose ; met en récit la réversibilité sociale formalisée par AWP-08. Compagnon documentaire (répertoire des leviers, repères sourcés) : https://stephane-lalut.com/premier-coup/
 
 Hors corpus anthropique :
 
 - [L'Odyssée des idées](https://stephane-lalut.com/livres/lodyssee-des-idees/) (nouvelle édition 2026, 696 p.) — ISBN 978-2-9586347-4-2 ; Wikidata Q138911733. Histoire des idées et culture générale : 250 escales et sept chemins de lecture, de l'aube de l'humanité à l'intelligence artificielle.
 - [Livresque des mots](https://stephane-lalut.com/livres/livresque-des-mots/) (3e édition 2026) — ISBN 978-2-9586347-0-4. Anthologie éclectique de citations : 25 siècles de voix, sans classement.
 
-Quatre livres au total, publiés en français ; ANTHROPIE existe aussi en édition anglaise (2026). Index : https://stephane-lalut.com/livres/
+Cinq livres au total, publiés en français ; ANTHROPIE existe aussi en édition anglaise (2026). Index : https://stephane-lalut.com/livres/
 
 ## Publications (presse intellectuelle et revues)
 
@@ -70,7 +71,7 @@ Recensions et articles publiés dans : Alternatives Économiques, La Vie des Id�
 
 > Anthropy is the hypothesis that social systems displace disorder rather than resolve it.
 
-All eight Anthropie Working Papers exist in English with distinct Zenodo DOIs. The foundational book is available in English: *ANTHROPY – A Big History of Civilization's Hidden Costs* (2026, 632 p.); the three other books are published in French only. English entry points:
+All eight Anthropie Working Papers exist in English with distinct Zenodo DOIs. The foundational book is available in English: *ANTHROPY – A Big History of Civilization's Hidden Costs* (2026, 632 p.); the four other books are published in French only. English entry points:
 
 - [What is anthropy?](https://stephane-lalut.com/en/quest-ce-que-lanthropie/) — canonical definition, FAQ, disambiguation (entropy, Anthropocene, anthropic principle)
 - [ANTHROPY — English edition](https://stephane-lalut.com/en/livres/anthropie-ordre-ici-dette-ailleurs/) — the complete framework in one volume (paperback and Kindle)

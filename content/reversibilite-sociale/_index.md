@@ -67,5 +67,6 @@ C'est le lien avec le cadre général de l'[anthropie](/quest-ce-que-lanthropie/
 ## Pour aller plus loin
 
 - [AWP-08 — *La réversibilité sociale comme dimension de l'inégalité*](/awp/awp-08/) — le working paper qui formalise le concept (DOI&nbsp;: 10.5281/zenodo.21506320, PDF en accès libre).
+- [*La Société du premier coup*](/livres/la-societe-du-premier-coup/) — le livre qui met la question en récit, à partir de cas concrets et sans appareil formel&nbsp;; ses repères chiffrés et leurs sources sont réunis sur la [page compagnon](/premier-coup/).
 - [AWP-07 — *La boucle anthropique*](/awp/awp-07/) — le mécanisme général dont la réversibilité est la contrepartie micro-institutionnelle.
 - [Qu'est-ce que l'anthropie&nbsp;?](/quest-ce-que-lanthropie/) — la page du concept général, et le [glossaire](/glossaire/) du cadre.

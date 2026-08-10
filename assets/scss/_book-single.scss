@@ -24,6 +24,19 @@
   min-width: 0;
 }
 
+// Sous-titre éditorial de la fiche livre. Même idiome que .awp-article__subtitle :
+// italique serif, taille intermédiaire H1 / corps, pleine présence (pas d'atténuation) —
+// le sous-titre porte l'argument du livre, il n'est pas une mention secondaire.
+.book-single__subtitle {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.3em;
+  font-weight: 400;
+  line-height: var(--lh-tight);
+  color: var(--color-text-body);
+  margin: 0.25em 0 1em;
+}
+
 .book-single__sidebar {
   display: flex;
   flex-direction: column;

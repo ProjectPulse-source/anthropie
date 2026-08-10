@@ -32,6 +32,7 @@ translation:
 related:
   - awp-01
   - awp-07
+related_book: "la-societe-du-premier-coup"
 ---
 
 {{< canonical-definition >}}

@@ -53,6 +53,57 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-08-10 — *La Société du premier coup* en vente : vague 2 exécutée, 3e livre du corpus
+
+**Mise en vente KDP le 2026-08-10** — broché `2958634760` (= ISBN-10 de
+978-2-9586347-6-6), Kindle `B0H1619K7W`, 138 p., 13,90 € / 5,99 €.
+
+Bascule de la **vague 2** de `docs/ARCHITECTURE_GEO_PREMIER_COUP.md`, préparée en
+local depuis le 29/07 et jamais commitée :
+
+- **fiche `/livres/la-societe-du-premier-coup/`** — paratexte écrit (elle n'était
+  qu'une coquille : `description`, corps et `faq` vides), liens canoniques `/dp/`
+  sur 7 marchés × 2 formats, FAQ book-scoped à 4 questions, `related_awp: awp-08` ;
+- **`/premier-coup/` sorti de `draft`** — la **vague 1 n'avait jamais été poussée**,
+  alors que l'adresse est **imprimée page 105** d'un livre désormais en vente : le
+  compagnon répondait 404 sur une promesse imprimée. C'est le vrai défaut trouvé au
+  passage, pas la fiche ;
+- **maillage** — `/reversibilite-sociale/` → fiche, AWP-08 (FR+EN) → fiche via
+  `related_book`, fiche → compagnon + maille + `/quest-ce-que-lanthropie/`.
+
+**Compteur de corpus 2 → 3 livres** (home FR/EN, `content/livres/_index*.md`,
+`static/llms.txt`) : `scripts/check-corpus-counters.py`, étendu au corpus de livres
+le 10/08, aurait fait échouer le commit sans ces gestes. Registres synchronisés :
+`data/works.yaml` (v1.12, `book-premier-coup`, total_works 38), `data/intent_matrix.yaml`.
+
+**Deux décisions du jour, notées pour ne pas les re-litiger :**
+
+1. **Page ressource offerte tenue hors ligne.** La fiche livre publiée activait
+   d'elle-même l'entrée du guichet (mécanisme C8) — or `/stock` du worker ne connaît
+   pas `premier-coup` : la carte aurait affiché « Exemplaires momentanément
+   indisponibles » en permanence. Slug retiré de `$order`, à remettre avec l'achat
+   des liens prépayés (étape B de la checklist diffusion).
+2. **Arbitrage « ne jamais inscrire ce livre à Select » supprimé** (décision auteur) :
+   tous les titres sont en Select, Amazon est la seule place de distribution. La
+   consigne traînait dans un bloc déjà marqué `[HISTORIQUE]` de
+   `ARBITRAGE_FINAL_RESSOURCES_2026-07-31.md`, dont le § 3 disait déjà l'inverse.
+
+**Correctif de gabarit** : `price` est stocké au format schema.org (point décimal).
+Les trois autres livres ayant des prix entiers, l'affichage n'avait jamais eu à
+trancher — « 13.90 € » serait parti en production. `layouts/livres/single.html`
+affiche désormais la virgule hors anglais, sans toucher au JSON-LD (`"price": "13.90"`).
+
+**Ajout du même jour** : le **sous-titre s'affiche sous le H1** de la fiche livre
+(`book-single__subtitle`, idiome des AWP). La carte `/livres/` l'affichait déjà, la
+fiche non — pour un livre dont le sous-titre porte l'argument, la surface la plus lue
+était celle qui le perdait. Profite aussi à *L'Odyssée des idées* et à *Livresque des
+mots* ; ANTHROPIE et *Dette publique* n'ont pas ce champ.
+
+**Restent dus** : item Wikidata + OpenLibrary du livre, stock du guichet (liste en
+cours côté auteur), et le relevé `amazon_rating`/`amazon_reviews` quand des avis
+existeront (les deux champs absents = pas d'étoiles, anti preuve sociale inversée).
+**Dépôt légal BnF** : opération auteur, hors chaîne — bloquant de rien.
+
 ### 2026-08-09 — /a-propos/ refondue : Auteur → Presse → Chercheur, deux murs de vignettes (FR + EN)
 
 **Ordre inversé.** La page déployait Chercheur avant Auteur. Nouvel ordre :

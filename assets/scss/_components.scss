@@ -442,3 +442,42 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
 @media (max-width: 480px) {
   .transmettre__panel { min-width: 160px; }
 }
+
+/* --- Bandeau du compagnon documentaire (page /premier-coup/) -----------------
+   L'adresse est imprimée dans le livre : le lecteur qui la tape doit reconnaître
+   l'ouvrage avant de lire quoi que ce soit. Le bandeau identifie et oriente ;
+   il ne vend pas — prix et boutons restent sur la fiche livre. */
+.companion-banner {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding: 1.1rem 1.25rem;
+  margin: 0 0 2rem;
+  border: 1px solid var(--rule, #e3ded7);
+  border-left: 4px solid var(--accent, #8a3324);
+  border-radius: 8px;
+}
+.companion-banner__cover { flex: 0 0 96px; }
+.companion-banner__cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+}
+.companion-banner__body { flex: 1 1 auto; min-width: 0; }
+.companion-banner__eyebrow {
+  margin: 0 0 .35rem;
+  font-size: .74rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted, #6b6560);
+}
+.companion-banner__title { margin: 0; font-size: 1.15rem; font-weight: 700; line-height: 1.25; }
+.companion-banner__sub { margin: .2rem 0 0; font-size: .95rem; font-style: italic; color: var(--muted, #6b6560); }
+.companion-banner__cta { margin: .7rem 0 0; font-size: .92rem; }
+
+@media (max-width: 480px) {
+  .companion-banner { gap: .9rem; padding: .9rem 1rem; }
+  .companion-banner__cover { flex-basis: 72px; }
+}

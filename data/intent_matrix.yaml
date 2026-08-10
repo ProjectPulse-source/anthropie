@@ -129,6 +129,47 @@ entities:
       - "aucune FAQ définitionnelle dette publique (propriété exclusive de /qui-paie-la-dette-publique/)"
 
   # ---------------------------------------------------------------------------
+  book-premier-coup:
+    type: book
+    pages: { fr: /livres/la-societe-du-premier-coup/, en: "" }
+    fil_remontant: /reversibilite-sociale/ → /awp/awp-08/ → /quest-ce-que-lanthropie/
+    jsonld: "Book + Offer + about DefinedTerm + FAQPage (4 questions book-scoped)"
+    cercle_1_ultra_niche:
+      - q: "qu'est-ce que la réversibilité sociale ?"
+        statut: couverte
+        destination: /reversibilite-sociale/   # PROPRIÉTÉ EXCLUSIVE de la maille conceptuelle
+        risk: faible
+        conversion: moyen
+        notes: "ne JAMAIS porter cette question sur la fiche livre ni sur /premier-coup/ (cannibalisation, doctrine GEO-04) ; la fiche vend l'objet, la maille répond à la question"
+      - q: "livre sur l'inégalité des secondes chances"
+        statut: enrichissement
+        destination: /livres/la-societe-du-premier-coup/
+        risk: faible
+        conversion: fort
+        notes: "« l'inégalité des secondes chances » est une formule de POSITIONNEMENT (déclassée du sous-titre le 24/07 : présuppose une chance reçue) — utilisable en description, jamais en titre"
+    cercle_2_conceptuel_proche:
+      - q: "pourquoi certains rebondissent après un échec et d'autres non / droit à l'erreur inégalités"
+        statut: couverte
+        destination: /reversibilite-sociale/
+        risk: faible
+        conversion: moyen
+      - q: "coût social de l'échec / trace institutionnelle d'un échec (fichage, FIBEN, droit à l'oubli)"
+        statut: enrichissement
+        destination: /premier-coup/
+        risk: faible
+        conversion: faible
+        notes: "le compagnon porte les repères sourcés et leur qualification probatoire — support de citation tierce (journalistes), pas de conversion"
+    cercle_3_culture_large:
+      - q: "meilleur livre sur les inégalités"
+        statut: ecartee   # en direct — même doctrine que « meilleure anthologie »
+        risk: doorway_a_eviter
+        conversion: fort
+    interdits:
+      - "aucune FAQ définitionnelle sur la réversibilité sociale hors /reversibilite-sociale/"
+      - "aucune FAQ sur /premier-coup/ : l'absence de faq[] tient la page hors de la nasse (check-geo-coverage.py) — c'est le mécanisme, pas un oubli"
+      - "ne jamais revendiquer « le patrimoine permet d'encaisser un choc » comme apport du livre (antériorité Duvoux 2023, reconnue dans AWP-08 § 9.4)"
+
+  # ---------------------------------------------------------------------------
   book-livresque:
     type: book
     pages: { fr: /livres/livresque-des-mots/, en: "" }

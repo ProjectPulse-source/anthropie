@@ -1,0 +1,47 @@
+{{ define "main" }}
+{{- /* Compagnon documentaire de « La Société du premier coup ».
+
+       POURQUOI CE GABARIT EXISTE (2026-08-09).
+       L'adresse /premier-coup/ est IMPRIMÉE page 105 du livre et annoncée comme
+       permanente. Elle est donc gelée : courte, tapable depuis un exemplaire en
+       main. Mais un lecteur qui la tape vient de refermer le livre — il doit
+       reconnaître l'ouvrage immédiatement, et pouvoir atteindre sa fiche.
+       Sans ce bloc, la page s'ouvrait sur un mur de texte sans couverture ni
+       titre : le compagnon ne se présentait pas comme celui de ce livre.
+
+       Le bandeau ne duplique pas la fiche livre. Il identifie et il oriente.
+       Prix, boutons d'achat et schema.org restent la propriété de
+       /livres/la-societe-du-premier-coup/ — une seule page vend. */ -}}
+{{- $fiche := site.GetPage "/livres/la-societe-du-premier-coup" -}}
+<div class="home-section">
+
+  <div class="companion-banner">
+    {{ partial "book-cover.html" (dict
+        "slug" "la-societe-du-premier-coup"
+        "alt" "Couverture — La Société du premier coup"
+        "wrapClass" "companion-banner__cover"
+        "sizes" "128px"
+        "loading" "eager"
+        "fetchpriority" "high") }}
+    <div class="companion-banner__body">
+      <p class="companion-banner__eyebrow">Compagnon documentaire du livre</p>
+      <p class="companion-banner__title">La Société du premier coup</p>
+      <p class="companion-banner__sub">Pourquoi certains peuvent recommencer&nbsp;— et d’autres non</p>
+      {{ with $fiche }}
+        {{ if not .Draft }}
+          <p class="companion-banner__cta"><a href="{{ .RelPermalink }}">Voir la fiche du livre</a></p>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+
+  <header class="page-header">
+    <h1 class="page-header__title">{{ partial "fr-typo.html" .Title }}</h1>
+    {{ with .Description }}<p class="page-header__lede">{{ . }}</p>{{ end }}
+  </header>
+
+  {{ .Content }}
+
+  {{- partial "transmettre.html" . -}}
+</div>
+{{ end }}

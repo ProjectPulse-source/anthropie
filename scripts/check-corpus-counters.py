@@ -74,6 +74,24 @@ PATTERNS = [
         r"\b(\d+)\s+AWP\b",
         re.IGNORECASE,
     ), "numeric"),
+    # ---- CORPUS DE LIVRES (et non plus AWP) -------------------------------------
+    # Ancres exigeantes : le compteur doit etre suivi, dans la meme phrase, d'une
+    # marque du cadre anthropique. Sans cette contrainte, « deux livres » dans une
+    # phrase quelconque du site declencherait a tort.
+    (re.compile(
+        r"\b(deux|trois|quatre|cinq|six)\s+(?:ouvrages?|livres?)\b"
+        r"(?=[^.]{0,70}anthropi)",
+        re.IGNORECASE,
+    ), "fr_word", "livre"),
+    (re.compile(
+        r"\b(two|three|four|five|six)\s+(?:books?|works?)\b"
+        r"(?=[^.]{0,70}anthropi)",
+        re.IGNORECASE,
+    ), "en_word", "livre"),
+    (re.compile(
+        r"\b(two|three|four|five|six)\s+developing\s+the\s+anthropic\b",
+        re.IGNORECASE,
+    ), "en_word", "livre"),
 ]
 
 
@@ -149,8 +167,40 @@ def count_awps(repo_root: Path) -> tuple[int, int]:
     return len(fr), len(en)
 
 
-def scan_file(rel_path: str, abs_path: Path, truth_fr: int,
-              truth_en: int) -> list[tuple[int, str, int, int, str]]:
+def count_livres_anthropie(repo_root: Path) -> tuple[int, int]:
+    """Compte les livres PUBLIES du corpus anthropique (draft exclu), FR puis EN.
+
+    Draft exclu volontairement : un livre en draft n'est pas dans la grille du site,
+    donc le texte d'intro qui l'ignore est JUSTE. La garde doit se declencher au
+    moment ou le livre parait, pas au moment ou on prepare sa fiche.
+    """
+    def compte(motif: str) -> int:
+        n = 0
+        for p in sorted(repo_root.glob(motif)):
+            if p.name.startswith("_index"):
+                continue
+            txt = p.read_text(encoding="utf-8", errors="replace")
+            m = re.search(r"(?s)\A---(.*?)^---", txt, re.M)
+            fm = m.group(1) if m else ""
+            if not re.search(r'serie:\s*"anthropie"', fm):
+                continue
+            if re.search(r"(?m)^draft:\s*true", fm):
+                continue
+            n += 1
+        return n
+    fr = compte("content/livres/*.md") - compte("content/livres/*.en.md")
+    # ⚠ LA VÉRITÉ EN EST LA MÊME QUE LA FR, et ce n'est pas un raccourci.
+    # Première version : on comptait les seuls `*.en.md` → vérité EN = 1, et le linter
+    # accusait « two books » d'être faux. Vérification faite sur le HTML rendu : la page
+    # /en/books/ affiche bien DEUX cartes de corpus — Hugo retombe sur la page FR quand
+    # la traduction manque (`dette-publique` n'a pas de `.en.md`). Le compteur visible
+    # est donc celui du corpus, pas celui des fichiers traduits.
+    # Un garde-fou qui accuse à tort est pire qu'aucun : on l'apprend à ignorer.
+    return fr, fr
+
+
+def scan_file(rel_path: str, abs_path: Path,
+              truths: dict) -> list[tuple[int, str, int, int, str]]:
     """Scanne un fichier, retourne [(ligne, lang, claimed, truth, extrait)]."""
     out: list[tuple[int, str, int, int, str]] = []
     try:
@@ -164,7 +214,11 @@ def scan_file(rel_path: str, abs_path: Path, truth_fr: int,
     for lineno, line in enumerate(lines, start=1):
         # Ligne dé-taguée pour matching ; ligne originale conservée pour extrait
         line_stripped = _strip_inline_html(line)
-        for pat, ptype in PATTERNS:
+        for entree in PATTERNS:
+            # Les entrees historiques sont des paires ; les nouvelles portent le
+            # corpus vise. Defaut « awp » : aucune regle existante n'est touchee.
+            pat, ptype = entree[0], entree[1]
+            corpus = entree[2] if len(entree) > 2 else "awp"
             for m in pat.finditer(line_stripped):
                 token = m.group(1).lower()
                 if ptype == "fr_word":
@@ -178,7 +232,8 @@ def scan_file(rel_path: str, abs_path: Path, truth_fr: int,
                         continue
                 if claimed is None:
                     continue
-                truth = truth_fr if lang == "fr" else truth_en
+                t_fr, t_en = truths[corpus]
+                truth = t_fr if lang == "fr" else t_en
                 if claimed == truth:
                     continue
                 extrait = line.strip()
@@ -194,8 +249,12 @@ def scan_file(rel_path: str, abs_path: Path, truth_fr: int,
 def main() -> int:
     repo_root = Path(__file__).resolve().parent.parent
     truth_fr, truth_en = count_awps(repo_root)
+    livre_fr, livre_en = count_livres_anthropie(repo_root)
+    truths = {"awp": (truth_fr, truth_en), "livre": (livre_fr, livre_en)}
 
     print(f"Vérité corpus : {truth_fr} AWP FR | {truth_en} AWP EN")
+    print(f"                {livre_fr} livre(s) anthropie FR publié(s) | "
+          f"{livre_en} EN  (draft exclu)")
     print()
 
     all_findings: list[tuple[str, int, str, int, int, str]] = []
@@ -212,7 +271,7 @@ def main() -> int:
             rel = path.relative_to(repo_root).as_posix()
             if _is_excluded(rel):
                 continue
-            findings = scan_file(rel, path, truth_fr, truth_en)
+            findings = scan_file(rel, path, truths)
             for f in findings:
                 all_findings.append((rel,) + f)
 
