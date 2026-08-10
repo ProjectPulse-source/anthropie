@@ -8,6 +8,7 @@ isbn: "978-2-958634-75-9"
 currency: "USD"
 price: "29.99"  # prix broché USD — affiché + schema.org Offer (priceCurrency USD)
 pages: 632  # nombre de pages broché (édition anglaise)
+wikidata_qid: "Q140645013"  # item de l'ÉDITION anglaise (P629 → Q138827344, l'œuvre) — alimente sameAs
 serie: "anthropie"
 weight: 1
 # Liens canoniques /dp/<ASIN> — ASIN broché 2958634752 (= ISBN-10) et Kindle B0H9QMR1CN

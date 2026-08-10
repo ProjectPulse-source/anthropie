@@ -419,6 +419,7 @@ works:
       pages: 632
       asin_paperback: "2958634752"
       asin_kindle: "B0H9QMR1CN"
+      wikidata: "Q140645013"  # item de l'ÉDITION anglaise (P629 → Q138827344) — vérifié via l'API le 2026-08-11 : ISBN 978-2-9586347-5-9, 632 p., 17 propriétés
       purchase_url:
         amazon_com: "https://www.amazon.com/dp/2958634752"
         amazon_com_kindle: "https://www.amazon.com/dp/B0H9QMR1CN"

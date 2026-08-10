@@ -94,6 +94,8 @@ Front matter — modèle : `anthropie-ordre-ici-dette-ailleurs.md` :
       boutons Amazon Broché/Kindle par marché.
 - [ ] `python scripts/check-corpus-counters.py` → exit 0.
 - [ ] `python scripts/audit_works.py` → pas de warning nouveau.
+- [ ] `python scripts/check-fiches-registre.py` → exit 0 (parité fiche ↔ `works.yaml` :
+      QID Wikidata, pagination, ISBN — attrape « le registre le sait, la fiche ne le dit pas »).
 - [ ] `hugo --minify` → build OK.
 
 ## 4. Indexation (après merge sur `main`)
