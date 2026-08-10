@@ -1,46 +1,71 @@
 {{- /* Mur « Auteur » — vignettes de couverture + ligne éditoriale.
 
-       Source unique : la vignette, le titre et l'URL viennent de la fiche
-       content/livres/<slug>.md via partials/book-cover.html. La page appelante
-       ne fournit que l'ordre, la mention d'édition (`meta`) et la ligne (`line`),
-       car « À propos » cadre les livres autrement que leur fiche.
+       ⚠ INVERSION DU 2026-08-11. Ce mur itérait sur une LISTE ÉCRITE À LA MAIN
+       (`wall_corpus` / `wall_autres`). Un livre absent de la liste était donc
+       invisible sur /a-propos/ — sans erreur, sans warning, sans trace : c'est
+       arrivé à « La Société du premier coup », publiée la veille et absente le
+       lendemain. Le mur presse, lui, itérait déjà sur les vraies fiches et
+       n'avait jamais eu ce défaut. Les deux murs suivent désormais la même règle :
 
-       Résolution FR/EN : la fiche NATIVE de la langue courante l'emporte quand
-       elle existe (ANTHROPY sur le site EN), sinon repli sur la fiche FR. Même
-       règle que les listings — apparat existant, partials/livres-merged.html.
-       Aujourd'hui seul ANTHROPIE a une édition anglaise ; les trois autres
-       tuiles restent en français sur /en/, sans disparaître.
+         la PRÉSENCE vient du dépôt ; seul l'ÉDITORIAL vient du front matter.
 
-       Input : la page (.Params.wall_corpus / .wall_autres + labels). */ -}}
+       Source de présence : partials/livres-merged.html (fiche native de la langue
+       si elle existe — ANTHROPY sur le site EN —, sinon repli FR ; tri par Weight).
+       Groupes : `serie: "anthropie"` → corpus, tout le reste → autres.
+
+       Surcharges facultatives, dans `wall_lignes` (map slug → {meta, line}) :
+         · `line` — HOOK (une loi contre-intuitive qui agrippe le lecteur qualifié
+           et filtre l'autre) puis RAISON DE CLIQUER. Jamais de définition de genre
+           en tête. Test de survie : la ligne ne doit pas fonctionner sur un autre
+           livre. Absente → la tuile s'affiche quand même, et le build avertit.
+         · `meta` — mention d'édition. Absente → dérivée de `pages` de la fiche
+           (« 138 pages »), donc juste par construction. À ne surcharger que pour
+           dire un rang d'édition (« 3ᵉ édition »). Pas d'année : décision auteur
+           du 2026-08-09.
+
+       Input : la page (.Params.wall_lignes + labels de groupe). */ -}}
 {{- $page := . -}}
-{{- $merged := dict -}}
-{{- range partial "livres-merged.html" $page -}}
-  {{- $merged = merge $merged (dict .File.ContentBaseName .) -}}
-{{- end -}}
+{{- $lignes := $page.Params.wall_lignes -}}
+{{- $books := partial "livres-merged.html" $page -}}
 <section class="auteur-wall">
   {{- range $groupKey := slice "corpus" "autres" -}}
-    {{- $items := index $page.Params (printf "wall_%s" $groupKey) -}}
+    {{- $serie := cond (eq $groupKey "corpus") "anthropie" "autres-ouvrages" -}}
+    {{- $items := where $books "Params.serie" $serie -}}
     {{- $label := index $page.Params (printf "wall_%s_label" $groupKey) -}}
     {{- with $items }}
   <div class="auteur-wall__group">
     {{- with $label }}<p class="auteur-wall__label">{{ partial "fr-typo.html" . }}</p>{{ end }}
     <div class="auteur-wall__grid">
-      {{- range . -}}
-        {{- $item := . -}}
-        {{- with index $merged $item.slug }}
-      <a class="wall-tile" href="{{ .RelPermalink }}">
-        {{ partial "book-cover.html" (dict "slug" $item.slug "alt" (printf "Couverture — %s" .Title) "wrapClass" "wall-tile__cover" "sizes" "96px" "lang" .Lang) }}
+      {{- range $b := . -}}
+        {{- $slug := $b.File.ContentBaseName -}}
+        {{- $o := index $lignes $slug -}}
+        {{- $meta := "" -}}
+        {{- $line := "" -}}
+        {{- with $o -}}
+          {{- $meta = index . "meta" -}}
+          {{- $line = index . "line" -}}
+        {{- end -}}
+        {{- /* Repli de `meta` sur la pagination réelle de la fiche. */ -}}
+        {{- if not $meta -}}
+          {{- with $b.Params.pages }}{{ $meta = printf "%v pages" . }}{{ end -}}
+        {{- end -}}
+        {{- /* Une ligne éditoriale ne se devine pas : on ne la fabrique pas, on
+               la réclame. Non bloquant — mieux vaut une tuile nue qu'un livre absent. */ -}}
+        {{- if not $line -}}
+          {{- warnf "auteur-wall : %s n'a pas de `line` dans wall_lignes de %s — tuile affichée sans ligne éditoriale." $slug $page.File.Path -}}
+        {{- end }}
+      <a class="wall-tile" href="{{ $b.RelPermalink }}">
+        {{ partial "book-cover.html" (dict "slug" $slug "alt" (printf "Couverture — %s" $b.Title) "wrapClass" "wall-tile__cover" "sizes" "96px" "lang" $b.Lang) }}
         <span class="wall-tile__body">
-          <span class="wall-tile__title">{{ partial "fr-typo.html" .Title }}</span>
+          <span class="wall-tile__title">{{ partial "fr-typo.html" $b.Title }}</span>
           {{- /* Site EN + fiche restée française = édition anglaise inexistante.
                  Même signal que partials/livre-card.html : ne pas laisser croire
                  qu'une traduction existe. ANTHROPY, native EN, ne le porte pas. */ -}}
-          {{- if and (eq site.Language.Lang "en") (eq .Lang "fr") }}<span class="wall-tile__lang"><em>In French</em></span>{{ end }}
-          {{- with $item.meta }}<span class="wall-tile__meta">{{ partial "fr-typo.html" . }}</span>{{ end }}
-          {{- with $item.line }}<span class="wall-tile__line">{{ partial "fr-typo.html" . }}</span>{{ end }}
+          {{- if and (eq site.Language.Lang "en") (eq $b.Lang "fr") }}<span class="wall-tile__lang"><em>In French</em></span>{{ end }}
+          {{- with $meta }}<span class="wall-tile__meta">{{ partial "fr-typo.html" . }}</span>{{ end }}
+          {{- with $line }}<span class="wall-tile__line">{{ partial "fr-typo.html" . }}</span>{{ end }}
         </span>
       </a>
-        {{- end -}}
       {{- end }}
     </div>
   </div>

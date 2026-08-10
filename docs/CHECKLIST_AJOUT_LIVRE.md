@@ -68,6 +68,22 @@ Front matter — modèle : `anthropie-ordre-ici-dette-ailleurs.md` :
 - [ ] Compteur hero `layouts/index.html` : décider si le livre entre dans le
       décompte du **cadre anthropique stricto sensu** ; si oui, incrémenter
       en lettres dans les 2 blocs FR + EN.
+- [ ] **Mur « Auteur » de `/a-propos/` — la tuile apparaît TOUTE SEULE**
+      (depuis le 2026-08-11 : présence lue dans `content/livres/`, groupée par
+      `serie`, triée par `weight`). Il ne reste qu'à écrire l'**éditorial**
+      dans `wall_lignes` de `content/a-propos/_index.md` **et** `_index.en.md` :
+      - `line` (attendu) — HOOK, une loi contre-intuitive qui agrippe le lecteur
+        qualifié et filtre l'autre, puis RAISON DE CLIQUER. Jamais de définition
+        de genre en tête. **Test de survie : la ligne ne doit pas fonctionner
+        sur un autre livre.** Absente → le livre s'affiche quand même et
+        `hugo --minify` émet un `WARN auteur-wall :` (visible dans le log CI ;
+        ⚠ `--quiet` l'étouffe, ne pas l'utiliser pour ce contrôle) ;
+      - `meta` (facultatif) — **ne rien écrire** pour une pagination simple :
+        elle est dérivée de `pages` de la fiche. Ne le poser que pour un rang
+        d'édition (« 3ᵉ édition »). Jamais d'année (décision auteur 2026-08-09).
+      *Motif : ce mur itérait sur une liste manuelle et « La Société du premier
+      coup » y est restée invisible le lendemain de sa parution, sans erreur ni
+      trace. La présence vient du dépôt, l'éditorial du front matter.*
 - [ ] Maillage entrant : fiches `content/publications/*.md` concernées
       (`related_book`), pages offrir/ressources si pertinent.
 

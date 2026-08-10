@@ -53,6 +53,32 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-08-11 — Le mur « Auteur » de /a-propos/ itère enfin sur le dépôt
+
+**Défaut trouvé par l'auteur** : *La Société du premier coup*, publiée la veille,
+était **absente de `/a-propos/`** — sans erreur, sans warning, sans trace.
+
+**Cause** : les deux murs de la page étaient construits **à l'envers l'un de
+l'autre**. Le mur presse itère sur `content/publications/` et n'utilise
+`presse_objets` que comme table d'étiquettes avec repli — une publication
+nouvelle y entre seule. Le mur livres, lui, itérait sur une **liste écrite à la
+main** (`wall_corpus` / `wall_autres`) : un livre hors liste était invisible.
+
+**Règle posée, commune aux deux murs** : *la présence vient du dépôt, l'éditorial
+du front matter.* `partials/auteur-wall.html` lit désormais `content/livres/`
+(groupé par `serie`, trié par `weight`) ; `wall_lignes` est une table de
+surcharges par slug. Conséquences :
+
+- `meta` **se dérive de `pages`** quand il n'est pas écrit — la valeur EN
+  d'ANTHROPY (632 p.) n'est plus recopiée à la main, elle vient de sa fiche ;
+- une `line` manquante n'efface plus le livre : la tuile s'affiche et le build
+  émet `WARN auteur-wall :`. **Testé pour de vrai**, par mutation puis
+  restauration du fichier — et le premier test a été un faux négatif : `--quiet`
+  étouffe le warning. La CI (`hugo --minify`, sans `--quiet`) le laisse passer.
+
+Les deux checklists, qui ne mentionnaient **ni l'un ni l'autre mur**, portent
+maintenant l'étape — c'était la racine documentaire du trou.
+
 ### 2026-08-10 — *La Société du premier coup* en vente : vague 2 exécutée, 3e livre du corpus
 
 **Mise en vente KDP le 2026-08-10** — broché `2958634760` (= ISBN-10 de

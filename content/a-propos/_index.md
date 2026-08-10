@@ -19,20 +19,24 @@ description: "Stéphane Lalut — Économiste, chercheur indépendant et essayis
 # (« 3e edition », « Nouvelle edition ») dit la duree sans nommer d'annee. Les
 # dates exactes restent ou elles font foi : datePublished schema.org de chaque
 # fiche livre, data/works.yaml, Wikidata.
+# La PRÉSENCE d'un livre vient du dépôt (content/livres/, groupé par `serie`) :
+# rien à ajouter ici pour qu'un nouveau titre apparaisse. Seul l'ÉDITORIAL vit
+# ici. `meta` est facultatif — sans lui, la pagination de la fiche est reprise
+# (« 138 pages ») ; ne le poser que pour dire un rang d'édition. Une `line`
+# manquante n'efface pas le livre : elle déclenche un avertissement au build.
 wall_corpus_label: "Corpus anthropique"
-wall_corpus:
-  - slug: "anthropie-ordre-ici-dette-ailleurs"
-    meta: "622 pages"
-    line: "Aucune société ne résout le désordre : elle le déplace — ailleurs, plus tard, sur d'autres. L'ouvrage qui pose le cadre et le met à l'épreuve de l'histoire longue."
-  - slug: "dette-publique-qui-paie-vraiment"
-    meta: "224 pages"
-    line: "La vraie question n'est pas « qui rembourse ? » mais « qui absorbe le coût ? ». Le livre suit la chaîne, du contribuable d'aujourd'hui aux générations qui n'ont pas voté."
 wall_autres_label: "Hors corpus anthropique"
-wall_autres:
-  - slug: "lodyssee-des-idees"
+wall_lignes:
+  anthropie-ordre-ici-dette-ailleurs:
+    line: "Aucune société ne résout le désordre : elle le déplace — ailleurs, plus tard, sur d'autres. L'ouvrage qui pose le cadre et le met à l'épreuve de l'histoire longue."
+  dette-publique-qui-paie-vraiment:
+    line: "La vraie question n'est pas « qui rembourse ? » mais « qui absorbe le coût ? ». Le livre suit la chaîne, du contribuable d'aujourd'hui aux générations qui n'ont pas voté."
+  la-societe-du-premier-coup:
+    line: "Tout le monde tombe. Le privilège, c'est que les chutes ne collent pas. Le livre compte ce que les mesures d'inégalité laissent hors champ : le nombre d'essais dont dispose une trajectoire."
+  lodyssee-des-idees:
     meta: "Nouvelle édition · 696 pages"
     line: "L'histoire des idées n'est pas un défilé chronologique : c'est un réseau. 250 escales et sept chemins de lecture, de l'aube de l'humanité à l'intelligence artificielle."
-  - slug: "livresque-des-mots"
+  livresque-des-mots:
     meta: "3ᵉ édition"
     line: "Une anthologie sans classement, ni alphabétique ni thématique : le désordre est le principe. Vingt-cinq siècles de voix, à lire comme un roman plutôt qu'à consulter."
 # ---------------------------------------------------------------------------

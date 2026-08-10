@@ -12,20 +12,24 @@ description: "Stéphane Lalut — Economist, independent researcher and essayist
 # (« 3e edition », « Nouvelle edition ») dit la duree sans nommer d'annee. Les
 # dates exactes restent ou elles font foi : datePublished schema.org de chaque
 # fiche livre, data/works.yaml, Wikidata.
+# Presence comes from the repository (content/livres/, grouped by `serie`) —
+# nothing to add here for a new title to show up. Only the editorial copy lives
+# here. `meta` is optional: without it the tile reuses the page count of the
+# book page ("138 pages"). A missing `line` never hides the book; it raises a
+# build warning.
 wall_corpus_label: "The anthropic corpus"
-wall_corpus:
-  - slug: "anthropie-ordre-ici-dette-ailleurs"
-    meta: "632 pages"
-    line: "No society resolves disorder: it displaces it — elsewhere, later, onto others. The book that lays out the framework and tests it against long-range history."
-  - slug: "dette-publique-qui-paie-vraiment"
-    meta: "224 pages"
-    line: "The real question is not who repays the debt, but who absorbs its cost. The book follows the chain, from today's taxpayers to generations that never voted."
 wall_autres_label: "Outside the anthropic corpus"
-wall_autres:
-  - slug: "lodyssee-des-idees"
+wall_lignes:
+  anthropie-ordre-ici-dette-ailleurs:
+    line: "No society resolves disorder: it displaces it — elsewhere, later, onto others. The book that lays out the framework and tests it against long-range history."
+  dette-publique-qui-paie-vraiment:
+    line: "The real question is not who repays the debt, but who absorbs its cost. The book follows the chain, from today's taxpayers to generations that never voted."
+  la-societe-du-premier-coup:
+    line: "Everyone falls. The privilege is that the falls do not stick. The book counts what inequality measures leave out of frame: how many attempts a trajectory actually allows."
+  lodyssee-des-idees:
     meta: "New edition · 696 pages"
     line: "The history of ideas is not a chronological parade: it is a network. 250 ports of call and seven itineraries, from the dawn of humanity to artificial intelligence."
-  - slug: "livresque-des-mots"
+  livresque-des-mots:
     meta: "3rd edition"
     line: "An anthology with no classification, neither alphabetical nor thematic: disorder is the principle. Twenty-five centuries of voices, to be read like a novel rather than consulted."
 # Les fiches publications n'ont pas de version anglaise (choix éditorial) : le

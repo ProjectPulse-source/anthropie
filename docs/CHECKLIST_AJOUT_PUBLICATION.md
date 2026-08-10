@@ -42,6 +42,13 @@ Modèle : `revue-projet-commune-republique.md` (2026-07-07).
       intention de requête, mettre à jour la matrice (doctrine en tête du
       fichier).
 - [ ] `static/llms.txt` : section publications, à la main.
+- [ ] **Mur presse de `/a-propos/` — la tuile apparaît TOUTE SEULE** (le mur
+      itère sur `content/publications/`). À faire quand même : ajouter le slug
+      à `presse_objets` dans `content/a-propos/_index.md` **et** `_index.en.md`
+      — un ou deux mots nommant **l'OBJET** du texte (« Dette souveraine »,
+      « Data centers »), jamais le thème, invariant sur tout le corpus. Sans
+      entrée, la tuile retombe silencieusement sur le nom de la revue et le mur
+      perd sa lisibilité d'un coup d'œil.
 - [ ] Typographie française : espaces insécables avant `: ; ? !`
       (cf. `partials/fr-typo.html` et fiches existantes).
 
