@@ -156,8 +156,14 @@ moteur qui ne lit que cette page ; un `@id` nu ne livre qu'un pointeur.
 **Calibrage vérifié dans les deux sens, sur fixture qui échoue** (le site en ligne porte
 encore le défaut, le correctif n'étant pas déployé) : ❌ sur **Accueil FR et Accueil EN**
 (`author, publisher` → `/a-propos/#person`), ✅ sur les **8 autres pages** auditées —
-à-propos, définition, série, AWP FR/EN, trois livres. Zéro faux positif. Après déploiement,
-ces deux lignes doivent passer au vert : c'est le contrôle de non-régression du correctif.
+à-propos, définition, série, AWP FR/EN, trois livres. Zéro faux positif.
+
+✅ **Déployé et vérifié le 11/08 à 04h38** (push `a1cf42a..c2fec20`, Actions *Deploy Hugo*
+et *IndexNow* verts). Contrôle de non-régression passé : les deux accueils en ligne portent
+désormais `@graph` = `WebSite` + `Person` (nom, jobTitle par langue, **9 identifiants
+externes**), et **A.2 bis sort 10/10 en vert** — les deux ❌ sont devenus ✅, les huit autres
+n'ont pas bougé. Le garde-fou a donc été observé rouge puis vert sur le même contrôle : il
+mesure bien ce qu'il prétend mesurer.
 
 Correctif appliqué dans `layouts/partials/schema-website.html` : `@graph` portant le
 `WebSite` **et** un nœud `Person` minimal de même `@id` (nom, url, jobTitle, 9 `sameAs`)
