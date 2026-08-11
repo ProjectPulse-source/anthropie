@@ -11,6 +11,9 @@
   <div class="site-wrapper">
     {{- partial "header.html" . -}}
     <main class="site-main">
+      {{- /* Signal de traduction posé ici, et non dans chaque gabarit : une page
+             traduite le dit d'elle-même, quel que soit son type. */ -}}
+      {{- partial "lang-alternate.html" . -}}
       {{- block "main" . }}{{- end }}
     </main>
     {{- partial "footer.html" . -}}

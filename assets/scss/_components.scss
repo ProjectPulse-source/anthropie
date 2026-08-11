@@ -47,6 +47,47 @@
 }
 .primary-nav__lang a { text-decoration: none; color: var(--color-text-muted); }
 .primary-nav__lang-active { color: var(--color-text); font-weight: 500; }
+// Le lien mène au SITE dans l'autre langue, pas à cette page-ci : la page n'est pas
+// traduite. Atténué pour que la différence se voie avant le clic (le libellé était
+// rigoureusement identique dans les deux cas jusqu'au 2026-08-11).
+.primary-nav__lang a.primary-nav__lang--site { opacity: 0.45; }
+.primary-nav__lang a.primary-nav__lang--site:hover { opacity: 0.75; }
+.mobile-menu__lang--site { opacity: 0.6; }
+
+// ----- Signal de traduction (partials/lang-alternate.html, posé par baseof) -----
+// Aligné sur la colonne de contenu (.home-section : padding 0 2rem) et volontairement
+// discret : il informe, il ne détourne pas. La pastille reprend le vocabulaire du
+// sélecteur de langue de l'en-tête — aucun élément visuel nouveau.
+.lang-alt {
+  max-width: var(--container-max);
+  margin: 0 auto 1.75rem;
+  padding: 0 2rem;
+}
+.lang-alt__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  transition: color 0.15s ease;
+}
+.lang-alt__tag {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+  border: 1px solid currentColor;
+  border-radius: 3px;
+  padding: 1px 5px;
+  line-height: 1.4;
+}
+.lang-alt__link em { font-style: italic; }
+.lang-alt__link:hover { color: var(--color-pivot); }
+.lang-alt__link:hover .lang-alt__tag { color: var(--color-pivot); }
+@media (max-width: 767px) {
+  .lang-alt { padding: 0 1.25rem; margin-bottom: 1.25rem; }
+}
 
 // ----- Header responsive laptop -----
 @media (min-width: 769px) and (max-width: 1280px) {

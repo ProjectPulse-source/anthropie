@@ -98,6 +98,36 @@ redevient une hypothèse à re-vérifier, pas un fait. Registre des collisions
 de nom/concept : `reports/geo_audit/REGISTRE_COLLISIONS.md` (hors dépôt) —
 input obligatoire de toute nouvelle langue ou surface.
 
+## Règle de surface — « la présence vient du dépôt » (actée 2026-08-11)
+
+Défaut récurrent, six occurrences en deux jours, toujours la même forme : **une donnée
+existe quelque part et la surface qui la consomme ne la reçoit pas — sans erreur, sans
+warning, sans trace.** Un livre publié absent du mur `/a-propos/` ; `pages` manquant sur
+une fiche, donc pas de pagination sur deux pages ; `subtitle` manquant, donc pas de hook ;
+deux QID Wikidata connus de `works.yaml` mais jamais déclarés en fiche, donc pas de
+`sameAs` ; un compteur de corpus périmé ; une page traduite qui ne le disait pas. Aucune
+n'a été trouvée par l'appareil : toutes par l'auteur, en regardant le site.
+
+Trois règles en découlent, à appliquer à **toute** surface qui agrège ou reflète du contenu :
+
+1. **La présence vient du dépôt, l'éditorial du front matter.** Un gabarit n'énumère
+   jamais à la main ce que `content/` sait déjà. Le front matter ne porte que ce qui ne
+   se déduit pas (une ligne éditoriale, une étiquette), en **table de surcharges indexée
+   par slug**, avec repli. Toute valeur dérivable (pagination, titre, URL, couverture,
+   traduction) se **dérive** — la recopier, c'est programmer sa dérive.
+2. **Une exclusion peut être légitime ; le silence, jamais.** Quand une liste manuelle se
+   justifie (ex. `$order` de `/ressources-offertes/`, où l'on retire un livre sans stock),
+   elle porte un `warnf` sur ce qu'elle omet. Idem pour un champ éditorial absent : la
+   tuile s'affiche **et** le build avertit — ne jamais faire disparaître l'objet.
+3. **Le registre est la source, la fiche doit le refléter.** `scripts/check-fiches-registre.py`
+   compare fiches et `data/works.yaml` (QID, pagination, ISBN) et signale « le registre le
+   sait, la fiche ne le dit pas ». À lancer avant commit, comme les autres linters.
+
+⚠ Un `warnf` **ne survit pas à `hugo --quiet`** (faux négatif observé le 11/08 en testant
+la première garde). La CI utilise `hugo --minify` sans `--quiet` : ne pas changer cela.
+Et un garde-fou se **teste par mutation réelle puis restauration**, jamais par relecture
+du code.
+
 ## Conventions de contenu
 
 - Typographie française : espaces insécables (`&nbsp;`) avant `:`, `;`, `?`, `!` dans les `.md` français — voir `partials/fr-typo.html` et les fichiers AWP existants.

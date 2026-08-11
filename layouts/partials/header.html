@@ -9,9 +9,9 @@
         <span class="primary-nav__lang">
           {{ if eq .Lang "fr" }}
             <span class="primary-nav__lang-active">FR</span>
-            {{ if .IsTranslated }}{{ range .Translations }}<a href="{{ .Permalink }}">EN</a>{{ end }}{{ else }}<a href="/en/">EN</a>{{ end }}
+            {{ if .IsTranslated }}{{ range .Translations }}<a href="{{ .Permalink }}" hreflang="{{ .Lang }}" title="Cette page en anglais">EN</a>{{ end }}{{ else }}<a href="/en/" class="primary-nav__lang--site" title="Site en anglais — cette page n'est pas traduite">EN</a>{{ end }}
           {{ else }}
-            {{ if .IsTranslated }}{{ range .Translations }}<a href="{{ .Permalink }}">FR</a>{{ end }}{{ else }}<a href="/">FR</a>{{ end }}
+            {{ if .IsTranslated }}{{ range .Translations }}<a href="{{ .Permalink }}" hreflang="{{ .Lang }}" title="This page in French">FR</a>{{ end }}{{ else }}<a href="/" class="primary-nav__lang--site" title="French site — this page is not translated">FR</a>{{ end }}
             <span class="primary-nav__lang-active">EN</span>
           {{ end }}
         </span>
@@ -29,9 +29,9 @@
       {{ end }}
       {{ if hugo.IsMultilingual }}
         {{ if eq .Lang "fr" }}
-          {{ if .IsTranslated }}{{ range .Translations }}<a href="{{ .Permalink }}">English</a>{{ end }}{{ else }}<a href="/en/">English</a>{{ end }}
+          {{ if .IsTranslated }}{{ range .Translations }}<a href="{{ .Permalink }}" hreflang="{{ .Lang }}">English — cette page</a>{{ end }}{{ else }}<a href="/en/" class="mobile-menu__lang--site">English (site)</a>{{ end }}
         {{ else }}
-          {{ if .IsTranslated }}{{ range .Translations }}<a href="{{ .Permalink }}">Français</a>{{ end }}{{ else }}<a href="/">Français</a>{{ end }}
+          {{ if .IsTranslated }}{{ range .Translations }}<a href="{{ .Permalink }}" hreflang="{{ .Lang }}">Français — this page</a>{{ end }}{{ else }}<a href="/" class="mobile-menu__lang--site">Français (site)</a>{{ end }}
         {{ end }}
       {{ end }}
     </nav>

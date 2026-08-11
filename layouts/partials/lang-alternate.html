@@ -1,0 +1,26 @@
+{{- /* Signal de traduction — AUTOMATIQUE, pour tous les types de page.
+
+       Motif (2026-08-11) : le site est bilingue depuis l'origine, mais rien n'indiquait
+       au lecteur d'une page française qu'elle existait en anglais. Le sélecteur de
+       l'en-tête affichait « EN » à l'identique que la page soit traduite ou non : on
+       cliquait, et on atterrissait soit sur la même page en anglais, soit sur l'accueil
+       anglais, sans avoir pu le savoir. Hugo connaissait la réponse (`.IsTranslated`) ;
+       aucune surface ne la transmettait — la même classe de défaut que le mur des livres.
+
+       Rendu depuis `baseof.html`, donc AUCUN gabarit à modifier quand une traduction
+       nouvelle apparaît : la présence vient du dépôt (`.en.md`), jamais d'une liste.
+
+       Les AWP portent déjà un bandeau plus riche (titre + DOI de la traduction,
+       `cross-language-banner.html`) : on ne double pas. */ -}}
+{{- if and .IsTranslated (not (and (eq .Type "awp") .Params.translation)) -}}
+  {{- range .Translations -}}
+<div class="lang-alt">
+  <a class="lang-alt__link" href="{{ .Permalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">
+    <span class="lang-alt__tag">{{ upper .Lang }}</span>
+    {{- if eq .Lang "en" }}<span class="lang-alt__text">Cette page existe aussi en anglais&nbsp;— <em>English version</em></span>
+    {{- else if eq .Lang "fr" }}<span class="lang-alt__text">This page is also available in French&nbsp;— <em>version française</em></span>
+    {{- else }}<span class="lang-alt__text">{{ .Language.LanguageName }}</span>{{ end }}
+  </a>
+</div>
+  {{- end -}}
+{{- end -}}

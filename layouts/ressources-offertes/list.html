@@ -67,6 +67,21 @@
            été retiré quelques heures plus tôt, à la publication de la fiche, pour ne pas
            exposer une carte « momentanément indisponibles » sans stock derrière. */}}
       {{ $order := slice "lodyssee-des-idees" "anthropie-ordre-ici-dette-ailleurs" "dette-publique-qui-paie-vraiment" "livresque-des-mots" "la-societe-du-premier-coup" }}
+      {{- /* ⚠ SEULE liste de PRÉSENCE encore manuelle du dépôt, et elle le reste
+             volontairement : exclure un livre d'ici est un geste éditorial légitime
+             (le 2026-08-10, « Premier coup » en a été retiré une demi-journée, faute
+             de stock au guichet — une carte « momentanément indisponibles » en
+             permanence dessert le dispositif). Ce qui n'est PAS légitime, c'est
+             l'oubli silencieux : tout livre pourvu d'un `promo_slug` et absent de
+             $order déclenche désormais un avertissement au build. La curation reste
+             possible ; le silence, non. */ -}}
+      {{- range site.RegularPages -}}
+        {{- if eq .Type "livres" -}}
+          {{- if and .Params.promo_slug (not (in $order .File.ContentBaseName)) -}}
+            {{- warnf "ressources-offertes : le livre %s a un promo_slug (%s) mais est ABSENT de $order — omission volontaire (pas de stock) ou oubli ? layouts/ressources-offertes/list.html" .File.ContentBaseName .Params.promo_slug -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end }}
       {{ range $hugo := $order }}
         {{ with site.GetPage (printf "/livres/%s" $hugo) }}
         {{ $promo := .Params.promo_slug }}
