@@ -53,6 +53,71 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-08-11 (soir) — Dossier GEO EXPERIENCE : aucun outil installé, une doctrine de la note actée
+
+**Saisine** : `GEO EXPERIENCE/GEO_Experience-01..04.txt` (hors dépôt, gitignoré) —
+audit de six dépôts GEO (GEO-optim/GEO, geo-citation-lab, elmohq/elmo,
+Auriti-Labs/geo-optimizer-skill, Cognitic-Labs/geoskills, oneglanse), en vue
+d'outillage et de veille.
+
+**Verdict, après 4 navettes arbitrées : AUCUNE INSTALLATION.** Motifs, dans l'ordre
+de force : (1) **OneGlanse = NO-GO doctrinal** — il automate les interfaces web
+consommateur authentifiées (Camoufox, sessions ChatGPT/Gemini/Perplexity/Claude), ce
+que la règle non négociable n°1 d'`external-audits` interdit ; la question ne se
+discute pas sur ses mérites techniques. (2) **Redondance** — l'appareil existant
+(`GEO_PROTOCOLE_MESURE.md`, 18 prompts, `intent_matrix.yaml`, `GEO_QUERY_MATRIX.csv`,
+`audit_geo_v2.py`, `check-geo-coverage.py`) couvre déjà ce que ces outils apportent ;
+Citation Lab se réduit à trois concepts (source sélectionnée / contenu absorbé /
+entité exposée), soit un paragraphe de protocole, pas une installation. (3) **Le coût
+réel n'est pas l'API mais la lecture humaine** — 18 × N répétitions × N moteurs, et
+l'absorption ne se code pas, elle se lit. (4) **Le protocole § 3 interdit déjà à toute
+métrique de volume de déclencher une action** : un score mieux mesuré déciderait
+toujours de rien.
+
+**Défaut réel trouvé, et c'est le seul acquis du dossier** : le score T0 « 5-6/18 »
+circulait **sans sa couverture** — un moteur sur cinq interrogé, 19 cellules sur 90,
+soit 21 %. Le symétrique exact existait dans l'appareil éditorial : `MODULE_RETRO-LAB`
+présentait « 18,0 → 18,2 » comme *la preuve par la mesure* qu'une passe améliore la
+note, sur un instrument qui n'a jamais déclaré sa matérialité. **Même défaut, deux
+appareils.**
+
+**Acte — doctrine de la note, arbitrée par l'auteur (9 amendements), appliquée des
+deux côtés** : une note ne circule jamais nue ; quatre objets à ne jamais fondre en un
+seul (granularité de la grille · **couverture pondérée**, preuve directe vs inférence ·
+**fiabilité empirique**, méthode déclarée a priori mais valeur estimée sur les
+réplications observées · **seuil de matérialité** fixé a priori) ; « bande de seuil »
+requalifiée en **zone de revue décisionnelle**, qui ne déclenche une notation
+complémentaire que si une décision dépend réellement du franchissement ; la réplication
+estime l'incertitude, elle **ne crée pas de matérialité** ; une divergence
+interne/externe déclenche une **investigation de calibration**, jamais une moyenne
+silencieuse ni un verdict automatique de défaut de grille ; **trois étages** —
+Conformité / Note / Traction, la traction n'autorisant **jamais à elle seule** une
+correction de l'objet, seulement une hypothèse à instruire.
+
+**Fichiers touchés** — `MODULE_RETRO-LAB` **v1.4** (invariant 9, § Trois étages, 2
+lignes au gate d'entrée, contrôle bloquant ② à six, garde-fou anti-invariant imaginaire,
+requalification 18,0 → 18,2 en **non-dégradation**) ; v1.3 archivée avec empreinte —
+`_ARCHIVE_MODULES\MODULE_RETRO-LAB_v1.3_2026-08-07.md`, SHA-256 `6FB8AD94…13DD38`
+(**première révision du control plane restituable à l'identique** ; l'exigence de
+versionnement du § Versionnement reste entière). `GEO_PROTOCOLE_MESURE.md` **§ 6**
+(doctrine transposée ; **±3/18 requalifié en seuil de matérialité**, ce n'était pas un
+seuil de bruit) et `GEO_PROMPTS_T0.md` (résultat réécrit par moteur avec couverture).
+Ces deux derniers vivent dans `reports/` — **gitignoré**, donc hors commit.
+
+**Priorité qui en découle pour T1 (octobre)** : *finir la couverture avant de raffiner
+l'instrument.* Compléter ChatGPT, Copilot et Claude sur les 18 intentions vaut plus que
+toute réplication statistique sur Perplexity. Six variables à relever en plus du ✔/✘
+(coût nul, même lecture) : source trouvée · citée · entité mentionnée · **concept repris**
+· concurrent dominant · **collision sémantique**. Motif : c'est la colonne « concurrent
+cité » — jamais le score — qui a produit le seul résultat actionnable de T0 (prompt 7,
+« dette technologique » capté par « dette technique » au sens logiciel). Et **archiver
+les réponses brutes** : seul coût de non-exécution irrécupérable du dossier.
+
+**Reste ouvert, non engagé** : un **passage unique** d'`Auriti-Labs/geo-optimizer-skill`
+comme second auditeur technique indépendant d'`audit_geo_v2.py` — test de valeur
+marginale, jamais une installation, jamais son score comme vérité. Décision auteur non
+rendue.
+
 ### 2026-08-11 — Le mur « Auteur » de /a-propos/ itère enfin sur le dépôt
 
 **Défaut trouvé par l'auteur** : *La Société du premier coup*, publiée la veille,
