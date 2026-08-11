@@ -149,6 +149,34 @@ sortent 0 sous console cp1252 sans préfixe. 2 scripts non suivis également ré
 du front matter : un crash en cours d'impression laisserait une passe partiellement
 appliquée sans compte rendu).
 
+**Règle de conduite actée par l'auteur, appliquée à elle-même dans la foulée.** Le build
+de déploiement remontait un avertissement : cinq actions GitHub épinglées ciblent Node 20,
+déprécié, et GitHub les force provisoirement sur Node 24. J'avais classé cela « pas à
+traiter ce soir ». **Arbitrage auteur : non.** Un défaut identifié dont la correction est
+connue et disponible se traite dans la session même — et en priorité quand il appartient
+à la classe qui *ne se signale pas au moment où elle casse* (dépréciation, sursis
+fournisseur, garde qui ne garde rien, état déclaré ≠ état réel). Ces défauts ne coûtent
+rien tant qu'ils dorment, puis coûtent une panne qu'on ne rattache pas à sa cause et qui
+en déclenche d'autres. Inscrit dans `~/.claude/CLAUDE.md` (portée transverse à tous les
+projets) et en mémoire `feedback_pas_de_report_solution_disponible`.
+
+*Exécution* — 5 pins relevés dans 4 workflows : `checkout` v4→v7.0.1,
+`configure-pages` v4→v6.0.0, `upload-pages-artifact` v3→v5.0.0, `deploy-pages` v4→v5.0.0,
+`github-script` v7→v9.0.0. Les ruptures ont été qualifiées **contre l'usage réel du
+dépôt**, pas contre le changelog en général : v6 de `checkout` change la persistance des
+identifiants et v7 bloque les PR de fork sur `pull_request_target`/`workflow_run` — aucun
+workflow ici n'est concerné ; la rupture v5 de `configure-pages` ne touche que l'entrée
+`static_site_generator: next`, non utilisée. Seule rupture réellement dangereuse :
+**`upload-pages-artifact` v4 exclut les fichiers cachés de l'artefact** — écarté par la
+mesure, un build local montre que `public/` n'en contient aucun (sinon il aurait fallu
+`include-hidden-files: true`, et la perte aurait été silencieuse).
+
+*Défaut attrapé par le contrôle des pins* : le SHA retenu pour `github-script` n'était pas
+un commit. La ref `v9.0.0` est un **tag annoté** — `.object.sha` renvoie l'objet-tag, pas
+le commit visé. Dans un `uses:`, cela casse au runtime avec un message opaque. Les cinq
+pins sont désormais vérifiés un par un via `repos/<action>/commits/<sha>`. **À refaire
+systématiquement lors d'un repin : résoudre le tag, ne jamais recopier `.object.sha`.**
+
 **Point de vigilance non traité** : `memory/MEMORY.md` (index de 207 fiches) est devenu
 le plus lourd fichier chargé à chaque session, ≈ 4 360 tokens estimés — devant les deux
 `CLAUDE.md` réunis. Rien de cassé, mais c'est le premier poste à examiner si le contexte
