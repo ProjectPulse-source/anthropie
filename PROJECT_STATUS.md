@@ -53,6 +53,107 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-08-11 (nuit) — `/doctor` : le `CLAUDE.md` violait la règle de surface qu'il énonce
+
+**Saisine** : `/doctor` (santé de l'installation Claude Code). Résultat de l'appareil
+lui-même : **rien à réparer**. Installation npm unique (`D:\npm-global`), pas de résidu
+natif ni de `~/.claude/local`, cinq fichiers de configuration qui parsent, quatre
+définitions d'agents valides et sans collision de nom, version `2.1.227` = dernière
+publiée, `defaultMode: auto` déjà actif au scope utilisateur et non masqué par le projet.
+Aucune extension inutilisée à désinstaller : `panel` 28 usages, `capture-kiosque` 0 mais
+installée le 26/07 pour un besoin épisodique (gardée), aucun plugin, aucun serveur MCP
+local. Fenêtre : 50 transcripts, 13/07 → 11/08.
+
+**Le vrai défaut est éditorial, et c'est le nôtre.** Trois blocs de `CLAUDE.md`
+recopiaient ce que le dépôt sait déjà — et avaient **dérivé sans bruit** :
+« AWP-01..05 » quand il y en a huit ; six sections `content/` listées quand il y en a
+vingt-six ; quinze partials SCSS énumérés quand `main.scss` en importe vingt-et-un ;
+sept partials cités sur trente-trois. Quatre énoncés faux dans le fichier que **toute**
+session lit avant d'agir.
+
+**C'est exactement la « règle de surface » du 11/08 au matin, appliquée à
+l'instruction au lieu du gabarit.** La règle dit : *« Toute valeur dérivable se dérive —
+la recopier, c'est programmer sa dérive. »* Elle a été écrite pour les gabarits Hugo.
+Le `CLAUDE.md` qui la porte était lui-même une liste recopiée. Le défaut n'a pas été
+trouvé par un linter : il l'a été en confrontant le fichier au dépôt, c'est-à-dire
+exactement comme les six occurrences fondatrices l'avaient été — en regardant.
+**Portée à retenir : la règle vaut pour la documentation d'instruction, pas seulement
+pour le code de rendu.** Un `check-corpus-counters.py` ne regarde pas `CLAUDE.md`.
+
+**Correctifs appliqués** (aucun commit, diff laissé à la revue) :
+
+- `CLAUDE.md` — les trois énumérations dérivables remplacées par des pointeurs
+  (`layouts/partials/`, `assets/scss/main.scss`, « lire un fichier existant »). Conservé
+  verbatim tout ce qui ne se dérive pas : le gotcha `hero-flowfield.js` (promu en ⚠, il
+  est désormais le point de la section), la convention `[params.design]`, le gabarit
+  160×107, le lien `faq` → `schema-faqpage.html`. −14 lignes / +6, ≈ 755 tokens résidents
+  par session.
+- `CLAUDE.md` § Méthodologie de patch — retrait du renvoi n° 3 vers `.claude/rules/` :
+  **ce répertoire n'a jamais existé dans ce dépôt.** Chaque session partait en lecture à
+  vide. Le renvoi reste dans `~/.claude/CLAUDE.md`, qui est chargé dans tous les projets.
+- `.claude/settings.local.json` (gitignoré) — 99 → 88 règles. Retirés : quatre
+  blancs-seings (`Bash(python *)`, `Bash(PYTHONIOENCODING=utf-8 python *)`, un wrapper
+  `sh -c`, un `rm -f` destructif pré-approuvé sur `02-DATA_RAW/`) et sept règles mortes
+  ou malformées (deux blobs `curl`+`python -c` de 769 et 485 caractères, une parenthèse
+  non fermée, trois cibles absentes du dépôt **et** de l'historique git — vérifié).
+  Sauvegarde pré-édition dans le scratchpad de session.
+
+**Suite immédiate — deux gates étaient rouges en permanence sous Windows.** Le retrait du
+blanc-seing `Bash(PYTHONIOENCODING=utf-8 python *)` a rendu visible ce qu'il masquait :
+`scripts/check-corpus-counters.py` **sortait 1 sur corpus sain**, parce que
+`UnicodeEncodeError` se déclenche en imprimant la ligne de *succès* (« ✓ », hors cp1252).
+Le gate que `CLAUDE.md` déclare bloquant avant commit ne pouvait donc jamais rendre 0 sur
+cette machine — et son échec est **indiscernable d'une divergence réelle** pour qui ne lit
+que le code de sortie, ce que la consigne demande précisément de faire. Son docstring
+annonçait « Encodage UTF-8 forcé pour Windows » : **état déclaré ≠ état réel**, règle
+d'audit n° 7, dans le gate lui-même. Même défaut sur `scripts/audit_works.py`, en pire :
+il meurt ligne 566 (« 📖 Lecture de… »), **avant tout appel réseau** — il n'a donc jamais
+pu tourner sous Windows autrement que préfixé.
+
+*Correctif* : garde `sys.stdout.reconfigure(encoding="utf-8")` en tête des deux fichiers
+(+21 lignes, additions pures). **Vérifié par la sortie, pas par relecture** :
+`check-corpus-counters` rend 0 de bout en bout avec le ✓ affiché ; `audit_works` bascule
+`cp1252 → utf-8` à l'import et imprime les huit glyphes qui le tuaient. Les trois linters
+sûrs sortent 0.
+
+*Ce que le challenge a évité* — trois fois de suite, l'analyse initiale était fausse :
+(1) le premier scanner comptait `# -*- coding: utf-8 -*-` comme une garde, alors que ce
+cookie déclare l'encodage de la **source** et ne protège rien : deux fichiers classés
+« protégés » ne l'étaient pas ; (2) le deuxième comptait les caractères **n'importe où**
+dans le fichier — commentaires, docstrings, écritures en UTF-8 incluses — et annonçait
+9 fichiers à corriger ; (3) l'analyse AST, restreinte aux littéraux atteignant réellement
+`print()`, ramène le périmètre à **4, dont 2 suivis**. `audit_geo_v2.py` et ses 1372
+occurrences n'imprime rien de fautif : il aurait été patché pour rien. **Mesurer la sortie
+plutôt que lire le code n'a pas seulement corrigé le diagnostic, il a divisé le patch
+par cinq.**
+
+*Restent 2 fichiers non suivis*, laissés intacts (fichiers de travail) :
+`scripts/check_dates_coherence.py` (2 `print()` fautifs) et `scripts/fix_dates_en.py`
+(3) — ce dernier étant un mutateur de contenu, il n'a été ni exécuté ni modifié.
+
+*Arbitrage tranché (auteur, même session) : le linter est installé.*
+`scripts/check-console-encoding.py` — analyse AST, ni exécution ni réseau. Il ne signale
+un fichier que s'il cumule **(1)** un littéral hors cp1252 atteignant `print()` **et**
+**(2)** l'absence de reconfiguration réelle de `sys.stdout` : sans la condition (2) il
+crierait sur les fichiers réparés. Le cookie `coding:` est délibérément exclu des motifs
+de garde — c'est ce qui avait produit le faux négatif initial. Portée assumée comme
+**borne inférieure** : l'analyse statique voit les littéraux, pas un caractère arrivant
+par variable. Enregistré dans `CLAUDE.md` (un linter que personne ne lance est mort).
+
+*Testé par mutation réelle, jamais par relecture* — les deux mutations sont détectées et
+aucune ne survit : (A) script fautif ajouté dans `scripts/` → exit 1, fichier nommé, puis
+supprimé ; (B) garde retirée d'un vrai fichier déjà réparé → exit 1, fichier nommé, puis
+restauré avec **SHA-256 identique avant/après** (`ac3e81c9…4c5cd2ad`). Les 4 linters
+sortent 0 sous console cp1252 sans préfixe. 2 scripts non suivis également réparés
+(`check_dates_coherence.py`, `fix_dates_en.py` — enjeu accru sur le second, qui modifie
+du front matter : un crash en cours d'impression laisserait une passe partiellement
+appliquée sans compte rendu).
+
+**Point de vigilance non traité** : `memory/MEMORY.md` (index de 207 fiches) est devenu
+le plus lourd fichier chargé à chaque session, ≈ 4 360 tokens estimés — devant les deux
+`CLAUDE.md` réunis. Rien de cassé, mais c'est le premier poste à examiner si le contexte
+se tend.
+
 ### 2026-08-11 (soir) — Dossier GEO EXPERIENCE : aucun outil installé, une doctrine de la note actée
 
 **Saisine** : `GEO EXPERIENCE/GEO_Experience-01..04.txt` (hors dépôt, gitignoré) —

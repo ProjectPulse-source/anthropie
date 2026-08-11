@@ -27,26 +27,19 @@ L'URL `/awp/` redirige (meta-refresh via `aliases`) vers `/serie-awp/`, qui est 
 
 Les sections `content/` mappent 1-1 aux sections sémantiques du site. Trois familles avec layouts dédiés :
 
-- **`awp/`** — *Anthropie Working Papers* (AWP-01..05). Pièces maîtresses académiques. Front matter riche : `awp_number`, `doi_zenodo`, `url_zenodo`, `pdf_url`, `jel_codes`, `keywords[_en]`, `faq[]`, `translation.{doi,url,title}`, `related[]` (slugs d'autres AWP), `related_book`. Le bloc `faq` alimente `partials/schema-faqpage.html` (JSON-LD FAQPage).
-- **`livres/`** — fiches livres avec liens Amazon (placeholders ASIN à remplacer, voir README).
-- **`publications/`** — recensions/articles publiés ailleurs ; cartes via `partials/publication-card.html` avec gabarit logo/photo unique 160×107 (cf. commits récents).
-
-Les sections `presse/`, `glossaire/`, `a-propos/`, `quest-ce-que-lanthropie/`, `serie-awp/`, `contact/` n'ont qu'un `_index.md` (+ `.en.md`).
+- **`awp/`** — *Anthropie Working Papers*. Pièces maîtresses académiques, au front matter riche (lire un fichier existant pour la liste des champs). Le bloc `faq` alimente `partials/schema-faqpage.html` (JSON-LD FAQPage).
+- **`livres/`** — fiches livres avec liens Amazon.
+- **`publications/`** — recensions/articles publiés ailleurs ; cartes via `partials/publication-card.html`, gabarit logo/photo unique 160×107.
 
 ## Layouts & partials clés
 
-- `layouts/_default/baseof.html` → squelette commun, charge `partials/head.html` + `header.html` + `footer.html`.
-- `partials/cross-language-banner.html` → bandeau de bascule fr↔en, lit `translation.url` du front matter.
-- `partials/how-to-cite.html` → bloc citation (lié aux outputs BibTeX/RIS).
-- `partials/related-awp.html` + `partials/awp-card.html` → graphe de navigation entre working papers via le champ `related[]`.
-- `partials/schema-itemlist.html`, `schema-faqpage.html` → JSON-LD pour le SEO académique.
-- `partials/background-anthropie.html` → fond SVG décoratif. Le fichier `assets/js/hero-flowfield.js` existe dans le dépôt mais n'est plus chargé (canvas supprimé lors du redesign home).
+Le squelette commun est `layouts/_default/baseof.html` ; le détail des partials se lit dans `layouts/partials/`.
 
-`data/awp_short_titles.yaml` mappe les slugs AWP vers leurs titres courts (utilisé par les cartes pour éviter de réimporter la page entière).
+⚠ `assets/js/hero-flowfield.js` existe dans le dépôt mais n'est plus chargé (canvas supprimé lors du redesign home).
 
 ## CSS
 
-Point d'entrée `assets/scss/main.scss` qui importe les partials `_variables`, `_typography`, `_layout`, `_components`, `_hero`, `_academic`, `_book-single`, `_publication-card`, `_related-awp`, `_amazon-button`, `_anthropie-bg`, `_how-to-cite`, `_awp-single`, `_serie-awp`, `_home`. Les paramètres de design exposés à Hugo (taille H1 hero, gabarit emblème livre) vivent sous `[params.design]` dans `hugo.toml` — modifier là plutôt qu'en dur dans le SCSS quand la valeur est référencée par un template.
+Point d'entrée `assets/scss/main.scss`. Les paramètres de design exposés à Hugo (taille H1 hero, gabarit emblème livre) vivent sous `[params.design]` dans `hugo.toml` — modifier là plutôt qu'en dur dans le SCSS quand la valeur est référencée par un template.
 
 ## Ajout d'un nouvel AWP
 
@@ -69,12 +62,16 @@ Avant tout patch substantiel, lecture obligatoire dans cet ordre :
 
 1. `PROJECT_STATUS.md`
 2. ce fichier (`CLAUDE.md`) pour les conventions locales
-3. tout fichier pertinent dans `.claude/rules/`
 
 Contextualisations propres à ce repo :
 
 - Linter cohérence corpus : `scripts/check-corpus-counters.py`
 - Linter couverture GEO (FR + miroir EN) : `scripts/check-geo-coverage.py`
+- Linter encodage console : `scripts/check-console-encoding.py` — un `print()`
+  contenant « ✓ », « → » ou un emoji fait sortir **1** un script sain sous
+  console Windows cp1252, ce qui est indiscernable d'un vrai échec. Le cookie
+  `# -*- coding: utf-8 -*-` ne protège pas : il déclare l'encodage de la source,
+  pas celui de `stdout`.
 - Checklist d'ajout d'AWP : `docs/CHECKLIST_AJOUT_AWP.md`
 - Convention multilingue Hugo : suffixe `.en.md` (pas sous-dossier
   `content/en/`)
