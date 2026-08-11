@@ -2,6 +2,15 @@ public/
 resources/
 .hugo_build.lock
 
+# Caches Python (regeneres a chaque execution des linters)
+__pycache__/
+*.pyc
+
+# Dossier declare "hors depot" par PROJECT_STATUS.md (arbitrage 2026-08-11),
+# mais qu'aucun motif ne couvrait : git le voyait en untracked dans un depot
+# PUBLIC. On aligne le reel sur le declare.
+GEO EXPERIENCE/
+
 # Configuration et brouillons Claude Code locaux
 .claude/
 _prompt-*.txt
