@@ -19,6 +19,19 @@ from pathlib import Path
 
 
 # ---------------------------------------------------------------------------
+# Encodage console — la promesse du docstring, effectivement tenue
+# ---------------------------------------------------------------------------
+# Windows sort en cp1252, qui ne sait pas encoder « ✓ », « → », « ⚠ ». Sans
+# cette reconfiguration, c'est l'impression de la ligne de SUCCÈS qui lève
+# UnicodeEncodeError : le linter sort 1 alors qu'il n'a rien trouvé — un faux
+# positif indiscernable d'une divergence réelle, sur le gate que CLAUDE.md
+# déclare bloquant avant commit. Vérifié le 2026-08-11 : exit 1 sur corpus sain.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stderr.reconfigure(encoding="utf-8")
+
+
+# ---------------------------------------------------------------------------
 # Conversion mots → entiers (FR + EN, 1 à 10)
 # ---------------------------------------------------------------------------
 WORDS_TO_INT_FR = {

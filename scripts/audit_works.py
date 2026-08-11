@@ -52,6 +52,14 @@ from typing import Any
 
 import yaml
 
+# Encodage console : Windows sort en cp1252, qui ne sait encoder ni « 📖 » ni
+# « ✅ ». Sans cette reconfiguration le script meurt ligne 566 (« Lecture de… »),
+# avant tout appel réseau — donc il n'a jamais pu tourner sous Windows autrement
+# qu'avec PYTHONIOENCODING=utf-8 en préfixe. Vérifié le 2026-08-11.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stderr.reconfigure(encoding="utf-8")
+
 # =============================================================================
 # Configuration
 # =============================================================================
