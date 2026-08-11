@@ -237,6 +237,77 @@ for label, url in pages_to_check:
 w()
 
 # ──────────────────────────────────────────────
+# A.2 bis — Résolution des références @id
+#
+# Motif (11/08/2026) : l'accueil émettait author/publisher -> {"@id": ".../a-propos/#person"}
+# sans définir ce nœud dans le document. Le lien existait en intention, il pointait dans le
+# vide : pour un moteur qui ne lit que la page la plus récupérée du site, l'auteur était un
+# identifiant opaque — ni nom, ni ORCID, ni Wikidata. A.3 ci-dessous ne pouvait pas le voir,
+# puisqu'il ne contrôle Person/sameAs que sur /a-propos/ : il vérifiait que l'ancre d'entité
+# existe QUELQUE PART, jamais qu'elle existe LÀ OÙ les moteurs arrivent d'abord.
+# Classe de défaut, pas instance — d'où ce contrôle transverse à toutes les pages auditées.
+# ──────────────────────────────────────────────
+w("## A.2 bis Références `@id` — aucun identifiant opaque")
+w()
+w("**Règle** : tout `@id` cité sur une page doit y être accompagné d'au moins un `@type`.")
+w("Une arête inter-pages du site-graphe reste légitime — le nœud concept, la série — **à la")
+w("condition d'être typée là où elle est citée** : un moteur qui ne lit que cette page reçoit")
+w("alors une entité, pas un pointeur. Un `@id` nu (`{\"@id\": \"…\"}` seul) est irrésoluble hors")
+w("du document.")
+w()
+
+def jsonld_id_refs(html):
+    """(définis, opaques) pour une page.
+       défini  = nœud portant un @type — il se décrit sur place, même s'il renvoie ailleurs.
+       opaque  = dict réduit au seul @id — pointeur nu, irrésoluble hors du document."""
+    defined, opaque = set(), {}
+
+    def walk(node, parent_key=None):
+        if isinstance(node, dict):
+            nid = node.get("@id")
+            if nid:
+                if "@type" in node:
+                    defined.add(nid)
+                elif len(node) == 1:
+                    opaque.setdefault(nid, set()).add(parent_key or "?")
+            for k, v in node.items():
+                walk(v, k)
+        elif isinstance(node, list):
+            for item in node:
+                walk(item, parent_key)
+
+    for b in extract_jsonld(html):
+        walk(b)
+    return defined, opaque
+
+w("| Page | Verdict | Références opaques |")
+w("|---|---|---|")
+opaque_total = 0
+for label, url in pages_to_check:
+    if not url or not html_cache.get(url):
+        continue
+    defined, opaque = jsonld_id_refs(html_cache[url])
+    dangling = {k: v for k, v in opaque.items() if k not in defined}
+    path = url.replace(BASE, "") or "/"
+    if dangling:
+        opaque_total += len(dangling)
+        detail = " ; ".join(
+            f"`{', '.join(sorted(keys))}` → `{ref}`" for ref, keys in sorted(dangling.items())
+        )
+        w(f"| {label} `{path}` | {flag('missing_contract', str(len(dangling)))} | {detail} |")
+    else:
+        w(f"| {label} `{path}` | {flag('ok')} | — |")
+w()
+if opaque_total:
+    w(f"**{opaque_total} référence(s) opaque(s).** Chacune désigne une entité que la page ne")
+    w("décrit pas. Deux correctifs possibles : typer et nommer la référence sur place, ou")
+    w("porter le nœud sur la page (même `@id`, propriétés complémentaires — jamais une")
+    w("duplication : le nœud canonique garde `description` et `knowsAbout`).")
+else:
+    w("Aucune référence opaque : toute entité citée est typée là où elle est citée.")
+w()
+
+# ──────────────────────────────────────────────
 # A.3 — Page Person (/a-propos/)
 # ──────────────────────────────────────────────
 w("## A.3 Page Person — sameAs et champs")

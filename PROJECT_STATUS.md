@@ -142,8 +142,22 @@ la donnée existe au dépôt, la surface ne la reçoit pas, **en silence**.
 les bons champs, mais **uniquement sur `/a-propos/`**. Il vérifie que l'ancre d'entité
 existe *quelque part*, jamais qu'elle existe *là où les moteurs arrivent d'abord*.
 **Classe de défaut, pas instance** : notre auditeur contrôle des propriétés sur des
-surfaces présumées. Mesure préventive proportionnée non encore prise (décision auteur) :
-lui faire vérifier que tout `@id` référencé sur une page y est **résoluble**.
+surfaces présumées.
+
+**Mesure préventive PRISE — `audit_geo_v2.py` § A.2 bis, « Références `@id` — aucun
+identifiant opaque ».** Règle retenue après calibrage sur le site réel : *tout `@id` cité
+sur une page doit y être accompagné d'au moins un `@type`*. La formulation naïve — « tout
+`@id` doit résoudre dans le document » — a été **écartée** : elle aurait signalé en faux
+positifs les arêtes inter-pages **délibérées** du site-graphe (nœud concept
+`#concept`, série AWP). La bonne frontière n'est pas *où le nœud est hébergé*, c'est
+*est-il typé là où il est cité* : une référence typée et nommée livre une entité à un
+moteur qui ne lit que cette page ; un `@id` nu ne livre qu'un pointeur.
+
+**Calibrage vérifié dans les deux sens, sur fixture qui échoue** (le site en ligne porte
+encore le défaut, le correctif n'étant pas déployé) : ❌ sur **Accueil FR et Accueil EN**
+(`author, publisher` → `/a-propos/#person`), ✅ sur les **8 autres pages** auditées —
+à-propos, définition, série, AWP FR/EN, trois livres. Zéro faux positif. Après déploiement,
+ces deux lignes doivent passer au vert : c'est le contrôle de non-régression du correctif.
 
 Correctif appliqué dans `layouts/partials/schema-website.html` : `@graph` portant le
 `WebSite` **et** un nœud `Person` minimal de même `@id` (nom, url, jobTitle, 9 `sameAs`)
