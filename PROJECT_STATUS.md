@@ -113,10 +113,53 @@ cité » — jamais le score — qui a produit le seul résultat actionnable de 
 « dette technologique » capté par « dette technique » au sens logiciel). Et **archiver
 les réponses brutes** : seul coût de non-exécution irrécupérable du dossier.
 
-**Reste ouvert, non engagé** : un **passage unique** d'`Auriti-Labs/geo-optimizer-skill`
-comme second auditeur technique indépendant d'`audit_geo_v2.py` — test de valeur
-marginale, jamais une installation, jamais son score comme vérité. Décision auteur non
-rendue.
+**Passage unique d'Auriti — EXÉCUTÉ le 11/08, test de valeur marginale RÉUSSI (une
+trouvaille réelle sur treize recommandations).** Exécution : venv isolé hors dépôt,
+wheels uniquement (aucun `setup.py`), sans les extras `openai`/`anthropic`/`mcp` — donc
+aucun appel LLM possible, zéro euro, aucune clé. Contrôle avant exécution : le paquet ne
+lit que des variables `GEO_*` et `PERPLEXITY_API_KEY`, aucune définie ici. Venv supprimé
+après coup, rien de persistant. Rapport : `reports/geo_audit/AURITI_PASSAGE_UNIQUE_2026-08-11.json`.
+Son score (67/100) est ignoré par doctrine — 4 de ses 13 recommandations sont des
+pseudo-standards de son invention (`/.well-known/ai.txt`, `/ai/summary.json`,
+`/ai/faq.json`, `/ai/service.json`, plus WebMCP) que **rien ne lit** ; Google écrit
+explicitement qu'aucune donnée structurée particulière n'est requise pour ses fonctions
+génératives. Écartés aussi : en-têtes HSTS/CSP/X-Frame-Options (GitHub Pages ne pose pas
+d'en-têtes de réponse), « image sans alt » (**faux positif vérifié** : figure dans un
+conteneur `aria-hidden="true"`, l'`alt` vide est la bonne pratique), « keyword stuffing
+amazon 9,1 % » (artefact des liens d'achat légitimes — noté comme observation
+spéculative, non actionnable).
+
+**La trouvaille, et le correctif — `fix(schema)` : l'accueil pointait vers un auteur
+introuvable.** L'accueil émettait `author`/`publisher` → `{"@id": ".../a-propos/#person"}`
+sans jamais définir ce nœud dans le document. Le lien existait **en intention** ; il
+**pointait dans le vide**. Pour un moteur qui ne lit que la page la plus récupérée du
+site, l'auteur était un identifiant opaque : ni nom, ni ORCID, ni Wikidata — alors que
+`data/author.toml` porte 9 identifiants externes. Encore la règle de surface du 11/08 :
+la donnée existe au dépôt, la surface ne la reçoit pas, **en silence**.
+
+⚠ **Pourquoi `audit_geo_v2.py` ne pouvait pas le voir** : `scripts/audit_geo_v2.py:245`
+—`if URL_ABOUT and URL_ABOUT in html_cache:`— il teste `Person`/`sameAs`/`jobTitle`,
+les bons champs, mais **uniquement sur `/a-propos/`**. Il vérifie que l'ancre d'entité
+existe *quelque part*, jamais qu'elle existe *là où les moteurs arrivent d'abord*.
+**Classe de défaut, pas instance** : notre auditeur contrôle des propriétés sur des
+surfaces présumées. Mesure préventive proportionnée non encore prise (décision auteur) :
+lui faire vérifier que tout `@id` référencé sur une page y est **résoluble**.
+
+Correctif appliqué dans `layouts/partials/schema-website.html` : `@graph` portant le
+`WebSite` **et** un nœud `Person` minimal de même `@id` (nom, url, jobTitle, 9 `sameAs`)
+— la référence se résout dans le document, sans duplication : `description` et
+`knowsAbout` restent sur `/a-propos/`, qui demeure le nœud canonique. Au passage,
+`$personID` cessait d'être **recopié en dur** : il se dérive de `data/author.toml`, avec
+deux `warnf` (registre sans `canonicalProfileUrl`, registre sans `sameAs`).
+**Garde-fou testé par mutation réelle** — champ retiré → `WARN` observé au build →
+`data/author.toml` restauré, SHA-256 identique. Vérifié sur les deux accueils (FR et EN).
+Build 0 warning, `check-geo-coverage` et `check-fiches-registre` à 0.
+
+⚠ **Piège d'outillage à connaître** : `scripts/check-corpus-counters.py` sort **1** dans
+un terminal cp1252 — non pas sur une divergence, mais parce qu'il **plante en imprimant
+son message de succès** (`✓` non encodable). Verdict réel : « Aucune divergence
+détectée ». Le lancer avec `PYTHONIOENCODING=utf-8` → exit 0. Ne pas lire ce 1 comme un
+échec de corpus.
 
 ### 2026-08-11 — Le mur « Auteur » de /a-propos/ itère enfin sur le dépôt
 

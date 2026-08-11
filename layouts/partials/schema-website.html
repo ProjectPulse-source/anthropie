@@ -1,12 +1,25 @@
 {{- $isEn := eq .Lang "en" -}}
+{{- $author := site.Data.author.author -}}
 {{- $siteName := cond $isEn "Stephane Lalut - Economist, independent researcher" "Stephane Lalut - Economiste, chercheur independant" -}}
 {{- $siteDesc := cond $isEn "Corpus on the anthropic hypothesis : social systems displace disorder rather than resolve it." "Corpus sur l'hypothese anthropique : les systemes sociaux deplacent le desordre plutot qu'ils ne le resolvent." -}}
 {{- $homeURL := cond $isEn "https://stephane-lalut.com/en/" "https://stephane-lalut.com/" -}}
 {{- $lang := cond $isEn "en" "fr" -}}
-{{- $personID := "https://stephane-lalut.com/a-propos/#person" -}}
+
+{{- /* @id du nœud auteur : DÉRIVÉ du registre (data/author.toml), jamais recopié —
+       règle de surface du 11/08. Le silence est interdit : si le registre perdait ce
+       champ, le graphe se casserait sans bruit. */ -}}
+{{- $personID := $author.canonicalProfileUrl -}}
+{{- if not $personID -}}
+  {{- warnf "schema-website: data/author.toml sans canonicalProfileUrl — le nœud Person de l'accueil sera muet et les références author/publisher pointeront dans le vide." -}}
+{{- end -}}
+
+{{- $sameAsUrls := slice -}}
+{{- range $author.sameAs -}}{{- $sameAsUrls = $sameAsUrls | append .url -}}{{- end -}}
+{{- if not $sameAsUrls -}}
+  {{- warnf "schema-website: aucun sameAs dans data/author.toml — l'accueil ne portera aucun identifiant externe (ORCID, Wikidata…)." -}}
+{{- end -}}
 
 {{- $website := dict
-  "@context" "https://schema.org"
   "@type" "WebSite"
   "@id" (printf "%s#website" $homeURL)
   "url" $homeURL
@@ -17,6 +30,28 @@
   "author" (dict "@id" $personID)
 -}}
 
+{{- /* Nœud Person minimal, porté par l'accueil.
+       Motif (défaut relevé le 11/08, passage unique Auriti) : les références
+       author/publisher ci-dessus pointaient vers un @id défini UNIQUEMENT sur
+       /a-propos/. Pour un moteur qui ne lit que l'accueil — la page la plus
+       récupérée — la référence était irrésoluble : un identifiant sans nom, sans
+       ORCID, sans Wikidata. On résout la référence dans le document.
+       Le profil COMPLET (description, knowsAbout) reste sur /a-propos/, qui demeure
+       le nœud canonique : même @id, propriétés complémentaires, pas de duplication. */ -}}
+{{- $person := dict
+  "@type" "Person"
+  "@id" $personID
+  "name" $author.name
+  "url" $author.url
+  "jobTitle" (cond $isEn $author.jobTitleEn $author.jobTitleFr)
+  "sameAs" $sameAsUrls
+-}}
+
+{{- $graph := dict
+  "@context" "https://schema.org"
+  "@graph" (slice $website $person)
+-}}
+
 <script type="application/ld+json">
-{{ $website | jsonify | safeJS }}
+{{ $graph | jsonify | safeJS }}
 </script>
