@@ -69,9 +69,12 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
    « Droits d'utilisation des images » (#droits-images) de /transparence-contacts/,
    `acquireLicensePage` pointe /contact/. Vérifié dans le build.
 3. Hors dépôt site, même session : prix Kindle consignés dans le registre Ads
-   (Anthropie/Dette constat fiche + US/CA déclaration auteur ; Livresque en
-   contradiction vitrine 5,00 € — NON consigné) ; collector documentaire relancé
-   (PID 24720) ; rappel fin promo Premier coup créé (17/08).
+   (Anthropie/Dette constat fiche + US/CA déclaration auteur ; Livresque consigné
+   à 21:43Z après résolution de la contradiction : la vitrine 5,00 € était un
+   affichage **Prime Reading** — prix réservé aux clients Prime, PAS le prix
+   catalogue ; KDP vérifié à 12,99 par l'auteur. ⚠ Fait commercial nouveau pour
+   la session Ads : Amazon a fait entrer Livresque en Prime Reading) ; collector
+   documentaire relancé (PID 24720) ; rappel fin promo Premier coup créé (17/08).
 
 ### 2026-08-12 (soir) — Notes Amazon dépôt-dérivées ; contrôles SSRN/OSF/MPRA consignés
 
