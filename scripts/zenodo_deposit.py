@@ -26,7 +26,7 @@ import urllib.request
 import urllib.error
 from pathlib import Path
 
-TOKEN_FILE = Path(r"D:\anthropie\_secrets\zenodo_token.txt")
+TOKEN_FILE = Path(__file__).resolve().parents[2] / "_secrets" / "zenodo_token.txt"
 BASE = "https://zenodo.org/api"
 
 # Identité auteur — DOIT correspondre à ORCID dans zenodo_audit_complet.py.
