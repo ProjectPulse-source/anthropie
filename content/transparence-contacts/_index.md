@@ -80,4 +80,13 @@ plus tard trois mois après sa clôture. Cet identifiant ne contient ni votre no
 votre adresse électronique. Il s'agit d'une mesure strictement nécessaire à la
 fourniture du service demandé&nbsp;; vos droits s'exercent comme indiqué ci-dessus.
 
-*Dernière mise à jour&nbsp;: 31 juillet 2026.*
+## Droits d'utilisation des images {#droits-images}
+
+Les couvertures de livres et les images publiées sur ce site sont
+©&nbsp;Stéphane Lalut, tous droits réservés. La reproduction d'une couverture est
+autorisée dans un cadre de presse, de recension ou de citation, avec crédit
+(«&nbsp;©&nbsp;Stéphane Lalut&nbsp;»). Pour toute autre utilisation — commerciale,
+éditoriale ou de diffusion —, l'autorisation se demande par la
+[page Contact](/contact/)&nbsp;; la réponse précise les conditions applicables.
+
+*Dernière mise à jour&nbsp;: 12 août 2026.*

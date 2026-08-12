@@ -104,7 +104,9 @@
       "representativeOfPage" true
       "creator" (dict "@type" "Person" "name" site.Data.author.author.name)
       "creditText" site.Data.author.author.name
-      "copyrightNotice" (printf "© %s" site.Data.author.author.name) -}}
+      "copyrightNotice" (printf "© %s" site.Data.author.author.name)
+      "license" (absURL "transparence-contacts/#droits-images")
+      "acquireLicensePage" (absURL "contact/") -}}
   {{- $book = merge $book (dict "image" $img) -}}
 {{- end -}}
 {{- with .Params.wikidata_qid -}}{{- $book = merge $book (dict "sameAs" (printf "https://www.wikidata.org/wiki/%s" .)) -}}{{- end -}}
