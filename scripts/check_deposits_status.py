@@ -37,8 +37,9 @@ SSRN = [("AWP-01", "6543618"), ("AWP-02", "6615059"), ("AWP-03", "6615278"),
 SSRN_MANQUANTS = ["AWP-07", "AWP-08"]
 
 MPRA = [("AWP-01", "128604"), ("AWP-02", "128605"), ("AWP-03", "128606"),
-        ("AWP-04", "128607"), ("AWP-05", "128608"), ("AWP-06", "129034")]
-MPRA_MANQUANTS = ["AWP-07", "AWP-08"]
+        ("AWP-04", "128607"), ("AWP-05", "128608"), ("AWP-06", "129034"),
+        ("AWP-07", "130468")]  # depot TEST espace du 2026-08-12 (decision auteur) — sonde le blocage referee du 04/08
+MPRA_MANQUANTS = ["AWP-08"]  # ne deposer qu'apres ACCEPTATION d'AWP-07 (echelonne strict)
 
 OSF_PROFIL = "ymkpj"
 # SocArXiv : canal CLOS pour les papiers conceptuels (decision 2026-08-05).

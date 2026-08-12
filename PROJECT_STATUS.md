@@ -53,6 +53,26 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-08-12 (nuit) — AWP-07 déposé sur MPRA ; correctif Search Console images
+
+1. **MPRA : AWP-07 déposé — paper #130468, in review** (mandat auteur explicite,
+   dépôt TEST espacé pour sonder le blocage referee du 04/08). Formulaire complet :
+   titre + sous-titre canoniques, abstract Zenodo intégral, 12 mots-clés, JEL
+   B41/B52/D62/Q57, bibliographie complète extraite du PDF (References est un champ
+   OBLIGATOIRE MPRA), PDF 220 kB. Vue « Manage deposits » relevée au passage :
+   AWP-01..05 Under Review (AWP-01 modifié le 02/08), AWP-06 Live Archive.
+   Registre + `scripts/check_deposits_status.py` mis à jour ; contrôle J+14 posé
+   au calendrier (26/08). Règle maintenue : AWP-08 seulement après ACCEPTATION.
+2. **Search Console (mail Google du 12/08)** : champs `license` et
+   `acquireLicensePage` manquants sur les ImageObject — ajoutés au JSON-LD des
+   couvertures (layouts/livres/single.html) ; `license` pointe la nouvelle section
+   « Droits d'utilisation des images » (#droits-images) de /transparence-contacts/,
+   `acquireLicensePage` pointe /contact/. Vérifié dans le build.
+3. Hors dépôt site, même session : prix Kindle consignés dans le registre Ads
+   (Anthropie/Dette constat fiche + US/CA déclaration auteur ; Livresque en
+   contradiction vitrine 5,00 € — NON consigné) ; collector documentaire relancé
+   (PID 24720) ; rappel fin promo Premier coup créé (17/08).
+
 ### 2026-08-12 (soir) — Notes Amazon dépôt-dérivées ; contrôles SSRN/OSF/MPRA consignés
 
 1. **Notes Amazon rafraîchies** (commit `352a04a`) : Odyssée 4,4/162 · Livresque

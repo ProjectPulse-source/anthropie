@@ -326,7 +326,7 @@ works:
       zenodo_fr: { doi: "10.5281/zenodo.20025421", url: "https://doi.org/10.5281/zenodo.20025421", status: published, date: "2026-05-07" }
       zenodo_en: { doi: "10.5281/zenodo.20077993", url: "https://doi.org/10.5281/zenodo.20077993", status: published, date: "2026-05-08" }
       ssrn_en: { abstract_id: "6735581", doi: "10.2139/ssrn.6735581", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6735581", status: approved, submission_date: "2026-05-08", posted_date: "2026-05-22" }  # vérifié sur la page auteur SSRN le 2026-08-02 : en ligne, 26 téléchargements
-      mpra_en: { item_id: "129034", url: "https://mpra.ub.uni-muenchen.de/id/eprint/129034", status: published, deposit_date: "2026-05-08", publication_date: "2026-05-15" }  # publié en 7 j par l'éditrice D. Cialfi (compte MPRA inspecté 2026-08-02) ; ⚠ AWP-01..05 (128604-608, déposés 07/04) toujours "Under Review" à 118 j — AUCUN rejet, AUCUN message, PDF conformes (21,4 kB = fichier Zenodo) : file de modération oubliée → relance préparée (Downloads/MPRA_RELANCE_A_ENVOYER.md). NE PAS déposer AWP-07/08 avant déblocage.
+      mpra_en: { item_id: "129034", url: "https://mpra.ub.uni-muenchen.de/id/eprint/129034", status: published, deposit_date: "2026-05-08", publication_date: "2026-05-15" }  # publié en 7 j par l'éditrice D. Cialfi (compte MPRA inspecté 2026-08-02) ; ⚠ AWP-01..05 (128604-608, déposés 07/04) : le diagnostic « file de moderation oubliée » du 02/08 était FAUX — relance envoyée 02/08 12:43, puis BLOCAGE actif le 04/08 (un referee a bloqué le lot : 6 dépôts d'affilée mal reçus), réclamation N'A PAS ABOUTI (info auteur 12/08). Décision auteur 12/08 : AWP-01..06 laissés en l'état (canal mort pour ce lot) ; tentative TEST d'un dépôt AWP-07 seul, espacé, pour sonder si le blocage vise le lot ou le compte.
     site_pages:
       fr: "https://stephane-lalut.com/awp/awp-06/"
       en: "https://stephane-lalut.com/en/awp/awp-06/"
@@ -355,7 +355,7 @@ works:
       zenodo_fr: { doi: "10.5281/zenodo.21200286", url: "https://doi.org/10.5281/zenodo.21200286", status: published, date: "2026-07-05" }
       zenodo_en: { doi: "10.5281/zenodo.21200288", url: "https://doi.org/10.5281/zenodo.21200288", status: published, date: "2026-07-05" }
       ssrn_en: { status: planned }
-      mpra_en: { status: planned }
+      mpra_en: { item_id: "130468", url: "https://mpra.ub.uni-muenchen.de/id/eprint/130468", status: in_review, deposit_date: "2026-08-12" }  # dépôt TEST espacé (décision auteur 12/08) — sonde si le blocage referee du 04/08 vise le lot d'avril ou le compte ; contrôle J+14 au calendrier
     site_pages:
       fr: "https://stephane-lalut.com/awp/awp-07/"
       en: "https://stephane-lalut.com/en/awp/awp-07/"
