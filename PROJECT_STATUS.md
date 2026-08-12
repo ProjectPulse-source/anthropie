@@ -45,13 +45,39 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 > **À lire avant** : toute intervention sur le site, technique 
 > ou éditoriale. Décrit l'état architectural, les doctrines 
 > en place, les chantiers en cours et les chantiers reportés.
-> Dernière mise à jour : 2026-08-03.
+> Dernière mise à jour : 2026-08-12.
 > **Règle de fraîcheur** : l'état écrit suit l'acte — toute session qui
 > exécute met à jour ce log ET les statuts des registres/backlogs touchés
 > dans la même session. Un statut périmé vaut défaut : il provoque la
 > re-exécution de l'acquis ou l'abandon de travaux crus « déjà faits ».
 
 ## 0. Log chronologique
+
+### 2026-08-12 — Publication EAN « Parler sans savoir à qui » (hors-série États du livre)
+
+**Saisine** : ajout au site de la publication du 2026-08-11 — essai original (non
+recension) pour le hors-série n°9 d'En attendant Nadeau, « États du livre ».
+Exécution par la checklist `docs/CHECKLIST_AJOUT_PUBLICATION.md` :
+
+- Fiche `content/publications/en-attendant-nadeau-parler-sans-savoir-a-qui.md`
+  (logo, noindex + hors sitemap, chapo FR/EN, fil remontant `related: [awp-06]` —
+  même maillage IA/numérique que les fiches EAN Welgryn et Neel-Chavez).
+  Pas de `related_book` : l'essai ne recense ni n'éclaire un livre du catalogue.
+- `data/works.yaml` : entrée `art-ean-parler-2026-08`, registre v1.13,
+  `meta.last_updated` 2026-08-12 ; total_works 38 → 40 (le compte déclaré était
+  déjà en retard d'une unité avant l'ajout — recalé sur les 40 entrées réelles :
+  27 articles + 8 AWP + 5 livres).
+- Murs presse `/a-propos/` FR + EN : `presse_objets` « Livre et algorithmes » /
+  « Books and algorithms ».
+- `static/llms.txt` : aucun changement requis (la section publications liste les
+  revues, EAN y figure déjà ; aucune énumération par article).
+- `data/intent_matrix.yaml` : non modifiée — constat : aucune publication n'y est
+  inscrite par slug malgré la doctrine d'inscription ; suivi de la pratique
+  établie, écart signalé à l'auteur.
+- Au passage (classe « état déclaré ≠ état réel ») : les compteurs de section en
+  commentaire de `works.yaml` avaient dérivé (« PUBLIÉS (10) » pour 12 entrées,
+  articles publiés restés sous « EN ATTENTE ») — compteurs durs retirés des
+  en-têtes, le champ `status` de chaque entrée fait foi.
 
 ### 2026-08-11 (nuit) — `/doctor` : le `CLAUDE.md` violait la règle de surface qu'il énonce
 

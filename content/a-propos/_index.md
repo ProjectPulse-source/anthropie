@@ -48,6 +48,7 @@ wall_lignes:
 # entrée, la tuile retombe sur le nom de la revue.
 # ---------------------------------------------------------------------------
 presse_objets:
+  en-attendant-nadeau-parler-sans-savoir-a-qui: "Livre et algorithmes"
   rfse-lemoine-chasseurs-detats: "Dette souveraine"
   revue-projet-commune-republique: "Communes"
   lectures-ridde-financiarisation-sante: "Santé coloniale"

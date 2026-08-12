@@ -36,6 +36,7 @@ wall_lignes:
 # mur lit toujours le corpus FR. Seul l'objet est traduit ; le titre révélé au
 # survol reste dans la langue de l'article.
 presse_objets:
+  en-attendant-nadeau-parler-sans-savoir-a-qui: "Books and algorithms"
   rfse-lemoine-chasseurs-detats: "Sovereign debt"
   revue-projet-commune-republique: "Municipalities"
   lectures-ridde-financiarisation-sante: "Colonial health"

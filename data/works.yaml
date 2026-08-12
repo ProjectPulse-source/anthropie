@@ -21,12 +21,21 @@
 # =============================================================================
 
 meta:
-  registry_version: "1.12"
-  last_updated: "2026-08-10"
+  registry_version: "1.13"
+  last_updated: "2026-08-12"
   maintainer: "Stéphane Lalut"
-  total_works: 38
+  total_works: 40
   source_registry: "registre_soumissions_v73.xlsx"
   changelog:
+    v1_13: |
+      Ajout essai Lalut (2026-08-11) — En attendant Nadeau, hors-série n°9
+      « États du livre », « Parler sans savoir à qui ». Essai original (non
+      recension) sur le quant-à-soi du livre face aux algorithmes.
+      total_works 38 → 40 : le compte déclaré était en retard d'une unité
+      AVANT cet ajout (39 entrées réelles pour 38 déclarées — un ajout
+      antérieur n'avait pas bumpé) ; recalé sur le compte réel
+      (27 articles + 8 AWP + 5 livres). Même session : compteurs durs
+      retirés des en-têtes de section (ils dérivaient aussi).
     v1_12: |
       Publication du 5e livre : « La Société du premier coup — Pourquoi certains
       peuvent recommencer — et d'autres non » (mise en vente 2026-08-10, 138 p.,
@@ -578,7 +587,11 @@ works:
     notes: "Livre antérieur (hors série anthropie), nouvelle édition 2026. Fiche site créée 2026-07-03 (comblait l'absence signalée par le chantier Wikidata)."
 
   # ===========================================================================
-  # ARTICLES PUBLIÉS — URL stable (10)
+  # ARTICLES PUBLIÉS — URL stable
+  # Compteurs durs retirés des en-têtes de section (2026-08-12) : ils dérivaient
+  # (« (10) » pour 12 entrées ; des articles publiés restés sous « EN ATTENTE »).
+  # Le champ status de chaque entrée fait foi ; les entrées restent dans leur
+  # section d'origine quand leur statut bascule.
   # Chapo extrait des fiches publications du repo Hugo.
   # Articles n'ont PAS de page individuelle — rendus en cards sur /publications/.
   # ===========================================================================
@@ -761,8 +774,23 @@ works:
     related_works: [awp-01, awp-03]
     notes: "Essai original (tribune) appliquant le cadre anthropique à la dette publique française. La Grande Conversation = revue intellectuelle et politique de Terra Nova."
 
+  - id: art-ean-parler-2026-08
+    type: article
+    status: published
+    canonical_title: { fr: "Parler sans savoir à qui" }
+    publication_date: "2026-08-11"
+    publisher: "En attendant Nadeau"
+    publisher_type: "revue"
+    source_type: "Revue"
+    url: "https://www.en-attendant-nadeau.fr/2026/08/11/parler-sans-savoir-a-qui-ia/"
+    chapo:
+      fr: "L'objet connecté se conforme à nos désirs ; le livre s'y refuse — il parle sans savoir à qui. Défense du quant-à-soi du livre face aux algorithmes, pour le hors-série « États du livre » d'En attendant Nadeau."
+      en: "The connected object bends to our desires; the book refuses to — it speaks without knowing to whom. A defence of the book's reserve against algorithms, for En attendant Nadeau's special issue on the state of the book."
+    related_works: [awp-06]
+    notes: "Essai original (non recension) pour le hors-série n°9 d'EAN, « États du livre », parution 11/08/2026. Slug URL : parler-sans-savoir-a-qui-ia. Fiche site content/publications/en-attendant-nadeau-parler-sans-savoir-a-qui.md."
+
   # ===========================================================================
-  # ARTICLES ACCEPTÉS — EN ATTENTE DE PUBLICATION (9)
+  # ARTICLES ACCEPTÉS — EN ATTENTE DE PUBLICATION (le champ status fait foi)
   # ===========================================================================
 
   - id: art-projet-municipales-2026-06
@@ -886,7 +914,7 @@ works:
     notes: "Recension de Phil A. Neel & Nick Chavez, Fabrique et forêt. Science et fiction du communisme (trad. Julien Guazzini, Sans soleil, coll. « µv », 130 p., 10 €). Commande Marianne Dautrey, envoi 11/05/2026, parue le 26/05/2026 (n° 245)."
 
   # ===========================================================================
-  # ARTICLES IN_REVIEW STRATÉGIQUES (5)
+  # ARTICLES IN_REVIEW STRATÉGIQUES (le champ status fait foi)
   # ===========================================================================
 
   - id: art-nlr-municipality-trap-2026-04
