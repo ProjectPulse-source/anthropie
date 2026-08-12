@@ -53,6 +53,29 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-08-12 (soir) — Notes Amazon dépôt-dérivées ; contrôles SSRN/OSF/MPRA consignés
+
+1. **Notes Amazon rafraîchies** (commit `352a04a`) : Odyssée 4,4/162 · Livresque
+   4,1/87 · Dette 4,2/27 · Anthropie 4,4/22. **Trou détecté par l'auteur** : la
+   routine relisait une liste figée de 4 livres ; le Premier coup — sur
+   `/ressources-offertes/` depuis le 10/08 — n'était pas relevé. Règle actée :
+   la liste se **dérive de `content/livres/*.md`** (anciens mis à jour, nouveaux
+   relevés d'office). Relevé Premier coup : **5,0/2 — non affiché** (2 avis =
+   preuve non matérielle ; champs absents = pas d'étoiles, garde en place).
+   Procédure inscrite : mémoire de routine + `docs/CHECKLIST_AJOUT_LIVRE.md` § 2.
+2. **SSRN — contrôle clos** (page auteur relue en direct le 12/08) : 6 papiers,
+   108 téléchargements, AWP-07/08 absents. AWP-07 n'a jamais été déposé sur
+   SSRN → rien à « accepter » → pas de dépôt AWP-08. La file réelle d'AWP-07/08
+   est MPRA (après déblocage) ; grille du 03/08 défavorable à SSRN de toute façon.
+3. **MPRA** : relance envoyée le 02/08 12:43 (vérifié dans les Envoyés) ; aucune
+   réponse à J+10. Prochaine décision auteur : 2e relance vs attente.
+4. **OSF** : transition consignée au registre (fin créations 16/11/2026,
+   projets read-only 19/02/2027 ; preprints et DOI persistent — z6x38 non
+   menacé). Action unique avant novembre : vérifier l'absence de projets actifs
+   sur ymkpj.
+5. Monitoring `anthropie-monitoring` : les échecs du 06/08 sont résolus (runs
+   verts le 12/08).
+
 ### 2026-08-12 (suite) — Arbitrages auteur : related_book, rattrapage intent_matrix, registre resynchronisé
 
 Trois gestes sur décision auteur, dans la foulée de l'ajout EAN du matin :

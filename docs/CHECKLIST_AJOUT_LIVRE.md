@@ -47,6 +47,16 @@ Front matter — modèle : `anthropie-ordre-ici-dette-ailleurs.md` :
 
 ## 2. Registres et surfaces à synchroniser
 
+- [ ] **Notes Amazon (`amazon_rating`/`amazon_reviews`) — rien à inscrire, mais
+      savoir** : la routine mensuelle (rappel Outlook du 10) dérive sa liste de
+      **toutes** les fiches `content/livres/*.md` porteuses d'un ASIN — jamais
+      d'une liste figée ; un nouveau livre est donc relevé d'office dès le mois
+      suivant. Les 2 champs restent **absents** tant que la preuve sociale n'est
+      pas matérielle (décision auteur, ordre de grandeur ≥ 10 avis — garde anti
+      « preuve sociale inversée » : champs absents = pas d'étoiles affichées).
+      *(Trou du 2026-08-12 : Premier coup présent sur /ressources-offertes/
+      depuis le 10/08, absent de la routine figée à 4 livres — corrigé en
+      dérivant la liste du dépôt.)*
 - [ ] `data/works.yaml` : entrée du livre (registre canonique — audité par
       `scripts/audit_works.py`).
 - [ ] **Inscription périphérie→centre (OBLIGATOIRE, quelle que soit la

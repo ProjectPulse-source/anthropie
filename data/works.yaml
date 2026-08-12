@@ -1018,9 +1018,19 @@ works:
 # AUDIT PLATEFORMES DU 2026-08-02 — trous constatés, à traiter (décision auteur) :
 #   SSRN      : 6 papiers en ligne (105 téléchargements) ; AWP-07 et AWP-08 ABSENTS.
 #               Titres dégradés à la soumission (ponctuation perdue) sur AWP-02 et AWP-03.
+#               RE-VÉRIFIÉ 2026-08-12 (page auteur, Chrome) : 6 papiers, 108 téléchargements,
+#               AWP-07/08 toujours absents — contrôle du rappel calendrier CLOS : AWP-07 n'a
+#               jamais été déposé sur SSRN, il n'y a rien à « accepter », donc pas de dépôt
+#               AWP-08 (grille du 03/08 : 'Frameworks' = type rejeté, valeur marginale faible ;
+#               la file réelle d'AWP-07/08 est MPRA, après déblocage du lot d'avril).
 #   OSF       : 1 SEUL preprint sur SocArXiv (AWP-06 EN, z6x38) — les 5 autres annoncés
 #               en mai n'existent pas ; licence non déclarée sur celui qui existe.
 #               (Wikidata ne porte aucun lien SocArXiv : pas de lien mort, bonne nouvelle.)
+#               TRANSITION OSF (mails du 11/08/2026, état externe daté) : fin de création de
+#               projets le 16/11/2026 ; TOUS les projets OSF read-only le 19/02/2027 ; les
+#               preprints, liens publics et DOI PERSISTENT (z6x38 et le profil ymkpj non
+#               menacés). Action unique avant nov. : vérifier si des projets OSF actifs
+#               existent sur ymkpj ; sinon, classer sans suite.
 #   OpenLib.  : 2 DOUBLONS jamais fusionnés (OL45424599W/OL45424600W « Dette Publique » ;
 #               OL45424564W/OL45424565W « ANTHROPIE ») ; couverture sur 1 seul work
 #               (Premier coup, ajoutée le 10/08) ; descriptions absentes sur 4 works.
