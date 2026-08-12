@@ -53,6 +53,19 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-08-13 — Maintien souverain d'ANTHROPY EN à 1,99 USD ; consignations US/CA révoquées
+
+Décision auteur : « Je conserve ANTHROPY à 1,99 USD pour l'instant. » Conséquences
+au registre des prix (dépôt Ads) : la vitrine $1.99 relue le 12/08 à 21:55Z était
+l'état réel — ratifié —, pas un retard de propagation. `promo_scheduled_end` passe
+à `null` (fenêtre ouverte, fin à la prochaine déclaration) et les
+`normal_price_observed_return` US et CA du 12/08 sont **révoqués** (CA par
+déduction PRIMARY_CONVERSION, à confirmer). À re-consigner au vrai retour à 12,99.
+⚠ Signalé à la session Ads via le registre : (1) les enchères US se restaurent
+automatiquement le 13/08 alors que la promo continue — cohérence à arbitrer ;
+(2) le Countdown UK du 21-27/08 exige la stabilité du prix .co.uk avant le 20/08 —
+vérifier que le maintien USD ne s'y propage pas par conversion.
+
 ### 2026-08-12 (nuit) — AWP-07 déposé sur MPRA ; correctif Search Console images
 
 1. **MPRA : AWP-07 déposé — paper #130468, in review** (mandat auteur explicite,
