@@ -37,7 +37,7 @@
 # autorite : primaire (page du site) | secondaire (page d'appui) | externe
 # =============================================================================
 
-version: "1.0 (2026-07-09, audit GEO-04)"
+version: "1.1 (2026-08-12, rattrapage inscription publications — décision auteur)"
 
 entities:
 
@@ -284,3 +284,92 @@ entities:
     enrichissement:
       - "« Order here. Debt elsewhere. » (surface EN du livre sur /en/livres/)"
       - "commonplace book (1 phrase, présentation Livresque sur /en/livres/)"
+
+  # ---------------------------------------------------------------------------
+  publications-presse:
+    type: publications
+    pages: { fr: /publications/, en: /en/publications/ }   # cartes ; l'URL portée est externe
+    autorite: externe
+    doctrine: >
+      Rattrapage du 2026-08-12 (décision auteur) : la règle d'inscription du § 0
+      de l'en-tête était restée sans exécution — aucune publication inscrite
+      depuis la création de la matrice. Une entrée par publication, ordre
+      chronologique : objet (vocabulaire = presse_objets de /a-propos/, une
+      étiquette par texte, invariante), sujet(s) d'entrée périphérique(s), fil
+      remontant. Le fil est un MIROIR du front matter de la fiche
+      (related, related_book) : la fiche est la source de vérité ; toute
+      modification d'un related en fiche se répercute ici dans le même commit
+      (même règle de synchronisation manuelle que works.yaml, NOTES_PUBLICATIONS § 1.5).
+    inscriptions:
+      - slug: mediapart-maprimerenov
+        objet: "MaPrimeRénov'"
+        entree: [dette, écologie]
+        fil: { awp: [awp-03, awp-04], livre: dette-publique-qui-paie-vraiment }
+      - slug: mediapart-budget-2026
+        objet: "Budget 2026"
+        entree: [dette]
+        fil: { awp: [awp-03], livre: dette-publique-qui-paie-vraiment }
+      - slug: en-attendant-nadeau-christophers
+        objet: "Profit et transition"
+        entree: [écologie]
+        fil: { awp: [awp-04], livre: anthropie-ordre-ici-dette-ailleurs }
+      - slug: terrestres-sous-le-cloud-la-fournaise
+        objet: "Data centers"
+        entree: [écologie, IA/numérique]
+        fil: { awp: [awp-01, awp-04, awp-06], livre: anthropie-ordre-ici-dette-ailleurs }
+      - slug: nonfiction-fressoz
+        objet: "Transition énergétique"
+        entree: [écologie]
+        fil: { awp: [awp-04, awp-06], livre: anthropie-ordre-ici-dette-ailleurs }
+      - slug: le-temps-votations
+        objet: "Votations suisses"
+        entree: [dette]
+        fil: { awp: [awp-03], livre: dette-publique-qui-paie-vraiment }
+      - slug: alternatives-economiques-teletravail
+        objet: "Télétravail"
+        entree: [travail, IA/numérique]
+        fil: { awp: [awp-01], livre: anthropie-ordre-ici-dette-ailleurs }
+      - slug: la-vie-des-idees-khalili
+        objet: "Logistique maritime"
+        entree: [écologie, extraction]
+        fil: { awp: [awp-02], livre: anthropie-ordre-ici-dette-ailleurs }
+      - slug: en-attendant-nadeau-carton-malm
+        objet: "Dépassement climatique"
+        entree: [écologie]
+        fil: { awp: [awp-04, awp-07], livre: anthropie-ordre-ici-dette-ailleurs }
+      - slug: lectures-kaba-main-esprit
+        objet: "Ouvriers de Bhopal"
+        entree: [travail]
+        fil: { awp: [awp-02], livre: anthropie-ordre-ici-dette-ailleurs }
+      - slug: en-attendant-nadeau-welgryn-alves-da-costa
+        objet: "Récit de l'IA"
+        entree: [IA/numérique]
+        fil: { awp: [awp-06], livre: anthropie-ordre-ici-dette-ailleurs }
+      - slug: en-attendant-nadeau-neel-chavez
+        objet: "Planification matérielle"
+        entree: [écologie, planification]
+        fil: { awp: [awp-06], livre: anthropie-ordre-ici-dette-ailleurs }
+      - slug: nonfiction-vuillemey
+        objet: "Responsabilité limitée"
+        entree: [entreprise, droit]
+        fil: { awp: [awp-01, awp-03, awp-07], livre: anthropie-ordre-ici-dette-ailleurs }
+      - slug: la-grande-conversation-dette-francaise
+        objet: "Dette française"
+        entree: [dette]
+        fil: { awp: [awp-01, awp-03, awp-07], livre: dette-publique-qui-paie-vraiment }
+      - slug: lectures-ridde-financiarisation-sante
+        objet: "Santé coloniale"
+        entree: [santé, dette]
+        fil: { awp: [awp-03], livre: anthropie-ordre-ici-dette-ailleurs }
+      - slug: revue-projet-commune-republique
+        objet: "Communes"
+        entree: [dette, communes]
+        fil: { awp: [awp-01, awp-03, awp-07], livre: dette-publique-qui-paie-vraiment }
+      - slug: rfse-lemoine-chasseurs-detats
+        objet: "Dette souveraine"
+        entree: [dette, droit]
+        fil: { awp: [awp-03], livre: dette-publique-qui-paie-vraiment }
+      - slug: en-attendant-nadeau-parler-sans-savoir-a-qui
+        objet: "Livre et algorithmes"
+        entree: [IA/numérique, livre/lecture]
+        fil: { awp: [awp-06], livre: livresque-des-mots }

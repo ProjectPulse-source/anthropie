@@ -53,6 +53,24 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-08-12 (suite) — Arbitrages auteur : related_book, rattrapage intent_matrix, registre resynchronisé
+
+Trois gestes sur décision auteur, dans la foulée de l'ajout EAN du matin :
+
+1. **`related_book: livresque-des-mots`** ajouté à la fiche EAN « Parler sans
+   savoir à qui » (l'essai sur le quant-à-soi du livre éclaire l'anthologie).
+2. **`data/intent_matrix.yaml` v1.1 — rattrapage** : la règle d'inscription du
+   § 0 était restée sans exécution depuis la création de la matrice (aucune
+   publication inscrite). Nouvelle entité `publications-presse` : 18 inscriptions
+   chronologiques (objet au vocabulaire `presse_objets`, sujets d'entrée
+   périphériques, fil remontant AWP + livre). Le fil est un miroir du front
+   matter des fiches — source de vérité — à répercuter dans le même commit.
+3. **`data/works.yaml` : 5 `related_works` resynchronisés** sur les fiches
+   (terrestres, fressoz, carton-malm, vuillemey, grande-conversation) : le
+   maillage des fiches avait été enrichi à la parution d'AWP-06/AWP-07
+   (checklist § 1.4), le registre n'avait jamais suivi — même classe
+   « état déclaré ≠ état réel » que les compteurs du matin.
+
 ### 2026-08-12 — Publication EAN « Parler sans savoir à qui » (hors-série États du livre)
 
 **Saisine** : ajout au site de la publication du 2026-08-11 — essai original (non
