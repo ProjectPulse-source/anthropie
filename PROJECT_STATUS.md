@@ -53,6 +53,45 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-08-15 (soir) — Registre EN INTÉGRAL `/en/register-of-offloaded-costs/` : traduction native des 165 jalons via le module de traduction (commande auteur)
+
+**Commande auteur** : « la même page » qu'en FR, « traduction parfaite et native, voir module
+de traduction » — renverse l'adaptation du matin. Un QR sera intégré à l'édition EN dans un
+second temps (corrections chirurgicales auteur) : **cette page est sa cible**.
+
+**Découvertes d'audit qui ont cadré l'exécution** (capitaliser sur l'existant) :
+- le chapitre 177 du pipeline livre (`work/anthropie/en/passes/177-registre-…-qr-code.*`)
+  est la **page QR** : le livre imprimé ne contient PAS les 168 jalons — il renvoie par QR
+  au registre en ligne (« Scan the QR code opposite ») ; `_production_en/qr_en.png` existe ;
+- **nom canonique EN = « Register of Offloaded Costs »** — décision auteur déjà rendue
+  (script `app70_register_canonical.py`, défaut LING-F-01) ; grille = « Order created /
+  Debt displaced » (paires P4 du ch. 177) ; la fiche EN portait « deported » (non canonique,
+  CORRIGÉ) et des noms d'âges non conformes au livre publié (nav de l'EPUB EN : Foundational
+  Programs, **The Extractive Empires**, Industrialization and **Nation-States** — CORRIGÉS).
+
+**Chaîne appliquée** (PROCEDURE_TEXTE_COURT, pack en-US) : P0 source scellée =
+`registre_couts_deportes.json` @ `a209a97` (complétude par construction : zip ordre-strict,
+165/165) · P1 traduction par lots avec terminologie AUTHOR_VALIDATED injectée
+(decisions_terminologiques : anthropy, external memory, State-machine, entropic debt,
+system of exploitation… + false_friends + forbidden_calques) · gates déterministes étage 1
+PASS (1 faux positif qualifié : « La Boétie ») · **P3B 2 réviseurs indépendants à contexte
+vierge** (fidélité : 36 findings/165 lus ; natif US : 84 findings/165 lus) · **P4 arbitrage**
+fidélité > voix > fluidité > élégance : **100 correctifs appliqués par mutation prouvée**
+(dont 3 faux-amis réels : « evidence »→self-evidence sur Descartes, « recover »→co-opt sur
+récupération situationniste, « counterpart »→counterweight ; « sanctuarize » inexistant ;
+« letters of exchange »→bills of exchange) ; **2 rejets documentés** : « Humanity Beside
+Itself » (collocation AUTHOR_VALIDATED_TITLE App_22, les réviseurs ne pouvaient pas la
+connaître) et « Hygienism » (nom attesté du mouvement). Apostrophes Chicago mécanisées.
+
+**Livré** : `data/registre_couts_deportes_en.json` (165 jalons EN, âges canoniques, dates
+en-US, catégories mappées ×21 — Mémoriel→Memory, Psychique→Psychological, jamais les
+faux-amis) ; shortcode `registre-ages` bilingue (labels + data par langue) ; page EN
+miroir de la FR (7 FAQ JSON-LD, mêmes sections) ; **URL canonique
+`/en/register-of-offloaded-costs/` + alias depuis l'URL du matin** ; i18n déjà posé.
+Vérifié : build 0, compteurs 0, couverture 0 signal, 165 details/ancres, hreflang croisé,
+rendu navigateur contrôlé (accordéons, arbitrages en place). **Commits locaux — push
+auteur NON exécuté ce tour (pas de demande explicite)** ; IndexNow partira au push.
+
 ### 2026-08-15 (jour, 2) — Adaptation EN `/en/register-of-deported-costs/` + push auteur (mandat explicite du tour)
 
 **Adaptation, pas traduction** (doctrine intent_matrix) : la page EN présente le Registre
