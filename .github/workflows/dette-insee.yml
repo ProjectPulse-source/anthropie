@@ -1,0 +1,84 @@
+# Donnees officielles de dette publique -> data/dette_officielle.json
+# (+ endpoint static/ + courbe SVG). Variante PR, arbitrage panel 2026-08-15 :
+# le workflow ne publie JAMAIS seul -- il ouvre une pull request, et le merge
+# humain est le push qui declenche le deploiement (hugo.yml). Un push du bot
+# ne declencherait d'ailleurs pas `on: push` (restriction GITHUB_TOKEN).
+# Echec (fetch, garde, build) => issue GitHub (pattern healthcheck).
+# DECROISSANCE : plus de 2 echecs/an pour cause non-donnee, ou PRs laissees
+# sans merge plus d'un trimestre => reexamen du dispositif ; repli documente =
+# execution locale trimestrielle de scripts/update_dette_insee.py + commit
+# humain (toujours viable, ~4 gestes/an).
+name: Donnees dette (INSEE/Eurostat)
+
+on:
+  schedule:
+    - cron: '17 7 6 * *'  # le 6 du mois, 07:17 UTC -- mensuel pour rattraper vite les publications trimestrielles
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+env:
+  HUGO_VERSION: 0.147.0
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Rapatrier et valider les series (gardes dures, exit 1 si echec)
+        run: python3 scripts/update_dette_insee.py
+
+      - name: Detecter un changement
+        id: diff
+        run: |
+          if git diff --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Aucun changement de donnees -- rien a publier."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git diff --stat
+          fi
+
+      - name: Build gate Hugo (jamais de PR qui casse le build)
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          wget -q -O "${{ runner.temp }}/hugo.deb" \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+          sudo dpkg -i "${{ runner.temp }}/hugo.deb"
+          hugo --minify
+
+      - name: Ouvrir la pull request (publication = merge humain)
+        if: steps.diff.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          BRANCH="data/dette-${{ github.run_id }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add data/dette_officielle.json static/dette_officielle.json static/img/ciseau-dette-interets.svg
+          git commit -m "data(dette): series INSEE/Eurostat du $(date -u +%Y-%m-%d)"
+          git push origin "$BRANCH"
+          gh pr create \
+            --title "Donnees dette : mise a jour du $(date -u +%Y-%m-%d)" \
+            --body "Series INSEE (dette de Maastricht) et Eurostat (interets D41PAY, COFOG) rapatriees, validees par les gardes de scripts/update_dette_insee.py, build Hugo verifie. Relire le diff puis merger : le merge publie."
+
+      - name: Issue en cas d'echec (un run rouge que personne ne lit n'est pas un echec visible)
+        if: failure()
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          script: |
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: 'Donnees dette : echec du workflow du ' + new Date().toISOString().slice(0, 10),
+              body: 'Le workflow dette-insee a echoue (fetch, garde de validation ou build gate). Run : ' +
+                context.serverUrl + '/' + context.repo.owner + '/' + context.repo.repo +
+                '/actions/runs/' + context.runId +
+                '\n\nRepli documente : `python scripts/update_dette_insee.py` en local + commit humain.'
+            })
