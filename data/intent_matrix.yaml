@@ -241,6 +241,18 @@ entities:
         destination: /livres/dette-publique-qui-paie-vraiment/
         risk: faible
         conversion: fort
+      - q: "combien coûte la dette publique / charge d'intérêts de la dette"
+        statut: couverte
+        destination: /cout-de-la-dette-publique/
+        risk: faible
+        conversion: moyen
+        notes: "page ouverte 15/08 sur GO auteur (exemption assumée à « réaction, pas anticipation » : le signal est la commande d'auteur) ; propriété = « combien coûte » (le ciseau, équivalences) ; « qui paie » reste EXCLUSIF au pont ; chiffres 100 % dérivés de data/dette_officielle.json — aucun en dur"
+      - q: "montant de la dette publique france / dette publique en % du PIB"
+        statut: couverte
+        destination: /qui-paie-la-dette-publique/  # bloc chiffré INSEE au build (partial dette-chiffres)
+        risk: moyen
+        conversion: faible
+        notes: "requête commodity (INSEE, vie-publique gagnent d'office) — servie par le bloc daté-sourcé et l'endpoint /dette_officielle.json, JAMAIS par une page dédiée aux chiffres bruts"
     cercle_2_conceptuel_proche:
       - q: "dette publique et générations futures / économie politique de la dette"
         statut: couverte

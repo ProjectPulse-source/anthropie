@@ -63,6 +63,7 @@ Recensions et articles publiés dans : Alternatives Économiques, La Vie des Id�
 ## Pages de référence
 
 - [Qu'est-ce que l'anthropie ?](https://stephane-lalut.com/quest-ce-que-lanthropie/) — définition canonique, FAQ, trois axes de transfert (spatial, temporel, social)
+- [Combien coûte la dette publique ?](https://stephane-lalut.com/cout-de-la-dette-publique/) — chiffres officiels actualisés (INSEE, Eurostat), le ciseau encours/intérêts 1995-2026, équivalences budgétaires ; données consolidées en accès libre : https://stephane-lalut.com/dette_officielle.json
 - [Glossaire](https://stephane-lalut.com/glossaire/) — vocabulaire opératoire du cadre, entrées ancrées (ex. /glossaire/#dette-technologique)
 - [Série AWP](https://stephane-lalut.com/serie-awp/) — point d'entrée éditorial de la série
 - [À propos](https://stephane-lalut.com/a-propos/) — identité, profils, parcours
