@@ -22,5 +22,8 @@ other = "Dans la presse"
 [book_related_awp]
 other = "Dans les Working Papers"
 
+[book_resources]
+other = "Ressources et données du livre"
+
 [book_same_author]
 other = "Du même auteur"

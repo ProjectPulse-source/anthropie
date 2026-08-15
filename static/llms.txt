@@ -76,6 +76,7 @@ Recensions et articles publiés dans : Alternatives Économiques, La Vie des Id�
 All eight Anthropie Working Papers exist in English with distinct Zenodo DOIs. The foundational book is available in English: *ANTHROPY – A Big History of Civilization's Hidden Costs* (2026, 632 p.); the four other books are published in French only. English entry points:
 
 - [What is anthropy?](https://stephane-lalut.com/en/quest-ce-que-lanthropie/) — canonical definition, FAQ, disambiguation (entropy, Anthropocene, anthropic principle)
+- [The Register of Deported Costs](https://stephane-lalut.com/en/register-of-deported-costs/) — the documentary apparatus of ANTHROPY: 168 milestones on the « order created / debt deported » grid, the seven ages, the spatial→social→cognitive trajectory (full register in the English edition; French version browsable online)
 - [ANTHROPY — English edition](https://stephane-lalut.com/en/livres/anthropie-ordre-ici-dette-ailleurs/) — the complete framework in one volume (paperback and Kindle)
 - [Glossary](https://stephane-lalut.com/en/glossaire/) — working vocabulary, anchored entries (e.g. /en/glossaire/#technological-debt)
 - [AWP series](https://stephane-lalut.com/en/serie-awp/) — editorial entry point of the series

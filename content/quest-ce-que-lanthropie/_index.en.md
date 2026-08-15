@@ -1,6 +1,6 @@
 ---
 title: "What is anthropy?"
-lastmod: 2026-07-24  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-08-15  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 # slug: est ignoré par Hugo sur les _index.md de section — l'URL réelle reste
 # /en/quest-ce-que-lanthropie/. Les alias ci-dessous réparent le 404 de
 # /en/what-is-anthropy/, référencée par Wikidata Q138827949 (P973, batch
@@ -184,7 +184,7 @@ The framework does not provide a single answer to these questions. It provides a
 - [AWP-07 — *The Anthropic Loop*](/en/awp/awp-07/)
 - [AWP-08 — *Social Reversibility as a Dimension of Inequality*](/en/awp/awp-08/)
 
-Two pages extend the framework in English: [What is the anthropic loop?](/en/anthropic-loop/) and [What is social reversibility?](/en/social-reversibility/)
+Three pages extend the framework in English: [What is the anthropic loop?](/en/anthropic-loop/), [What is social reversibility?](/en/social-reversibility/) and [The Register of Deported Costs](/en/register-of-deported-costs/) — the book's documentary apparatus, milestone by milestone across the seven ages.
 
 ## The book
 

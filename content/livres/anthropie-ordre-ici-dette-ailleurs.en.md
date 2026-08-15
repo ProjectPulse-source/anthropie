@@ -2,7 +2,7 @@
 title: "ANTHROPY – A Big History of Civilization's Hidden Costs"
 subtitle: "Seven ages of history for a single hypothesis: disorder is never resolved, only displaced."
 date: 2026-07-21  # date de publication de l'édition anglaise (mise en vente KDP)
-lastmod: 2026-07-21
+lastmod: 2026-08-15
 description: "The foundational work on the anthropic framework. Across 632 pages, ANTHROPY develops the hypothesis that social systems do not resolve disorder but displace it — across space, across time, or onto other social groups. Order here. Debt elsewhere."
 isbn: "978-2-958634-75-9"
 currency: "USD"
@@ -36,6 +36,10 @@ faq:
     answer: "No, the two entry points are independent. ANTHROPY lays out the complete framework — seven historical ages, 632 pages — from which each working paper then develops a theorem or an application (public debt, the energy transition, academic research). You can begin with the fresco or with a single paper."
   - question: "Who is ANTHROPY for?"
     answer: "For the essay reader looking for an overall reading grid — political economy, deep history, ecology — rather than topical commentary. No technical prerequisite: the conceptual apparatus is built step by step, from the Paleolithic tool to the digital metaprogram. Early readers place it alongside the great syntheses of Jared Diamond or Yuval Noah Harari."
+ressources_livre:
+  - label: "The Register of Deported Costs — online presentation"
+    url: "/en/register-of-deported-costs/"
+    note: "the book's documentary apparatus: 168 milestones on the « order created / debt deported » grid, organised by the seven ages"
 related_awp:
   - chapter: "What is anthropy? Principles of a hypothesis"
     awp: "awp-01"
@@ -85,6 +89,6 @@ The book traverses **seven historical Ages** — from the mastery of fire to con
 6. Age 5 — The modern state-machine (1500 → 1800)
 7. Age 6 — Industrialization and nations (1800 → 1945)
 8. Age 7 — The contemporary metaprogram (1945 → present)
-9. *Constraint into freedom* — epilogue, *Register of deported costs* and *Afterword: the anthropy of anthropy*
+9. *Constraint into freedom* — epilogue, [*Register of deported costs*](/en/register-of-deported-costs/) and *Afterword: the anthropy of anthropy*
 
 *ANTHROPY lays out the framework whose theorems and applications are developed by the Anthropy Working Papers series.*
