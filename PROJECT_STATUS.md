@@ -45,13 +45,53 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 > **À lire avant** : toute intervention sur le site, technique 
 > ou éditoriale. Décrit l'état architectural, les doctrines 
 > en place, les chantiers en cours et les chantiers reportés.
-> Dernière mise à jour : 2026-08-15.
+> Dernière mise à jour : 2026-08-15 (soir).
 > **Règle de fraîcheur** : l'état écrit suit l'acte — toute session qui
 > exécute met à jour ce log ET les statuts des registres/backlogs touchés
 > dans la même session. Un statut périmé vaut défaut : il provoque la
 > re-exécution de l'acquis ou l'abandon de travaux crus « déjà faits ».
 
 ## 0. Log chronologique
+
+### 2026-08-15 (soir) — Chantier dette EXÉCUTÉ : B-minimal + page coût + pipeline + compagnon réparé — EN ATTENTE DES 2 PUSH AUTEUR
+
+**GO auteur reçu** (chiffres automatiques + courbes croisées + « incontournable GEO »). Panel
+interne convoqué (3 sièges) avant implémentation ; synthèse d'arbitre : variante **PR** (jamais
+de publication sans merge humain), page satellite plutôt que section, une seule courbe (le
+ciseau — pas de courbe « services publics » fabriquée), équivalences à millésime unique.
+⚠ Constat de données qui corrige la demande : la corrélation « dette↑ → santé/éducation↓ »
+est FAUSSE dans les agrégats (santé 8,1→8,9 % PIB ; éducation stable) — le récit publié est
+le ciseau (coût qui baisse pendant que l'encours monte, retournement 2022) + équivalences de
+masses 2024 + section « ce que les données ne montrent pas ».
+
+**Livré (5 commits site `9761b7b`→`0b9774e`, build + linters verts, rendu vérifié en navigateur) :**
+- `scripts/update_dette_insee.py` — INSEE SDMX (010777616/608) + Eurostat (D41PAY, COFOG) ;
+  gardes : bandes, ancres consolidées, delta vs committé, non-régression, écriture atomique,
+  exit 1 sans écriture (témoin positif : mutation réelle exercée) ; produit
+  `data/dette_officielle.json` (bloc `affichage` FR précalculé + équivalences 2024) +
+  endpoint public `/dette_officielle.json` + `static/img/ciseau-dette-interets.svg`.
+- Bloc chiffré au build sur la page pont (partial `dette-chiffres` : errorf si absent, warnf
+  si périmé >290 j — la garde vit dans le BUILD) ; placeholders `{dette.*}` dans
+  `desc-figures` (couvre le JSON-LD FAQPage) ; shortcode `dette-val` — AUCUN chiffre en dur.
+- **Nouvelle page `/cout-de-la-dette-publique/`** (propriété « combien coûte » ; « qui paie »
+  reste EXCLUSIF au pont) : ciseau SVG 2 panneaux, équivalences (intérêts 2024 = 7,2× les
+  tribunaux GF0303, > poste GF03 entier, 40 % de GF09, 23 % de GF07), 5 FAQ chiffrées par
+  placeholders, honnêteté explicite (pic ratio = T1 2021, pas aujourd'hui). intent_matrix +
+  llms.txt à jour (exemption « réaction/anticipation » signalée : le signal = commande auteur).
+- Fiche livre : bloc « Ressources et données du livre » (frontmatter `ressources_livre`).
+- `.github/workflows/dette-insee.yml` : cron mensuel → fetch+gardes → build gate → **PR**
+  (merge humain = publication) ; issue si échec ; condition de décroissance en tête.
+- **Compagnon** (clone `D:\PRO\90_SAS\EN_COURS\dette-publique-france`, 3 commits `42620d4`→`9108b35`) :
+  JSON de repli régénéré (était 2 docs concaténés, illisible), ancre d'extrapolation recalée
+  (T1 2026, +5,7 %/an observé), idbank faux 001694056 + clé fictive supprimés, **titre du
+  livre corrigé (« Dette Souveraine » ×5 → vrai titre)**, **bouton Amazon réparé (était
+  `href='#'`)** → `/dp/2958634736`, og:image existante, backlinks vers pont/coût/fiche,
+  pipeline propre supprimé (condition de mort : les données viennent du site). Rendu vérifié
+  en navigateur : `[INSEE Live] Source : insee-live — période : 2026-Q1`.
+
+**⛔ PORTES HUMAINES : ① push du compagnon (avant le site, pour que les backlinks pointent
+du cohérent) ; ② push du site ; ③ 2FA sur le compte ProjectPulse-source + l'ajouter au
+healthcheck (1 ligne NODES) ; ④ merges des futures PR de données (~4/an).**
 
 ### 2026-08-15 — Rattachement compteur de dette : architecture B-minimal ARBITRÉE, en attente de GO auteur
 
