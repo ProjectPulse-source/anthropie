@@ -108,7 +108,12 @@ L'anthropie repose sur une hypothèse unique — les systèmes sociaux déplacen
 
 <div class="glossaire-entry" id="registres-de-couts-couples">
 <dt>Registres de coûts couplés</dt>
-<dd>Apport central d'AWP-06&nbsp;: grille testable des quatre registres&nbsp;— énergie, matière, territoire, attention&nbsp;— qui montre comment l'infrastructure numérique déplace simultanément le désordre selon plusieurs axes irréductibles. Ces registres ne s'additionnent pas&nbsp;: ils se couplent. Réduire l'un déplace souvent vers les trois autres. Voir <a href="/awp/awp-06/">AWP-06</a>.</dd>
+<dd>Apport central d'AWP-06&nbsp;: grille testable des quatre registres&nbsp;— énergie, matière, territoire, attention&nbsp;— qui montre comment l'infrastructure numérique déplace simultanément le désordre selon plusieurs axes irréductibles. Ces registres ne s'additionnent pas&nbsp;: ils se couplent. Réduire l'un déplace souvent vers les trois autres. Voir <a href="/awp/awp-06/">AWP-06</a>. À ne pas confondre avec le <em>Registre des coûts déportés</em>, qui est une chronologie et non une typologie.</dd>
+</div>
+
+<div class="glossaire-entry" id="registre-des-couts-deportes">
+<dt>Registre des coûts déportés</dt>
+<dd>Appareil documentaire du livre <em>ANTHROPIE — Ordre ici. Dette ailleurs</em> (2025)&nbsp;: chronologie de 168 jalons, des premiers outils (≈&nbsp;−3,3&nbsp;millions d'années) aux algorithmes contemporains, qui documente pour chaque innovation l'ordre créé et la dette déportée, avec les catégories du transfert. Version en ligne en consultation libre&nbsp;: <a href="/registre-des-couts-deportes/">Le Registre des coûts déportés</a>. À ne pas confondre avec les <a href="#registres-de-couts-couples">registres de coûts couplés</a> d'AWP-06, qui sont une typologie et non une chronologie.</dd>
 </div>
 
 </dl>

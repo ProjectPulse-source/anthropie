@@ -1,6 +1,6 @@
 ---
 title: "Qu'est-ce que l'anthropie ?"
-lastmod: 2026-07-24  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-08-15  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 description: "L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent."
 faq:
   - question: "Qu'est-ce que l'anthropie en sciences sociales ?"
@@ -169,7 +169,7 @@ Le cadre n'apporte pas une réponse unique à ces questions. Il fournit une mani
 - [AWP-07 — *La boucle anthropique*](/awp/awp-07/)
 - [AWP-08 — *La réversibilité sociale comme dimension de l'inégalité*](/awp/awp-08/)
 
-Plusieurs pages prolongent le cadre sur ses terrains d'application&nbsp;: [Qu'est-ce que la dette technologique&nbsp;?](/dette-technologique/), [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/), [Qu'est-ce que l'effet rebond&nbsp;?](/effet-rebond/), [Qu'est-ce que la boucle anthropique&nbsp;?](/boucle-anthropique/) et [Qu'est-ce que la réversibilité sociale&nbsp;?](/reversibilite-sociale/)
+Plusieurs pages prolongent le cadre sur ses terrains d'application&nbsp;: [Qu'est-ce que la dette technologique&nbsp;?](/dette-technologique/), [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/), [Qu'est-ce que l'effet rebond&nbsp;?](/effet-rebond/), [Qu'est-ce que la boucle anthropique&nbsp;?](/boucle-anthropique/) et [Qu'est-ce que la réversibilité sociale&nbsp;?](/reversibilite-sociale/) L'application du cadre à l'histoire longue est documentée jalon par jalon dans [le Registre des coûts déportés](/registre-des-couts-deportes/), l'appareil documentaire du livre en consultation libre.
 
 ## Le livre
 

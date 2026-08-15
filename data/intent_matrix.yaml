@@ -37,7 +37,7 @@
 # autorite : primaire (page du site) | secondaire (page d'appui) | externe
 # =============================================================================
 
-version: "1.1 (2026-08-12, rattrapage inscription publications — décision auteur)"
+version: "1.2 (2026-08-15, maille registre des coûts déportés — commande auteur, rapatriement ancien mini-site)"
 
 entities:
 
@@ -73,6 +73,18 @@ entities:
         risk: faible
         conversion: moyen
         notes: "terme présent dans le corpus AWP ; pas d'ancre H2/FAQ dédiée — bloc possible page concept, pas de page"
+      - q: "registre des coûts déportés"
+        statut: couverte
+        destination: /registre-des-couts-deportes/
+        risk: faible
+        conversion: fort
+        notes: "page ouverte 15/08 sur commande auteur (rapatriement de l'ancien mini-site GitHub — même exemption « réaction, pas anticipation » que /cout-de-la-dette-publique/ : le signal est la commande) ; propriété = l'appareil documentaire du livre, 165 jalons en ligne dérivés de data/registre_couts_deportes.json — compteurs au build, aucun en dur ; désambiguïsation faite vs « registres de coûts couplés » (AWP-06)"
+      - q: "les sept âges de l'anthropie"
+        statut: couverte
+        destination: /registre-des-couts-deportes/
+        risk: faible
+        conversion: fort
+        notes: "segmentation canonique = Sommaire de la fiche livre (le livre publié fait foi — l'ancien mini-site portait un découpage antérieur, non repris) ; la fiche livre garde le Sommaire, la maille porte la question"
     cercle_2_conceptuel_proche:
       - q: "coûts cachés de l'intelligence artificielle"
         statut: couverte

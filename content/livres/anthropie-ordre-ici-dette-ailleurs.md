@@ -3,7 +3,7 @@ title: "ANTHROPIE – Ordre ici. Dette ailleurs"
 subtitle: "Sept âges d'histoire pour une seule hypothèse : le désordre ne se résout pas, il se déplace."
 promo_slug: "anthropie"  # clé D1/books.toml pour /ressources-offertes (guichet Kindle)
 date: 2025-09-09
-lastmod: 2026-07-09  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-08-15  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 description: "L'ouvrage fondateur du cadre anthropique. En 622 pages, l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent est déployée à travers l'histoire longue, l'économie, les finances publiques et l'épistémologie. Ordre ici. Dette ailleurs."
 isbn: "978-2-9586347-2-8"
 amazon_rating: 4.4       # note moyenne Amazon.fr — relevé 2026-08-12 (MAJ ~mensuelle, relecture Chrome)
@@ -40,6 +40,10 @@ faq:
     answer: "Non, les deux entrées sont indépendantes. ANTHROPIE pose le cadre complet — sept âges historiques, 622 pages — dont chaque working paper développe ensuite un théorème ou une application (dette publique, transition énergétique, recherche académique). On peut commencer par la fresque ou par un paper."
   - question: "À qui s'adresse ANTHROPIE ?"
     answer: "Au lecteur d'essais qui cherche une grille de lecture d'ensemble — économie politique, histoire longue, écologie — plutôt qu'un traitement d'actualité. Aucun prérequis technique : l'appareil conceptuel est construit pas à pas, de l'outil paléolithique au métaprogramme numérique. Les premiers lecteurs le rapprochent des grandes synthèses de Jared Diamond ou de Yuval Noah Harari."
+ressources_livre:
+  - label: "Le Registre des coûts déportés — version en ligne"
+    url: "/registre-des-couts-deportes/"
+    note: "l'appareil documentaire du livre : 168 jalons « ordre créé / dette déportée », classés selon les sept âges, en consultation libre"
 related_awp:
   - chapter: "Qu'est-ce que l'anthropie ? Principes d'une hypothèse"
     awp: "awp-01"
@@ -97,6 +101,6 @@ Le livre traverse **sept Âges historiques** — de l'invention du feu aux algor
 6. Âge 5 — La machine-État moderne (1500 → 1800)
 7. Âge 6 — L'industrialisation et les nations (1800 → 1945)
 8. Âge 7 — Le métaprogramme contemporain (1945 → présent)
-9. *Contrainte en liberté* — épilogue, *Registre des coûts déportés* et *Postface&nbsp;: l'anthropie de l'anthropie*
+9. *Contrainte en liberté* — épilogue, [*Registre des coûts déportés*](/registre-des-couts-deportes/) et *Postface&nbsp;: l'anthropie de l'anthropie*
 
 *ANTHROPIE pose le cadre dont la série Anthropie Working Papers développe les théorèmes et les applications.*
