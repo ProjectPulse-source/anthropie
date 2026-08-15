@@ -89,9 +89,14 @@ masses 2024 + section « ce que les données ne montrent pas ».
   pipeline propre supprimé (condition de mort : les données viennent du site). Rendu vérifié
   en navigateur : `[INSEE Live] Source : insee-live — période : 2026-Q1`.
 
-**⛔ PORTES HUMAINES : ① push du compagnon (avant le site, pour que les backlinks pointent
-du cohérent) ; ② push du site ; ③ 2FA sur le compte ProjectPulse-source + l'ajouter au
-healthcheck (1 ligne NODES) ; ④ merges des futures PR de données (~4/an).**
+**⛔ PORTES HUMAINES, dans l'ordre : ⓪ contre-expertise CONTENU avant tout push (demande
+auteur 15/08 soir) — audit `anthropie-site-20260815-033932`, double canal ChatGPT (§8-A
+raisonnement : base Covid du +124 %, lecture « anesthésie », équivalences, graphique,
+croisements manquants) + Perplexity (§8-B factuel : D41PAY, valeurs INSEE/COFOG, mission
+Justice) ; paquet dans `D:\CONTRE_EXPERTISE\anthropie-site\…033932\A_TRANSMETTRE\` ;
+arbitrage puis correctifs éventuels AVANT publication ; ① push du compagnon (avant le
+site) ; ② push du site ; ③ 2FA compte ProjectPulse-source + ligne healthcheck ;
+④ merges des futures PR de données (~4/an).**
 
 ### 2026-08-15 — Rattachement compteur de dette : architecture B-minimal ARBITRÉE, en attente de GO auteur
 
