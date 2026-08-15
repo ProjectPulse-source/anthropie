@@ -45,13 +45,40 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 > **À lire avant** : toute intervention sur le site, technique 
 > ou éditoriale. Décrit l'état architectural, les doctrines 
 > en place, les chantiers en cours et les chantiers reportés.
-> Dernière mise à jour : 2026-08-12.
+> Dernière mise à jour : 2026-08-15.
 > **Règle de fraîcheur** : l'état écrit suit l'acte — toute session qui
 > exécute met à jour ce log ET les statuts des registres/backlogs touchés
 > dans la même session. Un statut périmé vaut défaut : il provoque la
 > re-exécution de l'acquis ou l'abandon de travaux crus « déjà faits ».
 
 ## 0. Log chronologique
+
+### 2026-08-15 — Rattachement compteur de dette : architecture B-minimal ARBITRÉE, en attente de GO auteur
+
+**Saisine auteur** : rattacher le compteur `ProjectPulse-source/dette-publique-france`
+(GitHub Pages, cible du QR imprimé dans l'EPUB *Dette publique*) au site, avec l'idée de
+faire de la fiche livre « un incontournable GEO ». Audit gate 0 (lecture seule) puis
+contre-expertise externe `anthropie-site-20260815-022215` (REASONING_AUDIT, cycle complet
+CLOS le jour même). **Aucune modification du site ni du compteur dans cette session.**
+
+**Décision retenue** (détail : `.claude/external-audits/ARBITRATIONS/anthropie-site-20260815-022215_arbitrage.md`) :
+un seul actif citationnel — `/qui-paie-la-dette-publique/` reçoit un bloc chiffré compact
+**au build** (période INSEE, montant, % PIB, source, date de relevé) ; compteur = preuve
+visuelle (6 gestes de durcissement puis STOP — son JSON de repli est corrompu, données
+2025-T2, cron disparu, 0 lien retour) ; fiche livre = conversion (bloc « ressources »,
+jamais de FAQ informationnelle — garde-fou GEO-04 intact). Page « en chiffres » NON
+ouverte (critère durci : réponse non substituable). Pas de sous-domaine pour le SEO.
+INSEE 2026-T1 vérifié à la source : **3 536,1 Md€ / 117,5 % du PIB** (idbanks 010777616/608).
+
+**Faits neufs vérifiés (sources primaires, 15/08)** : les bots de search sont
+`OAI-SearchBot`/`Claude-SearchBot` (pas GPTBot/ClaudeBot) ; Google **rend le JS** — mais
+le contenu essentiel ne doit jamais en dépendre (invariant multi-canaux) ; **rich result
+FAQ retiré de Google Search le 15/06/2026** (les FAQ du site gardent leur valeur
+lecteur/LLM, l'argument rich result est mort) ; `llms.txt` officiellement neutre pour
+Google. → mémoire `reference_geo_crawlers_et_faq_2026`.
+
+**EN ATTENTE AUTEUR** : ① GO chantier site (B-minimal) ; ② GO chantier compteur (6 gestes) ;
+③ emplacement du clone local (`D:\anthropie\dette-publique-france`, hors `D:\PRO`).
 
 ### 2026-08-13 — Maintien souverain d'ANTHROPY EN à 1,99 USD ; consignations US/CA révoquées
 
