@@ -53,6 +53,49 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-08-15 (jour) — Maille `/registre-des-couts-deportes/` : rapatriement de l'ancien mini-site GitHub (commande auteur)
+
+**Commande auteur** : refaire pour la page GitHub `ProjectPulse-source/anthropie` ce qui a été
+fait pour le compteur dette — rapatrier dans le site, au design du site, « en autant de
+réponses claires » pour le GEO grand public. Constat d'audit : le dépôt GitHub **est** le
+dépôt du site (même remote) ; l'ancien mini-site (2025) ne survit que dans la branche
+`backup-mini-site` et n'est plus servi nulle part. Son actif unique jamais rapatrié : le
+**Registre des coûts déportés** (165 jalons rédigés « ordre créé / dette déportée » ; le
+livre en compte 168).
+
+**Livré :**
+- `data/registre_couts_deportes.json` — 165 jalons **dérivés par script** (session, one-shot)
+  depuis l'ancien `index.html`, typographie FR appliquée (insécables), affectation aux
+  **7 âges du livre publié** (Sommaire de la fiche = vérité ; l'ancien mini-site portait un
+  découpage antérieur, non repris) par bornes chronologiques. Répartition : 8/7/33/18/32/32/35.
+  Le JSON est désormais la source maintenue ; `_meta` documente la provenance.
+- Nouvelle maille `/registre-des-couts-deportes/` : réponse directe, grille de lecture,
+  trajectoire spatial→social→cognitif (postface), registre complet rendu par le shortcode
+  `registre-ages` (`<details>` ancrés par jalon, compteurs dérivés au build — **aucun nombre
+  en dur**), section « Ce que le Registre ne dit pas », 7 FAQ (JSON-LD FAQPage validé).
+  Anti-cannibalisation tenue : zéro FAQ définitionnelle anthropie/dette.
+- Maillage : fiche livre ANTHROPIE (`ressources_livre` + lien Sommaire + lastmod), page
+  concept (lien « histoire longue » + lastmod), glossaire (entrée « Registre des coûts
+  déportés » + désambiguïsation croisée avec « registres de coûts couplés » AWP-06),
+  `llms.txt`, `intent_matrix` v1.2 (2 requêtes couvertes, exemption commande-auteur
+  documentée), NASSE_GEO_ETENDUE.md (cluster 4, gates passées), README du dépôt réécrit
+  (la page GitHub devient un nœud du maillage : présentation + points d'entrée + note
+  branche backup).
+- Vérifié : build 0, `check-corpus-counters` 0, `check-geo-coverage` 0 signal (maille
+  reconnue, fraîche, maillée), 165 `<details>`/ancres uniques, page dans `fr/sitemap.xml`,
+  203 insécables posés dans le corps.
+
+**Écartés (readback)** : Wikidata (graphe auteur clos 15/08 — rien à rouvrir, aucune
+notabilité pour une page) ; ItemList JSON-LD des 165 jalons (poids ~50 Ko sans rich result) ;
+redirections des anciennes URLs `*.html` (mortes depuis la bascule Hugo, aucun QR connu —
+à la différence du compteur) ; miroir EN (candidat noté, doctrine « adapter, pas traduire »,
+décision auteur). **Écart connu** : 165 jalons en ligne vs 168 au livre — les 3 manquants
+n'étaient pas dans l'ancienne page ; à compléter un jour depuis le PDF broché si souhaité
+(édition directe du JSON).
+
+**Push auteur dû** (s'ajoute à la file : site d'abord, puis compagnon dette). IndexNow
+partira seul au push (`content/**`).
+
 ### 2026-08-15 (nuit, 3) — Retours auteur `Modifs_Site.txt` appliqués (`27cee45`)
 
 Ressource unique de la fiche livre **remontée avant les Working Papers** et reformulée
