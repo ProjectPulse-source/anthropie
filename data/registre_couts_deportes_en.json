@@ -1,0 +1,2187 @@
+{
+ "_meta": {
+  "source": "English edition of the Register of Offloaded Costs (the book's documentary apparatus). Translated 2026-08-15 from data/registre_couts_deportes.json (sealed source, commit a209a97) through the short-text translation chain: locale pack en-US, author-validated terminology (decisions_terminologiques.yaml, app70 canonical name 'Register of Offloaded Costs', ch. 177 grid 'Order created / Debt displaced'), deterministic gates, sequential adversarial review (P3B), arbitration (fidelity > voice > fluency > elegance). Editorial corrections happen HERE for EN display text; structure follows the FR file.",
+  "jalons_livre": 168
+ },
+ "ages": [
+  {
+   "num": 1,
+   "titre": "Foundational Programs",
+   "periode": "≈ −3.3 million years → −10,000"
+  },
+  {
+   "num": 2,
+   "titre": "The Neolithic Trap",
+   "periode": "−10,000 → −1,000"
+  },
+  {
+   "num": 3,
+   "titre": "The Extractive Empires",
+   "periode": "−1,000 → 500"
+  },
+  {
+   "num": 4,
+   "titre": "The Networks—Routes, Relays, Relays of Power",
+   "periode": "500 → 1500"
+  },
+  {
+   "num": 5,
+   "titre": "The Modern State-machine",
+   "periode": "1500 → 1800"
+  },
+  {
+   "num": 6,
+   "titre": "Industrialization and Nation-States",
+   "periode": "1800 → 1945"
+  },
+  {
+   "num": 7,
+   "titre": "The Contemporary Metaprogram",
+   "periode": "1945 → present"
+  }
+ ],
+ "jalons": [
+  {
+   "age": 1,
+   "tri": -3300000,
+   "date": "≈ −3,300,000",
+   "titre": "First tools—external memory",
+   "ordre": "Memory and intention externalized into durable artifacts, creating transmissible knowledge independent of its bearer.",
+   "dette": "Dependence on materials and know-how; a cognitive cost converted into a thermodynamic cost of extraction and shaping.",
+   "categories": [
+    "Technical",
+    "Energetic",
+    "Cognitive"
+   ]
+  },
+  {
+   "age": 1,
+   "tri": -1500000,
+   "date": "≈ −1,500,000",
+   "titre": "Fire—stealing lightning, lighting the world",
+   "ordre": "A secured social center, digestion externalized through cooking, useful hours extended by pushing back the night.",
+   "dette": "A permanent energy debt owed to fuel; health costs (smoke); the first extractive gaze upon nature.",
+   "categories": [
+    "Energetic",
+    "Social",
+    "Ecological"
+   ]
+  },
+  {
+   "age": 1,
+   "tri": -400000,
+   "date": "≈ −400,000",
+   "titre": "Death—the archive of the living",
+   "ordre": "The invention of the long term, of collective memory, and of lineages; burial founds territory and legitimizes power.",
+   "dette": "The colossal material and energy cost of funerary rites; space taken from the living; social inequalities petrified beyond death.",
+   "categories": [
+    "Symbolic",
+    "Social",
+    "Spatial"
+   ]
+  },
+  {
+   "age": 1,
+   "tri": -400000,
+   "date": "≈ −400,000",
+   "titre": "Language—breath made world",
+   "ordre": "Large-scale social coordination, transmission of complex knowledge, the capacity for abstract thought (past, future, hypotheses).",
+   "dette": "The upkeep cost of conventions (grammar); confinement within categories of thought; exclusion through the word (taboos).",
+   "categories": [
+    "Cognitive",
+    "Social",
+    "Symbolic"
+   ]
+  },
+  {
+   "age": 1,
+   "tri": -300000,
+   "date": "≈ −300,000",
+   "titre": "Homo sapiens—the face-interface",
+   "ordre": "A high-frequency interface of social recognition, accelerating coordination and establishing nonverbal protocols of trust.",
+   "dette": "The metabolic cost of processing facial information; future infrastructures of control (biometrics) built on the surveillance of faces.",
+   "categories": [
+    "Social",
+    "Political",
+    "Technical"
+   ]
+  },
+  {
+   "age": 1,
+   "tri": -120000,
+   "date": "≈ −120,000",
+   "titre": "Trade—the bond that divides",
+   "ordre": "Long-distance exchange networks based on conventions of value (ornaments, pigments), reducing uncertainty.",
+   "dette": "Inequalities formalized through the accumulation of symbolic goods; the cost of logistics; division between those who share the code and everyone else.",
+   "categories": [
+    "Economic",
+    "Social",
+    "Spatial"
+   ]
+  },
+  {
+   "age": 1,
+   "tri": -70000,
+   "date": "≈ −70,000",
+   "titre": "Religion—the invisible held in common",
+   "ordre": "Social cohesion beyond kinship through the ritualized management of anxiety and a shared sacred calendar.",
+   "dette": "The material cost of offerings and places of worship; time taken from subsistence; division between initiates and those excluded from the rite.",
+   "categories": [
+    "Symbolic",
+    "Social",
+    "Economic"
+   ]
+  },
+  {
+   "age": 1,
+   "tri": -45000,
+   "date": "≈ −45,000",
+   "titre": "Cave art—mind on rock",
+   "ordre": "A durable symbolic external memory that fixes complex narratives and lets consciousness reflect upon itself.",
+   "dette": "The energy and physical cost of producing the works in remote places (pigments, lighting, danger); representational codes fixed in ways that frame how the world is perceived.",
+   "categories": [
+    "Cognitive",
+    "Symbolic",
+    "Energetic"
+   ]
+  },
+  {
+   "age": 2,
+   "tri": -10000,
+   "date": "≈ −10,000",
+   "titre": "The Neolithic—the civilizational trap",
+   "ordre": "Food security through surplus, sedentarization, population explosion.",
+   "dette": "Bondage to land and labor; social hierarchies founded on storage; an agricultural debt owed to soils and climate.",
+   "categories": [
+    "Social",
+    "Ecological",
+    "Economic"
+   ]
+  },
+  {
+   "age": 2,
+   "tri": -5000,
+   "date": "≈ −5,000",
+   "titre": "The wheel—the eternal mechanical return",
+   "ordre": "Logistical efficiency, hauling set free, standardized production (the potter’s wheel).",
+   "dette": "The obligation to build and maintain infrastructure (roads); confinement within mechanical logic and its upkeep costs.",
+   "categories": [
+    "Technical",
+    "Spatial",
+    "Energetic"
+   ]
+  },
+  {
+   "age": 2,
+   "tri": -3500,
+   "date": "≈ −3,500",
+   "titre": "Uruk—gathering to divide",
+   "ordre": "Specialization of tasks, centralized management of surpluses, safety through urban concentration.",
+   "dette": "Rigid social stratification; loss of individual autonomy; heightened fragility in the face of epidemics and centralized famines.",
+   "categories": [
+    "Social",
+    "Political",
+    "Spatial"
+   ]
+  },
+  {
+   "age": 2,
+   "tri": -3200,
+   "date": "≈ −3,200",
+   "titre": "Cuneiform—carving to last",
+   "ordre": "An infallible administrative memory, written law, State accounting that guarantees contracts.",
+   "dette": "The creation of a scribal caste; exclusion of the illiterate; social norms rigidified and flexibility lost.",
+   "categories": [
+    "Cognitive",
+    "Social",
+    "Political"
+   ]
+  },
+  {
+   "age": 2,
+   "tri": -2000,
+   "date": "≈ −2,000",
+   "titre": "Pantheons & kingdoms—believing to obey",
+   "ordre": "Divine legitimation of temporal power, the empire synchronized by a shared ritual calendar.",
+   "dette": "The colossal material cost of temples and sacrifices; politics subordinated to theology; the logistical debt of offerings.",
+   "categories": [
+    "Symbolic",
+    "Political",
+    "Economic"
+   ]
+  },
+  {
+   "age": 2,
+   "tri": -1200,
+   "date": "≈ −1,200",
+   "titre": "Tyranny—governing time",
+   "ordre": "Acceleration and efficiency in decision-making by short-circuiting deliberation.",
+   "dette": "Loss of collective legitimacy; risk concentrated on a single head; structural instability; a debt of time levied on citizens.",
+   "categories": [
+    "Political",
+    "Temporal",
+    "Social"
+   ]
+  },
+  {
+   "age": 2,
+   "tri": -1046,
+   "date": "≈ −1,046",
+   "titre": "Zhou—Mandate of Heaven, order of the world",
+   "ordre": "A contract of conditional legitimacy (the “Mandate of Heaven”), binding power to visible performance (prosperity, order).",
+   "dette": "Governance through anxiety (the fear of losing the mandate); the cost of rituals and inspections to prove virtue; a permanent performance debt.",
+   "categories": [
+    "Symbolic",
+    "Political",
+    "Social"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -776,
+   "date": "≈ −776",
+   "titre": "Olympia—war played so it need not be waged",
+   "ordre": "Conflict sublimated into regulated competition; a sacred truce allowing Panhellenic circulation.",
+   "dette": "The cost of infrastructure and ritual sacrifices; structural exclusion (women, “barbarians”); a physical debt levied on athletes’ bodies.",
+   "categories": [
+    "Social",
+    "Political",
+    "Economic"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -753,
+   "date": "≈ −753",
+   "titre": "Rome—fratricidal founding, suicidal destiny",
+   "ordre": "Internal civic peace guaranteed by a sacred boundary (the pomerium) that defines an inside and an outside.",
+   "dette": "Violence permanently externalized outward (conquest) or returning periodically within (civil wars), reenacting the founding murder.",
+   "categories": [
+    "Political",
+    "Spatial",
+    "Symbolic"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -650,
+   "date": "≈ −650",
+   "titre": "Coinage—trust struck with the seal of doubt",
+   "ordre": "Portable, anonymous trust, easing long-distance exchange by compressing the ritual of weighing.",
+   "dette": "The cost of the guarantee (mining, policing counterfeits); value abstracted, enabling financial crises and a devaluation of trust.",
+   "categories": [
+    "Economic",
+    "Technical",
+    "Social"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -563,
+   "date": "≈ −563",
+   "titre": "Buddha—the fullness that empties itself",
+   "ordre": "A protocol for release from suffering through “non-clinging” to desires; mental order and inner discipline.",
+   "dette": "Material support of the monastic community (saṃgha) by the laity; a debt of time and resources (alms, upkeep) to finance the monks’ inner peace.",
+   "categories": [
+    "Cognitive",
+    "Social",
+    "Economic"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -551,
+   "date": "≈ −551",
+   "titre": "Confucius—the motionless revolution",
+   "ordre": "A social order founded on the exemplarity of gestures (li) and roles, spreading by imitation rather than by decree.",
+   "dette": "The cost in time and attention of learning and maintaining the rites; the “models” financed by the community; the risk of rigidifying into conformism.",
+   "categories": [
+    "Social",
+    "Symbolic",
+    "Cognitive"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -534,
+   "date": "≈ −534",
+   "titre": "Tragedy—the invention of social theater",
+   "ordre": "A public space for staging and metabolizing insoluble conflicts (law versus family, State versus individual).",
+   "dette": "The material and financial cost of performances (the choregia); civic time taken from production to allow collective catharsis.",
+   "categories": [
+    "Social",
+    "Political",
+    "Economic"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -508,
+   "date": "≈ −508",
+   "titre": "Democracy—the power of all, the fear of each",
+   "ordre": "Power shared among citizens through common law (isonomia), sortition, and public deliberation.",
+   "dette": "Structural exclusion of women, metics, and slaves; citizenship financed by empire (tribute) and servile labor (the Laurion mines).",
+   "categories": [
+    "Political",
+    "Social",
+    "Inequalities"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -500,
+   "date": "≈ −500",
+   "titre": "Pythagoras—the mathematical dream of an ordered world",
+   "ordre": "An intelligible cosmos, governed by numerical ratios and mathematical harmonies.",
+   "dette": "Exclusion of the incommensurable (the irrational); the material cost of abstraction (schools, instruments, freed time); the risk of a tyranny of the norm.",
+   "categories": [
+    "Cognitive",
+    "Philosophical",
+    "Social"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -500,
+   "date": "≈ −500",
+   "titre": "Heraclitus and Parmenides—the river against the sphere",
+   "ordre": "Two founding visions of Western metaphysics: the world as permanent flux (Heraclitus) or as eternal, unchanging being (Parmenides).",
+   "dette": "The material cost of thought (time, schools, scribes); a cognitive debt for later generations, forced to navigate this conceptual tension.",
+   "categories": [
+    "Philosophical",
+    "Cognitive"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -500,
+   "date": "≈ −500",
+   "titre": "Sun Tzu—the art of fighting without fighting",
+   "ordre": "Victory through strategic configuration and the manipulation of information, avoiding direct confrontation.",
+   "dette": "Peace without trust; mistrust and manipulation generalized as a mode of relation; the cost of intelligence and espionage.",
+   "categories": [
+    "Political",
+    "Cognitive",
+    "Symbolic"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -480,
+   "date": "≈ −480",
+   "titre": "Thermopylae/Salamis—the West invents itself by inventing the East",
+   "ordre": "A founding narrative of a “Western” identity (free, measured) set against a caricatured “East” (servile, excessive).",
+   "dette": "Athenian naval democracy financed by slavery (the Laurion mines); a debt of symbolic violence toward the Persians.",
+   "categories": [
+    "Symbolic",
+    "Political",
+    "Symbolic violence"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -460,
+   "date": "≈ −460",
+   "titre": "Leucippus—full void, empty plenitude",
+   "ordre": "A physics of motion made possible by introducing the void as an operative principle, explaining change as the rearrangement of atoms.",
+   "dette": "The social cost of materialist thought (accusations of impiety); the material debt of philosophical schools (time, patronage).",
+   "categories": [
+    "Philosophical",
+    "Cognitive",
+    "Social"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -450,
+   "date": "≈ −450",
+   "titre": "Alcibiades—understanding in order to betray",
+   "ordre": "Absolute strategic effectiveness through a liquid intelligence, able to adapt to every system in order to manipulate it from within.",
+   "dette": "Trust and loyalty dissolved; one side’s tactical gains are paid for in systemic disorder for all the others (prolonged wars, broken alliances).",
+   "categories": [
+    "Political",
+    "Social",
+    "Moral"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -441,
+   "date": "≈ −441",
+   "titre": "Sophocles—the law of the heart against the heart of the law",
+   "ordre": "A theatrical space for staging the irreducible tension between the impersonal norm of the city and the unwritten law of conscience and family.",
+   "dette": "The material cost of performance (the choregia); civic time immobilized to allow collective catharsis, paid for by those excluded from citizenship.",
+   "categories": [
+    "Social",
+    "Political",
+    "Symbolic"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -427,
+   "date": "≈ −427",
+   "titre": "The Sophists—selling truth, buying doubt",
+   "ordre": "Rhetorical skill democratized, turning speech into a purchasable technique rather than a privilege of birth.",
+   "dette": "Social trust devalued as truth becomes a commodity; institutional costs (a proliferation of lawsuits) and cognitive costs (generalized skepticism).",
+   "categories": [
+    "Cognitive",
+    "Social",
+    "Economic"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -415,
+   "date": "≈ −415",
+   "titre": "Thucydides—repeating so as not to begin again",
+   "ordre": "An operative memory of history, founded on the search for causes and the logic of power relations, to defuse the future.",
+   "dette": "The material cost of the inquiry (financed by his mines); the moral debt of a knowledge that, by exposing the brutality of the real (“the strong do what they can”), can inject a lasting chill.",
+   "categories": [
+    "Cognitive",
+    "Political",
+    "Moral"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -400,
+   "date": "≈ −400",
+   "titre": "Callicles—the right of the strongest, the law of the weak",
+   "ordre": "A “natural” legitimation of domination and of the maximization of desires (pleonexia) by an elite.",
+   "dette": "The burden of moderation and cooperation is shifted onto the “weak”; the order of the strong is financed by the exhaustion and servitude of everyone else.",
+   "categories": [
+    "Social",
+    "Political",
+    "Symbolic violence"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -399,
+   "date": "≈ −399",
+   "titre": "Epicureanism—happiness by subtraction",
+   "ordre": "Inner peace (ataraxia) through the limitation of desires and the elimination of fears (of the gods, of death).",
+   "dette": "The Epicurean community’s “live hidden” is subsidized by the order and labor of the city it flees; a debt of civic participation.",
+   "categories": [
+    "Cognitive",
+    "Social",
+    "Philosophical"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -399,
+   "date": "≈ −399",
+   "titre": "Socrates—doubt as a public service",
+   "ordre": "Civic hygiene through the systematic testing of apparent knowledge; coherence becomes the criterion of just discourse.",
+   "dette": "Constant social friction, a cost in time for the city; the ultimate debt is paid with his own life to preserve the integrity of the law.",
+   "categories": [
+    "Cognitive",
+    "Political",
+    "Moral"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -384,
+   "date": "≈ −384",
+   "titre": "Plato—building the ideal, inhabiting the impossible",
+   "ordre": "An architecture of knowledge and of the just city, founded on ideal forms that serve as the standard for judging the real.",
+   "dette": "The cost of training the “guardians” is borne by the producing class; the ideal order demands censorship, the “noble lie,” and the banishment of the poets.",
+   "categories": [
+    "Philosophical",
+    "Political",
+    "Social"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -335,
+   "date": "≈ −335",
+   "titre": "Aristotle—measured excess, excessive measure",
+   "ordre": "A universal system of classification (categories, causes) that makes the world intelligible and governable through measure and prudence (phronesis).",
+   "dette": "Classificatory knowledge, once it becomes a norm, excludes and pathologizes “deviations”; measure becomes an instrument of normalization.",
+   "categories": [
+    "Cognitive",
+    "Social",
+    "Symbolic violence"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -334,
+   "date": "≈ −334",
+   "titre": "Alexander—the intoxication of the infinite",
+   "ordre": "An immense space unified by the speed of conquest, creating the first “Hellenistic” cultural space.",
+   "dette": "Persian political and administrative orders destroyed; the human and logistical cost of the military campaign; a debt of legitimacy owed to his own troops.",
+   "categories": [
+    "Political",
+    "Spatial",
+    "Economic"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -330,
+   "date": "≈ −330",
+   "titre": "Diogenes—the nothing that judges everything",
+   "ordre": "Absolute individual sovereignty through radical renunciation and the refusal of conventions.",
+   "dette": "His freedom is subsidized by the surplus and tolerance of the city he despises (alms, safety); a debt of participation in the common burdens.",
+   "categories": [
+    "Social",
+    "Philosophical",
+    "Economic"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -300,
+   "date": "≈ −300",
+   "titre": "Euclid—geometric democracy",
+   "ordre": "A universal regime of proof in which authority is earned by demonstration, accessible to all regardless of social status.",
+   "dette": "The formal equality of access to proof masks a real inequality of access to the time and education needed to master it.",
+   "categories": [
+    "Cognitive",
+    "Social",
+    "Political"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -250,
+   "date": "≈ −250",
+   "titre": "Archimedes—a fixed point for a moving world",
+   "ordre": "Mechanical mastery of the world through the application of principles (the lever, buoyancy) that multiply human force.",
+   "dette": "The material and human cost of the machines (wood, metal, workshops) and of their financing by a political power (King Hiero II).",
+   "categories": [
+    "Technical",
+    "Energetic",
+    "Economic"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -220,
+   "date": "≈ −220",
+   "titre": "Qin—the empire forged in totalitarian uniformity",
+   "ordre": "Imperial unity through radical standardization (writing, currency, measures, axle widths).",
+   "dette": "Local cultures and knowledge destroyed (the “burning of the books”); the colossal human cost of the great public works (wall, canals); State violence as a principle of government.",
+   "categories": [
+    "Political",
+    "Cultural",
+    "Social"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -49,
+   "date": "≈ −49",
+   "titre": "The Rubicon—when speed assassinates the law",
+   "ordre": "An end to civil war through a lightning seizure of power, where the speed of the fait accompli replaces deliberation.",
+   "dette": "Republican legality assassinated; the human and economic cost of the military campaigns; a debt of legitimacy settled by dictatorship.",
+   "categories": [
+    "Political",
+    "Temporal",
+    "Legal"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -7,
+   "date": "≈ −7 to −4",
+   "titre": "Jesus Christ—the strength of weakness",
+   "ordre": "A community founded on the inversion of values (poverty, forgiveness), undermining the Empire’s logic of power from within.",
+   "dette": "The cost of martyrdom, the State’s violence being absorbed by the bodies of believers; an organizational debt for the communities (mutual aid, alms).",
+   "categories": [
+    "Symbolic",
+    "Social",
+    "Political"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": 105,
+   "date": "105",
+   "titre": "Paper (Han)—writing the State",
+   "ordre": "Administration made fluid, creating a “liquid State” able to remember, circulate, and revise itself at low cost.",
+   "dette": "The ecological cost of production (water, fibers); an explosion of bureaucracy; increased surveillance; a debt of time for scribes and administrators.",
+   "categories": [
+    "Technical",
+    "Political",
+    "Ecological"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": 110,
+   "date": "110",
+   "titre": "Juvenal—feeding the belly, starving the mind",
+   "ordre": "Social peace through the distribution of food (panem) and entertainment (circenses), occupying the people’s bodies and attention.",
+   "dette": "Citizenship atrophied into a passive clientele; the colossal logistical and financial cost of maintaining the grain flows and the games.",
+   "categories": [
+    "Political",
+    "Social",
+    "Cognitive"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": 135,
+   "date": "135",
+   "titre": "Stoicism—the will to will nothing",
+   "ordre": "An impregnable inner citadel, freedom through the mastery of judgments and the discipline of desire.",
+   "dette": "The social cost of indifference to common burdens; the otium (free time) this asceticism requires is financed by the labor of others (slaves, servants).",
+   "categories": [
+    "Cognitive",
+    "Social",
+    "Philosophical"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": 312,
+   "date": "312",
+   "titre": "Constantine—saving the empire by killing its gods",
+   "ordre": "The empire unified under a single symbol (the cross), creating a new infrastructure of loyalty.",
+   "dette": "Pagan orders and economies destroyed (temples, priesthoods); the cost of building the new ecclesiastical apparatus; conflict displaced onto heresies.",
+   "categories": [
+    "Political",
+    "Symbolic",
+    "Economic"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": 486,
+   "date": "486",
+   "titre": "Clovis—the chemistry of the anointing",
+   "ordre": "Warrior force transmuted into durable divine legitimacy; the anointing institutes an immortal political body that outlives the king’s physical body.",
+   "dette": "The cost of the ecclesiastical apparatus (endowments, basilicas, tax exemptions) shifted onto public finances and lay landowners.",
+   "categories": [
+    "Symbolic",
+    "Political",
+    "Economic"
+   ]
+  },
+  {
+   "age": 4,
+   "tri": 529,
+   "date": "529",
+   "titre": "Saint Benedict—the order that frees",
+   "ordre": "A stable, productive framework for living (ora et labora) that transforms time through the discipline of the Rule, releasing spiritual and material energy.",
+   "dette": "Material support of the monastery through gifts, rents, and the labor of dependent laypeople (familia); an ecological debt on the lands worked (hides for parchment).",
+   "categories": [
+    "Social",
+    "Economic",
+    "Temporal"
+   ]
+  },
+  {
+   "age": 4,
+   "tri": 632,
+   "date": "632",
+   "titre": "The Quran—the algorithm of transcendence",
+   "ordre": "A unified social and spiritual protocol (prayers, zakāt) that synchronizes a decentralized network of believers and creates a community (the Umma).",
+   "dette": "The cost of establishing a consensus (standardization under ʿUthmān), which displaces conflict into politics (schisms); the cost of conformity for society (time, resources).",
+   "categories": [
+    "Symbolic",
+    "Social",
+    "Political"
+   ]
+  },
+  {
+   "age": 4,
+   "tri": 850,
+   "date": "850",
+   "titre": "Gunpowder & saltpeter—the chemistry of power (China)",
+   "ordre": "Traditional military hierarchies leveled (“ballistic democracy”); the chemical recipe prevails over birth.",
+   "dette": "Death industrialized, the ecological cost of production (saltpeter, charcoal); regulating violence becomes more costly and more centralized.",
+   "categories": [
+    "Technical",
+    "Energetic",
+    "Political"
+   ]
+  },
+  {
+   "age": 4,
+   "tri": 980,
+   "date": "980/1126",
+   "titre": "Avicenna and Averroes—Islam, Aristotle’s ferryman",
+   "ordre": "Greek philosophy and science transmitted and enriched, creating a conceptual infrastructure for Europe’s intellectual future.",
+   "dette": "The material cost of translation and copying (paper, scribes, libraries) financed by Islamic powers; the West would inherit the knowledge while often erasing the ferryman’s signature.",
+   "categories": [
+    "Cognitive",
+    "Cultural",
+    "Economic"
+   ]
+  },
+  {
+   "age": 4,
+   "tri": 1066,
+   "date": "1066",
+   "titre": "Hastings—the bastard’s alchemy",
+   "ordre": "A violent conquest transformed into a centralized administrative State (the Domesday Book) and a durable legal order (common law).",
+   "dette": "Massive expropriation of the Anglo-Saxon elite; the human cost of repression (the Harrying of the North); symbolic violence through the imposition of Norman language and law.",
+   "categories": [
+    "Political",
+    "Social",
+    "Symbolic violence"
+   ]
+  },
+  {
+   "age": 4,
+   "tri": 1150,
+   "date": "1150",
+   "titre": "Toledo—translating to transform",
+   "ordre": "An infrastructure of “cognitive compatibility” that makes Greek, Arabic, and Jewish knowledge interoperable and available to the Latin West.",
+   "dette": "The material cost of the translation workshop (patronage, parchment, wages); the transformation of concepts imports frameworks of thought that lastingly reconfigure Latin culture.",
+   "categories": [
+    "Cognitive",
+    "Technical",
+    "Cultural"
+   ]
+  },
+  {
+   "age": 4,
+   "tri": 1200,
+   "date": "1200",
+   "titre": "The University of Paris—the forge of disputes",
+   "ordre": "Truth produced through regulated confrontation (the disputatio), creating an autonomous intellectual authority set against political and religious power.",
+   "dette": "The social cost of maintaining an unproductive student population; a material debt (colleges, books); exclusion of those who do not master the scholastic code.",
+   "categories": [
+    "Cognitive",
+    "Social",
+    "Economic"
+   ]
+  },
+  {
+   "age": 4,
+   "tri": 1209,
+   "date": "1209",
+   "titre": "The Albigensians—the mechanics of purity",
+   "ordre": "Doctrinal unity of Christendom through the eradication of the Cathar heresy; the invention of the Inquisition as a procedure for controlling consciences.",
+   "dette": "Physical and symbolic violence (massacres, pyres); a cultural ecosystem destroyed (the langue d’oc); the moral debt of an orthodoxy imposed by terror.",
+   "categories": [
+    "Symbolic",
+    "Political",
+    "Symbolic violence"
+   ]
+  },
+  {
+   "age": 4,
+   "tri": 1215,
+   "date": "1215",
+   "titre": "Magna Carta—the crown under contract",
+   "ordre": "Royal power limited by a written contract, establishing the predictability of law (due process) and a right of resistance.",
+   "dette": "The cost of a permanent judicial apparatus; procedural friction as a new form of conflict; internal peace sometimes paid for with violence exported to the margins.",
+   "categories": [
+    "Legal",
+    "Political",
+    "Social"
+   ]
+  },
+  {
+   "age": 4,
+   "tri": 1272,
+   "date": "1272",
+   "titre": "Thomas Aquinas—the architect of compatibilities",
+   "ordre": "An intellectual synthesis that makes Aristotelian reason and Christian faith compatible, creating a durable architecture of knowledge.",
+   "dette": "Institutional costs (university quarrels); conflict displaced onto technical points that would feed future schisms; clarity paid for in conceptual exclusions.",
+   "categories": [
+    "Philosophical",
+    "Cognitive",
+    "Symbolic"
+   ]
+  },
+  {
+   "age": 4,
+   "tri": 1302,
+   "date": "1302",
+   "titre": "Dante—the tribunal of the tercets",
+   "ordre": "A poetic jurisdiction above the political, judging History and assigning each person their place within a moral cosmology.",
+   "dette": "A national language standardized (Tuscan) at the expense of the dialects; the material debt of producing and circulating the work (patronage, copyists).",
+   "categories": [
+    "Symbolic",
+    "Cultural",
+    "Cognitive"
+   ]
+  },
+  {
+   "age": 4,
+   "tri": 1314,
+   "date": "1314",
+   "titre": "The Templars—turning creed into credit",
+   "ordre": "A transnational financial network in which religious trust guarantees the circulation of value without transporting metal (bills of exchange).",
+   "dette": "The centralization of financial information by an autonomous order becomes a threat to the State, which destroys it and appropriates its technology of control.",
+   "categories": [
+    "Economic",
+    "Political",
+    "Technical"
+   ]
+  },
+  {
+   "age": 4,
+   "tri": 1325,
+   "date": "1325",
+   "titre": "Timbuktu—ink in the sand",
+   "ordre": "A major intellectual hub founded on a knowledge economy (a book worth more than gold) and distributed resilience (private libraries).",
+   "dette": "The high cost of importing the raw material (paper); preservation in a hostile environment demands constant engineering and investment.",
+   "categories": [
+    "Cognitive",
+    "Economic",
+    "Technical"
+   ]
+  },
+  {
+   "age": 4,
+   "tri": 1377,
+   "date": "1377",
+   "titre": "Ibn Khaldun—the cycle of empires",
+   "ordre": "A cyclical model of history that makes the rise and fall of dynasties intelligible through the force of social cohesion (’asabiyya).",
+   "dette": "Lucidity about the mechanics of power can lead to cynicism or paralysis; the cycle itself is a debt of blood and resources paid at every transition.",
+   "categories": [
+    "Political",
+    "Philosophical",
+    "Social"
+   ]
+  },
+  {
+   "age": 4,
+   "tri": 1429,
+   "date": "1429",
+   "titre": "Joan—the people before the people",
+   "ordre": "The French monarchy re-legitimized by a charismatic short-circuit that transcends institutional mediations (Church, nobility).",
+   "dette": "The financial and military cost of the campaigns; institutional disorder for the established powers; the ultimate debt paid with her own life at the stake.",
+   "categories": [
+    "Symbolic",
+    "Political",
+    "Social"
+   ]
+  },
+  {
+   "age": 4,
+   "tri": 1435,
+   "date": "1435",
+   "titre": "Alberti—framing the world, building the eye",
+   "ordre": "A rationalized visual space, measurable and reproducible through perspective, turning painting into a “window onto the world.”",
+   "dette": "The eye is bound to a single, immobile point of view; the frame excludes what lies outside it; mastery of the visible is paid for with the loss of peripheral, multisensory vision.",
+   "categories": [
+    "Cognitive",
+    "Technical",
+    "Symbolic"
+   ]
+  },
+  {
+   "age": 4,
+   "tri": 1492,
+   "date": "1492",
+   "titre": "New worlds—discovering, counting, conquering",
+   "ordre": "Planetary unification, the creation of a Euro-centered world-system through cartography, accounting, and military power.",
+   "dette": "Amerindian civilizations destroyed, the slave trade, resources plundered; a bottomless human, ecological, and moral debt.",
+   "categories": [
+    "Spatial",
+    "Economic",
+    "Symbolic violence"
+   ]
+  },
+  {
+   "age": 4,
+   "tri": 1494,
+   "date": "1494",
+   "titre": "Pacioli—counting double, seeing true",
+   "ordre": "Transparency and trust in commercial exchange through double-entry bookkeeping, which makes wealth relational and verifiable.",
+   "dette": "Lives and non-monetary costs rendered invisible in the balance sheets; the accounting form can mask inequality and fraud; clarity has a bureaucratic cost.",
+   "categories": [
+    "Economic",
+    "Cognitive",
+    "Technical"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1513,
+   "date": "1513",
+   "titre": "Machiavelli—the virtue of vice, the morality of force",
+   "ordre": "Stability and permanence of the State through a technology of decision (virtù) that judges acts by their public consequences, not their private morality.",
+   "dette": "The moral debt of cruelty turned into an instrument of government; the human and economic cost of “necessities” paid by civilian populations.",
+   "categories": [
+    "Political",
+    "Moral",
+    "Social"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1516,
+   "date": "1516",
+   "titre": "Erasmus—correcting in order to believe",
+   "ordre": "A textual truth restored (the New Testament) through philological method (ad fontes), founding modern criticism.",
+   "dette": "Questioning the Vulgate cracks the Church’s authority, supplying the intellectual tools of the Reformation and of the wars of religion that follow.",
+   "categories": [
+    "Cognitive",
+    "Symbolic",
+    "Political"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1517,
+   "date": "1517",
+   "titre": "Luther—the blockchain of conscience",
+   "ordre": "Access to salvation decentralized (sola fide, sola scriptura), the individual conscience becoming the validator of faith, without an ecclesial intermediary.",
+   "dette": "Christendom fragmented, wars of religion; the cost of confessional order is paid in armed conflict and lasting political divisions.",
+   "categories": [
+    "Symbolic",
+    "Political",
+    "Social"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1543,
+   "date": "1543",
+   "titre": "Copernicus—decentering the sky, reframing the earth",
+   "ordre": "Geometric and predictive coherence of the universe by placing the Sun at the center, founding a new celestial physics.",
+   "dette": "Theological and social disorder as man is unseated from his central place; the institutional cost of conflicts with the Church (Galileo’s trial).",
+   "categories": [
+    "Cognitive",
+    "Symbolic",
+    "Political"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1576,
+   "date": "1576",
+   "titre": "La Boétie—the people as their own tyrant",
+   "ordre": "Servitude diagnosed as the product of active consent, founding the possibility of liberation through the simple refusal to serve.",
+   "dette": "The text shifts responsibility for tyranny from the tyrant to the people themselves, creating a debt of lucidity and civic courage.",
+   "categories": [
+    "Political",
+    "Cognitive",
+    "Moral"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1600,
+   "date": "1600",
+   "titre": "The East India companies—the invention of the world-company",
+   "ordre": "A planetary commercial network, financed by liquid, anonymous capital (shares), endowed with sovereign prerogatives (to fit out fleets, to negotiate).",
+   "dette": "Structural violence (the Banda massacre), forced monocultures, founding ecocides, and risks externalized onto colonized populations.",
+   "categories": [
+    "Economic",
+    "Geopolitical",
+    "Ecological"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1609,
+   "date": "1609",
+   "titre": "Galileo—bringing down the sky to raise the mind",
+   "ordre": "A technology of objectivity in which proof is produced by the instrument (the telescope) and becomes reproducible and verifiable by all.",
+   "dette": "Disorder transferred from cosmology to the ecclesiastical institution, provoking conflicts of authority and trials (the condemnation of 1633).",
+   "categories": [
+    "Cognitive",
+    "Technical",
+    "Political"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1625,
+   "date": "1625",
+   "titre": "Grotius—the founder of regulated murder",
+   "ordre": "A common law among nations, founded on natural reason, which frames war (jus ad bellum, jus in bello) and makes it procedural.",
+   "dette": "Once “civilized,” war becomes governable and therefore lasting; the legal order legitimizes violence under conditions, at the expense of the civilian populations who pay its cost.",
+   "categories": [
+    "Legal",
+    "Political",
+    "Moral"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1637,
+   "date": "1637",
+   "titre": "Descartes—founding doubt, abyssal certainty",
+   "ordre": "An audit protocol for thought (the Discourse on Method) that grounds certainty in individual self-evidence (the cogito) rather than external authority.",
+   "dette": "A fracture between soul and body (res cogitans/res extensa), relegating the sensible; an ontological and medical debt that would treat the body as a machine.",
+   "categories": [
+    "Philosophical",
+    "Cognitive",
+    "Social"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1648,
+   "date": "1648",
+   "titre": "Westphalia—the art of coexisting by ignoring one another",
+   "ordre": "Peace through separation; territorial sovereignty and noninterference become the principles of an international order founded on the balance of power.",
+   "dette": "European peace is paid for by freezing the aspirations of peoples and by making “domestic tyrannies” untouchable within borders.",
+   "categories": [
+    "Geopolitical",
+    "Political",
+    "Social"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1651,
+   "date": "1651",
+   "titre": "Hobbes—the monster that saves us from ourselves",
+   "ordre": "Absolute security through the total alienation of individual liberties to an artificial sovereign (the Leviathan) who ends the “war of all against all.”",
+   "dette": "Fear becomes the foundation of politics; the question “who protects us from the protector?” remains unanswered, opening the way to totalitarianism.",
+   "categories": [
+    "Political",
+    "Social",
+    "Philosophical"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1661,
+   "date": "1661",
+   "titre": "Reason of State—the legitimate crime",
+   "ordre": "The fiscal-military State, a centralized machine that rationalizes taxation (Colbert) and force (Louvois) to maximize the kingdom’s power.",
+   "dette": "Crushing fiscal pressure on the people; the State’s glory is financed by the organized misery of the countryside and by perpetual wars.",
+   "categories": [
+    "Political",
+    "Economic",
+    "Social"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1687,
+   "date": "1687",
+   "titre": "Newton—the apple that would kill God",
+   "ordre": "A universe unified by universal mathematical laws (gravitation), making the cosmos predictable and calculable.",
+   "dette": "The clockwork world no longer needs the divine hypothesis in order to run; disorder is displaced from physics into metaphysics (the disenchantment of the world).",
+   "categories": [
+    "Cognitive",
+    "Philosophical",
+    "Symbolic"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1689,
+   "date": "1689",
+   "titre": "Locke—obeying in order to be free",
+   "ordre": "Legitimate government founded on consent and the guarantee of natural rights (life, liberty, property), with a right of resistance built in.",
+   "dette": "Political liberty in the metropole is financed by economic servitude in the colonies (slavery, expropriation of lands).",
+   "categories": [
+    "Political",
+    "Economic",
+    "Inequalities"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1748,
+   "date": "1748",
+   "titre": "Montesquieu—dividing to unite",
+   "ordre": "Political liberty through the separation of powers (legislative, executive, judicial), where “power checks power.”",
+   "dette": "Liberty is paid for with a “calculated inefficiency”; institutional friction and procedural slowness become the cost of protection against the arbitrary.",
+   "categories": [
+    "Political",
+    "Legal",
+    "Temporal"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1748,
+   "date": "1748",
+   "titre": "Hume—the earthquake of causality",
+   "ordre": "Skeptical lucidity in revealing that causality is not a law of the world but a habit of our minds.",
+   "dette": "The order of certainties collapses, replaced by an order of probabilities that demands a constant cost of verification, replication, and the upkeep of doubt.",
+   "categories": [
+    "Cognitive",
+    "Philosophical",
+    "Social"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1755,
+   "date": "1755",
+   "titre": "Voltaire—nothing is so certain as doubt",
+   "ordre": "A critical public sphere in which opinion, armed with reason and publicity (the Calas affair), can judge and correct the abuses of power.",
+   "dette": "By undermining traditional authorities without building replacement institutions, critique releases forces that reason alone cannot contain, risking demagoguery.",
+   "categories": [
+    "Cognitive",
+    "Political",
+    "Social"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1758,
+   "date": "1758",
+   "titre": "The Physiocrats—the blood and sap of wealth",
+   "ordre": "The first macroeconomic model (the Tableau économique), seeing the economy as an organism whose wealth springs from the land.",
+   "dette": "The liberalized order of flows (free circulation of grain) displaces disorder onto prices, provoking food riots (the “Flour War”).",
+   "categories": [
+    "Economic",
+    "Political",
+    "Social"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1759,
+   "date": "1759",
+   "titre": "The Encyclopédie—ordering knowledge, upending power",
+   "ordre": "Knowledge democratized and unified through alphabetical order and critical cross-references, making the secrets of power and of the trades transparent.",
+   "dette": "An abundance of information without hierarchy displaces disorder onto interpretation; the critique of authority can lead to its dissolution and to instability.",
+   "categories": [
+    "Cognitive",
+    "Political",
+    "Technical"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1762,
+   "date": "1762",
+   "titre": "Rousseau—the fire beneath the democratic ash",
+   "ordre": "Legitimacy founded on the “general will”; civil liberty consists in obeying the law one has given oneself.",
+   "dette": "The order of the common is paid for in constraints on the individual (taxation, military service); brandished as an absolute, the general will can justify the Terror.",
+   "categories": [
+    "Political",
+    "Social",
+    "Philosophical"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1762,
+   "date": "1762",
+   "titre": "Insurance—the code of risk",
+   "ordre": "Risk mutualized, transforming an uncertain future into calculable probabilities and payable premiums.",
+   "dette": "New exclusions created (the “uninsurable”); the moral debt of surveillance (moral hazard); the socialization of risk can lead to its privatization (bank bailouts).",
+   "categories": [
+    "Economic",
+    "Social",
+    "Technical"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1776,
+   "date": "1776",
+   "titre": "Adam Smith—the invisible hand, a blind guide",
+   "ordre": "Selfish interests coordinated by the anonymous mechanism of the market, producing wealth through the division of labor.",
+   "dette": "The stultification and alienation of the specialized worker; social and ecological costs externalized, unaccounted for in the price.",
+   "categories": [
+    "Economic",
+    "Social",
+    "Cognitive"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1776,
+   "date": "1776",
+   "titre": "America—the gospel of profit",
+   "ordre": "A republic founded on the “pursuit of happiness,” where economic success becomes a sign of election and a civic duty.",
+   "dette": "Profit is sanctified at the price of slavery, the expropriation of indigenous peoples, and the creation of a structural social and racial debt.",
+   "categories": [
+    "Economic",
+    "Social",
+    "Inequalities"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1784,
+   "date": "1784",
+   "titre": "Kant—the clockmaker of Königsberg takes History apart",
+   "ordre": "A philosophy of history in which men’s “unsocial sociability” drives them, unknowingly, toward perpetual peace through law.",
+   "dette": "Progress is paid for by the conflict and suffering of present generations; the future order is financed by present disorder and violence.",
+   "categories": [
+    "Philosophical",
+    "Political",
+    "Temporal"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1789,
+   "date": "1789",
+   "titre": "Revolution—the theater that devours its actors",
+   "ordre": "National sovereignty, civil equality proclaimed, and the invention of politics-as-spectacle in which the people become a public actor.",
+   "dette": "Chronic institutional instability; the Terror and civil wars as the cost of refounding; violence becomes the arbiter of political debate.",
+   "categories": [
+    "Political",
+    "Social",
+    "Symbolic violence"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1789,
+   "date": "1789",
+   "titre": "The Rights of Man—transcendence without God",
+   "ordre": "Universal principles (liberty, equality) becoming a norm above the State, founding a right of resistance.",
+   "dette": "Abstract universality masks de facto exclusions (women, slaves, the colonized); the ideal becomes a tool of justification for new forms of domination.",
+   "categories": [
+    "Inequalities",
+    "Symbolic violence",
+    "Legal"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1791,
+   "date": "1791",
+   "titre": "The guillotine—equality in death",
+   "ordre": "An “equal,” rationalized standardization of capital punishment, turning public torture into administrative procedure.",
+   "dette": "The technical possibility of industrialized death; the executioner’s responsibility dissolved into that of an operator; State murder made banal.",
+   "categories": [
+    "Political",
+    "Moral",
+    "Technical"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1791,
+   "date": "1791–1804",
+   "titre": "Haiti—liberty against its inventors",
+   "ordre": "The first Black republic born of a victorious slave revolt, giving the Rights of Man concrete universality.",
+   "dette": "A crushing indemnity paid to the former colonists; diplomatic isolation and the country’s lasting economic strangulation by the slaveholding powers.",
+   "categories": [
+    "Economic",
+    "Inequalities",
+    "Geopolitical"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1792,
+   "date": "1792",
+   "titre": "Olympe de Gouges—the universal beheaded",
+   "ordre": "The demand that the universal be extended to women, exposing the contradiction of an exclusively male liberty.",
+   "dette": "Violent repression; women lastingly erased from the political sphere by law (the Civil Code) and by custom.",
+   "categories": [
+    "Inequalities",
+    "Symbolic violence",
+    "Legal"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1792,
+   "date": "1792",
+   "titre": "Romantic love—the heart as a code of exclusion",
+   "ordre": "Individual choice and intimacy legitimized as the foundation of the couple, against the socially arranged match.",
+   "dette": "Gender roles naturalized; the mental and domestic load (borne mostly by women) rendered invisible; affects commodified.",
+   "categories": [
+    "Social",
+    "Inequalities",
+    "Cognitive"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1792,
+   "date": "1792",
+   "titre": "Nationalism—fraternity in arms",
+   "ordre": "Social cohesion and a capacity for mass mobilization (conscription, taxation) founded on an imagined common belonging.",
+   "dette": "Exclusion and suspicion toward minorities and the foreigner (xenophobia); borders sacralized, leading to total wars.",
+   "categories": [
+    "Political",
+    "Social",
+    "Symbolic violence"
+   ]
+  },
+  {
+   "age": 5,
+   "tri": 1793,
+   "date": "1793",
+   "titre": "The Terror—the machine for purifying souls",
+   "ordre": "Radical centralization of power and revolutionary discipline to save the Republic from internal and external threats.",
+   "dette": "Institutionalized paranoia, purges, and mass executions; virtue becomes a pretext for the physical elimination of opponents.",
+   "categories": [
+    "Political",
+    "Moral",
+    "Social"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1804,
+   "date": "1804",
+   "titre": "The Civil Code—coding society",
+   "ordre": "Law unified, contracts and property secured, founding the predictability of the bourgeois economy.",
+   "dette": "Patriarchy institutionalized (the married woman’s civil incapacity) along with unequal filiation; social statuses rigidified.",
+   "categories": [
+    "Legal",
+    "Inequalities",
+    "Symbolic violence"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1814,
+   "date": "1814",
+   "titre": "Vienna—the ball of the enlightened cynics",
+   "ordre": "A century of geopolitical stability in Europe (the “Concert of Europe”) through a negotiated balance of power.",
+   "dette": "The national and liberal aspirations of peoples smothered; repression legitimized in the name of dynastic order.",
+   "categories": [
+    "Geopolitical",
+    "Political",
+    "Social"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1824,
+   "date": "1824",
+   "titre": "Thermodynamics—the entropy of the terminal program",
+   "ordre": "Universal laws of energy allowing an unprecedented optimization of machines and industry.",
+   "dette": "Awareness of energy’s inescapable degradation (entropy); the end of the illusion of perpetual progress; an ecological debt through massive combustion.",
+   "categories": [
+    "Energetic",
+    "Ecological",
+    "Philosophical"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1833,
+   "date": "1833–1865",
+   "titre": "The abolition of slavery—the human being proclaimed",
+   "ordre": "Legal recognition of human personhood for millions of individuals, the end of “chattel” status.",
+   "dette": "Compensation paid to slave owners (not to the victims); the persistence of structural racism and of disguised regimes of forced labor.",
+   "categories": [
+    "Inequalities",
+    "Economic",
+    "Symbolic violence"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1835,
+   "date": "1835",
+   "titre": "Tocqueville—the aristocratic prophet of our servitudes",
+   "ordre": "A lucid diagnosis of democracy, of its strengths (equality) and its risks (tyranny of the majority, soft despotism).",
+   "dette": "The critique of conformity can itself become a posture of intellectual distinction; a risk of paralysis through hyper-awareness of the perils.",
+   "categories": [
+    "Cognitive",
+    "Social",
+    "Symbolic violence"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1835,
+   "date": "1835",
+   "titre": "The telegraph—humanity wired",
+   "ordre": "Instant long-distance communication, the synchronization of markets, empires, and clocks.",
+   "dette": "The tyranny of urgency, the loss of depth and time for reflection; the systemic vulnerability of centralized networks; an infrastructure debt.",
+   "categories": [
+    "Temporal",
+    "Cognitive",
+    "Technical"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1848,
+   "date": "1848",
+   "titre": "The Spring of 1848—the simultaneous failure of the peoples",
+   "ordre": "Continental diffusion of democratic, national, and social ideas; an apprenticeship in political mobilization.",
+   "dette": "Coordinated repression by the empires; a lasting fracture between liberals and socialists; failure immunizes the elites and delays reform.",
+   "categories": [
+    "Political",
+    "Social",
+    "Geopolitical"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1853,
+   "date": "1853–1870",
+   "titre": "Haussmann—order set in stone",
+   "ordre": "Fluid circulation, public hygiene (sewers, ventilation), imperial monumentality.",
+   "dette": "Social segregation through the expulsion of the working classes to the outskirts; the old social fabric destroyed; a colossal financial debt.",
+   "categories": [
+    "Spatial",
+    "Social",
+    "Inequalities"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1854,
+   "date": "1854",
+   "titre": "Hygienism—the body under a public-health contract",
+   "ordre": "Public health, a spectacular drop in mortality through hygiene norms (water, vaccines).",
+   "dette": "Biopolitics: social and normative control of bodies; stigmatization of the classes deemed “dangerous”; an immune debt (the hygiene hypothesis).",
+   "categories": [
+    "Social",
+    "Political",
+    "Symbolic violence"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1859,
+   "date": "1859",
+   "titre": "Darwin—the chance that orders",
+   "ordre": "A unified, materialist explanation of the diversity of life through natural selection.",
+   "dette": "The end of divine design and of man’s central place; the theory instrumentalized as “social Darwinism” to justify inequalities and imperialism.",
+   "categories": [
+    "Philosophical",
+    "Moral",
+    "Symbolic violence"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1862,
+   "date": "1862",
+   "titre": "The corporation—an immortal legal creature",
+   "ordre": "Long-term capital accumulation through legal personhood and limited liability.",
+   "dette": "Systemic externalization of costs (social, ecological); organized irresponsibility; economic power without a democratic counterweight.",
+   "categories": [
+    "Economic",
+    "Ecological",
+    "Legal"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1867,
+   "date": "1867",
+   "titre": "Capital—the vampire with equations",
+   "ordre": "A critical grammar of capitalism, unveiling the mechanism of exploitation (surplus value); an organizing tool for the workers’ movement.",
+   "dette": "A risk of dogmatism and economic reductionism in certain readings; an ideological polarization that can freeze analysis.",
+   "categories": [
+    "Cognitive",
+    "Political",
+    "Economic"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1868,
+   "date": "1868",
+   "titre": "Meiji—becoming the other to remain oneself",
+   "ordre": "Accelerated modernization, a powerful central State, national sovereignty preserved in the face of the West.",
+   "dette": "Authoritarianism, militarism, and imperial expansionism; traditional social structures destroyed (the samurai); the human cost of forced industrialization.",
+   "categories": [
+    "Political",
+    "Social",
+    "Geopolitical"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1871,
+   "date": "1871",
+   "titre": "The Commune—the revolution that invents its own vocabulary",
+   "ordre": "An experiment in direct democratic self-government (recallable mandates, self-management).",
+   "dette": "Civil war and extreme repression (the “Bloody Week”); the memory of the crushing would long weigh on France’s social movements.",
+   "categories": [
+    "Political",
+    "Social",
+    "Memory"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1882,
+   "date": "1882",
+   "titre": "Ferry’s schools—the machine for formatting souls",
+   "ordre": "National unity through compulsory schooling, secularism, and a common language.",
+   "dette": "Regional cultures eradicated by the imposition of a “single canon”; the formatting of a schoolroom nationalism that prepared the slaughter of 1914–18 and legitimized the “coloniality of knowledge.”",
+   "categories": [
+    "Cultural",
+    "Political",
+    "Symbolic violence"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1882,
+   "date": "1882",
+   "titre": "Electricity—the debt of light",
+   "ordre": "The night pushed back, a planetary nervous system created, time and activities synchronized.",
+   "dette": "A debt owed to nature (extraction, pollution), to future generations (maintenance, waste), and to physics (systemic losses).",
+   "categories": [
+    "Energetic",
+    "Ecological",
+    "Temporal"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1884,
+   "date": "1884–1885",
+   "titre": "Berlin—the world carved up with a ruler",
+   "ordre": "Geopolitical stability in Europe through the regulated partition of Africa; colonial spheres of influence sanctuarized.",
+   "dette": "Artificial borders created (a “homicidal geometry”) that divide some peoples and confine others, programming future conflicts on the African continent.",
+   "categories": [
+    "Geopolitical",
+    "Social",
+    "Spatial"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1887,
+   "date": "1887",
+   "titre": "Nietzsche—the man-dynamite",
+   "ordre": "Lucidity through the “revaluation of all values”; the diagnosis of the “death of God” and of the morality of ressentiment.",
+   "dette": "A metaphysical void filled by substitute absolutes (Nation, Race, Class); “guilt” (Schuld) is displaced from theology into politics and economics.",
+   "categories": [
+    "Moral",
+    "Philosophical",
+    "Political"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1894,
+   "date": "1894–1906",
+   "titre": "The Dreyfus Affair—the Republic before its shattered mirror",
+   "ordre": "The rule of law reaffirmed against reason of State; the invention of the engaged intellectual; a clarification of the political landscape.",
+   "dette": "A deep fracture in French society; a militant antisemitism and nationalism legitimized and organized.",
+   "categories": [
+    "Social",
+    "Political",
+    "Moral"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1900,
+   "date": "1900",
+   "titre": "Freud—the unconscious as a stage",
+   "ordre": "The psyche made intelligible through the mapping of the unconscious; a therapeutic method (the talking cure) that gives symptoms a meaning.",
+   "dette": "The order of a defense (the symptom) displaces the disorder of a drive; consciousness is dispossessed of its mastery; a psychic debt managed but never canceled.",
+   "categories": [
+    "Cognitive",
+    "Psychological",
+    "Social"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1905,
+   "date": "1905",
+   "titre": "The separation of Church and State—the eldest daughter emancipates herself",
+   "ordre": "State neutrality, civil peace through the privatization of faith, freedom of conscience and worship guaranteed.",
+   "dette": "A secular debt: the State becomes guarantor and arbiter of the coexistence of faiths, with permanent costs of upkeep (church buildings) and regulation (procedures).",
+   "categories": [
+    "Legal",
+    "Political",
+    "Administrative"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1905,
+   "date": "1905–1915",
+   "titre": "Einstein—elastic time, curved space",
+   "ordre": "Space, time, matter, and energy unified under invariant physical laws.",
+   "dette": "A nuclear debt (E=mc²); the cognitive debt of a counterintuitive world; the cost of the infrastructures needed to verify and use his theories (GPS, accelerators).",
+   "categories": [
+    "Cognitive",
+    "Energetic",
+    "Technical"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1914,
+   "date": "1914–1918",
+   "titre": "Total war—the machine for grinding down the human",
+   "ordre": "Society mobilized in full (factories, capital, minds) for maximum military efficiency.",
+   "dette": "A human debt (millions dead), a psychic one (shell shock), an ecological one (the red zones), and a political one (treaties that program the next war).",
+   "categories": [
+    "Social",
+    "Ecological",
+    "Political"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1917,
+   "date": "1917",
+   "titre": "The October Revolution—paradise gives birth to the Gulag",
+   "ordre": "A socialist order imposed by a vanguard party, the economy and the State centralized.",
+   "dette": "The human cost of terror, organized famines, and the Gulag; the promise of equality is paid for in generalized servitude and shortages.",
+   "categories": [
+    "Political",
+    "Social",
+    "Economic"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1922,
+   "date": "1922–1928",
+   "titre": "Lippmann & Bernays—consent unaware of itself",
+   "ordre": "The engineering of public opinion, making the masses governable and desires predictable for the market.",
+   "dette": "A cognitive debt (the impoverishment of debate), a democratic debt (the citizen’s alienation), and a social debt (needs artificially created).",
+   "categories": [
+    "Cognitive",
+    "Political",
+    "Social"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1925,
+   "date": "1925–1927",
+   "titre": "Quanta—a world that plays dice",
+   "ordre": "A probabilistic description of fundamental reality that allows unprecedented technical mastery (transistors, lasers).",
+   "dette": "The end of classical determinism; a permanent debt of philosophical interpretation; the energy cost of the infrastructures for mastering the infinitely small.",
+   "categories": [
+    "Philosophical",
+    "Energetic",
+    "Technical"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1928,
+   "date": "1928",
+   "titre": "Penicillin—the body under an algorithmic contract",
+   "ordre": "An administered victory over bacterial infections, a drastic drop in mortality, surgical safety.",
+   "dette": "The biological debt of antibiotic resistance; disorder displaced onto chronic diseases; a debt of surveillance (biopolitics).",
+   "categories": [
+    "Ecological",
+    "Social",
+    "Technical"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1936,
+   "date": "1936",
+   "titre": "The Popular Front—taking the symbols, conceding the essential",
+   "ordre": "Major social rights won (paid vacations, the 40-hour week), workers’ dignity recognized.",
+   "dette": "Economic disorder (inflation, capital flight); the moral debt of nonintervention in Spain.",
+   "categories": [
+    "Social",
+    "Economic",
+    "Political"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1936,
+   "date": "1936–1944",
+   "titre": "Culture industry vs. public broadcasting—the war of narratives",
+   "ordre": "Cultural formats standardized for industry, a common civic space created by public broadcasting.",
+   "dette": "The culture industry displaces disorder into minds (conformism, passivity); public broadcasting displaces it into politics (pressures, elitism).",
+   "categories": [
+    "Cognitive",
+    "Cultural",
+    "Political"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1938,
+   "date": "1938",
+   "titre": "Munich—the diplomacy of disaster",
+   "ordre": "An immediate and illusory peace through concession in the face of force.",
+   "dette": "War deferred and amplified; the cost is displaced onto the sacrificed nation (Czechoslovakia) and future generations.",
+   "categories": [
+    "Geopolitical",
+    "Temporal",
+    "Moral"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1940,
+   "date": "1940",
+   "titre": "June 18—the Word that founds a phantom State",
+   "ordre": "The continuity of French legitimacy through the force of a speech act, creating a State without territory.",
+   "dette": "The cost of this symbolic order is paid in lives by the Resistance and the Free French, and in the destruction endured for the Liberation.",
+   "categories": [
+    "Symbolic",
+    "Political",
+    "Social"
+   ]
+  },
+  {
+   "age": 6,
+   "tri": 1940,
+   "date": "1940–1945",
+   "titre": "Churchill—the orator who spoke his empire to death",
+   "ordre": "National cohesion in the face of imminent defeat, speech transformed into a strategic weapon.",
+   "dette": "The war effort is paid for by the liquidation of the British Empire and a colossal financial debt to the United States.",
+   "categories": [
+    "Symbolic",
+    "Geopolitical",
+    "Economic"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 1945,
+   "date": "1945",
+   "titre": "Hiroshima/Nagasaki—creation against creator",
+   "ordre": "The war’s accelerated end, the establishment of an order of nuclear deterrence (“peace” through terror).",
+   "dette": "A human and ecological debt on the destroyed cities; the moral and psychic debt of a humanity capable of annihilating itself.",
+   "categories": [
+    "Technical",
+    "Political",
+    "Moral"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 1945,
+   "date": "1945",
+   "titre": "Social insurance—care becomes a right",
+   "ordre": "Compulsory solidarity that mutualizes life’s risks (illness, old age) and decommodifies care.",
+   "dette": "An intergenerational debt (workers paying for retirees) and a financial debt (deficits) managed by a bureaucratic apparatus.",
+   "categories": [
+    "Social",
+    "Economic",
+    "Administrative"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 1947,
+   "date": "1947",
+   "titre": "Exodus—memory in competition",
+   "ordre": "Moral and political legitimation of the creation of Israel through the staging of the suffering of Shoah survivors.",
+   "dette": "Disorder transferred onto the Palestinian people (the Nakba); the competition of memories entrenches an insoluble conflict of identities.",
+   "categories": [
+    "Symbolic",
+    "Geopolitical",
+    "Memory"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 1948,
+   "date": "1948",
+   "titre": "The Universal Declaration—dignity in articles",
+   "ordre": "A universal moral norm that makes the violation of human rights visible and illegitimate.",
+   "dette": "The text creates a permanent “compliance debt” for all States; disorder is displaced from brute force into justification and procedure.",
+   "categories": [
+    "Legal",
+    "Moral",
+    "Political"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 1948,
+   "date": "1948",
+   "titre": "Shannon—killing meaning, giving birth to information",
+   "ordre": "A mathematical theory of communication that allows error-free data transmission and founds the digital era.",
+   "dette": "Meaning is evacuated from the process; syntactic order is paid for with semantic disorder (information overload, loss of context).",
+   "categories": [
+    "Technical",
+    "Cognitive",
+    "Philosophical"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 1953,
+   "date": "1953",
+   "titre": "DNA—decoding to recode",
+   "ordre": "The genetic code understood, opening the way to the engineering of life.",
+   "dette": "An ethical debt (eugenics 2.0), an ecological one (GMOs), and a social one (biological inequalities); genetic precision creates normative chaos.",
+   "categories": [
+    "Technical",
+    "Ecological",
+    "Moral"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 1957,
+   "date": "1957",
+   "titre": "The Common Market—the union that divides",
+   "ordre": "Peace through economic integration, the creation of a unified market.",
+   "dette": "Political conflict displaced into technocratic norms; popular sovereignty eroded in favor of governance at a distance.",
+   "categories": [
+    "Economic",
+    "Political",
+    "Legal"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 1958,
+   "date": "1958",
+   "titre": "The Fifth Republic—democratizing the monarchy",
+   "ordre": "Executive stability through the concentration of presidential power.",
+   "dette": "Parliament and intermediate bodies weakened; democratic disorder displaced into abstention or the street.",
+   "categories": [
+    "Political",
+    "Social"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 1958,
+   "date": "1958–1988",
+   "titre": "Climate—measuring in order to ignore",
+   "ordre": "An ever more precise body of scientific evidence on global warming.",
+   "dette": "Exact knowledge becomes an alibi for political inaction; the carbon debt accumulates, transferring physical chaos onto future generations.",
+   "categories": [
+    "Cognitive",
+    "Temporal",
+    "Ecological"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 1960,
+   "date": "1960",
+   "titre": "Africa—Year II of the independences",
+   "ordre": "An order of flags and national anthems, formal political independence.",
+   "dette": "Structures of economic and political dependence persist (neo-colonialism); the arbitrariness of borders displaces disorder within the new States.",
+   "categories": [
+    "Geopolitical",
+    "Economic",
+    "Political"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 1960,
+   "date": "1960",
+   "titre": "The pill—fertile time domesticated",
+   "ordre": "Individual mastery of the fertility calendar, sexuality dissociated from reproduction.",
+   "dette": "The contraceptive load (health-related, mental) is overwhelmingly shifted onto women; a debt of research into male contraception.",
+   "categories": [
+    "Social",
+    "Technical",
+    "Inequalities"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 1962,
+   "date": "1962",
+   "titre": "Decolonizing—the nation in the mirror",
+   "ordre": "A multiplication of sovereign nation-states.",
+   "dette": "Former metropoles and new States alike face crises of identity; the colonial repressed returns, mirrored (immigration, racism, civil wars).",
+   "categories": [
+    "Symbolic",
+    "Social",
+    "Memory"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 1967,
+   "date": "1967",
+   "titre": "Debord—the spectacle, or commodity hypnosis",
+   "ordre": "The diagnosis of a society in which social relations are mediated by images.",
+   "dette": "The spectacle colonizes the imaginary and lived life; the order of consumption displaces disorder into alienation and passivity.",
+   "categories": [
+    "Cognitive",
+    "Social",
+    "Symbolic"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 1968,
+   "date": "1968",
+   "titre": "May ’68—pleasure without shackles, shackles without pleasure",
+   "ordre": "A liberation of mores and a radical critique of authority.",
+   "dette": "The refusal of political power lets capitalism co-opt the critique and turn it into a marketing argument; cultural freedom is paid for with economic precarity.",
+   "categories": [
+    "Cultural",
+    "Social",
+    "Economic"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 1969,
+   "date": "1969",
+   "titre": "Apollo 11—humanity beside itself",
+   "ordre": "A supreme technical and symbolic feat, a demonstration of human power.",
+   "dette": "A colossal financial cost that displaces earthly priorities (the social, poverty); the ecological debt of the space race (debris).",
+   "categories": [
+    "Technical",
+    "Symbolic",
+    "Economic"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 1971,
+   "date": "1971",
+   "titre": "The microprocessor—the invisible in command",
+   "ordre": "Universal, miniaturized computing power, founding automation and the information society.",
+   "dette": "An ecological debt (electronic waste), a social one (obsolete trades), and a strategic one (the vulnerability of systems).",
+   "categories": [
+    "Technical",
+    "Economic",
+    "Ecological"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 1971,
+   "date": "1971",
+   "titre": "King Dollar—wealth without value",
+   "ordre": "The end of gold convertibility, creating a flexible monetary system founded on trust in the dollar.",
+   "dette": "The United States exports its inflation and has its deficits financed by the rest of the world; a stability debt for the countries of the periphery.",
+   "categories": [
+    "Economic",
+    "Geopolitical"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 1974,
+   "date": "1974",
+   "titre": "Kahneman—reason unreasoning",
+   "ordre": "A map of our cognitive biases, revealing a predictable architecture of human irrationality.",
+   "dette": "This knowledge becomes a tool of manipulation (the nudge), displacing the disorder of our errors into a voluntary servitude to “choice architectures.”",
+   "categories": [
+    "Cognitive",
+    "Political",
+    "Economic"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 1979,
+   "date": "1979",
+   "titre": "Bourdieu—the order of taste, the taste for order",
+   "ordre": "The mechanisms of “distinction” unveiled, where taste serves as a class marker.",
+   "dette": "Sociological lucidity itself becomes cultural capital, creating a new form of distinction through the critique of distinction.",
+   "categories": [
+    "Social",
+    "Cognitive",
+    "Symbolic violence"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 1979,
+   "date": "1979–1980",
+   "titre": "Neoliberalism—a whiff of dollar in the air",
+   "ordre": "Monetary stability, market discipline, the liberation of capital flows.",
+   "dette": "Disorder is displaced onto the social (mass unemployment, inequalities), the ecological (deregulation), and the political (loss of sovereignty).",
+   "categories": [
+    "Economic",
+    "Social",
+    "Political"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 1989,
+   "date": "1989–1991",
+   "titre": "The internet—the center everywhere, nowhere",
+   "ordre": "Planetary connection, decentralized access to information.",
+   "dette": "Cognitive fragmentation (overload), mass surveillance; the order of connection displaces disorder onto attention and privacy.",
+   "categories": [
+    "Technical",
+    "Cognitive",
+    "Social"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 1991,
+   "date": "1991",
+   "titre": "The USSR—the empire that killed itself trying to cure itself",
+   "ordre": "The end of the Cold War, the liberation of the nations held captive by the Soviet empire.",
+   "dette": "Post-collapse economic and social chaos (shock therapy); political disorder displaced into regional conflicts and the rise of a revanchist Russian nationalism.",
+   "categories": [
+    "Geopolitical",
+    "Political",
+    "Social"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 1995,
+   "date": "1995",
+   "titre": "Exoplanets—mirrors without a face",
+   "ordre": "Knowledge of thousands of other worlds, radically decentering our place in the universe.",
+   "dette": "The financial and energy cost of observation; an orbital debt (space debris); the Fermi paradox sharpens, creating existential disorder.",
+   "categories": [
+    "Cognitive",
+    "Ecological",
+    "Philosophical"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 1995,
+   "date": "1995",
+   "titre": "Cerebral flux—lost abysses vs. captive surface",
+   "ordre": "An attention economy that optimizes the capture of streams of consciousness.",
+   "dette": "A collective mental desiccation, the loss of deep concentration; the cognitive debt is paid in fatigue and superficiality.",
+   "categories": [
+    "Cognitive",
+    "Economic",
+    "Social"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 2000,
+   "date": "2000",
+   "titre": "The Anthropocene—the power that suicides",
+   "ordre": "A human power become geological force, capable of shaping the planet.",
+   "dette": "The debt is total: climatic, ecological, biospheric; the industrial order displaces disorder onto the whole Earth system, threatening its own survival.",
+   "categories": [
+    "Ecological",
+    "Energetic",
+    "Global"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 2001,
+   "date": "2001",
+   "titre": "September 11—the fall of the empire",
+   "ordre": "A global security apparatus to forestall the terrorist threat.",
+   "dette": "Civil liberties eroded, endless wars, moral authority lost; the promised security is paid for with generalized insecurity.",
+   "categories": [
+    "Political",
+    "Legal",
+    "Geopolitical"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 2008,
+   "date": "2008",
+   "titre": "The financial crisis—glass cathedral, cracked faith",
+   "ordre": "The world financial system rescued by massive intervention from States and central banks.",
+   "dette": "The socialization of private losses is paid for in public debt and austerity for entire populations; trust in the elites is lastingly broken.",
+   "categories": [
+    "Economic",
+    "Political",
+    "Social"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 2009,
+   "date": "2009",
+   "titre": "Bitcoin—trust changes address",
+   "ordre": "A decentralized network of trust, with no intermediaries, founded on an algorithmic rule.",
+   "dette": "The energy debt of “proof of work”; extreme volatility; trust is displaced from the political onto a code whose governance remains contested.",
+   "categories": [
+    "Technical",
+    "Energetic",
+    "Economic"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 2012,
+   "date": "2012",
+   "titre": "CRISPR—genes cut, humanity rewritten",
+   "ordre": "Surgical precision in genome editing, the promise of cures.",
+   "dette": "An ethical debt (eugenics 2.0), a social one (biological inequalities), and an ecological one (gene drives); normative chaos displaced onto future generations.",
+   "categories": [
+    "Technical",
+    "Moral",
+    "Ecological"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 2013,
+   "date": "2013",
+   "titre": "Algorithms—predicting without seeing, governing without a name",
+   "ordre": "Prediction and optimization of behavior at scale.",
+   "dette": "Algorithmic servitude, opaque decisions, the past petrified in predictive models; freedom becomes the capacity to deviate from the computed trajectory.",
+   "categories": [
+    "Cognitive",
+    "Political",
+    "Technical"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 2015,
+   "date": "2015",
+   "titre": "The Paris Agreement—the soft in the hard",
+   "ordre": "Diplomatic unanimity, a universal procedural framework for climate action.",
+   "dette": "Procedural order displaces physical disorder (real emissions) onto the future and onto the global South; the climate debt keeps growing.",
+   "categories": [
+    "Political",
+    "Ecological",
+    "Temporal"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 2016,
+   "date": "2016",
+   "titre": "The GDPR—the rights of the powerless",
+   "ordre": "A legal framework for the protection of personal data, creating rights for citizens.",
+   "dette": "A cognitive debt for users (consent fatigue) and a bureaucratic one for small and medium-sized firms; the formal order validates an architecture of extraction.",
+   "categories": [
+    "Legal",
+    "Cognitive",
+    "Economic"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 2020,
+   "date": "2020",
+   "titre": "Covid-19—stress test of the world",
+   "ordre": "Health protection through social control (lockdowns, health passes).",
+   "dette": "Economic disorder (public debt), social disorder (inequalities), psychic disorder (mental health), and educational disorder (learning losses), offloaded wholesale.",
+   "categories": [
+    "Social",
+    "Economic",
+    "Political"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 2022,
+   "date": "2022",
+   "titre": "Psittacism 2.0—the parrot speaks to parrots",
+   "ordre": "The production of language and images automated, productivity gained.",
+   "dette": "A verification debt (hallucinations), a social debt (jobs replaced), and a cognitive debt (judgment atrophied); the plundering of creative corpora.",
+   "categories": [
+    "Cognitive",
+    "Economic",
+    "Technical"
+   ]
+  },
+  {
+   "age": 7,
+   "tri": 2024,
+   "date": "2024",
+   "titre": "The State without a people, the people without a State",
+   "ordre": "The order of global financial markets, liquidity and efficiency of capital flows.",
+   "dette": "Democratic States lose sovereignty; disorder is displaced onto peoples (austerity, precarity) to guarantee the stability of assets.",
+   "categories": [
+    "Political",
+    "Economic",
+    "Social"
+   ]
+  }
+ ]
+}

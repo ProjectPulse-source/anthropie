@@ -1,25 +1,39 @@
 {{- /* {{< registre-ages >}} — rend le Registre des coûts déportés depuis
-       data/registre_couts_deportes.json (source unique, dérivée de l'ancienne
-       page d'accueil ; voir _meta du JSON). Présence par le dépôt : les
-       compteurs sont dérivés au build, jamais recopiés — si un jalon entre ou
-       sort du JSON, la page suit seule. Chaque jalon est ancré (id) pour être
-       citable à l'entrée près. */ -}}
-{{- $reg := site.Data.registre_couts_deportes -}}
+       data/registre_couts_deportes{_en}.json selon la langue de la page
+       (source unique par langue ; voir _meta des JSON). Présence par le
+       dépôt : les compteurs sont dérivés au build, jamais recopiés — si un
+       jalon entre ou sort d'un JSON, la page suit seule. Chaque jalon est
+       ancré (id) pour être citable à l'entrée près. */ -}}
+{{- $isEn := eq .Page.Lang "en" -}}
+{{- $reg := cond $isEn site.Data.registre_couts_deportes_en site.Data.registre_couts_deportes -}}
 {{- if not $reg -}}
-  {{- errorf "registre-ages : data/registre_couts_deportes.json absent" -}}
+  {{- errorf "registre-ages : fichier data absent pour la langue %s" .Page.Lang -}}
 {{- end -}}
 <div class="registre">
+  {{- if $isEn }}
+  <p class="registre__compte">Online: {{ len $reg.jalons }} of the {{ $reg._meta.jalons_livre }} milestones in the book—each on the same grid: <strong>Order created</strong>, <strong>Debt displaced</strong>, categories of the transfer.</p>
+  {{- else }}
   <p class="registre__compte">En ligne&nbsp;: {{ len $reg.jalons }} jalons des {{ $reg._meta.jalons_livre }} que compte le livre — chacun sur la même grille&nbsp;: <strong>ordre créé</strong>, <strong>dette déportée</strong>, catégories du transfert.</p>
+  {{- end }}
   {{- range $age := $reg.ages }}
   {{- $jalons := where $reg.jalons "age" $age.num }}
   <section class="registre__age">
+    {{- if $isEn }}
+    <h2 id="age-{{ $age.num }}">Age {{ $age.num }}—{{ $age.titre }} <span class="registre__periode">({{ $age.periode }})</span></h2>
+    {{- else }}
     <h2 id="age-{{ $age.num }}">Âge {{ $age.num }} — {{ $age.titre }} <span class="registre__periode">({{ $age.periode }})</span></h2>
+    {{- end }}
     {{- range $j := $jalons }}
     <details class="registre__jalon" id="{{ anchorize $j.titre }}">
       <summary><span class="registre__date">{{ $j.date }}</span> <span class="registre__titre">{{ $j.titre }}</span></summary>
       <div class="registre__corps">
+        {{- if $isEn }}
+        <p><strong>Order created.</strong> {{ $j.ordre }}</p>
+        <p><strong>Debt displaced.</strong> {{ $j.dette }}</p>
+        {{- else }}
         <p><strong>Ordre créé.</strong> {{ $j.ordre }}</p>
         <p><strong>Dette déportée.</strong> {{ $j.dette }}</p>
+        {{- end }}
         <p class="registre__categories">{{ delimit $j.categories " · " }}</p>
       </div>
     </details>
