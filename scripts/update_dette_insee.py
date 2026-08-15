@@ -67,6 +67,8 @@ EURO_COFOG_MIO = EURO + ("gov_10a_exp?format=JSON&geo=FR&na_item=TE&sector=S13"
 EURO_COFOG_PIB = EURO + ("gov_10a_exp?format=JSON&geo=FR&na_item=TE&sector=S13"
                          "&unit=PC_GDP&cofog99=GF03&cofog99=GF0303"
                          "&cofog99=GF07&cofog99=GF09&lang=en")
+EURO_TR = EURO + ("gov_10a_main?format=JSON&geo=FR&na_item=TR"
+                  "&sector=S13&unit=MIO_EUR&lang=en")
 
 RE_QUARTER = re.compile(r"^\d{4}-Q[1-4]$")
 RE_YEAR = re.compile(r"^\d{4}$")
@@ -387,11 +389,13 @@ def main() -> int:
 
     print("fetch INSEE SDMX ...")
     insee = parse_insee(fetch(INSEE_URL))
-    print("fetch Eurostat (4 requetes) ...")
+    print("fetch Eurostat (5 requetes) ...")
     d41_mio = parse_eurostat(fetch(EURO_D41_MIO), "sector").get("S13", {})
     d41_pib = parse_eurostat(fetch(EURO_D41_PIB), "sector").get("S13", {})
     cofog_mio = parse_eurostat(fetch(EURO_COFOG_MIO), "cofog99")
     cofog_pib = parse_eurostat(fetch(EURO_COFOG_PIB), "cofog99")
+    tr_mdeur = {y: round(v / 1000.0, 1) for y, v in
+                parse_eurostat(fetch(EURO_TR), "sector").get("S13", {}).items()}
 
     dette_mdeur = insee.get("010777616", {})
     dette_pib = insee.get("010777608", {})
@@ -413,6 +417,7 @@ def main() -> int:
                  "GF07": (5.0, 13.0), "GF09": (3.5, 8.0)}
     for code, (lo, hi) in bands_pib.items():
         check_annual("cofog_pib." + code, cofog_pib.get(code, {}), lo, hi)
+    check_annual("recettes_mdeur", tr_mdeur, 300, 3000)
     check_consolidated_anchors(dette_mdeur, dette_pib, d41_mio)
     check_delta_vs_committed(payload_prev, dette_mdeur, dette_pib, d41_mdeur)
 
@@ -442,6 +447,43 @@ def main() -> int:
         return 1
     hausse_pct = round((d41_mdeur[last_y] - d41_mdeur[trough_y])
                        / d41_mdeur[trough_y] * 100.0)
+    # controle pre-Covid : 2019 est une reference historique FIXE (derniere
+    # annee avant la rupture sanitaire), pas un point mobile
+    hausse_2019_pct = None
+    if "2019" in d41_mdeur and d41_mdeur["2019"] > 0:
+        hausse_2019_pct = round((d41_mdeur[last_y] - d41_mdeur["2019"])
+                                / d41_mdeur["2019"] * 100.0)
+    if hausse_2019_pct is None:
+        print("ECHEC: reference 2019 absente de la serie D41 -- rien n'est ecrit.")
+        return 1
+
+    # taux apparent = interets de l'annee N / encours au T4 de N-1
+    # (cout moyen du stock, PAS le taux d'emission courant)
+    taux_apparent = {}
+    for y in sorted(d41_mdeur):
+        prev_q4 = "%d-Q4" % (int(y) - 1)
+        if prev_q4 in dette_mdeur and dette_mdeur[prev_q4] > 0:
+            taux_apparent[y] = round(d41_mdeur[y] / dette_mdeur[prev_q4] * 100.0, 2)
+    if len(taux_apparent) < 20:
+        print("ECHEC: serie taux apparent incomplete (%d obs) -- rien n'est ecrit."
+              % len(taux_apparent))
+        return 1
+    ta_first = min(taux_apparent)
+    ta_trough = min(taux_apparent, key=lambda k: taux_apparent[k])
+    ta_last = max(taux_apparent)
+    for y, v in taux_apparent.items():
+        in_band("taux_apparent[%s]" % y, v, 0.5, 12.0)
+
+    # interets / recettes publiques (capacite d'absorption budgetaire)
+    tr_last = max(set(tr_mdeur) & set(d41_mdeur)) if tr_mdeur else None
+    if not tr_last or tr_mdeur[tr_last] <= 0:
+        print("ECHEC: recettes publiques indisponibles -- rien n'est ecrit.")
+        return 1
+    int_sur_recettes = round(d41_mdeur[tr_last] / tr_mdeur[tr_last] * 100.0, 1)
+    in_band("interets/recettes " + tr_last, int_sur_recettes, 1.0, 15.0)
+    if FAILURES:
+        print("ECHEC: %d garde(s) sur les derives -- AUCUNE ecriture." % len(FAILURES))
+        return 1
 
     now_fr = datetime.now(timezone.utc).strftime("%d/%m/%Y")
     now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%d")
@@ -461,6 +503,17 @@ def main() -> int:
         "interets_creux_mdeur": fr(d41_mdeur[trough_y]),
         "interets_creux_pct_pib": fr(d41_pib[trough_y]),
         "interets_hausse_pct": str(hausse_pct),
+        "interets_2019_mdeur": fr(d41_mdeur["2019"]),
+        "interets_hausse_2019_pct": str(hausse_2019_pct),
+        "taux_apparent_premier_annee": ta_first,
+        "taux_apparent_premier": fr(taux_apparent[ta_first]),
+        "taux_apparent_creux_annee": ta_trough,
+        "taux_apparent_creux": fr(taux_apparent[ta_trough]),
+        "taux_apparent_dernier_annee": ta_last,
+        "taux_apparent_dernier": fr(taux_apparent[ta_last]),
+        "recettes_annee": tr_last,
+        "recettes_mdeur": fr(tr_mdeur[tr_last]),
+        "interets_sur_recettes_pct": fr(int_sur_recettes),
         "equiv_annee": equiv_y,
         "interets_equiv_mdeur": fr(int_equiv),
         "justice_mdeur": fr(cof24["GF0303"]),
@@ -499,7 +552,19 @@ def main() -> int:
             "series": {
                 "mdeur": {y: d41_mdeur[y] for y in sorted(d41_mdeur)},
                 "pct_pib": {y: d41_pib[y] for y in sorted(d41_pib)},
+                "taux_apparent_pct": dict(sorted(taux_apparent.items())),
             },
+            "taux_apparent_definition": ("interets verses l'annee N / encours de "
+                                         "dette au T4 de l'annee N-1 -- cout moyen "
+                                         "du stock, pas le taux d'emission courant"),
+        },
+        "recettes_annuelles": {
+            "source": ("Eurostat, gov_10a_main -- recettes totales (TR) des "
+                       "administrations publiques (S13), France"),
+            "dataset": "gov_10a_main",
+            "unite": {"mdeur": "milliards d'euros courants"},
+            "derniere_periode": tr_last,
+            "series": {"mdeur": {y: tr_mdeur[y] for y in sorted(tr_mdeur)}},
         },
         "depenses_fonction_annuelles": {
             "source": ("Eurostat, gov_10a_exp -- depenses totales (TE) des "
