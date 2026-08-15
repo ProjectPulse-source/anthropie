@@ -315,6 +315,31 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
 }
 .doi-box__link:hover { background: var(--color-accent-faint); }
 
+// ----- Bloc chiffres officiels dette (partial dette-chiffres.html) -----
+.dette-chiffres {
+  background: var(--color-bg-card); border: 0.5px solid var(--color-rule-strong);
+  padding: 24px; margin: 32px 0; page-break-inside: avoid;
+}
+.dette-chiffres__titre {
+  font-family: var(--font-sans); font-size: var(--fs-tiny);
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--color-text-faint); margin: 0 0 12px;
+}
+.dette-chiffres__valeurs { font-size: 1.15em; margin: 0 0 12px; }
+.dette-chiffres__source, .dette-chiffres__liens {
+  font-family: var(--font-sans); font-size: var(--fs-small);
+  color: var(--color-text-muted); margin: 0 0 6px;
+}
+.dette-chiffres__liens { margin-bottom: 0; }
+
+// ----- Figure du ciseau (page /cout-de-la-dette-publique/) -----
+.figure-ciseau { margin: 32px 0; }
+.figure-ciseau img { width: 100%; max-width: 720px; height: auto; display: block; }
+.figure-ciseau figcaption {
+  font-family: var(--font-sans); font-size: var(--fs-small);
+  color: var(--color-text-subtle); margin-top: 8px;
+}
+
 // ----- Amazon buttons -----
 .amazon-buttons { margin: 2rem 0; }
 .amazon-buttons__title {

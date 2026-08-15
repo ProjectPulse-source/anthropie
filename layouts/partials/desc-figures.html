@@ -7,6 +7,17 @@
        retourné inchangé). Évite toute recopie des chiffres dans la prose. */ -}}
 {{- $text := .text -}}
 {{- $sep := .sep | default " " -}}
+{{- /* Chiffres officiels de dette publique : placeholders {dette.<cle>},
+       resolus depuis data/dette_officielle.json (bloc "affichage", chaines
+       deja formatees a la francaise par scripts/update_dette_insee.py).
+       Independant de l'ISBN : disponibles sur toute page. NO-OP sans
+       placeholder. Couvre aussi le JSON-LD FAQPage (schema-faqpage.html
+       passe par ce partial). */ -}}
+{{- with site.Data.dette_officielle -}}
+  {{- range $k, $v := .affichage -}}
+    {{- $text = replace $text (printf "{dette.%s}" $k) $v -}}
+  {{- end -}}
+{{- end -}}
 {{- with .isbn -}}
   {{- range where site.Data.works.works "isbn" . -}}
     {{- with .corpus_stats -}}

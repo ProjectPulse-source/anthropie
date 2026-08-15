@@ -1,0 +1,30 @@
+{{- /* dette-chiffres.html — bloc « dernière donnée officielle » de la dette
+       publique. Source unique : data/dette_officielle.json (généré par
+       scripts/update_dette_insee.py). Garde-fous (arbitrage panel 15/08) :
+       - données absentes ou incomplètes => errorf (le bloc ne disparaît
+         jamais en silence) ;
+       - garde de fraîcheur dans le BUILD (survit à la mort du cron) : la
+         période économique affichée est le signal — au-delà de ~290 j
+         après le début du dernier trimestre publié, warnf. La CI utilise
+         `hugo --minify` sans `--quiet` : le warnf est visible. */ -}}
+{{- $d := site.Data.dette_officielle -}}
+{{- if not $d -}}
+  {{- errorf "dette-chiffres: data/dette_officielle.json ABSENT — lancer scripts/update_dette_insee.py" -}}
+{{- else -}}
+{{- $a := $d.affichage -}}
+{{- if not $a -}}{{- errorf "dette-chiffres: bloc affichage absent du JSON" -}}{{- end -}}
+{{- $p := $d.dette_trimestrielle.derniere_periode -}}
+{{- $yr := int (substr $p 0 4) -}}
+{{- $q := int (substr $p 6 1) -}}
+{{- $debut := time.AsTime (printf "%d-%02d-01" $yr (add (mul (sub $q 1) 3) 1)) -}}
+{{- $age := div (sub now.Unix $debut.Unix) 86400 -}}
+{{- if gt $age 290 -}}
+  {{- warnf "dette-chiffres: derniere periode %s agee de %d jours — relancer scripts/update_dette_insee.py (ou verifier le workflow dette-insee.yml)" $p $age -}}
+{{- end -}}
+<aside class="dette-chiffres">
+  <p class="dette-chiffres__titre">Dette publique française&nbsp;— dernière donnée officielle</p>
+  <p class="dette-chiffres__valeurs"><strong>{{ index $a "dette_mdeur" }}&nbsp;milliards d'euros</strong>, soit <strong>{{ index $a "dette_pct_pib" }}&nbsp;% du PIB</strong>, au {{ index $a "dette_periode" }}.</p>
+  <p class="dette-chiffres__source">Source&nbsp;: INSEE, dette de Maastricht des administrations publiques (séries 010777616 et 010777608)&nbsp;· relevé le {{ index $a "releve_le" }}&nbsp;· <a href="/dette_officielle.json">données brutes (JSON)</a>.</p>
+  <p class="dette-chiffres__liens">Ce que cette dette coûte&nbsp;: <a href="/cout-de-la-dette-publique/">Combien coûte la dette publique&nbsp;?</a>&nbsp;· Visualisation interactive&nbsp;: <a href="https://projectpulse-source.github.io/dette-publique-france/" target="_blank" rel="noopener">le compteur de la dette</a> (site compagnon du livre).</p>
+</aside>
+{{- end -}}

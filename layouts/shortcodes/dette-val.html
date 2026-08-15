@@ -1,0 +1,17 @@
+{{- /* {{< dette-val "interets_mdeur" >}} — émet UNE valeur du bloc affichage
+       de data/dette_officielle.json (chaînes françaises précalculées par
+       scripts/update_dette_insee.py). Aucun chiffre de dette en dur dans la
+       prose : toute valeur passe par ici ou par les placeholders {dette.*}
+       de desc-figures. Clé inconnue ou données absentes = échec de build
+       (une exclusion peut être légitime ; le silence, jamais). */ -}}
+{{- $k := .Get 0 -}}
+{{- $a := "" -}}
+{{- with site.Data.dette_officielle -}}{{- $a = .affichage -}}{{- end -}}
+{{- if not $a -}}
+  {{- errorf "dette-val: data/dette_officielle.json absent ou sans bloc affichage (page %s)" .Page.RelPermalink -}}
+{{- else -}}
+  {{- $v := index $a $k -}}
+  {{- if not $v -}}
+    {{- errorf "dette-val: cle %q inconnue du bloc affichage (page %s)" $k .Page.RelPermalink -}}
+  {{- else -}}{{- $v -}}{{- end -}}
+{{- end -}}
