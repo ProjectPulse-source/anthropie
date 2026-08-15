@@ -53,6 +53,18 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-08-15 (nuit, 3) — Retours auteur `Modifs_Site.txt` appliqués (`27cee45`)
+
+Ressource unique de la fiche livre **remontée avant les Working Papers** et reformulée
+(le QR mis en avant — le double lien signalé avait déjà disparu au push précédent) ;
+formules « honnêteté » supprimées (« louche lorsqu'on s'en réclame » — auteur) ; le
+paradoxe budgets-en-hausse / services-dégradés rendu **causal et exact** : effet Baumol
+(un service fait de personnes suit les salaires, pas la productivité) + besoins croissant
+plus vite que le PIB (vieillissement, progrès médical, judiciarisation) → un budget stable
+couvre chaque année moins de la demande, sans baisser ; la dette ne crée pas l'écart,
+elle **pince la marge de rattrapage**. Corps + FAQ 5 alignés. Redirection QR **ratifiée
+par l'auteur**. Push auteur dû.
+
 ### 2026-08-15 (nuit, 2) — Rapatriement du compteur sur la page ; compagnon → REDIRECTION (décision auteur)
 
 **Décision auteur** (renversement PARTIEL de l'arbitrage externe 022215, signalé, non
