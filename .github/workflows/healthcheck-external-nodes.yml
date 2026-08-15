@@ -36,6 +36,7 @@ jobs:
             ["Wikidata Anthropie ouvrage"]="https://www.wikidata.org/wiki/Q138827344"
             ["OpenLibrary auteur"]="https://openlibrary.org/authors/OL16378291A"
             ["OSF/SocArXiv"]="https://osf.io/ymkpj/"
+            ["Compteur dette (compagnon)"]="https://projectpulse-source.github.io/dette-publique-france/"
             ["Google Scholar"]="https://scholar.google.com/citations?user=J4NqzwSfrHAC"
             ["Academia"]="https://independent.academia.edu/StéphaneLALUT"
           )

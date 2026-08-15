@@ -102,8 +102,13 @@ plus d'« anesthésiait » causal) ; « pic historique » → « maximum de la s
 l'État » RETIRÉ (faux en APU). Écartés conformes : dette/habitant, projection, zone euro.
 Arbitrage : `ARBITRATIONS\anthropie-site-20260815-033932_arbitrage.md`.
 
-**⛔ PORTES HUMAINES RESTANTES : ① push du compagnon (avant le site) ; ② push du site ;
-③ 2FA compte ProjectPulse-source + ligne healthcheck ; ④ merges des futures PR (~4/an).**
+**✅ Portes ① et ② FRANCHIES le 15/08 (nuit) — les deux push exécutés par l'auteur, LIVE
+VÉRIFIÉ** : page 200 + bloc stylé (contrôle visuel), endpoint `/dette_officielle.json` 200,
+SVG 200, JSON compagnon valide en ligne (2026-T1), IndexNow notifié automatiquement.
+Ligne healthcheck du compagnon AJOUTÉE au workflow (commit suivant). **RESTENT : ③ 2FA
+sur le compte ProjectPulse-source (geste auteur) ; ④ merges des futures PR de données
+(~4/an) ; arbitrage d'emplacement du clone compagnon (aujourd'hui `D:\PRO\90_SAS\EN_COURS\`,
+le sas — à migrer vers un emplacement pérenne ou à re-cloner à la demande).**
 
 ### 2026-08-15 — Rattachement compteur de dette : architecture B-minimal ARBITRÉE, en attente de GO auteur
 
