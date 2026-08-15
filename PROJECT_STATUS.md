@@ -53,6 +53,30 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-08-15 (nuit, 2) — Rapatriement du compteur sur la page ; compagnon → REDIRECTION (décision auteur)
+
+**Décision auteur** (renversement PARTIEL de l'arbitrage externe 022215, signalé, non
+effacé : le compagnon perd son rôle d'« annexe interactive » — design obsolète, hors
+site). Exécuté (site `c82c21d`, compagnon `3f47597`, **2 push auteur dus : site
+D'ABORD, compagnon ensuite**) :
+- **Compteur animé rapatrié** sur `/cout-de-la-dette-publique/` : bloc `live` dans le
+  JSON (ancre, fin de trimestre ISO, croissance annuelle calculée sur 4 trimestres —
+  gardes 0-15 %), rendu en data-attributes, JS inline sans AUCUN nombre en dur,
+  étiquette « extrapolation mécanique… ni observation ni prévision » (formulation du
+  réviseur 033932), sans-JS = rien de cassé (hidden). Vérifié en navigateur : compteur
+  en marche (≈ +6 400 €/s), mathématique contrôlée. Pas de fetch INSEE côté navigateur
+  (choix assumé : cohérence compteur/ligne officielle ; l'« API automatisée » = le
+  pipeline + PR).
+- **Chaîne causale 4 maillons** pour non-spécialistes ajoutée sous le bloc (emprunt →
+  stock → prix moyen → intérêts → qui paiera).
+- **Tous les renvois site → compagnon retirés** (partial, page, fiche livre — la
+  ressource fiche pointe la page et mentionne le QR).
+- **Compagnon = page de redirection** (meta refresh + JS + lien) vers
+  `/cout-de-la-dette-publique/?src=compteur-qr` (param = mesure des arrivées QR),
+  canonical vers la page, noindex ; **l'URL github.io reste vivante À VIE** (QR imprimé
+  dans les EPUB vendus — interdiction de renommer/supprimer dépôt ou compte, README à
+  jour) ; le nœud healthcheck la surveille.
+
 ### 2026-08-15 (soir) — Chantier dette EXÉCUTÉ : B-minimal + page coût + pipeline + compagnon réparé — EN ATTENTE DES 2 PUSH AUTEUR
 
 **GO auteur reçu** (chiffres automatiques + courbes croisées + « incontournable GEO »). Panel
