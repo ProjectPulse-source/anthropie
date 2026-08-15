@@ -3,7 +3,7 @@ title: "Dette Publique : Qui paie vraiment ?"
 subtitle: "La question n'est pas «&nbsp;combien&nbsp;?&nbsp;» mais «&nbsp;qui paie&nbsp;?&nbsp;» — et par quels canaux le coût se déplace."
 promo_slug: "dette-publique"  # clé D1/books.toml pour /ressources-offertes (guichet Kindle)
 date: 2025-10-17
-lastmod: 2026-07-09  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-08-15  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 description: "La dette publique n'est pas un solde à contenir mais un mécanisme de transfert. Ce livre pose la question non plus combien, mais qui paie — et par quels canaux le coût se déplace vers les générations futures et les groupes sociaux les moins mobiles."
 isbn: "978-2-9586347-3-5"
 amazon_rating: 4.2       # note moyenne Amazon.fr — relevé 2026-08-12 (MAJ ~mensuelle, relecture Chrome)
@@ -49,6 +49,13 @@ faq:
     answer: "Le livre reprend et développe l'analyse amorcée dans le working paper AWP-03 (« Dette publique et anthropie : qui paie vraiment le désordre ? ») : 224 pages pour le lecteur non spécialiste, à partir de cas concrets, sans prérequis. Le paper formalise l'hypothèse en format académique ; le livre la déploie et la met en scénarios."
   - question: "Faut-il avoir lu ANTHROPIE d'abord ?"
     answer: "Non. Le livre est une application autonome du cadre anthropique : les mécanismes sont exposés à partir de cas concrets, sans prérequis. ANTHROPIE développe le cadre général — histoire longue, épistémologie — pour qui veut ensuite remonter à la fresque d'ensemble."
+ressources_livre:
+  - label: "Le compteur de la dette — site compagnon du livre"
+    url: "https://projectpulse-source.github.io/dette-publique-france/"
+    note: "l'encours INSEE en continu, la cible du QR code imprimé dans le livre"
+  - label: "Combien coûte la dette publique ?"
+    url: "/cout-de-la-dette-publique/"
+    note: "chiffres officiels actualisés — intérêts, ciseau 1995-2026, équivalences budgétaires"
 related_awp:
   - label: "Qu'est-ce que l'anthropie ? Principes d'une hypothèse"
     awp: "awp-01"
