@@ -53,6 +53,29 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-08-15 (jour, 2) — Adaptation EN `/en/register-of-deported-costs/` + push auteur (mandat explicite du tour)
+
+**Adaptation, pas traduction** (doctrine intent_matrix) : la page EN présente le Registre
+(grille, 7 âges aux noms canoniques de la fiche EN, trajectoire spatial→social→cognitif,
+« What the Register does not say »), donne **3 exemples adaptés** (outils, Néolithique,
+marchés 2024) et renvoie pour le registre complet à l'édition EN *ANTHROPY* (632 p., qui
+contient l'épilogue *Register of deported costs*) et à la version FR en ligne. **Les 165
+jalons FR restent exclusifs à la page FR — jamais de traduction mécanique du corpus.**
+Nom canonique retenu : « Register of Deported Costs » (= épilogue de la fiche EN publiée).
+7 FAQ EN (JSON-LD validé), 0 cannibalisation avec /en/quest-ce-que-lanthropie/.
+
+Maillage EN : fiche livre EN (`ressources_livre` + lien Contents + lastmod), page concept
+EN (« Three pages extend the framework »), glossaire EN (entrée + désambiguïsation croisée
+coupled-cost-registers), llms.txt § English, intent_matrix (en-adaptations). Au passage,
+le titre du bloc « Ressources et données du livre » passé en **i18n** (`book_resources`
+FR/EN) — il était en dur en français dans `layouts/livres/single.html` et serait apparu
+en français sur la fiche EN.
+
+Vérifié : build 0, YAML 0, compteurs 0, couverture GEO 0 signal (EN maille reconnue,
+fraîche), hreflang ×3 sur la page FR, les deux sitemaps. **Push auteur exécuté ce tour
+(mandat explicite « Push »)** — IndexNow part au push. Chaîne QR dette re-vérifiée en
+ligne : compagnon github.io = redirection vivante vers /cout-de-la-dette-publique/?src=compteur-qr.
+
 ### 2026-08-15 (jour) — Maille `/registre-des-couts-deportes/` : rapatriement de l'ancien mini-site GitHub (commande auteur)
 
 **Commande auteur** : refaire pour la page GitHub `ProjectPulse-source/anthropie` ce qui a été
