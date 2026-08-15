@@ -108,12 +108,12 @@ Anthropy rests on a single hypothesis — social systems displace disorder rathe
 
 <div class="glossaire-entry" id="coupled-cost-registers">
 <dt>Coupled cost registers</dt>
-<dd>AWP-06's central contribution: a testable grid of four registers — energy, matter, territory, attention — showing how digital infrastructure simultaneously displaces disorder along several irreducible axes. These registers do not add up: they couple. Reducing one often displaces toward the three others. See <a href="/en/awp/awp-06/">AWP-06</a>. Not to be confused with the <em>Register of Deported Costs</em>, which is a chronology rather than a typology.</dd>
+<dd>AWP-06's central contribution: a testable grid of four registers — energy, matter, territory, attention — showing how digital infrastructure simultaneously displaces disorder along several irreducible axes. These registers do not add up: they couple. Reducing one often displaces toward the three others. See <a href="/en/awp/awp-06/">AWP-06</a>. Not to be confused with the <em>Register of Offloaded Costs</em>, which is a chronology rather than a typology.</dd>
 </div>
 
-<div class="glossaire-entry" id="register-of-deported-costs">
-<dt>Register of Deported Costs</dt>
-<dd>The documentary apparatus of the book <em>ANTHROPY – A Big History of Civilization's Hidden Costs</em> (2026; French original 2025): a chronology of 168 milestones, from the first stone tools (≈ 3.3 million years ago) to contemporary algorithms, documenting for each innovation the order created and the debt deported, with the categories of the transfer. See <a href="/en/register-of-deported-costs/">The Register of Deported Costs</a>. Not to be confused with the <a href="#coupled-cost-registers">coupled cost registers</a> of AWP-06, which are a typology rather than a chronology.</dd>
+<div class="glossaire-entry" id="register-of-offloaded-costs">
+<dt>Register of Offloaded Costs</dt>
+<dd>The documentary apparatus of the book <em>ANTHROPY – A Big History of Civilization's Hidden Costs</em> (2026; French original 2025): a chronology of 168 milestones, from the first stone tools (≈ 3.3 million years ago) to contemporary algorithms, documenting for each innovation the order created and the debt displaced, with the categories of the transfer. See <a href="/en/register-of-offloaded-costs/">The Register of Offloaded Costs</a>. Not to be confused with the <a href="#coupled-cost-registers">coupled cost registers</a> of AWP-06, which are a typology rather than a chronology.</dd>
 </div>
 
 </dl>

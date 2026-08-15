@@ -37,9 +37,9 @@ faq:
   - question: "Who is ANTHROPY for?"
     answer: "For the essay reader looking for an overall reading grid — political economy, deep history, ecology — rather than topical commentary. No technical prerequisite: the conceptual apparatus is built step by step, from the Paleolithic tool to the digital metaprogram. Early readers place it alongside the great syntheses of Jared Diamond or Yuval Noah Harari."
 ressources_livre:
-  - label: "The Register of Deported Costs — online presentation"
-    url: "/en/register-of-deported-costs/"
-    note: "the book's documentary apparatus: 168 milestones on the « order created / debt deported » grid, organised by the seven ages"
+  - label: "The Register of Offloaded Costs — online version"
+    url: "/en/register-of-offloaded-costs/"
+    note: "the book's documentary apparatus: 168 milestones on the « Order created / Debt displaced » grid, organized by the seven ages, freely browsable"
 related_awp:
   - chapter: "What is anthropy? Principles of a hypothesis"
     awp: "awp-01"
@@ -82,13 +82,13 @@ The subtitle condenses the book's hypothesis. The common misreading takes it for
 The book traverses **seven historical Ages** — from the mastery of fire to contemporary algorithms — to show how each civilization displaced its disorder toward a spatial, temporal or social elsewhere.
 
 1. *Freedom under constraint* — preface
-2. Age 1 — The founding programs (−3.3 M → −10,000)
-3. Age 2 — The Neolithic trap (−10,000 → −1,000)
-4. Age 3 — The operating systems of antiquity (−1,000 → 500)
-5. Age 4 — Networks: roads, relays, relays of power (500 → 1500)
-6. Age 5 — The modern state-machine (1500 → 1800)
-7. Age 6 — Industrialization and nations (1800 → 1945)
-8. Age 7 — The contemporary metaprogram (1945 → present)
-9. *Constraint into freedom* — epilogue, [*Register of deported costs*](/en/register-of-deported-costs/) and *Afterword: the anthropy of anthropy*
+2. Age 1 — Foundational Programs (−3.3 M → −10,000)
+3. Age 2 — The Neolithic Trap (−10,000 → −1,000)
+4. Age 3 — The Extractive Empires (−1,000 → 500)
+5. Age 4 — The Networks: Routes, Relays, Relays of Power (500 → 1500)
+6. Age 5 — The Modern State-machine (1500 → 1800)
+7. Age 6 — Industrialization and Nation-States (1800 → 1945)
+8. Age 7 — The Contemporary Metaprogram (1945 → present)
+9. *Constraint into freedom* — epilogue, [*Register of Offloaded Costs*](/en/register-of-offloaded-costs/) and *Afterword: the anthropy of anthropy*
 
 *ANTHROPY lays out the framework whose theorems and applications are developed by the Anthropy Working Papers series.*

@@ -184,7 +184,7 @@ The framework does not provide a single answer to these questions. It provides a
 - [AWP-07 — *The Anthropic Loop*](/en/awp/awp-07/)
 - [AWP-08 — *Social Reversibility as a Dimension of Inequality*](/en/awp/awp-08/)
 
-Three pages extend the framework in English: [What is the anthropic loop?](/en/anthropic-loop/), [What is social reversibility?](/en/social-reversibility/) and [The Register of Deported Costs](/en/register-of-deported-costs/) — the book's documentary apparatus, milestone by milestone across the seven ages.
+Three pages extend the framework in English: [What is the anthropic loop?](/en/anthropic-loop/), [What is social reversibility?](/en/social-reversibility/) and [The Register of Offloaded Costs](/en/register-of-offloaded-costs/) — the book's documentary apparatus, fully browsable milestone by milestone across the seven ages.
 
 ## The book
 
