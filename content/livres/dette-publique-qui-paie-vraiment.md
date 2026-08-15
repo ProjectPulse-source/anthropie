@@ -50,9 +50,9 @@ faq:
   - question: "Faut-il avoir lu ANTHROPIE d'abord ?"
     answer: "Non. Le livre est une application autonome du cadre anthropique : les mécanismes sont exposés à partir de cas concrets, sans prérequis. ANTHROPIE développe le cadre général — histoire longue, épistémologie — pour qui veut ensuite remonter à la fresque d'ensemble."
 ressources_livre:
-  - label: "Combien coûte la dette publique ?"
+  - label: "Le compteur de la dette et les chiffres officiels actualisés"
     url: "/cout-de-la-dette-publique/"
-    note: "le compteur et les chiffres officiels actualisés — intérêts, ciseau 1995-2026, équivalences budgétaires (la page où mène le QR code du livre)"
+    note: "la page où mène le QR code imprimé dans le livre : compteur en direct, coût de la dette, ciseau 1995-2026, équivalences budgétaires"
 related_awp:
   - label: "Qu'est-ce que l'anthropie ? Principes d'une hypothèse"
     awp: "awp-01"

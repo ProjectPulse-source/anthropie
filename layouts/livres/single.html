@@ -47,23 +47,25 @@
     </aside>
   </div>
 
-  {{ partial "book-related-awp.html" . }}
-
   {{- /* Ressources et données du livre — présence par le dépôt, éditorial par
          le front matter : liste ressources_livre (label, url, note facultative).
-         Rien déclaré = rien affiché ; même idiome que subtitle/price/reviews. */ -}}
+         Rien déclaré = rien affiché ; même idiome que subtitle/price/reviews.
+         Placé AVANT les Working Papers : demande auteur 15/08 (« plus en
+         évidence » — c'est le prolongement vivant du livre). */ -}}
   {{ with .Params.ressources_livre }}
   <section class="book-others">
     <h2 class="book-others__title">Ressources et données du livre</h2>
     <ul class="book-others__list">
       {{ range . }}
       <li class="book-others__item">
-        <a href="{{ .url }}"{{ if hasPrefix .url "http" }} target="_blank" rel="noopener"{{ end }}>{{ partial "fr-typo.html" .label }}</a>{{ with .note }}<span class="book-others__subtitle"> — {{ partial "fr-typo.html" . }}</span>{{ end }}
+        <a href="{{ .url }}"{{ if hasPrefix .url "http" }} target="_blank" rel="noopener"{{ end }}><strong>{{ partial "fr-typo.html" .label }}</strong></a>{{ with .note }}<span class="book-others__subtitle"> — {{ partial "fr-typo.html" . }}</span>{{ end }}
       </li>
       {{ end }}
     </ul>
   </section>
   {{ end }}
+
+  {{ partial "book-related-awp.html" . }}
 
   {{- /* Du même auteur — maillage livre↔livre généré depuis la section
          (GEO-04 lot 1, item 4). Aucune donnée nouvelle : titres + sous-titres
