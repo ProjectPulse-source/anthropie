@@ -36,7 +36,15 @@
   "ratio_interets_justice": "7,2",
   "pct_interets_education": "40",
   "pct_interets_sante": "23",
+  "croissance_annuelle_pct": "5,7",
   "releve_le": "15/08/2026"
+ },
+ "live": {
+  "_usage": "Parametres du compteur anime (extrapolation mecanique) -- consommes par le partial dette-chiffres via data-attributes.",
+  "mdeur": 3536.1,
+  "periode": "T1 2026",
+  "fin_periode_iso": "2026-03-31",
+  "croissance_annuelle_pct": 5.7
  },
  "dette_trimestrielle": {
   "source": "INSEE, dette de Maastricht des administrations publiques",

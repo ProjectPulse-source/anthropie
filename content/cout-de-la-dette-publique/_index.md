@@ -18,7 +18,9 @@ faq:
 
 À la question «&nbsp;combien coûte la dette publique&nbsp;?&nbsp;», la mesure la plus directe n'est pas le montant de l'encours — c'est la **charge d'intérêts versés** chaque année par les administrations publiques&nbsp;: **{{< dette-val "interets_mdeur" >}}&nbsp;milliards d'euros en {{< dette-val "interets_annee" >}}**, soit {{< dette-val "interets_pct_pib" >}}&nbsp;% du PIB et **{{< dette-val "interets_sur_recettes_pct" >}}&nbsp;% de l'ensemble des recettes publiques** (Eurostat). Cette charge a augmenté de **{{< dette-val "interets_hausse_pct" >}}&nbsp;%** depuis le creux exceptionnel de {{< dette-val "interets_creux_annee" >}} — et de **{{< dette-val "interets_hausse_2019_pct" >}}&nbsp;%** depuis 2019, avant la rupture sanitaire&nbsp;: les deux bases de comparaison mènent à la même conclusion. L'encours, lui&nbsp;:
 
-{{< dette-chiffres >}}
+{{< dette-chiffres live="true" >}}
+
+Pour lire ces chiffres sans être spécialiste, la chaîne tient en quatre maillons&nbsp;: l'État emprunte chaque année plus qu'il ne rembourse, donc le **stock** de dette grossit. Ce stock a un **prix moyen** — le taux auquel il a été emprunté au fil du temps. Ce prix se paie chaque année&nbsp;: ce sont les **intérêts**, dus avant tout choix budgétaire. Et quand les taux de marché remontent, le prix moyen suit avec retard — la facture annuelle grossit, et la question cesse d'être «&nbsp;combien&nbsp;» pour devenir «&nbsp;**qui la paiera**&nbsp;».
 
 ## Le ciseau&nbsp;: trente ans d'anesthésie, puis le retournement
 
@@ -52,6 +54,6 @@ L'honnêteté oblige à le dire&nbsp;: **les agrégats ne montrent aucune baisse
 
 ## D'où viennent ces chiffres
 
-Toutes les valeurs de cette page sont **dérivées automatiquement des sources officielles**, jamais recopiées&nbsp;: dette de Maastricht trimestrielle de l'INSEE (séries 010777616 — encours en milliards d'euros — et 010777608 — % du PIB)&nbsp;; intérêts versés par les administrations publiques et recettes totales (Eurostat, `gov_10a_main`, D41PAY et TR)&nbsp;; dépenses par fonction COFOG (Eurostat, `gov_10a_exp`)&nbsp;; taux apparent calculé comme intérêts de l'année rapportés à l'encours de fin d'année précédente. Dernier relevé&nbsp;: {{< dette-val "releve_le" >}}. Les données consolidées sont publiées en accès libre&nbsp;: [dette_officielle.json](/dette_officielle.json). Pour suivre l'encours en continu, le [compteur de la dette](https://projectpulse-source.github.io/dette-publique-france/) — site compagnon du livre — offre la visualisation interactive.
+Toutes les valeurs de cette page sont **dérivées automatiquement des sources officielles**, jamais recopiées&nbsp;: dette de Maastricht trimestrielle de l'INSEE (séries 010777616 — encours en milliards d'euros — et 010777608 — % du PIB)&nbsp;; intérêts versés par les administrations publiques et recettes totales (Eurostat, `gov_10a_main`, D41PAY et TR)&nbsp;; dépenses par fonction COFOG (Eurostat, `gov_10a_exp`)&nbsp;; taux apparent calculé comme intérêts de l'année rapportés à l'encours de fin d'année précédente. Dernier relevé&nbsp;: {{< dette-val "releve_le" >}}. Les données consolidées sont publiées en accès libre&nbsp;: [dette_officielle.json](/dette_officielle.json). Le compteur animé en tête de page est une extrapolation mécanique entre deux publications trimestrielles — jamais une donnée.
 
 {{< canonical-definition >}}

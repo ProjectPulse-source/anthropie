@@ -485,6 +485,23 @@ def main() -> int:
         print("ECHEC: %d garde(s) sur les derives -- AUCUNE ecriture." % len(FAILURES))
         return 1
 
+    # parametres du compteur anime de la page (extrapolation depuis l'ancre
+    # officielle -- le JS de la page ne contient AUCUN nombre en dur)
+    q_sorted = sorted(dette_mdeur)
+    if len(q_sorted) < 5:
+        print("ECHEC: moins de 5 trimestres, croissance annuelle incalculable.")
+        return 1
+    prev_year_q = q_sorted[-5]
+    croissance = round((dette_mdeur[lastq] / dette_mdeur[prev_year_q] - 1) * 100.0, 1)
+    in_band("croissance annuelle du stock", croissance, 0.0, 15.0)
+    ly, lq = int(lastq[:4]), int(lastq[-1])
+    fin_mois = lq * 3
+    fin_jour = {3: 31, 6: 30, 9: 30, 12: 31}[fin_mois]
+    fin_periode_iso = "%d-%02d-%02d" % (ly, fin_mois, fin_jour)
+    if FAILURES:
+        print("ECHEC: %d garde(s) sur le bloc live -- AUCUNE ecriture." % len(FAILURES))
+        return 1
+
     now_fr = datetime.now(timezone.utc).strftime("%d/%m/%Y")
     now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
@@ -523,7 +540,17 @@ def main() -> int:
         "ratio_interets_justice": fr(round(int_equiv / cof24["GF0303"], 1)),
         "pct_interets_education": str(round(int_equiv / cof24["GF09"] * 100)),
         "pct_interets_sante": str(round(int_equiv / cof24["GF07"] * 100)),
+        "croissance_annuelle_pct": fr(croissance),
         "releve_le": now_fr,
+    }
+
+    live = {
+        "_usage": ("Parametres du compteur anime (extrapolation mecanique) -- "
+                   "consommes par le partial dette-chiffres via data-attributes."),
+        "mdeur": dette_mdeur[lastq],
+        "periode": fr_quarter(lastq),
+        "fin_periode_iso": fin_periode_iso,
+        "croissance_annuelle_pct": croissance,
     }
 
     payload = {
@@ -531,6 +558,7 @@ def main() -> int:
                            "-- ne pas editer a la main."),
         "releve_le": now_iso,
         "affichage": affichage,
+        "live": live,
         "dette_trimestrielle": {
             "source": "INSEE, dette de Maastricht des administrations publiques",
             "idbanks": {"mdeur": "010777616", "pct_pib": "010777608"},

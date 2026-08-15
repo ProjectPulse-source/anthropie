@@ -1,18 +1,21 @@
 {{- /* dette-chiffres.html — bloc « dernière donnée officielle » de la dette
        publique. Source unique : data/dette_officielle.json (généré par
-       scripts/update_dette_insee.py). Garde-fous (arbitrage panel 15/08) :
-       - données absentes ou incomplètes => errorf (le bloc ne disparaît
-         jamais en silence) ;
-       - garde de fraîcheur dans le BUILD (survit à la mort du cron) : la
-         période économique affichée est le signal — au-delà de ~290 j
-         après le début du dernier trimestre publié, warnf. La CI utilise
-         `hugo --minify` sans `--quiet` : le warnf est visible. */ -}}
+       scripts/update_dette_insee.py). Entrée : dict { "page": <Page>,
+       "live": <bool> }. Avec live=true, ajoute le compteur animé — une
+       EXTRAPOLATION étiquetée, ancrée sur les data-attributes générés depuis
+       le JSON (aucun nombre en dur dans le JS ; sans JS, rien de cassé :
+       les éléments restent hidden). Garde-fous inchangés (arbitrage panel
+       15/08) : errorf si données absentes, warnf si périmées — la garde vit
+       dans le BUILD, la CI n'utilise jamais --quiet. */ -}}
+{{- $page := .page -}}
+{{- $live := .live -}}
 {{- $d := site.Data.dette_officielle -}}
 {{- if not $d -}}
   {{- errorf "dette-chiffres: data/dette_officielle.json ABSENT — lancer scripts/update_dette_insee.py" -}}
 {{- else -}}
 {{- $a := $d.affichage -}}
 {{- if not $a -}}{{- errorf "dette-chiffres: bloc affichage absent du JSON" -}}{{- end -}}
+{{- if and $live (not $d.live) -}}{{- errorf "dette-chiffres: bloc live absent du JSON (relancer le script)" -}}{{- end -}}
 {{- $p := $d.dette_trimestrielle.derniere_periode -}}
 {{- $yr := int (substr $p 0 4) -}}
 {{- $q := int (substr $p 6 1) -}}
@@ -21,10 +24,48 @@
 {{- if gt $age 290 -}}
   {{- warnf "dette-chiffres: derniere periode %s agee de %d jours — relancer scripts/update_dette_insee.py (ou verifier le workflow dette-insee.yml)" $p $age -}}
 {{- end -}}
-<aside class="dette-chiffres">
+<aside class="dette-chiffres"{{ if $live }} data-live-mdeur="{{ $d.live.mdeur }}" data-live-fin="{{ $d.live.fin_periode_iso }}" data-live-taux="{{ $d.live.croissance_annuelle_pct }}"{{ end }}>
   <p class="dette-chiffres__titre">Dette publique française&nbsp;— dernière donnée officielle</p>
+  {{- if $live }}
+  <p class="dette-chiffres__live" hidden>
+    <span class="dette-chiffres__live-valeur" id="dette-live-valeur">—</span>
+    <span class="dette-chiffres__live-vitesse" id="dette-live-vitesse"></span>
+  </p>
+  {{- end }}
   <p class="dette-chiffres__valeurs"><strong>{{ index $a "dette_mdeur" }}&nbsp;milliards d'euros</strong>, soit <strong>{{ index $a "dette_pct_pib" }}&nbsp;% du PIB</strong>, au {{ index $a "dette_periode" }}.</p>
+  {{- if $live }}
+  <p class="dette-chiffres__note" hidden id="dette-live-note">Le chiffre animé est une <strong>extrapolation mécanique</strong> depuis la publication INSEE du {{ index $a "dette_periode" }}, au rythme observé sur un an (+{{ index $a "croissance_annuelle_pct" }}&nbsp;% l'an)&nbsp;— ni une observation, ni une prévision.</p>
+  {{- end }}
   <p class="dette-chiffres__source">Source&nbsp;: INSEE, dette de Maastricht des administrations publiques (séries 010777616 et 010777608)&nbsp;· relevé le {{ index $a "releve_le" }}&nbsp;· <a href="/dette_officielle.json">données brutes (JSON)</a>.</p>
-  <p class="dette-chiffres__liens">Ce que cette dette coûte&nbsp;: <a href="/cout-de-la-dette-publique/">Combien coûte la dette publique&nbsp;?</a>&nbsp;· Visualisation interactive&nbsp;: <a href="https://projectpulse-source.github.io/dette-publique-france/" target="_blank" rel="noopener">le compteur de la dette</a> (site compagnon du livre).</p>
+  {{- if ne $page.RelPermalink "/cout-de-la-dette-publique/" }}
+  <p class="dette-chiffres__liens">Ce que cette dette coûte, et pourquoi&nbsp;: <a href="/cout-de-la-dette-publique/">Combien coûte la dette publique&nbsp;?</a></p>
+  {{- end }}
 </aside>
+{{- if $live }}
+<script>
+(function () {
+  "use strict";
+  var bloc = document.querySelector(".dette-chiffres[data-live-mdeur]");
+  if (!bloc) return;
+  var base = parseFloat(bloc.getAttribute("data-live-mdeur")) * 1e9;
+  var fin = Date.parse(bloc.getAttribute("data-live-fin") + "T00:00:00Z");
+  var taux = parseFloat(bloc.getAttribute("data-live-taux")) / 100;
+  if (!isFinite(base) || !isFinite(fin) || !isFinite(taux)) return;
+  var parSeconde = base * taux / 31557600;
+  var valeur = document.getElementById("dette-live-valeur");
+  var vitesse = document.getElementById("dette-live-vitesse");
+  var note = document.getElementById("dette-live-note");
+  var fmt = new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 0 });
+  function tic() {
+    var estimation = base + (Date.now() - fin) / 1000 * parSeconde;
+    valeur.textContent = fmt.format(estimation) + " €";
+  }
+  vitesse.textContent = "(≈ +" + fmt.format(Math.round(parSeconde / 100) * 100) + " € par seconde, estimation)";
+  tic();
+  valeur.parentElement.removeAttribute("hidden");
+  note.removeAttribute("hidden");
+  setInterval(tic, 1000);
+})();
+</script>
+{{- end }}
 {{- end -}}

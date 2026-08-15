@@ -1,2 +1,4 @@
-{{- /* Relais vers le partial single-source. Toute la logique vit dans le partial. */ -}}
-{{ partial "dette-chiffres.html" .Page }}
+{{- /* Relais vers le partial single-source. {{< dette-chiffres >}} = bloc
+       statique ; {{< dette-chiffres live="true" >}} = ajoute le compteur
+       animé (extrapolation étiquetée). Toute la logique vit dans le partial. */ -}}
+{{ partial "dette-chiffres.html" (dict "page" .Page "live" (eq (.Get "live") "true")) }}
