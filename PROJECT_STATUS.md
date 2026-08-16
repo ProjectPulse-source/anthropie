@@ -1446,6 +1446,34 @@ pas d'auteur.
 
 ## 6. Chantiers reportés / à activer si signal
 
+- **⛔ ARTICLE WIKIPÉDIA — NON, et ne pas re-litiger avant qu'un des quatre
+  déclencheurs ci-dessous soit atteint (mesuré le 2026-08-16).**
+  État réel de la couverture par des **tiers** :
+  **0 recension éditoriale** d'un livre dans la presse ; **1** seule recension
+  existante (Philippe Martin, 2025-11-10) et elle est publiée dans « **Parole de
+  lecteurs** » — un blog de lecteurs hébergé par *Alternatives Économiques*, donc
+  contenu contributif, pas une source secondaire éditoriale. Les 20 fiches de
+  `content/publications/` sont des textes **écrits par** l'auteur, pas **sur**
+  lui. Les livres sont en **auto-édition** (obstacle quasi rédhibitoire aux
+  critères « écrivains » de fr.wikipédia, qui supposent le compte d'éditeur), et
+  `works.yaml` mesure lui-même `citation_pattern: "auto-circulation présumée"`
+  avec Google Scholar à 0 sur plusieurs AWP.
+  **Tenter serait net-négatif** : une page créée par le sujet ou un proxy tombe
+  sous WP:AUTOBIOGRAPHIE + conflit d'intérêts ; le débat de suppression qui suit
+  est **public et indexé** — on fabriquerait une page faisant autorité pour dire
+  que la communauté n'a trouvé aucune notoriété, exactement l'inverse du but GEO,
+  et le titre devient plus difficile à recréer ensuite.
+  **Wikipédia est un thermomètre, pas un levier** : c'est le signal d'entité le
+  plus fort pour les moteurs et les modèles *parce qu'*il ne se fabrique pas.
+  **Déclencheurs de réexamen** — un seul suffit à rouvrir la question :
+  (1) ≥ 2 recensions **éditoriales** indépendantes, espacées dans le temps ;
+  (2) un livre publié à **compte d'éditeur** ; (3) un article peer-reviewed avec
+  des citations **indépendantes** (pas d'auto-circulation) ; (4) le concept
+  d'anthropie **discuté par des tiers** dans la littérature ou la presse — cette
+  voie viserait un article sur le *concept*, pas sur la personne.
+  Contribution légitime entre-temps, à ne pas confondre avec un levier : enrichir
+  l'article existant *Dette publique de la France* en **sourçant l'INSEE et
+  Eurostat**, jamais le site de l'auteur.
 - **Catégorie "Académique"** dans NOTES_PUBLICATIONS.md : à activer 
   quand une vraie revue peer-reviewed publie une fiche 
   (ex. Droit et Société). Décision : reclasser ou non Lectures 
