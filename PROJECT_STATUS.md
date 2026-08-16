@@ -101,11 +101,23 @@ l'invariant du docstring dit désormais la distinction, pour qu'une session futu
 → « CONTENU INCHANGE », aucun diff) ; **4 linters à 0** (corpus-counters, console-encoding,
 geo-coverage, fiches-registre). Rien poussé.
 
-**⏸ Restes nommés** : (1) **geste Laura** — `Q138910896 P921 Q3024794` (l'item du livre porte
-`Q3024789`, générique tous pays, pas le nœud français) ; (2) **arbitrage ouvert** — DOI Zenodo
-du jeu de données, écarté pour l'instant : coût récurrent (~4 dépôts/an) avant toute mesure de
-retour ; (3) **option éditoriale** — second graphe du taux apparent (série déjà dans le JSON,
-racontée par la prose mais jamais montrée).
+**✅ EN LIGNE le même jour** — push auteur `37054d6..19ed171`, déploiement Hugo en succès.
+Vérifié **par la sortie réelle**, pas par le code retour : page 200, **2 blocs JSON-LD**
+(`FAQPage` + `Dataset`), `license` CC BY 4.0 dans le balisage **et** dans la prose, `about`
+→ Q3024794, 9 `variableMeasured`, accents corrects ; endpoint `/dette_officielle.json` 200,
+porteur de `_licence` et **SHA-identique au dépôt** ; `<title>` du SVG accentué en ligne.
+
+**✅ Wikidata — geste Laura exécuté et relu par l'API** : `Q138910896` `P921` porte désormais
+**3 valeurs** — anthropie (`Q138827949`), `Q3024789` (*dette de l'État*, générique) et
+**`Q3024794`** (*dette publique de la France*), rang normal ; 12 propriétés au total, donc
+aucun effet de bord. Les deux surfaces concordent enfin : le `about` du `Dataset` et le `P921`
+de l'item du livre désignent le même nœud, celui où atterrit toute résolution d'entité sur la
+dette publique française.
+
+**⏸ Restes nommés** : (1) **arbitrage ouvert** — DOI Zenodo du jeu de données, écarté pour
+l'instant : coût récurrent (~4 dépôts/an) avant toute mesure de retour ; (2) **option
+éditoriale** — second graphe du taux apparent (série déjà dans le JSON, racontée par la prose
+mais jamais montrée).
 
 ### 2026-08-15 (soir) — Registre EN INTÉGRAL `/en/register-of-offloaded-costs/` : traduction native des 165 jalons via le module de traduction (commande auteur)
 
