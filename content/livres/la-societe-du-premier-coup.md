@@ -7,6 +7,7 @@ lastmod: 2026-08-10  # date de la derniere modification de contenu (fraicheur le
 description: "Nous ne disposons pas tous du même nombre d'essais. Ce livre propose une grille pour rendre visible une dimension des inégalités que les colonnes habituelles — revenus, patrimoine, mobilité — laissent hors champ : ce qu'un échec coûte selon celui qui le commet, et combien de tentatives une trajectoire autorise réellement."
 description_en: "We are not all granted the same number of attempts. This book offers a grid for seeing a dimension of inequality that the usual columns — income, wealth, mobility — leave out of frame: what a failure costs depending on who fails, and how many attempts a trajectory actually allows. A narrative essay for the general reader, companion to working paper AWP-08."
 isbn: "978-2-9586347-6-6"
+wikidata_qid: "Q141072263"  # item créé le 15/08/2026, resté absent de la fiche jusqu'au 16/08 — alimente le sameAs du JSON-LD Book
 pages: 138  # sync data/works.yaml (book-premier-coup.pages) — nombre de pages broché
 price: "13.90"  # prix broché EUR — affiché sur la page + schema.org Offer
 kindle_price: "5.99"  # prix EUR de l'édition Kindle (non rendu : information de registre)

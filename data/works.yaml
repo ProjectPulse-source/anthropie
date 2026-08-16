@@ -485,7 +485,7 @@ works:
     asin_broche: "2958634760"   # = ISBN-10 du bloc AFNIL, clé de contrôle vérifiée
     asin_kindle: "B0H1619K7W"   # Kindle SANS ISBN (ASIN) — ne jamais réutiliser 978-2-9586347-6-6
     license: ""  # à préciser
-    wikidata: ""  # todo — item du livre à créer (scripts Wikidata/, import Laura)
+    wikidata: "Q141072263"  # créé par Laura le 15/08/2026 ; readback API le 16/08 : ISBN 978-2-9586347-6-6 (P212), auteur Q138909233 (P50), P856 → fiche site
     openlibrary:
       edition: "OL62424864M"   # créée 2026-08-10 (formulaire web, compte st_phane_lalut)
       work: "OL45876839W"
