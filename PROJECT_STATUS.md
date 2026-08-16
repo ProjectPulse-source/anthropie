@@ -53,6 +53,60 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-08-16 — Page dette : la PR mensuelle vide désamorcée, et la compilation publiée comme **jeu de données** (CC BY 4.0)
+
+**Question auteur** : la page `/cout-de-la-dette-publique/` peut-elle suivre les mises à jour
+INSEE, et comment la référencer dans Wikidata ? Réponse mesurée, pas déclarée : `python
+scripts/update_dette_insee.py --check` exécuté en séance — INSEE + Eurostat rapatriés, gardes
+passées, **T1 2026 = 3 536,1 Md€ / 117,5 %**, intérêts **2025 = 66,6 Md€**. La page était donc
+déjà à jour, et **aucun chiffre n'y est écrit en dur** (tout passe par `dette-val` ou les
+placeholders `{dette.*}` ; clé inconnue = échec de build).
+
+**Défaut trouvé et corrigé (commit `94bf48e`)** — à données identiques, le script réécrivait
+quand même les deux fichiers, par les seuls champs `releve_le`. Le `git diff --quiet` de
+`dette-insee.yml` était donc **toujours faux** : le workflow aurait ouvert **une PR par mois
+pour 4 lignes de date**, là où il annonce ~4 gestes/an. État déclaré ≠ état réel ; rien
+n'aurait cassé, l'usure serait tombée sur le merge humain, seule barrière de publication —
+exactement la cause de mort inscrite dans sa propre clause de décroissance. Correctif :
+comparaison du paquet **privé de ses horodatages** (`_hors_dates`). Aucun champ nouveau — un
+`verifie_le` exigerait un commit mensuel pour rester vrai, soit le défaut qu'on corrige.
+Témoins : inchangé → diff vide ; `dette_mdeur` mutée à `9 999,9` → réécriture, valeur vraie
+restaurée, date du jour.
+
+**Ajout (commit `2dc8016`) — JSON-LD `Dataset`.** La page n'émettait que du `FAQPage` : sa
+compilation était lue comme de la prose alors qu'elle expose déjà `/dette_officielle.json` en
+accès libre. Partial `layouts/partials/schema-dataset-dette.html`, émis sur la seule page
+portant `dataset_dette: true` (jamais un gate sur une URL). **Rien n'y est recopié** :
+provenance, unités, millésimes, date et identité auteur se dérivent de
+`data/dette_officielle.json` + `data/author.toml` — prouvé par mutation (`2099`,
+`MUTATION-TEMOIN`, `1999-01-01` traversent tous les trois jusqu'au balisage). `about` pointe
+**Q3024794** (dette publique de la France), en cohérence avec le geste Wikidata demandé sur
+l'item du livre.
+
+**Licence — décision auteur : CC BY 4.0 sur la COMPILATION** (assemblage, grandeurs dérivées,
+mise en cohérence) ; les séries brutes restent INSEE et Eurostat. Portée sur les **trois
+surfaces qui distribuent la donnée**, parce que le fichier voyage seul : prose de la page,
+`license` du JSON-LD, champ `_licence` **dans** le paquet JSON. `llms.txt` aligné.
+
+**Défaut de classe corrigé au passage** : les libellés destinés aux lecteurs étaient en ASCII
+(« interets verses », « sante », « securite », « francaise »). La contrainte console cp1252,
+qui ne porte que sur `print()`, avait été appliquée par habitude à des chaînes qui partent
+dans le JSON public, dans le `Dataset` et dans le `<title>`/`<desc>` du SVG (texte des
+lecteurs d'écran). Corrigé **à la source**, donc propagé aux trois surfaces d'un coup ;
+l'invariant du docstring dit désormais la distinction, pour qu'une session future ne
+« répare » pas ces accents en ASCII.
+
+**Preuves** : `hugo --minify` vert ; 2 blocs JSON-LD (`FAQPage` + `Dataset`), 9
+`variableMeasured` ; octets JSON et SVG décodent en UTF-8 sans BOM ; idempotence (2ᵉ exécution
+→ « CONTENU INCHANGE », aucun diff) ; **4 linters à 0** (corpus-counters, console-encoding,
+geo-coverage, fiches-registre). Rien poussé.
+
+**⏸ Restes nommés** : (1) **geste Laura** — `Q138910896 P921 Q3024794` (l'item du livre porte
+`Q3024789`, générique tous pays, pas le nœud français) ; (2) **arbitrage ouvert** — DOI Zenodo
+du jeu de données, écarté pour l'instant : coût récurrent (~4 dépôts/an) avant toute mesure de
+retour ; (3) **option éditoriale** — second graphe du taux apparent (série déjà dans le JSON,
+racontée par la prose mais jamais montrée).
+
 ### 2026-08-15 (soir) — Registre EN INTÉGRAL `/en/register-of-offloaded-costs/` : traduction native des 165 jalons via le module de traduction (commande auteur)
 
 **Commande auteur** : « la même page » qu'en FR, « traduction parfaite et native, voir module
