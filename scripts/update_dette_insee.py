@@ -23,7 +23,10 @@ Invariants (arbitrage panel 2026-08-15) :
   - les ratios d'equivalence sont calcules ICI, sur UN MEME millesime ;
   - aucune chaine brute des API dans les sorties : nombres re-parses en float,
     periodes revalidees par regex, libelles ecrits en dur dans ce script ;
-  - sorties console ASCII pur (console Windows cp1252).
+  - sorties console ASCII pur (console Windows cp1252) ;
+  - une reecriture ne se declenche QUE si un chiffre a bouge : a donnees
+    identiques les deux "releve_le" sont conserves, donc le depot ne bouge pas
+    et le workflow n'ouvre pas de PR vide (mesure du 2026-08-16).
 
 Usage :
   python scripts/update_dette_insee.py             # ecrit tout
@@ -372,6 +375,16 @@ def build_svg(dette_pib: dict[str, float], d41_pib: dict[str, float]) -> str:
 
 
 # ------------------------------------------------------------------- sortie
+def _hors_dates(payload: dict) -> str:
+    """Empreinte du paquet PRIVEE de ses deux horodatages, pour repondre a la
+    seule question qui decide d'une publication : un chiffre a-t-il bouge ?"""
+    c = json.loads(json.dumps(payload))
+    c.pop("releve_le", None)
+    if isinstance(c.get("affichage"), dict):
+        c["affichage"].pop("releve_le", None)
+    return json.dumps(c, ensure_ascii=False, sort_keys=True)
+
+
 def atomic_write(path: Path, text: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     fd, tmp = tempfile.mkstemp(dir=str(path.parent), suffix=".tmp")
@@ -615,18 +628,43 @@ def main() -> int:
         },
     }
 
+    # -- pas de reecriture pour la seule date -------------------------------
+    # Mesure du 2026-08-16 : a donnees identiques, le paquet differait quand
+    # meme -- par les deux champs "releve_le". Donc `git diff --quiet` du
+    # workflow etait TOUJOURS faux, et dette-insee.yml ouvrait une PR chaque
+    # mois pour 4 lignes de date : 12 gestes/an la ou il en annonce ~4.
+    # L'ecart n'aurait rien casse ; il aurait use le merge humain, qui est la
+    # seule barriere de publication (clause de decroissance du workflow :
+    # "PRs laissees sans merge plus d'un trimestre => reexamen").
+    # Donc : quand rien n'a change hors dates, on conserve les dates publiees
+    # et la page reste bit pour bit identique. "releve_le" designe des lors le
+    # dernier releve AYANT MODIFIE un chiffre -- ce que la page dit en toutes
+    # lettres. Aucun champ nouveau : un second horodatage "verifie_le" exigerait
+    # un commit mensuel pour rester vrai, soit le defaut qu'on corrige.
+    inchange = payload_prev is not None and _hors_dates(payload) == _hors_dates(payload_prev)
+    if inchange:
+        payload["releve_le"] = payload_prev.get("releve_le", payload["releve_le"])
+        payload["affichage"]["releve_le"] = (
+            payload_prev.get("affichage", {}).get("releve_le",
+                                                 payload["affichage"]["releve_le"]))
+
     if check_only:
         print("OK (--check): gardes passees, rien n'est ecrit. Dette %s = %s "
-              "Md EUR / %s %% PIB ; interets %s = %s Md EUR"
+              "Md EUR / %s %% PIB ; interets %s = %s Md EUR%s"
               % (lastq, dette_mdeur[lastq], dette_pib[lastq],
-                 last_y, d41_mdeur[last_y]))
+                 last_y, d41_mdeur[last_y],
+                 " -- INCHANGE depuis le releve du " + str(payload["releve_le"])
+                 if inchange else " -- DONNEES NOUVELLES"))
         return 0
 
     txt = json.dumps(payload, ensure_ascii=False, indent=1) + "\n"
     atomic_write(OUT_JSON, txt)
     atomic_write(OUT_ENDPOINT, txt)
     atomic_write(OUT_SVG, build_svg(dette_pib, d41_pib))
-    print("OK: ecrits %s + endpoint + %s" % (OUT_JSON.name, OUT_SVG.name))
+    print("OK: ecrits %s + endpoint + %s%s"
+          % (OUT_JSON.name, OUT_SVG.name,
+             " -- CONTENU INCHANGE (dates conservees, aucun diff attendu)"
+             if inchange else " -- DONNEES NOUVELLES"))
 
     if legacy_path is not None:
         legacy = {
