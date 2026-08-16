@@ -123,9 +123,24 @@ prévention).
 depuis : capillarité, force de décroissance, « pas de report », external-audits. Hors du
 périmètre de ce dépôt, donc laissé intact.
 
-**⏸ Laissés à l'arbitrage auteur, sans les trancher (5)** : `BRIEF-CLAUDE-CODE-REDESIGN.md`,
-`BRIEF-HARMONISATION-GABARITS.md`, `AUDIT_AWP06_COHERENCE.md`,
-`docs/memo-stephane-lalut-2026-05-08.md`, `docs/stats_zenodo_2026-04-22.md`.
+**🗑 Les 5 derniers non-suivis ARCHIVÉS PUIS SUPPRIMÉS (décision auteur, 16/08)** — deux briefs
+de chantiers **exécutés depuis** (`BRIEF-CLAUDE-CODE-REDESIGN.md` 16/04,
+`BRIEF-HARMONISATION-GABARITS.md` 17/04, tous deux renvoyant à un référentiel
+`INVENTAIRE-SEO…` disparu) et trois traces datées (`AUDIT_AWP06_COHERENCE.md` 11/05 —
+audit en lecture seule, `docs/memo-stephane-lalut-2026-05-08.md`,
+`docs/stats_zenodo_2026-04-22.md`). Aucun n'avait jamais été committé : la suppression aurait
+été sans retour.
+Protocole appliqué, le même que pour `AGENTS.md` : **copie → vérification SHA-256 → suppression
+seulement ensuite**, puis **relecture de l'archive APRÈS coup** contre son manifeste (6/6
+conformes). `G:\_BACKUP_SUPPRESSIONS_2026-08-16\` porte désormais 7 fichiers / 86 720 o, dont
+`_MANIFESTE_SHA256.txt` qui donne pour chaque pièce son empreinte **et son chemin d'origine**
+dans le dépôt — le manifeste manquait au geste de la veille, il est rétabli pour `AGENTS.md`
+aussi.
+
+**Effet de bord acquis, et c'est le vrai suivi** : `git status` ne signale **plus aucun fichier
+non suivi**. C'était la condition qui avait permis à `Wikidata/` de se cacher quatre mois — un
+statut bruyant où plus personne ne lit les `??`. Désormais, **tout non-suivi qui apparaît est
+un signal**, sans qu'aucun dispositif n'ait été ajouté pour l'obtenir.
 
 ### 2026-08-16 — Page dette : la PR mensuelle vide désamorcée, et la compilation publiée comme **jeu de données** (CC BY 4.0)
 
