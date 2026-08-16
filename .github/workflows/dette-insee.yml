@@ -61,7 +61,14 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b "$BRANCH"
-          git add data/dette_officielle.json static/dette_officielle.json static/img/ciseau-dette-interets.svg
+          # Enumeration explicite : toute sortie NOUVELLE du script doit etre
+          # ajoutee ICI, sinon elle est regeneree en CI puis jamais committee --
+          # la figure resterait figee en ligne pendant que le reste s'actualise,
+          # sans erreur ni trace. (Defaut evite le 2026-08-16 en ajoutant la
+          # courbe du taux apparent.)
+          git add data/dette_officielle.json static/dette_officielle.json \
+                  static/img/ciseau-dette-interets.svg \
+                  static/img/taux-apparent-dette.svg
           git commit -m "data(dette): series INSEE/Eurostat du $(date -u +%Y-%m-%d)"
           git push origin "$BRANCH"
           gh pr create \

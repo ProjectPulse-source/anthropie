@@ -203,10 +203,31 @@ aucun effet de bord. Les deux surfaces concordent enfin : le `about` du `Dataset
 de l'item du livre désignent le même nœud, celui où atterrit toute résolution d'entité sur la
 dette publique française.
 
-**⏸ Restes nommés** : (1) **arbitrage ouvert** — DOI Zenodo du jeu de données, écarté pour
-l'instant : coût récurrent (~4 dépôts/an) avant toute mesure de retour ; (2) **option
-éditoriale** — second graphe du taux apparent (série déjà dans le JSON, racontée par la prose
-mais jamais montrée).
+**✅ Second graphe FAIT le 16/08 (demande auteur)** — `static/img/taux-apparent-dette.svg`,
+posé dans « Le mécanisme » : la courbe du **taux apparent** 1996-2025, le chaînon causal que
+la page racontait sans le montrer. Généré par le même script, **rien en dur** — témoin par
+mutation directe de `build_svg_taux` : creux forcé en 2012 et fin à 5,55 → étiquettes et
+`<desc>` suivent (2020→2012, 2,0→5,5). Palette **validée par le script du référentiel**
+(6 contrôles PASS, ΔE 24,7 protan / 33,6 vision normale) ; couleur = slot 2, celle des
+intérêts dans la figure voisine, parce que **la couleur suit l'entité** (le coût), pas le rang.
+Série unique → pas de légende, étiquetage direct des 3 seuls points que la prose cite.
+Deux écarts assumés au référentiel, **déclarés** : pas de couche de survol (l'actif est servi
+en `<img>` et vaut comme image citable — les valeurs vivent dans la prose et le JSON public,
+qui tient lieu de vue tableau) ; et la verticale pointillée du creux a été **retirée** — non
+étiquetée, elle était indiscernable d'une grille en pointillés (anti-pattern), et le creux est
+déjà porté par son point.
+
+**⚠ Deux défauts attrapés pendant ce geste, avant qu'ils ne dorment** :
+(a) le `git add` de `dette-insee.yml` **énumère les fichiers** — la nouvelle courbe aurait été
+régénérée en CI puis **jamais committée**, donc figée en ligne pendant que le reste
+s'actualise, sans erreur ni trace. Corrigé, avec le commentaire qui dit pourquoi l'énumération
+est un piège ;
+(b) le figcaption écrit en markdown dans un bloc HTML brut **n'est pas rendu** par Goldmark —
+les backticks et le lien seraient sortis en clair. Vu en contrôlant la SORTIE, pas la source.
+Réécrit en `<code>` et `<a href>`.
+
+**⏸ Reste nommé (1)** : **DOI Zenodo du jeu de données**, écarté pour l'instant — coût
+récurrent (~4 dépôts/an) avant toute mesure de retour du `Dataset`.
 
 ### 2026-08-15 (soir) — Registre EN INTÉGRAL `/en/register-of-offloaded-costs/` : traduction native des 165 jalons via le module de traduction (commande auteur)
 

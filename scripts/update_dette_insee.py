@@ -61,6 +61,7 @@ REPO = Path(__file__).resolve().parent.parent
 OUT_JSON = REPO / "data" / "dette_officielle.json"
 OUT_ENDPOINT = REPO / "static" / "dette_officielle.json"
 OUT_SVG = REPO / "static" / "img" / "ciseau-dette-interets.svg"
+OUT_SVG_TAUX = REPO / "static" / "img" / "taux-apparent-dette.svg"
 
 INSEE_URL = ("https://bdm.insee.fr/series/sdmx/data/SERIES_BDM/"
              "010777616+010777608?startPeriod=1995-Q1")
@@ -379,6 +380,83 @@ def build_svg(dette_pib: dict[str, float], d41_pib: dict[str, float]) -> str:
     return "\n".join(e) + "\n"
 
 
+def build_svg_taux(taux: dict[str, float]) -> str:
+    """Courbe du TAUX APPARENT -- le chainon causal que la page raconte sans le
+    montrer. Serie UNIQUE : donc pas de legende (le titre nomme la serie), et
+    etiquetage direct des trois seuls points que la prose cite : depart, creux,
+    arrivee. Le repere vertical est pose sur le creux MESURE, jamais sur une
+    annee en dur -- une revision qui deplace le creux deplace le repere.
+    Couleur = slot 2 de la palette, celle des interets dans l'autre figure :
+    la couleur suit l'ENTITE (le cout de la dette), pas le rang de la serie.
+    Pas de survol : l'actif est servi en <img> et vaut comme image citable ;
+    exclusion declaree, les valeurs vivent dans la prose et dans le JSON public.
+    """
+    W, H = 720, 340
+    ml, mr = 46, 14
+    ay0, ay1, amax = 280.0, 46.0, 7.0
+    years = sorted(int(y) for y in taux)
+    t0, t1 = years[0] - 0.6, years[-1] + 0.6
+
+    def x(v): return ml + (v - t0) / (t1 - t0) * (W - ml - mr)
+    def y(v): return ay0 - v / amax * (ay0 - ay1)
+
+    pts = [(x(yr), y(taux[str(yr)])) for yr in years]
+    first, last = str(years[0]), str(years[-1])
+    trough = min(taux, key=lambda k: taux[k])
+
+    def num(v): return fr(v, 1)
+
+    e = []
+    e.append('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" '
+             'role="img" aria-labelledby="ta-t ta-d" font-family="%s">'
+             % (W, H, FONT))
+    e.append('<title id="ta-t">Le taux apparent de la dette publique '
+             'française, %s-%s</title>' % (first, last))
+    e.append('<desc id="ta-d">Une courbe, en pourcentage par an. Le coût moyen '
+             'du stock de dette descend de %s %% en %s à %s %% en %s, son '
+             'minimum sur la série, puis remonte à %s %% en %s. La baisse court '
+             'sur près de vingt-cinq ans ; la remontée sur les dernières '
+             'années.</desc>'
+             % (num(taux[first]), first, num(taux[trough]), trough,
+                num(taux[last]), last))
+    e.append('<text x="%d" y="22" font-size="13" fill="%s">Taux apparent de la '
+             'dette publique, en %% par an — le coût moyen du stock</text>'
+             % (ml, INK2))
+
+    for v in (0, 2, 4, 6):
+        e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" '
+                 'stroke-width="1"/>'
+                 % (ml, y(v), W - mr, y(v), GRID if v else AXIS))
+        e.append('<text x="%d" y="%.1f" font-size="11" fill="%s" '
+                 'text-anchor="end">%d</text>' % (ml - 6, y(v) + 4, MUTED, v))
+    for yr in range(years[0] + 4, years[-1] + 1, 5):
+        e.append('<text x="%.1f" y="305" font-size="11" fill="%s" '
+                 'text-anchor="middle">%d</text>' % (x(yr), MUTED, yr))
+
+    # Pas de verticale au creux : non etiquetee, elle serait indiscernable
+    # d'une grille en pointilles (anti-pattern) et n'ajouterait rien -- le creux
+    # est deja porte par son point et son libelle direct.
+    xt = x(int(trough))
+    e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2" '
+             'stroke-linecap="round" stroke-linejoin="round"/>'
+             % (_line_path(pts), COL_INTER))
+
+    # etiquetage direct SELECTIF : jamais un nombre sur chaque point
+    def dot(px, py, txt, anchor, dx, dy):
+        e.append('<circle cx="%.1f" cy="%.1f" r="4" fill="%s"/>'
+                 % (px, py, COL_INTER))
+        e.append('<text x="%.1f" y="%.1f" font-size="12" fill="%s" '
+                 'text-anchor="%s">%s</text>'
+                 % (px + dx, py + dy, INK2, anchor, txt))
+
+    dot(pts[0][0], pts[0][1], num(taux[first]) + " % en " + first, "start", 9, 4)
+    dot(pts[-1][0], pts[-1][1], num(taux[last]) + " % en " + last, "end", -9, -10)
+    dot(xt, y(taux[trough]), num(taux[trough]) + " % en " + trough,
+        "middle", 0, 22)
+    e.append("</svg>")
+    return "\n".join(e) + "\n"
+
+
 # ------------------------------------------------------------------- sortie
 def _hors_dates(payload: dict) -> str:
     """Empreinte du paquet PRIVEE de ses deux horodatages, pour repondre a la
@@ -678,8 +756,9 @@ def main() -> int:
     atomic_write(OUT_JSON, txt)
     atomic_write(OUT_ENDPOINT, txt)
     atomic_write(OUT_SVG, build_svg(dette_pib, d41_pib))
-    print("OK: ecrits %s + endpoint + %s%s"
-          % (OUT_JSON.name, OUT_SVG.name,
+    atomic_write(OUT_SVG_TAUX, build_svg_taux(taux_apparent))
+    print("OK: ecrits %s + endpoint + %s + %s%s"
+          % (OUT_JSON.name, OUT_SVG.name, OUT_SVG_TAUX.name,
              " -- CONTENU INCHANGE (dates conservees, aucun diff attendu)"
              if inchange else " -- DONNEES NOUVELLES"))
 
