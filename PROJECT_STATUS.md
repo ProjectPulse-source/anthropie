@@ -106,11 +106,26 @@ un garde-fou qui crierait dans le vide.
 donc ignorés comme `reports/`. Une seule règle `/_*.txt` remplace `_prompt-*.txt` et couvre
 les quatre familles qui lui échappaient.
 
-**⏸ Laissés à l'arbitrage auteur, sans les trancher** : `AGENTS.md` (consignes Codex — or
-la revue Codex est remplacée par le panel interne : dispositif possiblement mort),
-`BRIEF-CLAUDE-CODE-REDESIGN.md`, `BRIEF-HARMONISATION-GABARITS.md`,
-`AUDIT_AWP06_COHERENCE.md`, `docs/memo-stephane-lalut-2026-05-08.md`,
-`docs/stats_zenodo_2026-04-22.md`.
+**🗑 `AGENTS.md` SUPPRIMÉ (décision auteur, 16/08).** Ce n'était pas seulement un dispositif
+mort — la revue Codex est remplacée par le panel interne — c'était un **doublon divergent de
+`CLAUDE.md` qui déclarait un état faux**, mesuré sur trois points : il annonçait « AWP-01..05 »
+quand `content/awp/` en compte **9** ; il ignorait **3 des 4 linters** du dépôt
+(`check-geo-coverage`, `check-console-encoding`, `check-fiches-registre`) ; et il renvoyait à
+un `.Codex/rules/` **qui n'a jamais existé**. Une session qui l'aurait lu aurait travaillé sur
+une carte périmée en croyant suivre les conventions.
+Fichier **jamais versionné** : archivé avant suppression, copie **SHA-256 vérifiée** dans
+`G:\_BACKUP_SUPPRESSIONS_2026-08-16\AGENTS.md_anthropie-site_20260816` (récupération, pas
+prévention).
+
+**⚠ Même défaut un étage plus haut, NON traité — arbitrage auteur en attente** :
+`~\.Codex\AGENTS.md` existe (2 378 o, **dernière modification le 31/05**) face à
+`~\.claude\CLAUDE.md` (20 855 o, à jour). Il ne contient **aucune** des quatre règles ratifiées
+depuis : capillarité, force de décroissance, « pas de report », external-audits. Hors du
+périmètre de ce dépôt, donc laissé intact.
+
+**⏸ Laissés à l'arbitrage auteur, sans les trancher (5)** : `BRIEF-CLAUDE-CODE-REDESIGN.md`,
+`BRIEF-HARMONISATION-GABARITS.md`, `AUDIT_AWP06_COHERENCE.md`,
+`docs/memo-stephane-lalut-2026-05-08.md`, `docs/stats_zenodo_2026-04-22.md`.
 
 ### 2026-08-16 — Page dette : la PR mensuelle vide désamorcée, et la compilation publiée comme **jeu de données** (CC BY 4.0)
 
