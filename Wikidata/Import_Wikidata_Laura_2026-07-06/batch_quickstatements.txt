@@ -1,0 +1,142 @@
+// ============================================================================
+// BATCH QUICKSTATEMENTS V1 — Alignement GEO Wikidata — préparé le 2026-07-04
+// Source des cibles : reports/geo_audit/GEO_WORKLIST_NOEUDS_EXTERNES.md (§ 0, § 2)
+// État réel relevé le 2026-07-04 (voir ETAT_ACTUEL.md) — chaque bloc = un écart constaté.
+// Format : V1, une commande par ligne, séparateur TABULATION.
+// Les lignes commençant par // sont des commentaires : les filtrer si l'outil les rejette.
+// Une ligne préfixée « - » RETIRE l'énoncé exact ; sans préfixe, elle l'ajoute.
+// ============================================================================
+
+// ---------------------------------------------------------------------------
+// BLOC 1 — Q138827949 (concept anthropie) — worklist 2.1
+// /* Écart : descriptions FR/EN disent « Mécanisme / Mechanism » et le FR ajoute
+//    « et techniques » + un point final. Cible = forme courte du verbatim
+//    canonique : l'anthropie est une HYPOTHÈSE (P31 Q41719 déjà présent).
+//    Labels et alias vérifiés : aucune confusion avec le principe anthropique,
+//    aucun « terme inventé par » (nuance actée 04/07). */
+Q138827949	Dfr	"hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent"
+Q138827949	Den	"hypothesis that social systems displace disorder rather than resolve it"
+
+// ---------------------------------------------------------------------------
+// BLOC 2 — Q138909233 (Stéphane Lalut) — worklist 2.2
+// /* Écart : descriptions actuelles = « auteur du cadre anthropique / author of
+//    the anthropic framework » — collision lexicale EN avec le principe
+//    anthropique, et « essayiste » absent alors que P106 Q11774202 le porte déjà.
+//    Cible worklist : « économiste, chercheur indépendant et essayiste ».
+//    EN : « French » conservé en tête par convention de désambiguïsation Wikidata. */
+Q138909233	Dfr	"économiste, chercheur indépendant et essayiste"
+Q138909233	Den	"French economist, independent researcher and essayist"
+
+// ---------------------------------------------------------------------------
+// BLOC 3 — Q139771993 (AWP-05) — worklist 2.3
+// /* Écart : l'item porte le CONCEPT-DOI 10.5281/zenodo.19269486 au lieu du DOI
+//    de VERSION 10.5281/zenodo.19269487 (vérifié le 04/07 sur l'API Zenodo :
+//    record 19269487 → doi=…19269487, conceptdoi=…19269486). Le lien P953
+//    Zenodo pointe aussi sur le record concept. Convention Option B (12-13/05) :
+//    jamais de concept-DOI. Les 5 autres AWP sont conformes — aucune ligne. */
+-Q139771993	P356	"10.5281/ZENODO.19269486"
+Q139771993	P356	"10.5281/ZENODO.19269487"
+-Q139771993	P953	"https://zenodo.org/records/19269486"
+Q139771993	P953	"https://zenodo.org/records/19269487"
+
+// ---------------------------------------------------------------------------
+// BLOC 4 — Q138827344 (livre ANTHROPIE) — worklist 2.5
+// /* Écart : P1104 (nombre de pages) = 606 ; canonique = 622 (data/works.yaml,
+//    content/livres/anthropie-ordre-ici-dette-ailleurs.md). Reprend tel quel le
+//    correctif différé du 29/05 (Wikidata/correction_pagination_anthropie_…qs) :
+//    claim sans qualificatif ni référence → remove/add sans perte.
+//    Dates 2025 et ISBN 978-2-9586347-2-8 vérifiés conformes — aucune autre ligne. */
+-Q138827344	P1104	+606
+Q138827344	P1104	+622
+
+// ---------------------------------------------------------------------------
+// BLOC 5 — Q138910896 (livre Dette publique) — worklist 2.5
+// /* Écart : P1104 = 225 ; canonique broché = 224 (data/works.yaml,
+//    content/livres/dette-publique-qui-paie-vraiment.md). NB : la claim actuelle
+//    porte 1 référence (vraisemblablement Amazon, qui affiche 225) — elle sera
+//    perdue au remove/add, assumé : la source canonique est le registre auteur.
+//    Dates 2025 et ISBN 978-2-9586347-3-5 vérifiés conformes — aucune autre ligne. */
+-Q138910896	P1104	+225
+Q138910896	P1104	+224
+
+// ---------------------------------------------------------------------------
+// BLOC 6 — Q138911733 (L'Odyssée des idées) — worklist 2.4 — ITEM CRITIQUE
+// /* Écart global : l'item décrit ENTIÈREMENT l'ancienne édition 2023
+//    (ISBN 978-2-9586347-1-1, P577=2023, ASIN broché dépublié 295863471X,
+//    descriptions « (2023) »). Cible = édition canonique 2026 :
+//    ISBN 978-2-9586347-4-2, 696 pages, publication 2026. Consigne worklist :
+//    « basculer les claims d'édition plutôt que de laisser l'hybride »
+//    (l'hybride 2023 + claims 2026 = le faux énoncé M4 qu'on veut éteindre).
+//    Les valeurs retirées restent documentées dans ETAT_ACTUEL.md (rollback). */
+// /* 6a — labels : casse canonique « des idées » (site + works.yaml), i minuscule. */
+Q138911733	Lfr	"L'Odyssée des idées"
+Q138911733	Len	"L'Odyssée des idées"
+// /* 6b — descriptions : formulation alignée sur le sous-titre canonique
+//    (« de l'aube de l'humanité… ») + mention explicite de l'édition 2026. */
+Q138911733	Dfr	"essai de Stéphane Lalut sur l'histoire des idées, de l'aube de l'humanité à l'intelligence artificielle (nouvelle édition 2026)"
+Q138911733	Den	"essay by Stéphane Lalut on the history of ideas, from the dawn of humanity to artificial intelligence (new edition 2026)"
+// /* 6c — ISBN-13 : bascule ancien → édition 2026 (les 2 références attachées à
+//    l'ancien ISBN sourcent l'ancienne édition ; perte assumée). */
+-Q138911733	P212	"978-2-9586347-1-1"
+Q138911733	P212	"978-2-9586347-4-2"
+// /* 6d — date de publication : 2023 → 2026 (précision année, comme les autres
+//    livres ; date exacte connue : 2026-07-03 si Laura préfère la précision jour). */
+-Q138911733	P577	+2023-00-00T00:00:00Z/9
+Q138911733	P577	+2026-00-00T00:00:00Z/9
+// /* 6e — nombre de pages : absent → 696 (édition 2026). */
+Q138911733	P1104	+696
+// /* 6f — ASIN : 295863471X = ancien broché DÉPUBLIÉ → broché actif 2958634744.
+//    Le Kindle B0CVXQSLBQ (hérité de la 1re édition, ancre du risque de fusion)
+//    n'est volontairement PAS ajouté. */
+-Q138911733	P5749	"295863471X"
+Q138911733	P5749	"2958634744"
+// /* 6g — titre (P1476) : absent → titre principal acté pour Wikidata. */
+Q138911733	P1476	fr:"L'Odyssée des idées"
+
+// ============================================================================
+// P1680 (sous-titre) Q138911733 — ✅ DÉCISION AUTEUR RENDUE LE 2026-07-04 :
+//    OPTION A retenue (sous-titre canonique tranché le 03/07, porté par
+//    l'édition 2026). L'ancien sous-titre long encore visible sur Amazon est
+//    un état TRANSITOIRE conservé pour préserver les 159 avis (fusion Amazon
+//    en attente) — ne pas l'utiliser. Ligne désormais ACTIVE :
+// ============================================================================
+Q138911733	P1680	fr:"Culture, philosophie et science — de l'aube de l'humanité à l'intelligence artificielle"
+
+// ---------------------------------------------------------------------------
+// BLOC 7 — CRÉATION de l'item AWP-07 « La boucle anthropique » — ajouté le 2026-07-06
+// /* AWP-07 publié le 2026-07-05 : Zenodo FR DOI 10.5281/zenodo.21200286 (version),
+//    EN 10.5281/zenodo.21200288, pages site /awp/awp-07/ FR+EN. Vérifié le 06/07 :
+//    aucun item existant (« boucle anthropique » / « anthropic loop » = 0 résultat).
+//    Modèle strictement calqué sur les 6 items AWP existants (Q139771989–…994) :
+//    P31 article scientifique, P50 auteur (réf. Zenodo), P407 français (item = la
+//    version FR canonique), P577 date jour, P356 = DOI de VERSION en majuscules
+//    (convention Option B — jamais le concept-DOI), P921 sujet anthropie,
+//    P361 partie de la série Q139040913, P953 ×3 (Zenodo, site FR, site EN).
+//    Pas de DOI SocArXiv (dépôt différé volontairement). */
+CREATE
+LAST	Lfr	"La boucle anthropique : déplacement, saturation, retour — formaliser un mécanisme, de Kapp à Stiegler"
+LAST	Len	"The anthropic loop: displacement, saturation, return — formalizing a mechanism, from Kapp to Stiegler"
+LAST	Dfr	"Working paper de Stéphane Lalut formalisant la boucle anthropique (AWP-07, 2026)"
+LAST	Den	"Working paper by Stéphane Lalut formalising the anthropic loop (AWP-07, 2026)"
+LAST	P31	Q13442814
+LAST	P50	Q138909233	S854	"https://zenodo.org/records/21200286"
+LAST	P407	Q150
+LAST	P577	+2026-07-05T00:00:00Z/11
+LAST	P356	"10.5281/ZENODO.21200286"	S854	"https://zenodo.org/records/21200286"	S813	+2026-07-06T00:00:00Z/11
+LAST	P921	Q138827949
+LAST	P361	Q139040913
+LAST	P953	"https://zenodo.org/records/21200286"
+LAST	P953	"https://stephane-lalut.com/awp/awp-07/"
+LAST	P953	"https://stephane-lalut.com/en/awp/awp-07/"
+
+// ============================================================================
+// BLOC OPTIONNEL — hors périmètre FR/EN de la worklist — NE PAS IMPORTER
+// sans validation (traductions à faire relire ; corrige des fautes réelles :
+// « ükonom under forscher », « francès », et l'asymétrie Mecanismo/Meccanismo
+// vs la nouvelle définition « hypothèse »)
+// ============================================================================
+// Q138827949	Dde	"Hypothese, nach der soziale Systeme Unordnung verlagern, statt sie zu lösen"
+// Q138827949	Des	"hipótesis según la cual los sistemas sociales desplazan el desorden en lugar de resolverlo"
+// Q138827949	Dit	"ipotesi secondo cui i sistemi sociali spostano il disordine invece di risolverlo"
+// Q138909233	Dde	"französischer Ökonom, unabhängiger Forscher und Essayist"
+// Q138909233	Des	"economista, investigador independiente y ensayista francés"

@@ -1,0 +1,36 @@
+// ============================================================================
+// BATCH QuickStatements V1 — création de l'item AWP-08
+// « La réversibilité sociale comme dimension de l'inégalité »
+// Préparé le 2026-07-23. Patron : batches-generated/awp-06-2026-05-13.qs
+// (série : P31 article scientifique, un item par AWP, DOI FR canonique,
+// pages site FR/EN et record Zenodo EN en liens texte intégral qualifiés).
+// QID maison : Q138909233=Stéphane Lalut · Q138827949=anthropie ·
+// Q139040913=série Anthropie Working Papers · Q13442814=article scientifique ·
+// Q150=français · Q1860=anglais.
+// Après suppression des lignes // : 1 CREATE + 15 LAST, puis 2 rétro-liens.
+// ============================================================================
+
+// --- BLOC 1 : création de l'item AWP-08 ---
+CREATE
+LAST	Lfr	"La réversibilité sociale comme dimension de l'inégalité — Repli, mémoire institutionnelle et agenda de mesure"
+LAST	Len	"Social Reversibility as a Dimension of Inequality — Fallback, Institutional Memory, and a Measurement Agenda"
+LAST	Dfr	"working paper de Stéphane Lalut (AWP-08, 2026)"
+LAST	Den	"working paper by Stéphane Lalut (AWP-08, 2026)"
+LAST	P31	Q13442814
+LAST	P50	Q138909233	S854	"https://orcid.org/0009-0002-1794-4895"	S813	+2026-07-23T00:00:00Z/11
+LAST	P356	"10.5281/zenodo.21506320"	S854	"https://doi.org/10.5281/zenodo.21506320"	S813	+2026-07-23T00:00:00Z/11
+LAST	P407	Q150
+LAST	P577	+2026-07-23T00:00:00Z/11
+LAST	P921	Q138827949
+LAST	P361	Q139040913
+LAST	P953	"https://zenodo.org/records/21506320"
+LAST	P953	"https://zenodo.org/records/21507249"	P407	Q1860
+LAST	P953	"https://stephane-lalut.com/awp/awp-08/"	P407	Q150
+LAST	P953	"https://stephane-lalut.com/en/awp/awp-08/"	P407	Q1860
+
+// --- BLOC 2 : rétro-liens — À PASSER APRÈS création, en remplaçant NEW_QID
+// par le QID affiché par QuickStatements (ex. Q1234567).
+// Série « a pour partie » l'AWP-08 :
+Q139040913	P527	NEW_QID
+// Auteur « œuvre notable » :
+Q138909233	P800	NEW_QID

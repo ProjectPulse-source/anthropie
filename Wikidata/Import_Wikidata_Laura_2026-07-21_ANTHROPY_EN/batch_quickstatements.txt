@@ -1,0 +1,61 @@
+// ============================================================================
+// BATCH QuickStatements V1 — création de l'item « ANTHROPY »
+// (édition anglaise d'ANTHROPIE = Q138827344) + lien de traduction.
+// Préparé le 2026-07-21.
+// ✅ EXÉCUTÉ le 2026-07-21 → item créé = Q140645013 (bloc 1 ci-dessous, historique).
+//    RESTE À PASSER : le bloc 2 (réciproque P747) tout en bas.
+// Sources : content/livres/anthropie-ordre-ici-dette-ailleurs.en.md (fiche EN
+// du site), catalogue canonique (ISBN-13 9782958634759 ; broché ASIN 2958634752
+// = ISBN-10 ; Kindle ASIN B0H9QMR1CN), item FR existant Q138827344.
+// QID génériques : Q47461344=œuvre écrite, Q571=livre, Q1860=anglais,
+// Q35760=essai, Q142=France, Q138909233=Stéphane Lalut, Q138827949=anthropie.
+// Après suppression des lignes // : 1 CREATE + 22 LAST.
+// ============================================================================
+
+// --- BLOC 1 : création de l'item ANTHROPY (édition anglaise) ---
+// Modèle : item FR Q138827344 (hybride œuvre/édition, P577 en année pour le FR ;
+// ici on connaît le jour de mise en vente EN -> précision /11). L'item porte
+// l'édition anglaise ; le lien vers l'œuvre FR se fait par P629 (traduction de).
+CREATE
+LAST	Len	"ANTHROPY — A Big History of Civilization's Hidden Costs"
+LAST	Lfr	"ANTHROPY — A Big History of Civilization's Hidden Costs"
+LAST	Den	"English edition of the essay by Stéphane Lalut (2026)"
+LAST	Dfr	"édition anglaise de l'essai « ANTHROPIE — Ordre ici. Dette ailleurs » de Stéphane Lalut (2026)"
+LAST	P31	Q47461344
+LAST	P31	Q571
+LAST	P50	Q138909233
+LAST	P407	Q1860
+LAST	P629	Q138827344
+LAST	P136	Q35760
+LAST	P921	Q138827949
+LAST	P577	+2026-07-21T00:00:00Z/11
+LAST	P291	Q142
+LAST	P212	"978-2-9586347-5-9"
+LAST	P957	"2958634752"
+LAST	P5749	"2958634752"
+LAST	P1104	632
+LAST	P856	"https://stephane-lalut.com/en/livres/anthropie-ordre-ici-dette-ailleurs/"
+LAST	P953	"https://www.amazon.com/dp/B0H9QMR1CN"
+LAST	P1476	en:"ANTHROPY"
+LAST	P1680	en:"A Big History of Civilization's Hidden Costs"
+LAST	P648	"OL62342580M"   // Open Library ID de l'édition anglaise (créée 2026-07-21)
+// LAST	P655	<Qxxx>   // TRADUCTEUR — DÉCISION STÉPHANE. La traduction EN est
+//   issue du moteur V2 + relecture auteur (cf. déclaration IA KDP). Wikidata P655
+//   attend un item (personne/organisation). Options : (a) laisser vide tant qu'il
+//   n'y a pas de traducteur humain créditable ; (b) créer/pointer un item si un
+//   crédit est décidé. Laisser commenté par défaut.
+
+// --- NOTE ISBN ---
+// ISBN-13 = 9782958634759 (checksum vérifié). Coupure retenue ici alignée sur le
+// registrant du FR (2-9586347) : 978-2-9586347-5-9. Le livre imprime la variante
+// 978-2-958634-75-9 (même numéro). Laura : garder la forme affichée par Wikidata
+// après validation du checksum.
+
+// --- BLOC 2 : réciproque À PASSER (l'item EN Q140645013 existe maintenant) ---
+// Sur l'œuvre FR Q138827344 : « a pour édition / traduction » → item anglais.
+Q138827344	P747	Q140645013
+
+// --- POST-IMPORT, encore ouvert ---
+// (recommandé) Corriger le libellé ANGLAIS de Q138827344 : il duplique
+// aujourd'hui le libellé français « ANTHROPIE — Ordre ici. Dette ailleurs ».
+// À traiter avec Stéphane (garder le titre FR comme nom propre, ou traduire).

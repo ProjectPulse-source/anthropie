@@ -13,8 +13,26 @@ GEO EXPERIENCE/
 
 # Configuration et brouillons Claude Code locaux
 .claude/
-_prompt-*.txt
 prompt_*.txt
+# Brouillons de racine : une seule regle remplace `_prompt-*.txt` et couvre les
+# quatre familles qui lui echappaient (_Consignes_GEO*, _correctif*, _indexnow-*,
+# _wikidata-prompt). Ancree a la racine : les `_*.txt` de Wikidata/ sont, eux,
+# des pieces du dossier de travail et restent suivis.
+/_*.txt
+/_tmp_*.py
+
+# Sorties d'audit reproductibles (meme classe que reports/ et audit_geo_v2_*.md
+# ci-dessus). `test.md` est un rapport « Audit GEO v2 » mal nomme, pas un test ;
+# `stats.txt` est le brouillon qui a produit scripts/zenodo_stats_full.py.
+audit_scholar_*.md
+audit_conformite_site_ia_seo_geo*.md
+/test.md
+/stats.txt
+
+# Archive redondante : les 3 fichiers du zip sont byte-identiques a leurs
+# versions en clair dans le meme dossier (verifie au SHA-256 le 2026-08-16).
+# Versionner les deux, c'est programmer leur divergence.
+Wikidata/**/*.zip
 
 # Fichiers temporaires tokens Zenodo
 *ztk.txt

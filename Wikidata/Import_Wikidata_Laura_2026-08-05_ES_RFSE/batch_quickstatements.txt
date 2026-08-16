@@ -1,0 +1,34 @@
+// ============================================================================
+// Navette Laura 2026-08-05 — DEUX blocs, un seul Run
+// (remplace Downloads\QS_WIKIDATA_AWP01_ES_2026-08-03.txt, qui pointait la v1)
+// ============================================================================
+// --- BLOC 1 — AWP-01 (Q139771989) : libellé + description ES + texte intégral
+//     espagnol. URL = record de CONCEPT 21766183 (résout toujours vers la
+//     dernière version — règle du 03/08 : relation entre œuvres → concept).
+Q139771989	Les	"¿Qué es la antropía? Principios de una hipótesis"
+Q139771989	Des	"Documento de trabajo de Stéphane Lalut sobre los fundamentos teóricos de la antropía"
+Q139771989	P953	"https://zenodo.org/records/21766183"	P407	Q1321
+// --- BLOC 2 — création de l'item « Comptes rendus d'ouvrages »,
+//     Revue française de socio-économie 2026/1 (n° 36), pp. 247-265.
+//     Bloc co-signé par 7 recenseurs ; Stéphane Lalut = 4e auteur (recension
+//     de Benjamin Lemoine, Chasseurs d'États). DOI commun au bloc.
+CREATE
+LAST	Lfr	"Comptes rendus d'ouvrages"
+LAST	Len	"Comptes rendus d'ouvrages"
+LAST	Dfr	"comptes rendus d'ouvrages, Revue française de socio-économie, 2026/1 (n° 36), p. 247-265"
+LAST	Den	"book reviews, Revue française de socio-économie, 2026/1 (no. 36), pp. 247-265"
+LAST	P31	Q13442814
+LAST	P1433	Q3428732
+LAST	P407	Q150
+LAST	P577	+2026-08-04T00:00:00Z/11
+LAST	P304	"247-265"
+LAST	P433	"36"
+LAST	P356	"10.3917/RFSE.036.0247"	S854	"https://shs.cairn.info/revue-francaise-de-socio-economie-2026-1-page-247"	S813	+2026-08-05T00:00:00Z/11
+LAST	P50	Q138909233	P1545	"4"	S854	"https://shs.cairn.info/revue-francaise-de-socio-economie-2026-1-page-247"	S813	+2026-08-05T00:00:00Z/11
+LAST	P2093	"Victor-Manuel Afonso Marques"	P1545	"1"
+LAST	P2093	"Manuel Cervera-Marzal"	P1545	"2"
+LAST	P2093	"Bernard Drevon"	P1545	"3"
+LAST	P2093	"Agathe Lelièvre"	P1545	"5"
+LAST	P2093	"Igor Martinache"	P1545	"6"
+LAST	P2093	"Apolline Meyer"	P1545	"7"
+LAST	P953	"https://shs.cairn.info/revue-francaise-de-socio-economie-2026-1-page-247"	P407	Q150

@@ -1,0 +1,220 @@
+# =============================================================================
+# 02_concept_anthropie.yaml — concept "anthropie" (Q138827949)
+# Sources : content/quest-ce-que-lanthropie/_index.md (+ .en.md), content/glossaire/_index.md,
+#           config/_default/hugo.toml, config/_default/params.toml, data/works.yaml
+# =============================================================================
+
+wikidata_qid: 'Q138827949'  # source : data/works.yaml ligne 64
+
+canonical_label:
+  fr: "Qu'est-ce que l'anthropie ?"  # source : content/quest-ce-que-lanthropie/_index.md ligne 2
+  en: 'What is anthropy?'  # source : content/quest-ce-que-lanthropie/_index.en.md ligne 2
+
+canonical_short_definition:
+  fr: "L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent."  # source : config/_default/params.toml ligne 2 + content/quest-ce-que-lanthropie/_index.md ligne 3 (verbatim identique)
+  en: 'Anthropy is the hypothesis that social systems displace disorder rather than resolve it.'  # source : config/_default/hugo.toml ligne 19 + content/quest-ce-que-lanthropie/_index.en.md ligne 4
+
+canonical_definition_extended:
+  fr: |
+    L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent.
+    Tout ordre observable dans un système social — qu'il s'agisse d'une institution, d'un territoire, d'une organisation ou d'une économie — suppose un désordre exporté ailleurs : vers d'autres lieux, vers d'autres temps ou vers d'autres groupes sociaux.
+    L'anthropie ne prétend pas constituer une théorie achevée. Il s'agit d'une hypothèse de travail à valeur heuristique : elle permet de poser des questions que d'autres cadres analytiques ne formulent pas, ou qu'ils tendent à neutraliser.
+  fr_source_file: 'content/quest-ce-que-lanthropie/_index.md'
+  fr_source_lines: '21-25'
+  en: |
+    Anthropy is the hypothesis that social systems displace disorder rather than resolve it.
+    Every observable order in a social system — whether an institution, a territory, an organisation, or an economy — implies disorder exported elsewhere: to other places, other times, or other social groups.
+    Anthropy does not claim to constitute a fully developed theory. It is a working hypothesis with heuristic value: it makes it possible to ask questions that other analytical frameworks do not formulate, or tend to neutralise.
+  en_source_file: 'content/quest-ce-que-lanthropie/_index.en.md'
+  en_source_lines: '22-26'
+
+canonical_urls:
+  fr: 'https://stephane-lalut.com/quest-ce-que-lanthropie/'
+  en: 'https://stephane-lalut.com/en/quest-ce-que-lanthropie/'  # source : config/_default/hugo.toml ligne 23
+  source_note: 'baseURL: https://stephane-lalut.com/ ; slug FR /quest-ce-que-lanthropie/ ; menu EN pointe vers /en/quest-ce-que-lanthropie/ (hugo.toml ligne 23). Le _index.en.md déclare slug "what-is-anthropy" (ligne 3) mais le menu EN garde /quest-ce-que-lanthropie/ ; incohérence à signaler.'
+
+discoverer_author:
+  qid: 'Q138909233'
+  source: 'data/works.yaml.author + content/quest-ce-que-lanthropie/_index.md FAQ 6 ("Qui a développé le cadre anthropique ?") confirme : "Stéphane Lalut, économiste, chercheur indépendant et essayiste, a proposé le cadre anthropique à partir de 2025 dans une série de working papers…"'
+
+zenodo_community_id: 'anthropie-working-papers'  # source : data/author.toml ligne 31 + data/works.yaml.author.* (rattachement community)
+zenodo_community_url: 'https://zenodo.org/communities/anthropie-working-papers'  # source : data/author.toml ligne 31
+zenodo_community_attachment: 'concept'  # PROJECT_STATUS.md §3 : "rattachée au Concept Q138827949 (anthropy), pas au Person"
+
+described_by_source:
+  # Œuvres qui formalisent ou développent le concept (depuis works.yaml + frontmatters)
+  - wikidata_qid: 'Q138827344'
+    title: 'ANTHROPIE — Ordre ici. Dette ailleurs'
+    role: 'ouvrage fondateur'
+    source_file: 'data/works.yaml'
+    source_id: 'book-anthropie'
+  - wikidata_qid: 'Q138910896'
+    title: 'Dette Publique : Qui paie vraiment ?'
+    role: 'application du cadre à la dette publique'
+    source_file: 'data/works.yaml'
+    source_id: 'book-dette-publique'
+  - wikidata_qid: null
+    title: 'Anthropie Working Papers (série)'
+    role: 'corpus académique du cadre — 6 working papers'
+    source_file: 'data/works.yaml'
+    note: 'QID attendu : Q139040913 — confirmation via 09_wikidata_existing_state.yaml'
+
+notable_works_treating_concept:
+  - qid: 'Q138827344'
+    label: 'ANTHROPIE — Ordre ici. Dette ailleurs'
+  - qid: 'Q138910896'
+    label: 'Dette Publique : Qui paie vraiment ?'
+  # NB : pour Q139040913 (série AWP) cf. 09_ ; pas confirmé par le repo lui-même.
+
+glossary_entries:
+  # Source : content/glossaire/_index.md — 18 entrées (le prompt en annonçait 15 ; écart documenté en audit)
+  - title: 'Anthropie'
+    slug: 'anthropie'
+    anchor_url: 'https://stephane-lalut.com/glossaire/#anthropie'
+    short_definition: "Hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. Tout ordre observable suppose un désordre exporté ailleurs."
+    refers_to_awp: null
+    source_file: 'content/glossaire/_index.md'
+    source_lines: '13-15'
+  - title: 'Transfert anthropique'
+    slug: 'transfert-anthropique'
+    anchor_url: 'https://stephane-lalut.com/glossaire/#transfert-anthropique'
+    short_definition: "Mécanisme par lequel le désordre est déplacé d'un lieu, d'un temps ou d'un groupe vers un autre."
+    refers_to_awp: 'awp-01'
+    source_file: 'content/glossaire/_index.md'
+    source_lines: '17-20'
+  - title: 'Externalisation entropique'
+    slug: 'externalisation-entropique'
+    anchor_url: 'https://stephane-lalut.com/glossaire/#externalisation-entropique'
+    short_definition: "Forme spatiale du transfert anthropique. Le désordre est déplacé vers d'autres territoires."
+    refers_to_awp: 'awp-04'
+    source_file: 'content/glossaire/_index.md'
+    source_lines: '22-25'
+  - title: 'Dette anthropique'
+    slug: 'dette-anthropique'
+    anchor_url: 'https://stephane-lalut.com/glossaire/#dette-anthropique'
+    short_definition: "Forme temporelle du transfert. Le désordre est reporté vers l'avenir — dette publique, sous-investissement, déficit de maintenance."
+    refers_to_awp: 'awp-03'
+    source_file: 'content/glossaire/_index.md'
+    source_lines: '27-30'
+  - title: 'Transfert social'
+    slug: 'transfert-social'
+    anchor_url: 'https://stephane-lalut.com/glossaire/#transfert-social'
+    short_definition: "Forme sociale du transfert anthropique. Le désordre est déplacé vers des groupes moins capables de s'y soustraire."
+    refers_to_awp: 'awp-01'
+    source_file: 'content/glossaire/_index.md'
+    source_lines: '32-35'
+  - title: 'Ordre local'
+    slug: 'ordre-local'
+    anchor_url: 'https://stephane-lalut.com/glossaire/#ordre-local'
+    short_definition: "Configuration sociale résultant du déplacement du désordre hors du périmètre considéré."
+    refers_to_awp: 'awp-01'
+    source_file: 'content/glossaire/_index.md'
+    source_lines: '37-40'
+  - title: 'Discipline du regard'
+    slug: 'discipline-du-regard'
+    anchor_url: 'https://stephane-lalut.com/glossaire/#discipline-du-regard'
+    short_definition: "Posture analytique : devant tout ordre stable, demander où s'écoule le désordre."
+    refers_to_awp: 'awp-01'
+    source_file: 'content/glossaire/_index.md'
+    source_lines: '42-45'
+  - title: 'Saturation'
+    slug: 'saturation'
+    anchor_url: 'https://stephane-lalut.com/glossaire/#saturation'
+    short_definition: "État d'un espace de déportation quand le coût marginal du transfert excède le bénéfice."
+    refers_to_awp: 'awp-02'
+    source_file: 'content/glossaire/_index.md'
+    source_lines: '47-50'
+  - title: 'Coût marginal croissant'
+    slug: 'cout-marginal-croissant'
+    anchor_url: 'https://stephane-lalut.com/glossaire/#cout-marginal-croissant'
+    short_definition: "Premier critère de saturation : le transfert devient de plus en plus coûteux."
+    refers_to_awp: 'awp-02'
+    source_file: 'content/glossaire/_index.md'
+    source_lines: '52-55'
+  - title: 'Effet boomerang'
+    slug: 'effet-boomerang'
+    anchor_url: 'https://stephane-lalut.com/glossaire/#effet-boomerang'
+    short_definition: "Second critère de saturation : le désordre déporté revient au système émetteur."
+    refers_to_awp: 'awp-02'
+    source_file: 'content/glossaire/_index.md'
+    source_lines: '57-60'
+  - title: 'Effet Jevons (paradoxe de Jevons)'
+    slug: 'effet-jevons'
+    anchor_url: 'https://stephane-lalut.com/glossaire/#effet-jevons'
+    short_definition: "L'amélioration de l'efficacité d'une ressource tend à augmenter sa consommation totale."
+    refers_to_awp: 'awp-04'
+    source_file: 'content/glossaire/_index.md'
+    source_lines: '62-65'
+  - title: 'Métaprogramme'
+    slug: 'metaprogramme'
+    anchor_url: 'https://stephane-lalut.com/glossaire/#metaprogramme'
+    short_definition: "Configuration contemporaine du transfert anthropique opérant à l'échelle numérique et planétaire."
+    refers_to_awp: 'awp-02'
+    source_file: 'content/glossaire/_index.md'
+    source_lines: '67-70'
+  - title: 'Ordre épistémique'
+    slug: 'ordre-epistemique'
+    anchor_url: 'https://stephane-lalut.com/glossaire/#ordre-epistemique'
+    short_definition: "Système de hiérarchies de légitimité produit par le champ académique, supposant un désordre épistémique exporté vers ses marges."
+    refers_to_awp: 'awp-05'
+    source_file: 'content/glossaire/_index.md'
+    source_lines: '72-75'
+  - title: 'Espace de déportation'
+    slug: 'espace-de-deportation'
+    anchor_url: 'https://stephane-lalut.com/glossaire/#espace-de-deportation'
+    short_definition: "Lieu, temps ou groupe social vers lequel le désordre est transféré."
+    refers_to_awp: 'awp-02'
+    source_file: 'content/glossaire/_index.md'
+    source_lines: '77-80'
+  - title: 'Configuration'
+    slug: 'configuration'
+    anchor_url: 'https://stephane-lalut.com/glossaire/#configuration'
+    short_definition: "Agencement historique particulier des mécanismes de transfert anthropique. Sept configurations majeures sur 3,3 millions d'années."
+    refers_to_awp: 'awp-02'
+    source_file: 'content/glossaire/_index.md'
+    source_lines: '82-85'
+  - title: 'Derisking'
+    slug: 'derisking'
+    anchor_url: 'https://stephane-lalut.com/glossaire/#derisking'
+    short_definition: "Mécanisme par lequel l'État altère le profil de risque d'un investissement privé (Daniela Gabor)."
+    refers_to_awp: 'awp-06'
+    source_file: 'content/glossaire/_index.md'
+    source_lines: '87-90'
+  - title: 'Communs négatifs'
+    slug: 'communs-negatifs'
+    anchor_url: 'https://stephane-lalut.com/glossaire/#communs-negatifs'
+    short_definition: "Catégorie introduite par Alexandre Monnin pour désigner ce dont nous héritons sans avoir choisi."
+    refers_to_awp: 'awp-06'
+    source_file: 'content/glossaire/_index.md'
+    source_lines: '92-95'
+  - title: 'Registres de coûts couplés'
+    slug: 'registres-de-couts-couples'
+    anchor_url: 'https://stephane-lalut.com/glossaire/#registres-de-couts-couples'
+    short_definition: "Grille testable des quatre registres — énergie, matière, territoire, attention — qui montre comment l'infrastructure numérique déplace simultanément le désordre."
+    refers_to_awp: 'awp-06'
+    source_file: 'content/glossaire/_index.md'
+    source_lines: '97-100'
+
+related_concepts_explicitly_mentioned_in_site:
+  # Concepts mentionnés littéralement dans le repo, avec source.
+  # Aucun QID Wikidata déduit ici (anti-pattern : pas d'invention).
+  - name: 'entropie'
+    context: "L'anthropie ne se confond pas avec l'entropie thermodynamique. Le terme ne vaut pas comme métaphore physique : il désigne un mécanisme proprement social et institutionnel."
+    source_file: 'content/awp/awp-01.md'
+    source_lines: '56-58'
+  - name: 'Anthropocène'
+    context: "L'Anthropocène désigne une ère géologique (Crutzen, 2000). L'anthropie désigne un mécanisme institutionnel qui précède l'Anthropocène de millions d'années et en éclaire la dynamique."
+    source_file: 'content/awp/awp-02.md (FAQ)'
+    source_lines: '20-21'
+  - name: 'effet Jevons / paradoxe de Jevons'
+    context: "L'effet Jevons montre que l'amélioration de l'efficacité énergétique tend à augmenter la consommation totale — un exemple d'effet boomerang anthropique."
+    source_file: 'content/awp/awp-04.md (FAQ)'
+    source_lines: '20-21'
+  - name: 'derisking (Daniela Gabor)'
+    context: "Le derisking opère le passage du coût présent à la dette future : garanties publiques, contrats d'engagement long terme."
+    source_file: 'content/glossaire/_index.md'
+    source_lines: '87-90'
+  - name: 'communs négatifs (Alexandre Monnin)'
+    context: "Catégorie introduite par Alexandre Monnin pour désigner ce dont nous héritons sans avoir choisi : déchets, ruines, infrastructures obsolètes."
+    source_file: 'content/glossaire/_index.md'
+    source_lines: '92-95'

@@ -1,0 +1,376 @@
+# =============================================================================
+# 06_articles.yaml — articles publiés + accepted_pending + in_review
+# Sources : data/works.yaml + content/publications/*.md
+# =============================================================================
+
+articles_published:
+
+  # ---------------------------------------------------------------------------
+  - id: art-terrestres-2026-01
+    title_fr_works_yaml: 'Résister à la dématérialisation depuis Marseille'  # source : data/works.yaml ligne 362
+    title_fr_in_site_card: 'Sous le cloud, la fournaise'  # source : content/publications/terrestres-sous-le-cloud-la-fournaise.md ligne 2
+    title_resolution_note: 'Titre publié sur Terrestres = "Résister à la dématérialisation depuis Marseille" (URL et works.yaml) ; la fiche site card retient le titre éditorial initial "Sous le cloud, la fournaise" (data/works.yaml ligne 372 confirme : "Soumis sous titre initial").'
+    publication_date: '2026-01-22'  # source : data/works.yaml ligne 363 + content/publications/terrestres-sous-le-cloud-la-fournaise.md ligne 3
+    venue_name: 'Terrestres'  # source : data/works.yaml ligne 364
+    venue_type: 'revue'  # source : data/works.yaml ligne 365 publisher_type
+    source_type: 'Revue'  # source : data/works.yaml ligne 366 + frontmatter ligne 5
+    external_url: 'https://www.terrestres.org/2026/01/20/resister-a-la-dematerialisation-depuis-marseille/'  # source : data/works.yaml ligne 367 (NB: URL works.yaml dit "2026/01/22" mais ligne 367 contient "/01/22/" ; vérifier — voir notes en bas)
+    external_url_verbatim_works_yaml: 'https://www.terrestres.org/2026/01/22/resister-a-la-dematerialisation-depuis-marseille/'  # source : data/works.yaml ligne 367
+    site_card_md: 'content/publications/terrestres-sous-le-cloud-la-fournaise.md'
+    image_url: null  # frontmatter image_type=logo sans image explicite (par défaut SVG inféré côté template)
+    chapo_fr: "À Marseille, les data centers avalent l'espace et l'électricité des quartiers populaires. Le cloud n'a rien de virtuel : il chauffe, il consomme, il déplace."  # source : data/works.yaml ligne 369 + content/publications/terrestres-sous-le-cloud-la-fournaise.md ligne 8 (concordance)
+    chapo_en: "In Marseille, data centres swallow the space and electricity of working-class neighbourhoods. The cloud is anything but virtual."  # source : data/works.yaml ligne 370 + frontmatter ligne 9
+    related_works: ['awp-01', 'awp-04']  # source : data/works.yaml ligne 371 + frontmatter ligne 10
+    related_book: 'anthropie-ordre-ici-dette-ailleurs'  # source : frontmatter ligne 11
+    source_files:
+      - 'data/works.yaml (id: art-terrestres-2026-01, lignes 359-372)'
+      - 'content/publications/terrestres-sous-le-cloud-la-fournaise.md'
+
+  # ---------------------------------------------------------------------------
+  - id: art-mediapart-maprimerenov-2026-01
+    title_fr: "MaPrimeRénov' : l'arrêt faute de budget. Les ménages modestes font les frais du gel"  # source : data/works.yaml ligne 377
+    title_fr_in_site_card: "MaPrimeRénov' : l'arrêt faute de budget"  # source : content/publications/mediapart-maprimerenov.md ligne 2 (version courte)
+    publication_date: '2026-01-12'
+    venue_name: 'Mediapart'
+    venue_type: 'journal_blog'
+    source_type: 'Journal'
+    external_url: 'https://blogs.mediapart.fr/stephane-lalut/blog/120126/maprimerenov-l-arret-faute-de-budget-les-menages-modestes-font-les-frais-du-gel'
+    site_card_md: 'content/publications/mediapart-maprimerenov.md'
+    image_url: null
+    chapo_fr: "Quand l'État gèle MaPrimeRénov', ce sont les ménages modestes qui paient la facture. Le coût de la rénovation ne disparaît pas : il change de porteur."
+    chapo_en: "When the state freezes MaPrimeRénov', low-income households foot the bill. The cost of renovation doesn't vanish — it changes hands."
+    related_works: ['awp-03', 'awp-04']
+    related_book: 'dette-publique-qui-paie-vraiment'
+    source_files:
+      - 'data/works.yaml (id: art-mediapart-maprimerenov-2026-01, lignes 374-386)'
+      - 'content/publications/mediapart-maprimerenov.md'
+
+  # ---------------------------------------------------------------------------
+  - id: art-mediapart-budget2026-2026-01
+    title_fr: 'Budget 2026 : la dette commande, les territoires patientent'
+    publication_date: '2026-01-15'
+    venue_name: 'Mediapart'
+    venue_type: 'journal_blog'
+    source_type: 'Journal'
+    external_url: 'https://blogs.mediapart.fr/stephane-lalut/blog/150126/budget-2026-la-dette-commande-les-territoires-patientent'
+    site_card_md: 'content/publications/mediapart-budget-2026.md'
+    image_url: null
+    chapo_fr: "La contrainte budgétaire de l'État ne disparaît pas : elle se déplace vers les collectivités territoriales, qui absorbent les coupes en silence."
+    chapo_en: "The state's fiscal constraint doesn't disappear: it shifts to local authorities, who absorb the cuts in silence."
+    related_works: ['awp-03']
+    related_book: 'dette-publique-qui-paie-vraiment'
+    source_files:
+      - 'data/works.yaml (id: art-mediapart-budget2026-2026-01, lignes 388-400)'
+      - 'content/publications/mediapart-budget-2026.md'
+
+  # ---------------------------------------------------------------------------
+  - id: art-ean-christophers-2026-01
+    title_fr: "Le prix ne fait pas le profit — Brett Christophers et l'impasse du capitalisme vert"
+    title_fr_in_site_card: 'Le prix ne fait pas le profit — Brett Christophers'  # source : content/publications/en-attendant-nadeau-christophers.md ligne 2 (variation : sans la fin "et l'impasse...")
+    publication_date: '2026-01-20'
+    venue_name: 'En attendant Nadeau'
+    venue_type: 'revue'
+    source_type: 'Revue'
+    external_url: 'https://www.en-attendant-nadeau.fr/2026/01/20/le-prix-ne-fait-pas-le-profit-brett-christophers/'
+    site_card_md: 'content/publications/en-attendant-nadeau-christophers.md'
+    image_url: null
+    chapo_fr: "Le solaire coûte moins cher que le charbon. Mais le capital ne suit pas les prix : il suit les profits. Christophers explique pourquoi la transition bloque."
+    chapo_en: "Solar is cheaper than coal. But capital doesn't follow prices — it follows profits. Christophers explains why the transition stalls."
+    related_works: ['awp-04']
+    related_book: 'anthropie-ordre-ici-dette-ailleurs'
+    notes: 'Recension The Price Is Wrong (Verso, 2024).'  # source : data/works.yaml ligne 415
+    source_files:
+      - 'data/works.yaml (id: art-ean-christophers-2026-01, lignes 402-415)'
+      - 'content/publications/en-attendant-nadeau-christophers.md'
+
+  # ---------------------------------------------------------------------------
+  - id: art-nonfiction-fressoz-2026-02
+    title_fr: "La transition énergétique n'a jamais eu lieu"
+    title_fr_in_site_card: "La transition énergétique n'a jamais eu lieu — Fressoz"  # source : frontmatter ligne 2
+    publication_date: '2026-02-03'
+    venue_name: 'Nonfiction'
+    venue_type: 'portail'
+    source_type: 'Portail'
+    external_url: 'https://www.nonfiction.fr/article-12589-la-transition-energetique-na-jamais-eu-lieu.htm'
+    site_card_md: 'content/publications/nonfiction-fressoz.md'
+    image_url: null
+    chapo_fr: "Les énergies ne se remplacent pas : elles s'empilent. Fressoz déconstruit le récit de la « transition » et oblige à repenser nos usages."
+    chapo_en: "Energy sources don't replace each other: they pile up. Fressoz dismantles the \"transition\" narrative and forces a rethink of our energy use."
+    related_works: ['awp-04']
+    related_book: 'anthropie-ordre-ici-dette-ailleurs'
+    notes: 'Recension Fressoz, Sans transition.'
+    source_files:
+      - 'data/works.yaml (id: art-nonfiction-fressoz-2026-02, lignes 417-430)'
+      - 'content/publications/nonfiction-fressoz.md'
+
+  # ---------------------------------------------------------------------------
+  - id: art-letemps-suisse-2026-02
+    title_fr: 'Le 8 mars, la Suisse vote l''allègement — mais qui en supporte la charge ?'  # source : data/works.yaml ligne 435
+    title_fr_in_site_card: 'Votations du 8 mars : quatre allègements, quatre coûts déplacés'  # source : frontmatter ligne 2
+    publication_date: '2026-02-26'
+    venue_name: 'Le Temps'
+    venue_type: 'quotidien'
+    source_type: 'Quotidien'
+    external_url: 'https://www.letemps.ch/opinions/votations-du-8-mars-quatre-allegements-quatre-couts-deplaces'
+    site_card_md: 'content/publications/le-temps-votations.md'
+    image_url: '/img/publications/logo-le-temps.svg'  # source : frontmatter ligne 7
+    chapo_fr: 'Quatre objets soumis au vote, quatre allègements promis — et quatre coûts déplacés vers d''autres groupes ou d''autres moments.'
+    chapo_en: 'Four relief measures put to the Swiss vote — and four costs displaced onto other groups or other moments.'
+    related_works: ['awp-03']
+    related_book: 'dette-publique-qui-paie-vraiment'
+    source_files:
+      - 'data/works.yaml (id: art-letemps-suisse-2026-02, lignes 432-444)'
+      - 'content/publications/le-temps-votations.md'
+
+  # ---------------------------------------------------------------------------
+  - id: art-altecon-teletravail-2026-03
+    title_fr: 'Comment les coûts du télétravail se sont déplacés vers les salariés'
+    publication_date: '2026-03-16'
+    venue_name: 'Alternatives Économiques'
+    venue_type: 'magazine'
+    source_type: 'Magazine'
+    external_url: 'https://www.alternatives-economiques.fr/comment-les-couts-du-teletravail-se-sont-deplaces-vers-les-salaries/00117769'
+    site_card_md: 'content/publications/alternatives-economiques-teletravail.md'
+    image_url: '/img/publications/logo-alternatives-economiques.svg'  # source : frontmatter ligne 7
+    chapo_fr: "Le bureau a disparu, pas ses coûts. Chauffage, équipement, espace : le télétravail a déplacé la charge de l'employeur vers le salarié."
+    chapo_en: 'The office vanished, but not its costs. Heating, equipment, space — remote work shifted the burden from employer to employee.'
+    related_works: ['awp-01']
+    related_book: 'anthropie-ordre-ici-dette-ailleurs'
+    source_files:
+      - 'data/works.yaml (id: art-altecon-teletravail-2026-03, lignes 446-458)'
+      - 'content/publications/alternatives-economiques-teletravail.md'
+
+  # ---------------------------------------------------------------------------
+  - id: art-laviedesidees-khalili-2026-03
+    title_fr_works_yaml: 'Qui paie la fluidité ?'
+    title_fr_in_site_card: 'Qui paie la fluidité ? — Khalili, Extractive Capitalism'  # source : frontmatter ligne 2
+    publication_date: '2026-03-16'
+    venue_name: 'La Vie des Idées'
+    venue_type: 'revue'
+    source_type: 'Revue'
+    external_url: 'https://laviedesidees.fr/Laleh-Khalili-Extractive-Capitalism'
+    site_card_md: 'content/publications/la-vie-des-idees-khalili.md'
+    image_url: null
+    chapo_fr: '80 % du commerce mondial transite par mer. Khalili montre que la fluidité des marchandises repose sur la captivité des corps et des territoires.'
+    chapo_en: '80% of world trade travels by sea. Khalili shows that the fluidity of goods depends on the captivity of bodies and territories.'
+    related_works: ['awp-02']
+    related_book: 'anthropie-ordre-ici-dette-ailleurs'  # source : content/publications/la-vie-des-idees-khalili.md ligne 11 (NB : works.yaml ne renseigne pas related_book pour cet article)
+    notes: 'Recension Khalili, Extractive Capitalism (Profile Books, 2025).'
+    source_files:
+      - 'data/works.yaml (id: art-laviedesidees-khalili-2026-03, lignes 460-473)'
+      - 'content/publications/la-vie-des-idees-khalili.md'
+
+  # ---------------------------------------------------------------------------
+  - id: art-ean-cartonmalm-2026-03
+    title_fr: 'La limite retournée'
+    title_fr_in_site_card: 'La limite retournée — Carton & Malm'  # source : frontmatter ligne 2
+    publication_date: '2026-03-24'
+    venue_name: 'En attendant Nadeau'
+    venue_type: 'revue'
+    source_type: 'Revue'
+    external_url: 'https://www.en-attendant-nadeau.fr/2026/03/24/la-limite-retournee/'
+    site_card_md: 'content/publications/en-attendant-nadeau-carton-malm.md'
+    image_url: null
+    chapo_fr: "Le dépassement climatique n'est pas un échec : c'est un programme. Carton et Malm décryptent la machinerie intellectuelle qui a rendu l'overshoot désirable."
+    chapo_en: 'Climate overshoot is not a failure — it is a programme. Carton and Malm decode the intellectual machinery that made exceeding the 1.5°C limit desirable.'
+    related_works: ['awp-04']
+    related_book: 'anthropie-ordre-ici-dette-ailleurs'
+    notes: 'Recension Carton & Malm, Overshoot.'
+    source_files:
+      - 'data/works.yaml (id: art-ean-cartonmalm-2026-03, lignes 475-488)'
+      - 'content/publications/en-attendant-nadeau-carton-malm.md'
+
+  # ---------------------------------------------------------------------------
+  - id: art-lectures-kaba-2026-04
+    title_fr: "Arnaud Kaba, La main et l'esprit. Valeurs du travail chez les ouvriers métallurgistes de Bhopal"
+    title_fr_in_site_card: "La main et l'esprit — Arnaud Kaba"  # source : frontmatter ligne 2
+    publication_date: '2026-04-14'
+    venue_name: 'Lectures'
+    venue_type: 'revue_acad'
+    source_type: 'Revue'
+    external_url: 'https://journals.openedition.org/lectures/70897'
+    doi: '10.4000/162f0'  # source : data/works.yaml ligne 499
+    site_card_md: 'content/publications/lectures-kaba-main-esprit.md'
+    image_url: '/img/publications/lectures-logo.webp'  # source : frontmatter ligne 7
+    chapo_fr: 'Bhopal, trente ans après : ce livre ne parle pas du désastre. Il montre comment les ouvriers métallurgistes construisent, dans l''ombre des ruines, identité professionnelle et dignité — par les gestes, les savoir-faire et les cultures du travail informel.'
+    chapo_en: 'Bhopal, thirty years on: this book is not about the disaster. It shows how metalworkers, living in the shadow of the ruins, build professional identity and dignity through gesture, craft, and the cultures of informal labour.'
+    related_works: ['awp-02']
+    related_book: 'anthropie-ordre-ici-dette-ailleurs'
+    google_scholar: { visible: true, citations_observed: 0 }
+    notes: 'DOI compact OpenEdition (10.4000/162f0).'
+    source_files:
+      - 'data/works.yaml (id: art-lectures-kaba-2026-04, lignes 490-505)'
+      - 'content/publications/lectures-kaba-main-esprit.md'
+
+  # ---------------------------------------------------------------------------
+  # Article publié supplémentaire (Welgryn / Alves Da Costa) :
+  # Présent dans content/publications/ ET data/works.yaml MAIS status confondu :
+  # data/works.yaml ligne 590 status=accepted_pending, alors que la page site
+  # publications/en-attendant-nadeau-welgryn-alves-da-costa.md date=2026-05-05
+  # suggère qu'il est PUBLIÉ. Voir audit pour incohérence.
+  - id: art-ean-welgryn-2026
+    title_fr_works_yaml: 'IA : Le grand enfumage (Welgryn / Alves Da Costa)'  # source : data/works.yaml ligne 591
+    title_fr_in_site_card: 'La nécessité fabriquée'  # source : content/publications/en-attendant-nadeau-welgryn-alves-da-costa.md ligne 2
+    publication_date_works_yaml: ''  # source : data/works.yaml ligne 592 (vide)
+    publication_date_frontmatter: '2026-05-05'  # source : content/publications/en-attendant-nadeau-welgryn-alves-da-costa.md ligne 3
+    status: 'accepted_pending_OR_published'  # divergence works.yaml/frontmatter — voir audit
+    venue_name: 'En attendant Nadeau'
+    venue_type: 'revue'
+    source_type: 'Revue'
+    external_url: 'https://www.en-attendant-nadeau.fr/2026/05/05/le-grand-enfumage/'
+    site_card_md: 'content/publications/en-attendant-nadeau-welgryn-alves-da-costa.md'
+    chapo_fr: "Welgryn et Alves Da Costa déconstruisent le récit qui rend l'IA inéluctable. La nécessité technologique n'est pas donnée : elle se fabrique. Recension du livre *IA. Le grand enfumage. Comprendre les enjeux, déconstruire les mythes, reprendre le pouvoir* (Payot, 240 p., 19,90 €)."
+    chapo_en: 'Welgryn and Alves Da Costa deconstruct the narrative that renders AI inescapable. Technological necessity is not given — it is manufactured. Review of *IA. Le grand enfumage. Comprendre les enjeux, déconstruire les mythes, reprendre le pouvoir* (Payot, 240 p., €19.90).'
+    related_works: ['awp-06']  # source : data/works.yaml ligne 597 + frontmatter ligne 10
+    related_book: 'anthropie-ordre-ici-dette-ailleurs'  # source : frontmatter ligne 11
+    audit_note: 'INCOHÉRENCE : works.yaml dit accepted_pending sans date ; URL existe et page publications confirme date 2026-05-05. Probablement publié — works.yaml à corriger.'
+    source_files:
+      - 'data/works.yaml (id: art-ean-welgryn-2026, lignes 589-598)'
+      - 'content/publications/en-attendant-nadeau-welgryn-alves-da-costa.md'
+
+# =============================================================================
+
+articles_accepted_pending:
+  # source : data/works.yaml section "ARTICLES ACCEPTÉS — EN ATTENTE DE PUBLICATION"
+
+  - id: art-projet-municipales-2026-06
+    title_fr: 'La commune, variable d''ajustement de la République'
+    publication_date: '2026-06'  # source : data/works.yaml ligne 515
+    venue_name: 'Revue Projet'
+    venue_type: 'revue'
+    notes: 'Acceptation Benoît Hervieu-Léger. Copie éditée révisée 11/04/2026. Parution Variations juin-juillet.'  # data/works.yaml ligne 519
+    source_file: 'data/works.yaml lignes 511-519'
+
+  - id: art-rfse-lemoine-2026
+    title_fr: 'Recension Lemoine, Chasseurs d''États (La Découverte, 2024)'
+    publication_date: ''
+    venue_name: 'RFSE'
+    venue_type: 'revue_acad'
+    related_works: ['awp-03']
+    notes: 'Accepté Igor Martinache.'
+    source_file: 'data/works.yaml lignes 521-530'
+
+  - id: art-regulation-aglietta-2026
+    title_fr: 'De la tragédie des communs à la dette écologique : Aglietta et Espagne refondent l''économie politique de la nature'
+    publication_date: ''
+    venue_name: 'Revue de la régulation'
+    venue_type: 'revue_acad'
+    sign_count: 12500
+    related_works: ['awp-04']
+    source_file: 'data/works.yaml lignes 532-541'
+
+  - id: art-mauss-dette-somatique-2026
+    title_fr: 'La dette somatique'
+    publication_date: ''
+    venue_name: 'Revue du MAUSS'
+    venue_type: 'revue_acad'
+    notes: 'Acceptée avec modifs mineures (Fabien Robertson). Version révisée envoyée 07/05/2026.'
+    source_file: 'data/works.yaml lignes 543-551'
+
+  - id: art-droitsociete-contrat-travail-2026
+    title_fr: 'Le contrat de travail comme dispositif d''allocation des risques. Subordination, plateformes et répartition des charges'
+    publication_date: ''
+    venue_name: 'Droit & Société'
+    venue_type: 'revue_acad'
+    sign_count: 41000
+    notes: 'Évaluation pairs. Acceptée avec modifs majeures. Version révisée 08/06/2026.'
+    source_file: 'data/works.yaml lignes 553-562'
+
+  - id: art-critique-minuit-sasson-2026
+    title_fr: 'Justice sans État. Sur The Solidarity Economy de Tehila Sasson'
+    publication_date: ''
+    venue_name: 'Critique'
+    venue_type: 'revue'
+    publisher_house: 'Éditions de Minuit'
+    sign_count: 13000
+    notes: 'Recension-essai. Acceptation Thierry Hoquet 24/04/2026.'
+    source_file: 'data/works.yaml lignes 564-574'
+
+  - id: art-raisonspolitiques-jaeggi-2026
+    title_fr: 'Rahel Jaeggi, Critique des formes de vie'
+    publication_date: '2026'
+    venue_name: 'Raisons politiques'
+    venue_type: 'revue_acad'
+    publisher_house: 'Presses de Sciences Po'
+    sign_count: 15000
+    notes: 'Lecture critique. Acceptation L. Antonicelli 08/05/2026.'
+    source_file: 'data/works.yaml lignes 576-586'
+
+  - id: art-ean-neelchavez-2026-05
+    title_fr: 'Recension Neel & Chavez, Fabrique et forêt. Science et fiction du communisme'
+    publication_date: ''
+    venue_name: 'En attendant Nadeau'
+    venue_type: 'revue'
+    sign_count: 9430
+    notes: 'Recension commande Marianne Dautrey. Envoi 11/05/2026.'
+    source_file: 'data/works.yaml lignes 600-609'
+
+# =============================================================================
+
+articles_in_review:
+  # source : data/works.yaml section "ARTICLES IN_REVIEW STRATÉGIQUES"
+
+  - id: art-nlr-municipality-trap-2026-04
+    title_en: 'The Municipality Trap'
+    submission_date: '2026-04-12'
+    venue_name: 'New Left Review'
+    venue_type: 'revue_int'
+    venue_country: 'UK'
+    language: 'en'
+    word_count: 3862
+    notes: 'PREMIÈRE percée éditoriale anglophone substantielle. Politique NLR : 8 sem. silence = refus tacite (date limite 2026-06-07).'
+    source_file: 'data/works.yaml lignes 615-626'
+
+  - id: art-jacobin-decarbonization-2026-04
+    title_en: 'When the State Outsources Decarbonization, Households Pay'
+    submission_date: '2026-04-14'
+    venue_name: 'Jacobin'
+    venue_type: 'magazine_int'
+    venue_country: 'US'
+    language: 'en'
+    word_count: 1574
+    notes: 'Triangulation FR/UK/US sur rebate politics. Exclusivité formelle. Abandon prévu J+28 = 2026-05-12.'
+    source_file: 'data/works.yaml lignes 628-639'
+
+  - id: art-cahiers-eco-pol-pigou-2026-04
+    title_fr: 'La commensurabilité comme condition de l''externalité : relire Pigou'
+    submission_date: '2026-04-13'
+    venue_name: 'Cahiers d''économie politique'
+    venue_type: 'revue_acad'
+    publisher_house: 'Hermann'
+    language: 'fr'
+    word_count: 8700
+    jel_codes: ['B31', 'B41', 'H23', 'Q58']
+    notes: 'Article HPE. Rang 3 CNRS section 37. Peer review double aveugle. PREMIÈRE soumission revue à comité théorique.'
+    source_file: 'data/works.yaml lignes 641-653'
+
+  - id: art-economie-institutions-2026-04
+    title_fr: 'La dette publique comme configuration institutionnelle de transfert des coûts'
+    submission_date: '2026-04-10'
+    venue_name: 'Économie et institutions'
+    venue_type: 'revue_acad'
+    language: 'fr'
+    sign_count: 48000
+    related_works: ['awp-03']
+    notes: 'Article peer-reviewed. Pré-publication Zenodo CC BY 4.0 explicitement référencée (AWP-03). PREMIÈRE soumission revue à comité explicitement adossée à un AWP.'
+    source_file: 'data/works.yaml lignes 655-666'
+
+  - id: art-lectures-ridde-2026-05
+    title_fr: 'Recension Valéry Ridde — La financiarisation de la santé au Sénégal (1840-1960)'
+    submission_date: '2026-05-25'
+    venue_name: 'Lectures'
+    venue_type: 'revue_acad'
+    sign_count: 8970
+    notes: '2e parcours Lectures. Commande Barbara Blum. Manuscrit prêt. Envoi programmé.'
+    source_file: 'data/works.yaml lignes 668-677'
+
+# =============================================================================
+
+inventory_notes:
+  total_published: 11  # 10 listés dans works.yaml (status=published) + 1 (Welgryn) marqué accepted_pending mais visiblement publié
+  total_accepted_pending: 8  # NB : 9 - 1 (Welgryn reclassé) = 8 si l'on suit l'évidence URL+date
+  total_in_review: 5
+  files_in_content_publications: 11  # ls content/publications/*.md (hors _index)
+  divergences:
+    - 'art-ean-welgryn-2026 : status=accepted_pending dans works.yaml mais page publication active avec date 2026-05-05 → probablement publié.'
+    - 'art-ean-neelchavez-2026-05 : présent en accepted_pending dans works.yaml ; pas de page content/publications/.'

@@ -53,6 +53,65 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-08-16 (suite) — `Wikidata/` versionné et câblé ; un défaut d'écriture en retour trouvé et corrigé
+
+**Constat de départ** : `Wikidata/` (71 fichiers, 703 Ko — navette complète, batches
+QuickStatements, générateur Python) n'était **ni suivi par git, ni ignoré** : simplement
+jamais ajouté. Quatre mois en **exemplaire unique sur un seul disque**, sans historique ni
+copie distante. C'était le risque réel, et le versionnement le corrige.
+
+**Contrôle d'exposition avant ajout** (le dépôt est **public**, et son `.gitignore` porte
+déjà deux cicatrices de ce type) : aucun secret, aucun jeton, aucune clé. Le seul contact
+trouvé est l'e-mail professionnel de l'auteur, **déjà présent dans le dépôt suivi**
+(`data/works.yaml:143`) ; « Laura » n'y figure qu'en prénom, dans des consignes
+opératoires, et **déjà présent** dans `PROJECT_STATUS.md`, `works.yaml` et deux checklists.
+Exposition nouvelle : **nulle**.
+
+**Écarté du versionnement, motif mesuré** : `Import_..._2026-07-06.zip` — ses 3 fichiers
+sont **byte-identiques au SHA-256** à leurs versions en clair du même dossier. Versionner
+les deux, c'est programmer leur divergence.
+
+**⚠ DÉFAUT RÉEL TROUVÉ ET CORRIGÉ — écriture en retour, pas journal.** `Q141072263`
+(*La Société du premier coup*) existait sur Wikidata **depuis le 15/08** — readback API :
+ISBN `978-2-9586347-6-6` (P212), auteur `Q138909233` (P50), `P856` vers la fiche. Or
+`data/works.yaml` disait encore `wikidata: "" # todo — item du livre à créer`, et la fiche
+n'avait **aucun `sameAs`** : l'item était invisible depuis le site. Même classe que le
+défaut qui avait motivé l'écriture de `check-fiches-registre.py` (Livresque, 11/08), un
+livre plus tard. Corrigé aux deux endroits ; `Q141072263` sort désormais dans le HTML de
+la fiche ; linter à 0.
+
+**Cause nommée** : la convention de navette a lâché quand le travail est passé du **lot
+préparé** au **deep-link d'une ligne collé en session**. Les gestes du 15/08 et du 16/08
+n'avaient laissé aucun dossier. Règle désormais écrite dans `Wikidata/README.md` : **tout
+geste Wikidata laisse un dossier daté, même s'il tient en une commande**, et se clôt par
+un readback API. Le dossier du 16/08 est créé et sert de modèle.
+
+**Correction d'une affirmation de la session** : j'avais annoncé un « trou de traçabilité »
+de trois mois dans `CHANGELOG.md`. **Faux, la mesure le dit** : les 9 QID de `works.yaml`
+sont tous documentés par les dossiers datés. Le CHANGELOG n'est qu'un **récit** qui double
+le registre ; en cas de contradiction, **les dossiers datés font foi** — c'est désormais
+écrit dans le README.
+
+**Contrôle automatique envisagé puis ÉCARTÉ PAR LA MESURE** : un diff « QID connus du
+dossier vs QID du registre » produirait **61 faux positifs sur 70** (vocabulaire courant,
+et jusqu'à l'exemple factice `Q1234567`). Le suivi repose donc sur le dossier daté, pas sur
+un garde-fou qui crierait dans le vide.
+
+**Autres instruments du même type, versionnés au passage** : `scripts/zenodo_inventory.py`,
+`zenodo_stats.py`, `zenodo_stats_full.py`, `audit_scholar.sh`. **Câblage** : `CLAUDE.md`
+(contextualisations du dépôt) et § 8 ci-dessous.
+
+**Rangé, motif mesuré** : `test.md` était un rapport « Audit GEO v2 » mal nommé et
+`stats.txt` le brouillon ayant produit `zenodo_stats_full.py` — tous deux reproductibles,
+donc ignorés comme `reports/`. Une seule règle `/_*.txt` remplace `_prompt-*.txt` et couvre
+les quatre familles qui lui échappaient.
+
+**⏸ Laissés à l'arbitrage auteur, sans les trancher** : `AGENTS.md` (consignes Codex — or
+la revue Codex est remplacée par le panel interne : dispositif possiblement mort),
+`BRIEF-CLAUDE-CODE-REDESIGN.md`, `BRIEF-HARMONISATION-GABARITS.md`,
+`AUDIT_AWP06_COHERENCE.md`, `docs/memo-stephane-lalut-2026-05-08.md`,
+`docs/stats_zenodo_2026-04-22.md`.
+
 ### 2026-08-16 — Page dette : la PR mensuelle vide désamorcée, et la compilation publiée comme **jeu de données** (CC BY 4.0)
 
 **Question auteur** : la page `/cout-de-la-dette-publique/` peut-elle suivre les mises à jour
@@ -1426,6 +1485,13 @@ pas d'auteur.
 - `NOTES_PUBLICATIONS.md` : règles publications (front matter, 
   taxonomie source_type, règle d'or SCSS BEM)
 - `data/author.toml` : source unique identité auteur
+- `Wikidata/README.md` : navette Wikidata — **registre primaire = les dossiers
+  `Import_..._<date>_<sujet>/`**, pas le `CHANGELOG.md` ; règle « tout geste
+  laisse un dossier daté, même en une commande » ; chaîne à boucler jusqu'au
+  `sameAs` de la fiche. Dossier versionné le 2026-08-16 après quatre mois en
+  exemplaire unique.
+- `Wikidata/scripts/README.md` : générateur de batches QuickStatements
+  (fetchers Zenodo/Crossref/OpenLibrary, validators P9934/P407)
 
 ---
 

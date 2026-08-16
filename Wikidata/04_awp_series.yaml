@@ -1,0 +1,70 @@
+# =============================================================================
+# 04_awp_series.yaml — série Anthropie Working Papers
+# Sources : content/serie-awp/_index.md (+ .en.md), data/works.yaml, data/awp_short_titles.yaml,
+#           config/_default/hugo.toml, content/awp/awp-NN.md
+# =============================================================================
+
+wikidata_qid: 'Q139040913'  # source : 09_wikidata_existing_state.yaml (item externe Wikidata, à confirmer par Laura)
+wikidata_qid_source_note: |
+  Le QID Q139040913 n'apparaît PAS dans le repo. Il est fourni dans
+  _wikidata-prompt.txt (memoire stratégique externe). Laura validera.
+
+canonical_name_fr: 'Anthropie Working Papers'  # source : content/serie-awp/_index.md ligne 2 + data/works.yaml ligne 80 ("series: Anthropie Working Papers")
+canonical_name_en: 'Anthropie Working Papers'  # source : content/serie-awp/_index.en.md ligne 2
+
+abbreviation: 'AWP'  # source : data/awp_short_titles.yaml + frontmatters awp_number "AWP-01" etc.
+
+description_fr: 'Série de working papers sur l''anthropie par Stéphane Lalut, économiste, chercheur indépendant et essayiste.'  # source : content/serie-awp/_index.md ligne 3
+description_en: 'The Anthropie Working Papers (AWP) constitute the academic corpus of the framework of anthropy by Stéphane Lalut, economist, independent researcher and essayist.'  # source : content/serie-awp/_index.en.md ligne 3
+
+homepage_fr: 'https://stephane-lalut.com/serie-awp/'
+homepage_en: 'https://stephane-lalut.com/en/serie-awp/'  # source : config/_default/hugo.toml ligne 27-29 (menu EN "Working Papers" → /en/serie-awp/)
+homepage_source_note: 'Aliases _index.md: /awp/ (ligne 5) — redirection legacy ; canonical = /serie-awp/.'
+
+zenodo_community_id: 'anthropie-working-papers'  # source : data/author.toml ligne 31
+zenodo_community_url: 'https://zenodo.org/communities/anthropie-working-papers'
+
+languages: ['fr', 'en']  # source : data/works.yaml (chaque AWP a publication_date_fr et publication_date_en)
+
+country_of_origin: 'France'  # source : data/works.yaml ligne 59 affiliation_label_fr "Chercheur indépendant" ; pas d'institution mais auteur français (FR baseURL, FR canonical).
+
+author_qid: 'Q138909233'  # source : data/works.yaml ligne 63 author.wikidata_person
+
+has_parts:
+  # AWP individuels (cf. 05_awps.yaml pour détails)
+  - id: 'awp-01'
+    short_title_fr: "Qu'est-ce que l'anthropie ?"  # source : data/awp_short_titles.yaml lignes 1-3
+    series_number: 1  # source : data/works.yaml ligne 81
+  - id: 'awp-02'
+    short_title_fr: "3,3 millions d'années en un principe"  # source : data/awp_short_titles.yaml lignes 4-6
+    series_number: 2  # source : data/works.yaml ligne 111
+  - id: 'awp-03'
+    short_title_fr: 'Dette publique et anthropie'  # source : data/awp_short_titles.yaml lignes 7-9
+    series_number: 3  # source : data/works.yaml ligne 143
+  - id: 'awp-04'
+    short_title_fr: 'Transition énergétique ou transfert entropique ?'  # source : data/awp_short_titles.yaml lignes 10-12
+    series_number: 4  # source : data/works.yaml ligne 175
+  - id: 'awp-05'
+    short_title_fr: 'Penser hors les murs'  # source : data/awp_short_titles.yaml lignes 13-15
+    series_number: 5  # source : data/works.yaml ligne 205
+  - id: 'awp-06'
+    short_title_fr: 'Infrastructures numériques'  # source : data/awp_short_titles.yaml lignes 16-18
+    series_number: 6  # source : data/works.yaml ligne 233
+
+total_count: 6  # source : énumération data/works.yaml type=awp
+
+publication_window:
+  first_publication_fr: '2026-02-01'  # source : data/works.yaml ligne 85 (awp-01.publication_date_fr)
+  latest_publication_fr: '2026-05-07'  # source : data/works.yaml ligne 237 (awp-06.publication_date_fr)
+  first_publication_en: '2026-04-05'  # source : data/works.yaml ligne 86 (awp-01.publication_date_en)
+  latest_publication_en: '2026-05-07'  # source : data/works.yaml ligne 238 (awp-06.publication_date_en)
+  note: 'Asymétrie intentionnelle FR≠EN sur AWP-01 à 05 (publication FR antérieure ; EN datée du dépôt Zenodo). Concordance FR=EN pour AWP-06.'
+
+license_default: 'CC-BY-4.0'  # source : data/works.yaml ligne 87 (chaque AWP : "license: CC-BY 4.0")
+
+source_files:
+  - 'content/serie-awp/_index.md'
+  - 'content/serie-awp/_index.en.md'
+  - 'data/works.yaml'
+  - 'data/awp_short_titles.yaml'
+  - 'config/_default/hugo.toml'

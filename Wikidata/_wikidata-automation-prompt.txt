@@ -1,0 +1,1464 @@
+# PROMPT CLAUDE CODE — Script Python de génération automatique des batches Wikidata
+# Version 1.0 (2026-05-13)
+
+## OBJECTIF
+
+Créer un dispositif Python semi-automatique pour générer des batches QuickStatements
+à chaque nouvelle publication intéressante pour Wikidata (AWP, article de revue,
+livre, ou recension). Le dispositif fonctionne en pull, pas en push : Stéphane le
+déclenche manuellement, le script génère un fichier `.qs` paste-ready dans
+`Wikidata/batches-generated/`, Stéphane valide visuellement, transmet à Laura,
+Laura exécute via QuickStatements.
+
+**Aucune communication automatique avec Wikidata. Aucun commit automatique.**
+La validation humaine reste obligatoire à chaque étape.
+
+## CONTEXTE
+
+Première phase Wikidata terminée (mai 2026, Phase A + B + C + correction DOI).
+12 items créés ou enrichis, 100+ déclarations posées, 8 conventions retenues,
+8 erreurs identifiées et résolues. Le dispositif actuel sert de référence
+qualité pour le script à produire.
+
+Stéphane prévoit ~2-5 publications par an (AWPs, articles, livres). Refaire
+manuellement le travail de Phase A+B+C pour chaque publication serait pénible.
+Le script doit réduire le coût marginal d'une nouvelle publication d'~1h à
+~10 min de validation.
+
+## PRÉREQUIS
+
+1. Python 3.10+ installé (vérifier `python --version`).
+2. Repo `D:\anthropie\anthropie-site\` à jour, branche `main`.
+3. Lire `PROJECT_STATUS.md` à la racine du repo.
+4. Lire `Wikidata/CHANGELOG.md` pour comprendre l'état du chantier.
+5. Lire `Wikidata/wikidata_maillage_lalut_v1.md` pour les conventions.
+6. Vérifier la présence de `data/works.yaml` (v1.2, 710 lignes).
+
+## ARCHITECTURE CIBLE
+
+Créer la structure suivante dans `D:\anthropie\anthropie-site\Wikidata\` :
+
+```
+Wikidata/
+├── scripts/
+│   ├── __init__.py
+│   ├── config.py                          # Constantes Q-IDs, P-IDs
+│   ├── generate_wikidata_batch.py         # CLI principal
+│   ├── validators.py                      # Validations Wikidata
+│   ├── fetchers/
+│   │   ├── __init__.py
+│   │   ├── zenodo.py                      # API Zenodo
+│   │   ├── crossref.py                    # API Crossref
+│   │   └── openlibrary.py                 # API OpenLibrary
+│   ├── generators/
+│   │   ├── __init__.py
+│   │   ├── base.py                        # Classe abstraite + helpers
+│   │   ├── awp.py                         # Générateur AWP
+│   │   ├── article.py                     # Générateur Article
+│   │   └── book.py                        # Générateur Book
+│   ├── tests/
+│   │   ├── __init__.py
+│   │   └── test_validators.py
+│   ├── requirements.txt
+│   └── README.md
+└── batches-generated/                     # Fichiers .qs en attente validation
+    ├── .gitkeep
+    └── README.md
+```
+
+## RÈGLES STRICTES
+
+1. **Aucun commit.** Tous les fichiers créés restent untracked tant que
+   Stéphane ne décide pas de les commiter manuellement.
+2. **Aucune communication avec Wikidata API.** Le script ne fait que
+   produire des fichiers `.qs` locaux.
+3. **Validation obligatoire avant écriture.** Le module `validators.py`
+   refuse l'écriture si une erreur de design est détectée (P9934 mal placé,
+   P407 sur P356, etc.).
+4. **Doctrine "no invent".** Toutes les valeurs Q-IDs/P-IDs sont dans
+   `config.py` avec leur source de vérification. Aucune invention en cours
+   de génération.
+5. **Tous les fichiers Python en UTF-8** (encoding declaration explicit
+   pour Windows/PowerShell compatibility).
+6. **Pathlib partout** (pas de chaînes de chemin hardcodées).
+
+---
+
+## ACTION 1 — Créer la structure de répertoires
+
+Depuis la racine du repo, créer :
+
+```powershell
+New-Item -ItemType Directory -Force -Path Wikidata\scripts\fetchers
+New-Item -ItemType Directory -Force -Path Wikidata\scripts\generators
+New-Item -ItemType Directory -Force -Path Wikidata\scripts\tests
+New-Item -ItemType Directory -Force -Path Wikidata\batches-generated
+```
+
+Créer les fichiers `__init__.py` vides :
+- `Wikidata\scripts\__init__.py`
+- `Wikidata\scripts\fetchers\__init__.py`
+- `Wikidata\scripts\generators\__init__.py`
+- `Wikidata\scripts\tests\__init__.py`
+
+Créer `Wikidata\batches-generated\.gitkeep` (fichier vide).
+
+---
+
+## ACTION 2 — Créer `Wikidata/scripts/config.py`
+
+Contenu **exact** :
+
+```python
+# -*- coding: utf-8 -*-
+"""
+Constantes Q-IDs et P-IDs validées pour le dispositif Lalut/Anthropie.
+
+Toutes les valeurs sont vérifiées au 2026-05-13 contre Wikidata.
+Aucune invention. Source : maillage_lalut_v1 + batches 11_/12_/13_ exécutés.
+
+Pour ajouter une nouvelle valeur : vérifier sur wikidata.org, noter ici
+avec un commentaire indiquant la source de vérification.
+"""
+
+# =============================================================================
+# Q-IDs ENTITÉS LALUT (validés par création Wikidata réelle)
+# =============================================================================
+
+# Personne et œuvres principales
+STEPHANE_LALUT = "Q138909233"
+ANTHROPY_CONCEPT = "Q138827949"
+AWP_SERIES = "Q139040913"
+
+# Livres
+BOOK_ANTHROPIE = "Q138827344"           # ANTHROPIE - Ordre ici. Dette ailleurs
+BOOK_DETTE_PUBLIQUE = "Q138910896"      # Dette Publique : Qui paie vraiment ?
+BOOK_ODYSSEE = "Q138911733"             # L'Odyssée des Idées
+
+# 6 AWPs créés en Phase B (2026-05-12)
+AWP_01 = "Q139771989"
+AWP_02 = "Q139771990"
+AWP_03 = "Q139771991"
+AWP_04 = "Q139771992"
+AWP_05 = "Q139771993"
+AWP_06 = "Q139771994"
+
+# =============================================================================
+# Q-IDs CONCEPTS WIKIDATA (validés)
+# =============================================================================
+
+HUMAN = "Q5"
+FRANCE = "Q142"
+FRENCH = "Q150"
+ENGLISH = "Q1860"
+SCHOLARLY_ARTICLE = "Q13442814"
+BOOK = "Q571"
+ECONOMIST = "Q188094"
+WRITER = "Q36180"
+ESSAYIST = "Q11774202"                   # essayiste
+STEPHANE_GIVEN_NAME = "Q3501543"         # corrigé en v2.1 du maillage
+ZENODO = "Q22661177"                     # corrigé en v2.1 du maillage
+
+# Sujets AWP (validés en v2 du maillage)
+GOVERNMENT_DEBT = "Q3024789"
+ENERGY_TRANSITION = "Q795757"
+DATA_CENTER = "Q671224"
+AI_DATA_CENTER = "Q137571914"
+ARTIFICIAL_INTELLIGENCE = "Q11660"
+
+# =============================================================================
+# P-IDs PROPRIÉTÉS WIKIDATA (validés)
+# =============================================================================
+
+# Métadonnées générales
+INSTANCE_OF = "P31"
+AUTHOR = "P50"
+OCCUPATION = "P106"
+COUNTRY_OF_CITIZENSHIP = "P27"
+LANGUAGE_OF_WORK = "P407"
+PUBLICATION_DATE = "P577"
+MAIN_SUBJECT = "P921"
+PART_OF = "P361"
+HAS_PART = "P527"
+DOI = "P356"
+FULL_WORK_URL = "P953"
+DESCRIBED_AT_URL = "P973"
+NOTABLE_WORK = "P800"
+PUBLISHED_IN = "P1433"
+
+# Identifiants externes
+ORCID = "P496"
+GOOGLE_SCHOLAR = "P1960"
+SSRN_AUTHOR = "P5587"
+OPENALEX = "P10283"
+IDREF = "P269"
+ZENODO_COMMUNITY = "P9934"   # ATTENTION : main value only, pas qualifier
+AMAZON_ASIN = "P5749"
+ISBN_13 = "P212"
+ISBN_10 = "P957"
+
+# Sources (préfixe S dans QuickStatements)
+REF_URL = "S854"
+REF_RETRIEVED = "S813"
+
+# =============================================================================
+# REGEX DE VALIDATION
+# =============================================================================
+
+REGEX_DOI = r"^10\.[0-9]{4,9}\/[-._;()/:A-Za-z0-9]+$"
+REGEX_ISBN_13 = r"^97[89]-?\d{1,5}-?\d{1,7}-?\d{1,7}-?\d$"
+REGEX_ZENODO_COMMUNITY = r"^[a-z0-9][-a-z0-9_]*$"
+
+# =============================================================================
+# PROPRIÉTÉS À PORTÉE RESTREINTE (NE PAS UTILISER COMME QUALIFIER)
+# =============================================================================
+
+# Ces propriétés ont un scope = "main value only" et NE DOIVENT JAMAIS
+# apparaître comme qualifier (préfixe P) ni comme source qualifier (préfixe S)
+# dans les batches QuickStatements.
+MAIN_VALUE_ONLY = {
+    ZENODO_COMMUNITY,  # P9934 - cf. bug Phase A 2026-05-12
+}
+
+# Qualifiers INVALIDES pour des propriétés données
+# Format : {propriété: [liste des qualifiers à interdire]}
+FORBIDDEN_QUALIFIERS = {
+    DOI: [LANGUAGE_OF_WORK],  # P407 sur P356 - cf. bug Phase B 2026-05-12
+}
+```
+
+---
+
+## ACTION 3 — Créer `Wikidata/scripts/fetchers/zenodo.py`
+
+Contenu **exact** :
+
+```python
+# -*- coding: utf-8 -*-
+"""
+Fetcher Zenodo : récupère les métadonnées d'un dépôt Zenodo via son DOI.
+
+API Zenodo : https://zenodo.org/api/records/{id}
+Format DOI : 10.5281/zenodo.{id} (extraction de {id} automatique)
+"""
+
+import json
+import re
+import urllib.request
+from typing import Optional
+
+
+class ZenodoMetadata:
+    """Métadonnées d'un dépôt Zenodo, structurées pour génération de batch."""
+
+    def __init__(self, doi: str, title: str, description: str,
+                 publication_date: str, language: str,
+                 keywords: list, pdf_url: str, record_id: str):
+        self.doi = doi
+        self.title = title
+        self.description = description
+        self.publication_date = publication_date  # ISO 8601
+        self.language = language  # code ISO 639-1 (fr, en)
+        self.keywords = keywords
+        self.pdf_url = pdf_url
+        self.record_id = record_id
+
+    def __repr__(self):
+        return f"ZenodoMetadata(doi={self.doi}, title={self.title[:50]}...)"
+
+
+def fetch_zenodo_metadata(doi: str) -> Optional[ZenodoMetadata]:
+    """
+    Récupère les métadonnées d'un dépôt Zenodo via son DOI.
+
+    Args:
+        doi: DOI au format '10.5281/zenodo.XXXXX'
+
+    Returns:
+        ZenodoMetadata si succès, None si échec.
+
+    Raises:
+        ValueError si DOI mal formaté.
+    """
+    # Extraire l'ID Zenodo du DOI
+    match = re.match(r"^10\.5281/zenodo\.(\d+)$", doi.strip())
+    if not match:
+        raise ValueError(
+            f"DOI '{doi}' n'est pas un DOI Zenodo valide "
+            "(format attendu : 10.5281/zenodo.XXXXX)"
+        )
+
+    record_id = match.group(1)
+    url = f"https://zenodo.org/api/records/{record_id}"
+
+    try:
+        with urllib.request.urlopen(url, timeout=30) as response:
+            data = json.loads(response.read().decode("utf-8"))
+    except Exception as e:
+        print(f"[ERROR] Échec fetch Zenodo {record_id}: {e}")
+        return None
+
+    metadata = data.get("metadata", {})
+
+    # Construction du PDF URL canonique
+    files = data.get("files", [])
+    pdf_url = ""
+    for f in files:
+        key = f.get("key", "")
+        if key.lower().endswith(".pdf"):
+            pdf_url = f"https://zenodo.org/records/{record_id}/files/{key}"
+            break
+
+    return ZenodoMetadata(
+        doi=doi,
+        title=metadata.get("title", ""),
+        description=metadata.get("description", ""),
+        publication_date=metadata.get("publication_date", ""),
+        language=metadata.get("language", ""),
+        keywords=metadata.get("keywords", []),
+        pdf_url=pdf_url,
+        record_id=record_id,
+    )
+```
+
+---
+
+## ACTION 4 — Créer `Wikidata/scripts/fetchers/crossref.py`
+
+Contenu **exact** :
+
+```python
+# -*- coding: utf-8 -*-
+"""
+Fetcher Crossref : récupère les métadonnées d'un DOI Crossref (articles).
+
+API Crossref : https://api.crossref.org/works/{doi}
+"""
+
+import json
+import urllib.request
+from typing import Optional
+
+
+class CrossrefMetadata:
+    """Métadonnées d'un article via Crossref."""
+
+    def __init__(self, doi: str, title: str, authors: list,
+                 publisher: str, journal: str, publication_date: str,
+                 language: str, container_title: str):
+        self.doi = doi
+        self.title = title
+        self.authors = authors
+        self.publisher = publisher
+        self.journal = journal
+        self.publication_date = publication_date
+        self.language = language
+        self.container_title = container_title
+
+    def __repr__(self):
+        return f"CrossrefMetadata(doi={self.doi}, title={self.title[:50]}...)"
+
+
+def fetch_crossref_metadata(doi: str) -> Optional[CrossrefMetadata]:
+    """
+    Récupère les métadonnées via l'API Crossref.
+
+    Args:
+        doi: DOI complet (ex: '10.1234/journal.5678')
+
+    Returns:
+        CrossrefMetadata si succès, None si échec.
+    """
+    url = f"https://api.crossref.org/works/{doi.strip()}"
+
+    try:
+        req = urllib.request.Request(
+            url,
+            headers={"User-Agent": "Lalut-Anthropie-Tool/1.0 (mailto:Stephane-lalut@outlook.fr)"}
+        )
+        with urllib.request.urlopen(req, timeout=30) as response:
+            data = json.loads(response.read().decode("utf-8"))
+    except Exception as e:
+        print(f"[ERROR] Échec fetch Crossref {doi}: {e}")
+        return None
+
+    msg = data.get("message", {})
+
+    title_list = msg.get("title", [])
+    title = title_list[0] if title_list else ""
+
+    authors = []
+    for a in msg.get("author", []):
+        name = f"{a.get('given', '')} {a.get('family', '')}".strip()
+        if name:
+            authors.append(name)
+
+    container_list = msg.get("container-title", [])
+    container_title = container_list[0] if container_list else ""
+
+    pub_date_parts = msg.get("published", {}).get("date-parts", [[]])[0]
+    if len(pub_date_parts) >= 3:
+        publication_date = f"{pub_date_parts[0]:04d}-{pub_date_parts[1]:02d}-{pub_date_parts[2]:02d}"
+    elif len(pub_date_parts) >= 2:
+        publication_date = f"{pub_date_parts[0]:04d}-{pub_date_parts[1]:02d}-01"
+    elif len(pub_date_parts) >= 1:
+        publication_date = f"{pub_date_parts[0]:04d}-01-01"
+    else:
+        publication_date = ""
+
+    return CrossrefMetadata(
+        doi=doi,
+        title=title,
+        authors=authors,
+        publisher=msg.get("publisher", ""),
+        journal=container_title,
+        publication_date=publication_date,
+        language=msg.get("language", ""),
+        container_title=container_title,
+    )
+```
+
+---
+
+## ACTION 5 — Créer `Wikidata/scripts/fetchers/openlibrary.py`
+
+Contenu **exact** :
+
+```python
+# -*- coding: utf-8 -*-
+"""
+Fetcher OpenLibrary : récupère les métadonnées d'un livre via ISBN.
+
+API OpenLibrary : https://openlibrary.org/api/books?bibkeys=ISBN:{isbn}&format=json&jscmd=data
+"""
+
+import json
+import urllib.request
+from typing import Optional
+
+
+class OpenLibraryMetadata:
+    """Métadonnées d'un livre via OpenLibrary."""
+
+    def __init__(self, isbn: str, title: str, authors: list,
+                 publisher: str, publication_date: str,
+                 number_of_pages: int, url: str):
+        self.isbn = isbn
+        self.title = title
+        self.authors = authors
+        self.publisher = publisher
+        self.publication_date = publication_date
+        self.number_of_pages = number_of_pages
+        self.url = url
+
+    def __repr__(self):
+        return f"OpenLibraryMetadata(isbn={self.isbn}, title={self.title[:50]}...)"
+
+
+def fetch_openlibrary_metadata(isbn: str) -> Optional[OpenLibraryMetadata]:
+    """
+    Récupère les métadonnées via l'API OpenLibrary.
+
+    Args:
+        isbn: ISBN 10 ou 13, avec ou sans tirets
+
+    Returns:
+        OpenLibraryMetadata si succès, None si échec ou inconnu.
+    """
+    isbn_clean = isbn.replace("-", "").replace(" ", "").strip()
+    url = f"https://openlibrary.org/api/books?bibkeys=ISBN:{isbn_clean}&format=json&jscmd=data"
+
+    try:
+        with urllib.request.urlopen(url, timeout=30) as response:
+            data = json.loads(response.read().decode("utf-8"))
+    except Exception as e:
+        print(f"[ERROR] Échec fetch OpenLibrary {isbn_clean}: {e}")
+        return None
+
+    key = f"ISBN:{isbn_clean}"
+    if key not in data:
+        print(f"[WARN] ISBN {isbn_clean} non trouvé dans OpenLibrary")
+        return None
+
+    book = data[key]
+    publishers = book.get("publishers", [])
+    publisher = publishers[0].get("name", "") if publishers else ""
+
+    return OpenLibraryMetadata(
+        isbn=isbn_clean,
+        title=book.get("title", ""),
+        authors=[a.get("name", "") for a in book.get("authors", [])],
+        publisher=publisher,
+        publication_date=book.get("publish_date", ""),
+        number_of_pages=book.get("number_of_pages", 0),
+        url=book.get("url", ""),
+    )
+```
+
+---
+
+## ACTION 6 — Créer `Wikidata/scripts/validators.py`
+
+Contenu **exact** :
+
+```python
+# -*- coding: utf-8 -*-
+"""
+Validateurs Wikidata. Empêche les erreurs de design avant écriture.
+
+Référence : les 8 erreurs accumulées dans le chantier Phase A+B+C
+(mai 2026) ont permis d'identifier les pièges récurrents. Ce module
+les bloque dès la génération.
+"""
+
+import re
+from typing import List, Tuple
+
+from config import (
+    REGEX_DOI, REGEX_ISBN_13, REGEX_ZENODO_COMMUNITY,
+    MAIN_VALUE_ONLY, FORBIDDEN_QUALIFIERS, DOI, LANGUAGE_OF_WORK
+)
+
+
+class ValidationError(Exception):
+    """Levée si une violation de contrainte Wikidata est détectée."""
+    pass
+
+
+def validate_doi(doi: str) -> None:
+    """Vérifie le format DOI."""
+    if not re.match(REGEX_DOI, doi):
+        raise ValidationError(
+            f"DOI '{doi}' ne respecte pas le format Wikidata "
+            f"(regex {REGEX_DOI})"
+        )
+
+
+def validate_isbn13(isbn: str) -> None:
+    """Vérifie le format ISBN-13."""
+    if not re.match(REGEX_ISBN_13, isbn):
+        raise ValidationError(
+            f"ISBN '{isbn}' ne respecte pas le format ISBN-13 "
+            f"(regex {REGEX_ISBN_13})"
+        )
+
+
+def validate_zenodo_community(slug: str) -> None:
+    """Vérifie le format d'un slug Zenodo Community."""
+    if not re.match(REGEX_ZENODO_COMMUNITY, slug):
+        raise ValidationError(
+            f"Slug Zenodo Community '{slug}' invalide. "
+            f"Ne doit contenir que minuscules, chiffres, tirets, underscores."
+        )
+
+
+def validate_batch_lines(lines: List[str]) -> List[str]:
+    """
+    Vérifie une liste de lignes de batch QuickStatements.
+
+    Erreurs détectées :
+    1. P9934 utilisé comme qualifier ou source (scope = main value only)
+    2. P407 utilisé comme qualifier de P356
+    3. P356 multiples sans qualifier valide sur le même item
+
+    Args:
+        lines: Liste de lignes de batch (sans les commentaires #).
+
+    Returns:
+        Liste de warnings (str). Lève ValidationError si erreur critique.
+    """
+    warnings = []
+    p356_per_item = {}  # {QID: count}
+
+    for i, line in enumerate(lines, start=1):
+        line_stripped = line.strip()
+        if not line_stripped or line_stripped.startswith("#"):
+            continue
+
+        # Découper la ligne
+        parts = line_stripped.split("\t")
+        if len(parts) < 3:
+            continue
+
+        qid = parts[0]
+        prop = parts[1]
+
+        # Erreur 1 : P9934 (et autres MAIN_VALUE_ONLY) en qualifier ou source
+        for j in range(3, len(parts), 2):
+            qual = parts[j] if j < len(parts) else ""
+            # Préfixes Q (qualifier) ou S (source) qui pointent vers une P mainvalue
+            if qual.startswith("S") or qual.startswith("P"):
+                pid_qual = "P" + qual[1:] if qual[0] in "PS" else qual
+                if pid_qual in MAIN_VALUE_ONLY:
+                    raise ValidationError(
+                        f"Ligne {i}: '{pid_qual}' est en scope 'main value only' "
+                        f"et ne peut pas être utilisé comme qualifier/source. "
+                        f"Erreur Phase A 2026-05-12 (P9934) reproduite. "
+                        f"Ligne en cause : {line_stripped[:120]}"
+                    )
+
+        # Erreur 2 : P407 comme qualifier de P356
+        if prop == DOI:
+            for j in range(3, len(parts), 2):
+                qual = parts[j] if j < len(parts) else ""
+                if qual == LANGUAGE_OF_WORK:
+                    raise ValidationError(
+                        f"Ligne {i}: P407 (langue) n'est PAS un qualifier valide "
+                        f"de P356 (DOI). Erreur Phase B 2026-05-12 reproduite. "
+                        f"Utiliser P953 (full work URL) pour les variantes "
+                        f"linguistiques d'une œuvre. "
+                        f"Ligne en cause : {line_stripped[:120]}"
+                    )
+
+        # Comptage P356 par item (pour erreur 3)
+        if prop == DOI and qid not in ("CREATE", "LAST"):
+            p356_per_item[qid] = p356_per_item.get(qid, 0) + 1
+
+    # Erreur 3 : P356 multiples sur un même item
+    for qid, count in p356_per_item.items():
+        if count > 1:
+            warnings.append(
+                f"L'item {qid} reçoit {count} P356 (DOI). "
+                f"Contrainte d'unicité Wikidata : un seul DOI par item. "
+                f"Considérer P953 (URL) pour les DOIs supplémentaires."
+            )
+
+    return warnings
+```
+
+---
+
+## ACTION 7 — Créer `Wikidata/scripts/generators/base.py`
+
+Contenu **exact** :
+
+```python
+# -*- coding: utf-8 -*-
+"""
+Classe abstraite pour les générateurs de batch QuickStatements.
+"""
+
+from datetime import date
+from pathlib import Path
+from typing import List
+
+
+class BatchGenerator:
+    """
+    Base abstraite. Les sous-classes implémentent generate() pour produire
+    une liste de lignes QuickStatements.
+    """
+
+    def __init__(self):
+        self.lines: List[str] = []
+        self.today = date.today().isoformat()  # "2026-05-13"
+
+    def add_header(self, title: str, subtitle: str = ""):
+        """Ajoute un en-tête de batch."""
+        self.lines.append("# " + "=" * 77)
+        self.lines.append(f"# {title}")
+        if subtitle:
+            self.lines.append(f"# {subtitle}")
+        self.lines.append(f"# Généré le {self.today} par generate_wikidata_batch.py")
+        self.lines.append("# " + "=" * 77)
+        self.lines.append("")
+
+    def add_section(self, label: str):
+        """Ajoute un séparateur de section."""
+        self.lines.append("")
+        self.lines.append("# " + "-" * 77)
+        self.lines.append(f"# {label}")
+        self.lines.append("# " + "-" * 77)
+
+    def add_statement(self, qid: str, prop: str, value: str, sources: list = None):
+        """
+        Ajoute une déclaration au batch.
+
+        Args:
+            qid: Q-ID de l'item (ou "CREATE" ou "LAST")
+            prop: P-ID de la propriété
+            value: Valeur (string ou Q-ID)
+            sources: Liste de tuples (S_prop, S_value) pour les références
+        """
+        parts = [qid, prop, value]
+        if sources:
+            for s_prop, s_value in sources:
+                parts.append(s_prop)
+                parts.append(s_value)
+        # Ajout du timestamp de récupération si pas déjà présent
+        if sources and not any(s[0] == "S813" for s in sources):
+            parts.append("S813")
+            parts.append(f"+{self.today}T00:00:00Z/11")
+        self.lines.append("\t".join(parts))
+
+    def add_label(self, lang: str, value: str):
+        """Ajoute un label pour une langue."""
+        self.lines.append(f'LAST\tL{lang}\t"{value}"')
+
+    def add_description(self, lang: str, value: str):
+        """Ajoute une description pour une langue."""
+        self.lines.append(f'LAST\tD{lang}\t"{value}"')
+
+    def generate(self) -> List[str]:
+        """À implémenter par les sous-classes."""
+        raise NotImplementedError
+
+    def to_file(self, output_dir: Path, filename: str) -> Path:
+        """Écrit le batch dans un fichier."""
+        output_path = output_dir / filename
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        output_path.write_text("\n".join(self.lines) + "\n", encoding="utf-8")
+        return output_path
+```
+
+---
+
+## ACTION 8 — Créer `Wikidata/scripts/generators/awp.py`
+
+Contenu **exact** :
+
+```python
+# -*- coding: utf-8 -*-
+"""
+Générateur de batch pour un nouveau working paper (AWP).
+"""
+
+from typing import Optional
+
+from generators.base import BatchGenerator
+from fetchers.zenodo import fetch_zenodo_metadata, ZenodoMetadata
+import config as cfg
+
+
+class AwpGenerator(BatchGenerator):
+    """Génère un batch QuickStatements pour un nouvel AWP."""
+
+    def __init__(self, zenodo_doi_fr: str, awp_number: int,
+                 zenodo_doi_en: Optional[str] = None,
+                 url_site_fr: Optional[str] = None,
+                 url_site_en: Optional[str] = None,
+                 main_subjects: Optional[list] = None):
+        super().__init__()
+        self.zenodo_doi_fr = zenodo_doi_fr
+        self.zenodo_doi_en = zenodo_doi_en
+        self.awp_number = awp_number
+        self.url_site_fr = url_site_fr or f"https://stephane-lalut.com/awp/awp-{awp_number:02d}/"
+        self.url_site_en = url_site_en or f"https://stephane-lalut.com/en/awp/awp-{awp_number:02d}/"
+        self.main_subjects = main_subjects or [cfg.ANTHROPY_CONCEPT]
+        self.metadata: Optional[ZenodoMetadata] = None
+
+    def fetch(self):
+        """Récupère les métadonnées Zenodo."""
+        self.metadata = fetch_zenodo_metadata(self.zenodo_doi_fr)
+        if self.metadata is None:
+            raise RuntimeError(f"Impossible de fetch Zenodo {self.zenodo_doi_fr}")
+
+    def generate(self) -> list:
+        """Produit les lignes du batch."""
+        if self.metadata is None:
+            self.fetch()
+
+        m = self.metadata
+        self.add_header(
+            f"AWP-{self.awp_number:02d} — Création item Wikidata",
+            f"DOI Zenodo FR : {self.zenodo_doi_fr}"
+        )
+
+        self.lines.append("CREATE")
+        self.add_label("fr", m.title)
+        self.add_description(
+            "fr",
+            f"Working paper de Stéphane Lalut "
+            f"(AWP-{self.awp_number:02d}, {m.publication_date[:4]})"
+        )
+
+        # Type
+        self.lines.append(f"LAST\t{cfg.INSTANCE_OF}\t{cfg.SCHOLARLY_ARTICLE}")
+        # Auteur
+        self.lines.append(
+            f"LAST\t{cfg.AUTHOR}\t{cfg.STEPHANE_LALUT}\t"
+            f"{cfg.REF_URL}\t\"https://orcid.org/0009-0002-1794-4895\"\t"
+            f"{cfg.REF_RETRIEVED}\t+{self.today}T00:00:00Z/11"
+        )
+        # DOI principal (Zenodo FR)
+        self.lines.append(
+            f'LAST\t{cfg.DOI}\t"{self.zenodo_doi_fr}"\t'
+            f'{cfg.REF_URL}\t"https://doi.org/{self.zenodo_doi_fr}"\t'
+            f"{cfg.REF_RETRIEVED}\t+{self.today}T00:00:00Z/11"
+        )
+        # Langue principale
+        self.lines.append(f"LAST\t{cfg.LANGUAGE_OF_WORK}\t{cfg.FRENCH}")
+        # Date de publication
+        if m.publication_date:
+            self.lines.append(
+                f"LAST\t{cfg.PUBLICATION_DATE}\t+{m.publication_date}T00:00:00Z/11"
+            )
+        # Sujets principaux
+        for subject in self.main_subjects:
+            self.lines.append(f"LAST\t{cfg.MAIN_SUBJECT}\t{subject}")
+        # Part of (série AWP)
+        self.lines.append(f"LAST\t{cfg.PART_OF}\t{cfg.AWP_SERIES}")
+        # URLs (full work + site canonique FR/EN)
+        self.lines.append(
+            f'LAST\t{cfg.FULL_WORK_URL}\t"https://zenodo.org/records/{m.record_id}"'
+        )
+        self.lines.append(
+            f'LAST\t{cfg.FULL_WORK_URL}\t"{self.url_site_fr}"\t'
+            f'{cfg.LANGUAGE_OF_WORK}\t{cfg.FRENCH}'
+        )
+        self.lines.append(
+            f'LAST\t{cfg.FULL_WORK_URL}\t"{self.url_site_en}"\t'
+            f'{cfg.LANGUAGE_OF_WORK}\t{cfg.ENGLISH}'
+        )
+        # DOI version EN en P953 si fourni (cf. décision Option B)
+        if self.zenodo_doi_en:
+            self.lines.append(
+                f'LAST\t{cfg.FULL_WORK_URL}\t"https://doi.org/{self.zenodo_doi_en}"\t'
+                f'{cfg.LANGUAGE_OF_WORK}\t{cfg.ENGLISH}'
+            )
+
+        # Rétro-liens (Phase C inline)
+        self.add_section(
+            f"AWP-{self.awp_number:02d} — Rétro-liens (à exécuter APRÈS création)"
+        )
+        self.lines.append(
+            "# NOTE : Substituer 'NEW_QID' par le QID assigné après exécution du CREATE"
+        )
+        self.lines.append(f"{cfg.AWP_SERIES}\t{cfg.HAS_PART}\tNEW_QID")
+        self.lines.append(f"{cfg.STEPHANE_LALUT}\t{cfg.NOTABLE_WORK}\tNEW_QID")
+
+        return self.lines
+```
+
+---
+
+## ACTION 9 — Créer `Wikidata/scripts/generators/article.py`
+
+Contenu **exact** :
+
+```python
+# -*- coding: utf-8 -*-
+"""
+Générateur de batch pour un nouvel article de revue.
+
+NOTE : Pour Wikidata, on enrichit principalement l'item de l'auteur (P800)
+plutôt que de créer un item par article. La création d'item article n'est
+généralement justifiée que si l'article a un DOI Crossref ou est cité ailleurs.
+"""
+
+from typing import Optional
+
+from generators.base import BatchGenerator
+import config as cfg
+
+
+class ArticleGenerator(BatchGenerator):
+    """Génère un batch QuickStatements pour un nouvel article de revue."""
+
+    def __init__(self, title: str, url: str, journal_qid: Optional[str],
+                 publication_date: str, language: str = "fr",
+                 doi: Optional[str] = None):
+        super().__init__()
+        self.title = title
+        self.url = url
+        self.journal_qid = journal_qid
+        self.publication_date = publication_date
+        self.language = language
+        self.doi = doi
+
+    def generate(self) -> list:
+        """Produit les lignes du batch."""
+        self.add_header(
+            f"Article — Création item Wikidata",
+            f"Titre : {self.title[:80]}"
+        )
+
+        lang_qid = cfg.FRENCH if self.language == "fr" else cfg.ENGLISH
+
+        self.lines.append("CREATE")
+        self.add_label(self.language, self.title)
+        self.add_description(
+            self.language,
+            f"Article de Stéphane Lalut publié le {self.publication_date[:10]}"
+        )
+
+        # Type
+        self.lines.append(f"LAST\t{cfg.INSTANCE_OF}\t{cfg.SCHOLARLY_ARTICLE}")
+        # Auteur
+        self.lines.append(
+            f"LAST\t{cfg.AUTHOR}\t{cfg.STEPHANE_LALUT}\t"
+            f"{cfg.REF_URL}\t\"{self.url}\"\t"
+            f"{cfg.REF_RETRIEVED}\t+{self.today}T00:00:00Z/11"
+        )
+        # Langue
+        self.lines.append(f"LAST\t{cfg.LANGUAGE_OF_WORK}\t{lang_qid}")
+        # Date de publication
+        if self.publication_date:
+            self.lines.append(
+                f"LAST\t{cfg.PUBLICATION_DATE}\t+{self.publication_date}T00:00:00Z/11"
+            )
+        # Revue (si Q-ID connu)
+        if self.journal_qid:
+            self.lines.append(f"LAST\t{cfg.PUBLISHED_IN}\t{self.journal_qid}")
+        # DOI si fourni
+        if self.doi:
+            self.lines.append(
+                f'LAST\t{cfg.DOI}\t"{self.doi}"\t'
+                f'{cfg.REF_URL}\t"https://doi.org/{self.doi}"\t'
+                f"{cfg.REF_RETRIEVED}\t+{self.today}T00:00:00Z/11"
+            )
+        # URL canonique
+        self.lines.append(f'LAST\t{cfg.FULL_WORK_URL}\t"{self.url}"')
+
+        # Rétro-lien P800 sur la personne
+        self.add_section("Rétro-lien (après exécution du CREATE)")
+        self.lines.append(f"{cfg.STEPHANE_LALUT}\t{cfg.NOTABLE_WORK}\tNEW_QID")
+
+        return self.lines
+```
+
+---
+
+## ACTION 10 — Créer `Wikidata/scripts/generators/book.py`
+
+Contenu **exact** :
+
+```python
+# -*- coding: utf-8 -*-
+"""
+Générateur de batch pour un nouveau livre.
+"""
+
+from typing import Optional
+
+from generators.base import BatchGenerator
+from fetchers.openlibrary import fetch_openlibrary_metadata
+import config as cfg
+
+
+class BookGenerator(BatchGenerator):
+    """Génère un batch QuickStatements pour un nouveau livre."""
+
+    def __init__(self, isbn_13: str, title: str, subtitle: str = "",
+                 publication_date: str = "", asin: Optional[str] = None,
+                 amazon_url: Optional[str] = None):
+        super().__init__()
+        self.isbn_13 = isbn_13.replace("-", "").replace(" ", "")
+        self.title = title
+        self.subtitle = subtitle
+        self.publication_date = publication_date
+        self.asin = asin
+        self.amazon_url = amazon_url
+
+    def fetch(self):
+        """Tente de récupérer les métadonnées OpenLibrary (optionnel)."""
+        meta = fetch_openlibrary_metadata(self.isbn_13)
+        if meta:
+            if not self.title:
+                self.title = meta.title
+            if not self.publication_date:
+                self.publication_date = meta.publication_date
+
+    def generate(self) -> list:
+        """Produit les lignes du batch."""
+        self.fetch()
+        self.add_header(
+            f"Livre — Création item Wikidata",
+            f"ISBN-13 : {self.isbn_13} | Titre : {self.title[:60]}"
+        )
+
+        full_title = self.title
+        if self.subtitle:
+            full_title = f"{self.title} : {self.subtitle}"
+
+        self.lines.append("CREATE")
+        self.add_label("fr", full_title)
+        self.add_description("fr", f"Livre de Stéphane Lalut")
+        self.add_label("en", full_title)
+        self.add_description("en", f"Book by Stéphane Lalut")
+
+        # Type
+        self.lines.append(f"LAST\t{cfg.INSTANCE_OF}\t{cfg.BOOK}")
+        # Auteur
+        self.lines.append(
+            f"LAST\t{cfg.AUTHOR}\t{cfg.STEPHANE_LALUT}\t"
+            f"{cfg.REF_URL}\t\"https://orcid.org/0009-0002-1794-4895\"\t"
+            f"{cfg.REF_RETRIEVED}\t+{self.today}T00:00:00Z/11"
+        )
+        # ISBN-13
+        self.lines.append(f'LAST\t{cfg.ISBN_13}\t"{self.isbn_13}"')
+        # Langue
+        self.lines.append(f"LAST\t{cfg.LANGUAGE_OF_WORK}\t{cfg.FRENCH}")
+        # Date
+        if self.publication_date:
+            try:
+                pub_date_iso = self.publication_date
+                if len(pub_date_iso) == 4:  # année seule
+                    pub_date_iso += "-01-01"
+                self.lines.append(
+                    f"LAST\t{cfg.PUBLICATION_DATE}\t+{pub_date_iso}T00:00:00Z/11"
+                )
+            except Exception:
+                pass
+        # ASIN Amazon
+        if self.asin:
+            self.lines.append(f'LAST\t{cfg.AMAZON_ASIN}\t"{self.asin}"')
+        # URL Amazon
+        if self.amazon_url:
+            self.lines.append(f'LAST\t{cfg.FULL_WORK_URL}\t"{self.amazon_url}"')
+
+        # Rétro-lien P800 sur la personne
+        self.add_section("Rétro-lien (après exécution du CREATE)")
+        self.lines.append(f"{cfg.STEPHANE_LALUT}\t{cfg.NOTABLE_WORK}\tNEW_QID")
+
+        return self.lines
+```
+
+---
+
+## ACTION 11 — Créer `Wikidata/scripts/generate_wikidata_batch.py` (CLI)
+
+Contenu **exact** :
+
+```python
+# -*- coding: utf-8 -*-
+"""
+CLI principal pour générer un batch QuickStatements pour une nouvelle publication.
+
+Usage :
+    python generate_wikidata_batch.py --type awp --zenodo-doi 10.5281/zenodo.XXXX --awp-number 7
+    python generate_wikidata_batch.py --type article --url "https://..." --title "..." --date 2026-05-13
+    python generate_wikidata_batch.py --type book --isbn 978-X-XXX-XX-X --title "..." --date 2026-MM-DD
+"""
+
+import argparse
+import sys
+from pathlib import Path
+
+# Permettre les imports relatifs depuis ce script
+sys.path.insert(0, str(Path(__file__).parent))
+
+from generators.awp import AwpGenerator
+from generators.article import ArticleGenerator
+from generators.book import BookGenerator
+from validators import validate_batch_lines, ValidationError
+
+
+OUTPUT_DIR = Path(__file__).parent.parent / "batches-generated"
+
+
+def cmd_awp(args):
+    """Génère un batch pour un nouvel AWP."""
+    print(f"[INFO] Génération batch AWP-{args.awp_number:02d} depuis {args.zenodo_doi}...")
+    gen = AwpGenerator(
+        zenodo_doi_fr=args.zenodo_doi,
+        zenodo_doi_en=args.zenodo_doi_en,
+        awp_number=args.awp_number,
+    )
+    lines = gen.generate()
+    return gen, lines, f"awp-{args.awp_number:02d}-{gen.today}.qs"
+
+
+def cmd_article(args):
+    """Génère un batch pour un nouvel article."""
+    print(f"[INFO] Génération batch article '{args.title[:50]}'...")
+    gen = ArticleGenerator(
+        title=args.title,
+        url=args.url,
+        journal_qid=args.journal_qid,
+        publication_date=args.date,
+        language=args.language,
+        doi=args.doi,
+    )
+    lines = gen.generate()
+    safe_title = "".join(c if c.isalnum() else "-" for c in args.title[:40]).strip("-")
+    return gen, lines, f"article-{safe_title}-{gen.today}.qs"
+
+
+def cmd_book(args):
+    """Génère un batch pour un nouveau livre."""
+    print(f"[INFO] Génération batch livre ISBN {args.isbn}...")
+    gen = BookGenerator(
+        isbn_13=args.isbn,
+        title=args.title,
+        subtitle=args.subtitle or "",
+        publication_date=args.date or "",
+        asin=args.asin,
+        amazon_url=args.amazon_url,
+    )
+    lines = gen.generate()
+    isbn_clean = args.isbn.replace("-", "")
+    return gen, lines, f"book-{isbn_clean}-{gen.today}.qs"
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Génère un batch QuickStatements pour une nouvelle publication."
+    )
+    subparsers = parser.add_subparsers(dest="type", required=True)
+
+    # AWP
+    p_awp = subparsers.add_parser("awp", help="Nouveau working paper")
+    p_awp.add_argument("--zenodo-doi", required=True, help="DOI Zenodo (FR)")
+    p_awp.add_argument("--zenodo-doi-en", help="DOI Zenodo (EN, optionnel)")
+    p_awp.add_argument("--awp-number", type=int, required=True, help="Numéro AWP")
+
+    # Article
+    p_art = subparsers.add_parser("article", help="Nouvel article de revue")
+    p_art.add_argument("--title", required=True)
+    p_art.add_argument("--url", required=True)
+    p_art.add_argument("--journal-qid", help="Q-ID de la revue (optionnel)")
+    p_art.add_argument("--date", required=True, help="YYYY-MM-DD")
+    p_art.add_argument("--language", default="fr", choices=["fr", "en"])
+    p_art.add_argument("--doi", help="DOI si l'article en a un")
+
+    # Livre
+    p_book = subparsers.add_parser("book", help="Nouveau livre")
+    p_book.add_argument("--isbn", required=True, help="ISBN-13")
+    p_book.add_argument("--title", required=True)
+    p_book.add_argument("--subtitle")
+    p_book.add_argument("--date", help="YYYY-MM-DD ou YYYY")
+    p_book.add_argument("--asin", help="ASIN Amazon")
+    p_book.add_argument("--amazon-url", help="URL produit Amazon")
+
+    args = parser.parse_args()
+
+    dispatch = {"awp": cmd_awp, "article": cmd_article, "book": cmd_book}
+    gen, lines, filename = dispatch[args.type](args)
+
+    # Validation
+    print("[INFO] Validation du batch...")
+    try:
+        warnings = validate_batch_lines(lines)
+        for w in warnings:
+            print(f"[WARN] {w}")
+    except ValidationError as e:
+        print(f"[ERROR] Validation échouée : {e}")
+        sys.exit(1)
+
+    # Écriture
+    output_path = gen.to_file(OUTPUT_DIR, filename)
+    print(f"\n[OK] Batch écrit : {output_path}")
+    print(f"[OK] {len([l for l in lines if l and not l.startswith('#')])} commandes générées")
+    print("\n--- RÉCAP POUR VALIDATION HUMAINE ---")
+    print(f"Type : {args.type}")
+    print(f"Fichier : {filename}")
+    print(f"Lignes totales : {len(lines)}")
+    print(f"\n[ACTION] Vérifier visuellement {output_path} avant transmission à Laura.")
+    print("[ACTION] Nom de lot QuickStatements recommandé :")
+    print(f"         Lalut-Anthropie-{args.type.capitalize()}-{gen.today}")
+
+
+if __name__ == "__main__":
+    main()
+```
+
+---
+
+## ACTION 12 — Créer `Wikidata/scripts/requirements.txt`
+
+Contenu **exact** :
+
+```
+# Aucune dépendance externe — utilise uniquement la stdlib Python 3.10+
+# (urllib, json, argparse, pathlib, datetime, re)
+```
+
+---
+
+## ACTION 13 — Créer `Wikidata/scripts/tests/test_validators.py`
+
+Contenu **exact** :
+
+```python
+# -*- coding: utf-8 -*-
+"""
+Tests unitaires pour validators.py.
+
+Exécution : python -m unittest tests.test_validators
+"""
+
+import sys
+import unittest
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from validators import (
+    validate_doi, validate_isbn13, validate_zenodo_community,
+    validate_batch_lines, ValidationError
+)
+
+
+class TestValidators(unittest.TestCase):
+
+    def test_valid_doi(self):
+        validate_doi("10.5281/zenodo.19266862")
+        validate_doi("10.2139/ssrn.6543618")
+        validate_doi("10.31235/osf.io/z6x38_v1")
+
+    def test_invalid_doi(self):
+        with self.assertRaises(ValidationError):
+            validate_doi("not-a-doi")
+        with self.assertRaises(ValidationError):
+            validate_doi("10/missing-prefix")
+
+    def test_valid_isbn(self):
+        validate_isbn13("978-2-9586347-2-8")
+        validate_isbn13("9782958634728")
+
+    def test_invalid_isbn(self):
+        with self.assertRaises(ValidationError):
+            validate_isbn13("123")
+
+    def test_zenodo_community_valid(self):
+        validate_zenodo_community("anthropie-working-papers")
+
+    def test_zenodo_community_invalid(self):
+        with self.assertRaises(ValidationError):
+            validate_zenodo_community("anthropie-working-papers/records?q=")
+
+    def test_p9934_as_qualifier_rejected(self):
+        """Reproduit le bug Phase A 2026-05-12."""
+        bad_lines = [
+            'Q138909233\tP106\tQ188094\tS248\tQ22661177\tS9934\t"anthropie-working-papers"'
+        ]
+        with self.assertRaises(ValidationError) as ctx:
+            validate_batch_lines(bad_lines)
+        self.assertIn("P9934", str(ctx.exception))
+
+    def test_p407_qualifier_on_p356_rejected(self):
+        """Reproduit le bug Phase B 2026-05-12."""
+        bad_lines = [
+            'Q139771989\tP356\t"10.5281/zenodo.19431208"\tP407\tQ1860'
+        ]
+        with self.assertRaises(ValidationError) as ctx:
+            validate_batch_lines(bad_lines)
+        self.assertIn("P407", str(ctx.exception))
+
+    def test_multiple_p356_warning(self):
+        lines = [
+            'Q139771989\tP356\t"10.5281/zenodo.19266862"',
+            'Q139771989\tP356\t"10.2139/ssrn.6543618"',
+        ]
+        warnings = validate_batch_lines(lines)
+        self.assertTrue(any("Q139771989" in w for w in warnings))
+
+
+if __name__ == "__main__":
+    unittest.main()
+```
+
+---
+
+## ACTION 14 — Créer `Wikidata/scripts/README.md`
+
+Contenu **exact** :
+
+```markdown
+# Scripts Wikidata — automatisation génération de batches
+
+Génère des fichiers `.qs` QuickStatements pour les nouvelles publications.
+**Aucune communication directe avec Wikidata.** Tous les batches passent
+par validation humaine avant transmission à Laura.
+
+## Prérequis
+
+Python 3.10+. Aucune dépendance externe (stdlib uniquement).
+
+## Usage
+
+Depuis `Wikidata/scripts/` :
+
+### Nouvel AWP
+
+```powershell
+python generate_wikidata_batch.py awp --zenodo-doi 10.5281/zenodo.XXXXXXXX --awp-number 7
+```
+
+Optionnel : `--zenodo-doi-en` pour la version EN.
+
+### Nouvel article de revue
+
+```powershell
+python generate_wikidata_batch.py article --title "Titre de l'article" --url "https://..." --date 2026-05-13
+```
+
+Optionnel : `--journal-qid Q...`, `--language en`, `--doi 10...`.
+
+### Nouveau livre
+
+```powershell
+python generate_wikidata_batch.py book --isbn 978-2-9586347-X-X --title "Titre" --date 2026
+```
+
+Optionnel : `--subtitle`, `--asin`, `--amazon-url`.
+
+## Workflow complet
+
+1. Lance le script avec les paramètres requis.
+2. Le script fetch les métadonnées (Zenodo / Crossref / OpenLibrary).
+3. Le script valide le batch (regex DOI, contraintes Wikidata).
+4. Si validation OK, écriture dans `Wikidata/batches-generated/`.
+5. Stéphane vérifie visuellement le fichier `.qs`.
+6. Stéphane transmet à Laura.
+7. Laura colle dans QuickStatements, vérifie le preview, exécute.
+
+## Garde-fous intégrés
+
+Le module `validators.py` bloque la génération si :
+
+- **P9934 utilisé comme qualifier ou source** (bug Phase A 2026-05-12 reproduit)
+- **P407 utilisé comme qualifier de P356** (bug Phase B 2026-05-12 reproduit)
+- **Format DOI/ISBN invalide**
+
+Warnings non bloquants :
+- Plusieurs P356 sur le même item (recommande P953 pour les variantes)
+
+## Tests
+
+```powershell
+cd Wikidata\scripts
+python -m unittest tests.test_validators
+```
+
+## Évolutions futures
+
+- Générateur `recension.py` : pour ajouter des références sur des items existants
+  sans créer de nouvel item.
+- Mode `--check` : compare `data/works.yaml` à un index local pour identifier
+  les publications non encore traitées.
+- Intégration `data/works.yaml` comme source de vérité unifiée.
+
+## Limitations
+
+- Les Q-IDs des sujets non encore listés dans `config.py` doivent être ajoutés
+  manuellement (avec vérification sur wikidata.org).
+- La création d'item dépend de l'absence de doublon — vérification via
+  `https://hub.toolforge.org/P356:[DOI]` reste à faire manuellement par Laura.
+```
+
+---
+
+## ACTION 15 — Créer `Wikidata/batches-generated/README.md`
+
+Contenu **exact** :
+
+```markdown
+# Batches générés en attente de validation
+
+Ce répertoire contient les fichiers `.qs` produits automatiquement par
+`Wikidata/scripts/generate_wikidata_batch.py`.
+
+**Chaque fichier doit être validé manuellement avant transmission à Laura.**
+
+## Convention de nommage
+
+- `awp-XX-YYYY-MM-DD.qs` : nouveau working paper
+- `article-titre-tronqué-YYYY-MM-DD.qs` : nouvel article
+- `book-ISBN-YYYY-MM-DD.qs` : nouveau livre
+
+## Cycle de vie d'un fichier
+
+1. Généré par le script (date du jour).
+2. Validé visuellement par Stéphane.
+3. Transmis à Laura (par email ou drive).
+4. Exécuté par Laura via QuickStatements.
+5. Une fois exécuté avec succès, peut être déplacé dans `executed/`
+   (à créer manuellement si souhaité) ou archivé.
+
+## Statut
+
+Ne pas committer ce répertoire tant qu'une politique d'archivage n'est pas
+décidée. Pour l'instant, fichiers en `.gitignore` recommandé.
+```
+
+---
+
+## ACTION 16 — Créer `Wikidata/scripts/.gitignore`
+
+Contenu **exact** :
+
+```
+# Ne pas committer les fichiers temporaires Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+```
+
+---
+
+## ACTION 17 — Mise à jour `Wikidata/CHANGELOG.md`
+
+Ajouter en haut du fichier :
+
+```markdown
+## v3.0 — 2026-05-13 (Automatisation : script Python de génération)
+
+- **Création du dispositif Python d'automatisation** dans `Wikidata/scripts/`.
+- **Architecture modulaire** : fetchers (Zenodo, Crossref, OpenLibrary),
+  generators (awp, article, book), validators (garde-fous intégrés).
+- **Validations intégrées** reproduisant les 8 erreurs accumulées dans Phase A+B+C :
+  P9934 hors scope, P407 sur P356, formats DOI/ISBN, contrainte unicité P356.
+- **Workflow semi-automatisé** : Stéphane déclenche, le script génère, validation
+  humaine obligatoire, transmission à Laura, exécution QuickStatements.
+- **Aucune communication automatique avec Wikidata.** Préservation du contrôle
+  qualité humain à chaque étape.
+- **Coût marginal d'une nouvelle publication** : ~10 min de validation (vs ~1h
+  composition manuelle de batch).
+- **Aucun commit automatique.** Repo `Wikidata/scripts/` reste untracked tant que
+  Stéphane n'a pas validé l'ensemble du dispositif après premier test réel.
+```
+
+---
+
+## CRITÈRES D'ACCEPTATION
+
+- [ ] Répertoire `Wikidata/scripts/` créé avec toute la structure.
+- [ ] `Wikidata/batches-generated/` créé avec `.gitkeep` et `README.md`.
+- [ ] Tous les fichiers Python sont en UTF-8, avec déclaration explicite.
+- [ ] Les 10 fichiers Python sont créés avec leur contenu exact.
+- [ ] `requirements.txt` et `README.md` créés.
+- [ ] Tests unitaires passent : `python -m unittest tests.test_validators`
+  depuis `Wikidata/scripts/`.
+- [ ] CHANGELOG v3.0 ajouté.
+- [ ] `git status Wikidata/` retourne `Untracked files`. Aucun commit.
+- [ ] Console finale : « Dispositif Python créé. Tests OK. Prêt pour
+  validation par premier test réel. »
+
+---
+
+## ANTI-PATTERNS
+
+- ❌ Committer quoi que ce soit.
+- ❌ Modifier `data/works.yaml` ou tout fichier hors `Wikidata/`.
+- ❌ Installer des dépendances pip externes (utiliser stdlib uniquement).
+- ❌ Inventer un Q-ID ou P-ID qui ne figure pas dans `config.py`.
+- ❌ Faire appel à l'API Wikidata directement.
+- ❌ Modifier les batches `11_`, `12_`, `13_`, `15_v3` existants.
+
+---
+
+## TEST DE RÉCEPTION (à exécuter par Stéphane après création)
+
+Depuis `Wikidata/scripts/` :
+
+```powershell
+# 1. Tests unitaires
+python -m unittest tests.test_validators
+
+# 2. Génération d'un batch test pour AWP-06 (déjà créé, juste pour vérifier le format)
+python generate_wikidata_batch.py awp --zenodo-doi 10.5281/zenodo.20025421 --awp-number 6
+
+# 3. Vérifier le fichier produit dans Wikidata/batches-generated/
+```
+
+Le batch produit pour AWP-06 doit ressembler structurellement au batch
+`12_quickstatements_phase_B_filled.qs` (sans les bugs corrigés). Le compare
+manuellement pour valider que le générateur produit du contenu cohérent.
+
+---
+
+*Fichier à placer à `D:\anthropie\anthropie-site\_wikidata-automation-prompt.txt`*
+*Exécuter via : `Lis _wikidata-automation-prompt.txt et exécute.`*

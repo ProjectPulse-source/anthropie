@@ -76,6 +76,21 @@ Contextualisations propres à ce repo :
 - Convention multilingue Hugo : suffixe `.en.md` (pas sous-dossier
   `content/en/`)
 - Source unique d'identité auteur : `data/author.toml`
+- **Navette Wikidata : `Wikidata/`** — versionnée depuis le 2026-08-16 (elle a
+  vécu quatre mois en un seul exemplaire sur un seul disque). **Lire son
+  `README.md` avant tout geste Wikidata** : les dossiers `Import_..._<date>_<sujet>/`
+  sont le **registre primaire** (historique, non régénérable) ; les fichiers
+  `00_`…`16_` ne sont qu'un inventaire régénérable ; `CHANGELOG.md` est un récit
+  et ne fait pas foi. Règle : **tout geste laisse un dossier daté, même en une
+  commande**, et se clôt par un readback API. Chaîne à boucler jusqu'au bout —
+  item → `data/works.yaml` → `wikidata_qid` de la fiche → `sameAs` du JSON-LD ;
+  le dernier maillon est couvert par `check-fiches-registre.py`, **le premier ne
+  l'est par rien** (un diff QID automatique a été mesuré puis écarté : 61 faux
+  positifs sur 70).
+- Instruments Zenodo : `scripts/zenodo_inventory.py` (recherche du corpus),
+  `scripts/zenodo_stats.py` et `zenodo_stats_full.py` (vues et téléchargements).
+  Audit des balises Google Scholar sur le site en ligne : `audit_scholar.sh`.
+  Tous versionnés le 2026-08-16, même motif que `Wikidata/`.
 
 **Règle de fraîcheur d'état (« l'état écrit suit l'acte »)** : toute session
 qui exécute un travail met à jour, dans la même session, (1) le log § 0 de

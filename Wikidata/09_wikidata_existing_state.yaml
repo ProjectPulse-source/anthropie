@@ -1,0 +1,179 @@
+# =============================================================================
+# 09_wikidata_existing_state.yaml — état Wikidata existant
+# Source : _wikidata-prompt.txt (mémoire stratégique externe) + repo (QIDs confirmés)
+# =============================================================================
+#
+# IMPORTANT : ce fichier est la SEULE section où l'on s'appuie sur des données
+# externes au repo. Les propriétés listées proviennent du brief utilisateur
+# (_wikidata-prompt.txt) qui reflète l'état Wikidata observé par Laura/Stéphane.
+# Laura validera ces valeurs depuis Wikidata directement.
+
+existing_items:
+
+  # ---------------------------------------------------------------------------
+  Q138909233:
+    label_en: 'Stéphane Lalut'
+    type: 'person'
+    confirmed_in_repo: true  # apparaît dans data/works.yaml + data/author.toml
+    properties_already_set:
+      - { p: 'P31', label: 'instance of', value: 'human' }
+      - { p: 'P27', label: 'country of citizenship', value: 'France' }
+      - { p: 'P106', label: 'occupation', value: ['economist', 'writer', 'researcher', 'essayist'] }
+      - { p: 'P800', label: 'notable work', value: ['Q138827344', 'Q138910896'] }
+      - { p: 'P856', label: 'official website', value: 'https://stephane-lalut.com/' }
+      - { p: 'P269', label: 'IdRef ID', value: '283054085' }
+      - { p: 'P1960', label: 'Google Scholar author ID', value: 'J4NqzwSfrHAC' }
+      - { p: 'P10283', label: 'OpenAlex ID', value: 'A5130851063' }
+      - { p: 'P496', label: 'ORCID iD', value: '0009-0002-1794-4895' }
+      - { p: 'P5587', label: 'SSRN author ID', value: '11065608' }
+      - { p: 'P5023', label: 'Academia.edu profile URL', value: 'https://independent.academia.edu/StéphaneLALUT' }
+    note: |
+      Selon PROJECT_STATUS.md §3 : 7 P-propriétés renseignées par Laura.
+      Le prompt en liste 11 ci-dessus avec P5023 (Academia URL).
+      Différence à investiguer côté Wikidata.
+
+  # ---------------------------------------------------------------------------
+  Q138827949:
+    label_en: 'Anthropy'
+    type: 'concept'
+    confirmed_in_repo: true  # apparaît dans data/works.yaml ligne 64
+    properties_already_set:
+      - { p: 'P31', label: 'instance of', value: 'concept' }
+      - { p: 'P61', label: 'discoverer or inventor', value: 'Q138909233' }
+      - { p: 'P973', label: 'described at URL', value: 'https://stephane-lalut.com/quest-ce-que-lanthropie/' }
+      - { p: 'P1343', label: 'described by source', value: 'Q138827344' }
+      - { p: 'P9934', label: 'Zenodo communities ID', value: 'anthropie-working-papers' }
+    note: 'PROJECT_STATUS.md §3 confirme : "la communauté Zenodo anthropie-working-papers est rattachée au Concept Q138827949 (anthropy), pas au Person".'
+
+  # ---------------------------------------------------------------------------
+  Q138827344:
+    label: 'ANTHROPIE — Ordre ici. Dette ailleurs'
+    type: 'written_work'
+    confirmed_in_repo: true  # data/works.yaml ligne 276 + content/livres/anthropie-ordre-ici-dette-ailleurs.md ligne 8
+    properties_already_set:
+      - { p: 'P31', label: 'instance of', value: 'written work' }
+      - { p: 'P921', label: 'main subject', value: 'Q138827949' }
+      - { p: 'P50', label: 'author', value: 'Q138909233' }
+      - { p: 'P577', label: 'publication date', value: '2025' }
+      - { p: 'P407', label: 'language of work', value: 'French' }
+      - { p: 'P856', label: 'official website', value: '<URL>' }
+      - { p: 'P212', label: 'ISBN-13', value: '978-2-9586347-2-8' }
+
+  # ---------------------------------------------------------------------------
+  Q138910896:
+    label: 'Dette Publique : Qui paie vraiment ?'
+    type: 'written_work'
+    confirmed_in_repo: true  # data/works.yaml ligne 307 + content/livres/dette-publique-qui-paie-vraiment.md ligne 8
+    properties_already_set:
+      - { p: 'P31', label: 'instance of', value: 'written work' }
+      - { p: 'P921', label: 'main subject', value: ['Q138827949', 'government debt'] }
+      - { p: 'P50', label: 'author', value: 'Q138909233' }
+      - { p: 'P577', label: 'publication date', value: '2025' }
+      - { p: 'P1104', label: 'number of pages', value: 225 }
+      - { p: 'P856', label: 'official website', value: '<URL>' }
+      - { p: 'P973', label: 'described at URL', value: '<URL Alternatives Économiques>' }
+    missing_known:
+      - 'P212 ISBN — à ajouter en Phase A (valeur repo : 978-2-9586347-3-5)'
+    note: 'P1104=225 contredit data/works.yaml ligne 302 qui dit pages=0 (todo). Incohérence : la valeur 225 vient probablement d''ailleurs (Amazon ?). À investiguer.'
+
+  # ---------------------------------------------------------------------------
+  Q138911733:
+    label: "L'Odyssée des Idées"
+    type: 'written_work'
+    confirmed_in_repo: false  # ABSENT de data/works.yaml et content/livres/
+    properties_already_set:
+      - { p: 'P31', label: 'instance of', value: 'Q3331189' }  # NB : prompt signale "ERREUR à corriger"
+      - { p: 'P136', label: 'genre', value: 'essay' }
+      - { p: 'P577', label: 'publication date', value: '2023' }
+      - { p: 'P407', label: 'language of work', value: 'French' }
+      - { p: 'P212', label: 'ISBN-13', value: '978-2-9586347-1-1' }
+    isbn_13_normalized: '9782958634711'  # confirmé hors-repo par utilisateur 2026-05-11 (équivalent strict)
+    external_data_provided_by_user:
+      # source : utilisateur 2026-05-11
+      amazon_fr_url: 'https://www.amazon.fr/Lodyssée-idées-philosophie-lintelligence-artificielle/dp/295863471X'
+      isbn_10_asin_paperback: '295863471X'
+    errors_to_correct:
+      - 'P31 = Q3331189 INADAPTÉ (cf. prompt) — devrait être Q47461344 written work ou Q571 book.'
+    missing_known:
+      - 'P50 author absent — maillage cassé avec Q138909233'
+      - 'P953 / P856 URL Amazon non posée — utilisateur a fourni l''URL le 2026-05-11, à intégrer en Phase A (11_)'
+    note: |
+      Livre antérieur (2023) hors repo. ISBN confirmé hors-repo par utilisateur le 2026-05-11.
+      Le slug Amazon contient "philosophie-lintelligence-artificielle" — sous-titre probable
+      mais NON RECOPIÉ ici (anti-pattern : ne pas extraire un titre depuis un slug URL).
+
+  # ---------------------------------------------------------------------------
+  Q139040913:
+    label_en: 'Anthropie Working Papers'
+    type: 'series'
+    confirmed_in_repo: false  # le QID n'apparaît pas dans le repo ; la série existe (content/serie-awp/) mais sans QID référencé
+    properties_already_set:
+      - { p: 'P31', label: 'instance of', value: 'Q13442814' }  # NB : prompt signale "INADAPTÉ" (Q13442814 = scholarly article)
+      - { p: 'P921', label: 'main subject', value: 'Q138827949' }
+      - { p: 'P50', label: 'author', value: 'Q138909233' }
+      - { p: 'P495', label: 'country of origin', value: 'Q142' }  # France
+      - { p: 'P407', label: 'language of work', value: ['French', 'English'] }
+      - { p: 'P856', label: 'official website', value: '<URL serie-awp>' }
+    errors_to_correct:
+      - 'P31 = Q13442814 (scholarly article) INADAPTÉ — devrait être Q1668921 publication series ou Q22907736 working paper series.'
+    note: 'QID série Q139040913 attendu dans le repo mais non référencé (data/works.yaml ne le mentionne pas). Confirmation par Laura nécessaire.'
+
+# =============================================================================
+
+items_to_create:
+  # AWPs individuels : 6 items à créer minimum (chacun en FR + EN linkés)
+  - id: 'awp-01'
+    proposed_label_fr: "Qu'est-ce que l'anthropie ? Principes d'une hypothèse"
+    proposed_label_en: 'What is anthropy? Principles of a hypothesis'
+    candidate_p31: 'Q13442814'  # scholarly article (à valider — working paper plutôt ?)
+  - id: 'awp-02'
+    proposed_label_fr: "3,3 millions d'années en un principe : l'anthropie dans la longue durée"
+    proposed_label_en: '3.3 million years distilled into one principle: anthropy in the longue durée'
+    candidate_p31: 'Q13442814'
+  - id: 'awp-03'
+    proposed_label_fr: 'Dette publique et anthropie : qui paie vraiment le désordre ?'
+    proposed_label_en: 'Public Debt and Anthropy: Who Really Pays for Disorder?'
+    candidate_p31: 'Q13442814'
+  - id: 'awp-04'
+    proposed_label_fr: 'Transition énergétique ou transfert entropique ?'
+    proposed_label_en: 'Energy Transition, or Anthropic Transfer?'
+    candidate_p31: 'Q13442814'
+  - id: 'awp-05'
+    proposed_label_fr: 'Penser hors les murs : notes sur la recherche indépendante en économie'
+    proposed_label_en: 'Thinking Beyond the Walls'
+    candidate_p31: 'Q13442814'
+  - id: 'awp-06'
+    proposed_label_fr: 'Infrastructures numériques et dette technologique : data centers, IA et déplacement du désordre'
+    proposed_label_en: 'Digital Infrastructures and Technological Debt: Data Centers, AI, and the Displacement of Disorder'
+    candidate_p31: 'Q13442814'
+
+  # Livresque des mots : QID RÉSOLU 2026-07-12.
+  - id: 'book-livresque-des-mots'
+    proposed_label_fr: 'Livresque des mots'
+    candidate_p31: 'Q571'  # book — validé (item réel a P31 = Q47461344 anthology + Q571 book)
+    qid_assigned: 'Q140517745'  # créé par Laura 2026-07-09, vérifié API 2026-07-12 — CANONIQUE recommandé
+    qid_duplicate: 'Q138911600'  # ⚠ DOUBLON préexistant « Livresque des Mots » (même ISBN 978-2-9586347-0-4, même auteur Q138909233, 2022 ; chiffres périmés 4680/1380, ISBN seul). À FUSIONNER Q138911600 → Q140517745 (survivant = Q140517745). Consigne : Wikidata/Fusion_Livresque_2026-07-16/README_LAURA.md.
+    note: 'QID assigné + doublon détecté. Fusion Wikidata requise (Special:MergeItems, PAS QuickStatements) avant de figer le canonique. Pré-étape : vider descriptions FR+EN de Q138911600 (conflit de descriptions bloque sinon le merge). ⚠ ÉTAT 2026-07-21 : fusion TOUJOURS EN ATTENTE (Q138911600 vérifié encore actif via SPARQL, pas de redirect). Relancée dans Import_Wikidata_Laura_2026-07-21_ANTHROPY_EN/README_LAURA.md (tâche B).'
+
+  # ANTHROPY — édition anglaise d'ANTHROPIE (Q138827344). Publiée Amazon 2026-07-21.
+  - id: 'book-anthropy-en'
+    proposed_label: 'ANTHROPY — A Big History of Civilization''s Hidden Costs'
+    candidate_p31: ['Q47461344', 'Q571']  # œuvre écrite + livre (modèle FR)
+    edition_of: 'Q138827344'  # P629 (traduction de) ; réciproque P747 à poser sur Q138827344
+    language: 'Q1860'  # anglais
+    isbn_13: '9782958634759'
+    isbn_10: '2958634752'  # = ASIN broché
+    asin_kindle: 'B0H9QMR1CN'
+    pages: 632
+    publication_date: '2026-07-21'
+    page_url_en: 'https://stephane-lalut.com/en/livres/anthropie-ordre-ici-dette-ailleurs/'
+    batch: 'Import_Wikidata_Laura_2026-07-21_ANTHROPY_EN/batch_quickstatements.txt'
+    open_decision: 'P655 traducteur — crédit à trancher par Stéphane (traduction moteur V2 + relecture ; déclaration IA KDP).'
+    note: 'Aucun doublon ANTHROPIE/ANTHROPY détecté (SPARQL P50=Q138909233 + recherche plein-texte, 2026-07-21) : item EN à CRÉER, pas à fusionner. Site EN en ligne (anthropie-site commit c67176e).'
+
+# =============================================================================
+
+audit_external_dependencies:
+  - 'Les QIDs et P-IDs de cette fiche proviennent du prompt utilisateur (mémoire stratégique externe), pas du repo.'
+  - 'Laura validera depuis Wikidata directement.'
+  - 'Les erreurs structurelles signalées (P31 inadaptés sur Q138911733 et Q139040913) sont à corriger via QuickStatements Phase A.'

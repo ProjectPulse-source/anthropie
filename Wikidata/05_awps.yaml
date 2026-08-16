@@ -1,0 +1,360 @@
+# =============================================================================
+# 05_awps.yaml — Anthropie Working Papers (AWP-01 à AWP-06), exhaustif
+# Sources : content/awp/awp-NN.md (FR), content/awp/awp-NN.en.md (EN),
+#           data/works.yaml, data/awp_short_titles.yaml
+# =============================================================================
+#
+# CONVENTION : verbatim depuis les frontmatters Hugo et data/works.yaml.
+# Tout champ null porte un commentaire `expected_source`.
+
+awps:
+
+  # ---------------------------------------------------------------------------
+  - id: awp-01
+    wikidata_qid: null  # à créer (Phase B)
+    series_number: 1  # source : data/works.yaml ligne 81
+    awp_number_label: 'AWP-01'  # source : content/awp/awp-01.md ligne 3
+    title_fr: "Qu'est-ce que l'anthropie ? Principes d'une hypothèse"  # source : content/awp/awp-01.md ligne 2 + data/works.yaml ligne 83
+    title_en: 'What is anthropy? Principles of a hypothesis'  # source : content/awp/awp-01.en.md ligne 2
+    short_title_fr: "Qu'est-ce que l'anthropie ?"  # source : data/awp_short_titles.yaml ligne 3
+    abstract_fr: |
+      L'anthropie est l'hypothèse selon laquelle tout ordre social local se construit en exportant son désordre vers d'autres lieux, d'autres temps ou d'autres groupes sociaux. Ce texte fondateur soutient que le déplacement du désordre constitue un mécanisme structurel observable dans toute configuration d'ordre stable.
+    abstract_fr_source_file: 'content/awp/awp-01.md'
+    abstract_fr_source_line: 11
+    abstract_en: |
+      Anthropy is the hypothesis that every stable local social order is built by exporting its disorder to other places, other times, or other social groups. This founding text argues that the displacement of disorder constitutes a structural mechanism observable in every configuration of stable order.
+    abstract_en_source_file: 'content/awp/awp-01.en.md'
+    abstract_en_source_line: 11
+    publication_date_fr: '2026-02-01'  # source : content/awp/awp-01.md ligne 4 + data/works.yaml ligne 85 (concordance)
+    publication_date_en: '2026-04-05'  # source : content/awp/awp-01.en.md ligne 4 + data/works.yaml ligne 86 (concordance)
+    doi_zenodo_fr: '10.5281/zenodo.19266862'  # source : content/awp/awp-01.md ligne 12
+    doi_zenodo_en: '10.5281/zenodo.19431208'  # source : content/awp/awp-01.en.md ligne 12
+    doi_ssrn: '10.2139/ssrn.6543618'  # source : data/works.yaml ligne 98
+    ssrn_abstract_id: '6543618'  # source : data/works.yaml ligne 98
+    ssrn_status: 'approved'  # source : data/works.yaml ligne 98
+    mpra_id: '128604'  # source : data/works.yaml ligne 99
+    mpra_status: 'in_review'  # source : data/works.yaml ligne 99
+    mpra_deposit_date: '2026-04-07'  # source : data/works.yaml ligne 99
+    zenodo_url_fr: 'https://zenodo.org/records/19266862'  # source : content/awp/awp-01.md ligne 13
+    zenodo_url_en: 'https://zenodo.org/records/19431208'  # source : content/awp/awp-01.en.md ligne 13
+    ssrn_url: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6543618'  # source : content/awp/awp-01.en.md ligne 14 + data/works.yaml ligne 98
+    mpra_url: 'https://mpra.ub.uni-muenchen.de/id/eprint/128604'  # source : data/works.yaml ligne 99
+    site_url_fr: 'https://stephane-lalut.com/awp/awp-01/'  # source : data/works.yaml ligne 101
+    site_url_en: 'https://stephane-lalut.com/en/awp/awp-01/'  # source : data/works.yaml ligne 102
+    pdf_url_fr: 'https://zenodo.org/records/19266862/files/AWP-01_anthropie_principes_hypothese.pdf'  # source : content/awp/awp-01.md ligne 24
+    pdf_url_en: 'https://zenodo.org/records/19431208/files/AWP-01_What_is_Anthropy_Principle_of_a_hypothesis_EN.pdf'  # source : content/awp/awp-01.en.md ligne 24
+    jel_codes: ['B41', 'D02', 'Z13']  # source : content/awp/awp-01.md ligne 14
+    keywords_fr: ['anthropie', 'désordre social', 'transfert entropique', 'systèmes sociaux', 'économie institutionnelle']  # source : content/awp/awp-01.md ligne 15
+    keywords_en: ['anthropy', 'social disorder', 'entropic transfer', 'social systems', 'institutional economics']  # source : content/awp/awp-01.md ligne 16
+    main_subjects_explicit:
+      - { name: 'anthropy', qid_wikidata: 'Q138827949' }
+    related_awps: ['awp-02']  # source : content/awp/awp-01.md ligne 32
+    related_book: 'anthropie-ordre-ici-dette-ailleurs'  # source : content/awp/awp-01.md ligne 33
+    faq_fr:  # source : content/awp/awp-01.md lignes 17-23
+      - q: "Qu'est-ce que l'anthropie en sciences sociales ?"
+        r: "L'anthropie est le principe selon lequel les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. Tout ordre observable dans un système suppose un désordre exporté ailleurs — spatialement, temporellement ou socialement."
+      - q: "Comment l'anthropie se distingue-t-elle de l'entropie ?"
+        r: "L'anthropie n'est pas une métaphore physique. Elle désigne un mécanisme institutionnel observable : le déplacement délibéré ou structurel du désordre entre acteurs, territoires et générations."
+      - q: "L'anthropie est-elle une théorie ou une hypothèse ?"
+        r: "Une hypothèse de travail à valeur heuristique. Elle permet de poser des questions que d'autres cadres ne formulent pas, sans prétendre à l'exhaustivité d'une théorie achevée."
+    license: 'CC-BY 4.0'  # source : data/works.yaml ligne 87
+    google_scholar:
+      visible: true  # source : data/works.yaml ligne 104
+      citations_observed: 4  # source : data/works.yaml ligne 105
+    citation_format_canonical: null  # expected_source : layouts/awp/single.html (sortie BibTeX/RIS/EndNote — pas extrait littéralement du repo)
+    source_files:
+      - 'content/awp/awp-01.md'
+      - 'content/awp/awp-01.en.md'
+      - 'data/works.yaml (id: awp-01, lignes 78-106)'
+
+  # ---------------------------------------------------------------------------
+  - id: awp-02
+    wikidata_qid: null
+    series_number: 2
+    awp_number_label: 'AWP-02'
+    title_fr: "3,3 millions d'années en un principe : l'anthropie dans la longue durée"  # source : data/works.yaml ligne 113 (canonique long) ; content/awp/awp-02.md ligne 2 a la version courte "3,3 millions d'années en un principe"
+    title_fr_short_in_frontmatter: "3,3 millions d'années en un principe"  # source : content/awp/awp-02.md ligne 2
+    title_en: '3.3 million years distilled into one principle: anthropy in the longue durée'  # source : data/works.yaml ligne 114
+    title_en_short_in_frontmatter: '3.3 million years in one principle'  # source : content/awp/awp-02.en.md ligne 2
+    title_resolution_note: |
+      Le frontmatter Hugo utilise une version courte du titre ;
+      works.yaml conserve le titre canonique long. Pour Wikidata,
+      utiliser la version canonique longue (works.yaml).
+    short_title_fr: "3,3 millions d'années en un principe"  # source : data/awp_short_titles.yaml ligne 6
+    abstract_fr: |
+      L'anthropie traverse 3,3 millions d'années d'histoire humaine en sept configurations — du premier outil au métaprogramme numérique. Le déplacement du désordre est un mécanisme structurel des sociétés humaines, pas un accident de la modernité.
+    abstract_fr_source_file: 'content/awp/awp-02.md'
+    abstract_fr_source_line: 11
+    abstract_en: |
+      Anthropy traverses 3.3 million years of human history across seven configurations — from the first tool to the digital meta-programme. The displacement of disorder is a structural mechanism of human societies, not an accident of modernity.
+    abstract_en_source_file: 'content/awp/awp-02.en.md'
+    abstract_en_source_line: 11
+    publication_date_fr: '2026-02-15'  # source : content/awp/awp-02.md ligne 4 + data/works.yaml ligne 115
+    publication_date_en: '2026-04-06'  # source : content/awp/awp-02.en.md ligne 4 + data/works.yaml ligne 116
+    doi_zenodo_fr: '10.5281/zenodo.19268037'  # source : content/awp/awp-02.md ligne 12
+    doi_zenodo_en: '10.5281/zenodo.19433086'  # source : content/awp/awp-02.en.md ligne 12
+    doi_ssrn: '10.2139/ssrn.6615059'  # source : data/works.yaml ligne 128
+    ssrn_abstract_id: '6615059'
+    ssrn_status: 'approved'
+    mpra_id: '128605'
+    mpra_status: 'in_review'
+    mpra_deposit_date: '2026-04-07'
+    zenodo_url_fr: 'https://zenodo.org/records/19268037'  # source : content/awp/awp-02.md ligne 13
+    zenodo_url_en: 'https://zenodo.org/records/19433086'  # source : content/awp/awp-02.en.md ligne 13
+    ssrn_url: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6615059'
+    mpra_url: 'https://mpra.ub.uni-muenchen.de/id/eprint/128605'
+    site_url_fr: 'https://stephane-lalut.com/awp/awp-02/'
+    site_url_en: 'https://stephane-lalut.com/en/awp/awp-02/'
+    pdf_url_fr: 'https://zenodo.org/records/19268037/files/AWP-02_anthropie_longue_duree.pdf'  # source : content/awp/awp-02.md ligne 22
+    pdf_url_en: 'https://zenodo.org/records/19433086/files/AWP-02_anthropy_longue_duree_EN.pdf'  # source : content/awp/awp-02.en.md ligne 22
+    jel_codes: ['N00', 'B15', 'Q56']  # source : content/awp/awp-02.md ligne 14
+    keywords_fr: ['anthropie', 'longue durée', 'histoire économique', 'déplacement du désordre', 'civilisations', 'saturation']
+    keywords_en: ['anthropy', 'long run', 'economic history', 'disorder displacement', 'civilizations', 'saturation']
+    main_subjects_explicit:
+      - { name: 'anthropy', qid_wikidata: 'Q138827949' }
+    related_awps: ['awp-01', 'awp-04']
+    related_book: 'anthropie-ordre-ici-dette-ailleurs'
+    faq_fr:
+      - q: "Qu'est-ce que la saturation anthropique ?"
+        r: "La saturation désigne l'état d'un espace de déportation quand le coût marginal du transfert excède le bénéfice, ou quand le désordre déporté revient au système émetteur sous forme d'effet boomerang."
+      - q: "Comment l'anthropie se distingue-t-elle de l'Anthropocène ?"
+        r: "L'Anthropocène désigne une ère géologique (Crutzen, 2000). L'anthropie désigne un mécanisme institutionnel qui précède l'Anthropocène de millions d'années et en éclaire la dynamique."
+    license: 'CC-BY 4.0'
+    google_scholar: { visible: true, citations_observed: 3 }
+    citation_format_canonical: null
+    source_files:
+      - 'content/awp/awp-02.md'
+      - 'content/awp/awp-02.en.md'
+      - 'data/works.yaml (id: awp-02, lignes 108-138)'
+
+  # ---------------------------------------------------------------------------
+  - id: awp-03
+    wikidata_qid: null
+    series_number: 3
+    awp_number_label: 'AWP-03'
+    title_fr: 'Dette publique et anthropie : qui paie vraiment le désordre ?'  # source : content/awp/awp-03.md ligne 2 + data/works.yaml ligne 145
+    title_en: 'Public Debt and Anthropy: Who Really Pays for Disorder?'  # source : data/works.yaml ligne 146
+    title_en_frontmatter: 'Public debt and anthropy: who really pays for disorder?'  # source : content/awp/awp-03.en.md ligne 2 (variation casse)
+    short_title_fr: 'Dette publique et anthropie'  # source : data/awp_short_titles.yaml ligne 9
+    abstract_fr: |
+      La dette publique n'est pas un simple solde comptable : c'est un mécanisme de transfert entropique temporel et social. Ce working paper applique le cadre anthropique aux finances publiques françaises et montre que la question n'est pas "combien ?" mais "qui paie ?"
+    abstract_fr_source_file: 'content/awp/awp-03.md'
+    abstract_fr_source_line: 11
+    abstract_en: |
+      Public debt is not a simple accounting balance: it is a mechanism of temporal and social entropic transfer. This working paper applies the framework of anthropy to French public finances and shows that the question is not "how much?" but "who pays?"
+    abstract_en_source_file: 'content/awp/awp-03.en.md'
+    abstract_en_source_line: 11
+    publication_date_fr: '2026-03-01'
+    publication_date_en: '2026-04-06'
+    doi_zenodo_fr: '10.5281/zenodo.19268769'
+    doi_zenodo_en: '10.5281/zenodo.19434094'
+    doi_ssrn: '10.2139/ssrn.6615278'
+    ssrn_abstract_id: '6615278'
+    ssrn_status: 'approved'
+    mpra_id: '128606'
+    mpra_status: 'in_review'
+    mpra_deposit_date: '2026-04-07'
+    zenodo_url_fr: 'https://zenodo.org/records/19268769'
+    zenodo_url_en: 'https://zenodo.org/records/19434094'
+    ssrn_url: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6615278'
+    mpra_url: 'https://mpra.ub.uni-muenchen.de/id/eprint/128606'
+    site_url_fr: 'https://stephane-lalut.com/awp/awp-03/'
+    site_url_en: 'https://stephane-lalut.com/en/awp/awp-03/'
+    pdf_url_fr: 'https://zenodo.org/records/19268769/files/AWP-03_dette_publique_transfert.pdf'  # source : content/awp/awp-03.md ligne 22
+    pdf_url_en: 'https://zenodo.org/records/19434094/files/AWP-03_Public_Debt_and_Anthropy_EN.pdf'  # source : content/awp/awp-03.en.md ligne 22
+    jel_codes: ['H63', 'H62', 'E62', 'E58']
+    keywords_fr: ['dette publique', 'anthropie', 'transfert temporel', 'finances publiques', 'France']
+    keywords_en: ['public debt', 'anthropy', 'temporal transfer', 'public finance', 'France']
+    main_subjects_explicit:
+      - { name: 'anthropy', qid_wikidata: 'Q138827949' }
+      - { name: 'public debt', qid_wikidata: null, expected_source: 'Wikidata externe (déjà posée P921 government debt sur livre Q138910896 selon 09_)' }
+    related_awps: ['awp-01', 'awp-04']
+    related_book: 'dette-publique-qui-paie-vraiment'
+    faq_fr:
+      - q: "En quoi la dette publique est-elle un mécanisme anthropique ?"
+        r: "La dette déplace le coût du désordre présent vers les générations futures et les groupes sociaux les moins capables de s'y soustraire. C'est un transfert temporel et social classique."
+      - q: "Qui paie vraiment la dette publique ?"
+        r: "L'analyse anthropique montre que le coût est supporté différemment selon les dimensions temporelle (générations futures) et sociale (groupes captifs sans mobilité fiscale ou géographique)."
+    license: 'CC-BY 4.0'
+    google_scholar: { visible: true, citations_observed: 2 }
+    derived_articles: ['art-economie-institutions-2026-04']  # source : data/works.yaml ligne 169
+    source_files:
+      - 'content/awp/awp-03.md'
+      - 'content/awp/awp-03.en.md'
+      - 'data/works.yaml (id: awp-03, lignes 140-170)'
+
+  # ---------------------------------------------------------------------------
+  - id: awp-04
+    wikidata_qid: null
+    series_number: 4
+    awp_number_label: 'AWP-04'
+    title_fr: 'Transition énergétique ou transfert entropique ?'
+    title_en: 'Energy Transition, or Anthropic Transfer?'  # source : data/works.yaml ligne 178
+    title_en_frontmatter: 'Energy transition or entropic transfer?'  # source : content/awp/awp-04.en.md ligne 2 (variation)
+    short_title_fr: 'Transition énergétique ou transfert entropique ?'
+    abstract_fr: |
+      La transition énergétique réduit-elle le désordre ou le déplace-t-elle ? Ce working paper examine les mécanismes anthropiques dans les politiques énergétiques contemporaines : extraction externalisée, déchets reportés, effet rebond non comptabilisé.
+    abstract_fr_source_file: 'content/awp/awp-04.md'
+    abstract_fr_source_line: 11
+    abstract_en: |
+      Does the energy transition reduce disorder or merely displace it? This working paper examines anthropic mechanisms in contemporary energy policies: externalised extraction, deferred waste, unaccounted rebound effects.
+    abstract_en_source_file: 'content/awp/awp-04.en.md'
+    abstract_en_source_line: 11
+    publication_date_fr: '2026-03-10'
+    publication_date_en: '2026-04-06'
+    doi_zenodo_fr: '10.5281/zenodo.19269244'
+    doi_zenodo_en: '10.5281/zenodo.19439921'
+    doi_ssrn: '10.2139/ssrn.6615305'
+    ssrn_abstract_id: '6615305'
+    ssrn_status: 'approved'
+    mpra_id: '128607'
+    mpra_status: 'in_review'
+    mpra_deposit_date: '2026-04-07'
+    zenodo_url_fr: 'https://zenodo.org/records/19269244'
+    zenodo_url_en: 'https://zenodo.org/records/19439921'
+    ssrn_url: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6615305'
+    mpra_url: 'https://mpra.ub.uni-muenchen.de/id/eprint/128607'
+    site_url_fr: 'https://stephane-lalut.com/awp/awp-04/'
+    site_url_en: 'https://stephane-lalut.com/en/awp/awp-04/'
+    pdf_url_fr: 'https://zenodo.org/records/19269244/files/AWP-04_transition_energetique.pdf'
+    pdf_url_en: 'https://zenodo.org/records/19439921/files/AWP-04_Energy_Transition_or_Anthtopic_Transfer_EN.pdf'  # NB : faute d'orthographe "Anthtopic" présente dans le filename (verbatim)
+    jel_codes: ['Q42', 'Q56', 'O33']
+    keywords_fr: ['transition énergétique', 'anthropie', 'transfert entropique', 'extraction minière', 'effet rebond', 'effet Jevons']
+    keywords_en: ['energy transition', 'anthropy', 'entropic transfer', 'mining', 'rebound effect', 'Jevons paradox']
+    main_subjects_explicit:
+      - { name: 'anthropy', qid_wikidata: 'Q138827949' }
+    related_awps: ['awp-02', 'awp-03', 'awp-06']
+    related_book: 'anthropie-ordre-ici-dette-ailleurs'
+    faq_fr:
+      - q: "La transition énergétique réduit-elle l'entropie sociale ?"
+        r: "Le cadre anthropique suggère qu'elle la déplace davantage qu'elle ne la réduit : extraction minière externalisée vers les pays du Sud, déchets technologiques reportés, effet rebond sur la consommation."
+      - q: "Qu'est-ce que l'effet Jevons dans ce contexte ?"
+        r: "L'effet Jevons montre que l'amélioration de l'efficacité énergétique tend à augmenter la consommation totale — un exemple d'effet boomerang anthropique où l'ordre local se construit au prix d'un désordre global."
+    license: 'CC-BY 4.0'
+    google_scholar: { visible: true, citations_observed: 1 }
+    source_files:
+      - 'content/awp/awp-04.md'
+      - 'content/awp/awp-04.en.md'
+      - 'data/works.yaml (id: awp-04, lignes 172-200)'
+
+  # ---------------------------------------------------------------------------
+  - id: awp-05
+    wikidata_qid: null
+    series_number: 5
+    awp_number_label: 'AWP-05'
+    title_fr: 'Penser hors les murs : notes sur la recherche indépendante en économie'  # source : data/works.yaml ligne 209
+    title_fr_frontmatter: 'Penser hors les murs : notes sur la recherche indépendante'  # source : content/awp/awp-05.md ligne 2 (sans "en économie")
+    title_en: 'Thinking Beyond the Walls'  # source : data/works.yaml ligne 210
+    title_en_frontmatter: 'Thinking outside the walls: notes on independent research'  # source : content/awp/awp-05.en.md ligne 2 (variation casse + sous-titre)
+    title_resolution_note: 'Titre canonique works.yaml ≠ frontmatter ; pour Wikidata, conserver works.yaml ("Penser hors les murs : notes sur la recherche indépendante en économie") car explicitement marqué canonical_title.'
+    short_title_fr: 'Penser hors les murs'
+    abstract_fr: |
+      Le champ académique déplace-t-il du désordre épistémique vers ses marges ? Ce working paper applique le cadre anthropique au champ lui-même, examine les mécanismes de relégation et interroge le rôle des infrastructures ouvertes (Zenodo, ORCID).
+    abstract_fr_source_file: 'content/awp/awp-05.md'
+    abstract_fr_source_line: 11
+    abstract_en: |
+      Does the academic field displace epistemic disorder toward its margins? This working paper applies the framework of anthropy to the field itself, examines relegation mechanisms, and questions the role of open infrastructures (Zenodo, ORCID).
+    abstract_en_source_file: 'content/awp/awp-05.en.md'
+    abstract_en_source_line: 11
+    publication_date_fr: '2026-03-20'
+    publication_date_en: '2026-04-06'
+    doi_zenodo_fr: '10.5281/zenodo.19269487'  # CORRIGÉ 2026-07-05 : 19269486 = DOI CONCEPT ; 19269487 = DOI VERSION (convention 2026-05-29 : toujours le version DOI). Source : data/works.yaml (corrigé) + content/awp/awp-05.md ligne 12
+    doi_zenodo_fr_pdf_url_record: 'RÉSOLU 2026-07-05 : 19269486 était le concept DOI du record 19269487 (version) — aucune incohérence Zenodo, c était le registre local qui portait le concept DOI'
+    doi_zenodo_en: '10.5281/zenodo.19440866'
+    doi_ssrn: '10.2139/ssrn.6615438'
+    ssrn_abstract_id: '6615438'
+    ssrn_status: 'approved'
+    mpra_id: '128608'
+    mpra_status: 'in_review'
+    mpra_deposit_date: '2026-04-07'
+    zenodo_url_fr: 'https://zenodo.org/records/19269487'  # CORRIGÉ 2026-07-05 (version record ; /records/19269486 renvoie 404)
+    zenodo_url_en: 'https://zenodo.org/records/19440866'
+    ssrn_url: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6615438'
+    mpra_url: 'https://mpra.ub.uni-muenchen.de/id/eprint/128608'
+    site_url_fr: 'https://stephane-lalut.com/awp/awp-05/'
+    site_url_en: 'https://stephane-lalut.com/en/awp/awp-05/'
+    pdf_url_fr: 'https://zenodo.org/records/19269487/files/AWP-05_penser_hors_les_murs.pdf'  # source : content/awp/awp-05.md ligne 22 — cohérent avec doi_zenodo_fr (version 19269487)
+    pdf_url_en: 'https://zenodo.org/records/19440866/files/AWP-05_Thinking_Beyond_The_Walls_EN.pdf'
+    pdf_url_record_drift_note: 'RÉSOLU 2026-07-05 : la « dérive » était le concept DOI (19269486) dans le registre local ; tout est aligné sur le version DOI 19269487.'
+    jel_codes: ['A11', 'B41', 'I23']
+    keywords_fr: ['recherche indépendante', 'anthropie', 'ordre épistémique', 'légitimité académique', 'infrastructures ouvertes']
+    keywords_en: ['independent research', 'anthropy', 'epistemic order', 'academic legitimacy', 'open-access infrastructure']
+    main_subjects_explicit:
+      - { name: 'anthropy', qid_wikidata: 'Q138827949' }
+    related_awps: ['awp-01']
+    related_book: 'anthropie-ordre-ici-dette-ailleurs'
+    faq_fr:
+      - q: "Comment l'anthropie s'applique-t-elle à la recherche ?"
+        r: "Le champ académique maintient son ordre en reléguant certaines questions, formats et postures vers ses marges — un mécanisme analogue au transfert anthropique social."
+      - q: "Les infrastructures ouvertes résolvent-elles ce problème ?"
+        r: "Elles réduisent le coût de la marginalité sans en abolir la logique. Elles modifient la forme du transfert — de la relégation silencieuse à la noyade dans le bruit — pas sa nature."
+    license: 'CC-BY 4.0'
+    google_scholar: { visible: true, citations_observed: 0 }
+    notes: 'Charte stratégique implicite — toute action de diffusion doit rester défendable sous AWP-05 (data/works.yaml ligne 228).'
+    source_files:
+      - 'content/awp/awp-05.md'
+      - 'content/awp/awp-05.en.md'
+      - 'data/works.yaml (id: awp-05, lignes 202-228)'
+
+  # ---------------------------------------------------------------------------
+  - id: awp-06
+    wikidata_qid: null
+    series_number: 6
+    awp_number_label: 'AWP-06'
+    title_fr: 'Infrastructures numériques et dette technologique : data centers, IA et déplacement du désordre'  # source : data/works.yaml ligne 235
+    title_fr_frontmatter: 'Infrastructures numériques et dette technologique'  # source : content/awp/awp-06.md ligne 2 (version courte)
+    title_en: 'Digital Infrastructures and Technological Debt: Data Centers, AI, and the Displacement of Disorder'  # source : data/works.yaml ligne 236
+    title_en_frontmatter: 'Digital Infrastructures and Technological Debt'  # source : content/awp/awp-06.en.md ligne 2 (version courte)
+    short_title_fr: 'Infrastructures numériques'
+    abstract_fr: |
+      L'anthropie désigne le mécanisme par lequel les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. Cet article examine les infrastructures numériques contemporaines — data centers, IA générative, chaînes matérielles, territoires d'accueil, dispositifs de garantie publique — comme régime structuré de déplacement.
+    abstract_fr_source_file: 'content/awp/awp-06.md'
+    abstract_fr_source_line: 11
+    abstract_en: |
+      Existing analyses of digital infrastructures often treat materialist critique, opacity studies, and environmental footprint accounting as separate approaches, thereby missing the broader regime that connects them. This paper applies the framework of anthropy to contemporary digital infrastructures: data centers, generative AI, material supply chains, host territories, and public guarantee mechanisms.
+    abstract_en_source_file: 'content/awp/awp-06.en.md'
+    abstract_en_source_line: 11
+    publication_date_fr: '2026-05-07'
+    publication_date_en: '2026-05-07'
+    doi_zenodo_fr: '10.5281/zenodo.20025421'
+    doi_zenodo_en: '10.5281/zenodo.20077993'
+    doi_ssrn: '10.2139/ssrn.6735581'
+    ssrn_abstract_id: '6735581'
+    ssrn_status: 'in_review'  # source : data/works.yaml ligne 251
+    ssrn_submission_date: '2026-05-08'  # source : data/works.yaml ligne 251
+    mpra_id: '129034'
+    mpra_status: 'in_review'
+    mpra_deposit_date: '2026-05-08'
+    zenodo_url_fr: 'https://zenodo.org/records/20025421'
+    zenodo_url_en: 'https://zenodo.org/records/20077993'
+    ssrn_url: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6735581'
+    mpra_url: 'https://mpra.ub.uni-muenchen.de/id/eprint/129034'
+    site_url_fr: 'https://stephane-lalut.com/awp/awp-06/'
+    site_url_en: 'https://stephane-lalut.com/en/awp/awp-06/'
+    pdf_url_fr: 'https://zenodo.org/records/20025421/files/AWP-06_infrastructures_numeriques.pdf'
+    pdf_url_en: 'https://zenodo.org/records/20077993/files/AWP06_Digital_Infrastructures_EN.pdf'
+    jel_codes: ['L86', 'Q55']  # source : content/awp/awp-06.md ligne 14
+    jel_codes_en_extended: ['L86', 'Q55', 'L96', 'Q56', 'O33']  # source : data/works.yaml ligne 247 + content/awp/awp-06.en.md ligne 14
+    jel_codes_asymmetry_note: 'JEL FR (2 codes) ≠ JEL EN (5 codes) — asymétrie observée dans le repo, signalée dans data/works.yaml ligne 257 comme "intentionnelle ou à harmoniser ultérieurement".'
+    keywords_fr: ['anthropie', 'data centers', 'IA générative', 'derisking', 'infrastructures numériques']
+    keywords_en: ['anthropy', 'data centers', 'generative AI', 'derisking', 'digital infrastructures']
+    main_subjects_explicit:
+      - { name: 'anthropy', qid_wikidata: 'Q138827949' }
+      - { name: 'data centers', qid_wikidata: null, expected_source: 'Wikidata externe' }
+      - { name: 'generative AI', qid_wikidata: null, expected_source: 'Wikidata externe' }
+      - { name: 'derisking (Daniela Gabor)', qid_wikidata: null, expected_source: 'Wikidata externe ou non-mappé' }
+    related_awps: ['awp-04']
+    related_book: 'anthropie-ordre-ici-dette-ailleurs'
+    faq_fr:
+      - q: 'Qu''apporte le cadre anthropique au numérique ?'
+        r: "Le cadre anthropique unifie matérialité, opacité et empreinte environnementale comme variantes d'un même mécanisme : le service numérique n'a pas allégé la matière, il l'a déplacée vers d'autres lieux, d'autres temps, d'autres groupes sociaux."
+      - q: 'Qu''est-ce que les registres de coûts couplés ?'
+        r: "Une grille testable des quatre registres — énergie, matière, territoire, attention — qui montre comment l'infrastructure numérique déplace simultanément le désordre selon plusieurs axes irréductibles. C'est l'apport central d'AWP-06."
+      - q: 'Comment le coût devient-il dette technologique ?'
+        r: 'Par engagement, garantie et irréversibilisation. Le derisking (Daniela Gabor) couple un mécanisme contemporain à une formation institutionnelle longue — l''État de marché — qui transforme un coût présent en dette future inéluctable.'
+    license: 'CC-BY 4.0'
+    google_scholar: { visible: false, citations_observed: 0 }
+    source_files:
+      - 'content/awp/awp-06.md'
+      - 'content/awp/awp-06.en.md'
+      - 'data/works.yaml (id: awp-06, lignes 230-258)'

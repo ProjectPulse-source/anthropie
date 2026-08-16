@@ -1,0 +1,204 @@
+# =============================================================================
+# 03_books.yaml — livres publiés
+# Sources : data/works.yaml (section livres) + content/livres/*.md
+# =============================================================================
+
+books:
+
+  # ---------------------------------------------------------------------------
+  - id: anthropie-ordre-ici-dette-ailleurs
+    wikidata_qid: 'Q138827344'  # source : data/works.yaml ligne 276 (book-anthropie.wikidata)
+    title_fr: 'ANTHROPIE — Ordre ici. Dette ailleurs'  # source : data/works.yaml ligne 267
+    title_fr_variant_in_content: 'ANTHROPIE – Ordre ici. Dette ailleurs'  # source : content/livres/anthropie-ordre-ici-dette-ailleurs.md ligne 2 (note : tiret demi-cadratin "–" dans le frontmatter ; cadratin "—" dans works.yaml — incohérence typographique mineure)
+    title_en_tentative: 'ANTHROPY — Order Here, Debt Elsewhere'  # source : data/works.yaml ligne 268 (commentaire "tentative, pas de page EN")
+    isbn_13: '978-2-9586347-2-8'  # source : data/works.yaml ligne 270 + content/livres/anthropie-ordre-ici-dette-ailleurs.md ligne 5
+    isbn_13_normalized: '9782958634728'  # source : data/works.yaml ligne 271
+    asin_kindle: 'B0FQ9PG246'  # source : data/works.yaml ligne 275
+    pages: 622  # source : data/works.yaml ligne 272
+    publication_date: '2025-09-09'  # source : data/works.yaml ligne 269 + content/livres/anthropie-ordre-ici-dette-ailleurs.md ligne 3 (concordance)
+    language: 'fr'
+    publisher: 'Auto-édition'  # source : data/works.yaml ligne 273
+    distribution: 'Amazon KDP'  # source : data/works.yaml ligne 274
+    license: ''  # source : data/works.yaml ligne 276 (champ explicitement vide : "# à préciser")
+    page_url_fr: 'https://stephane-lalut.com/livres/anthropie-ordre-ici-dette-ailleurs/'  # source : data/works.yaml ligne 283
+    page_url_en: ''  # source : data/works.yaml ligne 284 ("# n/a — pas de page livre EN dédiée")
+    cover_image_url: 'https://stephane-lalut.com/images/livres/anthropie-ordre-ici-dette-ailleurs.jpg'  # auto-hébergé site (URL stable) — assets/images/livres/<slug>.jpg, indépendante du visuel
+    amazon_urls:
+      fr: 'https://amzn.eu/d/0hfod6Wc'  # source : data/works.yaml ligne 286 + content/livres/anthropie-ordre-ici-dette-ailleurs.md ligne 10
+      com: 'https://a.co/d/08HfFlLF'  # source : data/works.yaml ligne 287 + content/livres/anthropie-ordre-ici-dette-ailleurs.md ligne 12
+      uk: 'https://amzn.eu/d/0hKCJKTh'  # source : content/livres/anthropie-ordre-ici-dette-ailleurs.md ligne 13 — ABSENT de works.yaml
+      de: 'https://amzn.eu/d/0iFQJmHF'  # source : content/livres/anthropie-ordre-ici-dette-ailleurs.md ligne 14 — ABSENT de works.yaml
+      es: 'https://amzn.eu/d/05Dd2qh4'  # source : content/livres/anthropie-ordre-ici-dette-ailleurs.md ligne 11 — ABSENT de works.yaml
+      it: 'https://amzn.eu/d/0f0NFGYi'  # source : content/livres/anthropie-ordre-ici-dette-ailleurs.md ligne 15 — ABSENT de works.yaml
+      ca: 'https://a.co/d/09nBM1Rj'  # source : content/livres/anthropie-ordre-ici-dette-ailleurs.md ligne 16 — ABSENT de works.yaml
+    abstract_short_fr: "L'ouvrage fondateur du cadre anthropique. En 622 pages, l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent est déployée à travers l'histoire longue, l'économie, les finances publiques et l'épistémologie. Ordre ici. Dette ailleurs."
+    abstract_short_fr_source_file: 'data/works.yaml'
+    abstract_short_fr_source_line: 278
+    abstract_short_en: ''  # source : data/works.yaml ligne 279 ("# à compléter pour future page livre EN")
+    keywords: ['anthropie', 'anthropy', 'économie politique', 'dette', 'ordre social', 'transfert']  # source : data/works.yaml ligne 280
+    main_subjects_explicit:
+      - { name: 'anthropie / anthropy', qid_wikidata: 'Q138827949', source: 'data/works.yaml ligne 280 (keyword) + content/awp/awp-01.md related_book' }
+    related_awps:  # source : content/livres/anthropie-ordre-ici-dette-ailleurs.md lignes 17-29
+      - { awp: 'awp-01', chapter: "Qu'est-ce que l'anthropie ? Principes d'une hypothèse" }
+      - { awp: 'awp-02', chapter: "3,3 millions d'années en un principe" }
+      - { awp: 'awp-03', chapter: "Dette publique et anthropie : qui paie vraiment le désordre ?" }
+      - { awp: 'awp-04', chapter: "Transition énergétique ou transfert entropique ?" }
+      - { awp: 'awp-05', chapter: "Penser hors les murs : notes sur la recherche indépendante en économie" }
+      - { awp: 'awp-06', chapter: "Infrastructures numériques et dette technologique" }
+    google_scholar:
+      visible: true  # source : data/works.yaml ligne 290
+      citations_observed: 4  # source : data/works.yaml ligne 291
+      title_observed: 'ANTHROPY—Order here / Debt elsewhere'  # source : data/works.yaml ligne 292
+    source_files:
+      - 'data/works.yaml (id: book-anthropie, lignes 264-293)'
+      - 'content/livres/anthropie-ordre-ici-dette-ailleurs.md'
+
+  # ---------------------------------------------------------------------------
+  - id: dette-publique-qui-paie-vraiment
+    wikidata_qid: 'Q138910896'  # source : data/works.yaml ligne 307 + content/livres/dette-publique-qui-paie-vraiment.md ligne 8
+    title_fr: 'Dette Publique : Qui paie vraiment ?'  # source : data/works.yaml ligne 297 + content/livres/dette-publique-qui-paie-vraiment.md ligne 2
+    title_en_tentative: 'Public Debt: Who Really Pays?'  # source : data/works.yaml ligne 298 ("# tentative")
+    isbn_13: '978-2-9586347-3-5'  # source : data/works.yaml ligne 300 + content/livres/dette-publique-qui-paie-vraiment.md ligne 5
+    isbn_13_normalized: '9782958634735'  # source : data/works.yaml ligne 301
+    asin_kindle: 'B0FWW2HPZP'  # source : data/works.yaml ligne 305
+    pages: null  # source : data/works.yaml ligne 302 (valeur 0 + "# todo : non renseigné en front matter du repo")
+    pages_expected_source: 'data/works.yaml ligne 302 OU content/livres/dette-publique-qui-paie-vraiment.md frontmatter'
+    publication_date: '2025-10-17'  # source : data/works.yaml ligne 299 + content/livres/dette-publique-qui-paie-vraiment.md ligne 3 (concordance)
+    language: 'fr'
+    publisher: 'Auto-édition'  # source : data/works.yaml ligne 303
+    distribution: 'Amazon KDP'  # source : data/works.yaml ligne 304
+    license: ''  # source : data/works.yaml ligne 306 ("# à préciser")
+    page_url_fr: 'https://stephane-lalut.com/livres/dette-publique-qui-paie-vraiment/'  # source : data/works.yaml ligne 313
+    page_url_en: ''  # source : data/works.yaml ligne 314 ("# n/a")
+    cover_image_url: 'https://stephane-lalut.com/images/livres/dette-publique-qui-paie-vraiment.jpg'  # auto-hébergé site (URL stable) — assets/images/livres/<slug>.jpg, indépendante du visuel
+    amazon_urls:
+      fr: 'https://amzn.eu/d/01Z60i3H'  # source : data/works.yaml ligne 316
+      com: 'https://a.co/d/04hB4FsV'  # source : data/works.yaml ligne 317
+      uk: 'https://amzn.eu/d/09SXx0W5'  # source : content/livres/dette-publique-qui-paie-vraiment.md ligne 13
+      de: 'https://amzn.eu/d/0f0NFGYi'  # source : content/livres/dette-publique-qui-paie-vraiment.md ligne 14
+      es: 'https://amzn.eu/d/06oRn63g'  # source : content/livres/dette-publique-qui-paie-vraiment.md ligne 11
+      it: 'https://amzn.eu/d/0f0NFGYi'  # source : content/livres/dette-publique-qui-paie-vraiment.md ligne 15
+      ca: 'https://a.co/d/0aLceVAe'  # source : content/livres/dette-publique-qui-paie-vraiment.md ligne 16
+    abstract_short_fr: "La dette publique n'est pas un solde à contenir mais un mécanisme de transfert. Ce livre pose la question non plus combien, mais qui paie — et par quels canaux le coût se déplace vers les générations futures et les groupes sociaux les moins mobiles."
+    abstract_short_fr_source_file: 'data/works.yaml'
+    abstract_short_fr_source_line: 309
+    abstract_short_en: ''  # source : data/works.yaml ligne 310 ("# à compléter")
+    keywords: ['dette publique', 'anthropie', 'transfert', 'économie publique', 'France']  # source : data/works.yaml ligne 311
+    main_subjects_explicit:
+      - { name: 'anthropie', qid_wikidata: 'Q138827949', source: 'data/works.yaml ligne 311 (keyword)' }
+      - { name: 'dette publique', qid_wikidata: null, expected_source: 'Wikidata externe (P921 government debt déjà posée selon 09_)' }
+    related_works: ['awp-03']  # source : data/works.yaml ligne 323
+    related_awps_from_frontmatter:  # source : content/livres/dette-publique-qui-paie-vraiment.md lignes 17-27
+      - { awp: 'awp-01', label: "Qu'est-ce que l'anthropie ? Principes d'une hypothèse" }
+      - { awp: 'awp-03', label: "Dette publique et anthropie : qui paie vraiment le désordre ?" }
+      - { awp: 'awp-04', label: "Transition énergétique ou transfert entropique ?" }
+      - { awp: 'awp-06', label: "Infrastructures numériques et dette technologique" }
+    google_scholar:
+      visible: false  # source : data/works.yaml ligne 320
+      citations_observed: 0  # source : data/works.yaml ligne 321
+      notes: 'Absent de Google Scholar — à investiguer après page livre EN éventuelle.'  # source : data/works.yaml ligne 322
+    source_files:
+      - 'data/works.yaml (id: book-dette-publique, lignes 295-323)'
+      - 'content/livres/dette-publique-qui-paie-vraiment.md'
+
+  # ---------------------------------------------------------------------------
+  - id: livresque-des-mots
+    wikidata_qid: 'Q140517745'  # créé par Laura 2026-07-09, vérifié par API 2026-07-12 (label FR+EN, ISBN 978-2-9586347-0-4, 672 p., ASIN 2958634701, OpenLibrary OL45424544W, sous-titre « Anthologie éclectique de citations », auteur Q138909233, P31 anthology+book)
+    wikidata_duplicate_warning: 'Q138911600'  # ⚠ DOUBLON préexistant « Livresque des Mots » (label MAJUSCULE, description "4 680 citations, 1 380 auteurs" = chiffres PÉRIMÉS vs 4658/1388 canoniques, ISBN seul, sans ASIN/OpenLibrary). À FUSIONNER Q138911600 → Q140517745. Direction correctness-first (survivant = Q140517745, item riche+correct) : inverse la convention "plus petit numéro", assumé/justifié. Pré-étape obligatoire : vider les descriptions FR+EN de Q138911600 (elles entrent en conflit et sont périmées). Consigne détaillée : Wikidata/Fusion_Livresque_2026-07-16/README_LAURA.md. Re-confirmer le QID canonique après fusion.
+    title_fr: 'Livresque des mots'  # source : data/works.yaml ligne 328 + content/livres/livresque-des-mots.md ligne 2
+    subtitle_fr: 'Anthologie inédite & éclectique de citations'  # source : content/livres/livresque-des-mots.md ligne 3 — ABSENT de works.yaml
+    title_en: ''  # source : data/works.yaml ligne 329 ("# n/a")
+    isbn_13: '978-2-9586347-0-4'  # source : data/works.yaml ligne 331 + content/livres/livresque-des-mots.md ligne 6 (concordance)
+    isbn_13_normalized: '9782958634704'  # source : data/works.yaml ligne 332
+    asin_kindle: 'B0CW994YWH'  # source : data/works.yaml ligne 336
+    pages: null  # source : data/works.yaml ligne 333 (0 + "# todo")
+    pages_expected_source: 'works.yaml OU frontmatter livres/livresque-des-mots.md (actuellement aucun champ pages)'
+    publication_date_works_yaml: ''  # source : data/works.yaml ligne 330 ("# todo")
+    publication_date_frontmatter: '2022-12-20'  # source : content/livres/livresque-des-mots.md ligne 5
+    publication_date_resolution_note: |
+      INCOHÉRENCE DATE : works.yaml dit vide ("todo"), frontmatter dit 2022-12-20 + le contenu indique "Édition 2022".
+      → valeur la plus fiable : 2022-12-20 (frontmatter explicite, contenu confirmant). Doit être propagée vers works.yaml par Stéphane.
+    language: 'fr'
+    publisher: 'Auto-édition'  # source : data/works.yaml ligne 334
+    distribution: 'Amazon KDP'  # source : data/works.yaml ligne 335
+    license: ''  # source : data/works.yaml ligne 337
+    page_url_fr: 'https://stephane-lalut.com/livres/livresque-des-mots/'  # déduit : la page existe (content/livres/livresque-des-mots.md). works.yaml ligne 343 dit "todo (vérifier si page existe sur le site)". À confirmer côté déploiement.
+    page_url_fr_source_note: 'works.yaml ligne 343 marque "todo" ; frontmatter content/livres/livresque-des-mots.md confirme la présence du fichier source. URL canonique probable selon convention Hugo /livres/<slug>/.'
+    cover_image_url: 'https://stephane-lalut.com/images/livres/livresque-des-mots.jpg'  # auto-hébergé site (URL stable) — assets/images/livres/<slug>.jpg, indépendante du visuel
+    amazon_urls:
+      fr: 'https://amzn.eu/d/01Qvm7fF'  # source : content/livres/livresque-des-mots.md ligne 10 — ABSENT de works.yaml
+      com: 'https://a.co/d/0geKRrgX'  # source : content/livres/livresque-des-mots.md ligne 12
+      uk: 'https://amzn.eu/d/0fTRK3ak'  # source : content/livres/livresque-des-mots.md ligne 13
+      de: 'https://amzn.eu/d/09518Az2'  # source : content/livres/livresque-des-mots.md ligne 14
+      es: 'https://amzn.eu/d/06zTzk9Q'  # source : content/livres/livresque-des-mots.md ligne 16
+      it: 'https://amzn.eu/d/0fQl5caq'  # source : content/livres/livresque-des-mots.md ligne 15
+      ca: 'https://amzn.eu/d/01Qvm7fF'  # source : content/livres/livresque-des-mots.md ligne 11
+    abstract_short_fr: "Une anthologie qui refuse l'ordre alphabétique et thématique pour privilégier la surprise des rencontres. 4 658 citations, 1 388 voix, 25 siècles de génie humain, tissés en un fil d'Ariane subtil. Quarante ans de passion littéraire pour offrir non un classement, mais un voyage."
+    abstract_short_fr_source_file: 'content/livres/livresque-des-mots.md'
+    abstract_short_fr_source_line: 4
+    abstract_short_en: ''
+    keywords: []  # source : data/works.yaml ligne 341 ("# todo")
+    main_subjects_explicit: []
+    related_awps: []
+    google_scholar:
+      visible: false  # source : data/works.yaml ligne 349
+      citations_observed: 0  # source : data/works.yaml ligne 350
+    notes: 'Livre antérieur (hors série anthropie). data/works.yaml note ligne 351 : "Données minimales (ISBN + ASIN). Métadonnées complètes à ajouter si tu souhaites le rendre visible sur le site."'
+    source_files:
+      - 'data/works.yaml (id: book-livresque-des-mots, lignes 325-351)'
+      - 'content/livres/livresque-des-mots.md'
+
+  # ---------------------------------------------------------------------------
+  - id: lodyssee-des-idees
+    wikidata_qid: 'Q138911733'  # source : _wikidata-prompt.txt + 09_wikidata_existing_state.yaml (item externe)
+    title_fr_short: "L'Odyssée des Idées"  # source : _wikidata-prompt.txt + 09_ + slug Amazon FR
+    title_fr_full: null  # expected_source : Amazon page meta — le slug URL contient "philosophie-lintelligence-artificielle" mais le sous-titre exact n'est pas littéralement disponible (anti-pattern : ne pas déduire depuis le slug)
+    title_fr_subtitle_candidate: null  # le slug URL Amazon "philosophie-de-l-intelligence-artificielle" suggère un sous-titre, mais l'extraction est trompeuse — à confirmer par Stéphane via la page de couverture / 4e de couv
+    title_en: null
+    isbn_13: '978-2958634711'  # source : utilisateur 2026-05-11 (concordance avec prompt initial "978-2-9586347-1-1" et 09_)
+    isbn_13_normalized: '9782958634711'
+    isbn_10: '295863471X'  # source : URL Amazon FR /dp/295863471X (=ASIN papier Amazon, identique à ISBN-10)
+    asin_kindle: null  # expected_source : recherche Amazon Kindle dédiée (l'utilisateur a fourni l'URL papier)
+    pages: null  # expected_source : Amazon ou registre KDP de l'auteur
+    publication_date: '2023'  # source : _wikidata-prompt.txt + 09_wikidata_existing_state.yaml (année seule, jour/mois non fournis)
+    language: 'fr'
+    publisher: null  # expected_source : Amazon — probablement "Auto-édition" comme les 2 autres mais NON CONFIRMÉ par le repo ni par l'utilisateur
+    distribution: null  # idem
+    license: null
+    page_url_fr: null  # absent du repo (pas de fichier content/livres/lodyssee-des-idees.md)
+    page_url_fr_expected_source: 'content/livres/lodyssee-des-idees.md'
+    page_url_en: null
+    cover_image_url: null
+    amazon_urls:
+      fr: 'https://www.amazon.fr/Lodyssée-idées-philosophie-lintelligence-artificielle/dp/295863471X'  # source : utilisateur 2026-05-11
+      com: null  # expected_source : utilisateur ou recherche
+      uk: null
+      de: null
+      es: null
+      it: null
+      ca: null
+    abstract_short_fr: null  # expected_source : 4e de couverture Amazon ou page livre (à créer)
+    keywords: []
+    main_subjects_explicit: []
+    related_awps: []
+    google_scholar:
+      visible: null
+      citations_observed: null
+    notes: |
+      Livre antérieur (2023) hors série anthropie.
+      ABSENT du repo (ni data/works.yaml, ni content/livres/lodyssee-des-idees.md).
+      Données partielles fournies hors-repo par l'utilisateur le 2026-05-11 :
+      ISBN-13 (= 978-2958634711, confirme valeur Wikidata) + URL Amazon FR.
+      Le slug Amazon suggère un sous-titre "philosophie de l'intelligence artificielle"
+      mais le titre canonique exact reste à confirmer par Stéphane (anti-pattern :
+      ne pas extraire un titre depuis un slug URL sans confirmation).
+    source_files: []  # AUCUNE source repo
+    source_external:
+      - utilisateur (2026-05-11) — URL Amazon + ISBN-13
+      - _wikidata-prompt.txt (QID + ISBN + année)
+      - 09_wikidata_existing_state.yaml (état Wikidata)
+
+books_mentioned_in_external_doc_but_not_in_repo: []  # plus de livre orphelin ; L'Odyssée intégrée avec données partielles fournies hors-repo
+
+books_present_in_repo_not_in_works_yaml: []
+books_present_in_works_yaml_not_in_repo: []  # tous les livres de works.yaml ont une page content/livres/

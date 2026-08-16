@@ -1,0 +1,47 @@
+// ============================================================================
+// BATCH QuickStatements V1 — création de l'item « Livresque des mots »
+// + complément P800 (AWP-07) sur la fiche personne
+// Préparé le 2026-07-09. Sources : data/works.yaml (book-livresque-des-mots),
+// catalogue canonique ASIN/ISBN, PROJECT_STATUS.md (OpenLibrary OL45424544W),
+// content/livres/livresque-des-mots.md. QID génériques vérifiés par API le
+// 09/07 : Q47461344=œuvre écrite, Q571=livre, Q105420=anthologie, Q150=français.
+// Après suppression des lignes // : exactement 20 lignes
+// (1 CREATE + 18 LAST + 1 Q138909233).
+// ============================================================================
+
+// --- BLOC 1 : création de l'item (dernier livre sans item Wikidata) ---
+// Modèle : items des 3 autres livres (hybride œuvre/édition, P577 en année).
+// Convention édition : l'item porte l'œuvre (1re parution 2022) ; la 3e
+// édition 2026 est dans la description — pas de bascule d'édition à gérer,
+// l'ISBN 978-2-9586347-0-4 est stable.
+CREATE
+LAST	Lfr	"Livresque des mots"
+LAST	Len	"Livresque des mots"
+LAST	Dfr	"anthologie éclectique de citations de Stéphane Lalut (2022 ; 3e édition 2026)"
+LAST	Den	"eclectic anthology of quotations by Stéphane Lalut (2022; 3rd edition 2026)"
+LAST	P31	Q47461344
+LAST	P31	Q571
+LAST	P50	Q138909233
+LAST	P407	Q150
+LAST	P136	Q105420
+LAST	P577	+2022-00-00T00:00:00Z/9
+LAST	P212	"978-2-9586347-0-4"
+LAST	P1104	672
+LAST	P5749	"2958634701"
+LAST	P648	"OL45424544W"
+LAST	P856	"https://stephane-lalut.com/livres/livresque-des-mots/"
+LAST	P953	"https://www.amazon.fr/dp/B0CW994YWH"
+LAST	P1476	fr:"Livresque des mots"
+LAST	P1680	fr:"Anthologie éclectique de citations"
+
+// --- BLOC 2 : fiche personne — AWP-07 manquant dans les œuvres notables ---
+// (vérifié par API le 09/07 : P800 contient les 6 AWP mais pas Q140446195)
+Q138909233	P800	Q140446195
+
+// --- POST-IMPORT MANUEL (impossible en V1, le QID n'existe pas encore) ---
+// 1. Noter le QID créé (ligne CREATE du journal de batch) → le renvoyer à
+//    Stéphane (registre works.yaml + fiche site wikidata_qid).
+// 2. Ajouter À LA MAIN sur Q138909233 : P800 = <QID créé> (œuvre notable).
+// 3. Optionnel cohérent : sur Q138827949 (concept), rien — Livresque est
+//    hors corpus anthropique (serie: autres-ouvrages), ne PAS le lier au
+//    concept (même logique que le schema.org du site).

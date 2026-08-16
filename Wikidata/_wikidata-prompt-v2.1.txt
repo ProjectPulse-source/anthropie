@@ -1,0 +1,10 @@
+À supprimer sans remplacement :
+Q3504054   # faux pour self-published
+Q62482     # faux pour economic essay
+Q161732    # faux pour independent research
+Q1339645   # faux pour longue durée
+À ne pas introduire :
+Q1711593   # edited volume, pas publication series
+Q5633421   # scientific journal, pas working paper series
+Q1812879   # pas longue durée
+P4985      # TMDB person ID, pas Google Scholar

@@ -1,0 +1,358 @@
+# PROMPT CLAUDE CODE v2 — Application corrections Q-IDs Wikidata + isolation décisions Laura
+
+## OBJECTIF
+
+Appliquer dans le dossier `D:\anthropie\anthropie-site\Wikidata\` :
+1. **Substitutions de 7 Q-IDs confirmés** dans les fichiers QuickStatements (11_, 12_, 13_) et dans le maillage de référence.
+2. **Création d'un nouveau fichier `14_remaining_decisions_for_laura.md`** qui isole proprement TOUS les `[À VÉRIFIER]` Wikidata externes restants (Q-IDs ambigus + P-IDs spécifiques) avec contexte d'usage et alternatives.
+3. **Mise à jour de l'audit `00_inventory_audit.md`** (nouvelle version v1.3) + `CHANGELOG.md`.
+
+**Aucun commit.** Le dossier `Wikidata/` doit rester `untracked`.
+
+---
+
+## PRÉ-REQUIS
+
+1. Lire `PROJECT_STATUS.md` à la racine du repo.
+2. Lister le contenu actuel de `Wikidata/` pour confirmer la présence des fichiers `11_quickstatements_phase_A_filled.qs`, `12_quickstatements_phase_B_filled.qs`, `13_quickstatements_phase_C_filled.qs`, `wikidata_maillage_lalut_v1.md` (ou nom équivalent dans le sous-dossier), `00_inventory_audit.md`, `CHANGELOG.md`.
+
+---
+
+## RÈGLES STRICTES
+
+1. **Substitutions littérales uniquement.** Ne pas reformuler les commentaires, ne pas réordonner les commandes.
+2. **Conserver les commentaires `#` qui accompagnent chaque Q-ID** : remplacer juste la valeur, garder le label en commentaire. Exemple : `LAST	P921	Q12739	# main subject: energy transition` → `LAST	P921	Q795757	# main subject: energy transition`.
+3. **Supprimer le marqueur `[À VÉRIFIER]`** des Q-IDs qui passent en V2 confirmé. Les marqueurs des Q-IDs non confirmés restent en place.
+4. **Aucun commit, aucun push, aucun stash.** Modifications locales uniquement.
+5. **Aucune invention.** Si une substitution exacte ne peut être effectuée parce que le texte source n'est pas trouvé verbatim, **signaler dans l'audit et passer au suivant** — ne pas tenter de reconstituer.
+
+---
+
+## TABLE DES SUBSTITUTIONS À APPLIQUER
+
+Pour chaque ligne ci-dessous, chercher la chaîne **AVANT** dans tous les fichiers `.qs` du dossier `Wikidata/` ET dans `wikidata_maillage_lalut_v1.md`, et remplacer par la chaîne **APRÈS**. Les substitutions doivent être effectuées avec préservation exacte des tabulations et commentaires.
+
+### Correction #1 — government debt
+- Chercher : `Q22954024`
+- Remplacer par : `Q3024789`
+- Contexte : utilisé sur Q138910896 (livre Dette Publique) et AWP-03 (P921 main subject)
+- Source vérification : https://www.wikidata.org/wiki/Q3024789 (« total amount of debt owed to lenders by a government/state »)
+
+### Correction #2 — entropy
+- Chercher : `Q42213`
+- Remplacer par : `Q45003`
+- Contexte : utilisé sur Q138827949 (concept anthropie, P941 inspired by)
+- Source vérification : https://www.wikidata.org/wiki/Q45003 (« physical property of the state of a system, measure of disorder »)
+
+### Correction #3 — energy transition
+- Chercher : `Q12739`
+- Remplacer par : `Q795757`
+- Contexte : utilisé sur AWP-04 (P921 main subject)
+- Source vérification : https://www.wikidata.org/wiki/Q795757
+
+### Correction #4 — data center
+- Chercher : `Q1066186`
+- Remplacer par : `Q671224`
+- Contexte : utilisé sur AWP-06 (P921 main subject)
+- Source vérification : https://www.wikidata.org/wiki/Q671224 (« building or room where computer servers and related equipment are operated »)
+- **Note pour Laura (à ajouter en commentaire `#` dans le fichier 12_ §B.6)** : alternative plus précise disponible — Q137571914 « AI data center » (« specialized data center designed for artificial intelligence workloads »). Décision éditoriale : poser les DEUX subjects (Q671224 + Q137571914) ou choisir l'un. Recommandation par défaut : poser les deux, Q671224 comme classe parente et Q137571914 comme classe spécifique.
+
+### Correction #5 — political ecology
+- Chercher : `Q161172`
+- Remplacer par : `Q1554076`
+- Contexte : utilisé sur Q138827949 (P101 field of work)
+- Source vérification : https://www.wikidata.org/wiki/Q1554076
+
+### Correction #6 — hypothesis
+- Chercher : `Q1149875`
+- Remplacer par : `Q41719`
+- Contexte : utilisé sur Q138827949 (P31 instance of, en complément de Q151885 concept et Q17737 theory)
+- Source vérification : https://www.wikidata.org/wiki/Q41719 (« proposed explanation for an observation, phenomenon, or scientific problem »)
+
+### Correction #7 — theory (confirmation, déjà correct)
+- Vérifier que `Q17737` est bien présent et **supprimer son marqueur `[À VÉRIFIER]`** s'il en a un.
+- Source vérification : https://www.wikidata.org/wiki/Q17737
+
+### Correction #8 — artificial intelligence (confirmation, déjà correct)
+- Vérifier que `Q11660` est bien présent dans le fichier 12_ §B.6 et **supprimer son marqueur `[À VÉRIFIER]`** s'il en a un.
+- Source vérification : https://www.wikidata.org/wiki/Q11660
+
+---
+
+## CRÉATION DU FICHIER `14_remaining_decisions_for_laura.md`
+
+Ce fichier isole TOUS les `[À VÉRIFIER]` Wikidata externes encore en place après l'application des corrections ci-dessus. C'est le **seul fichier que Laura doit ouvrir** pour finaliser le maillage avant exécution.
+
+### Structure obligatoire
+
+```markdown
+# 14 — Décisions Wikidata restantes pour Laura
+
+**Génération : <timestamp ISO>**
+**Statut : à arbitrer avant exécution des batches `11_`, `12_`, `13_`**
+
+---
+
+## Mode d'emploi
+
+Ce document liste toutes les valeurs Wikidata externes (Q-IDs et P-IDs) qui n'ont pas pu être validées depuis le repo Hugo ni depuis une recherche web Anthropic. Chaque entrée donne :
+- la valeur actuellement posée dans les batches QS,
+- son contexte d'usage,
+- les alternatives connues,
+- une recommandation neutre,
+- la décision finale à reporter dans le batch.
+
+**Convention :** Laura tranche par item, reporte sa décision finale dans le tableau de tête, et substitue manuellement dans le fichier QS concerné AVANT le lancement du batch.
+
+---
+
+## Tableau de tête — décisions à reporter par Laura
+
+| # | Concept / propriété | Valeur actuelle batch | Décision Laura | Validé le |
+|---|---|---|---|---|
+| 1 | given name "Stéphane" | Q937131 | (à remplir) | |
+| 2 | public finance | Q161157 | | |
+| 3 | ecological economics | Q1062148 | | |
+| 4 | social sciences | Q21201 | | |
+| 5 | self-published | Q3504054 | | |
+| 6 | publication series | Q1711593 | | |
+| 7 | economic essay (genre) | Q62482 | | |
+| 8 | independent research | Q161732 | | |
+| 9 | longue durée | Q1339645 | | |
+| 10 | Zenodo (en tant que repository) | Q1322603 | | |
+| 11 | Academia.edu profile property | P6079 vs P973 | | |
+| 12 | Google Scholar property | P1960 (actuel) vs P4985 | | |
+| 13 | Amazon URL property (livre Odyssée) | P953 vs P856 vs autre | | |
+
+---
+
+## Détail par décision
+
+### #1 — Given name "Stéphane"
+
+**Fichier concerné :** `11_quickstatements_phase_A_filled.qs` §A.1
+**Ligne approximative :** `Q138909233	P735	Q937131	# given name: Stéphane`
+**Valeur posée :** Q937131
+**Statut :** À vérifier
+**Action Laura :** ouvrir https://www.wikidata.org/wiki/Q937131 et confirmer que le libellé est bien « Stéphane » (et non un homonyme).
+**Alternative si erroné :** rechercher « Stéphane » sur wikidata.org → autocomplétion sur les items « given name (male) ».
+**Recommandation :** vérification rapide (30 s).
+
+### #2 — Public finance
+
+**Fichier concerné :** `11_quickstatements_phase_A_filled.qs` §A.1
+**Ligne :** `Q138909233	P101	Q161157	# field of work: public finance`
+**Statut :** À vérifier
+**Action Laura :** confirmer Q161157 = « public finance » discipline (et non un homonyme).
+**Alternative si erroné :** Q1191488 (à valider) ou rechercher « public finance discipline » sur wikidata.org.
+**Recommandation :** ce champ est important pour la cohérence du profil de l'auteur — ne pas le laisser ambigu.
+
+### #3 — Ecological economics
+
+**Fichier concerné :** `11_quickstatements_phase_A_filled.qs` §A.1 (P101 auteur) et §A.2 (P101 concept anthropie)
+**Valeur posée :** Q1062148
+**Statut :** **NON CONFIRMÉ par recherche web** — la recherche Anthropic a retourné Q4037914 (le journal *Ecological Economics*) et Q164156 (ISEE) mais aucun Q-ID concept clair pour la discipline elle-même.
+**Action Laura :** rechercher « ecological economics » sur wikidata.org en filtrant par « instance of: discipline » ou « instance of: field of study ».
+**Hypothèse plausible :** la discipline pourrait être représentée par Q132949 (à valider — peut-être « branch of science ») ou être absente d'un item dédié et représentée seulement par le journal.
+**Recommandation :** si aucun Q-ID concept satisfaisant n'existe, **omettre cette déclaration P101** plutôt que poser un mauvais Q-ID. La déclaration P101 = Q8134 (economics) générique suffit déjà.
+
+### #4 — Social sciences
+
+**Fichier concerné :** `11_quickstatements_phase_A_filled.qs` §A.2
+**Valeur posée :** Q21201
+**Statut :** À vérifier — Q21201 peut être un homonyme.
+**Alternative connue stable :** Q34749 (« social science »).
+**Action Laura :** confirmer ou substituer.
+
+### #5 — Self-published
+
+**Fichier concerné :** `11_quickstatements_phase_A_filled.qs` §A.3, §A.4, §A.5
+**Valeur posée :** Q3504054
+**Statut :** À vérifier — la recherche Anthropic n'a pas retourné de confirmation directe.
+**Contexte d'usage Wikidata :** la propriété est P123 (publisher). « Self-published » est un concept ambigu sur Wikidata : il existe plusieurs items candidats selon qu'on parle de « self-publishing » (l'acte), « self-published work » (l'objet), ou un auteur-éditeur.
+**Action Laura :** rechercher « self-published » sur wikidata.org.
+**Alternative possible :** Q1019875 (« self-publishing ») ou Q22939518 (« self-published work »).
+**Recommandation :** si aucun match propre, **omettre P123** sur les livres auto-édités plutôt que poser un Q-ID ambigu — l'absence de publisher est un signal recevable pour un patrouilleur, l'erreur sur Q-ID l'est moins.
+
+### #6 — Publication series
+
+**Fichier concerné :** `11_quickstatements_phase_A_filled.qs` §A.6 (Q139040913 série AWP)
+**Valeur posée :** Q1711593
+**Statut :** À vérifier — non confirmé par web search.
+**Contexte :** P31 actuel Q139040913 est Q13442814 (scholarly article) qui est inadapté pour une série. Le batch propose de SUPPRIMER cette déclaration et la remplacer par Q1711593.
+**Alternatives connues :**
+- Q277759 « book series » (peut-être inadapté car ce n'est pas un livre)
+- Q1711593 « scholarly publication series » (si existe)
+- Q734774 « working paper series » (à vérifier)
+- Q5633421 « scholarly publishing series »
+**Action Laura :** rechercher « working paper series » et « publication series » sur wikidata.org, choisir le Q-ID le plus précis et stable.
+**Recommandation :** ce choix est structurant pour l'item série — prendre le temps de bien choisir.
+
+### #7 — Economic essay (genre)
+
+**Fichier concerné :** `11_quickstatements_phase_A_filled.qs` §A.3
+**Valeur posée :** Q62482
+**Statut :** À vérifier — Q-ID très probablement faux (la valeur Q62482 peut être un homonyme sans rapport).
+**Action Laura :** rechercher « economic essay » ou « economics essay » sur wikidata.org.
+**Alternative recommandée :** **omettre cette déclaration P136** si pas de Q-ID propre — P136 = Q35760 (essay) générique est déjà posé et suffit. La sous-catégorisation « economic essay » n'apporte pas de valeur structurelle nette face au risque d'erreur.
+
+### #8 — Independent research
+
+**Fichier concerné :** `12_quickstatements_phase_B_filled.qs` §B.5 (AWP-05)
+**Valeur posée :** Q161732
+**Statut :** À vérifier.
+**Action Laura :** rechercher « independent research » sur wikidata.org.
+**Alternative :** Q97133380 (« independent researcher ») mais c'est probablement une occupation, pas un sujet — donc pas adapté pour P921.
+**Recommandation :** si pas de Q-ID propre pour « independent research as a subject », **omettre cette déclaration P921 supplémentaire** — la déclaration P921 = Q138827949 (anthropy) couvre déjà le sujet principal de l'AWP-05.
+
+### #9 — Longue durée
+
+**Fichier concerné :** `12_quickstatements_phase_B_filled.qs` §B.2 (AWP-02)
+**Valeur posée :** Q1339645
+**Statut :** À vérifier.
+**Action Laura :** rechercher « longue durée » sur wikidata.org (concept braudelien).
+**Alternative possible :** Q1812879 (« longue durée ») — à vérifier.
+**Recommandation :** concept central pour AWP-02, ne pas omettre — vérifier 30 s.
+
+### #10 — Zenodo (en tant que repository, pour le sourcing)
+
+**Fichier concerné :** sourcing dans plusieurs lignes des batches (statement `S248 Q1322603`)
+**Valeur posée :** Q1322603
+**Statut :** À vérifier.
+**Action Laura :** ouvrir https://www.wikidata.org/wiki/Q1322603 et confirmer que c'est bien « Zenodo » (repository).
+**Alternative :** Q4994924 « Zenodo » — à départager.
+**Recommandation :** essentiel pour la qualité du sourcing — vérifier.
+
+---
+
+## Décisions de propriétés P-IDs
+
+### #11 — Academia.edu
+
+**Fichier concerné :** `09_wikidata_existing_state.yaml` (état actuel Q138909233 mentionne « Academia.edu profile URL ») et potentiellement ajouts en Phase A.
+**Question :** quelle propriété Wikidata utiliser ?
+- P6079 = « Academia.edu user ID » (identifiant pur, ex. `StéphaneLALUT`)
+- P973 = « described at URL » avec URL complète et qualifier langue
+- P856 = « official website » (probablement inadapté)
+**Recommandation :** si la propriété P6079 existe et accepte le format `StéphaneLALUT` (sans URL), c'est la plus propre. Sinon P973 avec URL complète.
+
+### #12 — Google Scholar
+
+**Fichier concerné :** Q138909233 (déjà posée selon `09_`)
+**Question :** P1960 (Google Scholar author ID) est-elle la propriété active et stable ?
+**Alternative possible :** P4985 (« Google Scholar publication ID ») — mais c'est pour des publications, pas des auteurs.
+**Recommandation :** P1960 est le standard actuel pour les auteurs. Confirmer juste qu'elle n'a pas été dépréciée.
+
+### #13 — Amazon URL pour le livre L'Odyssée
+
+**Fichier concerné :** `11_quickstatements_phase_A_filled.qs` §A.5 (livre Odyssée Q138911733)
+**Contexte :** L'URL Amazon FR a été fournie par Stéphane le 2026-05-11. Question : où la poser sur Wikidata ?
+**Options :**
+- P953 « full work available at URL » — peut convenir si le livre est intégralement disponible (preview ?) → probablement non
+- P856 « official website » — probablement inadapté car Amazon n'est pas le site officiel du livre
+- P973 « described at URL » — convient bien (Amazon décrit le livre)
+- P5749 « Amazon Standard Identification Number » (ASIN) — propriété dédiée pour l'ASIN seul, pas pour l'URL
+**Recommandation :** poser P973 avec URL complète et qualifier `P407 Q150` (langue FR). Si la propriété P5749 ASIN existe et est active, poser aussi l'ASIN papier `295863471X` (et l'ASIN Kindle quand fourni).
+
+---
+
+## Hors-périmètre — questions non-Wikidata
+
+Aucune. Tout ce qui pouvait être validé depuis le repo l'a été en v1.1 et v1.2.
+
+---
+
+## Synthèse pour exécution
+
+| Catégorie | Volume | Effort Laura |
+|---|---|---|
+| Q-IDs à vérifier rapidement (catégorie 1 résiduelle, items #1, #4, #9, #10) | 4 items | 30 s × 4 = 2 min |
+| Q-IDs à arbitrer (items #2, #3, #5, #6, #7, #8) | 6 items | 1-2 min × 6 = 6-12 min |
+| P-IDs à arbitrer (items #11, #12, #13) | 3 items | 2-3 min × 3 = 6-9 min |
+| **Total estimé** | **13 items** | **~15-25 min** |
+
+**Décisions structurantes (à traiter en priorité) :** #6 (publication series pour la série AWP), #10 (Zenodo pour le sourcing), #11/#12/#13 (P-IDs).
+
+**Décisions d'omission acceptables (par défaut si Laura hésite) :** #3 (ecological economics), #5 (self-published), #7 (economic essay), #8 (independent research) — l'omission est préférable à un Q-ID erroné.
+```
+
+---
+
+## MISE À JOUR `00_inventory_audit.md`
+
+Ajouter une nouvelle section §6.6 (après l'existante §6.5) :
+
+```markdown
+## 6.6 — Corrections Q-IDs Wikidata externes (v1.3, 2026-05-11)
+
+Sept Q-IDs initialement marqués `[À VÉRIFIER]` dans le maillage v1.0 ont été corrigés ou confirmés via recherche web ciblée :
+
+| Concept | V1 (initial, inventé) | V2 (vérifié) | Méthode |
+|---|---|---|---|
+| government debt | ~~Q22954024~~ | Q3024789 | web_search Anthropic |
+| entropy | ~~Q42213~~ | Q45003 | web_search Anthropic |
+| energy transition | ~~Q12739~~ | Q795757 | web_search Anthropic |
+| data center | ~~Q1066186~~ | Q671224 | web_search Anthropic |
+| political ecology | ~~Q161172~~ | Q1554076 | web_search Anthropic |
+| hypothesis | ~~Q1149875~~ | Q41719 | web_search Anthropic |
+| theory | Q17737 (déjà correct) | Q17737 | confirmation web |
+| artificial intelligence | Q11660 (déjà correct) | Q11660 | confirmation web |
+| AI data center (bonus AWP-06) | — | Q137571914 | découverte web |
+
+Les Q-IDs et P-IDs encore à arbitrer (13 items) sont isolés dans le fichier dédié `14_remaining_decisions_for_laura.md`. Total effort Laura estimé : 15-25 min.
+
+**Modification du décompte d'audit** : sur les ~19 `[À VÉRIFIER]` Wikidata externes du maillage v1.0, **8 sont désormais résolus**, **13 restent** (isolés en `14_`).
+```
+
+Bumper l'en-tête du fichier : `Génération : **2026-05-11**, v1.3`.
+
+---
+
+## MISE À JOUR `CHANGELOG.md`
+
+Ajouter en haut du fichier :
+
+```markdown
+## v1.3 — 2026-05-11 (corrections Q-IDs après web_search Anthropic)
+
+- **7 corrections Q-IDs Wikidata** appliquées dans les batches QuickStatements (11_, 12_, 13_) et dans `wikidata_maillage_lalut_v1.md` :
+  - Q22954024 → Q3024789 (government debt)
+  - Q42213 → Q45003 (entropy)
+  - Q12739 → Q795757 (energy transition)
+  - Q1066186 → Q671224 (data center)
+  - Q161172 → Q1554076 (political ecology)
+  - Q1149875 → Q41719 (hypothesis)
+  - Q17737 et Q11660 confirmés corrects (suppression marqueurs `[À VÉRIFIER]`)
+- **Bonus** : Q137571914 (AI data center) ajouté en commentaire sur §B.6 (AWP-06) comme alternative plus précise à Q671224 — décision Laura.
+- **Création `14_remaining_decisions_for_laura.md`** : isole les 13 `[À VÉRIFIER]` Wikidata externes restants (10 Q-IDs ambigus + 3 P-IDs à arbitrer) avec contexte d'usage, alternatives connues, et recommandations neutres.
+- `00_inventory_audit.md` §6.6 ajoutée pour traçabilité des corrections.
+- **Aucun commit.** Dossier `Wikidata/` reste `untracked`.
+```
+
+---
+
+## CRITÈRES D'ACCEPTATION
+
+- [ ] 7 substitutions Q-IDs appliquées dans `11_`, `12_`, `13_`, et dans `wikidata_maillage_lalut_v1.md`.
+- [ ] Marqueurs `[À VÉRIFIER]` supprimés sur les 8 Q-IDs concernés (7 corrigés + Q17737 + Q11660 confirmés).
+- [ ] Commentaire `# Alternative : Q137571914 AI data center (décision Laura)` ajouté en commentaire dans `12_` §B.6 sur la ligne data center.
+- [ ] Fichier `14_remaining_decisions_for_laura.md` créé selon la structure spécifiée.
+- [ ] `00_inventory_audit.md` §6.6 ajoutée + en-tête v1.3.
+- [ ] `CHANGELOG.md` entry v1.3 ajoutée.
+- [ ] `git status Wikidata/` retourne `Untracked files`. Aucun commit.
+- [ ] Console finale : résumé « 7 substitutions appliquées, 13 décisions isolées en 14_, dossier reste untracked ».
+
+---
+
+## ANTI-PATTERNS
+
+- ❌ Modifier l'ordre des commandes QuickStatements.
+- ❌ Reformuler les commentaires `#` autres que le marqueur `[À VÉRIFIER]`.
+- ❌ Committer.
+- ❌ Inventer des Q-IDs additionnels pour combler les `[À VÉRIFIER]` non listés dans la table des substitutions.
+- ❌ Toucher aux fichiers `01_`, `02_`, `03_`, ... `09_` (les YAML descriptifs ne sont pas concernés par cette passe — uniquement les batches QS et la documentation).
+- ❌ Supprimer le marqueur `[À VÉRIFIER]` sur un Q-ID NON listé dans la table.
+
+---
+
+*Fichier à placer à `D:\anthropie\anthropie-site\_wikidata-prompt-v2.txt`, exécuter via `Lis _wikidata-prompt-v2.txt et exécute.`*

@@ -1,0 +1,118 @@
+# =============================================================================
+# 01_author.yaml — identité auteur (Stéphane Lalut)
+# Source unique : data/author.toml (consolidé par data/works.yaml.author)
+# =============================================================================
+
+canonical_id:
+  wikidata_qid: 'Q138909233'  # source : data/works.yaml ligne 63 + data/author.toml ligne 54
+  orcid: '0009-0002-1794-4895'  # source : data/author.toml ligne 25
+  openalex: 'A5130851063'  # source : data/author.toml ligne 37
+  google_scholar: 'J4NqzwSfrHAC'  # source : data/author.toml ligne 43
+  ssrn: '11065608'  # source : data/author.toml ligne 61
+  idref: '283054085'  # source : data/author.toml ligne 67
+
+identity:
+  full_name_fr: 'Stéphane Lalut'  # source : data/author.toml ligne 7
+  display_title_fr: 'Économiste — Chercheur indépendant et essayiste'  # source : data/author.toml ligne 12
+  display_title_en: 'Economist — Independent researcher and essayist'  # source : data/author.toml ligne 13
+  description_fr: 'Économiste, chercheur indépendant et essayiste. Auteur du cadre anthropique.'  # source : data/author.toml ligne 16
+  description_en: 'Economist, independent researcher and essayist. Author of the framework of anthropy.'  # source : data/author.toml ligne 17
+  email_public: 'stephane-lalut@outlook.fr'  # source : data/works.yaml ligne 67 — NB : ABSENT de data/author.toml
+  given_name: null  # expected_source : data/author.toml (champ non éclaté ; recopie littérale dans full_name)
+  family_name: null  # expected_source : data/author.toml (idem)
+
+knows_about:
+  # source : data/author.toml ligne 20 — array verbatim
+  - 'anthropie'
+  - 'dette publique'
+  - 'transition énergétique'
+  - 'économie institutionnelle'
+  source_note: 'Liste française uniquement (volontaire, néologisme "anthropie" FR). Pas de knowsAbout EN — chantier reporté, cf. PROJECT_STATUS.md §6.'
+
+sameAs_list:
+  # 8 entrées verbatim depuis data/author.toml [[author.sameAs]] dans l'ordre du fichier
+  - key: 'orcid'
+    url: 'https://orcid.org/0009-0002-1794-4895'
+    label: 'ORCID'
+    label_long: 'ORCID 0009-0002-1794-4895'
+    source_file: 'data/author.toml'
+    source_lines: '23-27'
+  - key: 'zenodoCommunity'
+    url: 'https://zenodo.org/communities/anthropie-working-papers'
+    label: 'Zenodo'
+    label_long: 'Communauté Zenodo'
+    source_file: 'data/author.toml'
+    source_lines: '29-33'
+  - key: 'openalex'
+    url: 'https://openalex.org/authors/A5130851063'
+    label: 'OpenAlex'
+    label_long: 'OpenAlex A5130851063'
+    source_file: 'data/author.toml'
+    source_lines: '35-39'
+  - key: 'googleScholar'
+    url: 'https://scholar.google.com/citations?user=J4NqzwSfrHAC'
+    label: 'Google Scholar'
+    label_long: 'Google Scholar'
+    source_file: 'data/author.toml'
+    source_lines: '41-45'
+  - key: 'academia'
+    url: 'https://independent.academia.edu/StéphaneLALUT'
+    label: 'Academia'
+    label_long: 'Academia.edu'
+    source_file: 'data/author.toml'
+    source_lines: '47-51'
+  - key: 'wikidata'
+    url: 'https://www.wikidata.org/wiki/Q138909233'
+    label: 'Wikidata'
+    label_long: 'Wikidata Q138909233'
+    source_file: 'data/author.toml'
+    source_lines: '53-57'
+  - key: 'ssrn'
+    url: 'https://ssrn.com/author=11065608'
+    label: 'SSRN'
+    label_long: 'SSRN 11065608'
+    source_file: 'data/author.toml'
+    source_lines: '59-63'
+  - key: 'idref'
+    url: 'https://www.idref.fr/283054085'
+    label: 'IdRef'
+    label_long: 'IdRef 283054085'
+    source_file: 'data/author.toml'
+    source_lines: '65-69'
+
+official_websites:
+  - url: 'https://stephane-lalut.com/'
+    lang: 'fr'
+    source_file: 'data/author.toml'
+    source_line: 8
+  - url: 'https://stephane-lalut.com/en/'
+    lang: 'en'
+    source_file: 'config/_default/hugo.toml'
+    source_note: 'Pas d''entrée explicite EN dans author.toml — déduit du baseURL + defaultContentLanguageInSubdir=false avec sous-domaine /en/ ; URLs EN observées dans data/works.yaml.site_pages.en.'
+
+canonical_profile_url: 'https://stephane-lalut.com/a-propos/#person'  # source : data/author.toml ligne 9
+
+human_visible_ids:
+  - { type: 'orcid', value: '0009-0002-1794-4895' }
+  - { type: 'google_scholar', value: 'J4NqzwSfrHAC' }
+  - { type: 'openalex', value: 'A5130851063' }
+  - { type: 'zenodo_community', value: 'anthropie-working-papers' }
+  - { type: 'ssrn', value: '11065608' }
+  - { type: 'idref', value: '283054085' }
+  - { type: 'wikidata', value: 'Q138909233' }
+  - { type: 'academia', value: 'StéphaneLALUT' }
+
+affiliation:
+  affiliation_label_en: 'Independent Researcher'  # source : data/works.yaml ligne 58
+  affiliation_label_fr: 'Chercheur indépendant'  # source : data/works.yaml ligne 59
+  institution_qid: null  # n/a — chercheur indépendant (pas d'institution)
+
+fields_not_in_repo:
+  date_of_birth: null  # absent du repo (donnée privée, à valider hors-repo)
+  place_of_birth: null  # absent du repo
+  work_location: null  # absent du repo
+  notes: 'Date de naissance et lieu non publiés sur le site, hors scope du repo.'
+
+cross_references_in_repo:
+  consumed_by: 'data/author.toml ligne 3 indique "Consommé par : à venir (phase 2 du refactor)" ; PROJECT_STATUS.md §2 confirme "9 surfaces (5 JSON-LD machine + 4 visibles humain)".'
+  ssot_status: 'Source unique de vérité pour l''identité auteur (PROJECT_STATUS.md §2).'

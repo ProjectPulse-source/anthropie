@@ -1,0 +1,261 @@
+# PROMPT CLAUDE CODE v2.5 — Intégration SocArXiv au maillage Wikidata
+# (remplace v2.4 — pré-remplit OSF_USER_ID et OSF_DOI_AWP_06)
+
+## OBJECTIF
+
+Préparer trois ajouts dans `D:\anthropie\anthropie-site\` :
+
+1. **Création** du batch additif `Wikidata/15_quickstatements_socarxiv_filled.qs` avec 2 placeholders pré-remplis (`ymkpj` pour le profil OSF, `10.31235/osf.io/z6x38_v1` pour AWP-06). 11 placeholders restants à substituer au fur et à mesure.
+2. **Mise à jour** de `data/author.toml` pour ajouter SocArXiv au `sameAs` JSON-LD (9 entrées au lieu de 8). URL profil pré-remplie : `https://osf.io/ymkpj/`.
+3. **Mise à jour** de `Wikidata/CHANGELOG.md` (entry v2.5) et de `Wikidata/00_inventory_audit.md` (§6.10).
+
+**Aucun commit.** Tout reste local et `untracked` dans `Wikidata/`. La modification de `data/author.toml` reste également untracked tant que tous les dépôts SocArXiv ne sont pas terminés et qu'aucune validation finale n'est faite.
+
+---
+
+## CONTEXTE
+
+Stéphane a déposé **AWP-06 (Digital Infrastructures)** sur SocArXiv le 2026-05-11, accepté par la modération. DOI minté : `10.31235/osf.io/z6x38_v1` (URL : `https://osf.io/preprints/socarxiv/z6x38_v1`). Stéphane déposera les 5 autres AWPs un par un, espacés de 2-3 jours, dans l'ordre AWP-01 → AWP-02 → AWP-03 → AWP-04 → AWP-05, pour éviter le pattern « rafale d'indépendant ».
+
+Le batch `15_` est conçu pour être exécuté **après Phase B Wikidata** (les QIDs réels des AWPs ne sont attribués qu'à ce moment, par Laura). Substitution partielle tolérée : exécution en plusieurs vagues au fur et à mesure des dépôts.
+
+OSF User ID de Stéphane : `ymkpj` (vérifié sur `https://osf.io/ymkpj/`).
+
+---
+
+## PRÉREQUIS
+
+1. Lire `PROJECT_STATUS.md` à la racine du repo.
+2. Vérifier que `Wikidata/` contient bien les fichiers `09_wikidata_existing_state.yaml`, `11_quickstatements_phase_A_filled.qs`, `12_`, `13_`, `14_`, `CHANGELOG.md`, `00_inventory_audit.md`.
+3. Vérifier que `data/author.toml` existe et contient un tableau `sameAs` de 8 entrées.
+4. Si le fichier `Wikidata/15_quickstatements_socarxiv_filled.qs` existe déjà (produit par un éventuel patch v2.4 précédent), le **supprimer** avant de le recréer avec le contenu v2.5.
+
+---
+
+## RÈGLES STRICTES
+
+1. **Pré-remplir exactement 2 placeholders** : `<OSF_USER_ID>` → `ymkpj`, `<OSF_DOI_AWP_06>` → `10.31235/osf.io/z6x38_v1`. Aucune autre substitution.
+2. **Les 11 placeholders restants** sont conservés littéralement : `<OSF_DOI_AWP_01>` à `<OSF_DOI_AWP_05>` (à substituer par Stéphane après dépôts), et `<Q-AWP-01>` à `<Q-AWP-06>` (à substituer après Phase B Wikidata).
+3. **Aucun commit.** Modifications locales seulement.
+4. **Ne pas modifier** les fichiers `11_`, `12_`, `13_` existants — le batch `15_` est strictement additif.
+
+---
+
+## ACTION 1 — Création de `Wikidata/15_quickstatements_socarxiv_filled.qs`
+
+Créer ce fichier avec le contenu suivant **exactement** :
+
+```
+# =============================================================================
+# BATCH 15 — Intégration SocArXiv au maillage Wikidata
+# Version v2.5 (2026-05-11) — 2 placeholders pré-remplis (OSF_USER_ID + AWP-06)
+# =============================================================================
+#
+# CONTEXTE
+# --------
+# Ce batch est strictement additif aux batches 11_, 12_, 13_. Il enrichit :
+#   - l'item personne Q138909233 (Stéphane Lalut) avec son profil OSF
+#   - les 6 items AWP (créés en Phase B) avec leur DOI SocArXiv supplémentaire
+#
+# Bénéfice : sourcing redondant à 4 plateformes (Zenodo FR + Zenodo EN + SSRN
+# + SocArXiv) sur chaque AWP. Renforce la défense face aux patrouilleurs
+# Wikidata sur la notabilité.
+#
+# CINÉTIQUE
+# ---------
+# À exécuter APRÈS Phase B (les QIDs réels des 6 AWPs ne sont attribués qu'au
+# moment de l'exécution du batch 12_ par Laura). Recommandation : J+21 ou
+# ultérieur, en complément naturel après Phase B et avant ou après Phase C.
+#
+# ÉTAT DES PLACEHOLDERS (v2.5)
+# -----------------------------
+# ✅ RÉSOLU : OSF_USER_ID = ymkpj
+# ✅ RÉSOLU : OSF_DOI_AWP_06 = 10.31235/osf.io/z6x38_v1
+#
+# ⏳ À SUBSTITUER PAR STÉPHANE au fur et à mesure des dépôts SocArXiv :
+#    <OSF_DOI_AWP_01> : DOI SocArXiv du dépôt AWP-01 (préfixe 10.31235/osf.io/)
+#    <OSF_DOI_AWP_02> : DOI SocArXiv du dépôt AWP-02
+#    <OSF_DOI_AWP_03> : DOI SocArXiv du dépôt AWP-03
+#    <OSF_DOI_AWP_04> : DOI SocArXiv du dépôt AWP-04
+#    <OSF_DOI_AWP_05> : DOI SocArXiv du dépôt AWP-05
+#
+# ⏳ À SUBSTITUER APRÈS PHASE B (par Laura ou Stéphane) :
+#    <Q-AWP-01> : QID Wikidata de AWP-01 (attribué après exécution Phase B)
+#    <Q-AWP-02> : QID Wikidata de AWP-02 (idem)
+#    <Q-AWP-03> : QID Wikidata de AWP-03 (idem)
+#    <Q-AWP-04> : QID Wikidata de AWP-04 (idem)
+#    <Q-AWP-05> : QID Wikidata de AWP-05 (idem)
+#    <Q-AWP-06> : QID Wikidata de AWP-06 (idem)
+#
+# SUBSTITUTION PARTIELLE TOLÉRÉE
+# ------------------------------
+# Ce batch peut être exécuté en plusieurs vagues. Commenter les lignes non
+# substituées avec un # en début de ligne pour éviter erreur QS.
+#
+# =============================================================================
+
+
+# -----------------------------------------------------------------------------
+# 15.1 — Profil OSF/SocArXiv sur l'item personne Q138909233
+# -----------------------------------------------------------------------------
+# Source : utilisateur (compte SocArXiv créé mai 2026, profil vérifié)
+
+Q138909233	P973	"https://osf.io/ymkpj/"	P407	Q1860	S854	"https://osf.io/ymkpj/"	S813	+2026-05-11T00:00:00Z/11
+
+
+# -----------------------------------------------------------------------------
+# 15.2 — DOI SocArXiv sur AWP-01
+# -----------------------------------------------------------------------------
+# Le DOI SocArXiv vient compléter les DOIs Zenodo FR/EN et SSRN déjà posés en
+# Phase B (batch 12_ §B.1). Sourcing total après ce batch : 4 plateformes.
+
+<Q-AWP-01>	P356	"<OSF_DOI_AWP_01>"	S854	"https://doi.org/<OSF_DOI_AWP_01>"	S813	+2026-05-11T00:00:00Z/11
+
+
+# -----------------------------------------------------------------------------
+# 15.3 — DOI SocArXiv sur AWP-02
+# -----------------------------------------------------------------------------
+
+<Q-AWP-02>	P356	"<OSF_DOI_AWP_02>"	S854	"https://doi.org/<OSF_DOI_AWP_02>"	S813	+2026-05-11T00:00:00Z/11
+
+
+# -----------------------------------------------------------------------------
+# 15.4 — DOI SocArXiv sur AWP-03
+# -----------------------------------------------------------------------------
+
+<Q-AWP-03>	P356	"<OSF_DOI_AWP_03>"	S854	"https://doi.org/<OSF_DOI_AWP_03>"	S813	+2026-05-11T00:00:00Z/11
+
+
+# -----------------------------------------------------------------------------
+# 15.5 — DOI SocArXiv sur AWP-04
+# -----------------------------------------------------------------------------
+
+<Q-AWP-04>	P356	"<OSF_DOI_AWP_04>"	S854	"https://doi.org/<OSF_DOI_AWP_04>"	S813	+2026-05-11T00:00:00Z/11
+
+
+# -----------------------------------------------------------------------------
+# 15.6 — DOI SocArXiv sur AWP-05
+# -----------------------------------------------------------------------------
+
+<Q-AWP-05>	P356	"<OSF_DOI_AWP_05>"	S854	"https://doi.org/<OSF_DOI_AWP_05>"	S813	+2026-05-11T00:00:00Z/11
+
+
+# -----------------------------------------------------------------------------
+# 15.7 — DOI SocArXiv sur AWP-06 (Digital Infrastructures, déposé 2026-05-11)
+# -----------------------------------------------------------------------------
+# DOI minté : 10.31235/osf.io/z6x38_v1
+# URL preprint : https://osf.io/preprints/socarxiv/z6x38_v1
+
+<Q-AWP-06>	P356	"10.31235/osf.io/z6x38_v1"	S854	"https://doi.org/10.31235/osf.io/z6x38_v1"	S813	+2026-05-11T00:00:00Z/11
+
+
+# =============================================================================
+# FIN DU BATCH 15
+# =============================================================================
+```
+
+---
+
+## ACTION 2 — Mise à jour de `data/author.toml`
+
+Trouver le tableau `sameAs` dans `data/author.toml`. Il devrait actuellement contenir 8 entrées.
+
+Ajouter une **9ème entrée** SocArXiv en respectant la convention de formatage TOML déjà en place (mêmes guillemets, même indentation, virgule de séparation). Position recommandée : à la fin du tableau, juste avant la fermeture `]`.
+
+Valeur à ajouter :
+
+```toml
+"https://osf.io/ymkpj/"
+```
+
+**Ne pas committer cette modification** tant que la stratégie complète de dépôt SocArXiv n'est pas terminée (5 autres dépôts à venir, étalés sur 10-15 jours). Stéphane commitera lui-même quand il sera prêt à publier l'enrichissement du sameAs.
+
+---
+
+## ACTION 3 — Mise à jour de `Wikidata/CHANGELOG.md`
+
+Ajouter en haut du fichier :
+
+```markdown
+## v2.5 — 2026-05-11 (SocArXiv : AWP-06 déposé, profil OSF résolu)
+
+- **AWP-06 (Digital Infrastructures) déposé sur SocArXiv** : DOI `10.31235/osf.io/z6x38_v1`, accepté par modération. URL preprint : `https://osf.io/preprints/socarxiv/z6x38_v1`. C'est le premier dépôt OSF de Stéphane, ouvre la voie aux 5 autres.
+- **OSF User ID résolu** : `ymkpj`. URL profil : `https://osf.io/ymkpj/`.
+- **Batch `15_quickstatements_socarxiv_filled.qs` mis à jour** : 2 placeholders sur 13 pré-remplis (`<OSF_USER_ID>` et `<OSF_DOI_AWP_06>`). 11 placeholders restants : 5 DOIs SocArXiv AWP-01 à AWP-05 (à substituer au fur et à mesure des dépôts), 6 QIDs Wikidata AWP-01 à AWP-06 (à substituer après Phase B Laura).
+- **`data/author.toml`** : 9ème entrée `sameAs` ajoutée (`https://osf.io/ymkpj/`). Non commité tant que les autres dépôts SocArXiv ne sont pas terminés.
+- **Cinétique de dépôt restant** : 1 dépôt tous les 2-3 jours, ordre AWP-01 → AWP-02 → AWP-03 → AWP-04 → AWP-05, total 10-15 jours.
+- **Aucun commit.** Dossier `Wikidata/` reste `untracked`.
+```
+
+---
+
+## ACTION 4 — Mise à jour de `Wikidata/00_inventory_audit.md`
+
+Remplacer (ou créer si absente) la sous-section §6.10 par :
+
+```markdown
+## 6.10 — Intégration SocArXiv (v2.5, 2026-05-11)
+
+Stéphane a un compte SocArXiv actif (OSF Preprints). URL profil : `https://osf.io/ymkpj/`. OSF User ID : `ymkpj`.
+
+**Dépôts effectués :**
+- AWP-06 (Digital Infrastructures) : DOI `10.31235/osf.io/z6x38_v1`, accepté 2026-05-11.
+
+**Dépôts à venir** (cinétique 2-3 jours entre chaque, ordre séquentiel AWP-01 → AWP-05) :
+- AWP-01, AWP-02, AWP-03, AWP-04, AWP-05.
+
+**Batch additif créé :** `15_quickstatements_socarxiv_filled.qs`. Strictement additif aux batches 11_, 12_, 13_. À exécuter après Phase B Wikidata (besoin des QIDs réels des AWPs). Substitution partielle tolérée.
+
+**Sourcing total par AWP après exécution du batch 15_ complet :**
+- DOI Zenodo FR (P356 principal)
+- DOI Zenodo EN (P356 qualifié langue anglaise)
+- DOI SSRN (P356)
+- DOI SocArXiv (P356) — ajouté par batch 15_
+
+Quatre plateformes indépendantes = signal de pérennité robuste face aux procédures de suppression Wikidata.
+
+**État `sameAs` JSON-LD `data/author.toml` :**
+- Avant : 8 entrées (ORCID, Zenodo, OpenAlex, Google Scholar, Academia, Wikidata, SSRN, IdRef)
+- Après : 9 entrées (ajout SocArXiv via `https://osf.io/ymkpj/`)
+
+Bumper l'en-tête : `Génération : **2026-05-11**, v2.5`.
+```
+
+---
+
+## PROCÉDURE FUTURE DE SUBSTITUTION (pour Stéphane, sans nouveau patch)
+
+À chaque nouveau dépôt SocArXiv d'un AWP :
+1. Récupérer le DOI minté affiché sur la page du preprint (format `10.31235/osf.io/xxxxx_v1`).
+2. Ouvrir `Wikidata/15_quickstatements_socarxiv_filled.qs` dans un éditeur de texte.
+3. Find/replace : `<OSF_DOI_AWP_XX>` (avec XX = 01, 02, etc.) → la valeur réelle du DOI. **Deux occurrences à remplacer par ligne** (dans le claim et dans la URL référence S854).
+4. Sauvegarder.
+
+Aucun nouveau patch Claude Code requis. Une fois les 5 dépôts effectués, le batch sera complet à 11/13 placeholders résolus. Les 6 placeholders `<Q-AWP-XX>` restants seront substitués après Phase B par Laura.
+
+---
+
+## CRITÈRES D'ACCEPTATION
+
+- [ ] Fichier `Wikidata/15_quickstatements_socarxiv_filled.qs` créé avec contenu v2.5.
+- [ ] Le fichier contient exactement 11 occurrences de chevrons `<...>` (placeholders restants), avec `OSF_USER_ID` et `OSF_DOI_AWP_06` absents des chevrons (résolus).
+- [ ] `data/author.toml` modifié pour ajouter la 9ème entrée `sameAs` `https://osf.io/ymkpj/`.
+- [ ] `Wikidata/CHANGELOG.md` entry v2.5 ajoutée en haut.
+- [ ] `Wikidata/00_inventory_audit.md` §6.10 mise à jour + en-tête v2.5.
+- [ ] `git status Wikidata/` retourne `Untracked files`. Aucun commit.
+- [ ] `git status data/author.toml` retourne modification non commitée.
+- [ ] Console finale : « Batch 15_ v2.5 créé avec 11 placeholders restants (5 DOIs SocArXiv, 6 QIDs Wikidata), sameAs préparé en 9 entrées, attente substitutions ».
+
+---
+
+## ANTI-PATTERNS
+
+- ❌ Inventer un DOI SocArXiv pour AWP-01 à AWP-05 (Stéphane les substituera après dépôts effectifs).
+- ❌ Substituer `<Q-AWP-XX>` à ce stade.
+- ❌ Committer.
+- ❌ Modifier les batches `11_`, `12_`, `13_` existants.
+- ❌ Modifier ou supprimer les deux substitutions résolues (`ymkpj` et `10.31235/osf.io/z6x38_v1`).
+
+---
+
+*Fichier à placer à `D:\anthropie\anthropie-site\_socarxiv-prompt.txt`, exécuter via `Lis _socarxiv-prompt.txt et exécute.`*

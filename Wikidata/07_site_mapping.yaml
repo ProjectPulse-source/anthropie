@@ -1,0 +1,141 @@
+# =============================================================================
+# 07_site_mapping.yaml — table URL site ↔ QID Wikidata
+# Sources : data/works.yaml, data/author.toml, config/_default/hugo.toml,
+#           content/*/_index.md, _wikidata-prompt.txt (QIDs externes)
+# =============================================================================
+
+site_to_wikidata:
+
+  # ---------------------------------------------------------------------------
+  # Auteur
+  - site_url: 'https://stephane-lalut.com/'
+    qid: 'Q138909233'
+    type: 'author'
+    source: 'data/author.toml ligne 8 (url) + data/works.yaml ligne 63 (wikidata_person)'
+  - site_url: 'https://stephane-lalut.com/en/'
+    qid: 'Q138909233'
+    type: 'author'
+    source: 'config/_default/hugo.toml — site EN sous /en/'
+  - site_url: 'https://stephane-lalut.com/a-propos/#person'
+    qid: 'Q138909233'
+    type: 'author_profile_anchor'
+    source: 'data/author.toml ligne 9 (canonicalProfileUrl)'
+
+  # ---------------------------------------------------------------------------
+  # Concept anthropie
+  - site_url: 'https://stephane-lalut.com/quest-ce-que-lanthropie/'
+    qid: 'Q138827949'
+    type: 'concept'
+    source: 'data/works.yaml ligne 64 (wikidata_concept) + content/quest-ce-que-lanthropie/_index.md'
+  - site_url: 'https://stephane-lalut.com/en/quest-ce-que-lanthropie/'
+    qid: 'Q138827949'
+    type: 'concept'
+    source: 'config/_default/hugo.toml ligne 23 (menu EN Anthropy)'
+    note: 'Le _index.en.md déclare slug "what-is-anthropy" (ligne 3) mais le menu EN garde /quest-ce-que-lanthropie/. Slug effectif côté Hugo à confirmer.'
+
+  # ---------------------------------------------------------------------------
+  # Glossaire (contient les définitions des concepts dérivés)
+  - site_url: 'https://stephane-lalut.com/glossaire/'
+    qid: null
+    type: 'glossary_concept_index'
+    note: 'Le glossaire est une page-index de concepts dérivés du concept anthropie. Pas de QID propre dans le repo ; rattachement implicite à Q138827949 via les ancres.'
+    source: 'content/glossaire/_index.md'
+
+  # ---------------------------------------------------------------------------
+  # Série AWP
+  - site_url: 'https://stephane-lalut.com/serie-awp/'
+    qid: 'Q139040913'
+    type: 'series'
+    source: '_wikidata-prompt.txt (QID externe, fourni hors repo) + content/serie-awp/_index.md'
+    note: 'QID Q139040913 non confirmé par le repo (uniquement par mémoire stratégique externe).'
+  - site_url: 'https://stephane-lalut.com/en/serie-awp/'
+    qid: 'Q139040913'
+    type: 'series'
+    source: 'config/_default/hugo.toml ligne 27-29 (menu EN Working Papers)'
+
+  # ---------------------------------------------------------------------------
+  # Livres
+  - site_url: 'https://stephane-lalut.com/livres/anthropie-ordre-ici-dette-ailleurs/'
+    qid: 'Q138827344'
+    type: 'book'
+    source: 'data/works.yaml ligne 282-283 + content/livres/anthropie-ordre-ici-dette-ailleurs.md ligne 8 (wikidata_qid)'
+  - site_url: 'https://stephane-lalut.com/livres/dette-publique-qui-paie-vraiment/'
+    qid: 'Q138910896'
+    type: 'book'
+    source: 'data/works.yaml ligne 312-313 + content/livres/dette-publique-qui-paie-vraiment.md ligne 8'
+  - site_url: 'https://stephane-lalut.com/livres/livresque-des-mots/'
+    qid: null
+    type: 'book'
+    source: 'content/livres/livresque-des-mots.md (fichier existant ; URL canonique conforme convention Hugo /livres/<slug>/)'
+    note: 'data/works.yaml ligne 343 marque site_pages.fr en "todo". Page existe physiquement dans le repo.'
+  - site_url: null
+    qid: 'Q138911733'
+    type: 'book'
+    source: '_wikidata-prompt.txt (QID externe) + 09_wikidata_existing_state.yaml'
+    note: "Livre L'Odyssée des Idées : QID externe connu, mais ABSENT du repo (ni works.yaml ni content/livres/). Pas de site_url disponible côté repo."
+
+  # ---------------------------------------------------------------------------
+  # AWPs FR
+  - site_url: 'https://stephane-lalut.com/awp/awp-01/'
+    qid: null  # à créer (Phase B)
+    type: 'scholarly_article'
+    source: 'data/works.yaml ligne 101'
+  - site_url: 'https://stephane-lalut.com/awp/awp-02/'
+    qid: null
+    type: 'scholarly_article'
+    source: 'data/works.yaml ligne 131'
+  - site_url: 'https://stephane-lalut.com/awp/awp-03/'
+    qid: null
+    type: 'scholarly_article'
+    source: 'data/works.yaml ligne 163'
+  - site_url: 'https://stephane-lalut.com/awp/awp-04/'
+    qid: null
+    type: 'scholarly_article'
+    source: 'data/works.yaml ligne 195'
+  - site_url: 'https://stephane-lalut.com/awp/awp-05/'
+    qid: null
+    type: 'scholarly_article'
+    source: 'data/works.yaml ligne 225'
+  - site_url: 'https://stephane-lalut.com/awp/awp-06/'
+    qid: null
+    type: 'scholarly_article'
+    source: 'data/works.yaml ligne 254'
+
+  # AWPs EN
+  - site_url: 'https://stephane-lalut.com/en/awp/awp-01/'
+    qid: null
+    type: 'scholarly_article_en'
+    source: 'data/works.yaml ligne 102'
+  - site_url: 'https://stephane-lalut.com/en/awp/awp-02/'
+    qid: null
+    type: 'scholarly_article_en'
+    source: 'data/works.yaml ligne 132'
+  - site_url: 'https://stephane-lalut.com/en/awp/awp-03/'
+    qid: null
+    type: 'scholarly_article_en'
+    source: 'data/works.yaml ligne 164'
+  - site_url: 'https://stephane-lalut.com/en/awp/awp-04/'
+    qid: null
+    type: 'scholarly_article_en'
+    source: 'data/works.yaml ligne 196'
+  - site_url: 'https://stephane-lalut.com/en/awp/awp-05/'
+    qid: null
+    type: 'scholarly_article_en'
+    source: 'data/works.yaml ligne 226'
+  - site_url: 'https://stephane-lalut.com/en/awp/awp-06/'
+    qid: null
+    type: 'scholarly_article_en'
+    source: 'data/works.yaml ligne 255'
+
+  # ---------------------------------------------------------------------------
+  # Articles publiés — pas de pages individuelles (rendus en cards sur /publications/).
+  # Voir 06_articles.yaml pour external_url et site_card_md.
+
+mapping_summary:
+  total_items: 21
+  qid_set: 7  # 1 author + 1 concept + 1 series + 2 books FR + book Livresque (sans qid) + Odyssée (qid externe sans site)
+  qid_null: 12  # 12 AWPs FR+EN à créer
+  notes:
+    - 'Les 12 AWPs (FR+EN) sont à créer en Phase B avec 12 QIDs.'
+    - 'Le livre Livresque des mots est à arbitrer : créer un QID ou laisser nul.'
+    - "L'Odyssée des Idées (Q138911733) existe sur Wikidata mais n'a pas de page dans le repo — maillage cassé."

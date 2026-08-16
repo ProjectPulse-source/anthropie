@@ -1,0 +1,5 @@
+# Ne pas committer les fichiers temporaires Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/

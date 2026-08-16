@@ -1,0 +1,2 @@
+# Aucune dépendance externe — utilise uniquement la stdlib Python 3.10+
+# (urllib, json, argparse, pathlib, datetime, re)
