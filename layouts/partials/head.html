@@ -112,6 +112,11 @@
   {{- partial "schema-faqpage.html" . -}}
 {{ end }}
 
+<!-- Schema.org Dataset (page portant dataset_dette: true) -->
+{{ if .Params.dataset_dette }}
+  {{- partial "schema-dataset-dette.html" . -}}
+{{ end }}
+
 <!-- Schema.org ItemList + CreativeWorkSeries série AWP -->
 {{ if eq .Section "serie-awp" }}
   {{- partial "schema-itemlist.html" . -}}

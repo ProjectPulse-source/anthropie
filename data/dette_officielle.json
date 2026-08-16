@@ -1,6 +1,7 @@
 {
- "_avertissement": "Fichier GENERE par scripts/update_dette_insee.py -- ne pas editer a la main.",
- "releve_le": "2026-08-15",
+ "_avertissement": "Fichier GÉNÉRÉ par scripts/update_dette_insee.py — ne pas éditer à la main.",
+ "_licence": "Compilation sous licence CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) : réutilisation libre, y compris commerciale, à condition de citer Stéphane Lalut, https://stephane-lalut.com/cout-de-la-dette-publique/. La licence porte sur la COMPILATION (assemblage des séries, grandeurs dérivées, mise en cohérence) ; les séries brutes restent celles de l'INSEE et d'Eurostat, sous leurs propres conditions.",
+ "releve_le": "2026-08-16",
  "affichage": {
   "dette_periode": "T1 2026",
   "dette_mdeur": "3 536,1",
@@ -37,10 +38,10 @@
   "pct_interets_education": "40",
   "pct_interets_sante": "23",
   "croissance_annuelle_pct": "5,7",
-  "releve_le": "15/08/2026"
+  "releve_le": "16/08/2026"
  },
  "live": {
-  "_usage": "Parametres du compteur anime (extrapolation mecanique) -- consommes par le partial dette-chiffres via data-attributes.",
+  "_usage": "Paramètres du compteur animé (extrapolation mécanique) — consommés par le partial dette-chiffres via data-attributes.",
   "mdeur": 3536.1,
   "periode": "T1 2026",
   "fin_periode_iso": "2026-03-31",
@@ -309,7 +310,7 @@
   }
  },
  "interets_annuels": {
-  "source": "Eurostat, gov_10a_main -- interets verses (D41PAY) par les administrations publiques (S13), France",
+  "source": "Eurostat, gov_10a_main — intérêts versés (D41PAY) par les administrations publiques (S13), France",
   "dataset": "gov_10a_main",
   "unite": {
    "mdeur": "milliards d'euros courants",
@@ -416,10 +417,10 @@
     "2025": 2.01
    }
   },
-  "taux_apparent_definition": "interets verses l'annee N / encours de dette au T4 de l'annee N-1 -- cout moyen du stock, pas le taux d'emission courant"
+  "taux_apparent_definition": "intérêts versés l'année N / encours de dette au T4 de l'année N-1 — coût moyen du stock, pas le taux d'émission courant"
  },
  "recettes_annuelles": {
-  "source": "Eurostat, gov_10a_main -- recettes totales (TR) des administrations publiques (S13), France",
+  "source": "Eurostat, gov_10a_main — recettes totales (TR) des administrations publiques (S13), France",
   "dataset": "gov_10a_main",
   "unite": {
    "mdeur": "milliards d'euros courants"
@@ -462,12 +463,12 @@
   }
  },
  "depenses_fonction_annuelles": {
-  "source": "Eurostat, gov_10a_exp -- depenses totales (TE) des administrations publiques (S13) par fonction COFOG, France",
+  "source": "Eurostat, gov_10a_exp — dépenses totales (TE) des administrations publiques (S13) par fonction COFOG, France",
   "dataset": "gov_10a_exp",
   "fonctions": {
    "GF0303": "justice (tribunaux)",
-   "GF03": "ordre et securite publics (ensemble)",
-   "GF07": "sante",
+   "GF03": "ordre et sécurité publics (ensemble)",
+   "GF07": "santé",
    "GF09": "enseignement"
   },
   "unite": {

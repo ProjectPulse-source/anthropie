@@ -1,0 +1,105 @@
+{{- /* JSON-LD Dataset — compilation de dette publique.
+
+  Émis sur la seule page qui porte `dataset_dette: true` en front matter
+  (jamais un gate sur une URL : elle peut changer, le front matter suit la page).
+
+  RIEN n'est recopié : provenance, unités, millésimes et date de relevé se
+  dérivent de data/dette_officielle.json, qui pilote déjà tous les chiffres de
+  la page. Un millésime qui avance met donc à jour ce balisage tout seul, dans
+  le même geste que la prose — il ne peut pas dériver d'elle.
+  L'identité auteur vient de data/author.toml (source unique).
+
+  ⚠ Les chaînes ci-dessous sont affichées telles quelles par Google Dataset
+  Search et lues par les crawlers : français accentué, jamais l'ASCII de
+  contrainte console qui régit les print() de scripts/update_dette_insee.py.
+
+  Nommage volontairement spécifique (`-dette`) : il n'existe qu'un jeu de
+  données. Le jour où il y en a deux, on généralise — pas avant.
+
+  Absence de données = échec de build, jamais une page muette. */ -}}
+
+{{- $d := site.Data.dette_officielle -}}
+{{- if not $d -}}
+  {{- errorf "schema-dataset-dette: data/dette_officielle.json absent (page %s)" .RelPermalink -}}
+{{- else -}}
+
+{{- $trim := $d.dette_trimestrielle -}}
+{{- $int := $d.interets_annuels -}}
+{{- $rec := $d.recettes_annuelles -}}
+{{- $cof := $d.depenses_fonction_annuelles -}}
+
+{{- /* Premier trimestre disponible : Go trie les clés de map, on prend la 1re */ -}}
+{{- $premierQ := "" -}}
+{{- range $k, $v := $trim.series.mdeur -}}
+  {{- if not $premierQ -}}{{- $premierQ = $k -}}{{- end -}}
+{{- end -}}
+{{- $anDebut := substr $premierQ 0 4 -}}
+{{- $anFin := substr $trim.derniere_periode 0 4 -}}
+
+{{- /* Sources primaires, reconstruites depuis les identifiants du JSON */ -}}
+{{- $sources := slice -}}
+{{- range $cle, $idbank := $trim.idbanks -}}
+  {{- $sources = $sources | append (printf "https://bdm.insee.fr/series/sdmx/data/SERIES_BDM/%s" $idbank) -}}
+{{- end -}}
+{{- range $ds := (slice $int.dataset $cof.dataset) -}}
+  {{- $sources = $sources | append (printf "https://ec.europa.eu/eurostat/databrowser/view/%s/default/table?lang=fr" $ds) -}}
+{{- end -}}
+
+{{- /* Variables mesurées : unités et provenance prises dans le JSON */ -}}
+{{- $vars := slice
+    (dict "@type" "PropertyValue" "name" "Dette de Maastricht des administrations publiques"
+          "unitText" $trim.unite.mdeur "measurementTechnique" $trim.source)
+    (dict "@type" "PropertyValue" "name" "Ratio dette/PIB"
+          "unitText" $trim.unite.pct_pib "measurementTechnique" $trim.source)
+    (dict "@type" "PropertyValue" "name" "Intérêts versés par les administrations publiques (D41PAY)"
+          "unitText" $int.unite.mdeur "measurementTechnique" $int.source)
+    (dict "@type" "PropertyValue" "name" "Taux apparent de la dette"
+          "unitText" "% par an" "description" $int.taux_apparent_definition)
+    (dict "@type" "PropertyValue" "name" "Recettes totales des administrations publiques (TR)"
+          "unitText" $rec.unite.mdeur "measurementTechnique" $rec.source) -}}
+{{- range $code, $libelle := $cof.fonctions -}}
+  {{- $vars = $vars | append (dict "@type" "PropertyValue"
+      "name" (printf "Dépenses publiques par fonction COFOG %s — %s" $code $libelle)
+      "unitText" $cof.unite.mdeur "measurementTechnique" $cof.source) -}}
+{{- end -}}
+
+{{- /* Auteur : source unique data/author.toml */ -}}
+{{- $a := site.Data.author.author -}}
+{{- $sameAs := slice -}}
+{{- range $a.sameAs -}}{{- $sameAs = $sameAs | append .url -}}{{- end -}}
+{{- $personne := dict
+    "@type" "Person"
+    "name" $a.name
+    "url" $a.canonicalProfileUrl
+    "sameAs" $sameAs -}}
+
+{{- $ds := dict
+    "@context" "https://schema.org"
+    "@type" "Dataset"
+    "name" "Dette publique française : encours, charge d'intérêts et masses budgétaires comparables"
+    "description" (printf "Compilation dérivée automatiquement des séries officielles, sans aucune valeur recopiée à la main : dette de Maastricht des administrations publiques (INSEE, trimestriel, %s à %s), intérêts versés et recettes totales (Eurostat %s, D41PAY et TR, jusqu'en %s), dépenses par fonction COFOG (Eurostat %s, jusqu'en %s), et taux apparent de la dette calculé comme les intérêts de l'année rapportés à l'encours de fin d'année précédente."
+        $premierQ $trim.derniere_periode $int.dataset $int.derniere_periode $cof.dataset $cof.derniere_periode)
+    "url" .Permalink
+    "inLanguage" "fr"
+    "license" "https://creativecommons.org/licenses/by/4.0/"
+    "creator" $personne
+    "publisher" $personne
+    "dateModified" $d.releve_le
+    "temporalCoverage" (printf "%s/%s" $anDebut $anFin)
+    "spatialCoverage" (dict "@type" "Place" "name" "France"
+                            "sameAs" "https://www.wikidata.org/wiki/Q142")
+    "about" (dict "@type" "Thing" "name" "dette publique de la France"
+                  "sameAs" "https://www.wikidata.org/wiki/Q3024794")
+    "measurementTechnique" "Rapatriement automatisé des API officielles (INSEE BDM SDMX, Eurostat dissemination API), gardes de cohérence bloquantes, publication après relecture humaine"
+    "isBasedOn" $sources
+    "variableMeasured" $vars
+    "keywords" (slice "dette publique" "France" "INSEE" "Eurostat" "charge d'intérêts" "taux apparent" "COFOG" "finances publiques")
+    "distribution" (slice (dict
+        "@type" "DataDownload"
+        "name" "dette_officielle.json"
+        "encodingFormat" "application/json"
+        "contentUrl" (printf "%sdette_officielle.json" site.BaseURL))) -}}
+<script type="application/ld+json">
+{{ $ds | jsonify (dict "indent" "  ") | safeJS }}
+</script>
+{{- end -}}

@@ -23,7 +23,12 @@ Invariants (arbitrage panel 2026-08-15) :
   - les ratios d'equivalence sont calcules ICI, sur UN MEME millesime ;
   - aucune chaine brute des API dans les sorties : nombres re-parses en float,
     periodes revalidees par regex, libelles ecrits en dur dans ce script ;
-  - sorties console ASCII pur (console Windows cp1252) ;
+  - sorties CONSOLE ASCII pur (console Windows cp1252). La contrainte porte
+    sur print(), PAS sur le contenu des fichiers : tout libelle destine a un
+    lecteur -- JSON public, titre et desc du SVG (texte lu par les lecteurs
+    d'ecran) -- est en francais accentue, ecrit en UTF-8. Ne pas "corriger"
+    ces accents en ASCII : ils partent dans le JSON-LD Dataset et dans la
+    page (defaut trouve et corrige le 2026-08-16) ;
   - une reecriture ne se declenche QUE si un chiffre a bouge : a donnees
     identiques les deux "releve_le" sont conserves, donc le depot ne bouge pas
     et le workflow n'ouvre pas de PR vide (mesure du 2026-08-16).
@@ -284,12 +289,12 @@ def build_svg(dette_pib: dict[str, float], d41_pib: dict[str, float]) -> str:
     e.append('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" '
              'role="img" aria-labelledby="cz-t cz-d" font-family="%s">'
              % (SVG_W, SVG_H, FONT))
-    e.append('<title id="cz-t">Le ciseau de la dette publique francaise : '
-             'encours et charge d\'interets, 1995-2026</title>')
+    e.append('<title id="cz-t">Le ciseau de la dette publique française : '
+             'encours et charge d\'intérêts, 1995-2026</title>')
     e.append('<desc id="cz-d">Deux courbes en pourcentage du PIB. En haut, la '
-             'dette publique passe de %s %% du PIB en %s a %s %% au %s. En bas, '
-             'les interets verses par les administrations publiques passent de '
-             '%s %% du PIB en %s a un creux de %s %% en %s, puis remontent a '
+             'dette publique passe de %s %% du PIB en %s à %s %% au %s. En bas, '
+             'les intérêts versés par les administrations publiques passent de '
+             '%s %% du PIB en %s à un creux de %s %% en %s, puis remontent à '
              '%s %% en %s.</desc>'
              % (str(dette_pib[first_q]).replace(".", ","), fr_quarter(first_q),
                 str(dette_pib[last_q]).replace(".", ","), fr_quarter(last_q),
@@ -301,7 +306,7 @@ def build_svg(dette_pib: dict[str, float], d41_pib: dict[str, float]) -> str:
     e.append('<text x="%d" y="22" font-size="13" fill="%s">Dette publique des '
              'administrations, en %% du PIB (INSEE, trimestriel)</text>'
              % (MARG_L, INK2))
-    e.append('<text x="%d" y="288" font-size="13" fill="%s">Interets verses par '
+    e.append('<text x="%d" y="288" font-size="13" fill="%s">Intérêts versés par '
              'les administrations, en %% du PIB (Eurostat, annuel)</text>'
              % (MARG_L, INK2))
 
@@ -558,8 +563,8 @@ def main() -> int:
     }
 
     live = {
-        "_usage": ("Parametres du compteur anime (extrapolation mecanique) -- "
-                   "consommes par le partial dette-chiffres via data-attributes."),
+        "_usage": ("Paramètres du compteur animé (extrapolation mécanique) — "
+                   "consommés par le partial dette-chiffres via data-attributes."),
         "mdeur": dette_mdeur[lastq],
         "periode": fr_quarter(lastq),
         "fin_periode_iso": fin_periode_iso,
@@ -567,8 +572,20 @@ def main() -> int:
     }
 
     payload = {
-        "_avertissement": ("Fichier GENERE par scripts/update_dette_insee.py "
-                           "-- ne pas editer a la main."),
+        "_avertissement": ("Fichier GÉNÉRÉ par scripts/update_dette_insee.py "
+                           "— ne pas éditer à la main."),
+        # Le fichier voyage seul : qui le telecharge n'a pas la page sous les
+        # yeux. La licence doit donc etre DANS le paquet, pas seulement dans
+        # le JSON-LD et la prose (meme surface, trois portes d'entree).
+        "_licence": ("Compilation sous licence CC BY 4.0 "
+                     "(https://creativecommons.org/licenses/by/4.0/) : "
+                     "réutilisation libre, y compris commerciale, à condition "
+                     "de citer Stéphane Lalut, "
+                     "https://stephane-lalut.com/cout-de-la-dette-publique/. "
+                     "La licence porte sur la COMPILATION (assemblage des "
+                     "séries, grandeurs dérivées, mise en cohérence) ; les "
+                     "séries brutes restent celles de l'INSEE et d'Eurostat, "
+                     "sous leurs propres conditions."),
         "releve_le": now_iso,
         "affichage": affichage,
         "live": live,
@@ -584,7 +601,7 @@ def main() -> int:
             },
         },
         "interets_annuels": {
-            "source": ("Eurostat, gov_10a_main -- interets verses (D41PAY) "
+            "source": ("Eurostat, gov_10a_main — intérêts versés (D41PAY) "
                        "par les administrations publiques (S13), France"),
             "dataset": "gov_10a_main",
             "unite": {"mdeur": "milliards d'euros courants",
@@ -595,12 +612,12 @@ def main() -> int:
                 "pct_pib": {y: d41_pib[y] for y in sorted(d41_pib)},
                 "taux_apparent_pct": dict(sorted(taux_apparent.items())),
             },
-            "taux_apparent_definition": ("interets verses l'annee N / encours de "
-                                         "dette au T4 de l'annee N-1 -- cout moyen "
-                                         "du stock, pas le taux d'emission courant"),
+            "taux_apparent_definition": ("intérêts versés l'année N / encours de "
+                                         "dette au T4 de l'année N-1 — coût moyen "
+                                         "du stock, pas le taux d'émission courant"),
         },
         "recettes_annuelles": {
-            "source": ("Eurostat, gov_10a_main -- recettes totales (TR) des "
+            "source": ("Eurostat, gov_10a_main — recettes totales (TR) des "
                        "administrations publiques (S13), France"),
             "dataset": "gov_10a_main",
             "unite": {"mdeur": "milliards d'euros courants"},
@@ -608,13 +625,13 @@ def main() -> int:
             "series": {"mdeur": {y: tr_mdeur[y] for y in sorted(tr_mdeur)}},
         },
         "depenses_fonction_annuelles": {
-            "source": ("Eurostat, gov_10a_exp -- depenses totales (TE) des "
+            "source": ("Eurostat, gov_10a_exp — dépenses totales (TE) des "
                        "administrations publiques (S13) par fonction COFOG, "
                        "France"),
             "dataset": "gov_10a_exp",
             "fonctions": {"GF0303": "justice (tribunaux)",
-                          "GF03": "ordre et securite publics (ensemble)",
-                          "GF07": "sante", "GF09": "enseignement"},
+                          "GF03": "ordre et sécurité publics (ensemble)",
+                          "GF07": "santé", "GF09": "enseignement"},
             "unite": {"mdeur": "milliards d'euros courants",
                       "pct_pib": "% du PIB"},
             "derniere_periode": equiv_y,
