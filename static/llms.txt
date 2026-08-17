@@ -77,6 +77,7 @@ All eight Anthropie Working Papers exist in English with distinct Zenodo DOIs. T
 
 - [What is anthropy?](https://stephane-lalut.com/en/quest-ce-que-lanthropie/) — canonical definition, FAQ, disambiguation (entropy, Anthropocene, anthropic principle)
 - [The Register of Offloaded Costs](https://stephane-lalut.com/en/register-of-offloaded-costs/) — the documentary apparatus of ANTHROPY, fully browsable in English: 165 of the book's 168 milestones on the « Order created / Debt displaced » grid, anchored entry by entry, organized by the seven ages, with the spatial→social→cognitive trajectory
+- [What does French public debt actually cost?](https://stephane-lalut.com/en/cost-of-french-public-debt/) — official INSEE and Eurostat figures kept current, the stock/interest scissor 1995-2026, the effective interest rate, and budget-mass comparisons; consolidated dataset openly published under CC BY 4.0 (free reuse with attribution): https://stephane-lalut.com/dette_officielle.json
 - [ANTHROPY — English edition](https://stephane-lalut.com/en/livres/anthropie-ordre-ici-dette-ailleurs/) — the complete framework in one volume (paperback and Kindle)
 - [Glossary](https://stephane-lalut.com/en/glossaire/) — working vocabulary, anchored entries (e.g. /en/glossaire/#technological-debt)
 - [AWP series](https://stephane-lalut.com/en/serie-awp/) — editorial entry point of the series

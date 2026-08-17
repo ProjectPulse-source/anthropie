@@ -1,0 +1,76 @@
+---
+title: "What does French public debt actually cost?"
+url: /en/cost-of-french-public-debt/
+description: "The cost of a public debt does not follow its size. In France, the stock climbed for thirty years while the interest burden fell — since 2022 both rise together. Official INSEE and Eurostat figures, kept current, and what the interest burden weighs against the budgets for justice, education and health."
+date: 2026-08-17
+lastmod: 2026-08-17
+# Émet le JSON-LD Dataset (partials/schema-dataset-dette.html), en anglais :
+# un seul jeu de données, deux descriptions — voir le partial.
+dataset_dette: true
+faq:
+  - question: "How much does French public debt cost each year?"
+    answer: "The most direct measure is the interest paid by general government: {dette.interets_mdeur} billion euros in {dette.interets_annee}, or {dette.interets_pct_pib}% of GDP and {dette.interets_sur_recettes_pct}% of all public revenue (Eurostat, series D41PAY). That burden has risen by {dette.interets_hausse_pct}% since the exceptional low of {dette.interets_creux_annee} ({dette.interets_creux_mdeur} billion) — and by {dette.interets_hausse_2019_pct}% since 2019, before the pandemic. Both baselines point the same way."
+  - question: "How large is France's public debt?"
+    answer: "{dette.dette_mdeur} billion euros in {dette.dette_periode}, or {dette.dette_pct_pib}% of GDP (INSEE, Maastricht debt of general government). Over the INSEE series available since 1995, the highest debt-to-GDP ratio remains that of {dette.dette_pic_periode} ({dette.dette_pic_pct_pib}%); it is in current euros, not as a share of GDP, that recent quarters set new records."
+  - question: "Why is the interest burden rising so fast when the debt was already growing before?"
+    answer: "Because the average cost of the stock and its size diverged for thirty years. The effective interest rate — a year's interest over the debt outstanding at the start of that year — fell from about {dette.taux_apparent_premier}% in {dette.taux_apparent_premier_annee} to {dette.taux_apparent_creux}% in {dette.taux_apparent_creux_annee}, while the stock roughly doubled as a share of GDP. Since 2022 that average cost has been climbing again ({dette.taux_apparent_dernier}% in {dette.taux_apparent_dernier_annee}) and now applies to a stock twice as heavy. Transmission is delayed: the burden can keep rising even if market rates stabilise, as cheap old debt is refinanced at new conditions."
+  - question: "Does the interest burden exceed the justice budget?"
+    answer: "Yes, by a wide margin. In {dette.equiv_annee} — the most recent year for which all series are comparable — general government paid {dette.interets_equiv_mdeur} billion euros in interest, against {dette.justice_mdeur} billion of public spending on law courts, in the sense of the European COFOG functional classification (item GF0303) and not of the French Justice ministry's total budget: roughly {dette.ratio_interets_justice} times more. Interest even exceeds the whole of public order and safety ({dette.ordre_mdeur} billion, GF03)."
+  - question: "Has the rise in interest already cut health or education spending?"
+    answer: "No, not in the aggregates: in {dette.equiv_annee}, public spending on health ({dette.sante_mdeur} billion euros) and education ({dette.education_mdeur} billion) was stable or rising, in euros and as a share of GDP. If those services nonetheless feel starved, it is because their costs and their demand — wages, ageing, medical progress, litigation — grow faster than GDP: a stable budget buys a little less of what is asked of it each year. Rising interest did not create that gap, but it squeezes the room that would close it."
+---
+
+France is a useful case, and not only for the French. It is a large advanced economy where a general mechanism became unusually legible: for three decades the debt stock grew while the cost of carrying it fell, so the burden stayed quiet — and then, within a few years, the two moved together. What happens when that reversal arrives is being paid out in public, on a scale big enough to read.
+
+To the question "what does the debt cost", the most direct answer is not the size of the stock — it is the **interest paid** each year by general government: **{{< dette-val "interets_mdeur" >}} billion euros in {{< dette-val "interets_annee" >}}**, or {{< dette-val "interets_pct_pib" >}}% of GDP and **{{< dette-val "interets_sur_recettes_pct" >}}% of all public revenue** (Eurostat). That burden is up **{{< dette-val "interets_hausse_pct" >}}%** on the exceptional low of {{< dette-val "interets_creux_annee" >}} — and **{{< dette-val "interets_hausse_2019_pct" >}}%** on 2019, before the pandemic. Two baselines, one conclusion.
+
+The stock itself stands at **{{< dette-val "dette_mdeur" >}} billion euros** in {{< dette-val "dette_periode" >}}, or {{< dette-val "dette_pct_pib" >}}% of GDP.
+
+The chain has four links. The state borrows more each year than it repays, so the **stock** grows. That stock carries an **average price** — the rate at which it was borrowed over time. That price falls due every year: it is the **interest**, owed before any budget choice is made. And when market rates climb, the average price follows with a lag — the annual bill swells, and the question stops being *how much* and becomes **who will pay it**.
+
+## The scissor: thirty years of anaesthesia, then the turn
+
+<figure class="figure-ciseau">
+  <img src="/img/ciseau-dette-interets-en.svg" alt="Two curves as a percentage of GDP. Above, French public debt rises almost continuously from 1995 to today. Below, interest paid by general government falls until 2020, then climbs sharply after 2022." width="720" height="480" loading="lazy">
+  <figcaption>Public debt ({{< dette-val "dette_periode" >}}: {{< dette-val "dette_pct_pib" >}}% of GDP, INSEE, quarterly) and interest paid by general government ({{< dette-val "interets_annee" >}}: {{< dette-val "interets_pct_pib" >}}% of GDP, Eurostat, annual). Two separate scales, one shared unit: percent of GDP.</figcaption>
+</figure>
+
+**The observation.** From 1995 to the turn of the 2020s the two curves open like a scissor: the stock climbs from {{< dette-val "dette_1995_pct_pib" >}}% to over 100% of GDP, while the interest burden **falls** from {{< dette-val "interets_1995_pct_pib" >}}% to {{< dette-val "interets_creux_pct_pib" >}}% ({{< dette-val "interets_creux_annee" >}}, {{< dette-val "interets_creux_mdeur" >}} billion euros). For more than two decades, the falling cost of finance let the burden shrink in proportion to GDP even as the stock kept growing.
+
+**The mechanism.** The link between the two curves is the **effective interest rate** on the debt — a year's interest divided by the stock outstanding at the start of that year: the **average cost of the stock**, not to be confused with the rate at which France borrows today.
+
+<figure class="figure-ciseau">
+  <img src="/img/taux-apparent-dette-en.svg" alt="A single curve in percent per year: the average cost of the French public debt stock falls from {{< dette-val "taux_apparent_premier" >}}% in {{< dette-val "taux_apparent_premier_annee" >}} to {{< dette-val "taux_apparent_creux" >}}% in {{< dette-val "taux_apparent_creux_annee" >}}, its lowest point, then climbs back to {{< dette-val "taux_apparent_dernier" >}}% in {{< dette-val "taux_apparent_dernier_annee" >}}." width="720" height="340" loading="lazy">
+  <figcaption><strong>Effective interest rate</strong>: a year's interest paid, divided by the debt outstanding on 31 December of the previous year — computed on Eurostat (<code>gov_10a_main</code>) and INSEE series. Three points are labelled: the start of the series, its minimum, the latest year. The full year-by-year series is in <a href="/dette_officielle.json">dette_officielle.json</a>.</figcaption>
+</figure>
+
+This is the curve the public debate watches least, and it is the one that decides. As long as it fell, the stock could double without the annual bill following. It has stopped falling — from about {{< dette-val "taux_apparent_premier" >}}% in {{< dette-val "taux_apparent_premier_annee" >}} to {{< dette-val "taux_apparent_creux" >}}% at the trough of {{< dette-val "taux_apparent_creux_annee" >}}, and back to {{< dette-val "taux_apparent_dernier" >}}% in {{< dette-val "taux_apparent_dernier_annee" >}}. Transmission is **delayed**: a given year's burden pays for a stock issued at many different dates, so the average cost can keep rising even after market rates settle, as cheap old debt is refinanced.
+
+**The reading.** Since 2022 — where inflation, index-linked bonds and monetary normalisation converge — the scissor closes: rising rates meet a stock twice as heavy, and the burden reaches {{< dette-val "interets_mdeur" >}} billion euros ({{< dette-val "interets_pct_pib" >}}% of GDP) in {{< dette-val "interets_annee" >}}. Within the framework of anthropy, this sequence **can be read** as a cost displaced in time and then returning: displacement, saturation, return. That reading is set out in the working paper [AWP-07 — *The anthropic loop*](/en/awp/awp-07/) and applied to debt in [AWP-03](/en/awp/awp-03/).
+
+One precision the public debate often drops: over the INSEE series available since 1995, the **highest ratio** of debt to GDP remains that of {{< dette-val "dette_pic_periode" >}} ({{< dette-val "dette_pic_pct_pib" >}}%, at the height of the pandemic). It is in current euros that recent quarters set new records.
+
+## What {{< dette-val "interets_equiv_mdeur" >}} billion in interest represents
+
+The clearest measure of budget absorption: in {{< dette-val "recettes_annee" >}}, interest paid amounted to **{{< dette-val "interets_sur_recettes_pct" >}}% of all public revenue** ({{< dette-val "recettes_mdeur" >}} billion euros of revenue, Eurostat). Then, comparing aggregates for the same year {{< dette-val "equiv_annee" >}} (the most recent comparable Eurostat data on general government expenditure by function):
+
+- **Law courts: {{< dette-val "justice_mdeur" >}} billion euros** — in the sense of the European COFOG classification (item GF0303), not the total budget of the French Justice ministry — the interest burden is about **{{< dette-val "ratio_interets_justice" >}} times** that amount;
+- **Public order and safety, the whole item (GF03): {{< dette-val "ordre_mdeur" >}} billion euros** — interest exceeds the entire heading;
+- **Education (GF09): {{< dette-val "education_mdeur" >}} billion euros** — interest represents about {{< dette-val "pct_interets_education" >}}% of it;
+- **Health (GF07): {{< dette-val "sante_mdeur" >}} billion euros** — interest represents about {{< dette-val "pct_interets_sante" >}}%.
+
+These comparisons weigh masses, not causes: they give the order of magnitude of what servicing the debt takes from public resources each year, before any budget choice.
+
+## What the data does not show
+
+The aggregates are unambiguous: **no fall in health or education spending**. In {{< dette-val "equiv_annee" >}}, both are stable or rising, in euros and as a share of GDP. Anyone claiming that debt has "already cut" those budgets is saying more than the data does.
+
+Hence an apparent paradox: if budgets rise, why do hospitals, schools and courts seem starved? Because **a budget that rises can cover less and less of what is asked of it**. A public service is made of people first: its costs track wages, not the productivity gains of machines — Baumol's cost disease, a standard mechanism in the economics of services. And demand grows faster than GDP: ageing and costly medical progress in health, litigation in justice. A heading "stable as a share of GDP" therefore buys a little less service per person each year. **The felt degradation and the rising aggregates do not contradict each other: they describe the same widening gap between needs and means.**
+
+Debt did not create that gap — it **squeezes the room that would close it**: the {{< dette-val "interets_mdeur" >}} billion of interest paid in {{< dette-val "interets_annee" >}} are, every year, unavailable for catching up. The question the data poses is therefore not "are budgets falling?" but "**who will absorb the adjustment**" as debt service climbs: higher taxes, other spending, wider deficits, inflation, or future generations.
+
+## Where these figures come from
+
+Every figure on this page is **derived automatically from official sources**, never copied by hand: quarterly Maastricht debt from INSEE (series 010777616 — stock in billions of euros — and 010777608 — % of GDP); interest paid by general government and total revenue (Eurostat, `gov_10a_main`, D41PAY and TR); expenditure by COFOG function (Eurostat, `gov_10a_exp`); the effective interest rate computed as a year's interest over the stock at the end of the previous year. The official series are re-queried every month; the date below moves only when an official release changes a figure — last reading that moved a value: {{< dette-val "releve_le" >}}. The consolidated data is published openly as [dette_officielle.json](/dette_officielle.json) under a [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) licence — free reuse, including commercial, on the single condition that the source is cited. The raw series belong to INSEE and Eurostat; what is licensed here is the compilation: the assembly of series, the derived quantities (effective rate, ratios, single-vintage equivalences) and their reconciliation.
+
+The framework these figures are read through is set out in [What is anthropy?](/en/quest-ce-que-lanthropie/) and in the book [*ANTHROPY — A Big History of Civilization's Hidden Costs*](/en/livres/anthropie-ordre-ici-dette-ailleurs/). The book-length treatment of French public debt, *Dette Publique : Qui paie vraiment ?*, exists in French only.

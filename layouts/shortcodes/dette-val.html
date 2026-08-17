@@ -4,9 +4,14 @@
        prose : toute valeur passe par ici ou par les placeholders {dette.*}
        de desc-figures. Clé inconnue ou données absentes = échec de build
        (une exclusion peut être légitime ; le silence, jamais). */ -}}
+{{- /* Locale : le bloc est CHOISI, jamais formaté ici. "3 536,1" sur une page
+       anglaise serait faux, pas seulement inélégant — le script précalcule les
+       deux présentations depuis un calcul unique. */ -}}
 {{- $k := .Get 0 -}}
 {{- $a := "" -}}
-{{- with site.Data.dette_officielle -}}{{- $a = .affichage -}}{{- end -}}
+{{- with site.Data.dette_officielle -}}
+  {{- $a = cond (eq $.Page.Lang "en") .affichage_en .affichage -}}
+{{- end -}}
 {{- if not $a -}}
   {{- errorf "dette-val: data/dette_officielle.json absent ou sans bloc affichage (page %s)" .Page.RelPermalink -}}
 {{- else -}}

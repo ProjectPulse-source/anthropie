@@ -68,7 +68,9 @@ jobs:
           # courbe du taux apparent.)
           git add data/dette_officielle.json static/dette_officielle.json \
                   static/img/ciseau-dette-interets.svg \
-                  static/img/taux-apparent-dette.svg
+                  static/img/taux-apparent-dette.svg \
+                  static/img/ciseau-dette-interets-en.svg \
+                  static/img/taux-apparent-dette-en.svg
           git commit -m "data(dette): series INSEE/Eurostat du $(date -u +%Y-%m-%d)"
           git push origin "$BRANCH"
           gh pr create \

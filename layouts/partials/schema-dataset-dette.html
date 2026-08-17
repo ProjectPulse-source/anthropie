@@ -45,21 +45,55 @@
   {{- $sources = $sources | append (printf "https://ec.europa.eu/eurostat/databrowser/view/%s/default/table?lang=fr" $ds) -}}
 {{- end -}}
 
+{{- /* Locale. UN SEUL jeu de données : `distribution`, `about`, `isBasedOn` et
+       `license` sont identiques dans les deux langues — seules les étiquettes
+       destinées à un lecteur changent. Deux descriptions d'une même chose, pas
+       deux choses. */ -}}
+{{- $isEn := eq site.Language.Lang "en" -}}
+{{- $T := dict
+    "name" "Dette publique française : encours, charge d'intérêts et masses budgétaires comparables"
+    "desc" "Compilation dérivée automatiquement des séries officielles, sans aucune valeur recopiée à la main : dette de Maastricht des administrations publiques (INSEE, trimestriel, %s à %s), intérêts versés et recettes totales (Eurostat %s, D41PAY et TR, jusqu'en %s), dépenses par fonction COFOG (Eurostat %s, jusqu'en %s), et taux apparent de la dette calculé comme les intérêts de l'année rapportés à l'encours de fin d'année précédente."
+    "technique" "Rapatriement automatisé des API officielles (INSEE BDM SDMX, Eurostat dissemination API), gardes de cohérence bloquantes, publication après relecture humaine"
+    "v_encours" "Dette de Maastricht des administrations publiques"
+    "v_ratio" "Ratio dette/PIB"
+    "v_interets" "Intérêts versés par les administrations publiques (D41PAY)"
+    "v_taux" "Taux apparent de la dette" "u_taux" "% par an"
+    "v_recettes" "Recettes totales des administrations publiques (TR)"
+    "v_cofog" "Dépenses publiques par fonction COFOG %s — %s"
+    "lieu" "France"
+    "sujet" "dette publique de la France"
+    "mots" (slice "dette publique" "France" "INSEE" "Eurostat" "charge d'intérêts" "taux apparent" "COFOG" "finances publiques") -}}
+{{- if $isEn -}}
+  {{- $T = dict
+      "name" "French public debt: outstanding stock, interest burden and comparable budget aggregates"
+      "desc" "A compilation derived automatically from official series, with no figure copied by hand: Maastricht debt of general government (INSEE, quarterly, %s to %s), interest paid and total revenue (Eurostat %s, D41PAY and TR, through %s), expenditure by COFOG function (Eurostat %s, through %s), and the effective interest rate computed as a year's interest over the debt stock at the end of the previous year."
+      "technique" "Automated retrieval from official APIs (INSEE BDM SDMX, Eurostat dissemination API), blocking consistency guards, publication after human review"
+      "v_encours" "Maastricht debt of general government"
+      "v_ratio" "Debt-to-GDP ratio"
+      "v_interets" "Interest paid by general government (D41PAY)"
+      "v_taux" "Effective interest rate on public debt" "u_taux" "% per year"
+      "v_recettes" "Total general government revenue (TR)"
+      "v_cofog" "General government expenditure by COFOG function %s — %s"
+      "lieu" "France"
+      "sujet" "public debt of France"
+      "mots" (slice "public debt" "France" "INSEE" "Eurostat" "interest burden" "effective interest rate" "COFOG" "public finance") -}}
+{{- end -}}
+
 {{- /* Variables mesurées : unités et provenance prises dans le JSON */ -}}
 {{- $vars := slice
-    (dict "@type" "PropertyValue" "name" "Dette de Maastricht des administrations publiques"
+    (dict "@type" "PropertyValue" "name" $T.v_encours
           "unitText" $trim.unite.mdeur "measurementTechnique" $trim.source)
-    (dict "@type" "PropertyValue" "name" "Ratio dette/PIB"
+    (dict "@type" "PropertyValue" "name" $T.v_ratio
           "unitText" $trim.unite.pct_pib "measurementTechnique" $trim.source)
-    (dict "@type" "PropertyValue" "name" "Intérêts versés par les administrations publiques (D41PAY)"
+    (dict "@type" "PropertyValue" "name" $T.v_interets
           "unitText" $int.unite.mdeur "measurementTechnique" $int.source)
-    (dict "@type" "PropertyValue" "name" "Taux apparent de la dette"
-          "unitText" "% par an" "description" $int.taux_apparent_definition)
-    (dict "@type" "PropertyValue" "name" "Recettes totales des administrations publiques (TR)"
+    (dict "@type" "PropertyValue" "name" $T.v_taux
+          "unitText" $T.u_taux "description" $int.taux_apparent_definition)
+    (dict "@type" "PropertyValue" "name" $T.v_recettes
           "unitText" $rec.unite.mdeur "measurementTechnique" $rec.source) -}}
 {{- range $code, $libelle := $cof.fonctions -}}
   {{- $vars = $vars | append (dict "@type" "PropertyValue"
-      "name" (printf "Dépenses publiques par fonction COFOG %s — %s" $code $libelle)
+      "name" (printf $T.v_cofog $code $libelle)
       "unitText" $cof.unite.mdeur "measurementTechnique" $cof.source) -}}
 {{- end -}}
 
@@ -76,24 +110,24 @@
 {{- $ds := dict
     "@context" "https://schema.org"
     "@type" "Dataset"
-    "name" "Dette publique française : encours, charge d'intérêts et masses budgétaires comparables"
-    "description" (printf "Compilation dérivée automatiquement des séries officielles, sans aucune valeur recopiée à la main : dette de Maastricht des administrations publiques (INSEE, trimestriel, %s à %s), intérêts versés et recettes totales (Eurostat %s, D41PAY et TR, jusqu'en %s), dépenses par fonction COFOG (Eurostat %s, jusqu'en %s), et taux apparent de la dette calculé comme les intérêts de l'année rapportés à l'encours de fin d'année précédente."
+    "name" $T.name
+    "description" (printf $T.desc
         $premierQ $trim.derniere_periode $int.dataset $int.derniere_periode $cof.dataset $cof.derniere_periode)
     "url" .Permalink
-    "inLanguage" "fr"
+    "inLanguage" site.Language.Lang
     "license" "https://creativecommons.org/licenses/by/4.0/"
     "creator" $personne
     "publisher" $personne
     "dateModified" $d.releve_le
     "temporalCoverage" (printf "%s/%s" $anDebut $anFin)
-    "spatialCoverage" (dict "@type" "Place" "name" "France"
+    "spatialCoverage" (dict "@type" "Place" "name" $T.lieu
                             "sameAs" "https://www.wikidata.org/wiki/Q142")
-    "about" (dict "@type" "Thing" "name" "dette publique de la France"
+    "about" (dict "@type" "Thing" "name" $T.sujet
                   "sameAs" "https://www.wikidata.org/wiki/Q3024794")
-    "measurementTechnique" "Rapatriement automatisé des API officielles (INSEE BDM SDMX, Eurostat dissemination API), gardes de cohérence bloquantes, publication après relecture humaine"
+    "measurementTechnique" $T.technique
     "isBasedOn" $sources
     "variableMeasured" $vars
-    "keywords" (slice "dette publique" "France" "INSEE" "Eurostat" "charge d'intérêts" "taux apparent" "COFOG" "finances publiques")
+    "keywords" $T.mots
     "distribution" (slice (dict
         "@type" "DataDownload"
         "name" "dette_officielle.json"

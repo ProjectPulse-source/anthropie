@@ -13,8 +13,13 @@
        Independant de l'ISBN : disponibles sur toute page. NO-OP sans
        placeholder. Couvre aussi le JSON-LD FAQPage (schema-faqpage.html
        passe par ce partial). */ -}}
+{{- /* La locale choisit le BLOC, elle ne formate rien ici : "3 536,1" ou
+       "T1 2026" sur une page anglaise serait faux. `site.Language.Lang` est la
+       langue du rendu en cours (même idiome que livre-card.html) — aucun des
+       sept appelants n'a donc à passer la langue. */ -}}
 {{- with site.Data.dette_officielle -}}
-  {{- range $k, $v := .affichage -}}
+  {{- $bloc := cond (eq site.Language.Lang "en") .affichage_en .affichage -}}
+  {{- range $k, $v := $bloc -}}
     {{- $text = replace $text (printf "{dette.%s}" $k) $v -}}
   {{- end -}}
 {{- end -}}

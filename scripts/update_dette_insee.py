@@ -62,6 +62,8 @@ OUT_JSON = REPO / "data" / "dette_officielle.json"
 OUT_ENDPOINT = REPO / "static" / "dette_officielle.json"
 OUT_SVG = REPO / "static" / "img" / "ciseau-dette-interets.svg"
 OUT_SVG_TAUX = REPO / "static" / "img" / "taux-apparent-dette.svg"
+OUT_SVG_EN = REPO / "static" / "img" / "ciseau-dette-interets-en.svg"
+OUT_SVG_TAUX_EN = REPO / "static" / "img" / "taux-apparent-dette-en.svg"
 
 INSEE_URL = ("https://bdm.insee.fr/series/sdmx/data/SERIES_BDM/"
              "010777616+010777608?startPeriod=1995-Q1")
@@ -158,6 +160,30 @@ def fr(v: float, dec: int = 1) -> str:
 def fr_quarter(p: str) -> str:
     y, q = p.split("-Q")
     return "T" + q + " " + y
+
+
+# -- locale anglaise -------------------------------------------------------
+# Un seul endroit de CALCUL (plus bas), deux endroits de PRESENTATION. La page
+# EN ne doit jamais afficher "3 536,1" ni "T1 2026" : ce serait FAUX, pas
+# seulement inelegant. Hugo reste bete -- il choisit un bloc, il ne formate pas.
+# NB : fr_quarter colle l'espace INSECABLE (U+00A0) entre le trimestre et
+# l'annee ; l'anglais n'en a pas besoin, on met une espace ordinaire.
+MOIS_EN = ("January", "February", "March", "April", "May", "June", "July",
+           "August", "September", "October", "November", "December")
+
+
+def en(v: float, dec: int = 1) -> str:
+    """3536.1 -> '3,536.1' : virgule de milliers, point decimal."""
+    return ("{:,." + str(dec) + "f}").format(v)
+
+
+def en_quarter(p: str) -> str:
+    y, q = p.split("-Q")
+    return "Q" + q + " " + y
+
+
+def en_date(d: datetime) -> str:
+    return "%d %s %d" % (d.day, MOIS_EN[d.month - 1], d.year)
 
 
 # ------------------------------------------------------------------- gardes
@@ -263,7 +289,56 @@ def _line_path(pts: list[tuple[float, float]]) -> str:
     return "M" + " L".join("%.1f,%.1f" % (x, y) for x, y in pts)
 
 
-def build_svg(dette_pib: dict[str, float], d41_pib: dict[str, float]) -> str:
+NBSP = " "  # U+00A0 pose par code, jamais tape
+
+# Libelles des figures, par locale. MEME regle que le bloc "affichage" : un seul
+# calcul, deux presentations. Une figure aux axes francais sur une page anglaise
+# est un DEFAUT, pas une inelegance -- c'est exactement ce que l'edition
+# ANTHROPY a deja paye une fois (du francais imprime dans le livre anglais).
+LABELS_CISEAU = {
+    "fr": {
+        "titre": "Le ciseau de la dette publique française : encours et "
+                 "charge d'intérêts, 1995-2026",
+        "desc": "Deux courbes en pourcentage du PIB. En haut, la dette publique "
+                "passe de %s %% du PIB en %s à %s %% au %s. En bas, les intérêts "
+                "versés par les administrations publiques passent de %s %% du "
+                "PIB en %s à un creux de %s %% en %s, puis remontent à %s %% "
+                "en %s.",
+        "panneau_a": "Dette publique des administrations, en % du PIB "
+                     "(INSEE, trimestriel)",
+        "panneau_b": "Intérêts versés par les administrations, en % du PIB "
+                     "(Eurostat, annuel)",
+        "retournement": "2022 : le retournement",
+        "en_annee": NBSP + "% en ",
+        # le francais met une insecable avant %, l'anglais colle : c'est une
+        # DONNEE DE LOCALE, pas une constante de mise en forme.
+        "pct": NBSP + "%",
+    },
+    "en": {
+        "titre": "The scissor of French public debt: outstanding stock and "
+                 "interest burden, 1995-2026",
+        "desc": "Two curves as a percentage of GDP. Above, public debt rises "
+                "from %s%% of GDP in %s to %s%% in %s. Below, interest paid by "
+                "general government falls from %s%% of GDP in %s to a trough of "
+                "%s%% in %s, then climbs back to %s%% in %s.",
+        "panneau_a": "General government debt, % of GDP (INSEE, quarterly)",
+        "panneau_b": "Interest paid by general government, % of GDP "
+                     "(Eurostat, annual)",
+        "retournement": "2022: the turning point",
+        "en_annee": "% in ",
+        "pct": "%",
+    },
+}
+
+
+def build_svg(dette_pib: dict[str, float], d41_pib: dict[str, float],
+              lang: str = "fr") -> str:
+    L = LABELS_CISEAU[lang]
+    quarter = fr_quarter if lang == "fr" else en_quarter
+    # decimale brute de la serie (1,3 vs 1.3) -- pas de separateur de milliers
+    # ici : aucune de ces valeurs n'atteint 1000.
+    dec = ((lambda v: str(v).replace(".", ",")) if lang == "fr"
+           else (lambda v: str(v)))
     t0, t1 = 1994.8, 2026.9
     # panneau A (dette, % PIB) : y 34..208 pour 0..125
     ay0, ay1, amax = 208.0, 34.0, 125.0
@@ -290,26 +365,19 @@ def build_svg(dette_pib: dict[str, float], d41_pib: dict[str, float]) -> str:
     e.append('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" '
              'role="img" aria-labelledby="cz-t cz-d" font-family="%s">'
              % (SVG_W, SVG_H, FONT))
-    e.append('<title id="cz-t">Le ciseau de la dette publique française : '
-             'encours et charge d\'intérêts, 1995-2026</title>')
-    e.append('<desc id="cz-d">Deux courbes en pourcentage du PIB. En haut, la '
-             'dette publique passe de %s %% du PIB en %s à %s %% au %s. En bas, '
-             'les intérêts versés par les administrations publiques passent de '
-             '%s %% du PIB en %s à un creux de %s %% en %s, puis remontent à '
-             '%s %% en %s.</desc>'
-             % (str(dette_pib[first_q]).replace(".", ","), fr_quarter(first_q),
-                str(dette_pib[last_q]).replace(".", ","), fr_quarter(last_q),
-                str(d41_pib[first_y]).replace(".", ","), first_y,
-                str(d41_pib[trough_y]).replace(".", ","), trough_y,
-                str(d41_pib[last_y]).replace(".", ","), last_y))
+    e.append('<title id="cz-t">%s</title>' % L["titre"])
+    e.append('<desc id="cz-d">%s</desc>'
+             % (L["desc"] % (dec(dette_pib[first_q]), quarter(first_q),
+                             dec(dette_pib[last_q]), quarter(last_q),
+                             dec(d41_pib[first_y]), first_y,
+                             dec(d41_pib[trough_y]), trough_y,
+                             dec(d41_pib[last_y]), last_y)))
 
     # titres de panneaux (encre secondaire, jamais la couleur de serie)
-    e.append('<text x="%d" y="22" font-size="13" fill="%s">Dette publique des '
-             'administrations, en %% du PIB (INSEE, trimestriel)</text>'
-             % (MARG_L, INK2))
-    e.append('<text x="%d" y="288" font-size="13" fill="%s">Intérêts versés par '
-             'les administrations, en %% du PIB (Eurostat, annuel)</text>'
-             % (MARG_L, INK2))
+    e.append('<text x="%d" y="22" font-size="13" fill="%s">%s</text>'
+             % (MARG_L, INK2, L["panneau_a"]))
+    e.append('<text x="%d" y="288" font-size="13" fill="%s">%s</text>'
+             % (MARG_L, INK2, L["panneau_b"]))
 
     # grilles + libelles d'axe Y
     for v in (0, 40, 80, 120):
@@ -337,8 +405,7 @@ def build_svg(dette_pib: dict[str, float], d41_pib: dict[str, float]) -> str:
     e.append('<line x1="%.1f" y1="30" x2="%.1f" y2="455" stroke="%s" '
              'stroke-width="1" stroke-dasharray="3 4"/>' % (x2022, x2022, AXIS))
     e.append('<text x="%.1f" y="243" font-size="11" fill="%s" '
-             'text-anchor="middle">2022 : le retournement</text>'
-             % (x2022, INK2))
+             'text-anchor="middle">%s</text>' % (x2022, INK2, L["retournement"]))
 
     # series (2 px, bouts ronds)
     e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2" '
@@ -358,29 +425,53 @@ def build_svg(dette_pib: dict[str, float], d41_pib: dict[str, float]) -> str:
 
     lx, ly = qpts[-1]
     dot_label(lx, ly, COL_DETTE,
-              str(dette_pib[last_q]).replace(".", ",") + " %",
+              dec(dette_pib[last_q]) + L["pct"],
               anchor="end", dx=-8, dy=-8)
     fx, fy = qpts[0]
     dot_label(fx, fy, COL_DETTE,
-              str(dette_pib[first_q]).replace(".", ",") + " %", dy=-8)
+              dec(dette_pib[first_q]) + L["pct"], dy=-8)
     ix, iy = ypts[-1]
     dot_label(ix, iy, COL_INTER,
-              str(d41_pib[last_y]).replace(".", ",") + " %",
+              dec(d41_pib[last_y]) + L["pct"],
               anchor="end", dx=-8, dy=-9)
     jx, jy = ypts[0]
     dot_label(jx, jy, COL_INTER,
-              str(d41_pib[first_y]).replace(".", ",") + " %", dy=-8)
+              dec(d41_pib[first_y]) + L["pct"], dy=-8)
     tx = _x(int(trough_y) + 0.5, t0, t1)
     ty = by(d41_pib[trough_y])
     dot_label(tx, ty, COL_INTER,
-              str(d41_pib[trough_y]).replace(".", ",") + " %% en "
-              .replace("%%", "%") + trough_y, anchor="middle", dx=0, dy=18)
+              dec(d41_pib[trough_y]) + L["en_annee"] + trough_y, anchor="middle", dx=0, dy=18)
 
     e.append("</svg>")
     return "\n".join(e) + "\n"
 
 
-def build_svg_taux(taux: dict[str, float]) -> str:
+LABELS_TAUX = {
+    "fr": {
+        "titre": "Le taux apparent de la dette publique française, %s-%s",
+        "desc": "Une courbe, en pourcentage par an. Le coût moyen du stock de "
+                "dette descend de %s %% en %s à %s %% en %s, son minimum sur la "
+                "série, puis remonte à %s %% en %s. La baisse court sur près de "
+                "vingt-cinq ans ; la remontée sur les dernières années.",
+        "panneau": "Taux apparent de la dette publique, en % par an — "
+                   "le coût moyen du stock",
+        "en_annee": NBSP + "% en ",
+    },
+    "en": {
+        "titre": "The effective interest rate on French public debt, %s-%s",
+        "desc": "A single curve, in percent per year. The average cost of the "
+                "debt stock falls from %s%% in %s to %s%% in %s, its lowest "
+                "point in the series, then climbs back to %s%% in %s. The "
+                "decline runs for nearly twenty-five years; the rebound only "
+                "for the last few.",
+        "panneau": "Effective interest rate on public debt, % per year — "
+                   "the average cost of the stock",
+        "en_annee": "% in ",
+    },
+}
+
+
+def build_svg_taux(taux: dict[str, float], lang: str = "fr") -> str:
     """Courbe du TAUX APPARENT -- le chainon causal que la page raconte sans le
     montrer. Serie UNIQUE : donc pas de legende (le titre nomme la serie), et
     etiquetage direct des trois seuls points que la prose cite : depart, creux,
@@ -404,24 +495,19 @@ def build_svg_taux(taux: dict[str, float]) -> str:
     first, last = str(years[0]), str(years[-1])
     trough = min(taux, key=lambda k: taux[k])
 
-    def num(v): return fr(v, 1)
+    T = LABELS_TAUX[lang]
+    num = (lambda v: fr(v, 1)) if lang == "fr" else (lambda v: en(v, 1))
 
     e = []
     e.append('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" '
              'role="img" aria-labelledby="ta-t ta-d" font-family="%s">'
              % (W, H, FONT))
-    e.append('<title id="ta-t">Le taux apparent de la dette publique '
-             'française, %s-%s</title>' % (first, last))
-    e.append('<desc id="ta-d">Une courbe, en pourcentage par an. Le coût moyen '
-             'du stock de dette descend de %s %% en %s à %s %% en %s, son '
-             'minimum sur la série, puis remonte à %s %% en %s. La baisse court '
-             'sur près de vingt-cinq ans ; la remontée sur les dernières '
-             'années.</desc>'
-             % (num(taux[first]), first, num(taux[trough]), trough,
-                num(taux[last]), last))
-    e.append('<text x="%d" y="22" font-size="13" fill="%s">Taux apparent de la '
-             'dette publique, en %% par an — le coût moyen du stock</text>'
-             % (ml, INK2))
+    e.append('<title id="ta-t">%s</title>' % (T["titre"] % (first, last)))
+    e.append('<desc id="ta-d">%s</desc>'
+             % (T["desc"] % (num(taux[first]), first, num(taux[trough]), trough,
+                             num(taux[last]), last)))
+    e.append('<text x="%d" y="22" font-size="13" fill="%s">%s</text>'
+             % (ml, INK2, T["panneau"]))
 
     for v in (0, 2, 4, 6):
         e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" '
@@ -449,9 +535,11 @@ def build_svg_taux(taux: dict[str, float]) -> str:
                  'text-anchor="%s">%s</text>'
                  % (px + dx, py + dy, INK2, anchor, txt))
 
-    dot(pts[0][0], pts[0][1], num(taux[first]) + " % en " + first, "start", 9, 4)
-    dot(pts[-1][0], pts[-1][1], num(taux[last]) + " % en " + last, "end", -9, -10)
-    dot(xt, y(taux[trough]), num(taux[trough]) + " % en " + trough,
+    dot(pts[0][0], pts[0][1], num(taux[first]) + T["en_annee"] + first,
+        "start", 9, 4)
+    dot(pts[-1][0], pts[-1][1], num(taux[last]) + T["en_annee"] + last,
+        "end", -9, -10)
+    dot(xt, y(taux[trough]), num(taux[trough]) + T["en_annee"] + trough,
         "middle", 0, 22)
     e.append("</svg>")
     return "\n".join(e) + "\n"
@@ -465,6 +553,8 @@ def _hors_dates(payload: dict) -> str:
     c.pop("releve_le", None)
     if isinstance(c.get("affichage"), dict):
         c["affichage"].pop("releve_le", None)
+    if isinstance(c.get("affichage_en"), dict):
+        c["affichage_en"].pop("releve_le", None)
     return json.dumps(c, ensure_ascii=False, sort_keys=True)
 
 
@@ -600,45 +690,53 @@ def main() -> int:
 
     now_fr = datetime.now(timezone.utc).strftime("%d/%m/%Y")
     now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    now_en = en_date(datetime.now(timezone.utc))
 
-    affichage = {
-        "dette_periode": fr_quarter(lastq),
-        "dette_mdeur": fr(dette_mdeur[lastq]),
-        "dette_pct_pib": fr(dette_pib[lastq]),
-        "dette_pic_periode": fr_quarter(peak_q),
-        "dette_pic_pct_pib": fr(dette_pib[peak_q]),
-        "dette_1995_pct_pib": fr(dette_pib[min(dette_pib)]),
-        "interets_annee": last_y,
-        "interets_mdeur": fr(d41_mdeur[last_y]),
-        "interets_pct_pib": fr(d41_pib[last_y]),
-        "interets_1995_pct_pib": fr(d41_pib[min(d41_pib)]),
-        "interets_creux_annee": trough_y,
-        "interets_creux_mdeur": fr(d41_mdeur[trough_y]),
-        "interets_creux_pct_pib": fr(d41_pib[trough_y]),
-        "interets_hausse_pct": str(hausse_pct),
-        "interets_2019_mdeur": fr(d41_mdeur["2019"]),
-        "interets_hausse_2019_pct": str(hausse_2019_pct),
-        "taux_apparent_premier_annee": ta_first,
-        "taux_apparent_premier": fr(taux_apparent[ta_first]),
-        "taux_apparent_creux_annee": ta_trough,
-        "taux_apparent_creux": fr(taux_apparent[ta_trough]),
-        "taux_apparent_dernier_annee": ta_last,
-        "taux_apparent_dernier": fr(taux_apparent[ta_last]),
-        "recettes_annee": tr_last,
-        "recettes_mdeur": fr(tr_mdeur[tr_last]),
-        "interets_sur_recettes_pct": fr(int_sur_recettes),
-        "equiv_annee": equiv_y,
-        "interets_equiv_mdeur": fr(int_equiv),
-        "justice_mdeur": fr(cof24["GF0303"]),
-        "ordre_mdeur": fr(cof24["GF03"]),
-        "sante_mdeur": fr(cof24["GF07"]),
-        "education_mdeur": fr(cof24["GF09"]),
-        "ratio_interets_justice": fr(round(int_equiv / cof24["GF0303"], 1)),
-        "pct_interets_education": str(round(int_equiv / cof24["GF09"] * 100)),
-        "pct_interets_sante": str(round(int_equiv / cof24["GF07"] * 100)),
-        "croissance_annuelle_pct": fr(croissance),
-        "releve_le": now_fr,
-    }
+    # Deux presentations, UN SEUL corps : les blocs ne peuvent pas diverger
+    # sur les VALEURS, seulement sur le format. C'est la meme regle que
+    # "un seul endroit de calcul", appliquee a la locale.
+    def bloc_affichage(nb, quarter, date_affichee):
+        return {
+            "dette_periode": quarter(lastq),
+            "dette_mdeur": nb(dette_mdeur[lastq]),
+            "dette_pct_pib": nb(dette_pib[lastq]),
+            "dette_pic_periode": quarter(peak_q),
+            "dette_pic_pct_pib": nb(dette_pib[peak_q]),
+            "dette_1995_pct_pib": nb(dette_pib[min(dette_pib)]),
+            "interets_annee": last_y,
+            "interets_mdeur": nb(d41_mdeur[last_y]),
+            "interets_pct_pib": nb(d41_pib[last_y]),
+            "interets_1995_pct_pib": nb(d41_pib[min(d41_pib)]),
+            "interets_creux_annee": trough_y,
+            "interets_creux_mdeur": nb(d41_mdeur[trough_y]),
+            "interets_creux_pct_pib": nb(d41_pib[trough_y]),
+            "interets_hausse_pct": str(hausse_pct),
+            "interets_2019_mdeur": nb(d41_mdeur["2019"]),
+            "interets_hausse_2019_pct": str(hausse_2019_pct),
+            "taux_apparent_premier_annee": ta_first,
+            "taux_apparent_premier": nb(taux_apparent[ta_first]),
+            "taux_apparent_creux_annee": ta_trough,
+            "taux_apparent_creux": nb(taux_apparent[ta_trough]),
+            "taux_apparent_dernier_annee": ta_last,
+            "taux_apparent_dernier": nb(taux_apparent[ta_last]),
+            "recettes_annee": tr_last,
+            "recettes_mdeur": nb(tr_mdeur[tr_last]),
+            "interets_sur_recettes_pct": nb(int_sur_recettes),
+            "equiv_annee": equiv_y,
+            "interets_equiv_mdeur": nb(int_equiv),
+            "justice_mdeur": nb(cof24["GF0303"]),
+            "ordre_mdeur": nb(cof24["GF03"]),
+            "sante_mdeur": nb(cof24["GF07"]),
+            "education_mdeur": nb(cof24["GF09"]),
+            "ratio_interets_justice": nb(round(int_equiv / cof24["GF0303"], 1)),
+            "pct_interets_education": str(round(int_equiv / cof24["GF09"] * 100)),
+            "pct_interets_sante": str(round(int_equiv / cof24["GF07"] * 100)),
+            "croissance_annuelle_pct": nb(croissance),
+            "releve_le": date_affichee,
+        }
+
+    affichage = bloc_affichage(fr, fr_quarter, now_fr)
+    affichage_en = bloc_affichage(en, en_quarter, now_en)
 
     live = {
         "_usage": ("Paramètres du compteur animé (extrapolation mécanique) — "
@@ -666,6 +764,7 @@ def main() -> int:
                      "sous leurs propres conditions."),
         "releve_le": now_iso,
         "affichage": affichage,
+        "affichage_en": affichage_en,
         "live": live,
         "dette_trimestrielle": {
             "source": "INSEE, dette de Maastricht des administrations publiques",
@@ -757,6 +856,8 @@ def main() -> int:
     atomic_write(OUT_ENDPOINT, txt)
     atomic_write(OUT_SVG, build_svg(dette_pib, d41_pib))
     atomic_write(OUT_SVG_TAUX, build_svg_taux(taux_apparent))
+    atomic_write(OUT_SVG_EN, build_svg(dette_pib, d41_pib, lang="en"))
+    atomic_write(OUT_SVG_TAUX_EN, build_svg_taux(taux_apparent, lang="en"))
     print("OK: ecrits %s + endpoint + %s + %s%s"
           % (OUT_JSON.name, OUT_SVG.name, OUT_SVG_TAUX.name,
              " -- CONTENU INCHANGE (dates conservees, aucun diff attendu)"

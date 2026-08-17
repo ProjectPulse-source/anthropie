@@ -53,6 +53,47 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-08-17 — La dette passe en anglais : `/en/cost-of-french-public-debt/`
+
+**Motif** (question auteur sur le déséquilibre 14 mailles FR / 3 EN) : le vrai écart n'était
+pas le nombre, mais celui entre **la dépense et la surface** — *ANTHROPY* en vente, campagne
+Ads US live, et trois pages de traction pour les recevoir. La dette est le seul terrain où
+l'actif est **non substituable** : un jeu de données sous licence ouverte, pas de la prose.
+
+**L'arbitrage qui commandait tout le reste.** Le bloc `affichage` du JSON contient des chaînes
+**préformatées en français** — `3 536,1`, `T1 2026`, `17/08/2026`. Les afficher sur une page
+anglaise aurait été **faux**, pas seulement inélégant. L'invariant du pipeline étant « tous les
+nombres viennent du JSON, Hugo reste bête », la locale se règle **dans le script** : un bloc
+`affichage_en`, **36 clés identiques**, produit par le **même corps de fonction**
+(`bloc_affichage(nb, quarter, date)`) — les deux blocs ne peuvent donc diverger sur les
+*valeurs*, seulement sur le format.
+
+**Figures.** Les deux SVG portaient leur texte en dur en français. Générateurs paramétrés par
+locale (`LABELS_CISEAU`, `LABELS_TAUX`) → `ciseau-dette-interets-en.svg`,
+`taux-apparent-dette-en.svg`. Défaut trouvé au rendu : la même figure affichait `117.5 %` et
+`1.3% in 2020` — l'espace insécable avant `%` est une **règle française** qui était codée en
+dur pour les deux locales. Passée en donnée de locale (`pct`).
+
+**Câblage, sans toucher aux appelants** : `dette-val` choisit le bloc par `.Page.Lang` ;
+`desc-figures.html` par `site.Language.Lang` — l'idiome déjà employé par `livre-card.html`,
+donc **aucun des sept appelants** n'a été modifié. Le `Dataset` devient bilingue en restant
+**UN SEUL jeu de données** : `distribution`, `about` (Q3024794), `isBasedOn` et `license`
+identiques ; seules les étiquettes changent.
+
+**Preuves** : page EN 29 761 o, **zéro forme française** (aucun de `3 536,1`, `T1 2026`,
+`117,5`, `66,6`, `17/08/2026`) et toutes les formes anglaises présentes ; **FR non régressée**,
+son `Dataset` reste `inLanguage: fr`, aucune fuite anglaise ; témoin par mutation sur la figure
+EN (creux forcé en 2012 → l'étiquette suit) ; EN au sitemap ; `hugo --minify` vert ;
+**4 linters à 0**. `llms.txt` complété. Le `git add` du workflow reçoit les 2 nouvelles figures
+— même piège d'énumération que la veille.
+
+**⏸ Exclusion déclarée, pas silence** : le compteur animé (`dette-chiffres.html`) porte ses
+libellés **en dur en français** ; il est donc **absent de la page EN** plutôt que d'y imprimer
+du français — c'est exactement le défaut déjà payé sur l'édition ANTHROPY. Le localiser est un
+point ouvert nommé. Autre point : la page EN est une **adaptation** rédigée nativement, pas un
+passage par la chaîne `PROCEDURE_TEXTE_COURT` ; une relecture par un anglophone natif (P3H)
+reste recommandée pour un premier texte de ce couple locale × genre.
+
 ### 2026-08-16 (suite) — `Wikidata/` versionné et câblé ; un défaut d'écriture en retour trouvé et corrigé
 
 **Constat de départ** : `Wikidata/` (71 fichiers, 703 Ko — navette complète, batches
