@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" role="img" aria-labelledby="ta-t ta-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="ta-t">Le taux apparent de la dette publique française, 1996-2025</title>
-<desc id="ta-d">Une courbe, en pourcentage par an. Le coût moyen du stock de dette descend de 6,5 % en 1996 à 1,2 % en 2020, son minimum sur la série, puis remonte à 2,0 % en 2025. La baisse court sur près de vingt-cinq ans ; la remontée sur les dernières années.</desc>
-<text x="46" y="22" font-size="13" fill="#52514e">Taux apparent de la dette publique, en % par an — le coût moyen du stock</text>
+<desc id="ta-d">Une courbe, en pourcentage par an. Le taux apparent de la dette descend de 6,5 % en 1996 à 1,2 % en 2020, son minimum sur la série, puis remonte à 2,0 % en 2025. La baisse court sur près de vingt-cinq ans ; la remontée sur les dernières années.</desc>
+<text x="46" y="22" font-size="13" fill="#52514e">Taux apparent de la dette publique, en % par an — indicateur du coût moyen du stock</text>
 <line x1="46" y1="280.0" x2="706" y2="280.0" stroke="#c3c2b7" stroke-width="1"/>
 <text x="40" y="284.0" font-size="11" fill="#898781" text-anchor="end">0</text>
 <line x1="46" y1="213.1" x2="706" y2="213.1" stroke="#e1e0d9" stroke-width="1"/>

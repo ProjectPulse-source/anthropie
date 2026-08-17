@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" role="img" aria-labelledby="ta-t ta-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="ta-t">The effective interest rate on French public debt, 1996-2025</title>
-<desc id="ta-d">A single curve, in percent per year. The average cost of the debt stock falls from 6.5% in 1996 to 1.2% in 2020, its lowest point in the series, then climbs back to 2.0% in 2025. The decline runs for nearly twenty-five years; the rebound only for the last few.</desc>
-<text x="46" y="22" font-size="13" fill="#52514e">Effective interest rate on public debt, % per year — the average cost of the stock</text>
+<desc id="ta-d">A single curve, in percent per year. The effective rate on the debt stock falls from 6.5% in 1996 to 1.2% in 2020, its lowest point in the series, then climbs back to 2.0% in 2025. The decline runs for nearly twenty-five years; the rebound only for the last few.</desc>
+<text x="46" y="22" font-size="13" fill="#52514e">Effective interest rate on public debt, % per year — a proxy for the average cost of the stock</text>
 <line x1="46" y1="280.0" x2="706" y2="280.0" stroke="#c3c2b7" stroke-width="1"/>
 <text x="40" y="284.0" font-size="11" fill="#898781" text-anchor="end">0</text>
 <line x1="46" y1="213.1" x2="706" y2="213.1" stroke="#e1e0d9" stroke-width="1"/>

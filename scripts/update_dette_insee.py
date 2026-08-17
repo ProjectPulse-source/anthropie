@@ -449,23 +449,23 @@ def build_svg(dette_pib: dict[str, float], d41_pib: dict[str, float],
 LABELS_TAUX = {
     "fr": {
         "titre": "Le taux apparent de la dette publique française, %s-%s",
-        "desc": "Une courbe, en pourcentage par an. Le coût moyen du stock de "
+        "desc": "Une courbe, en pourcentage par an. Le taux apparent de la "
                 "dette descend de %s %% en %s à %s %% en %s, son minimum sur la "
                 "série, puis remonte à %s %% en %s. La baisse court sur près de "
                 "vingt-cinq ans ; la remontée sur les dernières années.",
         "panneau": "Taux apparent de la dette publique, en % par an — "
-                   "le coût moyen du stock",
+                   "indicateur du coût moyen du stock",
         "en_annee": NBSP + "% en ",
     },
     "en": {
         "titre": "The effective interest rate on French public debt, %s-%s",
-        "desc": "A single curve, in percent per year. The average cost of the "
+        "desc": "A single curve, in percent per year. The effective rate on the "
                 "debt stock falls from %s%% in %s to %s%% in %s, its lowest "
                 "point in the series, then climbs back to %s%% in %s. The "
                 "decline runs for nearly twenty-five years; the rebound only "
                 "for the last few.",
         "panneau": "Effective interest rate on public debt, % per year — "
-                   "the average cost of the stock",
+                   "a proxy for the average cost of the stock",
         "en_annee": "% in ",
     },
 }
