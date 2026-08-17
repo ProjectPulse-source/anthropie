@@ -37,7 +37,7 @@
 # autorite : primaire (page du site) | secondaire (page d'appui) | externe
 # =============================================================================
 
-version: "1.2 (2026-08-15, maille registre des coûts déportés — commande auteur, rapatriement ancien mini-site)"
+version: "1.3 (2026-08-17, maille EN dette — /en/cost-of-french-public-debt/, 4e page de traction anglophone)"
 
 entities:
 
@@ -259,6 +259,12 @@ entities:
         risk: faible
         conversion: moyen
         notes: "page ouverte 15/08 sur GO auteur (exemption assumée à « réaction, pas anticipation » : le signal est la commande d'auteur) ; propriété = « combien coûte » (le ciseau, équivalences) ; « qui paie » reste EXCLUSIF au pont ; chiffres 100 % dérivés de data/dette_officielle.json — aucun en dur"
+      - q: "french public debt cost / interest burden on french public debt"
+        statut: couverte
+        destination: /en/cost-of-french-public-debt/
+        risk: faible
+        conversion: moyen
+        notes: "page EN ouverte 17/08 sur GO auteur — motif MESURÉ : l'écart n'était pas 14 mailles FR contre 3 EN, mais entre la DÉPENSE (ANTHROPY en vente, campagne Ads US live) et la SURFACE de traction anglophone. Choisie parce que c'est le seul terrain où l'actif est NON SUBSTITUABLE : un jeu de données sous licence ouverte, que rien d'anglophone ne paraphrase. Sujet d'entrée périphérique = dette publique française ; fil remontant = /en/quest-ce-que-lanthropie/ + AWP-07/AWP-03 EN. Chiffres et figures 100 % dérivés (bloc affichage_en, 36 clés, même corps de fonction que le FR). ⚠ Le compteur animé est ABSENT de la page EN — dette-chiffres.html a ses libellés en dur en français ; exclusion déclarée, point ouvert. Trois tours de contre-expertise arbitrés (économie x2, langue x1) : D:/CONTRE_EXPERTISE/2026-08-17_RELECTURE_EN_DETTE/"
       - q: "montant de la dette publique france / dette publique en % du PIB"
         statut: couverte
         destination: /qui-paie-la-dette-publique/  # bloc chiffré INSEE au build (partial dette-chiffres)

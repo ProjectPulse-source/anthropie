@@ -26,7 +26,7 @@ To the question "what does the debt cost", the most direct answer is not the siz
 
 The stock itself stands at **{{< dette-val "dette_mdeur" >}} billion euros** in {{< dette-val "dette_periode" >}}, or {{< dette-val "dette_pct_pib" >}}% of GDP.
 
-The chain has four links. A state continuously refinances maturing securities, so borrowing heavily does not by itself make the **stock** grow — what makes it grow is the **deficit** — that is, net government borrowing — plus stock-flow adjustments. That stock carries an **average financing cost**. Each year, that cost gives rise to **interest** payments: an obligation already contracted, rather than a new discretionary spending choice, and one that reduces the room left for other choices. And when market rates climb, the average price follows with a lag — the annual bill swells, and the question stops being *how much* and becomes **who will pay it**.
+The chain has four links. A state continuously refinances maturing securities, so borrowing heavily does not by itself make the **stock** grow — what makes it grow is the **deficit** — that is, net government borrowing — plus stock-flow adjustments. That stock carries an **average financing cost**. Each year, that cost gives rise to **interest** payments: an obligation already contracted, rather than a new discretionary spending choice, and one that reduces the room left for other choices. And when market rates climb, that average cost follows with a lag — the annual bill swells, and the question stops being *how much* and becomes **who will pay it**.
 
 ## The scissor: thirty years of anaesthesia, then the turn
 
