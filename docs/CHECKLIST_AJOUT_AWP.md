@@ -59,6 +59,10 @@ Zenodo mis à part (dépôt propre, sans modération), **toute plateforme à mod
 | MPRA | Oui |
 | **SciELO Preprints** | **NON** — « não será postado se já tiver sido […] postado **em outro local** » (21/05/2025) |
 
+⚠ **Ce tableau ne traite QU'UNE des quatre portes.** Un « Oui » ici ne dit rien du **type de contenu** accepté, ni de la langue, ni de la valeur marginale. Ne pas recopier ces trois portes ici — elles vivent dans le bloc `[GRILLE DE DEPOT]` de `check_deposits_status.py`, **instrument unique** ; une copie dériverait. **Lancer le script et lire la grille avant tout dépôt.**
+
+**Preuve que la distinction n'est pas théorique (2026-08-17)** : SSRN est « Oui » sur l'exclusivité **et NO-GO sur le type**. Sa page de guidelines (`elsevier.support/ssrn/answer/get-started`) liste **« Frameworks »** parmi les types *typically NOT accepted* et exige « rigorous methodology and **original findings** » — ce qui exclut AWP-07 et AWP-08. Les rejets y sont **finaux, non motivés, sans appel**, et « high submission volumes may lead to rejections **and account closure** » : le risque porte sur le **compte**, pas sur le seul papier. Même forme d'erreur que le cas SciELO ci-dessous, entrée par une autre porte.
+
 **Cas d'école, à ne pas rejouer** : un dossier de dépôt SciELO complet avait été préparé pour l'AWP-01 espagnol, en s'appuyant sur la checklist étroite (« autre *serveur de preprints* ») et sur le fait que Zenodo est un dépôt généraliste typant le document en `working paper`. Exact, mais **non décisif** : la politique générale dit « posté ailleurs », sans condition sur le type de plateforme. Le dépôt était inéligible depuis le départ. Classé `NO_GO_PRIOR_PUBLIC_AVAILABILITY`.
 
 **Deux leçons** : (1) chercher la règle qui tranche, pas l'interprétation qui arrange ; (2) une déclaration de transparence dans un champ de commentaires **ne rend pas conforme** une soumission qui ne l'est pas, surtout à côté d'une case affirmant l'inverse.

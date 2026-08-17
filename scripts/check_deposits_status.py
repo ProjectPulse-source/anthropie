@@ -34,12 +34,25 @@ UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
 # --- Etat declare (tenir a jour ; source : data/works.yaml) ---------------
 SSRN = [("AWP-01", "6543618"), ("AWP-02", "6615059"), ("AWP-03", "6615278"),
         ("AWP-04", "6615305"), ("AWP-05", "6615438"), ("AWP-06", "6735581")]
-SSRN_MANQUANTS = ["AWP-07", "AWP-08"]
+
+# HORS PERIMETRE DU CONTROLE. Ces papiers n'ont aucun identifiant SSRN local :
+# le script n'a donc RIEN a interroger, et il ne rend AUCUN verdict sur eux.
+# L'ancienne etiquette "A DEPOSER" se lisait comme un constat de plateforme
+# alors qu'elle n'etait qu'une liste en dur : un manquant deguise en zero.
+# Seule source qui tranche : hq.ssrn.com > My Papers (elle seule distingue
+# jamais-depose / en cours / prive / inactif). Motif nomme obligatoire.
+SSRN_SANS_ID = [
+    ("AWP-07", "jamais depose sur SSRN - page auteur verifiee le 2026-08-17"),
+    ("AWP-08", "depot non pose - grille du 03/08 : valeur marginale faible"),
+]
 
 MPRA = [("AWP-01", "128604"), ("AWP-02", "128605"), ("AWP-03", "128606"),
         ("AWP-04", "128607"), ("AWP-05", "128608"), ("AWP-06", "129034"),
         ("AWP-07", "130468")]  # depot TEST espace du 2026-08-12 (decision auteur) — sonde le blocage referee du 04/08
-MPRA_MANQUANTS = ["AWP-08"]  # ne deposer qu'apres ACCEPTATION d'AWP-07 (echelonne strict)
+# Meme regle que SSRN_SANS_ID : hors perimetre, motif nomme, pas de verdict.
+MPRA_SANS_ID = [
+    ("AWP-08", "non depose - echelonne strict : attendre l'ACCEPTATION d'AWP-07"),
+]
 
 OSF_PROFIL = "ymkpj"
 # SocArXiv : canal CLOS pour les papiers conceptuels (decision 2026-08-05).
@@ -87,9 +100,10 @@ for label, sid in SSRN:
     ssrn_ok += ok
     state = "EN LIGNE" if ok else "ABSENT"
     print(f"   {label}  {sid}  {state}  {title[:44]}")
-for label in SSRN_MANQUANTS:
-    print(f"   {label}  --       A DEPOSER")
-print(f"   -> {ssrn_ok}/{len(SSRN)} en ligne ; {len(SSRN_MANQUANTS)} a deposer")
+for label, motif in SSRN_SANS_ID:
+    print(f"   {label}  --       NON INTERROGE (aucun ID local) : {motif}")
+print(f"   -> interroges {ssrn_ok}/{len(SSRN)} EN LIGNE ; "
+      f"{len(SSRN_SANS_ID)} hors perimetre (motifs ci-dessus, pas un verdict)")
 
 # --- MPRA --------------------------------------------------------------
 print("\n[MPRA]  200 = publie ; 401/403 = encore en moderation")
@@ -104,9 +118,10 @@ for label, mid in MPRA:
     else:
         state = f"HTTP {code}"
     print(f"   {label}  {mid}  {state}")
-for label in MPRA_MANQUANTS:
-    print(f"   {label}  --       A DEPOSER (apres deblocage du lot d'avril)")
-print(f"   -> {mpra_live}/{len(MPRA)} publies")
+for label, motif in MPRA_SANS_ID:
+    print(f"   {label}  --       NON INTERROGE (aucun ID local) : {motif}")
+print(f"   -> interroges {mpra_live}/{len(MPRA)} PUBLIES ; "
+      f"{len(MPRA_SANS_ID)} hors perimetre (motifs ci-dessus, pas un verdict)")
 
 # --- OSF ---------------------------------------------------------------
 print("\n[OSF / SocArXiv]")
@@ -148,10 +163,15 @@ for nom, verdict, note in [
      "accepte a tout stade ; apporte la communaute SHS internationale"),
     ("MPRA/RePEc", "WAIT",
      "conforme, mais lot d'avril encore bloque : rien de neuf avant deblocage"),
-    ("SSRN", "FIT INCERTAIN",
-     "guidelines du 03/08/2026 : 'Frameworks' listes en types REJETES, PDF"
-     " tout-anglais exige, rejets definitifs et non motives."
-     " 6 papiers deja acceptes (avant ce changement) => valeur marginale du 7e faible"),
+    ("SSRN", "NO-GO (AWP-07/08)",
+     "source : elsevier.support/ssrn/answer/get-started, 'Last updated on"
+     " August 03, 2026' - RELUE le 2026-08-17, INCHANGEE. 'Frameworks' figure"
+     " toujours en 'Content types that are typically NOT accepted' ; critere"
+     " d'entree = 'rigorous methodology and ORIGINAL FINDINGS' ; rejets FINAUX,"
+     " non motives, SANS APPEL ; 'high submission volumes may lead to rejections"
+     " AND ACCOUNT CLOSURE' (le compte porte 6 acceptations). AWP-08 se declare"
+     " lui-meme 'a refutable framework, not an empirical result' => cible exacte"
+     " de l'exclusion. AWP-07 (formalisation d'une boucle) court le meme risque."),
     ("SciELO Preprints", "NO-GO",
      "'postado em outro local' (21/05/2025) => tout texte deja public exclu"),
     ("Revues hispanophones", "NO-GO (strategique)",
