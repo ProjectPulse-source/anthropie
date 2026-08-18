@@ -153,8 +153,22 @@ jobs:
           if [ -n "$(git status --porcelain Wayback/)" ]; then
               git add Wayback/
               git commit -m "Wayback: archive run $(date -u '+%Y-%m-%d')"
-              git push origin main
-              echo "::notice::Log Wayback committé et poussé"
+              # Tentative unique = un 500 transitoire de GitHub tue le run et perd le
+              # log du mois (cas observe sur anthropie-monitoring, run 32082744679).
+              # Le rebase couvre en plus le non-fast-forward si un autre workflow a
+              # pousse sur main depuis notre checkout.
+              for attempt in 1 2 3 4 5; do
+                  if git push origin main; then
+                      echo "::notice::Log Wayback committé et poussé (tentative $attempt)"
+                      exit 0
+                  fi
+                  echo "::warning::Push refusé (tentative $attempt) — rebase puis nouvelle tentative"
+                  git fetch origin main || true
+                  git rebase origin/main || git rebase --abort || true
+                  sleep $((attempt * 5))
+              done
+              echo "::error::Push impossible après 5 tentatives — le log Wayback du mois n'est pas publié"
+              exit 1
           else
               echo "Aucune modification du log à commiter"
           fi

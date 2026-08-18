@@ -72,7 +72,21 @@ jobs:
                   static/img/ciseau-dette-interets-en.svg \
                   static/img/taux-apparent-dette-en.svg
           git commit -m "data(dette): series INSEE/Eurostat du $(date -u +%Y-%m-%d)"
-          git push origin "$BRANCH"
+          # Branche neuve a chaque run : le non-fast-forward est impossible, donc
+          # pas de rebase ici -- seul reste le 500 transitoire de GitHub, qui tuait
+          # le run et reportait la mise a jour d'un mois (cas observe sur
+          # anthropie-monitoring, run 32082744679). Pas d'exit 0 dans la boucle :
+          # la creation de la PR doit suivre.
+          pushed=0
+          for attempt in 1 2 3; do
+            if git push origin "$BRANCH"; then pushed=1; break; fi
+            echo "::warning::Push refuse (tentative $attempt) -- nouvelle tentative"
+            sleep $((attempt * 5))
+          done
+          if [ "$pushed" = 0 ]; then
+            echo "::error::Push impossible apres 3 tentatives -- pas de PR ouverte ce mois-ci"
+            exit 1
+          fi
           gh pr create \
             --title "Donnees dette : mise a jour du $(date -u +%Y-%m-%d)" \
             --body "Series INSEE (dette de Maastricht) et Eurostat (interets D41PAY, COFOG) rapatriees, validees par les gardes de scripts/update_dette_insee.py, build Hugo verifie. Relire le diff puis merger : le merge publie."
