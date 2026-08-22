@@ -78,7 +78,7 @@ d'échéance J+30/J+60 exécutée.
 | **6** | PDF Zenodo | 12/12 HTTP 200 | 16/16 HTTP 200 | = (périmètre élargi) |
 | — | **OpenLibrary — doublons LIT** | non instruit au J+0 | **NON fusionnés** : 2 fiches auteur, 2 œuvres *Livresque* | ⛔ **NOUVEAU — ouvert** |
 | — | **Google Scholar** | profil listé en `sameAs` | **profil public, actif, 17 citations, h = 3** | ⚠ **NOUVEAU — décision caduque** |
-| — | **Publication tierce indexée** | aucune | RFSE n° 36, `10.3917/rfse.036.0247` | ⚠ **NOUVEAU — à confirmer** |
+| — | **1ʳᵉ publication à comité de lecture** | aucune | RFSE n° 36 (recension Lemoine), au site et à Scholar — **absente de l'ORCID** | ⚠ **NOUVEAU — arc manquant** |
 
 ---
 
@@ -330,19 +330,37 @@ sur deux questions mortes, ce qui est le coût symétrique de la méfiance — d
 n'énonce pas des **décisions à rendre**, elle énonce des **questions à poser à l'état**
 (« la phase est-elle close, et où est-ce écrit ? »). La première forme périme ; la seconde non.
 
-### A4 — ⚠ Publication tierce indexée, non reflétée par le site
+### A4 — ⚠ La première publication à comité de lecture n'est PAS dans l'ORCID
 
-`10.3917/rfse.036.0247` — « Comptes rendus d'ouvrages », *Revue française de socio-économie*
-n° 36, pp. 247-265, 2026-08-04. Crossref (**source primaire**, pas seulement OpenAlex) liste
-**Stéphane Lalut** parmi 7 auteurs. Corroboré par le profil Google Scholar, qui porte aussi
-*Valéry Ridde, La financiarisation de la santé au Sénégal* et *Arnaud Kaba, La main et
-l'esprit* ; et par `data/works.yaml`, qui journalise déjà des recensions (Nonfiction) et une
-tribune (*La Grande Conversation*, Terra Nova).
+`10.3917/rfse.036.0247` — recension de **Benjamin Lemoine, *Chasseurs d'États. La fabrique
+juridique de la domination économique***, parue dans le bloc « Comptes rendus d'ouvrages »,
+*Revue française de socio-économie* 2026/1 (n° 36), pp. 247-265, le 2026-08-04. Bloc co-signé
+par 7 recenseurs sous un DOI commun, ce qui explique les 7 auteurs vus chez Crossref.
 
-**Ce que l'audit établit** : la publication existe, elle est indexée, et l'attribution vient
-du fournisseur, pas d'un artefact d'agrégateur.
-**Ce que l'audit n'établit pas** : que ce soit bien l'auteur. Aucun ORCID n'accompagne
-l'attribution chez Crossref. → **DÉCISION AUTEUR** (§ 7.5).
+> **Correction d'un constat de première rédaction.** J'avais d'abord écrit que cette
+> publication n'était « pas reflétée par le site » et demandé à l'auteur de confirmer qu'elle
+> était bien de lui. **Les deux étaient faux, et le dépôt le disait déjà** : `data/works.yaml:811`
+> porte la fiche complète (`id: art-rfse-lemoine-2026`, DOI, résumés FR/EN, mention
+> « PREMIÈRE publication en revue à comité de lecture → activation catégorie *Académique*,
+> décision auteur 2026-08-05 »), et la page existe —
+> `content/publications/rfse-lemoine-chasseurs-detats.md`. J'avais interrogé `works.yaml` sur
+> `citation_pattern` sans l'interroger sur `rfse`. **Lire l'appareil avant de conclure à son
+> silence** : le défaut était dans ma requête, pas dans le dépôt.
+
+**Le vrai écart, lui, tient** — et il est plus utile que celui que je croyais avoir trouvé :
+
+| Nœud | Porte la recension RFSE ? |
+|---|---|
+| `data/works.yaml` + page publications | **oui** |
+| Google Scholar | **oui** |
+| Crossref (fournisseur Cairn) | oui, mais **sans aucun ORCID** sur les 7 recenseurs |
+| **ORCID `0009-0002-1794-4895`** | ⛔ **NON** — 36 travaux, zéro DOI `10.3917` |
+
+Les deux autres recensions y sont pourtant (`10.4000/162f0`, `10.4000/16ihm`, via OpenEdition).
+**Le seul nœud sain du graphe ignore donc la seule publication à comité de lecture du corpus** —
+et c'est précisément le nœud dont dépend la réparation d'OpenAlex (§ 5.1, § 5.6). Cairn ne
+transmettant pas l'ORCID à Crossref, aucun automatisme ne le comblera. → **GESTE AUTEUR**
+(§ 7.5, G3).
 
 ### A5 — ⚠ Le healthcheck vérifie la vie, pas la justesse
 
@@ -467,14 +485,38 @@ relève de l'audit périodique — geste humain, cadence trimestrielle — pas d
 
 | # | Geste | Pourquoi l'auteur, et pas moi |
 |---|---|---|
-| **G1** | **Réclamer les 9 entités OpenAlex** sous l'ORCID `0009-0002-1794-4895` et demander leur fusion sur `A5130851063` | Compte externe, action irréversible côté tiers |
-| **G2** | **RELANCER** la demande de fusion OpenLibrary du 15/08 restée sans effet, ou fusionner soi-même : fiche auteur `OL16378292A` → `OL16378291A` ; œuvres `OL45424564W` → `OL45424565W` et `OL45424599W` → `OL45424600W` | Requiert le statut Super-Librarian — droit attaché à la personne |
-| **G3** | **Confirmer ou infirmer** la recension RFSE `10.3917/rfse.036.0247` | Fait biographique : nul ne peut le vérifier à la place de l'auteur |
+| **G1** | **Revendiquer `A5130851063` sur openalex.org**, puis y **rattacher les 12 DOI** portés par les 8 autres entités | Création de compte + authentification |
+| **G2** | **Relancer OpenLibrary** (ticket avec les IDs) **et** demander le statut *Librarian-In-Training* | Compte personnel ; le droit de fusion est attaché à la personne |
 
-Si G3 est **confirmé**, deux conséquences suivent, à traiter dans la session qui reçoit la
-réponse : l'ajouter à `data/works.yaml` et à la page publications ; et vérifier que la
-recension est bien rattachée à l'ORCID chez Crossref — c'est aujourd'hui la seule
-publication du corpus qui n'y est pas attachée côté fournisseur.
+**Procédures vérifiées à la source le 22/08, pas supposées :**
+
+- **G1 — OpenAlex.** Il n'existe **aucune fonction « fusionner »**. La procédure officielle est :
+  se connecter sur `openalex.org` → ouvrir sa page auteur → **Claim** → puis **ajouter à son
+  profil les travaux des autres entités** (par DOI, ID OpenAlex, ou dépôt de CV). *« Le profil
+  vidé devient inerte : il cesse d'accumuler des travaux et sort de l'appariement. »* Les
+  modifications sont des curations, en ligne sous **~2 jours**. Une revendication avec courriel
+  institutionnel vérifié est automatique ; sinon, revue manuelle.
+  **Les 12 DOI à rattacher** : `10.5281/zenodo.` + `19266862` · `19431208` · `19433086` ·
+  `19434094` · `19439921` · `19440866` · `20025421` · `20077993` · `21200286` · `21200288` ·
+  `21506320` · `21507249`.
+- **G2 — OpenLibrary.** La fusion d'auteurs **et** d'œuvres est **réservée aux librarians** ;
+  les autres passent par le formulaire de contact en donnant les identifiants des fiches —
+  c'est la voie déjà empruntée le 15/08, restée sans effet. Le statut se demande à
+  `openlibrary.org/volunteer#librarian` (revue sous ~1 semaine, le lundi en général) ; un
+  *Librarian-In-Training* obtient l'**outil de demande de fusion**, qui soumet une revue au
+  lieu d'exécuter. **Deux canaux à ouvrir en parallèle** : relancer le ticket *et* demander le
+  statut — le premier règle ce cas, le second règle la classe, un catalogue qui continuera de
+  croître.
+| **G3** | **Ajouter `10.3917/rfse.036.0247` au dossier ORCID** (*Add works → Search & link*, ou saisie manuelle par DOI) — recension Lemoine, RFSE n° 36 | Compte personnel ORCID ; authentification |
+
+**Pourquoi G3 n'est pas cosmétique.** ORCID est le seul nœud complet du graphe (§ 5.6) et
+c'est celui par lequel OpenAlex peut recoller les 9 entités (G1). Y laisser absente la
+**seule publication à comité de lecture** du corpus, c'est priver la réparation de son
+meilleur signal, sur le travail qui en porte le plus. Cairn ne transmettant pas l'ORCID à
+Crossref, l'écart ne se comblera pas tout seul.
+
+**Ordre d'exécution qui compte** : **G3 avant G1.** Une revendication OpenAlex faite après
+que l'ORCID soit complet part d'un dossier plus fort qu'une revendication faite avant.
 
 ---
 
