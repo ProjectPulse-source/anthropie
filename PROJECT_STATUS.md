@@ -1492,8 +1492,8 @@ un mini-commit polish.
 - P1960 Google Scholar : J4NqzwSfrHAC
 - P10283 OpenAlex ID : A5130851063
 - P496 ORCID iD : 0009-0002-1794-4895
-- P3781 SSRN author ID : 11065608
-- P5023 Academia.edu profile URL
+- P3747 SSRN author ID : 11065608
+- P5715 Academia.edu profile URL
 - P9934 Zenodo communities ID : anthropie-working-papers
 
 Note : la communauté Zenodo `anthropie-working-papers` est 
