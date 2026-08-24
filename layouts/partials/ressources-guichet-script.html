@@ -42,15 +42,6 @@
   }
   function books() { return document.querySelectorAll(".ressources-book"); }
 
-  function setAssignedLink(book, url) {
-    books().forEach(function (article) {
-      if (article.getAttribute("data-book") !== book) return;
-      var link = article.querySelector(".ressources-assigned-link");
-      if (!link) return;
-      if (url) { link.href = url; link.hidden = false; }
-      else { link.hidden = true; }
-    });
-  }
   function applyClaimed(claim) {
     claimed = true;
     books().forEach(function (article) {
@@ -75,20 +66,30 @@
       }
     });
   }
-  // Retour d'un visiteur : re-obtient son lien via le Worker (idempotent par
-  // invite_code — même lien, jamais un second) pour peupler « Rouvrir ».
+  // Retour d'un visiteur : on rétablit son état SANS AUCUN APPEL RÉSEAU.
+  //
+  // Cet appel était un POST /claim présenté comme idempotent « par
+  // invite_code ». Il ne l'est que tant que la ligne D1 porte cet invite_code :
+  // dès que l'autopilot recycle le lien non utilisé (prune() supprime la ligne,
+  // push la repousse avec invite_code NULL), le même appel tombe dans le chemin
+  // d'attribution et donne un SECOND exemplaire — sans clic, sans trace pour le
+  // lecteur. Mesuré le 2026-08-24 sur le journal : 33 attributions pour un seul
+  // visiteur, 41 recyclages pour 6 usages réels.
+  //
+  // Le lien n'étant jamais persisté en clair côté client (choix délibéré),
+  // « Rouvrir » ne peut pas être proposé au retour. Le lecteur qui a perdu son
+  // onglet passe par la voie humaine, déjà prévue sur la page.
+  //
   // Si le livre déjà choisi n'est pas présent dans la page (page individualisée
   // d'un AUTRE titre), applyClaimed désactive proprement les CTA visibles.
   function reclaim(book) {
     applyClaimed({ book: book, url: null });
-    fetch(WORKER + "/claim", {
-      method: "POST", cache: "no-store",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ book: book, visitor: visitorId() }),
-    })
-      .then(function (r) { return r.json(); })
-      .then(function (j) { if (j && j.ok && j.url) setAssignedLink(book, j.url); })
-      .catch(function () {});
+    books().forEach(function (article) {
+      if (article.getAttribute("data-book") !== book) return;
+      var msg = article.querySelector(".ressources-assigned-msg");
+      if (msg) msg.textContent = "Votre exemplaire vous a déjà été attribué. "
+        + "Si vous n'avez pas pu utiliser le lien, écrivez-moi : je le remets en circulation.";
+    });
   }
 
   function fetchStock() {
