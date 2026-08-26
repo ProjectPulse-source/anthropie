@@ -1047,14 +1047,21 @@ works:
 #               preprints, liens publics et DOI PERSISTENT (z6x38 et le profil ymkpj non
 #               menacés). Action unique avant nov. : vérifier si des projets OSF actifs
 #               existent sur ymkpj ; sinon, classer sans suite.
-#   OpenLib.  : 2 DOUBLONS jamais fusionnés (OL45424599W/OL45424600W « Dette Publique » ;
-#               OL45424564W/OL45424565W « ANTHROPIE ») ; couverture sur 1 seul work
-#               (Premier coup, ajoutée le 10/08) ; descriptions absentes sur 4 works.
-#               Liens d'autorité auteur (ORCID, Wikidata, VIAF) AJOUTÉS le 2026-08-02.
-#               ⚠ TROISIÈME DOUBLON, découvert le 2026-08-10 à la création du Premier
-#               coup : un AUTEUR homonyme VIDE, OL16378292A, que l'autocomplétion
-#               propose AVANT le canonique OL16378291A (6 œuvres). Aucun livre ne lui est
-#               rattaché à ce jour ; à fusionner avec les deux doublons d'œuvres.
+#   OpenLib.  : DOUBLONS FUSIONNÉS par OL le 2026-08-26 (ticket 1605786) — vérifié API :
+#               OL45424565W → OL45424564W (ANTHROPIE), OL45424600W → OL45424599W (Dette
+#               Publique), OL45424545W → OL45424544W (Livresque), auteur OL16378292A →
+#               OL16378291A. ⚠ Pour ANTHROPIE et Dette Publique, OL a gardé l'INVERSE de
+#               ce que Wikidata pointait : P648 de Q138827344 et Q138910896 à corriger.
+#               Le même jour : ASIN broché (= ISBN-10) posé en identifiant `amazon` sur
+#               les 6 éditions canoniques, liens URL Amazon retirés des works (remarque
+#               OL : « identifier, not URL »), lien Site officiel ajouté sur Odyssée et
+#               Premier coup. RESTE : 3 paires d'éditions au même ISBN sous un même work
+#               (OL61896316M/317M, OL61896276M/277M, OL61896251M/252M — canonique = la
+#               seconde) à fusionner par OL ; fiche auteur NON modifiable par le compte
+#               depuis fin août (formulaire 200 vide, PUT json 403) alors qu'elle l'était
+#               le 02/08 (liens d'autorité ORCID, Wikidata, VIAF ajoutés ce jour-là).
+#               Couverture sur 1 seul work (Premier coup, 10/08) ; descriptions absentes
+#               sur 4 works.
 # - Nouvelle publication/acceptation : ajouter entrée + total_works + bump
 #   registry_version + last_updated.
 #

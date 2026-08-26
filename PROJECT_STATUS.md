@@ -8,7 +8,7 @@ Synthèse des 4 axes de diffusion exécutés en mai 2026 ; le chantier est déso
 
 2. **SocArXiv** : 6 AWPs déposés sur `osf.io/ymkpj`. DOIs SocArXiv liés en P953 sur les 6 items AWP Wikidata. Profil OSF `ymkpj` rattaché à `Q138909233` (Stéphane Lalut) via P973.
 
-3. **OpenLibrary** : 4 fiches livre + page auteur enrichie. Author ID `OL16378291A`. Work IDs : Livresque `OL45424544W`, L'Odyssée `OL45424562W`, ANTHROPIE `OL45424565W`, Dette Publique `OL45424600W`. Batch 16 (P648 OpenLibrary IDs) transmis à Laura. 2 doublons OpenLibrary à fusionner après obtention du statut LIT (~1 semaine).
+3. **OpenLibrary** : 6 fiches livre + page auteur enrichie. Author ID `OL16378291A` (doublon `OL16378292A` fusionné par OL le 26/08/2026). Work IDs canoniques **au 26/08/2026** : Livresque `OL45424544W`, L'Odyssée `OL45424562W`, ANTHROPIE **`OL45424564W`**, Dette Publique **`OL45424599W`**, Premier coup `OL45876839W` — OL a fusionné les 3 paires d'œuvres en gardant, pour ANTHROPIE et Dette Publique, l'inverse de ce que Wikidata pointait (`OL45424565W` et `OL45424600W` sont devenus des redirections) : P648 de Q138827344 et Q138910896 à corriger (QuickStatements, Laura). ASIN broché posé en identifiant `amazon` sur les 6 éditions canoniques, liens URL Amazon retirés des works (remarque OL). Reste côté OL : 3 paires d'éditions au même ISBN à fusionner (rôle librarian) ; fiche auteur non modifiable par le compte depuis fin août (403).
 
 4. **Externe** : BnF dépôt légal régularisé, Bing Webmaster Tools configuré (import Google Search Console + sitemap), GitHub Actions IndexNow + Wayback Machine opérationnels (commit `ab86532`).
 
