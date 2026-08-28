@@ -1050,16 +1050,27 @@ works:
 #   OpenLib.  : DOUBLONS FUSIONNÉS par OL le 2026-08-26 (ticket 1605786) — vérifié API :
 #               OL45424565W → OL45424564W (ANTHROPIE), OL45424600W → OL45424599W (Dette
 #               Publique), OL45424545W → OL45424544W (Livresque), auteur OL16378292A →
-#               OL16378291A. ⚠ Pour ANTHROPIE et Dette Publique, OL a gardé l'INVERSE de
-#               ce que Wikidata pointait : P648 de Q138827344 et Q138910896 à corriger.
+#               OL16378291A (6 œuvres rattachées). ⚠ Pour ANTHROPIE et Dette Publique,
+#               OL a gardé l'INVERSE de ce que Wikidata pointait.
+#               RE-VÉRIFIÉ À LA SOURCE le 2026-08-28 : les 4 redirections tiennent, et
+#               P648 est CORRIGÉ des deux côtés (Q138827344 → OL45424564W, Q138910896 →
+#               OL45424599W, lus par wbgetclaims). Le point « à corriger » du 26/08 est
+#               CLOS — il ne restait périmé que dans ce fichier.
 #               Le même jour : ASIN broché (= ISBN-10) posé en identifiant `amazon` sur
 #               les 6 éditions canoniques, liens URL Amazon retirés des works (remarque
 #               OL : « identifier, not URL »), lien Site officiel ajouté sur Odyssée et
-#               Premier coup. RESTE : 3 paires d'éditions au même ISBN sous un même work
-#               (OL61896316M/317M, OL61896276M/277M, OL61896251M/252M — canonique = la
-#               seconde) à fusionner par OL ; fiche auteur NON modifiable par le compte
-#               depuis fin août (formulaire 200 vide, PUT json 403) alors qu'elle l'était
-#               le 02/08 (liens d'autorité ORCID, Wikidata, VIAF ajoutés ce jour-là).
+#               Premier coup. RESTE, confirmé ouvert au 2026-08-28 : 3 paires d'éditions
+#               au même ISBN sous un même work, TOUJOURS non fusionnées —
+#               OL61896251M/252M (9782958634704), OL61896276M/277M (9782958634728),
+#               OL61896316M/317M (9782958634735). Dans chaque paire la SECONDE porte
+#               l'identifiant `amazon` et la première n'a rien : la seconde est la
+#               canonique, fusionner la première dedans (rôle librarian).
+#               Fiche auteur NON modifiable par le compte depuis fin août (formulaire
+#               200 vide, PUT json 403) alors qu'elle l'était le 02/08.
+#               ⚠ Les liens d'autorité posés le 02/08 (ORCID, Wikidata, VIAF) vivent en
+#               `links` — texte libre. Le champ STRUCTURÉ `remote_ids`, celui que lisent
+#               les consommateurs machine, est VIDE (None au 28/08). Correctif connu mais
+#               bloqué par le 403 ci-dessus : à reprendre quand l'écriture revient.
 #               Couverture sur 1 seul work (Premier coup, 10/08) ; descriptions absentes
 #               sur 4 works.
 # - Nouvelle publication/acceptation : ajouter entrée + total_works + bump
