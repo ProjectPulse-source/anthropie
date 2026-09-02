@@ -83,7 +83,10 @@ indexation demandée sur 8 URL — `/publications/`, `/en/publications/`, `/a-pr
 **Relevé externe daté** : `/publications/` n'avait plus été explorée depuis le 31/07 ;
 `/en/publications/` était **« détectée, actuellement non indexée »**, jamais explorée — la
 liste anglaise n'existait pas pour Google avant cette demande. À revérifier à J+7 par
-inspection d'URL ; passé ce délai, ce relevé redevient une hypothèse.
+inspection d'URL ; passé ce délai, ce relevé redevient une hypothèse. **Rappel armé** : RDV
+Outlook du 2026-09-09 09h00, rappel actif, corps = la commande à coller (canal doctrinal,
+un seul). La vérification elle-même exige la session Search Console : aucune routine cloud
+ni script ne peut l'exécuter sans identifiants API que l'auteur devrait créer lui-même.
 
 ### 2026-08-17 — La dette passe en anglais : `/en/cost-of-french-public-debt/`
 
