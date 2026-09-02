@@ -107,6 +107,8 @@ le `README_LAURA.md` du dossier. **Exécutée par Laura le 02/09 à 15h05 UTC** 
 conforme (1 référence sur `P50` et `P356` des deux items, 8 propriétés, aucune déclaration nouvelle).
 **Reste** : les 2 descriptions es/de de `Q138909233`, ajoutées au lot après sa première version, n'ont
 pas été posées — lien direct `deeplink_reste.txt` (2 commandes) dans le même dossier.
+**Posées par Laura le 02/09 à 22h51 UTC** ; readback du 03/09 : textes identiques au lot, 17 propriétés,
+rien d'autre touché. Navette close, aucun reste.
 
 **Vérification de `Q138909233` (commande auteur, 02/09, relecture API).** Identifiants tous
 présents et conformes à `data/author.toml` (ORCID, OpenAlex, Google Scholar, Academia, SSRN, IdRef,

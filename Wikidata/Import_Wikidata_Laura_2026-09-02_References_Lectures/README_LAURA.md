@@ -6,10 +6,11 @@
 > aucune déclaration nouvelle. `check-wikidata-registre.py` : parité 19/19. Écriture en retour : rien à
 > écrire (les QID étaient déjà au registre, commit `1e4370f`).
 >
-> ⏳ **RESTE — 2 lignes** : les descriptions **es** et **de** de `Q138909233` n'ont **pas** été posées
-> (item inchangé depuis le 14/08 ; ces deux lignes ont été ajoutées au lot après sa première
-> version, le Run a probablement chargé l'ancien lien). Lien direct **`deeplink_reste.txt`**, deux
-> commandes, rien d'autre. Une fois fait : readback des deux descriptions, et ce bloc passe en ✅.
+> ✅ **DESCRIPTIONS FAITES le 2026-09-02, 22h51 UTC, par Laura** (2 `wbsetdescription-set`, es puis de).
+> **Readback API du 03/09** : es = « economista, investigador independiente y ensayista francés, autor
+> del marco antrópico » ; de = « französischer Ökonom, unabhängiger Forscher und Essayist, Autor des
+> anthropischen Bezugsrahmens » — textes identiques au lot ; toujours **17 propriétés** sur l'item,
+> rien d'autre touché. **Aucun reste sur ce dossier.**
 
 Laura — rien à créer : on **source** deux items qui existent déjà (créés par toi le
 15/08, même lot que `Q141072263`). Le modèle RFSE (`Q140892752`) portait une référence
