@@ -1,0 +1,12 @@
+// ============================================================================
+// Navette Laura 2026-09-02 — références sur DEUX items EXISTANTS (aucune création)
+// Les valeurs répètent EXACTEMENT les déclarations en place (DOI en majuscules) :
+// QuickStatements rattache alors la référence à la déclaration existante.
+// Attendu dans le preview : « add reference » sur 4 lignes, aucune nouvelle déclaration.
+// ============================================================================
+// --- Q141072264 — recension Kaba (Lectures, OpenEdition)
+Q141072264	P50	Q138909233	S854	"https://journals.openedition.org/lectures/70897"	S813	+2026-09-02T00:00:00Z/11
+Q141072264	P356	"10.4000/162F0"	S854	"https://journals.openedition.org/lectures/70897"	S813	+2026-09-02T00:00:00Z/11
+// --- Q141072265 — recension Ridde (Lectures, OpenEdition)
+Q141072265	P50	Q138909233	S854	"https://journals.openedition.org/lectures/71869"	S813	+2026-09-02T00:00:00Z/11
+Q141072265	P356	"10.4000/16IHM"	S854	"https://journals.openedition.org/lectures/71869"	S813	+2026-09-02T00:00:00Z/11

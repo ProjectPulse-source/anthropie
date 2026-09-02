@@ -100,6 +100,11 @@ en retour (`works.yaml` v1.15), dossier daté reconstruit
 déclarée : les fiches publications ne portent pas de `wikidata_qid` et aucun gabarit ne l'émet ;
 un `sameAs` par item de l'`ItemList` reste un point ouvert nommé.
 
+**Navette préparée le 02/09 pour Laura** (commande auteur) : références `S854` + `S813` sur `P50` et
+`P356` des deux items — dossier `Wikidata/Import_Wikidata_Laura_2026-09-02_References_Lectures/`
+(4 lignes, lien direct), **en attente d'exécution** ; readback API à faire ensuite, puis ✅ dans
+le `README_LAURA.md` du dossier.
+
 ### 2026-08-17 — La dette passe en anglais : `/en/cost-of-french-public-debt/`
 
 **Motif** (question auteur sur le déséquilibre 14 mailles FR / 3 EN) : le vrai écart n'était
