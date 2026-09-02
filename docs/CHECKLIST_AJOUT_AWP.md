@@ -92,7 +92,15 @@ Lancer `hugo server` et vérifier sur les deux URLs FR et EN : balises `<meta na
 
 ## 6. Linter cohérence corpus
 
-Exécuter `python scripts/check-corpus-counters.py`. Doit sortir code 0 (aucune divergence). Si le linter détecte un chiffre dur obsolète (par exemple `cinq Anthropie Working Papers` quand on passe à 6) : corriger les occurrences listées avant commit.
+Exécuter `python scripts/check-corpus-counters.py`. Doit sortir code 0 (aucune divergence).
+
+Puis, dans la même passe : `python scripts/check-fiches-registre.py` (parité registre ↔ fiches, **AWP
+inclus depuis le 2026-09-02** : `wikidata_qid` identique sur `awp-NN.md` et `awp-NN.en.md`, il
+alimente le `sameAs` du ScholarlyArticle) et `python scripts/check-wikidata-registre.py` (parité
+Wikidata ↔ registre dans les deux sens, depuis le nœud auteur). **Écriture en retour obligatoire** :
+quand Laura rend le QID du nouvel AWP, il entre dans `data/works.yaml` (`wikidata:`) **et** dans les
+deux fiches, dans le même commit que le ✅ du dossier daté — les 8 premiers AWP ont vécu quatre mois
+sur Wikidata sans que le site le sache. Si le linter détecte un chiffre dur obsolète (par exemple `cinq Anthropie Working Papers` quand on passe à 6) : corriger les occurrences listées avant commit.
 
 ## 7. Mise à jour du hero index (FR + EN)
 

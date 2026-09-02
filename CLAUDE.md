@@ -67,6 +67,10 @@ Contextualisations propres à ce repo :
 
 - Linter cohérence corpus : `scripts/check-corpus-counters.py`
 - Linter couverture GEO (FR + miroir EN) : `scripts/check-geo-coverage.py`
+- Parité registre ↔ fiches (livres, AWP) : `scripts/check-fiches-registre.py` ;
+  parité Wikidata ↔ registre (deux sens) : `scripts/check-wikidata-registre.py` ;
+  sondage inverse des autres nœuds (Crossref, OpenLibrary, site, listes manuelles) :
+  `scripts/sondage-noeuds-externes.py`, condition de mort en tête du fichier.
 - Linter encodage console : `scripts/check-console-encoding.py` — un `print()`
   contenant « ✓ », « → » ou un emoji fait sortir **1** un script sain sous
   console Windows cp1252, ce qui est indiscernable d'un vrai échec. Le cookie
@@ -84,9 +88,12 @@ Contextualisations propres à ce repo :
   et ne fait pas foi. Règle : **tout geste laisse un dossier daté, même en une
   commande**, et se clôt par un readback API. Chaîne à boucler jusqu'au bout —
   item → `data/works.yaml` → `wikidata_qid` de la fiche → `sameAs` du JSON-LD ;
-  le dernier maillon est couvert par `check-fiches-registre.py`, **le premier ne
-  l'est par rien** (un diff QID automatique a été mesuré puis écarté : 61 faux
-  positifs sur 70).
+  le dernier maillon est couvert par `check-fiches-registre.py` (livres **et AWP**),
+  le premier par `check-wikidata-registre.py` depuis le 2026-09-02 — requête inverse
+  depuis le nœud auteur, deux sens ; 10 écarts trouvés le jour même, 0 faux positif
+  (un diff des QID cités dans le dossier avait été mesuré puis écarté : 61 faux
+  positifs sur 70). Le bloc ✅ d'un dossier daté cite le QID, le commit d'écriture
+  en retour et la sortie du script.
 - Instruments Zenodo : `scripts/zenodo_inventory.py` (recherche du corpus),
   `scripts/zenodo_stats.py` et `zenodo_stats_full.py` (vues et téléchargements).
   Audit des balises Google Scholar sur le site en ligne : `audit_scholar.sh`.
@@ -134,6 +141,9 @@ Trois règles en découlent, à appliquer à **toute** surface qui agrège ou re
 3. **Le registre est la source, la fiche doit le refléter.** `scripts/check-fiches-registre.py`
    compare fiches et `data/works.yaml` (QID, pagination, ISBN) et signale « le registre le
    sait, la fiche ne le dit pas ». À lancer avant commit, comme les autres linters.
+   Symétrique depuis le 2026-09-02 : `scripts/check-wikidata-registre.py` signale « Wikidata le
+   sait, le registre ne le dit pas » — la classe qui a laissé 8 AWP quatre mois sur Wikidata
+   sans `sameAs`. Un contrôle qui part du registre ne peut pas la voir ; il faut partir du nœud.
 
 ⚠ Un `warnf` **ne survit pas à `hugo --quiet`** (faux négatif observé le 11/08 en testant
 la première garde). La CI utilise `hugo --minify` sans `--quiet` : ne pas changer cela.

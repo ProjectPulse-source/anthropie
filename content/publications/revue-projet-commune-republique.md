@@ -4,6 +4,7 @@ date: 2026-07-08
 revue: "Revue Projet"
 source_type: "Revue"
 url_externe: "https://www.revue-projet.com/articles/2026-07-lalut-variable-d-ajustement-de-la-republique/11589"
+doi: "10.3917/pro.412.0078"
 image_type: "logo"
 chapo: "L'État transfère aux communes des compétences sans les financements : réforme après réforme, la charge descend jusqu'aux ménages captifs, privés d'alternative. Derrière le solde de la dette publique se cache une géographie du pouvoir — qui fixe l'ordre ici, qui en absorbe la dette ailleurs ?"
 chapo_en: "The state hands local councils new duties without the funding: reform after reform, the burden slides down to the captive households left without an alternative. Behind the public-debt balance lies a geography of power — who sets order here, and who absorbs the debt elsewhere?"

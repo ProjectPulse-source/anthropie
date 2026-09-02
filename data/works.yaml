@@ -21,12 +21,17 @@
 # =============================================================================
 
 meta:
-  registry_version: "1.16"
+  registry_version: "1.17"
   last_updated: "2026-09-02"
   maintainer: "Stéphane Lalut"
   total_works: 41
   source_registry: "registre_soumissions_v73.xlsx"
   changelog:
+    v1_17: |
+      Sondage inverse des nœuds externes (2026-09-02) : Crossref par auteur révèle
+      le DOI Cairn de l'article Revue Projet (10.3917/pro.412.0078), jamais enregistré ;
+      OpenLibrary par auteur : 4 livres sur 5 sans bloc openlibrary au registre (les
+      identifiants canoniques ne vivaient que dans PROJECT_STATUS). Écrits en retour.
     v1_16: |
       Vérification de Q138909233 (2026-09-02) : 19 items portent P50 → auteur, le
       registre n'en connaissait que 9. Écriture en retour des 10 manquants — les 8 AWP
@@ -421,6 +426,9 @@ works:
 
   - id: book-anthropie
     type: book
+    openlibrary:
+      work: "OL45424564W"  # œuvre CANONIQUE lue sur /authors/OL16378291A/works.json le 2026-09-02 (post-fusions OL du 26/08) — écriture en retour
+      author: "OL16378291A"
     canonical_title:
       fr: "ANTHROPIE — Ordre ici. Dette ailleurs"
       en: "ANTHROPY — Order here. Debt elsewhere"  # aligné 2026-07-05 sur l'usage des 6 PDF EN de la série (T12) ; forme canonique de citation — le titre commercial de l'édition EN vit dans english_edition
@@ -466,6 +474,9 @@ works:
 
   - id: book-dette-publique
     type: book
+    openlibrary:
+      work: "OL45424599W"  # œuvre CANONIQUE lue sur /authors/OL16378291A/works.json le 2026-09-02 (post-fusions OL du 26/08) — écriture en retour
+      author: "OL16378291A"
     canonical_title:
       fr: "Dette Publique : Qui paie vraiment ?"
       en: "Public Debt: Who Really Pays?"  # tentative
@@ -538,6 +549,9 @@ works:
 
   - id: book-livresque-des-mots
     type: book
+    openlibrary:
+      work: "OL45424544W"  # œuvre CANONIQUE lue sur /authors/OL16378291A/works.json le 2026-09-02 (post-fusions OL du 26/08) — écriture en retour
+      author: "OL16378291A"
     canonical_title:
       fr: "Livresque des mots"
       en: ""  # n/a
@@ -581,6 +595,9 @@ works:
 
   - id: book-lodyssee-des-idees
     type: book
+    openlibrary:
+      work: "OL45424562W"  # œuvre CANONIQUE lue sur /authors/OL16378291A/works.json le 2026-09-02 (post-fusions OL du 26/08) — écriture en retour
+      author: "OL16378291A"
     canonical_title:
       fr: "L'Odyssée des idées"
       en: ""  # n/a
@@ -843,6 +860,7 @@ works:
     publisher_type: "revue"
     source_type: "Revue"
     url: "https://www.revue-projet.com/articles/2026-07-lalut-variable-d-ajustement-de-la-republique/11589"
+    doi: "10.3917/pro.412.0078"  # Cairn, Revue Projet 2026/3 (n° 412), p. 78-81, daté 2026-06-01 — trouvé par requête Crossref auteur le 2026-09-02, absent du registre et de la fiche jusque-là
     chapo:
       fr: "L'État transfère aux communes des compétences sans les financements : réforme après réforme, la charge descend jusqu'aux ménages captifs, privés d'alternative. Derrière le solde de la dette publique se cache une géographie du pouvoir — qui fixe l'ordre ici, qui en absorbe la dette ailleurs ?"
       en: "The state hands local councils new duties without the funding: reform after reform, the burden slides down to the captive households left without an alternative. Behind the public-debt balance lies a geography of power — who sets order here, and who absorbs the debt elsewhere?"

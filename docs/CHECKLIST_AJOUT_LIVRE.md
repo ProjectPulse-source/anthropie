@@ -104,6 +104,10 @@ Front matter — modèle : `anthropie-ordre-ici-dette-ailleurs.md` :
       boutons Amazon Broché/Kindle par marché.
 - [ ] `python scripts/check-corpus-counters.py` → exit 0.
 - [ ] `python scripts/audit_works.py` → pas de warning nouveau.
+- [ ] `python scripts/check-wikidata-registre.py` → exit 0 (parité Wikidata ↔ `works.yaml`
+      dans les DEUX sens : requête inverse depuis le nœud auteur, `haswbstatement:P50=…`,
+      contre les QID déclarés — attrape « l'item existe, le registre ne le sait pas »,
+      la classe des 10 trous du 2026-09-02 ; exit 2 = Wikidata injoignable, rien conclu).
 - [ ] `python scripts/check-fiches-registre.py` → exit 0 (parité fiche ↔ `works.yaml` :
       QID Wikidata, pagination, ISBN — attrape « le registre le sait, la fiche ne le dit pas »).
 - [ ] `hugo --minify` → build OK.

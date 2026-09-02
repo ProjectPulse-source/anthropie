@@ -41,9 +41,16 @@
 > Un QID obtenu n'existe pour le site que s'il redescend jusqu'à la page :
 > **item Wikidata → `data/works.yaml` → front matter `wikidata_qid` de la fiche**
 > → `sameAs` du JSON-LD. `python scripts/check-fiches-registre.py` couvre le
-> dernier maillon (registre → fiche) ; **le premier — Wikidata → registre — n'est
-> couvert par aucun contrôle**, il repose sur le dossier daté. Un contrôle
-> automatique a été envisagé et **écarté par la mesure** : les fichiers du dossier
+> dernier maillon (registre → fiche, livres **et AWP**) ; **le premier — Wikidata →
+> registre — est couvert depuis le 2026-09-02 par `python scripts/check-wikidata-registre.py`** :
+> requête inverse depuis le nœud auteur (`haswbstatement:P50=Q138909233`), comparée aux
+> QID déclarés au registre, dans les deux sens (absent du registre ; inexistant, redirigé
+> ou sans P50). Témoin positif le jour de son écriture : **10 écarts, 0 faux positif** —
+> les 8 AWP, la série et une recension vivaient sur Wikidata depuis des mois sans que le
+> site le sache. **Le bloc ✅ d'un dossier daté cite désormais trois choses** : le QID
+> rendu, le commit qui l'a écrit en retour dans `data/works.yaml` (et la fiche), et la
+> sortie à 0 de ce script. Un diff des QID cités dans les fichiers du dossier avait
+> d'abord été envisagé, et **écarté par la mesure** : les fichiers du dossier
 > citent 70 QID dont l'essentiel est du vocabulaire et jusqu'à un exemple factice
 > (`Q1234567`) — un diff QID produirait 61 faux positifs, soit l'inverse d'un
 > garde-fou.

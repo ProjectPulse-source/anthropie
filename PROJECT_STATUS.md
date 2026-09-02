@@ -119,6 +119,25 @@ seule (Q141072266, distinct du bloc à DOI Q140892752) n'existaient nulle part d
 `check-fiches-registre.py` étendu aux AWP (parité registre ↔ fiche FR et EN). Mapping AWP ↔ QID
 confirmé par égalité des DOI Zenodo FR sur les 8.
 
+**Protocole (commande auteur : « éviter cela à l'avenir ; d'autres trous ? »).** La classe est « un
+nœud externe connaît une œuvre, le registre l'ignore » ; le seul contrôle qui la voit part du **nœud**
+vers le registre, jamais l'inverse. (1) `scripts/check-wikidata-registre.py` : requête inverse
+`haswbstatement:P50=Q138909233` contre tous les QID du registre, deux sens, témoin par mutation sur
+copie (QID retiré → écart ; QID inexistant → « inexistant » ; ancien doublon Livresque `Q138911600`
+→ « redirigé ») ; raccordé aux trois checklists, au `README.md` de `Wikidata/` (le bloc ✅ cite
+désormais le commit d'écriture en retour et la sortie du script) et au `CLAUDE.md`. Pas de tir
+mensuel en CI : le geste qui crée le trou est une clôture de navette, c'est là que le contrôle se
+lance. (2) Même logique appliquée aux autres nœuds (`scripts/sondage-noeuds-externes.py`, condition
+de mort écrite en tête) : **Crossref par auteur** → le DOI Cairn de l'article Revue Projet
+(`10.3917/pro.412.0078`) n'était ni au registre ni en fiche — écrit, la carte l'affiche ;
+**OpenLibrary par auteur** → 4 livres sur 5 sans bloc `openlibrary` au registre, les œuvres
+canoniques post-fusion ne vivaient que dans ce journal — écrites (v1.17) ; **site ↔ registre**
+(19 fiches / 19 articles publiés, deux sens) et **listes manuelles** (`intent_matrix`,
+`presse_objets` FR/EN) : à zéro ; **Zenodo** : la direction communauté → registre est déjà couverte
+par `zenodo_audit_complet.py` (jeton requis, à lancer par l'auteur) ; **ORCID / OpenAlex** :
+couverts par `audit_works.py`. Sondage relancé après écritures : 0 écart. Exclusion déclarée : les
+fiches livres n'émettent pas de `sameAs` OpenLibrary (point ouvert GEO, pas un trou de registre).
+
 ### 2026-08-17 — La dette passe en anglais : `/en/cost-of-french-public-debt/`
 
 **Motif** (question auteur sur le déséquilibre 14 mailles FR / 3 EN) : le vrai écart n'était
