@@ -76,6 +76,15 @@ EN ; URL dans l'ItemList JSON-LD ; `&lt;em&gt;` absent du rendu ; fiche noindex 
 sitemap ; `check-corpus-counters`, `check-fiches-registre`, `check-geo-coverage` à 0 ;
 `audit_works` 0 échec.
 
+**Après push (`a60a0c8`, rebasé sur le commit Wayback du 01/09)** : déploiement et IndexNow
+verts (59 URL, HTTP 200). **Search Console, 02/09** (commande auteur, via Chrome) :
+indexation demandée sur 8 URL — `/publications/`, `/en/publications/`, `/a-propos/`,
+`/en/a-propos/`, `/awp/awp-02/`, `/awp/awp-06/` et les deux miroirs EN des AWP.
+**Relevé externe daté** : `/publications/` n'avait plus été explorée depuis le 31/07 ;
+`/en/publications/` était **« détectée, actuellement non indexée »**, jamais explorée — la
+liste anglaise n'existait pas pour Google avant cette demande. À revérifier à J+7 par
+inspection d'URL ; passé ce délai, ce relevé redevient une hypothèse.
+
 ### 2026-08-17 — La dette passe en anglais : `/en/cost-of-french-public-debt/`
 
 **Motif** (question auteur sur le déséquilibre 14 mailles FR / 3 EN) : le vrai écart n'était
