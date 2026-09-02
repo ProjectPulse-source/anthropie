@@ -88,6 +88,18 @@ Outlook du 2026-09-09 09h00, rappel actif, corps = la commande à coller (canal 
 un seul). La vérification elle-même exige la session Search Console : aucune routine cloud
 ni script ne peut l'exécuter sans identifiants API que l'auteur devrait créer lui-même.
 
+**Wikidata, même session — deux items « à créer » qui existaient déjà.** Question auteur : les
+publications doivent-elles être sur Wikidata ? Réponse actée : oui pour les recensions en revue à
+comité de lecture avec DOI, non pour la presse intellectuelle sans DOI (notabilité, auto-promotion).
+Les deux recensions *Lectures* (Kaba, Ridde) ont été annoncées « à créer » sur la foi de
+`works.yaml` ; la recherche `haswbstatement:P356=<DOI>` à la source a rendu **`Q141072264`** et
+**`Q141072265`**, créés le **15/08 par Laura** dans le lot du livre `Q141072263` et jamais
+reportés au registre — la classe même que le `README.md` de `Wikidata/` décrit. Fait : écriture
+en retour (`works.yaml` v1.15), dossier daté reconstruit
+`Wikidata/Import_Wikidata_Laura_2026-08-15_Recensions_Lectures/` avec readback API. Exclusion
+déclarée : les fiches publications ne portent pas de `wikidata_qid` et aucun gabarit ne l'émet ;
+un `sameAs` par item de l'`ItemList` reste un point ouvert nommé.
+
 ### 2026-08-17 — La dette passe en anglais : `/en/cost-of-french-public-debt/`
 
 **Motif** (question auteur sur le déséquilibre 14 mailles FR / 3 EN) : le vrai écart n'était

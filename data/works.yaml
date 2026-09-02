@@ -21,12 +21,17 @@
 # =============================================================================
 
 meta:
-  registry_version: "1.14"
+  registry_version: "1.15"
   last_updated: "2026-09-02"
   maintainer: "Stéphane Lalut"
   total_works: 41
   source_registry: "registre_soumissions_v73.xlsx"
   changelog:
+    v1_15: |
+      Écriture en retour (2026-09-02) : QID posés sur les deux recensions Lectures —
+      art-lectures-kaba-2026-04 → Q141072264, art-lectures-ridde-2026-05 → Q141072265.
+      Items créés le 2026-08-15 par Laura (même lot que Q141072263) et jamais
+      reportés ici ; découverts par recherche P356 à la source. Aucun ajout d'œuvre.
     v1_14: |
       Ajout recension Lalut (2026-09-02) — En attendant Nadeau n° 249,
       « Le passé recalculé », sur Histoire culturelle de l'IA (Alexandre
@@ -743,6 +748,7 @@ works:
     source_type: "Académique"
     url: "https://journals.openedition.org/lectures/70897"
     doi: "10.4000/162f0"
+    wikidata: "Q141072264"  # créé par Laura le 2026-08-15 (QuickStatements), readback API 2026-09-02 conforme — dossier Import_Wikidata_Laura_2026-08-15_Recensions_Lectures
     chapo:
       fr: "Bhopal, trente ans après : ce livre ne parle pas du désastre. Il montre comment les ouvriers métallurgistes construisent, dans l'ombre des ruines, identité professionnelle et dignité — par les gestes, les savoir-faire et les cultures du travail informel."
       en: "Bhopal, thirty years on: this book is not about the disaster. It shows how metalworkers, living in the shadow of the ruins, build professional identity and dignity through gesture, craft, and the cultures of informal labour."
@@ -1002,6 +1008,7 @@ works:
     source_type: "Académique"
     url: "https://journals.openedition.org/lectures/71869"
     doi: "10.4000/16ihm"
+    wikidata: "Q141072265"  # créé par Laura le 2026-08-15 (QuickStatements), readback API 2026-09-02 conforme — dossier Import_Wikidata_Laura_2026-08-15_Recensions_Lectures
     sign_count: 8970
     chapo:
       fr: "Le paiement direct des soins n'est pas né des ajustements structurels des années 1980. Archives à l'appui, Valéry Ridde montre que le Sénégal colonial faisait déjà payer les patients africains — tarifs hospitaliers, taxes médicales, primes aux soignants — sous couvert de gratuité proclamée."
@@ -1019,7 +1026,7 @@ works:
 #    - FAIT (2026-06-08) : pages 672, publication_date, ASIN broché, site_pages.fr,
 #      purchase_url, corpus_stats (chiffres canoniques 4 658/1 388/25/40)
 #    - Restent : abstract_short.fr (rédiger en référençant corpus_stats, sans
-#      recopier les chiffres) + keywords ; wikidata (à créer)
+#      recopier les chiffres) + keywords ; wikidata : FAIT (Q140517745)
 #
 # 2. book-dette-publique.pages : FAIT (224, 2026-05-30)
 #

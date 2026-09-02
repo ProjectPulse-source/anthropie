@@ -1,0 +1,29 @@
+Readback API Wikidata du 2026-09-02 (Special:EntityData, lecture seule)
+
+===== Q141072264 (art-lectures-kaba-2026-04) | lastrevid 2531520818 | modified 2026-08-14T23:53:51Z
+  label fr : Arnaud Kaba, La main et l'esprit. Valeurs du travail chez les ouvriers métallurgistes de Bhopal
+  label en : Arnaud Kaba, La main et l'esprit. Valeurs du travail chez les ouvriers métallurgistes de Bhopal
+  descr fr : compte rendu de lecture par Stéphane Lalut, revue Lectures (2026)
+  descr en : book review by Stéphane Lalut in the journal Lectures (2026)
+  P31 = Q637866  (refs=0, rank=normal)
+  P50 = Q138909233  (refs=0, rank=normal)
+  P407 = Q150  (refs=0, rank=normal)
+  P1433 = Q28587733  (refs=0, rank=normal)
+  P577 = +2026-04-14T00:00:00Z  (refs=0, rank=normal)
+  P356 = 10.4000/162F0  (refs=0, rank=normal)
+  P953 = https://journals.openedition.org/lectures/70897  (refs=0, rank=normal)
+  P1476 = Arnaud Kaba, La main et l'esprit. Valeurs du travail chez les ouvriers métallurgistes de Bhopal  (refs=0, rank=normal)
+
+===== Q141072265 (art-lectures-ridde-2026-05) | lastrevid 2531520845 | modified 2026-08-14T23:54:03Z
+  label fr : Valéry Ridde, La financiarisation de la santé au Sénégal (1840-1960)
+  label en : Valéry Ridde, La financiarisation de la santé au Sénégal (1840-1960)
+  descr fr : compte rendu de lecture par Stéphane Lalut, revue Lectures (2026)
+  descr en : book review by Stéphane Lalut in the journal Lectures (2026)
+  P31 = Q637866  (refs=0, rank=normal)
+  P50 = Q138909233  (refs=0, rank=normal)
+  P407 = Q150  (refs=0, rank=normal)
+  P1433 = Q28587733  (refs=0, rank=normal)
+  P577 = +2026-07-03T00:00:00Z  (refs=0, rank=normal)
+  P356 = 10.4000/16IHM  (refs=0, rank=normal)
+  P953 = https://journals.openedition.org/lectures/71869  (refs=0, rank=normal)
+  P1476 = Valéry Ridde, La financiarisation de la santé au Sénégal (1840-1960)  (refs=0, rank=normal)
