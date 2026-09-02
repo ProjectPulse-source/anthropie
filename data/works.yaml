@@ -21,12 +21,17 @@
 # =============================================================================
 
 meta:
-  registry_version: "1.15"
+  registry_version: "1.16"
   last_updated: "2026-09-02"
   maintainer: "Stéphane Lalut"
   total_works: 41
   source_registry: "registre_soumissions_v73.xlsx"
   changelog:
+    v1_16: |
+      Vérification de Q138909233 (2026-09-02) : 19 items portent P50 → auteur, le
+      registre n'en connaissait que 9. Écriture en retour des 10 manquants — les 8 AWP
+      (wikidata:), la série (author.wikidata_series) et l'item de la recension RFSE
+      seule (art-rfse-lemoine-2026.wikidata_review). Aucun ajout d'œuvre.
     v1_15: |
       Écriture en retour (2026-09-02) : QID posés sur les deux recensions Lectures —
       art-lectures-kaba-2026-04 → Q141072264, art-lectures-ridde-2026-05 → Q141072265.
@@ -149,6 +154,7 @@ author:
   ssrn_profile: "11065608"
   wikidata_person: "Q138909233"
   wikidata_concept: "Q138827949"
+  wikidata_series: "Q139040913"  # série Anthropie Working Papers (P50 → auteur), écriture en retour 2026-09-02
   google_scholar: "J4NqzwSfrHAC"
   idref: "283054085"
   email_public: "stephane-lalut@outlook.fr"
@@ -159,11 +165,12 @@ author:
 works:
 
   # ===========================================================================
-  # ANTHROPIE WORKING PAPERS (6)
+  # ANTHROPIE WORKING PAPERS
   # ===========================================================================
 
   - id: awp-01
     type: awp
+    wikidata: "Q139771989"  # item de l'œuvre (P356 = DOI Zenodo FR ; labels FR+EN) — créé 05/2026 (AWP-01..06) / 07/2026 (07, 08), écriture en retour 2026-09-02 d'après haswbstatement:P50=Q138909233
     series: "Anthropie Working Papers"
     series_number: 1
     canonical_title:
@@ -195,6 +202,7 @@ works:
 
   - id: awp-02
     type: awp
+    wikidata: "Q139771990"  # item de l'œuvre (P356 = DOI Zenodo FR ; labels FR+EN) — créé 05/2026 (AWP-01..06) / 07/2026 (07, 08), écriture en retour 2026-09-02 d'après haswbstatement:P50=Q138909233
     series: "Anthropie Working Papers"
     series_number: 2
     canonical_title:
@@ -227,6 +235,7 @@ works:
 
   - id: awp-03
     type: awp
+    wikidata: "Q139771991"  # item de l'œuvre (P356 = DOI Zenodo FR ; labels FR+EN) — créé 05/2026 (AWP-01..06) / 07/2026 (07, 08), écriture en retour 2026-09-02 d'après haswbstatement:P50=Q138909233
     series: "Anthropie Working Papers"
     series_number: 3
     canonical_title:
@@ -259,6 +268,7 @@ works:
 
   - id: awp-04
     type: awp
+    wikidata: "Q139771992"  # item de l'œuvre (P356 = DOI Zenodo FR ; labels FR+EN) — créé 05/2026 (AWP-01..06) / 07/2026 (07, 08), écriture en retour 2026-09-02 d'après haswbstatement:P50=Q138909233
     series: "Anthropie Working Papers"
     series_number: 4
     canonical_title:
@@ -289,6 +299,7 @@ works:
 
   - id: awp-05
     type: awp
+    wikidata: "Q139771993"  # item de l'œuvre (P356 = DOI Zenodo FR ; labels FR+EN) — créé 05/2026 (AWP-01..06) / 07/2026 (07, 08), écriture en retour 2026-09-02 d'après haswbstatement:P50=Q138909233
     series: "Anthropie Working Papers"
     series_number: 5
     canonical_title:
@@ -317,6 +328,7 @@ works:
 
   - id: awp-06
     type: awp
+    wikidata: "Q139771994"  # item de l'œuvre (P356 = DOI Zenodo FR ; labels FR+EN) — créé 05/2026 (AWP-01..06) / 07/2026 (07, 08), écriture en retour 2026-09-02 d'après haswbstatement:P50=Q138909233
     series: "Anthropie Working Papers"
     series_number: 6
     canonical_title:
@@ -346,6 +358,7 @@ works:
 
   - id: awp-07
     type: awp
+    wikidata: "Q140446195"  # item de l'œuvre (P356 = DOI Zenodo FR ; labels FR+EN) — créé 05/2026 (AWP-01..06) / 07/2026 (07, 08), écriture en retour 2026-09-02 d'après haswbstatement:P50=Q138909233
     series: "Anthropie Working Papers"
     series_number: 7
     canonical_title:
@@ -376,6 +389,7 @@ works:
 
   - id: awp-08
     type: awp
+    wikidata: "Q140680750"  # item de l'œuvre (P356 = DOI Zenodo FR ; labels FR+EN) — créé 05/2026 (AWP-01..06) / 07/2026 (07, 08), écriture en retour 2026-09-02 d'après haswbstatement:P50=Q138909233
     series: "Anthropie Working Papers"
     series_number: 8
     canonical_title:
@@ -846,6 +860,7 @@ works:
     url: "https://shs.cairn.info/revue-francaise-de-socio-economie-2026-1-page-247"
     doi: "10.3917/rfse.036.0247"
     wikidata: "Q140892752"  # item du bloc « Comptes rendus d'ouvrages » (7 recenseurs), créé par Laura le 2026-08-05, readback API conforme
+    wikidata_review: "Q141072266"  # item de la recension SEULE (P31 compte rendu, P1433 RFSE, sans DOI), créé par Laura le 2026-08-15 ; distinct du bloc ci-dessus, qui porte le DOI — écriture en retour 2026-09-02
     chapo:
       fr: "Une créance argentine rachetée 177 millions de dollars, remboursée 2,4 milliards par décision d'un tribunal de Manhattan. Benjamin Lemoine démonte la fabrique juridique de cette domination : des États qui signent eux-mêmes la levée de leur immunité, et des coûts d'ajustement que les populations absorbent."
       en: "Argentine debt bought for $177 million and repaid at $2.4 billion by order of a Manhattan court. Benjamin Lemoine dissects the legal machinery of that domination: states signing away their own immunity, and adjustment costs their populations end up absorbing."

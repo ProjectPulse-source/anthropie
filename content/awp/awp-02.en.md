@@ -11,6 +11,7 @@ outputs:
   - EndNote
 description: "Anthropy traverses 3.3 million years of human history across seven configurations — from the first tool to the digital meta-programme. The displacement of disorder is a structural mechanism of human societies, not an accident of modernity."
 doi_zenodo: "10.5281/zenodo.19433086"
+wikidata_qid: "Q139771990"  # same work item as the FR paper — feeds ScholarlyArticle sameAs
 url_zenodo: "https://zenodo.org/records/19433086"
 ssrn_url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6615059"
 jel_codes: ["N00", "B15", "Q56"]

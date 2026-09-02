@@ -10,6 +10,7 @@ outputs:
   - EndNote
 description: "La transition énergétique réduit-elle le désordre ou le déplace-t-elle ? Ce working paper examine les mécanismes anthropiques dans les politiques énergétiques contemporaines : extraction externalisée, déchets reportés, effet rebond non comptabilisé."
 doi_zenodo: "10.5281/zenodo.19269244"
+wikidata_qid: "Q139771992"  # item de l'œuvre (FR+EN) — alimente sameAs du ScholarlyArticle
 url_zenodo: "https://zenodo.org/records/19269244"
 jel_codes: ["Q42", "Q56", "O33"]
 keywords: ["transition énergétique", "anthropie", "transfert entropique", "extraction minière", "effet rebond", "effet Jevons"]

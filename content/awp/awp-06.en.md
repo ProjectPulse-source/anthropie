@@ -12,6 +12,7 @@ outputs:
   - EndNote
 description: "Existing analyses of digital infrastructures often treat materialist critique, opacity studies, and environmental footprint accounting as separate approaches, thereby missing the broader regime that connects them. This paper applies the framework of anthropy to contemporary digital infrastructures: data centers, generative AI, material supply chains, host territories, and public guarantee mechanisms."
 doi_zenodo: "10.5281/zenodo.20077993"
+wikidata_qid: "Q139771994"  # same work item as the FR paper — feeds ScholarlyArticle sameAs
 url_zenodo: "https://zenodo.org/records/20077993"
 jel_codes: ["L86", "Q55", "L96", "Q56", "O33"]
 keywords: ["anthropy", "data centers", "generative AI", "derisking", "digital infrastructures"]

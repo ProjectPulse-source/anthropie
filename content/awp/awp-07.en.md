@@ -11,6 +11,7 @@ outputs:
   - EndNote
 description: "Existing frameworks for tracking displaced costs describe segments of the displacement — the shift (Kapp), the aggregate balance (Georgescu-Roegen), the attentional toll (Stiegler) — but not the full cycle that links them. AWP-07 formalises the anthropic loop as a conceptual state machine: displacement, accumulation, saturation, return, re-displacement."
 doi_zenodo: "10.5281/zenodo.21200288"
+wikidata_qid: "Q140446195"  # same work item as the FR paper — feeds ScholarlyArticle sameAs
 url_zenodo: "https://zenodo.org/records/21200288"
 jel_codes: ["B41", "B52", "D62", "Q57"]
 keywords: ["anthropy", "anthropic loop", "disorder displacement", "cost-shifting", "social costs", "K. William Kapp", "Bernard Stiegler", "neganthropy", "Nicholas Georgescu-Roegen", "bioeconomics", "anthropic saturation", "return transmutation"]

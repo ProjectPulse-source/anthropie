@@ -11,6 +11,7 @@ outputs:
   - EndNote
 description: "Does the academic field displace epistemic disorder toward its margins? This working paper applies the framework of anthropy to the field itself, examines relegation mechanisms, and questions the role of open infrastructures (Zenodo, ORCID)."
 doi_zenodo: "10.5281/zenodo.19440866"
+wikidata_qid: "Q139771993"  # same work item as the FR paper — feeds ScholarlyArticle sameAs
 url_zenodo: "https://zenodo.org/records/19440866"
 ssrn_url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6615438"
 jel_codes: ["A11", "B41", "I23"]

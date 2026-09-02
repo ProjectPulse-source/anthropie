@@ -17,6 +17,12 @@ Les deux premiers sont desormais couverts par le gabarit (auteur-wall) et par
 REGISTRE sait et que la FICHE ne dit pas, et les valeurs presentes des deux
 cotes qui ont DIVERGE.
 
+EXTENSION (2026-09-02) : meme regle pour les working papers. La verification de
+l'item auteur Q138909233 a montre 19 oeuvres pointant vers lui quand le registre
+n'en connaissait que 9 -- les 8 AWP n'avaient de QID ni au registre ni en fiche,
+donc pas de `sameAs` Wikidata sur le ScholarlyArticle. Les fiches FR et EN d'un
+AWP portent le MEME item (une oeuvre, deux textes).
+
 Principe : le registre est la source de verite ; la fiche doit la refleter.
 On ne signale JAMAIS un champ absent des deux cotes -- ce n'est pas une
 incoherence, c'est un travail a faire, suivi ailleurs (checklists, works.yaml).
@@ -52,7 +58,7 @@ CHAMPS = [("wikidata", "wikidata_qid"), ("pages", "pages"), ("isbn", "isbn")]
 
 
 def front_matter(path: Path) -> dict:
-    m = re.search(r"(?s)\A---\n(.*?)\n---", path.read_text(encoding="utf-8"))
+    m = re.search(r"(?s)\A---\r?\n(.*?)\r?\n---", path.read_text(encoding="utf-8"))
     if not m:
         return {}
     return yaml.safe_load(m.group(1)) or {}
@@ -77,6 +83,7 @@ def compare(etiquette: str, reg: dict, fiche: dict, out: list) -> None:
 def main() -> int:
     registre = yaml.safe_load((ROOT / "data" / "works.yaml").read_text(encoding="utf-8"))
     livres = {w["id"]: w for w in registre["works"] if w.get("type") == "book"}
+    awps = {w["id"]: w for w in registre["works"] if w.get("type") == "awp"}
     ecarts: list[str] = []
 
     for bid, oeuvre in livres.items():
@@ -97,7 +104,16 @@ def main() -> int:
             if fiche_en.exists():
                 compare(f"{slug}.en", edition_en, front_matter(fiche_en), ecarts)
 
-    print(f"Parite fiche <-> registre : {len(livres)} livre(s) au registre")
+    # Working papers : la fiche FR et la fiche EN refletent le MEME item.
+    for aid, oeuvre in awps.items():
+        for suffix in (".md", ".en.md"):
+            fiche = ROOT / "content" / "awp" / f"{aid}{suffix}"
+            if not fiche.exists():
+                ecarts.append(f"{aid} : fiche content/awp/{aid}{suffix} INTROUVABLE")
+                continue
+            compare(f"{aid}{suffix}", oeuvre, front_matter(fiche), ecarts)
+
+    print(f"Parite fiche <-> registre : {len(livres)} livre(s), {len(awps)} AWP au registre")
     if not ecarts:
         print("\nAucune divergence. OK")
         return 0

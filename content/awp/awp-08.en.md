@@ -11,6 +11,7 @@ outputs:
   - EndNote
 description: "Inequality is measured in stocks (income, wealth) and flows (mobility), but almost never by what a person can afford to fail at without durably closing off their future. This working paper builds social reversibility as a third dimension of inequality: the capacity, assessed before an attempt, to withstand its failure. It offers a definition, a measurement architecture, four families of testable propositions, and an identification protocol. A refutable framework, not an empirical result. Extends the anthropic programme (AWP-01, AWP-07)."
 doi_zenodo: "10.5281/zenodo.21507249"
+wikidata_qid: "Q140680750"  # same work item as the FR paper — feeds ScholarlyArticle sameAs
 url_zenodo: "https://zenodo.org/records/21507249"
 jel_codes: ["D63", "D81", "I32", "J62", "D31", "I38"]
 keywords: ["social reversibility", "fallback capacity", "institutional memory", "readmission", "complementarity", "inequality"]

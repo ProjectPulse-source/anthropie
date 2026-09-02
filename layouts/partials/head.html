@@ -214,6 +214,7 @@
 {{- $article = merge $article (dict "about" (dict "@type" "DefinedTerm" "@id" (printf "%s#concept" $conceptURL) "name" $conceptName "url" $conceptURL "sameAs" (slice "https://www.wikidata.org/entity/Q138827949"))) -}}
 {{- $sameAs := slice (printf "https://doi.org/%s" .Params.doi_zenodo) -}}
 {{- with .Params.ssrn_url -}}{{- $sameAs = $sameAs | append . -}}{{- end -}}
+{{- with .Params.wikidata_qid -}}{{- $sameAs = $sameAs | append (printf "https://www.wikidata.org/entity/%s" .) -}}{{- end -}}
 {{- $article = merge $article (dict "sameAs" $sameAs) -}}
 {{- with .Params.keywords -}}{{- $article = merge $article (dict "keywords" .) -}}{{- end -}}
 {{- with .Params.translation -}}

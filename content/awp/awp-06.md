@@ -12,6 +12,7 @@ outputs:
   - EndNote
 description: "L'anthropie désigne le mécanisme par lequel les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. Cet article examine les infrastructures numériques contemporaines — data centers, IA générative, chaînes matérielles, territoires d'accueil, dispositifs de garantie publique — comme régime structuré de déplacement."
 doi_zenodo: "10.5281/zenodo.20025421"
+wikidata_qid: "Q139771994"  # item de l'œuvre (FR+EN) — alimente sameAs du ScholarlyArticle
 url_zenodo: "https://zenodo.org/records/20025421"
 jel_codes: ["L86", "Q55"]
 keywords: ["anthropie", "data centers", "IA générative", "derisking", "infrastructures numériques"]

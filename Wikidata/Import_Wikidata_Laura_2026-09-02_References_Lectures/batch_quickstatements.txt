@@ -10,3 +10,8 @@ Q141072264	P356	"10.4000/162F0"	S854	"https://journals.openedition.org/lectures/
 // --- Q141072265 — recension Ridde (Lectures, OpenEdition)
 Q141072265	P50	Q138909233	S854	"https://journals.openedition.org/lectures/71869"	S813	+2026-09-02T00:00:00Z/11
 Q141072265	P356	"10.4000/16IHM"	S854	"https://journals.openedition.org/lectures/71869"	S813	+2026-09-02T00:00:00Z/11
+// --- Q138909233 — item auteur : deux descriptions fautives (relues à l'API le 02/09)
+//     es : « economista e investigador independiente francès, autor del marco antropico »
+//     de : « Französischer unabhängiger ükonom under forscher, autor des anthropischen rahmens »
+Q138909233	Des	"economista, investigador independiente y ensayista francés, autor del marco antrópico"
+Q138909233	Dde	"französischer Ökonom, unabhängiger Forscher und Essayist, Autor des anthropischen Bezugsrahmens"

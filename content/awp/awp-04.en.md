@@ -10,6 +10,7 @@ outputs:
   - EndNote
 description: "Does the energy transition reduce disorder or merely displace it? This working paper examines anthropic mechanisms in contemporary energy policies: externalised extraction, deferred waste, unaccounted rebound effects."
 doi_zenodo: "10.5281/zenodo.19439921"
+wikidata_qid: "Q139771992"  # same work item as the FR paper — feeds ScholarlyArticle sameAs
 url_zenodo: "https://zenodo.org/records/19439921"
 ssrn_url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6615305"
 jel_codes: ["Q42", "Q56", "O33"]

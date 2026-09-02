@@ -11,6 +11,7 @@ outputs:
   - EndNote
 description: "Le champ académique déplace-t-il du désordre épistémique vers ses marges ? Ce working paper applique le cadre anthropique au champ lui-même, examine les mécanismes de relégation et interroge le rôle des infrastructures ouvertes (Zenodo, ORCID)."
 doi_zenodo: "10.5281/zenodo.19269487"
+wikidata_qid: "Q139771993"  # item de l'œuvre (FR+EN) — alimente sameAs du ScholarlyArticle
 url_zenodo: "https://zenodo.org/records/19269487"
 jel_codes: ["A11", "B41", "I23"]
 keywords: ["recherche indépendante", "anthropie", "ordre épistémique", "légitimité académique", "infrastructures ouvertes"]

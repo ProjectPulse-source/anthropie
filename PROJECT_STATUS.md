@@ -105,6 +105,20 @@ un `sameAs` par item de l'`ItemList` reste un point ouvert nommé.
 (4 lignes, lien direct), **en attente d'exécution** ; readback API à faire ensuite, puis ✅ dans
 le `README_LAURA.md` du dossier.
 
+**Vérification de `Q138909233` (commande auteur, 02/09, relecture API).** Identifiants tous
+présents et conformes à `data/author.toml` (ORCID, OpenAlex, Google Scholar, Academia, SSRN, IdRef,
+SocArXiv ; en plus VIAF et OpenLibrary `OL16378291A`, l'auteur canonique post-fusion) ; `P800`
+porte les 5 livres, le concept, la série et les 8 AWP. **Deux défauts** : descriptions es/de
+fautives (corrections ajoutées à la navette du 02/09, 6 lignes désormais) ; et surtout **19 items
+portent `P50` → auteur alors que le registre n'en connaissait que 9** — les 8 AWP
+(Q139771989…994, Q140446195, Q140680750), la série (Q139040913) et l'item de la recension RFSE
+seule (Q141072266, distinct du bloc à DOI Q140892752) n'existaient nulle part dans `data/` ni
+`content/`. Fait : `works.yaml` v1.16 (10 QID écrits en retour) ; `wikidata_qid` posé sur les
+16 fiches AWP (FR+EN, même item) ; `head.html` ajoute ce QID au `sameAs` du `ScholarlyArticle`
+— la chaîne « item → registre → fiche → sameAs » est bouclée pour les AWP comme pour les livres ;
+`check-fiches-registre.py` étendu aux AWP (parité registre ↔ fiche FR et EN). Mapping AWP ↔ QID
+confirmé par égalité des DOI Zenodo FR sur les 8.
+
 ### 2026-08-17 — La dette passe en anglais : `/en/cost-of-french-public-debt/`
 
 **Motif** (question auteur sur le déséquilibre 14 mailles FR / 3 EN) : le vrai écart n'était

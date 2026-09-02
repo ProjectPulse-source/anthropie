@@ -11,6 +11,7 @@ outputs:
   - EndNote
 description: "L'anthropie est l'hypothèse selon laquelle tout ordre social local se construit en exportant son désordre vers d'autres lieux, d'autres temps ou d'autres groupes sociaux. Ce texte fondateur soutient que le déplacement du désordre constitue un mécanisme structurel observable dans toute configuration d'ordre stable."
 doi_zenodo: "10.5281/zenodo.19266862"
+wikidata_qid: "Q139771989"  # item de l'œuvre (FR+EN) — alimente sameAs du ScholarlyArticle
 url_zenodo: "https://zenodo.org/records/19266862"
 jel_codes: ["B41", "D02", "Z13"]
 keywords: ["anthropie", "désordre social", "transfert entropique", "systèmes sociaux", "économie institutionnelle"]

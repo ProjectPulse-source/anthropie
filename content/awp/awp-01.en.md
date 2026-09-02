@@ -11,6 +11,7 @@ outputs:
   - EndNote
 description: "Anthropy is the hypothesis that every stable local social order is built by exporting its disorder to other places, other times, or other social groups. This founding text argues that the displacement of disorder constitutes a structural mechanism observable in every configuration of stable order."
 doi_zenodo: "10.5281/zenodo.19431208"
+wikidata_qid: "Q139771989"  # same work item as the FR paper — feeds ScholarlyArticle sameAs
 url_zenodo: "https://zenodo.org/records/19431208"
 ssrn_url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6543618"
 jel_codes: ["B41", "D02", "Z13"]

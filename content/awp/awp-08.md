@@ -11,6 +11,7 @@ outputs:
   - EndNote
 description: "L'inégalité se mesure en stocks (revenu, patrimoine) et en flux (mobilité), presque jamais par ce qu'une personne peut se permettre de rater sans fermer durablement son avenir. Ce working paper construit la réversibilité sociale comme troisième dimension de l'inégalité : la capacité, évaluée avant une tentative, de supporter son échec. Il en propose une définition, une architecture de mesure, quatre familles de propositions testables et un protocole d'identification. Cadre réfutable, non résultat empirique. Prolonge le programme anthropique (AWP-01, AWP-07)."
 doi_zenodo: "10.5281/zenodo.21506320"
+wikidata_qid: "Q140680750"  # item de l'œuvre (FR+EN) — alimente sameAs du ScholarlyArticle
 url_zenodo: "https://zenodo.org/records/21506320"
 jel_codes: ["D63", "D81", "I32", "J62", "D31", "I38"]
 keywords: ["réversibilité sociale", "capacité de repli", "mémoire institutionnelle", "réadmission", "complémentarité", "inégalité"]

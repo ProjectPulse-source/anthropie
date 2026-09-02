@@ -11,6 +11,7 @@ outputs:
   - EndNote
 description: "L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. AWP-07 formalise la boucle anthropique — déplacement, accumulation, saturation, retour, re-déplacement — en machine à états conceptuelle, en dialogue avec Kapp, Georgescu-Roegen et Stiegler."
 doi_zenodo: "10.5281/zenodo.21200286"
+wikidata_qid: "Q140446195"  # item de l'œuvre (FR+EN) — alimente sameAs du ScholarlyArticle
 url_zenodo: "https://zenodo.org/records/21200286"
 jel_codes: ["B41", "B52", "D62", "Q57"]
 keywords: ["anthropie", "boucle anthropique", "déplacement du désordre", "cost-shifting", "coûts sociaux", "K. William Kapp", "Bernard Stiegler", "néguanthropie", "Nicholas Georgescu-Roegen", "bioéconomie", "saturation anthropique", "transmutation du retour"]
