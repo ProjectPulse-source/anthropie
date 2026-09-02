@@ -21,12 +21,18 @@
 # =============================================================================
 
 meta:
-  registry_version: "1.13"
-  last_updated: "2026-08-12"
+  registry_version: "1.14"
+  last_updated: "2026-09-02"
   maintainer: "Stéphane Lalut"
-  total_works: 40
+  total_works: 41
   source_registry: "registre_soumissions_v73.xlsx"
   changelog:
+    v1_14: |
+      Ajout recension Lalut (2026-09-02) — En attendant Nadeau n° 249,
+      « Le passé recalculé », sur Histoire culturelle de l'IA (Alexandre
+      Gefen dir., CNRS Éditions, 2026). Fil remontant : AWP-02, AWP-06,
+      livre L'Odyssée des idées. total_works 40 → 41
+      (28 articles + 8 AWP + 5 livres).
     v1_13: |
       Ajout essai Lalut (2026-08-11) — En attendant Nadeau, hors-série n°9
       « États du livre », « Parler sans savoir à qui ». Essai original (non
@@ -788,6 +794,21 @@ works:
       en: "The connected object bends to our desires; the book refuses to — it speaks without knowing to whom. A defence of the book's reserve against algorithms, for En attendant Nadeau's special issue on the state of the book."
     related_works: [awp-06]
     notes: "Essai original (non recension) pour le hors-série n°9 d'EAN, « États du livre », parution 11/08/2026. Slug URL : parler-sans-savoir-a-qui-ia. Fiche site content/publications/en-attendant-nadeau-parler-sans-savoir-a-qui.md."
+
+  - id: art-ean-gefen-2026-09
+    type: article
+    status: published
+    canonical_title: { fr: "Le passé recalculé" }
+    publication_date: "2026-09-02"
+    publisher: "En attendant Nadeau"
+    publisher_type: "revue"
+    source_type: "Revue"
+    url: "https://www.en-attendant-nadeau.fr/2026/09/02/le-passe-recalcule/"
+    chapo:
+      fr: "L'IA est-elle née en 1956, ou a-t-elle des millénaires d'ancêtres ? L'<em>Histoire culturelle de l'IA</em> (Alexandre Gefen dir., CNRS Éditions) défait le mythe de Dartmouth, mais laisse au lecteur le soin de séparer la filiation de l'analogie, et tient à la marge les travailleurs du clic qui fabriquent aujourd'hui son évidence. Les ancêtres ne sont pas trouvés : ils sont institués."
+      en: "Was AI born in 1956, or does it have millennia of ancestors? <em>Histoire culturelle de l'IA</em> (ed. Alexandre Gefen, CNRS Éditions) undoes the Dartmouth myth, but leaves the reader to tell lineage from analogy, and keeps at the margins the click workers who manufacture its self-evidence today. Ancestors are not found: they are instituted."
+    related_works: [awp-02, awp-06]
+    notes: "Recension d'Alexandre Gefen (dir.), Histoire culturelle de l'IA (CNRS Éditions, coll. « Histoire », 380 p., 28 €), issue du projet CulturIA. Parue le 02/09/2026 (n° 249), rubrique Essais. Slug URL : le-passe-recalcule. Fiche site content/publications/en-attendant-nadeau-gefen.md ; related_book lodyssee-des-idees."
 
   # ===========================================================================
   # ARTICLES ACCEPTÉS — EN ATTENTE DE PUBLICATION (le champ status fait foi)

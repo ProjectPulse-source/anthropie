@@ -45,13 +45,36 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 > **À lire avant** : toute intervention sur le site, technique 
 > ou éditoriale. Décrit l'état architectural, les doctrines 
 > en place, les chantiers en cours et les chantiers reportés.
-> Dernière mise à jour : 2026-08-15 (soir).
+> Dernière mise à jour : 2026-09-02.
 > **Règle de fraîcheur** : l'état écrit suit l'acte — toute session qui
 > exécute met à jour ce log ET les statuts des registres/backlogs touchés
 > dans la même session. Un statut périmé vaut défaut : il provoque la
 > re-exécution de l'acquis ou l'abandon de travaux crus « déjà faits ».
 
 ## 0. Log chronologique
+
+### 2026-09-02 — Publication : « Le passé recalculé » (En attendant Nadeau n° 249)
+
+Recension de l'*Histoire culturelle de l'IA* (Alexandre Gefen dir., CNRS Éditions, 380 p.),
+parue le 02/09. Fiche `content/publications/en-attendant-nadeau-gefen.md` selon
+`docs/CHECKLIST_AJOUT_PUBLICATION.md` (logo, noindex, hors sitemap).
+
+**Fil remontant** : `related: [awp-02, awp-06]` — l'histoire longue d'un principe et la
+question de l'anachronisme (AWP-02) ; la base matérielle de l'IA, dont les travailleurs du
+clic que le volume tient à la marge (AWP-06). `related_book: lodyssee-des-idees` — histoire
+culturelle des idées jusqu'à l'intelligence artificielle.
+
+**Registres synchronisés dans le même commit** : `data/works.yaml` v1.14
+(`art-ean-gefen-2026-09` ; 41 œuvres = 28 articles + 8 AWP + 5 livres, compte réel vérifié) ;
+`data/intent_matrix.yaml` v1.4 (inscription, entrées IA/numérique + histoire des idées) ;
+`presse_objets` FR/EN (« Histoire de l'IA » / « History of AI »). `static/llms.txt` inchangé :
+sa section publications énumère les revues, En attendant Nadeau y figure déjà.
+
+**Preuves** : `hugo --minify` vert ; carte présente sur `/publications/`, `/en/publications/`,
+`/awp/awp-02/`, `/awp/awp-06/` et leurs miroirs EN ; tuile du mur presse `/a-propos/` FR et
+EN ; URL dans l'ItemList JSON-LD ; `&lt;em&gt;` absent du rendu ; fiche noindex et absente du
+sitemap ; `check-corpus-counters`, `check-fiches-registre`, `check-geo-coverage` à 0 ;
+`audit_works` 0 échec.
 
 ### 2026-08-17 — La dette passe en anglais : `/en/cost-of-french-public-debt/`
 

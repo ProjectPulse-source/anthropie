@@ -37,7 +37,7 @@
 # autorite : primaire (page du site) | secondaire (page d'appui) | externe
 # =============================================================================
 
-version: "1.3 (2026-08-17, maille EN dette — /en/cost-of-french-public-debt/, 4e page de traction anglophone)"
+version: "1.4 (2026-09-02, inscription EAN Gefen — recension Histoire culturelle de l'IA, entrées IA/numérique + histoire des idées)"
 
 entities:
 
@@ -404,3 +404,7 @@ entities:
         objet: "Livre et algorithmes"
         entree: [IA/numérique, livre/lecture]
         fil: { awp: [awp-06], livre: livresque-des-mots }
+      - slug: en-attendant-nadeau-gefen
+        objet: "Histoire de l'IA"
+        entree: [IA/numérique, histoire des idées]
+        fil: { awp: [awp-02, awp-06], livre: lodyssee-des-idees }
