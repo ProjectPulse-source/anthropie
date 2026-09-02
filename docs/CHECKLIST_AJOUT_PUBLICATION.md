@@ -57,6 +57,8 @@ Modèle : `revue-projet-commune-republique.md` (2026-07-07).
 - [ ] `hugo server` : carte visible sur `/publications/` (alternance
       logo navy/crème automatique), lien externe correct, chapô propre ;
       la fiche apparaît dans l'`ItemList` JSON-LD si `url_externe` présent.
+- [ ] **`python scripts/check-all.py --reseau` → exit 0** — lance tous les contrôles ci-dessous d'un
+      coup (les trois premiers sont aussi la porte CI : un dépôt incohérent ne se déploie pas).
 - [ ] `python scripts/check-corpus-counters.py` → exit 0.
 - [ ] `python scripts/audit_works.py` → pas de warning nouveau.
 - [ ] `python scripts/check-wikidata-registre.py` → exit 0 (parité Wikidata ↔ `works.yaml`

@@ -18,3 +18,17 @@
 @import 'figure-chaine-boucles';
 @import 'ressources-offertes';
 @import 'murs-a-propos';
+
+// Dernieres parutions sur l'accueil (bloc Publications) -- liste derivee du corpus, 2026-09-02
+.corpus-latest {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  li { margin: 0 0 .55rem; line-height: 1.4; }
+  a { text-decoration: underline; text-underline-offset: 2px; }
+}
+.corpus-latest__meta {
+  display: block;
+  font-size: .88em;
+  opacity: .75;
+}

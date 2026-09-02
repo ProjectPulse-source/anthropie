@@ -1,5 +1,6 @@
 ---
 title: "About"
+aggregates: [publications, livres, awp]  # lastmod du sitemap = la fiche la plus recente de ces sections (layouts/sitemap.xml)
 description: "Stéphane Lalut — Economist, independent researcher and essayist. Author of the framework of anthropy."
 # Même montage que la version FR : HOOK puis RAISON DE CLIQUER.
 # La fiche NATIVE de la langue l'emporte quand elle existe — aujourd'hui

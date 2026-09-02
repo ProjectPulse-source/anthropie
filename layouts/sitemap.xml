@@ -1,0 +1,40 @@
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+{{- /* Surcharge du gabarit embarque Hugo 0.147 (tpl/tplimpl/embedded/templates/sitemap.xml).
+       Seul ajout : une page qui AGREGE du contenu (front matter `aggregates: [publications, livres, awp]`)
+       prend pour lastmod la date la plus recente des pages qu'elle agrege, lue sur le site FR (le corpus
+       des publications n'existe qu'en FR ; le mur presse EN le lit deja ainsi). Sans cela, /a-propos/,
+       /serie-awp/ et /en/publications/ n'avaient AUCUN lastmod : une nouvelle parution y changeait la
+       page sans qu'un moteur en soit averti (constat du 2026-09-02). Aucune fausse fraicheur : la date
+       vient d'une fiche reellement ajoutee ou modifiee. */ -}}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  {{ range where .Pages "Sitemap.Disable" "ne" true }}
+    {{- if .Permalink -}}
+    {{- $lm := .Lastmod -}}
+    {{- with .Params.aggregates -}}
+      {{- $fr := index site.Sites 0 -}}
+      {{- range . -}}
+        {{- range (where $fr.RegularPages "Section" .) -}}
+          {{- if .Lastmod.After $lm -}}{{- $lm = .Lastmod -}}{{- end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  <url>
+    <loc>{{ .Permalink }}</loc>{{ if not $lm.IsZero }}
+    <lastmod>{{ safeHTML ( $lm.Format "2006-01-02T15:04:05-07:00" ) }}</lastmod>{{ end }}{{ with .Sitemap.ChangeFreq }}
+    <changefreq>{{ . }}</changefreq>{{ end }}{{ if ge .Sitemap.Priority 0.0 }}
+    <priority>{{ .Sitemap.Priority }}</priority>{{ end }}{{ if .IsTranslated }}{{ range .Translations }}
+    <xhtml:link
+                rel="alternate"
+                hreflang="{{ .Language.LanguageCode }}"
+                href="{{ .Permalink }}"
+                />{{ end }}
+    <xhtml:link
+                rel="alternate"
+                hreflang="{{ .Language.LanguageCode }}"
+                href="{{ .Permalink }}"
+                />{{ end }}
+  </url>
+    {{- end -}}
+  {{ end }}
+</urlset>

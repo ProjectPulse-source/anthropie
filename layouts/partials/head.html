@@ -234,11 +234,20 @@
 {{- $withUrl := where $pubs "Params.url_externe" "!=" nil -}}
 {{- $items := slice -}}
 {{- range $i, $pub := $withUrl.ByDate.Reverse -}}
+  {{- /* Chaque ListItem porte aussi l'objet complet : date, revue, DOI, item Wikidata — tout vient du front
+         matter de la fiche, rien n'est recopie (2026-09-02). */ -}}
+  {{- $obj := dict "@type" (cond (eq $pub.Params.source_type "Académique") "ScholarlyArticle" "Article")
+      "name" $pub.Title "url" $pub.Params.url_externe "datePublished" ($pub.Date.Format "2006-01-02")
+      "inLanguage" "fr" "author" (dict "@type" "Person" "name" site.Data.author.author.name) -}}
+  {{- with $pub.Params.revue -}}{{- $obj = merge $obj (dict "isPartOf" (dict "@type" "Periodical" "name" .)) -}}{{- end -}}
+  {{- with $pub.Params.doi -}}{{- $obj = merge $obj (dict "identifier" (printf "https://doi.org/%s" .)) -}}{{- end -}}
+  {{- with $pub.Params.wikidata_qid -}}{{- $obj = merge $obj (dict "sameAs" (slice (printf "https://www.wikidata.org/entity/%s" .))) -}}{{- end -}}
   {{- $items = $items | append (dict
       "@type" "ListItem"
       "position" (add $i 1)
       "name" $pub.Title
-      "url" $pub.Params.url_externe) -}}
+      "url" $pub.Params.url_externe
+      "item" $obj) -}}
 {{- end -}}
 {{- $orcid := false -}}
 {{- range site.Data.author.author.sameAs -}}

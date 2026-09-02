@@ -173,6 +173,18 @@
 
     <div class="corpus-block corpus-block--publications">
       <h3>Publications</h3>
+      {{- /* Dernieres parutions : derivees du corpus FR (les fiches publications n'existent qu'en FR).
+             La presence vient du depot : une nouvelle fiche apparait ici au build suivant, sans geste. */ -}}
+      {{- $frSite := index site.Sites 0 -}}
+      {{- $latest := first 3 (where (where $frSite.RegularPages "Type" "publications") "Params.url_externe" "!=" nil).ByDate.Reverse -}}
+      {{- with $latest }}
+      <ul class="corpus-latest" aria-label="{{ if eq $.Lang "en" }}Latest publications{{ else }}Dernières parutions{{ end }}">
+        {{- range . }}
+        <li><a href="{{ .Params.url_externe }}" target="_blank" rel="noopener">{{ partial "fr-typo.html" .Title }}</a>
+          <span class="corpus-latest__meta">{{ .Params.revue }}, {{ .Date | time.Format ":date_medium" }}</span></li>
+        {{- end }}
+      </ul>
+      {{- end }}
       <p>
         {{ if eq .Lang "en" }}
           Published and reviewed in <em>Alternatives Économiques</em>, <em>La Vie des idées</em>, <em>En attendant Nadeau</em>, <em>Terrestres</em>, <em>Nonfiction</em>, <em>Le Temps</em> and other intellectual press outlets.

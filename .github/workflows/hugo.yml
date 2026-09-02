@@ -35,6 +35,14 @@ jobs:
 
       - name: Build with Hugo
         run: hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+      # Porte deterministe (2026-09-02) : un depot incoherent ne se deploie pas. Trois controles
+      # hors reseau, quelques secondes : compteurs de corpus, parite registre <-> fiches
+      # (livres, AWP, articles), encodage console des scripts. Les controles reseau (Wikidata,
+      # noeuds externes) restent locaux : python scripts/check-all.py --reseau.
+      - name: Contrôles de cohérence (bloquants)
+        run: |
+          python3 -m pip install --quiet pyyaml
+          python3 scripts/check-all.py --ci
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0

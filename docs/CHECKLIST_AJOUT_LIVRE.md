@@ -102,6 +102,8 @@ Front matter — modèle : `anthropie-ordre-ici-dette-ailleurs.md` :
 - [ ] `hugo server` : JSON-LD `Book` complet (isbn, Offer avec le bon prix,
       sameAs Wikidata, image), og:image correcte (safe-zone WhatsApp),
       boutons Amazon Broché/Kindle par marché.
+- [ ] **`python scripts/check-all.py --reseau` → exit 0** — lance tous les contrôles ci-dessous d'un
+      coup (les trois premiers sont aussi la porte CI : un dépôt incohérent ne se déploie pas).
 - [ ] `python scripts/check-corpus-counters.py` → exit 0.
 - [ ] `python scripts/audit_works.py` → pas de warning nouveau.
 - [ ] `python scripts/check-wikidata-registre.py` → exit 0 (parité Wikidata ↔ `works.yaml`

@@ -92,6 +92,8 @@ Lancer `hugo server` et vérifier sur les deux URLs FR et EN : balises `<meta na
 
 ## 6. Linter cohérence corpus
 
+**`python scripts/check-all.py --reseau` → exit 0** lance tous les contrôles d'un coup (porte CI comprise).
+
 Exécuter `python scripts/check-corpus-counters.py`. Doit sortir code 0 (aucune divergence).
 
 Puis, dans la même passe : `python scripts/check-fiches-registre.py` (parité registre ↔ fiches, **AWP

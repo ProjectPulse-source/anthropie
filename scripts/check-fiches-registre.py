@@ -17,11 +17,11 @@ Les deux premiers sont desormais couverts par le gabarit (auteur-wall) et par
 REGISTRE sait et que la FICHE ne dit pas, et les valeurs presentes des deux
 cotes qui ont DIVERGE.
 
-EXTENSION (2026-09-02) : meme regle pour les working papers. La verification de
-l'item auteur Q138909233 a montre 19 oeuvres pointant vers lui quand le registre
-n'en connaissait que 9 -- les 8 AWP n'avaient de QID ni au registre ni en fiche,
-donc pas de `sameAs` Wikidata sur le ScholarlyArticle. Les fiches FR et EN d'un
-AWP portent le MEME item (une oeuvre, deux textes).
+EXTENSIONS (2026-09-02) : meme regle pour les working papers (fiches FR et EN d'un
+AWP portent le MEME item) et pour les articles (fiche trouvee par son url_externe ;
+le QID attendu est `wikidata_review` s'il existe -- l'item de la recension seule --
+sinon `wikidata`). Motif : 19 oeuvres pointaient vers l'auteur sur Wikidata quand le
+registre n'en connaissait que 9, et aucune page AWP n'emettait de `sameAs` Wikidata.
 
 Principe : le registre est la source de verite ; la fiche doit la refleter.
 On ne signale JAMAIS un champ absent des deux cotes -- ce n'est pas une
@@ -84,6 +84,8 @@ def main() -> int:
     registre = yaml.safe_load((ROOT / "data" / "works.yaml").read_text(encoding="utf-8"))
     livres = {w["id"]: w for w in registre["works"] if w.get("type") == "book"}
     awps = {w["id"]: w for w in registre["works"] if w.get("type") == "awp"}
+    articles = [w for w in registre["works"]
+                if w.get("type") == "article" and (w.get("wikidata") or w.get("wikidata_review"))]
     ecarts: list[str] = []
 
     for bid, oeuvre in livres.items():
@@ -113,7 +115,24 @@ def main() -> int:
                 continue
             compare(f"{aid}{suffix}", oeuvre, front_matter(fiche), ecarts)
 
-    print(f"Parite fiche <-> registre : {len(livres)} livre(s), {len(awps)} AWP au registre")
+    # Articles : fiche retrouvee par url_externe ; QID attendu = wikidata_review sinon wikidata.
+    fiches_pub = {}
+    for p in (ROOT / "content" / "publications").glob("*.md"):
+        if p.name.startswith("_"):
+            continue
+        fm = front_matter(p)
+        fiches_pub[(fm.get("url_externe") or "").rstrip("/")] = (p.name, fm)
+    for w in articles:
+        url = (w.get("url") or "").rstrip("/")
+        hit = fiches_pub.get(url)
+        if not hit:
+            ecarts.append(f"{w['id']} : QID au registre mais aucune fiche publication ne porte son url ({url or 'url vide'})")
+            continue
+        nom, fm = hit
+        attendu = {"wikidata": w.get("wikidata_review") or w.get("wikidata")}
+        compare(nom, attendu, fm, ecarts)
+
+    print(f"Parite fiche <-> registre : {len(livres)} livre(s), {len(awps)} AWP, {len(articles)} article(s) a QID au registre")
     if not ecarts:
         print("\nAucune divergence. OK")
         return 0

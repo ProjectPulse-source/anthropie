@@ -1,5 +1,6 @@
 ---
 title: "À propos"
+aggregates: [publications, livres, awp]  # lastmod du sitemap = la fiche la plus recente de ces sections (layouts/sitemap.xml)
 description: "Stéphane Lalut — Économiste, chercheur indépendant et essayiste. Auteur du cadre anthropique."
 # ---------------------------------------------------------------------------
 # MUR AUTEUR — vignette, titre et lien viennent de content/livres/<slug>.md

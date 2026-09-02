@@ -1,5 +1,6 @@
 ---
 title: "Publications"
+aggregates: [publications]  # lastmod du sitemap = la fiche la plus recente de ces sections (layouts/sitemap.xml)
 description: "Articles et contributions de Stéphane Lalut dans la presse et les revues."
 og_image: "images/og-publications.jpg"
 og_image_alt: "Publications — Recensions & articles. On ne crée pas l'ordre, on déplace le désordre."

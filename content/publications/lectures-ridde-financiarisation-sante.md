@@ -5,6 +5,7 @@ revue: "Lectures"
 source_type: "Académique"
 url_externe: "https://journals.openedition.org/lectures/71869"
 doi: "10.4000/16ihm"
+wikidata_qid: "Q141072265"  # alimente sameAs de l'ItemList /publications/
 image: "/img/publications/lectures-logo.webp"
 image_type: "logo"
 chapo: "Le paiement direct des soins n'est pas né des ajustements structurels des années 1980. Archives à l'appui, Valéry Ridde montre que le Sénégal colonial faisait déjà payer les patients africains — tarifs hospitaliers, taxes médicales, primes aux soignants — sous couvert de gratuité proclamée."

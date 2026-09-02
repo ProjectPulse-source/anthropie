@@ -1,0 +1,35 @@
+{{- /* Flux de la section publications (FR et EN lisent le corpus FR, comme le mur presse et l'ItemList).
+       Derive du gabarit embarque Hugo 0.147 ; trois changements : les items sont les publications FR,
+       le <link> et le <guid> sont l'ARTICLE EXTERNE (la fiche interne est noindex par decision 1.3a),
+       la description est le chapo dans la langue du flux. Un agregateur ou un crawler qui suit ce flux
+       arrive donc sur la revue, pas sur une page vide. */ -}}
+{{- $frSite := index site.Sites 0 -}}
+{{- $isEn := eq site.Language.Lang "en" -}}
+{{- $pages := (where (where $frSite.RegularPages "Type" "publications") "Params.url_externe" "!=" nil).ByDate.Reverse -}}
+{{- $limit := .Site.Config.Services.RSS.Limit -}}
+{{- if ge $limit 1 }}{{ $pages = $pages | first $limit }}{{ end -}}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ if $isEn }}Publications — {{ else }}Publications — {{ end }}{{ .Site.Title }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>{{ if $isEn }}Reviews and articles by Stéphane Lalut in the intellectual press and academic journals (links go to the publishing outlet).{{ else }}Recensions et articles de Stéphane Lalut dans la presse intellectuelle et les revues (les liens mènent à la revue).{{ end }}</description>
+    <generator>Hugo</generator>
+    <language>{{ site.Language.LanguageCode }}</language>
+    {{- with $pages }}
+    <lastBuildDate>{{ (index . 0).Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
+    {{- end }}
+    {{- with .OutputFormats.Get "RSS" }}
+    {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
+    {{- end }}
+    {{- range $pages }}
+    <item>
+      <title>{{ .Title }}{{ with .Params.revue }} — {{ . }}{{ end }}</title>
+      <link>{{ .Params.url_externe }}</link>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+      <guid>{{ .Params.url_externe }}</guid>
+      <description>{{ (cond (and $isEn (ne .Params.chapo_en nil)) .Params.chapo_en .Params.chapo) | plainify | transform.XMLEscape | safeHTML }}</description>
+    </item>
+    {{- end }}
+  </channel>
+</rss>

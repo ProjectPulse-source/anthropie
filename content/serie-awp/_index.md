@@ -1,5 +1,6 @@
 ---
 title: "Anthropie Working Papers"
+aggregates: [awp]  # lastmod du sitemap = la fiche la plus recente de ces sections (layouts/sitemap.xml)
 description: "Série de working papers sur l'anthropie par Stéphane Lalut, économiste, chercheur indépendant et essayiste."
 aliases:
   - /awp/

@@ -1,5 +1,6 @@
 ---
 title: "Anthropie Working Papers"
+aggregates: [awp]  # lastmod du sitemap = la fiche la plus recente de ces sections (layouts/sitemap.xml)
 description: "The Anthropie Working Papers (AWP) constitute the academic corpus of the framework of anthropy by Stéphane Lalut, economist, independent researcher and essayist."
 aliases:
   - /en/awp/

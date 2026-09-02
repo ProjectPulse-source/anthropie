@@ -65,6 +65,9 @@ Avant tout patch substantiel, lecture obligatoire dans cet ordre :
 
 Contextualisations propres à ce repo :
 
+- **Un seul geste avant commit : `python scripts/check-all.py --reseau`** (runner des contrôles
+  ci-dessous ; `--ci` = les trois hors réseau, exécutés en porte bloquante par `hugo.yml` avant
+  déploiement depuis le 2026-09-02).
 - Linter cohérence corpus : `scripts/check-corpus-counters.py`
 - Linter couverture GEO (FR + miroir EN) : `scripts/check-geo-coverage.py`
 - Parité registre ↔ fiches (livres, AWP) : `scripts/check-fiches-registre.py` ;

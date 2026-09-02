@@ -138,6 +138,46 @@ par `zenodo_audit_complet.py` (jeton requis, à lancer par l'auteur) ; **ORCID /
 couverts par `audit_works.py`. Sondage relancé après écritures : 0 écart. Exclusion déclarée : les
 fiches livres n'émettent pas de `sameAs` OpenLibrary (point ouvert GEO, pas un trou de registre).
 
+### 2026-09-02 (suite) — Chaîne d'activation SEO/GEO à chaque publication ou livre (commande auteur)
+
+**Relevé d'abord, construction ensuite.** Ce qui s'activait déjà seul à un push : build et déploiement,
+sitemaps FR/EN, IndexNow (Bing/Yandex/Naver, 59 URL), flux RSS par section, JSON-LD (Person, Book,
+ScholarlyArticle, ItemList), archivage Wayback mensuel. Ce qui restait manuel ou muet, et que le relevé
+a montré : `/a-propos/`, `/serie-awp/` et `/en/publications/` **sans `lastmod`** dans le sitemap — une
+parution changeait le mur presse sans qu'un moteur en soit averti ; le flux RSS des publications
+pointait la **fiche interne noindex** au lieu de l'article ; l'`ItemList` de `/publications/` ne portait
+que nom et URL ; l'accueil décrivait les publications par une phrase fixe ; les fiches d'articles à
+item Wikidata ne l'émettaient pas. Google ne reçoit rien d'IndexNow : sa découverte tient au sitemap,
+aux liens internes depuis les pages les plus explorées, et à la demande manuelle (checklist § 4).
+
+**Construit — tout dérive du dépôt, aucune valeur recopiée** :
+
+- `layouts/sitemap.xml` (surcharge du gabarit embarqué 0.147) : une page portant `aggregates:` prend
+  pour `lastmod` la fiche la plus récente des sections qu'elle agrège, lue sur le site FR ; posé sur
+  `/a-propos/`, `/serie-awp/`, `/publications/` (FR+EN). Preuve : `/a-propos/` et `/en/publications/`
+  → `2026-09-02`, `/serie-awp/` → `2026-07-23` (AWP-08). Aucune fausse fraîcheur : pas de `:git`.
+- `layouts/publications/rss.xml` : items = publications FR, `<link>` et `<guid>` = l'article externe,
+  description = chapô dans la langue du flux ; autodiscovery `rel=alternate` déjà émise par `head.html`.
+- `head.html` : chaque `ListItem` de `/publications/` porte l'objet complet — `Article` ou
+  `ScholarlyArticle` selon `source_type`, `datePublished`, `isPartOf` (revue), `identifier` (DOI),
+  `sameAs` (Wikidata) — depuis le front matter des fiches ; `wikidata_qid` posé sur les 3 fiches
+  d'articles à item (RFSE → item de la recension seule `Q141072266` ; Lectures Kaba, Ridde).
+- `layouts/index.html` : bloc « Dernières parutions » (3 dernières, FR et EN, liens vers l'article)
+  dérivé du corpus — la page la plus explorée porte la nouveauté au build suivant, sans geste.
+- `scripts/check-all.py` : un seul geste pour tous les contrôles (`--ci` hors réseau, `--reseau`
+  complet) ; `check-fiches-registre.py` étendu aux **articles** (fiche retrouvée par `url_externe`,
+  QID attendu = `wikidata_review` sinon `wikidata`) ; témoin : QID faussé sur la fiche Kaba → le
+  runner sort 1 avec l'écart nommé, puis restauration.
+- **Porte CI** : `hugo.yml` exécute `check-all.py --ci` après le build et avant l'artefact — un
+  dépôt incohérent ne se déploie pas. Les contrôles réseau restent locaux (checklists, `CLAUDE.md`).
+
+**Écarté, et dit** : générer `llms.txt` au build — doctrine du 15/08 (neutre pour Google, on n'y
+investit plus) ; automatiser la demande d'indexation Google — pas d'API (URL Inspection est en
+lecture seule, Indexing API réservée aux offres d'emploi/directs) ; pages nouvelles par requête —
+anti-doorway. **Reste manuel, et gardé** : Search Console à chaque parution (checklist § 4), navette
+Wikidata (Laura), OpenLibrary pour un livre. Vérification : `check-all --reseau` à 0 sur 6 contrôles ;
+build vert ; IndexNow se déclenchera au push (`layouts/**`, `content/**` dans ses chemins).
+
 ### 2026-08-17 — La dette passe en anglais : `/en/cost-of-french-public-debt/`
 
 **Motif** (question auteur sur le déséquilibre 14 mailles FR / 3 EN) : le vrai écart n'était
