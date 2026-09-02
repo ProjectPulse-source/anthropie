@@ -1,9 +1,15 @@
 # Wikidata — navette du 2026-09-02 (6 lignes, un seul Run) : références sur deux recensions *Lectures* + deux descriptions de l'item auteur
 
-> ⏳ **À exécuter.** Une fois fait, remplacer ce bloc par ✅ + readback API
-> (`P50` et `P356` doivent porter **1 référence** chacun sur les deux items ; toujours
-> **8 propriétés** par item — aucune déclaration nouvelle ; descriptions es/de de
-> `Q138909233` remplacées, rien d'autre touché sur l'item auteur).
+> ✅ **RÉFÉRENCES FAITES le 2026-09-02, 15h04-15h05 UTC, par Laura** (4 ajouts `wbsetreference`).
+> **Readback API du 03/09** : `Q141072264` et `Q141072265` portent chacun **1 référence** sur `P50` et
+> sur `P356` (`P854` = page OpenEdition, `P813` = 2026-09-02), toujours **8 propriétés** par item,
+> aucune déclaration nouvelle. `check-wikidata-registre.py` : parité 19/19. Écriture en retour : rien à
+> écrire (les QID étaient déjà au registre, commit `1e4370f`).
+>
+> ⏳ **RESTE — 2 lignes** : les descriptions **es** et **de** de `Q138909233` n'ont **pas** été posées
+> (item inchangé depuis le 14/08 ; ces deux lignes ont été ajoutées au lot après sa première
+> version, le Run a probablement chargé l'ancien lien). Lien direct **`deeplink_reste.txt`**, deux
+> commandes, rien d'autre. Une fois fait : readback des deux descriptions, et ce bloc passe en ✅.
 
 Laura — rien à créer : on **source** deux items qui existent déjà (créés par toi le
 15/08, même lot que `Q141072263`). Le modèle RFSE (`Q140892752`) portait une référence

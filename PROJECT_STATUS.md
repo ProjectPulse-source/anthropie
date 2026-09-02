@@ -103,7 +103,10 @@ un `sameAs` par item de l'`ItemList` reste un point ouvert nommé.
 **Navette préparée le 02/09 pour Laura** (commande auteur) : références `S854` + `S813` sur `P50` et
 `P356` des deux items — dossier `Wikidata/Import_Wikidata_Laura_2026-09-02_References_Lectures/`
 (4 lignes, lien direct), **en attente d'exécution** ; readback API à faire ensuite, puis ✅ dans
-le `README_LAURA.md` du dossier.
+le `README_LAURA.md` du dossier. **Exécutée par Laura le 02/09 à 15h05 UTC** : readback du 03/09
+conforme (1 référence sur `P50` et `P356` des deux items, 8 propriétés, aucune déclaration nouvelle).
+**Reste** : les 2 descriptions es/de de `Q138909233`, ajoutées au lot après sa première version, n'ont
+pas été posées — lien direct `deeplink_reste.txt` (2 commandes) dans le même dossier.
 
 **Vérification de `Q138909233` (commande auteur, 02/09, relecture API).** Identifiants tous
 présents et conformes à `data/author.toml` (ORCID, OpenAlex, Google Scholar, Academia, SSRN, IdRef,

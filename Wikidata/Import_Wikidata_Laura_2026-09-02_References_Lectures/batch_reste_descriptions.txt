@@ -1,0 +1,4 @@
+// Navette Laura 2026-09-02 — RESTE apres le Run du 02/09 15h05 UTC : les 4 references sont posees,
+// les 2 descriptions de l'item auteur ne le sont pas (item inchange depuis le 14/08). Deux lignes.
+Q138909233	Des	"economista, investigador independiente y ensayista francés, autor del marco antrópico"
+Q138909233	Dde	"französischer Ökonom, unabhängiger Forscher und Essayist, Autor des anthropischen Bezugsrahmens"
