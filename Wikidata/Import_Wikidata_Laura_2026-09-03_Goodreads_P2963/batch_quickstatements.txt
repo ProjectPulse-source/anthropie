@@ -1,0 +1,7 @@
+// ============================================================================
+// Navette Laura 2026-09-03 - UNE ligne, sur l'item auteur EXISTANT Q138909233
+// Ajout de P2963 (Goodreads author ID) : la seule autorite du graphe qui soit
+// declaree d'un cote et pas de l'autre depuis qu'Open Library l'a posee le 01/09.
+// Attendu dans le preview : « add statement » P2963 + sa reference. Rien d'autre.
+// ============================================================================
+Q138909233	P2963	"23088054"	S854	"https://www.goodreads.com/author/show/23088054.St_phane_Lalut"	S813	+2026-09-03T00:00:00Z/11
