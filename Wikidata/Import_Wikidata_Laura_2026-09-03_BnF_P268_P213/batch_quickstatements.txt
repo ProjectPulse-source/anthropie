@@ -1,0 +1,16 @@
+// ============================================================================
+// Navette Laura 2026-09-03 (4e lot) - BnF : P268 x4 + P213 (ISNI) sur l'auteur
+// ⚠ P268 se stocke SANS le prefixe « cb » : la formatter URL de Wikidata est
+//   catalogue.bnf.fr/ark:/12148/cb$1 (regex \d{8,9}[0-9bcdfghjkmnpqrstvwxz]).
+//   ISNI (P213) : 16 caracteres SANS espaces (regex [0]{7}[0-9]{8}[0-9X]).
+// ⛔ ABSENT DELIBEREMENT : Q138911733 (Odyssee). Son item porte l'ISBN 2026
+//   (978-2-9586347-4-2), qui n'a AUCUNE notice BnF ; la seule notice existante
+//   (cb47481513r) est celle de la 1re edition, DEPUBLIEE. Y pointer contredirait
+//   le P212 de l'item.
+// Attendu dans le preview : 5 « add statement », chacun avec sa reference.
+// ============================================================================
+Q138909233	P268	"17672810m"	S854	"https://catalogue.bnf.fr/ark:/12148/cb17672810m"	S813	+2026-09-03T00:00:00Z/11
+Q138909233	P213	"0000000518014301"	S854	"https://catalogue.bnf.fr/ark:/12148/cb17672810m"	S813	+2026-09-03T00:00:00Z/11
+Q138827344	P268	"488150518"	S854	"https://catalogue.bnf.fr/ark:/12148/cb488150518"	S813	+2026-09-03T00:00:00Z/11
+Q138910896	P268	"488150471"	S854	"https://catalogue.bnf.fr/ark:/12148/cb488150471"	S813	+2026-09-03T00:00:00Z/11
+Q140517745	P268	"474815054"	S854	"https://catalogue.bnf.fr/ark:/12148/cb474815054"	S813	+2026-09-03T00:00:00Z/11
