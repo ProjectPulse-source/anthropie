@@ -1,0 +1,15 @@
+// ============================================================================
+// Navette Laura 2026-09-03 (2e lot) - P8383 sur les SIX items livres EXISTANTS
+// Goodreads identifiant d'OEUVRE. Rattachement verifie par ISBN, jamais par titre :
+// chaque oeuvre Goodreads ci-dessous contient bien l'ISBN porte par l'item (P212).
+// Debloque par la reunion des editions faite le 03/09 sur Goodreads (6 oeuvres,
+// une par livre) - avant cela deux livres avaient DEUX oeuvres et aucun identifiant
+// n'aurait ete stable.
+// Attendu dans le preview : 6 « add statement » P8383, chacun avec sa reference.
+// ============================================================================
+Q138911733	P8383	"215006210"	S854	"https://www.goodreads.com/work/editions/215006210"	S813	+2026-09-03T00:00:00Z/11
+Q138827344	P8383	"260328868"	S854	"https://www.goodreads.com/work/editions/260328868"	S813	+2026-09-03T00:00:00Z/11
+Q140645013	P8383	"299046023"	S854	"https://www.goodreads.com/work/editions/299046023"	S813	+2026-09-03T00:00:00Z/11
+Q138910896	P8383	"266484445"	S854	"https://www.goodreads.com/work/editions/266484445"	S813	+2026-09-03T00:00:00Z/11
+Q140517745	P8383	"99837927"	S854	"https://www.goodreads.com/work/editions/99837927"	S813	+2026-09-03T00:00:00Z/11
+Q141072263	P8383	"301000264"	S854	"https://www.goodreads.com/work/editions/301000264"	S813	+2026-09-03T00:00:00Z/11
