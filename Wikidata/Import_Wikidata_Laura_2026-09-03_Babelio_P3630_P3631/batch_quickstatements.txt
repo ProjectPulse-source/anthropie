@@ -1,0 +1,13 @@
+// ============================================================================
+// Navette Laura 2026-09-03 (3e lot) - BABELIO : 1 identifiant auteur + 3 d'oeuvres
+// P3630 = Babelio author ID, P3631 = Babelio work ID. Valeur = CHIFFRES SEULS
+// (regex \d+ ; le slug de l'URL n'entre pas dans la valeur, la formatter URL de
+// Wikidata est .../auteur/wd/$1 et .../livres/wd/$1).
+// ⛔ DELIBEREMENT ABSENTS : Odyssee (Q138911733) et Livresque (Q140517745) -
+// chacun a DEUX fiches Babelio vivantes au 03/09. Voir README.
+// Attendu dans le preview : 4 « add statement », chacun avec sa reference.
+// ============================================================================
+Q138909233	P3630	"636238"	S854	"https://www.babelio.com/auteur/Stephane-Lalut/636238"	S813	+2026-09-03T00:00:00Z/11
+Q138827344	P3631	"1922333"	S854	"https://www.babelio.com/livres/Lalut-ANTHROPIE--Ordre-ici-Dette-ailleurs-La-face-ca/1922333"	S813	+2026-09-03T00:00:00Z/11
+Q138910896	P3631	"1947782"	S854	"https://www.babelio.com/livres/Lalut-Dette-Publique--Qui-paie-vraiment--Budget-democ/1947782"	S813	+2026-09-03T00:00:00Z/11
+Q141072263	P3631	"2105689"	S854	"https://www.babelio.com/livres/Lalut-LA-SOCIT-DU-PREMIER-COUP-Pourquoi-certains-peuv/2105689"	S813	+2026-09-03T00:00:00Z/11
