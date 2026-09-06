@@ -22,6 +22,17 @@ import subprocess
 import sys
 from pathlib import Path
 
+# Encodage console : ce runner REIMPRIME la derniere ligne de chaque controle,
+# et ces lignes portent des caracteres hors cp1252 (« Aucune divergence detectee.
+# ✓ »). Le PYTHONIOENCODING pose plus bas protege l'ENFANT, pas ce processus :
+# sans la reconfiguration ci-dessous, le runner meurt en relayant un controle VERT,
+# et la porte declaree bloquante avant commit est morte sur le poste. Le linter
+# d'encodage ne peut pas le voir : il lit les litteraux, or ici le caractere arrive
+# par variable -- c'est la borne inferieure que son docstring assume. 2026-09-06.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stderr.reconfigure(encoding="utf-8")
+
 ROOT = Path(__file__).resolve().parent.parent
 SCRIPTS = ROOT / "scripts"
 

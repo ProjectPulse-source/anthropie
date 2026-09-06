@@ -25,6 +25,14 @@ import sys
 sys.path.insert(0, os.path.dirname(__file__))
 from goatcounter_baseline import fetch_hits  # noqa: E402
 
+# Encodage console : le message d'absence de jeton ci-dessous contient
+# « → », que cp1252 ne sait pas encoder. Sans cette reconfiguration le
+# script meurt sur son propre message d'erreur sous PowerShell 5.1 --
+# l'echec imiterait un jeton illisible au lieu d'un jeton absent.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stderr.reconfigure(encoding="utf-8")
+
 OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "reports",
                        "geo_audit", "zenodo_outbound")
 
