@@ -546,15 +546,35 @@ def build_svg_taux(taux: dict[str, float], lang: str = "fr") -> str:
 
 
 # ------------------------------------------------------------------- sortie
+# Blocs d'affichage portant un "releve_le", en plus de la racine.
+# Deux organes manipulent ce champ : l'empreinte qui DECIDE s'il faut publier, et
+# la restauration qui APPLIQUE la decision. Chacun lisait sa propre liste. Le
+# 16/08 la garde couvrait racine + "affichage" ; le 17/08 "affichage_en" est entre
+# dans l'empreinte et PAS dans la restauration. Consequence mesuree le 06/09 : a
+# donnees strictement identiques le script rendait quand meme une ligne de diff,
+# la PR mensuelle vide etait de retour, et la page EN aurait publie un releve du
+# 6 septembre que la page FR contredisait au 17 aout -- sur des chiffres CC BY
+# repris dans le JSON-LD Dataset. Une seule liste, deux lecteurs.
+BLOCS_RELEVE = ("affichage", "affichage_en")
+
+
+def _blocs_dates(payload: dict):
+    """Rend (cle, bloc) pour chaque dict portant un "releve_le", racine comprise.
+    La cle vaut None pour la racine. Cle-a-cle, jamais par position : un paquet
+    ancien peut ne pas avoir tous les blocs."""
+    yield None, payload
+    for cle in BLOCS_RELEVE:
+        bloc = payload.get(cle)
+        if isinstance(bloc, dict):
+            yield cle, bloc
+
+
 def _hors_dates(payload: dict) -> str:
-    """Empreinte du paquet PRIVEE de ses deux horodatages, pour repondre a la
+    """Empreinte du paquet PRIVEE de ses horodatages, pour repondre a la
     seule question qui decide d'une publication : un chiffre a-t-il bouge ?"""
     c = json.loads(json.dumps(payload))
-    c.pop("releve_le", None)
-    if isinstance(c.get("affichage"), dict):
-        c["affichage"].pop("releve_le", None)
-    if isinstance(c.get("affichage_en"), dict):
-        c["affichage_en"].pop("releve_le", None)
+    for _, bloc in _blocs_dates(c):
+        bloc.pop("releve_le", None)
     return json.dumps(c, ensure_ascii=False, sort_keys=True)
 
 
@@ -837,10 +857,10 @@ def main() -> int:
     # un commit mensuel pour rester vrai, soit le defaut qu'on corrige.
     inchange = payload_prev is not None and _hors_dates(payload) == _hors_dates(payload_prev)
     if inchange:
-        payload["releve_le"] = payload_prev.get("releve_le", payload["releve_le"])
-        payload["affichage"]["releve_le"] = (
-            payload_prev.get("affichage", {}).get("releve_le",
-                                                 payload["affichage"]["releve_le"]))
+        for cle, bloc in _blocs_dates(payload):
+            prec = payload_prev if cle is None else payload_prev.get(cle)
+            if isinstance(prec, dict) and "releve_le" in prec:
+                bloc["releve_le"] = prec["releve_le"]
 
     if check_only:
         print("OK (--check): gardes passees, rien n'est ecrit. Dette %s = %s "
