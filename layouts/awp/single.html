@@ -130,11 +130,29 @@
     {{/* ══════════ SIDEBAR ══════════ */}}
     <aside class="awp-article__sidebar">
 
+      {{/* ── Routage de convergence (data/convergence_routing.json, contrôleur collector).
+           Notice Zenodo promue en CTA principal quand ce record est sous contrôle (déficit
+           vues/téléchargements) ; PDF en secondaire. Défaut sûr : sans donnée, kill switch,
+           ou cta_primary != "record" → régime normal (PDF principal). */}}
+      {{ $ctaRecord := false }}
+      {{ with site.Data.convergence_routing }}
+        {{ if not .kill_switch }}
+          {{ with (index .records $.Params.doi_zenodo) }}
+            {{ if eq .cta_primary "record" }}{{ $ctaRecord = true }}{{ end }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+
       {{/* ── Downloads ── */}}
       <div class="awp-sidebar__block">
         <h3 class="awp-sidebar__heading">{{ if $isEn }}Download{{ else }}Télécharger{{ end }}</h3>
+        {{ if and $ctaRecord .Params.url_zenodo }}
+        <a href="{{ .Params.url_zenodo }}" class="btn btn--primary awp-sidebar__btn" target="_blank" rel="noopener">
+          {{ if $isEn }}Read on Zenodo ↗{{ else }}Lire la notice Zenodo ↗{{ end }}
+        </a>
+        {{ end }}
         {{ with .Params.pdf_url }}
-        <a href="{{ . }}" class="btn btn--primary awp-sidebar__btn" target="_blank" rel="noopener">
+        <a href="{{ . }}" class="btn {{ if $ctaRecord }}btn--secondary{{ else }}btn--primary{{ end }} awp-sidebar__btn" target="_blank" rel="noopener">
           PDF{{ if $isEn }} (EN){{ else }} (FR){{ end }}
         </a>
         {{ end }}
