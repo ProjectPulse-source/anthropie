@@ -80,8 +80,20 @@ Défaut de méthode relevé et corrigé dans la session : un premier `curl -o` a
 l'inverse de la vérité. *Un parseur qui ne sait pas lire n'a pas trouvé un vide* : la mesure n'a
 été retenue qu'après contrôle de la taille du corps récupéré (80 613 octets).
 
-**Fait** : relance courte rédigée, sur le seul point non traité, sujet LiT abandonné (OL a
-répondu) → `reports/openlibrary/RELANCE_TICKET_1605786_2026-09-09.txt`. **Envoi = geste auteur.**
+**Fait** : relance courte rédigée sur le seul point non traité →
+`reports/openlibrary/RELANCE_TICKET_1605786_2026-09-09.txt`. **Envoi = geste auteur.**
+
+Rédaction reprise après relecture de l'auteur, sur un défaut réel de la première version. Le
+« just to be clear, record deletion is not something we typically do » n'est pas une remarque
+générale : il répond à une phrase précise du message du 02/09 — *« I will treat an edition
+duplicate as a deletion request rather than a merge from now on »* —, c'est-à-dire à un
+**précédent que nous venions d'annoncer**. Un simple accusé de réception (« understood on both
+counts ») laissait cette intention debout ; la lettre la **retire** explicitement. Deux autres
+conséquences : le sujet LIT est **clos par écrit** (« no need to reply ») plutôt que passé sous
+silence, ce qui évite qu'OL redoute une relance de plus ; et la demande de réindexation est
+d'emblée **sortie de la classe visée par l'avertissement** — ni modification d'enregistrement,
+ni faveur, mais le reliquat d'une fusion déjà faite. ⭐ *Répondre à un avertissement de
+support, c'est retirer le geste qui l'a déclenché, pas en accuser réception.*
 
 ### 2026-09-02 — Publication : « Le passé recalculé » (En attendant Nadeau n° 249)
 
