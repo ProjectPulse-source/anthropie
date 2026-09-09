@@ -8,7 +8,7 @@ Synthèse des 4 axes de diffusion exécutés en mai 2026 ; le chantier est déso
 
 2. **SocArXiv** : 6 AWPs déposés sur `osf.io/ymkpj`. DOIs SocArXiv liés en P953 sur les 6 items AWP Wikidata. Profil OSF `ymkpj` rattaché à `Q138909233` (Stéphane Lalut) via P973.
 
-3. **OpenLibrary** : 6 fiches livre + page auteur enrichie. Author ID `OL16378291A` (doublon `OL16378292A` fusionné par OL le 26/08/2026). Work IDs canoniques **au 26/08/2026** : Livresque `OL45424544W`, L'Odyssée `OL45424562W`, ANTHROPIE **`OL45424564W`**, Dette Publique **`OL45424599W`**, Premier coup `OL45876839W` — OL a fusionné les 3 paires d'œuvres en gardant, pour ANTHROPIE et Dette Publique, l'inverse de ce que Wikidata pointait (`OL45424565W` et `OL45424600W` sont devenus des redirections). **P648 corrigé des deux côtés**, vérifié à la source le 28/08/2026 (`Q138827344` → `OL45424564W`, `Q138910896` → `OL45424599W`). ASIN broché posé en identifiant `amazon` sur les 6 éditions canoniques, liens URL Amazon retirés des works (remarque OL). Reste côté OL, **confirmé ouvert au 28/08/2026** : 3 paires d'éditions au même ISBN à fusionner (`OL61896251M/252M`, `OL61896276M/277M`, `OL61896316M/317M` — la seconde de chaque paire porte l'identifiant `amazon`, c'est elle la canonique ; rôle librarian) ; fiche auteur non modifiable par le compte depuis fin août (403), ce qui bloque aussi le passage des liens d'autorité de `links` vers `remote_ids` (champ structuré vide).
+3. **OpenLibrary** : 6 fiches livre + page auteur enrichie. Author ID `OL16378291A` (doublon `OL16378292A` fusionné par OL le 26/08/2026). Work IDs canoniques **au 26/08/2026** : Livresque `OL45424544W`, L'Odyssée `OL45424562W`, ANTHROPIE **`OL45424564W`**, Dette Publique **`OL45424599W`**, Premier coup `OL45876839W` — OL a fusionné les 3 paires d'œuvres en gardant, pour ANTHROPIE et Dette Publique, l'inverse de ce que Wikidata pointait (`OL45424565W` et `OL45424600W` sont devenus des redirections). **P648 corrigé des deux côtés**, vérifié à la source le 28/08/2026 (`Q138827344` → `OL45424564W`, `Q138910896` → `OL45424599W`). ASIN broché posé en identifiant `amazon` sur les 6 éditions canoniques, liens URL Amazon retirés des works (remarque OL). **Soldé par OL le 01/09/2026** (ticket Zendesk 1605786) : les 3 paires d'éditions au même ISBN (`OL61896251M/252M`, `OL61896276M/277M`, `OL61896316M/317M`) ont été **supprimées et non fusionnées** — OL ne sait pas fusionner des éditions, un doublon d'édition se demande donc en *suppression* ; les liens d'autorité sont passés en `remote_ids` sur la fiche auteur (`wikidata` / `viaf` / `goodreads`, révision 4, vérifiée à la source le 03/09), et le 403 d'août était un **faux positif** du durcissement de sécurité OL, non intentionnel. **Reste ouvert au 09/09/2026, revérifié à la source ce jour** : `OL45424565W` est un `/type/redirect` vers `OL45424564W` dans la donnée depuis le 26/08 (14:21 UTC), mais **subsiste dans l'index Solr** — `search.json?q=author_key:OL16378291A` rend `numFound = 6` dont ce work à **0 édition**, et la page auteur publique affiche « 6 works ». Les deux redirections sœurs de la même fusion (`OL45424600W`, `OL45424545W`) sont, elles, correctement désindexées (`numFound = 0`) : **un seul réindex manqué, pas un comportement normal de redirection**. Réindexation demandée le 03/09, **non traitée dans la réponse OL du 07/09**. Statut *Librarian-In-Training* (candidature du 22/08) : toujours pas accordé — OL répond le 07/09 que les candidatures sont revues « as time allows ».
 
 4. **Externe** : BnF dépôt légal régularisé, Bing Webmaster Tools configuré (import Google Search Console + sitemap), GitHub Actions IndexNow + Wayback Machine opérationnels (commit `ab86532`).
 
@@ -52,6 +52,36 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 > re-exécution de l'acquis ou l'abandon de travaux crus « déjà faits ».
 
 ## 0. Log chronologique
+
+### 2026-09-09 — Open Library, ticket 1605786 : réponse du 07/09 dépouillée, le fantôme d'index survit
+
+Réponse de Sapphire (Internet Archive) datée du **07/09**, deux phrases, qui répondent au tour
+**précédent** — la suppression des éditions doublons est « une exception », les candidatures
+bénévoles sont revues « as time allows ». **La seule demande du message du 03/09 n'y est pas
+traitée** : la réindexation de `OL45424565W`.
+
+**Mesuré à la source le 09/09**, et non déduit de l'échange :
+
+| Objet | Mesure | Verdict |
+|---|---|---|
+| `OL45424565W` (donnée) | `/type/redirect` → `/works/OL45424564W`, `last_modified` 2026-08-26T14:21 UTC | fusion **vraie** |
+| `search.json?q=author_key:OL16378291A` | `numFound = 6`, dont `/works/OL45424565W` à **0 édition** | index **faux** |
+| Page auteur publique | affiche « **6 works** », le work fantôme cité 13 fois dans le HTML | ce que le lecteur voit est faux |
+| `OL45424600W`, `OL45424545W` (mêmes fusions du 26/08) | `numFound = 0` chacun | **désindexées correctement** |
+| `OL16378291A` (donnée) | révision 4, `remote_ids` = wikidata + viaf + goodreads | **soldé** |
+| `usergroup/librarians.json` (157 m.) et `super-librarians.json` (26 m.) | `st_phane_lalut` **absent des deux** | LiT **non accordé**, 18 j après l'envoi |
+
+Les deux redirections sœurs prouvent que ce n'est pas le comportement normal d'une redirection :
+**un seul document Solr n'a pas été retiré**. C'est la classe *état déclaré ≠ état réel* — rien
+n'échoue, la donnée est juste, et le catalogue public montre un doublon vide sous le nom d'un livre.
+
+Défaut de méthode relevé et corrigé dans la session : un premier `curl -o` a écrit un fichier de
+**0 octet** sans erreur, et le `grep` qui l'a lu a rendu « 0 occurrence » — soit exactement
+l'inverse de la vérité. *Un parseur qui ne sait pas lire n'a pas trouvé un vide* : la mesure n'a
+été retenue qu'après contrôle de la taille du corps récupéré (80 613 octets).
+
+**Fait** : relance courte rédigée, sur le seul point non traité, sujet LiT abandonné (OL a
+répondu) → `reports/openlibrary/RELANCE_TICKET_1605786_2026-09-09.txt`. **Envoi = geste auteur.**
 
 ### 2026-09-02 — Publication : « Le passé recalculé » (En attendant Nadeau n° 249)
 
