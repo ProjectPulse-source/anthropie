@@ -1,6 +1,13 @@
 # Wikidata — compte rendu *Sociologie du travail* (Pugh) : item à créer
 
-> ✅ **PRÊT À ENVOYER — 11/09/2026 au soir.** Le DOI est paru chez Crossref le 11/09 à 18:54 UTC :
+> ✅ **FAIT le 2026-09-11 à 20:09 UTC, exécuté par Laura — item [Q141435769](https://www.wikidata.org/wiki/Q141435769)**,
+> révision 2544165666. Readback API du 11/09 (`readback_api_2026-09-11.json`, dans ce dossier) : les
+> 12 déclarations du lot, toutes conformes, labels et descriptions fr/en identiques au lot.
+> Écriture en retour dans le même commit que ce bloc : `wikidata: "Q141435769"` sur
+> `art-sdt-pugh-2026-09` (`data/works.yaml`), `wikidata_qid` sur la fiche ; `check-wikidata-registre.py`
+> et `check-fiches-registre.py` relancés à 0 avant commit.
+>
+> Historique de l'envoi : **prêt à envoyer le 11/09 au soir.** Le DOI est paru chez Crossref le 11/09 à 18:54 UTC :
 > `10.4000/16rju`. Notice relue : titre exact, *Sociologie du travail* 68 n° 2, auteur rattaché à
 > l'ORCID de l'auteur, licence CC BY-NC-ND ; `doi.org` redirige vers la page de consultation. La ligne
 > `P356` est au lot, DOI en majuscules comme Wikidata les stocke ; `deeplink.txt` porte le lien direct.

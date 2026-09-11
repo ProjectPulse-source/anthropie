@@ -5,6 +5,7 @@ revue: "Sociologie du travail"
 source_type: "Académique"
 url_externe: "https://journals.openedition.org/sdt/50224"
 doi: "10.4000/16rju"
+wikidata_qid: "Q141435769"  # alimente sameAs de l'ItemList /publications/
 image_type: "logo"
 chapo: "Quinze minutes de réconfort auprès d'un patient intubé, puis trois systèmes de saisie pour les consigner. Allison Pugh nomme <em>connective labor</em> ce travail qui consiste à voir l'autre, et montre que scripts et métriques l'usent bien avant l'automatisation. Ce que l'on ne mesure pas ne disparaît pas : il est reporté sur les personnes qui l'exercent et sur celles qu'elles accompagnent, jusqu'à faire de la connexion humaine un bien de luxe."
 chapo_en: "Fifteen minutes of comfort beside an intubated patient, then three separate data systems to log them. Allison Pugh names this work of seeing the other person <em>connective labor</em>, and shows that scripts and metrics wear it down long before automation arrives. What goes unmeasured does not vanish: it is shifted onto the people who do this work and onto those they care for, until human connection becomes a luxury good."

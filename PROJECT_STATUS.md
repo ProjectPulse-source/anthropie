@@ -97,8 +97,9 @@ FR/EN, l'accueil FR/EN et AWP-06 ; objets du mur presse FR/EN ; fiche noindex ; 
 1. **DOI** : ✅ `10.4000/16rju`, déposé chez Crossref le 11/09 à 18:54 UTC, auteur rattaché à son
    ORCID ; il résout vers la page de consultation. Clé `doi` posée en fiche et au registre. La notice
    ne porte que l'année : la date du bloc « Pour citer » (09/09) est gardée.
-2. **Wikidata** : navette complétée de `P356` et **prête à envoyer**, lien direct dans le dossier —
-   `Wikidata/Import_Wikidata_Laura_2026-09-11_Recension_SdT_Pugh/`. Envoi à Laura : geste auteur.
+2. **Wikidata** : ✅ item **Q141435769** créé par Laura le 11/09 à 20:09 UTC, readback API conforme
+   (12 déclarations) ; écriture en retour faite — `wikidata` au registre, `wikidata_qid` en fiche,
+   donc `sameAs` dans l'`ItemList`. Dossier : `Wikidata/Import_Wikidata_Laura_2026-09-11_Recension_SdT_Pugh/`.
 3. **ORCID** : ✅ fait le 11/09 par saisie manuelle dans la session de l'auteur (Chrome).
    Relu à l'API publique : 38 works, put-code `226452428`, type `book-review`, visibilité
    publique, lien = page de consultation, langue `fr`. DOI ajouté le soir même (identifiant

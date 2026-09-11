@@ -864,6 +864,7 @@ works:
     source_type: "Académique"
     url: "https://journals.openedition.org/sdt/50224"
     doi: "10.4000/16rju"
+    wikidata: "Q141435769"  # créé par Laura le 2026-09-11 à 20:09 UTC (navette Import_Wikidata_Laura_2026-09-11_Recension_SdT_Pugh), readback API conforme, 12 déclarations
     chapo:
       fr: "Quinze minutes de réconfort auprès d'un patient intubé, puis trois systèmes de saisie pour les consigner. Allison Pugh nomme <em>connective labor</em> ce travail qui consiste à voir l'autre, et montre que scripts et métriques l'usent bien avant l'automatisation. Ce que l'on ne mesure pas ne disparaît pas : il est reporté sur les personnes qui l'exercent et sur celles qu'elles accompagnent, jusqu'à faire de la connexion humaine un bien de luxe."
       en: "Fifteen minutes of comfort beside an intubated patient, then three separate data systems to log them. Allison Pugh names this work of seeing the other person <em>connective labor</em>, and shows that scripts and metrics wear it down long before automation arrives. What goes unmeasured does not vanish: it is shifted onto the people who do this work and onto those they care for, until human connection becomes a luxury good."
