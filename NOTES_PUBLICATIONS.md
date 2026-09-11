@@ -2,7 +2,7 @@
 
 > **À lire avant** : ajout de publication, modification de vignette, 
 > ou intervention sur le SCSS de cartes BEM.
-> Dernière mise à jour : août 2026 (activation de la catégorie « Académique », option b).
+> Dernière mise à jour : septembre 2026 (Sociologie du travail entre en table § 2, catégorie « Académique »).
 
 ## 1. Front matter publication — checklist
 
@@ -75,6 +75,7 @@ related_book: [slug-livre]
 | Revue de la régulation    | `Académique`  | Revue à comité de lecture (reclassée 2026-08-05) |
 | Revue Française de Socio-Économie | `Académique` | Revue à comité de lecture, éditée par La Découverte, diffusée sur Cairn |
 | Revue Projet              | `Revue`       | Le terme est dans le titre (revue du CERAS) |
+| Sociologie du travail     | `Académique`  | Revue à comité de lecture (ADST, IRISSO-Dauphine), diffusée sur OpenEdition (entrée 2026-09-11) |
 | Terrestres                | `Revue`       | Slogan : « La revue des écologies radicales » |
 
 ### Catégories actuelles
