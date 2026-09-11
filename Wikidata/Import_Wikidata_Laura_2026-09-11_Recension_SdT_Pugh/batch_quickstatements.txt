@@ -1,0 +1,21 @@
+// ============================================================================
+// Navette Laura 2026-09-11 — compte rendu Pugh, Sociologie du travail 68-2 : CRÉATION d'un item
+// En attente du DOI : ajouter la ligne P356 (DOI en majuscules) avant envoi — voir README_LAURA.md
+// Modèle : Q141072264 (compte rendu Kaba, Lectures, OpenEdition)
+// ============================================================================
+CREATE
+LAST	Lfr	"Allison J. Pugh, The Last Human Job: The Work of Connecting in a Disconnected World"
+LAST	Len	"Allison J. Pugh, The Last Human Job: The Work of Connecting in a Disconnected World"
+LAST	Dfr	"compte rendu de lecture par Stéphane Lalut, Sociologie du travail, vol. 68, n° 2 (2026)"
+LAST	Den	"book review by Stéphane Lalut in the journal Sociologie du travail (2026)"
+LAST	P31	Q637866
+LAST	P50	Q138909233
+LAST	P407	Q150
+LAST	P1433	Q15708759
+LAST	P478	"68"
+LAST	P433	"2"
+LAST	P577	+2026-09-09T00:00:00Z/11
+LAST	P953	"https://journals.openedition.org/sdt/50224"
+LAST	P1476	fr:"Allison J. Pugh, The Last Human Job: The Work of Connecting in a Disconnected World"
+LAST	P921	Q140734883
+LAST	P275	Q24082749
