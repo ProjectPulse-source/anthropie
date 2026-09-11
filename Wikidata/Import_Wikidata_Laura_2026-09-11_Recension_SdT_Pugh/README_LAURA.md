@@ -10,7 +10,7 @@
 > Historique de l'envoi : **prêt à envoyer le 11/09 au soir.** Le DOI est paru chez Crossref le 11/09 à 18:54 UTC :
 > `10.4000/16rju`. Notice relue : titre exact, *Sociologie du travail* 68 n° 2, auteur rattaché à
 > l'ORCID de l'auteur, licence CC BY-NC-ND ; `doi.org` redirige vers la page de consultation. La ligne
-> `P356` est au lot, DOI en majuscules comme Wikidata les stocke ; `deeplink.txt` porte le lien direct.
+> `P356` est au lot, DOI en majuscules comme Wikidata les stocke ; `deeplink_New.txt` porte le lien direct (renommé à l'envoi le 11/09, contenu identique à l'octet au `deeplink.txt` d'origine).
 > Aucun item ne porte ce DOI au 11/09 : `haswbstatement:P356=10.4000/16RJU` → 0, avec le témoin Kaba
 > (`P356=10.4000/162F0` → Q141072264) qui répond. **Envoi à Laura : geste auteur.**
 
