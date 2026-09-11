@@ -87,6 +87,11 @@ presse FR et EN ; `ListItem` en position 1, `ScholarlyArticle`, `isPartOf` *Soci
 `&lt;em&gt;` absent ; fiche noindex et absente des trois sitemaps ; `check-all --reseau` à 0 sur
 6 contrôles ; `check_forme.py` conforme sur les deux chapôs.
 
+**Après push (`4b46eb1`, demande de l'auteur)** : déploiement (run 34632443818) et IndexNow
+(34632443848 : 59 URL, HTTP 200) verts. Relu en ligne, cache contourné : carte sur `/publications/`
+FR/EN, l'accueil FR/EN et AWP-06 ; objets du mur presse FR/EN ; fiche noindex ; `llms.txt` à jour ;
+`sdt/pdf/50224` absent.
+
 **Restes nommés** :
 
 1. **DOI** : aucun article du numéro 68-2 n'en porte au 11/09, alors que la revue en dépose chez
