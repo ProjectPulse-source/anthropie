@@ -95,8 +95,10 @@ presse FR et EN ; `ListItem` en position 1, `ScholarlyArticle`, `isPartOf` *Soci
 2. **Wikidata** : navette prête, non envoyée, déclenchée par le DOI —
    `Wikidata/Import_Wikidata_Laura_2026-09-11_Recension_SdT_Pugh/`. Les deux comptes rendus
    OpenEdition déjà créés portent le leur ; créer celui-ci sans DOI obligerait Laura à repasser.
-3. **ORCID** : l'œuvre manque parmi les 37 de la fiche publique (relevé API du 11/09). Saisie
-   manuelle, lien = page de consultation ; champs = entrée `art-sdt-pugh-2026-09` du registre.
+3. **ORCID** : ✅ fait le 11/09 par saisie manuelle dans la session de l'auteur (Chrome).
+   Relu à l'API publique : 38 works, put-code `226452428`, type `book-review`, visibilité
+   publique, lien = page de consultation, langue `fr`. Aucun identifiant externe : le DOI
+   s'ajoutera à cette même entrée quand il paraîtra.
 4. **Search Console** : demander l'indexation de `/publications/` après le push (checklist § 4).
 
 ### 2026-09-09 — Open Library, ticket 1605786 : réponse du 07/09 dépouillée, le fantôme d'index survit
