@@ -94,16 +94,16 @@ FR/EN, l'accueil FR/EN et AWP-06 ; objets du mur presse FR/EN ; fiche noindex ; 
 
 **Restes nommés** :
 
-1. **DOI** : aucun article du numéro 68-2 n'en porte au 11/09, alors que la revue en dépose chez
-   Crossref (2025 : `10.4000/14pg5`). Le jour où il paraît : clé `doi` en fiche et au registre, et
-   vérifier la date — la page dit « mis en ligne le 09 septembre », ses balises DC portent le 10.
-2. **Wikidata** : navette prête, non envoyée, déclenchée par le DOI —
-   `Wikidata/Import_Wikidata_Laura_2026-09-11_Recension_SdT_Pugh/`. Les deux comptes rendus
-   OpenEdition déjà créés portent le leur ; créer celui-ci sans DOI obligerait Laura à repasser.
+1. **DOI** : ✅ `10.4000/16rju`, déposé chez Crossref le 11/09 à 18:54 UTC, auteur rattaché à son
+   ORCID ; il résout vers la page de consultation. Clé `doi` posée en fiche et au registre. La notice
+   ne porte que l'année : la date du bloc « Pour citer » (09/09) est gardée.
+2. **Wikidata** : navette complétée de `P356` et **prête à envoyer**, lien direct dans le dossier —
+   `Wikidata/Import_Wikidata_Laura_2026-09-11_Recension_SdT_Pugh/`. Envoi à Laura : geste auteur.
 3. **ORCID** : ✅ fait le 11/09 par saisie manuelle dans la session de l'auteur (Chrome).
    Relu à l'API publique : 38 works, put-code `226452428`, type `book-review`, visibilité
-   publique, lien = page de consultation, langue `fr`. Aucun identifiant externe : le DOI
-   s'ajoutera à cette même entrée quand il paraîtra.
+   publique, lien = page de consultation, langue `fr`. DOI ajouté le soir même (identifiant
+   `doi`, relation *self*, relu à l'API) : la notice Crossref portant l'ORCID, son import
+   automatique se regroupera avec cette entrée au lieu de la doubler.
 4. **Search Console** : demander l'indexation de `/publications/` après le push (checklist § 4).
 
 ### 2026-09-09 — Open Library, ticket 1605786 : réponse du 07/09 dépouillée, le fantôme d'index survit
