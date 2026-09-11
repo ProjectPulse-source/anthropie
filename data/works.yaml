@@ -21,12 +21,19 @@
 # =============================================================================
 
 meta:
-  registry_version: "1.17"
-  last_updated: "2026-09-02"
+  registry_version: "1.18"
+  last_updated: "2026-09-11"
   maintainer: "Stéphane Lalut"
-  total_works: 41
+  total_works: 42
   source_registry: "registre_soumissions_v73.xlsx"
   changelog:
+    v1_18: |
+      Ajout compte rendu Lalut (2026-09-09) — Sociologie du travail vol. 68
+      n° 2, Allison J. Pugh, The Last Human Job (Princeton UP, 2024).
+      Première parution dans la revue ; source_type Académique (revue à
+      comité, ADST, OpenEdition). Fil remontant : AWP-01, AWP-06, livre
+      ANTHROPIE — Ordre ici. Dette ailleurs. total_works 41 → 42
+      (29 articles + 8 AWP + 5 livres).
     v1_17: |
       Sondage inverse des nœuds externes (2026-09-02) : Crossref par auteur révèle
       le DOI Cairn de l'article Revue Projet (10.3917/pro.412.0078), jamais enregistré ;
@@ -846,6 +853,21 @@ works:
       en: "Was AI born in 1956, or does it have millennia of ancestors? <em>Histoire culturelle de l'IA</em> (ed. Alexandre Gefen, CNRS Éditions) undoes the Dartmouth myth, but leaves the reader to tell lineage from analogy, and keeps at the margins the click workers who manufacture its self-evidence today. Ancestors are not found: they are instituted."
     related_works: [awp-02, awp-06]
     notes: "Recension d'Alexandre Gefen (dir.), Histoire culturelle de l'IA (CNRS Éditions, coll. « Histoire », 380 p., 28 €), issue du projet CulturIA. Parue le 02/09/2026 (n° 249), rubrique Essais. Slug URL : le-passe-recalcule. Fiche site content/publications/en-attendant-nadeau-gefen.md ; related_book lodyssee-des-idees."
+
+  - id: art-sdt-pugh-2026-09
+    type: article
+    status: published
+    canonical_title: { fr: "Allison J. Pugh, The Last Human Job: The Work of Connecting in a Disconnected World" }
+    publication_date: "2026-09-09"
+    publisher: "Sociologie du travail"
+    publisher_type: "revue_acad"
+    source_type: "Académique"
+    url: "https://journals.openedition.org/sdt/50224"
+    chapo:
+      fr: "Quinze minutes de réconfort auprès d'un patient intubé, puis trois systèmes de saisie pour les consigner. Allison Pugh nomme <em>connective labor</em> ce travail qui consiste à voir l'autre, et montre que scripts et métriques l'usent bien avant l'automatisation. Ce que l'on ne mesure pas ne disparaît pas : il est reporté sur les personnes qui l'exercent et sur celles qu'elles accompagnent, jusqu'à faire de la connexion humaine un bien de luxe."
+      en: "Fifteen minutes of comfort beside an intubated patient, then three separate data systems to log them. Allison Pugh names this work of seeing the other person <em>connective labor</em>, and shows that scripts and metrics wear it down long before automation arrives. What goes unmeasured does not vanish: it is shifted onto the people who do this work and onto those they care for, until human connection becomes a luxury good."
+    related_works: [awp-01, awp-06]
+    notes: "Compte rendu CR26023 (proposé 11/04/2026, accepté 04/06/2026 sans remaniement ; éditrice Anne Bertrand). Sociologie du travail vol. 68 n° 2 (avril-juin 2026, Varia), mis en ligne le 09/09/2026 selon le bloc « Pour citer » ; les balises DC/citation de la page portent 2026-09-10. Pas de DOI au 2026-09-11 : aucun article du numéro n'en porte encore, alors que la revue en dépose chez Crossref (2025 : 10.4000/14pg5) ; à écrire ici et en fiche quand il paraîtra. Licence CC BY-NC-ND 4.0 : le post-print éditeur peut aller en archive ouverte institutionnelle, JAMAIS sur une plateforme commerciale (Academia, Mendeley, ResearchGate, SSRN) ; l'éditrice demande de renvoyer vers la page de consultation plutôt que vers le PDF. Site, ORCID et Wikidata pointent donc https://journals.openedition.org/sdt/50224, jamais /sdt/pdf/50224. Message de l'éditrice archivé : D:/PRO/08_ARTICLES/SOCIOLOGIE DU TRAVAIL/Tire_a_part_CR26023_2026-09.txt. Fiche site content/publications/sociologie-du-travail-pugh.md ; related_book anthropie-ordre-ici-dette-ailleurs."
 
   # ===========================================================================
   # ARTICLES ACCEPTÉS — EN ATTENTE DE PUBLICATION (le champ status fait foi)

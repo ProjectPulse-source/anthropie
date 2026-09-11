@@ -53,6 +53,52 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-11 — Publication : compte rendu Pugh, *Sociologie du travail* vol. 68 n° 2
+
+Compte rendu CR26023 de *The Last Human Job* (Allison J. Pugh, Princeton UP, 2024), mis en ligne
+le 09/09 sur OpenEdition : https://journals.openedition.org/sdt/50224. Fiche
+`content/publications/sociologie-du-travail-pugh.md` selon `docs/CHECKLIST_AJOUT_PUBLICATION.md`
+(logo, noindex, hors sitemap). Première parution dans la revue : `source_type` Académique, et la
+revue entre dans la table § 2 de `NOTES_PUBLICATIONS.md` (commit `docs:` séparé).
+
+**Fil remontant** : `related: [awp-01, awp-06]`. Le compte rendu lit le « paradoxe tragique » de
+Pugh comme un report : ce que les organisations ne mesurent pas passe aux personnes qui exercent le
+travail relationnel et à celles qu'elles accompagnent, c'est le déplacement que pose AWP-01 ;
+scripts, métriques et chatbots « mieux que rien » en sont le versant numérique, celui d'AWP-06.
+`related_book: anthropie-ordre-ici-dette-ailleurs`.
+
+**Registres synchronisés dans le même commit** : `data/works.yaml` v1.18 (`art-sdt-pugh-2026-09` ;
+42 œuvres = 29 articles + 8 AWP + 5 livres, compte relu par lecture YAML) ; `data/intent_matrix.yaml`
+v1.5 (entrées travail + IA/numérique) ; `presse_objets` FR/EN (« Travail de connexion » /
+« Connective labour ») ; `static/llms.txt`, où la revue rejoint la liste.
+
+**La consigne de l'éditrice vaut pour chaque surface.** Le texte est sous CC BY-NC-ND 4.0 : le
+post-print peut aller en archive ouverte institutionnelle, jamais sur Academia, Mendeley,
+ResearchGate ou SSRN, et l'éditrice demande de renvoyer vers la page de consultation plutôt que vers
+le PDF. Carte, `ItemList`, flux RSS et registre pointent `…/sdt/50224` ; `sdt/pdf/50224` apparaît
+0 fois dans `public/`. La même règle est écrite dans la navette Wikidata (`P953`) et dans les notes
+de l'entrée du registre. Message de l'éditrice archivé verbatim :
+`D:\PRO\08_ARTICLES\SOCIOLOGIE DU TRAVAIL\Tire_a_part_CR26023_2026-09.txt`, SHA-256 `946acc82…c1ac0e`
+identique à la pièce reçue.
+
+**Preuves** : `hugo --minify` vert ; carte sur `/publications/` et `/en/publications/`, sur AWP-01,
+AWP-06 et leurs miroirs EN, et dans « Dernières parutions » de l'accueil FR et EN ; tuile du mur
+presse FR et EN ; `ListItem` en position 1, `ScholarlyArticle`, `isPartOf` *Sociologie du travail* ;
+`&lt;em&gt;` absent ; fiche noindex et absente des trois sitemaps ; `check-all --reseau` à 0 sur
+6 contrôles ; `check_forme.py` conforme sur les deux chapôs.
+
+**Restes nommés** :
+
+1. **DOI** : aucun article du numéro 68-2 n'en porte au 11/09, alors que la revue en dépose chez
+   Crossref (2025 : `10.4000/14pg5`). Le jour où il paraît : clé `doi` en fiche et au registre, et
+   vérifier la date — la page dit « mis en ligne le 09 septembre », ses balises DC portent le 10.
+2. **Wikidata** : navette prête, non envoyée, déclenchée par le DOI —
+   `Wikidata/Import_Wikidata_Laura_2026-09-11_Recension_SdT_Pugh/`. Les deux comptes rendus
+   OpenEdition déjà créés portent le leur ; créer celui-ci sans DOI obligerait Laura à repasser.
+3. **ORCID** : l'œuvre manque parmi les 37 de la fiche publique (relevé API du 11/09). Saisie
+   manuelle, lien = page de consultation ; champs = entrée `art-sdt-pugh-2026-09` du registre.
+4. **Search Console** : demander l'indexation de `/publications/` après le push (checklist § 4).
+
 ### 2026-09-09 — Open Library, ticket 1605786 : réponse du 07/09 dépouillée, le fantôme d'index survit
 
 Réponse de Sapphire (Internet Archive) datée du **07/09**, deux phrases, qui répondent au tour

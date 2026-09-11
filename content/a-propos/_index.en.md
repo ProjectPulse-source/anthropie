@@ -37,6 +37,7 @@ wall_lignes:
 # mur lit toujours le corpus FR. Seul l'objet est traduit ; le titre révélé au
 # survol reste dans la langue de l'article.
 presse_objets:
+  sociologie-du-travail-pugh: "Connective labour"
   en-attendant-nadeau-gefen: "History of AI"
   en-attendant-nadeau-parler-sans-savoir-a-qui: "Books and algorithms"
   rfse-lemoine-chasseurs-detats: "Sovereign debt"

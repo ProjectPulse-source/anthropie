@@ -49,6 +49,7 @@ wall_lignes:
 # entrée, la tuile retombe sur le nom de la revue.
 # ---------------------------------------------------------------------------
 presse_objets:
+  sociologie-du-travail-pugh: "Travail de connexion"
   en-attendant-nadeau-gefen: "Histoire de l'IA"
   en-attendant-nadeau-parler-sans-savoir-a-qui: "Livre et algorithmes"
   rfse-lemoine-chasseurs-detats: "Dette souveraine"
