@@ -53,6 +53,32 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-14 — Contrôle des dépôts : la décision était dans le code, la sortie disait le contraire
+
+Contrôle demandé sur la foi de l'audit plateformes du **2026-08-02**, dont la recommandation n°1
+était « déposer AWP-07 et AWP-08 sur SSRN ». Deux prémisses de la consigne sont périmées, et
+`check_deposits_status.py` le montre : **AWP-07 n'a jamais été déposé sur SSRN** (`status:
+planned` dans `works.yaml`, page auteur vérifiée le 17/08) — il n'y a donc aucune acceptation à
+attendre ; et SSRN est passé en **NO-GO pour AWP-07/08** le 2026-08-17, source relue : *frameworks*
+en « Content types that are typically NOT accepted », critère d'entrée « original findings »,
+rejets finaux sans appel, et « high submission volumes may lead to rejections **and account
+closure** » sur un compte qui porte six acceptations. Rien déposé, donc rien à porter dans
+`works.yaml`.
+
+**Défaut corrigé dans le même passage.** La grille imprimée par le script annonçait
+« **GO (EN)** — SocArXiv/OSF, accepté à tout stade », alors que le canal est **clos aux papiers
+conceptuels depuis le 2026-08-05** après deux refus sur le fond d'AWP-01 EN — décision écrite
+vingt lignes plus haut dans le même fichier, en commentaire, et contredite par la sortie. La
+section OSF aggravait la lecture : « file d'attente restante : aucune » suivi de « ne déposer le
+suivant qu'après acceptation du précédent » se lit comme une invitation à déposer, alors que la
+file est vide **par décision, pas par disponibilité**. Les deux lignes disent maintenant ce que le
+dépôt sait. Classe *état déclaré ≠ état réel*, appliquée à un instrument : ce qu'il imprime est ce
+que l'auteur lit, et c'est sur cette lecture que se déposerait un papier.
+
+**MPRA** : rien à rouvrir, arbitré le 13/09 — AWP-07 (`130468`) est « Under review », pas refusé,
+et 97 % de sa cohorte d'août est dans le même cas ; vérification au **11/10/2026**, sur le
+rendement de la cohorte et non sur un nombre de jours.
+
 ### 2026-09-13 — PDF des AWP : on ne peut pas les ouvrir, on ne pouvait que les télécharger — et le bouton de l'autre langue mentait
 
 **Point de départ, une question d'auteur sur téléphone** : depuis un iPhone, un PDF du site

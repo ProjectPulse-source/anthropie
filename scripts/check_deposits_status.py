@@ -191,7 +191,12 @@ try:
         if not any(k in t for t in titres for k in (lab.lower(),)):
             reste.append(lab)
     print(f"   -> {n} en ligne | file d'attente restante : {', '.join(reste) if reste else 'aucune'}")
-    print("   RAPPEL : ne deposer le suivant qu'apres ACCEPTATION du precedent.")
+    # "File vide" ne veut pas dire "on peut deposer le suivant" : la file est vide
+    # parce que le canal a ete CLOS, pas parce qu'il attend. Sans cette ligne, la
+    # sortie invitait a deposer (corrige le 2026-09-14).
+    print("   CANAL CLOS aux papiers conceptuels depuis le 2026-08-05 (deux refus sur"
+          " le fond d'AWP-01 EN) : la file est vide par decision, pas par disponibilite.")
+    print("   RAPPEL : ailleurs, ne deposer le suivant qu'apres ACCEPTATION du precedent.")
 except Exception as e:
     print(f"   ERREUR : {e}")
 
@@ -205,8 +210,17 @@ print("\n[GRILLE DE DEPOT]  conformite | valeur marginale")
 for nom, verdict, note in [
     ("Zenodo", "CANONIQUE",
      "socle de toutes les langues — ne se discute pas"),
-    ("SocArXiv/OSF", "GO (EN)",
-     "accepte a tout stade ; apporte la communaute SHS internationale"),
+    # Corrige le 2026-09-14 : cette ligne affichait "GO (EN) - accepte a tout stade"
+    # alors que le canal est CLOS depuis le 2026-08-05 (voir OSF_FILE_ATTENTE plus
+    # haut, vide pour cette raison). La decision etait dans le code, en commentaire,
+    # et la SORTIE disait le contraire -- c'est la sortie que l'auteur lit.
+    ("SocArXiv/OSF", "NO-GO (conceptuels)",
+     "CLOS le 2026-08-05 apres DEUX refus sur le fond d'AWP-01 EN : 2026-05-14 en"
+     " lot ('Arts & Humanities' + suspicion 'reference spamming') puis 2026-08-04"
+     " ('does not meet our criteria for scholarly social science research'). Ne plus"
+     " soumettre de papier conceptuel, ne pas repondre au moderateur. AWP-06, plus"
+     " applique, reste en ligne (z6x38_v1) et y demeure : le canal n'est pas ferme"
+     " au compte, il l'est a ce TYPE de texte."),
     ("MPRA/RePEc", "WAIT",
      "conforme, mais lot d'avril encore bloque : rien de neuf avant deblocage"),
     ("SSRN", "NO-GO (AWP-07/08)",
