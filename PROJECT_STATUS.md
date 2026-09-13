@@ -103,9 +103,19 @@ donc distinguer. `python scripts/check-all.py --reseau` : 6 contrôles, tout à 
 contrôle écarté : sa regex exigeait `href="…"` que le `--minify` supprime, et il rendait 16 faux
 « absent » — un parseur qui ne sait pas lire n'a pas trouvé un vide.
 
-**Point ouvert, côté collector** : `data/convergence_routing.json` n'est plus lu par aucun
-template. `mesure_regime --route` continue de le produire — il mesure sans piloter. À arbitrer
-dans le chantier collector (le régime mixte est ce qui part en contre-expertise), pas ici.
+**Point fermé le 2026-09-14, arbitrage délégué par l'auteur.** `data/convergence_routing.json`
+est supprimé du dépôt : plus aucun template ne le lisait, et un fichier de configuration que
+personne ne lit finit par être cru. Côté collector, `--route` n'écrit plus rien et le dit, le
+lanceur quotidien `data/convergence.bat` perd l'option, et la section du rapport s'intitule
+désormais « Contrôleur de routage — DÉSARMÉ (mesure seule) » — sans quoi elle aurait continué
+d'affirmer chaque jour une action qui n'a plus lieu. La mesure, elle, est intégralement conservée :
+c'est l'action qui tombe, pas le diagnostic. Vérifié le 2026-09-14 : `--route` relancé n'a pas
+recréé le fichier. Détail du geste dans `01_SITE/collector/PROJECT_STATUS.md`.
+
+Vérifié aussi dans le même passage : aucune autre surface du site n'est pilotée par un instrument
+de mesure. Les `site.Data` restants sont l'identité auteur, les chiffres de dette et les registres
+d'œuvres — du contenu, pas des compteurs. La règle « le lecteur d'abord » n'a donc qu'un seul cas
+d'application ici, et il est traité.
 
 ### 2026-09-13 — Rappel J+90 : l'audit existait déjà ; ce qui a bougé, et trois cellules remplies
 
