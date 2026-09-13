@@ -235,6 +235,64 @@ survit. `New-ExternalAudit.ps1` corrigé pour **remplacer** au lieu d'ajouter, s
 `.bak-20260913`, ASCII pur et syntaxe PowerShell revérifiées. Aucun identifiant perdu, aucun
 doublon restant — contrôlé par énumération.
 
+**Tour 2 — pièce externe reçue le 13/09 à 11:23, archivée puis arbitrée.** Capture verbatim
+`420B124D…7889`, 4 886 octets, posée **avant lecture**, parité d'empreinte vérifiée.
+⚠ **Enregistrée en annexe, pas en consultation** : l'import refuse un second dépôt dans un
+créneau déjà servi — un paquet, une réponse. L'enregistrer autrement aurait exigé de fabriquer
+un envoi qui n'a pas eu lieu. Le ledger ne la compte pas ; l'archive la conserve.
+
+**Elle concède les deux verdicts du tour 1** : son passage précédent n'était pas le `FACT_CHECK`
+demandé, et le redressement ×1,52 existe — « ma formulation était trop forte ». Sa seule
+contestation porte sur le témoin français, qui ne serait pas un contrôle *causal* puisque langue,
+SERP, concurrents et géographie changent ensemble. **`ACCEPTÉ` sur la méthode, `REJETÉ` sur la
+cible** : elle attaque une conclusion que l'arbitrage n'avait pas tirée — il disait déjà que la
+contamination « ne peut pas porter seule le déficit ». Et l'usage étroit survit : le bras français
+ne servait pas à estimer le CTR anglais atteignable, mais de **témoin négatif sur l'opération** —
+si un qualificatif définitionnel augmentait mécaniquement le CTR, le français le montrerait aussi ;
+il montre l'inverse. Cela écarte une explication concurrente, cela n'en établit aucune.
+
+**`ACCEPTÉ` et exécuté dans la foulée : la décomposition par intention.** Mesure à la source sur
+la page seule — 375 requêtes, le top 10 couvrant **76 %** des impressions :
+
+| Classe d'intention | Impressions | Clics | CTR |
+|---|---|---|---|
+| requête **nue / ambiguë** | 13 544 | 29 | **0,21 %** |
+| **définitionnelle explicite** | 12 987 | 41 | **0,32 %** |
+| **francophone servie par la page ANGLAISE** | 1 327 | 8 | **0,60 %** |
+| **navigationnelle homonyme** | **0 identifiée** | — | — |
+
+**Terminal** : mobile 21 405 impressions à 0,3 %, ordinateur 9 150 à 0,3 %, tablette 543 à 0,2 %.
+**Le CTR est identique sur les trois** — la dimension réclamée n'explique rien, et c'est un
+résultat, pas une case vide. Elle reste utile : **69 % des impressions sont mobiles**, là où
+l'extrait affiché est le plus court.
+
+⚠ **Deux gardes sur cette table.** Le zéro d'homonymes **ne confirme ni n'infirme** la
+contamination : la console ne montre que les requêtes où ce site a été affiché, et qui tape le nom
+de l'entreprise ne voit jamais cette page. Et les taux élevés de la queue sont du **bruit** —
+`anthropie meaning` à 3,7 %, c'est 2 clics sur 54 impressions.
+
+**La taille de l'enjeu, enfin chiffrée — et c'est elle qui répond au « faut-il ? ».** Sur le bloc
+définitionnel, seule population où une réécriture d'extrait peut agir (12 987 impressions à
+0,32 %) : porté à 0,50 % il rendrait **+24 clics par trimestre** ; au taux définitionnel français
+de 0,91 %, **+77** ; au taux français sur requête nue, **+95**. À rapporter aux **354 clics
+trimestriels du site entier** : entre 7 % et 27 % du trafic total. **Considérable en proportion,
+modeste en volume.**
+
+⚠ **Un facteur de la formule reste non mesurable.** Le tour 2 propose de convertir en valeur
+d'opportunité — impressions récupérables × gain de CTR × **valeur d'un clic**. Les deux premiers
+sont désormais chiffrés ; le troisième ne l'est pas, et le dépôt sait pourquoi : aucun clic sortant
+n'est instrumenté (`GEO_COMMERCIAL_FUNNEL.md`, constat F8, pages vues seules). **La décision sera
+jugée, pas calculée.**
+
+**Une fuite mineure, nommée et non traitée** : 1 327 impressions de requêtes **françaises** sont
+servies par la page **anglaise** à 0,60 %, quand la page française convertit à 1,05 % sur la même
+requête — environ **6 clics par trimestre**. Trop petit pour un chantier, trop net pour un silence.
+
+**Bilan des deux tours** : un défaut logique réel que je n'avais pas vu, une conclusion fausse que
+sa propre recommandation contredisait, et **zéro source sur les deux passages**. Le `FACT_CHECK`
+reste entier. Lire le verdict et le motif séparément était la bonne discipline : accepter en bloc
+aurait fait entrer une fausseté au dossier, refuser en bloc y aurait laissé mon raccourci.
+
 **Aucune modification du site.** Les seuls fichiers écrits dans le dépôt sont ce journal et le
 renvoi ajouté au § 5.7 du rapport du 22/08, pour qu'un lecteur de ce rapport sache où sont les
 cellules remplies. Le paquet de contre-expertise vit hors dépôt suivi.
