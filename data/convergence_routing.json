@@ -10,9 +10,9 @@
       "intensity": "aucune",
       "lang": "fr",
       "slope_14d": 0.429,
-      "slope_7d": 0.714,
+      "slope_7d": 0.143,
       "state": "EQUILIBRE",
-      "uratio": 1.466
+      "uratio": 1.464
     },
     "10.5281/zenodo.19268037": {
       "awp": "awp-02",
@@ -21,46 +21,46 @@
       "intensity": "fort",
       "lang": "fr",
       "order": 5,
-      "slope_14d": 0.214,
-      "slope_7d": 0.429,
+      "slope_14d": 0.357,
+      "slope_7d": 0.286,
       "state": "SURDESEQUILIBRE",
-      "uratio": 6.355
+      "uratio": 6.328
     },
     "10.5281/zenodo.19268769": {
       "awp": "awp-03",
       "cta_primary": "record",
-      "deficit": 22,
+      "deficit": 23,
       "intensity": "léger",
       "lang": "fr",
       "order": 9,
-      "slope_14d": 0.286,
+      "slope_14d": 0.429,
       "slope_7d": 0.429,
       "state": "CONVERGENCE",
-      "uratio": 2.383
+      "uratio": 2.385
     },
     "10.5281/zenodo.19269244": {
       "awp": "awp-04",
       "cta_primary": "record",
-      "deficit": 289,
+      "deficit": 287,
       "intensity": "fort",
       "lang": "fr",
       "order": 2,
-      "slope_14d": 0.5,
-      "slope_7d": 0.857,
+      "slope_14d": 0.714,
+      "slope_7d": 0.571,
       "state": "SURDESEQUILIBRE",
-      "uratio": 8.283
+      "uratio": 8.032
     },
     "10.5281/zenodo.19269486": {
       "awp": "awp-05",
       "cta_primary": "record",
-      "deficit": 54,
+      "deficit": 52,
       "intensity": "moyen",
       "lang": "fr",
       "order": 8,
-      "slope_14d": 0.429,
-      "slope_7d": 0.714,
-      "state": "CONVERGENCE",
-      "uratio": 3.0
+      "slope_14d": 0.571,
+      "slope_7d": 0.429,
+      "state": "SURDESEQUILIBRE",
+      "uratio": 2.954
     },
     "10.5281/zenodo.19431208": {
       "awp": "awp-01",
@@ -68,22 +68,22 @@
       "deficit": 0,
       "intensity": "aucune",
       "lang": "en",
-      "slope_14d": 0.5,
-      "slope_7d": 0.857,
+      "slope_14d": 0.714,
+      "slope_7d": 0.571,
       "state": "EQUILIBRE",
-      "uratio": 1.856
+      "uratio": 1.837
     },
     "10.5281/zenodo.19433086": {
       "awp": "awp-02",
       "cta_primary": "record",
-      "deficit": 292,
+      "deficit": 291,
       "intensity": "fort",
       "lang": "en",
       "order": 1,
       "slope_14d": 0.5,
-      "slope_7d": 0.714,
+      "slope_7d": 0.286,
       "state": "SURDESEQUILIBRE",
-      "uratio": 8.94
+      "uratio": 8.767
     },
     "10.5281/zenodo.19434094": {
       "awp": "awp-03",
@@ -91,46 +91,46 @@
       "deficit": 0,
       "intensity": "aucune",
       "lang": "en",
-      "slope_14d": 0.429,
-      "slope_7d": 0.571,
+      "slope_14d": 0.357,
+      "slope_7d": 0.143,
       "state": "EQUILIBRE",
-      "uratio": 1.691
+      "uratio": 1.698
     },
     "10.5281/zenodo.19439921": {
       "awp": "awp-04",
       "cta_primary": "record",
-      "deficit": 218,
+      "deficit": 219,
       "intensity": "fort",
       "lang": "en",
       "order": 6,
-      "slope_14d": 0.643,
-      "slope_7d": 1.286,
+      "slope_14d": 0.857,
+      "slope_7d": 0.571,
       "state": "SURDESEQUILIBRE",
-      "uratio": 4.813
+      "uratio": 4.766
     },
     "10.5281/zenodo.19440866": {
       "awp": "awp-05",
       "cta_primary": "record",
-      "deficit": 16,
+      "deficit": 12,
       "intensity": "léger",
       "lang": "en",
       "order": 11,
-      "slope_14d": 0.643,
-      "slope_7d": 1.143,
+      "slope_14d": 0.857,
+      "slope_7d": 0.571,
       "state": "CONVERGENCE",
-      "uratio": 2.199
+      "uratio": 2.15
     },
     "10.5281/zenodo.20025421": {
       "awp": "awp-06",
       "cta_primary": "record",
-      "deficit": 89,
+      "deficit": 86,
       "intensity": "moyen",
       "lang": "fr",
       "order": 7,
-      "slope_14d": 0.286,
+      "slope_14d": 0.571,
       "slope_7d": 0.571,
       "state": "SURDESEQUILIBRE",
-      "uratio": 3.752
+      "uratio": 3.654
     },
     "10.5281/zenodo.20077993": {
       "awp": "awp-06",
@@ -138,10 +138,10 @@
       "deficit": 0,
       "intensity": "aucune",
       "lang": "en",
-      "slope_14d": 0.714,
-      "slope_7d": 0.714,
+      "slope_14d": 0.429,
+      "slope_7d": 0.143,
       "state": "EQUILIBRE",
-      "uratio": 1.641
+      "uratio": 1.651
     },
     "10.5281/zenodo.21200286": {
       "awp": "awp-07",
@@ -150,9 +150,9 @@
       "intensity": "aucune",
       "lang": "fr",
       "slope_14d": null,
-      "slope_7d": null,
+      "slope_7d": 0.571,
       "state": "EQUILIBRE",
-      "uratio": 1.86
+      "uratio": 1.767
     },
     "10.5281/zenodo.21200288": {
       "awp": "awp-07",
@@ -162,21 +162,21 @@
       "lang": "en",
       "order": 3,
       "slope_14d": null,
-      "slope_7d": null,
+      "slope_7d": 0.286,
       "state": "SURDESEQUILIBRE",
-      "uratio": 12.291
+      "uratio": 11.912
     },
     "10.5281/zenodo.21506320": {
       "awp": "awp-08",
       "cta_primary": "record",
-      "deficit": 18,
+      "deficit": 17,
       "intensity": "léger",
       "lang": "fr",
       "order": 10,
       "slope_14d": null,
-      "slope_7d": null,
+      "slope_7d": 0.286,
       "state": "SURDESEQUILIBRE",
-      "uratio": 3.161
+      "uratio": 3.03
     },
     "10.5281/zenodo.21507249": {
       "awp": "awp-08",
@@ -185,22 +185,22 @@
       "intensity": "aucune",
       "lang": "en",
       "slope_14d": null,
-      "slope_7d": null,
+      "slope_7d": 0.143,
       "state": "EQUILIBRE",
-      "uratio": 1.375
+      "uratio": 1.386
     },
     "10.5281/zenodo.21775366": {
       "awp": "awp-01",
       "cta_primary": "record",
-      "deficit": 264,
+      "deficit": 265,
       "intensity": "fort",
       "lang": "es",
       "order": 4,
       "slope_14d": null,
-      "slope_7d": null,
+      "slope_7d": 0.0,
       "state": "SURDESEQUILIBRE",
-      "uratio": 28.35
+      "uratio": 28.45
     }
   },
-  "updated": "2026-09-07"
+  "updated": "2026-09-13"
 }
