@@ -163,6 +163,78 @@ contrôle par `grep` rendait ici un faux zéro, seule la lecture Python fait foi
 fuite par le remote public. **L'envoi reste un geste auteur** ; le dossier a été ouvert dans
 l'explorateur.
 
+**Réponse reçue le 13/09, archivée puis arbitrée.** Capture verbatim `67DE1E80…2EB8`, 15 609
+octets, archivée **avant toute lecture** ; copie déposée et copie d'archive vérifiées identiques
+octet pour octet. Statut `RESPONSE_ARCHIVED`, arbitrage dans `ARBITRATIONS/`.
+
+⚠ **Le `FACT_CHECK` demandé n'a pas été livré.** Le paquet réclamait, pour chacune des six
+hypothèses, un verdict avec **URL, date de source et citation exacte**. La réponse n'en porte
+**aucune** : les six hypothèses sont exactement aussi peu vérifiées qu'avant. La réponse se
+désigne elle-même comme une relecture « avant envoi au contradicteur » — elle s'est comprise
+comme un contrôle amont. **La vérification factuelle reste entièrement à faire**, et le dossier
+révisé devra partir vers un canal de recherche sourcée. Ce n'est pas une perte : un audit de
+raisonnement non demandé qui trouve un défaut réel vaut mieux qu'une vérification complaisante.
+Mais il faut nommer ce qui est rendu, sinon on classe « vérifié » un dossier qui ne l'est pas.
+
+**`ACCEPTÉ` — et cela invalide l'architecture du paquet, pas ses mesures.** Le § 6 posait :
+*si H1 ou H2 est confirmée, alors le CTR n'est pas un défaut de la page, donc ne rien toucher*.
+C'est faux. Une SERP structurellement difficile explique **le plancher général** ; elle ne dit
+rien de **notre distance au plafond atteignable**. Une page peut très bien sous-performer de
+moitié à l'intérieur d'un environnement déjà pauvre. **H3 — le contrefactuel chiffré — devient
+la charnière de la décision, à la place de H1.** J'avais construit un dossier qui demandait une
+cause là où la décision dépend d'un **écart à une référence** : « pourquoi 0,29 % ? » n'était
+pas la bonne question.
+
+**`REJETÉ` — bon instrument, calcul exact, conclusion fausse.** Le contradicteur isole le
+sous-ensemble explicitement définitionnel (12 612 impressions, 38 clics, 0,301 % — arithmétique
+re-vérifiée, exacte) et conclut que le redressement attendu si les homonymes étaient la cause
+principale **« n'apparaît pas »**. Il l'a comparé à la **page entière** au lieu de la **requête
+nue**, la seule vraiment ambiguë :
+
+| Découpage | Impressions | Clics | CTR |
+|---|---|---|---|
+| `anthropy` **nue** | 13 624 | 27 | **0,198 %** |
+| sous-ensemble **définitionnel** | 12 612 | 38 | **0,301 %** |
+
+**Le redressement existe : ×1,52.** Et le **témoin français**, sur le même découpage, l'établit
+comme un fait de langue : `anthropie` nue 1,049 % → `anthropie définition` 0,912 %, soit
+**×0,87 — en français le qualificatif DÉGRADE**. La même opération produit un effet **inverse**
+dans les deux langues : signature d'une contamination présente côté anglais, absente côté
+français. Retenu malgré tout : la contamination **ne peut pas porter seule** le déficit, 0,301 %
+restant très loin du français. *Cause de son erreur : il a mesuré son mécanisme sur une seule
+population, alors que le contrôle français était dans le paquet qu'il lisait.*
+
+**Décidé sans arbitrage d'auteur** : le changement d'URL canonique est **écarté** — son bénéfice
+repose sur l'hypothèse la plus spéculative du dossier, pendant que son coût est réel ; le paquet
+est **révisé** avant tout nouvel envoi (le lien « H1 ou H2 ⇒ ne rien faire » disparaît, H1 se
+scinde en requête nue / requêtes définitionnelles, trois hypothèses s'ajoutent — extrait
+réellement affiché, sous-performance à configuration comparable, fraction de trafic récupérable) ;
+et **la réécriture de titre et description devient un test réversible**, pas un remède.
+
+⚠ **Un angle mort que le paquet n'avait pas** : la métadonnée écrite n'est pas l'extrait affiché,
+le moteur réécrit. Sans contrôle de ce qui s'affiche réellement, un test de réécriture peut
+rendre un **faux négatif** — texte changé, extrait inchangé, et l'on conclurait que le message
+n'y fait rien.
+
+**Restent à l'auteur, et seulement eux** : le relevé manuel des SERP réelles sur quatre à six
+requêtes — interroger un moteur de façon automatisée n'entre pas dans ce que cette session
+s'autorise — et **une question stratégique que personne n'a posée** : la page anglaise porte
+68 % des impressions pour 30 % des clics, mais *faut-il* récupérer ce CTR ? Cent clics
+trimestriels de plus sur une page de concept ne valent pas mécaniquement un effort équivalent
+placé ailleurs. La consultation a éclairé le « comment » ; le « faut-il » n'appartient pas à
+l'arbitrage.
+
+🔧 **Incident du dispositif, trouvé par sa propre garde.** L'import de la réponse a **refusé** de
+mettre à jour l'état : deux lignes de ledger pour un seul audit. Cause : l'identifiant est lu
+**dans le paquet**, donc la reprise forcée de 10:21 a réutilisé celui de 10:17, puis le ledger a
+**ajouté** une ligne au lieu de remplacer — la garde d'import (« exactement une ligne par
+audit ») avait raison, c'est l'écrivain qui avait tort. La capture verbatim, elle, avait bien eu
+lieu : le verrou essentiel a tenu. Ledger sauvegardé puis assaini — la ligne périmée pointait un
+chemin dont les octets avaient changé, sa trace est passée en colonne `notes` de la ligne qui
+survit. `New-ExternalAudit.ps1` corrigé pour **remplacer** au lieu d'ajouter, sauvegarde
+`.bak-20260913`, ASCII pur et syntaxe PowerShell revérifiées. Aucun identifiant perdu, aucun
+doublon restant — contrôlé par énumération.
+
 **Aucune modification du site.** Les seuls fichiers écrits dans le dépôt sont ce journal et le
 renvoi ajouté au § 5.7 du rapport du 22/08, pour qu'un lecteur de ce rapport sache où sont les
 cellules remplies. Le paquet de contre-expertise vit hors dépôt suivi.
