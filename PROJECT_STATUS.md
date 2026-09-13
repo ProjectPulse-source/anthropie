@@ -121,8 +121,51 @@ la checklist depuis mai est levée par un chiffre, pas par une impression.
 | **SSRN** `11065608` | non concluant | 403 anti-bot, comme au J+0 et au J+90 |
 | **Backlinks `.edu`, mentions presse** | non instruit | recherche manuelle |
 
-**Aucune modification du site.** Les seuls fichiers écrits sont ce journal et le renvoi ajouté au
-§ 5.7 du rapport du 22/08, pour qu'un lecteur de ce rapport sache où sont les cellules remplies.
+**La position ne sauve pas l'explication simple — mesuré, puis écarté.** L'hypothèse la moins
+coûteuse était que la page anglaise se classe plus bas et que son CTR suive. Elle est fausse :
+« anthropy meaning » est en position **5,4** pour **0,3 %**, « anthropie définition » en position
+**5,6** pour **0,9 %**. Position voisine, CTR trois fois moindre. Par pays, l'écart États-Unis /
+France vaut **une** position (7,0 contre 6,1) et un facteur **cinq** de CTR (0,3 % contre 1,5 %).
+Le classement n'explique pas l'écart ; autre chose le fait.
+
+**La page anglaise a déjà fait le travail de désambiguïsation — et ça ne suffit pas.** Sa FAQ
+porte **14 entrées**, deux de plus que la française, dont **quatre distinctions explicites** :
+l'entreprise d'intelligence artificielle au nom voisin, un **rassemblement britannique nommé
+*Anthropy***, l'ère géologique, et le principe cosmologique homonyme. Le contenu dit donc déjà,
+noir sur blanc, ce que la page n'est pas — et le CTR reste à 0,29 %. **Cela désavantage
+l'hypothèse « la page ne dit pas assez ce qu'elle est » et renforce celle de l'intention de
+recherche.** Le levier restant n'est pas dans la page : il est dans ce que l'utilisateur voit
+**avant** de cliquer.
+
+⚠ **Une erreur de cette session, corrigée avant tout envoi et dite ici.** La première version du
+paquet affirmait l'inverse — que la page anglaise ne portait aucune distinction avec l'entreprise
+d'IA. L'affirmation venait d'une **lecture tronquée** du fichier source, arrêtée à la vingt-deuxième
+ligne, et non d'une mesure : conclure de ce que l'instrument ne montre pas. Elle était rangée en
+« fait établi, ne pas revérifier », c'est-à-dire à l'endroit exact où un contradicteur ne l'aurait
+pas contrôlée. Le paquet a été refait, le créneau d'audit écrasé délibérément, et **la correction
+est écrite dans le paquet lui-même** (§ 10) pour que le contradicteur sache ce qui a basculé.
+
+⚖ **Contre-expertise ouverte — `anthropie-site-20260913-101742`, type FACT_CHECK, statut
+`AWAITING_MANUAL_SEND`.** La question est décidable et son coût est réel : faut-il réécrire la page
+anglaise — titre, description, FAQ, voire URL canonique — ou ce CTR tient-il à une intention de
+recherche que la page ne peut pas satisfaire ? Les deux réponses commandent des gestes opposés, et
+l'une engage 36 457 impressions par trimestre de façon peu réversible. Six hypothèses numérotées,
+la plus fragile en tête et **déclarée comme telle** : celle du chemin d'URL en langue étrangère a
+été formée *en regardant l'URL*, pas en mesurant. Six décisions sont verrouillées dans le paquet
+pour qu'il ne rouvre rien — le nom du concept, l'interdit des pages par requête, la clôture de la
+confusion « Anthropocène », le bilan du 22/08, le dépôt canonique, le bilinguisme.
+
+**Vérifié, pas supposé** : la pièce du sas est **octet pour octet** celle de l'OUTBOX
+(`21903538…411778` des deux côtés, 12 329 octets), il n'existe **aucune copie survivante** de la
+version fautive — le créneau a été écrasé en place, vérifié par énumération du sas et de
+l'OUTBOX —, et son encodage est sain : BOM UTF-8, **zéro** caractère de remplacement — le
+contrôle par `grep` rendait ici un faux zéro, seule la lecture Python fait foi, et `.claude/` est bien couvert par `.gitignore:15`, donc aucun risque de
+fuite par le remote public. **L'envoi reste un geste auteur** ; le dossier a été ouvert dans
+l'explorateur.
+
+**Aucune modification du site.** Les seuls fichiers écrits dans le dépôt sont ce journal et le
+renvoi ajouté au § 5.7 du rapport du 22/08, pour qu'un lecteur de ce rapport sache où sont les
+cellules remplies. Le paquet de contre-expertise vit hors dépôt suivi.
 
 ### 2026-09-13 — MPRA, sonde AWP-07 à J+32 : le contrôle ne mesurait rien, et la sonde non plus
 
