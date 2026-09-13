@@ -4,6 +4,12 @@ promo_slug: "odyssee-des-idees"  # clé D1/books.toml pour /ressources-offertes 
 subtitle: "Culture, philosophie et science — de l'aube de l'humanité à l'intelligence artificielle"
 description: "De l'aube de l'humanité à l'intelligence artificielle, 250 escales — œuvres, vies, inventions, crises, instants de bascule — et sept parcours relient les penseurs par-delà les siècles. Non pas un défilé chronologique, mais un réseau. Un instrument de curiosité, pas un réservoir de certitudes."
 date: 2026-07-03
+# ⚠ `date` ci-dessus = NOUVELLE édition. `first_published` = première parution, lue par
+# partials/preuve-sociale.html pour la fenêtre « Nouveauté » : sans elle, un livre de deux
+# ans réédité se présenterait comme une nouveauté. Date lue le 2026-09-13 sur la fiche Kindle
+# d'origine (ASIN B0CVXQSLBQ, ancre des avis) ; data/works.yaml:612 dit « première édition
+# 2023 » — écart non tranché, sans effet sur une fenêtre de 6 mois.
+first_published: 2024-02-19
 lastmod: 2026-07-25  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 isbn: "978-2-9586347-4-2"
 amazon_rating: 4.4       # note moyenne Amazon.fr — relevé 2026-09-13 (MAJ ~mensuelle, relecture Chrome)

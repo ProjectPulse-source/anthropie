@@ -175,6 +175,29 @@
 }
 .ressources-book__rating-score { font-weight: 600; }
 .ressources-book__rating-count { color: var(--color-text-subtle); }
+
+// « Nouveauté » — prend la place exacte de la note quand le livre n'a pas encore assez
+// d'avis pour qu'un compte rassure (seuil dans params.toml, règle dans
+// partials/preuve-sociale.html). Même marge et même centrage que .ressources-book__rating :
+// la colonne ne bouge pas quand un livre passe de l'un à l'autre.
+.ressources-book__novelty {
+  display: flex;
+  justify-content: center;
+  margin: 12px 0 0;
+}
+.ressources-book__novelty-badge {
+  font-family: var(--font-sans);
+  font-size: var(--fs-tiny);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  color: var(--color-accent);
+  background: var(--color-accent-faint);
+  border: 1px solid rgba(27, 42, 78, 0.35);
+  border-radius: 3px;
+  padding: 4px 10px;
+  line-height: 1;
+}
 .ressources-book__cover {
   display: block;
   width: 200px;

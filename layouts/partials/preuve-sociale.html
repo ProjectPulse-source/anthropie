@@ -1,0 +1,59 @@
+{{- /* Preuve sociale d'un livre sous sa couverture, sur /ressources-offertes/.
+
+       RÈGLE UNIQUE pour la liste ET la fiche : les deux gabarits appellent ce partial,
+       aucun ne porte sa propre copie — deux copies divergent en silence.
+
+       Trois états, dans cet ordre :
+         1. assez d'avis (>= site.Params.socialProofMinReviews) → la note Amazon.fr ;
+         2. sinon, livre paru depuis moins de site.Params.noveltyWindowMonths mois
+            → « Nouveauté » ;
+         3. sinon → rien, c'est-à-dire l'affichage d'avant ce partial.
+
+       Pourquoi le NOMBRE D'AVIS décide, et non l'âge (arbitrage auteur, 13/09/2026) : ce qui
+       dessert un livre neuf n'est pas son âge mais un compte trop maigre pour rassurer. Le
+       compte décide donc, et la bascule vers la note se fait toute seule au seuil franchi,
+       sans champ à poser ni à retirer.
+
+       ⚠ QUELLE DATE : `date` en front matter est la date de l'ÉDITION COURANTE, pas de la
+       première parution — L'Odyssée des idées porte date 2026-07-03 pour une nouvelle édition
+       d'un livre paru en 2024, dont elle a hérité les avis (ASIN Kindle conservé comme ancre,
+       cf. data/works.yaml). Lire `date` ferait donc afficher « Nouveauté » sous un livre de
+       deux ans réédité. La fenêtre se calcule sur `first_published` quand la fiche le porte,
+       sur `date` sinon — un livre à édition unique n'a rien à déclarer.
+
+       Le badge est DÉRIVÉ à chaque build : il ne s'écrit jamais en front matter, donc il ne
+       peut pas survivre à sa propre péremption. Réserve connue : le site étant statique, il
+       s'éteint au premier build suivant la fin de fenêtre, pas le jour même — écart borné par
+       la cadence de publication (médiane 2 jours, maximum 6 sur le dernier mois).
+
+       Input : le contexte est la PAGE LIVRE (content/livres/*.md). */ -}}
+
+{{- $seuil := site.Params.socialProofMinReviews | default 10 -}}
+{{- $fenetre := site.Params.noveltyWindowMonths | default 6 -}}
+{{- /* int explicite : params.toml rend un int64, now.AddDate exige des int. */ -}}
+{{- $limite := now.AddDate 0 (int (mul -1 $fenetre)) 0 -}}
+
+{{- /* time.AsTime est OBLIGATOIRE : une valeur de front matter comparee telle quelle
+       a un time.Time rend `gt` toujours faux, donc un badge qui ne s'affiche jamais --
+       panne muette, verte au controle si l'on ne teste pas le cas qui DOIT l'allumer. */ -}}
+{{- $parution := .Date -}}
+{{- with .Params.first_published }}{{ $parution = time.AsTime . }}{{ end -}}
+
+{{- $note := .Params.amazon_rating -}}
+{{- $avis := .Params.amazon_reviews -}}
+
+{{- /* `and` n'est pas paresseux en Go template : le seuil se teste dans un if imbriqué,
+       sinon `ge nil 10` casserait le build sur un livre sans note. */ -}}
+{{- $assezDAvis := false -}}
+{{- if and $note $avis -}}
+  {{- if ge $avis $seuil -}}{{- $assezDAvis = true -}}{{- end -}}
+{{- end -}}
+
+{{- if $assezDAvis -}}
+  {{- $aff := replace (printf "%.1f" $note) "." "," -}}
+<p class="ressources-book__rating" aria-label="Note moyenne {{ $aff }} sur 5 — {{ $avis }} avis sur Amazon.fr">
+  <span class="ressources-book__stars" aria-hidden="true">★</span><span class="ressources-book__rating-score">{{ $aff }}/5</span><span class="ressources-book__rating-count"> · {{ $avis }}&nbsp;avis sur&nbsp;Amazon.fr</span>
+</p>
+{{- else if gt $parution $limite -}}
+<p class="ressources-book__novelty"><span class="ressources-book__novelty-badge">Nouveauté</span></p>
+{{- end -}}

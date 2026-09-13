@@ -4,3 +4,11 @@ description = "L'anthropie : hypothèse selon laquelle les systèmes sociaux dé
 # résolue par langue via .Site.Params.canonicalDefinition — pas de clé suffixée canonicalDefinitionEN).
 # Garder les deux versions synchronisées : toute modification de l'une exige la modification simultanée de l'autre.
 canonicalDefinition = "L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent."
+
+# Preuve sociale des livres sur /ressources-offertes/ — lus par partials/preuve-sociale.html,
+# qui sert la liste ET la fiche. Ici et nulle part ailleurs : une constante en dur dans les
+# gabarits ferait deux copies, qui divergent.
+# En dessous de ce nombre d'avis, le compte dessert plus qu'il ne rassure : le livre affiche
+# « Nouveauté » s'il est dans sa fenêtre de parution, et rien sinon.
+socialProofMinReviews = 10
+noveltyWindowMonths = 6

@@ -34,12 +34,8 @@
           <a href="{{ $book.RelPermalink }}" target="_blank" rel="noopener" class="ressources-book__emblem" aria-hidden="true" tabindex="-1">
             {{ partial "book-cover.html" (dict "slug" $slug "alt" $book.Title "wrapClass" "ressources-book__cover" "sizes" "200px") }}
           </a>
-          {{ if and $book.Params.amazon_rating $book.Params.amazon_reviews }}
-          {{ $note := replace (printf "%.1f" $book.Params.amazon_rating) "." "," }}
-          <p class="ressources-book__rating" aria-label="Note moyenne {{ $note }} sur 5 — {{ $book.Params.amazon_reviews }} avis sur Amazon.fr">
-            <span class="ressources-book__stars" aria-hidden="true">★</span><span class="ressources-book__rating-score">{{ $note }}/5</span><span class="ressources-book__rating-count"> · {{ $book.Params.amazon_reviews }}&nbsp;avis sur&nbsp;Amazon.fr</span>
-          </p>
-          {{ end }}
+          {{- /* Même règle que la liste, même exemplaire : partials/preuve-sociale.html. */ -}}
+          {{ partial "preuve-sociale.html" $book }}
         </div>
         <div class="ressources-book__body">
           {{ with $book.Params.pages }}<p class="ressources-book__meta">Édition Kindle · Édition brochée&nbsp;: {{ . }} pages</p>{{ end }}

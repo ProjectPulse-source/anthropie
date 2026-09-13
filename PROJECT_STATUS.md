@@ -53,6 +53,39 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-13 — /ressources-offertes/ : relevé Amazon du jour, et « Nouveauté » au lieu d'un compte maigre
+
+**Relevé Amazon.fr**, un mois après celui du 12/08, lu fiche par fiche : ANTHROPIE 4,4 (22 → 26),
+Dette Publique 4,2 → 4,3 (27 → 29), Livresque des mots 4,1 (87 → 88), L'Odyssée des idées 4,4
+(162 → 165), La Société du premier coup 5,0 sur 4 avis — sa première note. Aucune en baisse.
+
+**Badge « Nouveauté »** (demande auteur). La règle proposée — moins de 6 mois → badge à la place
+de la note — aurait masqué les 165 avis de L'Odyssée, dont l'édition a dix semaines. Arbitrage
+retenu : **c'est le nombre d'avis qui déclenche**, pas l'âge. Note dès `socialProofMinReviews`
+(10) ; en dessous, « Nouveauté » si la parution est dans `noveltyWindowMonths` (6) ; sinon rien,
+soit l'affichage d'avant. La bascule vers la note se fait au 10e avis, sans geste.
+
+Trois points de méthode, chacun trouvé par un contrôle et non par relecture :
+
+1. **La date du front matter n'est pas la parution** (signalé par l'auteur) : `date` porte
+   l'édition courante — L'Odyssée affiche 2026-07-03 pour un livre paru le 19/02/2024, dont elle
+   a hérité les avis (ASIN Kindle conservé comme ancre). Sans correctif, un livre de deux ans
+   réédité se serait annoncé « nouveauté ». La fenêtre lit désormais `first_published`, repli sur
+   `date`. Écart ouvert : `works.yaml:612` dit « première édition 2023 », Amazon dit février 2024
+   — sans effet sur une fenêtre de 6 mois, non tranché.
+2. **`time.AsTime` est obligatoire** : comparée telle quelle à un `time.Time`, une valeur de front
+   matter rend `gt` toujours faux — badge qui ne s'allume jamais, panne muette. Le témoin T4
+   (« le badge doit disparaître ») passait alors **par accident** ; seul T2, qui exige qu'il
+   s'allume, l'a révélé.
+3. **Une règle, un exemplaire** : la note était dupliquée dans `list.html` et `single.html`. Les
+   deux appellent maintenant `partials/preuve-sociale.html` ; le seuil et la fenêtre vivent dans
+   `params.toml`, jamais en dur dans un gabarit.
+
+Mesure : build 0.147.0 vert ; sur la liste et sur les cinq fiches, quatre notes et un badge, aucun
+livre n'affichant les deux ; témoin par mutation réelle 4/4 (seuil franchi → note ; sous seuil et
+parution récente → badge ; `first_published` retiré → faux badge ; remis → rien), fichiers
+restaurés à l'identique. `check-all.py --ci` 0/3.
+
 ### 2026-09-13 — Vignettes de publication : liseré bleu nuit sur la variante crème
 
 La variante crème de la tuile logo (`.pub-thumb--logo--cream`) avait pour fond `#FAFAF6`,
