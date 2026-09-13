@@ -53,6 +53,46 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-13 — Search Console, J+7 du relevé du 02/09 : les deux listes de publications sont indexées
+
+Rappel armé le 02/09 (RDV Outlook du 09/09), exécuté ce jour par inspection d'URL dans Search
+Console, propriété `sc-domain:stephane-lalut.com`, via Chrome. Relevé lu à la source, page par page :
+
+| URL | Verdict | Dernière exploration | Canonique déclarée | Canonique retenue par Google |
+|---|---|---|---|---|
+| `/en/publications/` | **indexée** | 2 sept. 2026, 14:47:44 | elle-même | **l'URL inspectée** |
+| `/publications/` | **indexée** | 11 sept. 2026, 22:33:19 | elle-même | **l'URL inspectée** |
+
+Les deux constats du 02/09 sont levés. `/en/publications/` était « détectée, actuellement non
+indexée » et n'avait jamais été explorée : elle l'a été le jour même de la demande, à 14:47, et
+elle est aujourd'hui sur Google — la demande d'indexation a donc porté. `/publications/`, qui
+n'avait plus été explorée depuis le 31/07, l'a été le 11/09 à 22:33, **le soir même d'une seconde
+demande** déposée à la parution du compte rendu Pugh (`00_PILOTAGE/HANDOFF.md` : « indexation de
+`/publications/` demandée le 11/09 au soir »). Aucune demande n'a été déposée ce jour : les deux
+pages sont indexées, elle serait sans objet.
+
+**La branche conditionnelle du rappel ne se déclenche pas, et son hypothèse tombe avec elle.**
+Elle prévoyait, en cas de non-indexation, de chercher pourquoi Google déprioriserait la liste
+anglaise, la piste nommée étant le quasi-doublon : `content/publications/` ne porte qu'un seul
+fichier anglais, `_index.en.md`, pour 21 notices — vérifié ce jour — donc la liste EN rend bien
+les cartes FR par repli. Le fait de contenu est exact ; il n'a rien empêché. Google a retenu
+chaque page comme sa propre canonique, sans regrouper l'une sur l'autre : il n'y a pas de doublon
+du point de vue de l'index, donc pas de remède à proposer. Ni `hreflang` ni maillage interne ne
+sont touchés.
+
+**Ce que ce relevé ne dit pas, et il faut le dire.** Les deux dates d'exploration suivent chacune
+une demande manuelle — le 02/09 pour la page EN, le 11/09 pour la page FR. Elles ne mesurent donc
+pas le rythme d'exploration spontané, ni d'un côté ni de l'autre, et l'écart apparent entre le
+02/09 et le 11/09 ne mesure que l'écart entre les deux demandes. La question du rythme ne se posera
+qu'à une parution **non** accompagnée d'une demande, ou le jour où une notice réellement anglaise
+sera publiée sous `/en/publications/`. Aucun dispositif n'est armé pour cela : il n'y a pas de
+défaut constaté à surveiller.
+
+**Dispositif éteint.** Le relevé du 02/09 portait sa condition de mort — « à revérifier à J+7 ;
+passé ce délai, ce relevé redevient une hypothèse ». Elle est remplie : le relevé est refait à la
+source, il n'y a plus rien à surveiller, et le RDV Outlook du 09/09 n'a plus d'objet. **Sa
+suppression est un geste auteur** : Outlook n'est pas piloté d'ici.
+
 ### 2026-09-13 — /ressources-offertes/ : relevé Amazon du jour, et « Nouveauté » au lieu d'un compte maigre
 
 **Relevé Amazon.fr**, un mois après celui du 12/08, lu fiche par fiche : ANTHROPIE 4,4 (22 → 26),
@@ -233,6 +273,7 @@ inspection d'URL ; passé ce délai, ce relevé redevient une hypothèse. **Rapp
 Outlook du 2026-09-09 09h00, rappel actif, corps = la commande à coller (canal doctrinal,
 un seul). La vérification elle-même exige la session Search Console : aucune routine cloud
 ni script ne peut l'exécuter sans identifiants API que l'auteur devrait créer lui-même.
+**→ Rappel soldé le 13/09 : les deux URL sont indexées, dispositif éteint (entrée du 13/09).**
 
 **Wikidata, même session — deux items « à créer » qui existaient déjà.** Question auteur : les
 publications doivent-elles être sur Wikidata ? Réponse actée : oui pour les recensions en revue à
