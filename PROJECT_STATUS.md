@@ -53,6 +53,80 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-13 — MPRA, sonde AWP-07 à J+32 : le contrôle ne mesurait rien, et la sonde non plus
+
+`check_deposits_status.py` rendait, pour le dépôt test du 12/08 (`130468`), l'étiquette
+**« EN MODERATION »**. Elle reposait sur une seule règle : `401/403 => encore en review`.
+**Contre-témoin passé ce jour : la règle ne discrimine rien.**
+
+| Identifiant interrogé | HTTP | Corps | OAI-PMH `GetRecord` |
+|---|---|---|---|
+| `130468` — sonde du 12/08 | **401** | 381 o, « 401 Unauthorized » | `idDoesNotExist` |
+| `128604` — lot bloqué du 07/04 | **401** | 381 o, identique | `idDoesNotExist` |
+| `99999999` — **identifiant qui n'a jamais existé** | **401** | 381 o, identique | `idDoesNotExist` |
+| `129034` — AWP-06, témoin positif | **200** | 30 293 o, titre réel | notice complète, `datestamp 2026-05-15T17:20:43Z` |
+
+Un dépôt en file, un refus, un retrait et un identifiant absurde rendent **la même réponse, à
+l'octet près**, sur les deux interfaces publiques. « En modération » n'était pas une mesure, c'était
+la valeur par défaut de tout ce qui n'est pas un enregistrement public. **Ce qui est établi au
+13/09 : `130468` n'est pas publié. Rien de plus.** La seule source qui tranche est le compte auteur
+MPRA (*Manage deposits*) — **elle a été lue par l'auteur le jour même** : **tous** les dépôts,
+la sonde du 12/08 comme le lot du 07/04, y sont **« Under review »**. Aucun refus. L'indécidable
+est levé, et il l'est par une notification de guichet, jamais par un code HTTP.
+
+**Correction posée dans le même geste** : le script interroge désormais le contre-témoin à
+**chaque exécution** et compare les codes au lieu de les interpréter ; l'étiquette devient
+`NON PUBLIE (indiscernable : en file / refuse / retire)` ; un code inédit est signalé comme tel au
+lieu d'être absorbé ; et si **aucun** `200` ne sort de la série, le détecteur se déclare
+possiblement en panne plutôt que de rendre sept verdicts. C'est la **seconde occurrence de la même
+classe dans ce fichier** : `SSRN_SANS_ID` porte déjà, depuis le 17/08, la note « un manquant déguisé
+en zéro ». La leçon avait été appliquée à SSRN et pas à MPRA, dans le même écran.
+
+**Les durées, maintenant qu'elles veulent dire quelque chose.** AWP-06, déposé **seul**
+le 08/05, était en ligne le **15/05** : sept jours. AWP-07, déposé seul et espacé le 12/08,
+est à **32 jours** ; le lot de six du 07/04 est à **159 jours**. La consigne couvre deux cas
+— accepté → déposer AWP-08 seul et espacé ; silence à J+14 → attendre J+30 — et **J+30 est
+passé le 11/09**. Reste à savoir ce que ces jours mesurent.
+
+**Contre-population : la sonde ne mesurait rien parce qu'elle n'avait pas de témoin.** « Tous nos
+dépôts sont *Under review* » explique 100 % d'**une seule** population — la nôtre. Mesure du 13/09
+sur les **voisins d'identifiant**, c'est-à-dire les dépôts d'autres auteurs posés aux mêmes dates
+(EPrints attribue l'identifiant au dépôt ; vérifié sur pièce : `130482` porte
+« Date Deposited: 16 Aug 2026 ») :
+
+| Bande | Dépôts contemporains de | Publiés chez les autres auteurs |
+|---|---|---|
+| `130455-130484` | notre sonde du **12/08** | **1 sur 29** — 3 % |
+| `129020-129049` | AWP-06, accepté en 7 j le **15/05** | **16 sur 29** — 55 % |
+| `128592-128621` | notre lot du **07/04** | **7 sur 25** — 28 % |
+
+**Notre sonde est dans la majorité écrasante de sa cohorte, pas dans une exception.** 97 % des
+dépôts d'août sont, comme elle, non publiés : son silence à J+32 ne dit donc **rien** sur le compte.
+Et notre lot d'avril n'est pas non plus un cas isolé — 72 % de ses voisins sont dans le même état.
+**L'hypothèse « le blocage suit le compte » perd son appui ; celle du lot ne le retrouve pas.** Ce
+qui ressort est plus simple : la file de MPRA ne draine plus les cohortes récentes.
+
+⚠ **Deux réserves, dites et non lissées.** La bande d'avril (28 %) est **moins** publiée que celle
+de mai (55 %) alors qu'elle est plus ancienne : inexpliqué, et aucune hypothèse n'est proposée ici
+faute de mesure. Et un `401` chez un autre auteur mélange lui aussi file d'attente et refus — les
+taux ci-dessus sont un **plancher** de lenteur, pas une mesure propre de la file.
+
+⚠ **Ce que cette mesure oblige à rouvrir, sans le trancher.** La doctrine du dépôt échelonné
+(`CLAUDE.md` § 3 ter) s'appuie sur un chiffre : « 5 dépôts en 18 minutes le 07/04 restés bloqués
+118 jours, alors qu'un dépôt isolé le 08/05 a été accepté en 7 jours ». Ces deux dépôts
+appartiennent à **deux cohortes de rendement très différent** — 28 % contre 55 %. La comparaison
+n'isole donc pas l'effet du lot ; elle peut n'en mesurer aucun. Cela **ne réfute pas** la doctrine,
+qui garde un appui indépendant (le refus SocArXiv du 14/05 invoquait explicitement une suspicion
+de *reference spamming*). **La doctrine n'est pas touchée : sa révision est un arbitrage d'auteur,
+et ce qui est signalé ici, c'est que sa preuve chiffrée n'a jamais eu de contre-population.**
+
+**Décision de la sonde, et elle est nette.** AWP-07 est en examen, pas refusé ; sa lenteur est
+celle de sa cohorte. Donc : **aucun dépôt nouveau** — la condition d'AWP-08 est l'*acceptation*
+d'AWP-07, pas l'écoulement d'un délai ; **aucune relance** — réclamer contre un délai que 97 % des
+dépôts contemporains subissent serait du bruit, sur un compte dont une réclamation a déjà été
+rejetée le 04/08 ; **aucune échéance courte** — la prochaine vérification n'a d'intérêt qu'après un
+mouvement de cohorte, pas après un nombre de jours.
+
 ### 2026-09-13 — Search Console, J+7 du relevé du 02/09 : les deux listes de publications sont indexées
 
 Rappel armé le 02/09 (RDV Outlook du 09/09), exécuté ce jour par inspection d'URL dans Search

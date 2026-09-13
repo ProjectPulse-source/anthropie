@@ -18,7 +18,13 @@ Methodes de detection (aucun mot de passe requis) :
              etaient en ligne et le detecteur les disait tous absents).
              Crossref renvoie en prime le TITRE tel qu'il est publie, ce qui
              permet de reperer les titres degrades a la soumission.
-  - MPRA   : HTTP sur /id/eprint/<id> (200 => publie, 401/403 => en review)
+  - MPRA   : HTTP sur /id/eprint/<id>. 200 => publie. TOUT LE RESTE => non
+             publie, et RIEN DE PLUS : le 401 est identique pour un depot en
+             file, un refus, un retrait et un identifiant qui n'a jamais
+             existe (contre-temoin mesure le 2026-09-13 ; l'OAI-PMH rend
+             idDoesNotExist dans les deux cas). Lire "en moderation" dans ce
+             401 etait un verdict invente. Seule source qui tranche : le
+             compte auteur MPRA (Manage deposits) ou un mail de MPRA.
   - OSF    : API publique des preprints
   - Zenodo : API (token) — deja couvert par zenodo_audit_complet.py
 
@@ -53,6 +59,31 @@ MPRA = [("AWP-01", "128604"), ("AWP-02", "128605"), ("AWP-03", "128606"),
 MPRA_SANS_ID = [
     ("AWP-08", "non depose - echelonne strict : attendre l'ACCEPTATION d'AWP-07"),
 ]
+
+# CONTRE-TEMOIN MPRA (mesure du 2026-09-13, R5). L'ancienne lecture
+# "401/403 => encore en moderation" etait un VERDICT INVENTE : un identifiant
+# certainement inexistant rend EXACTEMENT la meme reponse (401, 381 octets,
+# "401 Unauthorized") qu'un depot reellement en file. L'interface OAI-PMH ne
+# discrimine pas davantage : idDoesNotExist pour le depot en attente comme
+# pour l'identifiant absurde. Aucune interface publique ne distingue
+# "en moderation" de "refuse", "retire" ou "jamais existe" : la seule source
+# qui tranche est le compte auteur MPRA (Manage deposits), ou un mail de MPRA.
+# Meme classe que SSRN_SANS_ID plus haut - un manquant deguise en constat -
+# trouvee une seconde fois dans le meme fichier.
+MPRA_TEMOIN_ABSENT = "99999999"  # identifiant hors de portee de l'archive
+
+# LU AU COMPTE le 2026-09-13 (auteur, Manage deposits) : TOUS les depots sont
+# "Under review" - la sonde du 12/08 comme le lot du 07/04. Aucun refus.
+#
+# CONTRE-POPULATION mesuree le meme jour sur les voisins d'identifiant (autres
+# auteurs, memes dates de depot ; verifie sur piece : 130482 = 16 Aug 2026) :
+#   bande de la sonde du 12/08 (130455-130484) :  1 publie sur 29  -  3 %
+#   bande d'AWP-06, accepte en 7 j le 15/05      : 16 publies sur 29 - 55 %
+#   bande du lot du 07/04       (128592-128621) :  7 publies sur 25 - 28 %
+# => nos depots sont dans la MAJORITE de leur cohorte, jamais des exceptions.
+# La lenteur ne dit donc rien du compte : c'est la file de MPRA qui ne draine
+# plus les cohortes recentes. Ne pas relancer sur un delai que 97 % des depots
+# contemporains subissent. Voir PROJECT_STATUS.md, entree du 2026-09-13.
 
 OSF_PROFIL = "ymkpj"
 # SocArXiv : canal CLOS pour les papiers conceptuels (decision 2026-08-05).
@@ -106,22 +137,37 @@ print(f"   -> interroges {ssrn_ok}/{len(SSRN)} EN LIGNE ; "
       f"{len(SSRN_SANS_ID)} hors perimetre (motifs ci-dessus, pas un verdict)")
 
 # --- MPRA --------------------------------------------------------------
-print("\n[MPRA]  200 = publie ; 401/403 = encore en moderation")
+print("\n[MPRA]  200 = publie ; le reste = NON PUBLIE, et rien de plus")
+code_absent = http_status(
+    f"https://mpra.ub.uni-muenchen.de/id/eprint/{MPRA_TEMOIN_ABSENT}")
+print(f"   contre-temoin {MPRA_TEMOIN_ABSENT} (inexistant) -> HTTP {code_absent}")
 mpra_live = 0
+mpra_muet = 0
 for label, mid in MPRA:
     code = http_status(f"https://mpra.ub.uni-muenchen.de/id/eprint/{mid}")
     if code == 200:
         mpra_live += 1
         state = "PUBLIE"
-    elif code in (401, 403):
-        state = "EN MODERATION"
+    elif code == code_absent:
+        mpra_muet += 1
+        state = "NON PUBLIE (indiscernable : en file / refuse / retire)"
     else:
-        state = f"HTTP {code}"
+        state = f"HTTP {code} - code INEDIT, a examiner"
     print(f"   {label}  {mid}  {state}")
 for label, motif in MPRA_SANS_ID:
     print(f"   {label}  --       NON INTERROGE (aucun ID local) : {motif}")
-print(f"   -> interroges {mpra_live}/{len(MPRA)} PUBLIES ; "
+print(f"   -> interroges {mpra_live}/{len(MPRA)} PUBLIES ; {mpra_muet} NON PUBLIES ; "
       f"{len(MPRA_SANS_ID)} hors perimetre (motifs ci-dessus, pas un verdict)")
+if mpra_live == 0:
+    print("   /!\\ AUCUN 200 : le detecteur lui-meme peut etre en panne "
+          "(maintenance, blocage anti-robot). Ne rien conclure.")
+if mpra_muet:
+    print("   /!\\ 'NON PUBLIE' N'EST PAS 'EN MODERATION'. Le 401 de l'archive "
+          "est identique pour un depot en file, un refus et un identifiant qui\n"
+          "       n'a jamais existe (mesure du 2026-09-13, contre-temoin ci-dessus ; "
+          "l'OAI-PMH rend idDoesNotExist dans les deux cas).\n"
+          "       SEULE SOURCE QUI TRANCHE : le compte auteur MPRA "
+          "(Manage deposits) ou un mail de MPRA. Geste auteur.")
 
 # --- OSF ---------------------------------------------------------------
 print("\n[OSF / SocArXiv]")
