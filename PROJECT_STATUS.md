@@ -293,9 +293,58 @@ sa propre recommandation contredisait, et **zéro source sur les deux passages**
 reste entier. Lire le verdict et le motif séparément était la bonne discipline : accepter en bloc
 aurait fait entrer une fausseté au dossier, refuser en bloc y aurait laissé mon raccourci.
 
-**Aucune modification du site.** Les seuls fichiers écrits dans le dépôt sont ce journal et le
-renvoi ajouté au § 5.7 du rapport du 22/08, pour qu'un lecteur de ce rapport sache où sont les
-cellules remplies. Le paquet de contre-expertise vit hors dépôt suivi.
+**Contre-expertise : NON, et le test R4 dit pourquoi.** Deux des trois conditions manquent.
+*Une décision que la réponse changerait* : la seule encore ouverte est le test B — réécrire la
+description. Il est **réversible et coûte une demi-heure** ; on n'achète pas d'information pour
+décider d'un geste gratuit et annulable. *Un point faible que je ne peux pas lever seul* : un
+seul, ce que la SERP affiche réellement — mais c'est une **observation de cinq minutes**, pas une
+contre-analyse ; payer un avis sur un écran qu'on peut regarder est de la surnumérarité au sens
+propre. *Un coût réel à se tromper* : C est gelée, B est réversible, et la question stratégique
+n'appartient à aucun contradicteur. Deux tours ont eu lieu ; un troisième rouvrirait C ou
+chercherait une confirmation.
+
+**Vérification de la page servie — et une fausse alerte de ma part, corrigée sur pièce.** Un
+premier passage d'extraction a rendu « pas de description, pas de canonique, pas de hreflang ».
+**C'était mon expression régulière**, qui supposait un ordre d'attributs alors que le HTML est
+minifié sans guillemets. Relu dans le brut : canonique auto-référente, `hreflang` `en` / `fr` /
+`x-default`, description, `og:`/`twitter:`, deux blocs JSON-LD dont un `FAQPage`. **La page est
+techniquement saine.** ⭐ Conséquence directe : la « fuite francophone » de 1 327 impressions
+**n'est pas un défaut de `hreflang`** — la déclaration est correcte, c'est Google qui choisit.
+Question close, rien à corriger.
+
+**Le seul défaut objectif trouvé, et il est mesurable :** la description servie faisait
+**88 caractères** là où le moteur en affiche **~155 sur ordinateur et ~120 sur mobile** — et
+**69 % des impressions de cette page sont mobiles**. Deux tiers de l'espace d'extrait étaient
+inutilisés, ce qui augmente aussi la probabilité que le moteur substitue son propre texte.
+
+**Test B posé — une seule variable, non poussé.** La description passe à 150 caractères, dont la
+coupe mobile tombe sur une clause complète. **Le titre n'est pas touché** : son suffixe vient de
+`head.html:11` et vaut pour tout le site ; le changer ferait varier deux choses à la fois.
+`lastmod` **n'est pas bousculé** — le corps n'a pas changé, et une fausse fraîcheur serait une
+faute. Rendu vérifié **par la sortie du build**, pas par relecture de la source : les 150
+caractères sortent bien dans `public/`.
+
+⚗ **Protocole pré-enregistré — écrit avant le déploiement, pour que le résultat ne se lise pas
+après coup.**
+
+- **Population** : les cinq requêtes définitionnelles de cette page — `anthropy meaning`,
+  `anthropy definition`, `what is anthropy`, `antropy meaning`, `anthrophy meaning`.
+- **Référence** : **12 987 impressions, 41 clics, 0,316 %**, trois mois glissants au 13/09.
+- **Relecture** : trois mois après déploiement, mêmes requêtes, même page.
+- ⚠ **Garde préalable, sans quoi le test est NUL** : vérifier que l'extrait **affiché** a
+  réellement changé. S'il n'a pas changé, on n'a pas testé la description — on a testé la
+  réécriture du moteur, et le résultat ne dit rien.
+- **Règle de décision, et elle est adossée au bruit** : l'écart-type du comptage est de
+  **6,4 clics**. Donc **< 0,45 %** (≤ 2,7 σ) → **non concluant**, ne rien généraliser ;
+  **≥ 0,50 %** (3,7 σ, soit +24 clics) → **levier réel**, appliquer le même traitement aux autres
+  pages anglaises à fort volume ; **retour sous 0,32 %** → annuler, la description précédente est
+  conservée en commentaire dans le fichier pour que le retour arrière soit immédiat.
+- **Ce que le test ne dira pas** : si le gain vient de la longueur, du contenu ou de la levée de
+  confusion. Une seule variable a bougé, mais elle en porte trois.
+
+**Une seule modification du site, et c'est une expérience** : la description de la page concept
+anglaise. Tout le reste de cette entrée est du journal, plus le renvoi ajouté au § 5.7 du rapport
+du 22/08. Le paquet de contre-expertise vit hors dépôt suivi.
 
 ### 2026-09-13 — MPRA, sonde AWP-07 à J+32 : le contrôle ne mesurait rien, et la sonde non plus
 

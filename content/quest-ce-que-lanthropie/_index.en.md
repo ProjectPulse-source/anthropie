@@ -8,7 +8,13 @@ lastmod: 2026-08-15  # date de la derniere modification de contenu (fraicheur le
 # d'alias sont résolus depuis la racine du site (pas de préfixe de langue
 # automatique), d'où les deux entrées.
 aliases: ["/en/what-is-anthropy/", "/what-is-anthropy/"]
-description: "Anthropy is the hypothesis that social systems displace disorder rather than resolve it."
+# TEST B du 2026-09-13 (une seule variable). Ancienne description, 88 car. :
+#   "Anthropy is the hypothesis that social systems displace disorder rather than resolve it."
+# Elle laissait ~67 caracteres d'extrait inutilises sur ~155. Reference d'avant-test,
+# grappe definitionnelle de cette page sur 3 mois au 13/09 : 12 987 impressions,
+# 41 clics, 0,32 %. Regle de lecture ecrite d'avance dans PROJECT_STATUS.md.
+# NE PAS reverter sans lire cette entree : ce champ porte une mesure en cours.
+description: "Anthropy: the hypothesis that social systems produce order locally by displacing disorder elsewhere, not by resolving it. Social science, not physics."
 faq:
   - question: "What is anthropy in social science?"
     answer: "Anthropy is the hypothesis that social systems displace disorder rather than resolve it. Every observable order in a system implies disorder exported elsewhere — spatially, temporally, or socially."
