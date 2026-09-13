@@ -287,7 +287,12 @@ a.pub-card {
 // Variante crème (logos pairs : 2e, 4e, 6e…)
 .pub-thumb--logo--cream {
   background: #FAFAF6;
-  border: 0.5px solid #EEEBE6;
+  // Le fond de cette variante est exactement --color-bg (#FAFAF6) : avec un
+  // filet gris (#EEEBE6, 12 unites d'ecart), le cadre 160x107 disparaissait
+  // dans la page sur /publications/ comme sur le mur presse de /a-propos/.
+  // Le liseret est donc tire de l'accent bleu nuit, dilue pour rester discret
+  // face aux tuiles navy pleines qui alternent avec elles.
+  border: 1px solid rgba(27, 42, 78, 0.35);
 
   .pub-thumb__label { color: #5A5A60; }
   .pub-thumb__name  { color: #1B2A4E; }

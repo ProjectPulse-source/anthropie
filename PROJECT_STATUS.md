@@ -45,13 +45,30 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 > **À lire avant** : toute intervention sur le site, technique 
 > ou éditoriale. Décrit l'état architectural, les doctrines 
 > en place, les chantiers en cours et les chantiers reportés.
-> Dernière mise à jour : 2026-09-02.
+> Dernière mise à jour : 2026-09-13.
 > **Règle de fraîcheur** : l'état écrit suit l'acte — toute session qui
 > exécute met à jour ce log ET les statuts des registres/backlogs touchés
 > dans la même session. Un statut périmé vaut défaut : il provoque la
 > re-exécution de l'acquis ou l'abandon de travaux crus « déjà faits ».
 
 ## 0. Log chronologique
+
+### 2026-09-13 — Vignettes de publication : liseré bleu nuit sur la variante crème
+
+La variante crème de la tuile logo (`.pub-thumb--logo--cream`) avait pour fond `#FAFAF6`,
+soit **exactement** `--color-bg` ; son cadre 160×107 ne se séparait du fond que par un filet
+`#EEEBE6`, douze unités d'écart mesurées en `getComputedStyle` sur le site en ligne. Dix tuiles
+sur vingt étaient dans ce cas : l'alternance navy/crème ne se lisait plus comme un damier mais
+comme une case sur deux manquante — sur `/publications/` comme sur le mur presse d'`/a-propos/`.
+
+Correction : `border: 1px solid rgba(27, 42, 78, 0.35)`, liseré tiré de l'accent bleu nuit
+(`#1B2A4E`) et non d'un gris de filet, dilué pour rester discret face aux tuiles navy pleines.
+Un seul point patché, `assets/scss/_publication-card.scss` : le mur presse réemploie le gabarit
+des cartes publications, donc les deux pages sont servies par la même règle.
+
+Vérifié par la sortie et non par le code : build local Hugo 0.147.0, `getComputedStyle` rend
+`rgba(27, 42, 78, 0.35) 1px` sur les deux pages, captures avant/après. `check-all.py --reseau`
+sort 6 contrôles à 0.
 
 ### 2026-09-11 — Publication : compte rendu Pugh, *Sociologie du travail* vol. 68 n° 2
 
