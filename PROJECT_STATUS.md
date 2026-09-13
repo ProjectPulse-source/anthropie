@@ -53,6 +53,60 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-13 — PDF des AWP : on ne peut pas les ouvrir, on ne pouvait que les télécharger — et le bouton de l'autre langue mentait
+
+**Point de départ, une question d'auteur sur téléphone** : depuis un iPhone, un PDF du site
+n'arrive pas à l'écran, il atterrit dans Fichiers → Sur mon iPhone → Téléchargements. Mesuré
+plutôt que supposé — `curl -sIL` sur un fichier Zenodo, avec et sans `?download=1`, même
+réponse dans les deux cas :
+
+```
+content-type: application/octet-stream
+content-disposition: attachment; filename=AWP-08_reversibilite_sociale.pdf
+```
+
+`attachment` **interdit** l'affichage dans l'onglet et `application/octet-stream` empêche même
+le navigateur de savoir que c'est un PDF. Le parcours n'était donc pas un défaut d'ergonomie du
+site : c'était la seule issue possible tant qu'un bouton pointait vers ce lien. Zenodo expose en
+revanche un lecteur intégré, `/records/<id>/preview/<fichier>`, qui rend le même PDF en HTML
+(`text/html`, viewport `device-width`, pdf.js) — lisible d'un tap, sans téléchargement. Non
+encapsulable (`x-frame-options: sameorigin`), donc ouvert en onglet.
+
+**Arbitrage auteur du jour** : « les instruments de mesure ne sont pas prioritaires ; le service
+au lecteur l'est — toujours simple pour le lecteur ». Trois conséquences appliquées dans le même
+commit :
+
+1. `partials/awp-preview-url.html` (nouveau) — un seul organe qui dérive l'URL du lecteur, trois
+   appelants. Rend une chaîne vide hors Zenodo, l'appelant doit tester : un futur PDF hébergé
+   ailleurs ne peut pas produire un bouton « Lire en ligne » qui téléchargerait.
+2. Sidebar de l'article : **Lire en ligne** en action principale, puis **Télécharger le PDF (FR)**
+   — l'ancien libellé « PDF (FR) » ne prévenait pas qu'il déclenchait un téléchargement. Carte de
+   liste : « Lire le PDF », qui mène au lecteur.
+3. **Routage de convergence désarmé côté site.** `data/convergence_routing.json` promouvait la
+   notice Zenodo en bouton principal quand un record manquait de vues : **11 records sur 17** ce
+   jour, soit une majorité d'articles plaçant une fiche de métadonnées devant le texte. Le
+   collector continue de produire le fichier ; il ne pilote plus l'ordre des CTA.
+
+**Défaut préexistant trouvé par le contrôle de la sortie, pas par la relecture du template.**
+Le bouton PDF de l'autre langue était faux sur **16 pages sur 16** : absent sur les 8 pages FR,
+et sur les 8 pages EN il portait le libellé « (FR) » au-dessus du fichier **anglais**. Cause :
+`$.Site.GetPage .url` recevait une URL de sortie (`/en/awp/awp-08/`) là où `GetPage` résout un
+chemin de contenu — nil côté FR, page courante côté EN. Corrigé par `.Translations`, le lien
+natif que Hugo établit entre `awp-NN.md` et `awp-NN.en.md` ; la langue du libellé se **dérive**
+désormais de la page pointée au lieu d'être recopiée. Classe *état déclaré ≠ état réel* : rien
+n'échouait, le bouton servait simplement l'autre fichier.
+
+**Mesures après correction** — 16 pages construites : lecture en ligne présente 16/16, bouton de
+traduction correct 16/16 (0 faux, 0 absent) ; les 16 URL de lecture répondent 200 **et** servent
+un lecteur pdf.js 16/16 ; contre-témoin sur un nom de fichier inexistant : 0, le contrôle sait
+donc distinguer. `python scripts/check-all.py --reseau` : 6 contrôles, tout à 0. Premier essai du
+contrôle écarté : sa regex exigeait `href="…"` que le `--minify` supprime, et il rendait 16 faux
+« absent » — un parseur qui ne sait pas lire n'a pas trouvé un vide.
+
+**Point ouvert, côté collector** : `data/convergence_routing.json` n'est plus lu par aucun
+template. `mesure_regime --route` continue de le produire — il mesure sans piloter. À arbitrer
+dans le chantier collector (le régime mixte est ce qui part en contre-expertise), pas ici.
+
 ### 2026-09-13 — Rappel J+90 : l'audit existait déjà ; ce qui a bougé, et trois cellules remplies
 
 **Le rappel qui a sonné ce jour demande un travail fait le 22/08.** `audits/diagnostic-compare-2026-08-22.md`

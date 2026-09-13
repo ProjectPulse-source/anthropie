@@ -11,8 +11,12 @@
     <p class="awp-card__description">{{ .Description | truncate 180 }}</p>
     <p class="awp-card__doi">DOI : <a href="https://doi.org/{{ .Params.doi_zenodo }}" target="_blank" rel="noopener">{{ .Params.doi_zenodo }}</a></p>
     <div class="awp-card__actions">
-      {{ with .Params.pdf_url }}
-      <a href="{{ . }}" class="awp-card__btn" target="_blank" rel="noopener">PDF</a>
+      {{/* Depuis une liste, le geste attendu est de lire, pas d'archiver : on envoie au
+           lecteur intégré Zenodo quand il existe (voir partials/awp-preview-url.html), au
+           fichier sinon. Le téléchargement reste sur la page de l'article. */}}
+      {{ $preview := partial "awp-preview-url.html" .Params.pdf_url }}
+      {{ with (or $preview .Params.pdf_url) }}
+      <a href="{{ . }}" class="awp-card__btn" target="_blank" rel="noopener">{{ if $isEn }}Read the PDF{{ else }}Lire le PDF{{ end }}</a>
       {{ end }}
       {{ with .Params.url_zenodo }}
       <a href="{{ . }}" class="awp-card__btn" target="_blank" rel="noopener">Zenodo</a>

@@ -130,39 +130,47 @@
     {{/* ══════════ SIDEBAR ══════════ */}}
     <aside class="awp-article__sidebar">
 
-      {{/* ── Routage de convergence (data/convergence_routing.json, contrôleur collector).
-           Notice Zenodo promue en CTA principal quand ce record est sous contrôle (déficit
-           vues/téléchargements) ; PDF en secondaire. Défaut sûr : sans donnée, kill switch,
-           ou cta_primary != "record" → régime normal (PDF principal). */}}
-      {{ $ctaRecord := false }}
-      {{ with site.Data.convergence_routing }}
-        {{ if not .kill_switch }}
-          {{ with (index .records $.Params.doi_zenodo) }}
-            {{ if eq .cta_primary "record" }}{{ $ctaRecord = true }}{{ end }}
-          {{ end }}
-        {{ end }}
-      {{ end }}
+      {{/* ── Lire ou télécharger ──
+           Zenodo sert ses fichiers en "content-disposition: attachment" : un lien PDF ne
+           s'ouvre jamais dans le navigateur, il part en téléchargement — et sur téléphone le
+           lecteur doit ensuite aller le rechercher dans ses fichiers. Le lecteur intégré de
+           Zenodo rend le même PDF lisible d'un tap ; le téléchargement reste offert juste
+           après, nommé pour ce qu'il fait. L'ordre des deux ne dépend plus d'aucune mesure.
 
-      {{/* ── Downloads ── */}}
+           Le routage de convergence (data/convergence_routing.json) promouvait ici la notice
+           Zenodo en bouton principal quand le record manquait de vues — 11 records sur 17 le
+           2026-09-13, soit une majorité d'articles plaçant une fiche de métadonnées devant le
+           texte. Désarmé côté site sur arbitrage auteur du 2026-09-13 : « toujours simple pour
+           le lecteur ». Le collector continue de produire le fichier, qui ne pilote plus rien
+           tant que cette ligne le dit. */}}
+      {{ $preview := partial "awp-preview-url.html" .Params.pdf_url }}
+      {{ $lang := upper .Lang }}
       <div class="awp-sidebar__block">
-        <h3 class="awp-sidebar__heading">{{ if $isEn }}Download{{ else }}Télécharger{{ end }}</h3>
-        {{ if and $ctaRecord .Params.url_zenodo }}
-        <a href="{{ .Params.url_zenodo }}" class="btn btn--primary awp-sidebar__btn" target="_blank" rel="noopener">
-          {{ if $isEn }}Read on Zenodo ↗{{ else }}Lire la notice Zenodo ↗{{ end }}
+        <h3 class="awp-sidebar__heading">{{ if $isEn }}Read or download{{ else }}Lire ou télécharger{{ end }}</h3>
+        {{ with $preview }}
+        <a href="{{ . }}" class="btn btn--primary awp-sidebar__btn" target="_blank" rel="noopener">
+          {{ if $isEn }}Read online{{ else }}Lire en ligne{{ end }}
         </a>
         {{ end }}
         {{ with .Params.pdf_url }}
-        <a href="{{ . }}" class="btn {{ if $ctaRecord }}btn--secondary{{ else }}btn--primary{{ end }} awp-sidebar__btn" target="_blank" rel="noopener">
-          PDF{{ if $isEn }} (EN){{ else }} (FR){{ end }}
+        <a href="{{ . }}" class="btn {{ if $preview }}btn--secondary{{ else }}btn--primary{{ end }} awp-sidebar__btn" target="_blank" rel="noopener">
+          {{ if $isEn }}Download the PDF{{ else }}Télécharger le PDF{{ end }} ({{ $lang }})
         </a>
         {{ end }}
-        {{ with .Params.translation }}
-          {{- $tr := $.Site.GetPage .url -}}
-          {{ with $tr }}{{ with .Params.pdf_url }}
+        {{/* PDF des autres langues. On passe par .Translations (lien natif de Hugo entre
+             awp-NN.md et awp-NN.en.md) et non par le champ "translation" du front matter :
+             celui-ci porte une URL de sortie ("/en/awp/awp-08/") que Site.GetPage, qui résout
+             des chemins de contenu, ne retrouvait pas. Résultat mesuré le 2026-09-13 sur les
+             16 pages construites : bouton absent sur les 8 pages FR, et sur les 8 pages EN
+             libellé "(FR)" au-dessus du fichier anglais. La langue du libellé se dérive
+             désormais de la page pointée, elle ne se recopie plus. */}}
+        {{ range .Translations }}
+          {{- $trLang := upper .Lang -}}
+          {{ with .Params.pdf_url }}
           <a href="{{ . }}" class="btn btn--secondary awp-sidebar__btn" target="_blank" rel="noopener">
-            PDF{{ if $isEn }} (FR){{ else }} (EN){{ end }}
+            {{ if $isEn }}Download the PDF{{ else }}Télécharger le PDF{{ end }} ({{ $trLang }})
           </a>
-          {{ end }}{{ end }}
+          {{ end }}
         {{ end }}
       </div>
 

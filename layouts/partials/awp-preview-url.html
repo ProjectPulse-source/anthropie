@@ -1,0 +1,24 @@
+{{/*
+  Transforme une URL de fichier Zenodo en URL de son lecteur intégré (pdf.js).
+
+  Pourquoi : Zenodo sert ses fichiers en "content-disposition: attachment" et
+  "content-type: application/octet-stream". Aucun navigateur ne peut donc les
+  afficher : sur telephone, un lien PDF ne se lit pas, il atterrit dans les
+  telechargements et le lecteur doit aller l'y rechercher. Le lecteur integre
+  (/records/<id>/preview/<fichier>) rend le meme PDF en HTML, lisible d'un tap.
+
+  Un seul organe, trois appelants (sidebar de l'article, PDF de la traduction,
+  carte de la liste) : la regle ne se recopie pas, elle s'appelle.
+
+  Rend une chaine vide si l'URL n'est pas un fichier Zenodo — l'appelant doit
+  donc toujours tester le resultat, sinon un futur PDF heberge ailleurs
+  produirait un bouton "Lire en ligne" pointant vers un telechargement.
+
+  Appel : {{ $preview := partial "awp-preview-url.html" .Params.pdf_url }}
+*/}}
+{{- $url := . | default "" -}}
+{{- $out := "" -}}
+{{- if and (ne $url "") (in $url "zenodo.org") (in $url "/files/") -}}
+  {{- $out = replace $url "/files/" "/preview/" -}}
+{{- end -}}
+{{- return $out -}}
