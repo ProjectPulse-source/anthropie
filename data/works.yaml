@@ -564,6 +564,10 @@ works:
       en: ""  # n/a
     subtitle_fr: "Anthologie éclectique de citations"  # NB : « inédite » du sous-titre couverture = subjectif (KDP), évité ici
     publication_date: "2022-12-20"  # source content/livres/livresque-des-mots.md
+    # HISTORIQUE ÉDITORIAL (auteur, 2026-09-13) — première édition chez Bookelis, distribuée
+    # par Hachette : l'auteur n'avait pas la main sur la fiche. Partenariat arrêté, titre
+    # réédité en direct sur KDP — Kindle publié le 26/02/2024 (ASIN B0CW994YWH, relevé le
+    # 2026-09-13). Les 88 avis courent depuis l'édition d'origine.
     isbn: "978-2-9586347-0-4"
     isbn_13_normalized: "9782958634704"
     pages: 672  # broché, master P11 (2026-06-08) — était 0/todo
@@ -610,6 +614,13 @@ works:
       en: ""  # n/a
     subtitle_fr: "Culture, philosophie et science — de l'aube de l'humanité à l'intelligence artificielle"  # sous-titre canonique tranché 2026-07-03 (aligné intérieur + couverture + BO + site)
     publication_date: "2026-07-03"  # nouvelle édition entièrement recomposée (696 p., nouvel ISBN) ; première édition 2023, ISBN 978-2-9586347-1-1 / broché 295863471X dépublié
+    # TROIS ÉDITIONS, et non deux — l'écart 2023/2024 n'est pas une contradiction
+    # (auteur, 2026-09-13) : 2023 = première édition chez Bookelis, distribuée par Hachette,
+    # fiche hors de contrôle de l'auteur ; partenariat arrêté, réédition en direct sur KDP,
+    # Kindle publié le 19/02/2024 ; puis la recomposition de 2026. L'ASIN Kindle conservé
+    # ancre les avis depuis l'origine, d'où 165 avis sur une édition de dix semaines.
+    # first_published de la fiche porte 2024-02-19 : c'est la plus ancienne date ATTESTÉE
+    # par une source lisible, la fiche Bookelis n'existant plus.
     isbn: "978-2-9586347-4-2"
     isbn_13_normalized: "9782958634742"
     pages: 696  # broché nouvelle édition (sync content/livres/lodyssee-des-idees.md)
