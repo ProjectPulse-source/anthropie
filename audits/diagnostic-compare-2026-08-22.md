@@ -282,6 +282,12 @@ requêtes d'entrée, impressions « anthropie », confusion « Anthropocène »,
 concept, pages d'entrée, profondeur de parcours, part AWP vs home. **Ces questions restent
 entières.**
 
+> **→ Complété le 2026-09-13.** Search Console a été lue (Chrome) : requêtes d'entrée, impressions,
+> CTR de la page concept et confusion « Anthropocène » sont **mesurés** — voir `PROJECT_STATUS.md`,
+> entrée du 2026-09-13. Zenodo est passé de *lisible* à **en défaut** (504 avec jeton, 403 sans).
+> GoatCounter, Bing et SSRN restent dans l'état décrit ci-dessus. Ce rapport n'est pas modifié par
+> ailleurs : il reste l'audit J+90, et il n'y en a qu'un.
+
 ---
 
 ## 6. Anomalies nouvelles depuis le 23 mai

@@ -53,6 +53,77 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-13 — Rappel J+90 : l'audit existait déjà ; ce qui a bougé, et trois cellules remplies
+
+**Le rappel qui a sonné ce jour demande un travail fait le 22/08.** `audits/diagnostic-compare-2026-08-22.md`
+est l'audit J+90 — J+91 exactement, base `diagnostic-2026-05-23.md`, HEAD `b399315`, 244 commits.
+Il couvre la checklist entière, y compris les quatre décisions propres au J+90 (§ 7) et les trois
+gestes auteur (§ 7.5). **Il n'est pas refait.** Le rappel, lui, n'avait pas de condition de mort :
+il a survécu à son objet — et son § A3 disait déjà que **c'est la checklist qui a vieilli**, pas le
+dossier. Sa suppression est un **geste auteur**.
+
+Ce qui suit n'est donc pas un second J+90 : c'est **l'écart mesuré depuis le 22/08**, plus les
+cellules que le § 5.7 déclarait non lues et que la session a pu lire.
+
+**G3 — ORCID : FAIT.** Le dossier porte 38 travaux et le DOI `10.3917/rfse.036.0247` y est.
+⚠ Il y entre sous le titre générique de Cairn, « Comptes rendus d'ouvrages », et non sous le titre
+de la recension : c'est la classe de dégradation de titre que le dossier connaît déjà côté SSRN.
+Le geste a porté ; ce qu'il a déposé mérite d'être relu.
+
+**G1 — OpenAlex : aggravé, et la checklist désigne la mauvaise fiche.** Chaque entité a été
+vérifiée **par ses travaux**, pas par son nom affiché :
+
+| | 22/08 | 13/09 |
+|---|---|---|
+| entités confirmées siennes (par DOI) | 9 | **9, portant 44 travaux** |
+| + entité portant son ORCID, non confirmée par DOI | — | **1** (`A5135768240`) |
+| homonyme au statut incertain, à ne pas revendiquer | — | 1 (`A5138641837`) |
+| DOI à rattacher | 12 | **44 distincts** |
+
+⛔ **`A5130851063`, l'identifiant que la checklist nomme, ne porte que 9 des 44 travaux et
+n'a pas l'ORCID.** L'entité la plus riche est **`A5134537460`** — 15 travaux, ORCID
+`0009-0002-1794-4895` attaché. Revendiquer celle de la checklist, c'est ancrer l'identité sur une
+entité minoritaire et sans signal ORCID. **L'ancre proposée change ; le choix reste à l'auteur.**
+Et la liste de 12 DOI du 22/08 est périmée : elle en compte 44 aujourd'hui.
+
+**Cellules du § 5.7 remplies ce jour — Search Console, lue via Chrome.** Trois mois glissants au
+13/09 : **354 clics, 53 700 impressions, CTR 0,7 %, position moyenne 6,8.**
+
+| Page | Clics | Impressions | CTR |
+|---|---|---|---|
+| `/awp/awp-01/` | 131 | 12 606 | 1,04 % |
+| **`/en/quest-ce-que-lanthropie/`** | 105 | **36 457** | **0,29 %** |
+| `/` | 33 | 560 | 5,9 % |
+| `/livres/lodyssee-des-idees/` | 18 | 239 | 7,5 % |
+| `/quest-ce-que-lanthropie/` | 13 | 1 915 | 0,68 % |
+
+**Le fait central, et il n'était pas prévu par la checklist.** La page concept **anglaise** porte
+**68 % des impressions du site** et les convertit à **0,29 %**. Au niveau des requêtes, la grappe
+anglaise (`anthropy`, `anthropy meaning`, `anthropy definition`, `what is anthropy`) pèse
+**26 236 impressions pour 65 clics — 0,25 %** ; la grappe française (`anthropie`, `anthropie
+définition`, `l'anthropie`) pèse **11 608 impressions pour 122 clics — 1,05 %**. L'anglais est vu
+deux fois plus et cliqué quatre fois moins. ⚠ **Observation à vérifier avant d'en faire une cause** :
+la page concept EN vit sur un **slug français**, `/en/quest-ce-que-lanthropie/` — ce que voit un
+lecteur anglophone dans la SERP. Toucher cette URL engage 36 000 impressions : **arbitrage auteur,
+rien n'a été modifié.**
+
+**Confusion « Anthropocène » : mesurée, et négligeable.** Requêtes contenant `anthropoc` sur trois
+mois : **5 impressions, 0 clic**, position 5,4 — soit **0,009 %** du total. La crainte portée par
+la checklist depuis mai est levée par un chiffre, pas par une impression.
+
+**Cellules restées non lues, et le motif de chacune — ce ne sont pas des zéros.**
+
+| Instrument | État au 13/09 | Motif mesuré |
+|---|---|---|
+| **Zenodo** (téléchargements par AWP) | **non lu** | `zenodo_stats.py` → **HTTP 504 deux fois** avec jeton ; `curl` sans jeton → **403** sur l'API *et* sur la page publique (client refusé) ; navigation navigateur non autorisée sur le domaine. L'instrument est en défaut, ce n'est pas un résultat nul. |
+| **GoatCounter** | non lu | tableau privé, inchangé depuis le 22/08 |
+| **Bing « AI Performance »** | non lu | authentification interactive |
+| **SSRN** `11065608` | non concluant | 403 anti-bot, comme au J+0 et au J+90 |
+| **Backlinks `.edu`, mentions presse** | non instruit | recherche manuelle |
+
+**Aucune modification du site.** Les seuls fichiers écrits sont ce journal et le renvoi ajouté au
+§ 5.7 du rapport du 22/08, pour qu'un lecteur de ce rapport sache où sont les cellules remplies.
+
 ### 2026-09-13 — MPRA, sonde AWP-07 à J+32 : le contrôle ne mesurait rien, et la sonde non plus
 
 `check_deposits_status.py` rendait, pour le dépôt test du 12/08 (`130468`), l'étiquette
@@ -126,6 +197,11 @@ d'AWP-07, pas l'écoulement d'un délai ; **aucune relance** — réclamer contr
 dépôts contemporains subissent serait du bruit, sur un compte dont une réclamation a déjà été
 rejetée le 04/08 ; **aucune échéance courte** — la prochaine vérification n'a d'intérêt qu'après un
 mouvement de cohorte, pas après un nombre de jours.
+
+⏰ **Report arbitré par l'auteur le 13/09 : vérification dans quatre semaines, soit le 11/10/2026.**
+La bonne lecture ce jour-là n'est pas « combien de jours » mais **le rendement de la cohorte d'août** :
+relancer la mesure de contre-population ci-dessus et comparer au 3 % du 13/09. Un taux qui monte
+sans nous dit quelque chose du compte ; un taux qui reste bas ne dit rien de nous.
 
 ### 2026-09-13 — Search Console, J+7 du relevé du 02/09 : les deux listes de publications sont indexées
 
