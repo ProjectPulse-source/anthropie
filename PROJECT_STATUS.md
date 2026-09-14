@@ -86,8 +86,11 @@ dépôt canonique, seize records dérivés du registre :
 | **AWP-08** | **aucun** | 53 | **1,70** | **3,38** |
 
 **Les deux papiers sans aucun relais font légèrement mieux que les six qui en ont un, sur les deux
-compteurs.** La question posée — *faut-il payer un risque pour leur donner un relais ?* — suppose
-un manque : **le manque n'est pas visible dans les chiffres du corpus.**
+compteurs.** ⚠ **Correction du 14/09, tour 2 : cette lecture était trop forte.** Un taux par jour
+écrase une courbe qui décroît, donc il **favorise mécaniquement les papiers jeunes** ; et le protocole
+de mesure du 04/07 documente un **incident de comptage Zenodo le 15/05**, qui sépare exactement mes
+deux groupes. **La comparaison à âge égal n'est pas faisable** — l'interface ne rend que des cumuls.
+À retenir : **la prémisse n'est pas testable**, et non « le manque n'existe pas ».
 
 ⚠ **Deux réserves, en sens opposés, et elles sont dans l'arbitrage.** Le **biais d'âge joue en
 leur faveur** — 53 et 71 jours contre 130 à 225, et le trafic d'un dépôt est plus dense au début ;
@@ -122,6 +125,59 @@ fois.
 fragmentation **avant** de rouvrir la question des relais ? Rien d'autre n'est en attente — le
 rendez-vous du **11/10** sur le relais 2 reste la seule échéance, et le ratio téléchargements/vues
 ne porte plus aucune décision tant que sa provenance n'est pas décomposée.
+
+**Tour 2 du 14/09 — et la règle qui dissout la question était déjà dans le dépôt.** Pièce
+`24E6B92C…94E6`, 15 017 octets, archivée verbatim avant lecture, en annexe (créneau déjà servi).
+
+⭐ **`reports/geo_audit/GEO_PROTOCOLE_MESURE.md`, 2026-07-04, statut « protocole d'engagement »,
+§ 3** : *« Seul un signal de traction déclenche une action : citation d'usage par un tiers, mail
+entrant, backlink `.edu`, demande de positionnement, reprise presse. **Une métrique de volume seule
+ne déclenche jamais rien** (elle contextualise). »* **Toute la question des relais est une question
+de volume** — téléchargements, vues, ratio, les 105 du relais 1 — et **aucun signal de traction n'a
+été rapporté.** Il n'y avait donc pas de décision à prendre. Le même fichier désigne par ailleurs
+l'index bibliographique ouvert comme **« le vrai KPI »** du régime long, et rappelle un **incident
+de comptage Zenodo du 15/05** qui rend les valeurs absolues fragiles. **Un paquet, trois tours de
+contradiction et deux arbitrages ont été produits sans que ce fichier soit ouvert** — et c'est moi
+qui l'ai manqué en premier.
+
+⚠ **Correction de ma mesure d'hier, et le tour 2 a raison.** J'avais conclu que la prémisse « les
+deux derniers papiers souffrent de l'absence de relais » **ne tenait pas**, sur des taux par jour.
+Deux défauts, tous deux dans le sens qui fabriquait mon résultat : un taux par jour **écrase une
+courbe décroissante** et favorise donc mécaniquement les papiers jeunes ; et l'incident de comptage
+du 15/05 **sépare exactement mes deux groupes**. La comparaison à âge égal n'est pas faisable —
+l'interface ne rend que des cumuls, et aucun relevé ancien n'est conservé. **À retenir : la
+prémisse n'est pas testable, pas « le manque n'existe pas ».** Sous la règle du § 3, cela ne change
+rien à la décision.
+
+**Apports neufs et retenus de ce tour** : le vrai actif risqué n'est pas les six papiers mais la
+**valeur d'option du canal pour les papiers à venir**, que le paquet ignorait ; et un rejet
+définitif **coûte moins qu'annoncé** — le papier reste public avec son DOI, seule l'option de
+distribution est perdue. Les deux erreurs du dossier allaient dans le même sens, celui de
+l'immobilité. **Non vérifié** : son intuition que les six papiers relayés serviraient déjà de
+portes d'entrée vers tout le corpus — la page du premier papier est bien **la plus cliquée du
+site** (131 clics, 1,04 %), mais le parcours interne exigerait l'instrument de fréquentation, non
+lisible.
+
+### Synthèse — huit décisions, coût nul
+
+| # | Décision | Qui |
+|---|---|---|
+| **D1** | **Aucune soumission d'AWP-07 ni d'AWP-08 au relais 1.** Le volume ne déclenche rien ; AWP-07 engagerait un second relais simultané contre une règle verrouillée ; AWP-08 est le moins compatible ; la perte inclut l'option pour les papiers futurs. | tranché |
+| **D2** | **La question « relais » est close**, pas ajournée : elle ne se rouvre que sur un **signal de traction**, jamais sur un chiffre de volume. | tranché |
+| **D3** | **Pas de critère de succès nouveau** : celui du protocole du 04/07 s'applique tel quel. | tranché |
+| **D4** | **Le ratio téléchargements/vues sort du moteur décisionnel** — provenance inconnue, endogénéité au lien du site depuis le 13/09, incident de comptage du 15/05. Descriptif seulement, en tendance trimestrielle. | tranché |
+| **D5** | **Correction du journal** ci-dessus appliquée. | fait |
+| **D6** | **Le seul défaut de diffusion réel et réparable reste l'identité fragmentée sur l'index bibliographique** — dix entités, 44 travaux, en aggravation. Le protocole en fait **le vrai KPI** : ce n'est pas un à-côté. | **auteur** |
+| **D7** | **Rendez-vous du 11/10 maintenu**, et ce jour-là on lit le **rendement de la cohorte**, pas un nombre de jours. | armé |
+| **D8** | **Aucune nouvelle contre-expertise sur ce sujet** : trois tours, verdict convergent, inconnues restantes soit non mesurables soit exclues par le protocole. Une quatrième serait surnuméraire. | tranché |
+
+**Ces huit décisions ne coûtent rien** : aucune soumission, aucun développement, aucun instrument
+nouveau. Le seul geste restant demande une authentification et porte sur les huit papiers à la fois.
+
+*Un dispositif de contradiction externe ne remplace pas la lecture de son propre appareil : il la
+suppose. Quand elle manque, il produit du raisonnement juste sur une question qui n'avait pas lieu
+d'être posée — et c'est plus coûteux qu'une erreur, parce que cela ressemble à du travail.*
+
 
 ### 2026-09-14 — Contrôle des dépôts : la décision était dans le code, la sortie disait le contraire
 
