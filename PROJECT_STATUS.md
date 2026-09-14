@@ -53,6 +53,31 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-14 — Identité OpenAlex : le geste auteur était bloqué par une liste qui n'existait pas
+
+**D6 attendait depuis le 22/08 sans que rien ne le dise.** La procédure était vérifiée à la
+source (pas de fonction « fusionner » : on revendique une entité, puis on lui rattache les
+travaux des autres **par DOI**), mais la liste des DOI à rattacher n'existait nulle part et aucun
+script ne la produisait. Le geste n'était donc pas « en attente de l'auteur » : il était
+**inexécutable**. La liste citée le 22/08 en comptait 12, le relevé du 13/09 parlait de 44 sans
+les énumérer.
+
+**Mesuré ce jour par l'API publique** (`scripts/openalex_identite.py`, nouveau) : **46 travaux
+distincts** répartis sur 10 entités, dont **16 déjà sur l'ancre** et **30 à rattacher**.
+
+**L'ancre ne se choisit plus à la main : c'est l'entité qui porte l'ORCID.** L'API répond
+`A5134537460` (16 travaux, ORCID `0009-0002-1794-4895`). La checklist du 22/08 nommait
+`A5130851063`, qui porte 9 travaux et **pas** l'ORCID — ancrer dessus fixait l'identité sur une
+entité minoritaire et sans signal. Point réglé par la mesure, pas par un arbitrage.
+
+**Pourquoi les DOI vont par paires** : Zenodo émet un DOI *concept* et un DOI de *version*, et
+OpenAlex indexe les deux comme deux travaux. Les rattacher tous les deux est correct ; cela
+explique que 23 publications donnent 46 entrées.
+
+La liste brute est remise à l'auteur dans `Downloads\OPENALEX_DOI_A_RATTACHER.txt`, prête à
+coller. L'outil porte sa condition de mort : il disparaît quand deux exécutions à un mois
+d'intervalle rendent « A RATTACHER : 0 ».
+
 ### 2026-09-14 — Dépôt d'AWP-07/08 : la question supposait un manque, et le manque ne se mesure pas
 
 Contre-expertise `anthropie-site-20260914-003955` (`REASONING_AUDIT`, paquet monté cette nuit par
