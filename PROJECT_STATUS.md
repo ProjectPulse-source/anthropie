@@ -53,6 +53,76 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-14 — Dépôt d'AWP-07/08 : la question supposait un manque, et le manque ne se mesure pas
+
+Contre-expertise `anthropie-site-20260914-003955` (`REASONING_AUDIT`, paquet monté cette nuit par
+une autre session). Réponse `D65B8C75…475E`, 14 858 octets, **archivée verbatim avant lecture**,
+parité d'empreinte vérifiée. Arbitrage complet dans `ARBITRATIONS/`.
+
+**Verdict retenu : NE PAS DÉPOSER — mais l'argument change une troisième fois.** Le paquet
+plaidait « on ne joue pas six acceptations contre une septième ». La réponse a montré que cette
+asymétrie est mal spécifiée et que l'argument tient plutôt à la valeur d'attente. **Les deux
+raisonnaient sur une prémisse que personne n'avait testée** : qu'AWP-07 et AWP-08 souffrent de
+n'avoir aucun relais.
+
+**Le point le plus fort de la réponse, vérifiable dans le paquet lui-même** : AWP-07 **n'est pas
+sans relais**, il est engagé sur le relais 2 et toujours en examen. Or la règle verrouillée dit
+« au plus un relais disciplinaire ». Le déposer ailleurs maintenant en engagerait **deux à la fois
+sur le même papier** : l'option B ne manque pas de prudence, elle **viole une décision déjà
+verrouillée**. Retirée du jeu, pas ajournée.
+
+**Et la fonction de perte est assise sur rien.** Le paquet chiffrait le coût à « potentiellement
+les six papiers déjà en ligne ». La source ne dit que « *may lead to rejections and account
+closure* » : entre fermeture d'un compte et disparition des records publiés, **il manque un maillon
+que personne n'a établi**. Tant qu'il n'est pas lu à la source, c'est une perte supposée.
+
+⭐ **La mesure qui déplace tout, et que la réponse réclamait sans pouvoir la faire.** Compteurs du
+dépôt canonique, seize records dérivés du registre :
+
+| Papier | Relais | Jours | Vues/jour | DL/jour |
+|---|---|---:|---:|---:|
+| AWP-01 à AWP-06 | oui | 130 à 225 | **1,54** (moyenne) | **4,99** (moyenne) |
+| **AWP-07** | **aucun** | 71 | **1,65** | **11,06** |
+| **AWP-08** | **aucun** | 53 | **1,70** | **3,38** |
+
+**Les deux papiers sans aucun relais font légèrement mieux que les six qui en ont un, sur les deux
+compteurs.** La question posée — *faut-il payer un risque pour leur donner un relais ?* — suppose
+un manque : **le manque n'est pas visible dans les chiffres du corpus.**
+
+⚠ **Deux réserves, en sens opposés, et elles sont dans l'arbitrage.** Le **biais d'âge joue en
+leur faveur** — 53 et 71 jours contre 130 à 225, et le trafic d'un dépôt est plus dense au début ;
+`n = 2` contre `n = 6`. Et le compteur de téléchargements est **celui que la réponse demande de
+suspendre** : AWP-07 EN affiche **679 téléchargements pour 57 vues, ratio 11,9, extrême du
+corpus** — premier record à inspecter le jour où la provenance sera vérifiée. Le compteur robuste
+est celui des **vues**, et l'écart y subsiste. Conclusion honnête : **aucun déficit mesurable**,
+pas « déficit prouvé absent ».
+
+🔧 **Défaut trouvé dans notre propre appareil, et corrigé dans le même geste.** `zenodo_stats.py`
+portait une liste **codée en dur de cinq records** ; `zenodo_stats_full.py` la même. **AWP-06, 07
+et 08 en étaient absents — en silence** : le tableau s'arrêtait, voilà tout. La décision du jour
+portait précisément sur les deux papiers que l'instrument ne regardait pas. C'est la classe que
+`check_deposits_status.py` documente déjà en tête (« un manquant déguisé en zéro ») et que le
+`CLAUDE.md` du dépôt pose en règle — *la présence vient du dépôt, une exclusion peut être légitime,
+le silence jamais*. **La leçon avait été appliquée à un script et pas à son voisin, dans le même
+dossier.** La liste est désormais **dérivée de `data/works.yaml`** — seize records, huit papiers,
+deux langues ; tout AWP du registre sans record est signalé avec son motif ; une erreur d'API est
+déclarée **non mesurée** et jamais lue comme un zéro ; et une indisponibilité est réessayée trois
+fois avant de conclure — Zenodo rendait `504` la veille. Vu mordre : la sortie déclare « Tous les
+AWP du registre ont été mesurés ».
+
+**L'option « diffuser sans redéposer » a déjà une tâche nommée et en attente.** La réponse la
+désigne comme l'angle le plus prometteur ; ce n'est pas un espace vierge. Le bilan à 90 jours y a
+trouvé un défaut majeur toujours ouvert : **l'identité de l'auteur sur le principal index
+bibliographique ouvert est fragmentée en dix entités portant 44 travaux** — mesuré le 13/09, neuf
+le 22/08. **C'est le seul défaut de diffusion réellement mesuré du dossier**, il s'aggrave à chaque
+dépôt, et sa réparation est un geste auteur de coût faible qui porte sur les huit papiers à la
+fois.
+
+**Décision humaine, et ce n'est pas celle que le paquet posait** : faut-il traiter cette
+fragmentation **avant** de rouvrir la question des relais ? Rien d'autre n'est en attente — le
+rendez-vous du **11/10** sur le relais 2 reste la seule échéance, et le ratio téléchargements/vues
+ne porte plus aucune décision tant que sa provenance n'est pas décomposée.
+
 ### 2026-09-14 — Contrôle des dépôts : la décision était dans le code, la sortie disait le contraire
 
 Contrôle demandé sur la foi de l'audit plateformes du **2026-08-02**, dont la recommandation n°1
