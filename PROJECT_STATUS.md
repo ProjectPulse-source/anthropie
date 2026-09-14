@@ -53,6 +53,42 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-14 — OpenAlex : 37 travaux soumis, et le profil revendiqué n'était pas celui que je croyais
+
+**Geste exécuté dans le navigateur de l'auteur, à sa demande explicite.** Résultat : **46
+publications analysées, 37 ajoutées, 9 déjà présentes, 0 introuvable** ; le profil affiche
+« 37 pending », application annoncée sous 1 à 2 jours.
+
+**Correction de ma recommandation du matin.** J'avais conclu « l'ancre est l'entité qui porte
+l'ORCID », soit `A5134537460`. La page des réglages du compte dit autre chose : **un profil est
+déjà revendiqué, et c'est `A5130851063`** — celle que la checklist du 22/08 nommait, qui porte 9
+travaux et **pas** l'ORCID. Le critère ORCID était juste dans l'ignorance de ce fait ; il ne
+l'était plus une fois la revendication connue.
+
+**Arbitrage retenu — consolider sur le profil déjà revendiqué**, pour trois raisons qui vont
+toutes dans le même sens : il est **éditable immédiatement** (l'autre exigerait une nouvelle
+revendication, en revue manuelle puisque l'adresse du compte n'est pas institutionnelle) ; il est
+**déjà déclaré** en `sameAs` sur le site et en P10283 sur Wikidata, donc en changer imposerait de
+modifier ces deux surfaces ; et OpenAlex fusionne précisément ainsi — « l'entité vidée devient
+inerte », il n'existe pas de bouton de fusion, déplacer les travaux **est** la fusion.
+
+**Moyen employé** : l'option « Add from CV », qui accepte un simple `.txt` de liste de
+publications. Une liste de 46 titres + DOI a été générée depuis l'API OpenAlex (les 10 entités)
+**et** depuis `data/works.yaml` pour les **6 DOI SSRN** — ces six-là n'apparaissaient sur aucune
+des entités inventoriées et auraient été manqués par la seule voie API. Un par un dans
+l'interface, l'opération aurait demandé une centaine et demie d'actions ; elle en a demandé
+quinze.
+
+**Procédure vérifiée à la source ce jour** (`help.openalex.org/how-to/fixing-authors/`) : la page
+auteur n'affiche **aucun bouton « Claim » quand le profil est déjà revendiqué** — ce qui explique
+que je ne l'aie pas trouvé et m'a conduit aux réglages du compte, où le profil revendiqué est
+nommé.
+
+⏰ **À vérifier le 2026-09-17** (J+3) : `works_count` de `A5130851063` doit passer de 9 à 46, et
+il faudra regarder **si l'ORCID migre** vers cette entité en même temps que les travaux qui le
+portaient. S'il ne migre pas, le point redevient ouvert — l'identité aurait alors ses travaux
+d'un côté et son identifiant chercheur de l'autre. Relance : `python scripts/openalex_identite.py`.
+
 ### 2026-09-14 — Identité OpenAlex : le geste auteur était bloqué par une liste qui n'existait pas
 
 **D6 attendait depuis le 22/08 sans que rien ne le dise.** La procédure était vérifiée à la
