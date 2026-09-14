@@ -239,6 +239,75 @@ nouveau. Le seul geste restant demande une authentification et porte sur les hui
 suppose. Quand elle manque, il produit du raisonnement juste sur une question qui n'avait pas lieu
 d'être posée — et c'est plus coûteux qu'une erreur, parce que cela ressemble à du travail.*
 
+**D6 élucidé le 14/09 — et la cause n'est pas chez nous.** Le rapport du 22/08 présentait
+l'identité auteur fragmentée sur l'index bibliographique comme un défaut structurel à réparer.
+**Trois vérifications à la source disent autre chose.**
+
+| Maillon | Mesure du 14/09 | Verdict |
+|---|---|---|
+| Nos dépôts portent-ils l'ORCID ? | audit complet, 17 enregistrements | **0 bloquant** |
+| L'index intermédiaire le transmet-il ? | 3 dépôts testés, pris parmi ceux qu'OpenAlex montre *sans* | **3/3 portent `nameIdentifiers`** |
+| Que voit OpenAlex ? | travaux inspectés | **21 avec ORCID, 26 sans** |
+
+**La chaîne est saine de bout en bout ; c'est OpenAlex qui n'a pas encore re-fusionné.** Nos
+métadonnées ont été corrigées tout au long d'août et début septembre — les dépôts testés portent
+des dates de mise à jour au 17/08, 31/08 et 13/09. **Les fiches parasites ont été créées avant ces
+corrections**, à partir de métadonnées alors incomplètes. Ce n'est pas un défaut à réparer, c'est
+un retard à observer.
+
+**Indice, et je ne le prends pas pour une tendance** : la fiche ancre portait **15 travaux le
+13/09, 16 le 14/09**. Un point ne fait pas une courbe, mais il est cohérent avec le mécanisme.
+
+⛔ **Correction d'une consigne fausse** : l'ancienne fiche de rappel désignait `A5130851063` comme
+la fiche à revendiquer. **Elle ne porte que 9 travaux sur 47 et pas l'ORCID.** L'ancre est
+`A5134537460` — 16 travaux, ORCID rattaché. Revendiquer l'autre aurait ancré l'identité sur une
+fiche minoritaire et sans signal.
+
+**Une fiche tranchée qui était en suspens** : `A5138641837` est bien la sienne — « La commune,
+variable d'ajustement de la République ? », *Revue Projet* 2026, `10.3917/pro.412.0078`. Son
+absence d'ORCID s'explique : Cairn ne le transmet pas.
+
+**Décision : mesurer avant d'agir, au 11/10 — le même jour que le rendez-vous déjà armé sur
+MPRA.** Un seul rendez-vous, pas deux. Coût de l'attente : nul, l'index se lit « mensuel, passif »
+d'après le protocole du 04/07. **Condition de mort écrite** : l'ancre a absorbé → dossier clos
+sans geste ; rien n'a bougé → dix minutes de revendication ; l'auteur le fait avant → vérification
+à la source sous 48 h et clôture. Pas de quatrième issue, et le dossier ne se reconduit pas.
+
+**Dossier auteur autoportant monté au sas** — `D:\CONTRE_EXPERTISE\2026-09-14_IDENTITE_OPENALEX\`,
+quatre fichiers, ouvert dans l'explorateur : ce que c'est, ce qui a été mesuré, la marche à suivre
+si l'auteur choisit d'agir, et les **31 DOI à coller, tous avec un DOI, aucune saisie manuelle**.
+**Procédure vérifiée à la source ce jour** — la documentation d'OpenAlex énonce « *Fixing authors :
+No ticket needed — claim it and fix it yourself* ». La revendication passe par une
+authentification : c'est la seule raison pour laquelle ce dossier existe.
+
+⛔ **CORRECTION, une heure plus tard : tout ce qui précède sur l'ancre est caduc, et le geste était
+déjà fait.** Une autre session a exécuté la consolidation le matin même, avec l'auteur, dans son
+navigateur : **46 publications analysées, 37 ajoutées, 9 déjà présentes, 0 introuvable**, profil à
+« 37 pending », application sous un à deux jours. **Et sur `A5130851063`, pas sur `A5134537460`.**
+
+**Pourquoi mon critère était faux, et c'est instructif.** Je raisonnais sur les interfaces publiques,
+qui ne montrent qu'une chose : quelle fiche porte l'ORCID. **Elles ne montrent pas qu'une
+revendication existe déjà** — cela ne se lit que dans les réglages du compte, en étant connecté.
+`A5130851063` était déjà revendiquée, donc **éditable immédiatement**, quand l'autre aurait exigé une
+nouvelle revendication en revue manuelle ; elle est en outre déjà déclarée en `sameAs` sur le site
+et en `P10283` sur Wikidata. *Le critère ORCID était juste tant que la revendication existante était
+inconnue.* Une mesure extérieure ne pouvait pas atteindre ce fait.
+
+**Ce qui reste vrai de mon relevé** : la chaîne de métadonnées est saine de bout en bout — c'est ce
+qui explique que les 37 soumissions devraient prendre sans résistance. **Ce qui est retiré** : la
+recommandation d'ancre, et l'échéance au 11/10. **La bonne date est le 2026-09-17**, posée par la
+session qui a agi : `A5130851063` doit passer de 9 à 46 travaux, et surtout **l'ORCID doit migrer
+avec les travaux qui le portaient**. S'il ne migre pas, l'identité se recoupe autrement — les travaux
+d'un côté, l'identifiant chercheur de l'autre — et le point rouvre sous une forme différente.
+
+**Le dossier du sas est neutralisé** : marche à suivre et liste de DOI renommées `PERIME`, `01`
+réécrit en « rien à faire », correction portée en tête de `02`. ⚠ **Le
+dossier avait été ouvert dans l'explorateur avant que je voie les commits de l'autre session** : c'est
+la fenêtre où l'auteur aurait pu suivre une consigne fausse. J'avais relevé les sessions pairs en début
+de session, pas avant d'écrire — **le relevé se refait avant de produire, pas une fois par jour.**
+
+
+
 
 ### 2026-09-14 — Contrôle des dépôts : la décision était dans le code, la sortie disait le contraire
 
