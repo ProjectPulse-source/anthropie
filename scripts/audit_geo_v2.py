@@ -1,12 +1,25 @@
 #!/usr/bin/env python3
 """audit_geo_v2.py — parsing HTML/JSON-LD rigoureux + génération rapport markdown."""
 
-import os, re, json, sys
+import os, re, json, sys, ssl
 from urllib.request import urlopen, Request
 from urllib.error import URLError, HTTPError
 import socket
 
 socket.setdefaulttimeout(10)
+
+# Python 3.11 sous Windows ne lit pas le magasin systeme : sans certifi, wikidata.org
+# echoue en CERTIFICATE_VERIFY_FAILED alors que curl passe. Geste deja porte par
+# check-wikidata-registre.py depuis le 2026-09-02 ; propage ici le 2026-09-15, ou
+# l'absence rendait « ⚠️ API » sur les quatre QID de la partie B — en 0,1 s, avalee
+# par le `except Exception` ci-dessous, donc indiscernable d'une API muette.
+# Mesure du 15/09 : seul *.wikidata.org echoue ; OpenAlex, Zenodo, Crossref, GitHub
+# et OpenLibrary passent sans contexte. Le remede est le meme, le motif est plus etroit.
+try:
+    import certifi
+    SSL_CTX = ssl.create_default_context(cafile=certifi.where())
+except ImportError:  # pragma: no cover
+    SSL_CTX = ssl.create_default_context()
 
 # Emoji constants (Python 3.11 can't use \u escapes inside f-string expressions)
 OK = "✅"
@@ -18,15 +31,21 @@ DASH = "—"
 BASE = os.environ["AUDIT_BASE"]
 REPORT = os.environ["AUDIT_REPORT"]
 
+# Les echecs reseau sont avales pour que l'audit aille au bout, mais leur MOTIF est
+# retenu : un « ⚠️ API » sans cause a coute un diagnostic complet le 15/09 alors que
+# la reponse tenait en une ligne (certificat expire). Rendu en fin de rapport.
+ECHECS_RESEAU = []
+
 def fetch(url, head=False):
     try:
         req = Request(url, method="HEAD" if head else "GET",
                       headers={"User-Agent": "audit-geo-v2/1.0"})
-        with urlopen(req, timeout=10) as r:
+        with urlopen(req, timeout=10, context=SSL_CTX) as r:
             return r.status, (r.read().decode("utf-8", errors="replace") if not head else ""), dict(r.headers)
     except HTTPError as e:
         return e.code, "", {}
-    except (URLError, socket.timeout, Exception):
+    except (URLError, socket.timeout, Exception) as e:
+        ECHECS_RESEAU.append((url, f"{type(e).__name__}: {e}"))
         return 0, "", {}
 
 def extract_jsonld(html):
@@ -73,23 +92,41 @@ def get_sameAs(block):
         return [x for x in sa if isinstance(x, str)]
     return []
 
+# ── Lecture d'attributs HTML — UN SEUL organe pour tout le fichier ──────────
+# MOTIF (2026-09-15). Hugo minifie et écrit les attributs SANS guillemets dès que
+# la valeur n'en a pas besoin : `href=/awp/awp-01/citation.bib`. Les motifs de ce
+# fichier exigeaient `href="…"` : ils ne voyaient RIEN sur le site en production et
+# imprimaient « ❌ manque au contrat » sur des éléments présents et servis en 200.
+# Un parseur qui ne sait pas lire n'a pas trouvé un vide. Mesuré le jour même sur
+# /awp/awp-01/ : 75 href réels vus comme 1, six ancres h2/h3 vues comme 0.
+# La règle vit ICI et nulle part ailleurs — N copies divergent en silence.
+ATTR_VALUE = r'(?:"([^"]*)"|\'([^\']*)\'|([^\s"\'<>`]+))'
+
+def attr_re(name):
+    """Fragment de regex : `name=valeur`, valeur citée (") ou (') ou nue."""
+    return rf'{name}=' + ATTR_VALUE
+
+def attr_values(html, name, flags=re.IGNORECASE):
+    """Toutes les valeurs de l'attribut `name`, guillemets ou pas."""
+    return ["".join(g) for g in re.findall(attr_re(name), html, flags)]
+
 def extract_meta(html, name):
-    """Extrait <meta name=X content=Y> robuste (guillemets ou pas)."""
+    """Extrait <meta name=X content=Y> robuste (guillemets ou pas, des DEUX côtés)."""
     pattern = re.compile(
-        rf'<meta\s[^>]*name=["\']?{re.escape(name)}(?:["\']|\s|/|>)[^>]*?content=(["\'])([^"\']*)\1',
+        rf'<meta\s[^>]*name=["\']?{re.escape(name)}(?:["\']|\s|/|>)[^>]*?content=' + ATTR_VALUE,
         re.IGNORECASE)
     m = pattern.search(html)
-    if m: return m.group(2)
+    if m: return "".join(g or "" for g in m.groups())
     # Variante : content avant name
     pattern2 = re.compile(
-        rf'<meta\s[^>]*content=(["\'])([^"\']*)\1[^>]*name=["\']?{re.escape(name)}',
+        rf'<meta\s[^>]*content=' + ATTR_VALUE + rf'[^>]*name=["\']?{re.escape(name)}',
         re.IGNORECASE)
     m = pattern2.search(html)
-    return m.group(2) if m else None
+    return "".join(g or "" for g in m.groups()) if m else None
 
 def extract_links_from_page(html, patterns):
     """Retourne les href qui matchent un pattern donné (ex: /citation\\.bib$)."""
-    hrefs = re.findall(r'href=["\']([^"\']+)["\']', html)
+    hrefs = attr_values(html, "href")
     out = {}
     for label, pat in patterns.items():
         for h in hrefs:
@@ -185,7 +222,13 @@ ai_crawlers = [
 w("| Crawler | Présent dans robots.txt | Rôle |")
 w("|---|---|---|")
 for name, role in ai_crawlers:
-    present = bool(re.search(rf'b{re.escape(name)}\b', robots, re.IGNORECASE))
+    # Une DIRECTIVE `User-agent: <nom>`, pas le nom nu : le robots.txt du site
+    # nomme Googlebot et Bingbot dans ses COMMENTAIRES pour dire qu'ils sont
+    # couverts par « * ». Chercher le nom nu les compterait comme déclarés.
+    # (Le motif portait `b<nom>` au lieu de `\b<nom>` : il ne trouvait jamais
+    # rien, et les 21 directives réelles du fichier sortaient toutes en 💡.)
+    present = bool(re.search(rf'^\s*User-agent:\s*{re.escape(name)}\s*$',
+                             robots, re.IGNORECASE | re.MULTILINE))
     w(f"| `{name}` | {'✅' if present else '💡 impact **fort**'} | {role} |")
 w()
 w(f"- `llms.txt` : {'✅ HTTP 200' if llms_code == 200 else '💡 absent — impact **moyen** (norme émergente, utile pour auto-description du site aux LLMs)'}")
@@ -533,7 +576,11 @@ for label, url in [("FR", URL_AWP_FR), ("EN", URL_AWP_EN)]:
     n_h1 = len(re.findall(r'<h1\b', html, re.IGNORECASE))
     n_h2 = len(re.findall(r'<h2\b', html, re.IGNORECASE))
     n_h3 = len(re.findall(r'<h3\b', html, re.IGNORECASE))
-    n_ids = len(re.findall(r'sid=["\'][^"\']+["\']', html))
+    # Ancres de sous-section : les `id` portés par un <h2>/<h3>, pas tous les `id`
+    # de la page (11 sur AWP-01, dont des conteneurs techniques — bon dénominateur,
+    # mauvais grain). Le motif cherchait `sid=` : un attribut qui n'existe pas, donc
+    # un contrôle mort rendant 0 quoi qu'il arrive. Réel mesuré le 15/09 : 6, FR et EN.
+    n_ids = len(re.findall(r'<h[23]\b[^>]*\s' + attr_re('id'), html, re.IGNORECASE))
     n_article = len(re.findall(r'<article\b', html, re.IGNORECASE))
     n_time = len(re.findall(r'<time\b', html, re.IGNORECASE))
     faq_present = bool(re.search(r'"@type":\s*"(FAQPage|Question)"', html))
@@ -542,7 +589,7 @@ for label, url in [("FR", URL_AWP_FR), ("EN", URL_AWP_EN)]:
     w(f"- `<h1>` : {n_h1} — {'✅' if n_h1 == 1 else '⚠️ attendu 1'}")
     w(f"- `<h2>` : {n_h2} (sectionnement)")
     w(f"- `<h3>` : {n_h3}")
-    w(f"- ancres `id=\"…\"` : {n_ids} — {'✅' if n_ids >= 3 else '💡 opportunité — impact **moyen** (permet citation LLM vers sous-section)'}")
+    w(f"- ancres `id` sur `<h2>`/`<h3>` : {n_ids} — {'✅' if n_ids >= 3 else '💡 opportunité — impact **moyen** (permet citation LLM vers sous-section)'}")
     w(f"- `<article>` : {'✅' if n_article else '💡 impact **faible**'}")
     w(f"- `<time>` : {'✅' if n_time else '💡 impact **faible**'}")
     w(f"- FAQ Schema : {'✅' if faq_present else '💡 impact **moyen**'}")
@@ -582,7 +629,19 @@ if URL_AWP_FR and URL_AWP_FR in html_cache:
 
 # Feed RSS
 _, home, _ = fetch(URL_HOME_FR)
-rss_links = re.findall(r'<link[^>]+rel=["\']alternate["\'][^>]+type=["\']application/(?:rss|atom)\+xml["\'][^>]+href=["\']([^"\']+)["\']', home, re.IGNORECASE)
+# Chaque <link> est isolée puis interrogée attribut par attribut : le motif
+# précédent imposait à la fois les guillemets et l'ordre rel→type→href. L'accueil
+# sert `<link rel=alternate type=application/rss+xml href=…/index.xml>` — annoncé
+# depuis toujours, rapporté « non annoncé » à chaque passage.
+rss_links = []
+for tag in re.findall(r'<link\b[^>]*>', home, re.IGNORECASE):
+    rel = attr_values(tag, "rel")
+    typ = attr_values(tag, "type")
+    if not any(r.lower() == "alternate" for r in rel):
+        continue
+    if not any(re.fullmatch(r'application/(?:rss|atom)\+xml', t.strip(), re.I) for t in typ):
+        continue
+    rss_links += attr_values(tag, "href")
 w(f"**Feed RSS/Atom annoncé sur accueil :** {'✅ ' + rss_links[0] if rss_links else '💡 non annoncé — impact **moyen**'}")
 code_rss, _, _ = fetch(f"{BASE}/index.xml", head=True)
 w(f"**Feed `/index.xml` HTTP :** {code_rss}")
@@ -665,6 +724,20 @@ w("**Lecture** : vérifier que chaque AWP apparaît bien dans au moins une versi
 w()
 
 w("---")
+w()
+w("## B.3 Échecs réseau de ce passage")
+w()
+if ECHECS_RESEAU:
+    w(f"**{len(ECHECS_RESEAU)} requête(s) n'ont pas abouti.** Un « ⚠️ API » ci-dessus veut dire "
+      "*non mesuré*, jamais *absent* — ne rien conclure de ces lignes.")
+    w()
+    w("| URL | Motif |")
+    w("|---|---|")
+    for u, motif in ECHECS_RESEAU:
+        w(f"| `{u[:78]}` | {motif[:110]} |")
+else:
+    w("Aucun — toutes les requêtes de ce passage ont abouti.")
+w()
 w("*Fin du rapport.*")
 
 with open(REPORT, "w", encoding="utf-8") as f:

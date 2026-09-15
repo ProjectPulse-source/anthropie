@@ -53,6 +53,61 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-15 — Relevé post-lancement : l'instrument GEO mesurait faux depuis un mois
+
+Créneau du 15/09 (fiche `T1_SONDES_EN_2026-09-15.md`, ouvert par le déploiement France du 22/07).
+Relevé exécuté : `reports/geo_audit/RELEVE_POST-LANCEMENT_2026-09-15.md`.
+
+**Résultat principal — `audit_geo_v2.py` rendait des verdicts inversés sur l'étage Éligibilité**,
+le seul étage qui autorise une correction directe du site : un faux ❌ y pousse à « réparer » ce
+qui fonctionne. Cause unique, cinq surfaces : Hugo minifie et écrit les attributs **sans
+guillemets** (`href=/awp/awp-01/citation.bib`) alors que les motifs exigeaient `href="…"` — 75 href
+réels lus comme 1. Deux coquilles rendaient en plus leur contrôle incapable de dire autre chose
+qu'« absent » : `sid=` pour `id=`, et `b<nom>` pour `\b<nom>`. Mesuré contre la source : BibTeX /
+RIS / PDF Zenodo **présents et servis en 200** (déclarés ❌ contrat), **6** ancres `id` sur h2/h3
+FR et EN (déclarées 0), RSS **annoncé** (déclaré absent), **21** directives `User-agent:` dont tous
+les bots IA de citation (0 sur 8 déclarés). Le rapport du 11/08 portait les mêmes erreurs.
+
+**Quatrième défaut, ailleurs** : les quatre `⚠️ API` de Wikidata ne venaient pas de Wikidata mais
+du poste — `CERTIFICATE_VERIFY_FAILED, certificate has expired`, en 0,1 s, avalé par le `except`.
+Seul `*.wikidata.org` échoue ; OpenAlex, Zenodo, Crossref, GitHub, OpenLibrary passent. **Le remède
+vivait déjà dans le dépôt** : `check-wikidata-registre.py` le porte depuis le 02/09 — jamais
+propagé à l'autre organe de la même famille, qui n'en comptait que deux. Après propagation :
+19 / 8 / 15 / 14 claims.
+
+**Corrigé** (`scripts/audit_geo_v2.py`, `scripts/audit_geo_v2.sh`) : un seul helper `attr_values()`
+pour tout le fichier — la règle vit à un endroit, pas en cinq copies ; contexte TLS `certifi` ;
+section **B.3** qui rend désormais le **motif** de chaque échec réseau (un `⚠️ API` muet a coûté un
+diagnostic complet) ; ancres comptées sur `<h2>/<h3>` et non sur tous les `id` de la page (bon
+dénominateur, mauvais grain) ; rapports écrits dans `reports/geo_audit/audit_geo_v2/` au lieu de
+s'empiler à côté de leur générateur.
+
+**Témoins** : contre-témoins tenus — `Markdown raw` reste 💡 (réellement absent), `Bingbot` reste 💡
+(nommé seulement dans un **commentaire** du robots.txt : le contrôle corrigé cherche une directive,
+pas une occurrence du mot). Aucune régression : sur les 104 ✅ du témoin, zéro perdu ; ✅ 104 → 115,
+❌ 6 → 3, 💡 35 → 27, ⚠️ 5 → 1 — les ❌ et ⚠️ restants sont les **lignes de légende**. Le témoin de
+l'état fautif est conservé (`audit_geo_v2/2026-09-15_TEMOIN_avant-correctif.md`).
+
+**Non fait, et pourquoi** : les sondes S1–S6 et Search Console exigent la double lecture connecté /
+navigation privée — geste d'auteur. L'étage Visibilité observée reste donc à **0 %** de couverture
+pour ce passage ; *non mesuré* n'est pas *absent*. Les quatre échéances « T1 15/09 » du registre
+des collisions sont marquées **échues et non relevées**, pas repoussées.
+
+**Points ouverts** : écart Crossref `10.3917/rfse.036.0247d` (recension Lemoine, absente du
+registre — arbitrage éditorial) ; `reports/` entièrement gitignoré (`.gitignore:45`), donc le
+protocole d'engagement et les **baselines T0 non régénérables** vivent hors versionnement, filet =
+sauvegarde `G:\_BACKUP_SITE_ANTHROPIE_2026-09-03\` — modifier le périmètre versionné d'un dépôt à
+remote public est un arbitrage non rendu ; `anthropic-ai` (legacy) absent des directives robots.
+
+**Collision anthropie.org** : push du **14/09** (le registre portait 23/07), 6 issues, 39 Mo, site
+200 — production vivante, réception toujours nulle (0 star / fork / watcher depuis le 02/08). Pas
+de fusion machine sur le canal testé : les deux objets sortent distincts. Déclencheur P3 (page
+comparative) **reste fermé**.
+
+**Nommage** : le 15/09 s'appelait « T1 » dans trois fichiers, à côté du **T1 d'octobre** du
+protocole — deux objets sous un nom, dans l'index qu'on lit en premier. Le relevé porte désormais
+un nom de rôle ; `GEO_PROTOCOLE_MESURE.md` § 5 et la fiche de sondes portent la distinction.
+
 ### 2026-09-14 — OpenAlex : 37 travaux soumis, et le profil revendiqué n'était pas celui que je croyais
 
 **Geste exécuté dans le navigateur de l'auteur, à sa demande explicite.** Résultat : **46

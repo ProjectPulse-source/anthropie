@@ -9,7 +9,12 @@
 
 set -u
 BASE="https://stephane-lalut.com"
-REPORT="audit_geo_v2_$(date +%Y%m%d_%H%M).md"
+# Un objet, un domicile : les rapports vivent avec les autres rapports GEO, pas
+# dans scripts/ ou ils s'empilaient a cote de leur propre generateur (six exemplaires
+# au 15/09, dont un « latest » du 21 avril qui n'etait plus le dernier depuis trois mois).
+REPORT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)/reports/geo_audit/audit_geo_v2"
+mkdir -p "$REPORT_DIR"
+REPORT="$REPORT_DIR/$(date +%Y-%m-%d_%H%M).md"
 TMPDIR=$(mktemp -d)
 trap 'rm -rf "$TMPDIR"' EXIT
 
