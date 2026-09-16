@@ -53,6 +53,23 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-16 — Couverture de *Dette publique* : nouvelle charte ; DOI propre de la recension RFSE
+
+**Couverture.** `assets/images/livres/dette-publique-qui-paie-vraiment.jpg` remplacée par le recto
+KDP du 16/09 (décision auteur) : bleu nuit d'ANTHROPIE `#011331` (mesuré sur sa couverture Kindle)
+et accent orange brûlé `#C85A2A` au lieu du marine et du jaune. Même cadrage que l'ancienne image
+(recto réduit à 1000×1500, vérifié : échelle 0,488, décalage nul), mêmes tables JPEG, progressif ;
+chroma 4:4:4 pour les traits orange fins (92 → 148 Ko). Une seule source sert la fiche, les
+vignettes, le mur auteur et l'image de partage : build local sans erreur, variantes `_hu_`
+renouvelées. Masters et traçabilité : `03_LIVRES\dette-publique\_INDEX.md`.
+
+**DOI.** `check-all --reseau` échouait sur un fait externe nouveau : Cairn a attribué à la recension
+Lemoine seule le DOI `10.3917/rfse.036.0247d` (lu à la source Crossref ; résout vers la page 247d).
+Écrit en retour : `doi_review` au registre (v1.19, même logique que `wikidata_review`), `doi` de la
+fiche, et lecture de `doi_review` par `sondage-noeuds-externes.py` — **témoin par mutation** : sans
+la ligne, l'écart revient ; restauration vérifiée par empreinte. ⏸ Reste externe : l'item de la
+recension seule `Q141072266` n'a toujours pas de DOI sur Wikidata (geste de navette, non fait ici).
+
 ### 2026-09-15 — Relevé post-lancement : l'instrument GEO mesurait faux depuis un mois
 
 Créneau du 15/09 (fiche `T1_SONDES_EN_2026-09-15.md`, ouvert par le déploiement France du 22/07).

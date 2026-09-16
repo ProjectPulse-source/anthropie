@@ -67,7 +67,8 @@ def main() -> int:
 
     # 1. Crossref, par auteur (prenom + nom : les homonymes « Lalut » sont ecartes, et dits)
     print("1. Crossref (auteur Stéphane Lalut) -> DOI d'articles au registre")
-    reg_dois = {w["doi"].lower() for w in works if w.get("doi")}
+    # doi_review : DOI propre d'une recension parue dans un bloc a DOI commun (meme logique que wikidata_review)
+    reg_dois = {w[k].lower() for w in works for k in ("doi", "doi_review") if w.get(k)}
     try:
         r = get("https://api.crossref.org/works?" + urllib.parse.urlencode({
             "query.author": "Stéphane Lalut", "rows": 50, "select": "DOI,title,container-title,author"}))

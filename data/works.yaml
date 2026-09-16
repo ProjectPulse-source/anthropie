@@ -21,12 +21,19 @@
 # =============================================================================
 
 meta:
-  registry_version: "1.18"
-  last_updated: "2026-09-11"
+  registry_version: "1.19"
+  last_updated: "2026-09-16"
   maintainer: "Stéphane Lalut"
   total_works: 42
   source_registry: "registre_soumissions_v73.xlsx"
   changelog:
+    v1_19: |
+      DOI propre de la recension RFSE (2026-09-16) : Cairn a attribué à la recension
+      Lemoine seule le DOI 10.3917/rfse.036.0247d (Crossref, auteur Stéphane Lalut,
+      pp. 247d-265d), distinct du DOI commun du bloc. Nouveau champ doi_review sur
+      art-rfse-lemoine-2026, même logique que wikidata_review ; la fiche porte ce DOI.
+      Trouvé par sondage-noeuds-externes.py, qui lit désormais doi_review. Aucun ajout
+      d'œuvre.
     v1_18: |
       Ajout compte rendu Lalut (2026-09-09) — Sociologie du travail vol. 68
       n° 2, Allison J. Pugh, The Last Human Job (Princeton UP, 2024).
@@ -912,6 +919,7 @@ works:
     source_type: "Académique"
     url: "https://shs.cairn.info/revue-francaise-de-socio-economie-2026-1-page-247"
     doi: "10.3917/rfse.036.0247"
+    doi_review: "10.3917/rfse.036.0247d"  # DOI propre de la recension seule, attribué ensuite par Cairn ; lu à la source Crossref le 2026-09-16 (auteur Stéphane Lalut, pp. 247d-265d, publié 2026-08-04) — trouvé par sondage-noeuds-externes.py
     wikidata: "Q140892752"  # item du bloc « Comptes rendus d'ouvrages » (7 recenseurs), créé par Laura le 2026-08-05, readback API conforme
     wikidata_review: "Q141072266"  # item de la recension SEULE (P31 compte rendu, P1433 RFSE, sans DOI), créé par Laura le 2026-08-15 ; distinct du bloc ci-dessus, qui porte le DOI — écriture en retour 2026-09-02
     chapo:
