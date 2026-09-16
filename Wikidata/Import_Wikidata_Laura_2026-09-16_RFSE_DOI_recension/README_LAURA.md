@@ -1,7 +1,14 @@
 # Wikidata — recension RFSE (Lemoine, *Chasseurs d'États*) : DOI propre et lien mort
 
-> ⏳ **PRÊT À ENVOYER le 16/09. Envoi à Laura : geste auteur.** Aucune écriture faite : ce bloc devient
-> ✅ + readback API après exécution, jamais « fait » sans relecture.
+> ✅ **FAIT le 2026-09-16 à 09:41 UTC** — Q141072266 révision 2546600949, Q140892752 révision 2546600956.
+> Readback API du 16/09 (`readback_api_2026-09-16.json`, dans ce dossier) : **8/8 conformes** — P356
+> `10.3917/RFSE.036.0247D` avec sa référence (page 247d + date), P304 `247d-265d`, P433 `36`, P361
+> Q140892752, P953 = page 247d seule ; sur le bloc, P953 mort retiré et DOI commun conservé.
+> `haswbstatement:P356=10.3917/RFSE.036.0247D` → Q141072266. Mêmes contrôles en écart avant exécution
+> (lecture API du matin : pas de DOI, P953 vers la page morte). Écriture en retour : rien à changer au
+> registre (`doi_review`, `wikidata_review` déjà posés) ; contrôles de parité relancés à 0 avant commit.
+>
+> Historique : préparé le 16/09 ; envoi à Laura par l'auteur.
 
 ## Pourquoi
 
