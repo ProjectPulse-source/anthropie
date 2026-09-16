@@ -70,6 +70,17 @@ fiche, et lecture de `doi_review` par `sondage-noeuds-externes.py` — **témoin
 la ligne, l'écart revient ; restauration vérifiée par empreinte. ⏸ Reste externe : l'item de la
 recension seule `Q141072266` n'a toujours pas de DOI sur Wikidata (geste de navette, non fait ici).
 
+**Vérifié chez l'éditeur (même jour, sur demande de l'auteur).** Crossref : `…0247` = bloc « Comptes
+rendus d'ouvrages » (7 recenseurs) ; `…0247a` à `…0247g` = les 7 recensions, `…0247d` = Lemoine par
+Stéphane Lalut ; `…0247h` n'existe pas. Cairn (navigateur) : la page `-page-247d` porte
+`citation_doi` `…0247d` et « Par Stéphane Lalut » ; le sommaire du numéro ne liste plus que 247a-247g ;
+**la page du bloc `-page-247` est « Page non trouvée »** — c'est elle que visaient `url_externe` et
+`works.yaml`, donc la carte `/publications/` menait à une page morte. Repointés vers `-page-247d` ;
+témoin par mutation de `check-fiches-registre.py` (lien divergent → écart ; restauré par empreinte).
+⚠ Le résolveur DOI de Cairn (`v4.reseaucairn.info`) répondait 503 pour les deux DOI ce jour-là, y
+compris en navigateur : panne côté éditeur, pas un verdict sur les DOI. ⏸ Externe : Wikidata
+`Q140892752` porte encore `P953` et des références `S854` vers `-page-247` (navette).
+
 ### 2026-09-15 — Relevé post-lancement : l'instrument GEO mesurait faux depuis un mois
 
 Créneau du 15/09 (fiche `T1_SONDES_EN_2026-09-15.md`, ouvert par le déploiement France du 22/07).

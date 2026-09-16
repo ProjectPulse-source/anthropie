@@ -3,7 +3,7 @@ title: "Chasseurs d'États — Benjamin Lemoine"
 date: 2026-08-04
 revue: "Revue Française de Socio-Économie"
 source_type: "Académique"
-url_externe: "https://shs.cairn.info/revue-francaise-de-socio-economie-2026-1-page-247"
+url_externe: "https://shs.cairn.info/revue-francaise-de-socio-economie-2026-1-page-247d"  # page de la recension ; la page du bloc (-247) est « Page non trouvée » chez Cairn (lu le 2026-09-16)
 doi: "10.3917/rfse.036.0247d"  # DOI propre de la recension (registre : doi_review) ; le DOI commun du bloc reste au registre
 wikidata_qid: "Q141072266"  # item de la recension seule (le bloc à DOI est Q140892752, au registre) — alimente sameAs de l'ItemList
 image_type: "logo"

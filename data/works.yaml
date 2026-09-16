@@ -33,7 +33,10 @@ meta:
       pp. 247d-265d), distinct du DOI commun du bloc. Nouveau champ doi_review sur
       art-rfse-lemoine-2026, même logique que wikidata_review ; la fiche porte ce DOI.
       Trouvé par sondage-noeuds-externes.py, qui lit désormais doi_review. Aucun ajout
-      d'œuvre.
+      d'œuvre. Même jour, vérifié chez l'éditeur : Cairn ne présente plus de page de bloc
+      (-page-247 = « Page non trouvée ») mais 7 comptes rendus 247a-247g ; la page 247d porte
+      citation_doi 10.3917/rfse.036.0247d et « Par Stéphane Lalut ». url et url_externe
+      repointés vers -page-247d (le lien du site menait à une page morte).
     v1_18: |
       Ajout compte rendu Lalut (2026-09-09) — Sociologie du travail vol. 68
       n° 2, Allison J. Pugh, The Last Human Job (Princeton UP, 2024).
@@ -917,7 +920,7 @@ works:
     publisher: "Revue Française de Socio-Économie"
     publisher_type: "revue_acad"
     source_type: "Académique"
-    url: "https://shs.cairn.info/revue-francaise-de-socio-economie-2026-1-page-247"
+    url: "https://shs.cairn.info/revue-francaise-de-socio-economie-2026-1-page-247d"  # page de la recension seule ; le sommaire Cairn liste 7 comptes rendus 247a-247g et la page du bloc (-247) est « Page non trouvée » (lu le 2026-09-16)
     doi: "10.3917/rfse.036.0247"
     doi_review: "10.3917/rfse.036.0247d"  # DOI propre de la recension seule, attribué ensuite par Cairn ; lu à la source Crossref le 2026-09-16 (auteur Stéphane Lalut, pp. 247d-265d, publié 2026-08-04) — trouvé par sondage-noeuds-externes.py
     wikidata: "Q140892752"  # item du bloc « Comptes rendus d'ouvrages » (7 recenseurs), créé par Laura le 2026-08-05, readback API conforme
