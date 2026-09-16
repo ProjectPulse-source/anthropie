@@ -78,8 +78,14 @@ Stéphane Lalut ; `…0247h` n'existe pas. Cairn (navigateur) : la page `-page-2
 `works.yaml`, donc la carte `/publications/` menait à une page morte. Repointés vers `-page-247d` ;
 témoin par mutation de `check-fiches-registre.py` (lien divergent → écart ; restauré par empreinte).
 ⚠ Le résolveur DOI de Cairn (`v4.reseaucairn.info`) répondait 503 pour les deux DOI ce jour-là, y
-compris en navigateur : panne côté éditeur, pas un verdict sur les DOI. ⏸ Externe : Wikidata
-`Q140892752` porte encore `P953` et des références `S854` vers `-page-247` (navette).
+compris en navigateur : panne côté éditeur, pas un verdict sur les DOI.
+
+**ORCID corrigé (sur demande de l'auteur, session ouverte dans son navigateur).** L'œuvre put-code
+`224566476` décrivait le bloc (« Comptes rendus d'ouvrages », DOI `…0247`, 7 contributeurs) : titre,
+sous-titre, lien et DOI passés à la recension seule (`…0247d`, relation *self*), 6 contributeurs du
+bloc retirés, ISSN conservé. Readback API publique : conforme ; `…0247` absent du profil, 37 œuvres
+(pas de doublon). **Wikidata** : lot prêt pour Laura, `Wikidata/Import_Wikidata_Laura_2026-09-16_RFSE_DOI_recension/`
+(DOI + pages + numéro + P361 sur `Q141072266`, P953 mort retiré des deux items) — non exécuté.
 
 ### 2026-09-15 — Relevé post-lancement : l'instrument GEO mesurait faux depuis un mois
 

@@ -1,0 +1,15 @@
+// ============================================================================
+// Navette Laura 2026-09-16 — recension RFSE (Lemoine, Chasseurs d'États) : MODIFICATION de 2 items existants
+// Q141072266 = la recension seule (Stéphane Lalut) · Q140892752 = le bloc « Comptes rendus d'ouvrages »
+// Vérifié chez l'éditeur le 16/09 : Cairn a remplacé la page du bloc (-page-247, « Page non trouvée »)
+// par 7 comptes rendus 247a-247g ; la page 247d porte citation_doi 10.3917/rfse.036.0247d, « Par Stéphane Lalut ».
+// ============================================================================
+// 1. Recension seule : DOI propre (absent de Wikidata au 16/09), pages, numéro, lien vivant, rattachement au bloc
+Q141072266	P356	"10.3917/RFSE.036.0247D"	S854	"https://shs.cairn.info/revue-francaise-de-socio-economie-2026-1-page-247d"	S813	+2026-09-16T00:00:00Z/11
+Q141072266	P304	"247d-265d"	S854	"https://shs.cairn.info/revue-francaise-de-socio-economie-2026-1-page-247d"	S813	+2026-09-16T00:00:00Z/11
+Q141072266	P433	"36"
+Q141072266	P361	Q140892752
+-Q141072266	P953	"https://shs.cairn.info/revue-francaise-de-socio-economie-2026-1-page-247"
+Q141072266	P953	"https://shs.cairn.info/revue-francaise-de-socio-economie-2026-1-page-247d"
+// 2. Bloc : retrait du lien mort (le DOI commun 10.3917/RFSE.036.0247 reste valide chez Crossref ; ses références datées du 05/08 restent)
+-Q140892752	P953	"https://shs.cairn.info/revue-francaise-de-socio-economie-2026-1-page-247"
