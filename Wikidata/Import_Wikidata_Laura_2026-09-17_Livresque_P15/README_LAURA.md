@@ -1,11 +1,14 @@
 # Wikidata, *Livresque des mots* (Q140517745) : sous-titre et nombre de pages
 
-> ⏸ **À EXÉCUTER EN DEUX FOIS.**
-> **Lot 1** (sous-titre) : tout de suite.
-> **Lot 2** (pages) : seulement quand la page https://www.amazon.fr/dp/2958634701 affiche **694 pages**
-> (elle en affichait encore 672 le 17/09 ; la nouvelle édition brochée venait d'être acceptée par KDP).
+> ✅ **FAIT le 2026-09-17 (les deux lots)** — Q140517745 révision 2546908838 (05:52 UTC).
+> Readback API du 17/09 (`readback_api_2026-09-17.json`, dans ce dossier) : **conforme** — un seul P1680,
+> `fr`, « Anthologie inédite & éclectique de citations », référence amazon.fr + date du 17/09 ; un seul
+> P1104, `+694`, référence amazon.fr. Écriture en retour : aucune (registre v1.20 et fiche déjà à 694 et
+> au nouveau sous-titre, commit `50a324d`) ; `check-wikidata-registre.py` et `check-fiches-registre.py` à 0.
+> ⚠ Le lot 2 est parti avant qu'amazon.fr affiche 694 pages (672 le 17/09 à midi) : la valeur est juste
+> (édition acceptée par KDP), la référence le deviendra au déploiement Amazon.
 >
-> Historique : préparé le 17/09 ; envoi à Laura par l'auteur.
+> Historique : préparé le 17/09 ; exécuté par Laura le même jour.
 
 Laura, deux corrections sur l'item du livre, sans création d'item.
 
