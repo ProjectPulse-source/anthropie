@@ -53,6 +53,31 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-17 — *Livresque des mots* : broché P15 (694 p., index des auteurs), nouvelle couverture, sous-titre
+
+**Livre.** Le broché P15 a été accepté par KDP le 17/09 : sommaire, « Promenades dans le livre » et
+**index des auteurs** (672 → 694 pages). Registre `data/works.yaml` v1.20 : `pages` 694, `subtitle_fr`
+aligné sur la page de titre de l'intérieur et la couverture (« Anthologie inédite & éclectique de
+citations » ; « inédite » avait été écarté tant que seule la fiche KDP le portait). `corpus_stats`
+inchangés.
+
+**Surfaces.** Fiche (sous-titre, pagination, FAQ « a-t-il un index ? », corps, pied), page méthode et
+corpus (694 pages, index, FAQ sans pagination figée), page « offrir un livre de culture générale »
+(l'objet littéraire ne se dit plus « jamais consulté »), ligne du mur `/a-propos/` FR et EN,
+`static/llms.txt`. Formule retenue par l'auteur : « un fil pour flâner, un index pour retrouver ».
+
+**Couverture.** Nouvel outil `scripts/og_couverture_livre.py` : fiche 1000×1500 tirée du master HD et
+couverture reposée dans les images de partage à la pose mesurée de l'ancienne (SIFT + RANSAC :
+échelle 0,200, ±4°, résidu 0,2 px ; couvertures voisines mesurées pour le masquage). **Témoin avant
+écriture** : recomposition avec l'ancienne couverture, écart lissé 1,0 à 1,4 niveau sur les trois
+images (`og-home`, `og-ressources-offertes`, `-dark`) ; **mutation** : un décalage de 1 px le porte à 5,4
+(seuil 3). Deux défauts du témoin corrigés en route : écart brut dominé par le grain (réduction
+Lanczos + rotation bicubique retenues, 4,1 contre 6,4 à 15) et flou qui mêlait la couverture voisine
+au bord (lissage normalisé sur la zone visible).
+
+**Wikidata.** Dossier `Wikidata/Import_Wikidata_Laura_2026-09-17_Livresque_P15/` : pages 672 → 694 et
+sous-titre sur `Q140517745`, à exécuter par Laura quand amazon.fr affiche 694 pages.
+
 ### 2026-09-16 — Couverture de *Dette publique* : nouvelle charte ; DOI propre de la recension RFSE
 
 **Couverture.** `assets/images/livres/dette-publique-qui-paie-vraiment.jpg` remplacée par le recto

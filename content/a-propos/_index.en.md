@@ -32,7 +32,7 @@ wall_lignes:
     line: "The history of ideas is not a chronological parade: it is a network. 250 ports of call and seven itineraries, from the dawn of humanity to artificial intelligence."
   livresque-des-mots:
     meta: "3rd edition"
-    line: "An anthology with no classification, neither alphabetical nor thematic: disorder is the principle. Twenty-five centuries of voices, to be read like a novel rather than consulted."
+    line: "An anthology with no classification, neither alphabetical nor thematic: disorder is the principle. Twenty-five centuries of voices to be read like a novel, with an index of authors to find them again."
 # Les fiches publications n'ont pas de version anglaise (choix éditorial) : le
 # mur lit toujours le corpus FR. Seul l'objet est traduit ; le titre révélé au
 # survol reste dans la langue de l'article.

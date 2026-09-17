@@ -1,12 +1,12 @@
 ---
 title: "Livresque des mots"
 promo_slug: "livresque"  # clé D1/books.toml pour /ressources-offertes (guichet Kindle)
-subtitle: "Anthologie éclectique de citations"
-pages: 672  # sync data/works.yaml (book-livresque-des-mots.pages) — broché, master P11
+subtitle: "Anthologie inédite & éclectique de citations"  # page de titre de l'intérieur et couverture
+pages: 694  # sync data/works.yaml (book-livresque-des-mots.pages) — broché, master P15 (sommaire, Promenades, index des auteurs)
 wikidata_qid: "Q140517745"  # item canonique (doublon Q138911600 fusionné) — alimente sameAs du Book
 description: "Une anthologie qui refuse l'ordre alphabétique et thématique pour privilégier la surprise des rencontres. {citations} citations, {auteurs} voix, 25 siècles de génie humain, tissés en un fil d'Ariane subtil. Quarante ans de passion littéraire pour offrir non un classement, mais un voyage."
 date: 2022-12-20
-lastmod: 2026-07-09  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-09-17  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 isbn: "978-2-9586347-0-4"
 amazon_rating: 4.1       # note moyenne Amazon.fr — relevé 2026-09-13 (MAJ ~mensuelle, relecture Chrome)
 amazon_reviews: 88       # nb d'avis Amazon.fr ; omettre les 2 champs = pas d'étoiles sur /ressources-offertes
@@ -39,6 +39,8 @@ faq:
     answer: "Un recueil sans ordre thématique, alphabétique ni chronologique : {citations} citations et {auteurs} voix tissées pour que le sens naisse du voisinage — une réplique de cinéma à côté d'un moraliste, une chanson à côté d'un philosophe. Le recueil se lit comme un roman : on avance de page en page, et la rencontre qu'aucune recherche par mot-clé n'aurait produite fait le sel de la lecture."
   - question: "Combien de citations contient Livresque des mots ?"
     answer: "{citations} citations, {auteurs} voix, {siecles} siècles — aphorismes, extraits de romans, anecdotes littéraires, poésies, répliques choisies. Derrière la sélection, quarante ans de lectures et une curation d'auteur : une voix qui choisit."
+  - question: "Livresque des mots a-t-il un index ?"
+    answer: "Oui. L'édition brochée se clôt sur un index des auteurs qui renvoie à la page de chaque citation ; l'anthologie, elle, reste sans classement. Un fil pour flâner, un index pour retrouver. En version Kindle, la recherche plein texte ramène une citation, un auteur ou un mot."
   - question: "À qui offrir Livresque des mots ?"
     answer: "À l'amoureux de la langue et des formules, à l'écrivain en quête de compagnie, au lecteur qui aime ouvrir un livre au hasard. Une anthologie sans ordre imposé se prête naturellement au cadeau ; en version Kindle, le cadeau passe par un lien prépayé (mode d'emploi sur la page Offrir un livre Kindle)."
 ---
@@ -57,7 +59,7 @@ Pour l'amoureux de la langue et des formules, le lecteur qui aime ouvrir un livr
 
 ## Sans classement, à lire comme un roman
 
-«&nbsp;Anthologie de citations sans classement&nbsp;»&nbsp;: la formule décrit exactement le parti pris de *Livresque des mots* — {{< stat "citations" >}} citations, {{< stat "auteurs" >}} voix, sans ordre thématique, alphabétique ni chronologique. Le recueil se lit comme un roman&nbsp;: on avance de page en page, et le sens naît du voisinage. Qu'y trouve-t-on qu'on ne trouve ni dans les recueils classés ni sur les sites de citations&nbsp;? La rencontre qu'aucune recherche par mot-clé n'aurait produite — une réplique de cinéma à côté d'un moraliste, une chanson à côté d'un philosophe — et une curation d'auteur&nbsp;: quarante ans de lectures, une voix qui choisit. Les chiffres exacts du corpus, leur histoire d'une édition à l'autre et la méthode de sélection sont détaillés sur la page [Méthode et corpus](/livresque/methode-et-corpus/).
+«&nbsp;Anthologie de citations sans classement&nbsp;»&nbsp;: la formule décrit exactement le parti pris de *Livresque des mots* — {{< stat "citations" >}} citations, {{< stat "auteurs" >}} voix, sans ordre thématique, alphabétique ni chronologique. Le recueil se lit comme un roman&nbsp;: on avance de page en page, et le sens naît du voisinage. Qu'y trouve-t-on qu'on ne trouve ni dans les recueils classés ni sur les sites de citations&nbsp;? La rencontre qu'aucune recherche par mot-clé n'aurait produite — une réplique de cinéma à côté d'un moraliste, une chanson à côté d'un philosophe — et une curation d'auteur&nbsp;: quarante ans de lectures, une voix qui choisit. Pour retrouver une voix, l'édition brochée se clôt sur un index des auteurs qui renvoie à la page de chaque citation&nbsp;: un fil pour flâner, un index pour retrouver. Les chiffres exacts du corpus, leur histoire d'une édition à l'autre et la méthode de sélection sont détaillés sur la page [Méthode et corpus](/livresque/methode-et-corpus/).
 
 ## Offrir ce livre
 
@@ -91,4 +93,4 @@ Un objet littéraire qui se prête au cadeau&nbsp;: à qui et pourquoi, sur la p
 
 ---
 
-Troisième édition, 2026. Version papier pour la flânerie, version Kindle pour la recherche fine.
+Troisième édition, 2026, avec sommaire et index des auteurs. Version papier pour la flânerie, version Kindle pour la recherche plein texte.

@@ -21,12 +21,18 @@
 # =============================================================================
 
 meta:
-  registry_version: "1.19"
-  last_updated: "2026-09-16"
+  registry_version: "1.20"
+  last_updated: "2026-09-17"
   maintainer: "Stéphane Lalut"
   total_works: 42
   source_registry: "registre_soumissions_v73.xlsx"
   changelog:
+    v1_20: |
+      Livresque des mots (2026-09-17) : broché P15 accepté par KDP, 694 pages (672 → 694 :
+      sommaire, « Promenades dans le livre », index des auteurs). Sous-titre aligné sur la page
+      de titre et la nouvelle couverture : « Anthologie inédite & éclectique de citations ».
+      Nouvelle couverture (spirale) sur la fiche et les trois images de partage. Aucun ajout
+      d'œuvre ; corpus_stats inchangés.
     v1_19: |
       DOI propre de la recension RFSE (2026-09-16) : Cairn a attribué à la recension
       Lemoine seule le DOI 10.3917/rfse.036.0247d (Crossref, auteur Stéphane Lalut,
@@ -572,7 +578,7 @@ works:
     canonical_title:
       fr: "Livresque des mots"
       en: ""  # n/a
-    subtitle_fr: "Anthologie éclectique de citations"  # NB : « inédite » du sous-titre couverture = subjectif (KDP), évité ici
+    subtitle_fr: "Anthologie inédite & éclectique de citations"  # page de titre de l'intérieur (depuis le patch #09) et couverture du 2026-09-17 ; « inédite » avait été évité tant que seule la fiche KDP le portait
     publication_date: "2022-12-20"  # source content/livres/livresque-des-mots.md
     # HISTORIQUE ÉDITORIAL (auteur, 2026-09-13) — première édition chez Bookelis, distribuée
     # par Hachette : l'auteur n'avait pas la main sur la fiche. Partenariat arrêté, titre
@@ -580,7 +586,7 @@ works:
     # 2026-09-13). Les 88 avis courent depuis l'édition d'origine.
     isbn: "978-2-9586347-0-4"
     isbn_13_normalized: "9782958634704"
-    pages: 672  # broché, master P11 (2026-06-08) — était 0/todo
+    pages: 694  # broché, master P15 (2026-09-17 : sommaire, Promenades, index des auteurs ; accepté par KDP) — était 672 (P11)
     publisher: "Auto-édition"
     distribution: "Amazon KDP"
     asin_kindle: "B0CW994YWH"

@@ -30,7 +30,7 @@ Pour qui&nbsp;: le lecteur curieux de philosophie, de sciences ou d'histoire&nbs
 
 [*Livresque des mots*](/livres/livresque-des-mots/) est un recueil de citations qui refuse le classement — ni thèmes, ni ordre alphabétique, ni chronologie. {{< stat "citations" "nbsp" >}} citations, {{< stat "auteurs" "nbsp" >}} voix, {{< stat "siecles" >}} siècles, tissés pour que le sens naisse du voisinage&nbsp;: une réplique de cinéma à côté d'un moraliste, une chanson à côté d'un philosophe.
 
-Ce qui en fait un cadeau&nbsp;: c'est un **objet littéraire**, pas un outil de recherche. On ne le consulte pas, on s'y promène — et c'est exactement ce qu'on souhaite à la personne à qui on l'offre. Pour l'amoureux de la langue, l'écrivain en quête de compagnie, le lecteur qui aime être surpris — [voir la fiche complète](/livres/livresque-des-mots/).
+Ce qui en fait un cadeau&nbsp;: c'est un **objet littéraire** avant d'être un outil de recherche. On s'y promène, et c'est exactement ce qu'on souhaite à la personne à qui on l'offre&nbsp;; l'index des auteurs, en fin de volume, permet ensuite d'y retrouver une voix. Pour l'amoureux de la langue, l'écrivain en quête de compagnie, le lecteur qui aime être surpris — [voir la fiche complète](/livres/livresque-des-mots/).
 
 ## Broché ou Kindle&nbsp;?
 

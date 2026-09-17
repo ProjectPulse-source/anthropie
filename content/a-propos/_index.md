@@ -39,7 +39,7 @@ wall_lignes:
     line: "L'histoire des idées n'est pas un défilé chronologique : c'est un réseau. 250 escales et sept chemins de lecture, de l'aube de l'humanité à l'intelligence artificielle."
   livresque-des-mots:
     meta: "3ᵉ édition"
-    line: "Une anthologie sans classement, ni alphabétique ni thématique : le désordre est le principe. Vingt-cinq siècles de voix, à lire comme un roman plutôt qu'à consulter."
+    line: "Une anthologie sans classement, ni alphabétique ni thématique : le désordre est le principe. Vingt-cinq siècles de voix à lire comme un roman, et un index des auteurs pour les retrouver."
 # ---------------------------------------------------------------------------
 # MUR PRESSE — un ou deux mots nommant CE DONT parle le texte. Ce n'est pas le
 # thème : le thème est invariant sur les dix-sept textes (le déplacement du

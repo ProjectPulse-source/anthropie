@@ -52,7 +52,7 @@ Corpus anthropique :
 Hors corpus anthropique :
 
 - [L'Odyssée des idées](https://stephane-lalut.com/livres/lodyssee-des-idees/) (nouvelle édition 2026, 696 p.) — ISBN 978-2-9586347-4-2 ; Wikidata Q138911733. Histoire des idées et culture générale : 250 escales et sept chemins de lecture, de l'aube de l'humanité à l'intelligence artificielle.
-- [Livresque des mots](https://stephane-lalut.com/livres/livresque-des-mots/) (3e édition 2026) — ISBN 978-2-9586347-0-4. Anthologie éclectique de citations : 25 siècles de voix, sans classement.
+- [Livresque des mots](https://stephane-lalut.com/livres/livresque-des-mots/) (3e édition 2026, 694 p.) — ISBN 978-2-9586347-0-4 ; Wikidata Q140517745. Anthologie inédite & éclectique de citations : 25 siècles de voix, sans classement, avec un index des auteurs.
 
 Cinq livres au total, publiés en français ; ANTHROPIE existe aussi en édition anglaise (2026). Index : https://stephane-lalut.com/livres/
 

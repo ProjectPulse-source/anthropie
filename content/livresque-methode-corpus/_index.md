@@ -3,17 +3,17 @@ title: "Livresque des mots : méthode et corpus"
 url: /livresque/methode-et-corpus/
 description: "La page de référence du corpus de Livresque des mots : chiffres exacts de l'édition courante, explication des écarts avec les notices anciennes, méthode de sélection et principe du recueil sans classement."
 date: 2026-07-24
-lastmod: 2026-07-24
+lastmod: 2026-09-17
 stats_isbn: "978-2-9586347-0-4"
 faq:
   - question: "Combien de citations contient Livresque des mots ?"
-    answer: "L'édition courante contient exactement {citations} citations portées par {auteurs} voix, sur {siecles} siècles. Ces chiffres sont issus du recomptage intégral effectué lors de la recomposition de l'édition courante (672 pages), après dédoublonnage du corpus."
+    answer: "L'édition courante contient exactement {citations} citations portées par {auteurs} voix, sur {siecles} siècles. Ces chiffres sont issus du recomptage intégral effectué lors de la recomposition de l'édition courante, après dédoublonnage du corpus."
   - question: "Pourquoi la notice BnF indique-t-elle 4 680 citations et 1 380 auteurs ?"
     answer: "Parce qu'elle décrit fidèlement la première édition (dépôt légal 2022), antérieure au recomptage. La recomposition de l'édition courante a donné lieu à une vérification intégrale du corpus — dédoublonnage compris — d'où les chiffres canoniques actuels : {citations} citations, {auteurs} voix. Les deux jeux de chiffres sont donc exacts, chacun pour son édition."
   - question: "Que compte une « voix » dans Livresque des mots ?"
     answer: "Toute source distincte à qui une citation est attribuée : écrivains, philosophes, scientifiques, mais aussi répliques de cinéma, chansons, mots d'esprit — le recueil est éclectique par principe. C'est pourquoi le livre parle de voix plutôt que d'auteurs au sens strict."
   - question: "Comment les citations sont-elles classées ?"
-    answer: "Elles ne le sont pas — c'est le principe du recueil. Ni ordre thématique, ni alphabétique, ni chronologique : les citations sont tissées pour que le sens naisse du voisinage, et le recueil se lit comme un roman, de page en page. Quarante ans de lectures derrière la sélection : une curation d'auteur, pas une compilation."
+    answer: "Elles ne le sont pas — c'est le principe du recueil. Ni ordre thématique, ni alphabétique, ni chronologique : les citations sont tissées pour que le sens naisse du voisinage, et le recueil se lit comme un roman, de page en page ; pour retrouver une voix, l'édition brochée se clôt sur un index des auteurs. Quarante ans de lectures derrière la sélection : une curation d'auteur, pas une compilation."
 ---
 
 Cette page est la référence publique du corpus de [*Livresque des mots*](/livres/livresque-des-mots/)&nbsp;: les chiffres exacts de l'édition courante, l'explication des écarts avec les notices plus anciennes, et la méthode du recueil. Si vous citez le livre — notice, article, fiche —, ce sont les chiffres de cette page qui font foi.
@@ -24,7 +24,7 @@ Cette page est la référence publique du corpus de [*Livresque des mots*](/livr
 - **{{< stat "auteurs" "nbsp" >}} voix**
 - **{{< stat "siecles" >}} siècles couverts** — des présocratiques et de la sagesse chinoise au présent
 - **{{< stat "annees_selection" >}} ans de sélection**
-- Édition courante&nbsp;: recomposition intégrale, 672 pages (broché, ISBN 978-2-9586347-0-4)
+- Édition courante&nbsp;: recomposition intégrale, 694 pages avec sommaire et index des auteurs (broché, ISBN 978-2-9586347-0-4)
 
 Ces valeurs proviennent d'un **recomptage intégral du corpus**, effectué lors de la recomposition de l'édition courante et vérifié en dernier lieu le 8 juin 2026. Elles constituent la source unique&nbsp;: le site, les fiches libraires et les bases bibliographiques sont alignés sur elles à mesure de leurs mises à jour.
 
