@@ -1,0 +1,9 @@
+// Navette Laura 2026-09-17 - Livresque des mots (Q140517745) - LOT 1 : sous-titre (a executer tout de suite)
+// Sous-titre imprime sur la page de titre de l'interieur et sur la couverture ; titre KDP releve sur amazon.fr le 17/09.
+-Q140517745	P1680	fr:"Anthologie éclectique de citations"
+Q140517745	P1680	fr:"Anthologie inédite & éclectique de citations"	S854	"https://www.amazon.fr/dp/2958634701"	S813	+2026-09-17T00:00:00Z/11
+
+// Navette Laura 2026-09-17 - Livresque des mots (Q140517745) - LOT 2 : nombre de pages 672 -> 694
+// NE PAS EXECUTER avant que la page amazon.fr/dp/2958634701 affiche 694 pages (elle affichait 672 le 17/09).
+-Q140517745	P1104	672
+Q140517745	P1104	694	S854	"https://www.amazon.fr/dp/2958634701"
