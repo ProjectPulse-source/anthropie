@@ -175,6 +175,14 @@
 }
 .ressources-book__rating-score { font-weight: 600; }
 .ressources-book__rating-count { color: var(--color-text-subtle); }
+// Mois du relevé, sous la note : discret, mais lisible — c'est lui qui rend la note vraie.
+.ressources-book__rating-date {
+  margin: 2px 0 0;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: var(--fs-tiny);
+  color: var(--color-text-subtle);
+}
 
 // « Nouveauté » — prend la place exacte de la note quand le livre n'a pas encore assez
 // d'avis pour qu'un compte rassure (seuil dans params.toml, règle dans

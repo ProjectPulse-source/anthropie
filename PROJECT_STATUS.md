@@ -53,6 +53,22 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-19 — Ressources offertes : phrase de transmission, « relais » retiré, note Amazon datée
+
+**Demande de l'auteur.** Zone de transmission de `/ressources-offertes/` et des cinq pages par livre :
+« Vous pensez qu'un proche, un collègue ou un lecteur de votre connaissance pourrait être intéressé ?
+Vous pouvez lui transmettre librement cette page par le moyen de votre choix. »
+
+**Remarques externes arbitrées** (pièce archivée verbatim + SHA-256 `6600ACE9…39BB`, arbitrage
+`.claude/external-audits/ARBITRATIONS/anthropie-site-20260919-ressources-offertes_arbitrage.md`) :
+« relais » retiré aux deux endroits ; premier maillon de la chaîne « Une part des ventes » au lieu de
+« Un livre acheté » (le dispositif n'est pas un un-pour-un) ; compte Amazon.fr annoncé dès l'accroche ;
+note Amazon **datée** — nouveau champ `amazon_rating_date` dans les cinq fiches (la date vivait en
+commentaire YAML), affichée « Note relevée en septembre 2026 » par `partials/preuve-sociale.html`, `warnf`
+si absent (témoin : mutation sur Livresque → avertissement, restauré) ; page `/transparence-contacts/`
+renommée « Transparence et données personnelles », URL et ancres inchangées. Accordéons du bas de page :
+rejetés. `check-all.py --reseau` : tout à 0.
+
 ### 2026-09-17 — *Livresque des mots* : broché P15 (694 p., index des auteurs), nouvelle couverture, sous-titre
 
 **Livre.** Le broché P15 a été accepté par KDP le 17/09 : sommaire, « Promenades dans le livre » et

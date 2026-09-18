@@ -47,7 +47,8 @@ Front matter — modèle : `anthropie-ordre-ici-dette-ailleurs.md` :
 
 ## 2. Registres et surfaces à synchroniser
 
-- [ ] **Notes Amazon (`amazon_rating`/`amazon_reviews`) — rien à inscrire, mais
+- [ ] **Notes Amazon (`amazon_rating`/`amazon_reviews`/`amazon_rating_date`, la date du
+      relevé s'affiche sous la note et se met à jour avec elle) — rien à inscrire, mais
       savoir** : la routine mensuelle (rappel Outlook du 10) dérive sa liste de
       **toutes** les fiches `content/livres/*.md` porteuses d'un ASIN — jamais
       d'une liste figée ; un nouveau livre est donc relevé d'office dès le mois

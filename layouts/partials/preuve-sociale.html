@@ -51,9 +51,22 @@
 
 {{- if $assezDAvis -}}
   {{- $aff := replace (printf "%.1f" $note) "." "," -}}
-<p class="ressources-book__rating" aria-label="Note moyenne {{ $aff }} sur 5 — {{ $avis }} avis sur Amazon.fr">
+  {{- /* Date du relevé (arbitrage 19/09) : une note recopiée d'Amazon vieillit dès le
+         lendemain — elle s'affiche donc avec son mois. Mois et non jour : assez précis
+         pour être vrai, assez large pour ne pas paraître périmé une semaine après.
+         Champ absent → la note s'affiche sans date ET le build avertit. */ -}}
+  {{- $releve := "" -}}
+  {{- with .Params.amazon_rating_date -}}
+    {{- $releve = time.Format "January 2006" (time.AsTime .) -}}
+  {{- else -}}
+    {{- warnf "preuve-sociale : %s affiche une note Amazon sans amazon_rating_date — date du relevé absente sous la note" .File.Path -}}
+  {{- end -}}
+<p class="ressources-book__rating" aria-label="Note moyenne {{ $aff }} sur 5 — {{ $avis }} avis sur Amazon.fr{{ with $releve }}, relevée en {{ . }}{{ end }}">
   <span class="ressources-book__stars" aria-hidden="true">★</span><span class="ressources-book__rating-score">{{ $aff }}/5</span><span class="ressources-book__rating-count"> · {{ $avis }}&nbsp;avis sur&nbsp;Amazon.fr</span>
 </p>
+{{- with $releve }}
+<p class="ressources-book__rating-date" aria-hidden="true">Note relevée en {{ . }}</p>
+{{- end -}}
 {{- else if gt $parution $limite -}}
 <p class="ressources-book__novelty"><span class="ressources-book__novelty-badge">Nouveauté</span></p>
 {{- end -}}

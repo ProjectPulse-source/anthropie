@@ -12,7 +12,8 @@ date: 2026-07-03
 first_published: 2024-02-19
 lastmod: 2026-07-25  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 isbn: "978-2-9586347-4-2"
-amazon_rating: 4.4       # note moyenne Amazon.fr — relevé 2026-09-13 (MAJ ~mensuelle, relecture Chrome)
+amazon_rating: 4.4       # note moyenne Amazon.fr (MAJ ~mensuelle, relecture Chrome)
+amazon_rating_date: 2026-09-13  # date du relevé, affichée sous la note ; la mettre à jour avec elle
 amazon_reviews: 165      # nb d'avis Amazon.fr ; omettre les 2 champs = pas d'étoiles sur /ressources-offertes
 pages: 696  # sync data/works.yaml (book-lodyssee-des-idees.pages) — nombre de pages broché
 description_en: "From the dawn of humanity to artificial intelligence, 250 ports of call — works, lives, inventions, crises, tipping points — and seven itineraries connect thinkers across the centuries. Not a chronological parade but a network. An instrument of curiosity, not a reservoir of certainties."

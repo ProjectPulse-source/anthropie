@@ -1,10 +1,15 @@
 ---
-title: "Contacts professionnels — transparence et données"
-description: "Comment et pourquoi vos coordonnées professionnelles publiques peuvent être utilisées pour une prise de contact individualisée, et comment vous y opposer."
+title: "Transparence et données personnelles"
+description: "Comment vos données sont traitées lors d'une prise de contact professionnelle ou d'une demande sur la page Ressources offertes, comment exercer vos droits ou vous opposer à un nouveau contact."
 draft: false
 ---
 
-## Pourquoi vous avez peut-être reçu un message
+Cette page couvre trois usages&nbsp;: les [prises de contact
+professionnelles](#contacts-professionnels), le [dispositif «&nbsp;Ressources
+offertes&nbsp;»](#ressources-offertes) et les [droits d'utilisation des
+images](#droits-images).
+
+## Pourquoi vous avez peut-être reçu un message {#contacts-professionnels}
 
 Dans le cadre de mes livres, articles et *Anthropie Working Papers*, il m'arrive
 d'écrire individuellement à des professionnels — journalistes, chercheurs, enseignants,
@@ -89,4 +94,4 @@ autorisée dans un cadre de presse, de recension ou de citation, avec crédit
 éditoriale ou de diffusion —, l'autorisation se demande par la
 [page Contact](/contact/)&nbsp;; la réponse précise les conditions applicables.
 
-*Dernière mise à jour&nbsp;: 12 août 2026.*
+*Dernière mise à jour&nbsp;: 19 septembre 2026.*

@@ -8,7 +8,8 @@ description: "Une anthologie qui refuse l'ordre alphabétique et thématique pou
 date: 2022-12-20
 lastmod: 2026-09-17  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 isbn: "978-2-9586347-0-4"
-amazon_rating: 4.1       # note moyenne Amazon.fr — relevé 2026-09-13 (MAJ ~mensuelle, relecture Chrome)
+amazon_rating: 4.1       # note moyenne Amazon.fr (MAJ ~mensuelle, relecture Chrome)
+amazon_rating_date: 2026-09-13  # date du relevé, affichée sous la note ; la mettre à jour avec elle
 amazon_reviews: 88       # nb d'avis Amazon.fr ; omettre les 2 champs = pas d'étoiles sur /ressources-offertes
 description_en: "An anthology that refuses alphabetical and thematic order in favour of the surprise of unexpected encounters. {citations} quotations, {auteurs} voices, 25 centuries of human genius woven along a subtle thread. Forty years of literary passion, offering not a classification but a journey."
 price: "36"  # prix broché EUR — affiché sur la page + schema.org Offer
