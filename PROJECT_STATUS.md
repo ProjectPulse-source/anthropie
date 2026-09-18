@@ -61,8 +61,9 @@ Vous pouvez lui transmettre librement cette page par le moyen de votre choix. »
 
 **Remarques externes arbitrées** (pièce archivée verbatim + SHA-256 `6600ACE9…39BB`, arbitrage
 `.claude/external-audits/ARBITRATIONS/anthropie-site-20260919-ressources-offertes_arbitrage.md`) :
-« relais » retiré aux deux endroits ; premier maillon de la chaîne « Une part des ventes » au lieu de
-« Un livre acheté » (le dispositif n'est pas un un-pour-un) ; compte Amazon.fr annoncé dès l'accroche ;
+« relais » retiré aux deux endroits (« un lecteur, un proche, une bibliothèque ou l'auteur » ; « il devient,
+s'il le souhaite, un passeur ») ; chaîne « Des livres achetés → des lecteurs invités → le savoir circule »
+(le dispositif n'est pas un un-pour-un) ; « intéressé par ce livre » sur les pages par livre ; compte Amazon.fr annoncé dès l'accroche ;
 note Amazon **datée** — nouveau champ `amazon_rating_date` dans les cinq fiches (la date vivait en
 commentaire YAML), affichée « Note relevée en septembre 2026 » par `partials/preuve-sociale.html`, `warnf`
 si absent (témoin : mutation sur Livresque → avertissement, restauré) ; page `/transparence-contacts/`
