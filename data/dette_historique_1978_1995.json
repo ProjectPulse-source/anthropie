@@ -1,0 +1,26 @@
+{
+ "_role": "Segment HISTORIQUE FIGE de la dette publique en % du PIB. Le flux automatique (scripts/update_dette_insee.py) ne couvre que 1995 et au-dela ; ces annees-ci sont closes et ne bougeront plus.",
+ "_source": "INSEE, comptes nationaux base 2020 — dette des administrations publiques au sens de Maastricht au 31 décembre, ensemble des APU. Tableau « Dette des administrations publiques au sens de Maastricht par sous-secteur » (insee.fr/fr/statistiques/2830192), fichier econ-fin-pub-dette-adm-pub.xlsx, relevé le 2026-09-20.",
+ "_temoin": "L'annee 1995 est presente ici ET dans la serie trimestrielle (T4 1995). Le script compare les deux a chaque execution : c'est ce qui rend le raccord verifiable au lieu d'etre suppose. Ne pas la retirer.",
+ "_unite": "% du PIB",
+ "pct_pib": {
+  "1978": 21.6,
+  "1979": 21.6,
+  "1980": 21.3,
+  "1981": 22.6,
+  "1982": 26.2,
+  "1983": 27.7,
+  "1984": 30.2,
+  "1985": 31.9,
+  "1986": 32.4,
+  "1987": 34.8,
+  "1988": 34.7,
+  "1989": 35.5,
+  "1990": 36.8,
+  "1991": 37.8,
+  "1992": 41.7,
+  "1993": 48.2,
+  "1994": 51.6,
+  "1995": 57.8
+ }
+}

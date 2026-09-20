@@ -9,6 +9,7 @@
        dans le BUILD, la CI n'utilise jamais --quiet. */ -}}
 {{- $page := .page -}}
 {{- $live := .live -}}
+{{- $hist := .historique -}}
 {{- $d := site.Data.dette_officielle -}}
 {{- if not $d -}}
   {{- errorf "dette-chiffres: data/dette_officielle.json ABSENT — lancer scripts/update_dette_insee.py" -}}
@@ -24,7 +25,7 @@
 {{- if gt $age 290 -}}
   {{- warnf "dette-chiffres: derniere periode %s agee de %d jours — relancer scripts/update_dette_insee.py (ou verifier le workflow dette-insee.yml)" $p $age -}}
 {{- end -}}
-<aside class="dette-chiffres"{{ if $live }} data-live-mdeur="{{ $d.live.mdeur }}" data-live-fin="{{ $d.live.fin_periode_iso }}" data-live-taux="{{ $d.live.croissance_annuelle_pct }}"{{ end }}>
+<aside class="dette-chiffres{{ if $hist }} dette-chiffres--longue{{ end }}"{{ if $live }} data-live-mdeur="{{ $d.live.mdeur }}" data-live-fin="{{ $d.live.fin_periode_iso }}" data-live-taux="{{ $d.live.croissance_annuelle_pct }}"{{ end }}>
   <p class="dette-chiffres__titre">Dette publique française&nbsp;— dernière donnée officielle</p>
   {{- if $live }}
   <p class="dette-chiffres__live" hidden>
@@ -36,7 +37,24 @@
   {{- if $live }}
   <p class="dette-chiffres__note" hidden id="dette-live-note">Le chiffre animé est une <strong>extrapolation mécanique</strong> depuis la publication INSEE du {{ index $a "dette_periode" }}, au rythme observé sur un an (+{{ index $a "croissance_annuelle_pct" }}&nbsp;% l'an)&nbsp;— ni une observation, ni une prévision.</p>
   {{- end }}
-  <p class="dette-chiffres__source">Source&nbsp;: INSEE, dette de Maastricht des administrations publiques (séries 010777616 et 010777608)&nbsp;· relevé le {{ index $a "releve_le" }}&nbsp;· <a href="/dette_officielle.json">données brutes (JSON)</a>.</p>
+  {{- if $hist }}
+  {{- $h := $d.dette_annuelle_longue -}}
+  {{- if not $h }}{{ errorf "dette-chiffres: bloc dette_annuelle_longue absent du JSON (relancer le script)" }}{{ end -}}
+  <figure class="dette-chiffres__figure">
+    <img src="/img/dette-longue.svg" width="720" height="300" loading="lazy"
+         alt="Courbe de la dette publique française en pourcentage du PIB, de {{ index $a "hist_annee_debut" }} à {{ index $a "dette_periode" }}&nbsp;: {{ index $a "hist_pct_debut" }}&nbsp;% au départ, puis franchissement de 30&nbsp;% en {{ index $a "hist_seuil_30_annee" }}, de 60&nbsp;% en {{ index $a "hist_seuil_60_annee" }}, de 80&nbsp;% en {{ index $a "hist_seuil_80_annee" }}, de 100&nbsp;% en {{ index $a "hist_seuil_100_annee" }}, jusqu'à {{ index $a "dette_pct_pib" }}&nbsp;% aujourd'hui.">
+  </figure>
+  <ul class="dette-chiffres__faits">
+    <li><b>{{ index $a "hist_pct_debut" }}&nbsp;%</b><span>du PIB en {{ index $a "hist_annee_debut" }}, avant le décrochage</span></li>
+    <li><b>×&nbsp;{{ index $a "hist_multiple" }}</b><span>en points de PIB depuis {{ index $a "hist_annee_debut" }}</span></li>
+    {{- if eq (index $a "hist_retour_10_ans") "0" }}
+    <li><b>jamais</b><span>revenue à son niveau de dix ans plus tôt</span></li>
+    {{- else }}
+    <li><b>{{ index $a "hist_annees_baisse" }}&nbsp;/&nbsp;{{ index $a "hist_annees_total" }}</b><span>années de baisse&nbsp;— jamais plus de {{ index $a "hist_plus_longue_baisse" }} d'affilée</span></li>
+    {{- end }}
+  </ul>
+  {{- end }}
+  <p class="dette-chiffres__source">Source&nbsp;: INSEE, dette de Maastricht des administrations publiques (séries 010777616 et 010777608{{ if $hist }}&nbsp;; série annuelle au 31&nbsp;décembre depuis {{ index $a "hist_annee_debut" }}, comptes nationaux base 2020{{ end }})&nbsp;· relevé le {{ index $a "releve_le" }}&nbsp;· <a href="/dette_officielle.json">données brutes (JSON)</a>.</p>
   {{- if ne $page.RelPermalink "/cout-de-la-dette-publique/" }}
   <p class="dette-chiffres__liens">Ce que cette dette coûte, et pourquoi&nbsp;: <a href="/cout-de-la-dette-publique/">Combien coûte la dette publique&nbsp;?</a></p>
   {{- end }}

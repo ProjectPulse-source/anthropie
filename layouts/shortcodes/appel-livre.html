@@ -1,0 +1,51 @@
+{{- /* appel-livre.html — bloc de fin de page vers un livre du catalogue.
+
+       {{< appel-livre slug="dette-publique-qui-paie-vraiment" >}}
+       L'argument, en une ou deux phrases, propre à CETTE page.
+       {{< /appel-livre >}}
+
+       Source unique = la fiche du livre : titre, sous-titre, couverture, prix,
+       liens Amazon, note. Seul l'argument change d'une page à l'autre. Un bloc
+       recopié par page divergerait au premier changement de prix — et c'est le
+       prix affiché à côté d'un bouton d'achat qui coûte le plus cher quand il
+       est faux.
+
+       La note Amazon n'apparaît qu'accompagnée de sa date de relevé : un chiffre
+       de réputation sans date se périme sans le dire. Si la fiche ne porte ni
+       amazon_rating ni amazon_reviews, aucune étoile n'est affichée.
+
+       Échoue bruyamment si le slug ne désigne aucune fiche : un bloc muet en
+       fin de page passerait inaperçu à la relecture. */ -}}
+{{- $slug := .Get "slug" -}}
+{{- if not $slug -}}{{ errorf "appel-livre: parametre slug manquant (%s)" .Page.File.Path }}{{- end -}}
+{{- $livre := site.GetPage (printf "/livres/%s" $slug) -}}
+{{- if not $livre -}}{{ errorf "appel-livre: fiche /livres/%s introuvable (appel depuis %s)" $slug .Page.File.Path }}{{- end -}}
+{{- $p := $livre.Params -}}
+{{- $broche := or $p.url_amazon_fr $p.url_amazon_com -}}
+{{- $kindle := $p.url_amazon_fr_kindle -}}
+<aside class="appel-livre">
+  {{ partial "book-cover.html" (dict "slug" $slug "alt" (printf "Couverture — %s" $livre.Title) "wrapClass" "appel-livre__cover-wrap" "class" "appel-livre__cover" "sizes" "150px" "lang" $livre.Lang) }}
+  <div class="appel-livre__corps">
+    <p class="appel-livre__sur">Le livre dont cette page est issue</p>
+    <h2 class="appel-livre__titre"><a href="{{ $livre.RelPermalink }}">{{ partial "fr-typo.html" $livre.Title }}</a></h2>
+    {{- with $p.subtitle }}<p class="appel-livre__soustitre">{{ . | safeHTML }}</p>{{ end }}
+    <div class="appel-livre__argu">{{ .Inner | markdownify }}</div>
+    <p class="appel-livre__meta">
+      {{- with $p.price }}<span class="appel-livre__prix">{{ . }}&nbsp;€</span>{{ end }}
+      {{- with $p.pages }}<span>broché, {{ . }}&nbsp;pages</span>{{ end }}
+      {{- with $kindle }}<span>édition Kindle disponible</span>{{ end }}
+      {{- if and $p.amazon_rating $p.amazon_reviews }}
+      {{- /* La note est un flottant : rendue telle quelle, elle sort avec un
+             point decimal anglais au milieu d'une page francaise. */ -}}
+      <span><span class="appel-livre__note" aria-hidden="true">★</span>
+        {{ replace (printf "%.1f" $p.amazon_rating) "." "," }}/5 · {{ $p.amazon_reviews }} avis Amazon
+        {{- with $p.amazon_rating_date }} (relevé le {{ dateFormat "02/01/2006" . }}){{ end }}</span>
+      {{- end }}
+    </p>
+    <p class="appel-livre__actions">
+      {{- with $broche }}<a class="appel-livre__btn appel-livre__btn--plein" href="{{ . }}">Acheter le broché{{ with $p.price }}&nbsp;— {{ . }}&nbsp;€{{ end }}</a>{{ end }}
+      {{- with $kindle }}<a class="appel-livre__btn" href="{{ . }}">Édition Kindle</a>{{ end }}
+    </p>
+    <p class="appel-livre__fiche"><a href="{{ $livre.RelPermalink }}">Sommaire, extraits et recensions&nbsp;→</a></p>
+  </div>
+</aside>

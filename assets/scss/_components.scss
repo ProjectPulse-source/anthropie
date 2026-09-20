@@ -346,6 +346,95 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
 }
 .dette-chiffres__liens { margin-bottom: 0; }
 
+// Variante longue : la courbe 1978-> devient le sujet du bloc. Obtenue par
+// classe et non par reecriture du markup -- le compteur anime cible des id
+// precis et remonte au parent de sa valeur pour l'afficher : reordonner le
+// DOM pour gagner une mise en page mettrait en jeu le seul organe de cette
+// page qui casse sans rien dire.
+.dette-chiffres--longue .dette-chiffres__live-valeur { font-size: 2.2em; }
+.dette-chiffres__figure { margin: 18px 0 0; }
+// Le SVG porte un viewBox : le laisser occuper toute la largeur du bloc
+// plutot que sa taille nominale de 720 px, qui laissait un vide a droite.
+.dette-chiffres__figure img {
+  width: 100%; height: auto; display: block;
+}
+.dette-chiffres__faits {
+  list-style: none; margin: 16px 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 2px; border-top: 1px solid var(--color-rule-soft);
+}
+.dette-chiffres__faits li { padding: 12px 16px 10px 0; }
+.dette-chiffres__faits b {
+  font-family: var(--font-sans); font-size: 22px; font-weight: 700;
+  color: var(--color-accent); display: block; line-height: 1.1;
+}
+.dette-chiffres__faits span {
+  font-family: var(--font-sans); font-size: var(--fs-small);
+  color: var(--color-text-subtle); display: block; margin-top: 3px;
+}
+
+// ----- Appel au livre en fin de page (shortcode appel-livre) -----
+// Un seul instrument pour toutes les pages qui prolongent un livre : la
+// couverture, le prix et les liens viennent de la fiche, seul l'argument
+// change. N copies de ce bloc divergeraient au premier changement de prix.
+.appel-livre {
+  display: flex; gap: 26px; flex-wrap: wrap; margin: 40px 0 0; padding: 26px;
+  background: var(--color-bg-elevated);
+  border: 0.5px solid var(--color-rule-strong);
+}
+.appel-livre__cover-wrap { flex: 0 0 150px; }
+.appel-livre__cover {
+  width: 150px; height: auto; display: block;
+  box-shadow: 0 2px 14px rgba(15, 15, 18, 0.16);
+}
+.appel-livre__corps { flex: 1 1 320px; min-width: 260px; }
+.appel-livre__sur {
+  font-family: var(--font-sans); font-size: var(--fs-tiny);
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--color-text-faint); margin: 0 0 8px;
+}
+// Un h2 pour la hierarchie du document, mais sans le decor des titres de
+// section du theme (filet superieur et grande respiration) : ici le titre
+// ouvre une carte, pas une partie de la page.
+// `.appel-livre .appel-livre__titre` et non la classe seule : le theme decore
+// les h2 du corps de page par `.content-reading h2` (une classe + un element),
+// qui l'emporterait sur une classe isolee. Deux classes suffisent a reprendre
+// la main sans recourir a !important, qui bloquerait la surcharge suivante.
+.appel-livre .appel-livre__titre {
+  font-size: 1.35em; line-height: 1.25; margin: 0 0 4px;
+  border-top: 0; padding-top: 0; padding-bottom: 0;
+}
+.appel-livre__titre a { color: var(--color-text); text-decoration: none; }
+.appel-livre__titre a:hover { color: var(--color-accent); }
+.appel-livre__soustitre {
+  font-style: italic; color: var(--color-text-muted); margin: 0 0 12px;
+}
+.appel-livre__argu { margin: 0 0 16px; }
+.appel-livre__meta {
+  font-family: var(--font-sans); font-size: var(--fs-small);
+  color: var(--color-text-subtle); margin: 0 0 14px;
+  display: flex; gap: 14px; flex-wrap: wrap; align-items: baseline;
+}
+.appel-livre__prix {
+  font-weight: 700; color: var(--color-text); font-size: 17px;
+}
+.appel-livre__note { color: var(--color-star); }
+.appel-livre__actions {
+  display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 0 0 12px;
+}
+.appel-livre__btn {
+  display: inline-block; font-family: var(--font-sans); font-size: 13px;
+  text-decoration: none; padding: 9px 18px;
+  border: 0.5px solid var(--color-accent); color: var(--color-accent);
+  transition: background 0.2s ease;
+}
+.appel-livre__btn:hover { background: var(--color-accent-faint); }
+.appel-livre__btn--plein { background: var(--color-accent); color: #fff; }
+.appel-livre__btn--plein:hover { background: var(--color-accent-hover); color: #fff; }
+.appel-livre__fiche {
+  font-family: var(--font-sans); font-size: var(--fs-small); margin: 0;
+}
+
 // ----- Figure du ciseau (page /cout-de-la-dette-publique/) -----
 .figure-ciseau { margin: 32px 0; }
 .figure-ciseau img { width: 100%; max-width: 720px; height: auto; display: block; }

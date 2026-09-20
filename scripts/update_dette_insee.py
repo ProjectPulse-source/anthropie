@@ -65,6 +65,12 @@ OUT_SVG = REPO / "static" / "img" / "ciseau-dette-interets.svg"
 OUT_SVG_TAUX = REPO / "static" / "img" / "taux-apparent-dette.svg"
 OUT_SVG_EN = REPO / "static" / "img" / "ciseau-dette-interets-en.svg"
 OUT_SVG_TAUX_EN = REPO / "static" / "img" / "taux-apparent-dette-en.svg"
+OUT_SVG_LONGUE = REPO / "static" / "img" / "dette-longue.svg"
+# Segment 1978-1995 que le flux ne couvre pas : comptes nationaux clos,
+# donc figes ici plutot que rapatries d'un .xlsx dont l'URL change a
+# chaque millesime. L'annee 1995 y est en DOUBLE avec la serie
+# trimestrielle : c'est le temoin qui rend le raccord verifiable.
+HIST_JSON = REPO / "data" / "dette_historique_1978_1995.json"
 
 INSEE_URL = ("https://bdm.insee.fr/series/sdmx/data/SERIES_BDM/"
              "010777616+010777608?startPeriod=1995-Q1")
@@ -292,6 +298,73 @@ def check_delta_vs_committed(payload_prev: dict | None, dette_mdeur, dette_pib,
     new_last = max(dette_mdeur) if dette_mdeur else ""
     if str(new_last) < str(old_p):
         fail("regression de periode: %s < %s" % (new_last, old_p))
+
+
+# ------------------------------------------------------- serie longue 1978->
+def charger_historique(dette_pib: dict[str, float]) -> dict:
+    """Serie annuelle 1978 -> derniere annee pleine, et ce qu'on peut en dire.
+
+    Le segment fige s'arrete en 1995, la serie vivante commence la : l'annee
+    commune est comparee a chaque execution. Un ecart la-dessus signifierait
+    que l'INSEE a revise l'ancien millesime ou que le fichier fige a derive --
+    dans les deux cas, la courbe raconterait une marche fausse, et il vaut
+    mieux ne rien publier."""
+    try:
+        brut = json.loads(HIST_JSON.read_text(encoding="utf-8"))
+        fige = {int(a): float(v) for a, v in brut["pct_pib"].items()}
+    except (OSError, ValueError, KeyError, TypeError) as e:
+        fail("historique: %s illisible (%s)" % (HIST_JSON.name, type(e).__name__))
+        return {}
+
+    annuel = dict(fige)
+    for p, v in dette_pib.items():
+        if p.endswith("-Q4"):
+            annuel[int(p[:4])] = v
+
+    # -- temoin de raccord : 1995 existe des DEUX cotes -------------------
+    commun = sorted(set(fige) & {int(p[:4]) for p in dette_pib if p.endswith("-Q4")})
+    if not commun:
+        fail("historique: aucune annee commune entre le segment fige et la "
+             "serie trimestrielle -- raccord invérifiable")
+    else:
+        for a in commun:
+            ecart = abs(fige[a] - dette_pib["%d-Q4" % a])
+            if ecart > 0.5:
+                fail("historique: raccord %d, fige %.1f vs T4 %.1f (ecart %.1f pt)"
+                     % (a, fige[a], dette_pib["%d-Q4" % a], ecart))
+
+    if len(annuel) < 45:
+        fail("historique: %d annees seulement -- serie tronquee" % len(annuel))
+    return annuel
+
+
+def faits_historiques(annuel: dict, pct_courant: float) -> dict:
+    """Ce que la serie autorise a ecrire, calcule et non recopie : une phrase
+    du genre « jamais revenue a son niveau de dix ans plus tot » se verifie en
+    dix secondes, et devient fausse toute seule si la serie bouge."""
+    ans = sorted(annuel)
+    baisses = [a for a in ans[1:] if annuel[a] < annuel[a - 1]]
+    best = cur = 0
+    for a in ans[1:]:
+        cur = cur + 1 if annuel[a] < annuel[a - 1] else 0
+        best = max(best, cur)
+    seuils = {}
+    for s in (30, 60, 80, 100):
+        an = next((a for a in ans if annuel[a] >= s), None)
+        if an is None:
+            fail("historique: seuil %d %% jamais franchi -- serie suspecte" % s)
+        seuils[s] = an
+    retours = [a for a in ans if a - 10 in annuel and annuel[a] <= annuel[a - 10]]
+    return {
+        "annee_debut": ans[0],
+        "pct_debut": annuel[ans[0]],
+        "seuils": seuils,
+        "annees_baisse": len(baisses),
+        "annees_total": len(ans) - 1,
+        "plus_longue_baisse": best,
+        "multiple": pct_courant / annuel[ans[0]],
+        "retour_10_ans": len(retours),
+    }
 
 
 # ---------------------------------------------------------------------- SVG
@@ -567,6 +640,78 @@ def build_svg_taux(taux: dict[str, float], lang: str = "fr") -> str:
     return "\n".join(e) + "\n"
 
 
+def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
+                     seuils: dict) -> str:
+    """Dette en % du PIB, de la premiere annee du segment fige a aujourd'hui.
+
+    Meme couleur que la courbe de dette du ciseau : c'est la meme grandeur, et
+    deux couleurs pour une seule serie feraient croire a deux mesures."""
+    ans = sorted(annuel)
+    pts = [(float(a), annuel[a]) for a in ans] + [(float(ans[-1]) + 0.25, pct_courant)]
+    w, h = 720, 300
+    ml, mr, mt, mb = 44, 16, 30, 34
+    x0, x1 = pts[0][0], pts[-1][0]
+    ymax = 130.0
+
+    def X(v):
+        return ml + (v - x0) / (x1 - x0) * (w - ml - mr)
+
+    def Y(v):
+        return h - mb - v / ymax * (h - mt - mb)
+
+    ligne = "M " + " L ".join("%.1f %.1f" % (X(a), Y(v)) for a, v in pts)
+    aire = ("M %.1f %.1f L " % (X(x0), h - mb)
+            + " L ".join("%.1f %.1f" % (X(a), Y(v)) for a, v in pts)
+            + " L %.1f %.1f Z" % (X(x1), h - mb))
+
+    e = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" '
+         'width="%d" height="%d" role="img" aria-labelledby="dl-t dl-d">' % (w, h, w, h)]
+    e.append('<title id="dl-t">Dette publique française en %% du PIB, de %d à %s</title>'
+             % (ans[0], label_courant))
+    e.append('<desc id="dl-d">Elle part de %s %% du PIB en %d, franchit 30 %% en %s, '
+             '60 %% en %s, 80 %% en %s, 100 %% en %s, et atteint %s %% au %s.</desc>'
+             % (fr(annuel[ans[0]]), ans[0], seuils[30], seuils[60], seuils[80],
+                seuils[100], fr(pct_courant), label_courant))
+    e.append('<rect width="%d" height="%d" fill="#fff"/>' % (w, h))
+    for g in (0, 25, 50, 75, 100, 125):
+        e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" '
+                 'stroke-width="1"/>' % (ml, Y(g), w - mr, Y(g), GRID))
+        e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="11" fill="%s" '
+                 'text-anchor="end">%d %%</text>' % (ml - 7, Y(g) + 4, FONT, MUTED, g))
+    e.append('<path d="%s" fill="%s" fill-opacity="0.10"/>' % (aire, COL_DETTE))
+    e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.4" '
+             'stroke-linejoin="round"/>' % (ligne, COL_DETTE))
+
+    # Repere = un seuil franchi, donc un fait date, jamais une annee choisie
+    # pour la jolie courbe.
+    reperes = [(ans[0], "%d : %s %%" % (ans[0], fr(annuel[ans[0]])), "start", 0)]
+    for s in (30, 60, 80, 100):
+        an = seuils[s]
+        reperes.append((an, "%d %% en %s" % (s, an), "middle", 0))
+    for an, lib, anchor, _ in reperes:
+        px, py = X(float(an)), Y(annuel[int(an)])
+        e.append('<circle cx="%.1f" cy="%.1f" r="3.4" fill="%s"/>' % (px, py, COL_DETTE))
+        e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="12" fill="%s" '
+                 'text-anchor="%s">%s</text>'
+                 % (px + (5 if anchor == "start" else 0), py - 10, FONT, INK2,
+                    anchor, lib))
+    # Valeur du jour SOUS son point : au-dessus, elle recouvrait l'etiquette du
+    # dernier seuil franchi -- les deux sont proches par construction, puisque
+    # le seuil le plus recent precede forcement le point le plus recent. Vu a
+    # l'ecran le 20/09, pas devine.
+    px, py = X(pts[-1][0]), Y(pct_courant)
+    e.append('<circle cx="%.1f" cy="%.1f" r="5" fill="%s"/>' % (px, py, COL_INTER))
+    e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="13" font-weight="700" '
+             'fill="%s" text-anchor="end">%s %% · %s</text>'
+             % (px - 4, py + 20, FONT, INK2, fr(pct_courant), label_courant))
+    e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="11" fill="%s">%d</text>'
+             % (ml, h - 12, FONT, MUTED, ans[0]))
+    e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="11" fill="%s" '
+             'text-anchor="end">%s</text>' % (w - mr, h - 12, FONT, MUTED, label_courant))
+    e.append("</svg>")
+    return "\n".join(e) + "\n"
+
+
 # ------------------------------------------------------------------- sortie
 # Blocs d'affichage portant un "releve_le", en plus de la racine.
 # Deux organes manipulent ce champ : l'empreinte qui DECIDE s'il faut publier, et
@@ -656,12 +801,15 @@ def main() -> int:
         in_band("PIB implicite " + lastq,
                 dette_mdeur[lastq] / (dette_pib[lastq] / 100.0), 1000, 5000)
 
+    annuel = charger_historique(dette_pib)
+
     if FAILURES:
         print("ECHEC: %d garde(s) -- AUCUNE ecriture, fichiers precedents "
               "conserves." % len(FAILURES))
         return 1
 
     # -- derives (un seul endroit de calcul) --------------------------------
+    hist = faits_historiques(annuel, dette_pib[max(dette_pib)])
     last_y = max(d41_mdeur)
     trough_y = min(d41_pib, key=lambda k: d41_pib[k])
     peak_q = max(dette_pib, key=lambda k: dette_pib[k])
@@ -774,6 +922,23 @@ def main() -> int:
             "pct_interets_education": str(round(int_equiv / cof24["GF09"] * 100)),
             "pct_interets_sante": str(round(int_equiv / cof24["GF07"] * 100)),
             "croissance_annuelle_pct": nb(croissance),
+            # Serie longue : la page raconte les paliers en toutes lettres,
+            # donc ils se calculent ici et nulle part ailleurs.
+            "hist_annee_debut": str(hist["annee_debut"]),
+            "hist_pct_debut": nb(hist["pct_debut"]),
+            "hist_seuil_30_annee": str(hist["seuils"][30]),
+            "hist_seuil_60_annee": str(hist["seuils"][60]),
+            "hist_seuil_80_annee": str(hist["seuils"][80]),
+            "hist_seuil_100_annee": str(hist["seuils"][100]),
+            "hist_annees_baisse": str(hist["annees_baisse"]),
+            "hist_annees_total": str(hist["annees_total"]),
+            "hist_plus_longue_baisse": str(hist["plus_longue_baisse"]),
+            "hist_multiple": nb(round(hist["multiple"], 1)),
+            # Vaut "0" tant que le ratio n'est jamais revenu a son niveau de
+            # dix ans plus tot. La page en tire une affirmation ; elle est
+            # rendue SOUS CONDITION de cette cle, pour qu'un reflux durable
+            # la fasse disparaitre au lieu de la laisser mentir.
+            "hist_retour_10_ans": str(hist["retour_10_ans"]),
             "releve_le": date_affichee,
         }
 
@@ -808,6 +973,19 @@ def main() -> int:
         "affichage": affichage,
         "affichage_en": affichage_en,
         "live": live,
+        "dette_annuelle_longue": {
+            "source": ("INSEE, dette de Maastricht des administrations "
+                       "publiques au 31 décembre — segment 1978-1995 issu du "
+                       "tableau 2830192 (comptes nationaux base 2020, clos), "
+                       "prolongé par la série trimestrielle (T4 de chaque "
+                       "année). Année de recouvrement contrôlée à chaque "
+                       "exécution."),
+            "unite": {"pct_pib": "% du PIB"},
+            "premiere_annee": str(min(annuel)),
+            "derniere_annee": str(max(annuel)),
+            "seuils_franchis": {str(s): str(a) for s, a in hist["seuils"].items()},
+            "series": {"pct_pib": {str(a): annuel[a] for a in sorted(annuel)}},
+        },
         "dette_trimestrielle": {
             "source": "INSEE, dette de Maastricht des administrations publiques",
             "idbanks": {"mdeur": "010777616", "pct_pib": "010777608"},
@@ -894,12 +1072,25 @@ def main() -> int:
         return 0
 
     txt = json.dumps(payload, ensure_ascii=False, indent=1) + "\n"
-    atomic_write(OUT_JSON, txt)
-    atomic_write(OUT_ENDPOINT, txt)
-    atomic_write(OUT_SVG, build_svg(dette_pib, d41_pib))
-    atomic_write(OUT_SVG_TAUX, build_svg_taux(taux_apparent))
-    atomic_write(OUT_SVG_EN, build_svg(dette_pib, d41_pib, lang="en"))
-    atomic_write(OUT_SVG_TAUX_EN, build_svg_taux(taux_apparent, lang="en"))
+    # TOUT est construit avant la premiere ecriture. Mesure du 2026-09-20 :
+    # une exception levee pendant la generation d'une figure laissait le JSON
+    # deja ecrit et les figures anciennes -- et, au passage suivant, le script
+    # comparait au paquet neuf, concluait "contenu inchange" et ne regenerait
+    # rien. Le depot disait alors une chose et la figure une autre, sans
+    # erreur ni trace. Construire d'abord, ecrire ensuite : un echec laisse
+    # l'ensemble dans son etat precedent, coherent.
+    sorties = [
+        (OUT_JSON, txt),
+        (OUT_ENDPOINT, txt),
+        (OUT_SVG, build_svg(dette_pib, d41_pib)),
+        (OUT_SVG_TAUX, build_svg_taux(taux_apparent)),
+        (OUT_SVG_EN, build_svg(dette_pib, d41_pib, lang="en")),
+        (OUT_SVG_TAUX_EN, build_svg_taux(taux_apparent, lang="en")),
+        (OUT_SVG_LONGUE, build_svg_longue(
+            annuel, dette_pib[lastq], fr_quarter(lastq), hist["seuils"])),
+    ]
+    for chemin, contenu in sorties:
+        atomic_write(chemin, contenu)
     print("OK: ecrits %s + endpoint + %s + %s%s"
           % (OUT_JSON.name, OUT_SVG.name, OUT_SVG_TAUX.name,
              " -- CONTENU INCHANGE (dates conservees, aucun diff attendu)"

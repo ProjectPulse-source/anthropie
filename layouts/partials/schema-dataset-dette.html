@@ -34,6 +34,11 @@
   {{- if not $premierQ -}}{{- $premierQ = $k -}}{{- end -}}
 {{- end -}}
 {{- $anDebut := substr $premierQ 0 4 -}}
+{{- /* La serie annuelle longue precede la trimestrielle : annoncer 1995
+       alors que le jeu publie remonte a 1978 sous-declarerait la couverture
+       aupres des moteurs, sur le seul champ qu'ils lisent pour la dater. */ -}}
+{{- $long := $d.dette_annuelle_longue -}}
+{{- with $long -}}{{- $anDebut = .premiere_annee -}}{{- end -}}
 {{- $anFin := substr $trim.derniere_periode 0 4 -}}
 
 {{- /* Sources primaires, reconstruites depuis les identifiants du JSON */ -}}
@@ -53,12 +58,13 @@
 {{- $T := dict
     "name" "Dette publique française : encours, charge d'intérêts et masses budgétaires comparables"
     "desc" "Compilation dérivée automatiquement des séries officielles, sans aucune valeur recopiée à la main : dette de Maastricht des administrations publiques (INSEE, trimestriel, %s à %s), intérêts versés et recettes totales (Eurostat %s, D41PAY et TR, jusqu'en %s), dépenses par fonction COFOG (Eurostat %s, jusqu'en %s), et taux apparent de la dette calculé comme les intérêts de l'année rapportés à l'encours de fin d'année précédente."
-    "technique" "Rapatriement automatisé des API officielles (INSEE BDM SDMX, Eurostat dissemination API), gardes de cohérence bloquantes, publication après relecture humaine"
+    "technique" "Rapatriement automatisé des API officielles (INSEE BDM SDMX, Eurostat dissemination API), gardes de cohérence bloquantes (ancres consolidées, écart maximal admis sur la dernière période publiée, non-régression de période), publication automatique hebdomadaire — aucune valeur saisie à la main"
     "v_encours" "Dette de Maastricht des administrations publiques"
     "v_ratio" "Ratio dette/PIB"
     "v_interets" "Intérêts versés par les administrations publiques (D41PAY)"
     "v_taux" "Taux apparent de la dette" "u_taux" "% par an"
     "v_recettes" "Recettes totales des administrations publiques (TR)"
+    "v_longue" "Dette de Maastricht, série annuelle au 31 décembre depuis 1978"
     "v_cofog" "Dépenses publiques par fonction COFOG %s — %s"
     "lieu" "France"
     "sujet" "dette publique de la France"
@@ -67,12 +73,13 @@
   {{- $T = dict
       "name" "French public debt: outstanding stock, interest burden and comparable budget aggregates"
       "desc" "A compilation derived automatically from official series, with no figure copied by hand: Maastricht debt of general government (INSEE, quarterly, %s to %s), interest paid and total revenue (Eurostat %s, D41PAY and TR, through %s), expenditure by COFOG function (Eurostat %s, through %s), and the effective interest rate computed as a year's interest over the debt stock at the end of the previous year."
-      "technique" "Automated retrieval from official APIs (INSEE BDM SDMX, Eurostat dissemination API), blocking consistency guards, publication after human review"
+      "technique" "Automated retrieval from official APIs (INSEE BDM SDMX, Eurostat dissemination API), blocking consistency guards (consolidated anchors, maximum admissible revision on the last published period, no period regression), automated weekly publication — no figure entered by hand"
       "v_encours" "Maastricht debt of general government"
       "v_ratio" "Debt-to-GDP ratio"
       "v_interets" "Interest paid by general government (D41PAY)"
       "v_taux" "Effective interest rate on public debt" "u_taux" "% per year"
       "v_recettes" "Total general government revenue (TR)"
+      "v_longue" "Maastricht debt, annual series at 31 December since 1978"
       "v_cofog" "General government expenditure by COFOG function %s — %s"
       "lieu" "France"
       "sujet" "public debt of France"
@@ -91,6 +98,10 @@
           "unitText" $T.u_taux "description" $int.taux_apparent_definition)
     (dict "@type" "PropertyValue" "name" $T.v_recettes
           "unitText" $rec.unite.mdeur "measurementTechnique" $rec.source) -}}
+{{- with $long -}}
+  {{- $vars = $vars | append (dict "@type" "PropertyValue" "name" $T.v_longue
+      "unitText" .unite.pct_pib "measurementTechnique" .source) -}}
+{{- end -}}
 {{- range $code, $libelle := $cof.fonctions -}}
   {{- $vars = $vars | append (dict "@type" "PropertyValue"
       "name" (printf $T.v_cofog $code $libelle)
