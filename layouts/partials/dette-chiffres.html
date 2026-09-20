@@ -1,12 +1,23 @@
 {{- /* dette-chiffres.html — bloc « dernière donnée officielle » de la dette
        publique. Source unique : data/dette_officielle.json (généré par
        scripts/update_dette_insee.py). Entrée : dict { "page": <Page>,
-       "live": <bool> }. Avec live=true, ajoute le compteur animé — une
-       EXTRAPOLATION étiquetée, ancrée sur les data-attributes générés depuis
-       le JSON (aucun nombre en dur dans le JS ; sans JS, rien de cassé :
-       les éléments restent hidden). Garde-fous inchangés (arbitrage panel
-       15/08) : errorf si données absentes, warnf si périmées — la garde vit
-       dans le BUILD, la CI n'utilise jamais --quiet. */ -}}
+       "live": <bool>, "historique": <bool> }.
+
+       Avec live=true, ajoute le compteur animé — une EXTRAPOLATION étiquetée,
+       ancrée sur les data-attributes générés depuis le JSON (aucun nombre en
+       dur dans le JS ; sans JS, rien de cassé : les éléments restent hidden).
+       Avec historique=true, ajoute la courbe 1978-> et trois faits.
+
+       BILINGUE (20/09) : le bloc d'affichage et la figure sont CHOISIS selon
+       la langue de la page, jamais formatés ici — « 3 536,1 » sur une page
+       anglaise serait faux, pas seulement inélégant. Les libellés vivent dans
+       un seul dict à deux entrées : deux copies du markup divergeraient au
+       premier changement, et c'est la version la moins relue qui garderait
+       l'erreur.
+
+       Garde-fous inchangés (arbitrage panel 15/08) : errorf si données
+       absentes, warnf si périmées — la garde vit dans le BUILD, la CI
+       n'utilise jamais --quiet. */ -}}
 {{- $page := .page -}}
 {{- $live := .live -}}
 {{- $hist := .historique -}}
@@ -14,9 +25,46 @@
 {{- if not $d -}}
   {{- errorf "dette-chiffres: data/dette_officielle.json ABSENT — lancer scripts/update_dette_insee.py" -}}
 {{- else -}}
-{{- $a := $d.affichage -}}
+{{- $en := eq $page.Lang "en" -}}
+{{- $a := cond $en $d.affichage_en $d.affichage -}}
 {{- if not $a -}}{{- errorf "dette-chiffres: bloc affichage absent du JSON" -}}{{- end -}}
 {{- if and $live (not $d.live) -}}{{- errorf "dette-chiffres: bloc live absent du JSON (relancer le script)" -}}{{- end -}}
+{{- $T := dict
+    "titre" "Dette publique française&nbsp;— dernière donnée officielle"
+    "valeurs" "<strong>%s&nbsp;milliards d'euros</strong>, soit <strong>%s&nbsp;%% du PIB</strong>, au %s."
+    "note" "Le chiffre animé est une <strong>extrapolation mécanique</strong> depuis la publication INSEE du %s, au rythme observé sur un an (+%s&nbsp;%% l'an)&nbsp;— ni une observation, ni une prévision."
+    "source" "Source&nbsp;: INSEE, dette de Maastricht des administrations publiques (séries 010777616 et 010777608"
+    "source_hist" "&nbsp;; série annuelle au 31&nbsp;décembre depuis %s, comptes nationaux base 2020"
+    "releve" ")&nbsp;· relevé le %s&nbsp;· "
+    "brutes" "données brutes (JSON)"
+    "lien" "Ce que cette dette coûte, et pourquoi&nbsp;: "
+    "lien_titre" "Combien coûte la dette publique&nbsp;?"
+    "fait1" "du PIB en %s, avant le décrochage"
+    "fait2" "en points de PIB depuis %s"
+    "fait3_cle" "jamais"
+    "fait3" "revenue à son niveau de dix ans plus tôt"
+    "fait4" "années de baisse&nbsp;— jamais plus de %s d'affilée"
+    "alt" "Courbe de la dette publique française en pourcentage du PIB, de %s à %s&nbsp;: %s&nbsp;%% au départ, puis franchissement de 30&nbsp;%% en %s, de 60&nbsp;%% en %s, de 80&nbsp;%% en %s, de 100&nbsp;%% en %s, jusqu'à %s&nbsp;%% aujourd'hui."
+    "svg" "/img/dette-longue.svg" -}}
+{{- if $en -}}
+  {{- $T = dict
+      "titre" "French public debt&nbsp;— latest official figure"
+      "valeurs" "<strong>%s billion euros</strong>, or <strong>%s%% of GDP</strong>, in %s."
+      "note" "The animated figure is a <strong>mechanical extrapolation</strong> from the INSEE release for %s, at the pace observed over one year (+%s%% a year)&nbsp;— neither an observation nor a forecast."
+      "source" "Source: INSEE, Maastricht debt of general government (series 010777616 and 010777608"
+      "source_hist" "; annual series at 31 December since %s, national accounts base 2020"
+      "releve" ") · data retrieved %s · "
+      "brutes" "raw data (JSON)"
+      "lien" "What this debt costs, and why: "
+      "lien_titre" "What does French public debt cost?"
+      "fait1" "of GDP in %s, before the break"
+      "fait2" "in points of GDP since %s"
+      "fait3_cle" "never"
+      "fait3" "back to its level of ten years earlier"
+      "fait4" "years of decline&nbsp;— never more than %s in a row"
+      "alt" "Curve of French public debt as a percentage of GDP, from %s to %s: %s%% at the start, then crossing 30%% in %s, 60%% in %s, 80%% in %s, 100%% in %s, up to %s%% today."
+      "svg" "/img/dette-longue-en.svg" -}}
+{{- end -}}
 {{- $p := $d.dette_trimestrielle.derniere_periode -}}
 {{- $yr := int (substr $p 0 4) -}}
 {{- $q := int (substr $p 6 1) -}}
@@ -26,37 +74,37 @@
   {{- warnf "dette-chiffres: derniere periode %s agee de %d jours — relancer scripts/update_dette_insee.py (ou verifier le workflow dette-insee.yml)" $p $age -}}
 {{- end -}}
 <aside class="dette-chiffres{{ if $hist }} dette-chiffres--longue{{ end }}"{{ if $live }} data-live-mdeur="{{ $d.live.mdeur }}" data-live-fin="{{ $d.live.fin_periode_iso }}" data-live-taux="{{ $d.live.croissance_annuelle_pct }}"{{ end }}>
-  <p class="dette-chiffres__titre">Dette publique française&nbsp;— dernière donnée officielle</p>
+  <p class="dette-chiffres__titre">{{ $T.titre | safeHTML }}</p>
   {{- if $live }}
   <p class="dette-chiffres__live" hidden>
     <span class="dette-chiffres__live-valeur" id="dette-live-valeur">—</span>
     <span class="dette-chiffres__live-vitesse" id="dette-live-vitesse"></span>
   </p>
   {{- end }}
-  <p class="dette-chiffres__valeurs"><strong>{{ index $a "dette_mdeur" }}&nbsp;milliards d'euros</strong>, soit <strong>{{ index $a "dette_pct_pib" }}&nbsp;% du PIB</strong>, au {{ index $a "dette_periode" }}.</p>
+  <p class="dette-chiffres__valeurs">{{ printf $T.valeurs (index $a "dette_mdeur") (index $a "dette_pct_pib") (index $a "dette_periode") | safeHTML }}</p>
   {{- if $live }}
-  <p class="dette-chiffres__note" hidden id="dette-live-note">Le chiffre animé est une <strong>extrapolation mécanique</strong> depuis la publication INSEE du {{ index $a "dette_periode" }}, au rythme observé sur un an (+{{ index $a "croissance_annuelle_pct" }}&nbsp;% l'an)&nbsp;— ni une observation, ni une prévision.</p>
+  <p class="dette-chiffres__note" hidden id="dette-live-note">{{ printf $T.note (index $a "dette_periode") (index $a "croissance_annuelle_pct") | safeHTML }}</p>
   {{- end }}
   {{- if $hist }}
   {{- $h := $d.dette_annuelle_longue -}}
   {{- if not $h }}{{ errorf "dette-chiffres: bloc dette_annuelle_longue absent du JSON (relancer le script)" }}{{ end -}}
   <figure class="dette-chiffres__figure">
-    <img src="/img/dette-longue.svg" width="720" height="300" loading="lazy"
-         alt="Courbe de la dette publique française en pourcentage du PIB, de {{ index $a "hist_annee_debut" }} à {{ index $a "dette_periode" }}&nbsp;: {{ index $a "hist_pct_debut" }}&nbsp;% au départ, puis franchissement de 30&nbsp;% en {{ index $a "hist_seuil_30_annee" }}, de 60&nbsp;% en {{ index $a "hist_seuil_60_annee" }}, de 80&nbsp;% en {{ index $a "hist_seuil_80_annee" }}, de 100&nbsp;% en {{ index $a "hist_seuil_100_annee" }}, jusqu'à {{ index $a "dette_pct_pib" }}&nbsp;% aujourd'hui.">
+    <img src="{{ $T.svg }}" width="720" height="320" loading="lazy"
+         alt="{{ printf $T.alt (index $a "hist_annee_debut") (index $a "dette_periode") (index $a "hist_pct_debut") (index $a "hist_seuil_30_annee") (index $a "hist_seuil_60_annee") (index $a "hist_seuil_80_annee") (index $a "hist_seuil_100_annee") (index $a "dette_pct_pib") }}">
   </figure>
   <ul class="dette-chiffres__faits">
-    <li><b>{{ index $a "hist_pct_debut" }}&nbsp;%</b><span>du PIB en {{ index $a "hist_annee_debut" }}, avant le décrochage</span></li>
-    <li><b>×&nbsp;{{ index $a "hist_multiple" }}</b><span>en points de PIB depuis {{ index $a "hist_annee_debut" }}</span></li>
+    <li><b>{{ index $a "hist_pct_debut" }}{{ if $en }}%{{ else }}&nbsp;%{{ end }}</b><span>{{ printf $T.fait1 (index $a "hist_annee_debut") | safeHTML }}</span></li>
+    <li><b>×&nbsp;{{ index $a "hist_multiple" }}</b><span>{{ printf $T.fait2 (index $a "hist_annee_debut") | safeHTML }}</span></li>
     {{- if eq (index $a "hist_retour_10_ans") "0" }}
-    <li><b>jamais</b><span>revenue à son niveau de dix ans plus tôt</span></li>
+    <li><b>{{ $T.fait3_cle }}</b><span>{{ $T.fait3 | safeHTML }}</span></li>
     {{- else }}
-    <li><b>{{ index $a "hist_annees_baisse" }}&nbsp;/&nbsp;{{ index $a "hist_annees_total" }}</b><span>années de baisse&nbsp;— jamais plus de {{ index $a "hist_plus_longue_baisse" }} d'affilée</span></li>
+    <li><b>{{ index $a "hist_annees_baisse" }}&nbsp;/&nbsp;{{ index $a "hist_annees_total" }}</b><span>{{ printf $T.fait4 (index $a "hist_plus_longue_baisse") | safeHTML }}</span></li>
     {{- end }}
   </ul>
   {{- end }}
-  <p class="dette-chiffres__source">Source&nbsp;: INSEE, dette de Maastricht des administrations publiques (séries 010777616 et 010777608{{ if $hist }}&nbsp;; série annuelle au 31&nbsp;décembre depuis {{ index $a "hist_annee_debut" }}, comptes nationaux base 2020{{ end }})&nbsp;· relevé le {{ index $a "releve_le" }}&nbsp;· <a href="/dette_officielle.json">données brutes (JSON)</a>.</p>
-  {{- if ne $page.RelPermalink "/cout-de-la-dette-publique/" }}
-  <p class="dette-chiffres__liens">Ce que cette dette coûte, et pourquoi&nbsp;: <a href="/cout-de-la-dette-publique/">Combien coûte la dette publique&nbsp;?</a></p>
+  <p class="dette-chiffres__source">{{ $T.source | safeHTML }}{{ if $hist }}{{ printf $T.source_hist (index $a "hist_annee_debut") | safeHTML }}{{ end }}{{ printf $T.releve (index $a "releve_le") | safeHTML }}<a href="/dette_officielle.json">{{ $T.brutes }}</a>.</p>
+  {{- if and (ne $page.RelPermalink "/cout-de-la-dette-publique/") (ne $page.RelPermalink "/en/cost-of-french-public-debt/") }}
+  <p class="dette-chiffres__liens">{{ $T.lien | safeHTML }}<a href="{{ if $en }}/en/cost-of-french-public-debt/{{ else }}/cout-de-la-dette-publique/{{ end }}">{{ $T.lien_titre | safeHTML }}</a></p>
   {{- end }}
 </aside>
 {{- if $live }}
@@ -73,12 +121,12 @@
   var valeur = document.getElementById("dette-live-valeur");
   var vitesse = document.getElementById("dette-live-vitesse");
   var note = document.getElementById("dette-live-note");
-  var fmt = new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 0 });
+  var fmt = new Intl.NumberFormat("{{ if $en }}en-GB{{ else }}fr-FR{{ end }}", { maximumFractionDigits: 0 });
   function tic() {
     var estimation = base + (Date.now() - fin) / 1000 * parSeconde;
     valeur.textContent = fmt.format(estimation) + " €";
   }
-  vitesse.textContent = "(≈ +" + fmt.format(Math.round(parSeconde / 100) * 100) + " € par seconde, estimation)";
+  vitesse.textContent = "{{ if $en }}(≈ +{{ else }}(≈ +{{ end }}" + fmt.format(Math.round(parSeconde / 100) * 100) + "{{ if $en }} € per second, estimate){{ else }} € par seconde, estimation){{ end }}";
   tic();
   valeur.parentElement.removeAttribute("hidden");
   note.removeAttribute("hidden");

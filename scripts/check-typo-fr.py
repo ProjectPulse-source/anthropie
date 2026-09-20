@@ -48,7 +48,13 @@ if hasattr(sys.stdout, "reconfigure"):
     sys.stderr.reconfigure(encoding="utf-8")
 
 RACINE = Path(__file__).resolve().parent.parent
-CIBLES = sorted((RACINE / "content").rglob("*.md"))
+# Les pages anglaises sont hors champ : l'anglais ne met pas d'espace devant
+# « : » et place le symbole AVANT le nombre (« €19 »). Appliquer la regle
+# francaise y introduirait la faute qu'on pretend corriger. Verifie le 20/09 :
+# les seules insecables presentes dans les .en.md tiennent a des TITRES
+# francais cites en anglais, ou elles sont justes -- le hasard, pas la regle.
+CIBLES = sorted(f for f in (RACINE / "content").rglob("*.md")
+                if not f.name.endswith(".en.md"))
 
 NBSP = "&nbsp;"
 

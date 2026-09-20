@@ -14,40 +14,85 @@
        de réputation sans date se périme sans le dire. Si la fiche ne porte ni
        amazon_rating ni amazon_reviews, aucune étoile n'est affichée.
 
+       BILINGUE (20/09). Sur une page anglaise, les liens restent ceux
+       d'amazon.fr et les prix en euros : pointer vers amazon.com afficherait un
+       prix EUR à côté d'une boutique en USD, c'est-à-dire un prix faux sous un
+       bouton d'achat. L'édition est française et le bloc le dit.
+
        Échoue bruyamment si le slug ne désigne aucune fiche : un bloc muet en
        fin de page passerait inaperçu à la relecture. */ -}}
 {{- $slug := .Get "slug" -}}
 {{- if not $slug -}}{{ errorf "appel-livre: parametre slug manquant (%s)" .Page.File.Path }}{{- end -}}
 {{- $livre := site.GetPage (printf "/livres/%s" $slug) -}}
-{{- if not $livre -}}{{ errorf "appel-livre: fiche /livres/%s introuvable (appel depuis %s)" $slug .Page.File.Path }}{{- end -}}
+{{- if not $livre -}}
+  {{- /* Repli sur les autres langues : un livre sans edition anglaise n'existe
+         pas dans le site EN, et `site.GetPage` y rend nil. La page anglaise
+         doit pouvoir renvoyer vers la fiche francaise — c'est le meme livre,
+         et le bloc le signale par « French edition ». */ -}}
+  {{- range site.Sites -}}
+    {{- with .GetPage (printf "/livres/%s" $slug) -}}{{- $livre = . -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if not $livre -}}{{ errorf "appel-livre: fiche /livres/%s introuvable dans aucune langue (appel depuis %s)" $slug .Page.File.Path }}{{- end -}}
 {{- $p := $livre.Params -}}
+{{- $en := eq .Page.Lang "en" -}}
 {{- $broche := or $p.url_amazon_fr $p.url_amazon_com -}}
 {{- $kindle := $p.url_amazon_fr_kindle -}}
+{{- /* Le prix reste en euros dans les deux langues — c'est l'edition francaise
+       qui est vendue — mais sa PRESENTATION suit la page : « 19 € » d'un cote,
+       « €19 » de l'autre, symbole avant et point decimal. Le montant est le
+       meme ; seule la convention change. */ -}}
+{{- $prix := "" -}}
+{{- with $p.price -}}
+  {{- $prix = cond $en (printf "€%s" .) (printf "%s&nbsp;€" (replace . "." ",")) -}}
+{{- end -}}
+{{- $prixK := "" -}}
+{{- with $p.kindle_price -}}
+  {{- $prixK = cond $en (printf "€%s" .) (printf "%s&nbsp;€" (replace . "." ",")) -}}
+{{- end -}}
+{{- $T := dict
+    "sur" "Le livre dont cette page est issue"
+    "pages" "broché, %s&nbsp;pages"
+    "avis" "%s/5 · %s avis Amazon"
+    "releve" " (relevé le %s)"
+    "acheter" "Acheter le broché"
+    "kindle" "Édition Kindle"
+    "fiche" "Sommaire, extraits et recensions&nbsp;→" -}}
+{{- if $en -}}
+  {{- $T = dict
+      "sur" "The book this page comes from"
+      "pages" "paperback, %s pages — French edition"
+      "avis" "%s/5 · %s Amazon ratings"
+      "releve" " (retrieved %s)"
+      "acheter" "Buy the paperback"
+      "kindle" "Kindle edition"
+      "fiche" "Contents, excerpts and reviews&nbsp;→" -}}
+{{- end -}}
 <aside class="appel-livre">
   {{ partial "book-cover.html" (dict "slug" $slug "alt" (printf "Couverture — %s" $livre.Title) "wrapClass" "appel-livre__cover-wrap" "class" "appel-livre__cover" "sizes" "150px" "lang" $livre.Lang) }}
   <div class="appel-livre__corps">
-    <p class="appel-livre__sur">Le livre dont cette page est issue</p>
+    <p class="appel-livre__sur">{{ $T.sur }}</p>
     <h2 class="appel-livre__titre"><a href="{{ $livre.RelPermalink }}">{{ partial "fr-typo.html" $livre.Title }}</a></h2>
-    {{- with $p.subtitle }}<p class="appel-livre__soustitre">{{ . | safeHTML }}</p>{{ end }}
+    {{- with $p.subtitle }}<p class="appel-livre__soustitre">{{ partial "fr-typo.html" . }}</p>{{ end }}
     <div class="appel-livre__argu">{{ .Inner | markdownify }}</div>
     <p class="appel-livre__meta">
-      {{- with $p.price }}<span class="appel-livre__prix">{{ . }}&nbsp;€</span>{{ end }}
-      {{- with $p.pages }}<span>broché, {{ . }}&nbsp;pages</span>{{ end }}
+      {{- with $prix }}<span class="appel-livre__prix">{{ . | safeHTML }}</span>{{ end }}
+      {{- with $p.pages }}<span>{{ printf $T.pages (string .) | safeHTML }}</span>{{ end }}
       {{- /* kindle_price est stocke au format schema.org (separateur point),
              comme `price` : on le rend a la francaise, jamais tel quel. */ -}}
-      {{- with $kindle }}<span>Kindle{{ with $p.kindle_price }}&nbsp;{{ replace . "." "," }}&nbsp;€{{ end }}</span>{{ end }}
+      {{- with $kindle }}<span>Kindle{{ with $prixK }}&nbsp;{{ . | safeHTML }}{{ end }}</span>{{ end }}
       {{- if and $p.amazon_rating $p.amazon_reviews }}
       {{- /* La note est un flottant : rendue telle quelle, elle sort avec un
              point decimal anglais au milieu d'une page francaise. */ -}}
       <span><span class="appel-livre__note" aria-hidden="true">★</span>
-        {{ replace (printf "%.1f" $p.amazon_rating) "." "," }}/5 · {{ $p.amazon_reviews }} avis Amazon
-        {{- with $p.amazon_rating_date }} (relevé le {{ dateFormat "02/01/2006" . }}){{ end }}</span>
+        {{ printf $T.avis (replace (printf "%.1f" $p.amazon_rating) "." (cond $en "." ",")) (string $p.amazon_reviews) }}
+        {{- with $p.amazon_rating_date }}{{ printf $T.releve (dateFormat (cond $en "2 Jan 2006" "02/01/2006") .) }}{{ end }}</span>
       {{- end }}
     </p>
     <p class="appel-livre__actions">
-      {{- with $broche }}<a class="appel-livre__btn appel-livre__btn--plein" href="{{ . }}">Acheter le broché{{ with $p.price }}&nbsp;— {{ . }}&nbsp;€{{ end }}</a>{{ end }}
-      {{- with $kindle }}<a class="appel-livre__btn" href="{{ . }}">Édition Kindle{{ with $p.kindle_price }}&nbsp;— {{ replace . "." "," }}&nbsp;€{{ end }}</a>{{ end }}
+      {{- with $broche }}<a class="appel-livre__btn appel-livre__btn--plein" href="{{ . }}">{{ $T.acheter }}{{ with $prix }}&nbsp;— {{ . | safeHTML }}{{ end }}</a>{{ end }}
+      {{- with $kindle }}<a class="appel-livre__btn" href="{{ . }}">{{ $T.kindle }}{{ with $prixK }}&nbsp;— {{ . | safeHTML }}{{ end }}</a>{{ end }}
     </p>
-    <p class="appel-livre__fiche"><a href="{{ $livre.RelPermalink }}">Sommaire, extraits et recensions&nbsp;→</a></p>
+    <p class="appel-livre__fiche"><a href="{{ $livre.RelPermalink }}">{{ $T.fiche | safeHTML }}</a></p>
   </div>
 </aside>

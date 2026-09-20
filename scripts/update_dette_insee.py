@@ -66,6 +66,7 @@ OUT_SVG_TAUX = REPO / "static" / "img" / "taux-apparent-dette.svg"
 OUT_SVG_EN = REPO / "static" / "img" / "ciseau-dette-interets-en.svg"
 OUT_SVG_TAUX_EN = REPO / "static" / "img" / "taux-apparent-dette-en.svg"
 OUT_SVG_LONGUE = REPO / "static" / "img" / "dette-longue.svg"
+OUT_SVG_LONGUE_EN = REPO / "static" / "img" / "dette-longue-en.svg"
 # Segment 1978-1995 que le flux ne couvre pas : comptes nationaux clos,
 # donc figes ici plutot que rapatries d'un .xlsx dont l'URL change a
 # chaque millesime. L'annee 1995 y est en DOUBLE avec la serie
@@ -640,13 +641,34 @@ def build_svg_taux(taux: dict[str, float], lang: str = "fr") -> str:
     return "\n".join(e) + "\n"
 
 
+LABELS_LONGUE = {
+    "fr": {
+        "titre": "Dette publique française en %% du PIB, de %d à %s",
+        "desc": ("Elle part de %s %% du PIB en %d, franchit 30 %% en %s, "
+                 "60 %% en %s, 80 %% en %s, 100 %% en %s, et atteint %s %% "
+                 "au %s."),
+        "unite": " %",
+    },
+    "en": {
+        "titre": "French public debt as a %% of GDP, from %d to %s",
+        "desc": ("It starts at %s%% of GDP in %d, crosses 30%% in %s, "
+                 "60%% in %s, 80%% in %s, 100%% in %s, and reaches %s%% "
+                 "in %s."),
+        "unite": "%",
+    },
+}
+
+
 def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
-                     seuils: dict) -> str:
+                     seuils: dict, lang: str = "fr") -> str:
     """Dette en % du PIB, de la premiere annee du segment fige a aujourd'hui.
 
     Meme couleur que la courbe de dette du ciseau : c'est la meme grandeur, et
     deux couleurs pour une seule serie feraient croire a deux mesures."""
     ans = sorted(annuel)
+    L = LABELS_LONGUE[lang]
+    nb = fr if lang == "fr" else en          # meme calcul, deux presentations
+    U = L["unite"]
     pts = [(float(a), annuel[a]) for a in ans] + [(float(ans[-1]) + 0.25, pct_courant)]
     w, h = 720, 320
     ml, mr, mt, mb = 44, 18, 34, 26
@@ -666,18 +688,16 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
 
     e = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" '
          'width="%d" height="%d" role="img" aria-labelledby="dl-t dl-d">' % (w, h, w, h)]
-    e.append('<title id="dl-t">Dette publique française en %% du PIB, de %d à %s</title>'
-             % (ans[0], label_courant))
-    e.append('<desc id="dl-d">Elle part de %s %% du PIB en %d, franchit 30 %% en %s, '
-             '60 %% en %s, 80 %% en %s, 100 %% en %s, et atteint %s %% au %s.</desc>'
-             % (fr(annuel[ans[0]]), ans[0], seuils[30], seuils[60], seuils[80],
-                seuils[100], fr(pct_courant), label_courant))
+    e.append('<title id="dl-t">' + L["titre"] % (ans[0], label_courant) + '</title>')
+    e.append('<desc id="dl-d">' + L["desc"]
+             % (nb(annuel[ans[0]]), ans[0], seuils[30], seuils[60], seuils[80],
+                seuils[100], nb(pct_courant), label_courant) + '</desc>')
     e.append('<rect width="%d" height="%d" fill="#fff"/>' % (w, h))
     for g in (0, 25, 50, 75, 100, 125):
         e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" '
                  'stroke-width="1"/>' % (ml, Y(g), w - mr, Y(g), GRID))
         e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="11" fill="%s" '
-                 'text-anchor="end">%d %%</text>' % (ml - 7, Y(g) + 4, FONT, MUTED, g))
+                 'text-anchor="end">%d%s</text>' % (ml - 7, Y(g) + 4, FONT, MUTED, g, U))
     e.append('<path d="%s" fill="%s" fill-opacity="0.10"/>' % (aire, COL_DETTE))
     e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.4" '
              'stroke-linejoin="round"/>' % (ligne, COL_DETTE))
@@ -689,12 +709,12 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
     # (« 30 % en 1984 ») se touchaient des que deux reperes etaient proches,
     # parce que leur largeur ne dependait pas de leur ecart.
     reperes = [(float(ans[0]), annuel[ans[0]], str(ans[0]),
-                fr(annuel[ans[0]]) + " %", "start")]
+                nb(annuel[ans[0]]) + U, "start")]
     for s in (30, 60, 80, 100):
         an = seuils[s]
-        reperes.append((float(an), annuel[int(an)], str(an), "%d %%" % s, "middle"))
+        reperes.append((float(an), annuel[int(an)], str(an), "%d%s" % (s, U), "middle"))
     reperes.append((pts[-1][0], pct_courant, label_courant,
-                    fr(pct_courant) + " %", "end"))
+                    nb(pct_courant) + U, "end"))
 
     # Anti-collision : deux reperes proches voient leurs etiquettes se toucher,
     # et le cas se produit par construction a la fin de la serie -- le dernier
@@ -1130,7 +1150,27 @@ def main() -> int:
         (OUT_SVG_TAUX_EN, build_svg_taux(taux_apparent, lang="en")),
         (OUT_SVG_LONGUE, build_svg_longue(
             annuel, dette_pib[lastq], fr_quarter(lastq), hist["seuils"])),
+        (OUT_SVG_LONGUE_EN, build_svg_longue(
+            annuel, dette_pib[lastq], en_quarter(lastq), hist["seuils"],
+            lang="en")),
     ]
+    # Le workflow enumere a la main les fichiers qu'il commite. Deux fois deja
+    # -- le 16/08 (courbe du taux apparent) et le 20/09 (courbe longue EN) --
+    # une sortie NOUVELLE a failli rester hors de cette liste : elle aurait ete
+    # regeneree en CI puis jamais publiee, laissant une figure figee en ligne
+    # sans erreur ni trace. Le script est le seul a connaitre ses sorties :
+    # c'est donc ici que la comparaison se fait.
+    wf = REPO / ".github" / "workflows" / "dette-insee.yml"
+    if wf.is_file():
+        texte = wf.read_text(encoding="utf-8")
+        oubliees = [c.relative_to(REPO).as_posix() for c, _ in sorties
+                    if c.relative_to(REPO).as_posix() not in texte]
+        if oubliees:
+            print("ECHEC: sortie(s) absente(s) du `git add` de %s : %s"
+                  % (wf.name, ", ".join(oubliees)))
+            print("       -- elles seraient regenerees en CI et jamais publiees.")
+            return 1
+
     for chemin, contenu in sorties:
         atomic_write(chemin, contenu)
     print("OK: ecrits %s + endpoint + %s + %s%s"
