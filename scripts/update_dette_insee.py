@@ -51,6 +51,7 @@ import ssl
 import subprocess
 import sys
 import tempfile
+import time
 import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -92,7 +93,7 @@ def fail(msg: str) -> None:
     print("GARDE EN ECHEC: " + msg)
 
 
-def fetch(url: str) -> bytes:
+def fetch_once(url: str) -> bytes:
     """urllib d'abord ; repli curl si le magasin de certificats local est
     perime (vu sous Windows). Jamais de verification desactivee."""
     try:
@@ -106,6 +107,27 @@ def fetch(url: str) -> bytes:
             raise RuntimeError("curl a echoue: "
                                + p.stderr.decode("ascii", "replace")[:200])
         return p.stdout
+
+
+def fetch(url: str, essais: int = 3) -> bytes:
+    """fetch_once, avec reprise espacee sur echec transitoire.
+
+    Une indisponibilite de quelques secondes chez INSEE ou Eurostat n'est pas
+    une donnee manquante : sans reprise elle reporterait la publication au
+    passage suivant et ouvrirait une issue pour rien. Un defaut durable (404,
+    serie retiree) epuise les essais et remonte tel quel -- la reprise ne
+    transforme jamais une absence en silence."""
+    for essai in range(1, essais + 1):
+        try:
+            return fetch_once(url)
+        except Exception as e:
+            if essai == essais:
+                raise
+            attente = essai * 5
+            print("info: echec %d/%d (%s) -- nouvelle tentative dans %d s"
+                  % (essai, essais, type(e).__name__, attente))
+            time.sleep(attente)
+    raise RuntimeError("fetch: sortie de boucle impossible")  # pragma: no cover
 
 
 def parse_insee(xml_bytes: bytes) -> dict[str, dict[str, float]]:

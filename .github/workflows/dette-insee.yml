@@ -1,23 +1,43 @@
 # Donnees officielles de dette publique -> data/dette_officielle.json
-# (+ endpoint static/ + courbe SVG). Variante PR, arbitrage panel 2026-08-15 :
-# le workflow ne publie JAMAIS seul -- il ouvre une pull request, et le merge
-# humain est le push qui declenche le deploiement (hugo.yml). Un push du bot
-# ne declencherait d'ailleurs pas `on: push` (restriction GITHUB_TOKEN).
-# Echec (fetch, garde, build) => issue GitHub (pattern healthcheck).
-# DECROISSANCE : plus de 2 echecs/an pour cause non-donnee, ou PRs laissees
-# sans merge plus d'un trimestre => reexamen du dispositif ; repli documente =
-# execution locale trimestrielle de scripts/update_dette_insee.py + commit
-# humain (toujours viable, ~4 gestes/an).
+# (+ endpoint static/ + courbes SVG), PUIS deploiement de la page.
+#
+# DECISION AUTEUR 2026-09-20 : la mise a jour se fait sans intervention. Elle
+# remplace la variante PR du 15/08 (publication = merge humain), qui n'a jamais
+# publie une seule fois : au premier passage du cron, le 06/09, `gh pr create` a
+# ete refuse ("GitHub Actions is not permitted to create or approve pull
+# requests") et la donnee est restee dans une branche morte. Ce qui garde la
+# publication n'est donc plus un geste humain, mais une chaine de gardes qui
+# bloquent AVANT d'ecrire : ancres sur valeurs consolidees, ecart <= 5 % sur la
+# derniere periode deja publiee, non-regression de periode, bandes de
+# plausibilite (scripts/update_dette_insee.py), puis build Hugo bloquant. Rien
+# n'est pousse tant que ces quatre-la n'ont pas passe ; un echec ouvre une issue
+# et ne publie pas.
+#
+# PIEGE QUI GOUVERNE LA FORME DE CE FICHIER : un push signe par le GITHUB_TOKEN
+# ne declenche AUCUN autre workflow (protection anti-recursion de GitHub). Un
+# simple `git push` laisserait donc le depot a jour et la page figee, sans
+# erreur ni trace -- exactement la classe "etat declare != etat reel". D'ou le
+# job `deploy`, qui appelle hugo.yml en workflow reutilisable sur le SHA que le
+# job `update` vient d'ecrire : le deploiement ne peut pas construire une
+# version anterieure a la donnee qui l'a declenche.
+#
+# DECROISSANCE : plus de 2 echecs/an pour cause non-donnee (reseau, API, droits)
+# => reexamen du rythme et du dispositif. Repli documente, toujours viable :
+# `python scripts/update_dette_insee.py` en local + commit humain.
 name: Donnees dette (INSEE/Eurostat)
 
 on:
   schedule:
-    - cron: '17 7 6 * *'  # le 6 du mois, 07:17 UTC -- mensuel pour rattraper vite les publications trimestrielles
+    # Chaque mercredi 07:17 UTC. Les series trimestrielles INSEE paraissent en
+    # fin de trimestre civil (T2 2026 : le 29/09 a 8h45) ; l'hebdomadaire borne
+    # le retard d'affichage a 7 jours la ou le mensuel pouvait atteindre 5
+    # semaines. Un passage sans donnee neuve n'ecrit rien et ne coute rien : le
+    # script conserve les dates quand aucun chiffre n'a bouge.
+    - cron: '17 7 * * 3'
   workflow_dispatch:
 
 permissions:
   contents: write
-  pull-requests: write
   issues: write
 
 env:
@@ -26,9 +46,17 @@ env:
 jobs:
   update:
     runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.diff.outputs.changed }}
+      sha: ${{ steps.push.outputs.sha }}
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # Historique complet (21 Mo, quelques secondes) : sans lui le rebase
+          # de la boucle de push ci-dessous ne peut pas aboutir sur un clone
+          # superficiel, et la reprise serait decorative.
+          fetch-depth: 0
 
       - name: Rapatrier et valider les series (gardes dures, exit 1 si echec)
         run: python3 scripts/update_dette_insee.py
@@ -44,7 +72,7 @@ jobs:
             git diff --stat
           fi
 
-      - name: Build gate Hugo (jamais de PR qui casse le build)
+      - name: Build gate Hugo (jamais un push qui casse le build)
         if: steps.diff.outputs.changed == 'true'
         run: |
           wget -q -O "${{ runner.temp }}/hugo.deb" \
@@ -52,15 +80,12 @@ jobs:
           sudo dpkg -i "${{ runner.temp }}/hugo.deb"
           hugo --minify
 
-      - name: Ouvrir la pull request (publication = merge humain)
+      - name: Publier sur main
+        id: push
         if: steps.diff.outputs.changed == 'true'
-        env:
-          GH_TOKEN: ${{ github.token }}
         run: |
-          BRANCH="data/dette-${{ github.run_id }}"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git checkout -b "$BRANCH"
           # Enumeration explicite : toute sortie NOUVELLE du script doit etre
           # ajoutee ICI, sinon elle est regeneree en CI puis jamais committee --
           # la figure resterait figee en ligne pendant que le reste s'actualise,
@@ -72,35 +97,60 @@ jobs:
                   static/img/ciseau-dette-interets-en.svg \
                   static/img/taux-apparent-dette-en.svg
           git commit -m "data(dette): series INSEE/Eurostat du $(date -u +%Y-%m-%d)"
-          # Branche neuve a chaque run : le non-fast-forward est impossible, donc
-          # pas de rebase ici -- seul reste le 500 transitoire de GitHub, qui tuait
-          # le run et reportait la mise a jour d'un mois (cas observe sur
-          # anthropie-monitoring, run 32082744679). Pas d'exit 0 dans la boucle :
-          # la creation de la PR doit suivre.
+          # Le rebase couvre le seul cas reel de non-fast-forward : un commit
+          # humain pousse sur main pendant les ~40 s du run. Le 500 transitoire
+          # de GitHub, lui, tuait le run et reportait la mise a jour (cas observe
+          # sur anthropie-monitoring, run 32082744679) -- d'ou les 3 tentatives.
           pushed=0
           for attempt in 1 2 3; do
-            if git push origin "$BRANCH"; then pushed=1; break; fi
-            echo "::warning::Push refuse (tentative $attempt) -- nouvelle tentative"
+            if git push origin HEAD:main; then pushed=1; break; fi
+            echo "::warning::Push refuse (tentative $attempt) -- rebase puis nouvelle tentative"
+            git pull --rebase origin main || true
             sleep $((attempt * 5))
           done
           if [ "$pushed" = 0 ]; then
-            echo "::error::Push impossible apres 3 tentatives -- pas de PR ouverte ce mois-ci"
+            echo "::error::Push impossible apres 3 tentatives -- donnee NON publiee"
             exit 1
           fi
-          gh pr create \
-            --title "Donnees dette : mise a jour du $(date -u +%Y-%m-%d)" \
-            --body "Series INSEE (dette de Maastricht) et Eurostat (interets D41PAY, COFOG) rapatriees, validees par les gardes de scripts/update_dette_insee.py, build Hugo verifie. Relire le diff puis merger : le merge publie."
+          # Le SHA voyage vers le job de deploiement : construire `main` par son
+          # nom exposerait a une course avec un commit humain simultane.
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
-      - name: Issue en cas d'echec (un run rouge que personne ne lit n'est pas un echec visible)
-        if: failure()
-        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+  # Le deploiement doit etre appele : un push du GITHUB_TOKEN ne declenche pas
+  # le `on: push` de hugo.yml (voir l'en-tete). C'est ce job, et lui seul, qui
+  # fait qu'une donnee nouvelle atteint la page.
+  deploy:
+    needs: update
+    if: needs.update.outputs.changed == 'true'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/hugo.yml
+    with:
+      ref: ${{ needs.update.outputs.sha }}
+
+  # Un run rouge que personne ne lit n'est pas un echec visible. Une seule
+  # surface d'alerte pour les deux jobs : la lecon du 06/09 est que deux organes
+  # qui tiennent chacun sa propre liste finissent par diverger.
+  alerte:
+    needs: [update, deploy]
+    if: failure()
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           script: |
+            const quoi = '${{ needs.update.result }}' === 'failure'
+              ? 'rapatriement, garde de validation, build gate ou push'
+              : 'deploiement de la page (la donnee est sur main, la page est en retard)';
             github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
               title: 'Donnees dette : echec du workflow du ' + new Date().toISOString().slice(0, 10),
-              body: 'Le workflow dette-insee a echoue (fetch, garde de validation ou build gate). Run : ' +
+              body: 'Le workflow dette-insee a echoue -- etape : ' + quoi + '.\n\nRun : ' +
                 context.serverUrl + '/' + context.repo.owner + '/' + context.repo.repo +
                 '/actions/runs/' + context.runId +
                 '\n\nRepli documente : `python scripts/update_dette_insee.py` en local + commit humain.'

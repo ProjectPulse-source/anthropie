@@ -4,6 +4,16 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # Appelable par un autre workflow (dette-insee.yml) : un push signe par le
+  # GITHUB_TOKEN ne declenche pas le `on: push` ci-dessus, donc une donnee
+  # publiee par un robot n'atteindrait jamais la page sans cet appel explicite.
+  workflow_call:
+    inputs:
+      ref:
+        description: "Commit a construire. Vide = le SHA qui a declenche le run."
+        type: string
+        required: false
+        default: ''
 
 permissions:
   contents: read
@@ -28,6 +38,12 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # Vide hors workflow_call : checkout retombe alors sur le SHA
+          # declencheur, comportement inchange pour un push ou un dispatch.
+          # Appele, ce parametre evite de construire la version d'AVANT la
+          # donnee qui vient d'etre poussee.
+          ref: ${{ inputs.ref }}
 
       - name: Setup Pages
         id: pages
