@@ -67,13 +67,13 @@ related_awp:
 
 Application du cadre anthropique à la dette publique française.
 
-*Dette Publique&nbsp;: Qui paie vraiment ?* reprend et développe l'analyse amorcée dans le working paper AWP-03, en montrant que la question décisive n'est pas « combien ? » mais « qui paie ? ».
+*Dette Publique&nbsp;: Qui paie vraiment&nbsp;?* reprend et développe l'analyse amorcée dans le working paper AWP-03, en montrant que la question décisive n'est pas «&nbsp;combien&nbsp;?&nbsp;» mais «&nbsp;qui paie&nbsp;?&nbsp;».
 
 ## Argument
 
 À la question «&nbsp;qui paie vraiment la dette publique&nbsp;?&nbsp;», ce livre répond&nbsp;: les générations futures et les groupes sociaux les moins mobiles — ceux qui ne peuvent se soustraire ni fiscalement ni géographiquement au prélèvement.
 
-La dette publique est habituellement discutée en termes de montants, de ratios et de soutenabilité. Ce livre déplace la question&nbsp;: il s'intéresse non pas au « combien » mais au « qui ». Qui supporte réellement le coût de la dette ? Vers quels groupes sociaux et vers quelles générations le fardeau est-il transféré ? Par quels mécanismes ce transfert devient-il invisible dans le débat public ?
+La dette publique est habituellement discutée en termes de montants, de ratios et de soutenabilité. Ce livre déplace la question&nbsp;: il s'intéresse non pas au «&nbsp;combien&nbsp;» mais au «&nbsp;qui&nbsp;». Qui supporte réellement le coût de la dette&nbsp;? Vers quels groupes sociaux et vers quelles générations le fardeau est-il transféré&nbsp;? Par quels mécanismes ce transfert devient-il invisible dans le débat public&nbsp;?
 
 En appliquant le cadre anthropique aux finances publiques françaises, Stéphane Lalut montre que la dette fonctionne comme un dispositif de transfert temporel et social&nbsp;: elle reporte le coût du désordre présent vers ceux qui n'ont pas voix au chapitre. La réponse en ligne, mécanisme par mécanisme&nbsp;: [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/) Le cadre général est présenté sur la page [Qu'est-ce que l'anthropie&nbsp;?](/quest-ce-que-lanthropie/).
 
@@ -87,7 +87,7 @@ Du chapitre 7, «&nbsp;Une dette, trois visages — les créanciers invisibles&n
 
 > La dette publique française de 3 460 milliards n'est pas un bloc monolithique. Elle se divise en trois réalités aux destins opposés.
 >
-> La dette de l'État (2 800 milliards, 82% du total) a pris le large. Plus de la moitié appartient à des créanciers étrangers : fonds de pension américains, banques allemandes, assureurs japonais. Résultat : 30 milliards d'intérêts s'envolent chaque année hors de France — trois fois le budget de la Justice.
+> La dette de l'État (2 800 milliards, 82% du total) a pris le large. Plus de la moitié appartient à des créanciers étrangers&nbsp;: fonds de pension américains, banques allemandes, assureurs japonais. Résultat&nbsp;: 30 milliards d'intérêts s'envolent chaque année hors de France — trois fois le budget de la Justice.
 >
 > La dette des collectivités locales (250 milliards, 7%) reste, elle, profondément française. Vos communes, départements et régions empruntent à 70% auprès de banques hexagonales, La Banque Postale en tête. Aucun fonds vautour new-yorkais ne spécule sur la dette de votre mairie.
 >

@@ -18,7 +18,7 @@ faq:
 
 Le débat public sur la dette des collectivités est presque toujours descriptif&nbsp;: encours, règle d'or, part dans la dette nationale. Cette page pose l'autre question, avec le cadre de l'[anthropie](/quest-ce-que-lanthropie/)&nbsp;: par quels mécanismes la charge se déplace-t-elle de l'État vers les territoires, et des territoires vers qui&nbsp;?
 
-## Le paradoxe apparent : peu endettées, très contraintes
+## Le paradoxe apparent&nbsp;: peu endettées, très contraintes
 
 La dette des collectivités territoriales est une part minoritaire de l'endettement public, et elle est strictement encadrée&nbsp;: la «&nbsp;règle d'or&nbsp;» leur interdit d'emprunter pour financer leur fonctionnement courant. À première vue, les finances locales sont donc le bon élève du système.
 
@@ -26,13 +26,13 @@ C'est précisément ce verrou qui fait d'elles une variable d'ajustement commode
 
 ## Les trois mécanismes du transfert
 
-1. **Les compétences transférées sans les financements** — réforme après réforme, des missions descendent vers les communes, départements et régions ; les compensations, figées ou partielles, décrochent des coûts réels. La mission reste, le financement s'érode.
+1. **Les compétences transférées sans les financements** — réforme après réforme, des missions descendent vers les communes, départements et régions&nbsp;; les compensations, figées ou partielles, décrochent des coûts réels. La mission reste, le financement s'érode.
 2. **Les dotations réduites ou gelées** — quand l'État consolide son budget, la baisse des concours aux collectivités améliore son solde sans qu'aucun service national ne ferme&nbsp;: ce sont des équipements municipaux, des associations locales, des investissements de proximité qui absorbent la coupe, en silence et en ordre dispersé.
 3. **Les normes non financées** — sécurité, accessibilité, environnement&nbsp;: l'État prescrit, la collectivité paie. Le coût politique de la norme est national, son coût budgétaire est local.
 
 Dans les trois cas, la mécanique est la même&nbsp;: **le décideur et le payeur sont dissociés**. Celui qui améliore son solde n'est pas celui qui ferme la piscine municipale.
 
-## Et au bout de la chaîne : les ménages captifs
+## Et au bout de la chaîne&nbsp;: les ménages captifs
 
 Le transfert ne s'arrête pas à la commune — elle n'est qu'un relais. La charge atteint son destinataire final&nbsp;: les habitants, et parmi eux, inégalement, **ceux qui ne peuvent pas se soustraire**. Un ménage mobile choisit sa commune, arbitre entre territoires, part si les services se dégradent. Un ménage captif — dépendant du logement social, des transports publics, de l'école et des équipements de proximité — subit la hausse des tarifs et la fermeture des services sans alternative. C'est le [transfert social](/glossaire/#transfert-social) du cadre anthropique, appliqué à la géographie&nbsp;: derrière le solde de la dette publique se cache une géographie du pouvoir — qui fixe l'ordre ici, qui en absorbe la dette ailleurs.
 
@@ -44,7 +44,7 @@ Elle déplace la question du «&nbsp;combien&nbsp;» vers le «&nbsp;qui&nbsp;»
 
 **Les collectivités ne sont-elles pas responsables de leur propre gestion&nbsp;?** Si — et l'analyse ne prétend pas le contraire. Elle dit autre chose&nbsp;: à gestion égale, la position des collectivités dans la chaîne budgétaire fait d'elles les récipiendaires d'une contrainte décidée ailleurs. La qualité de gestion module l'absorption du choc&nbsp;; elle ne choisit pas le choc.
 
-**Ce mécanisme est-il propre à la France&nbsp;?** Non — le report de la contrainte centrale vers les échelons locaux s'observe dans la plupart des États décentralisés. Le cas français a une particularité&nbsp;: le poids des dotations d'État dans les ressources locales rend le canal « concours gelés » particulièrement direct.
+**Ce mécanisme est-il propre à la France&nbsp;?** Non — le report de la contrainte centrale vers les échelons locaux s'observe dans la plupart des États décentralisés. Le cas français a une particularité&nbsp;: le poids des dotations d'État dans les ressources locales rend le canal «&nbsp;concours gelés&nbsp;» particulièrement direct.
 
 **Où cette analyse est-elle développée&nbsp;?** Dans deux articles de Stéphane Lalut — [«&nbsp;La commune, variable d'ajustement de la République&nbsp;?&nbsp;»](https://www.revue-projet.com/articles/2026-07-lalut-variable-d-ajustement-de-la-republique/11589) (*Revue Projet*, 2026) et [«&nbsp;Budget 2026&nbsp;: la dette commande, les territoires patientent&nbsp;»](https://blogs.mediapart.fr/stephane-lalut/blog/150126/budget-2026-la-dette-commande-les-territoires-patientent) (*Mediapart*, 2026) — et dans le cadre formalisé par [AWP-03](/awp/awp-03/).
 

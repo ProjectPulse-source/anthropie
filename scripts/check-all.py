@@ -40,6 +40,12 @@ HORS_RESEAU = [
     ("compteurs de corpus", "check-corpus-counters.py", []),
     ("parite registre <-> fiches", "check-fiches-registre.py", []),
     ("encodage console des scripts", "check-console-encoding.py", []),
+    # Regle de site (auteur, 2026-09-20) : ponctuation haute et unites ne se
+    # separent jamais de ce qui precede. Bloquant parce qu'une regle de forme
+    # non outillee derive en quelques semaines, et que la faute est invisible
+    # a la relecture -- elle ne se voit qu'a la coupure de ligne, chez le
+    # lecteur, sur le chiffre meme qu'on met en avant.
+    ("typographie francaise (insecables)", "check-typo-fr.py", []),
 ]
 LOCAL = [
     ("couverture GEO FR/EN", "check-geo-coverage.py", []),

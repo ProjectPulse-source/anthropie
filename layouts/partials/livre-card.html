@@ -5,7 +5,12 @@
        (page en français). Une édition anglaise native (ex. ANTHROPY, .Lang = en)
        ne porte pas ce tag. */}}
   {{ if and (eq site.Language.Lang "en") (eq .Lang "fr") }}<p class="livre-card__lang-tag"><em>In French</em></p>{{ end }}
-  {{ with .Params.subtitle }}<p class="livre-card__subtitle">{{ . }}</p>{{ end }}
+  {{/* fr-typo, et non `{{ . }}` : les sous-titres du front matter portent des
+       &nbsp;, qu'un rendu brut echappe en &amp;nbsp; — l'entite s'affichait
+       alors en toutes lettres au lecteur, sur l'accueil et sur /livres/
+       (mesure du 2026-09-20). Le partial applique aussi la typographie
+       francaise et termine par safeHTML. */}}
+  {{ with .Params.subtitle }}<p class="livre-card__subtitle">{{ partial "fr-typo.html" . }}</p>{{ end }}
   <p class="livre-card__description">{{ if and (eq site.Language.Lang "en") .Params.description_en }}{{ partial "desc-figures.html" (dict "text" .Params.description_en "isbn" .Params.isbn "sep" ",") }}{{ else }}{{ partial "desc-figures.html" (dict "text" .Description "isbn" .Params.isbn) }}{{ end }}</p>
   {{ with .Params.isbn }}<p class="livre-card__isbn">ISBN&nbsp;: {{ . }}</p>{{ end }}
   {{/* Affordance fiche — décorative (aria-hidden) : le lien réel est le titre, dont le ::after rend toute la carte cliquable. */}}

@@ -648,8 +648,8 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
     deux couleurs pour une seule serie feraient croire a deux mesures."""
     ans = sorted(annuel)
     pts = [(float(a), annuel[a]) for a in ans] + [(float(ans[-1]) + 0.25, pct_courant)]
-    w, h = 720, 300
-    ml, mr, mt, mb = 44, 16, 30, 34
+    w, h = 720, 320
+    ml, mr, mt, mb = 44, 18, 34, 26
     x0, x1 = pts[0][0], pts[-1][0]
     ymax = 130.0
 
@@ -682,32 +682,51 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
     e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.4" '
              'stroke-linejoin="round"/>' % (ligne, COL_DETTE))
 
-    # Repere = un seuil franchi, donc un fait date, jamais une annee choisie
-    # pour la jolie courbe.
-    reperes = [(ans[0], "%d : %s %%" % (ans[0], fr(annuel[ans[0]])), "start", 0)]
+    # Un repere = un seuil franchi, donc un fait date, jamais une annee choisie
+    # pour la jolie courbe. Disposition voulue par l'auteur le 20/09 : la DATE
+    # en gras au-dessus de la courbe, le POURCENTAGE en couleur chaude dans
+    # l'aire. Elle resout aussi le chevauchement : les etiquettes composees
+    # (« 30 % en 1984 ») se touchaient des que deux reperes etaient proches,
+    # parce que leur largeur ne dependait pas de leur ecart.
+    reperes = [(float(ans[0]), annuel[ans[0]], str(ans[0]),
+                fr(annuel[ans[0]]) + " %", "start")]
     for s in (30, 60, 80, 100):
         an = seuils[s]
-        reperes.append((an, "%d %% en %s" % (s, an), "middle", 0))
-    for an, lib, anchor, _ in reperes:
-        px, py = X(float(an)), Y(annuel[int(an)])
-        e.append('<circle cx="%.1f" cy="%.1f" r="3.4" fill="%s"/>' % (px, py, COL_DETTE))
-        e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="12" fill="%s" '
-                 'text-anchor="%s">%s</text>'
-                 % (px + (5 if anchor == "start" else 0), py - 10, FONT, INK2,
-                    anchor, lib))
-    # Valeur du jour SOUS son point : au-dessus, elle recouvrait l'etiquette du
-    # dernier seuil franchi -- les deux sont proches par construction, puisque
-    # le seuil le plus recent precede forcement le point le plus recent. Vu a
-    # l'ecran le 20/09, pas devine.
-    px, py = X(pts[-1][0]), Y(pct_courant)
-    e.append('<circle cx="%.1f" cy="%.1f" r="5" fill="%s"/>' % (px, py, COL_INTER))
-    e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="13" font-weight="700" '
-             'fill="%s" text-anchor="end">%s %% · %s</text>'
-             % (px - 4, py + 20, FONT, INK2, fr(pct_courant), label_courant))
-    e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="11" fill="%s">%d</text>'
-             % (ml, h - 12, FONT, MUTED, ans[0]))
-    e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="11" fill="%s" '
-             'text-anchor="end">%s</text>' % (w - mr, h - 12, FONT, MUTED, label_courant))
+        reperes.append((float(an), annuel[int(an)], str(an), "%d %%" % s, "middle"))
+    reperes.append((pts[-1][0], pct_courant, label_courant,
+                    fr(pct_courant) + " %", "end"))
+
+    # Anti-collision : deux reperes proches voient leurs etiquettes se toucher,
+    # et le cas se produit par construction a la fin de la serie -- le dernier
+    # seuil franchi precede forcement le point courant. Plutot que d'ecarter le
+    # cas a la main (il se deplacerait au prochain seuil), on replie a gauche
+    # l'etiquette de tout repere dont le suivant est a moins de 95 px. Le
+    # premier garde son ancrage : le replier le sortirait du cadre.
+    espacees = []
+    for i, (xv, yv, date, pct, anchor) in enumerate(reperes):
+        if 0 < i < len(reperes) - 1:
+            if X(reperes[i + 1][0]) - X(xv) < 95:
+                anchor = "end"
+        espacees.append((xv, yv, date, pct, anchor))
+    reperes = espacees
+
+    for xv, yv, date, pct, anchor in reperes:
+        px, py = X(xv), Y(yv)
+        dernier = xv == reperes[-1][0]
+        e.append('<circle cx="%.1f" cy="%.1f" r="%s" fill="%s"/>'
+                 % (px, py, "5" if dernier else "3.4",
+                    COL_INTER if dernier else COL_DETTE))
+        dx = 5 if anchor == "start" else (-5 if anchor == "end" else 0)
+        e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="%d" '
+                 'font-weight="700" fill="%s" text-anchor="%s">%s</text>'
+                 % (px + dx, py - 11, FONT, 13 if dernier else 12, INK2, anchor, date))
+        e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="%d" '
+                 'font-weight="600" fill="%s" text-anchor="%s">%s</text>'
+                 % (px + dx, py + 19, FONT, 13 if dernier else 12, COL_INTER,
+                    anchor, pct))
+    # Pas de libelles d'axe horizontal : les deux bornes de la periode sont
+    # deja portees, en gras, par le premier et le dernier repere. Les repeter
+    # sous l'axe ferait lire deux fois la meme date.
     e.append("</svg>")
     return "\n".join(e) + "\n"
 

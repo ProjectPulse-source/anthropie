@@ -16,7 +16,7 @@ faq:
 
 Un chercheur indépendant est un chercheur qui conduit et publie des travaux **sans affiliation institutionnelle** — ni poste, ni laboratoire, ni financement académique. La question intéressante n'est pas le statut&nbsp;: c'est **comment ce travail devient citable, vérifiable et discutable** sans le crédit a priori que confère une institution. Cette page répond en deux temps&nbsp;: l'infrastructure concrète, puis l'analyse de la position elle-même.
 
-## L'infrastructure : publier hors les murs, mode d'emploi
+## L'infrastructure&nbsp;: publier hors les murs, mode d'emploi
 
 Ce qui était impossible il y a vingt ans est aujourd'hui outillé. La boîte à outils minimale d'un chercheur indépendant&nbsp;:
 
@@ -39,7 +39,7 @@ Sans crédit a priori, la méthode doit porter toute la charge de la preuve. En 
 
 C'est le protocole suivi par la série des [*Anthropie Working Papers*](/serie-awp/)&nbsp;: huit working papers numérotés, chacun avec DOI Zenodo, versions française et anglaise croisées, définitions stables et conditions de réfutation — le corpus qui sert de cas concret à cette page.
 
-## La position analysée : la marge n'est pas un accident
+## La position analysée&nbsp;: la marge n'est pas un accident
 
 Le cadre anthropique offre une lecture de cette position — et il se l'applique à lui-même. Le working paper [AWP-05 — *Penser hors les murs*](/awp/awp-05/) (2026) analyse le champ académique comme un système qui produit son ordre — hiérarchies de légitimité, critères de validité, circuits de reconnaissance — en **exportant du désordre vers ses marges**&nbsp;: les questions trop transversales, les hypothèses trop risquées, les formats hétérodoxes sont relégués vers les revues non indexées, l'auto-publication, la recherche indépendante.
 

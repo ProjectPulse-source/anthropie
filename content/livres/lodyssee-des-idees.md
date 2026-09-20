@@ -56,7 +56,7 @@ faq:
 
 Une traversée de l'histoire des idées, des premiers signes à l'intelligence artificielle. Nouvelle édition entièrement recomposée (2026)&nbsp;: 250 escales, sept chemins de lecture, 696 pages.
 
-> « Ce que nous croyons penser pour la première fois a, presque toujours, déjà été pensé. »
+> «&nbsp;Ce que nous croyons penser pour la première fois a, presque toujours, déjà été pensé.&nbsp;»
 
 ## Argument
 

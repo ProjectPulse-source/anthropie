@@ -40,7 +40,7 @@ La première filiation est économique. Dès 1950, dans *The Social Costs of Pri
 
 ## Georgescu-Roegen&nbsp;: il n'y a pas d'ailleurs infini
 
-La deuxième filiation vient de la bioéconomie. Dans *The Entropy Law and the Economic Process* (1971), Nicholas Georgescu-Roegen établit qu'aucun processus économique n'annule le désordre&nbsp;: toute production d'ordre local se paie d'une dégradation quelque part. La boucle anthropique retient ce résultat comme arrière-plan — la garantie qu'un « déplacement sans reste » n'existe pas — sans importer la thermodynamique&nbsp;: ses réceptacles ne sont pas des réservoirs d'énergie mais des espaces **sociaux, territoriaux et attentionnels**, et sa saturation se lit dans des institutions, pas dans des joules. La leçon conservée est celle du système clos&nbsp;: il n'y a pas d'ailleurs infini.
+La deuxième filiation vient de la bioéconomie. Dans *The Entropy Law and the Economic Process* (1971), Nicholas Georgescu-Roegen établit qu'aucun processus économique n'annule le désordre&nbsp;: toute production d'ordre local se paie d'une dégradation quelque part. La boucle anthropique retient ce résultat comme arrière-plan — la garantie qu'un «&nbsp;déplacement sans reste&nbsp;» n'existe pas — sans importer la thermodynamique&nbsp;: ses réceptacles ne sont pas des réservoirs d'énergie mais des espaces **sociaux, territoriaux et attentionnels**, et sa saturation se lit dans des institutions, pas dans des joules. La leçon conservée est celle du système clos&nbsp;: il n'y a pas d'ailleurs infini.
 
 ## Stiegler&nbsp;: l'homonymie assumée
 

@@ -33,7 +33,7 @@ related:
 related_book: "anthropie-ordre-ici-dette-ailleurs"
 ---
 
-Le champ académique déplace-t-il du désordre épistémique vers ses marges ? Ce working paper applique le cadre anthropique au champ lui-même.
+Le champ académique déplace-t-il du désordre épistémique vers ses marges&nbsp;? Ce working paper applique le cadre anthropique au champ lui-même.
 
 ## Le champ académique comme système de transfert
 
@@ -49,7 +49,7 @@ Le chercheur indépendant est celui sur qui le champ déporte une part de son d�
 
 ## Les infrastructures ouvertes
 
-Les infrastructures ouvertes — Zenodo, ORCID, les licences Creative Commons — modifient-elles cette logique de transfert ? Ce texte soutient qu'elles la reconfigurent sans l'abolir.
+Les infrastructures ouvertes — Zenodo, ORCID, les licences Creative Commons — modifient-elles cette logique de transfert&nbsp;? Ce texte soutient qu'elles la reconfigurent sans l'abolir.
 
 Zenodo permet de déposer un texte avec un DOI permanent, sans passer par le filtre des éditeurs. ORCID fournit une identité académique indépendante des institutions. Mais ces outils ne suppriment pas l'asymétrie de reconnaissance&nbsp;: ils réduisent le coût de la marginalité sans en abolir la logique. Le transfert change de forme — de la relégation silencieuse à la noyade dans le bruit — pas de nature.
 

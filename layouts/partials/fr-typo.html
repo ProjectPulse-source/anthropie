@@ -1,7 +1,25 @@
+{{- /* Typographie francaise appliquee au rendu (titres, sous-titres, libelles).
+
+       La regle du site (auteur, 2026-09-20) : la ponctuation haute et les
+       unites ne se separent jamais de ce qu'elles suivent. Sans insecable, le
+       navigateur peut rejeter le signe seul en debut de ligne — « 19 » d'un
+       cote, « EUR » de l'autre — et c'est precisement le chiffre que la page
+       met en avant qui se casse.
+
+       Ce partial traite ce qui passe par les GABARITS. Le corps des pages est
+       ecrit avec des &nbsp; dans la source et controle par
+       scripts/check-typo-fr.py : transformer du HTML deja assemble abimerait
+       les attributs, le code et le JavaScript inline.
+
+       Termine par safeHTML : un appelant qui rendrait la valeur brute
+       echapperait les &nbsp; du front matter en &amp;nbsp; visibles. */ -}}
 {{- $s := . -}}
 {{- if eq (site.Language.Lang) "fr" -}}
-  {{- $s = replaceRE " ([?!;:»])" "\u202f$1" $s -}}
-  {{- $s = replaceRE "« " "«\u00a0" $s -}}
-  {{- $s = replaceRE " (—|–) " "\u00a0$1 " $s -}}
+  {{- $s = replaceRE " ([?!;:»])" " $1" $s -}}
+  {{- $s = replaceRE "« " "« " $s -}}
+  {{- $s = replaceRE " (—|–) " " $1 " $s -}}
+  {{- /* Unites : insecable pleine, jamais fine — l'usage francais la reserve
+         a la ponctuation haute. */ -}}
+  {{- $s = replaceRE "([0-9]) ([%€])" "$1 $2" $s -}}
 {{- end -}}
 {{- $s | safeHTML -}}

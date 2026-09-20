@@ -55,7 +55,7 @@ Ces trois dimensions ne s'excluent pas. Dans la plupart des configurations obser
 
 ## La discipline du regard
 
-L'anthropie propose une posture analytique qui peut se résumer en une formule&nbsp;: devant tout ordre stable, demander où s'écoule le désordre. Cette « discipline du regard » conduit à interroger systématiquement ce qui est rendu invisible par la stabilité apparente d'un système.
+L'anthropie propose une posture analytique qui peut se résumer en une formule&nbsp;: devant tout ordre stable, demander où s'écoule le désordre. Cette «&nbsp;discipline du regard&nbsp;» conduit à interroger systématiquement ce qui est rendu invisible par la stabilité apparente d'un système.
 
 Elle ne constitue pas une dénonciation abstraite du désordre du monde. Elle vise au contraire à identifier, dans chaque configuration concrète, le mécanisme par lequel un ordre local se maintient en exportant une part de ses coûts — et à rendre lisibles les médiations qui opacifient ce transfert.
 

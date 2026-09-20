@@ -41,7 +41,7 @@ L'anthropie ne prétend pas constituer une théorie achevée. Il s'agit d'une hy
 
 ## Le mot, ses usages, le concept
 
-Le mot « anthropie » dérive du grec *ánthrôpos*, «&nbsp;l'être humain&nbsp;». Il appartient à une famille lexicale ancienne — philanthropie, misanthropie, lycanthropie — où le suffixe *-anthropie* forme des termes relatifs à l'humain.
+Le mot «&nbsp;anthropie&nbsp;» dérive du grec *ánthrôpos*, «&nbsp;l'être humain&nbsp;». Il appartient à une famille lexicale ancienne — philanthropie, misanthropie, lycanthropie — où le suffixe *-anthropie* forme des termes relatifs à l'humain.
 
 Le mot lui-même, ou des formes voisines, a connu des usages dispersés chez plusieurs auteurs, le plus souvent par proximité avec l'entropie, dans des contextes philosophiques, psychanalytiques ou technologiques — Bernard Stiegler, notamment, l'a employé pour désigner une entropie d'origine humaine, à laquelle il opposait la «&nbsp;néguanthropie&nbsp;». Aucun de ces usages n'en avait fixé une définition opératoire en sciences sociales.
 
@@ -53,9 +53,9 @@ Le cadre anthropique se construit comme une discipline du regard&nbsp;: devant t
 
 L'anthropie propose une grille de lecture simple, organisée autour de trois questions&nbsp;:
 
-1. **Qui crée l'ordre ?**
-2. **Qui absorbe le désordre ?**
-3. **Quel mécanisme rend ce transfert invisible ?**
+1. **Qui crée l'ordre&nbsp;?**
+2. **Qui absorbe le désordre&nbsp;?**
+3. **Quel mécanisme rend ce transfert invisible&nbsp;?**
 
 Ces trois questions déplacent le regard. Elles conduisent à ne plus prendre l'ordre pour un donné, mais pour le résultat d'une opération de transfert, de report ou d'externalisation.
 
@@ -89,9 +89,9 @@ Le terme ne vaut donc pas comme métaphore décorative, mais comme hypothèse an
 
 L'anthropie ne se confond pas avec l'Anthropocène.
 
-L'Anthropocène nomme une ère géologique : la trace que les sociétés humaines impriment dans la stratigraphie de la planète. L'anthropie nomme un mécanisme social : la manière dont ces sociétés produisent leurs ordres locaux en déplaçant le désordre — vers d'autres lieux, vers d'autres temps, vers d'autres groupes.
+L'Anthropocène nomme une ère géologique&nbsp;: la trace que les sociétés humaines impriment dans la stratigraphie de la planète. L'anthropie nomme un mécanisme social&nbsp;: la manière dont ces sociétés produisent leurs ordres locaux en déplaçant le désordre — vers d'autres lieux, vers d'autres temps, vers d'autres groupes.
 
-L'une est une marque ; l'autre est un mécanisme. Et le mécanisme précède la marque : l'anthropie peut se lire dès les premiers programmes techniques de l'espèce, sur une profondeur de 3,3 millions d'années, bien avant l'industrialisation qui rend la trace géologique visible. Elle n'invalide donc pas l'Anthropocène. Elle en éclaire la dynamique institutionnelle, en montrant par quels transferts les sociétés en sont venues à laisser une telle trace.
+L'une est une marque&nbsp;; l'autre est un mécanisme. Et le mécanisme précède la marque&nbsp;: l'anthropie peut se lire dès les premiers programmes techniques de l'espèce, sur une profondeur de 3,3 millions d'années, bien avant l'industrialisation qui rend la trace géologique visible. Elle n'invalide donc pas l'Anthropocène. Elle en éclaire la dynamique institutionnelle, en montrant par quels transferts les sociétés en sont venues à laisser une telle trace.
 
 Voir [AWP-02 — *3,3 millions d'années en un principe*](https://stephane-lalut.com/awp/awp-02/) pour l'analyse en longue durée.
 
@@ -151,19 +151,19 @@ Une hypothèse se juge aussi à ce qu'elle concède. Trois objections reviennent
 
 L'anthropie peut être mobilisée dans des champs très différents&nbsp;:
 
-- **Finances publiques**&nbsp;: à qui le coût est-il reporté, dans le temps ou entre groupes sociaux ?
-- **Transition énergétique**&nbsp;: où le désordre matériel est-il déplacé, et sous quelle forme revient-il ?
-- **Recherche académique**&nbsp;: quelles marges absorbent le coût de l'ordre institutionnel ?
-- **Organisation territoriale**&nbsp;: quels territoires héritent des charges que d'autres centres rendent invisibles ?
+- **Finances publiques**&nbsp;: à qui le coût est-il reporté, dans le temps ou entre groupes sociaux&nbsp;?
+- **Transition énergétique**&nbsp;: où le désordre matériel est-il déplacé, et sous quelle forme revient-il&nbsp;?
+- **Recherche académique**&nbsp;: quelles marges absorbent le coût de l'ordre institutionnel&nbsp;?
+- **Organisation territoriale**&nbsp;: quels territoires héritent des charges que d'autres centres rendent invisibles&nbsp;?
 
 Le cadre n'apporte pas une réponse unique à ces questions. Il fournit une manière de les poser avec plus de netteté.
 
 ## Explorer le cadre
 
-- [AWP-01 — *Qu'est-ce que l'anthropie ? Principes d'une hypothèse*](/awp/awp-01/)
+- [AWP-01 — *Qu'est-ce que l'anthropie&nbsp;? Principes d'une hypothèse*](/awp/awp-01/)
 - [AWP-02 — *3,3 millions d'années en un principe*](/awp/awp-02/)
 - [AWP-03 — *Dette publique et anthropie*](/awp/awp-03/)
-- [AWP-04 — *Transition énergétique ou transfert entropique ?*](/awp/awp-04/)
+- [AWP-04 — *Transition énergétique ou transfert entropique&nbsp;?*](/awp/awp-04/)
 - [AWP-05 — *Penser hors les murs*](/awp/awp-05/)
 - [AWP-06 — *Infrastructures numériques et dette technologique*](/awp/awp-06/)
 - [AWP-07 — *La boucle anthropique*](/awp/awp-07/)

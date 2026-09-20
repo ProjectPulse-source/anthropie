@@ -130,6 +130,31 @@ du code.
 
 ## Conventions de contenu
 
-- Typographie française : espaces insécables (`&nbsp;`) avant `:`, `;`, `?`, `!` dans les `.md` français — voir `partials/fr-typo.html` et les fichiers AWP existants.
+### Typographie française — règle de site (auteur, 2026-09-20)
+
+**La ponctuation haute et les unités ne se séparent jamais de ce qui précède.** Espace
+insécable (`&nbsp;` dans les `.md`) devant `;` `:` `!` `?` `»`, après `«`, et entre un
+nombre et son unité (`19&nbsp;€`, `117,5&nbsp;%`). Sans elle, le navigateur rejette le
+signe seul en début de ligne : le « € » passe à la ligne suivante sans son montant, sur
+le chiffre même que la page met en avant.
+
+Deux organes, un seul énoncé :
+
+- **Le corps des pages** est écrit avec des `&nbsp;` dans la source, et contrôlé par
+  `scripts/check-typo-fr.py` — **bloquant** dans `check-all.py --ci`, donc au déploiement.
+  `--corriger` applique ; un chemin en argument ne traite que ce fichier.
+- **Les gabarits** passent leurs libellés par `partials/fr-typo.html`, qui pose les fines
+  insécables, traite les guillemets et les unités, et termine par `safeHTML`.
+
+⚠ **Rendre un champ de front matter avec `{{ . }}` échappe ses `&nbsp;` en `&amp;nbsp;`** —
+l'entité s'affiche alors en toutes lettres au lecteur. Tout sous-titre ou description venant
+du front matter passe par `fr-typo.html`. Défaut mesuré le 2026-09-20 sur dix pages, dont
+l'accueil ; il restait encore `layouts/livres/single.html` (bloc « autres livres ») au moment
+de l'écriture.
+
+La règle précédente tenait en une ligne et n'était outillée nulle part : **426 fautes**
+s'étaient accumulées dans 23 fichiers sans que rien ne le signale. Une règle de forme non
+contrôlée dérive, parce que la faute est invisible à la relecture et ne se voit qu'à la
+coupure de ligne, chez le lecteur.
 - `unsafe = true` dans le renderer Goldmark : HTML inline autorisé dans le markdown.
 - Tout nouveau working paper doit fournir `doi_zenodo` + `url_zenodo` + `pdf_url` (Zenodo community `anthropie-working-papers`) et un pendant `.en.md` avec `translation` croisé.

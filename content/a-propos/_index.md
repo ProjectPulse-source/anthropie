@@ -78,7 +78,7 @@ Stéphane Lalut est économiste, chercheur indépendant et essayiste. Il dévelo
 
 <p class="orcid-link"><a href="https://orcid.org/0009-0002-1794-4895" target="_blank" rel="noopener">ORCID</a> · <a href="https://scholar.google.com/citations?user=J4NqzwSfrHAC" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://zenodo.org/communities/anthropie-working-papers" target="_blank" rel="noopener">Zenodo</a></p>
 
-Direction marketing européenne, conseil au secteur public, entrepreneuriat international : ce parcours a précédé la recherche et l'écriture. Il en explique la méthode — rigueur analytique et attention aux mécanismes concrets par lesquels un coût change de porteur.
+Direction marketing européenne, conseil au secteur public, entrepreneuriat international&nbsp;: ce parcours a précédé la recherche et l'écriture. Il en explique la méthode — rigueur analytique et attention aux mécanismes concrets par lesquels un coût change de porteur.
 
 ## Auteur
 

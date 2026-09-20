@@ -34,7 +34,7 @@ related:
 related_book: "anthropie-ordre-ici-dette-ailleurs"
 ---
 
-La transition énergétique réduit-elle le désordre ou le déplace-t-elle ? Ce working paper examine les mécanismes anthropiques dans les politiques énergétiques contemporaines.
+La transition énergétique réduit-elle le désordre ou le déplace-t-elle&nbsp;? Ce working paper examine les mécanismes anthropiques dans les politiques énergétiques contemporaines.
 
 ## Le paradoxe de la transition
 
@@ -46,7 +46,7 @@ Le passage aux énergies renouvelables repose sur une extraction minière massiv
 
 Ce texte identifie trois mécanismes anthropiques à l'œuvre dans la transition énergétique.
 
-L'extraction externalisée transfère le coût environnemental et social de la production d'énergie « propre » vers des territoires et des populations éloignés des bénéficiaires. Les mines de lithium du Chili, les exploitations de cobalt en République démocratique du Congo produisent le désordre que les panneaux solaires et les batteries européennes rendent invisible.
+L'extraction externalisée transfère le coût environnemental et social de la production d'énergie «&nbsp;propre&nbsp;» vers des territoires et des populations éloignés des bénéficiaires. Les mines de lithium du Chili, les exploitations de cobalt en République démocratique du Congo produisent le désordre que les panneaux solaires et les batteries européennes rendent invisible.
 
 Les déchets reportés transfèrent le coût temporellement. Les infrastructures renouvelables ont une durée de vie limitée — panneaux, batteries, éoliennes — et leur recyclage demeure largement non résolu. Le désordre est reporté vers les décennies à venir.
 
@@ -54,4 +54,4 @@ L'[effet rebond (paradoxe de Jevons)](/effet-rebond/) constitue un effet boomera
 
 ## Au-delà de l'opposition binaire
 
-Le cadre anthropique ne s'oppose pas à la transition énergétique. Il propose de la lire autrement&nbsp;: non comme une solution au désordre, mais comme une reconfiguration de ses circuits de transfert. Cette lecture permet de poser les questions que le récit dominant de la transition tend à neutraliser&nbsp;: où va le désordre que la transition prétend éliminer ?
+Le cadre anthropique ne s'oppose pas à la transition énergétique. Il propose de la lire autrement&nbsp;: non comme une solution au désordre, mais comme une reconfiguration de ses circuits de transfert. Cette lecture permet de poser les questions que le récit dominant de la transition tend à neutraliser&nbsp;: où va le désordre que la transition prétend éliminer&nbsp;?

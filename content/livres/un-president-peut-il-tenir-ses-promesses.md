@@ -73,7 +73,7 @@ De l'ouverture, «&nbsp;Ce que dit le texte, et que la campagne ne dit pas&nbsp;
 
 ## Formats
 
-Le livre paraît le **22 septembre 2026** en broché (284 pages, 19,90 €) et en édition Kindle (9,99 €). L'édition Kindle est **en précommande dès maintenant**&nbsp;: elle se télécharge et se règle le jour de la parution.
+Le livre paraît le **22 septembre 2026** en broché (284 pages, 19,90&nbsp;€) et en édition Kindle (9,99&nbsp;€). L'édition Kindle est **en précommande dès maintenant**&nbsp;: elle se télécharge et se règle le jour de la parution.
 
 ## Sommaire
 

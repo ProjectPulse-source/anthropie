@@ -5,9 +5,9 @@ og_image: "images/og-glossaire.jpg"
 og_image_alt: "Glossaire — Anthropie. On ne crée pas l'ordre, on déplace le désordre."
 ---
 
-Ce glossaire rassemble les termes propres au cadre anthropique. Il ne s'agit pas d'un dictionnaire général : chaque entrée désigne un concept forgé ou réapproprié dans le cadre de l'hypothèse anthropique, et n'a de sens précis que dans ce contexte théorique. Les définitions renvoient aux *Anthropie Working Papers* qui les formalisent et au livre [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) qui les déploie sur l'ensemble du cadre.
+Ce glossaire rassemble les termes propres au cadre anthropique. Il ne s'agit pas d'un dictionnaire général&nbsp;: chaque entrée désigne un concept forgé ou réapproprié dans le cadre de l'hypothèse anthropique, et n'a de sens précis que dans ce contexte théorique. Les définitions renvoient aux *Anthropie Working Papers* qui les formalisent et au livre [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) qui les déploie sur l'ensemble du cadre.
 
-L'anthropie repose sur une hypothèse unique — les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent — dont les termes ci-dessous constituent le vocabulaire opératoire. Ils s'organisent autour de trois ensembles — le **mécanisme** (transfert anthropique et ses trois dimensions), les **seuils** (saturation, coût marginal croissant, effet boomerang), et les **configurations** (agencements historiques du transfert sur 3,3 millions d'années) — auxquels s'ajoute une posture analytique : la **discipline du regard**.
+L'anthropie repose sur une hypothèse unique — les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent — dont les termes ci-dessous constituent le vocabulaire opératoire. Ils s'organisent autour de trois ensembles — le **mécanisme** (transfert anthropique et ses trois dimensions), les **seuils** (saturation, coût marginal croissant, effet boomerang), et les **configurations** (agencements historiques du transfert sur 3,3 millions d'années) — auxquels s'ajoute une posture analytique&nbsp;: la **discipline du regard**.
 
 <dl>
 

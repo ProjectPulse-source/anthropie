@@ -28,13 +28,13 @@ L'économie standard range ces réalités sous la catégorie d'**externalité**&
 
 Cette critique rejoint celle que la tradition du *cost-shifting* de K.&nbsp;William Kapp adressait déjà à l'externalité&nbsp;: le report des coûts n'est pas un raté du marché, c'est un mécanisme systémique — et le corriger demande plus qu'un prix.
 
-## La lecture anthropique : le transfert devenu matière
+## La lecture anthropique&nbsp;: le transfert devenu matière
 
 Le cadre de l'[anthropie](/quest-ce-que-lanthropie/) offre une généalogie de ces héritages. Un système social produit son ordre en déplaçant son désordre — vers d'autres lieux, d'autres temps, d'autres groupes. Quand le réceptacle s'accumule et sature, ce qui reste au sol, dans les nappes, dans les infrastructures en fin de vie, c'est **le transfert anthropique cristallisé dans la matérialité du monde**&nbsp;: un commun négatif est un déplacement de désordre devenu héritage.
 
 Cette lecture relie les deux notions sans les confondre&nbsp;: les communs négatifs décrivent **ce qui reste**&nbsp;; la [boucle anthropique](/boucle-anthropique/) décrit **le trajet** — déplacement, accumulation, saturation, retour. Et elle éclaire la question de la responsabilité que pose Guillaume Vuillemey à propos de l'entreprise&nbsp;: quand la responsabilité limitée sépare l'agir du répondre, les dommages glissent vers les biens communs — l'entreprise disparaît, l'héritage reste.
 
-## Le cas d'école qui vient : le numérique
+## Le cas d'école qui vient&nbsp;: le numérique
 
 Le working paper [AWP-06 — *Infrastructures numériques et dette technologique*](/awp/awp-06/) (2026) range les technologies numériques parmi les **communs négatifs candidats**&nbsp;: data centers dimensionnés pour des décennies, équipements à durée de vie courte et à recyclage non résolu, réseaux dont le démantèlement coûtera plus que personne ne l'a provisionné. Le numérique se présente comme immatériel&nbsp;; ses restes seront très matériels — et partagés. Penser le cloud en communs négatifs, c'est poser aujourd'hui la question que les sols pollués nous ont apprise trop tard&nbsp;: qui héritera de l'infrastructure, et qui en prendra soin&nbsp;?
 

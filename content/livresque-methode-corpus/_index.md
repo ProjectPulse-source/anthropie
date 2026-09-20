@@ -38,7 +38,7 @@ La recomposition de l'édition courante a donné lieu à une vérification compl
 
 Le recueil parle de *voix* plutôt que d'*auteurs*, et ce n'est pas une coquetterie&nbsp;: y voisinent des écrivains et des philosophes, mais aussi des répliques de cinéma, des chansons, des anecdotes littéraires, des mots d'esprit. Une voix est toute source distincte à laquelle une citation est attribuée. L'éclectisme est un principe de composition, pas un défaut de rigueur&nbsp;: chaque citation est rattachée à sa voix, et le décompte des voix suit les mêmes règles de dédoublonnage que celui des citations.
 
-## La méthode : une curation d'auteur, sans classement
+## La méthode&nbsp;: une curation d'auteur, sans classement
 
 *Livresque des mots* refuse les trois ordres attendus d'une anthologie — thématique, alphabétique, chronologique. Les citations sont **tissées pour que le sens naisse du voisinage**&nbsp;: une réplique de cinéma à côté d'un moraliste, une chanson à côté d'un philosophe. Le recueil se lit comme un roman, de page en page — la rencontre qu'aucune recherche par mot-clé n'aurait produite fait le sel de la lecture.
 

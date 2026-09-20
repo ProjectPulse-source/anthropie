@@ -37,7 +37,7 @@ La dette publique n'est pas un simple solde comptable&nbsp;: c'est un mécanisme
 
 ## La dette comme transfert
 
-Le débat sur la dette publique se concentre habituellement sur la question du montant&nbsp;: combien ? Le cadre anthropique déplace la question&nbsp;: qui paie ? La dette n'est pas seulement un chiffre — c'est un mécanisme de transfert qui opère sur deux dimensions simultanées.
+Le débat sur la dette publique se concentre habituellement sur la question du montant&nbsp;: combien&nbsp;? Le cadre anthropique déplace la question&nbsp;: qui paie&nbsp;? La dette n'est pas seulement un chiffre — c'est un mécanisme de transfert qui opère sur deux dimensions simultanées.
 
 Sur l'axe temporel, la dette reporte le coût du désordre présent vers les générations futures. Les dépenses courantes sont financées par un prélèvement sur l'avenir, dont les bénéficiaires ne sont pas consultés et dont ils hériteront sans avoir participé aux arbitrages qui les engagent.
 
@@ -51,4 +51,4 @@ L'analyse met en évidence la dimension sociale du transfert&nbsp;: les groupes 
 
 ## Au-delà du solde comptable
 
-Le cadre anthropique ne propose pas une lecture morale de la dette. Il vise à rendre visible le mécanisme de transfert qui la sous-tend, et à poser la question que les cadres comptables ne formulent pas&nbsp;: non pas « combien coûte la dette ? » mais « qui en supporte le coût, et par quelles médiations ce coût devient-il invisible ? ».
+Le cadre anthropique ne propose pas une lecture morale de la dette. Il vise à rendre visible le mécanisme de transfert qui la sous-tend, et à poser la question que les cadres comptables ne formulent pas&nbsp;: non pas «&nbsp;combien coûte la dette&nbsp;?&nbsp;» mais «&nbsp;qui en supporte le coût, et par quelles médiations ce coût devient-il invisible&nbsp;?&nbsp;».

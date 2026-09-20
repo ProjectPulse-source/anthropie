@@ -18,7 +18,7 @@ faq:
 
 Cette controverse est ancienne et elle mérite ses meilleurs arguments — des deux côtés. Les voici, avec la réponse du cadre de l'[anthropie](/quest-ce-que-lanthropie/).
 
-## L'argument rassurant : «&nbsp;on se la doit à nous-mêmes&nbsp;»
+## L'argument rassurant&nbsp;: «&nbsp;on se la doit à nous-mêmes&nbsp;»
 
 La version classique vient d'Abba Lerner (1948)&nbsp;: si la dette publique est détenue par les résidents du pays, la «&nbsp;rembourser&nbsp;» consiste à prélever sur des contribuables nationaux pour payer des épargnants nationaux. Transfert interne, somme nulle pour la nation&nbsp;: la génération future qui paie est aussi celle qui encaisse. À quoi s'ajoute l'argument du refinancement perpétuel — les États ne remboursent pas leur dette, ils la font rouler — et celui de la croissance&nbsp;: tant qu'elle dépasse le taux d'intérêt, le poids relatif de la dette peut se stabiliser sans effort.
 
@@ -34,7 +34,7 @@ Ces arguments sont sérieux, et le débat académique les a affinés pendant des
 
 **4. L'héritage est double, mais son contenu se choisit.** L'argument le plus solide du camp rassurant est celui de l'actif transmis&nbsp;: une dette qui finance des infrastructures ou de l'éducation lègue un capital avec la charge. La question opératoire devient alors&nbsp;: quelle part de l'emprunt finance de l'investissement transmissible, et quelle part du fonctionnement courant&nbsp;? C'est un critère vérifiable, budget par budget — et il est rarement flatteur.
 
-## La réponse anthropique : déplacer la question du volume vers la répartition
+## La réponse anthropique&nbsp;: déplacer la question du volume vers la répartition
 
 Le cadre anthropique ne tranche pas la controverse macroéconomique — il la déplace. La dette publique est l'exemple canonique du **transfert temporel**&nbsp;: un coût présent reporté vers des payeurs qui n'ont pas participé aux arbitrages. Personne ne vote «&nbsp;contre&nbsp;» les générations futures&nbsp;; on vote pour des budgets qui leur transmettent la facture — et le transfert est d'autant plus efficace qu'il est invisible.
 

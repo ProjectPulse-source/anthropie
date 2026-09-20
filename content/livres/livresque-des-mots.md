@@ -50,7 +50,7 @@ Une anthologie qui refuse l'ordre alphabétique.
 
 {{< stat "citations" >}} citations. {{< stat "auteurs" >}} voix. 25 siècles. Aucun classement par thème, par auteur ou par lettre.
 
-Le pari : que le voisinage des phrases produit du sens là où le classement le fige. Un fragment de Juvénal y côtoie un mot d'Albert Brie ; un aphorisme du XVIIᵉ siècle se laisse rejoindre par une réplique de cinéma. À chaque page, des passerelles inattendues entre œuvres, époques et registres — aphorismes, extraits de romans, anecdotes littéraires, poésies, répliques choisies.
+Le pari&nbsp;: que le voisinage des phrases produit du sens là où le classement le fige. Un fragment de Juvénal y côtoie un mot d'Albert Brie&nbsp;; un aphorisme du XVIIᵉ siècle se laisse rejoindre par une réplique de cinéma. À chaque page, des passerelles inattendues entre œuvres, époques et registres — aphorismes, extraits de romans, anecdotes littéraires, poésies, répliques choisies.
 
 Ce que cherche cette anthologie n'est pas la commodité de la consultation thématique. C'est la résonance — la rencontre qui n'aurait pas dû avoir lieu et qui éclaire.
 
@@ -68,7 +68,7 @@ Un objet littéraire qui se prête au cadeau&nbsp;: à qui et pourquoi, sur la p
 
 ## Au fil des pages
 
-> Esclaves maintenant de plaisirs corrupteurs, / Que leur faut-il ? du pain et des gladiateurs.
+> Esclaves maintenant de plaisirs corrupteurs, / Que leur faut-il&nbsp;? du pain et des gladiateurs.
 >
 > — Juvénal
 
@@ -80,7 +80,7 @@ Un objet littéraire qui se prête au cadeau&nbsp;: à qui et pourquoi, sur la p
 >
 > — Joseph de Maistre
 
-> Je forme une entreprise qui n'eut jamais d'exemple et dont l'exécution n'aura point d'imitateur. Je veux montrer à mes semblables un homme dans toute la vérité de la nature ; et cet homme ce sera moi. Moi seul.
+> Je forme une entreprise qui n'eut jamais d'exemple et dont l'exécution n'aura point d'imitateur. Je veux montrer à mes semblables un homme dans toute la vérité de la nature&nbsp;; et cet homme ce sera moi. Moi seul.
 >
 > — Jean-Jacques Rousseau, *Les Confessions* (incipit)
 
@@ -88,7 +88,7 @@ Un objet littéraire qui se prête au cadeau&nbsp;: à qui et pourquoi, sur la p
 >
 > — Joseph Joubert
 
-> Quelques-uns donnent sans compter ; le reste compte sans donner.
+> Quelques-uns donnent sans compter&nbsp;; le reste compte sans donner.
 >
 > — Albert Brie
 
