@@ -34,6 +34,9 @@ wall_lignes:
     line: "La vraie question n'est pas « qui rembourse ? » mais « qui absorbe le coût ? ». Le livre suit la chaîne, du contribuable d'aujourd'hui aux générations qui n'ont pas voté."
   la-societe-du-premier-coup:
     line: "Tout le monde tombe. Le privilège, c'est que les chutes ne collent pas. Le livre compte ce que les mesures d'inégalité laissent hors champ : le nombre d'essais dont dispose une trajectoire."
+  un-president-peut-il-tenir-ses-promesses:
+    meta: "Parution le 22 septembre 2026"
+    line: "Un président peut décider sans que rien ne se fasse. Une grille en quatre zones pour savoir, avant de voter, où une promesse casse — et après, qui n'a pas pu de qui n'a pas essayé."
   lodyssee-des-idees:
     meta: "Nouvelle édition"
     line: "L'histoire des idées n'est pas un défilé chronologique : c'est un réseau. 250 escales et sept chemins de lecture, de l'aube de l'humanité à l'intelligence artificielle."

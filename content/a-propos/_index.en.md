@@ -27,6 +27,9 @@ wall_lignes:
     line: "The real question is not who repays the debt, but who absorbs its cost. The book follows the chain, from today's taxpayers to generations that never voted."
   la-societe-du-premier-coup:
     line: "Everyone falls. The privilege is that the falls do not stick. The book counts what inequality measures leave out of frame: how many attempts a trajectory actually allows."
+  un-president-peut-il-tenir-ses-promesses:
+    meta: "Published 22 September 2026"
+    line: "A president can decide and nothing happens. A four-zone grid to tell, before voting, where a promise breaks — and afterwards, who could not from who did not try."
   lodyssee-des-idees:
     meta: "New edition"
     line: "The history of ideas is not a chronological parade: it is a network. 250 ports of call and seven itineraries, from the dawn of humanity to artificial intelligence."

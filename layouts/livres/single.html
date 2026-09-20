@@ -40,7 +40,11 @@
                l'affichage en euros passe donc en virgule hors anglais, sans toucher au JSON-LD. */ -}}
         {{ with .Params.price }}{{ $cur := $.Params.currency | default "EUR" }}<p class="book-single__price">{{ if eq $cur "USD" }}${{ . }}{{ else }}{{ if eq $.Lang "en" }}{{ . }}{{ else }}{{ replace . "." "," }}{{ end }}&nbsp;€{{ end }}<span class="book-single__price-note">{{ if eq $.Lang "en" }}Paperback{{ else }}Broché{{ end }}</span></p>{{ end }}
         {{- partial "transmettre.html" . -}}
-        {{ if or .Params.url_amazon_fr .Params.url_amazon_com }}
+        {{- /* Un livre peut n'exister qu'en Kindle — c'est le cas pendant une PRÉCOMMANDE,
+               où la page du broché n'est pas encore ouverte (Promesses 2027, 20/09/2026).
+               La condition portait sur le seul broché : le bloc entier disparaissait, donc
+               aucun bouton d'achat alors que le Kindle était commandable. */ -}}
+        {{ if or .Params.url_amazon_fr .Params.url_amazon_com .Params.url_amazon_fr_kindle .Params.url_amazon_com_kindle }}
           {{- partial "amazon-button.html" . -}}
         {{ end }}
       </div>

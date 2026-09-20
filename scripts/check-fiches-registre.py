@@ -49,6 +49,7 @@ SLUGS = {
     "book-anthropie": "anthropie-ordre-ici-dette-ailleurs",
     "book-dette-publique": "dette-publique-qui-paie-vraiment",
     "book-premier-coup": "la-societe-du-premier-coup",
+    "book-promesses-2027": "un-president-peut-il-tenir-ses-promesses",
     "book-livresque-des-mots": "livresque-des-mots",
     "book-lodyssee-des-idees": "lodyssee-des-idees",
 }

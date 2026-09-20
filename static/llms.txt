@@ -2,7 +2,7 @@
 
 > L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. (EN — Anthropy is the hypothesis that social systems displace disorder rather than resolve it.)
 
-Stéphane Lalut développe le cadre de l'**anthropie** : tout ordre social local se construit en exportant son désordre vers d'autres lieux, d'autres temps ou d'autres groupes sociaux. Le cadre est déployé dans une série d'*Anthropie Working Papers* (Zenodo, CC-BY 4.0, bilingues FR/EN) et trois livres, et appliqué à la dette publique, la transition énergétique, les infrastructures numériques, les inégalités et la recherche indépendante. Deux autres ouvrages, hors corpus anthropique, complètent le catalogue (histoire des idées, anthologie littéraire).
+Stéphane Lalut développe le cadre de l'**anthropie** : tout ordre social local se construit en exportant son désordre vers d'autres lieux, d'autres temps ou d'autres groupes sociaux. Le cadre est déployé dans une série d'*Anthropie Working Papers* (Zenodo, CC-BY 4.0, bilingues FR/EN) et trois livres, et appliqué à la dette publique, la transition énergétique, les infrastructures numériques, les inégalités et la recherche indépendante. Trois autres ouvrages, hors corpus anthropique, complètent le catalogue (histoire des idées, anthologie littéraire, institutions et promesses politiques).
 
 Site : https://stephane-lalut.com
 
@@ -51,10 +51,11 @@ Corpus anthropique :
 
 Hors corpus anthropique :
 
+- [Un président peut-il tenir ses promesses ?](https://stephane-lalut.com/livres/un-president-peut-il-tenir-ses-promesses/) (2026, 284 p.) — ISBN 978-2-9586347-8-0. Sous-titre : « Ce qu'il peut vraiment décider — et ce qui lui échappe ». Essai sur ce qu'une élection présidentielle permet réellement d'obtenir : une grille en quatre zones (ce que le président décide seul, ce qu'il doit faire voter, ce qu'il doit négocier, ce qui ne dépend pas de lui), éprouvée sur neuf promesses — santé, salaires, prix, école, emploi, sécurité, dette, immigration, climat — et un chapitre européen ; 290 entrées sourcées (Constitution, Légifrance, Assemblée nationale, Sénat, Conseil constitutionnel, statistique publique). Aucun conseil de vote. Parution le 22 septembre 2026 ; édition Kindle en précommande.
 - [L'Odyssée des idées](https://stephane-lalut.com/livres/lodyssee-des-idees/) (nouvelle édition 2026, 696 p.) — ISBN 978-2-9586347-4-2 ; Wikidata Q138911733. Histoire des idées et culture générale : 250 escales et sept chemins de lecture, de l'aube de l'humanité à l'intelligence artificielle.
 - [Livresque des mots](https://stephane-lalut.com/livres/livresque-des-mots/) (3e édition 2026, 694 p.) — ISBN 978-2-9586347-0-4 ; Wikidata Q140517745. Anthologie inédite & éclectique de citations : 25 siècles de voix, sans classement, avec un index des auteurs.
 
-Cinq livres au total, publiés en français ; ANTHROPIE existe aussi en édition anglaise (2026). Index : https://stephane-lalut.com/livres/
+Six livres au total, publiés en français ; ANTHROPIE existe aussi en édition anglaise (2026). Index : https://stephane-lalut.com/livres/
 
 ## Publications (presse intellectuelle et revues)
 
@@ -73,7 +74,7 @@ Recensions et articles publiés dans : Alternatives Économiques, La Vie des Id�
 
 > Anthropy is the hypothesis that social systems displace disorder rather than resolve it.
 
-All eight Anthropie Working Papers exist in English with distinct Zenodo DOIs. The foundational book is available in English: *ANTHROPY – A Big History of Civilization's Hidden Costs* (2026, 632 p.); the four other books are published in French only. English entry points:
+All eight Anthropie Working Papers exist in English with distinct Zenodo DOIs. The foundational book is available in English: *ANTHROPY – A Big History of Civilization's Hidden Costs* (2026, 632 p.); the five other books are published in French only. English entry points:
 
 - [What is anthropy?](https://stephane-lalut.com/en/quest-ce-que-lanthropie/) — canonical definition, FAQ, disambiguation (entropy, Anthropocene, anthropic principle)
 - [The Register of Offloaded Costs](https://stephane-lalut.com/en/register-of-offloaded-costs/) — the documentary apparatus of ANTHROPY, fully browsable in English: 165 of the book's 168 milestones on the « Order created / Debt displaced » grid, anchored entry by entry, organized by the seven ages, with the spatial→social→cognitive trajectory

@@ -570,6 +570,44 @@ works:
     related_works: [awp-08]
     notes: "Troisième livre du corpus anthropique — vecteur « déplacement du désordre vers d'autres groupes sociaux ». Met en récit la réversibilité sociale formalisée par AWP-08 (2e intention du paper). Architecture GEO à quatre objets, arbitrée le 2026-07-29 : /reversibilite-sociale/ = racine conceptuelle (maille, faq) · /awp/awp-08/ = formalisation · fiche livre = objet commercial (hors nasse) · /premier-coup/ = compagnon documentaire, SANS faq, adresse imprimée p. 105. Voir docs/ARCHITECTURE_GEO_PREMIER_COUP.md."
 
+  - id: book-promesses-2027
+    type: book
+    canonical_title:
+      fr: "Un président peut-il tenir ses promesses ?"
+      en: ""  # n/a — pas d'édition anglaise
+    subtitle_fr: "Ce qu'il peut vraiment décider — et ce qui lui échappe"
+    publication_date: "2026-09-22"   # parution des DEUX formats ; Kindle en précommande depuis le 17/09
+    isbn: "978-2-9586347-8-0"
+    isbn_13_normalized: "9782958634780"
+    pages: 284  # broché (sync content/livres/un-president-peut-il-tenir-ses-promesses.md)
+    publisher: "Auto-édition"
+    distribution: "Amazon KDP"
+    asin_broche: "2958634787"   # = ISBN-10 du bloc AFNIL ; ⚠ page /dp/ absente avant le 22/09 (404 vérifié le 20/09)
+    asin_kindle: "B0HK1ZYW7C"   # Kindle SANS ISBN (ASIN) — page en précommande depuis le 17/09
+    license: ""  # à préciser
+    wikidata: ""  # todo — item à créer après la parution (navette Wikidata/)
+    openlibrary:
+      edition: ""  # todo — après parution du broché
+      work: ""
+      author: "OL16378291A"    # auteur CANONIQUE (6 œuvres) — ⚠ ne jamais choisir l'homonyme vide OL16378292A
+      cover_id: 0
+    abstract_short:
+      fr: "Un président peut décider sans que rien ne se fasse, faire sans obtenir, obtenir sans avoir causé. L'essai propose une grille en quatre zones — ce qu'il décide seul, ce qu'il doit faire voter, ce qu'il doit négocier, ce qui ne dépendra jamais de lui — et l'éprouve sur neuf promesses écrites, datées et signées, appuyé sur 290 entrées sourcées."
+      en: ""  # à compléter
+    keywords: [présidentielle 2027, institutions françaises, promesses politiques, Constitution, pouvoir exécutif]
+    site_pages:
+      fr: "https://stephane-lalut.com/livres/un-president-peut-il-tenir-ses-promesses/"
+      en: ""  # n/a
+    purchase_url:
+      amazon_fr: ""  # ⚠ à poser le 22/09 : https://www.amazon.fr/dp/2958634787 (404 tant que la page n'est pas ouverte)
+      amazon_fr_kindle: "https://www.amazon.fr/dp/B0HK1ZYW7C"
+    image_url: "https://stephane-lalut.com/images/livres/un-president-peut-il-tenir-ses-promesses.jpg"  # auto-hébergé (assets/images/livres/<slug>.jpg)
+    google_scholar:
+      visible: false
+      citations_observed: 0
+    related_works: []
+    notes: "Quatrième essai du corpus. Grille en quatre zones appliquée à neuf promesses (santé, salaires, prix, école, emploi, sécurité, dette, immigration, climat) plus un chapitre européen ; 290 entrées sourcées. ⚠ Le triplet exact est « écrites, datées et SIGNÉES » : « chiffrées » est faux (quatre promesses sur neuf ne portent aucun chiffre, constat du 06/09) — la description Kindle EN LIGNE le portait encore le 20/09."
+
   - id: book-livresque-des-mots
     type: book
     openlibrary:
