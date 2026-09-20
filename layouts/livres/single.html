@@ -84,7 +84,11 @@
     <ul class="book-others__list">
       {{ range $others }}
       <li class="book-others__item">
-        <a href="{{ .Permalink }}">{{ partial "fr-typo.html" .Title }}</a>{{ with .Params.subtitle }}<span class="book-others__subtitle"> — {{ . }}</span>{{ end }}
+        {{/* fr-typo sur le sous-titre aussi, comme le fait la ligne jumelle
+             plus haut pour `.note` : rendu brut, il echappait ses &nbsp; en
+             &amp;nbsp; VISIBLES au lecteur, sur cinq fiches (mesure du
+             2026-09-20). Le partial termine par safeHTML. */}}
+        <a href="{{ .Permalink }}">{{ partial "fr-typo.html" .Title }}</a>{{ with .Params.subtitle }}<span class="book-others__subtitle"> — {{ partial "fr-typo.html" . }}</span>{{ end }}
       </li>
       {{ end }}
     </ul>
