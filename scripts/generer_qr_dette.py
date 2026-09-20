@@ -52,33 +52,49 @@ URL_MESUREE = URL_NUE + "?src=livre-broche"
 ENCRE = "#1B2A4E"
 
 
-def produire(url: str, nom: str) -> None:
+def produire(url: str, nom: str, encre: str = ENCRE, scale: int = 12,
+             cote_cm: float = 2.5) -> None:
     qr = segno.make(url, error="q")
     svg = DEST / (nom + ".svg")
     png = DEST / (nom + ".png")
     # scale=10 + border=4 : la « quiet zone » de 4 modules est normative, un QR
     # colle au bord d'une page devient illisible sans elle.
-    qr.save(str(svg), scale=10, border=4, dark=ENCRE, light="#FFFFFF")
-    qr.save(str(png), scale=12, border=4, dark=ENCRE, light="#FFFFFF")
-    cote_cm = 2.5
+    qr.save(str(svg), scale=10, border=4, dark=encre, light="#FFFFFF")
+    qr.save(str(png), scale=scale, border=4, dark=encre, light="#FFFFFF")
     modules = qr.symbol_size(scale=1, border=4)[0]
-    print("  %-22s version %-3s  %d modules  %s"
-          % (nom, qr.version, modules, url))
-    print("     %s + %s" % (svg.name, png.name))
+    print("  %-22s version %-3s  %d modules  encre %s  %s"
+          % (nom, qr.version, modules, encre, url))
+    print("     %s + %s (PNG : %d px de cote)"
+          % (svg.name, png.name, modules * scale))
     print("     a %.1f cm de cote, un module fait %.2f mm "
           "(0,4 mm est le minimum pratique pour un lecteur de telephone)"
           % (cote_cm, cote_cm * 10 / modules))
+    print("     et le PNG y sort a %d dpi (300 est le minimum KDP pour un interieur)"
+          % round(modules * scale / (cote_cm / 2.54)))
 
 
 def main() -> int:
     args = sys.argv[1:]
     DEST.mkdir(parents=True, exist_ok=True)
+
+    def option(nom_court: str, defaut):
+        return args[args.index(nom_court) + 1] if nom_court in args else defaut
+
+    # ⛔ Une ENCRE DE COULEUR n'a rien a faire dans un interieur imprime en noir
+    # et blanc : KDP convertit en niveaux de gris, le bleu tombe vers un gris
+    # moyen et le contraste du QR s'effondre la ou personne ne le verifiera.
+    # Pour le LIVRE : --encre "#000000". Pour le SITE : le defaut.
+    encre = option("--encre", ENCRE)
+    scale = int(option("--scale", 12))
+    cote = float(option("--cote-cm", 2.5))
+
     if "--url" in args:
-        produire(args[args.index("--url") + 1], "qr-personnalise")
+        produire(option("--url", URL_NUE), option("--nom", "qr-personnalise"),
+                 encre, scale, cote)
         return 0
     print("QR du livre Dette Publique -> page du compteur\n")
-    produire(URL_MESUREE, "qr-dette-broche")     # recommande : mesurable
-    produire(URL_NUE, "qr-dette-url-nue")        # si le parametre n'est pas voulu
+    produire(URL_MESUREE, "qr-dette-broche", encre, scale, cote)  # recommande : mesurable
+    produire(URL_NUE, "qr-dette-url-nue", encre, scale, cote)     # si le parametre n'est pas voulu
     print("\nDossier : %s" % DEST)
     print("RAPPEL : ce QR va dans le LIVRE, jamais dans le contenu A+ Amazon.")
     return 0
