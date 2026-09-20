@@ -720,10 +720,33 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
         e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="%d" '
                  'font-weight="700" fill="%s" text-anchor="%s">%s</text>'
                  % (px + dx, py - 11, FONT, 13 if dernier else 12, INK2, anchor, date))
+        # Le pourcentage doit etre SOUS la courbe, pas a une distance fixe du
+        # point : la ou la pente est forte -- 2009, 2020 -- la ligne replonge
+        # dans le texte quelques pixels plus loin. On prend donc le point le
+        # plus bas de la courbe sur la LARGEUR REELLE de l'etiquette, et on se
+        # pose en dessous. Mesure a l'ecran le 20/09 : « 80 % » etait traverse
+        # par la courbe.
+        corps = 13 if dernier else 12
+        larg = 0.58 * corps * len(pct)
+        tx = px + dx
+        gx0 = tx if anchor == "start" else (tx - larg if anchor == "end"
+                                            else tx - larg / 2)
+        bas = py
+        pas = max(1.0, (gx1 := gx0 + larg) - gx0) / 12.0
+        xi = gx0
+        while xi <= gx1:
+            # inverse de X() : retrouver l'annee sous ce pixel, puis son y
+            an_x = x0 + (xi - ml) / (w - ml - mr) * (x1 - x0)
+            an_x = min(max(an_x, x0), x1)
+            prec = [p for p in pts if p[0] <= an_x] or [pts[0]]
+            suiv = [p for p in pts if p[0] >= an_x] or [pts[-1]]
+            a, b = prec[-1], suiv[0]
+            v = a[1] if b[0] == a[0] else a[1] + (b[1] - a[1]) * (an_x - a[0]) / (b[0] - a[0])
+            bas = max(bas, Y(v))
+            xi += pas
         e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="%d" '
                  'font-weight="600" fill="%s" text-anchor="%s">%s</text>'
-                 % (px + dx, py + 19, FONT, 13 if dernier else 12, COL_INTER,
-                    anchor, pct))
+                 % (tx, bas + 17, FONT, corps, COL_INTER, anchor, pct))
     # Pas de libelles d'axe horizontal : les deux bornes de la periode sont
     # deja portees, en gras, par le premier et le dernier repere. Les repeter
     # sous l'axe ferait lire deux fois la meme date.

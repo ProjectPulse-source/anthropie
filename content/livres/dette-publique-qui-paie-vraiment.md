@@ -12,6 +12,7 @@ amazon_reviews: 29       # nb d'avis Amazon.fr ; omettre les 2 champs = pas d'é
 pages: 224  # sync data/works.yaml (book-dette-publique.pages) — nombre de pages broché
 description_en: "A focused application of the anthropic framework to the question of public debt. Who, ultimately, bears the cost of fiscal imbalances — present taxpayers, future generations, foreign creditors, or the ecological commons? The book maps the displacement chains by which sovereign debt redistributes disorder across time and across borders."
 price: "19"  # prix broché EUR — affiché sur la page + schema.org Offer
+kindle_price: "9.99"  # prix EUR de l'édition Kindle (auteur, 20/09/2026) — rendu par le shortcode appel-livre ; format schema.org, séparateur décimal = point
 serie: "anthropie"
 weight: 2
 wikidata_qid: "Q138910896"

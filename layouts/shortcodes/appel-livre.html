@@ -33,7 +33,9 @@
     <p class="appel-livre__meta">
       {{- with $p.price }}<span class="appel-livre__prix">{{ . }}&nbsp;€</span>{{ end }}
       {{- with $p.pages }}<span>broché, {{ . }}&nbsp;pages</span>{{ end }}
-      {{- with $kindle }}<span>édition Kindle disponible</span>{{ end }}
+      {{- /* kindle_price est stocke au format schema.org (separateur point),
+             comme `price` : on le rend a la francaise, jamais tel quel. */ -}}
+      {{- with $kindle }}<span>Kindle{{ with $p.kindle_price }}&nbsp;{{ replace . "." "," }}&nbsp;€{{ end }}</span>{{ end }}
       {{- if and $p.amazon_rating $p.amazon_reviews }}
       {{- /* La note est un flottant : rendue telle quelle, elle sort avec un
              point decimal anglais au milieu d'une page francaise. */ -}}
@@ -44,7 +46,7 @@
     </p>
     <p class="appel-livre__actions">
       {{- with $broche }}<a class="appel-livre__btn appel-livre__btn--plein" href="{{ . }}">Acheter le broché{{ with $p.price }}&nbsp;— {{ . }}&nbsp;€{{ end }}</a>{{ end }}
-      {{- with $kindle }}<a class="appel-livre__btn" href="{{ . }}">Édition Kindle</a>{{ end }}
+      {{- with $kindle }}<a class="appel-livre__btn" href="{{ . }}">Édition Kindle{{ with $p.kindle_price }}&nbsp;— {{ replace . "." "," }}&nbsp;€{{ end }}</a>{{ end }}
     </p>
     <p class="appel-livre__fiche"><a href="{{ $livre.RelPermalink }}">Sommaire, extraits et recensions&nbsp;→</a></p>
   </div>
