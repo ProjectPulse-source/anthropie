@@ -53,6 +53,28 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-21 — Bloc « Réutiliser » : composant à cartes, source unique des figures
+
+**Motif.** Contre-expertise sur les maquettes A/B/C (`PRO-20260921-MAQUETTES-REUTILISER`, pièce
+entrée hors navette, arbitrée) : les six fichiers se cachaient dans des parenthèses. Variante A+
+retenue.
+
+**Source unique.** `update_dette_insee.py` écrit `data/figures_dette.json` (titre, « ce que
+montre », source et période, précaution, fichiers ; FR et EN). La précaution y est la même phrase
+que dans le cartouche de l'image : une seule définition, dans `LABELS_CARTOUCHE`. Fichier séparé
+du jeu public, dont l'empreinte décide de la date de relevé.
+
+**Composant.** `{{< reutiliser >}}` : une carte par figure, précaution en évidence, PNG en action
+principale ; citation au format du site, résumé en trois phrases, données. Taille et ratio des
+vignettes lus dans les SVG réels. Aucune ligne de JavaScript nouvelle (`copy-citation.js`) ni de
+style de bouton nouveau (`how-to-cite__btn`). `{{< reutiliser-ancre >}}` en tête de page et
+`{{< fig-actions >}}` sous chaque figure du corps. JSON-LD : figures en `ImageObject` avec licence.
+
+**À retenir pour les captures.** Le HTML référence son CSS par une URL absolue de production : une
+capture sur `hugo server` affiche la page avec le CSS **en ligne**, donc sans les styles non encore
+poussés. Construire avec `--baseURL http://127.0.0.1:<port>/` dans un dossier temporaire et le
+servir tel quel.
+
 ### 2026-09-21 — Page dette : figures citables, droits par type, résumé repris
 
 **Motif.** Contre-expertise `PRO-20260921-064850` (arbitrage archivé) : la page est

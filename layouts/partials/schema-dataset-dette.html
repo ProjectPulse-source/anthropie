@@ -118,6 +118,28 @@
     "url" $a.canonicalProfileUrl
     "sameAs" $sameAs -}}
 
+{{- /* Figures : ImageObject, pas DataDownload -- ce ne sont pas des distributions
+       du jeu de donnees mais des images qui en derivent. Lues depuis
+       data/figures_dette.json (source unique, ecrite par le generateur) : aucune
+       liste recopiee. Champs de licence reconnus par les moteurs d'images
+       (license, acquireLicensePage, creditText, creator). Arbitrage
+       PRO-20260921-MAQUETTES-REUTILISER, point 8. */ -}}
+{{- $imgs := slice -}}
+{{- with index site.Data "figures_dette" -}}
+  {{- range index . (cond (eq site.Language.Lang "en") "en" "fr") -}}
+    {{- $imgs = $imgs | append (dict
+        "@type" "ImageObject"
+        "name" .titre
+        "caption" .montre
+        "contentUrl" (printf "%simg/%s.png" site.BaseURL .fichier)
+        "encodingFormat" "image/png"
+        "license" "https://creativecommons.org/licenses/by/4.0/"
+        "acquireLicensePage" (printf "%s#reutiliser" $.Permalink)
+        "creditText" "Stéphane Lalut"
+        "creator" $personne) -}}
+  {{- end -}}
+{{- end -}}
+
 {{- $ds := dict
     "@context" "https://schema.org"
     "@type" "Dataset"
@@ -143,7 +165,8 @@
         "@type" "DataDownload"
         "name" "dette_officielle.json"
         "encodingFormat" "application/json"
-        "contentUrl" (printf "%sdette_officielle.json" site.BaseURL))) -}}
+        "contentUrl" (printf "%sdette_officielle.json" site.BaseURL)))
+    "image" $imgs -}}
 <script type="application/ld+json">
 {{ $ds | jsonify (dict "indent" "  ") | safeJS }}
 </script>
