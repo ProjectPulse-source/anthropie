@@ -53,6 +53,40 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-21 (nuit, suite) — Diptyque dette, étapes 3 et 4 + P4 + pages voisines : TOUT LIVRÉ
+
+**Fait :**
+
+- **Figures de « Qui paie »** — `scripts/generer_figures_qui_paie.py` (local, PNG rendus dans la même
+  exécution que les SVG, arrêt si cairosvg manque : pas de dérive possible, donc pas de contrôle de plus).
+  **F1** détention, deux panneaux sans lien de proportion, depuis le **registre du livre** (même source que
+  la p. 101) ; **F2** prélèvements et transferts par dixième, Insee Analyses n° 118 figure 1c, fichier
+  archivé dans `scripts/sources/` et contrôlé par empreinte ; **F3** schéma non quantitatif. Sorties :
+  `static/img/qui-paie-*`, `data/figures_qui_paie.json`, `data/` + `static/qui_paie_donnees.json`.
+  Les phrases qualitatives de la page (« plus de la moitié », « varient beaucoup moins ») sont vérifiées
+  par le générateur. `maj_edition.py` du livre relance ce script (étape bloquante) : la figure suit le registre.
+- **Page « Qui paie »** : section « Ce que les données permettent de voir » (F1, F2 + tableau), F3 dans les
+  canaux, bloc « Réutiliser » (étape 4) avant le prolongement, ancre de tête. Aucun chiffre en dur : shortcode
+  `qp-val`, placeholders `{qp.*}` dans la FAQ. Shortcode `figure-svg` : dimensions lues dans le SVG.
+- **P4** — « À l'échelle d'un foyer » sur « Combien coûte » FR et EN, calculé au build (`interets-par-foyer`) :
+  charge Eurostat de l'année / foyers fiscaux du registre (DGFiP Statistiques n° 32, lu à la source). Précaution
+  de l'arbitrage dans le texte.
+- **Pages voisines** `/dette-publique-generations-futures/` et `/dette-publique-collectivites-locales/`
+  réécrites au conditionnel (même diagnostic que « qui paie ») ; r < g avec le solde primaire.
+- **`reutiliser.html`** : texte des données paramétrable (`donnees=`), licence nommant les producteurs réels.
+- **JSON-LD FAQ, tout le site** : les réponses sortaient avec `&#39;` au lieu de l'apostrophe (texte échappé
+  pour le HTML puis mis en JSON) — 44 pages, 0 entité après correction (`schema-faqpage.html`).
+- **Défaut du registre du livre trouvé en construisant F1** : sous-secteurs 2 840 / 310 / 240 / 70 portés par
+  aucune publication ; INSEE IR n° 79 dit 2 822,7 / 293,1 / 275,7 / 69,0. Corrigé à la source (registre,
+  p. 102) ; extrait cité sur la fiche du livre aligné.
+
+**Contrôles** : `check-all.py --reseau` 8/8 à 0 ; build sans avertissement ; rendu des trois figures vu
+(légende de F2 et cadres de F3 corrigés après le premier rendu) ; anciennes formules : 0 sur quatre pages,
+témoin positif sur les versions commitées.
+
+**Reste** : EN du volet 2 non fait (P8, décision de l'arbitrage) ; figures de « qui paie » hors JSON-LD
+(les quatre de la page du coût y sont).
+
 ### 2026-09-21 (nuit) — Diptyque dette, étape 2 : « Qui paie » réécrit, bandeau commun posé
 
 **Fait** (arbitrage `D:\PRO\.claude\external-audits\ARBITRATIONS\PRO-20260921-DIPTYQUE_arbitrage.md`, § 6, étape 2) :

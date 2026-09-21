@@ -88,11 +88,11 @@ Du chapitre 7, «&nbsp;Une dette, trois visages — les créanciers invisibles&n
 
 > La dette publique française de 3 460 milliards n'est pas un bloc monolithique. Elle se divise en trois réalités aux destins opposés.
 >
-> La dette de l'État (2 840 milliards, 82% du total) a pris le large. Plus de la moitié est détenue par des non-résidents&nbsp;: fonds de pension américains, banques allemandes, assureurs japonais. Résultat&nbsp;: une part des intérêts que verse l'État quitte chaque année la France, vers ces porteurs du reste du monde.
+> La dette de l'État (2 823 milliards, 82% du total) a pris le large. Plus de la moitié est détenue par des non-résidents&nbsp;: fonds de pension américains, banques allemandes, assureurs japonais. Résultat&nbsp;: une part des intérêts que verse l'État quitte chaque année la France, vers ces porteurs du reste du monde.
 >
-> La dette des collectivités locales (240 milliards, 7%) reste, elle, profondément française. Vos communes, départements et régions empruntent à 70% auprès de banques hexagonales, La Banque Postale en tête. Aucun fonds vautour new-yorkais ne spécule sur la dette de votre mairie.
+> La dette des collectivités locales (276 milliards, 8%) reste, elle, profondément française. Vos communes, départements et régions empruntent à 70% auprès de banques hexagonales, La Banque Postale en tête. Aucun fonds vautour new-yorkais ne spécule sur la dette de votre mairie.
 >
-> La dette sociale (310 milliards, 9%) finance hôpitaux et Sécurité sociale, avec un profil mixte entre les deux.
+> La dette sociale (293 milliards, 8%) finance hôpitaux et Sécurité sociale, avec un profil mixte entre les deux.
 
 *Pour offrir la version Kindle par lien prépayé&nbsp;: [mode d'emploi](/offrir-un-livre-kindle/).*
 

@@ -1,44 +1,46 @@
 ---
 title: "Dette publique : pourquoi les collectivités locales sont-elles la variable d'ajustement ?"
-description: "La contrainte budgétaire de l'État ne disparaît pas : elle descend. Compétences transférées sans financements, dotations réduites, ajustement absorbé par les communes — puis par les ménages captifs. L'analyse du transfert, mécanisme par mécanisme."
+description: "Quand l'État consolide son budget, une part de sa contrainte peut descendre vers les collectivités : compétences transférées sans financements complets, dotations réduites ou gelées, normes non financées. Les communes, qui ne peuvent pas emprunter pour fonctionner, la reportent sur l'impôt local, les tarifs, les services ou l'investissement. Les mécanismes, leurs conditions, et qui peut en supporter le coût."
 date: 2026-07-24
-lastmod: 2026-07-24
+lastmod: 2026-09-21
 faq:
   - question: "Pourquoi dit-on que les collectivités locales sont la variable d'ajustement du budget de l'État ?"
-    answer: "Parce que la contrainte budgétaire de l'État ne disparaît pas : elle se déplace. Quand l'État doit réduire son déficit, il transfère des compétences sans les financements correspondants, réduit ou gèle ses dotations, et impose aux collectivités des normes coûteuses qu'elles doivent financer. Le solde de l'État s'améliore ; la charge descend d'un étage."
+    answer: "Parce qu'une part de la contrainte budgétaire de l'État peut se déplacer vers elles. Quand l'État réduit son déficit, il peut transférer des compétences sans les financements correspondants, réduire ou geler ses dotations, et imposer des normes que les collectivités financent. Le solde de l'État s'améliore ; une partie de la charge descend d'un étage. L'ampleur de ce report se mesure réforme par réforme."
   - question: "Les collectivités locales sont-elles très endettées ?"
-    answer: "Non — leur dette est une part minoritaire de l'endettement public national, encadrée par la « règle d'or » : elles ne peuvent emprunter que pour investir, jamais pour leur fonctionnement courant. C'est précisément ce qui fait d'elles une variable d'ajustement commode : ne pouvant pas reporter la contrainte sur la dette, elles la reportent sur l'impôt local, les tarifs, les services — c'est-à-dire sur les habitants."
+    answer: "Non — leur dette est une part minoritaire de l'endettement public national, encadrée par la « règle d'or » : elles ne peuvent emprunter que pour investir, jamais pour leur fonctionnement courant. C'est ce qui fait d'elles une variable d'ajustement commode : ne pouvant pas reporter la contrainte sur la dette, elles la reportent sur l'impôt local, les tarifs, les services ou l'investissement — c'est-à-dire, d'une manière ou d'une autre, sur les habitants."
   - question: "Qui absorbe finalement l'ajustement transféré aux communes ?"
-    answer: "Les habitants les moins mobiles. Un ménage aisé peut choisir sa commune, arbitrer, partir ; un ménage captif — locataire social, dépendant des services publics locaux, sans mobilité résidentielle — subit la hausse des tarifs, la dégradation des équipements et la fermeture des services sans alternative. Le transfert suit la ligne de moindre résistance : il frappe ceux qui ne peuvent pas partir."
+    answer: "Cela dépend des choix de chaque collectivité. L'hypothèse du cadre anthropique est que l'ajustement peut peser davantage sur les habitants les moins mobiles : un ménage aisé peut choisir sa commune ou partir ; un ménage qui dépend du logement social, des transports et des services publics locaux subit plus directement une hausse des tarifs ou une fermeture de service. Des tarifs sociaux, des arbitrages entre services ou une hausse d'impôt mieux répartie peuvent déplacer cette charge : c'est commune par commune que la question se tranche."
   - question: "Où cette analyse est-elle développée ?"
     answer: "Dans deux articles de Stéphane Lalut — « La commune, variable d'ajustement de la République ? » (Revue Projet, 2026) et « Budget 2026 : la dette commande, les territoires patientent » (Mediapart, 2026) —, dans le working paper AWP-03 (DOI 10.5281/zenodo.19268769) et dans le livre Dette Publique : Qui paie vraiment ? (2025)."
 ---
 
-À la question «&nbsp;pourquoi les collectivités locales sont-elles la variable d'ajustement des finances publiques&nbsp;?&nbsp;», la réponse tient en une phrase&nbsp;: **parce que la contrainte budgétaire de l'État ne disparaît pas — elle descend**, d'étage en étage, jusqu'aux ménages qui ne peuvent pas partir.
+À la question «&nbsp;pourquoi les collectivités locales sont-elles la variable d'ajustement des finances publiques&nbsp;?&nbsp;», la réponse tient à leur position dans la chaîne budgétaire&nbsp;: **quand l'État consolide son budget, une part de sa contrainte peut descendre vers les collectivités, qui ne peuvent pas la reporter sur la dette**. Reste à savoir, commune par commune, qui en supporte le coût.
 
-Le débat public sur la dette des collectivités est presque toujours descriptif&nbsp;: encours, règle d'or, part dans la dette nationale. Cette page pose l'autre question, avec le cadre de l'[anthropie](/quest-ce-que-lanthropie/)&nbsp;: par quels mécanismes la charge se déplace-t-elle de l'État vers les territoires, et des territoires vers qui&nbsp;?
+Le débat public sur la dette des collectivités est presque toujours descriptif&nbsp;: encours, règle d'or, part dans la dette nationale. Cette page pose l'autre question, avec le cadre de l'[anthropie](/quest-ce-que-lanthropie/)&nbsp;: par quels mécanismes la charge peut-elle se déplacer de l'État vers les territoires, et des territoires vers qui&nbsp;?
 
 ## Le paradoxe apparent&nbsp;: peu endettées, très contraintes
 
 La dette des collectivités territoriales est une part minoritaire de l'endettement public, et elle est strictement encadrée&nbsp;: la «&nbsp;règle d'or&nbsp;» leur interdit d'emprunter pour financer leur fonctionnement courant. À première vue, les finances locales sont donc le bon élève du système.
 
-C'est précisément ce verrou qui fait d'elles une variable d'ajustement commode. L'État, lui, peut reporter sa contrainte sur la dette — c'est-à-dire sur l'avenir. Les communes ne le peuvent pas&nbsp;: quand la charge descend vers elles, elles n'ont que trois issues, toutes immédiates — l'impôt local et les tarifs, la coupe dans les services, ou le renoncement à l'investissement. **La contrainte que l'État différait dans le temps devient, un étage plus bas, une contrainte que quelqu'un paie tout de suite.**
+C'est précisément ce verrou qui fait d'elles une variable d'ajustement commode. L'État, lui, peut reporter sa contrainte sur la dette — c'est-à-dire sur l'avenir. Les communes ne le peuvent pas&nbsp;: quand la charge descend vers elles, elles ont trois issues, toutes immédiates — l'impôt local et les tarifs, la coupe dans les services, ou le renoncement à l'investissement. **La contrainte que l'État peut différer dans le temps devient, un étage plus bas, une contrainte que quelqu'un paie tout de suite.**
 
 ## Les trois mécanismes du transfert
 
-1. **Les compétences transférées sans les financements** — réforme après réforme, des missions descendent vers les communes, départements et régions&nbsp;; les compensations, figées ou partielles, décrochent des coûts réels. La mission reste, le financement s'érode.
-2. **Les dotations réduites ou gelées** — quand l'État consolide son budget, la baisse des concours aux collectivités améliore son solde sans qu'aucun service national ne ferme&nbsp;: ce sont des équipements municipaux, des associations locales, des investissements de proximité qui absorbent la coupe, en silence et en ordre dispersé.
+1. **Les compétences transférées sans les financements complets** — réforme après réforme, des missions descendent vers les communes, départements et régions&nbsp;; quand les compensations sont figées ou partielles, elles décrochent des coûts réels. La mission reste, le financement s'érode.
+2. **Les dotations réduites ou gelées** — quand l'État consolide son budget, la baisse des concours aux collectivités améliore son solde sans qu'aucun service national ne ferme&nbsp;: ce sont des équipements municipaux, des associations locales, des investissements de proximité qui peuvent absorber la coupe, en ordre dispersé.
 3. **Les normes non financées** — sécurité, accessibilité, environnement&nbsp;: l'État prescrit, la collectivité paie. Le coût politique de la norme est national, son coût budgétaire est local.
 
 Dans les trois cas, la mécanique est la même&nbsp;: **le décideur et le payeur sont dissociés**. Celui qui améliore son solde n'est pas celui qui ferme la piscine municipale.
 
-## Et au bout de la chaîne&nbsp;: les ménages captifs
+## Et au bout de la chaîne&nbsp;: une hypothèse sur les ménages les moins mobiles
 
-Le transfert ne s'arrête pas à la commune — elle n'est qu'un relais. La charge atteint son destinataire final&nbsp;: les habitants, et parmi eux, inégalement, **ceux qui ne peuvent pas se soustraire**. Un ménage mobile choisit sa commune, arbitre entre territoires, part si les services se dégradent. Un ménage captif — dépendant du logement social, des transports publics, de l'école et des équipements de proximité — subit la hausse des tarifs et la fermeture des services sans alternative. C'est le [transfert social](/glossaire/#transfert-social) du cadre anthropique, appliqué à la géographie&nbsp;: derrière le solde de la dette publique se cache une géographie du pouvoir — qui fixe l'ordre ici, qui en absorbe la dette ailleurs.
+La commune n'est qu'un relais&nbsp;: la charge finit par atteindre des habitants, par l'impôt local, les tarifs ou les services. L'hypothèse du cadre anthropique est qu'elle peut peser davantage sur **ceux qui ne peuvent pas se soustraire**. Un ménage mobile choisit sa commune, arbitre entre territoires, part si les services se dégradent&nbsp;; un ménage qui dépend du logement social, des transports publics, de l'école et des équipements de proximité subit plus directement une hausse des tarifs ou une fermeture de service. C'est le [transfert social](/glossaire/#transfert-social) du cadre anthropique, appliqué à la géographie.
+
+L'hypothèse se vérifie décision par décision&nbsp;: quel service a été réduit, quel tarif relevé, pour quels usagers. Elle serait affaiblie par des ajustements portant surtout sur les ménages aisés, ou compensés par des tarifs sociaux — et ces cas ne se relisent pas après coup comme des confirmations.
 
 ## Ce que cette lecture change
 
-Elle déplace la question du «&nbsp;combien&nbsp;» vers le «&nbsp;qui&nbsp;»&nbsp;: la santé apparente des finances locales ne mesure pas l'absence de charge, mais son passage vers des porteurs moins visibles. Elle éclaire aussi un angle mort du débat sur la dette&nbsp;: l'ajustement budgétaire national se joue pour partie hors du budget de l'État, dans des milliers de décisions locales dont aucune n'est imputée à la contrainte qui les a produites. Le transfert est d'autant plus efficace qu'il est invisible.
+Elle déplace la question du «&nbsp;combien&nbsp;» vers le «&nbsp;qui&nbsp;»&nbsp;: la santé apparente des finances locales ne mesure pas l'absence de charge, elle peut aussi traduire son passage vers des porteurs moins visibles. Elle éclaire un angle mort du débat sur la dette&nbsp;: une part de l'ajustement budgétaire national se joue hors du budget de l'État, dans des milliers de décisions locales qu'aucun compte n'impute à la contrainte qui les a produites.
 
 ## Questions fréquentes
 
@@ -50,6 +52,6 @@ Elle déplace la question du «&nbsp;combien&nbsp;» vers le «&nbsp;qui&nbsp;»
 
 ## Pour aller plus loin
 
-- [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/) — la page maîtresse&nbsp;: tous les mécanismes de transfert, dont celui-ci.
+- [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/) — les rôles, les canaux, leurs conditions, et ce que les données permettent de voir.
 - [La dette publique est-elle un fardeau pour les générations futures&nbsp;?](/dette-publique-generations-futures/) — l'autre canal du transfert, temporel celui-là.
-- [AWP-03 — *Dette publique et anthropie*](/awp/awp-03/) (DOI&nbsp;: 10.5281/zenodo.19268769, PDF en accès libre) et le livre [*Dette Publique&nbsp;: Qui paie vraiment&nbsp;?*](/livres/dette-publique-qui-paie-vraiment/) (2025, 224&nbsp;p.).
+- [AWP-03 — *Dette publique et anthropie*](/awp/awp-03/) (DOI&nbsp;: 10.5281/zenodo.19268769, PDF en accès libre) et le livre [*Dette Publique&nbsp;: Qui paie vraiment&nbsp;?*](/livres/dette-publique-qui-paie-vraiment/) (2025).
