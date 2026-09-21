@@ -3,12 +3,15 @@
        résolus depuis works.yaml (corpus_stats) via l'ISBN de la page — ou stats_isbn
        pour les pages sans ISBN propre (ex. pages offrir). NO-OP sinon. */ -}}
 {{- $isbn := or .Params.isbn .Params.stats_isbn -}}
+{{- /* htmlUnescape : le partial rend son texte echappe pour le HTML (' -> &#39;) ;
+       dans une chaine JSON, l'entite se lirait en toutes lettres. jsonify echappe
+       lui-meme ce qui doit l'etre. Constate le 2026-09-21 sur toutes les FAQ. */ -}}
 {{- $mainEntity := slice -}}
 {{- range .Params.faq -}}
   {{- $mainEntity = $mainEntity | append (dict
       "@type" "Question"
       "name" .question
-      "acceptedAnswer" (dict "@type" "Answer" "text" (partial "desc-figures.html" (dict "text" .answer "isbn" $isbn)))) -}}
+      "acceptedAnswer" (dict "@type" "Answer" "text" (partial "desc-figures.html" (dict "text" .answer "isbn" $isbn) | htmlUnescape))) -}}
 {{- end -}}
 {{- $faq := dict
     "@context" "https://schema.org"
