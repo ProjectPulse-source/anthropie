@@ -9,12 +9,14 @@ faq:
   - question: "La dette publique est-elle un fardeau pour les générations futures ?"
     answer: "Pas mécaniquement. Les générations suivantes héritent des engagements, mais aussi de ce qu'ils ont financé — infrastructures, formation, patrimoine public — et d'une partie des titres eux-mêmes, détenus directement ou par l'assurance-vie. Le transfert net dépend de l'usage : une dette qui finance une consommation courante sans contrepartie durable leur transmet surtout un coût ; un investissement dont elles profiteront peut leur transmettre davantage qu'il ne coûte. Ce qui reste vrai dans tous les cas : la décision est prise sans elles."
   - question: "Qui détient la dette publique française ?"
-    answer: "Pour les titres négociables de l'État, premier emprunteur public, la Banque de France publie, via l'Agence France Trésor, une répartition des porteurs par secteur, en valeur de marché : non-résidents, banques, assureurs, fonds et autres porteurs français. Le classement se fait par résidence du détenteur, non par nationalité, et un ménage peut détenir des titres indirectement, par son assurance-vie ou un fonds. Surtout, détenir n'est pas payer : le porteur a avancé les fonds et en reçoit la rémunération ; la répartition des porteurs ne dit pas qui supporte la charge finale."
+    answer: "L'État porte {qp.etat_pct} % de la dette publique ({qp.periode_a}, INSEE). Pour ses titres négociables, la Banque de France publie, via l'Agence France Trésor, une répartition des porteurs en valeur de marché : au premier trimestre 2026, {qp.nonres_pct} % sont détenus par des non-résidents, {qp.bafs_pct} % par des banques, assureurs et fonds français, {qp.autres_fr_pct} % par d'autres porteurs français — parmi lesquels la Banque de France, dont la part n'est pas publiée. Le classement se fait par résidence du détenteur, non par nationalité, et un ménage peut détenir des titres indirectement, par son assurance-vie ou un fonds. Surtout, détenir n'est pas payer : le porteur a avancé les fonds et en reçoit la rémunération ; la répartition des porteurs ne dit pas qui supporte la charge finale."
   - question: "Faut-il rembourser la dette publique ?"
     answer: "Chaque titre arrivé à échéance est remboursé, mais la dette dans son ensemble se refinance : l'État émet de nouveaux titres pour rembourser les anciens, et le stock évolue avec le déficit. Le remboursement intégral du stock est donc une hypothèse largement théorique. La question opératoire porte sur ce que la dette organise pendant qu'elle roule : qui supporte les intérêts, sur quels budgets portent les ajustements, qui hérite des engagements et de ce qu'ils ont financé. Le refinancement reporte une échéance ; il ne désigne à lui seul aucun perdant."
 ---
 
 {{< dossier-dette volet="2" >}}
+
+{{< reutiliser-ancre >}}
 
 Qui paie la dette publique&nbsp;? La question est vécue avant d'être technique&nbsp;: l'impôt qui augmente, le service public qui se resserre, l'épargne que l'inflation rogne. Demander qui supporte les coûts, qui reçoit les revenus et qui décide est une bonne discipline, à condition de ne pas fixer la réponse d'avance. Ce qui se défend tient en une proposition conditionnelle&nbsp;: **la répartition des effets de la dette dépend de ce qu'elle finance, de la manière dont elle est financée et des ajustements choisis pour la servir&nbsp;; certaines configurations peuvent reporter des coûts sur des groupes moins capables de les éviter.**
 
@@ -30,6 +32,21 @@ Une même personne tient souvent plusieurs de ces rôles&nbsp;: elle paie l'imp�
 
 Reste une question que toute réponse doit nommer&nbsp;: «&nbsp;qui paie&nbsp;» — par rapport à quelle autre décision&nbsp;? Moins emprunter aurait signifié augmenter un impôt, renoncer à une dépense ou la décaler. Attribuer une perte suppose de dire à quelle alternative on la compare.
 
+## Ce que les données permettent de voir
+
+Trois choses se mesurent&nbsp;: qui emprunte, qui détient les titres, et qui contribue ou reçoit aujourd'hui.
+
+{{< figure-svg fichier="qui-paie-detention" alt="Deux panneaux de barres horizontales, séparés. En haut, la dette publique par administration emprunteuse, en valeur nominale : l'État très largement en tête. En bas, les porteurs des titres négociables de l'État, en valeur de marché : les non-résidents en tête." >}}Deux champs distincts&nbsp;: A en valeur nominale (INSEE), B en valeur de marché (Banque de France, via l'Agence France Trésor). Les valeurs viennent du même registre que la figure de la p.&nbsp;101 du livre.{{< /figure-svg >}}
+{{< fig-actions id="detention" >}}
+
+**Qui emprunte, qui détient.** L'État porte l'essentiel de la dette publique&nbsp;: {{< qp-val "etat_mdeur" >}}&nbsp;milliards d'euros sur {{< qp-val "total_mdeur" >}}, soit {{< qp-val "etat_pct" >}}&nbsp;%, {{< qp-val "periode_a" >}}. Ses titres négociables sont détenus, au premier trimestre 2026, à {{< qp-val "nonres_pct" >}}&nbsp;% par des non-résidents&nbsp;; banques, assureurs et fonds français en portent ensemble {{< qp-val "bafs_pct" >}}&nbsp;%&nbsp;; les autres porteurs français, {{< qp-val "autres_fr_pct" >}}&nbsp;%, comprennent la Banque de France, dont la source ne publie pas la part. Les deux panneaux ne se combinent pas&nbsp;: le premier est en valeur nominale, le second en valeur de marché, et aucun des deux ne dit qui supporte la charge.
+
+{{< figure-svg fichier="qui-paie-redistribution" alt="Barres par dixième de niveau de vie, en 2023. Au-dessus de zéro, les transferts reçus, d'un niveau voisin d'un dixième à l'autre ; sous zéro, les prélèvements, qui croissent fortement du premier au dernier dixième." >}}Insee, comptes nationaux distribués 2023 (*Insee Analyses* n°&nbsp;118, 16&nbsp;avril 2026, figure&nbsp;1c), en euros par unité de consommation.{{< /figure-svg >}}
+{{< fig-actions id="redistribution" >}}
+{{< qp-tableau-redistribution >}}
+
+**Qui contribue, qui reçoit aujourd'hui.** Les comptes nationaux distribués de l'Insee répartissent, pour {{< qp-val "cd_annee" >}}, prélèvements et transferts publics entre les dixièmes de niveau de vie. Les prélèvements vont de {{< qp-val "d1_prel" >}}&nbsp;€ par unité de consommation pour les 10&nbsp;% les plus modestes à {{< qp-val "d10_prel" >}}&nbsp;€ pour les 10&nbsp;% les plus aisés, environ {{< qp-val "ratio_prel" >}}&nbsp;fois plus&nbsp;; les transferts reçus — prestations en espèces et services publics valorisés en euros — varient beaucoup moins, de {{< qp-val "recu_min" >}} à {{< qp-val "recu_max" >}}&nbsp;€. La même année, la puissance publique a versé plus qu'elle n'a prélevé&nbsp;: {{< qp-val "solde_uc" >}}&nbsp;€ par unité de consommation en moyenne, {{< qp-val "solde_mdeur" >}}&nbsp;milliards au total, financés par endettement. C'est un bénéfice présent financé à crédit, que l'Insee répartit par convention — moitié en moindres prélèvements, moitié en transferts supplémentaires. Ces comptes décrivent qui contribue et qui reçoit aujourd'hui&nbsp;; ils ne disent pas qui paiera demain la dette qui finance l'écart.
+
 ## Par quels canaux la charge se répartit
 
 Une dette se sert par quatre voies, qui se combinent&nbsp;:
@@ -40,6 +57,9 @@ Une dette se sert par quatre voies, qui se combinent&nbsp;:
 - **la restructuration**, cas extrême où la perte revient aux porteurs des titres.
 
 Le refinancement, lui, reporte une échéance&nbsp;; il ne désigne à lui seul aucun perdant. Et en face de ces coûts se trouve ce que la dette a financé&nbsp;: les bénéfices, présents et futurs, de la dépense publique entrent dans le bilan au même titre que la charge.
+
+{{< figure-svg fichier="qui-paie-mecanismes" alt="Schéma sans quantités : le service de la dette mène, par des flèches d'égale épaisseur, à quatre canaux possibles — prélèvements, dépenses et prestations, inflation, restructuration — ; le refinancement reporte l'échéance ; en regard, ce que la dette a financé." >}}Schéma de mécanismes possibles&nbsp;: aucun poids relatif ni effet causal n'y est mesuré.{{< /figure-svg >}}
+{{< fig-actions id="mecanismes" >}}
 
 ## Les générations futures — ce dont elles héritent
 
@@ -75,6 +95,10 @@ Un budget contraint par le service de la dette peut reporter les dépenses dont 
 Aucune statistique ne dit, à elle seule, qui supporte au bout du compte la charge de la dette française&nbsp;: l'incidence finale d'un euro d'intérêts dépend des ajustements choisis année après année, et de l'alternative à laquelle on les compare. Une répartition actuelle des impôts et des prestations décrit qui contribue et qui reçoit aujourd'hui&nbsp;; elle n'identifie pas les payeurs futurs de la dette. Une moyenne par ménage n'est pas une facture individuelle&nbsp;: elle est compatible avec une dispersion considérable, et une personne qui reçoit beaucoup de prestations peut perdre à une réforme précise.
 
 Ce qui peut s'établir, c'est l'effet d'une décision déterminée — une réforme, un gel, un report — sur des groupes définis d'avance. C'est à ce niveau que la question «&nbsp;qui paie&nbsp;?&nbsp;» reçoit des réponses vérifiables.
+
+{{< reutiliser figures="figures_qui_paie" jeu="qui_paie_donnees" sources="Insee et Banque de France via l'AFT" donnees="Détention de la dette publique (registre du livre, sources INSEE et Banque de France) et comptes nationaux distribués 2023 de l'Insee, avec leurs périodes, unités et conventions." >}}
+La répartition des effets de la dette publique dépend de ce qu'elle finance, de la manière dont elle est financée et des ajustements choisis pour la servir&nbsp;; certaines configurations peuvent reporter des coûts sur des groupes moins capables de les éviter. Les données disponibles montrent qui emprunte, qui détient les titres de l'État et qui contribue ou reçoit aujourd'hui — pas qui supportera la charge finale. Une perte ne s'attribue qu'à une décision déterminée, comparée à son alternative.
+{{< /reutiliser >}}
 
 ## D'où vient cette analyse
 
