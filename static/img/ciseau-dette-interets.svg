@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-labelledby="cz-t cz-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 528" role="img" aria-labelledby="cz-t cz-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="cz-t">Le ciseau de la dette publique française : encours et charge d'intérêts, 1995-2026</title>
 <desc id="cz-d">Deux courbes en pourcentage du PIB. En haut, la dette publique passe de 57,8 % du PIB en T4 1995 à 117,5 % au T1 2026. En bas, les intérêts versés par les administrations publiques passent de 3,5 % du PIB en 1995 à un creux de 1,3 % en 2020, puis remontent à 2,2 % en 2025.</desc>
 <text x="46" y="22" font-size="13" fill="#52514e">Dette publique des administrations, en % du PIB (INSEE, trimestriel)</text>
@@ -42,4 +42,8 @@
 <text x="67.4" y="311.0" font-size="12" fill="#52514e" text-anchor="start">3,5 %</text>
 <circle cx="574.4" cy="402.6" r="3.5" fill="#eb6834"/>
 <text x="574.4" y="420.6" font-size="12" fill="#52514e" text-anchor="middle">1,3 % en 2020</text>
+<line x1="0" y1="484.0" x2="720" y2="484.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="0" y="497.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">INSEE, dette de Maastricht (T1 2026)  ·  Eurostat gov_10a_main, intérêts D41PAY (2025)</text>
+<text x="0" y="509.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Deux échelles distinctes, une même unité : le % du PIB.</text>
+<text x="0" y="521.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/cout-de-la-dette-publique/</text>
 </svg>

@@ -89,7 +89,7 @@
   {{- $h := $d.dette_annuelle_longue -}}
   {{- if not $h }}{{ errorf "dette-chiffres: bloc dette_annuelle_longue absent du JSON (relancer le script)" }}{{ end -}}
   <figure class="dette-chiffres__figure">
-    <img src="{{ $T.svg }}" width="720" height="320" loading="lazy"
+    <img src="{{ $T.svg }}" width="720" height="368" loading="lazy"
          alt="{{ printf $T.alt (index $a "hist_annee_debut") (index $a "dette_periode") (index $a "hist_pct_debut") (index $a "hist_seuil_30_annee") (index $a "hist_seuil_60_annee") (index $a "hist_seuil_80_annee") (index $a "hist_seuil_100_annee") (index $a "dette_pct_pib") }}">
   </figure>
   <ul class="dette-chiffres__faits">

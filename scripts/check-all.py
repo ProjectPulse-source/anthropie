@@ -47,6 +47,14 @@ HORS_RESEAU = [
     # lecteur, sur le chiffre meme qu'on met en avant.
     ("typographie francaise (insecables)", "check-typo-fr.py", []),
 ]
+LOCAL_DERIVES = [
+    # Les PNG des figures de la dette sont derives EN LOCAL, alors que leurs SVG
+    # sont regeneres chaque semaine en CI : le jour ou un chiffre bouge, le PNG
+    # reste en arriere sans rien casser, et continue d'etre propose au
+    # telechargement. Hors --ci : la CI ne les produit pas, elle n'a donc rien
+    # a en dire. Condition de mort dans la docstring du controle.
+    ("PNG des figures <-> leurs SVG", "check-png-dette.py", []),
+]
 LOCAL = [
     ("couverture GEO FR/EN", "check-geo-coverage.py", []),
 ]
@@ -81,7 +89,7 @@ def main() -> int:
     a = ap.parse_args()
     lots = list(HORS_RESEAU)
     if not a.ci:
-        lots += LOCAL
+        lots += LOCAL + LOCAL_DERIVES
     if a.reseau:
         lots += RESEAU
     print(f"check-all : {len(lots)} controle(s){' (mode CI)' if a.ci else ''}")

@@ -53,6 +53,31 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-21 — Page dette : figures citables, droits par type, résumé repris
+
+**Motif.** Contre-expertise `PRO-20260921-064850` (arbitrage archivé) : la page est
+transmise comme ressource, mais elle sollicitait l'achat avant d'exposer sa méthode, sa
+licence n'apparaissait qu'une fois en fin de page, et ses figures circulaient **nues** —
+aucune ne portait sa source, son millésime ni sa précaution.
+
+**Figures.** `update_dette_insee.py` pose désormais un cartouche de trois lignes au pied
+des six SVG (source + millésime, précaution de lecture, licence + URL). Le cadre gagne
+48 px ; les `height` des `<img>` ont suivi dans les deux pages et dans
+`partials/dette-chiffres.html`, faute de quoi le ratio annoncé au navigateur mentirait.
+La longueur des lignes n'a pas été estimée : **mesurée au rendu** — la première version, en
+deux lignes, sortait du cadre sans rien casser.
+
+**PNG.** Option `--png` : six PNG à 1440 px dérivés des SVG, hors chaîne automatique. Le
+workflow n'installe aucune dépendance, et faire dépendre la mise à jour des *données* d'une
+bibliothèque d'images mettrait l'essentiel à la merci de l'accessoire. Leur péremption est
+guettée par `scripts/check-png-dette.py` (empreinte du SVG source), branché dans
+`check-all.py` hors `--ci` ; témoin vérifié dans les deux sens (0 → 1 → 0). Condition de
+mort écrite dans sa docstring.
+
+**Pages.** Bloc « Réutiliser cette page » : droits énoncés **par type** — données, graphiques,
+texte — au point de téléchargement, plus trois phrases citables (question, apport, limite).
+L'appel au livre est passé après la section méthodologique.
+
 ### 2026-09-19 — Ressources offertes : phrase de transmission, « relais » retiré, note Amazon datée
 
 **Demande de l'auteur.** Zone de transmission de `/ressources-offertes/` et des cinq pages par livre :

@@ -385,6 +385,70 @@ def _line_path(pts: list[tuple[float, float]]) -> str:
     return "M" + " L".join("%.1f,%.1f" % (x, y) for x, y in pts)
 
 
+# ------------------------------------------------------------- CARTOUCHE
+# Une figure REPRISE voyage sans sa page : le lecteur qui la colle dans un
+# diaporama emporte la courbe et laisse sur place la source, le millesime, la
+# licence et la precaution. Le cartouche les attache a l'image elle-meme --
+# c'est le seul endroit qu'une reprise ne peut pas oublier.
+# HAUTEUR : CARTOUCHE_H s'ajoute a la hauteur utile de chaque figure. Les
+# attributs `height` des <img> qui les servent doivent suivre, sinon le ratio
+# annonce au navigateur ment et la page saute au chargement.
+CARTOUCHE_H = 48
+
+LABELS_CARTOUCHE = {
+    "fr": {
+        "licence": "Compilation Stéphane Lalut, CC BY 4.0 · "
+                   "stephane-lalut.com/cout-de-la-dette-publique/",
+        "taux": "Taux apparent = intérêts de l'année / encours au "
+                "31 décembre précédent, non le taux d'emprunt du jour.",
+        "ciseau": "Deux échelles distinctes, une même unité : "
+                  "le % du PIB.",
+        "longue": "Dette au sens de Maastricht, toutes administrations "
+                  "publiques.",
+    },
+    "en": {
+        "licence": "Compiled by Stéphane Lalut, CC BY 4.0 · "
+                   "stephane-lalut.com/en/cost-of-french-public-debt/",
+        "taux": "Effective rate = a year's interest / debt outstanding at the "
+                "end of the previous year, not today's borrowing rate.",
+        "ciseau": "Two separate scales, one shared unit: % of GDP.",
+        "longue": "Maastricht debt, general government.",
+    },
+}
+
+
+def _esc(s: str) -> str:
+    """Le cartouche porte des URL et des libelles : `&` casserait le XML."""
+    return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def cartouche(w: int, y0: float, source: str, note_cle: str,
+              lang: str) -> list:
+    """Deux lignes de pied : sources + millesime, puis licence + precaution.
+
+    Rendu en 9 px sur 720 px de large. La longueur n'est pas ESTIMEE, elle est
+    verifiee au rendu (`--png`) : un depassement ne casse rien et ne se voit
+    pas dans le fichier -- le texte sort simplement du cadre, en silence.
+    """
+    T = LABELS_CARTOUCHE[lang]
+    # TROIS lignes, et non deux : mesure du 21/09, la ligne unique
+    # "licence + precaution" sortait du cadre a 720 px -- sans rien casser et
+    # sans se voir dans le fichier. Une ligne par role, chacune sous 110
+    # caracteres, ce que le rendu confirme.
+    lignes = [(source, INK2)]
+    note = T.get(note_cle, "")
+    if note:
+        lignes.append((note, INK2))
+    lignes.append((T["licence"], MUTED))
+    out = ['<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" '
+           'stroke-width="1"/>' % (y0, w, y0, GRID)]
+    for i, (txt, col) in enumerate(lignes):
+        out.append('<text x="0" y="%.1f" font-family="%s" font-size="9" '
+                   'fill="%s">%s</text>'
+                   % (y0 + 13 + i * 12, FONT, col, _esc(txt)))
+    return out
+
+
 NBSP = " "  # U+00A0 pose par code, jamais tape
 
 # Libelles des figures, par locale. MEME regle que le bloc "affichage" : un seul
@@ -460,7 +524,7 @@ def build_svg(dette_pib: dict[str, float], d41_pib: dict[str, float],
     e = []
     e.append('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" '
              'role="img" aria-labelledby="cz-t cz-d" font-family="%s">'
-             % (SVG_W, SVG_H, FONT))
+             % (SVG_W, SVG_H + CARTOUCHE_H, FONT))
     e.append('<title id="cz-t">%s</title>' % L["titre"])
     e.append('<desc id="cz-d">%s</desc>'
              % (L["desc"] % (dec(dette_pib[first_q]), quarter(first_q),
@@ -538,6 +602,14 @@ def build_svg(dette_pib: dict[str, float], d41_pib: dict[str, float],
     dot_label(tx, ty, COL_INTER,
               dec(d41_pib[trough_y]) + L["en_annee"] + trough_y, anchor="middle", dx=0, dy=18)
 
+    src = ("INSEE, dette de Maastricht (%s)  ·  "
+           "Eurostat gov_10a_main, intérêts D41PAY (%s)"
+           if lang == "fr" else
+           "INSEE, Maastricht debt (%s)  ·  "
+           "Eurostat gov_10a_main, interest D41PAY (%s)")
+    e += cartouche(SVG_W, SVG_H + 4,
+                   src % (quarter(max(dette_pib)), max(d41_pib)),
+                   "ciseau", lang)
     e.append("</svg>")
     return "\n".join(e) + "\n"
 
@@ -597,7 +669,7 @@ def build_svg_taux(taux: dict[str, float], lang: str = "fr") -> str:
     e = []
     e.append('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" '
              'role="img" aria-labelledby="ta-t ta-d" font-family="%s">'
-             % (W, H, FONT))
+             % (W, H + CARTOUCHE_H, FONT))
     e.append('<title id="ta-t">%s</title>' % (T["titre"] % (first, last)))
     e.append('<desc id="ta-d">%s</desc>'
              % (T["desc"] % (num(taux[first]), first, num(taux[trough]), trough,
@@ -637,6 +709,11 @@ def build_svg_taux(taux: dict[str, float], lang: str = "fr") -> str:
         "end", -9, -10)
     dot(xt, y(taux[trough]), num(taux[trough]) + T["en_annee"] + trough,
         "middle", 0, 22)
+
+    src = ("Calcul sur séries Eurostat (gov_10a_main) et INSEE, %s-%s"
+           if lang == "fr" else
+           "Computed on Eurostat (gov_10a_main) and INSEE series, %s-%s")
+    e += cartouche(W, H + 4, src % (first, last), "taux", lang)
     e.append("</svg>")
     return "\n".join(e) + "\n"
 
@@ -687,7 +764,8 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
             + " L %.1f %.1f Z" % (X(x1), h - mb))
 
     e = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" '
-         'width="%d" height="%d" role="img" aria-labelledby="dl-t dl-d">' % (w, h, w, h)]
+         'width="%d" height="%d" role="img" aria-labelledby="dl-t dl-d">'
+         % (w, h + CARTOUCHE_H, w, h + CARTOUCHE_H)]
     e.append('<title id="dl-t">' + L["titre"] % (ans[0], label_courant) + '</title>')
     e.append('<desc id="dl-d">' + L["desc"]
              % (nb(annuel[ans[0]]), ans[0], seuils[30], seuils[60], seuils[80],
@@ -770,6 +848,10 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
     # Pas de libelles d'axe horizontal : les deux bornes de la periode sont
     # deja portees, en gras, par le premier et le dernier repere. Les repeter
     # sous l'axe ferait lire deux fois la meme date.
+
+    src = ("INSEE, dette de Maastricht, %s-%s" if lang == "fr"
+           else "INSEE, Maastricht debt, %s-%s")
+    e += cartouche(w, h + 4, src % (ans[0], label_courant), "longue", lang)
     e.append("</svg>")
     return "\n".join(e) + "\n"
 
@@ -815,9 +897,43 @@ def atomic_write(path: Path, text: str) -> None:
     os.replace(tmp, path)
 
 
+def rendre_png(svgs: list) -> None:
+    """Derive un PNG par SVG et note l'empreinte de la source dans un manifeste.
+
+    L'absence de cairosvg n'est pas une panne : c'est le cas NORMAL hors du
+    poste local. Elle se DIT, elle ne se tait pas -- un silence ici laisserait
+    croire que les PNG viennent d'etre refaits.
+    """
+    try:
+        import cairosvg
+    except ImportError:
+        print("PNG non rendus : cairosvg absent (cas normal hors poste local).")
+        return
+    import hashlib
+    manifeste = {
+        "_avertissement": ("Empreinte du SVG source au moment du rendu du PNG."
+                           " Controle : scripts/check-png-dette.py"),
+        "sources": {},
+    }
+    for svg in svgs:
+        png = svg.with_suffix(".png")
+        cairosvg.svg2png(url=str(svg), write_to=str(png), output_width=1440,
+                         background_color="white")
+        manifeste["sources"][png.name] = hashlib.sha256(
+            svg.read_bytes()).hexdigest()
+    # Manifeste dans data/ : c'est un artefact INTERNE de controle, il n'a
+    # rien a faire parmi les fichiers servis au public.
+    cible = REPO / "data" / "png_dette_source.json"
+    cible.write_text(json.dumps(manifeste, ensure_ascii=False, indent=1) + "\n",
+                     encoding="utf-8")
+    print("OK: %d PNG rendus (1440 px) + manifeste d'empreintes."
+          % len(manifeste["sources"]))
+
+
 def main() -> int:
     args = sys.argv[1:]
     check_only = "--check" in args
+    faire_png = "--png" in args
     legacy_path = None
     if "--legacy" in args:
         legacy_path = Path(args[args.index("--legacy") + 1])
@@ -1173,6 +1289,15 @@ def main() -> int:
 
     for chemin, contenu in sorties:
         atomic_write(chemin, contenu)
+
+    # PNG : derives des SVG, JAMAIS dans la chaine automatique. Rendre une image
+    # demande une dependance graphique ; l'exiger en CI ferait dependre la mise a
+    # jour des DONNEES d'une bibliotheque d'images -- l'essentiel suspendu a
+    # l'accessoire. Ils sont donc produits ici a la demande, et leur peremption
+    # est guettee par scripts/check-png-dette.py, qui compare l'empreinte du SVG
+    # source a celle du SVG courant.
+    if faire_png:
+        rendre_png([c for c, _ in sorties if c.suffix == ".svg"])
     print("OK: ecrits %s + endpoint + %s + %s%s"
           % (OUT_JSON.name, OUT_SVG.name, OUT_SVG_TAUX.name,
              " -- CONTENU INCHANGE (dates conservees, aucun diff attendu)"
