@@ -53,6 +53,39 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-21 (nuit) — Diptyque dette, étape 2 : « Qui paie » réécrit, bandeau commun posé
+
+**Fait** (arbitrage `D:\PRO\.claude\external-audits\ARBITRATIONS\PRO-20260921-DIPTYQUE_arbitrage.md`, § 6, étape 2) :
+
+- **`/qui-paie-la-dette-publique/` réécrit** : thèse au conditionnel (la répartition dépend des
+  usages, du financement et des ajustements ; certaines configurations *peuvent* reporter des coûts
+  sur les moins mobiles) ; repère de méthode (emprunteur / créancier / bénéficiaire / celui qui
+  supporte le coût, et le contrefactuel) ; quatre canaux (prélèvements, dépenses, inflation,
+  restructuration ; le refinancement ne désigne aucun perdant) ; **les trois réparations** —
+  avantages transmis avec la dette, financement du créancier ≠ gain net, éviction écologique à
+  établir cas par cas ; objections (dont r < g **avec le solde primaire**) ; section des limites ;
+  livre **après** la méthode, par `appel-livre` en fin de page. FAQ dérivée du corps : plus aucun
+  chiffre en dur (« 82 % », « plus de moitié », « créanciers étrangers » retirés).
+- **Bandeau commun** `{{< dossier-dette volet="1|2" >}}` (shortcode + `_reutiliser.scss`) sur « Combien
+  coûte » FR et EN et sur « Qui paie » ; fonction de chaque volet affichée ; sur la page anglaise,
+  le volet 2 est signalé « in French » (`hreflang="fr"`). Il remplace la ligne en italique de tête.
+- **Capillarité** — mêmes affirmations sur deux pages voisines, corrigées : fiche du livre (l'extrait
+  cité de la p. 102 est aligné sur **l'édition en ligne**, relue dans le PDF publié : 2 840 / 240 /
+  310 Md€, « non-résidents », plus de « 30 milliards s'envolent » ; « montre » → « soutient ») ;
+  `/dette-publique-generations-futures/` (FAQ et § 2 : « non-résidents », daté T1 2026, source BdF via AFT).
+
+**Contrôles** : `hugo --minify` code 0 ; `check-all.py --reseau` 8/8 à 0 ; rendu relu (bandeaux sur les
+trois pages, FAQ JSON-LD à 4 questions, première mention du livre après « D'où vient cette analyse ») ;
+recherche des anciennes formulations : 0 sur le site, témoin positif sur la version précédente.
+
+**Reste ouvert, dans l'ordre de l'arbitrage :** P4 (charge par foyer) suspendu ; **étape 3** figures
+F1 (détention, depuis le registre du livre — voir le point 3 ci-dessous), F2 (Insee Analyses n° 118,
+**à vérifier à la source avant construction**), F3 (schéma non quantitatif) ; **étape 4** bloc
+« Réutiliser » de « Qui paie ». Pages voisines, non réécrites (hors périmètre) : l'ouverture
+« la réponse tient en une phrase » de `/dette-publique-collectivites-locales/` et la FAQ catégorique
+(« n'ont pas voix au chapitre », « vers les groupes captifs ») de `/dette-publique-generations-futures/`
+relèvent du même diagnostic.
+
 ### 2026-09-21 — Pages dette : ponts réciproques posés ; figures suivantes À REPRENDRE après le 23/09
 
 **Fait.** Pont visible dans les deux sens entre « Combien coûte » et « Qui paie vraiment » : en tête
@@ -78,8 +111,8 @@ par l'auteur à 95 %.
    Cadence annuelle (révision du livre). Le générateur vit dans le dépôt `D:\PRO`, la figure
    dans celui du site : commit site à chaque révision, et contrôle de dérive par empreinte
    (modèle `check-png-dette.py`).
-   ⚠ La FAQ de « qui paie » porte des chiffres **en dur** (« 82 % du total », « plus de
-   moitié ») : à dériver du même registre dans le même geste.
+   ✅ FAQ de « qui paie » : chiffres en dur **retirés** le 21/09 (nuit) ; F1 pourra y réintroduire
+   des valeurs, dérivées du registre.
 
 ### 2026-09-21 — Bloc « Réutiliser » : composant à cartes, source unique des figures
 
