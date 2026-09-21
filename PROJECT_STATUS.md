@@ -90,6 +90,8 @@ workflow ») est étendue aux PNG et au manifeste : un quatrième graphique ajou
 aurait sinon un PNG régénéré en CI et jamais publié. Témoin par mutation réelle du
 workflow (1 → 0).
 
+**Constaté en production le même jour** (run `35578048777`, déclenchement manuel) : étape de rendu verte, six PNG rendus et committés par la CI (`ff6c721`), SVG et données inchangés. Le PNG rendu sur le runner a été **regardé** : police de repli réelle, cartouche intact. Désormais la CI est la source des PNG — un `--png` local produirait un rendu différent (autre police) pour un contenu identique.
+
 **Pages.** Bloc « Réutiliser cette page » : droits énoncés **par type** — données, graphiques,
 texte — au point de téléchargement, plus trois phrases citables (question, apport, limite).
 L'appel au livre est passé après la section méthodologique.
