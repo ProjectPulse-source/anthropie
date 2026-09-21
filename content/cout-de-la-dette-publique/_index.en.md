@@ -88,12 +88,12 @@ The {{< dette-val "interets_mdeur" >}} billion euros of interest paid in {{< det
 
 Which leaves the one question these figures cannot settle: a burden of this size does not disappear, it moves. To whom?
 
-{{< appel-livre slug="dette-publique-qui-paie-vraiment" >}}
-This page prices the bill. It does not say who settles it — and that is where everything is decided: a debt is never cancelled, it is displaced. Onto the taxpayer, onto the saver through inflation, onto public services whose margin tightens, onto those who cannot yet vote. The book follows each of these channels in turn, on official figures, and ends in scenarios for 2025-2035. By the end you will recognise which one is unfolding.
-{{< /appel-livre >}}
-
 ## Where these figures come from
 
 Every figure on this page is **derived automatically from official sources**, never copied by hand: quarterly Maastricht debt from INSEE (series 010777616 — stock in billions of euros — and 010777608 — % of GDP); interest paid by general government and total revenue (Eurostat, `gov_10a_main`, D41PAY and TR); expenditure by COFOG function (Eurostat, `gov_10a_exp`); the effective interest rate computed as a year's interest over the stock at the end of the previous year. The interest burden used here is Eurostat's `D41PAY` series, recorded on an accrual basis — attributed to the year in which it accrues, not the date of payment — and covering the same universe, general government as a whole, as the revenue it is set against; other official publications use a neighbouring convention and report a slightly different amount for the same year. This page holds one convention throughout, so that the effective rate, the ratio to revenue and the functional comparisons all rest on the same perimeter. The official series are re-queried every week; the date below is updated only when an official release changes a figure — most recent data update that changed a value: {{< dette-val "releve_le" >}}. The consolidated data is published openly as [dette_officielle.json](/dette_officielle.json) under a [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) licence — free reuse, including commercial use, on the single condition that the source is cited. The raw series belong to INSEE and Eurostat; what is licensed here is the compilation: the assembly of series, the derived quantities (effective rate, ratios, single-vintage equivalences) and their reconciliation.
 
 The framework used to interpret these figures is set out in [What is anthropy?](/en/quest-ce-que-lanthropie/) and in the book [*ANTHROPY — A Big History of Civilization's Hidden Costs*](/en/livres/anthropie-ordre-ici-dette-ailleurs/). The book-length treatment of French public debt, *Dette Publique&nbsp;: Qui paie vraiment&nbsp;?*, exists in French only.
+
+{{< appel-livre slug="dette-publique-qui-paie-vraiment" >}}
+This page prices the bill. It does not say who settles it — and that is where everything is decided: a debt is never cancelled, it is displaced. Onto the taxpayer, onto the saver through inflation, onto public services whose margin tightens, onto those who cannot yet vote. The book follows each of these channels in turn, on official figures, and ends in scenarios for 2025-2035. By the end you will recognise which one is unfolding.
+{{< /appel-livre >}}
