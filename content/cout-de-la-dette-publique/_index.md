@@ -2,7 +2,7 @@
 title: "Combien coûte la dette publique ?"
 description: "Le coût de la dette ne suit pas mécaniquement son volume : pendant trente ans, l'encours montait pendant que la charge d'intérêts baissait — depuis 2022, le ciseau se referme. Chiffres officiels INSEE et Eurostat actualisés, et ce que la charge d'intérêts représente face aux budgets de la justice, de l'enseignement et de la santé."
 date: 2026-08-15
-lastmod: 2026-08-16
+lastmod: 2026-09-21
 # Émet le JSON-LD Dataset (partials/schema-dataset-dette.html) : la page ne
 # fait pas que citer des chiffres, elle publie une compilation réutilisable.
 dataset_dette: true
@@ -19,9 +19,9 @@ faq:
     answer: "Non, pas dans les agrégats : en {dette.equiv_annee}, les dépenses publiques de santé ({dette.sante_mdeur} milliards d'euros) et d'enseignement ({dette.education_mdeur} milliards) sont stables ou en hausse, en euros comme en part de PIB. Si les services semblent pourtant manquer de moyens, l'explication la plus courante — plausible, mais que ces séries ne démontrent pas — est que leurs coûts et leurs besoins (salaires, vieillissement, progrès médical, judiciarisation) croîtraient plus vite que le PIB : la stabilité d'un budget en part de PIB ne garantirait alors pas un service rendu stable, sans que ce budget baisse pour autant. L'établir exigerait des données que cette page ne porte pas : inflation sectorielle, productivité, démographie, volumes produits. Ces données n'attribuent pas cet écart à la dette ; ce qu'elles établissent, c'est que la charge d'intérêts pince la marge qui permettrait de le combler. La question devient de savoir qui absorbera l'ajustement — impôts supplémentaires, réduction d’autres dépenses, déficit accru, inflation, ou générations futures. C'est l'objet de la page « Qui paie vraiment la dette publique ? » et des scénarios 2025-2035 du livre."
 ---
 
-{{< reutiliser-ancre >}}
+{{< dossier-dette volet="1" >}}
 
-*Cette page chiffre la facture. Sa page sœur, [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/), suit à qui elle revient et qui détient la dette.*
+{{< reutiliser-ancre >}}
 
 À la question «&nbsp;combien coûte la dette publique&nbsp;?&nbsp;», la mesure la plus directe n'est pas le montant de l'encours — c'est la **charge d'intérêts versés** chaque année par les administrations publiques&nbsp;: **{{< dette-val "interets_mdeur" >}}&nbsp;milliards d'euros en {{< dette-val "interets_annee" >}}**, soit {{< dette-val "interets_pct_pib" >}}&nbsp;% du PIB et **{{< dette-val "interets_sur_recettes_pct" >}}&nbsp;% de l'ensemble des recettes publiques** (Eurostat). L'encours, lui&nbsp;:
 

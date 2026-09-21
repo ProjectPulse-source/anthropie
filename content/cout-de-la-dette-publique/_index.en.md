@@ -3,7 +3,7 @@ title: "What does French public debt actually cost?"
 url: /en/cost-of-french-public-debt/
 description: "The cost of a public debt does not mechanically follow its size. In France, the stock climbed for thirty years while the interest burden fell — since 2022 the scissor is closing. Official INSEE and Eurostat figures, kept current, and what the interest burden represents compared with spending on justice, education and health."
 date: 2026-08-17
-lastmod: 2026-08-17
+lastmod: 2026-09-21
 # Émet le JSON-LD Dataset (partials/schema-dataset-dette.html), en anglais :
 # un seul jeu de données, deux descriptions — voir le partial.
 dataset_dette: true
@@ -20,9 +20,9 @@ faq:
     answer: "No, not in the aggregates: in {dette.equiv_annee}, public spending on health ({dette.sante_mdeur} billion euros) and education ({dette.education_mdeur} billion) was stable or rising, in euros and as a share of GDP. If those services nonetheless feel starved, the most common explanation — plausible, but not demonstrated by these series — is that their costs and their demand (wages, ageing, medical progress, litigation) would grow faster than GDP: a stable share of GDP would then not guarantee a stable level of service, without the budget itself falling. Establishing that would require data that fall outside the scope of this page: sectoral inflation, productivity, demographics, volumes delivered. These data do not attribute that gap to debt; what they do establish is that the interest burden squeezes the room that would close it."
 ---
 
-{{< reutiliser-ancre >}}
+{{< dossier-dette volet="1" >}}
 
-*This page prices the bill. Its companion page, [Qui paie vraiment la dette publique ?](/qui-paie-la-dette-publique/) (in French), follows who ends up bearing it and who holds the debt.*
+{{< reutiliser-ancre >}}
 
 France is a useful case well beyond France itself. It is a large advanced economy where a general mechanism became unusually clear: for three decades the debt stock grew while the cost of carrying it fell, so the burden stayed quiet — and then, within a few years, the scissor began to close. What happens when that reversal arrives is now playing out in public, on a scale large enough to make the mechanism visible.
 

@@ -1,0 +1,33 @@
+{{- /* dossier-dette.html — bandeau commun des deux volets du dossier dette publique.
+
+       {{< dossier-dette volet="1" >}}   « Combien coûte » (FR et EN)
+       {{< dossier-dette volet="2" >}}   « Qui paie » (FR seulement)
+
+       Deux pages autonomes, une identité commune, une fonction explicite pour
+       chacune : données et méthode / répartition, mécanismes et limites.
+       Arbitrage PRO-20260921-DIPTYQUE, P1. Le volet 2 n'existe qu'en français
+       (P8) : sur une page anglaise, le lien le dit au lieu de laisser croire à
+       une traduction. Échoue bruyamment sur un volet inconnu. */ -}}
+{{- $v := .Get "volet" -}}
+{{- if not (in (slice "1" "2") $v) -}}{{ errorf "dossier-dette: volet \"%s\" inconnu (attendu 1 ou 2) dans %s" $v .Page.File.Path }}{{- end -}}
+{{- $en := eq .Page.Lang "en" -}}
+{{- $items := slice
+    (dict "n" "1" "url" (cond $en "/en/cost-of-french-public-debt/" "/cout-de-la-dette-publique/")
+          "titre" (cond $en "What it costs" "Combien coûte")
+          "role" (cond $en "data and method" "données et méthode") "note" "")
+    (dict "n" "2" "url" "/qui-paie-la-dette-publique/"
+          "titre" (cond $en "Who pays" "Qui paie")
+          "role" (cond $en "distribution, mechanisms and limits" "répartition, mécanismes et limites")
+          "note" (cond $en "in French" "")) -}}
+<nav class="dossier-dette" aria-label="{{ if $en }}Public debt file{{ else }}Dossier dette publique{{ end }}">
+  <span class="dossier-dette__titre">{{ if $en }}Public debt file{{ else }}Dossier dette publique{{ end }}</span>
+  <ol class="dossier-dette__volets">
+    {{- range $items }}
+    {{- if eq .n $v }}
+    <li class="dossier-dette__volet is-actif" aria-current="page"><b>{{ .n }}. {{ .titre }}</b><span>{{ .role }}</span></li>
+    {{- else }}
+    <li class="dossier-dette__volet"><a href="{{ .url }}"{{ with .note }} hreflang="fr"{{ end }}><b>{{ .n }}. {{ .titre }}</b>{{ with .note }} <em>({{ . }})</em>{{ end }}</a><span>{{ .role }}</span></li>
+    {{- end }}
+    {{- end }}
+  </ol>
+</nav>
