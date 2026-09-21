@@ -36,6 +36,9 @@
   {{- $releve = index $jeu (cond $isEn "affichage_en" "affichage") "releve_le" | default "" -}}
 {{- end -}}
 {{- $sources := .Get "sources" -}}
+{{- /* Texte du bloc « Les données » propre à la page (optionnel) : le texte par
+       défaut décrit le jeu de la page du coût, pas celui d'une autre page. */ -}}
+{{- $donneesP := .Get "donnees" -}}
 
 {{- $T := dict
     "titre" "Réutiliser cette page"
@@ -52,7 +55,7 @@
     "copie" "Copié !"
     "donnees_de" "Données"
     "releve" "relevé du"
-    "licence" "<strong>Données et graphiques</strong> CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source. <strong>Texte</strong> soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande. Les séries brutes appartiennent à l'INSEE et à Eurostat, sous leurs propres conditions." -}}
+    "licence" "<strong>Données et graphiques</strong> CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source. <strong>Texte</strong> soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande. Les séries brutes appartiennent à leurs producteurs (%s), sous leurs propres conditions." -}}
 {{- if $isEn -}}
 {{- $T = dict
     "titre" "Reusing this page"
@@ -69,8 +72,10 @@
     "copie" "Copied!"
     "donnees_de" "Data from"
     "releve" "retrieved"
-    "licence" "<strong>Data and charts</strong> CC BY 4.0 — free reuse, including commercial, with attribution. <strong>Text</strong> under copyright — short quotation free, full reproduction on request. The raw series belong to INSEE and Eurostat, under their own terms." -}}
+    "licence" "<strong>Data and charts</strong> CC BY 4.0 — free reuse, including commercial, with attribution. <strong>Text</strong> under copyright — short quotation free, full reproduction on request. The raw series belong to their producers (%s), under their own terms." -}}
 {{- end -}}
+{{- $T = merge $T (dict "licence" (printf $T.licence $sources)) -}}
+{{- with $donneesP }}{{ $T = merge $T (dict "donnees_p" .) }}{{ end -}}
 
 {{- /* Citation au format du site (partials/how-to-cite.html) : Nom, Prénom (année). « Titre ». */ -}}
 {{- $citation := "" -}}

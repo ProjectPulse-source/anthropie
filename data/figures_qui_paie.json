@@ -1,0 +1,28 @@
+{
+ "fr": [
+  {
+   "id": "detention",
+   "fichier": "qui-paie-detention",
+   "titre": "Qui emprunte ? Qui détient les titres de l'État ?",
+   "montre": "Les administrations qui empruntent, puis les porteurs des titres de l'État : deux champs distincts, sans lien de proportion.",
+   "source": "INSEE, IR n° 79 (27/03/2026), fin 2025  ·  Banque de France via l'AFT, 1er trimestre 2026",
+   "precaution": "A : valeur nominale ; B : valeur de marché. La détention ne mesure pas la charge finale."
+  },
+  {
+   "id": "redistribution",
+   "fichier": "qui-paie-redistribution",
+   "titre": "Prélèvements et transferts publics par dixième de niveau de vie, 2023",
+   "montre": "Les prélèvements croissent fortement avec le niveau de vie ; les transferts reçus, prestations et services publics, varient beaucoup moins.",
+   "source": "Insee, comptes nationaux distribués 2023 (Insee Analyses n° 118, figure 1c)",
+   "precaution": "Répartition avec conventions d'imputation ; ne mesure pas l'incidence spécifique de la dette."
+  },
+  {
+   "id": "mecanismes",
+   "fichier": "qui-paie-mecanismes",
+   "titre": "Par quels canaux la charge peut-elle être répartie ?",
+   "montre": "Quatre canaux possibles, le refinancement qui reporte sans désigner de perdant, et en regard ce que la dette a financé.",
+   "source": "Synthèse de l'auteur, schéma non quantitatif",
+   "precaution": "Aucun poids relatif ni effet causal n'est mesuré ici."
+  }
+ ]
+}

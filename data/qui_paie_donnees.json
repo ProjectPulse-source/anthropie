@@ -1,0 +1,149 @@
+{
+ "_licence": "Compilation Stéphane Lalut, CC BY 4.0 (assemblage, grandeurs dérivées, mise en cohérence). Données d'origine : INSEE (Licence Ouverte Etalab), Banque de France via l'Agence France Trésor, sous leurs propres conditions.",
+ "_genere_le": "2026-09-21",
+ "affichage": {
+  "releve_le": "21 septembre 2026",
+  "total_mdeur": "3 460,5",
+  "periode_a": "fin 2025",
+  "etat_mdeur": "2 823",
+  "etat_pct": "82",
+  "nonres_pct": "57,5",
+  "bafs_pct": "21,9",
+  "autres_fr_pct": "20,6",
+  "cd_annee": "2023",
+  "d1_prel": "6 400",
+  "d10_prel": "89 800",
+  "ratio_prel": "14",
+  "recu_min": "26 400",
+  "recu_max": "31 400",
+  "solde_uc": "1 400",
+  "solde_mdeur": "66"
+ },
+ "detention": {
+  "A_sous_secteurs": {
+   "unite": "milliards d'euros, valeur nominale",
+   "periode": "fin 2025",
+   "total": 3460.5,
+   "valeurs": [
+    {
+     "libelle": "État",
+     "mdeur": 2823
+    },
+    {
+     "libelle": "Sécurité sociale",
+     "mdeur": 293
+    },
+    {
+     "libelle": "Collectivités",
+     "mdeur": 276
+    },
+    {
+     "libelle": "Autres",
+     "mdeur": 69
+    }
+   ]
+  },
+  "B_detenteurs_titres_etat": {
+   "unite": "% des titres négociables de l'État, valeur de marché",
+   "periode": "1er trimestre 2026",
+   "valeurs": [
+    {
+     "libelle": "Non-résidents",
+     "pct": 57.5
+    },
+    {
+     "libelle": "Autres (français)",
+     "pct": 20.6
+    },
+    {
+     "libelle": "Établissements de crédit français",
+     "pct": 10.5
+    },
+    {
+     "libelle": "Assureurs français",
+     "pct": 9.6
+    },
+    {
+     "libelle": "OPCVM français",
+     "pct": 1.8
+    }
+   ]
+  },
+  "sources": [
+   "Sources : INSEE IR n°79 (27/03/2026), APU-Maastricht, fin 2025, valeur nominale ; PLF 2025.",
+   "Détenteurs : titres négociables de l'État, valeur de marché, 1er trimestre 2026 (Banque de France, via AFT)."
+  ],
+  "note": "Deux champs distincts : ne pas multiplier les parts de B par les montants de A.",
+  "registre_sha256": "5f765eeb27581421b08dac9622af0cb0f767cb73c48a3b29bd6bcb75811b9b37"
+ },
+ "echelle_foyer": {
+  "millions": 41.0,
+  "periode": "revenus 2023, déclaration 2024",
+  "periode_en": "2023 incomes, filed in 2024",
+  "source": "DGFiP Statistiques n° 32 (avril 2025), « 41 millions de foyers fiscaux »",
+  "url": "https://www.impots.gouv.fr/dgfip-statistiques-limpot-sur-les-revenus-de-2023-ete-moins-dynamique-que-les-revenus"
+ },
+ "redistribution": {
+  "unite": "euros par unité de consommation (UC), 2023",
+  "colonnes": [
+   "D1",
+   "D2",
+   "D3",
+   "D4",
+   "D5",
+   "D6",
+   "D7",
+   "D8",
+   "D9",
+   "D10",
+   "Ensemble"
+  ],
+  "prelevements": [
+   -6400,
+   -8800,
+   -11900,
+   -15100,
+   -18200,
+   -21500,
+   -25700,
+   -31700,
+   -41100,
+   -89800,
+   -27000
+  ],
+  "prestations_especes": [
+   8000,
+   10600,
+   11700,
+   11500,
+   12000,
+   12600,
+   12800,
+   13400,
+   14600,
+   18500,
+   12600
+  ],
+  "transferts_non_monetaires": [
+   19100,
+   20500,
+   17400,
+   17200,
+   15000,
+   15000,
+   14700,
+   13000,
+   13600,
+   12900,
+   15800
+  ],
+  "solde_finance_par_endettement_uc": -1400,
+  "solde_finance_par_endettement_mdeur": -66.2,
+  "convention": "Insee : le supplément financé par endettement est imputé par convention pour moitié à de moindres prélèvements, pour moitié à des transferts supplémentaires.",
+  "source": {
+   "publication": "Insee Analyses n° 118, 16/04/2026, figure 1c et 2a-2b",
+   "url": "https://www.insee.fr/fr/statistiques/8974371",
+   "sha256_fichier": "6f5f27809be12e192afdca5008022a0e0c63f832869d29be8dc837abbdeec0eb"
+  }
+ }
+}

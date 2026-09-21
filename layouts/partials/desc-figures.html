@@ -23,6 +23,15 @@
     {{- $text = replace $text (printf "{dette.%s}" $k) $v -}}
   {{- end -}}
 {{- end -}}
+{{- /* Page « Qui paie » : placeholders {qp.<cle>}, resolus depuis
+       data/qui_paie_donnees.json (bloc affichage, scripts/generer_figures_qui_paie.py).
+       Donnees francaises seulement. Un placeholder non resolu echoue au build. */ -}}
+{{- with site.Data.qui_paie_donnees -}}
+  {{- range $k, $v := .affichage -}}
+    {{- $text = replace $text (printf "{qp.%s}" $k) $v -}}
+  {{- end -}}
+{{- end -}}
+{{- if in $text "{qp." -}}{{- errorf "desc-figures: placeholder {qp.*} non resolu dans : %s" $text -}}{{- end -}}
 {{- with .isbn -}}
   {{- range where site.Data.works.works "isbn" . -}}
     {{- with .corpus_stats -}}

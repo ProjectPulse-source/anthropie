@@ -1,0 +1,17 @@
+{{- /* Vue en tableau de la figure F2 (redistribution par dixième) : les valeurs
+       exactes, lisibles sans la couleur -- la palette de la figure avertit en
+       contraste pour l'aqua. Source : data/qui_paie_donnees.json. */ -}}
+{{- $r := "" -}}
+{{- with site.Data.qui_paie_donnees -}}{{- $r = .redistribution -}}{{- end -}}
+{{- if not $r -}}{{ errorf "qp-tableau-redistribution: donnees absentes (%s)" .Page.File.Path }}{{- end -}}
+<details class="qp-tableau">
+  <summary>Les valeurs en tableau (euros par unité de consommation, 2023)</summary>
+  <table>
+    <thead><tr><th scope="col">Dixième</th><th scope="col">Prélèvements</th><th scope="col">Prestations en espèces</th><th scope="col">Transferts non monétaires</th></tr></thead>
+    <tbody>
+    {{- range $i, $c := $r.colonnes }}
+      <tr><th scope="row">{{ $c }}</th><td>−{{ lang.FormatNumber 0 (mul -1 (index $r.prelevements $i)) }}</td><td>{{ lang.FormatNumber 0 (index $r.prestations_especes $i) }}</td><td>{{ lang.FormatNumber 0 (index $r.transferts_non_monetaires $i) }}</td></tr>
+    {{- end }}
+    </tbody>
+  </table>
+</details>

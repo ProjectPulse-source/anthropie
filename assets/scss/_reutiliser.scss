@@ -223,3 +223,17 @@
   a:focus-visible { outline: 2px solid var(--color-pivot); outline-offset: 2px; }
   &.is-actif b { color: var(--color-text); }
 }
+
+// Vue en tableau d'une figure (qp-tableau-redistribution) : repliée par défaut,
+// les valeurs exactes pour qui ne lit pas la couleur.
+.qp-tableau {
+  margin: 0 0 1.4rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+
+  summary { cursor: pointer; color: var(--color-accent); }
+  table { border-collapse: collapse; margin-top: 0.6rem; width: 100%; max-width: 560px; }
+  th, td { padding: 0.25rem 0.6rem; border-bottom: 1px solid var(--color-rule-medium); text-align: right; }
+  th:first-child { text-align: left; }
+  thead th { font-weight: 600; color: var(--color-text-subtle); }
+}

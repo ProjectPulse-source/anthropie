@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 447" role="img" aria-labelledby="qp-det-t qp-det-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="qp-det-t">Qui emprunte ? Qui détient les titres de l'État ?</title>
+<desc id="qp-det-d">Deux panneaux séparés, sans lien de proportion entre eux. A, en valeur nominale : État 2 823 Md€; Sécurité sociale 293 Md€; Collectivités 276 Md€; Autres 69 Md€, sur 3 460,5 Md€, fin 2025. B, en valeur de marché, porteurs des titres négociables de l'État au 1er trimestre 2026 : Non-résidents 57,5 %; Autres porteurs français 20,6 %; Banques françaises 10,5 %; Assureurs français 9,6 %; Fonds (OPCVM) français 1,8 %.</desc>
+<text x="0.0" y="22.0" font-size="13" fill="#52514e" text-anchor="start">Qui emprunte ? Qui détient les titres de l'État ? Deux questions, deux champs</text>
+<text x="0.0" y="50.0" font-size="12" fill="#2b2a28" text-anchor="start" font-weight="600">A · Qui emprunte ? Contribution des administrations à la dette publique, fin 2025</text>
+<text x="0.0" y="66.0" font-size="11" fill="#898781" text-anchor="start">Valeur nominale, en milliards d'euros · total 3 460,5 Md€</text>
+<text x="180.0" y="95.0" font-size="11" fill="#52514e" text-anchor="end">État</text>
+<rect x="190" y="84.0" width="400.0" height="14" rx="3" fill="#2a78d6"/>
+<text x="598.0" y="95.0" font-size="11" fill="#52514e" text-anchor="start">2 823 Md€ · 82 %</text>
+<text x="180.0" y="117.0" font-size="11" fill="#52514e" text-anchor="end">Sécurité sociale</text>
+<rect x="190" y="106.0" width="41.5" height="14" rx="3" fill="#2a78d6"/>
+<text x="239.5" y="117.0" font-size="11" fill="#52514e" text-anchor="start">293 Md€ · 8 %</text>
+<text x="180.0" y="139.0" font-size="11" fill="#52514e" text-anchor="end">Collectivités</text>
+<rect x="190" y="128.0" width="39.1" height="14" rx="3" fill="#2a78d6"/>
+<text x="237.1" y="139.0" font-size="11" fill="#52514e" text-anchor="start">276 Md€ · 8 %</text>
+<text x="180.0" y="161.0" font-size="11" fill="#52514e" text-anchor="end">Autres</text>
+<rect x="190" y="150.0" width="9.8" height="14" rx="3" fill="#2a78d6"/>
+<text x="207.8" y="161.0" font-size="11" fill="#52514e" text-anchor="start">69 Md€ · 2 %</text>
+<line x1="0" y1="188.0" x2="720" y2="188.0" stroke="#c3c2b7" stroke-width="1"/>
+<text x="0.0" y="216.0" font-size="12" fill="#2b2a28" text-anchor="start" font-weight="600">B · Qui détient les titres négociables de l'État ? 1er trimestre 2026</text>
+<text x="0.0" y="232.0" font-size="11" fill="#898781" text-anchor="start">Valeur de marché, en % · classement par résidence du détenteur, non par nationalité</text>
+<text x="180.0" y="261.0" font-size="11" fill="#52514e" text-anchor="end">Non-résidents</text>
+<rect x="190" y="250.0" width="400.0" height="14" rx="3" fill="#eb6834"/>
+<text x="598.0" y="261.0" font-size="11" fill="#52514e" text-anchor="start">57,5 %</text>
+<text x="180.0" y="283.0" font-size="11" fill="#52514e" text-anchor="end">Autres porteurs français *</text>
+<rect x="190" y="272.0" width="143.3" height="14" rx="3" fill="#eb6834"/>
+<text x="341.3" y="283.0" font-size="11" fill="#52514e" text-anchor="start">20,6 %</text>
+<text x="180.0" y="305.0" font-size="11" fill="#52514e" text-anchor="end">Banques françaises</text>
+<rect x="190" y="294.0" width="73.0" height="14" rx="3" fill="#eb6834"/>
+<text x="271.0" y="305.0" font-size="11" fill="#52514e" text-anchor="start">10,5 %</text>
+<text x="180.0" y="327.0" font-size="11" fill="#52514e" text-anchor="end">Assureurs français</text>
+<rect x="190" y="316.0" width="66.8" height="14" rx="3" fill="#eb6834"/>
+<text x="264.8" y="327.0" font-size="11" fill="#52514e" text-anchor="start">9,6 %</text>
+<text x="180.0" y="349.0" font-size="11" fill="#52514e" text-anchor="end">Fonds (OPCVM) français</text>
+<rect x="190" y="338.0" width="12.5" height="14" rx="3" fill="#eb6834"/>
+<text x="210.5" y="349.0" font-size="11" fill="#52514e" text-anchor="start">1,8 %</text>
+<text x="0.0" y="370.0" font-size="10" fill="#898781" text-anchor="start">* dont la Banque de France (programmes de l'Eurosystème) : part non publiée par la source.</text>
+<line x1="0" y1="390.0" x2="720" y2="390.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="0" y="403.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">A : INSEE, Informations rapides n° 79 (27/03/2026), dette de Maastricht par sous-secteur · B : Banque de France, via l'AFT</text>
+<text x="0" y="415.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Deux champs distincts. A : valeur nominale ; B : valeur de marché. La détention ne mesure pas la charge finale.</text>
+<text x="0" y="427.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/qui-paie-la-dette-publique/</text>
+</svg>

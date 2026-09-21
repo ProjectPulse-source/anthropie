@@ -1,0 +1,16 @@
+{{- /* {{< figure-svg fichier="qui-paie-detention" alt="…" >}}légende{{< /figure-svg >}}
+
+       Figure du corps servie depuis static/img/<fichier>.svg. Largeur et hauteur
+       sont LUES dans le viewBox du SVG réel, jamais recopiées : un générateur qui
+       change la hauteur d'une figure ne laisse pas un ratio faux au navigateur
+       (la page sauterait au chargement). Échoue si le fichier manque. */ -}}
+{{- $f := .Get "fichier" -}}
+{{- $chemin := printf "static/img/%s.svg" $f -}}
+{{- if not (fileExists $chemin) -}}{{ errorf "figure-svg: %s introuvable (%s)" $chemin .Page.File.Path }}{{- end -}}
+{{- $vb := index (findRESubmatch `viewBox="0 0 ([0-9.]+) ([0-9.]+)"` (os.ReadFile $chemin) 1) 0 -}}
+<figure class="figure-ciseau">
+  <img src="{{ printf "/img/%s.svg" $f | relURL }}" alt="{{ .Get "alt" }}" width="{{ index $vb 1 }}" height="{{ index $vb 2 }}" loading="lazy">
+  {{- with .Inner }}
+  <figcaption>{{ . | markdownify }}</figcaption>
+  {{- end }}
+</figure>
