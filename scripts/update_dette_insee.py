@@ -67,6 +67,7 @@ OUT_SVG_EN = REPO / "static" / "img" / "ciseau-dette-interets-en.svg"
 OUT_SVG_TAUX_EN = REPO / "static" / "img" / "taux-apparent-dette-en.svg"
 OUT_SVG_LONGUE = REPO / "static" / "img" / "dette-longue.svg"
 OUT_SVG_LONGUE_EN = REPO / "static" / "img" / "dette-longue-en.svg"
+OUT_FIGURES = REPO / "data" / "figures_dette.json"
 # Segment 1978-1995 que le flux ne couvre pas : comptes nationaux clos,
 # donc figes ici plutot que rapatries d'un .xlsx dont l'URL change a
 # chaque millesime. L'annee 1995 y est en DOUBLE avec la serie
@@ -405,6 +406,21 @@ LABELS_CARTOUCHE = {
                   "le % du PIB.",
         "longue": "Dette au sens de Maastricht, toutes administrations "
                   "publiques.",
+        # Lignes Â« source Â» et textes des cartes de la page : un seul modele
+        # par figure, lu par le cartouche de l'image ET par la carte HTML.
+        "src_ciseau": "INSEE, dette de Maastricht (%s)  ·  "
+                      "Eurostat gov_10a_main, intérêts D41PAY (%s)",
+        "src_taux": "Calcul sur séries Eurostat (gov_10a_main) et INSEE, %s-%s",
+        "src_longue": "INSEE, dette de Maastricht, %s-%s",
+        "titre_ciseau": "Le ciseau : encours et charge d'intérêts, 1995-%s",
+        "titre_taux": "Le taux apparent, %s-%s",
+        "titre_longue": "La dette depuis %s, en %% du PIB",
+        "montre_ciseau": ("L'encours double en part de PIB pendant que la charge "
+                          "d'intérêts baisse, jusqu'au retournement de 2022."),
+        "montre_taux": ("Le coût moyen du stock : il baisse pendant vingt-cinq "
+                        "ans, puis remonte depuis 2022."),
+        "montre_longue": ("La dette monte par paliers, chacun installé par une "
+                          "crise, aucun effacé par la décennie suivante."),
     },
     "en": {
         "licence": "Compiled by Stéphane Lalut, CC BY 4.0 · "
@@ -413,6 +429,19 @@ LABELS_CARTOUCHE = {
                 "end of the previous year, not today's borrowing rate.",
         "ciseau": "Two separate scales, one shared unit: % of GDP.",
         "longue": "Maastricht debt, general government.",
+        "src_ciseau": "INSEE, Maastricht debt (%s)  ·  "
+                      "Eurostat gov_10a_main, interest D41PAY (%s)",
+        "src_taux": "Computed on Eurostat (gov_10a_main) and INSEE series, %s-%s",
+        "src_longue": "INSEE, Maastricht debt, %s-%s",
+        "titre_ciseau": "The scissor: debt stock and interest burden, 1995-%s",
+        "titre_taux": "The effective interest rate, %s-%s",
+        "titre_longue": "Debt since %s, as a %% of GDP",
+        "montre_ciseau": ("The stock doubles as a share of GDP while the interest "
+                          "burden falls, until the 2022 turn."),
+        "montre_taux": ("The average cost of the stock: falling for twenty-five "
+                        "years, rising again since 2022."),
+        "montre_longue": ("Debt climbs in steps, each set by a crisis, none erased "
+                          "by the following decade."),
     },
 }
 
@@ -602,11 +631,7 @@ def build_svg(dette_pib: dict[str, float], d41_pib: dict[str, float],
     dot_label(tx, ty, COL_INTER,
               dec(d41_pib[trough_y]) + L["en_annee"] + trough_y, anchor="middle", dx=0, dy=18)
 
-    src = ("INSEE, dette de Maastricht (%s)  ·  "
-           "Eurostat gov_10a_main, intérêts D41PAY (%s)"
-           if lang == "fr" else
-           "INSEE, Maastricht debt (%s)  ·  "
-           "Eurostat gov_10a_main, interest D41PAY (%s)")
+    src = LABELS_CARTOUCHE[lang]["src_ciseau"]
     e += cartouche(SVG_W, SVG_H + 4,
                    src % (quarter(max(dette_pib)), max(d41_pib)),
                    "ciseau", lang)
@@ -710,9 +735,7 @@ def build_svg_taux(taux: dict[str, float], lang: str = "fr") -> str:
     dot(xt, y(taux[trough]), num(taux[trough]) + T["en_annee"] + trough,
         "middle", 0, 22)
 
-    src = ("Calcul sur séries Eurostat (gov_10a_main) et INSEE, %s-%s"
-           if lang == "fr" else
-           "Computed on Eurostat (gov_10a_main) and INSEE series, %s-%s")
+    src = LABELS_CARTOUCHE[lang]["src_taux"]
     e += cartouche(W, H + 4, src % (first, last), "taux", lang)
     e.append("</svg>")
     return "\n".join(e) + "\n"
@@ -849,8 +872,7 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
     # deja portees, en gras, par le premier et le dernier repere. Les repeter
     # sous l'axe ferait lire deux fois la meme date.
 
-    src = ("INSEE, dette de Maastricht, %s-%s" if lang == "fr"
-           else "INSEE, Maastricht debt, %s-%s")
+    src = LABELS_CARTOUCHE[lang]["src_longue"]
     e += cartouche(w, h + 4, src % (ans[0], label_courant), "longue", lang)
     e.append("</svg>")
     return "\n".join(e) + "\n"
@@ -895,6 +917,37 @@ def atomic_write(path: Path, text: str) -> None:
     with os.fdopen(fd, "w", encoding="utf-8", newline="\n") as f:
         f.write(text)
     os.replace(tmp, path)
+
+
+def meta_figures(lastq: str, last_y: str, taux: dict, annuel: dict) -> dict:
+    """Donnees des cartes « Reutiliser » : meme texte que les cartouches.
+
+    Source UNIQUE de la precaution de lecture : elle est ecrite une fois, dans
+    LABELS_CARTOUCHE, et lue ici comme par l'image. Deux copies de la phrase
+    qui sert a eviter un contresens finiraient par se contredire.
+    """
+    t0, t1 = min(taux), max(taux)
+    a0 = min(annuel)
+    out = {}
+    for lang, quarter in (("fr", fr_quarter), ("en", en_quarter)):
+        C = LABELS_CARTOUCHE[lang]
+        q = quarter(lastq)
+        suf = "" if lang == "fr" else "-en"
+        out[lang] = [
+            {"id": "ciseau", "fichier": "ciseau-dette-interets" + suf,
+             "titre": C["titre_ciseau"] % q, "montre": C["montre_ciseau"],
+             "source": C["src_ciseau"] % (q, last_y),
+             "precaution": C["ciseau"]},
+            {"id": "taux", "fichier": "taux-apparent-dette" + suf,
+             "titre": C["titre_taux"] % (t0, t1), "montre": C["montre_taux"],
+             "source": C["src_taux"] % (t0, t1), "precaution": C["taux"]},
+            {"id": "longue", "fichier": "dette-longue" + suf,
+             "titre": C["titre_longue"] % a0, "montre": C["montre_longue"],
+             "source": C["src_longue"] % (a0, q), "precaution": C["longue"]},
+        ]
+    out["licence"] = {"fr": LABELS_CARTOUCHE["fr"]["licence"],
+                      "en": LABELS_CARTOUCHE["en"]["licence"]}
+    return out
 
 
 def rendre_png(svgs: list) -> None:
@@ -1258,6 +1311,9 @@ def main() -> int:
     # erreur ni trace. Construire d'abord, ecrire ensuite : un echec laisse
     # l'ensemble dans son etat precedent, coherent.
     sorties = [
+        (OUT_FIGURES, json.dumps(meta_figures(
+            lastq, last_y, taux_apparent, annuel),
+            ensure_ascii=False, indent=1) + "\n"),
         (OUT_JSON, txt),
         (OUT_ENDPOINT, txt),
         (OUT_SVG, build_svg(dette_pib, d41_pib)),

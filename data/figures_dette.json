@@ -1,0 +1,58 @@
+{
+ "fr": [
+  {
+   "id": "ciseau",
+   "fichier": "ciseau-dette-interets",
+   "titre": "Le ciseau : encours et charge d'intérêts, 1995-T1 2026",
+   "montre": "L'encours double en part de PIB pendant que la charge d'intérêts baisse, jusqu'au retournement de 2022.",
+   "source": "INSEE, dette de Maastricht (T1 2026)  ·  Eurostat gov_10a_main, intérêts D41PAY (2025)",
+   "precaution": "Deux échelles distinctes, une même unité : le % du PIB."
+  },
+  {
+   "id": "taux",
+   "fichier": "taux-apparent-dette",
+   "titre": "Le taux apparent, 1996-2025",
+   "montre": "Le coût moyen du stock : il baisse pendant vingt-cinq ans, puis remonte depuis 2022.",
+   "source": "Calcul sur séries Eurostat (gov_10a_main) et INSEE, 1996-2025",
+   "precaution": "Taux apparent = intérêts de l'année / encours au 31 décembre précédent, non le taux d'emprunt du jour."
+  },
+  {
+   "id": "longue",
+   "fichier": "dette-longue",
+   "titre": "La dette depuis 1978, en % du PIB",
+   "montre": "La dette monte par paliers, chacun installé par une crise, aucun effacé par la décennie suivante.",
+   "source": "INSEE, dette de Maastricht, 1978-T1 2026",
+   "precaution": "Dette au sens de Maastricht, toutes administrations publiques."
+  }
+ ],
+ "en": [
+  {
+   "id": "ciseau",
+   "fichier": "ciseau-dette-interets-en",
+   "titre": "The scissor: debt stock and interest burden, 1995-Q1 2026",
+   "montre": "The stock doubles as a share of GDP while the interest burden falls, until the 2022 turn.",
+   "source": "INSEE, Maastricht debt (Q1 2026)  ·  Eurostat gov_10a_main, interest D41PAY (2025)",
+   "precaution": "Two separate scales, one shared unit: % of GDP."
+  },
+  {
+   "id": "taux",
+   "fichier": "taux-apparent-dette-en",
+   "titre": "The effective interest rate, 1996-2025",
+   "montre": "The average cost of the stock: falling for twenty-five years, rising again since 2022.",
+   "source": "Computed on Eurostat (gov_10a_main) and INSEE series, 1996-2025",
+   "precaution": "Effective rate = a year's interest / debt outstanding at the end of the previous year, not today's borrowing rate."
+  },
+  {
+   "id": "longue",
+   "fichier": "dette-longue-en",
+   "titre": "Debt since 1978, as a % of GDP",
+   "montre": "Debt climbs in steps, each set by a crisis, none erased by the following decade.",
+   "source": "INSEE, Maastricht debt, 1978-Q1 2026",
+   "precaution": "Maastricht debt, general government."
+  }
+ ],
+ "licence": {
+  "fr": "Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/cout-de-la-dette-publique/",
+  "en": "Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/cost-of-french-public-debt/"
+ }
+}

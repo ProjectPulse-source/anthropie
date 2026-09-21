@@ -113,7 +113,8 @@ jobs:
                   static/img/taux-apparent-dette-en.png \
                   static/img/dette-longue.png \
                   static/img/dette-longue-en.png \
-                  data/png_dette_source.json
+                  data/png_dette_source.json \
+                  data/figures_dette.json
           git commit -m "data(dette): series INSEE/Eurostat du $(date -u +%Y-%m-%d)"
           # Le rebase couvre le seul cas reel de non-fast-forward : un commit
           # humain pousse sur main pendant les ~40 s du run. Le 500 transitoire
