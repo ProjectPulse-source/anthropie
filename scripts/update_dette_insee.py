@@ -68,6 +68,8 @@ OUT_SVG_TAUX_EN = REPO / "static" / "img" / "taux-apparent-dette-en.svg"
 OUT_SVG_LONGUE = REPO / "static" / "img" / "dette-longue.svg"
 OUT_SVG_LONGUE_EN = REPO / "static" / "img" / "dette-longue-en.svg"
 OUT_FIGURES = REPO / "data" / "figures_dette.json"
+OUT_SVG_MARCHE = REPO / "static" / "img" / "taux-marche-apparent.svg"
+OUT_SVG_MARCHE_EN = REPO / "static" / "img" / "taux-marche-apparent-en.svg"
 # Segment 1978-1995 que le flux ne couvre pas : comptes nationaux clos,
 # donc figes ici plutot que rapatries d'un .xlsx dont l'URL change a
 # chaque millesime. L'annee 1995 y est en DOUBLE avec la serie
@@ -87,6 +89,10 @@ EURO_COFOG_MIO = EURO + ("gov_10a_exp?format=JSON&geo=FR&na_item=TE&sector=S13"
 EURO_COFOG_PIB = EURO + ("gov_10a_exp?format=JSON&geo=FR&na_item=TE&sector=S13"
                          "&unit=PC_GDP&cofog99=GF03&cofog99=GF0303"
                          "&cofog99=GF07&cofog99=GF09&lang=en")
+# Taux a 10 ans de reference (critere de convergence de Maastricht), annuel.
+# Serie ACCESSOIRE : si elle manque, la figure est conservee et la mise a jour
+# des donnees passe quand meme -- jamais l'essentiel suspendu a l'accessoire.
+EURO_LT = EURO + "irt_lt_mcby_a?format=JSON&geo=FR&lang=en"
 EURO_TR = EURO + ("gov_10a_main?format=JSON&geo=FR&na_item=TR"
                   "&sector=S13&unit=MIO_EUR&lang=en")
 
@@ -421,6 +427,14 @@ LABELS_CARTOUCHE = {
                         "ans, puis remonte depuis 2022."),
         "montre_longue": ("La dette monte par paliers, chacun installé par une "
                           "crise, aucun effacé par la décennie suivante."),
+        "marche": ("Le taux à 10 ans indique le prix de la dette nouvelle ; le "
+                   "taux apparent, celui de tout le stock, qui ne le suit qu'au fil des "
+                   "refinancements."),
+        "src_marche": ("Eurostat irt_lt_mcby_a (taux à 10 ans)  ·  taux apparent : "
+                       "Eurostat gov_10a_main et INSEE, %s-%s"),
+        "titre_marche": "Taux de marché et coût moyen du stock, %s-%s",
+        "montre_marche": ("Le coût moyen du stock suit le taux à 10 ans avec des "
+                          "années de retard : il descend moins bas, et remonte moins vite."),
     },
     "en": {
         "licence": "Compiled by Stéphane Lalut, CC BY 4.0 · "
@@ -442,6 +456,14 @@ LABELS_CARTOUCHE = {
                         "years, rising again since 2022."),
         "montre_longue": ("Debt climbs in steps, each set by a crisis, none erased "
                           "by the following decade."),
+        "marche": ("The 10-year rate is the price of new debt; the effective rate, "
+                   "the cost of the whole stock, follows it only as old debt is "
+                   "refinanced."),
+        "src_marche": ("Eurostat irt_lt_mcby_a (10-year yield)  ·  effective rate: "
+                       "Eurostat gov_10a_main and INSEE, %s-%s"),
+        "titre_marche": "Market rate and average cost of the stock, %s-%s",
+        "montre_marche": ("The average cost of the stock follows the 10-year rate "
+                          "years behind: it falls less far, and climbs back more slowly."),
     },
 }
 
@@ -759,6 +781,90 @@ LABELS_LONGUE = {
 }
 
 
+LABELS_MARCHE = {
+    "fr": {"titre": "Taux \u00e0 10 ans et taux apparent de la dette publique, %s-%s",
+           "desc": ("Deux courbes en pourcentage par an. Le taux \u00e0 10 ans passe de %s %% en %s "
+                    "\u00e0 %s %% en %s, puis remonte \u00e0 %s %% en %s. Le taux apparent, co\u00fbt moyen "
+                    "du stock, passe de %s %% \u00e0 %s %%, puis ne remonte qu'\u00e0 %s %% en %s."),
+           "panneau": "Prix de la dette nouvelle et co\u00fbt moyen du stock, en % par an",
+           "marche": "Taux \u00e0 10 ans", "apparent": "Taux apparent", "pct": " %"},
+    "en": {"titre": "10-year rate and effective interest rate on French public debt, %s-%s",
+           "desc": ("Two curves in percent per year. The 10-year rate goes from %s%% in %s to %s%% "
+                    "in %s, then climbs back to %s%% in %s. The effective rate, the average cost "
+                    "of the stock, goes from %s%% to %s%%, then rises only to %s%% in %s."),
+           "panneau": "Price of new debt and average cost of the stock, % per year",
+           "marche": "10-year rate", "apparent": "Effective rate", "pct": "%"},
+}
+
+
+def build_svg_marche(apparent: dict, marche: dict, lang: str = "fr") -> str:
+    """Taux de marche (prix de la dette NOUVELLE) et taux apparent (cout du
+    STOCK) sur la MEME echelle : meme unite, et c'est l'ecart qui fait la
+    demonstration -- le stock ne suit le marche qu'au fil des refinancements.
+    Le taux apparent garde la couleur de l'entite « cout de la dette » ; le
+    marche, repere, est en encre sombre et plus fin. Libelles directs aux
+    extremites, places au-dessus pour la plus haute des deux : pas de legende."""
+    W, H = 720, 360
+    ml, mr = 46, 120
+    ay0, ay1, vmin, vmax = 300.0, 46.0, -1.0, 7.0
+    years = sorted(int(y) for y in apparent if y in marche)
+    t0, t1 = years[0] - 0.6, years[-1] + 0.6
+
+    def x(v): return ml + (v - t0) / (t1 - t0) * (W - ml - mr)
+    def y(v): return ay0 - (v - vmin) / (vmax - vmin) * (ay0 - ay1)
+
+    L = LABELS_MARCHE[lang]
+    num = (lambda v: fr(v, 1)) if lang == "fr" else (lambda v: en(v, 1))
+    first, last = str(years[0]), str(years[-1])
+    creux = min((str(a) for a in years), key=lambda k: marche[k])
+    pa = [(x(a), y(apparent[str(a)])) for a in years]
+    pm = [(x(a), y(marche[str(a)])) for a in years]
+
+    e = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" '
+         'role="img" aria-labelledby="tm-t tm-d" font-family="%s">'
+         % (W, H + CARTOUCHE_H, FONT)]
+    e.append('<title id="tm-t">%s</title>' % (L["titre"] % (first, last)))
+    e.append('<desc id="tm-d">%s</desc>' % (L["desc"] % (
+        num(marche[first]), first, num(marche[creux]), creux, num(marche[last]), last,
+        num(apparent[first]), num(min(apparent[str(a)] for a in years)),
+        num(apparent[last]), last)))
+    e.append('<text x="%d" y="22" font-size="13" fill="%s">%s</text>'
+             % (ml, INK2, _esc(L["panneau"])))
+    for v in (0, 2, 4, 6):
+        e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" '
+                 'stroke-width="1"/>' % (ml, y(v), W - mr, y(v), AXIS if v == 0 else GRID))
+        e.append('<text x="%d" y="%.1f" font-size="11" fill="%s" '
+                 'text-anchor="end">%d</text>' % (ml - 6, y(v) + 4, MUTED, v))
+    for a in range(years[0] + 4, years[-1] + 1, 5):
+        e.append('<text x="%.1f" y="%.1f" font-size="11" fill="%s" '
+                 'text-anchor="middle">%d</text>' % (x(a), ay0 + 22, MUTED, a))
+    e.append('<path d="%s" fill="none" stroke="%s" stroke-width="1.6" '
+             'stroke-linecap="round" stroke-linejoin="round"/>' % (_line_path(pm), INK2))
+    e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.4" '
+             'stroke-linecap="round" stroke-linejoin="round"/>' % (_line_path(pa), COL_INTER))
+
+    # Libelles de fin : la courbe la plus haute prend le sien au-dessus.
+    haut_m = marche[last] >= apparent[last]
+    for serie, pts, col, cle, en_haut in (
+            (marche, pm, INK2, "marche", haut_m),
+            (apparent, pa, COL_INTER, "apparent", not haut_m)):
+        px, py = pts[-1]
+        e.append('<circle cx="%.1f" cy="%.1f" r="4" fill="%s"/>' % (px, py, col))
+        dy = -9 if en_haut else 17
+        e.append('<text x="%.1f" y="%.1f" font-size="12" fill="%s">'
+                 '<tspan font-weight="600">%s</tspan> %s%s</text>'
+                 % (px + 8, py + dy, col, _esc(L[cle]), num(serie[last]), L["pct"]))
+    cx, cy = pm[years.index(int(creux))]
+    e.append('<circle cx="%.1f" cy="%.1f" r="3.5" fill="%s"/>' % (cx, cy, INK2))
+    e.append('<text x="%.1f" y="%.1f" font-size="11" fill="%s" text-anchor="middle">'
+             '%s%s en %s</text>' % (cx, cy + 18, INK2, num(marche[creux]), L["pct"], creux))
+
+    src = LABELS_CARTOUCHE[lang]["src_marche"]
+    e += cartouche(W, H + 4, src % (first, last), "marche", lang)
+    e.append("</svg>")
+    return "\n".join(e) + "\n"
+
+
 def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
                      seuils: dict, lang: str = "fr") -> str:
     """Dette en % du PIB, de la premiere annee du segment fige a aujourd'hui.
@@ -944,6 +1050,9 @@ def meta_figures(lastq: str, last_y: str, taux: dict, annuel: dict) -> dict:
             {"id": "longue", "fichier": "dette-longue" + suf,
              "titre": C["titre_longue"] % a0, "montre": C["montre_longue"],
              "source": C["src_longue"] % (a0, q), "precaution": C["longue"]},
+            {"id": "marche", "fichier": "taux-marche-apparent" + suf,
+             "titre": C["titre_marche"] % (t0, t1), "montre": C["montre_marche"],
+             "source": C["src_marche"] % (t0, t1), "precaution": C["marche"]},
         ]
     out["licence"] = {"fr": LABELS_CARTOUCHE["fr"]["licence"],
                       "en": LABELS_CARTOUCHE["en"]["licence"]}
@@ -998,6 +1107,15 @@ def main() -> int:
     d41_pib = parse_eurostat(fetch(EURO_D41_PIB), "sector").get("S13", {})
     cofog_mio = parse_eurostat(fetch(EURO_COFOG_MIO), "cofog99")
     cofog_pib = parse_eurostat(fetch(EURO_COFOG_PIB), "cofog99")
+    # Serie accessoire : un echec l'annonce et n'arrete rien.
+    try:
+        taux_marche = parse_eurostat(fetch(EURO_LT), "int_rt").get("MCBY", {})
+        if len(taux_marche) < 20 or not all(-3 < v < 25 for v in taux_marche.values()):
+            raise ValueError("serie hors bornes ou trop courte")
+    except Exception as exc:
+        print("AVERTISSEMENT non bloquant : taux a 10 ans indisponible (%s) ; "
+              "figure taux-marche-apparent conservee en l'etat." % exc)
+        taux_marche = None
     tr_mdeur = {y: round(v / 1000.0, 1) for y, v in
                 parse_eurostat(fetch(EURO_TR), "sector").get("S13", {}).items()}
 
@@ -1326,6 +1444,12 @@ def main() -> int:
             annuel, dette_pib[lastq], en_quarter(lastq), hist["seuils"],
             lang="en")),
     ]
+    if taux_marche:
+        sorties += [
+            (OUT_SVG_MARCHE, build_svg_marche(taux_apparent, taux_marche)),
+            (OUT_SVG_MARCHE_EN, build_svg_marche(taux_apparent, taux_marche,
+                                                 lang="en")),
+        ]
     # Le workflow enumere a la main les fichiers qu'il commite. Deux fois deja
     # -- le 16/08 (courbe du taux apparent) et le 20/09 (courbe longue EN) --
     # une sortie NOUVELLE a failli rester hors de cette liste : elle aurait ete

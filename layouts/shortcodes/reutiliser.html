@@ -96,7 +96,11 @@
     {{- $r := div (float (index $v 2)) (float (index $v 1)) -}}
     {{- if gt $r $ratioMax }}{{ $ratioMax = $r }}{{ end -}}
   {{- end }}
-  <div class="reutiliser__cartes" style="--reutiliser-ratio: 1 / {{ $ratioMax }}">
+  {{- /* Colonnes : 2 pour un nombre pair d'au moins 4 cartes, sinon 3 -- jamais une
+         carte seule sur sa ligne a 4 figures. */ -}}
+  {{- $n := len $figs -}}
+  {{- $cols := cond (and (ge $n 4) (eq (mod $n 2) 0)) 2 3 -}}
+  <div class="reutiliser__cartes" style="--reutiliser-ratio: 1 / {{ $ratioMax }}; --reutiliser-cols: {{ $cols }}">
   {{- range $figs }}
     {{- $svgRel := printf "img/%s.svg" .fichier -}}
     {{- $pngRel := printf "img/%s.png" .fichier -}}

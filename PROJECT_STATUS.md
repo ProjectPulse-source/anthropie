@@ -62,7 +62,7 @@ par l'auteur à 95 %.
 
 **À reprendre — décidé, non construit :**
 
-1. **Graphe taux de marché / taux apparent** (page du coût), validé par l'auteur. Il montre le
+1. ✅ **FAIT le 2026-09-21** — graphe taux de marché / taux apparent. Série Eurostat `irt_lt_mcby_a` vérifiée à la source (1970-2025) ; accessoire, donc non bloquante si elle manque. Figure `taux-marche-apparent(-en)`, 4ᵉ carte « Réutiliser », grille passée en 2 colonnes. *Constat en la dessinant : les deux courbes se superposent jusqu'en 2011 ; l'écart ne s'ouvre qu'avec la plongée des taux, puis le bond de 2022 — le texte le dit ainsi.* Ancienne consigne : **Graphe taux de marché / taux apparent** (page du coût), validé par l'auteur. Il montre le
    retard de transmission que la page affirme. Série : taux à long terme Eurostat (critère de
    convergence, annuel, France) — **code du jeu à vérifier à la source** avant de coder. Même
    API, bibliothèque standard : aucune dépendance CI. Nouvelle figure du générateur + entrée dans

@@ -23,6 +23,14 @@
    "montre": "La dette monte par paliers, chacun installé par une crise, aucun effacé par la décennie suivante.",
    "source": "INSEE, dette de Maastricht, 1978-T1 2026",
    "precaution": "Dette au sens de Maastricht, toutes administrations publiques."
+  },
+  {
+   "id": "marche",
+   "fichier": "taux-marche-apparent",
+   "titre": "Taux de marché et coût moyen du stock, 1996-2025",
+   "montre": "Le coût moyen du stock suit le taux à 10 ans avec des années de retard : il descend moins bas, et remonte moins vite.",
+   "source": "Eurostat irt_lt_mcby_a (taux à 10 ans)  ·  taux apparent : Eurostat gov_10a_main et INSEE, 1996-2025",
+   "precaution": "Le taux à 10 ans indique le prix de la dette nouvelle ; le taux apparent, celui de tout le stock, qui ne le suit qu'au fil des refinancements."
   }
  ],
  "en": [
@@ -49,6 +57,14 @@
    "montre": "Debt climbs in steps, each set by a crisis, none erased by the following decade.",
    "source": "INSEE, Maastricht debt, 1978-Q1 2026",
    "precaution": "Maastricht debt, general government."
+  },
+  {
+   "id": "marche",
+   "fichier": "taux-marche-apparent-en",
+   "titre": "Market rate and average cost of the stock, 1996-2025",
+   "montre": "The average cost of the stock follows the 10-year rate years behind: it falls less far, and climbs back more slowly.",
+   "source": "Eurostat irt_lt_mcby_a (10-year yield)  ·  effective rate: Eurostat gov_10a_main and INSEE, 1996-2025",
+   "precaution": "The 10-year rate is the price of new debt; the effective rate, the cost of the whole stock, follows it only as old debt is refinanced."
   }
  ],
  "licence": {

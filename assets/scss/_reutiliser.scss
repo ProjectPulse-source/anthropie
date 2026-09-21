@@ -15,8 +15,10 @@
 
 .reutiliser__cartes {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  grid-template-columns: repeat(var(--reutiliser-cols, 3), minmax(0, 1fr));
   gap: 1.25rem;
+
+  @media (max-width: 760px) { grid-template-columns: 1fr; }
 }
 
 .reutiliser__carte {

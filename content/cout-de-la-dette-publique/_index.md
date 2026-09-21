@@ -57,6 +57,12 @@ Pour lire ces chiffres sans être spécialiste, la chaîne tient en quatre maill
 </figure>
 {{< fig-actions id="taux" >}}
 
+<figure class="figure-ciseau">
+  <img src="/img/taux-marche-apparent.svg" alt="Deux courbes en pourcentage par an, sur la même échelle : le taux à 10 ans et le taux apparent de la dette publique restent proches jusqu'au début des années 2010 ; ensuite le taux à 10 ans descend jusqu'à zéro puis remonte fortement, tandis que le taux apparent descend moins bas et remonte plus lentement." width="720" height="408" loading="lazy">
+  <figcaption><strong>Le retard de transmission</strong>&nbsp;: le taux à 10&nbsp;ans, prix de la dette nouvelle, et le taux apparent, coût moyen de tout le stock, sur la même échelle — séries Eurostat <code>irt_lt_mcby_a</code> et <code>gov_10a_main</code>, INSEE.</figcaption>
+</figure>
+{{< fig-actions id="marche" >}}
+
 C'est la courbe que le débat public regarde le moins, et c'est celle qui manquait pour comprendre le reste&nbsp;: la charge ne dépend pas d'elle seule, mais du **produit** de l'encours par ce coût moyen. Trente ans durant, la baisse de l'un a compensé la hausse de l'autre — c'est pourquoi doubler l'encours n'a pas doublé la facture. Aujourd'hui l'encours est bien plus lourd **et** le coût moyen remonte&nbsp;: les deux termes jouent enfin dans le même sens.
 
 **La lecture.** Depuis 2022 — rupture de trajectoire où convergent inflation, titres indexés et normalisation monétaire —, le ciseau se referme&nbsp;: la remontée des taux rencontre un encours devenu deux fois plus lourd, et la charge atteint {{< dette-val "interets_mdeur" >}}&nbsp;Md€ ({{< dette-val "interets_pct_pib" >}}&nbsp;% du PIB) en {{< dette-val "interets_annee" >}} — **{{< dette-val "interets_hausse_pct" >}}&nbsp;%** de plus qu'au creux exceptionnel de {{< dette-val "interets_creux_annee" >}}, et **{{< dette-val "interets_hausse_2019_pct" >}}&nbsp;%** de plus qu'en 2019, avant la rupture sanitaire&nbsp;: les deux bases de comparaison mènent à la même conclusion. Dans le cadre de l'anthropie, cette séquence **peut être lue** comme un déplacement temporaire du coût suivi de sa réapparition&nbsp;: déplacement, saturation, retour. Cette lecture est formalisée dans le working paper [AWP-07 — *La boucle anthropique*](/awp/awp-07/) et appliquée à la dette dans [AWP-03](/awp/awp-03/).
