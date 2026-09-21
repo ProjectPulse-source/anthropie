@@ -58,8 +58,17 @@ jobs:
           # superficiel, et la reprise serait decorative.
           fetch-depth: 0
 
+      # Rendu des figures en PNG : utile, mais ACCESSOIRE. L'installation est
+      # isolee et non bloquante -- si elle echoue, le script le dit et poursuit
+      # (rendre_png() ne leve jamais), et les DONNEES sont publiees quand meme.
+      # Faire dependre la mise a jour des chiffres d'une bibliotheque d'images
+      # suspendrait l'essentiel a l'accessoire.
+      - name: Rendu PNG -- dependance non bloquante
+        continue-on-error: true
+        run: python3 -m pip install --quiet cairosvg
+
       - name: Rapatrier et valider les series (gardes dures, exit 1 si echec)
-        run: python3 scripts/update_dette_insee.py
+        run: python3 scripts/update_dette_insee.py --png
 
       - name: Detecter un changement
         id: diff
@@ -97,7 +106,14 @@ jobs:
                   static/img/ciseau-dette-interets-en.svg \
                   static/img/taux-apparent-dette-en.svg \
                   static/img/dette-longue.svg \
-                  static/img/dette-longue-en.svg
+                  static/img/dette-longue-en.svg \
+                  static/img/ciseau-dette-interets.png \
+                  static/img/taux-apparent-dette.png \
+                  static/img/ciseau-dette-interets-en.png \
+                  static/img/taux-apparent-dette-en.png \
+                  static/img/dette-longue.png \
+                  static/img/dette-longue-en.png \
+                  data/png_dette_source.json
           git commit -m "data(dette): series INSEE/Eurostat du $(date -u +%Y-%m-%d)"
           # Le rebase couvre le seul cas reel de non-fast-forward : un commit
           # humain pousse sur main pendant les ~40 s du run. Le 500 transitoire

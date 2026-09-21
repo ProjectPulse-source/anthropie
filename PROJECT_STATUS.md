@@ -67,12 +67,28 @@ des six SVG (source + millésime, précaution de lecture, licence + URL). Le cad
 La longueur des lignes n'a pas été estimée : **mesurée au rendu** — la première version, en
 deux lignes, sortait du cadre sans rien casser.
 
-**PNG.** Option `--png` : six PNG à 1440 px dérivés des SVG, hors chaîne automatique. Le
-workflow n'installe aucune dépendance, et faire dépendre la mise à jour des *données* d'une
-bibliothèque d'images mettrait l'essentiel à la merci de l'accessoire. Leur péremption est
-guettée par `scripts/check-png-dette.py` (empreinte du SVG source), branché dans
-`check-all.py` hors `--ci` ; témoin vérifié dans les deux sens (0 → 1 → 0). Condition de
-mort écrite dans sa docstring.
+**PNG.** Option `--png` : six PNG à 1440 px dérivés des SVG. **Rendus par la CI** depuis
+ce jour, par une étape délibérément non bloquante — l'installation de la bibliothèque de
+rendu porte `continue-on-error`, et `rendre_png()` ne lève jamais : si elle échoue, le
+script le dit, poursuit, et les *données* sont publiées quand même. Faire dépendre la mise
+à jour des chiffres d'une bibliothèque d'images suspendrait l'essentiel à l'accessoire.
+
+Le premier arbitrage excluait ce chaînage ; il était trop binaire — GitHub Actions isole
+une étape. Deux vérifications l'ont ouvert : le rendu simulé avec la police de repli d'un
+runner Linux (DejaVu Sans, sensiblement plus large) montre que le cartouche tient ; et
+l'isolation était déjà dans le code.
+
+Cette tolérance a un prix, et c'est lui que garde `scripts/check-png-dette.py` : une
+installation qui échoue publierait des SVG neufs à côté de PNG anciens, sans erreur.
+Empreinte du SVG source, branché dans `check-all.py` hors `--ci` — un PNG périmé ne doit
+pas bloquer le déploiement du site. Témoin vérifié dans les deux sens (0 → 1 → 0).
+Condition de mort réécrite : il disparaît le jour où le rendu ne peut plus échouer
+séparément de la publication des données.
+
+La garde de cohérence du script (« toute sortie doit figurer dans le `git add` du
+workflow ») est étendue aux PNG et au manifeste : un quatrième graphique ajouté demain
+aurait sinon un PNG régénéré en CI et jamais publié. Témoin par mutation réelle du
+workflow (1 → 0).
 
 **Pages.** Bloc « Réutiliser cette page » : droits énoncés **par type** — données, graphiques,
 texte — au point de téléchargement, plus trois phrases citables (question, apport, limite).

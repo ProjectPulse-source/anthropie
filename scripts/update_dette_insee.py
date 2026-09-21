@@ -1279,8 +1279,15 @@ def main() -> int:
     wf = REPO / ".github" / "workflows" / "dette-insee.yml"
     if wf.is_file():
         texte = wf.read_text(encoding="utf-8")
-        oubliees = [c.relative_to(REPO).as_posix() for c, _ in sorties
-                    if c.relative_to(REPO).as_posix() not in texte]
+        # Les PNG derives comptent AUSSI : depuis le 2026-09-21 la CI les rend
+        # (etape non bloquante) et doit donc les committer. Un quatrieme
+        # graphique ajoute demain aurait sinon un PNG regenere en CI et jamais
+        # publie -- exactement le defaut que cette garde previent pour les SVG.
+        attendus = [c.relative_to(REPO).as_posix() for c, _ in sorties]
+        attendus += [c.with_suffix(".png").relative_to(REPO).as_posix()
+                     for c, _ in sorties if c.suffix == ".svg"]
+        attendus.append("data/png_dette_source.json")
+        oubliees = [c for c in attendus if c not in texte]
         if oubliees:
             print("ECHEC: sortie(s) absente(s) du `git add` de %s : %s"
                   % (wf.name, ", ".join(oubliees)))

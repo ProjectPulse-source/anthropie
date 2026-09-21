@@ -1,24 +1,27 @@
 #!/usr/bin/env python3
 """Les PNG des figures de la dette sont-ils encore ceux de leurs SVG ?
 
-MOTIF (2026-09-21). Les SVG sont regeneres chaque semaine par la chaine INSEE /
-Eurostat, en CI. Les PNG, eux, sont derives EN LOCAL : la chaine ne peut pas les
-produire sans une dependance graphique, et faire dependre la mise a jour des
-DONNEES d'une bibliotheque d'images serait mettre l'essentiel a la merci de
-l'accessoire. Consequence : des qu'un chiffre bouge, le SVG suit et le PNG
-reste en arriere -- sans rien casser, sans aucune erreur, et en continuant
-d'etre propose au telechargement. Une figure fausse qui circule est exactement
-le defaut que ce controle guette.
+MOTIF (2026-09-21, reecrit le meme jour). Les SVG sont regeneres chaque semaine
+par la chaine INSEE / Eurostat, en CI, et depuis ce jour la CI rend aussi les
+PNG. Mais elle le fait par une etape DELIBEREMENT non bloquante : l'installation
+de la bibliotheque de rendu porte `continue-on-error`, parce que faire dependre
+la mise a jour des DONNEES d'une bibliotheque d'images suspendrait l'essentiel a
+l'accessoire. Cette tolerance a un prix, et c'est lui que ce controle guette :
+le jour ou l'installation echoue, le script l'annonce, poursuit, et publie des
+SVG neufs a cote de PNG anciens -- sans erreur, sans echec de workflow, et en
+continuant d'offrir les PNG au telechargement. Une figure fausse qui circule est
+exactement le defaut vise.
 
 Il ne compare pas des images : il compare l'EMPREINTE DU SVG SOURCE au moment
-ou le PNG a ete produit (static/img/_png_source.json) a celle du SVG courant.
-Deux rendus du meme SVG peuvent differer d'une version de cairo a l'autre ;
-la source, elle, ne ment pas.
+ou le PNG a ete produit (data/png_dette_source.json) a celle du SVG courant.
+Deux rendus du meme SVG peuvent differer d'une version de cairo ou d'un jeu de
+polices a l'autre ; la source, elle, ne ment pas.
 
 CONDITION DE MORT (R2), en predicat et non en date : ce controle disparait le
-jour ou les PNG sont produits dans la meme execution que les SVG -- c'est-a-dire
-le jour ou la chaine de production sait rendre une image. Il n'y a alors plus
-de derive possible, donc plus rien a surveiller.
+jour ou le rendu des PNG cesse de pouvoir echouer separement de la publication
+des donnees -- soit qu'il devienne bloquant, soit qu'il n'ait plus de dependance
+a installer. Il n'y a alors plus de divergence possible, donc plus rien a
+surveiller.
 
 Sortie 0 = a jour ; 1 = au moins un PNG perime ou orphelin ; 2 = rien a
 conclure (manifeste absent : les PNG n'ont jamais ete produits).

@@ -48,11 +48,11 @@ HORS_RESEAU = [
     ("typographie francaise (insecables)", "check-typo-fr.py", []),
 ]
 LOCAL_DERIVES = [
-    # Les PNG des figures de la dette sont derives EN LOCAL, alors que leurs SVG
-    # sont regeneres chaque semaine en CI : le jour ou un chiffre bouge, le PNG
-    # reste en arriere sans rien casser, et continue d'etre propose au
-    # telechargement. Hors --ci : la CI ne les produit pas, elle n'a donc rien
-    # a en dire. Condition de mort dans la docstring du controle.
+    # La CI rend les PNG, mais par une etape NON BLOQUANTE : si l'installation
+    # de la bibliotheque de rendu echoue, elle publie des SVG neufs a cote de
+    # PNG anciens, sans erreur. Hors --ci a dessein : un PNG perime ne doit pas
+    # bloquer le deploiement du site, il doit se voir avant un commit humain.
+    # Condition de mort dans la docstring du controle.
     ("PNG des figures <-> leurs SVG", "check-png-dette.py", []),
 ]
 LOCAL = [
