@@ -1,0 +1,34 @@
+{{- /* {{< interets-par-foyer >}}            -> montant, arrondi à la dizaine d'euros
+       {{< interets-par-foyer "foyers" >}}   -> nombre de foyers fiscaux, en millions
+       {{< interets-par-foyer "periode" >}}  -> période du dénominateur
+
+       Ordre de grandeur de la charge d'intérêts rapportée au foyer fiscal
+       (arbitrage PRO-20260921-DIPTYQUE, P4). CALCULÉ au build, jamais recopié :
+       numérateur = dernière charge d'intérêts de data/dette_officielle.json
+       (Eurostat, réinterrogée chaque semaine) ; dénominateur = foyers fiscaux du
+       registre du livre, exportés dans data/qui_paie_donnees.json. La page doit
+       dire, à côté, que c'est une division uniforme théorique et non un impôt dû.
+       Donnée absente = échec de build. */ -}}
+{{- $quoi := .Get 0 | default "montant" -}}
+{{- $d := site.Data.dette_officielle -}}
+{{- $q := site.Data.qui_paie_donnees -}}
+{{- if or (not $d) (not $q) (not $q.echelle_foyer) -}}
+  {{- errorf "interets-par-foyer: donnees absentes (dette_officielle ou qui_paie_donnees.echelle_foyer) (%s)" .Page.File.Path -}}
+{{- end -}}
+{{- $f := $q.echelle_foyer -}}
+{{- if eq $quoi "montant" -}}
+  {{- $an := $d.interets_annuels.derniere_periode -}}
+  {{- $mdeur := index $d.interets_annuels.series.mdeur $an -}}
+  {{- if not $mdeur }}{{ errorf "interets-par-foyer: charge %s introuvable" $an }}{{ end -}}
+  {{- $eur := div (mul (float $mdeur) 1000.0) (float $f.millions) -}}
+  {{- lang.FormatNumber 0 (mul (math.Round (div $eur 10.0)) 10) -}}
+{{- else if eq $quoi "foyers" -}}
+  {{- /* « 41 millions » dans la source : pas de décimale inventée. */ -}}
+  {{- lang.FormatNumber (cond (eq (math.Floor $f.millions) (float $f.millions)) 0 1) $f.millions -}}
+{{- else if eq $quoi "periode" -}}
+  {{- if eq $.Page.Lang "en" -}}
+    {{- with $f.periode_en }}{{ . }}{{ else }}{{ errorf "interets-par-foyer: periode_en absente du registre (%s)" $.Page.File.Path }}{{ end -}}
+  {{- else }}{{ $f.periode }}{{ end -}}
+{{- else -}}
+  {{- errorf "interets-par-foyer: argument %q inconnu (%s)" $quoi .Page.File.Path -}}
+{{- end -}}

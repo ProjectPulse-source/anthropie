@@ -69,6 +69,8 @@ C'est la courbe que le débat public regarde le moins, et c'est celle qui manqua
 
 Une précision que le débat public oublie souvent&nbsp;: sur la série INSEE disponible (depuis 1995), le **maximum du ratio** dette/PIB reste celui du {{< dette-val "dette_pic_periode" >}} ({{< dette-val "dette_pic_pct_pib" >}}&nbsp;%, au cœur de la crise sanitaire)&nbsp;; c'est en euros courants que les trimestres récents établissent de nouveaux maximums.
 
+**À l'échelle d'un foyer.** Rapportée aux {{< interets-par-foyer "foyers" >}}&nbsp;millions de foyers fiscaux ({{< interets-par-foyer "periode" >}}, DGFiP), la charge d'intérêts de {{< dette-val "interets_annee" >}} représente environ {{< interets-par-foyer >}}&nbsp;€ par foyer. C'est une division uniforme théorique de la charge totale&nbsp;: ce montant n'est pas un impôt dû par chaque foyer, et il ne dit pas qui la supporte — ménages, entreprises et non-résidents contribuent aux recettes publiques dans des proportions que ce calcul ignore. Qui la supporte est [l'objet du second volet](/qui-paie-la-dette-publique/).
+
 ## Ce que représentaient {{< dette-val "interets_equiv_mdeur" >}}&nbsp;milliards d'intérêts en {{< dette-val "equiv_annee" >}}
 
 La mesure la plus parlante de la capacité d'absorption budgétaire&nbsp;: en {{< dette-val "recettes_annee" >}}, les intérêts versés ont représenté **{{< dette-val "interets_sur_recettes_pct" >}}&nbsp;% de l'ensemble des recettes publiques** ({{< dette-val "recettes_mdeur" >}}&nbsp;Md€ de recettes, Eurostat). Puis, à masses comparées sur le même millésime {{< dette-val "equiv_annee" >}} (dernières données Eurostat comparables, dépenses des administrations publiques par fonction)&nbsp;:

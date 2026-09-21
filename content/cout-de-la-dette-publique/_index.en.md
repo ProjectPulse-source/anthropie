@@ -74,6 +74,8 @@ This is the curve that receives the least attention in public debate, and the mi
 
 One point often overlooked in public debate: over the INSEE series available since 1995, the **highest ratio** of debt to GDP remains that of {{< dette-val "dette_pic_periode" >}} ({{< dette-val "dette_pic_pct_pib" >}}%, at the height of the pandemic). It is in current euros that recent quarters set new records.
 
+**On the scale of a household.** Divided among France's {{< interets-par-foyer "foyers" >}} million tax households ({{< interets-par-foyer "periode" >}}, DGFiP), the {{< dette-val "interets_annee" >}} interest burden comes to about €{{< interets-par-foyer >}} per household. This is a notional, uniform division of the total: it is not a tax owed by each household, and it says nothing about who bears the burden — households, firms and non-residents contribute to public revenue in proportions this calculation ignores. Who bears it is the subject of the [second part of the file](/qui-paie-la-dette-publique/) (in French).
+
 ## What {{< dette-val "interets_equiv_mdeur" >}} billion euros in interest represented in {{< dette-val "equiv_annee" >}}
 
 The clearest measure of the burden on public finances: in {{< dette-val "recettes_annee" >}}, interest paid amounted to **{{< dette-val "interets_sur_recettes_pct" >}}% of all public revenue** ({{< dette-val "recettes_mdeur" >}} billion euros of revenue, Eurostat). For comparison, using {{< dette-val "equiv_annee" >}} — the most recent year for which comparable Eurostat expenditure-by-function data are available:
