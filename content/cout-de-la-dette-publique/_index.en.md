@@ -94,15 +94,9 @@ Every figure on this page is **derived automatically from official sources**, ne
 
 The framework used to interpret these figures is set out in [What is anthropy?](/en/quest-ce-que-lanthropie/) and in the book [*ANTHROPY — A Big History of Civilization's Hidden Costs*](/en/livres/anthropie-ordre-ici-dette-ailleurs/). The book-length treatment of French public debt, *Dette Publique&nbsp;: Qui paie vraiment&nbsp;?*, exists in French only.
 
-### Reusing this page
-
-**The data** — [dette_officielle.json](/dette_officielle.json). The compilation is released under a [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) licence: free reuse, including commercial use, on the single condition that the source is cited. The raw series belong to INSEE and Eurostat, under their own terms.
-
-**The charts** — the scissor ([SVG](/img/ciseau-dette-interets-en.svg), [PNG](/img/ciseau-dette-interets-en.png)), the effective rate ([SVG](/img/taux-apparent-dette-en.svg), [PNG](/img/taux-apparent-dette-en.png)), debt since {{< dette-val "hist_annee_debut" >}} ([SVG](/img/dette-longue-en.svg), [PNG](/img/dette-longue-en.png)). Same licence as the data — SVG stays sharp at any size, PNG fits anywhere. Each one carries its source, vintage and caveat **inside the image**: reused in a slide deck or an article, it does not come apart from what makes it readable.
-
-**The text** of this page remains under copyright: short quotation with attribution, full reproduction on request.
-
-**In three sentences, if you need to summarise it.** This page measures what public debt costs each year — the interest burden, {{< dette-val "interets_mdeur" >}} billion euros in {{< dette-val "interets_annee" >}} — rather than the size of the stock. It shows why a stock twice as heavy did not double the bill: the average cost of that stock fell for thirty years, and has been climbing since 2022 with the lag that refinancing imposes. It compares magnitudes on one perimeter and one vintage, without establishing that a euro of interest was taken from another budget: these data do not show that.
+{{< reutiliser figures="figures_dette" jeu="dette_officielle" sources="INSEE and Eurostat" >}}
+This page measures what public debt costs each year — the interest burden, {{< dette-val "interets_mdeur" >}} billion euros in {{< dette-val "interets_annee" >}} — rather than the size of the stock. It shows why a stock twice as heavy did not double the bill: the average cost of that stock fell for thirty years, and has been climbing since 2022 with the lag that refinancing imposes. It compares magnitudes on one perimeter and one vintage, without establishing that a euro of interest was taken from another budget: these data do not show that.
+{{< /reutiliser >}}
 
 {{< appel-livre slug="dette-publique-qui-paie-vraiment" >}}
 This page prices the bill. It does not say who settles it — and that is where everything is decided: a debt is never cancelled, it is displaced. Onto the taxpayer, onto the saver through inflation, onto public services whose margin tightens, onto those who cannot yet vote. The book follows each of these channels in turn, on official figures, and ends in scenarios for 2025-2035. By the end you will recognise which one is unfolding.

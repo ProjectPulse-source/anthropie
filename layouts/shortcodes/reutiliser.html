@@ -1,0 +1,143 @@
+{{- /* reutiliser.html — bloc « Réutiliser cette page », commun aux pages ressources.
+
+       {{< reutiliser figures="figures_dette" jeu="dette_officielle"
+                      sources="INSEE et Eurostat" >}}
+       Le résumé en trois phrases, propre à CETTE page.
+       {{< /reutiliser >}}
+
+       Variante A+ de l'arbitrage PRO-20260921-MAQUETTES-REUTILISER. Le corps de la
+       page démontre ; ce bloc permet d'emporter. Il ne réécrit pas l'article.
+
+       SOURCE UNIQUE. Titre, « ce que montre la figure », source, période et
+       précaution viennent de data/<figures>.json, écrit par le générateur qui
+       imprime les mêmes phrases dans le cartouche de l'image. Les recopier ici
+       les ferait diverger — sur la phrase même qui sert à éviter un contresens.
+       La taille des vignettes est lue dans le viewBox du SVG réel, jamais
+       recopiée : le jour où le cadre change, la page suit.
+
+       CONTENU DANS LE HTML. Citation, résumé, source et précaution sont du texte
+       de la page. Les boutons de copie passent par static/js/copy-citation.js
+       (existant, data-copy-target) et copient ce qui est affiché : un robot, un
+       lecteur d'écran ou un assistant les lit sans exécuter de script.
+
+       Échoue bruyamment si un fichier de données manque : un bloc muet en fin de
+       page passerait inaperçu à la relecture. */ -}}
+{{- $isEn := eq .Page.Lang "en" -}}
+{{- $lang := cond $isEn "en" "fr" -}}
+{{- $nomFig := .Get "figures" -}}
+{{- $data := index site.Data $nomFig -}}
+{{- if not $data -}}{{ errorf "reutiliser: data/%s.json introuvable (%s)" $nomFig .Page.File.Path }}{{- end -}}
+{{- $figs := index $data $lang -}}
+{{- $jeuNom := .Get "jeu" -}}
+{{- $releve := "" -}}
+{{- with $jeuNom -}}
+  {{- $jeu := index site.Data . -}}
+  {{- if not $jeu -}}{{ errorf "reutiliser: data/%s.json introuvable (%s)" . $.Page.File.Path }}{{- end -}}
+  {{- $releve = index $jeu (cond $isEn "affichage_en" "affichage") "releve_le" | default "" -}}
+{{- end -}}
+{{- $sources := .Get "sources" -}}
+
+{{- $T := dict
+    "titre" "Réutiliser cette page"
+    "chapo" "Les figures, les données et une citation prête, sous licence libre. Chaque figure porte dans l'image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire."
+    "precaution" "Précaution d'interprétation."
+    "png" "Télécharger en PNG"
+    "citer" "Citer cette page"
+    "copier_cit" "Copier la citation"
+    "resume" "En trois phrases"
+    "copier_res" "Copier le résumé"
+    "donnees" "Les données"
+    "donnees_p" "Séries consolidées et grandeurs dérivées : taux apparent, ratios, équivalences à millésime unique."
+    "json" "Télécharger en JSON"
+    "copie" "Copié !"
+    "donnees_de" "Données"
+    "releve" "relevé du"
+    "licence" "<strong>Données et graphiques</strong> CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source. <strong>Texte</strong> soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande. Les séries brutes appartiennent à l'INSEE et à Eurostat, sous leurs propres conditions." -}}
+{{- if $isEn -}}
+{{- $T = dict
+    "titre" "Reusing this page"
+    "chapo" "The charts, the data and a ready-made citation, under an open licence. Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it does not come apart from what makes it readable."
+    "precaution" "Reading caveat."
+    "png" "Download PNG"
+    "citer" "Cite this page"
+    "copier_cit" "Copy citation"
+    "resume" "In three sentences"
+    "copier_res" "Copy summary"
+    "donnees" "The data"
+    "donnees_p" "Consolidated series and derived quantities: effective rate, ratios, single-vintage equivalences."
+    "json" "Download JSON"
+    "copie" "Copied!"
+    "donnees_de" "Data from"
+    "releve" "retrieved"
+    "licence" "<strong>Data and charts</strong> CC BY 4.0 — free reuse, including commercial, with attribution. <strong>Text</strong> under copyright — short quotation free, full reproduction on request. The raw series belong to INSEE and Eurostat, under their own terms." -}}
+{{- end -}}
+
+{{- /* Citation au format du site (partials/how-to-cite.html) : Nom, Prénom (année). « Titre ». */ -}}
+{{- $citation := "" -}}
+{{- if $isEn -}}
+  {{- $citation = printf "Lalut, Stéphane (%s). “%s”. %s %s%s. %s"
+      (.Page.Date.Format "2006") .Page.Title $sources (cond (ne $releve "") "data, retrieved " "data") $releve .Page.Permalink -}}
+{{- else -}}
+  {{- $citation = printf "Lalut, Stéphane (%s). « %s ». Données %s%s%s. %s"
+      (.Page.Date.Format "2006") .Page.Title $sources (cond (ne $releve "") ", relevé du " "") $releve .Page.Permalink -}}
+{{- end -}}
+
+<section class="reutiliser" id="reutiliser" aria-labelledby="reutiliser-titre">
+  <h2 id="reutiliser-titre">{{ $T.titre }}</h2>
+  <p class="reutiliser__chapo">{{ if $isEn }}{{ $T.chapo }}{{ else }}{{ partial "fr-typo.html" $T.chapo }}{{ end }}</p>
+
+  {{- /* Ratio commun des vignettes = celui de la figure la plus haute, lu dans
+         les SVG reels : les titres des cartes s'alignent, et aucune valeur n'est
+         recopiee a la main. */ -}}
+  {{- $ratioMax := 0.0 -}}
+  {{- range $figs -}}
+    {{- $s := os.ReadFile (printf "static/img/%s.svg" .fichier) -}}
+    {{- $v := index (findRESubmatch `viewBox="0 0 ([0-9.]+) ([0-9.]+)"` $s 1) 0 -}}
+    {{- $r := div (float (index $v 2)) (float (index $v 1)) -}}
+    {{- if gt $r $ratioMax }}{{ $ratioMax = $r }}{{ end -}}
+  {{- end }}
+  <div class="reutiliser__cartes" style="--reutiliser-ratio: 1 / {{ $ratioMax }}">
+  {{- range $figs }}
+    {{- $svgRel := printf "img/%s.svg" .fichier -}}
+    {{- $pngRel := printf "img/%s.png" .fichier -}}
+    {{- $svg := os.ReadFile (printf "static/%s" $svgRel) -}}
+    {{- $vb := index (findRESubmatch `viewBox="0 0 ([0-9.]+) ([0-9.]+)"` $svg 1) 0 -}}
+    <article class="reutiliser__carte" id="fig-{{ .id }}">
+      <img class="reutiliser__vignette" src="{{ $svgRel | relURL }}" alt="{{ .titre }}"
+           width="{{ index $vb 1 }}" height="{{ index $vb 2 }}" loading="lazy">
+      <div class="reutiliser__corps">
+        <h3 class="reutiliser__titre">{{ if $isEn }}{{ .titre }}{{ else }}{{ partial "fr-typo.html" .titre }}{{ end }}</h3>
+        <p class="reutiliser__montre">{{ if $isEn }}{{ .montre }}{{ else }}{{ partial "fr-typo.html" .montre }}{{ end }}</p>
+        <p class="reutiliser__precaution"><strong>{{ $T.precaution }}</strong> {{ if $isEn }}{{ .precaution }}{{ else }}{{ partial "fr-typo.html" .precaution }}{{ end }}</p>
+        <p class="reutiliser__source">{{ .source }}</p>
+        <div class="reutiliser__actions">
+          <a class="how-to-cite__btn" href="{{ $pngRel | relURL }}" download="{{ .fichier }}.png">{{ $T.png }}</a>
+          <a class="how-to-cite__btn how-to-cite__btn--secondary" href="{{ $svgRel | relURL }}" download="{{ .fichier }}.svg">SVG</a>
+        </div>
+      </div>
+    </article>
+  {{- end }}
+  </div>
+
+  <div class="reutiliser__commun">
+    <div class="reutiliser__bloc" id="reutiliser-citer">
+      <h3 class="reutiliser__bloc-titre">{{ $T.citer }}</h3>
+      <p class="reutiliser__citation" id="reutiliser-citation">{{ $citation }}</p>
+      <div><button type="button" class="how-to-cite__btn" data-copy-target="#reutiliser-citation" data-copy-feedback="{{ $T.copie }}">{{ $T.copier_cit }}</button></div>
+    </div>
+    <div class="reutiliser__bloc">
+      <h3 class="reutiliser__bloc-titre">{{ $T.resume }}</h3>
+      <div class="reutiliser__resume" id="reutiliser-resume">{{ .Inner | markdownify }}</div>
+      <div><button type="button" class="how-to-cite__btn how-to-cite__btn--secondary" data-copy-target="#reutiliser-resume" data-copy-feedback="{{ $T.copie }}">{{ $T.copier_res }}</button></div>
+    </div>
+    {{- with $jeuNom }}
+    <div class="reutiliser__bloc" id="reutiliser-donnees">
+      <h3 class="reutiliser__bloc-titre">{{ $T.donnees }}</h3>
+      <p class="reutiliser__montre">{{ if $isEn }}{{ $T.donnees_p }}{{ else }}{{ partial "fr-typo.html" $T.donnees_p }}{{ end }}</p>
+      <div><a class="how-to-cite__btn" href="{{ printf "%s.json" . | relURL }}" download="{{ . }}.json">{{ $T.json }}</a></div>
+    </div>
+    {{- end }}
+  </div>
+
+  <p class="reutiliser__licence">{{ if $isEn }}{{ $T.licence | safeHTML }}{{ else }}{{ partial "fr-typo.html" $T.licence }}{{ end }}</p>
+</section>

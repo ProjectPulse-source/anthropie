@@ -1,0 +1,180 @@
+// Bloc « Réutiliser cette page » (layouts/shortcodes/reutiliser.html) — composant
+// commun des pages ressources. Les boutons sont ceux de « Comment citer »
+// (_how-to-cite.scss) : aucun nouveau style de bouton, une seule grammaire.
+
+.reutiliser {
+  margin-block: 3rem 2.5rem;
+  scroll-margin-top: 1.5rem;
+}
+
+.reutiliser__chapo {
+  max-width: 66ch;
+  margin: 0 0 1.5rem;
+  color: var(--color-text-muted);
+}
+
+.reutiliser__cartes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.25rem;
+}
+
+.reutiliser__carte {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--color-bg-card);
+  border-radius: 6px;
+  scroll-margin-top: 1.5rem;
+}
+
+// La figure garde sa taille réelle de lecture : c'est elle qu'on emporte.
+.reutiliser__vignette {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: var(--reutiliser-ratio, auto);
+  object-fit: contain;
+  background: var(--color-bg-elevated);
+  border-bottom: 1px solid var(--color-rule-ghost);
+}
+
+.reutiliser__corps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  flex: 1;
+  padding: 0.9rem 1rem 1.1rem;
+}
+
+.reutiliser__titre {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--color-text);
+}
+
+.reutiliser__montre {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--color-text-body);
+}
+
+// La précaution se lit à côté du chiffre qu'elle protège, pas dans une note.
+.reutiliser__precaution {
+  margin: 0;
+  padding-left: 0.65rem;
+  border-left: 2px solid var(--color-accent-rule);
+  font-size: 0.86rem;
+  line-height: 1.45;
+  color: var(--color-text-muted);
+
+  strong { color: var(--color-accent); font-weight: 600; }
+}
+
+.reutiliser__source {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  line-height: 1.4;
+  color: var(--color-text-subtle);
+}
+
+.reutiliser__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.35rem;
+}
+
+.reutiliser__commun {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.75rem;
+}
+
+.reutiliser__bloc {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--color-rule-soft);
+  border-radius: 6px;
+  scroll-margin-top: 1.5rem;
+
+  // Le bouton se pose en bas : les trois blocs alignent leurs actions.
+  > :last-child { margin-top: auto; padding-top: 0.2rem; }
+}
+
+// Classe obligatoire : _page-common.scss style les h3 SANS classe comme du
+// contenu (serif, grande marge). Convention du site : un h3 de gabarit en porte une.
+.reutiliser__bloc-titre {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+// Les boutons empruntés à « Comment citer » héritent sinon la police du corps (serif).
+.reutiliser .how-to-cite__btn { font-family: var(--font-sans); }
+
+.reutiliser__citation,
+.reutiliser__resume {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+
+  p { margin: 0; }
+}
+
+.reutiliser__licence {
+  max-width: 72ch;
+  margin: 1.25rem 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  line-height: 1.55;
+  color: var(--color-text-subtle);
+
+  strong { color: var(--color-accent); font-weight: 500; }
+}
+
+// Ancre de tête et micro-actions sous les figures du corps : le lecteur qui
+// veut reprendre une figure le décide en la regardant, pas en fin de page.
+.reutiliser-ancre {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0 1.25rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--color-accent-rule);
+  border-radius: 4px;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--color-accent);
+  text-decoration: none;
+
+  &:hover { background: var(--color-accent-faint); }
+  &:focus-visible { outline: 2px solid var(--color-pivot); outline-offset: 2px; }
+}
+
+.fig-actions {
+  margin: 0.35rem 0 0;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: var(--color-text-subtle);
+
+  a {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-decoration-color: var(--color-accent-rule);
+    text-underline-offset: 2px;
+  }
+}
