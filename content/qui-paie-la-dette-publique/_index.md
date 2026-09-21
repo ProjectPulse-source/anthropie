@@ -22,6 +22,8 @@ Cette page donne l'essentiel de la réponse — le livre [*Dette Publique&nbsp;:
 
 {{< dette-chiffres >}}
 
+Ces chiffres sont suivis semaine après semaine sur la page sœur, [Combien coûte la dette publique&nbsp;?](/cout-de-la-dette-publique/)&nbsp;: la charge d'intérêts de l'année, pourquoi elle remonte, et ce qu'elle représente face aux budgets de la justice, de l'école et de la santé.
+
 ## Les générations futures — le transfert temporel
 
 La dette convertit un coût présent en charge future&nbsp;: ceux qui hériteront du désordre n'ont pas contracté l'emprunt. Cette charge prendra l'une de deux formes — des impôts plus lourds pour servir la dette, ou des services publics dégradés si on ne la sert pas — et le plus souvent un mélange des deux. Le transfert est d'autant plus efficace qu'il est invisible&nbsp;: personne ne vote «&nbsp;contre&nbsp;» les générations futures&nbsp;; on vote pour des budgets qui leur transmettent la facture. L'objection classique — «&nbsp;on se la doit à nous-mêmes&nbsp;» — et sa réponse sont développées argument par argument sur la page [La dette publique est-elle un fardeau pour les générations futures&nbsp;?](/dette-publique-generations-futures/)

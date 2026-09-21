@@ -22,6 +22,8 @@ faq:
 
 {{< reutiliser-ancre >}}
 
+*This page prices the bill. Its companion page, [Qui paie vraiment la dette publique ?](/qui-paie-la-dette-publique/) (in French), follows who ends up bearing it and who holds the debt.*
+
 France is a useful case well beyond France itself. It is a large advanced economy where a general mechanism became unusually clear: for three decades the debt stock grew while the cost of carrying it fell, so the burden stayed quiet — and then, within a few years, the scissor began to close. What happens when that reversal arrives is now playing out in public, on a scale large enough to make the mechanism visible.
 
 To the question "what does the debt cost", the most direct answer is not the size of the stock — it is the **interest paid** each year by general government: **{{< dette-val "interets_mdeur" >}} billion euros in {{< dette-val "interets_annee" >}}**, or {{< dette-val "interets_pct_pib" >}}% of GDP and **{{< dette-val "interets_sur_recettes_pct" >}}% of all public revenue** (Eurostat).

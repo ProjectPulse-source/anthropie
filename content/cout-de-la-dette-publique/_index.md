@@ -21,6 +21,8 @@ faq:
 
 {{< reutiliser-ancre >}}
 
+*Cette page chiffre la facture. Sa page sœur, [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/), suit à qui elle revient et qui détient la dette.*
+
 À la question «&nbsp;combien coûte la dette publique&nbsp;?&nbsp;», la mesure la plus directe n'est pas le montant de l'encours — c'est la **charge d'intérêts versés** chaque année par les administrations publiques&nbsp;: **{{< dette-val "interets_mdeur" >}}&nbsp;milliards d'euros en {{< dette-val "interets_annee" >}}**, soit {{< dette-val "interets_pct_pib" >}}&nbsp;% du PIB et **{{< dette-val "interets_sur_recettes_pct" >}}&nbsp;% de l'ensemble des recettes publiques** (Eurostat). L'encours, lui&nbsp;:
 
 {{< dette-chiffres live="true" historique="true" >}}

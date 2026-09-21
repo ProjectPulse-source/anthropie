@@ -53,6 +53,34 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-21 — Pages dette : ponts réciproques posés ; figures suivantes À REPRENDRE après le 23/09
+
+**Fait.** Pont visible dans les deux sens entre « Combien coûte » et « Qui paie vraiment » : en tête
+de la page du coût (FR et EN, sous l'ancre « Réutiliser ») ; sous le compteur partagé de la page
+« qui paie ». Arrêt volontaire ensuite : quota hebdomadaire à 93 % pour un seuil d'arrêt fixé
+par l'auteur à 95 %.
+
+**À reprendre — décidé, non construit :**
+
+1. **Graphe taux de marché / taux apparent** (page du coût), validé par l'auteur. Il montre le
+   retard de transmission que la page affirme. Série : taux à long terme Eurostat (critère de
+   convergence, annuel, France) — **code du jeu à vérifier à la source** avant de coder. Même
+   API, bibliothèque standard : aucune dépendance CI. Nouvelle figure du générateur + entrée dans
+   `data/figures_dette.json` : la carte « Réutiliser » suit d'elle-même ; la garde imposera
+   l'ajout au `git add` du workflow.
+2. **Durée de vie moyenne et part indexée** — ⛔ **pas en dur dans la prose** (page
+   auto-alimentée, décision verrouillée). Par le générateur, depuis une source primaire
+   AFT / Banque de France à identifier ; étiquetées « dette négociable de l'État ».
+3. **Détention, sur « qui paie »** : figure web dérivée du **registre du livre**
+   (`03_LIVRES/dette-publique/01_SOURCE/REGISTRE_DONNEES.yaml`, bloc `infographie_detention`),
+   même source que la p. 101 — jamais une seconde série. Garder son articulation : dette de
+   toutes les administrations par sous-secteur, puis détenteurs de la seule part de l'État.
+   Cadence annuelle (révision du livre). Le générateur vit dans le dépôt `D:\PRO`, la figure
+   dans celui du site : commit site à chaque révision, et contrôle de dérive par empreinte
+   (modèle `check-png-dette.py`).
+   ⚠ La FAQ de « qui paie » porte des chiffres **en dur** (« 82 % du total », « plus de
+   moitié ») : à dériver du même registre dans le même geste.
+
 ### 2026-09-21 — Bloc « Réutiliser » : composant à cartes, source unique des figures
 
 **Motif.** Contre-expertise sur les maquettes A/B/C (`PRO-20260921-MAQUETTES-REUTILISER`, pièce
