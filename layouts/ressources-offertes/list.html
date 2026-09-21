@@ -77,9 +77,20 @@
              l'oubli silencieux : tout livre pourvu d'un `promo_slug` et absent de
              $order déclenche désormais un avertissement au build. La curation reste
              possible ; le silence, non. */ -}}
+      {{- /* Omissions DÉCLARÉES : slug -> motif. Une omission voulue ne doit pas
+             avertir à chaque build (une alerte toujours vraie apprend à l'ignorer) ;
+             elle s'écrit ici, avec son motif. Condition de mort de chaque entrée :
+             le stock existe au guichet -> le slug passe dans $order et sort d'ici.
+             Un slug présent dans les deux avertit : la déclaration serait périmée. */ -}}
+      {{- $omis := dict "un-president-peut-il-tenir-ses-promesses" "pas de stock au guichet (auteur, 2026-09-21)" -}}
+      {{- range $slug, $motif := $omis -}}
+        {{- if in $order $slug -}}
+          {{- warnf "ressources-offertes : %s est a la fois dans $order et dans $omis (%s) -- retirer la declaration d'omission" $slug $motif -}}
+        {{- end -}}
+      {{- end -}}
       {{- range site.RegularPages -}}
         {{- if eq .Type "livres" -}}
-          {{- if and .Params.promo_slug (not (in $order .File.ContentBaseName)) -}}
+          {{- if and .Params.promo_slug (not (in $order .File.ContentBaseName)) (not (isset $omis .File.ContentBaseName)) -}}
             {{- warnf "ressources-offertes : le livre %s a un promo_slug (%s) mais est ABSENT de $order — omission volontaire (pas de stock) ou oubli ? layouts/ressources-offertes/list.html" .File.ContentBaseName .Params.promo_slug -}}
           {{- end -}}
         {{- end -}}
