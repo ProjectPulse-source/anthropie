@@ -19,9 +19,12 @@ faq:
     answer: "Non, pas dans les agrégats : en {dette.equiv_annee}, les dépenses publiques de santé ({dette.sante_mdeur} milliards d'euros) et d'enseignement ({dette.education_mdeur} milliards) sont stables ou en hausse, en euros comme en part de PIB. Si les services semblent pourtant manquer de moyens, l'explication la plus courante — plausible, mais que ces séries ne démontrent pas — est que leurs coûts et leurs besoins (salaires, vieillissement, progrès médical, judiciarisation) croîtraient plus vite que le PIB : la stabilité d'un budget en part de PIB ne garantirait alors pas un service rendu stable, sans que ce budget baisse pour autant. L'établir exigerait des données que cette page ne porte pas : inflation sectorielle, productivité, démographie, volumes produits. Ces données n'attribuent pas cet écart à la dette ; ce qu'elles établissent, c'est que la charge d'intérêts pince la marge qui permettrait de le combler. La question devient de savoir qui absorbera l'ajustement — impôts supplémentaires, réduction d’autres dépenses, déficit accru, inflation, ou générations futures. C'est l'objet de la page « Qui paie vraiment la dette publique ? » et des scénarios 2025-2035 du livre."
 ---
 
+{{< reutiliser-ancre >}}
+
 À la question «&nbsp;combien coûte la dette publique&nbsp;?&nbsp;», la mesure la plus directe n'est pas le montant de l'encours — c'est la **charge d'intérêts versés** chaque année par les administrations publiques&nbsp;: **{{< dette-val "interets_mdeur" >}}&nbsp;milliards d'euros en {{< dette-val "interets_annee" >}}**, soit {{< dette-val "interets_pct_pib" >}}&nbsp;% du PIB et **{{< dette-val "interets_sur_recettes_pct" >}}&nbsp;% de l'ensemble des recettes publiques** (Eurostat). L'encours, lui&nbsp;:
 
 {{< dette-chiffres live="true" historique="true" >}}
+{{< fig-actions id="longue" >}}
 
 **Ce que montre la courbe.** Depuis {{< dette-val "hist_annee_debut" >}}, la dette publique est passée de {{< dette-val "hist_pct_debut" >}}&nbsp;% à {{< dette-val "dette_pct_pib" >}}&nbsp;% du PIB&nbsp;: multipliée par {{< dette-val "hist_multiple" >}} en part de la richesse produite. La montée n'est pas régulière — sur les {{< dette-val "hist_annees_total" >}}&nbsp;années de la série annuelle, le ratio a reculé {{< dette-val "hist_annees_baisse" >}}&nbsp;fois, jamais plus de {{< dette-val "hist_plus_longue_baisse" >}}&nbsp;d'affilée. Elle procède par paliers, chacun installé par une crise, et **aucun n'a été effacé par la décennie qui a suivi**.
 
@@ -40,6 +43,7 @@ Pour lire ces chiffres sans être spécialiste, la chaîne tient en quatre maill
   <img src="/img/ciseau-dette-interets.svg" alt="Deux courbes en pourcentage du PIB : en haut, la dette publique française monte presque continûment de 1995 à aujourd'hui ; en bas, les intérêts versés par les administrations publiques baissent jusqu'en 2020, puis remontent fortement après 2022." width="720" height="528" loading="lazy">
   <figcaption>Dette publique ({{< dette-val "dette_periode" >}}&nbsp;: {{< dette-val "dette_pct_pib" >}}&nbsp;% du PIB, INSEE, trimestriel) et intérêts versés par les administrations publiques ({{< dette-val "interets_annee" >}}&nbsp;: {{< dette-val "interets_pct_pib" >}}&nbsp;% du PIB, Eurostat, annuel). Deux échelles distinctes, une même unité&nbsp;: le pourcentage du PIB.</figcaption>
 </figure>
+{{< fig-actions id="ciseau" >}}
 
 **L'observation.** De 1995 au tournant des années 2020, les deux courbes font ciseau&nbsp;: l'encours passe de {{< dette-val "dette_1995_pct_pib" >}}&nbsp;% à plus de 100&nbsp;% du PIB, pendant que la charge d'intérêts **descend** de {{< dette-val "interets_1995_pct_pib" >}}&nbsp;% à {{< dette-val "interets_creux_pct_pib" >}}&nbsp;% ({{< dette-val "interets_creux_annee" >}}, {{< dette-val "interets_creux_mdeur" >}}&nbsp;Md€). Pendant plus de deux décennies, la baisse du coût moyen de financement a permis à la charge de diminuer en proportion du PIB malgré la hausse continue de l'encours.
 
@@ -49,6 +53,7 @@ Pour lire ces chiffres sans être spécialiste, la chaîne tient en quatre maill
   <img src="/img/taux-apparent-dette.svg" alt="Une courbe en pourcentage par an : le coût moyen du stock de dette publique descend de {{< dette-val "taux_apparent_premier" >}} % en {{< dette-val "taux_apparent_premier_annee" >}} à {{< dette-val "taux_apparent_creux" >}} % en {{< dette-val "taux_apparent_creux_annee" >}}, son minimum, puis remonte à {{< dette-val "taux_apparent_dernier" >}} % en {{< dette-val "taux_apparent_dernier_annee" >}}. La baisse court sur près de vingt-cinq ans, la remontée sur les dernières années." width="720" height="388" loading="lazy">
   <figcaption><strong>Taux apparent</strong>&nbsp;: intérêts versés une année rapportés à l'encours au 31&nbsp;décembre précédent — calcul sur séries Eurostat (<code>gov_10a_main</code>) et INSEE. Trois points sont étiquetés&nbsp;: le début de la série, son minimum, le dernier millésime. La série complète, année par année, est dans <a href="/dette_officielle.json">dette_officielle.json</a>.</figcaption>
 </figure>
+{{< fig-actions id="taux" >}}
 
 C'est la courbe que le débat public regarde le moins, et c'est celle qui manquait pour comprendre le reste&nbsp;: la charge ne dépend pas d'elle seule, mais du **produit** de l'encours par ce coût moyen. Trente ans durant, la baisse de l'un a compensé la hausse de l'autre — c'est pourquoi doubler l'encours n'a pas doublé la facture. Aujourd'hui l'encours est bien plus lourd **et** le coût moyen remonte&nbsp;: les deux termes jouent enfin dans le même sens.
 

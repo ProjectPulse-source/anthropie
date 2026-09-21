@@ -1,0 +1,7 @@
+{{- /* reutiliser-ancre.html — lien de tête vers le bloc « Réutiliser ».
+
+       Le bloc est en fin de page, après toute la démonstration : sans ce lien, le
+       lecteur venu chercher une figure ou une citation ne sait pas qu'elles
+       existent. Arbitrage PRO-20260921-MAQUETTES-REUTILISER, point 6. */ -}}
+{{- $isEn := eq .Page.Lang "en" -}}
+<p><a class="reutiliser-ancre" href="#reutiliser">↓ {{ if $isEn }}Charts, data and citations to reuse{{ else }}Graphiques, données et citations à réutiliser{{ end }}</a></p>

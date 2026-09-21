@@ -1,0 +1,12 @@
+{{- /* fig-actions.html — micro-actions sous une figure du corps, vers sa carte.
+
+       {{< fig-actions id="ciseau" >}}
+
+       Le lecteur qui veut reprendre une figure le décide en la regardant, pas
+       en fin de page. « Télécharger » mène à la carte, où l'on choisit PNG ou
+       SVG et où la précaution de lecture est visible. Arbitrage
+       PRO-20260921-MAQUETTES-REUTILISER, point 7. */ -}}
+{{- $id := .Get "id" -}}
+{{- if not $id -}}{{ errorf "fig-actions: parametre id manquant (%s)" .Page.File.Path }}{{- end -}}
+{{- $isEn := eq .Page.Lang "en" -}}
+<p class="fig-actions"><a href="#fig-{{ $id }}">{{ if $isEn }}Download{{ else }}Télécharger{{ end }}</a> · <a href="#reutiliser-citer">{{ if $isEn }}Cite{{ else }}Citer{{ end }}</a> · <a href="#reutiliser-donnees">{{ if $isEn }}Data{{ else }}Données{{ end }}</a></p>
