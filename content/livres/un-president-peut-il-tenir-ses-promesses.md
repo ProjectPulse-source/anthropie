@@ -9,14 +9,13 @@ promo_slug: "promesses-2027"  # clé D1/books.toml pour /ressources-offertes (gu
 # classement Kindle Store (KDP, « Pre-orders contribute toward sales rank … before your release »).
 date: 2026-09-22
 publishDate: 2026-09-20
-lastmod: 2026-09-20  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-09-22  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 description: "Un président peut décider sans que rien ne se fasse. Cet essai propose une grille en quatre zones, applicable à n'importe quelle promesse : ce qu'un président décide dans sa propre chaîne de pouvoir, ce qu'il doit faire voter, ce qu'il doit négocier avec ceux dont la signature manque, et ce qui ne dépendra jamais de lui. Elle est mise à l'épreuve sur neuf promesses écrites, datées et signées, et sur 290 entrées sourcées."
 isbn: "978-2-9586347-8-0"
 pages: 284  # sync data/works.yaml (book-promesses-2027.pages) — nombre de pages broché
-# `price` (broché, 19,90 €) reste commenté jusqu'au 22/09 : il alimente l'Offer schema.org,
-# dont l'URL est celle du broché — annoncer un prix en données structurées vers une page qui
-# n'existe pas est un signal faux. Le prix des deux formats est dit en clair dans « Formats ».
-# price: "19.90"
+# `price` (broché, 19,90 €) alimente l'Offer schema.org, dont l'URL est celle du broché :
+# ouvert le 22/09, jour de parution, après avoir vu la page produit répondre (titre du livre lu).
+price: "19.90"
 kindle_price: "9.99"  # prix EUR de l'édition Kindle (non rendu : information de registre)
 # Groupe « autres ouvrages » et non corpus anthropique : le livre ne se réclame nulle part
 # du cadre (vérifié le 20/09 — aucune occurrence dans la clôture, « pourquoi ce livre »,
@@ -24,14 +23,24 @@ kindle_price: "9.99"  # prix EUR de l'édition Kindle (non rendu : information d
 # anthropique » de /livres/. La définition du groupe — travail éditorial parallèle — convient.
 serie: "autres-ouvrages"
 weight: 2
-# ⚠ PRÉCOMMANDE — au 2026-09-20, seul le Kindle a une page produit. L'ASIN du broché est
-# connu (2958634787, l'ISBN-10 fait l'ASIN) mais /dp/2958634787 rend 404 jusqu'au 22/09
-# (vérifié ce jour). Les lignes `url_amazon_*` du broché restent donc commentées : un lien
-# mort sur la fiche coûte plus qu'un bouton manquant. À décommenter le 22/09, après avoir
-# vu la page répondre, en même temps que les marchés étrangers du Kindle.
-# url_amazon_fr: "https://www.amazon.fr/dp/2958634787"
-# Édition Kindle (ASIN B0HK1ZYW7C) — en précommande, débit et livraison le 22/09/2026
+# PARU le 22/09/2026. Broché : ASIN 2958634787 (l'ISBN-10 fait l'ASIN), page produit vérifiée
+# ce jour (titre du livre lu sur /dp/2958634787). Kindle en précommande du 17 au 22/09.
+# Six marchés étrangers ajoutés le 22/09, broché et Kindle : les douze pages lues, titre du livre présent.
+url_amazon_fr: "https://www.amazon.fr/dp/2958634787"
+url_amazon_ca: "https://www.amazon.ca/dp/2958634787"
+url_amazon_com: "https://www.amazon.com/dp/2958634787"
+url_amazon_uk: "https://www.amazon.co.uk/dp/2958634787"
+url_amazon_de: "https://www.amazon.de/dp/2958634787"
+url_amazon_it: "https://www.amazon.it/dp/2958634787"
+url_amazon_es: "https://www.amazon.es/dp/2958634787"
+# Édition Kindle (ASIN B0HK1ZYW7C) — en vente depuis le 22/09/2026
 url_amazon_fr_kindle: "https://www.amazon.fr/dp/B0HK1ZYW7C"
+url_amazon_ca_kindle: "https://www.amazon.ca/dp/B0HK1ZYW7C"
+url_amazon_com_kindle: "https://www.amazon.com/dp/B0HK1ZYW7C"
+url_amazon_uk_kindle: "https://www.amazon.co.uk/dp/B0HK1ZYW7C"
+url_amazon_de_kindle: "https://www.amazon.de/dp/B0HK1ZYW7C"
+url_amazon_it_kindle: "https://www.amazon.it/dp/B0HK1ZYW7C"
+url_amazon_es_kindle: "https://www.amazon.es/dp/B0HK1ZYW7C"
 # FAQ book-scoped UNIQUEMENT (doctrine GEO-04) : les questions conceptuelles sur le pouvoir
 # exécutif appartiennent à une page de notion, jamais à une fiche produit.
 faq:
@@ -73,7 +82,7 @@ De l'ouverture, «&nbsp;Ce que dit le texte, et que la campagne ne dit pas&nbsp;
 
 ## Formats
 
-Le livre paraît le **22 septembre 2026** en broché (284 pages, 19,90&nbsp;€) et en édition Kindle (9,99&nbsp;€). L'édition Kindle est **en précommande dès maintenant**&nbsp;: elle se télécharge et se règle le jour de la parution.
+Le livre est paru le **22 septembre 2026**, en broché (284 pages, 19,90&nbsp;€) et en édition Kindle (9,99&nbsp;€).
 
 ## Sommaire
 

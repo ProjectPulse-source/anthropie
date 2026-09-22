@@ -576,14 +576,14 @@ works:
       fr: "Un président peut-il tenir ses promesses ?"
       en: ""  # n/a — pas d'édition anglaise
     subtitle_fr: "Ce qu'il peut vraiment décider — et ce qui lui échappe"
-    publication_date: "2026-09-22"   # parution des DEUX formats ; Kindle en précommande depuis le 17/09
+    publication_date: "2026-09-22"   # parution des DEUX formats (Kindle en précommande du 17 au 22/09)
     isbn: "978-2-9586347-8-0"
     isbn_13_normalized: "9782958634780"
     pages: 284  # broché (sync content/livres/un-president-peut-il-tenir-ses-promesses.md)
     publisher: "Auto-édition"
     distribution: "Amazon KDP"
-    asin_broche: "2958634787"   # = ISBN-10 du bloc AFNIL ; ⚠ page /dp/ absente avant le 22/09 (404 vérifié le 20/09)
-    asin_kindle: "B0HK1ZYW7C"   # Kindle SANS ISBN (ASIN) — page en précommande depuis le 17/09
+    asin_broche: "2958634787"   # = ISBN-10 du bloc AFNIL ; page /dp/ en ligne depuis le 22/09 (titre lu ce jour)
+    asin_kindle: "B0HK1ZYW7C"   # Kindle SANS ISBN (ASIN) — en vente depuis le 22/09
     license: ""  # à préciser
     wikidata: ""  # todo — item à créer après la parution (navette Wikidata/)
     openlibrary:
@@ -599,7 +599,8 @@ works:
       fr: "https://stephane-lalut.com/livres/un-president-peut-il-tenir-ses-promesses/"
       en: ""  # n/a
     purchase_url:
-      amazon_fr: ""  # ⚠ à poser le 22/09 : https://www.amazon.fr/dp/2958634787 (404 tant que la page n'est pas ouverte)
+      amazon_fr: "https://www.amazon.fr/dp/2958634787"  # /dp canonique — jamais de shortener amzn.eu/a
+      amazon_com: "https://www.amazon.com/dp/2958634787"
       amazon_fr_kindle: "https://www.amazon.fr/dp/B0HK1ZYW7C"
     image_url: "https://stephane-lalut.com/images/livres/un-president-peut-il-tenir-ses-promesses.jpg"  # auto-hébergé (assets/images/livres/<slug>.jpg)
     google_scholar:
