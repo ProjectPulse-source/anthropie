@@ -129,11 +129,21 @@
       .then(function (r) { return r.json().then(function (j) { return { status: r.status, j: j }; }); })
       .then(function (res) {
         if (res.j && res.j.ok && res.j.url) {
-          if (win) { win.location = res.j.url; } else { window.open(res.j.url, "_blank", "noopener"); }
+          // Onglet refusé (navigateurs intégrés à certaines applis, bloqueurs) : un
+          // window.open() tardif serait bloqué lui aussi. On ne promet donc pas un
+          // onglet qui n'existe pas : le lecteur touche le bouton affiché dans la page.
+          if (win) { win.location = res.j.url; }
           // On ne persiste QUE le livre choisi, jamais l'URL en clair.
           try { localStorage.setItem("ro-claim", JSON.stringify({ book: book })); } catch (e) {}
           applyClaimed({ book: book, url: res.j.url });
-          toast("Votre exemplaire Kindle prépayé a été attribué. Amazon.fr s'est ouvert dans un nouvel onglet.");
+          if (!win) {
+            var m = article.querySelector(".ressources-assigned-msg");
+            if (m) m.textContent = "Touchez le bouton ci-dessous pour l'ouvrir sur Amazon.fr.";
+            var l = article.querySelector(".ressources-assigned-link");
+            if (l) l.textContent = "Ouvrir mon exemplaire sur Amazon.fr";
+          }
+          toast(win ? "Votre exemplaire Kindle prépayé a été attribué. Amazon.fr s'est ouvert dans un nouvel onglet."
+                    : "Votre exemplaire Kindle prépayé a été attribué. Touchez le bouton pour l'ouvrir.");
         } else {
           if (win) win.close();
           var msg = res.status === 409 ? UNAVAIL : GENERR;
