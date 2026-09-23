@@ -68,7 +68,7 @@
            en place (10 liens importés, `premier-coup: true` sur /stock du Worker). Il avait
            été retiré quelques heures plus tôt, à la publication de la fiche, pour ne pas
            exposer une carte « momentanément indisponibles » sans stock derrière. */}}
-      {{ $order := slice "lodyssee-des-idees" "anthropie-ordre-ici-dette-ailleurs" "dette-publique-qui-paie-vraiment" "livresque-des-mots" "la-societe-du-premier-coup" }}
+      {{ $order := slice "lodyssee-des-idees" "anthropie-ordre-ici-dette-ailleurs" "dette-publique-qui-paie-vraiment" "livresque-des-mots" "la-societe-du-premier-coup" "un-president-peut-il-tenir-ses-promesses" }}
       {{- /* ⚠ SEULE liste de PRÉSENCE encore manuelle du dépôt, et elle le reste
              volontairement : exclure un livre d'ici est un geste éditorial légitime
              (le 2026-08-10, « Premier coup » en a été retiré une demi-journée, faute
@@ -82,7 +82,9 @@
              elle s'écrit ici, avec son motif. Condition de mort de chaque entrée :
              le stock existe au guichet -> le slug passe dans $order et sort d'ici.
              Un slug présent dans les deux avertit : la déclaration serait périmée. */ -}}
-      {{- $omis := dict "un-president-peut-il-tenir-ses-promesses" "pas de stock au guichet (auteur, 2026-09-21)" -}}
+      {{- /* un-president-peut-il-tenir-ses-promesses : sorti d'ici le 2026-09-23, entré dans
+             $order le même jour (4 liens importés, `promesses-2027: true` sur /stock). */ -}}
+      {{- $omis := dict -}}
       {{- range $slug, $motif := $omis -}}
         {{- if in $order $slug -}}
           {{- warnf "ressources-offertes : %s est a la fois dans $order et dans $omis (%s) -- retirer la declaration d'omission" $slug $motif -}}

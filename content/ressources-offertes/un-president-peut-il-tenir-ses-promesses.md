@@ -2,13 +2,10 @@
 title: "Un président peut-il tenir ses promesses ? — un exemplaire vous est offert"
 description: "Un exemplaire Kindle prépayé d'Un président peut-il tenir ses promesses ?, transmis sans paiement ni contrepartie."
 livre: "un-president-peut-il-tenir-ses-promesses"
-# ⏳ BROUILLON jusqu'à ce que des liens prépayés existent au guichet. Amazon n'ouvre pas
-# l'option « Offrir » sur un titre en précommande (vérifié sur la page du livre le 20/09) :
-# avant le 22/09, cette page ne pourrait promettre qu'un stock inexistant. Le jour où des
-# liens sont importés (gift.py autopilot), passer `draft` à false ET ajouter le slug à
-# `$order` dans layouts/ressources-offertes/list.html — les deux, sinon la page vit sans
-# être atteignable depuis la page mère.
-draft: true
+# Sortie de brouillon le 2026-09-23 : 4 liens prépayés importés au guichet (gift.py
+# autopilot), `promesses-2027: true` sur /stock du Worker ; slug ajouté le même jour à
+# `$order` dans layouts/ressources-offertes/list.html.
+draft: false
 # Même régime que la page mère : invitation, jamais les moteurs.
 noindex: true
 og_title: "Un président peut-il tenir ses promesses ? — un exemplaire vous est offert"
