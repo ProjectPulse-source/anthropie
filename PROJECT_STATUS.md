@@ -53,6 +53,19 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-23 — Ressources offertes : *Promesses* ouvert, et une carte de partage par livre
+
+- **Promesses ouvert** (`ab79293`) : 4 liens prépayés au guichet (`promesses-2027: true` sur `/stock`),
+  page sortie de brouillon, slug dans `$order` ; 6 cartes sur la page mère, 6 pages à `200` au carnet.
+- **Carte de partage par livre** (demande auteur) : chaque page `/ressources-offertes/<livre>/` partage
+  désormais la couverture DE SON livre, la page mère garde sa carte collective. Composée au build
+  (`partials/og-ressources-livre.html`, appelé par `head.html`) : fond `assets/images/og-ressources-livre-base.jpg`
+  + `assets/images/livres/<livre>.jpg` ; un nouveau livre a sa carte sans geste. Fond régénérable par
+  `scripts/og_ressources_livre_base.py`. Les six `og_image` recopiés ont été retirés du front matter —
+  un `og_image` explicite reprend la main s'il est remis. Couverture dans le carré central 630×630
+  (recadrage de l'aperçu compact WhatsApp). ⚠ Une URL déjà partagée garde l'ancien aperçu en cache
+  WhatsApp : tester avec `?v=N`.
+
 ### 2026-09-21 (nuit, suite) — Diptyque dette, étapes 3 et 4 + P4 + pages voisines : TOUT LIVRÉ
 
 **Fait :**

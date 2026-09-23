@@ -1,0 +1,18 @@
+{{- /* Carte de partage d'une page /ressources-offertes/<livre>/ : la couverture DU livre
+       transmis, posée sur un fond commun. Composée au build -> tout livre pourvu d'une
+       couverture (assets/images/livres/<livre>.jpg) a sa carte sans geste.
+       Fond : assets/images/og-ressources-livre-base.jpg, régénéré par
+       scripts/og_ressources_livre_base.py ; les constantes ci-dessous DOIVENT rester
+       égales à COVER_CX / COVER_TOP / COVER_H du script (zone de l'ombre portée).
+       Retourne la ressource image, ou nil (couverture ou fond absents). */ -}}
+{{- $out := "" -}}
+{{- $base := resources.Get "images/og-ressources-livre-base.jpg" -}}
+{{- $cover := partial "book-cover-resource.html" . -}}
+{{- if and $base $cover -}}
+  {{- $cx := 450 -}}{{- $top := 75 -}}{{- $h := 480 -}}
+  {{- $c := $cover.Resize (printf "x%d q90" $h) -}}
+  {{- $x := sub $cx (div $c.Width 2) -}}
+  {{- $out = $base | images.Filter (images.Overlay $c $x $top) -}}
+  {{- $out = $out.Process "jpg q85" -}}
+{{- end -}}
+{{- return $out -}}

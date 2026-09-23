@@ -5,7 +5,6 @@ livre: "livresque-des-mots"
 noindex: true
 og_title: "Livresque des mots — un exemplaire vous est offert"
 og_description: "Un exemplaire Kindle prépayé, déjà financé, transmis sans paiement ni contrepartie."
-og_image: "images/og-ressources-offertes.jpg"
 og_image_alt: "Ressources offertes — un exemplaire de Livresque des mots transmis à un lecteur invité."
 _build:
   list: never

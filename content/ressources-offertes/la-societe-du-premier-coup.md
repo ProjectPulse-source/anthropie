@@ -5,7 +5,6 @@ livre: "la-societe-du-premier-coup"
 noindex: true
 og_title: "La Société du premier coup — un exemplaire vous est offert"
 og_description: "Un exemplaire Kindle prépayé, déjà financé, transmis sans paiement ni contrepartie."
-og_image: "images/og-ressources-offertes.jpg"
 og_image_alt: "Ressources offertes — un exemplaire de La Société du premier coup transmis à un lecteur invité."
 _build:
   list: never

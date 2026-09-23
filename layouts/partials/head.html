@@ -54,6 +54,12 @@
     {{- $ogURL = .Permalink -}}{{- $ogW = .Width -}}{{- $ogH = .Height -}}
     {{- $ogAlt = $.Params.og_image_alt | default (printf (cond (eq $.Lang "en") "Cover — %s" "Couverture — %s") $.Title) -}}
   {{- end -}}
+{{- else if and (eq .Type "ressources-offertes") .IsPage .Params.livre (not .Params.og_image) -}}
+  {{- /* Page ressource ciblée : l'aperçu montre le livre transmis, pas la carte
+         collective de la page mère (auteur, 2026-09-23). Repli : og-image par défaut. */ -}}
+  {{- with partial "og-ressources-livre.html" .Params.livre -}}
+    {{- $ogURL = .Permalink -}}{{- $ogW = .Width -}}{{- $ogH = .Height -}}
+  {{- end -}}
 {{- else if and (in (slice "awp" "serie-awp") .Type) (not .Params.og_image) -}}
   {{- /* AWP + série : carte de série dédiée (entité = working papers, jamais une
          couverture de livre commercial — arbitrage 2026-08-01). Gabarit 1200×630. */ -}}

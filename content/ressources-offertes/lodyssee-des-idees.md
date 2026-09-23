@@ -5,7 +5,6 @@ livre: "lodyssee-des-idees"
 noindex: true
 og_title: "L'Odyssée des idées — un exemplaire vous est offert"
 og_description: "Un exemplaire Kindle prépayé, déjà financé, transmis sans paiement ni contrepartie."
-og_image: "images/og-ressources-offertes.jpg"
 og_image_alt: "Ressources offertes — un exemplaire de L'Odyssée des idées transmis à un lecteur invité."
 _build:
   list: never
