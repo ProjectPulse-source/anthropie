@@ -12,17 +12,26 @@ Style repris de static/images/og-ressources-offertes.jpg (mesure le 2026-09-23) 
 degrade, Newsreader pour le texte, filet bleu, URL en Inter gris. La zone de couverture tient dans
 le carre central 630x630 (x = 285..915) que WhatsApp recadre pour son apercu compact.
 
+Le meme script fabrique la carte COLLECTIVE de la page mere, static/images/og-ressources-offertes.jpg :
+les couvertures de tous les livres de `$order` (layouts/ressources-offertes/list.html), lu a chaque
+execution, en grille de trois colonnes. Elle, en revanche, est figee : un livre ajoute a `$order`
+n'y entre qu'en relancant ce script.
+
 Usage : python scripts/og_ressources_livre_base.py
-Sortie : assets/images/og-ressources-livre-base.jpg (1200x630)
+Sorties : assets/images/og-ressources-livre-base.jpg et static/images/og-ressources-offertes.jpg (1200x630)
 """
 from __future__ import annotations
 
+import re
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "assets" / "images" / "og-ressources-livre-base.jpg"
+OUT_MERE = ROOT / "static" / "images" / "og-ressources-offertes.jpg"
+LIST = ROOT / "layouts" / "ressources-offertes" / "list.html"
+COVERS = ROOT / "assets" / "images" / "livres"
 FONTS = ROOT / "static" / "fonts"
 W, H = 1200, 630
 
@@ -70,37 +79,84 @@ def background() -> Image.Image:
     return im
 
 
-def main() -> None:
-    im = background()
-
-    # Ombre portee douce sous la couverture (la couverture elle-meme est posee par Hugo).
-    shadow = Image.new("L", (W, H), 0)
-    x0 = COVER_CX - SHADOW_W // 2
-    ImageDraw.Draw(shadow).rectangle((x0 + 6, COVER_TOP + 10, x0 + SHADOW_W + 6, COVER_TOP + COVER_H + 10), fill=110)
-    shadow = shadow.filter(ImageFilter.GaussianBlur(14))
-    im.paste(Image.new("RGB", (W, H), (60, 55, 50)), (0, 0), shadow)
-
+def text_block(im: Image.Image, x: int, sub: tuple[str, str], ital: tuple[str, str]) -> None:
     d = ImageDraw.Draw(im)
     y = 150
-    d.text((TEXT_X, y), "Ressources offertes", font=font("newsreader", 62), fill=NAVY)
+    d.text((x, y), "Ressources offertes", font=font("newsreader", 62), fill=NAVY)
     y += 100
     f_sub = font("newsreader", 30)
-    for line in ("Un livre numérique déjà financé,", "transmis à un lecteur invité"):
-        d.text((TEXT_X, y), line, font=f_sub, fill=INK)
+    for line in sub:
+        d.text((x, y), line, font=f_sub, fill=INK)
         y += 40
     y += 26
     f_it = font("newsreader", 23, italic=True)
-    for line in ("Lisez. Et si vous aimez,", "faites circuler le savoir."):
-        d.text((TEXT_X, y), line, font=f_it, fill=GREY_ITAL)
+    for line in ital:
+        d.text((x, y), line, font=f_it, fill=GREY_ITAL)
         y += 32
     y += 24
-    d.rectangle((TEXT_X, y, TEXT_X + 56, y + 3), fill=RULE)
+    d.rectangle((x, y, x + 56, y + 3), fill=RULE)
     y += 22
-    d.text((TEXT_X, y), "stephane-lalut.com", font=font("inter", 19), fill=URL)
+    d.text((x, y), "stephane-lalut.com", font=font("inter", 19), fill=URL)
 
+
+def drop_shadow(im: Image.Image, box: tuple[int, int, int, int], dx: int, dy: int, blur: int, alpha: int) -> None:
+    shadow = Image.new("L", (W, H), 0)
+    x0, y0, x1, y1 = box
+    ImageDraw.Draw(shadow).rectangle((x0 + dx, y0 + dy, x1 + dx, y1 + dy), fill=alpha)
+    im.paste(Image.new("RGB", (W, H), (60, 55, 50)), (0, 0), shadow.filter(ImageFilter.GaussianBlur(blur)))
+
+
+def base_livre() -> None:
+    im = background()
+    x0 = COVER_CX - SHADOW_W // 2
+    drop_shadow(im, (x0, COVER_TOP, x0 + SHADOW_W, COVER_TOP + COVER_H), 6, 10, 14, 110)
+    text_block(im, TEXT_X, ("Un livre numérique déjà financé,", "transmis à un lecteur invité"),
+               ("Lisez. Et si vous aimez,", "faites circuler le savoir."))
     OUT.parent.mkdir(parents=True, exist_ok=True)
     im.save(OUT, "JPEG", quality=92, optimize=True)
     print(f"ecrit : {OUT.relative_to(ROOT)} ({W}x{H})")
+
+
+def order() -> list[str]:
+    m = re.search(r'\$order := slice ((?:"[^"]+"\s*)+)\}\}', LIST.read_text(encoding="utf-8"))
+    if not m:
+        raise SystemExit(f"$order introuvable dans {LIST}")
+    return re.findall(r'"([^"]+)"', m.group(1))
+
+
+def carte_mere() -> None:
+    slugs = order()
+    missing = [s for s in slugs if not (COVERS / f"{s}.jpg").exists()]
+    if missing:
+        raise SystemExit(f"couverture absente : {missing}")
+    cols = 3
+    rows = -(-len(slugs) // cols)
+    ch = 232 if rows == 2 else min(480, 480 // rows)
+    gap, left, top = 16, 70, (H - rows * ch - (rows - 1) * 16) // 2
+    cw = round(ch * 2 / 3)
+    im = background()
+    places = []
+    for i, slug in enumerate(slugs):
+        r, c = divmod(i, cols)
+        cov = Image.open(COVERS / f"{slug}.jpg").convert("RGB")
+        w = round(cov.width * ch / cov.height)
+        cov = cov.resize((w, ch), Image.LANCZOS)
+        x = left + c * (cw + gap) + (cw - w) // 2
+        y = top + r * (ch + gap)
+        places.append((cov, x, y))
+        drop_shadow(im, (x, y, x + w, y + ch), 4, 7, 9, 95)
+    for cov, x, y in places:
+        im.paste(cov, (x, y))
+    text_x = left + cols * cw + (cols - 1) * gap + 44
+    text_block(im, text_x, ("Des livres numériques déjà financés,", "transmis aux lecteurs invités"),
+               ("Recevez un livre sans paiement", "et faites circuler le savoir."))
+    im.save(OUT_MERE, "JPEG", quality=85, optimize=True)
+    print(f"ecrit : {OUT_MERE.relative_to(ROOT)} ({W}x{H}) -- {len(slugs)} livres : {', '.join(slugs)}")
+
+
+def main() -> None:
+    base_livre()
+    carte_mere()
 
 
 if __name__ == "__main__":

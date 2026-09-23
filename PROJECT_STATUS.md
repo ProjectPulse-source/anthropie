@@ -65,6 +65,8 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
   un `og_image` explicite reprend la main s'il est remis. Couverture dans le carré central 630×630
   (recadrage de l'aperçu compact WhatsApp). ⚠ Une URL déjà partagée garde l'ancien aperçu en cache
   WhatsApp : tester avec `?v=N`.
+- **Carte mère refaite à six livres** (demande auteur) : grille 3×2 dans l'ordre de `$order`, même texte.
+  Fabriquée par le même script, qui lit `$order` ; elle est figée : un livre ajouté n'y entre qu'en le relançant.
 
 ### 2026-09-21 (nuit, suite) — Diptyque dette, étapes 3 et 4 + P4 + pages voisines : TOUT LIVRÉ
 
