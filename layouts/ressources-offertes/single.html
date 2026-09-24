@@ -21,7 +21,7 @@
 %s
 
 Un compte Amazon.fr est nécessaire. Les liens sont individuels, à usage unique, attribués dans la limite du stock disponible.` $invit $url -}}
-{{- $partage := dict "url" $url "copyLabel" "Copier l'invitation" "copyText" $body
+{{- $partage := dict "url" $url "copyText" $body
       "mailSubject" (printf "Un livre vous est offert : %s" $book.Title) "mailBody" $body
       "shareText" $body "telegramText" $invit -}}
 <article class="home-section ressources ressources--single">

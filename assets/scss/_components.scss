@@ -614,7 +614,10 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
   font-size: 13px;
   letter-spacing: 0.01em;
   padding: 0.55rem 1rem;
+  white-space: nowrap;  // « Envoyer par e-mail » se coupait en « e- / mail » sur iPhone
+  line-height: 1.4;     // même hauteur pour les <button> et les <a> de la liste
 }
+.transmettre .transmettre__panel { width: max-content; }
 .transmettre .transmettre__option svg { width: 15px; height: 15px; opacity: 0.7; }
 .transmettre__panel {
   position: absolute;

@@ -1,102 +1,73 @@
-{{- /* Boutons « faire circuler » des pages /ressources-offertes/ — COMPOSANT UNIQUE,
-       page mère (list.html) et pages par livre (single.html). Il remplace deux
-       copies qui avaient divergé : la page par livre n'avait ni copie de secours
-       (échec muet dans les navigateurs intégrés aux applis) ni SMS ni Telegram.
+{{- /* Transmission des pages /ressources-offertes/ (page mère et pages par livre).
+       Même bouton et même liste que le menu « Transmettre » du reste du site
+       (classes .transmettre, moteur static/js/transmettre.js : une seule
+       mécanique, une seule apparence — demande auteur, 24/09). Deux différences,
+       voulues :
+       - canaux limités aux messageries privées (copier, WhatsApp, Telegram,
+         e-mail, SMS sur écran tactile) : une invitation se transmet de personne
+         à personne ; une diffusion publique (LinkedIn, X…) viderait le stock au
+         profit d'inconnus ;
+       - data-native="off" : pas de menu de partage de l'appareil, même sur
+         téléphone, pour la même raison (il ouvre LinkedIn, X, Instagram…).
        Règle absolue : le partage ne véhicule QUE l'URL de la page, jamais un
        lien Kindle prépayé. Aucune adresse ni numéro n'est saisi ni conservé.
-       « Partager… » (menu natif de l'appareil) n'apparaît que là où il existe.
-       Entrée (dict) : url, copyLabel, copyText, mailSubject, mailBody,
-       shareText (WhatsApp, SMS), telegramText (Telegram ajoute l'URL seul). */ -}}
-<div class="ressources-transmit__buttons" data-partage>
-  <button class="ressources-btn" type="button" data-share="native" hidden>Partager…</button>
-  <button class="ressources-btn" type="button" data-share="copy">{{ .copyLabel }}</button>
-  <button class="ressources-btn ressources-btn--outline" type="button" data-share="whatsapp">WhatsApp</button>
-  <button class="ressources-btn ressources-btn--outline" type="button" data-share="mail">Envoyer par e-mail</button>
-  <button class="ressources-btn ressources-btn--outline" type="button" data-share="sms" hidden>SMS</button>
-  <button class="ressources-btn ressources-btn--outline" type="button" data-share="telegram">Telegram</button>
+       Entrée (dict) : url, copyText, mailSubject, mailBody, shareText
+       (WhatsApp, SMS), telegramText (Telegram ajoute l'URL lui-même). */ -}}
+{{- $id := printf "ro-partage-%s" (.url | md5) -}}
+<div class="transmettre transmettre--ressources" data-native="off">
+  <button
+    type="button"
+    class="transmettre__button"
+    aria-expanded="false"
+    aria-controls="{{ $id }}">
+    <svg class="transmettre__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="18" cy="5" r="3"/>
+      <circle cx="6" cy="12" r="3"/>
+      <circle cx="18" cy="19" r="3"/>
+      <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+      <line x1="15.41" y1="6.51" x2="8.59" y2="11.49"/>
+    </svg>
+    <span>Inviter un proche</span>
+  </button>
+
+  <div class="transmettre__panel" id="{{ $id }}" role="menu" hidden>
+    <button type="button" class="transmettre__option" data-channel="copy"
+      data-url="{{ .url }}" data-copy-text="{{ .copyText }}"
+      data-copied-label="Invitation copiée ✓" role="menuitem">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+      </svg>
+      <span class="transmettre__copy-label">Copier l'invitation</span>
+    </button>
+    <a href="#" class="transmettre__option" data-channel="whatsapp"
+      data-url="{{ .url }}" data-text="{{ .shareText }}" role="menuitem">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.9-9.89 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 7c0 5.45-4.44 9.89-9.89 9.89zm8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41z"/>
+      </svg>
+      <span>WhatsApp</span>
+    </a>
+    <a href="#" class="transmettre__option" data-channel="telegram"
+      data-url="{{ .url }}" data-text="{{ .telegramText }}" role="menuitem">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M21.94 4.3 18.7 19.6c-.24 1.07-.88 1.34-1.78.83l-4.92-3.63-2.37 2.28c-.26.26-.48.48-.99.48l.35-5.02 9.14-8.26c.4-.35-.09-.55-.62-.2L6.2 13.2l-4.86-1.52c-1.06-.33-1.08-1.06.22-1.57L20.55 2.8c.88-.33 1.65.2 1.39 1.5z"/>
+      </svg>
+      <span>Telegram</span>
+    </a>
+    <a href="#" class="transmettre__option" data-channel="email"
+      data-url="{{ .url }}" data-subject="{{ .mailSubject }}" data-body="{{ .mailBody }}" role="menuitem">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+        <polyline points="22,6 12,13 2,6"/>
+      </svg>
+      <span>Envoyer par e-mail</span>
+    </a>
+    <a href="#" class="transmettre__option" data-channel="sms"
+      data-url="{{ .url }}" data-text="{{ .shareText }}" role="menuitem" hidden>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+      </svg>
+      <span>SMS</span>
+    </a>
+  </div>
 </div>
-<script>
-(function () {
-  var C = {
-    url: {{ .url }}, copyText: {{ .copyText }},
-    mailSubject: {{ .mailSubject }}, mailBody: {{ .mailBody }},
-    shareText: {{ .shareText }}, telegramText: {{ .telegramText }}
-  };
-  var box = document.currentScript.previousElementSibling;
-  var toastTimer;
-  function toast(msg) {
-    var el = document.getElementById("ro-toast");
-    if (!el) return;
-    el.textContent = msg;
-    el.classList.add("is-visible");
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(function () { el.classList.remove("is-visible"); }, 4000);
-  }
-  function fallbackCopy(text, okMsg) {
-    var ta = document.createElement("textarea");
-    ta.value = text;
-    ta.setAttribute("readonly", "");
-    ta.style.position = "fixed";
-    ta.style.opacity = "0";
-    document.body.appendChild(ta);
-    ta.select();
-    ta.setSelectionRange(0, text.length);  // iOS : select() seul ne sélectionne rien
-    var ok = false;
-    try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
-    ta.remove();
-    toast(ok ? okMsg : "Copie impossible ici — utilisez WhatsApp, l'e-mail ou le SMS.");
-  }
-  var act = {
-    native: function () {
-      // Menu de partage de l'appareil : c'est le lecteur qui choisit à qui il
-      // transmet (LinkedIn, X, Messenger, Signal…). Annulation = rien à signaler.
-      navigator.share({ title: C.mailSubject, text: C.telegramText, url: C.url }).catch(function () {});
-    },
-    copy: function () {
-      var ok = "Invitation copiée. Vous pouvez la transmettre librement.";
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(C.copyText).then(function () { toast(ok); },
-          function () { fallbackCopy(C.copyText, ok); });
-      } else { fallbackCopy(C.copyText, ok); }
-    },
-    whatsapp: function () {
-      // wa.me : l'application sur mobile, WhatsApp Web sur ordinateur.
-      window.open("https://wa.me/?text=" + encodeURIComponent(C.shareText), "_blank", "noopener");
-      toast("WhatsApp s'ouvre avec l'invitation prête à envoyer.");
-    },
-    mail: function () {
-      window.location.href = "mailto:?subject=" + encodeURIComponent(C.mailSubject)
-        + "&body=" + encodeURIComponent(C.mailBody.replace(/\n/g, "\r\n"));
-      toast("Votre messagerie s'ouvre avec l'invitation prête à envoyer.");
-    },
-    sms: function () {
-      var sep = /iPhone|iPad|iPod/i.test(navigator.userAgent) ? "&" : "?";
-      window.location.href = "sms:" + sep + "body=" + encodeURIComponent(C.shareText);
-      toast("Votre messagerie SMS s'ouvre avec l'invitation.");
-    },
-    telegram: function () {
-      window.open("https://t.me/share/url?url=" + encodeURIComponent(C.url)
-        + "&text=" + encodeURIComponent(C.telegramText), "_blank", "noopener");
-      toast("Telegram s'ouvre avec l'invitation prête à envoyer.");
-    }
-  };
-  // Écran tactile avec menu de partage (téléphones, tablettes) : « Partager… »
-  // et « Copier » suffisent, le menu de l'appareil contient déjà WhatsApp,
-  // l'e-mail, le SMS, Telegram, LinkedIn… Ailleurs : tous les boutons du site,
-  // y compris sur un ordinateur qui propose un partage natif (la fenêtre de
-  // Windows ou de macOS ne se stylise pas — remarque auteur, 24/09) ; le SMS
-  // seulement sur écran tactile (aucun client SMS sur un ordinateur).
-  var tactile = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
-  if (navigator.share && tactile) {
-    box.querySelector('[data-share="native"]').hidden = false;
-    ["whatsapp", "mail", "telegram"].forEach(function (k) {
-      box.querySelector('[data-share="' + k + '"]').hidden = true;
-    });
-  } else if (tactile) {
-    box.querySelector('[data-share="sms"]').hidden = false;
-  }
-  box.querySelectorAll("[data-share]").forEach(function (b) {
-    b.addEventListener("click", function () { act[b.getAttribute("data-share")](); });
-  });
-})();
-</script>

@@ -13,7 +13,7 @@ Vous pouvez consulter les livres disponibles ici :
 Un compte Amazon.fr est nécessaire. Les liens sont individuels, à usage unique, et attribués dans la limite du stock disponible.
 
 Aucune contrepartie n'est demandée.` $url -}}
-{{- $partage := dict "url" $url "copyLabel" "Copier le message" "copyText" $mailBody
+{{- $partage := dict "url" $url "copyText" $mailBody
       "mailSubject" "Un livre Kindle prépayé vous est proposé" "mailBody" $mailBody
       "shareText" (printf `Je vous transmets cette page : des livres déjà financés y sont proposés à des lecteurs invités, pour faire circuler le savoir :
 %s` $url)
@@ -209,8 +209,7 @@ Aucune contrepartie n'est demandée.` $url -}}
       <h2 class="ressources-kicker">Confidentialité</h2>
       <p>Ce site ne collecte pas les adresses e-mail des personnes auxquelles vous
       transmettez l'invitation. Les boutons de transmission ouvrent votre propre
-      messagerie, copient un message ou utilisent les fonctions de partage de votre
-      appareil. Pour éviter l'attribution de plusieurs exemplaires, un identifiant
+      messagerie ou copient un message. Pour éviter l'attribution de plusieurs exemplaires, un identifiant
       aléatoire est enregistré dans votre navigateur jusqu'à la suppression des
       données du site&nbsp;; lorsqu'un exemplaire est attribué, cet identifiant et le
       livre choisi sont conservés sur notre infrastructure technique (Cloudflare)

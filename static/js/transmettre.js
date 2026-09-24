@@ -9,14 +9,18 @@
   function setupTransmettre(container) {
     var button = container.querySelector('.transmettre__button');
     var panel = container.querySelector('.transmettre__panel');
+    var coarse = !!window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
     // Sur écran tactile (téléphones, tablettes), le bouton ouvre directement le
     // menu de partage de l'appareil : il contient déjà WhatsApp, l'e-mail,
     // LinkedIn, X… Sur ordinateur, on garde la liste du site, même quand le
     // navigateur propose un partage natif : la fenêtre de Windows ou de macOS
     // ne se stylise pas et jure avec le site (remarque auteur, 24/09).
+    // data-native="off" (pages ressources offertes) : jamais de menu natif, qui
+    // ouvrirait LinkedIn, X… — ces pages se transmettent de personne à personne.
     var ref = panel.querySelector('[data-channel="x"]');
-    var nativeOk = !!navigator.share && !!window.matchMedia &&
-      window.matchMedia('(pointer: coarse)').matches;
+    var nativeOk = container.dataset.native !== 'off' && !!navigator.share && coarse;
+    // SMS : seulement sur écran tactile (aucun client SMS sur un ordinateur).
+    panel.querySelectorAll('[data-channel="sms"]').forEach(function(o) { o.hidden = !coarse; });
 
     button.addEventListener('click', function(e) {
       e.stopPropagation();
@@ -54,23 +58,38 @@
     });
   }
 
+  // Un texte prérempli propre à la page (data-text, data-subject, data-body,
+  // data-copy-text : invitations des pages ressources) l'emporte sur le
+  // message générique « titre + lien ».
   function handleShare(option) {
     var channel = option.dataset.channel;
     var url = option.dataset.url;
     var title = option.dataset.title || '';
+    var text = option.dataset.text || (title + '\n' + url);
 
     switch(channel) {
       case 'whatsapp':
-        window.open('https://wa.me/?text=' + encodeURIComponent(title + '\n' + url), '_blank', 'noopener');
+        window.open('https://wa.me/?text=' + encodeURIComponent(text), '_blank', 'noopener');
+        break;
+
+      case 'telegram':
+        // Telegram ajoute lui-même le lien : on ne lui passe que le texte d'accroche.
+        window.open('https://t.me/share/url?url=' + encodeURIComponent(url) +
+          '&text=' + encodeURIComponent(option.dataset.text || title), '_blank', 'noopener');
+        break;
+
+      case 'sms':
+        var sep = /iPhone|iPad|iPod/i.test(navigator.userAgent) ? '&' : '?';
+        window.location.href = 'sms:' + sep + 'body=' + encodeURIComponent(text);
         break;
 
       case 'bluesky':
         var maxTitleLength = MAX_BLUESKY - url.length - 4;
         var truncatedTitle = title.length > maxTitleLength
-          ? title.substring(0, maxTitleLength - 1) + '\u2026'
+          ? title.substring(0, maxTitleLength - 1) + '…'
           : title;
-        var text = truncatedTitle + '\n\n' + url;
-        window.open('https://bsky.app/intent/compose?text=' + encodeURIComponent(text), '_blank', 'noopener');
+        window.open('https://bsky.app/intent/compose?text=' +
+          encodeURIComponent(truncatedTitle + '\n\n' + url), '_blank', 'noopener');
         break;
 
       case 'linkedin':
@@ -82,16 +101,18 @@
         break;
 
       case 'email':
-        var intro = option.dataset.emailIntro || '';
-        var subject = encodeURIComponent(title);
-        var body = encodeURIComponent(intro + '\n\n' + title + '\n\n' + url);
-        window.location.href = 'mailto:?subject=' + subject + '&body=' + body;
+        var subject = option.dataset.subject || title;
+        var body = option.dataset.body ||
+          ((option.dataset.emailIntro || '') + '\n\n' + title + '\n\n' + url);
+        window.location.href = 'mailto:?subject=' + encodeURIComponent(subject) +
+          '&body=' + encodeURIComponent(body.replace(/\r?\n/g, '\r\n'));
         break;
 
       case 'copy':
+        var copyText = option.dataset.copyText || url;
         var label = option.querySelector('.transmettre__copy-label');
         var original = label.textContent;
-        var copiedText = option.dataset.copiedLabel || 'Lien copié \u2713';
+        var copiedText = option.dataset.copiedLabel || 'Lien copié ✓';
         var done = function() {
           label.textContent = copiedText;
           setTimeout(function() {
@@ -103,20 +124,20 @@
         // plantait avant d'atteindre le repli : copie de secours, puis prompt.
         var fallback = function() {
           var ta = document.createElement('textarea');
-          ta.value = url;
+          ta.value = copyText;
           ta.setAttribute('readonly', '');
           ta.style.position = 'fixed';
           ta.style.opacity = '0';
           document.body.appendChild(ta);
           ta.select();
-          ta.setSelectionRange(0, url.length);
+          ta.setSelectionRange(0, copyText.length);
           var ok = false;
           try { ok = document.execCommand('copy'); } catch (err) { ok = false; }
           ta.remove();
-          if (ok) { done(); } else { prompt('URL :', url); }
+          if (ok) { done(); } else { prompt('', copyText); }
         };
         if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(url).then(done, fallback);
+          navigator.clipboard.writeText(copyText).then(done, fallback);
         } else {
           fallback();
         }
