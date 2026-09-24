@@ -21,12 +21,12 @@ Usage :
 """
 import argparse
 import json
+import os
 import sys
 import urllib.request
 import urllib.error
 from pathlib import Path
 
-TOKEN_FILE = Path(__file__).resolve().parents[2] / "_secrets" / "zenodo_token.txt"
 BASE = "https://zenodo.org/api"
 
 # Identité auteur — DOIT correspondre à ORCID dans zenodo_audit_complet.py.
@@ -59,19 +59,24 @@ KEYWORDS = ["réversibilité sociale", "inégalité", "seconde chance", "mémoir
 
 
 def token() -> str:
-    t = TOKEN_FILE.read_text(encoding="utf-8").strip()
+    # Même source que les autres scripts Zenodo du dépôt : la variable d'environnement
+    # utilisateur. L'ancien fichier `_secrets/zenodo_token.txt` n'existait plus sous D:\PRO.
+    t = (os.environ.get("ZENODO_TOKEN") or "").strip()
     if not t:
-        sys.exit("Token vide.")
+        sys.exit("ERREUR : variable ZENODO_TOKEN absente")
     return t
+
+
+def auth_headers(extra: dict) -> dict:
+    # Jeton en en-tête, jamais dans l'URL (une URL finit dans les journaux et les messages d'erreur).
+    return {**extra, "Authorization": f"Bearer {token()}"}
 
 
 def api(method: str, path: str, payload=None):
     url = f"{BASE}{path}"
-    sep = "&" if "?" in url else "?"
-    url = f"{url}{sep}access_token={token()}"
     data = json.dumps(payload).encode("utf-8") if payload is not None else None
     req = urllib.request.Request(url, data=data, method=method,
-                                 headers={"Content-Type": "application/json"})
+                                 headers=auth_headers({"Content-Type": "application/json"}))
     try:
         with urllib.request.urlopen(req, timeout=60) as r:
             return json.loads(r.read().decode("utf-8"))
@@ -331,10 +336,10 @@ def cmd_upload(dep_id: str, filepath: str):
     bucket = dep.get("links", {}).get("bucket")
     if not bucket:
         sys.exit("Pas de lien bucket sur cette deposition.")
-    url = f"{bucket}/{fp.name}?access_token={token()}"
+    url = f"{bucket}/{fp.name}"
     data = fp.read_bytes()
     req = urllib.request.Request(url, data=data, method="PUT",
-                                 headers={"Content-Type": "application/octet-stream"})
+                                 headers=auth_headers({"Content-Type": "application/octet-stream"}))
     try:
         with urllib.request.urlopen(req, timeout=300) as r:
             info = json.loads(r.read().decode("utf-8"))
