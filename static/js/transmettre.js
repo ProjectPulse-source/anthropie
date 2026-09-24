@@ -9,6 +9,9 @@
   function setupTransmettre(container) {
     var button = container.querySelector('.transmettre__button');
     var panel = container.querySelector('.transmettre__panel');
+    // Partage natif : montré seulement là où l'appareil le propose.
+    var native = panel.querySelector('[data-channel="native"]');
+    if (native && navigator.share) native.hidden = false;
 
     button.addEventListener('click', function(e) {
       e.stopPropagation();
@@ -47,6 +50,15 @@
     var title = option.dataset.title || '';
 
     switch(channel) {
+      case 'native':
+        // Annulation par l'utilisateur = rejet de la promesse : rien à signaler.
+        navigator.share({ title: title, url: url }).catch(function() {});
+        break;
+
+      case 'whatsapp':
+        window.open('https://wa.me/?text=' + encodeURIComponent(title + '\n' + url), '_blank', 'noopener');
+        break;
+
       case 'bluesky':
         var maxTitleLength = MAX_BLUESKY - url.length - 4;
         var truncatedTitle = title.length > maxTitleLength
@@ -75,15 +87,34 @@
         var label = option.querySelector('.transmettre__copy-label');
         var original = label.textContent;
         var copiedText = option.dataset.copiedLabel || 'Lien copié \u2713';
-        navigator.clipboard.writeText(url).then(function() {
+        var done = function() {
           label.textContent = copiedText;
           setTimeout(function() {
             label.textContent = original;
             closeAllPanels();
           }, 1500);
-        }).catch(function() {
-          prompt('URL :', url);
-        });
+        };
+        // Sans presse-papiers (navigateurs intégrés aux applis), l'appel
+        // plantait avant d'atteindre le repli : copie de secours, puis prompt.
+        var fallback = function() {
+          var ta = document.createElement('textarea');
+          ta.value = url;
+          ta.setAttribute('readonly', '');
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          ta.setSelectionRange(0, url.length);
+          var ok = false;
+          try { ok = document.execCommand('copy'); } catch (err) { ok = false; }
+          ta.remove();
+          if (ok) { done(); } else { prompt('URL :', url); }
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(done, fallback);
+        } else {
+          fallback();
+        }
         return;
     }
 

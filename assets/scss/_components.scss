@@ -632,6 +632,8 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
   cursor: pointer;
   transition: background 0.15s ease;
 }
+// Même piège que .ressources-btn : le display de l'option l'emporte sur `hidden`.
+.transmettre__option[hidden] { display: none; }
 .transmettre__option:hover {
   background: rgba(26, 35, 50, 0.05);
 }
