@@ -1,4 +1,23 @@
 {{ define "main" }}
+{{- /* Textes de transmission de la page mère (composant partials/ressources-partage.html). */ -}}
+{{- $url := .Permalink -}}
+{{- $mailBody := printf `Bonjour,
+
+Je vous transmets cette invitation parce que ce livre pourrait vous intéresser.
+
+Stéphane Lalut propose certains de ses ouvrages sous forme d'exemplaires Kindle prépayés, financés à l'avance, afin de faire circuler le savoir au-delà des seuls circuits publicitaires.
+
+Vous pouvez consulter les livres disponibles ici :
+%s
+
+Un compte Amazon.fr est nécessaire. Les liens sont individuels, à usage unique, et attribués dans la limite du stock disponible.
+
+Aucune contrepartie n'est demandée.` $url -}}
+{{- $partage := dict "url" $url "copyLabel" "Copier le message" "copyText" $mailBody
+      "mailSubject" "Un livre Kindle prépayé vous est proposé" "mailBody" $mailBody
+      "shareText" (printf `Je vous transmets cette page : des livres déjà financés y sont proposés à des lecteurs invités, pour faire circuler le savoir :
+%s` $url)
+      "telegramText" "Je vous transmets cette page : des livres déjà financés y sont proposés à des lecteurs invités, pour faire circuler le savoir." -}}
 {{- /* Page sur invitation (noindex, hors sitemap). Attribution DIRECTE par
        Worker Cloudflare (guichet — voir partials/ressources-guichet-script.html,
        composant unique partagé avec les pages par livre single.html) : le lien
@@ -165,13 +184,7 @@
       par le moyen de votre choix. Le message est prêt&nbsp;: vous n'avez
       qu'à le copier, l'envoyer par e-mail, WhatsApp ou SMS. Aucune adresse e-mail ni
       aucun numéro de téléphone n'est saisi ni conservé sur ce site.</p>
-      <div class="ressources-transmit__buttons">
-        <button class="ressources-btn" id="ro-btn-copy" type="button">Copier le message</button>
-        <button class="ressources-btn ressources-btn--outline" id="ro-btn-whatsapp" type="button">WhatsApp</button>
-        <button class="ressources-btn ressources-btn--outline" id="ro-btn-mail" type="button">Envoyer par e-mail</button>
-        <button class="ressources-btn ressources-btn--outline" id="ro-btn-sms" type="button">SMS</button>
-        <button class="ressources-btn ressources-btn--outline" id="ro-btn-telegram" type="button">Telegram</button>
-      </div>
+      {{ partial "ressources-partage.html" $partage }}
     </div>
   </section>
 
@@ -219,83 +232,5 @@
 
 <div class="ressources-toast" id="ro-toast" role="status" aria-live="polite"></div>
 
-<script>
-(function () {
-  // Règle absolue : le partage ne véhicule QUE l'URL de cette page,
-  // jamais un lien Kindle prépayé.
-  var PAGE_URL = {{ .Permalink | jsonify }};
-  var MAIL_SUBJECT = "Un livre Kindle prépayé vous est proposé";
-  var MAIL_BODY = "Bonjour,\n\n" +
-    "Je vous transmets cette invitation parce que ce livre pourrait vous intéresser.\n\n" +
-    "Stéphane Lalut propose certains de ses ouvrages sous forme d'exemplaires Kindle prépayés, financés à l'avance, afin de faire circuler le savoir au-delà des seuls circuits publicitaires.\n\n" +
-    "Vous pouvez consulter les livres disponibles ici :\n" + PAGE_URL + "\n\n" +
-    "Un compte Amazon.fr est nécessaire. Les liens sont individuels, à usage unique, et attribués dans la limite du stock disponible.\n\n" +
-    "Aucune contrepartie n'est demandée.";
-  var SHARE_TEXT = "Je vous transmets cette page : des livres déjà financés y sont proposés à des lecteurs invités, pour faire circuler le savoir :\n" + PAGE_URL;
-  var TELEGRAM_TEXT = "Je vous transmets cette page : des livres déjà financés y sont proposés à des lecteurs invités, pour faire circuler le savoir.";
-
-  var toastTimer;
-  function toast(msg) {
-    var el = document.getElementById("ro-toast");
-    el.textContent = msg;
-    el.classList.add("is-visible");
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(function () { el.classList.remove("is-visible"); }, 4000);
-  }
-
-  function copyText(text, okMsg) {
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(function () { toast(okMsg); }, function () { fallbackCopy(text, okMsg); });
-    } else { fallbackCopy(text, okMsg); }
-  }
-  function fallbackCopy(text, okMsg) {
-    var ta = document.createElement("textarea");
-    ta.value = text;
-    ta.setAttribute("readonly", "");
-    ta.style.position = "fixed";
-    document.body.appendChild(ta);
-    ta.select();
-    var ok = false;
-    try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
-    ta.remove();
-    toast(ok ? okMsg : "Copie impossible — sélectionnez le texte manuellement.");
-  }
-
-  document.getElementById("ro-btn-copy").addEventListener("click", function () {
-    copyText(MAIL_BODY, "Message copié. Vous pouvez le transmettre librement.");
-  });
-  document.getElementById("ro-btn-mail").addEventListener("click", function () {
-    window.location.href = "mailto:?subject=" + encodeURIComponent(MAIL_SUBJECT)
-      + "&body=" + encodeURIComponent(MAIL_BODY.replace(/\n/g, "\r\n"));
-    toast("Votre messagerie s'ouvre avec l'invitation prête à envoyer.");
-  });
-  // WhatsApp : wa.me ouvre l'application (mobile) ou WhatsApp Web (poste fixe)
-  // avec le message prérempli — pas de panneau de partage système.
-  document.getElementById("ro-btn-whatsapp").addEventListener("click", function () {
-    window.open("https://wa.me/?text=" + encodeURIComponent(SHARE_TEXT),
-                "_blank", "noopener");
-    toast("WhatsApp s'ouvre avec l'invitation prête à envoyer.");
-  });
-
-  // SMS : uniquement sur appareil tactile (aucun client SMS sur poste fixe).
-  var smsBtn = document.getElementById("ro-btn-sms");
-  if (window.matchMedia && !window.matchMedia("(pointer: coarse)").matches) {
-    smsBtn.hidden = true;
-  } else {
-    smsBtn.addEventListener("click", function () {
-      var sep = /iPhone|iPad|iPod/i.test(navigator.userAgent) ? "&" : "?";
-      window.location.href = "sms:" + sep + "body=" + encodeURIComponent(SHARE_TEXT);
-      toast("Votre messagerie SMS s'ouvre avec l'invitation.");
-    });
-  }
-
-  // Telegram : partage via t.me (url + texte séparés — Telegram ajoute l'URL).
-  document.getElementById("ro-btn-telegram").addEventListener("click", function () {
-    window.open("https://t.me/share/url?url=" + encodeURIComponent(PAGE_URL)
-      + "&text=" + encodeURIComponent(TELEGRAM_TEXT), "_blank", "noopener");
-    toast("Telegram s'ouvre avec l'invitation prête à envoyer.");
-  });
-})();
-</script>
 {{ partial "ressources-guichet-script.html" . }}
 {{ end }}

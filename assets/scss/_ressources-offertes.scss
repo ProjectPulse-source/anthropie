@@ -321,6 +321,10 @@
   transition: background 0.25s ease;
   &:hover { background: var(--color-accent-hover); color: var(--color-bg); }
 }
+// Un bouton caché doit l'être vraiment : `display: inline-block` ci-dessus
+// l'emporte sur l'attribut `hidden` (défaut du 24/09 : bouton SMS visible et
+// inerte sur ordinateur).
+.ressources-btn[hidden] { display: none; }
 .ressources-btn--outline {
   background: transparent;
   color: var(--color-accent);

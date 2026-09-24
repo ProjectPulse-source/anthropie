@@ -11,6 +11,19 @@
 {{ if not $book }}{{ errorf "ressources-offertes : /livres/%s introuvable" $slug }}{{ end }}
 {{ $promo := $book.Params.promo_slug }}
 {{ if not $promo }}{{ errorf "ressources-offertes : /livres/%s sans promo_slug" $slug }}{{ end }}
+{{- /* Textes de transmission de la page du livre (composant partials/ressources-partage.html). */ -}}
+{{- $url := .Permalink -}}
+{{- $invit := printf "Je vous transmets cette invitation : un exemplaire Kindle prépayé de « %s » est proposé, déjà financé, sans paiement ni contrepartie." $book.Title -}}
+{{- $body := printf `Bonjour,
+
+%s
+
+%s
+
+Un compte Amazon.fr est nécessaire. Les liens sont individuels, à usage unique, attribués dans la limite du stock disponible.` $invit $url -}}
+{{- $partage := dict "url" $url "copyLabel" "Copier l'invitation" "copyText" $body
+      "mailSubject" (printf "Un livre vous est offert : %s" $book.Title) "mailBody" $body
+      "shareText" $body "telegramText" $invit -}}
 <article class="home-section ressources ressources--single">
 
   <header class="page-header">
@@ -81,11 +94,7 @@
       pourrait être intéressé par ce livre&nbsp;? Vous pouvez lui transmettre librement cette page
       par le moyen de votre choix — le message est prêt. Aucune adresse n'est saisie ni
       conservée sur ce site.</p>
-      <div class="ressources-transmit__buttons">
-        <button class="ressources-btn" id="ro-single-copy" type="button">Copier l'invitation</button>
-        <button class="ressources-btn ressources-btn--outline" id="ro-single-whatsapp" type="button">WhatsApp</button>
-        <button class="ressources-btn ressources-btn--outline" id="ro-single-mail" type="button">Envoyer par e-mail</button>
-      </div>
+      {{ partial "ressources-partage.html" $partage }}
     </div>
   </section>
 
@@ -108,41 +117,5 @@
 
 <div class="ressources-toast" id="ro-toast" role="status" aria-live="polite"></div>
 
-<script>
-(function () {
-  // Transmission de la page du livre — même règle absolue que la page mère :
-  // le partage ne véhicule QUE l'URL de la page, jamais un lien Kindle prépayé.
-  var PAGE_URL = {{ .Permalink | jsonify }};
-  var TITLE = {{ $book.Title | jsonify }};
-  var MAIL_SUBJECT = "Un livre vous est offert : " + TITLE;
-  var BODY = "Bonjour,\n\n" +
-    "Je vous transmets cette invitation : un exemplaire Kindle prépayé de « " + TITLE + " » est proposé, déjà financé, sans paiement ni contrepartie.\n\n" +
-    PAGE_URL + "\n\n" +
-    "Un compte Amazon.fr est nécessaire. Les liens sont individuels, à usage unique, attribués dans la limite du stock disponible.";
-  var toastTimer;
-  function toast(msg) {
-    var el = document.getElementById("ro-toast");
-    if (!el) return;
-    el.textContent = msg;
-    el.classList.add("is-visible");
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(function () { el.classList.remove("is-visible"); }, 4000);
-  }
-  document.getElementById("ro-single-copy").addEventListener("click", function () {
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(BODY).then(function () { toast("Invitation copiée. Vous pouvez la transmettre librement."); });
-    }
-  });
-  document.getElementById("ro-single-whatsapp").addEventListener("click", function () {
-    window.open("https://wa.me/?text=" + encodeURIComponent(BODY), "_blank", "noopener");
-    toast("WhatsApp s'ouvre avec l'invitation prête à envoyer.");
-  });
-  document.getElementById("ro-single-mail").addEventListener("click", function () {
-    window.location.href = "mailto:?subject=" + encodeURIComponent(MAIL_SUBJECT)
-      + "&body=" + encodeURIComponent(BODY.replace(/\n/g, "\r\n"));
-    toast("Votre messagerie s'ouvre avec l'invitation prête à envoyer.");
-  });
-})();
-</script>
 {{ partial "ressources-guichet-script.html" . }}
 {{ end }}
