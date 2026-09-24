@@ -80,16 +80,19 @@
       toast("Telegram s'ouvre avec l'invitation prête à envoyer.");
     }
   };
-  // Avec un menu de partage (téléphones, tablettes, Safari, Edge…) : « Partager… »
+  // Écran tactile avec menu de partage (téléphones, tablettes) : « Partager… »
   // et « Copier » suffisent, le menu de l'appareil contient déjà WhatsApp,
-  // l'e-mail, le SMS, Telegram, LinkedIn… Sans lui : tous les boutons, le SMS
-  // seulement sur appareil tactile (aucun client SMS sur un ordinateur).
-  if (navigator.share) {
+  // l'e-mail, le SMS, Telegram, LinkedIn… Ailleurs : tous les boutons du site,
+  // y compris sur un ordinateur qui propose un partage natif (la fenêtre de
+  // Windows ou de macOS ne se stylise pas — remarque auteur, 24/09) ; le SMS
+  // seulement sur écran tactile (aucun client SMS sur un ordinateur).
+  var tactile = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
+  if (navigator.share && tactile) {
     box.querySelector('[data-share="native"]').hidden = false;
     ["whatsapp", "mail", "telegram"].forEach(function (k) {
       box.querySelector('[data-share="' + k + '"]').hidden = true;
     });
-  } else if (window.matchMedia && window.matchMedia("(pointer: coarse)").matches) {
+  } else if (tactile) {
     box.querySelector('[data-share="sms"]').hidden = false;
   }
   box.querySelectorAll("[data-share]").forEach(function (b) {

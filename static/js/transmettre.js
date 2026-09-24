@@ -9,14 +9,18 @@
   function setupTransmettre(container) {
     var button = container.querySelector('.transmettre__button');
     var panel = container.querySelector('.transmettre__panel');
-    // Là où l'appareil a un menu de partage (téléphones, tablettes, Safari,
-    // Edge…), le bouton l'ouvre directement : il contient déjà WhatsApp,
-    // l'e-mail, LinkedIn, X… La liste ci-dessous ne sert qu'ailleurs.
+    // Sur écran tactile (téléphones, tablettes), le bouton ouvre directement le
+    // menu de partage de l'appareil : il contient déjà WhatsApp, l'e-mail,
+    // LinkedIn, X… Sur ordinateur, on garde la liste du site, même quand le
+    // navigateur propose un partage natif : la fenêtre de Windows ou de macOS
+    // ne se stylise pas et jure avec le site (remarque auteur, 24/09).
     var ref = panel.querySelector('[data-channel="x"]');
+    var nativeOk = !!navigator.share && !!window.matchMedia &&
+      window.matchMedia('(pointer: coarse)').matches;
 
     button.addEventListener('click', function(e) {
       e.stopPropagation();
-      if (navigator.share && ref) {
+      if (nativeOk && ref) {
         // Annulation par l'utilisateur = rejet de la promesse : rien à signaler.
         navigator.share({ title: ref.dataset.title, url: ref.dataset.url }).catch(function() {});
         return;
