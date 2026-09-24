@@ -80,12 +80,18 @@
       toast("Telegram s'ouvre avec l'invitation prête à envoyer.");
     }
   };
-  // SMS : seulement sur appareil tactile (aucun client SMS sur un ordinateur).
-  // Le bouton naît caché ; on ne le montre que s'il peut servir.
-  var nat = box.querySelector('[data-share="native"]');
-  if (navigator.share) nat.hidden = false;
-  var sms = box.querySelector('[data-share="sms"]');
-  if (window.matchMedia && window.matchMedia("(pointer: coarse)").matches) sms.hidden = false;
+  // Avec un menu de partage (téléphones, tablettes, Safari, Edge…) : « Partager… »
+  // et « Copier » suffisent, le menu de l'appareil contient déjà WhatsApp,
+  // l'e-mail, le SMS, Telegram, LinkedIn… Sans lui : tous les boutons, le SMS
+  // seulement sur appareil tactile (aucun client SMS sur un ordinateur).
+  if (navigator.share) {
+    box.querySelector('[data-share="native"]').hidden = false;
+    ["whatsapp", "mail", "telegram"].forEach(function (k) {
+      box.querySelector('[data-share="' + k + '"]').hidden = true;
+    });
+  } else if (window.matchMedia && window.matchMedia("(pointer: coarse)").matches) {
+    box.querySelector('[data-share="sms"]').hidden = false;
+  }
   box.querySelectorAll("[data-share]").forEach(function (b) {
     b.addEventListener("click", function () { act[b.getAttribute("data-share")](); });
   });

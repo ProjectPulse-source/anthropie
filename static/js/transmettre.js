@@ -9,12 +9,18 @@
   function setupTransmettre(container) {
     var button = container.querySelector('.transmettre__button');
     var panel = container.querySelector('.transmettre__panel');
-    // Partage natif : montré seulement là où l'appareil le propose.
-    var native = panel.querySelector('[data-channel="native"]');
-    if (native && navigator.share) native.hidden = false;
+    // Là où l'appareil a un menu de partage (téléphones, tablettes, Safari,
+    // Edge…), le bouton l'ouvre directement : il contient déjà WhatsApp,
+    // l'e-mail, LinkedIn, X… La liste ci-dessous ne sert qu'ailleurs.
+    var ref = panel.querySelector('[data-channel="x"]');
 
     button.addEventListener('click', function(e) {
       e.stopPropagation();
+      if (navigator.share && ref) {
+        // Annulation par l'utilisateur = rejet de la promesse : rien à signaler.
+        navigator.share({ title: ref.dataset.title, url: ref.dataset.url }).catch(function() {});
+        return;
+      }
       var isOpen = button.getAttribute('aria-expanded') === 'true';
       closeAllPanels();
       if (!isOpen) {
@@ -50,11 +56,6 @@
     var title = option.dataset.title || '';
 
     switch(channel) {
-      case 'native':
-        // Annulation par l'utilisateur = rejet de la promesse : rien à signaler.
-        navigator.share({ title: title, url: url }).catch(function() {});
-        break;
-
       case 'whatsapp':
         window.open('https://wa.me/?text=' + encodeURIComponent(title + '\n' + url), '_blank', 'noopener');
         break;
