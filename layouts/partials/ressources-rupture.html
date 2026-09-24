@@ -1,0 +1,25 @@
+{{- /* Rupture de stock d'un livre au guichet (auteur, 2026-09-24) — bloc UNIQUE,
+       inclus par la page mère (list.html) et les pages par livre (single.html).
+       Caché au rendu ; le script du guichet l'affiche quand /stock répond que
+       le livre n'a plus de lien (ou qu'un clic rend 409). Une panne réseau n'est
+       PAS une rupture : elle garde le message « momentanément indisponibles ».
+       Deux gestes au lecteur : être prévenu (courriel prérempli vers l'auteur,
+       aucune adresse stockée par le site) ou acheter l'édition Kindle.
+       Espaces codés %20 et non « + » : dans un mailto, bien des messageries
+       affichent le « + » tel quel.
+       Entrée : la page /livres/<slug>. */ -}}
+{{- $book := . -}}
+{{- $kindle := $book.Params.url_amazon_fr_kindle | default $book.Params.url_amazon_fr -}}
+{{- $sujet := printf "Prévenez-moi : %s" $book.Title -}}
+{{- $corps := printf "Bonjour,\n\nPouvez-vous me prévenir quand « %s » sera de nouveau offert sur votre site ?\n\nMerci." $book.Title -}}
+<div class="ressources-book__rupture" hidden>
+  <p class="ressources-rupture-msg">Tous les exemplaires offerts de ce livre sont partis.
+  De nouveaux sont ajoutés régulièrement&nbsp;: revenez d'ici quelques jours.</p>
+  <p class="ressources-rupture-actions">
+    <a class="ressources-btn ressources-btn--outline" href="{{ printf "mailto:stephane@stephane-lalut.com?subject=%s&body=%s" (replace ($sujet | urlquery) "+" "%20") (replace ($corps | urlquery) "+" "%20") | safeURL }}">Me prévenir par e-mail</a>
+    {{- with $kindle }}
+    <a class="ressources-btn" href="{{ . }}" target="_blank" rel="noopener">L'acheter sur Amazon</a>
+    {{- end }}
+  </p>
+  <p class="ressources-btn-note">Vos achats financent les exemplaires offerts à d'autres lecteurs.</p>
+</div>

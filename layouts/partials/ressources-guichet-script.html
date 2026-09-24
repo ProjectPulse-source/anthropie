@@ -41,6 +41,18 @@
     el.hidden = !msg;
   }
   function books() { return document.querySelectorAll(".ressources-book"); }
+  // Rupture de stock (le Worker répond : ce livre n'a plus de lien). Distincte
+  // d'une panne : le lecteur y reçoit deux gestes utiles (bloc ressources-rupture).
+  var SOLDOUT = "Exemplaires offerts épuisés";
+  function setSoldOut(article) {
+    var cta = article.querySelector(".ressources-book__cta");
+    if (cta) { cta.disabled = true; cta.textContent = SOLDOUT; }
+    var note = article.querySelector('[data-role="note"]');
+    if (note) note.hidden = true;
+    setState(article, "");
+    var r = article.querySelector(".ressources-book__rupture");
+    if (r) r.hidden = false;
+  }
 
   function applyClaimed(claim) {
     claimed = true;
@@ -101,7 +113,8 @@
           var avail = j && j.ok && j.stock && j.stock[b] === true;
           var cta = article.querySelector(".ressources-book__cta");
           if (avail) { if (cta) cta.disabled = false; setState(article, ""); }
-          else { if (cta) cta.disabled = true; setState(article, UNAVAIL); }
+          else if (j && j.ok && j.stock) { setSoldOut(article); }  // réponse lue : rupture réelle
+          else { if (cta) cta.disabled = true; setState(article, UNAVAIL); }  // guichet fermé ou réponse illisible
         });
       })
       .catch(function () {
@@ -146,9 +159,8 @@
                     : "Votre exemplaire Kindle prépayé a été attribué. Touchez le bouton pour l'ouvrir.");
         } else {
           if (win) win.close();
-          var msg = res.status === 409 ? UNAVAIL : GENERR;
-          setState(article, msg);
-          toast(msg);
+          if (res.status === 409) { setSoldOut(article); toast(SOLDOUT + "."); }
+          else { setState(article, GENERR); toast(GENERR); }
         }
       })
       .catch(function () {
