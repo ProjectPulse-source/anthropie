@@ -10,6 +10,7 @@
        Entrée : la page /livres/<slug>. */ -}}
 {{- $book := . -}}
 {{- $kindle := $book.Params.url_amazon_fr_kindle | default $book.Params.url_amazon_fr -}}
+{{- with $kindle }}{{ $kindle = partial "amazon-href.html" . }}{{ end -}}
 {{- $sujet := printf "Prévenez-moi : %s" $book.Title -}}
 {{- $corps := printf "Bonjour,\n\nPouvez-vous me prévenir quand « %s » sera de nouveau offert sur votre site ?\n\nMerci." $book.Title -}}
 <div class="ressources-book__rupture" hidden>

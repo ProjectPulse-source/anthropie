@@ -1,7 +1,7 @@
 <div class="amazon-buttons">
   <p class="amazon-buttons__title">Commander ce livre</p>
   <div class="amazon-buttons__row">
-    {{ with .Page.Params.url_amazon_fr }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.fr</a>{{ end }}
+    {{ with .Page.Params.url_amazon_fr }}<a href="{{ partial "amazon-href.html" . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.fr</a>{{ end }}
     {{ with .Page.Params.url_amazon_es }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.es</a>{{ end }}
     {{ with .Page.Params.url_amazon_ca }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.ca</a>{{ end }}
     {{ with .Page.Params.url_amazon_com }}<a href="{{ . }}" class="amazon-btn" target="_blank" rel="noopener">Amazon.com</a>{{ end }}

@@ -1,0 +1,19 @@
+# Amazon Attribution, campagne « Site stephane-lalut.com - FR » (ID 584990720795160857).
+# ASIN amazon.fr -> identifiant maas du groupe. Registre : reports/attribution/BALISES_FR_2026-08-15.md ;
+# la console Amazon fait foi. Lu par layouts/partials/amazon-href.html (liens de clic seulement,
+# jamais le JSON-LD). Cles entre guillemets : un ISBN-10 tout en chiffres serait lu comme entier.
+# Condition de mort : un livre retire de la vente -> retirer sa ligne ; campagne close -> retirer le fichier et le partial.
+"2958634728": "maas_adg_C607016B5487145DA161F5257EE9B77A_afap_abs"
+"B0FQ9PG246": "maas_adg_75BFFED0B07F84F22C2AB6828ED15907_afap_abs"
+"2958634752": "maas_adg_BF01B8FD6A3A623F4FDD7EC5C9E50E27_afap_abs"
+"B0H9QMR1CN": "maas_adg_899CBFAEFAB8A02EBC4771D4925EDA32_afap_abs"
+"2958634736": "maas_adg_A9AD6636BA6D53E49CAD66C9A76AE1AF_afap_abs"
+"B0FWW2HPZP": "maas_adg_63E7FB217959E3F92E68BAAA0796404D_afap_abs"
+"2958634701": "maas_adg_40AE37D58F01675A656F289804E1C825_afap_abs"
+"B0CW994YWH": "maas_adg_32DC4E135A46419947EF291F587B1A82_afap_abs"
+"2958634744": "maas_adg_B65A4DA014C0DEFE1E14F9638228C226_afap_abs"
+"B0CVXQSLBQ": "maas_adg_DF4C6F7DD617AC1209AA413E74E6AFBB_afap_abs"
+"2958634760": "maas_adg_8E618999CC8DA688CFB478281146D223_afap_abs"
+"B0H1619K7W": "maas_adg_860BC93FF4D2AA46BBEC40BD832DC012_afap_abs"
+"2958634787": "maas_adg_0705E5B2F5E8EB262FA093EB33F0CDD7_afap_abs"
+"B0HK1ZYW7C": "maas_adg_0A6ECC2027E1B57FCD07ADBC36D4C4D3_afap_abs"

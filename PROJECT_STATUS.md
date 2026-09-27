@@ -53,6 +53,23 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-27 — Amazon Attribution câblé : les clics du site vers amazon.fr deviennent mesurables jusqu'à la vente
+
+- 14 balises (6 livres × broché/Kindle + *Anthropy* EN sur .fr), campagne « Site stephane-lalut.com - FR ».
+  Elles avaient été créées le 15/08 sans jamais être posées, d'où 0 clic en six semaines. Les deux groupes
+  *Promesses* ont été ajoutés le 27/09.
+- **Une seule source**, `data/attribution_fr.yaml` (ASIN → maas). **Un seul organe**, `partials/amazon-href.html`,
+  appelé par chaque lien de CLIC amazon.fr (bouton, popover, `appel-livre`, `amazon-buttons`, `amazon-dropdown`,
+  `ressources-rupture`). Le JSON-LD garde l'URL canonique. Seule exception : les 4 liens écrits dans le corps
+  de `/offrir-un-livre-kindle/` sont balisés en dur. Un gabarit `render-link` global avait été essayé, puis
+  retiré : il cassait la résolution des liens relatifs du rendu par défaut (vu au diff de build).
+- **Témoin** : build HEAD contre build nouveau, balises retirées. Résultat : identique, hormis les guillemets
+  de minification et le hachage des images OG (dépend du dossier de build). 14/14 ASIN, 23 pages, 0 balise
+  dans un JSON-LD. `check-all --ci` à 0.
+- **Condition de mort** : campagne close, on retire le fichier de données et le partial ; livre retiré de la
+  vente, on retire sa ligne. Limite affichée par Amazon : une partie des conversions en France et en
+  Allemagne n'est pas mesurable pour l'instant, correction annoncée pour le 30/09.
+
 ### 2026-09-23 — Ressources offertes : *Promesses* ouvert, et une carte de partage par livre
 
 - **Promesses ouvert** (`ab79293`) : 4 liens prépayés au guichet (`promesses-2027: true` sur `/stock`),

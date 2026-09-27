@@ -12,7 +12,7 @@
       <span>Amazon</span>
     </button>
     <div class="amazon-popover" id="{{ $id }}" data-amazon-popover hidden>
-      {{ with $book.Params.url_amazon_fr }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.fr</a>{{ end }}
+      {{ with $book.Params.url_amazon_fr }}<a href="{{ partial "amazon-href.html" . }}" target="_blank" rel="noopener noreferrer">Amazon.fr</a>{{ end }}
       {{ with $book.Params.url_amazon_es }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.es</a>{{ end }}
       {{ with $book.Params.url_amazon_ca }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.ca</a>{{ end }}
       {{ with $book.Params.url_amazon_com }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.com</a>{{ end }}

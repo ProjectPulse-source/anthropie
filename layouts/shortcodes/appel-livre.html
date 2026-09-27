@@ -37,7 +37,9 @@
 {{- $p := $livre.Params -}}
 {{- $en := eq .Page.Lang "en" -}}
 {{- $broche := or $p.url_amazon_fr $p.url_amazon_com -}}
+{{- with $broche }}{{ $broche = partial "amazon-href.html" . }}{{ end -}}
 {{- $kindle := $p.url_amazon_fr_kindle -}}
+{{- with $kindle }}{{ $kindle = partial "amazon-href.html" . }}{{ end -}}
 {{- /* Le prix reste en euros dans les deux langues — c'est l'edition francaise
        qui est vendue — mais sa PRESENTATION suit la page : « 19 € » d'un cote,
        « €19 » de l'autre, symbole avant et point decimal. Le montant est le

@@ -35,10 +35,10 @@ Offrir un livre numérique est moins connu qu'offrir un livre papier — et pour
 
 Les quatre livres existent en version Kindle&nbsp;; chaque lien ci-dessous ouvre la page où se trouve «&nbsp;Acheter pour d'autres personnes&nbsp;»&nbsp;:
 
-- [*L'Odyssée des idées*](https://www.amazon.fr/dp/B0CVXQSLBQ) — l'histoire des idées en 250 escales&nbsp;: le livre-cadeau naturel du catalogue ([pourquoi et pour qui&nbsp;?](/offrir-un-livre-de-culture-generale/))
-- [*Livresque des mots*](https://www.amazon.fr/dp/B0CW994YWH) — l'anthologie de citations sans classement, pour l'amoureux des mots
-- [*ANTHROPIE — Ordre ici. Dette ailleurs*](https://www.amazon.fr/dp/B0FQ9PG246) — l'essai fondateur du cadre anthropique
-- [*Dette Publique&nbsp;: Qui paie vraiment&nbsp;?*](https://www.amazon.fr/dp/B0FWW2HPZP) — l'application aux finances publiques
+- [*L'Odyssée des idées*](https://www.amazon.fr/dp/B0CVXQSLBQ?maas=maas_adg_DF4C6F7DD617AC1209AA413E74E6AFBB_afap_abs&ref_=aa_maas&tag=maas) — l'histoire des idées en 250 escales&nbsp;: le livre-cadeau naturel du catalogue ([pourquoi et pour qui&nbsp;?](/offrir-un-livre-de-culture-generale/))
+- [*Livresque des mots*](https://www.amazon.fr/dp/B0CW994YWH?maas=maas_adg_32DC4E135A46419947EF291F587B1A82_afap_abs&ref_=aa_maas&tag=maas) — l'anthologie de citations sans classement, pour l'amoureux des mots
+- [*ANTHROPIE — Ordre ici. Dette ailleurs*](https://www.amazon.fr/dp/B0FQ9PG246?maas=maas_adg_75BFFED0B07F84F22C2AB6828ED15907_afap_abs&ref_=aa_maas&tag=maas) — l'essai fondateur du cadre anthropique
+- [*Dette Publique&nbsp;: Qui paie vraiment&nbsp;?*](https://www.amazon.fr/dp/B0FWW2HPZP?maas=maas_adg_63E7FB217959E3F92E68BAAA0796404D_afap_abs&ref_=aa_maas&tag=maas) — l'application aux finances publiques
 
 Les fiches complètes (argument, sommaire, extraits) sont sur la [page des livres](/livres/).
 

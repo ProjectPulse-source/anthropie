@@ -1,0 +1,12 @@
+{{- /* URL de CLIC vers Amazon : ajoute la balise Amazon Attribution quand l'ASIN amazon.fr
+       figure dans data/attribution_fr.yaml, rend l'URL inchangée sinon (autres marchés, livre
+       non balisé). Ne jamais l'employer pour le JSON-LD ni pour une URL canonique : la balise
+       ne sert qu'à mesurer le clic et la vente qui suit. */ -}}
+{{- $url := . -}}
+{{- $out := $url -}}
+{{- with findRESubmatch `^https://www\.amazon\.fr/dp/([0-9A-Z]{10})/?$` $url 1 -}}
+  {{- with index site.Data.attribution_fr (index (index . 0) 1) -}}
+    {{- $out = printf "%s?maas=%s&ref_=aa_maas&tag=maas" $url . -}}
+  {{- end -}}
+{{- end -}}
+{{- return $out -}}
