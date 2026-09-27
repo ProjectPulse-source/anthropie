@@ -171,8 +171,25 @@ def lire_insee() -> dict:
     for nom, l in (("prélèvements", prel), ("prestations", esp), ("transferts", nat)):
         if len(l) != 11:
             fail("Figure 1c : %s sur %d colonnes" % (nom, len(l)))
+    net = ligne("Figure 2a", "Transferts nets de la redistribution publique nationale")
+    part_benef = ligne("Figure 2a", "Part de personnes bénéficiaires nettes")
+    wsa = wb["Figure 1e"]
+    age_entetes = [x for x in next(r for r in wsa.iter_rows(values_only=True)
+                                   if r[0] == "Nature des revenus")[1:] if x is not None]
+    if len(age_entetes) != 6 or age_entetes[-1] != "Ensemble":
+        fail("Figure 1e : colonnes inattendues %s" % age_entetes)
+    age = {"groupes": [str(x).replace("\u00a0", " ") for x in age_entetes[:5]],
+           "prel": ligne("Figure 1e", "Prélèvements"),
+           "esp": ligne("Figure 1e", "Prestations sociales en espèces"),
+           "nat": ligne("Figure 1e", "Transferts non monétaires")}
+    # Conservation : les trois lignes de la figure 1c redonnent le solde net publié.
+    for i in range(10):
+        if abs(prel[i] + esp[i] + nat[i] + net[i]) > 200:   # arrondis Insee à la centaine
+            fail("dixième %d : i+ii+iii = %s mais transferts nets publiés = %s"
+                 % (i + 1, prel[i] + esp[i] + nat[i], net[i]))
     return {"prel": prel, "esp": esp, "nat": nat, "solde_uc": solde_uc,
-            "solde_md": solde_md, "sha256": sha}
+            "solde_md": solde_md, "net": net, "part_benef": part_benef, "age": age,
+            "sha256": sha}
 
 
 # ------------------------------------------------------------------ F1
@@ -306,6 +323,139 @@ def svg_redistribution(d: dict) -> tuple[str, int]:
     return "\n".join(e) + "\n", h
 
 
+# ------------------------------------------------------------------ F4
+def svg_solde_net(d: dict) -> tuple[str, int]:
+    """Contributeurs nets et bénéficiaires nets, par dixième.
+
+    DEUX panneaux, deux unités : A en euros par UC, B en part de personnes.
+    Jamais deux échelles sur un même axe.
+    """
+    net = [v / 1000 for v in d["net"][:10]]      # convention Insee : + = verse net
+    part = d["part_benef"][:10]
+    c = [txt(0, 22, "Qui verse plus qu'il ne reçoit ? Solde des transferts publics par dixième "
+             "de niveau de vie, 2023", 13, INK2)]
+    ml, mr = 46, 12
+    pas = (W - ml - mr) / 10
+    bw = 34
+    vmax, vmin = 60, -25
+    top, bas = 62, 252
+    k = (bas - top) / (vmax - vmin)
+
+    def Y(v):
+        return top + (vmax - v) * k
+
+    c.append(txt(0, 48, "A · Transferts nets, en milliers d'euros par UC "
+                 "(au-dessus de zéro : verse plus qu'il ne reçoit)", 11, MUTED))
+    for g in range(-20, 61, 20):
+        yy = Y(g)
+        c.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="1"/>'
+                 % (ml, yy, W - mr, yy, AXIS if g == 0 else GRID))
+        c.append(txt(ml - 6, yy + 4, fr(g) if g >= 0 else "−" + fr(-g), 11, MUTED, "end"))
+    for i in range(10):
+        cx = ml + pas * (i + 0.5)
+        v = net[i]
+        y0 = Y(0)
+        haut = abs(v) * k
+        col = C2 if v > 0 else C1
+        y = y0 - haut - 2 if v > 0 else y0 + 2
+        c.append('<rect x="%.1f" y="%.1f" width="%d" height="%.1f" rx="2" fill="%s"/>'
+                 % (cx - bw / 2, y, bw, max(haut - 2, 1), col))
+        etiq = ("+" if v > 0 else "−") + fr(abs(v), 1)
+        c.append(txt(cx, (y - 6) if v > 0 else (y + haut + 11), etiq, 10, INK2, "middle"))
+        c.append(txt(cx, bas + 30, "D%d" % (i + 1), 11, MUTED, "middle"))
+    y = bas + 56
+    c.append(txt(0, y, "B · Part de personnes bénéficiaires nettes, en %", 11, MUTED))
+    top2, bas2 = y + 16, y + 106
+    k2 = (bas2 - top2) / 100.0
+    for g in (0, 50, 100):
+        yy = bas2 - g * k2
+        c.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="1"/>'
+                 % (ml, yy, W - mr, yy, AXIS if g == 0 else GRID))
+        c.append(txt(ml - 6, yy + 4, fr(g), 11, MUTED, "end"))
+    for i in range(10):
+        cx = ml + pas * (i + 0.5)
+        haut = part[i] * k2
+        c.append('<rect x="%.1f" y="%.1f" width="%d" height="%.1f" rx="2" fill="%s"/>'
+                 % (cx - bw / 2, bas2 - haut, bw, haut, C3))
+        c.append(txt(cx, bas2 - haut - 6, fr(part[i]) + NBSP + "%", 10, INK2, "middle"))
+    y = bas2 + 30
+    h = int(y + 13 + 12 * 3 + 8)
+    desc = ("Deux panneaux. A : transferts nets par dixième de niveau de vie, en milliers d'euros "
+            "par unité de consommation ; les sept premiers dixièmes reçoivent plus qu'ils ne "
+            "versent, les trois derniers versent plus qu'ils ne reçoivent, le dernier de %s. "
+            "B : part de personnes bénéficiaires nettes, de %s %% dans le premier dixième à "
+            "%s %% dans le dernier." % (fr(net[9], 1), fr(part[0]), fr(part[9])))
+    e = entete(h, "qp-net", "Contributeurs nets et bénéficiaires nets par dixième, 2023", desc) + c
+    e += cartouche(y, [
+        ("Insee, comptes nationaux distribués 2023 (Insee Analyses n° 118, 16/04/2026, figure 2a) "
+         "· France, euros par UC", INK2),
+        ("Les pensions de retraite sont comptées en transferts reçus ; ce solde est celui d'une "
+         "année, non d'une vie.", INK2),
+        ("Compilation Stéphane Lalut, CC BY 4.0 · " + URL_PAGE, MUTED)])
+    e.append("</svg>")
+    return "\n".join(e) + "\n", h
+
+
+# ------------------------------------------------------------------ F5
+def svg_age(d: dict) -> tuple[str, int]:
+    a = d["age"]
+    prel = [v / 1000 for v in a["prel"][:5]]
+    esp = [v / 1000 for v in a["esp"][:5]]
+    nat = [v / 1000 for v in a["nat"][:5]]
+    vmax, vmin = 50, -40
+    top, bas = 78, 330
+    k = (bas - top) / (vmax - vmin)
+
+    def Y(v):
+        return top + (vmax - v) * k
+
+    ml, mr = 46, 12
+    pas = (W - ml - mr) / 5
+    bw = 64
+    c = [txt(0, 22, "Prélèvements et transferts publics par âge du ménage, 2023, "
+             "en milliers d'euros par UC", 13, INK2)]
+    for lx, col, lab in ((0, C1, "Prestations en espèces (dont retraites)"),
+                         (270, C3, "Transferts non monétaires (services publics…)"),
+                         (585, C2, "Prélèvements")):
+        c.append('<rect x="%d" y="37" width="12" height="12" rx="2" fill="%s"/>' % (lx, col))
+        c.append(txt(lx + 17, 47, lab, 11, INK2))
+    for g in range(-40, 51, 10):
+        yy = Y(g)
+        c.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="1"/>'
+                 % (ml, yy, W - mr, yy, AXIS if g == 0 else GRID))
+        c.append(txt(ml - 6, yy + 4, fr(g) if g >= 0 else "−" + fr(-g), 11, MUTED, "end"))
+    for i, g in enumerate(a["groupes"]):
+        cx = ml + pas * (i + 0.5)
+        x = cx - bw / 2
+        y0 = Y(0)
+        h1, h2 = esp[i] * k, nat[i] * k
+        c.append('<rect x="%.1f" y="%.1f" width="%d" height="%.1f" fill="%s"/>'
+                 % (x, y0 - h1, bw, h1, C1))
+        c.append('<rect x="%.1f" y="%.1f" width="%d" height="%.1f" rx="2" fill="%s"/>'
+                 % (x, y0 - h1 - 2 - h2, bw, h2, C3))
+        hp = -prel[i] * k
+        c.append('<rect x="%.1f" y="%.1f" width="%d" height="%.1f" rx="2" fill="%s"/>'
+                 % (x, y0 + 2, bw, hp - 2, C2))
+        c.append(txt(cx, y0 - h1 - h2 - 7, fr(esp[i] + nat[i], 1), 10, INK2, "middle"))
+        c.append(txt(cx, y0 + hp + 13, "−" + fr(-prel[i], 1), 10, INK2, "middle"))
+        c.append(txt(cx, bas + 16, g, 11, MUTED, "middle"))
+    y = bas + 34
+    h = int(y + 13 + 12 * 3 + 8)
+    desc = ("Barres par groupe d'âge du ménage, en 2023, en milliers d'euros par unité de "
+            "consommation. Les transferts reçus passent de %s pour les 18-29 ans à %s pour les "
+            "65 ans ou plus, tandis que les prélèvements passent de %s à %s."
+            % (fr(esp[0] + nat[0], 1), fr(esp[4] + nat[4], 1), fr(-prel[0], 1), fr(-prel[4], 1)))
+    e = entete(h, "qp-age", "Prélèvements et transferts publics par âge du ménage, 2023", desc) + c
+    e += cartouche(y, [
+        ("Insee, comptes nationaux distribués 2023 (Insee Analyses n° 118, 16/04/2026, figure 1e) "
+         "· groupes d'âge moyen des adultes du ménage", INK2),
+        ("Photographie d'une année, non le bilan d'une génération : les pensions de retraite y "
+         "sont comptées en transferts reçus.", INK2),
+        ("Compilation Stéphane Lalut, CC BY 4.0 · " + URL_PAGE, MUTED)])
+    e.append("</svg>")
+    return "\n".join(e) + "\n", h
+
+
 # ------------------------------------------------------------------ F3
 def svg_mecanismes() -> tuple[str, int]:
     c = [txt(0, 22, "Par quels canaux la charge de la dette peut-elle être répartie ?", 13, INK2)]
@@ -383,8 +533,29 @@ def affichage(r: dict, d: dict) -> dict:
         fail("la page dit que les transferts reçus varient « beaucoup moins » que les prélèvements")
     if not d["solde_uc"] < 0:
         fail("la page dit que la puissance publique a versé plus qu'elle n'a prélevé")
+    net = d["net"][:10]
+    part = d["part_benef"][:10]
+    bascule = next((i for i, v in enumerate(net) if v > 0), None)
+    if bascule is None or not all(v < 0 for v in net[:bascule]):
+        fail("solde net : la bascule contributeur/bénéficiaire n'est pas unique (%s)" % net)
+    if not part[0] > part[-1]:
+        fail("la page dit que la part de bénéficiaires nets décroît avec le niveau de vie")
+    age = d["age"]
+    if not (age["esp"][4] > age["esp"][0] and -age["prel"][4] < -age["prel"][0]):
+        fail("la page dit que les 65 ans ou plus reçoivent plus et versent moins que les 18-29 ans")
     return {
         "releve_le": "21 septembre 2026",
+        "net_bascule": "D%d" % (bascule + 1),
+        "net_benef_n": fr(bascule),
+        "net_d10": fr(net[9]),
+        "net_d1": fr(-net[0]),
+        "benef_d1": fr(part[0]), "benef_d10": fr(part[9]),
+        "benef_ensemble": fr(d["part_benef"][-1]),
+        "age_recu_65": fr(age["esp"][4] + age["nat"][4]),
+        "age_prel_65": fr(-age["prel"][4]),
+        "age_recu_jeunes": fr(age["esp"][0] + age["nat"][0]),
+        "age_prel_5064": fr(-age["prel"][3]),
+        "age_esp_65": fr(age["esp"][4]),
         "total_mdeur": r["total_txt"], "periode_a": r["periode_a"],
         "etat_mdeur": fr(ss["État"]), "etat_pct": fr(etat_pct),
         "nonres_pct": fr(nonres, 1), "bafs_pct": fr(bafs, 1),
@@ -406,6 +577,8 @@ def main() -> int:
     aff = affichage(r, d)
     figs = [("qui-paie-detention", svg_detention(r)),
             ("qui-paie-redistribution", svg_redistribution(d)),
+            ("qui-paie-solde-net", svg_solde_net(d)),
+            ("qui-paie-age", svg_age(d)),
             ("qui-paie-mecanismes", svg_mecanismes())]
     for nom, (svg, _h) in figs:
         p = IMG / (nom + ".svg")
@@ -428,6 +601,20 @@ def main() -> int:
          "source": "Insee, comptes nationaux distribués 2023 (Insee Analyses n° 118, figure 1c)",
          "precaution": "Répartition avec conventions d'imputation ; ne mesure pas l'incidence "
                        "spécifique de la dette."},
+        {"id": "solde-net", "fichier": "qui-paie-solde-net",
+         "titre": "Contributeurs nets et bénéficiaires nets par dixième, 2023",
+         "montre": "Les sept premiers dixièmes reçoivent plus qu'ils ne versent, les trois "
+                   "derniers l'inverse ; la part de bénéficiaires nets décroît avec le niveau de vie.",
+         "source": "Insee, comptes nationaux distribués 2023 (Insee Analyses n° 118, figure 2a)",
+         "precaution": "Solde d'une année, non d'une vie ; les pensions de retraite y sont "
+                       "comptées en transferts reçus."},
+        {"id": "age", "fichier": "qui-paie-age",
+         "titre": "Prélèvements et transferts publics par âge du ménage, 2023",
+         "montre": "La répartition par âge telle qu'elle est mesurée aujourd'hui : ce que chaque "
+                   "groupe verse et reçoit, retraites et services publics compris.",
+         "source": "Insee, comptes nationaux distribués 2023 (Insee Analyses n° 118, figure 1e)",
+         "precaution": "Photographie d'une année : elle ne dit rien du solde d'une génération "
+                       "sur sa vie entière, ni des payeurs futurs."},
         {"id": "mecanismes", "fichier": "qui-paie-mecanismes",
          "titre": "Par quels canaux la charge peut-elle être répartie ?",
          "montre": "Quatre canaux possibles, le refinancement qui reporte sans désigner de "
@@ -464,12 +651,15 @@ def main() -> int:
             "colonnes": ["D%d" % i for i in range(1, 11)] + ["Ensemble"],
             "prelevements": d["prel"], "prestations_especes": d["esp"],
             "transferts_non_monetaires": d["nat"],
+            "transferts_nets": d["net"],
+            "part_beneficiaires_nets_pct": d["part_benef"],
+            "par_age": d["age"],
             "solde_finance_par_endettement_uc": d["solde_uc"],
             "solde_finance_par_endettement_mdeur": d["solde_md"],
             "convention": ("Insee : le supplément financé par endettement est imputé par "
                            "convention pour moitié à de moindres prélèvements, pour moitié à des "
                            "transferts supplémentaires."),
-            "source": {"publication": "Insee Analyses n° 118, 16/04/2026, figure 1c et 2a-2b",
+            "source": {"publication": "Insee Analyses n° 118, 16/04/2026, figures 1c, 1e, 2a et 2b",
                        "url": XLSX_URL, "sha256_fichier": d["sha256"]},
         },
     }

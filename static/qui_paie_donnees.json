@@ -1,8 +1,20 @@
 {
  "_licence": "Compilation Stéphane Lalut, CC BY 4.0 (assemblage, grandeurs dérivées, mise en cohérence). Données d'origine : INSEE (Licence Ouverte Etalab), Banque de France via l'Agence France Trésor, sous leurs propres conditions.",
- "_genere_le": "2026-09-21",
+ "_genere_le": "2026-09-27",
  "affichage": {
   "releve_le": "21 septembre 2026",
+  "net_bascule": "D8",
+  "net_benef_n": "7",
+  "net_d10": "58 400",
+  "net_d1": "20 800",
+  "benef_d1": "99",
+  "benef_d10": "18",
+  "benef_ensemble": "56",
+  "age_recu_65": "47 800",
+  "age_prel_65": "14 600",
+  "age_recu_jeunes": "18 200",
+  "age_prel_5064": "33 800",
+  "age_esp_65": "28 700",
   "total_mdeur": "3 460,5",
   "periode_a": "fin 2025",
   "etat_mdeur": "2 823",
@@ -137,11 +149,70 @@
    12900,
    15800
   ],
+  "transferts_nets": [
+   -20800,
+   -22300,
+   -17200,
+   -13700,
+   -8800,
+   -6100,
+   -1800,
+   5300,
+   12900,
+   58400,
+   -1400
+  ],
+  "part_beneficiaires_nets_pct": [
+   98.62,
+   96.61,
+   86.6,
+   73.43,
+   53.44,
+   44.82,
+   35.77,
+   28.83,
+   24.88,
+   18.24,
+   56.12
+  ],
+  "par_age": {
+   "groupes": [
+    "18-29 ans",
+    "30-39 ans",
+    "40-49 ans",
+    "50-64 ans",
+    "65 ans ou plus"
+   ],
+   "prel": [
+    -23200,
+    -30600,
+    -31500,
+    -33800,
+    -14600,
+    -27000
+   ],
+   "esp": [
+    4200,
+    5400,
+    5600,
+    10600,
+    28700,
+    12600
+   ],
+   "nat": [
+    14000,
+    15400,
+    16000,
+    13600,
+    19100,
+    15800
+   ]
+  },
   "solde_finance_par_endettement_uc": -1400,
   "solde_finance_par_endettement_mdeur": -66.2,
   "convention": "Insee : le supplément financé par endettement est imputé par convention pour moitié à de moindres prélèvements, pour moitié à des transferts supplémentaires.",
   "source": {
-   "publication": "Insee Analyses n° 118, 16/04/2026, figure 1c et 2a-2b",
+   "publication": "Insee Analyses n° 118, 16/04/2026, figures 1c, 1e, 2a et 2b",
    "url": "https://www.insee.fr/fr/statistiques/8974371",
    "sha256_fichier": "6f5f27809be12e192afdca5008022a0e0c63f832869d29be8dc837abbdeec0eb"
   }

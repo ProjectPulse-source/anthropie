@@ -53,6 +53,29 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-27 — « Qui paie » : deux figures de données de plus (solde net, âge)
+
+**Fait.** Le second volet portait deux figures de données et un schéma ; il en porte quatre et un
+schéma, toutes tirées de la même source Insee déjà archivée et hachée (`scripts/sources/`, empreinte
+contrôlée à chaque exécution) :
+
+- **F4 — contributeurs nets et bénéficiaires nets par dixième** (figure 2a) : deux panneaux, deux
+  unités (euros par UC, puis part de personnes) — jamais deux échelles sur un axe. Le générateur
+  contrôle que `i+ii+iii` redonne le solde net publié, et que la bascule contributeur/bénéficiaire
+  est unique (D8) avant de laisser la prose l'écrire.
+- **F5 — prélèvements et transferts par âge du ménage** (figure 1e), dans la section des générations
+  futures, avec les deux limites dans l'image et dans le texte : les pensions y sont comptées en
+  transferts reçus, et une photographie d'année ne désigne aucun payeur futur.
+- FAQ : une question de plus (« qui reçoit plus qu'il ne verse ? »), chiffrée par placeholders.
+
+**Non fait, et pourquoi.** Série longue de la détention par les non-résidents (elle aurait été la
+figure la plus proche du ciseau de la page du coût) : **l'AFT refuse le téléchargement automatisé
+(HTTP 403)**. À reprendre par une série Banque de France identifiée, ou par un relevé manuel daté.
+
+**Contrôles** : `check-all.py --reseau` 8/8 à 0 ; build sans avertissement ; les deux figures vues au
+rendu (libellés d'axe descendus après le premier essai) ; 5 cartes dans « Réutiliser », 5 questions
+en JSON-LD, aucun placeholder non résolu.
+
 ### 2026-09-27 — Amazon Attribution câblé : les clics du site vers amazon.fr deviennent mesurables jusqu'à la vente
 
 - 14 balises (6 livres × broché/Kindle + *Anthropy* EN sur .fr), campagne « Site stephane-lalut.com - FR ».
