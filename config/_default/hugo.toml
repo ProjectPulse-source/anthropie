@@ -29,6 +29,11 @@ disableKinds = ["taxonomy", "term"]
   weight = 20
 
 [[languages.en.menus.main]]
+  name = "Resources"
+  url = "/en/resources/"
+  weight = 22
+
+[[languages.en.menus.main]]
   name = "Publications"
   url = "/en/publications/"
   weight = 25

@@ -1,0 +1,11 @@
+{{- /* Pied d'une page qui déclare `ressource` : retour vers l'index de la rubrique.
+       Le maillage contextuel (un ou deux prolongements) reste dans le corps de chaque page. */ -}}
+{{- with .Params.ressource -}}
+<p class="ressource-retour">
+  {{- if eq $.Lang "en" -}}
+  <a href="/en/resources/">All resources: data, explainers and reference material →</a>
+  {{- else -}}
+  <a href="/ressources/">Toutes les ressources&nbsp;: données, dossiers et repères →</a>
+  {{- end -}}
+</p>
+{{- end -}}

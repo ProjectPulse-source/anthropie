@@ -12,6 +12,10 @@ faq:
     answer: "Les mêmes exigences que partout, appliquées plus strictement encore : un texte daté et versionné avec DOI, des sources vérifiables, des définitions stables, des critères de réfutation explicites, et des métadonnées propres (identifiants, mots-clés, résumés) qui permettent aux moteurs académiques d'indexer le travail. L'absence d'affiliation prive du crédit a priori — la méthode doit le remplacer."
   - question: "La recherche indépendante est-elle prise au sérieux par le champ académique ?"
     answer: "Structurellement, elle occupe une marge — et cette marginalité n'est pas un accident, analyse le working paper AWP-05 : le champ maintient son ordre en reléguant vers ses marges les questions trop transversales, les formats non conformes, les postures atypiques. Les infrastructures ouvertes réduisent le coût de cette marginalité (publier, être cité, exister académiquement) sans en abolir la logique."
+ressource:  # index /ressources/ (layouts/ressources/list.html)
+  bloc: "guides"
+  rang: 20
+  nature: "Guide pratique et analyse"
 ---
 
 Un chercheur indépendant est un chercheur qui conduit et publie des travaux **sans affiliation institutionnelle** — ni poste, ni laboratoire, ni financement académique. La question intéressante n'est pas le statut&nbsp;: c'est **comment ce travail devient citable, vérifiable et discutable** sans le crédit a priori que confère une institution. Cette page répond en deux temps&nbsp;: l'infrastructure concrète, puis l'analyse de la position elle-même.

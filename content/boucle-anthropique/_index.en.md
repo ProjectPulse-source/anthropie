@@ -17,6 +17,10 @@ faq:
     answer: "Nicholas Georgescu-Roegen (The Entropy Law and the Economic Process, 1971), founder of bioeconomics, guarantees that no economic process cancels disorder. The anthropic loop takes this result as background, not foundation: it imports no thermodynamics — its receptacles are social, territorial and attentional. The lesson retained is that of the closed system: there is no infinite elsewhere."
   - question: "Is the anthropic loop falsifiable?"
     answer: "That is the requirement AWP-07 sets for itself: an ex ante protocol requires naming the receptacle and the order of magnitude of the latency before the analysis, which disciplines both the claim that a displacement exists and the certification that a cost has been internalised. One case external to the corpus — asbestos — is coded end to end as a test of the apparatus."
+ressource:  # index /ressources/ (layouts/ressources/list.html)
+  bloc: "notions"
+  rang: 20
+  nature: "Concept — definition, origins and sources"
 ---
 
 The anthropic loop describes the complete cycle of disorder displacement by social systems: displacement, accumulation, saturation, return, re-displacement. It is formalised by economist Stéphane Lalut in the working paper [AWP-07](/en/awp/awp-07/) (2026), in explicit dialogue with K. William Kapp's *cost-shifting*, Nicholas Georgescu-Roegen's bioeconomics and Bernard Stiegler's neganthropy.

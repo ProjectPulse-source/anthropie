@@ -18,6 +18,11 @@ faq:
     answer: "Non. Le Registre des coûts déportés est l'appareil documentaire du livre ANTHROPIE : une chronologie de 168 jalons historiques. Les registres de coûts couplés sont un apport théorique d'AWP-06 : la grille des quatre registres — énergie, matière, territoire, attention — selon lesquels l'infrastructure numérique déplace simultanément le désordre. L'un est une chronologie, l'autre une typologie ; seul le mot « registre » est commun."
   - question: "Où trouver le Registre des coûts déportés complet ?"
     answer: "Dans le livre ANTHROPIE — Ordre ici. Dette ailleurs (2025, 622 pages), dont il constitue l'épilogue documentaire, accompagné des schémas, de la postface analytique et des sept âges déployés chapitre par chapitre. La version en ligne, en consultation libre sur cette page, en reprend l'essentiel jalon par jalon."
+ressource:  # index /ressources/ (layouts/ressources/list.html)
+  bloc: "corpus"
+  rang: 10
+  nature: "Corpus documenté — chronologie commentée"
+  accueil: 3
 ---
 
 Le Registre des coûts déportés est l'**appareil documentaire** du livre [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) (2025)&nbsp;: une chronologie de 168 jalons, des premiers outils de pierre (≈&nbsp;−3,3&nbsp;millions d'années) aux algorithmes contemporains. Chaque jalon répond aux deux mêmes questions&nbsp;: **quel ordre cette innovation a-t-elle créé, et quelle dette a-t-elle déportée** — vers d'autres lieux, d'autres temps ou d'autres groupes sociaux&nbsp;? La version en ligne, ci-dessous, est en consultation libre.

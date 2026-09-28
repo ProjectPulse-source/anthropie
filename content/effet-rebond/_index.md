@@ -14,6 +14,10 @@ faq:
     answer: "Non — l'ampleur du rebond varie selon les usages, les secteurs et les périodes, et fait l'objet d'une littérature abondante. Mais il est structurel, pas anecdotique : ignorer le rebond conduit systématiquement à surestimer les économies d'énergie attendues des politiques d'efficacité. C'est pourquoi les scénarios sérieux distinguent efficacité et sobriété."
   - question: "Quel est le lien entre l'effet rebond et l'anthropie ?"
     answer: "Dans le cadre anthropique (Stéphane Lalut), l'effet rebond est un cas d'effet boomerang : le gain d'efficacité produit un ordre local — moins d'énergie par unité — dont le coût revient sous forme d'un désordre global — plus de consommation totale. L'analyse est développée dans AWP-04, « Transition énergétique ou transfert entropique ? » (2026, DOI 10.5281/zenodo.19269244)."
+ressource:  # index /ressources/ (layouts/ressources/list.html)
+  bloc: "notions"
+  rang: 50
+  nature: "Notion — définition, origine et sources"
 ---
 
 L'effet rebond est le mécanisme par lequel l'amélioration de l'efficacité énergétique, au lieu de réduire la consommation totale d'énergie, tend à l'augmenter&nbsp;: ce qui devient plus efficace devient moins cher, donc plus utilisé. Décrit par l'économiste William Stanley Jevons dès 1865, il reste le point aveugle de la plupart des politiques d'efficacité énergétique.

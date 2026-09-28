@@ -16,6 +16,10 @@ faq:
     answer: "Nicholas Georgescu-Roegen (The Entropy Law and the Economic Process, 1971), fondateur de la bioéconomie, garantit qu'aucun processus économique n'annule le désordre. La boucle anthropique prend ce résultat comme arrière-plan, non comme fondement : elle n'importe pas la thermodynamique, ses réceptacles sont sociaux, territoriaux et attentionnels. La leçon retenue est celle du système clos : il n'y a pas d'ailleurs infini."
   - question: "La boucle anthropique est-elle falsifiable ?"
     answer: "C'est l'exigence que se donne AWP-07 : un protocole ex ante impose de nommer le réceptacle et l'ordre de grandeur de la latence avant l'analyse, ce qui discipline à la fois l'affirmation d'un déplacement et la certification d'une internalisation. Un cas externe au corpus, l'amiante, est codé de bout en bout comme test de l'appareil."
+ressource:  # index /ressources/ (layouts/ressources/list.html)
+  bloc: "notions"
+  rang: 20
+  nature: "Notion — définition, origine et sources"
 ---
 
 La boucle anthropique décrit le cycle complet du déplacement du désordre par les systèmes sociaux&nbsp;: déplacement, accumulation, saturation, retour, re-déplacement. Elle est formalisée par l'économiste Stéphane Lalut dans le working paper [AWP-07](/awp/awp-07/) (2026), en dialogue explicite avec le *cost-shifting* de K.&nbsp;William Kapp, la bioéconomie de Nicholas Georgescu-Roegen et la néguanthropie de Bernard Stiegler.

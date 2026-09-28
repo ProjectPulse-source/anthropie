@@ -17,6 +17,10 @@ faq:
     answer: "That is the programme opened by AWP-08: a measurement architecture (V = f(C, T, A)), four families of testable propositions and an identification protocol on two dated French institutional reforms — the removal of the 040 indicator from the Banque de France's FIBEN file and the insurance right-to-be-forgotten of the Lemoine Act. It is a refutable framework, not yet an empirical result."
   - question: "Who proposed the concept of social reversibility?"
     answer: "Stéphane Lalut, economist and independent researcher, in the working paper AWP-08 — Social Reversibility as a Dimension of Inequality (2026, DOI 10.5281/zenodo.21507249), eighth of the Anthropie Working Papers. The concept extends the framework of anthropy: the stratified price of failure is a mechanism of social disorder distribution."
+ressource:  # index /ressources/ (layouts/ressources/list.html)
+  bloc: "notions"
+  rang: 30
+  nature: "Concept — definition, origins and sources"
 ---
 
 Social reversibility is the capacity, assessed *before* an attempt, to withstand its possible failure without lasting closure of the set of accessible options. The concept is proposed by economist Stéphane Lalut in the working paper [AWP-08](/en/awp/awp-08/) (2026) as a third dimension of inequality, alongside stocks (income, wealth) and trajectories (social mobility).

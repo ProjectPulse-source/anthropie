@@ -27,6 +27,8 @@
     {{ end }}
   {{ end }}
 
+  {{- partial "ressource-retour.html" . -}}
+
   {{ if and (ne .Section "livres") (ne .Section "publications") (ne .Section "awp") (ne .Section "serie-awp") }}
     {{- partial "transmettre.html" . -}}
   {{ end }}

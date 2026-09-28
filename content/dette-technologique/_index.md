@@ -12,6 +12,10 @@ faq:
     answer: "Ceux qui n'ont pas signé les engagements : les budgets publics qui garantissent, les territoires qui accueillent les infrastructures et leurs besoins en énergie et en eau, les générations qui hériteront des équipements et de leurs coûts de maintenance ou de démantèlement, et les utilisateurs dont l'attention constitue le quatrième registre de coût."
   - question: "Où le concept est-il formalisé ?"
     answer: "Dans AWP-06, « Infrastructures numériques et dette technologique » (Stéphane Lalut, 2026, DOI 10.5281/zenodo.20025421), sixième des Anthropie Working Papers, et dans le livre ANTHROPIE — Ordre ici. Dette ailleurs (2025), qui déploie le cadre général."
+ressource:  # index /ressources/ (layouts/ressources/list.html)
+  bloc: "notions"
+  rang: 60
+  nature: "Notion — définition, origine et sources"
 ---
 
 La dette technologique est le coût des infrastructures numériques — énergie, matière, territoire, attention — transformé en dette par des mécanismes d'engagement&nbsp;: garanties publiques, contrats de long terme, irréversibilisation des choix d'infrastructure. Le concept est formalisé par l'économiste Stéphane Lalut dans le working paper [AWP-06](/awp/awp-06/) (2026) et s'inscrit dans le cadre de l'anthropie.

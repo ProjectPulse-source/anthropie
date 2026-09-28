@@ -1,0 +1,55 @@
+// Index éditorial /ressources/ et bloc d'accès de l'accueil.
+// Arbitrage PRO-20260921-105434 (28/09/2026) : type de contenu lisible AVANT le clic.
+
+.ressources-index__intro { max-width: 42rem; margin-bottom: 1.5rem; }
+
+.ressources-index__sommaire {
+  display: flex; flex-wrap: wrap; gap: .5rem 1.25rem;
+  padding: .75rem 0; margin-bottom: 2rem;
+  border-top: 1px solid var(--color-rule-soft);
+  border-bottom: 1px solid var(--color-rule-soft);
+  a { color: var(--color-accent); font-size: .95rem; }
+}
+
+.ressources-index__bloc { margin-bottom: 2.75rem; scroll-margin-top: 5rem; }
+.ressources-index__chapo { color: var(--color-text-muted); max-width: 42rem; }
+
+.ressources-index__liste {
+  list-style: none; padding: 0; margin: 1.25rem 0 0;
+  display: grid; gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(#{unquote("min(100%, 19rem)")}, 1fr));
+}
+
+.ressources-index__entree {
+  background: var(--color-bg-card);
+  border-left: 3px solid var(--color-accent-rule);
+  padding: 1rem 1.15rem;
+  h3 { font-size: 1.08rem; line-height: 1.35; margin: .25rem 0 .5rem; }
+  h3 a { color: var(--color-text); text-decoration: none; }
+  h3 a:hover, h3 a:focus-visible { color: var(--color-accent); text-decoration: underline; }
+}
+
+.ressources-index__nature {
+  font-size: .78rem; letter-spacing: .03em; text-transform: uppercase;
+  color: var(--color-text-subtle); margin: 0;
+}
+.ressources-index__langue { font-weight: 600; color: var(--color-accent); }
+.ressources-index__desc, .ressources-index__titre-fr { font-size: .93rem; color: var(--color-text-muted); margin: 0; }
+.ressources-index__titre-fr { font-style: italic; }
+
+// Accueil
+.home-ressources {
+  .home-ressources__liste {
+    list-style: none; padding: 0; margin: 1.25rem 0;
+    display: grid; gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(#{unquote("min(100%, 16rem)")}, 1fr));
+  }
+  .home-ressources__tout { font-weight: 600; }
+}
+
+// Retour vers l'index au pied d'une page ressource
+.ressource-retour {
+  margin-top: 2.5rem; padding-top: 1rem;
+  border-top: 1px solid var(--color-rule-soft);
+  font-size: .95rem;
+}

@@ -21,6 +21,11 @@ faq:
     answer: "No. The Register of Offloaded Costs is the documentary apparatus of the book ANTHROPY: a chronology of 168 historical milestones. The coupled cost registers are a theoretical contribution of AWP-06: the grid of four registers—energy, matter, territory, attention—along which digital infrastructure simultaneously displaces disorder. One is a chronology, the other a typology; only the word « register » is shared."
   - question: "Where can I read the full Register of Offloaded Costs?"
     answer: "On this page: the English version is freely browsable, milestone by milestone and anchored entry by entry. The book ANTHROPY – A Big History of Civilization's Hidden Costs (2026, 632 pages) presents the Register as its documentary epilogue, alongside the diagrams, the analytical afterword, and the seven ages developed chapter by chapter. The French version is browsable at /registre-des-couts-deportes/."
+ressource:  # index /ressources/ (layouts/ressources/list.html)
+  bloc: "corpus"
+  rang: 10
+  nature: "Documented corpus — annotated chronology"
+  accueil: 2
 ---
 
 The Register of Offloaded Costs is the **documentary apparatus** of the book [*ANTHROPY – A Big History of Civilization's Hidden Costs*](/en/livres/anthropie-ordre-ici-dette-ailleurs/): a chronology of 168 milestones, from the first stone tools (≈ 3.3 million years ago) to contemporary algorithms. Each milestone answers the same two questions: **what order did this innovation create, and what debt did it displace**—toward other places, other times, or other social groups? The English version, below, is freely browsable.

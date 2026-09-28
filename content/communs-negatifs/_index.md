@@ -12,6 +12,10 @@ faq:
     answer: "L'externalité est une notion comptable : un coût non facturé, qu'on imagine corrigible par un prix (taxe, marché). La notion de communs négatifs conteste cette lecture : un sol pollué ou une centrale en fin de vie ne sont pas des écarts de prix mais des réalités matérielles installées, qui exigent du soin, des institutions et du travail — pas seulement une internalisation monétaire."
   - question: "Quel est le lien entre communs négatifs et anthropie ?"
     answer: "Les communs négatifs sont le transfert anthropique devenu matière : quand un système déplace son désordre (déchets, pollutions, infrastructures en fin de vie) et que le réceptacle s'accumule, ce qui reste est un héritage négatif partagé. Le working paper AWP-06 (Stéphane Lalut, 2026) range les infrastructures numériques — data centers, équipements à démanteler — parmi les communs négatifs candidats."
+ressource:  # index /ressources/ (layouts/ressources/list.html)
+  bloc: "notions"
+  rang: 40
+  nature: "Notion — définition, origine et sources"
 ---
 
 Les communs négatifs désignent ce dont nous héritons collectivement **sans l'avoir choisi**&nbsp;: déchets nucléaires, sols pollués, centrales à démanteler, ruines industrielles, infrastructures obsolètes. La notion a été développée par le philosophe Alexandre Monnin avec Emmanuel Bonnet et Diego Landivar (*Héritage et fermeture. Une écologie du démantèlement*, 2021)&nbsp;: non plus des biens communs à préserver, mais des **charges communes** à gérer, refermer ou démanteler — parfois sur des générations.

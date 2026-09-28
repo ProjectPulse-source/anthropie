@@ -52,3 +52,5 @@ L'analyse met en évidence la dimension sociale du transfert&nbsp;: les groupes 
 ## Au-delà du solde comptable
 
 Le cadre anthropique ne propose pas une lecture morale de la dette. Il vise à rendre visible le mécanisme de transfert qui la sous-tend, et à poser la question que les cadres comptables ne formulent pas&nbsp;: non pas «&nbsp;combien coûte la dette&nbsp;?&nbsp;» mais «&nbsp;qui en supporte le coût, et par quelles médiations ce coût devient-il invisible&nbsp;?&nbsp;».
+
+Deux pages reprennent ces questions à partir des données publiques&nbsp;: [Combien coûte la dette publique&nbsp;?](/cout-de-la-dette-publique/) et [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/). Les autres données et dossiers sont rassemblés dans les [Ressources](/ressources/).

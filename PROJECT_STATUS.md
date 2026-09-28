@@ -53,6 +53,33 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-28 — Rubrique « Ressources » : livraison 1 (accès) PRÊTE, non commitée, non poussée
+
+Arbitrage : `D:\PRO\.claude\external-audits\ARBITRATIONS\PRO-20260921-105434_arbitrage_2026-09-28.md`
+(contre-avis du 28/09 accepté avec modification ; quatre décisions d'auteur acceptées, « Go »).
+
+- **Index** `/ressources/` (4 blocs, 14 entrées) et `/en/resources/` (3 blocs, 5 entrées + *Qui paie* marqué « in French »).
+  Gabarit `layouts/ressources/list.html`. **La présence vient des pages** : bloc `ressource:` en front matter
+  (`bloc`, `rang`, `nature`, facultatifs `intitule`, `accueil`, `en_francais` + `titre_en`). Bloc inconnu = `errorf`
+  (**vu mordre** par mutation le 28/09, restauré) ; bloc vide ou `nature` absente = `warnf`.
+- **Menus** FR/EN : Ressources en troisième position (poids 22). **Pied de page** : colonne « Liens utiles / Useful links »
+  + lien vers la rubrique. **Accueil** : bloc « Ressources pour comprendre et discuter » avant « Trois axes », accès
+  tirés de `ressource.accueil` (FR : coût, qui paie, registre ; EN : coût, registre, glossaire).
+- **Retour vers l'index** au pied de chaque page ressource (`partials/ressource-retour.html`, gabarit commun + Premier coup).
+- **Renommages, adresses inchangées** : guichet → « Livres offerts — accès sur invitation » (titre, partage, surtitres,
+  textes alternatifs, page transparence, **images de partage régénérées** par `og_ressources_livre_base.py`) ;
+  « Ressources presse » → « Presse ».
+- **Maillage** posé là où il manquait : AWP-03 FR/EN → coût + qui paie + Ressources ; Anthropie → communs négatifs +
+  Ressources (et point final manquant rétabli) ; glossaire FR/EN → entrée **réversibilité sociale** (définition reprise
+  mot pour mot de sa page). Déjà présents, constatés : diptyque → collectivités/générations (depuis *Qui paie*), fiche du
+  livre dette → deux pages, Réversibilité → Premier coup, À propos et AWP-05 → Chercheur indépendant, Odyssée → écriture.
+- `static/llms.txt` : rubrique ajoutée (FR et EN).
+- Contrôles : build sans erreur ni avertissement ; `check-all.py --reseau` à 0 ; HTML produit relu (blocs, entrées,
+  accès, menus, pied de page, titres). **Non contrôlé** : rendu mobile et navigation clavier en navigateur (critère 7),
+  exclus par la politique de quota de la session.
+- **Livraison 2** (compléments du composant de réutilisation) : non commencée ; commence par l'inventaire des écarts
+  à cinq états décrit dans l'arbitrage.
+
 ### 2026-09-27 — « Qui paie » : deux figures de données de plus (solde net, âge)
 
 **Fait.** Le second volet portait deux figures de données et un schéma ; il en porte quatre et un

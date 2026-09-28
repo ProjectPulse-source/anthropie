@@ -3,6 +3,11 @@ title: "Glossary"
 description: "Key terms of the anthropic framework."
 og_image: "images/og-glossaire.en.jpg"
 og_image_alt: "Glossary — Anthropy. Order here. Debt elsewhere."
+ressource:  # index /ressources/ (layouts/ressources/list.html)
+  bloc: "notions"
+  rang: 10
+  nature: "Definitions"
+  accueil: 3
 ---
 
 This glossary brings together the terms specific to the anthropic framework. It is not a general dictionary: each entry designates a concept coined or repurposed within the framework of the anthropic hypothesis, and carries its precise meaning only in that theoretical context. Definitions refer to the *Anthropie Working Papers* that formalise them and to the book [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) (in French) that develops them across the full scope of the framework.
@@ -104,6 +109,11 @@ Anthropy rests on a single hypothesis — social systems displace disorder rathe
 <div class="glossaire-entry" id="negative-commons">
 <dt>Negative commons</dt>
 <dd>Category introduced by Alexandre Monnin to designate what we inherit without having chosen: waste, ruins, obsolete infrastructures. Negative commons are not goods voluntarily shared, but burdens transmitted — an anthropic transfer crystallised in the materiality of the world. AWP-06 places digital technologies among candidate negative commons. See <a href="/en/awp/awp-06/">AWP-06</a>.</dd>
+</div>
+
+<div class="glossaire-entry" id="social-reversibility">
+<dt>Social reversibility</dt>
+<dd>The capacity, assessed before an attempt, to withstand its possible failure without a lasting closure of one's future. Neither a stock nor a flow: a third dimension of inequality — what one can afford to fail. See <a href="/en/social-reversibility/">What is social reversibility?</a></dd>
 </div>
 
 <div class="glossaire-entry" id="coupled-cost-registers">

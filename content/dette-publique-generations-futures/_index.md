@@ -12,6 +12,10 @@ faq:
     answer: "Si — et c'est la meilleure version de l'argument rassurant : une dette qui finance des infrastructures, de l'éducation ou la transition transmet un capital en même temps qu'une charge. La question opératoire est donc : quelle part de l'emprunt finance de l'investissement transmissible, et quelle part finance du fonctionnement courant ? Quand la dette finance les dépenses courantes sans contrepartie durable, l'héritage se réduit pour l'essentiel à la charge."
   - question: "Quel est le lien avec le cadre anthropique ?"
     answer: "La dette publique est un cas type de transfert temporel : un coût présent peut être reporté vers des payeurs futurs qui n'ont pas pris part à la décision. Le cadre y ajoute une hypothèse sociale : à l'intérieur de chaque génération, l'ajustement peut peser davantage sur les groupes les moins mobiles, fiscalement ou géographiquement — une hypothèse qui se teste réforme par réforme. L'analyse est formalisée dans AWP-03 (DOI 10.5281/zenodo.19268769) et déployée dans le livre Dette Publique : Qui paie vraiment ? (2025)."
+ressource:  # index /ressources/ (layouts/ressources/list.html)
+  bloc: "dette"
+  rang: 40
+  nature: "Analyse"
 ---
 
 À la question «&nbsp;la dette publique est-elle un fardeau pour les générations futures&nbsp;?&nbsp;», la réponse défendable est conditionnelle&nbsp;: **les générations suivantes héritent des engagements, mais aussi de ce qu'ils ont financé&nbsp;; le transfert net dépend de l'usage de la dette et des ajustements choisis pour la servir.** Le fardeau n'est pas un remboursement massif qui attendrait nos enfants&nbsp;: c'est l'ensemble des transferts que la dette organise pendant qu'elle roule, et leur répartition.

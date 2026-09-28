@@ -12,6 +12,10 @@ faq:
     answer: "Cela dépend des choix de chaque collectivité. L'hypothèse du cadre anthropique est que l'ajustement peut peser davantage sur les habitants les moins mobiles : un ménage aisé peut choisir sa commune ou partir ; un ménage qui dépend du logement social, des transports et des services publics locaux subit plus directement une hausse des tarifs ou une fermeture de service. Des tarifs sociaux, des arbitrages entre services ou une hausse d'impôt mieux répartie peuvent déplacer cette charge : c'est commune par commune que la question se tranche."
   - question: "Où cette analyse est-elle développée ?"
     answer: "Dans deux articles de Stéphane Lalut — « La commune, variable d'ajustement de la République ? » (Revue Projet, 2026) et « Budget 2026 : la dette commande, les territoires patientent » (Mediapart, 2026) —, dans le working paper AWP-03 (DOI 10.5281/zenodo.19268769) et dans le livre Dette Publique : Qui paie vraiment ? (2025)."
+ressource:  # index /ressources/ (layouts/ressources/list.html)
+  bloc: "dette"
+  rang: 30
+  nature: "Analyse"
 ---
 
 À la question «&nbsp;pourquoi les collectivités locales sont-elles la variable d'ajustement des finances publiques&nbsp;?&nbsp;», la réponse tient à leur position dans la chaîne budgétaire&nbsp;: **quand l'État consolide son budget, une part de sa contrainte peut descendre vers les collectivités, qui ne peuvent pas la reporter sur la dette**. Reste à savoir, commune par commune, qui en supporte le coût.

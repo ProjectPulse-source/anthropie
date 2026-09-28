@@ -14,6 +14,10 @@ faq:
     answer: "C'est l'hypothèse discutée aujourd'hui : après la mémoire (écriture) et la diffusion (imprimerie), l'IA externalise une part du jugement lui-même — formuler, résumer, répondre. Comme aux bascules précédentes, la question n'est pas de bénir ou maudire l'outil, mais de voir ce qu'il redistribue : qu'est-ce qui se libère, qu'est-ce qui s'atrophie, et qui contrôle le support."
   - question: "Où cette traversée est-elle développée ?"
     answer: "Dans L'Odyssée des idées de Stéphane Lalut (nouvelle édition 2026, 696 pages) : 250 escales des premiers signes à l'intelligence artificielle, dont le chemin de lecture « Les signes » suit précisément cette histoire — écriture, alphabet, imprimerie, presse, numérique — et ses effets sur la manière de penser."
+ressource:  # index /ressources/ (layouts/ressources/list.html)
+  bloc: "guides"
+  rang: 10
+  nature: "Éclairage — histoire des idées"
 ---
 
 L'écriture n'a pas seulement **noté** la pensée&nbsp;: elle l'a **transformée**. En externalisant la mémoire, elle a libéré l'esprit de la charge de tout retenir&nbsp;; en fixant les mots, elle a rendu la pensée inspectable, comparable, critiquable. Chaque grand support qui a suivi — l'imprimerie, l'écran, l'intelligence artificielle — a rejoué cette bascule&nbsp;: à chaque fois, ce n'est pas seulement l'outil qui change, c'est ce que penser veut dire.

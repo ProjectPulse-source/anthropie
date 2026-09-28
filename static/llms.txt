@@ -67,6 +67,7 @@ Recensions et articles publiés dans : Alternatives Économiques, La Vie des Id�
 - [Combien coûte la dette publique ?](https://stephane-lalut.com/cout-de-la-dette-publique/) — chiffres officiels actualisés (INSEE, Eurostat), le ciseau encours/intérêts 1995-2026, équivalences budgétaires ; jeu de données consolidé en accès libre, sous licence CC BY 4.0 (réutilisation libre avec citation de la source) : https://stephane-lalut.com/dette_officielle.json ; les trois graphiques sont réutilisables sous la même licence (SVG et PNG), chacun portant dans l'image sa source, son millésime et sa précaution de lecture
 - [Le Registre des coûts déportés](https://stephane-lalut.com/registre-des-couts-deportes/) — l'appareil documentaire du livre ANTHROPIE en consultation libre : 168 jalons historiques (≈ −3,3 millions d'années → aujourd'hui), chacun sur la grille « ordre créé / dette déportée », classés selon les sept âges du livre, entrées ancrées
 - [Glossaire](https://stephane-lalut.com/glossaire/) — vocabulaire opératoire du cadre, entrées ancrées (ex. /glossaire/#dette-technologique)
+- [Ressources](https://stephane-lalut.com/ressources/) — index des données, dossiers et repères (dette publique, notions, corpus, guides), chaque entrée typée par la nature de son contenu
 - [Série AWP](https://stephane-lalut.com/serie-awp/) — point d'entrée éditorial de la série
 - [À propos](https://stephane-lalut.com/a-propos/) — identité, profils, parcours
 
@@ -81,5 +82,6 @@ All eight Anthropie Working Papers exist in English with distinct Zenodo DOIs. T
 - [What does French public debt actually cost?](https://stephane-lalut.com/en/cost-of-french-public-debt/) — official INSEE and Eurostat figures kept current, the stock/interest scissor 1995-2026, the effective interest rate, and budget-mass comparisons; consolidated dataset openly published under CC BY 4.0 (free reuse with attribution): https://stephane-lalut.com/dette_officielle.json
 - [ANTHROPY — English edition](https://stephane-lalut.com/en/livres/anthropie-ordre-ici-dette-ailleurs/) — the complete framework in one volume (paperback and Kindle)
 - [Glossary](https://stephane-lalut.com/en/glossaire/) — working vocabulary, anchored entries (e.g. /en/glossaire/#technological-debt)
+- [Resources](https://stephane-lalut.com/en/resources/) — index of data, explainers and reference material, each entry typed by the nature of its content
 - [AWP series](https://stephane-lalut.com/en/serie-awp/) — editorial entry point of the series
 - [About](https://stephane-lalut.com/en/a-propos/) — identity, profiles, background

@@ -58,6 +58,25 @@
   </aside>
 </section>
 
+{{/* ══════════ Section 1 bis — Ressources (arbitrage PRO-20260921-105434, 28/09/2026) ══════════
+     Accès directs tirés des pages qui déclarent `ressource.accueil` (ordre = valeur), dans la
+     langue courante ; jamais une liste recopiée. Moins de trois accès : le build avertit. */}}
+{{- $acces := slice -}}
+{{- range where site.Pages "Params.ressource.accueil" "!=" nil }}{{ $acces = $acces | append . }}{{ end -}}
+{{- if lt (len $acces) 3 }}{{ warnf "accueil : %d acces ressources seulement (%s)" (len $acces) .Lang }}{{ end -}}
+<section class="home-section home-ressources" aria-labelledby="home-ressources-titre">
+  <h2 id="home-ressources-titre">{{ if eq .Lang "en" }}Resources to understand and discuss{{ else }}Ressources pour comprendre et discuter{{ end }}</h2>
+  <ul class="home-ressources__liste">
+    {{- range sort $acces "Params.ressource.accueil" }}
+    <li class="ressources-index__entree">
+      {{ with .Params.ressource.nature }}<p class="ressources-index__nature">{{ partial "fr-typo.html" . }}</p>{{ end }}
+      <h3><a href="{{ .RelPermalink }}">{{ partial "fr-typo.html" (or .Params.ressource.intitule .Title) }}</a></h3>
+    </li>
+    {{- end }}
+  </ul>
+  <p><a class="home-ressources__tout" href="{{ if eq .Lang "en" }}/en/resources/{{ else }}/ressources/{{ end }}">{{ if eq .Lang "en" }}All resources →{{ else }}Toutes les ressources →{{ end }}</a></p>
+</section>
+
 {{/* ══════════ Section 2 — Trois axes ══════════ */}}
 <section class="home-axes">
   <h2>

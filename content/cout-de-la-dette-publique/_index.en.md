@@ -18,6 +18,11 @@ faq:
     answer: "Yes, by a wide margin. In {dette.equiv_annee} — the most recent year for which all series are comparable — general government paid {dette.interets_equiv_mdeur} billion euros in interest, against {dette.justice_mdeur} billion of public spending on law courts, in the sense of the European COFOG functional classification (item GF0303) and not of the French Justice ministry's total budget: roughly {dette.ratio_interets_justice} times more. Interest even exceeds the whole of public order and safety ({dette.ordre_mdeur} billion, GF03)."
   - question: "Has the rise in interest already cut health or education spending?"
     answer: "No, not in the aggregates: in {dette.equiv_annee}, public spending on health ({dette.sante_mdeur} billion euros) and education ({dette.education_mdeur} billion) was stable or rising, in euros and as a share of GDP. If those services nonetheless feel starved, the most common explanation — plausible, but not demonstrated by these series — is that their costs and their demand (wages, ageing, medical progress, litigation) would grow faster than GDP: a stable share of GDP would then not guarantee a stable level of service, without the budget itself falling. Establishing that would require data that fall outside the scope of this page: sectoral inflation, productivity, demographics, volumes delivered. These data do not attribute that gap to debt; what they do establish is that the interest burden squeezes the room that would close it."
+ressource:  # index /ressources/ (layouts/ressources/list.html)
+  bloc: "dette"
+  rang: 10
+  nature: "Official series (INSEE, Eurostat) and the author's calculations"
+  accueil: 1
 ---
 
 {{< dossier-dette volet="1" >}}

@@ -3,6 +3,10 @@ title: "Glossaire"
 description: "Glossaire des termes clés du cadre anthropique."
 og_image: "images/og-glossaire.jpg"
 og_image_alt: "Glossaire — Anthropie. On ne crée pas l'ordre, on déplace le désordre."
+ressource:  # index /ressources/ (layouts/ressources/list.html)
+  bloc: "notions"
+  rang: 10
+  nature: "Définitions"
 ---
 
 Ce glossaire rassemble les termes propres au cadre anthropique. Il ne s'agit pas d'un dictionnaire général&nbsp;: chaque entrée désigne un concept forgé ou réapproprié dans le cadre de l'hypothèse anthropique, et n'a de sens précis que dans ce contexte théorique. Les définitions renvoient aux *Anthropie Working Papers* qui les formalisent et au livre [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) qui les déploie sur l'ensemble du cadre.
@@ -104,6 +108,11 @@ L'anthropie repose sur une hypothèse unique — les systèmes sociaux déplacen
 <div class="glossaire-entry" id="communs-negatifs">
 <dt>Communs négatifs</dt>
 <dd>Catégorie introduite par Alexandre Monnin pour désigner ce dont nous héritons sans avoir choisi&nbsp;: déchets, ruines, infrastructures obsolètes. Les communs négatifs ne sont pas des biens partagés volontairement, mais des charges transmises&nbsp;— un transfert anthropique cristallisé dans la matérialité du monde. AWP-06 range les technologies numériques parmi les communs négatifs candidats. Voir la page <a href="/communs-negatifs/">Qu'est-ce que les communs négatifs&nbsp;?</a> et <a href="/awp/awp-06/">AWP-06</a>.</dd>
+</div>
+
+<div class="glossaire-entry" id="reversibilite-sociale">
+<dt>Réversibilité sociale</dt>
+<dd>Capacité, évaluée avant une tentative, de supporter son éventuel échec sans fermeture durable de son avenir. Ni un stock ni un flux&nbsp;: une troisième dimension de l'inégalité — ce qu'on peut se permettre de rater. Voir la page <a href="/reversibilite-sociale/">Qu'est-ce que la réversibilité sociale&nbsp;?</a> et les <a href="/premier-coup/">sources et le répertoire</a> de <em>La Société du premier coup</em>.</dd>
 </div>
 
 <div class="glossaire-entry" id="registres-de-couts-couples">

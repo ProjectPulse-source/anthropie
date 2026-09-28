@@ -53,3 +53,5 @@ The analysis highlights the social dimension of transfer: the groups bearing the
 ## Beyond the accounting balance
 
 The framework of anthropy does not propose a moral reading of debt. It aims to make visible the transfer mechanism that underlies it, and to pose the question that accounting frameworks do not formulate: not "how much does debt cost?" but "who bears its cost, and through what mediations does that cost become invisible?"
+
+Two pages take up these questions with public data: [What does French public debt actually cost?](/en/cost-of-french-public-debt/) and, in French, [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/). Other data and reference material are gathered under [Resources](/en/resources/).

@@ -10,6 +10,11 @@ description: "Le compagnon documentaire de La Société du premier coup (Stépha
 # red team GEO-04 a établie. L'absence de `faq:` est aussi ce qui tient cette page
 # HORS de la nasse dans `scripts/check-geo-coverage.py` — elle n'est pas une maille,
 # elle est un compagnon. Voir docs/ARCHITECTURE_GEO_PREMIER_COUP.md.
+ressource:  # index /ressources/ (layouts/ressources/list.html)
+  bloc: "corpus"
+  rang: 20
+  intitule: "Inégalités et possibilités de recommencer — sources et répertoire"
+  nature: "Sources et répertoire du livre « La Société du premier coup »"
 ---
 
 Cette page est le **compagnon documentaire** de *La Société du premier coup*. Elle porte ce que le livre annonce page&nbsp;105&nbsp;: le répertoire complet, ses sources et ses mises à jour.

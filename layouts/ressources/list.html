@@ -1,0 +1,84 @@
+{{ define "main" }}
+{{- /* Index éditorial /ressources/ et /en/resources/.
+       PRÉSENCE : une page y entre en déclarant dans son front matter
+         ressource:
+           bloc: dette | notions | corpus | guides   (ids déclarés par content/ressources/_index*.md)
+           rang: 10                                   (ordre dans le bloc)
+           nature: "…"                                (type de contenu, lisible avant le clic)
+           intitule: "…"                              (facultatif : surcharge du titre)
+           accueil: 1                                 (facultatif : accès direct depuis l'accueil, dans cet ordre)
+           en_francais: true + titre_en + nature_en   (facultatif, page FR sans traduction : listée
+                                                       sur l'index anglais, marquée « in French »)
+       Un bloc inconnu arrête le build ; un bloc vide avertit (règle de surface du 11/08). */ -}}
+{{- $isEn := eq .Lang "en" -}}
+{{- $blocs := .Params.blocs -}}
+{{- if not $blocs }}{{ errorf "ressources : %s sans `blocs` en front matter" .File.Path }}{{ end -}}
+{{- $ids := slice -}}
+{{- range $blocs }}{{ $ids = $ids | append .id }}{{ end -}}
+
+{{- /* Entrées de la langue courante */ -}}
+{{- $entrees := slice -}}
+{{- range where site.Pages "Params.ressource.bloc" "!=" nil -}}
+  {{- $r := .Params.ressource -}}
+  {{- if not (in $ids $r.bloc) }}{{ errorf "ressources : %s déclare le bloc %q, absent de %s" .File.Path $r.bloc $.File.Path }}{{ end -}}
+  {{- if not $r.nature }}{{ warnf "ressources : %s sans `ressource.nature` -- le type de contenu ne s'affiche pas" .File.Path }}{{ end -}}
+  {{- $entrees = $entrees | append (dict "page" . "r" $r "fr" false) -}}
+{{- end -}}
+
+{{- /* Sur l'index anglais : pages françaises non traduites qui le demandent */ -}}
+{{- if $isEn -}}
+  {{- if not .IsTranslated }}{{ errorf "ressources : %s sans pendant français -- les pages « in French » ne peuvent pas être listées" .File.Path }}{{ end -}}
+  {{- range .Translations -}}
+    {{- if eq .Lang "fr" -}}
+      {{- range where .Site.Pages "Params.ressource.en_francais" true -}}
+        {{- if .IsTranslated }}{{ warnf "ressources : %s a une traduction, `en_francais` est inutile" .File.Path }}{{ end -}}
+        {{- if not .Params.ressource.titre_en }}{{ errorf "ressources : %s en_francais sans titre_en" .File.Path }}{{ end -}}
+        {{- $entrees = $entrees | append (dict "page" . "r" .Params.ressource "fr" true) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+<article class="home-section ressources-index">
+  <header class="page-header">
+    <h1 class="page-header__title">{{ partial "fr-typo.html" .Title }}</h1>
+    {{ with .Description }}<p class="page-header__lede">{{ partial "fr-typo.html" . }}</p>{{ end }}
+  </header>
+
+  <div class="ressources-index__intro">{{ .Content }}</div>
+
+  <nav class="ressources-index__sommaire" aria-label="{{ if $isEn }}Sections{{ else }}Blocs{{ end }}">
+    {{- range $blocs }}<a href="#{{ .id }}">{{ partial "fr-typo.html" .titre }}</a>{{ end -}}
+  </nav>
+
+  {{ range $blocs }}
+    {{- $id := .id -}}
+    {{- $items := slice -}}
+    {{- range $entrees }}{{ if eq .r.bloc $id }}{{ $items = $items | append . }}{{ end }}{{ end -}}
+    {{- if not $items }}{{ warnf "ressources : le bloc %q de %s est vide" $id $.File.Path }}{{ end -}}
+    <section class="ressources-index__bloc" id="{{ $id }}" aria-labelledby="bloc-{{ $id }}">
+      <h2 id="bloc-{{ $id }}">{{ partial "fr-typo.html" .titre }}</h2>
+      {{ with .chapo }}<p class="ressources-index__chapo">{{ partial "fr-typo.html" . }}</p>{{ end }}
+      <ul class="ressources-index__liste">
+        {{ range sort $items "r.rang" }}
+          {{- $p := .page -}}
+          {{- $r := .r -}}
+          <li class="ressources-index__entree">
+            {{- if .fr }}
+              <p class="ressources-index__nature">{{ with $r.nature_en }}{{ . }}{{ else }}{{ $r.nature }}{{ end }} · <span class="ressources-index__langue" lang="en">in French</span></p>
+              <h3><a href="{{ $p.Permalink }}" hreflang="fr">{{ $r.titre_en }}</a></h3>
+              <p class="ressources-index__titre-fr" lang="fr">{{ partial "fr-typo.html" $p.Title }}</p>
+            {{- else }}
+              {{ with $r.nature }}<p class="ressources-index__nature">{{ partial "fr-typo.html" . }}</p>{{ end }}
+              <h3><a href="{{ $p.RelPermalink }}">{{ partial "fr-typo.html" (or $r.intitule $p.Title) }}</a></h3>
+              {{ with $p.Description }}<p class="ressources-index__desc">{{ partial "fr-typo.html" . }}</p>{{ end }}
+            {{- end }}
+          </li>
+        {{ end }}
+      </ul>
+    </section>
+  {{ end }}
+
+  {{- partial "transmettre.html" . -}}
+</article>
+{{ end }}

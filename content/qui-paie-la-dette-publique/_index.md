@@ -14,6 +14,14 @@ faq:
     answer: "En {qp.cd_annee}, d'après les comptes nationaux distribués de l'Insee, {qp.benef_ensemble} % des personnes recevaient plus de transferts publics qu'elles n'en versaient : {qp.benef_d1} % dans le dixième de niveau de vie le plus modeste, {qp.benef_d10} % dans le plus aisé. Le solde bascule au dixième {qp.net_bascule} : les {qp.net_benef_n} premiers dixièmes sont bénéficiaires nets, les trois derniers contributeurs nets, le dernier de {qp.net_d10} euros par unité de consommation. Deux précautions : c'est le solde d'une année et non d'une vie — les pensions de retraite y comptent comme transferts reçus —, et il décrit toute la redistribution publique, pas l'effet propre de la dette."
   - question: "Faut-il rembourser la dette publique ?"
     answer: "Chaque titre arrivé à échéance est remboursé, mais la dette dans son ensemble se refinance : l'État émet de nouveaux titres pour rembourser les anciens, et le stock évolue avec le déficit. Le remboursement intégral du stock est donc une hypothèse largement théorique. La question opératoire porte sur ce que la dette organise pendant qu'elle roule : qui supporte les intérêts, sur quels budgets portent les ajustements, qui hérite des engagements et de ce qu'ils ont financé. Le refinancement reporte une échéance ; il ne désigne à lui seul aucun perdant."
+ressource:  # index /ressources/ (layouts/ressources/list.html)
+  bloc: "dette"
+  rang: 20
+  nature: "Analyse, appuyée sur des données publiques"
+  accueil: 2
+  en_francais: true
+  titre_en: "Who really pays the public debt?"
+  nature_en: "Analysis based on public data"
 ---
 
 {{< dossier-dette volet="2" >}}

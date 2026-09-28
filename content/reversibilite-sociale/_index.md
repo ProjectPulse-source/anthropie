@@ -16,6 +16,10 @@ faq:
     answer: "C'est l'objet du programme ouvert par AWP-08 : une architecture de mesure (V = f(C, T, A)), quatre familles de propositions testables et un protocole d'identification sur deux terrains datés — la suppression de l'indicateur 040 du FIBEN par la Banque de France et le droit à l'oubli assurantiel de la loi Lemoine. C'est un cadre réfutable, pas encore un résultat empirique."
   - question: "Qui a proposé le concept de réversibilité sociale ?"
     answer: "Stéphane Lalut, économiste et chercheur indépendant, dans le working paper AWP-08 — « La réversibilité sociale comme dimension de l'inégalité » (2026, DOI 10.5281/zenodo.21506320), huitième des Anthropie Working Papers. Le concept prolonge le cadre anthropique : le tarif stratifié de l'échec est un mécanisme de distribution du désordre social."
+ressource:  # index /ressources/ (layouts/ressources/list.html)
+  bloc: "notions"
+  rang: 30
+  nature: "Notion — définition, origine et sources"
 ---
 
 La réversibilité sociale est la capacité, évaluée *avant* une tentative, de supporter son éventuel échec sans fermeture durable de l'ensemble des options accessibles. Le concept est proposé par l'économiste Stéphane Lalut dans le working paper [AWP-08](/awp/awp-08/) (2026) comme une troisième dimension de l'inégalité, à côté des stocks (revenu, patrimoine) et des trajectoires (mobilité sociale).

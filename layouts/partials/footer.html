@@ -18,10 +18,11 @@
       </ul>
     </div>
 
-    {{/* ── Colonne 3 — Ressources ── */}}
+    {{/* ── Colonne 3 — Liens utiles (renommée le 28/09/2026 : « Ressources » désigne la rubrique) ── */}}
     <div class="site-footer__col">
-      <p class="site-footer__heading">{{ if $isEn }}Resources{{ else }}Ressources{{ end }}</p>
+      <p class="site-footer__heading">{{ if $isEn }}Useful links{{ else }}Liens utiles{{ end }}</p>
       <ul class="site-footer__links">
+        <li><a href="{{ if $isEn }}/en/resources/{{ else }}/ressources/{{ end }}">{{ if $isEn }}Resources{{ else }}Ressources{{ end }}</a></li>
         {{ $footerKeys := slice "orcid" "googleScholar" "zenodoCommunity" }}
         {{ $sameAs := site.Data.author.author.sameAs }}
         {{ range $key := $footerKeys }}
