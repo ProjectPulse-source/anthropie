@@ -211,10 +211,14 @@
   font-family: var(--font-sans);
 }
 .dossier-dette__barre {
+  // UNE SEULE LIGNE sur grand ecran : cartouche, onglets, date. Le retour a la
+  // ligne renvoyait la pastille SOUS les onglets, a gauche, et laissait la date
+  // seule a droite -- composition vue sur une capture de la page en ligne le
+  // 28/09. `nowrap` l'interdit ; l'ordre affiche suit alors l'ordre du document.
   display: flex;
   align-items: flex-end;
-  flex-wrap: wrap;
-  gap: 0.3rem 1rem;
+  flex-wrap: nowrap;
+  gap: 0 1.1rem;
   padding-top: 0.35rem;
 }
 .dossier-dette__titre {
@@ -222,7 +226,8 @@
   // nomme lui-meme d'un coup d'oeil, au lieu de se lire comme une sur-legende.
   flex: 0 0 auto;
   align-self: flex-end;
-  margin-bottom: 0.4rem;   // meme ligne de base optique que le bas des onglets
+  margin-bottom: 0.45rem;  // meme ligne de base optique que le bas des onglets
+  white-space: nowrap;
   padding: 0.22rem 0.6rem;
   border-radius: 4px;
   background: var(--color-accent);
@@ -235,11 +240,12 @@
 }
 .dossier-dette__volets {
   display: flex;
-  flex: 1 1 auto;
+  flex: 0 1 auto;          // ne pousse plus la date au bout de la barre
   gap: 0.25rem;
   margin: 0;
   padding: 0;
   list-style: none;
+  min-width: 0;
 }
 .dossier-dette__volet { margin: 0; }
 .dossier-dette__onglet {
@@ -283,7 +289,13 @@ a.dossier-dette__onglet:focus-visible { outline: 2px solid var(--color-pivot); o
   white-space: nowrap;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 760px) {
+  // Sous cette largeur la ligne unique ne tient plus : on autorise le retour,
+  // et c'est le cartouche qui part a la ligne AVEC la date, les onglets en
+  // dessous -- jamais l'inverse.
+  .dossier-dette__barre { flex-wrap: wrap; }
+  .dossier-dette__volets { flex: 1 0 100%; order: 2; }
+  .dossier-dette__maj { order: 1; }
   .dossier-dette {
     --dossier-top: 54px;
     font-size: 0.95em;
