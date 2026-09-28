@@ -3,6 +3,8 @@ title: "Qui paie vraiment la dette publique ?"
 description: "Qui supporte le coût de la dette publique ? Cela dépend de ce qu'elle finance, de la manière dont elle est financée et des ajustements choisis pour la servir ; certaines configurations reportent des coûts sur ceux qui peuvent le moins les éviter. Les rôles, les canaux, leurs conditions — et ce que les données ne permettent pas d'attribuer."
 date: 2026-07-04
 lastmod: 2026-09-28
+og_image: "images/og-qui-paie-dette.jpg"
+og_image_alt: "Carte de partage : « Qui paie vraiment la dette publique ? » — prélèvements et transferts publics par dixième de niveau de vie, 2023, sources Insee et Banque de France via l'AFT."
 faq:
   - question: "La dette publique est-elle vraiment un problème ?"
     answer: "L'argument rassurant est sérieux : quand le taux d'intérêt reste inférieur à la croissance, le ratio de dette peut se stabiliser, à condition que le déficit hors intérêts — le solde primaire — reste sous un seuil qui dépend de l'écart entre ces deux taux et du niveau de la dette. Au-delà, le ratio monte malgré tout. Et même stable, une dette se sert chaque année : son financement et ses ajustements répartissent des coûts et des avantages entre contribuables, usagers, épargnants et générations. La question utile porte alors sur ce qu'elle finance et sur qui supporte les ajustements — elle se traite configuration par configuration, pas par principe."
