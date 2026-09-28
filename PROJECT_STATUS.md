@@ -53,6 +53,172 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-29 — « Qui paie » : une section et une figure, sorties d'une contre-expertise
+
+**Motif.** Une contre-expertise reçue le 28/09 a nommé un manque réel de la page : entre des figures
+descriptives et une conclusion méthodologique — « la question n'a pas de réponse en soi, elle en a une
+par décision » — il manquait la démonstration. La section « Par quels canaux la charge peut se
+répartir » se terminait sur un schéma **explicitement sans quantités**.
+
+**Arbitré** (`D:\CONTRE_EXPERTISE\2026-09-28_FICHES_RESSOURCES\REPONSE_RECUE\ARBITRAGE_FICHE_02_QUI_PAIE_2026-09-28.md`,
+statut ACCEPTÉ AVEC MODIFICATION). Les six valeurs de la maquette reçue ont été **reproduites au
+centième** depuis nos propres sources, sans qu'aucun de ses chiffres n'entre dans le calcul. Deux
+choses lui ont été opposées : son point le plus visible tient à une seule cellule instable (§ ci-dessous),
+et son résultat n'est pas le plus fort que ses données contiennent.
+
+**Fait.** Nouvelle figure `qui-paie-exposition` (6ᵉ du volet), produite par
+`scripts/generer_figures_qui_paie.py` depuis le tableau Insee **CND.101** ajouté au dépôt
+(`scripts/sources/insee_T_CND_101_vingtiemes_2020_2023.xlsx`, quatre millésimes). Deux panneaux :
+le profil d'exposition de trois décisions, puis **de combien le choix de la décision change l'effort
+d'un même groupe**. Ce second panneau porte le résultat : le rapport vaut ×5,5 aux deux extrémités de
+l'échelle et **×1,4 au dixième D7** — pour les ménages médians, les trois décisions se valent. Le creux
+se situe en D7 ou D8 les **quatre** millésimes 2020-2023, et il est invariant au choix du dénominateur,
+qui s'élimine du rapport. Section, entrée de FAQ et carte « Réutiliser » posées dans le même geste ;
+aucun chiffre en dur dans la prose (clés `exp_*` du bloc `affichage`).
+
+- **Un point est écarté, et cela se voit** : l'impôt sur le revenu du premier vingtième pèse 60 % du
+  poste fiscal de D1 quand les vingtièmes voisins sont à zéro, et varie de 1 à 2,9 selon le millésime.
+  Marque creuse, sans valeur, motif au cartouche. **Condition de mort écrite dans le générateur** : si
+  l'Insee corrige cette cellule, la génération s'arrête au lieu de continuer à retirer un point valide.
+- **Quatre gardes bloquantes**, et `scripts/test_gardes_figure_exposition.py` les a vues **mordre** par
+  mutation réelle. La première version de ce témoin concluait à tort : deux mutations étaient arrêtées
+  par une autre garde que celle visée, et une troisième n'aplatissait pas réellement le U. Il vérifie
+  désormais que c'est bien la garde visée qui répond.
+- **Le mot « simulation » est refusé** : répartir au prorata puis diviser par le revenu affiche le
+  profil d'un poste, à une constante près. La page dit *profil d'exposition*.
+- **Écart déclaré** : la page n'a pas de version anglaise, à la différence du volet 1 — rien à propager.
+- **Reste** : les figures 1c et 1e écrivent « 10 % » avec une espace ordinaire. La règle
+  d'insécabilité vaut pour elles ; les corriger régénérerait des figures publiées un jour de diffusion.
+
+### 2026-09-28 (nuit) — Diffusion prévue le 29/09 : cartes de partage propres aux deux volets
+
+**Motif.** L'auteur diffuse la ressource le 29 au matin. Les deux pages du dossier servaient la carte
+générique du site : quand un journaliste colle le lien dans LinkedIn, Bluesky, WhatsApp ou un CMS,
+l'aperçu ne disait rien de la ressource — au moment précis où elle a besoin d'une identité. C'est ce
+que le lecteur voit **avant** d'ouvrir le lien. Priorité inversée sur le `FAQPage`, et le motif est
+bon : le balisage invisible ne coûte rien tant que personne ne le regarde.
+
+**Fait** (`319eb09`) : `scripts/og_dossier_dette.py` produit `static/images/og-qui-paie-dette.jpg` et
+`og-cout-dette.jpg` (1200×630), déclarées par `og_image` / `og_image_alt` dans le front matter des
+trois pages (volet 2 FR, volet 1 FR et EN) — `layouts/partials/head.html` les servait déjà par ce
+paramètre, aucun gabarit n'a été touché.
+
+- **La figure est redessinée, jamais recadrée.** Un recadrage du SVG publié se casserait au premier
+  changement de cadre, de marge ou de cartouche — et **en silence**, puisque personne ne regarde une
+  image de partage. Elle est donc redessinée à l'échelle de la carte **à partir du jeu publié**
+  (`data/qui_paie_donnees.json`, `data/dette_officielle.json`) : aucun chiffre en dur, et une donnée
+  qui bouge déplace la carte comme elle déplace la page.
+- **La phrase d'accroche est contrôlée**, comme l'est la même phrase dans le générateur de figures :
+  si le contraste versé/reçu disparaît des données, la carte ne se fabrique pas.
+- Palette et typographie communes aux figures (charte du 28/09) et au fond crème des autres cartes du
+  site — une carte qui ne leur ressemblerait pas ferait deux identités.
+- **Deux défauts trouvés en regardant les JPEG**, pas en relisant le code : la légende de la figure
+  touchait le filet, et **aucune couleur n'était expliquée** — la figure était muette, ce qui est le
+  pire défaut possible pour un aperçu qui se lit en une seconde. Clé de couleur posée dans la colonne
+  de gauche, restée vide.
+
+**À faire le 29/09 après 8 h 45** : lancer la chaîne INSEE à la main pour que le badge ne reste pas
+sur `INSEE T1 2026` pendant la journée de diffusion. `dette-insee.yml` porte `workflow_dispatch` :
+`gh workflow run "Donnees dette (INSEE/Eurostat)"` emprunte la chaîne testée (quatre gardes bloquantes
+avant écriture, déploiement sur le SHA écrit) plutôt qu'un run local suivi d'un commit manuel.
+
+### 2026-09-28 (nuit) — Badge du dossier, et arbitrage de la pièce « Avis-Paie_Dette »
+
+**Badge « MAJ », signalé par l'auteur, mesuré puis corrigé (`e64337b`).** Les deux volets écrivaient
+« MAJ Tx 2026 » pour **deux grandeurs différentes** : trimestre des DONNÉES sur le volet 1, relecture
+ÉDITORIALE sur le volet 2. Même préfixe, même grain, même couleur, même place — seule l'infobulle les
+distinguait, et le commentaire du gabarit prétendait le contraire : les libellés ne différaient qu'en
+anglais. « Qui paie », qui ne porte aucune série trimestrielle, affichait donc T3 2026 quand la page
+des données affichait T1 2026, et le lecteur en concluait l'inverse de la vérité. Corrigé à la racine :
+`INSEE T1 2026` / `Relu 09/2026` — une révision de texte a une date, pas un trimestre ; le grain était
+la vraie erreur. **Largeur mesurée avant d'écrire** : `.dossier-dette__maj` est `white-space: nowrap`
+et la colonne des onglets est `minmax(0,1fr)` **sans** `nowrap`, donc tout caractère ajouté au badge
+se prend sur les onglets, qui eux peuvent revenir à la ligne → libellés tenus à +2, +1 et +1 caractère,
+aucune règle CSS touchée. **Rendu aux largeurs réelles non contrôlé.** Table des trimestres, devenue
+sans emploi, retirée dans le même geste.
+
+**Publication INSEE du 29/09 à 8 h 45 — aucun geste requis.** `dette-insee.yml` tourne le mercredi à
+07:17 UTC, soit le 30/09 : le volet 1 passera de T1 à T2 environ 24 h après la publication, sans
+intervention (décision auteur du 20/09). Mardi, la page affichera donc encore `INSEE T1 2026` alors
+que le T2 sera publié. Repli si besoin le jour même : `python scripts/update_dette_insee.py` en local.
+
+**Pièce entrante `Avis-Paie_Dette.txt`**, archivée verbatim avant lecture (SHA-256 `33E69C95…`,
+14 234 o), arbitrage complet dans
+`D:\PRO\.claude\external-audits\ARBITRATIONS\PRO-20260928-QUIPAIE-AVIS_arbitrage.md`.
+
+- **Défaut silencieux corrigé** (`c1cf2fb`) : la **date de relevé** publiée dans la citation prête à
+  copier était écrite à la main. Le XLSX de l'Insee avait sa garde d'empreinte ; **le registre du livre
+  n'en avait aucune**, alors que la révision annuelle du livre le régénère. Il pouvait changer, les
+  chiffres de la page suivre, et la date rester au 21/09 sans que rien ne le signale — une citation
+  reprise sous licence CC BY aurait porté une date fausse. `REGISTRE_SHA256` + `SOURCES_RELEVEES_LE`
+  gouvernent désormais la date ; **garde vue mordre** par mutation réelle d'une copie du registre.
+- **Corrections de fond acceptées** : « inflation » → **inflation non anticipée**, et elle seule (une
+  inflation attendue se retrouve dans les taux exigés à l'émission) ; **restructuration** = perte de
+  *premier rang*, l'incidence finale dépendant de l'intermédiation — c'était une incohérence interne,
+  la page martelant par ailleurs que détenir n'est pas payer ; solde de 66 Md€ rattaché à sa convention
+  d'imputation ; section écologique **généralisée** aux investissements à bénéfices différés, le climat
+  restant l'exemple.
+- **Écarté** : son chiffre de 64,7 Md€ d'intérêts 2025 reste `NON_VERIFIE` et diverge de nos 66,6 Md€,
+  dont la convention (Eurostat `D41PAY`, droits constatés, toutes APU) est écrite dans la page.
+- **Confirmés par la mesure, NON corrigés** : `FAQPage` dans le JSON-LD **sans section FAQ visible, sur
+  les deux volets** (5 `acceptedAnswer`, aucun `<h2>` correspondant) — le choix entre afficher les
+  questions et retirer le balisage engage le GEO du site et trois gabarits, donc session dédiée ;
+  `og:image` générique ; deux « relevé du » de sens différent sur la même page, même classe que le
+  badge ci-dessus.
+- **Décisions d'auteur en attente** : le bloc commercial en pied de page (conflit réel entre ventes et
+  crédibilité, § 3 de l'arbitrage) et le titre « en France ».
+
+### 2026-09-28 (soir) — « Qui paie » : charte graphique appliquée aux cinq figures, texte relu
+
+**Figures** (`scripts/generer_figures_qui_paie.py`, cinq SVG + PNG régénérés). La charte du 28/09
+s'applique désormais aux deux générateurs du dépôt, et non au seul volet 1 :
+
+- **Deux couleurs de données au maximum.** L'aqua `#1baf7a` est retiré — il faisait une troisième
+  couleur et avertissait en contraste. Le gris moyen `#898781` prend la série secondaire (services
+  publics **valorisés par imputation** : la composante qui porte la convention de calcul), précédent
+  déjà validé dans `update_dette_insee.py`. **Aucune teinte nouvelle**, donc rien à soumettre à
+  `validate_palette.js`. Vérifié : l'aqua ne subsistait nulle part ailleurs dans le dépôt.
+- **Étiquetage direct** : les légendes à pastilles de F2 et F5 sont supprimées ; chaque série est
+  nommée à la hauteur de son segment dans la dernière catégorie, placement **calculé**
+  (`etiquettes_directes`, tri + écart minimum + bornage), jamais estimé au caractère.
+- **Valeur terminale en ancrage** : dernier dixième / dernier groupe d'âge en corps 12 semi-gras.
+  Pour les deux panneaux classés par rang (F1), l'ancrage est la valeur **dominante**, calculée par
+  `max` — dans une série sans axe du temps, « terminal » n'a pas de sens.
+- **Grille horizontale seule, quatre à cinq lignes** : F2 passe de 8 graduations à 5, F5 de 10 à 4.
+- **Chiffres tabulaires** sur toutes les figures ; **échelle typographique commune** aux deux
+  générateurs (`TY_TITRE`…`TY_MINEUR`, mêmes noms, mêmes valeurs) ; cartouche déjà présent.
+- **Sans objet, dit et non tu** : bandes datées (aucun axe du temps sur ces cinq figures) ; grille,
+  valeur terminale et bandes sur le schéma F3, qui n'est pas une figure de données.
+
+**Deux défauts trouvés en REGARDANT le PNG**, non en relisant le code — comme la charte le prévoit :
+les deux clés de couleur du solde net étaient chacune du côté **opposé** aux barres qu'elles
+décrivaient ; et la barre de D7 (−1,8) faisait un pixel, donc une valeur attachée à une marque
+invisible. Corrigés, puis revus au rendu.
+
+**Texte et structure.** Trois défauts de référence corrigés : un pronom sans antécédent dans
+« Les générations futures » (« ils héritent de ce qu'il a financé ») ; un participe détaché de son
+nom dans le paragraphe du solde financé par endettement ; « les figures ci-dessous » désignant une
+figure située au-dessus. « Dixième de niveau de vie » et « unité de consommation » sont désormais
+définis à leur **première** occurrence. Le faux parallèle entre l'écart D1→D10 des prélèvements et
+l'intervalle min-max des transferts reçus est levé. Titre de section passé au conditionnel
+(« la charge **peut** se répartir »), comme le corps et la figure. Texte alternatif de la figure par
+âge rendu exact (les prélèvements chutent **pour** les 65 ans ou plus, ils ne « diminuent » pas
+« après 65 ans »). **Section « Ce qu'il faut retenir » ajoutée**, sur le modèle du volet 1, à la même
+place dans l'ordre des sections.
+
+Contrôles : `check-all.py --ci` à 0 ; build Hugo sans erreur ni avertissement ; HTML produit relu —
+les cinq images portent les nouvelles dimensions lues dans leur `viewBox`, aucun shortcode non rendu.
+**Non contrôlé** : rendu aux cinq largeurs en navigateur (exclu par la politique de quota).
+Commentaire de `qp-tableau-redistribution.html` corrigé : il justifiait le tableau par un défaut de
+contraste de l'aqua, qui n'existe plus.
+
+### 2026-09-28 — Collectivités : « ne peuvent pas reporter sur la dette » corrigé
+
+Trouvé en rédigeant la fiche Ressources n° 3 : la règle d'or (CGCT art. L. 1612-4, relu sur Légifrance le 28/09)
+interdit l'emprunt pour le fonctionnement et le remboursement du capital, pas pour investir ; Eurostat montre un
+déficit local de 17,8 Md€ en 2024. Chapeau, paragraphe du « verrou » et sa phrase en gras corrigés ; la thèse
+subsiste pour le fonctionnement. La page n'a toujours ni chiffre ni figure : la fiche 3 en propose trois.
+
 ### 2026-09-28 — « Qui paie » : contre-expertise des figures arbitrée, corrections locales appliquées
 
 Arbitrage : `D:\PRO\.claude\external-audits\ARBITRATIONS\PRO-20260927-QUIPAIE-FIGURES_arbitrage.md` (option B).
