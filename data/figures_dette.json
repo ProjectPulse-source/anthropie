@@ -31,6 +31,14 @@
    "montre": "Le coût moyen du stock suit le taux à 10 ans avec des années de retard : il descend moins bas, et remonte moins vite.",
    "source": "Eurostat irt_lt_mcby_a (taux à 10 ans)  ·  taux apparent : Eurostat gov_10a_main et INSEE, 1996-2025",
    "precaution": "Le taux à 10 ans, repère du coût des emprunts nouveaux ; le taux apparent, coût de tout le stock, ne le suit qu'au fil des refinancements."
+  },
+  {
+   "id": "masses",
+   "fichier": "masses-comparees",
+   "titre": "La charge d'intérêts face aux grands budgets, 1995-2024",
+   "montre": "La charge d'intérêts est longtemps restée sous le poste « ordre et sécurité » ; elle est repassée au-dessus.",
+   "source": "Eurostat : intérêts versés (gov_10a_main, D41PAY) et dépenses des administrations par fonction (gov_10a_exp, COFOG), 1995-2024",
+   "precaution": "Masses comparées sur un millésime unique. Une comparaison de masses n'établit aucun transfert d'un budget vers un autre."
   }
  ],
  "en": [
@@ -65,6 +73,14 @@
    "montre": "The average cost of the stock follows the 10-year rate years behind: it falls less far, and climbs back more slowly.",
    "source": "Eurostat irt_lt_mcby_a (10-year yield)  ·  effective rate: Eurostat gov_10a_main and INSEE, 1996-2025",
    "precaution": "The 10-year yield benchmarks the cost of new borrowing; the effective rate, the cost of the whole stock, follows it only as old debt is refinanced."
+  },
+  {
+   "id": "masses",
+   "fichier": "masses-comparees-en",
+   "titre": "Interest paid against the main public budgets, 1995-2024",
+   "montre": "Interest paid long stayed below the public order and safety function; it has moved back above it.",
+   "source": "Eurostat: interest paid (gov_10a_main, D41PAY) and general government expenditure by function (gov_10a_exp, COFOG), 1995-2024",
+   "precaution": "Masses compared on a single vintage. Comparing masses establishes no transfer from one budget to another."
   }
  ],
  "licence": {

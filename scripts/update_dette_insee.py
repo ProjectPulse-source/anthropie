@@ -70,6 +70,8 @@ OUT_SVG_LONGUE_EN = REPO / "static" / "img" / "dette-longue-en.svg"
 OUT_FIGURES = REPO / "data" / "figures_dette.json"
 OUT_SVG_MARCHE = REPO / "static" / "img" / "taux-marche-apparent.svg"
 OUT_SVG_MARCHE_EN = REPO / "static" / "img" / "taux-marche-apparent-en.svg"
+OUT_SVG_MASSES = REPO / "static" / "img" / "masses-comparees.svg"
+OUT_SVG_MASSES_EN = REPO / "static" / "img" / "masses-comparees-en.svg"
 # Segment 1978-1995 que le flux ne couvre pas : comptes nationaux clos,
 # donc figes ici plutot que rapatries d'un .xlsx dont l'URL change a
 # chaque millesime. L'annee 1995 y est en DOUBLE avec la serie
@@ -432,6 +434,11 @@ LABELS_CARTOUCHE = {
                         "ans, puis remonte depuis 2021."),
         "montre_longue": ("La dette monte par paliers, chacun installé par une "
                           "crise ; dans la série observée, le ratio n\'est jamais revenu à son niveau de dix ans auparavant."),
+        "masses": ("Masses comparées sur un millésime unique. Une comparaison de "
+                   "masses n'établit aucun transfert d'un budget vers un autre."),
+        "titre_masses": "La charge d'intérêts face aux grands budgets, %s-%s",
+        "montre_masses": ("La charge d'intérêts est longtemps restée sous le poste "
+                          "« ordre et sécurité » ; elle est repassée au-dessus."),
         "marche": ("Le taux à 10 ans, repère du coût des emprunts nouveaux ; le "
                    "taux apparent, coût de tout le stock, ne le suit qu'au fil des "
                    "refinancements."),
@@ -462,6 +469,11 @@ LABELS_CARTOUCHE = {
                         "years, rising again since 2021."),
         "montre_longue": ("Debt climbs in steps, each set by a crisis; in the observed series, the ratio has "
                           "never returned to its level of ten years earlier."),
+        "masses": ("Masses compared on a single vintage. Comparing masses establishes "
+                   "no transfer from one budget to another."),
+        "titre_masses": "Interest paid against the main public budgets, %s-%s",
+        "montre_masses": ("Interest paid long stayed below the public order and safety "
+                          "function; it has moved back above it."),
         "marche": ("The 10-year yield benchmarks the cost of new borrowing; the effective "
                    "rate, the cost of the whole stock, follows it only as old debt is "
                    "refinanced."),
@@ -552,6 +564,38 @@ NBSP = " "  # U+00A0 pose par code, jamais tape
 # calcul, deux presentations. Une figure aux axes francais sur une page anglaise
 # est un DEFAUT, pas une inelegance -- c'est exactement ce que l'edition
 # ANTHROPY a deja paye une fois (du francais imprime dans le livre anglais).
+LABELS_MASSES = {
+    "fr": {
+        "titre": "La charge d'intérêts face aux grands budgets publics, %s-%s",
+        "panneau": "Milliards d'euros courants — intérêts versés et dépenses "
+                   "publiques par fonction",
+        "series": {"interets": "Charge d'intérêts", "GF07": "Santé",
+                   "GF09": "Enseignement", "GF03": "Ordre et sécurité"},
+        "desc": "Quatre courbes en milliards d'euros courants, de %s à %s. La santé et "
+                "l'enseignement progressent régulièrement et restent les plus élevés. La charge "
+                "d'intérêts baisse jusqu'au début des années 2020, puis remonte et repasse "
+                "au-dessus du poste « ordre et sécurité ».",
+        "src": "Eurostat : intérêts versés (gov_10a_main, D41PAY) et dépenses des "
+               "administrations par fonction (gov_10a_exp, COFOG), %s-%s",
+        "note": "Masses comparées sur un millésime unique. Une comparaison de masses "
+                "n'établit aucun transfert d'un budget vers un autre.",
+    },
+    "en": {
+        "titre": "Interest paid against the main public budgets, %s-%s",
+        "panneau": "Billion euros, current prices — interest paid and general government "
+                   "expenditure by function",
+        "series": {"interets": "Interest paid", "GF07": "Health",
+                   "GF09": "Education", "GF03": "Public order and safety"},
+        "desc": "Four curves in billion euros, from %s to %s. Health and education rise "
+                "steadily and stay the highest. Interest paid falls until the early 2020s, then "
+                "climbs back above the public order and safety function.",
+        "src": "Eurostat: interest paid (gov_10a_main, D41PAY) and general government "
+               "expenditure by function (gov_10a_exp, COFOG), %s-%s",
+        "note": "Masses compared on a single vintage. Comparing masses establishes no transfer "
+                "from one budget to another.",
+    },
+}
+
 LABELS_CISEAU = {
     "fr": {
         "titre": "Le ciseau de la dette publique française : encours et "
@@ -930,6 +974,79 @@ def build_svg_marche(apparent: dict, marche: dict, lang: str = "fr") -> str:
     return "\n".join(e) + "\n"
 
 
+def build_svg_masses(interets: dict, cofog: dict, lang: str = "fr") -> str:
+    """Charge d'interets et grands budgets, en Md€ courants, millesime commun.
+
+    Serie heroine en orange et epaisse, budgets en gris de valeurs differentes :
+    la hierarchie tient sans la couleur (test du noir et blanc), et la regle des
+    trois couleurs fonctionnelles est respectee.
+    """
+    L = LABELS_MASSES[lang]
+    num = fr if lang == "fr" else en
+    W, H = 720, 380
+    ml, mr, mt, mb = 52, 168, 46, 34      # mr : place des etiquettes directes
+    fonctions = ("GF07", "GF09", "GF03")
+    ans = sorted(set(interets) & set.intersection(*[set(cofog[c]) for c in fonctions]))
+    if len(ans) < 10:
+        fail("masses comparees : millesimes communs insuffisants (%d)" % len(ans))
+    a0, a1 = int(ans[0]), int(ans[-1])
+    vmax = max(max(cofog[c][a] for a in ans) for c in fonctions) * 1.08
+
+    def X(a):
+        return ml + (int(a) - a0) / (a1 - a0) * (W - ml - mr)
+
+    def Y(v):
+        return H - mb - v / vmax * (H - mt - mb)
+
+    e = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" role="img" '
+         'aria-labelledby="ma-t ma-d" font-family="%s">' % (W, H + CARTOUCHE_H, FONT),
+         '<title id="ma-t">%s</title>' % _esc(L["titre"] % (a0, a1)),
+         '<desc id="ma-d">%s</desc>' % _esc(L["desc"] % (a0, a1)),
+         '<text x="0" y="22" font-size="%d" fill="%s">%s</text>'
+         % (TY_TITRE, INK2, _esc(L["panneau"]))]
+    pas = 50 if vmax < 320 else 100
+    g = 0
+    while g <= vmax:
+        e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1"/>'
+                 % (ml, Y(g), W - mr, Y(g), AXIS if g == 0 else GRID))
+        e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s" text-anchor="end">%d</text>'
+                 % (ml - 7, Y(g) + 4, TY_AXE, MUTED, g))
+        g += pas
+    for a in range(a0, a1 + 1):
+        if a % 10 == 0 or a == a1:
+            e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s" text-anchor="middle">%d</text>'
+                     % (X(a), H - mb + 18, TY_AXE, MUTED, a))
+    # contexte d'abord, serie heroine ensuite : l'ordre de dessin est la hierarchie
+    gris = {"GF07": INK2, "GF09": MUTED, "GF03": AXIS}
+    bouts = []
+    for c in fonctions:
+        pts = [(X(a), Y(cofog[c][a])) for a in ans]
+        e.append('<path d="%s" fill="none" stroke="%s" stroke-width="1.6" '
+                 'stroke-linejoin="round"/>' % (_line_path(pts), gris[c]))
+        bouts.append((pts[-1][1], gris[c], L["series"][c], cofog[c][ans[-1]], False))
+    pts = [(X(a), Y(interets[a])) for a in ans]
+    e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.8" '
+             'stroke-linecap="round" stroke-linejoin="round"/>' % (_line_path(pts), COL_INTER))
+    e.append('<circle cx="%.1f" cy="%.1f" r="4.5" fill="%s"/>' % (pts[-1][0], pts[-1][1], COL_INTER))
+    bouts.append((pts[-1][1], COL_INTER, L["series"]["interets"], interets[ans[-1]], True))
+    # Etiquetage DIRECT a droite, sans legende ; ecart minimum garanti, sinon
+    # deux budgets proches se superposent (« ordre et securite » et les interets
+    # se croisent justement a la fin de la serie).
+    bouts.sort()
+    ecart = 17.0
+    for i in range(1, len(bouts)):
+        if bouts[i][0] - bouts[i - 1][0] < ecart:
+            bouts[i] = (bouts[i - 1][0] + ecart,) + bouts[i][1:]
+    for y, col, nom, val, fort in bouts:
+        e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s">'
+                 '<tspan font-weight="%d">%s</tspan> %s</text>'
+                 % (W - mr + 12, y + 4, TY_ANNOT if fort else TY_MINEUR, col,
+                    700 if fort else 600, _esc(nom), num(val, 0)))
+    e += cartouche(W, H + 4, L["src"] % (a0, a1), "masses", lang)
+    e.append("</svg>")
+    return "\n".join(e) + "\n"
+
+
 def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
                      seuils: dict, lang: str = "fr") -> str:
     """Dette en % du PIB, de la premiere annee du segment fige a aujourd'hui.
@@ -1112,7 +1229,8 @@ def atomic_write(path: Path, text: str) -> None:
     os.replace(tmp, path)
 
 
-def meta_figures(lastq: str, last_y: str, taux: dict, annuel: dict) -> dict:
+def meta_figures(lastq: str, last_y: str, taux: dict, annuel: dict,
+                 masses: tuple[int, int]) -> dict:
     """Donnees des cartes « Reutiliser » : meme texte que les cartouches.
 
     Source UNIQUE de la precaution de lecture : elle est ecrite une fois, dans
@@ -1121,6 +1239,7 @@ def meta_figures(lastq: str, last_y: str, taux: dict, annuel: dict) -> dict:
     """
     t0, t1 = min(taux), max(taux)
     a0 = min(annuel)
+    m0, m1 = masses
     out = {}
     for lang, quarter in (("fr", fr_quarter), ("en", en_quarter)):
         C = LABELS_CARTOUCHE[lang]
@@ -1140,6 +1259,9 @@ def meta_figures(lastq: str, last_y: str, taux: dict, annuel: dict) -> dict:
             {"id": "marche", "fichier": "taux-marche-apparent" + suf,
              "titre": C["titre_marche"] % (t0, t1), "montre": C["montre_marche"],
              "source": C["src_marche"] % (t0, t1), "precaution": C["marche"]},
+            {"id": "masses", "fichier": "masses-comparees" + suf,
+             "titre": C["titre_masses"] % (m0, m1), "montre": C["montre_masses"],
+             "source": LABELS_MASSES[lang]["src"] % (m0, m1), "precaution": C["masses"]},
         ]
     out["licence"] = {"fr": LABELS_CARTOUCHE["fr"]["licence"],
                       "en": LABELS_CARTOUCHE["en"]["licence"]}
@@ -1542,9 +1664,17 @@ def main() -> int:
     # rien. Le depot disait alors une chose et la figure une autre, sans
     # erreur ni trace. Construire d'abord, ecrire ensuite : un echec laisse
     # l'ensemble dans son etat precedent, coherent.
+    # Millesime commun des masses comparees : les series par fonction s'arretent
+    # avant les interets, et une comparaison ne melange pas deux annees.
+    cofog_md = {c: {int(a): v / 1000.0 for a, v in cofog_mio[c].items()}
+                for c in ("GF0303", "GF03", "GF07", "GF09")}
+    inter_md = {int(a): v for a, v in d41_mdeur.items()}
+    ans_masses = sorted(set(inter_md) & set(cofog_md["GF07"]) & set(cofog_md["GF09"])
+                        & set(cofog_md["GF03"]))
     sorties = [
         (OUT_FIGURES, json.dumps(meta_figures(
-            lastq, last_y, taux_apparent, annuel),
+            lastq, last_y, taux_apparent, annuel,
+            (ans_masses[0], ans_masses[-1])),
             ensure_ascii=False, indent=1) + "\n"),
         (OUT_JSON, txt),
         (OUT_ENDPOINT, txt),
@@ -1557,6 +1687,8 @@ def main() -> int:
         (OUT_SVG_LONGUE_EN, build_svg_longue(
             annuel, dette_pib[lastq], en_quarter(lastq), hist["seuils"],
             lang="en")),
+        (OUT_SVG_MASSES, build_svg_masses(inter_md, cofog_md)),
+        (OUT_SVG_MASSES_EN, build_svg_masses(inter_md, cofog_md, lang="en")),
     ]
     if taux_marche:
         sorties += [
