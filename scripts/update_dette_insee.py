@@ -1207,6 +1207,16 @@ def main() -> int:
         return 1
     int_sur_recettes = round(d41_mdeur[tr_last] / tr_mdeur[tr_last] * 100.0, 1)
     in_band("interets/recettes " + tr_last, int_sur_recettes, 1.0, 15.0)
+    # MEME MILLESIME pour tous les termes d'une comparaison (arbitrage du 28/09) : la
+    # section des masses comparees porte equiv_y en titre ; son ratio aux recettes doit
+    # donc etre calcule sur equiv_y, et non sur la derniere annee disponible. Les deux
+    # ratios coexistent : le recent en tete de page, celui du millesime commun dans la
+    # comparaison. Absence de recettes sur equiv_y = echec, pas de repli silencieux.
+    if equiv_y not in tr_mdeur or equiv_y not in d41_mdeur:
+        print("ECHEC: recettes ou interets manquants pour le millesime commun %s." % equiv_y)
+        return 1
+    int_sur_recettes_equiv = round(d41_mdeur[equiv_y] / tr_mdeur[equiv_y] * 100.0, 1)
+    in_band("interets/recettes " + equiv_y, int_sur_recettes_equiv, 1.0, 15.0)
     if FAILURES:
         print("ECHEC: %d garde(s) sur les derives -- AUCUNE ecriture." % len(FAILURES))
         return 1
@@ -1264,6 +1274,8 @@ def main() -> int:
             "interets_sur_recettes_pct": nb(int_sur_recettes),
             "equiv_annee": equiv_y,
             "interets_equiv_mdeur": nb(int_equiv),
+            "recettes_equiv_mdeur": nb(tr_mdeur[equiv_y]),
+            "interets_sur_recettes_equiv_pct": nb(int_sur_recettes_equiv),
             "justice_mdeur": nb(cof24["GF0303"]),
             "ordre_mdeur": nb(cof24["GF03"]),
             "sante_mdeur": nb(cof24["GF07"]),

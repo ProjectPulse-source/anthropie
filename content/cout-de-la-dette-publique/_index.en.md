@@ -83,7 +83,7 @@ One point often overlooked in public debate: over the INSEE series available sin
 
 ## What {{< dette-val "interets_equiv_mdeur" >}} billion euros in interest represented in {{< dette-val "equiv_annee" >}}
 
-The clearest measure of the burden on public finances: in {{< dette-val "recettes_annee" >}}, interest paid amounted to **{{< dette-val "interets_sur_recettes_pct" >}}% of all public revenue** ({{< dette-val "recettes_mdeur" >}} billion euros of revenue, Eurostat). For comparison, using {{< dette-val "equiv_annee" >}} — the most recent year for which comparable Eurostat expenditure-by-function data are available:
+Everything below uses **the same year**, {{< dette-val "equiv_annee" >}} — the most recent one for which every series exists, expenditure by function being published with almost a two-year lag. That year, interest paid ({{< dette-val "interets_equiv_mdeur" >}} billion euros) amounted to **{{< dette-val "interets_sur_recettes_equiv_pct" >}}% of all public revenue** ({{< dette-val "recettes_equiv_mdeur" >}} billion, Eurostat). Compared with other masses, on that same year:
 
 - **Law courts: {{< dette-val "justice_mdeur" >}} billion euros** — in the sense of the European COFOG classification (item GF0303), not the total budget of the French Justice ministry — the interest burden is about **{{< dette-val "ratio_interets_justice" >}} times** that amount;
 - **Public order and safety, the whole item (GF03): {{< dette-val "ordre_mdeur" >}} billion euros** — interest exceeds the entire category;

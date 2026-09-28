@@ -1,16 +1,44 @@
-{{- /* dossier-dette.html — bandeau commun des deux volets du dossier dette publique.
+{{- /* dossier-dette.html — barre d'onglets du dossier dette publique.
 
        {{< dossier-dette volet="1" >}}   « Combien coûte » (FR et EN)
        {{< dossier-dette volet="2" >}}   « Qui paie » (FR seulement)
 
        Deux pages autonomes, une identité commune, une fonction explicite pour
-       chacune : données et méthode / répartition, mécanismes et limites.
-       Arbitrage PRO-20260921-DIPTYQUE, P1. Le volet 2 n'existe qu'en français
-       (P8) : sur une page anglaise, le lien le dit au lieu de laisser croire à
-       une traduction. Échoue bruyamment sur un volet inconnu. */ -}}
+       chacune (arbitrage PRO-20260921-DIPTYQUE, P1). Le volet 2 n'existe qu'en
+       français (P8) : sur une page anglaise, le lien le dit au lieu de laisser
+       croire à une traduction.
+
+       ONGLETS ET MAINTIEN AU DÉFILEMENT (auteur, 28/09) : la barre reste visible
+       pendant la lecture, SOUS l'en-tête du site, qui est déjà collant — d'où le
+       décalage `--dossier-top` du SCSS. Un lecteur qui arrive au milieu d'une
+       page longue voit ainsi dans quel volet il se trouve et atteint l'autre
+       sans remonter.
+
+       DATE DE MISE À JOUR, en rouge (auteur, 28/09) : elle ne dit pas la même
+       chose selon le volet, donc elle ne porte pas le même libellé.
+       - volet 1 : le TRIMESTRE DES DONNÉES, lu dans data/dette_officielle.json,
+         donc actualisé par la chaîne hebdomadaire — jamais saisi à la main ;
+       - volet 2 : le trimestre de la dernière mise à jour ÉDITORIALE de la page,
+         déduit de `lastmod`. Confondre les deux ferait passer une relecture de
+         texte pour une donnée neuve.
+
+       Échoue bruyamment sur un volet inconnu. */ -}}
 {{- $v := .Get "volet" -}}
 {{- if not (in (slice "1" "2") $v) -}}{{ errorf "dossier-dette: volet \"%s\" inconnu (attendu 1 ou 2) dans %s" $v .Page.File.Path }}{{- end -}}
 {{- $en := eq .Page.Lang "en" -}}
+{{- $trim := index (slice "" "T1" "T1" "T1" "T2" "T2" "T2" "T3" "T3" "T3" "T4" "T4" "T4") (int (.Page.Lastmod.Format "1")) -}}
+{{- $maj := "" -}}
+{{- $majTitre := "" -}}
+{{- if eq $v "1" -}}
+  {{- with site.Data.dette_officielle -}}
+    {{- $p := index (cond $en .affichage_en .affichage) "dette_periode" -}}
+    {{- $maj = printf "%s %s" (cond $en "Data" "MAJ") $p -}}
+    {{- $majTitre = cond $en "Latest quarter published by INSEE in this page's figures" "Dernier trimestre publié par l'INSEE dans les chiffres de cette page" -}}
+  {{- end -}}
+{{- else -}}
+  {{- $maj = printf "MAJ %s %d" $trim .Page.Lastmod.Year -}}
+  {{- $majTitre = "Dernière mise à jour éditoriale de la page" -}}
+{{- end -}}
 {{- $items := slice
     (dict "n" "1" "url" (cond $en "/en/cost-of-french-public-debt/" "/cout-de-la-dette-publique/")
           "titre" (cond $en "What it costs" "Combien coûte")
@@ -20,14 +48,23 @@
           "role" (cond $en "distribution, mechanisms and limits" "répartition, mécanismes et limites")
           "note" (cond $en "in French" "")) -}}
 <nav class="dossier-dette" aria-label="{{ if $en }}Public debt file{{ else }}Dossier dette publique{{ end }}">
-  <span class="dossier-dette__titre">{{ if $en }}Public debt file{{ else }}Dossier dette publique{{ end }}</span>
-  <ol class="dossier-dette__volets">
-    {{- range $items }}
-    {{- if eq .n $v }}
-    <li class="dossier-dette__volet is-actif" aria-current="page"><b>{{ .n }}. {{ .titre }}</b><span>{{ .role }}</span></li>
-    {{- else }}
-    <li class="dossier-dette__volet"><a href="{{ .url }}"{{ with .note }} hreflang="fr"{{ end }}><b>{{ .n }}. {{ .titre }}</b>{{ with .note }} <em>({{ . }})</em>{{ end }}</a><span>{{ .role }}</span></li>
+  <div class="dossier-dette__barre">
+    <span class="dossier-dette__titre">{{ if $en }}Public debt file{{ else }}Dossier dette publique{{ end }}</span>
+    <ol class="dossier-dette__volets">
+      {{- range $items }}
+      {{- if eq .n $v }}
+      <li class="dossier-dette__volet is-actif" aria-current="page">
+        <span class="dossier-dette__onglet"><b>{{ .n }}. {{ .titre }}</b><span class="dossier-dette__role">{{ .role }}</span></span>
+      </li>
+      {{- else }}
+      <li class="dossier-dette__volet">
+        <a class="dossier-dette__onglet" href="{{ .url }}"{{ with .note }} hreflang="fr"{{ end }}><b>{{ .n }}. {{ .titre }}</b>{{ with .note }} <em>({{ . }})</em>{{ end }}<span class="dossier-dette__role">{{ .role }}</span></a>
+      </li>
+      {{- end }}
+      {{- end }}
+    </ol>
+    {{- with $maj }}
+    <span class="dossier-dette__maj" title="{{ $majTitre }}">{{ . }}</span>
     {{- end }}
-    {{- end }}
-  </ol>
+  </div>
 </nav>

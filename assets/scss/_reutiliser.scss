@@ -183,49 +183,106 @@
   }
 }
 
-// Bandeau commun du dossier dette publique (shortcode dossier-dette) : deux
-// volets, le courant marqué, la fonction de chacun lisible sans cliquer.
+// Barre d'onglets du dossier dette publique (shortcode dossier-dette).
+// Elle reste visible au défilement, SOUS l'en-tête du site qui est déjà collant
+// (.site-header : position sticky, top 0, z-index 100) : d'où le décalage
+// --dossier-top et un z-index inférieur. Sur une page longue, le lecteur arrivé
+// au milieu voit dans quel volet il est et atteint l'autre sans remonter.
 .dossier-dette {
-  margin: 0 0 1.5rem;
-  padding: 0.7rem 0.9rem;
-  border-left: 3px solid var(--color-accent-rule);
-  background: var(--color-accent-faint);
+  --dossier-top: 66px;
+  position: sticky;
+  top: var(--dossier-top);
+  z-index: 60;
+  margin: 0 0 1.6rem;
+  // repli d'abord : un navigateur sans color-mix garde un fond opaque plutot
+  // qu'une barre transparente posee sur le texte.
+  background: var(--color-bg);
+  background: color-mix(in srgb, var(--color-bg) 94%, transparent);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--color-accent-rule);
   font-family: var(--font-sans);
-  font-size: 0.88rem;
-  line-height: 1.45;
+}
+.dossier-dette__barre {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 0.3rem 1rem;
+  padding-top: 0.3rem;
 }
 .dossier-dette__titre {
-  display: block;
-  margin-bottom: 0.35rem;
+  flex: 1 0 100%;
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.04em;
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--color-text-subtle);
 }
 .dossier-dette__volets {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem 1.6rem;
+  flex: 1 1 auto;
+  gap: 0.25rem;
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.dossier-dette__volet {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
+.dossier-dette__volet { margin: 0; }
+.dossier-dette__onglet {
+  display: block;
+  padding: 0.35rem 0.85rem 0.4rem;
+  border: 1px solid transparent;
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  color: var(--color-accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+  line-height: 1.25;
 
   b { font-weight: 600; }
-  span { font-size: 0.8rem; color: var(--color-text-subtle); }
-  a { color: var(--color-accent); text-decoration: none; }
-  a:hover b { text-decoration: underline; }
-  a:focus-visible { outline: 2px solid var(--color-pivot); outline-offset: 2px; }
-  &.is-actif b { color: var(--color-text); }
+  em { font-style: normal; font-size: 0.78rem; color: var(--color-text-subtle); }
+}
+a.dossier-dette__onglet:hover { background: var(--color-accent-faint); }
+a.dossier-dette__onglet:focus-visible { outline: 2px solid var(--color-pivot); outline-offset: 2px; }
+.dossier-dette__volet.is-actif .dossier-dette__onglet {
+  background: var(--color-bg-elevated);
+  border-color: var(--color-accent-rule);
+  color: var(--color-text);
+  // le trait plein de l'onglet actif mord sur la bordure de la barre : c'est ce
+  // qui fait lire « onglet » plutôt que « bouton ».
+  box-shadow: 0 1px 0 0 var(--color-bg-elevated);
+}
+.dossier-dette__role {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--color-text-subtle);
+}
+// Date de mise à jour : rouge, discrète mais immanquable ; son libellé diffère
+// selon le volet (donnée publiée / mise à jour éditoriale), voir le shortcode.
+.dossier-dette__maj {
+  align-self: center;
+  margin-left: auto;
+  padding-bottom: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #C0392B;
+  white-space: nowrap;
 }
 
-// Vue en tableau d'une figure (qp-tableau-redistribution) : repliée par défaut,
-// les valeurs exactes pour qui ne lit pas la couleur.
+@media (max-width: 640px) {
+  .dossier-dette {
+    --dossier-top: 54px;
+    font-size: 0.95em;
+  }
+  .dossier-dette__role { display: none; }
+  .dossier-dette__titre { flex-basis: auto; }
+}
+
+// Deux barres collantes se superposent à une ancre : les cibles internes gagnent
+// la marge correspondante, sinon le titre visé se cache derrière elles.
+.reutiliser, .reutiliser__carte { scroll-margin-top: 7.5rem; }
+
 .qp-tableau {
   margin: 0 0 1.4rem;
   font-family: var(--font-sans);

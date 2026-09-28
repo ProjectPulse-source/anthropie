@@ -78,7 +78,7 @@ Une précision que le débat public oublie souvent&nbsp;: sur la série INSEE di
 
 ## Ce que représentaient {{< dette-val "interets_equiv_mdeur" >}}&nbsp;milliards d'intérêts en {{< dette-val "equiv_annee" >}}
 
-La mesure la plus parlante de la capacité d'absorption budgétaire&nbsp;: en {{< dette-val "recettes_annee" >}}, les intérêts versés ont représenté **{{< dette-val "interets_sur_recettes_pct" >}}&nbsp;% de l'ensemble des recettes publiques** ({{< dette-val "recettes_mdeur" >}}&nbsp;Md€ de recettes, Eurostat). Puis, à masses comparées sur le même millésime {{< dette-val "equiv_annee" >}} (dernières données Eurostat comparables, dépenses des administrations publiques par fonction)&nbsp;:
+Tout ce qui suit porte sur **le même millésime**, {{< dette-val "equiv_annee" >}}&nbsp;— la dernière année où toutes les séries existent, la ventilation par fonction paraissant avec près de deux ans de retard. Cette année-là, les intérêts versés ({{< dette-val "interets_equiv_mdeur" >}}&nbsp;Md€) ont représenté **{{< dette-val "interets_sur_recettes_equiv_pct" >}}&nbsp;% de l'ensemble des recettes publiques** ({{< dette-val "recettes_equiv_mdeur" >}}&nbsp;Md€, Eurostat). À masses comparées, sur ce millésime&nbsp;:
 
 - **Justice (tribunaux)&nbsp;: {{< dette-val "justice_mdeur" >}}&nbsp;Md€** — au sens de la classification fonctionnelle européenne COFOG (poste GF0303, tribunaux), et non du budget total de la mission Justice — la charge d'intérêts en représente environ **{{< dette-val "ratio_interets_justice" >}}&nbsp;fois** le montant&nbsp;;
 - **Ordre et sécurité publics, poste entier (GF03)&nbsp;: {{< dette-val "ordre_mdeur" >}}&nbsp;Md€** — les intérêts dépassent le poste complet&nbsp;;
@@ -100,6 +100,10 @@ Ces données n'attribuent pas cet écart à la dette&nbsp;; ce qu'elles établis
 Pendant environ vingt-cinq ans, la facture n'a pas suivi la dette&nbsp;: la baisse du coût moyen du stock a compensé la hausse de l'encours. Son retournement accroît désormais la contrainte budgétaire.
 
 Les {{< dette-val "interets_mdeur" >}}&nbsp;milliards d'intérêts versés en {{< dette-val "interets_annee" >}} ne se retranchent d'aucun budget en particulier&nbsp;: ils réduisent la marge de tous, chaque année, avant le moindre arbitrage. C'est pourquoi la comparaison avec le budget de la justice éclaire l'ordre de grandeur sans désigner de victime.
+
+Une conséquence mérite d'être vue d'avance&nbsp;: **stabiliser l'encours ne stabiliserait pas la facture**. Le coût moyen du stock suit les taux de marché avec des années de retard, à mesure que la dette ancienne, peu coûteuse, se refinance aux conditions nouvelles&nbsp;; tant que ce rattrapage court, la charge peut monter alors même que le ratio de dette cesse de croître. Ce que cette page ne fait pas encore&nbsp;: chiffrer cette trajectoire. Les prévisions publiques existent — loi de finances, Commission européenne — et elles divergent&nbsp;; elles n'entreront ici qu'après lecture à la source, en pointillés et sous le nom de leur émetteur, jamais au même rang que les observations.
+
+Une règle gouverne enfin toutes les comparaisons de cette page&nbsp;: **le millésime commun le plus récent, le même pour tous les termes**. La ventilation des dépenses par fonction paraissant avec près de deux ans de retard, les masses comparées portent sur {{< dette-val "equiv_annee" >}}, quand la charge d'intérêts la plus récente porte sur {{< dette-val "interets_annee" >}}. Les deux années sont dites, jamais mélangées.
 
 Reste une question que ces chiffres ne tranchent pas&nbsp;: qui supporte in fine cette charge, et une partie de son coût est-elle déplacée vers d'autres&nbsp;? C'est l'objet de la page suivante.
 
