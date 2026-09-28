@@ -562,10 +562,13 @@ def cartouche(w: int, y0: float, source: str, note_cle: str,
 # Bandes de crise, trait epais, valeur en pastille (choix de l'auteur, 28/09,
 # sur maquettes). Le fond situe les ruptures sans que le lecteur les cherche
 # dans le texte ; la pastille fait voyager la valeur cle avec l'image.
-CRISES = ((1979.0, 1982.0, "post-choc pétrolier", "post-oil-shock"),
-          (1993.0, 1994.0, "récession", "recession"),
-          (2008.0, 2010.0, "crise financière", "financial crisis"),
-          (2020.0, 2021.0, "crise sanitaire", "pandemic"))
+# (debut, fin, libelle fr, libelle en, PERIODE AFFICHEE) : la periode ne se
+# deduit pas des bornes de la bande -- la bande de 1993 deborde sur 1994 pour
+# rester visible, mais la recession, elle, est de 1993.
+CRISES = ((1979.0, 1982.0, "post-choc pétrolier", "post-oil-shock", "1979-1982"),
+          (1993.0, 1994.0, "récession", "recession", "1993"),
+          (2008.0, 2010.0, "crise financière", "financial crisis", "2008-2009"),
+          (2020.0, 2021.0, "crise sanitaire", "pandemic", "2020-2021"))
 BANDE = "#eb6834"
 # Orange ATTENUE des seuils anciens : l'orange sature est reserve au point
 # contemporain et a la serie des interets (28/09). Sinon l'oeil rebondit sur cinq
@@ -578,7 +581,7 @@ def bandes_crise(X, y_haut, y_bas, lang, x_min=None, x_max=None, libelles=True,
                  bas=False):
     """Bandes derriere la courbe : a emettre AVANT la serie, c'est un fond."""
     out = []
-    for a1, a2, lib_fr, lib_en in CRISES:
+    for a1, a2, lib_fr, lib_en, _per in CRISES:
         if x_min is not None and a2 < x_min:
             continue
         if x_max is not None and a1 > x_max:
@@ -1359,13 +1362,10 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
 
     # LEGENDE des bandes, sous l'axe : une figure reprise seule doit dire ce que
     # ses zones grisees signifient. Ordre chronologique, gris, une seule ligne.
-    lg = [(a1b, a2b, (lf if lang == "fr" else le))
-          for a1b, a2b, lf, le in CRISES if a2b >= x0 and a1b <= x1]
+    lg = [(per, (lf if lang == "fr" else le))
+          for a1b, a2b, lf, le, per in CRISES if a2b >= x0 and a1b <= x1]
     if lg:
-        bouts = []
-        for a1b, a2b, lib in lg:
-            an = "%d" % int(a1b) if int(a2b) - int(a1b) <= 1 else "%d-%d" % (int(a1b), int(a2b))
-            bouts.append("%s %s" % (an, lib))
+        bouts = ["%s %s" % (per, lib) for per, lib in lg]
         e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="%d" fill="%s">%s</text>'
                  % (ml, h - 6, FONT, TY_MINEUR - 1, MUTED, _esc("  ·  ".join(bouts))))
 
