@@ -87,7 +87,7 @@ Tout ce qui suit porte sur **le même millésime**, {{< dette-val "equiv_annee" 
 
 - **Justice (tribunaux)&nbsp;: {{< dette-val "justice_mdeur" >}}&nbsp;Md€** — au sens de la classification fonctionnelle européenne COFOG (poste GF0303, tribunaux), et non du budget total de la mission Justice — la charge d'intérêts en représente environ **{{< dette-val "ratio_interets_justice" >}}&nbsp;fois** le montant&nbsp;;
 - **Ordre et sécurité publics, poste entier (GF03)&nbsp;: {{< dette-val "ordre_mdeur" >}}&nbsp;Md€** — les intérêts dépassent le poste complet&nbsp;;
-- **Enseignement (GF09)&nbsp;: {{< dette-val "education_mdeur" >}}&nbsp;Md€** — les intérêts en représentent environ {{< dette-val "pct_interets_education" >}}&nbsp;%&nbsp;;
+- **Enseignement (GF09)&nbsp;: {{< dette-val "education_mdeur" >}}&nbsp;Md€** — toute la dépense publique d'enseignement, toutes administrations et tous niveaux confondus, et non la seule mission «&nbsp;Enseignement scolaire&nbsp;» du budget de l'État, environ deux fois et demie plus petite — les intérêts en représentent environ {{< dette-val "pct_interets_education" >}}&nbsp;%&nbsp;;
 - **Santé (GF07)&nbsp;: {{< dette-val "sante_mdeur" >}}&nbsp;Md€** — les intérêts en représentent environ {{< dette-val "pct_interets_sante" >}}&nbsp;%.
 
 {{< figure-svg fichier="masses-comparees" alt="Quatre courbes en milliards d'euros courants, de 1995 à 2024 : la santé et l'enseignement montent régulièrement et restent les plus élevés ; la charge d'intérêts, longtemps stable puis en baisse, remonte après 2020 et repasse au-dessus du poste « ordre et sécurité »." >}}Eurostat, intérêts versés et dépenses des administrations par fonction. Toutes les séries s'arrêtent au même millésime.{{< /figure-svg >}}

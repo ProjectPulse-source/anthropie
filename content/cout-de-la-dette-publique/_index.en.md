@@ -92,7 +92,7 @@ Everything below uses **the same year**, {{< dette-val "equiv_annee" >}} — the
 
 - **Law courts: {{< dette-val "justice_mdeur" >}} billion euros** — in the sense of the European COFOG classification (item GF0303), not the total budget of the French Justice ministry — the interest burden is about **{{< dette-val "ratio_interets_justice" >}} times** that amount;
 - **Public order and safety, the whole item (GF03): {{< dette-val "ordre_mdeur" >}} billion euros** — interest exceeds the entire category;
-- **Education (GF09): {{< dette-val "education_mdeur" >}} billion euros** — interest represents about {{< dette-val "pct_interets_education" >}}% of it;
+- **Education (GF09): {{< dette-val "education_mdeur" >}} billion euros** — all public spending on education, every level of government included, not the single "school education" mission of the State budget, which is about two and a half times smaller — interest represents about {{< dette-val "pct_interets_education" >}}% of it;
 - **Health (GF07): {{< dette-val "sante_mdeur" >}} billion euros** — interest represents about {{< dette-val "pct_interets_sante" >}}%.
 
 {{< figure-svg fichier="masses-comparees-en" alt="Four curves in billion euros, from 1995 to 2024: health and education rise steadily and stay the highest; interest paid, long flat then falling, climbs after 2020 and moves back above the public order and safety function." >}}Eurostat, interest paid and general government expenditure by function. Every series stops at the same vintage.{{< /figure-svg >}}
