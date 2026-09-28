@@ -44,6 +44,11 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 Pour lire ces chiffres sans être spécialiste, la chaîne tient en quatre maillons&nbsp;: l'État refinance en permanence les titres qui arrivent à échéance, si bien qu'emprunter beaucoup ne fait pas grossir le **stock** par soi-même — le montant des émissions brutes ne mesure donc pas l'augmentation de la dette. Ce qui la fait grossir, c'est le **déficit**, ce qu'il emprunte net, augmenté des ajustements entre flux et stock. Ce stock a un **prix moyen** — le taux auquel il a été emprunté au fil du temps. Ce prix se paie chaque année&nbsp;: ce sont les **intérêts**, une obligation déjà contractée — on ne la met pas en balance comme une dépense nouvelle, et elle réduit d'autant la marge des arbitrages. Et quand les taux de marché remontent, le prix moyen suit avec retard — la facture annuelle grossit, et la question cesse d'être «&nbsp;combien&nbsp;» pour devenir «&nbsp;**qui la paiera**&nbsp;».
 
+{{< figure-svg fichier="charge-interets-mdeur" alt="Une courbe en milliards d'euros courants, de 1995 à 2025 : la charge d'intérêts oscille autour de 45 à 55 milliards, descend jusqu'à un creux de 29,7 milliards en 2020, puis remonte fortement jusqu'à 66,6 milliards." >}}Eurostat, intérêts versés par les administrations publiques. En euros courants, non corrigés de l'inflation.{{< /figure-svg >}}
+{{< fig-actions id="charge" >}}
+
+**La même charge, en euros.** Le pourcentage du PIB dit si la dette est soutenable&nbsp;; le milliard dit ce qu'elle coûte. En euros courants, la facture est passée d'un creux de {{< dette-val "interets_creux_mdeur" >}}&nbsp;milliards en {{< dette-val "interets_creux_annee" >}} à {{< dette-val "interets_mdeur" >}}&nbsp;milliards en {{< dette-val "interets_annee" >}}. Ces euros ne sont pas corrigés de l'inflation&nbsp;: une partie de la hausse est celle des prix, et c'est pourquoi la page raisonne ailleurs en part de PIB.
+
 ## Le ciseau&nbsp;: vingt-cinq ans de compensation, puis le retournement
 
 <figure class="figure-ciseau">

@@ -49,6 +49,11 @@ The stock itself stands at **{{< dette-val "dette_mdeur" >}} billion euros** in 
 
 The chain has four links. A state continuously refinances maturing securities, so borrowing heavily does not by itself make the **stock** grow — gross issuance is therefore not a measure of how much the debt has increased. What makes it grow is the **deficit** — that is, net government borrowing — plus stock-flow adjustments. That stock carries an **average financing cost**. Each year, that cost gives rise to **interest** payments: an obligation already contracted, rather than a new discretionary spending choice, and one that reduces the room left for other choices. And when market rates climb, that average cost follows with a lag — the annual bill swells, and the question stops being *how much* and becomes **who will pay it**.
 
+{{< figure-svg fichier="charge-interets-mdeur-en" alt="One curve in billion euros, from 1995 to 2025: interest paid hovers around 45 to 55 billion, falls to a trough of 29.7 billion in 2020, then climbs steeply to 66.6 billion." >}}Eurostat, interest paid by general government. Current prices, not adjusted for inflation.{{< /figure-svg >}}
+{{< fig-actions id="charge" >}}
+
+**The same burden, in euros.** The share of GDP tells you whether the debt is sustainable; the billion tells you what it costs. In current euros, the bill went from a trough of {{< dette-val "interets_creux_mdeur" >}} billion in {{< dette-val "interets_creux_annee" >}} to {{< dette-val "interets_mdeur" >}} billion in {{< dette-val "interets_annee" >}}. These euros are not adjusted for inflation: part of the rise is prices, which is why the rest of this page works in shares of GDP.
+
 ## The scissor: twenty-five years of offset, then the turn
 
 <figure class="figure-ciseau">

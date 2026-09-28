@@ -33,6 +33,14 @@
    "precaution": "Le taux à 10 ans, repère du coût des emprunts nouveaux ; le taux apparent, coût de tout le stock, ne le suit qu'au fil des refinancements."
   },
   {
+   "id": "charge",
+   "fichier": "charge-interets-mdeur",
+   "titre": "La charge d'intérêts en milliards d'euros, 1995-2025",
+   "montre": "Ce que la dette coûte en euros, et non en part de PIB : le creux, puis la remontée.",
+   "source": "Eurostat, intérêts versés par les administrations publiques (gov_10a_main, D41PAY), 1995-2025",
+   "precaution": "Milliards d'euros courants, non corrigés de l'inflation : la facture, non son poids dans la richesse produite."
+  },
+  {
    "id": "masses",
    "fichier": "masses-comparees",
    "titre": "La charge d'intérêts face aux grands budgets, 1995-2024",
@@ -73,6 +81,14 @@
    "montre": "The average cost of the stock follows the 10-year rate years behind: it falls less far, and climbs back more slowly.",
    "source": "Eurostat irt_lt_mcby_a (10-year yield)  ·  effective rate: Eurostat gov_10a_main and INSEE, 1996-2025",
    "precaution": "The 10-year yield benchmarks the cost of new borrowing; the effective rate, the cost of the whole stock, follows it only as old debt is refinanced."
+  },
+  {
+   "id": "charge",
+   "fichier": "charge-interets-mdeur-en",
+   "titre": "Interest paid in billion euros, 1995-2025",
+   "montre": "What the debt costs in euros rather than as a share of GDP: the trough, then the climb.",
+   "source": "Eurostat, interest paid by general government (gov_10a_main, D41PAY), 1995-2025",
+   "precaution": "Billion euros at current prices, not adjusted for inflation: the bill itself, not its weight in national income."
   },
   {
    "id": "masses",

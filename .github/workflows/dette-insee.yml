@@ -122,7 +122,11 @@ jobs:
                   static/img/masses-comparees.svg \
                   static/img/masses-comparees-en.svg \
                   static/img/masses-comparees.png \
-                  static/img/masses-comparees-en.png
+                  static/img/masses-comparees-en.png \
+                  static/img/charge-interets-mdeur.svg \
+                  static/img/charge-interets-mdeur-en.svg \
+                  static/img/charge-interets-mdeur.png \
+                  static/img/charge-interets-mdeur-en.png
           git commit -m "data(dette): series INSEE/Eurostat du $(date -u +%Y-%m-%d)"
           # Le rebase couvre le seul cas reel de non-fast-forward : un commit
           # humain pousse sur main pendant les ~40 s du run. Le 500 transitoire

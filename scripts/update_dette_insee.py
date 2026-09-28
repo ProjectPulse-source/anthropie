@@ -72,6 +72,27 @@ OUT_SVG_MARCHE = REPO / "static" / "img" / "taux-marche-apparent.svg"
 OUT_SVG_MARCHE_EN = REPO / "static" / "img" / "taux-marche-apparent-en.svg"
 OUT_SVG_MASSES = REPO / "static" / "img" / "masses-comparees.svg"
 OUT_SVG_MASSES_EN = REPO / "static" / "img" / "masses-comparees-en.svg"
+OUT_SVG_CHARGE = REPO / "static" / "img" / "charge-interets-mdeur.svg"
+OUT_SVG_CHARGE_EN = REPO / "static" / "img" / "charge-interets-mdeur-en.svg"
+TRAJECTOIRE = REPO / "data" / "trajectoire_plf2026.json"
+
+
+def lire_trajectoire() -> dict:
+    """Serie PREVISIONNELLE, saisie a la main apres lecture a la source.
+
+    Absente ou illisible : la figure se dessine sans prolongement, elle ne
+    s'arrete pas. Une prevision manquante ne doit pas suspendre une observation.
+    """
+    if not TRAJECTOIRE.is_file():
+        return {}
+    try:
+        t = json.loads(TRAJECTOIRE.read_text(encoding="utf-8"))
+        d = {int(a): float(v) for a, v in t["dette_pct_pib"].items()
+             if not a.startswith("_")}
+        return {"dette": d, "source": t["source"]["publication"]} if d else {}
+    except Exception as exc:                       # noqa: BLE001
+        print("trajectoire ignoree (%s)" % exc)
+        return {}
 # Segment 1978-1995 que le flux ne couvre pas : comptes nationaux clos,
 # donc figes ici plutot que rapatries d'un .xlsx dont l'URL change a
 # chaque millesime. L'annee 1995 y est en DOUBLE avec la serie
@@ -434,6 +455,11 @@ LABELS_CARTOUCHE = {
                         "ans, puis remonte depuis 2021."),
         "montre_longue": ("La dette monte par paliers, chacun installé par une "
                           "crise ; dans la série observée, le ratio n\'est jamais revenu à son niveau de dix ans auparavant."),
+        "charge": ("Milliards d'euros courants, non corrigés de l'inflation : "
+                   "la facture, non son poids dans la richesse produite."),
+        "titre_charge": "La charge d'intérêts en milliards d'euros, %s-%s",
+        "montre_charge": ("Ce que la dette coûte en euros, et non en part de PIB : "
+                          "le creux, puis la remontée."),
         "masses": ("Masses comparées sur un millésime unique. Une comparaison de "
                    "masses n'établit aucun transfert d'un budget vers un autre."),
         "titre_masses": "La charge d'intérêts face aux grands budgets, %s-%s",
@@ -469,6 +495,11 @@ LABELS_CARTOUCHE = {
                         "years, rising again since 2021."),
         "montre_longue": ("Debt climbs in steps, each set by a crisis; in the observed series, the ratio has "
                           "never returned to its level of ten years earlier."),
+        "charge": ("Billion euros at current prices, not adjusted for inflation: "
+                   "the bill itself, not its weight in national income."),
+        "titre_charge": "Interest paid in billion euros, %s-%s",
+        "montre_charge": ("What the debt costs in euros rather than as a share of GDP: "
+                          "the trough, then the climb."),
         "masses": ("Masses compared on a single vintage. Comparing masses establishes "
                    "no transfer from one budget to another."),
         "titre_masses": "Interest paid against the main public budgets, %s-%s",
@@ -974,6 +1005,77 @@ def build_svg_marche(apparent: dict, marche: dict, lang: str = "fr") -> str:
     return "\n".join(e) + "\n"
 
 
+def build_svg_charge(interets_md: dict, lang: str = "fr") -> str:
+    """La charge d'interets en MILLIARDS : la grandeur que le lecteur a en tete.
+
+    Le % du PIB dit la soutenabilite, le milliard dit la facture. Les deux
+    existent donc, et chacune porte son unite dans son intitule.
+    """
+    num = fr if lang == "fr" else en
+    T = ({"panneau": "Charge d'intérêts des administrations publiques, en milliards d'euros courants",
+          "creux": "creux de", "titre": "La charge d'intérêts en milliards d'euros, %s-%s",
+          "src": "Eurostat, intérêts versés par les administrations publiques "
+                 "(gov_10a_main, D41PAY), %s-%s",
+          "desc": "Une courbe en milliards d'euros courants, de %s à %s. La charge d'intérêts "
+                  "descend jusqu'au creux de %s, puis remonte fortement pour atteindre %s "
+                  "milliards en %s."}
+         if lang == "fr" else
+         {"panneau": "Interest paid by general government, billion euros, current prices",
+          "creux": "trough of", "titre": "Interest paid in billion euros, %s-%s",
+          "src": "Eurostat, interest paid by general government (gov_10a_main, D41PAY), %s-%s",
+          "desc": "One curve in billion euros, from %s to %s. Interest paid falls to its trough "
+                  "in %s, then climbs steeply to %s billion in %s."})
+    ans = sorted(int(a) for a in interets_md)
+    a0, a1 = ans[0], ans[-1]
+    creux = min(ans, key=lambda a: interets_md[a])
+    W, H = 720, 340
+    ml, mr, mt, mb = 52, 96, 46, 34
+    vmax = max(interets_md.values()) * 1.12
+
+    def X(a):
+        return ml + (a - a0) / (a1 - a0) * (W - ml - mr)
+
+    def Y(v):
+        return H - mb - v / vmax * (H - mt - mb)
+
+    e = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" role="img" '
+         'aria-labelledby="ch-t ch-d" font-family="%s">' % (W, H + CARTOUCHE_H, FONT),
+         '<title id="ch-t">%s</title>' % _esc(T["titre"] % (a0, a1)),
+         '<desc id="ch-d">%s</desc>' % _esc(T["desc"] % (a0, a1, creux,
+                                                         num(interets_md[a1], 1), a1)),
+         '<text x="0" y="22" font-size="%d" fill="%s">%s</text>'
+         % (TY_TITRE, INK2, _esc(T["panneau"]))]
+    g = 0
+    while g <= vmax:
+        e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1"/>'
+                 % (ml, Y(g), W - mr, Y(g), AXIS if g == 0 else GRID))
+        e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s" text-anchor="end">%d</text>'
+                 % (ml - 7, Y(g) + 4, TY_AXE, MUTED, g))
+        g += 20
+    for a in range(a0, a1 + 1):
+        if a % 10 == 0 or a == a1:
+            e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s" text-anchor="middle">%d</text>'
+                     % (X(a), H - mb + 18, TY_AXE, MUTED, a))
+    e += bandes_crise(X, mt, H - mb, lang, x_min=a0, x_max=a1)
+    pts = [(X(a), Y(interets_md[a])) for a in ans]
+    e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.8" '
+             'stroke-linecap="round" stroke-linejoin="round"/>' % (_line_path(pts), COL_INTER))
+    # creux, en retrait ; derniere valeur, en ancrage
+    cx, cy = X(creux), Y(interets_md[creux])
+    e.append('<circle cx="%.1f" cy="%.1f" r="3.5" fill="%s"/>' % (cx, cy, COL_INTER))
+    e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s" text-anchor="middle">%s %s (%d)</text>'
+             % (cx, cy + 20, TY_MINEUR, MUTED, _esc(T["creux"]), num(interets_md[creux], 1), creux))
+    lx, ly = pts[-1]
+    e.append('<circle cx="%.1f" cy="%.1f" r="5" fill="%s"/>' % (lx, ly, COL_INTER))
+    e.append('<text x="%.1f" y="%.1f" font-size="%d" font-weight="700" fill="%s">%s</text>'
+             % (lx + 10, ly + 2, TY_VALEUR, INK, num(interets_md[a1], 1)))
+    e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s">%s %d</text>'
+             % (lx + 10, ly + 17, TY_MINEUR, MUTED, "Md€" if lang == "fr" else "bn", a1))
+    e += cartouche(W, H + 4, T["src"] % (a0, a1), "charge", lang)
+    e.append("</svg>")
+    return "\n".join(e) + "\n"
+
+
 def build_svg_masses(interets: dict, cofog: dict, lang: str = "fr") -> str:
     """Charge d'interets et grands budgets, en Md€ courants, millesime commun.
 
@@ -1048,7 +1150,7 @@ def build_svg_masses(interets: dict, cofog: dict, lang: str = "fr") -> str:
 
 
 def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
-                     seuils: dict, lang: str = "fr") -> str:
+                     seuils: dict, lang: str = "fr", traj: dict | None = None) -> str:
     """Dette en % du PIB, de la premiere annee du segment fige a aujourd'hui.
 
     Meme couleur que la courbe de dette du ciseau : c'est la meme grandeur, et
@@ -1059,8 +1161,13 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
     U = L["unite"]
     pts = [(float(a), annuel[a]) for a in ans] + [(float(ans[-1]) + 0.25, pct_courant)]
     w, h = 720, 320
-    ml, mr, mt, mb = 44, 28, 34, 26   # mr : la valeur d'arrivee ne touche plus le bord
+    # PROLONGEMENT PREVISIONNEL : il etend l'axe ET demande sa propre place a
+    # droite, donc il se decide avant les marges.
+    prev = sorted((a, v) for a, v in (traj or {}).items() if a > int(ans[-1]))
+    ml, mr, mt, mb = 44, (128 if prev else 28), 34, 26  # place de l'etiquette de trajectoire
     x0, x1 = pts[0][0], pts[-1][0]
+    if prev:
+        x1 = float(prev[-1][0])
     ymax = 130.0
 
     def X(v):
@@ -1073,7 +1180,7 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
     ligne = "M " + " L ".join("%.1f %.1f" % (X(a), Y(v)) for a, v in pts)
     aire = ("M %.1f %.1f L " % (X(x0), h - mb)
             + " L ".join("%.1f %.1f" % (X(a), Y(v)) for a, v in pts)
-            + " L %.1f %.1f Z" % (X(x1), h - mb))
+            + " L %.1f %.1f Z" % (X(pts[-1][0]), h - mb))   # ferme sur l'OBSERVE
 
     e = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" '
          'width="%d" height="%d" role="img" aria-labelledby="dl-t dl-d">'
@@ -1081,7 +1188,16 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
     e.append('<title id="dl-t">' + L["titre"] % (ans[0], label_courant) + '</title>')
     e.append('<desc id="dl-d">' + L["desc"]
              % (nb(annuel[ans[0]]), ans[0], seuils[30], seuils[60], seuils[80],
-                seuils[100], nb(pct_courant), label_courant) + '</desc>')
+                seuils[100], nb(pct_courant), label_courant)
+             + (("" if not prev else
+                 (" Un prolongement en pointillés montre la trajectoire du projet de loi de "
+                  "finances pour 2026, qui atteint %s%s en %d : une prévision, non une "
+                  "observation." % (nb(prev[-1][1]), U, prev[-1][0]))) if lang == "fr" else
+                ("" if not prev else
+                 (" A dotted extension shows the path of the 2026 budget bill, reaching %s%s "
+                  "in %d: a forecast, not an observation."
+                  % (nb(prev[-1][1]), U, prev[-1][0]))))
+             + '</desc>')
     e.append('<rect width="%d" height="%d" fill="#fff"/>' % (w, h))
     for g in (0, 25, 50, 75, 100, 125):
         e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" '
@@ -1098,6 +1214,24 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
     # Les bandes passent APRES l'aplat : dessous, elles viraient au gris (vu au
     # rendu le 28/09). Elles restent derriere la courbe, qui domine.
     e.append('<path d="%s" fill="%s" fill-opacity="0.10"/>' % (aire, COL_DETTE))
+    if prev:
+        # le prolongement part du dernier point OBSERVE : aucun saut, aucune
+        # valeur intercalee entre les deux regimes.
+        ppts = [(X(pts[-1][0]), Y(pct_courant))] + [(X(float(a)), Y(v)) for a, v in prev]
+        e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.4" '
+                 'stroke-dasharray="6 5" stroke-linejoin="round" opacity="0.75"/>'
+                 % (_line_path(ppts), COL_DETTE))
+        px, py = ppts[-1]
+        e.append('<circle cx="%.1f" cy="%.1f" r="4" fill="#ffffff" stroke="%s" '
+                 'stroke-width="2"/>' % (px, py, COL_DETTE))
+        e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="%d" '
+                 'font-weight="600" fill="%s">%s%s</text>'
+                 % (px + 9, py + 1, FONT, TY_ANNOT, COL_DETTE, nb(prev[-1][1]), U))
+        e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="%d" '
+                 'fill="%s">%s</text>'
+                 % (px + 9, py + 15, FONT, TY_MINEUR, MUTED,
+                    _esc("trajectoire PLF 2026" if lang == "fr"
+                         else "2026 budget bill path")))
     e += bandes
     e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.8" '
              'stroke-linejoin="round"/>' % (ligne, COL_DETTE))
@@ -1230,7 +1364,7 @@ def atomic_write(path: Path, text: str) -> None:
 
 
 def meta_figures(lastq: str, last_y: str, taux: dict, annuel: dict,
-                 masses: tuple[int, int]) -> dict:
+                 masses: tuple[int, int], charge: tuple[int, int]) -> dict:
     """Donnees des cartes « Reutiliser » : meme texte que les cartouches.
 
     Source UNIQUE de la precaution de lecture : elle est ecrite une fois, dans
@@ -1240,6 +1374,7 @@ def meta_figures(lastq: str, last_y: str, taux: dict, annuel: dict,
     t0, t1 = min(taux), max(taux)
     a0 = min(annuel)
     m0, m1 = masses
+    c0, c1 = charge
     out = {}
     for lang, quarter in (("fr", fr_quarter), ("en", en_quarter)):
         C = LABELS_CARTOUCHE[lang]
@@ -1259,6 +1394,13 @@ def meta_figures(lastq: str, last_y: str, taux: dict, annuel: dict,
             {"id": "marche", "fichier": "taux-marche-apparent" + suf,
              "titre": C["titre_marche"] % (t0, t1), "montre": C["montre_marche"],
              "source": C["src_marche"] % (t0, t1), "precaution": C["marche"]},
+            {"id": "charge", "fichier": "charge-interets-mdeur" + suf,
+             "titre": C["titre_charge"] % (c0, c1), "montre": C["montre_charge"],
+             "source": (("Eurostat, intérêts versés par les administrations publiques "
+                         "(gov_10a_main, D41PAY), %s-%s") if lang == "fr" else
+                        ("Eurostat, interest paid by general government "
+                         "(gov_10a_main, D41PAY), %s-%s")) % (c0, c1),
+             "precaution": C["charge"]},
             {"id": "masses", "fichier": "masses-comparees" + suf,
              "titre": C["titre_masses"] % (m0, m1), "montre": C["montre_masses"],
              "source": LABELS_MASSES[lang]["src"] % (m0, m1), "precaution": C["masses"]},
@@ -1666,6 +1808,7 @@ def main() -> int:
     # l'ensemble dans son etat precedent, coherent.
     # Millesime commun des masses comparees : les series par fonction s'arretent
     # avant les interets, et une comparaison ne melange pas deux annees.
+    trajectoire = lire_trajectoire()
     cofog_md = {c: {int(a): v / 1000.0 for a, v in cofog_mio[c].items()}
                 for c in ("GF0303", "GF03", "GF07", "GF09")}
     inter_md = {int(a): v for a, v in d41_mdeur.items()}
@@ -1674,7 +1817,8 @@ def main() -> int:
     sorties = [
         (OUT_FIGURES, json.dumps(meta_figures(
             lastq, last_y, taux_apparent, annuel,
-            (ans_masses[0], ans_masses[-1])),
+            (ans_masses[0], ans_masses[-1]),
+            (min(inter_md), max(inter_md))),
             ensure_ascii=False, indent=1) + "\n"),
         (OUT_JSON, txt),
         (OUT_ENDPOINT, txt),
@@ -1683,10 +1827,13 @@ def main() -> int:
         (OUT_SVG_EN, build_svg(dette_pib, d41_pib, lang="en")),
         (OUT_SVG_TAUX_EN, build_svg_taux(taux_apparent, lang="en")),
         (OUT_SVG_LONGUE, build_svg_longue(
-            annuel, dette_pib[lastq], fr_quarter(lastq), hist["seuils"])),
+            annuel, dette_pib[lastq], fr_quarter(lastq), hist["seuils"],
+            traj=trajectoire.get("dette"))),
         (OUT_SVG_LONGUE_EN, build_svg_longue(
             annuel, dette_pib[lastq], en_quarter(lastq), hist["seuils"],
-            lang="en")),
+            lang="en", traj=trajectoire.get("dette"))),
+        (OUT_SVG_CHARGE, build_svg_charge(inter_md)),
+        (OUT_SVG_CHARGE_EN, build_svg_charge(inter_md, lang="en")),
         (OUT_SVG_MASSES, build_svg_masses(inter_md, cofog_md)),
         (OUT_SVG_MASSES_EN, build_svg_masses(inter_md, cofog_md, lang="en")),
     ]
