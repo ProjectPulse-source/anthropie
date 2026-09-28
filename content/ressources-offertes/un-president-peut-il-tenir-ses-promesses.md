@@ -10,7 +10,7 @@ draft: false
 noindex: true
 og_title: "Un président peut-il tenir ses promesses ? — un exemplaire vous est offert"
 og_description: "Un exemplaire Kindle prépayé, déjà financé, transmis sans paiement ni contrepartie."
-og_image_alt: "Ressources offertes — un exemplaire d'Un président peut-il tenir ses promesses ? transmis à un lecteur invité."
+og_image_alt: "Livres offerts — un exemplaire d'Un président peut-il tenir ses promesses ? transmis à un lecteur invité."
 _build:
   list: never        # exclue du sitemap et des listes internes
   render: always     # l'URL reste servie pour qui possède le lien

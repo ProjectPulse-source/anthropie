@@ -1,5 +1,5 @@
 ---
-title: "Ressources presse"
+title: "Presse"
 description: "Documents et ressources à destination de la presse."
 # Page volontairement non indexée tant que le kit presse est vide : on ne veut
 # pas exposer une page maigre aux moteurs classiques ni aux moteurs IA.

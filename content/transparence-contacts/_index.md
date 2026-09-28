@@ -1,6 +1,6 @@
 ---
 title: "Transparence et données personnelles"
-description: "Comment vos données sont traitées lors d'une prise de contact professionnelle ou d'une demande sur la page Ressources offertes, comment exercer vos droits ou vous opposer à un nouveau contact."
+description: "Comment vos données sont traitées lors d'une prise de contact professionnelle ou d'une demande sur la page Livres offerts, comment exercer vos droits ou vous opposer à un nouveau contact."
 draft: false
 ---
 
@@ -74,9 +74,9 @@ Vous pouvez exercer vos droits en répondant au message reçu ou par la
 [page Contact](/contact/). Vous pouvez également adresser une réclamation à la
 [CNIL](https://www.cnil.fr).
 
-## Dispositif «&nbsp;Ressources offertes&nbsp;» {#ressources-offertes}
+## Dispositif «&nbsp;Livres offerts&nbsp;» {#ressources-offertes}
 
-Lorsque vous demandez un exemplaire offert sur la page Ressources offertes, un
+Lorsque vous demandez un exemplaire offert sur la page Livres offerts, un
 identifiant aléatoire est enregistré dans votre navigateur (jusqu'à la suppression des
 données du site) afin d'éviter l'attribution de plusieurs exemplaires. Lorsqu'un
 exemplaire est attribué, cet identifiant et le livre choisi sont conservés sur notre

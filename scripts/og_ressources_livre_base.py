@@ -82,7 +82,7 @@ def background() -> Image.Image:
 def text_block(im: Image.Image, x: int, sub: tuple[str, str], ital: tuple[str, str]) -> None:
     d = ImageDraw.Draw(im)
     y = 150
-    d.text((x, y), "Ressources offertes", font=font("newsreader", 62), fill=NAVY)
+    d.text((x, y), "Livres offerts", font=font("newsreader", 62), fill=NAVY)
     y += 100
     f_sub = font("newsreader", 30)
     for line in sub:
