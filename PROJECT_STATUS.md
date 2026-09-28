@@ -53,6 +53,42 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-29 (nuit, clôture) — Trois tours de contre-expertise, fiche 02 en v2, tout poussé
+
+**État final : `origin/main` sur `5484bd1`, déploiement vert, page vérifiée en ligne.** Cinq commits
+(`e5143fd` source CND.101 · `a6320a7` figure et gardes · `e11a505` section et FAQ · `a951dd1` journal ·
+`5484bd1` figure de sensibilité de la fiche).
+
+**Deux tours de contre-expertise supplémentaires**, arbitrés par écrit
+(`D:\CONTRE_EXPERTISE\2026-09-28_FICHES_RESSOURCES\REPONSE_RECUE\ARBITRAGE_0{2,3}_*`), tous deux
+archivés et hachés **avant lecture** :
+
+- **Tour 2** — deux excès de langage retirés du texte avant publication (« les trois décisions se
+  valent », « ne change presque rien » : à ×1,4 l'écart reste de 40 %) ; le point D1 écarté devient une
+  **borne inférieure** (« ≥ ×5,5 »), plus exact et plus fort ; « résidents » remplace « français » sur
+  les porteurs de titres, le libellé contredisant le sous-titre de sa propre figure ; le refinancement
+  « renouvelle une échéance aux conditions du moment » au lieu de « reporte ». Le jeu publié porte
+  désormais sa **convention de signe** en toutes lettres — sans elle, un réutilisateur inversait la
+  lecture sans que rien ne le signale.
+- **Tour 3** — il a trouvé une surraffirmation dans ma propre correction : « trois mesures
+  **indépendantes** … **au même endroit**, sur quatre millésimes » était faux trois fois (elles portent
+  sur les mêmes trois observations ; le minimum tombe en D7 pour l'une, D8 pour les autres ; la preuve
+  ne couvrait que 2023). La garde couvre maintenant les **douze combinaisons** année × mesure, toutes
+  en D7-D8. La page, elle, ne portait rien de faux : l'excès était dans le document d'arbitrage.
+- **Note méthodologique CND lue à la source** (publication 8981444) : elle confirme la chaîne
+  Ines/ERFS, ne dit rien du premier vingtième — et donne un fait que personne n'avait vu, le poste est
+  « impôt sur le revenu **hors crédit d'impôt** », donc le scénario fiscal porte sur un impôt brut de
+  crédits. Piste documentée là où l'on n'avait qu'une hypothèse.
+
+**Fiche 02 v2** (`scripts/figure_fiche_02_sensibilite.py` pour sa figure) : convention de signe alignée
+sur l'Insee — la v1 contredisait sa source —, figure de sensibilité **refaite dans la charte et rendue
+reproductible** (son script d'origine n'existait nulle part), « robustesse » renommé « sensibilité ».
+Les 21 lignes de tableau de la fiche ont été relues une à une contre le jeu publié ; trois figures du
+dossier de contre-expertise étaient périmées par rapport au site et ont été rafraîchies.
+
+⚠ **Non contrôlé** : le rendu de la nouvelle section et de sa figure sur un vrai navigateur, à largeur
+réelle. Le build et les linters ne voient pas cela.
+
 ### 2026-09-29 — « Qui paie » : une section et une figure, sorties d'une contre-expertise
 
 **Motif.** Une contre-expertise reçue le 28/09 a nommé un manque réel de la page : entre des figures
