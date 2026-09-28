@@ -211,12 +211,18 @@
   padding-top: 0.3rem;
 }
 .dossier-dette__titre {
-  flex: 1 0 100%;
+  // Pastille pleine, bleu marine, texte blanc (auteur, 28/09) : le dossier se
+  // nomme lui-meme d'un coup d'oeil, au lieu de se lire comme une sur-legende.
+  flex: 0 0 auto;
+  padding: 0.22rem 0.6rem;
+  border-radius: 4px;
+  background: var(--color-accent);
+  color: #FFFFFF;
   font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.05em;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--color-text-subtle);
 }
 .dossier-dette__volets {
   display: flex;
@@ -263,8 +269,8 @@ a.dossier-dette__onglet:focus-visible { outline: 2px solid var(--color-pivot); o
   margin-left: auto;
   padding-bottom: 0.35rem;
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 600;
+  font-size: 0.86rem;
+  font-weight: 700;
   letter-spacing: 0.04em;
   color: #C0392B;
   white-space: nowrap;
@@ -276,7 +282,8 @@ a.dossier-dette__onglet:focus-visible { outline: 2px solid var(--color-pivot); o
     font-size: 0.95em;
   }
   .dossier-dette__role { display: none; }
-  .dossier-dette__titre { flex-basis: auto; }
+  .dossier-dette__titre { font-size: 0.72rem; padding: 0.18rem 0.45rem; }
+  .dossier-dette__maj { font-size: 0.78rem; }
 }
 
 // Deux barres collantes se superposent à une ancre : les cibles internes gagnent
