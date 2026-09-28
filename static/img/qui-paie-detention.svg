@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 447" role="img" aria-labelledby="qp-det-t qp-det-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 447" role="img" font-variant-numeric="tabular-nums" aria-labelledby="qp-det-t qp-det-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="qp-det-t">Qui emprunte ? Qui détient les titres de l'État ?</title>
 <desc id="qp-det-d">Deux panneaux séparés, sans lien de proportion entre eux. A, en valeur nominale : État 2 823 Md€; Sécurité sociale 293 Md€; Collectivités 276 Md€; Autres 69 Md€, sur 3 460,5 Md€, fin 2025. B, en valeur de marché, porteurs des titres négociables de l'État au 1er trimestre 2026 : Non-résidents 57,5 %; Autres porteurs français 20,6 %; Banques françaises 10,5 %; Assureurs français 9,6 %; Fonds (OPCVM) français 1,8 %.</desc>
 <text x="0.0" y="22.0" font-size="13" fill="#52514e" text-anchor="start">Qui emprunte ? Qui détient les titres de l'État ? Deux questions, deux champs</text>
@@ -6,7 +6,7 @@
 <text x="0.0" y="66.0" font-size="11" fill="#898781" text-anchor="start">Valeur nominale, en milliards d'euros · total 3 460,5 Md€</text>
 <text x="180.0" y="95.0" font-size="11" fill="#52514e" text-anchor="end">État</text>
 <rect x="190" y="84.0" width="400.0" height="14" rx="3" fill="#184f95"/>
-<text x="598.0" y="95.0" font-size="11" fill="#52514e" text-anchor="start">2 823 Md€ · 82 %</text>
+<text x="598.0" y="95.0" font-size="12" fill="#184f95" text-anchor="start" font-weight="600">2 823 Md€ · 82 %</text>
 <text x="180.0" y="117.0" font-size="11" fill="#52514e" text-anchor="end">Sécurité sociale</text>
 <rect x="190" y="106.0" width="41.5" height="14" rx="3" fill="#184f95"/>
 <text x="239.5" y="117.0" font-size="11" fill="#52514e" text-anchor="start">293 Md€ · 8 %</text>
@@ -21,7 +21,7 @@
 <text x="0.0" y="232.0" font-size="11" fill="#898781" text-anchor="start">Valeur de marché, en % · classement par résidence du détenteur, non par nationalité</text>
 <text x="180.0" y="261.0" font-size="11" fill="#52514e" text-anchor="end">Non-résidents</text>
 <rect x="190" y="250.0" width="400.0" height="14" rx="3" fill="#eb6834"/>
-<text x="598.0" y="261.0" font-size="11" fill="#52514e" text-anchor="start">57,5 %</text>
+<text x="598.0" y="261.0" font-size="12" fill="#eb6834" text-anchor="start" font-weight="600">57,5 %</text>
 <text x="180.0" y="283.0" font-size="11" fill="#52514e" text-anchor="end">Autres porteurs français *</text>
 <rect x="190" y="272.0" width="143.3" height="14" rx="3" fill="#eb6834"/>
 <text x="341.3" y="283.0" font-size="11" fill="#52514e" text-anchor="start">20,6 %</text>

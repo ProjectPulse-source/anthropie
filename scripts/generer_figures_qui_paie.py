@@ -64,12 +64,28 @@ XLSX_URL = "https://www.insee.fr/fr/statistiques/8974371"
 IMG = REPO / "static" / "img"
 URL_PAGE = "stephane-lalut.com/qui-paie-la-dette-publique/"
 
-# Palette dataviz de référence (slots 1-3, validés en clair par
-# validate_palette.js le 2026-09-21 ; l'aqua avertit en contraste : d'où les
-# étiquettes de valeur visibles et la vue en tableau sur la page).
-C1, C2, C3 = "#184f95", "#eb6834", "#1baf7a"   # bleu profond, 28/09 (triplet revalide)
+# Palette — charte du 2026-09-28 (mémoire feedback_langage_graphique_figures,
+# rappelée dans CLAUDE.md § « Figures de données »). DEUX couleurs de données au
+# maximum, hors gris, et la même grandeur toujours de la même couleur :
+#   C1 bleu profond = ce qui est reçu (transferts, bénéficiaires nets) et le stock
+#                     de dette — même bleu que la page du coût ;
+#   C2 orange       = ce qui est versé, et les intérêts — donc aussi les porteurs
+#                     des titres, qui en sont les destinataires ;
+#   SEC gris moyen  = série secondaire : la part imputée (services publics
+#                     valorisés), celle qui porte la convention de calcul.
+# L'aqua #1baf7a du triplet de septembre est RETIRÉ : il faisait une troisième
+# couleur de données, ce que la charte interdit, et il avertissait en contraste.
+# Le gris pour une série secondaire a son précédent validé dans
+# update_dette_insee.py (build_svg_masses) : aucune teinte nouvelle n'entre ici,
+# donc rien à soumettre à validate_palette.js.
+C1, C2 = "#184f95", "#eb6834"
 INK, INK2, MUTED, GRID, AXIS = "#2b2a28", "#52514e", "#898781", "#e1e0d9", "#c3c2b7"
+SEC = MUTED
 FONT = "system-ui, -apple-system, Segoe UI, sans-serif"
+# Échelle typographique COMMUNE aux deux générateurs du dépôt (mêmes noms, mêmes
+# valeurs que update_dette_insee.py) : les figures des deux volets du dossier
+# forment une famille, et non deux collections.
+TY_TITRE, TY_AXE, TY_ANNOT, TY_VALEUR, TY_MINEUR = 13, 11, 12, 15, 11
 NBSP = "\u00a0"
 W = 720
 
@@ -94,6 +110,34 @@ def txt(x, y, s, size=11, fill=INK2, anchor="start", weight=None):
             % (x, y, size, fill, anchor, w, esc(s)))
 
 
+def etiquettes_directes(x: float, bouts: list, y_min: float, y_max: float,
+                        ecart: float = 34.0) -> list[str]:
+    """Nomme chaque série À CÔTÉ d'elle, sans légende séparée (charte du 28/09).
+
+    `bouts` : (y visée, couleur, nom, précision) — la hauteur visée est le milieu
+    du segment de la DERNIÈRE catégorie, celle que la lecture atteint en dernier.
+    Le placement est CALCULÉ, jamais estimé : tri, écart minimum garanti, puis
+    bornage dans [y_min, y_max]. Sans cela, deux séries voisines dans la dernière
+    colonne écriraient l'une sur l'autre — le défaut qui a fait sortir du cadre la
+    troisième étiquette de la légende le 21/09, ici rendu impossible.
+    """
+    b = sorted(bouts, key=lambda t: t[0])
+    for i in range(1, len(b)):
+        if b[i][0] - b[i - 1][0] < ecart:
+            b[i] = (b[i - 1][0] + ecart,) + tuple(b[i][1:])
+    # Le paquet peut dépasser par le bas après décalage : on le remonte en bloc.
+    debord = b[-1][0] - y_max
+    if debord > 0:
+        b = [(y - debord,) + tuple(reste) for y, *reste in b]
+    b = [(max(y, y_min),) + tuple(reste) for y, *reste in b]
+    out = []
+    for y, col, nom, precision in b:
+        out.append(txt(x, y, nom, TY_AXE, col, weight="600"))
+        if precision:
+            out.append(txt(x, y + 13, precision, TY_AXE - 1, MUTED))
+    return out
+
+
 def cartouche(y0: float, lignes: list[tuple[str, str]]) -> list[str]:
     out = ['<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="1"/>'
            % (y0, W, y0, GRID)]
@@ -104,7 +148,10 @@ def cartouche(y0: float, lignes: list[tuple[str, str]]) -> list[str]:
 
 
 def entete(h: float, ident: str, titre: str, desc: str) -> list[str]:
+    # Chiffres tabulaires : mêmes largeurs, donc les valeurs et les graduations
+    # s'alignent d'une figure à l'autre et d'un volet du dossier à l'autre (28/09).
     return ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" role="img" '
+            'font-variant-numeric="tabular-nums" '
             'aria-labelledby="%s-t %s-d" font-family="%s">' % (W, h, ident, ident, FONT),
             '<title id="%s-t">%s</title>' % (ident, esc(titre)),
             '<desc id="%s-d">%s</desc>' % (ident, esc(desc))]
@@ -198,44 +245,57 @@ def svg_detention(r: dict) -> tuple[str, int]:
     e = []
     y = 50
     corps = [txt(0, 22, "Qui emprunte ? Qui détient les titres de l'État ? Deux questions, deux champs",
-                 13, INK2),
+                 TY_TITRE, INK2),
              txt(0, y, "A · Qui emprunte ? Contribution des administrations à la dette publique, "
-                 + r["periode_a"], 12, INK, weight="600"),
+                 + r["periode_a"], TY_ANNOT, INK, weight="600"),
              txt(0, y + 16, "Valeur nominale, en milliards d'euros · total " + r["total_txt"]
-                 + NBSP + "Md€", 11, MUTED)]
+                 + NBSP + "Md€", TY_AXE, MUTED)]
     x0, larg = 190, 400
     y = y + 34
+    # ANCRAGE. Dans une série ordonnée par rangs et non par le temps, la valeur qui
+    # ancre la lecture n'est pas la dernière mais la DOMINANTE : elle se calcule
+    # (max), elle ne se choisit pas au regard — sinon un jour l'emphase resterait
+    # sur un rang que les données ont cessé de placer en tête.
+    domin_a = max(x["mdeur"] for x in ss)
     for s in ss:
-        w = max(2.0, larg * s["mdeur"] / max(x["mdeur"] for x in ss))
+        w = max(2.0, larg * s["mdeur"] / domin_a)
         pct = 100 * s["mdeur"] / total
-        corps.append(txt(x0 - 10, y + 11, s["libelle"], 11, INK2, "end"))
+        fort = s["mdeur"] == domin_a
+        corps.append(txt(x0 - 10, y + 11, s["libelle"], TY_AXE, INK2, "end"))
         corps.append('<rect x="%d" y="%.1f" width="%.1f" height="14" rx="3" fill="%s"/>'
                      % (x0, y, w, C1))
         corps.append(txt(x0 + w + 8, y + 11, "%s%sMd€ · %s%s%%" % (fr(s["mdeur"]), NBSP,
-                                                                   fr(pct), NBSP), 11, INK2))
+                                                                   fr(pct), NBSP),
+                         TY_ANNOT if fort else TY_AXE, C1 if fort else INK2,
+                         weight="600" if fort else None))
         y += 22
     y += 16
     corps.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="1"/>'
                  % (y, W, y, AXIS))
     y += 28
     corps.append(txt(0, y, "B · Qui détient les titres négociables de l'État ? 1er trimestre 2026",
-                     12, INK, weight="600"))
+                     TY_ANNOT, INK, weight="600"))
     corps.append(txt(0, y + 16, "Valeur de marché, en % · classement par résidence du détenteur, "
-                     "non par nationalité", 11, MUTED))
+                     "non par nationalité", TY_AXE, MUTED))
     y += 34
     noms = {"Autres (français)": "Autres porteurs français *",
             "Établissements de crédit français": "Banques françaises",
             "Assureurs français": "Assureurs français",
             "OPCVM français": "Fonds (OPCVM) français"}
+    domin_b = max(x["pct"] for x in det)
     for d in det:
-        w = max(2.0, larg * d["pct"] / max(x["pct"] for x in det))
-        corps.append(txt(x0 - 10, y + 11, noms.get(d["libelle"], d["libelle"]), 11, INK2, "end"))
+        w = max(2.0, larg * d["pct"] / domin_b)
+        fort = d["pct"] == domin_b
+        corps.append(txt(x0 - 10, y + 11, noms.get(d["libelle"], d["libelle"]),
+                         TY_AXE, INK2, "end"))
         corps.append('<rect x="%d" y="%.1f" width="%.1f" height="14" rx="3" fill="%s"/>'
                      % (x0, y, w, C2))
-        corps.append(txt(x0 + w + 8, y + 11, "%s%s%%" % (fr(d["pct"], 1), NBSP), 11, INK2))
+        corps.append(txt(x0 + w + 8, y + 11, "%s%s%%" % (fr(d["pct"], 1), NBSP),
+                         TY_ANNOT if fort else TY_AXE, C2 if fort else INK2,
+                         weight="600" if fort else None))
         y += 22
     corps.append(txt(0, y + 10, "* dont la Banque de France (programmes de l'Eurosystème) : "
-                     "part non publiée par la source.", 10, MUTED))
+                     "part non publiée par la source.", TY_AXE - 1, MUTED))
     y += 30
     h = int(y + 13 + 12 * 3 + 8)
     desc = ("Deux panneaux séparés, sans lien de proportion entre eux. A, en valeur nominale : "
@@ -261,50 +321,60 @@ def svg_redistribution(d: dict) -> tuple[str, int]:
     prel = [v / 1000 for v in d["prel"][:10]]
     esp = [v / 1000 for v in d["esp"][:10]]
     nat = [v / 1000 for v in d["nat"][:10]]
-    vmax, vmin = 40, -100
-    top, bas = 78, 360
+    vmax, vmin = 35, -100
+    top, bas = 58, 340
     k = (bas - top) / (vmax - vmin)
 
     def Y(v):
         return top + (vmax - v) * k
 
-    ml, mr = 46, 12
+    # mr : la marge droite n'est plus un bord, c'est la place des étiquettes
+    # directes. La légende à pastilles a disparu avec elle.
+    ml, mr = 46, 168
     pas = (W - ml - mr) / 10
     bw = 34
     c = []
     c.append(txt(0, 22, "Prélèvements et transferts publics par dixième de niveau de vie, 2023, "
-                 "en milliers d'euros par UC", 13, INK2))
-    # Positions FIXES, vues au rendu : une largeur estimée par caractère a fait
-    # sortir la troisième étiquette du cadre (21/09).
-    for lx, col, lab in ((0, C1, "Prestations en espèces"),
-                         (180, C3, "Transferts non monétaires (services publics…)"),
-                         (478, C2, "Prélèvements (impôts, cotisations)")):
-        c.append('<rect x="%d" y="37" width="12" height="12" rx="2" fill="%s"/>' % (lx, col))
-        c.append(txt(lx + 17, 47, lab, 11, INK2))
-    for g in range(-100, 41, 20):
+                 "en milliers d'euros par UC", TY_TITRE, INK2))
+    # Grille HORIZONTALE seule, cinq lignes, sans ligne au ras du cadre : une
+    # graduation de plus ne se lirait pas mieux, elle ferait une boîte.
+    for g in (-75, -50, -25, 0, 25):
         yy = Y(g)
         c.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="1"/>'
                  % (ml, yy, W - mr, yy, AXIS if g == 0 else GRID))
-        c.append(txt(ml - 6, yy + 4, fr(g) if g >= 0 else "−" + fr(-g), 11, MUTED, "end"))
+        c.append(txt(ml - 6, yy + 4, fr(g) if g >= 0 else "−" + fr(-g), TY_AXE, MUTED, "end"))
     for i in range(10):
         cx = ml + pas * (i + 0.5)
         x = cx - bw / 2
         y0 = Y(0)
         h1 = esp[i] * k
         h2 = nat[i] * k
+        fort = i == 9                      # ancrage : le dernier dixième
         c.append('<rect x="%.1f" y="%.1f" width="%d" height="%.1f" fill="%s"/>'
                  % (x, y0 - h1, bw, h1, C1))
         c.append('<rect x="%.1f" y="%.1f" width="%d" height="%.1f" rx="2" fill="%s"/>'
-                 % (x, y0 - h1 - 2 - h2, bw, h2, C3))
+                 % (x, y0 - h1 - 2 - h2, bw, h2, SEC))
         hp = -prel[i] * k
         c.append('<rect x="%.1f" y="%.1f" width="%d" height="%.1f" rx="2" fill="%s"/>'
                  % (x, y0 + 2, bw, hp - 2, C2))
-        c.append(txt(cx, y0 - h1 - h2 - 7, fr(esp[i] + nat[i], 1), 10, INK2, "middle"))
-        c.append(txt(cx, y0 + hp + 13, "−" + fr(-prel[i], 1), 10, INK2, "middle"))
-        c.append(txt(cx, bas + 16, "D%d" % (i + 1), 11, MUTED, "middle"))
-    c.append(txt(ml, bas + 30, "← 10 % les plus modestes", 10, MUTED))
-    c.append(txt(W - mr, bas + 30, "10 % les plus aisés →", 10, MUTED, "end"))
-    y = bas + 44
+        tv, cv = (TY_ANNOT, INK) if fort else (TY_AXE - 1, INK2)
+        pv = "600" if fort else None
+        c.append(txt(cx, y0 - h1 - h2 - 7, fr(esp[i] + nat[i], 1), tv, cv, "middle", weight=pv))
+        c.append(txt(cx, y0 + hp + 13, "−" + fr(-prel[i], 1), tv, cv, "middle", weight=pv))
+        c.append(txt(cx, bas + 16, "D%d" % (i + 1), TY_AXE,
+                     INK if fort else MUTED, "middle", weight=pv))
+    # Étiquetage DIRECT : chaque série nommée à la hauteur de son segment dans le
+    # dernier dixième, celui que la lecture atteint en dernier.
+    y0 = Y(0)
+    h1, h2 = esp[9] * k, nat[9] * k
+    c += etiquettes_directes(W - mr + 14, [
+        (y0 - h1 / 2 + 4, C1, "Prestations", "en espèces"),
+        (y0 - h1 - 2 - h2 / 2 + 4, SEC, "Transferts non monétaires", "services publics valorisés"),
+        (y0 + 2 + (-prel[9] * k) / 2 + 4, C2, "Prélèvements", "impôts et cotisations"),
+    ], top + 8, bas - 12)
+    c.append(txt(ml, bas + 32, "← 10 % les plus modestes", TY_AXE - 1, MUTED))
+    c.append(txt(W - mr, bas + 32, "10 % les plus aisés →", TY_AXE - 1, MUTED, "end"))
+    y = bas + 46
     h = int(y + 13 + 12 * 3 + 8)
     desc = ("Barres par dixième de niveau de vie, en 2023, en milliers d'euros par unité de "
             "consommation. Au-dessus de zéro, les transferts reçus (prestations en espèces et "
@@ -333,24 +403,30 @@ def svg_solde_net(d: dict) -> tuple[str, int]:
     net = [v / 1000 for v in d["net"][:10]]      # convention Insee : + = verse net
     part = d["part_benef"][:10]
     c = [txt(0, 22, "Qui verse plus qu'il ne reçoit ? Solde des transferts publics par dixième "
-             "de niveau de vie, 2023", 13, INK2)]
+             "de niveau de vie, 2023", TY_TITRE, INK2)]
     ml, mr = 46, 12
     pas = (W - ml - mr) / 10
     bw = 34
     vmax, vmin = 60, -25
-    top, bas = 62, 252
+    top, bas = 84, 260
     k = (bas - top) / (vmax - vmin)
 
     def Y(v):
         return top + (vmax - v) * k
 
-    c.append(txt(0, 48, "A · Transferts nets, en milliers d'euros par UC "
-                 "(au-dessus de zéro : verse plus qu'il ne reçoit)", 11, MUTED))
+    c.append(txt(0, 38, "A · Transferts nets, en milliers d'euros par UC", TY_AXE, MUTED))
+    # Clé de lecture DIRECTE : chaque énoncé porte la couleur des barres qu'il
+    # décrit, et se pose DU CÔTÉ où elles se trouvent — les dixièmes bénéficiaires
+    # nets à gauche, les contributeurs nets à droite. Une clé posée du côté opposé
+    # à ses barres oblige le lecteur à traverser la figure pour la vérifier.
+    # Deux ancrages opposés sur une ligne vide : aucune largeur à estimer.
+    c.append(txt(0, 54, "en dessous de zéro : reçoit plus qu'il ne verse", TY_AXE - 1, C1))
+    c.append(txt(W - mr, 54, "au-dessus : verse plus qu'il ne reçoit", TY_AXE - 1, C2, "end"))
     for g in range(-20, 61, 20):
         yy = Y(g)
         c.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="1"/>'
                  % (ml, yy, W - mr, yy, AXIS if g == 0 else GRID))
-        c.append(txt(ml - 6, yy + 4, fr(g) if g >= 0 else "−" + fr(-g), 11, MUTED, "end"))
+        c.append(txt(ml - 6, yy + 4, fr(g) if g >= 0 else "−" + fr(-g), TY_AXE, MUTED, "end"))
     for i in range(10):
         cx = ml + pas * (i + 0.5)
         v = net[i]
@@ -358,26 +434,38 @@ def svg_solde_net(d: dict) -> tuple[str, int]:
         haut = abs(v) * k
         col = C2 if v > 0 else C1
         y = y0 - haut - 2 if v > 0 else y0 + 2
+        fort = i == 9
+        # Plancher de 2 px : un dixième presque équilibré (D7, −1,8) donnait une
+        # barre d'un pixel, et la charte interdit d'attacher une valeur à une
+        # marque invisible. La distorsion reste inférieure au pixel d'affichage.
         c.append('<rect x="%.1f" y="%.1f" width="%d" height="%.1f" rx="2" fill="%s"/>'
-                 % (cx - bw / 2, y, bw, max(haut - 2, 1), col))
+                 % (cx - bw / 2, y, bw, max(haut - 2, 2), col))
         etiq = ("+" if v > 0 else "−") + fr(abs(v), 1)
-        c.append(txt(cx, (y - 6) if v > 0 else (y + haut + 11), etiq, 10, INK2, "middle"))
-        c.append(txt(cx, bas + 30, "D%d" % (i + 1), 11, MUTED, "middle"))
+        tv, cv = (TY_ANNOT, INK) if fort else (TY_AXE - 1, INK2)
+        pv = "600" if fort else None
+        c.append(txt(cx, (y - 6) if v > 0 else (y + haut + 11), etiq, tv, cv, "middle", weight=pv))
+        c.append(txt(cx, bas + 30, "D%d" % (i + 1), TY_AXE,
+                     INK if fort else MUTED, "middle", weight=pv))
     y = bas + 56
-    c.append(txt(0, y, "B · Part de personnes bénéficiaires nettes, en %", 11, MUTED))
+    c.append(txt(0, y, "B · Part de personnes bénéficiaires nettes, en %", TY_AXE, MUTED))
     top2, bas2 = y + 16, y + 106
     k2 = (bas2 - top2) / 100.0
     for g in (0, 50, 100):
         yy = bas2 - g * k2
         c.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="1"/>'
                  % (ml, yy, W - mr, yy, AXIS if g == 0 else GRID))
-        c.append(txt(ml - 6, yy + 4, fr(g), 11, MUTED, "end"))
+        c.append(txt(ml - 6, yy + 4, fr(g), TY_AXE, MUTED, "end"))
     for i in range(10):
         cx = ml + pas * (i + 0.5)
         haut = part[i] * k2
+        fort = i == 9
+        # Bénéficiaires nets : même bleu qu'au panneau A, où ils sont sous zéro.
+        # Une même grandeur ne change pas de couleur d'un panneau à l'autre.
         c.append('<rect x="%.1f" y="%.1f" width="%d" height="%.1f" rx="2" fill="%s"/>'
-                 % (cx - bw / 2, bas2 - haut, bw, haut, C3))
-        c.append(txt(cx, bas2 - haut - 6, fr(part[i]) + NBSP + "%", 10, INK2, "middle"))
+                 % (cx - bw / 2, bas2 - haut, bw, haut, C1))
+        c.append(txt(cx, bas2 - haut - 6, fr(part[i]) + NBSP + "%",
+                     TY_ANNOT if fort else TY_AXE - 1, INK if fort else INK2, "middle",
+                     weight="600" if fort else None))
     y = bas2 + 30
     h = int(y + 13 + 12 * 3 + 8)
     desc = ("Deux panneaux. A : transferts nets par dixième de niveau de vie, en milliers d'euros "
@@ -402,43 +490,49 @@ def svg_age(d: dict) -> tuple[str, int]:
     prel = [v / 1000 for v in a["prel"][:5]]
     esp = [v / 1000 for v in a["esp"][:5]]
     nat = [v / 1000 for v in a["nat"][:5]]
-    vmax, vmin = 50, -40
-    top, bas = 78, 330
+    vmax, vmin = 52, -40
+    top, bas = 58, 330
     k = (bas - top) / (vmax - vmin)
 
     def Y(v):
         return top + (vmax - v) * k
 
-    ml, mr = 46, 12
+    ml, mr = 46, 168          # mr : place des étiquettes directes, plus de légende
     pas = (W - ml - mr) / 5
     bw = 64
     c = [txt(0, 22, "Prélèvements et transferts publics par âge du ménage, 2023, "
-             "en milliers d'euros par UC", 13, INK2)]
-    for lx, col, lab in ((0, C1, "Prestations en espèces (dont retraites)"),
-                         (270, C3, "Transferts non monétaires (services publics…)"),
-                         (585, C2, "Prélèvements")):
-        c.append('<rect x="%d" y="37" width="12" height="12" rx="2" fill="%s"/>' % (lx, col))
-        c.append(txt(lx + 17, 47, lab, 11, INK2))
-    for g in range(-40, 51, 10):
+             "en milliers d'euros par UC", TY_TITRE, INK2)]
+    for g in (-25, 0, 25, 50):
         yy = Y(g)
         c.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="1"/>'
                  % (ml, yy, W - mr, yy, AXIS if g == 0 else GRID))
-        c.append(txt(ml - 6, yy + 4, fr(g) if g >= 0 else "−" + fr(-g), 11, MUTED, "end"))
+        c.append(txt(ml - 6, yy + 4, fr(g) if g >= 0 else "−" + fr(-g), TY_AXE, MUTED, "end"))
+    dernier = len(a["groupes"]) - 1
     for i, g in enumerate(a["groupes"]):
         cx = ml + pas * (i + 0.5)
         x = cx - bw / 2
         y0 = Y(0)
         h1, h2 = esp[i] * k, nat[i] * k
+        fort = i == dernier
         c.append('<rect x="%.1f" y="%.1f" width="%d" height="%.1f" fill="%s"/>'
                  % (x, y0 - h1, bw, h1, C1))
         c.append('<rect x="%.1f" y="%.1f" width="%d" height="%.1f" rx="2" fill="%s"/>'
-                 % (x, y0 - h1 - 2 - h2, bw, h2, C3))
+                 % (x, y0 - h1 - 2 - h2, bw, h2, SEC))
         hp = -prel[i] * k
         c.append('<rect x="%.1f" y="%.1f" width="%d" height="%.1f" rx="2" fill="%s"/>'
                  % (x, y0 + 2, bw, hp - 2, C2))
-        c.append(txt(cx, y0 - h1 - h2 - 7, fr(esp[i] + nat[i], 1), 10, INK2, "middle"))
-        c.append(txt(cx, y0 + hp + 13, "−" + fr(-prel[i], 1), 10, INK2, "middle"))
-        c.append(txt(cx, bas + 16, g, 11, MUTED, "middle"))
+        tv, cv = (TY_ANNOT, INK) if fort else (TY_AXE - 1, INK2)
+        pv = "600" if fort else None
+        c.append(txt(cx, y0 - h1 - h2 - 7, fr(esp[i] + nat[i], 1), tv, cv, "middle", weight=pv))
+        c.append(txt(cx, y0 + hp + 13, "−" + fr(-prel[i], 1), tv, cv, "middle", weight=pv))
+        c.append(txt(cx, bas + 16, g, TY_AXE, INK if fort else MUTED, "middle", weight=pv))
+    y0 = Y(0)
+    h1, h2 = esp[dernier] * k, nat[dernier] * k
+    c += etiquettes_directes(W - mr + 14, [
+        (y0 - h1 / 2 + 4, C1, "Prestations en espèces", "dont les retraites"),
+        (y0 - h1 - 2 - h2 / 2 + 4, SEC, "Transferts non monétaires", "services publics valorisés"),
+        (y0 + 2 + (-prel[dernier] * k) / 2 + 4, C2, "Prélèvements", "impôts et cotisations"),
+    ], top + 8, bas - 12)
     y = bas + 34
     h = int(y + 13 + 12 * 3 + 8)
     desc = ("Barres par groupe d'âge du ménage, en 2023, en milliers d'euros par unité de "
@@ -458,7 +552,16 @@ def svg_age(d: dict) -> tuple[str, int]:
 
 # ------------------------------------------------------------------ F3
 def svg_mecanismes() -> tuple[str, int]:
-    c = [txt(0, 22, "Par quels canaux la charge de la dette peut-elle être répartie ?", 13, INK2)]
+    """Schéma NON quantitatif : trois règles de la charte y sont sans objet.
+
+    Pas de grille, pas de valeur terminale, pas de bande datée — il n'y a ni axe
+    ni série. Ce qui s'y applique s'y applique : deux couleurs au maximum (le bleu
+    du stock au seul nœud central, le reste à l'encre), boîtes en trait et non en
+    aplat, cartouche dans l'image, échelle typographique commune. Exclusion dite,
+    non silencieuse.
+    """
+    c = [txt(0, 22, "Par quels canaux la charge de la dette peut-elle être répartie ?",
+             TY_TITRE, INK2)]
 
     def boite(x, y, w, h, lignes, trait=AXIS, tiret=False, fond="#ffffff"):
         d = ' stroke-dasharray="4 3"' if tiret else ""
@@ -475,9 +578,9 @@ def svg_mecanismes() -> tuple[str, int]:
     c.append('<defs><marker id="qp-fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" '
              'markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="%s"/></marker>'
              '</defs>' % MUTED)
-    c += boite(1, 150, 200, 74, [("Charge de la dette", 12, INK, True),
-                                 ("et sa répartition", 12, INK, True),
-                                 ("intérêts, échéances", 11, INK2, False)], trait=C1)
+    c += boite(1, 150, 200, 74, [("Charge de la dette", TY_ANNOT, INK, True),
+                                 ("et sa répartition", TY_ANNOT, INK, True),
+                                 ("intérêts, échéances", TY_AXE, INK2, False)], trait=C1)
     canaux = [
         ("Prélèvements", "contribuables : impôts, cotisations"),
         ("Dépenses et prestations", "usagers, bénéficiaires : réduites, gelées, reportées"),
@@ -486,16 +589,16 @@ def svg_mecanismes() -> tuple[str, int]:
     ]
     y = 44
     for tit, qui in canaux:
-        c += boite(300, y, 418, 50, [(tit, 12, INK, True), (qui, 11, INK2, False)])
+        c += boite(300, y, 418, 50, [(tit, TY_ANNOT, INK, True), (qui, TY_AXE, INK2, False)])
         c += fleche(200, 187, 296, y + 25)
         y += 64
-    c += boite(1, 44, 200, 70, [("Refinancement", 12, INK, True),
-                                ("reporte l'échéance ;", 11, INK2, False),
-                                ("ne désigne aucun perdant", 11, INK2, False)], tiret=True)
+    c += boite(1, 44, 200, 70, [("Refinancement", TY_ANNOT, INK, True),
+                                ("reporte l'échéance ;", TY_AXE, INK2, False),
+                                ("ne désigne aucun perdant", TY_AXE, INK2, False)], tiret=True)
     c += fleche(100, 150, 100, 118)
-    c += boite(1, 316, 717, 52, [("En regard : ce que la dette a financé", 12, INK, True),
+    c += boite(1, 316, 717, 52, [("En regard : ce que la dette a financé", TY_ANNOT, INK, True),
                                  ("services, prestations, investissements, soutien en crise — "
-                                  "bénéfices présents et futurs", 11, INK2, False)],
+                                  "bénéfices présents et futurs", TY_AXE, INK2, False)],
                tiret=True, fond="#f7f7f4")
     y = 392
     h = int(y + 13 + 12 * 3 + 8)

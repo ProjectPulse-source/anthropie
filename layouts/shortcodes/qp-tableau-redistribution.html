@@ -1,6 +1,8 @@
 {{- /* Vue en tableau de la figure F2 (redistribution par dixième) : les valeurs
-       exactes, lisibles sans la couleur -- la palette de la figure avertit en
-       contraste pour l'aqua. Source : data/qui_paie_donnees.json. */ -}}
+       exactes, lisibles sans la couleur. Le motif initial -- l'aqua qui avertissait
+       en contraste -- a disparu le 28/09 avec l'aqua lui-même ; le tableau reste,
+       pour la lecture au clavier, à l'écran parlant et à l'impression en noir.
+       Source : data/qui_paie_donnees.json. */ -}}
 {{- $r := "" -}}
 {{- with site.Data.qui_paie_donnees -}}{{- $r = .redistribution -}}{{- end -}}
 {{- if not $r -}}{{ errorf "qp-tableau-redistribution: donnees absentes (%s)" .Page.File.Path }}{{- end -}}
