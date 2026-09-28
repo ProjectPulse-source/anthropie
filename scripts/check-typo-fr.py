@@ -95,8 +95,21 @@ def masquer(txt: str):
 
 
 def demasquer(txt: str, coffre: list[str]) -> str:
-    for i, brut in enumerate(coffre):
-        txt = txt.replace("\x00%d\x00" % i, brut)
+    """Restaure les zones protegees, Y COMPRIS IMBRIQUEES.
+
+    Une zone protegee peut contenir les jetons d une autre : restaurer une
+    seule fois, dans l ordre des indices, laisse dans le texte les jetons
+    reintroduits APRES leur tour -- ils partaient alors dans le fichier, en
+    octets nuls, sans erreur ni trace (incident du 2026-09-28 : 12 octets nuls
+    dans le texte alternatif d une figure). On repasse jusqu a stabilite, en
+    nombre de passes borne ; l appelant verifie qu il ne reste plus rien.
+    """
+    for _ in range(len(coffre) + 1):
+        avant = txt
+        for i, brut in enumerate(coffre):
+            txt = txt.replace("\x00%d\x00" % i, brut)
+        if txt == avant:
+            break
     return txt
 
 
@@ -129,7 +142,19 @@ def main() -> int:
     touches = 0
     for f in cibles:
         brut = io.open(f, encoding="utf-8", newline="").read()
+        # Deux gardes, parce que le defaut ne se voyait pas : une source qui
+        # contient deja un octet nul est corrompue ; un texte corrige qui en
+        # contient encore signale un jeton non restaure. Dans les deux cas on
+        # n ecrit RIEN et on le dit.
+        if chr(0) in brut:
+            print("%s : OCTET NUL dans la source -- corrompue, rien n est ecrit."
+                  % f.relative_to(RACINE))
+            return 2
         corrige, trouve = analyser(brut)
+        if chr(0) in corrige:
+            print("%s : jeton de protection non restaure -- rien n est ecrit."
+                  % f.relative_to(RACINE))
+            return 2
         if not trouve:
             continue
         touches += 1

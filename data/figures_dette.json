@@ -46,7 +46,7 @@
    "titre": "La charge d'intérêts face aux grands budgets, 1995-2024",
    "montre": "La charge d'intérêts est longtemps restée sous le poste « ordre et sécurité » ; elle est repassée au-dessus.",
    "source": "Eurostat : intérêts versés (gov_10a_main, D41PAY) et dépenses des administrations par fonction (gov_10a_exp, COFOG), 1995-2024",
-   "precaution": "Masses comparées sur un millésime unique. Une comparaison de masses n'établit aucun transfert d'un budget vers un autre."
+   "precaution": "Les intérêts sont une nature de dépense, les trois autres des fonctions : ce n'est pas le même découpage, et aucun transfert n'est établi de l'un vers l'autre."
   }
  ],
  "en": [
@@ -96,7 +96,7 @@
    "titre": "Interest paid against the main public budgets, 1995-2024",
    "montre": "Interest paid long stayed below the public order and safety function; it has moved back above it.",
    "source": "Eurostat: interest paid (gov_10a_main, D41PAY) and general government expenditure by function (gov_10a_exp, COFOG), 1995-2024",
-   "precaution": "Masses compared on a single vintage. Comparing masses establishes no transfer from one budget to another."
+   "precaution": "Interest is a type of spending, the other three are functions: not the same breakdown, and no transfer from one to the other is established."
   }
  ],
  "licence": {

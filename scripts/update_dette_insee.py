@@ -460,8 +460,9 @@ LABELS_CARTOUCHE = {
         "titre_charge": "La charge d'intérêts en milliards d'euros, %s-%s",
         "montre_charge": ("Ce que la dette coûte en euros, et non en part de PIB : "
                           "le creux, puis la remontée."),
-        "masses": ("Masses comparées sur un millésime unique. Une comparaison de "
-                   "masses n'établit aucun transfert d'un budget vers un autre."),
+        "masses": ("Les intérêts sont une nature de dépense, les trois autres des "
+                   "fonctions : ce n'est pas le même découpage, et aucun transfert "
+                   "n'est établi de l'un vers l'autre."),
         "titre_masses": "La charge d'intérêts face aux grands budgets, %s-%s",
         "montre_masses": ("La charge d'intérêts est longtemps restée sous le poste "
                           "« ordre et sécurité » ; elle est repassée au-dessus."),
@@ -500,8 +501,9 @@ LABELS_CARTOUCHE = {
         "titre_charge": "Interest paid in billion euros, %s-%s",
         "montre_charge": ("What the debt costs in euros rather than as a share of GDP: "
                           "the trough, then the climb."),
-        "masses": ("Masses compared on a single vintage. Comparing masses establishes "
-                   "no transfer from one budget to another."),
+        "masses": ("Interest is a type of spending, the other three are functions: not "
+                   "the same breakdown, and no transfer from one to the other is "
+                   "established."),
         "titre_masses": "Interest paid against the main public budgets, %s-%s",
         "montre_masses": ("Interest paid long stayed below the public order and safety "
                           "function; it has moved back above it."),
@@ -598,8 +600,8 @@ NBSP = " "  # U+00A0 pose par code, jamais tape
 LABELS_MASSES = {
     "fr": {
         "titre": "La charge d'intérêts face aux grands budgets publics, %s-%s",
-        "panneau": "Milliards d'euros courants — intérêts versés et dépenses "
-                   "publiques par fonction",
+        "panneau": "Milliards d'euros courants — la charge d'intérêts comparée à "
+                   "quelques grandes fonctions de dépense publique",
         "series": {"interets": "Charge d'intérêts", "GF07": "Santé",
                    "GF09": "Enseignement", "GF03": "Ordre et sécurité"},
         "desc": "Quatre courbes en milliards d'euros courants, de %s à %s. La santé et "
@@ -613,8 +615,8 @@ LABELS_MASSES = {
     },
     "en": {
         "titre": "Interest paid against the main public budgets, %s-%s",
-        "panneau": "Billion euros, current prices — interest paid and general government "
-                   "expenditure by function",
+        "panneau": "Billion euros, current prices — interest paid compared with a few "
+                   "large functions of public spending",
         "series": {"interets": "Interest paid", "GF07": "Health",
                    "GF09": "Education", "GF03": "Public order and safety"},
         "desc": "Four curves in billion euros, from %s to %s. Health and education rise "
@@ -1118,6 +1120,9 @@ def build_svg_masses(interets: dict, cofog: dict, lang: str = "fr") -> str:
         if a % 10 == 0 or a == a1:
             e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s" text-anchor="middle">%d</text>'
                      % (X(a), H - mb + 18, TY_AXE, MUTED, a))
+    # Annee de reference des croissances : le CREUX de la charge d'interets. Il se
+    # calcule, il ne se choisit pas -- sinon la comparaison deviendrait un cadrage.
+    ref = min(ans, key=lambda a: interets[a])
     # contexte d'abord, serie heroine ensuite : l'ordre de dessin est la hierarchie
     gris = {"GF07": INK2, "GF09": MUTED, "GF03": AXIS}
     bouts = []
@@ -1125,25 +1130,33 @@ def build_svg_masses(interets: dict, cofog: dict, lang: str = "fr") -> str:
         pts = [(X(a), Y(cofog[c][a])) for a in ans]
         e.append('<path d="%s" fill="none" stroke="%s" stroke-width="1.6" '
                  'stroke-linejoin="round"/>' % (_line_path(pts), gris[c]))
-        bouts.append((pts[-1][1], gris[c], L["series"][c], cofog[c][ans[-1]], False))
+        bouts.append((pts[-1][1], gris[c], L["series"][c], cofog[c][ans[-1]], False,
+                      (cofog[c][ans[-1]] / cofog[c][ref] - 1) * 100))
     pts = [(X(a), Y(interets[a])) for a in ans]
     e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.8" '
              'stroke-linecap="round" stroke-linejoin="round"/>' % (_line_path(pts), COL_INTER))
     e.append('<circle cx="%.1f" cy="%.1f" r="4.5" fill="%s"/>' % (pts[-1][0], pts[-1][1], COL_INTER))
-    bouts.append((pts[-1][1], COL_INTER, L["series"]["interets"], interets[ans[-1]], True))
+    bouts.append((pts[-1][1], COL_INTER, L["series"]["interets"], interets[ans[-1]], True,
+                  (interets[ans[-1]] / interets[ref] - 1) * 100))
     # Etiquetage DIRECT a droite, sans legende ; ecart minimum garanti, sinon
     # deux budgets proches se superposent (« ordre et securite » et les interets
     # se croisent justement a la fin de la serie).
     bouts.sort()
-    ecart = 17.0
+    ecart = 30.0
     for i in range(1, len(bouts)):
         if bouts[i][0] - bouts[i - 1][0] < ecart:
             bouts[i] = (bouts[i - 1][0] + ecart,) + bouts[i][1:]
-    for y, col, nom, val, fort in bouts:
+    for y, col, nom, val, fort, croiss in bouts:
         e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s">'
                  '<tspan font-weight="%d">%s</tspan> %s</text>'
-                 % (W - mr + 12, y + 4, TY_ANNOT if fort else TY_MINEUR, col,
+                 % (W - mr + 12, y + 1, TY_ANNOT if fort else TY_MINEUR, col,
                     700 if fort else 600, _esc(nom), num(val, 0)))
+        # La croissance DEPUIS LE CREUX repond a la lecture spontanee de la
+        # figure (« tout monte plus vite que les interets ») : vraie sur trente
+        # ans, fausse depuis le creux. Calculee, jamais ecrite a la main.
+        e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s">%+d %% %s %d</text>'
+                 % (W - mr + 12, y + 14, TY_MINEUR - 1, MUTED, round(croiss),
+                    "depuis" if lang == "fr" else "since", ref))
     e += cartouche(W, H + 4, L["src"] % (a0, a1), "masses", lang)
     e.append("</svg>")
     return "\n".join(e) + "\n"
@@ -1566,6 +1579,20 @@ def main() -> int:
         print("ECHEC: recettes ou interets manquants pour le millesime commun %s." % equiv_y)
         return 1
     int_sur_recettes_equiv = round(d41_mdeur[equiv_y] / tr_mdeur[equiv_y] * 100.0, 1)
+    # Croissances depuis le CREUX de la charge d'interets : c'est la seule lecture
+    # qui repond a « tout monte plus vite que les interets » -- vraie sur trente
+    # ans, fausse depuis le creux. Le creux se calcule ; la prose s'arrete si le
+    # rapport s'inverse un jour.
+    an_c = [a for a in d41_mdeur if a in cofog_mio.get("GF07", {})]
+    creux_ref = min(an_c, key=lambda a: d41_mdeur[a])
+    fin_c = max(an_c)
+    croiss_int = (d41_mdeur[fin_c] / d41_mdeur[creux_ref] - 1) * 100
+    croiss_fonc_max = max((cofog_mio[c][fin_c] / cofog_mio[c][creux_ref] - 1) * 100
+                          for c in ("GF03", "GF07", "GF09"))
+    if croiss_int < 2 * croiss_fonc_max:
+        print("ECHEC: la page dit que les interets ont progresse bien plus vite que les "
+              "fonctions depuis le creux (%.0f %% contre %.0f %%)." % (croiss_int, croiss_fonc_max))
+        return 1
     in_band("interets/recettes " + equiv_y, int_sur_recettes_equiv, 1.0, 15.0)
     if FAILURES:
         print("ECHEC: %d garde(s) sur les derives -- AUCUNE ecriture." % len(FAILURES))
@@ -1625,6 +1652,9 @@ def main() -> int:
             "equiv_annee": equiv_y,
             "interets_equiv_mdeur": nb(int_equiv),
             "recettes_equiv_mdeur": nb(tr_mdeur[equiv_y]),
+            "creux_ref_annee": creux_ref,
+            "croiss_interets_depuis_creux_pct": nb(croiss_int, 0),
+            "croiss_fonctions_depuis_creux_pct": nb(croiss_fonc_max, 0),
             "interets_sur_recettes_equiv_pct": nb(int_sur_recettes_equiv),
             "justice_mdeur": nb(cof24["GF0303"]),
             "ordre_mdeur": nb(cof24["GF03"]),

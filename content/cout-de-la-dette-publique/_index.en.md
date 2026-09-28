@@ -98,7 +98,11 @@ Everything below uses **the same year**, {{< dette-val "equiv_annee" >}} — the
 {{< figure-svg fichier="masses-comparees-en" alt="Four curves in billion euros, from 1995 to 2024: health and education rise steadily and stay the highest; interest paid, long flat then falling, climbs after 2020 and moves back above the public order and safety function." >}}Eurostat, interest paid and general government expenditure by function. Every series stops at the same vintage.{{< /figure-svg >}}
 {{< fig-actions id="masses" >}}
 
-**What the curve adds to the table.** The four amounts above are a snapshot; their path says something else. For two decades, interest paid stayed below the entire public order and safety function — police, courts, emergency services. It has moved back above it. Health and education are drifting away: they are masses of another order, and the comparison does not say that a euro of interest was taken from them.
+**What the curve adds to the table.** The four amounts above are a snapshot; their path says something else. For two decades, interest paid stayed below the entire public order and safety function — police, courts, emergency services. It has moved back above it. Health and education are drifting away: they are masses of another order.
+
+**One misreading has to be ruled out here.** Over the whole period those three budgets grew **faster** than interest paid: falling rates long lightened the bill while public spending rose. The relation reverses after the {{< dette-val "creux_ref_annee" >}} trough: **+{{< dette-val "croiss_interets_depuis_creux_pct" >}}% for interest**, against at most +{{< dette-val "croiss_fonctions_depuis_creux_pct" >}}% for these three functions. Both things are true at once, and this page does not choose between them: debt has **not** cut these budgets, and its cost has become, since the trough, the fastest-growing item.
+
+One reading caveat: interest is a **type** of spending, the other three are **functions**. Not the same breakdown — interest sits inside the general public services function — and the comparison does not say that a euro of interest was taken from any of these budgets.
 
 These comparisons are about scale, not causation. They show the size of annual debt-service costs relative to public resources — a weight, not a slice taken from another budget.
 
