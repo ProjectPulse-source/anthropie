@@ -1,5 +1,6 @@
 ---
 title: "Glossaire"
+og_title: "Glossaire — les notions, définies et sourcées — S. Lalut"
 description: "Glossaire des termes clés du cadre anthropique."
 og_image: "images/og-glossaire.jpg"
 og_image_alt: "Glossaire — Anthropie. On ne crée pas l'ordre, on déplace le désordre."

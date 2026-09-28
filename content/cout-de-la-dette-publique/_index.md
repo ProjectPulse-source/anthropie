@@ -3,6 +3,7 @@ title: "Combien coûte la dette publique ?"
 description: "Le coût de la dette ne suit pas mécaniquement son volume : pendant environ vingt-cinq ans, l'encours montait pendant que la charge d'intérêts baissait — le coût moyen remonte depuis 2021 et le ciseau se referme depuis 2022. Chiffres officiels INSEE et Eurostat actualisés, et ce que la charge d'intérêts représente face aux budgets de la justice, de l'enseignement et de la santé."
 date: 2026-08-15
 lastmod: 2026-09-21
+og_title: "Combien coûte la dette publique ? — données officielles à jour — S. Lalut"
 og_image: "images/og-cout-dette.jpg"
 og_image_alt: "Carte de partage : « Combien coûte la dette publique ? » — encours de dette et charge d'intérêts en % du PIB, 1995-2025, sources INSEE et Eurostat."
 # Émet le JSON-LD Dataset (partials/schema-dataset-dette.html) : la page ne

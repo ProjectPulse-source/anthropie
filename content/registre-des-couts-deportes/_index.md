@@ -3,6 +3,7 @@ title: "Le Registre des coûts déportés"
 description: "Le Registre des coûts déportés est l'appareil documentaire du livre ANTHROPIE : une chronologie de 168 jalons, des premiers outils (≈ −3,3 millions d'années) aux algorithmes contemporains, qui documente pour chaque innovation l'ordre créé et la dette déportée — le désordre déplacé ailleurs, plus tard ou sur d'autres. Version en ligne en consultation libre, classée selon les sept âges du livre."
 date: 2026-08-15
 lastmod: 2026-08-15
+og_title: "Le Registre des coûts déportés — chronologie documentée — S. Lalut"
 faq:
   - question: "Qu'est-ce que le Registre des coûts déportés ?"
     answer: "Le Registre des coûts déportés est l'appareil documentaire du livre ANTHROPIE — Ordre ici. Dette ailleurs (Stéphane Lalut, 2025) : une chronologie de 168 jalons historiques, des premiers outils (≈ −3,3 millions d'années) aux algorithmes contemporains. Chaque jalon documente, sur la même grille, l'ordre créé par une innovation et la dette déportée — le désordre déplacé vers d'autres lieux, d'autres temps ou d'autres groupes. Une version en ligne est en consultation libre sur cette page."

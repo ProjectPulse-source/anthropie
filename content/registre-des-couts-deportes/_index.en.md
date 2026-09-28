@@ -6,6 +6,7 @@ aliases:
 description: "The Register of Offloaded Costs is the documentary apparatus of the book ANTHROPY: a chronology of 168 milestones, from the first stone tools (≈ 3.3 million years ago) to contemporary algorithms, documenting for each innovation the order created and the debt displaced—elsewhere, later, or onto others. Browsable online in full, organized by the book’s seven ages."
 date: 2026-08-15
 lastmod: 2026-08-15
+og_title: "The Register of Offloaded Costs — documented chronology — S. Lalut"
 faq:
   - question: "What is the Register of Offloaded Costs?"
     answer: "The Register of Offloaded Costs is the documentary apparatus of the book ANTHROPY – A Big History of Civilization's Hidden Costs (Stéphane Lalut, English edition 2026; French original ANTHROPIE, 2025): a chronology of 168 historical milestones, from the first stone tools (≈ 3.3 million years ago) to contemporary algorithms. Each milestone documents, on the same grid, the Order created by an innovation and the Debt displaced—the disorder moved toward other places, other times, or other groups. An English version is freely browsable on this page."

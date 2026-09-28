@@ -3,6 +3,7 @@ title: "La dette publique est-elle un fardeau pour les générations futures ?"
 description: "Pas mécaniquement : les générations suivantes héritent des engagements, mais aussi de ce qu'ils ont financé et d'une partie des titres. Le transfert net dépend de l'usage de la dette et des ajustements choisis. L'objection « on se la doit à nous-mêmes » (Lerner), ses limites, et la question que le débat en volume oublie : la répartition."
 date: 2026-07-24
 lastmod: 2026-09-21
+og_title: "La dette est-elle un fardeau pour les générations futures ? — S. Lalut"
 faq:
   - question: "La dette publique pèse-t-elle vraiment sur les générations futures ?"
     answer: "Pas mécaniquement. Ceux qui héritent de la dette n'ont pas voté l'emprunt, mais ils héritent aussi de ce qu'il a financé et d'une partie des titres eux-mêmes. Le fardeau n'est pas un remboursement massif à venir — les États refinancent leur dette en permanence ; il tient aux transferts que la dette organise pendant qu'elle roule : charge d'intérêts, ajustements budgétaires, héritage. Leur solde pour une génération donnée dépend de ce que la dette a financé et de qui supporte les ajustements."

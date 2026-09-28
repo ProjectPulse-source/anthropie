@@ -1,5 +1,6 @@
 ---
 title: "Glossary"
+og_title: "Glossary — the concepts, defined and sourced — S. Lalut"
 description: "Key terms of the anthropic framework."
 og_image: "images/og-glossaire.en.jpg"
 og_image_alt: "Glossary — Anthropy. Order here. Debt elsewhere."

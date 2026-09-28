@@ -3,6 +3,7 @@ title: "Dette publique : pourquoi les collectivités locales sont-elles la varia
 description: "Quand l'État consolide son budget, une part de sa contrainte peut descendre vers les collectivités : compétences transférées sans financements complets, dotations réduites ou gelées, normes non financées. Les communes, qui ne peuvent pas emprunter pour fonctionner, la reportent sur l'impôt local, les tarifs, les services ou l'investissement. Les mécanismes, leurs conditions, et qui peut en supporter le coût."
 date: 2026-07-24
 lastmod: 2026-09-21
+og_title: "Collectivités locales : la variable d'ajustement de la dette ? — S. Lalut"
 faq:
   - question: "Pourquoi dit-on que les collectivités locales sont la variable d'ajustement du budget de l'État ?"
     answer: "Parce qu'une part de la contrainte budgétaire de l'État peut se déplacer vers elles. Quand l'État réduit son déficit, il peut transférer des compétences sans les financements correspondants, réduire ou geler ses dotations, et imposer des normes que les collectivités financent. Le solde de l'État s'améliore ; une partie de la charge descend d'un étage. L'ampleur de ce report se mesure réforme par réforme."
@@ -18,7 +19,7 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   nature: "Analyse"
 ---
 
-À la question «&nbsp;pourquoi les collectivités locales sont-elles la variable d'ajustement des finances publiques&nbsp;?&nbsp;», la réponse tient à leur position dans la chaîne budgétaire&nbsp;: **quand l'État consolide son budget, une part de sa contrainte peut descendre vers les collectivités, qui ne peuvent pas la reporter sur la dette**. Reste à savoir, commune par commune, qui en supporte le coût.
+À la question «&nbsp;pourquoi les collectivités locales sont-elles la variable d'ajustement des finances publiques&nbsp;?&nbsp;», la réponse tient à leur position dans la chaîne budgétaire&nbsp;: **quand l'État consolide son budget, une part de sa contrainte peut descendre vers les collectivités, qui ne peuvent pas la reporter sur la dette pour financer leur fonctionnement**. Reste à savoir, commune par commune, qui en supporte le coût.
 
 Le débat public sur la dette des collectivités est presque toujours descriptif&nbsp;: encours, règle d'or, part dans la dette nationale. Cette page pose l'autre question, avec le cadre de l'[anthropie](/quest-ce-que-lanthropie/)&nbsp;: par quels mécanismes la charge peut-elle se déplacer de l'État vers les territoires, et des territoires vers qui&nbsp;?
 
@@ -26,7 +27,7 @@ Le débat public sur la dette des collectivités est presque toujours descriptif
 
 La dette des collectivités territoriales est une part minoritaire de l'endettement public, et elle est strictement encadrée&nbsp;: la «&nbsp;règle d'or&nbsp;» leur interdit d'emprunter pour financer leur fonctionnement courant. À première vue, les finances locales sont donc le bon élève du système.
 
-C'est précisément ce verrou qui fait d'elles une variable d'ajustement commode. L'État, lui, peut reporter sa contrainte sur la dette — c'est-à-dire sur l'avenir. Les communes ne le peuvent pas&nbsp;: quand la charge descend vers elles, elles ont trois issues, toutes immédiates — l'impôt local et les tarifs, la coupe dans les services, ou le renoncement à l'investissement. **La contrainte que l'État peut différer dans le temps devient, un étage plus bas, une contrainte que quelqu'un paie tout de suite.**
+C'est précisément ce verrou qui fait d'elles une variable d'ajustement commode. L'État, lui, peut reporter sa contrainte sur la dette — c'est-à-dire sur l'avenir. Les collectivités ne le peuvent que pour investir&nbsp;: la loi impose l'équilibre réel de leur budget, section de fonctionnement comprise, et exclut l'emprunt des ressources qui remboursent le capital des emprunts (article L.&nbsp;1612-4 du code général des collectivités territoriales). Quand la charge descend vers elles, leurs issues sont l'impôt local et les tarifs, la coupe dans les services, le renoncement à l'investissement — ou l'emprunt pour investir, dans la limite de ce que leur épargne permet de rembourser. **La contrainte que l'État peut différer dans le temps devient, un étage plus bas, une contrainte largement immédiate&nbsp;: pour le fonctionnement, quelqu'un la paie dans l'année.**
 
 ## Les trois mécanismes du transfert
 

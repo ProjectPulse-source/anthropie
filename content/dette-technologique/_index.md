@@ -3,6 +3,7 @@ title: "Qu'est-ce que la dette technologique ?"
 description: "La dette technologique désigne le coût des infrastructures numériques — énergie, matière, territoire, attention — transformé en dette par des mécanismes d'engagement. À ne pas confondre avec la « dette technique » du génie logiciel."
 date: 2026-07-04
 lastmod: 2026-07-26
+og_title: "Qu'est-ce que la dette technologique ? — définition et sources — S. Lalut"
 faq:
   - question: "Quelle est la différence entre dette technologique et dette technique ?"
     answer: "La dette technique est une notion de génie logiciel : l'accumulation de compromis de conception dans un programme, qui rend son évolution de plus en plus coûteuse. La dette technologique, au sens de Stéphane Lalut (AWP-06, 2026), est un mécanisme économique et politique : le coût des infrastructures numériques — énergie, matière, territoire, attention — transformé en dette par des engagements de long terme. L'une est une propriété du code ; l'autre, une propriété du système économique."

@@ -3,6 +3,7 @@ title: "Comment l'écriture a-t-elle transformé la pensée ?"
 description: "L'écriture n'a pas seulement noté la pensée : elle l'a transformée — mémoire externalisée, raison graphique, esprit critique. De Platon à l'imprimerie et à l'intelligence artificielle, l'histoire des supports est celle des bascules de notre manière de penser."
 date: 2026-07-25
 lastmod: 2026-07-25
+og_title: "Comment l'écriture a-t-elle transformé la pensée ? — S. Lalut"
 faq:
   - question: "Qu'est-ce que l'écriture a changé dans la pensée humaine ?"
     answer: "Trois choses au moins. Elle a externalisé la mémoire : le savoir survit à celui qui le porte, l'esprit n'a plus à tout retenir. Elle a rendu la pensée inspectable : un texte se relit, se compare, se critique — là où la parole s'enfuit. Et elle a créé des formes de raisonnement impossibles à l'oral : la liste, le tableau, la formule — ce que l'anthropologue Jack Goody a appelé la raison graphique."

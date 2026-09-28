@@ -3,6 +3,7 @@ title: "Qu'est-ce que les communs négatifs ?"
 description: "Les communs négatifs désignent ce dont nous héritons collectivement sans l'avoir choisi : déchets, sols pollués, centrales à démanteler, infrastructures obsolètes. Notion développée par Alexandre Monnin, Emmanuel Bonnet et Diego Landivar — et lecture anthropique de ces héritages."
 date: 2026-07-26
 lastmod: 2026-07-26
+og_title: "Qu'est-ce que les communs négatifs ? — définition et sources — S. Lalut"
 faq:
   - question: "Qu'est-ce qu'un commun négatif ?"
     answer: "Une réalité dont nous héritons collectivement sans l'avoir choisie et dont il faut pourtant prendre soin : déchets nucléaires, sols pollués, centrales à démanteler, ruines industrielles, infrastructures obsolètes. La notion a été développée par Alexandre Monnin avec Emmanuel Bonnet et Diego Landivar (Héritage et fermeture, 2021) : là où les communs d'Elinor Ostrom sont des ressources partagées à entretenir, les communs négatifs sont des charges partagées à gérer, démanteler ou refermer."

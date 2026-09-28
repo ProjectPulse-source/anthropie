@@ -4,6 +4,7 @@ url: /en/anthropic-loop/
 description: "The anthropic loop formalises the cycle of disorder displacement in five moments: displacement, accumulation, saturation, return, re-displacement. It extends K. William Kapp's cost-shifting and is distinct from Bernard Stiegler's neganthropy — and from the AI company Anthropic."
 date: 2026-07-24
 lastmod: 2026-07-24
+og_title: "What is the anthropic loop? — definition, origins and sources — S. Lalut"
 faq:
   - question: "What is the anthropic loop?"
     answer: "The anthropic loop is the formalisation of the central mechanism of anthropy in five moments: a social system displaces its disorder toward a receptacle (E1), the charge accumulates there (E2) until saturation (E3), returns toward the emitting system (E4), which re-displaces toward a new receptacle or reconfigures itself (E5). It is formalised by economist Stéphane Lalut in AWP-07 (2026, DOI 10.5281/zenodo.21200286). The loop never returns to its starting point: each iteration consumes displacement capacity — it is a spiral."

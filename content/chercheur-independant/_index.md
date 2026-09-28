@@ -3,6 +3,7 @@ title: "Chercheur indépendant : travailler et publier hors institution"
 description: "Comment un chercheur indépendant publie-t-il des travaux citables sans affiliation universitaire ? DOI, préprints, identifiants académiques, exigences de méthode — l'infrastructure concrète, et l'analyse de cette position dans le champ académique."
 date: 2026-07-26
 lastmod: 2026-07-26
+og_title: "Chercheur indépendant : publier hors institution — guide — S. Lalut"
 faq:
   - question: "Qu'est-ce qu'un chercheur indépendant ?"
     answer: "Un chercheur qui conduit et publie des travaux de recherche sans affiliation institutionnelle — ni poste universitaire, ni laboratoire. Le terme ne dit rien de la qualité du travail : il décrit une position dans le champ académique. La crédibilité d'un chercheur indépendant repose entièrement sur ce qu'il rend vérifiable — textes datés et citables (DOI), sources, critères de réfutation."

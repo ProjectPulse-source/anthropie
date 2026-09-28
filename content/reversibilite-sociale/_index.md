@@ -3,6 +3,7 @@ title: "Qu'est-ce que la réversibilité sociale ?"
 description: "La réversibilité sociale est la capacité, évaluée avant une tentative, de supporter son éventuel échec sans fermeture durable de son avenir. Ni un stock ni un flux : une troisième dimension de l'inégalité — ce qu'on peut se permettre de rater."
 date: 2026-07-24
 lastmod: 2026-07-24
+og_title: "Qu'est-ce que la réversibilité sociale ? — définition et sources — S. Lalut"
 faq:
   - question: "Qu'est-ce que la réversibilité sociale ?"
     answer: "La capacité, évaluée avant une tentative, de supporter son éventuel échec sans fermeture durable de l'ensemble des options accessibles. Ni un stock (comme le patrimoine), ni un flux (comme la mobilité) : un profil conditionnel d'options récupérables. Le concept est formalisé par l'économiste Stéphane Lalut dans AWP-08 (2026, DOI 10.5281/zenodo.21506320)."

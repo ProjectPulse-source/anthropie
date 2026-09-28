@@ -3,6 +3,7 @@ title: "Qu'est-ce que la boucle anthropique ?"
 description: "La boucle anthropique formalise le cycle du déplacement du désordre en cinq moments : déplacement, accumulation, saturation, retour, re-déplacement. Elle prolonge le cost-shifting de K. William Kapp et se distingue de la néguanthropie de Bernard Stiegler."
 date: 2026-07-24
 lastmod: 2026-07-24
+og_title: "Qu'est-ce que la boucle anthropique ? — définition et sources — S. Lalut"
 faq:
   - question: "Qu'est-ce que la boucle anthropique ?"
     answer: "La boucle anthropique est la formalisation du mécanisme central de l'anthropie en cinq moments : un système social déplace son désordre vers un réceptacle (E1), la charge s'y accumule (E2) jusqu'à saturation (E3), revient vers le système émetteur (E4), qui re-déplace vers un nouveau réceptacle ou se reconfigure (E5). Elle est formalisée par l'économiste Stéphane Lalut dans AWP-07 (2026, DOI 10.5281/zenodo.21200286). La boucle ne revient jamais à son point de départ : chaque itération consomme de la capacité de déportation — c'est une spirale."

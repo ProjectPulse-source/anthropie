@@ -4,6 +4,7 @@ url: /en/social-reversibility/
 description: "Social reversibility is the capacity, assessed before an attempt, to withstand its possible failure without a lasting closure of one's future. Neither a stock nor a flow: a third dimension of inequality — what one can afford to fail."
 date: 2026-07-24
 lastmod: 2026-07-24
+og_title: "What is social reversibility? — definition and sources — S. Lalut"
 faq:
   - question: "What is social reversibility?"
     answer: "The capacity, assessed before an attempt, to withstand its possible failure without lasting closure of the set of accessible options. Neither a stock (like wealth) nor a flow (like mobility): a conditional profile of recoverable options. The concept is formalised by economist Stéphane Lalut in AWP-08 (2026, DOI 10.5281/zenodo.21507249)."

@@ -2,6 +2,7 @@
 title: "La Société du premier coup — sources, compléments et mises à jour"
 date: 2026-07-29
 lastmod: 2026-08-10
+og_title: "La Société du premier coup — sources et compléments du livre — S. Lalut"
 description: "Le compagnon documentaire de La Société du premier coup (Stéphane Lalut, 2026) : le Répertoire des leviers et des pistes, les repères chiffrés du livre avec leurs sources primaires et leur qualification probatoire, les mises à jour et les errata."
 # PAS DE FAQ — volontaire, et c'est structurel.
 # Doctrine GEO-04, déjà démontrée sur /qui-paie-la-dette-publique/ : une question
