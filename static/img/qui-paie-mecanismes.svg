@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 449" role="img" font-variant-numeric="tabular-nums" aria-labelledby="qp-mec-t qp-mec-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="qp-mec-t">Par quels canaux la charge de la dette peut-elle être répartie ?</title>
-<desc id="qp-mec-d">Schéma sans quantités. Quatre mécanismes, non exhaustifs, peuvent modifier la charge de la dette et sa répartition, et se combinent : prélèvements (contribuables), dépenses et prestations (usagers, bénéficiaires), inflation (détenteurs de créances et de revenus mal indexés), restructuration, cas extrême (porteurs des titres). Le refinancement reporte l'échéance sans désigner de perdant. En regard figure ce que la dette a financé.</desc>
+<desc id="qp-mec-d">Schéma sans quantités. Quatre mécanismes, non exhaustifs, peuvent modifier la charge de la dette et sa répartition, et se combinent : prélèvements (contribuables), dépenses et prestations (usagers, bénéficiaires), inflation (détenteurs de créances et de revenus mal indexés), restructuration, cas extrême (porteurs des titres). Le refinancement renouvelle l'échéance aux taux du moment et ne permet pas, à lui seul, d'identifier qui supportera la charge. En regard figure ce que la dette a financé.</desc>
 <text x="0.0" y="22.0" font-size="13" fill="#52514e" text-anchor="start">Par quels canaux la charge de la dette peut-elle être répartie ?</text>
 <defs><marker id="qp-fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#898781"/></marker></defs>
 <rect x="1" y="150" width="200" height="74" rx="6" fill="#ffffff" stroke="#184f95" stroke-width="1.5"/>
@@ -25,8 +25,8 @@
 <line x1="200" y1="187" x2="296" y2="261" stroke="#898781" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#qp-fl)"/>
 <rect x="1" y="44" width="200" height="70" rx="6" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.5" stroke-dasharray="4 3"/>
 <text x="13.0" y="64.0" font-size="12" fill="#2b2a28" text-anchor="start" font-weight="600">Refinancement</text>
-<text x="13.0" y="80.0" font-size="11" fill="#52514e" text-anchor="start">reporte l'échéance ;</text>
-<text x="13.0" y="96.0" font-size="11" fill="#52514e" text-anchor="start">ne désigne aucun perdant</text>
+<text x="13.0" y="80.0" font-size="11" fill="#52514e" text-anchor="start">renouvelle l'échéance</text>
+<text x="13.0" y="96.0" font-size="11" fill="#52514e" text-anchor="start">aux taux du moment</text>
 <line x1="100" y1="150" x2="100" y2="118" stroke="#898781" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#qp-fl)"/>
 <rect x="1" y="316" width="717" height="52" rx="6" fill="#f7f7f4" stroke="#c3c2b7" stroke-width="1.5" stroke-dasharray="4 3"/>
 <text x="13.0" y="336.0" font-size="12" fill="#2b2a28" text-anchor="start" font-weight="600">En regard : ce que la dette a financé</text>

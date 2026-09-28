@@ -33,6 +33,14 @@
    "precaution": "Photographie d'une année, non le bilan d'une génération ni des générations futures ; l'âge du ménage n'est pas le statut de retraite de ses membres."
   },
   {
+   "id": "exposition",
+   "fichier": "qui-paie-exposition",
+   "titre": "Un même effort de 10 milliards d'euros : qui le supporterait selon la décision prise ?",
+   "montre": "Ce qu'un même effort représenterait pour chaque dixième de niveau de vie selon la décision retenue — impôts, pensions ou enseignement —, puis de combien ce choix change l'effort d'un même groupe.",
+   "source": "Insee, comptes nationaux distribués, tableau CND.101 (vingtièmes de niveau de vie, 2020-2023, base 2020) — millésime 2023",
+   "precaution": "Profil d'exposition comptable, non une simulation : ni comportement ni effet en retour. Une baisse de service valorisé n'est pas une perte de revenu monétaire. Le point D1 de la décision fiscale est écarté, son motif figure au cartouche."
+  },
+  {
    "id": "mecanismes",
    "fichier": "qui-paie-mecanismes",
    "titre": "Par quels canaux la charge peut-elle être répartie ?",

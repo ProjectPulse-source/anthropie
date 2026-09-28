@@ -1,7 +1,25 @@
 {
  "_licence": "Compilation Stéphane Lalut, CC BY 4.0 (assemblage, grandeurs dérivées, mise en cohérence). Données d'origine : INSEE (Licence Ouverte Etalab), Banque de France via l'Agence France Trésor, sous leurs propres conditions.",
- "_genere_le": "2026-09-28",
+ "_genere_le": "2026-09-29",
  "affichage": {
+  "exp_effort": "10",
+  "exp_ens_d1": "2,75",
+  "exp_ens_d10": "0,21",
+  "exp_fisc_d10": "1,14",
+  "exp_pens_min": "0,43",
+  "exp_pens_max": "0,78",
+  "exp_ecart_d1": "5,5",
+  "exp_ecart_d10": "5,5",
+  "exp_ecart_creux": "1,4",
+  "exp_creux_dixieme": "D7",
+  "exp_creux_zone": "D7-D8",
+  "exp_cv_creux": "0,14",
+  "exp_cv_d10": "0,67",
+  "exp_creux_millesimes": "D7 ou D8",
+  "exp_masse_ens": "57,8",
+  "exp_masse_fisc": "14,6",
+  "exp_millesimes": "2020-2023",
+  "exp_part_ir_v1": "60",
   "releve_le": "21 septembre 2026",
   "net_bascule": "D8",
   "net_benef_n": "7",
@@ -165,6 +183,7 @@
    58400,
    -1400
   ],
+  "transferts_nets_convention_signe": "Convention Insee : valeur POSITIVE = le groupe verse plus qu'il ne reçoit (contributeur net) ; valeur NÉGATIVE = il reçoit plus qu'il ne verse (bénéficiaire net). D1 vaut -20800 et D10 +58400 en 2023.",
   "part_beneficiaires_nets_pct": [
    98.62,
    96.61,
@@ -218,6 +237,229 @@
    "publication": "Insee Analyses n° 118, 16/04/2026, figures 1c, 1e, 2a et 2b",
    "url": "https://www.insee.fr/fr/statistiques/8974371",
    "sha256_fichier": "6f5f27809be12e192afdca5008022a0e0c63f832869d29be8dc837abbdeec0eb"
+  }
+ },
+ "exposition": {
+  "unite": "% du revenu disponible net du dixième",
+  "effort_mdeur": 10.0,
+  "colonnes": [
+   "D1",
+   "D2",
+   "D3",
+   "D4",
+   "D5",
+   "D6",
+   "D7",
+   "D8",
+   "D9",
+   "D10"
+  ],
+  "millesime": "2023",
+  "decisions": {
+   "fiscal": "hausse des impôts courants sur les revenus et le patrimoine (CSG, impôt sur le revenu, autres), au prorata des montants existants. ATTENTION : dans la nomenclature des comptes distribués, le poste « impôt sur le revenu » est pris HORS CRÉDIT D'IMPÔT (CND.4.2), les crédits d'impôt étant classés ailleurs, en subventions sur les produits (CND.11.2.3 pour les services à la personne). Ce scénario porte donc sur un impôt BRUT de crédits, ce qui pèse surtout en bas de distribution — une raison de plus d'écarter le point D1.",
+   "pensions": "baisse des pensions de retraite, au prorata",
+   "enseignement": "baisse des dépenses d'enseignement attribuées aux ménages, au prorata"
+  },
+  "taux": {
+   "fiscal": [
+    null,
+    0.178,
+    0.24,
+    0.303,
+    0.35,
+    0.406,
+    0.463,
+    0.546,
+    0.675,
+    1.143
+   ],
+   "pensions": [
+    0.502,
+    0.657,
+    0.781,
+    0.718,
+    0.699,
+    0.705,
+    0.647,
+    0.608,
+    0.568,
+    0.429
+   ],
+   "enseignement": [
+    2.749,
+    1.367,
+    1.056,
+    0.792,
+    0.684,
+    0.577,
+    0.49,
+    0.431,
+    0.351,
+    0.208
+   ]
+  },
+  "ecart_entre_decisions": [
+   5.48,
+   7.7,
+   4.4,
+   2.61,
+   1.99,
+   1.74,
+   1.4,
+   1.41,
+   1.92,
+   5.5
+  ],
+  "ecart_entre_decisions_note": "Rapport entre la décision la plus lourde et la plus légère pour le groupe. En D1, calculé sur deux décisions seulement (point fiscal écarté) : c'est une BORNE INFÉRIEURE, un troisième point ne pourrait qu'élever le maximum ou abaisser le minimum.",
+  "autres_mesures_de_dispersion": {
+   "max_min": [
+    5.478,
+    7.701,
+    4.404,
+    2.614,
+    1.994,
+    1.737,
+    1.399,
+    1.412,
+    1.925,
+    5.499
+   ],
+   "coef_variation": [
+    0.691,
+    0.666,
+    0.49,
+    0.356,
+    0.279,
+    0.218,
+    0.152,
+    0.139,
+    0.254,
+    0.673
+   ],
+   "etendue_sur_moyenne": [
+    1.383,
+    1.621,
+    1.179,
+    0.809,
+    0.603,
+    0.532,
+    0.346,
+    0.336,
+    0.611,
+    1.577
+   ]
+  },
+  "creux_par_mesure": {
+   "max_min": "D7",
+   "coef_variation": "D8",
+   "etendue_sur_moyenne": "D8"
+  },
+  "creux_par_millesime_et_mesure": {
+   "2020": {
+    "max_min": "D7",
+    "coef_variation": "D8",
+    "etendue_sur_moyenne": "D7"
+   },
+   "2021": {
+    "max_min": "D7",
+    "coef_variation": "D7",
+    "etendue_sur_moyenne": "D7"
+   },
+   "2022": {
+    "max_min": "D8",
+    "coef_variation": "D8",
+    "etendue_sur_moyenne": "D8"
+   },
+   "2023": {
+    "max_min": "D7",
+    "coef_variation": "D8",
+    "etendue_sur_moyenne": "D8"
+   }
+  },
+  "note_sur_les_mesures": "Trois mesures DISTINCTES de dispersion appliquées aux mêmes trois observations : elles se corroborent, elles ne constituent pas trois observations indépendantes. Leur minimum tombe en D7 ou en D8 selon la mesure et selon le millésime — c'est une zone, pas un dixième.",
+  "part_de_l_effort_recue_par_d1_d5_pct": {
+   "fiscal": 14.6,
+   "pensions": 35.9,
+   "enseignement": 57.8
+  },
+  "stabilite_2020_2023": {
+   "2020": {
+    "ratios": [
+     10.19,
+     9.0,
+     4.83,
+     3.04,
+     2.23,
+     1.86,
+     1.48,
+     1.52,
+     2.19,
+     5.77
+    ],
+    "creux_en": "D7"
+   },
+   "2021": {
+    "ratios": [
+     6.72,
+     8.1,
+     4.21,
+     2.81,
+     1.97,
+     1.79,
+     1.41,
+     1.54,
+     2.05,
+     5.24
+    ],
+    "creux_en": "D7"
+   },
+   "2022": {
+    "ratios": [
+     8.82,
+     8.38,
+     4.33,
+     2.56,
+     2.02,
+     1.73,
+     1.38,
+     1.29,
+     2.08,
+     5.34
+    ],
+    "creux_en": "D8"
+   },
+   "2023": {
+    "ratios": [
+     8.84,
+     7.7,
+     4.4,
+     2.61,
+     1.99,
+     1.74,
+     1.4,
+     1.41,
+     1.92,
+     5.5
+    ],
+    "creux_en": "D7"
+   }
+  },
+  "point_ecarte": {
+   "ou": "D1, décision fiscale",
+   "motif": "l'impôt sur le revenu du premier vingtième pèse 60 % du poste fiscal de ce dixième alors que les vingtièmes voisins sont à zéro, et varie de 1 à 2.9 sur 2020-2023",
+   "valeurs_ir_v1_mdeur": {
+    "2020": 1.7,
+    "2021": 4.9,
+    "2022": 2.3,
+    "2023": 2.7
+   }
+  },
+  "nature": "Profil d'exposition comptable, non une simulation : l'effort est réparti au prorata des montants existants, sans comportement ni effet en retour. Une baisse de service valorisé n'est pas une perte de revenu monétaire.",
+  "temoin_croise_avec_IA118_mdeur": 0.1,
+  "source": {
+   "publication": "Insee, comptes nationaux distribués, tableau CND.101 (vingtièmes de niveau de vie, 2020-2023, base 2020)",
+   "url": "https://www.insee.fr/fr/statistiques/8574663",
+   "sha256_fichier": "8e4d2ec005e9351f7105c796ac2e0ae8afc1f53b70b165d04f9387ed8cf838ef"
   }
  }
 }

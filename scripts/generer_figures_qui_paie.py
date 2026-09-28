@@ -61,6 +61,16 @@ XLSX = REPO / "scripts" / "sources" / "insee_IA118_comptes_distribues_2023.xlsx"
 XLSX_SHA256 = "6f5f27809be12e192afdca5008022a0e0c63f832869d29be8dc837abbdeec0eb"
 XLSX_URL = "https://www.insee.fr/fr/statistiques/8974371"
 
+# F6 — profil d'exposition. Tableau CND.101 : comptes distribués par VINGTIÈME de
+# niveau de vie, avec une feuille par année de 2020 à 2023. Le classeur IA118
+# ci-dessus ne porte que 2023 ; sans les quatre millésimes, la figure ne pourrait
+# pas dire que son résultat est structurel plutôt que conjoncturel.
+XLSX_CND = REPO / "scripts" / "sources" / "insee_T_CND_101_vingtiemes_2020_2023.xlsx"
+XLSX_CND_SHA256 = "8e4d2ec005e9351f7105c796ac2e0ae8afc1f53b70b165d04f9387ed8cf838ef"
+XLSX_CND_URL = "https://www.insee.fr/fr/statistiques/8574663"
+CND_ANNEES = ("2020", "2021", "2022", "2023")
+EFFORT_MDEUR = 10.0
+
 # DATE DE RELEVÉ DES SOURCES, publiée dans la citation prête à copier du bloc
 # « Réutiliser ». Elle était écrite à la main et ne s'appuyait sur RIEN : le XLSX
 # de l'Insee avait bien sa garde d'empreinte, le registre du livre n'en avait
@@ -257,6 +267,191 @@ def lire_insee() -> dict:
             "sha256": sha}
 
 
+def lire_cnd(d_ia118: dict) -> dict:
+    """Profil d'exposition par dixième, sur les quatre millésimes de CND.101.
+
+    Répartir un effort de 10 Md€ au prorata d'un poste puis le rapporter au revenu
+    revient à afficher le PROFIL du poste dans le revenu, à une constante près par
+    courbe. Aucun comportement, aucune élasticité, aucun effet en retour : c'est ce
+    qui rend le résultat robuste, et c'est pourquoi la figure dit « profil
+    d'exposition » et jamais « simulation ».
+
+    Quatre gardes, toutes bloquantes, et toutes AVANT le résultat :
+      G1  la structure du tableau est la même d'une année à l'autre ;
+      G2  témoin croisé — le millésime 2023 de CND.101 est confronté au classeur
+          IA118, qui est une AUTRE publication de la même source ;
+      G3  le U — test écrit d'avance : le creux tombe dans D5-D9 et les deux
+          extrémités valent au moins deux fois ce creux, les quatre années ;
+      G4  la cellule atypique qui fait écarter le point D1 du scénario fiscal est
+          TOUJOURS atypique. C'est la condition de mort de cet écartement : si
+          l'Insee la corrige, la réserve n'a plus d'objet et la figure doit être
+          refaite au lieu de continuer à retirer un point valide.
+    """
+    if not XLSX_CND.is_file():
+        fail("tableau CND.101 absent : %s" % XLSX_CND)
+    sha = hashlib.sha256(XLSX_CND.read_bytes()).hexdigest()
+    if sha != XLSX_CND_SHA256:
+        fail("empreinte du tableau CND.101 changée (%s) : relire la source, refaire les "
+             "contrôles du § 4.3 de l'arbitrage, puis mettre à jour XLSX_CND_SHA256" % sha[:12])
+    import openpyxl
+    wb = openpyxl.load_workbook(XLSX_CND, data_only=True)
+
+    postes = {"csg": "Contribution sociale", "ir": "Impôt sur le revenu",
+              "autres": "Autres impôts sur les revenus", "pensions": "Pensions de retraite",
+              "enseignement": "Enseignement", "rdn": "Revenu disponible net (RDN)"}
+
+    def lire_an(an: str) -> tuple[dict, dict]:
+        vals, rangs = {}, {}
+        lignes = list(wb["CND_" + an].iter_rows(values_only=True))
+        for cle, debut in postes.items():
+            trouve = [(i, r) for i, r in enumerate(lignes, 1)
+                      if r[0] and str(r[0]).strip().startswith(debut)]
+            if not trouve:
+                fail("CND_%s : ligne « %s » introuvable" % (an, debut))
+            i, r = trouve[0]
+            v = [abs(float(x)) if isinstance(x, (int, float)) else 0.0 for x in r[1:21]]
+            if len(v) != 20:
+                fail("CND_%s : « %s » sur %d vingtièmes au lieu de 20" % (an, debut, len(v)))
+            vals[cle], rangs[cle] = v, i
+        return vals, rangs
+
+    brut = {an: lire_an(an) for an in CND_ANNEES}
+    ref = brut["2023"][1]
+    for an in CND_ANNEES:                                                    # G1
+        if brut[an][1] != ref:
+            fail("CND.101 : la structure de %s diffère de celle de 2023 (%s contre %s) — "
+                 "les lignes ne peuvent plus être lues par leur libellé sans vérification"
+                 % (an, brut[an][1], ref))
+
+    # G2 — témoin croisé. IA118 porte une colonne « Ensemble » en tête, CND.101 non.
+    ia = {}
+    import openpyxl as _o
+    wb118 = _o.load_workbook(XLSX, data_only=True)
+    for cle, debut in postes.items():
+        for r in wb118["Tableau complémentaire"].iter_rows(values_only=True):
+            if r[0] and str(r[0]).strip().startswith(debut):
+                ia[cle] = [abs(float(x)) if isinstance(x, (int, float)) else 0.0
+                           for x in r[2:22]]
+                break
+        else:
+            fail("IA118 : ligne « %s » introuvable pour le témoin croisé" % debut)
+    ecart = max(max(abs(a - b) for a, b in zip(ia[c], brut["2023"][0][c])) for c in postes)
+    if ecart > 0.15:
+        fail("témoin croisé : CND.101 et IA118 divergent de %.2f Md€ sur 2023 alors qu'ils "
+             "publient la même source — l'un des deux fichiers n'est pas celui qu'on croit"
+             % ecart)
+
+    def dix(v20: list) -> list:
+        return [v20[2 * i] + v20[2 * i + 1] for i in range(10)]
+
+    def profil(an: str, ecarter_d1_fiscal: bool) -> dict:
+        v = brut[an][0]
+        rdn = dix(v["rdn"])
+        fisc = [v["csg"][i] + v["ir"][i] + v["autres"][i] for i in range(20)]
+        out = {}
+        for nom, poste in (("fiscal", fisc), ("pensions", v["pensions"]),
+                           ("enseignement", v["enseignement"])):
+            p = dix(poste)
+            out[nom] = [100 * (EFFORT_MDEUR * p[i] / sum(p)) / rdn[i] for i in range(10)]
+        out["_masse_d1_d5"] = {nom: 100 * sum(dix(poste)[:5]) / sum(dix(poste))
+                               for nom, poste in (("fiscal", fisc), ("pensions", v["pensions"]),
+                                                  ("enseignement", v["enseignement"]))}
+        if ecarter_d1_fiscal:
+            out["fiscal"][0] = None
+        return out
+
+    def ratios(p: dict) -> list:
+        out = []
+        for i in range(10):
+            v = [p[n][i] for n in ("fiscal", "pensions", "enseignement") if p[n][i] is not None]
+            out.append(max(v) / min(v))
+        return out
+
+    # G3 — le U, sur les données BRUTES : le test ne doit rien devoir au point écarté.
+    stab = {}
+    for an in CND_ANNEES:
+        r = ratios(profil(an, False))
+        creux = min(r[4:9])
+        imin = r.index(min(r))
+        if not 4 <= imin <= 8:
+            fail("le creux de l'écart entre décisions tombe en D%d en %s, hors de D5-D9 : "
+                 "la figure ne peut plus dire que le milieu est le moins sensible"
+                 % (imin + 1, an))
+        if not (r[0] >= 2 * creux and r[9] >= 2 * creux):
+            fail("en %s, les extrémités ne valent plus le double du creux (D1 %.1f, D10 %.1f, "
+                 "creux %.1f) : le U ne se lit plus" % (an, r[0], r[9], creux))
+        stab[an] = {"ratios": [round(x, 2) for x in r], "creux_en": "D%d" % (imin + 1)}
+
+    p23 = profil("2023", True)
+    r23 = ratios(p23)
+    # G4 — condition de mort de l'écartement du point D1 fiscal.
+    ir = brut["2023"][0]["ir"]
+    if not (ir[0] > 0.5 and ir[1] + ir[2] < 0.2):
+        fail("l'impôt sur le revenu du premier vingtième n'est plus atypique (V1 %.1f, "
+             "V2+V3 %.1f) : l'écartement du point D1 du scénario fiscal n'a plus de motif, "
+             "la figure et son cartouche doivent être refaits" % (ir[0], ir[1] + ir[2]))
+    if not (p23["enseignement"][0] > p23["pensions"][0]
+            and p23["fiscal"][9] > p23["enseignement"][9]):
+        fail("l'inversion que la figure démontre n'est plus dans les données : "
+             "enseignement D1 %.2f, pensions D1 %.2f, fiscal D10 %.2f, enseignement D10 %.2f"
+             % (p23["enseignement"][0], p23["pensions"][0],
+                p23["fiscal"][9], p23["enseignement"][9]))
+    # G5 — le creux ne doit rien au choix de la mesure. Le rapport max/min est une
+    # mesure de dispersion parmi d'autres ; si le creux changeait de place avec le
+    # coefficient de variation ou l'étendue rapportée à la moyenne, il serait un
+    # artefact de la mesure et non un fait sur les données. Contrôle demandé par la
+    # contre-expertise du 29/09, qui l'avait fait de son côté sur le millésime 2023.
+    def dispersions(p: dict) -> dict:
+        out = {"max_min": [], "coef_variation": [], "etendue_sur_moyenne": []}
+        for i in range(10):
+            v = [p[n][i] for n in ("fiscal", "pensions", "enseignement") if p[n][i] is not None]
+            moy = sum(v) / len(v)
+            var = sum((x - moy) ** 2 for x in v) / len(v)
+            out["max_min"].append(max(v) / min(v))
+            out["coef_variation"].append(var ** 0.5 / moy)
+            out["etendue_sur_moyenne"].append((max(v) - min(v)) / moy)
+        return out
+    # Les QUATRE millésimes, et non le seul 2023 : la garde couvrait une année pendant
+    # que le cartouche parlait de quatre, ce qu'un lecteur pouvait lire comme « trois
+    # mesures sur quatre millésimes ». La preuve suit maintenant l'affirmation
+    # (contre-expertise du 29/09, second tour).
+    disp_an = {an: dispersions(profil(an, False)) for an in CND_ANNEES}
+    disp23 = dispersions(profil("2023", True))
+    # D1 ne compare que deux leviers dans la figure : il est hors comparaison de mesures.
+    creux_par_mesure = {m: "D%d" % (2 + v[1:].index(min(v[1:]))) for m, v in disp23.items()}
+    creux_an_mesure = {an: {m: "D%d" % (2 + v[1:].index(min(v[1:]))) for m, v in d.items()}
+                       for an, d in disp_an.items()}
+    hors_zone = {(an, m): dx for an, d in creux_an_mesure.items()
+                 for m, dx in d.items() if dx not in ("D7", "D8")}
+    # La ZONE, et non le dixième exact : D7 et D8 sont à égalité de fait (1,40 contre
+    # 1,41 en rapport, 0,15 contre 0,14 en coefficient de variation), et le minimum
+    # bascule de l'un à l'autre selon la mesure comme il bascule selon le millésime.
+    # C'est bien ce que la figure affirme — un creux en D7-D8 —, donc ce que la garde
+    # doit vérifier ; exiger le même dixième exact ferait échouer la chaîne sur un
+    # écart sans portée.
+    if hors_zone:
+        fail("le creux de dispersion sort de D7-D8 pour %s : il dépendrait de la mesure ou du "
+             "millésime, et la figure ne peut plus l'affirmer"
+             % "; ".join("%s / %s -> %s" % (a, m, d) for (a, m), d in hors_zone.items()))
+
+    creux_partout = sorted({v["creux_en"] for v in stab.values()})
+    # Poids de la cellule atypique dans le poste fiscal du premier dixième, et son
+    # amplitude sur les quatre millésimes : les deux chiffres du cartouche, calculés
+    # ici plutôt qu'écrits à la main dans la figure.
+    v23 = brut["2023"][0]
+    fisc_d1 = (v23["csg"][0] + v23["ir"][0] + v23["autres"][0]
+               + v23["csg"][1] + v23["ir"][1] + v23["autres"][1])
+    ir_par_an = {an: brut[an][0]["ir"][0] for an in CND_ANNEES}
+    return {"p": p23, "ratios": r23, "stabilite": stab, "creux_partout": creux_partout,
+            "dispersions": disp23, "creux_par_mesure": creux_par_mesure,
+            "creux_an_mesure": creux_an_mesure,
+            "ir_v1": ir[0], "part_ir_v1": 100 * ir[0] / fisc_d1,
+            "ir_v1_par_an": ir_par_an,
+            "ir_v1_amplitude": max(ir_par_an.values()) / min(ir_par_an.values()),
+            "masse_d1_d5": p23["_masse_d1_d5"],
+            "temoin_croise_mdeur": round(ecart, 2), "sha256": sha}
+
+
 # ------------------------------------------------------------------ F1
 def svg_detention(r: dict) -> tuple[str, int]:
     ss, det, total = r["ss"], r["det"], r["total"]
@@ -296,10 +491,16 @@ def svg_detention(r: dict) -> tuple[str, int]:
     corps.append(txt(0, y + 16, "Valeur de marché, en % · classement par résidence du détenteur, "
                      "non par nationalité", TY_AXE, MUTED))
     y += 34
-    noms = {"Autres (français)": "Autres porteurs français *",
-            "Établissements de crédit français": "Banques françaises",
-            "Assureurs français": "Assureurs français",
-            "OPCVM français": "Fonds (OPCVM) français"}
+    # « Résidents » et non « français » : la source classe par RÉSIDENCE du porteur, ce
+    # que le sous-titre dit déjà. Garder « français » à côté de cette note faisait dire
+    # à la figure le contraire de sa propre légende — une filiale résidente d'un groupe
+    # étranger est ici résidente, un Français installé hors de France ne l'est pas.
+    # Correction sur contre-expertise du 29/09 ; les libellés du registre du livre, eux,
+    # ne bougent pas : le renommage est d'affichage.
+    noms = {"Autres (français)": "Autres porteurs résidents *",
+            "Établissements de crédit français": "Banques résidentes",
+            "Assureurs français": "Assureurs résidents",
+            "OPCVM français": "Fonds (OPCVM) résidents"}
     domin_b = max(x["pct"] for x in det)
     for d in det:
         w = max(2.0, larg * d["pct"] / domin_b)
@@ -610,9 +811,12 @@ def svg_mecanismes() -> tuple[str, int]:
         c += boite(300, y, 418, 50, [(tit, TY_ANNOT, INK, True), (qui, TY_AXE, INK2, False)])
         c += fleche(200, 187, 296, y + 25)
         y += 64
+    # « Renouvelle », et non « reporte » : un titre remboursé est remplacé par un titre
+    # neuf, au taux du moment — l'échéance recule, la charge peut monter ou baisser.
+    # « Reporte » suggérait une opération neutre qu'elle n'est pas (contre-expertise 29/09).
     c += boite(1, 44, 200, 70, [("Refinancement", TY_ANNOT, INK, True),
-                                ("reporte l'échéance ;", TY_AXE, INK2, False),
-                                ("ne désigne aucun perdant", TY_AXE, INK2, False)], tiret=True)
+                                ("renouvelle l'échéance", TY_AXE, INK2, False),
+                                ("aux taux du moment", TY_AXE, INK2, False)], tiret=True)
     c += fleche(100, 150, 100, 118)
     c += boite(1, 316, 717, 52, [("En regard : ce que la dette a financé", TY_ANNOT, INK, True),
                                  ("services, prestations, investissements, soutien en crise — "
@@ -623,8 +827,9 @@ def svg_mecanismes() -> tuple[str, int]:
     desc = ("Schéma sans quantités. Quatre mécanismes, non exhaustifs, peuvent modifier la charge de la dette et sa répartition, et "
             "se combinent : prélèvements (contribuables), dépenses et prestations (usagers, "
             "bénéficiaires), inflation (détenteurs de créances et de revenus mal indexés), "
-            "restructuration, cas extrême (porteurs des titres). Le refinancement reporte "
-            "l'échéance sans désigner de perdant. En regard figure ce que la dette a financé.")
+            "restructuration, cas extrême (porteurs des titres). Le refinancement renouvelle "
+            "l'échéance aux taux du moment et ne permet pas, à lui seul, d'identifier qui "
+            "supportera la charge. En regard figure ce que la dette a financé.")
     e = entete(h, "qp-mec", "Par quels canaux la charge de la dette peut-elle être répartie ?",
                desc) + c
     e += cartouche(y, [
@@ -636,8 +841,166 @@ def svg_mecanismes() -> tuple[str, int]:
     return "\n".join(e) + "\n", h
 
 
+# ------------------------------------------------------------------ F6
+def svg_exposition(c: dict) -> tuple[str, int]:
+    """Un même effort, trois décisions — et de combien le choix change l'effort.
+
+    DEUX panneaux, deux grandeurs : A en % du revenu du groupe, B en rapport entre
+    la décision la plus lourde et la plus légère. Le panneau A montre l'inversion,
+    déjà lisible dans la fiche ; le panneau B porte le résultat que rien d'autre ne
+    dit — les extrémités de l'échelle dépendent du levier choisi, la moitié médiane
+    non.
+
+    Couleurs : celles des autres figures du volet, pour la même grandeur. Les
+    prélèvements restent orange, les prestations en espèces (donc les pensions)
+    bleues, les services publics valorisés (donc l'enseignement) gris — c'est la
+    série qui porte la convention d'imputation, ici comme dans la figure 1c.
+    """
+    p, rat = c["p"], c["ratios"]
+    # Les trois décisions se nomment en toutes lettres SOUS le titre du panneau, et
+    # l'étiquette directe ne porte à côté de la courbe que le nom court et sa valeur
+    # terminale : la marge droite fait 162 px, une précision plus longue y serait
+    # coupée — et une étiquette tronquée ment sur la série qu'elle désigne.
+    noms = {"fiscal": ("Impôts", C2),
+            "pensions": ("Pensions", C1),
+            "enseignement": ("Enseignement", SEC)}
+    # Phrase du panneau B, vérifiée avant d'être écrite. Elle disait « ne change presque
+    # rien » : à ×1,4, l'écart entre le levier le plus lourd et le plus léger reste de
+    # 40 % — la formulation promettait une indifférence que les chiffres ne portent pas
+    # (contre-expertise du 29/09, acceptée). Ce que la figure établit est un CREUX DE
+    # DISPERSION, et c'est cela que la garde vérifie : il tombe en D7 ou D8.
+    creux_dixieme = "D%d" % (rat.index(min(rat)) + 1)
+    if creux_dixieme not in ("D7", "D8"):
+        fail("le panneau B nomme D7-D8 comme creux de dispersion : le minimum est en %s"
+             % creux_dixieme)
+
+    ml, mr = 46, 176
+    pas = (W - ml - mr) / 10
+
+    def X(i):
+        return ml + pas * (i + 0.5)
+
+    topA, basA, vmaxA = 104, 300, 3.0
+    kA = (basA - topA) / vmaxA
+
+    def YA(v):
+        return basA - v * kA
+
+    c_ = [txt(0, 22, "Un même effort de 10" + NBSP + "milliards d'euros : qui le supporterait, "
+              "selon la décision prise ?", TY_TITRE, INK2),
+          txt(0, 48, "A · Montant imputé au groupe, en % de son revenu disponible net",
+              TY_ANNOT, INK, weight="600"),
+          txt(0, 64, "Effort réparti au prorata des montants existants de chaque poste "
+              "· dixièmes de niveau de vie, 2023", TY_AXE, MUTED),
+          txt(0, 78, "Décisions comparées : impôts sur les revenus et le patrimoine "
+              "· pensions de retraite · dépenses d'enseignement", TY_AXE, MUTED)]
+    for g in (0, 1, 2, 3):
+        yy = YA(g)
+        c_.append('<line x1="%d" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1"/>'
+                  % (ml, yy, W - mr, yy, AXIS if g == 0 else GRID))
+        c_.append(txt(ml - 6, yy + 4, fr(g) + NBSP + "%", TY_AXE, MUTED, "end"))
+    for cle in ("enseignement", "pensions", "fiscal"):
+        col = noms[cle][1]
+        pts = [(X(i), YA(v)) for i, v in enumerate(p[cle]) if v is not None]
+        c_.append('<polyline points="%s" fill="none" stroke="%s" stroke-width="2.2" '
+                  'stroke-linejoin="round" stroke-linecap="round"/>'
+                  % (" ".join("%.1f,%.1f" % q for q in pts), col))
+        for x, y in pts:
+            c_.append('<circle cx="%.1f" cy="%.1f" r="3.4" fill="%s"/>' % (x, y, col))
+    # Le point écarté se VOIT : marque creuse, sans valeur, motif au cartouche. Le
+    # taire laisserait croire à un trou dans la donnée ; l'afficher plein ferait
+    # porter une affirmation à un chiffre que quatre millésimes démentent.
+    c_.append('<circle cx="%.1f" cy="%.1f" r="3.4" fill="none" stroke="%s" stroke-width="1.6" '
+              'stroke-dasharray="2 2"/>' % (X(0), YA(0.31), C2))
+    c_.append(txt(X(0) + 9, YA(0.31) + 4, "point écarté", TY_AXE - 1, MUTED))
+    c_.append(txt(X(0), YA(p["enseignement"][0]) - 10, fr(p["enseignement"][0], 2) + NBSP + "%",
+                  TY_VALEUR, INK, "middle", weight="600"))
+    c_ += etiquettes_directes(W - mr + 14, [
+        (YA(p[cle][9]) + 4, noms[cle][1], noms[cle][0],
+         "%s%s%% en D10" % (fr(p[cle][9], 2), NBSP))
+        for cle in ("fiscal", "pensions", "enseignement")], topA + 8, basA - 12)
+    for i in range(10):
+        c_.append(txt(X(i), basA + 16, "D%d" % (i + 1), TY_AXE, MUTED, "middle"))
+    c_.append(txt(ml, basA + 32, "← 10" + NBSP + "% les plus modestes", TY_AXE - 1, MUTED))
+    c_.append(txt(W - mr, basA + 32, "10" + NBSP + "% les plus aisés →", TY_AXE - 1, MUTED, "end"))
+
+    topB, basB, vmaxB = 404, 504, 8.0
+    kB = (basB - topB) / (vmaxB - 1)
+
+    def YB(v):
+        return basB - (v - 1) * kB
+
+    c_.append(txt(0, 364, "B · De combien le choix de la décision change l'effort d'un même "
+                  "groupe", TY_ANNOT, INK, weight="600"))
+    c_.append(txt(0, 380, "Rapport entre la décision la plus lourde et la plus légère pour ce "
+                  "groupe · base 1 : aucun écart", TY_AXE, MUTED))
+    # Bande d'événement : la zone que la figure démontre, libellée SOUS elle.
+    c_.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="#f0efe9"/>'
+              % (X(4) - pas / 2, topB - 6, pas * 5, basB - topB + 6))
+    for g in (1, 2, 4, 6, 8):
+        yy = YB(g)
+        c_.append('<line x1="%d" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1"/>'
+                  % (ml, yy, W - mr, yy, AXIS if g == 1 else GRID))
+        c_.append(txt(ml - 6, yy + 4, "×" + fr(g), TY_AXE, MUTED, "end"))
+    creux = min(rat)
+    for i, v in enumerate(rat):
+        h_ = max((v - 1) * kB, 2.0)
+        fort = v == creux
+        # Une seule teinte pour toutes les barres : la charte compte deux couleurs de
+        # données, et une barre d'encre en ferait une troisième. Le creux se marque par
+        # la typographie et par la bande de fond, pas par une couleur de plus.
+        c_.append('<rect x="%.1f" y="%.1f" width="34" height="%.1f" rx="2" fill="%s"/>'
+                  % (X(i) - 17, basB - h_, h_, SEC))
+        # D1 ne compare que deux leviers, le troisième étant écarté : ce qu'on lit là
+        # est une BORNE INFÉRIEURE, puisqu'un troisième point ne pourrait qu'élever le
+        # maximum ou abaisser le minimum. L'écrire « ≥ » est plus exact, et plus fort :
+        # l'affirmation tient quelle que soit la valeur du point manquant.
+        borne = i == 0 and any(p[k][0] is None for k in p if not k.startswith("_"))
+        c_.append(txt(X(i), basB - h_ - 7, ("≥ ×" if borne else "×") + fr(v, 1),
+                      TY_ANNOT if fort else TY_AXE - 1, INK if fort else INK2, "middle",
+                      weight="600" if fort else None))
+        c_.append(txt(X(i), basB + 16, "D%d" % (i + 1), TY_AXE,
+                      INK if fort else MUTED, "middle", weight="600" if fort else None))
+    c_.append(txt(X(6), basB + 34, "D7-D8 : dispersion minimale entre les trois leviers",
+                  TY_AXE, INK2, "middle"))
+    c_.append(txt(X(6), basB + 48, "le levier choisi y différencie le moins les ménages",
+                  TY_AXE, INK2, "middle"))
+    y = basB + 62
+    lignes = [
+        ("Insee, comptes nationaux distribués, tableau CND.101 (millésime 2023, base 2020) "
+         "· France, dixièmes de niveau de vie usuel", INK2),
+        ("Profil d'exposition, non une simulation : ni comportement, ni effet en retour. Une "
+         "baisse de service valorisé n'est pas une perte de revenu monétaire.", INK2),
+        ("Point D1 des impôts écarté : l'impôt sur le revenu du premier vingtième y pèse "
+         "%s%s%% du poste quand les vingtièmes voisins sont à zéro, et varie de 1 à %s "
+         "selon le millésime." % (fr(c["part_ir_v1"]), NBSP, fr(c["ir_v1_amplitude"], 1)), INK2),
+        ("D1 porte « ≥ » : l'écart y est calculé sur les deux leviers conservés — c'est une borne "
+         "inférieure, un troisième point ne pourrait que l'élever.", INK2),
+        ("Le creux se situe en %s sur les quatre millésimes 2020-2023, et dans la même zone avec "
+         "trois mesures de dispersion." % " ou ".join(c["creux_partout"]), INK2),
+        ("Compilation Stéphane Lalut, CC BY 4.0 · " + URL_PAGE, MUTED)]
+    h = int(y + 13 + 12 * len(lignes) + 8)
+    desc = ("Deux panneaux. A : pour un effort de 10 milliards d'euros réparti au prorata de "
+            "chaque poste, la part du revenu disponible net que représenterait ce montant pour "
+            "chaque dixième de niveau de vie, en 2023. Une baisse des dépenses d'enseignement "
+            "pèse %s %% du revenu du premier dixième et %s %% du dernier ; une hausse des impôts "
+            "sur les revenus et le patrimoine, %s %% du dernier ; les pensions restent entre "
+            "%s et %s %%. B : le rapport entre la décision la plus lourde et la plus légère pour "
+            "un même groupe, en base 1. Il vaut %s au dernier dixième et au moins autant au "
+            "premier, et descend à %s en D7-D8 : c'est là que le levier retenu différencie le "
+            "moins les ménages." % (
+                fr(p["enseignement"][0], 2), fr(p["enseignement"][9], 2), fr(p["fiscal"][9], 2),
+                fr(min(p["pensions"]), 2), fr(max(p["pensions"]), 2),
+                "×" + fr(max(rat[0], rat[9]), 1), "×" + fr(creux, 1)))
+    e = entete(h, "qp-exp", "Un même effort de 10 milliards d'euros : qui le supporterait "
+               "selon la décision prise ?", desc) + c_
+    e += cartouche(y, lignes)
+    e.append("</svg>")
+    return "\n".join(e) + "\n", h
+
+
 # ------------------------------------------------------------------ texte
-def affichage(r: dict, d: dict) -> dict:
+def affichage(r: dict, d: dict, c: dict) -> dict:
     ss = {s["libelle"]: s["mdeur"] for s in r["ss"]}
     det = {x["libelle"]: x["pct"] for x in r["det"]}
     etat_pct = 100 * ss["État"] / r["total"]
@@ -671,7 +1034,40 @@ def affichage(r: dict, d: dict) -> dict:
     age = d["age"]
     if not (age["esp"][4] > age["esp"][0] and -age["prel"][4] < -age["prel"][0]):
         fail("la page dit que les 65 ans ou plus reçoivent plus et versent moins que les 18-29 ans")
-    return {
+    # Section « Selon la décision prise… » : ses trois affirmations, contrôlées ici.
+    p, rat = c["p"], c["ratios"]
+    pens = p["pensions"]
+    if not max(pens) / min(pens) < 2:
+        fail("la page dit que le poids d'une baisse des pensions reste dans une bande étroite : "
+             "il va de %.2f à %.2f %%" % (min(pens), max(pens)))
+    if not c["masse_d1_d5"]["enseignement"] > 2 * c["masse_d1_d5"]["fiscal"]:
+        fail("la page oppose la part de l'effort qui reviendrait à la moitié la moins aisée selon "
+             "la décision : enseignement %.1f %%, impôts %.1f %%"
+             % (c["masse_d1_d5"]["enseignement"], c["masse_d1_d5"]["fiscal"]))
+    creux = min(rat)
+    icreux = rat.index(creux)
+    if not (rat[0] > 2 * creux and rat[9] > 2 * creux):
+        fail("la page dit que le choix de la décision pèse aux deux extrémités et non au milieu")
+    if c["creux_par_mesure"]["max_min"] != "D%d" % (icreux + 1):
+        fail("la page nomme %s comme creux ; le rapport max/min le place en %s"
+             % ("D%d" % (icreux + 1), c["creux_par_mesure"]["max_min"]))
+    exp = {
+        "exp_effort": "10",
+        "exp_ens_d1": fr(p["enseignement"][0], 2), "exp_ens_d10": fr(p["enseignement"][9], 2),
+        "exp_fisc_d10": fr(p["fiscal"][9], 2),
+        "exp_pens_min": fr(min(pens), 2), "exp_pens_max": fr(max(pens), 2),
+        "exp_ecart_d1": fr(rat[0], 1), "exp_ecart_d10": fr(rat[9], 1),
+        "exp_ecart_creux": fr(creux, 1), "exp_creux_dixieme": "D%d" % (icreux + 1),
+        "exp_creux_zone": "D7-D8",
+        "exp_cv_creux": fr(min(c["dispersions"]["coef_variation"][1:]), 2),
+        "exp_cv_d10": fr(c["dispersions"]["coef_variation"][9], 2),
+        "exp_creux_millesimes": " ou ".join(c["creux_partout"]),
+        "exp_masse_ens": fr(c["masse_d1_d5"]["enseignement"], 1),
+        "exp_masse_fisc": fr(c["masse_d1_d5"]["fiscal"], 1),
+        "exp_millesimes": "2020-2023",
+        "exp_part_ir_v1": fr(c["part_ir_v1"]),
+    }
+    return dict(exp, **{
         "releve_le": SOURCES_RELEVEES_LE,
         "net_bascule": "D%d" % (bascule + 1),
         "net_benef_n": fr(bascule),
@@ -695,7 +1091,7 @@ def affichage(r: dict, d: dict) -> dict:
         "ratio_prel": fr(prel[9] / prel[0]),
         "recu_min": fr(min(recus)), "recu_max": fr(max(recus)),
         "solde_uc": fr(-d["solde_uc"]), "solde_mdeur": fr(-d["solde_md"]),
-    }
+    })
 
 
 def main() -> int:
@@ -704,12 +1100,14 @@ def main() -> int:
     except ImportError:
         fail("cairosvg absent : SVG et PNG se produisent ensemble ou pas du tout")
     r, d = lire_registre(), lire_insee()
-    aff = affichage(r, d)
+    c = lire_cnd(d)
+    aff = affichage(r, d, c)
     figs = [("qui-paie-detention", svg_detention(r)),
             ("qui-paie-redistribution", svg_redistribution(d)),
             ("qui-paie-solde-net", svg_solde_net(d)),
             ("qui-paie-age", svg_age(d)),
-            ("qui-paie-mecanismes", svg_mecanismes())]
+            ("qui-paie-mecanismes", svg_mecanismes()),
+            ("qui-paie-exposition", svg_exposition(c))]
     for nom, (svg, _h) in figs:
         p = IMG / (nom + ".svg")
         p.write_text(svg, encoding="utf-8")
@@ -745,6 +1143,18 @@ def main() -> int:
          "source": "Insee, comptes nationaux distribués 2023 (Insee Analyses n° 118, figure 1e)",
          "precaution": "Photographie d'une année, non le bilan d'une génération ni des générations futures ; "
                        "l'âge du ménage n'est pas le statut de retraite de ses membres."},
+        {"id": "exposition", "fichier": "qui-paie-exposition",
+         "titre": "Un même effort de 10 milliards d'euros : qui le supporterait selon la "
+                  "décision prise ?",
+         "montre": "Ce qu'un même effort représenterait pour chaque dixième de niveau de vie "
+                   "selon la décision retenue — impôts, pensions ou enseignement —, puis de "
+                   "combien ce choix change l'effort d'un même groupe.",
+         "source": "Insee, comptes nationaux distribués, tableau CND.101 (vingtièmes de niveau "
+                   "de vie, 2020-2023, base 2020) — millésime 2023",
+         "precaution": "Profil d'exposition comptable, non une simulation : ni comportement ni "
+                       "effet en retour. Une baisse de service valorisé n'est pas une perte de "
+                       "revenu monétaire. Le point D1 de la décision fiscale est écarté, son "
+                       "motif figure au cartouche."},
         {"id": "mecanismes", "fichier": "qui-paie-mecanismes",
          "titre": "Par quels canaux la charge peut-elle être répartie ?",
          "montre": "Quatre mécanismes possibles, non exhaustifs, le refinancement qui reporte sans désigner de "
@@ -782,6 +1192,14 @@ def main() -> int:
             "prelevements": d["prel"], "prestations_especes": d["esp"],
             "transferts_non_monetaires": d["nat"],
             "transferts_nets": d["net"],
+            # Convention de signe explicitée le 29/09 sur contre-expertise : les valeurs
+            # reprennent celles de l'Insee, où le solde est POSITIF quand le groupe verse
+            # plus qu'il ne reçoit. Un tiers qui reprend ce jeu sans le savoir inverserait
+            # la lecture de la figure, et rien ne le lui signalerait.
+            "transferts_nets_convention_signe": (
+                "Convention Insee : valeur POSITIVE = le groupe verse plus qu'il ne reçoit "
+                "(contributeur net) ; valeur NÉGATIVE = il reçoit plus qu'il ne verse "
+                "(bénéficiaire net). D1 vaut -20800 et D10 +58400 en 2023."),
             "part_beneficiaires_nets_pct": d["part_benef"],
             "par_age": d["age"],
             "solde_finance_par_endettement_uc": d["solde_uc"],
@@ -791,6 +1209,60 @@ def main() -> int:
                            "transferts supplémentaires."),
             "source": {"publication": "Insee Analyses n° 118, 16/04/2026, figures 1c, 1e, 2a et 2b",
                        "url": XLSX_URL, "sha256_fichier": d["sha256"]},
+        },
+        "exposition": {
+            "unite": "% du revenu disponible net du dixième",
+            "effort_mdeur": EFFORT_MDEUR,
+            "colonnes": ["D%d" % i for i in range(1, 11)],
+            "millesime": "2023",
+            "decisions": {
+                "fiscal": "hausse des impôts courants sur les revenus et le patrimoine "
+                          "(CSG, impôt sur le revenu, autres), au prorata des montants existants. "
+                          "ATTENTION : dans la nomenclature des comptes distribués, le poste "
+                          "« impôt sur le revenu » est pris HORS CRÉDIT D'IMPÔT (CND.4.2), les "
+                          "crédits d'impôt étant classés ailleurs, en subventions sur les produits "
+                          "(CND.11.2.3 pour les services à la personne). Ce scénario porte donc "
+                          "sur un impôt BRUT de crédits, ce qui pèse surtout en bas de "
+                          "distribution — une raison de plus d'écarter le point D1.",
+                "pensions": "baisse des pensions de retraite, au prorata",
+                "enseignement": "baisse des dépenses d'enseignement attribuées aux ménages, "
+                                "au prorata",
+            },
+            "taux": {k: [None if v is None else round(v, 3) for v in c["p"][k]]
+                     for k in ("fiscal", "pensions", "enseignement")},
+            "ecart_entre_decisions": [round(v, 2) for v in c["ratios"]],
+            "ecart_entre_decisions_note": (
+                "Rapport entre la décision la plus lourde et la plus légère pour le groupe. "
+                "En D1, calculé sur deux décisions seulement (point fiscal écarté) : c'est une "
+                "BORNE INFÉRIEURE, un troisième point ne pourrait qu'élever le maximum ou "
+                "abaisser le minimum."),
+            "autres_mesures_de_dispersion": {
+                m: [round(v, 3) for v in s] for m, s in c["dispersions"].items()},
+            "creux_par_mesure": c["creux_par_mesure"],
+            "creux_par_millesime_et_mesure": c["creux_an_mesure"],
+            "note_sur_les_mesures": (
+                "Trois mesures DISTINCTES de dispersion appliquées aux mêmes trois "
+                "observations : elles se corroborent, elles ne constituent pas trois "
+                "observations indépendantes. Leur minimum tombe en D7 ou en D8 selon la "
+                "mesure et selon le millésime — c'est une zone, pas un dixième."),
+            "part_de_l_effort_recue_par_d1_d5_pct": {k: round(v, 1)
+                                                     for k, v in c["masse_d1_d5"].items()},
+            "stabilite_2020_2023": c["stabilite"],
+            "point_ecarte": {
+                "ou": "D1, décision fiscale",
+                "motif": ("l'impôt sur le revenu du premier vingtième pèse %.0f %% du poste "
+                          "fiscal de ce dixième alors que les vingtièmes voisins sont à zéro, "
+                          "et varie de 1 à %.1f sur 2020-2023"
+                          % (c["part_ir_v1"], c["ir_v1_amplitude"])),
+                "valeurs_ir_v1_mdeur": c["ir_v1_par_an"],
+            },
+            "nature": ("Profil d'exposition comptable, non une simulation : l'effort est réparti "
+                       "au prorata des montants existants, sans comportement ni effet en retour. "
+                       "Une baisse de service valorisé n'est pas une perte de revenu monétaire."),
+            "temoin_croise_avec_IA118_mdeur": c["temoin_croise_mdeur"],
+            "source": {"publication": "Insee, comptes nationaux distribués, tableau CND.101 "
+                                      "(vingtièmes de niveau de vie, 2020-2023, base 2020)",
+                       "url": XLSX_CND_URL, "sha256_fichier": c["sha256"]},
         },
     }
     corps = json.dumps(donnees, ensure_ascii=False, indent=1) + "\n"

@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 659" role="img" font-variant-numeric="tabular-nums" aria-labelledby="qp-exp-t qp-exp-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="qp-exp-t">Un même effort de 10 milliards d'euros : qui le supporterait selon la décision prise ?</title>
+<desc id="qp-exp-d">Deux panneaux. A : pour un effort de 10 milliards d'euros réparti au prorata de chaque poste, la part du revenu disponible net que représenterait ce montant pour chaque dixième de niveau de vie, en 2023. Une baisse des dépenses d'enseignement pèse 2,75 % du revenu du premier dixième et 0,21 % du dernier ; une hausse des impôts sur les revenus et le patrimoine, 1,14 % du dernier ; les pensions restent entre 0,43 et 0,78 %. B : le rapport entre la décision la plus lourde et la plus légère pour un même groupe, en base 1. Il vaut ×5,5 au dernier dixième et au moins autant au premier, et descend à ×1,4 en D7-D8 : c'est là que le levier retenu différencie le moins les ménages.</desc>
+<text x="0.0" y="22.0" font-size="13" fill="#52514e" text-anchor="start">Un même effort de 10 milliards d'euros : qui le supporterait, selon la décision prise ?</text>
+<text x="0.0" y="48.0" font-size="12" fill="#2b2a28" text-anchor="start" font-weight="600">A · Montant imputé au groupe, en % de son revenu disponible net</text>
+<text x="0.0" y="64.0" font-size="11" fill="#898781" text-anchor="start">Effort réparti au prorata des montants existants de chaque poste · dixièmes de niveau de vie, 2023</text>
+<text x="0.0" y="78.0" font-size="11" fill="#898781" text-anchor="start">Décisions comparées : impôts sur les revenus et le patrimoine · pensions de retraite · dépenses d'enseignement</text>
+<line x1="46" y1="300.0" x2="544.0" y2="300.0" stroke="#c3c2b7" stroke-width="1"/>
+<text x="40.0" y="304.0" font-size="11" fill="#898781" text-anchor="end">0 %</text>
+<line x1="46" y1="234.7" x2="544.0" y2="234.7" stroke="#e1e0d9" stroke-width="1"/>
+<text x="40.0" y="238.7" font-size="11" fill="#898781" text-anchor="end">1 %</text>
+<line x1="46" y1="169.3" x2="544.0" y2="169.3" stroke="#e1e0d9" stroke-width="1"/>
+<text x="40.0" y="173.3" font-size="11" fill="#898781" text-anchor="end">2 %</text>
+<line x1="46" y1="104.0" x2="544.0" y2="104.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="40.0" y="108.0" font-size="11" fill="#898781" text-anchor="end">3 %</text>
+<polyline points="70.9,120.4 120.7,210.7 170.5,231.0 220.3,248.2 270.1,255.3 319.9,262.3 369.7,268.0 419.5,271.9 469.3,277.1 519.1,286.4" fill="none" stroke="#898781" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="70.9" cy="120.4" r="3.4" fill="#898781"/>
+<circle cx="120.7" cy="210.7" r="3.4" fill="#898781"/>
+<circle cx="170.5" cy="231.0" r="3.4" fill="#898781"/>
+<circle cx="220.3" cy="248.2" r="3.4" fill="#898781"/>
+<circle cx="270.1" cy="255.3" r="3.4" fill="#898781"/>
+<circle cx="319.9" cy="262.3" r="3.4" fill="#898781"/>
+<circle cx="369.7" cy="268.0" r="3.4" fill="#898781"/>
+<circle cx="419.5" cy="271.9" r="3.4" fill="#898781"/>
+<circle cx="469.3" cy="277.1" r="3.4" fill="#898781"/>
+<circle cx="519.1" cy="286.4" r="3.4" fill="#898781"/>
+<polyline points="70.9,267.2 120.7,257.0 170.5,249.0 220.3,253.1 270.1,254.3 319.9,254.0 369.7,257.7 419.5,260.3 469.3,262.9 519.1,272.0" fill="none" stroke="#184f95" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="70.9" cy="267.2" r="3.4" fill="#184f95"/>
+<circle cx="120.7" cy="257.0" r="3.4" fill="#184f95"/>
+<circle cx="170.5" cy="249.0" r="3.4" fill="#184f95"/>
+<circle cx="220.3" cy="253.1" r="3.4" fill="#184f95"/>
+<circle cx="270.1" cy="254.3" r="3.4" fill="#184f95"/>
+<circle cx="319.9" cy="254.0" r="3.4" fill="#184f95"/>
+<circle cx="369.7" cy="257.7" r="3.4" fill="#184f95"/>
+<circle cx="419.5" cy="260.3" r="3.4" fill="#184f95"/>
+<circle cx="469.3" cy="262.9" r="3.4" fill="#184f95"/>
+<circle cx="519.1" cy="272.0" r="3.4" fill="#184f95"/>
+<polyline points="120.7,288.4 170.5,284.3 220.3,280.2 270.1,277.1 319.9,273.5 369.7,269.8 419.5,264.3 469.3,255.9 519.1,225.3" fill="none" stroke="#eb6834" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="120.7" cy="288.4" r="3.4" fill="#eb6834"/>
+<circle cx="170.5" cy="284.3" r="3.4" fill="#eb6834"/>
+<circle cx="220.3" cy="280.2" r="3.4" fill="#eb6834"/>
+<circle cx="270.1" cy="277.1" r="3.4" fill="#eb6834"/>
+<circle cx="319.9" cy="273.5" r="3.4" fill="#eb6834"/>
+<circle cx="369.7" cy="269.8" r="3.4" fill="#eb6834"/>
+<circle cx="419.5" cy="264.3" r="3.4" fill="#eb6834"/>
+<circle cx="469.3" cy="255.9" r="3.4" fill="#eb6834"/>
+<circle cx="519.1" cy="225.3" r="3.4" fill="#eb6834"/>
+<circle cx="70.9" cy="279.7" r="3.4" fill="none" stroke="#eb6834" stroke-width="1.6" stroke-dasharray="2 2"/>
+<text x="79.9" y="283.7" font-size="10" fill="#898781" text-anchor="start">point écarté</text>
+<text x="70.9" y="110.4" font-size="15" fill="#2b2a28" text-anchor="middle" font-weight="600">2,75 %</text>
+<text x="558.0" y="207.3" font-size="11" fill="#eb6834" text-anchor="start" font-weight="600">Impôts</text>
+<text x="558.0" y="220.3" font-size="10" fill="#898781" text-anchor="start">1,14 % en D10</text>
+<text x="558.0" y="254.0" font-size="11" fill="#184f95" text-anchor="start" font-weight="600">Pensions</text>
+<text x="558.0" y="267.0" font-size="10" fill="#898781" text-anchor="start">0,43 % en D10</text>
+<text x="558.0" y="288.0" font-size="11" fill="#898781" text-anchor="start" font-weight="600">Enseignement</text>
+<text x="558.0" y="301.0" font-size="10" fill="#898781" text-anchor="start">0,21 % en D10</text>
+<text x="70.9" y="316.0" font-size="11" fill="#898781" text-anchor="middle">D1</text>
+<text x="120.7" y="316.0" font-size="11" fill="#898781" text-anchor="middle">D2</text>
+<text x="170.5" y="316.0" font-size="11" fill="#898781" text-anchor="middle">D3</text>
+<text x="220.3" y="316.0" font-size="11" fill="#898781" text-anchor="middle">D4</text>
+<text x="270.1" y="316.0" font-size="11" fill="#898781" text-anchor="middle">D5</text>
+<text x="319.9" y="316.0" font-size="11" fill="#898781" text-anchor="middle">D6</text>
+<text x="369.7" y="316.0" font-size="11" fill="#898781" text-anchor="middle">D7</text>
+<text x="419.5" y="316.0" font-size="11" fill="#898781" text-anchor="middle">D8</text>
+<text x="469.3" y="316.0" font-size="11" fill="#898781" text-anchor="middle">D9</text>
+<text x="519.1" y="316.0" font-size="11" fill="#898781" text-anchor="middle">D10</text>
+<text x="46.0" y="332.0" font-size="10" fill="#898781" text-anchor="start">← 10 % les plus modestes</text>
+<text x="544.0" y="332.0" font-size="10" fill="#898781" text-anchor="end">10 % les plus aisés →</text>
+<text x="0.0" y="364.0" font-size="12" fill="#2b2a28" text-anchor="start" font-weight="600">B · De combien le choix de la décision change l'effort d'un même groupe</text>
+<text x="0.0" y="380.0" font-size="11" fill="#898781" text-anchor="start">Rapport entre la décision la plus lourde et la plus légère pour ce groupe · base 1 : aucun écart</text>
+<rect x="245.2" y="398.0" width="249.0" height="106.0" fill="#f0efe9"/>
+<line x1="46" y1="504.0" x2="544.0" y2="504.0" stroke="#c3c2b7" stroke-width="1"/>
+<text x="40.0" y="508.0" font-size="11" fill="#898781" text-anchor="end">×1</text>
+<line x1="46" y1="489.7" x2="544.0" y2="489.7" stroke="#e1e0d9" stroke-width="1"/>
+<text x="40.0" y="493.7" font-size="11" fill="#898781" text-anchor="end">×2</text>
+<line x1="46" y1="461.1" x2="544.0" y2="461.1" stroke="#e1e0d9" stroke-width="1"/>
+<text x="40.0" y="465.1" font-size="11" fill="#898781" text-anchor="end">×4</text>
+<line x1="46" y1="432.6" x2="544.0" y2="432.6" stroke="#e1e0d9" stroke-width="1"/>
+<text x="40.0" y="436.6" font-size="11" fill="#898781" text-anchor="end">×6</text>
+<line x1="46" y1="404.0" x2="544.0" y2="404.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="40.0" y="408.0" font-size="11" fill="#898781" text-anchor="end">×8</text>
+<rect x="53.9" y="440.0" width="34" height="64.0" rx="2" fill="#898781"/>
+<text x="70.9" y="433.0" font-size="10" fill="#52514e" text-anchor="middle">≥ ×5,5</text>
+<text x="70.9" y="520.0" font-size="11" fill="#898781" text-anchor="middle">D1</text>
+<rect x="103.7" y="408.3" width="34" height="95.7" rx="2" fill="#898781"/>
+<text x="120.7" y="401.3" font-size="10" fill="#52514e" text-anchor="middle">×7,7</text>
+<text x="120.7" y="520.0" font-size="11" fill="#898781" text-anchor="middle">D2</text>
+<rect x="153.5" y="455.4" width="34" height="48.6" rx="2" fill="#898781"/>
+<text x="170.5" y="448.4" font-size="10" fill="#52514e" text-anchor="middle">×4,4</text>
+<text x="170.5" y="520.0" font-size="11" fill="#898781" text-anchor="middle">D3</text>
+<rect x="203.3" y="480.9" width="34" height="23.1" rx="2" fill="#898781"/>
+<text x="220.3" y="473.9" font-size="10" fill="#52514e" text-anchor="middle">×2,6</text>
+<text x="220.3" y="520.0" font-size="11" fill="#898781" text-anchor="middle">D4</text>
+<rect x="253.1" y="489.8" width="34" height="14.2" rx="2" fill="#898781"/>
+<text x="270.1" y="482.8" font-size="10" fill="#52514e" text-anchor="middle">×2,0</text>
+<text x="270.1" y="520.0" font-size="11" fill="#898781" text-anchor="middle">D5</text>
+<rect x="302.9" y="493.5" width="34" height="10.5" rx="2" fill="#898781"/>
+<text x="319.9" y="486.5" font-size="10" fill="#52514e" text-anchor="middle">×1,7</text>
+<text x="319.9" y="520.0" font-size="11" fill="#898781" text-anchor="middle">D6</text>
+<rect x="352.7" y="498.3" width="34" height="5.7" rx="2" fill="#898781"/>
+<text x="369.7" y="491.3" font-size="12" fill="#2b2a28" text-anchor="middle" font-weight="600">×1,4</text>
+<text x="369.7" y="520.0" font-size="11" fill="#2b2a28" text-anchor="middle" font-weight="600">D7</text>
+<rect x="402.5" y="498.1" width="34" height="5.9" rx="2" fill="#898781"/>
+<text x="419.5" y="491.1" font-size="10" fill="#52514e" text-anchor="middle">×1,4</text>
+<text x="419.5" y="520.0" font-size="11" fill="#898781" text-anchor="middle">D8</text>
+<rect x="452.3" y="490.8" width="34" height="13.2" rx="2" fill="#898781"/>
+<text x="469.3" y="483.8" font-size="10" fill="#52514e" text-anchor="middle">×1,9</text>
+<text x="469.3" y="520.0" font-size="11" fill="#898781" text-anchor="middle">D9</text>
+<rect x="502.1" y="439.7" width="34" height="64.3" rx="2" fill="#898781"/>
+<text x="519.1" y="432.7" font-size="10" fill="#52514e" text-anchor="middle">×5,5</text>
+<text x="519.1" y="520.0" font-size="11" fill="#898781" text-anchor="middle">D10</text>
+<text x="369.7" y="538.0" font-size="11" fill="#52514e" text-anchor="middle">D7-D8 : dispersion minimale entre les trois leviers</text>
+<text x="369.7" y="552.0" font-size="11" fill="#52514e" text-anchor="middle">le levier choisi y différencie le moins les ménages</text>
+<line x1="0" y1="566.0" x2="720" y2="566.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="0" y="579.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Insee, comptes nationaux distribués, tableau CND.101 (millésime 2023, base 2020) · France, dixièmes de niveau de vie usuel</text>
+<text x="0" y="591.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Profil d'exposition, non une simulation : ni comportement, ni effet en retour. Une baisse de service valorisé n'est pas une perte de revenu monétaire.</text>
+<text x="0" y="603.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Point D1 des impôts écarté : l'impôt sur le revenu du premier vingtième y pèse 60 % du poste quand les vingtièmes voisins sont à zéro, et varie de 1 à 2,9 selon le millésime.</text>
+<text x="0" y="615.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">D1 porte « ≥ » : l'écart y est calculé sur les deux leviers conservés — c'est une borne inférieure, un troisième point ne pourrait que l'élever.</text>
+<text x="0" y="627.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Le creux se situe en D7 ou D8 sur les quatre millésimes 2020-2023, et dans la même zone avec trois mesures de dispersion.</text>
+<text x="0" y="639.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/qui-paie-la-dette-publique/</text>
+</svg>
