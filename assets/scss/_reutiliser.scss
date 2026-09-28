@@ -35,7 +35,10 @@
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: var(--reutiliser-ratio, auto);
+  // Chaque vignette garde le ratio de SA figure (posé en style inline par le
+  // shortcode, depuis le viewBox réel) : une figure ne se déforme pas pour
+  // une grille. Repli sur le ratio naturel de l'image.
+  aspect-ratio: var(--carte-ratio, auto);
   object-fit: contain;
   background: var(--color-bg-elevated);
   border-bottom: 1px solid var(--color-rule-ghost);

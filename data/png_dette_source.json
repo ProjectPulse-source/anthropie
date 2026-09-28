@@ -1,13 +1,13 @@
 {
  "_avertissement": "Empreinte du SVG source au moment du rendu du PNG. Controle : scripts/check-png-dette.py",
  "sources": {
-  "ciseau-dette-interets.png": "26119effeccbdf11f010ebf03a5cdf8adf940d03470d33805bdb60fc1fe4004b",
-  "taux-apparent-dette.png": "bfd1c7da28594dbb703fb8ab085754a426e92140f6492f6d24e0badb342579c8",
-  "ciseau-dette-interets-en.png": "4582afca8f6a7c96797a3cb0f6f8b1c38f6ee64d6e10a1d6e7404a22db7c4a39",
-  "taux-apparent-dette-en.png": "9af2b0ec9ed2a6109d00aeed883f267f9c85c4f772ae4e1bbe8c4c67115f73f8",
-  "dette-longue.png": "5c3d5bf2e9758f55f573d031e61a34324be1a0cbc3dd448bc442f8f06075a319",
-  "dette-longue-en.png": "941723556a25d9fef66a11cdb95dd1cd34709d82a2acb6b653802ea81551a971",
-  "taux-marche-apparent.png": "52f5a57592ffa1a2198dd071b3cc5788ead640789e5240fd6ed5d54ca6f45fda",
-  "taux-marche-apparent-en.png": "3a33a9126db5bb81094edf40da5cc887ff88f8c040060a762f9243cbdd7b9e96"
+  "ciseau-dette-interets.png": "13e9fec25ab28ea1c8d25ad7a2a5d80d95f6aa8bff7231d2693c7328d8eaf23d",
+  "taux-apparent-dette.png": "d05bf5c6abc91d9babc18f4697a60ba2c95103634004a130d84ef0c017233411",
+  "ciseau-dette-interets-en.png": "f318847d4f48c7fbe0626120c29d8ffe6af21d88345cec3c5313204397d047dd",
+  "taux-apparent-dette-en.png": "7a5eec8aeb3c4d666710038453983627c5b1a16fbd16bbf9ad2d351dde8dd68b",
+  "dette-longue.png": "58d3d72d7bd0be8c2bddf6b80d5b5f8647dbff98f6d63afe2283e2fbd2c8f59b",
+  "dette-longue-en.png": "ca14f0986d01564587d95fcd2886aa16579e9ca1c8ebf88b93361338c81dc703",
+  "taux-marche-apparent.png": "f69af879be96fdd07b8ac66a1351bbe2a4bd42765fa0da4160a9a6743c1389d9",
+  "taux-marche-apparent-en.png": "bb41737838efadc997b110f98c444590c3ae26d6afe67ae5c71bed13b3a182c2"
  }
 }

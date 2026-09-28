@@ -380,7 +380,7 @@ SVG_W, SVG_H = 720, 480
 MARG_L, MARG_R = 46, 14
 COL_DETTE = "#2a78d6"   # palette dataviz slot 1 (validee)
 COL_INTER = "#eb6834"   # slot 2
-INK2, MUTED, GRID, AXIS = "#52514e", "#898781", "#e1e0d9", "#c3c2b7"
+INK, INK2, MUTED, GRID, AXIS = "#0A0A0E", "#52514e", "#898781", "#e1e0d9", "#c3c2b7"
 FONT = "system-ui, -apple-system, Segoe UI, sans-serif"
 
 
@@ -656,6 +656,10 @@ def build_svg(dette_pib: dict[str, float], d41_pib: dict[str, float],
     # repere du retournement 2022, traversant les deux panneaux
     e.append('<line x1="%.1f" y1="30" x2="%.1f" y2="455" stroke="%s" '
              'stroke-width="1" stroke-dasharray="3 4"/>' % (x2022, x2022, AXIS))
+    # le meme repere dans le panneau du haut : la simultanee se voit au lieu de
+    # se lire (arbitrage PRO-20260928-DESIGN-GRAPHES, point 5)
+    e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" '
+             'stroke-width="1" stroke-dasharray="3 4"/>' % (x2022, ay1, x2022, ay0, AXIS))
     e.append('<text x="%.1f" y="243" font-size="11" fill="%s" '
              'text-anchor="middle">%s</text>' % (x2022, INK2, L["retournement"]))
 
@@ -671,31 +675,29 @@ def build_svg(dette_pib: dict[str, float], d41_pib: dict[str, float],
              'stroke-linecap="round" stroke-linejoin="round"/>'
              % (_line_path(ypts), COL_INTER))
 
-    # valeur cle en pastille, dans l'angle libre du panneau A (la courbe y est
-    # basse avant 2000) : elle part avec l'image quand la figure est reprise.
-    e += pastille(_x(t0 + 0.4, t0, t1), ay1 + 4,
-                  "%s%s" % (dec(dette_pib[last_q]), L["pct"]),
-                  L["panneau_a"].split(",")[0][:34])
-
     # etiquettes directes selectives : points d'arrivee + creux
-    def dot_label(x, y, color, txt, anchor="start", dx=7, dy=4):
-        e.append('<circle cx="%.1f" cy="%.1f" r="3.5" fill="%s"/>'
-                 % (x, y, color))
-        e.append('<text x="%.1f" y="%.1f" font-size="12" fill="%s" '
+    def dot_label(x, y, color, txt, anchor="start", dx=7, dy=4, fort=False):
+        """`fort` : la valeur d'arrivee, ancrage de la figure (arbitrage du 28/09,
+        point 4). Elle se lit avant tout le reste ; les autres etiquettes restent
+        secondaires."""
+        e.append('<circle cx="%.1f" cy="%.1f" r="%.1f" fill="%s"/>'
+                 % (x, y, 4.5 if fort else 3.5, color))
+        e.append('<text x="%.1f" y="%.1f" font-size="%d" font-weight="%d" fill="%s" '
                  'text-anchor="%s">%s</text>'
-                 % (x + dx, y + dy, INK2, anchor, txt))
+                 % (x + dx, y + dy, 15 if fort else 12, 700 if fort else 400,
+                    INK if fort else INK2, anchor, txt))
 
     lx, ly = qpts[-1]
     dot_label(lx, ly, COL_DETTE,
               dec(dette_pib[last_q]) + L["pct"],
-              anchor="end", dx=-8, dy=-8)
+              anchor="end", dx=-9, dy=-10, fort=True)
     fx, fy = qpts[0]
     dot_label(fx, fy, COL_DETTE,
               dec(dette_pib[first_q]) + L["pct"], dy=-8)
     ix, iy = ypts[-1]
     dot_label(ix, iy, COL_INTER,
               dec(d41_pib[last_y]) + L["pct"],
-              anchor="end", dx=-8, dy=-9)
+              anchor="end", dx=-9, dy=-11, fort=True)
     jx, jy = ypts[0]
     dot_label(jx, jy, COL_INTER,
               dec(d41_pib[first_y]) + L["pct"], dy=-8)
@@ -810,9 +812,6 @@ def build_svg_taux(taux: dict[str, float], lang: str = "fr") -> str:
 
     src = LABELS_CARTOUCHE[lang]["src_taux"]
     pc = " %" if lang == "fr" else "%"
-    e += _pastille_bas_gauche(ml, ay0, num(taux[last]) + pc,
-                              ("cout moyen du stock, %s" if lang == "fr"
-                               else "average cost of the stock, %s") % last)
     e += cartouche(W, H + 4, src % (first, last), "taux", lang)
     e.append("</svg>")
     return "\n".join(e) + "\n"
@@ -850,12 +849,6 @@ LABELS_MARCHE = {
            "panneau": "10-year market yield and average cost of the stock, % per year",
            "marche": "10-year rate", "apparent": "Effective rate", "pct": "%"},
 }
-
-
-def _pastille_bas_gauche(ml, ay0, valeur, sous):
-    """Angle bas-gauche : vide sur les deux figures de taux, ou la courbe part
-    du haut. Verifie au rendu, pas estime."""
-    return pastille(ml + 10, ay0 - 58, valeur, sous)
 
 
 def build_svg_marche(apparent: dict, marche: dict, lang: str = "fr") -> str:
@@ -922,9 +915,6 @@ def build_svg_marche(apparent: dict, marche: dict, lang: str = "fr") -> str:
 
     src = LABELS_CARTOUCHE[lang]["src_marche"]
     pc = " %" if lang == "fr" else "%"
-    e += _pastille_bas_gauche(ml, ay0, num(apparent[last]) + pc,
-                              ("cout moyen du stock, %s" if lang == "fr"
-                               else "average cost of the stock, %s") % last)
     e += cartouche(W, H + 4, src % (first, last), "marche", lang)
     e.append("</svg>")
     return "\n".join(e) + "\n"
@@ -971,13 +961,19 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
                  'stroke-width="1"/>' % (ml, Y(g), w - mr, Y(g), GRID))
         e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="11" fill="%s" '
                  'text-anchor="end">%d%s</text>' % (ml - 7, Y(g) + 4, FONT, MUTED, g, U))
+    # Seuil de traite : un fait, donc une ligne, pas une annotation flottante.
+    e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" '
+             'stroke-width="1" stroke-dasharray="5 4"/>' % (ml, Y(60), w - mr, Y(60), AXIS))
+    e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="10" fill="%s">%s</text>'
+             % (ml + 6, Y(60) - 5, FONT, MUTED,
+                _esc("référence Maastricht, 60 %" if lang == "fr"
+                     else "Maastricht reference, 60%")))
     e += bandes            # fond : avant l'aire et la courbe
     e.append('<path d="%s" fill="%s" fill-opacity="0.10"/>' % (aire, COL_DETTE))
     e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.8" '
              'stroke-linejoin="round"/>' % (ligne, COL_DETTE))
     # valeur courante en pastille, dans l'angle haut-gauche : la courbe y est
     # au plus bas (premieres annees de la serie).
-    e += pastille(ml + 8, mt + 2, nb(pct_courant) + U, label_courant)
 
     # Un repere = un seuil franchi, donc un fait date, jamais une annee choisie
     # pour la jolie courbe. Disposition voulue par l'auteur le 20/09 : la DATE

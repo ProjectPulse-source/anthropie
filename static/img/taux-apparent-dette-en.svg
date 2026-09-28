@@ -23,9 +23,6 @@
 <text x="683.9" y="202.8" font-size="12" fill="#52514e" text-anchor="end">2.0% in 2025</text>
 <circle cx="583.6" cy="238.5" r="4" fill="#eb6834"/>
 <text x="583.6" y="260.5" font-size="12" fill="#52514e" text-anchor="middle">1.2% in 2020</text>
-<rect x="56.0" y="222.0" width="176.0" height="44.0" rx="22.0" fill="#1B2A4E"/>
-<text x="144.0" y="242.0" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">2.0%</text>
-<text x="144.0" y="256.0" font-size="10" fill="#b9c6de" text-anchor="middle">average cost of the stock, 2025</text>
 <line x1="0" y1="344.0" x2="720" y2="344.0" stroke="#e1e0d9" stroke-width="1"/>
 <text x="0" y="357.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Computed on Eurostat (gov_10a_main) and INSEE series, 1996-2025</text>
 <text x="0" y="369.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Effective rate = a year's interest / debt outstanding at the end of the previous year, not today's borrowing rate.</text>

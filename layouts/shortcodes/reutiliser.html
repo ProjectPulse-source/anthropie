@@ -91,21 +91,16 @@
   <h2 id="reutiliser-titre">{{ $T.titre }}</h2>
   <p class="reutiliser__chapo">{{ if $isEn }}{{ $T.chapo }}{{ else }}{{ partial "fr-typo.html" $T.chapo }}{{ end }}</p>
 
-  {{- /* Ratio commun des vignettes = celui de la figure la plus haute, lu dans
-         les SVG reels : les titres des cartes s'alignent, et aucune valeur n'est
-         recopiee a la main. */ -}}
-  {{- $ratioMax := 0.0 -}}
-  {{- range $figs -}}
-    {{- $s := os.ReadFile (printf "static/img/%s.svg" .fichier) -}}
-    {{- $v := index (findRESubmatch `viewBox="0 0 ([0-9.]+) ([0-9.]+)"` $s 1) 0 -}}
-    {{- $r := div (float (index $v 2)) (float (index $v 1)) -}}
-    {{- if gt $r $ratioMax }}{{ $ratioMax = $r }}{{ end -}}
-  {{- end }}
+  {{- /* CHAQUE VIGNETTE GARDE SON RATIO (arbitrage PRO-20260928-DESIGN-GRAPHES,
+         point 6). Le ratio commun etait celui de la figure la plus haute : il
+         laissait du vide sous les figures panoramiques, ou les ecrasait selon le
+         CSS. Une figure ne se deforme pas pour une grille. La hauteur des
+         vignettes reste bornee par le CSS ; aucune valeur n'est recopiee ici. */ -}}
   {{- /* Colonnes : 2 pour un nombre pair d'au moins 4 cartes, sinon 3 -- jamais une
          carte seule sur sa ligne a 4 figures. */ -}}
   {{- $n := len $figs -}}
   {{- $cols := cond (and (ge $n 4) (eq (mod $n 2) 0)) 2 3 -}}
-  <div class="reutiliser__cartes" style="--reutiliser-ratio: 1 / {{ $ratioMax }}; --reutiliser-cols: {{ $cols }}">
+  <div class="reutiliser__cartes" style="--reutiliser-cols: {{ $cols }}">
   {{- range $figs }}
     {{- $svgRel := printf "img/%s.svg" .fichier -}}
     {{- $pngRel := printf "img/%s.png" .fichier -}}
@@ -113,6 +108,7 @@
     {{- $vb := index (findRESubmatch `viewBox="0 0 ([0-9.]+) ([0-9.]+)"` $svg 1) 0 -}}
     <article class="reutiliser__carte" id="fig-{{ .id }}">
       <img class="reutiliser__vignette" src="{{ $svgRel | relURL }}" alt="{{ .titre }}"
+           style="--carte-ratio: {{ index $vb 1 }} / {{ index $vb 2 }}"
            width="{{ index $vb 1 }}" height="{{ index $vb 2 }}" loading="lazy">
       <div class="reutiliser__corps">
         <h3 class="reutiliser__titre">{{ if $isEn }}{{ .titre }}{{ else }}{{ partial "fr-typo.html" .titre }}{{ end }}</h3>
