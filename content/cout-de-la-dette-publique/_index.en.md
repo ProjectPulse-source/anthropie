@@ -69,7 +69,7 @@ The chain has four links. A state continuously refinances maturing securities, s
 
 <figure class="figure-ciseau">
   <img src="/img/taux-marche-apparent-en.svg" alt="Two curves in percent per year, on the same scale: the 10-year rate and the effective interest rate on French public debt stay close until the early 2010s; then the 10-year rate falls to zero and climbs back sharply, while the effective rate falls less far and rises more slowly." width="720" height="408" loading="lazy">
-  <figcaption><strong>The transmission lag</strong>: the 10-year rate, the price of new debt, and the effective rate, the average cost of the whole stock, on the same scale — Eurostat series <code>irt_lt_mcby_a</code> and <code>gov_10a_main</code>, INSEE.</figcaption>
+  <figcaption><strong>The transmission lag</strong>: the 10-year yield, an annual average that benchmarks the cost of new borrowing, and the effective rate, the average cost of the whole stock, on the same scale — Eurostat series <code>irt_lt_mcby_a</code> and <code>gov_10a_main</code>, INSEE.</figcaption>
 </figure>
 {{< fig-actions id="marche" >}}
 

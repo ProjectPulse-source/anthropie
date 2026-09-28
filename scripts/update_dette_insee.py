@@ -427,8 +427,8 @@ LABELS_CARTOUCHE = {
                         "ans, puis remonte depuis 2022."),
         "montre_longue": ("La dette monte par paliers, chacun installé par une "
                           "crise, aucun effacé par la décennie suivante."),
-        "marche": ("Le taux à 10 ans indique le prix de la dette nouvelle ; le "
-                   "taux apparent, celui de tout le stock, qui ne le suit qu'au fil des "
+        "marche": ("Le taux à 10 ans, repère du coût des emprunts nouveaux ; le "
+                   "taux apparent, coût de tout le stock, ne le suit qu'au fil des "
                    "refinancements."),
         "src_marche": ("Eurostat irt_lt_mcby_a (taux à 10 ans)  ·  taux apparent : "
                        "Eurostat gov_10a_main et INSEE, %s-%s"),
@@ -456,8 +456,8 @@ LABELS_CARTOUCHE = {
                         "years, rising again since 2022."),
         "montre_longue": ("Debt climbs in steps, each set by a crisis, none erased "
                           "by the following decade."),
-        "marche": ("The 10-year rate is the price of new debt; the effective rate, "
-                   "the cost of the whole stock, follows it only as old debt is "
+        "marche": ("The 10-year yield benchmarks the cost of new borrowing; the effective "
+                   "rate, the cost of the whole stock, follows it only as old debt is "
                    "refinanced."),
         "src_marche": ("Eurostat irt_lt_mcby_a (10-year yield)  ·  effective rate: "
                        "Eurostat gov_10a_main and INSEE, %s-%s"),
@@ -786,26 +786,26 @@ LABELS_MARCHE = {
            "desc": ("Deux courbes en pourcentage par an. Le taux \u00e0 10 ans passe de %s %% en %s "
                     "\u00e0 %s %% en %s, puis remonte \u00e0 %s %% en %s. Le taux apparent, co\u00fbt moyen "
                     "du stock, passe de %s %% \u00e0 %s %%, puis ne remonte qu'\u00e0 %s %% en %s."),
-           "panneau": "Prix de la dette nouvelle et co\u00fbt moyen du stock, en % par an",
+           "panneau": "Taux de march\u00e9 \u00e0 10 ans et co\u00fbt moyen du stock, en % par an",
            "marche": "Taux \u00e0 10 ans", "apparent": "Taux apparent", "pct": " %"},
     "en": {"titre": "10-year rate and effective interest rate on French public debt, %s-%s",
            "desc": ("Two curves in percent per year. The 10-year rate goes from %s%% in %s to %s%% "
                     "in %s, then climbs back to %s%% in %s. The effective rate, the average cost "
                     "of the stock, goes from %s%% to %s%%, then rises only to %s%% in %s."),
-           "panneau": "Price of new debt and average cost of the stock, % per year",
+           "panneau": "10-year market yield and average cost of the stock, % per year",
            "marche": "10-year rate", "apparent": "Effective rate", "pct": "%"},
 }
 
 
 def build_svg_marche(apparent: dict, marche: dict, lang: str = "fr") -> str:
-    """Taux de marche (prix de la dette NOUVELLE) et taux apparent (cout du
+    """Taux de marche a 10 ans (repere du cout des emprunts NOUVEAUX) et taux apparent (cout du
     STOCK) sur la MEME echelle : meme unite, et c'est l'ecart qui fait la
     demonstration -- le stock ne suit le marche qu'au fil des refinancements.
     Le taux apparent garde la couleur de l'entite « cout de la dette » ; le
     marche, repere, est en encre sombre et plus fin. Libelles directs aux
     extremites, places au-dessus pour la plus haute des deux : pas de legende."""
     W, H = 720, 360
-    ml, mr = 46, 120
+    ml, mr = 46, 160  # 160 : « Taux apparent 2,0 % » en gras tenait mal dans 120 (etiquette coupee, contre-expertise du 28/09)
     ay0, ay1, vmin, vmax = 300.0, 46.0, -1.0, 7.0
     years = sorted(int(y) for y in apparent if y in marche)
     t0, t1 = years[0] - 0.6, years[-1] + 0.6

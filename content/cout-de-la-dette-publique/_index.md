@@ -64,7 +64,7 @@ Pour lire ces chiffres sans être spécialiste, la chaîne tient en quatre maill
 
 <figure class="figure-ciseau">
   <img src="/img/taux-marche-apparent.svg" alt="Deux courbes en pourcentage par an, sur la même échelle : le taux à 10 ans et le taux apparent de la dette publique restent proches jusqu'au début des années 2010 ; ensuite le taux à 10 ans descend jusqu'à zéro puis remonte fortement, tandis que le taux apparent descend moins bas et remonte plus lentement." width="720" height="408" loading="lazy">
-  <figcaption><strong>Le retard de transmission</strong>&nbsp;: le taux à 10&nbsp;ans, prix de la dette nouvelle, et le taux apparent, coût moyen de tout le stock, sur la même échelle — séries Eurostat <code>irt_lt_mcby_a</code> et <code>gov_10a_main</code>, INSEE.</figcaption>
+  <figcaption><strong>Le retard de transmission</strong>&nbsp;: le taux à 10&nbsp;ans, moyenne annuelle et repère du coût des emprunts nouveaux, et le taux apparent, coût moyen de tout le stock, sur la même échelle — séries Eurostat <code>irt_lt_mcby_a</code> et <code>gov_10a_main</code>, INSEE.</figcaption>
 </figure>
 {{< fig-actions id="marche" >}}
 
