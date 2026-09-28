@@ -1,17 +1,17 @@
 {
  "_avertissement": "Empreinte du SVG source au moment du rendu du PNG. Controle : scripts/check-png-dette.py",
  "sources": {
-  "ciseau-dette-interets.png": "aeef7f6ad039f02bc2aad46d74a11989678f44c9c379eb40faf211951fef6227",
-  "taux-apparent-dette.png": "d05bf5c6abc91d9babc18f4697a60ba2c95103634004a130d84ef0c017233411",
-  "ciseau-dette-interets-en.png": "1d654b16914b39036205473cc16366abf0cfbd0c601eabc299124dfc09b04617",
-  "taux-apparent-dette-en.png": "7a5eec8aeb3c4d666710038453983627c5b1a16fbd16bbf9ad2d351dde8dd68b",
-  "dette-longue.png": "94147f1067e2b4797756383bca5dd2db26e08d93cc338c30abc3bae7f1a90dbc",
-  "dette-longue-en.png": "493b01a0cc8f4598b13752ac77afa479d9fbd696e7745aaed2339a742a0d775d",
+  "ciseau-dette-interets.png": "c51d85eb86f6c075c20250f55fcd01426e243694ec0b124b8555216fef4ffc2d",
+  "taux-apparent-dette.png": "cdc59d6e231597202baf3e92dc1f54ac4d0d48895c25b64f26e6d52934ff88ed",
+  "ciseau-dette-interets-en.png": "dfc0e9644b503c5c82a650ac831c354e330db56d5a12b0529fc728a9cbb4c313",
+  "taux-apparent-dette-en.png": "0d15de62ff8116ca1bc3a047d9f4852c651d65e99780ba630273d88f1b4d3018",
+  "dette-longue.png": "8b5f018961df487b47ce7f802a847138b2222446e8f23c2e2a6e51285dcff92f",
+  "dette-longue-en.png": "589c20285527f08c403b3a28930ab64fdabf7dbdc28941882dd21f700030eb96",
   "charge-interets-mdeur.png": "9983ae977428c58ff2046af9dc44eaaba9a0b4f7340ead7493acc66a32ab7e97",
   "charge-interets-mdeur-en.png": "2b3a3c56173b4db84f95c475d243f4b328bb4263b15c3c2bfd0cfbedaa362767",
   "masses-comparees.png": "1f4952b64bcc43914f7469cd3ba23c309e2ba2d86b25cb5cd6ab47de43f36330",
   "masses-comparees-en.png": "69f3b44348fe406fff067825c3a1d16af3b3b433e73766a96964421fa97d0c10",
-  "taux-marche-apparent.png": "f69af879be96fdd07b8ac66a1351bbe2a4bd42765fa0da4160a9a6743c1389d9",
-  "taux-marche-apparent-en.png": "bb41737838efadc997b110f98c444590c3ae26d6afe67ae5c71bed13b3a182c2"
+  "taux-marche-apparent.png": "057944f5ef504660372ca22311a4c46965fa79ad204ca56f551bcd5b9773c94d",
+  "taux-marche-apparent-en.png": "dd7f4c5c94df24435d696412f035ff0fb21210e5c1e7cded34719a01b6b27edf"
  }
 }

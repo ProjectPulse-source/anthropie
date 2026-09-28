@@ -90,7 +90,11 @@
 {{ if eq .Lang "fr" }}<script src="/js/french-typography.js" defer></script>{{ end }}
 
 <!-- CSS -->
-{{ $style := resources.Get "scss/main.scss" | css.Sass (dict "targetPath" "css/style.css" "outputStyle" "compressed") }}
+{{- /* EMPREINTE sur le nom du fichier : sans elle, /css/style.css reste en cache
+       chez le lecteur et aux points de diffusion jusqu'a dix minutes, et une
+       correction de mise en page part en ligne avec l'ancien style (constate le
+       28/09). Le nom change a chaque contenu, donc le cache ne peut plus mentir. */ -}}
+{{ $style := resources.Get "scss/main.scss" | css.Sass (dict "targetPath" "css/style.css" "outputStyle" "compressed") | fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
 
 <!-- RSS -->

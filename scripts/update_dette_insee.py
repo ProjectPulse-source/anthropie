@@ -409,6 +409,9 @@ COL_DETTE = "#184f95"   # palette dataviz, rampe bleue, pas 600 (validee)
 COL_INTER = "#eb6834"   # slot 2
 INK, INK2, MUTED, GRID, AXIS = "#0A0A0E", "#52514e", "#898781", "#e1e0d9", "#c3c2b7"
 FONT = "system-ui, -apple-system, Segoe UI, sans-serif"
+# Chiffres tabulaires : memes largeurs, donc les valeurs et les axes s'alignent
+# d'une figure a l'autre (28/09).
+TABNUM = 'font-variant-numeric="tabular-nums"' 
 # Echelle typographique COMMUNE aux quatre figures (arbitrage du 28/09) : une
 # seule definition, pour que les figures forment une famille et non une
 # collection. Les tailles restent celles deja en place -- ce qui change, c'est
@@ -562,10 +565,15 @@ def cartouche(w: int, y0: float, source: str, note_cle: str,
 CRISES = ((2008.0, 2010.0, "crise financière", "financial crisis"),
           (2020.0, 2021.0, "crise sanitaire", "pandemic"))
 BANDE = "#eb6834"
+# Orange ATTENUE des seuils anciens : l'orange sature est reserve au point
+# contemporain et a la serie des interets (28/09). Sinon l'oeil rebondit sur cinq
+# accents au lieu d'aller a la derniere valeur.
+ORANGE_DOUX = "#b8703f"
 PASTILLE = "#1B2A4E"
 
 
-def bandes_crise(X, y_haut, y_bas, lang, x_min=None, x_max=None, libelles=True):
+def bandes_crise(X, y_haut, y_bas, lang, x_min=None, x_max=None, libelles=True,
+                 bas=False):
     """Bandes derriere la courbe : a emettre AVANT la serie, c'est un fond."""
     out = []
     for a1, a2, lib_fr, lib_en in CRISES:
@@ -579,9 +587,12 @@ def bandes_crise(X, y_haut, y_bas, lang, x_min=None, x_max=None, libelles=True):
         # Le libelle ne s'imprime que la ou il ne heurte rien : dans la figure
         # longue, les jalons de seuil occupent deja le haut du cadre (vu au rendu).
         if libelles:
+            # `bas` : 10 px au-dessus de la ligne de base du panneau, la ou aucune
+            # courbe ne passe -- l'evenement est du contexte, il se lit apres.
+            y = (y_bas - 10) if bas else (y_haut + 12)
             out.append('<text x="%.1f" y="%.1f" font-size="10" fill="%s" text-anchor="middle" '
                        'opacity="0.85">%s</text>'
-                       % ((xa + xb) / 2, y_haut + 12, BANDE, _esc(lib_fr if lang == "fr" else lib_en)))
+                       % ((xa + xb) / 2, y, BANDE, _esc(lib_fr if lang == "fr" else lib_en)))
     return out
 
 
@@ -701,7 +712,7 @@ def build_svg(dette_pib: dict[str, float], d41_pib: dict[str, float],
 
     e = []
     e.append('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" '
-             'role="img" aria-labelledby="cz-t cz-d" font-family="%s">'
+             'role="img" font-variant-numeric="tabular-nums" aria-labelledby="cz-t cz-d" font-family="%s">'
              % (SVG_W, SVG_H + CARTOUCHE_H, FONT))
     e.append('<title id="cz-t">%s</title>' % L["titre"])
     e.append('<desc id="cz-d">%s</desc>'
@@ -750,8 +761,12 @@ def build_svg(dette_pib: dict[str, float], d41_pib: dict[str, float],
              'text-anchor="middle">%s</text>' % (x2022, INK2, L["retournement"]))
 
     # bandes de crise en FOND des deux panneaux, avant les series (style B)
-    e += bandes_crise(lambda a: _x(a, t0, t1), ay1, ay0, lang)
-    e += bandes_crise(lambda a: _x(a, t0, t1), by1, by0, lang)
+    # Les bandes traversent les deux panneaux, le LIBELLE ne s'ecrit qu'une fois,
+    # dans celui du bas (choix de l'auteur, 28/09) : deux panneaux alignes sur le
+    # meme axe temporel n'ont pas besoin de repeter le meme mot, et en haut la
+    # courbe le frolait. Pose au-dessus de la ligne de base du panneau.
+    e += bandes_crise(lambda a: _x(a, t0, t1), ay1, ay0, lang, libelles=False)
+    e += bandes_crise(lambda a: _x(a, t0, t1), by1, by0, lang, bas=True)
 
     # series (2,6 px, bouts ronds)
     e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.6" '
@@ -854,7 +869,7 @@ def build_svg_taux(taux: dict[str, float], lang: str = "fr") -> str:
 
     e = []
     e.append('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" '
-             'role="img" aria-labelledby="ta-t ta-d" font-family="%s">'
+             'role="img" font-variant-numeric="tabular-nums" aria-labelledby="ta-t ta-d" font-family="%s">'
              % (W, H + CARTOUCHE_H, FONT))
     e.append('<title id="ta-t">%s</title>' % (T["titre"] % (first, last)))
     e.append('<desc id="ta-d">%s</desc>'
@@ -961,7 +976,7 @@ def build_svg_marche(apparent: dict, marche: dict, lang: str = "fr") -> str:
     pm = [(x(a), y(marche[str(a)])) for a in years]
 
     e = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" '
-         'role="img" aria-labelledby="tm-t tm-d" font-family="%s">'
+         'role="img" font-variant-numeric="tabular-nums" aria-labelledby="tm-t tm-d" font-family="%s">'
          % (W, H + CARTOUCHE_H, FONT)]
     e.append('<title id="tm-t">%s</title>' % (L["titre"] % (first, last)))
     e.append('<desc id="tm-d">%s</desc>' % (L["desc"] % (
@@ -1200,7 +1215,7 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
             + " L %.1f %.1f Z" % (X(pts[-1][0]), h - mb))   # ferme sur l'OBSERVE
 
     e = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" '
-         'width="%d" height="%d" role="img" aria-labelledby="dl-t dl-d">'
+         'width="%d" height="%d" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dl-t dl-d">'
          % (w, h + CARTOUCHE_H, w, h + CARTOUCHE_H)]
     e.append('<title id="dl-t">' + L["titre"] % (ans[0], label_courant) + '</title>')
     e.append('<desc id="dl-d">' + L["desc"]
@@ -1329,7 +1344,8 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
             xi += pas
         e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="%d" '
                  'font-weight="600" fill="%s" text-anchor="%s">%s</text>'
-                 % (tx, bas + 17, FONT, corps, COL_INTER, anchor, pct))
+                 % (tx, bas + 17, FONT, corps,
+                    COL_INTER if dernier else ORANGE_DOUX, anchor, pct))
     # Pas de libelles d'axe horizontal : les deux bornes de la periode sont
     # deja portees, en gras, par le premier et le dernier repere. Les repeter
     # sous l'axe ferait lire deux fois la meme date.

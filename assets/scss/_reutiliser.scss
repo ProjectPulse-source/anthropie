@@ -211,21 +211,24 @@
   font-family: var(--font-sans);
 }
 .dossier-dette__barre {
-  // UNE SEULE LIGNE sur grand ecran : cartouche, onglets, date. Le retour a la
-  // ligne renvoyait la pastille SOUS les onglets, a gauche, et laissait la date
-  // seule a droite -- composition vue sur une capture de la page en ligne le
-  // 28/09. `nowrap` l'interdit ; l'ordre affiche suit alors l'ordre du document.
-  display: flex;
-  align-items: flex-end;
-  flex-wrap: nowrap;
-  gap: 0 1.1rem;
+  // GRILLE EXPLICITE, et non plus une rangee flex. Deux tentatives en flex ont
+  // laisse la pastille sous les onglets (captures des 28/09) sans que la regle
+  // servie l'explique : plutot que de chercher plus loin une cause invisible, on
+  // rend la composition INSENSIBLE a la classe entiere du defaut. Trois colonnes
+  // nommees, une rangee : aucun retour a la ligne n'est possible, et l'ordre
+  // affiche ne depend plus de la largeur intrinseque des elements.
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-areas: "titre onglets maj";
+  align-items: end;
+  column-gap: 1.1rem;
   padding-top: 0.35rem;
 }
 .dossier-dette__titre {
   // Pastille pleine, bleu marine, texte blanc (auteur, 28/09) : le dossier se
   // nomme lui-meme d'un coup d'oeil, au lieu de se lire comme une sur-legende.
-  flex: 0 0 auto;
-  align-self: flex-end;
+  grid-area: titre;
+  align-self: end;
   margin-bottom: 0.45rem;  // meme ligne de base optique que le bas des onglets
   white-space: nowrap;
   padding: 0.22rem 0.6rem;
@@ -239,8 +242,8 @@
   text-transform: uppercase;
 }
 .dossier-dette__volets {
+  grid-area: onglets;
   display: flex;
-  flex: 0 1 auto;          // ne pousse plus la date au bout de la barre
   gap: 0.25rem;
   margin: 0;
   padding: 0;
@@ -278,8 +281,9 @@ a.dossier-dette__onglet:focus-visible { outline: 2px solid var(--color-pivot); o
 // Date de mise à jour : rouge, discrète mais immanquable ; son libellé diffère
 // selon le volet (donnée publiée / mise à jour éditoriale), voir le shortcode.
 .dossier-dette__maj {
-  align-self: flex-end;
-  margin-left: auto;
+  grid-area: maj;
+  align-self: end;
+  justify-self: end;
   padding-bottom: 0.5rem;   // pose sur la meme ligne de base que les onglets
   font-family: var(--font-mono);
   font-size: 0.86rem;
@@ -293,9 +297,15 @@ a.dossier-dette__onglet:focus-visible { outline: 2px solid var(--color-pivot); o
   // Sous cette largeur la ligne unique ne tient plus : on autorise le retour,
   // et c'est le cartouche qui part a la ligne AVEC la date, les onglets en
   // dessous -- jamais l'inverse.
-  .dossier-dette__barre { flex-wrap: wrap; }
-  .dossier-dette__volets { flex: 1 0 100%; order: 2; }
-  .dossier-dette__maj { order: 1; }
+  // Sous cette largeur, deux rangees NOMMEES : cartouche et date en haut, onglets
+  // dessous. La aussi, rien n'est laisse au hasard du retour a la ligne.
+  .dossier-dette__barre {
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "titre maj"
+      "onglets onglets";
+    row-gap: 0.35rem;
+  }
   .dossier-dette {
     --dossier-top: 54px;
     font-size: 0.95em;
