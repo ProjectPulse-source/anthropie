@@ -18,26 +18,41 @@
        chose selon le volet, donc elle ne porte pas le même libellé.
        - volet 1 : le TRIMESTRE DES DONNÉES, lu dans data/dette_officielle.json,
          donc actualisé par la chaîne hebdomadaire — jamais saisi à la main ;
-       - volet 2 : le trimestre de la dernière mise à jour ÉDITORIALE de la page,
-         déduit de `lastmod`. Confondre les deux ferait passer une relecture de
-         texte pour une donnée neuve.
+       - volet 2 : le MOIS de la dernière mise à jour ÉDITORIALE, déduit de
+         `lastmod`. Confondre les deux ferait passer une relecture de texte pour
+         une donnée neuve.
+
+       ⚠ CE QUE LA VERSION DU 28/09 PROMETTAIT SANS LE FAIRE (corrigé le 28/09
+       au soir, sur signalement de l'auteur). Les deux volets écrivaient « MAJ
+       Tx 2026 » : même préfixe, même grain, même couleur, même place — seule
+       l'infobulle les distinguait, et une infobulle n'existe pas au toucher.
+       Résultat : « Qui paie », qui ne porte AUCUNE série trimestrielle,
+       affichait un trimestre PLUS RÉCENT que la page qui porte les données, et
+       le lecteur en concluait l'inverse de la vérité. Deux corrections, à la
+       racine : le volet 1 nomme sa source (`INSEE`), et le volet 2 cesse
+       d'exprimer une relecture en TRIMESTRES — une révision de texte a une
+       date, pas un trimestre ; le trimestre est l'unité de la donnée INSEE.
+
+       LARGEUR. `.dossier-dette__maj` est en `white-space: nowrap` et la colonne
+       des onglets est `minmax(0, 1fr)` SANS `nowrap` : tout caractère ajouté au
+       badge se prend sur les onglets, qui eux peuvent revenir à la ligne. D'où
+       des libellés tenus au plus court — +2 et +1 caractère seulement.
 
        Échoue bruyamment sur un volet inconnu. */ -}}
 {{- $v := .Get "volet" -}}
 {{- if not (in (slice "1" "2") $v) -}}{{ errorf "dossier-dette: volet \"%s\" inconnu (attendu 1 ou 2) dans %s" $v .Page.File.Path }}{{- end -}}
 {{- $en := eq .Page.Lang "en" -}}
-{{- $trim := index (slice "" "T1" "T1" "T1" "T2" "T2" "T2" "T3" "T3" "T3" "T4" "T4" "T4") (int (.Page.Lastmod.Format "1")) -}}
 {{- $maj := "" -}}
 {{- $majTitre := "" -}}
 {{- if eq $v "1" -}}
   {{- with site.Data.dette_officielle -}}
     {{- $p := index (cond $en .affichage_en .affichage) "dette_periode" -}}
-    {{- $maj = printf "%s %s" (cond $en "Data" "MAJ") $p -}}
-    {{- $majTitre = cond $en "Latest quarter published by INSEE in this page's figures" "Dernier trimestre publié par l'INSEE dans les chiffres de cette page" -}}
+    {{- $maj = printf "INSEE %s" $p -}}
+    {{- $majTitre = cond $en "Latest quarter published by INSEE in this page's figures" "Dernier trimestre publié par l'INSEE dans les chiffres de cette page — c'est le millésime des DONNÉES, non la date de relecture du texte" -}}
   {{- end -}}
 {{- else -}}
-  {{- $maj = printf "MAJ %s %d" $trim .Page.Lastmod.Year -}}
-  {{- $majTitre = "Dernière mise à jour éditoriale de la page" -}}
+  {{- $maj = printf "Relu %s" (.Page.Lastmod.Format "01/2006") -}}
+  {{- $majTitre = "Dernière relecture éditoriale de cette page ; elle ne porte aucune série trimestrielle, donc aucun millésime de données" -}}
 {{- end -}}
 {{- $items := slice
     (dict "n" "1" "url" (cond $en "/en/cost-of-french-public-debt/" "/cout-de-la-dette-publique/")
