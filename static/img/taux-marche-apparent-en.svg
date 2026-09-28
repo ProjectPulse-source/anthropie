@@ -24,6 +24,9 @@
 <text x="557.8" y="221.4" font-size="12" fill="#eb6834"><tspan font-weight="600">Effective rate</tspan> 2.0%</text>
 <circle cx="464.7" cy="273.0" r="3.5" fill="#52514e"/>
 <text x="464.7" y="291.0" font-size="11" fill="#52514e" text-anchor="middle">-0.1% en 2020</text>
+<rect x="56.0" y="242.0" width="176.0" height="44.0" rx="22.0" fill="#1B2A4E"/>
+<text x="144.0" y="262.0" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">2.0%</text>
+<text x="144.0" y="276.0" font-size="10" fill="#b9c6de" text-anchor="middle">average cost of the stock, 2025</text>
 <line x1="0" y1="364.0" x2="720" y2="364.0" stroke="#e1e0d9" stroke-width="1"/>
 <text x="0" y="377.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Eurostat irt_lt_mcby_a (10-year yield)  ·  effective rate: Eurostat gov_10a_main and INSEE, 1996-2025</text>
 <text x="0" y="389.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">The 10-year yield benchmarks the cost of new borrowing; the effective rate, the cost of the whole stock, follows it only as old debt is refinanced.</text>

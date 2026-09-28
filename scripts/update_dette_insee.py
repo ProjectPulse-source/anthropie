@@ -501,6 +501,46 @@ def cartouche(w: int, y0: float, source: str, note_cle: str,
     return out
 
 
+# ---------------------------------------------------------------- style B
+# Bandes de crise, trait epais, valeur en pastille (choix de l'auteur, 28/09,
+# sur maquettes). Le fond situe les ruptures sans que le lecteur les cherche
+# dans le texte ; la pastille fait voyager la valeur cle avec l'image.
+CRISES = ((2008.0, 2010.0, "crise financière", "financial crisis"),
+          (2020.0, 2021.0, "crise sanitaire", "pandemic"))
+BANDE = "#eb6834"
+PASTILLE = "#1B2A4E"
+
+
+def bandes_crise(X, y_haut, y_bas, lang, x_min=None, x_max=None, libelles=True):
+    """Bandes derriere la courbe : a emettre AVANT la serie, c'est un fond."""
+    out = []
+    for a1, a2, lib_fr, lib_en in CRISES:
+        if x_min is not None and a2 < x_min:
+            continue
+        if x_max is not None and a1 > x_max:
+            continue
+        xa, xb = X(a1), X(a2)
+        out.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="%s" '
+                   'opacity="0.07"/>' % (xa, y_haut, max(xb - xa, 2.0), y_bas - y_haut, BANDE))
+        # Le libelle ne s'imprime que la ou il ne heurte rien : dans la figure
+        # longue, les jalons de seuil occupent deja le haut du cadre (vu au rendu).
+        if libelles:
+            out.append('<text x="%.1f" y="%.1f" font-size="10" fill="%s" text-anchor="middle" '
+                       'opacity="0.85">%s</text>'
+                       % ((xa + xb) / 2, y_haut + 12, BANDE, _esc(lib_fr if lang == "fr" else lib_en)))
+    return out
+
+
+def pastille(x, y, valeur, sous, largeur=176.0, hauteur=44.0):
+    """Valeur cle en pastille pleine, coin superieur gauche en (x, y)."""
+    return ['<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" rx="%.1f" fill="%s"/>'
+            % (x, y, largeur, hauteur, hauteur / 2, PASTILLE),
+            '<text x="%.1f" y="%.1f" font-size="16" font-weight="700" fill="#ffffff" '
+            'text-anchor="middle">%s</text>' % (x + largeur / 2, y + 20, _esc(valeur)),
+            '<text x="%.1f" y="%.1f" font-size="10" fill="#b9c6de" text-anchor="middle">%s</text>'
+            % (x + largeur / 2, y + 34, _esc(sous))]
+
+
 NBSP = " "  # U+00A0 pose par code, jamais tape
 
 # Libelles des figures, par locale. MEME regle que le bloc "affichage" : un seul
@@ -619,13 +659,23 @@ def build_svg(dette_pib: dict[str, float], d41_pib: dict[str, float],
     e.append('<text x="%.1f" y="243" font-size="11" fill="%s" '
              'text-anchor="middle">%s</text>' % (x2022, INK2, L["retournement"]))
 
-    # series (2 px, bouts ronds)
-    e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2" '
+    # bandes de crise en FOND des deux panneaux, avant les series (style B)
+    e += bandes_crise(lambda a: _x(a, t0, t1), ay1, ay0, lang)
+    e += bandes_crise(lambda a: _x(a, t0, t1), by1, by0, lang)
+
+    # series (2,6 px, bouts ronds)
+    e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.6" '
              'stroke-linecap="round" stroke-linejoin="round"/>'
              % (_line_path(qpts), COL_DETTE))
-    e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2" '
+    e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.6" '
              'stroke-linecap="round" stroke-linejoin="round"/>'
              % (_line_path(ypts), COL_INTER))
+
+    # valeur cle en pastille, dans l'angle libre du panneau A (la courbe y est
+    # basse avant 2000) : elle part avec l'image quand la figure est reprise.
+    e += pastille(_x(t0 + 0.4, t0, t1), ay1 + 4,
+                  "%s%s" % (dec(dette_pib[last_q]), L["pct"]),
+                  L["panneau_a"].split(",")[0][:34])
 
     # etiquettes directes selectives : points d'arrivee + creux
     def dot_label(x, y, color, txt, anchor="start", dx=7, dy=4):
@@ -739,7 +789,7 @@ def build_svg_taux(taux: dict[str, float], lang: str = "fr") -> str:
     # d'une grille en pointilles (anti-pattern) et n'ajouterait rien -- le creux
     # est deja porte par son point et son libelle direct.
     xt = x(int(trough))
-    e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2" '
+    e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.6" '
              'stroke-linecap="round" stroke-linejoin="round"/>'
              % (_line_path(pts), COL_INTER))
 
@@ -759,6 +809,10 @@ def build_svg_taux(taux: dict[str, float], lang: str = "fr") -> str:
         "middle", 0, 22)
 
     src = LABELS_CARTOUCHE[lang]["src_taux"]
+    pc = " %" if lang == "fr" else "%"
+    e += _pastille_bas_gauche(ml, ay0, num(taux[last]) + pc,
+                              ("cout moyen du stock, %s" if lang == "fr"
+                               else "average cost of the stock, %s") % last)
     e += cartouche(W, H + 4, src % (first, last), "taux", lang)
     e.append("</svg>")
     return "\n".join(e) + "\n"
@@ -796,6 +850,12 @@ LABELS_MARCHE = {
            "panneau": "10-year market yield and average cost of the stock, % per year",
            "marche": "10-year rate", "apparent": "Effective rate", "pct": "%"},
 }
+
+
+def _pastille_bas_gauche(ml, ay0, valeur, sous):
+    """Angle bas-gauche : vide sur les deux figures de taux, ou la courbe part
+    du haut. Verifie au rendu, pas estime."""
+    return pastille(ml + 10, ay0 - 58, valeur, sous)
 
 
 def build_svg_marche(apparent: dict, marche: dict, lang: str = "fr") -> str:
@@ -861,6 +921,10 @@ def build_svg_marche(apparent: dict, marche: dict, lang: str = "fr") -> str:
              '%s%s en %s</text>' % (cx, cy + 18, INK2, num(marche[creux]), L["pct"], creux))
 
     src = LABELS_CARTOUCHE[lang]["src_marche"]
+    pc = " %" if lang == "fr" else "%"
+    e += _pastille_bas_gauche(ml, ay0, num(apparent[last]) + pc,
+                              ("cout moyen du stock, %s" if lang == "fr"
+                               else "average cost of the stock, %s") % last)
     e += cartouche(W, H + 4, src % (first, last), "marche", lang)
     e.append("</svg>")
     return "\n".join(e) + "\n"
@@ -888,6 +952,7 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
     def Y(v):
         return h - mb - v / ymax * (h - mt - mb)
 
+    bandes = bandes_crise(X, mt, h - mb, lang, x_min=x0, x_max=x1, libelles=False)
     ligne = "M " + " L ".join("%.1f %.1f" % (X(a), Y(v)) for a, v in pts)
     aire = ("M %.1f %.1f L " % (X(x0), h - mb)
             + " L ".join("%.1f %.1f" % (X(a), Y(v)) for a, v in pts)
@@ -906,9 +971,13 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
                  'stroke-width="1"/>' % (ml, Y(g), w - mr, Y(g), GRID))
         e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="11" fill="%s" '
                  'text-anchor="end">%d%s</text>' % (ml - 7, Y(g) + 4, FONT, MUTED, g, U))
+    e += bandes            # fond : avant l'aire et la courbe
     e.append('<path d="%s" fill="%s" fill-opacity="0.10"/>' % (aire, COL_DETTE))
-    e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.4" '
+    e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.8" '
              'stroke-linejoin="round"/>' % (ligne, COL_DETTE))
+    # valeur courante en pastille, dans l'angle haut-gauche : la courbe y est
+    # au plus bas (premieres annees de la serie).
+    e += pastille(ml + 8, mt + 2, nb(pct_courant) + U, label_courant)
 
     # Un repere = un seuil franchi, donc un fait date, jamais une annee choisie
     # pour la jolie courbe. Disposition voulue par l'auteur le 20/09 : la DATE
