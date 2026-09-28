@@ -1,6 +1,6 @@
 {
  "_licence": "Compilation Stéphane Lalut, CC BY 4.0 (assemblage, grandeurs dérivées, mise en cohérence). Données d'origine : INSEE (Licence Ouverte Etalab), Banque de France via l'Agence France Trésor, sous leurs propres conditions.",
- "_genere_le": "2026-09-27",
+ "_genere_le": "2026-09-28",
  "affichage": {
   "releve_le": "21 septembre 2026",
   "net_bascule": "D8",
@@ -9,6 +9,9 @@
   "net_d1": "20 800",
   "benef_d1": "99",
   "benef_d10": "18",
+  "benef_majo_n": "5",
+  "benef_dernier_moyen": "D7",
+  "benef_dernier_moyen_pct": "36",
   "benef_ensemble": "56",
   "age_recu_65": "47 800",
   "age_prel_65": "14 600",

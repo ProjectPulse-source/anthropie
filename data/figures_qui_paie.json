@@ -20,23 +20,23 @@
    "id": "solde-net",
    "fichier": "qui-paie-solde-net",
    "titre": "Contributeurs nets et bénéficiaires nets par dixième, 2023",
-   "montre": "Les sept premiers dixièmes reçoivent plus qu'ils ne versent, les trois derniers l'inverse ; la part de bénéficiaires nets décroît avec le niveau de vie.",
+   "montre": "En moyenne par UC, les dixièmes modestes et médians reçoivent plus qu'ils ne versent, les plus aisés l'inverse ; mais dès le milieu de l'échelle, la majorité des personnes versent plus qu'elles ne reçoivent.",
    "source": "Insee, comptes nationaux distribués 2023 (Insee Analyses n° 118, figure 2a)",
-   "precaution": "Solde d'une année, non d'une vie ; les pensions de retraite y sont comptées en transferts reçus."
+   "precaution": "Moyennes par UC ; pensions et services publics valorisés par imputation inclus ; solde d'une année, non d'une vie ; ne mesure pas l'effet propre de la dette."
   },
   {
    "id": "age",
    "fichier": "qui-paie-age",
    "titre": "Prélèvements et transferts publics par âge du ménage, 2023",
-   "montre": "La répartition par âge telle qu'elle est mesurée aujourd'hui : ce que chaque groupe verse et reçoit, retraites et services publics compris.",
+   "montre": "En 2023, selon ces conventions : ce que verse et reçoit chaque groupe, classé par âge moyen des adultes du ménage, retraites et services publics compris.",
    "source": "Insee, comptes nationaux distribués 2023 (Insee Analyses n° 118, figure 1e)",
-   "precaution": "Photographie d'une année : elle ne dit rien du solde d'une génération sur sa vie entière, ni des payeurs futurs."
+   "precaution": "Photographie d'une année, non le bilan d'une génération ni des générations futures ; l'âge du ménage n'est pas le statut de retraite de ses membres."
   },
   {
    "id": "mecanismes",
    "fichier": "qui-paie-mecanismes",
    "titre": "Par quels canaux la charge peut-elle être répartie ?",
-   "montre": "Quatre canaux possibles, le refinancement qui reporte sans désigner de perdant, et en regard ce que la dette a financé.",
+   "montre": "Quatre mécanismes possibles, non exhaustifs, le refinancement qui reporte sans désigner de perdant, et en regard ce que la dette a financé.",
    "source": "Synthèse de l'auteur, schéma non quantitatif",
    "precaution": "Aucun poids relatif ni effet causal n'est mesuré ici."
   }

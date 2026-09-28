@@ -53,6 +53,19 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-28 — « Qui paie » : contre-expertise des figures arbitrée, corrections locales appliquées
+
+Arbitrage : `D:\PRO\.claude\external-audits\ARBITRATIONS\PRO-20260927-QUIPAIE-FIGURES_arbitrage.md` (option B).
+- Solde net : « en moyenne par UC » partout (page, image, carte, texte alternatif) ; contraste moyenne / personnes
+  tiré des données (`benef_majo_n`, `benef_dernier_moyen`, `benef_dernier_moyen_pct`) ; conventions dites
+  (services imputés, pensions, revenu « avant transferts »). **Garde** dans `generer_figures_qui_paie.py` : si le
+  contraste disparaît des données, la génération s'arrête — vue mordre par mutation.
+- « Quatre voies » → quatre mécanismes non exhaustifs ; nœud du schéma renommé ; inflation conditionnelle ;
+  rendement réel ≠ avantage par rapport à un autre placement ; définition du coût supporté ; « n'ont pas voté » ;
+  croissance nominale / taux apparent ; « par UC ».
+- Figure par âge déplacée parmi les constats actuels, avec ses conventions.
+- Reste ouvert (non bloquant) : libellés institutionnels du panneau A de la figure de détention.
+
 ### 2026-09-28 — Rubrique « Ressources » : livraison 1 (accès) PRÊTE, non commitée, non poussée
 
 Arbitrage : `D:\PRO\.claude\external-audits\ARBITRATIONS\PRO-20260921-105434_arbitrage_2026-09-28.md`

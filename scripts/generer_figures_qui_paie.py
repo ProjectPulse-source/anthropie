@@ -381,7 +381,7 @@ def svg_solde_net(d: dict) -> tuple[str, int]:
     y = bas2 + 30
     h = int(y + 13 + 12 * 3 + 8)
     desc = ("Deux panneaux. A : transferts nets par dixième de niveau de vie, en milliers d'euros "
-            "par unité de consommation ; les sept premiers dixièmes reçoivent plus qu'ils ne "
+            "par unité de consommation ; en moyenne, les sept premiers dixièmes reçoivent plus qu'ils ne "
             "versent, les trois derniers versent plus qu'ils ne reçoivent, le dernier de %s. "
             "B : part de personnes bénéficiaires nettes, de %s %% dans le premier dixième à "
             "%s %% dans le dernier." % (fr(net[9], 1), fr(part[0]), fr(part[9])))
@@ -389,7 +389,7 @@ def svg_solde_net(d: dict) -> tuple[str, int]:
     e += cartouche(y, [
         ("Insee, comptes nationaux distribués 2023 (Insee Analyses n° 118, 16/04/2026, figure 2a) "
          "· France, euros par UC", INK2),
-        ("Les pensions de retraite sont comptées en transferts reçus ; ce solde est celui d'une "
+        ("Moyennes par UC ; pensions et services publics valorisés (imputés) inclus ; solde d'une "
          "année, non d'une vie.", INK2),
         ("Compilation Stéphane Lalut, CC BY 4.0 · " + URL_PAGE, MUTED)])
     e.append("</svg>")
@@ -443,7 +443,7 @@ def svg_age(d: dict) -> tuple[str, int]:
     h = int(y + 13 + 12 * 3 + 8)
     desc = ("Barres par groupe d'âge du ménage, en 2023, en milliers d'euros par unité de "
             "consommation. Les transferts reçus passent de %s pour les 18-29 ans à %s pour les "
-            "65 ans ou plus, tandis que les prélèvements passent de %s à %s."
+            "ménages dont l'âge moyen des adultes atteint 65 ans ou plus, tandis que les prélèvements passent de %s à %s."
             % (fr(esp[0] + nat[0], 1), fr(esp[4] + nat[4], 1), fr(-prel[0], 1), fr(-prel[4], 1)))
     e = entete(h, "qp-age", "Prélèvements et transferts publics par âge du ménage, 2023", desc) + c
     e += cartouche(y, [
@@ -475,9 +475,9 @@ def svg_mecanismes() -> tuple[str, int]:
     c.append('<defs><marker id="qp-fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" '
              'markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="%s"/></marker>'
              '</defs>' % MUTED)
-    c += boite(1, 150, 200, 74, [("Service de la dette", 12, INK, True),
-                                 ("intérêts, et titres qui", 11, INK2, False),
-                                 ("arrivent à échéance", 11, INK2, False)], trait=C1)
+    c += boite(1, 150, 200, 74, [("Charge de la dette", 12, INK, True),
+                                 ("et sa répartition", 12, INK, True),
+                                 ("intérêts, échéances", 11, INK2, False)], trait=C1)
     canaux = [
         ("Prélèvements", "contribuables : impôts, cotisations"),
         ("Dépenses et prestations", "usagers, bénéficiaires : réduites, gelées, reportées"),
@@ -499,7 +499,7 @@ def svg_mecanismes() -> tuple[str, int]:
                tiret=True, fond="#f7f7f4")
     y = 392
     h = int(y + 13 + 12 * 3 + 8)
-    desc = ("Schéma sans quantités. Le service de la dette peut être assuré par quatre canaux, qui "
+    desc = ("Schéma sans quantités. Quatre mécanismes, non exhaustifs, peuvent modifier la charge de la dette et sa répartition, et "
             "se combinent : prélèvements (contribuables), dépenses et prestations (usagers, "
             "bénéficiaires), inflation (détenteurs de créances et de revenus mal indexés), "
             "restructuration, cas extrême (porteurs des titres). Le refinancement reporte "
@@ -540,6 +540,13 @@ def affichage(r: dict, d: dict) -> dict:
         fail("solde net : la bascule contributeur/bénéficiaire n'est pas unique (%s)" % net)
     if not part[0] > part[-1]:
         fail("la page dit que la part de bénéficiaires nets décroît avec le niveau de vie")
+    # Contraste moyenne / personnes (contre-expertise du 27/09) : un dixième peut être
+    # bénéficiaire net EN MOYENNE alors que la majorité de ses membres sont contributeurs
+    # nets. La page l'énonce ; il doit rester vrai dans les données, sinon arrêt.
+    majo = next((i for i, v in enumerate(part) if v <= 50), len(part))
+    if not majo < bascule:
+        fail("la page dit que la majorité de bénéficiaires nets s'arrête avant la bascule "
+             "du solde moyen (majorité jusqu'à D%d, bascule en D%d)" % (majo, bascule + 1))
     age = d["age"]
     if not (age["esp"][4] > age["esp"][0] and -age["prel"][4] < -age["prel"][0]):
         fail("la page dit que les 65 ans ou plus reçoivent plus et versent moins que les 18-29 ans")
@@ -550,6 +557,8 @@ def affichage(r: dict, d: dict) -> dict:
         "net_d10": fr(net[9]),
         "net_d1": fr(-net[0]),
         "benef_d1": fr(part[0]), "benef_d10": fr(part[9]),
+        "benef_majo_n": fr(majo),
+        "benef_dernier_moyen": "D%d" % bascule, "benef_dernier_moyen_pct": fr(part[bascule - 1]),
         "benef_ensemble": fr(d["part_benef"][-1]),
         "age_recu_65": fr(age["esp"][4] + age["nat"][4]),
         "age_prel_65": fr(-age["prel"][4]),
@@ -603,21 +612,21 @@ def main() -> int:
                        "spécifique de la dette."},
         {"id": "solde-net", "fichier": "qui-paie-solde-net",
          "titre": "Contributeurs nets et bénéficiaires nets par dixième, 2023",
-         "montre": "Les sept premiers dixièmes reçoivent plus qu'ils ne versent, les trois "
-                   "derniers l'inverse ; la part de bénéficiaires nets décroît avec le niveau de vie.",
+         "montre": "En moyenne par UC, les dixièmes modestes et médians reçoivent plus qu'ils ne versent, "
+                   "les plus aisés l'inverse ; mais dès le milieu de l'échelle, la majorité des personnes versent plus qu'elles ne reçoivent.",
          "source": "Insee, comptes nationaux distribués 2023 (Insee Analyses n° 118, figure 2a)",
-         "precaution": "Solde d'une année, non d'une vie ; les pensions de retraite y sont "
-                       "comptées en transferts reçus."},
+         "precaution": "Moyennes par UC ; pensions et services publics valorisés par imputation inclus ; "
+                       "solde d'une année, non d'une vie ; ne mesure pas l'effet propre de la dette."},
         {"id": "age", "fichier": "qui-paie-age",
          "titre": "Prélèvements et transferts publics par âge du ménage, 2023",
-         "montre": "La répartition par âge telle qu'elle est mesurée aujourd'hui : ce que chaque "
-                   "groupe verse et reçoit, retraites et services publics compris.",
+         "montre": "En 2023, selon ces conventions : ce que verse et reçoit chaque groupe, classé par "
+                   "âge moyen des adultes du ménage, retraites et services publics compris.",
          "source": "Insee, comptes nationaux distribués 2023 (Insee Analyses n° 118, figure 1e)",
-         "precaution": "Photographie d'une année : elle ne dit rien du solde d'une génération "
-                       "sur sa vie entière, ni des payeurs futurs."},
+         "precaution": "Photographie d'une année, non le bilan d'une génération ni des générations futures ; "
+                       "l'âge du ménage n'est pas le statut de retraite de ses membres."},
         {"id": "mecanismes", "fichier": "qui-paie-mecanismes",
          "titre": "Par quels canaux la charge peut-elle être répartie ?",
-         "montre": "Quatre canaux possibles, le refinancement qui reporte sans désigner de "
+         "montre": "Quatre mécanismes possibles, non exhaustifs, le refinancement qui reporte sans désigner de "
                    "perdant, et en regard ce que la dette a financé.",
          "source": "Synthèse de l'auteur, schéma non quantitatif",
          "precaution": "Aucun poids relatif ni effet causal n'est mesuré ici."},

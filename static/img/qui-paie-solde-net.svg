@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 501" role="img" aria-labelledby="qp-net-t qp-net-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="qp-net-t">Contributeurs nets et bénéficiaires nets par dixième, 2023</title>
-<desc id="qp-net-d">Deux panneaux. A : transferts nets par dixième de niveau de vie, en milliers d'euros par unité de consommation ; les sept premiers dixièmes reçoivent plus qu'ils ne versent, les trois derniers versent plus qu'ils ne reçoivent, le dernier de 58,4. B : part de personnes bénéficiaires nettes, de 99 % dans le premier dixième à 18 % dans le dernier.</desc>
+<desc id="qp-net-d">Deux panneaux. A : transferts nets par dixième de niveau de vie, en milliers d'euros par unité de consommation ; en moyenne, les sept premiers dixièmes reçoivent plus qu'ils ne versent, les trois derniers versent plus qu'ils ne reçoivent, le dernier de 58,4. B : part de personnes bénéficiaires nettes, de 99 % dans le premier dixième à 18 % dans le dernier.</desc>
 <text x="0.0" y="22.0" font-size="13" fill="#52514e" text-anchor="start">Qui verse plus qu'il ne reçoit ? Solde des transferts publics par dixième de niveau de vie, 2023</text>
 <text x="0.0" y="48.0" font-size="11" fill="#898781" text-anchor="start">A · Transferts nets, en milliers d'euros par UC (au-dessus de zéro : verse plus qu'il ne reçoit)</text>
 <line x1="46" y1="240.8" x2="708" y2="240.8" stroke="#e1e0d9" stroke-width="1"/>
@@ -72,6 +72,6 @@
 <text x="674.9" y="391.6" font-size="10" fill="#52514e" text-anchor="middle">18 %</text>
 <line x1="0" y1="444.0" x2="720" y2="444.0" stroke="#e1e0d9" stroke-width="1"/>
 <text x="0" y="457.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Insee, comptes nationaux distribués 2023 (Insee Analyses n° 118, 16/04/2026, figure 2a) · France, euros par UC</text>
-<text x="0" y="469.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Les pensions de retraite sont comptées en transferts reçus ; ce solde est celui d'une année, non d'une vie.</text>
+<text x="0" y="469.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Moyennes par UC ; pensions et services publics valorisés (imputés) inclus ; solde d'une année, non d'une vie.</text>
 <text x="0" y="481.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/qui-paie-la-dette-publique/</text>
 </svg>
