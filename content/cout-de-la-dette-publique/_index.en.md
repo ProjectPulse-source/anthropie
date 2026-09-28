@@ -33,7 +33,7 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 France is a useful case well beyond France itself. It is a large advanced economy where a general mechanism became unusually clear: for three decades the debt stock grew while the cost of carrying it fell, so the burden stayed quiet — and then, within a few years, the scissor began to close. What happens when that reversal arrives is now playing out in public, on a scale large enough to make the mechanism visible.
 
-To the question "what does the debt cost", the most direct answer is not the size of the stock — it is the **interest paid** each year by general government: **{{< dette-val "interets_mdeur" >}} billion euros in {{< dette-val "interets_annee" >}}**, or {{< dette-val "interets_pct_pib" >}}% of GDP and **{{< dette-val "interets_sur_recettes_pct" >}}% of all public revenue** (Eurostat).
+To the question "what does the debt cost", the most direct answer is not the size of the stock — it is the **interest paid** each year by general government: **{{< dette-val "interets_mdeur" >}} billion euros in {{< dette-val "interets_annee" >}}**, or {{< dette-val "interets_pct_pib" >}}% of GDP and **{{< dette-val "interets_sur_recettes_pct" >}}% of all public revenue** (Eurostat, series `D41PAY`). One clarification worth making at this first figure: other official publications use a **closely related convention** and report a slightly different amount for the same year — a reader who checks elsewhere has not found an error. This page keeps one convention throughout; it is set out below.
 
 The stock itself stands at **{{< dette-val "dette_mdeur" >}} billion euros** in {{< dette-val "dette_periode" >}}, or {{< dette-val "dette_pct_pib" >}}% of GDP.
 
@@ -54,7 +54,7 @@ The chain has four links. A state continuously refinances maturing securities, s
 {{< figure-svg fichier="charge-interets-mdeur-en" alt="One curve in billion euros, from 1995 to 2025: interest paid hovers around 45 to 55 billion, falls to a trough of 29.7 billion in 2020, then climbs steeply to 66.6 billion." >}}Eurostat, interest paid by general government. Current prices, not adjusted for inflation.{{< /figure-svg >}}
 {{< fig-actions id="charge" >}}
 
-**The same burden, in euros.** The share of GDP tells you whether the debt is sustainable; the billion tells you what it costs. In current euros, the bill went from a trough of {{< dette-val "interets_creux_mdeur" >}} billion in {{< dette-val "interets_creux_annee" >}} to {{< dette-val "interets_mdeur" >}} billion in {{< dette-val "interets_annee" >}}. These euros are not adjusted for inflation: part of the rise is prices, which is why the rest of this page works in shares of GDP.
+**The same burden, in euros.** The share of GDP places the debt against the wealth produced; the billion measures the burden in euros. Neither tells you whether the debt is **sustainable**: that also depends on growth, on the interest rate and on the primary balance — the deficit excluding interest. In current euros, the bill went from a trough of {{< dette-val "interets_creux_mdeur" >}} billion in {{< dette-val "interets_creux_annee" >}} to {{< dette-val "interets_mdeur" >}} billion in {{< dette-val "interets_annee" >}}. These euros are not adjusted for inflation: part of the rise is prices, which is why the rest of this page works in shares of GDP.
 
 ## The scissor: twenty-five years of offset, then the turn
 
@@ -88,7 +88,7 @@ One point often overlooked in public debate: over the INSEE series available sin
 
 **On the scale of a household.** Divided among France's {{< interets-par-foyer "foyers" >}} million tax households ({{< interets-par-foyer "periode" >}}, DGFiP), the {{< dette-val "interets_annee" >}} interest burden comes to about €{{< interets-par-foyer >}} per household. This is a notional, uniform division of the total: it is not a tax owed by each household, and it says nothing about who bears the burden — households, firms and non-residents contribute to public revenue in proportions this calculation ignores. Who bears it is the subject of the [second part of the file](/qui-paie-la-dette-publique/) (in French).
 
-## What {{< dette-val "interets_equiv_mdeur" >}} billion euros in interest represented in {{< dette-val "equiv_annee" >}}
+<h2 id="compared-magnitudes">What {{< dette-val "interets_equiv_mdeur" >}} billion euros in interest represented in {{< dette-val "equiv_annee" >}}</h2>
 
 Everything below uses **the same year**, {{< dette-val "equiv_annee" >}} — the most recent one for which every series exists, expenditure by function being published with almost a two-year lag. That year, interest paid ({{< dette-val "interets_equiv_mdeur" >}} billion euros) amounted to **{{< dette-val "interets_sur_recettes_equiv_pct" >}}% of all public revenue** ({{< dette-val "recettes_equiv_mdeur" >}} billion, Eurostat). Compared with other masses, on that same year:
 
@@ -110,7 +110,7 @@ These comparisons are about scale, not causation. They show the size of annual d
 
 ## What the data does not show
 
-The aggregates are unambiguous: **no fall in health or education spending**. In {{< dette-val "equiv_annee" >}}, both are stable or rising, in euros and as a share of GDP. Anyone claiming that debt has "already cut" those budgets is saying more than the data does.
+The aggregates are unambiguous on one point: **observed health and education spending has not fallen**. In {{< dette-val "equiv_annee" >}}, both are stable or rising, in euros and as a share of GDP. Anyone claiming that debt has "already cut" those budgets is saying more than the data does.
 
 Hence an apparent paradox: if budgets rise, why do hospitals, schools and courts seem starved? The most common explanation — **plausible, but not demonstrated by the series on this page** — rests on two standard mechanisms. Public services rely heavily on human labour: their costs track wages, not the productivity gains of machines (Baumol's cost disease, a standard result in the economics of services — its magnitude varies by sector). Demand for some of them may also grow faster than GDP: ageing and costly medical progress in health, litigation in justice. If both mechanisms hold, a spending category that remains stable as a share of GDP **does not guarantee** a stable volume or quality of service. Establishing that it actually fell would require what this page does not measure: sectoral inflation, wages, productivity, demographics, and the volumes actually delivered. **Perceived deterioration and rising aggregate spending are therefore not necessarily contradictory: both can coexist if the gap between needs and resources is widening.**
 
