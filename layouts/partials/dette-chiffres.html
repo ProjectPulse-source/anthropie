@@ -40,7 +40,8 @@
     "lien" "Ce que cette dette coûte, et pourquoi&nbsp;: "
     "lien_titre" "Combien coûte la dette publique&nbsp;?"
     "fait1" "du PIB en %s, avant le décrochage"
-    "fait2" "en points de PIB depuis %s"
+    "fait2" "le ratio dette/PIB, multiplié depuis %s"
+    "live_label" "Extrapolation illustrative, non officielle"
     "fait3_cle" "jamais"
     "fait3" "revenue à son niveau de dix ans plus tôt"
     "fait4" "années de baisse&nbsp;— jamais plus de %s d'affilée"
@@ -58,7 +59,8 @@
       "lien" "What this debt costs, and why: "
       "lien_titre" "What does French public debt cost?"
       "fait1" "of GDP in %s, before the break"
-      "fait2" "in points of GDP since %s"
+      "fait2" "the debt-to-GDP ratio, multiplied since %s"
+      "live_label" "Illustrative extrapolation, not official"
       "fait3_cle" "never"
       "fait3" "back to its level of ten years earlier"
       "fait4" "years of decline&nbsp;— never more than %s in a row"
@@ -75,13 +77,17 @@
 {{- end -}}
 <aside class="dette-chiffres{{ if $hist }} dette-chiffres--longue{{ end }}"{{ if $live }} data-live-mdeur="{{ $d.live.mdeur }}" data-live-fin="{{ $d.live.fin_periode_iso }}" data-live-taux="{{ $d.live.croissance_annuelle_pct }}"{{ end }}>
   <p class="dette-chiffres__titre">{{ $T.titre | safeHTML }}</p>
+  {{- /* Ordre (contre-lecture du 28/09) : la donnée officielle datée d'abord ; l'extrapolation
+         ensuite, étiquetée comme telle — sous le titre « dernière donnée officielle », un
+         compteur en tête se lisait comme la donnée officielle. */}}
+  <p class="dette-chiffres__valeurs">{{ printf $T.valeurs (index $a "dette_mdeur") (index $a "dette_pct_pib") (index $a "dette_periode") | safeHTML }}</p>
   {{- if $live }}
   <p class="dette-chiffres__live" hidden>
+    <span class="dette-chiffres__live-label">{{ $T.live_label }}{{ if $en }}:{{ else }}&nbsp;:{{ end }}</span>
     <span class="dette-chiffres__live-valeur" id="dette-live-valeur">—</span>
     <span class="dette-chiffres__live-vitesse" id="dette-live-vitesse"></span>
   </p>
   {{- end }}
-  <p class="dette-chiffres__valeurs">{{ printf $T.valeurs (index $a "dette_mdeur") (index $a "dette_pct_pib") (index $a "dette_periode") | safeHTML }}</p>
   {{- if $live }}
   <p class="dette-chiffres__note" hidden id="dette-live-note">{{ printf $T.note (index $a "dette_periode") (index $a "croissance_annuelle_pct") | safeHTML }}</p>
   {{- end }}

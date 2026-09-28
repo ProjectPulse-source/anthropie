@@ -12,7 +12,7 @@
    "id": "taux",
    "fichier": "taux-apparent-dette",
    "titre": "Le taux apparent, 1996-2025",
-   "montre": "Le coût moyen du stock : il baisse pendant vingt-cinq ans, puis remonte depuis 2022.",
+   "montre": "Le coût moyen du stock : il baisse pendant vingt-cinq ans, puis remonte depuis 2021.",
    "source": "Calcul sur séries Eurostat (gov_10a_main) et INSEE, 1996-2025",
    "precaution": "Taux apparent = intérêts de l'année / encours au 31 décembre précédent, non le taux d'emprunt du jour."
   },
@@ -20,7 +20,7 @@
    "id": "longue",
    "fichier": "dette-longue",
    "titre": "La dette depuis 1978, en % du PIB",
-   "montre": "La dette monte par paliers, chacun installé par une crise, aucun effacé par la décennie suivante.",
+   "montre": "La dette monte par paliers, chacun installé par une crise ; dans la série observée, le ratio n'est jamais revenu à son niveau de dix ans auparavant.",
    "source": "INSEE, dette de Maastricht, 1978-T1 2026",
    "precaution": "Dette au sens de Maastricht, toutes administrations publiques."
   },
@@ -46,7 +46,7 @@
    "id": "taux",
    "fichier": "taux-apparent-dette-en",
    "titre": "The effective interest rate, 1996-2025",
-   "montre": "The average cost of the stock: falling for twenty-five years, rising again since 2022.",
+   "montre": "The average cost of the stock: falling for twenty-five years, rising again since 2021.",
    "source": "Computed on Eurostat (gov_10a_main) and INSEE series, 1996-2025",
    "precaution": "Effective rate = a year's interest / debt outstanding at the end of the previous year, not today's borrowing rate."
   },
@@ -54,7 +54,7 @@
    "id": "longue",
    "fichier": "dette-longue-en",
    "titre": "Debt since 1978, as a % of GDP",
-   "montre": "Debt climbs in steps, each set by a crisis, none erased by the following decade.",
+   "montre": "Debt climbs in steps, each set by a crisis; in the observed series, the ratio has never returned to its level of ten years earlier.",
    "source": "INSEE, Maastricht debt, 1978-Q1 2026",
    "precaution": "Maastricht debt, general government."
   },

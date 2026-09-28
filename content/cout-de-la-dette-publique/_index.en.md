@@ -1,7 +1,7 @@
 ---
 title: "What does French public debt actually cost?"
 url: /en/cost-of-french-public-debt/
-description: "The cost of a public debt does not mechanically follow its size. In France, the stock climbed for thirty years while the interest burden fell — since 2022 the scissor is closing. Official INSEE and Eurostat figures, kept current, and what the interest burden represents compared with spending on justice, education and health."
+description: "The cost of a public debt does not mechanically follow its size. In France, the stock climbed for about twenty-five years while the interest burden fell — the average cost has been rising since 2021 and the scissor has been closing since 2022. Official INSEE and Eurostat figures, kept current, and what the interest burden represents compared with spending on justice, education and health."
 date: 2026-08-17
 lastmod: 2026-09-21
 # Émet le JSON-LD Dataset (partials/schema-dataset-dette.html), en anglais :
@@ -13,7 +13,7 @@ faq:
   - question: "How large is France's public debt?"
     answer: "{dette.dette_mdeur} billion euros in {dette.dette_periode}, or {dette.dette_pct_pib}% of GDP (INSEE, Maastricht debt of general government). Over the INSEE series available since 1995, the highest debt-to-GDP ratio remains that of {dette.dette_pic_periode} ({dette.dette_pic_pct_pib}%); it is in current euros, not as a share of GDP, that recent quarters set new records."
   - question: "Why is the interest burden rising so fast when the debt was already growing before?"
-    answer: "Because the average cost of the stock and its size diverged for thirty years. The effective interest rate — a year's interest over the debt outstanding at the start of that year, a good proxy for that average cost rather than an exact measure of it — fell from about {dette.taux_apparent_premier}% in {dette.taux_apparent_premier_annee} to {dette.taux_apparent_creux}% in {dette.taux_apparent_creux_annee}, while the stock roughly doubled as a share of GDP. Since 2022 that average cost has been climbing again ({dette.taux_apparent_dernier}% in {dette.taux_apparent_dernier_annee}) and now applies to a debt stock roughly twice as large relative to GDP. Transmission is delayed: the burden can keep rising even if market rates stabilise, as cheap old debt is refinanced at prevailing rates."
+    answer: "Because the average cost of the stock and its size diverged for about twenty-five years. The effective interest rate — a year's interest over the debt outstanding at the start of that year, a good proxy for that average cost rather than an exact measure of it — fell from about {dette.taux_apparent_premier}% in {dette.taux_apparent_premier_annee} to {dette.taux_apparent_creux}% in {dette.taux_apparent_creux_annee}, while the stock roughly doubled as a share of GDP. Since 2021 that average cost has been climbing again, with an acceleration in 2022 ({dette.taux_apparent_dernier}% in {dette.taux_apparent_dernier_annee}) and now applies to a debt stock roughly twice as large relative to GDP. Transmission is delayed: the burden can keep rising even if market rates stabilise, as cheap old debt is refinanced at prevailing rates."
   - question: "Does the interest burden exceed the justice budget?"
     answer: "Yes, by a wide margin. In {dette.equiv_annee} — the most recent year for which all series are comparable — general government paid {dette.interets_equiv_mdeur} billion euros in interest, against {dette.justice_mdeur} billion of public spending on law courts, in the sense of the European COFOG functional classification (item GF0303) and not of the French Justice ministry's total budget: roughly {dette.ratio_interets_justice} times more. Interest even exceeds the whole of public order and safety ({dette.ordre_mdeur} billion, GF03)."
   - question: "Has the rise in interest already cut health or education spending?"
@@ -38,18 +38,18 @@ The stock itself stands at **{{< dette-val "dette_mdeur" >}} billion euros** in 
 {{< dette-chiffres historique="true" >}}
 {{< fig-actions id="longue" >}}
 
-**What the curve shows.** Since {{< dette-val "hist_annee_debut" >}}, French public debt has gone from {{< dette-val "hist_pct_debut" >}}% to {{< dette-val "dette_pct_pib" >}}% of GDP: multiplied by {{< dette-val "hist_multiple" >}} as a share of the wealth produced. The rise is not steady — over the {{< dette-val "hist_annees_total" >}} years of the annual series the ratio fell {{< dette-val "hist_annees_baisse" >}} times, never more than {{< dette-val "hist_plus_longue_baisse" >}} in a row. It proceeds in steps, each installed by a crisis, and **none has been erased by the decade that followed**.
+**What the curve shows.** Since {{< dette-val "hist_annee_debut" >}}, French public debt has gone from {{< dette-val "hist_pct_debut" >}}% to {{< dette-val "dette_pct_pib" >}}% of GDP: multiplied by {{< dette-val "hist_multiple" >}} as a share of the wealth produced. The rise is not steady — over the {{< dette-val "hist_annees_total" >}} years of the annual series the ratio fell {{< dette-val "hist_annees_baisse" >}} times, never more than {{< dette-val "hist_plus_longue_baisse" >}} in a row. It proceeds in steps, each installed by a crisis: **in the observed series, the ratio has never returned to its level of ten years earlier**.
 
 - **{{< dette-val "hist_annee_debut" >}} — {{< dette-val "hist_pct_debut" >}}%.** Thirty years of strong growth and inflation had diluted the post-war debt: the state repaid in a currency that was losing its value. Debt was not an issue.
 - **{{< dette-val "hist_seuil_30_annee" >}} — 30%.** After the two oil shocks growth slowed while spending did not: the deficit became permanent. Debt stopped being a cyclical accident and became a means of financing.
-- **{{< dette-val "hist_seuil_60_annee" >}} — 60%.** The 1993 recession widened the gap just as the Maastricht Treaty made 60% the European norm. The ceiling was crossed the very year it took effect: the ratio would fall back below it in only two years, at the turn of the 2000s.
+- **{{< dette-val "hist_seuil_60_annee" >}} — 60%.** The 1993 recession widened the gap; the Maastricht Treaty, signed in 1992 and in force since November 1993, had made 60% the European reference value. Debt crossed it in 1996: the ratio would fall back below it in only two years, at the turn of the 2000s.
 - **{{< dette-val "hist_seuil_80_annee" >}} — 80%.** The financial crisis cut revenue and forced support plans: close to twenty points of GDP in two years. The recovery that followed did not win them back.
 - **{{< dette-val "hist_seuil_100_annee" >}} — 100%.** The shutdown of the economy and income support added nearly seventeen points in a single year. Debt passed the size of GDP.
-- **{{< dette-val "dette_periode" >}} — {{< dette-val "dette_pct_pib" >}}%.** The stock no longer falls and its average cost has been rising since 2022. For the first time in thirty years, volume and price pull in the same direction — which is what the rest of this page is about.
+- **{{< dette-val "dette_periode" >}} — {{< dette-val "dette_pct_pib" >}}%.** The stock remains on a long-run upward trend, and its average cost has been rising since 2021, accelerating in 2022: a rising average cost now combines with a much larger stock — which is what the rest of this page is about.
 
 The chain has four links. A state continuously refinances maturing securities, so borrowing heavily does not by itself make the **stock** grow — gross issuance is therefore not a measure of how much the debt has increased. What makes it grow is the **deficit** — that is, net government borrowing — plus stock-flow adjustments. That stock carries an **average financing cost**. Each year, that cost gives rise to **interest** payments: an obligation already contracted, rather than a new discretionary spending choice, and one that reduces the room left for other choices. And when market rates climb, that average cost follows with a lag — the annual bill swells, and the question stops being *how much* and becomes **who will pay it**.
 
-## The scissor: thirty years of anaesthesia, then the turn
+## The scissor: twenty-five years of offset, then the turn
 
 <figure class="figure-ciseau">
   <img src="/img/ciseau-dette-interets-en.svg" alt="Two curves as a percentage of GDP. Above, French public debt rises almost continuously from 1995 to today. Below, interest paid by general government falls until 2020, then climbs sharply after 2022." width="720" height="528" loading="lazy">
@@ -73,7 +73,7 @@ The chain has four links. A state continuously refinances maturing securities, s
 </figure>
 {{< fig-actions id="marche" >}}
 
-This is the curve that receives the least attention in public debate, and the missing piece needed to make sense of the rest. The burden does not depend on it alone, but on the **product** of the stock and this average cost. For thirty years the fall in one offset the rise in the other — which is why doubling the stock did not double the bill. Today the stock is far heavier **and** the average cost is climbing: both terms now push in the same direction — from about {{< dette-val "taux_apparent_premier" >}}% in {{< dette-val "taux_apparent_premier_annee" >}} to {{< dette-val "taux_apparent_creux" >}}% at the trough of {{< dette-val "taux_apparent_creux_annee" >}}, and back to {{< dette-val "taux_apparent_dernier" >}}% in {{< dette-val "taux_apparent_dernier_annee" >}}. Transmission is **delayed**: a given year's interest bill covers debt issued at many different dates, so the average cost can keep rising even after market rates settle, as cheap old debt is refinanced.
+This is the curve that receives the least attention in public debate, and the missing piece needed to make sense of the rest. The burden does not depend on it alone, but on the **product** of the stock and this average cost. For about twenty-five years the fall in one offset the rise in the other — which is why doubling the stock did not double the bill. Today a rising average cost applies to a far heavier stock — from about {{< dette-val "taux_apparent_premier" >}}% in {{< dette-val "taux_apparent_premier_annee" >}} to {{< dette-val "taux_apparent_creux" >}}% at the trough of {{< dette-val "taux_apparent_creux_annee" >}}, and back to {{< dette-val "taux_apparent_dernier" >}}% in {{< dette-val "taux_apparent_dernier_annee" >}}. Transmission is **delayed**: a given year's interest bill covers debt issued at many different dates, so the average cost can keep rising even after market rates settle, as cheap old debt is refinanced.
 
 **The reading.** Since 2022 — as inflation, index-linked bonds and monetary normalisation have converged — the scissor closes: rising rates meet a debt stock roughly twice as large relative to GDP, and the burden reaches {{< dette-val "interets_mdeur" >}} billion euros ({{< dette-val "interets_pct_pib" >}}% of GDP) in {{< dette-val "interets_annee" >}} — up **{{< dette-val "interets_hausse_pct" >}}%** on the exceptional low of {{< dette-val "interets_creux_annee" >}}, and **{{< dette-val "interets_hausse_2019_pct" >}}%** on 2019, before the pandemic: two baselines, one conclusion. Within the framework of anthropy, this sequence **can be read** as a cost displaced in time and then returning: displacement, saturation, return. That reading is set out in the working paper [AWP-07 — *The anthropic loop*](/en/awp/awp-07/) and applied to debt in [AWP-03](/en/awp/awp-03/).
 
@@ -102,11 +102,11 @@ These data do not attribute that gap to debt; what they do establish is that the
 
 ## What to take away
 
-For thirty years the bill did not follow the debt: the average cost of the stock fell faster than the stock itself rose, and it is that offset — not budgetary discipline — that made borrowing painless. It is over.
+For about twenty-five years the bill did not follow the debt: the falling average cost of the stock offset the rising stock. Its reversal now tightens the budget constraint.
 
 The {{< dette-val "interets_mdeur" >}} billion euros of interest paid in {{< dette-val "interets_annee" >}} are not subtracted from any single budget: they narrow everyone's room for manoeuvre, every year, before any trade-off is made. That is why the comparison with the courts budget conveys scale without naming a victim.
 
-Which leaves the one question these figures cannot settle: a burden of this size does not disappear, it moves. To whom?
+Which leaves a question these figures do not settle: who ultimately bears this burden, and is part of its cost shifted onto others? That is the subject of the next page (in French).
 
 ## Where these figures come from
 

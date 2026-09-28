@@ -327,6 +327,7 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
 }
 .dette-chiffres__valeurs { font-size: 1.15em; margin: 0 0 12px; }
 .dette-chiffres__live { margin: 0 0 4px; }
+.dette-chiffres__live-label { display: block; font-size: .8em; color: var(--color-text-subtle); }
 .dette-chiffres__live-valeur {
   font-family: var(--font-sans); font-variant-numeric: tabular-nums;
   font-size: 1.9em; font-weight: 700; color: var(--color-accent);

@@ -424,9 +424,9 @@ LABELS_CARTOUCHE = {
         "montre_ciseau": ("L'encours double en part de PIB pendant que la charge "
                           "d'intérêts baisse, jusqu'au retournement de 2022."),
         "montre_taux": ("Le coût moyen du stock : il baisse pendant vingt-cinq "
-                        "ans, puis remonte depuis 2022."),
+                        "ans, puis remonte depuis 2021."),
         "montre_longue": ("La dette monte par paliers, chacun installé par une "
-                          "crise, aucun effacé par la décennie suivante."),
+                          "crise ; dans la série observée, le ratio n\'est jamais revenu à son niveau de dix ans auparavant."),
         "marche": ("Le taux à 10 ans, repère du coût des emprunts nouveaux ; le "
                    "taux apparent, coût de tout le stock, ne le suit qu'au fil des "
                    "refinancements."),
@@ -453,9 +453,9 @@ LABELS_CARTOUCHE = {
         "montre_ciseau": ("The stock doubles as a share of GDP while the interest "
                           "burden falls, until the 2022 turn."),
         "montre_taux": ("The average cost of the stock: falling for twenty-five "
-                        "years, rising again since 2022."),
-        "montre_longue": ("Debt climbs in steps, each set by a crisis, none erased "
-                          "by the following decade."),
+                        "years, rising again since 2021."),
+        "montre_longue": ("Debt climbs in steps, each set by a crisis; in the observed series, the ratio has "
+                          "never returned to its level of ten years earlier."),
         "marche": ("The 10-year yield benchmarks the cost of new borrowing; the effective "
                    "rate, the cost of the whole stock, follows it only as old debt is "
                    "refinanced."),
