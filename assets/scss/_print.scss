@@ -21,6 +21,28 @@
   .how-to-cite__btn { display: none !important; }
 
   .site-header { position: static !important; box-shadow: none !important; border: 0 !important; }
+
+  // BARRE DU DOSSIER : a l'impression elle disparaissait ENTIEREMENT -- ni la
+  // barre, ni le nom du dossier, ni la date de mise a jour (constate le 28/09
+  // sur un PDF de la page en ligne : absents jusqu'a la couche de texte). Or la
+  // navigation ne sert qu'a l'ecran, mais le NOM du dossier et la DATE des
+  // donnees servent au lecteur du PDF, et plus encore a celui qui le recevra
+  // sans l'avoir imprime lui-meme. On garde donc la ligne, sans les onglets.
+  .dossier-dette {
+    position: static !important;
+    background: none !important;
+    backdrop-filter: none !important;
+    border-bottom: 1px solid #999 !important;
+    margin-bottom: 6mm !important;
+  }
+  .dossier-dette__volets { display: none !important; }
+  .dossier-dette__titre {
+    background: none !important;
+    color: #000 !important;
+    padding: 0 !important;
+    margin-bottom: 2mm !important;
+  }
+  .dossier-dette__maj { color: #000 !important; padding-bottom: 2mm !important; }
   .site-footer { padding: 0 !important; margin-top: 6mm; border-top: 1px solid #999; }
   .site-footer__legal { font-size: 9pt; }
 
