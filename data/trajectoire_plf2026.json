@@ -1,0 +1,36 @@
+{
+ "_avertissement": "Valeurs PRÉVISIONNELLES, lues à la source le 2026-09-28 dans le Rapport économique, social et financier annexé au PLF 2026. Elles ne se dessinent JAMAIS au même rang qu'une observation : trait pointillé, étiquette portant l'émetteur. Saisie manuelle annuelle, comme les autres valeurs non disponibles par API.",
+ "source": {
+  "publication": "Rapport économique, social et financier (RESF) annexé au projet de loi de finances pour 2026",
+  "url": "https://www.assemblee-nationale.fr/dyn/dyn/contenu/visualisation/1087924/file/RESF%202026.pdf",
+  "sha256_pdf": "79d577f3068315c500b6f749c40d2e59450424a31061ce0d46646317ab04996e",
+  "lu_le": "2026-09-28"
+ },
+ "dette_pct_pib": {
+  "_statut": "PUBLIÉ, série complète",
+  "_emplacement": "tableau 5 « Trajectoire pluriannuelle de finances publiques », p. 76 du PDF",
+  "2024": 113.2,
+  "2025": 115.9,
+  "2026": 117.9,
+  "2027": 118.7,
+  "2028": 118.6,
+  "2029": 118.0
+ },
+ "charge_interets_pct_pib": {
+  "_statut": "PUBLIÉ JUSQU'EN 2026 SEULEMENT",
+  "_emplacement": "tableau de la dépense primaire nette, p. 70 du PDF",
+  "2024": 2.1,
+  "2025": 2.2,
+  "2026": 2.4
+ },
+ "charge_interets_2027_2029": {
+  "_statut": "NON PUBLIÉ année par année",
+  "_ce_que_dit_la_source": "p. 75 : l'ajustement structurel cumulé de 2027 à 2029 se fait « malgré un renchérissement du coût de la charge d'intérêt de la dette de 0,8 point ».",
+  "_ce_qu_on_peut_en_faire": "Un point d'arrivée 2029 aux alentours de 3,2 % du PIB (2,4 + 0,8), à condition de dire que la base est 2026 et que les années intermédiaires ne sont pas publiées. Les valeurs 2,7 (2027) et 3,0 (2028) qui circulent ne figurent PAS dans ce rapport : ne pas les imprimer.",
+  "_a_verifier_avant_publication": "Si une série annuelle 2027-2029 est publiée ailleurs (annexe au PLF, programme de stabilité, Cour des comptes), la lire à la source et remplacer cette entrée."
+ },
+ "divergence_commission_europeenne": {
+  "_statut": "NON VÉRIFIÉ",
+  "_note": "Une pièce externe cite 118,1 % (2026) et 120,2 % (2027) pour la dette, et 2,6 puis 2,8 % du PIB pour les intérêts, à politiques inchangées, d'après les prévisions de printemps 2026 de la Commission européenne. À lire à la source (AMECO ou prévisions de la Commission) avant toute impression : deux trajectoires divergentes valent mieux qu'une, mais seulement si les deux sont établies."
+ }
+}
