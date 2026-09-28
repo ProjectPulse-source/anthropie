@@ -47,6 +47,9 @@ RULE = (86, 110, 146)
 URL_GREY = (150, 146, 143)
 GRID = (214, 210, 205)
 
+# Legende sous la figure du ciseau, posee par carte() selon la langue.
+LEGENDE_CISEAU = ("", "")
+
 
 def fail(msg: str) -> None:
     print("ECHEC : " + msg)
@@ -163,14 +166,16 @@ def figure_ciseau(d: ImageDraw.ImageDraw, annees: list[int],
     fa = font("inter", 18, 500)
     d.text((x0, bas + 14), str(annees[0]), font=fa, fill=URL_GREY)
     d.text((x1 - 44, bas + 14), str(annees[-1]), font=fa, fill=URL_GREY)
-    d.text((x0, bas + 40), "Encours de dette et charge d'intérêts, en % du PIB",
-           font=font("inter", 17, 400), fill=URL_GREY)
-    d.text((x0, bas + 62), "deux échelles distinctes, une même unité",
-           font=font("inter", 17, 400), fill=URL_GREY)
+    l1, l2 = LEGENDE_CISEAU
+    d.text((x0, bas + 40), l1, font=font("inter", 17, 400), fill=URL_GREY)
+    d.text((x0, bas + 62), l2, font=font("inter", 17, 400), fill=URL_GREY)
 
 
 def carte(nom: str, titre: list[str], accroche: str, source: str, url: str,
-          dessin, cle: list[tuple]) -> None:
+          dessin, cle: list[tuple], legende: tuple = None) -> None:
+    global LEGENDE_CISEAU
+    if legende:
+        LEGENDE_CISEAU = legende
     im = background()
     d = ImageDraw.Draw(im)
     dessin(d)
@@ -215,14 +220,31 @@ def main() -> int:
     if len(ans) < 10:
         fail("volet 1 : années communes insuffisantes (%d) dans data/dette_officielle.json"
              % len(ans))
+    ciseau = lambda d: figure_ciseau(d, [int(a) for a in ans],
+                                     [dpib[a] for a in ans], [ipib[a] for a in ans])
     carte("og-cout-dette.jpg",
           ["Combien coûte", "la dette publique ?"],
           "L'encours a doublé en part de PIB ; la facture, elle, a d'abord baissé.",
           "Données INSEE et Eurostat · CC BY 4.0",
           "stephane-lalut.com/cout-de-la-dette-publique/",
-          lambda d: figure_ciseau(d, [int(a) for a in ans],
-                                  [dpib[a] for a in ans], [ipib[a] for a in ans]),
-          [(C1, "Encours de dette"), (C2, "Charge d'intérêts")])
+          ciseau,
+          [(C1, "Encours de dette"), (C2, "Charge d'intérêts")],
+          ("Encours de dette et charge d'intérêts, en % du PIB",
+           "deux échelles distinctes, une même unité"))
+
+    # La page anglaise est diffusee a des medias anglophones : sa carte ne peut
+    # pas porter un titre francais. Une carte de partage est LUE avant le lien,
+    # et dans la mauvaise langue elle dit au lecteur que la page n'est pas pour
+    # lui. Meme figure, meme palette, meme cadre -- seuls les mots changent.
+    carte("og-cout-dette-en.jpg",
+          ["What does French", "public debt cost?"],
+          "The stock doubled as a share of GDP; the bill, at first, fell.",
+          "INSEE and Eurostat data · CC BY 4.0",
+          "stephane-lalut.com/en/cost-of-french-public-debt/",
+          ciseau,
+          [(C1, "Debt stock"), (C2, "Interest burden")],
+          ("Debt stock and interest burden, as a share of GDP",
+           "two distinct scales, one shared unit"))
     return 0
 
 
