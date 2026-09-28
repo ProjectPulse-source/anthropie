@@ -330,12 +330,18 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
 .dette-chiffres__live-label { display: block; font-size: .8em; color: var(--color-text-subtle); }
 .dette-chiffres__live-valeur {
   font-family: var(--font-sans); font-variant-numeric: tabular-nums;
-  font-size: 1.9em; font-weight: 700; color: var(--color-accent);
+  font-weight: 700; color: var(--color-accent);
   display: inline-block;
-}
-.dette-chiffres__live-vitesse {
-  font-family: var(--font-sans); font-size: var(--fs-small);
-  color: var(--color-text-subtle); margin-left: 10px; white-space: nowrap;
+  // SORTAIT DU CADRE SUR ANDROID (auteur, 28/09). Deux causes, un seul remede
+  // ici : la taille etait fixe en `em`, donc un montant long depassait la
+  // largeur d'un telephone ; et rien n'empechait la coupure, donc le navigateur
+  // cassait la ligne sur l'espace qui precedait le « € ». `nowrap` garde le
+  // montant et son unite ensemble ; `clamp` fait retrecir le chiffre au lieu de
+  // le laisser deborder. Le passage au dixieme de milliard raccourcit en outre
+  // la chaine de 19 a 11 caracteres, ce qui traite la cause plutot que l'effet.
+  font-size: clamp(1.15rem, 5.4vw, 1.9em);
+  white-space: nowrap;
+  max-width: 100%;
 }
 .dette-chiffres__note {
   font-family: var(--font-sans); font-size: var(--fs-small);
@@ -439,6 +445,50 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
 // ----- Figure du ciseau (page /cout-de-la-dette-publique/) -----
 .figure-ciseau { margin: 32px 0; }
 .figure-ciseau img { width: 100%; max-width: 720px; height: auto; display: block; }
+// ----- Agrandissement d'une figure (static/js/figure-zoom.js) -----
+// Le lecteur qui veut lire une etiquette ou un cartouche n'avait aucun moyen de
+// le faire : les figures sont servies a 720 px et reduites par le CSS (auteur,
+// 28/09). L'affordance doit se VOIR, sinon elle n'existe pas -- d'ou le curseur,
+// le contour au survol et le focus visible au clavier.
+.figure-ciseau img.est-agrandissable,
+.dette-chiffres__figure img.est-agrandissable {
+  cursor: zoom-in;
+  border-radius: 3px;
+  transition: box-shadow .15s ease;
+
+  &:hover { box-shadow: 0 0 0 3px var(--color-accent-faint); }
+  &:focus-visible { outline: 2px solid var(--color-pivot); outline-offset: 3px; }
+}
+.figure-zoom {
+  position: fixed; inset: 0; z-index: 200;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 14px; padding: 16px;
+  background: rgba(24, 23, 21, .92);
+  // Le pincement natif doit rester possible PAR-DESSUS la couche : c'est lui qui
+  // sert vraiment sur telephone, la couche ne fait que donner la pleine largeur.
+  touch-action: auto;
+  overflow: auto;
+}
+.figure-zoom__image {
+  max-width: 100%; max-height: 82vh;
+  width: auto; height: auto;
+  background: #fff; border-radius: 4px; padding: 10px;
+}
+.figure-zoom__fermer {
+  align-self: flex-end;
+  font-family: var(--font-sans); font-size: var(--fs-small);
+  color: #fff; background: transparent;
+  border: 1px solid rgba(255, 255, 255, .5); border-radius: 4px;
+  padding: 6px 14px; cursor: pointer;
+
+  &:hover { background: rgba(255, 255, 255, .12); }
+  &:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+}
+.figure-zoom__aide {
+  margin: 0; font-family: var(--font-sans); font-size: var(--fs-tiny);
+  color: rgba(255, 255, 255, .72);
+}
+
 .figure-ciseau figcaption {
   font-family: var(--font-sans); font-size: var(--fs-small);
   color: var(--color-text-subtle); margin-top: 8px;

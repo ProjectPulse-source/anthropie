@@ -6,8 +6,20 @@
 
   var containers = document.querySelectorAll('body');
 
+  // UN NOMBRE NE SE SEPARE JAMAIS DE SON UNITE, ni de ses milliers (regle
+  // d'auteur, 28/09 : « les symboles, les chiffres, la ponctuation doivent etre
+  // insecables quel que soit le support »). Cette regle vivait dans DEUX organes
+  // -- le linter des sources .md et le partial fr-typo.html -- et manquait au
+  // troisieme, celui-ci, le seul a traiter ce qu'un script injecte apres coup.
+  // Un « € » s'est ainsi retrouve seul en debut de ligne sur Android, sans son
+  // montant. La regle couvre aussi les espaces de milliers, que certaines
+  // plateformes rendent par une espace ordinaire.
+  var UNITES = 'Md€|M€|k€|€|%|km|kg|ha|min|h';
+
   function fix(text) {
     return text
+      .replace(new RegExp('(\\d) (?=(?:' + UNITES + ')(?![A-Za-z]))', 'g'), '$1' + NBSP)
+      .replace(/(\d) (?=\d{3}(?!\d))/g, '$1' + NBSP)
       .replace(/ ([?!;:])/g, THIN_NBSP + '$1')
       .replace(/« /g, '\u00AB' + NBSP)
       .replace(/ »/g, NBSP + '\u00BB')

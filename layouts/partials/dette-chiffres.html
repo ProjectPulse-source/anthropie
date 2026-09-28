@@ -32,7 +32,7 @@
 {{- $T := dict
     "titre" "Dette publique française&nbsp;— dernière donnée officielle"
     "valeurs" "<strong>%s&nbsp;milliards d'euros</strong>, soit <strong>%s&nbsp;%% du PIB</strong>, au %s."
-    "note" "Le chiffre animé est une <strong>extrapolation mécanique</strong> depuis la publication INSEE du %s, au rythme observé sur un an (+%s&nbsp;%% l'an)&nbsp;— ni une observation, ni une prévision."
+    "note" "Ordre de grandeur <strong>mécanique</strong>, extrapolé depuis la publication INSEE du %s au rythme observé sur un an (+%s&nbsp;%% l'an), et arrondi au milliard&nbsp;— ni une observation, ni une prévision, ni la dette d'aujourd'hui."
     "source" "Source&nbsp;: INSEE, dette de Maastricht des administrations publiques (séries 010777616 et 010777608"
     "source_hist" "&nbsp;; série annuelle au 31&nbsp;décembre depuis %s, comptes nationaux base 2020"
     "releve" ")&nbsp;· séries relevées le %s&nbsp;· "
@@ -41,7 +41,7 @@
     "lien_titre" "Combien coûte la dette publique&nbsp;?"
     "fait1" "du PIB en %s, avant le décrochage"
     "fait2" "le ratio dette/PIB, multiplié depuis %s"
-    "live_label" "Extrapolation illustrative, non officielle"
+    "live_label" "Ordre de grandeur illustratif, non officiel"
     "fait3_cle" "jamais"
     "fait3" "revenue à son niveau de dix ans plus tôt"
     "fait4" "années de baisse&nbsp;— jamais plus de %s d'affilée"
@@ -51,7 +51,7 @@
   {{- $T = dict
       "titre" "French public debt&nbsp;— latest official figure"
       "valeurs" "<strong>%s billion euros</strong>, or <strong>%s%% of GDP</strong>, in %s."
-      "note" "The animated figure is a <strong>mechanical extrapolation</strong> from the INSEE release for %s, at the pace observed over one year (+%s%% a year)&nbsp;— neither an observation nor a forecast."
+      "note" "A <strong>mechanical</strong> order of magnitude, extrapolated from the INSEE release for %s at the pace observed over one year (+%s%% a year) and rounded to the nearest billion&nbsp;— neither an observation, nor a forecast, nor today's debt."
       "source" "Source: INSEE, Maastricht debt of general government (series 010777616 and 010777608"
       "source_hist" "; annual series at 31 December since %s, national accounts base 2020"
       "releve" ") · series retrieved %s · "
@@ -60,7 +60,7 @@
       "lien_titre" "What does French public debt cost?"
       "fait1" "of GDP in %s, before the break"
       "fait2" "the debt-to-GDP ratio, multiplied since %s"
-      "live_label" "Illustrative extrapolation, not official"
+      "live_label" "Illustrative order of magnitude, not official"
       "fait3_cle" "never"
       "fait3" "back to its level of ten years earlier"
       "fait4" "years of decline&nbsp;— never more than %s in a row"
@@ -85,7 +85,6 @@
   <p class="dette-chiffres__live" hidden>
     <span class="dette-chiffres__live-label">{{ $T.live_label }}{{ if $en }}:{{ else }}&nbsp;:{{ end }}</span>
     <span class="dette-chiffres__live-valeur" id="dette-live-valeur">—</span>
-    <span class="dette-chiffres__live-vitesse" id="dette-live-vitesse"></span>
   </p>
   {{- end }}
   {{- if $live }}
@@ -125,18 +124,30 @@
   if (!isFinite(base) || !isFinite(fin) || !isFinite(taux)) return;
   var parSeconde = base * taux / 31557600;
   var valeur = document.getElementById("dette-live-valeur");
-  var vitesse = document.getElementById("dette-live-vitesse");
   var note = document.getElementById("dette-live-note");
+  // GRAIN. Le compteur affichait l'euro pres et se rafraichissait chaque
+  // seconde : il annoncait ainsi une precision que la donnee n'a pas. La dette
+  // ne croit pas comme un compteur electrique -- entre deux trimestres jouent le
+  // deficit, les emissions et remboursements, la tresorerie, les acquisitions
+  // d'actifs et les ajustements flux-stock. On affiche donc un ordre de grandeur
+  // ARRONDI AU MILLIARD, calcule une fois, sans rafraichissement : au rythme
+  // observe, ce milliard met plus de DEUX JOURS a bouger, donc une animation ne
+  // montrerait rien de reel. L'arrondi est en outre VISIBLEMENT plus grossier que
+  // celui de la donnee officielle juste au-dessus (un dixieme de milliard) : le
+  // chiffre le moins sur est aussi le plus rond, ce qui est le bon signal.
+  // (Auteur, 28/09.)
   var fmt = new Intl.NumberFormat("{{ if $en }}en-GB{{ else }}fr-FR{{ end }}", { maximumFractionDigits: 0 });
-  function tic() {
-    var estimation = base + (Date.now() - fin) / 1000 * parSeconde;
-    valeur.textContent = fmt.format(estimation) + " €";
-  }
-  vitesse.textContent = "{{ if $en }}(≈ +{{ else }}(≈ +{{ end }}" + fmt.format(Math.round(parSeconde / 100) * 100) + "{{ if $en }} € per second, estimate){{ else }} € par seconde, estimation){{ end }}";
-  tic();
+  var estimation = base + (Date.now() - fin) / 1000 * parSeconde;
+  // INSECABLES, quel que soit le support (regle d'auteur, 28/09) : le separateur
+  // de milliers rendu par Intl varie selon la plateforme, et l'unite etait collee
+  // par une espace ORDINAIRE -- d'ou le « € » rejete a la ligne suivante sur
+  // Android, sans son montant. Tout ce qui separe un nombre de ses parties ou de
+  // son unite devient une espace insecable, ici et non ailleurs.
+  var NBSP = " ";
+  var texte = fmt.format(estimation / 1e9).replace(/[\s  ]/g, NBSP);
+  valeur.textContent = texte + NBSP + "{{ if $en }}bn €{{ else }}Md€{{ end }}";
   valeur.parentElement.removeAttribute("hidden");
   note.removeAttribute("hidden");
-  setInterval(tic, 1000);
 })();
 </script>
 {{- end }}

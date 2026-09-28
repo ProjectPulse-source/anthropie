@@ -161,13 +161,27 @@ nombre et son unité (`19&nbsp;€`, `117,5&nbsp;%`). Sans elle, le navigateur r
 signe seul en début de ligne : le « € » passe à la ligne suivante sans son montant, sur
 le chiffre même que la page met en avant.
 
-Deux organes, un seul énoncé :
+**Portée étendue par l'auteur le 2026-09-28 : « les symboles, les chiffres, la ponctuation
+doivent être insécables QUEL QUE SOIT LE SUPPORT ».** La règle ne s'arrête donc pas au HTML
+produit au build : elle vaut aussi pour ce qu'un script écrit dans la page après coup.
+
+**TROIS** organes, un seul énoncé — et c'est le troisième qui manquait :
 
 - **Le corps des pages** est écrit avec des `&nbsp;` dans la source, et contrôlé par
   `scripts/check-typo-fr.py` — **bloquant** dans `check-all.py --ci`, donc au déploiement.
   `--corriger` applique ; un chemin en argument ne traite que ce fichier.
 - **Les gabarits** passent leurs libellés par `partials/fr-typo.html`, qui pose les fines
   insécables, traite les guillemets et les unités, et termine par `safeHTML`.
+- **Le texte injecté par un script**, que les deux premiers ne voient pas : `static/js/french-typography.js`
+  porte depuis le 28/09 la règle **nombre ↔ unité** et **nombre ↔ milliers**, qui n'existait que
+  dans les deux autres. ⚠ Ce script ne passe qu'**une fois, au chargement** : un contenu réécrit
+  ensuite (compteur, valeur rafraîchie) doit poser ses insécables **lui-même, à la source**.
+
+**Incident fondateur (auteur, 28/09, sur Android)** : le compteur de dette écrivait
+`fmt.format(x) + " €"` — une espace **ordinaire**. Le « € » partait seul à la ligne, sans son
+montant, sur le chiffre le plus visible du site. Deux organes portaient la règle, le troisième
+l'ignorait, et aucun contrôle ne regardait de ce côté. Le séparateur de milliers rendu par
+`Intl.NumberFormat` varie en outre selon la plateforme : il est désormais normalisé en ` `.
 
 ⚠ **Rendre un champ de front matter avec `{{ . }}` échappe ses `&nbsp;` en `&amp;nbsp;`** —
 l'entité s'affiche alors en toutes lettres au lecteur. Tout sous-titre ou description venant
