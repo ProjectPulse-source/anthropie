@@ -382,6 +382,11 @@ COL_DETTE = "#2a78d6"   # palette dataviz slot 1 (validee)
 COL_INTER = "#eb6834"   # slot 2
 INK, INK2, MUTED, GRID, AXIS = "#0A0A0E", "#52514e", "#898781", "#e1e0d9", "#c3c2b7"
 FONT = "system-ui, -apple-system, Segoe UI, sans-serif"
+# Echelle typographique COMMUNE aux quatre figures (arbitrage du 28/09) : une
+# seule definition, pour que les figures forment une famille et non une
+# collection. Les tailles restent celles deja en place -- ce qui change, c'est
+# qu'elles sont nommees en un seul endroit.
+TY_TITRE, TY_AXE, TY_ANNOT, TY_VALEUR, TY_MINEUR = 13, 11, 12, 15, 11
 
 
 def _x(t: float, t0: float, t1: float) -> float:
@@ -897,14 +902,19 @@ def build_svg_marche(apparent: dict, marche: dict, lang: str = "fr") -> str:
     e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.4" '
              'stroke-linecap="round" stroke-linejoin="round"/>' % (_line_path(pa), COL_INTER))
 
-    # Libelles de fin : la courbe la plus haute prend le sien au-dessus.
+    # Libelles de fin : la courbe la plus haute prend le sien au-dessus. Ecart
+    # MINIMUM garanti entre les deux : quand les deux series finissent proches,
+    # « au-dessus » et « en dessous » ne suffisent plus a les separer.
+    ECART_MIN = 26.0
     haut_m = marche[last] >= apparent[last]
     for serie, pts, col, cle, en_haut in (
             (marche, pm, INK2, "marche", haut_m),
             (apparent, pa, COL_INTER, "apparent", not haut_m)):
         px, py = pts[-1]
         e.append('<circle cx="%.1f" cy="%.1f" r="4" fill="%s"/>' % (px, py, col))
-        dy = -9 if en_haut else 17
+        ecart = abs(pm[-1][1] - pa[-1][1])
+        marge = max(0.0, (ECART_MIN - ecart) / 2.0)
+        dy = (-9 - marge) if en_haut else (17 + marge)
         e.append('<text x="%.1f" y="%.1f" font-size="12" fill="%s">'
                  '<tspan font-weight="600">%s</tspan> %s%s</text>'
                  % (px + 8, py + dy, col, _esc(L[cle]), num(serie[last]), L["pct"]))
@@ -932,7 +942,7 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
     U = L["unite"]
     pts = [(float(a), annuel[a]) for a in ans] + [(float(ans[-1]) + 0.25, pct_courant)]
     w, h = 720, 320
-    ml, mr, mt, mb = 44, 18, 34, 26
+    ml, mr, mt, mb = 44, 28, 34, 26   # mr : la valeur d'arrivee ne touche plus le bord
     x0, x1 = pts[0][0], pts[-1][0]
     ymax = 130.0
 
@@ -968,8 +978,10 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
              % (ml + 6, Y(60) - 5, FONT, MUTED,
                 _esc("référence Maastricht, 60 %" if lang == "fr"
                      else "Maastricht reference, 60%")))
-    e += bandes            # fond : avant l'aire et la courbe
+    # Les bandes passent APRES l'aplat : dessous, elles viraient au gris (vu au
+    # rendu le 28/09). Elles restent derriere la courbe, qui domine.
     e.append('<path d="%s" fill="%s" fill-opacity="0.10"/>' % (aire, COL_DETTE))
+    e += bandes
     e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.8" '
              'stroke-linejoin="round"/>' % (ligne, COL_DETTE))
     # valeur courante en pastille, dans l'angle haut-gauche : la courbe y est
@@ -981,13 +993,19 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
     # l'aire. Elle resout aussi le chevauchement : les etiquettes composees
     # (« 30 % en 1984 ») se touchaient des que deux reperes etaient proches,
     # parce que leur largeur ne dependait pas de leur ecart.
+    # HIERARCHIE (arbitrage du 28/09) : six jalons de meme poids font une frise,
+    # pas une lecture. Dominent : le depart, le seuil de Maastricht, le seuil de
+    # 100 % (l'annee sanitaire) et le dernier point. Les deux autres restent
+    # lisibles, en retrait. Le critere est le SEUIL, pas l'annee : il tient donc
+    # quand la serie s'allonge.
+    MAJEURS = (60, 100)
     reperes = [(float(ans[0]), annuel[ans[0]], str(ans[0]),
-                nb(annuel[ans[0]]) + U, "start")]
+                nb(annuel[ans[0]]) + U, "start", True)]
     for s in (30, 60, 80, 100):
         an = seuils[s]
-        reperes.append((float(an), annuel[int(an)], str(an), "> %d%s" % (s, U), "middle"))  # « > » : seuil franchi, pas valeur du point (relecture 28/09)
+        reperes.append((float(an), annuel[int(an)], str(an), "> %d%s" % (s, U), "middle", s in MAJEURS))  # « > » : seuil franchi, pas valeur du point (relecture 28/09)
     reperes.append((pts[-1][0], pct_courant, label_courant,
-                    nb(pct_courant) + U, "end"))
+                    nb(pct_courant) + U, "end", True))
 
     # Anti-collision : deux reperes proches voient leurs etiquettes se toucher,
     # et le cas se produit par construction a la fin de la serie -- le dernier
@@ -996,30 +1014,33 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
     # l'etiquette de tout repere dont le suivant est a moins de 95 px. Le
     # premier garde son ancrage : le replier le sortirait du cadre.
     espacees = []
-    for i, (xv, yv, date, pct, anchor) in enumerate(reperes):
+    for i, (xv, yv, date, pct, anchor, majeur) in enumerate(reperes):
         if 0 < i < len(reperes) - 1:
             if X(reperes[i + 1][0]) - X(xv) < 95:
                 anchor = "end"
-        espacees.append((xv, yv, date, pct, anchor))
+        espacees.append((xv, yv, date, pct, anchor, majeur))
     reperes = espacees
 
-    for xv, yv, date, pct, anchor in reperes:
+    for xv, yv, date, pct, anchor, majeur in reperes:
         px, py = X(xv), Y(yv)
         dernier = xv == reperes[-1][0]
         e.append('<circle cx="%.1f" cy="%.1f" r="%s" fill="%s"/>'
-                 % (px, py, "5" if dernier else "3.4",
+                 % (px, py, "5" if dernier else ("3.4" if majeur else "2.6"),
                     COL_INTER if dernier else COL_DETTE))
         dx = 5 if anchor == "start" else (-5 if anchor == "end" else 0)
         e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="%d" '
-                 'font-weight="700" fill="%s" text-anchor="%s">%s</text>'
-                 % (px + dx, py - 11, FONT, 13 if dernier else 12, INK2, anchor, date))
+                 'font-weight="%d" fill="%s" text-anchor="%s">%s</text>'
+                 % (px + dx, py - 11, FONT,
+                    TY_VALEUR - 1 if dernier else (TY_ANNOT if majeur else TY_MINEUR),
+                    700 if majeur or dernier else 500,
+                    INK2 if majeur or dernier else MUTED, anchor, date))
         # Le pourcentage doit etre SOUS la courbe, pas a une distance fixe du
         # point : la ou la pente est forte -- 2009, 2020 -- la ligne replonge
         # dans le texte quelques pixels plus loin. On prend donc le point le
         # plus bas de la courbe sur la LARGEUR REELLE de l'etiquette, et on se
         # pose en dessous. Mesure a l'ecran le 20/09 : « 80 % » etait traverse
         # par la courbe.
-        corps = 13 if dernier else 12
+        corps = TY_VALEUR - 1 if dernier else (TY_ANNOT if majeur else TY_MINEUR)
         larg = 0.58 * corps * len(pct)
         tx = px + dx
         gx0 = tx if anchor == "start" else (tx - larg if anchor == "end"

@@ -203,7 +203,11 @@
   background: color-mix(in srgb, var(--color-bg) 94%, transparent);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  border-bottom: 1px solid var(--color-accent-rule);
+  // La regle horizontale structure la composition : le cartouche, le bas des
+  // onglets et le reperede MAJ s'y alignent, et l'onglet actif la RECOUVRE d'un
+  // pixel (margin-bottom negatif + bordure basse de la couleur du fond). Sans
+  // cela l'onglet flotte au-dessus de sa ligne -- defaut signale le 28/09.
+  border-bottom: 1px solid var(--color-rule-medium);
   font-family: var(--font-sans);
 }
 .dossier-dette__barre {
@@ -211,12 +215,14 @@
   align-items: flex-end;
   flex-wrap: wrap;
   gap: 0.3rem 1rem;
-  padding-top: 0.3rem;
+  padding-top: 0.35rem;
 }
 .dossier-dette__titre {
   // Pastille pleine, bleu marine, texte blanc (auteur, 28/09) : le dossier se
   // nomme lui-meme d'un coup d'oeil, au lieu de se lire comme une sur-legende.
   flex: 0 0 auto;
+  align-self: flex-end;
+  margin-bottom: 0.4rem;   // meme ligne de base optique que le bas des onglets
   padding: 0.22rem 0.6rem;
   border-radius: 4px;
   background: var(--color-accent);
@@ -238,10 +244,10 @@
 .dossier-dette__volet { margin: 0; }
 .dossier-dette__onglet {
   display: block;
-  padding: 0.35rem 0.85rem 0.4rem;
+  margin-bottom: -1px;     // l'onglet mord la regle au lieu de la survoler
+  padding: 0.35rem 0.85rem 0.45rem;
   border: 1px solid transparent;
-  border-bottom: none;
-  border-radius: 6px 6px 0 0;
+  border-radius: 5px 5px 0 0;
   color: var(--color-accent);
   text-decoration: none;
   font-size: 0.9rem;
@@ -254,11 +260,9 @@ a.dossier-dette__onglet:hover { background: var(--color-accent-faint); }
 a.dossier-dette__onglet:focus-visible { outline: 2px solid var(--color-pivot); outline-offset: 2px; }
 .dossier-dette__volet.is-actif .dossier-dette__onglet {
   background: var(--color-bg-elevated);
-  border-color: var(--color-accent-rule);
+  border-color: var(--color-rule-medium);
+  border-bottom-color: var(--color-bg-elevated);  // la regle est « mangee » ici
   color: var(--color-text);
-  // le trait plein de l'onglet actif mord sur la bordure de la barre : c'est ce
-  // qui fait lire « onglet » plutôt que « bouton ».
-  box-shadow: 0 1px 0 0 var(--color-bg-elevated);
 }
 .dossier-dette__role {
   display: block;
@@ -268,9 +272,9 @@ a.dossier-dette__onglet:focus-visible { outline: 2px solid var(--color-pivot); o
 // Date de mise à jour : rouge, discrète mais immanquable ; son libellé diffère
 // selon le volet (donnée publiée / mise à jour éditoriale), voir le shortcode.
 .dossier-dette__maj {
-  align-self: center;
+  align-self: flex-end;
   margin-left: auto;
-  padding-bottom: 0.35rem;
+  padding-bottom: 0.5rem;   // pose sur la meme ligne de base que les onglets
   font-family: var(--font-mono);
   font-size: 0.86rem;
   font-weight: 700;
