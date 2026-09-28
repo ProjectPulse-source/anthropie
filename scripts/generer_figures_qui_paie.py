@@ -61,6 +61,19 @@ XLSX = REPO / "scripts" / "sources" / "insee_IA118_comptes_distribues_2023.xlsx"
 XLSX_SHA256 = "6f5f27809be12e192afdca5008022a0e0c63f832869d29be8dc837abbdeec0eb"
 XLSX_URL = "https://www.insee.fr/fr/statistiques/8974371"
 
+# DATE DE RELEVÉ DES SOURCES, publiée dans la citation prête à copier du bloc
+# « Réutiliser ». Elle était écrite à la main et ne s'appuyait sur RIEN : le XLSX
+# de l'Insee avait bien sa garde d'empreinte, le registre du livre n'en avait
+# aucune. Le registre est pourtant une source VIVANTE — la révision annuelle du
+# livre la régénère. Il pouvait donc changer, les chiffres de la page suivre, et
+# la date de relevé rester au 21/09 sans que rien ne le signale : la citation
+# qu'un tiers reprend sous licence aurait porté une date fausse.
+# Les deux empreintes gouvernent maintenant la date. Une source qui bouge sans
+# que la date suive arrête la génération — l'erreur devient impossible au lieu
+# d'être documentée.
+REGISTRE_SHA256 = "5f765eeb27581421b08dac9622af0cb0f767cb73c48a3b29bd6bcb75811b9b37"
+SOURCES_RELEVEES_LE = "21 septembre 2026"
+
 IMG = REPO / "static" / "img"
 URL_PAGE = "stephane-lalut.com/qui-paie-la-dette-publique/"
 
@@ -166,6 +179,11 @@ def lire_registre() -> dict:
     if not REGISTRE.is_file():
         fail("registre introuvable : %s (variable REGISTRE_DETTE pour un autre chemin)" % REGISTRE)
     brut = REGISTRE.read_bytes()
+    sha = hashlib.sha256(brut).hexdigest()
+    if sha != REGISTRE_SHA256:
+        fail("empreinte du registre du livre changée (%s…) : relire les valeurs à la "
+             "source, puis mettre à jour REGISTRE_SHA256 ET SOURCES_RELEVEES_LE — sans "
+             "quoi la page publierait une date de relevé fausse" % sha[:12])
     reg = yaml.safe_load(brut.decode("utf-8"))
     info = reg["infographie_detention"]
     total_txt = reg["grandeurs"]["dette_fin_annee_mdeur"]["valeur_imprimee"]
@@ -186,7 +204,7 @@ def lire_registre() -> dict:
             "foyers": {"millions": foyers, "periode": ff["periode"],
                        "periode_en": ff.get("periode_en", ""),
                        "source": ff["source_citee"], "url": ff.get("url_source", "")},
-            "sha256": hashlib.sha256(brut).hexdigest()}
+            "sha256": sha}
 
 
 def lire_insee() -> dict:
@@ -654,7 +672,7 @@ def affichage(r: dict, d: dict) -> dict:
     if not (age["esp"][4] > age["esp"][0] and -age["prel"][4] < -age["prel"][0]):
         fail("la page dit que les 65 ans ou plus reçoivent plus et versent moins que les 18-29 ans")
     return {
-        "releve_le": "21 septembre 2026",
+        "releve_le": SOURCES_RELEVEES_LE,
         "net_bascule": "D%d" % (bascule + 1),
         "net_benef_n": fr(bascule),
         "net_d10": fr(net[9]),
