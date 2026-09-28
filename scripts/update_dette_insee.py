@@ -1362,12 +1362,23 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
 
     # LEGENDE des bandes, sous l'axe : une figure reprise seule doit dire ce que
     # ses zones grisees signifient. Ordre chronologique, gris, une seule ligne.
-    lg = [(per, (lf if lang == "fr" else le))
-          for a1b, a2b, lf, le, per in CRISES if a2b >= x0 and a1b <= x1]
-    if lg:
-        bouts = ["%s %s" % (per, lib) for per, lib in lg]
-        e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="%d" fill="%s">%s</text>'
-                 % (ml, h - 6, FONT, TY_MINEUR - 1, MUTED, _esc("  ·  ".join(bouts))))
+    # Chaque libelle sous SA bande, sur deux lignes : periode au-dessus, intitule
+    # en dessous (auteur, 28/09). Une ligne unique en pied ne disait pas quelle
+    # bande portait quel mot ; ici le libelle est centre sur la bande qu'il nomme.
+    for a1b, a2b, lf, le, per in CRISES:
+        if a2b < x0 or a1b > x1:
+            continue
+        cx = (X(max(a1b, x0)) + X(min(a2b, x1))) / 2
+        lib = lf if lang == "fr" else le
+        # bornage : un libelle centre sur une bande de bord sortirait du cadre
+        demi = 0.29 * (TY_MINEUR - 1) * max(len(lib), len(per))
+        cx = min(max(cx, ml + demi), w - mr - demi)
+        e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="%d" fill="%s" '
+                 'text-anchor="middle">%s</text>'
+                 % (cx, h - 18, FONT, TY_MINEUR - 1, MUTED, _esc(per)))
+        e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="%d" fill="%s" '
+                 'text-anchor="middle">%s</text>'
+                 % (cx, h - 6, FONT, TY_MINEUR - 1, MUTED, _esc(lib)))
 
     src = LABELS_CARTOUCHE[lang]["src_longue"]
     e += cartouche(w, h + 4, src % (ans[0], label_courant), "longue", lang)

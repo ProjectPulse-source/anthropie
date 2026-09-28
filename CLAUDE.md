@@ -128,6 +128,29 @@ la première garde). La CI utilise `hugo --minify` sans `--quiet` : ne pas chang
 Et un garde-fou se **teste par mutation réelle puis restauration**, jamais par relecture
 du code.
 
+## Figures de données — constantes, et une règle de méthode
+
+La charte graphique complète (couleurs sémantiques, grille, étiquetage, jalons, bandes, cartouche,
+contrôles) est une **constante de l'auteur** arrêtée le 2026-09-28 : mémoire
+`feedback_langage_graphique_figures`. Elle s'applique aux deux générateurs de ce dépôt
+(`update_dette_insee.py`, `generer_figures_qui_paie.py`) sans être rediscutée figure par figure.
+Trois points en tiennent lieu de rappel : **deux couleurs de données au maximum** et la même
+grandeur toujours de la même couleur ; **toute étiquette centrée sur le point qu'elle désigne** ;
+**le libellé d'une bande d'événement se pose sous elle, en deux lignes** — période, puis intitulé.
+
+⚠ **Une teinte nouvelle passe `validate_palette.js` avant d'être appliquée.** Le bleu marine du site
+(`#1B2A4E`) y échoue comme couleur de données : chroma trop faible, il lit gris. C'est ainsi que le
+bleu profond `#184f95` a été retenu — sur mesure, non par goût.
+
+### Avant de corriger une mise en page, MESURER
+
+Le 2026-09-28, trois correctifs CSS successifs ont été livrés et déployés contre un défaut supposé
+— un retour à la ligne de la barre du dossier — qui **n'existait pas** : trente secondes dans le
+navigateur (`window.innerWidth`, `getComputedStyle(...).gridTemplateAreas`) ont montré une grille à
+une seule rangée et un simple désalignement optique. **Une propriété calculée vaut mieux que trois
+hypothèses.** Quand un symptôme visuel résiste à une correction, la suivante ne s'écrit pas : on
+relève d'abord la valeur calculée, ou l'on demande la capture d'inspecteur.
+
 ## Conventions de contenu
 
 ### Typographie française — règle de site (auteur, 2026-09-20)

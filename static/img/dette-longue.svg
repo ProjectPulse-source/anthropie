@@ -43,7 +43,14 @@
 <circle cx="551.7" cy="59.0" r="5" fill="#eb6834"/>
 <text x="551.7" y="46.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#52514e" text-anchor="middle">T1 2026</text>
 <text x="551.7" y="91.9" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#eb6834" text-anchor="middle">117,5 %</text>
-<text x="44.0" y="314.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" fill="#898781">1979-1982 post-choc pétrolier  ·  1993 récession  ·  2008-2009 crise financière  ·  2020-2021 crise sanitaire</text>
+<text x="99.1" y="302.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" fill="#898781" text-anchor="middle">1979-1982</text>
+<text x="99.1" y="314.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" fill="#898781" text-anchor="middle">post-choc pétrolier</text>
+<text x="210.5" y="302.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" fill="#898781" text-anchor="middle">1993</text>
+<text x="210.5" y="314.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" fill="#898781" text-anchor="middle">récession</text>
+<text x="377.1" y="302.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" fill="#898781" text-anchor="middle">2008-2009</text>
+<text x="377.1" y="314.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" fill="#898781" text-anchor="middle">crise financière</text>
+<text x="500.7" y="302.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" fill="#898781" text-anchor="middle">2020-2021</text>
+<text x="500.7" y="314.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" fill="#898781" text-anchor="middle">crise sanitaire</text>
 <line x1="0" y1="324.0" x2="720" y2="324.0" stroke="#e1e0d9" stroke-width="1"/>
 <text x="0" y="337.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">INSEE, dette de Maastricht, 1978-T1 2026</text>
 <text x="0" y="349.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Dette au sens de Maastricht, toutes administrations publiques. « &gt; 80 % » : première fin d'année au-delà du seuil ; en trimestriel, il peut être franchi plus tôt.</text>
