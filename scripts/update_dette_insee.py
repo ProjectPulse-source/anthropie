@@ -562,7 +562,9 @@ def cartouche(w: int, y0: float, source: str, note_cle: str,
 # Bandes de crise, trait epais, valeur en pastille (choix de l'auteur, 28/09,
 # sur maquettes). Le fond situe les ruptures sans que le lecteur les cherche
 # dans le texte ; la pastille fait voyager la valeur cle avec l'image.
-CRISES = ((2008.0, 2010.0, "crise financière", "financial crisis"),
+CRISES = ((1979.0, 1982.0, "post-choc pétrolier", "post-oil-shock"),
+          (1993.0, 1994.0, "récession", "recession"),
+          (2008.0, 2010.0, "crise financière", "financial crisis"),
           (2020.0, 2021.0, "crise sanitaire", "pandemic"))
 BANDE = "#eb6834"
 # Orange ATTENUE des seuils anciens : l'orange sature est reserve au point
@@ -765,8 +767,12 @@ def build_svg(dette_pib: dict[str, float], d41_pib: dict[str, float],
     # dans celui du bas (choix de l'auteur, 28/09) : deux panneaux alignes sur le
     # meme axe temporel n'ont pas besoin de repeter le meme mot, et en haut la
     # courbe le frolait. Pose au-dessus de la ligne de base du panneau.
-    e += bandes_crise(lambda a: _x(a, t0, t1), ay1, ay0, lang, libelles=False)
-    e += bandes_crise(lambda a: _x(a, t0, t1), by1, by0, lang, bas=True)
+    # BORNES : depuis que la liste porte aussi 1979-1982 et 1993, une bande
+    # anterieure au debut du ciseau se dessinerait hors du cadre, a gauche.
+    e += bandes_crise(lambda a: _x(a, t0, t1), ay1, ay0, lang, libelles=False,
+                      x_min=t0, x_max=t1)
+    e += bandes_crise(lambda a: _x(a, t0, t1), by1, by0, lang, bas=True,
+                      x_min=t0, x_max=t1)
 
     # series (2,6 px, bouts ronds)
     e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.6" '
@@ -1260,9 +1266,12 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
         e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="%d" '
                  'font-weight="600" fill="%s">%s%s</text>'
                  % (px + 9, py + 1, FONT, TY_ANNOT, COL_DETTE, nb(prev[-1][1]), U))
+        # SOUS la valeur d'arrivee, a droite du cercle : centree sur le pointille
+        # elle heurtait « T1 2026 », au-dessus comme en dessous (deux rendus).
+        # Ici elle nomme le trait sans disputer aucun aplomb.
         e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="%d" '
                  'fill="%s">%s</text>'
-                 % (px + 9, py + 15, FONT, TY_MINEUR, MUTED,
+                 % (px + 9, py + 16, FONT, TY_MINEUR, MUTED,
                     _esc("trajectoire PLF 2026" if lang == "fr"
                          else "2026 budget bill path")))
     e += bandes
@@ -1297,34 +1306,32 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
     # cas a la main (il se deplacerait au prochain seuil), on replie a gauche
     # l'etiquette de tout repere dont le suivant est a moins de 95 px. Le
     # premier garde son ancrage : le replier le sortirait du cadre.
-    espacees = []
-    for i, (xv, yv, date, pct, anchor, majeur) in enumerate(reperes):
-        if 0 < i < len(reperes) - 1:
-            if X(reperes[i + 1][0]) - X(xv) < 95:
-                anchor = "end"
-        espacees.append((xv, yv, date, pct, anchor, majeur))
-    reperes = espacees
+    # Toutes les etiquettes sont CENTREES sur leur point (auteur, 28/09) : une
+    # date qui flotte a gauche de son marqueur ne le designe plus. Les ecarts
+    # entre jalons le permettent ; le controle est fait ci-dessous, au rendu.
+    reperes = [(xv, yv, date, pct, "middle", majeur)
+               for xv, yv, date, pct, anchor, majeur in reperes]
 
     for xv, yv, date, pct, anchor, majeur in reperes:
         px, py = X(xv), Y(yv)
         dernier = xv == reperes[-1][0]
+        # Meme diametre pour tous les points bleus : chaque jalon est un point de
+        # bascule, et c'est la BANDE qui dit lequel. Seul le point contemporain,
+        # en orange, se detache -- il n'est pas de la meme nature.
         e.append('<circle cx="%.1f" cy="%.1f" r="%s" fill="%s"/>'
-                 % (px, py, "5" if dernier else ("3.4" if majeur else "2.6"),
+                 % (px, py, "5" if dernier else "3.8",
                     COL_INTER if dernier else COL_DETTE))
         dx = 5 if anchor == "start" else (-5 if anchor == "end" else 0)
         e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="%d" '
                  'font-weight="%d" fill="%s" text-anchor="%s">%s</text>'
-                 % (px + dx, py - 11, FONT,
-                    TY_VALEUR - 1 if dernier else (TY_ANNOT if majeur else TY_MINEUR),
-                    700 if majeur or dernier else 500,
-                    INK2 if majeur or dernier else MUTED, anchor, date))
+                 % (px + dx, py - 13, FONT, TY_ANNOT, 700, INK2, anchor, date))
         # Le pourcentage doit etre SOUS la courbe, pas a une distance fixe du
         # point : la ou la pente est forte -- 2009, 2020 -- la ligne replonge
         # dans le texte quelques pixels plus loin. On prend donc le point le
         # plus bas de la courbe sur la LARGEUR REELLE de l'etiquette, et on se
         # pose en dessous. Mesure a l'ecran le 20/09 : « 80 % » etait traverse
         # par la courbe.
-        corps = TY_VALEUR - 1 if dernier else (TY_ANNOT if majeur else TY_MINEUR)
+        corps = TY_ANNOT
         larg = 0.58 * corps * len(pct)
         tx = px + dx
         gx0 = tx if anchor == "start" else (tx - larg if anchor == "end"
@@ -1349,6 +1356,18 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
     # Pas de libelles d'axe horizontal : les deux bornes de la periode sont
     # deja portees, en gras, par le premier et le dernier repere. Les repeter
     # sous l'axe ferait lire deux fois la meme date.
+
+    # LEGENDE des bandes, sous l'axe : une figure reprise seule doit dire ce que
+    # ses zones grisees signifient. Ordre chronologique, gris, une seule ligne.
+    lg = [(a1b, a2b, (lf if lang == "fr" else le))
+          for a1b, a2b, lf, le in CRISES if a2b >= x0 and a1b <= x1]
+    if lg:
+        bouts = []
+        for a1b, a2b, lib in lg:
+            an = "%d" % int(a1b) if int(a2b) - int(a1b) <= 1 else "%d-%d" % (int(a1b), int(a2b))
+            bouts.append("%s %s" % (an, lib))
+        e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="%d" fill="%s">%s</text>'
+                 % (ml, h - 6, FONT, TY_MINEUR - 1, MUTED, _esc("  ·  ".join(bouts))))
 
     src = LABELS_CARTOUCHE[lang]["src_longue"]
     e += cartouche(w, h + 4, src % (ans[0], label_courant), "longue", lang)

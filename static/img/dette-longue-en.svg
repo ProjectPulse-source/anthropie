@@ -19,28 +19,31 @@
 <path d="M551.7,59.0 L559.8,58.2 L570.5,56.6 L581.3,56.8 L592.0,58.0" fill="none" stroke="#184f95" stroke-width="2.4" stroke-dasharray="6 5" stroke-linejoin="round" opacity="0.75"/>
 <circle cx="592.0" cy="58.0" r="4" fill="#ffffff" stroke="#184f95" stroke-width="2"/>
 <text x="601.0" y="59.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#184f95">118.0%</text>
-<text x="601.0" y="73.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="11" fill="#898781">2026 budget bill path</text>
+<text x="601.0" y="74.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="11" fill="#898781">2026 budget bill path</text>
+<rect x="54.7" y="34.0" width="32.2" height="260.0" fill="#eb6834" opacity="0.05"/>
+<rect x="205.2" y="34.0" width="10.7" height="260.0" fill="#eb6834" opacity="0.05"/>
 <rect x="366.4" y="34.0" width="21.5" height="260.0" fill="#eb6834" opacity="0.05"/>
 <rect x="495.3" y="34.0" width="10.7" height="260.0" fill="#eb6834" opacity="0.05"/>
 <path d="M 44.0 250.8 L 54.7 250.8 L 65.5 251.4 L 76.2 248.8 L 87.0 241.6 L 97.7 238.6 L 108.5 233.6 L 119.2 230.2 L 130.0 229.2 L 140.7 224.4 L 151.5 224.6 L 162.2 223.0 L 172.9 220.4 L 183.7 218.4 L 194.4 210.6 L 205.2 197.6 L 215.9 190.8 L 226.7 178.4 L 237.4 172.8 L 248.2 170.0 L 258.9 169.8 L 269.6 171.2 L 280.4 174.6 L 291.1 175.4 L 301.9 171.4 L 312.6 163.2 L 323.4 160.2 L 334.1 157.6 L 344.9 163.2 L 355.6 163.0 L 366.4 154.4 L 377.1 125.8 L 387.8 121.4 L 398.6 116.6 L 409.3 110.6 L 420.1 104.8 L 430.8 101.6 L 441.6 100.0 L 452.3 97.8 L 463.1 96.4 L 473.8 97.0 L 484.5 97.6 L 495.3 64.2 L 506.0 68.4 L 516.8 71.2 L 527.5 75.0 L 538.3 68.8 L 549.0 62.6 L 551.7 59.0" fill="none" stroke="#184f95" stroke-width="2.8" stroke-linejoin="round"/>
-<circle cx="44.0" cy="250.8" r="3.4" fill="#184f95"/>
-<text x="49.0" y="239.8" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#52514e" text-anchor="start">1978</text>
-<text x="49.0" y="268.3" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#b8703f" text-anchor="start">21.6%</text>
-<circle cx="108.5" cy="233.6" r="2.6" fill="#184f95"/>
-<text x="108.5" y="222.6" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="11" font-weight="500" fill="#898781" text-anchor="middle">1984</text>
-<text x="108.5" y="257.1" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#b8703f" text-anchor="middle">> 30%</text>
-<circle cx="237.4" cy="172.8" r="3.4" fill="#184f95"/>
-<text x="237.4" y="161.8" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#52514e" text-anchor="middle">1996</text>
+<circle cx="44.0" cy="250.8" r="3.8" fill="#184f95"/>
+<text x="44.0" y="237.8" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#52514e" text-anchor="middle">1978</text>
+<text x="44.0" y="268.2" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#b8703f" text-anchor="middle">21.6%</text>
+<circle cx="108.5" cy="233.6" r="3.8" fill="#184f95"/>
+<text x="108.5" y="220.6" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#52514e" text-anchor="middle">1984</text>
+<text x="108.5" y="257.5" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#b8703f" text-anchor="middle">> 30%</text>
+<circle cx="237.4" cy="172.8" r="3.8" fill="#184f95"/>
+<text x="237.4" y="159.8" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#52514e" text-anchor="middle">1996</text>
 <text x="237.4" y="203.1" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#b8703f" text-anchor="middle">> 60%</text>
-<circle cx="377.1" cy="125.8" r="2.6" fill="#184f95"/>
-<text x="377.1" y="114.8" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="11" font-weight="500" fill="#898781" text-anchor="middle">2009</text>
-<text x="377.1" y="175.6" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#b8703f" text-anchor="middle">> 80%</text>
-<circle cx="495.3" cy="64.2" r="3.4" fill="#184f95"/>
-<text x="490.3" y="53.2" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#52514e" text-anchor="end">2020</text>
-<text x="490.3" y="115.6" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#b8703f" text-anchor="end">> 100%</text>
+<circle cx="377.1" cy="125.8" r="3.8" fill="#184f95"/>
+<text x="377.1" y="112.8" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#52514e" text-anchor="middle">2009</text>
+<text x="377.1" y="176.7" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#b8703f" text-anchor="middle">> 80%</text>
+<circle cx="495.3" cy="64.2" r="3.8" fill="#184f95"/>
+<text x="495.3" y="51.2" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#52514e" text-anchor="middle">2020</text>
+<text x="495.3" y="114.4" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#b8703f" text-anchor="middle">> 100%</text>
 <circle cx="551.7" cy="59.0" r="5" fill="#eb6834"/>
-<text x="546.7" y="48.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#52514e" text-anchor="end">Q1 2026</text>
-<text x="546.7" y="91.6" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="14" font-weight="600" fill="#eb6834" text-anchor="end">117.5%</text>
+<text x="551.7" y="46.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#52514e" text-anchor="middle">Q1 2026</text>
+<text x="551.7" y="90.1" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#eb6834" text-anchor="middle">117.5%</text>
+<text x="44.0" y="314.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" fill="#898781">1979-1982 post-oil-shock  ·  1993 recession  ·  2008-2010 financial crisis  ·  2020 pandemic</text>
 <line x1="0" y1="324.0" x2="720" y2="324.0" stroke="#e1e0d9" stroke-width="1"/>
 <text x="0" y="337.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">INSEE, Maastricht debt, 1978-Q1 2026</text>
 <text x="0" y="349.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Maastricht debt, general government. "&gt; 80%": first year-end above the threshold; in quarterly data it may be crossed earlier.</text>
