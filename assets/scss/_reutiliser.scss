@@ -228,8 +228,12 @@
   // Pastille pleine, bleu marine, texte blanc (auteur, 28/09) : le dossier se
   // nomme lui-meme d'un coup d'oeil, au lieu de se lire comme une sur-legende.
   grid-area: titre;
-  align-self: end;
-  margin-bottom: 0.45rem;  // meme ligne de base optique que le bas des onglets
+  // Les trois elements avaient TROIS geometries verticales differentes : le
+  // cartouche releve de 0,45rem, la date creusee de 0,5rem, l'onglet descendu
+  // d'un pixel. Le commentaire disait « meme ligne de base », le code disait le
+  // contraire (contre-expertise du 28/09). Plus de compensation : les onglets
+  // reposent sur la regle, cartouche et date sont centres dans leur hauteur.
+  align-self: center;
   white-space: nowrap;
   padding: 0.22rem 0.6rem;
   border-radius: 4px;
@@ -243,6 +247,7 @@
 }
 .dossier-dette__volets {
   grid-area: onglets;
+  align-self: end;         // seuls les onglets touchent la regle
   display: flex;
   gap: 0.25rem;
   margin: 0;
@@ -282,9 +287,8 @@ a.dossier-dette__onglet:focus-visible { outline: 2px solid var(--color-pivot); o
 // selon le volet (donnée publiée / mise à jour éditoriale), voir le shortcode.
 .dossier-dette__maj {
   grid-area: maj;
-  align-self: end;
+  align-self: center;
   justify-self: end;
-  padding-bottom: 0.5rem;   // pose sur la meme ligne de base que les onglets
   font-family: var(--font-mono);
   font-size: 0.86rem;
   font-weight: 700;
