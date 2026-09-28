@@ -401,7 +401,11 @@ def faits_historiques(annuel: dict, pct_courant: float) -> dict:
 # ---------------------------------------------------------------------- SVG
 SVG_W, SVG_H = 720, 480
 MARG_L, MARG_R = 46, 14
-COL_DETTE = "#2a78d6"   # palette dataviz slot 1 (validee)
+# Bleu PROFOND (pas 600 de la rampe) : direction « minimal newsroom » retenue par
+# l'auteur le 28/09 sur maquettes. Le bleu marine du site echoue au controle de
+# palette (chroma trop faible, il lit gris en donnee) ; ce pas-ci passe tous les
+# controles, seul et avec l'orange et l'aqua.
+COL_DETTE = "#184f95"   # palette dataviz, rampe bleue, pas 600 (validee)
 COL_INTER = "#eb6834"   # slot 2
 INK, INK2, MUTED, GRID, AXIS = "#0A0A0E", "#52514e", "#898781", "#e1e0d9", "#c3c2b7"
 FONT = "system-ui, -apple-system, Segoe UI, sans-serif"
@@ -571,7 +575,7 @@ def bandes_crise(X, y_haut, y_bas, lang, x_min=None, x_max=None, libelles=True):
             continue
         xa, xb = X(a1), X(a2)
         out.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="%s" '
-                   'opacity="0.07"/>' % (xa, y_haut, max(xb - xa, 2.0), y_bas - y_haut, BANDE))
+                   'opacity="0.05"/>' % (xa, y_haut, max(xb - xa, 2.0), y_bas - y_haut, BANDE))
         # Le libelle ne s'imprime que la ou il ne heurte rien : dans la figure
         # longue, les jalons de seuil occupent deja le haut du cadre (vu au rendu).
         if libelles:
@@ -1226,7 +1230,8 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
                      else "Maastricht reference, 60%")))
     # Les bandes passent APRES l'aplat : dessous, elles viraient au gris (vu au
     # rendu le 28/09). Elles restent derriere la courbe, qui domine.
-    e.append('<path d="%s" fill="%s" fill-opacity="0.10"/>' % (aire, COL_DETTE))
+    # Plus d'aplat sous la courbe : la ligne seule dans du blanc (direction
+    # « minimal newsroom », 28/09). L'aire reste calculee mais n'est plus dessinee.
     if prev:
         # le prolongement part du dernier point OBSERVE : aucun saut, aucune
         # valeur intercalee entre les deux regimes.

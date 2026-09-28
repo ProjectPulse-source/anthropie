@@ -13,25 +13,25 @@
 <text x="40.0" y="110.7" font-size="11" fill="#898781" text-anchor="end">40</text>
 <line x1="46" y1="62.0" x2="708" y2="62.0" stroke="#e1e0d9" stroke-width="1"/>
 <text x="40.0" y="66.0" font-size="11" fill="#898781" text-anchor="end">60</text>
-<rect x="62.1" y="198.1" width="34" height="44.5" rx="2" fill="#2a78d6"/>
+<rect x="62.1" y="198.1" width="34" height="44.5" rx="2" fill="#184f95"/>
 <text x="79.1" y="255.6" font-size="10" fill="#52514e" text-anchor="middle">−20,8</text>
 <text x="79.1" y="282.0" font-size="11" fill="#898781" text-anchor="middle">D1</text>
-<rect x="128.3" y="198.1" width="34" height="47.8" rx="2" fill="#2a78d6"/>
+<rect x="128.3" y="198.1" width="34" height="47.8" rx="2" fill="#184f95"/>
 <text x="145.3" y="259.0" font-size="10" fill="#52514e" text-anchor="middle">−22,3</text>
 <text x="145.3" y="282.0" font-size="11" fill="#898781" text-anchor="middle">D2</text>
-<rect x="194.5" y="198.1" width="34" height="36.4" rx="2" fill="#2a78d6"/>
+<rect x="194.5" y="198.1" width="34" height="36.4" rx="2" fill="#184f95"/>
 <text x="211.5" y="247.6" font-size="10" fill="#52514e" text-anchor="middle">−17,2</text>
 <text x="211.5" y="282.0" font-size="11" fill="#898781" text-anchor="middle">D3</text>
-<rect x="260.7" y="198.1" width="34" height="28.6" rx="2" fill="#2a78d6"/>
+<rect x="260.7" y="198.1" width="34" height="28.6" rx="2" fill="#184f95"/>
 <text x="277.7" y="239.7" font-size="10" fill="#52514e" text-anchor="middle">−13,7</text>
 <text x="277.7" y="282.0" font-size="11" fill="#898781" text-anchor="middle">D4</text>
-<rect x="326.9" y="198.1" width="34" height="17.7" rx="2" fill="#2a78d6"/>
+<rect x="326.9" y="198.1" width="34" height="17.7" rx="2" fill="#184f95"/>
 <text x="343.9" y="228.8" font-size="10" fill="#52514e" text-anchor="middle">−8,8</text>
 <text x="343.9" y="282.0" font-size="11" fill="#898781" text-anchor="middle">D5</text>
-<rect x="393.1" y="198.1" width="34" height="11.6" rx="2" fill="#2a78d6"/>
+<rect x="393.1" y="198.1" width="34" height="11.6" rx="2" fill="#184f95"/>
 <text x="410.1" y="222.8" font-size="10" fill="#52514e" text-anchor="middle">−6,1</text>
 <text x="410.1" y="282.0" font-size="11" fill="#898781" text-anchor="middle">D6</text>
-<rect x="459.3" y="198.1" width="34" height="2.0" rx="2" fill="#2a78d6"/>
+<rect x="459.3" y="198.1" width="34" height="2.0" rx="2" fill="#184f95"/>
 <text x="476.3" y="213.1" font-size="10" fill="#52514e" text-anchor="middle">−1,8</text>
 <text x="476.3" y="282.0" font-size="11" fill="#898781" text-anchor="middle">D7</text>
 <rect x="525.5" y="182.3" width="34" height="9.8" rx="2" fill="#eb6834"/>

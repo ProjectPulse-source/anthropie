@@ -67,7 +67,7 @@ URL_PAGE = "stephane-lalut.com/qui-paie-la-dette-publique/"
 # Palette dataviz de référence (slots 1-3, validés en clair par
 # validate_palette.js le 2026-09-21 ; l'aqua avertit en contraste : d'où les
 # étiquettes de valeur visibles et la vue en tableau sur la page).
-C1, C2, C3 = "#2a78d6", "#eb6834", "#1baf7a"
+C1, C2, C3 = "#184f95", "#eb6834", "#1baf7a"   # bleu profond, 28/09 (triplet revalide)
 INK, INK2, MUTED, GRID, AXIS = "#2b2a28", "#52514e", "#898781", "#e1e0d9", "#c3c2b7"
 FONT = "system-ui, -apple-system, Segoe UI, sans-serif"
 NBSP = "\u00a0"

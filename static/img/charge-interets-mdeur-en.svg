@@ -14,9 +14,9 @@
 <text x="338.0" y="324.0" font-size="11" fill="#898781" text-anchor="middle">2010</text>
 <text x="528.7" y="324.0" font-size="11" fill="#898781" text-anchor="middle">2020</text>
 <text x="624.0" y="324.0" font-size="11" fill="#898781" text-anchor="middle">2025</text>
-<rect x="299.9" y="46.0" width="38.1" height="260.0" fill="#eb6834" opacity="0.07"/>
+<rect x="299.9" y="46.0" width="38.1" height="260.0" fill="#eb6834" opacity="0.05"/>
 <text x="318.9" y="58.0" font-size="10" fill="#eb6834" text-anchor="middle" opacity="0.85">financial crisis</text>
-<rect x="528.7" y="46.0" width="19.1" height="260.0" fill="#eb6834" opacity="0.07"/>
+<rect x="528.7" y="46.0" width="19.1" height="260.0" fill="#eb6834" opacity="0.05"/>
 <text x="538.2" y="58.0" font-size="10" fill="#eb6834" text-anchor="middle" opacity="0.85">pandemic</text>
 <path d="M52.0,158.9 L71.1,147.4 L90.1,147.8 L109.2,148.1 L128.3,156.5 L147.3,154.0 L166.4,143.2 L185.5,139.4 L204.5,143.2 L223.6,140.4 L242.7,139.4 L261.7,138.3 L280.8,124.4 L299.9,106.6 L318.9,134.2 L338.0,129.3 L357.1,110.8 L376.1,114.6 L395.2,133.8 L414.3,141.1 L433.3,150.2 L452.4,158.2 L471.5,163.1 L490.5,160.6 L509.6,177.4 L528.7,202.5 L547.7,184.7 L566.8,128.6 L585.9,119.9 L604.9,96.5 L624.0,73.9" fill="none" stroke="#eb6834" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
 <circle cx="528.7" cy="202.5" r="3.5" fill="#eb6834"/>
