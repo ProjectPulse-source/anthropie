@@ -1,0 +1,38 @@
+// Impression et export PDF (relecture externe du 28/09 : navigation imprimée,
+// fond décoratif sur les graphiques, cartes coupées, dernière page presque vide).
+// Principe : le PDF garde le texte, les figures et leurs sources ; il perd ce qui
+// ne sert qu'à l'écran (navigation, fond, boutons, partage).
+@media print {
+  @page { margin: 16mm 14mm; }
+
+  html, body, .site-wrapper, .site-main { background: #fff !important; }
+  body { color: #000; font-size: 11pt; }
+
+  .anthropie-bg,
+  .site-header__nav,
+  .site-header__burger,
+  .mobile-menu,
+  .transmettre,
+  .reutiliser-ancre,
+  .reutiliser__actions,
+  .dette-chiffres__live,
+  .ressource-retour,
+  .site-footer__inner,
+  .how-to-cite__btn { display: none !important; }
+
+  .site-header { position: static !important; box-shadow: none !important; border: 0 !important; }
+  .site-footer { padding: 0 !important; margin-top: 6mm; border-top: 1px solid #999; }
+  .site-footer__legal { font-size: 9pt; }
+
+  figure, img, svg, table,
+  .reutiliser__carte,
+  .dette-chiffres,
+  .ressources-index__entree { break-inside: avoid; page-break-inside: avoid; }
+  h2, h3 { break-after: avoid; page-break-after: avoid; }
+  p { orphans: 3; widows: 3; }
+
+  .reutiliser__cartes { display: block !important; }
+  .reutiliser__carte { margin-bottom: 6mm; }
+
+  a { color: #000; text-decoration: underline; }
+}

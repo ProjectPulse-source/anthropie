@@ -21,21 +21,21 @@
 <text x="49.0" y="268.3" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#eb6834" text-anchor="start">21.6%</text>
 <circle cx="127.6" cy="233.6" r="3.4" fill="#2a78d6"/>
 <text x="127.6" y="222.6" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#52514e" text-anchor="middle">1984</text>
-<text x="127.6" y="254.3" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#eb6834" text-anchor="middle">30%</text>
+<text x="127.6" y="256.3" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#eb6834" text-anchor="middle">> 30%</text>
 <circle cx="294.7" cy="172.8" r="3.4" fill="#2a78d6"/>
 <text x="294.7" y="161.8" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#52514e" text-anchor="middle">1996</text>
-<text x="294.7" y="194.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#eb6834" text-anchor="middle">60%</text>
+<text x="294.7" y="198.5" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#eb6834" text-anchor="middle">> 60%</text>
 <circle cx="475.7" cy="125.8" r="3.4" fill="#2a78d6"/>
 <text x="475.7" y="114.8" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#52514e" text-anchor="middle">2009</text>
-<text x="475.7" y="164.2" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#eb6834" text-anchor="middle">80%</text>
+<text x="475.7" y="173.5" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#eb6834" text-anchor="middle">> 80%</text>
 <circle cx="628.9" cy="64.2" r="3.4" fill="#2a78d6"/>
 <text x="623.9" y="53.2" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#52514e" text-anchor="end">2020</text>
-<text x="623.9" y="114.6" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#eb6834" text-anchor="end">100%</text>
+<text x="623.9" y="114.5" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#eb6834" text-anchor="end">> 100%</text>
 <circle cx="702.0" cy="59.0" r="5" fill="#eb6834"/>
 <text x="697.0" y="48.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#52514e" text-anchor="end">Q1 2026</text>
 <text x="697.0" y="92.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#eb6834" text-anchor="end">117.5%</text>
 <line x1="0" y1="324.0" x2="720" y2="324.0" stroke="#e1e0d9" stroke-width="1"/>
 <text x="0" y="337.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">INSEE, Maastricht debt, 1978-Q1 2026</text>
-<text x="0" y="349.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Maastricht debt, general government.</text>
+<text x="0" y="349.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Maastricht debt, general government. "&gt; 80%": first year-end above the threshold; in quarterly data it may be crossed earlier.</text>
 <text x="0" y="361.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/cost-of-french-public-debt/</text>
 </svg>

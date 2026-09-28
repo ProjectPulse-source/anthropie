@@ -1,7 +1,7 @@
 {
  "_avertissement": "Fichier GÉNÉRÉ par scripts/update_dette_insee.py — ne pas éditer à la main.",
  "_licence": "Compilation sous licence CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) : réutilisation libre, y compris commerciale, à condition de citer Stéphane Lalut, https://stephane-lalut.com/cout-de-la-dette-publique/. La licence porte sur la COMPILATION (assemblage des séries, grandeurs dérivées, mise en cohérence) ; les séries brutes restent celles de l'INSEE et d'Eurostat, sous leurs propres conditions.",
- "releve_le": "2026-09-20",
+ "releve_le": "2026-09-28",
  "affichage": {
   "dette_periode": "T1 2026",
   "dette_mdeur": "3 536,1",
@@ -49,7 +49,7 @@
   "hist_plus_longue_baisse": "3",
   "hist_multiple": "5,4",
   "hist_retour_10_ans": "0",
-  "releve_le": "20/09/2026"
+  "releve_le": "28/09/2026"
  },
  "affichage_en": {
   "dette_periode": "Q1 2026",
@@ -98,7 +98,7 @@
   "hist_plus_longue_baisse": "3",
   "hist_multiple": "5.4",
   "hist_retour_10_ans": "0",
-  "releve_le": "20 September 2026"
+  "releve_le": "28 September 2026"
  },
  "live": {
   "_usage": "Paramètres du compteur animé (extrapolation mécanique) — consommés par le partial dette-chiffres via data-attributes.",
@@ -866,6 +866,74 @@
      "2023": 5.0,
      "2024": 5.1
     }
+   }
+  }
+ },
+ "taux_long_terme_annuels": {
+  "source": "Eurostat, irt_lt_mcby_a -- rendement des titres publics de reference a 10 ans (critere de convergence de Maastricht), France",
+  "dataset": "irt_lt_mcby_a",
+  "unite": {
+   "pct": "% par an, moyenne annuelle"
+  },
+  "derniere_periode": "2025",
+  "series": {
+   "pct": {
+    "1970": 8.04,
+    "1971": 7.75,
+    "1972": 7.35,
+    "1973": 8.29,
+    "1974": 10.45,
+    "1975": 9.52,
+    "1976": 9.33,
+    "1977": 9.87,
+    "1978": 9.5,
+    "1979": 9.89,
+    "1980": 13.13,
+    "1981": 15.85,
+    "1982": 15.65,
+    "1983": 13.59,
+    "1984": 12.49,
+    "1985": 11.12,
+    "1986": 8.54,
+    "1987": 9.5,
+    "1988": 9.08,
+    "1989": 8.79,
+    "1990": 9.94,
+    "1991": 9.05,
+    "1992": 8.59,
+    "1993": 6.78,
+    "1994": 7.22,
+    "1995": 7.54,
+    "1996": 6.31,
+    "1997": 5.58,
+    "1998": 4.64,
+    "1999": 4.61,
+    "2000": 5.39,
+    "2001": 4.94,
+    "2002": 4.86,
+    "2003": 4.13,
+    "2004": 4.1,
+    "2005": 3.41,
+    "2006": 3.8,
+    "2007": 4.3,
+    "2008": 4.23,
+    "2009": 3.65,
+    "2010": 3.12,
+    "2011": 3.32,
+    "2012": 2.54,
+    "2013": 2.2,
+    "2014": 1.67,
+    "2015": 0.84,
+    "2016": 0.47,
+    "2017": 0.81,
+    "2018": 0.78,
+    "2019": 0.13,
+    "2020": -0.15,
+    "2021": 0.01,
+    "2022": 1.7,
+    "2023": 2.99,
+    "2024": 2.97,
+    "2025": 3.34979
    }
   }
  }

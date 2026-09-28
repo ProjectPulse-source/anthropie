@@ -22,7 +22,7 @@
    "titre": "La dette depuis 1978, en % du PIB",
    "montre": "La dette monte par paliers, chacun installé par une crise ; dans la série observée, le ratio n'est jamais revenu à son niveau de dix ans auparavant.",
    "source": "INSEE, dette de Maastricht, 1978-T1 2026",
-   "precaution": "Dette au sens de Maastricht, toutes administrations publiques."
+   "precaution": "Dette au sens de Maastricht, toutes administrations publiques. « > 80 % » : première fin d'année au-delà du seuil ; en trimestriel, il peut être franchi plus tôt."
   },
   {
    "id": "marche",
@@ -56,7 +56,7 @@
    "titre": "Debt since 1978, as a % of GDP",
    "montre": "Debt climbs in steps, each set by a crisis; in the observed series, the ratio has never returned to its level of ten years earlier.",
    "source": "INSEE, Maastricht debt, 1978-Q1 2026",
-   "precaution": "Maastricht debt, general government."
+   "precaution": "Maastricht debt, general government. \"> 80%\": first year-end above the threshold; in quarterly data it may be crossed earlier."
   },
   {
    "id": "marche",

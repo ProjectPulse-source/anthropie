@@ -410,8 +410,8 @@ LABELS_CARTOUCHE = {
                 "31 décembre précédent, non le taux d'emprunt du jour.",
         "ciseau": "Deux échelles distinctes, une même unité : "
                   "le % du PIB.",
-        "longue": "Dette au sens de Maastricht, toutes administrations "
-                  "publiques.",
+        "longue": "Dette au sens de Maastricht, toutes administrations publiques. « > 80 % » : "
+                  "première fin d'année au-delà du seuil ; en trimestriel, il peut être franchi plus tôt.",
         # Lignes Â« source Â» et textes des cartes de la page : un seul modele
         # par figure, lu par le cartouche de l'image ET par la carte HTML.
         "src_ciseau": "INSEE, dette de Maastricht (%s)  ·  "
@@ -442,7 +442,8 @@ LABELS_CARTOUCHE = {
         "taux": "Effective rate = a year's interest / debt outstanding at the "
                 "end of the previous year, not today's borrowing rate.",
         "ciseau": "Two separate scales, one shared unit: % of GDP.",
-        "longue": "Maastricht debt, general government.",
+        "longue": ("Maastricht debt, general government. \"> 80%\": first year-end above the "
+                   "threshold; in quarterly data it may be crossed earlier."),
         "src_ciseau": "INSEE, Maastricht debt (%s)  ·  "
                       "Eurostat gov_10a_main, interest D41PAY (%s)",
         "src_taux": "Computed on Eurostat (gov_10a_main) and INSEE series, %s-%s",
@@ -919,7 +920,7 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
                 nb(annuel[ans[0]]) + U, "start")]
     for s in (30, 60, 80, 100):
         an = seuils[s]
-        reperes.append((float(an), annuel[int(an)], str(an), "%d%s" % (s, U), "middle"))
+        reperes.append((float(an), annuel[int(an)], str(an), "> %d%s" % (s, U), "middle"))  # « > » : seuil franchi, pas valeur du point (relecture 28/09)
     reperes.append((pts[-1][0], pct_courant, label_courant,
                     nb(pct_courant) + U, "end"))
 
@@ -1404,6 +1405,21 @@ def main() -> int:
     # dernier releve AYANT MODIFIE un chiffre -- ce que la page dit en toutes
     # lettres. Aucun champ nouveau : un second horodatage "verifie_le" exigerait
     # un commit mensuel pour rester vrai, soit le defaut qu'on corrige.
+    # Serie du taux a 10 ans, jointe au jeu public (relecture externe du 28/09 : la
+    # figure « taux de marche » n'etait pas reproductible depuis le JSON). Serie
+    # ACCESSOIRE : si son fetch echoue, on reprend le bloc deja publie plutot que de
+    # le retirer en silence -- et l'empreinte ne bouge pas pour autant.
+    if taux_marche:
+        payload["taux_long_terme_annuels"] = {
+            "source": ("Eurostat, irt_lt_mcby_a -- rendement des titres publics de "
+                       "reference a 10 ans (critere de convergence de Maastricht), France"),
+            "dataset": "irt_lt_mcby_a",
+            "unite": {"pct": "% par an, moyenne annuelle"},
+            "derniere_periode": max(taux_marche),
+            "series": {"pct": {y: taux_marche[y] for y in sorted(taux_marche)}},
+        }
+    elif payload_prev and "taux_long_terme_annuels" in payload_prev:
+        payload["taux_long_terme_annuels"] = payload_prev["taux_long_terme_annuels"]
     inchange = payload_prev is not None and _hors_dates(payload) == _hors_dates(payload_prev)
     if inchange:
         for cle, bloc in _blocs_dates(payload):
