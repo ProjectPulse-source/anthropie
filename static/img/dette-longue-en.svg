@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 368" width="720" height="368" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dl-t dl-d">
-<title id="dl-t">French public debt as a % of GDP, from 1978 to Q1 2026</title>
-<desc id="dl-d">It starts at 21.6% of GDP in 1978, crosses 30% in 1984, 60% in 1996, 80% in 2009, 100% in 2020, and reaches 117.5% in Q1 2026. A dotted extension shows the path of the 2026 budget bill, reaching 118.0% in 2029: a forecast, not an observation.</desc>
+<title id="dl-t">French public debt as a % of GDP, from 1978 to Q2 2026</title>
+<desc id="dl-d">It starts at 21.6% of GDP in 1978, crosses 30% in 1984, 60% in 1996, 80% in 2009, 100% in 2020, and reaches 119.0% in Q2 2026. A dotted extension shows the path of the 2026 budget bill, reaching 118.0% in 2029: a forecast, not an observation.</desc>
 <rect width="720" height="320" fill="#fff"/>
 <line x1="44.0" y1="294.0" x2="592.0" y2="294.0" stroke="#e1e0d9" stroke-width="1"/>
 <text x="37.0" y="298.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="11" fill="#898781" text-anchor="end">0%</text>
@@ -16,7 +16,7 @@
 <text x="37.0" y="48.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="11" fill="#898781" text-anchor="end">125%</text>
 <line x1="44.0" y1="174.0" x2="592.0" y2="174.0" stroke="#c3c2b7" stroke-width="1" stroke-dasharray="5 4"/>
 <text x="50.0" y="169.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" fill="#898781">Maastricht reference, 60%</text>
-<path d="M551.7,59.0 L559.8,58.2 L570.5,56.6 L581.3,56.8 L592.0,58.0" fill="none" stroke="#184f95" stroke-width="2.4" stroke-dasharray="6 5" stroke-linejoin="round" opacity="0.75"/>
+<path d="M551.7,56.0 L559.8,58.2 L570.5,56.6 L581.3,56.8 L592.0,58.0" fill="none" stroke="#184f95" stroke-width="2.4" stroke-dasharray="6 5" stroke-linejoin="round" opacity="0.75"/>
 <circle cx="592.0" cy="58.0" r="4" fill="#ffffff" stroke="#184f95" stroke-width="2"/>
 <text x="601.0" y="59.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#184f95">118.0%</text>
 <text x="601.0" y="74.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="11" fill="#898781">2026 budget bill path</text>
@@ -24,7 +24,7 @@
 <rect x="205.2" y="34.0" width="10.7" height="260.0" fill="#eb6834" opacity="0.05"/>
 <rect x="366.4" y="34.0" width="21.5" height="260.0" fill="#eb6834" opacity="0.05"/>
 <rect x="495.3" y="34.0" width="10.7" height="260.0" fill="#eb6834" opacity="0.05"/>
-<path d="M 44.0 250.8 L 54.7 250.8 L 65.5 251.4 L 76.2 248.8 L 87.0 241.6 L 97.7 238.6 L 108.5 233.6 L 119.2 230.2 L 130.0 229.2 L 140.7 224.4 L 151.5 224.6 L 162.2 223.0 L 172.9 220.4 L 183.7 218.4 L 194.4 210.6 L 205.2 197.6 L 215.9 190.8 L 226.7 178.4 L 237.4 172.8 L 248.2 170.0 L 258.9 169.8 L 269.6 171.2 L 280.4 174.6 L 291.1 175.4 L 301.9 171.4 L 312.6 163.2 L 323.4 160.2 L 334.1 157.6 L 344.9 163.2 L 355.6 163.0 L 366.4 154.4 L 377.1 125.8 L 387.8 121.4 L 398.6 116.6 L 409.3 110.6 L 420.1 104.8 L 430.8 101.6 L 441.6 100.0 L 452.3 97.8 L 463.1 96.4 L 473.8 97.0 L 484.5 97.6 L 495.3 64.2 L 506.0 68.4 L 516.8 71.2 L 527.5 75.0 L 538.3 68.8 L 549.0 62.6 L 551.7 59.0" fill="none" stroke="#184f95" stroke-width="2.8" stroke-linejoin="round"/>
+<path d="M 44.0 250.8 L 54.7 250.8 L 65.5 251.4 L 76.2 248.8 L 87.0 241.6 L 97.7 238.6 L 108.5 233.6 L 119.2 230.2 L 130.0 229.2 L 140.7 224.4 L 151.5 224.6 L 162.2 223.0 L 172.9 220.4 L 183.7 218.4 L 194.4 210.6 L 205.2 197.6 L 215.9 190.8 L 226.7 178.4 L 237.4 172.8 L 248.2 170.0 L 258.9 169.8 L 269.6 171.2 L 280.4 174.6 L 291.1 175.4 L 301.9 171.4 L 312.6 163.2 L 323.4 160.2 L 334.1 157.6 L 344.9 163.2 L 355.6 163.0 L 366.4 154.4 L 377.1 125.8 L 387.8 121.4 L 398.6 116.6 L 409.3 110.6 L 420.1 104.8 L 430.8 101.6 L 441.6 100.0 L 452.3 97.8 L 463.1 96.4 L 473.8 97.0 L 484.5 97.6 L 495.3 64.2 L 506.0 68.4 L 516.8 71.2 L 527.5 75.0 L 538.3 68.8 L 549.0 62.6 L 551.7 56.0" fill="none" stroke="#184f95" stroke-width="2.8" stroke-linejoin="round"/>
 <circle cx="44.0" cy="250.8" r="3.8" fill="#184f95"/>
 <text x="44.0" y="237.8" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#52514e" text-anchor="middle">1978</text>
 <text x="44.0" y="268.2" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#b8703f" text-anchor="middle">21.6%</text>
@@ -40,9 +40,9 @@
 <circle cx="495.3" cy="64.2" r="3.8" fill="#184f95"/>
 <text x="495.3" y="51.2" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#52514e" text-anchor="middle">2020</text>
 <text x="495.3" y="114.4" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#b8703f" text-anchor="middle">> 100%</text>
-<circle cx="551.7" cy="59.0" r="5" fill="#eb6834"/>
-<text x="551.7" y="46.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#52514e" text-anchor="middle">Q1 2026</text>
-<text x="551.7" y="90.1" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#eb6834" text-anchor="middle">117.5%</text>
+<circle cx="551.7" cy="56.0" r="5" fill="#eb6834"/>
+<text x="551.7" y="43.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#52514e" text-anchor="middle">Q2 2026</text>
+<text x="551.7" y="90.1" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#eb6834" text-anchor="middle">119.0%</text>
 <text x="84.6" y="302.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" fill="#898781" text-anchor="middle">1979-1982</text>
 <text x="84.6" y="314.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" fill="#898781" text-anchor="middle">post-oil-shock</text>
 <text x="210.5" y="302.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" fill="#898781" text-anchor="middle">1993</text>
@@ -52,7 +52,7 @@
 <text x="500.7" y="302.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" fill="#898781" text-anchor="middle">2020-2021</text>
 <text x="500.7" y="314.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" fill="#898781" text-anchor="middle">pandemic</text>
 <line x1="0" y1="324.0" x2="720" y2="324.0" stroke="#e1e0d9" stroke-width="1"/>
-<text x="0" y="337.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">INSEE, Maastricht debt, 1978-Q1 2026</text>
+<text x="0" y="337.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">INSEE, Maastricht debt, 1978-Q2 2026</text>
 <text x="0" y="349.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Maastricht debt, general government. "&gt; 80%": first year-end above the threshold; in quarterly data it may be crossed earlier.</text>
 <text x="0" y="361.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/cost-of-french-public-debt/</text>
 </svg>

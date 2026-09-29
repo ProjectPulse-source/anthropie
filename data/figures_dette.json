@@ -3,9 +3,9 @@
   {
    "id": "ciseau",
    "fichier": "ciseau-dette-interets",
-   "titre": "Le ciseau : encours et charge d'intérêts, 1995-T1 2026",
+   "titre": "Le ciseau : encours et charge d'intérêts, 1995-T2 2026",
    "montre": "L'encours double en part de PIB pendant que la charge d'intérêts baisse, jusqu'au retournement de 2022.",
-   "source": "INSEE, dette de Maastricht (T1 2026)  ·  Eurostat gov_10a_main, intérêts D41PAY (2025)",
+   "source": "INSEE, dette de Maastricht (T2 2026)  ·  Eurostat gov_10a_main, intérêts D41PAY (2025)",
    "precaution": "Deux échelles distinctes, une même unité : le % du PIB."
   },
   {
@@ -21,7 +21,7 @@
    "fichier": "dette-longue",
    "titre": "La dette depuis 1978, en % du PIB",
    "montre": "La dette monte par paliers, chacun installé par une crise ; dans la série observée, le ratio n'est jamais revenu à son niveau de dix ans auparavant.",
-   "source": "INSEE, dette de Maastricht, 1978-T1 2026",
+   "source": "INSEE, dette de Maastricht, 1978-T2 2026",
    "precaution": "Dette au sens de Maastricht, toutes administrations publiques. « > 80 % » : première fin d'année au-delà du seuil ; en trimestriel, il peut être franchi plus tôt."
   },
   {
@@ -53,9 +53,9 @@
   {
    "id": "ciseau",
    "fichier": "ciseau-dette-interets-en",
-   "titre": "The scissor: debt stock and interest burden, 1995-Q1 2026",
+   "titre": "The scissor: debt stock and interest burden, 1995-Q2 2026",
    "montre": "The stock doubles as a share of GDP while the interest burden falls, until the 2022 turn.",
-   "source": "INSEE, Maastricht debt (Q1 2026)  ·  Eurostat gov_10a_main, interest D41PAY (2025)",
+   "source": "INSEE, Maastricht debt (Q2 2026)  ·  Eurostat gov_10a_main, interest D41PAY (2025)",
    "precaution": "Two separate scales, one shared unit: % of GDP."
   },
   {
@@ -71,7 +71,7 @@
    "fichier": "dette-longue-en",
    "titre": "Debt since 1978, as a % of GDP",
    "montre": "Debt climbs in steps, each set by a crisis; in the observed series, the ratio has never returned to its level of ten years earlier.",
-   "source": "INSEE, Maastricht debt, 1978-Q1 2026",
+   "source": "INSEE, Maastricht debt, 1978-Q2 2026",
    "precaution": "Maastricht debt, general government. \"> 80%\": first year-end above the threshold; in quarterly data it may be crossed earlier."
   },
   {

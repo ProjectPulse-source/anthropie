@@ -1,13 +1,13 @@
 {
  "_avertissement": "Fichier GÉNÉRÉ par scripts/update_dette_insee.py — ne pas éditer à la main.",
  "_licence": "Compilation sous licence CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) : réutilisation libre, y compris commerciale, à condition de citer Stéphane Lalut, https://stephane-lalut.com/cout-de-la-dette-publique/. La licence porte sur la COMPILATION (assemblage des séries, grandeurs dérivées, mise en cohérence) ; les séries brutes restent celles de l'INSEE et d'Eurostat, sous leurs propres conditions.",
- "releve_le": "2026-09-28",
+ "releve_le": "2026-09-29",
  "affichage": {
-  "dette_periode": "T1 2026",
-  "dette_mdeur": "3 536,1",
-  "dette_pct_pib": "117,5",
-  "dette_pic_periode": "T1 2021",
-  "dette_pic_pct_pib": "117,8",
+  "dette_periode": "T2 2026",
+  "dette_mdeur": "3 595,5",
+  "dette_pct_pib": "119,0",
+  "dette_pic_periode": "T2 2026",
+  "dette_pic_pct_pib": "119,0",
   "dette_1995_pct_pib": "57,8",
   "interets_annee": "2025",
   "interets_mdeur": "66,6",
@@ -42,7 +42,7 @@
   "ratio_interets_justice": "7,2",
   "pct_interets_education": "40",
   "pct_interets_sante": "23",
-  "croissance_annuelle_pct": "5,7",
+  "croissance_annuelle_pct": "5,2",
   "hist_annee_debut": "1978",
   "hist_pct_debut": "21,6",
   "hist_seuil_30_annee": "1984",
@@ -52,16 +52,16 @@
   "hist_annees_baisse": "11",
   "hist_annees_total": "47",
   "hist_plus_longue_baisse": "3",
-  "hist_multiple": "5,4",
+  "hist_multiple": "5,5",
   "hist_retour_10_ans": "0",
-  "releve_le": "28/09/2026"
+  "releve_le": "29/09/2026"
  },
  "affichage_en": {
-  "dette_periode": "Q1 2026",
-  "dette_mdeur": "3,536.1",
-  "dette_pct_pib": "117.5",
-  "dette_pic_periode": "Q1 2021",
-  "dette_pic_pct_pib": "117.8",
+  "dette_periode": "Q2 2026",
+  "dette_mdeur": "3,595.5",
+  "dette_pct_pib": "119.0",
+  "dette_pic_periode": "Q2 2026",
+  "dette_pic_pct_pib": "119.0",
   "dette_1995_pct_pib": "57.8",
   "interets_annee": "2025",
   "interets_mdeur": "66.6",
@@ -96,7 +96,7 @@
   "ratio_interets_justice": "7.2",
   "pct_interets_education": "40",
   "pct_interets_sante": "23",
-  "croissance_annuelle_pct": "5.7",
+  "croissance_annuelle_pct": "5.2",
   "hist_annee_debut": "1978",
   "hist_pct_debut": "21.6",
   "hist_seuil_30_annee": "1984",
@@ -106,16 +106,16 @@
   "hist_annees_baisse": "11",
   "hist_annees_total": "47",
   "hist_plus_longue_baisse": "3",
-  "hist_multiple": "5.4",
+  "hist_multiple": "5.5",
   "hist_retour_10_ans": "0",
-  "releve_le": "28 September 2026"
+  "releve_le": "29 September 2026"
  },
  "live": {
   "_usage": "Paramètres du compteur animé (extrapolation mécanique) — consommés par le partial dette-chiffres via data-attributes.",
-  "mdeur": 3536.1,
-  "periode": "T1 2026",
-  "fin_periode_iso": "2026-03-31",
-  "croissance_annuelle_pct": 5.7
+  "mdeur": 3595.5,
+  "periode": "T2 2026",
+  "fin_periode_iso": "2026-06-30",
+  "croissance_annuelle_pct": 5.2
  },
  "dette_annuelle_longue": {
   "source": "INSEE, dette de Maastricht des administrations publiques au 31 décembre — segment 1978-1995 issu du tableau 2830192 (comptes nationaux base 2020, clos), prolongé par la série trimestrielle (T4 de chaque année). Année de recouvrement contrôlée à chaque exécution.",
@@ -193,7 +193,7 @@
    "mdeur": "milliards d'euros courants",
    "pct_pib": "% du PIB"
   },
-  "derniere_periode": "2026-Q1",
+  "derniere_periode": "2026-Q2",
   "series": {
    "mdeur": {
     "1995-Q4": 701.6,
@@ -316,8 +316,9 @@
     "2025-Q1": 3346.3,
     "2025-Q2": 3417.2,
     "2025-Q3": 3484.1,
-    "2025-Q4": 3460.5,
-    "2026-Q1": 3536.1
+    "2025-Q4": 3460.1,
+    "2026-Q1": 3535.9,
+    "2026-Q2": 3595.5
    },
    "pct_pib": {
     "1995-Q4": 57.8,
@@ -441,7 +442,8 @@
     "2025-Q2": 115.2,
     "2025-Q3": 117.0,
     "2025-Q4": 115.7,
-    "2026-Q1": 117.5
+    "2026-Q1": 117.5,
+    "2026-Q2": 119.0
    }
   }
  },
