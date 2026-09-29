@@ -31,9 +31,13 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 {{< reutiliser-ancre >}}
 
-À la question «&nbsp;combien coûte la dette publique&nbsp;?&nbsp;», la mesure la plus directe n'est pas le montant de l'encours — c'est la **charge d'intérêts versés** chaque année par les administrations publiques&nbsp;: **{{< dette-val "interets_mdeur" >}}&nbsp;milliards d'euros en {{< dette-val "interets_annee" >}}**, soit {{< dette-val "interets_pct_pib" >}}&nbsp;% du PIB et **{{< dette-val "interets_sur_recettes_pct" >}}&nbsp;% de l'ensemble des recettes publiques** (Eurostat, série `D41PAY`). C'est une charge **brute**&nbsp;: les intérêts versés, non déduits des revenus financiers que les administrations perçoivent par ailleurs. Ce montant rattache chaque intérêt à l'année où il court, non à la date où il est payé, et couvre l'ensemble des administrations publiques — État, collectivités locales, sécurité sociale&nbsp;: exactement le périmètre des recettes auxquelles on le rapporte. C'est la raison pour laquelle la page s'y tient d'un bout à l'autre&nbsp;: un rapport n'a de sens que si son numérateur et son dénominateur mesurent le même ensemble, et changer de série en cours de route ferait apparaître des écarts qui ne tiendraient qu'au changement de source. Le lecteur qui vérifie dans les comptes de l'INSEE y trouvera, pour la même année, un montant légèrement différent&nbsp;: l'INSEE y présente les intérêts hors correction dite «&nbsp;SIFIM&nbsp;» (services d'intermédiation financière indirectement mesurés) — une **convention voisine**, non une erreur de l'un ou de l'autre.
+À la question «&nbsp;combien coûte la dette publique&nbsp;?&nbsp;», le chiffre le plus direct n'est pas l'encours, mais les intérêts payés chaque année&nbsp;: {{< dette-val "interets_mdeur" >}}&nbsp;milliards d'euros en {{< dette-val "interets_annee" >}}, soit {{< dette-val "interets_pct_pib" >}}&nbsp;% du PIB et {{< dette-val "interets_sur_recettes_pct" >}}&nbsp;% des recettes publiques (Eurostat, `D41PAY`).
 
-Reste l'autre chiffre, celui qu'on cite d'ordinaire&nbsp;: le montant de la dette elle-même, c'est-à-dire l'**encours** accumulé.
+Il s'agit d'une charge brute, couvrant l'ensemble des administrations publiques — État, collectivités locales et sécurité sociale — et enregistrée l'année où les intérêts courent. La même convention est conservée sur toute la page afin de comparer des grandeurs de périmètre identique.
+
+Les comptes de l'INSEE affichent pour {{< dette-val "interets_annee" >}} un montant légèrement différent, notamment parce qu'ils présentent les intérêts hors correction dite SIFIM (services d'intermédiation financière indirectement mesurés). Deux conventions voisines, donc, et non deux mesures contradictoires.
+
+Reste l'autre chiffre, celui qu'on cite le plus souvent&nbsp;: non plus ce que la dette coûte chaque année, mais ce qu'elle représente au total — l'encours accumulé.
 
 {{< dette-chiffres live="true" historique="true" >}}
 {{< fig-actions id="longue" >}}
