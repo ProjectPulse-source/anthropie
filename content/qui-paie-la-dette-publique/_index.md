@@ -3,6 +3,7 @@ title: "Qui paie vraiment la dette publique ?"
 description: "Qui supporte le coût de la dette publique ? Cela dépend de ce qu'elle finance, de la manière dont elle est financée et des ajustements choisis pour la servir ; certaines configurations reportent des coûts sur ceux qui peuvent le moins les éviter. Les rôles, les canaux, leurs conditions — et ce que les données ne permettent pas d'attribuer."
 date: 2026-07-04
 lastmod: 2026-09-29
+donnees: [dette_officielle]
 og_title: "Qui paie vraiment la dette publique ? — ce que montrent les données — S. Lalut"
 og_image: "images/og-qui-paie-dette.jpg"
 og_image_alt: "Carte de partage : « Qui paie vraiment la dette publique ? » — prélèvements et transferts publics par dixième de niveau de vie, 2023, sources Insee et Banque de France via l'AFT."

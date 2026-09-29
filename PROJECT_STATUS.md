@@ -53,6 +53,27 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-29 — Le sitemap suit enfin les données : `lastmod` des pages dette
+
+Trouvé en vérifiant une contre-expertise GEO (arbitrage versionné :
+`D:\PRO\06_PROMOTION\ARBITRAGE_CONTRE_EXPERTISE_GEO-PLUS_2026-09-29.md`). Son grief (« deux pages,
+deux dernières données ») était faux au présent : les deux pages servent T2 2026, un seul JSON.
+Le défaut voisin était réel : `lastmod` saisi à la main laissait `/cout-de-la-dette-publique/`
+(FR et EN) au **21/09** dans le sitemap, alors que ses données étaient passées au T2 2026 et son
+texte réécrit le 29/09.
+
+- `layouts/sitemap.xml` : une page qui déclare `donnees: [dette_officielle]` prend la date
+  `releve_le` du fichier si elle est plus récente. `releve_le` ne bouge que si un chiffre bouge
+  (en-tête de `update_dette_insee.py`) : aucune fraîcheur fictive au passage hebdomadaire du robot.
+- Déclaration posée sur coût FR, coût EN, qui paie ; `lastmod` de la page coût porté au 29/09.
+- **Témoins** : `lastmod` de texte reculé au 01/09 → sitemap au 29/09 tiré des données ; source
+  inexistante → build arrêté (`errorf`). `check-all.py --ci` à 0.
+- **Non couvert** : `qui_paie_donnees.json` date son relevé en toutes lettres, il n'est pas câblé.
+- **Règle d'architecture adoptée le même jour** (même arbitrage, tour 2) : une question se traite
+  par défaut en **section ancrée** d'une page mère, jamais par une URL par formulation ; toute
+  section-question porte un **identifiant figé** (`{#…}`) — aucun `h2` du site n'en a aujourd'hui,
+  l'ancre suit le libellé et casserait à la première réécriture.
+
 ### 2026-09-29 — Runners épinglés avant la bascule Ubuntu 26.04, banc de test déjà vert ⏳ ÉCHÉANCE 19/11/2026
 
 Dossier unique : `docs/MIGRATION_RUNNER_UBUNTU26.md`. Source lue à la source

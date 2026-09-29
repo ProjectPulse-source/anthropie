@@ -5,7 +5,12 @@
        des publications n'existe qu'en FR ; le mur presse EN le lit deja ainsi). Sans cela, /a-propos/,
        /serie-awp/ et /en/publications/ n'avaient AUCUN lastmod : une nouvelle parution y changeait la
        page sans qu'un moteur en soit averti (constat du 2026-09-02). Aucune fausse fraicheur : la date
-       vient d'une fiche reellement ajoutee ou modifiee. */ -}}
+       vient d'une fiche reellement ajoutee ou modifiee.
+       Second ajout (2026-09-29) : une page dont les CHIFFRES viennent d'un fichier de donnees
+       (front matter `donnees: [dette_officielle]`) prend aussi la date `releve_le` de ce fichier,
+       si elle est plus recente. Le generateur ne reecrit `releve_le` que lorsqu'un chiffre a bouge
+       (scripts/update_dette_insee.py, en-tete) : aucune fraicheur fictive. Sans cela, le passage
+       des donnees au T2 2026 laissait /cout-de-la-dette-publique/ au 21/09 dans le sitemap. */ -}}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   {{ range where .Pages "Sitemap.Disable" "ne" true }}
@@ -17,6 +22,15 @@
         {{- range (where $fr.RegularPages "Section" .) -}}
           {{- if .Lastmod.After $lm -}}{{- $lm = .Lastmod -}}{{- end -}}
         {{- end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $page := . -}}
+    {{- with .Params.donnees -}}
+      {{- range . -}}
+        {{- $d := index site.Data . -}}
+        {{- if not $d.releve_le -}}{{- errorf "sitemap: %s declare `donnees: %s` sans releve_le lisible" $page.File.Path . -}}{{- end -}}
+        {{- $t := time $d.releve_le -}}
+        {{- if $t.After $lm -}}{{- $lm = $t -}}{{- end -}}
       {{- end -}}
     {{- end -}}
   <url>

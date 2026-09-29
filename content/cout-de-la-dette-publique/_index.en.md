@@ -3,7 +3,8 @@ title: "What does French public debt actually cost?"
 url: /en/cost-of-french-public-debt/
 description: "The cost of a public debt does not mechanically follow its size. In France, the stock climbed for about twenty-five years while the interest burden fell — the average cost has been rising since 2021 and the scissor has been closing since 2022. Official INSEE and Eurostat figures, kept current, and what the interest burden represents compared with spending on justice, education and health."
 date: 2026-08-17
-lastmod: 2026-09-21
+lastmod: 2026-09-29
+donnees: [dette_officielle]
 og_title: "What does French public debt cost? — official data, kept current — S. Lalut"
 og_image: "images/og-cout-dette-en.jpg"
 og_image_alt: "Share card: “What does French public debt cost?” — debt stock and interest burden as a share of GDP, 1995-2025, sources INSEE and Eurostat."
