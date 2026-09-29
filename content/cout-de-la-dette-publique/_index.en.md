@@ -34,13 +34,13 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 France is a useful case well beyond France itself. It is a large advanced economy where a general mechanism became unusually clear: for three decades the debt stock grew while the cost of carrying it fell, so the burden stayed quiet — and then, within a few years, the scissor began to close. What happens when that reversal arrives is now playing out in public, on a scale large enough to make the mechanism visible.
 
-To the question "what does the debt cost", the most direct figure is not the stock but the interest paid each year: {{< dette-val "interets_mdeur" >}} billion euros in {{< dette-val "interets_annee" >}}, or {{< dette-val "interets_pct_pib" >}}% of GDP and {{< dette-val "interets_sur_recettes_pct" >}}% of public revenue (Eurostat, `D41PAY`).
+To the question "what does the debt cost", the most direct figure is not the stock but the **interest paid each year**: **{{< dette-val "interets_mdeur" >}} billion euros in {{< dette-val "interets_annee" >}}**, or {{< dette-val "interets_pct_pib" >}}% of GDP and **{{< dette-val "interets_sur_recettes_pct" >}}% of public revenue** (Eurostat, `D41PAY`).
 
-It is a gross burden, covering general government as a whole — central government, local authorities and social security — and recorded in the year in which the interest accrues. The same convention is kept throughout the page, so that the quantities compared share the same perimeter.
+It is a **gross** burden, covering general government as a whole — central government, local authorities and social security — and recorded in the year in which the interest accrues. The same convention is kept throughout the page, so that the quantities compared share the same perimeter.
 
-INSEE's accounts show a slightly different amount for {{< dette-val "interets_annee" >}}, partly because they present interest before the so-called FISIM adjustment (financial intermediation services indirectly measured). Two closely related conventions, then, not two contradictory measurements.
+INSEE's accounts show a slightly different amount for {{< dette-val "interets_annee" >}}, partly because they present interest before the so-called FISIM adjustment (financial intermediation services indirectly measured). Two **closely related conventions**, then, not two contradictory measurements.
 
-That leaves the other figure, the one most often quoted: no longer what the debt costs each year, but what it amounts to in total — the accumulated stock. It stands at **{{< dette-val "dette_mdeur" >}} billion euros** in {{< dette-val "dette_periode" >}}, or {{< dette-val "dette_pct_pib" >}}% of GDP.
+That leaves the other figure, the one most often quoted: no longer what the debt costs each year, but what it amounts to in total — the accumulated **stock**. It stands at **{{< dette-val "dette_mdeur" >}} billion euros** in {{< dette-val "dette_periode" >}}, or {{< dette-val "dette_pct_pib" >}}% of GDP.
 
 {{< dette-chiffres historique="true" >}}
 {{< fig-actions id="longue" >}}

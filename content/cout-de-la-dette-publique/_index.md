@@ -31,13 +31,13 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 {{< reutiliser-ancre >}}
 
-À la question «&nbsp;combien coûte la dette publique&nbsp;?&nbsp;», le chiffre le plus direct n'est pas l'encours, mais les intérêts payés chaque année&nbsp;: {{< dette-val "interets_mdeur" >}}&nbsp;milliards d'euros en {{< dette-val "interets_annee" >}}, soit {{< dette-val "interets_pct_pib" >}}&nbsp;% du PIB et {{< dette-val "interets_sur_recettes_pct" >}}&nbsp;% des recettes publiques (Eurostat, `D41PAY`).
+À la question «&nbsp;combien coûte la dette publique&nbsp;?&nbsp;», le chiffre le plus direct n'est pas l'encours, mais les **intérêts payés chaque année**&nbsp;: **{{< dette-val "interets_mdeur" >}}&nbsp;milliards d'euros en {{< dette-val "interets_annee" >}}**, soit {{< dette-val "interets_pct_pib" >}}&nbsp;% du PIB et **{{< dette-val "interets_sur_recettes_pct" >}}&nbsp;% des recettes publiques** (Eurostat, `D41PAY`).
 
-Il s'agit d'une charge brute, couvrant l'ensemble des administrations publiques — État, collectivités locales et sécurité sociale — et enregistrée l'année où les intérêts courent. La même convention est conservée sur toute la page afin de comparer des grandeurs de périmètre identique.
+Il s'agit d'une charge **brute**, couvrant l'ensemble des administrations publiques — État, collectivités locales et sécurité sociale — et enregistrée l'année où les intérêts courent. La même convention est conservée sur toute la page afin de comparer des grandeurs de périmètre identique.
 
-Les comptes de l'INSEE affichent pour {{< dette-val "interets_annee" >}} un montant légèrement différent, notamment parce qu'ils présentent les intérêts hors correction dite SIFIM (services d'intermédiation financière indirectement mesurés). Deux conventions voisines, donc, et non deux mesures contradictoires.
+Les comptes de l'INSEE affichent pour {{< dette-val "interets_annee" >}} un montant légèrement différent, notamment parce qu'ils présentent les intérêts hors correction dite SIFIM (services d'intermédiation financière indirectement mesurés). Deux **conventions voisines**, donc, et non deux mesures contradictoires.
 
-Reste l'autre chiffre, celui qu'on cite le plus souvent&nbsp;: non plus ce que la dette coûte chaque année, mais ce qu'elle représente au total — l'encours accumulé.
+Reste l'autre chiffre, celui qu'on cite le plus souvent&nbsp;: non plus ce que la dette coûte chaque année, mais ce qu'elle représente au total — l'**encours** accumulé.
 
 {{< dette-chiffres live="true" historique="true" >}}
 {{< fig-actions id="longue" >}}
