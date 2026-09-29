@@ -45,7 +45,7 @@ env:
 
 jobs:
   update:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04   # epingle -- voir docs/MIGRATION_RUNNER_UBUNTU26.md
     outputs:
       changed: ${{ steps.diff.outputs.changed }}
       sha: ${{ steps.push.outputs.sha }}
@@ -167,7 +167,7 @@ jobs:
   alerte:
     needs: [update, deploy]
     if: failure()
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04   # epingle -- voir docs/MIGRATION_RUNNER_UBUNTU26.md
     permissions:
       issues: write
     steps:

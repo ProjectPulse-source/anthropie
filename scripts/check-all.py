@@ -54,6 +54,12 @@ LOCAL_DERIVES = [
     # bloquer le deploiement du site, il doit se voir avant un commit humain.
     # Condition de mort dans la docstring du controle.
     ("PNG des figures <-> leurs SVG", "check-png-dette.py", []),
+    # Transition Ubuntu 26.04 (19/10 -> 19/11/2026) : verifie que l'epinglage des
+    # runners tient et rappelle l'echeance. Hors --ci pour la meme raison que le
+    # controle ci-dessus : une image a migrer n'est pas une raison de ne plus
+    # publier. Condition de mort dans la docstring -- le controle annonce lui-meme
+    # le jour ou il doit etre supprime.
+    ("image des runners GitHub", "check-runner-image.py", []),
 ]
 LOCAL = [
     ("couverture GEO FR/EN", "check-geo-coverage.py", []),

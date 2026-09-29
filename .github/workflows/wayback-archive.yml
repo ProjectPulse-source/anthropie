@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   archive:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04   # epingle -- voir docs/MIGRATION_RUNNER_UBUNTU26.md
     timeout-minutes: 60
     steps:
       - name: Checkout repo

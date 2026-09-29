@@ -1,0 +1,69 @@
+# BANC DE TEST -- Ubuntu 26.04, avant que GitHub ne l'impose.
+#
+# POURQUOI. `ubuntu-latest` migre vers Ubuntu 26.04 du 19/10/2026 au 19/11/2026
+# (actions/runner-images#14748). Pendant cette fenetre, un workflow peut tomber un
+# jour sur 24.04 et le lendemain sur 26.04 sans changement de code : l'echec serait
+# INTERMITTENT, donc attribue a la donnee ou au reseau avant d'etre attribue a
+# l'image. Les runners du depot sont epingles sur 24.04 ; ce banc verifie ce que la
+# bascule couterait, AVANT de la subir.
+#
+# CE QU'IL NE FAIT PAS, a dessein : il ne publie rien, ne commite rien, ne deploie
+# rien. Permissions en lecture seule. Declenchement MANUEL uniquement -- aucun cron,
+# aucun `on: push` : un banc qui tourne tout seul finit par etre ignore.
+#
+# CONDITION DE MORT : ce fichier se SUPPRIME quand les runners passent sur 26.04 et
+# qu'un run vert l'a constate. Dossier : docs/MIGRATION_RUNNER_UBUNTU26.md.
+name: Test runner Ubuntu 26.04
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  HUGO_VERSION: 0.147.0
+
+jobs:
+  test:
+    runs-on: ubuntu-26.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Ce que le runner est vraiment
+        run: |
+          echo "--- image ---"
+          cat /etc/os-release | head -3
+          echo "--- python ---"
+          python3 --version
+          echo "--- glibc (Hugo extended en depend) ---"
+          ldd --version | head -1
+
+      # Etape la plus exposee : le .deb de Hugo Extended est lie a une glibc, et
+      # c'est lui qui construit les pages. S'il devait casser, tout le reste est
+      # sans objet.
+      - name: Hugo Extended par dpkg, puis build complet
+        run: |
+          wget -q -O "${{ runner.temp }}/hugo.deb" \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+          sudo dpkg -i "${{ runner.temp }}/hugo.deb"
+          hugo version
+          hugo --minify
+
+      # Le script de donnees tourne sous le python3 du runner : la version par
+      # defaut change d'une image a l'autre, et le script emploie des formes
+      # recentes (`X | None`, walrus, `from __future__ import annotations`).
+      - name: Dependances de rendu, puis gardes du script de donnees
+        run: |
+          python3 -m pip install --quiet cairosvg
+          python3 scripts/update_dette_insee.py --check
+
+      # Les quatre controles de la porte bloquante, sur cette image.
+      - name: Porte bloquante du depot
+        run: python3 scripts/check-all.py --ci
+
+      - name: Verdict
+        run: |
+          echo "Toutes les etapes sensibles passent sur ubuntu-26.04."
+          echo "Suite : docs/MIGRATION_RUNNER_UBUNTU26.md, point 2."
