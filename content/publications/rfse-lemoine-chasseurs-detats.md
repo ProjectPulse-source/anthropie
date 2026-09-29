@@ -5,6 +5,7 @@ revue: "Revue Française de Socio-Économie"
 source_type: "Académique"
 url_externe: "https://shs.cairn.info/revue-francaise-de-socio-economie-2026-1-page-247d"  # page de la recension ; la page du bloc (-247) est « Page non trouvée » chez Cairn (lu le 2026-09-16)
 doi: "10.3917/rfse.036.0247d"  # DOI propre de la recension (registre : doi_review) ; le DOI commun du bloc reste au registre
+doi_url: "https://shs.cairn.info/revue-francaise-de-socio-economie-2026-1-page-247d"  # repli : doi.org → reseaucairn.info rend 503 (mesuré le 2026-09-29). Condition de retrait : supprimer ce champ dès que `curl -sIL https://doi.org/10.3917/rfse.036.0247d` finit en 200.
 wikidata_qid: "Q141072266"  # item de la recension seule (le bloc à DOI est Q140892752, au registre) — alimente sameAs de l'ItemList
 image_type: "logo"
 chapo: "Une créance argentine rachetée 177 millions de dollars, remboursée 2,4 milliards par décision d'un tribunal de Manhattan. Benjamin Lemoine démonte la fabrique juridique de cette domination : des États qui signent eux-mêmes la levée de leur immunité, et des coûts d'ajustement que les populations absorbent."

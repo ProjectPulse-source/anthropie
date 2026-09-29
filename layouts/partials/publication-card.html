@@ -62,6 +62,8 @@
 </div>
 {{ end }}
 {{ with $page.Params.doi }}
-<p class="pub-card__doi"><a href="https://doi.org/{{ . }}" target="_blank" rel="noopener noreferrer">{{ if $isEN }}DOI: {{ else }}DOI&nbsp;: {{ end }}{{ . }}</a></p>
+{{/* doi_url : lien de repli quand la résolution doi.org de l'éditeur est cassée (le DOI reste affiché, c'est l'identifiant à citer). */}}
+{{ $href := printf "https://doi.org/%s" . }}{{ with $page.Params.doi_url }}{{ $href = . }}{{ end }}
+<p class="pub-card__doi"><a href="{{ $href }}" target="_blank" rel="noopener noreferrer">{{ if $isEN }}DOI: {{ else }}DOI&nbsp;: {{ end }}{{ . }}</a></p>
 {{ end }}
 </div>
