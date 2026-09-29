@@ -137,9 +137,10 @@ main li > p {
 main li > p:first-child { margin-top: 0; }
 main li > p:last-child { margin-bottom: 0; }
 
+// Pas de font-weight ici : le gras d'une liste est celui d'un paragraphe.
+// À 500, sur Newsreader variable, il ne se distinguait plus du texte courant.
 main ol li strong,
 main ul li strong {
-  font-weight: 500;
   color: var(--color-text);
 }
 
