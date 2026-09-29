@@ -106,9 +106,29 @@ EURO_D41_MIO = EURO + ("gov_10a_main?format=JSON&geo=FR&na_item=D41PAY"
                        "&sector=S13&unit=MIO_EUR&lang=en")
 EURO_D41_PIB = EURO + ("gov_10a_main?format=JSON&geo=FR&na_item=D41PAY"
                        "&sector=S13&unit=PC_GDP&lang=en")
+# Les postes de NIVEAU II de la sante et de l'enseignement servent la
+# decomposition affichee sous les etiquettes des masses comparees : le lecteur
+# qui lit « Sante 261 » ne sait pas ce qu'il y a derriere, et « Enseignement 149 »
+# ne signifie pas 149 Md EUR de professeurs. Ils sont DERIVES de la meme requete
+# que les totaux -- jamais recopies a la main, sinon ils se figent au millesime
+# du jour ou on les a lus (regle de surface du depot : toute valeur derivable se
+# derive). Le reste de chaque fonction se calcule par soustraction, ce qui ferme
+# la somme par construction.  (2026-09-29)
 EURO_COFOG_MIO = EURO + ("gov_10a_exp?format=JSON&geo=FR&na_item=TE&sector=S13"
                          "&unit=MIO_EUR&cofog99=GF03&cofog99=GF0303"
-                         "&cofog99=GF07&cofog99=GF09&lang=en")
+                         "&cofog99=GF07&cofog99=GF09"
+                         "&cofog99=GF0701&cofog99=GF0702&cofog99=GF0703"
+                         "&cofog99=GF0901&cofog99=GF0902&cofog99=GF0904"
+                         "&cofog99=GF0906&lang=en")
+
+# Postes affiches, dans l'ordre de lecture, et leur part ADMISSIBLE du total de
+# leur fonction. Bornes larges : elles ne pretendent pas predire la structure,
+# elles arretent une inversion de code ou un poste qui deviendrait aberrant.
+POSTES_COFOG = {
+    "GF07": (("GF0703", 0.30, 0.55), ("GF0702", 0.25, 0.45), ("GF0701", 0.10, 0.30)),
+    "GF09": (("GF0902", 0.30, 0.55), ("GF0901", 0.20, 0.40),
+             ("GF0904", 0.05, 0.20), ("GF0906", 0.05, 0.25)),
+}
 EURO_COFOG_PIB = EURO + ("gov_10a_exp?format=JSON&geo=FR&na_item=TE&sector=S13"
                          "&unit=PC_GDP&cofog99=GF03&cofog99=GF0303"
                          "&cofog99=GF07&cofog99=GF09&lang=en")
@@ -408,6 +428,14 @@ MARG_L, MARG_R = 46, 14
 COL_DETTE = "#184f95"   # palette dataviz, rampe bleue, pas 600 (validee)
 COL_INTER = "#eb6834"   # slot 2
 INK, INK2, MUTED, GRID, AXIS = "#0A0A0E", "#52514e", "#898781", "#e1e0d9", "#c3c2b7"
+# Troisieme valeur de contexte des masses comparees. « Ordre et securite » etait
+# trace en AXIS, c'est-a-dire dans la couleur de l'axe des abscisses : une SERIE
+# partageait la teinte d'un element de structure, et la comparaison la plus
+# frappante de la figure -- les interets repassent au-dessus d'elle -- se lisait
+# comme du quadrillage. Un gris de plus, entre MUTED et AXIS, separe la donnee de
+# la grille SANS introduire de seconde couleur de donnees : la hierarchie continue
+# de tenir en noir et blanc, ce que la docstring de la figure protege.  (2026-09-29)
+CTX3 = "#a5a39a"
 FONT = "system-ui, -apple-system, Segoe UI, sans-serif"
 # Chiffres tabulaires : memes largeurs, donc les valeurs et les axes s'alignent
 # d'une figure a l'autre (28/09).
@@ -620,32 +648,46 @@ NBSP = " "  # U+00A0 pose par code, jamais tape
 LABELS_MASSES = {
     "fr": {
         "titre": "La charge d'intérêts face aux grands budgets publics, %s-%s",
-        "panneau": "Milliards d'euros courants — la charge d'intérêts comparée à "
-                   "quelques grandes fonctions de dépense publique",
+        # Autosuffisant hors de la page : la figure est proposee en ressource
+        # reutilisable, « France » et « administrations publiques » doivent donc
+        # etre dans l'IMAGE, pas seulement deductibles du texte qui l'entoure.
+        "panneau": "France · administrations publiques · milliards d'euros courants — "
+                   "la charge d'intérêts comparée à quelques grandes fonctions de dépense",
         "series": {"interets": "Charge d'intérêts", "GF07": "Santé",
                    "GF09": "Enseignement", "GF03": "Ordre et sécurité"},
+        "postes": {"GF0703": "hôpital", "GF0702": "ambulatoire",
+                   "GF0701": "produits médicaux", "GF0902": "secondaire",
+                   "GF0901": "primaire", "GF0904": "supérieur",
+                   "GF0906": "annexes", "reste": "autres"},
         "desc": "Quatre courbes en milliards d'euros courants, de %s à %s. La santé et "
                 "l'enseignement progressent régulièrement et restent les plus élevés. La charge "
                 "d'intérêts baisse jusqu'au début des années 2020, puis remonte et repasse "
                 "au-dessus du poste « ordre et sécurité ».",
         "src": "Eurostat : intérêts versés (gov_10a_main, D41PAY) et dépenses des "
                "administrations par fonction (gov_10a_exp, COFOG), %s-%s",
-        "note": "Masses comparées sur un millésime unique. Une comparaison de masses "
-                "n'établit aucun transfert d'un budget vers un autre.",
+        # Pas de cle « note » ici : la note affichee sous la figure est la precaution
+        # C["masses"], et elle porte deja en TETE la phrase qui empeche la figure
+        # d'etre trompeuse -- les interets sont une nature de depense, les trois
+        # autres des fonctions. Une seconde formulation au meme endroit divergerait.
+        # (Le champ « note » qui vivait ici n'etait lu par aucun appelant : retire
+        # le 2026-09-29, verifie par grep.)
     },
     "en": {
         "titre": "Interest paid against the main public budgets, %s-%s",
-        "panneau": "Billion euros, current prices — interest paid compared with a few "
-                   "large functions of public spending",
+        "panneau": "France · general government · billion euros, current prices — "
+                   "interest paid compared with a few large functions of spending",
         "series": {"interets": "Interest paid", "GF07": "Health",
                    "GF09": "Education", "GF03": "Public order and safety"},
+        "postes": {"GF0703": "hospital", "GF0702": "outpatient",
+                   "GF0701": "medical products", "GF0902": "secondary",
+                   "GF0901": "primary", "GF0904": "tertiary",
+                   "GF0906": "ancillary", "reste": "other"},
         "desc": "Four curves in billion euros, from %s to %s. Health and education rise "
                 "steadily and stay the highest. Interest paid falls until the early 2020s, then "
                 "climbs back above the public order and safety function.",
         "src": "Eurostat: interest paid (gov_10a_main, D41PAY) and general government "
                "expenditure by function (gov_10a_exp, COFOG), %s-%s",
-        "note": "Masses compared on a single vintage. Comparing masses establishes no transfer "
-                "from one budget to another.",
+        # Voir le commentaire du bloc francais : la note vient de C["masses"].
     },
 }
 
@@ -1116,7 +1158,9 @@ def build_svg_masses(interets: dict, cofog: dict, lang: str = "fr") -> str:
     L = LABELS_MASSES[lang]
     num = fr if lang == "fr" else en
     W, H = 720, 380
-    ml, mr, mt, mb = 52, 168, 46, 34      # mr : place des etiquettes directes
+    # mr : place des etiquettes directes -- elargie le 29/09 pour les deux lignes
+    # de decomposition (« hopital 109 · ambulatoire 92 » fait ~150 px a ce corps).
+    ml, mr, mt, mb = 52, 196, 46, 34
     fonctions = ("GF07", "GF09", "GF03")
     ans = sorted(set(interets) & set.intersection(*[set(cofog[c]) for c in fonctions]))
     if len(ans) < 10:
@@ -1152,38 +1196,83 @@ def build_svg_masses(interets: dict, cofog: dict, lang: str = "fr") -> str:
     # calcule, il ne se choisit pas -- sinon la comparaison deviendrait un cadrage.
     ref = min(ans, key=lambda a: interets[a])
     # contexte d'abord, serie heroine ensuite : l'ordre de dessin est la hierarchie
-    gris = {"GF07": INK2, "GF09": MUTED, "GF03": AXIS}
+    gris = {"GF07": INK2, "GF09": MUTED, "GF03": CTX3}
     bouts = []
     for c in fonctions:
         pts = [(X(a), Y(cofog[c][a])) for a in ans]
         e.append('<path d="%s" fill="none" stroke="%s" stroke-width="1.6" '
                  'stroke-linejoin="round"/>' % (_line_path(pts), gris[c]))
         bouts.append((pts[-1][1], gris[c], L["series"][c], cofog[c][ans[-1]], False,
-                      (cofog[c][ans[-1]] / cofog[c][ref] - 1) * 100))
+                      (cofog[c][ans[-1]] / cofog[c][ref] - 1) * 100, c))
     pts = [(X(a), Y(interets[a])) for a in ans]
     e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.8" '
              'stroke-linecap="round" stroke-linejoin="round"/>' % (_line_path(pts), COL_INTER))
     e.append('<circle cx="%.1f" cy="%.1f" r="4.5" fill="%s"/>' % (pts[-1][0], pts[-1][1], COL_INTER))
+    # Le CREUX, marque sur la courbe : « +102 % depuis 2020 » est une assertion que
+    # le lecteur doit pouvoir verifier de l'oeil -- 30 puis 60. L'annee et la valeur
+    # sont celles du calcul de `ref`, jamais ecrites a la main.
+    xr, yr = X(ref), Y(interets[ref])
+    e.append('<circle cx="%.1f" cy="%.1f" r="3.2" fill="%s"/>' % (xr, yr, COL_INTER))
+    e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s" text-anchor="middle">'
+             '%s — %d</text>' % (xr, yr + 17, TY_MINEUR, COL_INTER,
+                                 num(interets[ref], 1), ref))
     bouts.append((pts[-1][1], COL_INTER, L["series"]["interets"], interets[ans[-1]], True,
-                  (interets[ans[-1]] / interets[ref] - 1) * 100))
+                  (interets[ans[-1]] / interets[ref] - 1) * 100, "interets"))
     # Etiquetage DIRECT a droite, sans legende ; ecart minimum garanti, sinon
     # deux budgets proches se superposent (« ordre et securite » et les interets
     # se croisent justement a la fin de la serie).
+    # Decomposition des deux grosses masses, en deux lignes sous leur etiquette :
+    # « Sante 261 » ne dit pas ce qu'il y a derriere, et « Enseignement 149 » se lit
+    # a tort comme 149 Md EUR de professeurs. Les postes sont derives (POSTES_COFOG),
+    # le reste calcule par soustraction, donc la somme se ferme toujours. Aucune
+    # qualification normative -- pas de « reellement consacres aux soins » : la
+    # decomposition factuelle fait comprendre la distinction toute seule.
+    detail = {}
+    for fonction, postes in POSTES_COFOG.items():
+        dispo = [(code, cofog[code][ans[-1]]) for code, _, _ in postes
+                 if code in cofog and ans[-1] in cofog[code]]
+        if len(dispo) < len(postes):
+            continue                      # poste manquant : on n'affiche rien plutot qu'un faux
+        reste = cofog[fonction][ans[-1]] - sum(v for _, v in dispo)
+        if reste < 0:
+            continue
+        mots = ["%s %s" % (L["postes"][code], num(v, 0)) for code, v in dispo]
+        mots.append("%s %s" % (L["postes"]["reste"], num(reste, 0)))
+        # Couper la ou les deux lignes sont le plus egales EN LONGUEUR, non en
+        # nombre de postes : « secondaire 64 · primaire 42 · superieur 12 » et
+        # « annexes 20 · autres 10 » comptent 3 et 2 postes mais debordent la
+        # marge d'un cote et la laissent vide de l'autre.
+        milieu = min(range(1, len(mots)),
+                     key=lambda k: abs(len(" · ".join(mots[:k]))
+                                       - len(" · ".join(mots[k:]))))
+        detail[fonction] = [" · ".join(mots[:milieu]), " · ".join(mots[milieu:])]
+
     bouts.sort()
-    ecart = 30.0
+    PAS = 13.0                            # interligne des lignes secondaires
     for i in range(1, len(bouts)):
-        if bouts[i][0] - bouts[i - 1][0] < ecart:
-            bouts[i] = (bouts[i - 1][0] + ecart,) + bouts[i][1:]
-    for y, col, nom, val, fort, croiss in bouts:
+        # L'ecart minimum n'est pas constant : un bloc decompose occupe deux lignes
+        # de plus. Le mesurer sur le bloc PRECEDENT, sinon les deux plus proches --
+        # « ordre et securite » et les interets, qui se croisent en fin de serie --
+        # se superposent au detail de leur voisin du dessus.
+        lignes_prec = 2 + len(detail.get(bouts[i - 1][6], []))
+        besoin = lignes_prec * PAS + 6.0
+        if bouts[i][0] - bouts[i - 1][0] < besoin:
+            bouts[i] = (bouts[i - 1][0] + besoin,) + bouts[i][1:]
+    for y, col, nom, val, fort, croiss, code in bouts:
         e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s">'
                  '<tspan font-weight="%d">%s</tspan> %s</text>'
                  % (W - mr + 12, y + 1, TY_ANNOT if fort else TY_MINEUR, col,
                     700 if fort else 600, _esc(nom), num(val, 0)))
+        dy = y + 1
+        for ligne in detail.get(code, []):
+            dy += PAS
+            e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s">%s</text>'
+                     % (W - mr + 12, dy, TY_MINEUR - 1, MUTED, _esc(ligne)))
         # La croissance DEPUIS LE CREUX repond a la lecture spontanee de la
         # figure (« tout monte plus vite que les interets ») : vraie sur trente
         # ans, fausse depuis le creux. Calculee, jamais ecrite a la main.
         e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s">%+d %% %s %d</text>'
-                 % (W - mr + 12, y + 14, TY_MINEUR - 1, MUTED, round(croiss),
+                 % (W - mr + 12, dy + PAS, TY_MINEUR - 1, MUTED, round(croiss),
                     "depuis" if lang == "fr" else "since", ref))
     e += cartouche(W, H + 4, L["src"] % (a0, a1), "masses", lang)
     e.append("</svg>")
@@ -1554,6 +1643,26 @@ def main() -> int:
                  "GF07": (5.0, 13.0), "GF09": (3.5, 8.0)}
     for code, (lo, hi) in bands_pib.items():
         check_annual("cofog_pib." + code, cofog_pib.get(code, {}), lo, hi)
+    # Postes de niveau II : la garde porte sur la COHERENCE INTERNE, pas sur une
+    # bande absolue. Une part du total ne derive pas avec l'inflation, et c'est
+    # elle qui trahirait une inversion de code ou un poste devenu aberrant. Le
+    # reste doit rester positif, sinon la decomposition affirmerait plus que le
+    # total. Verifie sur le dernier millesime commun -- le seul qui s'affiche.
+    for fonction, postes in POSTES_COFOG.items():
+        annees_f = set(cofog_mio.get(fonction, {}))
+        for code, lo, hi in postes:
+            annees_f &= set(cofog_mio.get(code, {}))
+        if not annees_f:
+            fail("cofog niveau II : aucun millesime commun pour %s" % fonction)
+            continue
+        an = max(annees_f)
+        total = cofog_mio[fonction][an]
+        cumul = 0.0
+        for code, lo, hi in postes:
+            part = cofog_mio[code][an] / total if total else 0.0
+            cumul += part
+            in_band("part %s dans %s (%s)" % (code, fonction, an), part, lo, hi)
+        in_band("reste de %s (%s)" % (fonction, an), 1.0 - cumul, 0.0, 0.40)
     check_annual("recettes_mdeur", tr_mdeur, 300, 3000)
     check_consolidated_anchors(dette_mdeur, dette_pib, d41_mio)
     check_delta_vs_committed(payload_prev, dette_mdeur, dette_pib, d41_mdeur)
@@ -1890,8 +1999,10 @@ def main() -> int:
     # Millesime commun des masses comparees : les series par fonction s'arretent
     # avant les interets, et une comparaison ne melange pas deux annees.
     trajectoire = lire_trajectoire()
+    _codes_md = ["GF0303", "GF03", "GF07", "GF09"]
+    _codes_md += [code for postes in POSTES_COFOG.values() for code, _, _ in postes]
     cofog_md = {c: {int(a): v / 1000.0 for a, v in cofog_mio[c].items()}
-                for c in ("GF0303", "GF03", "GF07", "GF09")}
+                for c in _codes_md if c in cofog_mio}
     inter_md = {int(a): v for a, v in d41_mdeur.items()}
     ans_masses = sorted(set(inter_md) & set(cofog_md["GF07"]) & set(cofog_md["GF09"])
                         & set(cofog_md["GF03"]))

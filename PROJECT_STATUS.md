@@ -53,6 +53,43 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-29 — Figure « masses comparées » : décomposition COFOG dérivée, creux de 2020 marqué, une série sortie de la couleur de l'axe
+
+Sur un complément de contre-expertise (arbitrage complet : `docs/ARBITRAGE_GRAPHIQUE_MASSES_2026-09-29.md`).
+Quatre demandes sur cinq retenues ; les onze chiffres avancés **tous vérifiés à la source** (Eurostat
+`gov_10a_exp`, niveau II COFOG, 2024), écart maximal **0,0**, sommes fermées à 0,00.
+
+- **Décomposition de santé et enseignement** sous leur étiquette : « Santé 261 » ne disait pas ce qu'il y
+  a derrière, et « Enseignement 149 » se lit à tort comme 149 Md€ de professeurs. Sept codes de niveau II
+  ajoutés à la requête existante, reste par soustraction — **dérivé, jamais recopié** : onze chiffres
+  recopiés se seraient figés au millésime du jour où on les a lus.
+- **Creux de 2020 marqué sur la courbe** (29,7). « +102 % depuis 2020 » cesse d'être une assertion à
+  croire : 30, puis 60, le lecteur le voit. Valeur et année calculées, `ref` étant déjà le minimum.
+- **« Ordre et sécurité » était tracé en `AXIS`** — la couleur de l'axe des abscisses. Une série de
+  données portait la teinte d'un élément de structure, et la comparaison la plus frappante de la figure
+  se lisait comme du quadrillage. ⛔ Le bleu ardoise proposé est **rejeté** : la charte fixe deux couleurs
+  de données avec un sens (bleu = stock, orange = coût) et les quatre séries sont des dépenses ; la
+  docstring protège le **test du noir et blanc** ; une teinte neuve doit passer `validate_palette.js`.
+  Appliqué à la place : `CTX3 = #a5a39a`, une valeur de gris de plus entre le gris moyen et l'axe.
+- **Titre autosuffisant** (« France · administrations publiques · … »), FR et EN : la figure est offerte
+  en ressource réutilisable et perdait son périmètre hors de la page.
+- **Gardes** sur les nouveaux postes, avant écriture : non des bandes absolues en euros — une part ne
+  dérive pas avec l'inflation — mais la **part de chaque poste dans sa fonction** et un reste positif.
+- ⚠ `LABELS_MASSES["note"]` n'était **lu par aucun appelant** (grep) : champ mort **retiré**. La note
+  affichée est la précaution `C["masses"]`, qui porte déjà en tête la phrase qui empêche la figure d'être
+  trompeuse. Deux formulations pour la même note auraient divergé.
+- ⚠ **Équilibrage des deux lignes de détail par longueur de texte**, non par nombre de postes : au premier
+  rendu « secondaire 64 · primaire 42 · supérieur 12 » débordait la marge. Mesuré sur le rendu, corrigé,
+  re-mesuré. Marge droite portée de 168 à 196 px.
+
+Figure construite hors dépôt et **regardée** avant toute écriture, FR et EN. Séparateur décimal vérifié
+**dans le SVG**, pas à l'œil sur un PNG redimensionné : « 29,7 » / « 29.7 ». `--check` : gardes passées,
+rien écrit. `check-all --ci` à 0. **Aucune sortie nouvelle** : la liste énumérée de `dette-insee.yml`
+reste valable.
+⚠ *Piège évité de justesse* : l'arbitrage avait d'abord été écrit sous `reports/`, **dossier gitignoré**
+(`.gitignore:45`) — il serait mort avec le disque. `git check-ignore -v` avant le commit, jamais
+l'intuition de rangement.
+
 ### 2026-09-29 — Un compteur faux depuis deux mois, un linter qui ne le voyait pas, et une page dont le texte n'était pas rendu
 
 Parti d'une contre-expertise du profil MAGNIFIER « page web » (`D:\CONTRE_EXPERTISE\2026-09-29_MAGNIFIER_WEB\`),
