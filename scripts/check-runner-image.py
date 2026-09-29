@@ -39,6 +39,11 @@ DEBUT = date(2026, 10, 19)
 FIN = date(2026, 11, 19)
 CIBLE = "ubuntu-26.04"          # ce vers quoi il faut arriver
 EPINGLE = "ubuntu-24.04"        # ce qui est fige en attendant
+# Banc de test deja passe au VERT sur la cible (run 36545145119) : Ubuntu 26.04.1,
+# Python 3.14.4, glibc 2.43, Hugo Extended par dpkg, build, gardes du script et porte
+# bloquante -- tout passe. La migration ne coutera donc rien. Reste a la faire quand
+# l'image cible aura fini de bouger, c'est-a-dire apres la fin de la bascule.
+DERNIER_TEST_VERT = date(2026, 9, 29)
 
 # Le motif s'arrete au premier blanc ou au premier « # » : une ligne epinglee porte
 # un commentaire de renvoi, et un motif ancre sur la fin de ligne ne l'aurait pas vue.
@@ -103,25 +108,29 @@ def main() -> int:
         return 1
 
     # -- rappel d'echeance, proportionne au temps qui reste
-    reste = (DEBUT - aujourdhui).days
+    jours_test = (aujourdhui - DERNIER_TEST_VERT).days
     if aujourdhui > FIN:
-        print("\nRAPPEL : la migration GitHub est achevee depuis le %s." % FIN.isoformat())
-        print("L'epinglage sur %s est desormais une DETTE : les images anciennes sont"
-              % EPINGLE)
-        print("retirees quelques mois apres. Tester %s et basculer." % CIBLE)
+        print("\nA FAIRE : la bascule GitHub est achevee depuis le %s." % FIN.isoformat())
+        print("C'est le moment prevu pour migrer. Relancer le banc puis basculer :")
+        print("  gh workflow run test-runner-ubuntu26.yml")
+        print("  puis remplacer %s par %s dans les 9 declarations (7 ici, 2 dans"
+              % (EPINGLE, CIBLE))
+        print("  le depot monitoring), et SUPPRIMER banc, garde et dossier.")
+        print("Le dernier banc vert date de %s, soit %d jours : le refaire, l'image"
+              % (DERNIER_TEST_VERT.isoformat(), jours_test))
+        print("cible a bouge depuis.")
     elif aujourdhui >= DEBUT:
-        print("\nRAPPEL : la bascule GitHub est EN COURS (%s -> %s)."
+        print("\nBascule GitHub EN COURS (%s -> %s) ; l'epinglage protege."
               % (DEBUT.isoformat(), FIN.isoformat()))
-        print("L'epinglage protege ; il ne dispense pas de tester %s." % CIBLE)
-    elif reste <= 30:
-        print("\nRAPPEL : la bascule commence dans %d jour(s), le %s."
-              % (reste, DEBUT.isoformat()))
-        print("Tester %s avant cette date : workflow « Test runner Ubuntu 26.04 »,"
-              % CIBLE)
-        print("declenchement manuel (gh workflow run test-runner-ubuntu26.yml).")
+        print("Rien a faire avant la fin : migrer pendant que l'image cible bouge")
+        print("encore echangerait un risque nul contre un risque inconnu.")
     else:
-        print("\nEcheance : bascule GitHub du %s au %s, dans %d jours."
-              % (DEBUT.isoformat(), FIN.isoformat(), reste))
+        print("\nBascule GitHub du %s au %s, dans %d jours -- l'epinglage protege."
+              % (DEBUT.isoformat(), FIN.isoformat(), (DEBUT - aujourdhui).days))
+        print("Banc de test deja VERT sur %s le %s : la migration ne coutera rien."
+              % (CIBLE, DERNIER_TEST_VERT.isoformat()))
+        print("Elle se fera APRES le %s, quand l'image cible aura fini de bouger."
+              % FIN.isoformat())
     return 0
 
 

@@ -1585,8 +1585,13 @@ def rendre_png(svgs: list) -> None:
         png = svg.with_suffix(".png")
         cairosvg.svg2png(url=str(svg), write_to=str(png), output_width=1440,
                          background_color="white")
+        # Fins de ligne normalisees en LF : le manifeste doit dire la meme chose
+        # selon qu'il est ecrit en CI (LF) ou sur un poste Windows (CRLF apres
+        # checkout). Sans cela, les deux cotes se contredisent sans qu'aucun
+        # fichier n'ait bouge -- cf. la docstring de check-png-dette.py, ou le
+        # faux positif a ete mesure le 2026-09-29.
         manifeste["sources"][png.name] = hashlib.sha256(
-            svg.read_bytes()).hexdigest()
+            svg.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
     # Manifeste dans data/ : c'est un artefact INTERNE de controle, il n'a
     # rien a faire parmi les fichiers servis au public.
     cible = REPO / "data" / "png_dette_source.json"

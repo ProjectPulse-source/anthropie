@@ -39,16 +39,41 @@ dirait pas que la cause est l'image.
   vérifie que l'épinglage tient, signale tout retour à un label flottant, et rappelle
   l'échéance avec une insistance proportionnée au temps restant.
 
+## Le banc a déjà tourné, et il est VERT — run `36545145119`, 2026-09-29
+
+Mesuré sur `ubuntu-26.04`, en 21 secondes :
+
+| Ce qui pouvait casser | Résultat |
+|---|---|
+| Image | `Ubuntu 26.04.1 LTS` |
+| Python par défaut | **3.14.4** (contre 3.12 sur 24.04) |
+| glibc — Hugo Extended en dépend | `2.43` |
+| Hugo Extended par `dpkg`, puis `hugo --minify` | **passe**, `v0.147.0 extended` |
+| `cairosvg` + gardes de `update_dette_insee.py --check` | **passent** |
+| Porte bloquante `check-all.py --ci` | **passe** |
+
+**Ce que cela règle** : la migration ne coûtera rien. Le saut de Python 3.12 à 3.14,
+qui était le risque le plus plausible, ne casse ni le script de données ni les
+contrôles.
+
+**Ce que cela ne règle pas** : un run vert le 29/09 ne dit rien du 19/11. L'image
+26.04 continuera d'évoluer jusqu'à la fin de la bascule — c'est précisément pourquoi
+le banc reste en place et se relance en une commande.
+
 ## Ce qui reste à faire, dans l'ordre
 
-1. **Avant le 19 octobre 2026** — lancer le banc de test :
-   `gh workflow run test-runner-ubuntu26.yml` puis `gh run watch <id> --exit-status`.
-2. **S'il est vert** : basculer les 9 déclarations sur `ubuntu-26.04`, relancer
-   `dette-insee.yml` une fois à la main pour le constater en réel, puis **supprimer**
-   le banc de test et la garde (voir ci-dessous).
-3. **S'il est rouge** : la cause est identifiée avant d'être subie. Corriger sous
-   `ubuntu-26.04` — le plus probable étant la version de Python par défaut ou une
-   dépendance de `cairosvg` — puis reprendre au point 2.
+1. **Rester sur `ubuntu-24.04` jusqu'à la fin de la bascule (19/11/2026).** Arbitrage :
+   l'épinglage sur 24.04 est aujourd'hui strictement équivalent au comportement
+   courant, alors que 26.04 est une image jeune qui bougera deux mois encore.
+   Basculer maintenant échangerait un risque connu et nul contre un risque inconnu,
+   sur la chaîne qui publie des données officielles.
+2. **Relancer le banc après le 19/11** : `gh workflow run test-runner-ubuntu26.yml`,
+   puis `gh run watch <id> --exit-status`.
+3. **S'il est encore vert** : basculer les 9 déclarations sur `ubuntu-26.04` (7 ici,
+   2 dans `monitoring`), relancer `dette-insee.yml` une fois à la main pour le
+   constater en réel, puis **supprimer** le banc, la garde et ce dossier.
+4. **S'il est rouge** : la cause est identifiée avant d'être subie, et il reste des
+   semaines pour la traiter — c'est tout le bénéfice d'avoir testé tôt.
 
 ## Condition de mort — prédicat, jamais date
 

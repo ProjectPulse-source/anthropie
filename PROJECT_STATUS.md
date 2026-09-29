@@ -53,6 +53,36 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-29 — Runners épinglés avant la bascule Ubuntu 26.04, banc de test déjà vert ⏳ ÉCHÉANCE 19/11/2026
+
+Dossier unique : `docs/MIGRATION_RUNNER_UBUNTU26.md`. Source lue à la source
+(`actions/runner-images#14748`) : `ubuntu-latest` migre vers 26.04 **du 19/10 au 19/11/2026**.
+
+**Le risque n'était pas la migration, c'était sa fenêtre** : pendant un mois, un même workflow peut
+tomber un jour sur 24.04 et le lendemain sur 26.04 sans changement de code. L'échec aurait été
+*intermittent*, donc imputé à la donnée ou au réseau avant de l'être à l'image. `dette-insee.yml`
+publie des données officielles, `hugo.yml` est le seul chemin d'une page vers le lecteur : attendre
+l'issue du job `alerte` n'aurait pas suffi, elle arrive après une publication manquée.
+
+- **9 déclarations `runs-on` épinglées `ubuntu-24.04`** — 7 ici, 2 dans `monitoring` (R3 : balayage
+  des dépôts, seuls ces deux portent des workflows). Changement **sans effet fonctionnel** :
+  `ubuntu-latest` servait déjà 24.04 (run `36543868062`, image `ubuntu24/20260920.314`).
+- ⭐ **Banc `test-runner-ubuntu26.yml`, manuel, lecture seule, ne publie rien — DÉJÀ VERT**
+  (run `36545145119`) : Ubuntu 26.04.1, **Python 3.14.4**, glibc 2.43, Hugo Extended par `dpkg`,
+  build, `cairosvg`, gardes du script, porte bloquante : tout passe. La migration ne coûtera rien.
+- **Garde `scripts/check-runner-image.py`**, dans `check-all` **hors `--ci`** (même motif que
+  `check-png-dette.py`). Messages vérifiés par simulation aux trois moments : avant, pendant, après.
+- **Arbitrage : ne pas migrer avant le 19/11.** 26.04 bougera deux mois encore ; migrer maintenant
+  échangerait un risque nul contre un risque inconnu sur la chaîne de publication.
+- **Condition de mort** : banc, garde et dossier disparaissent ensemble quand les 9 déclarations
+  portent une image ≥ 26.04 et qu'un run vert l'a constaté. La garde l'annonce elle-même.
+
+⚠ **La garde a commis le défaut qu'elle combat, à sa première exécution** : motif ancré sur la fin
+de ligne, donc aveugle aux lignes portant le commentaire d'épinglage — **1 déclaration vue sur 8**,
+et l'annonce « MIGRATION TERMINEE ». Faux vert, attrapé parce qu'elle a été testée avant d'être crue,
+puis vue mordre sur mutation. **Deuxième fois du même jour** qu'un contrôle textuel rate par son
+*vocabulaire* et non par son périmètre de fichiers, après `check-corpus-counters.py`.
+
 ### 2026-09-29 — Figure « masses comparées » : décomposition COFOG dérivée, creux de 2020 marqué, une série sortie de la couleur de l'axe
 
 Sur un complément de contre-expertise (arbitrage complet : `docs/ARBITRAGE_GRAPHIQUE_MASSES_2026-09-29.md`).

@@ -42,7 +42,19 @@ MANIFESTE = ROOT / "data" / "png_dette_source.json"
 
 
 def sha(p: Path) -> str:
-    return hashlib.sha256(p.read_bytes()).hexdigest()
+    """Empreinte du SVG, fins de ligne NORMALISEES en LF.
+
+    Sans cette normalisation, le controle est un faux positif permanent sur un
+    poste Windows : la CI ecrit et hache le SVG en LF, git le rend en CRLF au
+    checkout (`core.autocrlf`), et les deux empreintes different alors que le
+    fichier est le meme. Mesure du 2026-09-29 sur masses-comparees.svg : 44 CRLF,
+    hash disque 1e8e4f46..., hash en LF 04d470cd... -- ce dernier egal au
+    manifeste au caractere pres. Six PNG sur douze etaient declares « perimes »
+    et faisaient sortir check-all en ECHEC, alors que les figures en ligne
+    etaient a jour. Une alerte toujours vraie ne se lit plus, et masque les
+    vraies.
+    """
+    return hashlib.sha256(p.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 def main() -> int:
