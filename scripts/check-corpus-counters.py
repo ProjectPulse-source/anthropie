@@ -87,6 +87,25 @@ PATTERNS = [
         r"\b(\d+)\s+AWP\b",
         re.IGNORECASE,
     ), "numeric"),
+    # Périphrase « N textes » : compte les AWP SANS les nommer. Tous les motifs
+    # ci-dessus exigent « Working Papers » ou « AWP » accolé au nombre ; le
+    # gabarit layouts/serie-awp/list.html écrit « Six textes pour formaliser
+    # l'hypothèse ». Le compteur y est donc resté à « Six » alors que la série
+    # comptait huit papers, dans les DEUX langues, sans qu'aucun motif ne le voie
+    # — un audit externe l'avait signalé le 2026-08-02, et le linter continuait à
+    # sortir « Aucune divergence détectée ✓ ». On ancre la formulation elle-même,
+    # stable et propre au corpus, comme pour /a-propos/ plus bas : un motif large
+    # sur « N textes » déclencherait à tort sur « Deux textes de méthode »
+    # (/ressources/) ou « les dix-sept textes » (/a-propos/).  (2026-09-29)
+    (re.compile(
+        r"\b(deux|trois|quatre|cinq|six|sept|huit|neuf|dix)\s+textes?\s+pour\s+formaliser",
+        re.IGNORECASE,
+    ), "fr_word"),
+    (re.compile(
+        r"\b(two|three|four|five|six|seven|eight|nine|ten)\s+texts?\s+to\s+formali[sz]e",
+        re.IGNORECASE,
+    ), "en_word"),
+
     # ---- CORPUS DE LIVRES (et non plus AWP) -------------------------------------
     # Ancres exigeantes : le compteur doit etre suivi, dans la meme phrase, d'une
     # marque du cadre anthropique. Sans cette contrainte, « deux livres » dans une

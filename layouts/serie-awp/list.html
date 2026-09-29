@@ -17,13 +17,15 @@
   {{/* ── Header ── */}}
   <header class="serie-awp__header">
     <h1>Anthropie Working Papers</h1>
-    <p class="serie-awp__intro">
-      {{ if $isEn }}
-        A collection of working papers exploring the anthropic framework across key domains. Six texts to formalize the hypothesis, test it across deep history, and apply it to contemporary issues.
-      {{ else }}
-        Une collection de working papers pour explorer le cadre anthropique dans des domaines clés. Six textes pour formaliser l'hypothèse, la déployer dans la longue durée et l'appliquer à des objets contemporains.
-      {{ end }}
-    </p>
+    {{/* Le chapeau vient du Markdown de la page (content/serie-awp/_index[.en].md),
+         jamais d'un littéral de gabarit : celui-ci annonçait « Six textes » depuis la
+         parution d'AWP-07, servi au lecteur, tandis que l'arc rédigé de la page
+         n'était jamais rendu faute d'appel à .Content. Un compteur en dur dans un
+         template est une copie condamnée à diverger ; le Markdown, lui, nomme les
+         papers un par un et n'a aucun compteur à maintenir.  (2026-09-29) */}}
+    <div class="serie-awp__intro">
+      {{ .Content }}
+    </div>
   </header>
 
   {{/* ── Grid ── */}}

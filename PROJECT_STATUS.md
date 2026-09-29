@@ -53,6 +53,52 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-29 — Un compteur faux depuis deux mois, un linter qui ne le voyait pas, et une page dont le texte n'était pas rendu
+
+Parti d'une contre-expertise du profil MAGNIFIER « page web » (`D:\CONTRE_EXPERTISE\2026-09-29_MAGNIFIER_WEB\`),
+qui signalait « six textes » sur `/serie-awp/` là où la série compte huit AWP. **Vérifié sur le rendu** : le
+HTML publié le servait bien au lecteur. Trois défauts en chaîne, tous corrigés.
+
+1. **Le compteur.** `layouts/serie-awp/list.html` portait « Six textes » / « Six texts » **en dur**.
+   `.claude/external-audits/ARCHIVE/Geo-01.txt`, **daté du 2 août 2026** (§ 4.1), le signalait déjà, avec sa
+   correction écrite — il a vécu deux mois. Le § 4.2 du même audit avait été corrigé, celui-ci non, et rien
+   ne distinguait les deux. ⚠ **Un point ouvert d'audit archivé n'est pas fermé parce qu'il est archivé** :
+   reste à balayer `ARCHIVE/` pour les autres constats jamais traités.
+2. **Pourquoi `check-corpus-counters.py` ne mordait pas** — et ce n'était pas le périmètre. Il scannait bien
+   `layouts/` et connaissait bien la vérité (« 8 AWP FR | 8 AWP EN ») : **tous ses motifs exigeaient
+   « Working Papers » ou « AWP » accolé au nombre**. Une périphrase qui compte le corpus sans le nommer
+   n'entrait jamais dans le contrôle, qui rendait « Aucune divergence détectée ✓ » et un code 0 sur la porte
+   bloquante de `hugo.yml`. Le périmètre d'un contrôle textuel n'est pas que son glob de fichiers, c'est
+   aussi son **vocabulaire**. Deux motifs ajoutés, ancrés sur la formulation — la méthode que le fichier
+   retenait déjà pour `/a-propos/` en août ; un motif large sur « N textes » déclencherait à tort sur « Deux
+   textes de méthode » (`/ressources/`), « les dix-sept textes » (`/a-propos/`) et « the first six papers »
+   (`awp-07.en.md`). **Vu mordre** (2 lignes, exit 1) puis vu se taire après correction (exit 0).
+3. **La page ne rendait pas son propre texte.** Le gabarit n'appelait jamais `.Content` : les deux
+   paragraphes de `content/serie-awp/_index[.en].md` — dont l'arc complet AWP-01→08 — étaient écrits,
+   versionnés et **invisibles**. Le chapeau en dur les remplaçait par une phrase générique. Corrigé : le
+   gabarit rend `.Content`, le littéral disparaît, et **le compteur n'existe plus du tout** (le Markdown
+   nomme les papers un par un). Un compteur en dur dans un template est une copie condamnée à diverger.
+
+**Remise en forme de l'arc, FR et EN** : une phrase de 145 mots à 16 points-virgules devient une liste de six
+items, rôle en tête. **Transformation conservative, prouvée** : 165 mots FR et 167 EN **identiques** à HEAD,
+seule la ponctuation de liaison cède ; le contrôle a été vu mordre sur mutation avant d'être cru. Rendu
+vérifié FR et EN : chapeau générique absent, arc présent, 6 items, 8 cartes intactes, **0 entité `&amp;nbsp;`
+échappée**. `check-all.py --ci` à 0 ; `hugo --minify` sans warning.
+⚠ *Piège d'instrument rencontré* : un premier contrôle du rendu a rendu « 0 carte » et « bloc introuvable »
+— faux zéro dû à `--minify`, qui retire les guillemets d'attributs. Ne pas conclure d'un zéro sans vérifier
+l'instrument.
+
+**Propagation (R3)**, balayage FR+EN des périphrases de comptage : `/offrir-un-livre-kindle/` annonçait « les
+quatre livres » alors que **les six** ont une édition Kindle — *La Société du premier coup* (B0H1619K7W) et
+*Un président peut-il tenir ses promesses ?* (B0HK1ZYW7C, **paru le 22/09**) manquaient à une page de
+conversion. Corrigé, descriptions tirées des fiches. ⚠ Les deux liens ajoutés sont en `/dp/<ASIN>` canonique :
+les quatre autres portent des tags d'affiliation `maas` que je ne peux pas fabriquer — à uniformiser si voulu.
+
+**Restés ouverts, nommés** : le compteur de **livres** en périphrase n'est pas outillé, sa vérité étant
+ambiguë entre les 3 livres du corpus anthropique et les 6 du site (ne pas trancher à la place de l'auteur) ;
+`_detect_lang` déduit la langue du **nom de fichier**, si bien que la ligne anglaise d'un gabarit bilingue est
+étiquetée `[fr]` — sans effet tant que les deux comptes sont égaux, à traiter le jour où ils divergent.
+
 ### 2026-09-29 (nuit, clôture) — Trois tours de contre-expertise, fiche 02 en v2, tout poussé
 
 **État final : `origin/main` sur `5484bd1`, déploiement vert, page vérifiée en ligne.** Cinq commits
