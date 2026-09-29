@@ -31,7 +31,7 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 {{< reutiliser-ancre >}}
 
-À la question «&nbsp;combien coûte la dette publique&nbsp;?&nbsp;», le chiffre le plus direct n'est pas l'encours, mais les **intérêts versés chaque année**&nbsp;: **{{< dette-val "interets_mdeur" >}}&nbsp;milliards d'euros en {{< dette-val "interets_annee" >}}**, soit {{< dette-val "interets_pct_pib" >}}&nbsp;% du PIB et **{{< dette-val "interets_sur_recettes_pct" >}}&nbsp;% des recettes publiques** (Eurostat, `D41PAY`).
+À la question **«&nbsp;combien coûte la dette publique&nbsp;?&nbsp;»**, le chiffre le plus direct n'est pas l'encours, mais les **intérêts versés chaque année**&nbsp;: **{{< dette-val "interets_mdeur" >}}&nbsp;milliards d'euros en {{< dette-val "interets_annee" >}}**, soit {{< dette-val "interets_pct_pib" >}}&nbsp;% du PIB et **{{< dette-val "interets_sur_recettes_pct" >}}&nbsp;% des recettes publiques** (Eurostat, `D41PAY`).
 
 Il s'agit d'une charge **brute**, couvrant l'ensemble des administrations publiques — État, collectivités locales et sécurité sociale — et enregistrée l'année où les intérêts courent. La même convention est conservée sur toute la page afin de comparer des grandeurs de périmètre identique.
 
