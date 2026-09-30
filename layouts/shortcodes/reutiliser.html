@@ -34,6 +34,10 @@
   {{- $jeu := index site.Data . -}}
   {{- if not $jeu -}}{{ errorf "reutiliser: data/%s.json introuvable (%s)" . $.Page.File.Path }}{{- end -}}
   {{- $releve = index $jeu (cond $isEn "affichage_en" "affichage") "releve_le" | default "" -}}
+  {{- /* Repli (30/09, dette_monde) : un jeu qui ne porte sa date qu'à la racine (ISO, lue par le sitemap). On la
+         formate ici plutôt que de la recopier dans `affichage` : recalculée chaque jour, elle y briserait la
+         règle « rien écrit à données identiques ». */ -}}
+  {{- if and (not $releve) $jeu.releve_le -}}{{- $releve = time.Format ":date_long" (time $jeu.releve_le) -}}{{- end -}}
 {{- end -}}
 {{- $sources := .Get "sources" -}}
 {{- /* Texte du bloc « Les données » propre à la page (optionnel) : le texte par

@@ -1,0 +1,36 @@
+{
+ "fr": [
+  {
+   "id": "charge",
+   "fichier": "dette-monde-charge",
+   "titre": "Même dette, charge différente : les 27 pays de l'UE en 2025",
+   "montre": "À dette voisine, la part des recettes consacrée aux intérêts peut varier de 1 à 3,3 ; hors de la zone euro, elle croît plus vite avec la dette.",
+   "source": "Eurostat gov_10a_main (D41PAY, TR), gov_10dd_edpt1 (GD), nama_10_gdp (B1GQ), 2025 ; administrations publiques S.13, monnaie nationale",
+   "precaution": "Pointillés : faux jumeaux (plus proche voisin en stock, écart < 10 points, trois plus grands écarts de charge)."
+  },
+  {
+   "id": "prix",
+   "fichier": "dette-monde-prix",
+   "titre": "Prix de la dette et inflation récente : l'Europe en 2025",
+   "montre": "Hors de la zone euro, le taux implicite est étroitement associé à l'inflation récente ; dans la zone euro, beaucoup moins. La Suède, hors euro, paie comme l'Allemagne.",
+   "source": "Eurostat prc_hicp_aind (IPCH), gov_10a_main, gov_10dd_edpt1, 2025",
+   "precaution": "Relation descriptive sur une année, non causale."
+  },
+  {
+   "id": "transmission",
+   "fichier": "dette-monde-transmission",
+   "titre": "Pression de refinancement : échéances et écart de taux, 2025",
+   "montre": "La part de la dette qui arrive à échéance et l'écart entre taux de marché et taux implicite : un repère de pression sur le coût moyen, non une prévision.",
+   "source": "Eurostat gov_10dd_ggd (dette par échéance résiduelle), irt_lt_mcby_a (taux à 10 ans), 2025",
+   "precaution": "Rendement de convergence à 10 ans, non le coût de toutes les émissions nouvelles. Repère, non prévision."
+  },
+  {
+   "id": "stock",
+   "fichier": "dette-monde-stock",
+   "titre": "Le stock : dette publique en % du PIB, fin 2025",
+   "montre": "Le classement le plus cité : il ne dit ni le prix payé sur la dette, ni la part des recettes qu'elle absorbe.",
+   "source": "Eurostat gov_10dd_edpt1, dette de Maastricht, fin 2025",
+   "precaution": "Stock brut, sans les actifs publics ni les engagements hors dette (retraites)."
+  }
+ ]
+}

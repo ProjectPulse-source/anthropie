@@ -9,7 +9,8 @@ date: 2026-09-29
 lastmod: 2026-09-30
 # Construite le 29/09/2026, publiée le 30/09/2026 sans attendre le WEO (contre-expertise PRO-20260930-061613) ;
 # hiérarchie refaite le 30/09 sur l'avis « forme et fond » (arbitrage ENTRANTE_2026-09-30_Dette_Internationale_forme) :
-# surprendre, montrer, expliquer, documenter — rien de supprimé, la preuve repliée sur la même URL.
+# surprendre, montrer, expliquer, documenter — rien de supprimé, la preuve repliée sur la même URL ; arbitrage final
+# du même jour (Derre_Internationale-01) : ouverture sans redite, dates distinguées, encart livre, figures réutilisables.
 # Arbitrages : 06_PROMOTION/DOSSIER_PAGE_DETTE_INTERNATIONALE.md, dépôt D:\PRO.
 donnees: [dette_monde]
 dataset_monde: true
@@ -34,10 +35,9 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 ---
 
 {{< dossier-dette volet="3" >}}
+{{< reutiliser-ancre >}}
 
-**Deux pays peuvent afficher le même niveau de dette et supporter des charges très différentes.** En {{< monde-val "annee" >}}, {{< monde-val "j_bas_le" >}} et {{< monde-val "j_haut_le" >}} avaient des dettes voisines — {{< monde-val "j_bas_stock" >}} et {{< monde-val "j_haut_stock" >}} du PIB. {{< monde-val "j_haut_le_maj" >}} a pourtant consacré **{{< monde-val "j_haut_charge" >}} de ses recettes publiques aux intérêts, {{< monde-val "j_bas_le" >}} {{< monde-val "j_bas_charge" >}}**&nbsp;: {{< monde-val "j_rapport" >}} fois moins. Le ratio dette/PIB, souvent mis en avant dans le débat public, n'est qu'un terme de l'équation.
-
-<p class="donnees-ligne"><span class="badge-donnees">Données&nbsp;: {{< monde-val "date_donnees" >}}</span> Les {{< monde-val "n_pays" >}} pays de l'Union européenne, puis quelques grandes économies hors d'Europe, chacune avec son niveau de comparabilité. Télécharger&nbsp;: <a href="/dette_monde.csv">CSV</a> · <a href="/dette_monde.json">JSON</a> · <a href="#sources">méthode</a></p>
+<p class="donnees-ligne"><span class="badge-donnees">Mise à jour&nbsp;: {{< monde-val "date_donnees" >}}</span> Les {{< monde-val "n_pays" >}} pays de l'Union européenne, données principales {{< monde-val "annee" >}}&nbsp;; hors d'Europe, le millésime est indiqué pays par pays. Télécharger&nbsp;: <a href="/dette_monde.csv">CSV</a> · <a href="/dette_monde.json">JSON</a> · <a href="#sources">méthode</a></p>
 
 ## Même dette, charge différente {#meme-dette}
 
@@ -48,7 +48,7 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 <div class="resultat-phrase">
 
-**Le résultat en une phrase.** Dans l'Union européenne en {{< monde-val "annee" >}}, être plus endetté ne signifie pas payer plus cher sa dette&nbsp;: le lien linéaire entre le niveau de la dette et son taux implicite est pratiquement nul (R² = {{< monde-val "r2_prix_stock" >}}). Sur une année et entre pays, le niveau de la dette ne permet pas de prédire son prix&nbsp;; cela ne veut pas dire qu'il n'a jamais d'effet sur lui.
+**Le résultat en une phrase.** À niveau de dette voisin, la part des recettes absorbée par les intérêts peut varier de 1 à {{< monde-val "j_rapport" >}}&nbsp;: le stock ne suffit pas à déterminer la charge, parce qu'il ne fixe ni le prix de la dette ni le niveau des recettes publiques.
 
 </div>
 
@@ -81,7 +81,7 @@ La France illustre l'autre versant&nbsp;: avec {{< monde-val "fr_stock" >}} du P
 
 ## Le prix et les recettes {#prix-et-recettes}
 
-**Le prix ne suit pas le niveau de la dette.** L'Italie, très endettée, paie un taux implicite voisin de pays qui le sont beaucoup moins, et la France paie **{{< monde-val "fr_prix" >}}**, dans la moyenne de la zone euro ({{< monde-val "prix_moyen_euro" >}}).
+**Le prix ne suit pas le stock.** Dans l'Union européenne en {{< monde-val "annee" >}}, la relation linéaire entre le stock de départ et le taux implicite est pratiquement nulle (R² = {{< monde-val "r2_prix_stock" >}})&nbsp;: sur une année et entre pays, le niveau de la dette ne permet pas de prédire son prix, ce qui ne veut pas dire qu'il n'a jamais d'effet sur lui. L'Italie, très endettée, paie un taux implicite voisin de pays qui le sont beaucoup moins, et la France paie **{{< monde-val "fr_prix" >}}**, dans la moyenne de la zone euro ({{< monde-val "prix_moyen_euro" >}}).
 
 **Les recettes comptent aussi.** À prix égal, un État qui prélève une plus faible part de sa richesse consacre une plus grande part de ses recettes aux intérêts. Ce sont les deux termes qui séparent les faux jumeaux&nbsp;: {{< monde-val "j_haut_le" >}} paie {{< monde-val "j_haut_prix" >}} sur son stock contre {{< monde-val "j_bas_prix" >}} pour {{< monde-val "j_bas_le" >}}, et ses recettes représentent {{< monde-val "j_haut_rec" >}} du PIB contre {{< monde-val "j_bas_rec" >}}.
 
@@ -192,10 +192,12 @@ Seules des mesures indicatives existent&nbsp;: la dette selon le FMI, et les int
 
 Les calculs, les statistiques et les figures sont produits par un script unique, relancé à chaque publication des sources&nbsp;; aucun chiffre de cette page n'est saisi à la main. **Télécharger les données** (licence CC BY 4.0)&nbsp;: [CSV](/dette_monde.csv), une ligne par pays, lisible dans un tableur&nbsp;; [JSON](/dette_monde.json), avec les statistiques et les définitions. Méthode&nbsp;: la charge, le stock et le prix vérifient l'identité exacte donnée plus haut, avec la dette de fin d'année précédente (convention du taux implicite de la BCE, distincte du «&nbsp;coût apparent&nbsp;» d'Eurostat, fondé sur la dette moyenne)&nbsp;; la robustesse des coefficients est recalculée à chaque mise à jour sur des fenêtres d'inflation de deux à cinq ans&nbsp;; les statistiques sont des moindres carrés simples, descriptifs.
 
-<div class="citer">
+{{< reutiliser figures="figures_monde" jeu="dette_monde" sources="Eurostat, OCDE, FMI et Banque mondiale" donnees="Les 27 pays de l'Union européenne et les économies hors d'Europe, avec leurs niveaux de comparabilité, leurs définitions et leurs statistiques ; le même contenu existe en CSV, une ligne par pays, lisible dans un tableur." >}}
+Cette page compare ce que représente une dette publique en quatre mesures&nbsp;: le stock, son prix, les recettes qui la servent et la vitesse à laquelle les nouveaux taux se transmettent. Dans l'Union européenne en {{< monde-val "annee" >}}, deux pays de dette voisine peuvent consacrer aux intérêts des parts de leurs recettes qui vont de 1 à {{< monde-val "j_rapport" >}}, et le prix de la dette n'a pas de lien linéaire avec son niveau. Ces relations décrivent une année et des associations, non des causes&nbsp;; elles ne mesurent pas le risque de crise.
+{{< /reutiliser >}}
 
-**Citer cette ressource** — Lalut, Stéphane. «&nbsp;Dette publique&nbsp;: pourquoi 100&nbsp;% du PIB ne pèse pas partout de la même façon&nbsp;». *stephane-lalut.com*, données au {{< monde-val "date_donnees" >}}. https://stephane-lalut.com/dette-publique-comparaison-internationale/ — licence CC BY 4.0.
+**Dans le dossier dette publique** — [Combien coûte la dette publique&nbsp;?](/cout-de-la-dette-publique/) · [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/)
 
-</div>
-
-**Pour aller plus loin** — le dossier sur la dette française&nbsp;: [Combien coûte la dette publique&nbsp;?](/cout-de-la-dette-publique/) et [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/). Les précédents historiques — Italie 2011, Grèce 2015, Allemagne 1953 — sont analysés dans le livre [*Dette publique&nbsp;: qui paie vraiment&nbsp;?*](/livres/dette-publique-qui-paie-vraiment/).
+{{< appel-livre slug="dette-publique-qui-paie-vraiment" sur="Prolonger l'analyse" >}}
+Cette page mesure ce que la dette coûte, et pourquoi une même dette ne pèse pas partout de la même façon. Elle ne dit pas qui en supporte le coût. Le livre suit ce déplacement canal par canal — contribuable, épargnant, services publics, générations qui ne votent pas encore —, chiffres officiels à l'appui. À la fin, vous saurez qui paie vraiment une dette publique, et par quels canaux.
+{{< /appel-livre >}}

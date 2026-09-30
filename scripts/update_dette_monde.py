@@ -62,6 +62,9 @@ OUT_STATIC = ROOT / "static" / "dette_monde.json"
 # CSV : demandé par l'avis du 30/09 (« plus exploitable qu'un JSON par un journaliste ou un enseignant »).
 # Une ligne par pays et par niveau de comparabilité, les mêmes valeurs que la page, point décimal.
 OUT_CSV = ROOT / "static" / "dette_monde.csv"
+# Fiches « Réutiliser » (30/09, demande de l'auteur : figures réutilisables sous licence, comme les volets 1 et 2).
+# Titre, source et précaution sont LUS DANS LE SVG produit : la fiche dit ce que l'image imprime, jamais autre chose.
+OUT_FIGURES = ROOT / "data" / "figures_monde.json"
 OUT_IMG = ROOT / "static" / "img"
 PAGE_URL = "stephane-lalut.com/dette-publique-comparaison-internationale/"
 
@@ -703,6 +706,36 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts) -> dict:
     return A
 
 
+def fiches_figures(figs: dict, A: dict) -> dict:
+    """Cartes du bloc « Réutiliser cette page », dans l'ordre de lecture de la page. « montre » est la seule phrase
+    écrite ici ; ses qualificatifs sont couverts par les gardes de prose (rapport des faux jumeaux, Suède, inflation)."""
+    import html as _html
+    import re as _re
+    MONTRE = [
+        ("charge", "dette-monde-charge",
+         "À dette voisine, la part des recettes consacrée aux intérêts peut varier de 1 à %s ; hors de la zone euro, "
+         "elle croît plus vite avec la dette." % A["j_rapport"]),
+        ("prix", "dette-monde-prix",
+         "Hors de la zone euro, le taux implicite est étroitement associé à l'inflation récente ; dans la zone euro, "
+         "beaucoup moins. La Suède, hors euro, paie comme l'Allemagne."),
+        ("transmission", "dette-monde-transmission",
+         "La part de la dette qui arrive à échéance et l'écart entre taux de marché et taux implicite : un repère de "
+         "pression sur le coût moyen, non une prévision."),
+        ("stock", "dette-monde-stock",
+         "Le classement le plus cité : il ne dit ni le prix payé sur la dette, ni la part des recettes qu'elle absorbe."),
+    ]
+    out = []
+    for ident, fichier, montre in MONTRE:
+        svg = figs[fichier + ".svg"]
+        titre = _html.unescape(_re.search(r"<title[^>]*>(.*?)</title>", svg).group(1))
+        cart = [_html.unescape(t) for t in _re.findall(r'<text x="0" y="[0-9.]+" font-size="9" fill="[^"]+">(.*?)</text>', svg)]
+        if len(cart) < 2 or not cart[-1].startswith("Compilation"):
+            fail("fiche %s : cartouche illisible dans le SVG" % fichier)
+        out.append(dict(id=ident, fichier=fichier, titre=titre, montre=montre, source=cart[0],
+                        precaution=cart[1] if len(cart) == 3 else ""))
+    return {"fr": out}
+
+
 def csv_texte(an: str, rows: list[dict], avances: list[dict], emergents: list[dict]) -> str:
     import csv, io as _io
     def v(x, d):
@@ -728,7 +761,12 @@ def csv_texte(an: str, rows: list[dict], avances: list[dict], emergents: list[di
 # ------------------------------------------------------------------ main
 def main() -> int:
     args = sys.argv[1:]
-    check, png = "--check" in args, "--png" in args
+    check = "--check" in args
+    if not check:
+        try:
+            import cairosvg  # noqa: F401
+        except ImportError:
+            fail("cairosvg absent : SVG et PNG se produisent ensemble ou pas du tout (pip install cairosvg)")
     an, rows = niveau_europe()
     log("Europe : %d pays, annee %s" % (len(rows), an))
     stats = statistiques(rows)
@@ -811,7 +849,9 @@ def main() -> int:
             if prev.get("releve_le") \
                     and json.dumps(p2, sort_keys=True, ensure_ascii=False) == json.dumps(n2, sort_keys=True, ensure_ascii=False) \
                     and all((OUT_IMG / nom).exists() and (OUT_IMG / nom).read_text(encoding="utf-8") == svg for nom, svg in figs.items()) \
-                    and OUT_CSV.exists() and OUT_CSV.read_text(encoding="utf-8-sig") == csv_texte(an, rows, avances, emergents):
+                    and OUT_CSV.exists() and OUT_CSV.read_text(encoding="utf-8-sig") == csv_texte(an, rows, avances, emergents) \
+                    and all((OUT_IMG / nom.replace(".svg", ".png")).exists() for nom in figs) \
+                    and OUT_FIGURES.exists() and json.loads(OUT_FIGURES.read_text(encoding="utf-8")) == fiches_figures(figs, aff):
                 log("Donnees et figures identiques : rien ecrit (releve_le conserve : %s)." % prev.get("releve_le"))
                 return 0
         except (ValueError, KeyError):
@@ -821,20 +861,14 @@ def main() -> int:
     OUT_DATA.write_text(txt, encoding="utf-8")
     OUT_STATIC.write_text(txt, encoding="utf-8")
     OUT_CSV.write_text(csv_texte(an, rows, avances, emergents), encoding="utf-8-sig", newline="\n")  # BOM : Excel lit les accents
+    import cairosvg
     for nom, svg in figs.items():
         (OUT_IMG / nom).write_text(svg, encoding="utf-8")
-    log("Ecrit : data/dette_monde.json, static/dette_monde.json, static/dette_monde.csv, %d figures" % len(figs))
-    if png:
-        try:
-            import cairosvg
-        except ImportError:
-            log("PNG non rendus : cairosvg absent.")
-            return 0
-        dest = Path(__import__("tempfile").gettempdir()) / "dette_monde_png"
-        dest.mkdir(exist_ok=True)
-        for nom in figs:
-            cairosvg.svg2png(url=str(OUT_IMG / nom), write_to=str(dest / nom.replace(".svg", ".png")), output_width=1440)
-        log("PNG de controle : %s" % dest)
+        cairosvg.svg2png(url=str(OUT_IMG / nom), write_to=str(OUT_IMG / nom.replace(".svg", ".png")),
+                         output_width=1440, background_color="white")
+    OUT_FIGURES.write_text(json.dumps(fiches_figures(figs, aff), ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    log("Ecrit : data/dette_monde.json, static/dette_monde.json, static/dette_monde.csv, data/figures_monde.json, "
+        "%d figures SVG + PNG" % len(figs))
     return 0
 
 

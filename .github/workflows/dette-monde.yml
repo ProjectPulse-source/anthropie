@@ -43,8 +43,12 @@ jobs:
         with:
           fetch-depth: 0
 
+      # SVG et PNG ensemble ou pas du tout (30/09, figures reutilisables) : le generateur echoue sans cairosvg,
+      # pour qu'aucun PNG ancien ne soit jamais offert au telechargement a cote d'un SVG neuf.
       - name: Rapatrier, calculer, valider (gardes dures et gardes de prose, exit 1 si echec)
-        run: python3 scripts/update_dette_monde.py
+        run: |
+          python3 -m pip install --quiet cairosvg==2.9.0
+          python3 scripts/update_dette_monde.py
 
       # Carte de partage de la page (30/09) : elle imprime la paire de faux jumeaux et leurs chiffres, lus
       # dans data/dette_monde.json. Redessinee dans le meme geste que les donnees, sinon elle mentirait
@@ -81,7 +85,9 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # Enumeration explicite : toute sortie NOUVELLE du script doit etre ajoutee ICI.
           git add data/dette_monde.json static/dette_monde.json static/dette_monde.csv \
-                  static/images/og-dette-monde.jpg \
+                  data/figures_monde.json static/images/og-dette-monde.jpg \
+                  static/img/dette-monde-stock.png static/img/dette-monde-charge.png \
+                  static/img/dette-monde-prix.png static/img/dette-monde-transmission.png \
                   static/img/dette-monde-stock.svg \
                   static/img/dette-monde-charge.svg \
                   static/img/dette-monde-prix.svg \
