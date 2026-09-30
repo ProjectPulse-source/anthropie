@@ -60,6 +60,11 @@ jobs:
           python3 -m pip install --quiet pyyaml
           python3 scripts/check-all.py --ci
 
+      # Liens, paires de langue, canonical, indexabilite du site CONSTRUIT (arbitrage
+      # ENTRANTE_2026-09-30_Architecture_Dette-02, E) : bloquant sur les defauts critiques.
+      - name: Audit des liens du build (bloquant)
+        run: python3 scripts/audit-liens-build.py public
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
@@ -75,3 +80,14 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0
+
+      # Le build valide ne suffit pas : la meme topologie doit etre observee sur le site SERVI
+      # (arbitrage ENTRANTE_2026-09-30_Architecture_Dette-02, F). Apres deploiement, donc un echec
+      # ne bloque rien : il rend le run rouge et signale l'ecart build / production.
+      - name: Checkout (scripts du controle de fumee)
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ inputs.ref }}
+
+      - name: Controle de fumee de la production
+        run: python3 scripts/smoke-production.py --attendre 300

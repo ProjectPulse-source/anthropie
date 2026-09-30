@@ -16,13 +16,22 @@ construit localement (`docs/audit-liens/arborescence_dossier_dette.py`), jamais 
 
 **Cause unique** : la version anglaise du dossier (commit `77898a7`) n'est pas encore publiée. Le site en ligne
 applique fidèlement l'état antérieur — trois volets n'existaient qu'en français, l'index et la barre les
-signalaient « in French ». Rien n'est cassé en ligne ; tout ce qui manque arrive avec le push.
+signalaient « in French ». Formulation corrigée après contre-analyse (`Architecture_Dette-02`) : aucun défaut
+structurel dans le build ; mais **le site publié était bien incohérent** pour un lecteur ou un robot tant que le
+déploiement n'avait pas eu lieu.
+
+**Vérifié après déploiement** (30/09, `cdac7a7` en ligne) : `scripts/smoke-production.py` — 10 pages (4 volets × 2
+langues + les deux index des ressources) servies en 200, canonical auto-référent, paires de langue réciproques,
+onglets et index dans la bonne langue : **OK**.
 
 ## Corrections faites pendant cet audit
 
 1. **Lien vers le livre depuis une page anglaise** : le livre n'existe qu'en français ; le gabarit
    `appel-livre.html` déclare désormais `hreflang` dès que la fiche du livre n'est pas dans la langue de la page
    (4 pages du dossier EN, et toute page future).
+1 bis. **Mention visible** « (in French) » après le titre du livre et « Contents, excerpts and reviews » sur les
+   pages anglaises (arbitrage `Architecture_Dette-02` : le lecteur doit le savoir avant de cliquer ; l'attribut ne
+   suffit pas).
 2. **Sélecteur « Version française / English version » du pied de page** : `hreflang` ajouté
    (`partials/footer.html`), sur tout le site.
 3. Avant l'audit, pendant l'intégration : terme unique « interest-growth effect » (page et figures) ;
@@ -116,7 +125,7 @@ antérieure, porte « french ». Figures, cartes de partage et barre d'onglets l
 
 ## Méthode
 
-- **Audit** : `docs/audit-liens/audit_liens.py <build> <sortie.json>` lit toutes les pages HTML d'un build
+- **Audit** : `scripts/audit-liens-build.py <build> --json <sortie.json>` (promu contrôle bloquant avant déploiement le 30/09) lit toutes les pages HTML d'un build
   `hugo --minify` (107 pages) : pour chaque lien interne, cible présente dans le build, ancre présente dans la page
   cible, langue de la cible (attribut `lang` de `<html>`) comparée à celle de la page source, présence de
   `hreflang` ; réciprocité des `<link rel=alternate hreflang>`. Aucun réseau.
@@ -129,6 +138,10 @@ antérieure, porte « french ». Figures, cartes de partage et barre d'onglets l
   débordement horizontal, replis ouverts.
 - **Limite** : l'audit porte sur le build local ; le site en ligne a été relevé à part (partie 0) par requêtes
   HTTP. Les liens **externes** ne sont pas contrôlés ici.
-- **Condition de mort** des deux scripts : ils servent ce relevé et sa contre-expertise ; ils ne sont branchés sur
-  aucun contrôle bloquant. À retirer une fois l'arbitrage exécuté, sauf décision de les promouvoir en contrôle
-  (R2 : qu'ils prouvent alors leur utilité présente).
+- **Contrôles promus** (arbitrage `Architecture_Dette-02`, E et F) : `scripts/audit-liens-build.py`, bloquant dans
+  `hugo.yml` avant déploiement — liens, ancres, paires de langue (absolues, auto-référentes, réciproques),
+  canonical, og:url, noindex, sitemap ; l'absence de mention visible « in French » est signalée sans bloquer ;
+  l'attribut `hreflang` des liens `<a>` n'est plus compté. `scripts/smoke-production.py`, après déploiement, sur
+  le site servi. Tous deux PERMANENTS, réexaminés à la revue annuelle (R2). Témoins : défauts injectés détectés
+  (build : 4/4, code de sortie 1) ; base factice → échec (production).
+- `arborescence_dossier_dette.py` reste un outil de relevé ponctuel : il sert ce fichier, rien d'autre.
