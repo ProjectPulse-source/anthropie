@@ -53,6 +53,15 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-30 — Le dossier dette devient le MODÈLE des ressources de données (décision de l'auteur)
+
+Règles écrites dans ce `CLAUDE.md`, section « Modèle d'une ressource de données » : six critères **bloquants**
+(`scripts/check-ressource-modele.py`, dans `check-all --ci` donc dans le déploiement) — carte de partage propre,
+résultat en une phrase, bloc Réutiliser, `Dataset`, JSON + CSV du jeu, livre sans note Amazon — et douze règles de
+**discipline** (architecture, hiérarchie de lecture, gardes de prose, test décisif, figures, dates, écriture, fin de page,
+mise à jour, vérification avant commit, contre-expertise). Six témoins vus mordre (pages factices, retirées) ; 5/5 pages
+de données conformes. Mémoire : `feedback_modele_ressource_dette`.
+
 ### 2026-09-30 — Volet 1 « Pourquoi la dette publique augmente-t-elle ? » : construit, dossier à quatre onglets
 
 Arbitrage `PRO-20260930-092814` (option E) ; gel des nouveaux ensembles levé pour cette page par l'auteur. **Test décisif

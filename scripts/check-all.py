@@ -50,6 +50,10 @@ HORS_RESEAU = [
     # FIGEE. Bloquant parce que la faute ne se signale nulle part : un titre
     # reecrit change son ancre et casse en silence les liens et les citations.
     ("ancres figees des sections-questions", "check-ancres-questions.py", []),
+    # Modele des ressources de donnees (auteur, 30/09) : le dossier dette sert de modele ; ce qui s'en verifie
+    # mecaniquement (carte de partage, resultat en une phrase, Reutiliser, Dataset, JSON + CSV, livre sans note
+    # Amazon) est bloquant, sinon une ressource neuve naitrait en dessous du modele sans que personne le voie.
+    ("modele des ressources de donnees", "check-ressource-modele.py", []),
 ]
 LOCAL_DERIVES = [
     # La CI rend les PNG, mais par une etape NON BLOQUANTE : si l'installation

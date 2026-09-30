@@ -112,6 +112,55 @@ une section de ressource.** Trois règles en tiennent lieu de rappel :
    près de la finalité, diagnostics, état initial, dates. ⚠ **Aucun contrôle ne la vérifie** : c'est
    une discipline de session, pas un verrou.
 
+## Modèle d'une ressource de données — le dossier dette (acté par l'auteur, 2026-09-30)
+
+**Le dossier dette publique est le modèle de structure et de méthode de toute ressource de données du site**
+(décision de l'auteur, 30/09). Pages de référence : `/pourquoi-la-dette-publique-augmente/`,
+`/cout-de-la-dette-publique/`, `/qui-paie-la-dette-publique/`, `/dette-publique-comparaison-internationale/` ; leurs
+générateurs `scripts/update_dette_{dynamique,insee,monde}.py` et `generer_figures_qui_paie.py`. Arbitrages sources :
+`D:\PRO\.claude\external-audits\ARBITRATIONS\` (PRO-20260930-061613, -092814, -103341 et les avis entrants du 30/09).
+**Avant de créer ou de refondre une ressource, relire une page de référence et son générateur.**
+
+**Vérifié par machine — bloquant** (`scripts/check-ressource-modele.py`, dans `check-all --ci`, donc avant tout
+déploiement ; toute page dont le front matter déclare `donnees:`) : carte de partage propre (`og_image`) ; bloc
+« Le résultat en une phrase » (`div.resultat-phrase`) ; bloc commun « Réutiliser cette page » ; balisage `Dataset`
+(bloc `dataset:` du front matter, gabarit `schema-dataset-page.html`) ; JSON **et** CSV du jeu dans `static/` ;
+appel au livre sans note Amazon (`avis="non"`).
+
+**Discipline — écrite, non vérifiée par machine** (la session la tient, la contre-expertise la contrôle) :
+
+1. **Architecture.** Une page = une découverte principale. Un dossier = des questions fondamentales en onglets
+   (clés stables, numéro par l'ordre, libellés courts sur téléphone, sans défilement à 390 px) ; les cas
+   particuliers en « Prolongements », jamais en onglet. Pas de page d'accueil de pure navigation.
+2. **Hiérarchie de lecture : surprendre → montrer → expliquer → documenter.** Chapô (`chapo:`) qui donne la réponse ;
+   figure signature en premier ; « le résultat en une phrase » dit ce que montre la figure juste au-dessus ; la
+   preuve longue en `<details class="repli">` sur la même URL ; rien supprimé, aucune ancre publiée changée.
+3. **Aucun chiffre saisi à la main.** Un générateur par jeu, un bloc `affichage`, des jetons (`{jeu.*}`, shortcode
+   `*-val`). **Chaque qualificatif de la prose est une garde** dans le générateur (« a doublé », « près du double »,
+   « comme l'Allemagne »…) : si la donnée le dément, arrêt. Au moins une garde **vue mordre** (mutation) à la
+   création. **Jamais de commentaire figé autour d'un chiffre qui se met à jour** (erreur du 30/09 : « T2 2026, au
+   cœur de la crise sanitaire »).
+4. **Un contrôle indépendant de la méthode** quand une décomposition ou une identité est publiée (ex. : résidu
+   flux-stock = témoin comptable) ; test décisif **avant** d'écrire la page — sans lui, pas de page.
+5. **Figures** : SVG et PNG produits **ensemble ou pas du tout** ; titre, source et précaution imprimés dans l'image,
+   fiches « Réutiliser » **lues dans le SVG** ; langage graphique du site (bleu = stock, orange = coût, gris = ce
+   qui fait baisser).
+6. **Données réutilisables** : JSON + CSV (UTF-8 avec BOM, format long si les tableaux diffèrent), `releve_le` à la
+   racine, rien réécrit à données identiques ; licence CC BY 4.0 ; bouton CSV automatique dans « Réutiliser ».
+7. **Dates** : le millésime des données (« Eurostat 2025 ») n'est jamais présenté comme une date de mise à jour.
+8. **Écriture** : associations et non causes ; conditions explicites ; limites visibles (« Ce que ces données ne
+   disent pas ») ; **vocabulaire unique d'une page à l'autre** (ex. : « taux implicite ») ; posture de chercheur
+   (qui parle et d'où, noyau d'arbitrage de `D:\PRO`) ; le chiffre officiel prime visuellement sur toute simulation.
+9. **Fin de page** : conclusion → livre (`appel-livre`, surtitre vrai via `sur=`, `avis="non"`) → sources →
+   « Réutiliser » ; une carte de partage tirée des données et contrôlée (`og_dossier_dette.py`).
+10. **Mise à jour** : workflow au calendrier de la source, sorties énumérées dans son `git add` ; tant que le module de
+    mise à jour n'existe pas, un rendez-vous de rattrapage daté.
+11. **Vérification avant commit** : build avec **lecture de `$?`** (jamais `--quiet | tail` seul) ; HTML construit relu
+    (jetons résolus, JSON-LD valide) ; rendu 390 px sans débordement ; `check-all --ci` à 0 ; fiche D0 écrite.
+12. **Contre-expertise** de la page construite avant ou juste après publication ; arbitrage écrit ; la
+    littérature, si elle est citée, **teste** l'interprétation dans un bloc « Confrontation à la recherche » par
+    page, jamais ne cautionne une mesure (arbitrage PRO-20260930-103341).
+
 ## Règle de surface — « la présence vient du dépôt » (actée 2026-08-11)
 
 Défaut récurrent, six occurrences en deux jours, toujours la même forme : **une donnée
