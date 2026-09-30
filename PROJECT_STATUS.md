@@ -53,6 +53,16 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-30 — Mise à jour automatique de la page internationale (`dette-monde.yml`), contre-expertise lancée
+
+**Mandat de l'auteur** : programmer la mise à jour. Workflow `dette-monde.yml` (commit `5f0eda0`), calqué sur
+`dette-insee.yml` ; **actif seulement une fois poussé**. Leçon qui l'a façonné : **un cron hebdomadaire est aveugle au
+calendrier des sources** — l'INSEE a publié le mardi 29/09, le cron passait le mercredi, il a fallu un lancement à la
+main. D'où des passages quotidiens du 13 au 20/10 pour le WEO du FMI (condition de mort en tête du fichier), doublés
+d'un rendez-vous Outlook le 15/10 à 9 h (lien vers les exécutions + commande de reprise). La page reste en brouillon
+jusqu'à l'arbitrage de la contre-expertise `PRO-20260930-061613` (HTML autonome de la page, figures intégrées,
+fabriqué par `D:\PRO\06_PROMOTION\BASES\DETTE_INTERNATIONALE\fabriquer_html_navette.py`).
+
 ### 2026-09-29 (nuit) — Page « dette publique : comparaison internationale » construite, en BROUILLON
 
 **Quoi.** `/dette-publique-comparaison-internationale/` (`draft: true`), « Dette publique : pourquoi 100 % du PIB
