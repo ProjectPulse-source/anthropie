@@ -53,6 +53,21 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-30 — Page `/enseignants/` : activités SES sur la dette publique (exception au STOP accordée par l'auteur)
+
+Arbitrage de deux avis entrants (`ENTRANTE_2026-09-30_Dette_Pedagogie_arbitrage.md`, tours 1 et 2) : les quatre pages
+dette restent des pages de recherche ; une couche d'**usage** les transforme en activités. Section `#dette-publique` :
+Première (financement de l'État, objectif Éduscol cité mot pour mot, cascade « Pourquoi augmente »), Terminale
+(politiques européennes ; soutenabilité attribuée à la ressource d'accompagnement ; faux jumeaux de la page
+internationale ; r − g annoncé comme approfondissement), prolongement redistribution (« Qui paie »). Fiches élèves et
+corrigés **par jetons** (`dyn-val`, `monde-val`, `qp-val`), aucun chiffre saisi ; bouton « Imprimer la fiche élève »
+(une fiche, sans corrigé). Lien discret dans le bloc « Réutiliser » des quatre volets, FR seulement ; bloc « Pour
+enseigner » du hub. Règles écrites dans ce CLAUDE.md (section « Couche pédagogique »). Build rc=0, `check-all --reseau`
+à 0 (11 contrôles), HTML relu (0 jeton brut), mesure à 390 px dans un cadre : aucun débordement propre (15 px du menu
+mobile commun, identiques sur « Pourquoi augmente »). Fiche D0 dans la feuille de route GEO (adoption pédagogique
+identifiable ; pilote 15-25, seuil d'élargissement fixé d'avance). Non engagés : exemplaire enseignant (contrôle de
+`GiftAutopilot` d'abord), pilote.
+
 ### 2026-09-30 — « Combien coûte » : palier 1978 corrigé sur signalement de P. Baubeau (EHR 2026), POUSSÉ
 
 Signalement de Patrice Baubeau (Paris Nanterre), en réponse à la campagne de diffusion du 29/09 : sa révision de

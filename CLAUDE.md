@@ -161,6 +161,24 @@ appel au livre sans note Amazon (`avis="non"`).
     littérature, si elle est citée, **teste** l'interprétation dans un bloc « Confrontation à la recherche » par
     page, jamais ne cautionne une mesure (arbitrage PRO-20260930-103341).
 
+## Couche pédagogique — `/enseignants/` (actée par l'auteur, 2026-09-30)
+
+Une page d'**usage** pour les enseignants, qui transforme les ressources en activités sans les recopier ; les pages de
+recherche ne portent **aucune** activité, seulement un lien discret (bloc « Réutiliser », FR, quatre volets dette).
+Arbitrage : `D:\PRO\.claude\external-audits\ARBITRATIONS\ENTRANTE_2026-09-30_Dette_Pedagogie_arbitrage.md` ; fiche D0
+dans la feuille de route GEO. Exception au STOP accordée par l'auteur pour cette page seule.
+
+1. **Fiches dynamiques.** Fiche élève et corrigé sont des sections imprimables de la page (`section.fiche`, bouton
+   « Imprimer la fiche élève », `static/js/fiche-imprimer.js`, `assets/scss/_enseignants.scss`), nourries par les jetons
+   des jeux (`dyn-val`, `monde-val`, `qp-val`, `dette-val`) : **aucun chiffre saisi**, aucun PDF figé ; un PDF, s'il
+   existe un jour, est produit au build depuis ces sections.
+2. **Neutralité.** Chaque question fait constater, calculer, comparer ou expliquer un mécanisme ; **aucune ne demande
+   de trancher une politique**. C'est la condition d'une reprise par un site académique.
+3. **Fidélité au programme.** Citer l'objectif officiel tel qu'il est écrit (Éduscol) ; ce qui le dépasse (r − g,
+   solde primaire en Terminale) s'annonce comme approfondissement, jamais comme « le programme ».
+4. **Chaque section contient une activité prête à l'emploi**, jamais une liste de liens. Français seulement : le
+   programme de SES est français (exclusion déclarée).
+
 ## Règle de surface — « la présence vient du dépôt » (actée 2026-08-11)
 
 Défaut récurrent, six occurrences en deux jours, toujours la même forme : **une donnée

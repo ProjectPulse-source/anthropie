@@ -9,6 +9,9 @@ blocs:
   - id: dette
     titre: "Dette publique"
     chapo: "Combien elle coûte, qui la supporte, et deux questions que le débat public pose sans cesse."
+  - id: enseigner
+    titre: "Pour enseigner"
+    chapo: "Des activités prêtes pour la classe de SES : figures projetables, fiches élèves, corrigés et données, tirés des mêmes séries que les analyses."
   - id: notions
     titre: "Notions et cadre d'analyse"
     chapo: "Les définitions du cadre anthropique, chacune reliée à ses sources."

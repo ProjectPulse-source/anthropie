@@ -151,4 +151,10 @@
   </div>
 
   <p class="reutiliser__licence">{{ if $isEn }}{{ $T.licence | safeHTML }}{{ else }}{{ partial "fr-typo.html" $T.licence }}{{ end }}</p>
+  {{- /* Un seul lien discret vers la couche pédagogique, sur les quatre volets du dossier dette et en français seulement
+         (programme de SES) : arbitrage ENTRANTE_2026-09-30_Dette_Pedagogie, tour 1, point 1. Les pages de recherche
+         ne portent aucune activité elles-mêmes. */ -}}
+  {{- if and (not $isEn) (in (slice "dette_officielle" "dette_dynamique" "dette_monde" "qui_paie_donnees") $jeuNom) }}
+  <p class="reutiliser__enseignants"><a href="{{ "/enseignants/#dette-publique" | relURL }}">{{ partial "fr-typo.html" "Vous enseignez les SES ? Activités, figures et données prêtes pour la classe →" }}</a></p>
+  {{- end }}
 </section>
