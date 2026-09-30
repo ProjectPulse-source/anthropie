@@ -1,0 +1,17 @@
+{{- /* pastilles.html — une énumération de pages rendue en rangée de pastilles cliquables.
+
+       {{< pastilles label="Le dossier dette publique" >}}
+       - [Pourquoi la dette augmente](/pourquoi-la-dette-publique-augmente/)
+       - [Combien elle coûte](/cout-de-la-dette-publique/)
+       {{< /pastilles >}}
+
+       Motif (auteur, 01/10/2026) : quatre liens alignés dans une phrase, séparés par des « · », sont un
+       sommaire que le lecteur ne voit pas comme tel. Réservé aux énumérations de pages ; un lien isolé dans
+       le texte reste un lien courant, sinon la pastille banalise.
+
+       Le contenu est une liste Markdown : la source reste lisible et le HTML reste une liste (<ul>), que les
+       lecteurs d'écran annoncent avec son nombre d'éléments. Échoue bruyamment si la liste manque : une
+       rangée vide passerait inaperçue à la relecture. */ -}}
+{{- $html := .Inner | .Page.RenderString -}}
+{{- if not (in $html "<li>") -}}{{ errorf "pastilles: aucune liste Markdown dans le bloc (%s)" .Page.File.Path }}{{- end -}}
+<nav class="pastilles"{{ with .Get "label" }} aria-label="{{ . }}"{{ end }}>{{ $html }}</nav>

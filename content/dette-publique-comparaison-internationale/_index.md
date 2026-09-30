@@ -218,7 +218,13 @@ Seules des mesures indicatives existent&nbsp;: la dette selon le FMI, et les int
 
 {{< faq-visible >}}
 
-**Dans le dossier dette publique** — [Combien coûte la dette publique&nbsp;?](/cout-de-la-dette-publique/) · [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/)
+**Dans le dossier dette publique**
+
+{{< pastilles label="Dans le dossier dette publique" >}}
+- [Pourquoi la dette publique augmente-t-elle&nbsp;?](/pourquoi-la-dette-publique-augmente/)
+- [Combien coûte la dette publique&nbsp;?](/cout-de-la-dette-publique/)
+- [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/)
+{{< /pastilles >}}
 
 {{< appel-livre slug="dette-publique-qui-paie-vraiment" sur="Prolonger l'analyse" avis="non" >}}
 Cette page mesure ce que la dette coûte, et pourquoi une même dette ne pèse pas partout de la même façon. Elle ne dit pas qui en supporte le coût. Le livre suit ce déplacement canal par canal — contribuable, épargnant, services publics, générations qui ne votent pas encore —, chiffres officiels à l'appui, pour montrer dans quelles configurations chacun supporte un coût. À la fin, vous disposerez d'une méthode pour identifier qui supporte quoi, selon la décision prise.

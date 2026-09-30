@@ -28,6 +28,10 @@
   // ----- Pivot : bleu nuit clair (italique d'accentuation) -----
   --color-pivot: #4A6FA5;
 
+  // ----- Liens : le pivot assombri, 6,5:1 sur le fond, 2,6:1 contre le texte courant, plus le soulignement -----
+  --color-link: #3A5C8F;
+  --color-link-rule: rgba(74, 111, 165, 0.45);
+
   // ----- Étoile d'évaluation (preuve sociale Amazon, /ressources-offertes) -----
   --color-star: #E3A32D;
 

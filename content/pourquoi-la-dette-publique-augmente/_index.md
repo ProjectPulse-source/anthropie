@@ -112,7 +112,13 @@ Sur les {{< dyn-val "annees_total" >}} années de la série, le solde primaire n
 
 {{< faq-visible >}}
 
-**Dans le dossier dette publique** — [Combien coûte la dette publique&nbsp;?](/cout-de-la-dette-publique/) · [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/) · [Et ailleurs&nbsp;?](/dette-publique-comparaison-internationale/)
+**Dans le dossier dette publique**
+
+{{< pastilles label="Dans le dossier dette publique" >}}
+- [Combien coûte la dette publique&nbsp;?](/cout-de-la-dette-publique/)
+- [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/)
+- [Et ailleurs&nbsp;?](/dette-publique-comparaison-internationale/)
+{{< /pastilles >}}
 
 {{< appel-livre slug="dette-publique-qui-paie-vraiment" sur="Pour prolonger l’analyse" avis="non" >}}
 Cette page montre par quels termes la dette a monté. Elle ne dit pas qui en supporte le coût, ni par quels canaux il se déplace — vers le contribuable, vers l'épargnant par l'inflation, vers des services publics dont la marge se resserre — selon les décisions prises pour l'ajuster. Le livre suit ces canaux un par un, chiffres officiels à l'appui, pour montrer dans quelles configurations chacun supporte un coût. À la fin, vous disposerez d'une méthode pour identifier qui supporte quoi, selon la décision prise.

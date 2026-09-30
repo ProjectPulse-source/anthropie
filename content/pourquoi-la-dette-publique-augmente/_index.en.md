@@ -114,7 +114,13 @@ Over the {{< dyn-val "annees_total" >}} years of the series, the primary balance
 
 {{< faq-visible >}}
 
-**In the public debt dossier** — [What does French public debt actually cost?](/en/cost-of-french-public-debt/) · [Who really pays for public debt?](/en/who-really-pays-public-debt/) · [And elsewhere?](/en/public-debt-international-comparison/)
+**In the public debt dossier**
+
+{{< pastilles label="In the public debt dossier" >}}
+- [What does French public debt actually cost?](/en/cost-of-french-public-debt/)
+- [Who really pays for public debt?](/en/who-really-pays-public-debt/)
+- [And elsewhere?](/en/public-debt-international-comparison/)
+{{< /pastilles >}}
 
 {{< appel-livre slug="dette-publique-qui-paie-vraiment" sur="To take the analysis further" avis="non" >}}
 This page identifies which accounting components contributed to the rise in the debt. It does not say who bears its cost, or through which channels that cost is shifted — onto the taxpayer, onto the saver through inflation, onto public services whose resources are squeezed — depending on the decisions taken to adjust it. The book follows these channels one by one, on official figures, to show in which configurations each group bears a cost. By the end you will have a method for identifying who bears what, depending on the decision taken. The book exists in French only.

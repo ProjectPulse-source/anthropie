@@ -144,8 +144,15 @@ publique&nbsp;?](/qui-paie-la-dette-publique/)
 ### Méthode et sources {#methode}
 
 Toutes les figures viennent des quatre pages du dossier, qui en donnent la méthode, les limites et les sources&nbsp;:
-[Pourquoi la dette augmente](/pourquoi-la-dette-publique-augmente/) · [Combien elle coûte](/cout-de-la-dette-publique/)
-· [Qui paie](/qui-paie-la-dette-publique/) · [Et ailleurs](/dette-publique-comparaison-internationale/). Les extraits
+
+{{< pastilles label="Les quatre pages du dossier dette publique" >}}
+- [Pourquoi la dette augmente](/pourquoi-la-dette-publique-augmente/)
+- [Combien elle coûte](/cout-de-la-dette-publique/)
+- [Qui paie](/qui-paie-la-dette-publique/)
+- [Et ailleurs](/dette-publique-comparaison-internationale/)
+{{< /pastilles >}}
+
+Les extraits
 du programme viennent des ressources d'accompagnement publiées par Éduscol pour la Première (juin 2019) et la
 Terminale (août 2020).
 

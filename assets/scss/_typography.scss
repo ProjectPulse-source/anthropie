@@ -53,14 +53,18 @@ p { margin: 0 0 1.2em; }
 
 em, i { font-style: italic; }
 
+// Lien reconnaissable (auteur, 01/10/2026) : l'ancienne règle donnait au lien la couleur des titres,
+// à 1,14:1 du texte courant, avec un soulignement à 18 % — invisible en lecture rapide (WCAG 1.4.1).
+// Les composants qui posent leur propre couleur (boutons, navigation, cartes) gardent la leur.
 a {
-  color: var(--color-text);
+  color: var(--color-link);
   text-decoration: underline;
-  text-decoration-color: var(--color-rule-medium);
+  text-decoration-color: var(--color-link-rule);
+  text-decoration-thickness: 1px;
   text-underline-offset: 3px;
-  transition: text-decoration-color 0.2s ease;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
-a:hover { text-decoration-color: var(--color-accent); }
+a:hover { color: var(--color-accent); text-decoration-color: var(--color-accent); }
 
 blockquote {
   border-left: 2px solid var(--color-accent);

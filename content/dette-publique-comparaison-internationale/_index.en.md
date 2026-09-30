@@ -218,7 +218,13 @@ Only indicative measures exist: debt according to the IMF, and central-governmen
 
 {{< faq-visible >}}
 
-**In the public debt dossier** — [What does French public debt actually cost?](/en/cost-of-french-public-debt/) · [Who really pays for public debt?](/en/who-really-pays-public-debt/)
+**In the public debt dossier**
+
+{{< pastilles label="In the public debt dossier" >}}
+- [Why does French public debt rise?](/en/why-does-public-debt-rise/)
+- [What does French public debt actually cost?](/en/cost-of-french-public-debt/)
+- [Who really pays for public debt?](/en/who-really-pays-public-debt/)
+{{< /pastilles >}}
 
 {{< appel-livre slug="dette-publique-qui-paie-vraiment" sur="To take the analysis further" avis="non" >}}
 This page measures what debt costs, and why the same debt does not carry the same burden everywhere. It does not say who bears its cost. The book follows that shift channel by channel — taxpayer, saver, public services, generations not yet old enough to vote —, on official figures, to show in which configurations each bears a cost. By the end you will have a method for identifying who bears what, depending on the decision taken. The book, on the French case, exists in French only.
