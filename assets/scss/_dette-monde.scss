@@ -126,6 +126,16 @@ main .dette-monde-table--monde thead th:last-child { text-align: left !important
   &[open] > summary { margin-bottom: 0.4rem; border-bottom: 1px solid rgba(24, 79, 149, 0.15); }
   &[open] > summary::before { transform: rotate(90deg); }
   .confrontation__resume { font-weight: 400; }
+  // Ligne d'action posée par static/js/replis-action.js (maquette D + décompte de B, auteur 30/09).
+  .repli__action {
+    display: block; margin-top: 0.35rem;
+    font-family: var(--font-sans); font-size: 0.74rem; font-weight: 600;
+    letter-spacing: 0.06em; text-transform: uppercase; color: #184f95;
+  }
+  .repli__ouvert { display: none; }
+  &[open] .repli__ferme { display: none; }
+  &[open] .repli__ouvert { display: inline; }
+  > summary:hover .repli__action, > summary:focus-visible .repli__action { text-decoration: underline; text-underline-offset: 3px; }
 }
 .confrontation > summary { font-weight: 600; }
 

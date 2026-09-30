@@ -88,6 +88,8 @@
 <script src="/js/transmettre.js" defer></script>
 <script src="/js/mobile-menu.js" defer></script>
 {{ if eq .Lang "fr" }}<script src="/js/french-typography.js" defer></script>{{ end }}
+{{/* Ligne d'action des replis (« Lire le détail · 3 paragraphes ▾ ») : toute page qui en contient (30/09). */}}
+{{ if in .Content "class=\"repli" }}<script src="/js/replis-action.js" defer></script>{{ end }}
 
 <!-- CSS -->
 {{- /* EMPREINTE sur le nom du fichier : sans elle, /css/style.css reste en cache
