@@ -1,12 +1,12 @@
 # Arborescence et liens du dossier dette publique — FR / EN (contre-expertise)
 
-Relevé du 30/09/2026, sur signalement de l'auteur : « *Why does public debt rise?* renvoie sur la page française ;
+Relevé du 30/09/2026 (parties 1 à 4 régénérées après les corrections de traduction du même jour), sur signalement de l'auteur : « *Why does public debt rise?* renvoie sur la page française ;
 d'autres problèmes de lien sur la page anglaise des ressources ». Parties 1 à 4 **générées** depuis le site
 construit localement (`docs/audit-liens/arborescence_dossier_dette.py`), jamais écrites à la main.
 
 ## 0. Diagnostic : ce que voit le lecteur en ligne, et pourquoi
 
-| | Site **en ligne** (dernier déploiement `b73b3cc`) | Site **local** (`77898a7` + corrections du 30/09 au soir, non poussés) |
+| | Site **en ligne** (dernier déploiement `b73b3cc`) | Site **local** (`d99f9d9`, après corrections de traduction) |
 |---|---|---|
 | `/en/why-does-public-debt-rise/` | **404** | page anglaise |
 | `/en/who-really-pays-public-debt/` | **404** | page anglaise |
@@ -61,7 +61,7 @@ antérieure, porte « french ». Figures, cartes de partage et barre d'onglets l
 | 1. Pourquoi elle augmente | `/pourquoi-la-dette-publique-augmente/` | Pourquoi la dette publique augmente-t-elle ? | `/en/why-does-public-debt-rise/` | Why does French public debt rise? | ✅ | ✅ | `/images/og-dette-dynamique.jpg` | `/images/og-dette-dynamique-en.jpg` |
 | 2. Combien coûte | `/cout-de-la-dette-publique/` | Combien coûte la dette publique ? | `/en/cost-of-french-public-debt/` | What does French public debt actually cost? | ✅ | ✅ | `/images/og-cout-dette.jpg` | `/images/og-cout-dette-en.jpg` |
 | 3. Qui paie | `/qui-paie-la-dette-publique/` | Qui paie vraiment la dette publique ? | `/en/who-really-pays-public-debt/` | Who really pays for public debt? | ✅ | ✅ | `/images/og-qui-paie-dette.jpg` | `/images/og-qui-paie-dette-en.jpg` |
-| 4. Et ailleurs | `/dette-publique-comparaison-internationale/` | Dette publique : pourquoi 100 % du PIB ne pèse pas partout de la même façon | `/en/public-debt-international-comparison/` | Public debt: why 100% of GDP does not weigh the same everywhere | ✅ | ✅ | `/images/og-dette-monde.jpg` | `/images/og-dette-monde-en.jpg` |
+| 4. Et ailleurs | `/dette-publique-comparaison-internationale/` | Dette publique : pourquoi 100 % du PIB ne pèse pas partout de la même façon | `/en/public-debt-international-comparison/` | Public debt: why 100% of GDP does not carry the same burden everywhere | ✅ | ✅ | `/images/og-dette-monde.jpg` | `/images/og-dette-monde-en.jpg` |
 
 ## 2. Barre d'onglets et liens entre volets (chaque page → les trois autres)
 
@@ -100,7 +100,7 @@ antérieure, porte « french ». Figures, cartes de partage et barre d'onglets l
   - ✅ `/en/why-does-public-debt-rise/` — Why does French public debt rise? 
   - ✅ `/en/cost-of-french-public-debt/` — What does French public debt actually cost? 
   - ✅ `/en/who-really-pays-public-debt/` — Who really pays for public debt? 
-  - ✅ `/en/public-debt-international-comparison/` — Public debt: why 100% of GDP does not weigh the sa 
+  - ✅ `/en/public-debt-international-comparison/` — Public debt: why 100% of GDP does not carry the sa 
 
 ## 4. Audit de tous les liens du site construit
 
@@ -113,7 +113,6 @@ antérieure, porte « french ». Figures, cartes de partage et barre d'onglets l
   - dossier dette : **2** — `/en/who-really-pays-public-debt/` → `/dette-publique-generations-futures/` (« Is public debt a burden on future generations ») ; `/en/who-really-pays-public-debt/` → `/dette-publique-collectivites-locales/` (« Public debt: why are local authorities the ad »)
   - fiches des livres (français seulement) : **26**
   - sélecteurs « FR » des AWP anglais : **16**
-
 
 ## Méthode
 
