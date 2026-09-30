@@ -413,9 +413,9 @@
  ],
  "total": {
   "variation": 58.19293181173738,
-  "effet_interets": 73.95719286705777,
+  "effet_interets": 73.95719286705776,
   "effet_croissance": -72.32182418973288,
-  "effet_taux_croissance": 1.6353686773248843,
+  "effet_taux_croissance": 1.635368677324885,
   "contribution_solde_primaire": 50.529763009133006,
   "flux_stock": 6.027800125279489
  },
@@ -423,25 +423,25 @@
   {
    "periode": "1996-2007",
    "variation": 7.975934054304815,
-   "effet_interets": 36.36743655501066,
+   "effet_interets": 36.367436555010656,
    "effet_croissance": -28.519113847466485,
-   "effet_taux_croissance": 7.84832270754417,
+   "effet_taux_croissance": 7.848322707544172,
    "contribution_solde_primaire": -2.1152488060387,
-   "flux_stock": 2.2428601527993424
+   "flux_stock": 2.242860152799343
   },
   {
    "periode": "2008-2019",
    "variation": 32.68096623127519,
-   "effet_interets": 26.839796170322018,
+   "effet_interets": 26.83979617032202,
    "effet_croissance": -20.77743430042656,
    "effet_taux_croissance": 6.06236186989546,
-   "contribution_solde_primaire": 26.912504423985066,
-   "flux_stock": -0.2939000626053253
+   "contribution_solde_primaire": 26.91250442398506,
+   "flux_stock": -0.2939000626053262
   },
   {
    "periode": "2020-2025",
    "variation": 17.536031526157373,
-   "effet_interets": 10.749960141725085,
+   "effet_interets": 10.749960141725083,
    "effet_croissance": -23.02527604183983,
    "effet_taux_croissance": -12.275315900114746,
    "contribution_solde_primaire": 25.732507391186648,
