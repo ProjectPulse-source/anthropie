@@ -1,6 +1,7 @@
 ---
 title: "Qui paie vraiment la dette publique ?"
 description: "Qui supporte le coût de la dette publique ? Cela dépend de ce qu'elle finance, de la manière dont elle est financée et des ajustements choisis pour la servir ; certaines configurations reportent des coûts sur ceux qui peuvent le moins les éviter. Les rôles, les canaux, leurs conditions — et ce que les données ne permettent pas d'attribuer."
+chapo: "Un même effort de {qp.exp_effort} milliards d'euros ne tombe pas sur les mêmes ménages selon la décision prise : par l'enseignement, il pèse surtout sur les plus modestes, par l'impôt sur les plus aisés. Qui paie la dette publique dépend de ce qu'elle finance, de la manière dont elle est financée et des ajustements choisis pour la servir."
 date: 2026-07-04
 lastmod: 2026-09-29
 donnees: [dette_officielle]
@@ -40,6 +41,31 @@ Cette page examine ces configurations une à une&nbsp;: ce qui les rend plausibl
 
 {{< dette-chiffres >}}
 
+## Selon la décision, l'effort ne tombe pas sur les mêmes ménages
+
+Tant qu'aucune décision n'est nommée, la question «&nbsp;qui paie&nbsp;?&nbsp;» n'a pas de réponse. Nommée, elle devient mesurable&nbsp;: à quoi ressemblerait la répartition d'un même effort, selon le poste par lequel on le fait passer&nbsp;?
+
+L'exercice qui suit prend {{< qp-val "exp_effort" >}}&nbsp;milliards d'euros et les répartit trois fois — par une hausse des impôts sur les revenus et le patrimoine, par une baisse des pensions de retraite, par une baisse des dépenses d'enseignement —, chaque fois au prorata des montants que chaque dixième verse ou reçoit déjà, puis rapporte le résultat à son revenu. Ce n'est pas une prévision&nbsp;: ni comportement ni effet en retour n'y entrent. C'est la structure actuelle des postes, rendue comparable d'une décision à l'autre.
+
+{{< figure-svg fichier="qui-paie-exposition" alt="Deux panneaux. En haut, trois courbes par dixième de niveau de vie : la baisse des dépenses d'enseignement part très haut sur le premier dixième et décroît fortement ; la hausse des impôts fait l'inverse et monte sur le dernier dixième ; les pensions restent presque plates. En bas, des barres montrant le rapport entre la décision la plus lourde et la plus légère pour chaque dixième : élevé aux deux extrémités, minimal au milieu de l'échelle." >}}Insee, comptes nationaux distribués, tableau CND.101 (vingtièmes de niveau de vie, 2020-2023, base 2020)&nbsp;; millésime 2023. Profil d'exposition comptable, non une simulation.{{< /figure-svg >}}
+{{< fig-actions id="exposition" >}}
+
+**Le classement s'inverse d'une décision à l'autre.** Une réduction des dépenses d'enseignement représenterait {{< qp-val "exp_ens_d1" >}}&nbsp;% du revenu des 10&nbsp;% les plus modestes et {{< qp-val "exp_ens_d10" >}}&nbsp;% de celui des plus aisés&nbsp;; une hausse des impôts sur les revenus et le patrimoine, l'inverse, jusqu'à {{< qp-val "exp_fisc_d10" >}}&nbsp;% pour le dernier dixième. Ce n'est pas un effet du dénominateur&nbsp;: en masse, la moitié la moins aisée recevrait {{< qp-val "exp_masse_ens" >}}&nbsp;% de la coupe d'enseignement contre {{< qp-val "exp_masse_fisc" >}}&nbsp;% de l'effort fiscal. Une baisse des pensions, elle, se tient dans une bande étroite — de {{< qp-val "exp_pens_min" >}} à {{< qp-val "exp_pens_max" >}}&nbsp;% — et n'épargne aucun groupe en particulier.
+
+<div class="resultat-phrase">
+
+**Le résultat en une phrase.** «&nbsp;Qui paie la dette&nbsp;?&nbsp;» n'a pas de réponse en soi, il en a une par décision&nbsp;: un même effort pèse surtout sur les plus modestes s'il passe par l'enseignement, surtout sur les plus aisés s'il passe par l'impôt.
+
+</div>
+
+Le second panneau porte le résultat le moins attendu. Pour les 10&nbsp;% les plus aisés, la décision la plus lourde pèse {{< qp-val "exp_ecart_d10" >}}&nbsp;fois la plus légère, et au moins autant pour les 10&nbsp;% les plus modestes&nbsp;: aux deux extrémités de l'échelle, le choix de l'instrument décide presque tout. Au milieu, ce rapport tombe à {{< qp-val "exp_ecart_creux" >}}. **C'est en {{< qp-val "exp_creux_zone" >}} que le levier retenu différencie le moins les ménages.** Ce creux ne tient ni à l'année — il se situe en {{< qp-val "exp_creux_millesimes" >}} sur les quatre millésimes {{< qp-val "exp_millesimes" >}} publiés par l'Insee — ni à la manière de mesurer l'écart&nbsp;: le coefficient de variation et l'étendue rapportée à la moyenne le placent dans la même zone.
+
+<details class="repli"><summary>Les trois limites de cet exercice</summary>
+
+Trois limites encadrent cette lecture. Un service public valorisé n'est pas un revenu&nbsp;: une dépense d'enseignement imputée à un ménage ne lui est pas versée, et sa réduction ne lui coûterait pas exactement cette somme. Les trois décisions sont proportionnelles par construction&nbsp;; une mesure ciblée — sur certaines pensions, sur certains impôts — dessinerait d'autres courbes, et la figure ne dit donc rien de «&nbsp;l'impôt&nbsp;» ni de «&nbsp;la dépense publique&nbsp;» en général. Enfin l'effort est rapporté au revenu disponible&nbsp;; un autre dénominateur déplacerait les points de croisement sans faire disparaître ces contrastes.
+
+</details>
+
 ## Quatre rôles à ne pas confondre
 
 Le débat mélange souvent quatre rôles. L'**emprunteur** est l'administration qui émet la dette — l'État d'abord, puis la sécurité sociale et les collectivités. Le **créancier** avance les fonds et reçoit des intérêts en retour. Le **bénéficiaire** profite de ce que l'emprunt a financé&nbsp;: une route, une école, un revenu de soutien pendant une crise. Celui qui **supporte un coût** subit, par rapport à l'alternative considérée, une perte de revenu, de patrimoine ou de services liée aux choix de financement ou d'ajustement&nbsp;: le contribuable qui paie un impôt supplémentaire, l'usager d'un service dont les moyens se resserrent, l'épargnant dont l'inflation érode le placement.
@@ -65,7 +91,11 @@ Trois choses se mesurent&nbsp;: qui emprunte, qui détient les titres, et qui co
 
 Les prélèvements vont de {{< qp-val "d1_prel" >}}&nbsp;€ par UC pour les 10&nbsp;% les plus modestes à {{< qp-val "d10_prel" >}}&nbsp;€ pour les 10&nbsp;% les plus aisés, environ {{< qp-val "ratio_prel" >}}&nbsp;fois plus. Les transferts reçus — prestations en espèces et services publics valorisés en euros — varient beaucoup moins&nbsp;: d'un bout à l'autre de l'échelle, ils restent compris entre {{< qp-val "recu_min" >}} et {{< qp-val "recu_max" >}}&nbsp;€, sans progression régulière. C'est ce contraste, et lui seul, que la figure établit&nbsp;: ce qui est versé suit le niveau de vie, ce qui est reçu beaucoup moins.
 
+<details class="repli"><summary>L'écart financé par endettement, et comment l'Insee le répartit</summary>
+
 La même année, la puissance publique a versé plus qu'elle n'a prélevé&nbsp;: {{< qp-val "solde_uc" >}}&nbsp;€ par UC en moyenne, soit {{< qp-val "solde_mdeur" >}}&nbsp;milliards d'euros, financés par endettement. Ce total porte sur le champ de ces comptes distribués, qui n'est pas celui du déficit public&nbsp;: les deux montants ne se substituent pas l'un à l'autre. Dans cette construction comptable, l'écart élève le niveau de vie élargi des ménages de l'année — un bénéfice présent, financé à crédit. Ce ne sont pas pour autant {{< qp-val "solde_mdeur" >}}&nbsp;milliards de versements identifiables&nbsp;: c'est un solde réparti par convention d'imputation. Pour calculer un niveau de vie «&nbsp;net de l'endettement&nbsp;», l'Insee répartit cet écart par convention — moitié en moindres prélèvements, moitié en transferts supplémentaires&nbsp;; les figures de cette page présentent les transferts courants, avant ce retraitement. Ces comptes décrivent qui contribue et qui reçoit aujourd'hui&nbsp;; ils ne disent pas qui paiera demain la dette qui finance l'écart.
+
+</details>
 
 {{< figure-svg fichier="qui-paie-solde-net" alt="Deux panneaux. En haut, le solde des transferts publics par dixième de niveau de vie : en moyenne par unité de consommation, négatif pour les sept premiers dixièmes, positif pour les trois derniers, très fortement pour le dernier. En bas, la part de personnes bénéficiaires nettes, décroissante du premier au dernier dixième." >}}Insee, comptes nationaux distribués 2023 (figure&nbsp;2a). Deux unités, deux panneaux&nbsp;: euros par unité de consommation, puis part de personnes.{{< /figure-svg >}}
 {{< fig-actions id="solde-net" >}}
@@ -74,12 +104,22 @@ La même année, la puissance publique a versé plus qu'elle n'a prélevé&nbsp;
 
 Rapporté aux personnes, le tableau change. {{< qp-val "benef_ensemble" >}}&nbsp;% sont bénéficiaires nettes cette année-là, {{< qp-val "benef_d1" >}}&nbsp;% dans le premier dixième et {{< qp-val "benef_d10" >}}&nbsp;% dans le dernier. Mais les bénéficiaires nets ne sont majoritaires que dans les {{< qp-val "benef_majo_n" >}} premiers dixièmes&nbsp;: dans le dixième {{< qp-val "benef_dernier_moyen" >}}, bénéficiaire net en moyenne, ils ne sont plus que {{< qp-val "benef_dernier_moyen_pct" >}}&nbsp;%. **Un groupe peut recevoir plus qu'il ne verse en moyenne alors que la majorité de ses membres versent plus qu'ils ne reçoivent**&nbsp;: quelques soldes très positifs suffisent à porter la moyenne.
 
+Le rapprochement avec l'exercice du haut de page est direct. Les dixièmes du milieu sont ceux où le solde moyen dit «&nbsp;bénéficiaire net&nbsp;» alors que la majorité de leurs membres versent plus qu'ils ne reçoivent — et ce sont ceux dont l'exposition varie le moins selon le levier. Recevoir plus que l'on ne verse ne protège donc pas d'un ajustement&nbsp;: la position dans la redistribution d'aujourd'hui et l'exposition à la décision de demain sont deux classements distincts, et ils ne se recouvrent pas.
+
+<details class="repli"><summary>Les conventions de ces comptes&nbsp;: une année, des services imputés</summary>
+
 Plusieurs conventions encadrent cette lecture. C'est le solde d'une **année**, non d'une vie&nbsp;: les pensions de retraite y sont comptées comme prestations courantes. Les transferts comprennent des services publics — soins, éducation, services collectifs — valorisés en euros et répartis par imputation statistique, non un relevé des services utilisés par chacun&nbsp;; la part de bénéficiaires nets en dépend à la marge. Le revenu «&nbsp;avant transferts&nbsp;» est une étape de calcul, non le revenu qu'aurait chacun dans une économie sans impôts ni services publics. Et ce solde décrit la redistribution dans son ensemble, pas l'effet propre de la dette.
+
+</details>
 
 {{< figure-svg fichier="qui-paie-age" alt="Barres par groupe d'âge du ménage, en 2023 : les transferts reçus augmentent avec l'âge, modérément jusqu'à 64 ans puis très fortement pour les ménages de 65 ans ou plus ; les prélèvements versés croissent jusqu'aux 50-64 ans, puis chutent pour ce dernier groupe." >}}Insee, comptes nationaux distribués 2023 (figure&nbsp;1e). Groupes d'âge moyen des adultes du ménage.{{< /figure-svg >}}
 {{< fig-actions id="age" >}}
 
-**Par âge.** En {{< qp-val "cd_annee" >}}, selon ces conventions, les ménages dont l'âge moyen des adultes atteint 65&nbsp;ans ou plus reçoivent {{< qp-val "age_recu_65" >}}&nbsp;€ par unité de consommation de transferts — dont {{< qp-val "age_esp_65" >}}&nbsp;€ de prestations en espèces, pensions comprises — et versent {{< qp-val "age_prel_65" >}}&nbsp;€ de prélèvements, contre {{< qp-val "age_prel_5064" >}}&nbsp;€ pour les ménages de 50 à 64&nbsp;ans. Trois limites l'encadrent. Les pensions correspondent notamment à des droits acquis au cours de la carrière&nbsp;; elles sont ici comptées comme prestations courantes, et le tableau d'une vie entière ne ressemblerait pas à celui d'une année. L'âge du ménage n'est pas le statut de retraite de chacun de ses membres, et un montant élevé de soins imputés traduit aussi des besoins plus élevés, non un avantage de bien-être. Enfin, cette photographie actuelle n'est pas une mesure du bilan des générations futures&nbsp;: elle ne désigne aucun payeur de demain.
+**Par âge.** En {{< qp-val "cd_annee" >}}, selon ces conventions, les ménages dont l'âge moyen des adultes atteint 65&nbsp;ans ou plus reçoivent {{< qp-val "age_recu_65" >}}&nbsp;€ par unité de consommation de transferts — dont {{< qp-val "age_esp_65" >}}&nbsp;€ de prestations en espèces, pensions comprises — et versent {{< qp-val "age_prel_65" >}}&nbsp;€ de prélèvements, contre {{< qp-val "age_prel_5064" >}}&nbsp;€ pour les ménages de 50 à 64&nbsp;ans. <details class="repli"><summary>Trois limites de la lecture par âge</summary>
+
+Trois limites l'encadrent. Les pensions correspondent notamment à des droits acquis au cours de la carrière&nbsp;; elles sont ici comptées comme prestations courantes, et le tableau d'une vie entière ne ressemblerait pas à celui d'une année. L'âge du ménage n'est pas le statut de retraite de chacun de ses membres, et un montant élevé de soins imputés traduit aussi des besoins plus élevés, non un avantage de bien-être. Enfin, cette photographie actuelle n'est pas une mesure du bilan des générations futures&nbsp;: elle ne désigne aucun payeur de demain.
+
+</details>
 
 ## Par quels canaux la charge peut se répartir
 
@@ -95,44 +135,43 @@ La liste n'est pas exhaustive&nbsp;: la croissance, les revenus ou cessions d'ac
 {{< figure-svg fichier="qui-paie-mecanismes" alt="Schéma sans quantités : la charge de la dette et sa répartition mènent, par des flèches d'égale épaisseur, à quatre mécanismes possibles — prélèvements, dépenses et prestations, inflation, restructuration — ; le refinancement renouvelle l'échéance aux taux du moment ; en regard, ce que la dette a financé." >}}Schéma de mécanismes possibles&nbsp;: aucun poids relatif ni effet causal n'y est mesuré.{{< /figure-svg >}}
 {{< fig-actions id="mecanismes" >}}
 
-## Selon la décision, l'effort ne tombe pas sur les mêmes ménages
-
-Ces canaux sont des possibilités&nbsp;; ils ne désignent personne tant qu'une décision n'est pas nommée. Nommée, la question devient mesurable&nbsp;: à quoi ressemblerait la répartition d'un même effort, selon le poste par lequel on le fait passer&nbsp;?
-
-L'exercice qui suit prend {{< qp-val "exp_effort" >}}&nbsp;milliards d'euros et les répartit trois fois — par une hausse des impôts sur les revenus et le patrimoine, par une baisse des pensions de retraite, par une baisse des dépenses d'enseignement —, chaque fois au prorata des montants que chaque dixième verse ou reçoit déjà, puis rapporte le résultat à son revenu. Ce n'est pas une prévision&nbsp;: ni comportement ni effet en retour n'y entrent. C'est la structure actuelle des postes, rendue comparable d'une décision à l'autre.
-
-{{< figure-svg fichier="qui-paie-exposition" alt="Deux panneaux. En haut, trois courbes par dixième de niveau de vie : la baisse des dépenses d'enseignement part très haut sur le premier dixième et décroît fortement ; la hausse des impôts fait l'inverse et monte sur le dernier dixième ; les pensions restent presque plates. En bas, des barres montrant le rapport entre la décision la plus lourde et la plus légère pour chaque dixième : élevé aux deux extrémités, minimal au milieu de l'échelle." >}}Insee, comptes nationaux distribués, tableau CND.101 (vingtièmes de niveau de vie, 2020-2023, base 2020)&nbsp;; millésime 2023. Profil d'exposition comptable, non une simulation.{{< /figure-svg >}}
-{{< fig-actions id="exposition" >}}
-
-**Le classement s'inverse d'une décision à l'autre.** Une réduction des dépenses d'enseignement représenterait {{< qp-val "exp_ens_d1" >}}&nbsp;% du revenu des 10&nbsp;% les plus modestes et {{< qp-val "exp_ens_d10" >}}&nbsp;% de celui des plus aisés&nbsp;; une hausse des impôts sur les revenus et le patrimoine, l'inverse, jusqu'à {{< qp-val "exp_fisc_d10" >}}&nbsp;% pour le dernier dixième. Ce n'est pas un effet du dénominateur&nbsp;: en masse, la moitié la moins aisée recevrait {{< qp-val "exp_masse_ens" >}}&nbsp;% de la coupe d'enseignement contre {{< qp-val "exp_masse_fisc" >}}&nbsp;% de l'effort fiscal. Une baisse des pensions, elle, se tient dans une bande étroite — de {{< qp-val "exp_pens_min" >}} à {{< qp-val "exp_pens_max" >}}&nbsp;% — et n'épargne aucun groupe en particulier.
-
-Le second panneau porte le résultat le moins attendu. Pour les 10&nbsp;% les plus aisés, la décision la plus lourde pèse {{< qp-val "exp_ecart_d10" >}}&nbsp;fois la plus légère, et au moins autant pour les 10&nbsp;% les plus modestes&nbsp;: aux deux extrémités de l'échelle, le choix de l'instrument décide presque tout. Au milieu, ce rapport tombe à {{< qp-val "exp_ecart_creux" >}}. **C'est en {{< qp-val "exp_creux_zone" >}} que le levier retenu différencie le moins les ménages.** Ce creux ne tient ni à l'année — il se situe en {{< qp-val "exp_creux_millesimes" >}} sur les quatre millésimes {{< qp-val "exp_millesimes" >}} publiés par l'Insee — ni à la manière de mesurer l'écart&nbsp;: le coefficient de variation et l'étendue rapportée à la moyenne le placent dans la même zone.
-
-Le rapprochement avec ce qui précède est direct. Les dixièmes du milieu sont ceux où le solde moyen dit «&nbsp;bénéficiaire net&nbsp;» alors que la majorité de leurs membres versent plus qu'ils ne reçoivent — et ce sont ceux dont l'exposition varie le moins selon le levier. Recevoir plus que l'on ne verse ne protège donc pas d'un ajustement&nbsp;: la position dans la redistribution d'aujourd'hui et l'exposition à la décision de demain sont deux classements distincts, et ils ne se recouvrent pas.
-
-Trois limites encadrent cette lecture. Un service public valorisé n'est pas un revenu&nbsp;: une dépense d'enseignement imputée à un ménage ne lui est pas versée, et sa réduction ne lui coûterait pas exactement cette somme. Les trois décisions sont proportionnelles par construction&nbsp;; une mesure ciblée — sur certaines pensions, sur certains impôts — dessinerait d'autres courbes, et la figure ne dit donc rien de «&nbsp;l'impôt&nbsp;» ni de «&nbsp;la dépense publique&nbsp;» en général. Enfin l'effort est rapporté au revenu disponible&nbsp;; un autre dénominateur déplacerait les points de croisement sans faire disparaître ces contrastes.
-
 ## Les générations futures — ce dont elles héritent
 
 La dette convertit une dépense présente en engagements futurs. Ceux qui viendront après héritent donc de ces engagements sans avoir pris part à la décision qui les a créés. Mais ils héritent aussi de ce que cette dépense a financé — infrastructures, formation, recherche, patrimoine public — et d'une partie des titres eux-mêmes, que leurs parents détiennent directement ou par l'assurance-vie&nbsp;: dans la même succession passent la charge et la créance. Le transfert net dépend donc de l'usage, mais pas de lui seul&nbsp;: l'absence de bénéfice durable entre dans le bilan, et le coût net dépend aussi du financement, des créances transmises et de l'alternative retenue&nbsp;; un investissement dont ils profiteront peut leur transmettre davantage qu'il ne coûte.
 
+<details class="repli"><summary>Dette nette, patrimoine public et objection «&nbsp;on se la doit à nous-mêmes&nbsp;»</summary>
+
 L'encours ne suffit pas à trancher, et la dette nette ne le fait pas davantage&nbsp;: celle que publie l'INSEE ne déduit que certains actifs financiers — trésorerie, prêts, titres —, pas les routes, le capital humain ni l'environnement. Ce qui vaut quel que soit l'usage, c'est que la décision se prend sans ceux qui en porteront une part. L'objection «&nbsp;on se la doit à nous-mêmes&nbsp;» et sa réponse sont développées sur la page [La dette publique est-elle un fardeau pour les générations futures&nbsp;?](/dette-publique-generations-futures/)
+
+</details>
 
 ## Les groupes moins mobiles — une hypothèse à tester
 
 Tous les contribuables ne sont pas égaux devant l'ajustement. Les ménages et les entreprises qui peuvent déplacer leurs revenus, leur patrimoine ou leur activité échappent plus facilement à un prélèvement que les salariés, les retraités ou les usagers qui dépendent d'un service public local. D'où l'hypothèse&nbsp;: quand l'ajustement suit la ligne de moindre résistance, il **peut** peser davantage sur ceux qui ne peuvent pas partir. Pour être testable, elle doit fixer ses mesures avant d'observer l'ajustement&nbsp;: à ajustement donné et situations initiales comparables, une moindre capacité d'évitement devrait aller avec un effort plus élevé. Et la capacité d'évitement n'est pas une variable unique&nbsp;: mobilité géographique, mobilité de la base imposable et capacité à remplacer un service public sont trois propriétés différentes.
 
+<details class="repli"><summary>Comment tester cette hypothèse</summary>
+
 Pour la tester, il faut définir ces groupes indépendamment du résultat, préciser l'ajustement étudié — telle réforme fiscale, tel gel de prestations — et choisir une mesure de l'effort. Elle serait affaiblie par un ajustement portant surtout sur d'autres groupes, ou par des compensations accordées aux perdants identifiés&nbsp;; ces cas ne se relisent pas après coup comme des confirmations. Le canal territorial — l'État qui reporte une part de sa contrainte sur les collectivités — est examiné sur la page [Dette publique&nbsp;: pourquoi les collectivités locales sont-elles la variable d'ajustement&nbsp;?](/dette-publique-collectivites-locales/)
+
+</details>
 
 ## Les créanciers — financer n'est pas gagner
 
 «&nbsp;Qui détient la dette&nbsp;?&nbsp;» est la question la plus posée, et elle ne dit pas qui paie. Le créancier a avancé les fonds&nbsp;: les intérêts rémunèrent cette avance, le temps et le risque. Son **rendement réel** tient compte des intérêts, de la variation de valeur du titre et de l'inflation&nbsp;; son **avantage par rapport à un autre placement** se mesure séparément, à horizon et risque comparables. Les deux varient selon la date d'achat et le type de titre. La détention renseigne sur la destination des intérêts, pas sur ceux qui les financent.
 
+<details class="repli"><summary>Ce que la répartition des porteurs mesure, et ce qu'elle ne mesure pas</summary>
+
 Pour les titres négociables de l'État, la répartition des porteurs est publiée par la Banque de France, via l'Agence France Trésor, en valeur de marché. Elle classe les porteurs par **résidence**, non par nationalité&nbsp;: un «&nbsp;non-résident&nbsp;» peut être un fonds étranger qui gère l'épargne de ménages français, et un ménage français peut détenir des titres de l'État sans le savoir, par son assurance-vie. Une part du stock détenue hors de France ne mesure pas non plus la part des intérêts versés hors de France&nbsp;: une photographie de fin de période ne donne pas un flux annuel.
+
+</details>
 
 ## Les investissements à bénéfices différés — un mécanisme à établir cas par cas
 
-Un budget contraint par le service de la dette **peut inciter à reporter** des dépenses dont les bénéfices sont lointains, notamment lorsque leur report produit peu de coût politique ou budgétaire immédiat&nbsp;: recherche, entretien du patrimoine, formation, transition écologique. C'est une classe, et non un cas particulier — l'exemple écologique n'a rien de singulier, il est seulement celui où l'écart entre la dépense et son bénéfice est le plus long. Le mécanisme est plausible&nbsp;; il reste à l'établir projet par projet&nbsp;: quelle dépense a été reportée, par quelle décision, pour quel motif budgétaire. Les agrégats ne suffisent pas&nbsp;: l'investissement public total n'est pas l'investissement climatique, et la fonction «&nbsp;protection de l'environnement&nbsp;» des comptes publics ne couvre pas toute la transition. Aucun d'eux ne mesure un investissement empêché par les intérêts. Là où le mécanisme est établi, il double le transfert&nbsp;: aux engagements financiers transmis s'ajoute le bénéfice qui n'a pas été construit — un patrimoine non entretenu, une transition retardée —, et ce second transfert-là n'apparaît dans aucun encours.
+Un budget contraint par le service de la dette **peut inciter à reporter** des dépenses dont les bénéfices sont lointains, notamment lorsque leur report produit peu de coût politique ou budgétaire immédiat&nbsp;: recherche, entretien du patrimoine, formation, transition écologique. <details class="repli"><summary>Pourquoi ce mécanisme s'établit projet par projet</summary>
+
+C'est une classe, et non un cas particulier — l'exemple écologique n'a rien de singulier, il est seulement celui où l'écart entre la dépense et son bénéfice est le plus long. Le mécanisme est plausible&nbsp;; il reste à l'établir projet par projet&nbsp;: quelle dépense a été reportée, par quelle décision, pour quel motif budgétaire. Les agrégats ne suffisent pas&nbsp;: l'investissement public total n'est pas l'investissement climatique, et la fonction «&nbsp;protection de l'environnement&nbsp;» des comptes publics ne couvre pas toute la transition. Aucun d'eux ne mesure un investissement empêché par les intérêts. Là où le mécanisme est établi, il double le transfert&nbsp;: aux engagements financiers transmis s'ajoute le bénéfice qui n'a pas été construit — un patrimoine non entretenu, une transition retardée —, et ce second transfert-là n'apparaît dans aucun encours.
+
+</details>
 
 ## Les objections qui comptent
 
