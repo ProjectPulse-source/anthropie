@@ -178,6 +178,11 @@ dans la feuille de route GEO. Exception au STOP accordée par l'auteur pour cett
    solde primaire en Terminale) s'annonce comme approfondissement, jamais comme « le programme ».
 4. **Chaque section contient une activité prête à l'emploi**, jamais une liste de liens. Français seulement : le
    programme de SES est français (exclusion déclarée).
+5. **Exemplaire de consultation** : un bloc en **fin** de section, après les activités (le livre n'est jamais la
+   contrepartie d'une activité), vers une page « un seul livre » de `/ressources-offertes/` — un fichier de contenu, même
+   gabarit, même guichet, **stock commun**, aucune donnée collectée. **Aucun contrôle d'éligibilité** : il ne se construit
+   que si une exigence externe ou un abus durable l'impose ; en cas d'abus, la marche suivante est le lien sur invitation
+   (arbitrage `PRO-20260930-210901`).
 
 ## Règle de surface — « la présence vient du dépôt » (actée 2026-08-11)
 

@@ -53,6 +53,15 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-30 — `/enseignants/` : exemplaire de consultation par le guichet existant, sans contrôle d'éligibilité
+
+Navette `PRO-20260930-210901` (close, 8 portes vertes) : option B. Page `/ressources-offertes/dette-publique-enseignants/`
+= un fichier de contenu sur le gabarit « un seul livre » (même Worker, `noindex`, hors sitemap), **stock commun** avec la
+page mère (décision de l'auteur), aucune donnée collectée ; bloc « Exemplaire de consultation » en fin de section dette,
+après les activités. Contrôle `ac-*.fr` écarté : aucune obligation, collecte sans nécessité ; en cas d'abus, lien sur
+invitation. Build rc=0, `check-all --reseau` à 0 ; page relue : `noindex`, absente du sitemap, `data-book="dette-publique"`,
+seul lien Amazon = bloc de rupture caché (comme la page témoin *Promesses*).
+
 ### 2026-09-30 — Page `/enseignants/` : activités SES sur la dette publique (exception au STOP accordée par l'auteur)
 
 Arbitrage de deux avis entrants (`ENTRANTE_2026-09-30_Dette_Pedagogie_arbitrage.md`, tours 1 et 2) : les quatre pages

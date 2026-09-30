@@ -133,6 +133,13 @@ publique&nbsp;?](/qui-paie-la-dette-publique/)
 
 </section>
 
+### Exemplaire de consultation {#exemplaire}
+
+Les enseignants de SES qui souhaitent prolonger ces activités peuvent disposer, dans la limite des exemplaires
+disponibles, d'un exemplaire numérique de consultation de *Dette publique&nbsp;: qui paie vraiment&nbsp;?* Il est
+proposé sans contrepartie et sous réserve des règles applicables dans votre établissement.
+[Demander un exemplaire →](/ressources-offertes/dette-publique-enseignants/)
+
 ### Méthode et sources {#methode}
 
 Toutes les figures viennent des quatre pages du dossier, qui en donnent la méthode, les limites et les sources&nbsp;:
