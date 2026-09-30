@@ -1,6 +1,6 @@
 ---
 title: "Qui paie vraiment la dette publique ?"
-description: "Qui supporte le coût de la dette publique ? Cela dépend de ce qu'elle finance, de la manière dont elle est financée et des ajustements choisis pour la servir ; certaines configurations reportent des coûts sur ceux qui peuvent le moins les éviter. Les rôles, les canaux, leurs conditions — et ce que les données ne permettent pas d'attribuer."
+description: "Qui paie la dette publique ? Détenir n'est pas payer : impôts, dépenses et inflation ne répartissent pas l'effort entre les mêmes groupes. Données officielles."
 chapo: "Un même effort de {qp.exp_effort} milliards d'euros ne tombe pas sur les mêmes ménages selon la décision prise : par l'enseignement, il pèse surtout sur les plus modestes, par l'impôt sur les plus aisés. Qui paie la dette publique dépend de ce qu'elle finance, de la manière dont elle est financée et des ajustements choisis pour la servir."
 date: 2026-07-04
 lastmod: 2026-09-29
@@ -35,7 +35,7 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 {{< reutiliser-ancre >}}
 
-Qui paie la dette publique&nbsp;? La question est vécue avant d'être technique&nbsp;: l'impôt qui augmente, le service public qui se resserre, l'épargne que l'inflation rogne. Demander qui supporte les coûts, qui reçoit les revenus et qui décide est une bonne discipline, à condition de ne pas fixer la réponse d'avance. Ce qui se défend tient en une proposition conditionnelle&nbsp;: **la répartition des effets de la dette dépend de ce qu'elle finance, de la manière dont elle est financée et des ajustements choisis pour la servir&nbsp;; certaines configurations peuvent reporter des coûts sur des groupes moins capables de les éviter.**
+Qui paie la dette publique&nbsp;? La question est vécue avant d'être technique&nbsp;: l'impôt qui augmente, le service public qui se resserre, l'épargne que l'inflation rogne. Demander qui supporte les coûts, qui reçoit les revenus et qui décide est une bonne discipline, à condition de ne pas fixer la réponse d'avance. Ce qui se défend d'abord est une réponse en trois temps&nbsp;: **il n'existe pas de payeur unique de la dette&nbsp;; détenir la dette n'est pas la payer&nbsp;; et la répartition de son coût dépend de la décision prise pour l'ajuster.** Que certaines configurations reportent des coûts sur des groupes moins capables de les éviter reste, plus bas, une hypothèse à tester.
 
 Cette page examine ces configurations une à une&nbsp;: ce qui les rend plausibles, ce qui les affaiblirait, et ce que les données disponibles ne permettent pas d'attribuer. Le montant de la facture — encours, charge d'intérêts, coût moyen du stock — est mesuré dans le premier volet du dossier.
 
@@ -58,7 +58,7 @@ L'exercice qui suit prend {{< qp-val "exp_effort" >}}&nbsp;milliards d'euros et 
 
 </div>
 
-Le second panneau porte le résultat le moins attendu. Pour les 10&nbsp;% les plus aisés, la décision la plus lourde pèse {{< qp-val "exp_ecart_d10" >}}&nbsp;fois la plus légère, et au moins autant pour les 10&nbsp;% les plus modestes&nbsp;: aux deux extrémités de l'échelle, le choix de l'instrument décide presque tout. Au milieu, ce rapport tombe à {{< qp-val "exp_ecart_creux" >}}. **C'est en {{< qp-val "exp_creux_zone" >}} que le levier retenu différencie le moins les ménages.** Ce creux ne tient ni à l'année — il se situe en {{< qp-val "exp_creux_millesimes" >}} sur les quatre millésimes {{< qp-val "exp_millesimes" >}} publiés par l'Insee — ni à la manière de mesurer l'écart&nbsp;: le coefficient de variation et l'étendue rapportée à la moyenne le placent dans la même zone.
+Le second panneau porte le résultat le moins attendu. Pour les 10&nbsp;% les plus aisés, la décision la plus lourde pèse {{< qp-val "exp_ecart_d10" >}}&nbsp;fois la plus légère, et au moins autant pour les 10&nbsp;% les plus modestes&nbsp;: aux deux extrémités de l'échelle, le choix de l'instrument décide presque tout. Au milieu, ce rapport tombe à {{< qp-val "exp_ecart_creux" >}}. **C'est en {{< qp-val "exp_creux_zone" >}} que le levier retenu différencie le moins les ménages.** Cela ne veut pas dire que ces dixièmes supporteraient moins d'effort&nbsp;: seulement que, dans cet exercice, changer de levier y modifie moins l'exposition qu'aux extrémités de l'échelle. Ce creux ne tient ni à l'année — il se situe en {{< qp-val "exp_creux_millesimes" >}} sur les quatre millésimes {{< qp-val "exp_millesimes" >}} publiés par l'Insee — ni à la manière de mesurer l'écart&nbsp;: le coefficient de variation et l'étendue rapportée à la moyenne le placent dans la même zone.
 
 <details class="repli"><summary>Les trois limites de cet exercice</summary>
 
@@ -91,9 +91,15 @@ Trois choses se mesurent&nbsp;: qui emprunte, qui détient les titres, et qui co
 
 Les prélèvements vont de {{< qp-val "d1_prel" >}}&nbsp;€ par UC pour les 10&nbsp;% les plus modestes à {{< qp-val "d10_prel" >}}&nbsp;€ pour les 10&nbsp;% les plus aisés, environ {{< qp-val "ratio_prel" >}}&nbsp;fois plus. Les transferts reçus — prestations en espèces et services publics valorisés en euros — varient beaucoup moins&nbsp;: d'un bout à l'autre de l'échelle, ils restent compris entre {{< qp-val "recu_min" >}} et {{< qp-val "recu_max" >}}&nbsp;€, sans progression régulière. C'est ce contraste, et lui seul, que la figure établit&nbsp;: ce qui est versé suit le niveau de vie, ce qui est reçu beaucoup moins.
 
+<div class="resultat-phrase">
+
+**Où la dette entre dans ces comptes.** En {{< qp-val "cd_annee" >}}, les transferts publics attribués aux ménages — prestations en espèces et services publics valorisés en euros — dépassent les prélèvements de {{< qp-val "solde_mdeur" >}}&nbsp;milliards d'euros dans ce cadre comptable, et l'Insee rattache ce solde à l'endettement public. Cela ne veut pas dire que les bénéficiaires de la redistribution «&nbsp;ont créé&nbsp;» cette dette, ni que leur position dit qui la remboursera&nbsp;: c'est la part du revenu élargi de l'année qui n'est pas financée par des prélèvements de la même année.
+
+</div>
+
 <details class="repli"><summary>L'écart financé par endettement, et comment l'Insee le répartit</summary>
 
-La même année, la puissance publique a versé plus qu'elle n'a prélevé&nbsp;: {{< qp-val "solde_uc" >}}&nbsp;€ par UC en moyenne, soit {{< qp-val "solde_mdeur" >}}&nbsp;milliards d'euros, financés par endettement. Ce total porte sur le champ de ces comptes distribués, qui n'est pas celui du déficit public&nbsp;: les deux montants ne se substituent pas l'un à l'autre. Dans cette construction comptable, l'écart élève le niveau de vie élargi des ménages de l'année — un bénéfice présent, financé à crédit. Ce ne sont pas pour autant {{< qp-val "solde_mdeur" >}}&nbsp;milliards de versements identifiables&nbsp;: c'est un solde réparti par convention d'imputation. Pour calculer un niveau de vie «&nbsp;net de l'endettement&nbsp;», l'Insee répartit cet écart par convention — moitié en moindres prélèvements, moitié en transferts supplémentaires&nbsp;; les figures de cette page présentent les transferts courants, avant ce retraitement. Ces comptes décrivent qui contribue et qui reçoit aujourd'hui&nbsp;; ils ne disent pas qui paiera demain la dette qui finance l'écart.
+La même année, les transferts attribués aux ménages ont dépassé les prélèvements&nbsp;: {{< qp-val "solde_uc" >}}&nbsp;€ par UC en moyenne, soit {{< qp-val "solde_mdeur" >}}&nbsp;milliards d'euros, financés par endettement. Ce total porte sur le champ de ces comptes distribués, qui n'est pas celui du déficit public&nbsp;: les deux montants ne se substituent pas l'un à l'autre. Dans cette construction comptable, l'écart élève le niveau de vie élargi des ménages de l'année — un bénéfice présent, financé à crédit. Ce ne sont pas pour autant {{< qp-val "solde_mdeur" >}}&nbsp;milliards de versements identifiables&nbsp;: c'est un solde réparti par convention d'imputation. Pour calculer un niveau de vie «&nbsp;net de l'endettement&nbsp;», l'Insee répartit cet écart par convention — moitié en moindres prélèvements, moitié en transferts supplémentaires&nbsp;; les figures de cette page présentent les transferts courants, avant ce retraitement. Ces comptes décrivent qui contribue et qui reçoit aujourd'hui&nbsp;; ils ne disent pas qui paiera demain la dette qui finance l'écart.
 
 </details>
 
@@ -112,12 +118,16 @@ Plusieurs conventions encadrent cette lecture. C'est le solde d'une **année**, 
 
 </details>
 
+<details class="repli"><summary>Par âge du ménage&nbsp;: ce que chaque groupe verse et reçoit</summary>
+
 {{< figure-svg fichier="qui-paie-age" alt="Barres par groupe d'âge du ménage, en 2023 : les transferts reçus augmentent avec l'âge, modérément jusqu'à 64 ans puis très fortement pour les ménages de 65 ans ou plus ; les prélèvements versés croissent jusqu'aux 50-64 ans, puis chutent pour ce dernier groupe." >}}Insee, comptes nationaux distribués 2023 (figure&nbsp;1e). Groupes d'âge moyen des adultes du ménage.{{< /figure-svg >}}
 {{< fig-actions id="age" >}}
 
 **Par âge.** En {{< qp-val "cd_annee" >}}, selon ces conventions, les ménages dont l'âge moyen des adultes atteint 65&nbsp;ans ou plus reçoivent {{< qp-val "age_recu_65" >}}&nbsp;€ par unité de consommation de transferts — dont {{< qp-val "age_esp_65" >}}&nbsp;€ de prestations en espèces, pensions comprises — et versent {{< qp-val "age_prel_65" >}}&nbsp;€ de prélèvements, contre {{< qp-val "age_prel_5064" >}}&nbsp;€ pour les ménages de 50 à 64&nbsp;ans. <details class="repli"><summary>Trois limites de la lecture par âge</summary>
 
 Trois limites l'encadrent. Les pensions correspondent notamment à des droits acquis au cours de la carrière&nbsp;; elles sont ici comptées comme prestations courantes, et le tableau d'une vie entière ne ressemblerait pas à celui d'une année. L'âge du ménage n'est pas le statut de retraite de chacun de ses membres, et un montant élevé de soins imputés traduit aussi des besoins plus élevés, non un avantage de bien-être. Enfin, cette photographie actuelle n'est pas une mesure du bilan des générations futures&nbsp;: elle ne désigne aucun payeur de demain.
+
+</details>
 
 </details>
 
@@ -190,7 +200,7 @@ Ce qui peut s'établir, c'est l'effet d'une décision déterminée — une réfo
 
 **Une question de répartition n'a pas de réponse en soi&nbsp;; elle en a une par décision.** L'incidence d'un euro d'intérêts ne se lit nulle part dans les comptes, parce qu'elle se forme ailleurs&nbsp;: dans l'ajustement retenu cette année-là — impôt, dépense, inflation, report — et dans l'alternative à laquelle on le compare. Nommer les deux transforme une opinion en énoncé vérifiable&nbsp;; ne nommer ni l'un ni l'autre produit une réponse qui ne peut être ni établie, ni réfutée.
 
-**Détenir n'est pas payer.** Le porteur d'un titre a avancé les fonds et reçoit une rémunération en retour&nbsp;; la charge, elle, est financée par les prélèvements, les dépenses non faites ou l'érosion de la valeur réelle. La répartition des porteurs renseigne sur la destination des intérêts, jamais sur leur origine — deux questions que la même figure ne peut pas trancher, d'où ses deux panneaux séparés.
+**Détenir n'est pas payer.** Le porteur d'un titre a avancé les fonds et reçoit une rémunération en retour&nbsp;; le paiement des intérêts relève du budget public, qui peut le financer par ses recettes ou par de nouveaux emprunts. La question distributive commence ensuite&nbsp;: quels prélèvements, quelles dépenses, quelle inflation ou quelle restructuration accompagnent l'ajustement, et par rapport à quelle alternative. La répartition des porteurs renseigne sur la destination des intérêts, jamais sur leur origine — deux questions que la même figure ne peut pas trancher, d'où ses deux panneaux séparés.
 
 **Une moyenne de groupe ne décrit pas ses membres.** C'est le résultat le moins intuitif de cette page&nbsp;: un dixième de niveau de vie peut recevoir plus qu'il ne verse *en moyenne* alors que la majorité des personnes qui le composent versent plus qu'elles ne reçoivent — quelques soldes très positifs suffisent à porter la moyenne. Une statistique de dixièmes répond donc à «&nbsp;comment se répartit la masse&nbsp;?&nbsp;», pas à «&nbsp;que vit une personne de ce dixième&nbsp;?&nbsp;».
 
@@ -198,9 +208,11 @@ Ce qui peut s'établir, c'est l'effet d'une décision déterminée — une réfo
 
 Deux prolongements traitent chacun un canal identifié ici&nbsp;: le canal territorial, sur la page [Dette publique&nbsp;: pourquoi les collectivités locales sont-elles la variable d'ajustement&nbsp;?](/dette-publique-collectivites-locales/), et le transfert dans le temps, sur la page [La dette publique est-elle un fardeau pour les générations futures&nbsp;?](/dette-publique-generations-futures/)
 
-{{< reutiliser figures="figures_qui_paie" jeu="qui_paie_donnees" sources="Insee et Banque de France via l'AFT" donnees="Détention de la dette publique (registre du livre, sources INSEE et Banque de France) et comptes nationaux distribués 2023 de l'Insee, avec leurs périodes, unités et conventions." >}}
-La répartition des effets de la dette publique dépend de ce qu'elle finance, de la manière dont elle est financée et des ajustements choisis pour la servir&nbsp;; certaines configurations peuvent reporter des coûts sur des groupes moins capables de les éviter. Les données disponibles montrent qui emprunte, qui détient les titres de l'État et qui contribue ou reçoit aujourd'hui — pas qui supportera la charge finale. Une perte ne s'attribue qu'à une décision déterminée, comparée à son alternative.
-{{< /reutiliser >}}
+
+
+{{< appel-livre slug="dette-publique-qui-paie-vraiment" sur="Cette analyse est développée dans le livre" avis="non" >}}
+Cette page pose la méthode&nbsp;: quatre rôles, quatre canaux, et ce qu'il faudrait observer pour conclure. Le livre la déploie sur le cas français — le transfert dans le temps, les créanciers, les services publics — et la prolonge par des scénarios 2025-2035.
+{{< /appel-livre >}}
 
 ## D'où vient cette analyse
 
@@ -208,6 +220,6 @@ La répartition des effets de la dette publique dépend de ce qu'elle finance, d
 
 Appliquée aux finances publiques, cette hypothèse est formalisée dans le working paper [AWP-03 — *Dette publique et anthropie&nbsp;: qui paie vraiment le désordre&nbsp;?*](/awp/awp-03/) (DOI&nbsp;: 10.5281/zenodo.19268769, PDF en accès libre).
 
-{{< appel-livre slug="dette-publique-qui-paie-vraiment" >}}
-Cette page pose la méthode&nbsp;: quatre rôles, quatre canaux, et ce qu'il faudrait observer pour conclure. Le livre la déploie sur le cas français — le transfert dans le temps, les créanciers, les services publics — et la prolonge par des scénarios 2025-2035.
-{{< /appel-livre >}}
+{{< reutiliser figures="figures_qui_paie" jeu="qui_paie_donnees" sources="Insee et Banque de France via l'AFT" donnees="Détention de la dette publique (registre du livre, sources INSEE et Banque de France) et comptes nationaux distribués 2023 de l'Insee, avec leurs périodes, unités et conventions." >}}
+La répartition des effets de la dette publique dépend de ce qu'elle finance, de la manière dont elle est financée et des ajustements choisis pour la servir&nbsp;; certaines configurations peuvent reporter des coûts sur des groupes moins capables de les éviter. Les données disponibles montrent qui emprunte, qui détient les titres de l'État et qui contribue ou reçoit aujourd'hui — pas qui supportera la charge finale. Une perte ne s'attribue qu'à une décision déterminée, comparée à son alternative.
+{{< /reutiliser >}}

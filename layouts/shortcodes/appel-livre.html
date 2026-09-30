@@ -76,7 +76,7 @@
     {{- /* sur="…" (30/09) : une page qui n'est PAS issue du livre (comparaison internationale) ne peut pas
            porter « Le livre dont cette page est issue » ; elle nomme le lien vrai. Absent : libellé par défaut. */}}
     <p class="appel-livre__sur">{{ with .Get "sur" }}{{ . }}{{ else }}{{ $T.sur }}{{ end }}</p>
-    <h2 class="appel-livre__titre"><a href="{{ $livre.RelPermalink }}">{{ partial "fr-typo.html" $livre.Title }}</a></h2>
+    <h3 class="appel-livre__titre"><a href="{{ $livre.RelPermalink }}">{{ partial "fr-typo.html" $livre.Title }}</a></h3>
     {{- with $p.subtitle }}<p class="appel-livre__soustitre">{{ partial "fr-typo.html" . }}</p>{{ end }}
     <div class="appel-livre__argu">{{ .Inner | markdownify }}</div>
     <p class="appel-livre__meta">
@@ -85,7 +85,9 @@
       {{- /* kindle_price est stocke au format schema.org (separateur point),
              comme `price` : on le rend a la francaise, jamais tel quel. */ -}}
       {{- with $kindle }}<span>Kindle{{ with $prixK }}&nbsp;{{ . | safeHTML }}{{ end }}</span>{{ end }}
-      {{- if and $p.amazon_rating $p.amazon_reviews }}
+      {{- /* avis="non" (30/09) : sur une ressource documentaire, la note Amazon fait basculer le registre vers le
+         commercial et vieillit ; la fiche du livre la garde. */ -}}
+      {{- if and $p.amazon_rating $p.amazon_reviews (ne ($.Get "avis") "non") }}
       {{- /* La note est un flottant : rendue telle quelle, elle sort avec un
              point decimal anglais au milieu d'une page francaise. */ -}}
       <span><span class="appel-livre__note" aria-hidden="true">★</span>

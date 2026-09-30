@@ -60,8 +60,8 @@
     {{- $majTitre = "Année des données Eurostat comparées sur cette page — c'est le millésime des DONNÉES, non la date de relecture du texte" -}}
   {{- end -}}
 {{- else -}}
-  {{- $maj = printf "Relu %s" (.Page.Lastmod.Format "01/2006") -}}
-  {{- $majTitre = "Dernière relecture éditoriale de cette page ; elle ne porte aucune série trimestrielle, donc aucun millésime de données" -}}
+  {{- $maj = printf "MAJ %s" (.Page.Lastmod.Format "01/2006") -}}
+  {{- $majTitre = "Mise à jour de la page. Les millésimes des données sont indiqués auprès de chaque figure." -}}
 {{- end -}}
 {{- $items := slice
     (dict "n" "1" "url" (cond $en "/en/cost-of-french-public-debt/" "/cout-de-la-dette-publique/")
