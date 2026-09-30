@@ -156,15 +156,11 @@ Les extraits
 du programme viennent des ressources d'accompagnement publiées par Éduscol pour la Première (juin 2019) et la
 Terminale (août 2020).
 
-<div class="exemplaire">
-
-### Exemplaire de consultation {#exemplaire}
-
+{{< exemplaire slug="dette-publique-qui-paie-vraiment" lien="/ressources-offertes/dette-publique-enseignants/"
+    surtitre="Pour les enseignants de SES" >}}
 Les enseignants de SES qui souhaitent prolonger ces activités peuvent disposer, dans la limite des exemplaires
 disponibles, d'un exemplaire numérique de consultation de *Dette publique&nbsp;: qui paie vraiment&nbsp;?* Il est
 proposé sans contrepartie et sous réserve des règles applicables dans votre établissement.
-[Demander un exemplaire →](/ressources-offertes/dette-publique-enseignants/)
-
-</div>
+{{< /exemplaire >}}
 
 <script src="/js/fiche-imprimer.js" defer></script>

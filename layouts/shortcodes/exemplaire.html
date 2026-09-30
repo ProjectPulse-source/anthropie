@@ -1,0 +1,31 @@
+{{- /* exemplaire.html — encart « Exemplaire de consultation » avec la couverture du livre.
+
+       {{< exemplaire slug="dette-publique-qui-paie-vraiment" lien="/ressources-offertes/dette-publique-enseignants/"
+           surtitre="Pour les enseignants de SES" >}}
+       Le texte de l'offre, en Markdown.
+       {{< /exemplaire >}}
+
+       Motif (auteur, 01/10/2026) : l'offre, écrite en paragraphe sous un intertitre, ne se voyait pas en fin de
+       page. La couverture fait repérer l'objet avant la condition, dans le langage du bloc `appel-livre` des pages
+       du dossier. Registre de ressource : ni prix ni note Amazon (CLAUDE.md du site, couche pédagogique § 5).
+
+       L'intertitre garde l'ancre publiée `#exemplaire` (id="…" paramétrable) ; la classe `exemplaire` porte la
+       règle d'impression de _enseignants.scss (l'offre n'apparaît sur aucune fiche imprimée).
+       Échoue bruyamment si le slug n'a pas de fiche ou si le lien manque : un encart muet ne se verrait pas. */ -}}
+{{- $slug := .Get "slug" -}}
+{{- $lien := .Get "lien" -}}
+{{- if not $slug -}}{{ errorf "exemplaire: parametre slug manquant (%s)" .Page.File.Path }}{{- end -}}
+{{- if not $lien -}}{{ errorf "exemplaire: parametre lien manquant (%s)" .Page.File.Path }}{{- end -}}
+{{- $livre := site.GetPage (printf "/livres/%s" $slug) -}}
+{{- if not $livre -}}{{ errorf "exemplaire: fiche /livres/%s introuvable (%s)" $slug .Page.File.Path }}{{- end -}}
+<aside class="exemplaire">
+  {{ partial "book-cover.html" (dict "slug" $slug "alt" (printf "Couverture — %s" $livre.Title) "wrapClass" "exemplaire__cover-wrap" "class" "exemplaire__cover" "sizes" "104px" "lang" $livre.Lang) }}
+  <div class="exemplaire__corps">
+    <div>
+      {{- with .Get "surtitre" }}<p class="exemplaire__surtitre">{{ . }}</p>{{ end }}
+      <h3 id="{{ .Get "id" | default "exemplaire" }}">{{ .Get "titre" | default "Exemplaire de consultation" }}</h3>
+    </div>
+    {{ .Inner | .Page.RenderString (dict "display" "block") }}
+    <p class="exemplaire__action"><a class="btn btn--primary" href="{{ $lien }}">{{ .Get "bouton" | default "Demander un exemplaire" }}&nbsp;→</a></p>
+  </div>
+</aside>

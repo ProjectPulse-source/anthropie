@@ -23,3 +23,35 @@
 
 // L'offre du livre n'apparaît sur aucune impression (avis « Enseignants », 30/09, § 9).
 @media print { .exemplaire { display: none !important; } }
+
+// Encart « Exemplaire de consultation » (shortcode `exemplaire`, 01/10/2026) : couverture inclinée du gabarit
+// emblème, texte, bouton. Deux classes sur les enfants : les règles de thème `main ul`, `.content-reading h3`
+// l'emporteraient sur une classe seule.
+.exemplaire {
+  display: grid; grid-template-columns: 104px minmax(0, 1fr); gap: 22px; align-items: start;
+  margin: 2.5rem 0 1.5rem; padding: 22px;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-accent-soft);
+}
+.exemplaire .exemplaire__cover-wrap { width: 104px; padding-top: 4px; }
+.exemplaire .exemplaire__cover {
+  width: 104px; height: auto; display: block;
+  transform: rotate(var(--book-emblem-rotation));
+  box-shadow: var(--book-emblem-shadow);
+}
+.exemplaire .exemplaire__corps { display: grid; gap: 12px; min-width: 0; }
+.exemplaire .exemplaire__corps p { margin: 0; }
+.exemplaire .exemplaire__surtitre {
+  font-family: var(--font-sans); font-size: var(--fs-tiny);
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--color-text-subtle); margin: 0 0 6px;
+}
+.exemplaire .exemplaire__corps h3 { margin: 0; padding: 0; border: 0; }
+.exemplaire .exemplaire__action .btn { white-space: normal; }
+// Téléphone : à côté de la couverture, la colonne de texte tombait à 147 px (mesuré à 390 px, 01/10) ;
+// la couverture passe au-dessus.
+@media (max-width: 520px) {
+  .exemplaire { grid-template-columns: minmax(0, 1fr); gap: 14px; padding: 18px 16px; }
+  .exemplaire .exemplaire__cover-wrap, .exemplaire .exemplaire__cover { width: 64px; }
+  .exemplaire .exemplaire__action .btn { padding: 12px 16px; }
+}
