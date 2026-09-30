@@ -222,7 +222,7 @@ def fig_annuelle(rows):
     desc = ("Barres empilées par année, en points de PIB : en orange la contribution des déficits primaires, en bleu l'effet "
             "net des taux et de la croissance, en gris les ajustements flux-stock ; le point noir est la variation effective du "
             "ratio. Les déficits primaires portent la hausse de 2008 à 2025 ; l'effet taux-croissance devient fortement "
-            "négatif en 2021-2023, quand l'inflation gonfle le PIB nominal.")
+            "négatif en 2021-2023, quand la croissance du PIB nominal, portée notamment par l'inflation, s'accélère.")
     e = entete(H, "da", titre, desc)
     for g in range(vmin, vmax + 1, 4):
         e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="%s"/>' % (X0, Y(g), X1, Y(g), GRID, 1.4 if g == 0 else 0.6))
@@ -262,8 +262,8 @@ def fiches(figs, A):
                "Sur la période, les intérêts et la croissance nominale se sont presque annulés ; la hausse de la dette "
                "tient pour l'essentiel aux déficits primaires, hors intérêts."),
               ("annuelle", "dette-dynamique-annuelle",
-               "Année par année, ce qui a poussé ou freiné le ratio ; en 2021-2023, l'inflation l'a fait baisser malgré "
-               "les déficits.")]
+               "Année par année, ce qui a poussé ou freiné le ratio ; en 2021-2023, la croissance nominale l'a fait baisser "
+               "malgré les déficits.")]
     out = []
     for ident, f, montre in MONTRE:
         svg = figs[f + ".svg"]
@@ -368,7 +368,7 @@ def main() -> int:
                         "definitions": {"effet_interets": "intérêts de l'année rapportés au PIB, via le taux implicite appliqué à la dette de départ",
                                         "effet_croissance": "érosion du ratio par la hausse du PIB nominal (croissance réelle et inflation)",
                                         "contribution_solde_primaire": "déficit hors intérêts, en points de PIB (négatif en cas d'excédent)",
-                                        "flux_stock": "variation de dette qui ne passe pas par le déficit (trésorerie, actifs, valorisation) ; résidu, égal au témoin comptable"}},
+                                        "flux_stock": "variation de dette qui ne passe pas par le déficit (trésorerie, actifs, valorisation) ; résidu, contrôlé par une seconde identité comptable (variation de dette moins déficit)"}},
                "depart": {"annee": a0, "dette_pct_pib": d_depart}, "annees": rows, "total": total,
                "periodes": [dict(periode=(lib if b else lib % rows[-1]["annee"]), **t) for (a, b, lib), t in zip(PERIODES, per)],
                "affichage": aff}

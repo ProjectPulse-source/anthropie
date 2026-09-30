@@ -6,20 +6,21 @@
        Replié par défaut ; `verifie` = date de la revue de littérature (AAAA-MM-JJ) ; fiches de lecture :
        docs/confrontation-recherche/fiches/.
 
-       Verrou de publication : le bloc ne s'affiche que si `confrontationRecherchePubliee = true`
-       (config/_default/params.toml), parce que son texte doit passer une contre-expertise AVANT d'être
-       en ligne (risque : faire dire à un article ce qu'il ne dit pas). Tant qu'il est fermé, le build
-       le dit (warnf) : une exclusion, jamais un silence.
-       Condition de mort du verrou : l'arbitrage de la contre-expertise des trois blocs est écrit et
-       exécuté → passer le paramètre à true, puis retirer le paramètre et ce `if` dans le même commit. */ -}}
+       Verrou de publication, page par page : `publie="oui"` affiche le bloc, `publie="non"` le masque et le build le
+       dit (warnf) : une exclusion, jamais un silence. Un bloc s'ouvre quand l'arbitrage de sa contre-expertise est
+       exécuté (PRO-20260930-122113, arbitré le 30/09 : Qui paie et Comparaison ouverts ; Coût fermé tant que deux
+       références qui le mettent en danger ne sont pas lues — Yue et al. 2026, Bailey et al. 2016).
+       Condition de mort du paramètre : les trois blocs sont à "oui" → retirer `publie` et ce `if` dans le même commit. */ -}}
 {{- $verifie := .Get "verifie" -}}
 {{- if not $verifie -}}{{ errorf "confrontation-recherche : date de vérification absente (%s)" .Page.RelPermalink }}{{- end -}}
-{{- if site.Params.confrontationRecherchePubliee -}}
+{{- $publie := .Get "publie" -}}
+{{- if not (in (slice "oui" "non") $publie) -}}{{ errorf "confrontation-recherche : publie=\"oui\" ou \"non\" attendu (%s)" .Page.RelPermalink }}{{- end -}}
+{{- if eq $publie "oui" -}}
 <details class="repli confrontation" id="confrontation-recherche">
 <summary>Confrontation à la recherche&nbsp;: ce que la littérature fait à cette lecture</summary>
 {{ .Inner | .Page.RenderString }}
 <p class="confrontation__date">Revue de littérature vérifiée le {{ time.Format "2 January 2006" $verifie }}&nbsp;: chaque référence citée a été lue en entier à cette date, dans la version indiquée.</p>
 </details>
 {{- else -}}
-{{ warnf "confrontation-recherche : bloc NON PUBLIE sur %s (verrou en attente de la contre-expertise)" .Page.RelPermalink }}
+{{ warnf "confrontation-recherche : bloc NON PUBLIE sur %s (verrou publie=non : voir l'arbitrage de sa contre-expertise)" .Page.RelPermalink }}
 {{- end -}}

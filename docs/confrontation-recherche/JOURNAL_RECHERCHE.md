@@ -79,8 +79,11 @@ Contrôle des extraits : `python docs/confrontation-recherche/verifier_extraits.
   ratio vers le bas ; le ratio ne baisse que s'il l'emporte sur le déficit primaire) — Blanchard E1, E6 ;
   Hall-Sargent E7 ; page internationale, « le prix d'une dette publique ne découle pas de son niveau » → « le
   niveau […] ne suffit pas à prédire son prix » — Gruber-Kamin, Bernoth et al., De Grauwe-Ji.
-- **Proposée, non appliquée** (ajout de fond, arbitrage de l'auteur) : page Qui paie, ajouter le canal
-  d'éviction du capital à « dans la même succession passent la charge et la créance » (Diamond E1, E2).
-- **Contre-expertise du texte des blocs** : audit `PRO-20260930-122113` (FACT_CHECK), dépôt `D:\PRO`. Blocs
-  derrière le verrou `confrontationRecherchePubliee = false` jusqu'à son arbitrage.
-
+- **Appliquée après contre-expertise (option A)** : page Qui paie, le canal d'éviction du capital ajouté à « dans la
+  même succession passent la charge et la créance » (Diamond E1, E2) ; par R3, page Générations futures complétée.
+- **Contre-expertise du texte des blocs** : audit `PRO-20260930-122113` (FACT_CHECK), réponse archivée et arbitrée le
+  30/09 (`ARBITRATIONS/PRO-20260930-122113_arbitrage.md`, dépôt `D:\PRO`), navette close. Aucune inversion de sens ;
+  17 reformulations de portée, d'unité ou d'inférence exécutées ; références menées par la version lue.
+- **Verrou par page** : Qui paie et Comparaison `publie="oui"` ; Coût `publie="non"` tant que Yue, Shang et Liu 2026
+  et Bailey, Anttiroiko et Valkama 2016 ne sont pas lus en entier (accès payant : **geste de l'auteur** pour obtenir
+  les PDF). Rendu à 390 px mesuré : pas de débordement.
