@@ -82,7 +82,7 @@ On peut lire ce livre page après page, comme une traversée chronologique. On p
 
 Le premier de ces chemins — «&nbsp;Les signes&nbsp;» — a sa traversée sur le site&nbsp;: [Comment l'écriture a-t-elle transformé la pensée&nbsp;?](/comment-lecriture-a-transforme-la-pensee/)
 
-## Pour qui&nbsp;?
+## Pour qui&nbsp;? {#pour-qui}
 
 Pour le lecteur curieux — de philosophie, de sciences, d'histoire — qui préfère un récit continu aux manuels à fiches&nbsp;; pour l'étudiant qui veut relier ce que les disciplines séparent&nbsp;; et pour qui cherche un livre à offrir&nbsp;: une fresque qui s'offre autant qu'elle se garde.
 

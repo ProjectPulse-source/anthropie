@@ -78,7 +78,7 @@ La dette publique est habituellement discutée en termes de montants, de ratios 
 
 En appliquant le cadre anthropique aux finances publiques françaises, Stéphane Lalut soutient que la dette fonctionne comme un dispositif de transfert temporel et social&nbsp;: elle reporte le coût du désordre présent vers ceux qui n'ont pas voix au chapitre. En ligne, les rôles, les canaux et leurs conditions&nbsp;: [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/) Le cadre général est présenté sur la page [Qu'est-ce que l'anthropie&nbsp;?](/quest-ce-que-lanthropie/).
 
-## Pour qui&nbsp;?
+## Pour qui&nbsp;? {#pour-qui}
 
 Pour le citoyen qui veut comprendre le débat budgétaire au-delà des ratios, l'étudiant en économie ou en science politique, et le lecteur de presse économique. Aucun prérequis&nbsp;: les mécanismes sont exposés à partir de cas concrets — France, Grèce, Japon, Norvège, Chine.
 

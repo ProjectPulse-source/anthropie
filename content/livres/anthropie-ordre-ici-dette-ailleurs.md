@@ -70,11 +70,11 @@ L'ordre que nous observons autour de nous — dans les institutions, les territo
 
 La définition du cadre et son vocabulaire opératoire sont présentés sur la page [Qu'est-ce que l'anthropie&nbsp;?](/quest-ce-que-lanthropie/) et dans le [glossaire](/glossaire/).
 
-## Pour qui&nbsp;?
+## Pour qui&nbsp;? {#pour-qui}
 
 Pour le lecteur d'essais qui cherche une grille de lecture d'ensemble — économie politique, histoire longue, écologie — plutôt qu'un traitement d'actualité. Aucun prérequis technique&nbsp;: l'appareil conceptuel est construit pas à pas. Les lecteurs des *Anthropie Working Papers* y trouveront le cadre complet dont chaque paper développe un théorème ou une application.
 
-## Que signifie «&nbsp;Ordre ici. Dette ailleurs.&nbsp;»&nbsp;?
+## Que signifie «&nbsp;Ordre ici. Dette ailleurs.&nbsp;»&nbsp;? {#que-signifie-ordre-ici-dette-ailleurs}
 
 Le sous-titre condense l'hypothèse du livre. Le contresens fréquent consiste à y lire une dénonciation de l'ordre, ou un slogan sur la dette publique. La formule dit autre chose — une comptabilité&nbsp;: tout ordre local (une ville propre, un réseau qui fonctionne, un budget maîtrisé) est financé par un désordre déplacé ailleurs, vers d'autres lieux, d'autres temps ou d'autres groupes sociaux. «&nbsp;Ici&nbsp;» et «&nbsp;ailleurs&nbsp;» ne sont pas des lieux fixes&nbsp;: ce sont les deux bouts d'un transfert, que le livre suit sur sept âges historiques. La formule ne renvoie pas à *L'Ordre de la dette* de Benjamin Lemoine (2016), qui relève de la sociologie des marchés de dette souveraine&nbsp;: seule la proximité des mots les rapproche.
 

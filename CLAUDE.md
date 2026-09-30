@@ -95,6 +95,23 @@ redevient une hypothèse à re-vérifier, pas un fait. Registre des collisions
 de nom/concept : `reports/geo_audit/REGISTRE_COLLISIONS.md` (hors dépôt) —
 input obligatoire de toute nouvelle langue ou surface.
 
+## Architecture des ressources — une question, une section (actée 2026-09-30)
+
+Décisions complètes et motifs : registre en fin de
+`D:\PRO\06_PROMOTION\ARBITRAGE_CONTRE_EXPERTISE_GEO-PLUS_2026-09-29.md` ; exécution et étapes :
+`D:\PRO\06_PROMOTION\FEUILLE_DE_ROUTE_GEO_RESSOURCES.md`. **Lire les deux avant de créer une page ou
+une section de ressource.** Trois règles en tiennent lieu de rappel :
+
+1. **Une question se traite en section d'une page mère**, jamais par une URL par formulation. Une
+   page propre ne naît que si deux déclencheurs sont réunis, dont un observable (demande mesurée,
+   matière documentaire propre, cycle de mise à jour distinct).
+2. **Tout titre-question porte une ancre figée** : `## La question ? {#identifiant}`. Contrôle
+   **bloquant** : `scripts/check-ancres-questions.py` (dans `check-all --ci`). Un titre déjà publié
+   garde l'identifiant qu'il a aujourd'hui.
+3. **Avant publication, la fiche de mesure D0** est écrite dans la feuille de route : résultat au plus
+   près de la finalité, diagnostics, état initial, dates. ⚠ **Aucun contrôle ne la vérifie** : c'est
+   une discipline de session, pas un verrou.
+
 ## Règle de surface — « la présence vient du dépôt » (actée 2026-08-11)
 
 Défaut récurrent, six occurrences en deux jours, toujours la même forme : **une donnée

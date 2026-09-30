@@ -68,7 +68,7 @@ Le «&nbsp;premier coup&nbsp;» n'est pas une faute. C'est la première configur
 
 Le livre instancie l'un des vecteurs du cadre anthropique&nbsp;: le déplacement du désordre vers d'autres groupes sociaux. L'ordre que produit la sélection sur dossier — celui d'institutions qui trient sur ce qui est déjà là — exporte son coût vers ceux qui n'ont pas de passé à montrer. Le cadre général est présenté sur la page [Qu'est-ce que l'anthropie&nbsp;?](/quest-ce-que-lanthropie/)&nbsp;; la notion que le livre met en récit est définie sur [Qu'est-ce que la réversibilité sociale&nbsp;?](/reversibilite-sociale/) et formalisée dans le working paper [AWP-08](/awp/awp-08/).
 
-## Pour qui&nbsp;?
+## Pour qui&nbsp;? {#pour-qui}
 
 Pour le lecteur qui veut comprendre pourquoi deux personnes voisines en revenu n'ont pas le même avenir après un même faux pas&nbsp;: étudiant, praticien du travail social ou de l'insertion, journaliste, chercheur, lecteur d'essais. Aucun prérequis&nbsp;: les mécanismes sont exposés à partir de cas concrets, et l'appareil de notes donne pour chaque fait sa source et son statut de preuve.
 

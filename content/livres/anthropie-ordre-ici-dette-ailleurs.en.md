@@ -65,11 +65,11 @@ The order we observe around us — in institutions, territories, economies — i
 
 The framework's definition and its operative vocabulary are set out on the [What is anthropy?](/en/quest-ce-que-lanthropie/) page and in the [glossary](/en/glossaire/).
 
-## Who is it for?
+## Who is it for? {#who-is-it-for}
 
 For the essay reader looking for an overall reading grid — political economy, deep history, ecology — rather than topical commentary. No technical prerequisite: the conceptual apparatus is built step by step. Readers of the *Anthropy Working Papers* will find here the complete framework from which each paper develops a theorem or an application.
 
-## What does "Order here. Debt elsewhere." mean?
+## What does "Order here. Debt elsewhere." mean? {#what-does-order-here-debt-elsewhere-mean}
 
 The subtitle condenses the book's hypothesis. The common misreading takes it for a denunciation of order, or a slogan about public debt. The formula says something else — an accounting: every local order (a clean city, a working network, a balanced budget) is financed by disorder displaced elsewhere, toward other places, other times, or other social groups. "Here" and "elsewhere" are not fixed locations: they are the two ends of a transfer, which the book follows across seven historical ages.
 

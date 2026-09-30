@@ -46,6 +46,10 @@ HORS_RESEAU = [
     # a la relecture -- elle ne se voit qu'a la coupure de ligne, chez le
     # lecteur, sur le chiffre meme qu'on met en avant.
     ("typographie francaise (insecables)", "check-typo-fr.py", []),
+    # Regle GEO (arbitrage GEO-PLUS, 30/09) : une section-question porte une ancre
+    # FIGEE. Bloquant parce que la faute ne se signale nulle part : un titre
+    # reecrit change son ancre et casse en silence les liens et les citations.
+    ("ancres figees des sections-questions", "check-ancres-questions.py", []),
 ]
 LOCAL_DERIVES = [
     # La CI rend les PNG, mais par une etape NON BLOQUANTE : si l'installation

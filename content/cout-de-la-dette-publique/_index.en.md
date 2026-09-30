@@ -94,7 +94,7 @@ One point often overlooked in public debate: over the INSEE series available sin
 
 **On the scale of a household.** Divided among France's {{< interets-par-foyer "foyers" >}} million tax households ({{< interets-par-foyer "periode" >}}, DGFiP), the {{< dette-val "interets_annee" >}} interest burden comes to about €{{< interets-par-foyer >}} per household. This is a notional, uniform division of the total: it is not a tax owed by each household, and it says nothing about who bears the burden — households, firms and non-residents contribute to public revenue in proportions this calculation ignores. Who bears it is the subject of the [second part of the file](/qui-paie-la-dette-publique/) (in French).
 
-## What the bill does not tell you: is the debt rising?
+## What the bill does not tell you: is the debt rising? {#what-the-bill-does-not-tell-you-is-the-debt-rising}
 
 Everything above answers "what does it cost". Whether the debt ratio rises, stabilises or falls is a different question — and the answer is in none of the figures above. It turns on three terms, of which this page measures one and a half.
 

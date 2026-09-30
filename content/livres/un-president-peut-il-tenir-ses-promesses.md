@@ -66,7 +66,7 @@ Ce que la grille permet tient en deux temps. **Avant l'élection**&nbsp;: distin
 
 Elle est mise à l'épreuve sur neuf promesses écrites, datées et signées — santé, salaires, prix, école, emploi, sécurité, dette, immigration, climat. Chacune est suivie jusqu'au point précis où son résultat échappe à celui qui la porte&nbsp;: une majorité à convaincre, un acteur à faire consentir, une règle européenne, une capacité à construire, une horloge qu'aucun décret n'accélère.
 
-## Pour qui&nbsp;?
+## Pour qui&nbsp;? {#pour-qui}
 
 Pour l'électeur qui veut savoir, avant de voter, ce qu'une promesse exigerait pour devenir un résultat&nbsp;; pour le journaliste et l'enseignant qui cherchent une méthode d'examen plutôt qu'un verdict&nbsp;; pour le lecteur d'essais politiques que les bilans en «&nbsp;tenue&nbsp;/ non tenue&nbsp;» laissent insatisfait. Aucun prérequis juridique&nbsp;: les textes cités sont expliqués là où ils servent, et chaque fait avancé porte sa source.
 

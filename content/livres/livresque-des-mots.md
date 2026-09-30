@@ -54,7 +54,7 @@ Le pari&nbsp;: que le voisinage des phrases produit du sens là où le classemen
 
 Ce que cherche cette anthologie n'est pas la commodité de la consultation thématique. C'est la résonance — la rencontre qui n'aurait pas dû avoir lieu et qui éclaire.
 
-## Pour qui&nbsp;?
+## Pour qui&nbsp;? {#pour-qui}
 
 Pour l'amoureux de la langue et des formules, le lecteur qui aime ouvrir un livre au hasard — et pour le cadeau&nbsp;: une anthologie sans ordre imposé se prête naturellement à être offerte.
 

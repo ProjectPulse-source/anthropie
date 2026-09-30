@@ -32,7 +32,7 @@ Pour qui&nbsp;: le lecteur curieux de philosophie, de sciences ou d'histoire&nbs
 
 Ce qui en fait un cadeau&nbsp;: c'est un **objet littéraire** avant d'être un outil de recherche. On s'y promène, et c'est exactement ce qu'on souhaite à la personne à qui on l'offre&nbsp;; l'index des auteurs, en fin de volume, permet ensuite d'y retrouver une voix. Pour l'amoureux de la langue, l'écrivain en quête de compagnie, le lecteur qui aime être surpris — [voir la fiche complète](/livres/livresque-des-mots/).
 
-## Broché ou Kindle&nbsp;?
+## Broché ou Kindle&nbsp;? {#broché-ou-kindle}
 
 Le broché reste le cadeau classique — un objet qu'on emballe. Mais le Kindle s'offre aussi, par **lien prépayé**&nbsp;: vous payez, le destinataire échange le lien contre le livre, sans liseuse (l'application gratuite suffit). C'est le cadeau de dernière minute ou de longue distance par excellence — à condition de connaître deux ou trois règles&nbsp;: [Offrir un livre Kindle&nbsp;: mode d'emploi](/offrir-un-livre-kindle/).
 

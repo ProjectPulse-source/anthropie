@@ -91,7 +91,7 @@ Une précision que le débat public oublie souvent&nbsp;: sur la série INSEE di
 
 **À l'échelle d'un foyer.** Rapportée aux {{< interets-par-foyer "foyers" >}}&nbsp;millions de foyers fiscaux ({{< interets-par-foyer "periode" >}}, DGFiP), la charge d'intérêts de {{< dette-val "interets_annee" >}} représente environ {{< interets-par-foyer >}}&nbsp;€ par foyer. C'est une division uniforme théorique de la charge totale&nbsp;: ce montant n'est pas un impôt dû par chaque foyer, et il ne dit pas qui la supporte — ménages, entreprises et non-résidents contribuent aux recettes publiques dans des proportions que ce calcul ignore. Qui la supporte est [l'objet du second volet](/qui-paie-la-dette-publique/).
 
-## Ce que la facture ne dit pas&nbsp;: la dette augmente-t-elle&nbsp;?
+## Ce que la facture ne dit pas&nbsp;: la dette augmente-t-elle&nbsp;? {#ce-que-la-facture-ne-dit-pas-la-dette-augmente-t-elle}
 
 Tout ce qui précède répond à «&nbsp;combien coûte&nbsp;». C'est une autre question que de savoir si le ratio de dette monte, se stabilise ou recule&nbsp;— et la réponse ne se lit dans aucun des chiffres ci-dessus. Elle dépend de trois termes, dont cette page n'en mesure qu'un et demi.
 
