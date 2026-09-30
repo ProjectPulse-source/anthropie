@@ -229,7 +229,11 @@ Ce qui peut s'établir, c'est l'effet d'une décision déterminée — une réfo
 
 **Sur les générations, un seul énoncé résiste à l'objection du bilan.** Qu'une dette pèse ou profite à ceux qui suivent dépend de son usage, du financement et des créances transmises&nbsp;: l'encours ne le dit pas, et la dette nette publiée ne le dit pas davantage, puisqu'elle ne déduit que certains actifs financiers. Ce qui reste vrai dans tous les cas est d'un autre ordre&nbsp;: la décision se prend sans ceux qui en porteront une part.
 
-Deux prolongements traitent chacun un canal identifié ici&nbsp;: le canal territorial, sur la page [Dette publique&nbsp;: pourquoi les collectivités locales sont-elles la variable d'ajustement&nbsp;?](/dette-publique-collectivites-locales/), et le transfert dans le temps, sur la page [La dette publique est-elle un fardeau pour les générations futures&nbsp;?](/dette-publique-generations-futures/)
+<div class="prolongements" role="group" aria-label="Prolongements du dossier">
+<p class="prolongements__titre">Prolongements du dossier&nbsp;: deux applications de «&nbsp;qui paie&nbsp;?&nbsp;»</p>
+<a class="prolongements__carte" href="/dette-publique-collectivites-locales/"><b>Collectivités locales</b><span>Comment une contrainte de l'État peut descendre vers des collectivités peu endettées mais très encadrées.</span></a>
+<a class="prolongements__carte" href="/dette-publique-generations-futures/"><b>Générations futures</b><span>Quand la dette constitue-t-elle réellement un transfert vers ceux qui viennent après&nbsp;?</span></a>
+</div>
 
 
 
