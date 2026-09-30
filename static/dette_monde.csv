@@ -1,0 +1,39 @@
+﻿niveau,comparabilite,pays,code,annee,zone_euro,stock_depart_pct_pib,stock_cloture_pct_pib,prix_taux_implicite_pct,recettes_pct_pib,charge_interets_pct_recettes,part_dette_moins_1an_pct,taux_10ans_pct
+europe,strictement comparable (Eurostat S.13),Grèce,EL,2025,oui,146.95,146.1,2.148,50.00,6.31,4.36,3.37
+europe,strictement comparable (Eurostat S.13),Italie,IT,2025,oui,130.99,137.1,2.937,47.94,8.03,10.88,3.59
+europe,strictement comparable (Eurostat S.13),France,FR,2025,oui,110.53,115.6,2.016,52.21,4.27,9.47,3.35
+europe,strictement comparable (Eurostat S.13),Belgique,BE,2025,oui,100.34,107.9,2.217,49.02,4.54,8.89,3.17
+europe,strictement comparable (Eurostat S.13),Espagne,ES,2025,oui,96.05,100.7,2.488,42.95,5.56,5.19,3.21
+europe,strictement comparable (Eurostat S.13),Portugal,PT,2025,oui,87.80,89.7,2.202,43.11,4.48,21.53,3.08
+europe,strictement comparable (Eurostat S.13),Finlande,FI,2025,oui,80.68,88.5,2.005,53.66,3.01,10.24,3.00
+europe,strictement comparable (Eurostat S.13),Autriche,AT,2025,oui,76.81,81.5,2.092,50.85,3.16,6.29,2.98
+europe,strictement comparable (Eurostat S.13),Hongrie,HU,2025,non,68.78,74.6,5.531,42.60,8.93,7.43,6.94
+europe,strictement comparable (Eurostat S.13),Slovénie,SI,2025,oui,62.88,65.7,2.010,46.62,2.71,5.99,3.10
+europe,strictement comparable (Eurostat S.13),Chypre,CY,2025,oui,59.79,55.0,1.911,43.64,2.62,1.37,2.93
+europe,strictement comparable (Eurostat S.13),Allemagne,DE,2025,oui,59.47,63.5,1.839,47.25,2.31,7.24,2.59
+europe,strictement comparable (Eurostat S.13),Slovaquie,SK,2025,oui,56.84,61.4,2.725,43.49,3.56,0.51,3.43
+europe,strictement comparable (Eurostat S.13),Croatie,HR,2025,oui,53.01,56.3,2.637,47.06,2.97,10.30,2.99
+europe,strictement comparable (Eurostat S.13),Pologne,PL,2025,non,51.44,59.7,4.875,43.60,5.75,3.15,5.52
+europe,strictement comparable (Eurostat S.13),Roumanie,RO,2025,non,50.34,59.3,5.650,35.45,8.02,6.96,6.96
+europe,strictement comparable (Eurostat S.13),Lettonie,LV,2025,oui,43.70,46.9,2.531,43.55,2.54,2.47,3.27
+europe,strictement comparable (Eurostat S.13),Malte,MT,2025,oui,43.06,46.4,2.819,34.68,3.50,8.03,3.44
+europe,strictement comparable (Eurostat S.13),Pays-Bas,NL,2025,oui,41.95,44.4,1.730,43.58,1.67,11.64,2.80
+europe,strictement comparable (Eurostat S.13),Tchéquie,CZ,2025,non,40.69,44.3,3.197,40.97,3.18,5.66,4.29
+europe,strictement comparable (Eurostat S.13),Irlande,IE,2025,oui,35.78,32.9,1.378,24.17,2.04,6.86,2.89
+europe,strictement comparable (Eurostat S.13),Lituanie,LT,2025,oui,35.60,39.5,2.508,39.41,2.27,0.63,2.88
+europe,strictement comparable (Eurostat S.13),Suède,SE,2025,non,32.91,35.1,1.841,47.97,1.26,28.88,2.45
+europe,strictement comparable (Eurostat S.13),Danemark,DK,2025,non,28.67,27.9,2.773,50.14,1.59,4.37,2.33
+europe,strictement comparable (Eurostat S.13),Luxembourg,LU,2025,oui,25.29,26.5,1.326,47.11,0.71,1.77,2.90
+europe,strictement comparable (Eurostat S.13),Estonie,EE,2025,oui,22.34,24.1,2.160,43.18,1.12,12.05,3.31
+europe,strictement comparable (Eurostat S.13),Bulgarie,BG,2025,non,21.53,29.9,3.818,38.15,2.15,7.23,3.93
+avances_hors_ue,"avec réserve (OCDE, passifs financiers bruts)",États-Unis,USA,2025,,117.04,,3.964,31.65,14.66,,
+avances_hors_ue,"avec réserve (OCDE, passifs financiers bruts)",Japon,JPN,2025,,214.93,,0.694,38.05,3.92,,
+avances_hors_ue,"avec réserve (OCDE, passifs financiers bruts)",Royaume-Uni,GBR,2025,,96.57,,2.597,42.01,5.97,,
+avances_hors_ue,"avec réserve (OCDE, passifs financiers bruts)",Canada,CAN,2025,,103.63,,3.340,42.46,8.15,,
+avances_hors_ue,"avec réserve (OCDE, passifs financiers bruts)",Suisse,CHE,2025,,38.76,,0.702,33.50,0.81,,
+avances_hors_ue,"avec réserve (OCDE, passifs financiers bruts)",Norvège,NOR,2025,,,,,61.60,1.85,,
+avances_hors_ue,"avec réserve (OCDE, passifs financiers bruts)",France (base OCDE),FRA,2025,,113.64,,2.011,51.55,4.43,,
+emergents,"indicatif (dette FMI, intérêts Banque mondiale de l'administration centrale)",Chine,CHN,2021,,72.10,,,,3.44,,
+emergents,"indicatif (dette FMI, intérêts Banque mondiale de l'administration centrale)",Inde,IND,2022,,84.60,,,,33.98,,
+emergents,"indicatif (dette FMI, intérêts Banque mondiale de l'administration centrale)",Brésil,BRA,2024,,87.00,,,,30.09,,
+emergents,"indicatif (dette FMI, intérêts Banque mondiale de l'administration centrale)",Afrique du Sud,ZAF,2024,,76.00,,,,18.17,,

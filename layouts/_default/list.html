@@ -4,10 +4,12 @@
   {{ if not (in (slice "awp" "serie-awp") .Section) }}
   <header class="page-header">
     <h1 class="page-header__title">{{ partial "fr-typo.html" .Title }}</h1>
-    {{ with .Description }}
+    {{ with .Params.chapo | default .Description }}
     {{- /* Même chaîne que la meta description : jetons de chiffres ({dette.*}, {qp.*}, {monde.*})
            résolus, puis typographie française. Rendu brut jusqu'au 29/09 : un jeton y aurait
-           été affiché tel quel au lecteur, et les insécables manquaient (règle du site). */ -}}
+           été affiché tel quel au lecteur, et les insécables manquaient (règle du site).
+           `chapo` (30/09, page internationale) : un chapô plus long que la description, qui reste
+           courte pour les moteurs (150 à 170 caractères). Absent : la description sert de chapô. */ -}}
     <p class="page-header__lede">{{ partial "fr-typo.html" (partial "desc-figures.html" (dict "text" . "isbn" $.Params.isbn)) }}</p>
     {{ end }}
   </header>

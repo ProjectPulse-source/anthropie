@@ -53,6 +53,20 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-30 — Page internationale : hiérarchie refaite sur l'avis « forme et fond », NON POUSSÉE
+
+Arbitrage : `D:\PRO\.claude\external-audits\ARBITRATIONS\ENTRANTE_2026-09-30_Dette_Internationale_forme_arbitrage.md`
+(13 points ; rejetés : la formule « la monnaie compte », non établie ; le repli de la FAQ, gabarit commun au site).
+Ordre « surprendre → montrer → expliquer → documenter » : figure signature en premier, « le résultat en une phrase »
+(R² prix~stock), équation en deux niveaux, classement du stock descendu ; replis `<details>` (27 pays, régression,
+trente ans d'écarts, OCDE, émergents) : 3 923 → 2 782 mots visibles, rien supprimé, même URL. Section euro devenue
+encadré (ancre `#euro-et-taux` gardée ; toutes les ancres publiées le matin sont conservées). Cartes Japon / Suisse /
+États-Unis / France-étalon (`dette-monde-cas`). **Nouveaux produits** : `static/dette_monde.csv` (UTF-8 avec BOM,
+module `csv`), carte de partage `og-dette-monde.jpg` (`og_dossier_dette.py --monde`, redessinée par `dette-monde.yml`
+avec les données), balisage `Dataset` (`schema-dataset-monde.html`), champ `chapo` (gabarit `list.html`), citation
+prête à copier. **Défaut corrigé** : « la {pays} » en dur → noms avec article fournis par le générateur. Quatre gardes
+de prose de plus (Japon, Suisse, États-Unis). `check-all --ci` à 0 ; rendu 390 px relu (débordement 0 px).
+
 ### 2026-09-30 — Page internationale PUBLIÉE (volet 3 du dossier dette), poussée sur demande de l'auteur
 
 Brouillon retiré ; onglet « 3. Et ailleurs » ajouté au dossier dette (badge « Eurostat <année> » lu de

@@ -95,3 +95,62 @@ main .dette-monde-table--monde thead th:last-child { text-align: left !important
   display: inline-block; margin-left: 0.3rem; padding: 0.05rem 0.5rem; border-radius: 0.8rem;
   font-size: 0.85rem; white-space: nowrap; background: rgba(24, 79, 149, 0.08); color: #184f95;
 }
+
+// ── Hiérarchie du 30/09 (avis « forme et fond ») : surface simple, profondeur repliée sur la même URL ──
+
+.donnees-ligne { font-family: var(--font-sans); font-size: 0.85rem; color: var(--color-text-subtle);
+  .badge-donnees { margin: 0 0.4rem 0 0; } }
+
+// La preuve reste dans le HTML (moteurs, impression, recherche dans la page) et se déplie à la demande.
+.repli {
+  margin: 0.4rem 0 1.6rem;
+  > summary { cursor: pointer; font-family: var(--font-sans); font-size: 0.9rem; color: var(--color-accent);
+              padding: 0.35rem 0; }
+  &[open] > summary { margin-bottom: 0.6rem; }
+}
+
+.resultat-phrase {
+  margin: 1.4rem 0 1.6rem;
+  padding: 0.9rem 1.1rem;
+  border-left: 4px solid #eb6834;
+  background: rgba(235, 104, 52, 0.06);
+  p { margin: 0; }
+}
+
+// L'équation en deux niveaux : la lecture courante en termes, puis l'identité exacte.
+.equation {
+  margin: 1.2rem 0 1.6rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--color-rule-medium);
+  border-radius: 6px;
+  font-family: var(--font-sans);
+  &__titre { margin: 0 0 0.8rem; font-size: 0.85rem; color: var(--color-text-subtle); }
+  &__ligne { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+  &__terme { display: flex; flex-direction: column; padding: 0.45rem 0.7rem; border-radius: 5px;
+             background: rgba(24, 79, 149, 0.07);
+             b { font-size: 1.05rem; color: #184f95; }
+             small { font-size: 0.75rem; color: var(--color-text-subtle); } }
+  &__terme--resultat { background: rgba(235, 104, 52, 0.1); b { color: #b8481c; } }
+  &__op { font-size: 1.4rem; color: var(--color-text-subtle); }
+  &__exacte { margin: 0.9rem 0 0; font-size: 0.78rem; color: var(--color-text-subtle); }
+}
+
+// Trois laboratoires hors UE, et la France sur la même base pour étalon.
+.dette-monde-cas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8.2rem, 1fr));  // deux colonnes à 390 px
+  gap: 0.8rem;
+  margin: 1rem 0 1.4rem;
+  font-family: var(--font-sans);
+  &__carte { padding: 0.8rem 0.9rem; border: 1px solid var(--color-rule-medium); border-radius: 6px;
+             &.is-france { background: rgba(24, 79, 149, 0.05); } }
+  &__pays { margin: 0 0 0.5rem; font-weight: 600; small { font-weight: 400; color: var(--color-text-subtle); } }
+  dl { margin: 0; font-size: 0.85rem; }
+  dt { color: var(--color-text-subtle); font-size: 0.75rem; }
+  dd { margin: 0 0 0.35rem; }
+}
+
+.encadre--euro h3 { margin-top: 0.2rem; }
+
+.citer { margin: 1.4rem 0; padding: 0.8rem 1rem; border: 1px dashed var(--color-rule-medium); border-radius: 6px;
+         font-size: 0.9rem; p { margin: 0; } }

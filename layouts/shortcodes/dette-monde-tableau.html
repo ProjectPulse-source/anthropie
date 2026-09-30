@@ -5,7 +5,11 @@
        Lit data/dette_monde.json (scripts/update_dette_monde.py). Aucun chiffre saisi ici : le
        gabarit ne fait que formater (virgule décimale, espace insécable avant %). Un pays sans
        valeur affiche « — » ET le build avertit : une absence se dit, elle ne se tait pas. */ -}}
+{{- /* repli="Libellé" (30/09, avis sur la forme) : le tableau reste dans le HTML — lu par les moteurs, imprimé,
+       cherchable — mais se déplie à la demande. La preuve reste sur la page ; elle cesse de barrer la lecture. */ -}}
 {{- $n := .Get "niveau" -}}
+{{- $repli := .Get "repli" -}}
+{{- with $repli }}<details class="repli"><summary>{{ . }}</summary>{{ end -}}
 {{- $d := site.Data.dette_monde -}}
 {{- if not $d -}}{{- errorf "dette-monde-tableau: data/dette_monde.json absent (%s)" .Page.RelPermalink -}}{{- end -}}
 {{- if eq $n "europe" -}}
@@ -75,3 +79,4 @@
 {{- else -}}
   {{- errorf "dette-monde-tableau: niveau %q inconnu (europe | avances | emergents | ecarts) dans %s" $n .Page.RelPermalink -}}
 {{- end -}}
+{{- with $repli }}</details>{{ end -}}

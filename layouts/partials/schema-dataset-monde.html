@@ -1,0 +1,57 @@
+{{- /* JSON-LD Dataset — comparaison internationale de la dette publique (page portant `dataset_monde: true`).
+
+  Deuxième jeu de données du site (30/09, avis « forme et fond ») : un partial séparé plutôt qu'une
+  généralisation de schema-dataset-dette.html, dont les champs (INSEE trimestriel, COFOG) n'ont pas
+  d'équivalent ici. À généraliser le jour où un troisième jeu arrive.
+
+  RIEN n'est recopié : années, date de relevé, définitions et niveaux de comparabilité se dérivent de
+  data/dette_monde.json (scripts/update_dette_monde.py). L'identité auteur vient de data/author.toml.
+  Page en français seulement. Absence de données = échec de build. */ -}}
+{{- $d := site.Data.dette_monde -}}
+{{- if not $d -}}
+  {{- errorf "schema-dataset-monde: data/dette_monde.json absent (page %s)" .RelPermalink -}}
+{{- else -}}
+{{- $m := $d.meta -}}
+{{- $a := site.Data.author.author -}}
+{{- $sameAs := slice -}}
+{{- range $a.sameAs -}}{{- $sameAs = $sameAs | append .url -}}{{- end -}}
+{{- $personne := dict "@type" "Person" "name" $a.name "url" $a.canonicalProfileUrl "sameAs" $sameAs -}}
+{{- $sources := slice -}}
+{{- range slice "gov_10a_main" "gov_10dd_edpt1" "nama_10_gdp" "gov_10dd_ggd" "irt_lt_mcby_a" "prc_hicp_aind" -}}
+  {{- $sources = $sources | append (printf "https://ec.europa.eu/eurostat/databrowser/view/%s/default/table?lang=fr" .) -}}
+{{- end -}}
+{{- $sources = $sources | append "https://data-explorer.oecd.org/" "https://www.imf.org/external/datamapper/GGXWDG_NGDP@WEO" "https://data.worldbank.org/indicator/GC.XPN.INTP.RV.ZS" -}}
+{{- $vars := slice
+    (dict "@type" "PropertyValue" "name" "Stock de dette publique" "unitText" "% du PIB" "description" $m.definitions.stock)
+    (dict "@type" "PropertyValue" "name" "Prix de la dette (taux implicite)" "unitText" "% par an" "description" $m.definitions.prix)
+    (dict "@type" "PropertyValue" "name" "Charge d'intérêts" "unitText" "% des recettes publiques" "description" $m.definitions.charge)
+    (dict "@type" "PropertyValue" "name" "Transmission" "description" $m.definitions.transmission)
+    (dict "@type" "PropertyValue" "name" "Écart de taux à 10 ans avec l'Allemagne" "unitText" "points de pourcentage"
+          "description" (printf "Rendements de convergence Eurostat, années %s" (delimit $d.ecarts_allemagne.annees ", "))) -}}
+{{- $ds := dict
+    "@context" "https://schema.org"
+    "@type" "Dataset"
+    "name" "Dette publique comparée : stock, prix, recettes et charge d'intérêts dans l'Union européenne et hors d'Europe"
+    "description" (printf "Compilation dérivée automatiquement des séries officielles, sans aucune valeur recopiée à la main : 27 pays de l'Union européenne en %s, %s ; économies avancées hors UE, %s ; grands émergents, %s. Identité exacte vérifiée pour chaque pays européen : intérêts / recettes = stock de départ × taux implicite ÷ recettes. Écarts de taux à 10 ans avec l'Allemagne depuis 1995." $m.annee $m.niveaux.europe $m.niveaux.avances $m.niveaux.emergents)
+    "url" .Permalink
+    "inLanguage" "fr"
+    "license" "https://creativecommons.org/licenses/by/4.0/"
+    "creator" $personne
+    "publisher" $personne
+    "dateModified" $d.releve_le
+    "temporalCoverage" (printf "1995/%s" $m.annee)
+    "spatialCoverage" (dict "@type" "Place" "name" "Union européenne, économies avancées de l'OCDE et grands émergents")
+    "about" (dict "@type" "Thing" "name" "dette publique" "sameAs" "https://www.wikidata.org/wiki/Q3024794")
+    "measurementTechnique" "Rapatriement automatisé des API officielles (Eurostat, OCDE, FMI, Banque mondiale), identité comptable vérifiée pays par pays, gardes de prose bloquantes, publication automatique — aucune valeur saisie à la main"
+    "isBasedOn" $sources
+    "variableMeasured" $vars
+    "keywords" (slice "dette publique" "comparaison internationale" "Union européenne" "taux implicite" "charge d'intérêts" "Eurostat" "OCDE" "FMI")
+    "distribution" (slice
+        (dict "@type" "DataDownload" "name" "dette_monde.csv" "encodingFormat" "text/csv"
+              "contentUrl" (printf "%sdette_monde.csv" site.BaseURL))
+        (dict "@type" "DataDownload" "name" "dette_monde.json" "encodingFormat" "application/json"
+              "contentUrl" (printf "%sdette_monde.json" site.BaseURL))) -}}
+<script type="application/ld+json">
+{{ $ds | jsonify (dict "indent" "  ") | safeJS }}
+</script>
+{{- end -}}

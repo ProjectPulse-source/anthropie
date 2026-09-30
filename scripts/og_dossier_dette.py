@@ -171,6 +171,40 @@ def figure_ciseau(d: ImageDraw.ImageDraw, annees: list[int],
     d.text((x0, bas + 62), l2, font=font("inter", 17, 400), fill=URL_GREY)
 
 
+def figure_jumeaux(d: ImageDraw.ImageDraw, rows: list[dict], bas_code: str, haut_code: str) -> None:
+    """Volet 3 : le nuage « Même dette, charge différente » réduit à l'essentiel — les 27 pays en gris,
+    la paire de faux jumeaux désignée par la règle de la page, reliée, en bleu (bas) et orange (haut)."""
+    x0, x1, top, bas = 660, 1126, 100, 424
+    xmax = 160.0
+    ymax = max(10.0, max(r["charge"] for r in rows) * 1.08)
+
+    def X(v):
+        return x0 + (x1 - x0) * min(v, xmax) / xmax
+
+    def Y(v):
+        return bas - (bas - top) * v / ymax
+
+    for g in range(0, int(ymax) + 1, 2):
+        d.line([(x0, Y(g)), (x1, Y(g))], fill=GRID, width=2 if g == 0 else 1)
+    for r in rows:
+        if r["code"] not in (bas_code, haut_code):
+            cx, cy = X(r["stock"]), Y(r["charge"])
+            d.ellipse([cx - 6, cy - 6, cx + 6, cy + 6], fill=(196, 192, 188))
+    by = {r["code"]: r for r in rows}
+    pb, ph = by[bas_code], by[haut_code]
+    d.line([(X(pb["stock"]), Y(pb["charge"])), (X(ph["stock"]), Y(ph["charge"]))], fill=GREY, width=3)
+    for r, c in ((pb, C1), (ph, C2)):
+        cx, cy = X(r["stock"]), Y(r["charge"])
+        d.ellipse([cx - 11, cy - 11, cx + 11, cy + 11], fill=c)
+    fa = font("inter", 18, 500)
+    d.text((x0, bas + 14), "0", font=fa, fill=URL_GREY)
+    d.text((x1 - 70, bas + 14), "160 %", font=fa, fill=URL_GREY)
+    d.text((x0, bas + 40), "Les 27 pays de l'UE : dette en % du PIB (horizontal)",
+           font=font("inter", 17, 400), fill=URL_GREY)
+    d.text((x0, bas + 62), "et intérêts en % des recettes publiques (vertical)",
+           font=font("inter", 17, 400), fill=URL_GREY)
+
+
 def carte(nom: str, titre: list[str], accroche: str, source: str, url: str,
           dessin, cle: list[tuple], legende: tuple = None) -> None:
     global LEGENDE_CISEAU
@@ -186,7 +220,43 @@ def carte(nom: str, titre: list[str], accroche: str, source: str, url: str,
     print("OK  %s (%dx%d, %d ko)" % (nom, W, H, p.stat().st_size // 1024))
 
 
+def carte_monde() -> None:
+    """Volet 3, comparaison internationale (avis du 30/09 : l'aperçu doit montrer la découverte de la page).
+    Tout vient de data/dette_monde.json : la paire de faux jumeaux (règle publiée), et les chaînes
+    françaises du bloc `affichage`, celles-là mêmes que la page imprime — la carte ne peut pas dire autre
+    chose que la page. Lancée aussi par le workflow dette-monde.yml (option --monde), dans le même geste
+    que les données."""
+    dm = ROOT / "data" / "dette_monde.json"
+    if not dm.is_file():
+        fail("jeu de données absent : %s — lancer scripts/update_dette_monde.py d'abord" % dm)
+    j = json.loads(dm.read_text(encoding="utf-8"))
+    A, rows, j0 = j["affichage"], j["europe"], j["faux_jumeaux"][0]
+    if (A["j_bas"], A["j_haut"]) != (next(r["nom"] for r in rows if r["code"] == j0["bas"]),
+                                     next(r["nom"] for r in rows if r["code"] == j0["haut"])):
+        fail("carte monde : la paire affichée ne correspond plus au premier couple de faux jumeaux")
+    nbsp = lambda s: s.replace(" ", " ")
+    cle = [(C1, "%s : dette %s du PIB, intérêts %s des recettes"
+            % (A["j_bas"], nbsp(A["j_bas_stock"]), nbsp(A["j_bas_charge"]))),
+           (C2, "%s : dette %s du PIB, intérêts %s des recettes"
+            % (A["j_haut"], nbsp(A["j_haut_stock"]), nbsp(A["j_haut_charge"])))]
+    fc = font("inter", 19, 500)
+    for _, t in cle:
+        if 100 + fc.getlength(t) > 640:
+            fail("carte monde : ligne de clé trop longue pour la colonne (%s)" % t)
+    carte("og-dette-monde.jpg",
+          ["Même dette,", "charge × %s" % A["j_rapport"]],
+          "Le stock ne dit pas ce que la dette coûte.",
+          "Eurostat %s · 27 pays de l'UE · CC BY 4.0" % j["meta"]["annee"],
+          "stephane-lalut.com/dette-publique-comparaison-internationale/",
+          lambda d: figure_jumeaux(d, rows, j0["bas"], j0["haut"]),
+          cle)
+
+
 def main() -> int:
+    if "--monde" in sys.argv[1:]:
+        carte_monde()
+        return 0
+    carte_monde()
     qp = ROOT / "data" / "qui_paie_donnees.json"
     do = ROOT / "data" / "dette_officielle.json"
     for f in (qp, do):

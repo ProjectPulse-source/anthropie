@@ -59,6 +59,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 OUT_DATA = ROOT / "data" / "dette_monde.json"
 OUT_STATIC = ROOT / "static" / "dette_monde.json"
+# CSV : demandé par l'avis du 30/09 (« plus exploitable qu'un JSON par un journaliste ou un enseignant »).
+# Une ligne par pays et par niveau de comparabilité, les mêmes valeurs que la page, point décimal.
+OUT_CSV = ROOT / "static" / "dette_monde.csv"
 OUT_IMG = ROOT / "static" / "img"
 PAGE_URL = "stephane-lalut.com/dette-publique-comparaison-internationale/"
 
@@ -79,6 +82,16 @@ NOMS = {
     "USA": "États-Unis", "JPN": "Japon", "GBR": "Royaume-Uni", "CAN": "Canada", "CHE": "Suisse",
     "NOR": "Norvège", "FRA": "France (base OCDE)", "CHN": "Chine", "IND": "Inde", "BRA": "Brésil",
     "ZAF": "Afrique du Sud",
+}
+# Nom AVEC son article, pour la prose : la paire de faux jumeaux sort d'une règle, pas d'un choix ; si elle change,
+# « la {pays} » écrit en dur donnerait « la Portugal ». Le générateur fournit donc le groupe nominal complet.
+ARTICLE = {
+    "BE": "la Belgique", "BG": "la Bulgarie", "CZ": "la Tchéquie", "DK": "le Danemark", "DE": "l'Allemagne",
+    "EE": "l'Estonie", "IE": "l'Irlande", "EL": "la Grèce", "ES": "l'Espagne", "FR": "la France", "HR": "la Croatie",
+    "IT": "l'Italie", "CY": "Chypre", "LV": "la Lettonie", "LT": "la Lituanie", "LU": "le Luxembourg",
+    "HU": "la Hongrie", "MT": "Malte", "NL": "les Pays-Bas", "AT": "l'Autriche", "PL": "la Pologne",
+    "PT": "le Portugal", "RO": "la Roumanie", "SI": "la Slovénie", "SK": "la Slovaquie", "FI": "la Finlande",
+    "SE": "la Suède",
 }
 AVANCES = ["USA", "JPN", "GBR", "CAN", "CHE", "NOR", "FRA"]
 EMERGENTS = ["CHN", "IND", "BRA", "ZAF"]
@@ -579,6 +592,9 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts) -> dict:
     j0 = jum[0]
     lo, hi = by[j0["bas"]], by[j0["haut"]]
     A["j_bas"], A["j_haut"] = lo["nom"], hi["nom"]
+    for k, x in (("j_bas", lo), ("j_haut", hi)):
+        A[k + "_le"] = ARTICLE[x["code"]]
+        A[k + "_le_maj"] = ARTICLE[x["code"]][0].upper() + ARTICLE[x["code"]][1:]
     A["j_bas_stock"], A["j_haut_stock"] = pct(lo["stock"], 0), pct(hi["stock"], 0)
     A["j_bas_charge"], A["j_haut_charge"] = pct(lo["charge"]), pct(hi["charge"])
     A["j_bas_prix"], A["j_haut_prix"] = pct(lo["prix"], 2), pct(hi["prix"], 2)
@@ -648,6 +664,12 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts) -> dict:
          and max(r["effet_euro"] for r in stats["robustesse_inflation"]) / min(r["effet_euro"] for r in stats["robustesse_inflation"]) > 0.5
          and min(r["effet_inflation"] for r in stats["robustesse_inflation"]) / max(r["effet_inflation"] for r in stats["robustesse_inflation"]) > 0.5),
         ("le Japon consacre moins que la France (base OCDE)", av["JPN"]["charge"] < av["FRA"]["charge"]),
+        # Cartes hors Europe (30/09) : les qualificatifs de la prose, recalculés.
+        ("le Japon doit « près du double » de la France (rapport 1,7 à 2,2)", 1.7 < av["JPN"]["stock"] / av["FRA"]["stock"] < 2.2),
+        ("le Japon paie moins cher que la France sur ses passifs", av["JPN"]["prix"] < av["FRA"]["prix"]),
+        ("la Suisse « paie peu sur une dette faible » (< 60 % du PIB, rapport sous la France)",
+         av["CHE"]["stock"] < 60 and av["CHE"]["prix"] < av["FRA"]["prix"]),
+        ("les États-Unis ont des passifs « proches » de la France (écart < 15 points)", abs(av["USA"]["stock"] - av["FRA"]["stock"]) < 15),
         ("la dette nette suisse est négative", (av["CHE"].get("dette_nette") or 0) < 0),
         # Section « trente ans d'écarts » : chaque constat de la prose, recalculé.
         ("avant 1999, les écarts italien et espagnol fondent (> 2 points en 1995, < 0,5 en 1998)",
@@ -679,6 +701,28 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts) -> dict:
     if faux:
         fail("la page affirme ce que les données ne soutiennent plus : " + " ; ".join(faux))
     return A
+
+
+def csv_texte(an: str, rows: list[dict], avances: list[dict], emergents: list[dict]) -> str:
+    import csv, io as _io
+    def v(x, d):
+        return "" if x is None else ("%." + str(d) + "f") % x
+    buf = _io.StringIO()
+    w = csv.writer(buf, lineterminator="\n")  # guillemets posés par le module : un libellé peut contenir une virgule
+    w.writerow(["niveau", "comparabilite", "pays", "code", "annee", "zone_euro", "stock_depart_pct_pib",
+                "stock_cloture_pct_pib", "prix_taux_implicite_pct", "recettes_pct_pib", "charge_interets_pct_recettes",
+                "part_dette_moins_1an_pct", "taux_10ans_pct"])
+    for x in sorted(rows, key=lambda r: -r["stock"]):
+        w.writerow(["europe", "strictement comparable (Eurostat S.13)", x["nom"], x["code"], an, "oui" if x["euro"] else "non",
+                    v(x["stock"], 2), v(x["stock_fin"], 1), v(x["prix"], 3), v(x["recettes"], 2), v(x["charge"], 2),
+                    v(x["part_1an"], 2), v(x["taux10"], 2)])
+    for x in avances:
+        w.writerow(["avances_hors_ue", "avec réserve (OCDE, passifs financiers bruts)", x["nom"], x["code"], an, "",
+                    v(x.get("stock"), 2), "", v(x.get("prix"), 3), v(x.get("recettes"), 2), v(x.get("charge"), 2), "", ""])
+    for x in emergents:
+        w.writerow(["emergents", "indicatif (dette FMI, intérêts Banque mondiale de l'administration centrale)", x["nom"],
+                    x["code"], str(x.get("annee") or ""), "", v(x.get("stock"), 2), "", "", "", v(x.get("charge"), 2), "", ""])
+    return buf.getvalue()
 
 
 # ------------------------------------------------------------------ main
@@ -766,7 +810,8 @@ def main() -> int:
             p2.pop("_licence", None)
             if prev.get("releve_le") \
                     and json.dumps(p2, sort_keys=True, ensure_ascii=False) == json.dumps(n2, sort_keys=True, ensure_ascii=False) \
-                    and all((OUT_IMG / nom).exists() and (OUT_IMG / nom).read_text(encoding="utf-8") == svg for nom, svg in figs.items()):
+                    and all((OUT_IMG / nom).exists() and (OUT_IMG / nom).read_text(encoding="utf-8") == svg for nom, svg in figs.items()) \
+                    and OUT_CSV.exists() and OUT_CSV.read_text(encoding="utf-8-sig") == csv_texte(an, rows, avances, emergents):
                 log("Donnees et figures identiques : rien ecrit (releve_le conserve : %s)." % prev.get("releve_le"))
                 return 0
         except (ValueError, KeyError):
@@ -775,9 +820,10 @@ def main() -> int:
     txt = json.dumps(payload, ensure_ascii=False, indent=1)
     OUT_DATA.write_text(txt, encoding="utf-8")
     OUT_STATIC.write_text(txt, encoding="utf-8")
+    OUT_CSV.write_text(csv_texte(an, rows, avances, emergents), encoding="utf-8-sig", newline="\n")  # BOM : Excel lit les accents
     for nom, svg in figs.items():
         (OUT_IMG / nom).write_text(svg, encoding="utf-8")
-    log("Ecrit : data/dette_monde.json, static/dette_monde.json, %d figures" % len(figs))
+    log("Ecrit : data/dette_monde.json, static/dette_monde.json, static/dette_monde.csv, %d figures" % len(figs))
     if png:
         try:
             import cairosvg

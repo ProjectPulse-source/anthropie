@@ -1,18 +1,25 @@
 ---
 title: "Dette publique : pourquoi 100 % du PIB ne pèse pas partout de la même façon"
-description: "Stock, taux d'intérêt, recettes, refinancement : quatre dimensions pour comparer ce que représente réellement une dette publique. Dans l'Union européenne, le prix payé ne suit pas le niveau de la dette ; la France, à {monde.fr_stock_fin} du PIB, consacre {monde.fr_charge} de ses recettes aux intérêts, moins que plusieurs pays moins endettés."
+description: "Même dette, charge différente : dans l'Union européenne, le prix de la dette publique ne suit pas son niveau. Stock, taux, recettes comparés en 27 pays et hors d'Europe."
+chapo: "À dette presque égale, {monde.j_haut_le} consacre {monde.j_haut_charge} de ses recettes publiques aux intérêts, {monde.j_bas_le} {monde.j_bas_charge}. Le stock ne suffit donc pas à mesurer ce que pèse une dette publique : il faut regarder aussi son prix, les recettes disponibles pour la servir et la vitesse à laquelle les nouvelles conditions de financement se transmettent."
+og_title: "Dette publique : ce que 100 % du PIB ne dit pas"
+og_image: "images/og-dette-monde.jpg"
+og_image_alt: "Carte de partage : « Même dette, charge différente » — les 27 pays de l'Union européenne, dette en % du PIB et intérêts en % des recettes ; deux pays à dette voisine reliés, l'un paie plus de trois fois plus que l'autre."
 date: 2026-09-29
 lastmod: 2026-09-30
 # Construite le 29/09/2026, publiée le 30/09/2026 sans attendre le WEO (contre-expertise PRO-20260930-061613) ;
-# arbitrages : 06_PROMOTION/DOSSIER_PAGE_DETTE_INTERNATIONALE.md, dépôt D:\PRO.
+# hiérarchie refaite le 30/09 sur l'avis « forme et fond » (arbitrage ENTRANTE_2026-09-30_Dette_Internationale_forme) :
+# surprendre, montrer, expliquer, documenter — rien de supprimé, la preuve repliée sur la même URL.
+# Arbitrages : 06_PROMOTION/DOSSIER_PAGE_DETTE_INTERNATIONALE.md, dépôt D:\PRO.
 donnees: [dette_monde]
+dataset_monde: true
 faq:
   - question: "La France est-elle plus endettée que les autres pays ?"
     answer: "Plus que la plupart : fin {monde.annee}, sa dette publique atteint {monde.fr_stock_fin} du PIB, la troisième de l'Union européenne après la Grèce et l'Italie (Eurostat, dette de Maastricht). Mais le niveau de la dette ne dit pas ce qu'elle coûte : en {monde.annee}, la France a consacré {monde.fr_charge} de ses recettes publiques aux intérêts, moins que {monde.n_plus_charges_moins_endettes} pays pourtant moins endettés ({monde.plus_charges_moins_endettes})."
   - question: "La dette de la France lui coûte-t-elle plus cher qu'à ses voisins ?"
     answer: "Pas systématiquement. En {monde.annee}, son taux implicite — les intérêts de l'année rapportés à la dette de fin {monde.annee_1} — est de {monde.fr_prix}, proche de la moyenne de la zone euro ({monde.prix_moyen_euro}) : certains pays paient moins, notamment l'Allemagne ({monde.de_prix}), d'autres davantage. Le rendement à 10 ans dépasse ce taux implicite de {monde.fr_ecart_taux}, et {monde.fr_part_1an} de la dette arrive à échéance dans l'année : si les conditions de financement restaient supérieures au coût de la dette remplacée, les refinancements pousseraient ce coût moyen à la hausse."
   - question: "Pourquoi deux pays aussi endettés ne paient-ils pas les mêmes intérêts ?"
-    answer: "Parce que la charge dépend de trois termes : le stock de dette, le prix auquel il a été financé et les recettes disponibles pour le servir. En {monde.annee}, la {monde.j_bas} ({monde.j_bas_stock} du PIB) et la {monde.j_haut} ({monde.j_haut_stock}) ont des dettes voisines ; la seconde consacre pourtant {monde.j_rapport} fois plus de ses recettes aux intérêts, parce qu'elle paie {monde.j_haut_prix} sur son stock contre {monde.j_bas_prix}."
+    answer: "Parce que la charge dépend de trois termes : le stock de dette, le prix auquel il a été financé et les recettes disponibles pour le servir. En {monde.annee}, {monde.j_bas_le} ({monde.j_bas_stock} du PIB) et {monde.j_haut_le} ({monde.j_haut_stock}) ont des dettes voisines ; la seconde consacre pourtant {monde.j_rapport} fois plus de ses recettes aux intérêts : elle paie {monde.j_haut_prix} sur son stock contre {monde.j_bas_prix}, et ses recettes pèsent {monde.j_haut_rec} du PIB contre {monde.j_bas_rec}."
   - question: "L'euro fait-il baisser le coût de la dette ?"
     answer: "Pas automatiquement. Avant 1999, les écarts de taux avec l'Allemagne ont fondu dans les futurs pays de l'euro, mais aussi en Suède, qui n'y est jamais entrée. En 2012, les membres les plus fragiles ont décroché (la Grèce empruntait {monde.ec_el_2012} points au-dessus de l'Allemagne), plus qu'aucun pays resté en dehors ; la détente a suivi les interventions de la BCE. En {monde.annee}, la Suède et le Danemark empruntent à 10 ans moins cher que l'Allemagne, la France plus cher. Sur le stock de dette, la Suède paie {monde.se_prix}, comme l'Allemagne ({monde.de_prix}). L'euro supprime le risque de change entre ses membres ; il ne leur garantit pas le taux allemand."
   - question: "Une dette élevée provoque-t-elle forcément une crise ?"
@@ -28,83 +35,94 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 {{< dossier-dette volet="3" >}}
 
-**Deux pays peuvent afficher le même niveau de dette et supporter des charges très différentes.** En {{< monde-val "annee" >}}, la {{< monde-val "j_bas" >}} et la {{< monde-val "j_haut" >}} avaient des dettes voisines — {{< monde-val "j_bas_stock" >}} et {{< monde-val "j_haut_stock" >}} du PIB. La {{< monde-val "j_haut" >}} a pourtant consacré **{{< monde-val "j_haut_charge" >}} de ses recettes publiques aux intérêts, la {{< monde-val "j_bas" >}} {{< monde-val "j_bas_charge" >}}**&nbsp;: {{< monde-val "j_rapport" >}} fois moins. Le ratio dette/PIB, souvent mis en avant dans le débat public, n'est qu'un terme de l'équation.
+**Deux pays peuvent afficher le même niveau de dette et supporter des charges très différentes.** En {{< monde-val "annee" >}}, {{< monde-val "j_bas_le" >}} et {{< monde-val "j_haut_le" >}} avaient des dettes voisines — {{< monde-val "j_bas_stock" >}} et {{< monde-val "j_haut_stock" >}} du PIB. {{< monde-val "j_haut_le_maj" >}} a pourtant consacré **{{< monde-val "j_haut_charge" >}} de ses recettes publiques aux intérêts, {{< monde-val "j_bas_le" >}} {{< monde-val "j_bas_charge" >}}**&nbsp;: {{< monde-val "j_rapport" >}} fois moins. Le ratio dette/PIB, souvent mis en avant dans le débat public, n'est qu'un terme de l'équation.
 
-Cette page compare ce que représente réellement une dette publique, d'abord dans les {{< monde-val "n_pays" >}} pays de l'Union européenne, où les données sont strictement comparables, puis pour quelques grandes économies hors d'Europe, avec leur niveau de comparabilité affiché. <span class="badge-donnees">Données&nbsp;: {{< monde-val "date_donnees" >}}</span>
-
-## Quatre mots, quatre mesures {#quatre-mesures}
-
-- **Le stock**&nbsp;: la dette publique rapportée au PIB. C'est le chiffre le plus cité. Il se lit à deux dates&nbsp;: le **stock de clôture** (dette de fin d'année) sert au classement&nbsp;; le **stock de départ** (dette de fin d'année précédente, rapportée au PIB de l'année) sert à expliquer les intérêts de l'année.
-- **Le prix**&nbsp;: le taux implicite, c'est-à-dire les intérêts versés une année rapportés à la dette de la fin de l'année précédente. Il mesure le coût moyen du stock, non le taux auquel l'État emprunte aujourd'hui. Eurostat publie aussi un «&nbsp;coût apparent&nbsp;», fondé sur la dette moyenne de l'année&nbsp;: les deux conventions sont proches mais non identiques.
-- **La charge**&nbsp;: les intérêts rapportés aux recettes publiques. C'est ce que la dette prend, chaque année, sur les moyens de l'État.
-- **La transmission**&nbsp;: la vitesse à laquelle les nouveaux taux gagnent le prix du stock, selon la part de la dette qui arrive à échéance et l'écart entre le taux de marché et le prix moyen.
-
-Les trois premiers sont liés par une identité exacte, vérifiée pour chaque pays&nbsp;:
-
-<p class="formule">charge = stock de départ × prix ÷ recettes<br><small>intérêts / recettes = (dette de fin d'année précédente / PIB) × (intérêts / dette de fin d'année précédente) ÷ (recettes / PIB)</small></p>
-
-Deux pays au même stock peuvent donc supporter des charges différentes pour deux raisons, et deux seulement&nbsp;: ils ne paient pas le même prix, ou ils ne disposent pas des mêmes recettes.
-
-## Le stock&nbsp;: un classement qui ne dit pas tout {#stock}
-
-<figure class="figure-ciseau">
-  <img src="/img/dette-monde-stock.svg" alt="Barres horizontales de la dette publique en pourcentage du PIB, fin {{< monde-val "annee" >}}, pour les 27 pays de l'Union européenne, de la Grèce, la plus endettée, à l'Estonie ; la France est troisième, à {{< monde-val "fr_stock_fin" >}}." width="720" height="543" loading="lazy">
-  <figcaption>Eurostat, dette brute de Maastricht des administrations publiques, fin {{< monde-val "annee" >}}. En bleu, la zone euro&nbsp;; en orange, les pays hors zone euro.</figcaption>
-</figure>
-
-Fin {{< monde-val "annee" >}}, la France est le {{< monde-val "fr_rang_stock" >}} pays le plus endetté de l'Union européenne, à **{{< monde-val "fr_stock_fin" >}} du PIB**. Ce classement est celui que retiennent la plupart des comparaisons. Il mesure un stock brut&nbsp;: il ne compte ni les actifs publics, ni les engagements qui ne sont pas de la dette, comme les retraites futures.
-
-Pour expliquer les intérêts payés en {{< monde-val "annee" >}}, il faut repartir de la dette déjà en place au début de l'année. Les figures suivantes utilisent donc le **stock de départ**, la dette de fin {{< monde-val "annee_1" >}} rapportée au PIB de {{< monde-val "annee" >}}, comme les chiffres de l'ouverture&nbsp;; le graphique précédent décrivait, lui, la situation à la fin de {{< monde-val "annee" >}}.
+<p class="donnees-ligne"><span class="badge-donnees">Données&nbsp;: {{< monde-val "date_donnees" >}}</span> Les {{< monde-val "n_pays" >}} pays de l'Union européenne, puis quelques grandes économies hors d'Europe, chacune avec son niveau de comparabilité. Télécharger&nbsp;: <a href="/dette_monde.csv">CSV</a> · <a href="/dette_monde.json">JSON</a> · <a href="#sources">méthode</a></p>
 
 ## Même dette, charge différente {#meme-dette}
 
 <figure class="figure-ciseau">
   <img src="/img/dette-monde-charge.svg" alt="Nuage de points : en abscisse la dette rapportée au PIB, en ordonnée les intérêts en pourcentage des recettes publiques, pour les 27 pays de l'Union européenne. Les pays de la zone euro s'alignent le long d'une droite peu pentue ; les pays hors zone euro, Hongrie, Roumanie et Pologne en tête, se situent bien au-dessus pour une dette comparable." width="720" height="488" loading="lazy">
-  <figcaption>Stock (dette de fin {{< monde-val "annee_1" >}} / PIB {{< monde-val "annee" >}}) et charge (intérêts / recettes), {{< monde-val "annee" >}}. Les pointillés relient les faux jumeaux désignés par une règle fixée avant le calcul&nbsp;: pour chaque pays, son plus proche voisin en stock&nbsp;; couples dont l'écart est inférieur à 10 points&nbsp;; les trois plus grands écarts de charge.</figcaption>
+  <figcaption>Stock de départ (dette de fin {{< monde-val "annee_1" >}} / PIB {{< monde-val "annee" >}}) et charge (intérêts / recettes), {{< monde-val "annee" >}}. Les pointillés relient les faux jumeaux désignés par une règle fixée avant le calcul&nbsp;: pour chaque pays, son plus proche voisin en stock&nbsp;; couples dont l'écart est inférieur à 10 points&nbsp;; les trois plus grands écarts de charge.</figcaption>
 </figure>
 
-Sur l'ensemble des {{< monde-val "n_pays" >}} pays, le stock ne rend compte que d'une partie de la dispersion des charges (régression linéaire simple, R² = {{< monde-val "r2_charge_stock" >}}). L'association de rang est pourtant forte&nbsp;: classés par dette et par charge, les pays s'ordonnent de façon voisine (corrélation de rang de {{< monde-val "spearman" >}}).
+<div class="resultat-phrase">
 
-La figure précise ce contraste. **À l'intérieur de la zone euro, le stock rend compte de l'essentiel de la charge** (R² = {{< monde-val "r2_euro" >}} sur {{< monde-val "n_euro" >}} pays)&nbsp;; il en va de même parmi les {{< monde-val "n_hors" >}} pays hors zone euro (R² = {{< monde-val "r2_hors" >}}). Mais les deux groupes ne suivent pas la même droite&nbsp;: hors de l'euro, la charge croît beaucoup plus vite avec la dette, notamment parce que les pays les plus endettés y paient aussi plus cher. La pente ne dépend d'aucun pays en particulier&nbsp;: en retirant tour à tour chacun des sept, elle reste comprise entre {{< monde-val "pente_hors_loo_min" >}} et {{< monde-val "pente_hors_loo_max" >}}.
+**Le résultat en une phrase.** Dans l'Union européenne en {{< monde-val "annee" >}}, être plus endetté ne signifie pas payer plus cher sa dette&nbsp;: le lien linéaire entre le niveau de la dette et son taux implicite est pratiquement nul (R² = {{< monde-val "r2_prix_stock" >}}). Sur une année et entre pays, le niveau de la dette ne permet pas de prédire son prix&nbsp;; cela ne veut pas dire qu'il n'a jamais d'effet sur lui.
+
+</div>
+
+Le stock n'est pas sans rapport avec la charge&nbsp;: classés par dette et par charge, les pays s'ordonnent de façon voisine (corrélation de rang de {{< monde-val "spearman" >}}). Mais il ne rend compte que d'une partie de sa dispersion (R² = {{< monde-val "r2_charge_stock" >}}), et la figure précise pourquoi. **À l'intérieur de la zone euro, le stock rend compte de l'essentiel de la charge** (R² = {{< monde-val "r2_euro" >}} sur {{< monde-val "n_euro" >}} pays)&nbsp;; il en va de même parmi les {{< monde-val "n_hors" >}} pays hors zone euro (R² = {{< monde-val "r2_hors" >}}). Mais les deux groupes ne suivent pas la même droite&nbsp;: hors de l'euro, la charge croît beaucoup plus vite avec la dette, notamment parce que les pays les plus endettés y paient aussi plus cher. La pente ne dépend d'aucun pays en particulier&nbsp;: en retirant tour à tour chacun des sept, elle reste comprise entre {{< monde-val "pente_hors_loo_min" >}} et {{< monde-val "pente_hors_loo_max" >}}.
 
 La France illustre l'autre versant&nbsp;: avec {{< monde-val "fr_stock" >}} du PIB de dette en début d'année, elle a consacré **{{< monde-val "fr_charge" >}} de ses recettes** aux intérêts en {{< monde-val "annee" >}}, moins que {{< monde-val "n_plus_charges_moins_endettes" >}} pays moins endettés&nbsp;: {{< monde-val "plus_charges_moins_endettes" >}}.
 
-## Pourquoi&nbsp;? Le prix et les recettes {#prix-et-recettes}
+## Pourquoi&nbsp;? Une équation, quatre mesures {#quatre-mesures}
 
-{{< dette-monde-tableau niveau="europe" >}}
+<div class="equation" role="group" aria-label="La charge de la dette décomposée en trois termes">
+  <p class="equation__titre">Ce que la dette pèse sur les recettes publiques dépend de trois choses</p>
+  <div class="equation__ligne">
+    <span class="equation__terme"><b>la dette</b><small>stock de départ, en % du PIB</small></span>
+    <span class="equation__op" aria-label="multipliée par">×</span>
+    <span class="equation__terme"><b>son coût moyen</b><small>prix&nbsp;: taux implicite</small></span>
+    <span class="equation__op" aria-label="divisée par">÷</span>
+    <span class="equation__terme"><b>les recettes publiques</b><small>en % du PIB</small></span>
+    <span class="equation__op" aria-label="égale">=</span>
+    <span class="equation__terme equation__terme--resultat"><b>la charge</b><small>intérêts en % des recettes</small></span>
+  </div>
+  <p class="equation__exacte">Identité exacte, vérifiée pour chaque pays&nbsp;: intérêts / recettes = (dette de fin d'année précédente / PIB) × (intérêts / dette de fin d'année précédente) ÷ (recettes / PIB)</p>
+</div>
 
-Le tableau décompose la charge de chaque pays en ses trois termes. Deux constats en ressortent.
+- **Le stock**&nbsp;: la dette publique rapportée au PIB, le chiffre le plus cité. Il se lit à deux dates&nbsp;: le **stock de départ** (dette de fin d'année précédente, rapportée au PIB de l'année) explique les intérêts de l'année — c'est celui de la figure et de l'ouverture&nbsp;; le **stock de clôture** (dette de fin d'année) sert au classement plus bas.
+- **Le prix**&nbsp;: le taux implicite, c'est-à-dire les intérêts versés une année rapportés à la dette de la fin de l'année précédente. Il mesure le coût moyen du stock, non le taux auquel un État emprunte aujourd'hui. Eurostat publie aussi un «&nbsp;coût apparent&nbsp;», fondé sur la dette moyenne de l'année&nbsp;: les deux conventions sont proches mais non identiques.
+- **La charge**&nbsp;: la part des recettes des administrations publiques consacrée au paiement des intérêts.
+- **La transmission**&nbsp;: la vitesse à laquelle les nouvelles conditions de financement se répercutent sur le coût moyen du stock, selon la part de la dette qui arrive à échéance et l'écart entre le taux de marché et le taux implicite.
 
-**Le prix ne suit pas le niveau de la dette.** Dans l'Union européenne en {{< monde-val "annee" >}}, le taux implicite n'a aucun lien linéaire avec le stock (R² = {{< monde-val "r2_prix_stock" >}})&nbsp;: l'Italie, très endettée, paie un prix voisin de pays qui le sont beaucoup moins, et la France paie **{{< monde-val "fr_prix" >}}**, dans la moyenne de la zone euro ({{< monde-val "prix_moyen_euro" >}}).
+À stock de départ égal, dans cette identité comptable, deux pays ne peuvent différer en charge que par deux termes&nbsp;: le prix de leur stock ou le niveau de leurs recettes.
 
-**Les recettes comptent aussi.** À prix égal, un État qui prélève une plus faible part de sa richesse consacre une plus grande part de ses recettes aux intérêts. C'est l'un des deux termes qui séparent les faux jumeaux&nbsp;: la {{< monde-val "j_haut" >}} paie {{< monde-val "j_haut_prix" >}} sur son stock contre {{< monde-val "j_bas_prix" >}} pour la {{< monde-val "j_bas" >}}, et ses recettes représentent {{< monde-val "j_haut_rec" >}} du PIB contre {{< monde-val "j_bas_rec" >}}.
+## Le prix et les recettes {#prix-et-recettes}
 
-### Prix de la dette et inflation récente&nbsp;: ce que montre l'Europe {#prix-et-inflation}
+**Le prix ne suit pas le niveau de la dette.** L'Italie, très endettée, paie un taux implicite voisin de pays qui le sont beaucoup moins, et la France paie **{{< monde-val "fr_prix" >}}**, dans la moyenne de la zone euro ({{< monde-val "prix_moyen_euro" >}}).
+
+**Les recettes comptent aussi.** À prix égal, un État qui prélève une plus faible part de sa richesse consacre une plus grande part de ses recettes aux intérêts. Ce sont les deux termes qui séparent les faux jumeaux&nbsp;: {{< monde-val "j_haut_le" >}} paie {{< monde-val "j_haut_prix" >}} sur son stock contre {{< monde-val "j_bas_prix" >}} pour {{< monde-val "j_bas_le" >}}, et ses recettes représentent {{< monde-val "j_haut_rec" >}} du PIB contre {{< monde-val "j_bas_rec" >}}.
+
+{{< dette-monde-tableau niveau="europe" repli="Voir les 27 pays : stock, prix, recettes et charge" >}}
+
+### Prix de la dette et inflation récente {#prix-et-inflation}
 
 <figure class="figure-ciseau">
   <img src="/img/dette-monde-prix.svg" alt="Nuage de points : en abscisse l'inflation moyenne des trois années précédentes, en ordonnée le taux implicite de la dette. Les pays hors zone euro à forte inflation, Roumanie, Hongrie, Pologne, paient le plus cher ; les pays baltes, en zone euro, ont connu une forte inflation sans payer cher ; la Suède paie comme l'Allemagne." width="720" height="488" loading="lazy">
   <figcaption>Taux implicite de la dette ({{< monde-val "annee" >}}) et inflation moyenne des trois années précédentes (indice des prix harmonisé, Eurostat). Relation descriptive sur une année.</figcaption>
 </figure>
 
-Dans une régression descriptive, l'inflation moyenne des trois années précédentes et l'appartenance à la zone euro rendent compte ensemble d'une large part de la dispersion observée (R² = {{< monde-val "r2_prix_euro_inflation" >}}). Le coefficient associé à la zone euro est de −{{< monde-val "effet_euro" >}} point, celui associé à un point d'inflation moyenne supplémentaire de +{{< monde-val "effet_inflation" >}} point. Ces coefficients ne mesurent pas des effets causaux, et la fenêtre de trois ans est un choix&nbsp;: avec une inflation moyenne sur deux, quatre ou cinq ans, leur signe ne change pas et leur ordre de grandeur tient (de −{{< monde-val "rob_euro_min" >}} à −{{< monde-val "rob_euro_max" >}} point pour la zone euro, de +{{< monde-val "rob_infl_min" >}} à +{{< monde-val "rob_infl_max" >}} point par point d'inflation, R² de {{< monde-val "rob_r2_min" >}} à {{< monde-val "rob_r2_max" >}}). Surtout, l'association n'a pas la même force selon la monnaie&nbsp;: **hors de la zone euro, le taux implicite est étroitement associé à l'inflation récente** (R² = {{< monde-val "r2_prix_inflation_hors" >}})&nbsp;; **dans la zone euro, beaucoup moins** (R² = {{< monde-val "r2_prix_inflation_euro" >}}), comme le montrent les pays baltes, qui ont connu une forte inflation sans payer cher.
+**Hors de la zone euro, le taux implicite est étroitement associé à l'inflation récente** (R² = {{< monde-val "r2_prix_inflation_hors" >}})&nbsp;; **dans la zone euro, beaucoup moins** (R² = {{< monde-val "r2_prix_inflation_euro" >}})&nbsp;: les pays baltes ont connu une forte inflation sans payer cher. L'appartenance monétaire ne suffit pas pour autant&nbsp;: **la Suède, hors de l'euro, paie {{< monde-val "se_prix" >}}**, comme l'Allemagne. Sur une seule année, ces données montrent que le prix d'une dette publique ne découle pas de son niveau&nbsp;; elles ne disent ni que l'euro le rend moins cher, ni l'inverse.
 
-L'appartenance monétaire ne suffit pas pour autant&nbsp;: **la Suède, hors de l'euro, paie {{< monde-val "se_prix" >}}**, comme l'Allemagne. Sur une seule année, les données ne disent donc ni que l'euro rend la dette moins chère, ni l'inverse&nbsp;; elles montrent que le prix d'une dette publique ne découle pas de son niveau.
+<details class="repli"><summary>La régression et sa robustesse</summary>
 
-### L'euro a-t-il fait baisser les taux&nbsp;? Trente ans d'écarts avec l'Allemagne {#euro-et-taux}
+Dans une régression descriptive, l'inflation moyenne des trois années précédentes et l'appartenance à la zone euro rendent compte ensemble d'une large part de la dispersion observée (R² = {{< monde-val "r2_prix_euro_inflation" >}}). Le coefficient associé à la zone euro est de −{{< monde-val "effet_euro" >}} point, celui associé à un point d'inflation moyenne supplémentaire de +{{< monde-val "effet_inflation" >}} point. Ces coefficients ne mesurent pas des effets causaux, et la fenêtre de trois ans est un choix&nbsp;: avec une inflation moyenne sur deux, quatre ou cinq ans, leur signe ne change pas et leur ordre de grandeur tient (de −{{< monde-val "rob_euro_min" >}} à −{{< monde-val "rob_euro_max" >}} point pour la zone euro, de +{{< monde-val "rob_infl_min" >}} à +{{< monde-val "rob_infl_max" >}} point par point d'inflation, R² de {{< monde-val "rob_r2_min" >}} à {{< monde-val "rob_r2_max" >}}).
 
-Une année ne suffit pas pour juger une monnaie. Le tableau suit donc, depuis 1995, l'écart entre le taux auquel chaque État emprunte à 10 ans et celui de l'Allemagne, pour des membres de l'euro et pour des pays restés en dehors. Il s'agit du taux de marché, non du taux implicite du stock.
+</details>
+
+<aside class="encadre encadre--euro">
+
+### Une monnaie commune suffit-elle à fixer le prix&nbsp;? Trente ans d'écarts avec l'Allemagne {#euro-et-taux}
+
+Non, à en juger par trente ans de taux à 10 ans comparés à ceux de l'Allemagne, avec des pays restés hors de l'euro pour témoins. Avant 1999, l'écart italien fond de {{< monde-val "ec_it_1995" >}} à {{< monde-val "ec_it_1998" >}} point, mais celui de la Suède aussi, de {{< monde-val "ec_se_1995" >}} à {{< monde-val "ec_se_1998" >}}&nbsp;: la convergence n'est pas propre à l'euro. En 2012, la Grèce emprunte {{< monde-val "ec_el_2012" >}} points au-dessus de l'Allemagne et le Portugal {{< monde-val "ec_pt_2012" >}}, plus qu'aucun pays resté en dehors&nbsp;; la détente suit ensuite les interventions de la BCE. En {{< monde-val "annee" >}}, la Suède et le Danemark empruntent moins cher que l'Allemagne, la France {{< monde-val "ec_fr_an" >}} point plus cher. **L'euro a supprimé le risque de change entre ses membres&nbsp;; il ne leur a pas garanti le taux allemand.**
+
+<details class="repli"><summary>Voir les trente ans de données et leur lecture</summary>
+
+Il s'agit du taux de marché à 10 ans, non du taux implicite du stock.
 
 {{< dette-monde-tableau niveau="ecarts" >}}
 
-Trois périodes se dessinent, et elles ne racontent pas la même histoire.
-
-**Avant l'euro, les écarts fondent, y compris hors de l'euro.** De 1995 à 1998, l'écart italien passe de {{< monde-val "ec_it_1995" >}} à {{< monde-val "ec_it_1998" >}} point, l'écart espagnol de {{< monde-val "ec_es_1995" >}} à {{< monde-val "ec_es_1998" >}}. Mais celui de la Suède, qui n'a jamais adopté l'euro, passe dans le même temps de {{< monde-val "ec_se_1995" >}} à {{< monde-val "ec_se_1998" >}}. La convergence n'est donc pas propre à l'euro&nbsp;; la perspective d'y entrer a pu peser pour les futurs membres, mais ces chiffres ne permettent pas d'en isoler la part.
+**Avant l'euro, les écarts fondent, y compris hors de l'euro.** De 1995 à 1998, l'écart italien passe de {{< monde-val "ec_it_1995" >}} à {{< monde-val "ec_it_1998" >}} point, l'écart espagnol de {{< monde-val "ec_es_1995" >}} à {{< monde-val "ec_es_1998" >}}. Celui de la Suède, qui n'a jamais adopté l'euro, passe dans le même temps de {{< monde-val "ec_se_1995" >}} à {{< monde-val "ec_se_1998" >}}. La perspective d'entrer dans l'euro a pu peser pour les futurs membres, mais ces chiffres ne permettent pas d'en isoler la part.
 
 **En 2012, l'euro ne protège pas ses membres les plus fragiles.** La Grèce emprunte alors {{< monde-val "ec_el_2012" >}} points au-dessus de l'Allemagne, le Portugal {{< monde-val "ec_pt_2012" >}}, l'Irlande {{< monde-val "ec_ie_2012" >}}, l'Espagne {{< monde-val "ec_es_2012" >}}, l'Italie {{< monde-val "ec_it_2012" >}}. Hors de l'euro, la Suède reste à {{< monde-val "ec_se_2012" >}} point au-dessus de l'Allemagne et le Danemark à {{< monde-val "ec_dk_2012" >}} point au-dessous&nbsp;; mais la Hongrie paie {{< monde-val "ec_hu_2012" >}} points&nbsp;: garder sa monnaie n'a pas protégé tout le monde. Aucun pays resté hors de l'euro n'atteint toutefois les niveaux grec et portugais, ceux d'États qui s'endettaient dans une monnaie dont ils ne maîtrisaient plus l'émission. Les écarts ne se referment qu'après l'engagement de la BCE, à l'été 2012, de défendre l'euro, puis ses achats massifs de titres publics à partir de 2015&nbsp;: la détente suit une décision de la banque centrale, qui peut changer, et non l'appartenance à l'euro, qui existait déjà en 2012.
 
 **Aujourd'hui, rester hors de l'euro ne coûte pas forcément plus cher.** En {{< monde-val "annee" >}}, la Suède emprunte à 10 ans {{< monde-val "ec_se_an" >}} point **au-dessous** de l'Allemagne, le Danemark {{< monde-val "ec_dk_an" >}} point au-dessous&nbsp;; la France paie {{< monde-val "ec_fr_an" >}} point de plus que l'Allemagne, l'Italie {{< monde-val "ec_it_an" >}}. Hors de l'euro, la Pologne et la Hongrie paient bien davantage ({{< monde-val "ec_pl_an" >}} et {{< monde-val "ec_hu_an" >}} points), mais leur inflation récente est aussi bien plus forte&nbsp;; et puisque la Suède est, elle aussi, hors de l'euro, ce n'est pas la monnaie qui les en sépare.
 
-L'euro a supprimé le risque de change entre ses membres&nbsp;; il ne leur a pas garanti le taux allemand. Sur trente ans, les chiffres ne montrent ni un avantage automatique ni un handicap permanent&nbsp;: une convergence avant 1999 que la Suède a connue sans l'euro, un décrochage en 2012 de ses membres les plus fragiles, plus violent que celui d'aucun pays resté en dehors, puis une détente qui a suivi les interventions de la BCE.
+</details>
+
+</aside>
 
 ## La transmission&nbsp;: un repère de pression, non une prévision {#transmission}
 
@@ -113,23 +131,36 @@ L'euro a supprimé le risque de change entre ses membres&nbsp;; il ne leur a pas
   <figcaption>Part de la dette arrivant à échéance dans l'année (Eurostat, dette par échéance résiduelle) et écart entre le rendement harmonisé à 10 ans et le taux implicite du stock, {{< monde-val "annee" >}}. Repère de transmission, non prévision.</figcaption>
 </figure>
 
-Le taux implicite d'une année rémunère une dette émise à des dates différentes&nbsp;: il ne rejoint les conditions de marché qu'au fil des refinancements. Deux mesures situent cette inertie&nbsp;: la part de la dette qui arrive à échéance dans l'année, et l'écart entre le rendement harmonisé à 10 ans et le taux implicite. Ni l'une ni l'autre n'est une prévision&nbsp;: l'État n'emprunte pas qu'à 10 ans, et le rendement d'aujourd'hui n'est pas celui de demain.
+Le taux implicite d'une année rémunère une dette émise à des dates différentes&nbsp;: il ne rejoint les conditions de marché qu'au fil des refinancements. Deux mesures situent cette inertie&nbsp;: la part de la dette qui arrive à échéance dans l'année, et l'écart entre le rendement harmonisé à 10 ans et le taux implicite. Ni l'une ni l'autre n'est une prévision&nbsp;: un État n'emprunte pas qu'à 10 ans, et le rendement d'aujourd'hui n'est pas celui de demain.
 
 **En France, {{< monde-val "fr_part_1an" >}} de la dette présente à fin {{< monde-val "annee" >}} a une échéance résiduelle inférieure à un an. En {{< monde-val "annee" >}}, le rendement harmonisé à 10 ans ({{< monde-val "fr_taux10" >}}) était supérieur de {{< monde-val "fr_ecart_taux" >}} au taux implicite du stock.** Si les conditions de financement demeuraient supérieures au coût de la dette remplacée, les refinancements exerceraient une pression haussière sur le coût moyen — le mécanisme que détaille la page [Combien coûte la dette publique&nbsp;?](/cout-de-la-dette-publique/). Au Danemark, l'indicateur est orienté dans l'autre sens&nbsp;: le rendement à 10 ans se situe sous le taux implicite du stock ({{< monde-val "dk_ecart_taux" >}}).
 
+## Le stock&nbsp;: un classement qui ne dit pas tout {#stock}
+
+<figure class="figure-ciseau">
+  <img src="/img/dette-monde-stock.svg" alt="Barres horizontales de la dette publique en pourcentage du PIB, fin {{< monde-val "annee" >}}, pour les 27 pays de l'Union européenne, de la Grèce, la plus endettée, à l'Estonie ; la France est troisième, à {{< monde-val "fr_stock_fin" >}}." width="720" height="543" loading="lazy">
+  <figcaption>Stock de clôture&nbsp;: Eurostat, dette brute de Maastricht des administrations publiques, fin {{< monde-val "annee" >}}. En bleu, la zone euro&nbsp;; en orange, les pays hors zone euro.</figcaption>
+</figure>
+
+Fin {{< monde-val "annee" >}}, la France est le {{< monde-val "fr_rang_stock" >}} pays le plus endetté de l'Union européenne, à **{{< monde-val "fr_stock_fin" >}} du PIB**. C'est le classement que retiennent la plupart des comparaisons. Il mesure un stock brut, sans les actifs publics ni les engagements qui ne sont pas de la dette, comme les retraites futures&nbsp;; et, on l'a vu, il ne dit pas ce que cette dette coûte.
+
 ## Et hors d'Europe&nbsp;? {#hors-europe}
 
-Hors de l'Union européenne, les données ne sont plus harmonisées&nbsp;: deux tableaux, deux niveaux de comparabilité. Pour les économies avancées, les séries de l'OCDE (*Economic Outlook*) permettent un calcul voisin, sur une base plus large&nbsp;: des passifs financiers bruts, et non la dette de Maastricht — la France y figure pour mesurer l'écart entre les deux sources. Le rapport des intérêts à ces passifs n'est donc pas exactement le taux implicite européen.
+Hors de l'Union européenne, les données ne sont plus harmonisées. Pour les économies avancées, l'OCDE (*Economic Outlook*) permet un calcul voisin sur une base plus large, des passifs financiers bruts et non la dette de Maastricht&nbsp;; le rapport des intérêts à ces passifs n'est donc pas exactement le taux implicite européen. La France y figure, sur la même base, pour servir d'étalon. Trois cas font office de laboratoires.
 
-{{< dette-monde-tableau niveau="avances" >}}
+{{< dette-monde-cas >}}
 
-Pour les grands émergents, seules des mesures indicatives existent&nbsp;: la dette selon le FMI, et les intérêts de la seule administration centrale selon la Banque mondiale, toujours pris la même année.
+**Le Japon** doit, sur cette base, près du double de la France, mais son rapport intérêts/passifs est de {{< monde-val "jpn_prix" >}} contre {{< monde-val "fra_prix" >}}, et il consacre moins de ses recettes aux intérêts ({{< monde-val "jpn_charge" >}} contre {{< monde-val "fra_charge" >}}). **La Suisse**, avec sa propre monnaie, paie peu sur une dette faible, et ses actifs financiers dépassent ses passifs. **Les États-Unis**, pour des passifs proches de ceux de la France, consacrent aux intérêts {{< monde-val "usa_fra_rapport" >}} fois la part française de leurs recettes.
+
+{{< dette-monde-tableau niveau="avances" repli="Voir toutes les économies avancées (OCDE)" >}}
+
+<details class="repli"><summary>Les grands émergents&nbsp;: Chine, Inde, Brésil, Afrique du Sud (données indicatives)</summary>
+
+Seules des mesures indicatives existent&nbsp;: la dette selon le FMI, et les intérêts de la seule administration centrale selon la Banque mondiale, toujours pris la même année. L'Inde consacre {{< monde-val "ind_charge" >}} des recettes de son administration centrale aux intérêts, le Brésil {{< monde-val "bra_charge" >}}, l'Afrique du Sud {{< monde-val "zaf_charge" >}}, pour des dettes de {{< monde-val "ind_stock" >}}, {{< monde-val "bra_stock" >}} et {{< monde-val "zaf_stock" >}} du PIB selon le FMI, en {{< monde-val "ind_charge_annee" >}}, {{< monde-val "bra_charge_annee" >}} et {{< monde-val "zaf_charge_annee" >}}, dernières années publiées par la Banque mondiale. Une part de l'écart tient au prix payé, une autre à la faiblesse relative des recettes&nbsp;: sans données harmonisées, on ne peut pas les séparer.
 
 {{< dette-monde-tableau niveau="emergents" >}}
 
-Trois cas éclairent la page. **Le Japon**, dont les passifs financiers bruts atteignent {{< monde-val "jpn_stock" >}} du PIB, présente sur cette base un rapport intérêts/passifs de {{< monde-val "jpn_prix" >}}, contre {{< monde-val "fra_prix" >}} pour la France, et consacre {{< monde-val "jpn_charge" >}} de ses recettes aux intérêts — moins que la France sur la même base ({{< monde-val "fra_charge" >}}). **La Suisse**, avec sa propre monnaie et des passifs bruts de {{< monde-val "che_stock" >}} du PIB, présente un rapport de {{< monde-val "che_prix" >}} et n'y consacre que {{< monde-val "che_charge" >}} de ses recettes&nbsp;; ses passifs financiers nets sont négatifs ({{< monde-val "che_dette_nette" >}} du PIB)&nbsp;: ses actifs financiers dépassent ses passifs. **Les États-Unis**, à {{< monde-val "usa_stock" >}}, présentent un rapport de {{< monde-val "usa_prix" >}} et y consacrent {{< monde-val "usa_charge" >}} de leurs recettes — {{< monde-val "usa_fra_rapport" >}} fois la part française, pour une dette comparable.
-
-Pour les grands émergents, les chiffres sont indicatifs et ne se comparent pas directement aux autres&nbsp;: l'Inde consacre {{< monde-val "ind_charge" >}} des recettes de son administration centrale aux intérêts, le Brésil {{< monde-val "bra_charge" >}}, l'Afrique du Sud {{< monde-val "zaf_charge" >}}, pour des dettes de {{< monde-val "ind_stock" >}}, {{< monde-val "bra_stock" >}} et {{< monde-val "zaf_stock" >}} du PIB selon le FMI, en {{< monde-val "ind_charge_annee" >}}, {{< monde-val "bra_charge_annee" >}} et {{< monde-val "zaf_charge_annee" >}}, dernières années publiées par la Banque mondiale. Une part de l'écart tient au prix payé, une autre à la faiblesse relative des recettes&nbsp;: sans données harmonisées, on ne peut pas les séparer.
+</details>
 
 <aside class="encadre">
 
@@ -159,6 +190,12 @@ Pour les grands émergents, les chiffres sont indicatifs et ne se comparent pas 
 
 **Grands émergents (indicatif)** — FMI, *World Economic Outlook* (dette brute des administrations publiques)&nbsp;; Banque mondiale, *World Development Indicators* (intérêts en % des recettes de l'administration centrale).
 
-Les calculs, les statistiques et les figures sont produits par un script unique, relancé à chaque publication des sources&nbsp;; aucun chiffre de cette page n'est saisi à la main. Les données sont téléchargeables en [JSON](/dette_monde.json) sous licence CC BY 4.0. Méthode&nbsp;: la charge, le stock et le prix vérifient l'identité exacte donnée plus haut, avec la dette de fin d'année précédente (convention du taux implicite de la BCE, distincte du «&nbsp;coût apparent&nbsp;» d'Eurostat, fondé sur la dette moyenne)&nbsp;; la robustesse des coefficients est recalculée à chaque mise à jour sur des fenêtres d'inflation de deux à cinq ans&nbsp;; les statistiques sont des moindres carrés simples, descriptifs.
+Les calculs, les statistiques et les figures sont produits par un script unique, relancé à chaque publication des sources&nbsp;; aucun chiffre de cette page n'est saisi à la main. **Télécharger les données** (licence CC BY 4.0)&nbsp;: [CSV](/dette_monde.csv), une ligne par pays, lisible dans un tableur&nbsp;; [JSON](/dette_monde.json), avec les statistiques et les définitions. Méthode&nbsp;: la charge, le stock et le prix vérifient l'identité exacte donnée plus haut, avec la dette de fin d'année précédente (convention du taux implicite de la BCE, distincte du «&nbsp;coût apparent&nbsp;» d'Eurostat, fondé sur la dette moyenne)&nbsp;; la robustesse des coefficients est recalculée à chaque mise à jour sur des fenêtres d'inflation de deux à cinq ans&nbsp;; les statistiques sont des moindres carrés simples, descriptifs.
+
+<div class="citer">
+
+**Citer cette ressource** — Lalut, Stéphane. «&nbsp;Dette publique&nbsp;: pourquoi 100&nbsp;% du PIB ne pèse pas partout de la même façon&nbsp;». *stephane-lalut.com*, données au {{< monde-val "date_donnees" >}}. https://stephane-lalut.com/dette-publique-comparaison-internationale/ — licence CC BY 4.0.
+
+</div>
 
 **Pour aller plus loin** — le dossier sur la dette française&nbsp;: [Combien coûte la dette publique&nbsp;?](/cout-de-la-dette-publique/) et [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/). Les précédents historiques — Italie 2011, Grèce 2015, Allemagne 1953 — sont analysés dans le livre [*Dette publique&nbsp;: qui paie vraiment&nbsp;?*](/livres/dette-publique-qui-paie-vraiment/).

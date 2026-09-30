@@ -46,6 +46,14 @@ jobs:
       - name: Rapatrier, calculer, valider (gardes dures et gardes de prose, exit 1 si echec)
         run: python3 scripts/update_dette_monde.py
 
+      # Carte de partage de la page (30/09) : elle imprime la paire de faux jumeaux et leurs chiffres, lus
+      # dans data/dette_monde.json. Redessinee dans le meme geste que les donnees, sinon elle mentirait
+      # apres une revision Eurostat. Pillow epingle a la version du poste ou la carte a ete validee.
+      - name: Carte de partage (og-dette-monde.jpg)
+        run: |
+          python3 -m pip install --quiet pillow==12.2.0
+          python3 scripts/og_dossier_dette.py --monde
+
       - name: Detecter un changement
         id: diff
         run: |
@@ -72,7 +80,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # Enumeration explicite : toute sortie NOUVELLE du script doit etre ajoutee ICI.
-          git add data/dette_monde.json static/dette_monde.json \
+          git add data/dette_monde.json static/dette_monde.json static/dette_monde.csv \
+                  static/images/og-dette-monde.jpg \
                   static/img/dette-monde-stock.svg \
                   static/img/dette-monde-charge.svg \
                   static/img/dette-monde-prix.svg \
