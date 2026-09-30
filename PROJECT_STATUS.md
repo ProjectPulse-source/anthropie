@@ -53,6 +53,17 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-30 — Page internationale PUBLIÉE (volet 3 du dossier dette), poussée sur demande de l'auteur
+
+Brouillon retiré ; onglet « 3. Et ailleurs » ajouté au dossier dette (badge « Eurostat <année> » lu de
+`data/dette_monde.json`) ; bloc `ressource` (hub `/ressources/`, rang 30, sans accès depuis l'accueil). Section
+« Trente ans d'écarts avec l'Allemagne » (commit `93ea521`) : l'euro jugé par les chiffres, pays hors euro en témoins.
+**Téléphone, MESURÉ à 390 px** (navigateur sans tête, build de production servi par interception) : la règle globale
+« tableaux en cartes » de `_typography.scss` rendait les quatre tableaux illisibles ; neutralisée pour
+`.dette-monde-table` (grille gardée, défilement dans `.table-scroll`, débordement de page 0 px). ⚠ Même règle, même
+risque probable pour `.pouvoirs-table` (page présidentielle, autre session) : non mesuré ici. `check-all --ci` à 0.
+Le push active `dette-monde.yml` (mercredis, et chaque jour du 13 au 20/10 pour le WEO).
+
 ### 2026-09-30 — Page internationale : corrections de la contre-expertise PRO-20260930-061613, prête à publier
 
 Verdict de la pièce : publier après corrections, sans attendre le WEO. Arbitrage :

@@ -2,10 +2,9 @@
 title: "Dette publique : pourquoi 100 % du PIB ne pèse pas partout de la même façon"
 description: "Stock, taux d'intérêt, recettes, refinancement : quatre dimensions pour comparer ce que représente réellement une dette publique. Dans l'Union européenne, le prix payé ne suit pas le niveau de la dette ; la France, à {monde.fr_stock_fin} du PIB, consacre {monde.fr_charge} de ses recettes aux intérêts, moins que plusieurs pays moins endettés."
 date: 2026-09-29
-lastmod: 2026-09-29
-# Brouillon : construite le 29/09/2026, publiée après le World Economic Outlook d'octobre 2026 du FMI
-# (arbitrages du dossier 06_PROMOTION/DOSSIER_PAGE_DETTE_INTERNATIONALE.md, dépôt D:\PRO).
-draft: true
+lastmod: 2026-09-30
+# Construite le 29/09/2026, publiée le 30/09/2026 sans attendre le WEO (contre-expertise PRO-20260930-061613) ;
+# arbitrages : 06_PROMOTION/DOSSIER_PAGE_DETTE_INTERNATIONALE.md, dépôt D:\PRO.
 donnees: [dette_monde]
 faq:
   - question: "La France est-elle plus endettée que les autres pays ?"
@@ -18,7 +17,16 @@ faq:
     answer: "Pas automatiquement. Avant 1999, les écarts de taux avec l'Allemagne ont fondu dans les futurs pays de l'euro, mais aussi en Suède, qui n'y est jamais entrée. En 2012, les membres les plus fragiles ont décroché (la Grèce empruntait {monde.ec_el_2012} points au-dessus de l'Allemagne), plus qu'aucun pays resté en dehors ; la détente a suivi les interventions de la BCE. En {monde.annee}, la Suède et le Danemark empruntent à 10 ans moins cher que l'Allemagne, la France plus cher. Sur le stock de dette, la Suède paie {monde.se_prix}, comme l'Allemagne ({monde.de_prix}). L'euro supprime le risque de change entre ses membres ; il ne leur garantit pas le taux allemand."
   - question: "Une dette élevée provoque-t-elle forcément une crise ?"
     answer: "Ces données ne permettent pas d'estimer le risque de crise. Elles montrent seulement qu'un même niveau de dette peut correspondre à des charges courantes très différentes. Le risque de crise dépend aussi de la croissance, du solde primaire, de la structure des créanciers, de la monnaie, des maturités, des actifs publics et des conditions financières."
+ressource:  # index /ressources/ (layouts/ressources/list.html)
+  bloc: "dette"
+  rang: 30
+  nature: "Séries officielles comparées (Eurostat, OCDE, FMI, Banque mondiale) et calculs de l'auteur"
+  en_francais: true
+  titre_en: "Public debt: why 100% of GDP does not weigh the same everywhere"
+  nature_en: "Official series compared (Eurostat, OECD, IMF, World Bank) and author's calculations"
 ---
+
+{{< dossier-dette volet="3" >}}
 
 **Deux pays peuvent afficher le même niveau de dette et supporter des charges très différentes.** En {{< monde-val "annee" >}}, la {{< monde-val "j_bas" >}} et la {{< monde-val "j_haut" >}} avaient des dettes voisines — {{< monde-val "j_bas_stock" >}} et {{< monde-val "j_haut_stock" >}} du PIB. La {{< monde-val "j_haut" >}} a pourtant consacré **{{< monde-val "j_haut_charge" >}} de ses recettes publiques aux intérêts, la {{< monde-val "j_bas" >}} {{< monde-val "j_bas_charge" >}}**&nbsp;: {{< monde-val "j_rapport" >}} fois moins. Le ratio dette/PIB, souvent mis en avant dans le débat public, n'est qu'un terme de l'équation.
 

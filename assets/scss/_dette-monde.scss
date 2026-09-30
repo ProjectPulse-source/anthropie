@@ -64,6 +64,32 @@ main .dette-monde-table--monde thead th:last-child { text-align: left !important
 
 .faq-visible h3 { font-size: 1.05rem; margin: 1.2rem 0 0.35rem; }
 
+// TÉLÉPHONE — MESURÉ le 30/09 (rendu 390 px, navigateur sans tête) : la règle globale « Tableaux responsive »
+// (_typography.scss) passe tout `main table` en cartes sous 768 px ; nos tableaux devenaient une pile de
+// cartes sans valeurs lisibles. Ces tableaux sont des grilles de comparaison : on garde la grille et on
+// laisse `.table-scroll` défiler horizontalement, sans jamais élargir la page.
+@media (max-width: 768px) {
+  main .table-scroll .dette-monde-table {
+    display: table !important;
+    width: 100% !important;
+    caption { display: table-caption !important; }
+    thead { display: table-header-group !important; }
+    tbody { display: table-row-group !important; }
+    tr { display: table-row !important; width: auto !important; margin: 0 !important; padding: 0 !important;
+         border: none !important; border-radius: 0; background: transparent; }
+    th, td { display: table-cell !important; width: auto !important; padding: 0.3rem 0.5rem !important;
+             font-family: var(--font-sans) !important; font-size: 0.8rem !important; color: var(--color-text-body) !important;
+             text-transform: none !important; letter-spacing: 0 !important; white-space: nowrap !important;
+             border-bottom: 1px solid var(--color-rule-medium) !important; }
+    th:first-child, td:first-child { font-size: 0.8rem !important; text-transform: none !important; letter-spacing: 0 !important;
+                                     font-weight: 400 !important; color: var(--color-text-body) !important; }
+    thead th { color: var(--color-text-subtle) !important; font-weight: 600 !important; white-space: normal !important; }
+    tr.is-france th, tr.is-france td { font-weight: 600 !important; }
+  }
+  // La colonne « Réserve » est une phrase : elle revient à la ligne.
+  main .table-scroll .dette-monde-table--monde td:last-child { white-space: normal !important; min-width: 14rem; }
+}
+
 // Date du dernier relevé où un chiffre a bougé (monde-val "date_donnees") — visible dès l'ouverture.
 .badge-donnees {
   display: inline-block; margin-left: 0.3rem; padding: 0.05rem 0.5rem; border-radius: 0.8rem;

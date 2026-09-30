@@ -2,6 +2,8 @@
 
        {{< dossier-dette volet="1" >}}   « Combien coûte » (FR et EN)
        {{< dossier-dette volet="2" >}}   « Qui paie » (FR seulement)
+       {{< dossier-dette volet="3" >}}   « Et ailleurs » (FR seulement), comparaison internationale,
+                                         ajouté le 30/09/2026 à sa publication
 
        Deux pages autonomes, une identité commune, une fonction explicite pour
        chacune (arbitrage PRO-20260921-DIPTYQUE, P1). Le volet 2 n'existe qu'en
@@ -19,7 +21,9 @@
        - volet 1 : le TRIMESTRE DES DONNÉES, lu dans data/dette_officielle.json,
          donc actualisé par la chaîne hebdomadaire — jamais saisi à la main ;
        - volet 2 : le MOIS de la dernière mise à jour ÉDITORIALE, déduit de
-         `lastmod`. Confondre les deux ferait passer une relecture de texte pour
+         `lastmod` ;
+       - volet 3 : l'ANNÉE DES DONNÉES Eurostat, lue dans data/dette_monde.json
+         (meta.annee), actualisée par dette-monde.yml. Confondre les deux ferait passer une relecture de texte pour
          une donnée neuve.
 
        ⚠ CE QUE LA VERSION DU 28/09 PROMETTAIT SANS LE FAIRE (corrigé le 28/09
@@ -40,7 +44,7 @@
 
        Échoue bruyamment sur un volet inconnu. */ -}}
 {{- $v := .Get "volet" -}}
-{{- if not (in (slice "1" "2") $v) -}}{{ errorf "dossier-dette: volet \"%s\" inconnu (attendu 1 ou 2) dans %s" $v .Page.File.Path }}{{- end -}}
+{{- if not (in (slice "1" "2" "3") $v) -}}{{ errorf "dossier-dette: volet \"%s\" inconnu (attendu 1, 2 ou 3) dans %s" $v .Page.File.Path }}{{- end -}}
 {{- $en := eq .Page.Lang "en" -}}
 {{- $maj := "" -}}
 {{- $majTitre := "" -}}
@@ -49,6 +53,11 @@
     {{- $p := index (cond $en .affichage_en .affichage) "dette_periode" -}}
     {{- $maj = printf "INSEE %s" $p -}}
     {{- $majTitre = cond $en "Latest quarter published by INSEE in this page's figures" "Dernier trimestre publié par l'INSEE dans les chiffres de cette page — c'est le millésime des DONNÉES, non la date de relecture du texte" -}}
+  {{- end -}}
+{{- else if eq $v "3" -}}
+  {{- with site.Data.dette_monde -}}
+    {{- $maj = printf "Eurostat %s" .meta.annee -}}
+    {{- $majTitre = "Année des données Eurostat comparées sur cette page — c'est le millésime des DONNÉES, non la date de relecture du texte" -}}
   {{- end -}}
 {{- else -}}
   {{- $maj = printf "Relu %s" (.Page.Lastmod.Format "01/2006") -}}
@@ -61,6 +70,10 @@
     (dict "n" "2" "url" "/qui-paie-la-dette-publique/"
           "titre" (cond $en "Who pays" "Qui paie")
           "role" (cond $en "distribution, mechanisms and limits" "répartition, mécanismes et limites")
+          "note" (cond $en "in French" ""))
+    (dict "n" "3" "url" "/dette-publique-comparaison-internationale/"
+          "titre" (cond $en "Elsewhere" "Et ailleurs")
+          "role" (cond $en "international comparison" "comparaison internationale")
           "note" (cond $en "in French" "")) -}}
 <nav class="dossier-dette" aria-label="{{ if $en }}Public debt file{{ else }}Dossier dette publique{{ end }}">
   <div class="dossier-dette__barre">
