@@ -3,7 +3,7 @@ title: "Combien coûte la dette publique ?"
 description: "Combien coûte la dette publique ? {dette.interets_mdeur} milliards d'euros d'intérêts en {dette.interets_annee}, {dette.interets_sur_recettes_pct} % des recettes publiques : pourquoi la facture a baissé vingt-cinq ans, puis remonte."
 chapo: "Pendant vingt-cinq ans, la dette publique a doublé en part de PIB pendant que sa facture baissait. Depuis 2022, le ciseau se referme : {dette.interets_mdeur} milliards d'euros d'intérêts en {dette.interets_annee}, {dette.interets_sur_recettes_pct} % des recettes publiques. Chiffres officiels de l'INSEE et d'Eurostat, actualisés à chaque publication."
 date: 2026-08-15
-lastmod: 2026-09-29
+lastmod: 2026-09-30
 donnees: [dette_officielle]
 og_title: "Combien coûte la dette publique ? — données officielles à jour — S. Lalut"
 og_image: "images/og-cout-dette.jpg"

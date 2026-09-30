@@ -4,7 +4,7 @@ url: /en/cost-of-french-public-debt/
 description: "What does French public debt cost? {dette.interets_mdeur} billion euros of interest in {dette.interets_annee}, {dette.interets_sur_recettes_pct}% of public revenue: why the bill fell for 25 years, then rose."
 chapo: "For about twenty-five years, French public debt doubled as a share of GDP while its interest bill fell. Since 2022 the scissor has been closing: {dette.interets_mdeur} billion euros of interest in {dette.interets_annee}, {dette.interets_sur_recettes_pct}% of public revenue. Official INSEE and Eurostat figures, updated with each release."
 date: 2026-08-17
-lastmod: 2026-09-29
+lastmod: 2026-09-30
 donnees: [dette_officielle]
 og_title: "What does French public debt cost? — official data, kept current — S. Lalut"
 og_image: "images/og-cout-dette-en.jpg"

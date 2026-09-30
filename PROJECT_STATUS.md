@@ -53,6 +53,22 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-30 — « Combien coûte » : palier 1978 corrigé sur signalement de P. Baubeau (EHR 2026), POUSSÉ
+
+Signalement de Patrice Baubeau (Paris Nanterre), en réponse à la campagne de diffusion du 29/09 : sa révision de
+l'indice des prix 1938-1949 (Baubeau et Teixeira, « The many prices of war and occupation », *Economic History
+Review*, 2026, doi:10.1111/ehr.70127, accès libre), **lue en entier** le 30/09 avant citation — règle « aucune
+référence non lue » (arbitrage PRO-20260930-103341). L'indice officiel ignorait le marché noir : inflation bien plus
+forte sous l'Occupation (prix ×6,4 contre ×2,5 de début 1940 à début 1945), bien moindre ensuite (×2,3 contre ×5,9 de
+début 1945 à début 1949) ; conclusion de l'article : le ratio dette/revenu national a moins monté pendant la guerre et
+moins baissé après. Une phrase ajoutée au palier 1978 de `/cout-de-la-dette-publique/` et à son miroir EN, **sans
+chiffre saisi** (l'article ne donne pas de ratio corrigé) ; la phrase sur les trente ans jusqu'à 1978 est conservée,
+hors de la période de l'article. Emplacements écartés, avec motif : bloc « Confrontation à la recherche » (déjà cinq
+références, porte sur 1995-2025) ; « Qui paie » (les salaires réels sous l'Occupation ne sont pas le service de la
+dette) ; FAQ inflation de « Pourquoi » (porte sur 2021-2023). Build rc=0, `check-all --ci` à 0, phrase et lien relus
+dans le HTML FR et EN. Commit `d88ea05`, réappliqué par-dessus deux commits de données du robot, en ligne à 18 h 27 ;
+`lastmod` des deux pages porté au 30/09. Réponse envoyée à P. Baubeau à 18 h 55, avec l'URL de la section.
+
 ### 2026-09-30 — Le dossier dette devient le MODÈLE des ressources de données (décision de l'auteur)
 
 Règles écrites dans ce `CLAUDE.md`, section « Modèle d'une ressource de données » : six critères **bloquants**
