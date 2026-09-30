@@ -32,6 +32,14 @@
   {{- end -}}
 {{- end -}}
 {{- if in $text "{qp." -}}{{- errorf "desc-figures: placeholder {qp.*} non resolu dans : %s" $text -}}{{- end -}}
+{{- /* Page de comparaison internationale : placeholders {monde.<cle>}, resolus depuis
+       data/dette_monde.json (bloc affichage, scripts/update_dette_monde.py). Meme contrat. */ -}}
+{{- with site.Data.dette_monde -}}
+  {{- range $k, $v := .affichage -}}
+    {{- $text = replace $text (printf "{monde.%s}" $k) $v -}}
+  {{- end -}}
+{{- end -}}
+{{- if in $text "{monde." -}}{{- errorf "desc-figures: placeholder {monde.*} non resolu dans : %s" $text -}}{{- end -}}
 {{- with .isbn -}}
   {{- range where site.Data.works.works "isbn" . -}}
     {{- with .corpus_stats -}}

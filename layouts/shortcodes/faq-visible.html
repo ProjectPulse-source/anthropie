@@ -1,0 +1,15 @@
+{{- /* {{< faq-visible >}} — affiche la FAQ du front matter (`faq:`), la MÊME qui alimente le JSON-LD
+       FAQPage (partials/schema-faqpage.html). Une seule source : le balisage et le texte lu ne
+       peuvent pas diverger. Réponses résolues par desc-figures (jetons {dette.*}, {qp.*}, {monde.*}),
+       puis typographie française. Page sans faq = échec de build : on n'appelle pas ce shortcode
+       pour rien. */ -}}
+{{- with .Page.Params.faq -}}
+<div class="faq-visible">
+{{- range . }}
+  <h3>{{ partial "fr-typo.html" .question }}</h3>
+  <p>{{ partial "fr-typo.html" (partial "desc-figures.html" (dict "text" .answer "isbn" nil)) }}</p>
+{{- end }}
+</div>
+{{- else -}}
+  {{- errorf "faq-visible: aucune faq en front matter (%s)" .Page.RelPermalink -}}
+{{- end -}}

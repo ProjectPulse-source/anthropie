@@ -53,6 +53,28 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-29 (nuit) — Page « dette publique : comparaison internationale » construite, en BROUILLON
+
+**Quoi.** `/dette-publique-comparaison-internationale/` (`draft: true`), « Dette publique : pourquoi 100 % du PIB
+ne pèse pas partout de la même façon ». Cahier des charges arrêté après trois avis externes :
+`D:\PRO\06_PROMOTION\DOSSIER_PAGE_DETTE_INTERNATIONALE.md` (§ 6 à 8). **Publication après le WEO d'octobre du FMI**
+(Assemblées du 12 au 18/10) : relancer le générateur, retirer `draft`, ajouter le volet 3 à `dossier-dette.html`,
+relire, puis `check-all --reseau`.
+
+**Organes.** `scripts/update_dette_monde.py` → `data/dette_monde.json` (+ `static/`), quatre SVG `static/img/dette-monde-*.svg`.
+Trois niveaux jamais mêlés dans un calcul : Europe (Eurostat S.13, monnaie nationale, **identité exacte vérifiée par
+assertion**), avancés hors UE (OCDE Economic Outlook, intérêts bruts GGINTP, badge « avec réserve »), émergents (FMI +
+Banque mondiale, « indicatif »). Shortcodes `monde-val`, `dette-monde-tableau`, `faq-visible` (la FAQ affichée et le
+JSON-LD ont désormais une seule source) ; jetons `{monde.*}` dans `desc-figures.html` ; `_dette-monde.scss`.
+**Gardes de prose** : quatorze affirmations de la page vérifiées sur les données à chaque passage ; témoin par mutation
+(prix suédois +1 point → exit 1, rien écrit). À données identiques, rien n'est réécrit (`releve_le` conservé).
+
+**Défauts trouvés en route, corrigés.** (1) `_default/list.html` rendait la description brute dans le chapô — un jeton
+y aurait été affiché tel quel et les insécables manquaient : passe désormais par `desc-figures` + `fr-typo`. (2) MESURÉ
+dans le navigateur : les règles globales `main table` (`table-layout: fixed`, largeurs 18/32/50 % des trois premières
+colonnes, `!important`) donnaient une largeur 0 aux colonnes 4 à 6 d'un tableau à six colonnes ; neutralisées pour
+`.dette-monde-table` seulement. ⚠ Tout futur tableau de plus de trois colonnes dans `main` hérite du même défaut.
+
 ### 2026-09-29 — Le sitemap suit enfin les données : `lastmod` des pages dette
 
 Trouvé en vérifiant une contre-expertise GEO (arbitrage versionné :

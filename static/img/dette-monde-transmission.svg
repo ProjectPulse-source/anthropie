@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 488" role="img" font-variant-numeric="tabular-nums" aria-labelledby="mt-t mt-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="mt-t">La transmission : ce qui arrive à échéance, et à quel écart de taux (2025)</title><desc id="mt-d">Chaque point est un pays : plus il est à droite, plus sa dette se refinance vite ; plus il est haut, plus le taux de marché dépasse le prix moyen de son stock. En haut à droite, la charge montera le plus vite ; sous zéro, le stock coûte plus cher que le marché.</desc>
+<rect width="720" height="488" fill="#ffffff"/>
+<text x="0" y="18" font-size="13" font-weight="600" fill="#0A0A0E">La transmission : ce qui arrive à échéance, et à quel écart de taux (2025)</text>
+<circle cx="470.0" cy="14.0" r="5" fill="#184f95"/>
+<text x="479.0" y="18.0" font-size="11" fill="#52514e">zone euro</text>
+<circle cx="560.0" cy="14.0" r="5" fill="#eb6834"/>
+<text x="569.0" y="18.0" font-size="11" fill="#52514e">hors zone euro</text>
+<line x1="58.0" y1="388.0" x2="700.0" y2="388.0" stroke="#e1e0d9"/>
+<text x="52.0" y="392.0" font-size="11" fill="#898781" text-anchor="end">−0,5 pt</text>
+<line x1="58.0" y1="323.2" x2="700.0" y2="323.2" stroke="#e1e0d9"/>
+<text x="52.0" y="327.2" font-size="11" fill="#898781" text-anchor="end">0,0 pt</text>
+<line x1="58.0" y1="258.4" x2="700.0" y2="258.4" stroke="#e1e0d9"/>
+<text x="52.0" y="262.4" font-size="11" fill="#898781" text-anchor="end">0,5 pt</text>
+<line x1="58.0" y1="193.6" x2="700.0" y2="193.6" stroke="#e1e0d9"/>
+<text x="52.0" y="197.6" font-size="11" fill="#898781" text-anchor="end">1,0 pt</text>
+<line x1="58.0" y1="128.8" x2="700.0" y2="128.8" stroke="#e1e0d9"/>
+<text x="52.0" y="132.8" font-size="11" fill="#898781" text-anchor="end">1,5 pt</text>
+<line x1="58.0" y1="64.0" x2="700.0" y2="64.0" stroke="#e1e0d9"/>
+<text x="52.0" y="68.0" font-size="11" fill="#898781" text-anchor="end">2,0 pt</text>
+<text x="58.0" y="54.0" font-size="11" fill="#52514e">écart taux à 10 ans − prix payé, en points</text>
+<line x1="58.0" y1="388.0" x2="700.0" y2="388.0" stroke="#c3c2b7"/>
+<text x="58.0" y="403.0" font-size="11" fill="#898781" text-anchor="middle">0 %</text>
+<text x="165.0" y="403.0" font-size="11" fill="#898781" text-anchor="middle">5 %</text>
+<text x="272.0" y="403.0" font-size="11" fill="#898781" text-anchor="middle">10 %</text>
+<text x="379.0" y="403.0" font-size="11" fill="#898781" text-anchor="middle">15 %</text>
+<text x="486.0" y="403.0" font-size="11" fill="#898781" text-anchor="middle">20 %</text>
+<text x="593.0" y="403.0" font-size="11" fill="#898781" text-anchor="middle">25 %</text>
+<text x="700.0" y="403.0" font-size="11" fill="#898781" text-anchor="middle">30 %</text>
+<text x="379.0" y="420.0" font-size="11" fill="#52514e" text-anchor="middle">part de la dette qui arrive à échéance dans l'année</text>
+<circle cx="248.2" cy="199.3" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="212.7" cy="308.7" r="5.5" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<circle cx="179.2" cy="181.9" r="5.5" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<circle cx="151.5" cy="381.0" r="5.5" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<circle cx="212.9" cy="225.6" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="315.9" cy="173.5" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="204.8" cy="127.2" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="151.3" cy="164.9" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="169.0" cy="229.1" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="260.7" cy="150.3" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="278.4" cy="277.1" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="290.8" cy="238.2" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="87.2" cy="191.6" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="110.9" cy="227.3" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="71.5" cy="275.0" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="95.8" cy="119.1" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="216.9" cy="140.6" r="5.5" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<circle cx="229.9" cy="243.1" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="307.1" cy="184.4" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="192.6" cy="207.9" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="125.4" cy="239.2" r="5.5" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<circle cx="518.6" cy="209.9" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="206.9" cy="153.6" r="5.5" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<circle cx="186.1" cy="181.7" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="68.8" cy="232.0" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="277.2" cy="194.7" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="676.0" cy="244.7" r="5.5" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<text x="160.5" y="385.0" font-size="11" fill="#0A0A0E" text-anchor="start">Danemark</text>
+<text x="221.9" y="229.6" font-size="11" fill="#0A0A0E" text-anchor="start">Allemagne</text>
+<text x="151.3" y="155.9" font-size="11" fill="#0A0A0E" text-anchor="middle">Grèce</text>
+<text x="260.7" y="141.3" font-size="11" fill="#0A0A0E" text-anchor="middle" font-weight="600">France</text>
+<text x="299.8" y="242.2" font-size="11" fill="#0A0A0E" text-anchor="start">Italie</text>
+<text x="207.9" y="144.6" font-size="11" fill="#0A0A0E" text-anchor="end">Hongrie</text>
+<text x="518.6" y="200.9" font-size="11" fill="#0A0A0E" text-anchor="middle">Portugal</text>
+<text x="676.0" y="235.7" font-size="11" fill="#0A0A0E" text-anchor="middle">Suède</text>
+<line x1="0" y1="442.0" x2="720" y2="442.0" stroke="#e1e0d9"/>
+<text x="0" y="455.0" font-size="9" fill="#52514e">Eurostat gov_10dd_ggd (dette par échéance résiduelle), irt_lt_mcby_a (taux à 10 ans), 2025</text>
+<text x="0" y="467.0" font-size="9" fill="#52514e">Taux de convergence à 10 ans ; échéance résiduelle, dette de Maastricht. Repère, non prévision.</text>
+<text x="0" y="479.0" font-size="9" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/dette-publique-comparaison-internationale/</text>
+</svg>
