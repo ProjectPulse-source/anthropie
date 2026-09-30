@@ -53,6 +53,18 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-30 — Volet 1 « Pourquoi la dette publique augmente-t-elle ? » : construit, dossier à quatre onglets
+
+Arbitrage `PRO-20260930-092814` (option E) ; gel des nouveaux ensembles levé pour cette page par l'auteur. **Test décisif
+passé** : décomposition de la variation du ratio dette/PIB (effet des intérêts, effet de la croissance nominale, solde
+primaire, flux-stock) sur Eurostat 1996-2025, résidu égal au témoin comptable chaque année. `scripts/update_dette_dynamique.py`
+(13 gardes de prose, dont une vue mordre), `data/dette_dynamique.json`, CSV, cascade + figure annuelle (SVG et PNG ensemble),
+fiches « Réutiliser », `Dataset` générique, carte `og-dette-dynamique.jpg`, jetons `{dyn.*}` et shortcode `dyn-val`.
+Barre du dossier : clés de volet stables, numéro par l'ordre ; quatre onglets tenant sans défilement à 390 px (numéros
+masqués sur téléphone, sous-titres courts). Lien depuis « Combien coûte » (FR, EN sans chiffres). Branché sur
+`dette-monde.yml`. **Leçon** : `hugo --quiet ... | tail` masque le code de retour — un build en échec a paru propre ;
+vérifier `$?`.
+
 ### 2026-09-30 — Page internationale : hiérarchie refaite sur l'avis « forme et fond », NON POUSSÉE
 
 Arbitrage : `D:\PRO\.claude\external-audits\ARBITRATIONS\ENTRANTE_2026-09-30_Dette_Internationale_forme_arbitrage.md`

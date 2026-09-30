@@ -44,7 +44,9 @@
 
        Échoue bruyamment sur un volet inconnu. */ -}}
 {{- $v := .Get "volet" -}}
-{{- if not (in (slice "1" "2" "3") $v) -}}{{ errorf "dossier-dette: volet \"%s\" inconnu (attendu 1, 2 ou 3) dans %s" $v .Page.File.Path }}{{- end -}}
+{{- /* Clés de volet STABLES ("hausse", "1", "2", "3") ; le NUMÉRO affiché vient de l'ordre (30/09 : le volet
+       « Pourquoi elle augmente » passe en tête, arbitrage PRO-20260930-092814) — les pages n'ont pas à changer d'appel. */ -}}
+{{- if not (in (slice "hausse" "1" "2" "3") $v) -}}{{ errorf "dossier-dette: volet \"%s\" inconnu (attendu hausse, 1, 2 ou 3) dans %s" $v .Page.File.Path }}{{- end -}}
 {{- $en := eq .Page.Lang "en" -}}
 {{- $maj := "" -}}
 {{- $majTitre := "" -}}
@@ -53,6 +55,11 @@
     {{- $p := index (cond $en .affichage_en .affichage) "dette_periode" -}}
     {{- $maj = printf "INSEE %s" $p -}}
     {{- $majTitre = cond $en "Latest quarter published by INSEE in this page's figures" "Dernier trimestre publié par l'INSEE dans les chiffres de cette page — c'est le millésime des DONNÉES, non la date de relecture du texte" -}}
+  {{- end -}}
+{{- else if eq $v "hausse" -}}
+  {{- with site.Data.dette_dynamique -}}
+    {{- $maj = printf "Eurostat %s" .affichage.annee_fin -}}
+    {{- $majTitre = "Dernière année des données Eurostat décomposées sur cette page — c'est le millésime des DONNÉES, non la date de relecture du texte" -}}
   {{- end -}}
 {{- else if eq $v "3" -}}
   {{- with site.Data.dette_monde -}}
@@ -64,30 +71,37 @@
   {{- $majTitre = "Mise à jour de la page. Les millésimes des données sont indiqués auprès de chaque figure." -}}
 {{- end -}}
 {{- $items := slice
+    (dict "n" "hausse" "url" "/pourquoi-la-dette-publique-augmente/"
+          "titre" (cond $en "Why it rises" "Pourquoi elle augmente") "court" (cond $en "Rise" "Hausse")
+          "role" (cond $en "dynamics" "dynamique")
+          "note" (cond $en "in French" ""))
     (dict "n" "1" "url" (cond $en "/en/cost-of-french-public-debt/" "/cout-de-la-dette-publique/")
           "titre" (cond $en "What it costs" "Combien coûte") "court" (cond $en "Cost" "Coût")
-          "role" (cond $en "data and method" "données et méthode") "note" "")
+          "role" (cond $en "interest burden" "charge d'intérêts") "note" "")
     (dict "n" "2" "url" "/qui-paie-la-dette-publique/"
           "titre" (cond $en "Who pays" "Qui paie") "court" (cond $en "Who pays" "Qui paie")
-          "role" (cond $en "distribution, mechanisms and limits" "répartition, mécanismes et limites")
+          "role" (cond $en "distribution" "répartition")
           "note" (cond $en "in French" ""))
     (dict "n" "3" "url" "/dette-publique-comparaison-internationale/"
           "titre" (cond $en "Elsewhere" "Et ailleurs") "court" (cond $en "Elsewhere" "Ailleurs")
-          "role" (cond $en "international comparison" "comparaison internationale")
+          "role" (cond $en "comparison" "comparaison")
           "note" (cond $en "in French" "")) -}}
 <nav class="dossier-dette" aria-label="{{ if $en }}Public debt file{{ else }}Dossier dette publique{{ end }}">
   <div class="dossier-dette__barre">
     <span class="dossier-dette__titre">{{ if $en }}Public debt file{{ else }}Dossier dette publique{{ end }}</span>
     <ol class="dossier-dette__volets">
-      {{- range $items }}
+      {{- range $i, $it := $items }}
+      {{- $num := add $i 1 }}
+      {{- with $it }}
       {{- if eq .n $v }}
       <li class="dossier-dette__volet is-actif" aria-current="page">
-        <span class="dossier-dette__onglet"><b>{{ .n }}. <span class="dossier-dette__long">{{ .titre }}</span><span class="dossier-dette__court">{{ .court }}</span></b><span class="dossier-dette__role">{{ .role }}</span></span>
+        <span class="dossier-dette__onglet"><b><span class="dossier-dette__num">{{ $num }}. </span><span class="dossier-dette__long">{{ .titre }}</span><span class="dossier-dette__court">{{ .court }}</span></b><span class="dossier-dette__role">{{ .role }}</span></span>
       </li>
       {{- else }}
       <li class="dossier-dette__volet">
-        <a class="dossier-dette__onglet" href="{{ .url }}"{{ with .note }} hreflang="fr"{{ end }}><b>{{ .n }}. <span class="dossier-dette__long">{{ .titre }}</span><span class="dossier-dette__court">{{ .court }}</span></b>{{ with .note }} <em>({{ . }})</em>{{ end }}<span class="dossier-dette__role">{{ .role }}</span></a>
+        <a class="dossier-dette__onglet" href="{{ .url }}"{{ with .note }} hreflang="fr"{{ end }}><b><span class="dossier-dette__num">{{ $num }}. </span><span class="dossier-dette__long">{{ .titre }}</span><span class="dossier-dette__court">{{ .court }}</span></b>{{ with .note }} <em>({{ . }})</em>{{ end }}<span class="dossier-dette__role">{{ .role }}</span></a>
       </li>
+      {{- end }}
       {{- end }}
       {{- end }}
     </ol>

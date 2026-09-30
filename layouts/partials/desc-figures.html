@@ -40,6 +40,14 @@
   {{- end -}}
 {{- end -}}
 {{- if in $text "{monde." -}}{{- errorf "desc-figures: placeholder {monde.*} non resolu dans : %s" $text -}}{{- end -}}
+{{- /* Volet « Pourquoi la dette augmente » : placeholders {dyn.<cle>}, depuis data/dette_dynamique.json
+       (bloc affichage, scripts/update_dette_dynamique.py). Meme contrat. */ -}}
+{{- with site.Data.dette_dynamique -}}
+  {{- range $k, $v := .affichage -}}
+    {{- $text = replace $text (printf "{dyn.%s}" $k) $v -}}
+  {{- end -}}
+{{- end -}}
+{{- if in $text "{dyn." -}}{{- errorf "desc-figures: placeholder {dyn.*} non resolu dans : %s" $text -}}{{- end -}}
 {{- with .isbn -}}
   {{- range where site.Data.works.works "isbn" . -}}
     {{- with .corpus_stats -}}

@@ -1,0 +1,14 @@
+{{- /* {{< dyn-val "hausse" >}} — une valeur du bloc affichage de data/dette_dynamique.json (volet « Pourquoi la dette
+       augmente », scripts/update_dette_dynamique.py). Même contrat que monde-val : clé inconnue ou données absentes =
+       échec de build. */ -}}
+{{- $k := .Get 0 -}}
+{{- $a := "" -}}
+{{- with site.Data.dette_dynamique -}}{{- $a = .affichage -}}{{- end -}}
+{{- if not $a -}}
+  {{- errorf "dyn-val: data/dette_dynamique.json absent ou sans bloc affichage (page %s)" .Page.RelPermalink -}}
+{{- else -}}
+  {{- $v := index $a $k -}}
+  {{- if not $v -}}
+    {{- errorf "dyn-val: cle %q inconnue du bloc affichage (page %s)" $k .Page.RelPermalink -}}
+  {{- else -}}{{- $v -}}{{- end -}}
+{{- end -}}

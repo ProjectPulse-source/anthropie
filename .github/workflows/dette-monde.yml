@@ -49,6 +49,8 @@ jobs:
         run: |
           python3 -m pip install --quiet cairosvg==2.9.0
           python3 scripts/update_dette_monde.py
+          # Volet « Pourquoi la dette augmente » (30/09) : memes sources Eurostat annuelles, meme cadence.
+          python3 scripts/update_dette_dynamique.py
 
       # Carte de partage de la page (30/09) : elle imprime la paire de faux jumeaux et leurs chiffres, lus
       # dans data/dette_monde.json. Redessinee dans le meme geste que les donnees, sinon elle mentirait
@@ -86,6 +88,10 @@ jobs:
           # Enumeration explicite : toute sortie NOUVELLE du script doit etre ajoutee ICI.
           git add data/dette_monde.json static/dette_monde.json static/dette_monde.csv \
                   data/figures_monde.json static/images/og-dette-monde.jpg \
+                  data/dette_dynamique.json static/dette_dynamique.json static/dette_dynamique.csv \
+                  data/figures_dynamique.json static/images/og-dette-dynamique.jpg \
+                  static/img/dette-dynamique-cascade.svg static/img/dette-dynamique-cascade.png \
+                  static/img/dette-dynamique-annuelle.svg static/img/dette-dynamique-annuelle.png \
                   static/img/dette-monde-stock.png static/img/dette-monde-charge.png \
                   static/img/dette-monde-prix.png static/img/dette-monde-transmission.png \
                   static/img/dette-monde-stock.svg \

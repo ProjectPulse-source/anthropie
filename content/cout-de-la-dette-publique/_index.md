@@ -133,6 +133,8 @@ Sur la série trimestrielle de l'INSEE, disponible depuis 1995, le **maximum du 
 
 ## Ce que la facture ne dit pas&nbsp;: la dette augmente-t-elle&nbsp;? {#ce-que-la-facture-ne-dit-pas-la-dette-augmente-t-elle}
 
+**La réponse détaillée est dans le premier volet du dossier**, [Pourquoi la dette publique augmente-t-elle&nbsp;?](/pourquoi-la-dette-publique-augmente/)&nbsp;: de {{< dyn-val "annee_depart" >}} à {{< dyn-val "annee_fin" >}}, les intérêts et la croissance du PIB nominal se sont presque annulés, et la hausse de la dette tient pour l'essentiel aux déficits primaires ({{< dyn-val "deficits_primaires" >}} points sur {{< dyn-val "hausse" >}}). Ce qui suit en résume le principe.
+
 Tout ce qui précède répond à «&nbsp;combien coûte&nbsp;». C'est une autre question que de savoir si le ratio de dette monte, se stabilise ou recule&nbsp;— et la réponse ne se lit dans aucun des chiffres ci-dessus. Elle dépend de trois termes, dont cette page n'en mesure qu'un et demi.
 
 <details class="repli"><summary>Les trois termes qui font monter ou baisser le ratio de dette</summary>

@@ -216,6 +216,59 @@ def carte(nom: str, titre: list[str], accroche: str, source: str, url: str,
     print("OK  %s (%dx%d, %d ko)" % (nom, W, H, p.stat().st_size // 1024))
 
 
+def figure_cascade_mini(d: ImageDraw.ImageDraw, dyn: dict) -> None:
+    """Volet « Pourquoi elle augmente » : la cascade de la page, réduite — stock de départ, intérêts, croissance,
+    déficits primaires, flux-stock, stock d'arrivée. Valeurs lues dans data/dette_dynamique.json."""
+    t, dep, fin = dyn["total"], dyn["depart"]["dette_pct_pib"], dyn["annees"][-1]["dette_pct_pib"]
+    etapes = [(dep, "s"), (t["effet_interets"], "d"), (t["effet_croissance"], "d"),
+              (t["contribution_solde_primaire"], "d"), (t["flux_stock"], "d"), (fin, "s")]
+    x0, x1, top, bas = 660, 1126, 100, 424
+    vmax = (int(max(dep + t["effet_interets"], fin) * 1.08 / 20) + 1) * 20
+
+    def Y(v):
+        return bas - (bas - top) * v / vmax
+
+    for g in range(0, vmax + 1, 40):
+        d.line([(x0, Y(g)), (x1, Y(g))], fill=GRID, width=2 if g == 0 else 1)
+    pas = (x1 - x0) / len(etapes)
+    bw = pas * 0.6
+    niveau = 0.0
+    for k, (v, nat) in enumerate(etapes):
+        cx = x0 + pas * (k + 0.5)
+        if nat == "s":
+            b, h, col, niveau = 0.0, v, C1, v
+        else:
+            b, h = (niveau, niveau + v) if v >= 0 else (niveau + v, niveau)
+            col = C2 if v >= 0 else SEC
+            niveau += v
+        d.rectangle([cx - bw / 2, Y(h), cx + bw / 2, Y(b)], fill=col)
+    fa = font("inter", 18, 500)
+    d.text((x0, bas + 14), str(dyn["depart"]["annee"]), font=fa, fill=URL_GREY)
+    d.text((x1 - 44, bas + 14), str(dyn["annees"][-1]["annee"]), font=fa, fill=URL_GREY)
+    d.text((x0, bas + 40), "Dette publique française, en points de PIB :", font=font("inter", 17, 400), fill=URL_GREY)
+    d.text((x0, bas + 62), "départ, intérêts, croissance, déficits, flux-stock", font=font("inter", 17, 400), fill=URL_GREY)
+
+
+def carte_dynamique() -> None:
+    """Volet 1 (30/09) : « Pourquoi la dette a doublé ». Chiffres lus dans le jeu publié ; le contraste annoncé
+    (intérêts et croissance presque annulés, déficits primaires dominants) est contrôlé ici."""
+    f = ROOT / "data" / "dette_dynamique.json"
+    if not f.is_file():
+        fail("jeu de données absent : %s — lancer scripts/update_dette_dynamique.py d'abord" % f)
+    dyn = json.loads(f.read_text(encoding="utf-8"))
+    A, t = dyn["affichage"], dyn["total"]
+    if not (abs(t["effet_taux_croissance"]) < 5 and t["contribution_solde_primaire"] > 0.75 * t["variation"]):
+        fail("carte dynamique : le contraste annoncé n'est plus vrai dans les données")
+    carte("og-dette-dynamique.jpg",
+          ["Pourquoi la dette", "a doublé"],
+          "Intérêts et croissance se sont presque annulés.",
+          "Eurostat, France %s-%s · CC BY 4.0" % (A["annee_depart"], A["annee_fin"]),
+          "stephane-lalut.com/pourquoi-la-dette-publique-augmente/",
+          lambda d: figure_cascade_mini(d, dyn),
+          [(C2, "Intérêts : +%s pts" % A["effet_interets"]), (SEC, "Croissance : −%s pts" % A["effet_croissance"]),
+           (C2, "Déficits primaires : +%s pts" % A["deficits_primaires"]), (C1, "Dette : %s → %s %%" % (A["dette_depart"], A["dette_fin"]))])
+
+
 def carte_monde() -> None:
     """Volet 3, comparaison internationale (avis du 30/09 : l'aperçu doit montrer la découverte de la page).
     Tout vient de data/dette_monde.json : la paire de faux jumeaux (règle publiée), et les chaînes
@@ -251,8 +304,10 @@ def carte_monde() -> None:
 def main() -> int:
     if "--monde" in sys.argv[1:]:
         carte_monde()
+        carte_dynamique()
         return 0
     carte_monde()
+    carte_dynamique()
     qp = ROOT / "data" / "qui_paie_donnees.json"
     do = ROOT / "data" / "dette_officielle.json"
     for f in (qp, do):

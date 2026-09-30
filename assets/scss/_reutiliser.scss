@@ -288,7 +288,9 @@ a.dossier-dette__onglet:focus-visible { outline: 2px solid var(--color-pivot); o
   border-bottom-color: var(--color-bg-elevated);  // la regle est « mangee » ici
   color: var(--color-text);
 }
-.dossier-dette__court { display: none; }  // libellé court : téléphone seulement (voir plus bas)
+.dossier-dette__court { display: none; }
+// Quatre volets (30/09) : titre et sous-titre sur une ligne chacun ; les sous-titres sont courts pour tenir.
+.dossier-dette__onglet b, .dossier-dette__role { white-space: nowrap; }  // libellé court : téléphone seulement (voir plus bas)
 .dossier-dette__role {
   display: block;
   font-size: 0.72rem;
@@ -330,7 +332,10 @@ a.dossier-dette__onglet:focus-visible { outline: 2px solid var(--color-pivot); o
   // décalée à droite. Une ligne par onglet ; si les volets ne tiennent plus, la bande défile, jamais la page.
   .dossier-dette__volets { margin-left: 0 !important; padding-left: 0 !important; overflow-x: auto;
                            scrollbar-width: thin; -webkit-overflow-scrolling: touch; }
-  .dossier-dette__onglet { white-space: nowrap; padding: 0.3rem 0.5rem 0.4rem; font-size: 0.85rem; }
+  .dossier-dette__onglet { white-space: nowrap; padding: 0.3rem 0.4rem 0.4rem; font-size: 0.84rem; }
+  .dossier-dette__volets { gap: 0.15rem; }
+  // Quatre volets (30/09) : 366 px pour 286 avec les numeros ; l'ordre de la bande suffit a les situer.
+  .dossier-dette__num { display: none; }
   // Libellé court : 3 onglets longs demandaient 332 px pour 286 disponibles (mesure du 30/09).
   .dossier-dette__long { display: none; }
   .dossier-dette__court { display: inline; }

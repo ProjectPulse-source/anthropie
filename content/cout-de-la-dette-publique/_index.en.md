@@ -136,6 +136,8 @@ On INSEE's quarterly series, available since 1995, the **highest ratio** of debt
 
 ## What the bill does not tell you: is the debt rising? {#what-the-bill-does-not-tell-you-is-the-debt-rising}
 
+**The detailed answer is in the first part of the file**, [Why does public debt rise?](/pourquoi-la-dette-publique-augmente/) (in French): over the last thirty years, interest and nominal GDP growth almost cancelled out, and the rise in the debt is mostly due to primary deficits. What follows sums up the principle.
+
 Everything above answers "what does it cost". Whether the debt ratio rises, stabilises or falls is a different question — and the answer is in none of the figures above. It turns on three terms, of which this page measures one and a half.
 
 <details class="repli"><summary>The three terms that move the debt ratio up or down</summary>
