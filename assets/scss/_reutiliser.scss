@@ -270,14 +270,25 @@
   b { font-weight: 600; }
   em { font-style: normal; font-size: 0.78rem; color: var(--color-text-subtle); }
 }
-a.dossier-dette__onglet:hover { background: var(--color-accent-faint); }
+// LISERET (auteur, 30/09) : les onglets inactifs avaient une bordure TRANSPARENTE et se lisaient comme de simples
+// liens ; le visiteur, qui arrive le plus souvent par un seul volet, ne voyait pas qu'il y en avait d'autres.
+// Chaque onglet porte maintenant son cadre et un fond léger ; l'actif garde le fond de la page et gagne un
+// filet haut de la couleur du dossier : le principe « un dossier, plusieurs volets » se lit d'un coup d'œil.
+a.dossier-dette__onglet {
+  border-color: var(--color-rule-medium);
+  border-bottom-color: transparent;
+  background: var(--color-accent-faint);
+}
+a.dossier-dette__onglet:hover { background: var(--color-bg-elevated); border-color: var(--color-accent); border-bottom-color: transparent; }
 a.dossier-dette__onglet:focus-visible { outline: 2px solid var(--color-pivot); outline-offset: 2px; }
 .dossier-dette__volet.is-actif .dossier-dette__onglet {
   background: var(--color-bg-elevated);
   border-color: var(--color-rule-medium);
+  border-top: 3px solid var(--color-accent);
   border-bottom-color: var(--color-bg-elevated);  // la regle est « mangee » ici
   color: var(--color-text);
 }
+.dossier-dette__court { display: none; }  // libellé court : téléphone seulement (voir plus bas)
 .dossier-dette__role {
   display: block;
   font-size: 0.72rem;
@@ -315,6 +326,14 @@ a.dossier-dette__onglet:focus-visible { outline: 2px solid var(--color-pivot); o
     font-size: 0.95em;
   }
   .dossier-dette__role { display: none; }
+  // Téléphone (mesuré le 30/09 à 390 px) : les libellés se coupaient sur trois lignes et la bande partait
+  // décalée à droite. Une ligne par onglet ; si les volets ne tiennent plus, la bande défile, jamais la page.
+  .dossier-dette__volets { margin-left: 0 !important; padding-left: 0 !important; overflow-x: auto;
+                           scrollbar-width: thin; -webkit-overflow-scrolling: touch; }
+  .dossier-dette__onglet { white-space: nowrap; padding: 0.3rem 0.5rem 0.4rem; font-size: 0.85rem; }
+  // Libellé court : 3 onglets longs demandaient 332 px pour 286 disponibles (mesure du 30/09).
+  .dossier-dette__long { display: none; }
+  .dossier-dette__court { display: inline; }
   .dossier-dette__titre { font-size: 0.72rem; padding: 0.18rem 0.45rem; }
   .dossier-dette__maj { font-size: 0.78rem; }
 }

@@ -65,14 +65,14 @@
 {{- end -}}
 {{- $items := slice
     (dict "n" "1" "url" (cond $en "/en/cost-of-french-public-debt/" "/cout-de-la-dette-publique/")
-          "titre" (cond $en "What it costs" "Combien coûte")
+          "titre" (cond $en "What it costs" "Combien coûte") "court" (cond $en "Cost" "Coût")
           "role" (cond $en "data and method" "données et méthode") "note" "")
     (dict "n" "2" "url" "/qui-paie-la-dette-publique/"
-          "titre" (cond $en "Who pays" "Qui paie")
+          "titre" (cond $en "Who pays" "Qui paie") "court" (cond $en "Who pays" "Qui paie")
           "role" (cond $en "distribution, mechanisms and limits" "répartition, mécanismes et limites")
           "note" (cond $en "in French" ""))
     (dict "n" "3" "url" "/dette-publique-comparaison-internationale/"
-          "titre" (cond $en "Elsewhere" "Et ailleurs")
+          "titre" (cond $en "Elsewhere" "Et ailleurs") "court" (cond $en "Elsewhere" "Ailleurs")
           "role" (cond $en "international comparison" "comparaison internationale")
           "note" (cond $en "in French" "")) -}}
 <nav class="dossier-dette" aria-label="{{ if $en }}Public debt file{{ else }}Dossier dette publique{{ end }}">
@@ -82,11 +82,11 @@
       {{- range $items }}
       {{- if eq .n $v }}
       <li class="dossier-dette__volet is-actif" aria-current="page">
-        <span class="dossier-dette__onglet"><b>{{ .n }}. {{ .titre }}</b><span class="dossier-dette__role">{{ .role }}</span></span>
+        <span class="dossier-dette__onglet"><b>{{ .n }}. <span class="dossier-dette__long">{{ .titre }}</span><span class="dossier-dette__court">{{ .court }}</span></b><span class="dossier-dette__role">{{ .role }}</span></span>
       </li>
       {{- else }}
       <li class="dossier-dette__volet">
-        <a class="dossier-dette__onglet" href="{{ .url }}"{{ with .note }} hreflang="fr"{{ end }}><b>{{ .n }}. {{ .titre }}</b>{{ with .note }} <em>({{ . }})</em>{{ end }}<span class="dossier-dette__role">{{ .role }}</span></a>
+        <a class="dossier-dette__onglet" href="{{ .url }}"{{ with .note }} hreflang="fr"{{ end }}><b>{{ .n }}. <span class="dossier-dette__long">{{ .titre }}</span><span class="dossier-dette__court">{{ .court }}</span></b>{{ with .note }} <em>({{ . }})</em>{{ end }}<span class="dossier-dette__role">{{ .role }}</span></a>
       </li>
       {{- end }}
       {{- end }}
