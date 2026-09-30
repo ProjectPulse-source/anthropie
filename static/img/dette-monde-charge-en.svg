@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 488" role="img" font-variant-numeric="tabular-nums" aria-labelledby="mc-t mc-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-<title id="mc-t">Same debt, different burden: the 27 EU countries in 2025</title><desc id="mc-d">Each dot is a country. Dotted lines link the false twins picked out by the published rule: similar debt, very different burden. Two least-squares lines, one per group, over their observed range.</desc>
+<title id="mc-t">Same debt, different burden: the 27 EU countries in 2025</title><desc id="mc-d">Each dot is a country. Dotted lines link the look-alike pairs picked out by the published rule: similar debt, very different burden. Two least-squares lines, one per group, over their observed range.</desc>
 <rect width="720" height="488" fill="#ffffff"/>
 <text x="0" y="18" font-size="13" font-weight="600" fill="#0A0A0E">Same debt, different burden: the 27 EU countries in 2025</text>
 <circle cx="470.0" cy="14.0" r="5" fill="#184f95"/>
@@ -78,6 +78,6 @@
 <text x="190.1" y="365.1" font-size="11" fill="#0A0A0E" text-anchor="middle">Sweden</text>
 <line x1="0" y1="442.0" x2="720" y2="442.0" stroke="#e1e0d9"/>
 <text x="0" y="455.0" font-size="9" fill="#52514e">Eurostat gov_10a_main (D41PAY, TR), gov_10dd_edpt1 (GD), nama_10_gdp (B1GQ), 2025; general government S.13, national currency</text>
-<text x="0" y="467.0" font-size="9" fill="#52514e">Dotted lines: false twins (nearest neighbour by debt stock, gap under 10 percentage points, three largest gaps in burden).</text>
+<text x="0" y="467.0" font-size="9" fill="#52514e">Dotted lines: look-alike pairs (nearest neighbour by debt stock, gap under 10 percentage points, three largest gaps in burden).</text>
 <text x="0" y="479.0" font-size="9" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/public-debt-international-comparison/</text>
 </svg>

@@ -40,12 +40,12 @@
    "titre": "Same debt, different burden: the 27 EU countries in 2025",
    "montre": "With similar debt, the share of revenue spent on interest can differ by a factor of 3.3; outside the euro area, it rises faster with debt.",
    "source": "Eurostat gov_10a_main (D41PAY, TR), gov_10dd_edpt1 (GD), nama_10_gdp (B1GQ), 2025; general government S.13, national currency",
-   "precaution": "Dotted lines: false twins (nearest neighbour by debt stock, gap under 10 percentage points, three largest gaps in burden)."
+   "precaution": "Dotted lines: look-alike pairs (nearest neighbour by debt stock, gap under 10 percentage points, three largest gaps in burden)."
   },
   {
    "id": "prix",
    "fichier": "dette-monde-prix-en",
-   "titre": "Price of debt and recent inflation: Europe in 2025",
+   "titre": "Average interest cost and recent inflation: Europe in 2025",
    "montre": "Outside the euro area, the implicit interest rate is closely associated with recent inflation; within the euro area, much less so. Sweden, outside the euro, pays about the same as Germany.",
    "source": "Eurostat prc_hicp_aind (HICP), gov_10a_main, gov_10dd_edpt1, 2025",
    "precaution": "Descriptive relationship over one year, not causal."
@@ -62,7 +62,7 @@
    "id": "stock",
    "fichier": "dette-monde-stock-en",
    "titre": "The stock: public debt as a % of GDP, end-2025",
-   "montre": "The most quoted ranking: it shows neither the price paid on the debt nor the share of revenue it absorbs.",
+   "montre": "The most quoted ranking: it shows neither the average interest cost of the debt nor the share of revenue it absorbs.",
    "source": "Eurostat gov_10dd_edpt1, Maastricht debt, end-2025",
    "precaution": "Gross stock, excluding public assets and liabilities outside debt (pensions)."
   }

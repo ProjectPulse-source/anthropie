@@ -367,7 +367,7 @@ def niveau_avances(an: str) -> list[dict]:
                             badge_en="with reservations", stock=None, prix=None,
                             recettes=100 * r / y, charge=100 * i / r,
                             note="passifs financiers bruts publiés jusqu'en %s seulement : prix non calculé" % dern,
-                            note_en="gross financial liabilities published up to %s only: price not computed" % dern,
+                            note_en="gross financial liabilities published up to %s only: implicit interest rate not computed" % dern,
                             dette_nette=o.get((p, "GNFLQ", an))))
             continue
         d1 = d1_pct / 100 * y1
@@ -399,7 +399,7 @@ def niveau_emergents() -> tuple[str, list[dict]]:
         out.append(dict(code=p, nom=NOMS[p], nom_en=NOMS_EN[p], niveau="emergent", badge="indicatif", badge_en="indicative",
                         stock=st, prix=None, recettes=None,
                         charge=ch[1] if ch else None, charge_annee=an_ligne, annee=an_ligne,
-                        note_en="IMF debt and World Bank interest for the same year; interest of central government only",
+                        note_en="IMF debt and World Bank interest for the same year; central-government interest payments only",
                         note="dette FMI et intérêts Banque mondiale de la même année ; intérêts de la seule administration centrale"))
     return an_fmi, out
 
@@ -835,7 +835,7 @@ def fiches_figures(figs: dict, A: dict, A_en: dict) -> dict:
              "The share of debt falling due and the gap between market yields and the implicit interest rate: a marker of "
              "pressure on the average cost, not a forecast."),
             ("stock", "dette-monde-stock-en",
-             "The most quoted ranking: it shows neither the price paid on the debt nor the share of revenue it absorbs."),
+             "The most quoted ranking: it shows neither the average interest cost of the debt nor the share of revenue it absorbs."),
         ],
     }
     res = {}
@@ -907,13 +907,13 @@ def figures(lang: str, an: str, rows: list[dict], stats: dict, jum: list[dict]) 
             c_lx="stock: debt at end-%s relative to %s GDP" % (an_1, an),
             c_ly="burden: interest as a % of public revenue",
             c_titre="Same debt, different burden: the 27 EU countries in %s" % an,
-            c_desc="Each dot is a country. Dotted lines link the false twins picked out by the published rule: similar debt, "
+            c_desc="Each dot is a country. Dotted lines link the look-alike pairs picked out by the published rule: similar debt, "
                    "very different burden. Two least-squares lines, one per group, over their observed range.",
-            c_note="Dotted lines: false twins (nearest neighbour by debt stock, gap under 10 percentage points, "
+            c_note="Dotted lines: look-alike pairs (nearest neighbour by debt stock, gap under 10 percentage points, "
                    "three largest gaps in burden).",
             p_lx="average inflation %s-%s (HICP)" % (an_3, an_1),
             p_ly="implicit interest rate: interest %s / debt at end-%s" % (an, an_1),
-            p_titre="Price of debt and recent inflation: Europe in %s" % an,
+            p_titre="Average interest cost and recent inflation: Europe in %s" % an,
             p_desc="Outside the euro area, the implicit interest rate is closely associated with recent inflation; within the "
                    "euro area, much less so: the Baltic states saw high inflation without a high rate. Sweden, outside the euro, "
                    "has the same implicit interest rate as Germany. Association observed over one year, not causation.",
@@ -986,7 +986,7 @@ def main() -> int:
                                     "prix": "implicit interest rate: interest for the year / debt at the end of the previous year "
                                             "(ECB convention; differs from Eurostat's \"apparent cost\", based on average debt)",
                                     "charge": "interest / public revenue",
-                                    "transmission": "share of debt due within one year; 10-year yield minus price"},
+                                    "transmission": "share of debt due within one year; 10-year yield minus implicit interest rate"},
                  "niveaux_en": {"europe": "strictly comparable (Eurostat S.13, ESA 2010)",
                                 "avances": "with reservations (OECD Economic Outlook, SNA gross financial liabilities, gross interest)",
                                 "emergents": "indicative (IMF WEO and World Bank, central government)"},

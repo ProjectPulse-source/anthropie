@@ -24,7 +24,7 @@
 <div class="table-scroll">
 <table class="dette-monde-table">
   {{ if $en }}<caption>The four dimensions, {{ $d.meta.annee }} — Eurostat, general government, harmonised scope (strictly comparable)</caption>
-  <thead><tr><th scope="col">Country</th><th scope="col">Euro area</th><th scope="col">Starting stock<br><small>debt end-{{ sub (int $d.meta.annee) 1 }} / GDP {{ $d.meta.annee }}</small></th><th scope="col">Price<br><small>implicit interest rate</small></th><th scope="col">Revenue<br><small>% of GDP</small></th><th scope="col">Burden<br><small>interest / revenue</small></th></tr></thead>{{ else }}<caption>Les quatre dimensions, {{ $d.meta.annee }} — Eurostat, administrations publiques, périmètre harmonisé (strictement comparable)</caption>
+  <thead><tr><th scope="col">Country</th><th scope="col">Euro area</th><th scope="col">Starting stock<br><small>debt end-{{ sub (int $d.meta.annee) 1 }} / GDP {{ $d.meta.annee }}</small></th><th scope="col">Cost<br><small>implicit interest rate</small></th><th scope="col">Revenue<br><small>% of GDP</small></th><th scope="col">Burden<br><small>interest / revenue</small></th></tr></thead>{{ else }}<caption>Les quatre dimensions, {{ $d.meta.annee }} — Eurostat, administrations publiques, périmètre harmonisé (strictement comparable)</caption>
   <thead><tr><th scope="col">Pays</th><th scope="col">Zone euro</th><th scope="col">Stock de départ<br><small>dette fin {{ sub (int $d.meta.annee) 1 }} / PIB {{ $d.meta.annee }}</small></th><th scope="col">Prix<br><small>taux implicite</small></th><th scope="col">Recettes<br><small>% du PIB</small></th><th scope="col">Charge<br><small>intérêts / recettes</small></th></tr></thead>{{ end }}
   <tbody>
   {{- range sort $d.europe "stock" "desc" }}

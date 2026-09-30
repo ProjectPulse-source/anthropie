@@ -16,7 +16,7 @@
    "stock": "gross debt / GDP (debt at the end of the previous year for the decomposition)",
    "prix": "implicit interest rate: interest for the year / debt at the end of the previous year (ECB convention; differs from Eurostat's \"apparent cost\", based on average debt)",
    "charge": "interest / public revenue",
-   "transmission": "share of debt due within one year; 10-year yield minus price"
+   "transmission": "share of debt due within one year; 10-year yield minus implicit interest rate"
   },
   "niveaux_en": {
    "europe": "strictly comparable (Eurostat S.13, ESA 2010)",
@@ -766,7 +766,7 @@
    "recettes": 61.59807260986937,
    "charge": 1.853470364116323,
    "note": "passifs financiers bruts publiés jusqu'en 2023 seulement : prix non calculé",
-   "note_en": "gross financial liabilities published up to 2023 only: price not computed",
+   "note_en": "gross financial liabilities published up to 2023 only: implicit interest rate not computed",
    "dette_nette": null
   },
   {
@@ -799,7 +799,7 @@
    "charge": 3.4419404251668,
    "charge_annee": "2021",
    "annee": "2021",
-   "note_en": "IMF debt and World Bank interest for the same year; interest of central government only",
+   "note_en": "IMF debt and World Bank interest for the same year; central-government interest payments only",
    "note": "dette FMI et intérêts Banque mondiale de la même année ; intérêts de la seule administration centrale"
   },
   {
@@ -815,7 +815,7 @@
    "charge": 33.9761997637185,
    "charge_annee": "2022",
    "annee": "2022",
-   "note_en": "IMF debt and World Bank interest for the same year; interest of central government only",
+   "note_en": "IMF debt and World Bank interest for the same year; central-government interest payments only",
    "note": "dette FMI et intérêts Banque mondiale de la même année ; intérêts de la seule administration centrale"
   },
   {
@@ -831,7 +831,7 @@
    "charge": 30.0945783300769,
    "charge_annee": "2024",
    "annee": "2024",
-   "note_en": "IMF debt and World Bank interest for the same year; interest of central government only",
+   "note_en": "IMF debt and World Bank interest for the same year; central-government interest payments only",
    "note": "dette FMI et intérêts Banque mondiale de la même année ; intérêts de la seule administration centrale"
   },
   {
@@ -847,7 +847,7 @@
    "charge": 18.1746461598679,
    "charge_annee": "2024",
    "annee": "2024",
-   "note_en": "IMF debt and World Bank interest for the same year; interest of central government only",
+   "note_en": "IMF debt and World Bank interest for the same year; central-government interest payments only",
    "note": "dette FMI et intérêts Banque mondiale de la même année ; intérêts de la seule administration centrale"
   }
  ],

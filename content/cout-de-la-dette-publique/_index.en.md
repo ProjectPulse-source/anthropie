@@ -202,7 +202,7 @@ The {{< dette-val "interets_mdeur" >}} billion euros of interest paid in {{< det
 Which leaves a question these figures do not settle: who ultimately bears this burden, and is part of its cost shifted onto others? That is the subject of the next page (in French).
 
 {{< appel-livre slug="dette-publique-qui-paie-vraiment" sur="To take the analysis further" avis="non" >}}
-This page prices the bill. It does not say who settles it — and that is where everything is decided: a debt is never cancelled, and its cost can be shifted — onto the taxpayer, onto the saver through inflation, onto public services whose margin tightens, onto those who cannot yet vote — depending on the decisions taken to adjust it. The book follows each of these channels in turn, on official figures, and ends in scenarios for 2025-2035. By the end you will recognise which one is unfolding.
+This page prices the bill. It does not say who settles it — and that is where everything is decided: a debt is never cancelled, and its cost can be shifted — onto the taxpayer, onto the saver through inflation, onto public services whose resources are squeezed, onto those who cannot yet vote — depending on the decisions taken to adjust it. The book follows each of these channels in turn, on official figures, and ends in scenarios for 2025-2035. By the end you will recognise which one is unfolding.
 {{< /appel-livre >}}
 
 ## Where these figures come from

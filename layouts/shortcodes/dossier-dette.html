@@ -84,9 +84,9 @@
     (dict "n" "3" "url" (cond $en "/en/public-debt-international-comparison/" "/dette-publique-comparaison-internationale/")
           "titre" (cond $en "Elsewhere" "Et ailleurs") "court" (cond $en "Elsewhere" "Ailleurs")
           "role" (cond $en "comparison" "comparaison") "note" "") -}}
-<nav class="dossier-dette" aria-label="{{ if $en }}Public debt file{{ else }}Dossier dette publique{{ end }}">
+<nav class="dossier-dette" aria-label="{{ if $en }}Public debt dossier{{ else }}Dossier dette publique{{ end }}">
   <div class="dossier-dette__barre">
-    <span class="dossier-dette__titre">{{ if $en }}Public debt file{{ else }}Dossier dette publique{{ end }}</span>
+    <span class="dossier-dette__titre">{{ if $en }}Public debt dossier{{ else }}Dossier dette publique{{ end }}</span>
     <ol class="dossier-dette__volets">
       {{- range $i, $it := $items }}
       {{- $num := add $i 1 }}

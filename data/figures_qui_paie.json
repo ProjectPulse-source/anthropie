@@ -85,8 +85,8 @@
   {
    "id": "exposition",
    "fichier": "qui-paie-exposition-en",
-   "titre": "The same €10 billion effort: who would bear it, depending on the decision taken?",
-   "montre": "What the same effort would represent for each standard-of-living decile depending on the decision taken — taxes, pensions or education —, then how much that choice changes the effort of the same group.",
+   "titre": "The same €10 billion adjustment: who would bear it, depending on the decision taken?",
+   "montre": "What the same adjustment would represent for each standard-of-living decile depending on the decision taken — taxes, pensions or education —, then how much that choice changes what the same group bears.",
    "source": "Insee, distributional national accounts, table CND.101 (standard-of-living twentieths, 2020-2023, base 2020) — 2023 vintage",
    "precaution": "An accounting exposure profile, not a simulation: no behaviour, no feedback effect. A cut in a valued public service is not a loss of cash income. The D1 point of the tax decision is excluded; the reason is given in the figure's footer."
   },

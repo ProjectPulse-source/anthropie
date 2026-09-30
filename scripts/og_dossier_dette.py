@@ -136,7 +136,7 @@ def figure_exposition(d: ImageDraw.ImageDraw, ex: dict, lang: str = "fr") -> Non
     d.text((x0, bas + 14), "D1", font=fa, fill=URL_GREY)
     d.text((x1 - 34, bas + 14), "D10", font=fa, fill=URL_GREY)
     if lang == "en":
-        l1 = "A %g bn euro effort, as %% of each standard-of-living" % ex["effort_mdeur"]
+        l1 = "A %g bn euro adjustment, as %% of each standard-of-living" % ex["effort_mdeur"]
         l2 = "decile's income, %s" % ex["millesime"]
     else:
         l1 = "Un effort de %g Md€, en %% du revenu de chaque" % ex["effort_mdeur"]
@@ -370,7 +370,7 @@ def main() -> int:
           [(C2, "Baisse de l'enseignement"), (C1, "Hausse des impôts (revenus, patrimoine)"),
            (SEC, "Baisse des pensions")])
     carte("og-qui-paie-dette-en.jpg",
-          ["Same effort,", "different payers"],
+          ["Same adjustment,", "different payers"],
           "Who pays the debt depends on the decision taken to adjust.",
           "Insee, distributional national accounts %s · CC BY 4.0" % ex["millesime"],
           "stephane-lalut.com/en/who-really-pays-public-debt/",

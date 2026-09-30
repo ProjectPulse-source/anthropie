@@ -1097,14 +1097,14 @@ def svg_exposition(c: dict, lang: str = "fr") -> tuple[str, int]:
 
     c_ = [txt(0, 22, S("Un même effort de 10" + NBSP + "milliards d'euros : qui le supporterait, "
                        "selon la décision prise ?",
-                       "The same €10 billion effort: who would bear it, depending on the "
+                       "The same €10 billion adjustment: who would bear it, depending on the "
                        "decision taken?"), TY_TITRE, INK2),
           txt(0, 48, S("A · Montant imputé au groupe, en % de son revenu disponible net",
                        "A · Amount allocated to the group, as a % of its net disposable income"),
               TY_ANNOT, INK, weight="600"),
           txt(0, 64, S("Effort réparti au prorata des montants existants de chaque poste "
                        "· dixièmes de niveau de vie, 2023",
-                       "Effort allocated pro rata to the existing amounts of each item "
+                       "Adjustment allocated pro rata to the existing amounts of each item "
                        "· standard-of-living deciles, 2023"), TY_AXE, MUTED),
           txt(0, 78, S("Décisions comparées : impôts sur les revenus et le patrimoine "
                        "· pensions de retraite · dépenses d'enseignement",
@@ -1151,8 +1151,8 @@ def svg_exposition(c: dict, lang: str = "fr") -> tuple[str, int]:
 
     c_.append(txt(0, 364, S("B · De combien le choix de la décision change l'effort d'un même "
                             "groupe",
-                            "B · How much the choice of decision changes the effort of the same "
-                            "group"), TY_ANNOT, INK, weight="600"))
+                            "B · How much the choice of decision changes what the same group "
+                            "bears"), TY_ANNOT, INK, weight="600"))
     c_.append(txt(0, 380, S("Rapport entre la décision la plus lourde et la plus légère pour ce "
                             "groupe · base 1 : aucun écart",
                             "Ratio of the heaviest to the lightest decision for this group "
@@ -1218,7 +1218,7 @@ def svg_exposition(c: dict, lang: str = "fr") -> tuple[str, int]:
            "Compiled by Stéphane Lalut, CC BY 4.0 · " + URL_PAGE_EN), MUTED)]
     h = int(y + 13 + 12 * len(lignes) + 8)
     if lang == "en":
-        desc = ("Two panels. A: for a 10 billion euro effort allocated pro rata to each item, the "
+        desc = ("Two panels. A: for a 10 billion euro adjustment allocated pro rata to each item, the "
                 "share of net disposable income this amount would represent for each "
                 "standard-of-living decile, in 2023. A cut in education spending weighs %s%% of "
                 "the income of the first decile and %s%% of the last; a rise in taxes on income "
@@ -1229,7 +1229,7 @@ def svg_exposition(c: dict, lang: str = "fr") -> tuple[str, int]:
                     en(p["enseignement"][0], 2), en(p["enseignement"][9], 2),
                     en(p["fiscal"][9], 2), en(min(p["pensions"]), 2), en(max(p["pensions"]), 2),
                     "×" + en(max(rat[0], rat[9]), 1), "×" + en(min(rat), 1)))
-        e = entete(h, "qp-exp", "The same €10 billion effort: who would bear it, depending on "
+        e = entete(h, "qp-exp", "The same €10 billion adjustment: who would bear it, depending on "
                    "the decision taken?", desc) + c_
         e += cartouche(y, lignes)
         e.append("</svg>")
@@ -1476,11 +1476,11 @@ def main() -> int:
                        "future generations; a household's age is not the retirement status of "
                        "its members."},
         {"id": "exposition", "fichier": "qui-paie-exposition-en",
-         "titre": "The same €10 billion effort: who would bear it, depending on the decision "
+         "titre": "The same €10 billion adjustment: who would bear it, depending on the decision "
                   "taken?",
-         "montre": "What the same effort would represent for each standard-of-living decile "
+         "montre": "What the same adjustment would represent for each standard-of-living decile "
                    "depending on the decision taken — taxes, pensions or education —, then how "
-                   "much that choice changes the effort of the same group.",
+                   "much that choice changes what the same group bears.",
          "source": "Insee, distributional national accounts, table CND.101 (standard-of-living "
                    "twentieths, 2020-2023, base 2020) — 2023 vintage",
          "precaution": "An accounting exposure profile, not a simulation: no behaviour, no "

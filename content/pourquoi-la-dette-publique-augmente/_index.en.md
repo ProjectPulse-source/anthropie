@@ -8,7 +8,7 @@ og_image: "images/og-dette-dynamique-en.jpg"
 og_image_alt: "Share card: “Why the debt doubled” — waterfall of French public debt in points of GDP, 1995 to 2025: interest, nominal growth, primary deficits, stock-flow adjustments."
 date: 2026-09-30
 lastmod: 2026-09-30
-# English version of part 1 of the public debt file (FR: content/pourquoi-la-dette-publique-augmente/_index.md).
+# English version of part 1 of the public debt dossier (FR: content/pourquoi-la-dette-publique-augmente/_index.md).
 # Same tokens, same keys: values come from the affichage_en block of data/dette_dynamique.json.
 donnees: [dette_dynamique]
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
@@ -31,11 +31,11 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
   fichiers: ["dette_dynamique.csv", "dette_dynamique.json"]
 faq:
   - question: "Why does French public debt rise?"
-    answer: "Over {dyn.annee_depart}-{dyn.annee_fin}, the debt-to-GDP ratio went from {dyn.dette_depart}% to {dyn.dette_fin}%. Decomposing its change year by year, interest pushed it up by {dyn.effet_interets} points and nominal GDP growth held it back by {dyn.effet_croissance}: their net effect is only {dyn.effet_net} points. The rise comes mostly from primary deficits, the gap between public spending and revenue excluding interest ({dyn.deficits_primaires} points), and for the rest from stock-flow adjustments ({dyn.flux_stock}). This is an accounting decomposition: it says through which term the debt rose, not why the deficits existed."
+    answer: "Over {dyn.annee_depart}-{dyn.annee_fin}, the debt-to-GDP ratio went from {dyn.dette_depart}% to {dyn.dette_fin}%. Decomposing its change year by year, interest pushed it up by {dyn.effet_interets} points and nominal GDP growth held it back by {dyn.effet_croissance}: their net effect is only {dyn.effet_net} points. The rise comes mostly from primary deficits, the gap between public spending and revenue excluding interest ({dyn.deficits_primaires} points), and for the rest from stock-flow adjustments ({dyn.flux_stock}). This is an accounting decomposition: it identifies which accounting components contributed to the increase, not why the deficits existed."
   - question: "Does interest make the debt rise?"
     answer: "All else equal, yes: it adds to the borrowing requirement. But over thirty years nominal GDP growth almost offset it: its accounting contribution is {dyn.effet_interets} points, against {dyn.effet_croissance} points of reduction due to nominal growth. That balance depends on the gap between the implicit interest rate on the debt and nominal growth: in {dyn.annee_fin} the two were almost equal ({dyn.taux_implicite_dernier}% and {dyn.croissance_derniere}%)."
   - question: "Does inflation reduce the debt?"
-    answer: "It can reduce the ratio, by inflating nominal GDP faster than the interest bill. From 2021 to 2023, nominal growth — inflation included — produced a interest-growth effect of −{dyn.effet_2021_2023} points, while primary deficits added {dyn.deficits_2021_2023}; this decomposition does not separate the share of inflation from that of real growth. It does not do so at no cost: it reduces the real value of nominal claims, and that loss is borne by someone."
+    answer: "It can reduce the ratio, by increasing nominal GDP faster than the interest bill. From 2021 to 2023, nominal growth — inflation included — produced an interest-growth effect of −{dyn.effet_2021_2023} points, while primary deficits added {dyn.deficits_2021_2023}; this decomposition does not separate the share of inflation from that of real growth. This is not costless: it reduces the real value of nominal claims, and that loss is borne by someone."
   - question: "Is a primary deficit a sign of too much spending?"
     answer: "Not necessarily: it is a gap between spending and revenue excluding interest, which can come from rising spending, falling revenue, or a recession that does both at once. These data measure the gap; they do not say which of its two terms should be corrected."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
@@ -50,7 +50,7 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 <p class="donnees-ligne"><span class="badge-donnees">Updated: {{< dyn-val "date_donnees" >}}</span> France, general government, Eurostat series from {{< dyn-val "annee_depart" >}} to {{< dyn-val "annee_fin" >}}. Download: <a href="/dette_dynamique.csv">CSV</a> · <a href="/dette_dynamique.json">JSON</a> · <a href="#sources">method</a></p>
 
-France is a telling case for a question every indebted country faces. Its debt ratio doubled in thirty years, and Eurostat's harmonised series allow that rise to be split, year by year, into the terms of a standard accounting identity. The method applies anywhere; the answer below is France's.
+France is a telling case for a question every indebted country faces. Its debt ratio doubled in thirty years, and Eurostat's harmonised series allow that rise to be split, year by year, into the terms of a standard accounting identity. The accounting identity is general; the estimates below are for France.
 
 ## Where the rise comes from {#cascade}
 
@@ -61,7 +61,7 @@ France is a telling case for a question every indebted country faces. Its debt r
 
 <div class="resultat-phrase">
 
-**The result in one sentence.** Over thirty years, interest and nominal GDP growth almost cancelled out (net effect {{< dyn-val "effet_net" >}} points): the rise in the debt comes mostly from primary deficits, {{< dyn-val "deficits_primaires" >}} points out of {{< dyn-val "hausse" >}}. This is an accounting decomposition: it says through which term the debt rose, not why the deficits existed.
+**The result in one sentence.** Over thirty years, interest and nominal GDP growth almost cancelled out (net effect {{< dyn-val "effet_net" >}} points): the rise in the debt comes mostly from primary deficits, {{< dyn-val "deficits_primaires" >}} points out of {{< dyn-val "hausse" >}}. This is an accounting decomposition: it identifies which accounting components contributed to the increase, not why the deficits existed.
 
 </div>
 
@@ -104,20 +104,20 @@ Over the {{< dyn-val "annees_total" >}} years of the series, the primary balance
 
 ## What this decomposition does not say {#limites}
 
-- **An accounting decomposition, not a causal explanation.** It says through which term the debt moved; it does not say why the deficits existed, or whether they were avoidable.
+- **An accounting decomposition, not a causal explanation.** It identifies which accounting components moved the debt; it does not say why the deficits existed, or whether they were avoidable.
 - **Terms that are not independent.** In a recession, revenue falls and some spending rises: the primary deficit itself depends on growth.
-- **Inflation does not erase debt at no cost.** It reduces the real value of nominal claims, and that loss is borne by someone: this is the subject of [Who really pays for public debt?](/en/who-really-pays-public-debt/)
+- **Inflation does not reduce the real burden of nominal debt without cost.** It reduces the real value of nominal claims, and that loss is borne by someone: this is the subject of [Who really pays for public debt?](/en/who-really-pays-public-debt/)
 - **Nothing about the future.** What comes next depends on the gap between the implicit interest rate and nominal growth, and on the primary balance. In {{< dyn-val "annee_fin" >}}, the implicit rate ({{< dyn-val "taux_implicite_dernier" >}}%) and nominal growth ({{< dyn-val "croissance_derniere" >}}%) were almost equal: the interest-growth effect was close to zero ({{< dyn-val "net_dernier" >}} points).
-- **A series that starts in {{< dyn-val "annee_depart" >}}.** Eurostat's harmonised interest data go back no further; the long debt curve, since 1978, is in [What does French public debt actually cost?](/en/cost-of-french-public-debt/)
+- **A series that starts in {{< dyn-val "annee_depart" >}}.** Eurostat's harmonised interest data go back no further; the long-run debt series, since 1978, is in [What does French public debt actually cost?](/en/cost-of-french-public-debt/)
 
 ## Frequently asked questions {#questions}
 
 {{< faq-visible >}}
 
-**In the public debt file** — [What does French public debt actually cost?](/en/cost-of-french-public-debt/) · [Who really pays for public debt?](/en/who-really-pays-public-debt/) · [And elsewhere?](/en/public-debt-international-comparison/)
+**In the public debt dossier** — [What does French public debt actually cost?](/en/cost-of-french-public-debt/) · [Who really pays for public debt?](/en/who-really-pays-public-debt/) · [And elsewhere?](/en/public-debt-international-comparison/)
 
 {{< appel-livre slug="dette-publique-qui-paie-vraiment" sur="To take the analysis further" avis="non" >}}
-This page shows through which terms the debt rose. It does not say who bears its cost, or through which channels that cost is shifted — onto the taxpayer, onto the saver through inflation, onto public services whose margin tightens — depending on the decisions taken to adjust it. The book follows these channels one by one, on official figures, to show in which configurations each group bears a cost. By the end you will have a method for identifying who bears what, depending on the decision taken. The book exists in French only.
+This page identifies which accounting components contributed to the rise in the debt. It does not say who bears its cost, or through which channels that cost is shifted — onto the taxpayer, onto the saver through inflation, onto public services whose resources are squeezed — depending on the decisions taken to adjust it. The book follows these channels one by one, on official figures, to show in which configurations each group bears a cost. By the end you will have a method for identifying who bears what, depending on the decision taken. The book exists in French only.
 {{< /appel-livre >}}
 
 ## Where these figures come from {#sources}
