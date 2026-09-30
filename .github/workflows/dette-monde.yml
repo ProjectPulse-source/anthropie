@@ -1,0 +1,127 @@
+# Comparaison internationale de la dette -> data/dette_monde.json (+ endpoint static/ + 4 figures SVG),
+# PUIS deploiement de la page /dette-publique-comparaison-internationale/.
+#
+# MANDAT DE L'AUTEUR, 29-30/09/2026 : « tu te programmes une action automatique, je te donne mandat ».
+# Meme mecanique que dette-insee.yml (decision auteur du 20/09 : mise a jour sans intervention, gardee
+# par des controles qui bloquent AVANT d'ecrire) : identite exacte verifiee pays par pays, bandes de
+# plausibilite, 14 GARDES DE PROSE (une donnee qui dement une phrase de la page arrete tout), build
+# Hugo bloquant. Un echec ouvre une issue et ne publie rien.
+#
+# CE QUI A MANQUE POUR LA DETTE FRANCAISE (29/09) : un cron hebdomadaire est aveugle au calendrier des
+# sources. L'INSEE a publie le mardi 29/09, le cron passait le mercredi : il a fallu un lancement a la
+# main. Ici, en plus de l'hebdomadaire, des passages QUOTIDIENS couvrent la semaine ou le FMI publie son
+# World Economic Outlook (Assemblees annuelles, Bangkok, 12-18/10/2026).
+#
+# CONDITION DE MORT de la ligne cron « 13-20 octobre » : a retirer apres le 20/10/2026 (elle ne se
+# declencherait plus qu'en octobre 2027, et le calendrier du FMI aura change). L'hebdomadaire reste.
+# DECROISSANCE du workflow entier : plus de 2 echecs/an pour cause non-donnee => reexamen.
+# Repli toujours viable : `python scripts/update_dette_monde.py` en local + commit humain.
+name: Donnees dette (comparaison internationale)
+
+on:
+  schedule:
+    - cron: '47 7 * * 3'          # chaque mercredi 07:47 UTC (apres dette-insee, 07:17)
+    - cron: '30 15 13-20 10 *'    # WEO d'octobre 2026 : chaque jour du 13 au 20/10, 15:30 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+env:
+  HUGO_VERSION: 0.147.0
+
+jobs:
+  update:
+    runs-on: ubuntu-24.04   # epingle -- voir docs/MIGRATION_RUNNER_UBUNTU26.md
+    outputs:
+      changed: ${{ steps.diff.outputs.changed }}
+      sha: ${{ steps.push.outputs.sha }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - name: Rapatrier, calculer, valider (gardes dures et gardes de prose, exit 1 si echec)
+        run: python3 scripts/update_dette_monde.py
+
+      - name: Detecter un changement
+        id: diff
+        run: |
+          if git diff --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Aucun changement de donnees -- rien a publier."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git diff --stat
+          fi
+
+      - name: Build gate Hugo (jamais un push qui casse le build)
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          wget -q -O "${{ runner.temp }}/hugo.deb" \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+          sudo dpkg -i "${{ runner.temp }}/hugo.deb"
+          hugo --minify
+
+      - name: Publier sur main
+        id: push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Enumeration explicite : toute sortie NOUVELLE du script doit etre ajoutee ICI.
+          git add data/dette_monde.json static/dette_monde.json \
+                  static/img/dette-monde-stock.svg \
+                  static/img/dette-monde-charge.svg \
+                  static/img/dette-monde-prix.svg \
+                  static/img/dette-monde-transmission.svg
+          git commit -m "data(dette-monde): Eurostat/OCDE/FMI/Banque mondiale du $(date -u +%Y-%m-%d)"
+          pushed=0
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then pushed=1; break; fi
+            echo "::warning::Push refuse (tentative $attempt) -- rebase puis nouvelle tentative"
+            git pull --rebase origin main || true
+            sleep $((attempt * 5))
+          done
+          if [ "$pushed" = 0 ]; then
+            echo "::error::Push impossible apres 3 tentatives -- donnee NON publiee"
+            exit 1
+          fi
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+  deploy:
+    needs: update
+    if: needs.update.outputs.changed == 'true'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/hugo.yml
+    with:
+      ref: ${{ needs.update.outputs.sha }}
+
+  alerte:
+    needs: [update, deploy]
+    if: failure()
+    runs-on: ubuntu-24.04   # epingle -- voir docs/MIGRATION_RUNNER_UBUNTU26.md
+    permissions:
+      issues: write
+    steps:
+      - uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          script: |
+            const quoi = '${{ needs.update.result }}' === 'failure'
+              ? 'rapatriement, garde (dont gardes de prose : une phrase de la page n est plus soutenue par les donnees), build gate ou push'
+              : 'deploiement de la page (la donnee est sur main, la page est en retard)';
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: 'Donnees dette-monde : echec du workflow du ' + new Date().toISOString().slice(0, 10),
+              body: 'Le workflow dette-monde a echoue -- etape : ' + quoi + '.\n\nRun : ' +
+                context.serverUrl + '/' + context.repo.owner + '/' + context.repo.repo +
+                '/actions/runs/' + context.runId +
+                '\n\nRepli : `python scripts/update_dette_monde.py` en local ; si une garde de prose bloque, ' +
+                'reformuler la phrase de la page, puis commit humain.'
+            })
