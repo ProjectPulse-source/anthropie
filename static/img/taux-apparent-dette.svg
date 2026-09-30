@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 388" role="img" font-variant-numeric="tabular-nums" aria-labelledby="ta-t ta-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-<title id="ta-t">Le taux apparent de la dette publique française, 1996-2025</title>
-<desc id="ta-d">Une courbe, en pourcentage par an. Le taux apparent de la dette descend de 6,5 % en 1996 à 1,2 % en 2020, son minimum sur la série, puis remonte à 2,0 % en 2025. La baisse court sur près de vingt-cinq ans ; la remontée sur les dernières années.</desc>
-<text x="46" y="22" font-size="13" fill="#52514e">Taux apparent de la dette publique, en % par an — indicateur du coût moyen du stock</text>
+<title id="ta-t">Le taux implicite de la dette publique française, 1996-2025</title>
+<desc id="ta-d">Une courbe, en pourcentage par an. Le taux implicite de la dette descend de 6,5 % en 1996 à 1,2 % en 2020, son minimum sur la série, puis remonte à 2,0 % en 2025. La baisse court sur près de vingt-cinq ans ; la remontée sur les dernières années.</desc>
+<text x="46" y="22" font-size="13" fill="#52514e">Taux implicite de la dette publique, en % par an — indicateur du coût moyen du stock</text>
 <line x1="46" y1="280.0" x2="706" y2="280.0" stroke="#c3c2b7" stroke-width="1"/>
 <text x="40" y="284.0" font-size="11" fill="#898781" text-anchor="end">0</text>
 <line x1="46" y1="213.1" x2="706" y2="213.1" stroke="#e1e0d9" stroke-width="1"/>
@@ -25,6 +25,6 @@
 <text x="583.6" y="260.5" font-size="12" fill="#52514e" text-anchor="middle">1,2 % en 2020</text>
 <line x1="0" y1="344.0" x2="720" y2="344.0" stroke="#e1e0d9" stroke-width="1"/>
 <text x="0" y="357.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Calcul sur séries Eurostat (gov_10a_main) et INSEE, 1996-2025</text>
-<text x="0" y="369.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Taux apparent = intérêts de l'année / encours au 31 décembre précédent, non le taux d'emprunt du jour.</text>
+<text x="0" y="369.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Taux implicite = intérêts de l'année / encours au 31 décembre précédent, non le taux d'emprunt du jour.</text>
 <text x="0" y="381.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/cout-de-la-dette-publique/</text>
 </svg>

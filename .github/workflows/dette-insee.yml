@@ -100,7 +100,7 @@ jobs:
           # la figure resterait figee en ligne pendant que le reste s'actualise,
           # sans erreur ni trace. (Defaut evite le 2026-08-16 en ajoutant la
           # courbe du taux apparent.)
-          git add data/dette_officielle.json static/dette_officielle.json \
+          git add data/dette_officielle.json static/dette_officielle.json static/dette_officielle.csv \
                   static/img/ciseau-dette-interets.svg \
                   static/img/taux-apparent-dette.svg \
                   static/img/ciseau-dette-interets-en.svg \

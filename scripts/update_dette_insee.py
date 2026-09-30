@@ -61,6 +61,10 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 OUT_JSON = REPO / "data" / "dette_officielle.json"
 OUT_ENDPOINT = REPO / "static" / "dette_officielle.json"
+# CSV (avis « Combien coûte », 30/09) : même contenu que le JSON publié, en format LONG — une valeur par ligne, avec
+# son unité, sa période et sa source —, UTF-8 avec BOM pour qu'Excel lise les accents. Dérivé du payload, jamais
+# recalculé : il ne peut pas dire autre chose que le JSON.
+OUT_CSV = REPO / "static" / "dette_officielle.csv"
 OUT_SVG = REPO / "static" / "img" / "ciseau-dette-interets.svg"
 OUT_SVG_TAUX = REPO / "static" / "img" / "taux-apparent-dette.svg"
 OUT_SVG_EN = REPO / "static" / "img" / "ciseau-dette-interets-en.svg"
@@ -469,7 +473,7 @@ LABELS_CARTOUCHE = {
     "fr": {
         "licence": "Compilation Stéphane Lalut, CC BY 4.0 · "
                    "stephane-lalut.com/cout-de-la-dette-publique/",
-        "taux": "Taux apparent = intérêts de l'année / encours au "
+        "taux": "Taux implicite = intérêts de l'année / encours au "
                 "31 décembre précédent, non le taux d'emprunt du jour.",
         "ciseau": "Deux échelles distinctes, une même unité : "
                   "le % du PIB.",
@@ -482,7 +486,7 @@ LABELS_CARTOUCHE = {
         "src_taux": "Calcul sur séries Eurostat (gov_10a_main) et INSEE, %s-%s",
         "src_longue": "INSEE, dette de Maastricht, %s-%s",
         "titre_ciseau": "Le ciseau : encours et charge d'intérêts, 1995-%s",
-        "titre_taux": "Le taux apparent, %s-%s",
+        "titre_taux": "Le taux implicite, %s-%s",
         "titre_longue": "La dette depuis %s, en %% du PIB",
         "montre_ciseau": ("L'encours double en part de PIB pendant que la charge "
                           "d'intérêts baisse, jusqu'au retournement de 2022."),
@@ -502,9 +506,9 @@ LABELS_CARTOUCHE = {
         "montre_masses": ("La charge d'intérêts est longtemps restée sous le poste "
                           "« ordre et sécurité » ; elle est repassée au-dessus."),
         "marche": ("Le taux à 10 ans, repère du coût des emprunts nouveaux ; le "
-                   "taux apparent, coût de tout le stock, ne le suit qu'au fil des "
+                   "taux implicite, coût de tout le stock, ne le suit qu'au fil des "
                    "refinancements."),
-        "src_marche": ("Eurostat irt_lt_mcby_a (taux à 10 ans)  ·  taux apparent : "
+        "src_marche": ("Eurostat irt_lt_mcby_a (taux à 10 ans)  ·  taux implicite : "
                        "Eurostat gov_10a_main et INSEE, %s-%s"),
         "titre_marche": "Taux de marché et coût moyen du stock, %s-%s",
         "montre_marche": ("Le coût moyen du stock suit le taux à 10 ans avec des "
@@ -513,7 +517,7 @@ LABELS_CARTOUCHE = {
     "en": {
         "licence": "Compiled by Stéphane Lalut, CC BY 4.0 · "
                    "stephane-lalut.com/en/cost-of-french-public-debt/",
-        "taux": "Effective rate = a year's interest / debt outstanding at the "
+        "taux": "Implicit rate = a year's interest / debt outstanding at the "
                 "end of the previous year, not today's borrowing rate.",
         "ciseau": "Two separate scales, one shared unit: % of GDP.",
         "longue": ("Maastricht debt, general government. \"> 80%\": first year-end above the "
@@ -523,7 +527,7 @@ LABELS_CARTOUCHE = {
         "src_taux": "Computed on Eurostat (gov_10a_main) and INSEE series, %s-%s",
         "src_longue": "INSEE, Maastricht debt, %s-%s",
         "titre_ciseau": "The scissor: debt stock and interest burden, 1995-%s",
-        "titre_taux": "The effective interest rate, %s-%s",
+        "titre_taux": "The implicit interest rate, %s-%s",
         "titre_longue": "Debt since %s, as a %% of GDP",
         "montre_ciseau": ("The stock doubles as a share of GDP while the interest "
                           "burden falls, until the 2022 turn."),
@@ -542,10 +546,10 @@ LABELS_CARTOUCHE = {
         "titre_masses": "Interest paid against the main public budgets, %s-%s",
         "montre_masses": ("Interest paid long stayed below the public order and safety "
                           "function; it has moved back above it."),
-        "marche": ("The 10-year yield benchmarks the cost of new borrowing; the effective "
+        "marche": ("The 10-year yield benchmarks the cost of new borrowing; the implicit "
                    "rate, the cost of the whole stock, follows it only as old debt is "
                    "refinanced."),
-        "src_marche": ("Eurostat irt_lt_mcby_a (10-year yield)  ·  effective rate: "
+        "src_marche": ("Eurostat irt_lt_mcby_a (10-year yield)  ·  implicit rate: "
                        "Eurostat gov_10a_main and INSEE, %s-%s"),
         "titre_marche": "Market rate and average cost of the stock, %s-%s",
         "montre_marche": ("The average cost of the stock follows the 10-year rate "
@@ -868,23 +872,23 @@ def build_svg(dette_pib: dict[str, float], d41_pib: dict[str, float],
 
 LABELS_TAUX = {
     "fr": {
-        "titre": "Le taux apparent de la dette publique française, %s-%s",
-        "desc": "Une courbe, en pourcentage par an. Le taux apparent de la "
+        "titre": "Le taux implicite de la dette publique française, %s-%s",
+        "desc": "Une courbe, en pourcentage par an. Le taux implicite de la "
                 "dette descend de %s %% en %s à %s %% en %s, son minimum sur la "
                 "série, puis remonte à %s %% en %s. La baisse court sur près de "
                 "vingt-cinq ans ; la remontée sur les dernières années.",
-        "panneau": "Taux apparent de la dette publique, en % par an — "
+        "panneau": "Taux implicite de la dette publique, en % par an — "
                    "indicateur du coût moyen du stock",
         "en_annee": NBSP + "% en ",
     },
     "en": {
-        "titre": "The effective interest rate on French public debt, %s-%s",
-        "desc": "A single curve, in percent per year. The effective rate on the "
+        "titre": "The implicit interest rate on French public debt, %s-%s",
+        "desc": "A single curve, in percent per year. The implicit rate on the "
                 "debt stock falls from %s%% in %s to %s%% in %s, its lowest "
                 "point in the series, then climbs back to %s%% in %s. The "
                 "decline runs for nearly twenty-five years; the rebound only "
                 "for the last few.",
-        "panneau": "Effective interest rate on public debt, % per year — "
+        "panneau": "Implicit interest rate on public debt, % per year — "
                    "a proxy for the average cost of the stock",
         "en_annee": "% in ",
     },
@@ -892,7 +896,7 @@ LABELS_TAUX = {
 
 
 def build_svg_taux(taux: dict[str, float], lang: str = "fr") -> str:
-    """Courbe du TAUX APPARENT -- le chainon causal que la page raconte sans le
+    """Courbe du TAUX IMPLICITE -- le chainon causal que la page raconte sans le
     montrer. Serie UNIQUE : donc pas de legende (le titre nomme la serie), et
     etiquetage direct des trois seuls points que la prose cite : depart, creux,
     arrivee. Le repere vertical est pose sur le creux MESURE, jamais sur une
@@ -988,30 +992,30 @@ LABELS_LONGUE = {
 
 
 LABELS_MARCHE = {
-    "fr": {"titre": "Taux \u00e0 10 ans et taux apparent de la dette publique, %s-%s",
+    "fr": {"titre": "Taux \u00e0 10 ans et taux implicite de la dette publique, %s-%s",
            "desc": ("Deux courbes en pourcentage par an. Le taux \u00e0 10 ans passe de %s %% en %s "
-                    "\u00e0 %s %% en %s, puis remonte \u00e0 %s %% en %s. Le taux apparent, co\u00fbt moyen "
+                    "\u00e0 %s %% en %s, puis remonte \u00e0 %s %% en %s. Le taux implicite, co\u00fbt moyen "
                     "du stock, passe de %s %% \u00e0 %s %%, puis ne remonte qu'\u00e0 %s %% en %s."),
            "panneau": "Taux de march\u00e9 \u00e0 10 ans et co\u00fbt moyen du stock, en % par an",
-           "marche": "Taux \u00e0 10 ans", "apparent": "Taux apparent", "pct": " %"},
-    "en": {"titre": "10-year rate and effective interest rate on French public debt, %s-%s",
+           "marche": "Taux \u00e0 10 ans", "apparent": "Taux implicite", "pct": " %"},
+    "en": {"titre": "10-year rate and implicit interest rate on French public debt, %s-%s",
            "desc": ("Two curves in percent per year. The 10-year rate goes from %s%% in %s to %s%% "
-                    "in %s, then climbs back to %s%% in %s. The effective rate, the average cost "
+                    "in %s, then climbs back to %s%% in %s. The implicit rate, the average cost "
                     "of the stock, goes from %s%% to %s%%, then rises only to %s%% in %s."),
            "panneau": "10-year market yield and average cost of the stock, % per year",
-           "marche": "10-year rate", "apparent": "Effective rate", "pct": "%"},
+           "marche": "10-year rate", "apparent": "Implicit rate", "pct": "%"},
 }
 
 
 def build_svg_marche(apparent: dict, marche: dict, lang: str = "fr") -> str:
-    """Taux de marche a 10 ans (repere du cout des emprunts NOUVEAUX) et taux apparent (cout du
+    """Taux de marche a 10 ans (repere du cout des emprunts NOUVEAUX) et taux implicite (cout du
     STOCK) sur la MEME echelle : meme unite, et c'est l'ecart qui fait la
     demonstration -- le stock ne suit le marche qu'au fil des refinancements.
-    Le taux apparent garde la couleur de l'entite « cout de la dette » ; le
+    Le taux implicite garde la couleur de l'entite « cout de la dette » ; le
     marche, repere, est en encre sombre et plus fin. Libelles directs aux
     extremites, places au-dessus pour la plus haute des deux : pas de legende."""
     W, H = 720, 360
-    ml, mr = 46, 160  # 160 : « Taux apparent 2,0 % » en gras tenait mal dans 120 (etiquette coupee, contre-expertise du 28/09)
+    ml, mr = 46, 160  # 160 : « Taux implicite 2,0 % » en gras tenait mal dans 120 (etiquette coupee, contre-expertise du 28/09)
     ay0, ay1, vmin, vmax = 300.0, 46.0, -1.0, 7.0
     years = sorted(int(y) for y in apparent if y in marche)
     t0, t1 = years[0] - 0.6, years[-1] + 0.6
@@ -1508,6 +1512,32 @@ def _hors_dates(payload: dict) -> str:
     return json.dumps(c, ensure_ascii=False, sort_keys=True)
 
 
+def csv_dette(payload: dict) -> str:
+    import csv
+    import io as _io
+    buf = _io.StringIO()
+    w = csv.writer(buf, lineterminator="\n")
+    w.writerow(["serie", "periode", "variable", "valeur", "unite", "source"])
+    blocs = [("dette_trimestrielle", "dette_trimestrielle"), ("dette_annuelle_longue", "dette_annuelle_longue"),
+             ("interets_annuels", "interets_annuels"), ("recettes_annuelles", "recettes_annuelles"),
+             ("depenses_fonction_annuelles", "depenses_fonction_annuelles"), ("taux_long_terme_annuels", "taux_long_terme_annuels")]
+    for cle, nom in blocs:
+        b = payload.get(cle)
+        if not isinstance(b, dict) or "series" not in b:
+            continue
+        unites = b.get("unite") if isinstance(b.get("unite"), dict) else {}
+        src = b.get("source") if isinstance(b.get("source"), str) else json.dumps(b.get("source"), ensure_ascii=False)
+        for var, serie in b["series"].items():
+            if not isinstance(serie, dict):
+                continue
+            unite = unites.get(var, "") if unites else (b.get("unite") if isinstance(b.get("unite"), str) else "")
+            if var == "taux_apparent_pct":
+                unite = unite or "% par an (taux implicite)"
+            for periode in sorted(serie):
+                w.writerow([nom, periode, var, serie[periode], unite, src])
+    return "\ufeff" + buf.getvalue()
+
+
 def atomic_write(path: Path, text: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     fd, tmp = tempfile.mkstemp(dir=str(path.parent), suffix=".tmp")
@@ -1711,7 +1741,7 @@ def main() -> int:
         print("ECHEC: reference 2019 absente de la serie D41 -- rien n'est ecrit.")
         return 1
 
-    # taux apparent = interets de l'annee N / encours au T4 de N-1
+    # taux implicite = interets de l'annee N / encours au T4 de N-1
     # (cout moyen du stock, PAS le taux d'emission courant)
     taux_apparent = {}
     for y in sorted(d41_mdeur):
@@ -1719,7 +1749,7 @@ def main() -> int:
         if prev_q4 in dette_mdeur and dette_mdeur[prev_q4] > 0:
             taux_apparent[y] = round(d41_mdeur[y] / dette_mdeur[prev_q4] * 100.0, 2)
     if len(taux_apparent) < 20:
-        print("ECHEC: serie taux apparent incomplete (%d obs) -- rien n'est ecrit."
+        print("ECHEC: serie taux implicite incomplete (%d obs) -- rien n'est ecrit."
               % len(taux_apparent))
         return 1
     ta_first = min(taux_apparent)
@@ -2019,6 +2049,7 @@ def main() -> int:
             ensure_ascii=False, indent=1) + "\n"),
         (OUT_JSON, txt),
         (OUT_ENDPOINT, txt),
+        (OUT_CSV, csv_dette(payload)),
         (OUT_SVG, build_svg(dette_pib, d41_pib)),
         (OUT_SVG_TAUX, build_svg_taux(taux_apparent)),
         (OUT_SVG_EN, build_svg(dette_pib, d41_pib, lang="en")),
@@ -2041,7 +2072,7 @@ def main() -> int:
                                                  lang="en")),
         ]
     # Le workflow enumere a la main les fichiers qu'il commite. Deux fois deja
-    # -- le 16/08 (courbe du taux apparent) et le 20/09 (courbe longue EN) --
+    # -- le 16/08 (courbe du taux implicite) et le 20/09 (courbe longue EN) --
     # une sortie NOUVELLE a failli rester hors de cette liste : elle aurait ete
     # regeneree en CI puis jamais publiee, laissant une figure figee en ligne
     # sans erreur ni trace. Le script est le seul a connaitre ses sorties :

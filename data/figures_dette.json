@@ -11,10 +11,10 @@
   {
    "id": "taux",
    "fichier": "taux-apparent-dette",
-   "titre": "Le taux apparent, 1996-2025",
+   "titre": "Le taux implicite, 1996-2025",
    "montre": "Le coût moyen du stock : il baisse pendant vingt-cinq ans, puis remonte depuis 2021.",
    "source": "Calcul sur séries Eurostat (gov_10a_main) et INSEE, 1996-2025",
-   "precaution": "Taux apparent = intérêts de l'année / encours au 31 décembre précédent, non le taux d'emprunt du jour."
+   "precaution": "Taux implicite = intérêts de l'année / encours au 31 décembre précédent, non le taux d'emprunt du jour."
   },
   {
    "id": "longue",
@@ -29,8 +29,8 @@
    "fichier": "taux-marche-apparent",
    "titre": "Taux de marché et coût moyen du stock, 1996-2025",
    "montre": "Le coût moyen du stock suit le taux à 10 ans avec des années de retard : il descend moins bas, et remonte moins vite.",
-   "source": "Eurostat irt_lt_mcby_a (taux à 10 ans)  ·  taux apparent : Eurostat gov_10a_main et INSEE, 1996-2025",
-   "precaution": "Le taux à 10 ans, repère du coût des emprunts nouveaux ; le taux apparent, coût de tout le stock, ne le suit qu'au fil des refinancements."
+   "source": "Eurostat irt_lt_mcby_a (taux à 10 ans)  ·  taux implicite : Eurostat gov_10a_main et INSEE, 1996-2025",
+   "precaution": "Le taux à 10 ans, repère du coût des emprunts nouveaux ; le taux implicite, coût de tout le stock, ne le suit qu'au fil des refinancements."
   },
   {
    "id": "charge",
@@ -61,10 +61,10 @@
   {
    "id": "taux",
    "fichier": "taux-apparent-dette-en",
-   "titre": "The effective interest rate, 1996-2025",
+   "titre": "The implicit interest rate, 1996-2025",
    "montre": "The average cost of the stock: falling for twenty-five years, rising again since 2021.",
    "source": "Computed on Eurostat (gov_10a_main) and INSEE series, 1996-2025",
-   "precaution": "Effective rate = a year's interest / debt outstanding at the end of the previous year, not today's borrowing rate."
+   "precaution": "Implicit rate = a year's interest / debt outstanding at the end of the previous year, not today's borrowing rate."
   },
   {
    "id": "longue",
@@ -79,8 +79,8 @@
    "fichier": "taux-marche-apparent-en",
    "titre": "Market rate and average cost of the stock, 1996-2025",
    "montre": "The average cost of the stock follows the 10-year rate years behind: it falls less far, and climbs back more slowly.",
-   "source": "Eurostat irt_lt_mcby_a (10-year yield)  ·  effective rate: Eurostat gov_10a_main and INSEE, 1996-2025",
-   "precaution": "The 10-year yield benchmarks the cost of new borrowing; the effective rate, the cost of the whole stock, follows it only as old debt is refinanced."
+   "source": "Eurostat irt_lt_mcby_a (10-year yield)  ·  implicit rate: Eurostat gov_10a_main and INSEE, 1996-2025",
+   "precaution": "The 10-year yield benchmarks the cost of new borrowing; the implicit rate, the cost of the whole stock, follows it only as old debt is refinanced."
   },
   {
    "id": "charge",
