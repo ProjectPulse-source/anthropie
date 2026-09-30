@@ -5,9 +5,12 @@
        paie », clé inconnue ou données absentes = échec de build. */ -}}
 {{- $k := .Get 0 -}}
 {{- $a := "" -}}
-{{- with site.Data.qui_paie_donnees -}}{{- $a = .affichage -}}{{- end -}}
+{{- /* Locale : le bloc est CHOISI (affichage_en sur une page anglaise), jamais formaté ici ; bloc anglais
+       absent = échec de build, jamais un repli sur les chaînes françaises (« 115,7 » serait faux). */ -}}
+{{- $en := eq $.Page.Lang "en" -}}
+{{- with site.Data.qui_paie_donnees -}}{{- $a = cond $en .affichage_en .affichage -}}{{- end -}}
 {{- if not $a -}}
-  {{- errorf "qp-val: data/qui_paie_donnees.json absent ou sans bloc affichage (page %s)" .Page.RelPermalink -}}
+  {{- errorf "qp-val: data/qui_paie_donnees.json absent ou sans bloc %s (page %s)" (cond $en "affichage_en" "affichage") .Page.RelPermalink -}}
 {{- else -}}
   {{- $v := index $a $k -}}
   {{- if not $v -}}

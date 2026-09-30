@@ -7,14 +7,17 @@
   {{- /* date du dernier relevé où un chiffre a bougé (releve_le à la racine, conservé à données identiques) */ -}}
   {{- with site.Data.dette_monde.releve_le -}}
     {{- $t := time . -}}
-    {{- $mois := slice "janvier" "février" "mars" "avril" "mai" "juin" "juillet" "août" "septembre" "octobre" "novembre" "décembre" -}}
+    {{- $mois := cond (eq $.Page.Lang "en") (slice "January" "February" "March" "April" "May" "June" "July" "August" "September" "October" "November" "December") (slice "janvier" "février" "mars" "avril" "mai" "juin" "juillet" "août" "septembre" "octobre" "novembre" "décembre") -}}
     {{- printf "%d %s %d" $t.Day (index $mois (sub (int $t.Month) 1)) $t.Year -}}
   {{- else -}}{{- errorf "monde-val: releve_le absent de data/dette_monde.json (page %s)" $.Page.RelPermalink -}}{{- end -}}
 {{- else -}}
 {{- $a := "" -}}
-{{- with site.Data.dette_monde -}}{{- $a = .affichage -}}{{- end -}}
+{{- /* Locale : le bloc est CHOISI (affichage_en sur une page anglaise), jamais formaté ici ; bloc anglais
+       absent = échec de build, jamais un repli sur les chaînes françaises (« 115,7 » serait faux). */ -}}
+{{- $en := eq $.Page.Lang "en" -}}
+{{- with site.Data.dette_monde -}}{{- $a = cond $en .affichage_en .affichage -}}{{- end -}}
 {{- if not $a -}}
-  {{- errorf "monde-val: data/dette_monde.json absent ou sans bloc affichage (page %s)" .Page.RelPermalink -}}
+  {{- errorf "monde-val: data/dette_monde.json absent ou sans bloc %s (page %s)" (cond $en "affichage_en" "affichage") .Page.RelPermalink -}}
 {{- else -}}
   {{- $v := index $a $k -}}
   {{- if not $v -}}

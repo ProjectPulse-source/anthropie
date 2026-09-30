@@ -20,7 +20,8 @@ bleu profond #184f95, orange #eb6834, gris pour la série secondaire) et même f
 que les autres cartes du site (dégradé crème, Newsreader, filet bleu, URL en Inter).
 Une carte qui ne ressemblerait pas aux figures ferait deux identités.
 
-SORTIES : static/images/og-qui-paie-dette.jpg (exposition, depuis le 30/09), og-cout-dette.jpg, og-dette-monde.jpg (1200x630),
+SORTIES : static/images/og-qui-paie-dette.jpg (exposition, depuis le 30/09), og-cout-dette.jpg, og-dette-monde.jpg,
+og-dette-dynamique.jpg, et leurs versions anglaises -en.jpg (depuis le 30/09) (1200x630),
 déclarées par `og_image` dans le front matter des deux pages.
 """
 from __future__ import annotations
@@ -108,7 +109,7 @@ def habillage(d: ImageDraw.ImageDraw, titre: list[str], accroche: str,
     d.text((70, H - 48), url, font=font("inter", 19, 400), fill=URL_GREY)
 
 
-def figure_exposition(d: ImageDraw.ImageDraw, ex: dict) -> None:
+def figure_exposition(d: ImageDraw.ImageDraw, ex: dict, lang: str = "fr") -> None:
     """Volet 2 : un même effort de 10 Md€ réparti selon trois décisions, en % du revenu de chaque dixième.
     Le point D1 de la décision fiscale est écarté dans le jeu publié (motif dans le JSON) : il est absent ici aussi."""
     x0, x1, top, bas = 648, 1126, 100, 424
@@ -134,9 +135,14 @@ def figure_exposition(d: ImageDraw.ImageDraw, ex: dict) -> None:
     fa = font("inter", 18, 500)
     d.text((x0, bas + 14), "D1", font=fa, fill=URL_GREY)
     d.text((x1 - 34, bas + 14), "D10", font=fa, fill=URL_GREY)
-    d.text((x0, bas + 40), "Un effort de %g Md€, en %% du revenu de chaque" % ex["effort_mdeur"],
-           font=font("inter", 17, 400), fill=URL_GREY)
-    d.text((x0, bas + 62), "dixième de niveau de vie, %s" % ex["millesime"], font=font("inter", 17, 400), fill=URL_GREY)
+    if lang == "en":
+        l1 = "A %g bn euro effort, as %% of each standard-of-living" % ex["effort_mdeur"]
+        l2 = "decile's income, %s" % ex["millesime"]
+    else:
+        l1 = "Un effort de %g Md€, en %% du revenu de chaque" % ex["effort_mdeur"]
+        l2 = "dixième de niveau de vie, %s" % ex["millesime"]
+    d.text((x0, bas + 40), l1, font=font("inter", 17, 400), fill=URL_GREY)
+    d.text((x0, bas + 62), l2, font=font("inter", 17, 400), fill=URL_GREY)
 
 def figure_ciseau(d: ImageDraw.ImageDraw, annees: list[int],
                   dette: list[float], interets: list[float]) -> None:
@@ -167,7 +173,7 @@ def figure_ciseau(d: ImageDraw.ImageDraw, annees: list[int],
     d.text((x0, bas + 62), l2, font=font("inter", 17, 400), fill=URL_GREY)
 
 
-def figure_jumeaux(d: ImageDraw.ImageDraw, rows: list[dict], bas_code: str, haut_code: str) -> None:
+def figure_jumeaux(d: ImageDraw.ImageDraw, rows: list[dict], bas_code: str, haut_code: str, lang: str = "fr") -> None:
     """Volet 3 : le nuage « Même dette, charge différente » réduit à l'essentiel — les 27 pays en gris,
     la paire de faux jumeaux désignée par la règle de la page, reliée, en bleu (bas) et orange (haut)."""
     x0, x1, top, bas = 660, 1126, 100, 424
@@ -194,11 +200,12 @@ def figure_jumeaux(d: ImageDraw.ImageDraw, rows: list[dict], bas_code: str, haut
         d.ellipse([cx - 11, cy - 11, cx + 11, cy + 11], fill=c)
     fa = font("inter", 18, 500)
     d.text((x0, bas + 14), "0", font=fa, fill=URL_GREY)
-    d.text((x1 - 70, bas + 14), "160 %", font=fa, fill=URL_GREY)
-    d.text((x0, bas + 40), "Les 27 pays de l'UE : dette en % du PIB (horizontal)",
-           font=font("inter", 17, 400), fill=URL_GREY)
-    d.text((x0, bas + 62), "et intérêts en % des recettes publiques (vertical)",
-           font=font("inter", 17, 400), fill=URL_GREY)
+    en = lang == "en"
+    d.text((x1 - 70, bas + 14), "160%" if en else "160 %", font=fa, fill=URL_GREY)
+    d.text((x0, bas + 40), "The 27 EU countries: debt as % of GDP (across)" if en
+           else "Les 27 pays de l'UE : dette en % du PIB (horizontal)", font=font("inter", 17, 400), fill=URL_GREY)
+    d.text((x0, bas + 62), "and interest as % of public revenue (up)" if en
+           else "et intérêts en % des recettes publiques (vertical)", font=font("inter", 17, 400), fill=URL_GREY)
 
 
 def carte(nom: str, titre: list[str], accroche: str, source: str, url: str,
@@ -216,7 +223,7 @@ def carte(nom: str, titre: list[str], accroche: str, source: str, url: str,
     print("OK  %s (%dx%d, %d ko)" % (nom, W, H, p.stat().st_size // 1024))
 
 
-def figure_cascade_mini(d: ImageDraw.ImageDraw, dyn: dict) -> None:
+def figure_cascade_mini(d: ImageDraw.ImageDraw, dyn: dict, lang: str = "fr") -> None:
     """Volet « Pourquoi elle augmente » : la cascade de la page, réduite — stock de départ, intérêts, croissance,
     déficits primaires, flux-stock, stock d'arrivée. Valeurs lues dans data/dette_dynamique.json."""
     t, dep, fin = dyn["total"], dyn["depart"]["dette_pct_pib"], dyn["annees"][-1]["dette_pct_pib"]
@@ -245,8 +252,11 @@ def figure_cascade_mini(d: ImageDraw.ImageDraw, dyn: dict) -> None:
     fa = font("inter", 18, 500)
     d.text((x0, bas + 14), str(dyn["depart"]["annee"]), font=fa, fill=URL_GREY)
     d.text((x1 - 44, bas + 14), str(dyn["annees"][-1]["annee"]), font=fa, fill=URL_GREY)
-    d.text((x0, bas + 40), "Dette publique française, en points de PIB :", font=font("inter", 17, 400), fill=URL_GREY)
-    d.text((x0, bas + 62), "départ, intérêts, croissance, déficits, flux-stock", font=font("inter", 17, 400), fill=URL_GREY)
+    en = lang == "en"
+    d.text((x0, bas + 40), "French public debt, in points of GDP:" if en
+           else "Dette publique française, en points de PIB :", font=font("inter", 17, 400), fill=URL_GREY)
+    d.text((x0, bas + 62), "start, interest, growth, deficits, stock-flow" if en
+           else "départ, intérêts, croissance, déficits, flux-stock", font=font("inter", 17, 400), fill=URL_GREY)
 
 
 def carte_dynamique() -> None:
@@ -267,6 +277,19 @@ def carte_dynamique() -> None:
           lambda d: figure_cascade_mini(d, dyn),
           [(C2, "Intérêts : +%s pts" % A["effet_interets"]), (SEC, "Croissance : −%s pts" % A["effet_croissance"]),
            (C2, "Déficits primaires : +%s pts" % A["deficits_primaires"]), (C1, "Dette : %s → %s %%" % (A["dette_depart"], A["dette_fin"]))])
+    # Version anglaise (30/09/2026, demande de l'auteur : le dossier dans les deux langues). Même figure, même
+    # contrôle ; chaînes du bloc affichage_en, celles que la page anglaise imprime.
+    E = dyn.get("affichage_en")
+    if not E:
+        fail("carte dynamique EN : bloc affichage_en absent de data/dette_dynamique.json")
+    carte("og-dette-dynamique-en.jpg",
+          ["Why French debt", "doubled"],
+          "Interest and growth almost cancelled out.",
+          "Eurostat, France %s-%s · CC BY 4.0" % (E["annee_depart"], E["annee_fin"]),
+          "stephane-lalut.com/en/why-does-public-debt-rise/",
+          lambda d: figure_cascade_mini(d, dyn, "en"),
+          [(C2, "Interest: +%s pts" % E["effet_interets"]), (SEC, "Growth: −%s pts" % E["effet_croissance"]),
+           (C2, "Primary deficits: +%s pts" % E["deficits_primaires"]), (C1, "Debt: %s → %s%%" % (E["dette_depart"], E["dette_fin"]))])
 
 
 def carte_monde() -> None:
@@ -299,6 +322,22 @@ def carte_monde() -> None:
           "stephane-lalut.com/dette-publique-comparaison-internationale/",
           lambda d: figure_jumeaux(d, rows, j0["bas"], j0["haut"]),
           cle)
+    # Version anglaise : mêmes contrôles de largeur ; chaînes du bloc affichage_en (noms de pays en anglais).
+    E = j.get("affichage_en")
+    if not E:
+        fail("carte monde EN : bloc affichage_en absent de data/dette_monde.json")
+    cle_en = [(C1, "%s: debt %s of GDP, interest %s of revenue" % (E["j_bas"], E["j_bas_stock"], E["j_bas_charge"])),
+              (C2, "%s: debt %s of GDP, interest %s of revenue" % (E["j_haut"], E["j_haut_stock"], E["j_haut_charge"]))]
+    for _, t in cle_en:
+        if 100 + fc.getlength(t) > 640:
+            fail("carte monde EN : ligne de clé trop longue pour la colonne (%s)" % t)
+    carte("og-dette-monde-en.jpg",
+          ["Same debt,", "burden × %s" % E["j_rapport"]],
+          "The stock does not say what the debt costs.",
+          "Eurostat %s · 27 EU countries · CC BY 4.0" % j["meta"]["annee"],
+          "stephane-lalut.com/en/public-debt-international-comparison/",
+          lambda d: figure_jumeaux(d, rows, j0["bas"], j0["haut"], "en"),
+          cle_en)
 
 
 def main() -> int:
@@ -330,6 +369,14 @@ def main() -> int:
           lambda d: figure_exposition(d, ex),
           [(C2, "Baisse de l'enseignement"), (C1, "Hausse des impôts (revenus, patrimoine)"),
            (SEC, "Baisse des pensions")])
+    carte("og-qui-paie-dette-en.jpg",
+          ["Same effort,", "different payers"],
+          "Who pays the debt depends on the decision taken to adjust.",
+          "Insee, distributional national accounts %s · CC BY 4.0" % ex["millesime"],
+          "stephane-lalut.com/en/who-really-pays-public-debt/",
+          lambda d: figure_exposition(d, ex, "en"),
+          [(C2, "Cut in education spending"), (C1, "Higher taxes (income, wealth)"),
+           (SEC, "Cut in pensions")])
 
     # Volet 1 : la fenêtre COMMUNE aux deux séries, lue dans le jeu publié. Le
     # ciseau n'a de sens que si les deux grandeurs couvrent les mêmes années.

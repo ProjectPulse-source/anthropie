@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 382" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dc-t dc-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="dc-t">Why the debt doubled: from 57.5% to 115.7% of GDP, 1995-2025</title><desc id="dc-d">Waterfall chart in points of GDP. The debt starts at 57.5% at the end of 1995. Interest would have pushed it up by 74.0 points, but nominal GDP growth erased 72.3: their net effect is +1.6 points. Primary deficits, excluding interest, add 50.5 points, stock-flow adjustments +6.0. The debt reaches 115.7% at the end of 2025. Accounting decomposition, not a causal one.</desc>
+<rect width="720" height="382" fill="#ffffff"/>
+<text x="0" y="18" font-size="15" font-weight="600" fill="#26262f">Why the debt doubled: from 57.5% to 115.7% of GDP, 1995-2025</text>
+<line x1="40" y1="290.0" x2="710" y2="290.0" stroke="#dcd8d3" stroke-width="1.2"/>
+<text x="34" y="293.0" font-size="10" fill="#96928f" text-anchor="end">0%</text>
+<line x1="40" y1="262.5" x2="710" y2="262.5" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="265.5" font-size="10" fill="#96928f" text-anchor="end">20%</text>
+<line x1="40" y1="235.0" x2="710" y2="235.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="238.0" font-size="10" fill="#96928f" text-anchor="end">40%</text>
+<line x1="40" y1="207.5" x2="710" y2="207.5" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="210.5" font-size="10" fill="#96928f" text-anchor="end">60%</text>
+<line x1="40" y1="180.0" x2="710" y2="180.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="183.0" font-size="10" fill="#96928f" text-anchor="end">80%</text>
+<line x1="40" y1="152.5" x2="710" y2="152.5" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="155.5" font-size="10" fill="#96928f" text-anchor="end">100%</text>
+<line x1="40" y1="125.0" x2="710" y2="125.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="128.0" font-size="10" fill="#96928f" text-anchor="end">120%</text>
+<line x1="40" y1="97.5" x2="710" y2="97.5" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="100.5" font-size="10" fill="#96928f" text-anchor="end">140%</text>
+<line x1="40" y1="70.0" x2="710" y2="70.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="73.0" font-size="10" fill="#96928f" text-anchor="end">160%</text>
+<rect x="63.5" y="210.9" width="64.8" height="79.1" fill="#184f95"/>
+<text x="95.8" y="204.9" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">57.5%</text>
+<text x="95.8" y="306" font-size="10.5" fill="#55524f" text-anchor="middle">Debt, end</text>
+<text x="95.8" y="319" font-size="10.5" fill="#55524f" text-anchor="middle">1995</text>
+<line x1="128.2" y1="210.9" x2="175.1" y2="210.9" stroke="#96928f" stroke-dasharray="3 2"/>
+<rect x="175.1" y="109.2" width="64.8" height="101.7" fill="#eb6834"/>
+<text x="207.5" y="103.2" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">+74.0</text>
+<text x="207.5" y="306" font-size="10.5" fill="#55524f" text-anchor="middle">Interest paid</text>
+<line x1="239.9" y1="109.2" x2="286.8" y2="109.2" stroke="#96928f" stroke-dasharray="3 2"/>
+<rect x="286.8" y="109.2" width="64.8" height="99.4" fill="#8a8781"/>
+<text x="319.2" y="103.2" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">−72.3</text>
+<text x="319.2" y="306" font-size="10.5" fill="#55524f" text-anchor="middle">Nominal GDP</text>
+<text x="319.2" y="319" font-size="10.5" fill="#55524f" text-anchor="middle">growth</text>
+<line x1="351.6" y1="208.7" x2="398.5" y2="208.7" stroke="#96928f" stroke-dasharray="3 2"/>
+<rect x="398.5" y="139.2" width="64.8" height="69.5" fill="#eb6834"/>
+<text x="430.8" y="133.2" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">+50.5</text>
+<text x="430.8" y="306" font-size="10.5" fill="#55524f" text-anchor="middle">Primary deficits</text>
+<line x1="463.2" y1="139.2" x2="510.1" y2="139.2" stroke="#96928f" stroke-dasharray="3 2"/>
+<rect x="510.1" y="130.9" width="64.8" height="8.3" fill="#eb6834"/>
+<text x="542.5" y="124.9" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">+6.0</text>
+<text x="542.5" y="306" font-size="10.5" fill="#55524f" text-anchor="middle">Stock-flow adjustments</text>
+<rect x="621.8" y="130.9" width="64.8" height="159.1" fill="#184f95"/>
+<text x="654.2" y="124.9" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">115.7%</text>
+<text x="654.2" y="306" font-size="10.5" fill="#55524f" text-anchor="middle">Debt, end</text>
+<text x="654.2" y="319" font-size="10.5" fill="#55524f" text-anchor="middle">2025</text>
+<text x="40" y="44" font-size="11" fill="#55524f">In points of GDP: blue, the stock; orange, what pushes it up; grey, what pushes it down.</text>
+<line x1="0" y1="334.0" x2="720" y2="334.0" stroke="#dcd8d3"/>
+<text x="0" y="347.0" font-size="9" fill="#55524f">Eurostat gov_10dd_edpt1 (debt), gov_10a_main (B9, D41PAY), nama_10_gdp (GDP), France, 1996-2025</text>
+<text x="0" y="359.0" font-size="9" fill="#55524f">Accounting decomposition of the change in the ratio, not a causal attribution; the terms partly offset each other.</text>
+<text x="0" y="371.0" font-size="9" fill="#96928f">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/why-does-public-debt-rise/</text>
+</svg>

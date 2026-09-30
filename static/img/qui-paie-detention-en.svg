@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 447" role="img" font-variant-numeric="tabular-nums" aria-labelledby="qp-det-t qp-det-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="qp-det-t">Who borrows? Who holds French government securities?</title>
+<desc id="qp-det-d">Two separate panels, with no proportional link between them. A, at nominal value: Central government €2,823bn; Social security funds €293bn; Local government €276bn; Other central bodies €69bn, out of €3,460.5bn, end of 2025. B, at market value, holders of the State's negotiable securities in Q1 2026: Non-residents 57.5%; Other resident holders 20.6%; Resident banks 10.5%; Resident insurers 9.6%; Resident funds (UCITS) 1.8%.</desc>
+<text x="0.0" y="22.0" font-size="13" fill="#52514e" text-anchor="start">Who borrows? Who holds French government securities? Two questions, two scopes</text>
+<text x="0.0" y="50.0" font-size="12" fill="#2b2a28" text-anchor="start" font-weight="600">A · Who borrows? Contribution of each level of government to public debt, end of 2025</text>
+<text x="0.0" y="66.0" font-size="11" fill="#898781" text-anchor="start">Nominal value, in billion euros · total €3,460.5bn</text>
+<text x="180.0" y="95.0" font-size="11" fill="#52514e" text-anchor="end">Central government</text>
+<rect x="190" y="84.0" width="400.0" height="14" rx="3" fill="#184f95"/>
+<text x="598.0" y="95.0" font-size="12" fill="#184f95" text-anchor="start" font-weight="600">€2,823bn · 82%</text>
+<text x="180.0" y="117.0" font-size="11" fill="#52514e" text-anchor="end">Social security funds</text>
+<rect x="190" y="106.0" width="41.5" height="14" rx="3" fill="#184f95"/>
+<text x="239.5" y="117.0" font-size="11" fill="#52514e" text-anchor="start">€293bn · 8%</text>
+<text x="180.0" y="139.0" font-size="11" fill="#52514e" text-anchor="end">Local government</text>
+<rect x="190" y="128.0" width="39.1" height="14" rx="3" fill="#184f95"/>
+<text x="237.1" y="139.0" font-size="11" fill="#52514e" text-anchor="start">€276bn · 8%</text>
+<text x="180.0" y="161.0" font-size="11" fill="#52514e" text-anchor="end">Other central bodies</text>
+<rect x="190" y="150.0" width="9.8" height="14" rx="3" fill="#184f95"/>
+<text x="207.8" y="161.0" font-size="11" fill="#52514e" text-anchor="start">€69bn · 2%</text>
+<line x1="0" y1="188.0" x2="720" y2="188.0" stroke="#c3c2b7" stroke-width="1"/>
+<text x="0.0" y="216.0" font-size="12" fill="#2b2a28" text-anchor="start" font-weight="600">B · Who holds the State's negotiable securities? Q1 2026</text>
+<text x="0.0" y="232.0" font-size="11" fill="#898781" text-anchor="start">Market value, in % · classified by the holder's residence, not by nationality</text>
+<text x="180.0" y="261.0" font-size="11" fill="#52514e" text-anchor="end">Non-residents</text>
+<rect x="190" y="250.0" width="400.0" height="14" rx="3" fill="#eb6834"/>
+<text x="598.0" y="261.0" font-size="12" fill="#eb6834" text-anchor="start" font-weight="600">57.5%</text>
+<text x="180.0" y="283.0" font-size="11" fill="#52514e" text-anchor="end">Other resident holders *</text>
+<rect x="190" y="272.0" width="143.3" height="14" rx="3" fill="#eb6834"/>
+<text x="341.3" y="283.0" font-size="11" fill="#52514e" text-anchor="start">20.6%</text>
+<text x="180.0" y="305.0" font-size="11" fill="#52514e" text-anchor="end">Resident banks</text>
+<rect x="190" y="294.0" width="73.0" height="14" rx="3" fill="#eb6834"/>
+<text x="271.0" y="305.0" font-size="11" fill="#52514e" text-anchor="start">10.5%</text>
+<text x="180.0" y="327.0" font-size="11" fill="#52514e" text-anchor="end">Resident insurers</text>
+<rect x="190" y="316.0" width="66.8" height="14" rx="3" fill="#eb6834"/>
+<text x="264.8" y="327.0" font-size="11" fill="#52514e" text-anchor="start">9.6%</text>
+<text x="180.0" y="349.0" font-size="11" fill="#52514e" text-anchor="end">Resident funds (UCITS)</text>
+<rect x="190" y="338.0" width="12.5" height="14" rx="3" fill="#eb6834"/>
+<text x="210.5" y="349.0" font-size="11" fill="#52514e" text-anchor="start">1.8%</text>
+<text x="0.0" y="370.0" font-size="10" fill="#898781" text-anchor="start">* including the Banque de France (Eurosystem programmes): share not published by the source.</text>
+<line x1="0" y1="390.0" x2="720" y2="390.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="0" y="403.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">A: INSEE, Informations rapides no. 79 (27 March 2026), Maastricht debt by subsector · B: Banque de France, via Agence France Trésor (French Treasury agency)</text>
+<text x="0" y="415.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Two separate scopes. A: nominal value; B: market value. Holding securities does not measure the final burden.</text>
+<text x="0" y="427.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/who-really-pays-public-debt/</text>
+</svg>

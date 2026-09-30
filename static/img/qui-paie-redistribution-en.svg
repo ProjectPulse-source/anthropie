@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 443" role="img" font-variant-numeric="tabular-nums" aria-labelledby="qp-red-t qp-red-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="qp-red-t">Taxes and contributions, and public transfers, by standard-of-living decile, 2023</title>
+<desc id="qp-red-d">Bars by standard-of-living decile, in 2023, in thousand euros per consumption unit. Above zero, transfers received (cash benefits and in-kind transfers): from 27.1 for the first decile to 31.4 for the last. Below zero, taxes and contributions: from 6.4 to 89.8.</desc>
+<text x="0.0" y="22.0" font-size="13" fill="#52514e" text-anchor="start">Taxes and contributions, and public transfers, by standard-of-living decile, 2023, € thousand per CU</text>
+<line x1="46" y1="287.8" x2="552" y2="287.8" stroke="#e1e0d9" stroke-width="1"/>
+<text x="40.0" y="291.8" font-size="11" fill="#898781" text-anchor="end">−75</text>
+<line x1="46" y1="235.6" x2="552" y2="235.6" stroke="#e1e0d9" stroke-width="1"/>
+<text x="40.0" y="239.6" font-size="11" fill="#898781" text-anchor="end">−50</text>
+<line x1="46" y1="183.3" x2="552" y2="183.3" stroke="#e1e0d9" stroke-width="1"/>
+<text x="40.0" y="187.3" font-size="11" fill="#898781" text-anchor="end">−25</text>
+<line x1="46" y1="131.1" x2="552" y2="131.1" stroke="#c3c2b7" stroke-width="1"/>
+<text x="40.0" y="135.1" font-size="11" fill="#898781" text-anchor="end">0</text>
+<line x1="46" y1="78.9" x2="552" y2="78.9" stroke="#e1e0d9" stroke-width="1"/>
+<text x="40.0" y="82.9" font-size="11" fill="#898781" text-anchor="end">25</text>
+<rect x="54.3" y="114.4" width="34" height="16.7" fill="#184f95"/>
+<rect x="54.3" y="72.5" width="34" height="39.9" rx="2" fill="#898781"/>
+<rect x="54.3" y="133.1" width="34" height="11.4" rx="2" fill="#eb6834"/>
+<text x="71.3" y="67.5" font-size="10" fill="#52514e" text-anchor="middle">27.1</text>
+<text x="71.3" y="157.5" font-size="10" fill="#52514e" text-anchor="middle">−6.4</text>
+<text x="71.3" y="356.0" font-size="11" fill="#898781" text-anchor="middle">D1</text>
+<rect x="104.9" y="109.0" width="34" height="22.1" fill="#184f95"/>
+<rect x="104.9" y="64.1" width="34" height="42.8" rx="2" fill="#898781"/>
+<rect x="104.9" y="133.1" width="34" height="16.4" rx="2" fill="#eb6834"/>
+<text x="121.9" y="59.1" font-size="10" fill="#52514e" text-anchor="middle">31.1</text>
+<text x="121.9" y="162.5" font-size="10" fill="#52514e" text-anchor="middle">−8.8</text>
+<text x="121.9" y="356.0" font-size="11" fill="#898781" text-anchor="middle">D2</text>
+<rect x="155.5" y="106.7" width="34" height="24.4" fill="#184f95"/>
+<rect x="155.5" y="68.3" width="34" height="36.3" rx="2" fill="#898781"/>
+<rect x="155.5" y="133.1" width="34" height="22.9" rx="2" fill="#eb6834"/>
+<text x="172.5" y="63.3" font-size="10" fill="#52514e" text-anchor="middle">29.1</text>
+<text x="172.5" y="169.0" font-size="10" fill="#52514e" text-anchor="middle">−11.9</text>
+<text x="172.5" y="356.0" font-size="11" fill="#898781" text-anchor="middle">D3</text>
+<rect x="206.1" y="107.1" width="34" height="24.0" fill="#184f95"/>
+<rect x="206.1" y="69.2" width="34" height="35.9" rx="2" fill="#898781"/>
+<rect x="206.1" y="133.1" width="34" height="29.5" rx="2" fill="#eb6834"/>
+<text x="223.1" y="64.2" font-size="10" fill="#52514e" text-anchor="middle">28.7</text>
+<text x="223.1" y="175.7" font-size="10" fill="#52514e" text-anchor="middle">−15.1</text>
+<text x="223.1" y="356.0" font-size="11" fill="#898781" text-anchor="middle">D4</text>
+<rect x="256.7" y="106.0" width="34" height="25.1" fill="#184f95"/>
+<rect x="256.7" y="72.7" width="34" height="31.3" rx="2" fill="#898781"/>
+<rect x="256.7" y="133.1" width="34" height="36.0" rx="2" fill="#eb6834"/>
+<text x="273.7" y="67.7" font-size="10" fill="#52514e" text-anchor="middle">27.0</text>
+<text x="273.7" y="182.1" font-size="10" fill="#52514e" text-anchor="middle">−18.2</text>
+<text x="273.7" y="356.0" font-size="11" fill="#898781" text-anchor="middle">D5</text>
+<rect x="307.3" y="104.8" width="34" height="26.3" fill="#184f95"/>
+<rect x="307.3" y="71.5" width="34" height="31.3" rx="2" fill="#898781"/>
+<rect x="307.3" y="133.1" width="34" height="42.9" rx="2" fill="#eb6834"/>
+<text x="324.3" y="66.5" font-size="10" fill="#52514e" text-anchor="middle">27.6</text>
+<text x="324.3" y="189.0" font-size="10" fill="#52514e" text-anchor="middle">−21.5</text>
+<text x="324.3" y="356.0" font-size="11" fill="#898781" text-anchor="middle">D6</text>
+<rect x="357.9" y="104.4" width="34" height="26.7" fill="#184f95"/>
+<rect x="357.9" y="71.7" width="34" height="30.7" rx="2" fill="#898781"/>
+<rect x="357.9" y="133.1" width="34" height="51.7" rx="2" fill="#eb6834"/>
+<text x="374.9" y="66.7" font-size="10" fill="#52514e" text-anchor="middle">27.5</text>
+<text x="374.9" y="197.8" font-size="10" fill="#52514e" text-anchor="middle">−25.7</text>
+<text x="374.9" y="356.0" font-size="11" fill="#898781" text-anchor="middle">D7</text>
+<rect x="408.5" y="103.1" width="34" height="28.0" fill="#184f95"/>
+<rect x="408.5" y="74.0" width="34" height="27.2" rx="2" fill="#898781"/>
+<rect x="408.5" y="133.1" width="34" height="64.2" rx="2" fill="#eb6834"/>
+<text x="425.5" y="69.0" font-size="10" fill="#52514e" text-anchor="middle">26.4</text>
+<text x="425.5" y="210.3" font-size="10" fill="#52514e" text-anchor="middle">−31.7</text>
+<text x="425.5" y="356.0" font-size="11" fill="#898781" text-anchor="middle">D8</text>
+<rect x="459.1" y="100.6" width="34" height="30.5" fill="#184f95"/>
+<rect x="459.1" y="70.2" width="34" height="28.4" rx="2" fill="#898781"/>
+<rect x="459.1" y="133.1" width="34" height="83.9" rx="2" fill="#eb6834"/>
+<text x="476.1" y="65.2" font-size="10" fill="#52514e" text-anchor="middle">28.2</text>
+<text x="476.1" y="230.0" font-size="10" fill="#52514e" text-anchor="middle">−41.1</text>
+<text x="476.1" y="356.0" font-size="11" fill="#898781" text-anchor="middle">D9</text>
+<rect x="509.7" y="92.5" width="34" height="38.6" fill="#184f95"/>
+<rect x="509.7" y="63.5" width="34" height="26.9" rx="2" fill="#898781"/>
+<rect x="509.7" y="133.1" width="34" height="185.6" rx="2" fill="#eb6834"/>
+<text x="526.7" y="58.5" font-size="12" fill="#2b2a28" text-anchor="middle" font-weight="600">31.4</text>
+<text x="526.7" y="331.7" font-size="12" fill="#2b2a28" text-anchor="middle" font-weight="600">−89.8</text>
+<text x="526.7" y="356.0" font-size="11" fill="#2b2a28" text-anchor="middle" font-weight="600">D10</text>
+<text x="566.0" y="81.0" font-size="11" fill="#898781" text-anchor="start" font-weight="600">In-kind transfers</text>
+<text x="566.0" y="94.0" font-size="10" fill="#898781" text-anchor="start">valued public services</text>
+<text x="566.0" y="115.8" font-size="11" fill="#184f95" text-anchor="start" font-weight="600">Benefits</text>
+<text x="566.0" y="128.8" font-size="10" fill="#898781" text-anchor="start">in cash</text>
+<text x="566.0" y="230.9" font-size="11" fill="#eb6834" text-anchor="start" font-weight="600">Taxes and contributions</text>
+<text x="566.0" y="243.9" font-size="10" fill="#898781" text-anchor="start">taxes, social contributions</text>
+<text x="46.0" y="372.0" font-size="10" fill="#898781" text-anchor="start">← least well-off 10%</text>
+<text x="552.0" y="372.0" font-size="10" fill="#898781" text-anchor="end">best-off 10% →</text>
+<line x1="0" y1="386.0" x2="720" y2="386.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="0" y="399.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Insee, distributional national accounts 2023 (Insee Analyses no. 118, 16 April 2026, figure 1c) · France, euros per CU</text>
+<text x="0" y="411.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Distribution based on imputation conventions; does not measure the specific incidence of the debt.</text>
+<text x="0" y="423.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/who-really-pays-public-debt/</text>
+</svg>

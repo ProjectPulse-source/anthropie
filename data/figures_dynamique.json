@@ -16,5 +16,23 @@
    "source": "Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), nama_10_gdp, France, 1996-2025",
    "precaution": "Points de PIB par an ; la somme des trois barres égale la variation (point noir), au centième près."
   }
+ ],
+ "en": [
+  {
+   "id": "cascade",
+   "fichier": "dette-dynamique-cascade-en",
+   "titre": "Why the debt doubled: from 57.5% to 115.7% of GDP, 1995-2025",
+   "montre": "Over the period, interest and nominal growth almost cancelled out; the rise in the debt is mostly due to primary deficits, excluding interest.",
+   "source": "Eurostat gov_10dd_edpt1 (debt), gov_10a_main (B9, D41PAY), nama_10_gdp (GDP), France, 1996-2025",
+   "precaution": "Accounting decomposition of the change in the ratio, not a causal attribution; the terms partly offset each other."
+  },
+  {
+   "id": "annuelle",
+   "fichier": "dette-dynamique-annuelle-en",
+   "titre": "Year by year: what pushed the ratio up or down, 1996-2025",
+   "montre": "Year by year, what pushed the ratio up or held it back; in 2021-2023, nominal growth brought it down despite the deficits.",
+   "source": "Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), nama_10_gdp, France, 1996-2025",
+   "precaution": "Points of GDP per year; the three bars add up to the change (black dot), to within a hundredth."
+  }
  ]
 }

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 488" role="img" font-variant-numeric="tabular-nums" aria-labelledby="mp-t mp-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="mp-t">Price of debt and recent inflation: Europe in 2025</title><desc id="mp-d">Outside the euro area, the implicit interest rate is closely associated with recent inflation; within the euro area, much less so: the Baltic states saw high inflation without a high rate. Sweden, outside the euro, has the same implicit interest rate as Germany. Association observed over one year, not causation.</desc>
+<rect width="720" height="488" fill="#ffffff"/>
+<text x="0" y="18" font-size="13" font-weight="600" fill="#0A0A0E">Price of debt and recent inflation: Europe in 2025</text>
+<circle cx="470.0" cy="14.0" r="5" fill="#184f95"/>
+<text x="479.0" y="18.0" font-size="11" fill="#52514e">euro area</text>
+<circle cx="560.0" cy="14.0" r="5" fill="#eb6834"/>
+<text x="569.0" y="18.0" font-size="11" fill="#52514e">outside euro area</text>
+<line x1="58.0" y1="388.0" x2="700.0" y2="388.0" stroke="#e1e0d9"/>
+<text x="52.0" y="392.0" font-size="11" fill="#898781" text-anchor="end">0%</text>
+<line x1="58.0" y1="334.0" x2="700.0" y2="334.0" stroke="#e1e0d9"/>
+<text x="52.0" y="338.0" font-size="11" fill="#898781" text-anchor="end">1%</text>
+<line x1="58.0" y1="280.0" x2="700.0" y2="280.0" stroke="#e1e0d9"/>
+<text x="52.0" y="284.0" font-size="11" fill="#898781" text-anchor="end">2%</text>
+<line x1="58.0" y1="226.0" x2="700.0" y2="226.0" stroke="#e1e0d9"/>
+<text x="52.0" y="230.0" font-size="11" fill="#898781" text-anchor="end">3%</text>
+<line x1="58.0" y1="172.0" x2="700.0" y2="172.0" stroke="#e1e0d9"/>
+<text x="52.0" y="176.0" font-size="11" fill="#898781" text-anchor="end">4%</text>
+<line x1="58.0" y1="118.0" x2="700.0" y2="118.0" stroke="#e1e0d9"/>
+<text x="52.0" y="122.0" font-size="11" fill="#898781" text-anchor="end">5%</text>
+<line x1="58.0" y1="64.0" x2="700.0" y2="64.0" stroke="#e1e0d9"/>
+<text x="52.0" y="68.0" font-size="11" fill="#898781" text-anchor="end">6%</text>
+<text x="58.0" y="54.0" font-size="11" fill="#52514e">implicit interest rate: interest 2025 / debt at end-2024</text>
+<line x1="58.0" y1="388.0" x2="700.0" y2="388.0" stroke="#c3c2b7"/>
+<text x="58.0" y="403.0" font-size="11" fill="#898781" text-anchor="middle">0%</text>
+<text x="149.7" y="403.0" font-size="11" fill="#898781" text-anchor="middle">2%</text>
+<text x="241.4" y="403.0" font-size="11" fill="#898781" text-anchor="middle">4%</text>
+<text x="333.1" y="403.0" font-size="11" fill="#898781" text-anchor="middle">6%</text>
+<text x="424.9" y="403.0" font-size="11" fill="#898781" text-anchor="middle">8%</text>
+<text x="516.6" y="403.0" font-size="11" fill="#898781" text-anchor="middle">10%</text>
+<text x="608.3" y="403.0" font-size="11" fill="#898781" text-anchor="middle">12%</text>
+<text x="700.0" y="403.0" font-size="11" fill="#898781" text-anchor="middle">14%</text>
+<text x="379.0" y="420.0" font-size="11" fill="#52514e" text-anchor="middle">average inflation 2022-2024 (HICP)</text>
+<circle cx="316.3" cy="268.3" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="427.9" cy="181.8" r="5.5" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<circle cx="508.9" cy="215.4" r="5.5" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<circle cx="259.8" cy="238.3" r="5.5" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<circle cx="320.9" cy="288.7" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="550.2" cy="271.4" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="281.2" cy="313.6" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="310.2" cy="272.0" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="281.2" cy="253.7" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="270.5" cy="279.2" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="411.1" cy="245.6" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="298.0" cy="229.4" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="276.6" cy="284.8" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="479.9" cy="251.3" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="493.6" cy="252.6" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="262.8" cy="316.4" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="608.3" cy="89.3" r="5.5" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<circle cx="273.5" cy="235.8" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="346.9" cy="294.6" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="351.5" cy="275.0" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="482.9" cy="124.7" r="5.5" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<circle cx="304.1" cy="269.1" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="478.4" cy="82.9" r="5.5" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<circle cx="340.8" cy="279.4" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="460.0" cy="240.8" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="249.1" cy="279.7" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="302.6" cy="288.6" r="5.5" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<text x="436.9" y="185.8" font-size="11" fill="#0A0A0E" text-anchor="start">Bulgaria</text>
+<text x="508.9" y="206.4" font-size="11" fill="#0A0A0E" text-anchor="middle">Czechia</text>
+<text x="250.8" y="242.3" font-size="11" fill="#0A0A0E" text-anchor="end">Denmark</text>
+<text x="329.9" y="292.7" font-size="11" fill="#0A0A0E" text-anchor="start">Germany</text>
+<text x="550.2" y="262.4" font-size="11" fill="#0A0A0E" text-anchor="middle">Estonia</text>
+<text x="270.5" y="270.2" font-size="11" fill="#0A0A0E" text-anchor="middle" font-weight="600">France</text>
+<text x="298.0" y="220.4" font-size="11" fill="#0A0A0E" text-anchor="middle">Italy</text>
+<text x="493.6" y="243.6" font-size="11" fill="#0A0A0E" text-anchor="middle">Lithuania</text>
+<text x="608.3" y="80.3" font-size="11" fill="#0A0A0E" text-anchor="middle">Hungary</text>
+<text x="482.9" y="115.7" font-size="11" fill="#0A0A0E" text-anchor="middle">Poland</text>
+<text x="478.4" y="73.9" font-size="11" fill="#0A0A0E" text-anchor="middle">Romania</text>
+<text x="302.6" y="306.6" font-size="11" fill="#0A0A0E" text-anchor="middle">Sweden</text>
+<line x1="0" y1="442.0" x2="720" y2="442.0" stroke="#e1e0d9"/>
+<text x="0" y="455.0" font-size="9" fill="#52514e">Eurostat prc_hicp_aind (HICP), gov_10a_main, gov_10dd_edpt1, 2025</text>
+<text x="0" y="467.0" font-size="9" fill="#52514e">Descriptive relationship over one year, not causal.</text>
+<text x="0" y="479.0" font-size="9" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/public-debt-international-comparison/</text>
+</svg>

@@ -7,14 +7,17 @@
          la date de mise à jour de la ressource, jamais le millésime des données (avis Architecture_Dette-01, 30/09) */ -}}
   {{- with site.Data.dette_dynamique.releve_le -}}
     {{- $t := time . -}}
-    {{- $mois := slice "janvier" "février" "mars" "avril" "mai" "juin" "juillet" "août" "septembre" "octobre" "novembre" "décembre" -}}
+    {{- $mois := cond (eq $.Page.Lang "en") (slice "January" "February" "March" "April" "May" "June" "July" "August" "September" "October" "November" "December") (slice "janvier" "février" "mars" "avril" "mai" "juin" "juillet" "août" "septembre" "octobre" "novembre" "décembre") -}}
     {{- printf "%d %s %d" $t.Day (index $mois (sub (int $t.Month) 1)) $t.Year -}}
   {{- else -}}{{- errorf "dyn-val: releve_le absent de data/dette_dynamique.json (page %s)" $.Page.RelPermalink -}}{{- end -}}
 {{- else -}}
 {{- $a := "" -}}
-{{- with site.Data.dette_dynamique -}}{{- $a = .affichage -}}{{- end -}}
+{{- /* Locale : le bloc est CHOISI (affichage_en sur une page anglaise), jamais formaté ici ; bloc anglais
+       absent = échec de build, jamais un repli sur les chaînes françaises (« 115,7 » serait faux). */ -}}
+{{- $en := eq $.Page.Lang "en" -}}
+{{- with site.Data.dette_dynamique -}}{{- $a = cond $en .affichage_en .affichage -}}{{- end -}}
 {{- if not $a -}}
-  {{- errorf "dyn-val: data/dette_dynamique.json absent ou sans bloc affichage (page %s)" .Page.RelPermalink -}}
+  {{- errorf "dyn-val: data/dette_dynamique.json absent ou sans bloc %s (page %s)" (cond $en "affichage_en" "affichage") .Page.RelPermalink -}}
 {{- else -}}
   {{- $v := index $a $k -}}
   {{- if not $v -}}

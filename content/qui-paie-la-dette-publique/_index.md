@@ -43,9 +43,6 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   rang: 20
   nature: "Analyse, appuyée sur des données publiques"
   accueil: 2
-  en_francais: true
-  titre_en: "Who really pays the public debt?"
-  nature_en: "Analysis based on public data"
 ---
 
 {{< dossier-dette volet="2" >}}

@@ -7,21 +7,31 @@
        valeur affiche « — » ET le build avertit : une absence se dit, elle ne se tait pas. */ -}}
 {{- /* repli="Libellé" (30/09, avis sur la forme) : le tableau reste dans le HTML — lu par les moteurs, imprimé,
        cherchable — mais se déplie à la demande. La preuve reste sur la page ; elle cesse de barrer la lecture. */ -}}
+{{- /* Bilingue (30/09) : sur une page anglaise (.Page.Lang "en"), libellés anglais, point décimal, « % » collé, et
+       les champs texte « _en » que le générateur pose à côté des champs français (nom_en, note_en). Champ anglais
+       absent = échec de build, jamais un repli sur le français. La page française rend exactement comme avant. */ -}}
 {{- $n := .Get "niveau" -}}
 {{- $repli := .Get "repli" -}}
+{{- $en := eq .Page.Lang "en" -}}
+{{- $dec := cond $en "." "," -}}
+{{- $pc := cond $en "%" "&nbsp;%" | safeHTML -}}
+{{- $kn := cond $en "nom_en" "nom" -}}
+{{- $page := .Page.RelPermalink -}}
 {{- with $repli }}<details class="repli"><summary>{{ . }}</summary>{{ end -}}
 {{- $d := site.Data.dette_monde -}}
 {{- if not $d -}}{{- errorf "dette-monde-tableau: data/dette_monde.json absent (%s)" .Page.RelPermalink -}}{{- end -}}
 {{- if eq $n "europe" -}}
 <div class="table-scroll">
 <table class="dette-monde-table">
-  <caption>Les quatre dimensions, {{ $d.meta.annee }} — Eurostat, administrations publiques, périmètre harmonisé (strictement comparable)</caption>
-  <thead><tr><th scope="col">Pays</th><th scope="col">Zone euro</th><th scope="col">Stock de départ<br><small>dette fin {{ sub (int $d.meta.annee) 1 }} / PIB {{ $d.meta.annee }}</small></th><th scope="col">Prix<br><small>taux implicite</small></th><th scope="col">Recettes<br><small>% du PIB</small></th><th scope="col">Charge<br><small>intérêts / recettes</small></th></tr></thead>
+  {{ if $en }}<caption>The four dimensions, {{ $d.meta.annee }} — Eurostat, general government, harmonised scope (strictly comparable)</caption>
+  <thead><tr><th scope="col">Country</th><th scope="col">Euro area</th><th scope="col">Starting stock<br><small>debt end-{{ sub (int $d.meta.annee) 1 }} / GDP {{ $d.meta.annee }}</small></th><th scope="col">Price<br><small>implicit interest rate</small></th><th scope="col">Revenue<br><small>% of GDP</small></th><th scope="col">Burden<br><small>interest / revenue</small></th></tr></thead>{{ else }}<caption>Les quatre dimensions, {{ $d.meta.annee }} — Eurostat, administrations publiques, périmètre harmonisé (strictement comparable)</caption>
+  <thead><tr><th scope="col">Pays</th><th scope="col">Zone euro</th><th scope="col">Stock de départ<br><small>dette fin {{ sub (int $d.meta.annee) 1 }} / PIB {{ $d.meta.annee }}</small></th><th scope="col">Prix<br><small>taux implicite</small></th><th scope="col">Recettes<br><small>% du PIB</small></th><th scope="col">Charge<br><small>intérêts / recettes</small></th></tr></thead>{{ end }}
   <tbody>
   {{- range sort $d.europe "stock" "desc" }}
-    <tr{{ if eq .code "FR" }} class="is-france"{{ end }}><th scope="row">{{ .nom }}</th><td>{{ if .euro }}oui{{ else }}non{{ end }}</td>
-      <td>{{ replace (printf "%.1f" .stock) "." "," }}&nbsp;%</td><td>{{ replace (printf "%.2f" .prix) "." "," }}&nbsp;%</td>
-      <td>{{ replace (printf "%.1f" .recettes) "." "," }}&nbsp;%</td><td><strong>{{ replace (printf "%.1f" .charge) "." "," }}&nbsp;%</strong></td></tr>
+    {{- if not (index . $kn) }}{{ errorf "dette-monde-tableau: %s absent pour %s (%s)" $kn .code $page }}{{ end }}
+    <tr{{ if eq .code "FR" }} class="is-france"{{ end }}><th scope="row">{{ index . $kn }}</th><td>{{ if .euro }}{{ cond $en "yes" "oui" }}{{ else }}{{ cond $en "no" "non" }}{{ end }}</td>
+      <td>{{ replace (printf "%.1f" .stock) "." $dec }}{{ $pc }}</td><td>{{ replace (printf "%.2f" .prix) "." $dec }}{{ $pc }}</td>
+      <td>{{ replace (printf "%.1f" .recettes) "." $dec }}{{ $pc }}</td><td><strong>{{ replace (printf "%.1f" .charge) "." $dec }}{{ $pc }}</strong></td></tr>
   {{- end }}
   </tbody>
 </table>
@@ -29,16 +39,20 @@
 {{- else if eq $n "avances" -}}
 <div class="table-scroll">
 <table class="dette-monde-table dette-monde-table--monde">
-  <caption>Économies avancées hors Union européenne — OCDE, <i>Economic Outlook</i> (comparable avec réserve)</caption>
-  <thead><tr><th scope="col">Pays</th><th scope="col">Stock<br><small>passifs financiers bruts / PIB</small></th><th scope="col">Rapport intérêts / passifs financiers bruts</th><th scope="col">Charge<br><small>intérêts / recettes</small></th><th scope="col">Passifs financiers nets<br><small>% du PIB</small></th><th scope="col">Réserve</th></tr></thead>
+  {{ if $en }}<caption>Advanced economies outside the European Union — OECD, <i>Economic Outlook</i> (comparable with reservations)</caption>
+  <thead><tr><th scope="col">Country</th><th scope="col">Stock<br><small>gross financial liabilities / GDP</small></th><th scope="col">Interest / gross financial liabilities</th><th scope="col">Burden<br><small>interest / revenue</small></th><th scope="col">Net financial liabilities<br><small>% of GDP</small></th><th scope="col">Caveat</th></tr></thead>{{ else }}<caption>Économies avancées hors Union européenne — OCDE, <i>Economic Outlook</i> (comparable avec réserve)</caption>
+  <thead><tr><th scope="col">Pays</th><th scope="col">Stock<br><small>passifs financiers bruts / PIB</small></th><th scope="col">Rapport intérêts / passifs financiers bruts</th><th scope="col">Charge<br><small>intérêts / recettes</small></th><th scope="col">Passifs financiers nets<br><small>% du PIB</small></th><th scope="col">Réserve</th></tr></thead>{{ end }}
   <tbody>
   {{- range $d.avances }}
-    <tr{{ if eq .code "FRA" }} class="is-france"{{ end }}><th scope="row">{{ .nom }}</th>
-      <td>{{ with .stock }}{{ replace (printf "%.1f" .) "." "," }}&nbsp;%{{ else }}—{{ if not .note }}{{ warnf "dette-monde-tableau: stock absent sans motif pour %s" .code }}{{ end }}{{ end }}</td>
-      <td>{{ with .prix }}{{ replace (printf "%.2f" .) "." "," }}&nbsp;%{{ else }}—{{ end }}</td>
-      <td><strong>{{ replace (printf "%.1f" .charge) "." "," }}&nbsp;%</strong></td>
-      <td>{{ with .dette_nette }}{{ replace (printf "%.0f" .) "." "," }}&nbsp;%{{ else }}—{{ end }}</td>
-      <td>{{ with .note }}{{ . }}{{ else }}—{{ end }}</td></tr>
+    {{- if not (index . $kn) }}{{ errorf "dette-monde-tableau: %s absent pour %s (%s)" $kn .code $page }}{{ end }}
+    {{- $note := cond $en .note_en .note }}
+    {{- if and $en .note (not .note_en) }}{{ errorf "dette-monde-tableau: note_en absente pour %s (%s)" .code $page }}{{ end }}
+    <tr{{ if eq .code "FRA" }} class="is-france"{{ end }}><th scope="row">{{ index . $kn }}</th>
+      <td>{{ with .stock }}{{ replace (printf "%.1f" .) "." $dec }}{{ $pc }}{{ else }}—{{ if not .note }}{{ warnf "dette-monde-tableau: stock absent sans motif pour %s" .code }}{{ end }}{{ end }}</td>
+      <td>{{ with .prix }}{{ replace (printf "%.2f" .) "." $dec }}{{ $pc }}{{ else }}—{{ end }}</td>
+      <td><strong>{{ replace (printf "%.1f" .charge) "." $dec }}{{ $pc }}</strong></td>
+      <td>{{ with .dette_nette }}{{ replace (printf "%.0f" .) "." $dec }}{{ $pc }}{{ else }}—{{ end }}</td>
+      <td>{{ with $note }}{{ . }}{{ else }}—{{ end }}</td></tr>
   {{- end }}
   </tbody>
 </table>
@@ -46,14 +60,17 @@
 {{- else if eq $n "emergents" -}}
 <div class="table-scroll">
 <table class="dette-monde-table dette-monde-table--monde">
-  <caption>Grands émergents — FMI et Banque mondiale (indicatif : périmètres et définitions différents)</caption>
-  <thead><tr><th scope="col">Pays</th><th scope="col">Stock<br><small>dette brute / PIB (FMI), année</small></th><th scope="col">Charge<br><small>intérêts / recettes (Banque mondiale)</small></th><th scope="col">Réserve</th></tr></thead>
+  {{ if $en }}<caption>Large emerging economies — IMF and World Bank (indicative: different scopes and definitions)</caption>
+  <thead><tr><th scope="col">Country</th><th scope="col">Stock<br><small>gross debt / GDP (IMF), year</small></th><th scope="col">Burden<br><small>interest / revenue (World Bank)</small></th><th scope="col">Caveat</th></tr></thead>{{ else }}<caption>Grands émergents — FMI et Banque mondiale (indicatif : périmètres et définitions différents)</caption>
+  <thead><tr><th scope="col">Pays</th><th scope="col">Stock<br><small>dette brute / PIB (FMI), année</small></th><th scope="col">Charge<br><small>intérêts / recettes (Banque mondiale)</small></th><th scope="col">Réserve</th></tr></thead>{{ end }}
   <tbody>
   {{- range $d.emergents }}
-    <tr><th scope="row">{{ .nom }}</th>
-      <td>{{ with .stock }}{{ replace (printf "%.1f" .) "." "," }}&nbsp;%{{ else }}—{{ end }}{{ with .annee }} <small>({{ . }})</small>{{ end }}</td>
-      <td>{{ with .charge }}{{ replace (printf "%.1f" .) "." "," }}&nbsp;%{{ else }}—{{ end }}</td>
-      <td>{{ .note }}</td></tr>
+    {{- if not (index . $kn) }}{{ errorf "dette-monde-tableau: %s absent pour %s (%s)" $kn .code $page }}{{ end }}
+    {{- if and $en .note (not .note_en) }}{{ errorf "dette-monde-tableau: note_en absente pour %s (%s)" .code $page }}{{ end }}
+    <tr><th scope="row">{{ index . $kn }}</th>
+      <td>{{ with .stock }}{{ replace (printf "%.1f" .) "." $dec }}{{ $pc }}{{ else }}—{{ end }}{{ with .annee }} <small>({{ . }})</small>{{ end }}</td>
+      <td>{{ with .charge }}{{ replace (printf "%.1f" .) "." $dec }}{{ $pc }}{{ else }}—{{ end }}</td>
+      <td>{{ cond $en .note_en .note }}</td></tr>
   {{- end }}
   </tbody>
 </table>
@@ -63,16 +80,17 @@
 {{- if not $e -}}{{- errorf "dette-monde-tableau: bloc ecarts_allemagne absent (%s)" .Page.RelPermalink -}}{{- end -}}
 <div class="table-scroll">
 <table class="dette-monde-table dette-monde-table--ecarts">
-  <caption>Écart de taux à 10 ans avec l'Allemagne, en points — Eurostat, rendements de convergence des emprunts d'État</caption>
-  <thead><tr><th scope="col">Pays</th>{{ range $e.annees }}<th scope="col">{{ . }}</th>{{ end }}</tr></thead>
+  {{ if $en }}<caption>10-year yield spread over Germany, in percentage points — Eurostat, convergence yields on government bonds</caption>{{ else }}<caption>Écart de taux à 10 ans avec l'Allemagne, en points — Eurostat, rendements de convergence des emprunts d'État</caption>{{ end }}
+  <thead><tr><th scope="col">{{ cond $en "Country" "Pays" }}</th>{{ range $e.annees }}<th scope="col">{{ . }}</th>{{ end }}</tr></thead>
   <tbody>
   {{- range $e.pays }}
     {{- $p := . }}
-    <tr{{ if eq .code "FR" }} class="is-france"{{ end }}><th scope="row">{{ .nom }}<br><small>{{ with .euro_depuis }}euro depuis {{ . }}{{ else }}hors euro{{ end }}</small></th>
+    {{- if not (index . $kn) }}{{ errorf "dette-monde-tableau: %s absent pour %s (%s)" $kn .code $page }}{{ end }}
+    <tr{{ if eq .code "FR" }} class="is-france"{{ end }}><th scope="row">{{ index . $kn }}<br><small>{{ with .euro_depuis }}{{ cond $en "euro since" "euro depuis" }} {{ . }}{{ else }}{{ cond $en "outside the euro" "hors euro" }}{{ end }}</small></th>
     {{- /* eq nil et non « with » : un écart nul (0,00) est une valeur, pas une absence */ -}}
-    {{- range $e.annees }}{{ $v := index $p.ecarts . }}<td>{{ if eq $v nil }}—{{ else }}{{ if gt $v 0.0 }}+{{ end }}{{ replace (replace (printf "%.2f" $v) "." ",") "-" "−" }}{{ end }}</td>{{ end }}</tr>
+    {{- range $e.annees }}{{ $v := index $p.ecarts . }}<td>{{ if eq $v nil }}—{{ else }}{{ if gt $v 0.0 }}+{{ end }}{{ replace (replace (printf "%.2f" $v) "." $dec) "-" "−" }}{{ end }}</td>{{ end }}</tr>
   {{- end }}
-    <tr><th scope="row">Allemagne<br><small>taux à 10 ans</small></th>{{ range $e.annees }}<td>{{ replace (replace (printf "%.2f" (index $e.allemagne .)) "." ",") "-" "−" }}&nbsp;%</td>{{ end }}</tr>
+    <tr><th scope="row">{{ if $en }}Germany<br><small>10-year yield</small>{{ else }}Allemagne<br><small>taux à 10 ans</small>{{ end }}</th>{{ range $e.annees }}<td>{{ replace (replace (printf "%.2f" (index $e.allemagne .)) "." $dec) "-" "−" }}{{ $pc }}</td>{{ end }}</tr>
   </tbody>
 </table>
 </div>

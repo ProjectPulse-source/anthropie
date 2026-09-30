@@ -44,9 +44,59 @@
    "id": "mecanismes",
    "fichier": "qui-paie-mecanismes",
    "titre": "Par quels canaux la charge peut-elle être répartie ?",
-   "montre": "Quatre mécanismes possibles, non exhaustifs, le refinancement qui reporte sans désigner de perdant, et en regard ce que la dette a financé.",
+   "montre": "Quatre mécanismes possibles, non exhaustifs, le refinancement qui renouvelle l'échéance aux taux du moment sans désigner de perdant, et en regard ce que la dette a financé.",
    "source": "Synthèse de l'auteur, schéma non quantitatif",
    "precaution": "Aucun poids relatif ni effet causal n'est mesuré ici."
+  }
+ ],
+ "en": [
+  {
+   "id": "detention",
+   "fichier": "qui-paie-detention-en",
+   "titre": "Who borrows? Who holds French government securities?",
+   "montre": "The levels of government that borrow, then the holders of the State's securities: two separate scopes, with no proportional link.",
+   "source": "INSEE, IR no. 79 (27 March 2026), end of 2025  ·  Banque de France via Agence France Trésor (French Treasury agency), Q1 2026",
+   "precaution": "A: nominal value; B: market value. Holding securities does not measure the final burden."
+  },
+  {
+   "id": "redistribution",
+   "fichier": "qui-paie-redistribution-en",
+   "titre": "Taxes and contributions, and public transfers, by standard-of-living decile, 2023",
+   "montre": "Taxes and contributions rise steeply with the standard of living; transfers received, benefits and public services, vary much less.",
+   "source": "Insee, distributional national accounts 2023 (Insee Analyses no. 118, figure 1c)",
+   "precaution": "Distribution based on imputation conventions; does not measure the specific incidence of the debt."
+  },
+  {
+   "id": "solde-net",
+   "fichier": "qui-paie-solde-net-en",
+   "titre": "Net contributors and net beneficiaries by decile, 2023",
+   "montre": "On average per CU, the lower and middle deciles receive more than they pay in, the best-off the reverse; but from the middle of the scale, most people pay in more than they receive.",
+   "source": "Insee, distributional national accounts 2023 (Insee Analyses no. 118, figure 2a)",
+   "precaution": "Averages per CU; pensions and public services valued by imputation included; the balance of one year, not of a lifetime; does not measure the specific effect of the debt."
+  },
+  {
+   "id": "age",
+   "fichier": "qui-paie-age-en",
+   "titre": "Taxes and contributions, and public transfers, by household age, 2023",
+   "montre": "In 2023, under these conventions: what each group pays in and receives, ranked by the mean age of the household's adults, pensions and public services included.",
+   "source": "Insee, distributional national accounts 2023 (Insee Analyses no. 118, figure 1e)",
+   "precaution": "A snapshot of one year, not the balance sheet of a generation nor of future generations; a household's age is not the retirement status of its members."
+  },
+  {
+   "id": "exposition",
+   "fichier": "qui-paie-exposition-en",
+   "titre": "The same €10 billion effort: who would bear it, depending on the decision taken?",
+   "montre": "What the same effort would represent for each standard-of-living decile depending on the decision taken — taxes, pensions or education —, then how much that choice changes the effort of the same group.",
+   "source": "Insee, distributional national accounts, table CND.101 (standard-of-living twentieths, 2020-2023, base 2020) — 2023 vintage",
+   "precaution": "An accounting exposure profile, not a simulation: no behaviour, no feedback effect. A cut in a valued public service is not a loss of cash income. The D1 point of the tax decision is excluded; the reason is given in the figure's footer."
+  },
+  {
+   "id": "mecanismes",
+   "fichier": "qui-paie-mecanismes-en",
+   "titre": "Through which channels can the burden be distributed?",
+   "montre": "Four possible mechanisms, not exhaustive, refinancing, which rolls the maturity over without designating a loser, and alongside what the debt has financed.",
+   "source": "Author's synthesis, non-quantitative diagram",
+   "precaution": "No relative weight or causal effect is measured here."
   }
  ]
 }

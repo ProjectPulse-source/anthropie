@@ -49,9 +49,6 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   bloc: "dette"
   rang: 30
   nature: "Séries officielles comparées (Eurostat, OCDE, FMI, Banque mondiale) et calculs de l'auteur"
-  en_francais: true
-  titre_en: "Public debt: why 100% of GDP does not weigh the same everywhere"
-  nature_en: "Official series compared (Eurostat, OECD, IMF, World Bank) and author's calculations"
 ---
 
 {{< dossier-dette volet="3" >}}

@@ -2,17 +2,20 @@
        exactes, lisibles sans la couleur. Le motif initial -- l'aqua qui avertissait
        en contraste -- a disparu le 28/09 avec l'aqua lui-même ; le tableau reste,
        pour la lecture au clavier, à l'écran parlant et à l'impression en noir.
-       Source : data/qui_paie_donnees.json. */ -}}
+       Source : data/qui_paie_donnees.json. Bilingue selon la langue de la page : les
+       libellés changent, les nombres viennent du même bloc et lang.FormatNumber suit
+       la langue (espace insécable en français, virgule des milliers en anglais). */ -}}
+{{- $en := eq .Page.Lang "en" -}}
 {{- $r := "" -}}
 {{- with site.Data.qui_paie_donnees -}}{{- $r = .redistribution -}}{{- end -}}
 {{- if not $r -}}{{ errorf "qp-tableau-redistribution: donnees absentes (%s)" .Page.File.Path }}{{- end -}}
 <details class="qp-tableau">
-  <summary>Les valeurs en tableau (euros par unité de consommation, 2023)</summary>
+  <summary>{{ if $en }}The values as a table (euros per consumption unit, 2023){{ else }}Les valeurs en tableau (euros par unité de consommation, 2023){{ end }}</summary>
   <table>
-    <thead><tr><th scope="col">Dixième</th><th scope="col">Prélèvements</th><th scope="col">Prestations en espèces</th><th scope="col">Transferts non monétaires</th></tr></thead>
+    <thead><tr>{{ if $en }}<th scope="col">Decile</th><th scope="col">Taxes and contributions</th><th scope="col">Cash benefits</th><th scope="col">In-kind transfers</th>{{ else }}<th scope="col">Dixième</th><th scope="col">Prélèvements</th><th scope="col">Prestations en espèces</th><th scope="col">Transferts non monétaires</th>{{ end }}</tr></thead>
     <tbody>
     {{- range $i, $c := $r.colonnes }}
-      <tr><th scope="row">{{ $c }}</th><td>−{{ lang.FormatNumber 0 (mul -1 (index $r.prelevements $i)) }}</td><td>{{ lang.FormatNumber 0 (index $r.prestations_especes $i) }}</td><td>{{ lang.FormatNumber 0 (index $r.transferts_non_monetaires $i) }}</td></tr>
+      <tr><th scope="row">{{ cond (and $en (eq $c "Ensemble")) "All" $c }}</th><td>−{{ lang.FormatNumber 0 (mul -1 (index $r.prelevements $i)) }}</td><td>{{ lang.FormatNumber 0 (index $r.prestations_especes $i) }}</td><td>{{ lang.FormatNumber 0 (index $r.transferts_non_monetaires $i) }}</td></tr>
     {{- end }}
     </tbody>
   </table>

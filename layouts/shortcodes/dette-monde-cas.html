@@ -1,15 +1,27 @@
 {{- /* {{< dette-monde-cas >}} — trois économies avancées hors UE en cartes (Japon, Suisse, États-Unis),
        et la France sur la MÊME base OCDE comme étalon (avis du 30/09 : « trois laboratoires », le tableau
        complet reste replié juste en dessous). Lit data/dette_monde.json ; aucune valeur saisie ici.
-       Un pays ou une grandeur absents = échec de build : une carte vide mentirait par omission. */ -}}
+       Un pays ou une grandeur absents = échec de build : une carte vide mentirait par omission.
+       Bilingue (30/09) : sur une page anglaise, libellés anglais, nom_en, point décimal, « % » collé ; nom_en
+       absent = échec de build. La page française rend exactement comme avant. */ -}}
+{{- $en := eq .Page.Lang "en" -}}
 {{- $d := site.Data.dette_monde -}}
 {{- if not $d -}}{{- errorf "dette-monde-cas: data/dette_monde.json absent (%s)" .Page.RelPermalink -}}{{- end -}}
 <div class="dette-monde-cas">
 {{- range slice "JPN" "CHE" "USA" "FRA" }}
   {{- $p := index (where $d.avances "code" .) 0 -}}
   {{- if or (not $p) (not $p.stock) (not $p.prix) (not $p.charge) -}}{{- errorf "dette-monde-cas: donnees OCDE incompletes pour %s (%s)" . $.Page.RelPermalink -}}{{- end }}
+  {{- if and $en (not $p.nom_en) -}}{{- errorf "dette-monde-cas: nom_en absent pour %s (%s)" . $.Page.RelPermalink -}}{{- end }}
   <div class="dette-monde-cas__carte{{ if eq . "FRA" }} is-france{{ end }}">
-    <p class="dette-monde-cas__pays">{{ if eq . "FRA" }}France <small>(même base, étalon)</small>{{ else }}{{ $p.nom }}{{ end }}</p>
+    {{ if $en }}<p class="dette-monde-cas__pays">{{ if eq . "FRA" }}France <small>(same basis, benchmark)</small>{{ else }}{{ $p.nom_en }}{{ end }}</p>
+    <dl>
+      <dt>Gross financial liabilities</dt><dd>{{ printf "%.0f" $p.stock }}% of GDP</dd>
+      <dt>Interest / liabilities</dt><dd>{{ printf "%.2f" $p.prix }}%</dd>
+      <dt>Interest / revenue</dt><dd><strong>{{ printf "%.1f" $p.charge }}%</strong></dd>
+      {{- if eq . "CHE" }}{{ with $p.dette_nette }}
+      <dt>Net financial liabilities</dt><dd>{{ replace (printf "%.0f" .) "-" "−" }}% of GDP</dd>
+      {{- end }}{{ end }}
+    </dl>{{ else }}<p class="dette-monde-cas__pays">{{ if eq . "FRA" }}France <small>(même base, étalon)</small>{{ else }}{{ $p.nom }}{{ end }}</p>
     <dl>
       <dt>Passifs financiers bruts</dt><dd>{{ replace (printf "%.0f" $p.stock) "." "," }}&nbsp;% du PIB</dd>
       <dt>Intérêts / passifs</dt><dd>{{ replace (printf "%.2f" $p.prix) "." "," }}&nbsp;%</dd>
@@ -17,7 +29,7 @@
       {{- if eq . "CHE" }}{{ with $p.dette_nette }}
       <dt>Passifs financiers nets</dt><dd>{{ replace (replace (printf "%.0f" .) "." ",") "-" "−" }}&nbsp;% du PIB</dd>
       {{- end }}{{ end }}
-    </dl>
+    </dl>{{ end }}
   </div>
 {{- end }}
 </div>

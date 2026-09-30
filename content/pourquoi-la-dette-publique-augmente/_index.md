@@ -42,9 +42,6 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   bloc: "dette"
   rang: 5
   nature: "Séries officielles (Eurostat) décomposées et calculs de l'auteur"
-  en_francais: true
-  titre_en: "Why does public debt rise?"
-  nature_en: "Official series (Eurostat) decomposed, and author's calculations"
 ---
 
 {{< dossier-dette volet="hausse" >}}

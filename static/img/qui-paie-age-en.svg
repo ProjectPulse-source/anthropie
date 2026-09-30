@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 421" role="img" font-variant-numeric="tabular-nums" aria-labelledby="qp-age-t qp-age-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="qp-age-t">Taxes and contributions, and public transfers, by household age, 2023</title>
+<desc id="qp-age-d">Bars by household age group, in 2023, in thousand euros per consumption unit. Transfers received rise from 18.2 for the 18-29 group to 47.8 for households whose adults are 65 or over on average, while taxes and contributions go from 23.2 to 14.6.</desc>
+<text x="0.0" y="22.0" font-size="13" fill="#52514e" text-anchor="start">Taxes and contributions, and public transfers, by household age, 2023, € thousand per CU</text>
+<line x1="46" y1="285.7" x2="552" y2="285.7" stroke="#e1e0d9" stroke-width="1"/>
+<text x="40.0" y="289.7" font-size="11" fill="#898781" text-anchor="end">−25</text>
+<line x1="46" y1="211.7" x2="552" y2="211.7" stroke="#c3c2b7" stroke-width="1"/>
+<text x="40.0" y="215.7" font-size="11" fill="#898781" text-anchor="end">0</text>
+<line x1="46" y1="137.8" x2="552" y2="137.8" stroke="#e1e0d9" stroke-width="1"/>
+<text x="40.0" y="141.8" font-size="11" fill="#898781" text-anchor="end">25</text>
+<line x1="46" y1="63.9" x2="552" y2="63.9" stroke="#e1e0d9" stroke-width="1"/>
+<text x="40.0" y="67.9" font-size="11" fill="#898781" text-anchor="end">50</text>
+<rect x="64.6" y="199.3" width="64" height="12.4" fill="#184f95"/>
+<rect x="64.6" y="155.9" width="64" height="41.4" rx="2" fill="#898781"/>
+<rect x="64.6" y="213.7" width="64" height="66.6" rx="2" fill="#eb6834"/>
+<text x="96.6" y="150.9" font-size="10" fill="#52514e" text-anchor="middle">18.2</text>
+<text x="96.6" y="293.3" font-size="10" fill="#52514e" text-anchor="middle">−23.2</text>
+<text x="96.6" y="346.0" font-size="11" fill="#898781" text-anchor="middle">18-29</text>
+<rect x="165.8" y="195.8" width="64" height="16.0" fill="#184f95"/>
+<rect x="165.8" y="148.2" width="64" height="45.5" rx="2" fill="#898781"/>
+<rect x="165.8" y="213.7" width="64" height="88.5" rx="2" fill="#eb6834"/>
+<text x="197.8" y="143.2" font-size="10" fill="#52514e" text-anchor="middle">20.8</text>
+<text x="197.8" y="315.2" font-size="10" fill="#52514e" text-anchor="middle">−30.6</text>
+<text x="197.8" y="346.0" font-size="11" fill="#898781" text-anchor="middle">30-39</text>
+<rect x="267.0" y="195.2" width="64" height="16.6" fill="#184f95"/>
+<rect x="267.0" y="145.9" width="64" height="47.3" rx="2" fill="#898781"/>
+<rect x="267.0" y="213.7" width="64" height="91.1" rx="2" fill="#eb6834"/>
+<text x="299.0" y="140.9" font-size="10" fill="#52514e" text-anchor="middle">21.6</text>
+<text x="299.0" y="317.9" font-size="10" fill="#52514e" text-anchor="middle">−31.5</text>
+<text x="299.0" y="346.0" font-size="11" fill="#898781" text-anchor="middle">40-49</text>
+<rect x="368.2" y="180.4" width="64" height="31.3" fill="#184f95"/>
+<rect x="368.2" y="138.2" width="64" height="40.2" rx="2" fill="#898781"/>
+<rect x="368.2" y="213.7" width="64" height="97.9" rx="2" fill="#eb6834"/>
+<text x="400.2" y="133.2" font-size="10" fill="#52514e" text-anchor="middle">24.2</text>
+<text x="400.2" y="324.7" font-size="10" fill="#52514e" text-anchor="middle">−33.8</text>
+<text x="400.2" y="346.0" font-size="11" fill="#898781" text-anchor="middle">50-64</text>
+<rect x="469.4" y="126.9" width="64" height="84.9" fill="#184f95"/>
+<rect x="469.4" y="68.4" width="64" height="56.5" rx="2" fill="#898781"/>
+<rect x="469.4" y="213.7" width="64" height="41.2" rx="2" fill="#eb6834"/>
+<text x="501.4" y="63.4" font-size="12" fill="#2b2a28" text-anchor="middle" font-weight="600">47.8</text>
+<text x="501.4" y="267.9" font-size="12" fill="#2b2a28" text-anchor="middle" font-weight="600">−14.6</text>
+<text x="501.4" y="346.0" font-size="11" fill="#2b2a28" text-anchor="middle" font-weight="600">65 or over</text>
+<text x="566.0" y="100.7" font-size="11" fill="#898781" text-anchor="start" font-weight="600">In-kind transfers</text>
+<text x="566.0" y="113.7" font-size="10" fill="#898781" text-anchor="start">valued public services</text>
+<text x="566.0" y="173.3" font-size="11" fill="#184f95" text-anchor="start" font-weight="600">Cash benefits</text>
+<text x="566.0" y="186.3" font-size="10" fill="#898781" text-anchor="start">including pensions</text>
+<text x="566.0" y="239.3" font-size="11" fill="#eb6834" text-anchor="start" font-weight="600">Taxes and contributions</text>
+<text x="566.0" y="252.3" font-size="10" fill="#898781" text-anchor="start">taxes, social contributions</text>
+<line x1="0" y1="364.0" x2="720" y2="364.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="0" y="377.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Insee, distributional national accounts 2023 (Insee Analyses no. 118, 16 April 2026, figure 1e) · groups by mean age of the household's adults</text>
+<text x="0" y="389.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">A snapshot of one year, not the balance sheet of a generation: retirement pensions are counted here as transfers received.</text>
+<text x="0" y="401.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/who-really-pays-public-debt/</text>
+</svg>

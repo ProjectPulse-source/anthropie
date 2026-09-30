@@ -1,35 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 488" role="img" font-variant-numeric="tabular-nums" aria-labelledby="mc-t mc-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-<title id="mc-t">Même dette, charge différente : les 27 pays de l'UE en 2025</title><desc id="mc-d">Chaque point est un pays. Les pointillés relient les faux jumeaux désignés par la règle publiée : dette voisine, charge très différente. Deux droites de moindres carrés, une par groupe, sur leur plage observée.</desc>
+<title id="mc-t">Same debt, different burden: the 27 EU countries in 2025</title><desc id="mc-d">Each dot is a country. Dotted lines link the false twins picked out by the published rule: similar debt, very different burden. Two least-squares lines, one per group, over their observed range.</desc>
 <rect width="720" height="488" fill="#ffffff"/>
-<text x="0" y="18" font-size="13" font-weight="600" fill="#0A0A0E">Même dette, charge différente : les 27 pays de l'UE en 2025</text>
+<text x="0" y="18" font-size="13" font-weight="600" fill="#0A0A0E">Same debt, different burden: the 27 EU countries in 2025</text>
 <circle cx="470.0" cy="14.0" r="5" fill="#184f95"/>
-<text x="479.0" y="18.0" font-size="11" fill="#52514e">zone euro</text>
+<text x="479.0" y="18.0" font-size="11" fill="#52514e">euro area</text>
 <circle cx="560.0" cy="14.0" r="5" fill="#eb6834"/>
-<text x="569.0" y="18.0" font-size="11" fill="#52514e">hors zone euro</text>
+<text x="569.0" y="18.0" font-size="11" fill="#52514e">outside euro area</text>
 <line x1="58.0" y1="388.0" x2="700.0" y2="388.0" stroke="#e1e0d9"/>
-<text x="52.0" y="392.0" font-size="11" fill="#898781" text-anchor="end">0 %</text>
+<text x="52.0" y="392.0" font-size="11" fill="#898781" text-anchor="end">0%</text>
 <line x1="58.0" y1="323.2" x2="700.0" y2="323.2" stroke="#e1e0d9"/>
-<text x="52.0" y="327.2" font-size="11" fill="#898781" text-anchor="end">2 %</text>
+<text x="52.0" y="327.2" font-size="11" fill="#898781" text-anchor="end">2%</text>
 <line x1="58.0" y1="258.4" x2="700.0" y2="258.4" stroke="#e1e0d9"/>
-<text x="52.0" y="262.4" font-size="11" fill="#898781" text-anchor="end">4 %</text>
+<text x="52.0" y="262.4" font-size="11" fill="#898781" text-anchor="end">4%</text>
 <line x1="58.0" y1="193.6" x2="700.0" y2="193.6" stroke="#e1e0d9"/>
-<text x="52.0" y="197.6" font-size="11" fill="#898781" text-anchor="end">6 %</text>
+<text x="52.0" y="197.6" font-size="11" fill="#898781" text-anchor="end">6%</text>
 <line x1="58.0" y1="128.8" x2="700.0" y2="128.8" stroke="#e1e0d9"/>
-<text x="52.0" y="132.8" font-size="11" fill="#898781" text-anchor="end">8 %</text>
+<text x="52.0" y="132.8" font-size="11" fill="#898781" text-anchor="end">8%</text>
 <line x1="58.0" y1="64.0" x2="700.0" y2="64.0" stroke="#e1e0d9"/>
-<text x="52.0" y="68.0" font-size="11" fill="#898781" text-anchor="end">10 %</text>
-<text x="58.0" y="54.0" font-size="11" fill="#52514e">charge : intérêts en % des recettes publiques</text>
+<text x="52.0" y="68.0" font-size="11" fill="#898781" text-anchor="end">10%</text>
+<text x="58.0" y="54.0" font-size="11" fill="#52514e">burden: interest as a % of public revenue</text>
 <line x1="58.0" y1="388.0" x2="700.0" y2="388.0" stroke="#c3c2b7"/>
-<text x="58.0" y="403.0" font-size="11" fill="#898781" text-anchor="middle">0 %</text>
-<text x="138.2" y="403.0" font-size="11" fill="#898781" text-anchor="middle">20 %</text>
-<text x="218.5" y="403.0" font-size="11" fill="#898781" text-anchor="middle">40 %</text>
-<text x="298.8" y="403.0" font-size="11" fill="#898781" text-anchor="middle">60 %</text>
-<text x="379.0" y="403.0" font-size="11" fill="#898781" text-anchor="middle">80 %</text>
-<text x="459.2" y="403.0" font-size="11" fill="#898781" text-anchor="middle">100 %</text>
-<text x="539.5" y="403.0" font-size="11" fill="#898781" text-anchor="middle">120 %</text>
-<text x="619.8" y="403.0" font-size="11" fill="#898781" text-anchor="middle">140 %</text>
-<text x="700.0" y="403.0" font-size="11" fill="#898781" text-anchor="middle">160 %</text>
-<text x="379.0" y="420.0" font-size="11" fill="#52514e" text-anchor="middle">stock : dette fin 2024 rapportée au PIB 2025</text>
+<text x="58.0" y="403.0" font-size="11" fill="#898781" text-anchor="middle">0%</text>
+<text x="138.2" y="403.0" font-size="11" fill="#898781" text-anchor="middle">20%</text>
+<text x="218.5" y="403.0" font-size="11" fill="#898781" text-anchor="middle">40%</text>
+<text x="298.8" y="403.0" font-size="11" fill="#898781" text-anchor="middle">60%</text>
+<text x="379.0" y="403.0" font-size="11" fill="#898781" text-anchor="middle">80%</text>
+<text x="459.2" y="403.0" font-size="11" fill="#898781" text-anchor="middle">100%</text>
+<text x="539.5" y="403.0" font-size="11" fill="#898781" text-anchor="middle">120%</text>
+<text x="619.8" y="403.0" font-size="11" fill="#898781" text-anchor="middle">140%</text>
+<text x="700.0" y="403.0" font-size="11" fill="#898781" text-anchor="middle">160%</text>
+<text x="379.0" y="420.0" font-size="11" fill="#52514e" text-anchor="middle">stock: debt at end-2024 relative to 2025 GDP</text>
 <line x1="310.3" y1="300.2" x2="334.0" y2="98.7" stroke="#898781" stroke-width="1.5" stroke-dasharray="3 3"/>
 <line x1="270.7" y1="291.8" x2="264.4" y2="201.6" stroke="#898781" stroke-width="1.5" stroke-dasharray="3 3"/>
 <line x1="264.4" y1="201.6" x2="260.0" y2="128.0" stroke="#898781" stroke-width="1.5" stroke-dasharray="3 3"/>
@@ -62,22 +62,22 @@
 <circle cx="286.1" cy="272.6" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="381.7" cy="290.3" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="190.1" cy="347.1" r="5.5" fill="#eb6834" stroke="#fff" stroke-width="1"/>
-<text x="460.6" y="232.0" font-size="11" fill="#0A0A0E" text-anchor="middle">Belgique</text>
-<text x="296.6" y="331.0" font-size="11" fill="#0A0A0E" text-anchor="middle">Allemagne</text>
-<text x="647.7" y="174.4" font-size="11" fill="#0A0A0E" text-anchor="middle">Grèce</text>
-<text x="442.8" y="198.7" font-size="11" fill="#0A0A0E" text-anchor="middle">Espagne</text>
+<text x="460.6" y="232.0" font-size="11" fill="#0A0A0E" text-anchor="middle">Belgium</text>
+<text x="296.6" y="331.0" font-size="11" fill="#0A0A0E" text-anchor="middle">Germany</text>
+<text x="647.7" y="174.4" font-size="11" fill="#0A0A0E" text-anchor="middle">Greece</text>
+<text x="442.8" y="198.7" font-size="11" fill="#0A0A0E" text-anchor="middle">Spain</text>
 <text x="501.5" y="240.7" font-size="11" fill="#0A0A0E" text-anchor="middle" font-weight="600">France</text>
-<text x="261.7" y="295.8" font-size="11" fill="#0A0A0E" text-anchor="end">Croatie</text>
-<text x="583.6" y="119.0" font-size="11" fill="#0A0A0E" text-anchor="middle">Italie</text>
-<text x="334.0" y="89.7" font-size="11" fill="#0A0A0E" text-anchor="middle">Hongrie</text>
-<text x="366.2" y="276.6" font-size="11" fill="#0A0A0E" text-anchor="middle">Autriche</text>
-<text x="255.4" y="205.6" font-size="11" fill="#0A0A0E" text-anchor="end">Pologne</text>
+<text x="261.7" y="295.8" font-size="11" fill="#0A0A0E" text-anchor="end">Croatia</text>
+<text x="583.6" y="119.0" font-size="11" fill="#0A0A0E" text-anchor="middle">Italy</text>
+<text x="334.0" y="89.7" font-size="11" fill="#0A0A0E" text-anchor="middle">Hungary</text>
+<text x="366.2" y="276.6" font-size="11" fill="#0A0A0E" text-anchor="middle">Austria</text>
+<text x="255.4" y="205.6" font-size="11" fill="#0A0A0E" text-anchor="end">Poland</text>
 <text x="410.3" y="233.7" font-size="11" fill="#0A0A0E" text-anchor="middle">Portugal</text>
-<text x="260.0" y="119.0" font-size="11" fill="#0A0A0E" text-anchor="middle">Roumanie</text>
-<text x="319.3" y="304.2" font-size="11" fill="#0A0A0E" text-anchor="start">Slovénie</text>
-<text x="190.1" y="365.1" font-size="11" fill="#0A0A0E" text-anchor="middle">Suède</text>
+<text x="260.0" y="119.0" font-size="11" fill="#0A0A0E" text-anchor="middle">Romania</text>
+<text x="319.3" y="304.2" font-size="11" fill="#0A0A0E" text-anchor="start">Slovenia</text>
+<text x="190.1" y="365.1" font-size="11" fill="#0A0A0E" text-anchor="middle">Sweden</text>
 <line x1="0" y1="442.0" x2="720" y2="442.0" stroke="#e1e0d9"/>
-<text x="0" y="455.0" font-size="9" fill="#52514e">Eurostat gov_10a_main (D41PAY, TR), gov_10dd_edpt1 (GD), nama_10_gdp (B1GQ), 2025 ; administrations publiques S.13, monnaie nationale</text>
-<text x="0" y="467.0" font-size="9" fill="#52514e">Pointillés : faux jumeaux (plus proche voisin en stock, écart &lt; 10 points, trois plus grands écarts de charge).</text>
-<text x="0" y="479.0" font-size="9" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/dette-publique-comparaison-internationale/</text>
+<text x="0" y="455.0" font-size="9" fill="#52514e">Eurostat gov_10a_main (D41PAY, TR), gov_10dd_edpt1 (GD), nama_10_gdp (B1GQ), 2025; general government S.13, national currency</text>
+<text x="0" y="467.0" font-size="9" fill="#52514e">Dotted lines: false twins (nearest neighbour by debt stock, gap under 10 percentage points, three largest gaps in burden).</text>
+<text x="0" y="479.0" font-size="9" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/public-debt-international-comparison/</text>
 </svg>

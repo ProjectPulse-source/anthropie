@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 449" role="img" font-variant-numeric="tabular-nums" aria-labelledby="qp-mec-t qp-mec-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="qp-mec-t">Through which channels can the burden of the debt be distributed?</title>
+<desc id="qp-mec-d">Diagram without quantities. Four mechanisms, not exhaustive, can change the burden of the debt and its distribution, and they combine: taxes and contributions (taxpayers), spending and benefits (users, beneficiaries), inflation (holders of claims and of poorly indexed incomes), restructuring, an extreme case (holders of the securities). Refinancing rolls the maturity over at current rates and does not, on its own, identify who will bear the burden. Alongside is what the debt has financed.</desc>
+<text x="0.0" y="22.0" font-size="13" fill="#52514e" text-anchor="start">Through which channels can the burden of the debt be distributed?</text>
+<defs><marker id="qp-fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#898781"/></marker></defs>
+<rect x="1" y="150" width="200" height="74" rx="6" fill="#ffffff" stroke="#184f95" stroke-width="1.5"/>
+<text x="13.0" y="170.0" font-size="12" fill="#2b2a28" text-anchor="start" font-weight="600">Debt burden</text>
+<text x="13.0" y="186.0" font-size="12" fill="#2b2a28" text-anchor="start" font-weight="600">and its distribution</text>
+<text x="13.0" y="202.0" font-size="11" fill="#52514e" text-anchor="start">interest, maturing debt</text>
+<rect x="300" y="44" width="418" height="50" rx="6" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.5"/>
+<text x="312.0" y="64.0" font-size="12" fill="#2b2a28" text-anchor="start" font-weight="600">Taxes and contributions</text>
+<text x="312.0" y="80.0" font-size="11" fill="#52514e" text-anchor="start">taxpayers: taxes, social contributions</text>
+<line x1="200" y1="187" x2="296" y2="69" stroke="#898781" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#qp-fl)"/>
+<rect x="300" y="108" width="418" height="50" rx="6" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.5"/>
+<text x="312.0" y="128.0" font-size="12" fill="#2b2a28" text-anchor="start" font-weight="600">Spending and benefits</text>
+<text x="312.0" y="144.0" font-size="11" fill="#52514e" text-anchor="start">users, beneficiaries: cut, frozen, postponed</text>
+<line x1="200" y1="187" x2="296" y2="133" stroke="#898781" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#qp-fl)"/>
+<rect x="300" y="172" width="418" height="50" rx="6" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.5"/>
+<text x="312.0" y="192.0" font-size="12" fill="#2b2a28" text-anchor="start" font-weight="600">Inflation</text>
+<text x="312.0" y="208.0" font-size="11" fill="#52514e" text-anchor="start">holders of claims and of poorly indexed incomes</text>
+<line x1="200" y1="187" x2="296" y2="197" stroke="#898781" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#qp-fl)"/>
+<rect x="300" y="236" width="418" height="50" rx="6" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.5"/>
+<text x="312.0" y="256.0" font-size="12" fill="#2b2a28" text-anchor="start" font-weight="600">Restructuring (extreme case)</text>
+<text x="312.0" y="272.0" font-size="11" fill="#52514e" text-anchor="start">holders of the securities</text>
+<line x1="200" y1="187" x2="296" y2="261" stroke="#898781" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#qp-fl)"/>
+<rect x="1" y="44" width="200" height="70" rx="6" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text x="13.0" y="64.0" font-size="12" fill="#2b2a28" text-anchor="start" font-weight="600">Refinancing</text>
+<text x="13.0" y="80.0" font-size="11" fill="#52514e" text-anchor="start">rolls the maturity over</text>
+<text x="13.0" y="96.0" font-size="11" fill="#52514e" text-anchor="start">at current rates</text>
+<line x1="100" y1="150" x2="100" y2="118" stroke="#898781" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#qp-fl)"/>
+<rect x="1" y="316" width="717" height="52" rx="6" fill="#f7f7f4" stroke="#c3c2b7" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text x="13.0" y="336.0" font-size="12" fill="#2b2a28" text-anchor="start" font-weight="600">Alongside: what the debt has financed</text>
+<text x="13.0" y="352.0" font-size="11" fill="#52514e" text-anchor="start">services, benefits, investment, crisis support — present and future benefits</text>
+<line x1="0" y1="392.0" x2="720" y2="392.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="0" y="405.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Author's synthesis · non-quantitative diagram, arrows of equal thickness</text>
+<text x="0" y="417.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">A diagram of possible mechanisms. No relative weight or causal effect is measured here.</text>
+<text x="0" y="429.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#898781">Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/who-really-pays-public-debt/</text>
+</svg>
