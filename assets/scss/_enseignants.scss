@@ -20,3 +20,6 @@
   body.imprime-une-fiche .dossier-dette,
   body.imprime-une-fiche .site-footer { display: none !important; }
 }
+
+// L'offre du livre n'apparaît sur aucune impression (avis « Enseignants », 30/09, § 9).
+@media print { .exemplaire { display: none !important; } }

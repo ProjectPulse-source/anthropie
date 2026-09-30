@@ -53,6 +53,18 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-30 — `/enseignants/` corrigée avant le pilote (avis entrant « Enseignants »)
+
+Arbitrage `ENTRANTE_2026-09-30_Enseignants_arbitrage.md`. Deux défauts graves corrigés : Première, encadré « Du
+programme au document » (budget de l'État ≠ administrations publiques ≠ solde primaire) et corrigé réécrit ; question 3,
+« quatre contributions », pas « trois termes ». Aussi : 87 % verrouillé (« hausse nette… dans cette décomposition
+comptable »), convention de la dette de départ dite (encours de fin N-1 / PIB N, écart avec le ratio officiel expliqué),
+« valeur de référence de 60 % inscrite dans les traités » et réforme de 2024 au corrigé, réserve flux-stock sur r − g,
+« Terminale, justice sociale » avec un lien au programme décrit sans citer un objectif non relu, livre après « Méthode et
+sources » et hors impression, titre et meta centrés sur la dette, licence précisée. **Test d'impression réel** (Chrome
+sans fenêtre, PDF relu) : fiche seule 2 pages, titre présent, sans corrigé ni livre ni navigation ; page entière 7 pages
+avec corrigés ; défaut trouvé et corrigé (titres hors des fiches). Firefox non testé. `LearningResource` différé.
+
 ### 2026-09-30 — `/enseignants/` : exemplaire de consultation par le guichet existant, sans contrôle d'éligibilité
 
 Navette `PRO-20260930-210901` (close, 8 portes vertes) : option B. Page `/ressources-offertes/dette-publique-enseignants/`

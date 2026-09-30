@@ -1,6 +1,9 @@
 ---
-title: "Pour enseigner : activités SES à partir de données officielles"
-description: "Des activités prêtes pour la classe de SES, en Première et en Terminale : figures projetables, fiches élèves, corrigés et données, tirées des séries officielles de l'INSEE et d'Eurostat."
+title: "Enseigner la dette publique en SES : activités de Première et de Terminale"
+description: "Activités de SES prêtes pour la classe sur la dette publique : déficit et emprunt en Première, politiques budgétaires européennes et redistribution en Terminale, avec les données de l'INSEE et d'Eurostat."
+og_title: "Enseigner la dette publique en SES — trois activités prêtes pour la classe"
+og_image: "images/og-dette-dynamique.jpg"
+og_image_alt: "La dette publique française décomposée depuis 1995 : la figure d'où part l'activité de Première."
 date: 2026-09-30
 lastmod: 2026-09-30
 # Page d'USAGE pour les enseignants, non une analyse : elle transforme les ressources existantes en activités,
@@ -18,8 +21,8 @@ ressource:
 
 Chaque activité part d'une figure du site, projetable telle quelle, et d'une question du programme. La fiche élève et
 son corrigé utilisent **les mêmes séries que les analyses** dont ils sont tirés&nbsp;: un chiffre y change quand il
-change dans la page d'origine, jamais séparément. Les figures et les données sont sous licence CC&nbsp;BY&nbsp;4.0, à
-reprendre en citant la source.
+change dans la page d'origine, jamais séparément. Les figures et la compilation des données sont sous licence CC&nbsp;BY&nbsp;4.0, à
+reprendre en citant la source&nbsp;; les séries brutes restent soumises aux conditions de l'INSEE et d'Eurostat.
 
 Les questions demandent de constater, de calculer, de comparer ou d'expliquer un mécanisme. Aucune ne demande de
 trancher une politique.
@@ -29,15 +32,19 @@ trancher une politique.
 Trois activités, du financement de l'État en Première aux politiques budgétaires européennes en Terminale, puis un
 prolongement sur la redistribution. Chacune tient en une vingtaine de minutes.
 
-### Première — Comment l'État finance-t-il son déficit&nbsp;? {#premiere-financement}
-
 <section class="fiche" id="fiche-premiere">
 
-<p class="fiche__actions"><button type="button" class="how-to-cite__btn how-to-cite__btn--secondary" data-imprimer-fiche="fiche-premiere">Imprimer la fiche élève</button></p>
+### Première — Comment l'État finance-t-il son déficit&nbsp;? {#premiere-financement}
+
+<p class="fiche__actions"><button type="button" class="how-to-cite__btn how-to-cite__btn--secondary" data-imprimer-fiche="fiche-premiere">Imprimer la fiche élève — sans corrigé</button></p>
 
 **Programme.** Chapitre «&nbsp;Comment les agents économiques se financent-ils&nbsp;?&nbsp;» — «&nbsp;Savoir que le solde
 budgétaire résulte de la différence entre les recettes (fiscales et non fiscales) et les dépenses de l'État&nbsp;;
 comprendre que le déficit budgétaire est financé par l'emprunt&nbsp;» (Éduscol).
+
+**Du programme au document.** Le programme porte ici sur le budget de l'État. La figure élargit l'analyse à
+l'ensemble des administrations publiques — État, collectivités locales, administrations de sécurité sociale — et
+isole le déficit primaire, calculé hors intérêts. Les notions sont liées, leurs périmètres ne sont pas identiques.
 
 **Durée**&nbsp;: 20&nbsp;minutes. **Support**&nbsp;: la cascade ci-dessous, tirée de [Pourquoi la dette publique
 augmente-t-elle&nbsp;?](/pourquoi-la-dette-publique-augmente/#cascade)
@@ -48,14 +55,14 @@ augmente-t-elle&nbsp;?](/pourquoi-la-dette-publique-augmente/#cascade)
 
 1. Relevez le ratio dette publique/PIB en {{< dyn-val "annee_depart" >}} et en {{< dyn-val "annee_fin" >}}. De combien de points a-t-il augmenté&nbsp;?
 2. Un **déficit primaire** est l'écart entre les dépenses et les recettes publiques, hors intérêts. Expliquez pourquoi un déficit fait augmenter la dette.
-3. Parmi les trois termes de la figure, lequel explique l'essentiel de la hausse&nbsp;? Quelle part de la hausse représente-t-il&nbsp;?
+3. Parmi les contributions représentées, laquelle explique l'essentiel de la hausse nette&nbsp;? Quelle part de la hausse représente-t-elle&nbsp;?
 4. Les intérêts versés ont poussé le ratio de {{< dyn-val "effet_interets" >}}&nbsp;points. Pourquoi ne suffisent-ils pas à expliquer la hausse&nbsp;?
 
 <details class="repli fiche__corrige"><summary>Corrigé pour l'enseignant</summary>
 
 1. De {{< dyn-val "dette_depart" >}}&nbsp;% à {{< dyn-val "dette_fin" >}}&nbsp;% du PIB&nbsp;: une hausse de {{< dyn-val "hausse" >}}&nbsp;points.
-2. Quand les dépenses dépassent les recettes, l'État emprunte la différence&nbsp;: le déficit de l'année s'ajoute à la dette accumulée. C'est le lien que fixe le programme entre solde budgétaire et emprunt.
-3. Les déficits primaires&nbsp;: {{< dyn-val "deficits_primaires" >}}&nbsp;points sur {{< dyn-val "hausse" >}}, soit {{< dyn-val "part_deficits" >}}&nbsp;% de la hausse.
+2. Un déficit crée un besoin de financement, couvert par l'emprunt&nbsp;: toutes choses égales par ailleurs, il augmente la dette. C'est le lien que fixe le programme entre solde budgétaire et emprunt. La variation exacte de la dette comprend aussi des ajustements flux-stock, qui ne passent pas par le déficit.
+3. Les déficits primaires&nbsp;: {{< dyn-val "deficits_primaires" >}}&nbsp;points sur {{< dyn-val "hausse" >}}, soit {{< dyn-val "part_deficits" >}}&nbsp;% de la hausse nette du ratio entre {{< dyn-val "annee_depart" >}} et {{< dyn-val "annee_fin" >}}, dans cette décomposition comptable — et non «&nbsp;87&nbsp;% de la dette&nbsp;».
 4. Parce que la croissance du PIB nominal a joué en sens inverse&nbsp;: elle a retiré {{< dyn-val "effet_croissance" >}}&nbsp;points au ratio, car une dette constante pèse moins dans un PIB qui grandit. Les deux effets se compensent presque (effet net {{< dyn-val "effet_net" >}}&nbsp;point). À faire remarquer&nbsp;: c'est une décomposition comptable, qui dit par quel terme la dette a monté, pas pourquoi les déficits ont existé.
 
 </details>
@@ -64,15 +71,15 @@ augmente-t-elle&nbsp;?](/pourquoi-la-dette-publique-augmente/#cascade)
 
 </section>
 
-### Terminale — La dette pèse-t-elle partout de la même façon&nbsp;? {#terminale-europe}
-
 <section class="fiche" id="fiche-terminale">
 
-<p class="fiche__actions"><button type="button" class="how-to-cite__btn how-to-cite__btn--secondary" data-imprimer-fiche="fiche-terminale">Imprimer la fiche élève</button></p>
+### Terminale — La dette pèse-t-elle partout de la même façon&nbsp;? {#terminale-europe}
+
+<p class="fiche__actions"><button type="button" class="how-to-cite__btn how-to-cite__btn--secondary" data-imprimer-fiche="fiche-terminale">Imprimer la fiche élève — sans corrigé</button></p>
 
 **Programme.** Chapitre «&nbsp;Quelles politiques économiques dans le cadre européen&nbsp;?&nbsp;» — la politique budgétaire
 est «&nbsp;du ressort de chaque pays membre mais contrainte par les traités européens&nbsp;» (Éduscol). La ressource
-d'accompagnement du chapitre pose la question de la soutenabilité de la dette et rappelle le repère de 60&nbsp;% du PIB.
+d'accompagnement du chapitre pose la question de la soutenabilité de la dette et rappelle la valeur de référence de 60&nbsp;% du PIB.
 
 **Durée**&nbsp;: 20&nbsp;minutes. **Support**&nbsp;: le nuage de points ci-dessous, tiré de [Dette publique&nbsp;: pourquoi
 100&nbsp;% du PIB ne pèse pas partout de la même façon](/dette-publique-comparaison-internationale/#meme-dette)
@@ -81,19 +88,19 @@ d'accompagnement du chapitre pose la question de la soutenabilité de la dette e
 
 **Fiche élève**
 
-1. Repérez la France sur la figure. Quelle est sa dette de départ, et quelle part de ses recettes consacre-t-elle aux intérêts&nbsp;?
+1. Repérez la France sur la figure. Quelle est sa dette de départ (encours de fin {{< monde-val "annee_1" >}} rapporté au PIB {{< monde-val "annee" >}}), et quelle part de ses recettes consacre-t-elle aux intérêts&nbsp;?
 2. {{< monde-val "j_haut_le_maj" >}} et {{< monde-val "j_bas_le" >}} ont une dette voisine ({{< monde-val "j_haut_stock" >}} et {{< monde-val "j_bas_stock" >}} du PIB). Comparez la part de leurs recettes consacrée aux intérêts.
 3. {{< monde-val "j_haut_le_maj" >}} paie un taux de {{< monde-val "j_haut_prix" >}} sur sa dette, {{< monde-val "j_bas_le" >}} {{< monde-val "j_bas_prix" >}}&nbsp;; ses recettes représentent {{< monde-val "j_haut_rec" >}} du PIB, contre {{< monde-val "j_bas_rec" >}}. Expliquez l'écart de charge à l'aide de ces deux éléments.
-4. Le repère européen de 60&nbsp;% porte sur le niveau de la dette. D'après la figure, ce niveau suffit-il à dire ce que la dette coûte à un pays&nbsp;? Justifiez.
+4. La valeur de référence de 60&nbsp;% du PIB inscrite dans les traités européens porte sur le niveau de la dette. D'après la figure, ce niveau suffit-il à dire ce que la dette coûte à un pays&nbsp;? Justifiez.
 
 <details class="repli fiche__corrige"><summary>Corrigé pour l'enseignant</summary>
 
-1. Une dette de départ de {{< monde-val "fr_stock" >}} du PIB&nbsp;; {{< monde-val "fr_charge" >}} de ses recettes consacrés aux intérêts.
+1. Une dette de départ de {{< monde-val "fr_stock" >}} du PIB&nbsp;; {{< monde-val "fr_charge" >}} de ses recettes consacrés aux intérêts. Attention à la convention&nbsp;: l'encours de fin {{< monde-val "annee_1" >}} est rapporté au PIB de {{< monde-val "annee" >}}, l'année où la charge est payée&nbsp;; le ratio officiel publié par Eurostat pour fin {{< monde-val "annee_1" >}} le rapporte au PIB de {{< monde-val "annee_1" >}}, d'où un chiffre différent.
 2. {{< monde-val "j_haut_charge" >}} pour {{< monde-val "j_haut_le" >}}, {{< monde-val "j_bas_charge" >}} pour {{< monde-val "j_bas_le" >}}&nbsp;: à dette voisine, une charge de 1 à {{< monde-val "j_rapport" >}}.
 3. La charge rapporte les intérêts aux recettes&nbsp;: elle dépend du **prix** de la dette (le taux payé sur le stock) et du **niveau des recettes**. {{< monde-val "j_haut_le_maj" >}} cumule un prix plus élevé et des recettes plus faibles.
-4. Non&nbsp;: le stock ne fixe ni le prix de la dette ni les recettes disponibles pour la servir. C'est une limite d'un indicateur, pas un jugement sur la règle.
+4. Non&nbsp;: le stock ne fixe ni le prix de la dette ni les recettes disponibles pour la servir. C'est une limite d'un indicateur, pas un jugement sur la règle. Le cadre budgétaire européen a été réformé en 2024&nbsp;: la valeur de référence de 60&nbsp;% demeure, mais la surveillance ne se résume pas à ce seuil.
 
-**Approfondissement, hors objectifs du programme.** En {{< dyn-val "annee_fin" >}}, le taux implicite de la dette française ({{< dyn-val "taux_implicite_dernier" >}}&nbsp;%) et la croissance nominale ({{< dyn-val "croissance_derniere" >}}&nbsp;%) étaient presque égaux&nbsp;: à solde primaire nul, le ratio serait resté presque stable. Si le taux dépasse durablement la croissance, le ratio monte même sans déficit primaire&nbsp;: c'est la mécanique de la soutenabilité, détaillée dans [Pourquoi la dette publique augmente-t-elle&nbsp;?](/pourquoi-la-dette-publique-augmente/#identite)
+**Approfondissement, hors objectifs du programme.** En {{< dyn-val "annee_fin" >}}, le taux implicite de la dette française ({{< dyn-val "taux_implicite_dernier" >}}&nbsp;%) et la croissance nominale ({{< dyn-val "croissance_derniere" >}}&nbsp;%) étaient presque égaux&nbsp;: à solde primaire nul et hors ajustements flux-stock, le ratio serait resté presque stable. À ajustements flux-stock nuls, si le taux implicite dépasse durablement la croissance nominale, cet effet pousse le ratio vers le haut même avec un solde primaire équilibré&nbsp;: c'est la mécanique de la soutenabilité, détaillée dans [Pourquoi la dette publique augmente-t-elle&nbsp;?](/pourquoi-la-dette-publique-augmente/#identite)
 
 </details>
 
@@ -101,14 +108,15 @@ d'accompagnement du chapitre pose la question de la soutenabilité de la dette e
 
 </section>
 
-### Prolongement — Qui verse, qui reçoit&nbsp;? {#prolongement-redistribution}
-
 <section class="fiche" id="fiche-prolongement">
 
-<p class="fiche__actions"><button type="button" class="how-to-cite__btn how-to-cite__btn--secondary" data-imprimer-fiche="fiche-prolongement">Imprimer la fiche élève</button></p>
+### Terminale, justice sociale — Qui verse, qui reçoit&nbsp;? {#prolongement-redistribution}
 
-**Usage.** Un prolongement documentaire sur la fiscalité et la redistribution, à rattacher au chapitre de Terminale
-sur la justice sociale selon la progression de la classe.
+<p class="fiche__actions"><button type="button" class="how-to-cite__btn how-to-cite__btn--secondary" data-imprimer-fiche="fiche-prolongement">Imprimer la fiche élève — sans corrigé</button></p>
+
+**Lien au programme.** Chapitre de Terminale sur la justice sociale&nbsp;: l'activité porte sur les instruments de
+l'action publique — prélèvements, prestations et services collectifs. Elle n'aborde pas à elle seule les différentes
+conceptions de la justice sociale, ni les débats sur leur efficacité et leur légitimité.
 
 **Durée**&nbsp;: 20&nbsp;minutes. **Support**&nbsp;: la figure ci-dessous, tirée de [Qui paie vraiment la dette
 publique&nbsp;?](/qui-paie-la-dette-publique/)
@@ -133,13 +141,6 @@ publique&nbsp;?](/qui-paie-la-dette-publique/)
 
 </section>
 
-### Exemplaire de consultation {#exemplaire}
-
-Les enseignants de SES qui souhaitent prolonger ces activités peuvent disposer, dans la limite des exemplaires
-disponibles, d'un exemplaire numérique de consultation de *Dette publique&nbsp;: qui paie vraiment&nbsp;?* Il est
-proposé sans contrepartie et sous réserve des règles applicables dans votre établissement.
-[Demander un exemplaire →](/ressources-offertes/dette-publique-enseignants/)
-
 ### Méthode et sources {#methode}
 
 Toutes les figures viennent des quatre pages du dossier, qui en donnent la méthode, les limites et les sources&nbsp;:
@@ -147,5 +148,16 @@ Toutes les figures viennent des quatre pages du dossier, qui en donnent la méth
 · [Qui paie](/qui-paie-la-dette-publique/) · [Et ailleurs](/dette-publique-comparaison-internationale/). Les extraits
 du programme viennent des ressources d'accompagnement publiées par Éduscol pour la Première (juin 2019) et la
 Terminale (août 2020).
+
+<div class="exemplaire">
+
+### Exemplaire de consultation {#exemplaire}
+
+Les enseignants de SES qui souhaitent prolonger ces activités peuvent disposer, dans la limite des exemplaires
+disponibles, d'un exemplaire numérique de consultation de *Dette publique&nbsp;: qui paie vraiment&nbsp;?* Il est
+proposé sans contrepartie et sous réserve des règles applicables dans votre établissement.
+[Demander un exemplaire →](/ressources-offertes/dette-publique-enseignants/)
+
+</div>
 
 <script src="/js/fiche-imprimer.js" defer></script>
