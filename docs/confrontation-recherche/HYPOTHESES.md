@@ -1,0 +1,42 @@
+# Hypothèses testées — dossier dette, chantier « Confrontation à la recherche »
+
+Écrit le 30/09/2026 **avant** toute lecture de référence, pour que la cible soit fixée d'avance. Règle de l'auteur :
+la recherche **teste nos interprétations**, elle ne cautionne pas nos mesures (arbitrage `PRO-20260930-103341`,
+dépôt `D:\PRO`). Une mesure de la page (un chiffre, un R²) ne se « valide » pas par un article : elle se valide par
+reproduction. Seules les **lectures** de ces mesures sont listées ici.
+
+Périmètre : les trois pages nommées par la commande de l'auteur (30/09). Le volet « Pourquoi la dette publique
+augmente-t-elle ? » n'en fait pas partie — **exclusion déclarée** : la commande du handoff le citait, celle de
+l'auteur ne le cite pas ; il reste à traiter.
+
+## Page « Combien coûte la dette publique ? » (`content/cout-de-la-dette-publique/_index.md`)
+
+| Id | Hypothèse | Texte exact de la page |
+|---|---|---|
+| C1 | Le retard de transmission : le coût moyen du stock suit les taux de marché avec retard, par le refinancement. | « Sa transmission est **retardée** : la charge d'une année rémunère un stock émis à des dates différentes — le coût moyen peut donc continuer de monter alors même que les taux de marché se stabilisent » |
+| C2 | Conséquence : stabiliser le ratio ne stabilise pas la facture à court terme. | « **stabiliser le ratio de dette ne garantirait pas, à court terme, la stabilisation de la facture** » |
+| C3 | L'écart taux-croissance gouverne la dynamique du ratio ; aucun seuil ne tranche. | « Tant que la croissance nominale dépasse le coût moyen du stock, le ratio baisse **sans le moindre effort budgétaire** ; quand l'écart s'inverse, il monte tout seul. » — « Ce chiffre seul ne tranche pas, et aucun seuil ne le fait à sa place. » |
+| C4 | Pas d'éviction observée des budgets de santé et d'enseignement ; mais la charge d'intérêts réduit la marge. | « la dette **n'a pas fait baisser** ces budgets » — « ces séries ne permettent **ni d'attribuer leur trajectoire à la dette, ni d'exclure qu'elles auraient été plus élevées** » — « à recettes et besoin de financement donnés, la charge d'intérêts **pince la marge qui permettrait de le combler** » |
+| C5 | L'effet Baumol comme explication plausible, non démontrée, de la tension ressentie dans les services. | « L'explication la plus courante — **plausible, mais que les séries de cette page ne démontrent pas** — […] ses coûts suivent les salaires, pas les gains de productivité des machines (l'effet Baumol, classique en économie des services — son ampleur varie selon les secteurs) » |
+| C6 | La rupture de 2022. | « Depuis 2022 — rupture de trajectoire où convergent inflation, titres indexés et normalisation monétaire » |
+
+## Page « Qui paie vraiment la dette publique ? » (`content/qui-paie-la-dette-publique/_index.md`)
+
+| Id | Hypothèse | Texte exact de la page |
+|---|---|---|
+| Q1 | La répartition de l'effort dépend de l'instrument d'ajustement. | « un même effort pèse surtout sur les plus modestes s'il passe par l'enseignement, surtout sur les plus aisés s'il passe par l'impôt » — « C'est un profil comptable et non une prévision : ni comportement ni effet en retour n'y entrent » |
+| Q2 | Seule l'inflation non anticipée transfère, et vers les détenteurs de créances nominales. | « C'est l'écart entre l'inflation réalisée et celle-là qui réduit la valeur réelle des créances nominales déjà émises, et reporte une partie de la charge sur leurs détenteurs et sur les revenus mal indexés. » |
+| Q3 | Les générations futures : pas de fardeau mécanique ; le transfert net dépend de l'usage. | « La dette publique est-elle un fardeau pour les générations futures ? — Pas mécaniquement. […] Le transfert net dépend de l'usage » — « dans la même succession passent la charge et la créance » |
+| Q4 | Les groupes moins mobiles supporteraient davantage l'ajustement — **hypothèse à tester, non établie**. | « quand l'ajustement suit la ligne de moindre résistance, il **peut** peser davantage sur ceux qui ne peuvent pas partir » |
+| Q5 | Les investissements à bénéfices différés sont reportés sous contrainte budgétaire. | « Un budget contraint par le service de la dette **peut inciter à reporter** des dépenses dont les bénéfices sont lointains » — « Le mécanisme est plausible ; il reste à l'établir projet par projet » |
+| Q6 | Détenir n'est pas payer. | « **Détenir n'est pas payer.** […] La répartition des porteurs renseigne sur la destination des intérêts, jamais sur leur origine » — énoncé définitionnel, non testable par la littérature : **sans objet**. |
+
+## Page « Dette publique : pourquoi 100 % du PIB ne pèse pas partout de la même façon » (`content/dette-publique-comparaison-internationale/_index.md`)
+
+| Id | Hypothèse | Texte exact de la page |
+|---|---|---|
+| I1 | Le prix de la dette ne découle pas de son niveau (en coupe, sur une année). | « sur une année et entre pays, le niveau de la dette ne permet pas de prédire son prix, ce qui ne veut pas dire qu'il n'a jamais d'effet sur lui » — « ces données montrent que le prix d'une dette publique ne découle pas de son niveau » |
+| I2 | L'euro supprime le risque de change, pas le risque de défaut ; la détente de 2012 suit la banque centrale. | « **L'euro a supprimé le risque de change entre ses membres ; il ne leur a pas garanti le taux allemand.** » — « ceux d'États qui s'endettaient dans une monnaie dont ils ne maîtrisaient plus l'émission » — « la détente suit une décision de la banque centrale, qui peut changer, et non l'appartenance à l'euro » |
+| I3 | La convergence des taux avant 1999 n'est pas propre à l'euro. | « la convergence n'est pas propre à l'euro » — « La perspective d'entrer dans l'euro a pu peser pour les futurs membres, mais ces chiffres ne permettent pas d'en isoler la part. » |
+| I4 | Hors de l'euro, le prix est associé à l'inflation passée. | « **Hors de la zone euro, le taux implicite est étroitement associé à l'inflation récente** » — « Ces coefficients ne mesurent pas des effets causaux » |
+| I5 | Le stock rend compte de la charge à l'intérieur de chaque groupe monétaire. | « **À l'intérieur de la zone euro, le stock rend compte de l'essentiel de la charge** » — mesure de la page (R²) : **sans objet** pour la littérature, se valide par reproduction. |

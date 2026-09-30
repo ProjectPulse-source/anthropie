@@ -12,3 +12,8 @@ canonicalDefinition = "L'anthropie est l'hypothèse selon laquelle les systèmes
 # « Nouveauté » s'il est dans sa fenêtre de parution, et rien sinon.
 socialProofMinReviews = 10
 noveltyWindowMonths = 6
+
+# Verrou des blocs « Confrontation a la recherche » (shortcode confrontation-recherche.html) :
+# false tant que la contre-expertise de leur texte n'est pas arbitree. Condition de mort : arbitrage
+# execute -> true, puis retrait de ce parametre et du `if` du shortcode dans le meme commit.
+confrontationRecherchePubliee = false
