@@ -14,15 +14,18 @@
 {{- $verifie := .Get "verifie" -}}
 {{- if not $verifie -}}{{ errorf "confrontation-recherche : date de vérification absente (%s)" .Page.RelPermalink }}{{- end -}}
 {{- $publie := .Get "publie" -}}
+{{- /* resume : ce que la littérature fait à la lecture de la page, en une ligne VISIBLE sans déplier
+       (demande de l'auteur, 30/09 : un lecteur en diagonale ne doit pas manquer le bloc). */ -}}
+{{- $resume := .Get "resume" | default "" -}}
 {{- if not (in (slice "oui" "non") $publie) -}}{{ errorf "confrontation-recherche : publie=\"oui\" ou \"non\" attendu (%s)" .Page.RelPermalink }}{{- end -}}
 {{- if eq $publie "oui" -}}
 <details class="repli confrontation" id="confrontation-recherche">
 {{- if eq .Page.Lang "en" }}
-<summary>Testing against research: what the literature does to this reading</summary>
+<summary>Testing against research{{ with $resume }}<span class="confrontation__resume">: {{ . | safeHTML }}</span>{{ else }}: what the literature does to this reading{{ end }}</summary>
 {{ .Inner | .Page.RenderString }}
 <p class="confrontation__date">Literature review checked on {{ (time $verifie).Format "2 January 2006" }}: every reference cited was read in full on that date, in the version indicated.</p>
 {{- else }}
-<summary>Confrontation à la recherche&nbsp;: ce que la littérature fait à cette lecture</summary>
+<summary>Confrontation à la recherche{{ with $resume }}<span class="confrontation__resume">&nbsp;: {{ . | safeHTML }}</span>{{ else }}&nbsp;: ce que la littérature fait à cette lecture{{ end }}</summary>
 {{ .Inner | .Page.RenderString }}
 <p class="confrontation__date">Revue de littérature vérifiée le {{ time.Format "2 January 2006" $verifie }}&nbsp;: chaque référence citée a été lue en entier à cette date, dans la version indiquée.</p>
 {{- end }}

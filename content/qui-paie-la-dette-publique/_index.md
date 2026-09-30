@@ -75,7 +75,7 @@ L'exercice qui suit prend {{< qp-val "exp_effort" >}}&nbsp;milliards d'euros et 
 
 Le second panneau porte le résultat le moins attendu. Pour les 10&nbsp;% les plus aisés, la décision la plus lourde pèse {{< qp-val "exp_ecart_d10" >}}&nbsp;fois la plus légère, et au moins autant pour les 10&nbsp;% les plus modestes&nbsp;: aux deux extrémités de l'échelle, le choix de l'instrument décide presque tout. Au milieu, ce rapport tombe à {{< qp-val "exp_ecart_creux" >}}. **C'est en {{< qp-val "exp_creux_zone" >}} que le levier retenu différencie le moins les ménages.** Cela ne veut pas dire que ces dixièmes supporteraient moins d'effort&nbsp;: seulement que, dans cet exercice, changer de levier y modifie moins l'exposition qu'aux extrémités de l'échelle. Ce creux ne tient ni à l'année — il se situe en {{< qp-val "exp_creux_millesimes" >}} sur les quatre millésimes {{< qp-val "exp_millesimes" >}} publiés par l'Insee — ni à la manière de mesurer l'écart&nbsp;: le coefficient de variation et l'étendue rapportée à la moyenne le placent dans la même zone.
 
-<details class="repli"><summary>Les trois limites de cet exercice</summary>
+<details class="repli"><summary>Trois limites&nbsp;: un service public valorisé n'est pas un revenu, les décisions sont proportionnelles par construction, un autre dénominateur déplacerait les croisements sans effacer les contrastes</summary>
 
 Trois limites encadrent cette lecture. Un service public valorisé n'est pas un revenu&nbsp;: une dépense d'enseignement imputée à un ménage ne lui est pas versée, et sa réduction ne lui coûterait pas exactement cette somme. Les trois décisions sont proportionnelles par construction&nbsp;; une mesure ciblée — sur certaines pensions, sur certains impôts — dessinerait d'autres courbes, et la figure ne dit donc rien de «&nbsp;l'impôt&nbsp;» ni de «&nbsp;la dépense publique&nbsp;» en général. Enfin l'effort est rapporté au revenu disponible&nbsp;; un autre dénominateur déplacerait les points de croisement sans faire disparaître ces contrastes.
 
@@ -114,7 +114,7 @@ Les prélèvements vont de {{< qp-val "d1_prel" >}}&nbsp;€ par UC pour les 10&
 
 </div>
 
-<details class="repli"><summary>L'écart financé par endettement, et comment l'Insee le répartit</summary>
+<details class="repli"><summary>Les transferts dépassent les prélèvements de {{< qp-val "solde_mdeur" >}}&nbsp;milliards d'euros&nbsp;: un solde réparti par convention, financé à crédit, qui ne dit pas qui paiera demain</summary>
 
 La même année, les transferts attribués aux ménages ont dépassé les prélèvements&nbsp;: {{< qp-val "solde_uc" >}}&nbsp;€ par UC en moyenne, soit {{< qp-val "solde_mdeur" >}}&nbsp;milliards d'euros, financés par endettement. Ce total porte sur le champ de ces comptes distribués, qui n'est pas celui du déficit public&nbsp;: les deux montants ne se substituent pas l'un à l'autre. Dans cette construction comptable, l'écart élève le niveau de vie élargi des ménages de l'année — un bénéfice présent, financé à crédit. Ce ne sont pas pour autant {{< qp-val "solde_mdeur" >}}&nbsp;milliards de versements identifiables&nbsp;: c'est un solde réparti par convention d'imputation. Pour calculer un niveau de vie «&nbsp;net de l'endettement&nbsp;», l'Insee répartit cet écart par convention — moitié en moindres prélèvements, moitié en transferts supplémentaires&nbsp;; les figures de cette page présentent les transferts courants, avant ce retraitement. Ces comptes décrivent qui contribue et qui reçoit aujourd'hui&nbsp;; ils ne disent pas qui paiera demain la dette qui finance l'écart.
 
@@ -130,19 +130,19 @@ Rapporté aux personnes, le tableau change. {{< qp-val "benef_ensemble" >}}&nbsp
 
 Le rapprochement avec l'exercice du haut de page est direct. Les dixièmes du milieu sont ceux où le solde moyen dit «&nbsp;bénéficiaire net&nbsp;» alors que la majorité de leurs membres versent plus qu'ils ne reçoivent — et ce sont ceux dont l'exposition varie le moins selon le levier. Recevoir plus que l'on ne verse ne protège donc pas d'un ajustement&nbsp;: la position dans la redistribution d'aujourd'hui et l'exposition à la décision de demain sont deux classements distincts, et ils ne se recouvrent pas.
 
-<details class="repli"><summary>Les conventions de ces comptes&nbsp;: une année, des services imputés</summary>
+<details class="repli"><summary>Conventions&nbsp;: le solde d'une année, non d'une vie&nbsp;; des services publics imputés, non mesurés&nbsp;; toute la redistribution, pas l'effet propre de la dette</summary>
 
 Plusieurs conventions encadrent cette lecture. C'est le solde d'une **année**, non d'une vie&nbsp;: les pensions de retraite y sont comptées comme prestations courantes. Les transferts comprennent des services publics — soins, éducation, services collectifs — valorisés en euros et répartis par imputation statistique, non un relevé des services utilisés par chacun&nbsp;; la part de bénéficiaires nets en dépend à la marge. Le revenu «&nbsp;avant transferts&nbsp;» est une étape de calcul, non le revenu qu'aurait chacun dans une économie sans impôts ni services publics. Et ce solde décrit la redistribution dans son ensemble, pas l'effet propre de la dette.
 
 </details>
 
-<details class="repli"><summary>Par âge du ménage&nbsp;: ce que chaque groupe verse et reçoit</summary>
+<details class="repli"><summary>Par âge&nbsp;: les ménages de 65&nbsp;ans ou plus reçoivent {{< qp-val "age_recu_65" >}}&nbsp;€ par unité de consommation, pensions comprises, et versent {{< qp-val "age_prel_65" >}}&nbsp;€ — une photographie annuelle, non un bilan de vie</summary>
 
 {{< figure-svg fichier="qui-paie-age" alt="Barres par groupe d'âge du ménage, en 2023 : les transferts reçus augmentent avec l'âge, modérément jusqu'à 64 ans puis très fortement pour les ménages de 65 ans ou plus ; les prélèvements versés croissent jusqu'aux 50-64 ans, puis chutent pour ce dernier groupe." >}}Insee, comptes nationaux distribués 2023 (figure&nbsp;1e). Groupes d'âge moyen des adultes du ménage.{{< /figure-svg >}}
 
 {{< fig-actions id="age" >}}
 
-**Par âge.** En {{< qp-val "cd_annee" >}}, selon ces conventions, les ménages dont l'âge moyen des adultes atteint 65&nbsp;ans ou plus reçoivent {{< qp-val "age_recu_65" >}}&nbsp;€ par unité de consommation de transferts — dont {{< qp-val "age_esp_65" >}}&nbsp;€ de prestations en espèces, pensions comprises — et versent {{< qp-val "age_prel_65" >}}&nbsp;€ de prélèvements, contre {{< qp-val "age_prel_5064" >}}&nbsp;€ pour les ménages de 50 à 64&nbsp;ans. <details class="repli"><summary>Trois limites de la lecture par âge</summary>
+**Par âge.** En {{< qp-val "cd_annee" >}}, selon ces conventions, les ménages dont l'âge moyen des adultes atteint 65&nbsp;ans ou plus reçoivent {{< qp-val "age_recu_65" >}}&nbsp;€ par unité de consommation de transferts — dont {{< qp-val "age_esp_65" >}}&nbsp;€ de prestations en espèces, pensions comprises — et versent {{< qp-val "age_prel_65" >}}&nbsp;€ de prélèvements, contre {{< qp-val "age_prel_5064" >}}&nbsp;€ pour les ménages de 50 à 64&nbsp;ans. <details class="repli"><summary>Trois limites&nbsp;: des pensions acquises comptées comme prestations, un âge du ménage qui n'est pas un statut de retraite, une photographie qui ne désigne aucun payeur de demain</summary>
 
 Trois limites l'encadrent. Les pensions correspondent notamment à des droits acquis au cours de la carrière&nbsp;; elles sont ici comptées comme prestations courantes, et le tableau d'une vie entière ne ressemblerait pas à celui d'une année. L'âge du ménage n'est pas le statut de retraite de chacun de ses membres, et un montant élevé de soins imputés traduit aussi des besoins plus élevés, non un avantage de bien-être. Enfin, cette photographie actuelle n'est pas une mesure du bilan des générations futures&nbsp;: elle ne désigne aucun payeur de demain.
 
@@ -169,7 +169,7 @@ La liste n'est pas exhaustive&nbsp;: la croissance, les revenus ou cessions d'ac
 
 La dette convertit une dépense présente en engagements futurs. Ceux qui viendront après héritent donc de ces engagements sans avoir pris part à la décision qui les a créés. Mais ils héritent aussi de ce que cette dépense a financé — infrastructures, formation, recherche, patrimoine public — et d'une partie des titres eux-mêmes, que leurs parents détiennent directement ou par l'assurance-vie&nbsp;: dans la même succession passent la charge et la créance. Cela ne les neutralise pas nécessairement&nbsp;: certains modèles identifient aussi un canal d'éviction du capital productif, lorsque les titres publics prennent sa place dans les patrimoines — un canal que cette page ne mesure pas en France. Le transfert net dépend donc de l'usage, mais pas de lui seul&nbsp;: l'absence de bénéfice durable entre dans le bilan, et le coût net dépend aussi du financement, des créances transmises et de l'alternative retenue&nbsp;; un investissement dont ils profiteront peut leur transmettre davantage qu'il ne coûte.
 
-<details class="repli"><summary>Dette nette, patrimoine public et objection «&nbsp;on se la doit à nous-mêmes&nbsp;»</summary>
+<details class="repli"><summary>La dette nette ne tranche pas non plus&nbsp;: elle ne déduit ni les routes ni le capital humain&nbsp;; l'objection «&nbsp;on se la doit à nous-mêmes&nbsp;» est traitée à part</summary>
 
 L'encours ne suffit pas à trancher, et la dette nette ne le fait pas davantage&nbsp;: celle que publie l'INSEE ne déduit que certains actifs financiers — trésorerie, prêts, titres —, pas les routes, le capital humain ni l'environnement. Ce qui vaut quel que soit l'usage, c'est que la décision se prend sans ceux qui en porteront une part. L'objection «&nbsp;on se la doit à nous-mêmes&nbsp;» et sa réponse sont développées sur la page [La dette publique est-elle un fardeau pour les générations futures&nbsp;?](/dette-publique-generations-futures/)
 
@@ -179,7 +179,7 @@ L'encours ne suffit pas à trancher, et la dette nette ne le fait pas davantage&
 
 Tous les contribuables ne sont pas égaux devant l'ajustement. Les ménages et les entreprises qui peuvent déplacer leurs revenus, leur patrimoine ou leur activité échappent plus facilement à un prélèvement que les salariés, les retraités ou les usagers qui dépendent d'un service public local. D'où l'hypothèse&nbsp;: quand l'ajustement suit la ligne de moindre résistance, il **peut** peser davantage sur ceux qui ne peuvent pas partir. Pour être testable, elle doit fixer ses mesures avant d'observer l'ajustement&nbsp;: à ajustement donné et situations initiales comparables, une moindre capacité d'évitement devrait aller avec un effort plus élevé. Et la capacité d'évitement n'est pas une variable unique&nbsp;: mobilité géographique, mobilité de la base imposable et capacité à remplacer un service public sont trois propriétés différentes.
 
-<details class="repli"><summary>Comment tester cette hypothèse</summary>
+<details class="repli"><summary>Pour la tester&nbsp;: des groupes définis d'avance, un ajustement précis, une mesure de l'effort fixée, et les cas qui l'affaibliraient nommés avant l'observation</summary>
 
 Pour la tester, il faut définir ces groupes indépendamment du résultat, préciser l'ajustement étudié — telle réforme fiscale, tel gel de prestations — et choisir une mesure de l'effort. Elle serait affaiblie par un ajustement portant surtout sur d'autres groupes, ou par des compensations accordées aux perdants identifiés&nbsp;; ces cas ne se relisent pas après coup comme des confirmations. Le canal territorial — l'État qui reporte une part de sa contrainte sur les collectivités — est examiné sur la page [Dette publique&nbsp;: pourquoi les collectivités locales sont-elles la variable d'ajustement&nbsp;?](/dette-publique-collectivites-locales/)
 
@@ -189,7 +189,7 @@ Pour la tester, il faut définir ces groupes indépendamment du résultat, préc
 
 «&nbsp;Qui détient la dette&nbsp;?&nbsp;» est la question la plus posée, et elle ne dit pas qui paie. Le créancier a avancé les fonds&nbsp;: les intérêts rémunèrent cette avance, le temps et le risque. Son **rendement réel** tient compte des intérêts, de la variation de valeur du titre et de l'inflation&nbsp;; son **avantage par rapport à un autre placement** se mesure séparément, à horizon et risque comparables. Les deux varient selon la date d'achat et le type de titre. La détention renseigne sur la destination des intérêts, pas sur ceux qui les financent.
 
-<details class="repli"><summary>Ce que la répartition des porteurs mesure, et ce qu'elle ne mesure pas</summary>
+<details class="repli"><summary>Porteurs classés par résidence, non par nationalité, et photographiés en stock&nbsp;: la répartition ne mesure pas la part des intérêts versés hors de France</summary>
 
 Pour les titres négociables de l'État, la répartition des porteurs est publiée par la Banque de France, via l'Agence France Trésor, en valeur de marché. Elle classe les porteurs par **résidence**, non par nationalité&nbsp;: un «&nbsp;non-résident&nbsp;» peut être un fonds étranger qui gère l'épargne de ménages français, et un ménage français peut détenir des titres de l'État sans le savoir, par son assurance-vie. Une part du stock détenue hors de France ne mesure pas non plus la part des intérêts versés hors de France&nbsp;: une photographie de fin de période ne donne pas un flux annuel.
 
@@ -197,7 +197,7 @@ Pour les titres négociables de l'État, la répartition des porteurs est publi�
 
 ## Les investissements à bénéfices différés — un mécanisme à établir cas par cas
 
-Un budget contraint par le service de la dette **peut inciter à reporter** des dépenses dont les bénéfices sont lointains, notamment lorsque leur report produit peu de coût politique ou budgétaire immédiat&nbsp;: recherche, entretien du patrimoine, formation, transition écologique. <details class="repli"><summary>Pourquoi ce mécanisme s'établit projet par projet</summary>
+Un budget contraint par le service de la dette **peut inciter à reporter** des dépenses dont les bénéfices sont lointains, notamment lorsque leur report produit peu de coût politique ou budgétaire immédiat&nbsp;: recherche, entretien du patrimoine, formation, transition écologique. <details class="repli"><summary>Plausible, non établi&nbsp;: aucun agrégat ne mesure un investissement empêché par les intérêts&nbsp;; il faut remonter décision par décision</summary>
 
 C'est une classe, et non un cas particulier — l'exemple écologique n'a rien de singulier, il est seulement celui où l'écart entre la dépense et son bénéfice est le plus long. Le mécanisme est plausible&nbsp;; il reste à l'établir projet par projet&nbsp;: quelle dépense a été reportée, par quelle décision, pour quel motif budgétaire. Les agrégats ne suffisent pas&nbsp;: l'investissement public total n'est pas l'investissement climatique, et la fonction «&nbsp;protection de l'environnement&nbsp;» des comptes publics ne couvre pas toute la transition. Aucun d'eux ne mesure un investissement empêché par les intérêts. Là où le mécanisme est établi, il double le transfert&nbsp;: aux engagements financiers transmis s'ajoute le bénéfice qui n'a pas été construit — un patrimoine non entretenu, une transition retardée —, et ce second transfert-là n'apparaît dans aucun encours.
 
@@ -216,7 +216,7 @@ Aucune statistique ne dit, à elle seule, qui supporte au bout du compte la char
 
 Ce qui peut s'établir, c'est l'effet d'une décision déterminée — une réforme, un gel, un report — sur des groupes définis d'avance. C'est à ce niveau que la question «&nbsp;qui paie&nbsp;?&nbsp;» reçoit des réponses vérifiables.
 
-{{< confrontation-recherche verifie="2026-09-30" publie="oui" >}}
+{{< confrontation-recherche verifie="2026-09-30" publie="oui" resume="le sens du contraste dépense / impôt est retrouvé sur des consolidations réelles&nbsp;; l'argument de la créance héritée est mis en danger par l'éviction du capital" >}}
 **Mesuré ici.** Un profil comptable&nbsp;: un même effort de {{< qp-val "exp_effort" >}}&nbsp;milliards d'euros réparti au prorata de ce que chaque dixième verse ou reçoit déjà, d'après l'Insee, sans comportement ni effet en retour. La littérature éprouve les lectures qu'on en tire, pas ce profil.
 
 **Cohérent avec.** Le sens du contraste entre dépense et impôt&nbsp;: sur des consolidations effectivement observées dans 18&nbsp;pays industrialisés, dont la France, de 1978 à 2009, les inégalités de revenu net augmentent&nbsp;; les coupes de dépenses y paraissent défavorables, les hausses d'impôt égalisatrices, sans que ce dernier effet soit significatif dans la spécification de base (Agnello et Sousa). Le report des investissements&nbsp;: dans l'échantillon de Breunig et Busemeyer, une charge d'intérêts plus lourde va de pair avec un recul de la part de l'investissement public au profit des retraites, reporter un investissement coûtant moins, politiquement, que réduire un droit. Le rôle de l'usage&nbsp;: dans le modèle de Diamond, emprunter pour acquérir du capital physique fait de l'État un simple intermédiaire entre épargnants et entrepreneurs, sans effet.

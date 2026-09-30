@@ -80,7 +80,7 @@ The exercise that follows takes {{< qp-val "exp_effort" >}} billion euros and di
 
 The second panel carries the least expected result. For the richest 10%, the heaviest decision weighs {{< qp-val "exp_ecart_d10" >}} times the lightest, and at least as much for the poorest 10%: at both ends of the scale, the choice of instrument decides almost everything. In the middle, that ratio falls to {{< qp-val "exp_ecart_creux" >}}. **It is in {{< qp-val "exp_creux_zone" >}} that the lever chosen makes the least difference between households.** This does not mean that these deciles would bear less of the adjustment: only that, in this exercise, changing the lever alters their exposure less than at the ends of the scale. This trough depends neither on the year — it lies in {{< qp-val "exp_creux_millesimes" >}} across the four vintages {{< qp-val "exp_millesimes" >}} published by INSEE — nor on how the gap is measured: the coefficient of variation and the range relative to the mean place it in the same zone.
 
-<details class="repli"><summary>The three limits of this exercise</summary>
+<details class="repli"><summary>Three limits: a public service valued in euros is not income, the decisions are proportional by construction, another denominator would move the crossing points without erasing the contrasts</summary>
 
 Three limits frame this reading. A public service valued in euros is not income: education spending imputed to a household is not paid to it, and cutting it would not cost the household exactly that sum. The three decisions are proportional by construction; a targeted measure — on some pensions, on some taxes — would draw other curves, so the figure says nothing about "taxes" or "public spending" in general. Finally, the adjustment is related to disposable income; another denominator would move the crossing points without making these contrasts disappear.
 
@@ -119,7 +119,7 @@ Taxes and contributions range from €{{< qp-val "d1_prel" >}} per CU for the po
 
 </div>
 
-<details class="repli"><summary>The gap financed by borrowing, and how INSEE allocates it</summary>
+<details class="repli"><summary>Transfers exceed taxes and contributions by {{< qp-val "solde_mdeur" >}} billion euros: a balance allocated by convention, financed on credit, which does not say who will pay tomorrow</summary>
 
 That same year, transfers attributed to households exceeded taxes and contributions: €{{< qp-val "solde_uc" >}} per CU on average, or {{< qp-val "solde_mdeur" >}} billion euros, financed by borrowing. This total covers the scope of these distributional accounts, which is not that of the public deficit: the two amounts are not substitutes for each other. In this accounting construction, the gap raises households' extended standard of living for the year — a present benefit, financed on credit. It is not, for all that, {{< qp-val "solde_mdeur" >}} billion euros of identifiable payments: it is a balance allocated by imputation convention. To compute a standard of living "net of borrowing", INSEE allocates this gap by convention — half as lower taxes and contributions, half as additional transfers; the figures on this page show current transfers, before that adjustment. These accounts describe who contributes and who receives today; they do not say who will pay tomorrow the debt that finances the gap.
 
@@ -135,19 +135,19 @@ Measured by people, the picture changes. {{< qp-val "benef_ensemble" >}}% are ne
 
 The link with the exercise at the top of the page is direct. The middle deciles are those where the average balance says "net beneficiary" while most of their members pay more than they receive — and they are the ones whose exposure varies least with the lever. Receiving more than one pays therefore offers no protection from an adjustment: position in today's redistribution and exposure to tomorrow's decision are two distinct rankings, and they do not coincide.
 
-<details class="repli"><summary>The conventions of these accounts: one year, imputed services</summary>
+<details class="repli"><summary>Conventions: the balance of one year, not of a lifetime; public services imputed, not measured; redistribution as a whole, not the specific effect of the debt</summary>
 
 Several conventions frame this reading. It is the balance of one **year**, not of a lifetime: retirement pensions are counted as current benefits. Transfers include public services — healthcare, education, collective services — valued in euros and allocated by statistical imputation, not a record of the services each person used; the share of net beneficiaries depends on this at the margin. Income "before transfers" is a step in the calculation, not the income each person would have in an economy without taxes or public services. And this balance describes redistribution as a whole, not the specific effect of the debt.
 
 </details>
 
-<details class="repli"><summary>By household age: what each group pays and receives</summary>
+<details class="repli"><summary>By age: households aged 65 or over receive €{{< qp-val "age_recu_65" >}} per consumption unit, pensions included, and pay €{{< qp-val "age_prel_65" >}} — a one-year snapshot, not a lifetime balance</summary>
 
 {{< figure-svg fichier="qui-paie-age-en" alt="Bars by household age group, in 2023: transfers received rise with age, moderately up to 64 then very sharply for households aged 65 or over; taxes and contributions paid rise up to the 50-64 group, then drop for the oldest group." >}}INSEE, distributional national accounts 2023 (figure 1e). Groups by average age of the adults in the household.{{< /figure-svg >}}
 
 {{< fig-actions id="age" >}}
 
-**By age.** In {{< qp-val "cd_annee" >}}, under these conventions, households whose adults are on average 65 or over receive €{{< qp-val "age_recu_65" >}} per consumption unit in transfers — of which €{{< qp-val "age_esp_65" >}} in cash benefits, pensions included — and pay €{{< qp-val "age_prel_65" >}} in taxes and contributions, against €{{< qp-val "age_prel_5064" >}} for households aged 50 to 64. <details class="repli"><summary>Three limits of the reading by age</summary>
+**By age.** In {{< qp-val "cd_annee" >}}, under these conventions, households whose adults are on average 65 or over receive €{{< qp-val "age_recu_65" >}} per consumption unit in transfers — of which €{{< qp-val "age_esp_65" >}} in cash benefits, pensions included — and pay €{{< qp-val "age_prel_65" >}} in taxes and contributions, against €{{< qp-val "age_prel_5064" >}} for households aged 50 to 64. <details class="repli"><summary>Three limits: pensions earned over a working life counted as current benefits, a household age that is not each member's retirement status, a snapshot that identifies no payer of tomorrow</summary>
 
 Three limits frame it. Pensions correspond in particular to rights acquired over a working life; here they are counted as current benefits, and a lifetime picture would not look like that of a single year. The household's age is not the retirement status of each of its members, and a high amount of imputed healthcare also reflects greater needs, not a welfare advantage. Finally, this current snapshot is not a measure of the position of future generations: it identifies no payer of tomorrow.
 
@@ -174,7 +174,7 @@ The list is not exhaustive: growth, asset income or sales and financing conditio
 
 Debt converts present spending into future obligations. Those who come later therefore inherit these obligations without having taken part in the decision that created them. But they also inherit what that spending financed — infrastructure, education, research, public assets — and part of the securities themselves, which their parents hold directly or through assurance-vie: the burden and the claim pass through the same estate. The burden and the claim do not necessarily offset each other: some models also identify a channel through which productive capital is crowded out, when public securities take its place in people's wealth — a channel this page does not measure for France. The net transfer therefore depends on the use, but not on the use alone: the absence of any lasting benefit enters the balance sheet, and the net cost also depends on the financing, the claims passed on and the alternative chosen; an investment they will benefit from can pass on more than it costs.
 
-<details class="repli"><summary>Net debt, public assets and the objection "we owe it to ourselves"</summary>
+<details class="repli"><summary>Net debt does not settle it either: it deducts neither roads nor human capital; the objection "we owe it to ourselves" is dealt with on a separate page</summary>
 
 The stock is not enough to settle the matter, and net debt does no better: the measure INSEE publishes deducts only certain financial assets — cash, loans, securities —, not roads, human capital or the environment. Whatever the borrowing finances, one point remains: the decision is taken without those who will bear part of it. The objection "we owe it to ourselves" and its answer are developed on the page [Is public debt a burden on future generations?](/dette-publique-generations-futures/) (in French).
 
@@ -184,7 +184,7 @@ The stock is not enough to settle the matter, and net debt does no better: the m
 
 Not all taxpayers are equal in the face of an adjustment. Households and firms that can move their income, their wealth or their activity escape a levy more easily than employees, pensioners or users who depend on a local public service. Hence the hypothesis: when the adjustment follows the line of least resistance, it **may** weigh more on those who cannot leave. To be testable, it must set its measures before observing the adjustment: for a given adjustment and comparable initial situations, a lower capacity for avoidance should go with a higher effort. And capacity for avoidance is not a single variable: geographical mobility, mobility of the tax base and the ability to replace a public service are three different properties.
 
-<details class="repli"><summary>How to test this hypothesis</summary>
+<details class="repli"><summary>To test it: groups defined independently of the result, a specified adjustment, a chosen measure of effort — and the cases that would weaken it, which cannot be reread afterwards as confirmations</summary>
 
 To test it, these groups must be defined independently of the result, the adjustment studied must be specified — a given tax reform, a given benefit freeze — and a measure of effort chosen. It would be weakened by an adjustment falling mainly on other groups, or by compensation granted to the losers identified; such cases cannot be reread after the fact as confirmations. The territorial channel — the State shifting part of its constraint onto local authorities — is examined on the page [Public debt: why are local authorities the adjustment variable?](/dette-publique-collectivites-locales/) (in French).
 
@@ -194,7 +194,7 @@ To test it, these groups must be defined independently of the result, the adjust
 
 "Who holds the debt?" is the most frequently asked question, and it does not say who pays. The creditor advanced the funds: interest compensates the lender for providing the funds, for time and for risk. Its **real return** takes into account the interest, the change in the security's value and inflation; its **advantage over another investment** is measured separately, at comparable horizon and risk. Both vary with the purchase date and the type of security. Holdings tell us where the interest goes, not who finances it.
 
-<details class="repli"><summary>What the breakdown of holders measures, and what it does not</summary>
+<details class="repli"><summary>Holders classified by residence, not nationality, and captured as a stock: the breakdown does not measure the share of interest paid outside France</summary>
 
 For the State's negotiable securities, the breakdown of holders is published by the Banque de France, via Agence France Trésor, at market value. It classifies holders by **residence**, not nationality: a "non-resident" may be a foreign fund managing the savings of French households, and a French household may hold State securities without knowing it, through its assurance-vie policy. Nor does a share of the stock held outside France measure the share of interest paid outside France: an end-of-period snapshot does not give an annual flow.
 
@@ -202,7 +202,7 @@ For the State's negotiable securities, the breakdown of holders is published by 
 
 ## Investments with deferred benefits — a mechanism to be established case by case
 
-A budget constrained by debt service **may create an incentive to postpone** spending whose benefits accrue only in the longer term, especially when postponing it carries little immediate political or budgetary cost: research, maintenance of public assets, training, the ecological transition. <details class="repli"><summary>Why this mechanism must be established case by case</summary>
+A budget constrained by debt service **may create an incentive to postpone** spending whose benefits accrue only in the longer term, especially when postponing it carries little immediate political or budgetary cost: research, maintenance of public assets, training, the ecological transition. <details class="repli"><summary>Plausible, not established: no aggregate measures an investment prevented by interest payments; it has to be traced project by project</summary>
 
 This is a class, not a special case — the ecological example has nothing singular about it; it is simply the one where the gap between the spending and its benefit is longest. The mechanism is plausible; it remains to be established project by project: which spending was postponed, by which decision, for which budgetary reason. Aggregates are not enough: total public investment is not climate investment, and the "environmental protection" function of the public accounts does not cover the whole transition. None of them measures an investment prevented by interest payments. Where the mechanism is established, it doubles the transfer: to the financial obligations passed on is added the foregone benefit — assets left unmaintained, a delayed transition —, and that second transfer appears in no debt stock.
 
@@ -221,7 +221,7 @@ No statistic says, on its own, who ultimately bears the burden of French debt: t
 
 What can be established is the effect of a specific decision — a reform, a freeze, a postponement — on groups defined in advance. It is at that level that the question "who pays?" receives verifiable answers.
 
-{{< confrontation-recherche verifie="2026-09-30" publie="oui" >}}
+{{< confrontation-recherche verifie="2026-09-30" publie="oui" resume="the direction of the spending/tax contrast is found again in consolidations actually observed; the inherited-claim argument is challenged by the crowding-out of capital" >}}
 **Measured here.** An accounting profile: the same €{{< qp-val "exp_effort" >}} billion adjustment distributed in proportion to what each decile already pays or receives, according to INSEE, with no behaviour or feedback effects. The literature tests the readings drawn from it, not the profile itself.
 
 **Consistent with.** The direction of the contrast between spending and taxes: in fiscal consolidations actually observed in 18 industrialised countries, France included, from 1978 to 2009, net income inequality rises; spending cuts appear unfavourable, tax rises equalising, although the latter effect is not significant in the baseline specification (Agnello and Sousa). The postponement of investment: in Breunig and Busemeyer's sample, a heavier interest burden goes with a decline in the share of public investment in favour of pensions, postponing an investment being politically less costly than cutting an entitlement. The role of use: in Diamond's model, borrowing to acquire physical capital makes the State a mere intermediary between savers and entrepreneurs, with no effect.

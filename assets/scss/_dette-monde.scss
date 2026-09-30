@@ -102,12 +102,32 @@ main .dette-monde-table--monde thead th:last-child { text-align: left !important
   .badge-donnees { margin: 0 0.4rem 0 0; } }
 
 // La preuve reste dans le HTML (moteurs, impression, recherche dans la page) et se déplie à la demande.
+// 30/09 (auteur) : un lecteur en diagonale sautait les replis — petite ligne colorée lue comme une légende.
+// Le titre porte désormais la conclusion du repli ; ici, il se voit comme un élément de contenu : encadré léger,
+// filet bleu (couleur du stock dans la charte), marqueur qui pivote, texte à taille courante.
 .repli {
-  margin: 0.4rem 0 1.6rem;
-  > summary { cursor: pointer; font-family: var(--font-sans); font-size: 0.9rem; color: var(--color-accent);
-              padding: 0.35rem 0; }
-  &[open] > summary { margin-bottom: 0.6rem; }
+  margin: 0.8rem 0 1.6rem;
+  border-left: 3px solid rgba(24, 79, 149, 0.55);
+  background: rgba(24, 79, 149, 0.045);
+  border-radius: 0 6px 6px 0;
+  padding: 0 0.9rem;
+  > summary {
+    cursor: pointer; list-style: none;
+    font-family: var(--font-sans); font-size: 0.95rem; line-height: 1.45; color: var(--color-text, inherit);
+    padding: 0.6rem 0 0.6rem 1.3rem; position: relative;
+    &::-webkit-details-marker { display: none; }
+    &::before {
+      content: "▸"; position: absolute; left: 0; top: 0.6rem;
+      color: #184f95; font-weight: 700; transition: transform 0.15s ease;
+    }
+    &:hover, &:focus-visible { color: #184f95; }
+  }
+  &[open] { padding-bottom: 0.4rem; }
+  &[open] > summary { margin-bottom: 0.4rem; border-bottom: 1px solid rgba(24, 79, 149, 0.15); }
+  &[open] > summary::before { transform: rotate(90deg); }
+  .confrontation__resume { font-weight: 400; }
 }
+.confrontation > summary { font-weight: 600; }
 
 .resultat-phrase {
   margin: 1.4rem 0 1.6rem;

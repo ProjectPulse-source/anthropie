@@ -114,7 +114,7 @@ For the same starting stock, in this accounting identity, two countries can diff
 
 **Outside the euro area, the implicit interest rate is closely associated with recent inflation** (R² = {{< monde-val "r2_prix_inflation_hors" >}}); **within the euro area, much less so** (R² = {{< monde-val "r2_prix_inflation_euro" >}}): the Baltic states experienced high inflation without paying much. Currency membership is not the whole story either: **Sweden, outside the euro, pays {{< monde-val "se_prix" >}}**, like Germany. Over a single year and from one country to another, these data show that the level of a public debt is not enough to predict its average interest cost; they say neither that the euro makes it cheaper, nor the opposite.
 
-<details class="repli"><summary>The regression and its robustness</summary>
+<details class="repli"><summary>Descriptive regression: −{{< monde-val "effet_euro" >}} points for the euro area, +{{< monde-val "effet_inflation" >}} points per point of inflation, same sign and order of magnitude across windows — associations, not causal effects</summary>
 
 In a descriptive regression, average inflation over the previous three years and euro area membership together account for a large part of the observed dispersion (R² = {{< monde-val "r2_prix_euro_inflation" >}}). The coefficient associated with the euro area is −{{< monde-val "effet_euro" >}} points, that associated with one additional point of average inflation +{{< monde-val "effet_inflation" >}} points. These coefficients do not measure causal effects, and the three-year window is a choice: with average inflation over two, four or five years, their sign does not change and their order of magnitude holds (from −{{< monde-val "rob_euro_min" >}} to −{{< monde-val "rob_euro_max" >}} points for the euro area, from +{{< monde-val "rob_infl_min" >}} to +{{< monde-val "rob_infl_max" >}} points per point of inflation, R² from {{< monde-val "rob_r2_min" >}} to {{< monde-val "rob_r2_max" >}}).
 
@@ -126,7 +126,7 @@ In a descriptive regression, average inflation over the previous three years and
 
 No, judging by thirty years of 10-year yields compared with Germany's, with countries that stayed outside the euro as comparators. Before 1999, the Italian spread shrinks from {{< monde-val "ec_it_1995" >}} to {{< monde-val "ec_it_1998" >}} points, but so does Sweden's, from {{< monde-val "ec_se_1995" >}} to {{< monde-val "ec_se_1998" >}}: the convergence is not specific to the euro. In 2012, Greece borrows at {{< monde-val "ec_el_2012" >}} points above Germany and Portugal at {{< monde-val "ec_pt_2012" >}}, more than any country that stayed outside; the easing then follows the ECB's interventions. In {{< monde-val "annee" >}}, Sweden and Denmark borrow more cheaply than Germany, France {{< monde-val "ec_fr_an" >}} points more expensively. **The euro removed exchange-rate risk between its members; it did not guarantee them the German rate.**
 
-<details class="repli"><summary>See the thirty years of data and how to read them</summary>
+<details class="repli"><summary>Thirty years of spreads against Germany: convergence before 1999, outside the euro too; spreads widen sharply for the most vulnerable members in 2012; easing after the ECB's decisions</summary>
 
 This is the 10-year market yield, not the implicit rate on the stock.
 
@@ -172,7 +172,7 @@ Outside the European Union, the data are no longer harmonised. For advanced econ
 
 {{< dette-monde-tableau niveau="avances" repli="See all advanced economies (OECD)" >}}
 
-<details class="repli"><summary>The major emerging economies: China, India, Brazil, South Africa (indicative data)</summary>
+<details class="repli"><summary>Major emerging economies (indicative): India devotes {{< monde-val "ind_charge" >}} of its central government revenue to interest, Brazil {{< monde-val "bra_charge" >}} — average cost and weak revenue cannot be separated without harmonised data</summary>
 
 Only indicative measures exist: debt according to the IMF, and central-government interest payments only according to the World Bank, always taken in the same year. India devotes {{< monde-val "ind_charge" >}} of its central government revenue to interest, Brazil {{< monde-val "bra_charge" >}}, South Africa {{< monde-val "zaf_charge" >}}, for debts of {{< monde-val "ind_stock" >}}, {{< monde-val "bra_stock" >}} and {{< monde-val "zaf_stock" >}} of GDP according to the IMF, in {{< monde-val "ind_charge_annee" >}}, {{< monde-val "bra_charge_annee" >}} and {{< monde-val "zaf_charge_annee" >}}, the latest years published by the World Bank. Part of the gap comes from the average interest cost, another from the relative weakness of revenue: without harmonised data, the two cannot be separated.
 
@@ -196,7 +196,7 @@ Only indicative measures exist: debt according to the IMF, and central-governmen
 - **The holders of the debt.** Central bank, non-residents, domestic savers: their shares change the risk and the cost of a debt, and will be the subject of a separate analysis.
 - **Commitments outside debt**, such as future pensions, enter none of these figures.
 
-{{< confrontation-recherche verifie="2026-09-30" publie="oui" >}}
+{{< confrontation-recherche verifie="2026-09-30" publie="oui" resume="the absence of a cross-sectional link is found elsewhere too; reading it as an absence of effect is contradicted over time and in times of crisis" >}}
 **Measured here.** Over one year and across the {{< monde-val "n_pays" >}} countries of the Union, the absence of a linear relationship between the starting stock and the implicit interest rate; thirty years of 10-year yield spreads against Germany. Calculations from official series that can be independently reproduced: none of the texts read measures the implicit rate in a cross-section.
 
 **Consistent with.** In their cross-sectional charts, Gruber and Kamin find no apparent relationship between debt and long-term rates across 19 OECD countries; in bond issues from 1999 to 2005, the debt ratio no longer explains the yield spreads of euro members (Bernoth, von Hagen and Schuknecht). The page's caveat also holds: estimated on variation within each country, projected debt raises long-term rates by a few basis points per point of GDP (Gruber and Kamin; Laubach, on expected US rates). On the euro, De Grauwe and Ji estimate that in 2010-2011 a large part of the rise in the spreads of peripheral countries is not explained by their fiscal fundamentals, a part that varies by country, Greece being the exception; Saka, Fuertes and Kalotychou, who put this hypothesis to the test, find that the significant contagion coming from Spain before the ECB's announcement of 26 July 2012 disappears afterwards. From 1993 to 1997, the yields of all EU countries except Greece, including those outside the euro, converge towards German and US levels (Bernoth, von Hagen and Schuknecht).

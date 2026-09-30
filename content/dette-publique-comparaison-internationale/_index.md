@@ -114,7 +114,7 @@ La France illustre l'autre versant&nbsp;: avec {{< monde-val "fr_stock" >}} du P
 
 **Hors de la zone euro, le taux implicite est étroitement associé à l'inflation récente** (R² = {{< monde-val "r2_prix_inflation_hors" >}})&nbsp;; **dans la zone euro, beaucoup moins** (R² = {{< monde-val "r2_prix_inflation_euro" >}})&nbsp;: les pays baltes ont connu une forte inflation sans payer cher. L'appartenance monétaire ne suffit pas pour autant&nbsp;: **la Suède, hors de l'euro, paie {{< monde-val "se_prix" >}}**, comme l'Allemagne. Sur une seule année et d'un pays à l'autre, ces données montrent que le niveau d'une dette publique ne suffit pas à prédire son prix&nbsp;; elles ne disent ni que l'euro le rend moins cher, ni l'inverse.
 
-<details class="repli"><summary>La régression et sa robustesse</summary>
+<details class="repli"><summary>Régression descriptive&nbsp;: −{{< monde-val "effet_euro" >}} point pour la zone euro, +{{< monde-val "effet_inflation" >}} point par point d'inflation, stables d'une fenêtre à l'autre — des associations, non des effets causaux</summary>
 
 Dans une régression descriptive, l'inflation moyenne des trois années précédentes et l'appartenance à la zone euro rendent compte ensemble d'une large part de la dispersion observée (R² = {{< monde-val "r2_prix_euro_inflation" >}}). Le coefficient associé à la zone euro est de −{{< monde-val "effet_euro" >}} point, celui associé à un point d'inflation moyenne supplémentaire de +{{< monde-val "effet_inflation" >}} point. Ces coefficients ne mesurent pas des effets causaux, et la fenêtre de trois ans est un choix&nbsp;: avec une inflation moyenne sur deux, quatre ou cinq ans, leur signe ne change pas et leur ordre de grandeur tient (de −{{< monde-val "rob_euro_min" >}} à −{{< monde-val "rob_euro_max" >}} point pour la zone euro, de +{{< monde-val "rob_infl_min" >}} à +{{< monde-val "rob_infl_max" >}} point par point d'inflation, R² de {{< monde-val "rob_r2_min" >}} à {{< monde-val "rob_r2_max" >}}).
 
@@ -126,7 +126,7 @@ Dans une régression descriptive, l'inflation moyenne des trois années précéd
 
 Non, à en juger par trente ans de taux à 10 ans comparés à ceux de l'Allemagne, avec des pays restés hors de l'euro pour témoins. Avant 1999, l'écart italien fond de {{< monde-val "ec_it_1995" >}} à {{< monde-val "ec_it_1998" >}} point, mais celui de la Suède aussi, de {{< monde-val "ec_se_1995" >}} à {{< monde-val "ec_se_1998" >}}&nbsp;: la convergence n'est pas propre à l'euro. En 2012, la Grèce emprunte {{< monde-val "ec_el_2012" >}} points au-dessus de l'Allemagne et le Portugal {{< monde-val "ec_pt_2012" >}}, plus qu'aucun pays resté en dehors&nbsp;; la détente suit ensuite les interventions de la BCE. En {{< monde-val "annee" >}}, la Suède et le Danemark empruntent moins cher que l'Allemagne, la France {{< monde-val "ec_fr_an" >}} point plus cher. **L'euro a supprimé le risque de change entre ses membres&nbsp;; il ne leur a pas garanti le taux allemand.**
 
-<details class="repli"><summary>Voir les trente ans de données et leur lecture</summary>
+<details class="repli"><summary>Trente ans d'écarts avec l'Allemagne&nbsp;: convergence avant 1999, hors de l'euro aussi&nbsp;; décrochage des membres fragiles en 2012&nbsp;; détente après les décisions de la BCE</summary>
 
 Il s'agit du taux de marché à 10 ans, non du taux implicite du stock.
 
@@ -172,7 +172,7 @@ Hors de l'Union européenne, les données ne sont plus harmonisées. Pour les é
 
 {{< dette-monde-tableau niveau="avances" repli="Voir toutes les économies avancées (OCDE)" >}}
 
-<details class="repli"><summary>Les grands émergents&nbsp;: Chine, Inde, Brésil, Afrique du Sud (données indicatives)</summary>
+<details class="repli"><summary>Grands émergents (indicatif)&nbsp;: l'Inde consacre {{< monde-val "ind_charge" >}} des recettes de son administration centrale aux intérêts, le Brésil {{< monde-val "bra_charge" >}} — prix et recettes non séparables sans données harmonisées</summary>
 
 Seules des mesures indicatives existent&nbsp;: la dette selon le FMI, et les intérêts de la seule administration centrale selon la Banque mondiale, toujours pris la même année. L'Inde consacre {{< monde-val "ind_charge" >}} des recettes de son administration centrale aux intérêts, le Brésil {{< monde-val "bra_charge" >}}, l'Afrique du Sud {{< monde-val "zaf_charge" >}}, pour des dettes de {{< monde-val "ind_stock" >}}, {{< monde-val "bra_stock" >}} et {{< monde-val "zaf_stock" >}} du PIB selon le FMI, en {{< monde-val "ind_charge_annee" >}}, {{< monde-val "bra_charge_annee" >}} et {{< monde-val "zaf_charge_annee" >}}, dernières années publiées par la Banque mondiale. Une part de l'écart tient au prix payé, une autre à la faiblesse relative des recettes&nbsp;: sans données harmonisées, on ne peut pas les séparer.
 
@@ -196,7 +196,7 @@ Seules des mesures indicatives existent&nbsp;: la dette selon le FMI, et les int
 - **Les détenteurs de la dette.** Banque centrale, non-résidents, épargnants nationaux&nbsp;: leur part change le risque et le coût d'une dette, et fera l'objet d'une analyse distincte.
 - **Les engagements hors dette**, comme les retraites futures, n'entrent dans aucun de ces chiffres.
 
-{{< confrontation-recherche verifie="2026-09-30" publie="oui" >}}
+{{< confrontation-recherche verifie="2026-09-30" publie="oui" resume="l'absence de lien en coupe est retrouvée ailleurs&nbsp;; la lire comme une absence d'effet est contredit dans le temps et en période de crise" >}}
 **Mesuré ici.** Sur une année et entre les {{< monde-val "n_pays" >}} pays de l'Union, l'absence de relation linéaire entre le stock de départ et le taux implicite&nbsp;; trente ans d'écarts de taux à 10&nbsp;ans avec l'Allemagne. Des calculs sur séries officielles, qui se valident par reproduction&nbsp;: aucun des textes lus ne mesure le taux implicite en coupe.
 
 **Cohérent avec.** Dans leurs graphiques en coupe, Gruber et Kamin ne trouvent aucune relation apparente entre dette et taux longs de 19&nbsp;pays de l'OCDE&nbsp;; dans les émissions de 1999 à 2005, le ratio de dette n'explique plus les écarts de taux des membres de l'euro (Bernoth, von Hagen et Schuknecht). La réserve de la page tient aussi&nbsp;: estimée sur les variations internes à chaque pays, la dette projetée relève les taux longs de quelques points de base par point de PIB (Gruber et Kamin&nbsp;; Laubach, sur les taux anticipés américains). Sur l'euro, De Grauwe et Ji estiment qu'en 2010-2011 une part importante de la hausse des écarts des pays périphériques échappe à leurs fondamentaux budgétaires, part variable selon les pays, la Grèce faisant exception&nbsp;; Saka, Fuertes et Kalotychou, qui mettent cette hypothèse à l'épreuve, trouvent que les contagions significatives venues d'Espagne avant l'annonce de la BCE du 26&nbsp;juillet 2012 disparaissent après. De 1993 à 1997, les rendements de tous les pays de l'Union sauf la Grèce, y compris hors de l'euro, se rapprochent des niveaux allemand et américain (Bernoth, von Hagen et Schuknecht).

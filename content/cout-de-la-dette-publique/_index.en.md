@@ -40,7 +40,7 @@ To the question **"what does the debt cost"**, the most direct figure is not the
 
 It is a **gross** burden, covering general government as a whole — central government, local authorities and social security — and recorded in the year in which the interest accrues. The same convention is kept throughout the page, so that the quantities compared share the same perimeter.
 
-<details class="repli"><summary>Why INSEE shows a slightly different amount</summary>
+<details class="repli"><summary>INSEE shows a close amount: two conventions (interest with or without the FISIM adjustment), not two contradictory measurements</summary>
 
 INSEE's accounts show a slightly different amount for {{< dette-val "interets_annee" >}}, partly because they present interest before the so-called FISIM adjustment (financial intermediation services indirectly measured). Two **closely related conventions**, then, not two contradictory measurements.
 
@@ -76,7 +76,7 @@ INSEE's accounts show a slightly different amount for {{< dette-val "interets_an
   <p class="equation__exacte">The average cost follows market rates only as the debt is refinanced: the transmission lag.</p>
 </div>
 
-<details class="repli"><summary>The chain in detail, for non-specialists</summary>
+<details class="repli"><summary>The chain in four links: the deficit builds the stock, the stock has an average cost, that cost is paid every year and follows market rates with a lag</summary>
 
 The chain has four links. A state continuously refinances maturing securities, so borrowing heavily does not by itself make the **stock** grow — gross issuance is therefore not a measure of how much the debt has increased. What makes it grow is the **deficit** — that is, net government borrowing — plus stock-flow adjustments. That stock carries an **average financing cost**. Each year, that cost gives rise to **interest** payments: an obligation already contracted, rather than a new discretionary spending choice, and one that, for given revenue and borrowing, reduces the room left for other choices; if that room is not reduced, borrowing rises instead. And when market rates climb, that average cost follows with a lag — the annual bill swells, and the question stops being *how much* and becomes **who will pay it**.
 
@@ -115,7 +115,7 @@ This bill pays for a stock: the accumulated **debt**, the figure most often quot
 
 **What the curve shows.** Since {{< dette-val "hist_annee_debut" >}}, French public debt has gone from {{< dette-val "hist_pct_debut" >}}% to {{< dette-val "dette_pct_pib" >}}% of GDP: multiplied by {{< dette-val "hist_multiple" >}} as a share of the wealth produced. The rise is not steady — over the {{< dette-val "hist_annees_total" >}} years of the annual series the ratio fell {{< dette-val "hist_annees_baisse" >}} times, never more than {{< dette-val "hist_plus_longue_baisse" >}} in a row. It proceeds in steps, and two phenomena follow one another: the main jumps **coincide with crises**, then the **persistence of deficits** prevents the step from being undone — **in the observed series, the ratio has never returned to its level of ten years earlier**.
 
-<details class="repli"><summary>The thresholds, from {{< dette-val "hist_annee_debut" >}} to today</summary>
+<details class="repli"><summary>The thresholds since {{< dette-val "hist_annee_debut" >}}: 30, 60, 80 then 100% of GDP, crossed after the oil shocks, the 1993 recession, the financial crisis and the shutdown of the economy</summary>
 
 - **{{< dette-val "hist_annee_debut" >}} — {{< dette-val "hist_pct_debut" >}}%.** Thirty years of strong growth and inflation had diluted the post-war debt: the state repaid in a currency that was losing its value. Debt was not an issue. The lightning deleveraging usually credited to post-Liberation inflation, however, needs revising: by bringing back the black-market prices that the official index ignored, Baubeau and Teixeira show that prices rose far more during the war, and less afterwards, than was believed; relative to national income, the debt therefore swelled less during the conflict, and melted less afterwards ([*Economic History Review*, 2026](https://doi.org/10.1111/ehr.70127)).
 - **{{< dette-val "hist_seuil_30_annee" >}} — 30%.** After the two oil shocks growth slowed while spending did not: the deficit became permanent. Borrowing stopped being occasional and settled in — not through any datable decision, but because the deficit no longer closed between two slowdowns.
@@ -128,7 +128,7 @@ This bill pays for a stock: the accumulated **debt**, the figure most often quot
 
 On INSEE's quarterly series, available since 1995, the **highest ratio** of debt to GDP is reached in {{< dette-val "dette_pic_periode" >}} ({{< dette-val "dette_pic_pct_pib" >}}%).
 
-<details class="repli"><summary>A purely arithmetic order of magnitude: the burden per household</summary>
+<details class="repli"><summary>About €{{< interets-par-foyer >}} of interest per tax household: an arithmetic division, neither a tax each household owes nor the actual distribution of the burden</summary>
 
 **On the scale of a household.** Divided among France's {{< interets-par-foyer "foyers" >}} million tax households ({{< interets-par-foyer "periode" >}}, DGFiP), the {{< dette-val "interets_annee" >}} interest burden comes to about €{{< interets-par-foyer >}} per household. This is a notional, uniform division of the total: it is not a tax owed by each household, and it says nothing about who bears the burden — households, firms and non-residents contribute to public revenue in proportions this calculation ignores. Who bears it is the subject of the [second part of the file](/qui-paie-la-dette-publique/) (in French).
 
@@ -140,9 +140,9 @@ On INSEE's quarterly series, available since 1995, the **highest ratio** of debt
 
 Everything above answers "what does it cost". Whether the debt ratio rises, stabilises or falls is a different question — and the answer is in none of the figures above. It turns on three terms, of which this page measures one and a half.
 
-<details class="repli"><summary>The three terms that move the debt ratio up or down</summary>
+<details class="repli"><summary>Three terms move the ratio: the gap between average cost and growth, the primary balance, stock-flow adjustments — this page measures only part of them</summary>
 
-- **The snowball effect**: inherited debt, multiplied by the gap between its **average cost** and the **nominal growth** of GDP. As long as nominal growth exceeds the average cost of the stock, the ratio falls **with no budgetary effort at all**; once the gap reverses, it rises on its own. This is the term that the turn in the apparent rate moves, and it is why that turn matters beyond the bill it produces.
+- **The snowball effect**: inherited debt, multiplied by the gap between its **average cost** and the **nominal growth** of GDP. As long as nominal growth exceeds the average cost of the stock, this term pulls the ratio down **with no budgetary effort at all**; once the gap reverses, it pushes it up. The ratio itself falls only if this term outweighs the primary deficit. This is the term that the turn in the apparent rate moves, and it is why that turn matters beyond the bill it produces.
 - **The primary balance**: the public accounts **excluding interest**. A primary surplus pushes the ratio down, a primary deficit pushes it up. Two countries can carry the same interest burden and diverge entirely on this term alone.
 - **Stock-flow adjustments**: what moves the debt without passing through the deficit — cash management, asset purchases and sales, valuation effects. They explain why a debt stock can grow faster, or slower, than the year's deficit.
 
@@ -169,7 +169,7 @@ Everything below uses **the same year**, {{< dette-val "equiv_annee" >}} — the
 
 **One misreading has to be ruled out here.** Over the whole period those three budgets grew **faster** than interest paid: falling rates long lightened the bill while public spending rose. The relation reverses after the {{< dette-val "creux_ref_annee" >}} trough: **+{{< dette-val "croiss_interets_depuis_creux_pct" >}}% for interest**, against at most +{{< dette-val "croiss_fonctions_depuis_creux_pct" >}}% for these three functions. Both things are true at once, and this page does not choose between them: debt has **not** cut these budgets, and its cost has become, since the trough, the fastest-growing item.
 
-<details class="repli"><summary>Reading caveat: a type of spending against functions</summary>
+<details class="repli"><summary>Caveat: these comparisons set masses side by side, not causes — no euro of interest is deemed to have been taken from health, education or the courts</summary>
 
 One reading caveat: interest is a **type** of spending, the other three are **functions**. Not the same breakdown — interest sits inside the general public services function — and the comparison does not say that a euro of interest was taken from any of these budgets.
 
@@ -181,7 +181,7 @@ These comparisons are about scale, not causation. They show the size of annual d
 
 The aggregates are unambiguous on one point: **observed health and education spending has not fallen**. In {{< dette-val "equiv_annee" >}}, both are stable or rising, in euros and as a share of GDP. Anyone claiming that debt has "already cut" those budgets is saying more than the data does. But the reverse does not follow either: these series allow **neither an attribution of their path to the debt, nor a conclusion that they would not have been higher** without the interest constraint. A budget that goes from 100 to 105 instead of 110 has not fallen, and has still been crowded out. No counterfactual, no causal claim — in either direction.
 
-<details class="repli"><summary>Why services seem short of resources while their budgets rise</summary>
+<details class="repli"><summary>Rising budgets, services under strain: a plausible explanation (labour costs, Baumol's cost disease, growing needs) that these series do not demonstrate</summary>
 
 Hence an apparent paradox: if budgets rise, why do hospitals, schools and courts seem starved? The most common explanation — **plausible, but not demonstrated by the series on this page** — rests on two standard mechanisms. Public services rely heavily on human labour: their costs track wages, not the productivity gains of machines (Baumol's cost disease, a standard result in the economics of services — its magnitude varies by sector). Demand for some of them may also grow faster than GDP: ageing and costly medical progress in health, litigation in justice. If both mechanisms hold, a spending category that remains stable as a share of GDP **does not guarantee** a stable volume or quality of service. Establishing that it actually fell would require what this page does not measure: sectoral inflation, wages, productivity, demographics, and the volumes actually delivered. **Perceived deterioration and rising aggregate spending are therefore not necessarily contradictory: both can coexist if the gap between needs and resources is widening.**
 
@@ -209,9 +209,9 @@ This page prices the bill. It does not say who settles it — and that is where 
 
 Every figure on this page is **derived automatically from official sources** (INSEE, Eurostat), never copied by hand, and re-queried every week; last retrieval that changed a value: {{< dette-val "releve_le" >}}. Open data: [dette_officielle.json](/dette_officielle.json), CC BY 4.0 licence.
 
-<details class="repli"><summary>Series, conventions and licence in detail</summary>
+<details class="repli"><summary>INSEE and Eurostat series, interest on an accrual basis, implicit rate on the stock at the end of the previous year; compilation under a CC BY 4.0 licence</summary>
 
-Every figure on this page is **derived automatically from official sources**, never copied by hand: quarterly Maastricht debt from INSEE (series 010777616 — stock in billions of euros — and 010777608 — % of GDP); interest paid by general government and total revenue (Eurostat, `gov_10a_main`, D41PAY and TR); expenditure by COFOG function (Eurostat, `gov_10a_exp`); the implicit interest rate computed as a year's interest over the stock at the end of the previous year. The interest burden used here is Eurostat's `D41PAY` series, recorded on an accrual basis — attributed to the year in which it accrues, not the date of payment — and covering the same universe, general government as a whole, as the revenue it is set against; INSEE's general government accounts present interest before the FISIM adjustment and report a slightly different amount for the same year. This page holds one convention throughout, so that the implicit rate, the ratio to revenue and the functional comparisons all rest on the same perimeter. The official series are re-queried every week; the date below is updated only when an official release changes a figure — most recent data update that changed a value: {{< dette-val "releve_le" >}}. The consolidated data is published openly as [dette_officielle.json](/dette_officielle.json) under a [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) licence — free reuse, including commercial use, on the single condition that the source is cited. The raw series belong to INSEE and Eurostat; what is licensed here is the compilation: the assembly of series, the derived quantities (implicit rate, ratios, single-vintage equivalences) and their reconciliation.
+Every figure on this page is **derived automatically from official sources**, never copied by hand: quarterly Maastricht debt from INSEE (series 010777616 — stock in billions of euros — and 010777608 — % of GDP); interest paid by general government and total revenue (Eurostat, `gov_10a_main`, D41PAY and TR); expenditure by COFOG function (Eurostat, `gov_10a_exp`); the implicit interest rate computed as a year's interest over the stock at the end of the previous year. The interest burden used here is Eurostat's `D41PAY` series, recorded on an accrual basis — attributed to the year in which it accrues, not the date of payment — and covering the same universe, general government as a whole, as the revenue it is set against; INSEE's general government accounts present interest before the FISIM adjustment and report a slightly different amount for the same year. This page holds one convention throughout, so that the implicit rate, the ratio to revenue and the functional comparisons all rest on the same perimeter. The official series are re-queried every week; the date below is updated only when an official release changes a figure — most recent data update that changed a value: {{< dette-val "releve_le" >}}. The consolidated data is published openly as [dette_officielle.json](/dette_officielle.json) under a [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) licence — free reuse, including commercial use, on the single condition that the source is cited. The raw series belong to INSEE and Eurostat; what is licensed here is the compilation: the assembly of series, the derived quantities (implicit rate, ratios, single-vintage equivalences) and their reconciliation. The animated counter at the top of the page is a mechanical extrapolation between two quarterly releases, never data.
 
 </details>
 
