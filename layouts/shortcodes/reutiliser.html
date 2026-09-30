@@ -143,7 +143,9 @@
     <div class="reutiliser__bloc" id="reutiliser-donnees">
       <h3 class="reutiliser__bloc-titre">{{ $T.donnees }}</h3>
       <p class="reutiliser__montre">{{ if $isEn }}{{ $T.donnees_p }}{{ else }}{{ partial "fr-typo.html" $T.donnees_p }}{{ end }}</p>
-      <div><a class="how-to-cite__btn" href="{{ printf "%s.json" . | relURL }}" download="{{ . }}.json">{{ $T.json }}</a></div>
+      <div><a class="how-to-cite__btn" href="{{ printf "%s.json" . | relURL }}" download="{{ . }}.json">{{ $T.json }}</a>
+      {{- /* CSV (30/09) : proposé dès que le générateur du jeu en publie un ; aucun bouton vers un fichier absent. */ -}}
+      {{- if fileExists (printf "static/%s.csv" .) }} <a class="how-to-cite__btn how-to-cite__btn--secondary" href="{{ printf "%s.csv" . | relURL }}" download="{{ . }}.csv">CSV</a>{{ end }}</div>
     </div>
     {{- end }}
   </div>

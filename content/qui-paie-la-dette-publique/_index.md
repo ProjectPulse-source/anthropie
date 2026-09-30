@@ -7,7 +7,24 @@ lastmod: 2026-09-29
 donnees: [dette_officielle]
 og_title: "Qui paie vraiment la dette publique ? — ce que montrent les données — S. Lalut"
 og_image: "images/og-qui-paie-dette.jpg"
-og_image_alt: "Carte de partage : « Qui paie vraiment la dette publique ? » — prélèvements et transferts publics par dixième de niveau de vie, 2023, sources Insee et Banque de France via l'AFT."
+og_image_alt: "Carte de partage : « Même effort, d'autres payeurs » — un même effort de 10 milliards d'euros, en % du revenu de chaque dixième de niveau de vie, selon trois décisions : baisse de l'enseignement, hausse des impôts, baisse des pensions (Insee, 2023)."
+dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html) ; jetons résolus au build
+  jeu: "qui_paie_donnees"
+  nom: "Qui paie la dette publique : détention, redistribution et exposition à un même effort"
+  description: "Compilation dérivée des séries officielles : dette publique par administration (INSEE) et détenteurs des titres négociables de l'État (Banque de France via l'Agence France Trésor) ; prélèvements et transferts publics par dixième de niveau de vie et par âge, comptes nationaux distribués 2023 (Insee) ; exposition des dixièmes à un même effort de {qp.exp_effort} milliards d'euros selon trois décisions — impôts, pensions, enseignement —, profil comptable et non simulation."
+  couverture_temporelle: "2020/2026"
+  couverture_spatiale: "France"
+  variables:
+    - {nom: "Prélèvements et transferts publics par dixième de niveau de vie", unite: "euros par unité de consommation"}
+    - {nom: "Part des personnes bénéficiaires nettes", unite: "% des personnes"}
+    - {nom: "Exposition à un même effort selon la décision", unite: "% du revenu disponible du dixième"}
+    - {nom: "Détenteurs des titres négociables de l'État", unite: "% en valeur de marché"}
+  sources:
+    - "https://www.insee.fr/fr/statistiques/8974371"
+    - "https://www.insee.fr/fr/statistiques/8574663"
+    - "https://www.aft.gouv.fr/"
+  mots: ["dette publique", "redistribution", "comptes nationaux distribués", "Insee", "qui paie la dette", "détenteurs de la dette"]
+  fichiers: ["qui_paie_donnees.csv", "qui_paie_donnees.json"]
 faq:
   - question: "La dette publique est-elle vraiment un problème ?"
     answer: "L'argument rassurant est sérieux : quand le taux d'intérêt reste inférieur à la croissance, le ratio de dette peut se stabiliser, à condition que le déficit hors intérêts — le solde primaire — reste sous un seuil qui dépend de l'écart entre ces deux taux et du niveau de la dette. Au-delà, le ratio monte malgré tout. Et même stable, une dette se sert chaque année : son financement et ses ajustements répartissent des coûts et des avantages entre contribuables, usagers, épargnants et générations. La question utile porte alors sur ce qu'elle finance et sur qui supporte les ajustements — elle se traite configuration par configuration, pas par principe."
@@ -48,6 +65,7 @@ Tant qu'aucune décision n'est nommée, la question «&nbsp;qui paie&nbsp;?&nbsp
 L'exercice qui suit prend {{< qp-val "exp_effort" >}}&nbsp;milliards d'euros et les répartit trois fois — par une hausse des impôts sur les revenus et le patrimoine, par une baisse des pensions de retraite, par une baisse des dépenses d'enseignement —, chaque fois au prorata des montants que chaque dixième verse ou reçoit déjà, puis rapporte le résultat à son revenu. Ce n'est pas une prévision&nbsp;: ni comportement ni effet en retour n'y entrent. C'est la structure actuelle des postes, rendue comparable d'une décision à l'autre.
 
 {{< figure-svg fichier="qui-paie-exposition" alt="Deux panneaux. En haut, trois courbes par dixième de niveau de vie : la baisse des dépenses d'enseignement part très haut sur le premier dixième et décroît fortement ; la hausse des impôts fait l'inverse et monte sur le dernier dixième ; les pensions restent presque plates. En bas, des barres montrant le rapport entre la décision la plus lourde et la plus légère pour chaque dixième : élevé aux deux extrémités, minimal au milieu de l'échelle." >}}Insee, comptes nationaux distribués, tableau CND.101 (vingtièmes de niveau de vie, 2020-2023, base 2020)&nbsp;; millésime 2023. Profil d'exposition comptable, non une simulation.{{< /figure-svg >}}
+
 {{< fig-actions id="exposition" >}}
 
 **Le classement s'inverse d'une décision à l'autre.** Une réduction des dépenses d'enseignement représenterait {{< qp-val "exp_ens_d1" >}}&nbsp;% du revenu des 10&nbsp;% les plus modestes et {{< qp-val "exp_ens_d10" >}}&nbsp;% de celui des plus aisés&nbsp;; une hausse des impôts sur les revenus et le patrimoine, l'inverse, jusqu'à {{< qp-val "exp_fisc_d10" >}}&nbsp;% pour le dernier dixième. Ce n'est pas un effet du dénominateur&nbsp;: en masse, la moitié la moins aisée recevrait {{< qp-val "exp_masse_ens" >}}&nbsp;% de la coupe d'enseignement contre {{< qp-val "exp_masse_fisc" >}}&nbsp;% de l'effort fiscal. Une baisse des pensions, elle, se tient dans une bande étroite — de {{< qp-val "exp_pens_min" >}} à {{< qp-val "exp_pens_max" >}}&nbsp;% — et n'épargne aucun groupe en particulier.
@@ -79,11 +97,13 @@ Reste une question que toute réponse doit nommer&nbsp;: «&nbsp;qui paie&nbsp;�
 Trois choses se mesurent&nbsp;: qui emprunte, qui détient les titres, et qui contribue ou reçoit aujourd'hui.
 
 {{< figure-svg fichier="qui-paie-detention" alt="Deux panneaux de barres horizontales, séparés. En haut, la dette publique par administration emprunteuse, en valeur nominale : l'État très largement en tête. En bas, les porteurs des titres négociables de l'État, en valeur de marché : les non-résidents en tête." >}}Deux champs distincts&nbsp;: A en valeur nominale (INSEE), B en valeur de marché (Banque de France, via l'Agence France Trésor). Les valeurs viennent du même registre que la figure de la p.&nbsp;101 du livre.{{< /figure-svg >}}
+
 {{< fig-actions id="detention" >}}
 
 **Qui emprunte, qui détient.** L'État porte l'essentiel de la dette publique&nbsp;: {{< qp-val "etat_mdeur" >}}&nbsp;milliards d'euros sur {{< qp-val "total_mdeur" >}}, soit {{< qp-val "etat_pct" >}}&nbsp;%, {{< qp-val "periode_a" >}}. Ses titres négociables sont détenus, au premier trimestre 2026, à {{< qp-val "nonres_pct" >}}&nbsp;% par des non-résidents&nbsp;; banques, assureurs et fonds résidents en portent ensemble {{< qp-val "bafs_pct" >}}&nbsp;%&nbsp;; les autres porteurs résidents, {{< qp-val "autres_fr_pct" >}}&nbsp;%, comprennent la Banque de France, dont la source ne publie pas la part. Les deux panneaux ne se combinent pas&nbsp;: le premier est en valeur nominale, le second en valeur de marché, et aucun des deux ne dit qui supporte la charge.
 
 {{< figure-svg fichier="qui-paie-redistribution" alt="Barres par dixième de niveau de vie, en 2023. Au-dessus de zéro, les transferts reçus, d'un niveau voisin d'un dixième à l'autre ; sous zéro, les prélèvements, qui croissent fortement du premier au dernier dixième." >}}Insee, comptes nationaux distribués 2023 (*Insee Analyses* n°&nbsp;118, 16&nbsp;avril 2026, figure&nbsp;1c), en euros par unité de consommation.{{< /figure-svg >}}
+
 {{< fig-actions id="redistribution" >}}
 {{< qp-tableau-redistribution >}}
 
@@ -104,6 +124,7 @@ La même année, les transferts attribués aux ménages ont dépassé les prél�
 </details>
 
 {{< figure-svg fichier="qui-paie-solde-net" alt="Deux panneaux. En haut, le solde des transferts publics par dixième de niveau de vie : en moyenne par unité de consommation, négatif pour les sept premiers dixièmes, positif pour les trois derniers, très fortement pour le dernier. En bas, la part de personnes bénéficiaires nettes, décroissante du premier au dernier dixième." >}}Insee, comptes nationaux distribués 2023 (figure&nbsp;2a). Deux unités, deux panneaux&nbsp;: euros par unité de consommation, puis part de personnes.{{< /figure-svg >}}
+
 {{< fig-actions id="solde-net" >}}
 
 **Qui verse net, qui reçoit net.** En moyenne par UC, le solde bascule au dixième {{< qp-val "net_bascule" >}}&nbsp;: dans chacun des {{< qp-val "net_benef_n" >}} premiers dixièmes, les transferts reçus dépassent les prélèvements — de {{< qp-val "net_d1" >}}&nbsp;€ par UC dans le premier —, dans les trois derniers c'est l'inverse, et dans le dernier dixième le prélèvement net moyen atteint {{< qp-val "net_d10" >}}&nbsp;€ par UC.
@@ -121,6 +142,7 @@ Plusieurs conventions encadrent cette lecture. C'est le solde d'une **année**, 
 <details class="repli"><summary>Par âge du ménage&nbsp;: ce que chaque groupe verse et reçoit</summary>
 
 {{< figure-svg fichier="qui-paie-age" alt="Barres par groupe d'âge du ménage, en 2023 : les transferts reçus augmentent avec l'âge, modérément jusqu'à 64 ans puis très fortement pour les ménages de 65 ans ou plus ; les prélèvements versés croissent jusqu'aux 50-64 ans, puis chutent pour ce dernier groupe." >}}Insee, comptes nationaux distribués 2023 (figure&nbsp;1e). Groupes d'âge moyen des adultes du ménage.{{< /figure-svg >}}
+
 {{< fig-actions id="age" >}}
 
 **Par âge.** En {{< qp-val "cd_annee" >}}, selon ces conventions, les ménages dont l'âge moyen des adultes atteint 65&nbsp;ans ou plus reçoivent {{< qp-val "age_recu_65" >}}&nbsp;€ par unité de consommation de transferts — dont {{< qp-val "age_esp_65" >}}&nbsp;€ de prestations en espèces, pensions comprises — et versent {{< qp-val "age_prel_65" >}}&nbsp;€ de prélèvements, contre {{< qp-val "age_prel_5064" >}}&nbsp;€ pour les ménages de 50 à 64&nbsp;ans. <details class="repli"><summary>Trois limites de la lecture par âge</summary>
@@ -143,6 +165,7 @@ Quatre mécanismes peuvent modifier la charge de la dette et sa répartition, et
 La liste n'est pas exhaustive&nbsp;: la croissance, les revenus ou cessions d'actifs et les conditions de financement interviennent aussi — une cession finance un paiement en réduisant un patrimoine, la croissance améliore le ratio sans prélever sur un groupe —, et l'histoire connaît la répression financière, qui contraint les rendements. Le refinancement, lui, renouvelle une échéance aux conditions du moment&nbsp;: il peut alléger ou alourdir la charge, et ne permet pas à lui seul d'identifier qui la supportera. Et en face de ces coûts se trouve ce que la dette a financé&nbsp;: les bénéfices, présents et futurs, de la dépense publique entrent dans le bilan au même titre que la charge.
 
 {{< figure-svg fichier="qui-paie-mecanismes" alt="Schéma sans quantités : la charge de la dette et sa répartition mènent, par des flèches d'égale épaisseur, à quatre mécanismes possibles — prélèvements, dépenses et prestations, inflation, restructuration — ; le refinancement renouvelle l'échéance aux taux du moment ; en regard, ce que la dette a financé." >}}Schéma de mécanismes possibles&nbsp;: aucun poids relatif ni effet causal n'y est mesuré.{{< /figure-svg >}}
+
 {{< fig-actions id="mecanismes" >}}
 
 ## Les générations futures — ce dont elles héritent

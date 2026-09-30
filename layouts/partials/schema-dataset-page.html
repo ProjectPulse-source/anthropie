@@ -1,0 +1,66 @@
+{{- /* JSON-LD Dataset piloté par la page (30/09/2026) — émis pour toute page dont le front matter porte un bloc
+       `dataset:`. Né au troisième jeu de données du site (« Qui paie »), comme le prévoyait le partial propre à la
+       page internationale, qu'il remplace (retiré dans le même geste). Le jeu de la dette française garde son partial
+       (schema-dataset-dette.html) : ses champs sont dérivés d'identifiants INSEE que ce gabarit ne connaît pas.
+
+       dataset:
+         jeu: "qui_paie_donnees"        # data/<jeu>.json : date de mise à jour, et échec de build s'il manque
+         nom: "…"                        # jetons {monde.*} {qp.*} {dette.*} admis dans les chaînes (desc-figures)
+         description: "…"
+         couverture_temporelle: "2020/2026"
+         couverture_spatiale: "France"
+         variables: [{nom, unite, description}]
+         sources: ["https://…"]
+         mots: ["…"]
+         fichiers: ["qui_paie_donnees.csv", "qui_paie_donnees.json"]   # publiés à la racine de static/
+
+       Date : `releve_le` du jeu (racine, puis bloc affichage), à défaut `_genere_le`. Aucune date saisie ici. */ -}}
+{{- $p := .Params.dataset -}}
+{{- $jeu := index site.Data $p.jeu -}}
+{{- if not $jeu -}}{{- errorf "schema-dataset-page: data/%s.json absent (page %s)" $p.jeu .RelPermalink -}}{{- end -}}
+{{- $date := $jeu.releve_le | default (index ($jeu.affichage | default dict) "releve_le") | default $jeu._genere_le -}}
+{{- if not $date -}}{{- errorf "schema-dataset-page: aucune date dans data/%s.json (page %s)" $p.jeu .RelPermalink -}}{{- end -}}
+{{- /* Une date d'affichage française (« 21 septembre 2026 ») n'est pas une date schema.org : on la convertit en ISO. */ -}}
+{{- if not (findRE `^\d{4}-\d{2}-\d{2}` $date) -}}
+  {{- $m := dict "janvier" "01" "février" "02" "mars" "03" "avril" "04" "mai" "05" "juin" "06" "juillet" "07" "août" "08" "septembre" "09" "octobre" "10" "novembre" "11" "décembre" "12" -}}
+  {{- $x := split (replace $date " " " ") " " -}}
+  {{- if ne (len $x) 3 -}}{{- errorf "schema-dataset-page: date illisible %q (page %s)" $date .RelPermalink -}}{{- end -}}
+  {{- $date = printf "%s-%s-%02d" (index $x 2) (index $m (index $x 1)) (int (index $x 0)) -}}
+{{- end -}}
+{{- $a := site.Data.author.author -}}
+{{- $sameAs := slice -}}
+{{- range $a.sameAs -}}{{- $sameAs = $sameAs | append .url -}}{{- end -}}
+{{- $personne := dict "@type" "Person" "name" $a.name "url" $a.canonicalProfileUrl "sameAs" $sameAs -}}
+{{- $vars := slice -}}
+{{- range $p.variables -}}
+  {{- $v := dict "@type" "PropertyValue" "name" (partial "desc-figures.html" (dict "text" .nom) | htmlUnescape) -}}
+  {{- with .unite }}{{ $v = merge $v (dict "unitText" .) }}{{ end -}}
+  {{- with .description }}{{ $v = merge $v (dict "description" (partial "desc-figures.html" (dict "text" .) | htmlUnescape)) }}{{ end -}}
+  {{- $vars = $vars | append $v -}}
+{{- end -}}
+{{- $dist := slice -}}
+{{- range $p.fichiers -}}
+  {{- $fmt := cond (strings.HasSuffix . ".csv") "text/csv" "application/json" -}}
+  {{- $dist = $dist | append (dict "@type" "DataDownload" "name" . "encodingFormat" $fmt "contentUrl" (printf "%s%s" site.BaseURL .)) -}}
+{{- end -}}
+{{- $ds := dict
+    "@context" "https://schema.org"
+    "@type" "Dataset"
+    "name" (partial "desc-figures.html" (dict "text" $p.nom) | htmlUnescape)
+    "description" (partial "desc-figures.html" (dict "text" $p.description) | htmlUnescape)
+    "url" .Permalink
+    "inLanguage" site.Language.Lang
+    "license" "https://creativecommons.org/licenses/by/4.0/"
+    "creator" $personne
+    "publisher" $personne
+    "dateModified" $date
+    "temporalCoverage" (partial "desc-figures.html" (dict "text" $p.couverture_temporelle) | htmlUnescape)
+    "spatialCoverage" (dict "@type" "Place" "name" $p.couverture_spatiale)
+    "about" (dict "@type" "Thing" "name" "dette publique" "sameAs" "https://www.wikidata.org/wiki/Q3024794")
+    "isBasedOn" $p.sources
+    "variableMeasured" $vars
+    "keywords" $p.mots
+    "distribution" $dist -}}
+<script type="application/ld+json">
+{{ $ds | jsonify (dict "indent" "  ") | safeJS }}
+</script>

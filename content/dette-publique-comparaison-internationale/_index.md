@@ -13,7 +13,27 @@ lastmod: 2026-09-30
 # du même jour (Derre_Internationale-01) : ouverture sans redite, dates distinguées, encart livre, figures réutilisables.
 # Arbitrages : 06_PROMOTION/DOSSIER_PAGE_DETTE_INTERNATIONALE.md, dépôt D:\PRO.
 donnees: [dette_monde]
-dataset_monde: true
+dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html) ; jetons résolus au build
+  jeu: "dette_monde"
+  nom: "Dette publique comparée : stock, prix, recettes et charge d'intérêts dans l'Union européenne et hors d'Europe"
+  description: "Compilation dérivée automatiquement des séries officielles, sans aucune valeur recopiée à la main : 27 pays de l'Union européenne en {monde.annee} (Eurostat, strictement comparable) ; économies avancées hors UE (OCDE, avec réserve) ; grands émergents (FMI et Banque mondiale, indicatif). Identité exacte vérifiée pour chaque pays européen : intérêts / recettes = stock de départ × taux implicite ÷ recettes. Écarts de taux à 10 ans avec l'Allemagne depuis 1995."
+  couverture_temporelle: "1995/{monde.annee}"
+  couverture_spatiale: "Union européenne, économies avancées de l'OCDE et grands émergents"
+  variables:
+    - {nom: "Stock de dette publique", unite: "% du PIB", description: "dette brute / PIB ; stock de départ (fin d'année précédente) pour la décomposition"}
+    - {nom: "Prix de la dette (taux implicite)", unite: "% par an", description: "intérêts de l'année / dette de fin d'année précédente"}
+    - {nom: "Charge d'intérêts", unite: "% des recettes publiques"}
+    - {nom: "Écart de taux à 10 ans avec l'Allemagne", unite: "points de pourcentage"}
+  sources:
+    - "https://ec.europa.eu/eurostat/databrowser/view/gov_10a_main/default/table?lang=fr"
+    - "https://ec.europa.eu/eurostat/databrowser/view/gov_10dd_edpt1/default/table?lang=fr"
+    - "https://ec.europa.eu/eurostat/databrowser/view/irt_lt_mcby_a/default/table?lang=fr"
+    - "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_aind/default/table?lang=fr"
+    - "https://data-explorer.oecd.org/"
+    - "https://www.imf.org/external/datamapper/GGXWDG_NGDP@WEO"
+    - "https://data.worldbank.org/indicator/GC.XPN.INTP.RV.ZS"
+  mots: ["dette publique", "comparaison internationale", "Union européenne", "taux implicite", "charge d'intérêts", "Eurostat", "OCDE", "FMI"]
+  fichiers: ["dette_monde.csv", "dette_monde.json"]
 faq:
   - question: "La France est-elle plus endettée que les autres pays ?"
     answer: "Plus que la plupart : fin {monde.annee}, sa dette publique atteint {monde.fr_stock_fin} du PIB, la troisième de l'Union européenne après la Grèce et l'Italie (Eurostat, dette de Maastricht). Mais le niveau de la dette ne dit pas ce qu'elle coûte : en {monde.annee}, la France a consacré {monde.fr_charge} de ses recettes publiques aux intérêts, moins que {monde.n_plus_charges_moins_endettes} pays pourtant moins endettés ({monde.plus_charges_moins_endettes})."
@@ -182,6 +202,12 @@ Seules des mesures indicatives existent&nbsp;: la dette selon le FMI, et les int
 
 {{< faq-visible >}}
 
+**Dans le dossier dette publique** — [Combien coûte la dette publique&nbsp;?](/cout-de-la-dette-publique/) · [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/)
+
+{{< appel-livre slug="dette-publique-qui-paie-vraiment" sur="Prolonger l'analyse" avis="non" >}}
+Cette page mesure ce que la dette coûte, et pourquoi une même dette ne pèse pas partout de la même façon. Elle ne dit pas qui en supporte le coût. Le livre suit ce déplacement canal par canal — contribuable, épargnant, services publics, générations qui ne votent pas encore —, chiffres officiels à l'appui. À la fin, vous saurez qui paie vraiment une dette publique, et par quels canaux.
+{{< /appel-livre >}}
+
 ## D'où viennent ces chiffres {#sources}
 
 **Europe (strictement comparable)** — Eurostat, administrations publiques (S.13), comptes nationaux SEC 2010, montants en monnaie nationale&nbsp;: intérêts versés et recettes (`gov_10a_main`, D41PAY et TR), dette de Maastricht (`gov_10dd_edpt1`), PIB (`nama_10_gdp`), dette par échéance résiduelle (`gov_10dd_ggd`), taux à 10 ans (`irt_lt_mcby_a`), indice des prix harmonisé (`prc_hicp_aind`).
@@ -195,9 +221,3 @@ Les calculs, les statistiques et les figures sont produits par un script unique,
 {{< reutiliser figures="figures_monde" jeu="dette_monde" sources="Eurostat, OCDE, FMI et Banque mondiale" donnees="Les 27 pays de l'Union européenne et les économies hors d'Europe, avec leurs niveaux de comparabilité, leurs définitions et leurs statistiques ; le même contenu existe en CSV, une ligne par pays, lisible dans un tableur." >}}
 Cette page compare ce que représente une dette publique en quatre mesures&nbsp;: le stock, son prix, les recettes qui la servent et la vitesse à laquelle les nouveaux taux se transmettent. Dans l'Union européenne en {{< monde-val "annee" >}}, deux pays de dette voisine peuvent consacrer aux intérêts des parts de leurs recettes qui vont de 1 à {{< monde-val "j_rapport" >}}, et le prix de la dette n'a pas de lien linéaire avec son niveau. Ces relations décrivent une année et des associations, non des causes&nbsp;; elles ne mesurent pas le risque de crise.
 {{< /reutiliser >}}
-
-**Dans le dossier dette publique** — [Combien coûte la dette publique&nbsp;?](/cout-de-la-dette-publique/) · [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/)
-
-{{< appel-livre slug="dette-publique-qui-paie-vraiment" sur="Prolonger l'analyse" >}}
-Cette page mesure ce que la dette coûte, et pourquoi une même dette ne pèse pas partout de la même façon. Elle ne dit pas qui en supporte le coût. Le livre suit ce déplacement canal par canal — contribuable, épargnant, services publics, générations qui ne votent pas encore —, chiffres officiels à l'appui. À la fin, vous saurez qui paie vraiment une dette publique, et par quels canaux.
-{{< /appel-livre >}}

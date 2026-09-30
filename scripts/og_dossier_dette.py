@@ -20,7 +20,7 @@ bleu profond #184f95, orange #eb6834, gris pour la série secondaire) et même f
 que les autres cartes du site (dégradé crème, Newsreader, filet bleu, URL en Inter).
 Une carte qui ne ressemblerait pas aux figures ferait deux identités.
 
-SORTIES : static/images/og-qui-paie-dette.jpg et og-cout-dette.jpg (1200x630),
+SORTIES : static/images/og-qui-paie-dette.jpg (exposition, depuis le 30/09), og-cout-dette.jpg, og-dette-monde.jpg (1200x630),
 déclarées par `og_image` dans le front matter des deux pages.
 """
 from __future__ import annotations
@@ -108,39 +108,35 @@ def habillage(d: ImageDraw.ImageDraw, titre: list[str], accroche: str,
     d.text((70, H - 48), url, font=font("inter", 19, 400), fill=URL_GREY)
 
 
-def figure_deciles(d: ImageDraw.ImageDraw, r: dict) -> None:
-    """Prélèvements et transferts par dixième — la figure la plus reconnaissable
-    du volet 2 : le contraste entre un versé qui explose et un reçu presque plat."""
-    esp = [v / 1000 for v in r["prestations_especes"][:10]]
-    nat = [v / 1000 for v in r["transferts_non_monetaires"][:10]]
-    prel = [-v / 1000 for v in r["prelevements"][:10]]
+def figure_exposition(d: ImageDraw.ImageDraw, ex: dict) -> None:
+    """Volet 2 : un même effort de 10 Md€ réparti selon trois décisions, en % du revenu de chaque dixième.
+    Le point D1 de la décision fiscale est écarté dans le jeu publié (motif dans le JSON) : il est absent ici aussi."""
     x0, x1, top, bas = 648, 1126, 100, 424
-    vmax, vmin = 35, -100
-    k = (bas - top) / (vmax - vmin)
+    series = [(ex["taux"]["enseignement"], C2), (ex["taux"]["fiscal"], C1), (ex["taux"]["pensions"], SEC)]
+    vmax = max(v for s, _c in series for v in s if v is not None)
+    vmax = (int(vmax * 2) + 1) / 2.0
+
+    def X(i):
+        return x0 + (x1 - x0) * i / 9
 
     def Y(v):
-        return top + (vmax - v) * k
+        return bas - (bas - top) * v / vmax
 
-    pas = (x1 - x0) / 10
-    bw = 30
-    for g in (-75, -50, -25, 0, 25):
+    g = 0.0
+    while g <= vmax + 1e-9:
         d.line([(x0, Y(g)), (x1, Y(g))], fill=GRID, width=2 if g == 0 else 1)
-    y0 = Y(0)
-    for i in range(10):
-        cx = x0 + pas * (i + 0.5)
-        g, dte = cx - bw / 2, cx + bw / 2
-        h1, h2, hp = esp[i] * k, nat[i] * k, prel[i] * k
-        d.rectangle([g, y0 - h1, dte, y0], fill=C1)
-        d.rectangle([g, y0 - h1 - 2 - h2, dte, y0 - h1 - 2], fill=SEC)
-        d.rectangle([g, y0 + 2, dte, y0 + hp], fill=C2)
+        g += 0.5
+    for serie, c in series:
+        pts = [(X(i), Y(v)) for i, v in enumerate(serie) if v is not None]
+        d.line(pts, fill=c, width=5, joint="curve")
+        for x, y in pts:
+            d.ellipse([x - 5, y - 5, x + 5, y + 5], fill=c)
     fa = font("inter", 18, 500)
     d.text((x0, bas + 14), "D1", font=fa, fill=URL_GREY)
     d.text((x1 - 34, bas + 14), "D10", font=fa, fill=URL_GREY)
-    d.text((x0, bas + 40), "Prélèvements et transferts publics par dixième de niveau",
+    d.text((x0, bas + 40), "Un effort de %g Md€, en %% du revenu de chaque" % ex["effort_mdeur"],
            font=font("inter", 17, 400), fill=URL_GREY)
-    d.text((x0, bas + 62), "de vie, 2023, en euros par unité de consommation",
-           font=font("inter", 17, 400), fill=URL_GREY)
-
+    d.text((x0, bas + 62), "dixième de niveau de vie, %s" % ex["millesime"], font=font("inter", 17, 400), fill=URL_GREY)
 
 def figure_ciseau(d: ImageDraw.ImageDraw, annees: list[int],
                   dette: list[float], interets: list[float]) -> None:
@@ -262,25 +258,23 @@ def main() -> int:
     for f in (qp, do):
         if not f.is_file():
             fail("jeu de données absent : %s — lancer son générateur d'abord" % f)
-    r = json.loads(qp.read_text(encoding="utf-8"))["redistribution"]
+    ex = json.loads(qp.read_text(encoding="utf-8"))["exposition"]
     o = json.loads(do.read_text(encoding="utf-8"))
 
-    # Les phrases de la carte reprennent celles de la page ; le contraste qu'elles
-    # annoncent est CONTRÔLÉ ici, comme le générateur de figures contrôle le sien.
-    recus = [r["prestations_especes"][i] + r["transferts_non_monetaires"][i] for i in range(10)]
-    prel = [-v for v in r["prelevements"][:10]]
-    if not (max(recus) / min(recus)) < (max(prel) / min(prel)) / 3:
-        fail("la carte annonce un reçu « beaucoup plus plat » que le versé : ce n'est "
-             "plus vrai dans les données")
-
+    # Volet 2 (avis du 30/09) : la carte montre le résultat PROPRE à la page — un même effort, des payeurs
+    # différents selon la décision — et non plus la redistribution générale, commune à bien des sources.
+    # Le contraste qu'elle annonce est CONTRÔLÉ ici : l'enseignement pèse plus en D2 qu'en D10, l'impôt l'inverse.
+    t = ex["taux"]
+    if not (t["enseignement"][1] > t["enseignement"][9] and t["fiscal"][9] > t["fiscal"][1]):
+        fail("la carte annonce que l'enseignement pèse en bas et l'impôt en haut : ce n'est plus vrai dans les données")
     carte("og-qui-paie-dette.jpg",
-          ["Qui paie vraiment", "la dette publique ?"],
-          "Ce qui est versé suit le niveau de vie. Ce qui est reçu, beaucoup moins.",
-          "Données Insee et Banque de France via l'AFT · CC BY 4.0",
+          ["Même effort,", "d'autres payeurs"],
+          "Qui paie la dette dépend de la décision prise pour l'ajuster.",
+          "Insee, comptes nationaux distribués %s · CC BY 4.0" % ex["millesime"],
           "stephane-lalut.com/qui-paie-la-dette-publique/",
-          lambda d: figure_deciles(d, r),
-          [(C1, "Prestations en espèces"), (SEC, "Services publics valorisés"),
-           (C2, "Prélèvements")])
+          lambda d: figure_exposition(d, ex),
+          [(C2, "Baisse de l'enseignement"), (C1, "Hausse des impôts (revenus, patrimoine)"),
+           (SEC, "Baisse des pensions")])
 
     # Volet 1 : la fenêtre COMMUNE aux deux séries, lue dans le jeu publié. Le
     # ciseau n'a de sens que si les deux grandeurs couvrent les mêmes années.

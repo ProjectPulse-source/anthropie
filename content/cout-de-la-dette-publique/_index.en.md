@@ -83,6 +83,7 @@ That leaves the other figure, the one most often quoted: no longer what the debt
 The chain has four links. A state continuously refinances maturing securities, so borrowing heavily does not by itself make the **stock** grow — gross issuance is therefore not a measure of how much the debt has increased. What makes it grow is the **deficit** — that is, net government borrowing — plus stock-flow adjustments. That stock carries an **average financing cost**. Each year, that cost gives rise to **interest** payments: an obligation already contracted, rather than a new discretionary spending choice, and one that reduces the room left for other choices. And when market rates climb, that average cost follows with a lag — the annual bill swells, and the question stops being *how much* and becomes **who will pay it**.
 
 {{< figure-svg fichier="charge-interets-mdeur-en" alt="One curve in billion euros, from 1995 to 2025: interest paid hovers around 45 to 55 billion, falls to a trough of 29.7 billion in 2020, then climbs steeply to 66.6 billion." >}}Eurostat, interest paid by general government. Current prices, not adjusted for inflation.{{< /figure-svg >}}
+
 {{< fig-actions id="charge" >}}
 
 **The same burden, in euros.** The share of GDP places the debt against the wealth produced; the billion measures the burden in euros. Neither tells you whether the debt is **sustainable**: that also depends on growth, on the interest rate and on the primary balance — the deficit excluding interest. In current euros, the bill went from a trough of {{< dette-val "interets_creux_mdeur" >}} billion in {{< dette-val "interets_creux_annee" >}} to {{< dette-val "interets_mdeur" >}} billion in {{< dette-val "interets_annee" >}}. These euros are not adjusted for inflation: part of the rise is prices, which is why the rest of this page works in shares of GDP.
@@ -135,6 +136,7 @@ Everything below uses **the same year**, {{< dette-val "equiv_annee" >}} — the
 - **Health (GF07): {{< dette-val "sante_mdeur" >}} billion euros** — interest represents about {{< dette-val "pct_interets_sante" >}}%.
 
 {{< figure-svg fichier="masses-comparees-en" alt="Four curves in billion euros, from 1995 to 2024: health and education rise steadily and stay the highest; interest paid, long flat then falling, climbs after 2020 and moves back above the public order and safety function." >}}Eurostat, interest paid and general government expenditure by function. Every series stops at the same vintage.{{< /figure-svg >}}
+
 {{< fig-actions id="masses" >}}
 
 **What the curve adds to the table.** The four amounts above are a snapshot; their path says something else. For two decades, interest paid stayed below the entire public order and safety function — police, courts, emergency services. It has moved back above it. Health and education are drifting away: they are masses of another order.
@@ -173,6 +175,10 @@ The {{< dette-val "interets_mdeur" >}} billion euros of interest paid in {{< det
 
 Which leaves a question these figures do not settle: who ultimately bears this burden, and is part of its cost shifted onto others? That is the subject of the next page (in French).
 
+{{< appel-livre slug="dette-publique-qui-paie-vraiment" avis="non" >}}
+This page prices the bill. It does not say who settles it — and that is where everything is decided: a debt is never cancelled, it is displaced. Onto the taxpayer, onto the saver through inflation, onto public services whose margin tightens, onto those who cannot yet vote. The book follows each of these channels in turn, on official figures, and ends in scenarios for 2025-2035. By the end you will recognise which one is unfolding.
+{{< /appel-livre >}}
+
 ## Where these figures come from
 
 Every figure on this page is **derived automatically from official sources** (INSEE, Eurostat), never copied by hand, and re-queried every week; last retrieval that changed a value: {{< dette-val "releve_le" >}}. Open data: [dette_officielle.json](/dette_officielle.json), CC BY 4.0 licence.
@@ -188,9 +194,5 @@ The framework used to interpret these figures is set out in [What is anthropy?](
 {{< reutiliser figures="figures_dette" jeu="dette_officielle" sources="INSEE and Eurostat" >}}
 This page measures what public debt costs each year — the interest burden, {{< dette-val "interets_mdeur" >}} billion euros in {{< dette-val "interets_annee" >}} — rather than the size of the stock. It shows why a stock twice as heavy did not double the bill: the average cost of that stock fell for thirty years, and has been climbing since 2022 with the lag that refinancing imposes. It compares magnitudes on one perimeter and one vintage, without establishing that a euro of interest was taken from another budget: these data do not show that.
 {{< /reutiliser >}}
-
-{{< appel-livre slug="dette-publique-qui-paie-vraiment" >}}
-This page prices the bill. It does not say who settles it — and that is where everything is decided: a debt is never cancelled, it is displaced. Onto the taxpayer, onto the saver through inflation, onto public services whose margin tightens, onto those who cannot yet vote. The book follows each of these channels in turn, on official figures, and ends in scenarios for 2025-2035. By the end you will recognise which one is unfolding.
-{{< /appel-livre >}}
 
 {{< canonical-definition >}}

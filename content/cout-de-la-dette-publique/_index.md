@@ -80,6 +80,7 @@ Reste l'autre chiffre, celui qu'on cite le plus souvent&nbsp;: non plus ce que l
 Pour lire ces chiffres sans être spécialiste, la chaîne tient en quatre maillons&nbsp;: l'État refinance en permanence les titres qui arrivent à échéance, si bien qu'emprunter beaucoup ne fait pas grossir le **stock** par soi-même — le montant des émissions brutes ne mesure donc pas l'augmentation de la dette. Ce qui la fait grossir, c'est le **déficit**, ce qu'il emprunte net, augmenté des ajustements entre flux et stock. Ce stock a un **prix moyen** — le taux auquel il a été emprunté au fil du temps. Ce prix se paie chaque année&nbsp;: ce sont les **intérêts**, une obligation déjà contractée — on ne la met pas en balance comme une dépense nouvelle, et elle réduit d'autant la marge des arbitrages. Et quand les taux de marché remontent, le prix moyen suit avec retard — la facture annuelle grossit, et la question cesse d'être «&nbsp;combien&nbsp;» pour devenir «&nbsp;**qui la paiera**&nbsp;».
 
 {{< figure-svg fichier="charge-interets-mdeur" alt="Une courbe en milliards d'euros courants, de 1995 à 2025 : la charge d'intérêts oscille autour de 45 à 55 milliards, descend jusqu'à un creux de 29,7 milliards en 2020, puis remonte fortement jusqu'à 66,6 milliards." >}}Eurostat, intérêts versés par les administrations publiques. En euros courants, non corrigés de l'inflation.{{< /figure-svg >}}
+
 {{< fig-actions id="charge" >}}
 
 **La même charge, en euros.** Le pourcentage du PIB situe le poids de la dette par rapport à la richesse produite&nbsp;; le milliard mesure la charge en euros. Ni l'un ni l'autre ne dit si la dette est **soutenable**&nbsp;: cela dépend en outre de la croissance, du taux d'intérêt et du solde primaire — le déficit hors intérêts. En euros courants, la facture est passée d'un creux de {{< dette-val "interets_creux_mdeur" >}}&nbsp;milliards en {{< dette-val "interets_creux_annee" >}} à {{< dette-val "interets_mdeur" >}}&nbsp;milliards en {{< dette-val "interets_annee" >}}. Ces euros ne sont pas corrigés de l'inflation&nbsp;: une partie de la hausse est celle des prix, et c'est pourquoi la page raisonne ailleurs en part de PIB.
@@ -132,6 +133,7 @@ Tout ce qui suit porte sur **le même millésime**, {{< dette-val "equiv_annee" 
 - **Santé (GF07)&nbsp;: {{< dette-val "sante_mdeur" >}}&nbsp;Md€** — les intérêts en représentent environ {{< dette-val "pct_interets_sante" >}}&nbsp;%.
 
 {{< figure-svg fichier="masses-comparees" alt="Quatre courbes en milliards d'euros courants, de 1995 à 2024 : la santé et l'enseignement montent régulièrement et restent les plus élevés ; la charge d'intérêts, longtemps stable puis en baisse, remonte après 2020 et repasse au-dessus du poste « ordre et sécurité »." >}}Eurostat, intérêts versés et dépenses des administrations par fonction. Toutes les séries s'arrêtent au même millésime.{{< /figure-svg >}}
+
 {{< fig-actions id="masses" >}}
 
 **Ce que la courbe ajoute au tableau.** Les quatre montants ci-dessus sont une photographie&nbsp;; leur trajectoire dit autre chose. La charge d'intérêts est restée, pendant vingt ans, sous le poste «&nbsp;ordre et sécurité&nbsp;» tout entier — police, gendarmerie, justice, secours. Elle est repassée au-dessus. La santé et l'enseignement, eux, s'en éloignent&nbsp;: ce sont des masses d'un autre ordre.
@@ -174,6 +176,10 @@ Une règle gouverne enfin toutes les comparaisons de cette page&nbsp;: **le mill
 
 Reste une question que ces chiffres ne tranchent pas&nbsp;: qui supporte in fine cette charge, et une partie de son coût est-elle déplacée vers d'autres&nbsp;? C'est l'objet de la page suivante.
 
+{{< appel-livre slug="dette-publique-qui-paie-vraiment" avis="non" >}}
+Cette page chiffre la facture. Elle ne dit pas qui la règle — et c'est là que tout se joue&nbsp;: une dette ne s'efface pas, elle se déplace. Vers le contribuable, vers l'épargnant par l'inflation, vers des services publics dont la marge se resserre, vers ceux qui ne votent pas encore. Le livre suit ces canaux un par un, chiffres officiels à l'appui, et conduit aux scénarios 2025-2035. Vous saurez, à la fin, reconnaître celui qui est en train de se réaliser.
+{{< /appel-livre >}}
+
 ## D'où viennent ces chiffres
 
 Toutes les valeurs de cette page sont **dérivées automatiquement des sources officielles** (INSEE, Eurostat), jamais recopiées, et réinterrogées chaque semaine&nbsp;; dernier relevé ayant fait bouger une valeur&nbsp;: {{< dette-val "releve_le" >}}. Données en accès libre&nbsp;: [dette_officielle.json](/dette_officielle.json), licence CC&nbsp;BY&nbsp;4.0.
@@ -187,9 +193,5 @@ Toutes les valeurs de cette page sont **dérivées automatiquement des sources o
 {{< reutiliser figures="figures_dette" jeu="dette_officielle" sources="INSEE et Eurostat" >}}
 Cette page mesure ce que la dette publique coûte chaque année — la charge d'intérêts, {{< dette-val "interets_mdeur" >}}&nbsp;milliards d'euros en {{< dette-val "interets_annee" >}} — et non le montant de l'encours. Elle montre pourquoi un encours deux fois plus lourd n'a pas doublé la facture&nbsp;: le coût moyen du stock a baissé pendant trente ans, et il remonte depuis 2022 avec le retard que lui impose le refinancement. Elle compare des masses à périmètre et millésime identiques, sans établir qu'un euro d'intérêts ait été retiré à un autre budget&nbsp;: ces données ne le montrent pas.
 {{< /reutiliser >}}
-
-{{< appel-livre slug="dette-publique-qui-paie-vraiment" >}}
-Cette page chiffre la facture. Elle ne dit pas qui la règle — et c'est là que tout se joue&nbsp;: une dette ne s'efface pas, elle se déplace. Vers le contribuable, vers l'épargnant par l'inflation, vers des services publics dont la marge se resserre, vers ceux qui ne votent pas encore. Le livre suit ces canaux un par un, chiffres officiels à l'appui, et conduit aux scénarios 2025-2035. Vous saurez, à la fin, reconnaître celui qui est en train de se réaliser.
-{{< /appel-livre >}}
 
 {{< canonical-definition >}}

@@ -126,8 +126,8 @@
 {{ if .Params.dataset_dette }}
   {{- partial "schema-dataset-dette.html" . -}}
 {{ end }}
-{{ if .Params.dataset_monde }}
-  {{- partial "schema-dataset-monde.html" . -}}
+{{ with .Params.dataset }}
+  {{- partial "schema-dataset-page.html" $ -}}
 {{ end }}
 
 <!-- Schema.org ItemList + CreativeWorkSeries série AWP -->

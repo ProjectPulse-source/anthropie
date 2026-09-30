@@ -1268,6 +1268,43 @@ def main() -> int:
     corps = json.dumps(donnees, ensure_ascii=False, indent=1) + "\n"
     (REPO / "data" / "qui_paie_donnees.json").write_text(corps, encoding="utf-8")
     (REPO / "static" / "qui_paie_donnees.json").write_text(corps, encoding="utf-8")
+    # CSV (avis du 30/09 : « plus exploitable qu'un JSON par un journaliste ou un enseignant »). Format LONG, une
+    # valeur par ligne avec son unité et son millésime : les tableaux de la page n'ont pas les mêmes colonnes, et un
+    # format large forcerait des cases vides ou des unités mêlées. UTF-8 avec BOM (Excel lit les accents).
+    import csv
+    import io as _io
+    buf = _io.StringIO()
+    w = csv.writer(buf, lineterminator="\n")
+    w.writerow(["tableau", "groupe", "variable", "valeur", "unite", "millesime", "source"])
+    rd = donnees["redistribution"]
+    src_rd = rd["source"]["publication"]
+    for var in ("prelevements", "prestations_especes", "transferts_non_monetaires", "transferts_nets"):
+        for g, v in zip(rd["colonnes"], rd[var]):
+            w.writerow(["redistribution_par_dixieme", g, var, v, "euros par UC", "2023", src_rd])
+    for g, v in zip(rd["colonnes"], rd["part_beneficiaires_nets_pct"]):
+        w.writerow(["redistribution_par_dixieme", g, "part_beneficiaires_nets", v, "% des personnes", "2023", src_rd])
+    age = rd["par_age"]
+    for var in ("prel", "esp", "nat"):
+        for g, v in zip(age["groupes"], age[var]):
+            w.writerow(["redistribution_par_age", g, {"prel": "prelevements", "esp": "prestations_especes",
+                                                      "nat": "transferts_non_monetaires"}[var], v, "euros par UC", "2023", src_rd])
+    ex = donnees["exposition"]
+    src_ex = ex["source"]["publication"]
+    for dec, serie in ex["taux"].items():
+        for g, v in zip(ex["colonnes"], serie):
+            w.writerow(["exposition_effort_%d_mdeur" % ex["effort_mdeur"], g, "decision_" + dec,
+                        "" if v is None else v, ex["unite"], ex["millesime"], src_ex])
+    for g, v in zip(ex["colonnes"], ex["ecart_entre_decisions"]):
+        w.writerow(["exposition_effort_%d_mdeur" % ex["effort_mdeur"], g, "rapport_decision_la_plus_lourde_la_plus_legere",
+                    v, "rapport", ex["millesime"], src_ex])
+    det = donnees["detention"]
+    for x in det["A_sous_secteurs"]["valeurs"]:
+        w.writerow(["dette_par_administration", x["libelle"], "encours", x["mdeur"], det["A_sous_secteurs"]["unite"],
+                    det["A_sous_secteurs"]["periode"], "INSEE"])
+    for x in det["B_detenteurs_titres_etat"]["valeurs"]:
+        w.writerow(["detenteurs_titres_etat", x["libelle"], "part", x["pct"], det["B_detenteurs_titres_etat"]["unite"],
+                    det["B_detenteurs_titres_etat"]["periode"], "Banque de France via l'Agence France Trésor"])
+    (REPO / "static" / "qui_paie_donnees.csv").write_text(buf.getvalue(), encoding="utf-8-sig", newline="\n")
     for nom, (_s, h) in figs:
         print("OK  %s.svg (720 x %d) + PNG 1440 px" % (nom, h))
     print("OK  data/figures_qui_paie.json, data/ et static/qui_paie_donnees.json")
