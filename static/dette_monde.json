@@ -1,14 +1,14 @@
 {
- "releve_le": "2026-09-29",
+ "releve_le": "2026-09-30",
  "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Eurostat, OCDE, FMI, Banque mondiale",
  "meta": {
   "annee": "2025",
-  "releve_le": "2026-09-29",
+  "releve_le": "2026-09-30",
   "page": "https://stephane-lalut.com/dette-publique-comparaison-internationale/",
   "licence": "CC BY 4.0",
   "definitions": {
    "stock": "dette brute / PIB (dette de fin d'année précédente pour la décomposition)",
-   "prix": "intérêts de l'année / dette de fin d'année précédente (taux apparent)",
+   "prix": "taux implicite : intérêts de l'année / dette de fin d'année précédente (convention de la BCE ; différent du « coût apparent » d'Eurostat, fondé sur la dette moyenne)",
    "charge": "intérêts / recettes publiques",
    "transmission": "part de la dette à moins d'un an ; écart taux à 10 ans − prix"
   },
@@ -30,6 +30,12 @@
    "recettes": 49.02319306097534,
    "charge": 4.5376702535836335,
    "inflation": 5.633333333333334,
+   "inflation_fenetres": {
+    "2": 3.3,
+    "3": 5.633333333333333,
+    "4": 5.0249999999999995,
+    "5": 4.1
+   },
    "taux10": 3.17326,
    "part_1an": 8.890149449615054
   },
@@ -43,6 +49,12 @@
    "recettes": 38.147516383191274,
    "charge": 2.154633841037008,
    "inflation": 8.066666666666668,
+   "inflation_fenetres": {
+    "2": 5.6,
+    "3": 8.066666666666666,
+    "4": 6.75,
+    "5": 5.64
+   },
    "taux10": 3.93,
    "part_1an": 7.228546928098536
   },
@@ -56,6 +68,12 @@
    "recettes": 40.96786655599522,
    "charge": 3.17536513880371,
    "inflation": 9.833333333333334,
+   "inflation_fenetres": {
+    "2": 7.35,
+    "3": 9.833333333333334,
+    "4": 8.2,
+    "5": 7.219999999999999
+   },
    "taux10": 4.28686,
    "part_1an": 5.661432816110928
   },
@@ -69,6 +87,12 @@
    "recettes": 50.14411081193599,
    "charge": 1.585342535921364,
    "inflation": 4.4,
+   "inflation_fenetres": {
+    "2": 2.35,
+    "3": 4.3999999999999995,
+    "4": 3.775,
+    "5": 3.08
+   },
    "taux10": 2.32731,
    "part_1an": 4.367760905575093
   },
@@ -82,6 +106,12 @@
    "recettes": 47.24792536387539,
    "charge": 2.314930328745899,
    "inflation": 5.733333333333333,
+   "inflation_fenetres": {
+    "2": 4.25,
+    "3": 5.733333333333333,
+    "4": 5.1,
+    "5": 4.159999999999999
+   },
    "taux10": 2.59206,
    "part_1an": 7.238284020478895
   },
@@ -95,6 +125,12 @@
    "recettes": 43.17775846093593,
    "charge": 1.1172195612977447,
    "inflation": 10.733333333333334,
+   "inflation_fenetres": {
+    "2": 6.4,
+    "3": 10.733333333333334,
+    "4": 9.175,
+    "5": 7.220000000000001
+   },
    "taux10": 3.31443,
    "part_1an": 12.052574936224488
   },
@@ -108,6 +144,12 @@
    "recettes": 24.171117864009567,
    "charge": 2.039395206731096,
    "inflation": 4.866666666666667,
+   "inflation_fenetres": {
+    "2": 3.25,
+    "3": 4.866666666666666,
+    "4": 4.25,
+    "5": 3.3
+   },
    "taux10": 2.88975,
    "part_1an": 6.85976285157428
   },
@@ -121,6 +163,12 @@
    "recettes": 49.995228579240006,
    "charge": 6.314984093746225,
    "inflation": 5.5,
+   "inflation_fenetres": {
+    "2": 3.6,
+    "3": 5.5,
+    "4": 4.275,
+    "5": 3.16
+   },
    "taux10": 3.36997,
    "part_1an": 4.358539783640831
   },
@@ -134,6 +182,12 @@
    "recettes": 42.94538962701642,
    "charge": 5.563974527778468,
    "inflation": 4.866666666666667,
+   "inflation_fenetres": {
+    "2": 3.15,
+    "3": 4.866666666666667,
+    "4": 4.4,
+    "5": 3.46
+   },
    "taux10": 3.21381,
    "part_1an": 5.187747250864226
   },
@@ -147,6 +201,12 @@
    "recettes": 52.20986006981682,
    "charge": 4.267084163104086,
    "inflation": 4.633333333333334,
+   "inflation_fenetres": {
+    "2": 4.0,
+    "3": 4.633333333333334,
+    "4": 4.0,
+    "5": 3.3
+   },
    "taux10": 3.34979,
    "part_1an": 9.471732571439603
   },
@@ -160,6 +220,12 @@
    "recettes": 47.05776062623218,
    "charge": 2.970378496982995,
    "inflation": 7.7,
+   "inflation_fenetres": {
+    "2": 6.2,
+    "3": 7.7,
+    "4": 6.45,
+    "5": 5.16
+   },
    "taux10": 2.99293,
    "part_1an": 10.29886883530517
   },
@@ -173,6 +239,12 @@
    "recettes": 47.94378814151419,
    "charge": 8.025025600223955,
    "inflation": 5.233333333333333,
+   "inflation_fenetres": {
+    "2": 3.5,
+    "3": 5.233333333333333,
+    "4": 4.3999999999999995,
+    "5": 3.499999999999999
+   },
    "taux10": 3.59284,
    "part_1an": 10.876887132465662
   },
@@ -186,6 +258,12 @@
    "recettes": 43.640823934107196,
    "charge": 2.6178109121513407,
    "inflation": 4.766666666666667,
+   "inflation_fenetres": {
+    "2": 3.0999999999999996,
+    "3": 4.766666666666667,
+    "4": 4.1499999999999995,
+    "5": 3.0999999999999996
+   },
    "taux10": 2.92614,
    "part_1an": 1.3661787338317253
   },
@@ -199,6 +277,12 @@
    "recettes": 43.55299794078957,
    "charge": 2.5390625,
    "inflation": 9.2,
+   "inflation_fenetres": {
+    "2": 5.2,
+    "3": 9.200000000000001,
+    "4": 7.7,
+    "5": 6.180000000000001
+   },
    "taux10": 3.27045,
    "part_1an": 2.470023148721863
   },
@@ -212,6 +296,12 @@
    "recettes": 39.40539770704265,
    "charge": 2.2655125262783793,
    "inflation": 9.499999999999998,
+   "inflation_fenetres": {
+    "2": 4.8,
+    "3": 9.5,
+    "4": 8.275,
+    "5": 6.840000000000001
+   },
    "taux10": 2.88,
    "part_1an": 0.632610721909859
   },
@@ -225,6 +315,12 @@
    "recettes": 47.10756633881246,
    "charge": 0.711856850851525,
    "inflation": 4.466666666666666,
+   "inflation_fenetres": {
+    "2": 2.5999999999999996,
+    "3": 4.466666666666666,
+    "4": 4.225,
+    "5": 3.38
+   },
    "taux10": 2.90111,
    "part_1an": 1.7682980869462464
   },
@@ -238,6 +334,12 @@
    "recettes": 42.60064563435371,
    "charge": 8.929044165077753,
    "inflation": 12.0,
+   "inflation_fenetres": {
+    "2": 10.35,
+    "3": 12.0,
+    "4": 10.3,
+    "5": 8.92
+   },
    "taux10": 6.93975,
    "part_1an": 7.426638964186977
   },
@@ -251,6 +353,12 @@
    "recettes": 34.681316899124226,
    "charge": 3.5001987420795433,
    "inflation": 4.7,
+   "inflation_fenetres": {
+    "2": 4.0,
+    "3": 4.7,
+    "4": 3.6999999999999997,
+    "5": 3.12
+   },
    "taux10": 3.43704,
    "part_1an": 8.031867755832623
   },
@@ -264,6 +372,12 @@
    "recettes": 43.58484134774329,
    "charge": 1.6652456413724164,
    "inflation": 6.3,
+   "inflation_fenetres": {
+    "2": 3.65,
+    "3": 6.3,
+    "4": 5.425,
+    "5": 4.5600000000000005
+   },
    "taux10": 2.80112,
    "part_1an": 11.639967070391812
   },
@@ -277,6 +391,12 @@
    "recettes": 50.85141177392408,
    "charge": 3.160396890608087,
    "inflation": 6.3999999999999995,
+   "inflation_fenetres": {
+    "2": 5.3,
+    "3": 6.3999999999999995,
+    "4": 5.5,
+    "5": 4.68
+   },
    "taux10": 2.98216,
    "part_1an": 6.290875995775913
   },
@@ -290,6 +410,12 @@
    "recettes": 43.59983571333459,
    "charge": 5.752090222337637,
    "inflation": 9.266666666666667,
+   "inflation_fenetres": {
+    "2": 7.300000000000001,
+    "3": 9.266666666666667,
+    "4": 8.25,
+    "5": 7.340000000000001
+   },
    "taux10": 5.52335,
    "part_1an": 3.1474374961886875
   },
@@ -303,6 +429,12 @@
    "recettes": 43.10649378261751,
    "charge": 4.484586466165413,
    "inflation": 5.366666666666666,
+   "inflation_fenetres": {
+    "2": 4.0,
+    "3": 5.366666666666667,
+    "4": 4.25,
+    "5": 3.38
+   },
    "taux10": 3.07583,
    "part_1an": 21.525302585445942
   },
@@ -316,6 +448,12 @@
    "recettes": 35.44803605960306,
    "charge": 8.024298722310684,
    "inflation": 9.166666666666666,
+   "inflation_fenetres": {
+    "2": 7.75,
+    "3": 9.166666666666666,
+    "4": 7.9,
+    "5": 6.779999999999999
+   },
    "taux10": 6.9585,
    "part_1an": 6.959751212429671
   },
@@ -329,6 +467,12 @@
    "recettes": 46.62354030520988,
    "charge": 2.7113852867341923,
    "inflation": 6.166666666666667,
+   "inflation_fenetres": {
+    "2": 4.6,
+    "3": 6.166666666666667,
+    "4": 5.125,
+    "5": 4.04
+   },
    "taux10": 3.1024,
    "part_1an": 5.987228971841567
   },
@@ -342,6 +486,12 @@
    "recettes": 43.49493946442635,
    "charge": 3.5617976772492823,
    "inflation": 8.766666666666667,
+   "inflation_fenetres": {
+    "2": 7.1,
+    "3": 8.766666666666666,
+    "4": 7.2749999999999995,
+    "5": 6.22
+   },
    "taux10": 3.42929,
    "part_1an": 0.5058553922969908
   },
@@ -355,6 +505,12 @@
    "recettes": 53.66221525074259,
    "charge": 3.014992295534055,
    "inflation": 4.166666666666667,
+   "inflation_fenetres": {
+    "2": 2.65,
+    "3": 4.166666666666667,
+    "4": 3.65,
+    "5": 3.0
+   },
    "taux10": 2.99698,
    "part_1an": 10.2442107127475
   },
@@ -368,6 +524,12 @@
    "recettes": 47.96576815086456,
    "charge": 1.2631726921744544,
    "inflation": 5.333333333333333,
+   "inflation_fenetres": {
+    "2": 3.95,
+    "3": 5.333333333333333,
+    "4": 4.675,
+    "5": 3.88
+   },
    "taux10": 2.44662,
    "part_1an": 28.88070231599622
   }
@@ -422,7 +584,41 @@
   "pente_hors_loo": {
    "min": 0.16451628992089204,
    "max": 0.21007500900764167
-  }
+  },
+  "robustesse_inflation": [
+   {
+    "fenetre": 2,
+    "n": 27,
+    "r2": 0.7326051748462044,
+    "effet_euro": -1.0748787502353934,
+    "effet_inflation": 0.32440431168097394,
+    "r2_hors": 0.6544704274316826
+   },
+   {
+    "fenetre": 3,
+    "n": 27,
+    "r2": 0.6524876199808433,
+    "effet_euro": -1.3338998304012464,
+    "effet_inflation": 0.21219573866172084,
+    "r2_hors": 0.6081501839982616
+   },
+   {
+    "fenetre": 4,
+    "n": 27,
+    "r2": 0.6477260767677059,
+    "effet_euro": -1.3263619659068624,
+    "effet_inflation": 0.2465239566443988,
+    "r2_hors": 0.6411236428099595
+   },
+   {
+    "fenetre": 5,
+    "n": 27,
+    "r2": 0.6605401774896634,
+    "effet_euro": -1.226954508650721,
+    "effet_inflation": 0.2973560358591716,
+    "r2_hors": 0.6266052263330318
+   }
+  ]
  },
  "faux_jumeaux": [
   {
@@ -536,48 +732,52 @@
    "nom": "Chine",
    "niveau": "emergent",
    "badge": "indicatif",
-   "stock": 99.2,
+   "stock": 72.1,
    "prix": null,
    "recettes": null,
    "charge": 3.4419404251668,
    "charge_annee": "2021",
-   "note": "dette FMI (administrations publiques) ; intérêts Banque mondiale (administration centrale)"
+   "annee": "2021",
+   "note": "dette FMI et intérêts Banque mondiale de la même année ; intérêts de la seule administration centrale"
   },
   {
    "code": "IND",
    "nom": "Inde",
    "niveau": "emergent",
    "badge": "indicatif",
-   "stock": 84.1,
+   "stock": 84.6,
    "prix": null,
    "recettes": null,
    "charge": 33.9761997637185,
    "charge_annee": "2022",
-   "note": "dette FMI (administrations publiques) ; intérêts Banque mondiale (administration centrale)"
+   "annee": "2022",
+   "note": "dette FMI et intérêts Banque mondiale de la même année ; intérêts de la seule administration centrale"
   },
   {
    "code": "BRA",
    "nom": "Brésil",
    "niveau": "emergent",
    "badge": "indicatif",
-   "stock": 93.3,
+   "stock": 87.0,
    "prix": null,
    "recettes": null,
    "charge": 30.0945783300769,
    "charge_annee": "2024",
-   "note": "dette FMI (administrations publiques) ; intérêts Banque mondiale (administration centrale)"
+   "annee": "2024",
+   "note": "dette FMI et intérêts Banque mondiale de la même année ; intérêts de la seule administration centrale"
   },
   {
    "code": "ZAF",
    "nom": "Afrique du Sud",
    "niveau": "emergent",
    "badge": "indicatif",
-   "stock": 78.6,
+   "stock": 76.0,
    "prix": null,
    "recettes": null,
    "charge": 18.1746461598679,
    "charge_annee": "2024",
-   "note": "dette FMI (administrations publiques) ; intérêts Banque mondiale (administration centrale)"
+   "annee": "2024",
+   "note": "dette FMI et intérêts Banque mondiale de la même année ; intérêts de la seule administration centrale"
   }
  ],
  "annee_fmi": "2025",
@@ -640,6 +840,12 @@
   "de_ecart_taux": "0,75 point",
   "de_taux10": "2,59 %",
   "an_fmi": "2025",
+  "rob_euro_min": "1,1",
+  "rob_euro_max": "1,3",
+  "rob_infl_min": "0,21",
+  "rob_infl_max": "0,32",
+  "rob_r2_min": "0,65",
+  "rob_r2_max": "0,73",
   "fr_rang_stock": "troisième",
   "devant_fr": "Grèce et Italie",
   "usa_stock": "117 %",
@@ -667,16 +873,16 @@
   "fra_prix": "2,01 %",
   "fra_charge": "4,4 %",
   "fra_dette_nette": "78 %",
-  "chn_stock": "99 %",
+  "chn_stock": "72 %",
   "chn_charge": "3 %",
   "chn_charge_annee": "2021",
-  "ind_stock": "84 %",
+  "ind_stock": "85 %",
   "ind_charge": "34 %",
   "ind_charge_annee": "2022",
-  "bra_stock": "93 %",
+  "bra_stock": "87 %",
   "bra_charge": "30 %",
   "bra_charge_annee": "2024",
-  "zaf_stock": "79 %",
+  "zaf_stock": "76 %",
   "zaf_charge": "18 %",
   "zaf_charge_annee": "2024",
   "usa_fra_rapport": "3,3"

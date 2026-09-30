@@ -63,3 +63,9 @@ main .dette-monde-table--monde thead th:last-child { text-align: left !important
 }
 
 .faq-visible h3 { font-size: 1.05rem; margin: 1.2rem 0 0.35rem; }
+
+// Date du dernier relevé où un chiffre a bougé (monde-val "date_donnees") — visible dès l'ouverture.
+.badge-donnees {
+  display: inline-block; margin-left: 0.3rem; padding: 0.05rem 0.5rem; border-radius: 0.8rem;
+  font-size: 0.85rem; white-space: nowrap; background: rgba(24, 79, 149, 0.08); color: #184f95;
+}

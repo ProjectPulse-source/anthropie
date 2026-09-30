@@ -9,7 +9,9 @@ ne pese pas partout de la meme facon ».
 Cahier des charges : 06_PROMOTION/DOSSIER_PAGE_DETTE_INTERNATIONALE.md (depot D:/PRO), arrete
 apres trois avis externes (29/09/2026). Quatre mots, quatre definitions :
   STOCK        = dette brute / PIB
-  PRIX         = taux apparent = interets de l'annee t / dette de fin t-1 (convention BCE)
+  PRIX         = taux IMPLICITE = interets de l'annee t / dette de fin t-1 (convention de la BCE). Ce n'est PAS
+                 l'« apparent cost » d'Eurostat (interets / dette MOYENNE de l'annee) : les deux sont proches,
+                 non identiques -- d'ou le nom, fixe par la contre-expertise PRO-20260930-061613.
   CHARGE       = interets / recettes publiques
   TRANSMISSION = part de la dette a moins d'un an, ecart taux a 10 ans - prix
 Identite EXACTE, verifiee pays par pays (assertion) :
@@ -235,7 +237,9 @@ def niveau_europe() -> tuple[str, list[dict]]:
     D = eurostat("gov_10dd_edpt1", [an_1, an], na_item="GD", sector="S13", unit="MIO_NAC")
     DP = eurostat("gov_10dd_edpt1", [an], na_item="GD", sector="S13", unit="PC_GDP")
     ans_inf = [str(int(an) - k) for k in (3, 2, 1)]
-    H = eurostat("prc_hicp_aind", ans_inf, coicop="CP00", unit="RCH_A_AVG")
+    # Cinq ans d'inflation : la fenêtre de 3 ans est celle de la page, 2, 4 et 5 ans servent au test de
+    # robustesse demandé par la contre-expertise PRO-20260930-061613 (recalculé et gardé à chaque passage).
+    H = eurostat("prc_hicp_aind", [str(int(an) - k) for k in (5, 4, 3, 2, 1)], coicop="CP00", unit="RCH_A_AVG")
     T10 = eurostat("irt_lt_mcby_a", [an], int_rt="MCBY")
     M1 = eurostat("gov_10dd_ggd", [an], na_item="GD", sector="S13", sector2="S1_S2", maturity="Y_LE1", unit="MIO_NAC")
     MT = eurostat("gov_10dd_ggd", [an], na_item="GD", sector="S13", sector2="S1_S2", maturity="TOTAL", unit="MIO_NAC")
@@ -251,10 +255,14 @@ def niveau_europe() -> tuple[str, list[dict]]:
         if abs(charge - stock * prix / rec) > 1e-9:
             fail("identite non verifiee pour %s" % g)
         infl = [H[(g, a)] for a in ans_inf if (g, a) in H]
+        fen = {}
+        for k in (2, 3, 4, 5):
+            v = [H.get((g, str(int(an) - j))) for j in range(1, k + 1)]
+            fen[str(k)] = sum(v) / k if None not in v else None
         part1 = (100 * M1[(g, an)] / MT[(g, an)]) if (g, an) in M1 and MT.get((g, an)) else None
         rows.append(dict(code=g, nom=NOMS[g], euro=g in euro, stock_fin=dp, stock=stock, prix=prix, recettes=rec,
                          charge=charge, inflation=(sum(infl) / len(infl)) if len(infl) == 3 else None,
-                         taux10=T10.get((g, an)), part_1an=part1))
+                         inflation_fenetres=fen, taux10=T10.get((g, an)), part_1an=part1))
     if manquants:
         log("Europe : pays sans donnees completes pour %s : %s" % (an, ", ".join(manquants)))
     if len(rows) < 25:
@@ -307,11 +315,16 @@ def niveau_emergents() -> tuple[str, list[dict]]:
     an_fmi = str(datetime.now().year - 1)
     out = []
     for p in EMERGENTS:
-        st = dette[p].get(an_fmi)
         ch = wb.get(p)
+        # Contre-expertise PRO-20260930-061613 (P1) : dette et charge de la MÊME année. La charge Banque
+        # mondiale est datée (2021 pour la Chine…) : on lit la dette FMI de cette année-là, jamais celle de l'an dernier.
+        an_ligne = ch[0] if ch else None
+        st = dette[p].get(an_ligne) if an_ligne else None
+        if ch and st is None:
+            fail("FMI : dette de %s absente pour %s, année de la charge Banque mondiale" % (p, an_ligne))
         out.append(dict(code=p, nom=NOMS[p], niveau="emergent", badge="indicatif", stock=st, prix=None, recettes=None,
-                        charge=ch[1] if ch else None, charge_annee=ch[0] if ch else None,
-                        note="dette FMI (administrations publiques) ; intérêts Banque mondiale (administration centrale)"))
+                        charge=ch[1] if ch else None, charge_annee=an_ligne, annee=an_ligne,
+                        note="dette FMI et intérêts Banque mondiale de la même année ; intérêts de la seule administration centrale"))
     return an_fmi, out
 
 
@@ -343,6 +356,16 @@ def statistiques(rows: list[dict]) -> dict:
         g = [x for x in hors if x is not k]
         loo.append(ols([x["stock"] for x in g], [x["charge"] for x in g])[1])
     s["pente_hors_loo"] = dict(min=min(loo), max=max(loo))
+    # Robustesse de la fenêtre d'inflation (2 à 5 ans) : si le signe ou l'ordre de grandeur changent, les
+    # coefficients sortent de la page (garde de prose « coefficients robustes »).
+    rob = []
+    for k in ("2", "3", "4", "5"):
+        g = [x for x in rows if x["inflation_fenetres"].get(k) is not None]
+        c, r2 = ols2([1.0 if x["euro"] else 0.0 for x in g], [x["inflation_fenetres"][k] for x in g], [x["prix"] for x in g])
+        he = [x for x in g if not x["euro"]]
+        rob.append(dict(fenetre=int(k), n=len(g), r2=r2, effet_euro=c[1], effet_inflation=c[2],
+                        r2_hors=ols([x["inflation_fenetres"][k] for x in he], [x["prix"] for x in he])[2]))
+    s["robustesse_inflation"] = rob
     return s
 
 
@@ -493,15 +516,18 @@ def transmission(rows, an, source):
     ymax = math.ceil(max(fy(x) for x in g) * 2) / 2
     ymin = min(0.0, math.floor(min(fy(x) for x in g) * 2) / 2)
     etiq = {"FR": "h", "IT": "d", "DE": "d", "EL": "h", "HU": "g", "SE": "h", "PT": "h", "DK": "d"}
-    titre = "La transmission : ce qui arrive à échéance, et à quel écart de taux (%s)" % an
+    titre = "Pression de refinancement : échéances et écart de taux, %s" % an
+    # Contre-expertise PRO-20260930-061613 (P1) : repère conditionnel, jamais une prévision -- le <desc> lu par
+    # les lecteurs d'écran ne doit pas affirmer plus que le texte visible.
     return nuage(g, fx, fy, xmax, ymax, 5, 0.5,
-                 "part de la dette qui arrive à échéance dans l'année",
-                 "écart taux à 10 ans − prix payé, en points",
+                 "part de la dette à échéance résiduelle de moins d'un an",
+                 "écart rendement à 10 ans − taux implicite du stock, en points",
                  "mt", titre,
-                 "Chaque point est un pays : plus il est à droite, plus sa dette se refinance vite ; plus il est haut, plus le taux "
-                 "de marché dépasse le prix moyen de son stock. En haut à droite, la charge montera le plus vite ; sous zéro, "
-                 "le stock coûte plus cher que le marché.",
-                 source, "Taux de convergence à 10 ans ; échéance résiduelle, dette de Maastricht. Repère, non prévision.",
+                 "Chaque point est un pays : à droite, une plus grande part de la dette arrive à échéance dans l'année ; en haut, "
+                 "le rendement harmonisé à 10 ans dépasse davantage le taux implicite du stock. Si les conditions de financement "
+                 "restaient supérieures au coût de la dette remplacée, les refinancements pousseraient le coût moyen à la hausse. "
+                 "Sous zéro, l'indicateur est orienté dans l'autre sens. Repère, non prévision.",
+                 source, "Rendement de convergence à 10 ans, non le coût de toutes les émissions nouvelles. Repère, non prévision.",
                  etiq, ymin=ymin, fmt_y=lambda v: fr(v, 1) + " pt")
 
 
@@ -551,6 +577,13 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents) -> dict:
             A["%s_ecart_taux" % c.lower()] = fr(x["taux10"] - x["prix"], 2) + " point"
             A["%s_taux10" % c.lower()] = pct(x["taux10"], 2)
     A["an_fmi"] = an_fmi
+    rob = stats["robustesse_inflation"]
+    A["rob_euro_min"] = fr(-max(r["effet_euro"] for r in rob), 1)
+    A["rob_euro_max"] = fr(-min(r["effet_euro"] for r in rob), 1)
+    A["rob_infl_min"] = fr(min(r["effet_inflation"] for r in rob), 2)
+    A["rob_infl_max"] = fr(max(r["effet_inflation"] for r in rob), 2)
+    A["rob_r2_min"] = fr(min(r["r2"] for r in rob), 2)
+    A["rob_r2_max"] = fr(max(r["r2"] for r in rob), 2)
     ORD = {1: "première", 2: "deuxième", 3: "troisième", 4: "quatrième", 5: "cinquième", 6: "sixième"}
     classement = sorted(rows, key=lambda x: -x["stock_fin"])
     rang = [x["code"] for x in classement].index("FR") + 1
@@ -576,11 +609,18 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents) -> dict:
     se, de, dk = by["SE"], by["DE"], by["DK"]
     affirmations = [
         ("la Suède paie comme l'Allemagne", abs(se["prix"] - de["prix"]) < 0.15),
+        ("FAQ « pas systématiquement » : l'Allemagne paie moins que la France", de["prix"] < F["prix"]),
+        ("FAQ « pas systématiquement » : d'autres pays de la zone euro paient davantage",
+         any(x["euro"] and x["prix"] > F["prix"] for x in rows)),
         ("le prix ne suit pas le stock (R2 < 0,1)", stats["prix_stock_r2"] < 0.1),
         ("hors euro, le prix suit l'inflation plus que dans l'euro",
          stats["prix_inflation_hors"]["r2"] > stats["prix_inflation_euro"]["r2"] + 0.2),
-        ("la charge française montera (taux à 10 ans > prix)", F["taux10"] > F["prix"]),
-        ("la charge danoise tend à baisser (taux à 10 ans < prix)", dk["taux10"] < dk["prix"]),
+        ("indicateur français orienté à la hausse (rendement 10 ans > taux implicite)", F["taux10"] > F["prix"]),
+        ("indicateur danois orienté dans l'autre sens (rendement 10 ans < taux implicite)", dk["taux10"] < dk["prix"]),
+        ("coefficients robustes à la fenêtre d'inflation (signes stables, facteur < 2)",
+         all(r["effet_euro"] < 0 and r["effet_inflation"] > 0 for r in stats["robustesse_inflation"])
+         and max(r["effet_euro"] for r in stats["robustesse_inflation"]) / min(r["effet_euro"] for r in stats["robustesse_inflation"]) > 0.5
+         and min(r["effet_inflation"] for r in stats["robustesse_inflation"]) / max(r["effet_inflation"] for r in stats["robustesse_inflation"]) > 0.5),
         ("le Japon consacre moins que la France (base OCDE)", av["JPN"]["charge"] < av["FRA"]["charge"]),
         ("la dette nette suisse est négative", (av["CHE"].get("dette_nette") or 0) < 0),
         ("le prix français est dans la moyenne de la zone euro", abs(F["prix"] - stats["prix_moyen_euro"]) < 0.4),
@@ -639,10 +679,11 @@ def main() -> int:
         "dette-monde-prix.svg": nuage(
             [x for x in rows if x["inflation"] is not None], lambda x: x["inflation"], lambda x: x["prix"], 14, 6, 2, 1,
             "inflation moyenne %s-%s (IPCH)" % (str(int(an) - 3), str(int(an) - 1)),
-            "prix : intérêts %s / dette fin %s" % (an, str(int(an) - 1)), "mp",
-            "Qu'est-ce qui fait le prix ? Prix de la dette et inflation récente, %s" % an,
-            "Hors de la zone euro, le prix payé suit de près l'inflation récente ; dans la zone euro, beaucoup moins : les pays "
-            "baltes ont connu une forte inflation sans payer cher. La Suède, hors euro, paie comme l'Allemagne.",
+            "taux implicite : intérêts %s / dette fin %s" % (an, str(int(an) - 1)), "mp",
+            "Prix de la dette et inflation récente : l'Europe en %s" % an,
+            "Hors de la zone euro, le taux implicite est étroitement associé à l'inflation récente ; dans la zone euro, beaucoup "
+            "moins : les pays baltes ont connu une forte inflation sans taux élevé. La Suède, hors euro, a le même taux implicite "
+            "que l'Allemagne. Association observée sur une année, non causalité.",
             "Eurostat prc_hicp_aind (IPCH), gov_10a_main, gov_10dd_edpt1, %s" % an,
             "Relation descriptive sur une année, non causale.",
             {"FR": "h", "IT": "h", "DE": "d", "HU": "h", "RO": "h", "PL": "h", "SE": "b", "EE": "h", "LT": "h",
@@ -654,7 +695,8 @@ def main() -> int:
         "meta": {"annee": an, "releve_le": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
                  "page": "https://" + PAGE_URL, "licence": "CC BY 4.0",
                  "definitions": {"stock": "dette brute / PIB (dette de fin d'année précédente pour la décomposition)",
-                                 "prix": "intérêts de l'année / dette de fin d'année précédente (taux apparent)",
+                                 "prix": "taux implicite : intérêts de l'année / dette de fin d'année précédente "
+                                         "(convention de la BCE ; différent du « coût apparent » d'Eurostat, fondé sur la dette moyenne)",
                                  "charge": "intérêts / recettes publiques",
                                  "transmission": "part de la dette à moins d'un an ; écart taux à 10 ans − prix"},
                  "identite": "I_t/R_t = (D_{t-1}/Y_t) x (I_t/D_{t-1}) / (R_t/Y_t)",

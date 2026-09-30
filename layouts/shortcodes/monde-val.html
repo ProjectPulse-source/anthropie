@@ -3,6 +3,14 @@
        dette-val : aucun chiffre en dur dans la prose ; clé inconnue ou données absentes = échec
        de build (une exclusion peut être légitime ; le silence, jamais). */ -}}
 {{- $k := .Get 0 -}}
+{{- if eq $k "date_donnees" -}}
+  {{- /* date du dernier relevé où un chiffre a bougé (releve_le à la racine, conservé à données identiques) */ -}}
+  {{- with site.Data.dette_monde.releve_le -}}
+    {{- $t := time . -}}
+    {{- $mois := slice "janvier" "février" "mars" "avril" "mai" "juin" "juillet" "août" "septembre" "octobre" "novembre" "décembre" -}}
+    {{- printf "%d %s %d" $t.Day (index $mois (sub (int $t.Month) 1)) $t.Year -}}
+  {{- else -}}{{- errorf "monde-val: releve_le absent de data/dette_monde.json (page %s)" $.Page.RelPermalink -}}{{- end -}}
+{{- else -}}
 {{- $a := "" -}}
 {{- with site.Data.dette_monde -}}{{- $a = .affichage -}}{{- end -}}
 {{- if not $a -}}
@@ -12,4 +20,5 @@
   {{- if not $v -}}
     {{- errorf "monde-val: cle %q inconnue du bloc affichage (page %s)" $k .Page.RelPermalink -}}
   {{- else -}}{{- $v -}}{{- end -}}
+{{- end -}}
 {{- end -}}

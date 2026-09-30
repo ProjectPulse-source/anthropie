@@ -53,6 +53,19 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-09-30 — Page internationale : corrections de la contre-expertise PRO-20260930-061613, prête à publier
+
+Verdict de la pièce : publier après corrections, sans attendre le WEO. Arbitrage :
+`D:\PRO\.claude\external-audits\ARBITRATIONS\PRO-20260930-061613_arbitrage.md` (13 points acceptés, audit clos).
+« Taux implicite » partout (le « coût apparent » d'Eurostat se fonde sur la dette moyenne) ; transmission devenue un
+repère conditionnel, figure et `<desc>` compris ; coefficients prix ~ euro + inflation testés sur des fenêtres de 2 à
+5 ans (signes stables, fourchette publiée, **garde bloquante** si un signe s'inverse) ; émergents : dette FMI de
+l'année de la charge Banque mondiale ; tableau hors UE scindé (OCDE, émergents) ; stock de clôture / de départ ;
+FAQ « Pas systématiquement » et « ne permettent pas d'estimer le risque de crise » (deux gardes de prose de plus) ;
+badge « Données : » lu de `releve_le` ; ancres figées sur toutes les sections. `check-all --reseau` à 0. Fiche D0
+dans `D:\PRO\06_PROMOTION\FEUILLE_DE_ROUTE_GEO_RESSOURCES.md`. Toujours `draft: true` : la publication (retrait du
+brouillon, volet 3 du dossier dette, push) attend la demande de l'auteur.
+
 ### 2026-09-30 — Mise à jour automatique de la page internationale (`dette-monde.yml`), contre-expertise lancée
 
 **Mandat de l'auteur** : programmer la mise à jour. Workflow `dette-monde.yml` (commit `5f0eda0`), calqué sur
