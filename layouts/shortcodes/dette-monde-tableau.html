@@ -54,6 +54,24 @@
   </tbody>
 </table>
 </div>
+{{- else if eq $n "ecarts" -}}
+{{- $e := $d.ecarts_allemagne -}}
+{{- if not $e -}}{{- errorf "dette-monde-tableau: bloc ecarts_allemagne absent (%s)" .Page.RelPermalink -}}{{- end -}}
+<div class="table-scroll">
+<table class="dette-monde-table dette-monde-table--ecarts">
+  <caption>Écart de taux à 10 ans avec l'Allemagne, en points — Eurostat, rendements de convergence des emprunts d'État</caption>
+  <thead><tr><th scope="col">Pays</th>{{ range $e.annees }}<th scope="col">{{ . }}</th>{{ end }}</tr></thead>
+  <tbody>
+  {{- range $e.pays }}
+    {{- $p := . }}
+    <tr{{ if eq .code "FR" }} class="is-france"{{ end }}><th scope="row">{{ .nom }}<br><small>{{ with .euro_depuis }}euro depuis {{ . }}{{ else }}hors euro{{ end }}</small></th>
+    {{- /* eq nil et non « with » : un écart nul (0,00) est une valeur, pas une absence */ -}}
+    {{- range $e.annees }}{{ $v := index $p.ecarts . }}<td>{{ if eq $v nil }}—{{ else }}{{ if gt $v 0.0 }}+{{ end }}{{ replace (replace (printf "%.2f" $v) "." ",") "-" "−" }}{{ end }}</td>{{ end }}</tr>
+  {{- end }}
+    <tr><th scope="row">Allemagne<br><small>taux à 10 ans</small></th>{{ range $e.annees }}<td>{{ replace (replace (printf "%.2f" (index $e.allemagne .)) "." ",") "-" "−" }}&nbsp;%</td>{{ end }}</tr>
+  </tbody>
+</table>
+</div>
 {{- else -}}
-  {{- errorf "dette-monde-tableau: niveau %q inconnu (europe | avances | emergents) dans %s" $n .Page.RelPermalink -}}
+  {{- errorf "dette-monde-tableau: niveau %q inconnu (europe | avances | emergents | ecarts) dans %s" $n .Page.RelPermalink -}}
 {{- end -}}

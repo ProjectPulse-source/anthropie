@@ -369,6 +369,27 @@ def statistiques(rows: list[dict]) -> dict:
     return s
 
 
+# ------------------------------------------------------------------ trente ans d'écarts avec l'Allemagne
+# Question de l'auteur (30/09/2026) : « l'euro fait-il baisser le coût de la dette ? », à trancher par les chiffres et
+# non par le récit courant. Test : les pays restés HORS de l'euro (Suède, Danemark ; Pologne et Hongrie depuis 2001)
+# ont-ils suivi la même trajectoire que les membres ? Rendements de convergence à 10 ans, Eurostat.
+ECARTS_PAYS = [("FR", 1999), ("IT", 1999), ("ES", 1999), ("PT", 1999), ("IE", 1999), ("EL", 2001),
+               ("SE", None), ("DK", None), ("PL", None), ("HU", None)]
+
+
+def ecarts_allemagne(an: str) -> dict:
+    ans = ["1995", "1998", "2007", "2012", an]
+    T = eurostat("irt_lt_mcby_a", ans, int_rt="MCBY")
+    if any(("DE", a) not in T for a in ans):
+        fail("Eurostat irt_lt_mcby_a : taux allemand absent pour une des annees %s" % ans)
+    pays = []
+    for g, entree in ECARTS_PAYS:
+        e = {a: (T[(g, a)] - T[("DE", a)]) if (g, a) in T else None for a in ans}
+        pays.append(dict(code=g, nom=NOMS[g], euro_depuis=entree, ecarts=e))
+    return dict(annees=ans, allemagne={a: T[("DE", a)] for a in ans}, pays=pays,
+                source="Eurostat irt_lt_mcby_a (rendements de convergence à 10 ans des emprunts d'État)")
+
+
 def faux_jumeaux(rows: list[dict], seuil: float = 10.0, n: int = 3) -> list[dict]:
     """Regle PUBLIEE, fixee avant calcul : pour chaque pays, son plus proche voisin en stock ;
     couples a ecart de stock < seuil points ; classes par ecart de charge ; les n premiers."""
@@ -532,7 +553,7 @@ def transmission(rows, an, source):
 
 
 # ------------------------------------------------------------------ affichage
-def affichage(an, rows, stats, jum, avances, an_fmi, emergents) -> dict:
+def affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts) -> dict:
     by = {x["code"]: x for x in rows}
     F = by["FR"]
     A = {"annee": an, "annee_1": str(int(an) - 1), "n_pays": str(len(rows)),
@@ -603,6 +624,11 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents) -> dict:
             A[c + "_charge"] = pct(x["charge"], 0)
             A[c + "_charge_annee"] = x["charge_annee"]
     av = {x["code"]: x for x in avances}
+    E = {x["code"]: x["ecarts"] for x in ecarts["pays"]}
+    for c, a in (("IT", "1995"), ("IT", "1998"), ("ES", "1995"), ("ES", "1998"), ("SE", "1995"), ("SE", "1998"),
+                 ("EL", "2012"), ("PT", "2012"), ("IE", "2012"), ("ES", "2012"), ("IT", "2012"), ("SE", "2012"),
+                 ("DK", "2012"), ("HU", "2012"), ("SE", an), ("DK", an), ("FR", an), ("IT", an), ("PL", an), ("HU", an)):
+        A["ec_%s_%s" % (c.lower(), "an" if a == an else a)] = fr(abs(E[c][a]), 1 if abs(E[c][a]) >= 10 else 2)
     A["usa_fra_rapport"] = fr(av["USA"]["charge"] / av["FRA"]["charge"], 1)
     # GARDES DE PROSE : la page affirme ces faits en toutes lettres. Si une nouvelle donnée les
     # dément, on s'arrête au lieu de publier une phrase devenue fausse (« état déclaré ≠ état réel »).
@@ -623,6 +649,23 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents) -> dict:
          and min(r["effet_inflation"] for r in stats["robustesse_inflation"]) / max(r["effet_inflation"] for r in stats["robustesse_inflation"]) > 0.5),
         ("le Japon consacre moins que la France (base OCDE)", av["JPN"]["charge"] < av["FRA"]["charge"]),
         ("la dette nette suisse est négative", (av["CHE"].get("dette_nette") or 0) < 0),
+        # Section « trente ans d'écarts » : chaque constat de la prose, recalculé.
+        ("avant 1999, les écarts italien et espagnol fondent (> 2 points en 1995, < 0,5 en 1998)",
+         all(E[c]["1995"] > 2 and E[c]["1998"] < 0.5 for c in ("IT", "ES"))),
+        ("la Suède, hors euro, converge aussi avant 1999 (> 2 points en 1995, < 0,6 en 1998)",
+         E["SE"]["1995"] > 2 and E["SE"]["1998"] < 0.6),
+        ("en 2012, Grèce, Portugal, Irlande, Espagne, Italie > 3 points ; Suède et Danemark < 0,5",
+         all(E[c]["2012"] > 3 for c in ("EL", "PT", "IE", "ES", "IT")) and all(abs(E[c]["2012"]) < 0.5 for c in ("SE", "DK"))),
+        ("écarts de 2012 : la Suède au-dessus, le Danemark au-dessous de l'Allemagne", E["SE"]["2012"] > 0 > E["DK"]["2012"]),
+        ("en 2012, la Hongrie, hors euro, au-dessus de 3 points", E["HU"]["2012"] > 3),
+        ("en 2012, aucun pays hors euro du tableau n'atteint la Grèce ni le Portugal",
+         max(x["ecarts"]["2012"] for x in ecarts["pays"] if not x["euro_depuis"] and x["ecarts"]["2012"] is not None)
+         < min(E["EL"]["2012"], E["PT"]["2012"])),
+        ("aujourd'hui, la Suède et le Danemark empruntent sous l'Allemagne", E["SE"][an] < 0 and E["DK"][an] < 0),
+        ("aujourd'hui, la France au-dessus de l'Allemagne, l'Italie au-dessus de la France",
+         0 < E["FR"][an] < E["IT"][an]),
+        ("aujourd'hui, la Pologne et la Hongrie, hors euro, paient plus que l'Italie",
+         E["PL"][an] > E["IT"][an] and E["HU"][an] > E["IT"][an]),
         ("le prix français est dans la moyenne de la zone euro", abs(F["prix"] - stats["prix_moyen_euro"]) < 0.4),
         ("des pays moins endettés que la France ont une charge plus lourde", len(moins_chers_que_fr) >= 2),
         ("les faux jumeaux : le plus chargé paie plus cher", hi["prix"] > lo["prix"]),
@@ -647,6 +690,7 @@ def main() -> int:
     stats = statistiques(rows)
     jum = faux_jumeaux(rows)
     avances = niveau_avances(an)
+    ecarts = ecarts_allemagne(an)
     an_fmi, emergents = niveau_emergents()
     log("Avances hors UE : %d ; emergents : %d (FMI %s)" % (len(avances), len(emergents), an_fmi))
     log("R2 charge~stock %.2f | euro %.2f | hors %.2f | prix~stock %.2f | prix~euro+inflation %.2f"
@@ -654,8 +698,11 @@ def main() -> int:
            stats["prix_stock_r2"], stats["prix_euro_inflation"]["r2"]))
     for j in jum:
         log("  faux jumeaux : %s / %s (rapport de charge %.1f)" % (j["bas"], j["haut"], j["rapport_charge"]))
+    # Les gardes de prose vivent dans affichage() : on le calcule AVANT --check, sinon --check annoncerait
+    # « gardes passees » sans en avoir execute aucune (defaut trouve le 30/09/2026).
+    aff = affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts)
     if check:
-        log("--check : gardes passees, rien ecrit.")
+        log("--check : gardes passees (%d cles d'affichage), rien ecrit." % len(aff))
         return 0
     src_eu = ("Eurostat gov_10a_main (D41PAY, TR), gov_10dd_edpt1 (GD), nama_10_gdp (B1GQ), %s ; "
               "administrations publiques S.13, monnaie nationale" % an)
@@ -704,8 +751,8 @@ def main() -> int:
                              "avances": "avec réserve (OCDE Economic Outlook, passifs financiers bruts SCN, intérêts bruts)",
                              "emergents": "indicatif (FMI WEO et Banque mondiale, administration centrale)"}},
         "europe": rows, "statistiques": stats, "faux_jumeaux": jum, "avances": avances,
-        "emergents": emergents, "annee_fmi": an_fmi,
-        "affichage": affichage(an, rows, stats, jum, avances, an_fmi, emergents),
+        "emergents": emergents, "annee_fmi": an_fmi, "ecarts_allemagne": ecarts,
+        "affichage": aff,
     }
     # releve_le à la RACINE : le sitemap le lit pour toute page déclarant `donnees: [dette_monde]`.
     # À données identiques, on garde l'ancienne date et on n'écrit rien (même règle que
