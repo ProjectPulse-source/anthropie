@@ -70,13 +70,16 @@
       "kindle" "Kindle edition"
       "fiche" "Contents, excerpts and reviews&nbsp;→" -}}
 {{- end -}}
+{{- /* Fiche du livre dans une autre langue que la page (livre français cité depuis une page anglaise) :
+       le lien le déclare (hreflang), au lieu de laisser croire à une page dans la langue du lecteur. */ -}}
+{{- $hl := cond (ne $livre.Lang .Page.Lang) (printf " hreflang=\"%s\"" $livre.Lang) "" -}}
 <aside class="appel-livre">
   {{ partial "book-cover.html" (dict "slug" $slug "alt" (printf "Couverture — %s" $livre.Title) "wrapClass" "appel-livre__cover-wrap" "class" "appel-livre__cover" "sizes" "150px" "lang" $livre.Lang) }}
   <div class="appel-livre__corps">
     {{- /* sur="…" (30/09) : une page qui n'est PAS issue du livre (comparaison internationale) ne peut pas
            porter « Le livre dont cette page est issue » ; elle nomme le lien vrai. Absent : libellé par défaut. */}}
     <p class="appel-livre__sur">{{ with .Get "sur" }}{{ . }}{{ else }}{{ $T.sur }}{{ end }}</p>
-    <h3 class="appel-livre__titre"><a href="{{ $livre.RelPermalink }}">{{ partial "fr-typo.html" $livre.Title }}</a></h3>
+    <h3 class="appel-livre__titre"><a href="{{ $livre.RelPermalink }}"{{ $hl | safeHTMLAttr }}>{{ partial "fr-typo.html" $livre.Title }}</a></h3>
     {{- with $p.subtitle }}<p class="appel-livre__soustitre">{{ partial "fr-typo.html" . }}</p>{{ end }}
     <div class="appel-livre__argu">{{ .Inner | markdownify }}</div>
     <p class="appel-livre__meta">
@@ -99,6 +102,6 @@
       {{- with $broche }}<a class="appel-livre__btn appel-livre__btn--plein" href="{{ . }}">{{ $T.acheter }}{{ with $prix }}&nbsp;— {{ . | safeHTML }}{{ end }}</a>{{ end }}
       {{- with $kindle }}<a class="appel-livre__btn" href="{{ . }}">{{ $T.kindle }}{{ with $prixK }}&nbsp;— {{ . | safeHTML }}{{ end }}</a>{{ end }}
     </p>
-    <p class="appel-livre__fiche"><a href="{{ $livre.RelPermalink }}">{{ $T.fiche | safeHTML }}</a></p>
+    <p class="appel-livre__fiche"><a href="{{ $livre.RelPermalink }}"{{ $hl | safeHTMLAttr }}>{{ $T.fiche | safeHTML }}</a></p>
   </div>
 </aside>
