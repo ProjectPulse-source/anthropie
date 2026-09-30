@@ -325,12 +325,23 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
   letter-spacing: 0.16em; text-transform: uppercase;
   color: var(--color-text-faint); margin: 0 0 12px;
 }
-.dette-chiffres__valeurs { font-size: 1.15em; margin: 0 0 12px; }
-.dette-chiffres__live { margin: 0 0 4px; }
-.dette-chiffres__live-label { display: block; font-size: .8em; color: var(--color-text-subtle); }
-.dette-chiffres__live-valeur {
+// HIERARCHIE (auteur, 30/09) : le DERNIER CHIFFRE OFFICIEL en grand, la simulation en petit dessous. Jusque-la
+// la simulation s'affichait a 2,2 em et la donnee officielle a 1,15 em : le chiffre le moins sur etait le plus
+// visible -- et c'est lui qu'un lecteur pressé ou un journaliste reprenait. La simulation garde son role (la dette
+// n'est pas statique) sans se faire passer pour une donnee.
+.dette-chiffres__valeurs { font-size: 1.05em; margin: 0 0 14px; }
+.dette-chiffres__valeurs strong:first-child {
+  display: block;
   font-family: var(--font-sans); font-variant-numeric: tabular-nums;
   font-weight: 700; color: var(--color-accent);
+  font-size: clamp(1.6rem, 7vw, 2.2em);
+  line-height: 1.15; max-width: 100%;  // retour possible apres « milliards » ; montant et unite lies par insecable
+}
+.dette-chiffres__live { margin: 0 0 4px; font-family: var(--font-sans); font-size: var(--fs-small); }
+.dette-chiffres__live-label { display: inline; color: var(--color-text-subtle); }
+.dette-chiffres__live-valeur {
+  font-family: var(--font-sans); font-variant-numeric: tabular-nums;
+  font-weight: 600; color: var(--color-text-subtle);
   display: inline-block;
   // SORTAIT DU CADRE SUR ANDROID (auteur, 28/09). Deux causes, un seul remede
   // ici : la taille etait fixe en `em`, donc un montant long depassait la
@@ -339,7 +350,7 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
   // montant et son unite ensemble ; `clamp` fait retrecir le chiffre au lieu de
   // le laisser deborder. Le passage au dixieme de milliard raccourcit en outre
   // la chaine de 19 a 11 caracteres, ce qui traite la cause plutot que l'effet.
-  font-size: clamp(1.15rem, 5.4vw, 1.9em);
+  font-size: 1em;
   white-space: nowrap;
   max-width: 100%;
 }
@@ -358,7 +369,7 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
 // precis et remonte au parent de sa valeur pour l'afficher : reordonner le
 // DOM pour gagner une mise en page mettrait en jeu le seul organe de cette
 // page qui casse sans rien dire.
-.dette-chiffres--longue .dette-chiffres__live-valeur { font-size: 2.2em; }
+// (30/09) la variante longue ne grossit plus la simulation : voir HIERARCHIE plus haut.
 .dette-chiffres__figure { margin: 18px 0 0; }
 // Le SVG porte un viewBox : le laisser occuper toute la largeur du bloc
 // plutot que sa taille nominale de 720 px, qui laissait un vide a droite.

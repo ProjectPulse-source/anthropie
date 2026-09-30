@@ -31,7 +31,7 @@
 {{- if and $live (not $d.live) -}}{{- errorf "dette-chiffres: bloc live absent du JSON (relancer le script)" -}}{{- end -}}
 {{- $T := dict
     "titre" "Dette publique française&nbsp;— dernière donnée officielle"
-    "valeurs" "<strong>%s&nbsp;milliards d'euros</strong>, soit <strong>%s&nbsp;%% du PIB</strong>, au %s."
+    "valeurs" "<strong>%s&nbsp;milliards d'euros</strong> soit <strong>%s&nbsp;%% du PIB</strong>, au %s."
     "note" "Ordre de grandeur <strong>mécanique</strong>, extrapolé depuis la publication INSEE du %s au rythme observé sur un an (+%s&nbsp;%% l'an), et arrondi au milliard&nbsp;— ni une observation, ni une prévision, ni la dette d'aujourd'hui."
     "source" "Source&nbsp;: INSEE, dette de Maastricht des administrations publiques (séries 010777616 et 010777608"
     "source_hist" "&nbsp;; série annuelle au 31&nbsp;décembre depuis %s, comptes nationaux base 2020"
@@ -41,7 +41,7 @@
     "lien_titre" "Combien coûte la dette publique&nbsp;?"
     "fait1" "du PIB en %s, avant le décrochage"
     "fait2" "le ratio dette/PIB, multiplié depuis %s"
-    "live_label" "Ordre de grandeur illustratif, non officiel"
+    "live_label" "Simulation non officielle, au rythme de l'an passé, pour aujourd'hui"
     "fait3_cle" "jamais"
     "fait3" "revenue à son niveau de dix ans plus tôt"
     "fait4" "années de baisse&nbsp;— jamais plus de %s d'affilée"
@@ -50,7 +50,7 @@
 {{- if $en -}}
   {{- $T = dict
       "titre" "French public debt&nbsp;— latest official figure"
-      "valeurs" "<strong>%s billion euros</strong>, or <strong>%s%% of GDP</strong>, in %s."
+      "valeurs" "<strong>%s billion euros</strong> or <strong>%s%% of GDP</strong>, in %s."
       "note" "A <strong>mechanical</strong> order of magnitude, extrapolated from the INSEE release for %s at the pace observed over one year (+%s%% a year) and rounded to the nearest billion&nbsp;— neither an observation, nor a forecast, nor today's debt."
       "source" "Source: INSEE, Maastricht debt of general government (series 010777616 and 010777608"
       "source_hist" "; annual series at 31 December since %s, national accounts base 2020"
@@ -60,7 +60,7 @@
       "lien_titre" "What does French public debt cost?"
       "fait1" "of GDP in %s, before the break"
       "fait2" "the debt-to-GDP ratio, multiplied since %s"
-      "live_label" "Illustrative order of magnitude, not official"
+      "live_label" "Unofficial simulation, at last year's pace, for today"
       "fait3_cle" "never"
       "fait3" "back to its level of ten years earlier"
       "fait4" "years of decline&nbsp;— never more than %s in a row"
