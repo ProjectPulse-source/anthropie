@@ -73,8 +73,12 @@
       {{- else }}{{ $autres = $autres | append . }}{{ end -}}
     {{- end -}}
     <section class="ressources-index__bloc" id="{{ $id }}" aria-labelledby="bloc-{{ $id }}">
-      <h2 id="bloc-{{ $id }}">{{ partial "fr-typo.html" .titre }}</h2>
-      {{ with .chapo }}<p class="ressources-index__chapo">{{ partial "fr-typo.html" . }}</p>{{ end }}
+      {{- /* En-tête de bloc (01/10/2026, accord avec Série AWP et Publications) : intitulé court, phrase en italique,
+             filet bleu. `section-title` exempte le h2 du grand titre à filet des pages. */}}
+      <div class="ressources-index__tete">
+        <h2 id="bloc-{{ $id }}" class="ressources-index__titre-bloc section-title">{{ partial "fr-typo.html" .titre }}</h2>
+        {{ with .chapo }}<p class="ressources-index__chapo">{{ partial "fr-typo.html" . }}</p>{{ end }}
+      </div>
       {{- range $encarts }}{{ partial "ressource-encart.html" (dict "page" .page "r" .r "isEn" $isEn) }}{{ end }}
       {{- with $dossier }}
         {{- $n := len . -}}{{- $mot := cond (lt $n (len $mots)) (index $mots $n) (string $n) -}}

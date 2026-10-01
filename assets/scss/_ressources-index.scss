@@ -10,7 +10,16 @@
 .pastilles--ancres a::after { content: "\2193"; }
 
 .ressources-index__bloc { margin-bottom: 2.75rem; scroll-margin-top: 5rem; }
-.ressources-index__chapo { color: var(--color-text-muted); max-width: 42rem; }
+.ressources-index__tete {
+  display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: 0.25rem 1.1rem; align-items: baseline;
+  padding: 0.5rem 0 0.4rem; border-bottom: 1px solid var(--color-accent-rule); margin: 0 0 0.25rem;
+}
+.home-section .ressources-index__tete h2.ressources-index__titre-bloc {
+  font-family: var(--font-sans); font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--color-accent); margin: 0; padding: 0; border: 0;
+}
+.ressources-index__chapo { font-style: italic; color: var(--color-text-muted); max-width: 70ch; margin: 0; }
+@media (max-width: 640px) { .ressources-index__tete { grid-template-columns: minmax(0, 1fr); } }
 .ressources-index__sous {
   font-family: var(--font-sans); font-size: 12px; font-weight: 600;
   letter-spacing: 0.1em; text-transform: uppercase;
@@ -23,30 +32,40 @@ main .ressources-index__liste {
   display: grid; gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(#{unquote("min(100%, 19rem)")}, 1fr));
 }
+main .ressources-index .ressources-index__liste:not(.ressources-index__liste--dossier) {
+  grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 2rem; row-gap: 0;
+  border-top: 1px solid var(--color-rule-soft);
+}
+@media (max-width: 680px) {
+  main .ressources-index .ressources-index__liste:not(.ressources-index__liste--dossier) { grid-template-columns: minmax(0, 1fr); }
+}
 main .ressources-index__liste--dossier {
   grid-template-columns: repeat(auto-fill, minmax(#{unquote("min(100%, 22rem)")}, 1fr));
 }
 
-// Carte : entière cliquable (le lien du titre s'étend sur elle), titre en lien bleu.
+// Entrée hors dossier : une ligne à filets (01/10/2026, accord avec Série AWP et Publications : le plein pour les
+// objets, le filet pour ce qui structure, le blanc pour le reste). Entière cliquable, titre en lien bleu.
 .ressources-index__entree {
   position: relative; display: flex; flex-direction: column; margin: 0;
-  background: var(--color-bg-card);
-  border-left: 3px solid var(--color-accent-rule);
-  transition: background 0.2s ease, box-shadow 0.2s ease;
-  h3 { font-size: 1.08rem; line-height: 1.35; margin: .25rem 0 .5rem; }
+  border-bottom: 1px solid var(--color-rule-soft);
+  h3 { font-size: 1.08rem; line-height: 1.35; margin: .25rem 0 .4rem; }
   h3 a { color: var(--color-link); }
   h3 a::after { content: ""; position: absolute; inset: 0; }
-  &:hover { background: var(--color-bg-elevated); box-shadow: 0 0 0 1px var(--color-accent-soft); }
   &:hover h3 a { color: var(--color-accent); text-decoration-color: var(--color-accent); }
-  &:focus-within { box-shadow: 0 0 0 2px var(--color-pivot); }
+  &:focus-within { outline: 2px solid var(--color-pivot); outline-offset: 2px; }
 }
-.ressources-index__texte { padding: 1rem 1.15rem; }
-// Carte du dossier : fond blanc, comme la vignette (même dessin sur fond blanc, scripts/og_dossier_dette.py).
+.ressources-index__texte { padding: 0.85rem 0; }
+// Carte du dossier de données : le seul « plein » de la page — fond blanc comme la vignette
+// (même dessin sur fond blanc, scripts/og_dossier_dette.py), filet bleu, partie texte teintée plus bas.
 .ressources-index__entree--vignette {
   background: var(--color-bg-elevated);
-  border-left-color: var(--color-accent);
+  border-bottom: 0;
+  border-left: 3px solid var(--color-accent);
   box-shadow: 0 0 0 1px var(--color-accent-soft);
+  transition: box-shadow 0.2s ease;
   &:hover { box-shadow: 0 0 0 1px var(--color-accent); }
+  &:focus-within { outline: 0; box-shadow: 0 0 0 2px var(--color-pivot); }
+  .ressources-index__texte { padding: 1rem 1.15rem; }
 }
 .ressources-index__vignette {
   display: block; width: 100%; height: auto; aspect-ratio: 720 / 378;

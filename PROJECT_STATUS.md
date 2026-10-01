@@ -53,6 +53,16 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-01 — `/ressources/` accordée aux pages refaites (variante B, registre à filets), POUSSÉ
+
+Ressources, refaite en premier, gardait douze cartes crème et des blocs ouverts par un grand titre à filet. Accord avec
+Série AWP et Publications (le plein pour les objets, le filet pour ce qui structure, le blanc pour le reste) : en-tête
+de bloc = intitulé court + phrase en italique au-dessus d'un filet bleu (`section-title`, exempté du grand titre) ;
+entrées hors dossier = lignes à filets sur deux colonnes, sans fond. Seul « plein » de la page : le dossier de
+données (vignette blanche, texte teinté, inchangé) ; encart « Pour enseigner » inchangé. Même composant sur l'accueil :
+la carte du Registre des coûts déportés y devient une entrée sur fond blanc. 0 débordement à 390 et 1 280 px (FR, EN,
+accueil). `hugo --minify` 0, `check-all --ci` 0, `audit-liens-build` 0 critique.
+
 ### 2026-10-01 — Page `/publications/` : chronologie filtrable (variante B), POUSSÉ — fin de la refonte des pages
 
 Les 20 publications en entrées compactes, groupées par mois : petite tuile de revue (classes `pub-thumb`, partagées
