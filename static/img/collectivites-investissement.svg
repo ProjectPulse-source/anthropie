@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 468" role="img" font-variant-numeric="tabular-nums" aria-labelledby="cs-t cs-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="cs-t">Investissement des collectivités et transferts reçus, France, en % du PIB</title><desc id="cs-d">Deux courbes depuis 1995 : l&#x27;investissement local oscille autour de 2 % du PIB, avec un creux marqué après 2013 ; les transferts reçus baissent de 2013 à 2017.</desc>
+<rect width="720" height="468" fill="#ffffff"/>
+<text x="0" y="18" font-size="13" font-weight="600" fill="#0A0A0E">Investissement des collectivités et transferts reçus, France, en % du PIB</text>
+<rect x="466.0" y="64" width="88.0" height="288" fill="#f3efe6"/>
+<line x1="48" y1="310.9" x2="708" y2="310.9" stroke="#e1e0d9"/>
+<text x="42.0" y="314.9" font-size="11" fill="#898781" text-anchor="end">2 %</text>
+<line x1="48" y1="228.6" x2="708" y2="228.6" stroke="#e1e0d9"/>
+<text x="42.0" y="232.6" font-size="11" fill="#898781" text-anchor="end">3 %</text>
+<line x1="48" y1="146.3" x2="708" y2="146.3" stroke="#e1e0d9"/>
+<text x="42.0" y="150.3" font-size="11" fill="#898781" text-anchor="end">4 %</text>
+<line x1="48" y1="64.0" x2="708" y2="64.0" stroke="#e1e0d9"/>
+<text x="42.0" y="68.0" font-size="11" fill="#898781" text-anchor="end">5 %</text>
+<text x="48.0" y="367.0" font-size="11" fill="#898781" text-anchor="middle">1995</text>
+<text x="158.0" y="367.0" font-size="11" fill="#898781" text-anchor="middle">2000</text>
+<text x="268.0" y="367.0" font-size="11" fill="#898781" text-anchor="middle">2005</text>
+<text x="378.0" y="367.0" font-size="11" fill="#898781" text-anchor="middle">2010</text>
+<text x="488.0" y="367.0" font-size="11" fill="#898781" text-anchor="middle">2015</text>
+<text x="598.0" y="367.0" font-size="11" fill="#898781" text-anchor="middle">2020</text>
+<text x="708.0" y="367.0" font-size="11" fill="#898781" text-anchor="middle">2025</text>
+<text x="510.0" y="384.0" font-size="11" fill="#52514e" text-anchor="middle">2014-2017</text>
+<text x="510.0" y="397.0" font-size="11" fill="#52514e" text-anchor="middle">baisse des dotations</text>
+<line x1="180.0" y1="64" x2="180.0" y2="352" stroke="#c3c2b7" stroke-dasharray="2 4"/>
+<text x="180.0" y="58.0" font-size="10" fill="#898781" text-anchor="middle">municipales 2001</text>
+<line x1="334.0" y1="64" x2="334.0" y2="352" stroke="#c3c2b7" stroke-dasharray="2 4"/>
+<text x="334.0" y="58.0" font-size="10" fill="#898781" text-anchor="middle">municipales 2008</text>
+<line x1="466.0" y1="64" x2="466.0" y2="352" stroke="#c3c2b7" stroke-dasharray="2 4"/>
+<text x="466.0" y="58.0" font-size="10" fill="#898781" text-anchor="middle">municipales 2014</text>
+<line x1="598.0" y1="64" x2="598.0" y2="352" stroke="#c3c2b7" stroke-dasharray="2 4"/>
+<text x="598.0" y="58.0" font-size="10" fill="#898781" text-anchor="middle">municipales 2020</text>
+<polyline points="48.0,255.4 70.0,245.1 92.0,239.6 114.0,248.1 136.0,235.1 158.0,215.0 180.0,210.0 202.0,185.3 224.0,178.1 246.0,180.7 268.0,190.3 290.0,189.4 312.0,201.2 334.0,198.0 356.0,178.2 378.0,92.1 400.0,194.4 422.0,203.4 444.0,202.5 466.0,215.5 488.0,231.5 510.0,246.9 532.0,254.9" fill="none" stroke="#8a8f98" stroke-width="2.6"/>
+<polyline points="48.0,289.7 70.0,299.5 92.0,315.0 114.0,316.7 136.0,303.6 158.0,292.3 180.0,297.2 202.0,306.3 224.0,301.7 246.0,294.0 268.0,285.5 290.0,283.0 312.0,277.4 334.0,278.4 356.0,275.6 378.0,293.6 400.0,295.2 422.0,287.6 444.0,281.1 466.0,299.8 488.0,319.9 510.0,327.1 532.0,322.4 554.0,314.0 576.0,295.0 598.0,303.3 620.0,302.7 642.0,299.5 664.0,291.5 686.0,283.7 708.0,281.4" fill="none" stroke="#184f95" stroke-width="2.6"/>
+<text x="386.0" y="96.1" font-size="11" fill="#52514e" text-anchor="start">2010 : compensation</text>
+<text x="386.0" y="109.1" font-size="11" fill="#52514e" text-anchor="start">de la taxe professionnelle</text>
+<text x="224.0" y="166.1" font-size="11" fill="#8a8f98" text-anchor="middle" font-weight="600">transferts reçus</text>
+<text x="92.0" y="337.0" font-size="11" fill="#184f95" text-anchor="middle" font-weight="600">investissement local</text>
+<line x1="0" y1="422.0" x2="720" y2="422.0" stroke="#e1e0d9"/>
+<text x="0" y="435.0" font-size="9" fill="#52514e">Eurostat gov_10a_main (S1313 : P51G, D73REC ; S13 : TE en % du PIB pour le dénominateur), administrations locales, France</text>
+<text x="0" y="447.0" font-size="9" fill="#52514e">Transferts : série comparable arrêtée en 2017 (DGF des régions remplacée par une fraction de TVA en 2018).</text>
+<text x="0" y="459.0" font-size="9" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/dette-publique-collectivites-locales/</text>
+</svg>

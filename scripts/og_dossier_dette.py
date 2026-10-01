@@ -350,13 +350,65 @@ def carte_monde() -> None:
           cle_en)
 
 
+def figure_collectivites(d: ImageDraw.ImageDraw, inv: dict, tr: dict) -> None:
+    """Prolongement « Collectivités » (01/10/2026) : la figure signature de la page, réduite — investissement local (bleu)
+    et transferts reçus (gris, série comparable jusqu'en 2017), bande de la baisse des dotations 2014-2017."""
+    x0, x1, top, bas = 660, 1126, 100, 424
+    a0, a1 = min(inv), max(inv)
+    vmin, vmax = 1.5, 5.0
+
+    def X(a):
+        return x0 + (x1 - x0) * (a - a0) / (a1 - a0)
+
+    def Y(v):
+        return bas - (bas - top) * (v - vmin) / (vmax - vmin)
+
+    d.rectangle([X(2014), top, X(2017.999), bas], fill=(243, 239, 230))
+    for g in (2, 3, 4, 5):
+        d.line([(x0, Y(g)), (x1, Y(g))], fill=GRID, width=1)
+    d.line([(X(a), Y(v)) for a, v in sorted(tr.items())], fill=SEC, width=5, joint="curve")
+    d.line([(X(a), Y(v)) for a, v in sorted(inv.items())], fill=C1, width=5, joint="curve")
+    fa = font("inter", 18, 500)
+    d.text((x0, bas + 14), str(a0), font=fa, fill=URL_GREY)
+    d.text((x1 - 44, bas + 14), str(a1), font=fa, fill=URL_GREY)
+    d.text((x0, bas + 40), "Collectivités, France, en % du PIB :", font=font("inter", 17, 400), fill=URL_GREY)
+    d.text((x0, bas + 62), "bande : baisse des dotations 2014-2017", font=font("inter", 17, 400), fill=URL_GREY)
+
+
+def carte_collectivites() -> None:
+    """Prolongement « Collectivités locales » : séries et chaînes lues dans data/dette_collectivites.json ; le contraste
+    annoncé (transferts et investissement en baisse sur l'épisode, dette locale contenue) est CONTRÔLÉ ici."""
+    f = ROOT / "data" / "dette_collectivites.json"
+    if not f.is_file():
+        fail("jeu de données absent : %s — lancer scripts/update_dette_collectivites.py d'abord" % f)
+    j = json.loads(f.read_text(encoding="utf-8"))
+    A, c, se = j["affichage"], j["calcul"], j["series"]
+    if not (c["ep_transf"] < 0 and c["ep_inv"] < 0 and c["part_hausse_loc"] < 10):
+        fail("carte collectivités : le contraste annoncé n'est plus vrai dans les données")
+    inv = {int(k): v for k, v in se["serie_inv_fr"].items()}
+    tr = {int(k): v for k, v in se["serie_transf_fr"].items()}
+    carte("og-collectivites.jpg",
+          ["L'ajustement local,", "hors de la dette"],
+          "La dette locale est restée contenue ; l'investissement a reculé.",
+          "Eurostat %s · OFGL · CC BY 4.0" % A["an_fin"],
+          "stephane-lalut.com/dette-publique-collectivites-locales/",
+          lambda d: figure_collectivites(d, inv, tr),
+          [(C1, "Investissement : −%s pt de PIB (%s-%s)" % (A["ep_inv"], A["ep_a0"], A["ep_a1"])),
+           (SEC, "Transferts reçus : −%s pt de PIB" % A["ep_transf"]),
+           (URL_GREY, "Dette locale : %s → %s %% du PIB (%s-%s)" % (A["dette_loc_deb"], A["dette_loc_fin"], A["an_dette_deb"], A["an_dette_fin"]))])
+
+
 def main() -> int:
+    if "--collectivites" in sys.argv[1:]:
+        carte_collectivites()
+        return 0
     if "--monde" in sys.argv[1:]:
         carte_monde()
         carte_dynamique()
         return 0
     carte_monde()
     carte_dynamique()
+    carte_collectivites()
     qp = ROOT / "data" / "qui_paie_donnees.json"
     do = ROOT / "data" / "dette_officielle.json"
     for f in (qp, do):

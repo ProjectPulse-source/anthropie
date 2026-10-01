@@ -66,9 +66,14 @@
     {{- range $entrees }}{{ if eq .r.bloc $id }}{{ $items = $items | append . }}{{ end }}{{ end -}}
     {{- if not $items }}{{ warnf "ressources : le bloc %q de %s est vide" $id $.File.Path }}{{ end -}}
     {{- $items = sort $items "r.rang" -}}
-    {{- $dossier := slice -}}{{- $encarts := slice -}}{{- $autres := slice -}}
+    {{- $dossier := slice -}}{{- $encarts := slice -}}{{- $autres := slice -}}{{- $prolong := slice -}}
     {{- range $items -}}
       {{- if .page.Params.ressource.encart }}{{ $encarts = $encarts | append . -}}
+      {{- /* PROLONGEMENT (option B, arbitrage PRO-20261001-145721, 01/10/2026) : une page de données qui traite un CAS
+             PARTICULIER du dossier (règle 1 du modèle : jamais en onglet) déclare `ressource.prolongement: true`. Elle
+             garde `donnees:` — donc les critères bloquants de check-ressource-modele.py —, mais l'index la range sous la
+             grille, dans « Prolongements du dossier » : le dossier reste en N questions générales. */}}
+      {{- else if .page.Params.ressource.prolongement }}{{ $prolong = $prolong | append . -}}
       {{- else if .page.Params.donnees }}{{ $dossier = $dossier | append . -}}
       {{- else }}{{ $autres = $autres | append . }}{{ end -}}
     {{- end -}}
@@ -83,6 +88,12 @@
       {{- with $dossier }}
         {{- $n := len . -}}{{- $mot := cond (lt $n (len $mots)) (index $mots $n) (string $n) -}}
         {{- if $autres }}<p class="ressources-index__sous">{{ i18n "ressources_dossier" (dict "Count" $n "N" $mot) }}</p>{{ end }}
+        <ul class="ressources-index__liste ressources-index__liste--dossier">
+          {{- range . }}{{ partial "ressource-entree.html" (dict "page" .page "r" .r "fr" .fr "vignette" true) }}{{ end }}
+        </ul>
+      {{- end }}
+      {{- with $prolong }}
+        <p class="ressources-index__sous">{{ i18n "ressources_prolongements" (len .) }}</p>
         <ul class="ressources-index__liste ressources-index__liste--dossier">
           {{- range . }}{{ partial "ressource-entree.html" (dict "page" .page "r" .r "fr" .fr "vignette" true) }}{{ end }}
         </ul>

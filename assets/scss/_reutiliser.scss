@@ -310,7 +310,11 @@ a.dossier-dette__onglet:focus-visible { outline: 2px solid var(--color-pivot); o
   white-space: nowrap;
 }
 
-@media (max-width: 760px) {
+// Seuil relevé de 760 à 1120 px le 01/10/2026 sur MESURE (quatre volets à libellé long) : de 761 à ~925 px la bande
+// débordait la page (scrollWidth 914-926) ; de ~925 à ~1110 px elle tenait dans la page mais le 4e onglet était rogné
+// et chevauché par la date (relevé : volets.scrollWidth > clientWidth, recouvrement onglet/date). Premier état propre
+// mesuré : 1121 px. Un critère « pas de débordement » seul était passé vert à 941 px avec l'onglet coupé.
+@media (max-width: 1120px) {
   // Sous cette largeur la ligne unique ne tient plus : on autorise le retour,
   // et c'est le cartouche qui part a la ligne AVEC la date, les onglets en
   // dessous -- jamais l'inverse.

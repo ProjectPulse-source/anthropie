@@ -1,0 +1,28 @@
+{
+ "fr": [
+  {
+   "id": "investissement",
+   "fichier": "collectivites-investissement",
+   "titre": "Investissement des collectivités et transferts reçus, France, en % du PIB",
+   "montre": "De 2013 à 2017, les transferts reçus par les collectivités reculent de 0,64 point de PIB et leur investissement de 0,50 point ; le recul de l'investissement après les municipales de 2014 dépasse nettement celui des autres mandats.",
+   "source": "Eurostat gov_10a_main (S1313 : P51G, D73REC ; S13 : TE en % du PIB pour le dénominateur), administrations locales, France",
+   "precaution": "Transferts : série comparable arrêtée en 2017 (DGF des régions remplacée par une fraction de TVA en 2018)."
+  },
+  {
+   "id": "cascade",
+   "fichier": "collectivites-cascade",
+   "titre": "D’où vient l’amélioration du solde des collectivités, 2013-2017",
+   "montre": "Le solde des collectivités s'améliore de 0,45 point de PIB entre 2013 et 2017, surtout par la baisse des dépenses, malgré la baisse des transferts reçus.",
+   "source": "Eurostat gov_10a_main, administrations locales (S1313), France ; points de PIB",
+   "precaution": "Lecture comptable : les postes reconstituent exactement la variation du solde ; ils ne disent pas ce qui l'a décidé."
+  },
+  {
+   "id": "europe",
+   "fichier": "collectivites-europe",
+   "titre": "Dette des administrations territoriales et part détenue par l’État central, en % du PIB",
+   "montre": "Une même dette territoriale peut recouvrir des architectures opposées : en Espagne, 59 % en est détenue par l'État central ; en France, 1 %.",
+   "source": "Eurostat gov_10q_ggdebt (4e trimestre) et gov_10dd_ggd (détention), S1312 + S1313, en % du PIB",
+   "precaution": "Périmètre statistique, non compétences : la France et l'Italie n'ont pas d'échelon d'États fédérés (S1312)."
+  }
+ ]
+}

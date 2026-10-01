@@ -47,7 +47,10 @@
 {{- $v := .Get "volet" -}}
 {{- /* Clés de volet STABLES ("hausse", "1", "2", "3") ; le NUMÉRO affiché vient de l'ordre (30/09 : le volet
        « Pourquoi elle augmente » passe en tête, arbitrage PRO-20260930-092814) — les pages n'ont pas à changer d'appel. */ -}}
-{{- if not (in (slice "hausse" "1" "2" "3") $v) -}}{{ errorf "dossier-dette: volet \"%s\" inconnu (attendu hausse, 1, 2 ou 3) dans %s" $v .Page.File.Path }}{{- end -}}
+{{- /* « collectivites » (01/10/2026) : un PROLONGEMENT, pas un volet (règle 1 du modèle : un cas particulier n'est jamais
+       un onglet) — aucun onglet actif, millésime Eurostat de son jeu. Une mention « · prolongement » dans le titre a été
+       MESURÉE puis retirée le même jour : +50 px à 390 px, badge sur le 4e onglet sur bureau (cf. LARGEUR ci-dessus). */ -}}
+{{- if not (in (slice "hausse" "1" "2" "3" "collectivites") $v) -}}{{ errorf "dossier-dette: volet \"%s\" inconnu (attendu hausse, 1, 2, 3 ou collectivites) dans %s" $v .Page.File.Path }}{{- end -}}
 {{- $en := eq .Page.Lang "en" -}}
 {{- $maj := "" -}}
 {{- $majTitre := "" -}}
@@ -61,6 +64,11 @@
   {{- with site.Data.dette_dynamique -}}
     {{- $maj = printf "Eurostat %s" .affichage.annee_fin -}}
     {{- $majTitre = cond $en "Latest year of the Eurostat data decomposed on this page" "Dernière année des données Eurostat décomposées sur cette page — c'est le millésime des DONNÉES, non la date de relecture du texte" -}}
+  {{- end -}}
+{{- else if eq $v "collectivites" -}}
+  {{- with site.Data.dette_collectivites -}}
+    {{- $maj = printf "Eurostat %s" .affichage.an_fin -}}
+    {{- $majTitre = "Dernière année des données Eurostat de cette page — c'est le millésime des DONNÉES, non la date de relecture du texte" -}}
   {{- end -}}
 {{- else if eq $v "3" -}}
   {{- with site.Data.dette_monde -}}

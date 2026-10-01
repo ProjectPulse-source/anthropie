@@ -1,0 +1,38 @@
+{{- /* {{< coll-tableau "cycles" >}} | {{< coll-tableau "categories" >}} | {{< coll-tableau "pays" >}}
+       Tableaux de la page collectivités, lus dans data/dette_collectivites.json (bloc calcul) : aucun chiffre
+       recopié. Les nombres sont formatés ici à la française (virgule décimale, moins typographique). Échoue sur
+       un type inconnu ou un jeu absent. */ -}}
+{{- $t := .Get 0 -}}
+{{- $j := site.Data.dette_collectivites -}}
+{{- if not $j -}}{{ errorf "coll-tableau: data/dette_collectivites.json absent (%s)" .Page.File.Path }}{{- end -}}
+{{- $c := $j.calcul -}}
+{{- $f2 := "%.2f" -}}{{- $f1 := "%.1f" -}}
+{{- if eq $t "cycles" -}}
+<div class="table-scroll"><table class="dette-monde-table">
+<thead><tr><th>Municipales</th><th>Année précédente, % du PIB</th><th>Plus bas des trois années suivantes</th><th>Écart, point de PIB</th></tr></thead>
+<tbody>
+{{- range $c.cycles }}
+<tr><td>{{ .municipales }}</td><td>{{ .pic_annee }}&nbsp;: {{ replace (printf $f2 .pic) "." "," }}</td><td>{{ .creux_annee }}&nbsp;: {{ replace (printf $f2 .creux) "." "," }}</td><td>{{ replace (replace (printf $f2 .baisse) "." ",") "-" "−" }}</td></tr>
+{{- end }}
+</tbody></table></div>
+{{- else if eq $t "categories" -}}
+<div class="table-scroll"><table class="dette-monde-table">
+<thead><tr><th>Catégorie, 2021 → {{ $c.of_an }}</th><th>Concours de l’État</th><th>Épargne brute</th><th>Dépenses d’équipement</th><th>Encours de dette</th></tr></thead>
+<tbody>
+{{- range $c.categories }}
+<tr><td>{{ .nom }}</td><td>{{ replace (printf $f1 .concours_21) "." "," }} → {{ replace (printf $f1 .concours_fin) "." "," }}</td><td>{{ replace (printf $f1 .eb_21) "." "," }} → {{ replace (printf $f1 .eb_fin) "." "," }}</td><td>{{ replace (printf $f1 .eq_21) "." "," }} → {{ replace (printf $f1 .eq_fin) "." "," }}</td><td>{{ replace (printf $f1 .dette_21) "." "," }} → {{ replace (printf $f1 .dette_fin) "." "," }}</td></tr>
+{{- end }}
+</tbody></table></div>
+<p><small>Milliards d’euros courants. Source&nbsp;: OFGL, bases consolidées des comptes de gestion (DGFiP).</small></p>
+{{- else if eq $t "pays" -}}
+<div class="table-scroll"><table class="dette-monde-table">
+<thead><tr><th>Pays</th><th>Dette territoriale {{ $c.an_dette_deb }}</th><th>Plus haut</th><th>{{ $c.an_dette_fin }}</th><th>Investissement territorial : plus haut 2000-2010 → plus bas 2011-2019</th><th>Années d’excédent 2012-2019</th><th>Part détenue par l’État central, {{ $c.an_ggd }}</th></tr></thead>
+<tbody>
+{{- range $c.pays }}
+<tr><td>{{ .nom }}</td><td>{{ replace (printf $f1 .dette_deb) "." "," }}</td><td>{{ replace (printf $f1 .dette_pic) "." "," }} ({{ .dette_pic_annee }})</td><td>{{ replace (printf $f1 .dette_fin) "." "," }}</td><td>{{ replace (printf $f1 .inv_max) "." "," }} → {{ replace (printf $f1 .inv_min) "." "," }}</td><td>{{ .excedents_2012_2019 }}/8</td><td>{{ printf "%.0f" .part_etat_pct }}&nbsp;%</td></tr>
+{{- end }}
+</tbody></table></div>
+<p><small>En % du PIB. Périmètre territorial&nbsp;: S1312 + S1313 (dettes croisées entre les deux échelons au plus {{ index $j.affichage "consolidation_ecart" }}&nbsp;point). Source&nbsp;: Eurostat.</small></p>
+{{- else -}}
+{{ errorf "coll-tableau: type %q inconnu (cycles, categories, pays) dans %s" $t .Page.File.Path }}
+{{- end -}}

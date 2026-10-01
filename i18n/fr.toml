@@ -39,3 +39,7 @@ other = "{{ .N }} questions du débat public"
 
 [ressources_ouvrir]
 other = "Ouvrir la ressource"
+
+[ressources_prolongements]
+one = "Prolongement du dossier"
+other = "Prolongements du dossier"

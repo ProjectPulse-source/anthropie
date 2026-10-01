@@ -130,7 +130,10 @@ appel au livre sans note Amazon (`avis="non"`) ; **vignette d'index** `static/im
 **Présentation dans l'index `/ressources/`** (auteur, 01/10/2026 ; vaut pour toutes les ressources, y compris celles à
 créer) : dans un bloc, les pages qui déclarent `donnees:` forment « le dossier » — grande grille, vignette sur fond
 blanc, partie texte teintée (`--color-dossier-tint`) ; les autres pages du bloc suivent en cartes crème ; une page qui
-déclare `ressource.encart: true` s'affiche en encart avec bouton (`ressource.bouton`). Rien à déclarer dans l'index : le
+déclare `ressource.encart: true` s'affiche en encart avec bouton (`ressource.bouton`) ; une page de données qui traite un
+cas particulier du dossier déclare `ressource.prolongement: true` et s'affiche sous la grille, dans « Prolongements du
+dossier » (option B, 01/10/2026 : elle garde `donnees:`, donc les critères bloquants ; dans la barre du dossier, volet
+`collectivites` = aucun onglet actif). Rien à déclarer dans l'index : le
 tri se déduit des pages (`layouts/ressources/list.html`, partials `ressource-entree.html` et `ressource-encart.html`).
 **Une nouvelle ressource de données fait produire sa vignette par le générateur de sa carte de partage**, dans le même
 passage et avec le même dessin sur fond blanc (modèle : `carte()` de `scripts/og_dossier_dette.py`) ; sa sortie entre
@@ -171,6 +174,17 @@ sous-titres propres, à déclarer alors par bloc dans `content/ressources/_index
 12. **Contre-expertise** de la page construite avant ou juste après publication ; arbitrage écrit ; la
     littérature, si elle est citée, **teste** l'interprétation dans un bloc « Confrontation à la recherche » par
     page, jamais ne cautionne une mesure (arbitrage PRO-20260930-103341).
+13. **Comparaison par sous-secteur public** (S1311 à S1314, entre pays ou dans le temps) : avant toute phrase,
+    vérifier l'équivalence du **périmètre institutionnel** (un S1313 n'est pas le même objet selon qu'il existe ou
+    non un S1312) et les **relations financières entre sous-secteurs** (dette détenue par un autre échelon :
+    `gov_10dd_ggd`, dimension `sector2`) ; une série de transferts se coupe à chaque reclassement en impôt
+    (ex. DGF → fraction de TVA). Plusieurs indicateurs qui ordonnent les pays différemment n'autorisent **aucun
+    classement synthétique**. Même famille, entre **sources** : avant de rapprocher deux chiffres de sources
+    différentes (Eurostat, Insee, OFGL, loi de finances), établir périmètre institutionnel, opération comptable,
+    consolidation, date et dénominateur ; à défaut, **l'écart se documente, il ne se corrige jamais** (ex. : DGF
+    votée ≠ contribution demandée ≠ DGF comptabilisée ; encours OFGL ≠ dette Maastricht). Cas fondateur : `/dette-publique-collectivites-locales/`, 01/10/2026 — la v1 comparait
+    S1313 seul et concluait à tort que la France était le seul pays où la dette locale avait augmenté (arbitrage
+    `D:\PRO\.claude\external-audits\ARBITRATIONS\PRO-20261001-145721_arbitrage.md`).
 
 ## Couche pédagogique — `/enseignants/` (actée par l'auteur, 2026-09-30)
 

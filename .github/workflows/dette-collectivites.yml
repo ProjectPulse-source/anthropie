@@ -1,0 +1,130 @@
+# Prolongement « Collectivités locales » du dossier dette -> data/dette_collectivites.json (+ endpoint static/, CSV,
+# 3 figures SVG + PNG, carte de partage et vignette), PUIS deploiement de /dette-publique-collectivites-locales/.
+#
+# Meme mecanique que dette-monde.yml (mandat de l'auteur des 29-30/09/2026 : mise a jour sans intervention, gardee
+# par des controles qui bloquent AVANT d'ecrire) : 37 GARDES DE PROSE (une donnee qui dement une phrase de la page
+# arrete tout), temoin comptable (recettes - depenses = solde), temoin du denominateur, test de consolidation entre
+# echelons, mutation reelle rejouee a chaque passage (une garde DOIT mordre), build Hugo bloquant. Un echec ouvre une
+# issue et ne publie rien. Rien n'est ecrit a donnees identiques : un passage sans nouveaute ne commite rien.
+#
+# CALENDRIER DES SOURCES : Eurostat (notifications d'avril et d'octobre, dette trimestrielle vers le 22 de janvier,
+# avril, juillet, octobre), OFGL (comptes de gestion, mises a jour au fil de l'annee). Hebdomadaire, apres
+# dette-monde (07:47) : un passage manque une publication d'au plus une semaine.
+# DECROISSANCE : plus de 2 echecs/an pour cause non-donnee => reexamen.
+# Repli toujours viable : `python scripts/update_dette_collectivites.py` en local + commit humain.
+name: Donnees dette (collectivites locales)
+
+on:
+  schedule:
+    - cron: '17 8 * * 3'          # chaque mercredi 08:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+env:
+  HUGO_VERSION: 0.147.0
+
+jobs:
+  update:
+    runs-on: ubuntu-24.04   # epingle -- voir docs/MIGRATION_RUNNER_UBUNTU26.md
+    outputs:
+      changed: ${{ steps.diff.outputs.changed }}
+      sha: ${{ steps.push.outputs.sha }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - name: Rapatrier, calculer, valider (gardes de prose, temoins, mutation ; exit 1 si echec)
+        run: |
+          python3 -m pip install --quiet cairosvg==2.9.0
+          python3 scripts/update_dette_collectivites.py
+
+      - name: Carte de partage (og-collectivites.jpg) et vignette de l'index (vig-collectivites.jpg)
+        run: |
+          python3 -m pip install --quiet pillow==12.2.0
+          python3 scripts/og_dossier_dette.py --collectivites
+
+      - name: Detecter un changement
+        id: diff
+        run: |
+          if git diff --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Aucun changement de donnees -- rien a publier."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git diff --stat
+          fi
+
+      - name: Build gate Hugo (jamais un push qui casse le build)
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          wget -q -O "${{ runner.temp }}/hugo.deb" \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+          sudo dpkg -i "${{ runner.temp }}/hugo.deb"
+          hugo --minify
+
+      - name: Publier sur main
+        id: push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Enumeration explicite : toute sortie NOUVELLE du script doit etre ajoutee ICI.
+          git add data/dette_collectivites.json static/dette_collectivites.json static/dette_collectivites.csv \
+                  data/figures_collectivites.json \
+                  static/img/collectivites-investissement.svg static/img/collectivites-investissement.png \
+                  static/img/collectivites-cascade.svg static/img/collectivites-cascade.png \
+                  static/img/collectivites-europe.svg static/img/collectivites-europe.png \
+                  static/images/og-collectivites.jpg static/images/vig-collectivites.jpg
+          git commit -m "data(collectivites): Eurostat/OFGL du $(date -u +%Y-%m-%d)"
+          pushed=0
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then pushed=1; break; fi
+            echo "::warning::Push refuse (tentative $attempt) -- rebase puis nouvelle tentative"
+            git pull --rebase origin main || true
+            sleep $((attempt * 5))
+          done
+          if [ "$pushed" = 0 ]; then
+            echo "::error::Push impossible apres 3 tentatives -- donnee NON publiee"
+            exit 1
+          fi
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+  deploy:
+    needs: update
+    if: needs.update.outputs.changed == 'true'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/hugo.yml
+    with:
+      ref: ${{ needs.update.outputs.sha }}
+
+  alerte:
+    needs: [update, deploy]
+    if: failure()
+    runs-on: ubuntu-24.04   # epingle -- voir docs/MIGRATION_RUNNER_UBUNTU26.md
+    permissions:
+      issues: write
+    steps:
+      - uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          script: |
+            const quoi = '${{ needs.update.result }}' === 'failure'
+              ? 'rapatriement, garde (dont gardes de prose : une phrase de la page n est plus soutenue par les donnees), build gate ou push'
+              : 'deploiement de la page (la donnee est sur main, la page est en retard)';
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: 'Donnees collectivites : echec du workflow du ' + new Date().toISOString().slice(0, 10),
+              body: 'Le workflow dette-collectivites a echoue -- etape : ' + quoi + '.\n\nRun : ' +
+                context.serverUrl + '/' + context.repo.owner + '/' + context.repo.repo +
+                '/actions/runs/' + context.runId +
+                '\n\nRepli : `python scripts/update_dette_collectivites.py` en local ; si une garde de prose bloque, ' +
+                'reformuler la phrase de la page, puis commit humain.'
+            })
