@@ -17,6 +17,8 @@ ressource:
   bloc: "enseigner"
   rang: 10
   nature: "Activités pédagogiques construites sur les séries officielles"
+  encart: true
+  bouton: "Voir les activités"
 ---
 
 Chaque activité part d'une figure du site, projetable telle quelle, et d'une question du programme. La fiche élève et

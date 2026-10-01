@@ -27,3 +27,15 @@ other = "Book resources and data"
 
 [book_same_author]
 other = "By the same author"
+
+# /resources/ index (2026-10-01): counted subtitles, never hard-coded.
+[ressources_dossier]
+one = "The dossier, in {{ .N }} page"
+other = "The dossier, in {{ .N }} pages"
+
+[ressources_debat]
+one = "{{ .N }} question in the public debate"
+other = "{{ .N }} questions in the public debate"
+
+[ressources_ouvrir]
+other = "Open the resource"

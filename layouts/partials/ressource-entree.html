@@ -1,0 +1,32 @@
+{{- /* ressource-entree.html — une carte de l'index /ressources/ (et /en/resources/).
+       Entrée : dict { page, r (= .Params.ressource), fr (page française listée sur l'index anglais), vignette (bool) }
+
+       La carte entière est cliquable (le lien du titre s'étend sur elle) et le titre se lit comme un lien
+       (règle des liens du 01/10/2026). VIGNETTE : dérivée de l'image de partage déclarée par la page
+       (`og_image: images/og-X.jpg` -> `images/vig-X.jpg`, même dessin sur fond blanc, produite par
+       scripts/og_dossier_dette.py). Aucune déclaration à tenir : une page sans vignette s'affiche sans image. */ -}}
+{{- $p := .page -}}
+{{- $r := .r -}}
+{{- $vig := "" -}}
+{{- if .vignette -}}
+  {{- with $p.Params.og_image -}}
+    {{- $v := replace . "og-" "vig-" 1 -}}
+    {{- if and (ne $v .) (fileExists (printf "static/%s" $v)) }}{{ $vig = $v }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+<li class="ressources-index__entree{{ with $vig }} ressources-index__entree--vignette{{ end }}">
+  {{- with $vig }}<img class="ressources-index__vignette" src="/{{ . }}" alt="" width="720" height="378" loading="lazy">{{ end }}
+  <div class="ressources-index__texte">
+  {{- if .fr }}
+    <p class="ressources-index__nature">{{ with $r.nature_en }}{{ . }}{{ else }}{{ $r.nature }}{{ end }} · <span class="ressources-index__langue" lang="en">in French</span></p>
+    <h3><a href="{{ $p.Permalink }}" hreflang="fr">{{ $r.titre_en }}</a></h3>
+    <p class="ressources-index__titre-fr" lang="fr">{{ partial "fr-typo.html" $p.Title }}</p>
+  {{- else }}
+    {{ with $r.nature }}<p class="ressources-index__nature">{{ partial "fr-typo.html" . }}</p>{{ end }}
+    <h3><a href="{{ $p.RelPermalink }}">{{ partial "fr-typo.html" (or $r.intitule $p.Title) }}</a></h3>
+    {{- /* desc-figures d'abord (01/10) : la description de /cout-de-la-dette-publique/ porte des jetons
+           {dette.*} ; rendue brute, elle s'affichait « {dette.interets_mdeur} milliards » sur les deux index. */}}
+    {{ with $p.Description }}<p class="ressources-index__desc">{{ partial "fr-typo.html" (partial "desc-figures.html" (dict "text" . "isbn" $p.Params.isbn)) }}</p>{{ end }}
+  {{- end }}
+  </div>
+</li>

@@ -1,0 +1,19 @@
+{{- /* ressource-encart.html — une ressource de l'index présentée en encart (page qui déclare `ressource.encart: true`).
+       Même allure que l'encart « Exemplaire de consultation » de /enseignants/ : vignette, nature, titre, description,
+       bouton (`ressource.bouton`, sinon libellé par défaut). Vignette dérivée de `og_image` comme pour les cartes. */ -}}
+{{- $p := .page -}}
+{{- $r := .r -}}
+{{- $vig := "" -}}
+{{- with $p.Params.og_image -}}
+  {{- $v := replace . "og-" "vig-" 1 -}}
+  {{- if and (ne $v .) (fileExists (printf "static/%s" $v)) }}{{ $vig = $v }}{{ end -}}
+{{- end -}}
+<aside class="ressources-index__encart{{ if not $vig }} ressources-index__encart--sans-image{{ end }}">
+  {{- with $vig }}<a class="ressources-index__encart-image" href="{{ $p.RelPermalink }}" tabindex="-1" aria-hidden="true"><img src="/{{ . }}" alt="" width="720" height="378" loading="lazy"></a>{{ end }}
+  <div class="ressources-index__encart-corps">
+    {{ with $r.nature }}<p class="ressources-index__nature">{{ partial "fr-typo.html" . }}</p>{{ end }}
+    <h3><a href="{{ $p.RelPermalink }}">{{ partial "fr-typo.html" (or $r.intitule $p.Title) }}</a></h3>
+    {{ with $p.Description }}<p class="ressources-index__desc">{{ partial "fr-typo.html" (partial "desc-figures.html" (dict "text" . "isbn" $p.Params.isbn)) }}</p>{{ end }}
+    <p><a class="btn btn--primary" href="{{ $p.RelPermalink }}">{{ with $r.bouton }}{{ partial "fr-typo.html" . }}{{ else }}{{ i18n "ressources_ouvrir" }}{{ end }}&nbsp;→</a></p>
+  </div>
+</aside>

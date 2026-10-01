@@ -22,7 +22,8 @@ Une carte qui ne ressemblerait pas aux figures ferait deux identités.
 
 SORTIES : static/images/og-qui-paie-dette.jpg (exposition, depuis le 30/09), og-cout-dette.jpg, og-dette-monde.jpg,
 og-dette-dynamique.jpg, et leurs versions anglaises -en.jpg (depuis le 30/09) (1200x630),
-déclarées par `og_image` dans le front matter des deux pages.
+déclarées par `og_image` dans le front matter des deux pages. Pour chacune, une vignette `vig-*.jpg` (720x378,
+même dessin sur fond blanc), lue par l'index /ressources/ à la place de l'image de partage (depuis le 01/10).
 """
 from __future__ import annotations
 
@@ -213,14 +214,23 @@ def carte(nom: str, titre: list[str], accroche: str, source: str, url: str,
     global LEGENDE_CISEAU
     if legende:
         LEGENDE_CISEAU = legende
-    im = background()
-    d = ImageDraw.Draw(im)
-    dessin(d)
-    habillage(d, titre, accroche, source, url, cle)
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    p = OUT_DIR / nom
-    im.save(p, "JPEG", quality=92, optimize=True)
-    print("OK  %s (%dx%d, %d ko)" % (nom, W, H, p.stat().st_size // 1024))
+    # VIGNETTE (01/10/2026) : même dessin sur fond BLANC, réduit, pour les cartes de l'index /ressources/.
+    # Le fond crème de la carte de partage, posé dans une carte blanche, faisait un rectangle gris collé ; la
+    # carte de partage garde le sien (identité commune des cartes du site). Dessinée dans le même geste,
+    # jamais à part : une vignette tirée d'un autre passage montrerait d'autres chiffres que la page.
+    for fond, sortie in ((background(), nom), (Image.new("RGB", (W, H), (255, 255, 255)), nom.replace("og-", "vig-", 1))):
+        im = fond
+        d = ImageDraw.Draw(im)
+        dessin(d)
+        habillage(d, titre, accroche, source, url, cle)
+        p = OUT_DIR / sortie
+        if sortie == nom:
+            im.save(p, "JPEG", quality=92, optimize=True)
+        else:
+            im.resize((720, 378), Image.LANCZOS).save(p, "JPEG", quality=88, optimize=True)
+        print("OK  %s (%dx%d, %d ko)" % (sortie, im.width if sortie == nom else 720,
+                                         im.height if sortie == nom else 378, p.stat().st_size // 1024))
 
 
 def figure_cascade_mini(d: ImageDraw.ImageDraw, dyn: dict, lang: str = "fr") -> None:

@@ -55,7 +55,7 @@ jobs:
       # Carte de partage de la page (30/09) : elle imprime la paire de faux jumeaux et leurs chiffres, lus
       # dans data/dette_monde.json. Redessinee dans le meme geste que les donnees, sinon elle mentirait
       # apres une revision Eurostat. Pillow epingle a la version du poste ou la carte a ete validee.
-      - name: Carte de partage (og-dette-monde.jpg)
+      - name: Carte de partage (og-dette-monde.jpg) et vignettes de l'index (vig-*.jpg)
         run: |
           python3 -m pip install --quiet pillow==12.2.0
           python3 scripts/og_dossier_dette.py --monde
@@ -99,6 +99,8 @@ jobs:
                   static/img/dette-monde-prix.svg \
                   static/img/dette-monde-transmission.svg \
                   static/images/og-dette-monde-en.jpg static/images/og-dette-dynamique-en.jpg \
+                  static/images/vig-dette-monde.jpg static/images/vig-dette-monde-en.jpg \
+                  static/images/vig-dette-dynamique.jpg static/images/vig-dette-dynamique-en.jpg \
                   static/img/dette-dynamique-cascade-en.svg static/img/dette-dynamique-cascade-en.png \
                   static/img/dette-dynamique-annuelle-en.svg static/img/dette-dynamique-annuelle-en.png \
                   static/img/dette-monde-stock-en.svg static/img/dette-monde-stock-en.png \

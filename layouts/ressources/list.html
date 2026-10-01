@@ -47,35 +47,49 @@
 
   <div class="ressources-index__intro">{{ .Content }}</div>
 
-  <nav class="ressources-index__sommaire" aria-label="{{ if $isEn }}Sections{{ else }}Blocs{{ end }}">
-    {{- range $blocs }}<a href="#{{ .id }}">{{ partial "fr-typo.html" .titre }}</a>{{ end -}}
+  {{- /* Sommaire en pastilles (règle des énumérations, 01/10/2026) : une rangée d'ancres, pas une phrase. */}}
+  <nav class="pastilles pastilles--ancres ressources-index__sommaire" aria-label="{{ if $isEn }}Sections{{ else }}Blocs{{ end }}">
+    <ul>{{- range $blocs }}<li><a href="#{{ .id }}">{{ partial "fr-typo.html" .titre }}</a></li>{{ end -}}</ul>
   </nav>
 
+  {{- /* HIÉRARCHIE (variante C retenue par l'auteur, 01/10/2026). Dans un bloc, les pages qui publient un jeu de
+         données (`donnees:` en front matter, contrôlé par check-ressource-modele.py) forment « le dossier », en grande
+         grille illustrée ; les autres viennent ensuite en cartes simples. Une analyse ne s'affiche donc jamais au rang
+         d'une série officielle, et le tri se déduit des pages : rien à déclarer ici. Les sous-titres comptent les
+         pages au lieu de les écrire en dur. Une page qui déclare `ressource.encart: true` s'affiche en encart. */ -}}
+  {{- $mots := dict "fr" (slice "zéro" "une" "deux" "trois" "quatre" "cinq" "six" "sept" "huit" "neuf" "dix")
+                    "en" (slice "zero" "one" "two" "three" "four" "five" "six" "seven" "eight" "nine" "ten") -}}
+  {{- $mots = index $mots (cond $isEn "en" "fr") -}}
   {{ range $blocs }}
     {{- $id := .id -}}
     {{- $items := slice -}}
     {{- range $entrees }}{{ if eq .r.bloc $id }}{{ $items = $items | append . }}{{ end }}{{ end -}}
     {{- if not $items }}{{ warnf "ressources : le bloc %q de %s est vide" $id $.File.Path }}{{ end -}}
+    {{- $items = sort $items "r.rang" -}}
+    {{- $dossier := slice -}}{{- $encarts := slice -}}{{- $autres := slice -}}
+    {{- range $items -}}
+      {{- if .page.Params.ressource.encart }}{{ $encarts = $encarts | append . -}}
+      {{- else if .page.Params.donnees }}{{ $dossier = $dossier | append . -}}
+      {{- else }}{{ $autres = $autres | append . }}{{ end -}}
+    {{- end -}}
     <section class="ressources-index__bloc" id="{{ $id }}" aria-labelledby="bloc-{{ $id }}">
       <h2 id="bloc-{{ $id }}">{{ partial "fr-typo.html" .titre }}</h2>
       {{ with .chapo }}<p class="ressources-index__chapo">{{ partial "fr-typo.html" . }}</p>{{ end }}
-      <ul class="ressources-index__liste">
-        {{ range sort $items "r.rang" }}
-          {{- $p := .page -}}
-          {{- $r := .r -}}
-          <li class="ressources-index__entree">
-            {{- if .fr }}
-              <p class="ressources-index__nature">{{ with $r.nature_en }}{{ . }}{{ else }}{{ $r.nature }}{{ end }} · <span class="ressources-index__langue" lang="en">in French</span></p>
-              <h3><a href="{{ $p.Permalink }}" hreflang="fr">{{ $r.titre_en }}</a></h3>
-              <p class="ressources-index__titre-fr" lang="fr">{{ partial "fr-typo.html" $p.Title }}</p>
-            {{- else }}
-              {{ with $r.nature }}<p class="ressources-index__nature">{{ partial "fr-typo.html" . }}</p>{{ end }}
-              <h3><a href="{{ $p.RelPermalink }}">{{ partial "fr-typo.html" (or $r.intitule $p.Title) }}</a></h3>
-              {{ with $p.Description }}<p class="ressources-index__desc">{{ partial "fr-typo.html" . }}</p>{{ end }}
-            {{- end }}
-          </li>
-        {{ end }}
-      </ul>
+      {{- range $encarts }}{{ partial "ressource-encart.html" (dict "page" .page "r" .r "isEn" $isEn) }}{{ end }}
+      {{- with $dossier }}
+        {{- $n := len . -}}{{- $mot := cond (lt $n (len $mots)) (index $mots $n) (string $n) -}}
+        {{- if $autres }}<p class="ressources-index__sous">{{ i18n "ressources_dossier" (dict "Count" $n "N" $mot) }}</p>{{ end }}
+        <ul class="ressources-index__liste ressources-index__liste--dossier">
+          {{- range . }}{{ partial "ressource-entree.html" (dict "page" .page "r" .r "fr" .fr "vignette" true) }}{{ end }}
+        </ul>
+      {{- end }}
+      {{- with $autres }}
+        {{- $n := len . -}}{{- $mot := cond (lt $n (len $mots)) (index $mots $n) (string $n) -}}
+        {{- if $dossier }}<p class="ressources-index__sous">{{ i18n "ressources_debat" (dict "Count" $n "N" ($mot | strings.FirstUpper)) }}</p>{{ end }}
+        <ul class="ressources-index__liste">
+          {{- range . }}{{ partial "ressource-entree.html" (dict "page" .page "r" .r "fr" .fr "vignette" false) }}{{ end }}
+        </ul>
+      {{- end }}
     </section>
   {{ end }}
 

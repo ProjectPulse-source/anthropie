@@ -27,3 +27,15 @@ other = "Ressources et données du livre"
 
 [book_same_author]
 other = "Du même auteur"
+
+# Index /ressources/ (01/10/2026) : sous-titres comptés, jamais écrits en dur.
+[ressources_dossier]
+one = "Le dossier, en {{ .N }} page"
+other = "Le dossier, en {{ .N }} pages"
+
+[ressources_debat]
+one = "{{ .N }} question du débat public"
+other = "{{ .N }} questions du débat public"
+
+[ressources_ouvrir]
+other = "Ouvrir la ressource"
