@@ -53,6 +53,28 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-01 — Liens visibles, pastilles, encart d'exemplaire, index `/ressources/` hiérarchisé, POUSSÉ
+
+Quatre commits, chacun sur maquette choisie par l'auteur, déployés et relus en ligne.
+- `5baeaf0` — **liens** : la règle globale `a` donnait au lien la couleur des titres (1,14:1 contre le texte, soulignement
+  à 18 %) ; bleu `--color-link` `#3A5C8F` + soulignement. Relevé sur 16 pages : seuls des liens de contenu changent.
+  Shortcode **`pastilles`** (énumération de pages ; garde vue mordre) sur `/enseignants/` et les lignes « Dans le
+  dossier » de Pourquoi et Et ailleurs, FR et EN ; renvoi manquant vers Pourquoi ajouté sur Et ailleurs.
+- `4edd341` — shortcode **`exemplaire`** : encart « Exemplaire de consultation » avec couverture sur `/enseignants/`,
+  ancre `#exemplaire` conservée, masqué à l'impression (garde vue mordre).
+- `b6b3f00` — **défaut en ligne** : sur `/ressources/` et `/en/resources/`, la description de « Combien coûte » affichait
+  ses jetons bruts (`{dette.interets_mdeur}`…) ; passée par `desc-figures.html`. **Index hiérarchisé** : sommaire en
+  pastilles, cartes cliquables, pages `donnees:` en grille « Le dossier, en N pages », encart `ressource.encart`.
+  `og_dossier_dette.py` produit aussi des vignettes `vig-*.jpg` sur fond blanc (cartes de partage inchangées à
+  l'octet) ; `dette-monde.yml` les ajoute à son `git add`.
+- `9434b5b` — partie texte des cartes du dossier teintée `--color-dossier-tint` `#EBEFF5`. Règle étendue aux
+  ressources à venir : critère 7 bloquant de `check-ressource-modele.py` (vignette exigée ; vu mordre) et section
+  « Modèle d'une ressource » du `CLAUDE.md`.
+
+Chaque commit : `hugo --minify` 0, `check-all --ci` 0, rendu mesuré à 390 et 1280 px. **Reste ouvert** : les
+sous-titres d'un bloc mixte sont rédigés pour le bloc Dette ; un autre bloc mixte appellera les siens, déclarés dans
+`content/ressources/_index*.md` (fichier modifié en ce moment par la session « pouvoirs du président »).
+
 ### 2026-09-30 — `/enseignants/` corrigée avant le pilote (avis entrant « Enseignants »)
 
 Arbitrage `ENTRANTE_2026-09-30_Enseignants_arbitrage.md`. Deux défauts graves corrigés : Première, encadré « Du
