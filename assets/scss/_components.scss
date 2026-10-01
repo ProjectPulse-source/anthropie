@@ -517,10 +517,6 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
 .cross-lang-banner--en h3 { margin-top: 0; font-family: var(--font-serif); font-size: 1.1rem; }
 
 // ----- AWP list compact (a-propos) -----
-.awp-list-compact { list-style: none; padding: 0; }
-.awp-list-compact li { margin-bottom: 0.8rem; }
-.awp-list-compact__number { font-family: var(--font-serif); font-weight: 600; color: var(--color-accent); margin-right: 0.3rem; }
-.awp-list-compact__doi { display: block; font-family: var(--font-mono); font-size: var(--fs-micro); color: var(--color-text-mono); margin-top: 0.2rem; }
 
 // ----- Contact form -----
 .contact-form { max-width: 720px; margin: 0 auto; }
@@ -841,4 +837,41 @@ main ol.trois-questions li {
   .notion summary { grid-template-columns: minmax(0, 1fr) auto; }
   .notion__avec { grid-column: 1 / -1; }
   .notion__suite { padding-left: 0; }
+}
+
+// ----- Page À propos (variante A, 01/10/2026) : accordée aux autres pages -----
+// En-tête de section : intitulé court et phrase en italique au-dessus d'un filet bleu (comme Ressources, Série AWP).
+.apropos-tete {
+  display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: 0.25rem 1.1rem; align-items: baseline;
+  margin: 2.75rem 0 1rem; padding: 0 0 0.4rem; border-bottom: 1px solid var(--color-accent-rule);
+}
+.home-section .apropos-tete h2.apropos-tete__titre {
+  font-family: var(--font-sans); font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--color-accent); margin: 0; padding: 0; border: 0; scroll-margin-top: 5rem;
+}
+.apropos-tete__phrase { font-style: italic; color: var(--color-text-muted); margin: 0; }
+@media (max-width: 640px) { .apropos-tete { grid-template-columns: minmax(0, 1fr); } }
+.home-section h3.apropos-sous {
+  font-family: var(--font-sans); font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--color-accent); margin: 1.5rem 0 0.6rem;
+}
+.apropos-contact { margin-top: 0.5rem; }
+
+// Identifiants : pastilles vers des sites externes (flèche oblique).
+.pastilles--ext a::after { content: "\2197"; }
+.identifiants { margin: 0 0 1.25rem; }
+
+// Repères : quatre nombres comptés dans le dépôt, entre deux filets.
+.reperes-auteur {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--color-accent-rule); border-bottom: 1px solid var(--color-rule-soft); margin: 0 0 1.5rem;
+}
+.reperes-auteur p { display: grid; gap: 0.15rem; margin: 0; padding: 0.7rem 0.9rem 0.7rem 0; }
+.reperes-auteur p + p { padding-left: 0.9rem; border-left: 1px solid var(--color-rule-soft); }
+.reperes-auteur b { font-family: var(--font-serif); font-size: 1.9rem; font-weight: 600; line-height: 1; color: var(--color-accent); font-variant-numeric: tabular-nums; }
+.reperes-auteur span { font-family: var(--font-sans); font-size: 12px; color: var(--color-text-subtle); }
+@media (max-width: 600px) {
+  .reperes-auteur { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .reperes-auteur p:nth-child(3) { padding-left: 0; border-left: 0; }
+  .reperes-auteur p:nth-child(n+3) { border-top: 1px solid var(--color-rule-soft); }
 }

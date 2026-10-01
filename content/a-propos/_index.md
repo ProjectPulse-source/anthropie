@@ -26,7 +26,7 @@ description: "Stéphane Lalut — Économiste, chercheur indépendant et essayis
 # (« 138 pages ») ; ne le poser que pour dire un rang d'édition. Une `line`
 # manquante n'efface pas le livre : elle déclenche un avertissement au build.
 wall_corpus_label: "Corpus anthropique"
-wall_autres_label: "Hors corpus anthropique"
+wall_autres_label: "Autres ouvrages"  # même nom que /livres/ et l'accueil (auteur, 01/10/2026)
 wall_lignes:
   anthropie-ordre-ici-dette-ailleurs:
     line: "Aucune société ne résout le désordre : elle le déplace — ailleurs, plus tard, sur d'autres. L'ouvrage qui pose le cadre et le met à l'épreuve de l'histoire longue."
@@ -35,8 +35,7 @@ wall_lignes:
   la-societe-du-premier-coup:
     line: "Tout le monde tombe. Le privilège, c'est que les chutes ne collent pas. Le livre compte ce que les mesures d'inégalité laissent hors champ : le nombre d'essais dont dispose une trajectoire."
   un-president-peut-il-tenir-ses-promesses:
-    meta: "Parution le 22 septembre 2026"
-    line: "Un président peut décider sans que rien ne se fasse. Une grille en quatre zones pour savoir, avant de voter, où une promesse casse — et après, qui n'a pas pu de qui n'a pas essayé."
+    line: "Un président peut décider sans que rien ne se fasse. Une grille en quatre zones pour savoir, avant de voter, où une promesse casse — et après, distinguer qui n'a pas pu de qui n'a pas essayé."
   lodyssee-des-idees:
     meta: "Nouvelle édition"
     line: "L'histoire des idées n'est pas un défilé chronologique : c'est un réseau. 250 escales et sept chemins de lecture, de l'aube de l'humanité à l'intelligence artificielle."
@@ -76,30 +75,32 @@ presse_objets:
 
 Stéphane Lalut est économiste, chercheur indépendant et essayiste. Il développe le cadre anthropique — l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent — dans une série de working papers et quatre ouvrages publiés. Il est par ailleurs l'auteur de deux autres livres, consacrés à l'histoire des idées et à la littérature.
 
-<p class="orcid-link"><a href="https://orcid.org/0009-0002-1794-4895" target="_blank" rel="noopener">ORCID</a> · <a href="https://scholar.google.com/citations?user=J4NqzwSfrHAC" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://zenodo.org/communities/anthropie-working-papers" target="_blank" rel="noopener">Zenodo</a></p>
+{{< identifiants >}}
+
+{{< reperes-auteur >}}
 
 Direction marketing européenne, conseil au secteur public, entrepreneuriat international&nbsp;: ce parcours a précédé la recherche et l'écriture. Il en explique la méthode — rigueur analytique et attention aux mécanismes concrets par lesquels un coût change de porteur.
 
-## Auteur
+<div class="apropos-tete"><h2 id="auteur" class="apropos-tete__titre section-title">Auteur</h2><p class="apropos-tete__phrase">Les livres du corpus anthropique, puis les autres ouvrages.</p></div>
 
 {{< mur-livres >}}
 
 Chaque fiche présente l'argument du livre, son sommaire et ses liens d'achat.
 
-## Dans les revues et la presse intellectuelle {#dans-la-presse-et-les-revues}
+<div class="apropos-tete"><h2 id="dans-la-presse-et-les-revues" class="apropos-tete__titre section-title">Dans les revues et la presse intellectuelle</h2><p class="apropos-tete__phrase">Chaque tuile nomme ce dont parle le texte.</p></div>
 
 {{< mur-presse >}}
 
 → [Toutes les publications](/publications/)
 
-## Chercheur
+<div class="apropos-tete"><h2 id="chercheur" class="apropos-tete__titre section-title">Chercheur</h2></div>
 
 Comment ce travail se conduit et se publie hors institution — outils, exigences de méthode, position dans le champ — est détaillé sur la page [Chercheur indépendant](/chercheur-independant/).
 
-### Anthropie Working Papers
+<h3 id="anthropie-working-papers" class="apropos-sous">Anthropie Working Papers</h3>
 
 {{< liste-awp >}}
 
-## Contact
+<div class="apropos-tete"><h2 id="contact" class="apropos-tete__titre section-title">Contact</h2></div>
 
-→ [Me contacter](/contact/)
+<p class="apropos-contact"><a class="btn btn--secondary" href="/contact/">Me contacter&nbsp;→</a></p>

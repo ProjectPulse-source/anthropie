@@ -219,7 +219,7 @@
 <section class="home-section home-livres" aria-labelledby="home-livres-titre">
   <h2 id="home-livres-titre">{{ if eq .Lang "en" }}Books{{ else }}Les livres{{ end }}</h2>
   {{- range $groupe := slice (dict "livres" $corpus "fr" "Le corpus anthropique" "en" "The anthropic corpus" "cls" "corpus")
-                             (dict "livres" $autres "fr" "Autres livres" "en" "Other books" "cls" "autres") }}
+                             (dict "livres" $autres "fr" "Autres ouvrages" "en" "Other works" "cls" "autres") }}
   {{- with $groupe.livres }}
   <p class="home-sous">{{ if eq $.Lang "en" }}{{ $groupe.en }}{{ else }}{{ $groupe.fr }}{{ end }}</p>
   <div class="home-livres__grille home-livres__grille--{{ $groupe.cls }}">

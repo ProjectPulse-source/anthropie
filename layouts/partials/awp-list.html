@@ -1,9 +1,12 @@
-<ul class="awp-list-compact">
-{{ range sort (where .Site.RegularPages "Type" "awp") "Params.awp_number" "asc" }}
-<li>
-  <span class="awp-list-compact__number">{{ .Params.awp_number }}</span> —
-  <a href="{{ .Permalink }}">{{ partial "fr-typo.html" .Title }}</a>
-  <span class="awp-list-compact__doi">DOI&nbsp;: <a href="https://doi.org/{{ .Params.doi_zenodo }}" target="_blank" rel="noopener">{{ .Params.doi_zenodo }}</a></span>
-</li>
-{{ end }}
+{{- /* awp-list.html — les working papers en registre sur la page À propos (variante A, 01/10/2026) : numéro, titre,
+       date, DOI ; du plus récent au plus ancien. Mêmes classes que le registre de l'accueil (_home.scss). Sur la page
+       où l'on vérifie un auteur, le DOI est l'information utile. Appelé par le shortcode liste-awp. */ -}}
+<ul class="awp-registre">
+{{- range sort (where .Site.RegularPages "Type" "awp") "Params.awp_number" "desc" }}
+  <li class="awp-registre__ligne">
+    <span class="awp-registre__num">{{ strings.TrimPrefix "AWP-" .Params.awp_number }}</span>
+    <a class="awp-registre__titre" href="{{ .RelPermalink }}">{{ partial "fr-typo.html" .Title }}</a>
+    <span class="awp-registre__meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format ":date_long" .Date }}</time>{{ with .Params.doi_zenodo }} · DOI&nbsp;<a href="https://doi.org/{{ . }}" target="_blank" rel="noopener">{{ . }}</a>{{ end }}</span>
+  </li>
+{{- end }}
 </ul>

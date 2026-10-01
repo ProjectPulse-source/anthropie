@@ -19,7 +19,7 @@ description: "Stéphane Lalut — Economist, independent researcher and essayist
 # book page ("138 pages"). A missing `line` never hides the book; it raises a
 # build warning.
 wall_corpus_label: "The anthropic corpus"
-wall_autres_label: "Outside the anthropic corpus"
+wall_autres_label: "Other works"  # same name as /en/books/ and the home page (author, 2026-10-01)
 wall_lignes:
   anthropie-ordre-ici-dette-ailleurs:
     line: "No society resolves disorder: it displaces it — elsewhere, later, onto others. The book that lays out the framework and tests it against long-range history."
@@ -28,7 +28,6 @@ wall_lignes:
   la-societe-du-premier-coup:
     line: "Everyone falls. The privilege is that the falls do not stick. The book counts what inequality measures leave out of frame: how many attempts a trajectory actually allows."
   un-president-peut-il-tenir-ses-promesses:
-    meta: "Published 22 September 2026"
     line: "A president can decide and nothing happens. A four-zone grid to tell, before voting, where a promise breaks — and afterwards, who could not from who did not try."
   lodyssee-des-idees:
     meta: "New edition"
@@ -64,30 +63,32 @@ presse_objets:
 
 Stéphane Lalut is an economist, independent researcher and essayist. He develops the framework of anthropy — the hypothesis that social systems displace disorder rather than resolve it — through a series of working papers and four published books. He is also the author of two further books, devoted to the history of ideas and to literature.
 
-<p class="orcid-link"><a href="https://orcid.org/0009-0002-1794-4895" target="_blank" rel="noopener">ORCID</a> · <a href="https://scholar.google.com/citations?user=J4NqzwSfrHAC" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://zenodo.org/communities/anthropie-working-papers" target="_blank" rel="noopener">Zenodo</a></p>
+{{< identifiants >}}
+
+{{< reperes-auteur >}}
 
 European marketing management, public-sector consulting, international entrepreneurship: that path came before the research and the writing. It explains the method — analytical rigour, and close attention to the concrete mechanisms by which a cost changes hands.
 
-## Author
+<div class="apropos-tete"><h2 id="author" class="apropos-tete__titre section-title">Author</h2><p class="apropos-tete__phrase">The books of the anthropic corpus, then the other works.</p></div>
 
 {{< mur-livres >}}
 
 Each page sets out the book's argument, its contents and where to buy it.
 
-## In journals and the intellectual press {#in-the-press-and-in-journals}
+<div class="apropos-tete"><h2 id="in-the-press-and-in-journals" class="apropos-tete__titre section-title">In journals and the intellectual press</h2><p class="apropos-tete__phrase">Each tile names what the text is about.</p></div>
 
 {{< mur-presse >}}
 
 → [All publications](/en/publications/)
 
-## Researcher
+<div class="apropos-tete"><h2 id="researcher" class="apropos-tete__titre section-title">Researcher</h2></div>
 
 Each paper in the series is deposited on Zenodo with its own DOI.
 
-### Anthropie Working Papers
+<h3 id="anthropie-working-papers" class="apropos-sous">Anthropie Working Papers</h3>
 
 {{< liste-awp >}}
 
-## Contact
+<div class="apropos-tete"><h2 id="contact" class="apropos-tete__titre section-title">Contact</h2></div>
 
-→ [Contact me](/en/contact/)
+<p class="apropos-contact"><a class="btn btn--secondary" href="/en/contact/">Contact me&nbsp;→</a></p>

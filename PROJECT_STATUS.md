@@ -53,6 +53,20 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-01 — Page `/a-propos/` accordée (variante A) et trois corrections de contenu, POUSSÉ
+
+Les deux murs (livres avec leur ligne d'accroche, presse avec une tuile par texte) restent tels quels. En-têtes de
+section courts sur filet bleu (comme Ressources, Série AWP ; ancres publiées conservées, FR/EN) ; identifiants en
+pastilles (shortcode `identifiants`, les cinq du bandeau de l'accueil, source `data/author.toml`) ; **repères comptés
+au build** (shortcode `reperes-auteur` : 8 working papers à DOI, 6 livres dont 4 du corpus, 20 textes publiés, 12
+revues et journaux) ; working papers en registre citable — numéro, titre, date, DOI — (`partials/awp-list.html` réécrit
+sur les classes du registre de l'accueil ; `.awp-list-compact` retiré) ; bouton « Me contacter ».
+**Corrections validées par l'auteur** : (1) ligne de *Promesses* du mur : « et après, *distinguer* qui n'a pas pu de
+qui n'a pas essayé » (le verbe manquait ; l'anglais « tell … who could not from who did not try » était correct) ;
+(2) « Parution le 22 septembre 2026 » / « Published 22 September 2026 » retiré (livre paru : « 284 pages ») ;
+(3) second groupe de livres nommé « Autres ouvrages » / « Other works » sur À propos et l'accueil, comme /livres/.
+0 débordement à 390 et 1 280 px. `hugo --minify` 0, `check-all --ci` 0, `audit-liens-build` 0 critique.
+
 ### 2026-10-01 — `/ressources/` accordée aux pages refaites (variante B, registre à filets), POUSSÉ
 
 Ressources, refaite en premier, gardait douze cartes crème et des blocs ouverts par un grand titre à filet. Accord avec

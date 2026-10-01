@@ -1,0 +1,18 @@
+{{- /* reperes-auteur.html — l'étendue du travail en quatre repères (page À propos, 01/10/2026, variante A).
+       Tout est COMPTÉ dans le dépôt au build, rien n'est écrit : working papers (fiches AWP de la langue), livres et
+       livres du corpus (livres-merged, `serie: "anthropie"`), textes publiés et revues distinctes (fiches publications,
+       site français, comme /publications/). Un nouveau papier, livre ou texte met la ligne à jour sans geste. */ -}}
+{{- $isEn := eq .Page.Lang "en" -}}
+{{- $awp := len (where site.RegularPages "Type" "awp") -}}
+{{- $livres := partial "livres-merged.html" .Page -}}
+{{- $corpus := len (where $livres "Params.serie" "anthropie") -}}
+{{- $frSite := index site.Sites 0 -}}
+{{- $pubs := where $frSite.RegularPages "Type" "publications" -}}
+{{- $revues := slice -}}
+{{- range $pubs }}{{ with .Params.revue }}{{ if not (in $revues .) }}{{ $revues = $revues | append . }}{{ end }}{{ end }}{{ end -}}
+<div class="reperes-auteur">
+  <p><b>{{ $awp }}</b><span>{{ if $isEn }}working papers with a DOI{{ else }}working papers à DOI{{ end }}</span></p>
+  <p><b>{{ len $livres }}</b><span>{{ if $isEn }}books, {{ $corpus }} in the anthropic corpus{{ else }}livres, dont {{ $corpus }} du corpus{{ end }}</span></p>
+  <p><b>{{ len $pubs }}</b><span>{{ if $isEn }}published texts{{ else }}textes publiés{{ end }}</span></p>
+  <p><b>{{ len $revues }}</b><span>{{ if $isEn }}journals and newspapers{{ else }}revues et journaux{{ end }}</span></p>
+</div>

@@ -1,0 +1,12 @@
+{{- /* identifiants.html — les identifiants de l'auteur en pastilles (page À propos, 01/10/2026).
+       Mêmes cinq identifiants, dans le même ordre, que le bandeau de l'accueil ; source unique data/author.toml
+       (sameAs). Remplace trois liens écrits à la main dans le Markdown. */ -}}
+{{- $cles := slice "orcid" "googleScholar" "zenodoCommunity" "openalex" "wikidata" -}}
+{{- $sameAs := site.Data.author.author.sameAs -}}
+<nav class="pastilles pastilles--ext identifiants" aria-label="{{ if eq .Page.Lang "en" }}Identifiers{{ else }}Identifiants{{ end }}">
+  <ul>
+    {{- range $cle := $cles }}{{ range $sameAs }}{{ if eq .key $cle }}
+    <li><a href="{{ .url }}" target="_blank" rel="noopener" title="{{ .labelLong }}">{{ .label }}</a></li>
+    {{- end }}{{ end }}{{ end }}
+  </ul>
+</nav>
