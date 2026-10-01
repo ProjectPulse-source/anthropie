@@ -1,0 +1,26 @@
+{{- /* awp-entree.html — un papier de la série sur /serie-awp/ (variante B retenue par l'auteur, 01/10/2026).
+       Contexte : la page AWP. Remplace partials/awp-card.html (résumé coupé à 180 signes, titre en noir).
+       Résumé complet ; citation à un clic : les trois exports (BibTeX, RIS, EndNote) que chaque page AWP
+       produit déjà en outputFormats, jusqu'ici proposés sur la seule page du papier. */ -}}
+{{- $isEn := eq .Lang "en" -}}
+{{- $n := strings.TrimPrefix "AWP-" .Params.awp_number -}}
+<article class="awp-entree" id="{{ lower .Params.awp_number }}">
+  <span class="awp-entree__num" aria-hidden="true">{{ $n }}</span>
+  <div class="awp-entree__corps">
+    <h3 class="awp-entree__titre"><a href="{{ .RelPermalink }}">{{ partial "fr-typo.html" .Title }}</a></h3>
+    {{- with .Params.subtitle }}<p class="awp-entree__st">{{ partial "fr-typo.html" . }}</p>{{ end }}
+    <p class="awp-entree__meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format ":date_long" .Date }}</time> · FR / EN{{ with .Params.jel_codes }} · JEL {{ delimit . " " }}{{ end }}</p>
+    {{- with .Description }}<p class="awp-entree__resume">{{ partial "fr-typo.html" . }}</p>{{ end }}
+    {{- with .Params.doi_zenodo }}<p class="awp-entree__doi">DOI <a href="https://doi.org/{{ . }}" target="_blank" rel="noopener">{{ . }}</a></p>{{ end }}
+    <p class="awp-entree__actions">
+      <a class="btn btn--primary" href="{{ .RelPermalink }}">{{ if $isEn }}Read AWP-{{ $n }}{{ else }}Lire l'AWP-{{ $n }}{{ end }}</a>
+      {{- $preview := partial "awp-preview-url.html" .Params.pdf_url }}
+      {{- with (or $preview .Params.pdf_url) }}<a class="awp-entree__lien" href="{{ . }}" target="_blank" rel="noopener">PDF</a>{{ end }}
+      {{- with .Params.url_zenodo }}<a class="awp-entree__lien" href="{{ . }}" target="_blank" rel="noopener">Zenodo</a>{{ end }}
+      <span class="awp-entree__citer">{{ if $isEn }}Cite:{{ else }}Citer&nbsp;:{{ end }}
+        {{- $formats := slice -}}
+        {{- range $libelle := slice "BibTeX" "RIS" "EndNote" }}{{ with $.OutputFormats.Get $libelle }}{{ $formats = $formats | append (printf `<a href="%s" download>%s</a>` .RelPermalink $libelle) }}{{ end }}{{ end -}}
+        {{ printf " %s" (delimit $formats " · ") | safeHTML }}</span>
+    </p>
+  </div>
+</article>

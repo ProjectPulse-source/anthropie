@@ -27,107 +27,56 @@
   max-width: 720px;
 }
 
-// ── Grid ──
-.serie-awp__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  margin-bottom: 3rem;
+// ── L'arc de la série (variante B, 01/10/2026) : frise de six étapes, puis un groupe par étape ──
+.awp-arc {
+  display: grid; grid-template-columns: repeat(6, minmax(0, 1fr));
+  border-top: 2px solid var(--color-accent); margin: 0 0 2rem;
 }
-
-// ── AWP Card (enriched) ──
-.awp-card {
-  display: flex;
-  gap: 1.5rem;
-  padding: 1.5rem;
-  background: var(--color-bg-card);
-  border-left: 3px solid var(--color-accent);
-  transition: box-shadow 0.15s ease;
-
-  &:hover {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  }
-}
-
-.awp-card__number {
-  font-family: var(--font-serif);
-  font-size: clamp(36px, 4vw, 48px);
-  font-weight: 700;
-  line-height: 1;
-  color: var(--color-accent);
-  min-width: 60px;
-  flex-shrink: 0;
-}
-
-.awp-card__body {
-  min-width: 0;
-}
-
-.awp-card__meta {
-  font-family: var(--font-sans);
-  font-size: var(--fs-small);
-  color: var(--color-text-subtle);
-  margin: 0 0 0.5rem;
-  display: flex;
-  gap: 0.75rem;
-  align-items: center;
-}
-
-.awp-card__lang {
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  color: var(--color-accent);
-}
-
-.awp-card__title {
-  font-family: var(--font-serif);
-  font-size: var(--fs-h3);
-  margin: 0 0 0.5rem;
-  line-height: 1.35;
-
-  a {
-    color: var(--color-text);
-    text-decoration: none;
-    &:hover { color: var(--color-accent); }
-  }
-}
-
-.awp-card__description {
-  font-family: var(--font-serif);
-  font-size: var(--fs-small);
-  line-height: var(--lh-body);
-  color: var(--color-text-body);
-  margin: 0 0 0.5rem;
-}
-
-.awp-card__doi {
-  font-family: var(--font-mono);
-  font-size: var(--fs-tiny);
-  color: var(--color-text-subtle);
-  margin: 0 0 0.75rem;
-
-  a { color: var(--color-accent); }
-}
-
-.awp-card__actions {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.awp-card__btn {
-  font-family: var(--font-sans);
-  font-size: var(--fs-small);
-  font-weight: 500;
-  padding: 0.3rem 0.75rem;
-  border: 1px solid var(--color-rule-soft);
-  color: var(--color-accent);
-  text-decoration: none;
+.awp-arc__etape {
+  position: relative; display: grid; gap: 4px; padding: 0.8rem 0.65rem 0.65rem;
+  text-decoration: none; border-right: 1px solid var(--color-rule-soft);
   transition: background 0.15s ease;
-
-  &:hover {
-    background: var(--color-accent-faint);
+  &:last-child { border-right: 0; }
+  &::before {
+    content: ""; position: absolute; top: -7px; left: 0.65rem; width: 12px; height: 12px;
+    border-radius: 50%; background: var(--color-bg); border: 2px solid var(--color-accent);
   }
+  &:hover { background: var(--color-accent-faint); }
 }
+.awp-arc__verbe { font-family: var(--font-sans); font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent); }
+.awp-arc__nums { font-family: var(--font-serif); font-size: 20px; font-weight: 600; color: var(--color-text); }
+@media (max-width: 720px) {
+  .awp-arc { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .awp-arc__etape:nth-child(3) { border-right: 0; }
+  .awp-arc__etape:nth-child(n+4) { border-top: 1px solid var(--color-rule-soft); }
+}
+
+.awp-groupe { margin: 0 0 1.5rem; scroll-margin-top: 5rem; }
+.awp-groupe__tete {
+  display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); gap: 0.25rem 1.1rem; align-items: baseline;
+  padding: 0.6rem 0 0.4rem; border-bottom: 1px solid var(--color-accent-rule);
+}
+// h2 neutre : la règle commune des h2 de page ne s'applique pas ici (pas de .home-section).
+.awp-groupe__verbe { font-family: var(--font-sans); font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent); margin: 0; }
+.awp-groupe__phrase { font-style: italic; color: var(--color-text-muted); max-width: 70ch; margin: 0; }
+@media (max-width: 600px) { .awp-groupe__tete { grid-template-columns: minmax(0, 1fr); } }
+
+// Une entrée : numéro, titre en lien, sous-titre, date et JEL, résumé complet, DOI, lire, citer.
+.awp-entree {
+  display: grid; grid-template-columns: 3.2rem minmax(0, 1fr); gap: 0.25rem 1.1rem;
+  padding: 1rem 0; border-bottom: 1px solid var(--color-rule-soft); scroll-margin-top: 5rem;
+}
+.awp-entree__num { font-family: var(--font-serif); font-size: 30px; font-weight: 600; line-height: 1; color: var(--color-accent); }
+.awp-entree__corps { display: grid; gap: 0.3rem; min-width: 0; }
+.awp-entree__titre { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 500; line-height: 1.3; margin: 0; }
+.awp-entree__st { font-style: italic; color: var(--color-text-muted); margin: 0; }
+.awp-entree__meta { font-family: var(--font-sans); font-size: 12px; letter-spacing: 0.03em; color: var(--color-text-subtle); margin: 0; }
+.awp-entree__resume { max-width: 68ch; margin: 0.15rem 0 0; }
+.awp-entree__doi { font-family: var(--font-mono); font-size: var(--fs-tiny); color: var(--color-text-subtle); margin: 0; }
+.awp-entree__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; margin: 0.4rem 0 0; }
+.awp-entree__lien { font-family: var(--font-sans); font-size: var(--fs-small); }
+.awp-entree__citer { font-family: var(--font-sans); font-size: 12.5px; color: var(--color-text-subtle); }
+@media (max-width: 560px) { .awp-entree { grid-template-columns: minmax(0, 1fr); } }
 
 // ── About section ──
 .serie-awp__about {
@@ -166,16 +115,4 @@
   font-weight: 500;
 
   &:hover { text-decoration: underline; }
-}
-
-// ── Responsive ──
-@media (max-width: 768px) {
-  .awp-card {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-  .awp-card__number {
-    font-size: 32px;
-    min-width: auto;
-  }
 }

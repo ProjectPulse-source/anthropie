@@ -53,6 +53,17 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-01 — Page `/serie-awp/` : l'arc de la série comme structure (variante B), POUSSÉ
+
+L'arc rédigé par l'auteur (fonder, déployer, appliquer, retourner, formaliser, mesurer) passe de la liste à puces du
+texte au front matter `arc:` des index FR/EN — source unique de la frise et du classement. Frise de six étapes
+cliquables, puis chaque papier sous son étape avec la phrase de l'arc, mot pour mot. **Garde vue mordre** : AWP-05
+retiré de l'arc → build arrêté (« figure 0 fois… attendu : 1 ») ; restauré. Entrée (`awp-entree.html`, remplace
+`awp-card.html`, retiré avec ses styles et `.awp-grid`) : titre en lien, sous-titre, date, JEL, **résumé complet**
+(coupé à 180 signes avant), DOI, Lire, PDF, Zenodo, **citer à un clic** (BibTeX, RIS, EndNote, exports déjà produits
+par chaque page AWP). Hauteur 3 815 → 4 315 px : le surcroît est celui des résumés complets, voulu. 0 débordement à
+390 et 1 280 px. `hugo --minify` 0, `check-all --ci` 0.
+
 ### 2026-10-01 — Page `/livres/` refaite (variante B), POUSSÉ
 
 Maquette choisie par l'auteur, avec sa consigne : autres ouvrages de **même taille** que le corpus hors fondateur.

@@ -28,12 +28,43 @@
     </div>
   </header>
 
-  {{/* ── Grid ── */}}
-  <div class="serie-awp__grid">
-    {{ range sort (where .Site.RegularPages "Type" "awp") "Params.awp_number" "asc" }}
-      {{ partial "awp-card.html" . }}
-    {{ end }}
-  </div>
+  {{/* ── L'arc de la série (variante B retenue par l'auteur, 01/10/2026) ──
+       Source unique : `arc` en front matter de la page (étape, phrase, papiers). Chaque AWP de la langue
+       figure dans exactement une étape : un papier absent ou rangé deux fois arrête le build, un numéro
+       cité sans fiche aussi. La frise en tête renvoie aux groupes ; chaque groupe porte la phrase de l'arc. */}}
+  {{- $awps := where .Site.RegularPages "Type" "awp" -}}
+  {{- $arc := .Params.arc -}}
+  {{- if not $arc }}{{ errorf "serie-awp : %s sans `arc` en front matter" .File.Path }}{{ end -}}
+  {{- $ranges := slice -}}
+  {{- range $arc }}{{ $ranges = $ranges | append .awp }}{{ end -}}
+  {{- range $awps -}}
+    {{- $num := .Params.awp_number -}}
+    {{- $fois := 0 -}}
+    {{- range $ranges }}{{ if eq . $num }}{{ $fois = add $fois 1 }}{{ end }}{{ end -}}
+    {{- if ne $fois 1 }}{{ errorf "serie-awp : %s figure %d fois dans l'arc de %s (attendu : 1)" $num $fois $.File.Path }}{{ end -}}
+  {{- end -}}
+  {{- range $ranges -}}
+    {{- if not (where $awps "Params.awp_number" .) }}{{ errorf "serie-awp : l'arc de %s cite %s, sans fiche AWP" $.File.Path . }}{{ end -}}
+  {{- end }}
+
+  <nav class="awp-arc" aria-label="{{ if $isEn }}The arc of the series{{ else }}L'arc de la série{{ end }}">
+    {{- range $i, $e := $arc }}
+    <a class="awp-arc__etape" href="#etape-{{ add $i 1 }}">
+      <span class="awp-arc__verbe">{{ $e.etape }}</span>
+      <span class="awp-arc__nums">{{ delimit (apply $e.awp "strings.TrimPrefix" "AWP-" ".") " · " }}</span>
+    </a>
+    {{- end }}
+  </nav>
+
+  {{- range $i, $e := $arc }}
+  <section class="awp-groupe" id="etape-{{ add $i 1 }}" aria-labelledby="etape-{{ add $i 1 }}-titre">
+    <div class="awp-groupe__tete">
+      <h2 class="awp-groupe__verbe" id="etape-{{ add $i 1 }}-titre">{{ $e.etape }}</h2>
+      <p class="awp-groupe__phrase">{{ partial "fr-typo.html" $e.phrase }}</p>
+    </div>
+    {{- range $e.awp }}{{ range where $awps "Params.awp_number" . }}{{ partial "awp-entree.html" . }}{{ end }}{{ end }}
+  </section>
+  {{- end }}
 
   {{/* ── About the series ── */}}
   <section class="serie-awp__about">

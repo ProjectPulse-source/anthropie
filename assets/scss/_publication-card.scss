@@ -61,7 +61,7 @@ a.pub-card {
   justify-content: center;
 }
 
-// Harmonisé avec serie-awp : awp-card__title = var(--fs-h2)
+// Titre de carte : var(--fs-h2) (valeur reprise de l'ancienne carte AWP, retirée le 01/10/2026)
 .pub-title {
   font-family: var(--font-serif);
   font-size: var(--fs-h3);
@@ -71,7 +71,7 @@ a.pub-card {
   color: var(--color-text);
 }
 
-// Harmonisé avec serie-awp : awp-card__description = var(--fs-body)
+// Description de carte : var(--fs-body) (même origine)
 .pub-chapo {
   font-family: var(--font-serif);
   font-size: var(--fs-body);
