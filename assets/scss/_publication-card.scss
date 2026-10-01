@@ -1,35 +1,5 @@
-// Publication cards — carte entièrement cliquable
-a.pub-card {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1.25rem 0.75rem;
-  border-bottom: 1px solid var(--color-rule-soft, #eeebe6);
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-  transition: background 0.15s;
-  border-radius: 6px;
-  margin: 0 -0.75rem;
-
-  &:first-of-type {
-    border-top: 1px solid var(--color-rule-soft, #eeebe6);
-  }
-
-  &:hover {
-    background: rgba(0, 0, 0, 0.015);
-  }
-
-  &:hover .pub-title {
-    text-decoration: underline;
-  }
-
-  &:hover .pub-thumb img {
-    transform: scale(1.03);
-  }
-}
-
+// Publications : tuile de revue (partagée avec le mur presse de /a-propos/), liens « Prolonge : », DOI.
+// La carte de liste (a.pub-card) a été remplacée par partials/publication-entree.html le 01/10/2026.
 // Gabarit unique pour toutes les cartes
 .pub-thumb {
   width: 160px;
@@ -53,106 +23,9 @@ a.pub-card {
 
 // Logos : règles dédiées plus bas (variantes navy/crème + bloc typographique).
 
-.pub-body {
-  flex: 1;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-// Titre de carte : var(--fs-h2) (valeur reprise de l'ancienne carte AWP, retirée le 01/10/2026)
-.pub-title {
-  font-family: var(--font-serif);
-  font-size: var(--fs-h3);
-  font-weight: 500;
-  line-height: 1.3;
-  margin: 0 0 0.35rem;
-  color: var(--color-text);
-}
-
-// Description de carte : var(--fs-body) (même origine)
-.pub-chapo {
-  font-family: var(--font-serif);
-  font-size: var(--fs-body);
-  color: var(--color-text-muted);
-  line-height: var(--lh-body);
-  margin: 0 0 0.5rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-// Métadonnées revue + date — texte éditorial lisible (pas technique comme les DOI)
-.pub-meta {
-  font-size: var(--fs-small);
-  color: var(--color-text-faint);
-  margin: 0;
-  display: flex;
-  align-items: center;
-  gap: 0.375rem;
-  flex-wrap: wrap;
-}
-
-.pub-revue {
-  font-weight: 500;
-  color: var(--color-text-muted);
-  font-variant: small-caps;
-  letter-spacing: 0.04em;
-  text-transform: lowercase;
-}
-
-.pub-dot { opacity: 0.4; }
-
-.pub-lang {
-  font-size: 0.6875rem;
-  color: #767676;
-  border: 1px solid #bbb;
-  border-radius: 3px;
-  padding: 1px 6px;
-  margin-left: 4px;
-  font-variant: normal;
-  letter-spacing: 0;
-}
-
-@media (max-width: 480px) {
-  a.pub-card {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-  .pub-thumb {
-    width: 100%;
-    min-width: unset;
-    height: 180px;
-  }
-}
-
 // =======================================================================
-// Bloc « Prolonge : » — liens contextuels AWP / livre sous chaque carte.
-// La séparation visuelle inter-cartes est portée par .pub-card__wrap ;
-// le border-bottom de .pub-card est neutralisé via surcharge ciblée pour
-// éviter le doublon, sans modifier la règle d'origine.
+// Bloc « Prolonge : » — liens contextuels AWP / livre sous chaque publication (publication-entree.html).
 // =======================================================================
-.pub-card__wrap {
-  border-bottom: 1px solid var(--color-rule-soft, #eeebe6);
-
-  // L'en-tete est sticky : degager la carte visee par une ancre #<slug>.
-  scroll-margin-top: 80px;
-
-  &:first-of-type {
-    border-top: 1px solid var(--color-rule-soft, #eeebe6);
-  }
-
-  > .pub-card {
-    border-bottom: none;
-
-    &:first-of-type {
-      border-top: none;
-    }
-  }
-}
-
 .pub-card__related {
   display: flex;
   flex-wrap: wrap;
@@ -298,3 +171,61 @@ a.pub-card {
   .pub-thumb__name  { color: #1B2A4E; }
   .pub-thumb__rule  { background: rgba(27, 42, 78, 0.55); }
 }
+
+// ── Page /publications/ (variante B, 01/10/2026) : chronologie compacte, filtrable par thème ──
+.publications-intro details.publications-chantiers {
+  border-top: 1px solid var(--color-rule-soft); border-bottom: 1px solid var(--color-rule-soft);
+  padding: 0.5rem 0; margin: 0 0 1rem;
+  summary { cursor: pointer; font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: var(--color-accent); }
+  p { color: var(--color-text-muted); }
+}
+.publications-sous { display: block; font-family: var(--font-sans); font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent); margin: 0 0 0.2rem; }
+.publications-revues { font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.75; max-width: 72ch; margin: 0 0 1.25rem; }
+.publications-filtres { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 0.5rem; }
+.publications-filtres button {
+  font-family: var(--font-sans); font-size: 13px; font-weight: 500; cursor: pointer;
+  padding: 5px 12px; border-radius: 999px;
+  border: 1px solid var(--color-accent-soft); background: var(--color-bg-elevated); color: var(--color-accent);
+  &.is-actif { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-bg); }
+  &:focus-visible { outline: 2px solid var(--color-pivot); outline-offset: 2px; }
+}
+.home-section h2.publications-mois.section-title {
+  font-family: var(--font-sans); font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--color-accent); margin: 1.5rem 0 0; padding: 0 0 0.4rem; border: 0; border-bottom: 1px solid var(--color-accent-rule);
+}
+
+// Une entrée : petite tuile de revue, méta, titre vers l'article, chapô, thèmes, « Prolonge : », DOI.
+.pub-entree {
+  display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 0.25rem 1rem;
+  padding: 0.9rem 0; border-bottom: 1px solid var(--color-rule-soft);
+  scroll-margin-top: 80px; // l'en-tête est collant : une ancre #<slug> (mur presse) dégage l'entrée
+}
+.pub-entree__tuile { display: block; text-decoration: none; }
+.pub-entree .pub-thumb {
+  width: 112px; min-width: 112px; height: 75px; border-radius: 6px; padding: 6px 8px; gap: 3px;
+  .pub-thumb__label { font-size: 8.5px; letter-spacing: 0.14em; }
+  .pub-thumb__name { font-size: 14px; }
+  .pub-thumb__rule { width: 22px; }
+}
+.pub-entree__corps { display: grid; gap: 0.3rem; min-width: 0; }
+.pub-entree__meta { font-family: var(--font-sans); font-size: 12px; color: var(--color-text-subtle); margin: 0; }
+.pub-entree__academique { font-weight: 600; color: var(--color-accent); }
+.pub-entree__titre { font-family: var(--font-serif); font-size: 1.12rem; font-weight: 500; line-height: 1.3; margin: 0; }
+.pub-entree__ext { font-size: 0.8em; color: var(--color-pivot); }
+.pub-entree__chapo { color: var(--color-text-muted); max-width: 70ch; margin: 0; }
+.pub-entree__themes { display: flex; flex-wrap: wrap; gap: 5px; margin: 0.1rem 0 0; }
+.pub-entree__themes span {
+  font-family: var(--font-sans); font-size: 11.5px; font-weight: 600; color: var(--color-accent);
+  background: var(--color-dossier-tint); padding: 2px 8px; border-radius: 999px;
+}
+// « Prolonge : » et DOI : alignés sur la colonne de texte de l'entrée (ils l'étaient sur l'ancienne tuile de 160 px).
+.pub-entree .pub-card__related, .pub-entree .pub-card__doi { margin: 0; padding: 0; }
+@media (max-width: 560px) {
+  .pub-entree { grid-template-columns: 72px minmax(0, 1fr); }
+  .pub-entree .pub-thumb { width: 72px; min-width: 72px; height: 48px; padding: 3px 4px; }
+  .pub-entree .pub-thumb .pub-thumb__label { display: none; }
+  .pub-entree .pub-thumb .pub-thumb__name { font-size: 10px; }
+}
+// `display: grid` de l'entrée l'emportait sur l'attribut `hidden` posé par le filtre : l'entrée restait affichée
+// (mesuré le 01/10/2026 : 5 entrées « cachées » sur 20 visibles à l'écran).
+.pub-entree[hidden], .home-section h2.publications-mois[hidden], .publications-filtres[hidden] { display: none; }

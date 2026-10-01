@@ -1,29 +1,49 @@
 {{ define "main" }}
+{{- /* Page /publications/ (variante B retenue par l'auteur, 01/10/2026) : chronologie compacte groupée par mois,
+       filtrable par thème. Les fiches n'existent qu'en français ; la page anglaise les liste marquées « In French ».
+       Tout se déduit des fiches : revues et nombres, thèmes (data/themes_publications.yaml), mois. Les deux derniers
+       paragraphes d'introduction sont repliés dans le Markdown (« Trois chantiers »). */ -}}
 {{- $isEn := eq .Lang "en" -}}
-<div class="home-section">
+{{- $frSite := index site.Sites 0 -}}
+{{- $pubs := (where $frSite.RegularPages "Type" "publications").ByDate.Reverse -}}
+<div class="home-section publications-page">
   <header class="page-header">
     <h1 class="page-header__title">{{ partial "fr-typo.html" .Title }}</h1>
-    {{ with .Description }}
-    <p class="page-header__lede">{{ . }}</p>
-    {{ end }}
+    {{ with .Description }}<p class="page-header__lede">{{ partial "fr-typo.html" . }}</p>{{ end }}
   </header>
 
-  {{ .Content }}
+  <div class="article__body publications-intro">{{ .Content }}</div>
 
-  {{ $frSite := index site.Sites 0 }}
-  {{ $pubs := where $frSite.RegularPages "Type" "publications" }}
-  {{- .Scratch.Set "logoIndex" 0 -}}
-  {{ range $i, $pub := $pubs.ByDate.Reverse }}
-    {{- $variant := "" -}}
-    {{- if eq $pub.Params.image_type "logo" -}}
-      {{- $.Scratch.Add "logoIndex" 1 -}}
-      {{- $variant = "cream" -}}
-      {{- if eq (mod ($.Scratch.Get "logoIndex") 2) 1 -}}
-        {{- $variant = "navy" -}}
-      {{- end -}}
-    {{- end -}}
-    {{ partial "publication-card.html" (dict "Page" $pub "Index" $i "LogoVariant" $variant) }}
-  {{ end }}
+  {{- /* Où ces textes ont paru : chaque revue et son nombre de textes, du plus au moins fréquent. */ -}}
+  {{- $revues := dict -}}
+  {{- range $pubs }}{{ with .Params.revue }}{{ $revues = merge $revues (dict . (add (index $revues . | default 0) 1)) }}{{ end }}{{ end -}}
+  {{- $lignes := slice -}}
+  {{- range $nom, $n := $revues }}{{ $lignes = $lignes | append (dict "nom" $nom "n" $n) }}{{ end }}
+  <p class="publications-revues">
+    <span class="publications-sous">{{ if $isEn }}Where these texts appeared{{ else }}Où ces textes ont paru{{ end }}</span>
+    {{ $parts := slice }}{{ range sort (sort $lignes "nom") "n" "desc" }}{{ $parts = $parts | append (printf "<i>%s</i>&nbsp;%d" .nom .n) }}{{ end }}{{ delimit $parts " · " | safeHTML }}
+  </p>
+
+  {{- /* Filtres par thème : sans script, tout reste visible ; le script masque les entrées hors thème et les mois vides. */ -}}
+  {{- $nb := dict -}}
+  {{- range $pubs }}{{ $rel := .Params.related | default (slice) }}{{ range site.Data.themes_publications }}{{ if in $rel .awp }}{{ $nb = merge $nb (dict .awp (add (index $nb .awp | default 0) 1)) }}{{ end }}{{ end }}{{ end }}
+  <div class="publications-filtres" role="group" aria-label="{{ if $isEn }}Themes{{ else }}Thèmes{{ end }}" hidden>
+    <button type="button" class="is-actif" data-theme="" aria-pressed="true">{{ if $isEn }}All{{ else }}Tous{{ end }}&nbsp;· {{ len $pubs }}</button>
+    {{- range $t := site.Data.themes_publications }}{{ $n := index $nb $t.awp }}{{ if $n }}{{ $lib := cond $isEn $t.en $t.fr }}
+    <button type="button" data-theme="{{ $lib }}" aria-pressed="false">{{ $lib }}&nbsp;· {{ $n }}</button>
+    {{- end }}{{ end }}
+  </div>
+
+  <div class="publications-liste">
+    {{- $mois := "" -}}
+    {{- range $i, $p := $pubs }}
+      {{- $m := $p.Date.Format "2006-01" -}}
+      {{- if ne $m $mois }}{{ $mois = $m }}
+      <h2 class="publications-mois section-title">{{ time.Format "January 2006" $p.Date }}</h2>
+      {{- end }}
+      {{ partial "publication-entree.html" (dict "page" $p "lang" $.Lang "variant" (cond (eq (mod $i 2) 0) "navy" "cream")) }}
+    {{- end }}
+  </div>
 
   <div class="page-exit">
     <a href="{{ "/serie-awp/" | relLangURL }}" class="text-link">
@@ -31,4 +51,26 @@
     </a>
   </div>
 </div>
+<script>
+  (function () {
+    var bloc = document.querySelector('.publications-filtres');
+    if (!bloc) return;
+    bloc.hidden = false;
+    var boutons = bloc.querySelectorAll('button');
+    boutons.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var t = b.dataset.theme;
+        boutons.forEach(function (x) { var on = x === b; x.classList.toggle('is-actif', on); x.setAttribute('aria-pressed', on); });
+        document.querySelectorAll('.pub-entree').forEach(function (a) {
+          a.hidden = !!t && a.dataset.themes.split('|').indexOf(t) < 0;
+        });
+        document.querySelectorAll('.publications-mois').forEach(function (m) {
+          var n = m.nextElementSibling, vis = false;
+          while (n && !n.classList.contains('publications-mois')) { if (!n.hidden) vis = true; n = n.nextElementSibling; }
+          m.hidden = !vis;
+        });
+      });
+    });
+  })();
+</script>
 {{ end }}

@@ -53,6 +53,21 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-01 — Page `/publications/` : chronologie filtrable (variante B), POUSSÉ — fin de la refonte des pages
+
+Les 20 publications en entrées compactes, groupées par mois : petite tuile de revue (classes `pub-thumb`, partagées
+avec le mur presse d'À propos — vérifié inchangé, 3 682 px et tuiles 189×107 en ligne comme en local), revue et date,
+« revue académique » sur les quatre textes `source_type: Académique`, titre vers l'article, chapô, **thèmes déduits
+des AWP** déclarés (`data/themes_publications.yaml` : AWP-03 Dette publique 8, AWP-06 Numérique 7, AWP-04 Énergie 5,
+AWP-02 Longue durée 3 ; plusieurs par texte), « Prolonge : » et DOI conservés. « Où ces textes ont paru » : revues et
+nombres, dérivés. **Filtres par thème** (script de la page ; sans script tout reste visible). Deux paragraphes
+d'introduction repliés (« Trois chantiers »). Ids `#<slug>` conservés (visés par le mur presse).
+`publication-card.html` retiré avec ses styles de carte. **Défaut vu au contrôle** : `display: grid` des entrées
+l'emportait sur l'attribut `hidden` du filtre — entrées comptées cachées, affichées à l'écran ; corrigé et mesuré
+(5 entrées « Énergie » réellement affichées). Ma maquette disait à tort que les liens « Prolonge » ne s'affichaient
+pas : ils s'affichaient, ils sont gardés. 7 518 → 6 252 px à 1 280 px ; 0 débordement à 390 px.
+`hugo --minify` 0, `check-all --ci` 0, `audit-liens-build` 0 critique.
+
 ### 2026-10-01 — Page `/quest-ce-que-lanthropie/` (variante B) ; défaut du contrôle typographique corrigé, POUSSÉ
 
 Texte de la page inchangé ; gabarit propre (`layouts/quest-ce-que-lanthropie/list.html`). En tête : la phrase

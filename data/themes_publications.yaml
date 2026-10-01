@@ -1,0 +1,18 @@
+# Thèmes de /publications/ (variante B retenue par l'auteur, 01/10/2026).
+# Un thème se DÉDUIT du working paper qu'une fiche déclare déjà dans `related` : aucune saisie par publication, une
+# fiche porte autant de thèmes que de papiers correspondants (thèmes, pas tiroirs exclusifs — avis externe du 01/10).
+# AWP-01 et AWP-07 (le cadre, sa formalisation) ne font pas de thème : ils concernent presque tous les textes.
+# AWP-05 non plus : aucune publication ne s'y rattache aujourd'hui.
+# Ordre = ordre des filtres.
+- awp: "awp-03"
+  fr: "Dette publique"
+  en: "Public debt"
+- awp: "awp-06"
+  fr: "Numérique"
+  en: "Digital"
+- awp: "awp-04"
+  fr: "Énergie"
+  en: "Energy"
+- awp: "awp-02"
+  fr: "Longue durée"
+  en: "Long run"

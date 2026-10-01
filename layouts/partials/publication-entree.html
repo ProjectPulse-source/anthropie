@@ -1,0 +1,42 @@
+{{- /* publication-entree.html — une publication sur /publications/ (variante B retenue par l'auteur, 01/10/2026).
+       Entrée : dict { page (fiche publication, toujours française), lang (langue de la page), variant (navy|cream) }.
+       Remplace partials/publication-card.html : même tuile de revue (classes pub-thumb, partagées avec le mur presse
+       de /a-propos/), en petit ; titre vers l'article ; chapô ; thèmes déduits des AWP (data/themes_publications.yaml) ;
+       « Prolonge : » vers les AWP et le livre ; DOI s'il existe. L'id = slug de la fiche, adresse publiée et visée
+       par le mur presse (/publications/#<slug>). */ -}}
+{{- $p := .page -}}
+{{- $isEn := eq .lang "en" -}}
+{{- $themes := slice -}}
+{{- $rel := $p.Params.related | default (slice) -}}
+{{- range site.Data.themes_publications }}{{ if in $rel .awp }}{{ $themes = $themes | append (cond $isEn .en .fr) }}{{ end }}{{ end -}}
+<article class="pub-entree" id="{{ $p.File.ContentBaseName }}" data-themes="{{ delimit $themes "|" }}">
+  <a class="pub-entree__tuile" href="{{ $p.Params.url_externe }}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+    <span class="pub-thumb pub-thumb--logo pub-thumb--logo--{{ .variant }}">
+      <span class="pub-thumb__label">{{ $p.Params.source_type }}</span>
+      <span class="pub-thumb__name">{{ $p.Params.revue }}</span>
+      <span class="pub-thumb__rule"></span>
+    </span>
+  </a>
+  <div class="pub-entree__corps">
+    <p class="pub-entree__meta">{{ $p.Params.revue }}{{ if eq $p.Params.source_type "Académique" }} <span class="pub-entree__academique">· {{ if $isEn }}academic journal{{ else }}revue académique{{ end }}</span>{{ end }} · <time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ time.Format ":date_long" $p.Date }}</time>{{ if $isEn }} · <span lang="en">In French</span>{{ end }}</p>
+    <h3 class="pub-entree__titre"><a href="{{ $p.Params.url_externe }}" target="_blank" rel="noopener"{{ if $isEn }} lang="fr"{{ end }}>{{ partial "fr-typo.html" $p.Title }}<span class="pub-entree__ext" aria-hidden="true">&nbsp;↗</span></a></h3>
+    {{- $chapo := cond (and $isEn $p.Params.chapo_en) $p.Params.chapo_en $p.Params.chapo }}
+    {{- with $chapo }}<p class="pub-entree__chapo">{{ . | safeHTML }}</p>{{ end }}
+    {{- with $themes }}<p class="pub-entree__themes">{{ range . }}<span>{{ . }}</span>{{ end }}</p>{{ end }}
+    {{- if or $p.Params.related $p.Params.related_book }}
+    <p class="pub-card__related">
+      <span class="pub-card__related-label">{{ i18n "pub_related_label" }}</span>
+      {{- range $slug := $p.Params.related }}{{ with site.GetPage (printf "/awp/%s" $slug) }}<a class="pub-card__related-awp" href="{{ .RelPermalink }}">{{ upper $slug }}</a>{{ end }}{{ end }}
+      {{- with $p.Params.related_book }}
+        {{- $slug := . }}{{ $book := site.GetPage (printf "/livres/%s" $slug) }}
+        {{- if not $book }}{{ range site.Sites }}{{ if eq .Language.Lang "fr" }}{{ $book = .GetPage (printf "/livres/%s" $slug) }}{{ end }}{{ end }}{{ end }}
+        {{- with $book }}<a class="pub-card__related-book" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}
+      {{- end }}
+    </p>
+    {{- end }}
+    {{- with $p.Params.doi }}
+    {{- $href := printf "https://doi.org/%s" . }}{{ with $p.Params.doi_url }}{{ $href = . }}{{ end }}
+    <p class="pub-card__doi"><a href="{{ $href }}" target="_blank" rel="noopener noreferrer">{{ if $isEn }}DOI: {{ else }}DOI&nbsp;: {{ end }}{{ . }}</a></p>
+    {{- end }}
+  </div>
+</article>
