@@ -27,13 +27,40 @@ faq:
     answer: "L'anthropie se présente comme une hypothèse de travail, non comme une théorie achevée. Trois limites sont assumées : elle prolonge des traditions existantes (externalités, cost-shifting de K. W. Kapp) dont elle unifie les cas ; sa généralité exige des critères observables — coût marginal croissant, effet boomerang — pour rester réfutable ; et son apport tient moins à la découverte du transfert qu'à sa stabilisation opératoire (définition canonique, vocabulaire, critères, corpus daté)."
   - question: "Qui a développé le cadre anthropique ?"
     answer: "Stéphane Lalut, économiste, chercheur indépendant et essayiste, a proposé le cadre anthropique en 2025 dans le livre ANTHROPIE — Ordre ici. Dette ailleurs, puis l'a formalisé à partir de 2026 dans une série de working papers publiés sur Zenodo sous le label Anthropie Working Papers (AWP)."
+# En-tête de la page (auteur, 01/10/2026, variante B) : la phrase « proposée par » (déplacée de la section Définition,
+# mot pour mot) et l'encadré « affirme / n'affirme pas ». Chaque ligne reprend une phrase de la page et pointe vers sa
+# section ; rien n'y est affirmé que la page ne dise déjà. Lu par layouts/quest-ce-que-lanthropie/list.html.
+proposee_par: "Cette hypothèse est proposée par l'économiste Stéphane Lalut (livre *ANTHROPIE*, 2025) et formalisée dans les *Anthropie Working Papers* (2026)."
+frontiere:
+  affirme:
+    - texte: "Tout ordre observable dans un système social suppose un désordre exporté ailleurs : vers d'autres lieux, d'autres temps ou d'autres groupes sociaux."
+      ancre: "définition"
+      section: "Définition"
+    - texte: "Ce transfert a un mécanisme que l'on peut nommer : qui crée l'ordre, qui absorbe le désordre, et ce qui rend le transfert invisible."
+      ancre: "les-trois-questions-fondamentales"
+      section: "Les trois questions"
+    - texte: "Le désordre déplacé peut s'accumuler, saturer et revenir : déplacement, accumulation, saturation, retour, re-déplacement."
+      ancre: "les-trois-axes-de-transfert"
+      section: "Les trois axes"
+    - texte: "Il se donne des critères observables — coût marginal croissant du transfert, effet boomerang — pour dire quand un espace de déportation sature."
+      ancre: "objections-et-limites"
+      section: "Objections et limites"
+  naffirme:
+    - texte: "Être une théorie achevée : c'est une hypothèse de travail à valeur heuristique."
+      ancre: "définition"
+      section: "Définition"
+    - texte: "Avoir découvert le transfert : l'apport revendiqué est sa stabilisation opératoire — définition, vocabulaire, critères, corpus daté."
+      ancre: "objections-et-limites"
+      section: "Objections et limites"
+    - texte: "Se confondre avec l'entropie de la physique, ni être une métaphore décorative."
+      ancre: "anthropie-et-entropie"
+      section: "Notions voisines"
+    - texte: "Apporter une réponse unique : il fournit une manière de poser les questions avec plus de netteté."
+      ancre: "quelques-domaines-dapplication"
+      section: "Domaines d'application"
 ---
 
 ## Définition
-
-{{< canonical-definition >}}
-
-Cette hypothèse est proposée par l'économiste Stéphane Lalut (livre *ANTHROPIE*, 2025) et formalisée dans les *Anthropie Working Papers* (2026).
 
 Tout ordre observable dans un système social — qu'il s'agisse d'une institution, d'un territoire, d'une organisation ou d'une économie — suppose un désordre exporté ailleurs&nbsp;: vers d'autres lieux, vers d'autres temps ou vers d'autres groupes sociaux.
 
@@ -53,9 +80,11 @@ Le cadre anthropique se construit comme une discipline du regard&nbsp;: devant t
 
 L'anthropie propose une grille de lecture simple, organisée autour de trois questions&nbsp;:
 
-1. **Qui crée l'ordre&nbsp;?**
-2. **Qui absorbe le désordre&nbsp;?**
-3. **Quel mécanisme rend ce transfert invisible&nbsp;?**
+<ol class="trois-questions">
+<li><span class="trois-questions__n">1</span>Qui crée l'ordre&nbsp;?</li>
+<li><span class="trois-questions__n">2</span>Qui absorbe le désordre&nbsp;?</li>
+<li><span class="trois-questions__n">3</span>Quel mécanisme rend ce transfert invisible&nbsp;?</li>
+</ol>
 
 Ces trois questions déplacent le regard. Elles conduisent à ne plus prendre l'ordre pour un donné, mais pour le résultat d'une opération de transfert, de report ou d'externalisation.
 
@@ -77,17 +106,23 @@ Dans le métaprogramme numérique contemporain, les trois axes atteignent un ré
 
 Cette boucle — déplacement, accumulation, saturation, retour, re-déplacement — est présentée sur la page [Qu'est-ce que la boucle anthropique&nbsp;?](/boucle-anthropique/) et formalisée dans [AWP-07 — *La boucle anthropique*](/awp/awp-07/), qui en donne les définitions, les états et les conditions de réfutation.
 
-## Anthropie et entropie
+## Notions voisines {#notions-voisines}
 
-L'anthropie ne se confond pas avec l'entropie.
+Ce que l'anthropie n'est pas&nbsp;: chaque distinction s'ouvre sur son texte complet.
+
+<div class="notions">
+
+<details class="notion" id="anthropie-et-entropie"><summary><span class="notion__avec">entropie</span><span class="notion__pr">L'anthropie ne se confond pas avec l'entropie.</span></summary>
+<div class="notion__suite">
 
 L'entropie relève de la physique et de la thermodynamique. L'anthropie désigne, elle, un mécanisme social et institutionnel&nbsp;: la manière dont des systèmes humains produisent de l'ordre local en déplaçant le désordre hors du périmètre visible de cet ordre.
 
 Le terme ne vaut donc pas comme métaphore décorative, mais comme hypothèse analytique appliquée aux structures sociales.
 
-## Anthropie et Anthropocène
+</div></details>
 
-L'anthropie ne se confond pas avec l'Anthropocène.
+<details class="notion" id="anthropie-et-anthropocène"><summary><span class="notion__avec">Anthropocène</span><span class="notion__pr">L'anthropie ne se confond pas avec l'Anthropocène.</span></summary>
+<div class="notion__suite">
 
 L'Anthropocène nomme une ère géologique&nbsp;: la trace que les sociétés humaines impriment dans la stratigraphie de la planète. L'anthropie nomme un mécanisme social&nbsp;: la manière dont ces sociétés produisent leurs ordres locaux en déplaçant le désordre — vers d'autres lieux, vers d'autres temps, vers d'autres groupes.
 
@@ -95,29 +130,37 @@ L'une est une marque&nbsp;; l'autre est un mécanisme. Et le mécanisme précèd
 
 Voir [AWP-02 — *3,3 millions d'années en un principe*](https://stephane-lalut.com/awp/awp-02/) pour l'analyse en longue durée.
 
-## Anthropie et principe anthropique
+</div></details>
 
-L'anthropie ne doit pas non plus être confondue avec le *principe anthropique*.
+<details class="notion" id="anthropie-et-principe-anthropique"><summary><span class="notion__avec">principe anthropique</span><span class="notion__pr">L'anthropie ne doit pas non plus être confondue avec le <i>principe anthropique</i>.</span></summary>
+<div class="notion__suite">
 
 Le principe anthropique relève de la cosmologie. Présenté par le physicien Brandon Carter lors d'un symposium en 1973, puis publié en 1974, il énonce que nos observations de l'univers sont nécessairement compatibles avec l'existence d'observateurs capables de les faire&nbsp;: les constantes physiques sont telles que nous les mesurons parce que, dans le cas contraire, nul ne serait là pour les mesurer.
 
 L'anthropie, elle, ne dit rien de l'univers ni de ses constantes. Elle désigne un mécanisme social et institutionnel&nbsp;: la manière dont les sociétés humaines produisent un ordre local en déplaçant le désordre. La proximité n'est que lexicale — l'un et l'autre dérivent du grec *ánthrôpos*, «&nbsp;l'être humain&nbsp;» —, sans aucune filiation conceptuelle.
 
-## Anthropie et anthropisation
+</div></details>
 
-L'anthropie ne se confond pas non plus avec l'anthropisation.
+<details class="notion" id="anthropie-et-anthropisation"><summary><span class="notion__avec">anthropisation</span><span class="notion__pr">L'anthropie ne se confond pas non plus avec l'anthropisation.</span></summary>
+<div class="notion__suite">
 
 L'anthropisation désigne, en écologie et en géographie, la transformation des milieux naturels par l'action humaine&nbsp;: un paysage anthropisé est un paysage modifié par l'homme. L'anthropie ne décrit pas un état des milieux&nbsp;: elle désigne le mécanisme social par lequel un ordre local se maintient en exportant son désordre. L'anthropisation peut être l'une des traces de ce mécanisme&nbsp;; elle n'en est pas le concept.
 
-## Anthropie et anthropologie
+</div></details>
 
-L'anthropie ne doit pas être confondue avec l'anthropologie — ni le cadre anthropique avec l'anthropologie économique.
+<details class="notion" id="anthropie-et-anthropologie"><summary><span class="notion__avec">anthropologie</span><span class="notion__pr">L'anthropie ne doit pas être confondue avec l'anthropologie — ni le cadre anthropique avec l'anthropologie économique.</span></summary>
+<div class="notion__suite">
 
 L'anthropologie est une discipline&nbsp;: la science des sociétés humaines, de leurs pratiques et de leurs représentations&nbsp;; l'anthropologie économique en étudie les modes de production et d'échange, de Marcel Mauss à Maurice Godelier. L'anthropie n'est pas une discipline mais une hypothèse&nbsp;: le déplacement du désordre par les systèmes sociaux. Elle peut être discutée par l'anthropologie, comme par l'économie ou la sociologie&nbsp;; elle ne s'y substitue pas. La proximité des mots tient au seul radical grec commun, *ánthrôpos*.
 
-## Anthropie et Anthropic
+</div></details>
 
-L'anthropie n'a aucun rapport avec Anthropic, l'entreprise américaine d'intelligence artificielle. «&nbsp;Anthropie&nbsp;» est un terme conceptuel de sciences sociales&nbsp;; «&nbsp;Anthropic&nbsp;» est une marque commerciale. Les moteurs de recherche conduisent parfois vers l'une quand on cherche l'autre — seule la racine grecque est commune.
+<details class="notion" id="anthropie-et-anthropic"><summary><span class="notion__avec">Anthropic</span><span class="notion__pr">L'anthropie n'a aucun rapport avec Anthropic, l'entreprise américaine d'intelligence artificielle. «&nbsp;Anthropie&nbsp;» est un terme conceptuel de sciences sociales&nbsp;; «&nbsp;Anthropic&nbsp;» est une marque commerciale. Les moteurs de recherche conduisent parfois vers l'une quand on cherche l'autre — seule la racine grecque est commune.</span></summary>
+<div class="notion__suite">
+
+</div></details>
+
+</div>
 
 ## La discipline du regard
 
@@ -160,14 +203,7 @@ Le cadre n'apporte pas une réponse unique à ces questions. Il fournit une mani
 
 ## Explorer le cadre
 
-- [AWP-01 — *Qu'est-ce que l'anthropie&nbsp;? Principes d'une hypothèse*](/awp/awp-01/)
-- [AWP-02 — *3,3 millions d'années en un principe*](/awp/awp-02/)
-- [AWP-03 — *Dette publique et anthropie*](/awp/awp-03/)
-- [AWP-04 — *Transition énergétique ou transfert entropique&nbsp;?*](/awp/awp-04/)
-- [AWP-05 — *Penser hors les murs*](/awp/awp-05/)
-- [AWP-06 — *Infrastructures numériques et dette technologique*](/awp/awp-06/)
-- [AWP-07 — *La boucle anthropique*](/awp/awp-07/)
-- [AWP-08 — *La réversibilité sociale comme dimension de l'inégalité*](/awp/awp-08/)
+{{< arc-awp >}}
 
 Plusieurs pages prolongent le cadre sur ses terrains d'application&nbsp;: [Qu'est-ce que la dette technologique&nbsp;?](/dette-technologique/), [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/), [Qu'est-ce que l'effet rebond&nbsp;?](/effet-rebond/), [Qu'est-ce que la boucle anthropique&nbsp;?](/boucle-anthropique/) [Qu'est-ce que la réversibilité sociale&nbsp;?](/reversibilite-sociale/) et [Qu'est-ce que les communs négatifs&nbsp;?](/communs-negatifs/). L'application du cadre à l'histoire longue est documentée jalon par jalon dans [le Registre des coûts déportés](/registre-des-couts-deportes/), l'appareil documentaire du livre en consultation libre. Ces pages, les données sur la dette publique et les guides sont rassemblés dans les [Ressources](/ressources/).
 

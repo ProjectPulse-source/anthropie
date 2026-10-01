@@ -87,7 +87,10 @@ def masquer(txt: str):
 
     def prendre(m):
         coffre.append(m.group(0))
-        return "\x00%d\x00" % (len(coffre) - 1)
+        # Jeton à bornes DISTINCTES (\x00 ... \x01) : avec \x00N\x00, un chiffre placé entre deux balises
+        # (`<span>1</span>`) formait avec leurs bornes un faux jeton \x001\x00, et la restauration y injectait
+        # la zone n° 1 (constaté le 01/10/2026 sur /quest-ce-que-lanthropie/, rendu « non conclu »).
+        return "\x00%d\x01" % (len(coffre) - 1)
 
     for motif in PROTEGES:
         txt = motif.sub(prendre, txt)
@@ -107,7 +110,7 @@ def demasquer(txt: str, coffre: list[str]) -> str:
     for _ in range(len(coffre) + 1):
         avant = txt
         for i, brut in enumerate(coffre):
-            txt = txt.replace("\x00%d\x00" % i, brut)
+            txt = txt.replace("\x00%d\x01" % i, brut)
         if txt == avant:
             break
     return txt

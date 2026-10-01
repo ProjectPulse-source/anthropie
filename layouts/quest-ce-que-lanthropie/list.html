@@ -1,0 +1,69 @@
+{{ define "main" }}
+{{- /* Page « Qu'est-ce que l'anthropie ? » (variante B retenue par l'auteur, 01/10/2026). Le texte de la page ne
+       change pas ; l'en-tête donne avant la lecture : la phrase (définition canonique, partial single-source, et
+       « proposée par »), la frontière de l'hypothèse (front matter `frontiere`, chaque ligne tirée de la page et
+       liée à sa section), un sommaire déduit des titres de la page. Les notions voisines sont en <details> dans
+       le Markdown ; une ancienne adresse (#anthropie-et-entropie…) ouvre la bonne notion (script en fin de page). */ -}}
+{{- $isEn := eq .Lang "en" -}}
+<div class="home-section anthropie-page">
+  <header class="page-header">
+    <h1 class="page-header__title">{{ partial "fr-typo.html" .Title }}</h1>
+  </header>
+
+  <aside class="anthropie-phrase" aria-label="{{ if $isEn }}Anthropy in one sentence{{ else }}L'anthropie en une phrase{{ end }}">
+    <p class="anthropie-phrase__eyebrow">{{ if $isEn }}Anthropy in one sentence{{ else }}L'anthropie en une phrase{{ end }}</p>
+    {{ partial "canonical-definition.html" . }}
+    {{- with .Params.proposee_par }}<p class="anthropie-phrase__qui">{{ partial "fr-typo.html" (. | markdownify) }}</p>{{ end }}
+  </aside>
+
+  {{- with .Params.frontiere }}
+  <section class="anthropie-frontiere" aria-labelledby="anthropie-frontiere-titre">
+    <h2 id="anthropie-frontiere-titre" class="anthropie-frontiere__titre section-title">{{ if $isEn }}What the hypothesis claims — and what it does not{{ else }}Ce que l'hypothèse affirme — et ce qu'elle n'affirme pas{{ end }}</h2>
+    <div class="anthropie-frontiere__cols">
+      {{- range $col := slice (dict "lignes" .affirme "cls" "oui" "fr" "Elle affirme" "en" "It claims")
+                              (dict "lignes" .naffirme "cls" "non" "fr" "Elle n'affirme pas" "en" "It does not claim") }}
+      <div class="anthropie-frontiere__col anthropie-frontiere__col--{{ $col.cls }}">
+        <p class="anthropie-frontiere__col-titre">{{ if $isEn }}{{ $col.en }}{{ else }}{{ $col.fr }}{{ end }}</p>
+        <ul class="anthropie-frontiere__liste">
+          {{- range $col.lignes }}
+          <li class="anthropie-frontiere__ligne">{{ partial "fr-typo.html" .texte }} <a class="anthropie-frontiere__src" href="#{{ .ancre }}">{{ .section }}</a></li>
+          {{- end }}
+        </ul>
+      </div>
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+
+  {{- /* Sommaire : les titres de niveau 2 de la page, dans l'ordre ; la présence vient du texte. */ -}}
+  {{- $titres := slice -}}
+  {{- range .Fragments.Headings -}}
+    {{- if eq .Level 2 }}{{ $titres = $titres | append . }}{{ else }}{{ range .Headings }}{{ if eq .Level 2 }}{{ $titres = $titres | append . }}{{ end }}{{ end }}{{ end -}}
+  {{- end }}
+  {{- with $titres }}
+  <nav class="pastilles pastilles--ancres anthropie-sommaire" aria-label="{{ if $isEn }}Contents{{ else }}Sommaire{{ end }}">
+    <ul>{{ range . }}<li><a href="#{{ .ID }}">{{ .Title | safeHTML }}</a></li>{{ end }}</ul>
+  </nav>
+  {{- end }}
+
+  <div class="article__body">
+    {{ .Content }}
+  </div>
+
+  {{- partial "ressource-retour.html" . -}}
+  {{- partial "transmettre.html" . -}}
+</div>
+<script>
+  // Une adresse qui vise une notion voisine (#anthropie-et-entropie…) ouvre son <details> : les liens publiés
+  // avant le 01/10/2026 menaient à un titre de section, ils mènent maintenant au texte déplié.
+  (function () {
+    function ouvrir() {
+      var id = decodeURIComponent(location.hash.slice(1));
+      var el = id && document.getElementById(id);
+      if (el && el.tagName === 'DETAILS') { el.open = true; el.scrollIntoView(); }
+    }
+    window.addEventListener('hashchange', ouvrir);
+    ouvrir();
+  })();
+</script>
+{{ end }}

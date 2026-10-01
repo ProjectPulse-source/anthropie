@@ -1,0 +1,16 @@
+{{- /* arc-awp.html — la frise de l'arc de la série AWP, hors de /serie-awp/ (01/10/2026).
+       {{< arc-awp >}}
+       Source unique : `arc` en front matter de /serie-awp/ dans la langue de la page ; chaque étape renvoie au
+       groupe correspondant de la page de la série (#etape-N). Mêmes classes que la frise de la série. */ -}}
+{{- $serie := site.GetPage "/serie-awp" -}}
+{{- if not $serie }}{{ errorf "arc-awp : page /serie-awp introuvable (appel depuis %s)" .Page.File.Path }}{{ end -}}
+{{- with $serie.Params.arc }}
+<nav class="awp-arc" aria-label="{{ if eq $.Page.Lang "en" }}The arc of the series{{ else }}L'arc de la série{{ end }}">
+  {{- range $i, $e := . }}
+  <a class="awp-arc__etape" href="{{ $serie.RelPermalink }}#etape-{{ add $i 1 }}">
+    <span class="awp-arc__verbe">{{ $e.etape }}</span>
+    <span class="awp-arc__nums">{{ delimit (apply $e.awp "strings.TrimPrefix" "AWP-" ".") " · " }}</span>
+  </a>
+  {{- end }}
+</nav>
+{{- else }}{{ errorf "arc-awp : /serie-awp sans `arc` en front matter (appel depuis %s)" $.Page.File.Path }}{{ end -}}

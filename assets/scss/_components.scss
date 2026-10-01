@@ -773,3 +773,72 @@ main .livres-commencer__liste { list-style: none; padding: 0 !important; margin:
   .livre-carte--grande .livre-carte__couv { max-width: 160px; }
 }
 @media (prefers-reduced-motion: reduce) { .livre-carte__cover { transition: none; } }
+
+// ----- Page « Qu'est-ce que l'anthropie ? » (variante B, 01/10/2026) -----
+// La phrase : définition canonique (partial single-source) et « proposée par ».
+.anthropie-phrase {
+  display: grid; gap: 0.5rem; margin: 0 0 2rem; padding: 1.25rem 1.4rem;
+  background: var(--color-bg-elevated); border-left: 3px solid var(--color-accent);
+  box-shadow: 0 0 0 1px var(--color-accent-soft);
+}
+.anthropie-phrase__eyebrow { font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text-subtle); margin: 0; }
+.anthropie-phrase .canonical-definition { font-family: var(--font-serif); font-size: clamp(1.25rem, 2.6vw, 1.6rem); line-height: 1.35; color: var(--color-text); margin: 0; }
+.anthropie-phrase__qui { font-size: var(--fs-small); color: var(--color-text-muted); margin: 0; }
+
+// Ce que l'hypothèse affirme / n'affirme pas.
+.anthropie-frontiere { margin: 0 0 1.75rem; }
+.anthropie-frontiere__titre.section-title { font-family: var(--font-sans); font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent); margin: 0 0 0.6rem; }
+.anthropie-frontiere__cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--color-accent-rule); }
+.anthropie-frontiere__col { padding: 0.8rem 1.1rem 0.8rem 0; min-width: 0; }
+.anthropie-frontiere__col + .anthropie-frontiere__col { padding: 0.8rem 0 0.8rem 1.1rem; border-left: 1px solid var(--color-rule-soft); }
+.anthropie-frontiere__col-titre { font-family: var(--font-sans); font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 0.5rem; }
+.anthropie-frontiere__col--oui .anthropie-frontiere__col-titre { color: var(--color-accent); }
+.anthropie-frontiere__col--non .anthropie-frontiere__col-titre { color: var(--color-text-subtle); }
+main .anthropie-frontiere__liste { list-style: none; padding: 0 !important; margin: 0 !important; display: grid; gap: 0.55rem; }
+.anthropie-frontiere__ligne { position: relative; font-size: 0.95rem; line-height: 1.5; }
+.anthropie-frontiere__col--oui .anthropie-frontiere__ligne::before { content: "\2192"; position: absolute; left: -1.1em; color: var(--color-pivot); }
+.anthropie-frontiere__col--non .anthropie-frontiere__ligne::before { content: "\00D7"; position: absolute; left: -1.1em; color: var(--color-text-subtle); }
+main .anthropie-frontiere__ligne { padding-left: 1.5em !important; margin-bottom: 0 !important; }
+.anthropie-frontiere__ligne::before { left: 0 !important; }
+.anthropie-frontiere__src { font-family: var(--font-sans); font-size: 11.5px; white-space: nowrap; }
+@media (max-width: 680px) {
+  .anthropie-frontiere__cols { grid-template-columns: minmax(0, 1fr); }
+  .anthropie-frontiere__col, .anthropie-frontiere__col + .anthropie-frontiere__col { padding: 0.8rem 0; border-left: 0; }
+  .anthropie-frontiere__col + .anthropie-frontiere__col { border-top: 1px solid var(--color-rule-soft); }
+}
+.anthropie-sommaire { margin: 0 0 1rem; }
+
+// Les trois questions, en grand.
+main ol.trois-questions { list-style: none; padding: 0 !important; margin: 1rem 0 1.5rem !important; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+main ol.trois-questions li {
+  display: grid; gap: 0.35rem; padding: 0.7rem 0 0 0 !important; margin: 0 !important;
+  border-top: 2px solid var(--color-accent);
+  font-family: var(--font-serif); font-size: 1.2rem; line-height: 1.3; color: var(--color-text); font-weight: 500 !important;
+}
+.trois-questions__n { font-family: var(--font-sans); font-size: 12px; font-weight: 600; color: var(--color-accent); }
+@media (max-width: 680px) { main ol.trois-questions { grid-template-columns: minmax(0, 1fr); } }
+
+// Notions voisines : une ligne par notion, dépliable, texte complet conservé.
+.notions { border-top: 1px solid var(--color-rule-soft); margin: 0.75rem 0 1.5rem; }
+.notion { border-bottom: 1px solid var(--color-rule-soft); scroll-margin-top: 5rem; }
+.notion summary {
+  list-style: none; cursor: pointer; display: grid; grid-template-columns: 11rem minmax(0, 1fr) auto;
+  gap: 0.25rem 1rem; align-items: baseline; padding: 0.7rem 0;
+}
+.notion summary::-webkit-details-marker { display: none; }
+.notion summary::after { content: "+"; font-family: var(--font-sans); font-weight: 600; color: var(--color-accent); }
+.notion[open] summary::after { content: "\2212"; }
+.notion summary:focus-visible { outline: 2px solid var(--color-pivot); outline-offset: 2px; }
+.notion__avec { font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: var(--color-accent); }
+.notion__avec::first-letter { text-transform: uppercase; }
+// Une notion sans texte au-delà de sa première phrase (Anthropic) n'a rien à déplier : pas de « + », pas de main.
+.notion:not(:has(.notion__suite > *)) summary { cursor: default; }
+.notion:not(:has(.notion__suite > *)) summary::after { content: none; }
+.notion__pr { font-size: 1rem; }
+.notion__suite { padding: 0 0 0.9rem 12rem; color: var(--color-text-muted); }
+.notion__suite p { margin: 0 0 0.6rem; }
+@media (max-width: 680px) {
+  .notion summary { grid-template-columns: minmax(0, 1fr) auto; }
+  .notion__avec { grid-column: 1 / -1; }
+  .notion__suite { padding-left: 0; }
+}

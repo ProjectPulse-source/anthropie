@@ -53,6 +53,22 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-01 — Page `/quest-ce-que-lanthropie/` (variante B) ; défaut du contrôle typographique corrigé, POUSSÉ
+
+Texte de la page inchangé ; gabarit propre (`layouts/quest-ce-que-lanthropie/list.html`). En tête : la phrase
+(définition canonique via le partial single-source, « proposée par » déplacée de la section Définition, mot pour
+mot) ; l'encadré **« Ce que l'hypothèse affirme — et ce qu'elle n'affirme pas »** (front matter `frontiere`, FR/EN,
+huit lignes tirées de la page, chacune liée à sa section ; soumis à l'auteur sur maquette, validé) ; sommaire en
+pastilles **déduit des titres** (`.Fragments`). Trois questions en grand. Notions voisines (6 FR, 7 EN) en
+`<details>` sous un titre « Notions voisines » sans compte en dur ; chaque ancienne ancre ouvre sa notion (script de
+la page, vérifié dans le navigateur, adresse encodée comprise). « Explorer le cadre » : la liste des huit AWP
+devient la frise de l'arc, lue dans `/serie-awp/` (shortcode `arc-awp`, source unique). 7 757 → 6 407 px à 1 280 px.
+**Défaut corrigé dans `scripts/check-typo-fr.py`** : ses jetons `\x00N\x00` laissaient un chiffre placé entre deux
+balises (`<span>1</span>`) former un faux jeton, et la restauration y injectait une autre zone — rendu « non
+conclu », bloquant au déploiement (fail-safe : rien n'était écrit). Jetons à bornes distinctes `\x00N\x01` ; témoin :
+le cas réel passe, un texte synthétique au même piège est restauré à l'octet et sa vraie faute est corrigée.
+`hugo --minify` 0, `check-all --ci` 0.
+
 ### 2026-10-01 — Page `/serie-awp/` : l'arc de la série comme structure (variante B), POUSSÉ
 
 L'arc rédigé par l'auteur (fonder, déployer, appliquer, retourner, formaliser, mesurer) passe de la liste à puces du
