@@ -125,7 +125,18 @@ générateurs `scripts/update_dette_{dynamique,insee,monde}.py` et `generer_figu
 déploiement ; toute page dont le front matter déclare `donnees:`) : carte de partage propre (`og_image`) ; bloc
 « Le résultat en une phrase » (`div.resultat-phrase`) ; bloc commun « Réutiliser cette page » ; balisage `Dataset`
 (bloc `dataset:` du front matter, gabarit `schema-dataset-page.html`) ; JSON **et** CSV du jeu dans `static/` ;
-appel au livre sans note Amazon (`avis="non"`).
+appel au livre sans note Amazon (`avis="non"`) ; **vignette d'index** `static/images/vig-X.jpg` pour `og_image: images/og-X.jpg`.
+
+**Présentation dans l'index `/ressources/`** (auteur, 01/10/2026 ; vaut pour toutes les ressources, y compris celles à
+créer) : dans un bloc, les pages qui déclarent `donnees:` forment « le dossier » — grande grille, vignette sur fond
+blanc, partie texte teintée (`--color-dossier-tint`) ; les autres pages du bloc suivent en cartes crème ; une page qui
+déclare `ressource.encart: true` s'affiche en encart avec bouton (`ressource.bouton`). Rien à déclarer dans l'index : le
+tri se déduit des pages (`layouts/ressources/list.html`, partials `ressource-entree.html` et `ressource-encart.html`).
+**Une nouvelle ressource de données fait produire sa vignette par le générateur de sa carte de partage**, dans le même
+passage et avec le même dessin sur fond blanc (modèle : `carte()` de `scripts/og_dossier_dette.py`) ; sa sortie entre
+dans le `git add` du workflow qui la régénère. ⚠ Les deux sous-titres d'un bloc mixte (« Le dossier, en N pages » /
+« N questions du débat public », `i18n/*.toml`) sont rédigés pour le bloc Dette : un autre bloc mixte appellera des
+sous-titres propres, à déclarer alors par bloc dans `content/ressources/_index*.md`.
 
 **Discipline — écrite, non vérifiée par machine** (la session la tient, la contre-expertise la contrôle) :
 

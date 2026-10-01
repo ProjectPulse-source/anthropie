@@ -15,6 +15,10 @@ tires d'un jeu data/<jeu>.json). Brouillons exemptes et comptes. Pour chaque pag
   5. chaque jeu declare publie son JSON ET son CSV dans static/ ;
   6. si la page appelle le livre ({{< appel-livre ...), sans note Amazon (`avis="non"`) : une ressource n'est pas
      une fiche produit.
+  7. la vignette de l'index /ressources/ existe : `og_image: images/og-X.jpg` -> static/images/vig-X.jpg (meme dessin
+     sur fond blanc, produit par le generateur de la carte). Sans elle la page s'afficherait dans la grille du
+     dossier sans image, en silence (presentation de l'index retenue par l'auteur le 2026-10-01, valable pour
+     toute ressource a venir).
 Conservation : pages vues == conformes + en defaut + brouillons exemptes.
 
 Condition de mort : aucune -- regle permanente du modele ; a reexaminer si le modele est abandonne ou refondu.
@@ -57,8 +61,15 @@ def main() -> int:
             continue
         corps = texte[len(fm) + 6:]
         f = []
-        if not re.search(r"^og_image:\s*\S", fm, re.M):
+        og = re.search(r"^og_image:\s*[\"']?([^\"'\s]+)", fm, re.M)
+        if not og:
             f.append("pas de carte de partage propre (og_image)")
+        else:
+            vig = og.group(1).replace("og-", "vig-", 1)
+            if vig == og.group(1):
+                f.append("og_image %s : nom sans 'og-', vignette d'index non derivable" % og.group(1))
+            elif not (STATIC / vig).is_file():
+                f.append("vignette d'index static/%s absente (le generateur de la carte doit la produire)" % vig)
         if 'class="resultat-phrase"' not in corps:
             f.append("pas de 'resultat en une phrase' (div.resultat-phrase)")
         if "{{< reutiliser " not in corps:

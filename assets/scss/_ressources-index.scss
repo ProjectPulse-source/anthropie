@@ -52,6 +52,11 @@ main .ressources-index__liste--dossier {
   display: block; width: 100%; height: auto; aspect-ratio: 720 / 378;
   border-bottom: 1px solid var(--color-rule-ghost);
 }
+// Partie texte teintée (variante C, auteur, 01/10/2026) : la vignette reste blanche, le texte prend le bleu des liens
+// éclairci. Il distingue le dossier de données des cartes crème des analyses. Vaut pour toute carte à vignette, donc
+// pour toute ressource de données à venir (check-ressource-modele.py exige sa vignette).
+.ressources-index__entree--vignette .ressources-index__texte { flex: 1; background: var(--color-dossier-tint); }
+.ressources-index__entree--vignette:hover .ressources-index__texte { background: var(--color-dossier-tint-hover); }
 
 .ressources-index__nature {
   font-size: .78rem; letter-spacing: .03em; text-transform: uppercase;
