@@ -26,7 +26,7 @@
         <p class="anthropie-frontiere__col-titre">{{ if $isEn }}{{ $col.en }}{{ else }}{{ $col.fr }}{{ end }}</p>
         <ul class="anthropie-frontiere__liste">
           {{- range $col.lignes }}
-          <li class="anthropie-frontiere__ligne">{{ partial "fr-typo.html" .texte }} <a class="anthropie-frontiere__src" href="#{{ .ancre }}">{{ .section }}</a></li>
+          <li class="anthropie-frontiere__ligne">{{ partial "fr-typo.html" .texte }} <a class="anthropie-frontiere__src" {{ printf `href="#%s"` .ancre | safeHTMLAttr }}>{{ .section }}</a></li>
           {{- end }}
         </ul>
       </div>
@@ -35,14 +35,16 @@
   </section>
   {{- end }}
 
-  {{- /* Sommaire : les titres de niveau 2 de la page, dans l'ordre ; la présence vient du texte. */ -}}
+  {{- /* Sommaire : les titres de niveau 2 de la page, dans l'ordre ; la présence vient du texte.
+         Ancres écrites telles quelles (safeHTMLAttr) : encodées (#d%c3%a9finition), l'audit des liens du
+         déploiement les jugeait sans cible et bloquait la mise en ligne (01/10/2026). */ -}}
   {{- $titres := slice -}}
   {{- range .Fragments.Headings -}}
     {{- if eq .Level 2 }}{{ $titres = $titres | append . }}{{ else }}{{ range .Headings }}{{ if eq .Level 2 }}{{ $titres = $titres | append . }}{{ end }}{{ end }}{{ end -}}
   {{- end }}
   {{- with $titres }}
   <nav class="pastilles pastilles--ancres anthropie-sommaire" aria-label="{{ if $isEn }}Contents{{ else }}Sommaire{{ end }}">
-    <ul>{{ range . }}<li><a href="#{{ .ID }}">{{ .Title | safeHTML }}</a></li>{{ end }}</ul>
+    <ul>{{ range . }}<li><a {{ printf `href="#%s"` .ID | safeHTMLAttr }}>{{ .Title | safeHTML }}</a></li>{{ end }}</ul>
   </nav>
   {{- end }}
 

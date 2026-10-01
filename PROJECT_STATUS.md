@@ -67,7 +67,9 @@ devient la frise de l'arc, lue dans `/serie-awp/` (shortcode `arc-awp`, source u
 balises (`<span>1</span>`) former un faux jeton, et la restauration y injectait une autre zone — rendu « non
 conclu », bloquant au déploiement (fail-safe : rien n'était écrit). Jetons à bornes distinctes `\x00N\x01` ; témoin :
 le cas réel passe, un texte synthétique au même piège est restauré à l'octet et sa vraie faute est corrigée.
-`hugo --minify` 0, `check-all --ci` 0.
+`hugo --minify` 0, `check-all --ci` 0. **Premier déploiement bloqué** par l'audit des liens (`audit-liens-build.py`, étape bloquante du workflow, non
+lancée en local) : ancre encodée `#d%c3%a9finition` jugée sans cible ; ancres désormais écrites telles quelles
+(`safeHTMLAttr`). Avant tout push : build, `check-all --ci` **et** `audit-liens-build.py` sur le build.
 
 ### 2026-10-01 — Page `/serie-awp/` : l'arc de la série comme structure (variante B), POUSSÉ
 
