@@ -14,6 +14,9 @@ description_en: "A focused application of the anthropic framework to the questio
 price: "19"  # prix broché EUR — affiché sur la page + schema.org Offer
 kindle_price: "9.99"  # prix EUR de l'édition Kindle (auteur, 20/09/2026) — rendu par le shortcode appel-livre ; format schema.org, séparateur décimal = point
 serie: "anthropie"
+# Axe du cadre affiché sur /livres/ (auteur, 01/10/2026) ; source : description : « vers les générations futures et les groupes sociaux les moins mobiles ».
+axe_cadre: "Axes temporel et social"
+axe_cadre_en: "Temporal and social axes"
 weight: 3
 wikidata_qid: "Q138910896"
 # Liens canoniques /dp/<ASIN broché 2958634736> — jamais de shortener amzn.eu/a.co

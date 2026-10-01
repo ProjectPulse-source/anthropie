@@ -53,6 +53,18 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-01 — Page `/livres/` refaite (variante B), POUSSÉ
+
+Maquette choisie par l'auteur, avec sa consigne : autres ouvrages de **même taille** que le corpus hors fondateur.
+« Par où commencer ? » (quatre lignes, front matter `commencer:` des index FR/EN, slug → titre et lien de la fiche,
+slug inconnu = build arrêté) ; ANTHROPIE en grand (argument, autre édition via `.Translations`) ; les cinq autres en
+cartes de même taille (couvertures 150 px mesurées), achat **dans** la carte. Étiquette d'axe par livre du corpus
+(`axe_cadre`, `axe_cadre_en`, source citée en commentaire de chaque fiche ; Promesses : « Rencontre le cadre sans le
+tester »). Réutilisés : `book-cover`, `preuve-sociale` (note datée, « Nouveauté » sous 10 avis — page FR seulement,
+libellés français), `amazon-button` (Attribution, autres pays). Nouveau partial `livre-carte.html` ; `livre-card.html`
+et ses styles retirés (seul `.livre-card__isbn` reste, utilisé par la fiche). 5 541 → 3 357 px à 1 280 px ; 0
+débordement à 390 px FR et EN. `hugo --minify` 0, `check-all --ci` 0.
+
 ### 2026-10-01 — Accueil refait (maquette v4), Promesses dans le corpus anthropique, POUSSÉ
 
 Sur deux avis externes arbitrés (`ARBITRATIONS\ENTRANTE_2026-10-01_Design_site_arbitrage.md`,

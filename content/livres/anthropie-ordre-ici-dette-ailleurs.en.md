@@ -10,6 +10,7 @@ price: "29.99"  # prix broché USD — affiché + schema.org Offer (priceCurrenc
 pages: 632  # nombre de pages broché (édition anglaise)
 wikidata_qid: "Q140645013"  # item de l'ÉDITION anglaise (P629 → Q138827344, l'œuvre) — alimente sameAs
 serie: "anthropie"
+axe_cadre: "All three axes, over the long run"
 weight: 1
 # Liens canoniques /dp/<ASIN> — ASIN broché 2958634752 (= ISBN-10) et Kindle B0H9QMR1CN
 # invariants d'un marché à l'autre (POD KDP). Jamais de shortener amzn.eu/a.co.

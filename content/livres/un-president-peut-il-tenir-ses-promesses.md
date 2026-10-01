@@ -25,6 +25,9 @@ kindle_price: "9.99"  # prix EUR de l'édition Kindle (non rendu : information d
 # sans la tester : le site le présente ainsi (« sans prétendre les mesurer »), jamais comme une
 # application ou une preuve du cadre. Le registre data/works.yaml le disait déjà du corpus.
 serie: "anthropie"
+# Axe du cadre affiché sur /livres/ (auteur, 01/10/2026) ; source : « Note de l'auteur », § « D'où vient l'anthropie, et pourquoi ce livre ne l'a pas testée ».
+axe_cadre: "Rencontre le cadre sans le tester"
+axe_cadre_en: "Meets the framework without testing it"
 weight: 2
 # PARU le 22/09/2026. Broché : ASIN 2958634787 (l'ISBN-10 fait l'ASIN), page produit vérifiée
 # ce jour (titre du livre lu sur /dp/2958634787). Kindle en précommande du 17 au 22/09.

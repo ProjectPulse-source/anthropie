@@ -10,40 +10,60 @@
 
   <div class="article__body">
     {{ .Content }}
+  </div>
 
-    {{/* Récupère les livres — fusion FR/EN sans doublon : fiche native de la
-         langue si elle existe (ex. ANTHROPY EN), sinon repli FR. Slice déjà
-         triée par Weight. */}}
-    {{ $livres := partial "livres-merged.html" . }}
+  {{/* Page refaite le 01/10/2026 (variante B retenue par l'auteur) : le fondateur en grand, puis le reste du
+       corpus et les autres ouvrages en cartes de même taille (consigne de l'auteur), achat dans la carte.
+       Fusion FR/EN sans doublon (fiche native de la langue, sinon repli FR), triée par weight. Corpus =
+       `serie: "anthropie"`, même champ que l'accueil et la page À propos. */}}
+  {{- $livres := partial "livres-merged.html" . -}}
+  {{- $corpus := where $livres "Params.serie" "anthropie" -}}
+  {{- $autres := where $livres "Params.serie" "!=" "anthropie" -}}
 
-    {{/* CORPUS PRINCIPAL — pages dont serie != autres-ouvrages */}}
-    <section class="livres-grid">
-      {{/* Source unique de la carte = partials/livre-card.html (corpus ET autres-ouvrages). */}}
-      {{ range $livres }}
-        {{ if ne .Params.serie "autres-ouvrages" }}
-          {{ partial "livre-card.html" . }}
-        {{ end }}
-      {{ end }}
-    </section>
+  {{- /* « Par où commencer ? » : chaque ligne nomme un livre par son slug (front matter de l'index) ; titre et
+         lien viennent de la fiche. Un slug inconnu arrête le build : une ligne sans livre ne doit pas partir. */ -}}
+  {{- with .Params.commencer }}
+  <section class="livres-commencer" aria-labelledby="livres-commencer-titre">
+    <h2 id="livres-commencer-titre" class="livres-sous">{{ if $isEn }}Where to start?{{ else }}Par où commencer&nbsp;?{{ end }}</h2>
+    <ul class="livres-commencer__liste">
+      {{- range . }}
+      {{- $slug := .livre -}}
+      {{- $fiche := "" -}}
+      {{- range $livres }}{{ if eq .File.ContentBaseName $slug }}{{ $fiche = . }}{{ end }}{{ end -}}
+      {{- if not $fiche }}{{ errorf "livres : « Par où commencer » cite %q, aucune fiche livre de ce nom (%s)" $slug $.File.Path }}{{ end }}
+      <li class="livres-commencer__ligne">
+        <span class="livres-commencer__pour">{{ partial "fr-typo.html" .pour }}</span>
+        <a class="livres-commencer__titre" href="{{ $fiche.RelPermalink }}"{{ if ne $fiche.Lang $.Lang }} hreflang="{{ $fiche.Lang }}" lang="{{ $fiche.Lang }}"{{ end }}>{{ partial "fr-typo.html" $fiche.Title }}</a>
+        <span class="livres-commencer__pourquoi">{{ partial "fr-typo.html" .pourquoi }}</span>
+      </li>
+      {{- end }}
+    </ul>
+  </section>
+  {{- end }}
 
-    {{/* SECTION AUTRES OUVRAGES */}}
-    {{ $autres := where $livres "Params.serie" "autres-ouvrages" }}
-    {{ if $autres }}
-    <section class="livres-autres">
-      <h2 class="livres-autres__title">{{ if $isEn }}Other works{{ else }}Autres ouvrages{{ end }}</h2>
-      <div class="livres-grid">
-        {{ range $autres.ByWeight }}
-          {{ partial "livre-card.html" . }}
-        {{ end }}
-      </div>
-    </section>
-    {{ end }}
-
-    <div class="page-exit">
-      <a href="{{ "/serie-awp/" | relLangURL }}" class="text-link">
-        {{ if $isEn }}View the Working Papers →{{ else }}Voir la série AWP →{{ end }}
-      </a>
+  {{- with $corpus }}
+  <section class="livres-groupe" aria-labelledby="livres-corpus-titre">
+    <h2 id="livres-corpus-titre" class="livres-sous">{{ if $isEn }}The anthropic corpus{{ else }}Le corpus anthropique{{ end }}</h2>
+    {{ partial "livre-carte.html" (dict "page" (index . 0) "grande" true "isEn" $isEn) }}
+    <div class="livres-grille">
+      {{- range after 1 . }}{{ partial "livre-carte.html" (dict "page" . "grande" false "isEn" $isEn) }}{{ end }}
     </div>
+  </section>
+  {{- end }}
+
+  {{- with $autres }}
+  <section class="livres-groupe" aria-labelledby="livres-autres-titre">
+    <h2 id="livres-autres-titre" class="livres-sous">{{ if $isEn }}Other works{{ else }}Autres ouvrages{{ end }}</h2>
+    <div class="livres-grille">
+      {{- range . }}{{ partial "livre-carte.html" (dict "page" . "grande" false "isEn" $isEn) }}{{ end }}
+    </div>
+  </section>
+  {{- end }}
+
+  <div class="page-exit">
+    <a href="{{ "/serie-awp/" | relLangURL }}" class="text-link">
+      {{ if $isEn }}View the Working Papers →{{ else }}Voir la série AWP →{{ end }}
+    </a>
   </div>
 </article>
 
@@ -51,13 +71,13 @@
 {{- $items := slice -}}
 {{- $pos := 0 -}}
 {{- range $livres -}}
-  {{- if ne .Params.serie "autres-ouvrages" -}}
+  {{- if eq .Params.serie "anthropie" -}}
     {{- $pos = add $pos 1 -}}
     {{- $items = $items | append (dict "@type" "ListItem" "position" $pos "item" (dict "@type" "Book" "name" .Title "url" .Permalink)) -}}
   {{- end -}}
 {{- end -}}
 {{- range $livres -}}
-  {{- if eq .Params.serie "autres-ouvrages" -}}
+  {{- if ne .Params.serie "anthropie" -}}
     {{- $pos = add $pos 1 -}}
     {{- $items = $items | append (dict "@type" "ListItem" "position" $pos "item" (dict "@type" "Book" "name" .Title "url" .Permalink)) -}}
   {{- end -}}

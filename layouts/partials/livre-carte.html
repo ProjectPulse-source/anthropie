@@ -1,0 +1,35 @@
+{{- /* livre-carte.html — carte d'un livre sur /livres/ (variante B retenue par l'auteur, 01/10/2026).
+       Entrée : dict { page (fiche livre), grande (bool : le livre fondateur, avec son argument et son
+       autre édition), isEn (bool : langue de la PAGE, qui peut différer de celle de la fiche en repli) }.
+
+       Remplace partials/livre-card.html. Réutilise ce qui existe : book-cover (couverture), preuve-sociale
+       (note Amazon datée, « Nouveauté » sous le seuil — libellés français, donc page FR seulement),
+       amazon-button (balise Attribution, autres pays et formats). Carte entière cliquable : le lien du titre
+       s'étend sur elle, les boutons d'achat repassent au-dessus du calque. L'étiquette d'axe vient de la
+       fiche (`axe_cadre`, `axe_cadre_en` pour une fiche française lue depuis la page anglaise). */ -}}
+{{- $p := .page -}}
+{{- $isEn := .isEn -}}
+{{- $repli := and $isEn (eq $p.Lang "fr") -}}
+{{- $axe := cond $repli $p.Params.axe_cadre_en $p.Params.axe_cadre -}}
+<article class="livre-carte{{ if .grande }} livre-carte--grande{{ end }}"{{ if $repli }} lang="fr"{{ end }}>
+  <a class="livre-carte__couv" href="{{ $p.RelPermalink }}" tabindex="-1" aria-hidden="true">
+    {{- partial "book-cover.html" (dict "slug" $p.File.ContentBaseName "alt" "" "wrapClass" "livre-carte__cover-wrap" "class" "livre-carte__cover" "sizes" (cond .grande "220px" "160px") "lang" $p.Lang) -}}
+  </a>
+  <div class="livre-carte__corps">
+    {{- with $axe }}<p class="livre-carte__axe"{{ if $repli }} lang="en"{{ end }}>{{ partial "fr-typo.html" . }}</p>{{ end }}
+    <h3 class="livre-carte__titre"><a href="{{ $p.RelPermalink }}"{{ if $repli }} hreflang="fr"{{ end }}>{{ partial "fr-typo.html" $p.Title }}</a></h3>
+    {{- with $p.Params.subtitle }}<p class="livre-carte__st">{{ partial "fr-typo.html" . }}</p>{{ end }}
+    {{- if .grande }}
+      {{- $d := cond (and $isEn (ne $p.Params.description_en nil)) $p.Params.description_en $p.Description }}
+      {{- with $d }}<p class="livre-carte__desc">{{ partial "desc-figures.html" (dict "text" . "isbn" $p.Params.isbn) }}</p>{{ end }}
+    {{- end }}
+    <p class="livre-carte__meta">{{ with $p.Params.pages }}{{ . }}&nbsp;pages{{ end }}{{ if $repli }} · <span lang="en">in French</span>{{ end }}</p>
+    {{- if not $isEn }}{{ partial "preuve-sociale.html" $p }}{{ end }}
+    {{- if or $p.Params.url_amazon_fr $p.Params.url_amazon_com }}{{ partial "amazon-button.html" $p }}{{ end }}
+    {{- if .grande }}
+      {{- range $p.Translations }}
+      <p class="livre-carte__autre-edition">{{ if eq .Lang "en" }}Aussi en anglais&nbsp;: {{ else }}Also in French: {{ end }}<a href="{{ .RelPermalink }}" hreflang="{{ .Lang }}"><i>{{ .Title }}</i></a></p>
+      {{- end }}
+    {{- end }}
+  </div>
+</article>

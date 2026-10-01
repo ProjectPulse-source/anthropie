@@ -15,7 +15,7 @@
        passe par ce partial). */ -}}
 {{- /* La locale choisit le BLOC, elle ne formate rien ici : "3 536,1" ou
        "T1 2026" sur une page anglaise serait faux. `site.Language.Lang` est la
-       langue du rendu en cours (même idiome que livre-card.html) — aucun des
+       langue du rendu en cours (même idiome que livre-carte.html) — aucun des
        sept appelants n'a donc à passer la langue. */ -}}
 {{- with site.Data.dette_officielle -}}
   {{- $bloc := cond (eq site.Language.Lang "en") .affichage_en .affichage -}}

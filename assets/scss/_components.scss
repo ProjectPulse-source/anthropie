@@ -251,51 +251,8 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
 .awp-card__doi { font-family: var(--font-mono); font-size: var(--fs-micro); color: var(--color-text-mono); margin: 0 0 16px; }
 .awp-card__doi a { color: inherit; }
 
-// ----- Livre card -----
-.livre-card { position: relative; margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--color-rule-soft); }
-.livre-card:last-child { border-bottom: none; }
-.livre-card--flex { display: flex; gap: 2rem; align-items: flex-start; }
-.livre-card__cover-wrap { flex-shrink: 0; width: 180px; }
-.livre-card__cover { width: 100%; height: auto; border-radius: 2px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: box-shadow 0.2s ease, transform 0.2s ease; }
-.livre-card__body { flex: 1; min-width: 0; }
-.livre-card__title { font-family: var(--font-serif); font-size: var(--fs-h3); margin: 0 0 4px; color: var(--color-text); }
-.livre-card__title a { color: var(--color-text); text-decoration: none; transition: color 0.2s ease; }
-.livre-card__description, .livre-card__subtitle {
-  font-family: var(--font-serif); font-size: var(--fs-small);
-  color: var(--color-text-muted); margin: 0 0 8px;
-}
+// ----- ISBN sur la fiche livre (layouts/livres/single.html) -----
 .livre-card__isbn { font-family: var(--font-mono); font-size: var(--fs-micro); color: var(--color-text-mono); margin: 0 0 1rem; }
-.livre-card__lang-tag { font-family: var(--font-sans); font-size: var(--fs-tiny); color: var(--color-text-faint); margin: 0 0 8px; }
-
-// Carte-fiche entièrement cliquable (stretched link, zéro JS, zéro lien imbriqué).
-// Le lien du titre porte un ::after qui étire la zone cliquable à toute la carte
-// (couverture comprise). Le bloc Amazon — seul autre interactif — repasse au-dessus
-// du calque via z-index : il reste cliquable sans imbrication de liens.
-.livre-card__title a::after { content: ""; position: absolute; inset: 0; z-index: 1; border-radius: 2px; }
-.livre-card__title a:focus-visible { outline: none; }
-.livre-card__title a:focus-visible::after { outline: 2px solid var(--color-accent); outline-offset: 4px; }
-.livre-card .amazon-buy { position: relative; z-index: 2; }
-
-// Affordance permanente « Consulter la fiche → » (idiome .text-link)
-.livre-card__see {
-  display: inline-flex; align-items: baseline; gap: 0.35em; margin: 0 0 1rem;
-  font-family: var(--font-sans); font-size: var(--fs-small); font-weight: 500;
-  color: var(--color-accent);
-}
-.livre-card__see-arrow { transition: transform 0.2s ease; }
-
-// Feedback survol / focus clavier porté par toute la carte
-.livre-card:hover .livre-card__cover,
-.livre-card:focus-within .livre-card__cover { box-shadow: 0 10px 28px rgba(0,0,0,0.20); transform: translateY(-4px) scale(1.012); }
-.livre-card:hover .livre-card__title a,
-.livre-card:focus-within .livre-card__title a { color: var(--color-accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-.livre-card:hover .livre-card__see-arrow,
-.livre-card:focus-within .livre-card__see-arrow { transform: translateX(5px); }
-
-@media (max-width: 600px) {
-  .livre-card--flex { flex-direction: column; }
-  .livre-card .livre-card__cover-wrap { width: 140px; }
-}
 
 // ----- DOI box -----
 .doi-box {
@@ -616,27 +573,6 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
 .awp-header__jel { font-family: var(--font-mono); font-size: var(--fs-micro); margin-top: 0.5rem; color: var(--color-text-mono); }
 
 // =====================================================================
-// Section "Autres ouvrages" sur /livres/
-// =====================================================================
-
-.livres-grid {
-  margin-bottom: 2rem;
-}
-.livres-autres {
-  margin-top: 4em;
-  padding-top: 2.4em;
-  border-top: 0.5px solid var(--color-rule-strong);
-}
-.livres-autres__title {
-  font-family: var(--font-sans);
-  font-size: var(--fs-tiny);
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--color-text-faint);
-  font-weight: 500;
-  margin: 0 0 28px;
-}
-// =====================================================================
 // Bouton "Transmettre" (partage social)
 // =====================================================================
 
@@ -784,3 +720,71 @@ main .pastilles ul {
   .pastilles a { border: none; padding: 0; min-height: 0; }
   .pastilles a::after { content: none; }
 }
+
+// ----- Page /livres/ (variante B, 01/10/2026) : le fondateur en grand, puis des cartes de même taille -----
+// Spécificité (0,4,1) : la règle commune `.home-section h2:not(.page-header__title):not(.section-title)` (0,3,1,
+// _page-common.scss) en faisait un grand titre à filet (28 px, mesuré le 01/10).
+.home-section h2.livres-sous:not(.page-header__title):not(.section-title) {
+  font-family: var(--font-sans); font-size: 12px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--color-accent); margin: 2.5rem 0 1rem; border: 0; padding: 0;
+}
+.livres-groupe { margin-bottom: 1rem; }
+
+// Par où commencer : liste à filets (la règle `main ul` impose retrait et marges en !important)
+main .livres-commencer__liste { list-style: none; padding: 0 !important; margin: 0 !important; border-top: 1px solid var(--color-rule-soft); }
+.livres-commencer__ligne {
+  display: grid; grid-template-columns: 15rem minmax(0, 1fr) auto; gap: 0.15rem 1rem; align-items: baseline;
+  padding: 0.6rem 0; border-bottom: 1px solid var(--color-rule-soft);
+}
+.livres-commencer__pour { font-family: var(--font-sans); font-size: 13px; color: var(--color-text-subtle); }
+.livres-commencer__titre { font-size: 1.02rem; }
+.livres-commencer__pourquoi { font-size: var(--fs-small); color: var(--color-text-muted); text-align: right; }
+@media (max-width: 720px) {
+  .livres-commencer__ligne { grid-template-columns: minmax(0, 1fr); }
+  .livres-commencer__pourquoi { text-align: left; }
+}
+
+// Carte livre : couverture, axe, titre, accroche, pages, note, achat. Carte entière cliquable.
+.livres-grille { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(#{unquote("min(100%, 18rem)")}, 1fr)); margin-top: 1rem; }
+.livre-carte {
+  position: relative; display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.9rem; align-content: start;
+  background: var(--color-bg-elevated); border: 1px solid var(--color-rule-soft); padding: 1rem;
+  transition: border-color 0.2s ease;
+}
+.livre-carte:hover { border-color: var(--color-accent-soft); }
+.livre-carte__couv { display: block; max-width: 150px; text-decoration: none; }
+.livre-carte__cover-wrap { display: block; }
+.livre-carte__cover {
+  display: block; width: 100%; height: auto; aspect-ratio: 2 / 3; object-fit: cover;
+  box-shadow: 0 3px 12px rgba(15, 15, 18, 0.15); transition: transform 0.2s ease;
+}
+.livre-carte:hover .livre-carte__cover { transform: translateY(-2px); }
+.livre-carte__corps { display: grid; gap: 0.35rem; align-content: start; min-width: 0; }
+.livre-carte__axe {
+  justify-self: start; margin: 0; padding: 3px 9px; border-radius: 999px;
+  font-family: var(--font-sans); font-size: 11.5px; font-weight: 600;
+  color: var(--color-accent); background: var(--color-dossier-tint);
+}
+.livre-carte__titre { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 500; line-height: 1.3; margin: 0; }
+.livre-carte__titre a::after { content: ""; position: absolute; inset: 0; z-index: 1; }
+.livre-carte__st { font-size: var(--fs-small); color: var(--color-text-muted); line-height: 1.45; margin: 0; }
+.livre-carte__desc { max-width: 60ch; margin: 0.25rem 0 0; }
+.livre-carte__meta { font-family: var(--font-sans); font-size: 12px; letter-spacing: 0.04em; color: var(--color-text-subtle); margin: 0; }
+// Note et nouveauté (partial preuve-sociale, centrées sur /ressources-offertes/) : alignées sur le texte ici.
+.livre-carte .ressources-book__rating, .livre-carte .ressources-book__novelty { justify-content: flex-start; margin: 0.15rem 0 0; }
+.livre-carte .ressources-book__rating-date { text-align: left; }
+// Achat et lien d'édition au-dessus du calque cliquable.
+.livre-carte .amazon-buy, .livre-carte__autre-edition { position: relative; z-index: 2; }
+.livre-carte .amazon-buy { width: 220px; max-width: 100%; margin-top: 0.5rem; }
+.livre-carte__autre-edition { font-size: var(--fs-small); color: var(--color-text-muted); margin: 0.4rem 0 0; }
+
+// Le livre fondateur : couverture à côté du texte, filet bleu.
+.livre-carte--grande { grid-template-columns: 200px minmax(0, 1fr); gap: 1.75rem; padding: 1.5rem; border-left: 3px solid var(--color-accent); }
+.livre-carte--grande .livre-carte__couv { max-width: none; }
+.livre-carte--grande .livre-carte__titre { font-size: clamp(1.4rem, 2.6vw, 1.75rem); }
+@media (max-width: 640px) {
+  .livre-carte--grande { grid-template-columns: minmax(0, 1fr); gap: 1rem; padding: 1rem; }
+  .livre-carte--grande .livre-carte__couv { max-width: 160px; }
+}
+@media (prefers-reduced-motion: reduce) { .livre-carte__cover { transition: none; } }

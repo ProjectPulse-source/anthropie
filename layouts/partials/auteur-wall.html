@@ -63,7 +63,7 @@
         <span class="wall-tile__body">
           <span class="wall-tile__title">{{ partial "fr-typo.html" $b.Title }}</span>
           {{- /* Site EN + fiche restée française = édition anglaise inexistante.
-                 Même signal que partials/livre-card.html : ne pas laisser croire
+                 Même signal que partials/livre-carte.html : ne pas laisser croire
                  qu'une traduction existe. ANTHROPY, native EN, ne le porte pas. */ -}}
           {{- if and (eq site.Language.Lang "en") (eq $b.Lang "fr") }}<span class="wall-tile__lang"><em>In French</em></span>{{ end }}
           {{- with $meta }}<span class="wall-tile__meta">{{ partial "fr-typo.html" . }}</span>{{ end }}

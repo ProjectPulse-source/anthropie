@@ -13,6 +13,9 @@ description_en: "The foundational work on the anthropic framework. Across 622 pa
 pages: 622  # sync data/works.yaml (book-anthropie.pages) — nombre de pages broché
 price: "36"  # prix broché EUR — affiché sur la page + schema.org Offer (priceCurrency EUR par défaut)
 serie: "anthropie"
+# Axe du cadre affiché sur /livres/ (auteur, 01/10/2026) ; source : sous-titre « Sept âges d'histoire pour une seule hypothèse ».
+axe_cadre: "Les trois axes, sur la longue durée"
+axe_cadre_en: "All three axes, over the long run"
 weight: 1
 wikidata_qid: "Q138827344"
 # Liens canoniques /dp/<ASIN broché 2958634728> — jamais de shortener amzn.eu/a.co

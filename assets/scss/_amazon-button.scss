@@ -12,17 +12,6 @@ $amazon-gold: #c9a961;
   width: 100%;
 }
 
-// Page liste livres : aligné sous la cover (180px)
-.livre-card .amazon-wrapper {
-  display: block;
-  width: 180px;
-  max-width: 100%;
-}
-
-.livre-card .amazon-trigger {
-  width: 100%;
-}
-
 .amazon-trigger {
   display: inline-flex;
   align-items: center;
@@ -117,7 +106,6 @@ $amazon-gold: #c9a961;
   width: 100%;
 }
 .book-single__sidebar .amazon-buy { width: 100%; }
-.livre-card .amazon-buy { width: 180px; max-width: 100%; margin: 0 auto; }
 
 .amazon-cta {
   display: inline-flex;

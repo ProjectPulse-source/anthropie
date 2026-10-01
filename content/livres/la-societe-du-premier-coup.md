@@ -16,6 +16,9 @@ pages: 138  # sync data/works.yaml (book-premier-coup.pages) — nombre de pages
 price: "13.90"  # prix broché EUR — affiché sur la page + schema.org Offer
 kindle_price: "5.99"  # prix EUR de l'édition Kindle (non rendu : information de registre)
 serie: "anthropie"
+# Axe du cadre affiché sur /livres/ (auteur, 01/10/2026) ; source : data/works.yaml : « vecteur déplacement du désordre vers d'autres groupes sociaux ».
+axe_cadre: "Axe social"
+axe_cadre_en: "Social axis"
 weight: 4
 # Liens canoniques /dp/<ASIN broché 2958634760> — jamais de shortener amzn.eu/a.co
 # (redirections opaques, intaguables, collisions constatées — patch 2026-06-04).
