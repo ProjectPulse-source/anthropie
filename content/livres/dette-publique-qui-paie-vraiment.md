@@ -14,7 +14,7 @@ description_en: "A focused application of the anthropic framework to the questio
 price: "19"  # prix broché EUR — affiché sur la page + schema.org Offer
 kindle_price: "9.99"  # prix EUR de l'édition Kindle (auteur, 20/09/2026) — rendu par le shortcode appel-livre ; format schema.org, séparateur décimal = point
 serie: "anthropie"
-weight: 2
+weight: 3
 wikidata_qid: "Q138910896"
 # Liens canoniques /dp/<ASIN broché 2958634736> — jamais de shortener amzn.eu/a.co
 # (les anciens DE/IT pointaient le shortener d'un AUTRE livre — collision corrigée 2026-06-04).

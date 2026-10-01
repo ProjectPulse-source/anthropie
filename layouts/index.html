@@ -14,9 +14,9 @@
     </h1>
     <p class="hero__lede">
       {{ if eq .Lang "en" }}
-        Anthropy is the hypothesis that social systems displace disorder rather than resolve it — in space, in time, or between social groups. This site gathers a research corpus devoted to testing this hypothesis: eight <em>Anthropy Working Papers</em>, three books, publications and resources designed to be read, cited and discussed.
+        Anthropy is the hypothesis that social systems displace disorder rather than resolve it — in space, in time, or between social groups. This site gathers a research corpus devoted to testing this hypothesis: eight <em>Anthropy Working Papers</em>, four books, publications and resources designed to be read, cited and discussed.
       {{ else }}
-        L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent&nbsp;: dans l'espace, dans le temps, ou entre groupes sociaux. Ce site rassemble un corpus de recherche qui la met à l'épreuve&nbsp;: huit <em>Anthropie Working Papers</em>, trois livres, des publications et des ressources conçues pour être lues, citées et discutées.
+        L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent&nbsp;: dans l'espace, dans le temps, ou entre groupes sociaux. Ce site rassemble un corpus de recherche qui la met à l'épreuve&nbsp;: huit <em>Anthropie Working Papers</em>, quatre livres, des publications et des ressources conçues pour être lues, citées et discutées.
       {{ end }}
     </p>
     <div class="hero__cta-group">
@@ -58,24 +58,12 @@
   </aside>
 </section>
 
-{{/* ══════════ Section 1 bis — Ressources (arbitrage PRO-20260921-105434, 28/09/2026) ══════════
-     Accès directs tirés des pages qui déclarent `ressource.accueil` (ordre = valeur), dans la
-     langue courante ; jamais une liste recopiée. Moins de trois accès : le build avertit. */}}
-{{- $acces := slice -}}
-{{- range where site.Pages "Params.ressource.accueil" "!=" nil }}{{ $acces = $acces | append . }}{{ end -}}
-{{- if lt (len $acces) 3 }}{{ warnf "accueil : %d acces ressources seulement (%s)" (len $acces) .Lang }}{{ end -}}
-<section class="home-section home-ressources" aria-labelledby="home-ressources-titre">
-  <h2 id="home-ressources-titre">{{ if eq .Lang "en" }}Resources to understand and discuss{{ else }}Ressources pour comprendre et discuter{{ end }}</h2>
-  <ul class="home-ressources__liste">
-    {{- range sort $acces "Params.ressource.accueil" }}
-    <li class="ressources-index__entree">
-      {{ with .Params.ressource.nature }}<p class="ressources-index__nature">{{ partial "fr-typo.html" . }}</p>{{ end }}
-      <h3><a href="{{ .RelPermalink }}">{{ partial "fr-typo.html" (or .Params.ressource.intitule .Title) }}</a></h3>
-    </li>
-    {{- end }}
-  </ul>
-  <p><a class="home-ressources__tout" href="{{ if eq .Lang "en" }}/en/resources/{{ else }}/ressources/{{ end }}">{{ if eq .Lang "en" }}All resources →{{ else }}Toutes les ressources →{{ end }}</a></p>
-</section>
+{{/* ══════════════════════════════════════════════════════════════════════════════════════════════
+     Ordre de l'accueil (arbitrages ENTRANTE_2026-10-01_Design_site et _Design_accueil_v2, maquette v4
+     validée par l'auteur le 01/10/2026) : thèse → mécanisme → frontière → données → recherche → livres →
+     réception. Trois gestes graphiques : le plein (couvertures, figures, numéro de la vedette), le filet
+     (registre, séparateurs), le blanc. Rien n'est énuméré à la main : chaque liste vient des pages.
+     ══════════════════════════════════════════════════════════════════════════════════════════════ */}}
 
 {{/* ══════════ Section 2 — Trois axes ══════════ */}}
 <section class="home-axes">
@@ -147,7 +135,31 @@
   </div>
 </section>
 
-{{/* ══════════ Section 3 — Série AWP ══════════ */}}
+{{/* ══════════ Section 3 — Suivre les coûts (arbitrage PRO-20260921-105434 pour la présence) ══════════
+     Accès directs tirés des pages qui déclarent `ressource.accueil` (ordre = valeur), dans la langue
+     courante ; jamais une liste recopiée. Moins de trois accès : le build avertit. Même carte que
+     l'index /ressources/ (partial ressource-entree : vignette des pages de données, teinte), sans la
+     description. Titre : « L'hypothèse à l'épreuve » écarté — il présenterait des ressources de données
+     neutres comme des preuves de la thèse (arbitrage ENTRANTE_2026-10-01_Design_site, point 3). */}}
+{{- $acces := slice -}}
+{{- range where site.Pages "Params.ressource.accueil" "!=" nil }}{{ $acces = $acces | append . }}{{ end -}}
+{{- if lt (len $acces) 3 }}{{ warnf "accueil : %d acces ressources seulement (%s)" (len $acces) .Lang }}{{ end -}}
+<section class="home-section home-ressources" aria-labelledby="home-ressources-titre">
+  <h2 id="home-ressources-titre">{{ if eq .Lang "en" }}Following the costs{{ else }}Suivre les coûts{{ end }}</h2>
+  <p class="section-intro">{{ if eq .Lang "en" }}Measuring their weight, identifying who bears them, tracing when they appear: public debt in official series, and the documented register of displaced costs.{{ else }}Mesurer leur poids, identifier qui les supporte, suivre leur apparition dans le temps&nbsp;: la dette publique en séries officielles et le registre documenté des coûts déportés.{{ end }}</p>
+  <ul class="ressources-index__liste home-ressources__liste">
+    {{- range sort $acces "Params.ressource.accueil" }}
+      {{- partial "ressource-entree.html" (dict "page" . "r" .Params.ressource "fr" false "vignette" true "sansDesc" true) -}}
+    {{- end }}
+  </ul>
+  <p class="home-tout"><a href="{{ if eq .Lang "en" }}/en/resources/{{ else }}/ressources/{{ end }}">{{ if eq .Lang "en" }}All resources&nbsp;→{{ else }}Toutes les ressources&nbsp;→{{ end }}</a></p>
+</section>
+
+{{/* ══════════ Section 4 — Série AWP : une vedette, puis le registre ══════════
+     La vedette est le papier au numéro le plus élevé, le registre tous les autres, du plus récent au plus
+     ancien : un nouveau papier prend sa place sans retouche. Ni DOI ni PDF dans le registre (page de la
+     série et fiches) ; le résumé de la vedette = ses deux premières phrases, lues dans sa description. */}}
+{{- $awps := sort (where .Site.RegularPages "Section" "awp") "Params.awp_number" "desc" -}}
 <section class="home-awp">
   <h2>Anthropie Working Papers</h2>
   <p class="section-intro">
@@ -158,64 +170,98 @@
     {{ end }}
   </p>
 
-  <div class="awp-grid">
-    {{ range sort (where .Site.RegularPages "Section" "awp") "Params.awp_number" "asc" }}
-      {{ partial "awp-card.html" . }}
-    {{ end }}
-  </div>
+  {{- with index $awps 0 }}
+  {{- $n := strings.TrimPrefix "AWP-" .Params.awp_number }}
+  <article class="awp-vedette">
+    <p class="awp-vedette__num" aria-hidden="true">{{ $n }}</p>
+    <div class="awp-vedette__corps">
+      <p class="awp-vedette__meta">{{ if eq $.Lang "en" }}Latest{{ else }}Dernier paru{{ end }} · <time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format ":date_long" .Date }}</time> · FR / EN</p>
+      <h3 class="awp-vedette__titre"><a href="{{ .RelPermalink }}">{{ partial "fr-typo.html" .Title }}</a></h3>
+      {{- with first 2 (findRE `[^.!?]+[.!?]+` .Description) }}
+      <p class="awp-vedette__resume">{{ partial "fr-typo.html" (strings.TrimSpace (delimit . "")) }}</p>
+      {{- end }}
+      <p class="awp-vedette__actions">
+        <a class="btn btn--primary" href="{{ .RelPermalink }}">{{ if eq $.Lang "en" }}Read AWP-{{ $n }}{{ else }}Lire l'AWP-{{ $n }}{{ end }}</a>
+        {{- $preview := partial "awp-preview-url.html" .Params.pdf_url }}
+        {{- with (or $preview .Params.pdf_url) }}<a class="awp-vedette__mini" href="{{ . }}" target="_blank" rel="noopener">PDF</a>{{ end }}
+        {{- with .Params.url_zenodo }}<a class="awp-vedette__mini" href="{{ . }}" target="_blank" rel="noopener">Zenodo</a>{{ end }}
+      </p>
+    </div>
+  </article>
+  {{- end }}
 
-  <p><a href="{{ "/serie-awp/" | relLangURL }}">
-    {{ if eq .Lang "en" }}View the full series →{{ else }}Voir la série complète →{{ end }}
-  </a></p>
+  {{- $reste := after 1 $awps }}
+  {{- with $reste }}
+  <p class="home-sous">{{ if eq $.Lang "en" }}The series{{ else }}La série{{ end }} — {{ strings.TrimPrefix "AWP-" (index (last 1 .) 0).Params.awp_number }}{{ if eq $.Lang "en" }} to {{ else }} à {{ end }}{{ strings.TrimPrefix "AWP-" (index . 0).Params.awp_number }}</p>
+  <ul class="awp-registre">
+    {{- range . }}
+    <li class="awp-registre__ligne">
+      <span class="awp-registre__num">{{ strings.TrimPrefix "AWP-" .Params.awp_number }}</span>
+      <a class="awp-registre__titre" href="{{ .RelPermalink }}">{{ partial "fr-typo.html" .Title }}</a>
+      <span class="awp-registre__meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format ":date_long" .Date }}</time> · FR / EN</span>
+      <a class="awp-registre__lire" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">{{ if eq $.Lang "en" }}Read{{ else }}Lire{{ end }}&nbsp;→</a>
+    </li>
+    {{- end }}
+  </ul>
+  {{- end }}
+
+  <p class="home-tout"><a href="{{ "/serie-awp/" | relLangURL }}">{{ if eq .Lang "en" }}The series and its abstracts&nbsp;→{{ else }}La série et ses résumés&nbsp;→{{ end }}</a></p>
 </section>
 
-{{/* ══════════ Section 4 — Le corpus ══════════ */}}
-<section class="home-corpus">
-  <h2>{{ if eq .Lang "en" }}The corpus{{ else }}Le corpus{{ end }}</h2>
+{{/* ══════════ Section 5 — Les livres ══════════
+     « Le corpus » contenait des livres que le site classe hors corpus : la section s'appelle « Les livres ».
+     Corpus anthropique = fiches `serie: "anthropie"` (même champ que la page À propos), dans l'ordre de leur
+     `weight` ; les autres livres viennent ensuite, plus petits. Ni bouton ni lien d'achat : la couverture et
+     le titre mènent à la fiche, qui porte les boutons (décision de l'auteur D2, 01/10/2026). */}}
+{{- $livres := partial "livres-merged.html" . -}}
+{{- $corpus := where $livres "Params.serie" "anthropie" -}}
+{{- $autres := where $livres "Params.serie" "!=" "anthropie" -}}
+<section class="home-section home-livres" aria-labelledby="home-livres-titre">
+  <h2 id="home-livres-titre">{{ if eq .Lang "en" }}Books{{ else }}Les livres{{ end }}</h2>
+  {{- range $groupe := slice (dict "livres" $corpus "fr" "Le corpus anthropique" "en" "The anthropic corpus" "cls" "corpus")
+                             (dict "livres" $autres "fr" "Autres livres" "en" "Other books" "cls" "autres") }}
+  {{- with $groupe.livres }}
+  <p class="home-sous">{{ if eq $.Lang "en" }}{{ $groupe.en }}{{ else }}{{ $groupe.fr }}{{ end }}</p>
+  <div class="home-livres__grille home-livres__grille--{{ $groupe.cls }}">
+    {{- range . }}
+    <article class="home-livre"{{ if ne .Lang $.Lang }} lang="{{ .Lang }}"{{ end }}>
+      <a class="home-livre__couv" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">
+        {{- partial "book-cover.html" (dict "slug" .File.ContentBaseName "alt" "" "wrapClass" "home-livre__cover-wrap" "class" "home-livre__cover" "sizes" "(max-width: 680px) 45vw, 220px" "lang" .Lang) -}}
+      </a>
+      <h3 class="home-livre__titre"><a href="{{ .RelPermalink }}"{{ if ne .Lang $.Lang }} hreflang="{{ .Lang }}"{{ end }}>{{ partial "fr-typo.html" .Title }}</a></h3>
+      {{- if and (eq $groupe.cls "corpus") .Params.subtitle }}<p class="home-livre__phrase">{{ partial "fr-typo.html" .Params.subtitle }}</p>{{ end }}
+      {{- if and (eq $.Lang "en") (eq .Lang "fr") }}<p class="home-livre__langue" lang="en">In French</p>{{ end }}
+    </article>
+    {{- end }}
+  </div>
+  {{- end }}
+  {{- end }}
+  <p class="home-tout"><a href="{{ "/livres/" | relLangURL }}">{{ if eq .Lang "en" }}All books&nbsp;→{{ else }}Tous les livres&nbsp;→{{ end }}</a></p>
+</section>
+
+{{/* ══════════ Section 6 — Réception ══════════
+     Dernières parutions dérivées du corpus FR (les fiches publications n'existent qu'en FR) : une nouvelle
+     fiche apparaît ici au build suivant, sans geste. */}}
+{{- $frSite := index site.Sites 0 -}}
+{{- $latest := first 3 (where (where $frSite.RegularPages "Type" "publications") "Params.url_externe" "!=" nil).ByDate.Reverse -}}
+<section class="home-section home-reception" aria-labelledby="home-reception-titre">
+  <h2 id="home-reception-titre">{{ if eq .Lang "en" }}In journals and the intellectual press{{ else }}Dans les revues et la presse intellectuelle{{ end }}</h2>
+  {{- with $latest }}
+  <ul class="home-reception__liste" aria-label="{{ if eq $.Lang "en" }}Latest publications{{ else }}Dernières parutions{{ end }}">
+    {{- range . }}
+    <li><a href="{{ .Params.url_externe }}" target="_blank" rel="noopener"{{ if eq $.Lang "en" }} lang="fr"{{ end }}>{{ partial "fr-typo.html" .Title }}</a>
+      <span class="home-reception__revue">{{ .Params.revue }}, {{ .Date | time.Format ":date_medium" }}</span></li>
+    {{- end }}
+  </ul>
+  {{- end }}
   <p class="section-intro">
     {{ if eq .Lang "en" }}
-      The anthropic framework extends across several formats: working papers, books, reference pages and publications in the intellectual press. The aim is not to multiply formats but to make the same mechanism visible through different objects — debt, energy, deep history, epistemic order.
+      Published and reviewed in <em>Alternatives Économiques</em>, <em>La Vie des idées</em>, <em>En attendant Nadeau</em>, <em>Terrestres</em>, <em>Nonfiction</em>, <em>Le Temps</em> and other intellectual press outlets.
     {{ else }}
-      Le cadre anthropique se déploie sur plusieurs supports&nbsp;: working papers, livres, pages de référence et publications dans la presse intellectuelle. L'enjeu n'est pas de multiplier les formats, mais de rendre visible un même mécanisme à travers des objets différents — dette, énergie, longue durée, ordre épistémique.
+      Publié et recensé dans <em>Alternatives Économiques</em>, <em>La Vie des idées</em>, <em>En attendant Nadeau</em>, <em>Terrestres</em>, <em>Nonfiction</em>, <em>Le Temps</em> et d'autres revues de la presse intellectuelle.
     {{ end }}
   </p>
-
-  <div class="corpus-grid">
-    <div class="corpus-block corpus-block--livres">
-      <h3>{{ if eq .Lang "en" }}Books{{ else }}Livres{{ end }}</h3>
-      {{- /* Fusion FR/EN sans doublon : ANTHROPY (EN) remplace ANTHROPIE côté /en/,
-             les livres FR-only restent affichés via leur fiche FR. */ -}}
-      {{ range (partial "livres-merged.html" .) }}
-        {{ partial "livre-card.html" . }}
-      {{ end }}
-    </div>
-
-    <div class="corpus-block corpus-block--publications">
-      <h3>Publications</h3>
-      {{- /* Dernieres parutions : derivees du corpus FR (les fiches publications n'existent qu'en FR).
-             La presence vient du depot : une nouvelle fiche apparait ici au build suivant, sans geste. */ -}}
-      {{- $frSite := index site.Sites 0 -}}
-      {{- $latest := first 3 (where (where $frSite.RegularPages "Type" "publications") "Params.url_externe" "!=" nil).ByDate.Reverse -}}
-      {{- with $latest }}
-      <ul class="corpus-latest" aria-label="{{ if eq $.Lang "en" }}Latest publications{{ else }}Dernières parutions{{ end }}">
-        {{- range . }}
-        <li><a href="{{ .Params.url_externe }}" target="_blank" rel="noopener">{{ partial "fr-typo.html" .Title }}</a>
-          <span class="corpus-latest__meta">{{ .Params.revue }}, {{ .Date | time.Format ":date_medium" }}</span></li>
-        {{- end }}
-      </ul>
-      {{- end }}
-      <p>
-        {{ if eq .Lang "en" }}
-          Published and reviewed in <em>Alternatives Économiques</em>, <em>La Vie des idées</em>, <em>En attendant Nadeau</em>, <em>Terrestres</em>, <em>Nonfiction</em>, <em>Le Temps</em> and other intellectual press outlets.
-        {{ else }}
-          Publié et recensé dans <em>Alternatives Économiques</em>, <em>La Vie des idées</em>, <em>En attendant Nadeau</em>, <em>Terrestres</em>, <em>Nonfiction</em>, <em>Le Temps</em> et d'autres revues de la presse intellectuelle.
-        {{ end }}
-      </p>
-      <a href="{{ "/publications/" | relLangURL }}" class="text-link">
-        {{ if eq .Lang "en" }}View publications →{{ else }}Voir les publications →{{ end }}
-      </a>
-    </div>
-  </div>
+  <p class="home-tout"><a href="{{ "/publications/" | relLangURL }}">{{ if eq .Lang "en" }}All publications&nbsp;→{{ else }}Toutes les publications&nbsp;→{{ end }}</a></p>
 </section>
 
 {{ end }}

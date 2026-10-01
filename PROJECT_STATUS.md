@@ -53,6 +53,25 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-01 — Accueil refait (maquette v4), Promesses dans le corpus anthropique, POUSSÉ
+
+Sur deux avis externes arbitrés (`ARBITRATIONS\ENTRANTE_2026-10-01_Design_site_arbitrage.md`,
+`…_Design_accueil_v2_arbitrage.md`) et la maquette v4 validée par l'auteur. **Ordre** : bandeau → trois axes →
+frontière → « Suivre les coûts » (cartes de /ressources/, sans description ; « L'hypothèse à l'épreuve » refusé pour
+intégrité) → AWP (vedette = numéro le plus élevé, registre sans DOI ni PDF) → « Les livres » (corpus `serie:
+"anthropie"` en grand, autres livres 27 % plus petits, **aucun lien d'achat**, décision D2 de l'auteur) → « Dans les
+revues et la presse intellectuelle ». Accueil : 9 308 → 5 543 px à 1 280 px. Styles retirés des sections remplacées
+(`.home-corpus`, `.corpus-*`, `.corpus-latest`, accueil de `_ressources-index.scss`).
+**Promesses** : `serie: "anthropie"`, après ANTHROPIE (weights 2/3/4). La note du 20/09 (« ne se réclame nulle part du
+cadre ») était fausse : « Note de l'auteur », § « D'où vient l'anthropie, et pourquoi ce livre ne l'a pas testée »,
+vérifié dans l'EPUB en vente (SHA-256 `6315fcb4…`). Présenté comme rencontrant des figures du cadre « sans prétendre
+les mesurer ». Compteur 3 → 4 : bandeau FR/EN, /livres/ FR/EN, À propos FR/EN, `llms.txt`, `works.yaml` v1.21 ;
+description EN de /books/ corrigée (annonçait cinq livres). Titre presse d'À propos aligné, ancres conservées.
+**Défaut en ligne corrigé** : `main li { padding-left: .6em !important }` creusait 9,6 px entre la bordure d'une carte
+de /ressources/ et sa vignette, et décalait pastilles et registres ; exemption des listes-composants dans
+`_typography.scss`. Mesuré : 0 débordement à 390 et 1 280 px (accueil, /ressources/, /enseignants/).
+`hugo --minify` 0, `check-all --ci` 0 (le contrôle des compteurs a mordu sur À propos avant correction).
+
 ### 2026-10-01 — Liens visibles, pastilles, encart d'exemplaire, index `/ressources/` hiérarchisé, POUSSÉ
 
 Quatre commits, chacun sur maquette choisie par l'auteur, déployés et relus en ligne.

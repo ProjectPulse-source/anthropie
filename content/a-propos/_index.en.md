@@ -62,7 +62,7 @@ presse_objets:
   mediapart-maprimerenov: "MaPrimeRénov'"
 ---
 
-Stéphane Lalut is an economist, independent researcher and essayist. He develops the framework of anthropy — the hypothesis that social systems displace disorder rather than resolve it — through a series of working papers and three published books. He is also the author of two further books, devoted to the history of ideas and to literature.
+Stéphane Lalut is an economist, independent researcher and essayist. He develops the framework of anthropy — the hypothesis that social systems displace disorder rather than resolve it — through a series of working papers and four published books. He is also the author of two further books, devoted to the history of ideas and to literature.
 
 <p class="orcid-link"><a href="https://orcid.org/0009-0002-1794-4895" target="_blank" rel="noopener">ORCID</a> · <a href="https://scholar.google.com/citations?user=J4NqzwSfrHAC" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://zenodo.org/communities/anthropie-working-papers" target="_blank" rel="noopener">Zenodo</a></p>
 
@@ -74,7 +74,7 @@ European marketing management, public-sector consulting, international entrepren
 
 Each page sets out the book's argument, its contents and where to buy it.
 
-## In the press and in journals
+## In journals and the intellectual press {#in-the-press-and-in-journals}
 
 {{< mur-presse >}}
 

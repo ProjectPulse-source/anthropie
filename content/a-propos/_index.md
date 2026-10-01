@@ -74,7 +74,7 @@ presse_objets:
   mediapart-maprimerenov: "MaPrimeRénov'"
 ---
 
-Stéphane Lalut est économiste, chercheur indépendant et essayiste. Il développe le cadre anthropique — l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent — dans une série de working papers et trois ouvrages publiés. Il est par ailleurs l'auteur de deux autres livres, consacrés à l'histoire des idées et à la littérature.
+Stéphane Lalut est économiste, chercheur indépendant et essayiste. Il développe le cadre anthropique — l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent — dans une série de working papers et quatre ouvrages publiés. Il est par ailleurs l'auteur de deux autres livres, consacrés à l'histoire des idées et à la littérature.
 
 <p class="orcid-link"><a href="https://orcid.org/0009-0002-1794-4895" target="_blank" rel="noopener">ORCID</a> · <a href="https://scholar.google.com/citations?user=J4NqzwSfrHAC" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://zenodo.org/communities/anthropie-working-papers" target="_blank" rel="noopener">Zenodo</a></p>
 
@@ -86,7 +86,7 @@ Direction marketing européenne, conseil au secteur public, entrepreneuriat inte
 
 Chaque fiche présente l'argument du livre, son sommaire et ses liens d'achat.
 
-## Dans la presse et les revues
+## Dans les revues et la presse intellectuelle {#dans-la-presse-et-les-revues}
 
 {{< mur-presse >}}
 

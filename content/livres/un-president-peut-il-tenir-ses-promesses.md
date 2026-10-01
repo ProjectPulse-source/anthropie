@@ -17,11 +17,14 @@ pages: 284  # sync data/works.yaml (book-promesses-2027.pages) — nombre de pag
 # ouvert le 22/09, jour de parution, après avoir vu la page produit répondre (titre du livre lu).
 price: "19.90"
 kindle_price: "9.99"  # prix EUR de l'édition Kindle (non rendu : information de registre)
-# Groupe « autres ouvrages » et non corpus anthropique : le livre ne se réclame nulle part
-# du cadre (vérifié le 20/09 — aucune occurrence dans la clôture, « pourquoi ce livre »,
-# ni le dossier KDP). Le dire du corpus rendrait fausse la phrase « les N ouvrages du cadre
-# anthropique » de /livres/. La définition du groupe — travail éditorial parallèle — convient.
-serie: "autres-ouvrages"
+# Corpus anthropique (décision de l'auteur, 01/10/2026), juste après ANTHROPIE. La note du 20/09
+# qui le rangeait hors corpus (« ne se réclame nulle part du cadre ») était fausse : elle n'avait
+# pas lu la « Note de l'auteur », dont le paragraphe « D'où vient l'anthropie, et pourquoi ce livre
+# ne l'a pas testée » rattache le livre au cadre — vérifié le 01/10 dans l'EPUB en vente (SHA-256
+# 6315fcb4…). Ce paragraphe dit aussi que les neuf enquêtes RENCONTRENT des figures de l'hypothèse
+# sans la tester : le site le présente ainsi (« sans prétendre les mesurer »), jamais comme une
+# application ou une preuve du cadre. Le registre data/works.yaml le disait déjà du corpus.
+serie: "anthropie"
 weight: 2
 # PARU le 22/09/2026. Broché : ASIN 2958634787 (l'ISBN-10 fait l'ASIN), page produit vérifiée
 # ce jour (titre du livre lu sur /dp/2958634787). Kindle en précommande du 17 au 22/09.

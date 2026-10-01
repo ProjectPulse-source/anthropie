@@ -21,12 +21,20 @@
 # =============================================================================
 
 meta:
-  registry_version: "1.20"
-  last_updated: "2026-09-17"
+  registry_version: "1.21"
+  last_updated: "2026-10-01"
   maintainer: "Stéphane Lalut"
   total_works: 42
   source_registry: "registre_soumissions_v73.xlsx"
   changelog:
+    v1_21: |
+      « Un président peut-il tenir ses promesses ? » rangé dans le corpus anthropique sur le site
+      (décision de l'auteur, 2026-10-01), juste après ANTHROPIE — ce registre le disait déjà
+      (« Quatrième essai du corpus ») ; seule la fiche du site le classait hors corpus, sur une
+      vérification du 20/09 qui n'avait pas lu la « Note de l'auteur » (paragraphe « D'où vient
+      l'anthropie, et pourquoi ce livre ne l'a pas testée », vérifié dans l'EPUB en vente). Le
+      compteur du site passe de trois à quatre livres du corpus (accueil FR/EN, /livres/_index*,
+      llms.txt). Aucun ajout d'œuvre ; total_works inchangé.
     v1_20: |
       Livresque des mots (2026-09-17) : broché P15 accepté par KDP, 694 pages (672 → 694 :
       sommaire, « Promenades dans le livre », index des auteurs). Sous-titre aligné sur la page

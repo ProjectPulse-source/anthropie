@@ -16,7 +16,7 @@ pages: 138  # sync data/works.yaml (book-premier-coup.pages) — nombre de pages
 price: "13.90"  # prix broché EUR — affiché sur la page + schema.org Offer
 kindle_price: "5.99"  # prix EUR de l'édition Kindle (non rendu : information de registre)
 serie: "anthropie"
-weight: 3
+weight: 4
 # Liens canoniques /dp/<ASIN broché 2958634760> — jamais de shortener amzn.eu/a.co
 # (redirections opaques, intaguables, collisions constatées — patch 2026-06-04).
 url_amazon_fr: "https://www.amazon.fr/dp/2958634760"

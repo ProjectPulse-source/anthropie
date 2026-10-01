@@ -129,6 +129,17 @@ main li {
   font-weight: 400 !important;
 }
 
+// Listes-composants : cartes, pastilles, registres et listes à filets ne sont pas du texte courant. La règle
+// ci-dessus y posait 9,6 px de retrait (une bande blanche entre la bordure d'une carte et sa vignette, mesurée
+// le 01/10/2026) et 0,8 em de marge sous chaque ligne d'un registre. Un composant à ajouter s'inscrit ici.
+main .ressources-index__entree,
+main .pastilles li,
+main .awp-registre__ligne,
+main .home-reception__liste li {
+  padding-left: 0 !important;
+  margin-bottom: 0 !important;
+}
+
 main li::marker {
   color: var(--color-text-faint);
   font-weight: 400;
