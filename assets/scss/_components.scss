@@ -395,6 +395,13 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
   font-family: var(--font-sans); font-size: var(--fs-small); margin: 0;
 }
 
+// Exemplaire de consultation (02/10/2026) : une ligne sous la fiche, subordonnée aux boutons d'achat.
+.appel-livre__consultation {
+  margin: 0.9rem 0 0; padding-top: 0.7rem; border-top: 1px solid var(--color-rule-soft);
+  font-family: var(--font-sans); font-size: var(--fs-small); color: var(--color-text-subtle);
+}
+@media print { .appel-livre__consultation { display: none !important; } }
+
 // ----- Figure du ciseau (page /cout-de-la-dette-publique/) -----
 .figure-ciseau { margin: 32px 0; }
 .figure-ciseau img { width: 100%; max-width: 720px; height: auto; display: block; }

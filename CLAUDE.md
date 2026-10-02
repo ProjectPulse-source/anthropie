@@ -228,6 +228,23 @@ dans la feuille de route GEO. Exception au STOP accordée par l'auteur pour cett
    thèse dit que l'activité ne met pas cette thèse à l'épreuve. Avant publication : quatre impressions de fiche,
    arrivée par chaque ancre (titre visible sous les éléments collants), 390 px.
 
+## Exemplaire de consultation sur les ressources (auteur, 2026-10-02)
+
+Décision de l'auteur : toute ressource propose l'exemplaire de consultation du livre qu'elle concerne. Finalités :
+volume sur la librairie en ligne par le guichet `/ressources-offertes/`, et crédibilité auprès des publics visés
+(presse, enseignement, recherche, responsables publics, associations). **Deux organes, un seul texte de publics**
+(`partials/consultation-publics.html`) :
+
+- page qui porte un bloc d'achat : la ligne est **dans `appel-livre`**, automatique dès que le livre a une page au
+  guichet (`consultation="non"` la retire) ;
+- page sans bloc d'achat (notions, guides, corpus) : `{{< consultation slug="…" >}}` en fin de page ;
+- pages des enseignants : `exemplaire`, avec leur façade (couche pédagogique, points 5 et 7).
+
+Français seulement (exemplaires Amazon.fr). Le lien porte `?src=consultation-<page>` : l'origine des demandes se lit
+dans la mesure d'audience. Aucun contrôle d'éligibilité, aucune donnée collectée ; un exemplaire attribué est un coût
+du canal, jamais un résultat. Une page de ressource neuve reçoit l'un des deux organes ; `chercheur-independant` n'a
+pas de livre lié (exclusion déclarée).
+
 ## Règle de surface — « la présence vient du dépôt » (actée 2026-08-11)
 
 Défaut récurrent, six occurrences en deux jours, toujours la même forme : **une donnée

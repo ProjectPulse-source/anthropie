@@ -60,3 +60,5 @@ La dette technologique est l'application de cette hypothèse aux infrastructures
 - [AWP-06 — *Infrastructures numériques et dette technologique*](/awp/awp-06/) — le working paper qui formalise le concept (DOI&nbsp;: 10.5281/zenodo.20025421, PDF en accès libre).
 - Le livre [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) (2025, 622 p.) déploie le cadre complet dont la dette technologique est l'une des applications.
 - [Qu'est-ce que l'anthropie&nbsp;?](/quest-ce-que-lanthropie/) — la page du concept général.
+
+{{< consultation slug="anthropie-ordre-ici-dette-ailleurs" >}}

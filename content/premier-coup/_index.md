@@ -334,3 +334,5 @@ Environ **22&nbsp;700 places** dans près de **1&nbsp;000 structures**. Le plan 
 - [Qu'est-ce que la réversibilité sociale&nbsp;?](/reversibilite-sociale/) — la page du concept&nbsp;: ce qu'on peut se permettre de rater, et de quoi cela dépend.
 - [AWP-08 — *La réversibilité sociale comme dimension de l'inégalité*](/awp/awp-08/) — le working paper qui formalise le cadre (DOI&nbsp;: 10.5281/zenodo.21506320, PDF en accès libre).
 - [AWP-07 — *La boucle anthropique*](/awp/awp-07/) — le mécanisme général dont la réversibilité est la contrepartie micro-institutionnelle.
+
+{{< consultation slug="la-societe-du-premier-coup" >}}

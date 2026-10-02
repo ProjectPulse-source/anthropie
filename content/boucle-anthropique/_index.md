@@ -74,3 +74,5 @@ La formalisation — neuf définitions, cinq états, trois conditions, quatre fo
 - [AWP-07 — *La boucle anthropique&nbsp;: déplacement, saturation, retour*](/awp/awp-07/) — le working paper qui formalise l'appareil (DOI&nbsp;: 10.5281/zenodo.21200286, PDF en accès libre).
 - [Qu'est-ce que l'anthropie&nbsp;?](/quest-ce-que-lanthropie/) — le concept général et ses distinctions (entropie, Anthropocène, principe anthropique, anthropologie).
 - Le livre [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) (2025, 622 p.) — le cadre complet, dont la boucle est la clé de voûte théorique.
+
+{{< consultation slug="anthropie-ordre-ici-dette-ailleurs" >}}

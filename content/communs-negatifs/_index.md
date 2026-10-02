@@ -56,3 +56,5 @@ Le working paper [AWP-06 — *Infrastructures numériques et dette technologique
 - [AWP-06 — *Infrastructures numériques et dette technologique*](/awp/awp-06/) (DOI&nbsp;: 10.5281/zenodo.20025421, PDF en accès libre) — où le numérique rejoint les communs négatifs candidats.
 - [Qu'est-ce que la dette technologique&nbsp;?](/dette-technologique/) et [Qu'est-ce que la boucle anthropique&nbsp;?](/boucle-anthropique/) — les pages voisines du cadre.
 - Le livre [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) (2025, 622 p.) — le cadre général dont les communs négatifs sont l'un des points de rencontre avec l'écologie du démantèlement.
+
+{{< consultation slug="anthropie-ordre-ici-dette-ailleurs" >}}

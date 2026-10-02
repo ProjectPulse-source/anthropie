@@ -58,3 +58,5 @@ Il y ajoute une hypothèse que le débat en volume ignore&nbsp;: **à l'intérie
 - [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/) — les rôles, les canaux, leurs conditions, et ce que les données permettent de voir.
 - [Dette publique&nbsp;: pourquoi les collectivités locales sont-elles la variable d'ajustement&nbsp;?](/dette-publique-collectivites-locales/) — le canal territorial du même transfert.
 - [Qu'est-ce que l'anthropie&nbsp;?](/quest-ce-que-lanthropie/) — le cadre général&nbsp;: ordre ici, dette ailleurs.
+
+{{< consultation slug="dette-publique-qui-paie-vraiment" >}}

@@ -59,3 +59,5 @@ Autre limite, assumée par le livre&nbsp;: les catégories du Registre — écon
 Le Registre des coûts déportés constitue l'épilogue du livre [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) (2025, 622&nbsp;pages), où il accompagne les sept âges déployés chapitre par chapitre, les schémas et la postface analytique. La présente version en ligne reprend, jalon par jalon, la version publiée par l'auteur&nbsp;; les jalons y sont classés selon la segmentation des sept âges du livre, par leurs bornes chronologiques. Le vocabulaire du cadre est défini au [glossaire](/glossaire/)&nbsp;— à ne pas confondre avec les [registres de coûts couplés](/glossaire/#registres-de-couts-couples) d'AWP-06, qui sont une typologie et non une chronologie.
 
 {{< canonical-definition >}}
+
+{{< consultation slug="anthropie-ordre-ici-dette-ailleurs" >}}

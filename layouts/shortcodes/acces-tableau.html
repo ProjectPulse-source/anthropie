@@ -1,0 +1,27 @@
+{{- /* {{< acces-tableau >}} — les valeurs de la figure « acces-superieur-origine » en tableau, repliées sous elle.
+       Même motif et même habillage que licence-tableau (lisibilité sur téléphone, accessibilité) ; mêmes jetons que
+       acces-val : clé absente = échec de build. */ -}}
+{{- $a := "" -}}
+{{- with site.Data.acces_superieur -}}{{- $a = .affichage -}}{{- end -}}
+{{- if not $a -}}{{- errorf "acces-tableau: data/acces_superieur.json absent ou sans bloc affichage (page %s)" .Page.RelPermalink -}}{{- end -}}
+{{- $lignes := slice (slice "ind" "Agriculteurs, artisans, commerçants, chefs d'entreprise") (slice "cad" "Cadres, professions intellectuelles supérieures") (slice "pi" "Professions intermédiaires") (slice "emp" "Employés") (slice "ouv" "Ouvriers") (slice "ret" "Retraités, inactifs") (slice "ens" "Ensemble (origine renseignée)") -}}
+{{- $cols := slice "univ" "cpge" "sts" "autres" -}}
+<details class="repli licence-tableau"><summary>Les valeurs de la figure en tableau</summary>
+<p>Nouveaux bacheliers {{ index $a "annee" }} inscrits dans l'enseignement supérieur, par filière, en&nbsp;% de chaque catégorie.</p>
+<div class="table-scroll">
+<table class="dette-monde-table">
+<thead><tr><th scope="col">Origine sociale</th><th scope="col">Université (dont IUT)</th><th scope="col">Classes préparatoires</th><th scope="col">Sections de technicien supérieur</th><th scope="col">Autres formations</th></tr></thead>
+<tbody>
+{{- range $lignes }}
+{{- $cle := index . 0 }}
+<tr><th scope="row">{{ index . 1 }}</th>
+{{- range $cols }}
+{{- $v := index $a (printf "%s_%s" $cle .) }}
+{{- if not $v }}{{ errorf "acces-tableau: cle %s_%s absente du bloc affichage" $cle . }}{{ end -}}
+<td>{{ $v }}</td>
+{{- end }}</tr>
+{{- end }}
+</tbody>
+</table>
+</div>
+</details>

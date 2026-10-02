@@ -68,3 +68,5 @@ La conséquence pratique est connue des scénarios énergétiques sérieux&nbsp;
 - [AWP-04 — *Transition énergétique ou transfert entropique&nbsp;?*](/awp/awp-04/) — le working paper qui replace l'effet rebond parmi les mécanismes de transfert de la transition (DOI&nbsp;: 10.5281/zenodo.19269244, PDF en accès libre).
 - [Qu'est-ce que l'anthropie&nbsp;?](/quest-ce-que-lanthropie/) — le cadre général&nbsp;: ordre local, désordre déplacé, effet boomerang.
 - Le livre [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) (2025, 622 p.) consacre un développement à l'énergie et aux transferts de la transition.
+
+{{< consultation slug="anthropie-ordre-ici-dette-ailleurs" >}}

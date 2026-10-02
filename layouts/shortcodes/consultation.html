@@ -1,0 +1,34 @@
+{{- /* consultation.html — encart « Exemplaire de consultation » d'une page de ressource HORS enseignement.
+
+       {{< consultation slug="anthropie-ordre-ici-dette-ailleurs" >}}
+
+       Décision de l'auteur (02/10/2026) : proposer sur les ressources l'exemplaire de consultation du livre que la
+       page concerne, pour les publics qu'il vise (presse, enseignement, recherche, responsables publics, associations).
+       Pages qui portent déjà un bloc d'achat : la ligne est dans `appel-livre`, rien à ajouter. Pages sans bloc
+       d'achat (notions, guides, corpus) : cet encart, en fin de page.
+
+       Même habillage que l'encart des enseignants (classe `exemplaire` : couverture, impression exclue). Le texte est
+       ICI, pas dans les pages : dix pages ne portent pas dix copies. Le lien mène à la page du livre au guichet
+       /ressources-offertes/ — même stock, aucune donnée collectée, aucun contrôle d'éligibilité — avec `src` pour
+       lire dans la mesure d'audience de quelle page vient la demande (un exemplaire attribué est un coût, non un résultat).
+       Français seulement : le guichet attribue des exemplaires Amazon.fr.
+
+       Échoue bruyamment si le livre n'a ni fiche ni page au guichet. */ -}}
+{{- $slug := .Get "slug" -}}
+{{- if not $slug -}}{{ errorf "consultation: parametre slug manquant (%s)" .Page.File.Path }}{{- end -}}
+{{- $livre := site.GetPage (printf "/livres/%s" $slug) -}}
+{{- if not $livre -}}{{ errorf "consultation: fiche /livres/%s introuvable (%s)" $slug .Page.File.Path }}{{- end -}}
+{{- $guichet := site.GetPage (printf "/ressources-offertes/%s" $slug) -}}
+{{- if or (not $guichet) (not $livre.Params.promo_slug) -}}{{ errorf "consultation: %s n'a pas de page au guichet /ressources-offertes/ (%s)" $slug .Page.File.Path }}{{- end -}}
+{{- $origine := path.Base (path.Dir .Page.File.Path) -}}
+<aside class="exemplaire">
+  {{ partial "book-cover.html" (dict "slug" $slug "alt" (printf "Couverture — %s" $livre.Title) "wrapClass" "exemplaire__cover-wrap" "class" "exemplaire__cover" "sizes" "104px" "lang" $livre.Lang) }}
+  <div class="exemplaire__corps">
+    <div>
+      <p class="exemplaire__surtitre">{{ partial "consultation-publics.html" . | strings.TrimSpace }}</p>
+      <h3 id="exemplaire">Exemplaire de consultation</h3>
+    </div>
+    <p>Un exemplaire numérique de consultation de <em>{{ partial "fr-typo.html" $livre.Title }}</em> est disponible, dans la limite du stock. Il est proposé sans contrepartie&nbsp;: aucune recension ni aucune citation n'est demandée.</p>
+    <p class="exemplaire__action"><a class="btn btn--primary" href="{{ $guichet.RelPermalink }}?src=consultation-{{ $origine }}">Demander un exemplaire&nbsp;→</a></p>
+  </div>
+</aside>

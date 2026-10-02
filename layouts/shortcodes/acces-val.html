@@ -1,0 +1,14 @@
+{{- /* {{< acces-val "ouv_sts" >}} — une valeur du bloc affichage de data/acces_superieur.json (activité de SES
+       « Après le bac, les mêmes voies pour tous ? », scripts/generer_acces_superieur.py). Même contrat que licence-val :
+       clé inconnue ou données absentes = échec de build. Français seulement. */ -}}
+{{- $k := .Get 0 -}}
+{{- $a := "" -}}
+{{- with site.Data.acces_superieur -}}{{- $a = .affichage -}}{{- end -}}
+{{- if not $a -}}
+  {{- errorf "acces-val: data/acces_superieur.json absent ou sans bloc affichage (page %s)" .Page.RelPermalink -}}
+{{- else -}}
+  {{- $v := index $a $k -}}
+  {{- if not $v -}}
+    {{- errorf "acces-val: cle %q inconnue du bloc affichage (page %s)" $k .Page.RelPermalink -}}
+  {{- else -}}{{- $v -}}{{- end -}}
+{{- end -}}

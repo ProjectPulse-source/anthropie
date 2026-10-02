@@ -75,3 +75,5 @@ C'est le lien avec le cadre général de l'[anthropie](/quest-ce-que-lanthropie/
 - [*La Société du premier coup*](/livres/la-societe-du-premier-coup/) — le livre qui met la question en récit, à partir de cas concrets et sans appareil formel&nbsp;; ses repères chiffrés et leurs sources sont réunis sur la [page compagnon](/premier-coup/).
 - [AWP-07 — *La boucle anthropique*](/awp/awp-07/) — le mécanisme général dont la réversibilité est la contrepartie micro-institutionnelle.
 - [Qu'est-ce que l'anthropie&nbsp;?](/quest-ce-que-lanthropie/) — la page du concept général, et le [glossaire](/glossaire/) du cadre.
+
+{{< consultation slug="la-societe-du-premier-coup" >}}

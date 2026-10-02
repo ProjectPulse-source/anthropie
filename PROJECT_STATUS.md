@@ -53,6 +53,51 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-02 — « École et parcours » : seconde activité « Après le bac, les mêmes voies pour tous ? », POUSSÉ
+
+Issue de deux avis externes arbitrés (`D:\PRO\.claude\external-audits\ARBITRATIONS\ENTRANTE_2026-10-02_Ecole_Parcours_Graphe_supplementaire_arbitrage.md`,
+tours 1 et 2). Premier objectif du chapitre (accès à un type de formation) ; l'activité sur la licence garde le second.
+
+- **Générateur** `scripts/generer_acces_superieur.py` : lit trois fiches officielles archivées dans
+  `scripts/sources_enseignants/` (*État de l'enseignement supérieur* n° 18, fiches 13 et 09 ; n° 19, fiche 13),
+  empreintes vérifiées. Bacheliers 2023 (même année que la cohorte de la licence), six catégories d'origine, quatre
+  destinations à 100 % ; témoins : millésime 2024 (dérive maximale 1,2 point) et série du baccalauréat. Douze gardes ;
+  l'une a mordu à l'écriture sur une affirmation fausse de ma part (« quatre catégories sur six » : cinq). Mutation
+  réelle rejouée (empreinte, puis quatre gardes au moins), pièces restaurées.
+- **Sorties** : `data/` et `static/acces_superieur.json`, `static/acces_superieur.csv`,
+  `static/img/acces-superieur-origine.svg` et `.png`. Shortcodes `acces-val`, `acces-tableau`.
+- **Page** : fiche `#terminale-apres-le-bac` placée avant la fiche licence ; introduction, méthode et front matter
+  adaptés (deux activités).
+- **Mesuré** : build `$?` = 0, aucun jeton non résolu ; `check-all --ci` à 0 ; audit des liens à 0 ; ancre dégagée
+  (192 px, éléments collants à 178) à 1 280 et 390 px, sans débordement ; impression : deux pages par fiche, ni
+  corrigé, ni autre fiche, ni encart.
+- **Non fait** : série longue (deux millésimes seulement) ; la ressource d'accompagnement Éduscol du chapitre (403).
+- **Chemins, pour le `git add`** : `scripts/generer_acces_superieur.py`, les trois fiches `eesr1*.html` et
+  `SHA256SUMS` de `scripts/sources_enseignants/`, `data/acces_superieur.json`, `static/acces_superieur.json`,
+  `static/acces_superieur.csv`, `static/img/acces-superieur-origine.svg` et `.png`, `layouts/shortcodes/acces-val.html`,
+  `layouts/shortcodes/acces-tableau.html`, `content/enseignants/ecole-et-parcours/_index.md` ; cette entrée seule.
+
+### 2026-10-02 — Exemplaire de consultation généralisé aux ressources ; carte de partage « École et parcours », POUSSÉ
+
+- **Décision de l'auteur** (02/10) : généraliser l'exemplaire de consultation aux ressources (volume par le guichet,
+  crédibilité auprès de la presse, de la recherche, des responsables publics et des associations). Ma recommandation
+  d'un essai sur une seule page est écartée.
+- **Ligne dans `appel-livre`** (six pages françaises qui portent un bloc d'achat, dont la page non publiée d'une autre
+  session) ; **shortcode `consultation`** en fin de dix pages sans bloc d'achat : `boucle-anthropique`,
+  `communs-negatifs`, `dette-technologique`, `effet-rebond`, `glossaire`, `registre-des-couts-deportes` (*Anthropie*),
+  `comment-lecriture-a-transforme-la-pensee` (*L'Odyssée des idées*), `dette-publique-generations-futures` (*Dette
+  publique*), `reversibilite-sociale`, `premier-coup` (*La Société du premier coup*). Publics dans
+  `partials/consultation-publics.html` ; style dans `_components.scss` ; règle au `CLAUDE.md`.
+- **Carte de partage** `scripts/og_enseignants.py` → `static/images/og-parcours-licence.jpg` et `vig-…`.
+- **Mesuré** : build `$?` = 0, `check-all --ci` à 0, audit des liens à 0 ; 12 pages avec encart, 6 avec la ligne,
+  aucune page anglaise ; 1 180 et 390 px sans débordement ; rendu regardé.
+- **Non fait** : volume du stock (le guichet dit seulement « disponible ») ; exclusions : `chercheur-independant`
+  (aucun livre lié), pages anglaises (guichet Amazon.fr).
+- **Chemins, pour le `git add`** : `layouts/shortcodes/appel-livre.html`, `layouts/shortcodes/consultation.html`,
+  `layouts/partials/consultation-publics.html`, `assets/scss/_components.scss`, les dix `content/<page>/_index.md`
+  ci-dessus, `scripts/og_enseignants.py`, `static/images/og-parcours-licence.jpg`, `static/images/vig-parcours-licence.jpg`,
+  `content/enseignants/ecole-et-parcours/_index.md`, `CLAUDE.md` ; cette entrée seule.
+
 ### 2026-10-02 — Couche enseignants : une page par thème, exemplaire de *La Société du premier coup*, POUSSÉ
 
 Décisions de l'auteur après contre-expertise (`D:\PRO\.claude\external-audits\ARBITRATIONS\ENTRANTE_2026-10-02_Enseignants_Structure_arbitrage.md`) :

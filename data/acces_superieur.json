@@ -1,0 +1,210 @@
+{
+ "releve_le": "2026-10-02",
+ "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; source MESRE-SIES",
+ "meta": {
+  "page": "https://stephane-lalut.com/enseignants/ecole-et-parcours/",
+  "licence": "CC BY 4.0 pour la compilation et la figure ; données MESRE-SIES",
+  "champ": "nouveaux bacheliers inscrits dans l'enseignement supérieur à la rentrée suivant le baccalauréat, France métropolitaine et DROM",
+  "source": "MESRE-DGESIP/DGRI-SIES, L'état de l'Enseignement supérieur, de la Recherche et de l'Innovation en France, fiche 13 (tableau 13.03) et fiche 09 (tableaux 09.03 et 09.04)",
+  "definitions": {
+   "universite": "université, IUT compris (« dont IUT » est un sous-ensemble, non une cinquième destination)",
+   "cpge": "classes préparatoires aux grandes écoles",
+   "sts": "sections de technicien supérieur, par voie scolaire et par apprentissage",
+   "autres": "autres formations (écoles de commerce et d'ingénieurs, formations paramédicales et sociales, autres établissements)",
+   "origine_sociale": "catégorie socioprofessionnelle du parent, six catégories de la source ; origine non renseignée : non répartie par la source",
+   "temoin_baccalaureat": "série du baccalauréat des nouveaux inscrits de chaque filière (09.03) et origine sociale des bacheliers de chaque série (09.04)"
+  }
+ },
+ "bacheliers": [
+  {
+   "annee": 2023,
+   "edition": "n° 18",
+   "fichier": "eesr18_fiche13_acces_enseignement_superieur_bacheliers2023.html",
+   "origine_renseignee_pct": 88.9,
+   "origines": {
+    "ind": {
+     "univ": 48.1,
+     "iut": 8.9,
+     "cpge": 8.8,
+     "sts": 24.6,
+     "autres": 18.6
+    },
+    "cad": {
+     "univ": 55.2,
+     "iut": 9.2,
+     "cpge": 14.2,
+     "sts": 9.9,
+     "autres": 20.7
+    },
+    "pi": {
+     "univ": 61.1,
+     "iut": 11.7,
+     "cpge": 6.3,
+     "sts": 19.6,
+     "autres": 13.0
+    },
+    "emp": {
+     "univ": 60.5,
+     "iut": 10.8,
+     "cpge": 4.8,
+     "sts": 22.7,
+     "autres": 11.9
+    },
+    "ouv": {
+     "univ": 43.4,
+     "iut": 8.4,
+     "cpge": 3.8,
+     "sts": 46.0,
+     "autres": 6.8
+    },
+    "ret": {
+     "univ": 45.3,
+     "iut": 6.8,
+     "cpge": 4.3,
+     "sts": 42.4,
+     "autres": 7.9
+    }
+   },
+   "ensemble_renseigne": {
+    "univ": 53.5,
+    "iut": 9.5,
+    "cpge": 8.0,
+    "sts": 24.3,
+    "autres": 14.1
+   }
+  },
+  {
+   "annee": 2024,
+   "edition": "n° 19",
+   "fichier": "eesr19_fiche13_acces_enseignement_superieur_bacheliers2024.html",
+   "origine_renseignee_pct": 88.9,
+   "origines": {
+    "ind": {
+     "univ": 47.6,
+     "iut": 9.2,
+     "cpge": 8.9,
+     "sts": 23.7,
+     "autres": 19.8
+    },
+    "cad": {
+     "univ": 55.0,
+     "iut": 9.3,
+     "cpge": 14.1,
+     "sts": 9.6,
+     "autres": 21.4
+    },
+    "pi": {
+     "univ": 60.7,
+     "iut": 11.5,
+     "cpge": 6.7,
+     "sts": 18.8,
+     "autres": 13.9
+    },
+    "emp": {
+     "univ": 60.6,
+     "iut": 10.9,
+     "cpge": 4.8,
+     "sts": 21.5,
+     "autres": 13.0
+    },
+    "ouv": {
+     "univ": 42.7,
+     "iut": 8.4,
+     "cpge": 4.1,
+     "sts": 45.8,
+     "autres": 7.5
+    },
+    "ret": {
+     "univ": 44.8,
+     "iut": 6.5,
+     "cpge": 4.9,
+     "sts": 41.8,
+     "autres": 8.5
+    }
+   },
+   "ensemble_renseigne": {
+    "univ": 53.3,
+    "iut": 9.5,
+    "cpge": 8.2,
+    "sts": 23.4,
+    "autres": 15.0
+   }
+  }
+ ],
+ "temoin_baccalaureat": {
+  "cpge_bac_general": 93.3,
+  "sts_bac_general": 23.1,
+  "sts_bac_technologique": 34.3,
+  "sts_bac_professionnel": 42.6,
+  "bac_general_cadres": 34.8,
+  "bac_general_ouvriers": 9.9,
+  "bac_professionnel_cadres": 9.0,
+  "bac_professionnel_ouvriers": 21.0
+ },
+ "affichage": {
+  "annee": "2023",
+  "annee_temoin": "2024",
+  "edition": "n° 18",
+  "edition_temoin": "n° 19",
+  "origine_renseignee": "88,9",
+  "origine_non_renseignee": "11,1",
+  "ind_univ": "48,1",
+  "ind_iut": "8,9",
+  "ind_cpge": "8,8",
+  "ind_sts": "24,6",
+  "ind_autres": "18,6",
+  "cad_univ": "55,2",
+  "cad_iut": "9,2",
+  "cad_cpge": "14,2",
+  "cad_sts": "9,9",
+  "cad_autres": "20,7",
+  "pi_univ": "61,1",
+  "pi_iut": "11,7",
+  "pi_cpge": "6,3",
+  "pi_sts": "19,6",
+  "pi_autres": "13,0",
+  "emp_univ": "60,5",
+  "emp_iut": "10,8",
+  "emp_cpge": "4,8",
+  "emp_sts": "22,7",
+  "emp_autres": "11,9",
+  "ouv_univ": "43,4",
+  "ouv_iut": "8,4",
+  "ouv_cpge": "3,8",
+  "ouv_sts": "46,0",
+  "ouv_autres": "6,8",
+  "ret_univ": "45,3",
+  "ret_iut": "6,8",
+  "ret_cpge": "4,3",
+  "ret_sts": "42,4",
+  "ret_autres": "7,9",
+  "ens_univ": "53,5",
+  "ens_iut": "9,5",
+  "ens_cpge": "8,0",
+  "ens_sts": "24,3",
+  "ens_autres": "14,1",
+  "ecart_univ": "17,7",
+  "rapport_univ": "1,4",
+  "ecart_cpge": "10,4",
+  "rapport_cpge": "3,7",
+  "ecart_sts": "36,1",
+  "rapport_sts": "4,6",
+  "ecart_autres": "13,9",
+  "rapport_autres": "3,0",
+  "sts_ouv_sur_cad": "4,6",
+  "cpge_cad_sur_ouv": "3,7",
+  "temoin_cad_cpge": "14,1",
+  "temoin_cad_sts": "9,6",
+  "temoin_ouv_cpge": "4,1",
+  "temoin_ouv_sts": "45,8",
+  "cpge_bac_general": "93,3",
+  "sts_bac_general": "23,1",
+  "sts_bac_technologique": "34,3",
+  "sts_bac_professionnel": "42,6",
+  "bac_general_cadres": "34,8",
+  "bac_general_ouvriers": "9,9",
+  "bac_professionnel_cadres": "9,0",
+  "bac_professionnel_ouvriers": "21,0",
+  "derive_max": "1,2"
+ }
+}

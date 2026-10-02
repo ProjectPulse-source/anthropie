@@ -127,3 +127,5 @@ L'anthropie repose sur une hypothèse unique — les systèmes sociaux déplacen
 </div>
 
 </dl>
+
+{{< consultation slug="anthropie-ordre-ici-dette-ailleurs" >}}

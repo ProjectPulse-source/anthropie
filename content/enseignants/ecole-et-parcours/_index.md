@@ -1,8 +1,8 @@
 ---
 title: "Avons-nous tous le même droit à l'erreur ?"
-description: "Une activité de SES pour la Terminale, chapitre sur l'École : ce que deviennent, un an après, les bacheliers entrés en première année de licence, selon leur origine sociale. Figure, fiche élève, corrigé et données du SIES."
-og_title: "Avons-nous tous le même droit à l'erreur ? — une activité de SES sur l'École, Terminale"
-og_image: "img/parcours-licence-devenir.png"
+description: "Deux activités de SES pour la Terminale, chapitre sur l'École : où s'inscrivent les nouveaux bacheliers selon leur origine sociale, et ce que deviennent un an après les entrants en licence. Figures, fiches élèves, corrigés et données du SIES."
+og_title: "Avons-nous tous le même droit à l'erreur ? — deux activités de SES sur l'École, Terminale"
+og_image: "images/og-parcours-licence.jpg"   # scripts/og_enseignants.py ; vignette vig-parcours-licence.jpg lue par /ressources/
 og_image_alt: "Cinq barres empilées : devenir des bacheliers un an après une première année de licence, selon l'origine sociale."
 date: 2026-10-02
 lastmod: 2026-10-02
@@ -16,20 +16,74 @@ lastmod: 2026-10-02
 ressource:
   bloc: "enseigner"
   rang: 20
-  nature: "Activité de SES — Terminale, chapitre sur l'École"
-  intitule: "École et parcours : après une première année de licence"
+  nature: "Activités de SES — Terminale, chapitre sur l'École"
+  intitule: "École et parcours : après le bac, après une année de licence"
   encart: true
-  bouton: "Voir l'activité"
+  bouton: "Voir les activités"
 ---
 
 {{< enseignants-themes actif="ecole" >}}
 
-**Terminale, chapitre sur l'École.** Que deviennent, un an après, les bacheliers entrés en première année de licence,
-selon leur origine sociale&nbsp;? La question du titre est celle de l'auteur, non une notion du programme&nbsp;: la
-fiche la ramène à ce qui se mesure. La fiche élève et son corrigé sont écrits à partir de la série elle-même&nbsp;:
-un chiffre y change quand la série change. La figure et la compilation des données sont sous licence
-CC&nbsp;BY&nbsp;4.0, à reprendre en citant la source&nbsp;; les questions demandent de constater, de calculer, de
-comparer ou d'expliquer un mécanisme, aucune ne demande de trancher une politique.
+**Terminale, chapitre sur l'École.** Deux activités, une par objectif du chapitre. La première regarde où
+s'inscrivent les nouveaux bacheliers selon leur origine sociale&nbsp;; la seconde, ce que deviennent un an après ceux
+qui sont entrés en première année de licence. Elles portent sur les bacheliers de la même année mais ne suivent pas
+les mêmes élèves. La question du titre est celle de l'auteur, non une notion du programme&nbsp;: les fiches la
+ramènent à ce qui se mesure. Fiches et corrigés sont écrits à partir des séries elles-mêmes&nbsp;: un chiffre y change
+quand la série change. Les figures et la compilation des données sont sous licence CC&nbsp;BY&nbsp;4.0, à reprendre
+en citant la source&nbsp;; les questions demandent de constater, de calculer, de comparer ou d'expliquer un mécanisme,
+aucune ne demande de trancher une politique.
+
+<section class="fiche" id="fiche-acces">
+
+### Terminale — Après le bac&nbsp;: les mêmes voies pour tous&nbsp;? {#terminale-apres-le-bac}
+
+<p class="fiche__actions"><button type="button" class="how-to-cite__btn how-to-cite__btn--secondary" data-imprimer-fiche="fiche-acces">Imprimer la fiche élève — sans corrigé</button></p>
+
+**Programme.** Chapitre «&nbsp;Quelle est l'action de l'École sur les destins individuels et sur l'évolution de la
+société&nbsp;?&nbsp;» — «&nbsp;comprendre l'évolution, depuis les années 1950, des principaux indicateurs mesurant
+l'accès à l'école et à l'enseignement supérieur (taux de scolarisation, taux d'accès à un diplôme ou à un type de
+formation) en distinguant les processus de massification et de démocratisation&nbsp;» (Éduscol).
+
+**Du programme au document.** Le programme demande une évolution depuis les années 1950&nbsp;; la figure donne une
+seule année, celle des bacheliers {{< acces-val "annee" >}}. Elle porte sur l'accès à un type de formation, pour les
+seuls bacheliers qui poursuivent leurs études&nbsp;: ceux qui ne s'inscrivent nulle part n'y figurent pas. Elle
+décrit des inscriptions observées, non des choix&nbsp;: une inscription dépend aussi de la série du baccalauréat, des
+candidatures et des admissions. «&nbsp;Université&nbsp;» comprend les IUT&nbsp;; les sections de technicien supérieur
+(STS) comprennent l'apprentissage. L'origine sociale est la catégorie socioprofessionnelle du parent, telle que la
+source la classe, sans jugement sur les personnes&nbsp;; elle est renseignée pour
+{{< acces-val "origine_renseignee" >}}&nbsp;% des inscrits.
+
+**Durée indicative**&nbsp;: 20 à 30&nbsp;minutes pour les questions 1 à 5&nbsp;; la question 6 est un prolongement.
+**Support**&nbsp;: la figure ci-dessous, construite pour cette activité à partir d'un tableau du service statistique du
+ministère de l'Enseignement supérieur (SIES).
+
+{{< figure-svg fichier="acces-superieur-origine" alt="Sept barres horizontales empilées à 100 %, une par catégorie socioprofessionnelle du parent puis l'ensemble : part des nouveaux bacheliers inscrits à l'université, en classes préparatoires, en sections de technicien supérieur et dans d'autres formations. Les valeurs sont dans le tableau qui suit la figure." >}}Source&nbsp;: MESRE-SIES, *État de l'enseignement supérieur, de la recherche et de l'innovation en France* {{< acces-val "edition" >}}. [Agrandir la figure](/img/acces-superieur-origine.png){{< /figure-svg >}}
+
+{{< acces-tableau >}}
+
+**Fiche élève**
+
+1. Relevez la part des nouveaux bacheliers inscrits en sections de technicien supérieur, puis en classes préparatoires, pour les enfants de cadres et pour les enfants d'ouvriers.
+2. Pour chacune de ces deux filières, calculez combien de fois l'inscription est plus fréquente dans une catégorie que dans l'autre.
+3. Quelle est la première destination des enfants d'ouvriers&nbsp;? Celle des cinq autres catégories&nbsp;?
+4. Pour l'université, puis pour les classes préparatoires, calculez l'écart entre la catégorie la plus représentée et la moins représentée, d'abord en points, puis en rapport (la plus grande part divisée par la plus petite). Les deux mesures donnent-elles la même image&nbsp;?
+5. Ce document permet-il d'affirmer que les élèves d'origines sociales différentes choisissent différemment&nbsp;? Justifiez, puis citez deux informations qu'il faudrait connaître pour répondre.
+6. *Prolongement.* Le programme distingue massification et démocratisation. Que faudrait-il ajouter à ce document pour parler de l'une et de l'autre&nbsp;? Quelles données permettraient de savoir si les écarts observés ici et ceux de l'activité suivante concernent les mêmes élèves&nbsp;?
+
+<details class="repli fiche__corrige"><summary>Corrigé pour l'enseignant</summary>
+
+1. Sections de technicien supérieur&nbsp;: {{< acces-val "cad_sts" >}}&nbsp;% des enfants de cadres, {{< acces-val "ouv_sts" >}}&nbsp;% des enfants d'ouvriers. Classes préparatoires&nbsp;: {{< acces-val "cad_cpge" >}}&nbsp;% et {{< acces-val "ouv_cpge" >}}&nbsp;%.
+2. L'inscription en STS est {{< acces-val "sts_ouv_sur_cad" >}}&nbsp;fois plus fréquente pour les enfants d'ouvriers&nbsp;; l'inscription en classes préparatoires, {{< acces-val "cpge_cad_sur_ouv" >}}&nbsp;fois plus fréquente pour les enfants de cadres.
+3. Les STS pour les enfants d'ouvriers ({{< acces-val "ouv_sts" >}}&nbsp;%, contre {{< acces-val "ouv_univ" >}}&nbsp;% à l'université)&nbsp;; l'université pour les cinq autres catégories, y compris les enfants de retraités et d'inactifs, pour qui les deux parts sont proches ({{< acces-val "ret_univ" >}}&nbsp;% et {{< acces-val "ret_sts" >}}&nbsp;%).
+4. Université&nbsp;: {{< acces-val "ecart_univ" >}}&nbsp;points d'écart, un rapport de 1 à {{< acces-val "rapport_univ" >}}. Classes préparatoires&nbsp;: {{< acces-val "ecart_cpge" >}}&nbsp;points, un rapport de 1 à {{< acces-val "rapport_cpge" >}}. En points, l'écart est plus faible pour les classes préparatoires&nbsp;; en rapport, il est bien plus fort. Une filière qui accueille peu d'élèves ne peut pas produire un grand écart en points&nbsp;: le rapport dit mieux ce qui sépare les catégories, l'écart en points dit mieux combien d'élèves sont concernés. Aucune des deux mesures n'est la bonne en soi.
+5. Non. Le document établit que les inscriptions diffèrent selon l'origine sociale&nbsp;; il n'observe ni les vœux, ni les admissions, ni les raisons. Une partie de l'écart tient à la série du baccalauréat, que ce tableau ne croise pas avec l'origine&nbsp;: {{< acces-val "cpge_bac_general" >}}&nbsp;% des nouveaux inscrits en classes préparatoires ont un baccalauréat général, contre {{< acces-val "sts_bac_general" >}}&nbsp;% en STS, où {{< acces-val "sts_bac_professionnel" >}}&nbsp;% ont un baccalauréat professionnel&nbsp;; et parmi les bacheliers généraux, {{< acces-val "bac_general_cadres" >}}&nbsp;% sont enfants de cadres et {{< acces-val "bac_general_ouvriers" >}}&nbsp;% enfants d'ouvriers, contre {{< acces-val "bac_professionnel_cadres" >}}&nbsp;% et {{< acces-val "bac_professionnel_ouvriers" >}}&nbsp;% parmi les bacheliers professionnels. L'origine sociale est donc associée à la filière d'inscription, et une partie de cette association passe par le parcours scolaire antérieur&nbsp;; ces tableaux ne permettent pas de dire quelle partie. Informations à connaître&nbsp;: la série et les résultats au baccalauréat, les vœux formulés, les propositions reçues, la distance aux formations, les ressources de la famille.
+6. Pour la massification, il faudrait la part d'une génération qui accède au baccalauréat puis à l'enseignement supérieur, à plusieurs dates. Pour la démocratisation, ce même tableau à plusieurs dates, pour voir si l'origine pèse moins qu'avant sur la filière suivie. Ici, une seule comparaison est possible&nbsp;: d'une année à la suivante, aucune valeur ne bouge de plus d'un point et demi ({{< acces-val "ouv_sts" >}}&nbsp;% puis {{< acces-val "temoin_ouv_sts" >}}&nbsp;% d'enfants d'ouvriers en STS, {{< acces-val "cad_cpge" >}}&nbsp;% puis {{< acces-val "temoin_cad_cpge" >}}&nbsp;% d'enfants de cadres en classes préparatoires), ce qui ne dit rien d'une évolution longue. Les deux activités de cette page ne suivent pas les mêmes élèves&nbsp;: celle-ci porte sur tous les bacheliers qui poursuivent, la suivante sur les seuls entrants en licence. Pour savoir si les écarts se cumulent au fil des parcours, il faudrait suivre les mêmes élèves, du baccalauréat aux années suivantes.
+
+</details>
+
+**Données**&nbsp;: [acces_superieur.csv](/acces_superieur.csv), une ligne par année, origine et filière.
+
+</section>
 
 <section class="fiche" id="fiche-licence">
 
@@ -89,7 +143,17 @@ tableaux du SIES.
 
 ### Méthode et sources {#methode}
 
-La figure est construite pour cette page à partir des tableaux nationaux
+**Après le bac.** La figure reprend le tableau 13.03 de *L'état de l'Enseignement supérieur, de la Recherche et de
+l'Innovation en France* {{< acces-val "edition" >}} (MESRE-SIES)&nbsp;: nouveaux bacheliers {{< acces-val "annee" >}}
+inscrits dans les différentes filières selon l'origine sociale, France métropolitaine et DROM. Les six catégories sont
+celles de la source, dans son ordre&nbsp;; les {{< acces-val "origine_non_renseignee" >}}&nbsp;% d'inscrits dont
+l'origine n'est pas renseignée ne sont pas répartis par la source et ne figurent pas. Les rapports et les écarts sont
+un calcul de cette page. L'édition {{< acces-val "edition_temoin" >}}, qui porte sur les bacheliers
+{{< acces-val "annee_temoin" >}}, sert de témoin&nbsp;; la série du baccalauréat par filière et par origine vient de la
+fiche 09 de l'édition {{< acces-val "edition" >}}. L'année retenue est celle de la cohorte de l'activité sur la
+licence. Pages consultées le 2&nbsp;octobre 2026.
+
+**Licence.** La figure est construite pour cette page à partir des tableaux nationaux
 qui accompagnent la {{< licence-val "note" >}} du SIES, «&nbsp;Parcours et réussite en licence&nbsp;» (feuille
 «&nbsp;Devenir cohorte {{< licence-val "cohorte" >}}&nbsp;»&nbsp;; {{< licence-val "inscrits" >}} néo-bacheliers,
 universités et établissements assimilés, France entière). L'origine sociale est celle du parent référent, que le SIES

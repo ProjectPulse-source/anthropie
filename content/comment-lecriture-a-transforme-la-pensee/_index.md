@@ -68,3 +68,5 @@ Cette page suit un seul fil. Le livre [*L'Odyssée des idées*](/livres/lodyssee
 - [*L'Odyssée des idées* — la fiche du livre](/livres/lodyssee-des-idees/) (250 escales, sept chemins, extrait).
 - [Quel livre de culture générale offrir&nbsp;?](/offrir-un-livre-de-culture-generale/) — si la traversée est pour quelqu'un d'autre.
 - [Qu'est-ce que la boucle anthropique&nbsp;?](/boucle-anthropique/) — ce que devient l'extériorisation cognitive quand elle sature.
+
+{{< consultation slug="lodyssee-des-idees" >}}
