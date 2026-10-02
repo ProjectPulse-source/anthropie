@@ -210,12 +210,23 @@ dans la feuille de route GEO. Exception au STOP accordée par l'auteur pour cett
    (arbitrage `PRO-20260930-210901`).
 
 6. **Exception — une activité peut porter sa propre figure** (auteur, 02/10/2026) quand aucune page de recherche n'a de
-   figure sur le sujet : activité « Après une première année de licence », section `#droit-a-l-erreur`. La page ne
+   figure sur le sujet : activité « Après une première année de licence », page `/enseignants/ecole-et-parcours/`. La page ne
    déclare pas `donnees:` pour autant ; la discipline du modèle de ressource vaut entière pour le jeu (générateur
    `scripts/generer_parcours_licence.py`, jetons `licence-val`, tableau `licence-tableau`, gardes de prose, témoins, JSON et CSV, SVG et PNG
    ensemble). Source sans API : tableurs du SIES archivés dans `scripts/sources_enseignants/` avec `SHA256SUMS`, que le
    générateur vérifie ; mise à jour annuelle à la main, en novembre (geste décrit en tête du générateur). La question de
-   l'auteur titre la section ; la fiche élève, qui s'imprime, garde un titre descriptif.
+   l'auteur titre le thème ; la fiche élève, qui s'imprime, garde un titre descriptif.
+7. **Une page par thème, reliées par la barre `enseignants-themes`** (auteur, 02/10/2026 ; arbitrage
+   `ENTRANTE_2026-10-02_Enseignants_Structure`). `/enseignants/` reste la page du thème dette : c'est l'adresse des
+   courriels et des quatre pages du dossier. Un thème nouveau reçoit sa page fille (`content/enseignants/<theme>/_index.md`,
+   une ligne dans le shortcode) si les deux déclencheurs de la règle « page propre » sont réunis ; une seule activité
+   complète suffit, aucune page ni catégorie vide. Navigation nommée par ce que cherche l'enseignant (« École et
+   parcours »), jamais par la formule de l'auteur, qui reste le titre. La barre réemploie les classes `dossier-dette*` ;
+   elle ne porte aucune date. **Une ancre publiée ne se retire pas** : `#droit-a-l-erreur` reste portée par la barre de
+   `/enseignants/` et renvoie à la page fille. Chaque thème a sa méthode et son encart d'exemplaire ; les façades
+   enseignants du guichet déclarent `facade: "enseignants"` (pas de bloc « Faire circuler »). L'encart d'un livre à
+   thèse dit que l'activité ne met pas cette thèse à l'épreuve. Avant publication : quatre impressions de fiche,
+   arrivée par chaque ancre (titre visible sous les éléments collants), 390 px.
 
 ## Règle de surface — « la présence vient du dépôt » (actée 2026-08-11)
 

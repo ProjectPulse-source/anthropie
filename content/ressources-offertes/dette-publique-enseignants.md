@@ -7,6 +7,7 @@ livre: "dette-publique-qui-paie-vraiment"
 # demande). Aucun composant nouveau, aucune donnée collectée. Liée publiquement depuis /enseignants/#exemplaire,
 # placée après les activités (le livre n'est jamais la contrepartie d'une activité).
 draft: false
+facade: "enseignants"   # pas de bloc « Faire circuler ce livre » (gabarit single.html)
 noindex: true
 og_title: "Dette publique : qui paie vraiment ? — exemplaire de consultation pour les enseignants"
 og_description: "Un exemplaire numérique de consultation, sans contrepartie, pour prolonger les activités de SES sur la dette publique."

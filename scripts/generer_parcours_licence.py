@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""generer_parcours_licence.py -- activité de SES « Avons-nous tous le même droit à l'erreur ? » (/enseignants/).
+"""generer_parcours_licence.py -- activité de SES « Avons-nous tous le même droit à l'erreur ? » (/enseignants/ecole-et-parcours/).
 
 Jeu : devenir, un an après, des néo-bacheliers inscrits en première année de licence, selon l'origine sociale.
 Source : MESRE-SIES, Note Flash « Parcours et réussite en licence », tableaux nationaux, feuille « Devenir cohorte N »
@@ -50,7 +50,7 @@ OUT_STATIC = ROOT / "static" / "parcours_licence.json"
 OUT_CSV = ROOT / "static" / "parcours_licence.csv"
 OUT_IMG = ROOT / "static" / "img"
 FIGURE = "parcours-licence-devenir"
-PAGE_URL = "stephane-lalut.com/enseignants/"
+PAGE_URL = "stephane-lalut.com/enseignants/ecole-et-parcours/"
 
 # cohorte (année d'entrée en L1) -> (tableur archivé, feuille, référence de la note)
 COHORTES = {

@@ -23,6 +23,8 @@
     {{/* Handled by layouts/livres/list.html */}}
   {{ else if eq .Section "publications" }}
     {{/* Handled by layouts/publications/list.html */}}
+  {{ else if eq .Section "enseignants" }}
+    {{/* Une page par thème, reliées par la barre `enseignants-themes` : la page d'un thème ne liste pas les autres. */}}
   {{ else }}
     {{ range .Pages }}
       <article style="margin-bottom: 2rem;">

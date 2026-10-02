@@ -86,7 +86,10 @@ Un compte Amazon.fr est nécessaire. Les liens sont individuels, à usage unique
     </noscript>
   </section>
 
-  {{/* Transmission — la circulation est le cœur du dispositif (registre lecteur) */}}
+  {{/* Transmission — la circulation est le cœur du dispositif (registre lecteur).
+       ABSENTE des façades enseignants (`facade: enseignants`, arbitrage ENTRANTE_2026-10-02_Enseignants_Structure, E3) :
+       l'exemplaire de consultation y est proposé sans aucune sollicitation, et « faites circuler » en est une. */}}
+  {{ if ne $.Params.facade "enseignants" }}
   <section class="ressources-transmit ressources-transmit--single">
     <div class="ressources-transmit__inner">
       <h2 class="ressources-kicker">Faire circuler ce livre</h2>
@@ -97,6 +100,7 @@ Un compte Amazon.fr est nécessaire. Les liens sont individuels, à usage unique
       {{ partial "ressources-partage.html" $partage }}
     </div>
   </section>
+  {{ end }}
 
   {{/* Confidentialité — même information que la page mère, condensée */}}
   <section class="ressources-legal ressources-legal--single">

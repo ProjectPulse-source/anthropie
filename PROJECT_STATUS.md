@@ -53,6 +53,30 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-02 — Couche enseignants : une page par thème, exemplaire de *La Société du premier coup*, POUSSÉ
+
+Décisions de l'auteur après contre-expertise (`D:\PRO\.claude\external-audits\ARBITRATIONS\ENTRANTE_2026-10-02_Enseignants_Structure_arbitrage.md`) :
+structure C, navigation « École et parcours », mise en ligne au plus tard le 6/10, rien du 8 au 13/10.
+
+- `/enseignants/` redevient la page du thème dette (titre d'origine, accordé à la campagne des 180 lycées) ; l'activité
+  licence passe à `/enseignants/ecole-et-parcours/` (titre : la question de l'auteur) avec sa méthode et son encart.
+- Shortcode `enseignants-themes` (classes `dossier-dette*`, aucune feuille nouvelle) ; `#droit-a-l-erreur`,
+  `#terminale-licence` et `#fiche-licence` renvoient à la page fille, paramètres conservés ; sans script, l'ancre mène
+  au lien de la barre. `_default/list.html` : la section enseignants ne liste pas ses pages filles.
+- Façade `ressources-offertes/premier-coup-enseignants.md` ; `facade: "enseignants"` retire « Faire circuler ce
+  livre » des DEUX façades (celle du livre sur la dette comprise). Stock relevé au guichet le 02/10 : disponible
+  (booléen, volume inconnu).
+- `_enseignants.scss` : marge d'arrivée par ancre sous les éléments collants. Figure : adresse du cartouche mise à jour.
+- **Mesuré** : build `$?` = 0, `check-all --ci` à 0, audit des liens à 0 (111 pages) ; 18 arrivées par ancre (9 ancres,
+  1 280 et 390 px) : titre à 192 px, éléments collants à 178 px ; redirections avec et sans paramètre ; retour arrière ;
+  impressions : 1, 1, 1 et 2 pages, ni barre ni encart ; index `/ressources/` : deux encarts.
+- **Non fait** : carte de partage propre à la page fille (elle emploie le PNG de la figure) ; volume du stock.
+- **Chemins, pour le `git add`** (l'arbre porte le travail d'autres sessions) : `content/enseignants/`,
+  `content/ressources-offertes/premier-coup-enseignants.md`, `content/ressources-offertes/dette-publique-enseignants.md`,
+  `layouts/shortcodes/enseignants-themes.html`, `layouts/_default/list.html`, `layouts/ressources-offertes/single.html`,
+  `assets/scss/_enseignants.scss`, `scripts/generer_parcours_licence.py`, `data/parcours_licence.json`,
+  `static/parcours_licence.json`, `static/img/parcours-licence-devenir.svg` et `.png`, `CLAUDE.md` ; cette entrée seule.
+
 ### 2026-10-02 — `/enseignants/` : quatrième activité de SES (chapitre École), contre-expertise arbitrée, POUSSÉ
 
 Section « Avons-nous tous le même droit à l'erreur ? » (`#droit-a-l-erreur`), fiche « Après une première année de

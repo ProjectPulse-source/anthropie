@@ -1,0 +1,58 @@
+{{- /* enseignants-themes.html — barre des thèmes de la couche enseignants : une page par thème, reliées par des liens
+       ordinaires (auteur, 02/10/2026 ; arbitrage ENTRANTE_2026-10-02_Enseignants_Structure).
+
+       {{< enseignants-themes actif="dette" >}}   /enseignants/                    Dette publique
+       {{< enseignants-themes actif="ecole" >}}   /enseignants/ecole-et-parcours/  École et parcours
+
+       MÊME ORGANE VISUEL que la barre du dossier dette : les classes `dossier-dette*` (_reutiliser.scss) portent déjà
+       le maintien sous l'en-tête, les libellés courts sur téléphone et les règles d'impression (_print.scss,
+       _enseignants.scss). Aucune feuille de style nouvelle. Aucune date dans cette barre : une date de données n'est
+       pas une date de relecture, et les deux thèmes n'ont pas le même cycle.
+
+       ANCRE CONSERVÉE (verrou : aucun lien en circulation ne mène ailleurs qu'au thème annoncé). `#droit-a-l-erreur`
+       a été publiée quelques heures sur /enseignants/ ; un fragment n'est pas transmis au serveur, donc aucune
+       redirection serveur n'est possible. Sur la page dette, l'identifiant est porté par le lien vers le second
+       thème, et le script envoie vers la nouvelle page en gardant les paramètres d'origine (?src=…). Sans script,
+       l'ancre mène au lien lui-même.
+       CONDITION DE MORT de ce renvoi : jamais — une ancre publiée ne se retire pas.
+
+       Échoue bruyamment sur un thème inconnu ou une page cible absente. */ -}}
+{{- $actif := .Get "actif" -}}
+{{- $themes := slice
+    (dict "cle" "dette" "page" "/enseignants" "long" "Dette publique" "court" "Dette" "role" "Première et Terminale" "id" "")
+    (dict "cle" "ecole" "page" "/enseignants/ecole-et-parcours" "long" "École et parcours" "court" "École" "role" "Terminale" "id" "droit-a-l-erreur") -}}
+{{- $connus := slice -}}
+{{- range $themes }}{{ $connus = $connus | append .cle }}{{ end -}}
+{{- if not (in $connus $actif) -}}{{ errorf "enseignants-themes: theme \"%s\" inconnu (attendu %s) dans %s" $actif (delimit $connus ", ") .Page.File.Path }}{{- end -}}
+<nav class="dossier-dette dossier-dette--enseignants" aria-label="Activités de SES, par thème">
+  <div class="dossier-dette__barre">
+    <span class="dossier-dette__titre">Activités de SES</span>
+    <ol class="dossier-dette__volets">
+      {{- range $i, $t := $themes }}
+      {{- $p := site.GetPage $t.page -}}
+      {{- if not $p }}{{ errorf "enseignants-themes: page %s introuvable" $t.page }}{{ end -}}
+      {{- if eq $t.cle $actif }}
+      <li class="dossier-dette__volet is-actif" aria-current="page">
+        <span class="dossier-dette__onglet"><b><span class="dossier-dette__long">{{ $t.long }}</span><span class="dossier-dette__court">{{ $t.court }}</span></b><span class="dossier-dette__role">{{ $t.role }}</span></span>
+      </li>
+      {{- else }}
+      <li class="dossier-dette__volet">
+        <a class="dossier-dette__onglet"{{ with $t.id }} id="{{ . }}"{{ end }} href="{{ $p.RelPermalink }}"><b><span class="dossier-dette__long">{{ $t.long }}</span><span class="dossier-dette__court">{{ $t.court }}</span></b><span class="dossier-dette__role">{{ $t.role }}</span></a>
+      </li>
+      {{- end }}
+      {{- end }}
+    </ol>
+  </div>
+</nav>
+{{- if eq $actif "dette" }}
+{{- $cible := (site.GetPage "/enseignants/ecole-et-parcours").RelPermalink }}
+<script>
+// Ancres de l'activité « licence », publiées le 02/10/2026 sur cette page, désormais sur la page du second thème.
+(function () {
+  var a = { "#droit-a-l-erreur": "", "#terminale-licence": "#terminale-licence", "#fiche-licence": "#fiche-licence" };
+  if (Object.prototype.hasOwnProperty.call(a, location.hash)) {
+    location.replace({{ $cible }} + location.search + a[location.hash]);
+  }
+})();
+</script>
+{{- end }}

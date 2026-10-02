@@ -7,6 +7,11 @@
 .fiche__actions { margin: 0 0 1rem; }
 .fiche ol { padding-left: 1.4rem; }
 
+// Arrivée par ancre sous l'en-tête ET la barre des thèmes, tous deux collants (mesuré le 02/10/2026 : 178 px à
+// 1 280 px, 177 px à 390 px ; sans cette marge le titre visé se posait à 0 px, donc dessous).
+.dossier-dette--enseignants ~ [id],
+.dossier-dette--enseignants ~ * [id] { scroll-margin-top: 12rem; }
+
 @media print {
   // Page entière : chaque fiche commence une page, corrigés compris.
   .fiche { break-before: page; border-left: 0; padding-left: 0; }
