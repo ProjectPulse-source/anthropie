@@ -395,11 +395,22 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
   font-family: var(--font-sans); font-size: var(--fs-small); margin: 0;
 }
 
-// Exemplaire de consultation (02/10/2026) : une ligne sous la fiche, subordonnée aux boutons d'achat.
+// Exemplaire de consultation (02/10/2026) : bandeau en pied du bloc, sur toute sa largeur. D'abord une ligne grise
+// sous les boutons d'achat ; l'auteur l'a jugée trop peu visible le soir même. Publics en surtitre, offre en texte
+// plein, bouton au contour : visible, et second derrière le bouton d'achat, qui reste le seul bouton plein.
 .appel-livre__consultation {
-  margin: 0.9rem 0 0; padding-top: 0.7rem; border-top: 1px solid var(--color-rule-soft);
-  font-family: var(--font-sans); font-size: var(--fs-small); color: var(--color-text-subtle);
+  flex: 1 1 100%; display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between;
+  margin: 0 -26px -26px; padding: 16px 26px;
+  background: var(--color-accent-faint); border-top: 0.5px solid var(--color-rule-strong);
+  font-family: var(--font-sans);
 }
+.appel-livre__consultation-texte { flex: 1 1 300px; }
+.appel-livre__consultation-publics {
+  margin: 0 0 4px; font-size: var(--fs-tiny); letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--color-text-subtle);
+}
+.appel-livre__consultation-offre { margin: 0; font-size: 15px; color: var(--color-text); }
+.appel-livre__consultation-btn { flex: 0 0 auto; background: var(--color-bg-elevated); white-space: nowrap; }
 @media print { .appel-livre__consultation { display: none !important; } }
 
 // ----- Figure du ciseau (page /cout-de-la-dette-publique/) -----

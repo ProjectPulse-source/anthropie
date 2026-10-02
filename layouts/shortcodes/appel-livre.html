@@ -106,8 +106,9 @@
       {{- with $kindle }}<a class="appel-livre__btn" href="{{ . }}">{{ $T.kindle }}{{ with $prixK }}&nbsp;— {{ . | safeHTML }}{{ end }}</a>{{ end }}
     </p>
     <p class="appel-livre__fiche"><a href="{{ $livre.RelPermalink }}"{{ $hl | safeHTMLAttr }}>{{ $T.fiche | safeHTML }}</a>{{ with $mention }}<span class="appel-livre__langue">{{ . }}</span>{{ end }}</p>
-    {{- /* EXEMPLAIRE DE CONSULTATION (auteur, 02/10/2026 : « la généralisation au niveau des ressources »). Une ligne
-           sous le bloc d'achat, vers la page du livre au guichet /ressources-offertes/ : même guichet, même stock,
+  </div>
+    {{- /* EXEMPLAIRE DE CONSULTATION (auteur, 02/10/2026 : « la généralisation au niveau des ressources »). Un bandeau
+           en pied du bloc d'achat, vers la page du livre au guichet /ressources-offertes/ : même guichet, même stock,
            aucune donnée collectée, aucun contrôle d'éligibilité. Publics nommés par l'auteur ; la formule est
            déclarative. Un seul organe pour toutes les pages qui appellent un livre : rien à recopier par page.
            Conditions : page française (le guichet attribue des exemplaires Amazon.fr), livre doté d'une page au
@@ -116,7 +117,12 @@
     {{- $guichet := site.GetPage (printf "/ressources-offertes/%s" $slug) -}}
     {{- if and (not $en) $guichet $p.promo_slug (ne (.Get "consultation") "non") }}
     {{- $origine := path.Base (path.Dir .Page.File.Path) -}}
-    <p class="appel-livre__consultation">{{ partial "consultation-publics.html" . | strings.TrimSpace }}&nbsp;: un exemplaire numérique de consultation est disponible, sans contrepartie, dans la limite du stock. <a href="{{ $guichet.RelPermalink }}?src=consultation-{{ $origine }}">Demander un exemplaire&nbsp;→</a></p>
+    <div class="appel-livre__consultation">
+      <div class="appel-livre__consultation-texte">
+        <p class="appel-livre__consultation-publics">{{ partial "consultation-publics.html" . | strings.TrimSpace }}</p>
+        <p class="appel-livre__consultation-offre"><strong>Exemplaire numérique de consultation</strong>, sans contrepartie, dans la limite du stock.</p>
+      </div>
+      <a class="appel-livre__btn appel-livre__consultation-btn" href="{{ $guichet.RelPermalink }}?src=consultation-{{ $origine }}">Demander un exemplaire&nbsp;→</a>
+    </div>
     {{- end }}
-  </div>
 </aside>
