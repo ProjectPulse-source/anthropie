@@ -11,6 +11,8 @@
   // Page entière : chaque fiche commence une page, corrigés compris.
   .fiche { break-before: page; border-left: 0; padding-left: 0; }
   .fiche__actions { display: none !important; }
+  // Le tableau replié des valeurs ne sert qu'à l'écran : la figure imprimée porte ses valeurs.
+  .licence-tableau { display: none !important; }
 
   // Bouton « Imprimer la fiche élève » : une seule fiche, sans corrigé ni le reste de la page.
   body.imprime-une-fiche .home-section > *:not(.imprime-cible) { display: none !important; }
@@ -19,6 +21,20 @@
   body.imprime-une-fiche .site-header,
   body.imprime-une-fiche .dossier-dette,
   body.imprime-une-fiche .site-footer { display: none !important; }
+
+  // Feuille élève resserrée (02/10/2026, mesuré : la fiche « licence » sortait sur trois pages, la première à moitié
+  // vide, la figure rejetée en page 2). Toute la largeur de la feuille, corps réduit, aucun blanc d'écran en tête ;
+  // le lien « Agrandir la figure » n'a pas de sens sur papier.
+  body.imprime-une-fiche main,
+  body.imprime-une-fiche .home-section,
+  body.imprime-une-fiche .content-reading { max-width: none !important; width: auto !important; margin: 0 !important; padding: 0 !important; }
+  body.imprime-une-fiche .imprime-cible { margin: 0 !important; padding: 0 !important; font-size: 10pt; line-height: 1.38; }
+  body.imprime-une-fiche .imprime-cible h3 { margin: 0 0 6pt !important; padding: 0 !important; }
+  body.imprime-une-fiche .imprime-cible p,
+  body.imprime-une-fiche .imprime-cible li { margin: 0 0 5pt !important; font-size: 10pt; line-height: 1.38; max-width: none !important; }
+  body.imprime-une-fiche .imprime-cible .figure-ciseau { margin: 8pt 0 !important; break-inside: avoid; }
+  body.imprime-une-fiche .imprime-cible .figure-ciseau img { max-width: 100% !important; }
+  body.imprime-une-fiche .imprime-cible .figure-ciseau figcaption a { display: none !important; }
 }
 
 // L'offre du livre n'apparaît sur aucune impression (avis « Enseignants », 30/09, § 9).

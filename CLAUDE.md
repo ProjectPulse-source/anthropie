@@ -209,6 +209,14 @@ dans la feuille de route GEO. Exception au STOP accordée par l'auteur pour cett
    que si une exigence externe ou un abus durable l'impose ; en cas d'abus, la marche suivante est le lien sur invitation
    (arbitrage `PRO-20260930-210901`).
 
+6. **Exception — une activité peut porter sa propre figure** (auteur, 02/10/2026) quand aucune page de recherche n'a de
+   figure sur le sujet : activité « Après une première année de licence », section `#droit-a-l-erreur`. La page ne
+   déclare pas `donnees:` pour autant ; la discipline du modèle de ressource vaut entière pour le jeu (générateur
+   `scripts/generer_parcours_licence.py`, jetons `licence-val`, tableau `licence-tableau`, gardes de prose, témoins, JSON et CSV, SVG et PNG
+   ensemble). Source sans API : tableurs du SIES archivés dans `scripts/sources_enseignants/` avec `SHA256SUMS`, que le
+   générateur vérifie ; mise à jour annuelle à la main, en novembre (geste décrit en tête du générateur). La question de
+   l'auteur titre la section ; la fiche élève, qui s'imprime, garde un titre descriptif.
+
 ## Règle de surface — « la présence vient du dépôt » (actée 2026-08-11)
 
 Défaut récurrent, six occurrences en deux jours, toujours la même forme : **une donnée

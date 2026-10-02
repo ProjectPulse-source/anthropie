@@ -1,0 +1,73 @@
+﻿cohorte,origine_sociale,devenir,effectif,inscrits,taux_pct_inscrits,part_pct_non_passants
+2021,Très favorisée,passage,31720,60297,52.6,
+2021,Très favorisée,redoublement,12758,60297,21.2,44.6
+2021,Très favorisée,reorientation,7901,60297,13.1,27.6
+2021,Très favorisée,sortie,7918,60297,13.1,27.7
+2021,Favorisée,passage,13241,28938,45.8,
+2021,Favorisée,redoublement,7118,28938,24.6,45.3
+2021,Favorisée,reorientation,3838,28938,13.3,24.5
+2021,Favorisée,sortie,4741,28938,16.4,30.2
+2021,Assez défavorisée,passage,23966,56517,42.4,
+2021,Assez défavorisée,redoublement,14842,56517,26.3,45.6
+2021,Assez défavorisée,reorientation,7565,56517,13.4,23.2
+2021,Assez défavorisée,sortie,10144,56517,17.9,31.2
+2021,Défavorisée,passage,15312,43459,35.2,
+2021,Défavorisée,redoublement,13949,43459,32.1,49.6
+2021,Défavorisée,reorientation,5761,43459,13.3,20.5
+2021,Défavorisée,sortie,8437,43459,19.4,30.0
+2021,Non-réponse,passage,2432,7779,31.3,
+2021,Non-réponse,redoublement,2492,7779,32.0,46.6
+2021,Non-réponse,reorientation,1157,7779,14.9,21.6
+2021,Non-réponse,sortie,1698,7779,21.8,31.8
+2021,Ensemble,passage,86671,196990,44.0,
+2021,Ensemble,redoublement,51159,196990,26.0,46.4
+2021,Ensemble,reorientation,26222,196990,13.3,23.8
+2021,Ensemble,sortie,32938,196990,16.7,29.9
+2022,Très favorisée,passage,33558,59770,56.1,
+2022,Très favorisée,redoublement,12229,59770,20.5,46.7
+2022,Très favorisée,reorientation,6642,59770,11.1,25.3
+2022,Très favorisée,sortie,7234,59770,12.1,27.6
+2022,Favorisée,passage,13404,26991,49.7,
+2022,Favorisée,redoublement,6561,26991,24.3,48.3
+2022,Favorisée,reorientation,2974,26991,11.0,21.9
+2022,Favorisée,sortie,4035,26991,14.9,29.7
+2022,Assez défavorisée,passage,24109,53083,45.4,
+2022,Assez défavorisée,redoublement,13936,53083,26.3,48.1
+2022,Assez défavorisée,reorientation,6154,53083,11.6,21.2
+2022,Assez défavorisée,sortie,8851,53083,16.7,30.5
+2022,Défavorisée,passage,15330,38882,39.4,
+2022,Défavorisée,redoublement,12161,38882,31.3,51.6
+2022,Défavorisée,reorientation,4446,38882,11.4,18.9
+2022,Défavorisée,sortie,6925,38882,17.8,29.4
+2022,Non-réponse,passage,2348,7037,33.4,
+2022,Non-réponse,redoublement,2253,7037,32.0,48.0
+2022,Non-réponse,reorientation,994,7037,14.1,21.2
+2022,Non-réponse,sortie,1438,7037,20.4,30.7
+2022,Ensemble,passage,88749,185763,47.8,
+2022,Ensemble,redoublement,47140,185763,25.4,48.6
+2022,Ensemble,reorientation,21210,185763,11.4,21.9
+2022,Ensemble,sortie,28483,185763,15.3,29.4
+2023,Très favorisée,passage,36500,62982,58.0,
+2023,Très favorisée,redoublement,12755,62982,20.3,48.2
+2023,Très favorisée,reorientation,6566,62982,10.4,24.8
+2023,Très favorisée,sortie,7158,62982,11.4,27.0
+2023,Favorisée,passage,13811,27340,50.5,
+2023,Favorisée,redoublement,6594,27340,24.1,48.7
+2023,Favorisée,reorientation,2973,27340,10.9,22.0
+2023,Favorisée,sortie,3961,27340,14.5,29.3
+2023,Assez défavorisée,passage,24985,53523,46.7,
+2023,Assez défavorisée,redoublement,14051,53523,26.3,49.2
+2023,Assez défavorisée,reorientation,5862,53523,11.0,20.5
+2023,Assez défavorisée,sortie,8621,53523,16.1,30.2
+2023,Défavorisée,passage,14907,37555,39.7,
+2023,Défavorisée,redoublement,12101,37555,32.2,53.4
+2023,Défavorisée,reorientation,3998,37555,10.6,17.7
+2023,Défavorisée,sortie,6548,37555,17.4,28.9
+2023,Non-réponse,passage,2443,7126,34.3,
+2023,Non-réponse,redoublement,2447,7126,34.3,52.3
+2023,Non-réponse,reorientation,886,7126,12.4,18.9
+2023,Non-réponse,sortie,1350,7126,18.9,28.8
+2023,Ensemble,passage,92646,188526,49.1,
+2023,Ensemble,redoublement,47948,188526,25.4,50.0
+2023,Ensemble,reorientation,20285,188526,10.8,21.2
+2023,Ensemble,sortie,27638,188526,14.7,28.8

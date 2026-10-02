@@ -1,0 +1,14 @@
+{{- /* {{< licence-val "tf_passage" >}} — une valeur du bloc affichage de data/parcours_licence.json (activité de SES
+       « Avons-nous tous le même droit à l'erreur ? », scripts/generer_parcours_licence.py). Même contrat que dyn-val :
+       clé inconnue ou données absentes = échec de build. Français seulement, comme la page /enseignants/. */ -}}
+{{- $k := .Get 0 -}}
+{{- $a := "" -}}
+{{- with site.Data.parcours_licence -}}{{- $a = .affichage -}}{{- end -}}
+{{- if not $a -}}
+  {{- errorf "licence-val: data/parcours_licence.json absent ou sans bloc affichage (page %s)" .Page.RelPermalink -}}
+{{- else -}}
+  {{- $v := index $a $k -}}
+  {{- if not $v -}}
+    {{- errorf "licence-val: cle %q inconnue du bloc affichage (page %s)" $k .Page.RelPermalink -}}
+  {{- else -}}{{- $v -}}{{- end -}}
+{{- end -}}

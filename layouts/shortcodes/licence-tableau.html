@@ -1,0 +1,29 @@
+{{- /* {{< licence-tableau >}} — les valeurs de la figure « parcours-licence-devenir » en tableau, repliées sous elle.
+       Motif (contre-expertise du 02/10/2026, M1) : à 390 px la figure mesure 267 px de large, et son texte alternatif
+       décrit les tendances sans donner les valeurs dont les questions ont besoin. Mêmes jetons que licence-val :
+       clé absente = échec de build. La classe dette-monde-table est celle des tableaux de données du site : elle
+       neutralise les règles globales `main table` et défile dans .table-scroll sur téléphone. */ -}}
+{{- $a := "" -}}
+{{- with site.Data.parcours_licence -}}{{- $a = .affichage -}}{{- end -}}
+{{- if not $a -}}{{- errorf "licence-tableau: data/parcours_licence.json absent ou sans bloc affichage (page %s)" .Page.RelPermalink -}}{{- end -}}
+{{- $lignes := slice (slice "tf" "Très favorisée") (slice "f" "Favorisée") (slice "ad" "Assez défavorisée") (slice "d" "Défavorisée") (slice "ens" "Ensemble") -}}
+{{- $cols := slice "passage" "redoublement" "reorientation" "sortie" -}}
+<details class="repli licence-tableau"><summary>Les valeurs de la figure en tableau</summary>
+<p>Bacheliers {{ index $a "cohorte" }} inscrits en première année de licence : situation à la rentrée {{ index $a "annee_devenir" }}, en&nbsp;% des inscrits.</p>
+<div class="table-scroll">
+<table class="dette-monde-table">
+<thead><tr><th scope="col">Origine sociale</th><th scope="col">Passés en 2ᵉ année</th><th scope="col">Recommencent une 1ʳᵉ année</th><th scope="col">Réorientés hors licence</th><th scope="col">Non retrouvés</th></tr></thead>
+<tbody>
+{{- range $lignes }}
+{{- $cle := index . 0 }}
+<tr><th scope="row">{{ index . 1 }}</th>
+{{- range $cols }}
+{{- $v := index $a (printf "%s_%s" $cle .) }}
+{{- if not $v }}{{ errorf "licence-tableau: cle %s_%s absente du bloc affichage" $cle . }}{{ end -}}
+<td>{{ $v }}</td>
+{{- end }}</tr>
+{{- end }}
+</tbody>
+</table>
+</div>
+</details>

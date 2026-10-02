@@ -53,6 +53,35 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-02 — `/enseignants/` : quatrième activité de SES (chapitre École), contre-expertise arbitrée, POUSSÉ
+
+Section « Avons-nous tous le même droit à l'erreur ? » (`#droit-a-l-erreur`), fiche « Après une première année de
+licence : les mêmes suites pour tous ? » (`#terminale-licence`). Décisions de l'auteur du jour : figure propre à la
+page, question en titre de section et fiche descriptive, titre de page élargi, construction sur la cohorte 2023,
+exception au gel étendue à cette activité.
+
+- **Générateur** `scripts/generer_parcours_licence.py` : lit trois tableurs du SIES archivés dans
+  `scripts/sources_enseignants/` (empreintes vérifiées), trois témoins (taux publiés recalculés, conservation du
+  périmètre, résidu des quatre devenirs), quatorze gardes de prose. Sorties : `data/` et `static/parcours_licence.json`,
+  `static/parcours_licence.csv`, `static/img/parcours-licence-devenir.svg` et `.png`. Shortcode `licence-val`.
+- **Mutation rejouée** : tableur modifié sans toucher l'empreinte, arrêt sur l'empreinte ; empreinte mise à jour, arrêt
+  sur trois gardes de prose ; pièces restaurées, `sha256sum -c` à 0 écart.
+- **Mesuré** : build de production `$?` = 0, aucun jeton non résolu, JSON-LD valide ; `check-all --ci` à 0 ;
+  `audit-liens-build.py` à 0 sur le build neuf ; 390 px sans débordement ; impression de la fiche seule : corrigé,
+  autres fiches et encart du livre absents, deux pages A4.
+- **Contre-expertise arbitrée le même jour** (`D:\PRO\.claude\external-audits\ARBITRATIONS\ENTRANTE_2026-10-02_Activite_SES_Licence_arbitrage.md`) :
+  « publier après corrections », appliquées. Corrigés 4, 5 et 6 réécrits ; figure « Non retrouvés », définitions au
+  cartouche ; shortcode `licence-tableau` ; `_enseignants.scss` : impression d'une fiche sur toute la largeur (licence
+  2 pages, les trois autres 1 page, mesuré) ; gardes ramenées à treize (deux sans qualificatif à garder retirées, une
+  remplacée) ; ressource d'accompagnement Éduscol archivée. Contrôles rejoués à 0.
+- **Non fait** : relecture par un enseignant ; impression sur papier et sous Firefox.
+- **Mise à jour** : édition du SIES de novembre 2026, à la main (pas de workflow possible : ni API ni adresse stable).
+- **Chemins de l'activité, pour le `git add`** (l'arbre porte aussi le travail non commité d'une autre session) :
+  `content/enseignants/_index.md`, `layouts/shortcodes/licence-val.html`, `scripts/generer_parcours_licence.py`,
+  `scripts/sources_enseignants/`, `data/parcours_licence.json`, `static/parcours_licence.json`,
+  `static/parcours_licence.csv`, `static/img/parcours-licence-devenir.svg`, `static/img/parcours-licence-devenir.png`,
+  `layouts/shortcodes/licence-tableau.html`, `assets/scss/_enseignants.scss`, `CLAUDE.md` ; dans `PROJECT_STATUS.md`, cette entrée seule.
+
 ### 2026-10-01 — Page `/a-propos/` accordée (variante A) et trois corrections de contenu, POUSSÉ
 
 Les deux murs (livres avec leur ligne d'accroche, presse avec une tuile par texte) restent tels quels. En-têtes de

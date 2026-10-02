@@ -1,0 +1,135 @@
+Le cursus Licence :
+
+La Licence inclut la Licence LMD et la Licence Professionnelle (LP) en troisième année.
+ 
+L1 = première année de la Licence 
+L2 = deuxième année de la Licence
+L3 = troisième année de la Licence 
+LP = Licence Professionnelle
+
+Discipline agrégée :
+  
+La discipline agrégée est la discipline d'inscription en L1 ventilée en 5 modalités :
+1) Droit, Sciences Politiques
+2) Sciences Economiques, Gestion, Administration Economique et Sociale (AES)
+3) Arts, Lettres, Langues, Sciences Humaines et Sociales (ALL, SHS)
+4) Sciences-Santé
+5) Sciences et Techniques des Activités Physiques et Sportives (STAPS)
+
+Discipline détaillée :
+  
+La discipline détaillée est la discipline d'inscription en L1 ventilée en 10 modalités :
+1) Droit, Sciences Politiques
+2) Sciences Economiques, Gestion
+3) Administration Economique et Sociale 
+4) Arts, Lettres
+5) Langues
+6) Sciences Humaines et Sociales (hors Psychologie)
+7) Psychologie
+8) Sciences et Techniques des Activités Physiques et Sportives
+9) Sciences fondamentales et applications
+10) Sciences et vie de la terre
+
+Diagrammes nationaux : Devenir de la cohorte de bacheliers 2020 inscrits pour la première fois en L1 en 2020
+
+Le champ est constitué de tous les néo-bacheliers 2020 inscrits pour la première fois en L1 l’année 2020/2021. 
+En sont exclus les étudiants ayant pris une inscription parallèle en STS, DUT ou CPGE ou ayant obtenu le diplôme de Licence à l’issue de la première année.
+
+Le diagramme 1 présente la situation d'inscription à chaque rentrée (de la rentrée 2020 où 100 % des néo-bacheliers 2020 sont en L1 jusqu'à la rentrée 2024) en termes de formation et de niveau dans la formation (L1, BTS2, BUT3, etc...). 
+Le diagramme 2 présente la situation d'inscription à chaque rentrée (de la rentrée 2020 où 100 % des néo-bacheliers 2020 sont en L1 jusqu'à la rentrée 2024) en terme de niveau global (bac +1, bac +2, etc...).
+Le diagramme 3 présente la situation de diplomation à chaque session (de la session 2020 où 100 % des néo-bacheliers 2020 sont, au plus, titulaires du baccalauréat jusqu'à la session 2024) en terme de plus haut diplôme détenu (BTS, autres bac +2, LG, etc...).
+
+Les sortants ne sont, en général, plus étudiants mais une faible part d’entre eux peuvent être inscrits soit en France dans une formation pour laquelle la décomposition individuelle n’est pas collectée, soit à l’étranger.
+
+Réussite en licence en 3 ou 4 ans de tous les néo-bacheliers 2020 inscrits pour la première fois en L1 à la rentrée universitaire 2020 :  
+ 
+Le champ des indicateurs est constitué de tous les néo-bacheliers 2020 inscrits pour la première fois en L1 à la rentrée 2020. 
+En sont exclus les étudiants ayant pris une inscription parallèle en STS, DUT ou CPGE ou ayant obtenu le diplôme de Licence à l’issue de la première année.
+
+Pour les inscrits en L1 de ces deux premiers champs, des taux de réussite en Licence à 3 ans, à 4 ans, et à 3 ou 4 ans, sont calculés selon les caractéristiques suivantes :
+- sexe (2 modalités : Homme, Femme)
+- âge au baccalauréat (3 modalités : à l’heure ou en avance, en retard d’un an, en retard de plus d’un an)
+- origine sociale (5 modalités : très favorisée (cadres, enseignants…), favorisée (professions intermédiaires), assez défavorisée (employés…), défavorisée (ouvriers…), non réponse)
+- série du baccalauréat (6 modalités : Littéraire, Economique, Scientifique, Technologique STMG, Autre technologique, Professionnel)
+- mention obtenue au baccalauréat (6 modalités : Très bien, Bien, Assez bien, Passable au premier groupe, Passable au deuxième groupe, Inconnue)
+
+Un sous-champ présente la réussite en 3 ou 4 ans de tous les néo-bacheliers 2020 inscrits pour la première fois en L1 l’année 2020/2021 selon le statut boursier. 
+Sont exclus de ce dernier sous-champ la Nouvelle-Calédonie et la Polynésie française.
+
+Un sous-champ est constitué des néo-bacheliers 2020 inscrits pour la première fois en L1 à la rentrée 2020 n'ayant jamais changé de groupe disciplinaire (discipline agrégée) au cours de leur cursus en Licence, c'est à dire entre la L1 et la L3. La sortie du cursus Licence ne constitue pas un changement de groupe disciplinaire.
+
+ 
+Réussite en licence en trois ans des néo-bacheliers 2021 inscrits pour la première fois en L1 à la rentrée universitaire 2021 :  
+
+Les quatre onglets concernant la cohorte 2021 ont fait l'objet de corrections le 26/11/2025.
+
+Le champ des indicateurs est constitué de tous les néo-bacheliers 2021 inscrits pour la première fois en L1 à la rentrée 2021. 
+En sont exclus les étudiants ayant pris une inscription parallèle en STS, DUT ou CPGE ou ayant obtenu le diplôme de Licence à l’issue de la première année.
+
+Pour les inscrits en L1 de ces deux premiers champs, des taux de réussite en Licence à 3 ans sont calculés selon les caractéristiques suivantes :
+- sexe (2 modalités : Homme, Femme)
+- âge au baccalauréat (3 modalités : à l’heure ou en avance, en retard d’un an, en retard de plus d’un an)
+- origine sociale (5 modalités : très favorisée (cadres, enseignants…), favorisée (professions intermédiaires), assez défavorisée (employés…), défavorisée (ouvriers…), non réponse)
+- série du baccalauréat (4 modalités : NBGE (+ détails pour certaines combinaisons de spécialités), Technologique STMG, Autre technologique, Professionnel)
+- mention obtenue au baccalauréat (6 modalités : Très bien, Bien, Assez bien, Passable au premier groupe, Passable au deuxième groupe, Inconnue)
+
+Depuis la session 2021 du baccalauréat, les néo-bacheliers généraux sont titulaires du nouveau baccalauréat général. 
+Les anciennes filières "Littéraire", "Economique et Social" et "Scientifique" ont été remplacées par des combinaisons de spécialités.
+Le taux de réussite en trois ans est présenté lorsque la combinaison représente plus de 1 % des inscrits.
+
+Un sous-champ présente la réussite en 3 ans de tous les néo-bacheliers 2021 inscrits pour la première fois en L1 l’année 2021/2022 selon le statut boursier. 
+Sont exclus de ce dernier sous-champ la Nouvelle-Calédonie et la Polynésie française.
+
+Un sous-champ est constitué des néo-bacheliers 2021 inscrits pour la première fois en L1 à la rentrée 2021 n'ayant jamais changé de groupe disciplinaire (discipline agrégée) au cours de leur cursus en Licence, c'est à dire entre la L1 et la L3. La sortie du cursus Licence ne constitue pas un changement de groupe disciplinaire.
+
+Depuis l'année dernière un nouvel indicateur est proposé, présentant le taux de passage en MMOPK en année N (1ère année de maïeutique ou kinésithérapie ou 2ème année de médecine, pharmacie ou odontologie) après une inscription en LAS en N-1. À partir de la rentrée 2020, les étudiants de licence peuvent s'inscrire en licence accès santé (LAS) afin d'accèder aux filières de santé médecine, maïeutique, odontologie, pharmacie et kinésithérapie (MMOPK). L'inscription en LAS peut intervenir à tout moment du cursus licence (en L1, L2 ou L3) et, quel que soit le niveau d'inscription en LAS, l'étudiant qui accède aux filières de santé s'inscrit l'année suivante en 1ère année de maïeutique ou kinésithérapie ou en 2ème année de médecine, pharmacie ou odontologie. Pour la réussite, afin de s'approcher au mieux de l'indicateur élaboré sur la base de l'obtention du diplôme de licence, le parcours de l'étudiant n'est comptabilisé dans cet indicateur que s'il est linéaire et sans redoublement, qu'il obtienne in fine une licence ou soit inscrit en 4ème année d'études de santé sans avoir connu d'année de retard. Par exemple un néo-bacheliers N inscrit en LAS1 à la rentrée N et inscrit en MMOPK à la rentrée N+1 n'entrera dans le taux de réussite en 3 ans que s'il progresse chaque année jusqu'à la rentrée N+3, c'est-à-dire qu'il doit être inscrit au moins en 3ème année pour les filières maïeutique et kinésithérapie ou au moins en 4ème année pour les filières médecine, pharmacie et odontologie à la rentrée N+3. Le passage en MMOPK après une LAS ne constitue pas un changement de groupe disciplinaire.  
+ 
+Devenir en 2024-2025 des néo-bacheliers inscrits en licence à la rentrée 2023, selon discipline en L1 et caractéristiques des étudiants : 
+
+Le champ des indicateurs est constitué des néo-bacheliers 2023 inscrits pour la première fois en L1 l’année 2023/2024. 
+
+Les taux de passage en L2 sont ventilés par disciplines agrégées et par les caractéristiques suivantes des étudiants : 
+- sexe (2 modalités : Homme, Femme)
+- âge au baccalauréat (3 modalités : à l’heure ou en avance, en retard d’un an, en retard de plus d’un an)
+- origine sociale (5 modalités : très favorisée (cadres, enseignants…), favorisée (professions intermédiaires), assez défavorisée (employés…), défavorisée (ouvriers…), non réponse)
+- série du baccalauréat (4 modalités : NBGE (+ détails pour certaines combinaisons de spécialités), Technologique STMG, Autre technologique, Professionnel)
+- mention obtenue au baccalauréat (6 modalités : Très bien, Bien, Assez bien, Passable au premier groupe, Passable au deuxième groupe, Inconnue)
+
+Depuis la session 2021 du baccalauréat, les néo-bacheliers généraux sont titulaires du nouveau baccalauréat général. 
+Les anciennes filières "Littéraire", "Economique et Social" et "Scientifique" ont été remplacées par des combinaisons de spécialités.
+Les taux de passage en L2 sont présentés lorsque la combinaison représente plus de 1 % des inscrits.
+
+Un sous-champ présente le devenir en 2024-2025 des néo-bacheliers 2023 inscrits pour la première fois en L1 l’année 2023/2024 selon le statut boursier. 
+Sont exclus de ce sous-champ la Nouvelle-Calédonie et la Polynésie française.
+
+Précisions relatives aux notions de passage, redoublement et sortie de l'enseignement supérieur : 
+
+Passage en L2 : étudiants du champ inscrits en L2 (ou L3, ou dans l'une des filières MMOPK pour les inscrits en L.AS) à la rentrée universitaire 2024 quels que soient la mention de licence et l’établissement d’accueil. 
+Passage strict en L2 : étudiants du champ inscrits en L2 (ou L3, ou dans l'une des filières MMOPK pour les inscrits en L.AS) à la rentrée universitaire 2024 dans la même discipline détaillée et au sein du même établissement. 
+La notion de passage englobe donc la notion de passage strict.
+
+Redoublement en L1 : étudiants du champ à nouveau inscrits en L1 à la rentrée universitaire 2024 quels que soient la mention de licence et l'établissement d'accueil (par exemple un néo-bacheliers 2023 inscrit en L1 de droit à l'université de Strasbourg en 2023-2024 et inscrit en L1 de psychologie à l'université de Reims en 2024-2025). 
+Redoublement strict en L1 : étudiants du champ à nouveau inscrits en L1 au sein de la même discipline détaillée et du même établissement à la rentrée universitaire 2024 (par exemple un néo-bacheliers 2023 inscrit en L1 d'Arts ou Lettres à l'université de Lorraine en 2023-2024 et réinscrit en L1 d'Arts ou Lettres à l'université de Lorraine en 2024-2025).
+La notion de redoublement englobe donc la notion de redoublement strict.
+
+Sortie de l'enseignement supérieur : étudiants de la base sortis du système SISE au cours de l'année universitaire 2023-2024. Les sortants ne sont, en général, plus étudiants mais une faible part d’entre eux peuvent être inscrits soit en France dans une formation pour laquelle la décomposition individuelle n’est pas collectée, soit à l’étranger.  
+
+Précision : Cas des inscriptions multiples à la rentrée universitaire 2024 : si un étudiant est inscrit dans plusieurs établissements l’année 2024/2025 et si sa situation n’est pas la même dans ces établissements, c’est la situation la plus favorable qui est retenue (passage en L2 puis redoublement puis réorientation). 
+
+Détail des formations suivies en 2024-2025 par les néo-bacheliers inscrits en licence à la rentrée 2023 et réorientés à la rentrée 2024 selon discipline en L1 et caractéristiques des étudiants
+
+Le champ des indicateurs est constitué des néo-bacheliers 2023 inscrits pour la première fois en L1 l’année 2023/2024 et s'étant réorientés en 2024-2025 à l'université (en dehors du cursus Licence) ou dans une formation de l'enseignement supérieur dispensée par un autre établissement qu'une université ou assimilé. 
+
+Les taux de réorientation sont ventilés par disciplines agrégées et par les caractéristiques suivantes des étudiants : 
+- sexe (2 modalités : Homme, Femme)
+- âge au baccalauréat (3 modalités : à l’heure ou en avance, en retard d’un an, en retard de plus d’un an)
+- origine sociale (5 modalités : très favorisée (cadres, enseignants…), favorisée (professions intermédiaires), assez défavorisée (employés…), défavorisée (ouvriers…), non réponse)
+- série du baccalauréat (4 modalités : NBGE (+ détails pour certaines combinaisons de spécialités), Technologique STMG, Autre technologique, Professionnel)
+- mention obtenue au baccalauréat (6 modalités : Très bien, Bien, Assez bien, Passable au premier groupe, Passable au deuxième groupe, Inconnue)
+
+Réorientation : Est considéré comme réorienté tout néo-bacheliers 2023 inscrits pour la première fois en L1 l’année 2023/2024 et inscrit dans une autre formation que la licence en 2024/2025. Il peut s'agir d'une réorientation à l'université, dans une autre formation que le cursus Licence (par exemple en BUT) ou en dehors de l'université (par exemple en école de commerce). Une réinscription en 1ère année de Licence accès santé (LAS) n'est pas considérée comme une réorientation, il s'agit toujours du cursus Licence, cette réinscription sera considérée comme un redoublement. Les taux de réorientation à l'université et en dehors sont désormais détaillés pour les formations suivantes : 
+- Hors université : CPGE, STS en apprentissage, STS hors apprentissage, école de commerce, école d'ingénieurs.
+- A l'université : BUT, Diplôme d'Etat d'Infirmier
+
+Par ailleurs, aucune donnée n'est diffusée lorsque l'effectif d'inscrits est inférieur à 100 compte tenu de la grande fragilité des résultats obtenus dans ce cas.
+

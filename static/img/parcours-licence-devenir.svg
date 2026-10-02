@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 404" role="img" font-variant-numeric="tabular-nums" aria-labelledby="pl-t pl-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="pl-t">Un an après une première année de licence : quatre devenirs, selon l'origine sociale</title><desc id="pl-d">Barres empilées à 100 %, une par origine sociale. Bacheliers 2023 entrés en première année de licence : 58,0 % des étudiants d'origine très favorisée sont passés en deuxième année un an après, contre 39,7 % de ceux d'origine défavorisée ; 20,3 % et 32,2 % recommencent une première année ; 10,4 % et 10,6 % sont réorientés hors de la licence ; 11,4 % et 17,4 % ne sont plus retrouvés dans les fichiers d'inscription.</desc>
+<rect width="720" height="404" fill="#ffffff"/>
+<text x="0" y="18" font-size="15" font-weight="600" fill="#26262f">Un an après une première année de licence : quatre devenirs, selon l'origine sociale</text>
+<text x="0" y="38" font-size="11" fill="#55524f">Bacheliers 2023 inscrits en 1ʳᵉ année de licence à la rentrée 2023 : situation à la rentrée 2024, en % des inscrits.</text>
+<text x="122" y="115.0" font-size="11.5" fill="#26262f" text-anchor="end">Très favorisée</text>
+<rect x="132.0" y="96" width="336.1" height="30" fill="#184f95" stroke="#ffffff" stroke-width="1.5"/>
+<text x="300.0" y="115.0" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">58,0</text>
+<text x="300.0" y="77.0" font-size="10.5" fill="#55524f" text-anchor="middle">Passés en</text>
+<text x="300.0" y="89.0" font-size="10.5" fill="#55524f" text-anchor="middle">2ᵉ année</text>
+<rect x="468.1" y="96" width="117.6" height="30" fill="#8a8781" stroke="#ffffff" stroke-width="1.5"/>
+<text x="526.9" y="115.0" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">20,3</text>
+<text x="526.9" y="77.0" font-size="10.5" fill="#55524f" text-anchor="middle">Recommencent</text>
+<text x="526.9" y="89.0" font-size="10.5" fill="#55524f" text-anchor="middle">une 1ʳᵉ année</text>
+<rect x="585.7" y="96" width="60.3" height="30" fill="#c9c5c0" stroke="#ffffff" stroke-width="1.5"/>
+<text x="615.8" y="115.0" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">10,4</text>
+<text x="615.8" y="77.0" font-size="10.5" fill="#55524f" text-anchor="middle">Réorientés</text>
+<text x="615.8" y="89.0" font-size="10.5" fill="#55524f" text-anchor="middle">hors licence</text>
+<rect x="645.9" y="96" width="66.1" height="30" fill="#eb6834" stroke="#ffffff" stroke-width="1.5"/>
+<text x="679.0" y="115.0" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">11,4</text>
+<text x="679.0" y="77.0" font-size="10.5" fill="#55524f" text-anchor="middle">Non</text>
+<text x="679.0" y="89.0" font-size="10.5" fill="#55524f" text-anchor="middle">retrouvés</text>
+<text x="122" y="159.0" font-size="11.5" fill="#26262f" text-anchor="end">Favorisée</text>
+<rect x="132.0" y="140" width="292.9" height="30" fill="#184f95" stroke="#ffffff" stroke-width="1.5"/>
+<text x="278.4" y="159.0" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">50,5</text>
+<rect x="424.9" y="140" width="139.8" height="30" fill="#8a8781" stroke="#ffffff" stroke-width="1.5"/>
+<text x="494.8" y="159.0" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">24,1</text>
+<rect x="564.7" y="140" width="63.2" height="30" fill="#c9c5c0" stroke="#ffffff" stroke-width="1.5"/>
+<text x="596.3" y="159.0" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">10,9</text>
+<rect x="627.9" y="140" width="84.1" height="30" fill="#eb6834" stroke="#ffffff" stroke-width="1.5"/>
+<text x="669.9" y="159.0" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">14,5</text>
+<text x="122" y="203.0" font-size="11.5" fill="#26262f" text-anchor="end">Assez défavorisée</text>
+<rect x="132.0" y="184" width="270.6" height="30" fill="#184f95" stroke="#ffffff" stroke-width="1.5"/>
+<text x="267.3" y="203.0" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">46,7</text>
+<rect x="402.6" y="184" width="152.4" height="30" fill="#8a8781" stroke="#ffffff" stroke-width="1.5"/>
+<text x="478.8" y="203.0" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">26,3</text>
+<rect x="555.0" y="184" width="63.7" height="30" fill="#c9c5c0" stroke="#ffffff" stroke-width="1.5"/>
+<text x="586.8" y="203.0" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">11,0</text>
+<rect x="618.7" y="184" width="93.3" height="30" fill="#eb6834" stroke="#ffffff" stroke-width="1.5"/>
+<text x="665.4" y="203.0" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">16,1</text>
+<text x="122" y="247.0" font-size="11.5" fill="#26262f" text-anchor="end">Défavorisée</text>
+<rect x="132.0" y="228" width="230.5" height="30" fill="#184f95" stroke="#ffffff" stroke-width="1.5"/>
+<text x="247.2" y="247.0" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">39,7</text>
+<rect x="362.5" y="228" width="186.9" height="30" fill="#8a8781" stroke="#ffffff" stroke-width="1.5"/>
+<text x="456.0" y="247.0" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">32,2</text>
+<rect x="549.4" y="228" width="61.5" height="30" fill="#c9c5c0" stroke="#ffffff" stroke-width="1.5"/>
+<text x="580.2" y="247.0" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">10,6</text>
+<rect x="611.0" y="228" width="101.0" height="30" fill="#eb6834" stroke="#ffffff" stroke-width="1.5"/>
+<text x="661.5" y="247.0" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">17,4</text>
+<line x1="0" y1="265.0" x2="720" y2="265.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="122" y="291.0" font-size="11.5" fill="#26262f" text-anchor="end" font-weight="600">Ensemble</text>
+<rect x="132.0" y="272" width="284.8" height="30" fill="#184f95" stroke="#ffffff" stroke-width="1.5"/>
+<text x="274.4" y="291.0" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">49,1</text>
+<rect x="416.8" y="272" width="147.3" height="30" fill="#8a8781" stroke="#ffffff" stroke-width="1.5"/>
+<text x="490.4" y="291.0" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">25,4</text>
+<rect x="564.1" y="272" width="62.6" height="30" fill="#c9c5c0" stroke="#ffffff" stroke-width="1.5"/>
+<text x="595.4" y="291.0" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">10,8</text>
+<rect x="626.7" y="272" width="85.3" height="30" fill="#eb6834" stroke="#ffffff" stroke-width="1.5"/>
+<text x="669.4" y="291.0" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">14,7</text>
+<line x1="0" y1="320.0" x2="720" y2="320.0" stroke="#dcd8d3"/>
+<text x="0" y="333.0" font-size="9" fill="#55524f">MESRE-SIES, Note Flash n° 29, novembre 2025, tableaux nationaux, feuille « Devenir cohorte 2023 » (SISE, SCOLARITE, SIFA)</text>
+<text x="0" y="345.0" font-size="9" fill="#55524f">Passés : inscrits en 2ᵉ ou 3ᵉ année de licence, ou entrés en études de santé depuis une licence accès santé. Recommencent : changements de discipline compris.</text>
+<text x="0" y="357.0" font-size="9" fill="#55524f">Non retrouvés : absents des fichiers d'inscription (« sortie de l'enseignement supérieur » pour le SIES) ; certains étudient à l'étranger ou hors du champ suivi.</text>
+<text x="0" y="369.0" font-size="9" fill="#55524f">Situation d'inscription un an après, non un diplôme. Le tableau ne croise pas l'origine sociale et le niveau scolaire à l'entrée.</text>
+<text x="0" y="381.0" font-size="9" fill="#55524f">Taux arrondis : leur somme peut différer de 100 %. Origine non renseignée (3,8 % des inscrits) : pas de barre, comprise dans l'ensemble.</text>
+<text x="0" y="393.0" font-size="9" fill="#96928f">Figure Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/enseignants/</text>
+</svg>

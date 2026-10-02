@@ -1,0 +1,463 @@
+{
+ "releve_le": "2026-10-02",
+ "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; source MESRE-SIES",
+ "meta": {
+  "page": "https://stephane-lalut.com/enseignants/",
+  "licence": "CC BY 4.0 pour la compilation et la figure ; données MESRE-SIES",
+  "champ": "néo-bacheliers inscrits pour la première fois en première année de licence, universités et établissements assimilés, France entière",
+  "source": "MESRE-SIES, Notes Flash « Parcours et réussite en licence », tableaux nationaux (SISE, SCOLARITE, SIFA)",
+  "definitions": {
+   "passage": "inscrit l'année suivante en deuxième année de licence (ou en troisième, ou en filière de santé pour les licences accès santé), quels que soient la mention et l'établissement",
+   "redoublement": "à nouveau inscrit en première année de licence, quels que soient la mention et l'établissement : un changement de discipline à l'intérieur de la licence en fait partie",
+   "reorientation": "inscrit l'année suivante dans une autre formation que la licence, à l'université (BUT, par exemple) ou en dehors (STS, école)",
+   "sortie": "non retrouvé dans les systèmes d'information ; une faible part peut être inscrite à l'étranger ou dans une formation non couverte",
+   "origine_sociale": "catégorie socioprofessionnelle du parent référent, regroupée par le SIES : très favorisée (cadres, enseignants…), favorisée (professions intermédiaires), assez défavorisée (employés…), défavorisée (ouvriers…)",
+   "part_pct_non_passants": "calcul de cette page : effectif rapporté aux inscrits non passés en deuxième année ; non publié par le SIES",
+   "residu": "inscrits moins la somme des quatre devenirs publiés ; mesuré, non redistribué"
+  }
+ },
+ "cohortes": [
+  {
+   "annee": 2021,
+   "note": "Note Flash n° 26, novembre 2023",
+   "fichier": "sies_nf2023-26_tableaux_nationaux_cohorte2021.xlsx",
+   "ensemble": {
+    "inscrits": 196990,
+    "passage": 86671,
+    "redoublement": 51159,
+    "reorientation": 26222,
+    "sortie": 32938,
+    "taux_publies": {
+     "passage": 44.0,
+     "redoublement": 26.0,
+     "reorientation": 13.3,
+     "sortie": 16.7
+    },
+    "redoublement_strict": null,
+    "residu": 0
+   },
+   "origines": {
+    "tf": {
+     "inscrits": 60297,
+     "passage": 31720,
+     "redoublement": 12758,
+     "reorientation": 7901,
+     "sortie": 7918,
+     "taux_publies": {
+      "passage": 52.6,
+      "redoublement": 21.2,
+      "reorientation": 13.1,
+      "sortie": 13.1
+     },
+     "redoublement_strict": null,
+     "residu": 0
+    },
+    "f": {
+     "inscrits": 28938,
+     "passage": 13241,
+     "redoublement": 7118,
+     "reorientation": 3838,
+     "sortie": 4741,
+     "taux_publies": {
+      "passage": 45.8,
+      "redoublement": 24.6,
+      "reorientation": 13.3,
+      "sortie": 16.4
+     },
+     "redoublement_strict": null,
+     "residu": 0
+    },
+    "ad": {
+     "inscrits": 56517,
+     "passage": 23966,
+     "redoublement": 14842,
+     "reorientation": 7565,
+     "sortie": 10144,
+     "taux_publies": {
+      "passage": 42.4,
+      "redoublement": 26.3,
+      "reorientation": 13.4,
+      "sortie": 17.9
+     },
+     "redoublement_strict": null,
+     "residu": 0
+    },
+    "d": {
+     "inscrits": 43459,
+     "passage": 15312,
+     "redoublement": 13949,
+     "reorientation": 5761,
+     "sortie": 8437,
+     "taux_publies": {
+      "passage": 35.2,
+      "redoublement": 32.1,
+      "reorientation": 13.3,
+      "sortie": 19.4
+     },
+     "redoublement_strict": null,
+     "residu": 0
+    }
+   },
+   "non_reponse": {
+    "inscrits": 7779,
+    "passage": 2432,
+    "redoublement": 2492,
+    "reorientation": 1157,
+    "sortie": 1698,
+    "taux_publies": {
+     "passage": 31.3,
+     "redoublement": 32.0,
+     "reorientation": 14.9,
+     "sortie": 21.8
+    },
+    "redoublement_strict": null
+   },
+   "mentions": {
+    "mention_tb": {
+     "inscrits": 13917,
+     "passage": 10794,
+     "redoublement": 1178,
+     "reorientation": 1160,
+     "sortie": 785,
+     "taux_publies": {
+      "passage": 77.6,
+      "redoublement": 8.5,
+      "reorientation": 8.3,
+      "sortie": 5.6
+     },
+     "redoublement_strict": null
+    },
+    "mention_p2": {
+     "inscrits": 6097,
+     "passage": 376,
+     "redoublement": 2592,
+     "reorientation": 921,
+     "sortie": 2208,
+     "taux_publies": {
+      "passage": 6.2,
+      "redoublement": 42.5,
+      "reorientation": 15.1,
+      "sortie": 36.2
+     },
+     "redoublement_strict": null
+    }
+   }
+  },
+  {
+   "annee": 2022,
+   "note": "Note Flash n° 30, novembre 2024",
+   "fichier": "sies_nf2024-30_tableaux_nationaux_cohorte2022.xlsx",
+   "ensemble": {
+    "inscrits": 185763,
+    "passage": 88749,
+    "redoublement": 47140,
+    "reorientation": 21210,
+    "sortie": 28483,
+    "taux_publies": {
+     "passage": 47.8,
+     "redoublement": 25.4,
+     "reorientation": 11.4,
+     "sortie": 15.3
+    },
+    "redoublement_strict": 31510,
+    "residu": 181
+   },
+   "origines": {
+    "tf": {
+     "inscrits": 59770,
+     "passage": 33558,
+     "redoublement": 12229,
+     "reorientation": 6642,
+     "sortie": 7234,
+     "taux_publies": {
+      "passage": 56.1,
+      "redoublement": 20.5,
+      "reorientation": 11.1,
+      "sortie": 12.1
+     },
+     "redoublement_strict": 8075,
+     "residu": 107
+    },
+    "f": {
+     "inscrits": 26991,
+     "passage": 13404,
+     "redoublement": 6561,
+     "reorientation": 2974,
+     "sortie": 4035,
+     "taux_publies": {
+      "passage": 49.7,
+      "redoublement": 24.3,
+      "reorientation": 11.0,
+      "sortie": 14.9
+     },
+     "redoublement_strict": 4353,
+     "residu": 17
+    },
+    "ad": {
+     "inscrits": 53083,
+     "passage": 24109,
+     "redoublement": 13936,
+     "reorientation": 6154,
+     "sortie": 8851,
+     "taux_publies": {
+      "passage": 45.4,
+      "redoublement": 26.3,
+      "reorientation": 11.6,
+      "sortie": 16.7
+     },
+     "redoublement_strict": 9371,
+     "residu": 33
+    },
+    "d": {
+     "inscrits": 38882,
+     "passage": 15330,
+     "redoublement": 12161,
+     "reorientation": 4446,
+     "sortie": 6925,
+     "taux_publies": {
+      "passage": 39.4,
+      "redoublement": 31.3,
+      "reorientation": 11.4,
+      "sortie": 17.8
+     },
+     "redoublement_strict": 8210,
+     "residu": 20
+    }
+   },
+   "non_reponse": {
+    "inscrits": 7037,
+    "passage": 2348,
+    "redoublement": 2253,
+    "reorientation": 994,
+    "sortie": 1438,
+    "taux_publies": {
+     "passage": 33.4,
+     "redoublement": 32.0,
+     "reorientation": 14.1,
+     "sortie": 20.4
+    },
+    "redoublement_strict": 1501
+   },
+   "mentions": {
+    "mention_tb": {
+     "inscrits": 14173,
+     "passage": 11422,
+     "redoublement": 1017,
+     "reorientation": 1040,
+     "sortie": 627,
+     "taux_publies": {
+      "passage": 80.6,
+      "redoublement": 7.2,
+      "reorientation": 7.3,
+      "sortie": 4.4
+     },
+     "redoublement_strict": 358
+    },
+    "mention_p2": {
+     "inscrits": 10415,
+     "passage": 1001,
+     "redoublement": 4421,
+     "reorientation": 1616,
+     "sortie": 3377,
+     "taux_publies": {
+      "passage": 9.6,
+      "redoublement": 42.4,
+      "reorientation": 15.5,
+      "sortie": 32.4
+     },
+     "redoublement_strict": 3203
+    }
+   }
+  },
+  {
+   "annee": 2023,
+   "note": "Note Flash n° 29, novembre 2025",
+   "fichier": "sies_nf2025-29_tableaux_nationaux_cohorte2023.xlsx",
+   "ensemble": {
+    "inscrits": 188526,
+    "passage": 92646,
+    "redoublement": 47948,
+    "reorientation": 20285,
+    "sortie": 27638,
+    "taux_publies": {
+     "passage": 49.1,
+     "redoublement": 25.4,
+     "reorientation": 10.8,
+     "sortie": 14.7
+    },
+    "redoublement_strict": 29520,
+    "residu": 9
+   },
+   "origines": {
+    "tf": {
+     "inscrits": 62982,
+     "passage": 36500,
+     "redoublement": 12755,
+     "reorientation": 6566,
+     "sortie": 7158,
+     "taux_publies": {
+      "passage": 58.0,
+      "redoublement": 20.3,
+      "reorientation": 10.4,
+      "sortie": 11.4
+     },
+     "redoublement_strict": 7704,
+     "residu": 3
+    },
+    "f": {
+     "inscrits": 27340,
+     "passage": 13811,
+     "redoublement": 6594,
+     "reorientation": 2973,
+     "sortie": 3961,
+     "taux_publies": {
+      "passage": 50.5,
+      "redoublement": 24.1,
+      "reorientation": 10.9,
+      "sortie": 14.5
+     },
+     "redoublement_strict": 4095,
+     "residu": 1
+    },
+    "ad": {
+     "inscrits": 53523,
+     "passage": 24985,
+     "redoublement": 14051,
+     "reorientation": 5862,
+     "sortie": 8621,
+     "taux_publies": {
+      "passage": 46.7,
+      "redoublement": 26.3,
+      "reorientation": 11.0,
+      "sortie": 16.1
+     },
+     "redoublement_strict": 8632,
+     "residu": 4
+    },
+    "d": {
+     "inscrits": 37555,
+     "passage": 14907,
+     "redoublement": 12101,
+     "reorientation": 3998,
+     "sortie": 6548,
+     "taux_publies": {
+      "passage": 39.7,
+      "redoublement": 32.2,
+      "reorientation": 10.6,
+      "sortie": 17.4
+     },
+     "redoublement_strict": 7573,
+     "residu": 1
+    }
+   },
+   "non_reponse": {
+    "inscrits": 7126,
+    "passage": 2443,
+    "redoublement": 2447,
+    "reorientation": 886,
+    "sortie": 1350,
+    "taux_publies": {
+     "passage": 34.3,
+     "redoublement": 34.3,
+     "reorientation": 12.4,
+     "sortie": 18.9
+    },
+    "redoublement_strict": 1516
+   },
+   "mentions": {
+    "mention_tb": {
+     "inscrits": 14111,
+     "passage": 11379,
+     "redoublement": 1058,
+     "reorientation": 1107,
+     "sortie": 566,
+     "taux_publies": {
+      "passage": 80.6,
+      "redoublement": 7.5,
+      "reorientation": 7.8,
+      "sortie": 4.0
+     },
+     "redoublement_strict": 391
+    },
+    "mention_p2": {
+     "inscrits": 10956,
+     "passage": 1139,
+     "redoublement": 4715,
+     "reorientation": 1622,
+     "sortie": 3480,
+     "taux_publies": {
+      "passage": 10.4,
+      "redoublement": 43.0,
+      "reorientation": 14.8,
+      "sortie": 31.8
+     },
+     "redoublement_strict": 3134
+    }
+   }
+  }
+ ],
+ "affichage": {
+  "cohorte": "2023",
+  "annee_devenir": "2024",
+  "annee_univ": "2023-2024",
+  "annee_univ_suivante": "2024-2025",
+  "note": "Note Flash n° 29, novembre 2025",
+  "inscrits": "188 526",
+  "cohortes_lib": "2021 à 2023",
+  "nb_cohortes": "3",
+  "ens_passage": "49,1",
+  "ens_redoublement": "25,4",
+  "ens_reorientation": "10,8",
+  "ens_sortie": "14,7",
+  "tf_passage": "58,0",
+  "tf_redoublement": "20,3",
+  "tf_reorientation": "10,4",
+  "tf_sortie": "11,4",
+  "tf_inscrits": "62 982",
+  "tf_non_passage": "42,0",
+  "tf_sortie_np": "27,1",
+  "tf_reorientation_np": "24,8",
+  "tf_redoublement_np": "48,3",
+  "tf_redoublement_autre": "8,0",
+  "f_passage": "50,5",
+  "f_redoublement": "24,1",
+  "f_reorientation": "10,9",
+  "f_sortie": "14,5",
+  "f_inscrits": "27 340",
+  "f_non_passage": "49,5",
+  "f_sortie_np": "29,3",
+  "f_reorientation_np": "22,0",
+  "f_redoublement_np": "48,7",
+  "f_redoublement_autre": "9,1",
+  "ad_passage": "46,7",
+  "ad_redoublement": "26,3",
+  "ad_reorientation": "11,0",
+  "ad_sortie": "16,1",
+  "ad_inscrits": "53 523",
+  "ad_non_passage": "53,3",
+  "ad_sortie_np": "30,2",
+  "ad_reorientation_np": "20,6",
+  "ad_redoublement_np": "49,3",
+  "ad_redoublement_autre": "10,1",
+  "d_passage": "39,7",
+  "d_redoublement": "32,2",
+  "d_reorientation": "10,6",
+  "d_sortie": "17,4",
+  "d_inscrits": "37 555",
+  "d_non_passage": "60,3",
+  "d_sortie_np": "28,9",
+  "d_reorientation_np": "17,6",
+  "d_redoublement_np": "53,4",
+  "d_redoublement_autre": "12,1",
+  "ecart_passage": "18,3",
+  "ecart_sortie": "6,0",
+  "ecart_sortie_np": "1,8",
+  "ecart_sortie_np_decimales": "1,7",
+  "reorientation_min": "10,4",
+  "reorientation_max": "11,0",
+  "mention_tb_passage": "80,6",
+  "mention_p2_passage": "10,4",
+  "non_reponse_part": "3,8",
+  "residu": "9"
+ }
+}
