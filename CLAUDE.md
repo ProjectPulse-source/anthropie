@@ -251,6 +251,33 @@ dans la mesure d'audience. Aucun contrôle d'éligibilité, aucune donnée colle
 du canal, jamais un résultat. Une page de ressource neuve reçoit l'un des deux organes ; `chercheur-independant` n'a
 pas de livre lié (exclusion déclarée).
 
+## Module de mise à jour des données (auteur, 2026-10-02)
+
+« À chaque mise à jour d'une donnée que nous utilisons, la mise à jour et la réécriture des pages se déclenchent. »
+**Un registre, un script, un workflow** :
+
+- **`data/sources_maj.json`** : une ligne par source (producteur, pages, générateurs, jeu, sorties, fenêtre de parution,
+  édition lue). Les générateurs des enseignants y lisent leur édition : **plus aucune année, aucun nom de fichier,
+  aucune date de téléchargement en dur** dans un générateur ou une page.
+- **`scripts/maj_sources.py`** : `etat` · `detecter` · `integrer` · `essai` · `sorties` · `controle`.
+  `integrer` archive la pièce (empreinte dans `SHA256SUMS`), l'inscrit au registre, lance tous les générateurs
+  concernés en `--check` puis en écriture ; un seul refus remet registre, empreintes et pièces dans leur état d'avant.
+  `essai` est le témoin positif : chaque détecteur doit retrouver à la source l'édition déjà archivée.
+- **`.github/workflows/maj-sources.yml`** : chaque jour, `integrer` ; chaque lundi, `essai` ; portes bloquantes
+  (`check-all --ci`, build), commit des sorties **listées par le registre**, déploiement, un seul ticket ouvert en cas
+  d'échec.
+
+**Pour qu'une page se réécrive seule, sa prose ne contient que des jetons** : nombres, années, libellés d'édition,
+dates, et jusqu'au nombre de cohortes en toutes lettres. Une phrase qui porte un chiffre saisi bloque la mise à jour,
+ou pire, ment après elle. Quand une garde refuse une édition, c'est une phrase à réécrire, pas une garde à desserrer.
+
+Ajouter une source en fichier : une ligne au registre, un détecteur dans `maj_sources.py`, son cas dans `essai`.
+Une donnée citée ne vient jamais d'un résumé : le détecteur valide le **contenu** de la pièce (titre du tableau,
+feuille attendue), jamais un code HTTP — la page d'une édition absente peut répondre 200.
+
+Hors du module à ce jour, déclaré : les sources à API du dossier dette gardent leurs workflows `dette-*.yml` (elles
+figurent au registre pour le tableau d'état) ; `generer_figures_qui_paie.py` se met à jour à la main.
+
 ## Règle de surface — « la présence vient du dépôt » (actée 2026-08-11)
 
 Défaut récurrent, six occurrences en deux jours, toujours la même forme : **une donnée

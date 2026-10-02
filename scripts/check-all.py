@@ -68,6 +68,11 @@ LOCAL_DERIVES = [
     # publier. Condition de mort dans la docstring -- le controle annonce lui-meme
     # le jour ou il doit etre supprime.
     ("image des runners GitHub", "check-runner-image.py", []),
+    # Module de mise a jour (auteur, 02/10/2026) : une edition attendue et non integree APRES la fermeture de sa
+    # fenetre de parution. Hors --ci : une source en retard n'est pas une raison de ne plus publier. Sortie 1
+    # seulement en cas de retard reel -- jamais une alerte toujours vraie. Condition de mort : celle du module
+    # (en-tete de scripts/maj_sources.py).
+    ("sources en fichier : editions attendues", "maj_sources.py", ["controle"]),
 ]
 LOCAL = [
     ("couverture GEO FR/EN", "check-geo-coverage.py", []),

@@ -12,9 +12,10 @@ pédagogique ») ; construction sur la cohorte 2023 sans attendre l'édition sui
 PIÈCES : téléchargées le 2 octobre 2026. Le SIES corrige parfois ses fichiers après parution (onglets de la cohorte 2021
 remplacés le 26/11/2025, selon la méthodologie du tableur) : l'empreinte dit quelle version est lue, cette date dit quand.
 
-METTRE À JOUR (édition annuelle, en novembre) : déposer le tableur « tableaux nationaux » dans
-scripts/sources_enseignants/, ajouter son empreinte à SHA256SUMS et sa ligne à COHORTES, relancer. Les gardes disent
-si les constats de la fiche tiennent sur la cohorte nouvelle ; si la définition des colonnes change, arrêt.
+METTRE À JOUR (édition annuelle, en novembre) : `python scripts/maj_sources.py integrer` (ou le workflow quotidien
+maj-sources.yml) dépose le tableur dans scripts/sources_enseignants/, ajoute son empreinte et sa ligne au registre
+data/sources_maj.json, puis relance ce générateur. Les gardes disent si les constats de la fiche tiennent sur la
+cohorte nouvelle ; si la définition des colonnes change, arrêt, et rien n'est adopté.
 
 SÉRIE COURTE, ET POURQUOI. Trois cohortes seulement sont comparables (2021, 2022, 2023). Avant, la « réorientation »
 ne couvrait que l'université et la dernière colonne s'appelait « sortie de l'université », réorientations vers une STS
@@ -53,11 +54,27 @@ FIGURE = "parcours-licence-devenir"
 PAGE_URL = "stephane-lalut.com/enseignants/ecole-et-parcours/"
 
 # cohorte (année d'entrée en L1) -> (tableur archivé, feuille, référence de la note)
-COHORTES = {
-    2021: ("sies_nf2023-26_tableaux_nationaux_cohorte2021.xlsx", "Devenir cohorte 2021", "Note Flash n° 26, novembre 2023"),
-    2022: ("sies_nf2024-30_tableaux_nationaux_cohorte2022.xlsx", "Devenir cohorte 2022", "Note Flash n° 30, novembre 2024"),
-    2023: ("sies_nf2025-29_tableaux_nationaux_cohorte2023.xlsx", "Devenir cohorte 2023", "Note Flash n° 29, novembre 2025"),
-}
+REGISTRE = ROOT / "data" / "sources_maj.json"
+MOIS = ("janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre")
+LETTRES = {3: "trois", 4: "quatre", 5: "cinq", 6: "six", 7: "sept", 8: "huit", 9: "neuf", 10: "dix"}
+
+
+def source(ident: str) -> dict:
+    """Une ligne du registre des sources (data/sources_maj.json) : c'est lui qui dit quelle édition lire."""
+    for x in json.loads(REGISTRE.read_text(encoding="utf-8"))["sources"]:
+        if x["id"] == ident:
+            return x
+    print("ECHEC : source %s absente de data/sources_maj.json" % ident)
+    sys.exit(1)
+
+
+def date_fr(iso: str) -> str:
+    a, m, j = (int(x) for x in iso.split("-"))
+    return "%d%s %s %d" % (j, "er" if j == 1 else "", MOIS[m - 1], a)
+
+
+# Cohortes lues dans le registre : une édition nouvelle s'ajoute là (scripts/maj_sources.py), jamais ici.
+COHORTES = {int(k): tuple(v) for k, v in source("sies-licence")["cohortes"].items()}
 COLONNES = {"inscrits": "Inscrits en L1", "passage": "Passage en L2", "redoublement": "Redoublement en L1",
             "reorientation": "Réorientation", "sortie": "Sortie de l'enseignement supérieur"}
 TAUX = {"passage": "Taux de passage en L2", "redoublement": "Taux de redoublement en L1",
@@ -214,7 +231,9 @@ def affichage(cohortes: dict[int, dict]) -> tuple[dict, list[str]]:
     A = {"cohorte": str(der), "annee_devenir": str(der + 1), "annee_univ": "%d-%d" % (der, der + 1),
          "annee_univ_suivante": "%d-%d" % (der + 1, der + 2), "note": c["note"],
          "inscrits": milliers(ens["inscrits"]), "cohortes_lib": "%d à %d" % (min(cohortes), der),
-         "nb_cohortes": str(len(cohortes))}
+         "nb_cohortes": str(len(cohortes)), "nb_cohortes_lettres": LETTRES.get(len(cohortes), str(len(cohortes))),
+         "Nb_cohortes_lettres": LETTRES.get(len(cohortes), str(len(cohortes))).capitalize(),
+         "premiere_cohorte": str(min(cohortes)), "telecharge_le": date_fr(source("sies-licence")["telecharge_le"])}
     for k in ISSUES:
         A["ens_" + k] = fr(ens["taux_publies"][k])
     for cle, d in o.items():
@@ -251,7 +270,7 @@ def affichage(cohortes: dict[int, dict]) -> tuple[dict, list[str]]:
     ecart_mentions = men["mention_tb"]["taux_publies"]["passage"] - men["mention_p2"]["taux_publies"]["passage"]
     ecart_origines = o["tf"]["taux_publies"]["passage"] - o["d"]["taux_publies"]["passage"]
     gardes = [
-        ("« trois cohortes comparables »", len(cohortes) == 3),
+        ("au moins trois cohortes comparables (le nombre exact est un jeton, la page ne l'écrit plus en dur)", len(cohortes) >= 3),
         ("le passage en 2e année décroît de l'origine très favorisée à la défavorisée, sur chaque cohorte",
          chaque(lambda og, i: og["tf"]["passage"] / og["tf"]["inscrits"] > og["f"]["passage"] / og["f"]["inscrits"]
                 > og["ad"]["passage"] / og["ad"]["inscrits"] > og["d"]["passage"] / og["d"]["inscrits"])),

@@ -10,9 +10,9 @@ MILLÉSIME (arbitrage ENTRANTE_2026-10-02_Ecole_Parcours_Graphe_supplementaire, 
 bacheliers de l'année ANNEE, la même que la cohorte de l'activité « licence » de la page ; l'édition suivante sert de
 témoin de stabilité. Les deux activités ne suivent pas les mêmes élèves, et la page le dit.
 
-METTRE À JOUR : quand generer_parcours_licence.py change de cohorte (novembre), archiver les fiches 13 et 09 de
-l'édition correspondante, ajouter leurs empreintes, changer ANNEE et FICHES, relancer. Les gardes disent si les
-constats tiennent.
+METTRE À JOUR : `python scripts/maj_sources.py integrer` archive les fiches 13 et 09 des éditions nécessaires et les
+inscrit au registre data/sources_maj.json ; l'année de la figure suit d'elle-même la dernière cohorte de l'activité
+« licence ». Les gardes disent si les constats tiennent.
 
 TÉMOINS, bloquants : six catégories d'origine exactement, libellés de la source ; quatre destinations qui somment à
 100 à l'arrondi près sur chaque ligne ; « dont IUT » inférieur à « université » ; mêmes contrôles sur le millésime témoin.
@@ -49,12 +49,20 @@ OUT_IMG = ROOT / "static" / "img"
 FIGURE = "acces-superieur-origine"
 PAGE_URL = "stephane-lalut.com/enseignants/ecole-et-parcours/"
 
-ANNEE, TEMOIN = 2023, 2024
-FICHES = {
-    2023: ("eesr18_fiche13_acces_enseignement_superieur_bacheliers2023.html", "n° 18"),
-    2024: ("eesr19_fiche13_acces_enseignement_superieur_bacheliers2024.html", "n° 19"),
-}
-FICHE_BAC = "eesr18_fiche09_nouveaux_bacheliers_2023.html"
+# Tout vient du registre data/sources_maj.json. RÈGLE : l'année de la figure est celle de la dernière cohorte de
+# l'activité « licence » ; l'autre année archivée la plus proche sert de témoin (la suivante si elle existe).
+_SRC = gl.source("eesr-acces")
+FICHES = {int(k): tuple(v) for k, v in _SRC["fiches_acces"].items()}
+ANNEE = max(gl.COHORTES)
+if ANNEE not in FICHES or str(ANNEE) not in _SRC["fiches_bac"]:
+    print("ECHEC : aucune fiche archivee pour les bacheliers %d (fiches 13 et 09) -- lancer scripts/maj_sources.py integrer" % ANNEE)
+    sys.exit(1)
+_AUTRES = sorted((a for a in FICHES if a != ANNEE), key=lambda a: (abs(a - ANNEE), -a))
+if not _AUTRES:
+    print("ECHEC : aucun millesime temoin archive pour la fiche 13")
+    sys.exit(1)
+TEMOIN = _AUTRES[0]
+FICHE_BAC = _SRC["fiches_bac"][str(ANNEE)]
 ORIGINES = [("ind", "Agriculteurs, artisans, commerçants, chefs d'entreprise", ("Agriculteurs, artisans,", "commerçants, chefs d'entreprise")),
             ("cad", "Cadres, professions intellectuelles supérieures", ("Cadres, professions", "intellectuelles supérieures")),
             ("pi", "Professions intermédiaires", ("Professions intermédiaires",)),
@@ -168,6 +176,12 @@ def affichage(a: dict, t: dict, bac: dict) -> tuple[dict, list[str]]:
     for cle in ("cad", "ouv"):
         for k in ("cpge", "sts"):
             A["temoin_%s_%s" % (cle, k)] = fr(t["origines"][cle][k])
+    # Les deux millésimes dans l'ordre du temps : la page écrit « x % en N, y % en N+1 », quel que soit celui de la figure.
+    c1, c2 = sorted((a, t), key=lambda x: x["annee"])
+    A["chrono1_annee"], A["chrono2_annee"] = str(c1["annee"]), str(c2["annee"])
+    for n, c in (("chrono1", c1), ("chrono2", c2)):
+        A[n + "_ouv_sts"], A[n + "_cad_cpge"] = fr(c["origines"]["ouv"]["sts"]), fr(c["origines"]["cad"]["cpge"])
+    A["telecharge_le"] = gl.date_fr(_SRC["telecharge_le"])
     for k, v in bac.items():
         A[k] = fr(v)
     derive = max(abs(o[c][k] - t["origines"][c][k]) for c in o for k, _ in DEST)

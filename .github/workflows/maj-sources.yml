@@ -1,0 +1,166 @@
+# Module de mise a jour des donnees -- sources publiees en FICHIERS (registre : data/sources_maj.json).
+#
+# DECISION AUTEUR 2026-10-02 : « un module qui, a chaque mise a jour d'une donnee que nous utilisons, declenche la mise
+# a jour et la reecriture des pages ». Chaque jour : scripts/maj_sources.py cherche une edition nouvelle (note du SIES
+# sur la licence, fiches de l'Etat de l'enseignement superieur, Insee Premiere sur l'empreinte carbone), l'archive avec
+# son empreinte, l'inscrit au registre et relance les generateurs. Les pages se reecrivent d'elles-memes : leur prose
+# est faite de jetons. Meme mandat que dette-insee.yml (auteur, 20/09/2026 : mise a jour sans intervention, gardee par
+# des controles qui bloquent AVANT d'ecrire).
+#
+# CE QUI GARDE LA PUBLICATION : une edition n'est adoptee que si tous les generateurs concernes passent en --check
+# (temoins et gardes de prose) ; sinon le registre et les pieces reviennent a leur etat d'avant et un ticket est ouvert.
+# Puis check-all --ci et build Hugo bloquants. Rien n'est pousse tant que ces portes n'ont pas passe.
+#
+# TEMOIN POSITIF, chaque lundi : `maj_sources.py essai` verifie que chaque detecteur retrouve a la source l'edition
+# deja archivee. Un detecteur qui ne trouve plus ce qu'il connait est en panne, et une panne de detecteur ressemble
+# exactement a « rien de nouveau » : c'est elle que ce passage guette.
+#
+# PIEGE HERITE de dette-insee.yml : un push signe par le GITHUB_TOKEN ne declenche aucun autre workflow. D'ou le job
+# `deploy`, qui appelle hugo.yml sur le SHA que le job `update` vient d'ecrire.
+#
+# SORTIES : la liste a commiter vient du registre (`maj_sources.py sorties`), jamais d'une enumeration recopiee ici.
+#
+# LES SOURCES A API (dossier dette) gardent leurs workflows dette-*.yml ; elles figurent au registre pour le tableau
+# d'etat. Les y fondre est une suite possible.
+#
+# CONDITION DE MORT : voir l'en-tete de scripts/maj_sources.py. DECROISSANCE : plus de 2 echecs par an pour cause
+# non-donnee (reseau, archive injoignable, droits) => reexamen du rythme et du dispositif.
+# Repli toujours viable : `python scripts/maj_sources.py integrer` en local + commit humain.
+name: Mise a jour des sources (fichiers)
+
+on:
+  schedule:
+    - cron: '40 6 * * *'       # chaque jour 06:40 UTC : detection et integration
+    - cron: '10 6 * * 1'       # chaque lundi 06:10 UTC : temoin positif des detecteurs
+  workflow_dispatch:
+    inputs:
+      publication:
+        description: "Adresse d'une Insee Premiere a adopter (vide : detection normale)"
+        type: string
+        required: false
+        default: ''
+      essai:
+        description: "Lancer seulement le temoin positif des detecteurs (depuis ce runner)"
+        type: boolean
+        required: false
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+
+env:
+  HUGO_VERSION: 0.147.0
+
+jobs:
+  update:
+    runs-on: ubuntu-24.04   # epingle -- voir docs/MIGRATION_RUNNER_UBUNTU26.md
+    outputs:
+      changed: ${{ steps.diff.outputs.changed }}
+      sha: ${{ steps.push.outputs.sha }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      # SVG et PNG ensemble ou pas du tout : les generateurs echouent sans cairosvg. Versions du poste ou les
+      # figures et les cartes ont ete validees.
+      - name: Dependances
+        run: python3 -m pip install --quiet openpyxl cairosvg==2.9.0 pillow==12.2.0
+
+      - name: Temoin positif des detecteurs (lundi)
+        if: github.event.schedule == '10 6 * * 1' || inputs.essai
+        run: python3 scripts/maj_sources.py essai
+
+      - name: Detecter, archiver, inscrire, relancer (exit 1 si une edition est refusee)
+        if: github.event.schedule != '10 6 * * 1' && !inputs.essai
+        env:
+          PUBLICATION: ${{ inputs.publication }}
+        run: |
+          if [ -n "$PUBLICATION" ]; then
+            python3 scripts/maj_sources.py integrer --publication "$PUBLICATION"
+          else
+            python3 scripts/maj_sources.py integrer
+          fi
+
+      - name: Detecter un changement
+        id: diff
+        run: |
+          git add -N $(python3 scripts/maj_sources.py sorties)
+          if git diff --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Aucune edition nouvelle -- rien a publier."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git diff --stat
+          fi
+
+      - name: Portes bloquantes (controles du site, build Hugo)
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          python3 scripts/check-all.py --ci
+          wget -q -O "${{ runner.temp }}/hugo.deb" \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+          sudo dpkg -i "${{ runner.temp }}/hugo.deb"
+          hugo --minify
+
+      - name: Publier sur main
+        id: push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add $(python3 scripts/maj_sources.py sorties)
+          git commit -m "data(sources): edition nouvelle adoptee le $(date -u +%Y-%m-%d)"
+          pushed=0
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then pushed=1; break; fi
+            echo "::warning::Push refuse (tentative $attempt) -- rebase puis nouvelle tentative"
+            git pull --rebase origin main || true
+            sleep $((attempt * 5))
+          done
+          if [ "$pushed" = 0 ]; then
+            echo "::error::Push impossible apres 3 tentatives -- edition NON publiee"
+            exit 1
+          fi
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+  deploy:
+    needs: update
+    if: needs.update.outputs.changed == 'true'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/hugo.yml
+    with:
+      ref: ${{ needs.update.outputs.sha }}
+
+  # Un seul ticket ouvert a la fois : ce workflow passe chaque jour, et une alerte repetee chaque matin cesse d'etre lue.
+  alerte:
+    needs: [update, deploy]
+    if: failure()
+    runs-on: ubuntu-24.04   # epingle -- voir docs/MIGRATION_RUNNER_UBUNTU26.md
+    permissions:
+      issues: write
+    steps:
+      - uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          script: |
+            const titre = 'Mise a jour des sources : echec du workflow';
+            const run = context.serverUrl + '/' + context.repo.owner + '/' + context.repo.repo + '/actions/runs/' + context.runId;
+            const quoi = '${{ needs.update.result }}' === 'failure'
+              ? 'detection, adoption refusee (temoin ou garde de prose : une phrase de la page n est plus soutenue par la donnee nouvelle, ou le fichier a change de forme), temoin positif d un detecteur, portes bloquantes ou push'
+              : 'deploiement de la page (la donnee est sur main, la page est en retard)';
+            const ouverts = await github.rest.issues.listForRepo({ owner: context.repo.owner, repo: context.repo.repo, state: 'open', per_page: 100 });
+            const deja = ouverts.data.find(i => i.title === titre);
+            if (deja) {
+              await github.rest.issues.createComment({ owner: context.repo.owner, repo: context.repo.repo, issue_number: deja.number,
+                body: 'Nouvel echec le ' + new Date().toISOString().slice(0, 10) + ' -- etape : ' + quoi + '.\n\nRun : ' + run });
+            } else {
+              await github.rest.issues.create({ owner: context.repo.owner, repo: context.repo.repo, title: titre,
+                body: 'Le workflow maj-sources a echoue le ' + new Date().toISOString().slice(0, 10) + ' -- etape : ' + quoi + '.\n\nRun : ' + run +
+                  '\n\nRepli : `python scripts/maj_sources.py integrer` en local ; si une garde de prose bloque, reformuler la phrase de la page, puis commit humain. ' +
+                  'Si la piece est introuvable : `python scripts/maj_sources.py integrer --publication <adresse>`.' });
+            }

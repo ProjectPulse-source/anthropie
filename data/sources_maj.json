@@ -1,0 +1,90 @@
+{
+ "_doc": "Registre des sources de données du site : UNE ligne par source, lue par scripts/maj_sources.py (détection, intégration, état), par les générateurs (quelle édition lire) et par le workflow maj-sources.yml. Règles : CLAUDE.md, section « Module de mise à jour ». Une source en mode « fichier » est une pièce archivée dans scripts/sources_enseignants/, empreinte dans SHA256SUMS ; une source en mode « api » est interrogée par son générateur et servie par son propre workflow.",
+ "sources": [
+  {
+   "id": "sies-licence",
+   "producteur": "MESRE-SIES",
+   "objet": "Note Flash « Parcours et réussite en licence », tableaux nationaux, feuille « Devenir cohorte N »",
+   "mode": "fichier",
+   "pages": ["/enseignants/ecole-et-parcours/"],
+   "generateurs": ["generer_parcours_licence.py", "generer_acces_superieur.py", "og_enseignants.py"],
+   "jeu": "data/parcours_licence.json",
+   "sorties": ["data/parcours_licence.json", "static/parcours_licence.json", "static/parcours_licence.csv",
+               "static/img/parcours-licence-devenir.svg", "static/img/parcours-licence-devenir.png",
+               "static/images/og-parcours-licence.jpg", "static/images/vig-parcours-licence.jpg"],
+   "cadence": "annuelle",
+   "fenetre": {"mois_debut": 11, "jour_debut": 1, "mois_fin": 12, "jour_fin": 15},
+   "detection": "archive de la page ministérielle « parcours-et-reussite-en-licence-les-resultats-de-la-session-AAAA » (les pages du ministère refusent les scripts ; les fichiers, non)",
+   "telecharge_le": "2026-10-02",
+   "cohortes": {
+    "2021": ["sies_nf2023-26_tableaux_nationaux_cohorte2021.xlsx", "Devenir cohorte 2021", "Note Flash n° 26, novembre 2023"],
+    "2022": ["sies_nf2024-30_tableaux_nationaux_cohorte2022.xlsx", "Devenir cohorte 2022", "Note Flash n° 30, novembre 2024"],
+    "2023": ["sies_nf2025-29_tableaux_nationaux_cohorte2023.xlsx", "Devenir cohorte 2023", "Note Flash n° 29, novembre 2025"]
+   }
+  },
+  {
+   "id": "eesr-acces",
+   "producteur": "MESRE-DGESIP/DGRI-SIES",
+   "objet": "L'état de l'Enseignement supérieur, de la Recherche et de l'Innovation en France, fiche 13 (tableau 13.03) et fiche 09 (tableaux 09.03 et 09.04)",
+   "mode": "fichier",
+   "pages": ["/enseignants/ecole-et-parcours/"],
+   "generateurs": ["generer_acces_superieur.py"],
+   "jeu": "data/acces_superieur.json",
+   "sorties": ["data/acces_superieur.json", "static/acces_superieur.json", "static/acces_superieur.csv",
+               "static/img/acces-superieur-origine.svg", "static/img/acces-superieur-origine.png"],
+   "cadence": "annuelle",
+   "fenetre": {"mois_debut": 5, "jour_debut": 1, "mois_fin": 9, "jour_fin": 30},
+   "detection": "adresse de l'édition suivante, publication.enseignementsup-recherche.gouv.fr/eesr/FR/EESR<n>_ES_13/ ; validée par le titre du tableau 13.03, jamais par le code HTTP (la page d'une édition absente répond 200)",
+   "regle": "l'année de la figure est celle de la dernière cohorte de sies-licence ; l'autre année archivée sert de témoin",
+   "telecharge_le": "2026-10-02",
+   "fiches_acces": {
+    "2023": ["eesr18_fiche13_acces_enseignement_superieur_bacheliers2023.html", "n° 18"],
+    "2024": ["eesr19_fiche13_acces_enseignement_superieur_bacheliers2024.html", "n° 19"]
+   },
+   "fiches_bac": {
+    "2023": "eesr18_fiche09_nouveaux_bacheliers_2023.html"
+   }
+  },
+  {
+   "id": "insee-empreinte",
+   "producteur": "Insee et SDES",
+   "objet": "Insee Première « Émissions de gaz à effet de serre et empreinte carbone de la France », fichier de données",
+   "mode": "fichier",
+   "pages": ["/enseignants/environnement/"],
+   "generateurs": ["generer_empreinte_carbone.py", "og_enseignants.py"],
+   "jeu": "data/empreinte_carbone.json",
+   "sorties": ["data/empreinte_carbone.json", "static/empreinte_carbone.json", "static/empreinte_carbone.csv",
+               "static/img/empreinte-carbone-deux-totaux.svg", "static/img/empreinte-carbone-deux-totaux.png",
+               "static/images/og-empreinte-carbone.jpg", "static/images/vig-empreinte-carbone.jpg"],
+   "cadence": "annuelle",
+   "fenetre": {"mois_debut": 10, "jour_debut": 1, "mois_fin": 11, "jour_fin": 30},
+   "detection": "page SDES « L'empreinte carbone de la France de 1990 à AAAA » de l'année suivante, puis flux des parutions de l'Insee pour retrouver l'Insee Première et son fichier",
+   "telecharge_le": "2026-10-02",
+   "annee_donnees": 2024,
+   "fichier": "insee_premiere_2077_empreinte_carbone_2024.xlsx",
+   "edition": "Insee Première n° 2077, octobre 2025",
+   "publication": "https://www.insee.fr/fr/statistiques/8654458"
+  },
+  {
+   "id": "dette-insee", "producteur": "INSEE, Eurostat", "objet": "dette publique française, charge d'intérêts", "mode": "api",
+   "pages": ["/cout-de-la-dette-publique/"], "generateurs": ["update_dette_insee.py"], "jeu": "data/dette_officielle.json",
+   "cadence": "trimestrielle", "workflow": "dette-insee.yml"
+  },
+  {
+   "id": "dette-monde", "producteur": "Eurostat, OCDE, FMI, Banque mondiale", "objet": "comparaison internationale ; décomposition de la variation du ratio", "mode": "api",
+   "pages": ["/dette-publique-comparaison-internationale/", "/pourquoi-la-dette-publique-augmente/"],
+   "generateurs": ["update_dette_monde.py", "update_dette_dynamique.py"], "jeu": "data/dette_monde.json",
+   "cadence": "semestrielle", "workflow": "dette-monde.yml"
+  },
+  {
+   "id": "dette-collectivites", "producteur": "Eurostat, OFGL", "objet": "administrations locales", "mode": "api",
+   "pages": ["/dette-publique-collectivites-locales/"], "generateurs": ["update_dette_collectivites.py"], "jeu": "data/dette_collectivites.json",
+   "cadence": "trimestrielle", "workflow": "dette-collectivites.yml"
+  },
+  {
+   "id": "qui-paie", "producteur": "INSEE (comptes nationaux distribués), registre du livre", "objet": "redistribution par dixième, détention de la dette", "mode": "fichier",
+   "pages": ["/qui-paie-la-dette-publique/"], "generateurs": ["generer_figures_qui_paie.py"], "jeu": "data/qui_paie_donnees.json",
+   "cadence": "annuelle", "detection": "aucune à ce jour : mise à jour à la main (point ouvert, déclaré)"
+  }
+ ]
+}

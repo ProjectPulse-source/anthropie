@@ -93,7 +93,7 @@ d'émissions dans l'air et comprennent le transport international des résidents
 {{< empreinte-val "empreinte_hab" >}}&nbsp;tonnes. L'année {{< empreinte-val "annee" >}} est provisoire, les années
 1990 à 2009 sont rétropolées, et chaque édition révise les précédentes&nbsp;: tous les chiffres de cette page viennent
 de la même édition. La part des importations, l'écart entre les totaux et les évolutions sont un calcul de cette
-page. Fichier téléchargé le 2&nbsp;octobre 2026. Les extraits du programme viennent de l'annexe «&nbsp;Programme de
+page. Fichier téléchargé le {{< empreinte-val "telecharge_le" >}}. Les extraits du programme viennent de l'annexe «&nbsp;Programme de
 sciences économiques et sociales de terminale générale&nbsp;» publiée par Éduscol.
 
 {{< exemplaire slug="anthropie-ordre-ici-dette-ailleurs" lien="/ressources-offertes/anthropie-enseignants/"

@@ -11,8 +11,9 @@ complémentaire 2 (émissions et empreinte depuis 1990). Coproduction Insee-SDES
 valait 644 Mt dans l'édition de 2024 et 583 Mt dans celle-ci ; la dernière année est provisoire. On ne mélange jamais
 deux éditions : tout vient d'UN fichier.
 
-METTRE À JOUR (édition annuelle, mi-octobre) : archiver le fichier de la nouvelle Insee Première, ajouter son
-empreinte, changer FICHIER et EDITION, relancer. Les gardes disent si les constats de la fiche tiennent.
+METTRE À JOUR (édition annuelle, mi-octobre) : `python scripts/maj_sources.py integrer` archive le fichier de la
+nouvelle Insee Première et l'inscrit au registre data/sources_maj.json, puis relance ce générateur. Les gardes disent
+si les constats de la fiche tiennent ; sinon rien n'est adopté.
 
 TÉMOINS, bloquants : chaque total se retrouve depuis ses composantes (à l'arrondi) ; la dernière ligne de la série
 longue égale la décomposition de l'année ; les deux tableaux de la série longue s'accordent.
@@ -44,8 +45,9 @@ OUT_CSV = ROOT / "static" / "empreinte_carbone.csv"
 OUT_IMG = ROOT / "static" / "img"
 FIGURE = "empreinte-carbone-deux-totaux"
 PAGE_URL = "stephane-lalut.com/enseignants/environnement/"
-FICHIER = "insee_premiere_2077_empreinte_carbone_2024.xlsx"
-EDITION = "Insee Première n° 2077, octobre 2025"
+# Édition lue dans le registre data/sources_maj.json : une nouvelle Insee Première s'adopte là (scripts/maj_sources.py).
+_SRC = gl.source("insee-empreinte")
+FICHIER, EDITION = _SRC["fichier"], _SRC["edition"]
 fail, log, fr, esc = gl.fail, gl.log, gl.fr, gl.esc
 
 L1 = {"menages": "Émissions directes des ménages",
@@ -131,6 +133,7 @@ def affichage(j: dict) -> tuple[dict, list[str]]:
     e_em, e_emp = evol(a0["emissions"], a1["emissions"]), evol(a0["empreinte"], a1["empreinte"])
     e_imp, e_int = evol(a0["importee"], a1["importee"]), evol(interieure0, interieure1)
     A = {"annee": str(d["annee"]), "annee_depart": str(a0["annee"]), "edition": EDITION,
+         "telecharge_le": gl.date_fr(_SRC["telecharge_le"]),
          "emissions": ent(d["emissions"]), "empreinte": ent(d["empreinte"]), "menages": ent(d["menages"]),
          "interieure": ent(d["interieure"]), "exportee": ent(d["exportee"]), "importee": ent(d["importee"]),
          "ecart_totaux": ent(d["empreinte"] - d["emissions"]), "part_importee": ent(100 * d["importee"] / d["empreinte"]),

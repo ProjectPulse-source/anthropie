@@ -53,6 +53,37 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-02 — Module de mise à jour des données : registre, script, workflow quotidien, POUSSÉ
+
+Décision de l'auteur (02/10 au soir) : « construis le module de mise à jour ». Règle écrite au `CLAUDE.md`, section
+« Module de mise à jour des données ».
+
+- **Registre** `data/sources_maj.json` : sept sources (trois en fichier servies par le module, trois à API servies par
+  leurs workflows `dette-*.yml`, une à la main, déclarée). Les trois générateurs des enseignants y lisent leur édition.
+- **Script** `scripts/maj_sources.py` : `etat`, `detecter`, `integrer`, `essai`, `sorties`, `controle`. Détecteurs :
+  note du SIES par l'archive publique de sa page ; fiches de l'État de l'enseignement supérieur par l'adresse de
+  l'édition, validée sur le titre du tableau ; Insee Première par la page annuelle du SDES puis le flux des parutions.
+- **Workflow** `.github/workflows/maj-sources.yml` : `integrer` chaque jour à 06:40 UTC, `essai` chaque lundi, portes
+  bloquantes, commit des sorties listées par le registre, déploiement, un seul ticket ouvert en cas d'échec.
+  En service depuis le push.
+- **Pages sans rien en dur** : nombre de cohortes en lettres, première cohorte comparable, dates de téléchargement,
+  millésimes comparés dans l'ordre du temps. La garde « trois cohortes » devient « au moins trois ».
+- **Mesuré** : `essai` : six vérifications sur six (la cohorte 2023 du SIES et le fichier de l'INSEE retrouvés octet
+  pour octet, le tableau 13.03 identique). **Adoption rejouée de bout en bout** : cohorte 2023 retirée du registre et
+  de l'archive, `integrer` l'a retrouvée, archivée, inscrite, a relancé les générateurs ; tableur, registre et sorties
+  identiques à l'état d'origine. **Refus rejoué** : pièce déjà présente, arrêt, registre remis dans son état d'avant.
+  `check-all` complet à 0 (dix contrôles, dont le nouveau), build et audit des liens à 0.
+- **Défaut trouvé par le témoin** : sur ce poste, Python refusait le certificat du site du SDES que le système
+  accepte ; repli sur curl, sans jamais désactiver la vérification. Une panne de réseau n'est plus lue comme « pas
+  encore parue ».
+- **Limites** : la note du SIES dépend du délai de l'archive publique ; le filtrage du flux de l'INSEE par titre ne se
+  prouve qu'un jour de parution réelle (`integrer --publication <adresse>` en secours) ; le comportement depuis les
+  serveurs de GitHub n'est pas encore observé (premier passage à lire après le push : `essai` en lancement manuel).
+- **Chemins** : `data/sources_maj.json`, `scripts/maj_sources.py`, `.github/workflows/maj-sources.yml`,
+  `scripts/check-all.py`, les trois `scripts/generer_*` des enseignants, `content/enseignants/ecole-et-parcours/_index.md`,
+  `content/enseignants/environnement/_index.md`, leurs trois jeux `data/` et `static/` (jetons ajoutés), `CLAUDE.md` ;
+  cette entrée seule.
+
 ### 2026-10-02 — Troisième thème des enseignants : Environnement (empreinte carbone) ; STOP levé, POUSSÉ
 
 Décisions de l'auteur (02/10 au soir) : construire le thème, **lever le gel des pages** (« on construit un site
