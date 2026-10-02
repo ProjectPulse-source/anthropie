@@ -53,6 +53,31 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-02 — Module de mise à jour observé depuis GitHub ; exemplaire de consultation en bandeau, POUSSÉ
+
+- **Témoin des détecteurs lancé depuis GitHub** (`gh workflow run maj-sources.yml -f essai=true`). Premier passage
+  (run 37036775085) : échec sur `sies-licence` seul — l'archive publique a répondu 503 au serveur, et le témoin en
+  concluait à un détecteur en panne ; les cinq autres vérifications passaient. Ticket n° 7 ouvert par le workflow.
+- **Correctif `eda7ef1`** (`scripts/maj_sources.py`) : `http_archive`, trois essais espacés (0, 20, 60 s) ; si l'archive
+  reste muette, verdict **non concluant**, distinct d'échec, avec avertissement dans le run et sans ticket. Mutations :
+  archive forcée à 503 → 0 échec, 1 non concluant ; tableur différent → 1 échec. Second passage depuis GitHub
+  (run 37037949152) : 0 échec, 0 non concluant. Ticket n° 7 fermé.
+- **Aucune API pour les trois sources en fichier** (vérifié le 02/10 : plateforme ouverte du ministère — jeux
+  Parcoursup seulement —, data.gouv, INSEE dont la page à adresse fixe est en retard d'une édition). Seul signal de
+  parution lisible par machine : le flux des parutions de l'INSEE.
+- **Reste à observer** : aucune édition nouvelle n'a encore été adoptée en conditions réelles (seule la réadoption
+  d'une édition connue a été jouée). Première occasion : Insee Première sur l'empreinte, vers le 15/10/2026.
+  **Rendez-vous Outlook posé au 19/10/2026, 9 h** (page à relire, lien des exécutions, commande de reprise) ; celui
+  du 16/11 sur la note du SIES devient un contrôle du module, son corps le dit.
+- **Exemplaire de consultation : bandeau `428e881`.** La ligne grise sous les liens du bloc `appel-livre` était trop
+  peu visible (auteur, 02/10). Bandeau pleine largeur en pied du bloc, publics en surtitre, offre en texte plein,
+  bouton au contour « Demander un exemplaire » ; « Acheter le broché » reste le seul bouton plein. Six pages
+  françaises, aucune page anglaise ; 1 280 et 390 px sans débordement, rendu regardé ; `check-all --ci` à 0 ;
+  déploiement vérifié sur `/dette-publique-collectivites-locales/`. L'encart `consultation` des dix pages sans bloc
+  d'achat est inchangé.
+- **Chemins** : `scripts/maj_sources.py` ; `layouts/shortcodes/appel-livre.html`, `assets/scss/_components.scss` ;
+  `CLAUDE.md` (mot « bandeau ») ; cette entrée seule.
+
 ### 2026-10-02 — Module de mise à jour des données : registre, script, workflow quotidien, POUSSÉ
 
 Décision de l'auteur (02/10 au soir) : « construis le module de mise à jour ». Règle écrite au `CLAUDE.md`, section
@@ -78,7 +103,7 @@ Décision de l'auteur (02/10 au soir) : « construis le module de mise à jour �
   encore parue ».
 - **Limites** : la note du SIES dépend du délai de l'archive publique ; le filtrage du flux de l'INSEE par titre ne se
   prouve qu'un jour de parution réelle (`integrer --publication <adresse>` en secours) ; le comportement depuis les
-  serveurs de GitHub n'est pas encore observé (premier passage à lire après le push : `essai` en lancement manuel).
+  serveurs de GitHub a été observé ensuite (entrée ci-dessus : un échec sur 503 de l'archive, corrigé).
 - **Chemins** : `data/sources_maj.json`, `scripts/maj_sources.py`, `.github/workflows/maj-sources.yml`,
   `scripts/check-all.py`, les trois `scripts/generer_*` des enseignants, `content/enseignants/ecole-et-parcours/_index.md`,
   `content/enseignants/environnement/_index.md`, leurs trois jeux `data/` et `static/` (jetons ajoutés), `CLAUDE.md` ;

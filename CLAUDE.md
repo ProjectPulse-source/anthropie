@@ -241,7 +241,7 @@ volume sur la librairie en ligne par le guichet `/ressources-offertes/`, et cré
 (presse, enseignement, recherche, responsables publics, associations). **Deux organes, un seul texte de publics**
 (`partials/consultation-publics.html`) :
 
-- page qui porte un bloc d'achat : la ligne est **dans `appel-livre`**, automatique dès que le livre a une page au
+- page qui porte un bloc d'achat : un bandeau avec bouton, en pied du bloc, **dans `appel-livre`**, automatique dès que le livre a une page au
   guichet (`consultation="non"` la retire) ;
 - page sans bloc d'achat (notions, guides, corpus) : `{{< consultation slug="…" >}}` en fin de page ;
 - pages des enseignants : `exemplaire`, avec leur façade (couche pédagogique, points 5 et 7).
