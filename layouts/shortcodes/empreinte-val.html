@@ -1,0 +1,14 @@
+{{- /* {{< empreinte-val "importee" >}} — une valeur du bloc affichage de data/empreinte_carbone.json (activité de SES
+       « Émissions françaises et empreinte carbone : pourquoi deux totaux ? », scripts/generer_empreinte_carbone.py).
+       Même contrat que licence-val : clé inconnue ou données absentes = échec de build. Français seulement. */ -}}
+{{- $k := .Get 0 -}}
+{{- $a := "" -}}
+{{- with site.Data.empreinte_carbone -}}{{- $a = .affichage -}}{{- end -}}
+{{- if not $a -}}
+  {{- errorf "empreinte-val: data/empreinte_carbone.json absent ou sans bloc affichage (page %s)" .Page.RelPermalink -}}
+{{- else -}}
+  {{- $v := index $a $k -}}
+  {{- if not $v -}}
+    {{- errorf "empreinte-val: cle %q inconnue du bloc affichage (page %s)" $k .Page.RelPermalink -}}
+  {{- else -}}{{- $v -}}{{- end -}}
+{{- end -}}

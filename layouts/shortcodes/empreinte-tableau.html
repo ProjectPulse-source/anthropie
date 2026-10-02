@@ -1,0 +1,21 @@
+{{- /* {{< empreinte-tableau >}} — les valeurs de la figure « empreinte-carbone-deux-totaux » en tableau, repliées sous elle.
+       Même motif et même habillage que licence-tableau ; mêmes jetons que empreinte-val : clé absente = échec de build. */ -}}
+{{- $a := "" -}}
+{{- with site.Data.empreinte_carbone -}}{{- $a = .affichage -}}{{- end -}}
+{{- if not $a -}}{{- errorf "empreinte-tableau: data/empreinte_carbone.json absent ou sans bloc affichage (page %s)" .Page.RelPermalink -}}{{- end -}}
+{{- range slice "menages" "interieure" "exportee" "importee" "emissions" "empreinte" }}{{ if not (index $a .) }}{{ errorf "empreinte-tableau: cle %s absente du bloc affichage" . }}{{ end }}{{ end -}}
+<details class="repli licence-tableau"><summary>Les valeurs de la figure en tableau</summary>
+<p>Gaz à effet de serre, France, {{ index $a "annee" }}, en millions de tonnes équivalent CO2.</p>
+<div class="table-scroll">
+<table class="dette-monde-table">
+<thead><tr><th scope="col">Poste</th><th scope="col">Émissions des unités résidentes françaises</th><th scope="col">Empreinte carbone</th></tr></thead>
+<tbody>
+<tr><th scope="row">Émissions directes des ménages</th><td>{{ index $a "menages" }}</td><td>{{ index $a "menages" }}</td></tr>
+<tr><th scope="row">Production en France pour la demande française</th><td>{{ index $a "interieure" }}</td><td>{{ index $a "interieure" }}</td></tr>
+<tr><th scope="row">Production en France exportée</th><td>{{ index $a "exportee" }}</td><td>—</td></tr>
+<tr><th scope="row">Importations pour la demande française</th><td>—</td><td>{{ index $a "importee" }}</td></tr>
+<tr><th scope="row">Total</th><td>{{ index $a "emissions" }}</td><td>{{ index $a "empreinte" }}</td></tr>
+</tbody>
+</table>
+</div>
+</details>

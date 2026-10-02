@@ -40,6 +40,11 @@
   body.imprime-une-fiche .imprime-cible .figure-ciseau { margin: 8pt 0 !important; break-inside: avoid; }
   body.imprime-une-fiche .imprime-cible .figure-ciseau img { max-width: 100% !important; }
   body.imprime-une-fiche .imprime-cible .figure-ciseau figcaption a { display: none !important; }
+  // Aucune page blanche en fin de fiche (mesuré le 02/10/2026 : la fiche « empreinte » tenait en une page et en
+  // sortait deux, la seconde vide, par la marge basse du dernier bloc et la hauteur minimale du conteneur).
+  body.imprime-une-fiche .imprime-cible > :last-child { margin-bottom: 0 !important; }
+  body.imprime-une-fiche, body.imprime-une-fiche .site-wrapper, body.imprime-une-fiche .site-main,
+  body.imprime-une-fiche main, body.imprime-une-fiche .home-section { min-height: 0 !important; height: auto !important; padding-bottom: 0 !important; margin-bottom: 0 !important; }
 }
 
 // L'offre du livre n'apparaît sur aucune impression (avis « Enseignants », 30/09, § 9).

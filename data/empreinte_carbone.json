@@ -1,0 +1,403 @@
+{
+ "releve_le": "2026-10-02",
+ "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; source Insee-SDES",
+ "meta": {
+  "page": "https://stephane-lalut.com/enseignants/environnement/",
+  "licence": "CC BY 4.0 pour la compilation et la figure ; données Insee-SDES",
+  "source": "Insee et SDES, Insee Première n° 2077, octobre 2025, fichier de données (figure 1, figure 3, tableau complémentaire 2)",
+  "champ": "France ; CO2, CH4, N2O et gaz fluorés",
+  "definitions": {
+   "emissions": "émissions des unités résidentes françaises (inventaire au format des comptes d'émissions dans l'air), transport international des résidents compris",
+   "empreinte": "estimation des émissions associées à la demande finale française, hors exportations, où qu'elles aient lieu",
+   "menages": "émissions directes des ménages (chauffage, carburants)",
+   "interieure": "émissions de la production intérieure destinée à la demande finale française",
+   "exportee": "émissions de la production intérieure exportée (décomposition de l'année seulement)",
+   "importee": "émissions importées destinées à la demande finale française",
+   "avertissement": "série révisée à chaque édition ; la dernière année est provisoire ; 1990-2009 rétropolées"
+  }
+ },
+ "decomposition": {
+  "annee": 2024,
+  "menages": 99.0,
+  "exportee": 125.0,
+  "interieure": 180.0,
+  "importee": 284.0,
+  "emissions": 404.0,
+  "empreinte": 563.0
+ },
+ "serie": [
+  {
+   "annee": 1990,
+   "menages": 130.0,
+   "interieure": 293.0,
+   "importee": 279.0,
+   "empreinte": 702.0,
+   "emissions": 589.2,
+   "emissions_hab": 10.1,
+   "empreinte_hab": 12.1
+  },
+  {
+   "annee": 1991,
+   "menages": 139.0,
+   "interieure": 298.0,
+   "importee": 267.0,
+   "empreinte": 703.0,
+   "emissions": 613.9,
+   "emissions_hab": 10.5,
+   "empreinte_hab": 12.0
+  },
+  {
+   "annee": 1992,
+   "menages": 140.0,
+   "interieure": 291.0,
+   "importee": 261.0,
+   "empreinte": 693.0,
+   "emissions": 603.7,
+   "emissions_hab": 10.3,
+   "empreinte_hab": 11.8
+  },
+  {
+   "annee": 1993,
+   "menages": 139.0,
+   "interieure": 283.0,
+   "importee": 225.0,
+   "empreinte": 646.0,
+   "emissions": 581.9,
+   "emissions_hab": 9.9,
+   "empreinte_hab": 11.0
+  },
+  {
+   "annee": 1994,
+   "menages": 135.0,
+   "interieure": 272.0,
+   "importee": 234.0,
+   "empreinte": 641.0,
+   "emissions": 573.7,
+   "emissions_hab": 9.7,
+   "empreinte_hab": 10.8
+  },
+  {
+   "annee": 1995,
+   "menages": 136.0,
+   "interieure": 268.0,
+   "importee": 257.0,
+   "empreinte": 660.0,
+   "emissions": 579.4,
+   "emissions_hab": 9.8,
+   "empreinte_hab": 11.1
+  },
+  {
+   "annee": 1996,
+   "menages": 144.0,
+   "interieure": 269.0,
+   "importee": 257.0,
+   "empreinte": 669.0,
+   "emissions": 598.0,
+   "emissions_hab": 10.0,
+   "empreinte_hab": 11.2
+  },
+  {
+   "annee": 1997,
+   "menages": 141.0,
+   "interieure": 247.0,
+   "importee": 249.0,
+   "empreinte": 637.0,
+   "emissions": 589.7,
+   "emissions_hab": 9.9,
+   "empreinte_hab": 10.7
+  },
+  {
+   "annee": 1998,
+   "menages": 145.0,
+   "interieure": 288.0,
+   "importee": 269.0,
+   "empreinte": 702.0,
+   "emissions": 603.1,
+   "emissions_hab": 10.0,
+   "empreinte_hab": 11.7
+  },
+  {
+   "annee": 1999,
+   "menages": 147.0,
+   "interieure": 288.0,
+   "importee": 263.0,
+   "empreinte": 698.0,
+   "emissions": 598.7,
+   "emissions_hab": 9.9,
+   "empreinte_hab": 11.6
+  },
+  {
+   "annee": 2000,
+   "menages": 145.0,
+   "interieure": 272.0,
+   "importee": 274.0,
+   "empreinte": 692.0,
+   "emissions": 589.9,
+   "emissions_hab": 9.7,
+   "empreinte_hab": 11.4
+  },
+  {
+   "annee": 2001,
+   "menages": 152.0,
+   "interieure": 275.0,
+   "importee": 274.0,
+   "empreinte": 700.0,
+   "emissions": 595.4,
+   "emissions_hab": 9.7,
+   "empreinte_hab": 11.4
+  },
+  {
+   "annee": 2002,
+   "menages": 150.0,
+   "interieure": 274.0,
+   "importee": 279.0,
+   "empreinte": 703.0,
+   "emissions": 588.7,
+   "emissions_hab": 9.6,
+   "empreinte_hab": 11.4
+  },
+  {
+   "annee": 2003,
+   "menages": 152.0,
+   "interieure": 280.0,
+   "importee": 307.0,
+   "empreinte": 739.0,
+   "emissions": 593.0,
+   "emissions_hab": 9.6,
+   "empreinte_hab": 11.9
+  },
+  {
+   "annee": 2004,
+   "menages": 155.0,
+   "interieure": 276.0,
+   "importee": 339.0,
+   "empreinte": 769.0,
+   "emissions": 592.4,
+   "emissions_hab": 9.5,
+   "empreinte_hab": 12.3
+  },
+  {
+   "annee": 2005,
+   "menages": 152.0,
+   "interieure": 275.0,
+   "importee": 356.0,
+   "empreinte": 782.0,
+   "emissions": 593.4,
+   "emissions_hab": 9.4,
+   "empreinte_hab": 12.4
+  },
+  {
+   "annee": 2006,
+   "menages": 149.0,
+   "interieure": 267.0,
+   "importee": 374.0,
+   "empreinte": 791.0,
+   "emissions": 583.6,
+   "emissions_hab": 9.2,
+   "empreinte_hab": 12.5
+  },
+  {
+   "annee": 2007,
+   "menages": 139.0,
+   "interieure": 271.0,
+   "importee": 396.0,
+   "empreinte": 807.0,
+   "emissions": 575.6,
+   "emissions_hab": 9.0,
+   "empreinte_hab": 12.7
+  },
+  {
+   "annee": 2008,
+   "menages": 141.0,
+   "interieure": 264.0,
+   "importee": 411.0,
+   "empreinte": 816.0,
+   "emissions": 571.3,
+   "emissions_hab": 8.9,
+   "empreinte_hab": 12.7
+  },
+  {
+   "annee": 2009,
+   "menages": 142.0,
+   "interieure": 260.0,
+   "importee": 346.0,
+   "empreinte": 748.0,
+   "emissions": 542.8,
+   "emissions_hab": 8.4,
+   "empreinte_hab": 11.6
+  },
+  {
+   "annee": 2010,
+   "menages": 140.0,
+   "interieure": 254.0,
+   "importee": 355.0,
+   "empreinte": 749.0,
+   "emissions": 547.6,
+   "emissions_hab": 8.5,
+   "empreinte_hab": 11.6
+  },
+  {
+   "annee": 2011,
+   "menages": 132.0,
+   "interieure": 238.0,
+   "importee": 370.0,
+   "empreinte": 740.0,
+   "emissions": 522.9,
+   "emissions_hab": 8.0,
+   "empreinte_hab": 11.4
+  },
+  {
+   "annee": 2012,
+   "menages": 136.0,
+   "interieure": 238.0,
+   "importee": 338.0,
+   "empreinte": 713.0,
+   "emissions": 525.5,
+   "emissions_hab": 8.0,
+   "empreinte_hab": 10.9
+  },
+  {
+   "annee": 2013,
+   "menages": 137.0,
+   "interieure": 235.0,
+   "importee": 333.0,
+   "empreinte": 705.0,
+   "emissions": 522.3,
+   "emissions_hab": 8.0,
+   "empreinte_hab": 10.7
+  },
+  {
+   "annee": 2014,
+   "menages": 123.0,
+   "interieure": 222.0,
+   "importee": 326.0,
+   "empreinte": 670.0,
+   "emissions": 487.7,
+   "emissions_hab": 7.4,
+   "empreinte_hab": 10.2
+  },
+  {
+   "annee": 2015,
+   "menages": 126.0,
+   "interieure": 220.0,
+   "importee": 302.0,
+   "empreinte": 648.0,
+   "emissions": 489.8,
+   "emissions_hab": 7.4,
+   "empreinte_hab": 9.8
+  },
+  {
+   "annee": 2016,
+   "menages": 130.0,
+   "interieure": 221.0,
+   "importee": 298.0,
+   "empreinte": 648.0,
+   "emissions": 490.6,
+   "emissions_hab": 7.4,
+   "empreinte_hab": 9.7
+  },
+  {
+   "annee": 2017,
+   "menages": 126.0,
+   "interieure": 224.0,
+   "importee": 305.0,
+   "empreinte": 656.0,
+   "emissions": 498.2,
+   "emissions_hab": 7.5,
+   "empreinte_hab": 9.8
+  },
+  {
+   "annee": 2018,
+   "menages": 121.0,
+   "interieure": 216.0,
+   "importee": 318.0,
+   "empreinte": 654.0,
+   "emissions": 481.0,
+   "emissions_hab": 7.2,
+   "empreinte_hab": 9.7
+  },
+  {
+   "annee": 2019,
+   "menages": 119.0,
+   "interieure": 212.0,
+   "importee": 307.0,
+   "empreinte": 637.0,
+   "emissions": 470.7,
+   "emissions_hab": 7.0,
+   "empreinte_hab": 9.5
+  },
+  {
+   "annee": 2020,
+   "menages": 103.0,
+   "interieure": 196.0,
+   "importee": 281.0,
+   "empreinte": 581.0,
+   "emissions": 422.0,
+   "emissions_hab": 6.2,
+   "empreinte_hab": 8.6
+  },
+  {
+   "annee": 2021,
+   "menages": 113.0,
+   "interieure": 198.0,
+   "importee": 309.0,
+   "empreinte": 620.0,
+   "emissions": 447.2,
+   "emissions_hab": 6.6,
+   "empreinte_hab": 9.1
+  },
+  {
+   "annee": 2022,
+   "menages": 106.0,
+   "interieure": 189.0,
+   "importee": 326.0,
+   "empreinte": 621.0,
+   "emissions": 434.1,
+   "emissions_hab": 6.4,
+   "empreinte_hab": 9.1
+  },
+  {
+   "annee": 2023,
+   "menages": 100.0,
+   "interieure": 185.0,
+   "importee": 297.0,
+   "empreinte": 583.0,
+   "emissions": 408.2,
+   "emissions_hab": 6.0,
+   "empreinte_hab": 8.5
+  },
+  {
+   "annee": 2024,
+   "menages": 99.0,
+   "interieure": 180.0,
+   "importee": 284.0,
+   "empreinte": 563.0,
+   "emissions": 404.4,
+   "emissions_hab": 5.9,
+   "empreinte_hab": 8.2
+  }
+ ],
+ "affichage": {
+  "annee": "2024",
+  "annee_depart": "1990",
+  "edition": "Insee Première n° 2077, octobre 2025",
+  "emissions": "404",
+  "empreinte": "563",
+  "menages": "99",
+  "interieure": "180",
+  "exportee": "125",
+  "importee": "284",
+  "ecart_totaux": "159",
+  "part_importee": "50",
+  "commun": "279",
+  "emissions_hab": "5,9",
+  "empreinte_hab": "8,2",
+  "evol_emissions": "31",
+  "evol_empreinte": "20",
+  "evol_importee": "2",
+  "evol_interieure": "34",
+  "emissions_depart": "589",
+  "empreinte_depart": "702",
+  "importee_depart": "279"
+ }
+}

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""og_enseignants.py -- carte de partage et vignette de la page /enseignants/ecole-et-parcours/.
+"""og_enseignants.py -- cartes de partage et vignettes des pages /enseignants/ecole-et-parcours/ et /enseignants/environnement/.
 
     python scripts/og_enseignants.py
 
@@ -12,8 +12,9 @@ est propre : les quatre barres empilées de la figure, redessinées à l'échell
 À relancer après scripts/generer_parcours_licence.py quand la cohorte change (édition annuelle du SIES, novembre) :
 le millésime et les valeurs de la clé en dépendent.
 
-SORTIES : static/images/og-parcours-licence.jpg (1200x630) et vig-parcours-licence.jpg (720x378, fond blanc, lue par
-l'index /ressources/), déclarées par `og_image` dans content/enseignants/ecole-et-parcours/_index.md.
+SORTIES : static/images/og-parcours-licence.jpg et og-empreinte-carbone.jpg (1200x630), avec leurs vignettes vig-*.jpg
+(720x378, fond blanc, lues par l'index /ressources/), déclarées par `og_image` dans les deux pages. La seconde carte
+se relance après scripts/generer_empreinte_carbone.py (édition annuelle Insee-SDES, mi-octobre).
 """
 from __future__ import annotations
 
@@ -74,7 +75,50 @@ def main() -> int:
               (og.SEC, "Recommencent une première année"),
               (GRIS_CLAIR, "Réorientés hors licence : %s à %s %%" % (A["reorientation_min"], A["reorientation_max"])),
               (og.C2, "Non retrouvés dans les fichiers")])
+    carte_empreinte()
     return 0
+
+
+def figure_deux_totaux(d, dec: dict) -> None:
+    """Les deux barres de la figure, à la même échelle : émissions des unités résidentes, empreinte."""
+    x0, larg, top, hb, pas = 660, 400, 150, 58, 118
+    ech = larg / dec["empreinte"]
+    fa, fv = og.font("inter", 18, 500), og.font("inter", 22, 600)
+    for n, (lib, postes, total) in enumerate([("Émissions des unités résidentes", [("menages", GRIS_CLAIR), ("interieure", og.C1), ("exportee", og.SEC)], dec["emissions"]),
+                                              ("Empreinte carbone", [("menages", GRIS_CLAIR), ("interieure", og.C1), ("importee", og.C2)], dec["empreinte"])]):
+        y = top + pas * n
+        d.text((x0, y - 28), lib, font=fa, fill=og.GREY)
+        x = float(x0)
+        for cle, col in postes:
+            w = dec[cle] * ech
+            d.rectangle([x, y, x + w - 2, y + hb], fill=col)
+            x += w
+        d.text((x + 10, y + 14), "%d" % round(total), font=fv, fill=og.INK)
+    fl = og.font("inter", 17, 400)
+    yb = top + pas * 2 - 26
+    d.text((x0, yb), "Gaz à effet de serre, France,", font=fl, fill=og.URL_GREY)
+    d.text((x0, yb + 22), "en millions de tonnes équivalent CO2", font=fl, fill=og.URL_GREY)
+
+
+def carte_empreinte() -> None:
+    """Page /enseignants/environnement/ : valeurs lues dans data/empreinte_carbone.json."""
+    f = ROOT / "data" / "empreinte_carbone.json"
+    if not f.is_file():
+        og.fail("jeu de données absent : %s — lancer scripts/generer_empreinte_carbone.py d'abord" % f)
+    j = json.loads(f.read_text(encoding="utf-8"))
+    A, dec = j["affichage"], j["decomposition"]
+    if not dec["empreinte"] > dec["emissions"] > 0:
+        og.fail("carte empreinte : l'empreinte ne dépasse plus les émissions des unités résidentes")
+    og.carte("og-empreinte-carbone.jpg",
+             ["Émissions, empreinte", "carbone : pourquoi", "deux totaux ?"],
+             "",
+             "Insee et SDES, France %s · activité de SES, Terminale · CC BY 4.0" % A["annee"],
+             "stephane-lalut.com/enseignants/environnement/",
+             lambda d: figure_deux_totaux(d, dec),
+             [(GRIS_CLAIR, "Émissions directes des ménages : %s" % A["menages"]),
+              (og.C1, "Production en France, demande française : %s" % A["interieure"]),
+              (og.SEC, "Production en France exportée : %s" % A["exportee"]),
+              (og.C2, "Importations, demande française : %s" % A["importee"])])
 
 
 if __name__ == "__main__":

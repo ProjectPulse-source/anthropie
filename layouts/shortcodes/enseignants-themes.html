@@ -3,6 +3,7 @@
 
        {{< enseignants-themes actif="dette" >}}   /enseignants/                    Dette publique
        {{< enseignants-themes actif="ecole" >}}   /enseignants/ecole-et-parcours/  École et parcours
+       {{< enseignants-themes actif="environnement" >}}  /enseignants/environnement/  Environnement (02/10/2026)
 
        MÊME ORGANE VISUEL que la barre du dossier dette : les classes `dossier-dette*` (_reutiliser.scss) portent déjà
        le maintien sous l'en-tête, les libellés courts sur téléphone et les règles d'impression (_print.scss,
@@ -20,7 +21,8 @@
 {{- $actif := .Get "actif" -}}
 {{- $themes := slice
     (dict "cle" "dette" "page" "/enseignants" "long" "Dette publique" "court" "Dette" "role" "Première et Terminale" "id" "")
-    (dict "cle" "ecole" "page" "/enseignants/ecole-et-parcours" "long" "École et parcours" "court" "École" "role" "Terminale" "id" "droit-a-l-erreur") -}}
+    (dict "cle" "ecole" "page" "/enseignants/ecole-et-parcours" "long" "École et parcours" "court" "École" "role" "Terminale" "id" "droit-a-l-erreur")
+    (dict "cle" "environnement" "page" "/enseignants/environnement" "long" "Environnement" "court" "Climat" "role" "Terminale" "id" "") -}}
 {{- $connus := slice -}}
 {{- range $themes }}{{ $connus = $connus | append .cle }}{{ end -}}
 {{- if not (in $connus $actif) -}}{{ errorf "enseignants-themes: theme \"%s\" inconnu (attendu %s) dans %s" $actif (delimit $connus ", ") .Page.File.Path }}{{- end -}}

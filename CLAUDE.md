@@ -191,7 +191,8 @@ sous-titres propres, à déclarer alors par bloc dans `content/ressources/_index
 Une page d'**usage** pour les enseignants, qui transforme les ressources en activités sans les recopier ; les pages de
 recherche ne portent **aucune** activité, seulement un lien discret (bloc « Réutiliser », FR, quatre volets dette).
 Arbitrage : `D:\PRO\.claude\external-audits\ARBITRATIONS\ENTRANTE_2026-09-30_Dette_Pedagogie_arbitrage.md` ; fiche D0
-dans la feuille de route GEO. Exception au STOP accordée par l'auteur pour cette page seule.
+dans la feuille de route GEO. **Le STOP des nouveaux ensembles est levé (auteur, 02/10/2026) : aucune exception à
+demander, aucune fenêtre d'attente ; une page se met en ligne dès qu'elle est prête et contrôlée.**
 
 1. **Fiches dynamiques.** Fiche élève et corrigé sont des sections imprimables de la page (`section.fiche`, bouton
    « Imprimer la fiche élève », `static/js/fiche-imprimer.js`, `assets/scss/_enseignants.scss`), nourries par les jetons
@@ -227,6 +228,11 @@ dans la feuille de route GEO. Exception au STOP accordée par l'auteur pour cett
    enseignants du guichet déclarent `facade: "enseignants"` (pas de bloc « Faire circuler »). L'encart d'un livre à
    thèse dit que l'activité ne met pas cette thèse à l'épreuve. Avant publication : quatre impressions de fiche,
    arrivée par chaque ancre (titre visible sous les éléments collants), 390 px.
+8. **Trois thèmes au 02/10/2026** : Dette publique (`/enseignants/`), École et parcours, Environnement
+   (`/enseignants/environnement/`, `scripts/generer_empreinte_carbone.py`, Insee Première annuelle de mi-octobre).
+   **Une série révisée ne se cite que depuis le fichier de sa dernière édition**, jamais depuis un résumé ni depuis
+   deux éditions mêlées (l'empreinte 2023 valait 644 Mt dans l'édition 2024, 583 Mt dans celle de 2025). Deux
+   conventions de comptabilité ne démontrent ni un déplacement ni l'effet d'une politique : la page l'écrit.
 
 ## Exemplaire de consultation sur les ressources (auteur, 2026-10-02)
 

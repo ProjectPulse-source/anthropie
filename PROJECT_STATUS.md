@@ -53,6 +53,35 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-02 — Troisième thème des enseignants : Environnement (empreinte carbone) ; STOP levé, POUSSÉ
+
+Décisions de l'auteur (02/10 au soir) : construire le thème, **lever le gel des pages** (« on construit un site
+performant, point »), mettre en ligne dès que prêt. Contenu arbitré :
+`D:\PRO\.claude\external-audits\ARBITRATIONS\ENTRANTE_2026-10-02_Enseignants_Theme3_Exemplaires_arbitrage.md`.
+
+- **Page** `/enseignants/environnement/` : activité « Émissions françaises et empreinte carbone : pourquoi deux
+  totaux ? » (`#terminale-deux-totaux`), cinq questions, corrigé, méthode, encart de consultation d'*ANTHROPIE*
+  (façade `ressources-offertes/anthropie-enseignants.md`). Troisième onglet de la barre `enseignants-themes`.
+- **Générateur** `scripts/generer_empreinte_carbone.py` : fichier de l'Insee Première n° 2077 archivé (empreinte
+  vérifiée), trois témoins (totaux recomposés, série longue contre décomposition, accord des deux tableaux), huit
+  gardes ; mutation réelle rejouée, pièces restaurées. 2024 : 404 Mt et 563 Mt ; importations 284 Mt, 50 %.
+  Sorties : `empreinte_carbone.json` et `.csv`, `empreinte-carbone-deux-totaux.svg` et `.png`. Shortcodes
+  `empreinte-val`, `empreinte-tableau`. Carte de partage et vignette par `scripts/og_enseignants.py`.
+- **Erreur évitée grâce à la contre-expertise** : mon dossier citait l'édition 2024 de la série (644 Mt en 2023,
+  importations +13 %) ; l'édition 2025 révise à 583 Mt et +2 %. Tout vient désormais d'un seul fichier.
+- **Impression** : plus de page blanche en fin de fiche (`_enseignants.scss`). Six fiches : 1, 1, 1, 2, 2 et 1 page.
+- **Mesuré** : build `$?` = 0 ; `check-all --ci` à 0 ; audit des liens à 0 (113 pages) ; barre à trois onglets sans
+  débordement à 1 280 et 390 px ; ancre dégagée (192 px contre 178) ; index `/ressources/` : trois encarts.
+- **Piège rencontré** : une page datée du lendemain n'est pas construite par Hugo, sans erreur (date ramenée au jour).
+- **Mise à jour** : édition annuelle de mi-octobre, qui révisera les années antérieures ; à la main en attendant le
+  module de mise à jour voulu par l'auteur.
+- **Chemins** : `content/enseignants/environnement/`, `content/enseignants/_index.md`,
+  `content/ressources-offertes/anthropie-enseignants.md`, `layouts/shortcodes/enseignants-themes.html`,
+  `empreinte-val.html`, `empreinte-tableau.html`, `scripts/generer_empreinte_carbone.py`, `scripts/og_enseignants.py`,
+  `scripts/sources_enseignants/` (deux pièces, `SHA256SUMS`), `data/empreinte_carbone.json`, `static/empreinte_carbone.*`,
+  `static/img/empreinte-carbone-deux-totaux.*`, `static/images/og-` et `vig-empreinte-carbone.jpg`,
+  `assets/scss/_enseignants.scss`, `CLAUDE.md` ; cette entrée seule.
+
 ### 2026-10-02 — « École et parcours » : seconde activité « Après le bac, les mêmes voies pour tous ? », POUSSÉ
 
 Issue de deux avis externes arbitrés (`D:\PRO\.claude\external-audits\ARBITRATIONS\ENTRANTE_2026-10-02_Ecole_Parcours_Graphe_supplementaire_arbitrage.md`,

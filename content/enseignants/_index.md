@@ -13,7 +13,7 @@ lastmod: 2026-10-02
 # content/enseignants/ecole-et-parcours/. La barre `enseignants-themes` relie les deux.
 # Exception au STOP des nouveaux ensembles accordée par l'auteur le 30/09 (arbitrage
 # .claude/external-audits/ARBITRATIONS/ENTRANTE_2026-09-30_Dette_Pedagogie_arbitrage.md, tours 1 et 2), étendue par
-# lui le 02/10 à la couche enseignants (quatrième activité, puis page du second thème).
+# lui le 02/10 à la couche enseignants ; le STOP lui-même est levé depuis le 02/10/2026 (plus d'exception à demander).
 # Français seulement : le programme de SES est français (exclusion déclarée, pas d'oubli).
 # Invariant de neutralité : chaque question fait constater, calculer, comparer ou expliquer un mécanisme ;
 # aucune ne demande de trancher une politique.
