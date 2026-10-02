@@ -93,6 +93,21 @@ def http(url: str, delai: int = 60) -> tuple[int, bytes]:
         return 0, b""
 
 
+def http_archive(url: str, delai: int = 90) -> tuple[int, bytes]:
+    """web.archive.org répond volontiers 503 ou 429 à un premier appel (mesuré le 02/10/2026 depuis un serveur de
+    GitHub : 503 sur l'index, alors que le poste obtenait 200). Trois essais espacés ; au-delà, on rend le dernier code."""
+    import time
+    code, corps = 0, b""
+    for attente in (0, 20, 60):
+        if attente:
+            time.sleep(attente)
+        code, corps = http(url, delai)
+        if code == 200:
+            break
+        log("  archive publique : code %s, nouvel essai" % code)
+    return code, corps
+
+
 def texte(page: bytes) -> str:
     t = page.decode("utf-8", errors="replace")
     t = re.sub(r"<script.*?</script>|<style.*?</style>", "", t, flags=re.S)
@@ -108,14 +123,18 @@ def src(reg: dict, ident: str) -> dict:
 
 
 # ------------------------------------------------------------------ détecteurs
+ARCHIVE_INJOIGNABLE: list[int] = []   # codes rendus par l'archive publique quand elle ne répond pas : lus par essai()
+
+
 def detecter_sies(reg: dict) -> list[dict]:
     """Cohorte suivante de la note « Parcours et réussite en licence », par l'archive publique de sa page."""
     s = src(reg, "sies-licence")
     cohorte = max(int(k) for k in s["cohortes"]) + 1
     session = cohorte + 1
     prefixe = "enseignementsup-recherche.gouv.fr/fr/parcours-et-reussite-en-licence-les-resultats-de-la-session-%d" % session
-    code, corps = http("http://web.archive.org/cdx/search/cdx?url=%s*&fl=original,timestamp,statuscode&filter=statuscode:200&limit=20" % prefixe, 90)
+    code, corps = http_archive("https://web.archive.org/cdx/search/cdx?url=%s*&fl=original,timestamp,statuscode&filter=statuscode:200&limit=20" % prefixe)
     if code != 200:
+        ARCHIVE_INJOIGNABLE.append(code)
         log("  sies-licence : archive publique injoignable (code %s), rien a conclure" % code)
         return []
     lignes = [l.split() for l in corps.decode("utf-8", "replace").splitlines() if l.strip()]
@@ -123,7 +142,7 @@ def detecter_sies(reg: dict) -> list[dict]:
     if not lignes:
         return []                                   # page pas encore archivée : pas une anomalie
     original, horodatage = lignes[-1][0], lignes[-1][1]
-    code, page = http("http://web.archive.org/web/%s/%s" % (horodatage, original), 120)
+    code, page = http_archive("https://web.archive.org/web/%s/%s" % (horodatage, original), 120)
     if code != 200:
         raise Anomalie("sies-licence : page de la session %d archivee mais illisible (code %s)" % (session, code))
     t = page.decode("utf-8", "replace")
@@ -333,6 +352,7 @@ def essai() -> int:
     reg = lire_registre()
     sums = empreintes()
     echecs = 0
+    non_conclus: list[str] = []
 
     def verdict(nom: str, ok: bool, detail: str) -> None:
         nonlocal echecs
@@ -345,10 +365,19 @@ def essai() -> int:
     der = str(max(int(k) for k in s["cohortes"]))
     attendu = s["cohortes"].pop(der)[0]
     try:
+        ARCHIVE_INJOIGNABLE.clear()
         t = detecter_sies(r)
+        if ARCHIVE_INJOIGNABLE:
+            # Une archive qui ne répond pas ne dit rien du détecteur : ni OK ni échec. Annotation visible dans le run,
+            # et le compte figure au bilan ; le lundi suivant rejoue le témoin.
+            non_conclus.append("sies-licence")
+            print("::warning::Temoin sies-licence NON CONCLUANT : archive publique injoignable (code %s)" % ARCHIVE_INJOIGNABLE[-1])
+            raise StopIteration
         ok = bool(t) and hashlib.sha256(t[0]["pieces"][0][1]).hexdigest() == sums.get(attendu)
         verdict("sies-licence", ok, "cohorte %s retrouvee, empreinte identique a la piece archivee" % der if ok
                 else "cohorte %s non retrouvee ou piece differente" % der)
+    except StopIteration:
+        log("  [NON CONCLUANT] sies-licence -- archive publique injoignable apres trois essais")
     except Anomalie as e:
         verdict("sies-licence", False, str(e))
     # EESR : on retire le dernier millésime, la fiche retrouvée doit porter le même tableau 13.03.
@@ -386,7 +415,7 @@ def essai() -> int:
     code, flux = http("https://www.insee.fr/fr/flux/1")
     n = len(re.findall(r"<item>", flux.decode("utf-8", "replace"))) if code == 200 else 0
     verdict("insee-empreinte (flux des parutions)", n > 5, "%d parutions lues ; le filtrage par titre ne se prouve qu'un jour de parution" % n)
-    log("Essai : %d echec(s)." % echecs)
+    log("Essai : %d echec(s), %d non concluant(s)%s." % (echecs, len(non_conclus), (" (" + ", ".join(non_conclus) + ")") if non_conclus else ""))
     return 1 if echecs else 0
 
 
