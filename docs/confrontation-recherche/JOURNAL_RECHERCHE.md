@@ -120,5 +120,8 @@ rejetés en mode `--temoin` (les quatorze fiches du premier tour échouent faute
   E9, E13) ; les seuils de 125 et 130 % placés dans le bloc, montrés non estimés.
 - Écart de chiffre documenté, non corrigé : déficit primaire 2025 de 3,2 % du PIB dans le Focus n° 124 (prévision
   d'octobre 2025, solde structurel) contre −2,9 % observé par la page (Eurostat, avril 2026).
-- **Contre-expertise des deux nouveaux blocs : à faire** (règle 12, avant ou juste après publication). Blocs ouverts
-  (`publie="oui"`) sur commande de l'auteur, sans attendre la navette.
+- **Contre-expertise des deux nouveaux blocs** : audit `PRO-20261003-165428` (FACT_CHECK), réponse archivée et
+  arbitrée le 03/10 (`ARBITRATIONS/PRO-20261003-165428_arbitrage.md`, dépôt `D:\PRO`). Aucune inversion de sens ;
+  dix corrections de portée exécutées, chaque fondement relu à la source (P-9 : la Note du CAE attribue bien la
+  dégradation récente à des causes nommées) ; phrase de tête de « Pourquoi » amendée (deux périodes opposées).
+  Trésor-Éco n° 403 invoqué par le contradicteur : non lu, non cité.
