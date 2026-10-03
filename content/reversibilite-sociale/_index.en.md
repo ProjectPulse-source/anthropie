@@ -22,7 +22,12 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   bloc: "notions"
   rang: 30
   nature: "Concept — definition, origins and sources"
+onglet:  # barre du dossier de son bloc (shortcode dossier, 03/10/2026)
+  long: "Social reversibility"
+  court: "Reversibility"
 ---
+
+{{< dossier >}}
 
 Social reversibility is the capacity, assessed *before* an attempt, to withstand its possible failure without lasting closure of the set of accessible options. The concept is proposed by economist Stéphane Lalut in the working paper [AWP-08](/en/awp/awp-08/) (2026) as a third dimension of inequality, alongside stocks (income, wealth) and trajectories (social mobility).
 

@@ -24,7 +24,12 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   rang: 10
   nature: "Corpus documenté — chronologie commentée"
   accueil: 3
+onglet:  # barre du dossier de son bloc (shortcode dossier, 03/10/2026)
+  long: "Registre des coûts déportés"
+  court: "Registre"
 ---
+
+{{< dossier >}}
 
 Le Registre des coûts déportés est l'**appareil documentaire** du livre [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) (2025)&nbsp;: une chronologie de 168 jalons, des premiers outils de pierre (≈&nbsp;−3,3&nbsp;millions d'années) aux algorithmes contemporains. Chaque jalon répond aux deux mêmes questions&nbsp;: **quel ordre cette innovation a-t-elle créé, et quelle dette a-t-elle déportée** — vers d'autres lieux, d'autres temps ou d'autres groupes sociaux&nbsp;? La version en ligne, ci-dessous, est en consultation libre.
 

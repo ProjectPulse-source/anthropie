@@ -1,0 +1,75 @@
+{{- /* dossier-barre.html — l'organe commun de toutes les barres de dossier (auteur, 03/10/2026 : « pour chaque dossier,
+       le même type d'architecture que pour Dette »). Il ne CALCULE rien : chaque shortcode (dossier-dette, dossier,
+       enseignants-themes) prépare ses onglets et son panneau, puis l'appelle. Un seul dessin, une seule feuille de style
+       (`.dossier-dette--v2`, _reutiliser.scss) : une correction faite ici vaut pour tous les dossiers.
+
+       Contexte attendu (dict) :
+         page     la page courante
+         titre    texte de la pastille (« Dossier dette publique », « Pour enseigner · SES »…)
+         src      source ou date propre à la page (peut être vide) ; srcTitre son infobulle
+         label    aria-label de la barre
+         items    liste de dict : url, titre (long), court, nom (question complète, lue par les lecteurs d'écran),
+                  role (sous-titre, facultatif), actif (bool), id (facultatif : ancre publiée à conserver)
+         panneau  dict ou rien : titre, court, nom (lu après le libellé court ; défaut : titre en minuscules), role, actif (bool), entrees = liste de dict : url, titre, role,
+                  ici (bool), avenir (bool : affichée grisée, sans lien), hreflang, lang, note (facultatifs)
+         classe   classes supplémentaires de la barre (facultatif)
+       Nom accessible : le libellé visible d'abord, la question ensuite (WCAG 2.5.3). */ -}}
+{{- $en := eq .page.Lang "en" -}}
+{{- $sep := cond $en ": " " : " -}}
+<div class="dossier-entete">
+  <span class="dossier-dette__titre">{{ .titre }}</span>
+  {{- with .src }}
+  <span class="dossier-entete__source"{{ with $.srcTitre }} title="{{ . }}"{{ end }}>{{ if $en }}{{ . }}{{ else }}{{ partial "fr-typo.html" . }}{{ end }}</span>
+  {{- end }}
+</div>
+<nav class="dossier-dette dossier-dette--v2{{ with .classe }} {{ . }}{{ end }}" aria-label="{{ .label }}">
+  <div class="dossier-dette__barre">
+    <ol class="dossier-dette__volets">
+      {{- range .items }}
+      {{- $long := cond $en .titre (partial "fr-typo.html" .titre) }}
+      {{- if .actif }}
+      <li class="dossier-dette__volet is-actif" aria-current="page">
+        <span class="dossier-dette__onglet"><b><span class="dossier-dette__long">{{ $long }}</span><span class="dossier-dette__court">{{ .court }}{{ with .nom }}<span class="sr-only">{{ $sep }}{{ . }}</span>{{ end }}</span></b>{{ with .role }}<span class="dossier-dette__role">{{ . }}</span>{{ end }}</span>
+      </li>
+      {{- else }}
+      <li class="dossier-dette__volet">
+        <a class="dossier-dette__onglet"{{ with .id }} id="{{ . }}"{{ end }} href="{{ .url }}"><b><span class="dossier-dette__long">{{ $long }}</span><span class="dossier-dette__court">{{ .court }}{{ with .nom }}<span class="sr-only">{{ $sep }}{{ . }}</span>{{ end }}</span></b>{{ with .role }}<span class="dossier-dette__role">{{ . }}</span>{{ end }}</a>
+      </li>
+      {{- end }}
+      {{- end }}
+      {{- with .panneau }}
+      {{- $p := . }}
+      <li class="dossier-dette__volet dossier-dette__volet--plus{{ if .actif }} is-actif{{ end }}"{{ if .actif }} aria-current="page"{{ end }}>
+        <details class="dossier-dette__plus">
+          <summary class="dossier-dette__onglet"><b><span class="dossier-dette__long">{{ .titre }}</span><span class="dossier-dette__court">{{ .court }}<span class="sr-only">{{ $sep }}{{ .nom | default (lower .titre) }}</span></span><span class="dossier-dette__chevron" aria-hidden="true">▾</span></b>{{ with .role }}<span class="dossier-dette__role">{{ . }}</span>{{ end }}</summary>
+          <div class="dossier-dette__panneau">
+            <p class="dossier-dette__panneau-titre">{{ .entete | default .titre }}</p>
+            {{- range .entrees }}
+            {{- $t := cond $en .titre (partial "fr-typo.html" .titre) }}
+            {{- if .avenir }}
+            <span class="dossier-dette__prolongement is-avenir" aria-disabled="true"><b>{{ $t }}</b><span>{{ if $en }}coming soon{{ else }}à venir{{ end }}</span></span>
+            {{- else }}
+            <a class="dossier-dette__prolongement{{ if .ici }} is-ici{{ end }}" href="{{ .url }}"{{ with .hreflang }} hreflang="{{ . }}"{{ end }}{{ with .lang }} lang="{{ . }}"{{ end }}{{ if .ici }} aria-current="page"{{ end }}><b>{{ $t }}</b>{{ with .role }}<span>{{ . }}</span>{{ end }}{{ with .note }}<span>{{ . }}</span>{{ end }}{{ if .ici }}<span>{{ if $en }}you are here{{ else }}vous êtes ici{{ end }}</span>{{ end }}</a>
+            {{- end }}
+            {{- end }}
+          </div>
+        </details>
+      </li>
+      {{- end }}
+    </ol>
+  </div>
+</nav>
+<script>
+// Téléphone : si la bande des onglets défile, l'onglet actif est ramené en vue à l'ouverture (horizontalement seulement).
+(function () {
+  var b = document.currentScript && document.currentScript.previousElementSibling;
+  var o = b && b.querySelector(".dossier-dette__volets"), a = o && o.querySelector(".is-actif");
+  function centrer() {
+    if (!o || !a || o.scrollWidth <= o.clientWidth) return;
+    var ro = o.getBoundingClientRect(), ra = a.getBoundingClientRect();
+    o.scrollLeft += (ra.left - ro.left) - (o.clientWidth - ra.width) / 2;
+  }
+  centrer();
+  window.addEventListener("load", centrer);
+})();
+</script>

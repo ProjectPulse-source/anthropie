@@ -22,7 +22,12 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   bloc: "notions"
   rang: 20
   nature: "Concept — definition, origins and sources"
+onglet:  # barre du dossier de son bloc (shortcode dossier, 03/10/2026)
+  long: "Anthropic loop"
+  court: "Loop"
 ---
+
+{{< dossier >}}
 
 The anthropic loop describes the complete cycle of disorder displacement by social systems: displacement, accumulation, saturation, return, re-displacement. It is formalised by economist Stéphane Lalut in the working paper [AWP-07](/en/awp/awp-07/) (2026), in explicit dialogue with K. William Kapp's *cost-shifting*, Nicholas Georgescu-Roegen's bioeconomics and Bernard Stiegler's neganthropy.
 

@@ -84,7 +84,7 @@
           "nom" (cond $en "who really pays public debt?" "qui paie vraiment la dette publique ?")
           "role" (cond $en "distribution" "répartition"))
     (dict "n" "3" "url" (cond $en "/en/public-debt-international-comparison/" "/dette-publique-comparaison-internationale/")
-          "titre" (cond $en "What about elsewhere?" "Qu’en est-il ailleurs ?") "court" (cond $en "Elsewhere" "Ailleurs")
+          "titre" (cond $en "What about elsewhere?" "Qu’en est-il ailleurs ?") "court" (cond $en "Abroad" "Ailleurs")
           "nom" (cond $en "how does public debt compare elsewhere?" "qu’en est-il de la dette publique ailleurs ?")
           "role" (cond $en "comparisons" "comparaisons")) -}}
 {{- $items = $items | append (dict "n" "baisse" "url" (cond $en "/en/can-public-debt-come-down/" "/dette-publique-peut-elle-baisser/")
@@ -100,57 +100,26 @@
 {{- end -}}
 {{- $prolong = sort $prolong "Params.ressource.rang" -}}
 {{- $plusActif := eq $v "prolongement" -}}
-{{- $ptitre := cond $en "Further topics" "Prolongements" -}}
-<div class="dossier-entete">
-  <span class="dossier-dette__titre">{{ if $en }}Public debt dossier{{ else }}Dossier dette publique{{ end }}</span>
-  <span class="dossier-entete__source" title="{{ $srcTitre }}">{{ if $en }}{{ $src }}{{ else }}{{ partial "fr-typo.html" $src }}{{ end }}</span>
-</div>
-<nav class="dossier-dette dossier-dette--v2" aria-label="{{ if $en }}Public debt dossier{{ else }}Dossier dette publique{{ end }}">
-  <div class="dossier-dette__barre">
-    <ol class="dossier-dette__volets">
-      {{- range $items }}
-      {{- if eq .n $v }}
-      <li class="dossier-dette__volet is-actif" aria-current="page">
-        <span class="dossier-dette__onglet"><b><span class="dossier-dette__long">{{ if $en }}{{ .titre }}{{ else }}{{ partial "fr-typo.html" .titre }}{{ end }}</span><span class="dossier-dette__court">{{ .court }}<span class="sr-only">{{ if $en }}: {{ else }} : {{ end }}{{ .nom }}</span></span></b><span class="dossier-dette__role">{{ .role }}</span></span>
-      </li>
-      {{- else }}
-      <li class="dossier-dette__volet">
-        <a class="dossier-dette__onglet" href="{{ .url }}"><b><span class="dossier-dette__long">{{ if $en }}{{ .titre }}{{ else }}{{ partial "fr-typo.html" .titre }}{{ end }}</span><span class="dossier-dette__court">{{ .court }}<span class="sr-only">{{ if $en }}: {{ else }} : {{ end }}{{ .nom }}</span></span></b><span class="dossier-dette__role">{{ .role }}</span></a>
-      </li>
-      {{- end }}
-      {{- end }}
-      {{- with $prolong }}
-      <li class="dossier-dette__volet dossier-dette__volet--plus{{ if $plusActif }} is-actif{{ end }}"{{ if $plusActif }} aria-current="page"{{ end }}>
-        <details class="dossier-dette__plus">
-          <summary class="dossier-dette__onglet"><b><span class="dossier-dette__long">{{ $ptitre }}</span><span class="dossier-dette__court">{{ if $en }}More{{ else }}Plus{{ end }}<span class="sr-only">{{ if $en }}: {{ else }} : {{ end }}{{ lower $ptitre }}</span></span><span class="dossier-dette__chevron" aria-hidden="true">▾</span></b><span class="dossier-dette__role">{{ len . }} {{ if $en }}topics{{ else }}thèmes{{ end }}</span></summary>
-          <div class="dossier-dette__panneau">
-            <p class="dossier-dette__panneau-titre">{{ if $en }}Further topics in the dossier{{ else }}Prolongements du dossier{{ end }}</p>
-            {{- range . }}
-            {{- $ici := eq .RelPermalink $page.RelPermalink }}
-            {{- if $enFrancais }}
-            <a class="dossier-dette__prolongement" href="{{ .RelPermalink }}" hreflang="fr" lang="en"><b>{{ .Params.dossier_dette_titre_en | default .Title }}</b>{{ with .Params.dossier_dette_role_en }}<span>{{ . }}</span>{{ end }}<span>in French</span></a>
-            {{- else }}
-            <a class="dossier-dette__prolongement{{ if $ici }} is-ici{{ end }}" href="{{ .RelPermalink }}"{{ if $ici }} aria-current="page"{{ end }}><b>{{ if $en }}{{ .Params.dossier_dette_titre | default .Title }}{{ else }}{{ partial "fr-typo.html" (.Params.dossier_dette_titre | default .Title) }}{{ end }}</b>{{ with .Params.dossier_dette_role }}<span>{{ . }}</span>{{ end }}{{ if $ici }}<span>{{ if $en }}you are here{{ else }}vous êtes ici{{ end }}</span>{{ end }}</a>
-            {{- end }}
-            {{- end }}
-          </div>
-        </details>
-      </li>
-      {{- end }}
-    </ol>
-  </div>
-</nav>
-<script>
-// Téléphone : si la bande des onglets défile, l'onglet actif est ramené en vue à l'ouverture (horizontalement seulement).
-(function () {
-  var b = document.currentScript && document.currentScript.previousElementSibling;
-  var o = b && b.querySelector(".dossier-dette__volets"), a = o && o.querySelector(".is-actif");
-  function centrer() {
-    if (!o || !a || o.scrollWidth <= o.clientWidth) return;
-    var ro = o.getBoundingClientRect(), ra = a.getBoundingClientRect();
-    o.scrollLeft += (ra.left - ro.left) - (o.clientWidth - ra.width) / 2;
-  }
-  centrer();
-  window.addEventListener("load", centrer);
-})();
-</script>
+{{- /* Rendu : l'organe commun des barres de dossier (partials/dossier-barre.html, 03/10/2026). Ce shortcode ne fait
+       plus que préparer les onglets et le panneau. */ -}}
+{{- $onglets := slice -}}
+{{- range $items -}}
+  {{- $onglets = $onglets | append (dict "url" .url "titre" .titre "court" .court "nom" .nom "role" .role "actif" (eq .n $v)) -}}
+{{- end -}}
+{{- $panneau := "" -}}
+{{- with $prolong -}}
+  {{- $entrees := slice -}}
+  {{- range . -}}
+    {{- if $enFrancais -}}
+      {{- $entrees = $entrees | append (dict "url" .RelPermalink "titre" (.Params.dossier_dette_titre_en | default .Title) "role" .Params.dossier_dette_role_en "hreflang" "fr" "lang" "en" "note" "in French") -}}
+    {{- else -}}
+      {{- $entrees = $entrees | append (dict "url" .RelPermalink "titre" (.Params.dossier_dette_titre | default .Title) "role" .Params.dossier_dette_role "ici" (eq .RelPermalink $page.RelPermalink)) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $panneau = dict "titre" (cond $en "Further topics" "Prolongements") "court" (cond $en "More" "Plus")
+        "role" (printf "%d %s" (len .) (cond $en "topics" "thèmes")) "actif" $plusActif
+        "entete" (cond $en "Further topics in the dossier" "Prolongements du dossier") "entrees" $entrees -}}
+{{- end -}}
+{{- partial "dossier-barre.html" (dict "page" .Page "titre" (cond $en "Public debt dossier" "Dossier dette publique")
+      "src" $src "srcTitre" $srcTitre "label" (cond $en "Public debt dossier" "Dossier dette publique")
+      "items" $onglets "panneau" $panneau) -}}

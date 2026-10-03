@@ -27,7 +27,12 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   rang: 10
   nature: "Documented corpus — annotated chronology"
   accueil: 2
+onglet:  # barre du dossier de son bloc (shortcode dossier, 03/10/2026)
+  long: "Register of Displaced Costs"
+  court: "Register"
 ---
+
+{{< dossier >}}
 
 The Register of Offloaded Costs is the **documentary apparatus** of the book [*ANTHROPY – A Big History of Civilization's Hidden Costs*](/en/livres/anthropie-ordre-ici-dette-ailleurs/): a chronology of 168 milestones, from the first stone tools (≈ 3.3 million years ago) to contemporary algorithms. Each milestone answers the same two questions: **what order did this innovation create, and what debt did it displace**—toward other places, other times, or other social groups? The English version, below, is freely browsable.
 

@@ -21,7 +21,12 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   bloc: "notions"
   rang: 30
   nature: "Notion — définition, origine et sources"
+onglet:  # barre du dossier de son bloc (shortcode dossier, 03/10/2026)
+  long: "Réversibilité sociale"
+  court: "Réversibilité"
 ---
+
+{{< dossier >}}
 
 La réversibilité sociale est la capacité, évaluée *avant* une tentative, de supporter son éventuel échec sans fermeture durable de l'ensemble des options accessibles. Le concept est proposé par l'économiste Stéphane Lalut dans le working paper [AWP-08](/awp/awp-08/) (2026) comme une troisième dimension de l'inégalité, à côté des stocks (revenu, patrimoine) et des trajectoires (mobilité sociale).
 

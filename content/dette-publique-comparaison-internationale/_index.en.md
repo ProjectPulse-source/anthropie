@@ -228,7 +228,7 @@ Only indicative measures exist: debt according to the IMF, and central-governmen
 {{< /pastilles >}}
 
 {{< appel-livre slug="dette-publique-qui-paie-vraiment" sur="To take the analysis further" avis="non" >}}
-This page measures what debt costs, and why the same debt does not carry the same burden everywhere. It does not say who bears its cost. The book follows that shift channel by channel — taxpayer, saver, public services, generations not yet old enough to vote —, on official figures, to show in which configurations each bears a cost. By the end you will have a method for identifying who bears what, depending on the decision taken. The book, on the French case, exists in French only.
+This page measures what debt costs, and why the same debt does not carry the same burden everywhere. It does not say who bears its cost. The book follows that shift channel by channel — taxpayer, saver, public services, generations not yet old enough to vote —, on official figures, to show in which configurations each bears a cost. It offers a three-question method — are the facts established, does the system keep its promise, who decides — and, for the outcomes it considers, the split between who pays and who gains. The book, on the French case, exists in French only.
 {{< /appel-livre >}}
 
 ## Where these figures come from {#sources}

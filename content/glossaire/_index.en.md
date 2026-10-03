@@ -9,7 +9,11 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   rang: 10
   nature: "Definitions"
   accueil: 3
+onglet:  # barre du dossier de son bloc (shortcode dossier, 03/10/2026)
+  long: "Glossary"
 ---
+
+{{< dossier >}}
 
 This glossary brings together the terms specific to the anthropic framework. It is not a general dictionary: each entry designates a concept coined or repurposed within the framework of the anthropic hypothesis, and carries its precise meaning only in that theoretical context. Definitions refer to the *Anthropie Working Papers* that formalise them and to the book [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) (in French) that develops them across the full scope of the framework.
 

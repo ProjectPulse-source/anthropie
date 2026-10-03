@@ -1,6 +1,6 @@
 ---
 title: "Resources — Data, explainers and reference material"
-description: "Data and reference material to understand and discuss: the cost of public debt from official series, the concepts of the anthropic framework, the Register of Displaced Costs, a glossary. Each entry states what kind of content it holds."
+description: "The figures of public debate often circulate without their source or method. These resources take them back to the official series, recalculate them and say what they show and what they do not: on public debt, and the analytical framework that links the questions."
 url: /en/resources/
 # Same mechanism as the French index: presence comes from each page's `ressource` block.
 # French-only pages appear here only when they declare `ressource.en_francais` (with `titre_en`),
@@ -8,7 +8,7 @@ url: /en/resources/
 blocs:
   - id: dette
     titre: "Public debt"
-    chapo: "What the debt costs, and who bears it."
+    chapo: "Why it rises, what it costs, who pays, how it compares elsewhere and under what conditions it can come down."
   - id: notions
     titre: "Concepts"
     chapo: "Definitions of the anthropic framework, each tied to its sources."
@@ -17,6 +17,4 @@ blocs:
     chapo: "The documentary apparatus behind the books, usable in its own right."
 ---
 
-A resource here can be read and reused without going through a book. Each entry states what it
-holds: official series, the author's own calculation, an analysis, a definition or a corpus.
 Pages marked *in French* have no English version yet.

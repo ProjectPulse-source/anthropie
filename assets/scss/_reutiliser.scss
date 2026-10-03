@@ -427,6 +427,9 @@ a.dossier-dette__onglet:focus-visible { outline: 2px solid var(--color-pivot); o
     span { display: block; font-size: 0.75rem; color: var(--color-text-subtle); }
     &:hover { background: var(--color-dossier-tint-hover); }
     &.is-ici { outline: 2px solid var(--color-accent); }
+    // Partie annoncée, pas encore écrite (Littérature, Philosophie des enseignants, 03/10/2026) : grisée, sans lien.
+    &.is-avenir { background: transparent; border: 1px dashed var(--color-rule-medium); color: var(--color-text-subtle); cursor: default; }
+    &.is-avenir:hover { background: transparent; }
   }
 }
 // Bascule avant saturation (réserve < 32 px) : libellés courts, rôles conservés tant que la place le permet.
@@ -436,11 +439,22 @@ a.dossier-dette__onglet:focus-visible { outline: 2px solid var(--color-pivot); o
 }
 @container (max-width: 520px) {
   .dossier-dette--v2 .dossier-dette__role { display: none; }
-  .dossier-dette--v2 .dossier-dette__volets { overflow-x: auto; scrollbar-width: thin; -webkit-overflow-scrolling: touch; gap: 0.12rem; }
+  .dossier-dette--v2 .dossier-dette__volets { overflow-x: auto; scrollbar-width: thin; -webkit-overflow-scrolling: touch; gap: 0.1rem; }
   .dossier-dette--v2 .dossier-dette__volet { flex: 0 0 auto; }
-  .dossier-dette--v2 .dossier-dette__onglet { white-space: nowrap; padding: 0.3rem 0.32rem 0.4rem; font-size: 0.8rem; }
-  .dossier-dette--v2 .dossier-dette__volet--plus { margin-left: 0.15rem; padding-left: 0.15rem; }
+  .dossier-dette--v2 .dossier-dette__onglet { white-space: nowrap; padding: 0.3rem 0.2rem 0.4rem; font-size: 0.76rem; }
+  .dossier-dette--v2 .dossier-dette__volet--plus { margin-left: 0.1rem; padding-left: 0.1rem; }
   .dossier-dette--v2 .dossier-dette__panneau { grid-template-columns: 1fr; }
+}
+// Téléphone (auteur, 03/10/2026 : « au mieux pour celui qui consulte ») : la rangée collante s'étend d'un bord à l'autre
+// de l'écran. Les marges latérales de la page (52 px de chaque côté à 390 px) ne laissaient que 286 px aux onglets, qui
+// en demandent 394 : la bande défilait. Pleine largeur, elle dispose de 358 px.
+@media (max-width: 700px) {
+  .dossier-dette--v2 {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 @media (max-width: 1120px) {
   .dossier-entete .dossier-dette__titre { font-size: 0.72rem; padding: 0.18rem 0.45rem; }

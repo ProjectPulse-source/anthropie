@@ -136,7 +136,11 @@ dossier » (option B, 01/10/2026 : elle garde `donnees:`, donc les critères blo
 (auteur, 03/10/2026)** : cinq questions en onglets, puis « Prolongements » qui déplie toute page déclarant
 `dossier_dette: prolongement` (libellé `dossier_dette_titre`, sous-titre `dossier_dette_role`) ; une telle page appelle
 `{{< dossier-dette volet="prolongement" >}}`. Source de la page en gris dans l'en-tête ; tout changement de libellé se
-remesure (bascule vers les libellés courts sous 968 px de barre). Rien à déclarer dans l'index : le
+remesure (bascule vers les libellés courts sous 968 px de barre). **Toutes les barres de dossier passent par un seul
+organe** (auteur, 03/10/2026 : « pour chaque dossier, le même type d'architecture que pour Dette ») :
+`partials/dossier-barre.html` dessine, les shortcodes préparent (`dossier-dette`, `enseignants-themes`, et `dossier`
+pour tout autre bloc — onglets = pages du même `ressource.bloc`, libellés `onglet.long`/`court`/`long_en`, aucune barre
+sous deux entrées). Une page neuve d'un bloc entre dans sa barre sans rien toucher d'autre que son front matter. Rien à déclarer dans l'index : le
 tri se déduit des pages (`layouts/ressources/list.html`, partials `ressource-entree.html` et `ressource-encart.html`).
 **Une nouvelle ressource de données fait produire sa vignette par le générateur de sa carte de partage**, dans le même
 passage et avec le même dessin sur fond blanc (modèle : `carte()` de `scripts/og_dossier_dette.py`) ; sa sortie entre
@@ -229,7 +233,9 @@ demander, aucune fenêtre d'attente ; une page se met en ligne dès qu'elle est 
    `ENTRANTE_2026-10-02_Enseignants_Structure`). `/enseignants/` reste la page du thème dette : c'est l'adresse des
    courriels et des quatre pages du dossier. Un thème nouveau reçoit sa page fille (`content/enseignants/<theme>/_index.md`,
    une ligne dans le shortcode) si les deux déclencheurs de la règle « page propre » sont réunis ; une seule activité
-   complète suffit, aucune page ni catégorie vide. Navigation nommée par ce que cherche l'enseignant (« École et
+   complète suffit, aucune page ni catégorie vide — sauf Littérature et Philosophie, annoncées grisées et sans lien dans le
+   panneau « Autres disciplines » (auteur, 03/10/2026 ; pastille « Pour enseigner · SES ») ; chaque entrée grisée meurt avec
+   la première page de sa discipline. Navigation nommée par ce que cherche l'enseignant (« École et
    parcours »), jamais par la formule de l'auteur, qui reste le titre. La barre réemploie les classes `dossier-dette*` ;
    elle ne porte aucune date. **Une ancre publiée ne se retire pas** : `#droit-a-l-erreur` reste portée par la barre de
    `/enseignants/` et renvoie à la page fille. Chaque thème a sa méthode et son encart d'exemplaire ; les façades

@@ -16,7 +16,13 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   rang: 20
   intitule: "Inégalités et possibilités de recommencer — sources et répertoire"
   nature: "Sources et répertoire du livre « La Société du premier coup »"
+onglet:  # barre du dossier de son bloc (shortcode dossier, 03/10/2026)
+  long: "La Société du premier coup"
+  court: "Premier coup"
+  long_en: "La Société du premier coup"
 ---
+
+{{< dossier >}}
 
 Cette page est le **compagnon documentaire** de *La Société du premier coup*. Elle porte ce que le livre annonce page&nbsp;105&nbsp;: le répertoire complet, ses sources et ses mises à jour.
 

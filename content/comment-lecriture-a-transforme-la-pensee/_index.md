@@ -19,7 +19,13 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   bloc: "guides"
   rang: 10
   nature: "Éclairage — histoire des idées"
+onglet:  # barre du dossier de son bloc (shortcode dossier, 03/10/2026)
+  long: "L'écriture et la pensée"
+  court: "Écriture"
+  long_en: "Writing and thought"
 ---
+
+{{< dossier >}}
 
 L'écriture n'a pas seulement **noté** la pensée&nbsp;: elle l'a **transformée**. En externalisant la mémoire, elle a libéré l'esprit de la charge de tout retenir&nbsp;; en fixant les mots, elle a rendu la pensée inspectable, comparable, critiquable. Chaque grand support qui a suivi — l'imprimerie, l'écran, l'intelligence artificielle — a rejoué cette bascule&nbsp;: à chaque fois, ce n'est pas seulement l'outil qui change, c'est ce que penser veut dire.
 
