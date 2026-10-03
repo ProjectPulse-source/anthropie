@@ -106,7 +106,7 @@ Over the {{< dyn-val "annees_total" >}} years of the series, the primary balance
 - **An accounting decomposition, not a causal explanation.** It identifies which accounting components moved the debt; it does not say why the deficits existed, or whether they were avoidable.
 - **Terms that are not independent.** In a recession, revenue falls and some spending rises: the primary deficit itself depends on growth.
 - **Inflation does not reduce the real burden of nominal debt without cost.** It reduces the real value of nominal claims, and that loss is borne by someone: this is the subject of [Who really pays for public debt?](/en/who-really-pays-public-debt/)
-- **Nothing about the future.** What comes next depends on the gap between the implicit interest rate and nominal growth, and on the primary balance. In {{< dyn-val "annee_fin" >}}, the implicit rate ({{< dyn-val "taux_implicite_dernier" >}}%) and nominal growth ({{< dyn-val "croissance_derniere" >}}%) were almost equal: the interest-growth effect was close to zero ({{< dyn-val "net_dernier" >}} points).
+- **Nothing about the future.** What comes next depends on the gap between the implicit interest rate and nominal growth, and on the primary balance: what it took elsewhere for debt to come down is the subject of [Can public debt come down?](/en/can-public-debt-come-down/) In {{< dyn-val "annee_fin" >}}, the implicit rate ({{< dyn-val "taux_implicite_dernier" >}}%) and nominal growth ({{< dyn-val "croissance_derniere" >}}%) were almost equal: the interest-growth effect was close to zero ({{< dyn-val "net_dernier" >}} points).
 - **A series that starts in {{< dyn-val "annee_depart" >}}.** Eurostat's harmonised interest data go back no further; the long-run debt series, since 1978, is in [What does French public debt actually cost?](/en/cost-of-french-public-debt/)
 
 ## Frequently asked questions {#questions}
@@ -119,6 +119,7 @@ Over the {{< dyn-val "annees_total" >}} years of the series, the primary balance
 - [What does French public debt actually cost?](/en/cost-of-french-public-debt/)
 - [Who really pays for public debt?](/en/who-really-pays-public-debt/)
 - [And elsewhere?](/en/public-debt-international-comparison/)
+- [Can it come down?](/en/can-public-debt-come-down/)
 {{< /pastilles >}}
 
 {{< appel-livre slug="dette-publique-qui-paie-vraiment" sur="To take the analysis further" avis="non" >}}

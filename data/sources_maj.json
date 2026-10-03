@@ -72,7 +72,7 @@
   },
   {
    "id": "dette-monde", "producteur": "Eurostat, OCDE, FMI, Banque mondiale", "objet": "comparaison internationale ; décomposition de la variation du ratio", "mode": "api",
-   "pages": ["/dette-publique-comparaison-internationale/", "/pourquoi-la-dette-publique-augmente/", "/dette-publique-peut-elle-baisser/"],
+   "pages": ["/dette-publique-comparaison-internationale/", "/pourquoi-la-dette-publique-augmente/", "/dette-publique-peut-elle-baisser/", "/en/can-public-debt-come-down/"],
    "generateurs": ["update_dette_monde.py", "update_dette_dynamique.py", "update_dette_baisse.py"], "jeu": "data/dette_monde.json",
    "cadence": "semestrielle", "workflow": "dette-monde.yml"
   },

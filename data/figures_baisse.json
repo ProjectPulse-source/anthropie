@@ -24,5 +24,31 @@
    "source": "Eurostat gov_10dd_edpt1 (dette, PIB), gov_10a_main (B9, D41PAY), France, 1996-2025",
    "precaution": "En % du PIB ; solde stabilisant = (taux implicite − croissance nominale) / (1 + croissance) × dette de l'année précédente, hors autres ajustements (flux-stock)."
   }
+ ],
+ "en": [
+  {
+   "id": "decennies",
+   "fichier": "dette-baisse-decennies-en",
+   "titre": "France: what pushed the debt up or down, decade by decade",
+   "montre": "From one decade to the next, the term pushing French debt up changes; over the last one, interest and growth pulled it down and primary deficits pushed it up by more.",
+   "source": "Eurostat gov_10dd_edpt1 (debt, GDP), gov_10a_main (B9, D41PAY), France, 1996-2025",
+   "precaution": "Points of GDP cumulated over ten years; an accounting decomposition, not a causal one: the three terms are not independent."
+  },
+  {
+   "id": "comparaison",
+   "fichier": "dette-baisse-comparaison-en",
+   "titre": "Seven countries with debt above 90% of GDP at end-2015: ten years on",
+   "montre": "Among countries that started from debt at least as high, the interest-growth effect was favourable everywhere; debt fell where the primary balance was in surplus on average.",
+   "source": "Eurostat gov_10dd_edpt1 (debt, GDP), gov_10a_main (B9, D41PAY), 2016-2025; countries sorted by change in the debt ratio",
+   "precaution": "Points of GDP, cumulated; Greece, Cyprus and Portugal received official financing (2010-2018). An accounting comparison, not a causal one."
+  },
+  {
+   "id": "stabilisant",
+   "fichier": "dette-baisse-stabilisant-en",
+   "titre": "France: the observed primary balance and the one that would have stabilised the debt",
+   "montre": "The primary balance that stabilises the debt changes every year with interest rates and growth; the observed balance mostly stayed below it.",
+   "source": "Eurostat gov_10dd_edpt1 (debt, GDP), gov_10a_main (B9, D41PAY), France, 1996-2025",
+   "precaution": "In % of GDP; stabilising balance = (implicit interest rate − nominal growth) / (1 + growth) × previous year's debt, excluding other adjustments (stock-flow)."
+  }
  ]
 }

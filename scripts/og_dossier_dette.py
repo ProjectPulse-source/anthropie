@@ -302,7 +302,7 @@ def carte_dynamique() -> None:
            (C2, "Primary deficits: +%s pts" % E["deficits_primaires"]), (C1, "Debt: %s → %s%%" % (E["dette_depart"], E["dette_fin"]))])
 
 
-def figure_decennies_mini(d: ImageDraw.ImageDraw, dec: list[dict]) -> None:
+def figure_decennies_mini(d: ImageDraw.ImageDraw, dec: list[dict], lang: str = "fr") -> None:
     """Volet « Peut-elle baisser » : la figure signature réduite — par décennie, effet taux-croissance, déficits
     primaires, flux-stock. Orange : fait monter le ratio ; gris : le fait baisser. Valeurs lues dans data/dette_baisse.json."""
     x0, x1, top, bas = 660, 1126, 100, 424
@@ -326,8 +326,11 @@ def figure_decennies_mini(d: ImageDraw.ImageDraw, dec: list[dict]) -> None:
             d.rectangle([x + 3, y0, x + bw - 3, y1], fill=C2 if v >= 0 else SEC)
         lib = "%d-%d" % (f["debut"], f["fin"])
         d.text((gx + pas / 2 - fa.getlength(lib) / 2, bas + 14), lib, font=fa, fill=URL_GREY)
-    d.text((x0, bas + 40), "Dette publique française, en points de PIB par décennie :", font=font("inter", 17, 400), fill=URL_GREY)
-    d.text((x0, bas + 62), "taux-croissance, déficits primaires, flux-stock", font=font("inter", 17, 400), fill=URL_GREY)
+    en = lang == "en"
+    d.text((x0, bas + 40), "French public debt, in points of GDP per decade:" if en
+           else "Dette publique française, en points de PIB par décennie :", font=font("inter", 17, 400), fill=URL_GREY)
+    d.text((x0, bas + 62), "interest-growth, primary deficits, stock-flow" if en
+           else "taux-croissance, déficits primaires, flux-stock", font=font("inter", 17, 400), fill=URL_GREY)
 
 
 def carte_baisse() -> None:
@@ -349,6 +352,18 @@ def carte_baisse() -> None:
           lambda d: figure_decennies_mini(d, dec),
           [(SEC, "Taux et croissance : −%s pts" % A["d3_tc_abs"]), (C2, "Déficits primaires : +%s pts" % A["d3_def_abs"]),
            (C1, "Dette : %s → %s %%" % (A["d3_dette_deb"], A["d3_dette_fin"]))])
+    # Version anglaise (03/10/2026, miroir de la page) : même figure, même contrôle ; chaînes du bloc affichage_en.
+    E = j.get("affichage_en")
+    if not E:
+        fail("carte baisse EN : bloc affichage_en absent de data/dette_baisse.json")
+    carte("og-dette-baisse-en.jpg",
+          ["Deficits", "weighed more"],
+          "%s: more than the relief from rates and growth." % E["d3_lib"],
+          "Eurostat, France %s-%s · CC BY 4.0" % (E["annee_debut"], E["annee_fin"]),
+          "stephane-lalut.com/en/can-public-debt-come-down/",
+          lambda d: figure_decennies_mini(d, dec, "en"),
+          [(SEC, "Interest and growth: −%s pts" % E["d3_tc_abs"]), (C2, "Primary deficits: +%s pts" % E["d3_def_abs"]),
+           (C1, "Debt: %s → %s%%" % (E["d3_dette_deb"], E["d3_dette_fin"]))])
 
 
 def carte_monde() -> None:

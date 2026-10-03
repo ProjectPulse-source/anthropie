@@ -1,127 +1,156 @@
-{{- /* dossier-dette.html — barre d'onglets du dossier dette publique.
+{{- /* dossier-dette.html — barre du dossier dette publique, version A+ v2 (auteur, 03/10/2026).
 
-       {{< dossier-dette volet="1" >}}   « Combien coûte » (FR et EN)
-       {{< dossier-dette volet="2" >}}   « Qui paie » (FR et EN)
-       {{< dossier-dette volet="3" >}}   « Et ailleurs » (FR et EN), comparaison internationale,
-                                         ajouté le 30/09/2026 à sa publication
+       {{< dossier-dette volet="hausse" >}}        « Pourquoi augmente-t-elle ? » (FR et EN)
+       {{< dossier-dette volet="1" >}}             « Combien coûte-t-elle ? »     (FR et EN)
+       {{< dossier-dette volet="2" >}}             « Qui paie ? »                 (FR et EN)
+       {{< dossier-dette volet="3" >}}             « Qu'en est-il ailleurs ? »    (FR et EN)
+       {{< dossier-dette volet="baisse" >}}        « Peut-elle baisser ? »        (FR et EN depuis le 03/10/2026)
+       {{< dossier-dette volet="prolongement" >}}  une page de prolongement (« collectivites » : ancien nom, accepté)
 
-       Deux pages autonomes, une identité commune, une fonction explicite pour
-       chacune (arbitrage PRO-20260921-DIPTYQUE, P1). Le volet 2 ne devait exister
-       qu'en français (P8, 21/09) : décision REMPLACÉE par l'auteur le 30/09/2026
-       (« les ressources FR de dette en anglais ») ; les quatre volets existent dans
-       les deux langues, chaque lien pointe vers la page de la même langue.
+       COMPOSITION (maquettes et trois avis arbitrés : 06_PROMOTION\MAQUETTES_BARRE_DOSSIER_DETTE_2026-10-03\,
+       ARBITRATIONS\ENTRANTE_2026-10-03_Presentation_Dette*_arbitrage.md) :
+       - un EN-TÊTE qui défile avec la page : pastille « Dossier dette publique » et source de la page, en GRIS
+         (auteur, 03/10 : le rouge du 28/09 donnait au millésime plus de poids qu'aux intitulés ; il reste réservé à
+         une vraie alerte de fraîcheur) ;
+       - une RANGÉE COLLANTE, seule à rester visible au défilement : cinq questions sans numéros (avec numéros, la
+         rangée demandait 1 028 px pour 992 : mesure du 03/10), puis, après un filet, « Prolongements » qui déplie un
+         panneau. Les deux blocs sont FRÈRES dans la page : un enfant collant ne colle que dans son parent.
+       - Les questions complètes cèdent la place aux libellés courts quand la rangée n'a plus 32 px de réserve
+         (rangée naturelle de 936 px, bascule sous 968 px de barre, requête de conteneur dans _reutiliser.scss) : on
+         bascule avant saturation, pas au débordement.
 
-       ONGLETS ET MAINTIEN AU DÉFILEMENT (auteur, 28/09) : la barre reste visible
-       pendant la lecture, SOUS l'en-tête du site, qui est déjà collant — d'où le
-       décalage `--dossier-top` du SCSS. Un lecteur qui arrive au milieu d'une
-       page longue voit ainsi dans quel volet il se trouve et atteint l'autre
-       sans remonter.
+       SOURCE : elle dit la chose de CETTE page, jamais du dossier entier — INSEE et trimestre pour le coût, Eurostat et
+       année pour les volets décomposés, mois de relecture pour « Qui paie » et les pages sans série (une relecture
+       a une date, pas un trimestre : défaut corrigé le 28/09). Le préfixe « Données · » ne va qu'aux pages à données.
 
-       DATE DE MISE À JOUR, en rouge (auteur, 28/09) : elle ne dit pas la même
-       chose selon le volet, donc elle ne porte pas le même libellé.
-       - volet 1 : le TRIMESTRE DES DONNÉES, lu dans data/dette_officielle.json,
-         donc actualisé par la chaîne hebdomadaire — jamais saisi à la main ;
-       - volet 2 : le MOIS de la dernière mise à jour ÉDITORIALE, déduit de
-         `lastmod` ;
-       - volet 3 : l'ANNÉE DES DONNÉES Eurostat, lue dans data/dette_monde.json
-         (meta.annee), actualisée par dette-monde.yml. Confondre les deux ferait passer une relecture de texte pour
-         une donnée neuve.
+       PROLONGEMENTS : la présence vient du dépôt — toute page qui déclare `dossier_dette: prolongement` dans sa langue,
+       triée par `ressource.rang` ; libellé `dossier_dette_titre` (sinon le titre), sous-titre `dossier_dette_role`.
+       Une page nouvelle n'a rien à toucher ici. Le panneau est positionné par rapport à la barre, non à la bande
+       des onglets, qui défile sur téléphone : il n'est donc pas rogné.
 
-       ⚠ CE QUE LA VERSION DU 28/09 PROMETTAIT SANS LE FAIRE (corrigé le 28/09
-       au soir, sur signalement de l'auteur). Les deux volets écrivaient « MAJ
-       Tx 2026 » : même préfixe, même grain, même couleur, même place — seule
-       l'infobulle les distinguait, et une infobulle n'existe pas au toucher.
-       Résultat : « Qui paie », qui ne porte AUCUNE série trimestrielle,
-       affichait un trimestre PLUS RÉCENT que la page qui porte les données, et
-       le lecteur en concluait l'inverse de la vérité. Deux corrections, à la
-       racine : le volet 1 nomme sa source (`INSEE`), et le volet 2 cesse
-       d'exprimer une relecture en TRIMESTRES — une révision de texte a une
-       date, pas un trimestre ; le trimestre est l'unité de la donnée INSEE.
-
-       LARGEUR. `.dossier-dette__maj` est en `white-space: nowrap` et la colonne
-       des onglets est `minmax(0, 1fr)` SANS `nowrap` : tout caractère ajouté au
-       badge se prend sur les onglets, qui eux peuvent revenir à la ligne. D'où
-       des libellés tenus au plus court — +2 et +1 caractère seulement.
+       NOM ACCESSIBLE : quand le libellé court est affiché, la question complète suit en texte masqué visuellement ;
+       le nom lu commence par le texte visible (critère WCAG 2.5.3).
 
        Échoue bruyamment sur un volet inconnu. */ -}}
 {{- $v := .Get "volet" -}}
-{{- /* Clés de volet STABLES ("hausse", "1", "2", "3") ; le NUMÉRO affiché vient de l'ordre (30/09 : le volet
-       « Pourquoi elle augmente » passe en tête, arbitrage PRO-20260930-092814) — les pages n'ont pas à changer d'appel. */ -}}
-{{- /* « collectivites » (01/10/2026) : un PROLONGEMENT, pas un volet (règle 1 du modèle : un cas particulier n'est jamais
-       un onglet) — aucun onglet actif, millésime Eurostat de son jeu. Une mention « · prolongement » dans le titre a été
-       MESURÉE puis retirée le même jour : +50 px à 390 px, badge sur le 4e onglet sur bureau (cf. LARGEUR ci-dessus). */ -}}
-{{- /* « baisse » (02/10/2026) : « La dette peut-elle baisser ? ». Un CINQUIÈME ONGLET a été essayé et MESURÉ le 03/10 :
-       à 390 px le dernier onglet finit à 406 px (16 px hors écran) ; à 1 280 px les onglets finissent à 1 182 px et
-       recouvrent le badge de date (1 030-1 136). La barre ne porte donc pas cinq onglets sans être redessinée : la page
-       prend la barre SANS onglet actif, comme un prolongement, jusqu'à décision de l'auteur sur la barre. */ -}}
-{{- if not (in (slice "hausse" "1" "2" "3" "baisse" "collectivites") $v) -}}{{ errorf "dossier-dette: volet \"%s\" inconnu (attendu hausse, 1, 2, 3, baisse ou collectivites) dans %s" $v .Page.File.Path }}{{- end -}}
+{{- if eq $v "collectivites" }}{{ $v = "prolongement" }}{{ end -}}
+{{- if not (in (slice "hausse" "1" "2" "3" "baisse" "prolongement") $v) -}}{{ errorf "dossier-dette: volet \"%s\" inconnu (attendu hausse, 1, 2, 3, baisse, prolongement ou collectivites) dans %s" $v .Page.File.Path }}{{- end -}}
 {{- $en := eq .Page.Lang "en" -}}
-{{- $maj := "" -}}
-{{- $majTitre := "" -}}
+{{- $page := .Page -}}
+{{- $src := "" -}}
+{{- $srcTitre := "" -}}
+{{- $donnees := cond $en "Data" "Données" -}}
 {{- if eq $v "1" -}}
   {{- with site.Data.dette_officielle -}}
-    {{- $p := index (cond $en .affichage_en .affichage) "dette_periode" -}}
-    {{- $maj = printf "INSEE %s" $p -}}
-    {{- $majTitre = cond $en "Latest quarter published by INSEE in this page's figures" "Dernier trimestre publié par l'INSEE dans les chiffres de cette page — c'est le millésime des DONNÉES, non la date de relecture du texte" -}}
+    {{- $src = printf "%s · INSEE %s" $donnees (index (cond $en .affichage_en .affichage) "dette_periode") -}}
+    {{- $srcTitre = cond $en "Latest quarter published by INSEE in this page's figures" "Dernier trimestre publié par l'INSEE dans les chiffres de cette page — c'est le millésime des DONNÉES, non la date de relecture du texte" -}}
   {{- end -}}
 {{- else if eq $v "hausse" -}}
   {{- with site.Data.dette_dynamique -}}
-    {{- $maj = printf "Eurostat %s" .affichage.annee_fin -}}
-    {{- $majTitre = cond $en "Latest year of the Eurostat data decomposed on this page" "Dernière année des données Eurostat décomposées sur cette page — c'est le millésime des DONNÉES, non la date de relecture du texte" -}}
+    {{- $src = printf "%s · Eurostat %s" $donnees .affichage.annee_fin -}}
+    {{- $srcTitre = cond $en "Latest year of the Eurostat data decomposed on this page" "Dernière année des données Eurostat décomposées sur cette page — c'est le millésime des DONNÉES, non la date de relecture du texte" -}}
   {{- end -}}
 {{- else if eq $v "baisse" -}}
   {{- with site.Data.dette_baisse -}}
-    {{- $maj = printf "Eurostat %s" .affichage.annee_fin -}}
-    {{- $majTitre = "Dernière année des données Eurostat de cette page — c'est le millésime des DONNÉES, non la date de relecture du texte" -}}
-  {{- end -}}
-{{- else if eq $v "collectivites" -}}
-  {{- with site.Data.dette_collectivites -}}
-    {{- $maj = printf "Eurostat %s" .affichage.an_fin -}}
-    {{- $majTitre = "Dernière année des données Eurostat de cette page — c'est le millésime des DONNÉES, non la date de relecture du texte" -}}
+    {{- $src = printf "%s · Eurostat %s" $donnees .affichage.annee_fin -}}
+    {{- $srcTitre = "Dernière année des données Eurostat de cette page — c'est le millésime des DONNÉES, non la date de relecture du texte" -}}
   {{- end -}}
 {{- else if eq $v "3" -}}
   {{- with site.Data.dette_monde -}}
-    {{- $maj = printf "Eurostat %s" .meta.annee -}}
-    {{- $majTitre = cond $en "Year of the Eurostat data compared on this page" "Année des données Eurostat comparées sur cette page — c'est le millésime des DONNÉES, non la date de relecture du texte" -}}
+    {{- $src = printf "%s · Eurostat %s" $donnees .meta.annee -}}
+    {{- $srcTitre = cond $en "Year of the Eurostat data compared on this page" "Année des données Eurostat comparées sur cette page — c'est le millésime des DONNÉES, non la date de relecture du texte" -}}
   {{- end -}}
-{{- else -}}
-  {{- $maj = printf "MAJ %s" (.Page.Lastmod.Format "01/2006") -}}
-  {{- $majTitre = "Mise à jour de la page. Les millésimes des données sont indiqués auprès de chaque figure." -}}
+{{- else if and (eq $v "prolongement") (in (.Page.Params.donnees | default (slice)) "dette_collectivites") -}}
+  {{- with site.Data.dette_collectivites -}}
+    {{- $src = printf "%s · Eurostat %s" $donnees .affichage.an_fin -}}
+    {{- $srcTitre = "Dernière année des données Eurostat de cette page — c'est le millésime des DONNÉES, non la date de relecture du texte" -}}
+  {{- end -}}
+{{- end -}}
+{{- if not $src -}}
+  {{- $src = printf "%s · %s" (cond $en "Updated" "Mise à jour") (.Page.Lastmod.Format "01/2006") -}}
+  {{- $srcTitre = cond $en "Last editorial update of this page. Data vintages are given next to each figure." "Mise à jour éditoriale de la page. Les millésimes des données sont indiqués auprès de chaque figure." -}}
 {{- end -}}
 {{- $items := slice
     (dict "n" "hausse" "url" (cond $en "/en/why-does-public-debt-rise/" "/pourquoi-la-dette-publique-augmente/")
-          "titre" (cond $en "Why it rises" "Pourquoi elle augmente") "court" (cond $en "Rise" "Hausse")
-          "role" (cond $en "dynamics" "dynamique") "note" "")
+          "titre" (cond $en "Why does it rise?" "Pourquoi augmente-t-elle ?") "court" (cond $en "Rise" "Hausse")
+          "nom" (cond $en "why does public debt rise?" "pourquoi la dette publique augmente-t-elle ?")
+          "role" (cond $en "dynamics" "dynamique"))
     (dict "n" "1" "url" (cond $en "/en/cost-of-french-public-debt/" "/cout-de-la-dette-publique/")
-          "titre" (cond $en "What it costs" "Combien coûte") "court" (cond $en "Cost" "Coût")
-          "role" (cond $en "interest burden" "charge d'intérêts") "note" "")
+          "titre" (cond $en "What does it cost?" "Combien coûte-t-elle ?") "court" (cond $en "Cost" "Coût")
+          "nom" (cond $en "what does public debt cost?" "combien coûte la dette publique ?")
+          "role" (cond $en "interest burden" "charge d'intérêts"))
     (dict "n" "2" "url" (cond $en "/en/who-really-pays-public-debt/" "/qui-paie-la-dette-publique/")
-          "titre" (cond $en "Who pays" "Qui paie") "court" (cond $en "Who pays" "Qui paie")
-          "role" (cond $en "distribution" "répartition") "note" "")
+          "titre" (cond $en "Who pays?" "Qui paie ?") "court" (cond $en "Who pays" "Qui paie")
+          "nom" (cond $en "who really pays public debt?" "qui paie vraiment la dette publique ?")
+          "role" (cond $en "distribution" "répartition"))
     (dict "n" "3" "url" (cond $en "/en/public-debt-international-comparison/" "/dette-publique-comparaison-internationale/")
-          "titre" (cond $en "Elsewhere" "Et ailleurs") "court" (cond $en "Elsewhere" "Ailleurs")
-          "role" (cond $en "comparison" "comparaison") "note" "") -}}
-<nav class="dossier-dette" aria-label="{{ if $en }}Public debt dossier{{ else }}Dossier dette publique{{ end }}">
+          "titre" (cond $en "What about elsewhere?" "Qu’en est-il ailleurs ?") "court" (cond $en "Elsewhere" "Ailleurs")
+          "nom" (cond $en "how does public debt compare elsewhere?" "qu’en est-il de la dette publique ailleurs ?")
+          "role" (cond $en "comparisons" "comparaisons")) -}}
+{{- $items = $items | append (dict "n" "baisse" "url" (cond $en "/en/can-public-debt-come-down/" "/dette-publique-peut-elle-baisser/")
+      "titre" (cond $en "Can it come down?" "Peut-elle baisser ?") "court" (cond $en "Down" "Baisse")
+      "nom" (cond $en "can public debt come down?" "la dette publique peut-elle baisser ?") "role" "conditions") -}}
+{{- /* Prolongements : ceux de la langue de la page ; une page anglaise sans prolongement anglais montre ceux de la page
+       française, marqués « in French » et hreflang="fr" (miroir de la barre demandé par l'auteur, 03/10/2026). */ -}}
+{{- $prolong := where site.Pages "Params.dossier_dette" "prolongement" -}}
+{{- $enFrancais := false -}}
+{{- if and $en (not $prolong) -}}
+  {{- range site.Sites }}{{ if eq .Language.Lang "fr" }}{{ $prolong = where .Pages "Params.dossier_dette" "prolongement" }}{{ end }}{{ end -}}
+  {{- $enFrancais = true -}}
+{{- end -}}
+{{- $prolong = sort $prolong "Params.ressource.rang" -}}
+{{- $plusActif := eq $v "prolongement" -}}
+{{- $ptitre := cond $en "Further topics" "Prolongements" -}}
+<div class="dossier-entete">
+  <span class="dossier-dette__titre">{{ if $en }}Public debt dossier{{ else }}Dossier dette publique{{ end }}</span>
+  <span class="dossier-entete__source" title="{{ $srcTitre }}">{{ if $en }}{{ $src }}{{ else }}{{ partial "fr-typo.html" $src }}{{ end }}</span>
+</div>
+<nav class="dossier-dette dossier-dette--v2" aria-label="{{ if $en }}Public debt dossier{{ else }}Dossier dette publique{{ end }}">
   <div class="dossier-dette__barre">
-    <span class="dossier-dette__titre">{{ if $en }}Public debt dossier{{ else }}Dossier dette publique{{ end }}</span>
     <ol class="dossier-dette__volets">
-      {{- range $i, $it := $items }}
-      {{- $num := add $i 1 }}
-      {{- with $it }}
+      {{- range $items }}
       {{- if eq .n $v }}
       <li class="dossier-dette__volet is-actif" aria-current="page">
-        <span class="dossier-dette__onglet"><b><span class="dossier-dette__num">{{ $num }}. </span><span class="dossier-dette__long">{{ .titre }}</span><span class="dossier-dette__court">{{ .court }}</span></b><span class="dossier-dette__role">{{ .role }}</span></span>
+        <span class="dossier-dette__onglet"><b><span class="dossier-dette__long">{{ if $en }}{{ .titre }}{{ else }}{{ partial "fr-typo.html" .titre }}{{ end }}</span><span class="dossier-dette__court">{{ .court }}<span class="sr-only"> : {{ .nom }}</span></span></b><span class="dossier-dette__role">{{ .role }}</span></span>
       </li>
       {{- else }}
       <li class="dossier-dette__volet">
-        <a class="dossier-dette__onglet" href="{{ .url }}"{{ with .note }} hreflang="fr"{{ end }}><b><span class="dossier-dette__num">{{ $num }}. </span><span class="dossier-dette__long">{{ .titre }}</span><span class="dossier-dette__court">{{ .court }}</span></b>{{ with .note }} <em>({{ . }})</em>{{ end }}<span class="dossier-dette__role">{{ .role }}</span></a>
+        <a class="dossier-dette__onglet" href="{{ .url }}"><b><span class="dossier-dette__long">{{ if $en }}{{ .titre }}{{ else }}{{ partial "fr-typo.html" .titre }}{{ end }}</span><span class="dossier-dette__court">{{ .court }}<span class="sr-only"> : {{ .nom }}</span></span></b><span class="dossier-dette__role">{{ .role }}</span></a>
       </li>
       {{- end }}
       {{- end }}
+      {{- with $prolong }}
+      <li class="dossier-dette__volet dossier-dette__volet--plus{{ if $plusActif }} is-actif{{ end }}"{{ if $plusActif }} aria-current="page"{{ end }}>
+        <details class="dossier-dette__plus">
+          <summary class="dossier-dette__onglet"><b><span class="dossier-dette__long">{{ $ptitre }}</span><span class="dossier-dette__court">{{ if $en }}More{{ else }}Plus{{ end }}<span class="sr-only"> : {{ lower $ptitre }}</span></span><span class="dossier-dette__chevron" aria-hidden="true">▾</span></b><span class="dossier-dette__role">{{ len . }} {{ if $en }}topics{{ else }}thèmes{{ end }}</span></summary>
+          <div class="dossier-dette__panneau">
+            <p class="dossier-dette__panneau-titre">{{ if $en }}Further topics in the dossier{{ else }}Prolongements du dossier{{ end }}</p>
+            {{- range . }}
+            {{- $ici := eq .RelPermalink $page.RelPermalink }}
+            {{- if $enFrancais }}
+            <a class="dossier-dette__prolongement" href="{{ .RelPermalink }}" hreflang="fr" lang="en"><b>{{ .Params.dossier_dette_titre_en | default .Title }}</b>{{ with .Params.dossier_dette_role_en }}<span>{{ . }}</span>{{ end }}<span>in French</span></a>
+            {{- else }}
+            <a class="dossier-dette__prolongement{{ if $ici }} is-ici{{ end }}" href="{{ .RelPermalink }}"{{ if $ici }} aria-current="page"{{ end }}><b>{{ if $en }}{{ .Params.dossier_dette_titre | default .Title }}{{ else }}{{ partial "fr-typo.html" (.Params.dossier_dette_titre | default .Title) }}{{ end }}</b>{{ with .Params.dossier_dette_role }}<span>{{ . }}</span>{{ end }}{{ if $ici }}<span>{{ if $en }}you are here{{ else }}vous êtes ici{{ end }}</span>{{ end }}</a>
+            {{- end }}
+            {{- end }}
+          </div>
+        </details>
+      </li>
       {{- end }}
     </ol>
-    {{- with $maj }}
-    <span class="dossier-dette__maj" title="{{ $majTitre }}">{{ . }}</span>
-    {{- end }}
   </div>
 </nav>
+<script>
+// Téléphone : si la bande des onglets défile, l'onglet actif est ramené en vue à l'ouverture (horizontalement seulement).
+(function () {
+  var b = document.currentScript && document.currentScript.previousElementSibling;
+  var o = b && b.querySelector(".dossier-dette__volets"), a = o && o.querySelector(".is-actif");
+  function centrer() {
+    if (!o || !a || o.scrollWidth <= o.clientWidth) return;
+    var ro = o.getBoundingClientRect(), ra = a.getBoundingClientRect();
+    o.scrollLeft += (ra.left - ro.left) - (o.clientWidth - ra.width) / 2;
+  }
+  centrer();
+  window.addEventListener("load", centrer);
+})();
+</script>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 408" role="img" font-variant-numeric="tabular-nums" aria-labelledby="bd-t bd-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="bd-t">France: what pushed the debt up or down, decade by decade</title><desc id="bd-d">Three groups of three bars, in points of GDP cumulated over ten years: effect of interest rates and growth, primary deficits, other adjustments (stock-flow). 1996-2005: +8.4, −2.5, +4.4; debt +10.4. 2006-2015: +7.8, +22.4, −1.5; debt +28.8. 2016-2025: −15.1, +30.6, +3.1; debt +18.6. Over the last decade, the interest-growth effect pulled the ratio down and primary deficits pushed it up by more.</desc>
+<rect width="720" height="408" fill="#ffffff"/>
+<text x="0" y="18" font-size="15" font-weight="600" fill="#26262f">France: what pushed the debt up or down, decade by decade</text>
+<rect x="40" y="36" width="10" height="10" fill="#eb6834"/>
+<text x="54" y="45" font-size="11" fill="#55524f">pushes the ratio up</text>
+<rect x="191" y="36" width="10" height="10" fill="#8a8781"/>
+<text x="205" y="45" font-size="11" fill="#55524f">pulls it down</text>
+<text x="40" y="64" font-size="11" fill="#55524f">T: interest and growth · S: primary deficits (+) or surpluses (−) · A: other adjustments</text>
+<line x1="40" y1="270.0" x2="710" y2="270.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="273.0" font-size="10" fill="#96928f" text-anchor="end">−20</text>
+<line x1="40" y1="238.0" x2="710" y2="238.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="241.0" font-size="10" fill="#96928f" text-anchor="end">−10</text>
+<line x1="40" y1="206.0" x2="710" y2="206.0" stroke="#dcd8d3" stroke-width="1.4"/>
+<text x="34" y="209.0" font-size="10" fill="#96928f" text-anchor="end">0</text>
+<line x1="40" y1="174.0" x2="710" y2="174.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="177.0" font-size="10" fill="#96928f" text-anchor="end">+10</text>
+<line x1="40" y1="142.0" x2="710" y2="142.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="145.0" font-size="10" fill="#96928f" text-anchor="end">+20</text>
+<line x1="40" y1="110.0" x2="710" y2="110.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="113.0" font-size="10" fill="#96928f" text-anchor="end">+30</text>
+<line x1="40" y1="78.0" x2="710" y2="78.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="81.0" font-size="10" fill="#96928f" text-anchor="end">+40</text>
+<text x="96.6" y="283" font-size="9" font-weight="600" fill="#96928f" text-anchor="middle">T</text>
+<rect x="70.5" y="179.0" width="52.1" height="27.0" fill="#eb6834"/>
+<text x="96.6" y="175.0" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">+8.4</text>
+<text x="151.7" y="283" font-size="9" font-weight="600" fill="#96928f" text-anchor="middle">S</text>
+<rect x="125.6" y="206.0" width="52.1" height="7.9" fill="#8a8781"/>
+<text x="151.7" y="225.9" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">−2.5</text>
+<text x="206.8" y="283" font-size="9" font-weight="600" fill="#96928f" text-anchor="middle">A</text>
+<rect x="180.7" y="191.9" width="52.1" height="14.1" fill="#eb6834"/>
+<text x="206.8" y="187.9" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">+4.4</text>
+<text x="151.7" y="302" font-size="11.5" font-weight="600" fill="#26262f" text-anchor="middle">1996-2005</text>
+<text x="151.7" y="316" font-size="10.5" fill="#184f95" text-anchor="middle">debt: +10.4 points (57.8 → 68.2% of GDP)</text>
+<text x="319.9" y="283" font-size="9" font-weight="600" fill="#96928f" text-anchor="middle">T</text>
+<rect x="293.9" y="180.9" width="52.1" height="25.1" fill="#eb6834"/>
+<text x="319.9" y="176.9" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">+7.8</text>
+<text x="375.0" y="283" font-size="9" font-weight="600" fill="#96928f" text-anchor="middle">S</text>
+<rect x="349.0" y="134.3" width="52.1" height="71.7" fill="#eb6834"/>
+<text x="375.0" y="130.3" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">+22.4</text>
+<text x="430.1" y="283" font-size="9" font-weight="600" fill="#96928f" text-anchor="middle">A</text>
+<rect x="404.0" y="206.0" width="52.1" height="4.7" fill="#8a8781"/>
+<text x="430.1" y="222.7" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">−1.5</text>
+<text x="375.0" y="302" font-size="11.5" font-weight="600" fill="#26262f" text-anchor="middle">2006-2015</text>
+<text x="375.0" y="316" font-size="10.5" fill="#184f95" text-anchor="middle">debt: +28.8 points (68.2 → 97.0% of GDP)</text>
+<text x="543.2" y="283" font-size="9" font-weight="600" fill="#96928f" text-anchor="middle">T</text>
+<rect x="517.2" y="206.0" width="52.1" height="48.3" fill="#8a8781"/>
+<text x="543.2" y="266.3" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">−15.1</text>
+<text x="598.3" y="283" font-size="9" font-weight="600" fill="#96928f" text-anchor="middle">S</text>
+<rect x="572.3" y="108.1" width="52.1" height="97.9" fill="#eb6834"/>
+<text x="598.3" y="104.1" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">+30.6</text>
+<text x="653.4" y="283" font-size="9" font-weight="600" fill="#96928f" text-anchor="middle">A</text>
+<rect x="627.4" y="196.1" width="52.1" height="9.9" fill="#eb6834"/>
+<text x="653.4" y="192.1" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">+3.1</text>
+<text x="598.3" y="302" font-size="11.5" font-weight="600" fill="#26262f" text-anchor="middle">2016-2025</text>
+<text x="598.3" y="316" font-size="10.5" fill="#184f95" text-anchor="middle">debt: +18.6 points (97.0 → 115.6% of GDP)</text>
+<line x1="0" y1="360.0" x2="720" y2="360.0" stroke="#dcd8d3"/>
+<text x="0" y="373.0" font-size="9" fill="#55524f">Eurostat gov_10dd_edpt1 (debt, GDP), gov_10a_main (B9, D41PAY), France, 1996-2025</text>
+<text x="0" y="385.0" font-size="9" fill="#55524f">Points of GDP cumulated over ten years; an accounting decomposition, not a causal one: the three terms are not independent.</text>
+<text x="0" y="397.0" font-size="9" fill="#96928f">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/can-public-debt-come-down/</text>
+</svg>

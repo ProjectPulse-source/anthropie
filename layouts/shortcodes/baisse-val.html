@@ -1,19 +1,21 @@
-{{- /* {{< baisse-val "d3_tc_abs" >}} — émet UNE valeur du bloc affichage de data/dette_baisse.json (chaînes françaises
-       précalculées et gardées par scripts/update_dette_baisse.py). Même contrat que dyn-val : aucun chiffre en dur dans
-       la prose ; clé inconnue ou données absentes = échec de build. Page en français seulement (exclusion déclarée :
-       pas de bloc affichage_en). */ -}}
+{{- /* {{< baisse-val "d3_tc_abs" >}} — émet UNE valeur du bloc affichage de data/dette_baisse.json (chaînes précalculées et
+       gardées par scripts/update_dette_baisse.py). Même contrat que dyn-val : aucun chiffre en dur dans la prose ; clé
+       inconnue ou données absentes = échec de build. Bilingue depuis le 03/10/2026 : la langue CHOISIT le bloc
+       (affichage_en sur une page anglaise), elle ne formate rien ici ; bloc anglais absent = échec, jamais un repli sur
+       les chaînes françaises (« 15,1 » serait faux en anglais). */ -}}
 {{- $k := .Get 0 -}}
+{{- $en := eq $.Page.Lang "en" -}}
 {{- if eq $k "date_donnees" -}}
   {{- with site.Data.dette_baisse.releve_le -}}
     {{- $t := time . -}}
-    {{- $mois := slice "janvier" "février" "mars" "avril" "mai" "juin" "juillet" "août" "septembre" "octobre" "novembre" "décembre" -}}
-    {{- printf "%d %s %d" $t.Day (index $mois (sub (int $t.Month) 1)) $t.Year -}}
+    {{- $mois := cond $en (slice "January" "February" "March" "April" "May" "June" "July" "August" "September" "October" "November" "December") (slice "janvier" "février" "mars" "avril" "mai" "juin" "juillet" "août" "septembre" "octobre" "novembre" "décembre") -}}
+    {{- if $en }}{{ printf "%d %s %d" $t.Day (index $mois (sub (int $t.Month) 1)) $t.Year }}{{ else }}{{ printf "%d %s %d" $t.Day (index $mois (sub (int $t.Month) 1)) $t.Year }}{{ end -}}
   {{- else -}}{{- errorf "baisse-val: releve_le absent de data/dette_baisse.json (page %s)" $.Page.RelPermalink -}}{{- end -}}
 {{- else -}}
 {{- $a := "" -}}
-{{- with site.Data.dette_baisse -}}{{- $a = .affichage -}}{{- end -}}
+{{- with site.Data.dette_baisse -}}{{- $a = cond $en .affichage_en .affichage -}}{{- end -}}
 {{- if not $a -}}
-  {{- errorf "baisse-val: data/dette_baisse.json absent ou sans bloc affichage (page %s)" .Page.RelPermalink -}}
+  {{- errorf "baisse-val: data/dette_baisse.json absent ou sans bloc %s (page %s)" (cond $en "affichage_en" "affichage") .Page.RelPermalink -}}
 {{- else -}}
   {{- $v := index $a $k -}}
   {{- if not $v -}}

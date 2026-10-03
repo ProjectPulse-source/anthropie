@@ -347,9 +347,113 @@ a.dossier-dette__onglet:focus-visible { outline: 2px solid var(--color-pivot); o
   .dossier-dette__maj { font-size: 0.78rem; }
 }
 
+// ---------------------------------------------------------------------------------------------------------------
+// BARRE DU DOSSIER DETTE, VERSION A+ v2 (auteur, 03/10/2026). Maquettes et trois avis arbitrés :
+// D:\PRO\06_PROMOTION\MAQUETTES_BARRE_DOSSIER_DETTE_2026-10-03\. Seul le modificateur --v2 est touché : la barre des
+// enseignants (enseignants-themes.html) garde l'organe d'origine ci-dessus.
+// - En-tête (pastille + source en gris) HORS de la barre collante : il défile avec la page.
+// - Rangée collante : cinq questions sans numéros, typographie resserrée (0,84 rem, marges 0,45 rem), filet puis
+//   « Prolongements ». Sur le site construit, rangée naturelle de 936 px : 56 px de réserve dans 992 px (mesure du
+//   03/10 ; la maquette donnait 884 px, polices et marges du site diffèrent).
+// - Bascule vers les libellés courts AVANT saturation : sous 968 px de barre (réserve < 32 px), requête de conteneur.
+// ---------------------------------------------------------------------------------------------------------------
+.sr-only {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+.dossier-entete {
+  display: flex; align-items: center; justify-content: space-between; gap: 0.4rem 1rem; flex-wrap: wrap;
+  margin: 0 0 0.35rem;
+  font-family: var(--font-sans);
+  .dossier-dette__titre { align-self: center; }
+}
+.dossier-entete__source {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--color-text-subtle);
+  white-space: nowrap;
+}
+.dossier-dette--v2 {
+  container-type: inline-size;
+  .dossier-dette__barre { display: block; padding-top: 0.3rem; }
+  // La liste hérite des marges et du retrait des <ol> du corps de page : sans ce remise à zéro, la rangée partait
+  // décalée de 42 px et dépassait la barre (mesure du 03/10) ; même parade que la barre d'origine sous 1 120 px.
+  .dossier-dette__volets { width: 100%; gap: 0.25rem; margin: 0 !important; padding: 0 !important; }
+  .dossier-dette__volet { flex: 1 1 auto; }
+  // position: relative : le texte masqué des lecteurs d'écran (.sr-only, absolu) prend l'onglet pour bloc conteneur ; sans
+  // cela il prenait la barre, échappait à la bande défilante et faisait déborder la PAGE à 390 px (mesure du 03/10).
+  .dossier-dette__onglet { position: relative; padding: 0.35rem 0.45rem 0.45rem; font-size: 0.84rem; }
+  .dossier-dette__role { display: block; }
+  .dossier-dette__long { display: inline; }
+  .dossier-dette__court { display: none; }
+  .dossier-dette__volet--plus {
+    flex: 0 0 auto;
+    margin-left: 0.45rem;
+    padding-left: 0.45rem;
+    border-left: 1px solid var(--color-rule-medium);
+  }
+  // « Prolongements » : contour plein très léger, fond transparent (le pointillé évoquait un emplacement provisoire)
+  .dossier-dette__volet--plus:not(.is-actif) .dossier-dette__onglet {
+    background: transparent;
+    border-color: var(--color-rule-soft);
+    border-bottom-color: transparent;
+  }
+  .dossier-dette__plus > summary { list-style: none; cursor: pointer; }
+  .dossier-dette__plus > summary::-webkit-details-marker { display: none; }
+  .dossier-dette__chevron { font-size: 0.7em; margin-left: 0.3rem; }
+  // Panneau : positionné par rapport à la BARRE (élément collant, donc bloc conteneur), non à la bande des onglets
+  // qui défile sur téléphone : il n'est pas rogné par elle.
+  .dossier-dette__plus { position: static; }
+  .dossier-dette__panneau {
+    position: absolute; left: 0; right: 0; top: 100%; z-index: 5;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0.6rem;
+    padding: 0.8rem 1rem 1rem;
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-rule-medium);
+    border-top: 3px solid var(--color-accent);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+  .dossier-dette__panneau-titre {
+    grid-column: 1 / -1; margin: 0;
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--color-text-subtle);
+  }
+  .dossier-dette__prolongement {
+    display: block; padding: 0.55rem 0.7rem; border-radius: 5px;
+    background: var(--color-dossier-tint); color: var(--color-accent); text-decoration: none;
+    b { display: block; font-size: 0.9rem; font-weight: 600; }
+    span { display: block; font-size: 0.75rem; color: var(--color-text-subtle); }
+    &:hover { background: var(--color-dossier-tint-hover); }
+    &.is-ici { outline: 2px solid var(--color-accent); }
+  }
+}
+// Bascule avant saturation (réserve < 32 px) : libellés courts, rôles conservés tant que la place le permet.
+@container (max-width: 967px) {
+  .dossier-dette--v2 .dossier-dette__long { display: none; }
+  .dossier-dette--v2 .dossier-dette__court { display: inline; }
+}
+@container (max-width: 520px) {
+  .dossier-dette--v2 .dossier-dette__role { display: none; }
+  .dossier-dette--v2 .dossier-dette__volets { overflow-x: auto; scrollbar-width: thin; -webkit-overflow-scrolling: touch; gap: 0.12rem; }
+  .dossier-dette--v2 .dossier-dette__volet { flex: 0 0 auto; }
+  .dossier-dette--v2 .dossier-dette__onglet { white-space: nowrap; padding: 0.3rem 0.32rem 0.4rem; font-size: 0.8rem; }
+  .dossier-dette--v2 .dossier-dette__volet--plus { margin-left: 0.15rem; padding-left: 0.15rem; }
+  .dossier-dette--v2 .dossier-dette__panneau { grid-template-columns: 1fr; }
+}
+@media (max-width: 1120px) {
+  .dossier-entete .dossier-dette__titre { font-size: 0.72rem; padding: 0.18rem 0.45rem; }
+  .dossier-entete__source { font-size: 0.74rem; }
+}
+
 // Deux barres collantes se superposent à une ancre : les cibles internes gagnent
 // la marge correspondante, sinon le titre visé se cache derrière elles.
 .reutiliser, .reutiliser__carte { scroll-margin-top: 7.5rem; }
+// Barre A+ v2 : un titre atteint par ancre se cachait sous l'en-tête et la rangée collante (mesure du 03/10 : titre à
+// 0 px sous 132 px de barres à 1 280 px, 102 px à 390 px ; 178 px avec l'ancienne barre, défaut déjà en ligne). Même
+// parade que la barre des enseignants (_enseignants.scss).
+.dossier-dette--v2 ~ [id], .dossier-dette--v2 ~ * [id] { scroll-margin-top: 9.5rem; }
 
 .qp-tableau {
   margin: 0 0 1.4rem;

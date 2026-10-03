@@ -132,8 +132,11 @@ créer) : dans un bloc, les pages qui déclarent `donnees:` forment « le dossie
 blanc, partie texte teintée (`--color-dossier-tint`) ; les autres pages du bloc suivent en cartes crème ; une page qui
 déclare `ressource.encart: true` s'affiche en encart avec bouton (`ressource.bouton`) ; une page de données qui traite un
 cas particulier du dossier déclare `ressource.prolongement: true` et s'affiche sous la grille, dans « Prolongements du
-dossier » (option B, 01/10/2026 : elle garde `donnees:`, donc les critères bloquants ; dans la barre du dossier, volet
-`collectivites` = aucun onglet actif). Rien à déclarer dans l'index : le
+dossier » (option B, 01/10/2026 : elle garde `donnees:`, donc les critères bloquants). **Barre du dossier A+ v2
+(auteur, 03/10/2026)** : cinq questions en onglets, puis « Prolongements » qui déplie toute page déclarant
+`dossier_dette: prolongement` (libellé `dossier_dette_titre`, sous-titre `dossier_dette_role`) ; une telle page appelle
+`{{< dossier-dette volet="prolongement" >}}`. Source de la page en gris dans l'en-tête ; tout changement de libellé se
+remesure (bascule vers les libellés courts sous 968 px de barre). Rien à déclarer dans l'index : le
 tri se déduit des pages (`layouts/ressources/list.html`, partials `ressource-entree.html` et `ressource-encart.html`).
 **Une nouvelle ressource de données fait produire sa vignette par le générateur de sa carte de partage**, dans le même
 passage et avec le même dessin sur fond blanc (modèle : `carte()` de `scripts/og_dossier_dette.py`) ; sa sortie entre

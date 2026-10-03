@@ -182,7 +182,7 @@ Only indicative measures exist: debt according to the IMF, and central-governmen
 
 <aside class="encadre">
 
-**And to know whether the debt will rise?** This page compares what debt costs today. The question of its trajectory is a different one: a debt ratio tends to rise when the interest rate paid exceeds the nominal growth of the economy and the budget, excluding interest, remains in deficit. This gap between rates and growth is the subject of a separate analysis.
+**And to know whether the debt will rise?** This page compares what debt costs today. The question of its trajectory is a different one: a debt ratio tends to rise when the interest rate paid exceeds the nominal growth of the economy and the budget, excluding interest, remains in deficit. This gap between rates and growth, and what it took elsewhere for debt to come down, are the subject of [Can public debt come down?](/en/can-public-debt-come-down/)
 
 </aside>
 
@@ -224,6 +224,7 @@ Only indicative measures exist: debt according to the IMF, and central-governmen
 - [Why does French public debt rise?](/en/why-does-public-debt-rise/)
 - [What does French public debt actually cost?](/en/cost-of-french-public-debt/)
 - [Who really pays for public debt?](/en/who-really-pays-public-debt/)
+- [Can it come down?](/en/can-public-debt-come-down/)
 {{< /pastilles >}}
 
 {{< appel-livre slug="dette-publique-qui-paie-vraiment" sur="To take the analysis further" avis="non" >}}

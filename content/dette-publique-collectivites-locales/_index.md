@@ -48,6 +48,11 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   rang: 30
   nature: "Séries officielles (Eurostat, OFGL) et calculs de l'auteur"
   prolongement: true   # option B : rangée « Prolongements du dossier », sous la grille des quatre volets
+dossier_dette: prolongement   # panneau « Prolongements » de la barre du dossier (A+ v2, 03/10/2026)
+dossier_dette_titre: "Les collectivités locales, variable d'ajustement ?"
+dossier_dette_role: "dette, dotations, investissement local"
+dossier_dette_titre_en: "Local authorities: the adjustment variable?"
+dossier_dette_role_en: "debt, grants, local investment"
 ---
 
 {{< dossier-dette volet="collectivites" >}}

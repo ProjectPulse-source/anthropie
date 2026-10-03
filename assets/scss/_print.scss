@@ -43,6 +43,12 @@
     margin-bottom: 2mm !important;
   }
   .dossier-dette__maj { color: #000 !important; padding-bottom: 2mm !important; }
+  // Barre A+ v2 (03/10/2026) : le nom du dossier et la source sont dans l'en-tête, qui s'imprime ; la rangée
+  // d'onglets ne sert qu'à l'écran.
+  .dossier-dette--v2 { display: none !important; }
+  .dossier-entete { border-bottom: 1px solid #999; padding-bottom: 2mm; margin-bottom: 6mm !important; }
+  .dossier-entete .dossier-dette__titre { background: none !important; color: #000 !important; padding: 0 !important; }
+  .dossier-entete__source { color: #000 !important; }
   .site-footer { padding: 0 !important; margin-top: 6mm; border-top: 1px solid #999; }
   .site-footer__legal { font-size: 9pt; }
 

@@ -1,15 +1,25 @@
 {{- /* {{< baisse-tableau >}} — les pays partis de plus de 90 % de dette, sur la dernière décennie. Lignes lues dans
-       data/dette_baisse.json (pays_dette_elevee, triés par variation de la dette) ; nombres lus dans le bloc affichage
-       (chaînes déjà formatées et gardées par scripts/update_dette_baisse.py) : aucun chiffre recopié, aucun format ici. */ -}}
+       data/dette_baisse.json (pays_dette_elevee, triés par variation de la dette) ; noms et nombres lus dans le bloc
+       affichage de la langue de la page (chaînes déjà formatées et gardées par scripts/update_dette_baisse.py) : aucun
+       chiffre recopié, aucun format ici. Bilingue depuis le 03/10/2026. */ -}}
 {{- $j := site.Data.dette_baisse -}}
 {{- if not $j -}}{{ errorf "baisse-tableau: data/dette_baisse.json absent (%s)" .Page.File.Path }}{{- end -}}
-{{- $A := $j.affichage -}}
+{{- $en := eq .Page.Lang "en" -}}
+{{- $A := cond $en $j.affichage_en $j.affichage -}}
 <div class="table-scroll"><table class="dette-monde-table">
+{{- if $en }}
+<thead><tr><th>Country</th><th>Debt, end-{{ $A.cmp_veille }}</th><th>Debt, end-{{ $A.annee_fin }}</th><th>Change</th><th>Interest-growth effect</th><th>Cumulated primary deficits</th><th>Stock-flow</th><th>Average primary balance</th></tr></thead>
+{{- else }}
 <thead><tr><th>Pays</th><th>Dette fin {{ $A.cmp_veille }}</th><th>Dette fin {{ $A.annee_fin }}</th><th>Variation</th><th>Effet taux-croissance</th><th>Déficits primaires cumulés</th><th>Flux-stock</th><th>Solde primaire moyen</th></tr></thead>
+{{- end }}
 <tbody>
 {{- range $j.pays_dette_elevee }}
 {{- $c := printf "cmp_%s_" (lower .pays) }}
-<tr><td>{{ .nom }}</td><td>{{ index $A (printf "%sd0" $c) }}</td><td>{{ index $A (printf "%sd1" $c) }}</td><td>{{ index $A (printf "%svar" $c) }}</td><td>{{ index $A (printf "%stc" $c) }}</td><td>{{ index $A (printf "%sdef" $c) }}</td><td>{{ index $A (printf "%ssfa" $c) }}</td><td>{{ index $A (printf "%spb" $c) }}&nbsp;%</td></tr>
+<tr><td>{{ index $A (printf "%snom" $c) }}</td><td>{{ index $A (printf "%sd0" $c) }}</td><td>{{ index $A (printf "%sd1" $c) }}</td><td>{{ index $A (printf "%svar" $c) }}</td><td>{{ index $A (printf "%stc" $c) }}</td><td>{{ index $A (printf "%sdef" $c) }}</td><td>{{ index $A (printf "%ssfa" $c) }}</td><td>{{ index $A (printf "%spb" $c) }}{{ if $en }}%{{ else }}&nbsp;%{{ end }}</td></tr>
 {{- end }}
 </tbody></table></div>
+{{- if $en }}
+<p><small>Debt in % of GDP; change and contributions in points of GDP cumulated over {{ $A.cmp_lib }}; a negative figure under “cumulated primary deficits” means surpluses. Source: Eurostat.</small></p>
+{{- else }}
 <p><small>Dette en&nbsp;% du PIB&nbsp;; variation et contributions en points de PIB cumulés sur {{ $A.cmp_lib }}&nbsp;; un nombre négatif dans «&nbsp;déficits primaires cumulés&nbsp;» désigne des excédents. Source&nbsp;: Eurostat.</small></p>
+{{- end }}

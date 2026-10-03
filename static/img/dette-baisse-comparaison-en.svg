@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 418" role="img" font-variant-numeric="tabular-nums" aria-labelledby="bc-t bc-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="bc-t">Seven countries with debt above 90% of GDP at end-2015: ten years on</title><desc id="bc-d">For each country, three bars in points of GDP cumulated over 2016-2025: the interest-growth effect, the contribution of the primary balance (a surplus pulls the debt down, a deficit pushes it up) and other adjustments. Cyprus: interest-growth −46.2, primary balance −23.3, other adjustments +12.9, debt −56.6. Portugal: interest-growth −33.3, primary balance −15.5, other adjustments +7.4, debt −41.4. Greece: interest-growth −30.4, primary balance −15.2, other adjustments +12.1, debt −33.5. Spain: interest-growth −22.5, primary balance +19.1, other adjustments +1.5, debt −1.8. Belgium: interest-growth −23.8, primary balance +17.0, other adjustments +9.0, debt +2.2. Italy: interest-growth −5.3, primary balance +11.6, other adjustments −4.0, debt +2.3. France: interest-growth −15.1, primary balance +30.6, other adjustments +3.1, debt +18.6. The interest-growth effect is favourable everywhere, but of very different size; the ratio fell by more than 15 points where the primary balance was in surplus on average.</desc>
+<rect width="720" height="418" fill="#ffffff"/>
+<text x="0" y="18" font-size="15" font-weight="600" fill="#26262f">Seven countries with debt above 90% of GDP at end-2015: ten years on</text>
+<rect x="40" y="36" width="10" height="10" fill="#eb6834"/>
+<text x="54" y="45" font-size="11" fill="#55524f">pushes the ratio up</text>
+<rect x="191" y="36" width="10" height="10" fill="#8a8781"/>
+<text x="205" y="45" font-size="11" fill="#55524f">pulls it down</text>
+<text x="40" y="64" font-size="11" fill="#55524f">T: interest and growth · S: primary deficits (+) or surpluses (−) · A: other adjustments</text>
+<line x1="40" y1="280.0" x2="710" y2="280.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="283.0" font-size="10" fill="#96928f" text-anchor="end">−60</text>
+<line x1="40" y1="239.6" x2="710" y2="239.6" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="242.6" font-size="10" fill="#96928f" text-anchor="end">−40</text>
+<line x1="40" y1="199.2" x2="710" y2="199.2" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="202.2" font-size="10" fill="#96928f" text-anchor="end">−20</text>
+<line x1="40" y1="158.8" x2="710" y2="158.8" stroke="#dcd8d3" stroke-width="1.4"/>
+<text x="34" y="161.8" font-size="10" fill="#96928f" text-anchor="end">0</text>
+<line x1="40" y1="118.4" x2="710" y2="118.4" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="121.4" font-size="10" fill="#96928f" text-anchor="end">+20</text>
+<line x1="40" y1="78.0" x2="710" y2="78.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="81.0" font-size="10" fill="#96928f" text-anchor="end">+40</text>
+<text x="64.2" y="293" font-size="9" font-weight="600" fill="#96928f" text-anchor="middle">T</text>
+<rect x="53.9" y="158.8" width="20.6" height="93.4" fill="#8a8781"/>
+<text x="64.2" y="264.2" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">−46.2</text>
+<text x="87.9" y="293" font-size="9" font-weight="600" fill="#96928f" text-anchor="middle">S</text>
+<rect x="77.6" y="158.8" width="20.6" height="47.0" fill="#8a8781"/>
+<text x="87.9" y="217.8" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">−23.3</text>
+<text x="111.5" y="293" font-size="9" font-weight="600" fill="#96928f" text-anchor="middle">A</text>
+<rect x="101.2" y="132.7" width="20.6" height="26.1" fill="#eb6834"/>
+<text x="111.5" y="128.7" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">+12.9</text>
+<text x="87.9" y="312" font-size="11.5" font-weight="600" fill="#26262f" text-anchor="middle">Cyprus</text>
+<text x="87.9" y="326" font-size="10.5" fill="#184f95" text-anchor="middle">ratio: −56.6</text>
+<text x="160.0" y="293" font-size="9" font-weight="600" fill="#96928f" text-anchor="middle">T</text>
+<rect x="149.7" y="158.8" width="20.6" height="67.3" fill="#8a8781"/>
+<text x="160.0" y="238.1" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">−33.3</text>
+<text x="183.6" y="293" font-size="9" font-weight="600" fill="#96928f" text-anchor="middle">S</text>
+<rect x="173.3" y="158.8" width="20.6" height="31.3" fill="#8a8781"/>
+<text x="183.6" y="202.1" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">−15.5</text>
+<text x="207.2" y="293" font-size="9" font-weight="600" fill="#96928f" text-anchor="middle">A</text>
+<rect x="196.9" y="143.8" width="20.6" height="15.0" fill="#eb6834"/>
+<text x="207.2" y="139.8" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">+7.4</text>
+<text x="183.6" y="312" font-size="11.5" font-weight="600" fill="#26262f" text-anchor="middle">Portugal</text>
+<text x="183.6" y="326" font-size="10.5" fill="#184f95" text-anchor="middle">ratio: −41.4</text>
+<text x="255.7" y="293" font-size="9" font-weight="600" fill="#96928f" text-anchor="middle">T</text>
+<rect x="245.4" y="158.8" width="20.6" height="61.3" fill="#8a8781"/>
+<text x="255.7" y="232.1" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">−30.4</text>
+<text x="279.3" y="293" font-size="9" font-weight="600" fill="#96928f" text-anchor="middle">S</text>
+<rect x="269.0" y="158.8" width="20.6" height="30.7" fill="#8a8781"/>
+<text x="279.3" y="201.5" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">−15.2</text>
+<text x="302.9" y="293" font-size="9" font-weight="600" fill="#96928f" text-anchor="middle">A</text>
+<rect x="292.6" y="134.4" width="20.6" height="24.4" fill="#eb6834"/>
+<text x="302.9" y="130.4" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">+12.1</text>
+<text x="279.3" y="312" font-size="11.5" font-weight="600" fill="#26262f" text-anchor="middle">Greece</text>
+<text x="279.3" y="326" font-size="10.5" fill="#184f95" text-anchor="middle">ratio: −33.5</text>
+<text x="351.4" y="293" font-size="9" font-weight="600" fill="#96928f" text-anchor="middle">T</text>
+<rect x="341.1" y="158.8" width="20.6" height="45.5" fill="#8a8781"/>
+<text x="351.4" y="216.3" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">−22.5</text>
+<text x="375.0" y="293" font-size="9" font-weight="600" fill="#96928f" text-anchor="middle">S</text>
+<rect x="364.7" y="120.1" width="20.6" height="38.7" fill="#eb6834"/>
+<text x="375.0" y="116.1" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">+19.1</text>
+<text x="398.6" y="293" font-size="9" font-weight="600" fill="#96928f" text-anchor="middle">A</text>
+<rect x="388.3" y="155.7" width="20.6" height="3.1" fill="#eb6834"/>
+<text x="398.6" y="151.7" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">+1.5</text>
+<text x="375.0" y="312" font-size="11.5" font-weight="600" fill="#26262f" text-anchor="middle">Spain</text>
+<text x="375.0" y="326" font-size="10.5" fill="#184f95" text-anchor="middle">ratio: −1.8</text>
+<text x="447.1" y="293" font-size="9" font-weight="600" fill="#96928f" text-anchor="middle">T</text>
+<rect x="436.8" y="158.8" width="20.6" height="48.1" fill="#8a8781"/>
+<text x="447.1" y="218.9" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">−23.8</text>
+<text x="470.7" y="293" font-size="9" font-weight="600" fill="#96928f" text-anchor="middle">S</text>
+<rect x="460.4" y="124.5" width="20.6" height="34.3" fill="#eb6834"/>
+<text x="470.7" y="120.5" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">+17.0</text>
+<text x="494.3" y="293" font-size="9" font-weight="600" fill="#96928f" text-anchor="middle">A</text>
+<rect x="484.0" y="140.6" width="20.6" height="18.2" fill="#eb6834"/>
+<text x="494.3" y="136.6" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">+9.0</text>
+<text x="470.7" y="312" font-size="11.5" font-weight="600" fill="#26262f" text-anchor="middle">Belgium</text>
+<text x="470.7" y="326" font-size="10.5" fill="#184f95" text-anchor="middle">ratio: +2.2</text>
+<text x="542.8" y="293" font-size="9" font-weight="600" fill="#96928f" text-anchor="middle">T</text>
+<rect x="532.5" y="158.8" width="20.6" height="10.6" fill="#8a8781"/>
+<text x="542.8" y="181.4" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">−5.3</text>
+<text x="566.4" y="293" font-size="9" font-weight="600" fill="#96928f" text-anchor="middle">S</text>
+<rect x="556.1" y="135.4" width="20.6" height="23.4" fill="#eb6834"/>
+<text x="566.4" y="131.4" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">+11.6</text>
+<text x="590.0" y="293" font-size="9" font-weight="600" fill="#96928f" text-anchor="middle">A</text>
+<rect x="579.7" y="158.8" width="20.6" height="8.1" fill="#8a8781"/>
+<text x="590.0" y="178.9" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">−4.0</text>
+<text x="566.4" y="312" font-size="11.5" font-weight="600" fill="#26262f" text-anchor="middle">Italy</text>
+<text x="566.4" y="326" font-size="10.5" fill="#184f95" text-anchor="middle">ratio: +2.3</text>
+<text x="638.5" y="293" font-size="9" font-weight="600" fill="#96928f" text-anchor="middle">T</text>
+<rect x="628.2" y="158.8" width="20.6" height="30.5" fill="#8a8781"/>
+<text x="638.5" y="201.3" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">−15.1</text>
+<text x="662.1" y="293" font-size="9" font-weight="600" fill="#96928f" text-anchor="middle">S</text>
+<rect x="651.8" y="97.0" width="20.6" height="61.8" fill="#eb6834"/>
+<text x="662.1" y="93.0" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">+30.6</text>
+<text x="685.8" y="293" font-size="9" font-weight="600" fill="#96928f" text-anchor="middle">A</text>
+<rect x="675.4" y="152.6" width="20.6" height="6.2" fill="#eb6834"/>
+<text x="685.8" y="148.6" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">+3.1</text>
+<text x="662.1" y="312" font-size="11.5" font-weight="600" fill="#26262f" text-anchor="middle">France</text>
+<text x="662.1" y="326" font-size="10.5" fill="#184f95" text-anchor="middle">ratio: +18.6</text>
+<line x1="0" y1="370.0" x2="720" y2="370.0" stroke="#dcd8d3"/>
+<text x="0" y="383.0" font-size="9" fill="#55524f">Eurostat gov_10dd_edpt1 (debt, GDP), gov_10a_main (B9, D41PAY), 2016-2025; countries sorted by change in the debt ratio</text>
+<text x="0" y="395.0" font-size="9" fill="#55524f">Points of GDP, cumulated; Greece, Cyprus and Portugal received official financing (2010-2018). An accounting comparison, not a causal one.</text>
+<text x="0" y="407.0" font-size="9" fill="#96928f">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/can-public-debt-come-down/</text>
+</svg>

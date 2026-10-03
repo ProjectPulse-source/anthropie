@@ -57,9 +57,9 @@
 {{- end -}}
 {{- if in $text "{coll." -}}{{- errorf "desc-figures: placeholder {coll.*} non resolu dans : %s" $text -}}{{- end -}}
 {{- /* Volet « La dette peut-elle baisser » : placeholders {baisse.<cle>}, depuis data/dette_baisse.json (bloc affichage,
-       scripts/update_dette_baisse.py). Page en français seulement : pas de bloc anglais. */ -}}
+       scripts/update_dette_baisse.py). Bilingue depuis le 03/10/2026 : bloc choisi selon la langue. */ -}}
 {{- with site.Data.dette_baisse -}}
-  {{- range $k, $v := .affichage -}}
+  {{- range $k, $v := (cond (eq site.Language.Lang "en") .affichage_en .affichage) -}}
     {{- $text = replace $text (printf "{baisse.%s}" $k) $v -}}
   {{- end -}}
 {{- end -}}

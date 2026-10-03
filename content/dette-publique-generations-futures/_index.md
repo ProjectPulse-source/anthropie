@@ -17,7 +17,14 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   bloc: "dette"
   rang: 40
   nature: "Analyse"
+dossier_dette: prolongement   # panneau « Prolongements » de la barre du dossier (A+ v2, 03/10/2026)
+dossier_dette_titre: "Un fardeau pour les générations futures ?"
+dossier_dette_role: "héritage, actifs, transferts dans le temps"
+dossier_dette_titre_en: "A burden for future generations?"
+dossier_dette_role_en: "inheritance, assets, transfers over time"
 ---
+
+{{< dossier-dette volet="prolongement" >}}
 
 À la question «&nbsp;la dette publique est-elle un fardeau pour les générations futures&nbsp;?&nbsp;», la réponse défendable est conditionnelle&nbsp;: **les générations suivantes héritent des engagements, mais aussi de ce qu'ils ont financé&nbsp;; le transfert net dépend de l'usage de la dette et des ajustements choisis pour la servir.** Le fardeau n'est pas un remboursement massif qui attendrait nos enfants&nbsp;: c'est l'ensemble des transferts que la dette organise pendant qu'elle roule, et leur répartition.
 

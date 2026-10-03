@@ -7,7 +7,7 @@ og_image: "images/og-dette-baisse.jpg"
 og_image_alt: "Carte de partage : « Les déficits ont pesé plus lourd » — France, trois décennies : effet des taux et de la croissance, déficits primaires et autres ajustements, en points de PIB."
 date: 2026-10-02
 lastmod: 2026-10-03
-# Page du dossier dette (prolongement à ce jour, onglet si la barre est redessinée), créée le 02/10/2026 sur décision de l'auteur (« construis la page autour du constat français »).
+# Volet 5 du dossier dette (onglet depuis la barre A+ v2 du 03/10/2026), créé le 02/10/2026 sur décision de l'auteur (« construis la page autour du constat français »).
 # Test décisif : D:\PRO\06_PROMOTION\RECHERCHE_SOLUTIONS_DETTE_2026-10-02\test_decisif\ ; contre-expertises et arbitrages :
 # D:\PRO\.claude\external-audits\ARBITRATIONS\PRO-20261002-195300_arbitrage.md (test) et PRO-20261003-064640_arbitrage.md (page) ; avis entrant final : ENTRANTE_2026-10-03_Solution_Dette_arbitrage.md.
 # Décisions verrouillées : ni « presque nécessaire », ni « suffit », ni seuil de 2 % ; toute fréquence dit son événement, son
@@ -45,9 +45,8 @@ faq:
     answer: "Il contribue à réduire le ratio, mais la variation finale dépend aussi des taux, de la croissance et des autres ajustements : en France, le solde a atteint le repère de stabilisation hors ajustements en {baisse.suff_hausse} sans que le ratio baisse. Dans les fenêtres de dix ans des {baisse.eu_pays} pays aujourd'hui membres de l'Union où la dette de départ dépassait {baisse.seuil_dette} % du PIB, les baisses d'au moins {baisse.forte_baisse} points sont {baisse.eu_def_fb} sur {baisse.eu_def_n} avec un solde primaire moyen négatif, {baisse.eu_mid_fb} sur {baisse.eu_mid_n} avec un solde de 0 à moins de 2 %, {baisse.eu_exc_fb} sur {baisse.eu_exc_n} avec un solde d'au moins 2 % ; ces fenêtres se recouvrent et viennent de quelques pays."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   bloc: "dette"
-  rang: 25
+  rang: 35
   nature: "Séries officielles (Eurostat) décomposées et calculs de l'auteur"
-  prolongement: true   # barre à cinq onglets mesurée le 03/10 : elle déborde ; rangée « Prolongements du dossier » en attendant
 ---
 
 {{< dossier-dette volet="baisse" >}}

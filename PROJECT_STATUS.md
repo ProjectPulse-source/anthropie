@@ -53,6 +53,47 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-03 (fin d'après-midi) — Miroir anglais : page /en/can-public-debt-come-down/ et barre anglaise ; NI COMMITÉ NI POUSSÉ
+
+Demande de l'auteur (03/10) : « ajuster la version anglaise en miroir de la version française ».
+- `scripts/update_dette_baisse.py` bilingue : un calcul, blocs `affichage` et `affichage_en` aux mêmes clés (contrôlé),
+  figures `-en` au même dessin ; les figures françaises n'ont pas bougé d'un octet ; 51 gardes, une passe pour les deux langues.
+- Page `content/dette-publique-peut-elle-baisser/_index.en.md` (traduction de la version française arbitrée) ; carte
+  `og-dette-baisse-en.jpg` et vignette ; `baisse-val`, `baisse-tableau`, `desc-figures` choisissent le bloc de la langue.
+- Barre anglaise : cinq questions (« Can it come down? ») et « Further topics », qui renvoie aux deux prolongements
+  français, marqués « in French » et `hreflang="fr"` (libellés `dossier_dette_titre_en`, `dossier_dette_role_en`).
+- Renvois anglais : « separate analysis » de la comparaison internationale et « Nothing about the future » du volet 1
+  pointent vers la page ; pastilles ajoutées. Workflow `dette-monde.yml` et `data/sources_maj.json` complétés.
+- Contrôles : build, `check-all --ci` (11/11 pages de données conformes), audit des liens à 0, balises de langue réciproques,
+  barre anglaise mesurée de 1 280 à 390 px sans débordement ni onglet coupé (rangée naturelle de 868 px à 1 280 px).
+- Non traduits, déclarés : les deux prolongements (collectivités : public français, exclusion déjà déclarée ; générations
+  futures : à décider).
+
+### 2026-10-03 (après-midi) — Barre du dossier dette « A+ v2 » CONSTRUITE en local ; NI COMMITÉE NI POUSSÉE
+
+Décision de l'auteur (03/10) : « gris, construis A+ v2 ». Maquettes et trois avis arbitrés :
+`D:\PRO\06_PROMOTION\MAQUETTES_BARRE_DOSSIER_DETTE_2026-10-03\`.
+- `layouts/shortcodes/dossier-dette.html` réécrit : en-tête qui défile (pastille + source en GRIS, propre à la page) ;
+  rangée collante de cinq questions sans numéros (« Peut-elle baisser ? » devient un onglet, FR seulement) ; filet puis
+  « Prolongements » qui déplie un panneau ; les prolongements viennent du dépôt (`dossier_dette: prolongement`, tri
+  par `ressource.rang`) ; nom accessible (libellé visible puis question, texte masqué) ; onglet actif recentré sur
+  téléphone. Volet `collectivites` accepté comme ancien nom de `prolongement`.
+- `assets/scss/_reutiliser.scss` : modificateur `.dossier-dette--v2` (la barre des enseignants garde l'organe
+  d'origine) ; bascule vers les libellés courts sous 968 px de barre (rangée naturelle mesurée : 936 px, réserve 32 px) ;
+  `.sr-only` ; marge d'ancre sous les barres collantes. `_print.scss` : l'en-tête s'imprime, la rangée non.
+- Pages : « Peut-elle baisser » sort des prolongements de l'index (`rang: 35`, grille du dossier) ; « Générations
+  futures » reçoit la barre et déclare `dossier_dette: prolongement` ; collectivités déclare de même (fichier qui porte
+  aussi le travail non commité d'une autre session).
+- Mesures (build de production, 9 pages × 7 largeurs de 1 280 à 320 px) : aucun onglet coupé, onglet actif visible
+  partout, page sans débordement de 1 280 à 390 px ; impression conforme ; ancres dégagées (titre à 152 px sous 132 px
+  de barres). `check-all --ci` et `audit-liens-build.py` à 0.
+- Défauts trouvés en mesurant : (1) titre atteint par ancre caché sous les barres collantes, DÉJÀ EN LIGNE (178 px
+  masqués) — corrigé ; (2) les textes masqués s'échappaient de la bande défilante et faisaient déborder la page à
+  390 px — corrigé avant tout commit ; (3) à 320 px, le bloc du livre (`appel-livre`) déborde de 19 px sur les pages
+  qui le portent, DÉJÀ EN LIGNE, hors de ce chantier — NON corrigé, point ouvert.
+- Ouvert : sous-titres de l'index `/ressources/` (« Le dossier, en cinq pages » s'affiche ; le chapô du bloc Dette
+  est dans un fichier d'une autre session) ; version anglaise de « Peut-elle baisser ».
+
 ### 2026-10-03 (matin, suite) — Avis entrant final arbitré et appliqué ; NI COMMITÉ NI POUSSÉ
 
 Arbitrage `D:\PRO\.claude\external-audits\ARBITRATIONS\ENTRANTE_2026-10-03_Solution_Dette_arbitrage.md`. Addition
