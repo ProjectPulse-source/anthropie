@@ -167,4 +167,8 @@ sur la série de la page (OFCE 2,1). Deux gardes nouvelles, vues mordre. Nuance 
 l'OFCE juge la remontée de la charge moins certaine que les projections officielles (+0,5 point d'ici 2029 au taux de
 juillet 2025, contre +1,2 projeté par le FMI).
 
-**Contre-expertise de ces ajouts : à faire** (règle 12), avant ou juste après publication.
+**Contre-expertise** : audit `PRO-20261003-180502`, arbitré le 03/10 (`ARBITRATIONS/PRO-20261003-180502_arbitrage.md`,
+dépôt `D:\PRO`). « Les deux institutions partagent les faits » ramené à une convergence sur **un** fait (dépense
+2019-2024 moindre qu'en zone euro), suivie de deux objets d'analyse différents ; structurel, PO et dépenses distingués ;
+« ampleur » et non « remontée » de la charge incertaine ; 0,5 et 1,2 point dits de périmètres différents. Le
+contradicteur juge qu'aucun nouveau tour n'est indispensable.
