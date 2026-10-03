@@ -1,0 +1,14 @@
+{{- /* {{< gen-tableau >}} — les pays de l'Union, même fenêtre : à quoi a correspondu le besoin de financement des
+       administrations publiques. Lignes lues dans data/dette_generations.json (ue.tableau, chaînes déjà formatées et
+       gardées par scripts/update_dette_generations.py, triées par part en actifs) : aucun chiffre recopié ici. */ -}}
+{{- $j := site.Data.dette_generations -}}
+{{- if not $j -}}{{ errorf "gen-tableau: data/dette_generations.json absent (%s)" .Page.File.Path }}{{- end -}}
+{{- $A := $j.affichage -}}
+<div class="table-scroll"><table class="dette-monde-table">
+<thead><tr><th>Pays</th><th>Besoin de financement</th><th>Actifs</th><th>Transferts en capital</th><th>Dépenses courantes non couvertes</th><th>Part en actifs</th></tr></thead>
+<tbody>
+{{- range $j.ue.tableau }}
+<tr><td>{{ .nom }}</td><td>{{ .besoin }}</td><td>{{ .actifs }}</td><td>{{ .transferts }}</td><td>{{ .desepargne }}</td><td>{{ .part }}</td></tr>
+{{- end }}
+</tbody></table></div>
+<p><small>Points de PIB cumulés de {{ $A.cp_a0 }} à {{ $A.fin }}&nbsp;; actifs&nbsp;: investissement moins usure du capital, terrains et stocks&nbsp;; un besoin de financement négatif désigne des excédents cumulés («&nbsp;sans objet&nbsp;»)&nbsp;; «&nbsp;au-delà du besoin&nbsp;»&nbsp;: les actifs acquis dépassent le besoin de financement, financés en partie par l'épargne publique. Source&nbsp;: Eurostat, calcul de l'auteur.</small></p>

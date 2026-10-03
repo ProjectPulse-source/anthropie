@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 366" role="img" font-variant-numeric="tabular-nums" aria-labelledby="gv-t gv-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="gv-t">France : d'où vient l'effort qui stabiliserait la dette (indicateur S2)</title><desc id="gv-d">Ajustement permanent du solde primaire structurel qui stabiliserait la dette, en points de PIB, partagé entre la position budgétaire présente et le coût du vieillissement, selon la Commission européenne (Debt Sustainability Monitor 2025), puis en remplaçant sa projection des retraites par celle du COR. Scénario de base : position présente 3,0, vieillissement 0,1. Productivité plus faible : position présente 3,3, vieillissement 0,5. Risque santé et dépendance : position présente 3,0, vieillissement 2,4. Base, retraites du COR : position présente 3,0, vieillissement 1,8. Risque, retraites du COR : position présente 3,0, vieillissement 4,1.</desc>
+<rect width="720" height="366" fill="#ffffff"/>
+<text x="0" y="18" font-size="15" font-weight="600" fill="#26262f">France : d'où vient l'effort qui stabiliserait la dette (indicateur S2)</text>
+<rect x="0" y="36" width="10" height="10" fill="#eb6834"/>
+<text x="14" y="45" font-size="11" fill="#55524f">position budgétaire présente</text>
+<rect x="200" y="36" width="10" height="10" fill="#8a8781"/>
+<text x="214" y="45" font-size="11" fill="#55524f">coût du vieillissement</text>
+<line x1="210.0" y1="58" x2="210.0" y2="276" stroke="#dcd8d3" stroke-width="1.4"/>
+<text x="210.0" y="290" font-size="10" fill="#96928f" text-anchor="middle">0</text>
+<line x1="304.0" y1="58" x2="304.0" y2="276" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="304.0" y="290" font-size="10" fill="#96928f" text-anchor="middle">1</text>
+<line x1="398.0" y1="58" x2="398.0" y2="276" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="398.0" y="290" font-size="10" fill="#96928f" text-anchor="middle">2</text>
+<line x1="492.0" y1="58" x2="492.0" y2="276" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="492.0" y="290" font-size="10" fill="#96928f" text-anchor="middle">3</text>
+<line x1="586.0" y1="58" x2="586.0" y2="276" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="586.0" y="290" font-size="10" fill="#96928f" text-anchor="middle">4</text>
+<line x1="680.0" y1="58" x2="680.0" y2="276" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="680.0" y="290" font-size="10" fill="#96928f" text-anchor="middle">5</text>
+<text x="0" y="81" font-size="11.5" font-weight="600" fill="#26262f">Scénario de base</text>
+<rect x="210.0" y="64" width="285.8" height="15" fill="#eb6834"/>
+<text x="499.8" y="75" font-size="10" font-weight="600" fill="#26262f">3,0</text>
+<rect x="210.0" y="81" width="7.0" height="15" fill="#8a8781"/>
+<text x="221.0" y="92" font-size="10" font-weight="600" fill="#26262f">0,1</text>
+<text x="0" y="125" font-size="11.5" font-weight="600" fill="#26262f">Productivité plus faible</text>
+<rect x="210.0" y="108" width="310.8" height="15" fill="#eb6834"/>
+<text x="524.8" y="119" font-size="10" font-weight="600" fill="#26262f">3,3</text>
+<rect x="210.0" y="125" width="43.4" height="15" fill="#8a8781"/>
+<text x="257.4" y="136" font-size="10" font-weight="600" fill="#26262f">0,5</text>
+<text x="0" y="169" font-size="11.5" font-weight="600" fill="#26262f">Risque santé et dépendance</text>
+<rect x="210.0" y="152" width="284.5" height="15" fill="#eb6834"/>
+<text x="498.5" y="163" font-size="10" font-weight="600" fill="#26262f">3,0</text>
+<rect x="210.0" y="169" width="224.2" height="15" fill="#8a8781"/>
+<text x="438.2" y="180" font-size="10" font-weight="600" fill="#26262f">2,4</text>
+<line x1="0" y1="190" x2="720" y2="190" stroke="#dcd8d3"/>
+<text x="0" y="213" font-size="11.5" font-weight="600" fill="#26262f">Base, retraites du COR</text>
+<rect x="210.0" y="196" width="285.8" height="15" fill="#eb6834"/>
+<text x="499.8" y="207" font-size="10" font-weight="600" fill="#26262f">3,0</text>
+<rect x="210.0" y="213" width="168.0" height="15" fill="#8a8781"/>
+<text x="382.0" y="224" font-size="10" font-weight="600" fill="#26262f">1,8</text>
+<text x="0" y="257" font-size="11.5" font-weight="600" fill="#26262f">Risque, retraites du COR</text>
+<rect x="210.0" y="240" width="284.5" height="15" fill="#eb6834"/>
+<text x="498.5" y="251" font-size="10" font-weight="600" fill="#26262f">3,0</text>
+<rect x="210.0" y="257" width="385.2" height="15" fill="#8a8781"/>
+<text x="599.2" y="268" font-size="10" font-weight="600" fill="#26262f">4,1</text>
+<text x="680" y="305" font-size="10" fill="#96928f" text-anchor="end">points de PIB</text>
+<line x1="0" y1="318.0" x2="720" y2="318.0" stroke="#dcd8d3"/>
+<text x="0" y="331.0" font-size="9" fill="#55524f">Commission européenne, Debt Sustainability Monitor 2025 (indicateur S2) ; COR, rapport annuel de juin 2026 (dépenses de retraite, scénario de référence)</text>
+<text x="0" y="343.0" font-size="9" fill="#55524f">Projections conditionnelles. « COR » : dépenses de retraite 2025-2070 du COR à la place des pensions (approximation majorante).</text>
+<text x="0" y="355.0" font-size="9" fill="#96928f">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/dette-publique-generations-futures/</text>
+</svg>

@@ -1,69 +1,195 @@
 ---
 title: "La dette publique est-elle un fardeau pour les générations futures ?"
-description: "Pas mécaniquement : les générations suivantes héritent des engagements, mais aussi de ce qu'ils ont financé et d'une partie des titres. Le transfert net dépend de l'usage de la dette et des ajustements choisis. L'objection « on se la doit à nous-mêmes » (Lerner), ses limites, et la question que le débat en volume oublie : la répartition."
+description: "Depuis {gen.a0}, {gen.part_k} % seulement des déficits publics français ont correspondu à un accroissement net des actifs publics, et {gen.nr_fin} % de la dette est détenue hors de France. Selon la Commission européenne, l'effort que laisse la dette tient à la position budgétaire présente bien plus qu'au vieillissement. Séries Eurostat et BCE recalculées et contrôlées."
+chapo: "Les comptes ne soutiennent pas les deux arguments qui allègent le poids de la dette pour ceux qui viennent : depuis {gen.a0}, {gen.part_k} % seulement des déficits français ont correspondu à un accroissement net des actifs publics, et {gen.nr_fin} % de la dette est aujourd'hui détenue hors du pays. Ils ne soutiennent pas davantage celui qui place le vrai fardeau dans les retraites : selon l'indicateur de la Commission européenne, l'effort qui stabiliserait la dette tient à la position budgétaire présente bien plus qu'au vieillissement."
 date: 2026-07-24
-lastmod: 2026-09-21
+lastmod: 2026-10-03
 og_title: "La dette est-elle un fardeau pour les générations futures ? — S. Lalut"
+og_image: "images/og-dette-generations.jpg"
+og_image_alt: "Carte de partage : « Des déficits pour le courant » — France, part des déficits publics correspondant à des actifs, par décennie, et le reste en dépenses courantes non couvertes."
+# Refonte du 03/10/2026 en ressource de données, sur le modèle du dossier dette (plan de diffusion d'octobre, § 5).
+# Test décisif avant la page, protocole écrit avant le calcul : D:\PRO\06_PROMOTION\RECHERCHE_GENERATIONS_FUTURES_2026-10-03\test_decisif\
+# (PROTOCOLE.md, VERDICT.md) : les trois arguments tombent, le troisième sous une condition nommée (cumul COR + risque santé).
+# Aucun chiffre saisi : jetons {gen.*} et shortcodes gen-val / gen-tableau (scripts/update_dette_generations.py).
+donnees: [dette_generations]
+dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html) ; jetons résolus au build
+  jeu: "dette_generations"
+  nom: "Dette publique et générations futures : emplois du besoin de financement, patrimoine, détention de la dette et indicateur S2, France et Union européenne"
+  description: "Compilation dérivée automatiquement des sources officielles, sans valeur recopiée à la main : emplois du besoin de financement des administrations publiques (désépargne nette, acquisitions nettes d'actifs non financiers, transferts en capital), France de {gen.a0} à {gen.fin} et 27 pays de l'Union de {gen.cp_a0} à {gen.fin} (Eurostat) ; patrimoine des administrations publiques ({gen.s0}-{gen.s1}) ; dette par secteur détenteur ({gen.h0}-{gen.h_fin}, BCE) ; indicateur S2 de la Commission européenne ({gen.dsm_lib}) ; dépenses de retraite projetées par le COR. Ratios contrôlés contre ceux que publie Eurostat."
+  couverture_temporelle: "{gen.h0}/{gen.fin}"
+  couverture_spatiale: "France ; Union européenne (27 pays)"
+  variables:
+    - {nom: "Besoin de financement des administrations publiques", unite: "points de PIB", description: "cumulé par période, et ses trois emplois"}
+    - {nom: "Acquisitions nettes d'actifs non financiers", unite: "points de PIB", description: "investissement moins consommation de capital fixe, terrains, stocks"}
+    - {nom: "Patrimoine net des administrations publiques", unite: "% du PIB", description: "actifs fixes nets, terrains, valeur financière nette"}
+    - {nom: "Dette détenue par les non-résidents et par la banque centrale", unite: "% du PIB et % de la dette", description: "dette de Maastricht par secteur détenteur"}
+    - {nom: "Indicateur S2 et ses composantes", unite: "points de PIB", description: "position budgétaire initiale, coût du vieillissement"}
+  sources:
+    - "https://ec.europa.eu/eurostat/databrowser/view/gov_10a_main/default/table?lang=fr"
+    - "https://ec.europa.eu/eurostat/databrowser/view/nama_10_nfa_bs/default/table?lang=fr"
+    - "https://ec.europa.eu/eurostat/databrowser/view/nasa_10_f_bs/default/table?lang=fr"
+    - "https://data.ecb.europa.eu/data/datasets/GFS"
+    - "https://economy-finance.ec.europa.eu/publications/debt-sustainability-monitor-2025_en"
+    - "https://www.cor-retraites.fr/rapports-du-cor/rapport-annuel-cor-juin-2026-evolutions-perspectives-retraites-france"
+  mots: ["dette publique", "générations futures", "investissement public", "patrimoine public", "détention de la dette", "non-résidents", "retraites", "indicateur S2", "Eurostat", "BCE"]
+  fichiers: ["dette_generations.csv", "dette_generations.json"]
 faq:
-  - question: "La dette publique pèse-t-elle vraiment sur les générations futures ?"
-    answer: "Pas mécaniquement. Ceux qui héritent de la dette n'ont pas voté l'emprunt, mais ils héritent aussi de ce qu'il a financé et d'une partie des titres eux-mêmes. Le fardeau n'est pas un remboursement massif à venir — les États refinancent leur dette en permanence ; il tient aux transferts que la dette organise pendant qu'elle roule : charge d'intérêts, ajustements budgétaires, héritage. Leur solde pour une génération donnée dépend de ce que la dette a financé et de qui supporte les ajustements."
-  - question: "Que signifie l'objection « on se la doit à nous-mêmes » ?"
-    answer: "C'est l'argument classique d'Abba Lerner (1948) : si la dette est détenue par les résidents, son service est un transfert interne — des contribuables vers les détenteurs de titres — qui n'appauvrit pas la nation dans son ensemble. L'objection a deux limites : plus de la moitié des titres négociables de l'État sont détenus par des non-résidents, et les intérêts qu'ils perçoivent sortent du pays ; et même un transfert « interne » a des destinataires — il prélève sur les contribuables pour rémunérer ceux qui détiennent l'épargne."
-  - question: "Les générations futures n'héritent-elles pas aussi des actifs financés par la dette ?"
-    answer: "Si — et c'est la meilleure version de l'argument rassurant : une dette qui finance des infrastructures, de l'éducation ou la transition transmet un capital en même temps qu'une charge. La question opératoire est donc : quelle part de l'emprunt finance de l'investissement transmissible, et quelle part finance du fonctionnement courant ? Quand la dette finance les dépenses courantes sans contrepartie durable, l'héritage se réduit pour l'essentiel à la charge."
+  - question: "La dette publique pèse-t-elle sur les générations futures ?"
+    answer: "Elle leur transmet une charge, et ce qu'elle a financé. En France, de {gen.a0} à {gen.fin}, {gen.part_k} % des déficits publics ont correspondu à un accroissement net des actifs publics, {gen.part_t} % à des transferts en capital vers d'autres secteurs et {gen.part_e} % à des dépenses courantes que les recettes courantes ne couvraient pas ; le patrimoine net des administrations publiques est passé de {gen.pn0} % à {gen.pn1} % du PIB de {gen.s0} à {gen.s1}. Ce que les dépenses courantes ont produit, en éducation ou en santé, n'est pas compté comme un actif : ces comptes ne le mesurent pas."
+  - question: "« On se la doit à nous-mêmes » : est-ce vrai pour la France ?"
+    answer: "Pour {gen.res_fin} % de la dette seulement : en {gen.h_fin}, {gen.nr_fin} % de la dette des administrations publiques était détenue par des non-résidents, contre {gen.nr0} % en {gen.h0} (BCE). La part détenue en France a été soutenue par les achats de la Banque de France, qui en détenait {gen.bc_max} % en {gen.bc_max_annee} et {gen.bc_fin} % en {gen.h_fin}. Et la part détenue dans le pays ne rend pas la dette neutre : elle organise un transfert des contribuables vers les détenteurs de titres."
+  - question: "Le vrai fardeau, ce sont les retraites ?"
+    answer: "Pas selon l'indicateur de soutenabilité de long terme de la Commission européenne : l'ajustement permanent qui stabiliserait la dette française vaut {gen.s2} points de PIB, dont {gen.ibp} au titre de la position budgétaire présente et {gen.coa} au titre du vieillissement ({gen.dsm_lib}). Avec la trajectoire de retraite du Conseil d'orientation des retraites, plus défavorable, le vieillissement compterait pour {gen.coa_cor} point : la position présente resterait le premier terme, sauf à cumuler cette trajectoire avec le scénario de risque de la Commission sur la santé et la dépendance."
+  - question: "Une dette qui finance de l'investissement est-elle un fardeau ?"
+    answer: "Moins qu'une autre : emprunter pour acquérir un actif transmet le capital avec la charge. C'est pourquoi l'usage est le bon critère. En France, la part des déficits qui a correspondu à un accroissement net des actifs publics est passée de {gen.d1_part} % ({gen.d1_lib}) à {gen.d2_part} % ({gen.d2_lib}) puis {gen.d3_part} % ({gen.d3_lib})."
   - question: "Quel est le lien avec le cadre anthropique ?"
     answer: "La dette publique est un cas type de transfert temporel : un coût présent peut être reporté vers des payeurs futurs qui n'ont pas pris part à la décision. Le cadre y ajoute une hypothèse sociale : à l'intérieur de chaque génération, l'ajustement peut peser davantage sur les groupes les moins mobiles, fiscalement ou géographiquement — une hypothèse qui se teste réforme par réforme. L'analyse est formalisée dans AWP-03 (DOI 10.5281/zenodo.19268769) et déployée dans le livre Dette Publique : Qui paie vraiment ? (2025)."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   bloc: "dette"
   rang: 40
-  nature: "Analyse"
+  nature: "Séries officielles (Eurostat, BCE, Commission européenne, COR) et calculs de l'auteur"
+  prolongement: true   # option B : rangée « Prolongements du dossier », sous la grille des volets
 dossier_dette: prolongement   # panneau « Prolongements » de la barre du dossier (A+ v2, 03/10/2026)
 dossier_dette_titre: "Un fardeau pour les générations futures ?"
-dossier_dette_role: "héritage, actifs, transferts dans le temps"
+dossier_dette_role: "actifs transmis, détention, retraites"
 dossier_dette_titre_en: "A burden for future generations?"
-dossier_dette_role_en: "inheritance, assets, transfers over time"
+dossier_dette_role_en: "assets passed on, holders, pensions"
 ---
 
 {{< dossier-dette volet="prolongement" >}}
 
-À la question «&nbsp;la dette publique est-elle un fardeau pour les générations futures&nbsp;?&nbsp;», la réponse défendable est conditionnelle&nbsp;: **les générations suivantes héritent des engagements, mais aussi de ce qu'ils ont financé&nbsp;; le transfert net dépend de l'usage de la dette et des ajustements choisis pour la servir.** Le fardeau n'est pas un remboursement massif qui attendrait nos enfants&nbsp;: c'est l'ensemble des transferts que la dette organise pendant qu'elle roule, et leur répartition.
+{{< reutiliser-ancre >}}
 
-Cette controverse est ancienne et elle mérite ses meilleurs arguments — des deux côtés. Les voici, avec la lecture du cadre de l'[anthropie](/quest-ce-que-lanthropie/).
+<p class="donnees-ligne"><span class="badge-donnees">Mise à jour&nbsp;: {{< gen-val "date_donnees" >}}</span> Administrations publiques, séries Eurostat et BCE de {{< gen-val "h0" >}} à {{< gen-val "fin" >}}&nbsp;; Commission européenne et COR, projections. Télécharger&nbsp;: <a href="/dette_generations.csv">CSV</a> · <a href="/dette_generations.json">JSON</a> · <a href="#sources">méthode</a></p>
 
-## L'argument rassurant&nbsp;: «&nbsp;on se la doit à nous-mêmes&nbsp;»
+## Ce que les déficits ont financé {#actifs}
 
-La version classique vient d'Abba Lerner (1948)&nbsp;: si la dette publique est détenue par les résidents du pays, la servir consiste à prélever sur des contribuables nationaux pour payer des épargnants nationaux. Transfert interne, somme nulle pour la nation&nbsp;: la génération future qui paie est aussi celle qui encaisse. À quoi s'ajoute l'argument du refinancement perpétuel — les États ne remboursent pas le stock, ils le font rouler — et celui de la croissance&nbsp;: quand elle dépasse le taux d'intérêt, le ratio de dette peut rester stable même avec un déficit hors intérêts, pourvu que ce déficit primaire reste sous un seuil qui dépend de l'écart entre les deux taux et du niveau de la dette.
+<figure class="figure-ciseau">
+  <img src="/img/dette-generations-actifs.svg" alt="Quatre barres horizontales, chacune représentant cent pour cent du besoin de financement des administrations publiques françaises sur une période : {{< gen-val "d1_lib" >}}, {{< gen-val "d1_part" >}} % en actifs ; {{< gen-val "d2_lib" >}}, {{< gen-val "d2_part" >}} % ; {{< gen-val "d3_lib" >}}, {{< gen-val "d3_part" >}} % ; sur l'ensemble, {{< gen-val "part_k" >}} % en actifs, {{< gen-val "part_t" >}} % en transferts en capital et {{< gen-val "part_e" >}} % en dépenses courantes non couvertes." width="720" height="352" loading="lazy">
+  <figcaption>Part du besoin de financement des administrations publiques françaises qui a correspondu à des actifs, à des transferts en capital et à des dépenses courantes non couvertes, par décennie (Eurostat, calcul de l'auteur).</figcaption>
+</figure>
 
-Ces arguments sont sérieux, et le débat académique les a affinés pendant des décennies — James Buchanan objectant dès 1958 que le fardeau pèse bien sur les générations futures parce que ce sont elles qui subissent le prélèvement au moment où il a lieu, Robert Barro (1974) soutenant à l'inverse que les ménages anticipent les impôts futurs et épargnent en conséquence, Peter Diamond (1965) montrant, dans un modèle de croissance où le taux d'intérêt dépasse la croissance de la population, qu'une dette détenue dans le pays prend la place du capital productif dans les patrimoines et réduit le bien-être à long terme&nbsp;: le fait qu'on se la doive à soi-même n'y efface pas le fardeau. La controverse n'est pas tranchée en volume. C'est pourquoi il faut aussi poser la question de la répartition.
+<div class="resultat-phrase">
 
-## Ce que l'argument rassurant laisse dans l'ombre
+**Le résultat en une phrase.** De {{< gen-val "a0" >}} à {{< gen-val "fin" >}}, le besoin de financement des administrations publiques françaises a totalisé {{< gen-val "b" >}} points de PIB&nbsp;: {{< gen-val "k" >}} ont correspondu à un accroissement net de leurs actifs ({{< gen-val "part_k" >}}&nbsp;%), {{< gen-val "t" >}} à des transferts en capital vers d'autres secteurs, et {{< gen-val "e" >}}, près des deux tiers, à des dépenses courantes que leurs recettes courantes ne couvraient pas. C'est une lecture comptable&nbsp;: elle dit à quoi les déficits ont correspondu, non ce qu'ils ont produit.
 
-**1. «&nbsp;Nous&nbsp;» n'est pas homogène.** Même un transfert purement interne a des destinataires&nbsp;: il prélève sur les contribuables — par l'impôt, la fiscalité indirecte, les arbitrages budgétaires — pour rémunérer ceux qui détiennent l'épargne. Dire «&nbsp;on se la doit à nous-mêmes&nbsp;», c'est laisser de côté la question de savoir qui, dans ce «&nbsp;nous&nbsp;», paie et qui reçoit.
+</div>
 
-**2. Le «&nbsp;nous&nbsp;» ne couvre qu'une partie de la dette.** Au premier trimestre 2026, plus de la moitié des titres négociables de l'État étaient détenus par des non-résidents — investisseurs résidant hors de France, selon la Banque de France citée par l'Agence France Trésor —, et les intérêts qu'ils perçoivent sortent du pays. L'argument de Lerner vaut pour la part détenue par des résidents&nbsp;; il ne couvre pas le reste. Le classement se fait par résidence, non par nationalité&nbsp;: un fonds étranger peut gérer l'épargne de ménages français.
+L'argument le plus solide pour dire qu'une dette ne pèse pas sur ceux qui viennent est celui de l'actif transmis&nbsp;: une dette qui finance une route, une école ou un réseau lègue un capital en même temps qu'une charge. Les comptes nationaux permettent de le mettre à l'épreuve, parce que le déficit public — le besoin de financement des administrations — s'y décompose exactement en trois emplois. Les **acquisitions nettes d'actifs**&nbsp;: l'investissement, moins l'usure du capital existant, plus les achats nets de terrains et les variations de stocks — seul ce surplus accroît le patrimoine. Les **transferts en capital nets**&nbsp;: aides à l'investissement versées à d'autres secteurs, moins les recettes en capital, droits de succession compris. Et la **désépargne**&nbsp;: les dépenses courantes, usure du capital comprise, que les recettes courantes ne couvrent pas.
 
-**3. Le fardeau agit sans remboursement.** Nul besoin d'un jour du jugement budgétaire&nbsp;: pendant que la dette roule, la charge d'intérêts occupe une part des ressources publiques avant tout arbitrage, et les ajustements qui suivent passent par l'impôt, la dépense, ou les deux. Les générations futures ne rembourseront sans doute jamais le stock — elles vivront avec ses transferts.
+**La part investie a baissé de décennie en décennie**&nbsp;: {{< gen-val "d1_part" >}}&nbsp;% de {{< gen-val "d1_lib" >}}, {{< gen-val "d2_part" >}}&nbsp;% de {{< gen-val "d2_lib" >}}, {{< gen-val "d3_part" >}}&nbsp;% de {{< gen-val "d3_lib" >}}. Sur la dernière décennie, les acquisitions nettes d'actifs n'ont représenté que {{< gen-val "d3_k_moy" >}} point de PIB par an en moyenne, pour un besoin de financement de {{< gen-val "d3_b" >}} points en dix ans. En trente ans, les recettes courantes n'ont couvert les dépenses courantes que {{< gen-val "ep_pos_n" >}} années, en {{< gen-val "ep_pos_lib" >}}, et aucune année les acquisitions d'actifs n'ont égalé le besoin de financement.
 
-**4. L'héritage est double, et son contenu se choisit.** L'argument le plus solide du camp rassurant est celui de l'actif transmis&nbsp;: une dette qui finance des infrastructures ou de l'éducation lègue un capital avec la charge. La question opératoire devient alors&nbsp;: quelle part de l'emprunt finance de l'investissement transmissible, et quelle part du fonctionnement courant&nbsp;? C'est un critère vérifiable, budget par budget.
+Une partie des transferts finance bien du capital, mais détenu ailleurs&nbsp;: les aides à l'investissement versées aux entreprises, aux ménages ou aux organismes hors du champ des administrations ont totalisé {{< gen-val "d92" >}} points de PIB sur la période. Les compter toutes comme un capital transmis porterait la part à {{< gen-val "part_max" >}}&nbsp;% au plus&nbsp;: toujours moins de la moitié.
 
-## La lecture anthropique&nbsp;: de la question du volume à celle de la répartition
+**Les bilans le confirment par un autre chemin.** De {{< gen-val "s0" >}} à {{< gen-val "s1" >}}, le patrimoine net des administrations publiques — leurs actifs fixes et leurs terrains, moins leurs dettes nettes de leurs actifs financiers — est passé de {{< gen-val "pn0" >}}&nbsp;% à {{< gen-val "pn1" >}}&nbsp;% du PIB. Leurs actifs fixes ont à peine bougé ({{< gen-val "fixes_var" >}} points), leur valeur financière nette a reculé de {{< gen-val "bf_var_abs" >}} points, et seule la hausse de la valeur des terrains ({{< gen-val "terr_var" >}} points), qui ne doit rien aux déficits, a limité la baisse&nbsp;: sans elle, le patrimoine aurait perdu {{< gen-val "pn_hors_terr" >}} points de PIB.
 
-Le cadre anthropique ne tranche pas la controverse macroéconomique — il y ajoute une question. La dette publique est un cas type de **transfert temporel**&nbsp;: un coût présent peut être reporté vers des payeurs qui n'ont pas participé aux arbitrages. Personne ne vote «&nbsp;contre&nbsp;» les générations futures&nbsp;; on vote des budgets dont une part des coûts leur reviendra, et cette part n'est jamais présentée sous ce nom.
+**La France n'est pas un cas extrême.** De {{< gen-val "cp_a0" >}} à {{< gen-val "fin" >}}, même calcul pour les {{< gen-val "cp_n" >}} pays de l'Union&nbsp;: la part des acquisitions nettes d'actifs a dépassé la moitié du besoin de financement dans {{< gen-val "cp_sup_n" >}} pays — {{< gen-val "cp_sup_pays" >}} —, et elle a été plus faible qu'en France ({{< gen-val "cp_fr_part" >}}&nbsp;%) dans {{< gen-val "cp_inf_n" >}} autres, dont l'Allemagne et l'Italie. {{< gen-val "cp_exc_pays_maj" >}} n'ont pas eu de besoin de financement sur l'ensemble de la période.
+
+<details class="repli"><summary>Les {{< gen-val "cp_n" >}} pays, emploi par emploi</summary>
+
+{{< gen-tableau >}}
+
+</details>
+
+## «&nbsp;On se la doit à nous-mêmes&nbsp;»&nbsp;? {#detention}
+
+L'argument classique d'Abba Lerner suppose que la dette soit détenue dans le pays&nbsp;: la servir reviendrait alors à prélever sur des contribuables nationaux pour payer des épargnants nationaux, et la génération qui paie serait aussi celle qui encaisse. Pour la France, cette prémisse ne vaut plus que pour {{< gen-val "res_fin" >}}&nbsp;% de la dette.
+
+<figure class="figure-ciseau">
+  <img src="/img/dette-generations-detention.svg" alt="Aires empilées de {{< gen-val "h0" >}} à {{< gen-val "h_fin" >}}, en pourcentage de la dette des administrations publiques : Banque de France, autres résidents, non-résidents. Les non-résidents passent de {{< gen-val "nr0" >}} % à {{< gen-val "nr_fin" >}} %, avec un maximum de {{< gen-val "nr_max" >}} % en {{< gen-val "nr_max_annee" >}} ; la Banque de France monte à {{< gen-val "bc_max" >}} % en {{< gen-val "bc_max_annee" >}} puis redescend à {{< gen-val "bc_fin" >}} %." width="720" height="352" loading="lazy">
+  <figcaption>Part de la dette des administrations publiques détenue par les non-résidents, la Banque de France et les autres résidents (BCE, statistiques de finances publiques).</figcaption>
+</figure>
+
+En {{< gen-val "h0" >}}, {{< gen-val "nr0" >}}&nbsp;% de la dette des administrations publiques était détenue par des non-résidents. La part a dépassé la moitié en {{< gen-val "nr_maj_premiere" >}}, l'est restée {{< gen-val "nr_maj_n" >}} années sur {{< gen-val "nr_maj_tot" >}} depuis, et a culminé à {{< gen-val "nr_max" >}}&nbsp;% en {{< gen-val "nr_max_annee" >}}. La Banque de France est alors devenue un détenteur majeur, à la faveur des programmes d'achats de titres publics de l'Eurosystème&nbsp;: {{< gen-val "bc0" >}}&nbsp;% de la dette en {{< gen-val "h0" >}}, {{< gen-val "bc_max" >}}&nbsp;% en {{< gen-val "bc_max_annee" >}}. Depuis, ses avoirs refluent — {{< gen-val "bc_fin" >}}&nbsp;% en {{< gen-val "h_fin" >}}, soit {{< gen-val "bc_var" >}} points de moins — et la part des non-résidents a monté de {{< gen-val "nr_var_bc" >}} points, à {{< gen-val "nr_fin" >}}&nbsp;%. Depuis {{< gen-val "bc10_premiere" >}}, la Banque de France détient plus du dixième de la dette, et la part détenue en France n'a tenu que par elle&nbsp;: les autres résidents, qui en détenaient {{< gen-val "ar_avant" >}}&nbsp;% en {{< gen-val "an_avant" >}}, n'en détiennent plus que {{< gen-val "ar_fin" >}}&nbsp;% en {{< gen-val "h_fin" >}}.
+
+La résidence comptée ici est celle du détenteur enregistré — un fonds, un dépositaire —, non celle de l'épargnant final&nbsp;: un fonds étranger peut gérer l'épargne de ménages français, et inversement. Surtout, la part détenue dans le pays ne rend pas la dette neutre&nbsp;: elle organise, à l'intérieur de chaque génération, un transfert des contribuables vers ceux qui détiennent les titres. Ailleurs, la prémisse de Lerner est mieux vérifiée qu'en France, en Italie ({{< gen-val "h_it" >}}&nbsp;% de dette détenue par des non-résidents en {{< gen-val "h_fin" >}}) ou en Suède ({{< gen-val "h_se" >}}&nbsp;%)&nbsp;; elle l'est moins en Autriche ({{< gen-val "h_at" >}}&nbsp;%) ou en Belgique ({{< gen-val "h_be" >}}&nbsp;%).
+
+## Le vrai fardeau est-il dans les retraites&nbsp;? {#vieillissement}
+
+Un troisième argument déplace la question&nbsp;: la dette visible serait secondaire, le vrai fardeau tiendrait aux retraites et au vieillissement. L'indicateur de soutenabilité de long terme de la Commission européenne, dit S2, permet de le mettre à l'épreuve. Il mesure l'ajustement permanent du solde primaire structurel qui stabiliserait la dette à horizon infini, et le partage en deux termes&nbsp;: la position budgétaire de départ, et le coût projeté du vieillissement — retraites, santé, dépendance, éducation.
+
+<figure class="figure-ciseau">
+  <img src="/img/dette-generations-vieillissement.svg" alt="Barres horizontales par scénario, en points de PIB : position budgétaire présente {{< gen-val "ibp" >}} et vieillissement {{< gen-val "coa" >}} dans le scénario de base ; {{< gen-val "ibp_prod" >}} et {{< gen-val "coa_prod" >}} avec une productivité plus faible ; {{< gen-val "ibp_risque" >}} et {{< gen-val "coa_risque" >}} dans le scénario de risque sur la santé et la dépendance ; avec les retraites projetées par le COR, vieillissement {{< gen-val "coa_cor" >}} dans le scénario de base et {{< gen-val "coa_cor_risque" >}} dans le scénario de risque." width="720" height="366" loading="lazy">
+  <figcaption>Ajustement qui stabiliserait la dette française, partagé entre la position budgétaire présente et le coût du vieillissement, selon la Commission européenne, puis avec la projection des retraites du COR (calcul de l'auteur).</figcaption>
+</figure>
+
+Pour la France, dans le *{{< gen-val "dsm_lib" >}}*, S2 vaut {{< gen-val "s2" >}} points de PIB&nbsp;: {{< gen-val "ibp" >}} au titre de la position budgétaire présente, {{< gen-val "coa" >}} au titre du vieillissement. Les retraites y comptent pour {{< gen-val "pen" >}} point — la Commission projette une dépense de pensions en baisse dans le PIB, nette des prélèvements qui la frappent —, la santé et la dépendance pour {{< gen-val "hc_ltc" >}}, l'éducation pour {{< gen-val "edu" >}}. La position présente reste le premier terme dans les deux scénarios de risque de la Commission, y compris celui qui alourdit la santé et la dépendance (vieillissement&nbsp;: {{< gen-val "coa_risque" >}} points, contre {{< gen-val "ibp_risque" >}}). Et l'indicateur sait montrer l'inverse&nbsp;: dans {{< gen-val "pays_coa_n" >}} pays de l'Union sur {{< gen-val "pays_n" >}}, dont la Belgique, l'Espagne et le Luxembourg, le vieillissement l'emporte sur la position de départ.
+
+Qui parle compte ici. La Commission est l'institution qui fait appliquer les règles budgétaires européennes, et sa projection des retraites françaises suppose la réforme de 2023 appliquée. Le Conseil d'orientation des retraites, instance pluraliste qui réunit partenaires sociaux, parlementaires et administrations, projette dans son scénario de référence ({{< gen-val "cor_lib" >}}) une dépense de retraite passant de {{< gen-val "cor_dep0" >}}&nbsp;% du PIB en {{< gen-val "cor_a0" >}} à {{< gen-val "cor_dep1" >}}&nbsp;% en {{< gen-val "cor_a1" >}}, soit {{< gen-val "cor_var" >}} point. Substituée à celle de la Commission — approximation qui majore l'effet, une variation de fin de période n'étant pas une valeur actualisée —, cette trajectoire porterait le coût du vieillissement à {{< gen-val "coa_cor" >}} point&nbsp;: toujours moins que la position présente ({{< gen-val "ibp" >}}). L'ordre ne s'inverse qu'en cumulant la trajectoire du COR et le scénario de risque de la Commission sur la santé et la dépendance ({{< gen-val "coa_cor_risque" >}} points contre {{< gen-val "ibp_risque" >}}).
+
+Le déficit que le COR projette pour le système de retraite, {{< gen-val "cor_solde1" >}} points de PIB en {{< gen-val "cor_a1" >}}, tient d'ailleurs autant à la baisse projetée de ses ressources, de {{< gen-val "cor_res0" >}}&nbsp;% à {{< gen-val "cor_res1" >}}&nbsp;% du PIB, qu'à la hausse de ses dépenses. Ces chiffres sont des projections conditionnelles&nbsp;: ils ne disent pas que les retraites ne posent aucun problème, mais que l'effort qu'exige la dette française tient d'abord à l'écart présent entre ses recettes et ses dépenses.
+
+## Ce que ces données ne disent pas {#limites}
+
+- **Ce que les dépenses courantes ont produit.** La comptabilité nationale ne compte pas comme actifs l'éducation, la santé ou la recherche non capitalisée&nbsp;: une part des dépenses courantes laisse aux générations suivantes un capital humain que ces séries ne voient pas. La page juge l'argument tel qu'il est posé — des actifs transmis —, non la valeur de toute dépense.
+- **Une causalité.** Les emplois du besoin de financement disent à quoi les déficits ont correspondu dans les comptes, non pourquoi ils ont existé, ni ce qui se serait passé sans eux.
+- **Le détenteur final.** La résidence est celle du détenteur enregistré&nbsp;; la série est en valeur nominale. La part des titres négociables de l'État détenue par des non-résidents, que publie la Banque de France, mesure un autre périmètre et n'est pas reprise ici.
+- **L'avenir.** S2 et les projections du COR sont des scénarios conditionnels à leurs hypothèses (démographie, productivité, législation), produits par deux institutions aux mandats différents&nbsp;; ils ne se valident pas par l'observation.
+- **La répartition à l'intérieur d'une génération.** Aucune de ces séries ne dit qui, dans une même génération, paie et reçoit&nbsp;: c'est l'objet de [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/)
+
+## La lecture anthropique&nbsp;: de la question du volume à celle de la répartition {#anthropie}
+
+Le cadre anthropique ne tranche pas la controverse macroéconomique — il y ajoute une question. La dette publique est un cas type de **transfert temporel**&nbsp;: un coût présent peut être reporté vers des payeurs qui n'ont pas participé aux arbitrages. Personne ne vote «&nbsp;contre&nbsp;» les générations futures&nbsp;; on vote des budgets dont une part des coûts leur reviendra, et cette part n'est jamais présentée sous ce nom. Les comptes de cette page en donnent la mesure française&nbsp;: une dette qui, pour l'essentiel, a couvert des dépenses courantes, détenue pour plus de la moitié hors du pays.
 
 Il y ajoute une hypothèse que le débat en volume ignore&nbsp;: **à l'intérieur de chaque génération, l'ajustement peut peser inégalement**. Les ménages mobiles — fiscalement, géographiquement — disposent de capacités d'évitement que les groupes les moins mobiles n'ont pas&nbsp;; si l'ajustement suit la ligne de moindre résistance, ce sont eux qui le portent, par l'impôt, les tarifs ou les services. L'hypothèse se teste sur des réformes précises, avec des groupes définis d'avance&nbsp;; elle serait affaiblie par un ajustement portant surtout sur d'autres groupes, ou par des compensations accordées aux perdants. De même, un budget contraint par le service de la dette peut reporter l'investissement écologique&nbsp;; là où ce report est établi, les mêmes héritiers reçoivent la dette financière et le désordre climatique différé.
 
-## Questions fréquentes
+{{< confrontation-recherche verifie="2026-09-30" publie="oui" resume="le critère de l'usage et le recul de l'investissement sont retrouvés&nbsp;; lire la détention par des résidents comme une absence de fardeau est mis en danger" >}}
+**Mesuré ici.** Les emplois du besoin de financement des administrations publiques françaises et européennes, le patrimoine des administrations, la détention de la dette par secteur, sur les séries d'Eurostat et de la BCE&nbsp;; la décomposition de l'indicateur S2, reprise de la Commission. Aucun des textes lus ne calcule ces grandeurs sur ces sources et ces périodes&nbsp;: elles se valident par reproduction.
 
-**Faut-il donc réduire la dette à tout prix&nbsp;?** Ce n'est pas la conclusion. Une austérité qui dégrade l'investissement transmissible appauvrit aussi les générations futures — par l'autre canal. La conclusion est un critère&nbsp;: juger chaque emprunt à ce qu'il transmet (un actif ou seulement une charge) et à qui il fera porter le coût.
+**Cohérent avec.** Le critère de l'usage&nbsp;: dans le modèle de Diamond, émettre de la dette pour acquérir du capital public fait de l'État un simple intermédiaire entre épargnants et entrepreneurs, sans effet de court ni de long terme. Le recul de la part investie&nbsp;: dans 21 pays de l'OCDE, dont la France, de 1979 à 2003, une charge d'intérêts plus lourde va de pair, cinq ans plus tard, avec une part de l'investissement public plus faible et une part des retraites plus forte, reporter un investissement coûtant moins, politiquement, que réduire un droit (Breunig et Busemeyer). Ce sont des associations dans un panel, sur une autre période&nbsp;: elles ne disent pas pourquoi la part investie a baissé en France depuis.
 
-**Pourquoi ce débat est-il si mal posé dans l'espace public&nbsp;?** Parce qu'il oppose deux camps en volume — «&nbsp;la dette nous ruine&nbsp;» contre «&nbsp;la dette n'est pas un problème&nbsp;» — alors qu'une partie décisive de la question est distributive&nbsp;: qui paie, quand, et qui a choisi. C'est la question que développe la page [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/)
+**Mis en danger par.** Toute lecture selon laquelle seule la part détenue par des non-résidents pèserait sur les générations suivantes. Dans le cas efficace du modèle de Diamond, où le taux d'intérêt dépasse la croissance de la population, la dette intérieure abaisse **davantage** le bien-être de long terme que la dette extérieure, parce qu'elle prend la place du capital productif dans les patrimoines. Chez Blanchard, même une dette que l'on fait rouler sans jamais relever l'impôt réduit l'accumulation de capital&nbsp;; dans le cas qu'il juge le plus représentatif, le bien-être monte pour la première génération et baisse généralement ensuite, des calculs qu'il dit lui-même trop rudimentaires pour une estimation. Barro soutient l'inverse&nbsp;: des parents altruistes compenseraient la charge par leurs transferts volontaires, à condition que ces transferts soient opérants pour la plupart des gens&nbsp;; il reconnaît qu'en 1989 la majorité des économistes penche vers les modèles où la dette pèse.
 
-**Où l'analyse est-elle formalisée&nbsp;?** Dans le working paper [AWP-03 — *Dette publique et anthropie*](/awp/awp-03/) (DOI&nbsp;: 10.5281/zenodo.19268769, PDF en accès libre) et dans le livre [*Dette Publique&nbsp;: Qui paie vraiment&nbsp;?*](/livres/dette-publique-qui-paie-vraiment/) (2025), qui consacre ses scénarios 2025-2035 à la trajectoire de ces transferts.
+**Non établi.** L'ampleur de l'éviction du capital en France, et la valeur de ce que les dépenses courantes ont transmis&nbsp;: aucun des quatre textes ne les mesure.
 
-## Pour aller plus loin
+**Références lues**
 
-- [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/) — les rôles, les canaux, leurs conditions, et ce que les données permettent de voir.
-- [Dette publique&nbsp;: pourquoi les collectivités locales sont-elles la variable d'ajustement&nbsp;?](/dette-publique-collectivites-locales/) — le canal territorial du même transfert.
-- [Qu'est-ce que l'anthropie&nbsp;?](/quest-ce-que-lanthropie/) — le cadre général&nbsp;: ordre ici, dette ailleurs.
+- Diamond, P. A. (1965), «&nbsp;National Debt in a Neoclassical Growth Model&nbsp;», *American Economic Review*, 55(5), p.&nbsp;1126-1150.
+- Barro, R. J. (1989), «&nbsp;The Ricardian Approach to Budget Deficits&nbsp;», *Journal of Economic Perspectives*, 3(2), p.&nbsp;37-54.
+- Blanchard, O. (2019), «&nbsp;Public Debt and Low Interest Rates&nbsp;», *American Economic Review*, 109(4), p.&nbsp;1197-1229 (lu dans sa version de document de travail du PIIE, n°&nbsp;19-4).
+- Breunig, C. et Busemeyer, M. R. (2012), «&nbsp;Fiscal austerity and the trade-off between public investment and social spending&nbsp;», *Journal of European Public Policy*, 19(6), p.&nbsp;921-938.
+{{< /confrontation-recherche >}}
 
-{{< consultation slug="dette-publique-qui-paie-vraiment" >}}
+## Ce qu'il faut retenir {#retenir}
+
+La dette ne transmet pas seulement une charge&nbsp;: elle transmet aussi ce qu'elle a financé. En France, sur trente ans, ce qu'elle a financé en actifs ne représente que {{< gen-val "part_k" >}}&nbsp;% des déficits, et cette part a baissé de décennie en décennie, jusqu'à {{< gen-val "d3_part" >}}&nbsp;% de {{< gen-val "d3_lib" >}}. Le patrimoine net des administrations publiques a reculé de {{< gen-val "pn0" >}}&nbsp;% à {{< gen-val "pn1" >}}&nbsp;% du PIB.
+
+«&nbsp;On se la doit à nous-mêmes&nbsp;» ne vaut que pour {{< gen-val "res_fin" >}}&nbsp;% de la dette, une part soutenue depuis {{< gen-val "bc10_premiere" >}} par les achats de la banque centrale, et qui reflue avec eux. Et même détenue dans le pays, la dette organise un transfert des contribuables vers les détenteurs de titres.
+
+Le vieillissement n'est pas, selon l'indicateur de la Commission, ce qui rend la dette française difficile à stabiliser&nbsp;: c'est l'écart présent entre recettes et dépenses ({{< gen-val "ibp" >}} points de PIB, contre {{< gen-val "coa" >}} pour le vieillissement). Avec la projection des retraites du COR, l'écart se resserre sans s'inverser.
+
+Ces comptes ne disent ni ce que les dépenses courantes ont produit, ni qui, dans chaque génération, portera l'ajustement&nbsp;: c'est l'objet de [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/)
+
+## Questions fréquentes {#questions}
+
+{{< faq-visible >}}
+
+**Dans le dossier dette publique**
+
+{{< pastilles label="Dans le dossier dette publique" >}}
+- [Pourquoi la dette publique augmente-t-elle&nbsp;?](/pourquoi-la-dette-publique-augmente/)
+- [Combien coûte la dette publique&nbsp;?](/cout-de-la-dette-publique/)
+- [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/)
+- [Et ailleurs&nbsp;?](/dette-publique-comparaison-internationale/)
+- [La dette publique peut-elle baisser&nbsp;?](/dette-publique-peut-elle-baisser/)
+{{< /pastilles >}}
+
+{{< appel-livre slug="dette-publique-qui-paie-vraiment" sur="Pour prolonger l’analyse" avis="non" >}}
+Cette page mesure ce que la dette française transmet&nbsp;: peu d'actifs, une détention majoritairement étrangère, un effort qui tient à la position présente. Reste à savoir qui, dans chaque génération, portera cet effort&nbsp;: le contribuable, l'usager des services publics, l'épargnant par l'inflation, le créancier par une restructuration&nbsp;? Le livre prolonge cette analyse, chiffres officiels à l'appui, en examinant ces choix et leurs conséquences.
+{{< /appel-livre >}}
+
+## D'où viennent ces chiffres {#sources}
+
+**Emplois du besoin de financement.** Eurostat, administrations publiques (S.13), comptes SEC 2010, en monnaie nationale (`gov_10a_main`)&nbsp;: capacité ou besoin de financement (B9), épargne nette (B8N), formation brute de capital fixe (P51G), consommation de capital fixe (P51C), acquisitions moins cessions d'actifs non produits (NP), variation des stocks (P52_P53), transferts en capital versés et reçus (D9), dont aides à l'investissement versées (D92). Chaque année, besoin de financement = désépargne nette + acquisitions nettes d'actifs + transferts en capital nets&nbsp;; l'identité est vérifiée année par année, à 0,05 point près. Les ratios sont calculés sur le PIB publié avec la notification de déficit et de dette (`gov_10dd_edpt1`) et cumulés par période en points de PIB&nbsp;; la part en actifs calculée en euros courants donne {{< gen-val "part_k_eur" >}}&nbsp;%, contre {{< gen-val "part_k" >}}&nbsp;% en points de PIB. Sans les terrains ni les stocks, l'investissement net seul représente {{< gen-val "part_n" >}}&nbsp;% du besoin de financement.
+
+**Patrimoine.** Actifs fixes nets et terrains des administrations publiques (`nama_10_nfa_bs`, prix courants), valeur financière nette consolidée (`nasa_10_f_bs`, BF90), rapportés au PIB. Les stocks d'actifs sont évalués aux prix courants&nbsp;: leurs variations mêlent flux et réévaluations.
+
+**Détention.** BCE, statistiques de finances publiques (GFS)&nbsp;: dette de Maastricht des administrations publiques par zone de contrepartie (reste du monde, résidents) et secteur détenteur (banque centrale). Contrôles&nbsp;: non-résidents et résidents égalent la dette totale chaque année&nbsp;; sur les années communes, les valeurs égalent celles d'Eurostat (`gov_10dd_ggd`), transmises par le même déclarant.
+
+**Indicateur S2.** Commission européenne, *{{< gen-val "dsm_lib" >}}*, tableaux par pays (fichier de l'édition, archivé avec son empreinte)&nbsp;: les composantes reprises sont celles du tableur&nbsp;; le tableau 3.2 du rapport imprime la position initiale comme la différence entre S2 et le coût du vieillissement, d'où {{< gen-val "ibp_pdf" >}} au lieu de {{< gen-val "ibp" >}} pour la France. **Retraites.** COR, {{< gen-val "cor_lib" >}}, données de la synthèse, scénario de référence. La substitution de la trajectoire du COR à la composante «&nbsp;pensions&nbsp;» de la Commission est un calcul de l'auteur.
+
+Contrôle&nbsp;: pour chaque pays et chaque année, les ratios calculés sont comparés à ceux qu'Eurostat publie en pourcentage du PIB, que le calcul n'utilise pas. Au-delà de {{< gen-val "tolerance" >}} point d'écart, l'année est écartée et comptée ({{< gen-val "cons_ecartees" >}} sur {{< gen-val "cons_calculables" >}})&nbsp;; pour la France, le script s'arrête. Aucun chiffre de cette page n'est saisi à la main&nbsp;: tous viennent du même script, qui vérifie les principales affirmations chiffrées et s'arrête si leurs conditions ne sont plus remplies&nbsp;; leur formulation fait l'objet d'une relecture éditoriale. Les arguments ont été mis à l'épreuve avant l'écriture de la page, selon un protocole fixé avant le calcul.
+
+{{< reutiliser figures="figures_generations" jeu="dette_generations" sources="Eurostat, BCE, Commission européenne, COR" donnees="Les emplois du besoin de financement des administrations publiques (France par décennie, 27 pays de l'Union), le patrimoine des administrations publiques, la détention de la dette par secteur et l'indicateur S2 de la Commission ; le même contenu existe en CSV, au format long." >}}
+De {{< gen-val "a0" >}} à {{< gen-val "fin" >}}, {{< gen-val "part_k" >}}&nbsp;% du besoin de financement des administrations publiques françaises a correspondu à un accroissement net de leurs actifs, et {{< gen-val "part_e" >}}&nbsp;% à des dépenses courantes non couvertes par les recettes courantes&nbsp;; la part investie est passée de {{< gen-val "d1_part" >}}&nbsp;% ({{< gen-val "d1_lib" >}}) à {{< gen-val "d3_part" >}}&nbsp;% ({{< gen-val "d3_lib" >}}). En {{< gen-val "h_fin" >}}, {{< gen-val "nr_fin" >}}&nbsp;% de la dette publique était détenue par des non-résidents. C'est une lecture comptable, non une attribution causale.
+{{< /reutiliser >}}

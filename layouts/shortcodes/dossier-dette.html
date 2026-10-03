@@ -65,6 +65,11 @@
     {{- $src = printf "%s · Eurostat %s" $donnees .affichage.an_fin -}}
     {{- $srcTitre = "Dernière année des données Eurostat de cette page — c'est le millésime des DONNÉES, non la date de relecture du texte" -}}
   {{- end -}}
+{{- else if and (eq $v "prolongement") (in (.Page.Params.donnees | default (slice)) "dette_generations") -}}
+  {{- with site.Data.dette_generations -}}
+    {{- $src = printf "%s · Eurostat et BCE %s" $donnees .affichage.fin -}}
+    {{- $srcTitre = "Dernière année des séries Eurostat et BCE de cette page — c'est le millésime des DONNÉES, non la date de relecture du texte" -}}
+  {{- end -}}
 {{- end -}}
 {{- if not $src -}}
   {{- $src = printf "%s · %s" (cond $en "Updated" "Mise à jour") (.Page.Lastmod.Format "01/2006") -}}

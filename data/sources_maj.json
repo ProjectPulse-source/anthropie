@@ -71,9 +71,9 @@
    "cadence": "trimestrielle", "workflow": "dette-insee.yml"
   },
   {
-   "id": "dette-monde", "producteur": "Eurostat, OCDE, FMI, Banque mondiale", "objet": "comparaison internationale ; décomposition de la variation du ratio", "mode": "api",
-   "pages": ["/dette-publique-comparaison-internationale/", "/pourquoi-la-dette-publique-augmente/", "/dette-publique-peut-elle-baisser/", "/en/can-public-debt-come-down/"],
-   "generateurs": ["update_dette_monde.py", "update_dette_dynamique.py", "update_dette_baisse.py"], "jeu": "data/dette_monde.json",
+   "id": "dette-monde", "producteur": "Eurostat, OCDE, FMI, Banque mondiale, BCE", "objet": "comparaison internationale ; décomposition de la variation du ratio", "mode": "api",
+   "pages": ["/dette-publique-comparaison-internationale/", "/pourquoi-la-dette-publique-augmente/", "/dette-publique-peut-elle-baisser/", "/en/can-public-debt-come-down/", "/dette-publique-generations-futures/"],
+   "generateurs": ["update_dette_monde.py", "update_dette_dynamique.py", "update_dette_baisse.py", "update_dette_generations.py"], "jeu": "data/dette_monde.json",
    "cadence": "semestrielle", "workflow": "dette-monde.yml"
   },
   {
@@ -85,6 +85,12 @@
    "id": "qui-paie", "producteur": "INSEE (comptes nationaux distribués), registre du livre", "objet": "redistribution par dixième, détention de la dette", "mode": "fichier",
    "pages": ["/qui-paie-la-dette-publique/"], "generateurs": ["generer_figures_qui_paie.py"], "jeu": "data/qui_paie_donnees.json",
    "cadence": "annuelle", "detection": "aucune à ce jour : mise à jour à la main (point ouvert, déclaré)"
+  },
+  {
+   "id": "dette-generations-pieces", "producteur": "Commission européenne (Debt Sustainability Monitor), COR (rapport annuel)",
+   "objet": "indicateur S2 et ses composantes ; dépenses et ressources du système de retraite projetées (scénario de référence)", "mode": "fichier",
+   "pages": ["/dette-publique-generations-futures/"], "generateurs": ["update_dette_generations.py"], "jeu": "data/dette_generations.json",
+   "cadence": "annuelle", "detection": "aucune à ce jour : pièces dans scripts/sources_generations/ (SHA256SUMS), mises à jour à la main ; rendez-vous : Debt Sustainability Monitor 2026 (attendu au premier trimestre 2027), rapport du COR de juin 2027"
   }
  ]
 }

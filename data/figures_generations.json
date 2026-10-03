@@ -1,0 +1,28 @@
+{
+ "fr": [
+  {
+   "id": "actifs",
+   "fichier": "dette-generations-actifs",
+   "titre": "France : à quoi ont correspondu les déficits publics",
+   "montre": "Depuis trente ans, la part des déficits français qui a correspondu à un accroissement net des actifs publics a baissé de décennie en décennie ; l'essentiel a couvert des dépenses courantes.",
+   "source": "Eurostat gov_10a_main (B9, B8N, P51G, P51C, NP, P52_P53, D9), gov_10dd_edpt1 (PIB), administrations publiques, France, 1996-2025",
+   "precaution": "Identité comptable : elle dit à quoi les déficits ont correspondu, non ce qu'ils ont produit ; l'éducation n'y est pas un actif."
+  },
+  {
+   "id": "detention",
+   "fichier": "dette-generations-detention",
+   "titre": "Qui détient la dette publique française",
+   "montre": "La part de la dette française détenue par des non-résidents dépasse la moitié la plupart des années depuis le début des années 2000 ; les achats de la Banque de France l'ont fait reculer, son reflux la fait remonter.",
+   "source": "BCE, statistiques de finances publiques (GFS) : dette de Maastricht des administrations publiques par secteur détenteur, France, 1995-2025",
+   "precaution": "Résidence du détenteur enregistré (fonds, dépositaire), non de l'épargnant final ; valeur nominale. Banque de France : titres comptés comme résidents."
+  },
+  {
+   "id": "vieillissement",
+   "fichier": "dette-generations-vieillissement",
+   "titre": "France : d'où vient l'effort qui stabiliserait la dette (indicateur S2)",
+   "montre": "Selon l'indicateur de la Commission, l'effort qui stabiliserait la dette française tient à la position budgétaire présente plus qu'au vieillissement, sauf à cumuler deux hypothèses défavorables.",
+   "source": "Commission européenne, Debt Sustainability Monitor 2025 (indicateur S2) ; COR, rapport annuel de juin 2026 (dépenses de retraite, scénario de référence)",
+   "precaution": "Projections conditionnelles. « COR » : dépenses de retraite 2025-2070 du COR à la place des pensions (approximation majorante)."
+  }
+ ]
+}

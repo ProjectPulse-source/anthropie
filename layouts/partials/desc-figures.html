@@ -64,6 +64,14 @@
   {{- end -}}
 {{- end -}}
 {{- if in $text "{baisse." -}}{{- errorf "desc-figures: placeholder {baisse.*} non resolu dans : %s" $text -}}{{- end -}}
+{{- /* Prolongement « Générations futures » : placeholders {gen.<cle>}, depuis data/dette_generations.json (bloc affichage,
+       scripts/update_dette_generations.py). Page en français seulement : pas de bloc anglais. */ -}}
+{{- with site.Data.dette_generations -}}
+  {{- range $k, $v := .affichage -}}
+    {{- $text = replace $text (printf "{gen.%s}" $k) $v -}}
+  {{- end -}}
+{{- end -}}
+{{- if in $text "{gen." -}}{{- errorf "desc-figures: placeholder {gen.*} non resolu dans : %s" $text -}}{{- end -}}
 {{- with .isbn -}}
   {{- range where site.Data.works.works "isbn" . -}}
     {{- with .corpus_stats -}}

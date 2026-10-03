@@ -366,6 +366,46 @@ def carte_baisse() -> None:
            (C1, "Debt: %s → %s%%" % (E["d3_dette_deb"], E["d3_dette_fin"]))])
 
 
+def figure_generations_mini(d: ImageDraw.ImageDraw, periodes: list[dict]) -> None:
+    """Prolongement « Générations futures » : la figure signature réduite — par décennie, part du besoin de financement
+    en actifs (bleu), en transferts en capital (gris) et en dépenses courantes non couvertes (orange). Valeurs lues dans
+    data/dette_generations.json."""
+    x0, x1, top = 660, 1126, 112
+    fa = font("inter", 18, 500)
+    for k, p in enumerate(periodes):
+        y = top + 100 * k
+        d.text((x0, y - 28), "%d-%d" % (p["debut"], p["fin"]), font=fa, fill=URL_GREY)
+        x = x0
+        for cle, col in (("part_actifs", C1), ("part_transferts", SEC), ("part_desepargne", C2)):
+            w = (x1 - x0) * max(p[cle], 0) / 100
+            d.rectangle([x, y, x + w, y + 46], fill=col)
+            x += w
+    d.text((x0, top + 300), "Part des déficits publics français, par décennie :", font=font("inter", 17, 400), fill=URL_GREY)
+    d.text((x0, top + 322), "actifs, transferts en capital, dépenses courantes", font=font("inter", 17, 400), fill=URL_GREY)
+
+
+def carte_generations() -> None:
+    """Prolongement « Générations futures » (03/10/2026). Chiffres lus dans le jeu publié ; le contraste annoncé (la part
+    en actifs baisse d'une décennie à l'autre, la dernière est faible, les dépenses courantes dominent) est contrôlé ici."""
+    f = ROOT / "data" / "dette_generations.json"
+    if not f.is_file():
+        fail("jeu de données absent : %s — lancer scripts/update_dette_generations.py d'abord" % f)
+    j = json.loads(f.read_text(encoding="utf-8"))
+    A, per = j["affichage"], j["france"]["periodes"][1:]
+    if not (per[0]["part_actifs"] > per[1]["part_actifs"] > per[2]["part_actifs"] and per[2]["part_actifs"] < 15
+            and per[2]["part_desepargne"] > 60):
+        fail("carte générations : le contraste annoncé n'est plus vrai dans les données")
+    carte("og-dette-generations.jpg",
+          ["Des déficits", "pour le courant"],
+          "%s : %s %% seulement en actifs transmis." % (A["d3_lib"], A["d3_part"]),
+          "Eurostat, France %s-%s · CC BY 4.0" % (A["a0"], A["fin"]),
+          "stephane-lalut.com/dette-publique-generations-futures/",
+          lambda d: figure_generations_mini(d, per),
+          [(C1, "Actifs : %s %% → %s %%" % (A["d1_part"], A["d3_part"])),
+           (SEC, "Transferts en capital"),
+           (C2, "Dépenses courantes non couvertes")])
+
+
 def carte_monde() -> None:
     """Volet 3, comparaison internationale (avis du 30/09 : l'aperçu doit montrer la découverte de la page).
     Tout vient de data/dette_monde.json : la paire de faux jumeaux (règle publiée), et les chaînes
@@ -466,15 +506,20 @@ def main() -> int:
     if "--collectivites" in sys.argv[1:]:
         carte_collectivites()
         return 0
+    if "--generations" in sys.argv[1:]:
+        carte_generations()
+        return 0
     if "--monde" in sys.argv[1:]:
         carte_monde()
         carte_dynamique()
         carte_baisse()
+        carte_generations()   # mêmes séries Eurostat, même workflow (dette-monde.yml), 03/10/2026
         return 0
     carte_monde()
     carte_dynamique()
     carte_baisse()
     carte_collectivites()
+    carte_generations()
     qp = ROOT / "data" / "qui_paie_donnees.json"
     do = ROOT / "data" / "dette_officielle.json"
     for f in (qp, do):

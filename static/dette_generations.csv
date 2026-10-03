@@ -1,0 +1,1348 @@
+﻿tableau,pays,periode,variable,valeur,unite
+france_emplois_du_besoin_de_financement,FR,1996-2025,besoin,124.475,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,1996-2025,actifs,22.967,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,1996-2025,investissement_net,18.468,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,1996-2025,transferts,19.774,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,1996-2025,aides_investissement,25.483,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,1996-2025,desepargne,81.734,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,1996-2005,besoin,28.599,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,1996-2005,actifs,9.117,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,1996-2005,investissement_net,7.649,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,1996-2005,transferts,5.109,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,1996-2005,aides_investissement,6.173,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,1996-2005,desepargne,14.373,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,2006-2015,besoin,47.560,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,2006-2015,actifs,9.028,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,2006-2015,investissement_net,7.519,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,2006-2015,transferts,7.977,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,2006-2015,aides_investissement,8.645,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,2006-2015,desepargne,30.554,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,2016-2025,besoin,48.316,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,2016-2025,actifs,4.822,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,2016-2025,investissement_net,3.299,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,2016-2025,transferts,6.687,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,2016-2025,aides_investissement,10.665,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,2016-2025,desepargne,36.807,points de PIB cumulés
+france_annuel,FR,1996,besoin,3.896,% du PIB
+france_annuel,FR,1996,actifs,1.018,% du PIB
+france_annuel,FR,1996,investissement_net,0.888,% du PIB
+france_annuel,FR,1996,transferts,0.560,% du PIB
+france_annuel,FR,1996,aides_investissement,0.820,% du PIB
+france_annuel,FR,1996,desepargne,2.319,% du PIB
+france_annuel,FR,1997,besoin,3.711,% du PIB
+france_annuel,FR,1997,actifs,0.521,% du PIB
+france_annuel,FR,1997,investissement_net,0.539,% du PIB
+france_annuel,FR,1997,transferts,0.869,% du PIB
+france_annuel,FR,1997,aides_investissement,0.668,% du PIB
+france_annuel,FR,1997,desepargne,2.322,% du PIB
+france_annuel,FR,1998,besoin,2.391,% du PIB
+france_annuel,FR,1998,actifs,0.716,% du PIB
+france_annuel,FR,1998,investissement_net,0.494,% du PIB
+france_annuel,FR,1998,transferts,0.547,% du PIB
+france_annuel,FR,1998,aides_investissement,0.628,% du PIB
+france_annuel,FR,1998,desepargne,1.128,% du PIB
+france_annuel,FR,1999,besoin,1.544,% du PIB
+france_annuel,FR,1999,actifs,0.780,% du PIB
+france_annuel,FR,1999,investissement_net,0.597,% du PIB
+france_annuel,FR,1999,transferts,0.653,% du PIB
+france_annuel,FR,1999,aides_investissement,0.559,% du PIB
+france_annuel,FR,1999,desepargne,0.112,% du PIB
+france_annuel,FR,2000,besoin,1.313,% du PIB
+france_annuel,FR,2000,actifs,0.976,% du PIB
+france_annuel,FR,2000,investissement_net,0.862,% du PIB
+france_annuel,FR,2000,transferts,0.393,% du PIB
+france_annuel,FR,2000,aides_investissement,0.497,% du PIB
+france_annuel,FR,2000,desepargne,-0.057,% du PIB
+france_annuel,FR,2001,besoin,1.417,% du PIB
+france_annuel,FR,2001,actifs,0.958,% du PIB
+france_annuel,FR,2001,investissement_net,0.792,% du PIB
+france_annuel,FR,2001,transferts,0.493,% du PIB
+france_annuel,FR,2001,aides_investissement,0.503,% du PIB
+france_annuel,FR,2001,desepargne,-0.034,% du PIB
+france_annuel,FR,2002,besoin,3.176,% du PIB
+france_annuel,FR,2002,actifs,0.946,% du PIB
+france_annuel,FR,2002,investissement_net,0.711,% du PIB
+france_annuel,FR,2002,transferts,0.480,% du PIB
+france_annuel,FR,2002,aides_investissement,0.570,% du PIB
+france_annuel,FR,2002,desepargne,1.749,% du PIB
+france_annuel,FR,2003,besoin,4.088,% du PIB
+france_annuel,FR,2003,actifs,0.983,% du PIB
+france_annuel,FR,2003,investissement_net,0.839,% du PIB
+france_annuel,FR,2003,transferts,0.337,% du PIB
+france_annuel,FR,2003,aides_investissement,0.572,% du PIB
+france_annuel,FR,2003,desepargne,2.768,% du PIB
+france_annuel,FR,2004,besoin,3.555,% du PIB
+france_annuel,FR,2004,actifs,1.064,% du PIB
+france_annuel,FR,2004,investissement_net,0.927,% du PIB
+france_annuel,FR,2004,transferts,0.314,% du PIB
+france_annuel,FR,2004,aides_investissement,0.648,% du PIB
+france_annuel,FR,2004,desepargne,2.178,% du PIB
+france_annuel,FR,2005,besoin,3.507,% du PIB
+france_annuel,FR,2005,actifs,1.155,% du PIB
+france_annuel,FR,2005,investissement_net,1.000,% du PIB
+france_annuel,FR,2005,transferts,0.464,% du PIB
+france_annuel,FR,2005,aides_investissement,0.708,% du PIB
+france_annuel,FR,2005,desepargne,1.889,% du PIB
+france_annuel,FR,2006,besoin,2.658,% du PIB
+france_annuel,FR,2006,actifs,1.057,% du PIB
+france_annuel,FR,2006,investissement_net,0.928,% du PIB
+france_annuel,FR,2006,transferts,0.634,% du PIB
+france_annuel,FR,2006,aides_investissement,0.662,% du PIB
+france_annuel,FR,2006,desepargne,0.966,% du PIB
+france_annuel,FR,2007,besoin,2.990,% du PIB
+france_annuel,FR,2007,actifs,1.075,% du PIB
+france_annuel,FR,2007,investissement_net,0.929,% du PIB
+france_annuel,FR,2007,transferts,0.790,% du PIB
+france_annuel,FR,2007,aides_investissement,0.902,% du PIB
+france_annuel,FR,2007,desepargne,1.125,% du PIB
+france_annuel,FR,2008,besoin,3.502,% du PIB
+france_annuel,FR,2008,actifs,1.062,% du PIB
+france_annuel,FR,2008,investissement_net,0.913,% du PIB
+france_annuel,FR,2008,transferts,0.900,% du PIB
+france_annuel,FR,2008,aides_investissement,0.950,% du PIB
+france_annuel,FR,2008,desepargne,1.540,% du PIB
+france_annuel,FR,2009,besoin,7.378,% du PIB
+france_annuel,FR,2009,actifs,1.292,% du PIB
+france_annuel,FR,2009,investissement_net,1.102,% du PIB
+france_annuel,FR,2009,transferts,0.835,% du PIB
+france_annuel,FR,2009,aides_investissement,0.942,% du PIB
+france_annuel,FR,2009,desepargne,5.252,% du PIB
+france_annuel,FR,2010,besoin,7.152,% du PIB
+france_annuel,FR,2010,actifs,1.186,% du PIB
+france_annuel,FR,2010,investissement_net,1.034,% du PIB
+france_annuel,FR,2010,transferts,0.863,% du PIB
+france_annuel,FR,2010,aides_investissement,0.930,% du PIB
+france_annuel,FR,2010,desepargne,5.103,% du PIB
+france_annuel,FR,2011,besoin,5.304,% du PIB
+france_annuel,FR,2011,actifs,0.814,% du PIB
+france_annuel,FR,2011,investissement_net,0.685,% du PIB
+france_annuel,FR,2011,transferts,0.691,% du PIB
+france_annuel,FR,2011,aides_investissement,0.807,% du PIB
+france_annuel,FR,2011,desepargne,3.800,% du PIB
+france_annuel,FR,2012,besoin,5.171,% du PIB
+france_annuel,FR,2012,actifs,0.871,% du PIB
+france_annuel,FR,2012,investissement_net,0.674,% du PIB
+france_annuel,FR,2012,transferts,0.850,% du PIB
+france_annuel,FR,2012,aides_investissement,0.850,% du PIB
+france_annuel,FR,2012,desepargne,3.451,% du PIB
+france_annuel,FR,2013,besoin,4.938,% du PIB
+france_annuel,FR,2013,actifs,0.847,% du PIB
+france_annuel,FR,2013,investissement_net,0.682,% du PIB
+france_annuel,FR,2013,transferts,0.766,% du PIB
+france_annuel,FR,2013,aides_investissement,0.834,% du PIB
+france_annuel,FR,2013,desepargne,3.326,% du PIB
+france_annuel,FR,2014,besoin,4.574,% du PIB
+france_annuel,FR,2014,actifs,0.532,% du PIB
+france_annuel,FR,2014,investissement_net,0.397,% du PIB
+france_annuel,FR,2014,transferts,0.801,% du PIB
+france_annuel,FR,2014,aides_investissement,0.838,% du PIB
+france_annuel,FR,2014,desepargne,3.241,% du PIB
+france_annuel,FR,2015,besoin,3.892,% du PIB
+france_annuel,FR,2015,actifs,0.293,% du PIB
+france_annuel,FR,2015,investissement_net,0.177,% du PIB
+france_annuel,FR,2015,transferts,0.849,% du PIB
+france_annuel,FR,2015,aides_investissement,0.929,% du PIB
+france_annuel,FR,2015,desepargne,2.750,% du PIB
+france_annuel,FR,2016,besoin,3.765,% du PIB
+france_annuel,FR,2016,actifs,0.293,% du PIB
+france_annuel,FR,2016,investissement_net,0.171,% du PIB
+france_annuel,FR,2016,transferts,0.794,% du PIB
+france_annuel,FR,2016,aides_investissement,0.935,% du PIB
+france_annuel,FR,2016,desepargne,2.678,% du PIB
+france_annuel,FR,2017,besoin,3.362,% du PIB
+france_annuel,FR,2017,actifs,0.226,% du PIB
+france_annuel,FR,2017,investissement_net,0.104,% du PIB
+france_annuel,FR,2017,transferts,1.230,% du PIB
+france_annuel,FR,2017,aides_investissement,0.942,% du PIB
+france_annuel,FR,2017,desepargne,1.907,% du PIB
+france_annuel,FR,2018,besoin,2.319,% du PIB
+france_annuel,FR,2018,actifs,0.303,% du PIB
+france_annuel,FR,2018,investissement_net,0.178,% du PIB
+france_annuel,FR,2018,transferts,0.519,% du PIB
+france_annuel,FR,2018,aides_investissement,0.883,% du PIB
+france_annuel,FR,2018,desepargne,1.497,% du PIB
+france_annuel,FR,2019,besoin,2.394,% du PIB
+france_annuel,FR,2019,actifs,0.585,% du PIB
+france_annuel,FR,2019,investissement_net,0.438,% du PIB
+france_annuel,FR,2019,transferts,0.516,% du PIB
+france_annuel,FR,2019,aides_investissement,0.887,% du PIB
+france_annuel,FR,2019,desepargne,1.293,% du PIB
+france_annuel,FR,2020,besoin,8.933,% du PIB
+france_annuel,FR,2020,actifs,0.419,% du PIB
+france_annuel,FR,2020,investissement_net,0.192,% du PIB
+france_annuel,FR,2020,transferts,0.966,% du PIB
+france_annuel,FR,2020,aides_investissement,1.099,% du PIB
+france_annuel,FR,2020,desepargne,7.548,% du PIB
+france_annuel,FR,2021,besoin,6.585,% du PIB
+france_annuel,FR,2021,actifs,0.404,% du PIB
+france_annuel,FR,2021,investissement_net,0.265,% du PIB
+france_annuel,FR,2021,transferts,0.651,% du PIB
+france_annuel,FR,2021,aides_investissement,1.278,% du PIB
+france_annuel,FR,2021,desepargne,5.530,% du PIB
+france_annuel,FR,2022,besoin,4.744,% du PIB
+france_annuel,FR,2022,actifs,0.427,% du PIB
+france_annuel,FR,2022,investissement_net,0.243,% du PIB
+france_annuel,FR,2022,transferts,0.563,% du PIB
+france_annuel,FR,2022,aides_investissement,1.169,% du PIB
+france_annuel,FR,2022,desepargne,3.754,% du PIB
+france_annuel,FR,2023,besoin,5.361,% du PIB
+france_annuel,FR,2023,actifs,0.517,% du PIB
+france_annuel,FR,2023,investissement_net,0.419,% du PIB
+france_annuel,FR,2023,transferts,0.426,% du PIB
+france_annuel,FR,2023,aides_investissement,1.157,% du PIB
+france_annuel,FR,2023,desepargne,4.418,% du PIB
+france_annuel,FR,2024,besoin,5.762,% du PIB
+france_annuel,FR,2024,actifs,0.754,% du PIB
+france_annuel,FR,2024,investissement_net,0.582,% du PIB
+france_annuel,FR,2024,transferts,0.485,% du PIB
+france_annuel,FR,2024,aides_investissement,1.180,% du PIB
+france_annuel,FR,2024,desepargne,4.522,% du PIB
+france_annuel,FR,2025,besoin,5.093,% du PIB
+france_annuel,FR,2025,actifs,0.893,% du PIB
+france_annuel,FR,2025,investissement_net,0.708,% du PIB
+france_annuel,FR,2025,transferts,0.538,% du PIB
+france_annuel,FR,2025,aides_investissement,1.135,% du PIB
+france_annuel,FR,2025,desepargne,3.662,% du PIB
+ue_emplois_du_besoin_de_financement,AT,2001-2025,besoin,66.151,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,AT,2001-2025,actifs,9.857,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,AT,2001-2025,transferts,27.308,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,AT,2001-2025,desepargne,28.986,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,BE,2001-2025,besoin,70.516,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,BE,2001-2025,actifs,6.521,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,BE,2001-2025,transferts,16.384,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,BE,2001-2025,desepargne,47.611,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,BG,2001-2025,besoin,25.050,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,BG,2001-2025,actifs,25.197,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,BG,2001-2025,transferts,-8.857,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,BG,2001-2025,desepargne,8.709,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,CY,2001-2025,besoin,56.066,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,CY,2001-2025,actifs,34.554,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,CY,2001-2025,transferts,26.538,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,CY,2001-2025,desepargne,-5.022,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,CZ,2001-2025,besoin,67.863,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,CZ,2001-2025,actifs,4.807,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,CZ,2001-2025,transferts,18.175,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,CZ,2001-2025,desepargne,44.880,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,DE,2001-2025,besoin,38.015,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,DE,2001-2025,actifs,1.861,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,DE,2001-2025,transferts,22.258,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,DE,2001-2025,desepargne,13.895,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,DK,2001-2025,besoin,-37.965,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,DK,2001-2025,actifs,7.719,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,DK,2001-2025,transferts,14.550,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,DK,2001-2025,desepargne,-60.234,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,EE,2001-2025,besoin,8.988,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,EE,2001-2025,actifs,65.406,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,EE,2001-2025,transferts,-8.928,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,EE,2001-2025,desepargne,-47.492,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,EL,2001-2025,besoin,143.786,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,EL,2001-2025,actifs,23.394,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,EL,2001-2025,transferts,0.165,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,EL,2001-2025,desepargne,120.227,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,ES,2001-2025,besoin,104.282,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,ES,2001-2025,actifs,26.195,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,ES,2001-2025,transferts,6.007,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,ES,2001-2025,desepargne,72.081,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,FI,2001-2025,besoin,10.068,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,FI,2001-2025,actifs,14.731,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,FI,2001-2025,transferts,-1.367,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,FI,2001-2025,desepargne,-3.296,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,FR,2001-2025,besoin,111.619,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,FR,2001-2025,actifs,18.956,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,FR,2001-2025,transferts,16.753,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,FR,2001-2025,desepargne,75.911,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,HR,2001-2025,besoin,86.085,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,HR,2001-2025,actifs,38.209,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,HR,2001-2025,transferts,26.238,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,HR,2001-2025,desepargne,21.638,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,HU,2001-2025,besoin,122.527,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,HU,2001-2025,actifs,24.835,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,HU,2001-2025,transferts,19.414,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,HU,2001-2025,desepargne,78.278,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,IE,2001-2025,besoin,77.657,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,IE,2001-2025,actifs,33.050,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,IE,2001-2025,transferts,27.309,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,IE,2001-2025,desepargne,17.298,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,IT,2001-2025,besoin,96.710,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,IT,2001-2025,actifs,3.050,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,IT,2001-2025,transferts,33.656,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,IT,2001-2025,desepargne,60.005,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,LT,2001-2025,besoin,53.582,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,LT,2001-2025,actifs,26.929,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,LT,2001-2025,transferts,-7.509,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,LT,2001-2025,desepargne,34.160,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,LU,2001-2025,besoin,-25.761,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,LU,2001-2025,actifs,52.372,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,LU,2001-2025,transferts,22.466,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,LU,2001-2025,desepargne,-100.599,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,LV,2001-2025,besoin,67.066,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,LV,2001-2025,actifs,27.823,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,LV,2001-2025,transferts,-8.840,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,LV,2001-2025,desepargne,48.082,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,MT,2001-2025,besoin,76.103,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,MT,2001-2025,actifs,31.794,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,MT,2001-2025,transferts,-6.823,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,MT,2001-2025,desepargne,51.118,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,NL,2001-2025,besoin,37.625,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,NL,2001-2025,actifs,12.977,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,NL,2001-2025,transferts,4.578,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,NL,2001-2025,desepargne,20.070,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,PL,2001-2025,besoin,103.040,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,PL,2001-2025,actifs,44.034,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,PL,2001-2025,transferts,1.033,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,PL,2001-2025,desepargne,57.973,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,PT,2001-2025,besoin,100.895,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,PT,2001-2025,actifs,11.036,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,PT,2001-2025,transferts,7.489,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,PT,2001-2025,desepargne,82.369,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,RO,2001-2025,besoin,107.902,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,RO,2001-2025,actifs,65.481,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,RO,2001-2025,transferts,5.400,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,RO,2001-2025,desepargne,37.021,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,SE,2001-2025,besoin,1.310,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,SE,2001-2025,actifs,30.435,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,SE,2001-2025,transferts,1.726,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,SE,2001-2025,desepargne,-30.851,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,SI,2001-2025,besoin,78.424,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,SI,2001-2025,actifs,48.140,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,SI,2001-2025,transferts,10.458,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,SI,2001-2025,desepargne,19.826,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,SK,2001-2025,besoin,98.046,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,SK,2001-2025,actifs,0.737,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,SK,2001-2025,transferts,2.495,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,SK,2001-2025,desepargne,94.814,points de PIB cumulés
+france_patrimoine_apu,FR,1995,actifs_fixes,55.753,% du PIB
+france_patrimoine_apu,FR,1995,terrains,7.717,% du PIB
+france_patrimoine_apu,FR,1995,valeur_financiere_nette,-31.324,% du PIB
+france_patrimoine_apu,FR,1995,patrimoine_net,32.146,% du PIB
+france_patrimoine_apu,FR,1996,actifs_fixes,55.963,% du PIB
+france_patrimoine_apu,FR,1996,terrains,7.479,% du PIB
+france_patrimoine_apu,FR,1996,valeur_financiere_nette,-36.746,% du PIB
+france_patrimoine_apu,FR,1996,patrimoine_net,26.696,% du PIB
+france_patrimoine_apu,FR,1997,actifs_fixes,55.228,% du PIB
+france_patrimoine_apu,FR,1997,terrains,7.222,% du PIB
+france_patrimoine_apu,FR,1997,valeur_financiere_nette,-37.032,% du PIB
+france_patrimoine_apu,FR,1997,patrimoine_net,25.418,% du PIB
+france_patrimoine_apu,FR,1998,actifs_fixes,53.858,% du PIB
+france_patrimoine_apu,FR,1998,terrains,8.145,% du PIB
+france_patrimoine_apu,FR,1998,valeur_financiere_nette,-38.840,% du PIB
+france_patrimoine_apu,FR,1998,patrimoine_net,23.163,% du PIB
+france_patrimoine_apu,FR,1999,actifs_fixes,53.189,% du PIB
+france_patrimoine_apu,FR,1999,terrains,10.676,% du PIB
+france_patrimoine_apu,FR,1999,valeur_financiere_nette,-31.930,% du PIB
+france_patrimoine_apu,FR,1999,patrimoine_net,31.935,% du PIB
+france_patrimoine_apu,FR,2000,actifs_fixes,51.921,% du PIB
+france_patrimoine_apu,FR,2000,terrains,12.499,% du PIB
+france_patrimoine_apu,FR,2000,valeur_financiere_nette,-33.373,% du PIB
+france_patrimoine_apu,FR,2000,patrimoine_net,31.047,% du PIB
+france_patrimoine_apu,FR,2001,actifs_fixes,51.688,% du PIB
+france_patrimoine_apu,FR,2001,terrains,14.319,% du PIB
+france_patrimoine_apu,FR,2001,valeur_financiere_nette,-36.247,% du PIB
+france_patrimoine_apu,FR,2001,patrimoine_net,29.759,% du PIB
+france_patrimoine_apu,FR,2002,actifs_fixes,51.952,% du PIB
+france_patrimoine_apu,FR,2002,terrains,17.521,% du PIB
+france_patrimoine_apu,FR,2002,valeur_financiere_nette,-40.414,% du PIB
+france_patrimoine_apu,FR,2002,patrimoine_net,29.060,% du PIB
+france_patrimoine_apu,FR,2003,actifs_fixes,52.868,% du PIB
+france_patrimoine_apu,FR,2003,terrains,22.074,% du PIB
+france_patrimoine_apu,FR,2003,valeur_financiere_nette,-41.820,% du PIB
+france_patrimoine_apu,FR,2003,patrimoine_net,33.122,% du PIB
+france_patrimoine_apu,FR,2004,actifs_fixes,53.181,% du PIB
+france_patrimoine_apu,FR,2004,terrains,27.648,% du PIB
+france_patrimoine_apu,FR,2004,valeur_financiere_nette,-43.508,% du PIB
+france_patrimoine_apu,FR,2004,patrimoine_net,37.321,% du PIB
+france_patrimoine_apu,FR,2005,actifs_fixes,54.028,% du PIB
+france_patrimoine_apu,FR,2005,terrains,33.714,% du PIB
+france_patrimoine_apu,FR,2005,valeur_financiere_nette,-41.162,% du PIB
+france_patrimoine_apu,FR,2005,patrimoine_net,46.580,% du PIB
+france_patrimoine_apu,FR,2006,actifs_fixes,54.463,% du PIB
+france_patrimoine_apu,FR,2006,terrains,36.882,% du PIB
+france_patrimoine_apu,FR,2006,valeur_financiere_nette,-36.809,% du PIB
+france_patrimoine_apu,FR,2006,patrimoine_net,54.535,% du PIB
+france_patrimoine_apu,FR,2007,actifs_fixes,55.071,% du PIB
+france_patrimoine_apu,FR,2007,terrains,37.319,% du PIB
+france_patrimoine_apu,FR,2007,valeur_financiere_nette,-34.275,% du PIB
+france_patrimoine_apu,FR,2007,patrimoine_net,58.114,% du PIB
+france_patrimoine_apu,FR,2008,actifs_fixes,55.852,% du PIB
+france_patrimoine_apu,FR,2008,terrains,32.765,% du PIB
+france_patrimoine_apu,FR,2008,valeur_financiere_nette,-42.739,% du PIB
+france_patrimoine_apu,FR,2008,patrimoine_net,45.878,% du PIB
+france_patrimoine_apu,FR,2009,actifs_fixes,59.350,% du PIB
+france_patrimoine_apu,FR,2009,terrains,34.239,% du PIB
+france_patrimoine_apu,FR,2009,valeur_financiere_nette,-49.902,% du PIB
+france_patrimoine_apu,FR,2009,patrimoine_net,43.688,% du PIB
+france_patrimoine_apu,FR,2010,actifs_fixes,60.500,% du PIB
+france_patrimoine_apu,FR,2010,terrains,38.224,% du PIB
+france_patrimoine_apu,FR,2010,valeur_financiere_nette,-55.780,% du PIB
+france_patrimoine_apu,FR,2010,patrimoine_net,42.944,% du PIB
+france_patrimoine_apu,FR,2011,actifs_fixes,61.043,% du PIB
+france_patrimoine_apu,FR,2011,terrains,38.936,% du PIB
+france_patrimoine_apu,FR,2011,valeur_financiere_nette,-59.565,% du PIB
+france_patrimoine_apu,FR,2011,patrimoine_net,40.414,% du PIB
+france_patrimoine_apu,FR,2012,actifs_fixes,61.841,% du PIB
+france_patrimoine_apu,FR,2012,terrains,37.447,% du PIB
+france_patrimoine_apu,FR,2012,valeur_financiere_nette,-66.252,% du PIB
+france_patrimoine_apu,FR,2012,patrimoine_net,33.035,% du PIB
+france_patrimoine_apu,FR,2013,actifs_fixes,61.641,% du PIB
+france_patrimoine_apu,FR,2013,terrains,35.761,% du PIB
+france_patrimoine_apu,FR,2013,valeur_financiere_nette,-67.004,% du PIB
+france_patrimoine_apu,FR,2013,patrimoine_net,30.398,% du PIB
+france_patrimoine_apu,FR,2014,actifs_fixes,60.146,% du PIB
+france_patrimoine_apu,FR,2014,terrains,33.780,% du PIB
+france_patrimoine_apu,FR,2014,valeur_financiere_nette,-75.293,% du PIB
+france_patrimoine_apu,FR,2014,patrimoine_net,18.633,% du PIB
+france_patrimoine_apu,FR,2015,actifs_fixes,58.161,% du PIB
+france_patrimoine_apu,FR,2015,terrains,33.399,% du PIB
+france_patrimoine_apu,FR,2015,valeur_financiere_nette,-76.162,% du PIB
+france_patrimoine_apu,FR,2015,patrimoine_net,15.398,% du PIB
+france_patrimoine_apu,FR,2016,actifs_fixes,58.288,% du PIB
+france_patrimoine_apu,FR,2016,terrains,34.314,% du PIB
+france_patrimoine_apu,FR,2016,valeur_financiere_nette,-79.356,% du PIB
+france_patrimoine_apu,FR,2016,patrimoine_net,13.247,% du PIB
+france_patrimoine_apu,FR,2017,actifs_fixes,58.438,% du PIB
+france_patrimoine_apu,FR,2017,terrains,35.425,% du PIB
+france_patrimoine_apu,FR,2017,valeur_financiere_nette,-77.665,% du PIB
+france_patrimoine_apu,FR,2017,patrimoine_net,16.198,% du PIB
+france_patrimoine_apu,FR,2018,actifs_fixes,58.360,% du PIB
+france_patrimoine_apu,FR,2018,terrains,36.478,% du PIB
+france_patrimoine_apu,FR,2018,valeur_financiere_nette,-76.682,% du PIB
+france_patrimoine_apu,FR,2018,patrimoine_net,18.156,% du PIB
+france_patrimoine_apu,FR,2019,actifs_fixes,57.607,% du PIB
+france_patrimoine_apu,FR,2019,terrains,38.578,% du PIB
+france_patrimoine_apu,FR,2019,valeur_financiere_nette,-76.406,% du PIB
+france_patrimoine_apu,FR,2019,patrimoine_net,19.779,% du PIB
+france_patrimoine_apu,FR,2020,actifs_fixes,62.152,% du PIB
+france_patrimoine_apu,FR,2020,terrains,45.072,% du PIB
+france_patrimoine_apu,FR,2020,valeur_financiere_nette,-90.523,% du PIB
+france_patrimoine_apu,FR,2020,patrimoine_net,16.701,% du PIB
+france_patrimoine_apu,FR,2021,actifs_fixes,61.995,% du PIB
+france_patrimoine_apu,FR,2021,terrains,45.213,% du PIB
+france_patrimoine_apu,FR,2021,valeur_financiere_nette,-82.422,% du PIB
+france_patrimoine_apu,FR,2021,patrimoine_net,24.785,% du PIB
+france_patrimoine_apu,FR,2022,actifs_fixes,62.534,% du PIB
+france_patrimoine_apu,FR,2022,terrains,45.705,% du PIB
+france_patrimoine_apu,FR,2022,valeur_financiere_nette,-71.294,% du PIB
+france_patrimoine_apu,FR,2022,patrimoine_net,36.945,% du PIB
+france_patrimoine_apu,FR,2023,actifs_fixes,60.051,% du PIB
+france_patrimoine_apu,FR,2023,terrains,38.841,% du PIB
+france_patrimoine_apu,FR,2023,valeur_financiere_nette,-73.259,% du PIB
+france_patrimoine_apu,FR,2023,patrimoine_net,25.632,% du PIB
+france_patrimoine_apu,FR,2024,actifs_fixes,58.829,% du PIB
+france_patrimoine_apu,FR,2024,terrains,37.016,% du PIB
+france_patrimoine_apu,FR,2024,valeur_financiere_nette,-72.817,% du PIB
+france_patrimoine_apu,FR,2024,patrimoine_net,23.028,% du PIB
+france_patrimoine_apu,FR,2025,actifs_fixes,58.779,% du PIB
+france_patrimoine_apu,FR,2025,terrains,36.528,% du PIB
+france_patrimoine_apu,FR,2025,valeur_financiere_nette,-73.300,% du PIB
+france_patrimoine_apu,FR,2025,patrimoine_net,22.007,% du PIB
+france_detention,FR,1995,dette,57.805,% du PIB
+france_detention,FR,1995,non_residents,22.428,% du PIB
+france_detention,FR,1995,banque_centrale,0.970,% du PIB
+france_detention,FR,1995,autres_residents,34.407,% du PIB
+france_detention,FR,1996,dette,60.593,% du PIB
+france_detention,FR,1996,non_residents,25.478,% du PIB
+france_detention,FR,1996,banque_centrale,0.944,% du PIB
+france_detention,FR,1996,autres_residents,34.172,% du PIB
+france_detention,FR,1997,dette,61.983,% du PIB
+france_detention,FR,1997,non_residents,27.154,% du PIB
+france_detention,FR,1997,banque_centrale,0.821,% du PIB
+france_detention,FR,1997,autres_residents,34.008,% du PIB
+france_detention,FR,1998,dette,62.100,% du PIB
+france_detention,FR,1998,non_residents,28.246,% du PIB
+france_detention,FR,1998,banque_centrale,0.802,% du PIB
+france_detention,FR,1998,autres_residents,33.052,% du PIB
+france_detention,FR,1999,dette,61.423,% du PIB
+france_detention,FR,1999,non_residents,28.135,% du PIB
+france_detention,FR,1999,banque_centrale,0.782,% du PIB
+france_detention,FR,1999,autres_residents,32.507,% du PIB
+france_detention,FR,2000,dette,59.721,% du PIB
+france_detention,FR,2000,non_residents,28.111,% du PIB
+france_detention,FR,2000,banque_centrale,0.743,% du PIB
+france_detention,FR,2000,autres_residents,30.868,% du PIB
+france_detention,FR,2001,dette,59.322,% du PIB
+france_detention,FR,2001,non_residents,28.684,% du PIB
+france_detention,FR,2001,banque_centrale,0.712,% du PIB
+france_detention,FR,2001,autres_residents,29.927,% du PIB
+france_detention,FR,2002,dette,61.256,% du PIB
+france_detention,FR,2002,non_residents,30.578,% du PIB
+france_detention,FR,2002,banque_centrale,0.660,% du PIB
+france_detention,FR,2002,autres_residents,30.018,% du PIB
+france_detention,FR,2003,dette,65.364,% du PIB
+france_detention,FR,2003,non_residents,33.063,% du PIB
+france_detention,FR,2003,banque_centrale,0.687,% du PIB
+france_detention,FR,2003,autres_residents,31.614,% du PIB
+france_detention,FR,2004,dette,66.879,% du PIB
+france_detention,FR,2004,non_residents,34.273,% du PIB
+france_detention,FR,2004,banque_centrale,0.694,% du PIB
+france_detention,FR,2004,autres_residents,31.912,% du PIB
+france_detention,FR,2005,dette,68.186,% du PIB
+france_detention,FR,2005,non_residents,35.285,% du PIB
+france_detention,FR,2005,banque_centrale,0.703,% du PIB
+france_detention,FR,2005,autres_residents,32.199,% du PIB
+france_detention,FR,2006,dette,65.401,% du PIB
+france_detention,FR,2006,non_residents,33.533,% du PIB
+france_detention,FR,2006,banque_centrale,0.680,% du PIB
+france_detention,FR,2006,autres_residents,31.188,% du PIB
+france_detention,FR,2007,dette,65.477,% du PIB
+france_detention,FR,2007,non_residents,33.340,% du PIB
+france_detention,FR,2007,banque_centrale,0.676,% du PIB
+france_detention,FR,2007,autres_residents,31.462,% du PIB
+france_detention,FR,2008,dette,69.819,% du PIB
+france_detention,FR,2008,non_residents,34.884,% du PIB
+france_detention,FR,2008,banque_centrale,0.826,% du PIB
+france_detention,FR,2008,autres_residents,34.110,% du PIB
+france_detention,FR,2009,dette,84.056,% du PIB
+france_detention,FR,2009,non_residents,46.670,% du PIB
+france_detention,FR,2009,banque_centrale,0.975,% du PIB
+france_detention,FR,2009,autres_residents,36.410,% du PIB
+france_detention,FR,2010,dette,86.278,% du PIB
+france_detention,FR,2010,non_residents,47.379,% du PIB
+france_detention,FR,2010,banque_centrale,1.390,% du PIB
+france_detention,FR,2010,autres_residents,37.509,% du PIB
+france_detention,FR,2011,dette,88.749,% du PIB
+france_detention,FR,2011,non_residents,47.911,% du PIB
+france_detention,FR,2011,banque_centrale,2.144,% du PIB
+france_detention,FR,2011,autres_residents,38.694,% du PIB
+france_detention,FR,2012,dette,91.742,% du PIB
+france_detention,FR,2012,non_residents,50.158,% du PIB
+france_detention,FR,2012,banque_centrale,2.953,% du PIB
+france_detention,FR,2012,autres_residents,38.632,% du PIB
+france_detention,FR,2013,dette,94.558,% du PIB
+france_detention,FR,2013,non_residents,52.968,% du PIB
+france_detention,FR,2013,banque_centrale,2.334,% du PIB
+france_detention,FR,2013,autres_residents,39.255,% du PIB
+france_detention,FR,2014,dette,96.164,% du PIB
+france_detention,FR,2014,non_residents,54.894,% du PIB
+france_detention,FR,2014,banque_centrale,2.069,% du PIB
+france_detention,FR,2014,autres_residents,39.202,% du PIB
+france_detention,FR,2015,dette,96.978,% du PIB
+france_detention,FR,2015,non_residents,54.150,% du PIB
+france_detention,FR,2015,banque_centrale,5.316,% du PIB
+france_detention,FR,2015,autres_residents,37.512,% du PIB
+france_detention,FR,2016,dette,98.150,% du PIB
+france_detention,FR,2016,non_residents,51.769,% du PIB
+france_detention,FR,2016,banque_centrale,9.905,% du PIB
+france_detention,FR,2016,autres_residents,36.476,% du PIB
+france_detention,FR,2017,dette,98.761,% du PIB
+france_detention,FR,2017,non_residents,50.377,% du PIB
+france_detention,FR,2017,banque_centrale,14.025,% du PIB
+france_detention,FR,2017,autres_residents,34.359,% du PIB
+france_detention,FR,2018,dette,98.530,% du PIB
+france_detention,FR,2018,non_residents,49.153,% du PIB
+france_detention,FR,2018,banque_centrale,15.310,% du PIB
+france_detention,FR,2018,autres_residents,34.066,% du PIB
+france_detention,FR,2019,dette,98.158,% du PIB
+france_detention,FR,2019,non_residents,50.145,% du PIB
+france_detention,FR,2019,banque_centrale,14.588,% du PIB
+france_detention,FR,2019,autres_residents,33.425,% du PIB
+france_detention,FR,2020,dette,114.907,% du PIB
+france_detention,FR,2020,non_residents,56.434,% du PIB
+france_detention,FR,2020,banque_centrale,20.966,% du PIB
+france_detention,FR,2020,autres_residents,37.507,% du PIB
+france_detention,FR,2021,dette,112.786,% du PIB
+france_detention,FR,2021,non_residents,53.202,% du PIB
+france_detention,FR,2021,banque_centrale,24.841,% du PIB
+france_detention,FR,2021,autres_residents,34.743,% du PIB
+france_detention,FR,2022,dette,111.366,% du PIB
+france_detention,FR,2022,non_residents,54.065,% du PIB
+france_detention,FR,2022,banque_centrale,25.159,% du PIB
+france_detention,FR,2022,autres_residents,32.141,% du PIB
+france_detention,FR,2023,dette,109.507,% du PIB
+france_detention,FR,2023,non_residents,56.060,% du PIB
+france_detention,FR,2023,banque_centrale,23.323,% du PIB
+france_detention,FR,2023,autres_residents,30.125,% du PIB
+france_detention,FR,2024,dette,112.635,% du PIB
+france_detention,FR,2024,non_residents,59.228,% du PIB
+france_detention,FR,2024,banque_centrale,21.689,% du PIB
+france_detention,FR,2024,autres_residents,31.717,% du PIB
+france_detention,FR,2025,dette,115.552,% du PIB
+france_detention,FR,2025,non_residents,62.782,% du PIB
+france_detention,FR,2025,banque_centrale,19.086,% du PIB
+france_detention,FR,2025,autres_residents,33.683,% du PIB
+ue_part_non_residents,AT,2025,part_non_residents,66.191,% de la dette
+ue_part_non_residents,BE,2025,part_non_residents,63.376,% de la dette
+ue_part_non_residents,BG,2025,part_non_residents,50.521,% de la dette
+ue_part_non_residents,CY,2025,part_non_residents,95.899,% de la dette
+ue_part_non_residents,CZ,2025,part_non_residents,25.212,% de la dette
+ue_part_non_residents,DE,2025,part_non_residents,51.327,% de la dette
+ue_part_non_residents,DK,2025,part_non_residents,42.453,% de la dette
+ue_part_non_residents,EE,2025,part_non_residents,76.560,% de la dette
+ue_part_non_residents,ES,2025,part_non_residents,48.935,% de la dette
+ue_part_non_residents,FI,2025,part_non_residents,61.153,% de la dette
+ue_part_non_residents,FR,2025,part_non_residents,54.333,% de la dette
+ue_part_non_residents,HR,2025,part_non_residents,29.361,% de la dette
+ue_part_non_residents,HU,2025,part_non_residents,36.407,% de la dette
+ue_part_non_residents,IE,2018,part_non_residents,56.117,% de la dette
+ue_part_non_residents,IT,2025,part_non_residents,34.343,% de la dette
+ue_part_non_residents,LT,2025,part_non_residents,72.257,% de la dette
+ue_part_non_residents,LV,2025,part_non_residents,74.208,% de la dette
+ue_part_non_residents,MT,2018,part_non_residents,13.092,% de la dette
+ue_part_non_residents,NL,2025,part_non_residents,49.233,% de la dette
+ue_part_non_residents,PL,2025,part_non_residents,34.597,% de la dette
+ue_part_non_residents,PT,2025,part_non_residents,47.169,% de la dette
+ue_part_non_residents,RO,2025,part_non_residents,50.009,% de la dette
+ue_part_non_residents,SE,2025,part_non_residents,23.022,% de la dette
+ue_part_non_residents,SI,2025,part_non_residents,56.653,% de la dette
+ue_part_non_residents,SK,2025,part_non_residents,59.805,% de la dette
+commission_s2,AT,base,S2,4.159,points de PIB
+commission_s2,AT,base,IBP,2.338,points de PIB
+commission_s2,AT,base,CoA,1.814,points de PIB
+commission_s2,AT,base,pensions,-0.232,points de PIB
+commission_s2,AT,base,sante,1.016,points de PIB
+commission_s2,AT,base,dependance,1.236,points de PIB
+commission_s2,AT,base,education,-0.207,points de PIB
+commission_s2,AT,productivite,S2,4.248,points de PIB
+commission_s2,AT,productivite,IBP,2.491,points de PIB
+commission_s2,AT,productivite,CoA,1.746,points de PIB
+commission_s2,AT,productivite,pensions,-0.130,points de PIB
+commission_s2,AT,productivite,sante,0.979,points de PIB
+commission_s2,AT,productivite,dependance,1.106,points de PIB
+commission_s2,AT,productivite,education,-0.209,points de PIB
+commission_s2,AT,risque,S2,6.156,points de PIB
+commission_s2,AT,risque,IBP,2.377,points de PIB
+commission_s2,AT,risque,CoA,3.770,points de PIB
+commission_s2,AT,risque,pensions,-0.225,points de PIB
+commission_s2,AT,risque,sante,1.811,points de PIB
+commission_s2,AT,risque,dependance,2.392,points de PIB
+commission_s2,AT,risque,education,-0.208,points de PIB
+commission_s2,AT,base_precedente,S2,4.193,points de PIB
+commission_s2,AT,base_precedente,IBP,2.235,points de PIB
+commission_s2,AT,base_precedente,CoA,1.958,points de PIB
+commission_s2,AT,base_precedente,pensions,-0.132,points de PIB
+commission_s2,AT,base_precedente,sante,1.071,points de PIB
+commission_s2,AT,base_precedente,dependance,1.262,points de PIB
+commission_s2,AT,base_precedente,education,-0.243,points de PIB
+commission_s2,BE,base,S2,6.952,points de PIB
+commission_s2,BE,base,IBP,3.247,points de PIB
+commission_s2,BE,base,CoA,3.690,points de PIB
+commission_s2,BE,base,pensions,2.111,points de PIB
+commission_s2,BE,base,sante,0.535,points de PIB
+commission_s2,BE,base,dependance,1.604,points de PIB
+commission_s2,BE,base,education,-0.560,points de PIB
+commission_s2,BE,productivite,S2,7.584,points de PIB
+commission_s2,BE,productivite,IBP,3.519,points de PIB
+commission_s2,BE,productivite,CoA,4.043,points de PIB
+commission_s2,BE,productivite,pensions,2.649,points de PIB
+commission_s2,BE,productivite,sante,0.432,points de PIB
+commission_s2,BE,productivite,dependance,1.499,points de PIB
+commission_s2,BE,productivite,education,-0.538,points de PIB
+commission_s2,BE,risque,S2,9.116,points de PIB
+commission_s2,BE,risque,IBP,3.351,points de PIB
+commission_s2,BE,risque,CoA,5.747,points de PIB
+commission_s2,BE,risque,pensions,2.043,points de PIB
+commission_s2,BE,risque,sante,1.054,points de PIB
+commission_s2,BE,risque,dependance,3.200,points de PIB
+commission_s2,BE,risque,education,-0.551,points de PIB
+commission_s2,BE,base_precedente,S2,6.728,points de PIB
+commission_s2,BE,base_precedente,IBP,3.052,points de PIB
+commission_s2,BE,base_precedente,CoA,3.674,points de PIB
+commission_s2,BE,base_precedente,pensions,2.258,points de PIB
+commission_s2,BE,base_precedente,sante,0.514,points de PIB
+commission_s2,BE,base_precedente,dependance,1.523,points de PIB
+commission_s2,BE,base_precedente,education,-0.620,points de PIB
+commission_s2,BG,base,S2,1.416,points de PIB
+commission_s2,BG,base,IBP,2.173,points de PIB
+commission_s2,BG,base,CoA,-0.773,points de PIB
+commission_s2,BG,base,pensions,-1.182,points de PIB
+commission_s2,BG,base,sante,0.234,points de PIB
+commission_s2,BG,base,dependance,0.183,points de PIB
+commission_s2,BG,base,education,-0.008,points de PIB
+commission_s2,BG,productivite,S2,1.638,points de PIB
+commission_s2,BG,productivite,IBP,2.218,points de PIB
+commission_s2,BG,productivite,CoA,-0.600,points de PIB
+commission_s2,BG,productivite,pensions,-1.007,points de PIB
+commission_s2,BG,productivite,sante,0.239,points de PIB
+commission_s2,BG,productivite,dependance,0.179,points de PIB
+commission_s2,BG,productivite,education,-0.011,points de PIB
+commission_s2,BG,risque,S2,3.821,points de PIB
+commission_s2,BG,risque,IBP,2.166,points de PIB
+commission_s2,BG,risque,CoA,1.639,points de PIB
+commission_s2,BG,risque,pensions,-1.183,points de PIB
+commission_s2,BG,risque,sante,0.951,points de PIB
+commission_s2,BG,risque,dependance,1.879,points de PIB
+commission_s2,BG,risque,education,-0.008,points de PIB
+commission_s2,BG,base_precedente,S2,1.959,points de PIB
+commission_s2,BG,base_precedente,IBP,2.718,points de PIB
+commission_s2,BG,base_precedente,CoA,-0.758,points de PIB
+commission_s2,BG,base_precedente,pensions,-1.205,points de PIB
+commission_s2,BG,base_precedente,sante,0.253,points de PIB
+commission_s2,BG,base_precedente,dependance,0.161,points de PIB
+commission_s2,BG,base_precedente,education,0.034,points de PIB
+commission_s2,CY,base,S2,0.121,points de PIB
+commission_s2,CY,base,IBP,-2.815,points de PIB
+commission_s2,CY,base,CoA,2.962,points de PIB
+commission_s2,CY,base,pensions,2.614,points de PIB
+commission_s2,CY,base,sante,0.626,points de PIB
+commission_s2,CY,base,dependance,0.093,points de PIB
+commission_s2,CY,base,education,-0.370,points de PIB
+commission_s2,CY,productivite,S2,0.602,points de PIB
+commission_s2,CY,productivite,IBP,-2.712,points de PIB
+commission_s2,CY,productivite,CoA,3.351,points de PIB
+commission_s2,CY,productivite,pensions,3.030,points de PIB
+commission_s2,CY,productivite,sante,0.588,points de PIB
+commission_s2,CY,productivite,dependance,0.089,points de PIB
+commission_s2,CY,productivite,education,-0.356,points de PIB
+commission_s2,CY,risque,S2,3.871,points de PIB
+commission_s2,CY,risque,IBP,-2.779,points de PIB
+commission_s2,CY,risque,CoA,6.680,points de PIB
+commission_s2,CY,risque,pensions,2.592,points de PIB
+commission_s2,CY,risque,sante,1.541,points de PIB
+commission_s2,CY,risque,dependance,2.913,points de PIB
+commission_s2,CY,risque,education,-0.366,points de PIB
+commission_s2,CY,base_precedente,S2,1.023,points de PIB
+commission_s2,CY,base_precedente,IBP,-2.353,points de PIB
+commission_s2,CY,base_precedente,CoA,3.372,points de PIB
+commission_s2,CY,base_precedente,pensions,2.940,points de PIB
+commission_s2,CY,base_precedente,sante,0.678,points de PIB
+commission_s2,CY,base_precedente,dependance,0.121,points de PIB
+commission_s2,CY,base_precedente,education,-0.366,points de PIB
+commission_s2,CZ,base,S2,3.805,points de PIB
+commission_s2,CZ,base,IBP,1.159,points de PIB
+commission_s2,CZ,base,CoA,2.643,points de PIB
+commission_s2,CZ,base,pensions,0.697,points de PIB
+commission_s2,CZ,base,sante,0.670,points de PIB
+commission_s2,CZ,base,dependance,1.190,points de PIB
+commission_s2,CZ,base,education,0.086,points de PIB
+commission_s2,CZ,productivite,S2,4.110,points de PIB
+commission_s2,CZ,productivite,IBP,1.285,points de PIB
+commission_s2,CZ,productivite,CoA,2.819,points de PIB
+commission_s2,CZ,productivite,pensions,0.937,points de PIB
+commission_s2,CZ,productivite,sante,0.635,points de PIB
+commission_s2,CZ,productivite,dependance,1.173,points de PIB
+commission_s2,CZ,productivite,education,0.073,points de PIB
+commission_s2,CZ,risque,S2,5.851,points de PIB
+commission_s2,CZ,risque,IBP,1.236,points de PIB
+commission_s2,CZ,risque,CoA,4.611,points de PIB
+commission_s2,CZ,risque,pensions,0.689,points de PIB
+commission_s2,CZ,risque,sante,1.460,points de PIB
+commission_s2,CZ,risque,dependance,2.382,points de PIB
+commission_s2,CZ,risque,education,0.080,points de PIB
+commission_s2,CZ,base_precedente,S2,5.429,points de PIB
+commission_s2,CZ,base_precedente,IBP,1.197,points de PIB
+commission_s2,CZ,base_precedente,CoA,4.228,points de PIB
+commission_s2,CZ,base_precedente,pensions,2.323,points de PIB
+commission_s2,CZ,base_precedente,sante,0.618,points de PIB
+commission_s2,CZ,base_precedente,dependance,1.168,points de PIB
+commission_s2,CZ,base_precedente,education,0.119,points de PIB
+commission_s2,DE,base,S2,4.084,points de PIB
+commission_s2,DE,base,IBP,2.672,points de PIB
+commission_s2,DE,base,CoA,1.404,points de PIB
+commission_s2,DE,base,pensions,0.462,points de PIB
+commission_s2,DE,base,sante,0.453,points de PIB
+commission_s2,DE,base,dependance,0.301,points de PIB
+commission_s2,DE,base,education,0.189,points de PIB
+commission_s2,DE,productivite,S2,4.171,points de PIB
+commission_s2,DE,productivite,IBP,2.789,points de PIB
+commission_s2,DE,productivite,CoA,1.370,points de PIB
+commission_s2,DE,productivite,pensions,0.448,points de PIB
+commission_s2,DE,productivite,sante,0.356,points de PIB
+commission_s2,DE,productivite,dependance,0.382,points de PIB
+commission_s2,DE,productivite,education,0.185,points de PIB
+commission_s2,DE,risque,S2,5.610,points de PIB
+commission_s2,DE,risque,IBP,2.666,points de PIB
+commission_s2,DE,risque,CoA,2.936,points de PIB
+commission_s2,DE,risque,pensions,0.462,points de PIB
+commission_s2,DE,risque,sante,1.192,points de PIB
+commission_s2,DE,risque,dependance,1.093,points de PIB
+commission_s2,DE,risque,education,0.189,points de PIB
+commission_s2,DE,base_precedente,S2,2.134,points de PIB
+commission_s2,DE,base_precedente,IBP,0.689,points de PIB
+commission_s2,DE,base_precedente,CoA,1.445,points de PIB
+commission_s2,DE,base_precedente,pensions,0.441,points de PIB
+commission_s2,DE,base_precedente,sante,0.471,points de PIB
+commission_s2,DE,base_precedente,dependance,0.371,points de PIB
+commission_s2,DE,base_precedente,education,0.162,points de PIB
+commission_s2,DK,base,S2,-1.046,points de PIB
+commission_s2,DK,base,IBP,-1.490,points de PIB
+commission_s2,DK,base,CoA,0.450,points de PIB
+commission_s2,DK,base,pensions,-2.384,points de PIB
+commission_s2,DK,base,sante,0.631,points de PIB
+commission_s2,DK,base,dependance,2.643,points de PIB
+commission_s2,DK,base,education,-0.439,points de PIB
+commission_s2,DK,productivite,S2,-0.745,points de PIB
+commission_s2,DK,productivite,IBP,-1.505,points de PIB
+commission_s2,DK,productivite,CoA,0.769,points de PIB
+commission_s2,DK,productivite,pensions,-1.935,points de PIB
+commission_s2,DK,productivite,sante,0.593,points de PIB
+commission_s2,DK,productivite,dependance,2.521,points de PIB
+commission_s2,DK,productivite,education,-0.410,points de PIB
+commission_s2,DK,risque,S2,0.013,points de PIB
+commission_s2,DK,risque,IBP,-1.482,points de PIB
+commission_s2,DK,risque,CoA,1.502,points de PIB
+commission_s2,DK,risque,pensions,-2.328,points de PIB
+commission_s2,DK,risque,sante,1.328,points de PIB
+commission_s2,DK,risque,dependance,2.931,points de PIB
+commission_s2,DK,risque,education,-0.429,points de PIB
+commission_s2,DK,base_precedente,S2,-0.482,points de PIB
+commission_s2,DK,base_precedente,IBP,-1.196,points de PIB
+commission_s2,DK,base_precedente,CoA,0.710,points de PIB
+commission_s2,DK,base_precedente,pensions,-2.137,points de PIB
+commission_s2,DK,base_precedente,sante,0.621,points de PIB
+commission_s2,DK,base_precedente,dependance,2.734,points de PIB
+commission_s2,DK,base_precedente,education,-0.508,points de PIB
+commission_s2,EE,base,S2,2.878,points de PIB
+commission_s2,EE,base,IBP,3.422,points de PIB
+commission_s2,EE,base,CoA,-0.549,points de PIB
+commission_s2,EE,base,pensions,-1.113,points de PIB
+commission_s2,EE,base,sante,0.577,points de PIB
+commission_s2,EE,base,dependance,0.476,points de PIB
+commission_s2,EE,base,education,-0.489,points de PIB
+commission_s2,EE,productivite,S2,3.053,points de PIB
+commission_s2,EE,productivite,IBP,3.454,points de PIB
+commission_s2,EE,productivite,CoA,-0.411,points de PIB
+commission_s2,EE,productivite,pensions,-0.857,points de PIB
+commission_s2,EE,productivite,sante,0.471,points de PIB
+commission_s2,EE,productivite,dependance,0.454,points de PIB
+commission_s2,EE,productivite,education,-0.479,points de PIB
+commission_s2,EE,risque,S2,8.193,points de PIB
+commission_s2,EE,risque,IBP,3.478,points de PIB
+commission_s2,EE,risque,CoA,4.703,points de PIB
+commission_s2,EE,risque,pensions,-1.021,points de PIB
+commission_s2,EE,risque,sante,1.302,points de PIB
+commission_s2,EE,risque,dependance,4.899,points de PIB
+commission_s2,EE,risque,education,-0.477,points de PIB
+commission_s2,EE,base_precedente,S2,0.208,points de PIB
+commission_s2,EE,base_precedente,IBP,0.739,points de PIB
+commission_s2,EE,base_precedente,CoA,-0.531,points de PIB
+commission_s2,EE,base_precedente,pensions,-1.104,points de PIB
+commission_s2,EE,base_precedente,sante,0.525,points de PIB
+commission_s2,EE,base_precedente,dependance,0.523,points de PIB
+commission_s2,EE,base_precedente,education,-0.475,points de PIB
+commission_s2,EL,base,S2,-0.386,points de PIB
+commission_s2,EL,base,IBP,-0.274,points de PIB
+commission_s2,EL,base,CoA,-0.077,points de PIB
+commission_s2,EL,base,pensions,-0.590,points de PIB
+commission_s2,EL,base,sante,0.682,points de PIB
+commission_s2,EL,base,dependance,0.002,points de PIB
+commission_s2,EL,base,education,-0.171,points de PIB
+commission_s2,EL,productivite,S2,0.475,points de PIB
+commission_s2,EL,productivite,IBP,0.044,points de PIB
+commission_s2,EL,productivite,CoA,0.479,points de PIB
+commission_s2,EL,productivite,pensions,-0.028,points de PIB
+commission_s2,EL,productivite,sante,0.671,points de PIB
+commission_s2,EL,productivite,dependance,0.000,points de PIB
+commission_s2,EL,productivite,education,-0.163,points de PIB
+commission_s2,EL,risque,S2,2.788,points de PIB
+commission_s2,EL,risque,IBP,-0.246,points de PIB
+commission_s2,EL,risque,CoA,3.071,points de PIB
+commission_s2,EL,risque,pensions,-0.577,points de PIB
+commission_s2,EL,risque,sante,1.373,points de PIB
+commission_s2,EL,risque,dependance,2.446,points de PIB
+commission_s2,EL,risque,education,-0.170,points de PIB
+commission_s2,EL,base_precedente,S2,-0.846,points de PIB
+commission_s2,EL,base_precedente,IBP,-0.493,points de PIB
+commission_s2,EL,base_precedente,CoA,-0.362,points de PIB
+commission_s2,EL,base_precedente,pensions,-0.829,points de PIB
+commission_s2,EL,base_precedente,sante,0.712,points de PIB
+commission_s2,EL,base_precedente,dependance,0.012,points de PIB
+commission_s2,EL,base_precedente,education,-0.257,points de PIB
+commission_s2,ES,base,S2,5.340,points de PIB
+commission_s2,ES,base,IBP,1.446,points de PIB
+commission_s2,ES,base,CoA,3.910,points de PIB
+commission_s2,ES,base,pensions,2.555,points de PIB
+commission_s2,ES,base,sante,0.996,points de PIB
+commission_s2,ES,base,dependance,0.748,points de PIB
+commission_s2,ES,base,education,-0.390,points de PIB
+commission_s2,ES,productivite,S2,6.091,points de PIB
+commission_s2,ES,productivite,IBP,1.585,points de PIB
+commission_s2,ES,productivite,CoA,4.524,points de PIB
+commission_s2,ES,productivite,pensions,3.227,points de PIB
+commission_s2,ES,productivite,sante,0.969,points de PIB
+commission_s2,ES,productivite,dependance,0.715,points de PIB
+commission_s2,ES,productivite,education,-0.388,points de PIB
+commission_s2,ES,risque,S2,8.001,points de PIB
+commission_s2,ES,risque,IBP,1.431,points de PIB
+commission_s2,ES,risque,CoA,6.585,points de PIB
+commission_s2,ES,risque,pensions,2.558,points de PIB
+commission_s2,ES,risque,sante,1.590,points de PIB
+commission_s2,ES,risque,dependance,2.827,points de PIB
+commission_s2,ES,risque,education,-0.390,points de PIB
+commission_s2,ES,base_precedente,S2,5.693,points de PIB
+commission_s2,ES,base_precedente,IBP,1.738,points de PIB
+commission_s2,ES,base_precedente,CoA,3.944,points de PIB
+commission_s2,ES,base_precedente,pensions,2.621,points de PIB
+commission_s2,ES,base_precedente,sante,1.087,points de PIB
+commission_s2,ES,base_precedente,dependance,0.734,points de PIB
+commission_s2,ES,base_precedente,education,-0.498,points de PIB
+commission_s2,FI,base,S2,4.096,points de PIB
+commission_s2,FI,base,IBP,2.199,points de PIB
+commission_s2,FI,base,CoA,1.885,points de PIB
+commission_s2,FI,base,pensions,0.632,points de PIB
+commission_s2,FI,base,sante,0.457,points de PIB
+commission_s2,FI,base,dependance,1.554,points de PIB
+commission_s2,FI,base,education,-0.758,points de PIB
+commission_s2,FI,productivite,S2,4.494,points de PIB
+commission_s2,FI,productivite,IBP,2.193,points de PIB
+commission_s2,FI,productivite,CoA,2.288,points de PIB
+commission_s2,FI,productivite,pensions,1.050,points de PIB
+commission_s2,FI,productivite,sante,0.452,points de PIB
+commission_s2,FI,productivite,dependance,1.540,points de PIB
+commission_s2,FI,productivite,education,-0.754,points de PIB
+commission_s2,FI,risque,S2,6.386,points de PIB
+commission_s2,FI,risque,IBP,2.432,points de PIB
+commission_s2,FI,risque,CoA,3.934,points de PIB
+commission_s2,FI,risque,pensions,0.515,points de PIB
+commission_s2,FI,risque,sante,1.218,points de PIB
+commission_s2,FI,risque,dependance,2.931,points de PIB
+commission_s2,FI,risque,education,-0.729,points de PIB
+commission_s2,FI,base_precedente,S2,3.058,points de PIB
+commission_s2,FI,base_precedente,IBP,1.299,points de PIB
+commission_s2,FI,base_precedente,CoA,1.654,points de PIB
+commission_s2,FI,base_precedente,pensions,0.463,points de PIB
+commission_s2,FI,base_precedente,sante,0.530,points de PIB
+commission_s2,FI,base_precedente,dependance,1.494,points de PIB
+commission_s2,FI,base_precedente,education,-0.833,points de PIB
+commission_s2,FR,base,S2,3.128,points de PIB
+commission_s2,FR,base,IBP,3.040,points de PIB
+commission_s2,FR,base,CoA,0.075,points de PIB
+commission_s2,FR,base,pensions,-0.529,points de PIB
+commission_s2,FR,base,sante,0.622,points de PIB
+commission_s2,FR,base,dependance,0.618,points de PIB
+commission_s2,FR,base,education,-0.636,points de PIB
+commission_s2,FR,productivite,S2,3.786,points de PIB
+commission_s2,FR,productivite,IBP,3.307,points de PIB
+commission_s2,FR,productivite,CoA,0.462,points de PIB
+commission_s2,FR,productivite,pensions,-0.046,points de PIB
+commission_s2,FR,productivite,sante,0.531,points de PIB
+commission_s2,FR,productivite,dependance,0.595,points de PIB
+commission_s2,FR,productivite,education,-0.617,points de PIB
+commission_s2,FR,risque,S2,5.425,points de PIB
+commission_s2,FR,risque,IBP,3.027,points de PIB
+commission_s2,FR,risque,CoA,2.385,points de PIB
+commission_s2,FR,risque,pensions,-0.530,points de PIB
+commission_s2,FR,risque,sante,1.229,points de PIB
+commission_s2,FR,risque,dependance,2.322,points de PIB
+commission_s2,FR,risque,education,-0.636,points de PIB
+commission_s2,FR,base_precedente,S2,3.389,points de PIB
+commission_s2,FR,base_precedente,IBP,3.334,points de PIB
+commission_s2,FR,base_precedente,CoA,0.056,points de PIB
+commission_s2,FR,base_precedente,pensions,-0.524,points de PIB
+commission_s2,FR,base_precedente,sante,0.593,points de PIB
+commission_s2,FR,base_precedente,dependance,0.630,points de PIB
+commission_s2,FR,base_precedente,education,-0.643,points de PIB
+commission_s2,HR,base,S2,1.523,points de PIB
+commission_s2,HR,base,IBP,2.471,points de PIB
+commission_s2,HR,base,CoA,-0.947,points de PIB
+commission_s2,HR,base,pensions,-1.288,points de PIB
+commission_s2,HR,base,sante,0.603,points de PIB
+commission_s2,HR,base,dependance,0.093,points de PIB
+commission_s2,HR,base,education,-0.355,points de PIB
+commission_s2,HR,productivite,S2,1.788,points de PIB
+commission_s2,HR,productivite,IBP,2.560,points de PIB
+commission_s2,HR,productivite,CoA,-0.771,points de PIB
+commission_s2,HR,productivite,pensions,-1.093,points de PIB
+commission_s2,HR,productivite,sante,0.576,points de PIB
+commission_s2,HR,productivite,dependance,0.092,points de PIB
+commission_s2,HR,productivite,education,-0.346,points de PIB
+commission_s2,HR,risque,S2,3.468,points de PIB
+commission_s2,HR,risque,IBP,2.490,points de PIB
+commission_s2,HR,risque,CoA,0.979,points de PIB
+commission_s2,HR,risque,pensions,-1.276,points de PIB
+commission_s2,HR,risque,sante,1.620,points de PIB
+commission_s2,HR,risque,dependance,0.988,points de PIB
+commission_s2,HR,risque,education,-0.353,points de PIB
+commission_s2,HR,base_precedente,S2,1.011,points de PIB
+commission_s2,HR,base_precedente,IBP,1.993,points de PIB
+commission_s2,HR,base_precedente,CoA,-0.987,points de PIB
+commission_s2,HR,base_precedente,pensions,-1.344,points de PIB
+commission_s2,HR,base_precedente,sante,0.619,points de PIB
+commission_s2,HR,base_precedente,dependance,0.118,points de PIB
+commission_s2,HR,base_precedente,education,-0.380,points de PIB
+commission_s2,HU,base,S2,6.679,points de PIB
+commission_s2,HU,base,IBP,2.142,points de PIB
+commission_s2,HU,base,CoA,4.535,points de PIB
+commission_s2,HU,base,pensions,3.648,points de PIB
+commission_s2,HU,base,sante,0.376,points de PIB
+commission_s2,HU,base,dependance,0.251,points de PIB
+commission_s2,HU,base,education,0.260,points de PIB
+commission_s2,HU,productivite,S2,7.073,points de PIB
+commission_s2,HU,productivite,IBP,2.330,points de PIB
+commission_s2,HU,productivite,CoA,4.741,points de PIB
+commission_s2,HU,productivite,pensions,3.896,points de PIB
+commission_s2,HU,productivite,sante,0.364,points de PIB
+commission_s2,HU,productivite,dependance,0.234,points de PIB
+commission_s2,HU,productivite,education,0.247,points de PIB
+commission_s2,HU,risque,S2,9.813,points de PIB
+commission_s2,HU,risque,IBP,2.167,points de PIB
+commission_s2,HU,risque,CoA,7.644,points de PIB
+commission_s2,HU,risque,pensions,3.628,points de PIB
+commission_s2,HU,risque,sante,1.079,points de PIB
+commission_s2,HU,risque,dependance,2.680,points de PIB
+commission_s2,HU,risque,education,0.258,points de PIB
+commission_s2,HU,base_precedente,S2,5.990,points de PIB
+commission_s2,HU,base_precedente,IBP,1.530,points de PIB
+commission_s2,HU,base_precedente,CoA,4.462,points de PIB
+commission_s2,HU,base_precedente,pensions,3.576,points de PIB
+commission_s2,HU,base_precedente,sante,0.413,points de PIB
+commission_s2,HU,base_precedente,dependance,0.293,points de PIB
+commission_s2,HU,base_precedente,education,0.180,points de PIB
+commission_s2,IE,base,S2,3.350,points de PIB
+commission_s2,IE,base,IBP,-0.995,points de PIB
+commission_s2,IE,base,CoA,4.348,points de PIB
+commission_s2,IE,base,pensions,2.450,points de PIB
+commission_s2,IE,base,sante,1.278,points de PIB
+commission_s2,IE,base,dependance,1.063,points de PIB
+commission_s2,IE,base,education,-0.442,points de PIB
+commission_s2,IE,productivite,S2,3.222,points de PIB
+commission_s2,IE,productivite,IBP,-0.950,points de PIB
+commission_s2,IE,productivite,CoA,4.177,points de PIB
+commission_s2,IE,productivite,pensions,2.440,points de PIB
+commission_s2,IE,productivite,sante,1.162,points de PIB
+commission_s2,IE,productivite,dependance,1.004,points de PIB
+commission_s2,IE,productivite,education,-0.429,points de PIB
+commission_s2,IE,risque,S2,4.453,points de PIB
+commission_s2,IE,risque,IBP,-0.987,points de PIB
+commission_s2,IE,risque,CoA,5.443,points de PIB
+commission_s2,IE,risque,pensions,2.446,points de PIB
+commission_s2,IE,risque,sante,1.904,points de PIB
+commission_s2,IE,risque,dependance,1.535,points de PIB
+commission_s2,IE,risque,education,-0.442,points de PIB
+commission_s2,IE,base_precedente,S2,2.194,points de PIB
+commission_s2,IE,base_precedente,IBP,-2.326,points de PIB
+commission_s2,IE,base_precedente,CoA,4.510,points de PIB
+commission_s2,IE,base_precedente,pensions,2.596,points de PIB
+commission_s2,IE,base_precedente,sante,1.256,points de PIB
+commission_s2,IE,base_precedente,dependance,1.112,points de PIB
+commission_s2,IE,base_precedente,education,-0.454,points de PIB
+commission_s2,IT,base,S2,-0.974,points de PIB
+commission_s2,IT,base,IBP,0.047,points de PIB
+commission_s2,IT,base,CoA,-1.031,points de PIB
+commission_s2,IT,base,pensions,-1.621,points de PIB
+commission_s2,IT,base,sante,0.576,points de PIB
+commission_s2,IT,base,dependance,0.563,points de PIB
+commission_s2,IT,base,education,-0.549,points de PIB
+commission_s2,IT,productivite,S2,-0.028,points de PIB
+commission_s2,IT,productivite,IBP,0.420,points de PIB
+commission_s2,IT,productivite,CoA,-0.463,points de PIB
+commission_s2,IT,productivite,pensions,-1.041,points de PIB
+commission_s2,IT,productivite,sante,0.561,points de PIB
+commission_s2,IT,productivite,dependance,0.547,points de PIB
+commission_s2,IT,productivite,education,-0.529,points de PIB
+commission_s2,IT,risque,S2,0.473,points de PIB
+commission_s2,IT,risque,IBP,0.043,points de PIB
+commission_s2,IT,risque,CoA,0.420,points de PIB
+commission_s2,IT,risque,pensions,-1.621,points de PIB
+commission_s2,IT,risque,sante,1.186,points de PIB
+commission_s2,IT,risque,dependance,1.404,points de PIB
+commission_s2,IT,risque,education,-0.549,points de PIB
+commission_s2,IT,base_precedente,S2,-0.119,points de PIB
+commission_s2,IT,base_precedente,IBP,0.925,points de PIB
+commission_s2,IT,base_precedente,CoA,-1.058,points de PIB
+commission_s2,IT,base_precedente,pensions,-1.553,points de PIB
+commission_s2,IT,base_precedente,sante,0.587,points de PIB
+commission_s2,IT,base_precedente,dependance,0.551,points de PIB
+commission_s2,IT,base_precedente,education,-0.644,points de PIB
+commission_s2,LT,base,S2,5.061,points de PIB
+commission_s2,LT,base,IBP,1.947,points de PIB
+commission_s2,LT,base,CoA,3.067,points de PIB
+commission_s2,LT,base,pensions,1.974,points de PIB
+commission_s2,LT,base,sante,0.596,points de PIB
+commission_s2,LT,base,dependance,0.721,points de PIB
+commission_s2,LT,base,education,-0.224,points de PIB
+commission_s2,LT,productivite,S2,5.268,points de PIB
+commission_s2,LT,productivite,IBP,2.013,points de PIB
+commission_s2,LT,productivite,CoA,3.197,points de PIB
+commission_s2,LT,productivite,pensions,2.174,points de PIB
+commission_s2,LT,productivite,sante,0.568,points de PIB
+commission_s2,LT,productivite,dependance,0.682,points de PIB
+commission_s2,LT,productivite,education,-0.227,points de PIB
+commission_s2,LT,risque,S2,11.094,points de PIB
+commission_s2,LT,risque,IBP,1.995,points de PIB
+commission_s2,LT,risque,CoA,9.046,points de PIB
+commission_s2,LT,risque,pensions,1.954,points de PIB
+commission_s2,LT,risque,sante,1.451,points de PIB
+commission_s2,LT,risque,dependance,5.864,points de PIB
+commission_s2,LT,risque,education,-0.222,points de PIB
+commission_s2,LT,base_precedente,S2,4.613,points de PIB
+commission_s2,LT,base_precedente,IBP,1.298,points de PIB
+commission_s2,LT,base_precedente,CoA,3.287,points de PIB
+commission_s2,LT,base_precedente,pensions,2.197,points de PIB
+commission_s2,LT,base_precedente,sante,0.645,points de PIB
+commission_s2,LT,base_precedente,dependance,0.708,points de PIB
+commission_s2,LT,base_precedente,education,-0.262,points de PIB
+commission_s2,LU,base,S2,7.102,points de PIB
+commission_s2,LU,base,IBP,-0.742,points de PIB
+commission_s2,LU,base,CoA,7.843,points de PIB
+commission_s2,LU,base,pensions,5.790,points de PIB
+commission_s2,LU,base,sante,0.882,points de PIB
+commission_s2,LU,base,dependance,1.359,points de PIB
+commission_s2,LU,base,education,-0.188,points de PIB
+commission_s2,LU,productivite,S2,7.101,points de PIB
+commission_s2,LU,productivite,IBP,-0.764,points de PIB
+commission_s2,LU,productivite,CoA,7.863,points de PIB
+commission_s2,LU,productivite,pensions,5.931,points de PIB
+commission_s2,LU,productivite,sante,0.839,points de PIB
+commission_s2,LU,productivite,dependance,1.276,points de PIB
+commission_s2,LU,productivite,education,-0.183,points de PIB
+commission_s2,LU,risque,S2,8.547,points de PIB
+commission_s2,LU,risque,IBP,-0.742,points de PIB
+commission_s2,LU,risque,CoA,9.288,points de PIB
+commission_s2,LU,risque,pensions,5.790,points de PIB
+commission_s2,LU,risque,sante,1.142,points de PIB
+commission_s2,LU,risque,dependance,2.544,points de PIB
+commission_s2,LU,risque,education,-0.188,points de PIB
+commission_s2,LU,base_precedente,S2,7.333,points de PIB
+commission_s2,LU,base_precedente,IBP,-0.396,points de PIB
+commission_s2,LU,base_precedente,CoA,7.802,points de PIB
+commission_s2,LU,base_precedente,pensions,5.750,points de PIB
+commission_s2,LU,base_precedente,sante,0.891,points de PIB
+commission_s2,LU,base_precedente,dependance,1.356,points de PIB
+commission_s2,LU,base_precedente,education,-0.196,points de PIB
+commission_s2,LV,base,S2,2.202,points de PIB
+commission_s2,LV,base,IBP,2.830,points de PIB
+commission_s2,LV,base,CoA,-0.642,points de PIB
+commission_s2,LV,base,pensions,-1.164,points de PIB
+commission_s2,LV,base,sante,0.460,points de PIB
+commission_s2,LV,base,dependance,0.248,points de PIB
+commission_s2,LV,base,education,-0.186,points de PIB
+commission_s2,LV,productivite,S2,2.523,points de PIB
+commission_s2,LV,productivite,IBP,2.928,points de PIB
+commission_s2,LV,productivite,CoA,-0.423,points de PIB
+commission_s2,LV,productivite,pensions,-0.915,points de PIB
+commission_s2,LV,productivite,sante,0.441,points de PIB
+commission_s2,LV,productivite,dependance,0.235,points de PIB
+commission_s2,LV,productivite,education,-0.183,points de PIB
+commission_s2,LV,risque,S2,4.793,points de PIB
+commission_s2,LV,risque,IBP,2.820,points de PIB
+commission_s2,LV,risque,CoA,1.959,points de PIB
+commission_s2,LV,risque,pensions,-1.165,points de PIB
+commission_s2,LV,risque,sante,1.371,points de PIB
+commission_s2,LV,risque,dependance,1.940,points de PIB
+commission_s2,LV,risque,education,-0.186,points de PIB
+commission_s2,LV,base_precedente,S2,1.510,points de PIB
+commission_s2,LV,base_precedente,IBP,2.178,points de PIB
+commission_s2,LV,base_precedente,CoA,-0.668,points de PIB
+commission_s2,LV,base_precedente,pensions,-1.169,points de PIB
+commission_s2,LV,base_precedente,sante,0.460,points de PIB
+commission_s2,LV,base_precedente,dependance,0.253,points de PIB
+commission_s2,LV,base_precedente,education,-0.213,points de PIB
+commission_s2,MT,base,S2,8.089,points de PIB
+commission_s2,MT,base,IBP,1.547,points de PIB
+commission_s2,MT,base,CoA,6.540,points de PIB
+commission_s2,MT,base,pensions,3.332,points de PIB
+commission_s2,MT,base,sante,1.594,points de PIB
+commission_s2,MT,base,dependance,1.571,points de PIB
+commission_s2,MT,base,education,0.043,points de PIB
+commission_s2,MT,productivite,S2,7.948,points de PIB
+commission_s2,MT,productivite,IBP,1.616,points de PIB
+commission_s2,MT,productivite,CoA,6.330,points de PIB
+commission_s2,MT,productivite,pensions,3.381,points de PIB
+commission_s2,MT,productivite,sante,1.481,points de PIB
+commission_s2,MT,productivite,dependance,1.457,points de PIB
+commission_s2,MT,productivite,education,0.010,points de PIB
+commission_s2,MT,risque,S2,11.235,points de PIB
+commission_s2,MT,risque,IBP,1.552,points de PIB
+commission_s2,MT,risque,CoA,9.682,points de PIB
+commission_s2,MT,risque,pensions,3.330,points de PIB
+commission_s2,MT,risque,sante,2.462,points de PIB
+commission_s2,MT,risque,dependance,3.847,points de PIB
+commission_s2,MT,risque,education,0.043,points de PIB
+commission_s2,MT,base_precedente,S2,8.737,points de PIB
+commission_s2,MT,base_precedente,IBP,2.324,points de PIB
+commission_s2,MT,base_precedente,CoA,6.415,points de PIB
+commission_s2,MT,base_precedente,pensions,3.161,points de PIB
+commission_s2,MT,base_precedente,sante,1.587,points de PIB
+commission_s2,MT,base_precedente,dependance,1.666,points de PIB
+commission_s2,MT,base_precedente,education,0.001,points de PIB
+commission_s2,NL,base,S2,3.860,points de PIB
+commission_s2,NL,base,IBP,1.035,points de PIB
+commission_s2,NL,base,CoA,2.810,points de PIB
+commission_s2,NL,base,pensions,1.023,points de PIB
+commission_s2,NL,base,sante,0.621,points de PIB
+commission_s2,NL,base,dependance,1.627,points de PIB
+commission_s2,NL,base,education,-0.461,points de PIB
+commission_s2,NL,productivite,S2,3.866,points de PIB
+commission_s2,NL,productivite,IBP,1.095,points de PIB
+commission_s2,NL,productivite,CoA,2.753,points de PIB
+commission_s2,NL,productivite,pensions,1.090,points de PIB
+commission_s2,NL,productivite,sante,0.533,points de PIB
+commission_s2,NL,productivite,dependance,1.579,points de PIB
+commission_s2,NL,productivite,education,-0.449,points de PIB
+commission_s2,NL,risque,S2,5.770,points de PIB
+commission_s2,NL,risque,IBP,1.083,points de PIB
+commission_s2,NL,risque,CoA,4.670,points de PIB
+commission_s2,NL,risque,pensions,1.011,points de PIB
+commission_s2,NL,risque,sante,1.053,points de PIB
+commission_s2,NL,risque,dependance,3.058,points de PIB
+commission_s2,NL,risque,education,-0.453,points de PIB
+commission_s2,NL,base_precedente,S2,3.373,points de PIB
+commission_s2,NL,base_precedente,IBP,0.562,points de PIB
+commission_s2,NL,base_precedente,CoA,2.804,points de PIB
+commission_s2,NL,base_precedente,pensions,1.151,points de PIB
+commission_s2,NL,base_precedente,sante,0.584,points de PIB
+commission_s2,NL,base_precedente,dependance,1.615,points de PIB
+commission_s2,NL,base_precedente,education,-0.546,points de PIB
+commission_s2,PL,base,S2,5.586,points de PIB
+commission_s2,PL,base,IBP,4.778,points de PIB
+commission_s2,PL,base,CoA,0.747,points de PIB
+commission_s2,PL,base,pensions,-0.756,points de PIB
+commission_s2,PL,base,sante,0.843,points de PIB
+commission_s2,PL,base,dependance,0.614,points de PIB
+commission_s2,PL,base,education,0.046,points de PIB
+commission_s2,PL,productivite,S2,5.903,points de PIB
+commission_s2,PL,productivite,IBP,4.900,points de PIB
+commission_s2,PL,productivite,CoA,0.929,points de PIB
+commission_s2,PL,productivite,pensions,-0.490,points de PIB
+commission_s2,PL,productivite,sante,0.808,points de PIB
+commission_s2,PL,productivite,dependance,0.576,points de PIB
+commission_s2,PL,productivite,education,0.034,points de PIB
+commission_s2,PL,risque,S2,8.731,points de PIB
+commission_s2,PL,risque,IBP,4.692,points de PIB
+commission_s2,PL,risque,CoA,3.986,points de PIB
+commission_s2,PL,risque,pensions,-0.777,points de PIB
+commission_s2,PL,risque,sante,1.649,points de PIB
+commission_s2,PL,risque,dependance,3.063,points de PIB
+commission_s2,PL,risque,education,0.051,points de PIB
+commission_s2,PL,base_precedente,S2,4.810,points de PIB
+commission_s2,PL,base_precedente,IBP,3.902,points de PIB
+commission_s2,PL,base_precedente,CoA,0.890,points de PIB
+commission_s2,PL,base_precedente,pensions,-0.701,points de PIB
+commission_s2,PL,base_precedente,sante,0.848,points de PIB
+commission_s2,PL,base_precedente,dependance,0.685,points de PIB
+commission_s2,PL,base_precedente,education,0.059,points de PIB
+commission_s2,PT,base,S2,-1.385,points de PIB
+commission_s2,PT,base,IBP,-1.256,points de PIB
+commission_s2,PT,base,CoA,-0.119,points de PIB
+commission_s2,PT,base,pensions,-1.727,points de PIB
+commission_s2,PT,base,sante,1.135,points de PIB
+commission_s2,PT,base,dependance,0.376,points de PIB
+commission_s2,PT,base,education,0.096,points de PIB
+commission_s2,PT,productivite,S2,-0.288,points de PIB
+commission_s2,PT,productivite,IBP,-1.040,points de PIB
+commission_s2,PT,productivite,CoA,0.767,points de PIB
+commission_s2,PT,productivite,pensions,-0.791,points de PIB
+commission_s2,PT,productivite,sante,1.100,points de PIB
+commission_s2,PT,productivite,dependance,0.365,points de PIB
+commission_s2,PT,productivite,education,0.093,points de PIB
+commission_s2,PT,risque,S2,5.887,points de PIB
+commission_s2,PT,risque,IBP,-1.069,points de PIB
+commission_s2,PT,risque,CoA,6.971,points de PIB
+commission_s2,PT,risque,pensions,-1.455,points de PIB
+commission_s2,PT,risque,sante,1.802,points de PIB
+commission_s2,PT,risque,dependance,6.529,points de PIB
+commission_s2,PT,risque,education,0.095,points de PIB
+commission_s2,PT,base_precedente,S2,-1.953,points de PIB
+commission_s2,PT,base_precedente,IBP,-1.965,points de PIB
+commission_s2,PT,base_precedente,CoA,0.004,points de PIB
+commission_s2,PT,base_precedente,pensions,-1.650,points de PIB
+commission_s2,PT,base_precedente,sante,1.144,points de PIB
+commission_s2,PT,base_precedente,dependance,0.380,points de PIB
+commission_s2,PT,base_precedente,education,0.130,points de PIB
+commission_s2,RO,base,S2,1.946,points de PIB
+commission_s2,RO,base,IBP,3.099,points de PIB
+commission_s2,RO,base,CoA,-1.172,points de PIB
+commission_s2,RO,base,pensions,-2.065,points de PIB
+commission_s2,RO,base,sante,0.629,points de PIB
+commission_s2,RO,base,dependance,0.253,points de PIB
+commission_s2,RO,base,education,0.011,points de PIB
+commission_s2,RO,productivite,S2,2.538,points de PIB
+commission_s2,RO,productivite,IBP,3.246,points de PIB
+commission_s2,RO,productivite,CoA,-0.732,points de PIB
+commission_s2,RO,productivite,pensions,-1.535,points de PIB
+commission_s2,RO,productivite,sante,0.549,points de PIB
+commission_s2,RO,productivite,dependance,0.241,points de PIB
+commission_s2,RO,productivite,education,0.013,points de PIB
+commission_s2,RO,risque,S2,4.945,points de PIB
+commission_s2,RO,risque,IBP,3.092,points de PIB
+commission_s2,RO,risque,CoA,1.835,points de PIB
+commission_s2,RO,risque,pensions,-2.063,points de PIB
+commission_s2,RO,risque,sante,1.510,points de PIB
+commission_s2,RO,risque,dependance,2.377,points de PIB
+commission_s2,RO,risque,education,0.011,points de PIB
+commission_s2,RO,base_precedente,S2,4.721,points de PIB
+commission_s2,RO,base_precedente,IBP,5.841,points de PIB
+commission_s2,RO,base_precedente,CoA,-1.119,points de PIB
+commission_s2,RO,base_precedente,pensions,-2.055,points de PIB
+commission_s2,RO,base_precedente,sante,0.585,points de PIB
+commission_s2,RO,base_precedente,dependance,0.323,points de PIB
+commission_s2,RO,base_precedente,education,0.028,points de PIB
+commission_s2,SE,base,S2,2.579,points de PIB
+commission_s2,SE,base,IBP,1.752,points de PIB
+commission_s2,SE,base,CoA,0.826,points de PIB
+commission_s2,SE,base,pensions,-0.293,points de PIB
+commission_s2,SE,base,sante,0.563,points de PIB
+commission_s2,SE,base,dependance,1.131,points de PIB
+commission_s2,SE,base,education,-0.575,points de PIB
+commission_s2,SE,productivite,S2,2.455,points de PIB
+commission_s2,SE,productivite,IBP,1.761,points de PIB
+commission_s2,SE,productivite,CoA,0.691,points de PIB
+commission_s2,SE,productivite,pensions,-0.373,points de PIB
+commission_s2,SE,productivite,sante,0.536,points de PIB
+commission_s2,SE,productivite,dependance,1.087,points de PIB
+commission_s2,SE,productivite,education,-0.558,points de PIB
+commission_s2,SE,risque,S2,5.044,points de PIB
+commission_s2,SE,risque,IBP,1.765,points de PIB
+commission_s2,SE,risque,CoA,3.277,points de PIB
+commission_s2,SE,risque,pensions,-0.293,points de PIB
+commission_s2,SE,risque,sante,1.411,points de PIB
+commission_s2,SE,risque,dependance,2.730,points de PIB
+commission_s2,SE,risque,education,-0.571,points de PIB
+commission_s2,SE,base_precedente,S2,1.016,points de PIB
+commission_s2,SE,base_precedente,IBP,0.254,points de PIB
+commission_s2,SE,base_precedente,CoA,0.762,points de PIB
+commission_s2,SE,base_precedente,pensions,-0.415,points de PIB
+commission_s2,SE,base_precedente,sante,0.608,points de PIB
+commission_s2,SE,base_precedente,dependance,1.122,points de PIB
+commission_s2,SE,base_precedente,education,-0.553,points de PIB
+commission_s2,SI,base,S2,6.450,points de PIB
+commission_s2,SI,base,IBP,2.103,points de PIB
+commission_s2,SI,base,CoA,4.356,points de PIB
+commission_s2,SI,base,pensions,3.110,points de PIB
+commission_s2,SI,base,sante,0.750,points de PIB
+commission_s2,SI,base,dependance,0.691,points de PIB
+commission_s2,SI,base,education,-0.195,points de PIB
+commission_s2,SI,productivite,S2,6.564,points de PIB
+commission_s2,SI,productivite,IBP,2.199,points de PIB
+commission_s2,SI,productivite,CoA,4.377,points de PIB
+commission_s2,SI,productivite,pensions,3.191,points de PIB
+commission_s2,SI,productivite,sante,0.725,points de PIB
+commission_s2,SI,productivite,dependance,0.656,points de PIB
+commission_s2,SI,productivite,education,-0.194,points de PIB
+commission_s2,SI,risque,S2,9.430,points de PIB
+commission_s2,SI,risque,IBP,2.149,points de PIB
+commission_s2,SI,risque,CoA,7.292,points de PIB
+commission_s2,SI,risque,pensions,3.085,points de PIB
+commission_s2,SI,risque,sante,1.919,points de PIB
+commission_s2,SI,risque,dependance,2.482,points de PIB
+commission_s2,SI,risque,education,-0.195,points de PIB
+commission_s2,SI,base_precedente,S2,5.977,points de PIB
+commission_s2,SI,base_precedente,IBP,1.439,points de PIB
+commission_s2,SI,base_precedente,CoA,4.539,points de PIB
+commission_s2,SI,base_precedente,pensions,3.117,points de PIB
+commission_s2,SI,base_precedente,sante,0.850,points de PIB
+commission_s2,SI,base_precedente,dependance,0.781,points de PIB
+commission_s2,SI,base_precedente,education,-0.209,points de PIB
+commission_s2,SK,base,S2,7.175,points de PIB
+commission_s2,SK,base,IBP,3.263,points de PIB
+commission_s2,SK,base,CoA,3.903,points de PIB
+commission_s2,SK,base,pensions,1.491,points de PIB
+commission_s2,SK,base,sante,1.043,points de PIB
+commission_s2,SK,base,dependance,1.169,points de PIB
+commission_s2,SK,base,education,0.199,points de PIB
+commission_s2,SK,productivite,S2,7.517,points de PIB
+commission_s2,SK,productivite,IBP,3.388,points de PIB
+commission_s2,SK,productivite,CoA,4.114,points de PIB
+commission_s2,SK,productivite,pensions,1.809,points de PIB
+commission_s2,SK,productivite,sante,1.009,points de PIB
+commission_s2,SK,productivite,dependance,1.099,points de PIB
+commission_s2,SK,productivite,education,0.197,points de PIB
+commission_s2,SK,risque,S2,10.626,points de PIB
+commission_s2,SK,risque,IBP,3.324,points de PIB
+commission_s2,SK,risque,CoA,7.290,points de PIB
+commission_s2,SK,risque,pensions,1.478,points de PIB
+commission_s2,SK,risque,sante,2.033,points de PIB
+commission_s2,SK,risque,dependance,3.582,points de PIB
+commission_s2,SK,risque,education,0.198,points de PIB
+commission_s2,SK,base_precedente,S2,7.765,points de PIB
+commission_s2,SK,base_precedente,IBP,3.622,points de PIB
+commission_s2,SK,base_precedente,CoA,4.138,points de PIB
+commission_s2,SK,base_precedente,pensions,1.714,points de PIB
+commission_s2,SK,base_precedente,sante,1.048,points de PIB
+commission_s2,SK,base_precedente,dependance,1.155,points de PIB
+commission_s2,SK,base_precedente,education,0.220,points de PIB
+cor_retraites,FR,2025,depenses,14.116,% du PIB
+cor_retraites,FR,2070,depenses,15.300,% du PIB
+cor_retraites,FR,2025,ressources,13.947,% du PIB
+cor_retraites,FR,2070,ressources,12.910,% du PIB
+cor_retraites,FR,2025,solde,-0.169,% du PIB
+cor_retraites,FR,2070,solde,-2.390,% du PIB

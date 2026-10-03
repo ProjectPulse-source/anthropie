@@ -47,12 +47,15 @@ jobs:
       # pour qu'aucun PNG ancien ne soit jamais offert au telechargement a cote d'un SVG neuf.
       - name: Rapatrier, calculer, valider (gardes dures et gardes de prose, exit 1 si echec)
         run: |
-          python3 -m pip install --quiet cairosvg==2.9.0
+          python3 -m pip install --quiet cairosvg==2.9.0 openpyxl==3.1.5
           python3 scripts/update_dette_monde.py
           # Volet « Pourquoi la dette augmente » (30/09) : memes sources Eurostat annuelles, meme cadence.
           python3 scripts/update_dette_dynamique.py
           # Volet « La dette peut-elle baisser » (02/10) : memes series ; lit data/dette_dynamique.json, donc APRES lui.
           python3 scripts/update_dette_baisse.py
+          # Prolongement « Generations futures » (03/10) : memes series Eurostat, plus la BCE (GFS) et deux pieces archivees
+          # (DSM de la Commission, COR) verifiees par leur empreinte ; mise a jour des pieces a la main (en-tete du script).
+          python3 scripts/update_dette_generations.py
 
       # Carte de partage de la page (30/09) : elle imprime la paire de faux jumeaux et leurs chiffres, lus
       # dans data/dette_monde.json. Redessinee dans le meme geste que les donnees, sinon elle mentirait
@@ -117,7 +120,12 @@ jobs:
                   static/img/dette-monde-stock-en.svg static/img/dette-monde-stock-en.png \
                   static/img/dette-monde-charge-en.svg static/img/dette-monde-charge-en.png \
                   static/img/dette-monde-prix-en.svg static/img/dette-monde-prix-en.png \
-                  static/img/dette-monde-transmission-en.svg static/img/dette-monde-transmission-en.png
+                  static/img/dette-monde-transmission-en.svg static/img/dette-monde-transmission-en.png \
+                  data/dette_generations.json static/dette_generations.json static/dette_generations.csv data/figures_generations.json \
+                  static/images/og-dette-generations.jpg static/images/vig-dette-generations.jpg \
+                  static/img/dette-generations-actifs.svg static/img/dette-generations-actifs.png \
+                  static/img/dette-generations-detention.svg static/img/dette-generations-detention.png \
+                  static/img/dette-generations-vieillissement.svg static/img/dette-generations-vieillissement.png
           git commit -m "data(dette-monde): Eurostat/OCDE/FMI/Banque mondiale du $(date -u +%Y-%m-%d)"
           pushed=0
           for attempt in 1 2 3; do

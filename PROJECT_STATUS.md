@@ -53,6 +53,23 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-03 (soir) — `/dette-publique-generations-futures/` refondue en ressource de données ; COMMITÉ, NON POUSSÉ
+
+Demande de l'auteur (plan de diffusion d'octobre, § 5) : test décisif d'abord, sur les trois arguments de la page.
+Test : `D:\PRO\06_PROMOTION\RECHERCHE_GENERATIONS_FUTURES_2026-10-03\test_decisif\` (protocole avant calcul, verdict) —
+les trois arguments tombent, le troisième sous condition (cumul COR + risque santé de la Commission).
+- `scripts/update_dette_generations.py` (Eurostat, BCE GFS, pièces DSM 2025 et COR 2026 dans `scripts/sources_generations/`
+  avec SHA256SUMS) : 46 gardes, garde vue mordre (`--mutation-garde`), empreinte vue mordre ; témoin des ratios publiés,
+  vu mordre au test (683 rejets sous mutation du PIB) ; 3 figures SVG + PNG, JSON, CSV long.
+- Shortcodes `gen-val`, `gen-tableau` ; jetons `{gen.*}` dans `desc-figures.html` ; source « Eurostat et BCE » dans
+  `dossier-dette.html` ; carte et vignette `og-dette-generations.jpg` (`og_dossier_dette.py --generations`, aussi dans `--monde`).
+- Mise à jour : `dette-monde.yml` (générateur, openpyxl épinglé, sorties dans le `git add`) ; registre `data/sources_maj.json`
+  (page et générateur sur `dette-monde`, ligne `dette-generations-pieces` pour les pièces à la main).
+- Vérifié : build `$?` = 0, HTML relu (jetons résolus, JSON-LD FAQ et Dataset valides), `check-all --ci` à 0,
+  `audit-liens-build.py` 0 critique, 390 px : figures et tableau tiennent (débordement résiduel de 15 px commun aux pages de
+  référence, dû à la barre/à la mesure en iframe). Fiche D0 écrite. Contre-expertise de la page : à faire.
+
+
 ### 2026-10-03 (nuit, suite) — Barres de dossier posées par le gabarit, plus aucun appel manuel ; NI COMMITÉ NI POUSSÉ
 
 Question de l'auteur : « l'ensemble est-il structurellement acquis pour que les prochains dossiers se structurent ainsi ? »
