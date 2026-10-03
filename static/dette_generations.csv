@@ -559,6 +559,33 @@ france_detention,FR,2025,dette,115.552,% du PIB
 france_detention,FR,2025,non_residents,62.782,% du PIB
 france_detention,FR,2025,banque_centrale,19.086,% du PIB
 france_detention,FR,2025,autres_residents,33.683,% du PIB
+france_etat_negociable_non_residents,FR,1999,part_non_residents_fin_annee,28.0,% de la dette négociable de l'État
+france_etat_negociable_non_residents,FR,2000,part_non_residents_fin_annee,33.7,% de la dette négociable de l'État
+france_etat_negociable_non_residents,FR,2001,part_non_residents_fin_annee,38.4,% de la dette négociable de l'État
+france_etat_negociable_non_residents,FR,2002,part_non_residents_fin_annee,41.9,% de la dette négociable de l'État
+france_etat_negociable_non_residents,FR,2003,part_non_residents_fin_annee,48.0,% de la dette négociable de l'État
+france_etat_negociable_non_residents,FR,2004,part_non_residents_fin_annee,52.7,% de la dette négociable de l'État
+france_etat_negociable_non_residents,FR,2005,part_non_residents_fin_annee,56.5,% de la dette négociable de l'État
+france_etat_negociable_non_residents,FR,2006,part_non_residents_fin_annee,59.0,% de la dette négociable de l'État
+france_etat_negociable_non_residents,FR,2007,part_non_residents_fin_annee,60.5,% de la dette négociable de l'État
+france_etat_negociable_non_residents,FR,2008,part_non_residents_fin_annee,64.1,% de la dette négociable de l'État
+france_etat_negociable_non_residents,FR,2009,part_non_residents_fin_annee,67.8,% de la dette négociable de l'État
+france_etat_negociable_non_residents,FR,2010,part_non_residents_fin_annee,67.0,% de la dette négociable de l'État
+france_etat_negociable_non_residents,FR,2011,part_non_residents_fin_annee,64.0,% de la dette négociable de l'État
+france_etat_negociable_non_residents,FR,2012,part_non_residents_fin_annee,61.9,% de la dette négociable de l'État
+france_etat_negociable_non_residents,FR,2013,part_non_residents_fin_annee,63.5,% de la dette négociable de l'État
+france_etat_negociable_non_residents,FR,2014,part_non_residents_fin_annee,63.6,% de la dette négociable de l'État
+france_etat_negociable_non_residents,FR,2015,part_non_residents_fin_annee,61.9,% de la dette négociable de l'État
+france_etat_negociable_non_residents,FR,2016,part_non_residents_fin_annee,58.3,% de la dette négociable de l'État
+france_etat_negociable_non_residents,FR,2017,part_non_residents_fin_annee,54.6,% de la dette négociable de l'État
+france_etat_negociable_non_residents,FR,2018,part_non_residents_fin_annee,52.7,% de la dette négociable de l'État
+france_etat_negociable_non_residents,FR,2019,part_non_residents_fin_annee,53.6,% de la dette négociable de l'État
+france_etat_negociable_non_residents,FR,2020,part_non_residents_fin_annee,50.1,% de la dette négociable de l'État
+france_etat_negociable_non_residents,FR,2021,part_non_residents_fin_annee,47.5,% de la dette négociable de l'État
+france_etat_negociable_non_residents,FR,2022,part_non_residents_fin_annee,49.8,% de la dette négociable de l'État
+france_etat_negociable_non_residents,FR,2023,part_non_residents_fin_annee,53.3,% de la dette négociable de l'État
+france_etat_negociable_non_residents,FR,2024,part_non_residents_fin_annee,54.6,% de la dette négociable de l'État
+france_etat_negociable_non_residents,FR,2025,part_non_residents_fin_annee,56.0,% de la dette négociable de l'État
 ue_part_non_residents,AT,2025,part_non_residents,66.191,% de la dette
 ue_part_non_residents,BE,2025,part_non_residents,63.376,% de la dette
 ue_part_non_residents,BG,2025,part_non_residents,50.521,% de la dette

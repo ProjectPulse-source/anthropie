@@ -21,6 +21,13 @@
     "producteur": "Conseil d'orientation des retraites, données de la synthèse, scénario de référence",
     "url": "https://www.cor-retraites.fr/rapports-du-cor/rapport-annuel-cor-juin-2026-evolutions-perspectives-retraites-france",
     "sha256": "288f75a0784536fd4ccecbe267f83ca44f394a0b6d9cae8350a5782691a78097"
+   },
+   "det": {
+    "fichier": "webstat_DET.Q.FR.1315.F33000.M.Z9.8.F.csv",
+    "lib": "Banque de France, série DET.Q.FR.1315.F33000.M.Z9.8.F",
+    "producteur": "Banque de France, Webstat : détention par les non-résidents de la dette négociable de l'État (en %), valeur de marché",
+    "url": "https://webstat.banque-france.fr/fr/catalogue/det/DET.Q.FR.1315.F33000.M.Z9.8.F",
+    "sha256": "5773dd1f855d8578531db03da44a8c6cd3641387bf671360486374dd53419259"
    }
   },
   "definitions": {
@@ -3057,6 +3064,121 @@
   "solde0": -0.16945503705611265,
   "solde1": -2.3895273281027585
  },
+ "etat_negociable": {
+  "fins": [
+   {
+    "annee": 1999,
+    "part": 28.0
+   },
+   {
+    "annee": 2000,
+    "part": 33.7
+   },
+   {
+    "annee": 2001,
+    "part": 38.4
+   },
+   {
+    "annee": 2002,
+    "part": 41.9
+   },
+   {
+    "annee": 2003,
+    "part": 48.0
+   },
+   {
+    "annee": 2004,
+    "part": 52.7
+   },
+   {
+    "annee": 2005,
+    "part": 56.5
+   },
+   {
+    "annee": 2006,
+    "part": 59.0
+   },
+   {
+    "annee": 2007,
+    "part": 60.5
+   },
+   {
+    "annee": 2008,
+    "part": 64.1
+   },
+   {
+    "annee": 2009,
+    "part": 67.8
+   },
+   {
+    "annee": 2010,
+    "part": 67.0
+   },
+   {
+    "annee": 2011,
+    "part": 64.0
+   },
+   {
+    "annee": 2012,
+    "part": 61.9
+   },
+   {
+    "annee": 2013,
+    "part": 63.5
+   },
+   {
+    "annee": 2014,
+    "part": 63.6
+   },
+   {
+    "annee": 2015,
+    "part": 61.9
+   },
+   {
+    "annee": 2016,
+    "part": 58.3
+   },
+   {
+    "annee": 2017,
+    "part": 54.6
+   },
+   {
+    "annee": 2018,
+    "part": 52.7
+   },
+   {
+    "annee": 2019,
+    "part": 53.6
+   },
+   {
+    "annee": 2020,
+    "part": 50.1
+   },
+   {
+    "annee": 2021,
+    "part": 47.5
+   },
+   {
+    "annee": 2022,
+    "part": 49.8
+   },
+   {
+    "annee": 2023,
+    "part": 53.3
+   },
+   {
+    "annee": 2024,
+    "part": 54.6
+   },
+   {
+    "annee": 2025,
+    "part": 56.0
+   }
+  ],
+  "dernier": "2025-Q4",
+  "valeur_dernier": 56.0,
+  "maj": "2026-04-07"
+ },
  "controles": {
   "detention_bce_eurostat_annees": 6
  },
@@ -3146,6 +3268,15 @@
   "an_avant": "2014",
   "ar_avant": "40,8",
   "ar_fin": "29,2",
+  "etat_a0": "1999",
+  "etat_0": "28,0",
+  "etat_fin": "56,0",
+  "etat_max": "67,8",
+  "etat_max_annee": "2009",
+  "etat_min": "47,5",
+  "etat_min_annee": "2021",
+  "etat_maj": "7 avril 2026",
+  "etat_lib": "Banque de France, série DET.Q.FR.1315.F33000.M.Z9.8.F",
   "h_at": "66",
   "h_be": "63",
   "h_bg": "51",

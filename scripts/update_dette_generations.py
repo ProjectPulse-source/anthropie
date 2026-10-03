@@ -64,6 +64,12 @@ SOURCES = {
     "cor": dict(fichier="cor_ra2026_synthese.xlsx", lib="rapport annuel de juin 2026",
                 producteur="Conseil d'orientation des retraites, données de la synthèse, scénario de référence",
                 url="https://www.cor-retraites.fr/rapports-du-cor/rapport-annuel-cor-juin-2026-evolutions-perspectives-retraites-france"),
+    # Témoin de périmètre État (règle constante de l'auteur, 03/10/2026 : anti-robot -> changer de canal, jamais abandonner
+    # la donnée). L'API Webstat ne sert pas ces observations aux scripts ; le CSV est celui du bouton « Télécharger les
+    # données » de la page publique de la série (format long), archivé tel quel. Mise à jour : trimestrielle, à la main.
+    "det": dict(fichier="webstat_DET.Q.FR.1315.F33000.M.Z9.8.F.csv", lib="Banque de France, série DET.Q.FR.1315.F33000.M.Z9.8.F",
+                producteur="Banque de France, Webstat : détention par les non-résidents de la dette négociable de l'État (en %), valeur de marché",
+                url="https://webstat.banque-france.fr/fr/catalogue/det/DET.Q.FR.1315.F33000.M.Z9.8.F"),
 }
 
 TOL = 0.11            # ratios publiés à une décimale
@@ -86,6 +92,7 @@ PAYS = {"AT": ("Autriche", "l'Autriche"), "BE": ("Belgique", "la Belgique"), "BG
         "LV": ("Lettonie", "la Lettonie"), "MT": ("Malte", "Malte"), "NL": ("Pays-Bas", "les Pays-Bas"),
         "PL": ("Pologne", "la Pologne"), "PT": ("Portugal", "le Portugal"), "RO": ("Roumanie", "la Roumanie"),
         "SE": ("Suède", "la Suède"), "SI": ("Slovénie", "la Slovénie"), "SK": ("Slovaquie", "la Slovaquie")}
+MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"]
 LETTRES = ["zéro", "un", "deux", "trois", "quatre", "cinq", "six", "sept", "huit", "neuf", "dix", "onze", "douze",
            "treize", "quatorze", "quinze", "seize"]
 
@@ -288,6 +295,21 @@ def detention():
     return fr_, pays, vus
 
 
+def etat_negociable():
+    """Témoin de périmètre : part des titres négociables de l'État détenue par des non-résidents (Banque de France,
+    valeur de marché), fin de chaque année ; autre champ (État, titres négociables, valeur de marché) que la série BCE
+    (administrations publiques, toute la dette, valeur nominale)."""
+    rows = list(csv.DictReader(io.StringIO(piece("det").read_text(encoding="utf-8-sig")), delimiter=";"))
+    if not rows or rows[0].get("series_key") != "DET.Q.FR.1315.F33000.M.Z9.8.F" or rows[0].get("UNIT") != "PC":
+        fail("piece Webstat DET : serie ou unite inattendue (le fichier n'est pas celui attendu)")
+    obs = {x["time_period"]: float(x["obs_value"].replace(",", ".")) for x in rows if x["obs_value"]}
+    dernier = max(obs)
+    fins = [dict(annee=int(k[:4]), part=v) for k, v in sorted(obs.items()) if k.endswith("Q4")]
+    if not 0 < fins[-1]["part"] < 100 or len(fins) < 20:
+        fail("piece Webstat DET : moins de vingt fins d'annee ou valeur hors bornes")
+    return dict(fins=fins, dernier=dernier, valeur_dernier=obs[dernier], maj=rows[0].get("updated_at", "")[:10])
+
+
 # ------------------------------------------------------------------ A3 : vieillissement ou position présente
 JEUX = ("base", "productivite", "risque", "base_precedente")
 
@@ -372,11 +394,11 @@ def calcul():
     S2 = s2()
     C = cor()
     cons = dict(annees_pays_calculables=calculables, retenues=sum(len(v) for v in R.values()), ecartees=len(ecartes), detail_ecartees=ecartes)
-    return fin, total, dec, annees, cp, pat, det, det_pays, det_controle, S2, C, cons
+    return fin, total, dec, annees, cp, pat, det, det_pays, det_controle, S2, C, cons, etat_negociable()
 
 
 # ------------------------------------------------------------------ affichage et gardes
-def affichage(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, cons):
+def affichage(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, cons, etat):
     A = {"fin": str(fin), "a0": str(total["debut"]), "tolerance": fr(TOL, 2),
          "dsm_lib": SOURCES["dsm"]["lib"], "cor_lib": SOURCES["cor"]["lib"]}
     t = total
@@ -428,6 +450,14 @@ def affichage(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, cons):
     avant = max((x for x in det if x["annee"] < bc_max["annee"] and x["part_banque_centrale"] < 3), key=lambda x: x["annee"])
     A.update(bc10_premiere=str(bc10[0]["annee"]), an_avant=str(avant["annee"]), ar_avant=fr(avant["part_autres_residents"]),
              ar_fin=fr(d1["part_autres_residents"]))
+    # Témoin de périmètre État (Banque de France) : mêmes dates de fin d'année que la série BCE
+    ef = {x["annee"]: x["part"] for x in etat["fins"]}
+    emax = max(etat["fins"], key=lambda x: x["part"])
+    emin_apres = min((x for x in etat["fins"] if x["annee"] > emax["annee"]), key=lambda x: x["part"])
+    A.update(etat_a0=str(etat["fins"][0]["annee"]), etat_0=fr(etat["fins"][0]["part"]), etat_fin=fr(ef[d1["annee"]]),
+             etat_max=fr(emax["part"]), etat_max_annee=str(emax["annee"]), etat_min=fr(emin_apres["part"]),
+             etat_min_annee=str(emin_apres["annee"]), etat_maj=etat["maj"][8:10].lstrip("0") + " " + MOIS[int(etat["maj"][5:7]) - 1] + " " + etat["maj"][:4],
+             etat_lib=SOURCES["det"]["lib"])
     for p, x in det_pays.items():
         A["h_" + p.lower()] = fr(x["part_non_residents"], 0)
     # S2
@@ -447,7 +477,8 @@ def affichage(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, cons):
     A["pays_coa_n"] = lettres(len(vieux)) if len(vieux) < len(LETTRES) else str(len(vieux)); A["pays_n"] = str(len(S2))
     # contrôles et conservation
     A["cons_calculables"] = str(cons["annees_pays_calculables"]); A["cons_ecartees"] = str(cons["ecartees"])
-    return A, dict(sup=sup, inf=inf, exc=exc, frc=frc, vieux=vieux, cor_var=cor_var, nr_max=nr_max, bc_max=bc_max, maj1=maj1)
+    return A, dict(sup=sup, inf=inf, exc=exc, frc=frc, vieux=vieux, cor_var=cor_var, nr_max=nr_max, bc_max=bc_max, maj1=maj1,
+                   etat=etat, emax=emax, emin_apres=emin_apres)
 
 
 def gardes(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, aux):
@@ -498,6 +529,16 @@ def gardes(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, aux):
          all(det_pays[p]["part_non_residents"] < dl["part_non_residents"] - 10 for p in ("IT", "SE"))),
         ("Autriche et Belgique : « moins » vérifiée (plus que la France)", all(det_pays[p]["part_non_residents"] > dl["part_non_residents"] for p in ("AT", "BE"))),
         ("contre-population de détention : même dernière année que la France", all(det_pays[p]["annee"] == dl["annee"] for p in ("IT", "SE", "AT", "BE"))),
+        # --- témoin de périmètre État (Banque de France, Webstat) : il doit dire la même chose que la série BCE
+        ("État : la série Banque de France couvre la dernière année de la série BCE", dl["annee"] in {x["annee"] for x in aux["etat"]["fins"]}),
+        ("État : « majorité non résidente aujourd'hui » (plus de 50 % la dernière année)",
+         next(x["part"] for x in aux["etat"]["fins"] if x["annee"] == dl["annee"]) > 50),
+        ("État : la part a monté depuis la première fin d'année publiée", aux["etat"]["fins"][-1]["part"] > aux["etat"]["fins"][0]["part"] + 10),
+        ("État : « creux au moment des achats de la banque centrale » (à un an près du maximum de la Banque de France)",
+         abs(aux["emin_apres"]["annee"] - aux["bc_max"]["annee"]) <= 1),
+        ("État : « remonte depuis » (au moins 3 points au-dessus du creux)", aux["etat"]["fins"][-1]["part"] > aux["emin_apres"]["part"] + 3),
+        ("les deux séries vont dans le même sens depuis le creux de l'État",
+         dl["part_non_residents"] > next(y for y in det if y["annee"] == aux["emin_apres"]["annee"])["part_non_residents"]),
         ("« depuis » la première année au-dessus du dixième, la Banque de France y reste chaque année",
          all(y["part_banque_centrale"] > 10 for y in det if y["annee"] >= next(z["annee"] for z in det if z["part_banque_centrale"] > 10))),
         ("« n'a tenu que par elle » : les autres résidents perdent au moins 8 points de part depuis la veille des achats",
@@ -691,7 +732,7 @@ def fiches(figs):
     return {"fr": out}
 
 
-def csv_texte(total, dec, annees, cp, pat, det, det_pays, S2, C):
+def csv_texte(total, dec, annees, cp, pat, det, det_pays, S2, C, etat):
     """Format long : les tableaux n'ont pas les mêmes colonnes."""
     buf = io.StringIO()
     w = csv.writer(buf, lineterminator="\n")
@@ -712,6 +753,8 @@ def csv_texte(total, dec, annees, cp, pat, det, det_pays, S2, C):
     for r in det:
         for k in ("dette", "non_residents", "banque_centrale", "autres_residents"):
             w.writerow(["france_detention", "FR", r["annee"], k, "%.3f" % r[k], "% du PIB"])
+    for x in etat["fins"]:
+        w.writerow(["france_etat_negociable_non_residents", "FR", x["annee"], "part_non_residents_fin_annee", "%.1f" % x["part"], "% de la dette négociable de l'État"])
     for p, x in sorted(det_pays.items()):
         w.writerow(["ue_part_non_residents", p, x["annee"], "part_non_residents", "%.3f" % x["part_non_residents"], "% de la dette"])
     for g, x in sorted(S2.items()):
@@ -731,8 +774,8 @@ def main() -> int:
             import cairosvg  # noqa: F401
         except ImportError:
             fail("cairosvg absent : SVG et PNG se produisent ensemble ou pas du tout (pip install cairosvg)")
-    fin, total, dec, annees, cp, pat, det, det_pays, det_controle, S2, C, cons = calcul()
-    A, aux = affichage(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, cons)
+    fin, total, dec, annees, cp, pat, det, det_pays, det_controle, S2, C, cons, etat = calcul()
+    A, aux = affichage(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, cons, etat)
     n = gardes(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, aux)
     log("France %s-%s : besoin %.1f pts = actifs %.1f (%.0f %%) + transferts %.1f + depenses courantes %.1f ; non-residents %.1f %% (%s) ; "
         "S2 %.2f = IBP %.2f + CoA %.2f ; %d annees-pays ecartees sur %d"
@@ -763,7 +806,7 @@ def main() -> int:
                                         "S2": "ajustement permanent du solde primaire structurel en 2027 qui stabiliserait la dette à horizon infini ; IBP : position budgétaire initiale ; CoA : coût du vieillissement (Commission européenne)"}},
                "france": {"periodes": [total] + dec, "annees": annees, "patrimoine": pat, "detention": det},
                "ue": {"emplois": cp, "tableau": tableau, "part_non_residents": det_pays, "s2": S2},
-               "cor": C, "controles": {"detention_bce_eurostat_annees": det_controle}, "conservation": cons, "affichage": A}
+               "cor": C, "etat_negociable": etat, "controles": {"detention_bce_eurostat_annees": det_controle}, "conservation": cons, "affichage": A}
     releve = payload["meta"]["releve_le"]
     if OUT_DATA.exists():
         try:
@@ -773,7 +816,7 @@ def main() -> int:
             if prev.get("releve_le") and json.dumps(p2, sort_keys=True, ensure_ascii=False) == json.dumps(n2, sort_keys=True, ensure_ascii=False) \
                     and all((OUT_IMG / f).exists() and (OUT_IMG / f).read_text(encoding="utf-8") == s for f, s in figs.items()) \
                     and all((OUT_IMG / f.replace(".svg", ".png")).exists() for f in figs) \
-                    and OUT_CSV.exists() and OUT_CSV.read_text(encoding="utf-8-sig") == csv_texte(total, dec, annees, cp, pat, det, det_pays, S2, C) \
+                    and OUT_CSV.exists() and OUT_CSV.read_text(encoding="utf-8-sig") == csv_texte(total, dec, annees, cp, pat, det, det_pays, S2, C, etat) \
                     and OUT_FIGURES.exists() and json.loads(OUT_FIGURES.read_text(encoding="utf-8")) == fiches(figs):
                 log("Donnees et figures identiques : rien ecrit (releve_le conserve : %s)." % prev["releve_le"])
                 return 0
@@ -783,7 +826,7 @@ def main() -> int:
     txt = json.dumps(payload, ensure_ascii=False, indent=1)
     OUT_DATA.write_text(txt, encoding="utf-8")
     OUT_STATIC.write_text(txt, encoding="utf-8")
-    OUT_CSV.write_text(csv_texte(total, dec, annees, cp, pat, det, det_pays, S2, C), encoding="utf-8-sig", newline="\n")
+    OUT_CSV.write_text(csv_texte(total, dec, annees, cp, pat, det, det_pays, S2, C, etat), encoding="utf-8-sig", newline="\n")
     import cairosvg
     for f, s in figs.items():
         (OUT_IMG / f).write_text(s, encoding="utf-8")

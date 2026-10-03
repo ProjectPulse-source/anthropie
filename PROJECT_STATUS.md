@@ -53,6 +53,16 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-03 (soir, suite) — « Générations futures » : témoin État rétabli par la règle constante « anti-robot → changer de canal »
+
+Règle de l'auteur (`Downloads\Regle_constante.txt`, mémoire `feedback_anti_robot_changer_de_canal`) : la part non
+résidente de la dette négociable de l'État avait été retirée après un refus de script. Rétablie : CSV de la page publique
+Webstat (série DET, 1999-2025), téléchargé avec l'accord de l'auteur, archivé avec son empreinte, lu par le générateur ;
+6 gardes de concordance avec la série BCE (52 au total). Table des pays : « au-delà du besoin » au lieu de parts > 100 %.
+Défaut trouvé à la relecture du diff du premier commit et corrigé avant lui : continuations du `git add` de
+`dette-monde.yml` écrites en `\n` littéraux (heredoc — récidive de la mémoire « texte avec `\` : Write/Edit »).
+
+
 ### 2026-10-03 (soir) — `/dette-publique-generations-futures/` refondue en ressource de données ; COMMITÉ, NON POUSSÉ
 
 Demande de l'auteur (plan de diffusion d'octobre, § 5) : test décisif d'abord, sur les trois arguments de la page.
