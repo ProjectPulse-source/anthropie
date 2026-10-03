@@ -353,7 +353,7 @@ def affichage(fin, dec, annees, cmp_, europe, cons):
     A["ti_creux"] = fr(creux_ti["taux_implicite"]); A["ti_creux_annee"] = str(creux_ti["annee"])
     A["var_derniere"] = fr(abs(last["variation"]))
     rg_pos = sum(1 for r in annees if r["taux_implicite"] > r["croissance_nominale"])
-    A["rg_pos_n"] = lettres(rg_pos) if rg_pos < len(LETTRES) else str(rg_pos)
+    A["rg_pos_n"] = str(rg_pos)   # en chiffres : la prose le met en regard de annees_total, en chiffres au-delà de seize
     # Un point d'écart taux-croissance durable déplace le solde stabilisant de d(t-1)/(1+g) point : dette et croissance de la dernière année.
     A["sens_pt"] = fr(last["dette"] / 100 / (1 + last["croissance_nominale"] / 100))
     # pays comparés
