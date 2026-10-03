@@ -235,7 +235,10 @@ demander, aucune fenêtre d'attente ; une page se met en ligne dès qu'elle est 
    une ligne dans le shortcode) si les deux déclencheurs de la règle « page propre » sont réunis ; une seule activité
    complète suffit, aucune page ni catégorie vide — sauf Littérature et Philosophie, annoncées grisées et sans lien dans le
    panneau « Autres disciplines » (auteur, 03/10/2026 ; pastille « Pour enseigner · SES ») ; chaque entrée grisée meurt avec
-   la première page de sa discipline. Navigation nommée par ce que cherche l'enseignant (« École et
+   la première page de sa discipline. **Dans `/ressources/`, un dossier par discipline** (auteur, 03/10/2026) : le bloc
+   `enseigner` déclare `disciplines` ; les pages déclarent `ressource.discipline` et `ressource.theme` ; la carte SES ouvre
+   `/enseignants/` (adresse des courriels ; `/enseignants/ses/` y renvoie), une discipline sans page s'affiche grisée
+   (`layouts/partials/ressource-discipline.html`). Navigation nommée par ce que cherche l'enseignant (« École et
    parcours »), jamais par la formule de l'auteur, qui reste le titre. La barre réemploie les classes `dossier-dette*` ;
    elle ne porte aucune date. **Une ancre publiée ne se retire pas** : `#droit-a-l-erreur` reste portée par la barre de
    `/enseignants/` et renvoie à la page fille. Chaque thème a sa méthode et son encart d'exemplaire ; les façades

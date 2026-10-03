@@ -53,7 +53,20 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
-### 2026-10-03 (soir) — Une architecture de dossier pour tous les blocs de /ressources/ ; NI COMMITÉ NI POUSSÉ
+### 2026-10-03 (nuit) — /ressources/ : un dossier par discipline dans « Pour enseigner » ; NI COMMITÉ NI POUSSÉ
+
+Demande de l'auteur : « un seul dossier par matière, puis, une fois sur la matière, la page avec les onglets » — SES,
+Littérature et Philosophie (à construire).
+- Bloc `enseigner` : `disciplines` déclarées dans `content/ressources/_index.md` ; les trois pages SES déclarent
+  `ressource.discipline: "ses"` et `ressource.theme`. `layouts/ressources/list.html` + partial `ressource-discipline.html` :
+  une carte SES (thèmes comptés et nommés depuis les pages, vignette de la première page) qui ouvre `/enseignants/` ;
+  Littérature et Philosophie grisées, sans lien. Les trois encarts par thème disparaissent de l'index.
+- Adresse : `/enseignants/` reste l'adresse de la page (courriels aux lycées avec `?src=`, ancres publiées) ;
+  `/enseignants/ses/` y renvoie (`aliases`). Chapô du bloc réécrit.
+- Contrôles : build 0, `check-all --ci` 0, audit des liens 0 (116 pages) ; index regardé à 1 280, 390 et 320 px, sans
+  débordement.
+
+### 2026-10-03 (soir) — Une architecture de dossier pour tous les blocs de /ressources/ ; POUSSÉ (`d0b21c1`, déploiement vérifié)
 
 Demande de l'auteur (03/10) : « pour chaque dossier, le même type d'architecture que pour Dette » ; « Pour enseigner »
 en sous-dossiers SES, Littérature, Philosophie, chacun à onglets. Choix de l'auteur : discipline en tête et thèmes en

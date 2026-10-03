@@ -11,7 +11,20 @@ blocs:
     chapo: "Pourquoi elle augmente, ce qu'elle coûte, qui la paie, ce qui se passe ailleurs et à quelles conditions elle peut baisser."
   - id: enseigner
     titre: "Pour enseigner"
-    chapo: "Des activités prêtes pour la classe, en SES d'abord : figures projetables, fiches élèves, corrigés et données, tirés des mêmes séries que les analyses. La littérature et la philosophie suivront."
+    chapo: "Un dossier par discipline, des activités prêtes pour la classe : fiches élèves et corrigés, et en SES des figures et des données tirées des mêmes séries que les analyses."
+    # UN DOSSIER PAR DISCIPLINE (auteur, 03/10/2026) : l'index montre une carte par discipline, qui ouvre la page à
+    # onglets de ses thèmes. Les pages déclarent `ressource.discipline` et `ressource.theme` ; une discipline sans page
+    # s'affiche grisée, sans lien (« à venir »), et prend sa carte active avec sa première page.
+    disciplines:
+      - id: "ses"
+        titre: "Sciences économiques et sociales"
+        nature: "SES — Première et Terminale"
+        desc: "Chaque activité part d'une figure projetable et se prolonge en fiche élève imprimable, avec son corrigé et ses données."
+        bouton: "Ouvrir le dossier SES"
+      - id: "litterature"
+        titre: "Littérature"
+      - id: "philosophie"
+        titre: "Philosophie"
   - id: notions
     titre: "Notions et cadre d'analyse"
     chapo: "Les définitions du cadre anthropique, chacune reliée à ses sources."

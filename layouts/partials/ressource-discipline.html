@@ -1,0 +1,27 @@
+{{- /* ressource-discipline.html — carte d'une discipline dans l'index /ressources/ (bloc qui déclare `disciplines`,
+       auteur, 03/10/2026 : « un seul dossier par matière, puis, une fois sur la matière, la page avec les onglets »).
+       La carte ouvre la PREMIÈRE page de la discipline (rang le plus bas), qui porte la barre de ses thèmes. Le nombre
+       et les noms des thèmes se déduisent des pages (`ressource.theme`, sinon l'intitulé) : rien à recompter ici.
+       Vignette : celle de la première page, dérivée de son `og_image` comme pour les autres cartes. */ -}}
+{{- $d := .d -}}
+{{- $entrees := sort .entrees "r.rang" -}}
+{{- $p := (index $entrees 0).page -}}
+{{- $themes := slice -}}
+{{- range $entrees }}{{ $themes = $themes | append (.r.theme | default (or .r.intitule .page.Title)) }}{{ end -}}
+{{- $n := len $themes -}}
+{{- $mot := cond (lt $n (len .mots)) (index .mots $n) (string $n) -}}
+{{- $vig := "" -}}
+{{- with $p.Params.og_image -}}
+  {{- $v := replace . "og-" "vig-" 1 -}}
+  {{- if and (ne $v .) (fileExists (printf "static/%s" $v)) }}{{ $vig = $v }}{{ end -}}
+{{- end -}}
+<aside class="ressources-index__encart{{ if not $vig }} ressources-index__encart--sans-image{{ end }}">
+  {{- with $vig }}<a class="ressources-index__encart-image" href="{{ $p.RelPermalink }}" tabindex="-1" aria-hidden="true"><img src="/{{ . }}" alt="" width="720" height="378" loading="lazy"></a>{{ end }}
+  <div class="ressources-index__encart-corps">
+    {{ with $d.nature }}<p class="ressources-index__nature">{{ partial "fr-typo.html" . }}</p>{{ end }}
+    <h3><a href="{{ $p.RelPermalink }}">{{ partial "fr-typo.html" $d.titre }}</a></h3>
+    <p class="ressources-index__desc">{{ partial "fr-typo.html" (printf "%s %s : %s." (strings.FirstUpper $mot) (cond (eq $n 1) "thème" "thèmes") (delimit $themes ", " " et ")) }}
+      {{- with $d.desc }} {{ partial "fr-typo.html" . }}{{ end }}</p>
+    <p><a class="btn btn--primary" href="{{ $p.RelPermalink }}">{{ partial "fr-typo.html" ($d.bouton | default "Ouvrir le dossier") }}&nbsp;→</a></p>
+  </div>
+</aside>

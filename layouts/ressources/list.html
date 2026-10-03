@@ -66,8 +66,17 @@
     {{- range $entrees }}{{ if eq .r.bloc $id }}{{ $items = $items | append . }}{{ end }}{{ end -}}
     {{- if not $items }}{{ warnf "ressources : le bloc %q de %s est vide" $id $.File.Path }}{{ end -}}
     {{- $items = sort $items "r.rang" -}}
+    {{- /* UN DOSSIER PAR DISCIPLINE (auteur, 03/10/2026) : un bloc qui déclare `disciplines` montre une carte par
+           discipline ; les pages qui déclarent `ressource.discipline` s'y regroupent (la carte ouvre la première, qui
+           porte la barre de ses thèmes). Une discipline sans page s'affiche grisée, sans lien. */ -}}
+    {{- $discIds := slice -}}
+    {{- range .disciplines }}{{ $discIds = $discIds | append .id }}{{ end -}}
+    {{- range $items -}}
+      {{- if and .r.discipline (not (in $discIds .r.discipline)) }}{{ errorf "ressources : %s declare la discipline %q, absente du bloc %q" .page.File.Path .r.discipline $id }}{{ end -}}
+    {{- end -}}
     {{- $dossier := slice -}}{{- $encarts := slice -}}{{- $autres := slice -}}{{- $prolong := slice -}}
     {{- range $items -}}
+      {{- if .r.discipline }}{{ continue }}{{ end -}}
       {{- if .page.Params.ressource.encart }}{{ $encarts = $encarts | append . -}}
       {{- /* PROLONGEMENT (option B, arbitrage PRO-20261001-145721, 01/10/2026) : une page de données qui traite un CAS
              PARTICULIER du dossier (règle 1 du modèle : jamais en onglet) déclare `ressource.prolongement: true`. Elle
@@ -84,6 +93,28 @@
         <h2 id="bloc-{{ $id }}" class="ressources-index__titre-bloc section-title">{{ partial "fr-typo.html" .titre }}</h2>
         {{ with .chapo }}<p class="ressources-index__chapo">{{ partial "fr-typo.html" . }}</p>{{ end }}
       </div>
+      {{- with .disciplines }}
+        {{- $avenir := slice -}}
+        {{- range . -}}
+          {{- $d := . -}}
+          {{- $pages := slice -}}
+          {{- range $items }}{{ if eq .r.discipline $d.id }}{{ $pages = $pages | append . }}{{ end }}{{ end -}}
+          {{- if $pages }}{{ partial "ressource-discipline.html" (dict "d" $d "entrees" $pages "mots" $mots) }}
+          {{- else }}{{ $avenir = $avenir | append $d }}{{ end -}}
+        {{- end }}
+        {{- with $avenir }}
+        <div class="ressources-index__avenir">
+          {{- range . }}
+          <aside class="ressources-index__encart ressources-index__encart--sans-image ressources-index__encart--avenir" aria-disabled="true">
+            <div class="ressources-index__encart-corps">
+              <h3>{{ partial "fr-typo.html" .titre }}</h3>
+              <p class="ressources-index__nature">{{ i18n "ressources_avenir" | default "À venir" }}</p>
+            </div>
+          </aside>
+          {{- end }}
+        </div>
+        {{- end }}
+      {{- end }}
       {{- range $encarts }}{{ partial "ressource-encart.html" (dict "page" .page "r" .r "isEn" $isEn) }}{{ end }}
       {{- with $dossier }}
         {{- $n := len . -}}{{- $mot := cond (lt $n (len $mots)) (index $mots $n) (string $n) -}}

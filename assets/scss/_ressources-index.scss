@@ -96,6 +96,14 @@ main .ressources-index__liste--dossier {
   .btn { margin-top: .9rem; white-space: normal; }
 }
 .ressources-index__encart--sans-image { grid-template-columns: minmax(0, 1fr); }
+// Disciplines annoncées, pas encore construites (03/10/2026) : côte à côte, grisées, sans lien ni bouton.
+.ressources-index__avenir { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1rem; }
+.ressources-index__encart--avenir {
+  margin: 0; padding: 14px 22px; background: transparent;
+  border: 1px dashed var(--color-rule-medium); color: var(--color-text-subtle);
+  h3 { margin: 0 0 .15rem; color: var(--color-text-subtle); }
+  .ressources-index__nature { margin: 0; }
+}
 .ressources-index__encart-corps { min-width: 0; }
 @media (max-width: 600px) {
   .ressources-index__encart { grid-template-columns: minmax(0, 1fr); gap: 14px; padding: 18px 16px; }

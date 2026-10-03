@@ -6,6 +6,8 @@ og_image: "images/og-dette-dynamique.jpg"
 og_image_alt: "La dette publique française décomposée depuis 1995 : la figure d'où part l'activité de Première."
 date: 2026-09-30
 lastmod: 2026-10-02
+# Adresse du dossier SES (auteur, 03/10/2026) : renvoi vers cette page, qui garde l'adresse des courriels et des ancres.
+aliases: ["/enseignants/ses/"]
 # Page d'USAGE pour les enseignants, non une analyse : elle transforme les ressources existantes en activités,
 # sans en recopier aucun chiffre (jetons dyn-val, monde-val, qp-val, lus dans les mêmes jeux que les pages).
 # UNE PAGE PAR THÈME (auteur, 02/10/2026, arbitrage ENTRANTE_2026-10-02_Enseignants_Structure) : celle-ci reste la
@@ -19,6 +21,8 @@ lastmod: 2026-10-02
 # aucune ne demande de trancher une politique.
 ressource:
   bloc: "enseigner"
+  discipline: "ses"   # une carte par discipline dans /ressources/ (03/10/2026)
+  theme: "Dette publique"
   rang: 10
   nature: "Activités de SES — Première et Terminale"
   intitule: "Enseigner la dette publique en SES"

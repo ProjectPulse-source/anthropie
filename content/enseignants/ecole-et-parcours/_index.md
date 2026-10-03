@@ -15,6 +15,8 @@ lastmod: 2026-10-02
 # L'ancre `#droit-a-l-erreur`, publiée quelques heures sur /enseignants/, y reste portée par la barre et renvoie ici.
 ressource:
   bloc: "enseigner"
+  discipline: "ses"   # une carte par discipline dans /ressources/ (03/10/2026)
+  theme: "École et parcours"
   rang: 20
   nature: "Activités de SES — Terminale, chapitre sur l'École"
   intitule: "École et parcours : après le bac, après une année de licence"

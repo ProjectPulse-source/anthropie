@@ -16,6 +16,8 @@ lastmod: 2026-10-02
 # SÉRIE RÉVISÉE à chaque édition : tout chiffre vient du fichier de l'édition en cours, jamais d'un résumé.
 ressource:
   bloc: "enseigner"
+  discipline: "ses"   # une carte par discipline dans /ressources/ (03/10/2026)
+  theme: "Environnement"
   rang: 30
   nature: "Activité de SES — Terminale, chapitre sur l'environnement"
   intitule: "Environnement : émissions françaises et empreinte carbone"
