@@ -51,6 +51,8 @@ jobs:
           python3 scripts/update_dette_monde.py
           # Volet « Pourquoi la dette augmente » (30/09) : memes sources Eurostat annuelles, meme cadence.
           python3 scripts/update_dette_dynamique.py
+          # Volet « La dette peut-elle baisser » (02/10) : memes series ; lit data/dette_dynamique.json, donc APRES lui.
+          python3 scripts/update_dette_baisse.py
 
       # Carte de partage de la page (30/09) : elle imprime la paire de faux jumeaux et leurs chiffres, lus
       # dans data/dette_monde.json. Redessinee dans le meme geste que les donnees, sinon elle mentirait
@@ -103,6 +105,11 @@ jobs:
                   static/images/vig-dette-dynamique.jpg static/images/vig-dette-dynamique-en.jpg \
                   static/img/dette-dynamique-cascade-en.svg static/img/dette-dynamique-cascade-en.png \
                   static/img/dette-dynamique-annuelle-en.svg static/img/dette-dynamique-annuelle-en.png \
+                  data/dette_baisse.json static/dette_baisse.json static/dette_baisse.csv data/figures_baisse.json \
+                  static/images/og-dette-baisse.jpg static/images/vig-dette-baisse.jpg \
+                  static/img/dette-baisse-decennies.svg static/img/dette-baisse-decennies.png \
+                  static/img/dette-baisse-comparaison.svg static/img/dette-baisse-comparaison.png \
+                  static/img/dette-baisse-stabilisant.svg static/img/dette-baisse-stabilisant.png \
                   static/img/dette-monde-stock-en.svg static/img/dette-monde-stock-en.png \
                   static/img/dette-monde-charge-en.svg static/img/dette-monde-charge-en.png \
                   static/img/dette-monde-prix-en.svg static/img/dette-monde-prix-en.png \

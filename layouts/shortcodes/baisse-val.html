@@ -1,0 +1,23 @@
+{{- /* {{< baisse-val "d3_tc_abs" >}} — émet UNE valeur du bloc affichage de data/dette_baisse.json (chaînes françaises
+       précalculées et gardées par scripts/update_dette_baisse.py). Même contrat que dyn-val : aucun chiffre en dur dans
+       la prose ; clé inconnue ou données absentes = échec de build. Page en français seulement (exclusion déclarée :
+       pas de bloc affichage_en). */ -}}
+{{- $k := .Get 0 -}}
+{{- if eq $k "date_donnees" -}}
+  {{- with site.Data.dette_baisse.releve_le -}}
+    {{- $t := time . -}}
+    {{- $mois := slice "janvier" "février" "mars" "avril" "mai" "juin" "juillet" "août" "septembre" "octobre" "novembre" "décembre" -}}
+    {{- printf "%d %s %d" $t.Day (index $mois (sub (int $t.Month) 1)) $t.Year -}}
+  {{- else -}}{{- errorf "baisse-val: releve_le absent de data/dette_baisse.json (page %s)" $.Page.RelPermalink -}}{{- end -}}
+{{- else -}}
+{{- $a := "" -}}
+{{- with site.Data.dette_baisse -}}{{- $a = .affichage -}}{{- end -}}
+{{- if not $a -}}
+  {{- errorf "baisse-val: data/dette_baisse.json absent ou sans bloc affichage (page %s)" .Page.RelPermalink -}}
+{{- else -}}
+  {{- $v := index $a $k -}}
+  {{- if not $v -}}
+    {{- errorf "baisse-val: cle %q inconnue du bloc affichage (page %s)" $k .Page.RelPermalink -}}
+  {{- else -}}{{- $v -}}{{- end -}}
+{{- end -}}
+{{- end -}}

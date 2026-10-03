@@ -182,7 +182,7 @@ Seules des mesures indicatives existent&nbsp;: la dette selon le FMI, et les int
 
 <aside class="encadre">
 
-**Et pour savoir si la dette va augmenter&nbsp;?** Cette page compare ce que la dette coûte aujourd'hui. La question de sa trajectoire est différente&nbsp;: un ratio de dette tend à croître quand le taux d'intérêt payé dépasse la croissance nominale de l'économie et que le budget, hors intérêts, reste en déficit. Cet écart entre taux et croissance est l'objet d'une autre analyse.
+**Et pour savoir si la dette va augmenter&nbsp;?** Cette page compare ce que la dette coûte aujourd'hui. La question de sa trajectoire est différente&nbsp;: un ratio de dette tend à croître quand le taux d'intérêt payé dépasse la croissance nominale de l'économie et que le budget, hors intérêts, reste en déficit. Cet écart entre taux et croissance, et ce qu'il a fallu ailleurs pour que la dette baisse, sont l'objet de [La dette publique peut-elle baisser&nbsp;?](/dette-publique-peut-elle-baisser/)
 
 </aside>
 
@@ -224,6 +224,7 @@ Seules des mesures indicatives existent&nbsp;: la dette selon le FMI, et les int
 - [Pourquoi la dette publique augmente-t-elle&nbsp;?](/pourquoi-la-dette-publique-augmente/)
 - [Combien coûte la dette publique&nbsp;?](/cout-de-la-dette-publique/)
 - [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/)
+- [Peut-elle baisser&nbsp;?](/dette-publique-peut-elle-baisser/)
 {{< /pastilles >}}
 
 {{< appel-livre slug="dette-publique-qui-paie-vraiment" sur="Prolonger l'analyse" avis="non" >}}

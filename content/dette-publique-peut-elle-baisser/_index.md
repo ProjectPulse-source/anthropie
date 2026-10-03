@@ -1,0 +1,173 @@
+---
+title: "La dette publique peut-elle baisser ?"
+description: "De {baisse.d3_debut} à {baisse.annee_fin}, le poids de la dette française dans le PIB a monté de {baisse.d3_var_abs} points : les déficits primaires l'ont alourdi de {baisse.d3_def_abs}, l'effet des taux et de la croissance, favorable surtout en {baisse.d3_creux_lib}, l'a allégé de {baisse.d3_tc_abs}. Comparaison avec {baisse.cmp_autres_n} pays européens partis d'une dette plus élevée."
+chapo: "Oui : son poids dans le PIB peut baisser même si son montant augmente, et il a baissé ailleurs. En France, de {baisse.d3_debut} à {baisse.annee_fin}, les déficits primaires, hors intérêts, ont dépassé l'allègement lié aux taux et à la croissance : le ratio dette/PIB a augmenté de {baisse.d3_var_abs} points."
+og_title: "La dette publique peut-elle baisser ?"
+og_image: "images/og-dette-baisse.jpg"
+og_image_alt: "Carte de partage : « Les déficits ont pesé plus lourd » — France, trois décennies : effet des taux et de la croissance, déficits primaires et autres ajustements, en points de PIB."
+date: 2026-10-02
+lastmod: 2026-10-03
+# Page du dossier dette (prolongement à ce jour, onglet si la barre est redessinée), créée le 02/10/2026 sur décision de l'auteur (« construis la page autour du constat français »).
+# Test décisif : D:\PRO\06_PROMOTION\RECHERCHE_SOLUTIONS_DETTE_2026-10-02\test_decisif\ ; contre-expertises et arbitrages :
+# D:\PRO\.claude\external-audits\ARBITRATIONS\PRO-20261002-195300_arbitrage.md (test) et PRO-20261003-064640_arbitrage.md (page) ; avis entrant final : ENTRANTE_2026-10-03_Solution_Dette_arbitrage.md.
+# Décisions verrouillées : ni « presque nécessaire », ni « suffit », ni seuil de 2 % ; toute fréquence dit son événement, son
+# dénominateur et sa période ; un ratio n'est pas un montant ; le solde stabilisant est dit « hors autres ajustements ».
+# Aucun chiffre saisi : jetons {baisse.*} et shortcodes baisse-val / baisse-tableau (scripts/update_dette_baisse.py).
+donnees: [dette_baisse]
+dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html) ; jetons résolus au build
+  jeu: "dette_baisse"
+  nom: "La dette publique peut-elle baisser : décomposition par décennie du ratio dette/PIB, France et pays de l'Union partis de plus de 90 % de dette"
+  description: "Décomposition de la variation du ratio dette/PIB en effet des taux et de la croissance, déficits primaires et autres ajustements (flux-stock) : France par décennie de {baisse.annee_debut} à {baisse.annee_fin}, solde primaire observé et solde stabilisant hors autres ajustements année par année, et les pays de l'Union dont la dette dépassait {baisse.seuil_dette} % du PIB fin {baisse.cmp_veille}. Ratios contrôlés contre ceux que publie Eurostat ; aucune valeur saisie à la main."
+  couverture_temporelle: "{baisse.annee_debut}/{baisse.annee_fin}"
+  couverture_spatiale: "France ; Union européenne (27 pays)"
+  variables:
+    - {nom: "Variation du ratio dette/PIB", unite: "points de PIB", description: "cumulée sur dix ans"}
+    - {nom: "Effet taux-croissance", unite: "points de PIB", description: "intérêts moins érosion du ratio par la croissance du PIB nominal"}
+    - {nom: "Déficits primaires cumulés", unite: "points de PIB", description: "hors intérêts ; négatif en cas d'excédents"}
+    - {nom: "Autres ajustements (flux-stock)", unite: "points de PIB", description: "résidu de l'identité"}
+    - {nom: "Solde primaire stabilisant", unite: "% du PIB", description: "solde qui aurait laissé le ratio inchangé dans l'année, hors autres ajustements"}
+    - {nom: "Encours de dette", unite: "milliards de monnaie nationale", description: "pays comparés, début et fin de la décennie"}
+  sources:
+    - "https://ec.europa.eu/eurostat/databrowser/view/gov_10dd_edpt1/default/table?lang=fr"
+    - "https://ec.europa.eu/eurostat/databrowser/view/gov_10a_main/default/table?lang=fr"
+  mots: ["dette publique", "France", "excédent primaire", "solde primaire stabilisant", "taux implicite", "croissance nominale", "désendettement", "Eurostat"]
+  fichiers: ["dette_baisse.csv", "dette_baisse.json"]
+faq:
+  - question: "La dette publique française peut-elle baisser ?"
+    answer: "Les intérêts et les déficits primaires augmentent le ratio dette/PIB ; la croissance du PIB nominal et les excédents primaires le réduisent ; les autres ajustements jouent dans les deux sens. Le ratio baisse quand le bilan de ces contributions est négatif, même si le montant de la dette continue d'augmenter. De {baisse.d3_debut} à {baisse.annee_fin}, le ratio français a monté de {baisse.d3_var_abs} points : les déficits primaires l'ont alourdi de {baisse.d3_def_abs}, l'effet des taux et de la croissance l'a allégé de {baisse.d3_tc_abs}, surtout en {baisse.d3_creux_lib}. Sur la même décennie, il a baissé de {baisse.cmp_exc_baisse_min} à {baisse.cmp_exc_baisse_max} points dans {baisse.cmp_exc_n} pays partis d'une dette plus élevée, tous en excédent primaire moyen : {baisse.cmp_exc_pays}."
+  - question: "La croissance et l'inflation suffisent-elles à faire baisser la dette ?"
+    answer: "Elles allègent le ratio quand la croissance nominale dépasse le taux d'intérêt payé sur la dette, mais cet effet varie fortement d'une année à l'autre : en France, il a retiré {baisse.d3_creux_abs} points de {baisse.d3_creux_lib} et pesé {baisse.d3_pic_tc} points en {baisse.d3_pic_annee}. Dans les {baisse.cmp_n} pays de l'Union partis de plus de {baisse.seuil_dette} % de dette fin {baisse.cmp_veille}, il a été favorable partout, de {baisse.cmp_tc_min} à {baisse.cmp_tc_max} points en dix ans ; aucun de ceux qui sont restés en déficit primaire moyen n'a vu son ratio baisser de {baisse.forte_baisse} points."
+  - question: "Quel solde primaire stabiliserait la dette française ?"
+    answer: "Hors autres ajustements, c'est le solde qui compense l'effet des taux et de la croissance de l'année : il dépend de l'écart entre le taux implicite de la dette et la croissance nominale, et du niveau de la dette. En {baisse.annee_fin}, les deux taux étaient presque égaux ({baisse.taux_implicite_dernier} % et {baisse.croissance_derniere} %) : ce repère était proche de zéro, pour un solde observé de {baisse.pb_dernier} % du PIB. Il varie fortement, de {baisse.stab_min} % en {baisse.stab_min_annee} à {baisse.stab_max} % en {baisse.stab_max_annee}. Pour stabiliser le ratio observé, il faut aussi tenir compte des autres ajustements."
+  - question: "La France a-t-elle déjà dégagé un excédent primaire ?"
+    answer: "{baisse.exc_n_maj} fois depuis {baisse.annee_debut}, de {baisse.exc_premiere} à {baisse.exc_derniere}, au plus {baisse.exc_max} % du PIB (Eurostat). Depuis, le solde primaire des administrations publiques est resté déficitaire chaque année."
+  - question: "Un excédent primaire fait-il toujours baisser la dette ?"
+    answer: "Il contribue à réduire le ratio, mais la variation finale dépend aussi des taux, de la croissance et des autres ajustements : en France, le solde a atteint le repère de stabilisation hors ajustements en {baisse.suff_hausse} sans que le ratio baisse. Dans les fenêtres de dix ans des {baisse.eu_pays} pays aujourd'hui membres de l'Union où la dette de départ dépassait {baisse.seuil_dette} % du PIB, les baisses d'au moins {baisse.forte_baisse} points sont {baisse.eu_def_fb} sur {baisse.eu_def_n} avec un solde primaire moyen négatif, {baisse.eu_mid_fb} sur {baisse.eu_mid_n} avec un solde de 0 à moins de 2 %, {baisse.eu_exc_fb} sur {baisse.eu_exc_n} avec un solde d'au moins 2 % ; ces fenêtres se recouvrent et viennent de quelques pays."
+ressource:  # index /ressources/ (layouts/ressources/list.html)
+  bloc: "dette"
+  rang: 25
+  nature: "Séries officielles (Eurostat) décomposées et calculs de l'auteur"
+  prolongement: true   # barre à cinq onglets mesurée le 03/10 : elle déborde ; rangée « Prolongements du dossier » en attendant
+---
+
+{{< dossier-dette volet="baisse" >}}
+
+{{< reutiliser-ancre >}}
+
+<p class="donnees-ligne"><span class="badge-donnees">Mise à jour&nbsp;: {{< baisse-val "date_donnees" >}}</span> Administrations publiques, séries Eurostat de {{< baisse-val "annee_debut" >}} à {{< baisse-val "annee_fin" >}}. Télécharger&nbsp;: <a href="/dette_baisse.csv">CSV</a> · <a href="/dette_baisse.json">JSON</a> · <a href="#sources">méthode</a></p>
+
+## Trois décennies, trois régimes {#trois-decennies}
+
+<figure class="figure-ciseau">
+  <img src="/img/dette-baisse-decennies.svg" alt="Trois groupes de barres en points de PIB cumulés sur dix ans : effet des taux et de la croissance (T), contribution des déficits ou excédents primaires (S), autres ajustements (A). {{< baisse-val "d1_lib" >}} : {{< baisse-val "d1_tc" >}}, {{< baisse-val "d1_def" >}}, {{< baisse-val "d1_sfa" >}}. {{< baisse-val "d2_lib" >}} : {{< baisse-val "d2_tc" >}}, {{< baisse-val "d2_def" >}}, {{< baisse-val "d2_sfa" >}}. {{< baisse-val "d3_lib" >}} : {{< baisse-val "d3_tc" >}}, {{< baisse-val "d3_def" >}}, {{< baisse-val "d3_sfa" >}}." width="720" height="408" loading="lazy">
+  <figcaption>Ce qui a fait monter ou baisser le ratio dette/PIB français, par décennie, en points de PIB cumulés (Eurostat). Orange&nbsp;: ce qui le fait monter&nbsp;; gris&nbsp;: ce qui le fait baisser.</figcaption>
+</figure>
+
+<div class="resultat-phrase">
+
+**Le résultat en une phrase.** De {{< baisse-val "d3_debut" >}} à {{< baisse-val "annee_fin" >}}, les déficits primaires ont ajouté {{< baisse-val "d3_def_abs" >}} points au ratio de dette français, l'effet des taux et de la croissance, concentré en {{< baisse-val "d3_creux_lib" >}}, en a retiré {{< baisse-val "d3_tc_abs" >}}, et les autres ajustements en ont ajouté {{< baisse-val "d3_sfa_abs" >}}&nbsp;: le bilan est une hausse de {{< baisse-val "d3_var_abs" >}} points. C'est une décomposition comptable&nbsp;: elle dit par quel terme la dette a bougé, pas pourquoi les déficits ont existé.
+
+</div>
+
+Ce qui baisse ou monte ici, c'est le poids de la dette dans le PIB, non son montant&nbsp;: un ratio peut reculer pendant que la dette en euros augmente, si le PIB nominal croît plus vite. Ce ratio bouge sous l'effet de trois termes, détaillés dans [Pourquoi la dette publique augmente-t-elle&nbsp;?](/pourquoi-la-dette-publique-augmente/)&nbsp;: l'effet taux-croissance (les intérêts, moins ce que la croissance du PIB nominal efface), le solde primaire (recettes moins dépenses, hors intérêts) et les autres ajustements, dits «&nbsp;flux-stock&nbsp;» (acquisitions d'actifs, variations de trésorerie et autres opérations qui modifient la dette sans passer par le déficit). En les cumulant par décennie, le terme qui pousse la dette change d'une période à l'autre.
+
+**{{< baisse-val "d1_lib" >}}&nbsp;: les taux poussent, le budget hors intérêts est proche de l'équilibre.** Le ratio passe de {{< baisse-val "d1_dette_deb" >}}&nbsp;% à {{< baisse-val "d1_dette_fin" >}}&nbsp;% du PIB. Sur l'ensemble de la décennie, l'effet taux-croissance ajoute {{< baisse-val "d1_tc_abs" >}} points. Le solde primaire, excédentaire {{< baisse-val "d1_exc" >}} années sur dix, en retire {{< baisse-val "d1_def_abs" >}}.
+
+**{{< baisse-val "d2_lib" >}}&nbsp;: les deux termes poussent ensemble.** Le ratio gagne {{< baisse-val "d2_var_abs" >}} points, la plus forte hausse des trois décennies&nbsp;: {{< baisse-val "d2_def_abs" >}} par les déficits primaires, {{< baisse-val "d2_tc_abs" >}} par l'effet taux-croissance. La période contient la crise financière de 2008-2009.
+
+**{{< baisse-val "d3_lib" >}}&nbsp;: un effet taux-croissance favorable en cumul, dépassé par les déficits primaires.** Les intérêts ajoutent {{< baisse-val "d3_interets" >}} points, la croissance du PIB nominal en efface {{< baisse-val "d3_croissance" >}}&nbsp;: en cumul, l'effet taux-croissance est de {{< baisse-val "d3_tc" >}} points. Cet allègement se concentre en {{< baisse-val "d3_creux_lib" >}}, années de rebond de l'activité puis d'inflation, qui retirent à elles seules {{< baisse-val "d3_creux_abs" >}} points&nbsp;; les {{< baisse-val "d3_reste_n" >}} autres années pèsent ensemble {{< baisse-val "d3_reste" >}} point, dont {{< baisse-val "d3_pic_tc" >}} en {{< baisse-val "d3_pic_annee" >}}, quand le PIB reculait. Aucune année de la décennie n'est en excédent primaire&nbsp;: les déficits cumulés ajoutent {{< baisse-val "d3_def_abs" >}} points, plus que toute la hausse du ratio ({{< baisse-val "d3_var" >}}).
+
+D'une décennie à l'autre, la contribution des déficits primaires est passée de {{< baisse-val "d1_def" >}} à {{< baisse-val "d2_def" >}} puis {{< baisse-val "d3_def" >}} points. Ce constat décrit une récurrence&nbsp;; il ne dit pas si ces déficits étaient évitables, ni lequel de leurs deux termes, dépenses ou recettes, les explique.
+
+## Les pays partis d'une dette plus élevée {#pays-compares}
+
+La même décomposition, sur la même décennie, s'applique aux pays de l'Union dont la dette dépassait {{< baisse-val "seuil_dette" >}}&nbsp;% du PIB fin {{< baisse-val "cmp_veille" >}}&nbsp;: la France, à {{< baisse-val "cmp_fr_d0" >}}&nbsp;%, et {{< baisse-val "cmp_autres_n" >}} autres, tous partis de plus haut. Ce seuil est une convention de présentation, proche du niveau français&nbsp;; il ne fait pas de ces pays des expériences équivalentes.
+
+<figure class="figure-ciseau">
+  <img src="/img/dette-baisse-comparaison.svg" alt="Pour chacun des {{< baisse-val "cmp_n" >}} pays, trois barres en points de PIB cumulés de {{< baisse-val "cmp_lib" >}} : l'effet taux-croissance, négatif partout ; la contribution du solde primaire, négative dans {{< baisse-val "cmp_exc_n" >}} pays et positive dans {{< baisse-val "cmp_def_n" >}} ; les autres ajustements. France : effet taux-croissance {{< baisse-val "cmp_fr_tc" >}}, déficits primaires {{< baisse-val "cmp_fr_def" >}}, autres ajustements {{< baisse-val "cmp_fr_sfa" >}}, ratio {{< baisse-val "cmp_fr_var" >}} points." width="720" height="418" loading="lazy">
+  <figcaption>Effet taux-croissance (T), contribution du solde primaire (S) et autres ajustements (A) à la variation du ratio de dette, {{< baisse-val "cmp_lib" >}}, en points de PIB cumulés (Eurostat). Pays triés par variation du ratio.</figcaption>
+</figure>
+
+<div class="encadre">
+
+**Ce que le groupe permet de dire, et ce qu'il ne permet pas.** Dans ce groupe, les {{< baisse-val "cmp_exc_n" >}} fortes baisses du ratio s'accompagnent d'un excédent primaire moyen. Mais les contributions favorables des taux et de la croissance vont de {{< baisse-val "cmp_tc_min" >}} à {{< baisse-val "cmp_tc_max" >}} points&nbsp;: ce n'est pas un environnement commun. Et le constat dépend du périmètre&nbsp;: à 80&nbsp;%, le groupe compte {{< baisse-val "s80_n" >}} pays, avec {{< baisse-val "s80_ajouts" >}}&nbsp;; {{< baisse-val "s80_exc_pays" >}}, partie de {{< baisse-val "s80_exc_d0" >}}&nbsp;%, a vu son ratio baisser de {{< baisse-val "s80_exc_var" >}} points avec un solde primaire moyen de {{< baisse-val "s80_exc_pb" >}}&nbsp;% du PIB. À 100&nbsp;%, la France sort du groupe.
+
+</div>
+
+- **L'effet taux-croissance a fait baisser le ratio dans les {{< baisse-val "cmp_n" >}} pays**, de {{< baisse-val "cmp_tc_min" >}} à {{< baisse-val "cmp_tc_max" >}} points en dix ans. Celui de la France ({{< baisse-val "cmp_fr_tc" >}}) n'est pas le plus faible du groupe.
+- **Le ratio a reculé de {{< baisse-val "cmp_exc_baisse_min" >}} à {{< baisse-val "cmp_exc_baisse_max" >}} points dans les {{< baisse-val "cmp_exc_n" >}} pays dont le solde primaire a été excédentaire en moyenne**&nbsp;: {{< baisse-val "cmp_exc_pays" >}}, avec un excédent moyen de {{< baisse-val "cmp_exc_pb_min" >}} à {{< baisse-val "cmp_exc_pb_max" >}}&nbsp;% du PIB. Le montant de leur dette, lui, n'a pas diminué&nbsp;: au Portugal, il est passé de {{< baisse-val "cmp_pt_enc0" >}} à {{< baisse-val "cmp_pt_enc1" >}} milliards d'euros. Leurs autres ajustements, positifs, ont freiné la baisse.
+- **Il est resté à peu près stable pour {{< baisse-val "cmp_def_autres" >}}** ({{< baisse-val "cmp_def_var_min" >}} à {{< baisse-val "cmp_def_var_max" >}} points), en déficit primaire moyen. En Belgique, les contributions des taux et de la croissance et du solde primaire totalisent {{< baisse-val "cmp_be_tcdef" >}} points&nbsp;; les autres ajustements en ajoutent {{< baisse-val "cmp_be_sfa_abs" >}}, portant la variation à {{< baisse-val "cmp_be_var" >}} points.
+- **Il a monté de {{< baisse-val "d3_var_abs" >}} points en France**, la plus forte hausse du groupe, avec le déficit primaire moyen le plus élevé ({{< baisse-val "cmp_fr_pb" >}}&nbsp;% du PIB).
+
+<details class="repli"><summary>Les {{< baisse-val "cmp_n" >}} pays, terme par terme</summary>
+
+{{< baisse-tableau >}}
+
+</details>
+
+Ces pays n'ont pas été financés dans les mêmes conditions. Le Portugal (de 2011 à mi-2014), Chypre (d'avril 2013 à mars 2016) et la Grèce (de mai 2010 à août 2018, dernier programme, financé par le Mécanisme européen de stabilité, d'août 2015 à août 2018) ont bénéficié de financements officiels de leurs partenaires européens et du FMI&nbsp;; l'Espagne a reçu, de juillet 2012 à janvier 2014, une aide à la recapitalisation de ses banques ([Commission européenne](https://economy-finance.ec.europa.eu/eu-financial-assistance/euro-area-countries_en)&nbsp;; [Mécanisme européen de stabilité](https://www.esm.europa.eu/assistance/greece/greece-successfully-concludes-esm-programme)). La restructuration de la dette grecque, en 2012, précède la décennie étudiée. La croissance nominale moyenne des trois pays en excédent a dépassé celle de la France, ce qui accroît leur effet taux-croissance&nbsp;; et un solde primaire dépend lui-même de la conjoncture&nbsp;: une économie qui croît vite encaisse plus de recettes. Sept pays sur une décennie ne font pas une régularité générale, et la comparaison n'isole pas l'effet d'une politique.
+
+## Quel solde stabiliserait la dette&nbsp;? {#solde-stabilisant}
+
+Hors autres ajustements, le ratio de dette reste inchangé une année donnée si le solde primaire compense l'effet taux-croissance de cette année-là&nbsp;: c'est le repère tracé ci-dessous. Il n'est pas une constante&nbsp;: il monte quand le taux dépasse la croissance, et devient négatif dans le cas inverse, où un déficit primaire limité laisse le ratio stable. Pour stabiliser le ratio observé, il faut aussi tenir compte des autres ajustements&nbsp;: en {{< baisse-val "suff_hausse" >}}, le solde a atteint ce repère et le ratio a pourtant monté.
+
+<figure class="figure-ciseau">
+  <img src="/img/dette-baisse-stabilisant.svg" alt="Deux courbes annuelles de {{< baisse-val "annee_debut" >}} à {{< baisse-val "annee_fin" >}}, en % du PIB : le solde primaire observé, positif de {{< baisse-val "exc_premiere" >}} à {{< baisse-val "exc_derniere" >}} seulement, et le solde qui aurait stabilisé le ratio hors autres ajustements, de {{< baisse-val "stab_min" >}} % en {{< baisse-val "stab_min_annee" >}} (rebond du PIB) à {{< baisse-val "stab_max" >}} % en {{< baisse-val "stab_max_annee" >}} (recul du PIB)." width="720" height="372" loading="lazy">
+  <figcaption>Solde primaire observé et solde primaire qui aurait stabilisé le ratio de dette dans l'année, hors autres ajustements, France, en&nbsp;% du PIB (Eurostat, calcul de l'auteur).</figcaption>
+</figure>
+
+En {{< baisse-val "annee_fin" >}}, taux implicite ({{< baisse-val "taux_implicite_dernier" >}}&nbsp;%) et croissance nominale ({{< baisse-val "croissance_derniere" >}}&nbsp;%) étaient presque égaux&nbsp;: le repère de stabilisation était proche de zéro. Le solde primaire observé était de {{< baisse-val "pb_dernier" >}}&nbsp;% du PIB, soit un écart de {{< baisse-val "ecart_dernier" >}} points.
+
+Sur {{< baisse-val "annees_total" >}} ans, ce repère est allé de {{< baisse-val "stab_min" >}}&nbsp;% du PIB en {{< baisse-val "stab_min_annee" >}}, quand le PIB nominal rebondissait, à {{< baisse-val "stab_max" >}}&nbsp;% en {{< baisse-val "stab_max_annee" >}}, quand il reculait. Le solde observé l'a atteint ou dépassé {{< baisse-val "suffisant_n" >}} années sur {{< baisse-val "annees_total" >}}. Ce décompte mesure les années où le repère hors ajustements a été atteint&nbsp;; il ne correspond pas au nombre d'années de baisse effective du ratio, qui a reculé {{< baisse-val "suff_baisse_n" >}} de ces années. La France a dégagé un excédent primaire {{< baisse-val "exc_n" >}} fois, de {{< baisse-val "exc_premiere" >}} à {{< baisse-val "exc_derniere" >}}, au plus {{< baisse-val "exc_max" >}}&nbsp;% du PIB.
+
+Stabiliser le ratio et le faire baisser sont deux objectifs distincts. Un montant d'ajustement se lit avec son objectif, son horizon et ses hypothèses&nbsp;; le repère calculé ici pour {{< baisse-val "annee_fin" >}} vaut pour cette année-là et ne permet pas d'évaluer les estimations pluriannuelles des institutions.
+
+## Trente ans de fenêtres européennes {#europe}
+
+<details class="repli"><summary>Soldes primaires et baisses du ratio&nbsp;: les périodes européennes de dix ans</summary>
+
+La comparaison ci-dessus ne porte que sur une décennie. Pour la replacer dans un ensemble plus large, la même décomposition a été appliquée à toutes les fenêtres de dix ans des {{< baisse-val "eu_pays" >}} pays aujourd'hui membres de l'Union, depuis {{< baisse-val "eu_premiere" >}}&nbsp;: {{< baisse-val "eu_fenetres" >}} fenêtres, qui se recouvrent, ne sont donc pas autant d'expériences indépendantes et contiennent la décennie déjà comparée. C'est un contexte, non une contre-épreuve.
+
+Parmi les {{< baisse-val "eu_hautes_n" >}} fenêtres où la dette de départ dépassait {{< baisse-val "seuil_dette" >}}&nbsp;% du PIB&nbsp;:
+
+- **solde primaire moyen négatif**&nbsp;: {{< baisse-val "eu_def_n" >}} fenêtres, dans {{< baisse-val "eu_def_pays_n" >}} pays ({{< baisse-val "eu_def_pays" >}}). Le ratio baisse dans {{< baisse-val "eu_def_baisses" >}} d'entre elles, jamais de {{< baisse-val "forte_baisse" >}} points&nbsp;;
+- **solde primaire moyen de 0 à moins de 2&nbsp;% du PIB**&nbsp;: {{< baisse-val "eu_mid_n" >}} fenêtres, dans {{< baisse-val "eu_mid_pays_n" >}} pays. Le ratio baisse dans {{< baisse-val "eu_mid_baisses" >}} d'entre elles, de {{< baisse-val "forte_baisse" >}} points ou plus dans {{< baisse-val "eu_mid_fb" >}}&nbsp;;
+- **solde primaire moyen d'au moins 2&nbsp;% du PIB**&nbsp;: {{< baisse-val "eu_exc_n" >}} fenêtres, dans {{< baisse-val "eu_exc_pays_n" >}} pays seulement ({{< baisse-val "eu_exc_pays" >}}). Le ratio baisse dans les {{< baisse-val "eu_exc_baisses" >}}, de {{< baisse-val "forte_baisse" >}} points ou plus dans {{< baisse-val "eu_exc_fb" >}}.
+
+Ces fréquences décrivent des périodes passées, dans quelques pays. Elles ne donnent ni un seuil d'excédent à atteindre, ni une probabilité de réussite&nbsp;: les fenêtres à fort excédent commencent pour la plupart avant 2003.
+
+</details>
+
+## Ce que ces données ne disent pas {#limites}
+
+- **Mesure de la dette.** Une baisse du ratio ne signifie pas que le montant de dette a diminué. La dette suivie est brute&nbsp;: les autres ajustements mêlent achats d'actifs, prêts et écarts de valorisation, et un pays qui emprunte pour acquérir des actifs voit sa dette brute monter sans que sa situation financière se dégrade d'autant.
+- **Interprétation économique.** Une décomposition comptable, non causale&nbsp;: les termes dépendent les uns des autres, et le solde observé contient la conjoncture, il ne mesure pas un effort. Rien ici ne dit lequel, des dépenses ou des recettes, devrait bouger, ni qui en supporterait le coût&nbsp;: c'est l'objet de [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/) L'effet taux-croissance repose sur le PIB nominal&nbsp;: la baisse du ratio par l'inflation réduit la valeur réelle des créances, elle a des porteurs.
+- **Périmètre de comparaison.** Les 27 pays aujourd'hui membres de l'Union, depuis {{< baisse-val "eu_premiere" >}}&nbsp;; rien avant, rien hors de l'Union. Le groupe comparé dépend du seuil de dette et de la décennie retenus. {{< baisse-val "cons_ecartees_maj" >}} années-pays sur {{< baisse-val "cons_calculables" >}} sont écartées par le contrôle décrit plus bas.
+- **Portée dans le temps.** La page décrit trente années observées. Les trajectoires que prévoient le Gouvernement, la Commission européenne ou le FMI sont des scénarios conditionnels, que ces données ne permettent ni de confirmer ni d'écarter.
+
+## Questions fréquentes {#questions}
+
+{{< faq-visible >}}
+
+**Dans le dossier dette publique**
+
+{{< pastilles label="Dans le dossier dette publique" >}}
+- [Pourquoi la dette publique augmente-t-elle&nbsp;?](/pourquoi-la-dette-publique-augmente/)
+- [Combien coûte la dette publique&nbsp;?](/cout-de-la-dette-publique/)
+- [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/)
+- [Et ailleurs&nbsp;?](/dette-publique-comparaison-internationale/)
+{{< /pastilles >}}
+
+{{< appel-livre slug="dette-publique-qui-paie-vraiment" sur="Pour prolonger l’analyse" avis="non" >}}
+Cette page décompose la hausse du ratio de dette français et les baisses observées ailleurs. Faire baisser ce ratio peut déplacer des coûts. Qui les supporte&nbsp;: le contribuable, l'usager des services publics, l'épargnant par l'inflation, le créancier par une restructuration&nbsp;? Le livre prolonge cette analyse, chiffres officiels à l'appui, en examinant ces choix et leurs conséquences.
+{{< /appel-livre >}}
+
+## D'où viennent ces chiffres {#sources}
+
+Eurostat, administrations publiques (S.13), comptes SEC 2010, en monnaie nationale&nbsp;: dette de Maastricht et PIB nominal publiés avec la notification de déficit et de dette (`gov_10dd_edpt1`), intérêts versés et capacité ou besoin de financement (`gov_10a_main`, D41PAY et B9). Le solde primaire est le solde des administrations publiques augmenté des intérêts versés. L'identité est celle du volet [Pourquoi la dette publique augmente-t-elle&nbsp;?](/pourquoi-la-dette-publique-augmente/#identite)&nbsp;; les termes annuels sont cumulés sur dix ans, de la fin de l'année qui précède la décennie à la fin de sa dernière année. Le solde stabilisant d'une année est l'effet taux-croissance de cette année, hors autres ajustements. Les variations et totaux sont calculés avant arrondi&nbsp;: les nombres affichés peuvent présenter un écart de 0,1 point.
+
+Contrôle&nbsp;: pour chaque pays et chaque année, le ratio de dette et le solde primaire calculés sont comparés à ceux qu'Eurostat publie en pourcentage du PIB, que le calcul n'utilise pas. Au-delà de {{< baisse-val "tolerance" >}} point d'écart, l'année est écartée et comptée ({{< baisse-val "cons_ecartees" >}} sur {{< baisse-val "cons_calculables" >}}, listées dans le fichier JSON)&nbsp;; pour la France et les pays comparés, le script s'arrête. Une fenêtre qui contient une année de croissance nominale supérieure à 35&nbsp;% (hyperinflation, rupture de série) est écartée. Les pays comparés à la France sont désignés par une règle, non choisis&nbsp;: dette supérieure à {{< baisse-val "seuil_dette" >}}&nbsp;% du PIB à la fin de {{< baisse-val "cmp_veille" >}}&nbsp;; le même calcul est refait à 80 et à 100&nbsp;%. Aucun chiffre de cette page n'est saisi à la main&nbsp;: tous viennent du même script, qui vérifie les principales affirmations chiffrées et s'arrête si leurs conditions ne sont plus remplies&nbsp;; leur formulation fait l'objet d'une relecture éditoriale.
+
+{{< reutiliser figures="figures_baisse" jeu="dette_baisse" sources="Eurostat" donnees="La décomposition par décennie du ratio dette/PIB français, le solde primaire observé et le solde stabilisant hors autres ajustements année par année, et la même décomposition pour les pays de l'Union partis de plus de 90 % de dette ; le même contenu existe en CSV, au format long." >}}
+De {{< baisse-val "d3_debut" >}} à {{< baisse-val "annee_fin" >}}, les déficits primaires ont ajouté {{< baisse-val "d3_def_abs" >}} points de PIB au ratio de dette français, l'effet des taux et de la croissance, concentré en {{< baisse-val "d3_creux_lib" >}}, en a retiré {{< baisse-val "d3_tc_abs" >}}, et les autres ajustements en ont ajouté {{< baisse-val "d3_sfa_abs" >}}&nbsp;: une hausse de {{< baisse-val "d3_var_abs" >}} points. Parmi les {{< baisse-val "cmp_n" >}} pays de l'Union partis de plus de {{< baisse-val "seuil_dette" >}}&nbsp;% de dette fin {{< baisse-val "cmp_veille" >}}, les baisses de plus de {{< baisse-val "forte_baisse" >}} points sont celles des {{< baisse-val "cmp_exc_n" >}} pays en excédent primaire moyen, un constat qui dépend du seuil retenu. C'est une décomposition comptable, non une attribution causale.
+{{< /reutiliser >}}

@@ -14,7 +14,7 @@ donnees: [dette_dynamique]
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
   jeu: "dette_dynamique"
   nom: "Why French public debt rises: a decomposition of the change in the debt-to-GDP ratio"
-  description: "Annual decomposition, from {dyn.annee_depart} to {dyn.annee_fin}, of the change in the debt-to-GDP ratio of French general government into the interest effect, the nominal growth effect, the primary balance and stock-flow adjustments; the residual is checked against a second accounting identity. Eurostat series, no value entered by hand."
+  description: "Annual decomposition, from {dyn.annee_depart} to {dyn.annee_fin}, of the change in the debt-to-GDP ratio of French general government into the interest effect, the nominal growth effect, the primary balance and stock-flow adjustments; ratios checked against those published by Eurostat. Eurostat series, no value entered by hand."
   couverture_temporelle: "{dyn.annee_depart}/{dyn.annee_fin}"
   couverture_spatiale: "France"
   variables:
@@ -26,7 +26,6 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
   sources:
     - "https://ec.europa.eu/eurostat/databrowser/view/gov_10dd_edpt1/default/table?lang=fr"
     - "https://ec.europa.eu/eurostat/databrowser/view/gov_10a_main/default/table?lang=fr"
-    - "https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table?lang=fr"
   mots: ["public debt", "France", "primary deficit", "snowball effect", "implicit interest rate", "nominal growth", "Eurostat"]
   fichiers: ["dette_dynamique.csv", "dette_dynamique.json"]
 faq:
@@ -83,7 +82,7 @@ France is a telling case for a question every indebted country faces. Its debt r
 
 - **The interest-growth effect.** All else equal, the year's interest adds to the borrowing requirement, and therefore to the debt; but nominal GDP growth — real growth plus inflation — lowers the ratio even without any repayment. The balance of the two is positive when the implicit interest rate exceeds nominal growth, negative in the opposite case.
 - **The primary deficit.** The gap between public spending and revenue excluding interest. It does not say whether spending is too high or revenue too low: it measures the gap, not its cause.
-- **Stock-flow adjustments.** Debt that moves without passing through the deficit: cash set aside, loans and equity stakes, valuation effects. Here they are obtained as the residual of the identity, then checked against a second accounting identity built on the same series (change in the debt minus the deficit): the two match every year.
+- **Stock-flow adjustments.** Debt that moves without passing through the deficit: cash set aside, loans and equity stakes, valuation effects. Here they are obtained as the residual of the identity: what the other three terms do not account for.
 
 ## Year by year {#annee-par-annee}
 
@@ -128,7 +127,7 @@ This page identifies which accounting components contributed to the rise in the 
 
 ## Where these figures come from {#sources}
 
-Eurostat, general government (S.13), national accounts ESA 2010, in national currency: Maastricht debt (`gov_10dd_edpt1`), interest paid (`gov_10a_main`, D41PAY), net lending or borrowing (B9), nominal GDP (`nama_10_gdp`). The primary balance is the general government balance plus interest paid. Each year, the identity is applied as written above; stock-flow adjustments are the residual, and the script stops if that residual differs from the second accounting identity (change in the debt minus the deficit), computed on the same series. The ratios may differ by a few tenths of a point from first releases (deficit and debt notifications, quarterly accounts), following revisions of the national accounts: this page uses Eurostat's annual series in their latest version. No figure on this page is entered by hand: all come from the same script, re-run with each release of the sources, which also stops if a sentence on the page ceased to be true.
+Eurostat, general government (S.13), national accounts ESA 2010, in national currency: Maastricht debt (`gov_10dd_edpt1`), interest paid (`gov_10a_main`, D41PAY), net lending or borrowing (B9), nominal GDP as published with the deficit and debt notification (`gov_10dd_edpt1`, B1GQ). The primary balance is the general government balance plus interest paid. Each year, the identity is applied as written above; stock-flow adjustments are the residual. The script then compares, year by year, the debt ratio and the primary balance it computes with those Eurostat publishes as a percentage of GDP, and stops beyond a gap of 0.11 point. No figure on this page is entered by hand: all come from the same script, re-run with each release of the sources, which also stops if a sentence on the page ceased to be true.
 
 {{< reutiliser figures="figures_dynamique" jeu="dette_dynamique" sources="Eurostat" donnees="The annual decomposition of the change in the debt-to-GDP ratio, France, with its four terms, the implicit interest rate and nominal growth; the same content is available as CSV, one row per year." >}}
 This page decomposes the change in the French debt-to-GDP ratio, from {{< dyn-val "annee_depart" >}} to {{< dyn-val "annee_fin" >}}, into the interest effect, the nominal growth effect, the primary balance and stock-flow adjustments. Over the period, interest and nominal growth almost cancelled out, and the rise comes mostly from primary deficits, excluding interest. This is an accounting decomposition, not a causal attribution: it does not say why the deficits existed.

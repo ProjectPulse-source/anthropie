@@ -53,6 +53,58 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-03 (matin, suite) — Avis entrant final arbitré et appliqué ; NI COMMITÉ NI POUSSÉ
+
+Arbitrage `D:\PRO\.claude\external-audits\ARBITRATIONS\ENTRANTE_2026-10-03_Solution_Dette_arbitrage.md`. Addition
+complète de la décennie dans le résultat et le résumé ; mécanisme exact dans la FAQ ; légende « S : déficits (+) ou
+excédents (−) primaires » ; Belgique en addition observée ; programme grec jusqu'au 20/08/2018 (MES) ; décompte des
+années au-dessus du repère (neuf de baisse sur onze) ; repli retitré et bornes « de 0 à moins de 2 % » ; limites en
+quatre groupes ; bloc du livre réécrit ; carte « Les déficits ont pesé plus lourd ». 51 gardes ; build, `check-all --ci`,
+audit des liens, 390 et 1 280 px à 0.
+
+### 2026-10-03 (matin) — Contre-expertise de la page construite ARBITRÉE et corrections appliquées ; NI COMMITÉ NI POUSSÉ
+
+Audit `PRO-20261003-064640` (clos), verdict « publier après corrections » ; arbitrage
+`D:\PRO\.claude\external-audits\ARBITRATIONS\PRO-20261003-064640_arbitrage.md`. Cinq corrections bloquantes acceptées :
+ratio et montant distingués dès le chapô (le montant de la dette n'a baissé dans aucun des trois pays en excédent) ;
+allègement taux-croissance de 2016-2025 dit concentré en 2021-2023 ; sensibilité du groupe au seuil (80 et 100 %)
+affichée après la figure ; solde stabilisant dit « hors autres ajustements » partout ; troisième barre « autres
+ajustements » sur la figure des pays. Programmes d'assistance datés et sourcés (Commission européenne, lu le 03/10).
+Générateur : 47 gardes, encours, sensibilité, classe 0-2 % du repli, contrôle de la dette de départ contre le volet 1.
+Build, `check-all --ci`, audit des liens, 390 et 1 280 px à 0 ; mutations rejouées. Ouvert : la formule « s'arrête si
+une phrase cessait d'être vraie » reste sur les autres volets ; la « méthode » promise par le bloc du livre n'est pas
+vérifiée contre le livre.
+
+### 2026-10-03 — Page `/dette-publique-peut-elle-baisser/` CONSTRUITE en local ; volet 1 corrigé (PIB, témoin) ; NI COMMITÉ NI POUSSÉ
+
+Décision de l'auteur (02/10) : « construis la page autour du constat français ». Recherche, test décisif, contre-expertise
+`PRO-20261002-195300` et arbitrage : `D:\PRO\06_PROMOTION\RECHERCHE_SOLUTIONS_DETTE_2026-10-02\`.
+
+- **Page** `content/dette-publique-peut-elle-baisser/_index.md` (français seulement) : de 2016 à 2025, l'effet
+  taux-croissance retire 15,1 points au ratio de dette, les déficits primaires en ajoutent 30,6 ; sept pays partis de
+  plus de 90 % fin 2015 (désignés par une règle) ; solde primaire observé et solde stabilisant ; fenêtres européennes
+  en repli. Jetons `{baisse.*}`, shortcodes `baisse-val` et `baisse-tableau`.
+- **Générateur** `scripts/update_dette_baisse.py` : jeu `dette_baisse` (JSON, CSV long), trois figures SVG et PNG,
+  37 gardes de prose, conservation des années-pays (805 = 795 + 10, motif par écart). Vus mordre : une garde
+  (`--mutation-garde`) et le témoin (`--mutation-pib`). Carte et vignette : `carte_baisse` de `og_dossier_dette.py`.
+  Câblé dans `dette-monde.yml` (après `update_dette_dynamique.py`, qu'il lit) et `data/sources_maj.json`.
+- **Défaut du volet 1 corrigé** (`scripts/update_dette_dynamique.py`) : (1) le « témoin comptable » était
+  algébriquement égal au résidu flux-stock, il ne pouvait rien rejeter ; remplacé par les ratios qu'Eurostat publie en
+  % du PIB (tolérance 0,11 point, bloquant) ; (2) le PIB venait de `nama_10_gdp` en `CP_MEUR`, donc en écus avant 1999 :
+  dette de 1995 à 57,5 % au lieu des 57,8 % publiés (et que `/cout-de-la-dette-publique/` affiche). PIB de la
+  notification désormais (`gov_10dd_edpt1`, B1GQ). Chiffres affichés du volet 1 : départ 57,5 → 57,8 ; fin 115,7 → 115,6 ;
+  hausse 58,2 → 57,7 ; ses gardes passent sans changement de prose. Phrases « seconde identité comptable » réécrites
+  (FR et EN), figures et cartes régénérées.
+- **Barre du dossier : cinquième onglet essayé, MESURÉ, retiré.** À 390 px le dernier onglet finit à 406 px ; à
+  1 280 px les onglets recouvrent le badge de date. La page prend la barre sans onglet actif et se range dans
+  « Prolongements du dossier » (`ressource.prolongement: true`) jusqu'à décision de l'auteur sur la barre.
+- **Contrôles** : build de production (code 0), HTML relu (jetons résolus, FAQPage et Dataset valides), `check-all --ci`
+  à 0, `audit-liens-build.py` à 0 critique, 390 et 1 280 px sans débordement après retrait de l'onglet.
+- **Ouvert** : version anglaise (exclusion déclarée) ; pastille vers la page sur `/cout-de-la-dette-publique/` et
+  `/qui-paie-la-dette-publique/` (la première porte le travail non commité d'une autre session) ; programmes
+  d'assistance de la Grèce, de Chypre et du Portugal cités de mémoire, non relus à la source ; scénarios officiels et
+  cadre juridique européen hors de cette page ; contre-expertise de la page construite ; `llms.txt`.
+
 ### 2026-10-02 — Module de mise à jour observé depuis GitHub ; exemplaire de consultation en bandeau, POUSSÉ
 
 - **Témoin des détecteurs lancé depuis GitHub** (`gh workflow run maj-sources.yml -f essai=true`). Premier passage

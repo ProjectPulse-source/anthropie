@@ -9,8 +9,12 @@ du ratio dette/PIB. Identité (administrations publiques, France, Eurostat, monn
                   - pb_t                       solde primaire / PIB (excédent > 0 : il fait BAISSER le ratio)
                   + sfa_t                      ajustements flux-stock (résidu)
 
-TÉMOIN INDÉPENDANT, bloquant : le résidu doit égaler (ΔDette_t + B9_t) / PIB_t, la dette qui bouge sans passer par le
-déficit, calculée par une autre voie. Un écart signale une série incohérente : rien n'est écrit.
+TÉMOIN, bloquant (02/10/2026) : les ratios qu'Eurostat PUBLIE en % du PIB (gov_10dd_edpt1, PC_GDP : dette, solde,
+intérêts), que le calcul n'utilise pas. Un écart de plus de 0,11 point sur la dette ou le solde primaire d'une année :
+rien n'est écrit. L'ancien « témoin » ((ΔDette_t + B9_t) / PIB_t) était ALGÉBRIQUEMENT égal au résidu flux-stock : il ne
+pouvait rien rejeter. Le PIB est celui de la notification (gov_10dd_edpt1, B1GQ, monnaie nationale) : jusqu'au 02/10 le
+calcul divisait par nama_10_gdp en CP_MEUR, donc par des écus avant 1999 — dette de 1995 à 57,5 % au lieu des 57,8 %
+publiés. Trouvé en faisant mordre le nouveau témoin (test décisif de /dette-publique-peut-elle-baisser/).
 
 Les phrases que la page affirme sont recalculées ici (gardes de prose) : si une nouvelle donnée les dément, arrêt.
 SVG et PNG sont produits ensemble ou pas du tout (cairosvg) ; les fiches « Réutiliser » sont lues dans le SVG.
@@ -49,6 +53,7 @@ PAGE_URL = "stephane-lalut.com/pourquoi-la-dette-publique-augmente/"
 # front matter de la page .en.md le jour où elle est créée (même forme que /en/cost-of-french-public-debt/).
 PAGE_URL_EN = "stephane-lalut.com/en/why-does-public-debt-rise/"
 PERIODES = [(1996, 2007, "1996-2007"), (2008, 2019, "2008-2019"), (2020, None, "2020-%s")]
+TOL_TEMOIN = 0.11   # ratios publiés à une décimale ; le solde primaire additionne deux arrondis
 
 W = 720
 FONT = "Inter, 'Helvetica Neue', Arial, sans-serif"
@@ -118,7 +123,8 @@ def signe_en(v: float, dec: int = 1) -> str:
 # ------------------------------------------------------------------ calcul
 def decomposition():
     D = eurostat("gov_10dd_edpt1", na_item="GD", sector="S13", unit="MIO_NAC")
-    Y = eurostat("nama_10_gdp", na_item="B1GQ", unit="CP_MEUR")
+    Y = eurostat("gov_10dd_edpt1", na_item="B1GQ", sector="S1", unit="MIO_NAC")
+    pub = {k: eurostat("gov_10dd_edpt1", na_item=k, sector="S13", unit="PC_GDP") for k in ("GD", "B9", "D41PAY")}
     I = eurostat("gov_10a_main", na_item="D41PAY", sector="S13", unit="MIO_NAC")
     B9 = eurostat("gov_10a_main", na_item="B9", sector="S13", unit="MIO_NAC")
     ans = sorted(a for a in D if a - 1 in D and a in Y and a - 1 in Y and a in I and a in B9)
@@ -131,9 +137,11 @@ def decomposition():
         interets, croissance = i / (1 + g) * d0, -g / (1 + g) * d0
         pb = (B9[a] + I[a]) / Y[a] * 100
         sfa = (d1 - d0) - (interets + croissance) + pb
-        temoin = ((D[a] - D[a - 1]) + B9[a]) / Y[a] * 100
-        if abs(sfa - temoin) > 1e-6:
-            fail("%d : residu flux-stock %.4f != temoin comptable %.4f" % (a, sfa, temoin))
+        if not all(a in pub[k] for k in pub):
+            fail("%d : ratio publie absent (temoin)" % a)
+        e_d, e_pb = d1 - pub["GD"][a], pb - (pub["B9"][a] + pub["D41PAY"][a])
+        if abs(e_d) > TOL_TEMOIN or abs(e_pb) > TOL_TEMOIN:
+            fail("%d : ecart aux ratios publies par Eurostat, dette %+.2f pt, solde primaire %+.2f pt" % (a, e_d, e_pb))
         rows.append(dict(annee=a, dette_pct_pib=d1, variation=d1 - d0, effet_interets=interets,
                          effet_croissance=croissance, effet_taux_croissance=interets + croissance,
                          contribution_solde_primaire=-pb, flux_stock=sfa, taux_implicite_pct=i * 100,
@@ -161,7 +169,7 @@ TXT = {
                          "croissance du PIB nominal en a effacé %s : leur effet net est de %s point. Les déficits primaires, hors intérêts, "
                          "ajoutent %s points, les ajustements flux-stock %s. La dette atteint %s %% fin %d. Décomposition comptable, non causale."),
         "legende_cascade": "En points de PIB : bleu, le stock ; orange, ce qui le fait monter ; gris, ce qui le fait baisser.",
-        "src_cascade": "Eurostat gov_10dd_edpt1 (dette), gov_10a_main (B9, D41PAY), nama_10_gdp (PIB), France, %d-%d",
+        "src_cascade": "Eurostat gov_10dd_edpt1 (dette), gov_10a_main (B9, D41PAY), PIB de la notification, France, %d-%d",
         "note_cascade": "Décomposition comptable de la variation du ratio, non une attribution causale ; les termes se compensent en partie.",
         "titre_annuelle": "Année par année : ce qui a fait monter ou baisser le ratio, %d-%d",
         "desc_annuelle": ("Barres empilées par année, en points de PIB : en orange la contribution des déficits primaires, en bleu l'effet "
@@ -169,7 +177,7 @@ TXT = {
                           "ratio. Les déficits primaires portent la hausse de 2008 à 2025 ; l'effet taux-croissance devient fortement "
                           "négatif en 2021-2023, quand la croissance du PIB nominal, portée notamment par l'inflation, s'accélère."),
         "legende_annuelle": ("déficits primaires", "effet taux-croissance", "ajustements flux-stock", "variation du ratio"),
-        "src_annuelle": "Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), nama_10_gdp, France, %d-%d",
+        "src_annuelle": "Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), France, %d-%d",
         "note_annuelle": "Points de PIB par an ; la somme des trois barres égale la variation (point noir), au centième près.",
         "montre_cascade": ("Sur la période, les intérêts et la croissance nominale se sont presque annulés ; la hausse de la dette "
                            "tient pour l'essentiel aux déficits primaires, hors intérêts."),
@@ -188,7 +196,7 @@ TXT = {
                          "interest, add %s points, stock-flow adjustments %s. The debt reaches %s%% at the end of %d. Accounting "
                          "decomposition, not a causal one."),
         "legende_cascade": "In points of GDP: blue, the stock; orange, what pushes it up; grey, what pushes it down.",
-        "src_cascade": "Eurostat gov_10dd_edpt1 (debt), gov_10a_main (B9, D41PAY), nama_10_gdp (GDP), France, %d-%d",
+        "src_cascade": "Eurostat gov_10dd_edpt1 (debt), gov_10a_main (B9, D41PAY), notification GDP, France, %d-%d",
         "note_cascade": "Accounting decomposition of the change in the ratio, not a causal attribution; the terms partly offset each other.",
         "titre_annuelle": "Year by year: what pushed the ratio up or down, %d-%d",
         "desc_annuelle": ("Stacked bars per year, in points of GDP: in orange the contribution of primary deficits, in blue the net "
@@ -196,7 +204,7 @@ TXT = {
                           "the ratio. Primary deficits drive the rise from 2008 to 2025; the interest-growth effect turns sharply "
                           "negative in 2021-2023, when nominal GDP growth, driven in part by inflation, accelerates."),
         "legende_annuelle": ("primary deficits", "interest-growth effect", "stock-flow adjustments", "change in the ratio"),
-        "src_annuelle": "Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), nama_10_gdp, France, %d-%d",
+        "src_annuelle": "Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), France, %d-%d",
         "note_annuelle": "Points of GDP per year; the three bars add up to the change (black dot), to within a hundredth.",
         "montre_cascade": ("Over the period, interest and nominal growth almost cancelled out; the rise in the debt is mostly due to "
                            "primary deficits, excluding interest."),
@@ -450,7 +458,7 @@ def main() -> int:
                         "definitions": {"effet_interets": "intérêts de l'année rapportés au PIB, via le taux implicite appliqué à la dette de départ",
                                         "effet_croissance": "érosion du ratio par la hausse du PIB nominal (croissance réelle et inflation)",
                                         "contribution_solde_primaire": "déficit hors intérêts, en points de PIB (négatif en cas d'excédent)",
-                                        "flux_stock": "variation de dette qui ne passe pas par le déficit (trésorerie, actifs, valorisation) ; résidu, contrôlé par une seconde identité comptable (variation de dette moins déficit)"}},
+                                        "flux_stock": "variation de dette qui ne passe pas par le déficit (trésorerie, actifs, valorisation) ; résidu de l'identité ; les ratios de dette et de solde sont contrôlés contre ceux que publie Eurostat"}},
                "depart": {"annee": a0, "dette_pct_pib": d_depart}, "annees": rows, "total": total,
                "periodes": [dict(periode=(lib if b else lib % rows[-1]["annee"]), **t) for (a, b, lib), t in zip(PERIODES, per)],
                "affichage": aff, "affichage_en": aff_en}

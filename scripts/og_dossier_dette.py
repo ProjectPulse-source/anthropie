@@ -302,6 +302,55 @@ def carte_dynamique() -> None:
            (C2, "Primary deficits: +%s pts" % E["deficits_primaires"]), (C1, "Debt: %s → %s%%" % (E["dette_depart"], E["dette_fin"]))])
 
 
+def figure_decennies_mini(d: ImageDraw.ImageDraw, dec: list[dict]) -> None:
+    """Volet « Peut-elle baisser » : la figure signature réduite — par décennie, effet taux-croissance, déficits
+    primaires, flux-stock. Orange : fait monter le ratio ; gris : le fait baisser. Valeurs lues dans data/dette_baisse.json."""
+    x0, x1, top, bas = 660, 1126, 100, 424
+    vals = [f[k] for f in dec for k in ("taux_croissance", "deficits_primaires", "flux_stock")]
+    vmax, vmin = (int(max(vals) / 10) + 1) * 10, -(int(-min(vals) / 10) + 1) * 10
+
+    def Y(v):
+        return bas - (bas - top) * (v - vmin) / (vmax - vmin)
+
+    for g in range(vmin, vmax + 1, 10):
+        d.line([(x0, Y(g)), (x1, Y(g))], fill=GRID, width=3 if g == 0 else 1)
+    pas = (x1 - x0) / len(dec)
+    fa = font("inter", 18, 500)
+    for k, f in enumerate(dec):
+        gx = x0 + pas * k
+        bw = pas * 0.76 / 3
+        for j, cle in enumerate(("taux_croissance", "deficits_primaires", "flux_stock")):
+            v = f[cle]
+            x = gx + pas * 0.12 + bw * j
+            y0, y1 = (Y(v), Y(0)) if v >= 0 else (Y(0), Y(v))
+            d.rectangle([x + 3, y0, x + bw - 3, y1], fill=C2 if v >= 0 else SEC)
+        lib = "%d-%d" % (f["debut"], f["fin"])
+        d.text((gx + pas / 2 - fa.getlength(lib) / 2, bas + 14), lib, font=fa, fill=URL_GREY)
+    d.text((x0, bas + 40), "Dette publique française, en points de PIB par décennie :", font=font("inter", 17, 400), fill=URL_GREY)
+    d.text((x0, bas + 62), "taux-croissance, déficits primaires, flux-stock", font=font("inter", 17, 400), fill=URL_GREY)
+
+
+def carte_baisse() -> None:
+    """Volet 5 (02/10/2026) : « La dette peut-elle baisser ? ». Chiffres lus dans le jeu publié ; le contraste annoncé
+    (taux et croissance allègent, les déficits primaires poussent davantage, la dette monte) est contrôlé ici."""
+    f = ROOT / "data" / "dette_baisse.json"
+    if not f.is_file():
+        fail("jeu de données absent : %s — lancer scripts/update_dette_baisse.py d'abord" % f)
+    j = json.loads(f.read_text(encoding="utf-8"))
+    A, dec = j["affichage"], j["france"]["decennies"]
+    d3 = dec[-1]
+    if not (d3["taux_croissance"] < 0 and d3["deficits_primaires"] > -d3["taux_croissance"] and d3["variation"] > 0):
+        fail("carte baisse : le contraste annoncé n'est plus vrai dans les données")
+    carte("og-dette-baisse.jpg",
+          ["Les déficits", "ont pesé plus lourd"],
+          "%s : plus que l'allègement par les taux et la croissance." % A["d3_lib"],
+          "Eurostat, France %s-%s · CC BY 4.0" % (A["annee_debut"], A["annee_fin"]),
+          "stephane-lalut.com/dette-publique-peut-elle-baisser/",
+          lambda d: figure_decennies_mini(d, dec),
+          [(SEC, "Taux et croissance : −%s pts" % A["d3_tc_abs"]), (C2, "Déficits primaires : +%s pts" % A["d3_def_abs"]),
+           (C1, "Dette : %s → %s %%" % (A["d3_dette_deb"], A["d3_dette_fin"]))])
+
+
 def carte_monde() -> None:
     """Volet 3, comparaison internationale (avis du 30/09 : l'aperçu doit montrer la découverte de la page).
     Tout vient de data/dette_monde.json : la paire de faux jumeaux (règle publiée), et les chaînes
@@ -405,9 +454,11 @@ def main() -> int:
     if "--monde" in sys.argv[1:]:
         carte_monde()
         carte_dynamique()
+        carte_baisse()
         return 0
     carte_monde()
     carte_dynamique()
+    carte_baisse()
     carte_collectivites()
     qp = ROOT / "data" / "qui_paie_donnees.json"
     do = ROOT / "data" / "dette_officielle.json"

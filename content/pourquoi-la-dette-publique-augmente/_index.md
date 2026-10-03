@@ -14,7 +14,7 @@ donnees: [dette_dynamique]
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
   jeu: "dette_dynamique"
   nom: "Pourquoi la dette publique française augmente : décomposition de la variation du ratio dette/PIB"
-  description: "Décomposition annuelle, de {dyn.annee_depart} à {dyn.annee_fin}, de la variation du ratio dette/PIB des administrations publiques françaises en effet des intérêts, effet de la croissance nominale, solde primaire et ajustements flux-stock ; résidu contrôlé par une seconde identité comptable. Séries Eurostat, aucune valeur saisie à la main."
+  description: "Décomposition annuelle, de {dyn.annee_depart} à {dyn.annee_fin}, de la variation du ratio dette/PIB des administrations publiques françaises en effet des intérêts, effet de la croissance nominale, solde primaire et ajustements flux-stock ; ratios contrôlés contre ceux que publie Eurostat. Séries Eurostat, aucune valeur saisie à la main."
   couverture_temporelle: "{dyn.annee_depart}/{dyn.annee_fin}"
   couverture_spatiale: "France"
   variables:
@@ -26,7 +26,6 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
   sources:
     - "https://ec.europa.eu/eurostat/databrowser/view/gov_10dd_edpt1/default/table?lang=fr"
     - "https://ec.europa.eu/eurostat/databrowser/view/gov_10a_main/default/table?lang=fr"
-    - "https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table?lang=fr"
   mots: ["dette publique", "France", "déficit primaire", "effet boule de neige", "taux implicite", "croissance nominale", "Eurostat"]
   fichiers: ["dette_dynamique.csv", "dette_dynamique.json"]
 faq:
@@ -81,7 +80,7 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 - **L'effet taux–croissance.** Toutes choses égales par ailleurs, les intérêts de l'année accroissent le besoin de financement, donc la dette&nbsp;; mais la croissance du PIB nominal — croissance réelle et inflation — fait baisser le ratio même sans remboursement. Le solde des deux est positif quand le taux implicite dépasse la croissance nominale, négatif dans le cas inverse.
 - **Le déficit primaire.** L'écart entre dépenses et recettes publiques hors intérêts. Il ne dit pas si les dépenses sont trop hautes ou les recettes trop basses&nbsp;: il mesure l'écart, pas sa cause.
-- **Les ajustements flux-stock.** La dette qui bouge sans passer par le déficit&nbsp;: trésorerie mise en réserve, prêts et participations, écarts de valorisation. Ils sont obtenus ici comme résidu de l'identité, puis contrôlés par une seconde identité comptable, fondée sur les mêmes séries (variation de la dette moins déficit)&nbsp;: les deux coïncident chaque année.
+- **Les ajustements flux-stock.** La dette qui bouge sans passer par le déficit&nbsp;: trésorerie mise en réserve, prêts et participations, écarts de valorisation. Ils sont obtenus ici comme résidu de l'identité&nbsp;: ce que les trois autres termes n'expliquent pas.
 
 ## Année par année {#annee-par-annee}
 
@@ -105,7 +104,7 @@ Sur les {{< dyn-val "annees_total" >}} années de la série, le solde primaire n
 - **Une décomposition comptable, non une explication causale.** Elle dit par quel terme la dette a bougé&nbsp;; elle ne dit pas pourquoi les déficits ont existé, ni s'ils étaient évitables.
 - **Des termes qui ne sont pas indépendants.** En récession, les recettes baissent et certaines dépenses montent&nbsp;: le déficit primaire dépend lui-même de la croissance.
 - **L'inflation n'efface pas la dette sans coût.** Elle réduit la valeur réelle des créances nominales, et cette perte a des porteurs&nbsp;: c'est l'objet de [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/)
-- **Rien sur l'avenir.** La suite dépend de l'écart entre le taux implicite et la croissance nominale, et du solde primaire. En {{< dyn-val "annee_fin" >}}, taux implicite ({{< dyn-val "taux_implicite_dernier" >}}&nbsp;%) et croissance nominale ({{< dyn-val "croissance_derniere" >}}&nbsp;%) étaient presque égaux&nbsp;: l'effet taux–croissance était proche de zéro ({{< dyn-val "net_dernier" >}} point).
+- **Rien sur l'avenir.** La suite dépend de l'écart entre le taux implicite et la croissance nominale, et du solde primaire&nbsp;: ce qu'il a fallu ailleurs pour que la dette baisse est l'objet de [La dette publique peut-elle baisser&nbsp;?](/dette-publique-peut-elle-baisser/) En {{< dyn-val "annee_fin" >}}, taux implicite ({{< dyn-val "taux_implicite_dernier" >}}&nbsp;%) et croissance nominale ({{< dyn-val "croissance_derniere" >}}&nbsp;%) étaient presque égaux&nbsp;: l'effet taux–croissance était proche de zéro ({{< dyn-val "net_dernier" >}} point).
 - **Une série qui commence en {{< dyn-val "annee_depart" >}}.** Les intérêts harmonisés d'Eurostat ne remontent pas plus loin&nbsp;; la courbe longue de la dette, depuis 1978, est dans [Combien coûte la dette publique&nbsp;?](/cout-de-la-dette-publique/)
 
 ## Questions fréquentes {#questions}
@@ -118,6 +117,7 @@ Sur les {{< dyn-val "annees_total" >}} années de la série, le solde primaire n
 - [Combien coûte la dette publique&nbsp;?](/cout-de-la-dette-publique/)
 - [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/)
 - [Et ailleurs&nbsp;?](/dette-publique-comparaison-internationale/)
+- [Peut-elle baisser&nbsp;?](/dette-publique-peut-elle-baisser/)
 {{< /pastilles >}}
 
 {{< appel-livre slug="dette-publique-qui-paie-vraiment" sur="Pour prolonger l’analyse" avis="non" >}}
@@ -126,7 +126,7 @@ Cette page montre par quels termes la dette a monté. Elle ne dit pas qui en sup
 
 ## D'où viennent ces chiffres {#sources}
 
-Eurostat, administrations publiques (S.13), comptes nationaux SEC 2010, en monnaie nationale&nbsp;: dette de Maastricht (`gov_10dd_edpt1`), intérêts versés (`gov_10a_main`, D41PAY), capacité ou besoin de financement (B9), PIB nominal (`nama_10_gdp`). Le solde primaire est le solde des administrations publiques augmenté des intérêts versés. Chaque année, l'identité est appliquée telle qu'écrite plus haut&nbsp;; les ajustements flux-stock sont le résidu, et le script s'arrête si ce résidu diffère de la seconde identité comptable (variation de la dette moins déficit), calculée sur les mêmes séries. Les ratios peuvent différer de quelques dixièmes de point des premières publications (notification de déficit et de dette, comptes trimestriels), à la suite des révisions des comptes nationaux&nbsp;: cette page utilise les séries annuelles d'Eurostat dans leur dernière version. Aucun chiffre de cette page n'est saisi à la main&nbsp;: tous viennent du même script, relancé à chaque publication des sources, qui s'arrête aussi si une phrase de la page cessait d'être vraie.
+Eurostat, administrations publiques (S.13), comptes nationaux SEC 2010, en monnaie nationale&nbsp;: dette de Maastricht (`gov_10dd_edpt1`), intérêts versés (`gov_10a_main`, D41PAY), capacité ou besoin de financement (B9), PIB nominal publié avec la notification de déficit et de dette (`gov_10dd_edpt1`, B1GQ). Le solde primaire est le solde des administrations publiques augmenté des intérêts versés. Chaque année, l'identité est appliquée telle qu'écrite plus haut&nbsp;; les ajustements flux-stock sont le résidu. Le script compare ensuite, année par année, le ratio de dette et le solde primaire qu'il calcule à ceux qu'Eurostat publie en pourcentage du PIB, et s'arrête au-delà de 0,11 point d'écart. Aucun chiffre de cette page n'est saisi à la main&nbsp;: tous viennent du même script, relancé à chaque publication des sources, qui s'arrête aussi si une phrase de la page cessait d'être vraie.
 
 {{< reutiliser figures="figures_dynamique" jeu="dette_dynamique" sources="Eurostat" donnees="La décomposition annuelle de la variation du ratio dette/PIB, France, avec ses quatre termes, le taux implicite et la croissance nominale ; le même contenu existe en CSV, une ligne par année." >}}
 Cette page décompose la variation du ratio dette/PIB français, de {{< dyn-val "annee_depart" >}} à {{< dyn-val "annee_fin" >}}, en effet des intérêts, effet de la croissance nominale, solde primaire et ajustements flux-stock. Sur la période, intérêts et croissance nominale se sont presque annulés, et la hausse tient pour l'essentiel aux déficits primaires, hors intérêts. C'est une décomposition comptable, non une attribution causale&nbsp;: elle ne dit pas pourquoi les déficits ont existé.

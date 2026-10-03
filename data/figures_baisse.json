@@ -1,0 +1,28 @@
+{
+ "fr": [
+  {
+   "id": "decennies",
+   "fichier": "dette-baisse-decennies",
+   "titre": "France : ce qui a fait monter ou baisser la dette, décennie par décennie",
+   "montre": "De décennie en décennie, le terme qui fait monter la dette française change ; sur la dernière, taux et croissance l'ont fait baisser et les déficits primaires l'ont fait monter davantage.",
+   "source": "Eurostat gov_10dd_edpt1 (dette, PIB), gov_10a_main (B9, D41PAY), France, 1996-2025",
+   "precaution": "Points de PIB cumulés sur dix ans ; décomposition comptable, non causale : les trois termes ne sont pas indépendants."
+  },
+  {
+   "id": "comparaison",
+   "fichier": "dette-baisse-comparaison",
+   "titre": "Sept pays à plus de 90 % de dette fin 2015 : dix ans après",
+   "montre": "Parmi les pays partis d'une dette au moins aussi élevée, l'effet des taux et de la croissance a été favorable partout ; la dette a baissé là où le solde primaire était excédentaire en moyenne.",
+   "source": "Eurostat gov_10dd_edpt1 (dette, PIB), gov_10a_main (B9, D41PAY), 2016-2025 ; pays triés par variation de la dette",
+   "precaution": "Points de PIB cumulés ; Grèce, Chypre et Portugal ont reçu des financements officiels (2010-2018). Comparaison comptable, non causale."
+  },
+  {
+   "id": "stabilisant",
+   "fichier": "dette-baisse-stabilisant",
+   "titre": "France : le solde primaire observé et celui qui aurait stabilisé la dette",
+   "montre": "Le solde primaire qui stabilise la dette change chaque année avec les taux et la croissance ; le solde observé est resté le plus souvent en dessous.",
+   "source": "Eurostat gov_10dd_edpt1 (dette, PIB), gov_10a_main (B9, D41PAY), France, 1996-2025",
+   "precaution": "En % du PIB ; solde stabilisant = (taux implicite − croissance nominale) / (1 + croissance) × dette de l'année précédente, hors autres ajustements (flux-stock)."
+  }
+ ]
+}

@@ -50,7 +50,11 @@
 {{- /* « collectivites » (01/10/2026) : un PROLONGEMENT, pas un volet (règle 1 du modèle : un cas particulier n'est jamais
        un onglet) — aucun onglet actif, millésime Eurostat de son jeu. Une mention « · prolongement » dans le titre a été
        MESURÉE puis retirée le même jour : +50 px à 390 px, badge sur le 4e onglet sur bureau (cf. LARGEUR ci-dessus). */ -}}
-{{- if not (in (slice "hausse" "1" "2" "3" "collectivites") $v) -}}{{ errorf "dossier-dette: volet \"%s\" inconnu (attendu hausse, 1, 2, 3 ou collectivites) dans %s" $v .Page.File.Path }}{{- end -}}
+{{- /* « baisse » (02/10/2026) : « La dette peut-elle baisser ? ». Un CINQUIÈME ONGLET a été essayé et MESURÉ le 03/10 :
+       à 390 px le dernier onglet finit à 406 px (16 px hors écran) ; à 1 280 px les onglets finissent à 1 182 px et
+       recouvrent le badge de date (1 030-1 136). La barre ne porte donc pas cinq onglets sans être redessinée : la page
+       prend la barre SANS onglet actif, comme un prolongement, jusqu'à décision de l'auteur sur la barre. */ -}}
+{{- if not (in (slice "hausse" "1" "2" "3" "baisse" "collectivites") $v) -}}{{ errorf "dossier-dette: volet \"%s\" inconnu (attendu hausse, 1, 2, 3, baisse ou collectivites) dans %s" $v .Page.File.Path }}{{- end -}}
 {{- $en := eq .Page.Lang "en" -}}
 {{- $maj := "" -}}
 {{- $majTitre := "" -}}
@@ -64,6 +68,11 @@
   {{- with site.Data.dette_dynamique -}}
     {{- $maj = printf "Eurostat %s" .affichage.annee_fin -}}
     {{- $majTitre = cond $en "Latest year of the Eurostat data decomposed on this page" "Dernière année des données Eurostat décomposées sur cette page — c'est le millésime des DONNÉES, non la date de relecture du texte" -}}
+  {{- end -}}
+{{- else if eq $v "baisse" -}}
+  {{- with site.Data.dette_baisse -}}
+    {{- $maj = printf "Eurostat %s" .affichage.annee_fin -}}
+    {{- $majTitre = "Dernière année des données Eurostat de cette page — c'est le millésime des DONNÉES, non la date de relecture du texte" -}}
   {{- end -}}
 {{- else if eq $v "collectivites" -}}
   {{- with site.Data.dette_collectivites -}}

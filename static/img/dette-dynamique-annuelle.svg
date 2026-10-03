@@ -18,22 +18,22 @@
 <text x="34" y="101.6" font-size="10" fill="#96928f" text-anchor="end">+16</text>
 <line x1="40" y1="70.0" x2="710" y2="70.0" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="34" y="73.0" font-size="10" fill="#96928f" text-anchor="end">+20</text>
-<rect x="43.4" y="210.9" width="15.6" height="2.0" fill="#eb6834"/>
-<rect x="43.4" y="198.2" width="15.6" height="12.7" fill="#184f95"/>
-<rect x="43.4" y="195.2" width="15.6" height="3.0" fill="#c9c5c0"/>
-<circle cx="51.2" cy="195.2" r="3.2" fill="#26262f" stroke="#ffffff" stroke-width="1"/>
-<rect x="65.7" y="211.7" width="15.6" height="1.2" fill="#eb6834"/>
-<rect x="65.7" y="192.7" width="15.6" height="19.0" fill="#184f95"/>
+<rect x="43.4" y="210.8" width="15.6" height="2.0" fill="#eb6834"/>
+<rect x="43.4" y="196.0" width="15.6" height="14.8" fill="#184f95"/>
+<rect x="43.4" y="192.9" width="15.6" height="3.1" fill="#c9c5c0"/>
+<circle cx="51.2" cy="192.9" r="3.2" fill="#26262f" stroke="#ffffff" stroke-width="1"/>
+<rect x="65.7" y="211.7" width="15.6" height="1.1" fill="#eb6834"/>
+<rect x="65.7" y="200.7" width="15.6" height="11.0" fill="#184f95"/>
 <rect x="65.7" y="212.9" width="15.6" height="2.3" fill="#c9c5c0"/>
-<circle cx="73.5" cy="195.0" r="3.2" fill="#26262f" stroke="#ffffff" stroke-width="1"/>
+<circle cx="73.5" cy="202.9" r="3.2" fill="#26262f" stroke="#ffffff" stroke-width="1"/>
 <rect x="88.0" y="212.9" width="15.6" height="7.1" fill="#eb6834"/>
-<rect x="88.0" y="208.0" width="15.6" height="4.8" fill="#184f95"/>
-<rect x="88.0" y="205.6" width="15.6" height="2.4" fill="#c9c5c0"/>
-<circle cx="95.8" cy="212.8" r="3.2" fill="#26262f" stroke="#ffffff" stroke-width="1"/>
+<rect x="88.0" y="207.3" width="15.6" height="5.6" fill="#184f95"/>
+<rect x="88.0" y="204.9" width="15.6" height="2.4" fill="#c9c5c0"/>
+<circle cx="95.8" cy="212.0" r="3.2" fill="#26262f" stroke="#ffffff" stroke-width="1"/>
 <rect x="110.3" y="212.9" width="15.6" height="11.0" fill="#eb6834"/>
-<rect x="110.3" y="209.2" width="15.6" height="3.6" fill="#184f95"/>
+<rect x="110.3" y="206.4" width="15.6" height="6.5" fill="#184f95"/>
 <rect x="110.3" y="223.8" width="15.6" height="0.3" fill="#c9c5c0"/>
-<circle cx="118.2" cy="220.5" r="3.2" fill="#26262f" stroke="#ffffff" stroke-width="1"/>
+<circle cx="118.2" cy="217.7" r="3.2" fill="#26262f" stroke="#ffffff" stroke-width="1"/>
 <rect x="132.7" y="212.9" width="15.6" height="11.8" fill="#eb6834"/>
 <rect x="132.7" y="224.6" width="15.6" height="2.2" fill="#184f95"/>
 <rect x="132.7" y="211.1" width="15.6" height="1.8" fill="#c9c5c0"/>
@@ -139,10 +139,10 @@
 <rect x="668.7" y="212.9" width="15.6" height="12.4" fill="#184f95"/>
 <rect x="668.7" y="178.1" width="15.6" height="8.2" fill="#c9c5c0"/>
 <circle cx="676.5" cy="190.5" r="3.2" fill="#26262f" stroke="#ffffff" stroke-width="1"/>
-<rect x="691.0" y="192.3" width="15.6" height="20.5" fill="#eb6834"/>
-<rect x="691.0" y="191.5" width="15.6" height="0.9" fill="#184f95"/>
-<rect x="691.0" y="191.0" width="15.6" height="0.4" fill="#c9c5c0"/>
-<circle cx="698.8" cy="191.0" r="3.2" fill="#26262f" stroke="#ffffff" stroke-width="1"/>
+<rect x="691.0" y="192.4" width="15.6" height="20.5" fill="#eb6834"/>
+<rect x="691.0" y="212.9" width="15.6" height="0.1" fill="#184f95"/>
+<rect x="691.0" y="191.9" width="15.6" height="0.4" fill="#c9c5c0"/>
+<circle cx="698.8" cy="192.0" r="3.2" fill="#26262f" stroke="#ffffff" stroke-width="1"/>
 <text x="698.8" y="284" font-size="10" fill="#55524f" text-anchor="middle">2025</text>
 <rect x="40" y="36" width="10" height="10" fill="#eb6834"/>
 <text x="54" y="45" font-size="11" fill="#55524f">déficits primaires</text>
@@ -153,7 +153,7 @@
 <circle cx="567" cy="41" r="3.2" fill="#26262f"/>
 <text x="575" y="45" font-size="11" fill="#55524f">variation du ratio</text>
 <line x1="0" y1="304.0" x2="720" y2="304.0" stroke="#dcd8d3"/>
-<text x="0" y="317.0" font-size="9" fill="#55524f">Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), nama_10_gdp, France, 1996-2025</text>
+<text x="0" y="317.0" font-size="9" fill="#55524f">Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), France, 1996-2025</text>
 <text x="0" y="329.0" font-size="9" fill="#55524f">Points de PIB par an ; la somme des trois barres égale la variation (point noir), au centième près.</text>
 <text x="0" y="341.0" font-size="9" fill="#96928f">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/pourquoi-la-dette-publique-augmente/</text>
 </svg>

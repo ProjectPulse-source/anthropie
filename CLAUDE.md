@@ -156,6 +156,11 @@ sous-titres propres, à déclarer alors par bloc dans `content/ressources/_index
    cœur de la crise sanitaire »).
 4. **Un contrôle indépendant de la méthode** quand une décomposition ou une identité est publiée (ex. : résidu
    flux-stock = témoin comptable) ; test décisif **avant** d'écrire la page — sans lui, pas de page.
+   ⚠ **Un témoin se vérifie par l'algèbre puis par mutation** : celui du volet 1 ((ΔDette + B9) / PIB) était identique
+   au résidu qu'il devait contrôler, donc incapable de rien rejeter, et a laissé passer un PIB en écus avant 1999
+   (dette de 1995 à 57,5 % au lieu de 57,8 %) du 30/09 au 03/10/2026. Témoin retenu depuis : les ratios qu'Eurostat
+   **publie** en % du PIB (`gov_10dd_edpt1`, PC_GDP), que le calcul n'utilise pas. Tout ratio se calcule sur le PIB
+   de la notification (`gov_10dd_edpt1`, B1GQ, MIO_NAC), jamais sur `nama_10_gdp` en `CP_MEUR`.
 5. **Figures** : SVG et PNG produits **ensemble ou pas du tout** ; titre, source et précaution imprimés dans l'image,
    fiches « Réutiliser » **lues dans le SVG** ; langage graphique du site (bleu = stock, orange = coût, gris = ce
    qui fait baisser).
