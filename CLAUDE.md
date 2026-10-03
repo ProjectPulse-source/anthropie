@@ -138,9 +138,14 @@ dossier » (option B, 01/10/2026 : elle garde `donnees:`, donc les critères blo
 `{{< dossier-dette volet="prolongement" >}}`. Source de la page en gris dans l'en-tête ; tout changement de libellé se
 remesure (bascule vers les libellés courts sous 968 px de barre). **Toutes les barres de dossier passent par un seul
 organe** (auteur, 03/10/2026 : « pour chaque dossier, le même type d'architecture que pour Dette ») :
-`partials/dossier-barre.html` dessine, les shortcodes préparent (`dossier-dette`, `enseignants-themes`, et `dossier`
-pour tout autre bloc — onglets = pages du même `ressource.bloc`, libellés `onglet.long`/`court`/`long_en`, aucune barre
-sous deux entrées). Une page neuve d'un bloc entre dans sa barre sans rien toucher d'autre que son front matter. Rien à déclarer dans l'index : le
+`partials/dossier-barre.html` dessine. **La barre se pose seule** : le gabarit (`partials/barre-auto.html`, appelé par
+`_default/list.html` et `premier-coup/list.html`) la met sur toute page qui déclare `ressource.bloc` — barre du bloc
+(`barre-bloc.html` : onglets = pages du bloc, libellés `onglet.long`/`court`/`role`/`long_en`, rien sous deux entrées),
+barre de discipline si le bloc déclare `disciplines` (`barre-discipline.html`), aucune si le bloc déclare
+`barre: "propre"` (dette : chaque page appelle `dossier-dette volet="…"`). **Une page neuve n'a rien d'autre à faire que
+déclarer son bloc** (et ses libellés d'onglet) : elle entre dans l'index, dans sa barre et dans celle des autres pages ;
+un nouveau dossier = un bloc déclaré dans `content/ressources/_index*.md`. Essai rejoué le 03/10 (copie du site, trois
+pages témoins) : deuxième page d'un bloc, quatrième thème SES, première page de Littérature. Rien à déclarer dans l'index : le
 tri se déduit des pages (`layouts/ressources/list.html`, partials `ressource-entree.html` et `ressource-encart.html`).
 **Une nouvelle ressource de données fait produire sa vignette par le générateur de sa carte de partage**, dans le même
 passage et avec le même dessin sur fond blanc (modèle : `carte()` de `scripts/og_dossier_dette.py`) ; sa sortie entre
@@ -229,10 +234,11 @@ demander, aucune fenêtre d'attente ; une page se met en ligne dès qu'elle est 
    ensemble). Source sans API : tableurs du SIES archivés dans `scripts/sources_enseignants/` avec `SHA256SUMS`, que le
    générateur vérifie ; mise à jour annuelle à la main, en novembre (geste décrit en tête du générateur). La question de
    l'auteur titre le thème ; la fiche élève, qui s'imprime, garde un titre descriptif.
-7. **Une page par thème, reliées par la barre `enseignants-themes`** (auteur, 02/10/2026 ; arbitrage
-   `ENTRANTE_2026-10-02_Enseignants_Structure`). `/enseignants/` reste la page du thème dette : c'est l'adresse des
-   courriels et des quatre pages du dossier. Un thème nouveau reçoit sa page fille (`content/enseignants/<theme>/_index.md`,
-   une ligne dans le shortcode) si les deux déclencheurs de la règle « page propre » sont réunis ; une seule activité
+7. **Une page par thème, reliées par la barre de leur discipline** (auteur, 02/10/2026 ; arbitrage
+   `ENTRANTE_2026-10-02_Enseignants_Structure` ; `partials/barre-discipline.html`, posée par le gabarit). `/enseignants/`
+   reste la page du thème dette : c'est l'adresse des courriels et des quatre pages du dossier. Un thème nouveau reçoit sa
+   page fille (`content/enseignants/<theme>/_index.md`, front matter `ressource.bloc: "enseigner"`, `discipline`, `theme`,
+   `rang`, `onglet.court`/`role` — rien d'autre ; une autre discipline : `content/enseignants/<discipline>/…`) si les deux déclencheurs de la règle « page propre » sont réunis ; une seule activité
    complète suffit, aucune page ni catégorie vide — sauf Littérature et Philosophie, annoncées grisées et sans lien dans le
    panneau « Autres disciplines » (auteur, 03/10/2026 ; pastille « Pour enseigner · SES ») ; chaque entrée grisée meurt avec
    la première page de sa discipline. **Dans `/ressources/`, un dossier par discipline** (auteur, 03/10/2026) : le bloc

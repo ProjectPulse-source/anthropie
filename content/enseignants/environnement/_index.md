@@ -23,9 +23,10 @@ ressource:
   intitule: "Environnement : émissions françaises et empreinte carbone"
   encart: true
   bouton: "Voir l'activité"
+onglet:  # barre de la discipline (partials/barre-discipline.html)
+  court: "Climat"
+  role: "Terminale"
 ---
-
-{{< enseignants-themes actif="environnement" >}}
 
 **Terminale, chapitre sur l'action publique pour l'environnement.** La France publie deux totaux d'émissions de gaz à
 effet de serre, qui ne comptent pas la même chose. L'activité fait retrouver ce que chacun additionne, puis ce que

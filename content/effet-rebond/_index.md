@@ -19,13 +19,11 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   bloc: "notions"
   rang: 50
   nature: "Notion — définition, origine et sources"
-onglet:  # barre du dossier de son bloc (shortcode dossier, 03/10/2026)
+onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le gabarit)
   long: "Effet rebond"
   court: "Rebond"
   long_en: "Rebound effect"
 ---
-
-{{< dossier >}}
 
 L'effet rebond est le mécanisme par lequel l'amélioration de l'efficacité énergétique, au lieu de réduire la consommation totale d'énergie, tend à l'augmenter&nbsp;: ce qui devient plus efficace devient moins cher, donc plus utilisé. Décrit par l'économiste William Stanley Jevons dès 1865, il reste le point aveugle de la plupart des politiques d'efficacité énergétique.
 

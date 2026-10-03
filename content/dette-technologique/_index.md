@@ -17,13 +17,11 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   bloc: "notions"
   rang: 60
   nature: "Notion — définition, origine et sources"
-onglet:  # barre du dossier de son bloc (shortcode dossier, 03/10/2026)
+onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le gabarit)
   long: "Dette technologique"
   court: "Techno."
   long_en: "Technological debt"
 ---
-
-{{< dossier >}}
 
 La dette technologique est le coût des infrastructures numériques — énergie, matière, territoire, attention — transformé en dette par des mécanismes d'engagement&nbsp;: garanties publiques, contrats de long terme, irréversibilisation des choix d'infrastructure. Le concept est formalisé par l'économiste Stéphane Lalut dans le working paper [AWP-06](/awp/awp-06/) (2026) et s'inscrit dans le cadre de l'anthropie.
 

@@ -22,9 +22,11 @@ ressource:
   intitule: "École et parcours : après le bac, après une année de licence"
   encart: true
   bouton: "Voir les activités"
+onglet:  # barre de la discipline (partials/barre-discipline.html)
+  court: "École"
+  role: "Terminale"
+  id: "droit-a-l-erreur"   # ancre publiée le 02/10, portée par ce lien sur /enseignants/ : ne se retire pas
 ---
-
-{{< enseignants-themes actif="ecole" >}}
 
 **Terminale, chapitre sur l'École.** Deux activités, une par objectif du chapitre. La première regarde où
 s'inscrivent les nouveaux bacheliers selon leur origine sociale&nbsp;; la seconde, ce que deviennent un an après ceux

@@ -1,6 +1,6 @@
 {{- /* dossier-barre.html — l'organe commun de toutes les barres de dossier (auteur, 03/10/2026 : « pour chaque dossier,
-       le même type d'architecture que pour Dette »). Il ne CALCULE rien : chaque shortcode (dossier-dette, dossier,
-       enseignants-themes) prépare ses onglets et son panneau, puis l'appelle. Un seul dessin, une seule feuille de style
+       le même type d'architecture que pour Dette »). Il ne CALCULE rien : `dossier-dette` (shortcode), `barre-bloc` et
+       `barre-discipline` (partiels posés par barre-auto.html) préparent onglets et panneau, puis l'appellent. Un seul dessin, une seule feuille de style
        (`.dossier-dette--v2`, _reutiliser.scss) : une correction faite ici vaut pour tous les dossiers.
 
        Contexte attendu (dict) :

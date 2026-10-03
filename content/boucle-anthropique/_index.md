@@ -21,12 +21,10 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   bloc: "notions"
   rang: 20
   nature: "Notion — définition, origine et sources"
-onglet:  # barre du dossier de son bloc (shortcode dossier, 03/10/2026)
+onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le gabarit)
   long: "Boucle anthropique"
   court: "Boucle"
 ---
-
-{{< dossier >}}
 
 La boucle anthropique décrit le cycle complet du déplacement du désordre par les systèmes sociaux&nbsp;: déplacement, accumulation, saturation, retour, re-déplacement. Elle est formalisée par l'économiste Stéphane Lalut dans le working paper [AWP-07](/awp/awp-07/) (2026), en dialogue explicite avec le *cost-shifting* de K.&nbsp;William Kapp, la bioéconomie de Nicholas Georgescu-Roegen et la néguanthropie de Bernard Stiegler.
 

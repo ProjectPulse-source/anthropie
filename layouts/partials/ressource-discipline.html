@@ -9,7 +9,8 @@
 {{- $themes := slice -}}
 {{- range $entrees }}{{ $themes = $themes | append (.r.theme | default (or .r.intitule .page.Title)) }}{{ end -}}
 {{- $n := len $themes -}}
-{{- $mot := cond (lt $n (len .mots)) (index .mots $n) (string $n) -}}
+{{- /* « thème » est masculin : la table des mots de l'index est au féminin (« une page »), d'où « Un » à part (vu le 03/10). */ -}}
+{{- $mot := cond (eq $n 1) "un" (cond (lt $n (len .mots)) (index .mots $n) (string $n)) -}}
 {{- $vig := "" -}}
 {{- with $p.Params.og_image -}}
   {{- $v := replace . "og-" "vig-" 1 -}}

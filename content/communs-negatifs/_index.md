@@ -17,13 +17,11 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   bloc: "notions"
   rang: 40
   nature: "Notion — définition, origine et sources"
-onglet:  # barre du dossier de son bloc (shortcode dossier, 03/10/2026)
+onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le gabarit)
   long: "Communs négatifs"
   court: "Communs"
   long_en: "Negative commons"
 ---
-
-{{< dossier >}}
 
 Les communs négatifs désignent ce dont nous héritons collectivement **sans l'avoir choisi**&nbsp;: déchets nucléaires, sols pollués, centrales à démanteler, ruines industrielles, infrastructures obsolètes. La notion a été développée par le philosophe Alexandre Monnin avec Emmanuel Bonnet et Diego Landivar (*Héritage et fermeture. Une écologie du démantèlement*, 2021)&nbsp;: non plus des biens communs à préserver, mais des **charges communes** à gérer, refermer ou démanteler — parfois sur des générations.
 

@@ -1,0 +1,64 @@
+{{- /* barre-discipline.html — barre d'une discipline de « Pour enseigner » : la discipline en tête, ses thèmes en
+       onglets, les autres disciplines dans un panneau (auteur, 02/10/2026 puis 03/10/2026 : « un seul dossier par
+       matière, puis, une fois sur la matière, la page avec les onglets »). Posée par barre-auto.html.
+
+       LA PRÉSENCE VIENT DU DÉPÔT : onglets = pages qui déclarent la même `ressource.discipline`, triées par `rang` ;
+       libellés `onglet.long` (sinon `ressource.theme`), `onglet.court`, `onglet.role`, `onglet.id` (ancre publiée à
+       garder sur le lien). Pastille et panneau viennent des `disciplines` déclarées par le bloc dans l'index
+       (`court` pour la pastille). Une autre discipline qui a des pages est un lien vers sa première ; sans page, elle
+       reste grisée, sans lien — elle s'allume d'elle-même avec sa première page.
+
+       Aucune date : les thèmes n'ont pas le même cycle. La classe `dossier-dette--enseignants` porte la marge d'arrivée
+       par ancre et les règles d'impression (_enseignants.scss).
+
+       ANCRE CONSERVÉE (verrou : aucun lien en circulation ne mène ailleurs qu'au thème annoncé). `#droit-a-l-erreur`
+       a été publiée quelques heures sur /enseignants/ ; un fragment n'est pas transmis au serveur, donc aucune
+       redirection serveur n'est possible. Sur /enseignants/, l'identifiant est porté par le lien vers « École et
+       parcours » (`onglet.id`), et le script envoie vers cette page en gardant les paramètres (?src=…). Sans script,
+       l'ancre mène au lien lui-même. CONDITION DE MORT de ce renvoi : jamais — une ancre publiée ne se retire pas. */ -}}
+{{- $page := .page -}}
+{{- $r := $page.Params.ressource -}}
+{{- $disc := $r.discipline -}}
+{{- if not $disc }}{{ errorf "barre-discipline: %s est dans le bloc %q sans ressource.discipline" $page.File.Path .bloc.id }}{{ end -}}
+{{- $pagesBloc := where site.Pages "Params.ressource.bloc" .bloc.id -}}
+{{- $d := dict -}}
+{{- $entrees := slice -}}
+{{- range .bloc.disciplines -}}
+  {{- $di := . -}}
+  {{- $pd := sort (where $pagesBloc "Params.ressource.discipline" $di.id) "Params.ressource.rang" -}}
+  {{- if eq $di.id $disc }}{{ $d = $di -}}
+  {{- else if $pd }}{{ $entrees = $entrees | append (dict "url" (index $pd 0).RelPermalink "titre" $di.titre) -}}
+  {{- else }}{{ $entrees = $entrees | append (dict "titre" $di.titre "avenir" true) }}{{ end -}}
+{{- end -}}
+{{- if not $d.id }}{{ errorf "barre-discipline: discipline %q de %s absente de l'index /ressources/" $disc $page.File.Path }}{{ end -}}
+{{- $onglets := slice -}}
+{{- range sort (where $pagesBloc "Params.ressource.discipline" $disc) "Params.ressource.rang" -}}
+  {{- $o := .Params.onglet | default dict -}}
+  {{- $long := $o.long | default (.Params.ressource.theme | default .Title) -}}
+  {{- $court := $o.court | default $long -}}
+  {{- $onglets = $onglets | append (dict "url" .RelPermalink "titre" $long "court" $court "nom" (cond (hasPrefix $long $court) "" $long)
+        "role" $o.role "id" $o.id "actif" (eq .RelPermalink $page.RelPermalink)) -}}
+{{- end -}}
+{{- $avenir := true -}}
+{{- range $entrees }}{{ if not .avenir }}{{ $avenir = false }}{{ end }}{{ end -}}
+{{- $panneau := "" -}}
+{{- with $entrees -}}
+  {{- $panneau = dict "titre" "Autres disciplines" "court" "Autres" "role" (cond $avenir "à venir" (printf "%d disciplines" (len .)))
+        "entete" "Les activités des autres disciplines" "entrees" . -}}
+{{- end -}}
+{{- $court := $d.court | default $d.titre -}}
+{{- partial "dossier-barre.html" (dict "page" $page "titre" (printf "Pour enseigner · %s" $court)
+      "label" (printf "Pour enseigner : activités de %s, par thème" $court)
+      "items" $onglets "panneau" $panneau "classe" "dossier-dette--enseignants") -}}
+{{- if eq $page.RelPermalink "/enseignants/" }}
+{{- $cible := (site.GetPage "/enseignants/ecole-et-parcours").RelPermalink }}
+<script>
+// Ancres de l'activité « licence », publiées le 02/10/2026 sur cette page, désormais sur la page du second thème.
+(function () {
+  var a = { "#droit-a-l-erreur": "", "#terminale-licence": "#terminale-licence", "#fiche-licence": "#fiche-licence" };
+  if (Object.prototype.hasOwnProperty.call(a, location.hash)) {
+    location.replace({{ $cible }} + location.search + a[location.hash]);
+  }
+})();
+</script>
+{{- end }}

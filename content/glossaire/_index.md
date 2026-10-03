@@ -8,11 +8,9 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   bloc: "notions"
   rang: 10
   nature: "Définitions"
-onglet:  # barre du dossier de son bloc (shortcode dossier, 03/10/2026)
+onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le gabarit)
   long: "Glossaire"
 ---
-
-{{< dossier >}}
 
 Ce glossaire rassemble les termes propres au cadre anthropique. Il ne s'agit pas d'un dictionnaire général&nbsp;: chaque entrée désigne un concept forgé ou réapproprié dans le cadre de l'hypothèse anthropique, et n'a de sens précis que dans ce contexte théorique. Les définitions renvoient aux *Anthropie Working Papers* qui les formalisent et au livre [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) qui les déploie sur l'ensemble du cadre.
 

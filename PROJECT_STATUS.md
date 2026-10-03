@@ -53,7 +53,24 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
-### 2026-10-03 (nuit) — /ressources/ : un dossier par discipline dans « Pour enseigner » ; NI COMMITÉ NI POUSSÉ
+### 2026-10-03 (nuit, suite) — Barres de dossier posées par le gabarit, plus aucun appel manuel ; NI COMMITÉ NI POUSSÉ
+
+Question de l'auteur : « l'ensemble est-il structurellement acquis pour que les prochains dossiers se structurent ainsi ? »
+Réponse mesurée : non, deux trous silencieux — la barre dépendait d'un appel manuel `{{< dossier >}}` (une page qui
+l'oubliait entrait dans la barre des autres sans la sienne ; la page du président n'en avait pas), et les thèmes SES
+étaient écrits à la main dans `enseignants-themes` (un thème neuf aurait été compté dans l'index, absent de la barre).
+- `partials/barre-auto.html` (appelé par `_default/list.html` et `premier-coup/list.html`) pose la barre de toute page
+  qui déclare `ressource.bloc` : `barre-bloc.html`, `barre-discipline.html` (tout se déduit des pages et des
+  `disciplines` de l'index), rien pour `barre: "propre"` (dette). Shortcodes `dossier` et `enseignants-themes` retirés
+  avec leurs 17 appels ; libellés des thèmes SES dans `onglet` (dont `id: droit-a-l-erreur`).
+- Mesure : HTML des 12 barres de référence identique avant/après ; essai sur copie du site avec trois pages témoins
+  (2ᵉ page d'institutions, 4ᵉ thème SES, 1ʳᵉ page de Littérature) : barres et carte d'index suivent seules ; faute
+  trouvée par l'essai et corrigée (« Une thème »). Avertissement de build si une page de bloc n'a pas d'`onglet.long`,
+  vu mordre par mutation. Build 0, `check-all --ci` 0, audit des liens 0 ; mesure 13 pages × 7 largeurs inchangée.
+- Limite déclarée : un nouveau dossier DE DONNÉES qui voudrait la barre dette complète (questions, source, prolongements)
+  passe aujourd'hui par `barre-bloc` (onglets seuls) ; à généraliser le jour où il existe, pas avant.
+
+### 2026-10-03 (nuit) — /ressources/ : un dossier par discipline dans « Pour enseigner » ; POUSSÉ (`5322c22`, déploiement vérifié)
 
 Demande de l'auteur : « un seul dossier par matière, puis, une fois sur la matière, la page avec les onglets » — SES,
 Littérature et Philosophie (à construire).

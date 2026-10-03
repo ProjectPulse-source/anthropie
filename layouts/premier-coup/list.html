@@ -40,6 +40,8 @@
     {{ with .Description }}<p class="page-header__lede">{{ . }}</p>{{ end }}
   </header>
 
+  {{- partial "barre-auto.html" . }}
+
   {{ .Content }}
 
   {{- partial "ressource-retour.html" . -}}

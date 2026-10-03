@@ -8,6 +8,7 @@ url: /en/resources/
 blocs:
   - id: dette
     titre: "Public debt"
+    barre: "propre"   # each page calls `dossier-dette volet="…"`
     chapo: "Why it rises, what it costs, who pays, how it compares elsewhere and under what conditions it can come down."
   - id: notions
     titre: "Concepts"

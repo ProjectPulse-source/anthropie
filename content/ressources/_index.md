@@ -8,6 +8,7 @@ description: "Les chiffres du débat public circulent souvent sans leur source n
 blocs:
   - id: dette
     titre: "Dette publique"
+    barre: "propre"   # chaque page appelle `dossier-dette volet="…"` (questions, source, prolongements)
     chapo: "Pourquoi elle augmente, ce qu'elle coûte, qui la paie, ce qui se passe ailleurs et à quelles conditions elle peut baisser."
   - id: enseigner
     titre: "Pour enseigner"
@@ -18,6 +19,7 @@ blocs:
     disciplines:
       - id: "ses"
         titre: "Sciences économiques et sociales"
+        court: "SES"
         nature: "SES — Première et Terminale"
         desc: "Chaque activité part d'une figure projetable et se prolonge en fiche élève imprimable, avec son corrigé et ses données."
         bouton: "Ouvrir le dossier SES"

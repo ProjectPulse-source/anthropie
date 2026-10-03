@@ -12,7 +12,7 @@ aliases: ["/enseignants/ses/"]
 # sans en recopier aucun chiffre (jetons dyn-val, monde-val, qp-val, lus dans les mêmes jeux que les pages).
 # UNE PAGE PAR THÈME (auteur, 02/10/2026, arbitrage ENTRANTE_2026-10-02_Enseignants_Structure) : celle-ci reste la
 # page du thème dette, à l'adresse que portent les courriels et les quatre pages du dossier ; le second thème vit dans
-# content/enseignants/ecole-et-parcours/. La barre `enseignants-themes` relie les deux.
+# content/enseignants/ecole-et-parcours/. La barre de la discipline (partials/barre-discipline.html, posée par le gabarit) relie les thèmes.
 # Exception au STOP des nouveaux ensembles accordée par l'auteur le 30/09 (arbitrage
 # .claude/external-audits/ARBITRATIONS/ENTRANTE_2026-09-30_Dette_Pedagogie_arbitrage.md, tours 1 et 2), étendue par
 # lui le 02/10 à la couche enseignants ; le STOP lui-même est levé depuis le 02/10/2026 (plus d'exception à demander).
@@ -28,9 +28,10 @@ ressource:
   intitule: "Enseigner la dette publique en SES"
   encart: true
   bouton: "Voir les activités"
+onglet:  # barre de la discipline (partials/barre-discipline.html)
+  court: "Dette"
+  role: "Première et Terminale"
 ---
-
-{{< enseignants-themes actif="dette" >}}
 
 Chaque activité part d'une figure du site, projetable telle quelle, et d'une question du programme. La fiche élève et
 son corrigé utilisent **les mêmes séries que les analyses** dont ils sont tirés&nbsp;: un chiffre y change quand il

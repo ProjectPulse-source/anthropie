@@ -17,13 +17,11 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   bloc: "guides"
   rang: 20
   nature: "Guide pratique et analyse"
-onglet:  # barre du dossier de son bloc (shortcode dossier, 03/10/2026)
+onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le gabarit)
   long: "Chercheur indépendant"
   court: "Chercheur"
   long_en: "Independent researcher"
 ---
-
-{{< dossier >}}
 
 Un chercheur indépendant est un chercheur qui conduit et publie des travaux **sans affiliation institutionnelle** — ni poste, ni laboratoire, ni financement académique. La question intéressante n'est pas le statut&nbsp;: c'est **comment ce travail devient citable, vérifiable et discutable** sans le crédit a priori que confère une institution. Cette page répond en deux temps&nbsp;: l'infrastructure concrète, puis l'analyse de la position elle-même.
 

@@ -1,0 +1,24 @@
+{{- /* barre-auto.html — pose la barre de dossier de toute page qui déclare `ressource.bloc`, sans geste dans la page
+       (auteur, 03/10/2026 : « que les prochains dossiers se structurent de cette manière »). Appelé par les gabarits de
+       page (_default/list.html, premier-coup/list.html) juste avant le contenu.
+
+       Avant, chaque page appelait sa barre à la main : une page neuve qui l'oubliait entrait dans la barre des autres
+       sans avoir la sienne, en silence. Désormais la barre suit la déclaration, comme l'entrée dans l'index.
+
+       Le bloc, tel que l'index /ressources/ le déclare, dit quelle barre :
+         barre: "propre"   la page appelle elle-même la sienne (dossier dette : `dossier-dette volet="…"`, qui porte
+                           les questions du dossier, sa source et ses prolongements) ;
+         disciplines: […]  barre d'une discipline (Pour enseigner) : partials/barre-discipline.html ;
+         sinon             barre du bloc : partials/barre-bloc.html (onglets = pages du bloc, rien sous deux entrées). */ -}}
+{{- with .Params.ressource -}}{{- with .bloc -}}
+  {{- $bloc := . -}}
+  {{- $decl := dict -}}
+  {{- with site.GetPage "/ressources" -}}
+    {{- range .Params.blocs }}{{ if eq .id $bloc }}{{ $decl = . }}{{ end }}{{ end -}}
+  {{- end -}}
+  {{- if not $decl.id }}{{ errorf "barre-auto: bloc %q absent de l'index /ressources/ (%s)" $bloc $.File.Path }}{{ end -}}
+  {{- if eq $decl.barre "propre" -}}
+  {{- else if $decl.disciplines -}}{{ partial "barre-discipline.html" (dict "page" $ "bloc" $decl) }}
+  {{- else -}}{{ partial "barre-bloc.html" (dict "page" $ "bloc" $decl) }}
+  {{- end -}}
+{{- end -}}{{- end -}}
