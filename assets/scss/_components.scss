@@ -348,6 +348,7 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
   box-shadow: 0 2px 14px rgba(15, 15, 18, 0.16);
 }
 .appel-livre__corps { flex: 1 1 320px; min-width: 260px; }
+
 .appel-livre__sur {
   font-family: var(--font-sans); font-size: var(--fs-tiny);
   letter-spacing: 0.16em; text-transform: uppercase;
@@ -412,6 +413,18 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
 .appel-livre__consultation-offre { margin: 0; font-size: 15px; color: var(--color-text); }
 .appel-livre__consultation-btn { flex: 0 0 auto; background: var(--color-bg-elevated); white-space: nowrap; }
 @media print { .appel-livre__consultation { display: none !important; } }
+// Très petits écrans (mesure du 03/10/2026) : 260 px fixes pour le texte, plus les marges du bloc, faisaient déborder la
+// page de 19 px à 320 px sur toutes les pages qui portent le bloc. Couverture et texte s'empilent ; le bandeau
+// d'exemplaire suit la marge réduite du bloc (ses marges négatives valaient 26 px). (min() n'est pas accepté par le
+// compilateur Sass du site, d'où la requête média.)
+@media (max-width: 400px) {
+  .appel-livre { padding: 16px; gap: 16px; }
+  .appel-livre__corps { flex-basis: 100%; min-width: 0; }
+  .appel-livre__consultation { margin: 0 -16px -16px; padding: 14px 16px; }
+  .appel-livre__consultation-texte { flex-basis: 100%; min-width: 0; }
+  .appel-livre__consultation-publics { letter-spacing: 0.06em; overflow-wrap: anywhere; }
+  .appel-livre__consultation-btn { white-space: normal; max-width: 100%; box-sizing: border-box; }
+}
 
 // ----- Figure du ciseau (page /cout-de-la-dette-publique/) -----
 .figure-ciseau { margin: 32px 0; }
