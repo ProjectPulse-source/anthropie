@@ -40,3 +40,27 @@ l'auteur ne le cite pas ; il reste à traiter.
 | I3 | La convergence des taux avant 1999 n'est pas propre à l'euro. | « la convergence n'est pas propre à l'euro » — « La perspective d'entrer dans l'euro a pu peser pour les futurs membres, mais ces chiffres ne permettent pas d'en isoler la part. » |
 | I4 | Hors de l'euro, le prix est associé à l'inflation passée. | « **Hors de la zone euro, le taux implicite est étroitement associé à l'inflation récente** » — « Ces coefficients ne mesurent pas des effets causaux » |
 | I5 | Le stock rend compte de la charge à l'intérieur de chaque groupe monétaire. | « **À l'intérieur de la zone euro, le stock rend compte de l'essentiel de la charge** » — mesure de la page (R²) : **sans objet** pour la littérature, se valide par reproduction. |
+
+## Second tour, 03/10/2026 — les deux volets restés sans bloc
+
+Écrit le 03/10/2026 **avant** la lecture des quatre textes retenus (commande de l'auteur : littérature française du
+plan de diffusion d'octobre — Note du CAE n° 82, Focus du CAE n° 124, Trésor-Éco n° 334, OFCE). L'exclusion du
+volet « Pourquoi » déclarée plus haut prend fin ici.
+
+### Page « Pourquoi la dette publique augmente-t-elle ? » (`content/pourquoi-la-dette-publique-augmente/_index.md`)
+
+| Id | Hypothèse | Texte exact de la page |
+|---|---|---|
+| D1 | Sur trente ans, intérêts et croissance nominale se sont presque annulés ; la hausse du ratio tient pour l'essentiel aux déficits primaires. | « Sur trente ans, les intérêts et la croissance du PIB nominal se sont presque annulés (effet net […] point) : la hausse de la dette tient pour l'essentiel aux déficits primaires » |
+| D2 | La décomposition est comptable, non causale : les termes ne sont pas indépendants, le déficit primaire dépend lui-même de la croissance. | « C'est une décomposition comptable : elle dit par quel terme la dette a monté, pas pourquoi les déficits ont existé. » — « En récession, les recettes baissent et certaines dépenses montent » |
+| D3 | Le terme dominant change selon la période : écart taux-croissance défavorable au début, déficits primaires ensuite, croissance nominale portée par l'inflation qui allège le ratio en 2021-2023. | « Trois périodes se dégagent, et le terme qui domine change de l'une à l'autre. » |
+| D4 | La suite dépend de l'écart entre taux implicite et croissance nominale, presque nul en fin de période. | « En […], taux implicite […] et croissance nominale […] étaient presque égaux : l'effet taux–croissance était proche de zéro » |
+
+### Page « La dette publique peut-elle baisser ? » (`content/dette-publique-peut-elle-baisser/_index.md`)
+
+| Id | Hypothèse | Texte exact de la page |
+|---|---|---|
+| B1 | Dans le groupe comparé, les fortes baisses du ratio s'accompagnent d'un excédent primaire moyen ; la comparaison n'isole pas l'effet d'une politique. | « les […] fortes baisses du ratio s'accompagnent d'un excédent primaire moyen » — « la comparaison n'isole pas l'effet d'une politique » |
+| B2 | Le solde stabilisant dépend de l'écart taux-croissance et du niveau de dette ; il varie fortement d'une année à l'autre ; celui d'une année ne permet pas d'évaluer une estimation pluriannuelle. | « Il n'est pas une constante » — « le repère calculé ici pour […] vaut pour cette année-là et ne permet pas d'évaluer les estimations pluriannuelles des institutions » |
+| B3 | Stabiliser le ratio et le faire baisser sont deux objectifs distincts. | « Stabiliser le ratio et le faire baisser sont deux objectifs distincts. » |
+| B4 | (section à écrire, `#soutenable`) La soutenabilité ne se lit pas dans un seuil de dette : les données de la page en donnent le noyau comptable (écart taux-croissance observé, solde stabilisant), elles ne disent rien de l'accès au marché ni du refinancement à venir. | arbitrage `ENTRANTE_2026-10-03_Test_5_Questions`, point 4 |

@@ -348,6 +348,14 @@ def affichage(fin, dec, annees, cmp_, europe, cons):
     stabs = [r["solde_stabilisant"] for r in annees]
     A["stab_min"] = signe(min(stabs)); A["stab_min_annee"] = str(annees[stabs.index(min(stabs))]["annee"])
     A["stab_max"] = signe(max(stabs)); A["stab_max_annee"] = str(annees[stabs.index(max(stabs))]["annee"])
+    # Section « La dette française est-elle soutenable ? » (#soutenable, 03/10/2026 ; arbitrage ENTRANTE_2026-10-03_Test_5_Questions, point 4)
+    creux_ti = min(annees, key=lambda r: r["taux_implicite"])
+    A["ti_creux"] = fr(creux_ti["taux_implicite"]); A["ti_creux_annee"] = str(creux_ti["annee"])
+    A["var_derniere"] = fr(abs(last["variation"]))
+    rg_pos = sum(1 for r in annees if r["taux_implicite"] > r["croissance_nominale"])
+    A["rg_pos_n"] = lettres(rg_pos) if rg_pos < len(LETTRES) else str(rg_pos)
+    # Un point d'écart taux-croissance durable déplace le solde stabilisant de d(t-1)/(1+g) point : dette et croissance de la dernière année.
+    A["sens_pt"] = fr(last["dette"] / 100 / (1 + last["croissance_nominale"] / 100))
     # pays comparés
     a0 = fin - 9
     A["cmp_lib"] = "%d-%d" % (a0, fin); A["cmp_veille"] = str(a0 - 1); A["cmp_n"] = lettres(len(cmp_))
@@ -451,6 +459,15 @@ def gardes(fin, dec, annees, cmp_, europe, haut, bas, exc_ans):
         ("le solde stabilisant le plus bas est une année de forte croissance nominale (plus de 5 %)",
          min(annees, key=lambda r: r["solde_stabilisant"])["croissance_nominale"] > 5),
         ("moins d'une année sur deux au-dessus du solde stabilisant", sum(1 for r in annees if r["ecart"] >= 0) * 2 < len(annees)),
+        # --- section #soutenable et « Ce qu'il faut retenir » (03/10/2026)
+        ("dernière année : le ratio n'est pas stabilisé, il monte", last["variation"] > 0),
+        ("le taux implicite « remonte » : son creux date de 2019 ou après et la dernière année le dépasse d'au moins 0,5 point",
+         min(annees, key=lambda r: r["taux_implicite"])["annee"] >= 2019
+         and last["taux_implicite"] > min(r["taux_implicite"] for r in annees) + 0.5),
+        ("la croissance nominale « retombe » : la dernière année est sous la moyenne de 2021-2023 d'au moins 3 points",
+         sum(r["croissance_nominale"] for r in annees if 2021 <= r["annee"] <= 2023) / 3 - last["croissance_nominale"] > 3),
+        ("un point d'écart taux-croissance vaut « un peu plus d'un point » de solde stabilisant (entre 1 et 1,3)",
+         1 < last["dette"] / 100 / (1 + last["croissance_nominale"] / 100) < 1.3),
         # --- pays comparés
         ("pays comparés : au moins cinq, dont la France", len(cmp_) >= 5 and any(f["pays"] == "FR" for f in cmp_)),
         ("pays comparés : l'effet taux-croissance fait baisser le ratio chez tous", all(f["taux_croissance"] < 0 for f in cmp_)),

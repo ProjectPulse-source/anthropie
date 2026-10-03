@@ -487,7 +487,10 @@
   "taux_implicite_dernier": "2,02",
   "croissance_derniere": "2,0",
   "annees_excedent": "4",
-  "annees_total": "30"
+  "annees_total": "30",
+  "tc_bascule": "2017",
+  "tc_avant": "+16,9",
+  "tc_apres": "−15,7"
  },
  "affichage_en": {
   "annee_depart": "1995",
@@ -528,6 +531,9 @@
   "taux_implicite_dernier": "2.02",
   "croissance_derniere": "2.0",
   "annees_excedent": "4",
-  "annees_total": "30"
+  "annees_total": "30",
+  "tc_bascule": "2017",
+  "tc_avant": "+16.9",
+  "tc_apres": "−15.7"
  }
 }

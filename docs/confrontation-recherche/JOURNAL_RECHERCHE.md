@@ -87,3 +87,38 @@ Contrôle des extraits : `python docs/confrontation-recherche/verifier_extraits.
 - **Verrou par page** : Qui paie et Comparaison `publie="oui"` ; Coût `publie="non"` tant que Yue, Shang et Liu 2026
   et Bailey, Anttiroiko et Valkama 2016 ne sont pas lus en entier (accès payant : **geste de l'auteur** pour obtenir
   les PDF). Rendu à 390 px mesuré : pas de débordement.
+
+## 6. Second tour, 03/10/2026 — volets « Pourquoi » et « Peut-elle baisser »
+
+Commande de l'auteur (03/10) : littérature française relevée dans le plan de diffusion d'octobre
+(`06_PROMOTION\CAMPAGNES\2026-10-03_PLAN_DETTE_OCTOBRE\CANDIDATS_CONSOLIDES.xlsx`, colonnes `travail` et `travail_url`).
+Hypothèses D1-D4 et B1-B4 écrites **avant** lecture (`HYPOTHESES.md`, « Second tour »).
+
+| Candidat | Statut | Motif |
+|---|---|---|
+| Auclert, Philippon, Ragot, Note du CAE n° 82, 2024 | **lu** | fiche `auclert-philippon-ragot-2024.md` |
+| Auclert et al., Focus du CAE n° 124, 2025 | **lu** | fiche `cae-focus-124-2025.md` ; auteurs relevés dans le texte (A. Lopes est remercié, non auteur) |
+| Clavères, Trésor-Éco n° 334, 2023 | **lu** | fiche `claveres-2023.md` ; absent du tableur, trouvé à la source (DG Trésor, 17/10/2023) |
+| Heyer, Plane, Ragot, Sampognaro, Timbeau, blog de l'OFCE, 2025 | **lu** | fiche `ofce-2025-trajectoires.md` ; date non établie par le texte, tirée de l'adresse |
+| OFCE, document de travail résumé par ce billet (`ofce.github.io/psmt/PB.pdf`) | écarté : non lu | hors commande ; le billet suffit aux hypothèses testées. Point ouvert si l'on veut chiffrer « 25 ans de déficits » |
+| Trésor-Éco n° 403, « Finances publiques : une situation dégradée, un redressement nécessaire », 09/2026 | écarté : non lu | trouvé en cherchant le n° 334 ; hors commande. Candidat naturel d'un troisième tour (soutenabilité, 2026) |
+| HCSP, « Finances publiques à l'horizon 2050 », document de travail du 02/10/2026, et Focus de juillet 2026 | écartés : non lus | présents au tableur, hors des quatre textes nommés par la commande ; r − g = +0,5 supposé, à lire avant toute citation |
+| OFCE, Revue n° 194 (prévision d'avril 2026) ; « 25 ans d'union monétaire » (Revue de l'OFCE, 2024/3) | écartés : non lus | hors commande ; le second concerne la page internationale |
+
+**Compte du second tour** : 10 références examinées = 4 lues + 6 écartées.
+
+Textes et PDF hors dépôt, dans `D:\PRO\07_RECHERCHE\confrontation_dette\` (dossier ignoré par git, droits des éditeurs) ;
+empreintes dans chaque fiche. Contrôle : `verifier_extraits.py` sur ce dossier — 57 extraits retrouvés, 57 altérés
+rejetés en mode `--temoin` (les quatorze fiches du premier tour échouent faute de leur texte, conservé ailleurs).
+
+**Suites de la lecture**
+
+- Correction appliquée (R1) : la quasi-annulation des intérêts et de la croissance sur trente ans est dite
+  **compensation dans le temps** (+16,9 points avant 2017, −15,7 depuis), jetons `tc_avant`, `tc_apres`, `tc_bascule`
+  de `update_dette_dynamique.py`, gardés. Lecture mise en danger par Clavères (E7, E8) et la Note n° 82 (E4, E5).
+- Section `#soutenable` écrite après lecture : l'écart nul de 2025 présenté comme non acquis (Focus E2 ; Clavères E1,
+  E9, E13) ; les seuils de 125 et 130 % placés dans le bloc, montrés non estimés.
+- Écart de chiffre documenté, non corrigé : déficit primaire 2025 de 3,2 % du PIB dans le Focus n° 124 (prévision
+  d'octobre 2025, solde structurel) contre −2,9 % observé par la page (Eurostat, avril 2026).
+- **Contre-expertise des deux nouveaux blocs : à faire** (règle 12, avant ou juste après publication). Blocs ouverts
+  (`publie="oui"`) sur commande de l'auteur, sans attendre la navette.

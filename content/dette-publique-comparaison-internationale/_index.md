@@ -6,7 +6,7 @@ og_title: "Dette publique : ce que 100 % du PIB ne dit pas"
 og_image: "images/og-dette-monde.jpg"
 og_image_alt: "Carte de partage : « Même dette, charge différente » — les 27 pays de l'Union européenne, dette en % du PIB et intérêts en % des recettes ; deux pays à dette voisine reliés, l'un paie plus de trois fois plus que l'autre."
 date: 2026-09-29
-lastmod: 2026-09-30
+lastmod: 2026-10-03
 # Construite le 29/09/2026, publiée le 30/09/2026 sans attendre le WEO (contre-expertise PRO-20260930-061613) ;
 # hiérarchie refaite le 30/09 sur l'avis « forme et fond » (arbitrage ENTRANTE_2026-09-30_Dette_Internationale_forme) :
 # surprendre, montrer, expliquer, documenter — rien de supprimé, la preuve repliée sur la même URL ; arbitrage final
@@ -213,6 +213,18 @@ Seules des mesures indicatives existent&nbsp;: la dette selon le FMI, et les int
 - Saka, O., Fuertes, A.-M. et Kalotychou, E., «&nbsp;ECB Policy and Eurozone Fragility: Was De Grauwe Right?&nbsp;», CEPS Working Document n°&nbsp;397, 2014 (publié dans le *Journal of International Money and Finance*, 54, 2015).
 - Laubach, T., «&nbsp;New Evidence on the Interest Rate Effects of Budget Deficits and Debt&nbsp;», Finance and Economics Discussion Series 2003-12, Federal Reserve (publié, révisé, dans le *Journal of the European Economic Association*, 7(4), 2009).
 {{< /confrontation-recherche >}}
+
+## Ce qu'il faut retenir {#retenir}
+
+Le niveau d'une dette ne dit pas, à lui seul, ce qu'elle pèse. Dans l'Union, à dette voisine, la part des recettes absorbée par les intérêts varie de 1 à {{< monde-val "j_rapport" >}}&nbsp;: la charge dépend aussi du prix payé sur le stock et du niveau des recettes publiques.
+
+La France en donne l'exemple. Fin {{< monde-val "annee" >}}, sa dette est la {{< monde-val "fr_rang_stock" >}} de l'Union, à {{< monde-val "fr_stock_fin" >}} du PIB&nbsp;; elle paie pourtant sur son stock un taux implicite dans la moyenne de la zone euro ({{< monde-val "fr_prix" >}}) et consacre aux intérêts {{< monde-val "fr_charge" >}} de ses recettes, moins que {{< monde-val "n_plus_charges_moins_endettes" >}} pays moins endettés qu'elle.
+
+Cette position est une photographie, et elle a une échéance. Le taux implicite rémunère une dette émise à des dates différentes&nbsp;; en {{< monde-val "annee" >}}, le rendement à 10&nbsp;ans le dépassait de {{< monde-val "fr_ecart_taux" >}}, et {{< monde-val "fr_part_1an" >}} de la dette arrivait à échéance dans l'année. Si ces conditions duraient, chaque refinancement rapprocherait le prix du stock de celui du marché, et la charge monterait sans que la dette ait besoin de croître.
+
+La monnaie commune ne fixe pas ce prix. L'euro a supprimé le risque de change entre ses membres, non l'écart de taux&nbsp;: en 2012, la Grèce empruntait {{< monde-val "ec_el_2012" >}}&nbsp;points au-dessus de l'Allemagne, et la détente n'est venue qu'après les interventions de la BCE.
+
+Reste la trajectoire&nbsp;: un même niveau de dette peut monter ou baisser selon l'écart entre taux et croissance et selon le solde primaire. C'est l'objet de [La dette publique peut-elle baisser&nbsp;?](/dette-publique-peut-elle-baisser/)
 
 ## Questions fréquentes {#questions}
 

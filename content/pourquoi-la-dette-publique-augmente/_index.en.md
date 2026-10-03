@@ -7,7 +7,7 @@ og_title: "Why does French public debt rise?"
 og_image: "images/og-dette-dynamique-en.jpg"
 og_image_alt: "Share card: “Why the debt doubled” — waterfall of French public debt in points of GDP, 1995 to 2025: interest, nominal growth, primary deficits, stock-flow adjustments."
 date: 2026-09-30
-lastmod: 2026-09-30
+lastmod: 2026-10-03
 # English version of part 1 of the public debt dossier (FR: content/pourquoi-la-dette-publique-augmente/_index.md).
 # Same tokens, same keys: values come from the affichage_en block of data/dette_dynamique.json.
 donnees: [dette_dynamique]
@@ -108,6 +108,32 @@ Over the {{< dyn-val "annees_total" >}} years of the series, the primary balance
 - **Inflation does not reduce the real burden of nominal debt without cost.** It reduces the real value of nominal claims, and that loss is borne by someone: this is the subject of [Who really pays for public debt?](/en/who-really-pays-public-debt/)
 - **Nothing about the future.** What comes next depends on the gap between the implicit interest rate and nominal growth, and on the primary balance: what it took elsewhere for debt to come down is the subject of [Can public debt come down?](/en/can-public-debt-come-down/) In {{< dyn-val "annee_fin" >}}, the implicit rate ({{< dyn-val "taux_implicite_dernier" >}}%) and nominal growth ({{< dyn-val "croissance_derniere" >}}%) were almost equal: the interest-growth effect was close to zero ({{< dyn-val "net_dernier" >}} points).
 - **A series that starts in {{< dyn-val "annee_depart" >}}.** Eurostat's harmonised interest data go back no further; the long-run debt series, since 1978, is in [What does French public debt actually cost?](/en/cost-of-french-public-debt/)
+
+{{< confrontation-recherche verifie="2026-10-03" publie="oui" resume="the weight of primary deficits is found again over fifty years; reading the near-cancellation of interest and growth as neutrality is challenged" >}}
+**Measured here.** The annual decomposition of the French ratio from {{< dyn-val "annee_depart" >}} to {{< dyn-val "annee_fin" >}}, on Eurostat series, checked against the published ratios. None of the texts read decomposes this window with this source: the measurement is validated by reproduction, not by citation.
+
+**Consistent with.** Over 1970-2023, using INSEE accounts and a historical database, Auclert, Philippon and Ragot find that primary deficits and stock-flow adjustments account for 88 of the 89 points of the rise, and a "snowball" effect close to zero on average: the same identity, another period, another source, and a primary deficit that includes the adjustments this page isolates. Clavères, at the French Treasury, finds the same sequence of signs: the effective interest rate above nominal growth from the 1980s, below it again from 2016. The OFCE (Heyer, Plane, Ragot, Sampognaro and Timbeau) links to deficits a rise in debt of 53 points in France from 2000 to 2024, against 44 in Spain, 27 in Italy and 5 in Germany, without decomposing these rises.
+
+**Challenged by.** Any reading of the near-cancellation of interest and growth as neutrality. The match depends on the starting point, to within about ten points (Auclert, Philippon and Ragot), and the gap between interest and growth changed sign during the period (Clavères). This page's data confirm it: the interest-growth effect weighed {{< dyn-val "tc_avant" >}} points before {{< dyn-val "tc_bascule" >}}, {{< dyn-val "tc_apres" >}} since. Conversely, the CAE note takes the step this page refuses, from accounting to attribution ("our debt is the direct consequence of our budgetary choices"), while judging the share of crises hard to estimate; an OFCE estimate, cited by the note, puts it at about half of the rise since 2007.
+
+**Not established.** Which of the two terms of the primary deficit explains it: the OFCE attributes the widening of the deficit since 2017 to the fall in compulsory levies (2.5 points of GDP), with spending stable, and specifies that the explanation is an accounting one; this split, drawn from the total deficit, is not reproduced here. Why the deficits existed: none of the four texts establishes it.
+
+**References read**
+
+- Auclert, A., Philippon, T. and Ragot, X., "Quelle trajectoire pour les finances publiques françaises ?" [What path for French public finances?], *Les notes du Conseil d'analyse économique*, no. 82, July 2024 (in French).
+- Clavères, G., "Taux d'intérêt, croissance et soutenabilité de la dette publique" [Interest rates, growth and public debt sustainability], *Trésor-Éco*, no. 334, French Treasury, October 2023 (in French).
+- Heyer, É., Plane, M., Ragot, X., Sampognaro, R. and Timbeau, X., "Quelles trajectoires pour les finances publiques de la France ?" [What paths for France's public finances?], *Blog de l'OFCE*, 2025 (in French).
+{{< /confrontation-recherche >}}
+
+## What to take away {#retenir}
+
+In thirty years, French public debt doubled as a share of GDP, from {{< dyn-val "dette_depart" >}}% to {{< dyn-val "dette_fin" >}}%. Interest pushed it up, but over the whole period nominal GDP growth erased almost as much; what remains is primary deficits, {{< dyn-val "part_deficits" >}}% of the rise: excluding interest, the public accounts were in surplus in only {{< dyn-val "annees_excedent" >}} years out of {{< dyn-val "annees_total" >}}.
+
+This near-cancellation is an offset over time, not neutrality. Before {{< dyn-val "tc_bascule" >}}, the implicit interest rate usually exceeded nominal growth, and the interest-growth effect added {{< dyn-val "tc_avant" >}} points to the ratio; since then, nominal growth has prevailed every year except 2020, when GDP fell, and the effect has weighed {{< dyn-val "tc_apres" >}} points.
+
+In {{< dyn-val "annee_fin" >}}, the offset closed: the implicit rate ({{< dyn-val "taux_implicite_dernier" >}}%) and nominal growth ({{< dyn-val "croissance_derniere" >}}%) were almost equal. As long as they stay so, growth erases only what interest costs, and the direction of the ratio is set by the primary balance, give or take stock-flow adjustments: a primary deficit pushes it up by as much, a surplus pulls it down by as much. The implicit rate, for its part, has been rising from its low point as old debt is refinanced on new terms: if it moves back above growth, the same deficit will weigh more.
+
+What the accounts do not say remains: why these deficits existed, and which of their two terms, spending or revenue, explains them. What it took elsewhere for debt to come down is the subject of [Can public debt come down?](/en/can-public-debt-come-down/)
 
 ## Frequently asked questions {#questions}
 

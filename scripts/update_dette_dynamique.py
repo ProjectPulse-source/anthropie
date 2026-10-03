@@ -397,7 +397,18 @@ def affichage(a0, d_depart, rows, total, per):
         A["croissance_derniere"] = nb(last["croissance_nominale_pct"])
         A["annees_excedent"] = str(sum(1 for r in rows if r["solde_primaire_pct_pib"] > 0))
         A["annees_total"] = str(len(rows))
+        # « Ce qu'il faut retenir » (03/10/2026) : la quasi-annulation sur la série est une compensation DANS LE TEMPS
+        # (Trésor-Éco n° 334, E7-E8 ; Note du CAE n° 82, E4-E5). Bascule = première année à partir de laquelle l'effet
+        # taux-croissance est négatif chaque année, hors années de recul du PIB nominal.
+        A["tc_bascule"] = str(bascule)
+        A["tc_avant"] = sg(sum(r["effet_taux_croissance"] for r in rows if r["annee"] < bascule))
+        A["tc_apres"] = sg(sum(r["effet_taux_croissance"] for r in rows if r["annee"] >= bascule))
         return A
+
+    bascule = next((r["annee"] for r in rows
+                    if all(x["effet_taux_croissance"] < 0 or x["croissance_nominale_pct"] < 0 for x in rows if x["annee"] >= r["annee"])), None)
+    if bascule is None or bascule == rows[-1]["annee"]:
+        fail("« Ce qu'il faut retenir » : plus de periode finale ou l'effet taux-croissance est negatif chaque annee (bascule %s)" % bascule)
 
     A, A_en = bloc(*NB["fr"]), bloc(*NB["en"])
     p1, p2, p3 = per
@@ -421,6 +432,21 @@ def affichage(a0, d_depart, rows, total, per):
          and all(r["variation"] < 0 for r in infl)),
         ("depuis 2024, le ratio remonte (2024 et années suivantes en hausse)", all(r["variation"] > 0 for r in rows if r["annee"] >= 2024)),
         ("dernière année : taux implicite et croissance nominale presque égaux (effet net < 0,5 point)", abs(last["effet_taux_croissance"]) < 0.5),
+        ("« Ce qu'il faut retenir » : compensation dans le temps — plus de 10 points avant la bascule, moins de -10 après",
+         sum(r["effet_taux_croissance"] for r in rows if r["annee"] < bascule) > 10
+         and sum(r["effet_taux_croissance"] for r in rows if r["annee"] >= bascule) < -10),
+        ("« Ce qu'il faut retenir » : la bascule tombe entre 2014 et 2019 (le bloc de confrontation la rapproche de la note du Trésor, qui la date de 2016)",
+         2014 <= bascule <= 2019),
+        ("« Ce qu'il faut retenir » : avant la bascule, le taux implicite dépasse « le plus souvent » la croissance nominale",
+         sum(1 for r in rows if r["annee"] < bascule and r["taux_implicite_pct"] > r["croissance_nominale_pct"]) * 2
+         > sum(1 for r in rows if r["annee"] < bascule)),
+        ("« Ce qu'il faut retenir » : depuis la bascule, la seule année d'effet taux-croissance positif est 2020",
+         [r["annee"] for r in rows if r["annee"] >= bascule and r["effet_taux_croissance"] >= 0] == [2020]),
+        ("« Ce qu'il faut retenir » : le taux implicite « remonte » (creux en 2019 ou après, dernière année au moins 0,5 point au-dessus)",
+         min(rows, key=lambda r: r["taux_implicite_pct"])["annee"] >= 2019
+         and last["taux_implicite_pct"] > min(r["taux_implicite_pct"] for r in rows) + 0.5),
+        ("« Ce qu'il faut retenir » : excédents primaires rares (six années au plus sur la série)",
+         sum(1 for r in rows if r["solde_primaire_pct_pib"] > 0) <= 6),
         ("2009 et 2020 : les deux plus fortes hausses de la série",
          sorted(rows, key=lambda r: -r["variation"])[0]["annee"] in (2009, 2020) and sorted(rows, key=lambda r: -r["variation"])[1]["annee"] in (2009, 2020)),
     ]

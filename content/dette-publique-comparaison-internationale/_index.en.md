@@ -7,7 +7,7 @@ og_title: "Public debt: what 100% of GDP does not tell you"
 og_image: "images/og-dette-monde-en.jpg"
 og_image_alt: "Share card: “Same debt, different burden” — the 27 European Union countries, debt as a % of GDP and interest as a % of revenue; two countries with similar debt are linked, one paying more than three times as much as the other."
 date: 2026-09-30
-lastmod: 2026-09-30
+lastmod: 2026-10-03
 # English version of part 3 of the public debt dossier (FR: content/dette-publique-comparaison-internationale/_index.md).
 # Same tokens, same keys: values come from the affichage_en block of data/dette_monde.json.
 donnees: [dette_monde]
@@ -213,6 +213,18 @@ Only indicative measures exist: debt according to the IMF, and central-governmen
 - Saka, O., Fuertes, A.-M. and Kalotychou, E., "ECB Policy and Eurozone Fragility: Was De Grauwe Right?", CEPS Working Document no. 397, 2014 (published in the *Journal of International Money and Finance*, 54, 2015).
 - Laubach, T., "New Evidence on the Interest Rate Effects of Budget Deficits and Debt", Finance and Economics Discussion Series 2003-12, Federal Reserve (published, revised, in the *Journal of the European Economic Association*, 7(4), 2009).
 {{< /confrontation-recherche >}}
+
+## What to take away {#retenir}
+
+The level of a debt does not, on its own, tell what it weighs. In the Union, for similar debt levels, the share of revenue absorbed by interest varies from 1 to {{< monde-val "j_rapport" >}}: the burden also depends on the average interest cost of the stock and on the level of public revenue.
+
+France is a case in point. At the end of {{< monde-val "annee" >}}, its debt was the {{< monde-val "fr_rang_stock" >}} highest in the Union, at {{< monde-val "fr_stock_fin" >}} of GDP; yet it pays an implicit interest rate on its stock in line with the euro-area average ({{< monde-val "fr_prix" >}}) and devotes {{< monde-val "fr_charge" >}} of its revenue to interest, less than {{< monde-val "n_plus_charges_moins_endettes" >}} less indebted countries.
+
+This position is a snapshot, and it has an expiry date. The implicit rate covers debt issued at different dates; in {{< monde-val "annee" >}}, the 10-year yield exceeded it by {{< monde-val "fr_ecart_taux" >}}, and {{< monde-val "fr_part_1an" >}} of the debt was maturing within the year. If these conditions lasted, each refinancing would bring the average cost of the stock closer to the market rate, and the burden would rise without the debt needing to grow.
+
+A common currency does not set that cost. The euro removed exchange-rate risk between its members, not the interest-rate gap: in 2012, Greece was borrowing {{< monde-val "ec_el_2012" >}} points above Germany, and the easing came only after the ECB's interventions.
+
+What remains is the trajectory: the same level of debt can rise or fall depending on the gap between interest rates and growth and on the primary balance. That is the subject of [Can public debt come down?](/en/can-public-debt-come-down/)
 
 ## Frequently asked questions {#questions}
 

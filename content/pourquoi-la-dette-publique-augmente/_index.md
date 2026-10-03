@@ -6,7 +6,7 @@ og_title: "Pourquoi la dette publique augmente-t-elle ?"
 og_image: "images/og-dette-dynamique.jpg"
 og_image_alt: "Carte de partage : « Pourquoi la dette a doublé » — cascade de la dette française en points de PIB, de 1995 à 2025 : intérêts, croissance nominale, déficits primaires, ajustements flux-stock."
 date: 2026-09-30
-lastmod: 2026-09-30
+lastmod: 2026-10-03
 # Volet 1 du dossier dette (arbitrage PRO-20260930-092814, option E). Créé le 30/09/2026 sur décision de l'auteur,
 # qui lève pour cette page le gel des nouveaux ensembles jusqu'au 25/10 (feuille de route GEO). Test décisif passé :
 # la décomposition se referme exactement (résidu flux-stock = témoin comptable), scripts/update_dette_dynamique.py.
@@ -106,6 +106,32 @@ Sur les {{< dyn-val "annees_total" >}} années de la série, le solde primaire n
 - **L'inflation n'efface pas la dette sans coût.** Elle réduit la valeur réelle des créances nominales, et cette perte a des porteurs&nbsp;: c'est l'objet de [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/)
 - **Rien sur l'avenir.** La suite dépend de l'écart entre le taux implicite et la croissance nominale, et du solde primaire&nbsp;: ce qu'il a fallu ailleurs pour que la dette baisse est l'objet de [La dette publique peut-elle baisser&nbsp;?](/dette-publique-peut-elle-baisser/) En {{< dyn-val "annee_fin" >}}, taux implicite ({{< dyn-val "taux_implicite_dernier" >}}&nbsp;%) et croissance nominale ({{< dyn-val "croissance_derniere" >}}&nbsp;%) étaient presque égaux&nbsp;: l'effet taux–croissance était proche de zéro ({{< dyn-val "net_dernier" >}} point).
 - **Une série qui commence en {{< dyn-val "annee_depart" >}}.** Les intérêts harmonisés d'Eurostat ne remontent pas plus loin&nbsp;; la courbe longue de la dette, depuis 1978, est dans [Combien coûte la dette publique&nbsp;?](/cout-de-la-dette-publique/)
+
+{{< confrontation-recherche verifie="2026-10-03" publie="oui" resume="le poids des déficits primaires est retrouvé sur cinquante ans&nbsp;; lire la quasi-annulation des intérêts et de la croissance comme une neutralité est mis en danger" >}}
+**Mesuré ici.** La décomposition annuelle du ratio français de {{< dyn-val "annee_depart" >}} à {{< dyn-val "annee_fin" >}}, sur les séries d'Eurostat, contrôlée contre les ratios publiés. Aucun des textes lus ne décompose cette fenêtre avec cette source&nbsp;: la mesure se valide par reproduction, non par citation.
+
+**Cohérent avec.** Sur 1970-2023, avec les comptes de l'Insee et une base historique, Auclert, Philippon et Ragot trouvent que les déficits primaires et les ajustements flux-stock font 88 des 89 points de hausse, et un effet «&nbsp;boule de neige&nbsp;» proche de zéro en moyenne&nbsp;: même identité, autre période, autre source, et un déficit primaire qui inclut les ajustements que la page isole. Clavères, à la direction générale du Trésor, retrouve la même chronologie des signes&nbsp;: taux apparent au-dessus de la croissance nominale à partir des années 1980, au-dessous de nouveau à partir de 2016. L'OFCE (Heyer, Plane, Ragot, Sampognaro et Timbeau) rattache aux déficits une hausse de la dette de 53 points en France de 2000 à 2024, contre 44 en Espagne, 27 en Italie et 5 en Allemagne, sans décomposer ces hausses.
+
+**Mis en danger par.** Toute lecture de la quasi-annulation des intérêts et de la croissance comme une neutralité. La coïncidence dépend du point de départ, à une dizaine de points près (Auclert, Philippon et Ragot), et l'écart entre taux et croissance a changé de signe en cours de période (Clavères). Les données de la page le confirment&nbsp;: l'effet taux-croissance a pesé {{< dyn-val "tc_avant" >}} points avant {{< dyn-val "tc_bascule" >}}, {{< dyn-val "tc_apres" >}} depuis. À l'inverse, la Note du CAE fait le pas que la page s'interdit, de la comptabilité à l'imputation («&nbsp;notre dette est la conséquence directe de nos choix budgétaires&nbsp;»), tout en jugant difficile d'estimer la part des crises, qu'une estimation de l'OFCE, citée par la Note, situe autour de la moitié de la hausse depuis 2007.
+
+**Non établi.** Lequel des deux termes du déficit primaire l'explique&nbsp;: l'OFCE attribue le creusement du déficit depuis 2017 à la baisse des prélèvements obligatoires (2,5 points de PIB), les dépenses restant stables, en précisant que l'explication est comptable&nbsp;; ce partage, tiré du déficit total, n'est pas reproduit ici. Pourquoi les déficits ont existé&nbsp;: aucun des quatre textes ne l'établit.
+
+**Références lues**
+
+- Auclert, A., Philippon, T. et Ragot, X., «&nbsp;Quelle trajectoire pour les finances publiques françaises&nbsp;?&nbsp;», *Les notes du Conseil d'analyse économique*, n°&nbsp;82, juillet 2024.
+- Clavères, G., «&nbsp;Taux d'intérêt, croissance et soutenabilité de la dette publique&nbsp;», *Trésor-Éco*, n°&nbsp;334, direction générale du Trésor, octobre 2023.
+- Heyer, É., Plane, M., Ragot, X., Sampognaro, R. et Timbeau, X., «&nbsp;Quelles trajectoires pour les finances publiques de la France&nbsp;?&nbsp;», *Blog de l'OFCE*, 2025.
+{{< /confrontation-recherche >}}
+
+## Ce qu'il faut retenir {#retenir}
+
+En trente ans, la dette publique française a doublé en part de PIB, de {{< dyn-val "dette_depart" >}}&nbsp;% à {{< dyn-val "dette_fin" >}}&nbsp;%. Les intérêts l'ont poussée, mais sur l'ensemble de la période la croissance du PIB nominal en a effacé presque autant&nbsp;; ce qui reste, ce sont les déficits primaires, {{< dyn-val "part_deficits" >}}&nbsp;% de la hausse&nbsp;: hors intérêts, les comptes publics n'ont été excédentaires que {{< dyn-val "annees_excedent" >}} années sur {{< dyn-val "annees_total" >}}.
+
+Cette quasi-annulation est une compensation dans le temps, non une neutralité. Avant {{< dyn-val "tc_bascule" >}}, le taux implicite dépassait le plus souvent la croissance nominale, et l'effet taux-croissance a ajouté {{< dyn-val "tc_avant" >}} points au ratio&nbsp;; depuis, la croissance nominale l'emporte chaque année, sauf en 2020, quand le PIB a reculé, et l'effet a pesé {{< dyn-val "tc_apres" >}} points.
+
+En {{< dyn-val "annee_fin" >}}, la compensation s'est refermée&nbsp;: taux implicite ({{< dyn-val "taux_implicite_dernier" >}}&nbsp;%) et croissance nominale ({{< dyn-val "croissance_derniere" >}}&nbsp;%) étaient presque égaux. Tant qu'ils le restent, la croissance n'efface que ce que coûtent les intérêts, et le sens du ratio se joue sur le solde primaire, aux ajustements flux-stock près&nbsp;: un déficit primaire le fait monter d'autant, un excédent le fait baisser d'autant. Le taux implicite, lui, remonte depuis son point bas, à mesure que la dette ancienne se refinance aux conditions nouvelles&nbsp;: s'il repasse au-dessus de la croissance, le même déficit pèsera davantage.
+
+Reste ce que la comptabilité ne dit pas&nbsp;: pourquoi ces déficits ont existé, et lequel de leurs deux termes, dépenses ou recettes, les explique. Ce qu'il a fallu ailleurs pour que la dette baisse est l'objet de [La dette publique peut-elle baisser&nbsp;?](/dette-publique-peut-elle-baisser/)
 
 ## Questions fréquentes {#questions}
 
