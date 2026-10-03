@@ -1,8 +1,8 @@
 {
- "releve_le": "2026-10-02",
+ "releve_le": "2026-10-03",
  "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; source Eurostat",
  "meta": {
-  "releve_le": "2026-10-02",
+  "releve_le": "2026-10-03",
   "page": "https://stephane-lalut.com/pourquoi-la-dette-publique-augmente/",
   "licence": "CC BY 4.0",
   "pays": "France",
@@ -448,6 +448,225 @@
    "flux_stock": 4.078764107880106
   }
  ],
+ "depenses_recettes_pc_pib": {
+  "1995": {
+   "depenses": 56.1,
+   "recettes": 50.9,
+   "interets": 3.5,
+   "solde": -5.1,
+   "depenses_hors_interets": 52.6
+  },
+  "1996": {
+   "depenses": 56.0,
+   "recettes": 52.1,
+   "interets": 3.6,
+   "solde": -3.9,
+   "depenses_hors_interets": 52.4
+  },
+  "1997": {
+   "depenses": 55.6,
+   "recettes": 51.9,
+   "interets": 3.6,
+   "solde": -3.7,
+   "depenses_hors_interets": 52.0
+  },
+  "1998": {
+   "depenses": 54.0,
+   "recettes": 51.6,
+   "interets": 3.4,
+   "solde": -2.4,
+   "depenses_hors_interets": 50.6
+  },
+  "1999": {
+   "depenses": 53.7,
+   "recettes": 52.1,
+   "interets": 3.1,
+   "solde": -1.5,
+   "depenses_hors_interets": 50.6
+  },
+  "2000": {
+   "depenses": 52.6,
+   "recettes": 51.3,
+   "interets": 3.0,
+   "solde": -1.3,
+   "depenses_hors_interets": 49.6
+  },
+  "2001": {
+   "depenses": 52.8,
+   "recettes": 51.4,
+   "interets": 3.1,
+   "solde": -1.4,
+   "depenses_hors_interets": 49.699999999999996
+  },
+  "2002": {
+   "depenses": 53.9,
+   "recettes": 50.7,
+   "interets": 3.0,
+   "solde": -3.2,
+   "depenses_hors_interets": 50.9
+  },
+  "2003": {
+   "depenses": 54.4,
+   "recettes": 50.3,
+   "interets": 2.9,
+   "solde": -4.1,
+   "depenses_hors_interets": 51.5
+  },
+  "2004": {
+   "depenses": 54.0,
+   "recettes": 50.4,
+   "interets": 2.8,
+   "solde": -3.6,
+   "depenses_hors_interets": 51.2
+  },
+  "2005": {
+   "depenses": 54.3,
+   "recettes": 50.8,
+   "interets": 2.7,
+   "solde": -3.5,
+   "depenses_hors_interets": 51.599999999999994
+  },
+  "2006": {
+   "depenses": 53.8,
+   "recettes": 51.1,
+   "interets": 2.6,
+   "solde": -2.7,
+   "depenses_hors_interets": 51.199999999999996
+  },
+  "2007": {
+   "depenses": 53.6,
+   "recettes": 50.6,
+   "interets": 2.7,
+   "solde": -3.0,
+   "depenses_hors_interets": 50.9
+  },
+  "2008": {
+   "depenses": 54.3,
+   "recettes": 50.8,
+   "interets": 2.9,
+   "solde": -3.5,
+   "depenses_hors_interets": 51.4
+  },
+  "2009": {
+   "depenses": 58.0,
+   "recettes": 50.6,
+   "interets": 2.5,
+   "solde": -7.4,
+   "depenses_hors_interets": 55.5
+  },
+  "2010": {
+   "depenses": 57.7,
+   "recettes": 50.6,
+   "interets": 2.5,
+   "solde": -7.2,
+   "depenses_hors_interets": 55.2
+  },
+  "2011": {
+   "depenses": 57.0,
+   "recettes": 51.7,
+   "interets": 2.7,
+   "solde": -5.3,
+   "depenses_hors_interets": 54.3
+  },
+  "2012": {
+   "depenses": 57.9,
+   "recettes": 52.7,
+   "interets": 2.6,
+   "solde": -5.2,
+   "depenses_hors_interets": 55.3
+  },
+  "2013": {
+   "depenses": 58.6,
+   "recettes": 53.7,
+   "interets": 2.3,
+   "solde": -4.9,
+   "depenses_hors_interets": 56.300000000000004
+  },
+  "2014": {
+   "depenses": 58.4,
+   "recettes": 53.8,
+   "interets": 2.2,
+   "solde": -4.6,
+   "depenses_hors_interets": 56.199999999999996
+  },
+  "2015": {
+   "depenses": 57.6,
+   "recettes": 53.7,
+   "interets": 2.0,
+   "solde": -3.9,
+   "depenses_hors_interets": 55.6
+  },
+  "2016": {
+   "depenses": 57.4,
+   "recettes": 53.6,
+   "interets": 1.9,
+   "solde": -3.8,
+   "depenses_hors_interets": 55.5
+  },
+  "2017": {
+   "depenses": 57.7,
+   "recettes": 54.3,
+   "interets": 1.8,
+   "solde": -3.4,
+   "depenses_hors_interets": 55.900000000000006
+  },
+  "2018": {
+   "depenses": 56.4,
+   "recettes": 54.0,
+   "interets": 1.8,
+   "solde": -2.3,
+   "depenses_hors_interets": 54.6
+  },
+  "2019": {
+   "depenses": 55.3,
+   "recettes": 53.0,
+   "interets": 1.5,
+   "solde": -2.4,
+   "depenses_hors_interets": 53.8
+  },
+  "2020": {
+   "depenses": 61.7,
+   "recettes": 52.8,
+   "interets": 1.3,
+   "solde": -8.9,
+   "depenses_hors_interets": 60.400000000000006
+  },
+  "2021": {
+   "depenses": 59.5,
+   "recettes": 52.9,
+   "interets": 1.4,
+   "solde": -6.6,
+   "depenses_hors_interets": 58.1
+  },
+  "2022": {
+   "depenses": 58.4,
+   "recettes": 53.7,
+   "interets": 1.9,
+   "solde": -4.7,
+   "depenses_hors_interets": 56.5
+  },
+  "2023": {
+   "depenses": 56.8,
+   "recettes": 51.4,
+   "interets": 1.9,
+   "solde": -5.4,
+   "depenses_hors_interets": 54.9
+  },
+  "2024": {
+   "depenses": 57.0,
+   "recettes": 51.2,
+   "interets": 2.0,
+   "solde": -5.8,
+   "depenses_hors_interets": 55.0
+  },
+  "2025": {
+   "depenses": 57.2,
+   "recettes": 52.1,
+   "interets": 2.2,
+   "solde": -5.1,
+   "depenses_hors_interets": 55.0
+  }
+ },
  "affichage": {
   "annee_depart": "1995",
   "annee_fin": "2025",
@@ -490,7 +709,22 @@
   "annees_total": "30",
   "tc_bascule": "2017",
   "tc_avant": "+16,9",
-  "tc_apres": "−15,7"
+  "tc_apres": "−15,7",
+  "dette_2001": "59,3",
+  "dette_2007": "65,5",
+  "ofce_debut": "2017",
+  "ofce_fin": "2024",
+  "ofce_solde": "−2,4",
+  "ofce_rec": "−3,1",
+  "ofce_dep_hi": "−0,9",
+  "ofce_dep": "−0,7",
+  "tresor_debut": "2019",
+  "tresor_fin": "2025",
+  "tresor_solde": "−2,7",
+  "tresor_rec": "−0,9",
+  "tresor_dep_hi": "+1,2",
+  "tresor_dep": "+1,9",
+  "entre_dep": "−2,4"
  },
  "affichage_en": {
   "annee_depart": "1995",
@@ -534,6 +768,21 @@
   "annees_total": "30",
   "tc_bascule": "2017",
   "tc_avant": "+16.9",
-  "tc_apres": "−15.7"
+  "tc_apres": "−15.7",
+  "dette_2001": "59.3",
+  "dette_2007": "65.5",
+  "ofce_debut": "2017",
+  "ofce_fin": "2024",
+  "ofce_solde": "−2.4",
+  "ofce_rec": "−3.1",
+  "ofce_dep_hi": "−0.9",
+  "ofce_dep": "−0.7",
+  "tresor_debut": "2019",
+  "tresor_fin": "2025",
+  "tresor_solde": "−2.7",
+  "tresor_rec": "−0.9",
+  "tresor_dep_hi": "+1.2",
+  "tresor_dep": "+1.9",
+  "entre_dep": "−2.4"
  }
 }

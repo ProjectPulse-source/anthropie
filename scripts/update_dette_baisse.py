@@ -466,6 +466,8 @@ def gardes(fin, dec, annees, cmp_, europe, haut, bas, exc_ans):
          and last["taux_implicite"] > min(r["taux_implicite"] for r in annees) + 0.5),
         ("la croissance nominale « retombe » : la dernière année est sous la moyenne de 2021-2023 d'au moins 3 points",
          sum(r["croissance_nominale"] for r in annees if 2021 <= r["annee"] <= 2023) / 3 - last["croissance_nominale"] > 3),
+        ("bloc de confrontation (Trésor-Éco n° 403) : l'écart de la dernière année est « comme » les 3 points du Trésor (à 0,5 près)",
+         abs(-last["ecart"] - 3.0) < 0.5),
         ("un point d'écart taux-croissance vaut « un peu plus d'un point » de solde stabilisant (entre 1 et 1,3)",
          1 < last["dette"] / 100 / (1 + last["croissance_nominale"] / 100) < 1.3),
         # --- pays comparés

@@ -149,6 +149,25 @@ def decomposition():
     return ans[0] - 1, D[ans[0] - 1] / Y[ans[0] - 1] * 100, rows
 
 
+def depenses_recettes():
+    """Dépenses (TE), recettes (TR), intérêts (D41PAY) et solde (B9), en % du PIB, tels qu'Eurostat les PUBLIE.
+
+    Troisième tour de la confrontation à la recherche (03/10/2026) : l'OFCE attribue le creusement du déficit depuis
+    2017 à la baisse des prélèvements, la DG Trésor (Trésor-Éco n° 403) celui de 2019-2025 surtout à la dépense. Les
+    séries publiées éprouvent les deux lectures sur leurs fenêtres. Témoin : TR − TE redonne B9 publié."""
+    s = {k: eurostat("gov_10a_main", na_item=k, sector="S13", unit="PC_GDP") for k in ("TE", "TR", "D41PAY", "B9")}
+    ans = sorted(a for a in s["TE"] if all(a in s[k] for k in s))
+    for a in ans:
+        if abs((s["TR"][a] - s["TE"][a]) - s["B9"][a]) > 0.15:
+            fail("%d : recettes - depenses ne redonnent pas le solde publie (temoin TE/TR/B9)" % a)
+    return {a: dict(depenses=s["TE"][a], recettes=s["TR"][a], interets=s["D41PAY"][a], solde=s["B9"][a],
+                    depenses_hors_interets=s["TE"][a] - s["D41PAY"][a]) for a in ans}
+
+
+# Fenêtres des deux lectures institutionnelles du creusement récent du déficit (None = dernière année publiée).
+FENETRES_DEFICIT = {"ofce": (2017, 2024), "tresor": (2019, None)}
+
+
 def agreger(rows, a0, a1):
     s = [r for r in rows if a0 <= r["annee"] <= a1]
     return {k: sum(r[k] for r in s) for k in ("variation", "effet_interets", "effet_croissance", "effet_taux_croissance",
@@ -364,7 +383,7 @@ def csv_texte(rows):
 
 
 # ------------------------------------------------------------------ affichage et gardes
-def affichage(a0, d_depart, rows, total, per):
+def affichage(a0, d_depart, rows, total, per, dr):
     """Rend (affichage, affichage_en) : deux présentations d'un seul corps de valeurs, puis les gardes (une passe,
     numérique, valable pour les deux langues)."""
     last = rows[-1]
@@ -403,7 +422,18 @@ def affichage(a0, d_depart, rows, total, per):
         A["tc_bascule"] = str(bascule)
         A["tc_avant"] = sg(sum(r["effet_taux_croissance"] for r in rows if r["annee"] < bascule))
         A["tc_apres"] = sg(sum(r["effet_taux_croissance"] for r in rows if r["annee"] >= bascule))
+        # Troisième tour (Trésor-Éco n° 403) : « relative stabilité » 2001-2007 éprouvée ; fenêtres OFCE et DG Trésor.
+        A["dette_2001"], A["dette_2007"] = nb(by[2001]["dette_pct_pib"]), nb(by[2007]["dette_pct_pib"])
+        for k, (d0, d1) in fen.items():
+            A[k + "_debut"], A[k + "_fin"] = str(d0), str(d1)
+            for v, cle in (("solde", "_solde"), ("recettes", "_rec"), ("depenses_hors_interets", "_dep_hi"), ("depenses", "_dep")):
+                A[k + cle] = sg(dr[d1][v] - dr[d0][v])
+        A["entre_dep"] = sg(dr[fen["tresor"][0]]["depenses"] - dr[fen["ofce"][0]]["depenses"])
         return A
+
+    fen = {k: (d0, d1 or last["annee"]) for k, (d0, d1) in FENETRES_DEFICIT.items()}
+    if any(a not in dr for d0, d1 in fen.values() for a in (d0, d1)):
+        fail("depenses et recettes publiees absentes pour une fenetre %s" % fen)
 
     bascule = next((r["annee"] for r in rows
                     if all(x["effet_taux_croissance"] < 0 or x["croissance_nominale_pct"] < 0 for x in rows if x["annee"] >= r["annee"])), None)
@@ -445,6 +475,25 @@ def affichage(a0, d_depart, rows, total, per):
         ("« Ce qu'il faut retenir » : le taux implicite « remonte » (creux en 2019 ou après, dernière année au moins 0,5 point au-dessus)",
          min(rows, key=lambda r: r["taux_implicite_pct"])["annee"] >= 2019
          and last["taux_implicite_pct"] > min(r["taux_implicite_pct"] for r in rows) + 0.5),
+        # --- troisième tour (Trésor-Éco n° 403, 03/10/2026) : chaque constat du bloc de confrontation, recalculé
+        ("2001-2007 : le ratio monte de plus de 4 points (le bloc l'oppose à la « relative stabilité » du Trésor)",
+         by[2007]["dette_pct_pib"] - by[2001]["dette_pct_pib"] > 4),
+        ("fenêtre OFCE : le solde se dégrade, la baisse des recettes dépasse la variation des dépenses hors intérêts",
+         dr[fen["ofce"][1]]["solde"] < dr[fen["ofce"][0]]["solde"]
+         and dr[fen["ofce"][1]]["recettes"] - dr[fen["ofce"][0]]["recettes"] < 0
+         and abs(dr[fen["ofce"][1]]["recettes"] - dr[fen["ofce"][0]]["recettes"])
+         > abs(dr[fen["ofce"][1]]["depenses_hors_interets"] - dr[fen["ofce"][0]]["depenses_hors_interets"])),
+        ("fenêtre OFCE : le solde retrouve le chiffre de l'OFCE (−2,4 points, à 0,5 près)",
+         abs((dr[fen["ofce"][1]]["solde"] - dr[fen["ofce"][0]]["solde"]) + 2.4) < 0.5),
+        ("fenêtre DG Trésor : le solde se dégrade, la hausse des dépenses hors intérêts dépasse la variation des recettes",
+         dr[fen["tresor"][1]]["solde"] < dr[fen["tresor"][0]]["solde"]
+         and dr[fen["tresor"][1]]["depenses_hors_interets"] - dr[fen["tresor"][0]]["depenses_hors_interets"] > 0
+         and dr[fen["tresor"][1]]["depenses_hors_interets"] - dr[fen["tresor"][0]]["depenses_hors_interets"]
+         > abs(dr[fen["tresor"][1]]["recettes"] - dr[fen["tresor"][0]]["recettes"])),
+        ("fenêtre DG Trésor : le solde retrouve le chiffre du Trésor (−2,7 points, à 0,5 près)",
+         abs((dr[fen["tresor"][1]]["solde"] - dr[fen["tresor"][0]]["solde"]) + 2.7) < 0.5),
+        ("entre les deux années de départ, la dépense baisse de plus d'un point",
+         dr[fen["tresor"][0]]["depenses"] - dr[fen["ofce"][0]]["depenses"] < -1),
         ("« Ce qu'il faut retenir » : excédents primaires rares (six années au plus sur la série)",
          sum(1 for r in rows if r["solde_primaire_pct_pib"] > 0) <= 6),
         ("2009 et 2020 : les deux plus fortes hausses de la série",
@@ -467,7 +516,8 @@ def main() -> int:
     a0, d_depart, rows = decomposition()
     total = agreger(rows, rows[0]["annee"], rows[-1]["annee"])
     per = [agreger(rows, a, b or rows[-1]["annee"]) for a, b, _ in PERIODES]
-    aff, aff_en = affichage(a0, d_depart, rows, total, per)
+    dr = depenses_recettes()
+    aff, aff_en = affichage(a0, d_depart, rows, total, per, dr)
     log("Decomposition %d-%d : hausse %.1f = interets %.1f + croissance %.1f + deficits primaires %.1f + flux-stock %.1f"
         % (rows[0]["annee"], rows[-1]["annee"], total["variation"], total["effet_interets"], total["effet_croissance"],
            total["contribution_solde_primaire"], total["flux_stock"]))
@@ -487,6 +537,7 @@ def main() -> int:
                                         "flux_stock": "variation de dette qui ne passe pas par le déficit (trésorerie, actifs, valorisation) ; résidu de l'identité ; les ratios de dette et de solde sont contrôlés contre ceux que publie Eurostat"}},
                "depart": {"annee": a0, "dette_pct_pib": d_depart}, "annees": rows, "total": total,
                "periodes": [dict(periode=(lib if b else lib % rows[-1]["annee"]), **t) for (a, b, lib), t in zip(PERIODES, per)],
+               "depenses_recettes_pc_pib": {str(k): v for k, v in dr.items() if k >= a0},
                "affichage": aff, "affichage_en": aff_en}
     releve = payload["meta"]["releve_le"]
     # « Rien écrit à données identiques » : l'empreinte compare le paquet ENTIER, donc affichage_en compris (aucun

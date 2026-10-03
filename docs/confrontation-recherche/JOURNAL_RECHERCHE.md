@@ -125,3 +125,22 @@ rejetés en mode `--temoin` (les quatorze fiches du premier tour échouent faute
   dix corrections de portée exécutées, chaque fondement relu à la source (P-9 : la Note du CAE attribue bien la
   dégradation récente à des causes nommées) ; phrase de tête de « Pourquoi » amendée (deux périodes opposées).
   Trésor-Éco n° 403 invoqué par le contradicteur : non lu, non cité.
+
+## 7. Troisième tour, 03/10/2026 — Trésor-Éco n° 403
+
+Commande de l'auteur. Hypothèses T1-T3 écrites avant lecture (`HYPOTHESES.md`, « Troisième tour »). Texte lu en entier
+(fiche `tresor-eco-403-2026.md`, 17 extraits ; contrôle : 74 extraits retrouvés, 74 altérés rejetés). PDF et texte dans
+`D:\PRO\07_RECHERCHE\confrontation_dette\` (SHA-256 `1f0cf7df…0134`).
+
+**Témoin ajouté au générateur** (`update_dette_dynamique.py`, `depenses_recettes()`, séries `gov_10a_main` publiées en
+% du PIB, contrôle TR − TE = B9) : l'OFCE (depuis 2017, les recettes) et la DG Trésor (2019-2025, la dépense)
+retrouvent chacun leur lecture sur leur fenêtre ; de 2017 à 2019, la dépense baisse de 2,4 points. **L'année de départ
+fait la conclusion** — constat porté sur la page en jetons gardés (six gardes, chacune vue mordre par mutation).
+
+**Écrit dans les blocs** : Pourquoi — mécanique décrite à l'identique depuis 2001, « relative stabilité » 2001-2007
+contre +6,2 points sur la série de la page ; les deux lectures institutionnelles et leur position (ajustement progressif ;
+consolidation en priorité par la dépense). Peut-elle baisser — stabilisation « condition nécessaire » ; solde stabilisant
+total −2,1 % pour un déficit de 5,1 % : trois points d'écart, comme les 2,9 points mesurés en solde primaire ; inversion
+de r − g et transmission par le refinancement.
+
+**Contre-expertise de ces ajouts : à faire** (règle 12), avant ou juste après publication.

@@ -64,3 +64,15 @@ volet « Pourquoi » déclarée plus haut prend fin ici.
 | B2 | Le solde stabilisant dépend de l'écart taux-croissance et du niveau de dette ; il varie fortement d'une année à l'autre ; celui d'une année ne permet pas d'évaluer une estimation pluriannuelle. | « Il n'est pas une constante » — « le repère calculé ici pour […] vaut pour cette année-là et ne permet pas d'évaluer les estimations pluriannuelles des institutions » |
 | B3 | Stabiliser le ratio et le faire baisser sont deux objectifs distincts. | « Stabiliser le ratio et le faire baisser sont deux objectifs distincts. » |
 | B4 | (section à écrire, `#soutenable`) La soutenabilité ne se lit pas dans un seuil de dette : les données de la page en donnent le noyau comptable (écart taux-croissance observé, solde stabilisant), elles ne disent rien de l'accès au marché ni du refinancement à venir. | arbitrage `ENTRANTE_2026-10-03_Test_5_Questions`, point 4 |
+
+## Troisième tour, 03/10/2026 — Trésor-Éco n° 403 (septembre 2026)
+
+Écrit le 03/10/2026 **avant** la lecture du texte (commande de l'auteur ; candidat signalé par la contre-expertise
+`PRO-20261003-165428`, alors `NON_VERIFIE`). Les hypothèses D1-D4 et B1-B4 restent testées ; trois lectures publiées
+depuis le second tour s'y ajoutent.
+
+| Id | Hypothèse | Texte exact de la page |
+|---|---|---|
+| T1 | Les causes des déficits : la Note du CAE attribue la dégradation récente à des causes nommées, mais aucun texte lu ne fournit une décomposition causale des déficits primaires observés sur 1995-2025. | « aucun des quatre textes ne fournit une décomposition causale des déficits primaires observés de 1995 à 2025 » (page Pourquoi, bloc) |
+| T2 | L'écart taux-croissance favorable s'est refermé en 2025 ; le taux implicite remonte depuis 2020 à mesure que la dette se refinance. | « Tombé à 1,2 % en 2020, il remonte, à mesure que la dette ancienne se refinance aux conditions de marché » (#soutenable) |
+| T3 | Aucun niveau de dette, à lui seul, ne tranche la soutenabilité ; à niveau de 2025, un point d'écart taux-croissance relève le solde stabilisant d'environ 1,1 point de PIB. | « Aucun niveau de dette, à lui seul, ne tranche cette question » ; « un point supplémentaire d'écart […] relève le solde stabilisant d'environ 1,1 point de PIB » (#soutenable) |
