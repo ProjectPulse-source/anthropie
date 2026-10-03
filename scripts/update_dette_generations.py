@@ -11,22 +11,31 @@ Les trois arguments qui allègent le fardeau, chacun confronté à la série qui
           besoin de financement = désépargne nette + acquisitions nettes d'actifs non financiers + transferts en capital nets
       TÉMOIN 1 (bloquant pour la France) : les ratios qu'Eurostat PUBLIE en % du PIB (gov_10a_main, PC_GDP), que le
       calcul n'utilise pas ; tolérance TOL ; vu mordre au test (PIB de l'année précédente : 683 rejets sur 810).
-      TÉMOIN 2 (autre cadre statistique) : le patrimoine des APU dans les bilans (actifs fixes nets et terrains,
-      nama_10_nfa_bs ; valeur financière nette, nasa_10_f_bs) : sa baisse doit concorder avec la faible part investie.
+      TÉMOIN 2 (autre cadre statistique) : le patrimoine net des APU dans les bilans (tous les actifs non financiers,
+      produits N1N et non produits N2N, nama_10_nfa_bs ; valeur financière nette consolidée, nasa_10_f_bs) : sa baisse
+      doit concorder avec la faible part en actifs, quelle que soit l'année de départ (garde de sensibilité).
+      La décomposition dit la COMPOSITION COMPTABLE des déficits, non la charge transmise (Auerbach, Gokhale et
+      Kotlikoff 1991 : le déficit dépend de l'étiquetage) ; la prose ne dit jamais « financé ».
   A2. « On se la doit à nous-mêmes » : dette des APU par secteur détenteur (BCE, statistiques de finances publiques,
       GFS), 1995-dernière année ; contrôle de cohérence contre Eurostat gov_10dd_ggd (même déclarant : cohérence, pas
-      indépendance). Le témoin de périmètre État (Banque de France / AFT) n'est pas servi aux scripts : la page ne parle
-      que des APU.
+      indépendance). TÉMOIN DE PÉRIMÈTRE État : Banque de France, Webstat, série DET (CSV de la page publique, l'API ne
+      la sert pas aux scripts) ; dernière observation : relevé daté du graphique de l'AFT (source Banque de France),
+      gardé contre une erreur de transcription et contre la péremption (garde de fraîcheur).
   A3. « Le vrai fardeau est le vieillissement » : indicateur S2 de la Commission (Debt Sustainability Monitor), position
-      budgétaire initiale contre coût du vieillissement ; témoin de producteur : dépenses de retraite projetées par le
-      COR. Pièces sans API, archivées dans scripts/sources_generations/ et vérifiées par leur empreinte (SHA256SUMS).
+      budgétaire initiale contre coût du vieillissement. COR : ordre de grandeur illustratif, présenté À PART, jamais
+      comme une composante de S2 (arbitrage PRO-20261003-195656, B4). Pièces sans API, archivées dans
+      scripts/sources_generations/ et vérifiées par leur empreinte (SHA256SUMS).
+
+Une garde numérique protège contre une variation des données, jamais contre une interprétation : une phrase dont le
+défaut est conceptuel se corrige dans la prose, pas par une garde (même arbitrage).
 
 Chaque qualificatif de la page est une garde (fonction gardes) ; une donnée qui dément une phrase arrête tout, rien
 n'est écrit. Page en français seulement (le prolongement n'a pas de miroir anglais : exclusion déclarée).
 
 MISE À JOUR. Séries Eurostat et BCE : workflow dette-monde.yml (mêmes notifications d'avril et d'octobre).
-Pièces : à la main, à chaque édition — Debt Sustainability Monitor (publication annuelle, début d'année) et rapport
-annuel du COR (juin). Geste : déposer la nouvelle pièce dans scripts/sources_generations/, mettre à jour SOURCES
+Pièces : à la main, à chaque édition — Debt Sustainability Monitor (publication annuelle, début d'année), rapport
+annuel du COR (juin), série Webstat DET et relevé de l'AFT (chaque trimestre ; le générateur s'arrête si Webstat
+rattrape le relevé, qu'il faut alors remplacer ou retirer). Geste : déposer la nouvelle pièce dans scripts/sources_generations/, mettre à jour SOURCES
 ci-dessous et SHA256SUMS, relancer ; si une garde refuse, réécrire la phrase, jamais desserrer la garde.
 
 Usage : python scripts/update_dette_generations.py [--check] [--mutation-garde]
@@ -58,10 +67,10 @@ PAGE_URL = "stephane-lalut.com/dette-publique-generations-futures/"
 
 # Pièces sans API : fichier, libellé de l'édition (dit dans la page par jeton, jamais saisi dans la prose)
 SOURCES = {
-    "dsm": dict(fichier="dsm2025_country_fiches.xlsx", lib="Debt Sustainability Monitor 2025",
+    "dsm": dict(fichier="dsm2025_country_fiches.xlsx", lib="Debt Sustainability Monitor 2025", publie="2026-02",
                 producteur="Commission européenne, DG ECFIN, Institutional Paper 332, février 2026",
                 url="https://economy-finance.ec.europa.eu/publications/debt-sustainability-monitor-2025_en"),
-    "cor": dict(fichier="cor_ra2026_synthese.xlsx", lib="rapport annuel de juin 2026",
+    "cor": dict(fichier="cor_ra2026_synthese.xlsx", lib="rapport annuel de juin 2026", publie="2026-06",
                 producteur="Conseil d'orientation des retraites, données de la synthèse, scénario de référence",
                 url="https://www.cor-retraites.fr/rapports-du-cor/rapport-annuel-cor-juin-2026-evolutions-perspectives-retraites-france"),
     # Témoin de périmètre État (règle constante de l'auteur, 03/10/2026 : anti-robot -> changer de canal, jamais abandonner
@@ -70,10 +79,16 @@ SOURCES = {
     "det": dict(fichier="webstat_DET.Q.FR.1315.F33000.M.Z9.8.F.csv", lib="Banque de France, série DET.Q.FR.1315.F33000.M.Z9.8.F",
                 producteur="Banque de France, Webstat : détention par les non-résidents de la dette négociable de l'État (en %), valeur de marché",
                 url="https://webstat.banque-france.fr/fr/catalogue/det/DET.Q.FR.1315.F33000.M.Z9.8.F"),
+    # Dernière observation (arbitrage PRO-20261003-195656, B3) : relevé daté du graphique de l'AFT, source Banque de
+    # France ; l'image n'est pas servie aux scripts, ses deux étiquettes sont transcrites dans la pièce avec son empreinte.
+    "aft": dict(fichier="aft_non_residents_releve_2026T1.json", lib="Agence France Trésor, d'après la Banque de France",
+                producteur="Agence France Trésor, page « Principaux chiffres », graphique des non-résidents (source Banque de France)",
+                url="https://www.aft.gouv.fr/fr/principaux-chiffres-dette"),
 }
 
 TOL = 0.11            # ratios publiés à une décimale
 TOL_BOUCLAGE = 0.05   # identité des comptes, par année, en points de PIB
+SEUIL_BESOIN = 30.0   # contre-population : besoin de financement cumulé minimal pour comparer la part en actifs
 API = "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/%s?format=JSON&%s"
 ECB = "https://data-api.ecb.europa.eu/service/data/GFS/%s?format=csvdata&detail=dataonly"
 
@@ -92,6 +107,7 @@ PAYS = {"AT": ("Autriche", "l'Autriche"), "BE": ("Belgique", "la Belgique"), "BG
         "LV": ("Lettonie", "la Lettonie"), "MT": ("Malte", "Malte"), "NL": ("Pays-Bas", "les Pays-Bas"),
         "PL": ("Pologne", "la Pologne"), "PT": ("Portugal", "le Portugal"), "RO": ("Roumanie", "la Roumanie"),
         "SE": ("Suède", "la Suède"), "SI": ("Slovénie", "la Slovénie"), "SK": ("Slovaquie", "la Slovaquie")}
+TRIM = ["premier trimestre", "deuxième trimestre", "troisième trimestre", "quatrième trimestre"]
 MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"]
 LETTRES = ["zéro", "un", "deux", "trois", "quatre", "cinq", "six", "sept", "huit", "neuf", "dix", "onze", "douze",
            "treize", "quatorze", "quinze", "seize"]
@@ -247,17 +263,22 @@ def cumul(an: dict, a0: int, a1: int):
 
 def patrimoine(fin: int):
     Y = eurostat("gov_10dd_edpt1", na_item="B1GQ", sector="S1", unit="MIO_NAC")
-    fixes = eurostat("nama_10_nfa_bs", sector="S13", unit="CP_MNAC", asset10="N11N")
+    # Tous les actifs non financiers (arbitrage PRO-20261003-195656, B2) : produits N1N (actifs fixes, stocks, objets de
+    # valeur) et non produits N2N (terrains surtout) ; les terrains seuls (N211N) gardés pour la phrase sur leur valeur.
+    prod = eurostat("nama_10_nfa_bs", sector="S13", unit="CP_MNAC", asset10="N1N")
+    nonprod = eurostat("nama_10_nfa_bs", sector="S13", unit="CP_MNAC", asset10="N2N")
     terrains = eurostat("nama_10_nfa_bs", sector="S13", unit="CP_MNAC", asset10="N211N")
     bf = eurostat("nasa_10_f_bs", sector="S13", unit="MIO_NAC", na_item="BF90", co_nco="CO", finpos="LIAB")
-    ans = [a for a in range(fin - 30, fin + 1) if all(("FR", a) in s for s in (Y, fixes, terrains, bf))]
+    ans = [a for a in range(fin - 30, fin + 1) if all(("FR", a) in s for s in (Y, prod, nonprod, terrains, bf))]
     if not ans:
         fail("patrimoine : aucune annee complete pour la France")
-    out = {a: dict(annee=a, actifs_fixes=fixes[("FR", a)] / Y[("FR", a)] * 100, terrains=terrains[("FR", a)] / Y[("FR", a)] * 100,
-                   valeur_financiere_nette=bf[("FR", a)] / Y[("FR", a)] * 100,
-                   patrimoine_net_meur=fixes[("FR", a)] + terrains[("FR", a)] + bf[("FR", a)]) for a in ans}
+    out = {a: dict(annee=a, actifs_produits=prod[("FR", a)] / Y[("FR", a)] * 100, actifs_non_produits=nonprod[("FR", a)] / Y[("FR", a)] * 100,
+                   terrains=terrains[("FR", a)] / Y[("FR", a)] * 100, valeur_financiere_nette=bf[("FR", a)] / Y[("FR", a)] * 100,
+                   patrimoine_net_meur=prod[("FR", a)] + nonprod[("FR", a)] + bf[("FR", a)]) for a in ans}
     for x in out.values():
-        x["patrimoine_net"] = x["actifs_fixes"] + x["terrains"] + x["valeur_financiere_nette"]
+        x["patrimoine_net"] = x["actifs_produits"] + x["actifs_non_produits"] + x["valeur_financiere_nette"]
+        if x["terrains"] > x["actifs_non_produits"] + 1e-9:
+            fail("patrimoine %d : terrains superieurs aux actifs non produits" % x["annee"])
     return [out[a] for a in ans]
 
 
@@ -307,7 +328,18 @@ def etat_negociable():
     fins = [dict(annee=int(k[:4]), part=v) for k, v in sorted(obs.items()) if k.endswith("Q4")]
     if not 0 < fins[-1]["part"] < 100 or len(fins) < 20:
         fail("piece Webstat DET : moins de vingt fins d'annee ou valeur hors bornes")
-    return dict(fins=fins, dernier=dernier, valeur_dernier=obs[dernier], maj=rows[0].get("updated_at", "")[:10])
+    rel = json.loads(piece("aft").read_text(encoding="utf-8"))
+    robs = {k: float(v) for k, v in rel["observations"].items()}
+    rder = max(robs)
+    # Garde de transcription : la période commune doit égaler Webstat à 0,1 point près.
+    communs = [k for k in robs if k in obs]
+    if not communs or any(abs(robs[k] - obs[k]) > 0.1 for k in communs):
+        fail("releve AFT : la periode commune ne concorde pas avec Webstat (%s)" % {k: (robs[k], obs.get(k)) for k in robs})
+    # Garde de fraîcheur : le relevé n'a de raison d'être que s'il est plus récent que Webstat.
+    if rder <= dernier:
+        fail("releve AFT perime : Webstat publie %s, le releve s'arrete a %s ; remplacer ou retirer le releve" % (dernier, rder))
+    return dict(fins=fins, dernier=dernier, valeur_dernier=obs[dernier], maj=rows[0].get("updated_at", "")[:10],
+                releve=dict(periode=rder, valeur=robs[rder], lu_le=rel["lu_le"], image_sha256=rel["image_sha256"]))
 
 
 # ------------------------------------------------------------------ A3 : vieillissement ou position présente
@@ -400,7 +432,8 @@ def calcul():
 # ------------------------------------------------------------------ affichage et gardes
 def affichage(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, cons, etat):
     A = {"fin": str(fin), "a0": str(total["debut"]), "tolerance": fr(TOL, 2),
-         "dsm_lib": SOURCES["dsm"]["lib"], "cor_lib": SOURCES["cor"]["lib"]}
+         "dsm_lib": SOURCES["dsm"]["lib"], "cor_lib": SOURCES["cor"]["lib"],
+         "proj_an": max(SOURCES[k]["publie"] for k in ("dsm", "cor"))[:4]}   # année de publication des projections
     t = total
     A.update(b=fr(t["besoin"]), k=fr(t["actifs"]), e=fr(t["desepargne"]), t=fr(t["transferts"]), d92=fr(t["aides_investissement"]),
              part_k=fr(t["part_actifs"], 0), part_e=fr(t["part_desepargne"], 0), part_t=fr(t["part_transferts"], 0),
@@ -417,19 +450,22 @@ def affichage(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, cons, etat
     p0, p1 = pat[0], pat[-1]
     A.update(s0=str(p0["annee"]), s1=str(p1["annee"]), pn0=fr(p0["patrimoine_net"]), pn1=fr(p1["patrimoine_net"]),
              pn_var=fr(abs(p1["patrimoine_net"] - p0["patrimoine_net"])),
-             fixes_var=signe(p1["actifs_fixes"] - p0["actifs_fixes"]), terr_var=signe(p1["terrains"] - p0["terrains"]),
+             prod_var=signe(p1["actifs_produits"] - p0["actifs_produits"]), terr_var=signe(p1["terrains"] - p0["terrains"]),
              bf_var_abs=fr(abs(p1["valeur_financiere_nette"] - p0["valeur_financiere_nette"])),
              pn_hors_terr=fr(abs((p1["patrimoine_net"] - p1["terrains"]) - (p0["patrimoine_net"] - p0["terrains"]))))
     # contre-population
     A["cp_a0"] = str(cp[0]["debut"]); A["cp_n"] = str(len(cp))
     frc = next(x for x in cp if x["pays"] == "FR")
-    sup = [x for x in cp if x["besoin"] > 0 and x["part_actifs"] >= 50]
-    inf = [x for x in cp if x["besoin"] > 0 and x["part_actifs"] < frc["part_actifs"]]
-    exc = [x for x in cp if x["besoin"] <= 0]
+    # Arbitrage PRO-20261003-195656 : le ratio n'a de sens que si le besoin cumulé est substantiel.
+    groupe = [x for x in cp if x["besoin"] >= SEUIL_BESOIN]
+    sup = [x for x in groupe if x["part_actifs"] >= 50]
+    inf = [x for x in groupe if x["part_actifs"] < frc["part_actifs"]]
+    exc = [x for x in cp if x["besoin"] < SEUIL_BESOIN]
     A["cp_fr_part"] = fr(frc["part_actifs"], 0)
     A["cp_sup_n"] = lettres(len(sup)); A["cp_sup_pays"] = enumere([PAYS[x["pays"]][1] for x in sorted(sup, key=lambda x: -x["part_actifs"])])
     A["cp_inf_n"] = lettres(len(inf)); A["cp_inf_pays"] = enumere([PAYS[x["pays"]][1] for x in sorted(inf, key=lambda x: -x["part_actifs"])])
     A["cp_exc_pays"] = enumere([PAYS[x["pays"]][1] for x in exc]) if exc else ""
+    A["cp_seuil"] = fr(SEUIL_BESOIN, 0); A["cp_groupe_n"] = str(len(groupe))
     A["cp_exc_pays_maj"] = maj(A["cp_exc_pays"])
     # détention
     d0, d1 = det[0], det[-1]
@@ -458,6 +494,9 @@ def affichage(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, cons, etat
              etat_max=fr(emax["part"]), etat_max_annee=str(emax["annee"]), etat_min=fr(emin_apres["part"]),
              etat_min_annee=str(emin_apres["annee"]), etat_maj=etat["maj"][8:10].lstrip("0") + " " + MOIS[int(etat["maj"][5:7]) - 1] + " " + etat["maj"][:4],
              etat_lib=SOURCES["det"]["lib"])
+    rp = etat["releve"]["periode"]
+    A.update(etat_der=fr(etat["releve"]["valeur"]), etat_der_trim=TRIM[int(rp[-1]) - 1] + " " + rp[:4],
+             etat_der_lu=etat["releve"]["lu_le"][8:10].lstrip("0") + " " + MOIS[int(etat["releve"]["lu_le"][5:7]) - 1] + " " + etat["releve"]["lu_le"][:4])
     for p, x in det_pays.items():
         A["h_" + p.lower()] = fr(x["part_non_residents"], 0)
     # S2
@@ -502,10 +541,12 @@ def gardes(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, aux):
          (total["actifs"] + total["aides_investissement"]) / total["besoin"] < 0.5),
         # --- témoin 2 : patrimoine
         ("patrimoine net en baisse (concorde avec la faible part investie)", p1["patrimoine_net"] < p0["patrimoine_net"]),
-        ("actifs fixes : « à peine bougé » (moins de 5 points)", abs(p1["actifs_fixes"] - p0["actifs_fixes"]) < 5),
+        ("actifs produits : « à peine bougé » (moins de 5 points)", abs(p1["actifs_produits"] - p0["actifs_produits"]) < 5),
         ("valeur financière nette en recul", p1["valeur_financiere_nette"] < p0["valeur_financiere_nette"]),
         ("terrains en hausse : « seule » la hausse de leur valeur a limité la baisse",
-         p1["terrains"] > p0["terrains"] and p1["actifs_fixes"] - p0["actifs_fixes"] < p1["terrains"] - p0["terrains"]),
+         p1["terrains"] > p0["terrains"] and p1["actifs_produits"] - p0["actifs_produits"] < p1["terrains"] - p0["terrains"]),
+        ("B2 : la baisse du patrimoine net ne dépend pas de l'année de départ (toute année des seize premières)",
+         all(p1["patrimoine_net"] < x["patrimoine_net"] for x in pat[:16])),
         ("sans les terrains, la baisse aurait été plus forte", (p1["patrimoine_net"] - p1["terrains"]) - (p0["patrimoine_net"] - p0["terrains"]) < p1["patrimoine_net"] - p0["patrimoine_net"]),
         ("patrimoine : la série couvre au moins vingt-cinq ans", p1["annee"] - p0["annee"] >= 25),
         # --- contre-population
@@ -537,6 +578,7 @@ def gardes(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, aux):
         ("État : « creux au moment des achats de la banque centrale » (à un an près du maximum de la Banque de France)",
          abs(aux["emin_apres"]["annee"] - aux["bc_max"]["annee"]) <= 1),
         ("État : « remonte depuis » (au moins 3 points au-dessus du creux)", aux["etat"]["fins"][-1]["part"] > aux["emin_apres"]["part"] + 3),
+        ("État : la dernière observation (relevé AFT) prolonge la remontée", aux["etat"]["releve"]["valeur"] >= aux["etat"]["fins"][-1]["part"]),
         ("les deux séries vont dans le même sens depuis le creux de l'État",
          dl["part_non_residents"] > next(y for y in det if y["annee"] == aux["emin_apres"]["annee"])["part_non_residents"]),
         ("« depuis » la première année au-dessus du dixième, la Banque de France y reste chaque année",
@@ -676,17 +718,15 @@ def fig_detention(det, A):
 
 
 def fig_vieillissement(S2fr, C, A):
-    H, X0, X1 = 314, 210, W - 40
+    H, X0, X1 = 270, 210, W - 40
     titre = "France : d'où vient l'effort qui stabiliserait la dette (indicateur S2)"
-    cor_var = C["depenses1"] - C["depenses0"]
     groupes = [("Scénario de base", S2fr["IBP"]["base"], S2fr["CoA"]["base"]),
                ("Productivité plus faible", S2fr["IBP"]["productivite"], S2fr["CoA"]["productivite"]),
                ("Risque santé et dépendance", S2fr["IBP"]["risque"], S2fr["CoA"]["risque"]),
-               ("Base, retraites du COR", S2fr["IBP"]["base"], S2fr["CoA"]["base"] - S2fr["pensions"]["base"] + cor_var),
-               ("Risque, retraites du COR", S2fr["IBP"]["risque"], S2fr["CoA"]["risque"] - S2fr["pensions"]["risque"] + cor_var)]
+               ("Édition précédente (%d)" % (int(A["dsm_lib"][-4:]) - 1), S2fr["IBP"]["base_precedente"], S2fr["CoA"]["base_precedente"])]
     desc = ("Ajustement permanent du solde primaire structurel qui stabiliserait la dette, en points de PIB, partagé entre la position "
-            "budgétaire présente et le coût du vieillissement, selon la Commission européenne (%s), puis en remplaçant sa projection des "
-            "retraites par celle du COR. " % A["dsm_lib"]
+            "budgétaire présente et le coût du vieillissement, selon la Commission européenne (%s), dans trois scénarios et dans "
+            "l'édition précédente. " % A["dsm_lib"]
             + " ".join("%s : position présente %s, vieillissement %s." % (g, fr(a), fr(b)) for g, a, b in groupes))
     e = entete(H, "gv", titre, desc)
     legende(e, [(ORANGE, "position budgétaire présente"), (GRIS, "coût du vieillissement")])
@@ -698,8 +738,6 @@ def fig_vieillissement(S2fr, C, A):
         e.append('<text x="%.1f" y="%d" font-size="10" fill="%s" text-anchor="middle">%d</text>' % (Xv(g), top + pas * len(groupes) + 6, MUTED, g))
     for k, (lib, a, b) in enumerate(groupes):
         y = top + pas * k
-        if k == 3:
-            e.append('<line x1="0" y1="%d" x2="%d" y2="%d" stroke="%s"/>' % (y - 6, W, y - 6, GRID))
         e.append('<text x="0" y="%d" font-size="11.5" font-weight="600" fill="%s">%s</text>' % (y + hb + 2, INK, esc(lib)))
         for j, (v, col) in enumerate(((a, ORANGE), (b, GRIS))):
             yy = y + j * (hb + 2)
@@ -707,8 +745,8 @@ def fig_vieillissement(S2fr, C, A):
             e.append('<rect x="%.1f" y="%d" width="%.1f" height="%d" fill="%s"/>' % (x0_, yy, max(x1_ - x0_, 0.6), hb, col))
             e.append('<text x="%.1f" y="%d" font-size="10" font-weight="600" fill="%s">%s</text>' % (max(x1_, Xv(0)) + 4, yy + 11, INK, fr(v)))
     e.append('<text x="%d" y="%d" font-size="10" fill="%s" text-anchor="end">points de PIB</text>' % (X1, top + pas * len(groupes) + 21, MUTED))
-    e += cartouche(H + 4, "Commission européenne, %s (indicateur S2) ; COR, %s (dépenses de retraite, scénario de référence)" % (A["dsm_lib"], A["cor_lib"]),
-                   "Projections conditionnelles. « COR » : dépenses de retraite %s-%s du COR à la place des pensions (approximation majorante)." % (A["cor_a0"], A["cor_a1"]))
+    e += cartouche(H + 4, "Commission européenne, %s, tableaux par pays : indicateur S2 et ses deux composantes, France" % A["dsm_lib"],
+                   "Projections conditionnelles aux hypothèses de la Commission (Ageing Report 2024, réforme des retraites de 2023 appliquée).")
     e.append("</svg>")
     return "\n".join(e)
 
@@ -748,7 +786,7 @@ def csv_texte(total, dec, annees, cp, pat, det, det_pays, S2, C, etat):
         for k in ("besoin", "actifs", "transferts", "desepargne"):
             w.writerow(["ue_emplois_du_besoin_de_financement", d["pays"], "%d-%d" % (d["debut"], d["fin"]), k, "%.3f" % d[k], "points de PIB cumulés"])
     for r in pat:
-        for k in ("actifs_fixes", "terrains", "valeur_financiere_nette", "patrimoine_net"):
+        for k in ("actifs_produits", "actifs_non_produits", "terrains", "valeur_financiere_nette", "patrimoine_net"):
             w.writerow(["france_patrimoine_apu", "FR", r["annee"], k, "%.3f" % r[k], "% du PIB"])
     for r in det:
         for k in ("dette", "non_residents", "banque_centrale", "autres_residents"):

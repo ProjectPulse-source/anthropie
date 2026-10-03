@@ -53,6 +53,22 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-03 (nuit) — « Générations futures » : contre-expertise PRO-20261003-195656 arbitrée et exécutée ; COMMITÉ, NON POUSSÉ
+
+Arbitrage `D:\PRO\.claude\external-audits\ARBITRATIONS\PRO-20261003-195656_arbitrage.md` : publier après corrections ;
+4 bloquantes acceptées (2 avec modification), affirmations du contradicteur vérifiées à la source avant d'être retenues.
+- B1 : plus jamais « financé » ; « À quoi les déficits ont correspondu dans les comptes » ; actifs « comptabilisés » ;
+  Auerbach, Gokhale et Kotlikoff (1991) lus (fiche, 8 extraits vérifiés) et cités : composition comptable ≠ charge.
+- B2 : patrimoine complet (N1N + N2N + BF90) : 37,1 → 25,0 % du PIB ; garde de sensibilité à l'année de départ.
+- B3 : dernière observation État 57,5 % au T1 2026 (relevé AFT archivé, empreinte de l'image) ; gardes de
+  transcription et de fraîcheur, vues mordre.
+- B4 : figure S2 réduite à la Commission ; COR en paragraphe distinct, « ordre de grandeur, non une composante de S2 ».
+- Non bloquantes : « principalement », contre-calcul descriptif, compensation (Banque de France), « convergent sur
+  trois faits », paiements aux détenteurs, contre-population au-dessus de 30 points de besoin cumulé, anthropie, livre,
+  cartouche « projections 2026 », docstring. 54 gardes ; build 0 ; `check-all --ci` 0 ; audit des liens 0 critique.
+- Leçon transversale en candidate : `~/.claude/knowledge/candidates/garde-numerique-ne-valide-pas-une-interpretation.md`.
+
+
 ### 2026-10-03 (soir, suite) — « Générations futures » : témoin État rétabli par la règle constante « anti-robot → changer de canal »
 
 Règle de l'auteur (`Downloads\Regle_constante.txt`, mémoire `feedback_anti_robot_changer_de_canal`) : la part non

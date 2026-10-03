@@ -67,8 +67,8 @@
   {{- end -}}
 {{- else if and (eq $v "prolongement") (in (.Page.Params.donnees | default (slice)) "dette_generations") -}}
   {{- with site.Data.dette_generations -}}
-    {{- $src = printf "%s · Eurostat et BCE %s" $donnees .affichage.fin -}}
-    {{- $srcTitre = "Dernière année des séries Eurostat et BCE de cette page — c'est le millésime des DONNÉES, non la date de relecture du texte" -}}
+    {{- $src = printf "%s · Eurostat et BCE %s · projections %s" $donnees .affichage.fin .affichage.proj_an -}}
+    {{- $srcTitre = "Dernière année des séries Eurostat et BCE de cette page, et édition des projections de la Commission et du COR — millésimes des DONNÉES, non date de relecture du texte" -}}
   {{- end -}}
 {{- end -}}
 {{- if not $src -}}

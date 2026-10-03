@@ -397,7 +397,7 @@ def carte_generations() -> None:
         fail("carte générations : le contraste annoncé n'est plus vrai dans les données")
     carte("og-dette-generations.jpg",
           ["Des déficits", "pour le courant"],
-          "%s : %s %% seulement en actifs transmis." % (A["d3_lib"], A["d3_part"]),
+          "%s : %s %% seulement en actifs comptabilisés." % (A["d3_lib"], A["d3_part"]),
           "Eurostat, France %s-%s · CC BY 4.0" % (A["a0"], A["fin"]),
           "stephane-lalut.com/dette-publique-generations-futures/",
           lambda d: figure_generations_mini(d, per),

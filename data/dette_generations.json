@@ -11,6 +11,7 @@
    "dsm": {
     "fichier": "dsm2025_country_fiches.xlsx",
     "lib": "Debt Sustainability Monitor 2025",
+    "publie": "2026-02",
     "producteur": "Commission européenne, DG ECFIN, Institutional Paper 332, février 2026",
     "url": "https://economy-finance.ec.europa.eu/publications/debt-sustainability-monitor-2025_en",
     "sha256": "2b0486b13dd7c779faf5b117dc04f15dfae74689cb19fec4276ffd7e36b8aafb"
@@ -18,6 +19,7 @@
    "cor": {
     "fichier": "cor_ra2026_synthese.xlsx",
     "lib": "rapport annuel de juin 2026",
+    "publie": "2026-06",
     "producteur": "Conseil d'orientation des retraites, données de la synthèse, scénario de référence",
     "url": "https://www.cor-retraites.fr/rapports-du-cor/rapport-annuel-cor-juin-2026-evolutions-perspectives-retraites-france",
     "sha256": "288f75a0784536fd4ccecbe267f83ca44f394a0b6d9cae8350a5782691a78097"
@@ -28,6 +30,13 @@
     "producteur": "Banque de France, Webstat : détention par les non-résidents de la dette négociable de l'État (en %), valeur de marché",
     "url": "https://webstat.banque-france.fr/fr/catalogue/det/DET.Q.FR.1315.F33000.M.Z9.8.F",
     "sha256": "5773dd1f855d8578531db03da44a8c6cd3641387bf671360486374dd53419259"
+   },
+   "aft": {
+    "fichier": "aft_non_residents_releve_2026T1.json",
+    "lib": "Agence France Trésor, d'après la Banque de France",
+    "producteur": "Agence France Trésor, page « Principaux chiffres », graphique des non-résidents (source Banque de France)",
+    "url": "https://www.aft.gouv.fr/fr/principaux-chiffres-dette",
+    "sha256": "8d88e81ae9abcf01d379e31453e16c49fa4a3e4660c03db67fba20ca35b67b38"
    }
   },
   "definitions": {
@@ -392,251 +401,282 @@
   "patrimoine": [
    {
     "annee": 1995,
-    "actifs_fixes": 55.752931697261985,
+    "actifs_produits": 59.90260355478077,
+    "actifs_non_produits": 8.497193117164086,
     "terrains": 7.717313037876029,
     "valeur_financiere_nette": -31.323807342548456,
-    "patrimoine_net_meur": 390194.1,
-    "patrimoine_net": 32.14643739258956
+    "patrimoine_net_meur": 450029.1,
+    "patrimoine_net": 37.0759893293964
    },
    {
     "annee": 1996,
-    "actifs_fixes": 55.96258622874254,
+    "actifs_produits": 60.000080194133965,
+    "actifs_non_produits": 8.303461018433424,
     "terrains": 7.479402136692505,
     "valeur_financiere_nette": -36.7455937333096,
-    "patrimoine_net_meur": 332897.1,
-    "patrimoine_net": 26.696394632125447
+    "patrimoine_net_meur": 393519.4,
+    "patrimoine_net": 31.557947479257784
    },
    {
     "annee": 1997,
-    "actifs_fixes": 55.22763592828858,
+    "actifs_produits": 59.16749956771854,
+    "actifs_non_produits": 7.973573064096291,
     "terrains": 7.2220624051597735,
     "valeur_financiere_nette": -37.03151738934564,
-    "patrimoine_net_meur": 327810.3999999999,
-    "patrimoine_net": 25.418180944102716
+    "patrimoine_net_meur": 388313.6,
+    "patrimoine_net": 30.109555242469185
    },
    {
     "annee": 1998,
-    "actifs_fixes": 53.85784784872519,
+    "actifs_produits": 57.60423614628935,
+    "actifs_non_produits": 8.888472114314746,
     "terrains": 8.144702811668566,
     "valeur_financiere_nette": -38.83985804245357,
-    "patrimoine_net_meur": 311843.5,
-    "patrimoine_net": 23.162692617940188
+    "patrimoine_net_meur": 372295.29999999993,
+    "patrimoine_net": 27.652850218150533
    },
    {
     "annee": 1999,
-    "actifs_fixes": 53.18906667966409,
+    "actifs_produits": 56.81036707216725,
+    "actifs_non_produits": 11.438700410279052,
     "terrains": 10.675763431549916,
     "valeur_financiere_nette": -31.92951572162953,
-    "patrimoine_net_meur": 445544.8999999999,
-    "patrimoine_net": 31.935314389584473
+    "patrimoine_net_meur": 506711.5,
+    "patrimoine_net": 36.31955176081678
    },
    {
     "annee": 2000,
-    "actifs_fixes": 51.92058184601874,
+    "actifs_produits": 55.37385045438905,
+    "actifs_non_produits": 13.23332543838992,
     "terrains": 12.49864779300137,
     "valeur_financiere_nette": -33.37267232071296,
-    "patrimoine_net_meur": 457476.30000000005,
-    "patrimoine_net": 31.04655731830716
+    "patrimoine_net_meur": 519186.3999999999,
+    "patrimoine_net": 35.23450357206601
    },
    {
     "annee": 2001,
-    "actifs_fixes": 51.68762756760961,
+    "actifs_produits": 54.991140933982805,
+    "actifs_non_produits": 15.138310575130173,
     "terrains": 14.31863619400668,
     "valeur_financiere_nette": -36.24688004674293,
-    "patrimoine_net_meur": 455339.69999999995,
-    "patrimoine_net": 29.759383714873366
+    "patrimoine_net_meur": 518427.3999999999,
+    "patrimoine_net": 33.88257146237005
    },
    {
     "annee": 2002,
-    "actifs_fixes": 51.95240539050769,
+    "actifs_produits": 55.226492558590415,
+    "actifs_non_produits": 18.355717752307818,
     "terrains": 17.521468894337687,
     "valeur_financiere_nette": -40.41410858312267,
-    "patrimoine_net_meur": 458659.0,
-    "patrimoine_net": 29.05976570172271
+    "patrimoine_net_meur": 523502.1000000001,
+    "patrimoine_net": 33.168101727775564
    },
    {
     "annee": 2003,
-    "actifs_fixes": 52.86801622128405,
+    "actifs_produits": 56.00124020457211,
+    "actifs_non_produits": 22.969975584242995,
     "terrains": 22.074266803015202,
     "valeur_financiere_nette": -41.81979679630256,
-    "patrimoine_net_meur": 537350.3999999999,
-    "patrimoine_net": 33.122486227996696
+    "patrimoine_net_meur": 602712.3,
+    "patrimoine_net": 37.15141899251254
    },
    {
     "annee": 2004,
-    "actifs_fixes": 53.18087055777109,
+    "actifs_produits": 56.156936940336344,
+    "actifs_non_produits": 28.47260315970445,
     "terrains": 27.647909213328397,
     "valeur_financiere_nette": -43.507547868414036,
-    "patrimoine_net_meur": 633008.3999999999,
-    "patrimoine_net": 37.32123190268544
+    "patrimoine_net_meur": 697473.3999999999,
+    "patrimoine_net": 41.12199223162676
    },
    {
     "annee": 2005,
-    "actifs_fixes": 54.02789821843673,
+    "actifs_produits": 56.853774698532625,
+    "actifs_non_produits": 34.57224207286067,
     "terrains": 33.71403049179137,
     "valeur_financiere_nette": -41.161818520267325,
-    "patrimoine_net_meur": 820763.8999999999,
-    "patrimoine_net": 46.580110189960784
+    "patrimoine_net_meur": 885679.3,
+    "patrimoine_net": 50.26419825112597
    },
    {
     "annee": 2006,
-    "actifs_fixes": 54.46282572083416,
+    "actifs_produits": 56.98599311708804,
+    "actifs_non_produits": 37.73271268311682,
     "terrains": 36.88155226836531,
     "valeur_financiere_nette": -36.809386242085004,
-    "patrimoine_net_meur": 1006727.3999999999,
-    "patrimoine_net": 54.53499174711447
+    "patrimoine_net_meur": 1069018.2,
+    "patrimoine_net": 57.90931955811987
    },
    {
     "annee": 2007,
-    "actifs_fixes": 55.07064435495357,
+    "actifs_produits": 57.66824089879847,
+    "actifs_non_produits": 38.15718343175725,
     "terrains": 37.318899661278635,
     "valeur_financiere_nette": -34.275051654491826,
-    "patrimoine_net_meur": 1126186.8,
-    "patrimoine_net": 58.11449236174038
+    "patrimoine_net_meur": 1192769.9,
+    "patrimoine_net": 61.550372676063894
    },
    {
     "annee": 2008,
-    "actifs_fixes": 55.85210050251257,
+    "actifs_produits": 58.30223618090452,
+    "actifs_non_produits": 33.56445728643216,
     "terrains": 32.764527638190955,
     "valeur_financiere_nette": -42.73889447236181,
-    "patrimoine_net_meur": 912966.8999999999,
-    "patrimoine_net": 45.87773366834172
+    "patrimoine_net_meur": 977643.2,
+    "patrimoine_net": 49.12779899497488
    },
    {
     "annee": 2009,
-    "actifs_fixes": 59.3499411108356,
+    "actifs_produits": 61.771039961980335,
+    "actifs_non_produits": 35.15953797834532,
     "terrains": 34.23941028184147,
     "valeur_financiere_nette": -49.90179973551533,
-    "patrimoine_net_meur": 845721.0999999999,
-    "patrimoine_net": 43.68755165716174
+    "patrimoine_net_meur": 910401.8999999999,
+    "patrimoine_net": 47.02877820481033
    },
    {
     "annee": 2010,
-    "actifs_fixes": 60.500427088160514,
+    "actifs_produits": 62.90796688501183,
+    "actifs_non_produits": 39.124787395263205,
     "terrains": 38.223914432072945,
     "valeur_financiere_nette": -55.78021867915785,
-    "patrimoine_net_meur": 857196.8999999999,
-    "patrimoine_net": 42.944122841075604
+    "patrimoine_net_meur": 923235.2999999998,
+    "patrimoine_net": 46.252535601117195
    },
    {
     "annee": 2011,
-    "actifs_fixes": 61.04300821330839,
+    "actifs_produits": 63.43364978437459,
+    "actifs_non_produits": 39.98544716389423,
     "terrains": 38.93644033070483,
     "valeur_financiere_nette": -59.56542253900194,
-    "patrimoine_net_meur": 833394.2,
-    "patrimoine_net": 40.41402600501128
+    "patrimoine_net_meur": 904324.6000000001,
+    "patrimoine_net": 43.85367440926687
    },
    {
     "annee": 2012,
-    "actifs_fixes": 61.840829349605684,
+    "actifs_produits": 64.3987967171179,
+    "actifs_non_produits": 38.50952479232979,
     "terrains": 37.44674941710598,
     "valeur_financiere_nette": -66.25214829187752,
-    "patrimoine_net_meur": 689874.6000000001,
-    "patrimoine_net": 33.03543047483414
+    "patrimoine_net_meur": 765486.1000000001,
+    "patrimoine_net": 36.65617321757017
    },
    {
     "annee": 2013,
-    "actifs_fixes": 61.64108600836088,
+    "actifs_produits": 64.23961210214154,
+    "actifs_non_produits": 36.74267763088393,
     "terrains": 35.761288691688925,
     "valeur_financiere_nette": -67.00411063823366,
-    "patrimoine_net_meur": 644550.2,
-    "patrimoine_net": 30.39826406181615
+    "patrimoine_net_meur": 720457.0,
+    "patrimoine_net": 33.97817909479181
    },
    {
     "annee": 2014,
-    "actifs_fixes": 60.14564015130938,
+    "actifs_produits": 62.92847349230383,
+    "actifs_non_produits": 34.789706987820686,
     "terrains": 33.780166808049096,
     "valeur_financiere_nette": -75.29252697525645,
-    "patrimoine_net_meur": 401311.1000000001,
-    "patrimoine_net": 18.633279984102032
+    "patrimoine_net_meur": 482988.7000000002,
+    "patrimoine_net": 22.425653504868066
    },
    {
     "annee": 2015,
-    "actifs_fixes": 58.16053587668222,
+    "actifs_produits": 60.805895515675914,
+    "actifs_non_produits": 34.38729954819701,
     "terrains": 33.399183792873814,
     "valeur_financiere_nette": -76.16160065267498,
-    "patrimoine_net_meur": 338974.5,
-    "patrimoine_net": 15.398119016881054
+    "patrimoine_net_meur": 418961.8999999999,
+    "patrimoine_net": 19.031594411197943
    },
    {
     "annee": 2016,
-    "actifs_fixes": 58.28844543397113,
+    "actifs_produits": 60.86618583317017,
+    "actifs_non_produits": 35.389106374665694,
     "terrains": 34.31441797027447,
     "valeur_financiere_nette": -79.35612162097374,
-    "patrimoine_net_meur": 295643.30000000005,
-    "patrimoine_net": 13.246741783271858
+    "patrimoine_net_meur": 377158.9000000004,
+    "patrimoine_net": 16.899170586862127
    },
    {
     "annee": 2017,
-    "actifs_fixes": 58.43784977053962,
+    "actifs_produits": 60.91437246283405,
+    "actifs_non_produits": 36.472637334777396,
     "terrains": 35.42524024940644,
     "valeur_financiere_nette": -77.66499787710418,
-    "patrimoine_net_meur": 371208.6000000001,
-    "patrimoine_net": 16.198092142841887
+    "patrimoine_net_meur": 451965.6000000001,
+    "patrimoine_net": 19.72201192050727
    },
    {
     "annee": 2018,
-    "actifs_fixes": 58.3595352393665,
+    "actifs_produits": 60.79111372641923,
+    "actifs_non_produits": 37.52021238339908,
     "terrains": 36.47819465619524,
     "valeur_financiere_nette": -76.68206556696356,
-    "patrimoine_net_meur": 427631.7999999998,
-    "patrimoine_net": 18.155664328598192
+    "patrimoine_net_meur": 509447.5999999996,
+    "patrimoine_net": 21.62926054285475
    },
    {
     "annee": 2019,
-    "actifs_fixes": 57.6066058522157,
+    "actifs_produits": 59.988709842542185,
+    "actifs_non_produits": 39.6561024616737,
     "terrains": 38.57846392186191,
     "valeur_financiere_nette": -76.40603780845956,
-    "patrimoine_net_meur": 481067.0,
-    "patrimoine_net": 19.77903196561806
+    "patrimoine_net_meur": 565215.1000000001,
+    "patrimoine_net": 23.23877449575633
    },
    {
     "annee": 2020,
-    "actifs_fixes": 62.152241579518574,
+    "actifs_produits": 64.66217568572507,
+    "actifs_non_produits": 46.29905153657287,
     "terrains": 45.07163081531276,
     "valeur_financiere_nette": -90.52304384810091,
-    "patrimoine_net_meur": 387171.2999999998,
-    "patrimoine_net": 16.70082854673042
+    "patrimoine_net_meur": 473813.5,
+    "patrimoine_net": 20.438183374197024
    },
    {
     "annee": 2021,
-    "actifs_fixes": 61.99453610738319,
+    "actifs_produits": 64.37350634065122,
+    "actifs_non_produits": 46.31388197130739,
     "terrains": 45.21257109958048,
     "valeur_financiere_nette": -82.4220865020641,
-    "patrimoine_net_meur": 621633.5999999996,
-    "patrimoine_net": 24.785020704899566
+    "patrimoine_net_meur": 708922.5999999996,
+    "patrimoine_net": 28.26530180989451
    },
    {
     "annee": 2022,
-    "actifs_fixes": 62.533702939377854,
+    "actifs_produits": 64.8447756346371,
+    "actifs_non_produits": 46.76200462924412,
     "terrains": 45.70479921416641,
     "valeur_financiere_nette": -71.29397659454777,
-    "patrimoine_net_meur": 980506.6000000001,
-    "patrimoine_net": 36.94452555899649
+    "patrimoine_net_meur": 1069900.5999999996,
+    "patrimoine_net": 40.31280366933345
    },
    {
     "annee": 2023,
-    "actifs_fixes": 60.050610023339466,
+    "actifs_produits": 62.20308162886501,
+    "actifs_non_produits": 39.80858034332383,
     "terrains": 38.84083214706902,
     "valeur_financiere_nette": -73.25904977934425,
-    "patrimoine_net_meur": 726377.4000000004,
-    "patrimoine_net": 25.63239239106423
+    "patrimoine_net_meur": 814799.0,
+    "patrimoine_net": 28.752612192844595
    },
    {
     "annee": 2024,
-    "actifs_fixes": 58.82869384267568,
+    "actifs_produits": 60.93939976206343,
+    "actifs_non_produits": 37.9716860927026,
     "terrains": 37.01615815559635,
     "valeur_financiere_nette": -72.81693874018988,
-    "patrimoine_net_meur": 675923.6000000001,
-    "patrimoine_net": 23.02791325808215
+    "patrimoine_net_meur": 765924.7999999998,
+    "patrimoine_net": 26.094147114576145
    },
    {
     "annee": 2025,
-    "actifs_fixes": 58.778952915001106,
+    "actifs_produits": 60.84045889900702,
+    "actifs_non_produits": 37.496511375137615,
     "terrains": 36.528448445988346,
     "valeur_financiere_nette": -73.30039105322578,
-    "patrimoine_net_meur": 659051.2000000002,
-    "patrimoine_net": 22.007010307763665
+    "patrimoine_net_meur": 749778.7000000002,
+    "patrimoine_net": 25.036579220918853
    }
   ],
   "detention": [
@@ -3177,7 +3217,13 @@
   ],
   "dernier": "2025-Q4",
   "valeur_dernier": 56.0,
-  "maj": "2026-04-07"
+  "maj": "2026-04-07",
+  "releve": {
+   "periode": "2026-Q1",
+   "valeur": 57.5,
+   "lu_le": "2026-10-03",
+   "image_sha256": "a813be6b03b1c2bde753a73f24781147e7f73a98e1d8e450e72430f9ec753999"
+  }
  },
  "controles": {
   "detention_bce_eurostat_annees": 6
@@ -3194,6 +3240,7 @@
   "tolerance": "0,11",
   "dsm_lib": "Debt Sustainability Monitor 2025",
   "cor_lib": "rapport annuel de juin 2026",
+  "proj_an": "2026",
   "b": "124,5",
   "k": "23,0",
   "e": "81,7",
@@ -3230,22 +3277,24 @@
   "ep_pos_lib": "2000 et 2001",
   "s0": "1995",
   "s1": "2025",
-  "pn0": "32,1",
-  "pn1": "22,0",
-  "pn_var": "10,1",
-  "fixes_var": "+3,0",
+  "pn0": "37,1",
+  "pn1": "25,0",
+  "pn_var": "12,0",
+  "prod_var": "+0,9",
   "terr_var": "+28,8",
   "bf_var_abs": "42,0",
-  "pn_hors_terr": "39,0",
+  "pn_hors_terr": "40,9",
   "cp_a0": "2001",
   "cp_n": "27",
   "cp_fr_part": "17",
-  "cp_sup_n": "huit",
-  "cp_sup_pays": "la Suède, l'Estonie, la Finlande, la Bulgarie, Chypre, la Slovénie, la Roumanie et la Lituanie",
+  "cp_sup_n": "quatre",
+  "cp_sup_pays": "Chypre, la Slovénie, la Roumanie et la Lituanie",
   "cp_inf_n": "huit",
   "cp_inf_pays": "la Grèce, l'Autriche, le Portugal, la Belgique, la Tchéquie, l'Allemagne, l'Italie et la Slovaquie",
-  "cp_exc_pays": "le Danemark et le Luxembourg",
-  "cp_exc_pays_maj": "Le Danemark et le Luxembourg",
+  "cp_exc_pays": "la Bulgarie, le Danemark, l'Estonie, la Finlande, le Luxembourg et la Suède",
+  "cp_seuil": "30",
+  "cp_groupe_n": "21",
+  "cp_exc_pays_maj": "La Bulgarie, le Danemark, l'Estonie, la Finlande, le Luxembourg et la Suède",
   "h0": "1995",
   "h_fin": "2025",
   "nr0": "38,8",
@@ -3277,6 +3326,9 @@
   "etat_min_annee": "2021",
   "etat_maj": "7 avril 2026",
   "etat_lib": "Banque de France, série DET.Q.FR.1315.F33000.M.Z9.8.F",
+  "etat_der": "57,5",
+  "etat_der_trim": "premier trimestre 2026",
+  "etat_der_lu": "3 octobre 2026",
   "h_at": "66",
   "h_be": "63",
   "h_bg": "51",

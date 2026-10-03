@@ -1,0 +1,12 @@
+{
+ "objet": "Part des non-résidents dans l'encours des titres de dette négociable de l'État, en % (source : Banque de France)",
+ "page": "https://www.aft.gouv.fr/fr/principaux-chiffres-dette",
+ "image": "https://www.aft.gouv.fr/files/medias-aft/7_Publications/7.2_BM/m%C3%A0j%20mensuelles%20BM/2_non%20resident.PNG",
+ "image_sha256": "a813be6b03b1c2bde753a73f24781147e7f73a98e1d8e450e72430f9ec753999",
+ "image_octets": 6671,
+ "image_modifiee": "2026-07-16",
+ "lu_le": "2026-10-03",
+ "mode": "lecture des étiquettes du graphique, page publique rendue par navigateur (le fichier n'est pas servi aux scripts : règle constante, changement de canal)",
+ "observations": {"2025-Q4": 56.07, "2026-Q1": 57.50},
+ "controle": "2025-Q4 doit égaler la série Webstat DET.Q.FR.1315.F33000.M.Z9.8.F à 0,1 point près (garde du générateur)"
+}
