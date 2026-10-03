@@ -111,18 +111,18 @@
       {{- range $items }}
       {{- if eq .n $v }}
       <li class="dossier-dette__volet is-actif" aria-current="page">
-        <span class="dossier-dette__onglet"><b><span class="dossier-dette__long">{{ if $en }}{{ .titre }}{{ else }}{{ partial "fr-typo.html" .titre }}{{ end }}</span><span class="dossier-dette__court">{{ .court }}<span class="sr-only"> : {{ .nom }}</span></span></b><span class="dossier-dette__role">{{ .role }}</span></span>
+        <span class="dossier-dette__onglet"><b><span class="dossier-dette__long">{{ if $en }}{{ .titre }}{{ else }}{{ partial "fr-typo.html" .titre }}{{ end }}</span><span class="dossier-dette__court">{{ .court }}<span class="sr-only">{{ if $en }}: {{ else }} : {{ end }}{{ .nom }}</span></span></b><span class="dossier-dette__role">{{ .role }}</span></span>
       </li>
       {{- else }}
       <li class="dossier-dette__volet">
-        <a class="dossier-dette__onglet" href="{{ .url }}"><b><span class="dossier-dette__long">{{ if $en }}{{ .titre }}{{ else }}{{ partial "fr-typo.html" .titre }}{{ end }}</span><span class="dossier-dette__court">{{ .court }}<span class="sr-only"> : {{ .nom }}</span></span></b><span class="dossier-dette__role">{{ .role }}</span></a>
+        <a class="dossier-dette__onglet" href="{{ .url }}"><b><span class="dossier-dette__long">{{ if $en }}{{ .titre }}{{ else }}{{ partial "fr-typo.html" .titre }}{{ end }}</span><span class="dossier-dette__court">{{ .court }}<span class="sr-only">{{ if $en }}: {{ else }} : {{ end }}{{ .nom }}</span></span></b><span class="dossier-dette__role">{{ .role }}</span></a>
       </li>
       {{- end }}
       {{- end }}
       {{- with $prolong }}
       <li class="dossier-dette__volet dossier-dette__volet--plus{{ if $plusActif }} is-actif{{ end }}"{{ if $plusActif }} aria-current="page"{{ end }}>
         <details class="dossier-dette__plus">
-          <summary class="dossier-dette__onglet"><b><span class="dossier-dette__long">{{ $ptitre }}</span><span class="dossier-dette__court">{{ if $en }}More{{ else }}Plus{{ end }}<span class="sr-only"> : {{ lower $ptitre }}</span></span><span class="dossier-dette__chevron" aria-hidden="true">▾</span></b><span class="dossier-dette__role">{{ len . }} {{ if $en }}topics{{ else }}thèmes{{ end }}</span></summary>
+          <summary class="dossier-dette__onglet"><b><span class="dossier-dette__long">{{ $ptitre }}</span><span class="dossier-dette__court">{{ if $en }}More{{ else }}Plus{{ end }}<span class="sr-only">{{ if $en }}: {{ else }} : {{ end }}{{ lower $ptitre }}</span></span><span class="dossier-dette__chevron" aria-hidden="true">▾</span></b><span class="dossier-dette__role">{{ len . }} {{ if $en }}topics{{ else }}thèmes{{ end }}</span></summary>
           <div class="dossier-dette__panneau">
             <p class="dossier-dette__panneau-titre">{{ if $en }}Further topics in the dossier{{ else }}Prolongements du dossier{{ end }}</p>
             {{- range . }}
