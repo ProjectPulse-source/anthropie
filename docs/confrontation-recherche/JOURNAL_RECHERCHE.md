@@ -149,4 +149,22 @@ est **infirmée** (recalcul : l'année d'arrivée change aussi le poids des rece
 2019-2025) et remplacée par « le diagnostic comptable dépend fortement de la période retenue » ; recettes totales ≠
 prélèvements obligatoires dit ; −2,4 (dépense totale) remplacé par −2,1 (hors intérêts) ; « surtout », « recommande »,
 « plaide », « non suffisante » retirés au profit des formulations des textes. **Point ouvert** : le document de travail
-de l'OFCE (`ofce.github.io/psmt/PB.pdf`), signalé par le contradicteur, non lu, non cité.
+de l'OFCE (`ofce.github.io/psmt/PB.pdf`), signalé par le contradicteur, non lu, non cité. → levé au § 8.
+
+## 8. Quatrième tour, 03/10/2026 — document de travail de l'OFCE n° 13
+
+Commande de l'auteur. Hypothèses O1-O3 écrites avant lecture. Texte lu en entier (27 pages ; fiche
+`ofce-2025-document-de-travail.md`, 16 extraits ; contrôle : 91 extraits retrouvés sur six textes, 91 altérés rejetés,
+extrait E18 ajouté à la fiche du Trésor-Éco n° 403). PDF dans `07_RECHERCHE\confrontation_dette\` (SHA-256
+`9cb4bdbb…c7c8b9`). Il établit la date du billet (11/07/2025) et confirme le point (b) de la contre-expertise
+`PRO-20261003-172718` (2017 = élection présidentielle ; 2,1 points sur 2,4 au solde primaire structurel).
+
+**Ce qu'il change** : la page prêtait à l'OFCE la seule lecture « les recettes » ; il voit aussi la hausse des dépenses
+depuis 2019 (+1,8 point) et la juge **moindre qu'en zone euro** — comme la DG Trésor (+1,6 contre +2,4, E18). Les deux
+institutions partagent les faits ; l'une en tire l'écart avec la zone euro, l'autre décompose en niveau. Témoins :
+Eurostat 2019-2024, dépenses +1,7 et recettes −1,8 (OFCE +1,8 et −1,6) ; écart au solde stabilisant 2024 de 2,0 points
+sur la série de la page (OFCE 2,1). Deux gardes nouvelles, vues mordre. Nuance portée au bloc de « Peut-elle baisser » :
+l'OFCE juge la remontée de la charge moins certaine que les projections officielles (+0,5 point d'ici 2029 au taux de
+juillet 2025, contre +1,2 projeté par le FMI).
+
+**Contre-expertise de ces ajouts : à faire** (règle 12), avant ou juste après publication.

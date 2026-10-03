@@ -431,6 +431,8 @@ def affichage(a0, d_depart, rows, total, per, dr):
         # Contre-expertise PRO-20261003-172718 (T-7, T-9) : même convention (hors intérêts) et fenêtre croisée.
         A["entre_dep_hi"] = sg(dr[fen["tresor"][0]]["depenses_hors_interets"] - dr[fen["ofce"][0]]["depenses_hors_interets"])
         A["croise_rec"] = sg(dr[fen["ofce"][1]]["recettes"] - dr[fen["tresor"][0]]["recettes"])
+        # Quatrième tour (document de travail de l'OFCE, E6) : sur la fenêtre commune, dépenses totales.
+        A["croise_dep"] = sg(dr[fen["ofce"][1]]["depenses"] - dr[fen["tresor"][0]]["depenses"])
         return A
 
     fen = {k: (d0, d1 or last["annee"]) for k, (d0, d1) in FENETRES_DEFICIT.items()}
@@ -492,6 +494,12 @@ def affichage(a0, d_depart, rows, total, per, dr):
          > abs(dr[fen["tresor"][1]]["recettes"] - dr[fen["tresor"][0]]["recettes"])),
         ("entre les deux années de départ, les dépenses hors intérêts baissent de plus d'un point",
          dr[fen["tresor"][0]]["depenses_hors_interets"] - dr[fen["ofce"][0]]["depenses_hors_interets"] < -1),
+        ("fenêtre commune : dépenses en hausse et recettes en baisse de plus d'un point chacune, d'ampleur voisine "
+         "(le bloc dit que les chiffres de l'OFCE, +1,8 et −1,6, s'y retrouvent ; écart à 0,5 près)",
+         dr[fen["ofce"][1]]["depenses"] - dr[fen["tresor"][0]]["depenses"] > 1
+         and dr[fen["ofce"][1]]["recettes"] - dr[fen["tresor"][0]]["recettes"] < -1
+         and abs((dr[fen["ofce"][1]]["depenses"] - dr[fen["tresor"][0]]["depenses"]) - 1.8) < 0.5
+         and abs((dr[fen["ofce"][1]]["recettes"] - dr[fen["tresor"][0]]["recettes"]) + 1.6) < 0.5),
         ("l'année d'arrivée compte aussi : depuis le départ du Trésor, les recettes baissent davantage jusqu'à la fin OFCE (écart > 0,5)",
          (dr[fen["ofce"][1]]["recettes"] - dr[fen["tresor"][0]]["recettes"])
          < (dr[fen["tresor"][1]]["recettes"] - dr[fen["tresor"][0]]["recettes"]) - 0.5),

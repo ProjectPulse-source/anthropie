@@ -352,6 +352,9 @@ def affichage(fin, dec, annees, cmp_, europe, cons):
     creux_ti = min(annees, key=lambda r: r["taux_implicite"])
     A["ti_creux"] = fr(creux_ti["taux_implicite"]); A["ti_creux_annee"] = str(creux_ti["annee"])
     A["var_derniere"] = fr(abs(last["variation"]))
+    # Quatrième tour (document de travail de l'OFCE, E9) : écart au solde stabilisant de l'avant-dernière année.
+    prec = annees[-2]
+    A["annee_prec"] = str(prec["annee"]); A["ecart_prec"] = fr(abs(prec["ecart"]))
     rg_pos = sum(1 for r in annees if r["taux_implicite"] > r["croissance_nominale"])
     A["rg_pos_n"] = str(rg_pos)   # en chiffres : la prose le met en regard de annees_total, en chiffres au-delà de seize
     # Un point d'écart taux-croissance durable déplace le solde stabilisant de d(t-1)/(1+g) point : dette et croissance de la dernière année.
@@ -466,6 +469,8 @@ def gardes(fin, dec, annees, cmp_, europe, haut, bas, exc_ans):
          and last["taux_implicite"] > min(r["taux_implicite"] for r in annees) + 0.5),
         ("la croissance nominale « retombe » : la dernière année est sous la moyenne de 2021-2023 d'au moins 3 points",
          sum(r["croissance_nominale"] for r in annees if 2021 <= r["annee"] <= 2023) / 3 - last["croissance_nominale"] > 3),
+        ("bloc de confrontation (OFCE, document de travail) : en 2024, solde sous le repère, « comme » les 2,1 points de l'OFCE (à 0,5 près)",
+         annees[-2]["annee"] == 2024 and annees[-2]["ecart"] < 0 and abs(-annees[-2]["ecart"] - 2.1) < 0.5),
         ("bloc de confrontation (Trésor-Éco n° 403) : l'écart de la dernière année est « comme » les 3 points du Trésor (à 0,5 près)",
          abs(-last["ecart"] - 3.0) < 0.5),
         ("un point d'écart taux-croissance vaut « un peu plus d'un point » de solde stabilisant (entre 1 et 1,3)",

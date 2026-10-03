@@ -80,4 +80,5 @@ E13. p. PDF 3 : « Ce qui importe in fine est la capacité de l'État à finance
 E14. p. PDF 9 : « la consolidation budgétaire pourrait passer en priorité par une réduction de la dépense publique »
 E15. p. PDF 1 : « Un rapport de quatre économistes publié en juin 2026 »
 E16. p. PDF 8 : « Dans un rapport publié en juillet 2026 »
+E18. p. PDF 4 : « sur 2019-2024, la dépense française a progressé de +1,6 point de PIB contre +2,4 points en zone euro »
 E17. p. PDF 12 : « Ce document a été élaboré sous la responsabilité de la direction générale du Trésor et ne reflète pas nécessairement la position du ministère »

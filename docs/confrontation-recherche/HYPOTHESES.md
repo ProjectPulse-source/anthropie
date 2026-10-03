@@ -76,3 +76,15 @@ depuis le second tour s'y ajoutent.
 | T1 | Les causes des déficits : la Note du CAE attribue la dégradation récente à des causes nommées, mais aucun texte lu ne fournit une décomposition causale des déficits primaires observés sur 1995-2025. | « aucun des quatre textes ne fournit une décomposition causale des déficits primaires observés de 1995 à 2025 » (page Pourquoi, bloc) |
 | T2 | L'écart taux-croissance favorable s'est refermé en 2025 ; le taux implicite remonte depuis 2020 à mesure que la dette se refinance. | « Tombé à 1,2 % en 2020, il remonte, à mesure que la dette ancienne se refinance aux conditions de marché » (#soutenable) |
 | T3 | Aucun niveau de dette, à lui seul, ne tranche la soutenabilité ; à niveau de 2025, un point d'écart taux-croissance relève le solde stabilisant d'environ 1,1 point de PIB. | « Aucun niveau de dette, à lui seul, ne tranche cette question » ; « un point supplémentaire d'écart […] relève le solde stabilisant d'environ 1,1 point de PIB » (#soutenable) |
+
+## Quatrième tour, 03/10/2026 — document de travail de l'OFCE (`ofce.github.io/psmt/PB.pdf`)
+
+Écrit le 03/10/2026 **avant** lecture (commande de l'auteur ; source signalée par la contre-expertise
+`PRO-20261003-172718`, alors `NON_VERIFIE`). Les lectures de la page qui portent sur l'OFCE, et ce que ce texte plus
+complet pourrait mettre en danger :
+
+| Id | Hypothèse | Texte exact de la page |
+|---|---|---|
+| O1 | Ce que la page prête à l'OFCE est fidèle à son analyse complète : creusement du déficit depuis 2017 attribué « comptablement » à la baisse des prélèvements obligatoires, dépenses stables ; trajectoire d'ajustement plus progressive. | « L'OFCE, qui propose une trajectoire d'ajustement plus progressive, attribue « comptablement » le creusement du déficit public depuis 2017 à la baisse des prélèvements obligatoires (2,5 points de PIB), les dépenses restant stables » (Pourquoi, bloc) |
+| O2 | Le diagnostic comptable dépend fortement de la période retenue ; les deux fenêtres (OFCE 2017-2024, Trésor 2019-2025) ne décomposent ni les mêmes années ni la même grandeur. | « Le diagnostic comptable dépend donc fortement de la période retenue ; et les recettes totales d'Eurostat ne sont pas les prélèvements obligatoires de l'OFCE » (Pourquoi, bloc) |
+| O3 | Aucun texte lu ne fournit une décomposition causale des déficits primaires observés sur 1995-2025 ; la hausse de la dette tient pour l'essentiel aux déficits primaires (D1). | « aucun des cinq textes ne fournit une décomposition causale des déficits primaires observés de 1995 à 2025 » (Pourquoi, bloc) |
