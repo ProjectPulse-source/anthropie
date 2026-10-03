@@ -724,7 +724,8 @@
   "tresor_rec": "−0,9",
   "tresor_dep_hi": "+1,2",
   "tresor_dep": "+1,9",
-  "entre_dep": "−2,4"
+  "entre_dep_hi": "−2,1",
+  "croise_rec": "−1,8"
  },
  "affichage_en": {
   "annee_depart": "1995",
@@ -783,6 +784,7 @@
   "tresor_rec": "−0.9",
   "tresor_dep_hi": "+1.2",
   "tresor_dep": "+1.9",
-  "entre_dep": "−2.4"
+  "entre_dep_hi": "−2.1",
+  "croise_rec": "−1.8"
  }
 }

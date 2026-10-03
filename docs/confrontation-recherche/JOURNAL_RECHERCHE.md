@@ -143,4 +143,10 @@ consolidation en priorité par la dépense). Peut-elle baisser — stabilisation
 total −2,1 % pour un déficit de 5,1 % : trois points d'écart, comme les 2,9 points mesurés en solde primaire ; inversion
 de r − g et transmission par le refinancement.
 
-**Contre-expertise de ces ajouts : à faire** (règle 12), avant ou juste après publication.
+**Contre-expertise** : audit `PRO-20261003-172718` (FACT_CHECK), arbitré le 03/10
+(`ARBITRATIONS/PRO-20261003-172718_arbitrage.md`, dépôt `D:\PRO`). La formule « l'année de départ fait la conclusion »
+est **infirmée** (recalcul : l'année d'arrivée change aussi le poids des recettes, −1,8 sur 2019-2024 contre −0,9 sur
+2019-2025) et remplacée par « le diagnostic comptable dépend fortement de la période retenue » ; recettes totales ≠
+prélèvements obligatoires dit ; −2,4 (dépense totale) remplacé par −2,1 (hors intérêts) ; « surtout », « recommande »,
+« plaide », « non suffisante » retirés au profit des formulations des textes. **Point ouvert** : le document de travail
+de l'OFCE (`ofce.github.io/psmt/PB.pdf`), signalé par le contradicteur, non lu, non cité.

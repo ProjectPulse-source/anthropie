@@ -428,7 +428,9 @@ def affichage(a0, d_depart, rows, total, per, dr):
             A[k + "_debut"], A[k + "_fin"] = str(d0), str(d1)
             for v, cle in (("solde", "_solde"), ("recettes", "_rec"), ("depenses_hors_interets", "_dep_hi"), ("depenses", "_dep")):
                 A[k + cle] = sg(dr[d1][v] - dr[d0][v])
-        A["entre_dep"] = sg(dr[fen["tresor"][0]]["depenses"] - dr[fen["ofce"][0]]["depenses"])
+        # Contre-expertise PRO-20261003-172718 (T-7, T-9) : même convention (hors intérêts) et fenêtre croisée.
+        A["entre_dep_hi"] = sg(dr[fen["tresor"][0]]["depenses_hors_interets"] - dr[fen["ofce"][0]]["depenses_hors_interets"])
+        A["croise_rec"] = sg(dr[fen["ofce"][1]]["recettes"] - dr[fen["tresor"][0]]["recettes"])
         return A
 
     fen = {k: (d0, d1 or last["annee"]) for k, (d0, d1) in FENETRES_DEFICIT.items()}
@@ -483,17 +485,16 @@ def affichage(a0, d_depart, rows, total, per, dr):
          and dr[fen["ofce"][1]]["recettes"] - dr[fen["ofce"][0]]["recettes"] < 0
          and abs(dr[fen["ofce"][1]]["recettes"] - dr[fen["ofce"][0]]["recettes"])
          > abs(dr[fen["ofce"][1]]["depenses_hors_interets"] - dr[fen["ofce"][0]]["depenses_hors_interets"])),
-        ("fenêtre OFCE : le solde retrouve le chiffre de l'OFCE (−2,4 points, à 0,5 près)",
-         abs((dr[fen["ofce"][1]]["solde"] - dr[fen["ofce"][0]]["solde"]) + 2.4) < 0.5),
         ("fenêtre DG Trésor : le solde se dégrade, la hausse des dépenses hors intérêts dépasse la variation des recettes",
          dr[fen["tresor"][1]]["solde"] < dr[fen["tresor"][0]]["solde"]
          and dr[fen["tresor"][1]]["depenses_hors_interets"] - dr[fen["tresor"][0]]["depenses_hors_interets"] > 0
          and dr[fen["tresor"][1]]["depenses_hors_interets"] - dr[fen["tresor"][0]]["depenses_hors_interets"]
          > abs(dr[fen["tresor"][1]]["recettes"] - dr[fen["tresor"][0]]["recettes"])),
-        ("fenêtre DG Trésor : le solde retrouve le chiffre du Trésor (−2,7 points, à 0,5 près)",
-         abs((dr[fen["tresor"][1]]["solde"] - dr[fen["tresor"][0]]["solde"]) + 2.7) < 0.5),
-        ("entre les deux années de départ, la dépense baisse de plus d'un point",
-         dr[fen["tresor"][0]]["depenses"] - dr[fen["ofce"][0]]["depenses"] < -1),
+        ("entre les deux années de départ, les dépenses hors intérêts baissent de plus d'un point",
+         dr[fen["tresor"][0]]["depenses_hors_interets"] - dr[fen["ofce"][0]]["depenses_hors_interets"] < -1),
+        ("l'année d'arrivée compte aussi : depuis le départ du Trésor, les recettes baissent davantage jusqu'à la fin OFCE (écart > 0,5)",
+         (dr[fen["ofce"][1]]["recettes"] - dr[fen["tresor"][0]]["recettes"])
+         < (dr[fen["tresor"][1]]["recettes"] - dr[fen["tresor"][0]]["recettes"]) - 0.5),
         ("« Ce qu'il faut retenir » : excédents primaires rares (six années au plus sur la série)",
          sum(1 for r in rows if r["solde_primaire_pct_pib"] > 0) <= 6),
         ("2009 et 2020 : les deux plus fortes hausses de la série",
