@@ -247,6 +247,8 @@ This page measures what debt costs, and why the same debt does not carry the sam
 
 **Europe (strictly comparable)** — Eurostat, general government (S.13), national accounts ESA 2010, amounts in national currency: interest paid and revenue (`gov_10a_main`, D41PAY and TR), Maastricht debt (`gov_10dd_edpt1`), GDP (`nama_10_gdp`), debt by residual maturity (`gov_10dd_ggd`), 10-year yields (`irt_lt_mcby_a`), harmonised index of consumer prices (`prc_hicp_aind`).
 
+The working paper [AWP-09](/en/awp/awp-09/) uses the charge identity and these yield spreads, with countries that stayed outside the euro as comparison groups, to test the narrative that the euro made interest rates converge.
+
 **Advanced economies outside the EU (with caveats)** — OECD, *Economic Outlook*: gross interest, revenue, GDP and gross financial liabilities of general government.
 
 **Major emerging economies (indicative)** — IMF, *World Economic Outlook* (general government gross debt); World Bank, *World Development Indicators* (interest as a % of central government revenue).

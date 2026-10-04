@@ -183,7 +183,7 @@ La comparaison ne fait apparaître aucun classement unique&nbsp;: dette, solde e
 2. **Les compétences transférées sans financement complet.** Non mesurées ici&nbsp;: une compensation figée qui décroche du coût réel se lit compétence par compétence (allocations individuelles de solidarité des départements, par exemple), non dans un agrégat.
 3. **Les normes non financées.** Non mesurées ici&nbsp;: le coût d'une norme se lit dans les évaluations préalables.
 
-Ces trois mécanismes ont en commun une hypothèse à tester&nbsp;: une décision prise à un niveau peut déplacer une partie de son coût vers un autre. Seul le premier est observé ici&nbsp;; les deux autres exigent des données propres.
+Ces trois mécanismes ont en commun une hypothèse à tester&nbsp;: une décision prise à un niveau peut déplacer une partie de son coût vers un autre. Seul le premier est observé ici&nbsp;; les deux autres exigent des données propres. Le working paper [AWP-09](/awp/awp-09/) confronte le premier à cet énoncé&nbsp;: sur l'épisode {{< coll-val "ep_a0" >}}-{{< coll-val "ep_a1" >}}, les comptes le rendent compatible, sans l'établir.
 
 ## Ce que ces données ne disent pas {#limites}
 

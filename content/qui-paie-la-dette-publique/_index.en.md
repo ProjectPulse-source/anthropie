@@ -265,7 +265,7 @@ This page sets out the method: four roles, four channels, and what would need to
 
 {{< canonical-definition >}}
 
-Applied to public finances, this hypothesis is formalised in the working paper [AWP-03 — *Public debt and anthropy: who really pays for disorder?*](/en/awp/awp-03/) (DOI: 10.5281/zenodo.19434094, open-access PDF).
+Applied to public finances, this hypothesis is formalised in the working paper [AWP-03 — *Public debt and anthropy: who really pays for disorder?*](/en/awp/awp-03/) (DOI: 10.5281/zenodo.19434094, open-access PDF). The working paper [AWP-09](/en/awp/awp-09/) tests this reading against public accounts: the incidence of the same fiscal effort depends on the instrument chosen, but the asymmetry between mobile and captive households lies beyond what the accounts can test, since they do not observe the former escaping.
 
 {{< reutiliser figures="figures_qui_paie" jeu="qui_paie_donnees" sources="INSEE and Banque de France via Agence France Trésor" donnees="Holdings of public debt (the book's register, sources INSEE and Banque de France) and INSEE's 2023 distributional national accounts, with their periods, units and conventions." >}}
 How the effects of public debt are distributed depends on what it finances, how it is financed and the adjustments chosen to service it; some configurations may shift costs onto groups less able to avoid them. The available data show who borrows, who holds the State's securities and who contributes or receives today — not who will bear the final burden. A loss can only be attributed to a specific decision, compared with its alternative.

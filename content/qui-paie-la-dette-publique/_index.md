@@ -260,7 +260,7 @@ Cette page pose la méthode&nbsp;: quatre rôles, quatre canaux, et ce qu'il fau
 
 {{< canonical-definition >}}
 
-Appliquée aux finances publiques, cette hypothèse est formalisée dans le working paper [AWP-03 — *Dette publique et anthropie&nbsp;: qui paie vraiment le désordre&nbsp;?*](/awp/awp-03/) (DOI&nbsp;: 10.5281/zenodo.19268769, PDF en accès libre).
+Appliquée aux finances publiques, cette hypothèse est formalisée dans le working paper [AWP-03 — *Dette publique et anthropie&nbsp;: qui paie vraiment le désordre&nbsp;?*](/awp/awp-03/) (DOI&nbsp;: 10.5281/zenodo.19268769, PDF en accès libre). Le working paper [AWP-09](/awp/awp-09/) met cette lecture à l'épreuve des comptes publics&nbsp;: l'incidence d'un même effort dépend de l'instrument retenu, mais l'asymétrie entre ménages mobiles et ménages captifs reste hors de portée des comptes, qui n'observent pas la soustraction des premiers.
 
 {{< reutiliser figures="figures_qui_paie" jeu="qui_paie_donnees" sources="Insee et Banque de France via l'AFT" donnees="Détention de la dette publique (registre du livre, sources INSEE et Banque de France) et comptes nationaux distribués 2023 de l'Insee, avec leurs périodes, unités et conventions." >}}
 La répartition des effets de la dette publique dépend de ce qu'elle finance, de la manière dont elle est financée et des ajustements choisis pour la servir&nbsp;; certaines configurations peuvent reporter des coûts sur des groupes moins capables de les éviter. Les données disponibles montrent qui emprunte, qui détient les titres de l'État et qui contribue ou reçoit aujourd'hui — pas qui supportera la charge finale. Une perte ne s'attribue qu'à une décision déterminée, comparée à son alternative.

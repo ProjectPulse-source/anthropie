@@ -247,6 +247,8 @@ Cette page mesure ce que la dette coûte, et pourquoi une même dette ne pèse p
 
 **Europe (strictement comparable)** — Eurostat, administrations publiques (S.13), comptes nationaux SEC 2010, montants en monnaie nationale&nbsp;: intérêts versés et recettes (`gov_10a_main`, D41PAY et TR), dette de Maastricht (`gov_10dd_edpt1`), PIB (`nama_10_gdp`), dette par échéance résiduelle (`gov_10dd_ggd`), taux à 10 ans (`irt_lt_mcby_a`), indice des prix harmonisé (`prc_hicp_aind`).
 
+Le working paper [AWP-09](/awp/awp-09/) reprend l'identité de la charge et ces écarts de taux, pays restés hors de l'euro en témoins, pour mettre à l'épreuve le récit d'une convergence des taux due à l'euro.
+
 **Économies avancées hors UE (avec réserve)** — OCDE, *Economic Outlook*&nbsp;: intérêts bruts, recettes, PIB et passifs financiers bruts des administrations publiques.
 
 **Grands émergents (indicatif)** — FMI, *World Economic Outlook* (dette brute des administrations publiques)&nbsp;; Banque mondiale, *World Development Indicators* (intérêts en % des recettes de l'administration centrale).
