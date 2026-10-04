@@ -75,8 +75,8 @@ AWPS = [
     {"label": "AWP-06", "source": "fr", "records": {"fr": "20025421", "en": "20077993"}},
     {"label": "AWP-07", "source": "fr", "records": {"fr": "21200286", "en": "21200288"}},
     {"label": "AWP-08", "source": "fr", "records": {"fr": "21506320", "en": "21507249"}},
-    # AWP-09 : publie le 2026-10-04, francais seul ; anglais a venir (pas un trou tant qu'il n'est pas depose).
-    {"label": "AWP-09", "source": "fr", "records": {"fr": "23143030"}},
+    # AWP-09 : FR et EN publies le 2026-10-04 (EN = traduction, isDerivedFrom FR).
+    {"label": "AWP-09", "source": "fr", "records": {"fr": "23143030", "en": "23145963"}},
     # AWP-01 espagnol : v1 publiee le 2026-08-03 (21766184), v2 le meme jour
     # (21775366, correction de deux renvois de note). Le concept 21766183 suit.
 ]

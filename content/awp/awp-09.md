@@ -25,6 +25,10 @@ faq:
 pdf_url: "https://zenodo.org/records/23143030/files/AWP-09_que_comptes_publics.pdf"
 language: "fr"
 publication_date: "2026-10-04"
+translation:
+  doi: "10.5281/zenodo.23145963"
+  url: "/en/awp/awp-09/"
+  title: "What Public Accounts Can Establish about the Displacement of the Public Debt Burden"
 related:
   - awp-01
   - awp-03

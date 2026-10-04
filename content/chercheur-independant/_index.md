@@ -46,7 +46,7 @@ Sans crédit a priori, la méthode doit porter toute la charge de la preuve. En 
 - **des critères de réfutation explicites** — dire ce qui, si on l'observait, invaliderait l'hypothèse&nbsp;;
 - **un corpus organisé** — une série numérotée plutôt que des textes épars, pour que le travail se cite comme un programme.
 
-C'est le protocole suivi par la série des [*Anthropie Working Papers*](/serie-awp/)&nbsp;: neuf working papers numérotés, chacun avec DOI Zenodo, versions française et anglaise croisées (l'anglaise du neuvième à venir), définitions stables et conditions de réfutation — le corpus qui sert de cas concret à cette page.
+C'est le protocole suivi par la série des [*Anthropie Working Papers*](/serie-awp/)&nbsp;: neuf working papers numérotés, chacun avec DOI Zenodo, versions française et anglaise croisées, définitions stables et conditions de réfutation — le corpus qui sert de cas concret à cette page.
 
 ## La position analysée&nbsp;: la marge n'est pas un accident
 

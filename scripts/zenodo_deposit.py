@@ -300,6 +300,23 @@ PAPERS = {
              "relation": "isDerivedFrom", "scheme": "url"},   # jeux et generateurs du dossier dette
         ],
     },
+    "awp09-en": {
+        "titre": ("What Public Accounts Can Establish about the Displacement of the Public Debt Burden — "
+                  "Accounting Identities, Independent Benchmarks, and Limits (France, 1995-2025) "
+                  "(Anthropie Working Paper No. 9)"),
+        "description": '<p>Anthropy is the hypothesis that social systems displace disorder rather than resolve it.</p><p>Methods-and-dated-results working paper (<em>Anthropie Working Papers</em> series, AWP-09; English edition of the French original, DOI 10.5281/zenodo.23143030). French fiscal institutions now agree that primary deficits, not the interest-growth “snowball,” account for most of the rise in public debt. Yet public readings that attributed nearly 40% of that rise to the snowball, or more than half of the debt to accumulated interest, also rested on official accounts, and the disagreement has not been reconciled in published work. Nor does the debt ratio say who bears the burden, a question that interpretive frameworks, including an earlier paper in this series (AWP-03), have addressed through illustration rather than measurement. This paper asks what official accounts can and cannot establish about the displacement of the debt burden over time, toward later generations, across households, across countries, and across levels of government, in France from 1995 to 2025. It applies standard debt-dynamics identities under a verification rule: the ratios entering a decomposition are checked against an independent published benchmark, validated algebraically and then seen to reject an actual error, its split is checked against reproductions by other producers, and every established narrative is tested where it should fail. Windows and measures account for much of the conflict: the snowball accounts for 43% of the rise in 1996-2012 and has subtracted 1.74 points a year since 2017. Less than one-fifth of deficits since 1996 matched a net increase in recorded public assets; more than half of the debt is held by non-residents; and the household distribution of fiscal effort reverses with the instrument. Tested against them, the earlier framework is supported only within a narrow balance-sheet scope on inheritance and as accounting mechanics on the interest-growth differential, while its social asymmetry lies beyond what the accounts can test.</p>',
+        "keywords": ["anthropy", "public debt", "debt dynamics", "intergenerational burden", "data verification",
+                     "working paper", "heterodox economics", "social sciences", "institutional analysis",
+                     "open access", "JEL:H63", "JEL:H62", "JEL:H72", "JEL:E62", "JEL:C82"],
+        "language": "eng",
+        "marqueurs": ["What Public Accounts Can Establish"],  # le numero de serie seul reconnaitrait le depot FR (faux doublon constate le 04/10)
+        "related": [
+            {"identifier": "10.5281/zenodo.23143030", "relation": "isDerivedFrom", "scheme": "doi"},  # original francais
+            {"identifier": "10.5281/zenodo.19434094", "relation": "references", "scheme": "doi"},   # AWP-03 EN
+            {"identifier": "10.5281/zenodo.19431208", "relation": "references", "scheme": "doi"},   # AWP-01 EN
+            {"identifier": "https://stephane-lalut.com/en/awp/awp-09/", "relation": "isDescribedBy", "scheme": "url"},
+        ],
+    },
 }
 
 
