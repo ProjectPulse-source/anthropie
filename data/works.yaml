@@ -514,7 +514,7 @@ works:
     publication_date: "2025-10-17"
     isbn: "978-2-9586347-3-5"
     isbn_13_normalized: "9782958634735"
-    pages: 224  # broché (fourni 2026-05-30 ; sync content/livres/dette-publique-qui-paie-vraiment.md)
+    pages: 225  # broché (225 lu sur la fiche Amazon.fr le 2026-10-04, « Nombre de pages de l'édition imprimée » ; 224 depuis le 2026-05-30 était faux ; sync content/livres/dette-publique-qui-paie-vraiment.md)
     publisher: "Auto-édition"
     distribution: "Amazon KDP"
     asin_kindle: "B0FWW2HPZP"
