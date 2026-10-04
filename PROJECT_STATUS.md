@@ -53,6 +53,28 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-04 (soir, suite) — Figures : nuages de pays nommés, placement calculé, titres harmonisés ; COMMITÉ ET POUSSÉ
+
+Demande de l'auteur sur `/enseignants/` (premier graphe : pays les moins endettés anonymes), étendue à « tous les graphes
+parfaits ». Commits `d2e9831`, `90f7daa`, `e30a7c1`, `2bcf1db`, `ec2ab91`, déployés et relus en production.
+
+- **Nuages de pays** (`update_dette_monde.py`, charge, prix, transmission, FR et EN) : extrêmes nommés (Bulgarie,
+  Danemark, Estonie, Luxembourg, Irlande, Roumanie). **Placement des étiquettes calculé** : position préférée puis neuf
+  autres ; recouvrir un point, une étiquette ou sortir du cadre ARRÊTE le générateur ; croiser un trait est évité, sinon
+  un liseré blanc l'interrompt. Témoin : le contrôle a refusé l'état publié sur trois défauts vus à l'œil (« Allemagne »
+  sur les Pays-Bas, « Croatie » sur la Tchéquie, « Lituanie » sur la Lettonie).
+- **Titres en gras foncé** partout : six figures « Qui paie », cinq figures Insee de la page coût. *Masses comparées* :
+  le titre d'un seul tenant sortait coupé à droite (FR et EN, défaut antérieur muet) — scindé en titre et champ.
+- **Garde de `generer_figures_qui_paie.py`** : bloquée depuis la passe du livre du 04/10 (empreinte du registre), sans
+  que rien ne la relance ; les trois blocs lus comparés à la version du 21/09 : identiques ; empreinte reprise, date de
+  relevé inchangée (le 21/09 reste vrai).
+- CO₂ (empreinte carbone) ; *Après le bac* : forme des valeurs mesurée, une même forme pour les petites (mutation 0,9 %
+  vue mordre) ; anglais « +26% since 2020 ».
+- **Copie commune** : publication faite depuis un worktree à l'état publié, hors du chantier « Budget 2027 » non commité
+  (entrée du 02/10), puis fusion (`c80b6e0`, sans réécrire les quatre commits Wikidata locaux d'une autre session) et
+  conflit de `update_dette_insee.py` résolu dans sa copie de travail (ses lignes de prévision + titre en gras) ;
+  `--png` relancé. **Budget 2027 : publication laissée à sa session, décision de l'auteur.**
+
 ### 2026-10-04 (soir) — Livresque des mots : couverture MARINE retenue par l'auteur, posée sur le site
 
 L'auteur retient finalement le recto marine (`Cover-Nouvelle-Livresque-01`, pièce archivée dans le dépôt du livre,
