@@ -1,0 +1,37 @@
+// ============================================================================
+// BATCH QuickStatements V1 — création de l'item AWP-09
+// « Ce que les comptes publics permettent d'établir sur le déplacement de la charge de la dette »
+// Préparé le 2026-10-04. Patron : Import_Wikidata_Laura_2026-07-23_AWP-08 (item Q140680750, relu le 04/10 :
+// P31, P50 réf., P356 réf., P407, P577, P921, P361, P953 ×4 qualifiés).
+// Ajouts propres à AWP-09 : P921 Q3024794 (dette publique de la France, nœud déjà employé pour le livre
+// Q138910896) et P2860 « cite » vers AWP-03 (Q139771991) et AWP-01 (Q139771989), que le papier cite.
+// QID maison : Q138909233=Stéphane Lalut · Q138827949=anthropie · Q139040913=série AWP ·
+// Q13442814=article scientifique · Q150=français · Q1860=anglais.
+// DOI en majuscules : forme stockée par Wikidata (relu sur Q140680750).
+// ============================================================================
+
+// --- BLOC 1 : création de l'item AWP-09 ---
+CREATE
+LAST	Lfr	"Ce que les comptes publics permettent d'établir sur le déplacement de la charge de la dette — Identités comptables, témoins indépendants et limites (France, 1995-2025)"
+LAST	Len	"What Public Accounts Can Establish about the Displacement of the Public Debt Burden — Accounting Identities, Independent Benchmarks, and Limits (France, 1995-2025)"
+LAST	Dfr	"working paper de Stéphane Lalut (AWP-09, 2026)"
+LAST	Den	"working paper by Stéphane Lalut (AWP-09, 2026)"
+LAST	P31	Q13442814
+LAST	P50	Q138909233	S854	"https://orcid.org/0009-0002-1794-4895"	S813	+2026-10-04T00:00:00Z/11
+LAST	P356	"10.5281/ZENODO.23143030"	S854	"https://doi.org/10.5281/zenodo.23143030"	S813	+2026-10-04T00:00:00Z/11
+LAST	P407	Q150
+LAST	P577	+2026-10-04T00:00:00Z/11
+LAST	P921	Q138827949
+LAST	P921	Q3024794
+LAST	P361	Q139040913
+LAST	P2860	Q139771991
+LAST	P2860	Q139771989
+LAST	P953	"https://zenodo.org/records/23143030"
+LAST	P953	"https://zenodo.org/records/23145963"	P407	Q1860
+LAST	P953	"https://stephane-lalut.com/awp/awp-09/"	P407	Q150
+LAST	P953	"https://stephane-lalut.com/en/awp/awp-09/"	P407	Q1860
+
+// --- BLOC 2 : rétro-liens — À PASSER APRÈS création (fichier deeplink_retroliens.txt, écrit
+// une fois le QID connu). Série « a pour partie » AWP-09 ; auteur « œuvre notable » AWP-09.
+// Q139040913	P527	NEW_QID
+// Q138909233	P800	NEW_QID
