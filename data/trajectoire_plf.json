@@ -1,0 +1,55 @@
+{
+ "_avertissement": "Valeurs PRÉVISIONNELLES du Gouvernement, saisies à la main après lecture à la source. Elles ne se dessinent JAMAIS au même rang qu'une observation : trait pointillé, étiquette portant l'émetteur. Ce fichier porte un RÔLE (la trajectoire du dernier projet de loi de finances déposé), non un millésime : à chaque dépôt, on le met à jour et l'édition précédente descend dans `edition_precedente`.",
+ "edition": 2027,
+ "emetteur": "Gouvernement",
+ "source": {
+  "publication": "Haut Conseil des finances publiques, avis n° HCFP-2026-5 du 25 septembre 2026 relatif aux projets de lois de finances et de financement de la sécurité sociale pour 2027, qui rapporte la prévision présentée par le Gouvernement",
+  "url": "https://www.hcfp.fr/sites/default/files/2026-10/Avis%20HCFP%202026-5%20-%20PLF-PLFSS%202027.pdf",
+  "page": "https://www.hcfp.fr/liste-avis/avis-ndeg2026-5-lois-de-finances-2027",
+  "sha256_pdf": "cf02528c4a5defd0430175fd6a1f98697bce43e1127888b68639f1694d5ff378",
+  "lu_le": "2026-10-02",
+  "depot_plf": "2026-10-01",
+  "_pourquoi_pas_le_rapport_annexe": "Le rapport économique, social et financier annexé au PLF 2027 n'était pas en ligne sur le dossier de l'Assemblée nationale le 2026-10-02 (texte n° 3210 seul). Quand il le sera, le lire et confronter ces valeurs ; l'avis du Haut Conseil cite les mêmes chiffres dans le scénario du Gouvernement qu'il reproduit en annexe (p. 47-48)."
+ },
+ "dette_pct_pib": {
+  "_statut": "PUBLIÉ pour 2026 et 2027",
+  "_emplacement": "§ 113, p. 37 (2027) ; annexe, scénario du Gouvernement, p. 47 (2026 et 2027)",
+  "2026": 119.3,
+  "2027": 121.7
+ },
+ "charge_interets_mdeur": {
+  "_statut": "PUBLIÉ pour 2026 et 2027",
+  "_emplacement": "§ 115, p. 38 : « une charge d'intérêts de 79,2 Md€ » en 2026 ; « 2,9 points de PIB (soit 91 Md€ courants) en 2027 »",
+  "_perimetre": "Charge d'intérêts des administrations publiques en comptabilité nationale, prévision du Gouvernement. À ne PAS soustraire d'une observation d'Eurostat : l'avis écrit « en hausse de plus de 25 Md€ par rapport à 2025 », ce qui suppose une base 2025 inférieure à 66 Md€, alors que la série D41PAY d'Eurostat donne 66,6. L'écart se documente, il ne se corrige pas (règle 13 du modèle de ressource).",
+  "2026": 79.2,
+  "2027": 91.0
+ },
+ "charge_interets_pct_pib": {
+  "_statut": "PUBLIÉ pour 2027 seulement",
+  "_emplacement": "§ 115, p. 38",
+  "2027": 2.9
+ },
+ "lecture_du_haut_conseil": {
+  "_statut": "LU",
+  "_emplacement": "§ 115, p. 38, et synthèse, p. 3",
+  "risque": "« La détérioration des conditions géopolitiques pourrait accroître davantage encore la charge d'intérêts que ne le prévoit le Gouvernement » ; « La hausse des taux souverains observée depuis cet été à toutes les maturités est aussi de nature à augmenter la charge d'intérêts en 2026 et plus encore en 2027. »",
+  "revision": "p. 37 : la prévision de dette pour 2027 est « 3,0 points au-dessus de celle du PLF 2026 »."
+ },
+ "edition_precedente": {
+  "edition": 2026,
+  "source": "Rapport économique, social et financier annexé au projet de loi de finances pour 2026, tableau 5, p. 76 du PDF (SHA-256 79d577f3068315c500b6f749c40d2e59450424a31061ce0d46646317ab04996e), lu le 2026-09-28",
+  "dette_pct_pib": {
+   "2026": 117.9,
+   "2027": 118.7,
+   "2028": 118.6,
+   "2029": 118.0
+  },
+  "charge_interets_pct_pib": {
+   "2026": 2.4
+  }
+ },
+ "divergence_commission_europeenne": {
+  "_statut": "NON VÉRIFIÉ",
+  "_note": "Une pièce externe cite, pour les prévisions de printemps 2026 de la Commission européenne à politiques inchangées, 118,1 % (2026) et 120,2 % (2027) de dette, et 2,6 puis 2,8 % du PIB d'intérêts. À lire à la source (AMECO) avant toute impression."
+ }
+}

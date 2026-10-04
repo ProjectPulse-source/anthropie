@@ -1,7 +1,7 @@
 {
  "_avertissement": "Fichier GÉNÉRÉ par scripts/update_dette_insee.py — ne pas éditer à la main.",
  "_licence": "Compilation sous licence CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) : réutilisation libre, y compris commerciale, à condition de citer Stéphane Lalut, https://stephane-lalut.com/cout-de-la-dette-publique/. La licence porte sur la COMPILATION (assemblage des séries, grandeurs dérivées, mise en cohérence) ; les séries brutes restent celles de l'INSEE et d'Eurostat, sous leurs propres conditions.",
- "releve_le": "2026-09-29",
+ "releve_le": "2026-10-02",
  "affichage": {
   "dette_periode": "T2 2026",
   "dette_mdeur": "3 595,5",
@@ -54,7 +54,17 @@
   "hist_plus_longue_baisse": "3",
   "hist_multiple": "5,5",
   "hist_retour_10_ans": "0",
-  "releve_le": "29/09/2026"
+  "prev_edition": "2027",
+  "prev_edition_prec": "2026",
+  "prev_n_annee": "2026",
+  "prev_n1_annee": "2027",
+  "prev_charge_n_mdeur": "79,2",
+  "prev_charge_n1_mdeur": "91",
+  "prev_charge_n1_pct_pib": "2,9",
+  "prev_dette_n1_pct_pib": "121,7",
+  "prev_dette_n1_prec_pct_pib": "118,7",
+  "prev_dette_revision_pts": "3,0",
+  "releve_le": "02/10/2026"
  },
  "affichage_en": {
   "dette_periode": "Q2 2026",
@@ -108,7 +118,17 @@
   "hist_plus_longue_baisse": "3",
   "hist_multiple": "5.5",
   "hist_retour_10_ans": "0",
-  "releve_le": "29 September 2026"
+  "prev_edition": "2027",
+  "prev_edition_prec": "2026",
+  "prev_n_annee": "2026",
+  "prev_n1_annee": "2027",
+  "prev_charge_n_mdeur": "79.2",
+  "prev_charge_n1_mdeur": "91",
+  "prev_charge_n1_pct_pib": "2.9",
+  "prev_dette_n1_pct_pib": "121.7",
+  "prev_dette_n1_prec_pct_pib": "118.7",
+  "prev_dette_revision_pts": "3.0",
+  "releve_le": "2 October 2026"
  },
  "live": {
   "_usage": "Paramètres du compteur animé (extrapolation mécanique) — consommés par le partial dette-chiffres via data-attributes.",

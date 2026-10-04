@@ -33,6 +33,16 @@
 {{- end }}
 </tbody></table></div>
 <p><small>En % du PIB. Périmètre territorial&nbsp;: S1312 + S1313 (dettes croisées entre les deux échelons au plus {{ index $j.affichage "consolidation_ecart" }}&nbsp;point). Source&nbsp;: Eurostat.</small></p>
+{{- else if eq $t "plf" -}}
+<div class="table-scroll"><table class="dette-monde-table">
+<thead><tr><th>Mesure du projet de loi de finances pour {{ $c.plf_edition }}</th><th>Texte</th><th>Nature</th><th>Montant, Md€</th></tr></thead>
+<tbody>
+{{- range $c.plf_mesures }}
+<tr><td>{{ .mesure }}</td><td>{{ .texte }}</td><td>{{ .nature }}</td><td>{{ replace (printf $f1 .md) "." "," }}</td></tr>
+{{- end }}
+<tr><td><strong>Somme arithmétique</strong></td><td></td><td>grandeurs de nature différente</td><td><strong>{{ replace (printf $f1 $c.plf_somme) "." "," }}</strong></td></tr>
+</tbody></table></div>
+<p><small>Montants pour {{ $c.plf_edition }}, tels que le projet déposé les prévoit, avant examen par le Parlement. Sources&nbsp;: projet de loi de finances (exposés des motifs) pour les deux premières lignes&nbsp;; avis du Haut Conseil des finances publiques pour les trois suivantes, que le texte du projet ne chiffre pas.</small></p>
 {{- else -}}
-{{ errorf "coll-tableau: type %q inconnu (cycles, categories, pays) dans %s" $t .Page.File.Path }}
+{{ errorf "coll-tableau: type %q inconnu (cycles, categories, pays, plf) dans %s" $t .Page.File.Path }}
 {{- end -}}

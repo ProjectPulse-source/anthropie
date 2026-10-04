@@ -527,6 +527,38 @@ structure C, navigation « École et parcours », mise en ligne au plus tard le 
   `assets/scss/_enseignants.scss`, `scripts/generer_parcours_licence.py`, `data/parcours_licence.json`,
   `static/parcours_licence.json`, `static/img/parcours-licence-devenir.svg` et `.png`, `CLAUDE.md` ; cette entrée seule.
 
+### 2026-10-02 — Budget 2027 : prévision du Gouvernement sur `/cout-de-la-dette-publique/`, mesures sur `/dette-publique-collectivites-locales/`, COMMITÉ le 04/10 après vérification, NON POUSSÉ
+
+**Vérification du 04/10 (autre session, à la demande de l'auteur)** : avis du Haut Conseil retéléchargé, empreinte
+identique à l'archive ; 79,2, 91, 2,9 points, 119,3 et 121,7 %, révision de 3,0 points relus p. 37, 38 et 47 ; montants
+des collectivités relus dans les pages archivées (2,5 ; 2,1 ; +150 M€ ; 0,6 ; 0,7 ; 0,3 ; 43 096 363 228 €) ; somme 6,2.
+**Corrigé** : la figure affichait « 91,0 » quand la source écrit « 91 » (le Gouvernement annonce 91,2) — elle affiche
+désormais la précision de la source. Contrôles sur l'état exact commité (copie isolée) : générateurs `--check`,
+`check-png-dette` 12/12, `check-all --ci`, build, `audit-liens-build` (117 pages, 0 défaut).
+
+Programme de promotion de l'auteur, opportunités 1 et 2 (`D:\PRO\06_PROMOTION\REGISTRE_OPPORTUNITES_RESSOURCES.md`) ;
+fiches D0 dans la feuille de route GEO. Sources lues dans le texte le 02/10 : projet de loi de finances pour 2027
+(n° 3210, déposé le 01/10), avis n° 2026-5 du Haut Conseil des finances publiques.
+
+- **Coût de la dette (FR et EN)** : `data/trajectoire_plf2026.json` renommé `data/trajectoire_plf.json` (un rôle, non un
+  millésime ; l'édition précédente y descend). Paragraphe « Ce que prévoit le Gouvernement » nourri par dix jetons
+  `prev_*` ; figure de la charge prolongée en pointillés jusqu'à 2027 ; étiquette de la figure longue tirée de l'édition.
+  Le fichier est désormais **requis** (la prose le cite). Gardes vues mordre par mutation : prévision relevée, charge
+  prévue au-dessus de l'observé, année manquante, page qui ne cite plus la source ; arrêt aussi quand l'année 2026 devient
+  observée (paragraphe à réécrire). La prévision ne se soustrait pas d'une observation d'Eurostat (bases 2025 différentes).
+- **Collectivités** : section `#projet-de-loi-de-finances`, tableau `coll-tableau "plf"`, question ajoutée à la FAQ,
+  lignes au CSV. Montants relus par motif dans `scripts/sources_collectivites/plf_collectivites.json` (pages archivées
+  des deux PDF, empreinte contrôlée ; geste annuel : `archiver_plf.py`). 45 gardes (8 nouvelles), dont deux témoins entre
+  sources (contribution progressive et FCTVA chiffrés de même par le projet et par le Haut Conseil) ; six vues mordre.
+- Build de production, `check-all --ci`, `audit-liens-build.py`, `check-png-dette.py` à 0 ; 390 px mesuré sur les deux
+  pages (aucun débordement, le tableau défile dans son cadre).
+- **Réexamen dû** : au vote de la loi de finances, au plus tard le 01/12/2026 — la section collectivités porte les
+  montants d'un projet. Rapport économique annexé au projet de loi : absent du dossier de l'Assemblée le 02/10, à
+  confronter quand il paraît. Texte alternatif de la figure de la charge : deux nombres y restent écrits en dur
+  (antérieur à ce chantier).
+- Fichiers d'autres sessions, non touchés : `_page-common.scss`, `content/ressources/_index.md`, page et données
+  `pouvoirs-du-president…`.
+
 ### 2026-10-02 — `/enseignants/` : quatrième activité de SES (chapitre École), contre-expertise arbitrée, POUSSÉ
 
 Section « Avons-nous tous le même droit à l'erreur ? » (`#droit-a-l-erreur`), fiche « Après une première année de

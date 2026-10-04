@@ -78,25 +78,81 @@ OUT_SVG_MASSES = REPO / "static" / "img" / "masses-comparees.svg"
 OUT_SVG_MASSES_EN = REPO / "static" / "img" / "masses-comparees-en.svg"
 OUT_SVG_CHARGE = REPO / "static" / "img" / "charge-interets-mdeur.svg"
 OUT_SVG_CHARGE_EN = REPO / "static" / "img" / "charge-interets-mdeur-en.svg"
-TRAJECTOIRE = REPO / "data" / "trajectoire_plf2026.json"
+TRAJECTOIRE = REPO / "data" / "trajectoire_plf.json"
+
+
+def arret(msg: str) -> None:
+    """Garde qui ne laisse rien continuer : la suite lirait des cles absentes."""
+    print("GARDE EN ECHEC: " + msg)
+    raise SystemExit(1)
 
 
 def lire_trajectoire() -> dict:
-    """Serie PREVISIONNELLE, saisie a la main apres lecture a la source.
+    """Prevision du Gouvernement (dernier projet de loi de finances depose),
+    saisie a la main apres lecture a la source.
 
-    Absente ou illisible : la figure se dessine sans prolongement, elle ne
-    s'arrete pas. Une prevision manquante ne doit pas suspendre une observation.
+    Depuis le 02/10/2026 la page du cout de la dette CITE cette prevision dans
+    sa prose (jetons prev_*) : le fichier est donc requis. Absent ou illisible,
+    arret -- une page qui citerait une prevision que le depot n'a plus
+    mentirait en silence.
     """
-    if not TRAJECTOIRE.is_file():
-        return {}
+    def serie(bloc):
+        return {int(a): float(v) for a, v in bloc.items() if not a.startswith("_")}
     try:
         t = json.loads(TRAJECTOIRE.read_text(encoding="utf-8"))
-        d = {int(a): float(v) for a, v in t["dette_pct_pib"].items()
-             if not a.startswith("_")}
-        return {"dette": d, "source": t["source"]["publication"]} if d else {}
+        out = {"dette": serie(t["dette_pct_pib"]),
+               "charge_md": serie(t["charge_interets_mdeur"]),
+               "charge_pct": serie(t["charge_interets_pct_pib"]),
+               "dette_prec": serie(t["edition_precedente"]["dette_pct_pib"]),
+               "edition": int(t["edition"]),
+               "edition_prec": int(t["edition_precedente"]["edition"]),
+               "source": t["source"]["publication"], "url": t["source"]["url"],
+               "page": t["source"]["page"],
+               "lu_le": t["source"]["lu_le"]}
     except Exception as exc:                       # noqa: BLE001
-        print("trajectoire ignoree (%s)" % exc)
-        return {}
+        arret("trajectoire du projet de loi de finances illisible (%s) : %s" % (TRAJECTOIRE.name, exc))
+    return out
+
+
+def faits_prevision(traj: dict, dernier_obs: int, charge_obs: float) -> dict:
+    """Ce que la prose dit de la prevision, et les gardes de ses qualificatifs.
+
+    La page ecrit que la charge PREVUE depasse la derniere charge observee,
+    qu'elle augmente d'une annee a l'autre, et que la prevision de dette a ete
+    RELEVEE depuis l'edition precedente. Si la donnee dement l'un des trois,
+    arret. Quand l'annee N de la prevision devient une annee observee, la
+    phrase est perimee : arret aussi, le paragraphe se reecrit a la main.
+    """
+    e = traj["edition"]
+    n, n1 = e - 1, e
+    for nom, serie in (("charge_md", traj["charge_md"]), ("dette", traj["dette"])):
+        if n not in serie or n1 not in serie:
+            arret("prevision : %s sans les annees %d et %d" % (nom, n, n1))
+    if n1 not in traj["charge_pct"]:
+        arret("prevision : charge en %% du PIB absente pour %d" % n1)
+    if dernier_obs >= n:
+        arret("prevision PERIMEE : l'annee %d est desormais observee ; mettre a jour %s "
+             "(nouveau projet de loi de finances) et relire le paragraphe de la page"
+             % (n, TRAJECTOIRE.name))
+    if not (traj["charge_md"][n1] > traj["charge_md"][n] > charge_obs):
+        arret("prevision : la prose dit une charge prevue en hausse au-dessus de l'observe "
+             "(%.1f, puis %.1f, contre %.1f observe)"
+             % (traj["charge_md"][n], traj["charge_md"][n1], charge_obs))
+    if n1 not in traj["dette_prec"]:
+        arret("prevision : l'edition precedente ne donne pas la dette %d" % n1)
+    rev = round(traj["dette"][n1] - traj["dette_prec"][n1], 1)
+    if rev <= 0:
+        arret("prevision : la prose dit une prevision de dette RELEVEE, la donnee dit %+.1f" % rev)
+    # Le paragraphe de la page cite l'avis qui porte ces chiffres (lien, numeros de
+    # paragraphe, lecture du Haut Conseil) : texte fige autour de valeurs qui changent
+    # a chaque edition. Si la page ne pointe plus vers la source du fichier, arret.
+    for page in ("_index.md", "_index.en.md"):
+        f = REPO / "content" / "cout-de-la-dette-publique" / page
+        if traj["page"] not in f.read_text(encoding="utf-8"):
+            arret("prevision : %s ne cite pas la source de %s (%s) -- nouvelle edition ? "
+                  "relire le paragraphe « Ce que prevoit le Gouvernement » et la note des sources"
+                  % (page, TRAJECTOIRE.name, traj["page"]))
+    return {"n": n, "n1": n1, "revision": rev}
 # Segment 1978-1995 que le flux ne couvre pas : comptes nationaux clos,
 # donc figes ici plutot que rapatries d'un .xlsx dont l'URL change a
 # chaque millesime. L'annee 1995 y est en DOUBLE avec la serie
@@ -1083,7 +1139,8 @@ def build_svg_marche(apparent: dict, marche: dict, lang: str = "fr") -> str:
     return "\n".join(e) + "\n"
 
 
-def build_svg_charge(interets_md: dict, lang: str = "fr") -> str:
+def build_svg_charge(interets_md: dict, lang: str = "fr", prev: dict | None = None,
+                     edition: int = 0) -> str:
     """La charge d'interets en MILLIARDS : la grandeur que le lecteur a en tete.
 
     Le % du PIB dit la soutenabilite, le milliard dit la facture. Les deux
@@ -1096,22 +1153,38 @@ def build_svg_charge(interets_md: dict, lang: str = "fr") -> str:
                  "(gov_10a_main, D41PAY), %s-%s",
           "desc": "Une courbe en milliards d'euros courants, de %s à %s. La charge d'intérêts "
                   "descend jusqu'au creux de %s, puis remonte fortement pour atteindre %s "
-                  "milliards en %s."}
+                  "milliards en %s.",
+          "desc_prev": " Un prolongement en pointillés montre la prévision du Gouvernement dans le "
+                       "projet de loi de finances pour %d : %s milliards en %d. Une prévision, non "
+                       "une observation.",
+          "etiq_prev": "prévision PLF %d",
+          "src_prev": " ; pointillés : prévision du Gouvernement, projet de loi de finances pour %d"}
          if lang == "fr" else
          {"panneau": "Interest paid by general government, billion euros, current prices",
           "creux": "trough of", "titre": "Interest paid in billion euros, %s-%s",
           "src": "Eurostat, interest paid by general government (gov_10a_main, D41PAY), %s-%s",
           "desc": "One curve in billion euros, from %s to %s. Interest paid falls to its trough "
-                  "in %s, then climbs steeply to %s billion in %s."})
+                  "in %s, then climbs steeply to %s billion in %s.",
+          "desc_prev": " A dotted extension shows the Government's forecast in the %d budget "
+                       "bill: %s billion in %d. A forecast, not an observation.",
+          "etiq_prev": "%d budget bill forecast",
+          "src_prev": "; dotted: Government forecast, %d budget bill"})
     ans = sorted(int(a) for a in interets_md)
     a0, a1 = ans[0], ans[-1]
     creux = min(ans, key=lambda a: interets_md[a])
+    # PREVISION : jamais au rang d'une observation -- pointille, cercle evide,
+    # etiquette portant l'emetteur. Elle etend l'axe et l'echelle.
+    pv = sorted((a, v) for a, v in (prev or {}).items() if a > a1)
+    ax1 = pv[-1][0] if pv else a1
+    # Précision de la SOURCE : l'avis du Haut Conseil écrit « 91 Md€ » ; l'afficher « 91,0 » inventerait une décimale
+    # (le Gouvernement annonce 91,2). Valeur saisie entière -> affichée entière, comme dans la prose.
+    dprev = (0 if pv and pv[-1][1] == round(pv[-1][1]) else 1)
     W, H = 720, 340
-    ml, mr, mt, mb = 52, 96, 46, 34
-    vmax = max(interets_md.values()) * 1.12
+    ml, mr, mt, mb = 52, (132 if pv else 96), 46, 34
+    vmax = max(list(interets_md.values()) + [v for _, v in pv]) * 1.12
 
     def X(a):
-        return ml + (a - a0) / (a1 - a0) * (W - ml - mr)
+        return ml + (a - a0) / (ax1 - a0) * (W - ml - mr)
 
     def Y(v):
         return H - mb - v / vmax * (H - mt - mb)
@@ -1120,7 +1193,9 @@ def build_svg_charge(interets_md: dict, lang: str = "fr") -> str:
          'aria-labelledby="ch-t ch-d" font-family="%s">' % (W, H + CARTOUCHE_H, FONT),
          '<title id="ch-t">%s</title>' % _esc(T["titre"] % (a0, a1)),
          '<desc id="ch-d">%s</desc>' % _esc(T["desc"] % (a0, a1, creux,
-                                                         num(interets_md[a1], 1), a1)),
+                                                         num(interets_md[a1], 1), a1)
+                                            + (T["desc_prev"] % (edition, num(pv[-1][1], dprev), pv[-1][0])
+                                               if pv else "")),
          '<text x="0" y="22" font-size="%d" font-weight="600" fill="%s">%s</text>'
          % (TY_TITRE, INK, _esc(T["panneau"]))]
     g = 0
@@ -1130,8 +1205,8 @@ def build_svg_charge(interets_md: dict, lang: str = "fr") -> str:
         e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s" text-anchor="end">%d</text>'
                  % (ml - 7, Y(g) + 4, TY_AXE, MUTED, g))
         g += 20
-    for a in range(a0, a1 + 1):
-        if a % 10 == 0 or a == a1:
+    for a in range(a0, ax1 + 1):
+        if a % 10 == 0 or a == ax1:
             e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s" text-anchor="middle">%d</text>'
                      % (X(a), H - mb + 18, TY_AXE, MUTED, a))
     e += bandes_crise(X, mt, H - mb, lang, x_min=a0, x_max=a1)
@@ -1144,12 +1219,31 @@ def build_svg_charge(interets_md: dict, lang: str = "fr") -> str:
     e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s" text-anchor="middle">%s %s (%d)</text>'
              % (cx, cy + 20, TY_MINEUR, MUTED, _esc(T["creux"]), num(interets_md[creux], 1), creux))
     lx, ly = pts[-1]
+    if pv:
+        ppts = [(lx, ly)] + [(X(a), Y(v)) for a, v in pv]
+        e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.4" '
+                 'stroke-dasharray="6 5" stroke-linejoin="round" opacity="0.75"/>'
+                 % (_line_path(ppts), COL_INTER))
+        px, py = ppts[-1]
+        e.append('<circle cx="%.1f" cy="%.1f" r="4" fill="#ffffff" stroke="%s" stroke-width="2"/>'
+                 % (px, py, COL_INTER))
+        e.append('<text x="%.1f" y="%.1f" font-size="%d" font-weight="600" fill="%s">%s</text>'
+                 % (px + 9, py + 1, TY_ANNOT, COL_INTER, num(pv[-1][1], dprev)))
+        e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s">%s %d</text>'
+                 % (px + 9, py + 16, TY_MINEUR, MUTED, "Md€" if lang == "fr" else "bn", pv[-1][0]))
+        e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s">%s</text>'
+                 % (px + 9, py + 30, TY_MINEUR, MUTED, _esc(T["etiq_prev"] % edition)))
     e.append('<circle cx="%.1f" cy="%.1f" r="5" fill="%s"/>' % (lx, ly, COL_INTER))
-    e.append('<text x="%.1f" y="%.1f" font-size="%d" font-weight="700" fill="%s">%s</text>'
-             % (lx + 10, ly + 2, TY_VALEUR, INK, num(interets_md[a1], 1)))
-    e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s">%s %d</text>'
-             % (lx + 10, ly + 17, TY_MINEUR, MUTED, "Md€" if lang == "fr" else "bn", a1))
-    e += cartouche(W, H + 4, T["src"] % (a0, a1), "charge", lang)
+    # Avec une prevision, la derniere OBSERVATION s'etiquette a gauche du point :
+    # a droite, elle serait traversee par le pointille.
+    ancre, dx = ("end", -10) if pv else ("start", 10)
+    e.append('<text x="%.1f" y="%.1f" font-size="%d" font-weight="700" fill="%s" text-anchor="%s">%s</text>'
+             % (lx + dx, ly - 6 if pv else ly + 2, TY_VALEUR, INK, ancre, num(interets_md[a1], 1)))
+    e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s" text-anchor="%s">%s %d</text>'
+             % (lx + dx, ly + 9 if pv else ly + 17, TY_MINEUR, MUTED, ancre,
+                "Md€" if lang == "fr" else "bn", a1))
+    e += cartouche(W, H + 4, T["src"] % (a0, a1) + (T["src_prev"] % edition if pv else ""),
+                   "charge", lang)
     e.append("</svg>")
     return "\n".join(e) + "\n"
 
@@ -1288,7 +1382,8 @@ def build_svg_masses(interets: dict, cofog: dict, lang: str = "fr") -> str:
 
 
 def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
-                     seuils: dict, lang: str = "fr", traj: dict | None = None) -> str:
+                     seuils: dict, lang: str = "fr", traj: dict | None = None,
+                     edition: int = 0) -> str:
     """Dette en % du PIB, de la premiere annee du segment fige a aujourd'hui.
 
     Meme couleur que la courbe de dette du ciseau : c'est la meme grandeur, et
@@ -1329,12 +1424,12 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
                 seuils[100], nb(pct_courant), label_courant)
              + (("" if not prev else
                  (" Un prolongement en pointillés montre la trajectoire du projet de loi de "
-                  "finances pour 2026, qui atteint %s%s en %d : une prévision, non une "
-                  "observation." % (nb(prev[-1][1]), U, prev[-1][0]))) if lang == "fr" else
+                  "finances pour %d, qui atteint %s%s en %d : une prévision, non une "
+                  "observation." % (edition, nb(prev[-1][1]), U, prev[-1][0]))) if lang == "fr" else
                 ("" if not prev else
-                 (" A dotted extension shows the path of the 2026 budget bill, reaching %s%s "
+                 (" A dotted extension shows the path of the %d budget bill, reaching %s%s "
                   "in %d: a forecast, not an observation."
-                  % (nb(prev[-1][1]), U, prev[-1][0]))))
+                  % (edition, nb(prev[-1][1]), U, prev[-1][0]))))
              + '</desc>')
     e.append('<rect width="%d" height="%d" fill="#fff"/>' % (w, h))
     for g in (0, 25, 50, 75, 100, 125):
@@ -1372,8 +1467,8 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
         e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="%d" '
                  'fill="%s">%s</text>'
                  % (px + 9, py + 16, FONT, TY_MINEUR, MUTED,
-                    _esc("trajectoire PLF 2026" if lang == "fr"
-                         else "2026 budget bill path")))
+                    _esc(("trajectoire PLF %d" if lang == "fr"
+                          else "%d budget bill path") % edition)))
     e += bandes
     e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.8" '
              'stroke-linejoin="round"/>' % (ligne, COL_DETTE))
@@ -1880,9 +1975,23 @@ def main() -> int:
             # rendue SOUS CONDITION de cette cle, pour qu'un reflux durable
             # la fasse disparaitre au lieu de la laisser mentir.
             "hist_retour_10_ans": str(hist["retour_10_ans"]),
+            # Prevision du Gouvernement (data/trajectoire_plf.json) : citee par la
+            # prose, toujours sous le nom de son emetteur.
+            "prev_edition": str(trajectoire["edition"]),
+            "prev_edition_prec": str(trajectoire["edition_prec"]),
+            "prev_n_annee": str(fprev["n"]),
+            "prev_n1_annee": str(fprev["n1"]),
+            "prev_charge_n_mdeur": nb(trajectoire["charge_md"][fprev["n"]]),
+            "prev_charge_n1_mdeur": nb(trajectoire["charge_md"][fprev["n1"]], 0),
+            "prev_charge_n1_pct_pib": nb(trajectoire["charge_pct"][fprev["n1"]]),
+            "prev_dette_n1_pct_pib": nb(trajectoire["dette"][fprev["n1"]]),
+            "prev_dette_n1_prec_pct_pib": nb(trajectoire["dette_prec"][fprev["n1"]]),
+            "prev_dette_revision_pts": nb(fprev["revision"]),
             "releve_le": date_affichee,
         }
 
+    trajectoire = lire_trajectoire()
+    fprev = faits_prevision(trajectoire, int(last_y), d41_mdeur[last_y])
     affichage = bloc_affichage(fr, fr_quarter, now_fr)
     affichage_en = bloc_affichage(en, en_quarter, now_en)
 
@@ -2037,7 +2146,6 @@ def main() -> int:
     # l'ensemble dans son etat precedent, coherent.
     # Millesime commun des masses comparees : les series par fonction s'arretent
     # avant les interets, et une comparaison ne melange pas deux annees.
-    trajectoire = lire_trajectoire()
     _codes_md = ["GF0303", "GF03", "GF07", "GF09"]
     _codes_md += [code for postes in POSTES_COFOG.values() for code, _, _ in postes]
     cofog_md = {c: {int(a): v / 1000.0 for a, v in cofog_mio[c].items()}
@@ -2060,12 +2168,14 @@ def main() -> int:
         (OUT_SVG_TAUX_EN, build_svg_taux(taux_apparent, lang="en")),
         (OUT_SVG_LONGUE, build_svg_longue(
             annuel, dette_pib[lastq], fr_quarter(lastq), hist["seuils"],
-            traj=trajectoire.get("dette"))),
+            traj=trajectoire.get("dette"), edition=trajectoire["edition"])),
         (OUT_SVG_LONGUE_EN, build_svg_longue(
             annuel, dette_pib[lastq], en_quarter(lastq), hist["seuils"],
-            lang="en", traj=trajectoire.get("dette"))),
-        (OUT_SVG_CHARGE, build_svg_charge(inter_md)),
-        (OUT_SVG_CHARGE_EN, build_svg_charge(inter_md, lang="en")),
+            lang="en", traj=trajectoire.get("dette"), edition=trajectoire["edition"])),
+        (OUT_SVG_CHARGE, build_svg_charge(inter_md, prev=trajectoire["charge_md"],
+                                          edition=trajectoire["edition"])),
+        (OUT_SVG_CHARGE_EN, build_svg_charge(inter_md, lang="en", prev=trajectoire["charge_md"],
+                                             edition=trajectoire["edition"])),
         (OUT_SVG_MASSES, build_svg_masses(inter_md, cofog_md)),
         (OUT_SVG_MASSES_EN, build_svg_masses(inter_md, cofog_md, lang="en")),
     ]

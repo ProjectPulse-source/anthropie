@@ -223,6 +223,98 @@ def dilico_montant() -> str:
     return m.group(1) + " d’euros"
 
 
+PLF = DON / "plf_collectivites.json"
+PLF_SHA = "0d61c45b6bdb0dc63b9407f79d69459053654514985cc07c6633b6c376b717da"
+
+
+def plf_mesures() -> dict:
+    """Ce que le dernier projet de loi de finances depose demande aux collectivites, relu par motif dans les pages
+    archivees du projet de loi et de l'avis du Haut Conseil des finances publiques (sources_collectivites/
+    archiver_plf.py ; empreinte controlee) : aucun montant recopie a la main. Montants d'un PROJET, avant examen."""
+    import re
+    brut = PLF.read_bytes()
+    if hashlib.sha256(brut).hexdigest() != PLF_SHA:
+        fail("archive du projet de loi de finances alteree (empreinte)")
+    a = json.loads(brut)
+    n = a["edition"]
+
+    def texte(doc):
+        return re.sub(r"\s+", " ", " ".join(a[doc]["pages"].values())).replace("\u2019", "'")
+    plf, hcfp = texte("plf"), texte("hcfp")
+
+    def lire(doc, motif, quoi):
+        m = re.search(motif, plf if doc == "plf" else hcfp)
+        if not m:
+            fail("projet de loi de finances : %s introuvable dans l'archive (%s)" % (quoi, doc))
+        return [float(g.replace(" ", "").replace(",", ".")) for g in m.groups()]
+    an = str(n)
+    dgf = lire("plf", r"En %s, ce montant est égal à ([\d ]+) €" % an, "montant de la DGF")[0] / 1e9
+    dgf_hausse = lire("plf", r"nouvelle augmentation du montant de la DGF en %s à hauteur de (\d+) millions d'euros" % an,
+                      "hausse de la DGF")[0]
+    cpeb = lire("plf", r"contribution progressive à l'effort budgétaire \(CPEB\), dont le rendement attendu s'élève à "
+                       r"([\d,]+) milliards", "rendement de la contribution progressive")[0]
+    part_com, part_dep = lire("plf", r"Le dispositif s'applique à (\d+) % des communes, à (\d+) % des départements",
+                              "assiette de la contribution progressive")
+    fctva = lire("plf", r"pour un rendement de ([\d,]+) milliards d'euros", "rendement de la réforme du FCTVA")[0]
+    fctva_pts = lire("plf", r"soit une baisse de (\d+) points par rapport à la situation actuelle", "baisse du taux du FCTVA")[0]
+    regions = lire("plf", r"fraction fixe d'accises sur les énergies d'un montant de ([\d,]+) millions d'euros",
+                   "fraction d'accises des régions")[0]
+    psr = lire("plf", r"sont évalués à ([\d ]+) euros", "prélèvements sur recettes")[0] / 1e9
+    psr_lfi, psr_rev, psr_tab = lire("plf", r"Prélèvements sur les recettes de l'État au profit des collectivités territoriales "
+                                            r"(\d\d \d{3}) (\d\d \d{3}) (\d\d \d{3})", "tableau des prélèvements sur recettes")
+    res_md, res_pct = lire("plf", r"Les collectivités disposeront en %s de \+(\d+) Md€ de ressources supplémentaires par "
+                                  r"rapport à %d \(\+([\d,]+) %%\)" % (an, n - 1), "ressources supplémentaires annoncées")
+    h_cpeb, tva, minist, dilico = lire(
+        "hcfp", r"un prélèvement de ([\d,]+) Md€ sur leurs avances de fiscalité, un écrêtement de ([\d,]+) Md€ de la TVA "
+                r"affectée \(hors régions\), une réduction des contributions de certains ministères aux collectivités "
+                r"\(([\d,]+) Md€\) ou encore un aménagement du rythme de versement du DILICO sur cinq ans au lieu de trois "
+                r"\(([\d,]+) Md€\)", "liste des mesures (Haut Conseil)")
+    h_fctva = lire("hcfp", r"l'État diminuant dès lors les concours à ce titre de −([\d,]+) Md€ en %s" % an, "FCTVA (Haut Conseil)")[0]
+    inv_n1 = lire("hcfp", r"baisse importante de l'investissement des collectivités territoriales \(−([\d,]+) %\)",
+                  "investissement prévu (Haut Conseil)")[0]
+    inv_n = lire("hcfp", r"dépenses d'investissement des collectivités territoriales \(−([\d,]+) % après",
+                 "investissement de l'année en cours (Haut Conseil)")[0]
+    src_plf = "projet de loi de finances pour %d, " % n
+    mesures = [
+        {"cle": "cpeb", "mesure": "Contribution progressive à l'effort budgétaire, prélevée sur les avances de fiscalité",
+         "texte": "article 37", "nature": "prélèvement sur les recettes fiscales, institué pour %d" % n, "md": cpeb,
+         "source": src_plf + "article 37, exposé des motifs"},
+        {"cle": "fctva", "mesure": "Fonds de compensation pour la TVA : taux abaissé de %d points, sauf dépenses vertes et voirie"
+                                    % fctva_pts,
+         "texte": "articles 35 et 41", "nature": "moindre concours de l'État à l'investissement", "md": fctva,
+         "source": src_plf + "article 41, exposé des motifs"},
+        {"cle": "tva", "mesure": "TVA affectée, hors régions : hausse annuelle réduite de l'inflation",
+         "texte": "article 36", "nature": "moindre progression d'une recette fiscale", "md": tva,
+         "source": "Haut Conseil des finances publiques, avis n° 2026-5"},
+        {"cle": "ministeres", "mesure": "Contributions de certains ministères aux collectivités",
+         "texte": "crédits des missions", "nature": "moindres concours de l'État", "md": minist,
+         "source": "Haut Conseil des finances publiques, avis n° 2026-5"},
+        {"cle": "dilico", "mesure": "Sommes mises en réserve en 2025 et 2026 (DILICO) : reversement sur cinq ans au lieu de trois",
+         "texte": "article 84", "nature": "report de calendrier, montant total restitué inchangé", "md": dilico,
+         "source": "Haut Conseil des finances publiques, avis n° 2026-5"},
+    ]
+    depot = re.search(r"déposé le (.+)$", a["plf"]["titre"])
+    if not depot:
+        fail("projet de loi de finances : date de dépôt introuvable dans le titre de l'archive")
+    # La page cite ces deux documents par leur adresse : texte fige autour de montants qui changent a chaque edition.
+    page = (Path(__file__).resolve().parent.parent / "content" / "dette-publique-collectivites-locales" / "_index.md")
+    contenu = page.read_text(encoding="utf-8")
+    for doc in ("plf", "hcfp"):
+        if a[doc]["url"] not in contenu:
+            fail("projet de loi de finances : la page ne cite pas la source archivée (%s) — nouvelle édition ? relire la "
+                 "section « projet de loi de finances »" % a[doc]["url"])
+    return {"plf_edition": n, "plf_depot": depot.group(1).replace(" ", "\u00a0"),  # insecables en caractere : le jeton sert aussi au JSON-LD
+            "plf_dgf": dgf, "plf_dgf_hausse_m": dgf_hausse, "plf_cpeb": cpeb,
+            "plf_cpeb_communes_pct": part_com, "plf_cpeb_dep_pct": part_dep, "plf_fctva": fctva, "plf_fctva_pts": fctva_pts,
+            "plf_tva": tva, "plf_ministeres": minist, "plf_dilico": dilico, "plf_regions_m": regions,
+            "plf_psr": psr, "plf_psr_lfi_prec": psr_lfi / 1000, "plf_psr_tableau": psr_tab / 1000,
+            "plf_ressources_md": res_md, "plf_ressources_pct": res_pct,
+            "plf_inv_n_pct": -inv_n, "plf_inv_n1_pct": -inv_n1, "plf_temoin_cpeb": h_cpeb, "plf_temoin_fctva": h_fctva,
+            "plf_somme": sum(m["md"] for m in mesures), "plf_mesures": mesures,
+            "plf_sources": {"plf": {k: a["plf"][k] for k in ("titre", "url", "sha256_pdf")},
+                            "hcfp": {k: a["hcfp"][k] for k in ("titre", "url", "sha256_pdf")}}}
+
+
 def calculer(J: Jeu) -> tuple[dict, list[dict]]:
     G = "FR"
     an_fin = max(J.annees(G, "S1313", "P51G"))
@@ -465,6 +557,26 @@ def calculer(J: Jeu) -> tuple[dict, list[dict]]:
         ("témoin comptable : TR − TE = B9 (écart ≤ 1 M€)", r["temoin_residu_max_meur"] <= 1.0),
         ("la cascade se referme sur le solde", abs(r["cascade_somme"] - r["ep_solde_delta"]) < 1e-9),
     ]
+    r.update(plf_mesures())
+    baisse_dgf_max = max(-d for d in r["dgf_vote_baisses"])
+    r["plf_dgf_baisse_annuelle_max"] = baisse_dgf_max
+    gardes += [
+        ("projet de loi de finances : « la DGF augmente »", r["plf_dgf_hausse_m"] > 0),
+        ("projet de loi de finances : « les prélèvements sur recettes au profit des collectivités baissent »",
+         r["plf_psr"] < r["plf_psr_lfi_prec"]),
+        ("projet de loi de finances : témoin entre sources — la contribution progressive est chiffrée au même montant par le "
+         "projet de loi et par le Haut Conseil", abs(r["plf_cpeb"] - r["plf_temoin_cpeb"]) < 0.05),
+        ("projet de loi de finances : témoin entre sources — FCTVA, projet de loi et Haut Conseil à 0,05 Md€ près",
+         abs(r["plf_fctva"] - r["plf_temoin_fctva"]) < 0.05),
+        ("projet de loi de finances : témoin interne — l'article et le tableau des recettes donnent le même total de "
+         "prélèvements sur recettes", abs(r["plf_psr"] - r["plf_psr_tableau"]) < 0.001),
+        ("projet de loi de finances : « la somme des cinq mesures dépasse chacune des baisses annuelles de DGF de 2014-2017 »",
+         r["plf_somme"] > baisse_dgf_max),
+        ("projet de loi de finances : « l'investissement local reculerait deux années de suite » (Haut Conseil)",
+         r["plf_inv_n_pct"] < 0 and r["plf_inv_n1_pct"] < 0),
+        ("projet de loi de finances : « des ressources en hausse malgré la contribution » (lecture du Gouvernement)",
+         r["plf_ressources_md"] > 0),
+    ]
     rapport = [{"garde": g, "ok": bool(ok)} for g, ok in gardes]
     for g in rapport:
         if not g["ok"]:
@@ -507,6 +619,18 @@ def affichage(r: dict) -> dict:
         "of_eq_com_hausse_pct": fr1(100 * (r["of_eq_com_fin"] / r["of_eq_com_20"] - 1), 0),
         "ep_transf_md": fr1(r["ep_transf_md"], 1), "ep_inv_md": fr1(r["ep_inv_md"], 1),
         "dilico_2025": dilico_montant(),
+        "plf_edition": str(r["plf_edition"]), "plf_prec": str(r["plf_edition"] - 1), "plf_depot": r["plf_depot"],
+        "plf_dgf": fr1(r["plf_dgf"]), "plf_dgf_hausse_m": fr1(r["plf_dgf_hausse_m"], 0),
+        "plf_cpeb": fr1(r["plf_cpeb"]), "plf_cpeb_communes_pct": fr1(r["plf_cpeb_communes_pct"], 0),
+        "plf_cpeb_dep_pct": fr1(r["plf_cpeb_dep_pct"], 0),
+        "plf_fctva": fr1(r["plf_fctva"]), "plf_fctva_pts": fr1(r["plf_fctva_pts"], 0),
+        "plf_tva": fr1(r["plf_tva"]), "plf_ministeres": fr1(r["plf_ministeres"]), "plf_dilico": fr1(r["plf_dilico"]),
+        "plf_somme": fr1(r["plf_somme"]), "plf_regions_m": fr1(r["plf_regions_m"], 0),
+        "plf_psr": fr1(r["plf_psr"]), "plf_psr_lfi_prec": fr1(r["plf_psr_lfi_prec"]),
+        "plf_psr_baisse": fr1(r["plf_psr_lfi_prec"] - r["plf_psr"]),
+        "plf_ressources_md": fr1(r["plf_ressources_md"], 0), "plf_ressources_pct": fr1(r["plf_ressources_pct"]),
+        "plf_inv_n_pct": fr1(-r["plf_inv_n_pct"]), "plf_inv_n1_pct": fr1(-r["plf_inv_n1_pct"]),
+        "plf_dgf_baisse_annuelle_max": fr1(r["plf_dgf_baisse_annuelle_max"]),
         "dgf_vote_13": fr1(r["dgf_vote"][2013]), "dgf_vote_17": fr1(r["dgf_vote"][2017]),
         "dgf_vote_baisse": fr1(r["dgf_vote"][2013] - r["dgf_vote"][2017]),
         "dgf_vote_b14": fr1(-r["dgf_vote_baisses"][0]), "dgf_vote_b15": fr1(-r["dgf_vote_baisses"][1]),
@@ -756,6 +880,11 @@ def csv_texte(r: dict) -> str:
                 w.writerow([lib + "_" + c["cat"], "FR", an_, "%.3f" % c[k + suf], "Md EUR", "OFGL, base consolidee " + c["cat"]])
     for a, v in sorted(r["dgf_vote"].items()):
         w.writerow(["dgf_montant_loi_de_finances", "FR", a, "%.3f" % v, "Md EUR", "CGCT art. L. 1613-1 (Legifrance)"])
+    for m in r["plf_mesures"]:
+        w.writerow(["projet_loi_finances_mesure_" + m["cle"], "FR", r["plf_edition"], "%.3f" % m["md"], "Md EUR",
+                    m["source"] + " (projet, avant examen)"])
+    w.writerow(["projet_loi_finances_dgf", "FR", r["plf_edition"], "%.3f" % r["plf_dgf"], "Md EUR",
+                "projet de loi de finances pour %d, article 34 (projet, avant examen)" % r["plf_edition"]])
     return buf.getvalue()
 
 
