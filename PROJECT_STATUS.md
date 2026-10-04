@@ -53,6 +53,14 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-04 (soir) — Livresque des mots : couverture MARINE retenue par l'auteur, posée sur le site
+
+L'auteur retient finalement le recto marine (`Cover-Nouvelle-Livresque-01`, pièce archivée dans le dépôt du livre,
+SHA-256 `7717843a…`) : le recto « papier » ressortait mal sur KDP. Master ×4 (Real-ESRGAN), sous-titre aligné sur la
+fiche KDP, puis version 2:3 (fond marine prolongé) posée sur la fiche et les trois images de partage par
+`scripts/og_couverture_livre.py` (témoin 0,34 / 0,41 / 0,45 niveau, seuil 3). Registre v1.22 : mention de la
+couverture corrigée. Rien d'autre ne change (chiffres, pagination).
+
 ### 2026-10-04 — Livresque des mots, édition 2026 révisée : site mis à jour, COMMITÉ ET POUSSÉ avec la publication KDP
 
 Registre v1.22 (`data/works.yaml`, source unique) : `corpus_stats` 4 656 citations / 1 387 voix (étaient 4 658 / 1 388 :

@@ -32,7 +32,8 @@ meta:
       fiches : texte, paternité, source ; formulations attestées rétablies, attributions discutées signalées).
       corpus_stats 4 658 → 4 656 citations (doublons réunis, une entrée à deux auteurs scindée) et
       1 388 → 1 387 voix (graphies d'un même auteur réunies) ; pages 694 → 680. Nouvelle couverture
-      (recto « papier » adopté par l'auteur le 04/10). Chiffres lus sur le livre fabriqué (bilan des Promenades,
+      (recto marine retenu par l'auteur le 04/10, à la place du recto « papier » du même jour, qui ressortait
+      mal sur KDP). Chiffres lus sur le livre fabriqué (bilan des Promenades,
       témoin temoin_livre_final.py du dépôt du livre). Mis en ligne le 04/10, avec la publication KDP en cours
       (description Amazon déjà à jour ; pagination de la fiche Amazon en cours de traitement).
       Aucun ajout d'œuvre ; total_works inchangé.
