@@ -111,7 +111,7 @@
 <meta name="citation_publication_date" content="{{ with .Params.publication_date }}{{ . | time.Format "2006/01/02" }}{{ else }}{{ .Date.Format "2006/01/02" }}{{ end }}">
 <meta name="citation_doi" content="{{ .Params.doi_zenodo }}">
 <meta name="citation_pdf_url" content="{{ with .Params.pdf_url }}{{ . }}{{ else }}{{ .Params.url_zenodo }}/files/{{ .File.BaseFileName }}.pdf{{ end }}">
-<meta name="citation_language" content="{{ .Params.language | default .Language.Lang }}">
+<meta name="citation_language" content="{{ .Params.text_language | default .Params.language | default .Language.Lang }}">
 <meta name="citation_abstract_html_url" content="{{ .Permalink }}">
 {{ with .Params.awp_number }}<meta name="citation_technical_report_number" content="{{ . }}">{{ end }}
 <meta name="citation_technical_report_institution" content="Anthropie Working Papers">
@@ -212,7 +212,7 @@
     "publisher" (dict "@type" "Organization" "name" "Stéphane Lalut" "url" "https://stephane-lalut.com")
     "identifier" (printf "https://doi.org/%s" .Params.doi_zenodo)
     "url" .Permalink
-    "inLanguage" (.Params.language | default .Language.Lang)
+    "inLanguage" (.Params.text_language | default .Params.language | default .Language.Lang)
     "isAccessibleForFree" true
     "license" "https://creativecommons.org/licenses/by/4.0/"
     "mainEntityOfPage" .Permalink -}}
@@ -232,11 +232,13 @@
 {{- with .Params.wikidata_qid -}}{{- $sameAs = $sameAs | append (printf "https://www.wikidata.org/entity/%s" .) -}}{{- end -}}
 {{- $article = merge $article (dict "sameAs" $sameAs) -}}
 {{- with .Params.keywords -}}{{- $article = merge $article (dict "keywords" .) -}}{{- end -}}
-{{- with .Params.translation -}}
+{{- /* Une fiche anglaise d'un papier encore francais seul (text_language) decrit la MEME
+       oeuvre sous le MEME DOI : la declarer traduction d'elle-meme serait faux. */ -}}
+{{- with .Params.translation -}}{{- if not $.Params.text_language -}}
   {{- $key := cond (eq $.Params.language "fr") "workTranslation" "translationOfWork" -}}
   {{- $tr := dict "@type" "ScholarlyArticle" "headline" .title "identifier" (printf "https://doi.org/%s" .doi) "url" (.url | absURL) -}}
   {{- $article = merge $article (dict $key $tr) -}}
-{{- end -}}
+{{- end -}}{{- end -}}
 <script type="application/ld+json">
 {{ $article | jsonify (dict "indent" "  ") | safeJS }}
 </script>

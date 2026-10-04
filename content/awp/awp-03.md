@@ -30,6 +30,7 @@ translation:
 related:
   - awp-01
   - awp-04
+  - awp-09
 related_book: "dette-publique-qui-paie-vraiment"
 ---
 

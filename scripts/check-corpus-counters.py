@@ -258,7 +258,25 @@ def scan_file(rel_path: str, abs_path: Path,
     lang = _detect_lang(rel_path)
     lines = text.splitlines()
 
+    # Le journal de version de data/works.yaml (meta.changelog) est un HISTORIQUE date :
+    # « 8 AWP » y etait vrai a sa date et le reste. Le scanner signalait ces lignes a
+    # chaque nouvel AWP (constate a l'ajout d'AWP-09, 2026-10-04) ; les reecrire
+    # falsifierait l'historique. On saute le bloc, du « changelog: » au premier
+    # retour a une indentation <= celle de la cle.
+    histo = set()
+    if rel_path.replace("\\", "/") == "data/works.yaml":
+        debut = next((i for i, l in enumerate(lines) if l.strip() == "changelog:"), None)
+        if debut is not None:
+            ind = len(lines[debut]) - len(lines[debut].lstrip())
+            i = debut + 1
+            while i < len(lines) and (not lines[i].strip()
+                                      or len(lines[i]) - len(lines[i].lstrip()) > ind):
+                histo.add(i + 1)
+                i += 1
+
     for lineno, line in enumerate(lines, start=1):
+        if lineno in histo:
+            continue
         # Ligne dé-taguée pour matching ; ligne originale conservée pour extrait
         line_stripped = _strip_inline_html(line)
         for entree in PATTERNS:

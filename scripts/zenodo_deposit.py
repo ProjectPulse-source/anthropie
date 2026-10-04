@@ -31,7 +31,8 @@ BASE = "https://zenodo.org/api"
 
 # Identité auteur — DOIT correspondre à ORCID dans zenodo_audit_complet.py.
 ORCID = "0009-0002-1794-4895"
-CREATORS = [{"name": "Lalut, Stéphane", "orcid": ORCID}]
+# Affiliation ajoutee le 2026-10-04 : les records publies la portent (AWP-08), le generateur non.
+CREATORS = [{"name": "Lalut, Stéphane", "affiliation": "Independent Researcher", "orcid": ORCID}]
 COMMUNITY = "anthropie-working-papers"
 
 TITLE = ("La réversibilité sociale comme dimension de l'inégalité — "
@@ -279,6 +280,25 @@ PAPERS = {
         # d'ajouter l'espagnol au site n'est pas prise. Ne pas pointer vers la page
         # française : ce serait déclarer que ce dépôt est décrit par un texte
         # qui n'est pas le sien.
+    },
+    "awp09-fr": {
+        "titre": ("Ce que les comptes publics permettent d'établir sur le déplacement de la charge de la dette — "
+                  "Identités comptables, témoins indépendants et limites (France, 1995-2025) "
+                  "(Anthropie Working Paper No. 9)"),
+        "description": "<p>L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent.</p><p>Working paper de méthode et de résultats datés (série <em>Anthropie Working Papers</em>, AWP-09). La dette publique déplace une charge\xa0: dans le temps, vers les générations suivantes, entre ménages, entre pays et entre échelons d'administration. Ce document de travail établit ce que les comptes publics permettent, ou non, d'affirmer sur chacun de ces déplacements, en France de 1995 à 2025. Sa méthode tient en une règle\xa0: les ratios d'une décomposition sont contrôlés par un témoin que le calcul n'utilise pas, vérifié par l'algèbre puis vu rejeter une erreur réelle, son partage par la reproduction d'autres producteurs, et toute lecture installée est testée là où elle devrait échouer. D'où trois apports. Le premier rapproche des lectures publiques contradictoires\xa0: l'effet des intérêts nets de la croissance pèse 43\xa0% de la hausse du ratio de 1996 à 2012 et retire 1,74 point par an depuis 2017\xa0; fenêtres et objets expliquent une grande part de leur écart. Le deuxième dresse un relevé daté\xa0: la hausse de 57,8\xa0% à 115,6\xa0% tient aux déficits primaires, comme l'a déjà établi la Cour des comptes\xa0; moins d'un cinquième des déficits depuis 1996 a correspondu à un accroissement net des actifs publics\xa0; plus de la moitié de la dette est détenue par des non-résidents\xa0; le sens de l'effort entre ménages s'inverse avec l'instrument. Le troisième met à l'épreuve une lecture antérieure (AWP-03), qui faisait de la dette un transfert vers les générations futures et les moins mobiles\xa0: elle n'est soutenue que dans un périmètre patrimonial sur l'héritage et comme mécanique comptable sur l'écart entre taux et croissance, et son asymétrie sociale est hors de portée des comptes.</p><p><em>Abstract.</em> French fiscal institutions now agree that primary deficits, not the interest-growth “snowball,” account for most of the rise in public debt. Yet public readings that attributed nearly 40% of that rise to the snowball, or more than half of the debt to accumulated interest, also rested on official accounts, and the disagreement has not been reconciled in published work. Nor does the debt ratio say who bears the burden, a question that interpretive frameworks, including an earlier paper in this series (AWP-03), have addressed through illustration rather than measurement. This paper asks what official accounts can and cannot establish about the displacement of the debt burden over time, toward later generations, across households, across countries, and across levels of government, in France from 1995 to 2025. It applies standard debt-dynamics identities under a verification rule: the ratios entering a decomposition are checked against an independent published benchmark, validated algebraically and then seen to reject an actual error, its split is checked against reproductions by other producers, and every established narrative is tested where it should fail. Windows and measures account for much of the conflict: the snowball accounts for 43% of the rise in 1996-2012 and has subtracted 1.74 points a year since 2017. Less than one-fifth of deficits since 1996 matched a net increase in recorded public assets; more than half of the debt is held by non-residents; and the household distribution of fiscal effort reverses with the instrument. Tested against them, the earlier framework is supported only within a narrow wealth perimeter on inheritance and as accounting mechanics on the interest-growth differential, while its social asymmetry lies beyond what the accounts can test.</p>",
+        "keywords": ["anthropie", "dette publique", "dynamique de la dette", "générations futures",
+                     "vérification des données", "working paper", "économie hétérodoxe", "sciences sociales",
+                     "open access", "public debt", "debt dynamics", "heterodox economics", "social sciences",
+                     "institutional analysis", "JEL:H63", "JEL:H62", "JEL:H72", "JEL:E62", "JEL:C82"],
+        "language": "fra",
+        "marqueurs": ["AWP-09", "Anthropie Working Paper No. 9", "permettent d'établir sur le déplacement"],
+        "related": [
+            {"identifier": "10.5281/zenodo.19268769", "relation": "references", "scheme": "doi"},   # AWP-03, mis a l'epreuve
+            {"identifier": "10.5281/zenodo.19266862", "relation": "references", "scheme": "doi"},   # AWP-01, definition
+            {"identifier": "https://stephane-lalut.com/awp/awp-09/", "relation": "isDescribedBy", "scheme": "url"},
+            {"identifier": "https://stephane-lalut.com/pourquoi-la-dette-publique-augmente/",
+             "relation": "isDerivedFrom", "scheme": "url"},   # jeux et generateurs du dossier dette
+        ],
     },
 }
 

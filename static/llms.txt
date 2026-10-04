@@ -2,7 +2,7 @@
 
 > L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. (EN — Anthropy is the hypothesis that social systems displace disorder rather than resolve it.)
 
-Stéphane Lalut développe le cadre de l'**anthropie** : tout ordre social local se construit en exportant son désordre vers d'autres lieux, d'autres temps ou d'autres groupes sociaux. Le cadre est déployé dans une série d'*Anthropie Working Papers* (Zenodo, CC-BY 4.0, bilingues FR/EN) et quatre livres, et appliqué à la dette publique, la transition énergétique, les infrastructures numériques, les inégalités et la recherche indépendante. Trois autres ouvrages, hors corpus anthropique, complètent le catalogue (histoire des idées, anthologie littéraire, institutions et promesses politiques).
+Stéphane Lalut développe le cadre de l'**anthropie** : tout ordre social local se construit en exportant son désordre vers d'autres lieux, d'autres temps ou d'autres groupes sociaux. Le cadre est déployé dans une série d'*Anthropie Working Papers* (Zenodo, CC-BY 4.0, bilingues FR/EN sauf le dernier, en français pour l'heure) et quatre livres, et appliqué à la dette publique, la transition énergétique, les infrastructures numériques, les inégalités et la recherche indépendante. Trois autres ouvrages, hors corpus anthropique, complètent le catalogue (histoire des idées, anthologie littéraire, institutions et promesses politiques).
 
 Site : https://stephane-lalut.com
 
@@ -38,6 +38,7 @@ Site : https://stephane-lalut.com
 - [AWP-06 — Infrastructures numériques et dette technologique](https://stephane-lalut.com/awp/awp-06/) — data centers, IA générative, derisking : le numérique n'a pas allégé la matière, il l'a déplacée. DOI : https://doi.org/10.5281/zenodo.20025421
 - [AWP-07 — La boucle anthropique](https://stephane-lalut.com/awp/awp-07/) — la clé de voûte théorique : déplacement, accumulation, saturation, retour, re-déplacement ; l'anthropie (Lalut) prolonge le cost-shifting de Kapp et se distingue de l'anthropie (Stiegler). DOI : https://doi.org/10.5281/zenodo.21200286
 - [AWP-08 — La réversibilité sociale comme dimension de l'inégalité](https://stephane-lalut.com/awp/awp-08/) — troisième dimension de l'inégalité, à côté des stocks et de la mobilité : la capacité, évaluée avant une tentative, d'en supporter l'échec ; définition, architecture de mesure, propositions réfutables. DOI : https://doi.org/10.5281/zenodo.21506320
+- [AWP-09 — Ce que les comptes publics permettent d'établir sur le déplacement de la charge de la dette](https://stephane-lalut.com/awp/awp-09/) — France, 1995-2025 : chaque décomposition contrôlée par un témoin indépendant ; trois lectures publiques opposées (audit citoyen 2014, iFRAP 2024, Cour des comptes 2025) rapprochées par leur fenêtre et leur objet ; le cadre de l'AWP-03 mis à l'épreuve des comptes. Français seul (anglais à venir). DOI : https://doi.org/10.5281/zenodo.23143030
 
 Chaque AWP a une version anglaise (DOI Zenodo distinct) et expose des sorties BibTeX / RIS / EndNote. Série indexée : https://stephane-lalut.com/serie-awp/
 
@@ -75,7 +76,7 @@ Recensions et articles publiés dans : Alternatives Économiques, La Vie des Id�
 
 > Anthropy is the hypothesis that social systems displace disorder rather than resolve it.
 
-All eight Anthropie Working Papers exist in English with distinct Zenodo DOIs. The foundational book is available in English: *ANTHROPY – A Big History of Civilization's Hidden Costs* (2026, 632 p.); the five other books are published in French only. English entry points:
+Eight of the nine Anthropie Working Papers exist in English with distinct Zenodo DOIs; the English edition of AWP-09 is forthcoming. The foundational book is available in English: *ANTHROPY – A Big History of Civilization's Hidden Costs* (2026, 632 p.); the five other books are published in French only. English entry points:
 
 - [What is anthropy?](https://stephane-lalut.com/en/quest-ce-que-lanthropie/) — canonical definition, FAQ, disambiguation (entropy, Anthropocene, anthropic principle)
 - [The Register of Offloaded Costs](https://stephane-lalut.com/en/register-of-offloaded-costs/) — the documentary apparatus of ANTHROPY, fully browsable in English: 165 of the book's 168 milestones on the « Order created / Debt displaced » grid, anchored entry by entry, organized by the seven ages, with the spatial→social→cognitive trajectory

@@ -23,6 +23,9 @@ arc:
   - etape: "Measure"
     phrase: "AWP-08 opens its measurement side, with social reversibility — the capacity, assessed before an attempt, to withstand its failure — posited as a third dimension of inequality."
     awp: ["AWP-08"]
+  - etape: "Test"
+    phrase: "AWP-09 puts the framework to the test of its own terrain: thirty years of French public accounts support the inheritance claim within a wealth perimeter, reduce the interest-growth differential to accounting mechanics, and leave social asymmetry beyond their reach."
+    awp: ["AWP-09"]
 ---
 
 The *Anthropie Working Papers* (AWP) constitute the academic corpus of the framework of anthropy. Each paper is deposited on [Zenodo](https://zenodo.org/communities/anthropie-working-papers) with a permanent DOI.

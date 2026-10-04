@@ -21,12 +21,17 @@
 # =============================================================================
 
 meta:
-  registry_version: "1.22"
+  registry_version: "1.23"
   last_updated: "2026-10-04"
   maintainer: "Stéphane Lalut"
-  total_works: 42
+  total_works: 43
   source_registry: "registre_soumissions_v73.xlsx"
   changelog:
+    v1_23: |
+      Publication AWP-09 (2026-10-04) — « Ce que les comptes publics permettent d'établir sur le
+      déplacement de la charge de la dette », français seul, DOI 10.5281/zenodo.23143030 (dépôt et
+      publication par API sous mandat explicite de l'auteur, communauté acceptée). Fiche FR + fiche EN
+      de présentation (text_language: fr, traduction à venir). Hero huit → neuf. total_works 42 → 43.
     v1_22: |
       Livresque des mots, édition 2026 révisée (2026-10-04) : chaque citation réexaminée (audit des 4 658
       fiches : texte, paternité, source ; formulations attestées rétablies, attributions discutées signalées).
@@ -460,6 +465,30 @@ works:
       en: "https://stephane-lalut.com/en/awp/awp-08/"
     google_scholar: { visible: false, citations_observed: 0 }
     notes: "Working paper de cadre et d'agenda, 2e intention du livre « La Société du premier coup » (publié le 2026-08-10, book-premier-coup). 7 contre-expertises externes + 3 audits croisés + referee de novo ; dépôt Zenodo via API, DOI pré-réservés ; EN isDerivedFrom FR. JEL FR = EN (6 codes)."
+
+  - id: awp-09
+    type: awp
+    series: "Anthropie Working Papers"
+    series_number: 9
+    canonical_title:
+      fr: "Ce que les comptes publics permettent d'établir sur le déplacement de la charge de la dette — Identités comptables, témoins indépendants et limites (France, 1995-2025)"
+      en: "What Public Accounts Can Establish about the Displacement of the Public Debt Burden — Accounting Identities, Independent Benchmarks, and Limits (France, 1995-2025)"
+    publication_date_fr: "2026-10-04"
+    license: "CC-BY 4.0"
+    abstract_short:
+      fr: "Ce que trente ans de comptes publics français permettent d'établir, et non, sur cinq déplacements de la charge de la dette. Chaque décomposition est contrôlée par un témoin indépendant ; trois lectures publiques opposées (audit citoyen 2014, iFRAP 2024, Cour des comptes 2025) sont rapprochées par leur fenêtre et leur objet ; le cadre de l'AWP-03 est mis à l'épreuve énoncé par énoncé."
+      en: "What thirty years of French public accounts can and cannot establish about five displacements of the debt burden. Every decomposition is checked against an independent benchmark; three opposed public readings are reconciled by window and measure; the AWP-03 framework is tested statement by statement."
+    keywords:
+      fr: [anthropie, dette publique, dynamique de la dette, générations futures, vérification des données]
+      en: [anthropy, public debt, debt dynamics, intergenerational burden, data verification]
+    jel_codes_fr: [H63, H62, H72, E62, C82]
+    deposits:
+      zenodo_fr: { doi: "10.5281/zenodo.23143030", url: "https://doi.org/10.5281/zenodo.23143030", status: published, date: "2026-10-04" }
+    site_pages:
+      fr: "https://stephane-lalut.com/awp/awp-09/"
+      en: "https://stephane-lalut.com/en/awp/awp-09/"
+    google_scholar: { visible: false, citations_observed: 0 }
+    notes: "Méthode + résultats datés tirés du dossier dette du site ; met à l'épreuve AWP-03. Cycle : S2, P1, maître SHS, singularité, contre-expertise externe PRO-20261004-200035 (arbitrée), arbitre de clôture ARRÊT V1.4. Tableau des chiffres joint au dépôt. Version anglaise à venir."
 
   # ===========================================================================
   # LIVRES (4)

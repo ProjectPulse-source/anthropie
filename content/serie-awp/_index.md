@@ -25,6 +25,9 @@ arc:
   - etape: "Mesurer"
     phrase: "AWP-08 en ouvre le versant mesure, avec la réversibilité sociale — la capacité, évaluée avant une tentative, de supporter son échec — posée comme troisième dimension de l'inégalité."
     awp: ["AWP-08"]
+  - etape: "Éprouver"
+    phrase: "AWP-09 met le cadre à l'épreuve de son propre terrain : trente ans de comptes publics de la dette française soutiennent l'héritage dans un périmètre patrimonial, réduisent l'écart entre taux et croissance à une mécanique comptable et laissent l'asymétrie sociale hors de leur portée."
+    awp: ["AWP-09"]
 ---
 
 Les *Anthropie Working Papers* (AWP) constituent le corpus académique du cadre anthropique. Chaque billet est déposé sur [Zenodo](https://zenodo.org/communities/anthropie-working-papers) avec un DOI permanent.

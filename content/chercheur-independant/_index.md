@@ -46,7 +46,7 @@ Sans crédit a priori, la méthode doit porter toute la charge de la preuve. En 
 - **des critères de réfutation explicites** — dire ce qui, si on l'observait, invaliderait l'hypothèse&nbsp;;
 - **un corpus organisé** — une série numérotée plutôt que des textes épars, pour que le travail se cite comme un programme.
 
-C'est le protocole suivi par la série des [*Anthropie Working Papers*](/serie-awp/)&nbsp;: huit working papers numérotés, chacun avec DOI Zenodo, versions française et anglaise croisées, définitions stables et conditions de réfutation — le corpus qui sert de cas concret à cette page.
+C'est le protocole suivi par la série des [*Anthropie Working Papers*](/serie-awp/)&nbsp;: neuf working papers numérotés, chacun avec DOI Zenodo, versions française et anglaise croisées (l'anglaise du neuvième à venir), définitions stables et conditions de réfutation — le corpus qui sert de cas concret à cette page.
 
 ## La position analysée&nbsp;: la marge n'est pas un accident
 
@@ -56,7 +56,7 @@ Dans cette lecture, la marginalité du chercheur indépendant n'est ni un échec
 
 ## Le cas concret
 
-Cette page est écrite depuis la position qu'elle décrit. Stéphane Lalut, économiste de formation, travaille comme chercheur indépendant et essayiste&nbsp;: huit working papers à DOI ([série AWP](/serie-awp/)), quatre livres publiés, des articles et recensions dans *Alternatives Économiques*, *La Vie des Idées*, *En attendant Nadeau*, *Terrestres*, *Nonfiction*, *Le Temps*, *Mediapart* ou *La Grande Conversation* ([publications](/publications/)). Identifiants publics&nbsp;: [ORCID](https://orcid.org/0009-0002-1794-4895), [Google Scholar](https://scholar.google.com/citations?user=J4NqzwSfrHAC), [communauté Zenodo](https://zenodo.org/communities/anthropie-working-papers). Parcours complet sur la page [À propos](/a-propos/).
+Cette page est écrite depuis la position qu'elle décrit. Stéphane Lalut, économiste de formation, travaille comme chercheur indépendant et essayiste&nbsp;: neuf working papers à DOI ([série AWP](/serie-awp/)), quatre livres publiés, des articles et recensions dans *Alternatives Économiques*, *La Vie des Idées*, *En attendant Nadeau*, *Terrestres*, *Nonfiction*, *Le Temps*, *Mediapart* ou *La Grande Conversation* ([publications](/publications/)). Identifiants publics&nbsp;: [ORCID](https://orcid.org/0009-0002-1794-4895), [Google Scholar](https://scholar.google.com/citations?user=J4NqzwSfrHAC), [communauté Zenodo](https://zenodo.org/communities/anthropie-working-papers). Parcours complet sur la page [À propos](/a-propos/).
 
 ## Questions fréquentes
 

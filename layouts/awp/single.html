@@ -85,7 +85,7 @@
           </div>
           <div>
             <dt>{{ if $isEn }}Language{{ else }}Langue{{ end }}</dt>
-            <dd>{{ if $isEn }}English{{ else }}Français{{ end }}{{ with .Params.translation }} — <a href="{{ .url }}">{{ if $isEn }}FR{{ else }}EN{{ end }}</a>{{ end }}</dd>
+            <dd>{{ if and $isEn (eq .Params.text_language "fr") }}French (English summary below){{ else if $isEn }}English{{ else }}Français{{ end }}{{ with .Params.translation }} — <a href="{{ .url }}">{{ if $isEn }}FR{{ else }}EN{{ end }}</a>{{ end }}</dd>
           </div>
           <div>
             <dt>{{ if $isEn }}License{{ else }}Licence{{ end }}</dt>
@@ -144,7 +144,9 @@
            le lecteur ». Le collector continue de produire le fichier, qui ne pilote plus rien
            tant que cette ligne le dit. */}}
       {{ $preview := partial "awp-preview-url.html" .Params.pdf_url }}
-      {{ $lang := upper .Lang }}
+      {{/* Langue du TEXTE depose : vaut la langue de la page, sauf fiche anglaise d'un papier
+           encore francais seul (text_language: "fr", AWP-09 au 2026-10-04). */}}
+      {{ $lang := upper (.Params.text_language | default .Lang) }}
       <div class="awp-sidebar__block">
         <h3 class="awp-sidebar__heading">{{ if $isEn }}Read or download{{ else }}Lire ou télécharger{{ end }}</h3>
         {{ with $preview }}
@@ -166,11 +168,11 @@
              désormais de la page pointée, elle ne se recopie plus. */}}
         {{ range .Translations }}
           {{- $trLang := upper .Lang -}}
-          {{ with .Params.pdf_url }}
+          {{ with .Params.pdf_url }}{{ if ne . $.Params.pdf_url }}
           <a href="{{ . }}" class="btn btn--secondary awp-sidebar__btn" target="_blank" rel="noopener">
             {{ if $isEn }}Download the PDF{{ else }}Télécharger le PDF{{ end }} ({{ $trLang }})
           </a>
-          {{ end }}
+          {{ end }}{{ end }}
         {{ end }}
       </div>
 
