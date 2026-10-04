@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 421" role="img" font-variant-numeric="tabular-nums" aria-labelledby="qp-age-t qp-age-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="qp-age-t">Taxes and contributions, and public transfers, by household age, 2023</title>
 <desc id="qp-age-d">Bars by household age group, in 2023, in thousand euros per consumption unit. Transfers received rise from 18.2 for the 18-29 group to 47.8 for households whose adults are 65 or over on average, while taxes and contributions go from 23.2 to 14.6.</desc>
-<text x="0.0" y="22.0" font-size="13" fill="#52514e" text-anchor="start">Taxes and contributions, and public transfers, by household age, 2023, € thousand per CU</text>
+<text x="0.0" y="22.0" font-size="13" fill="#2b2a28" text-anchor="start" font-weight="600">Taxes and contributions, and public transfers, by household age, 2023, € thousand per CU</text>
 <line x1="46" y1="285.7" x2="552" y2="285.7" stroke="#e1e0d9" stroke-width="1"/>
 <text x="40.0" y="289.7" font-size="11" fill="#898781" text-anchor="end">−25</text>
 <line x1="46" y1="211.7" x2="552" y2="211.7" stroke="#c3c2b7" stroke-width="1"/>

@@ -5,7 +5,7 @@
 {{- if not $a -}}{{- errorf "empreinte-tableau: data/empreinte_carbone.json absent ou sans bloc affichage (page %s)" .Page.RelPermalink -}}{{- end -}}
 {{- range slice "menages" "interieure" "exportee" "importee" "emissions" "empreinte" }}{{ if not (index $a .) }}{{ errorf "empreinte-tableau: cle %s absente du bloc affichage" . }}{{ end }}{{ end -}}
 <details class="repli licence-tableau"><summary>Les valeurs de la figure en tableau</summary>
-<p>Gaz à effet de serre, France, {{ index $a "annee" }}, en millions de tonnes équivalent CO2.</p>
+<p>Gaz à effet de serre, France, {{ index $a "annee" }}, en millions de tonnes équivalent CO₂.</p>
 <div class="table-scroll">
 <table class="dette-monde-table">
 <thead><tr><th scope="col">Poste</th><th scope="col">Émissions des unités résidentes françaises</th><th scope="col">Empreinte carbone</th></tr></thead>

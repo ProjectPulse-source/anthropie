@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 443" role="img" font-variant-numeric="tabular-nums" aria-labelledby="qp-red-t qp-red-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="qp-red-t">Taxes and contributions, and public transfers, by standard-of-living decile, 2023</title>
 <desc id="qp-red-d">Bars by standard-of-living decile, in 2023, in thousand euros per consumption unit. Above zero, transfers received (cash benefits and in-kind transfers): from 27.1 for the first decile to 31.4 for the last. Below zero, taxes and contributions: from 6.4 to 89.8.</desc>
-<text x="0.0" y="22.0" font-size="13" fill="#52514e" text-anchor="start">Taxes and contributions, and public transfers, by standard-of-living decile, 2023, € thousand per CU</text>
+<text x="0.0" y="22.0" font-size="13" fill="#2b2a28" text-anchor="start" font-weight="600">Taxes and contributions, and public transfers, by standard-of-living decile, 2023, € thousand per CU</text>
 <line x1="46" y1="287.8" x2="552" y2="287.8" stroke="#e1e0d9" stroke-width="1"/>
 <text x="40.0" y="291.8" font-size="11" fill="#898781" text-anchor="end">−75</text>
 <line x1="46" y1="235.6" x2="552" y2="235.6" stroke="#e1e0d9" stroke-width="1"/>

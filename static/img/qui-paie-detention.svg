@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 447" role="img" font-variant-numeric="tabular-nums" aria-labelledby="qp-det-t qp-det-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="qp-det-t">Qui emprunte ? Qui détient les titres de l'État ?</title>
 <desc id="qp-det-d">Deux panneaux séparés, sans lien de proportion entre eux. A, en valeur nominale : État 2 823 Md€; Sécurité sociale 293 Md€; Collectivités 276 Md€; Autres 69 Md€, sur 3 460,5 Md€, fin 2025. B, en valeur de marché, porteurs des titres négociables de l'État au 1er trimestre 2026 : Non-résidents 57,5 %; Autres porteurs résidents 20,6 %; Banques résidentes 10,5 %; Assureurs résidents 9,6 %; Fonds (OPCVM) résidents 1,8 %.</desc>
-<text x="0.0" y="22.0" font-size="13" fill="#52514e" text-anchor="start">Qui emprunte ? Qui détient les titres de l'État ? Deux questions, deux champs</text>
+<text x="0.0" y="22.0" font-size="13" fill="#2b2a28" text-anchor="start" font-weight="600">Qui emprunte ? Qui détient les titres de l'État ? Deux questions, deux champs</text>
 <text x="0.0" y="50.0" font-size="12" fill="#2b2a28" text-anchor="start" font-weight="600">A · Qui emprunte ? Contribution des administrations à la dette publique, fin 2025</text>
 <text x="0.0" y="66.0" font-size="11" fill="#898781" text-anchor="start">Valeur nominale, en milliards d'euros · total 3 460,5 Md€</text>
 <text x="180.0" y="95.0" font-size="11" fill="#52514e" text-anchor="end">État</text>

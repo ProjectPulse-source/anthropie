@@ -44,7 +44,7 @@
 <rect x="196.0" y="216" width="312.5" height="28" fill="#184f95" stroke="#ffffff" stroke-width="1.5"/>
 <text x="352.2" y="234.0" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">60,5</text>
 <rect x="508.5" y="216" width="24.8" height="28" fill="#eb6834" stroke="#ffffff" stroke-width="1.5"/>
-<text x="520.9" y="234.0" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">4,8</text>
+<text x="520.9" y="234.0" font-size="10" fill="#26262f" text-anchor="middle">4,8</text>
 <rect x="533.3" y="216" width="117.2" height="28" fill="#c9c5c0" stroke="#ffffff" stroke-width="1.5"/>
 <text x="591.9" y="234.0" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">22,7</text>
 <rect x="650.5" y="216" width="61.5" height="28" fill="#8a8781" stroke="#ffffff" stroke-width="1.5"/>
@@ -53,7 +53,7 @@
 <rect x="196.0" y="256" width="223.9" height="28" fill="#184f95" stroke="#ffffff" stroke-width="1.5"/>
 <text x="308.0" y="274.0" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">43,4</text>
 <rect x="419.9" y="256" width="19.6" height="28" fill="#eb6834" stroke="#ffffff" stroke-width="1.5"/>
-<text x="429.7" y="274.0" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">3,8</text>
+<text x="429.7" y="274.0" font-size="10" fill="#26262f" text-anchor="middle">3,8</text>
 <rect x="439.6" y="256" width="237.4" height="28" fill="#c9c5c0" stroke="#ffffff" stroke-width="1.5"/>
 <text x="558.2" y="274.0" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">46,0</text>
 <rect x="676.9" y="256" width="35.1" height="28" fill="#8a8781" stroke="#ffffff" stroke-width="1.5"/>
@@ -62,7 +62,7 @@
 <rect x="196.0" y="296" width="234.0" height="28" fill="#184f95" stroke="#ffffff" stroke-width="1.5"/>
 <text x="313.0" y="314.0" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">45,3</text>
 <rect x="430.0" y="296" width="22.2" height="28" fill="#eb6834" stroke="#ffffff" stroke-width="1.5"/>
-<text x="441.1" y="314.0" font-size="10" font-weight="600" fill="#26262f" text-anchor="middle">4,3</text>
+<text x="441.1" y="314.0" font-size="10" fill="#26262f" text-anchor="middle">4,3</text>
 <rect x="452.2" y="296" width="219.0" height="28" fill="#c9c5c0" stroke="#ffffff" stroke-width="1.5"/>
 <text x="561.7" y="314.0" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">42,4</text>
 <rect x="671.2" y="296" width="40.8" height="28" fill="#8a8781" stroke="#ffffff" stroke-width="1.5"/>

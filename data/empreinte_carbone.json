@@ -5,7 +5,7 @@
   "page": "https://stephane-lalut.com/enseignants/environnement/",
   "licence": "CC BY 4.0 pour la compilation et la figure ; données Insee-SDES",
   "source": "Insee et SDES, Insee Première n° 2077, octobre 2025, fichier de données (figure 1, figure 3, tableau complémentaire 2)",
-  "champ": "France ; CO2, CH4, N2O et gaz fluorés",
+  "champ": "France ; CO₂, CH₄, N₂O et gaz fluorés",
   "definitions": {
    "emissions": "émissions des unités résidentes françaises (inventaire au format des comptes d'émissions dans l'air), transport international des résidents compris",
    "empreinte": "estimation des émissions associées à la demande finale française, hors exportations, où qu'elles aient lieu",

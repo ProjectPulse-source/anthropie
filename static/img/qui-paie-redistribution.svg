@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 443" role="img" font-variant-numeric="tabular-nums" aria-labelledby="qp-red-t qp-red-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="qp-red-t">Prélèvements et transferts publics par dixième de niveau de vie, 2023</title>
 <desc id="qp-red-d">Barres par dixième de niveau de vie, en 2023, en milliers d'euros par unité de consommation. Au-dessus de zéro, les transferts reçus (prestations en espèces et transferts non monétaires) : de 27,1 pour le premier dixième à 31,4 pour le dernier. Sous zéro, les prélèvements : de 6,4 à 89,8.</desc>
-<text x="0.0" y="22.0" font-size="13" fill="#52514e" text-anchor="start">Prélèvements et transferts publics par dixième de niveau de vie, 2023, en milliers d'euros par UC</text>
+<text x="0.0" y="22.0" font-size="13" fill="#2b2a28" text-anchor="start" font-weight="600">Prélèvements et transferts publics par dixième de niveau de vie, 2023, en milliers d'euros par UC</text>
 <line x1="46" y1="287.8" x2="552" y2="287.8" stroke="#e1e0d9" stroke-width="1"/>
 <text x="40.0" y="291.8" font-size="11" fill="#898781" text-anchor="end">−75</text>
 <line x1="46" y1="235.6" x2="552" y2="235.6" stroke="#e1e0d9" stroke-width="1"/>

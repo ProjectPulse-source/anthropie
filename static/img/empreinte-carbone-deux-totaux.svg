@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 336" role="img" font-variant-numeric="tabular-nums" aria-labelledby="ec-t ec-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
-<title id="ec-t">Émissions françaises et empreinte carbone en 2024 : deux totaux, trois postes chacun</title><desc id="ec-d">Deux barres horizontales à la même échelle, en millions de tonnes équivalent CO2. Émissions des unités résidentes françaises : 404, dont 99 émises directement par les ménages, 180 par la production en France destinée à la demande française et 125 par la production en France exportée. Empreinte carbone : 563, dont les mêmes 99 et 180, et 284 d'émissions importées pour la demande française.</desc>
+<title id="ec-t">Émissions françaises et empreinte carbone en 2024 : deux totaux, trois postes chacun</title><desc id="ec-d">Deux barres horizontales à la même échelle, en millions de tonnes équivalent CO₂. Émissions des unités résidentes françaises : 404, dont 99 émises directement par les ménages, 180 par la production en France destinée à la demande française et 125 par la production en France exportée. Empreinte carbone : 563, dont les mêmes 99 et 180, et 284 d'émissions importées pour la demande française.</desc>
 <rect width="720" height="336" fill="#ffffff"/>
 <text x="0" y="18" font-size="15" font-weight="600" fill="#26262f">Émissions françaises et empreinte carbone en 2024 : deux totaux, trois postes chacun</text>
-<text x="0" y="38" font-size="11" fill="#55524f">Gaz à effet de serre, en millions de tonnes équivalent CO2 (Mt CO2 éq), France, 2024.</text>
+<text x="0" y="38" font-size="11" fill="#55524f">Gaz à effet de serre, en millions de tonnes équivalent CO₂ (Mt CO₂ éq), France, 2024.</text>
 <text x="158" y="107.0" font-size="11.5" fill="#26262f" text-anchor="end" font-weight="600">Émissions des unités</text>
 <text x="158" y="121.0" font-size="11.5" fill="#26262f" text-anchor="end">résidentes françaises</text>
 <rect x="168.0" y="78" width="84.1" height="62" fill="#c9c5c0" stroke="#ffffff" stroke-width="1.5"/>
@@ -34,7 +34,7 @@
 <text x="525.4" y="218.0" font-size="9" fill="#26262f" text-anchor="middle">pour la demande française</text>
 <text x="654.0" y="206.0" font-size="15" font-weight="600" fill="#26262f">= 563</text>
 <line x1="0" y1="252.0" x2="720" y2="252.0" stroke="#dcd8d3"/>
-<text x="0" y="265.0" font-size="9" fill="#55524f">Insee et SDES, Insee Première n° 2077, octobre 2025, figure 1 ; champ : France, CO2, méthane, protoxyde d'azote et gaz fluorés</text>
+<text x="0" y="265.0" font-size="9" fill="#55524f">Insee et SDES, Insee Première n° 2077, octobre 2025, figure 1 ; champ : France, CO₂, méthane, protoxyde d'azote et gaz fluorés</text>
 <text x="0" y="277.0" font-size="9" fill="#55524f">Émissions des unités résidentes : format des comptes d'émissions dans l'air, transport international des résidents compris ; ce n'est pas le total de l'inventaire national.</text>
 <text x="0" y="289.0" font-size="9" fill="#55524f">Empreinte : estimation des émissions associées à la demande finale française, où qu'elles aient lieu ; hors émissions des produits exportés.</text>
 <text x="0" y="301.0" font-size="9" fill="#55524f">Deux conventions de comptabilité : elles ne mesurent ni une délocalisation ni l'effet d'une politique.</text>

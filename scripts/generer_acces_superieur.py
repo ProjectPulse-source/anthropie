@@ -231,6 +231,22 @@ def figure(a: dict, A: dict) -> str:
          '<text x="0" y="38" font-size="11" fill="%s">%s</text>'
          % (gl.INK2, esc("Nouveaux bacheliers %s inscrits dans l'enseignement supérieur, par filière, en %% de chaque catégorie." % A["annee"]))]
     larg = X1 - X0
+    # Forme des valeurs MESURÉE, non estimée sur la largeur du segment : « 3,8 » en gras 10 touchait les deux bords
+    # de son segment (vu le 04/10). Chasse des chiffres 0,556 em, virgule 0,278 ; gras +7 %. Trois formes, de la plus
+    # lisible à la plus compacte ; chaque valeur reçoit la première qui laisse sa marge, et toutes les valeurs qui
+    # ne tiennent pas en grand prennent la MÊME forme, celle de la plus serrée : deux styles au plus dans la figure.
+    # Aucune forme ne tient : arrêt, plutôt qu'un chiffre rogné.
+    FORMES = ((12, True, 4), (10, True, 3), (10, False, 2.5))
+
+    def niveau(val, w):
+        em = sum(0.278 if c in ",." else 0.556 for c in val)
+        for i, (taille, gras, marge) in enumerate(FORMES):
+            if em * taille * (1.07 if gras else 1.0) + 2 * marge <= w:
+                return i
+        fail("figure : la valeur %s ne tient pas dans son segment (%.1f px)" % (val, w))
+
+    niveaux = [niveau(fr(d[k]), larg * d[k] / sum(d[q] for q, _ in DEST)) for _, d in lignes for k, _ in DEST]
+    petit = max(niveaux)
     for n, (lib, d) in enumerate(lignes):
         y = TOP + PAS * n
         total = sum(d[k] for k, _ in DEST)
@@ -246,8 +262,10 @@ def figure(a: dict, A: dict) -> str:
             w = larg * d[k] / total
             fond, encre = COULEUR[k]
             e.append('<rect x="%.1f" y="%d" width="%.1f" height="%d" fill="%s" stroke="#ffffff" stroke-width="1.5"/>' % (x, y, w, HB, fond))
-            e.append('<text x="%.1f" y="%.1f" font-size="%s" font-weight="600" fill="%s" text-anchor="middle">%s</text>'
-                     % (x + w / 2, y + HB / 2 + 4, "12" if w >= 30 else "10", encre, esc(fr(d[k]))))
+            val = fr(d[k])
+            taille, gras, _ = FORMES[0 if niveau(val, w) == 0 else petit]
+            e.append('<text x="%.1f" y="%.1f" font-size="%s"%s fill="%s" text-anchor="middle">%s</text>'
+                     % (x + w / 2, y + HB / 2 + 4, taille, ' font-weight="600"' if gras else "", encre, esc(val)))
             if n == 0:
                 for j, mot in enumerate(LIBELLE[k]):
                     e.append('<text x="%.1f" y="%.1f" font-size="10.5" fill="%s" text-anchor="middle">%s</text>'

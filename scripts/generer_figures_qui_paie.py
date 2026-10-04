@@ -87,7 +87,10 @@ EFFORT_MDEUR = 10.0
 # Les deux empreintes gouvernent maintenant la date. Une source qui bouge sans
 # que la date suive arrête la génération — l'erreur devient impossible au lieu
 # d'être documentée.
-REGISTRE_SHA256 = "5f765eeb27581421b08dac9622af0cb0f767cb73c48a3b29bd6bcb75811b9b37"
+# 04/10/2026 : empreinte reprise après la passe du livre du même jour (commit D:\PRO a5c2c57), qui n'ajoute
+# que la clé interets_apu_2027_mdeur ; infographie_detention, dette_fin_annee_mdeur et foyers_fiscaux comparés
+# à la version du 21/09 (c839300) : identiques. La date de relevé reste donc vraie et ne bouge pas.
+REGISTRE_SHA256 = "b57d875d97f9aca120ea1911f1b46e63c3ee073c4fbe17ea8f4ba8383e29337d"
 SOURCES_RELEVEES_LE = "21 septembre 2026"
 
 IMG = REPO / "static" / "img"
@@ -545,7 +548,7 @@ def svg_detention(r: dict, lang: str = "fr") -> tuple[str, int]:
     y = 50
     corps = [txt(0, 22, S("Qui emprunte ? Qui détient les titres de l'État ? Deux questions, deux champs",
                           "Who borrows? Who holds French government securities? Two questions, two scopes"),
-                 TY_TITRE, INK2),
+                 TY_TITRE, INK, weight=600),
              txt(0, y, S("A · Qui emprunte ? Contribution des administrations à la dette publique, "
                          + r["periode_a"],
                          "A · Who borrows? Contribution of each level of government to public debt, "
@@ -683,7 +686,7 @@ def svg_redistribution(d: dict, lang: str = "fr") -> tuple[str, int]:
     c.append(txt(0, 22, S("Prélèvements et transferts publics par dixième de niveau de vie, 2023, "
                           "en milliers d'euros par UC",
                           "Taxes and contributions, and public transfers, by standard-of-living "
-                          "decile, 2023, € thousand per CU"), TY_TITRE, INK2))
+                          "decile, 2023, € thousand per CU"), TY_TITRE, INK, weight=600))
     # Grille HORIZONTALE seule, cinq lignes, sans ligne au ras du cadre : une
     # graduation de plus ne se lirait pas mieux, elle ferait une boîte.
     for g in (-75, -50, -25, 0, 25):
@@ -767,7 +770,7 @@ def svg_solde_net(d: dict, lang: str = "fr") -> tuple[str, int]:
     c = [txt(0, 22, S("Qui verse plus qu'il ne reçoit ? Solde des transferts publics par dixième "
                       "de niveau de vie, 2023",
                       "Who pays in more than they receive? Balance of public transfers by "
-                      "standard-of-living decile, 2023"), TY_TITRE, INK2)]
+                      "standard-of-living decile, 2023"), TY_TITRE, INK, weight=600)]
     ml, mr = 46, 12
     pas = (W - ml - mr) / 10
     bw = 34
@@ -893,7 +896,7 @@ def svg_age(d: dict, lang: str = "fr") -> tuple[str, int]:
     c = [txt(0, 22, S("Prélèvements et transferts publics par âge du ménage, 2023, "
                       "en milliers d'euros par UC",
                       "Taxes and contributions, and public transfers, by household age, 2023, "
-                      "€ thousand per CU"), TY_TITRE, INK2)]
+                      "€ thousand per CU"), TY_TITRE, INK, weight=600)]
     for g in (-25, 0, 25, 50):
         yy = Y(g)
         c.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="1"/>'
@@ -967,7 +970,7 @@ def svg_mecanismes(lang: str = "fr") -> tuple[str, int]:
     _nb, S, _pc = langue(lang)
     titre = S("Par quels canaux la charge de la dette peut-elle être répartie ?",
               "Through which channels can the burden of the debt be distributed?")
-    c = [txt(0, 22, titre, TY_TITRE, INK2)]
+    c = [txt(0, 22, titre, TY_TITRE, INK, weight=600)]
 
     def boite(x, y, w, h, lignes, trait=AXIS, tiret=False, fond="#ffffff"):
         d = ' stroke-dasharray="4 3"' if tiret else ""
@@ -1098,7 +1101,7 @@ def svg_exposition(c: dict, lang: str = "fr") -> tuple[str, int]:
     c_ = [txt(0, 22, S("Un même effort de 10" + NBSP + "milliards d'euros : qui le supporterait, "
                        "selon la décision prise ?",
                        "The same €10 billion adjustment: who would bear it, depending on the "
-                       "decision taken?"), TY_TITRE, INK2),
+                       "decision taken?"), TY_TITRE, INK, weight=600),
           txt(0, 48, S("A · Montant imputé au groupe, en % de son revenu disponible net",
                        "A · Amount allocated to the group, as a % of its net disposable income"),
               TY_ANNOT, INK, weight="600"),

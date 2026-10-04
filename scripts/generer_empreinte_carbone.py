@@ -171,7 +171,7 @@ def figure(j: dict, A: dict) -> str:
     H = TOP + PAS + HB + 16 + 12 * (NB_CART - 3)
     ech = LARG / d["empreinte"]
     titre = "Émissions françaises et empreinte carbone en %s : deux totaux, trois postes chacun" % A["annee"]
-    desc = ("Deux barres horizontales à la même échelle, en millions de tonnes équivalent CO2. Émissions des unités résidentes "
+    desc = ("Deux barres horizontales à la même échelle, en millions de tonnes équivalent CO₂. Émissions des unités résidentes "
             "françaises : %s, dont %s émises directement par les ménages, %s par la production en France destinée à la demande "
             "française et %s par la production en France exportée. Empreinte carbone : %s, dont les mêmes %s et %s, et %s "
             "d'émissions importées pour la demande française."
@@ -182,7 +182,7 @@ def figure(j: dict, A: dict) -> str:
          '<rect width="%d" height="%d" fill="#ffffff"/>' % (W, H + 52),
          '<text x="0" y="18" font-size="15" font-weight="600" fill="%s">%s</text>' % (gl.INK, esc(titre)),
          '<text x="0" y="38" font-size="11" fill="%s">%s</text>'
-         % (gl.INK2, esc("Gaz à effet de serre, en millions de tonnes équivalent CO2 (Mt CO2 éq), France, %s." % A["annee"]))]
+         % (gl.INK2, esc("Gaz à effet de serre, en millions de tonnes équivalent CO₂ (Mt CO₂ éq), France, %s." % A["annee"]))]
     for n, (lib, postes, total) in enumerate(barres):
         y = TOP + PAS * n
         for k, mot in enumerate(lib):
@@ -202,7 +202,7 @@ def figure(j: dict, A: dict) -> str:
         e.append('<text x="%.1f" y="%.1f" font-size="15" font-weight="600" fill="%s">= %s</text>' % (x + 8, y + HB / 2 + 5, gl.INK, esc(fr(total, 0))))
     y0 = H + 4 - 12 * (NB_CART - 3)
     e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y0, W, y0, gl.GRID))
-    cart = [("Insee et SDES, %s, figure 1 ; champ : France, CO2, méthane, protoxyde d'azote et gaz fluorés" % EDITION, gl.INK2),
+    cart = [("Insee et SDES, %s, figure 1 ; champ : France, CO₂, méthane, protoxyde d'azote et gaz fluorés" % EDITION, gl.INK2),
             ("Émissions des unités résidentes : format des comptes d'émissions dans l'air, transport international des résidents compris ; "
              "ce n'est pas le total de l'inventaire national.", gl.INK2),
             ("Empreinte : estimation des émissions associées à la demande finale française, où qu'elles aient lieu ; hors émissions "
@@ -247,7 +247,7 @@ def main() -> int:
     svg = figure(j, A)
     payload = {"meta": {"page": "https://" + PAGE_URL, "licence": "CC BY 4.0 pour la compilation et la figure ; données Insee-SDES",
                         "source": "Insee et SDES, " + EDITION + ", fichier de données (figure 1, figure 3, tableau complémentaire 2)",
-                        "champ": "France ; CO2, CH4, N2O et gaz fluorés",
+                        "champ": "France ; CO₂, CH₄, N₂O et gaz fluorés",
                         "definitions": {
                             "emissions": "émissions des unités résidentes françaises (inventaire au format des comptes d'émissions dans l'air), transport international des résidents compris",
                             "empreinte": "estimation des émissions associées à la demande finale française, hors exportations, où qu'elles aient lieu",

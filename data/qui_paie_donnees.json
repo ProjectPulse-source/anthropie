@@ -1,6 +1,6 @@
 {
  "_licence": "Compilation Stéphane Lalut, CC BY 4.0 (assemblage, grandeurs dérivées, mise en cohérence). Données d'origine : INSEE (Licence Ouverte Etalab), Banque de France via l'Agence France Trésor, sous leurs propres conditions.",
- "_genere_le": "2026-09-30",
+ "_genere_le": "2026-10-04",
  "affichage": {
   "exp_effort": "10",
   "exp_ens_d1": "2,75",
@@ -158,7 +158,7 @@
    "Détenteurs : titres négociables de l'État, valeur de marché, 1er trimestre 2026 (Banque de France, via AFT)."
   ],
   "note": "Deux champs distincts : ne pas multiplier les parts de B par les montants de A.",
-  "registre_sha256": "5f765eeb27581421b08dac9622af0cb0f767cb73c48a3b29bd6bcb75811b9b37"
+  "registre_sha256": "b57d875d97f9aca120ea1911f1b46e63c3ee073c4fbe17ea8f4ba8383e29337d"
  },
  "echelle_foyer": {
   "millions": 41.0,
