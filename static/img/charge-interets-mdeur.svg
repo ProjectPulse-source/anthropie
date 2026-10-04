@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 388" role="img" aria-labelledby="ch-t ch-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="ch-t">La charge d'intérêts en milliards d'euros, 1995-2025</title>
 <desc id="ch-d">Une courbe en milliards d'euros courants, de 1995 à 2025. La charge d'intérêts descend jusqu'au creux de 2020, puis remonte fortement pour atteindre 66,6 milliards en 2025.</desc>
-<text x="0" y="22" font-size="13" fill="#52514e">Charge d'intérêts des administrations publiques, en milliards d'euros courants</text>
+<text x="0" y="22" font-size="13" font-weight="600" fill="#0A0A0E">Charge d'intérêts des administrations publiques, en milliards d'euros courants</text>
 <line x1="52.0" y1="306.0" x2="624.0" y2="306.0" stroke="#c3c2b7" stroke-width="1"/>
 <text x="45.0" y="310.0" font-size="11" fill="#898781" text-anchor="end">0</text>
 <line x1="52.0" y1="236.3" x2="624.0" y2="236.3" stroke="#e1e0d9" stroke-width="1"/>
