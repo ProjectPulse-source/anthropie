@@ -11,6 +11,7 @@ outputs:
   - EndNote
 description: "Que permettent d'établir les comptes publics sur la charge de la dette française, dans le temps, entre générations, entre ménages, entre pays et entre échelons ? Ce working paper contrôle chaque décomposition par un témoin indépendant, rapproche trois lectures publiques réputées contradictoires et met à l'épreuve des comptes la lecture de l'AWP-03 : soutenue dans un périmètre patrimonial, conditionnelle ou hors de portée ailleurs."
 doi_zenodo: "10.5281/zenodo.23143030"
+wikidata_qid: "Q141641858"  # item de l'œuvre (FR+EN) — alimente sameAs du ScholarlyArticle
 url_zenodo: "https://zenodo.org/records/23143030"
 jel_codes: ["H63", "H62", "H72", "E62", "C82"]
 keywords: ["anthropie", "dette publique", "dynamique de la dette", "générations futures", "vérification des données"]

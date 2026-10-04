@@ -11,6 +11,7 @@ outputs:
   - EndNote
 description: "What can public accounts establish about the burden of French public debt over time, across generations, households, countries, and levels of government? This working paper checks every decomposition against an independent benchmark, reconciles three public readings deemed contradictory, and tests the AWP-03 framework against the accounts: supported within a balance-sheet scope, conditional or beyond reach elsewhere."
 doi_zenodo: "10.5281/zenodo.23145963"
+wikidata_qid: "Q141641858"  # same work item as the FR paper — feeds ScholarlyArticle sameAs
 url_zenodo: "https://zenodo.org/records/23145963"
 jel_codes: ["H63", "H62", "H72", "E62", "C82"]
 keywords: ["anthropy", "public debt", "debt dynamics", "intergenerational burden", "data verification"]

@@ -1,8 +1,15 @@
 # Wikidata — nouvel item AWP-09 (2026-10-04)
 
-> ⏳ **EN ATTENTE** : lot prêt, lu sans erreur par l'API d'import de QuickStatements le 04/10
-> (`status: OK`, **24 commandes** : 1 création + 23 ajouts, références et qualificatifs comptés).
-> Le bloc ✅ (QID rendu, readback API, écriture en retour, `check-wikidata-registre.py` à 0) s'écrira ici au retour.
+> ✅ **ITEM CRÉÉ le 2026-10-04 par Laura : Q141641858.** Readback API le jour même : **14 déclarations**, exactement
+> celles du lot (P31, P50 réf., P356 réf. `10.5281/ZENODO.23143030`, P407, P577, P921 ×2, P361, P2860 ×2, P953 ×4
+> qualifiés), libellés et descriptions FR/EN conformes, aucun effet de bord.
+> Écriture en retour : `data/works.yaml` (`wikidata: "Q141641858"`) et `wikidata_qid` des fiches `awp-09.md` /
+> `awp-09.en.md` (même commit que ce bloc) ; `sameAs` présent dans les deux pages construites ;
+> `check-fiches-registre.py` 0 divergence ; `check-wikidata-registre.py` : 23 items ↔ 23 QID, OK.
+>
+> ⏳ **RESTE : rétro-liens** — `deeplink_retroliens.txt` (2 commandes, lues sans erreur par l'API d'import :
+> série Q139040913 P527 et auteur Q138909233 P800 → Q141641858). Avant envoi, la série compte 8 valeurs P527 ;
+> attendu après : 9. Readback à écrire ici.
 
 Laura — un nouveau working paper est publié aujourd'hui, en français et en anglais, à créer sur Wikidata au
 même patron que les AWP précédents (un item par AWP, article scientifique, rattaché à la série).

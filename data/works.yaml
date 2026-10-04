@@ -471,6 +471,7 @@ works:
 
   - id: awp-09
     type: awp
+    wikidata: "Q141641858"  # item de l'œuvre (FR+EN), créé par Laura le 2026-10-04, relu par l'API (14 déclarations)
     series: "Anthropie Working Papers"
     series_number: 9
     canonical_title:
