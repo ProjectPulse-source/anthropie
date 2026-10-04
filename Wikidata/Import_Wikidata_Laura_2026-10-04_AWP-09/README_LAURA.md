@@ -7,9 +7,9 @@
 > `awp-09.en.md` (même commit que ce bloc) ; `sameAs` présent dans les deux pages construites ;
 > `check-fiches-registre.py` 0 divergence ; `check-wikidata-registre.py` : 23 items ↔ 23 QID, OK.
 >
-> ⏳ **RESTE : rétro-liens** — `deeplink_retroliens.txt` (2 commandes, lues sans erreur par l'API d'import :
-> série Q139040913 P527 et auteur Q138909233 P800 → Q141641858). Avant envoi, la série compte 8 valeurs P527 ;
-> attendu après : 9. Readback à écrire ici.
+> ✅ **RÉTRO-LIENS PASSÉS** (Laura, nuit du 04 au 05/10) — readback API le 2026-10-05 : série Q139040913, P527 =
+> **9 valeurs** (8 avant), AWP-09 présent, aucun doublon ; auteur Q138909233, P800 = 16 valeurs, AWP-09 présent,
+> aucun doublon. **Dossier clos, aucun reste.**
 
 Laura — un nouveau working paper est publié aujourd'hui, en français et en anglais, à créer sur Wikidata au
 même patron que les AWP précédents (un item par AWP, article scientifique, rattaché à la série).
