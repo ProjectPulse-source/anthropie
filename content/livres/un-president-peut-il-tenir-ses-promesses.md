@@ -9,10 +9,10 @@ promo_slug: "promesses-2027"  # clé D1/books.toml pour /ressources-offertes (gu
 # classement Kindle Store (KDP, « Pre-orders contribute toward sales rank … before your release »).
 date: 2026-09-22
 publishDate: 2026-09-20
-lastmod: 2026-09-22  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-10-04  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 description: "Un président peut décider sans que rien ne se fasse. Cet essai propose une grille en quatre zones, applicable à n'importe quelle promesse : ce qu'un président décide dans sa propre chaîne de pouvoir, ce qu'il doit faire voter, ce qu'il doit négocier avec ceux dont la signature manque, et ce qui ne dépendra jamais de lui. Elle est mise à l'épreuve sur neuf promesses écrites, datées et signées, et sur 290 entrées sourcées."
 isbn: "978-2-9586347-8-0"
-pages: 284  # sync data/works.yaml (book-promesses-2027.pages) — nombre de pages broché
+pages: 286  # sync data/works.yaml (book-promesses-2027.pages) — nombre de pages broché
 # `price` (broché, 19,90 €) alimente l'Offer schema.org, dont l'URL est celle du broché :
 # ouvert le 22/09, jour de parution, après avoir vu la page produit répondre (titre du livre lu).
 price: "19.90"
@@ -51,7 +51,7 @@ url_amazon_es_kindle: "https://www.amazon.es/dp/B0HK1ZYW7C"
 # exécutif appartiennent à une page de notion, jamais à une fiche produit.
 faq:
   - question: "Que contient Un président peut-il tenir ses promesses ?"
-    answer: "Une ouverture qui établit ce que la Constitution confie au président et ce qu'elle confie au Gouvernement, puis neuf promesses suivies une à une — santé, salaires, prix, école, emploi, sécurité, dette, immigration, climat —, un chapitre sur ce qui se décide au niveau européen, et une clôture qui rend la grille utilisable sur n'importe quelle promesse. 284 pages en broché, 290 entrées sourcées."
+    answer: "Une ouverture qui établit ce que la Constitution confie au président et ce qu'elle confie au Gouvernement, puis neuf promesses suivies une à une — santé, salaires, prix, école, emploi, sécurité, dette, immigration, climat —, un chapitre sur ce qui se décide au niveau européen, et une clôture qui rend la grille utilisable sur n'importe quelle promesse. 286 pages en broché, 290 entrées sourcées."
   - question: "Le livre prend-il parti pour un camp ou un candidat ?"
     answer: "Non. Aucun conseil de vote, aucune promesse déclarée bonne ou mauvaise, aucun candidat qualifié de sincère ou de menteur. Le livre examine ce qui, dans la chaîne de décision, permet ou empêche un résultat : une majorité à convaincre, un acteur dont la signature manque, une règle européenne, une capacité à construire, un délai qu'aucun décret n'abrège. Le jugement reste au lecteur."
   - question: "Sur quelles sources l'enquête repose-t-elle ?"
@@ -88,7 +88,7 @@ De l'ouverture, «&nbsp;Ce que dit le texte, et que la campagne ne dit pas&nbsp;
 
 ## Formats
 
-Le livre est paru le **22 septembre 2026**, en broché (284 pages, 19,90&nbsp;€) et en édition Kindle (9,99&nbsp;€).
+Le livre est paru le **22 septembre 2026**, en broché (286 pages, 19,90&nbsp;€) et en édition Kindle (9,99&nbsp;€).
 
 ## Sommaire
 

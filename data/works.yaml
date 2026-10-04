@@ -597,7 +597,7 @@ works:
     publication_date: "2026-09-22"   # parution des DEUX formats (Kindle en précommande du 17 au 22/09)
     isbn: "978-2-9586347-8-0"
     isbn_13_normalized: "9782958634780"
-    pages: 284  # broché (sync content/livres/un-president-peut-il-tenir-ses-promesses.md)
+    pages: 286  # broché (286 depuis l'intérieur corrigé « fond perdu » du 2026-09-27, lu sur amazon.fr le 2026-10-04 ; 284 avant ; sync content/livres/un-president-peut-il-tenir-ses-promesses.md)
     publisher: "Auto-édition"
     distribution: "Amazon KDP"
     asin_broche: "2958634787"   # = ISBN-10 du bloc AFNIL ; page /dp/ en ligne depuis le 22/09 (titre lu ce jour)
