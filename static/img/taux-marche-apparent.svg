@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 408" role="img" font-variant-numeric="tabular-nums" aria-labelledby="tm-t tm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="tm-t">Taux à 10 ans et taux implicite de la dette publique, 1996-2025</title>
 <desc id="tm-d">Deux courbes en pourcentage par an. Le taux à 10 ans passe de 6,3 % en 1996 à -0,1 % en 2020, puis remonte à 3,3 % en 2025. Le taux implicite, coût moyen du stock, passe de 6,5 % à 1,2 %, puis ne remonte qu'à 2,0 % en 2025.</desc>
-<text x="46" y="22" font-size="13" fill="#52514e">Taux de marché à 10 ans et coût moyen du stock, en % par an</text>
+<text x="46" y="22" font-size="13" font-weight="600" fill="#0A0A0E">Taux de marché à 10 ans et coût moyen du stock, en % par an</text>
 <line x1="46" y1="268.2" x2="560" y2="268.2" stroke="#c3c2b7" stroke-width="1"/>
 <text x="40" y="272.2" font-size="11" fill="#898781" text-anchor="end">0</text>
 <line x1="46" y1="204.8" x2="560" y2="204.8" stroke="#e1e0d9" stroke-width="1"/>

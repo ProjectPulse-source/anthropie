@@ -655,8 +655,10 @@ LABELS_MASSES = {
         # Autosuffisant hors de la page : la figure est proposee en ressource
         # reutilisable, « France » et « administrations publiques » doivent donc
         # etre dans l'IMAGE, pas seulement deductibles du texte qui l'entoure.
-        "panneau": "France · administrations publiques · milliards d'euros courants — "
-                   "la charge d'intérêts comparée à quelques grandes fonctions de dépense",
+        # Titre et champ sur deux lignes (04/10) : d'un seul tenant, la ligne dépassait les 720 px de l'image et
+        # sortait coupée, en français comme en anglais, sans que rien ne le signale.
+        "panneau": "La charge d'intérêts comparée à quelques grandes fonctions de dépense",
+        "champ": "France · administrations publiques · milliards d'euros courants",
         "series": {"interets": "Charge d'intérêts", "GF07": "Santé",
                    "GF09": "Enseignement", "GF03": "Ordre et sécurité"},
         "postes": {"GF0703": "hôpital", "GF0702": "ambulatoire",
@@ -678,8 +680,8 @@ LABELS_MASSES = {
     },
     "en": {
         "titre": "Interest paid against the main public budgets, %s-%s",
-        "panneau": "France · general government · billion euros, current prices — "
-                   "interest paid compared with a few large functions of spending",
+        "panneau": "Interest paid compared with a few large functions of spending",
+        "champ": "France · general government · billion euros, current prices",
         "series": {"interets": "Interest paid", "GF07": "Health",
                    "GF09": "Education", "GF03": "Public order and safety"},
         "postes": {"GF0703": "hospital", "GF0702": "outpatient",
@@ -773,11 +775,11 @@ def build_svg(dette_pib: dict[str, float], d41_pib: dict[str, float],
                              dec(d41_pib[trough_y]), trough_y,
                              dec(d41_pib[last_y]), last_y)))
 
-    # titres de panneaux (encre secondaire, jamais la couleur de serie)
-    e.append('<text x="%d" y="22" font-size="13" fill="%s">%s</text>'
-             % (MARG_L, INK2, L["panneau_a"]))
-    e.append('<text x="%d" y="288" font-size="13" fill="%s">%s</text>'
-             % (MARG_L, INK2, L["panneau_b"]))
+    # titres de panneaux : encre du texte, en gras comme toutes les figures du site (04/10) ; jamais la couleur de serie
+    e.append('<text x="%d" y="22" font-size="13" font-weight="600" fill="%s">%s</text>'
+             % (MARG_L, INK, L["panneau_a"]))
+    e.append('<text x="%d" y="288" font-size="13" font-weight="600" fill="%s">%s</text>'
+             % (MARG_L, INK, L["panneau_b"]))
 
     # grilles + libelles d'axe Y
     for v in (0, 40, 80, 120):
@@ -930,8 +932,8 @@ def build_svg_taux(taux: dict[str, float], lang: str = "fr") -> str:
     e.append('<desc id="ta-d">%s</desc>'
              % (T["desc"] % (num(taux[first]), first, num(taux[trough]), trough,
                              num(taux[last]), last)))
-    e.append('<text x="%d" y="22" font-size="13" fill="%s">%s</text>'
-             % (ml, INK2, T["panneau"]))
+    e.append('<text x="%d" y="22" font-size="13" font-weight="600" fill="%s">%s</text>'
+             % (ml, INK, T["panneau"]))
 
     for v in (0, 2, 4, 6):
         e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" '
@@ -1038,8 +1040,8 @@ def build_svg_marche(apparent: dict, marche: dict, lang: str = "fr") -> str:
         num(marche[first]), first, num(marche[creux]), creux, num(marche[last]), last,
         num(apparent[first]), num(min(apparent[str(a)] for a in years)),
         num(apparent[last]), last)))
-    e.append('<text x="%d" y="22" font-size="13" fill="%s">%s</text>'
-             % (ml, INK2, _esc(L["panneau"])))
+    e.append('<text x="%d" y="22" font-size="13" font-weight="600" fill="%s">%s</text>'
+             % (ml, INK, _esc(L["panneau"])))
     for v in (0, 2, 4, 6):
         e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" '
                  'stroke-width="1"/>' % (ml, y(v), W - mr, y(v), AXIS if v == 0 else GRID))
@@ -1119,8 +1121,8 @@ def build_svg_charge(interets_md: dict, lang: str = "fr") -> str:
          '<title id="ch-t">%s</title>' % _esc(T["titre"] % (a0, a1)),
          '<desc id="ch-d">%s</desc>' % _esc(T["desc"] % (a0, a1, creux,
                                                          num(interets_md[a1], 1), a1)),
-         '<text x="0" y="22" font-size="%d" fill="%s">%s</text>'
-         % (TY_TITRE, INK2, _esc(T["panneau"]))]
+         '<text x="0" y="22" font-size="%d" font-weight="600" fill="%s">%s</text>'
+         % (TY_TITRE, INK, _esc(T["panneau"]))]
     g = 0
     while g <= vmax:
         e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1"/>'
@@ -1164,7 +1166,7 @@ def build_svg_masses(interets: dict, cofog: dict, lang: str = "fr") -> str:
     W, H = 720, 380
     # mr : place des etiquettes directes -- elargie le 29/09 pour les deux lignes
     # de decomposition (« hopital 109 · ambulatoire 92 » fait ~150 px a ce corps).
-    ml, mr, mt, mb = 52, 196, 46, 34
+    ml, mr, mt, mb = 52, 196, 56, 34
     fonctions = ("GF07", "GF09", "GF03")
     ans = sorted(set(interets) & set.intersection(*[set(cofog[c]) for c in fonctions]))
     if len(ans) < 10:
@@ -1182,8 +1184,9 @@ def build_svg_masses(interets: dict, cofog: dict, lang: str = "fr") -> str:
          'aria-labelledby="ma-t ma-d" font-family="%s">' % (W, H + CARTOUCHE_H, FONT),
          '<title id="ma-t">%s</title>' % _esc(L["titre"] % (a0, a1)),
          '<desc id="ma-d">%s</desc>' % _esc(L["desc"] % (a0, a1)),
-         '<text x="0" y="22" font-size="%d" fill="%s">%s</text>'
-         % (TY_TITRE, INK2, _esc(L["panneau"]))]
+         '<text x="0" y="22" font-size="%d" font-weight="600" fill="%s">%s</text>'
+         % (TY_TITRE, INK, _esc(L["panneau"])),
+         '<text x="0" y="40" font-size="%d" fill="%s">%s</text>' % (TY_AXE, INK2, _esc(L["champ"]))]
     pas = 50 if vmax < 320 else 100
     g = 0
     while g <= vmax:
@@ -1275,9 +1278,10 @@ def build_svg_masses(interets: dict, cofog: dict, lang: str = "fr") -> str:
         # La croissance DEPUIS LE CREUX repond a la lecture spontanee de la
         # figure (« tout monte plus vite que les interets ») : vraie sur trente
         # ans, fausse depuis le creux. Calculee, jamais ecrite a la main.
-        e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s">%+d %% %s %d</text>'
+        # Espace avant « % » en français, aucune en anglais (« +26% since 2020 », 04/10).
+        e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s">%+d%s %s %d</text>'
                  % (W - mr + 12, dy + PAS, TY_MINEUR - 1, MUTED, round(croiss),
-                    "depuis" if lang == "fr" else "since", ref))
+                    " %" if lang == "fr" else "%", "depuis" if lang == "fr" else "since", ref))
     e += cartouche(W, H + 4, L["src"] % (a0, a1), "masses", lang)
     e.append("</svg>")
     return "\n".join(e) + "\n"
