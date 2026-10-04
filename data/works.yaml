@@ -603,7 +603,7 @@ works:
     asin_broche: "2958634787"   # = ISBN-10 du bloc AFNIL ; page /dp/ en ligne depuis le 22/09 (titre lu ce jour)
     asin_kindle: "B0HK1ZYW7C"   # Kindle SANS ISBN (ASIN) — en vente depuis le 22/09
     license: ""  # à préciser
-    wikidata: ""  # todo — item à créer après la parution (navette Wikidata/)
+    wikidata: "Q141640333"  # créé par Laura le 2026-10-04 (navette Import_Wikidata_Laura_2026-10-04_Passe_complete), readback API conforme, 13 déclarations
     openlibrary:
       edition: ""  # todo — après parution du broché
       work: ""
@@ -969,6 +969,7 @@ works:
     source_type: "Revue"
     url: "https://www.revue-projet.com/articles/2026-07-lalut-variable-d-ajustement-de-la-republique/11589"
     doi: "10.3917/pro.412.0078"  # Cairn, Revue Projet 2026/3 (n° 412), p. 78-81, daté 2026-06-01 — trouvé par requête Crossref auteur le 2026-09-02, absent du registre et de la fiche jusque-là
+    wikidata: "Q141640335"  # créé par Laura le 2026-10-04 (navette Import_Wikidata_Laura_2026-10-04_Passe_complete), readback API conforme, 10 déclarations
     chapo:
       fr: "L'État transfère aux communes des compétences sans les financements : réforme après réforme, la charge descend jusqu'aux ménages captifs, privés d'alternative. Derrière le solde de la dette publique se cache une géographie du pouvoir — qui fixe l'ordre ici, qui en absorbe la dette ailleurs ?"
       en: "The state hands local councils new duties without the funding: reform after reform, the burden slides down to the captive households left without an alternative. Behind the public-debt balance lies a geography of power — who sets order here, and who absorbs the debt elsewhere?"

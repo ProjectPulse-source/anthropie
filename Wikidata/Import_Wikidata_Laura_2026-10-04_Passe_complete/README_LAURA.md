@@ -1,6 +1,17 @@
 # Wikidata — passe complète du 4 octobre 2026 (un seul Run)
 
-> ⏳ **PRÉPARÉ le 2026-10-04** (demande de l'auteur : « passe complète sur Wikidata »). Page transmise à Laura :
+> ✅ **FAIT le 2026-10-04, exécuté par Laura (« Run in background », 16:49 UTC)** — readback API du 04/10
+> (`readback_api_2026-10-04.json`) : **conforme**, déclaration par déclaration. Q138910896 révision 2553112874,
+> un seul P1104 `+225` avec sa référence ; Q140517745 révision 2553113015, un seul P1104 `+680` avec sa référence ;
+> **Q141640333** (*Un président peut-il tenir ses promesses ?*, révision 2553113050, 13 déclarations, aucun écart,
+> rien en plus) ; **Q141640335** (article *Revue Projet*, révision 2553113098, 10 déclarations, aucun écart).
+> Écriture en retour : `wikidata` des deux œuvres dans `data/works.yaml`, `wikidata_qid` sur leurs fiches ;
+> `check-wikidata-registre.py` OK (22 items / 22 QID), `check-fiches-registre.py` OK, build et `check-all --ci` à 0 ;
+> sameAs vérifié dans le HTML construit (fiche du livre ; `/publications/` FR et EN).
+> Incident de lancement : un premier essai en mode « Run » a tourné sans rien écrire (aucune révision) ; le lot lu
+> par l'API d'import de QuickStatements était valide (48 commandes, statut OK) ; relancé en arrière-plan.
+>
+> Historique : **PRÉPARÉ le 2026-10-04** (demande de l'auteur : « passe complète sur Wikidata »). Page transmise à Laura :
 > https://claude.ai/artifact/Hcu1uLhcGy4B2hrpzr8yqb (privée : à partager depuis son menu ; lien et lot de la page
 > vérifiés identiques, à l'octet, à `deeplink.txt` et `batch_quickstatements.txt`). Bloc ✅ à poser après exécution
 > et relecture à l'API.
