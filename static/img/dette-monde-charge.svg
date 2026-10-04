@@ -63,12 +63,16 @@
 <circle cx="381.7" cy="290.3" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="190.1" cy="347.1" r="5.5" fill="#eb6834" stroke="#fff" stroke-width="1"/>
 <text x="460.6" y="232.0" font-size="11" fill="#0A0A0E" text-anchor="middle">Belgique</text>
+<text x="135.4" y="322.2" font-size="11" fill="#0A0A0E" text-anchor="end">Bulgarie</text>
+<text x="164.0" y="340.6" font-size="11" fill="#0A0A0E" text-anchor="end">Danemark</text>
 <text x="296.6" y="331.0" font-size="11" fill="#0A0A0E" text-anchor="middle">Allemagne</text>
+<text x="138.6" y="355.8" font-size="11" fill="#0A0A0E" text-anchor="end">Estonie</text>
 <text x="647.7" y="174.4" font-size="11" fill="#0A0A0E" text-anchor="middle">Grèce</text>
 <text x="442.8" y="198.7" font-size="11" fill="#0A0A0E" text-anchor="middle">Espagne</text>
 <text x="501.5" y="240.7" font-size="11" fill="#0A0A0E" text-anchor="middle" font-weight="600">France</text>
 <text x="261.7" y="295.8" font-size="11" fill="#0A0A0E" text-anchor="end">Croatie</text>
 <text x="583.6" y="119.0" font-size="11" fill="#0A0A0E" text-anchor="middle">Italie</text>
+<text x="150.5" y="368.9" font-size="11" fill="#0A0A0E" text-anchor="end">Luxembourg</text>
 <text x="334.0" y="89.7" font-size="11" fill="#0A0A0E" text-anchor="middle">Hongrie</text>
 <text x="366.2" y="276.6" font-size="11" fill="#0A0A0E" text-anchor="middle">Autriche</text>
 <text x="255.4" y="205.6" font-size="11" fill="#0A0A0E" text-anchor="end">Pologne</text>

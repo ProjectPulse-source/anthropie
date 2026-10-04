@@ -927,7 +927,9 @@ def figures(lang: str, an: str, rows: list[dict], stats: dict, jum: list[dict]) 
             rows, lambda x: x["stock"], lambda x: x["charge"], 160, 10, 20, 2,
             T["c_lx"], T["c_ly"], "mc", T["c_titre"], T["c_desc"], T["src_eu"], T["c_note"],
             {"FR": "h", "IT": "h", "EL": "h", "DE": "b", "HU": "h", "RO": "h", "PL": "g", "SE": "b", "ES": "h",
-             "BE": "h", "PT": "h", "AT": "h", "SI": "d", "HR": "g"},
+             "BE": "h", "PT": "h", "AT": "h", "SI": "d", "HR": "g",
+             # Les deux moins endettés de chaque groupe (auteur, 04/10) : sans eux, le bas de l'échelle restait anonyme.
+             "BG": "g", "DK": "g", "EE": "g", "LU": "g"},
             droites=[(stats["charge_stock_euro"]["ordonnee"], stats["charge_stock_euro"]["pente"],
                       stats["charge_stock_euro"]["stock_min"], stats["charge_stock_euro"]["stock_max"], COL_EURO),
                      (stats["charge_stock_hors"]["ordonnee"], stats["charge_stock_hors"]["pente"],
