@@ -527,7 +527,7 @@ structure C, navigation « École et parcours », mise en ligne au plus tard le 
   `assets/scss/_enseignants.scss`, `scripts/generer_parcours_licence.py`, `data/parcours_licence.json`,
   `static/parcours_licence.json`, `static/img/parcours-licence-devenir.svg` et `.png`, `CLAUDE.md` ; cette entrée seule.
 
-### 2026-10-02 — Budget 2027 : prévision du Gouvernement sur `/cout-de-la-dette-publique/`, mesures sur `/dette-publique-collectivites-locales/`, COMMITÉ le 04/10 après vérification, NON POUSSÉ
+### 2026-10-02 — Budget 2027 : prévision du Gouvernement sur `/cout-de-la-dette-publique/`, mesures sur `/dette-publique-collectivites-locales/`, COMMITÉ ET POUSSÉ le 04/10 après vérification (`d8c40a4`, déploiement vert, pages relues en production)
 
 **Vérification du 04/10 (autre session, à la demande de l'auteur)** : avis du Haut Conseil retéléchargé, empreinte
 identique à l'archive ; 79,2, 91, 2,9 points, 119,3 et 121,7 %, révision de 3,0 points relus p. 37, 38 et 47 ; montants
