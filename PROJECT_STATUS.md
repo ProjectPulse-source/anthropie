@@ -53,6 +53,18 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-04 — Livresque des mots, édition 2026 révisée : site mis à jour, COMMITÉ ET POUSSÉ avec la publication KDP
+
+Registre v1.22 (`data/works.yaml`, source unique) : `corpus_stats` 4 656 citations / 1 387 voix (étaient 4 658 / 1 388 :
+audit des citations, doublons réunis, graphies d'un même auteur rapprochées), pages 680 (étaient 694), `derniere_verif`
+04/10. Fiche (`pages`, pied « chaque citation réexaminée », Kindle « index cliquable »), page Méthode et corpus (section
+« L'édition 2026 : chaque citation réexaminée », 680 pages, date de vérification), `llms.txt`, navette Wikidata
+(`03_books.yaml`, texte seulement : aucun geste sur Wikidata). Couverture : recto « papier » adopté par l'auteur, posé
+sur la fiche et les trois images de partage par `scripts/og_couverture_livre.py` (témoin 0,59 / 0,66 / 0,80 niveau,
+seuil 3). Build `$?` = 0, `check-all --ci` à 0 ; HTML construit : `numberOfPages` 680, « 4 656 citations », plus aucun
+« 694 ». Poussé le 04/10 à la demande de l'auteur : relevé amazon.fr du jour, description révisée déjà en ligne, bloc
+« pages » encore à 694 (traitement KDP en cours). Restent : navette Wikidata (680 p.), Open Library.
+
 ### 2026-10-03 (nuit) — « Générations futures » : contre-expertise PRO-20261003-195656 arbitrée et exécutée ; COMMITÉ, NON POUSSÉ
 
 Arbitrage `D:\PRO\.claude\external-audits\ARBITRATIONS\PRO-20261003-195656_arbitrage.md` : publier après corrections ;

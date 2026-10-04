@@ -133,7 +133,7 @@ books:
       es: 'https://amzn.eu/d/06zTzk9Q'  # source : content/livres/livresque-des-mots.md ligne 16
       it: 'https://amzn.eu/d/0fQl5caq'  # source : content/livres/livresque-des-mots.md ligne 15
       ca: 'https://amzn.eu/d/01Qvm7fF'  # source : content/livres/livresque-des-mots.md ligne 11
-    abstract_short_fr: "Une anthologie qui refuse l'ordre alphabétique et thématique pour privilégier la surprise des rencontres. 4 658 citations, 1 388 voix, 25 siècles de génie humain, tissés en un fil d'Ariane subtil. Quarante ans de passion littéraire pour offrir non un classement, mais un voyage."
+    abstract_short_fr: "Une anthologie qui refuse l'ordre alphabétique et thématique pour privilégier la surprise des rencontres. 4 656 citations, 1 387 voix, 25 siècles de génie humain, tissés en un fil d'Ariane subtil. Quarante ans de passion littéraire pour offrir non un classement, mais un voyage."
     abstract_short_fr_source_file: 'content/livres/livresque-des-mots.md'
     abstract_short_fr_source_line: 4
     abstract_short_en: ''

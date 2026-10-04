@@ -21,12 +21,21 @@
 # =============================================================================
 
 meta:
-  registry_version: "1.21"
-  last_updated: "2026-10-01"
+  registry_version: "1.22"
+  last_updated: "2026-10-04"
   maintainer: "Stéphane Lalut"
   total_works: 42
   source_registry: "registre_soumissions_v73.xlsx"
   changelog:
+    v1_22: |
+      Livresque des mots, édition 2026 révisée (2026-10-04) : chaque citation réexaminée (audit des 4 658
+      fiches : texte, paternité, source ; formulations attestées rétablies, attributions discutées signalées).
+      corpus_stats 4 658 → 4 656 citations (doublons réunis, une entrée à deux auteurs scindée) et
+      1 388 → 1 387 voix (graphies d'un même auteur réunies) ; pages 694 → 680. Nouvelle couverture
+      (recto « papier » adopté par l'auteur le 04/10). Chiffres lus sur le livre fabriqué (bilan des Promenades,
+      témoin temoin_livre_final.py du dépôt du livre). Mis en ligne le 04/10, avec la publication KDP en cours
+      (description Amazon déjà à jour ; pagination de la fiche Amazon en cours de traitement).
+      Aucun ajout d'œuvre ; total_works inchangé.
     v1_21: |
       « Un président peut-il tenir ses promesses ? » rangé dans le corpus anthropique sur le site
       (décision de l'auteur, 2026-10-01), juste après ANTHROPIE — ce registre le disait déjà
@@ -633,7 +642,7 @@ works:
     # 2026-09-13). Les 88 avis courent depuis l'édition d'origine.
     isbn: "978-2-9586347-0-4"
     isbn_13_normalized: "9782958634704"
-    pages: 694  # broché, master P15 (2026-09-17 : sommaire, Promenades, index des auteurs ; accepté par KDP) — était 672 (P11)
+    pages: 680  # broché, édition 2026 révisée (2026-10-04 : audit des citations) — était 694 (P15), 672 (P11)
     publisher: "Auto-édition"
     distribution: "Amazon KDP"
     asin_kindle: "B0CW994YWH"
@@ -648,11 +657,11 @@ works:
     # après dédoublonnage (Wittgenstein). NE PAS recopier ces nombres ailleurs
     # sans les corriger ici en premier.
     corpus_stats:
-      citations: 4658
-      auteurs: 1388            # « voix »
+      citations: 4656          # édition 2026 révisée (était 4658, P15)
+      auteurs: 1387            # « voix » (était 1388 : graphies d'un même auteur réunies)
       siecles: 25              # de Homère/Confucius au présent (≈ conservateur)
       annees_selection: 40
-      derniere_verif: "2026-06-08"
+      derniere_verif: "2026-10-04"
     abstract_short:
       fr: ""  # todo (rédiger en RÉFÉRENÇANT corpus_stats, ne pas recopier les chiffres)
     keywords: []  # todo

@@ -3,11 +3,11 @@ title: "Livresque des mots : méthode et corpus"
 url: /livresque/methode-et-corpus/
 description: "La page de référence du corpus de Livresque des mots : chiffres exacts de l'édition courante, explication des écarts avec les notices anciennes, méthode de sélection et principe du recueil sans classement."
 date: 2026-07-24
-lastmod: 2026-09-17
+lastmod: 2026-10-04
 stats_isbn: "978-2-9586347-0-4"
 faq:
   - question: "Combien de citations contient Livresque des mots ?"
-    answer: "L'édition courante contient exactement {citations} citations portées par {auteurs} voix, sur {siecles} siècles. Ces chiffres sont issus du recomptage intégral effectué lors de la recomposition de l'édition courante, après dédoublonnage du corpus."
+    answer: "L'édition courante contient exactement {citations} citations portées par {auteurs} voix, sur {siecles} siècles. Ces chiffres sont issus de la révision de l'édition 2026, où chaque citation a été réexaminée, après dédoublonnage du corpus."
   - question: "Pourquoi la notice BnF indique-t-elle 4 680 citations et 1 380 auteurs ?"
     answer: "Parce qu'elle décrit fidèlement la première édition (dépôt légal 2022), antérieure au recomptage. La recomposition de l'édition courante a donné lieu à une vérification intégrale du corpus — dédoublonnage compris — d'où les chiffres canoniques actuels : {citations} citations, {auteurs} voix. Les deux jeux de chiffres sont donc exacts, chacun pour son édition."
   - question: "Que compte une « voix » dans Livresque des mots ?"
@@ -24,9 +24,13 @@ Cette page est la référence publique du corpus de [*Livresque des mots*](/livr
 - **{{< stat "auteurs" "nbsp" >}} voix**
 - **{{< stat "siecles" >}} siècles couverts** — des présocratiques et de la sagesse chinoise au présent
 - **{{< stat "annees_selection" >}} ans de sélection**
-- Édition courante&nbsp;: recomposition intégrale, 694 pages avec sommaire et index des auteurs (broché, ISBN 978-2-9586347-0-4)
+- Édition courante&nbsp;: édition 2026, 680 pages avec sommaire et index des auteurs (broché, ISBN 978-2-9586347-0-4)
 
-Ces valeurs proviennent d'un **recomptage intégral du corpus**, effectué lors de la recomposition de l'édition courante et vérifié en dernier lieu le 8 juin 2026. Elles constituent la source unique&nbsp;: le site, les fiches libraires et les bases bibliographiques sont alignés sur elles à mesure de leurs mises à jour.
+Ces valeurs proviennent d'un **recomptage intégral du corpus**, vérifié en dernier lieu le 4 octobre 2026 sur le livre fabriqué. Elles constituent la source unique&nbsp;: le site, les fiches libraires et les bases bibliographiques sont alignés sur elles à mesure de leurs mises à jour.
+
+## L'édition 2026&nbsp;: chaque citation réexaminée
+
+Pour l'édition 2026, chaque citation du recueil a été réexaminée&nbsp;: son texte, sa paternité, sa source. Lorsque la formulation d'origine a pu être établie, c'est elle que le livre imprime&nbsp;; lorsque la paternité reste discutée, la ligne d'auteur le dit («&nbsp;Attribué à&nbsp;», «&nbsp;Origine incertaine&nbsp;»). Une phrase célèbre peut circuler loin de sa source&nbsp;: «&nbsp;Tout est pour le mieux dans le meilleur des mondes possibles&nbsp;» ne se lit ni chez Leibniz ni, mot pour mot, chez Voltaire, et le livre donne la phrase que Voltaire a écrite dans *Candide*. Le décompte s'établit depuis à {{< stat "citations" "nbsp" >}} citations et {{< stat "auteurs" "nbsp" >}} voix&nbsp;: quelques doublons ont été réunis, une entrée qui réunissait deux auteurs a été scindée, et les graphies d'un même auteur ont été rapprochées.
 
 ## Pourquoi certaines notices indiquent 4 680 citations et 1 380 auteurs
 

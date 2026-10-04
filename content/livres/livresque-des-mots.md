@@ -2,7 +2,7 @@
 title: "Livresque des mots"
 promo_slug: "livresque"  # clé D1/books.toml pour /ressources-offertes (guichet Kindle)
 subtitle: "Anthologie inédite & éclectique de citations"  # page de titre de l'intérieur et couverture
-pages: 694  # sync data/works.yaml (book-livresque-des-mots.pages) — broché, master P15 (sommaire, Promenades, index des auteurs)
+pages: 680  # sync data/works.yaml (book-livresque-des-mots.pages) — broché, édition 2026 révisée (sommaire, Promenades, index des auteurs)
 wikidata_qid: "Q140517745"  # item canonique (doublon Q138911600 fusionné) — alimente sameAs du Book
 description: "Une anthologie qui refuse l'ordre alphabétique et thématique pour privilégier la surprise des rencontres. {citations} citations, {auteurs} voix, 25 siècles de génie humain, tissés en un fil d'Ariane subtil. Quarante ans de passion littéraire pour offrir non un classement, mais un voyage."
 date: 2022-12-20
@@ -94,4 +94,4 @@ Un objet littéraire qui se prête au cadeau&nbsp;: à qui et pourquoi, sur la p
 
 ---
 
-Troisième édition, 2026, avec sommaire et index des auteurs. Version papier pour la flânerie, version Kindle pour la recherche plein texte.
+Troisième édition, 2026, avec sommaire et index des auteurs, chaque citation réexaminée. Version papier pour la flânerie, version Kindle pour la recherche plein texte et l'index cliquable.
