@@ -20,6 +20,15 @@
 > qui double une source finit par en diverger : en cas de contradiction, **les
 > dossiers datés font foi.**
 >
+> ### Lancer un lot : en arrière-plan, après lecture par l'API d'import (2026-10-04)
+>
+> Le 04/10, un lot de 48 commandes lancé par « Run » a tourné sans rien écrire (aucune révision) ; relancé par
+> **« Run in background »**, il est passé en une minute et s'est affiché dans « Latest batches ». Consigne à Laura :
+> toujours « Run in background ». Avant l'envoi, faire lire le lot sans rien écrire :
+> `curl https://quickstatements.toolforge.org/api.php --data-urlencode action=import --data-urlencode format=v1
+> --data-urlencode compress=0 --data-urlencode data@lot.txt` → `status: OK` et la liste des commandes (références et
+> qualificatifs comptent chacun pour une : annoncer ce nombre-là, pas celui des lignes).
+>
 > ### La règle, née du seul manque réellement mesuré
 >
 > **Tout geste Wikidata laisse un dossier daté — même s'il tient en une commande.**
