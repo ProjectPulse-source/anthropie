@@ -1,0 +1,4 @@
+// Navette 2026-10-04 - Dette Publique : Qui paie vraiment ? (Q138910896) : nombre de pages 224 -> 225
+// Lecture API avant (lecture_api_2026-10-04_avant.json) : un seul P1104, +224, sans reference ni qualificatif -> retrait sans perte.
+-Q138910896	P1104	224
+Q138910896	P1104	225	S854	"https://www.amazon.fr/dp/2958634736"	S813	+2026-10-04T00:00:00Z/11
