@@ -1278,9 +1278,10 @@ def build_svg_masses(interets: dict, cofog: dict, lang: str = "fr") -> str:
         # La croissance DEPUIS LE CREUX repond a la lecture spontanee de la
         # figure (« tout monte plus vite que les interets ») : vraie sur trente
         # ans, fausse depuis le creux. Calculee, jamais ecrite a la main.
-        e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s">%+d %% %s %d</text>'
+        # Espace avant « % » en français, aucune en anglais (« +26% since 2020 », 04/10).
+        e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s">%+d%s %s %d</text>'
                  % (W - mr + 12, dy + PAS, TY_MINEUR - 1, MUTED, round(croiss),
-                    "depuis" if lang == "fr" else "since", ref))
+                    " %" if lang == "fr" else "%", "depuis" if lang == "fr" else "since", ref))
     e += cartouche(W, H + 4, L["src"] % (a0, a1), "masses", lang)
     e.append("</svg>")
     return "\n".join(e) + "\n"

@@ -29,15 +29,15 @@
 <text x="536.0" y="78.5" font-size="11" fill="#52514e"><tspan font-weight="600">Health</tspan> 261</text>
 <text x="536.0" y="91.5" font-size="10" fill="#898781">hospital 109 · outpatient 92</text>
 <text x="536.0" y="104.5" font-size="10" fill="#898781">medical products 44 · other 16</text>
-<text x="536.0" y="117.5" font-size="10" fill="#898781">+26 % since 2020</text>
+<text x="536.0" y="117.5" font-size="10" fill="#898781">+26% since 2020</text>
 <text x="536.0" y="194.2" font-size="11" fill="#898781"><tspan font-weight="600">Education</tspan> 149</text>
 <text x="536.0" y="207.2" font-size="10" fill="#898781">secondary 64 · primary 42</text>
 <text x="536.0" y="220.2" font-size="10" fill="#898781">tertiary 12 · ancillary 20 · other 10</text>
-<text x="536.0" y="233.2" font-size="10" fill="#898781">+24 % since 2020</text>
+<text x="536.0" y="233.2" font-size="10" fill="#898781">+24% since 2020</text>
 <text x="536.0" y="285.2" font-size="12" fill="#eb6834"><tspan font-weight="700">Interest paid</tspan> 60</text>
-<text x="536.0" y="298.2" font-size="10" fill="#898781">+102 % since 2020</text>
+<text x="536.0" y="298.2" font-size="10" fill="#898781">+102% since 2020</text>
 <text x="536.0" y="317.2" font-size="11" fill="#a5a39a"><tspan font-weight="600">Public order and safety</tspan> 52</text>
-<text x="536.0" y="330.2" font-size="10" fill="#898781">+26 % since 2020</text>
+<text x="536.0" y="330.2" font-size="10" fill="#898781">+26% since 2020</text>
 <line x1="0" y1="384.0" x2="720" y2="384.0" stroke="#e1e0d9" stroke-width="1"/>
 <text x="0" y="397.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Eurostat: interest paid (gov_10a_main, D41PAY) and general government expenditure by function (gov_10a_exp, COFOG), 1995-2024</text>
 <text x="0" y="409.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Interest is a type of spending, the other three are functions: not the same breakdown, and no transfer from one to the other is established.</text>
