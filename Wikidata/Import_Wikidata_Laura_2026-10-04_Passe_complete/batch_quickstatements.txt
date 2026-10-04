@@ -1,0 +1,51 @@
+// Navette Laura 2026-10-04 -- PASSE COMPLETE, un seul Run (quatre blocs)
+// Lectures API avant : lecture_api_2026-10-04_avant.json (dans ce dossier) ; sources : README_LAURA.md
+//
+// --- BLOC 1 -- Dette Publique : Qui paie vraiment ? (Q138910896) : nombre de pages 224 -> 225
+//     un seul P1104 (+224), sans reference ni qualificatif : retrait sans perte
+-Q138910896	P1104	224
+Q138910896	P1104	225	S854	"https://www.amazon.fr/dp/2958634736"	S813	+2026-10-04T00:00:00Z/11
+//
+// --- BLOC 2 -- Livresque des mots (Q140517745) : nombre de pages 694 -> 680 (edition 2026 revisee,
+//     amazon.fr affiche 680 pages le 04/10)
+-Q140517745	P1104	694
+Q140517745	P1104	680	S854	"https://www.amazon.fr/dp/2958634701"	S813	+2026-10-04T00:00:00Z/11
+//
+// --- BLOC 3 -- creation : Un president peut-il tenir ses promesses ? (livre, 2026)
+//     aucun item ne porte l'ISBN (haswbstatement:P212=978-2-9586347-8-0 -> 0 ; temoin P212 Dette -> Q138910896)
+CREATE
+LAST	Lfr	"Un président peut-il tenir ses promesses ?"
+LAST	Len	"Un président peut-il tenir ses promesses ?"
+LAST	Dfr	"essai de Stéphane Lalut sur les pouvoirs du président de la République française (2026)"
+LAST	Den	"essay by Stéphane Lalut on the powers of the President of the French Republic (2026)"
+LAST	P31	Q47461344
+LAST	P50	Q138909233	S854	"https://www.amazon.fr/dp/2958634787"	S813	+2026-10-04T00:00:00Z/11
+LAST	P1476	fr:"Un président peut-il tenir ses promesses ?"
+LAST	P1680	fr:"Ce qu'il peut vraiment décider — et ce qui lui échappe"
+LAST	P136	Q35760
+LAST	P921	Q191954
+LAST	P407	Q150
+LAST	P291	Q142
+LAST	P577	+2026-09-22T00:00:00Z/11	S854	"https://www.amazon.fr/dp/2958634787"	S813	+2026-10-04T00:00:00Z/11
+LAST	P212	"978-2-9586347-8-0"	S854	"https://www.amazon.fr/dp/2958634787"	S813	+2026-10-04T00:00:00Z/11
+LAST	P1104	286	S854	"https://www.amazon.fr/dp/2958634787"	S813	+2026-10-04T00:00:00Z/11
+LAST	P5749	"2958634787"
+LAST	P856	"https://stephane-lalut.com/livres/un-president-peut-il-tenir-ses-promesses/"	P407	Q150
+//
+// --- BLOC 4 -- creation : article, Revue Projet 2026/3 (n° 412), p. 78-81, DOI 10.3917/pro.412.0078
+//     titre et pages lus chez Crossref ; aucun item ne porte ce DOI (P356 -> 0 ; temoin RFSE -> Q140892752)
+CREATE
+LAST	Lfr	"Variable d’ajustement de la République ?"
+LAST	Len	"Variable d’ajustement de la République ?"
+LAST	Dfr	"article de Stéphane Lalut, Revue Projet, 2026/3 (n° 412), p. 78-81"
+LAST	Den	"article by Stéphane Lalut, Revue Projet, 2026/3 (no. 412), pp. 78-81"
+LAST	P31	Q191067
+LAST	P1476	fr:"Variable d’ajustement de la République ?"
+LAST	P1433	Q3407167
+LAST	P407	Q150
+LAST	P577	+2026-06-00T00:00:00Z/10
+LAST	P433	"412"
+LAST	P304	"78-81"
+LAST	P356	"10.3917/PRO.412.0078"	S854	"https://shs.cairn.info/revue-projet-2026-3-page-78"	S813	+2026-10-04T00:00:00Z/11
+LAST	P50	Q138909233	P1545	"1"	S854	"https://shs.cairn.info/revue-projet-2026-3-page-78"	S813	+2026-10-04T00:00:00Z/11
+LAST	P953	"https://www.revue-projet.com/articles/2026-07-lalut-variable-d-ajustement-de-la-republique/11589"	P407	Q150

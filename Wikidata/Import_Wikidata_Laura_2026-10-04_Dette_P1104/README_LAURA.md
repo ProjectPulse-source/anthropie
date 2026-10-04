@@ -1,7 +1,7 @@
 # Wikidata, *Dette Publique : Qui paie vraiment ?* (Q138910896) : nombre de pages
 
-> ⏳ **PRÉPARÉ le 2026-10-04**, sur demande de l'auteur (« corrige Wikidata »). Bloc ✅ à poser après exécution
-> et relecture à l'API.
+> ↪ **INTÉGRÉ le 2026-10-04 à la passe complète** : `Import_Wikidata_Laura_2026-10-04_Passe_complete/` (bloc 1).
+> Ne pas exécuter le lien de ce dossier ; le suivi et le bloc ✅ sont là-bas. La lecture API avant reste ici.
 
 Une correction sur l'item du livre, sans création d'item.
 
