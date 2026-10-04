@@ -62,23 +62,41 @@
 <circle cx="286.1" cy="272.6" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="381.7" cy="290.3" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="190.1" cy="347.1" r="5.5" fill="#eb6834" stroke="#fff" stroke-width="1"/>
-<text x="460.6" y="232.0" font-size="11" fill="#0A0A0E" text-anchor="middle">Belgique</text>
+<text x="460.6" y="259.0" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Belgique</text>
+<text x="460.6" y="259.0" font-size="11" fill="#0A0A0E" text-anchor="middle">Belgique</text>
+<text x="135.4" y="322.2" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="end" aria-hidden="true">Bulgarie</text>
 <text x="135.4" y="322.2" font-size="11" fill="#0A0A0E" text-anchor="end">Bulgarie</text>
+<text x="164.0" y="340.6" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="end" aria-hidden="true">Danemark</text>
 <text x="164.0" y="340.6" font-size="11" fill="#0A0A0E" text-anchor="end">Danemark</text>
+<text x="296.6" y="331.0" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Allemagne</text>
 <text x="296.6" y="331.0" font-size="11" fill="#0A0A0E" text-anchor="middle">Allemagne</text>
+<text x="138.6" y="355.8" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="end" aria-hidden="true">Estonie</text>
 <text x="138.6" y="355.8" font-size="11" fill="#0A0A0E" text-anchor="end">Estonie</text>
-<text x="647.7" y="174.4" font-size="11" fill="#0A0A0E" text-anchor="middle">Grèce</text>
+<text x="647.7" y="201.4" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Grèce</text>
+<text x="647.7" y="201.4" font-size="11" fill="#0A0A0E" text-anchor="middle">Grèce</text>
+<text x="442.8" y="198.7" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Espagne</text>
 <text x="442.8" y="198.7" font-size="11" fill="#0A0A0E" text-anchor="middle">Espagne</text>
+<text x="501.5" y="240.7" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" font-weight="600" aria-hidden="true">France</text>
 <text x="501.5" y="240.7" font-size="11" fill="#0A0A0E" text-anchor="middle" font-weight="600">France</text>
-<text x="261.7" y="295.8" font-size="11" fill="#0A0A0E" text-anchor="end">Croatie</text>
+<text x="270.7" y="309.8" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Croatie</text>
+<text x="270.7" y="309.8" font-size="11" fill="#0A0A0E" text-anchor="middle">Croatie</text>
+<text x="583.6" y="119.0" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Italie</text>
 <text x="583.6" y="119.0" font-size="11" fill="#0A0A0E" text-anchor="middle">Italie</text>
-<text x="150.5" y="368.9" font-size="11" fill="#0A0A0E" text-anchor="end">Luxembourg</text>
+<text x="159.5" y="382.9" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Luxembourg</text>
+<text x="159.5" y="382.9" font-size="11" fill="#0A0A0E" text-anchor="middle">Luxembourg</text>
+<text x="334.0" y="89.7" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Hongrie</text>
 <text x="334.0" y="89.7" font-size="11" fill="#0A0A0E" text-anchor="middle">Hongrie</text>
-<text x="366.2" y="276.6" font-size="11" fill="#0A0A0E" text-anchor="middle">Autriche</text>
-<text x="255.4" y="205.6" font-size="11" fill="#0A0A0E" text-anchor="end">Pologne</text>
+<text x="372.2" y="278.6" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Autriche</text>
+<text x="372.2" y="278.6" font-size="11" fill="#0A0A0E" text-anchor="start">Autriche</text>
+<text x="273.4" y="205.6" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Pologne</text>
+<text x="273.4" y="205.6" font-size="11" fill="#0A0A0E" text-anchor="start">Pologne</text>
+<text x="410.3" y="233.7" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Portugal</text>
 <text x="410.3" y="233.7" font-size="11" fill="#0A0A0E" text-anchor="middle">Portugal</text>
+<text x="260.0" y="119.0" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Roumanie</text>
 <text x="260.0" y="119.0" font-size="11" fill="#0A0A0E" text-anchor="middle">Roumanie</text>
+<text x="319.3" y="304.2" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Slovénie</text>
 <text x="319.3" y="304.2" font-size="11" fill="#0A0A0E" text-anchor="start">Slovénie</text>
+<text x="190.1" y="365.1" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Suède</text>
 <text x="190.1" y="365.1" font-size="11" fill="#0A0A0E" text-anchor="middle">Suède</text>
 <line x1="0" y1="442.0" x2="720" y2="442.0" stroke="#e1e0d9"/>
 <text x="0" y="455.0" font-size="9" fill="#52514e">Eurostat gov_10a_main (D41PAY, TR), gov_10dd_edpt1 (GD), nama_10_gdp (B1GQ), 2025 ; administrations publiques S.13, monnaie nationale</text>

@@ -554,6 +554,22 @@ def grille_y(x0, x1, y0, y1, vmin, vmax, pas, fmt, libelle):
     return e
 
 
+def largeur_texte(s: str, taille: float) -> float:
+    """Largeur approchée d'un libellé, en px : chasses d'Arial par classe de lettre (en millièmes d'em). Table
+    fixe plutôt qu'une police mesurée : le générateur tourne aussi en CI, où les polices du poste n'existent pas."""
+    def chasse(c: str) -> int:
+        if c in "ijlI.,;:'’!| ":
+            return 250 if c != " " else 278
+        if c in "frt-":
+            return 333
+        if c in "mwMW":
+            return 833
+        if c.isupper():
+            return 667
+        return 556
+    return sum(chasse(c) for c in s) * taille / 1000
+
+
 def nuage(rows, fx, fy, xmax, ymax, pasx, pasy, lx, ly, ident, titre, desc, source, note, etiquettes, droites=None,
           jumeaux=(), ymin=0.0, fmt_y=None, lang="fr"):
     H = 440
@@ -567,30 +583,91 @@ def nuage(rows, fx, fy, xmax, ymax, pasx, pasy, lx, ly, ident, titre, desc, sour
     e += grille_y(X0, X1, Y0, Y1, ymin, ymax, pasy, fmt_y or (lambda v: nb(v, 0) + pc), ly)
     e += axe_x(X0, X1, Y1, 0, xmax, pasx, lambda v: nb(v, 0) + pc, lx)
     by = {x["code"]: x for x in rows}
+    traits = []  # segments dessinés (pointillés, droites), que l'anti-chevauchement des étiquettes doit éviter
     for j in jumeaux:
         a, b = by[j["bas"]], by[j["haut"]]
+        traits.append((sx(fx(a)), sy(fy(a)), sx(fx(b)), sy(fy(b))))
         e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1.5" stroke-dasharray="3 3"/>'
                  % (sx(fx(a)), sy(fy(a)), sx(fx(b)), sy(fy(b)), MUTED))
     for (a, b, xa, xb, col) in (droites or []):
+        traits.append((sx(xa), sy(a + b * xa), sx(xb), sy(a + b * xb)))
         e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1.2" opacity="0.7"/>'
                  % (sx(xa), sy(a + b * xa), sx(xb), sy(a + b * xb), col))
     for x in rows:
         e.append('<circle cx="%.1f" cy="%.1f" r="5.5" fill="%s" stroke="#fff" stroke-width="1"/>'
                  % (sx(fx(x)), sy(fy(x)), COL_EURO if x["euro"] else COL_HORS))
-    # Placement : au-dessus par défaut (étiquette centrée sur son point, charte du site) ; « b » dessous,
-    # « g » à gauche, « d » à droite, pour les points serrés. Les membres des faux jumeaux sont toujours nommés.
+    # Placement CALCULÉ (charte du 28/09 : « toute règle graphique doit être calculable, anti-chevauchement
+    # compris ») : les points bougent à chaque millésime, et une étiquette posée à la main finit par recouvrir
+    # un point, une autre étiquette ou un trait sans que rien ne le dise (« Allemagne » sur les Pays-Bas, nuage
+    # des prix ; « Pologne » barrée par la droite hors zone euro -- vus le 04/10). La table d'appel dit QUI est
+    # nommé et la position PRÉFÉRÉE ; si elle est prise, on essaie les suivantes, dans l'ordre de POSITIONS
+    # (centrée d'abord, charte du site). Recouvrir un point, une étiquette ou sortir du cadre est BLOQUANT ;
+    # croiser un trait est seulement évité : à défaut de mieux, le liseré blanc de l'étiquette interrompt le
+    # trait sous le texte (Danemark, posé sur le croisement des deux droites). Aucune position sans conflit
+    # bloquant : arrêt, avec la liste complète des conflits.
+    # Les membres des faux jumeaux sont toujours nommés. Boîte approchée : largeur_texte(), hauteur de capitale.
+    POSITIONS = {"h": (0, -9, "middle"), "b": (0, 18, "middle"), "d": (9, 4, "start"), "g": (-9, 4, "end"),
+                 "hd": (6, -7, "start"), "hg": (-6, -7, "end"), "bd": (9, 16, "start"), "bg": (-9, 16, "end"),
+                 "h2": (0, -13, "middle"), "b2": (0, 22, "middle")}
     noms = dict(etiquettes) if isinstance(etiquettes, dict) else {c: "h" for c in etiquettes}
     for j in jumeaux:
         noms.setdefault(j["bas"], "h")
         noms.setdefault(j["haut"], "h")
+    points = [(x["code"], sx(fx(x)), sy(fy(x))) for x in rows]
+    boites, echecs = [], []
+
+    def conflits(code, lib, b, px, py):
+        """(bloquants, évitables)."""
+        out = []
+        if b[0] < X0 + 2 or b[2] > W - 2 or b[1] < Y0 - 6 or b[3] > Y1 - 2:
+            out.append("« %s » sort du cadre" % lib)
+        for c, cx, cy in points:
+            if c != code and math.hypot(cx - min(max(cx, b[0]), b[2]), cy - min(max(cy, b[1]), b[3])) < 5.5 + 1.5:
+                out.append("« %s » recouvre le point %s" % (lib, c))
+        for c, o in boites:
+            if b[0] < o[2] and o[0] < b[2] and b[1] < o[3] and o[1] < b[3]:
+                out.append("« %s » chevauche l'étiquette de %s" % (lib, c))
+        for (x1, y1, x2, y2) in traits:
+            n = int(math.hypot(x2 - x1, y2 - y1)) + 1
+            # Au ras de son propre point (12 px), un trait qui passe par ce point ne prête à aucune confusion :
+            # sans cette exemption, un pays posé sur le croisement des deux droites (Danemark) n'aurait aucune place.
+            if any(b[0] - 1 < x1 + (x2 - x1) * k / n < b[2] + 1 and b[1] - 1 < y1 + (y2 - y1) * k / n < b[3] + 1
+                   and math.hypot(x1 + (x2 - x1) * k / n - px, y1 + (y2 - y1) * k / n - py) > 12
+                   for k in range(n + 1)):
+                return out, True
+        return out, False
+
     for x in rows:
-        pos = noms.get(x["code"])
-        if not pos:
+        pref = noms.get(x["code"])
+        if not pref:
             continue
         px, py = sx(fx(x)), sy(fy(x))
-        dx, dy, anc = {"h": (0, -9, "middle"), "b": (0, 18, "middle"), "g": (-9, 4, "end"), "d": (9, 4, "start")}[pos]
+        lib = x[cle_nom]
+        larg = largeur_texte(lib, TY_ANNOT) * (1.07 if x["code"] == "FR" else 1.0)
+        essais = []
+        for pos in [pref] + [q for q in POSITIONS if q != pref]:
+            dx, dy, anc = POSITIONS[pos]
+            gx = {"middle": px + dx - larg / 2, "end": px + dx - larg, "start": px + dx}[anc]
+            b = (gx, py + dy - TY_ANNOT * 0.75, gx + larg, py + dy + 1)
+            dur, trait = conflits(x["code"], lib, b, px, py)
+            essais.append((dur, trait, dx, dy, anc, b))
+            if not dur and not trait:
+                break
+        libres = [t for t in essais if not t[0]]
+        if not libres:
+            echecs += essais[0][0]
+            continue
+        _, _, dx, dy, anc, b = libres[-1] if not libres[-1][1] else libres[0]
+        boites.append((x["code"], b))
+        gras = ' font-weight="600"' if x["code"] == "FR" else ""
+        # Liseré : le même texte, contour blanc, dessous ; masqué aux lecteurs d'écran (sinon lu deux fois).
+        e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="#fff" stroke="#fff" stroke-width="3" '
+                 'stroke-linejoin="round" text-anchor="%s"%s aria-hidden="true">%s</text>'
+                 % (px + dx, py + dy, TY_ANNOT, anc, gras, esc(lib)))
         e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s" text-anchor="%s"%s>%s</text>'
-                 % (px + dx, py + dy, TY_ANNOT, INK, anc, ' font-weight="600"' if x["code"] == "FR" else "", esc(x[cle_nom])))
+                 % (px + dx, py + dy, TY_ANNOT, INK, anc, gras, esc(lib)))
+    if echecs:
+        fail("%s (%s) : aucune position libre -- %s" % (ident, lang, " ; ".join(echecs)))
     e += cartouche(H + 2, source, note, lang)
     e.append("</svg>")
     return "\n".join(e)
@@ -631,7 +708,10 @@ def transmission(rows, an, source, lang="fr"):
     xmax = math.ceil(max(fx(x) for x in g) / 5) * 5
     ymax = math.ceil(max(fy(x) for x in g) * 2) / 2
     ymin = min(0.0, math.floor(min(fy(x) for x in g) * 2) / 2)
-    etiq = {"FR": "h", "IT": "d", "DE": "d", "EL": "h", "HU": "g", "SE": "h", "PT": "h", "DK": "d"}
+    # Extrêmes nommés (auteur, 04/10) : les deux écarts les plus hauts (LU, IE), le plus bas hors Danemark (BG) ;
+    # RO nommé pour qu'on ne lui attribue pas l'étiquette de la Hongrie, sa voisine.
+    etiq = {"FR": "h", "IT": "d", "DE": "d", "EL": "g", "HU": "g", "SE": "h", "PT": "h", "DK": "d",
+            "LU": "d", "IE": "h", "RO": "bd", "BG": "d"}
     # Contre-expertise PRO-20260930-061613 (P1) : repère conditionnel, jamais une prévision -- le <desc> lu par
     # les lecteurs d'écran ne doit pas affirmer plus que le texte visible.
     T = {"fr": ("Pression de refinancement : échéances et écart de taux, %s",
@@ -927,7 +1007,7 @@ def figures(lang: str, an: str, rows: list[dict], stats: dict, jum: list[dict]) 
             rows, lambda x: x["stock"], lambda x: x["charge"], 160, 10, 20, 2,
             T["c_lx"], T["c_ly"], "mc", T["c_titre"], T["c_desc"], T["src_eu"], T["c_note"],
             {"FR": "h", "IT": "h", "EL": "h", "DE": "b", "HU": "h", "RO": "h", "PL": "g", "SE": "b", "ES": "h",
-             "BE": "h", "PT": "h", "AT": "h", "SI": "d", "HR": "g",
+             "BE": "h", "PT": "h", "AT": "h", "SI": "d", "HR": "b",
              # Les deux moins endettés de chaque groupe (auteur, 04/10) : sans eux, le bas de l'échelle restait anonyme.
              "BG": "g", "DK": "g", "EE": "g", "LU": "g"},
             droites=[(stats["charge_stock_euro"]["ordonnee"], stats["charge_stock_euro"]["pente"],
@@ -938,8 +1018,10 @@ def figures(lang: str, an: str, rows: list[dict], stats: dict, jum: list[dict]) 
         "dette-monde-prix%s.svg" % suf: nuage(
             [x for x in rows if x["inflation"] is not None], lambda x: x["inflation"], lambda x: x["prix"], 14, 6, 2, 1,
             T["p_lx"], T["p_ly"], "mp", T["p_titre"], T["p_desc"], T["p_src"], T["p_note"],
-            {"FR": "h", "IT": "h", "DE": "d", "HU": "h", "RO": "h", "PL": "h", "SE": "b", "EE": "h", "LT": "h",
-             "CZ": "h", "DK": "g", "BG": "d"}, lang=lang),
+            {"FR": "h", "IT": "h", "DE": "b2", "HU": "h", "RO": "h", "PL": "h", "SE": "bg", "EE": "d", "LT": "d",
+             "CZ": "h", "DK": "g", "BG": "d",
+             # Les deux taux implicites les plus bas (auteur, 04/10 : nommer le bas de l'échelle).
+             "LU": "g", "IE": "b"}, lang=lang),
         "dette-monde-transmission%s.svg" % suf: transmission(rows, an, T["src_tr"], lang),
     }
 
