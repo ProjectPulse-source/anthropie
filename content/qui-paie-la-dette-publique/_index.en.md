@@ -255,6 +255,10 @@ What can be established is the effect of a specific decision — a reform, a fre
 <a class="prolongements__carte" href="/dette-publique-generations-futures/" hreflang="fr"><b>Future generations</b><span>When does debt really amount to a transfer to those who come after? (In French)</span></a>
 </div>
 
+## Frequently asked questions {#questions}
+
+{{< faq-visible >}}
+
 
 
 {{< appel-livre slug="dette-publique-qui-paie-vraiment" sur="This analysis is developed in the book" avis="non" >}}

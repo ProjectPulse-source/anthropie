@@ -220,6 +220,10 @@ Une règle gouverne enfin toutes les comparaisons de cette page&nbsp;: **le mill
 
 </details>
 
+## Questions fréquentes {#questions}
+
+{{< faq-visible >}}
+
 Reste une question que ces chiffres ne tranchent pas&nbsp;: qui supporte in fine cette charge, et une partie de son coût est-elle déplacée vers d'autres&nbsp;? C'est l'objet de la page suivante.
 
 {{< appel-livre slug="dette-publique-qui-paie-vraiment" sur="Pour prolonger l’analyse" avis="non" >}}
