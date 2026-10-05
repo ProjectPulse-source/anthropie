@@ -12,7 +12,8 @@ Rend EXÉCUTABLE la checklist d'assurance de couverture :
      FR/EN est un choix éditorial (« adapter, pas traduire », intent_matrix).
 
 Rapport informatif : exit 0 toujours — les absences ACTÉES vivent dans
-NASSE_GEO_ETENDUE.md (hors dépôt), l'arbitrage reste humain.
+NASSE_GEO_ETENDUE.md (hors de ce dépôt public : D:/PRO/06_PROMOTION/NASSE_GEO_ETENDUE/, dépôt privé du
+pilotage, depuis le 05/10/2026), l'arbitrage reste humain.
 Usage : python scripts/check-geo-coverage.py   (racine du repo ou scripts/)
 """
 
@@ -161,7 +162,7 @@ def main() -> int:
 
     warn += check_en_coverage(today)
 
-    print(f"\nBilan : {warn} signal(aux). Les absences ACTÉES (avec leur raison) vivent dans NASSE_GEO_ETENDUE.md — comparer avant d'agir.")
+    print(f"\nBilan : {warn} signal(aux). Les absences ACTÉES (avec leur raison) vivent dans D:/PRO/06_PROMOTION/NASSE_GEO_ETENDUE/NASSE_GEO_ETENDUE.md (§ 6b) — comparer avant d'agir.")
     return 0
 
 
