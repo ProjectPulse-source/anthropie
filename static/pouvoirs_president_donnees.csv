@@ -1,0 +1,47 @@
+﻿renvoi,pouvoir,attribut,present,article,citation,legiarti,lu_le
+"8, al. 1",Nommer le Premier ministre,acte,oui,8,Le Président de la République nomme le Premier ministre.,LEGIARTI000006527467,2026-09-30
+"8, al. 1",Nommer le Premier ministre,condition,non,,,,
+"8, al. 1",Nommer le Premier ministre,autre_autorite,non,,,,
+"8, al. 1",Nommer le Premier ministre,partage,non,,,,
+"8, al. 1",Nommer le Premier ministre,limite,oui,8,Il met fin à ses fonctions sur la présentation par celui-ci de la démission du Gouvernement.,LEGIARTI000006527467,2026-09-30
+11,Soumettre un projet de loi au référendum,acte,oui,11,peut soumettre au référendum tout projet de loi,LEGIARTI000019241004,2026-09-30
+11,Soumettre un projet de loi au référendum,condition,oui,11,sur proposition du Gouvernement pendant la durée des sessions ou sur proposition conjointe des deux assemblées,LEGIARTI000019241004,2026-09-30
+11,Soumettre un projet de loi au référendum,autre_autorite,oui,11,Lorsque le référendum a conclu à l'adoption du projet ou de la proposition de loi,LEGIARTI000019241004,2026-09-30
+11,Soumettre un projet de loi au référendum,partage,non,,,,
+11,Soumettre un projet de loi au référendum,limite,oui,11,"portant sur l'organisation des pouvoirs publics, sur des réformes relatives à la politique économique, sociale ou environnementale de la nation et aux services publics qui y concourent",LEGIARTI000019241004,2026-09-30
+12,Dissoudre l'Assemblée nationale,acte,oui,12,prononcer la dissolution de l'Assemblée nationale,LEGIARTI000006527474,2026-09-30
+12,Dissoudre l'Assemblée nationale,condition,oui,12,après consultation du Premier ministre et des Présidents des Assemblées,LEGIARTI000006527474,2026-09-30
+12,Dissoudre l'Assemblée nationale,autre_autorite,oui,12,Les élections générales ont lieu vingt jours au moins et quarante jours au plus après la dissolution.,LEGIARTI000006527474,2026-09-30
+12,Dissoudre l'Assemblée nationale,partage,non,,,,
+12,Dissoudre l'Assemblée nationale,limite,oui,12,Il ne peut être procédé à une nouvelle dissolution dans l'année qui suit ces élections.,LEGIARTI000006527474,2026-09-30
+16,Exercer les pouvoirs exceptionnels,acte,oui,16,le Président de la République prend les mesures exigées par ces circonstances,LEGIARTI000019241008,2026-09-30
+16,Exercer les pouvoirs exceptionnels,condition,oui,16,"après consultation officielle du Premier ministre, des Présidents des Assemblées ainsi que du Conseil constitutionnel",LEGIARTI000019241008,2026-09-30
+16,Exercer les pouvoirs exceptionnels,autre_autorite,oui,16,Il procède de plein droit à cet examen et se prononce dans les mêmes conditions au terme de soixante jours d'exercice des pouvoirs exceptionnels,LEGIARTI000019241008,2026-09-30
+16,Exercer les pouvoirs exceptionnels,partage,non,,,,
+16,Exercer les pouvoirs exceptionnels,limite,oui,16,d'une manière grave et immédiate et que le fonctionnement régulier des pouvoirs publics constitutionnels est interrompu,LEGIARTI000019241008,2026-09-30
+18,Adresser un message au Parlement,acte,oui,18,Le Président de la République communique avec les deux Assemblées du Parlement par des messages qu'il fait lire,LEGIARTI000019241012,2026-09-30
+18,Adresser un message au Parlement,condition,non,,,,
+18,Adresser un message au Parlement,autre_autorite,non,,,,
+18,Adresser un message au Parlement,partage,non,,,,
+18,Adresser un message au Parlement,limite,oui,18,qui ne donnent lieu à aucun débat,LEGIARTI000019241012,2026-09-30
+54,Saisir le Conseil constitutionnel d'un engagement international,acte,oui,54,saisi par le Président de la République,LEGIARTI000006527540,2026-09-30
+54,Saisir le Conseil constitutionnel d'un engagement international,condition,non,,,,
+54,Saisir le Conseil constitutionnel d'un engagement international,autre_autorite,oui,54,a déclaré qu'un engagement international comporte une clause contraire à la Constitution,LEGIARTI000006527540,2026-09-30
+54,Saisir le Conseil constitutionnel d'un engagement international,partage,oui,54,"par le Premier ministre, par le président de l'une ou l'autre assemblée ou par soixante députés ou soixante sénateurs",LEGIARTI000006527540,2026-09-30
+54,Saisir le Conseil constitutionnel d'un engagement international,limite,non,,,,
+56,Nommer trois membres du Conseil constitutionnel et son président,acte,oui,56,Trois des membres sont nommés par le Président de la République,LEGIARTI000019241071,2026-09-30
+56,Nommer trois membres du Conseil constitutionnel et son président,condition,non,,,,
+56,Nommer trois membres du Conseil constitutionnel et son président,autre_autorite,oui,56,La procédure prévue au dernier alinéa de l'article 13 est applicable à ces nominations.,LEGIARTI000019241071,2026-09-30
+56,Nommer trois membres du Conseil constitutionnel et son président,partage,oui,56,"trois par le président de l'Assemblée nationale, trois par le président du Sénat",LEGIARTI000019241071,2026-09-30
+56,Nommer trois membres du Conseil constitutionnel et son président,limite,non,,,,
+61,Déférer une loi au Conseil constitutionnel,acte,oui,61,"les lois peuvent être déférées au Conseil constitutionnel, avant leur promulgation, par le Président de la République",LEGIARTI000019241074,2026-09-30
+61,Déférer une loi au Conseil constitutionnel,condition,non,,,,
+61,Déférer une loi au Conseil constitutionnel,autre_autorite,oui,61,le Conseil constitutionnel doit statuer dans le délai d'un mois,LEGIARTI000019241074,2026-09-30
+61,Déférer une loi au Conseil constitutionnel,partage,oui,61,"le Premier ministre, le Président de l'Assemblée nationale, le Président du Sénat ou soixante députés ou soixante sénateurs",LEGIARTI000019241074,2026-09-30
+61,Déférer une loi au Conseil constitutionnel,limite,non,,,,
+,"qui fixe les regles : les matières de l'article 34, dont l'impôt",regle,oui,34,La loi fixe les règles concernant,LEGIARTI000049255019,2026-10-05
+,qui fixe les regles : l'impôt,regle,oui,34,"l'assiette, le taux et les modalités de recouvrement des impositions de toutes natures",LEGIARTI000049255019,2026-10-05
+,qui fixe les regles : le reste,regle,oui,37,Les matières autres que celles qui sont du domaine de la loi ont un caractère réglementaire.,LEGIARTI000006527508,2026-10-05
+,qui fixe les regles : le Premier ministre,regle,oui,21,il exerce le pouvoir réglementaire,LEGIARTI000006527485,2026-09-30
+,"qui fixe les regles : le président, pour une catégorie de décrets",regle,oui,13,Le Président de la République signe les ordonnances et les décrets délibérés en Conseil des ministres.,LEGIARTI000019241006,2026-09-30
+,qui fixe les regles : le contreseing,regle,oui,19,"sont contresignés par le Premier ministre et, le cas échéant, par les ministres responsables",LEGIARTI000006527482,2026-09-30

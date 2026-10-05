@@ -27,6 +27,10 @@ blocs:
         titre: "Littérature"
       - id: "philosophie"
         titre: "Philosophie"
+  - id: promesses
+    titre: "Promesses présidentielles : du pouvoir aux résultats"
+    chapo: "Qui peut décider, avec quels accords, dans quel délai — et comment vérifier le résultat ?"
+    # Remplace le bloc « Pouvoir et institutions » (arbitrage PRO-20261005-153428, décision de l'auteur du 05/10).
   - id: notions
     titre: "Notions et cadre d'analyse"
     chapo: "Les définitions du cadre anthropique, chacune reliée à ses sources."

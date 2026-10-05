@@ -107,3 +107,37 @@
 .article__body ol {
   line-height: var(--lh-body);
 }
+
+// ── Page /pouvoirs-du-president-de-la-republique/ (shortcode pouvoirs-president) ──
+// Même neutralisation que .dette-monde-table : les règles globales `main table` imposent
+// `table-layout: fixed` et des largeurs 18/32/50 % aux trois premières colonnes (mesuré le 29/09).
+main .pouvoirs-table {
+  table-layout: auto !important;
+  min-width: 480px;
+  font-family: var(--font-sans);
+  caption { caption-side: top; text-align: left; padding-bottom: 0.5rem; color: var(--color-text-subtle); }
+  th, td { width: auto !important; padding: 0.3rem 0.55rem !important; text-align: left !important;
+           border-bottom: 1px solid var(--color-rule-medium) !important; font-size: 0.85rem !important;
+           letter-spacing: 0 !important; text-transform: none !important; vertical-align: top; }
+  tbody th { font-weight: 400; }
+  tr:nth-child(2n) { background: transparent; }
+}
+
+.pouvoirs-fiches { margin: 1rem 0 2rem; }
+
+.pouvoir-fiche {
+  margin: 0 0 1.6rem;
+  padding: 0 0 1.2rem;
+  border-bottom: 1px solid var(--color-rule-medium);
+  scroll-margin-top: 5rem;
+  h3 { margin: 0 0 0.6rem; }
+  dl { display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.35rem 1rem; margin: 0; }
+  dt { font-family: var(--font-sans); font-size: var(--fs-tiny); font-weight: 600; color: var(--color-text-subtle); padding-top: 0.15rem; }
+  dd { margin: 0; }
+  @media (max-width: 560px) {
+    dl { grid-template-columns: 1fr; gap: 0.1rem; }
+    dd { margin-bottom: 0.5rem; }
+  }
+}
+
+.pouvoirs-sources { font-size: var(--fs-small); }

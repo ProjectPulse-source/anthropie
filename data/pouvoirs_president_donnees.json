@@ -1,0 +1,277 @@
+{
+ "releve_le": "2026-10-05",
+ "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; texte de la Constitution : Légifrance (DILA), Licence Ouverte",
+ "meta": {
+  "page": "https://stephane-lalut.com/pouvoirs-du-president-de-la-republique/",
+  "protocole": "fiches de preuve v2, volet Décider, E1",
+  "definitions": {
+   "condition": "Proposition ou consultation exigée avant l'acte",
+   "autre_autorite": "Une autre autorité intervient pour la suite",
+   "partage": "D'autres autorités disposent aussi de ce pouvoir",
+   "limite": "Limite écrite de temps ou d'objet"
+  },
+  "lecture": "Une case renseignée = une citation exacte de l'article indiqué ; une case vide ne dit rien des autres articles ni de la pratique institutionnelle."
+ },
+ "gardes": [
+  "G2 : 25 citations de l'inventaire retrouvees mot pour mot",
+  "G2 : 6 citations de « qui fixe les regles » retrouvees",
+  "G2 : 13 citations entre guillemets des fiches retrouvees",
+  "G3 : inventaire complet, 8 renvois relus dans l'article 19 (8, 11, 12, 16, 18, 54, 56, 61)",
+  "G4 : « seulement » tenu (2 sur 8)"
+ ],
+ "inventaire": [
+  {
+   "renvoi": "8, al. 1",
+   "pouvoir": "Nommer le Premier ministre",
+   "ancre": "nommer-premier-ministre",
+   "acte": {
+    "art": "8",
+    "cite": "Le Président de la République nomme le Premier ministre."
+   },
+   "condition": null,
+   "autre_autorite": null,
+   "partage": null,
+   "limite": {
+    "art": "8",
+    "cite": "Il met fin à ses fonctions sur la présentation par celui-ci de la démission du Gouvernement."
+   },
+   "legifrance": {
+    "acte": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006527467",
+    "limite": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006527467"
+   }
+  },
+  {
+   "renvoi": "11",
+   "pouvoir": "Soumettre un projet de loi au référendum",
+   "ancre": "referendum",
+   "acte": {
+    "art": "11",
+    "cite": "peut soumettre au référendum tout projet de loi"
+   },
+   "condition": {
+    "art": "11",
+    "cite": "sur proposition du Gouvernement pendant la durée des sessions ou sur proposition conjointe des deux assemblées"
+   },
+   "autre_autorite": {
+    "art": "11",
+    "cite": "Lorsque le référendum a conclu à l'adoption du projet ou de la proposition de loi"
+   },
+   "partage": null,
+   "limite": {
+    "art": "11",
+    "cite": "portant sur l'organisation des pouvoirs publics, sur des réformes relatives à la politique économique, sociale ou environnementale de la nation et aux services publics qui y concourent"
+   },
+   "legifrance": {
+    "acte": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241004",
+    "condition": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241004",
+    "autre_autorite": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241004",
+    "limite": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241004"
+   }
+  },
+  {
+   "renvoi": "12",
+   "pouvoir": "Dissoudre l'Assemblée nationale",
+   "ancre": "dissolution",
+   "acte": {
+    "art": "12",
+    "cite": "prononcer la dissolution de l'Assemblée nationale"
+   },
+   "condition": {
+    "art": "12",
+    "cite": "après consultation du Premier ministre et des Présidents des Assemblées"
+   },
+   "autre_autorite": {
+    "art": "12",
+    "cite": "Les élections générales ont lieu vingt jours au moins et quarante jours au plus après la dissolution."
+   },
+   "partage": null,
+   "limite": {
+    "art": "12",
+    "cite": "Il ne peut être procédé à une nouvelle dissolution dans l'année qui suit ces élections."
+   },
+   "legifrance": {
+    "acte": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006527474",
+    "condition": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006527474",
+    "autre_autorite": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006527474",
+    "limite": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006527474"
+   }
+  },
+  {
+   "renvoi": "16",
+   "pouvoir": "Exercer les pouvoirs exceptionnels",
+   "ancre": "pouvoirs-exceptionnels",
+   "acte": {
+    "art": "16",
+    "cite": "le Président de la République prend les mesures exigées par ces circonstances"
+   },
+   "condition": {
+    "art": "16",
+    "cite": "après consultation officielle du Premier ministre, des Présidents des Assemblées ainsi que du Conseil constitutionnel"
+   },
+   "autre_autorite": {
+    "art": "16",
+    "cite": "Il procède de plein droit à cet examen et se prononce dans les mêmes conditions au terme de soixante jours d'exercice des pouvoirs exceptionnels"
+   },
+   "partage": null,
+   "limite": {
+    "art": "16",
+    "cite": "d'une manière grave et immédiate et que le fonctionnement régulier des pouvoirs publics constitutionnels est interrompu"
+   },
+   "legifrance": {
+    "acte": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241008",
+    "condition": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241008",
+    "autre_autorite": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241008",
+    "limite": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241008"
+   }
+  },
+  {
+   "renvoi": "18",
+   "pouvoir": "Adresser un message au Parlement",
+   "ancre": "messages-parlement",
+   "acte": {
+    "art": "18",
+    "cite": "Le Président de la République communique avec les deux Assemblées du Parlement par des messages qu'il fait lire"
+   },
+   "condition": null,
+   "autre_autorite": null,
+   "partage": null,
+   "limite": {
+    "art": "18",
+    "cite": "qui ne donnent lieu à aucun débat"
+   },
+   "legifrance": {
+    "acte": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241012",
+    "limite": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241012"
+   }
+  },
+  {
+   "renvoi": "54",
+   "pouvoir": "Saisir le Conseil constitutionnel d'un engagement international",
+   "court": "Saisir le Conseil constitutionnel d'un traité",
+   "ancre": "saisir-cc-traite",
+   "acte": {
+    "art": "54",
+    "cite": "saisi par le Président de la République"
+   },
+   "condition": null,
+   "autre_autorite": {
+    "art": "54",
+    "cite": "a déclaré qu'un engagement international comporte une clause contraire à la Constitution"
+   },
+   "partage": {
+    "art": "54",
+    "cite": "par le Premier ministre, par le président de l'une ou l'autre assemblée ou par soixante députés ou soixante sénateurs"
+   },
+   "limite": null,
+   "legifrance": {
+    "acte": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006527540",
+    "autre_autorite": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006527540",
+    "partage": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006527540"
+   }
+  },
+  {
+   "renvoi": "56",
+   "pouvoir": "Nommer trois membres du Conseil constitutionnel et son président",
+   "court": "Nommer au Conseil constitutionnel",
+   "ancre": "nommer-conseil-constitutionnel",
+   "acte": {
+    "art": "56",
+    "cite": "Trois des membres sont nommés par le Président de la République"
+   },
+   "condition": null,
+   "autre_autorite": {
+    "art": "56",
+    "cite": "La procédure prévue au dernier alinéa de l'article 13 est applicable à ces nominations."
+   },
+   "partage": {
+    "art": "56",
+    "cite": "trois par le président de l'Assemblée nationale, trois par le président du Sénat"
+   },
+   "limite": null,
+   "legifrance": {
+    "acte": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241071",
+    "autre_autorite": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241071",
+    "partage": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241071"
+   }
+  },
+  {
+   "renvoi": "61",
+   "pouvoir": "Déférer une loi au Conseil constitutionnel",
+   "court": "Déférer une loi au Conseil constitutionnel",
+   "ancre": "saisir-cc-loi",
+   "acte": {
+    "art": "61",
+    "cite": "les lois peuvent être déférées au Conseil constitutionnel, avant leur promulgation, par le Président de la République"
+   },
+   "condition": null,
+   "autre_autorite": {
+    "art": "61",
+    "cite": "le Conseil constitutionnel doit statuer dans le délai d'un mois"
+   },
+   "partage": {
+    "art": "61",
+    "cite": "le Premier ministre, le Président de l'Assemblée nationale, le Président du Sénat ou soixante députés ou soixante sénateurs"
+   },
+   "limite": null,
+   "legifrance": {
+    "acte": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241074",
+    "autre_autorite": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241074",
+    "partage": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241074"
+   }
+  }
+ ],
+ "regles": [
+  {
+   "art": "34",
+   "cite": "La loi fixe les règles concernant",
+   "objet": "les matières de l'article 34, dont l'impôt"
+  },
+  {
+   "art": "34",
+   "cite": "l'assiette, le taux et les modalités de recouvrement des impositions de toutes natures",
+   "objet": "l'impôt"
+  },
+  {
+   "art": "37",
+   "cite": "Les matières autres que celles qui sont du domaine de la loi ont un caractère réglementaire.",
+   "objet": "le reste"
+  },
+  {
+   "art": "21",
+   "cite": "il exerce le pouvoir réglementaire",
+   "objet": "le Premier ministre"
+  },
+  {
+   "art": "13",
+   "cite": "Le Président de la République signe les ordonnances et les décrets délibérés en Conseil des ministres.",
+   "objet": "le président, pour une catégorie de décrets"
+  },
+  {
+   "art": "19",
+   "cite": "sont contresignés par le Premier ministre et, le cas échéant, par les ministres responsables",
+   "objet": "le contreseing"
+  }
+ ],
+ "comptes": {
+  "condition": 3,
+  "autre_autorite": 6,
+  "partage": 3,
+  "limite": 5,
+  "n": 8,
+  "sans_condition_ni_autre_autorite_ni_partage": [
+   "8, al. 1",
+   "18"
+  ]
+ },
+ "affichage": {
+  "n_renvois": "huit",
+  "n_condition": "trois",
+  "n_autre": "six",
+  "n_partage": "trois",
+  "n_limite": "cinq",
+  "n_seuls": "deux",
+  "n_seuls_maj": "Deux",
+  "seuls_liste": "nommer le Premier ministre et adresser un message au Parlement",
+  "releve_le": "05/10/2026 (textes lus sur Légifrance du 30/09/2026 au 05/10/2026)"
+ }
+}

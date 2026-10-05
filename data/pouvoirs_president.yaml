@@ -1,0 +1,309 @@
+# Base des pouvoirs du président de la République — source unique de la page
+# /pouvoirs-du-president-de-la-republique/ (shortcode pouvoirs-president).
+#
+# Décision : registre GEO-PLUS, D3, tour 5 (D:\PRO\06_PROMOTION\ARBITRAGE_CONTRE_EXPERTISE_GEO-PLUS_2026-09-29.md).
+# PÉRIMÈTRE FERMÉ : les pouvoirs que la page traite, pas une encyclopédie constitutionnelle.
+#   - sans_contreseing : la liste de l'article 19, complète (art. 8 al. 1, 11, 12, 16, 18, 54, 56, 61) ;
+#   - contresigne      : les pouvoirs que les lecteurs croient propres alors qu'ils sont contresignés ;
+#   - gouvernement     : ce que la Constitution confie au Gouvernement et au Premier ministre.
+#
+# RÈGLE DE PREUVE : chaque article cité est LU sur Légifrance (API PISTE, MCP `sources`, outil
+# legifrance_article), dans sa version en vigueur, au moment d'écrire. `lu_le` porte la date de
+# lecture, `empreinte` le SHA-256 de la réponse archivée par l'outil. Une entrée dont un article
+# n'a pas de `lu_le` NE S'AFFICHE PAS, et le build l'annonce (warnf).
+#
+# Rédaction : les champs ne disent que ce que le texte dit. Pratique, doctrine et jurisprudence
+# n'y entrent pas tant qu'elles n'ont pas été lues à leur source ; là où le texte se tait, le
+# champ le dit (« le texte ne précise pas… »).
+#
+# portee_texte : ce que l'acte produit, dit en une phrase fidèle au texte. La catégorie exclusive de « portée »
+#   (produit, déclenche, nomme, saisit) a été RETIRÉE le 05/10/2026 : des catégories exclusives fabriquaient un
+#   résultat (arbitrage PRO-20261005-164029, P3). Les attributs cumulables sont dans inventaire_19.
+
+articles:
+  "5":  { legiarti: LEGIARTI000006527459, vigueur_depuis: 1995-08-05, lu_le: 2026-09-30, empreinte: d3ce458bdaf3a314e60f1142b9c98d6144637002d60b9a141681805fa58bb532 }
+  "8":  { legiarti: LEGIARTI000006527467, vigueur_depuis: 1958-10-05, lu_le: 2026-09-30, empreinte: fc69bc1ecc412c203538e4901889b05240a61722725da5787e1c0de17c292200 }
+  "9":  { legiarti: LEGIARTI000006527468, vigueur_depuis: 1958-10-05, lu_le: 2026-09-30, empreinte: 750dee5faabfa815bc50e3d318f7501e6a6b52bd79e74f1d33a88c962cb228bc }
+  "10": { legiarti: LEGIARTI000006527469, vigueur_depuis: 1958-10-05, lu_le: 2026-09-30, empreinte: a0e4c47afc8bdd62fc63b45662fa6d32fc5d54a9db1ad5b7c8990fcd84d5ebaa }
+  "11": { legiarti: LEGIARTI000019241004, vigueur_depuis: 2008-07-25, lu_le: 2026-09-30, empreinte: e4718a1b13a755204ea409d81c5025811a2bfb29fb5e6fae0bc10a87d19367d8 }
+  "12": { legiarti: LEGIARTI000006527474, vigueur_depuis: 1995-08-05, lu_le: 2026-09-30, empreinte: acf147608008a20cca542cd16a851b723937da75634d3480e467ffc1056c38f2 }
+  "13": { legiarti: LEGIARTI000019241006, vigueur_depuis: 2008-07-25, lu_le: 2026-09-30, empreinte: 48d68737de9c34143c355de92838a0155262914c3a30096cd639a481a095f95a }
+  "15": { legiarti: LEGIARTI000006527478, vigueur_depuis: 1958-10-05, lu_le: 2026-09-30, empreinte: 38d6b5121eeb85a44799e694dcee7989d2f3de2f290023f1ad455a2cd2868ee7 }
+  "16": { legiarti: LEGIARTI000019241008, vigueur_depuis: 2008-07-25, lu_le: 2026-09-30, empreinte: 2a1362415f5ff192bf6a5c0c621309eafd96fb5c95501e0b4d78917593a5d018 }
+  "17": { legiarti: LEGIARTI000019241010, vigueur_depuis: 2008-07-25, lu_le: 2026-09-30, empreinte: 8f405020fee1a2e70c9526fb4bef4a3271c81c6b959bbaf0673df06a917d6035 }
+  "18": { legiarti: LEGIARTI000019241012, vigueur_depuis: 2008-07-25, lu_le: 2026-09-30, empreinte: 5f2615f1bb3b64664d4be142f294707fbaced3c39a38f4633be754c16d033509 }
+  "19": { legiarti: LEGIARTI000006527482, vigueur_depuis: 1958-10-05, lu_le: 2026-09-30, empreinte: 6f964a9686927f9c174efa86fc1dcba43b752b7a94c135ff58e9295e19c59efb }
+  "20": { legiarti: LEGIARTI000006527483, vigueur_depuis: 1958-10-05, lu_le: 2026-09-30, empreinte: 3061c56a25df23891303fe31d1e7ddbb3a30463283d600f1e9759e594cd5110d }
+  "21": { legiarti: LEGIARTI000006527485, vigueur_depuis: 1958-10-05, lu_le: 2026-09-30, empreinte: ec04bca269f2bb1d8d41a22541853096f4a2eef7091b31f154e05f8158502a28 }
+  "22": { legiarti: LEGIARTI000006527486, vigueur_depuis: 1958-10-05, lu_le: 2026-09-30, empreinte: 79933dc89cbeab8bb98b833bbb5c4fe31dd01d6cecaab9821b36cb08ec099736 }
+  "52": { legiarti: LEGIARTI000006527533, vigueur_depuis: 1958-10-05, lu_le: 2026-09-30, empreinte: 48ca2179af7f079b81414c154cf301493c574ebbb0a0dad8bd734ffcfc7362ab }
+  "54": { legiarti: LEGIARTI000006527540, vigueur_depuis: 1992-06-26, lu_le: 2026-09-30, empreinte: 1e8c563173be3521ae76bc44300336bab878cb362987cffebc13dcaa2b1d8448 }
+  "56": { legiarti: LEGIARTI000019241071, vigueur_depuis: 2008-07-25, lu_le: 2026-09-30, empreinte: c6d8dbe2edebbf0a32d14d554fb991194a111ab317fb5abf3b3f92e78c237344 }
+  "61": { legiarti: LEGIARTI000019241074, vigueur_depuis: 2008-07-25, lu_le: 2026-09-30, empreinte: c14abed78a1e9932d2cf37f84e6366e03847a41174d17466b5f83b4a0a3d299c }
+  "34": { legiarti: LEGIARTI000049255019, vigueur_depuis: 2024-03-10, lu_le: 2026-10-05, empreinte: e1e942eccace67bff5f064c59a0baf9cb139f99b91b629155f48f76b89a6a067 }
+  "37": { legiarti: LEGIARTI000006527508, vigueur_depuis: 1958-10-05, lu_le: 2026-10-05, empreinte: e0f7c95680179e006c8fc8da8378bef366615e09b1b10ef28d5a3c3bd6876c36 }
+
+# ── Inventaire de l'article 19, en CITATIONS (fiches de preuve v2, Décider E1 ; arbitrage PRO-20261005-164029) ──
+# Chaque case de la matrice n'est remplie que par une citation EXACTE de l'article indiqué. Le générateur
+# (scripts/update_pouvoirs_president.py) relit le texte archivé de chaque article (02_FABRIQUE/sources/archive,
+# empreinte ci-dessus) et ARRÊTE si une citation n'y figure pas mot pour mot. Une case vide (null) dit seulement que
+# l'article lui-même ne contient pas cet élément : elle ne dit rien d'autres articles, ni de la pratique.
+# Attributs cumulables, jamais exclusifs :
+#   acte           — ce que le texte fait faire au président ;
+#   condition      — une proposition ou une consultation que le texte exige AVANT l'acte ;
+#   autre_autorite — une autre autorité que le texte fait intervenir pour la suite ou l'issue ;
+#   partage        — d'autres autorités disposent aussi de ce pouvoir, nommées par le texte (art. 56 : chacune pour
+#                    des sièges différents ; libellé « même pouvoir » retiré, pièce entrante du 05/10) ;
+#   limite         — une limite écrite de temps ou d'objet.
+inventaire_19:
+  - renvoi: "8, al. 1"
+    pouvoir: "Nommer le Premier ministre"
+    ancre: nommer-premier-ministre
+    acte: {art: "8", cite: "Le Président de la République nomme le Premier ministre."}
+    condition: null
+    autre_autorite: null
+    partage: null
+    limite: {art: "8", cite: "Il met fin à ses fonctions sur la présentation par celui-ci de la démission du Gouvernement."}
+  - renvoi: "11"
+    pouvoir: "Soumettre un projet de loi au référendum"
+    ancre: referendum
+    acte: {art: "11", cite: "peut soumettre au référendum tout projet de loi"}
+    condition: {art: "11", cite: "sur proposition du Gouvernement pendant la durée des sessions ou sur proposition conjointe des deux assemblées"}
+    autre_autorite: {art: "11", cite: "Lorsque le référendum a conclu à l'adoption du projet ou de la proposition de loi"}
+    partage: null
+    limite: {art: "11", cite: "portant sur l'organisation des pouvoirs publics, sur des réformes relatives à la politique économique, sociale ou environnementale de la nation et aux services publics qui y concourent"}
+  - renvoi: "12"
+    pouvoir: "Dissoudre l'Assemblée nationale"
+    ancre: dissolution
+    acte: {art: "12", cite: "prononcer la dissolution de l'Assemblée nationale"}
+    condition: {art: "12", cite: "après consultation du Premier ministre et des Présidents des Assemblées"}
+    autre_autorite: {art: "12", cite: "Les élections générales ont lieu vingt jours au moins et quarante jours au plus après la dissolution."}
+    partage: null
+    limite: {art: "12", cite: "Il ne peut être procédé à une nouvelle dissolution dans l'année qui suit ces élections."}
+  - renvoi: "16"
+    pouvoir: "Exercer les pouvoirs exceptionnels"
+    ancre: pouvoirs-exceptionnels
+    acte: {art: "16", cite: "le Président de la République prend les mesures exigées par ces circonstances"}
+    condition: {art: "16", cite: "après consultation officielle du Premier ministre, des Présidents des Assemblées ainsi que du Conseil constitutionnel"}
+    autre_autorite: {art: "16", cite: "Il procède de plein droit à cet examen et se prononce dans les mêmes conditions au terme de soixante jours d'exercice des pouvoirs exceptionnels"}
+    partage: null
+    limite: {art: "16", cite: "d'une manière grave et immédiate et que le fonctionnement régulier des pouvoirs publics constitutionnels est interrompu"}
+  - renvoi: "18"
+    pouvoir: "Adresser un message au Parlement"
+    ancre: messages-parlement
+    acte: {art: "18", cite: "Le Président de la République communique avec les deux Assemblées du Parlement par des messages qu'il fait lire"}
+    condition: null
+    autre_autorite: null
+    partage: null
+    limite: {art: "18", cite: "qui ne donnent lieu à aucun débat"}
+  - renvoi: "54"
+    pouvoir: "Saisir le Conseil constitutionnel d'un engagement international"
+    court: "Saisir le Conseil constitutionnel d'un traité"
+    ancre: saisir-cc-traite
+    acte: {art: "54", cite: "saisi par le Président de la République"}
+    condition: null
+    autre_autorite: {art: "54", cite: "a déclaré qu'un engagement international comporte une clause contraire à la Constitution"}
+    partage: {art: "54", cite: "par le Premier ministre, par le président de l'une ou l'autre assemblée ou par soixante députés ou soixante sénateurs"}
+    limite: null
+  - renvoi: "56"
+    pouvoir: "Nommer trois membres du Conseil constitutionnel et son président"
+    court: "Nommer au Conseil constitutionnel"
+    ancre: nommer-conseil-constitutionnel
+    acte: {art: "56", cite: "Trois des membres sont nommés par le Président de la République"}
+    condition: null
+    autre_autorite: {art: "56", cite: "La procédure prévue au dernier alinéa de l'article 13 est applicable à ces nominations."}
+    partage: {art: "56", cite: "trois par le président de l'Assemblée nationale, trois par le président du Sénat"}
+    limite: null
+  - renvoi: "61"
+    pouvoir: "Déférer une loi au Conseil constitutionnel"
+    court: "Déférer une loi au Conseil constitutionnel"
+    ancre: saisir-cc-loi
+    acte: {art: "61", cite: "les lois peuvent être déférées au Conseil constitutionnel, avant leur promulgation, par le Président de la République"}
+    condition: null
+    autre_autorite: {art: "61", cite: "le Conseil constitutionnel doit statuer dans le délai d'un mois"}
+    partage: {art: "61", cite: "le Premier ministre, le Président de l'Assemblée nationale, le Président du Sénat ou soixante députés ou soixante sénateurs"}
+    limite: null
+
+# ── Qui fixe les règles (Décider E1, attribution POSITIVE par le texte ; aucune phrase « il ne peut pas ») ──
+regles:
+  - {art: "34", cite: "La loi fixe les règles concernant", objet: "les matières de l'article 34, dont l'impôt"}
+  - {art: "34", cite: "l'assiette, le taux et les modalités de recouvrement des impositions de toutes natures", objet: "l'impôt"}
+  - {art: "37", cite: "Les matières autres que celles qui sont du domaine de la loi ont un caractère réglementaire.", objet: "le reste"}
+  - {art: "21", cite: "il exerce le pouvoir réglementaire", objet: "le Premier ministre"}
+  - {art: "13", cite: "Le Président de la République signe les ordonnances et les décrets délibérés en Conseil des ministres.", objet: "le président, pour une catégorie de décrets"}
+  - {art: "19", cite: "sont contresignés par le Premier ministre et, le cas échéant, par les ministres responsables", objet: "le contreseing"}
+
+groupes:
+  - id: sans_contreseing
+    titre: "Les actes que le président signe sans contreseing"
+    chapo: "L'article 19 les énumère : ce sont les seuls actes du président que ni le Premier ministre ni un ministre ne contresignent. Sans contreseing ne veut pas dire sans condition."
+  - id: contresigne
+    titre: "Les pouvoirs qu'on lui prête en propre, et qui sont contresignés"
+    chapo: "Tous les autres actes du président portent la signature du Premier ministre et, le cas échéant, des ministres responsables (art. 19). La Constitution l'exige."
+  - id: gouvernement
+    titre: "Ce que la Constitution confie au Gouvernement"
+    chapo: "Plusieurs décisions que l'on attribue au président appartiennent, dans le texte, au Gouvernement ou au Premier ministre."
+
+pouvoirs:
+  # ── Sans contreseing (art. 19) ──────────────────────────────────────────────
+  - id: nommer-premier-ministre
+    groupe: sans_contreseing
+    question: "Le président peut-il nommer et renvoyer le Premier ministre ?"
+    pouvoir: "Nommer le Premier ministre"
+    articles: ["8", "19", "20"]
+    decide: "Le président, seul, pour la nomination (art. 8, al. 1)."
+    condition: "Aucune condition écrite pour nommer."
+    tiers: "L'Assemblée nationale : le Gouvernement est responsable devant le Parlement dans les conditions des articles 49 et 50 (art. 20)."
+    portee_texte: "La nomination est acquise par sa seule signature. La fin des fonctions intervient « sur la présentation par celui-ci de la démission du Gouvernement » (art. 8, al. 1) : c'est la seule voie que l'article décrit."
+
+  - id: referendum
+    groupe: sans_contreseing
+    question: "Le président peut-il organiser un référendum seul ?"
+    pouvoir: "Soumettre un projet de loi au référendum"
+    articles: ["11", "19"]
+    decide: "Le président soumet le texte au peuple ; le peuple décide."
+    condition: "Une proposition du Gouvernement pendant la durée des sessions, ou une proposition conjointe des deux assemblées, publiées au Journal officiel. L'objet est limité : organisation des pouvoirs publics, réformes relatives à la politique économique, sociale ou environnementale et aux services publics qui y concourent, autorisation de ratifier certains traités."
+    tiers: "Le Gouvernement ou les deux assemblées pour proposer ; les électeurs pour adopter."
+    portee_texte: "L'initiative appartient au Gouvernement ou aux deux assemblées, qui proposent ; le président décide de soumettre. Dans le référendum d'initiative partagée (un cinquième des parlementaires, soutenu par un dixième des électeurs inscrits), le texte l'oblige : si les deux assemblées n'ont pas examiné la proposition dans le délai de la loi organique, il « la soumet » au référendum."
+
+  - id: dissolution
+    groupe: sans_contreseing
+    question: "Le président peut-il dissoudre l'Assemblée nationale sans l'accord du Premier ministre ?"
+    pouvoir: "Dissoudre l'Assemblée nationale"
+    articles: ["12", "16", "19"]
+    decide: "Le président, après consultation du Premier ministre et des présidents des assemblées."
+    condition: "La consultation est exigée, pas l'accord. Pas de nouvelle dissolution dans l'année qui suit les élections ; aucune dissolution pendant l'exercice des pouvoirs exceptionnels (art. 16)."
+    tiers: "Les électeurs : les élections générales ont lieu vingt jours au moins et quarante jours au plus après la dissolution."
+    portee_texte: "La dissolution est acquise par sa seule décision. La majorité qui en sortira appartient aux électeurs."
+
+  - id: pouvoirs-exceptionnels
+    groupe: sans_contreseing
+    question: "Que sont les pouvoirs exceptionnels de l'article 16 ?"
+    pouvoir: "Exercer les pouvoirs exceptionnels"
+    articles: ["16", "19"]
+    decide: "Le président prend « les mesures exigées par ces circonstances »."
+    condition: "Deux conditions cumulées : une menace grave et immédiate sur les institutions, l'indépendance de la Nation, l'intégrité du territoire ou l'exécution des engagements internationaux, et l'interruption du fonctionnement régulier des pouvoirs publics constitutionnels. Consultation officielle du Premier ministre, des présidents des assemblées et du Conseil constitutionnel ; message à la Nation."
+    tiers: "Le Parlement se réunit de plein droit. Après trente jours, le Conseil constitutionnel peut être saisi pour examiner si les conditions demeurent réunies ; il le fait de plein droit à soixante jours et à tout moment au-delà, par un avis public."
+    portee_texte: "Les mesures doivent être inspirées par la volonté de rendre aux pouvoirs publics, « dans les moindres délais », les moyens d'accomplir leur mission : le pouvoir est borné par son but et contrôlé dans sa durée."
+
+  - id: messages-parlement
+    groupe: sans_contreseing
+    question: "Le président peut-il s'adresser au Parlement ?"
+    pouvoir: "Adresser un message au Parlement, parler devant le Congrès"
+    articles: ["18", "19"]
+    decide: "Le président."
+    condition: "Messages lus, sans débat. Devant le Congrès, sa déclaration peut être suivie, hors sa présence, d'un débat sans vote."
+    tiers: "Aucun."
+    portee_texte: "L'effet est celui d'une parole : aucun vote ne suit."
+
+  - id: saisir-cc-traite
+    groupe: sans_contreseing
+    question: "Le président peut-il faire contrôler seul un traité ?"
+    pouvoir: "Saisir le Conseil constitutionnel d'un engagement international"
+    articles: ["54", "19"]
+    decide: "Le Conseil constitutionnel."
+    condition: "Aucune pour saisir. Le Premier ministre, le président de chaque assemblée, soixante députés ou soixante sénateurs le peuvent aussi."
+    tiers: "Le Conseil constitutionnel ; puis, si une clause est contraire à la Constitution, le constituant."
+    portee_texte: "S'il déclare une clause contraire à la Constitution, l'autorisation de ratifier n'intervient qu'après révision de la Constitution. Le président obtient l'examen, pas la décision."
+
+  - id: nommer-conseil-constitutionnel
+    groupe: sans_contreseing
+    question: "Qui nomme les membres du Conseil constitutionnel ?"
+    pouvoir: "Nommer trois membres du Conseil constitutionnel et son président"
+    articles: ["56", "13", "19"]
+    decide: "Le président, pour trois des neuf membres et pour le président du Conseil ; trois autres sont nommés par le président de l'Assemblée nationale, trois par le président du Sénat."
+    condition: "Pour ces nominations, la procédure du dernier alinéa de l'article 13 : avis public de la commission compétente de chaque assemblée."
+    tiers: "Les commissions parlementaires : la nomination est impossible si les votes négatifs représentent au moins trois cinquièmes des suffrages exprimés dans les deux commissions (art. 13)."
+    portee_texte: "Le choix lui appartient ; une opposition qualifiée du Parlement peut l'empêcher."
+
+  - id: saisir-cc-loi
+    groupe: sans_contreseing
+    question: "Le président peut-il faire contrôler une loi avant sa promulgation ?"
+    pouvoir: "Déférer une loi au Conseil constitutionnel avant sa promulgation"
+    articles: ["61", "10", "19"]
+    decide: "Le Conseil constitutionnel, qui se prononce sur la conformité de la loi à la Constitution."
+    condition: "Avant la promulgation. Le Premier ministre, les présidents des deux assemblées, soixante députés ou soixante sénateurs le peuvent aussi."
+    tiers: "Le Conseil constitutionnel, qui statue dans le délai d'un mois (huit jours en cas d'urgence, à la demande du Gouvernement)."
+    portee_texte: "La saisine suspend le délai de promulgation. Elle obtient un contrôle de constitutionnalité, pas un jugement d'opportunité."
+
+  # ── Contresignés ────────────────────────────────────────────────────────────
+  - id: nommer-ministres
+    groupe: contresigne
+    question: "Le président choisit-il seul les ministres ?"
+    pouvoir: "Nommer les ministres et mettre fin à leurs fonctions"
+    articles: ["8", "19"]
+    decide: "Le président, « sur la proposition du Premier ministre » (art. 8, al. 2)."
+    condition: "Une proposition du Premier ministre."
+    tiers: "Le Premier ministre, qui propose et contresigne."
+    portee_texte: "Ni la nomination ni le renvoi d'un ministre ne sont dans la liste de l'article 19."
+
+  - id: promulguer
+    groupe: contresigne
+    question: "Le président peut-il refuser de promulguer une loi ?"
+    pouvoir: "Promulguer les lois, demander une nouvelle délibération"
+    articles: ["10", "19"]
+    decide: "Le président promulgue ; le Parlement délibère à nouveau s'il le demande."
+    condition: "Promulgation dans les quinze jours qui suivent la transmission de la loi définitivement adoptée. Avant l'expiration de ce délai, il peut demander une nouvelle délibération de la loi ou de certains articles."
+    tiers: "Le Parlement : la nouvelle délibération « ne peut être refusée », et c'est lui qui vote à nouveau."
+    portee_texte: "Le texte fixe un délai de promulgation et ouvre une seconde lecture, dont l'issue appartient au Parlement ; il ne prévoit pas de veto."
+
+  - id: decrets-ordonnances
+    groupe: contresigne
+    question: "Le président peut-il gouverner par décret ?"
+    pouvoir: "Signer les ordonnances et les décrets délibérés en Conseil des ministres"
+    articles: ["13", "9", "21", "19"]
+    decide: "Le président signe les ordonnances et les décrets délibérés en Conseil des ministres, qu'il préside (art. 9). Les autres décrets relèvent du Premier ministre, qui exerce le pouvoir réglementaire sous réserve de l'article 13 (art. 21)."
+    condition: "Une délibération en Conseil des ministres."
+    tiers: "Le Premier ministre et les ministres responsables, qui contresignent."
+    portee_texte: "Le texte dit « signe » ; il ne précise pas si le président peut refuser. Le texte confie le pouvoir réglementaire de droit commun au Premier ministre (art. 21)."
+
+  - id: nominations-emplois
+    groupe: contresigne
+    question: "Le président nomme-t-il seul les hauts fonctionnaires ?"
+    pouvoir: "Nommer aux emplois civils et militaires de l'État"
+    articles: ["13", "21", "19"]
+    decide: "Le président pour les emplois pourvus en Conseil des ministres (conseillers d'État, ambassadeurs, préfets, recteurs, directeurs d'administration centrale, officiers généraux…) ; le Premier ministre pour les autres, sous réserve de l'article 13 (art. 21)."
+    condition: "Délibération en Conseil des ministres pour les emplois énumérés. Pour les emplois fixés par une loi organique, avis public de la commission compétente de chaque assemblée."
+    tiers: "Le Premier ministre et les ministres, qui contresignent ; les commissions parlementaires, qui peuvent empêcher une nomination par trois cinquièmes des suffrages exprimés."
+    portee_texte: "Le pouvoir de nomination est partagé avec le Premier ministre et, pour une liste d'emplois, soumis à un veto parlementaire qualifié."
+
+  - id: chef-des-armees
+    groupe: contresigne
+    question: "Le président décide-t-il seul en matière militaire ?"
+    pouvoir: "Chef des armées"
+    articles: ["15", "20", "21", "19"]
+    decide: "Le président est le chef des armées et préside les conseils et comités supérieurs de la Défense nationale (art. 15)."
+    condition: "Aucune écrite pour la qualité de chef des armées ; ses actes sont contresignés."
+    tiers: "Le Gouvernement « dispose […] de la force armée » (art. 20) ; le Premier ministre « est responsable de la Défense nationale » (art. 21)."
+    portee_texte: "La Constitution répartit le militaire entre trois titres : chef des armées, disposition de la force armée, responsabilité de la Défense nationale. Aucun ne se lit seul."
+
+  - id: grace
+    groupe: contresigne
+    question: "Le président peut-il gracier seul ?"
+    pouvoir: "Droit de grâce"
+    articles: ["17", "19"]
+    decide: "Le président."
+    condition: "« À titre individuel », précision ajoutée en 2008 : le texte de 1958 disait seulement « le droit de faire grâce »."
+    tiers: "Le Premier ministre et le ministre responsable, qui contresignent."
+    portee_texte: "Un pouvoir personnel dans l'image, un acte contresigné dans le texte."
+
+  - id: traites
+    groupe: contresigne
+    question: "Le président peut-il signer seul un traité ?"
+    pouvoir: "Négocier et ratifier les traités"
+    articles: ["52", "54", "19"]
+    decide: "Le président « négocie et ratifie les traités » ; il est informé des accords non soumis à ratification."
+    condition: "Si le Conseil constitutionnel a déclaré une clause contraire à la Constitution, la ratification n'intervient qu'après révision (art. 54)."
+    tiers: "Le Premier ministre et les ministres responsables, qui contresignent ; le Conseil constitutionnel s'il est saisi."
+    portee_texte: "Ratifier n'est pas dans la liste de l'article 19 : même l'acte le plus personnel de la diplomatie porte un contreseing."
+
+  # ── Gouvernement ────────────────────────────────────────────────────────────
+  - id: politique-nation
+    groupe: gouvernement
+    question: "Qui détermine la politique de la Nation ?"
+    pouvoir: "Déterminer et conduire la politique de la Nation"
+    articles: ["20", "21", "22", "5"]
+    decide: "Le Gouvernement (art. 20), dont le Premier ministre dirige l'action et assure l'exécution des lois (art. 21)."
+    condition: "Le Gouvernement est responsable devant le Parlement (art. 20)."
+    tiers: "L'Assemblée nationale, devant laquelle il répond ; les ministres, qui contresignent les actes du Premier ministre chargés de leur exécution (art. 22)."
+    portee_texte: "Le président veille au respect de la Constitution et assure, par son arbitrage, le fonctionnement régulier des pouvoirs publics (art. 5) ; la politique de la Nation est, dans le texte, l'affaire du Gouvernement."

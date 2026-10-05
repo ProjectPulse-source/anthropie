@@ -1,0 +1,110 @@
+{{- /* {{< pouvoirs-president vue="tableau" >}}          — synthèse : pouvoir, articles, contreseing
+       {{< pouvoirs-president vue="citations" >}}        — inventaire de l'article 19, citation par citation
+       {{< pouvoirs-president vue="regles" >}}           — qui fixe les règles (art. 34, 37, 21, 13, 19)
+       {{< pouvoirs-president vue="sans_contreseing" >}} — fiches d'un groupe (id de groupe de la base)
+       {{< pouvoirs-president vue="sources" >}}          — articles cités, lien Légifrance, date de lecture
+
+       Vue de data/pouvoirs_president.yaml (décision D3, registre GEO-PLUS, tour 5) : la page ne
+       porte aucun contenu juridique en dur, la base est la source unique.
+
+       RÈGLE DE PREUVE, appliquée ici : un pouvoir dont un article cité n'a pas de `lu_le` ne
+       s'affiche pas, et le build l'annonce (warnf). Un article cité absent du registre
+       `articles` arrête le build : ce serait une référence sans lecture. Une vue inconnue ou
+       un groupe vide arrêtent aussi le build : un bloc muet passerait la relecture. */ -}}
+{{- $d := site.Data.pouvoirs_president -}}
+{{- if not $d -}}{{ errorf "pouvoirs-president: data/pouvoirs_president.yaml absent (%s)" .Page.File.Path }}{{- end -}}
+{{- $vue := .Get "vue" -}}
+{{- $lf := "https://www.legifrance.gouv.fr/loda/article_lc/" -}}
+
+{{- /* Filtre de preuve, commun aux trois vues */ -}}
+{{- $lus := slice -}}
+{{- range $d.pouvoirs -}}
+  {{- $ok := true -}}
+  {{- range .articles -}}
+    {{- $a := index $d.articles . -}}
+    {{- if not $a -}}{{ errorf "pouvoirs-president: article %s cite sans entree dans `articles`" . }}{{- end -}}
+    {{- if not $a.lu_le -}}{{- $ok = false -}}{{- end -}}
+  {{- end -}}
+  {{- if $ok -}}{{- $lus = $lus | append . -}}{{- else -}}{{ warnf "pouvoirs-president: '%s' masque (article non lu sur Legifrance)" .id }}{{- end -}}
+{{- end -}}
+
+{{- if eq $vue "tableau" -}}
+<div class="table-scroll">
+<table class="pouvoirs-table">
+  <caption>{{ len $lus }} pouvoirs et leur base dans la Constitution</caption>
+  <thead><tr><th scope="col">Pouvoir</th><th scope="col">Articles</th><th scope="col">Sans contreseing&nbsp;?</th></tr></thead>
+  <tbody>
+  {{- range $lus }}
+    <tr><th scope="row"><a href="#{{ .id }}">{{ partial "fr-typo.html" .pouvoir }}</a></th>
+      <td>{{ delimit .articles ", " }}</td>
+      <td>{{ if eq .groupe "sans_contreseing" }}<strong>oui</strong>{{ else if eq .groupe "contresigne" }}non{{ else }}acte du Gouvernement{{ end }}</td></tr>
+  {{- end }}
+  </tbody>
+</table>
+</div>
+
+{{- else if eq $vue "citations" -}}
+{{- /* Inventaire de l'article 19, une ligne par attribut renseigné : la citation exacte que le générateur a
+       retrouvée mot pour mot dans le texte archivé (scripts/update_pouvoirs_president.py, garde G2). */ -}}
+{{- $libs := dict "acte" "Acte" "condition" "Proposition ou consultation exigée avant l'acte" "autre_autorite" "Une autre autorité intervient pour la suite" "partage" "D'autres autorités disposent aussi de ce pouvoir" "limite" "Limite écrite de temps ou d'objet" -}}
+{{- if not $d.inventaire_19 -}}{{ errorf "pouvoirs-president: inventaire_19 absent (%s)" .Page.File.Path }}{{- end -}}
+<div class="table-scroll">
+<table class="pouvoirs-table pouvoirs-citations">
+  <caption>Les citations qui remplissent la matrice, article par article</caption>
+  <thead><tr><th scope="col">Disposition</th><th scope="col">Élément</th><th scope="col">Texte de l'article</th></tr></thead>
+  <tbody>
+  {{- range $d.inventaire_19 }}
+    {{- $e := . -}}
+    {{- range $k := slice "acte" "condition" "autre_autorite" "partage" "limite" }}
+      {{- with index $e $k }}
+    <tr><th scope="row">art.&nbsp;{{ $e.renvoi }}</th><td>{{ index $libs $k }}</td>
+      <td><a href="{{ $lf }}{{ (index $d.articles .art).legiarti }}">«&nbsp;{{ .cite }}&nbsp;»</a></td></tr>
+      {{- end }}
+    {{- end }}
+  {{- end }}
+  </tbody>
+</table>
+</div>
+
+{{- else if eq $vue "regles" -}}
+{{- if not $d.regles -}}{{ errorf "pouvoirs-president: regles absent (%s)" .Page.File.Path }}{{- end -}}
+<ul class="pouvoirs-regles">
+{{- range $d.regles }}
+  <li><a href="{{ $lf }}{{ (index $d.articles .art).legiarti }}">Art.&nbsp;{{ .art }}</a>&nbsp;: «&nbsp;{{ .cite }}&nbsp;»</li>
+{{- end }}
+</ul>
+
+{{- else if eq $vue "sources" -}}
+{{- $cites := slice -}}
+{{- range $lus }}{{ range .articles }}{{ $cites = $cites | append . }}{{ end }}{{ end -}}
+{{- $cites = $cites | uniq -}}
+{{- $tries := slice -}}
+{{- range $cites }}{{ $tries = $tries | append (int .) }}{{ end -}}
+<ul class="pouvoirs-sources">
+{{- range sort $tries }}
+  {{- $n := string . -}}
+  {{- $a := index $d.articles $n }}
+  <li><a href="{{ $lf }}{{ $a.legiarti }}">Constitution du 4&nbsp;octobre 1958, article&nbsp;{{ $n }}</a> — version en vigueur depuis le {{ time.Format "2 January 2006" $a.vigueur_depuis }}, lue sur Légifrance le {{ time.Format "2 January 2006" $a.lu_le }}.</li>
+{{- end }}
+</ul>
+
+{{- else -}}
+{{- $g := where $d.groupes "id" $vue -}}
+{{- if not $g -}}{{ errorf "pouvoirs-president: vue inconnue '%s' (%s)" $vue .Page.File.Path }}{{- end -}}
+{{- $items := where $lus "groupe" $vue -}}
+{{- if not $items -}}{{ errorf "pouvoirs-president: groupe '%s' vide (%s)" $vue .Page.File.Path }}{{- end -}}
+<div class="pouvoirs-fiches">
+{{- range $items }}
+  <section class="pouvoir-fiche" id="{{ .id }}">
+    <h3>{{ partial "fr-typo.html" .question }}</h3>
+    <dl>
+      <dt>Base</dt><dd>{{ range $i, $n := .articles }}{{ if $i }}, {{ end }}<a href="{{ $lf }}{{ (index $d.articles $n).legiarti }}">art.&nbsp;{{ $n }}</a>{{ end }}</dd>
+      <dt>Qui décide</dt><dd>{{ partial "fr-typo.html" .decide }}</dd>
+      <dt>Condition</dt><dd>{{ partial "fr-typo.html" .condition }}</dd>
+      <dt>Tiers nécessaire</dt><dd>{{ partial "fr-typo.html" .tiers }}</dd>
+      <dt>Ce que l'acte produit</dt><dd>{{ partial "fr-typo.html" .portee_texte }}</dd>
+    </dl>
+  </section>
+{{- end }}
+</div>
+{{- end -}}
