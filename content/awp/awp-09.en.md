@@ -17,7 +17,7 @@ jel_codes: ["H63", "H62", "H72", "E62", "C82"]
 keywords: ["anthropy", "public debt", "debt dynamics", "intergenerational burden", "data verification"]
 faq:
   - question: "What drove the rise in French public debt since 1995?"
-    answer: "Primary deficits: from 1995 to 2025 the ratio rose from 57.8% to 115.6% of GDP, of which primary deficits account for 50.5 of 57.7 points, interest and nominal growth effects having nearly offset each other over thirty years. AWP-09 (Stéphane Lalut, 2026, DOI 10.5281/zenodo.23145963) recovers this result with an independent benchmark."
+    answer: "Primary deficits: in the Eurostat series retrieved on 3 October 2026, from 1995 to 2025 the ratio rose from 57.8% to 115.6% of GDP, of which primary deficits account for 50.5 of 57.7 points, interest and nominal growth effects having nearly offset each other over thirty years. AWP-09 (Stéphane Lalut, 2026, DOI 10.5281/zenodo.23145963) recovers this result with an independent benchmark."
   - question: "Why do opposite public readings of the debt all rest on official accounts?"
     answer: "Because they measure neither the same window nor the same object. In 1996-2012 the snowball effect accounts for 43% of the rise in the ratio, close to the 38% found by the 2014 citizens' audit; since 2017 it has subtracted 1.74 points a year, the figure given by the French Treasury; cumulative gross interest, without the growth that offsets it, measures yet another object."
   - question: "Do public accounts tell who pays the debt?"
@@ -38,7 +38,7 @@ related_book: "dette-publique-qui-paie-vraiment"
 
 {{< canonical-definition >}}
 
-This working paper is the English edition of the French original. It tests the question "who pays the debt?" against public accounts. It does not settle it: it establishes what thirty years of official French series can and cannot show about five displacements of the burden — over time, toward later generations, across households, across countries, and across levels of government.
+This working paper is the English edition of the French original. It tests the question "who pays the debt?" against public accounts. It does not settle it: it establishes what thirty years of official French series can and cannot show about five displacements of the burden — [over time](/en/why-does-public-debt-rise/), toward later generations, [across households](/en/who-really-pays-public-debt/), [across countries](/en/public-debt-international-comparison/), and across levels of government.
 
 ## A verification rule
 
@@ -52,4 +52,4 @@ A 2014 citizens' audit attributed 38% of the 1980-2012 rise in debt to the snowb
 
 The paper delivers a statement-by-statement verdict on the anthropic reading of debt proposed in [AWP-03](/en/awp/awp-03/): the transfer toward future generations is supported only within a balance-sheet scope; the effect of the interest-growth differential holds as accounting mechanics, not as a transfer; the asymmetry between mobile and captive households lies beyond what the accounts can test, which show only that the incidence of the same effort depends on the instrument.
 
-The datasets, the scripts that produce them, and their benchmarks are published with the author's public-debt data pages (in French); the values cited are those recorded from 30 September to 3 October 2026, attached to the Zenodo deposit of the French original.
+The datasets, the scripts that produce them, and their benchmarks are published with the author's public-debt data pages, starting with [Why does French public debt rise?](/en/why-does-public-debt-rise/) (the pages on future generations and local government exist in French only); the values cited are those recorded from 30 September to 3 October 2026, attached to the Zenodo deposit of the French original.

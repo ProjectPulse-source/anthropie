@@ -18,7 +18,7 @@ keywords: ["anthropie", "dette publique", "dynamique de la dette", "génération
 keywords_en: ["anthropy", "public debt", "debt dynamics", "intergenerational burden", "data verification"]
 faq:
   - question: "D'où vient la hausse de la dette publique française depuis 1995 ?"
-    answer: "Des déficits primaires, hors intérêts : de 1995 à 2025, le ratio passe de 57,8 % à 115,6 % du PIB, et les déficits primaires en portent 50,5 points sur 57,7, l'effet des intérêts et celui de la croissance nominale s'étant presque compensés sur trente ans. La Cour des comptes et le Conseil d'analyse économique l'avaient établi sur d'autres périodes ; AWP-09 (Stéphane Lalut, 2026, DOI 10.5281/zenodo.23143030) le retrouve avec un témoin indépendant."
+    answer: "Des déficits primaires, hors intérêts : dans les séries d'Eurostat relevées le 3 octobre 2026, de 1995 à 2025, le ratio passe de 57,8 % à 115,6 % du PIB, et les déficits primaires en portent 50,5 points sur 57,7, l'effet des intérêts et celui de la croissance nominale s'étant presque compensés sur trente ans. La Cour des comptes et le Conseil d'analyse économique l'avaient établi sur d'autres périodes ; AWP-09 (Stéphane Lalut, 2026, DOI 10.5281/zenodo.23143030) le retrouve avec un témoin indépendant."
   - question: "Pourquoi des lectures publiques opposées de la dette s'appuient-elles toutes sur des comptes officiels ?"
     answer: "Parce qu'elles ne mesurent ni la même fenêtre ni le même objet. Sur 1996-2012, l'effet boule de neige pèse 43 % de la hausse du ratio, du même ordre que les 38 % de l'audit citoyen de 2014 ; depuis 2017, il retire 1,74 point par an, le chiffre de la direction générale du Trésor ; les intérêts bruts cumulés, sans la croissance qui les compense, mesurent encore autre chose."
   - question: "Les comptes publics disent-ils qui paie la dette ?"
@@ -38,7 +38,7 @@ related_book: "dette-publique-qui-paie-vraiment"
 
 {{< canonical-definition >}}
 
-Ce working paper met à l'épreuve des comptes publics la question «&nbsp;qui paie la dette&nbsp;?&nbsp;». Il ne la tranche pas&nbsp;: il établit ce que trente ans de séries officielles françaises permettent d'affirmer, et ce qu'elles ne permettent pas, sur cinq déplacements de la charge — dans le temps, vers les générations suivantes, entre ménages, entre pays et entre échelons d'administration.
+Ce working paper met à l'épreuve des comptes publics la question «&nbsp;qui paie la dette&nbsp;?&nbsp;». Il ne la tranche pas&nbsp;: il établit ce que trente ans de séries officielles françaises permettent d'affirmer, et ce qu'elles ne permettent pas, sur cinq déplacements de la charge — [dans le temps](/pourquoi-la-dette-publique-augmente/), [vers les générations suivantes](/dette-publique-generations-futures/), [entre ménages](/qui-paie-la-dette-publique/), [entre pays](/dette-publique-comparaison-internationale/) et [entre échelons d'administration](/dette-publique-collectivites-locales/).
 
 ## Une règle de contrôle
 

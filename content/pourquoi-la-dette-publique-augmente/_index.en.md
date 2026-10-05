@@ -28,6 +28,7 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
     - "https://ec.europa.eu/eurostat/databrowser/view/gov_10a_main/default/table?lang=fr"
   mots: ["public debt", "France", "primary deficit", "snowball effect", "implicit interest rate", "nominal growth", "Eurostat"]
   fichiers: ["dette_dynamique.csv", "dette_dynamique.json"]
+  citation: ["https://doi.org/10.5281/zenodo.23145963"]  # AWP-09 (English edition): method and benchmark of this decomposition
 faq:
   - question: "Why does French public debt rise?"
     answer: "Over {dyn.annee_depart}-{dyn.annee_fin}, the debt-to-GDP ratio went from {dyn.dette_depart}% to {dyn.dette_fin}%. Decomposing its change year by year, interest pushed it up by {dyn.effet_interets} points and nominal GDP growth held it back by {dyn.effet_croissance}: their net effect is only {dyn.effet_net} points. The rise comes mostly from primary deficits, the gap between public spending and revenue excluding interest ({dyn.deficits_primaires} points), and for the rest from stock-flow adjustments ({dyn.flux_stock}). This is an accounting decomposition: it identifies which accounting components contributed to the increase, not why the deficits existed."

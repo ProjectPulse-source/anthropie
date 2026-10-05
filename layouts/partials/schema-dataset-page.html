@@ -13,6 +13,8 @@
          sources: ["https://…"]
          mots: ["…"]
          fichiers: ["qui_paie_donnees.csv", "qui_paie_donnees.json"]   # publiés à la racine de static/
+         citation: ["https://doi.org/…"]  # facultatif : article à citer avec le jeu (DOI de l'AWP qui en expose la
+                                          # méthode) ; schema.org Dataset.citation, lu par Google Dataset Search
 
        Date : `releve_le` du jeu (racine, puis bloc affichage), à défaut `_genere_le`. Aucune date saisie ici. */ -}}
 {{- $p := .Params.dataset -}}
@@ -61,6 +63,7 @@
     "variableMeasured" $vars
     "keywords" $p.mots
     "distribution" $dist -}}
+{{- with $p.citation }}{{ $ds = merge $ds (dict "citation" .) }}{{ end -}}
 <script type="application/ld+json">
 {{ $ds | jsonify (dict "indent" "  ") | safeJS }}
 </script>

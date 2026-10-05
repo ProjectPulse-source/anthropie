@@ -28,6 +28,7 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
     - "https://ec.europa.eu/eurostat/databrowser/view/gov_10a_main/default/table?lang=fr"
   mots: ["dette publique", "France", "déficit primaire", "effet boule de neige", "taux implicite", "croissance nominale", "Eurostat"]
   fichiers: ["dette_dynamique.csv", "dette_dynamique.json"]
+  citation: ["https://doi.org/10.5281/zenodo.23143030"]  # AWP-09 : méthode et témoin de cette décomposition
 faq:
   - question: "Pourquoi la dette publique française augmente-t-elle ?"
     answer: "Sur {dyn.annee_depart}-{dyn.annee_fin}, le ratio dette/PIB est passé de {dyn.dette_depart} % à {dyn.dette_fin} %. En décomposant chaque année sa variation, les intérêts l'ont poussé de {dyn.effet_interets} points et la croissance du PIB nominal l'a freiné de {dyn.effet_croissance} : leur effet net n'est que de {dyn.effet_net} point. La hausse tient pour l'essentiel aux déficits primaires, l'écart entre dépenses et recettes publiques hors intérêts ({dyn.deficits_primaires} points), et pour le reste aux ajustements flux-stock ({dyn.flux_stock}). C'est une décomposition comptable : elle dit par quel terme la dette a monté, pas pourquoi les déficits ont existé."

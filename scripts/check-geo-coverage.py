@@ -59,6 +59,22 @@ def norm(url: str) -> str:
     return url.rstrip("/") + "/"
 
 
+# Le shortcode appel-livre pose un lien vers la fiche du livre que la source Markdown ne montre pas : sans lui, une
+# page qui ne renvoie au livre que par son appel de fin de page sortait « aucun lien vers /livres/ » (faux positif
+# sur /dette-publique-peut-elle-baisser/, 05/10/2026). Il résout la fiche dans la langue de la page si elle existe,
+# sinon la fiche française (layouts/shortcodes/appel-livre.html) : on suit la même règle.
+APPEL_RE = re.compile(r'\{\{<\s*appel-livre\b[^>]*?\bslug="([^"]+)"')
+
+
+def liens(body: str, en: bool = False) -> list[str]:
+    cibles = [norm(m.group(1) or m.group(2)) for m in LINK_RE.finditer(body)]
+    for m in APPEL_RE.finditer(body):
+        slug = m.group(1)
+        traduit = en and (CONTENT / "livres" / f"{slug}.en.md").exists()
+        cibles.append(norm(f"/en/livres/{slug}/" if traduit else f"/livres/{slug}/"))
+    return cibles
+
+
 def main() -> int:
     pages = {}  # url -> {file, fm, body, faq, lastmod}
     # Sections racines FR
@@ -90,8 +106,7 @@ def main() -> int:
     # Graphe de liens entrants (depuis toutes les pages FR connues)
     inbound: dict[str, set[str]] = {}
     for src_url, page in pages.items():
-        for m in LINK_RE.finditer(page["body"]):
-            tgt = norm(m.group(1) or m.group(2))
+        for tgt in liens(page["body"]):
             inbound.setdefault(tgt, set()).add(src_url)
 
     warn = 0
@@ -123,7 +138,7 @@ def main() -> int:
         if not p.get("faq"):
             continue
         age = (today - p["lastmod"]).days if p.get("lastmod") else None
-        out_hub = bool(re.search(r"\((/awp/|/livres/)", p["body"]))
+        out_hub = any(t.startswith(("/awp/", "/livres/")) for t in liens(p["body"]))
         flags = []
         if age is None or age > FRESHNESS_DAYS:
             flags.append(f"lastmod {age if age is not None else '?'} j")
@@ -176,8 +191,7 @@ def check_en_coverage(today: date) -> int:
 
     inbound: dict[str, set[str]] = {}
     for src_url, page in pages.items():
-        for m in LINK_RE.finditer(page["body"]):
-            tgt = norm(m.group(1) or m.group(2))
+        for tgt in liens(page["body"], en=True):
             inbound.setdefault(tgt, set()).add(src_url)
 
     warn = 0
@@ -202,7 +216,8 @@ def check_en_coverage(today: date) -> int:
         if not p.get("faq"):
             continue
         age = (today - p["lastmod"]).days if p.get("lastmod") else None
-        out_hub = bool(re.search(r"\((/en/awp/|/en/livres/|/en/books/|/en/serie-awp/)", p["body"]))
+        out_hub = any(t.startswith(("/en/awp/", "/en/livres/", "/en/books/", "/en/serie-awp/"))
+                      for t in liens(p["body"], en=True))
         flags = []
         if age is None or age > FRESHNESS_DAYS:
             flags.append(f"lastmod {age if age is not None else '?'} j")
