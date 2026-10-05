@@ -32,7 +32,7 @@
 {{- $a := site.Data.author.author -}}
 {{- $sameAs := slice -}}
 {{- range $a.sameAs -}}{{- $sameAs = $sameAs | append .url -}}{{- end -}}
-{{- $personne := dict "@type" "Person" "name" $a.name "url" $a.canonicalProfileUrl "sameAs" $sameAs -}}
+{{- $personne := dict "@type" "Person" "@id" $a.canonicalProfileUrl "name" $a.name "url" $a.canonicalProfileUrl "sameAs" $sameAs -}}
 {{- $vars := slice -}}
 {{- range $p.variables -}}
   {{- $v := dict "@type" "PropertyValue" "name" (partial "desc-figures.html" (dict "text" .nom) | htmlUnescape) -}}

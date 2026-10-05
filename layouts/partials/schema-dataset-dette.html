@@ -114,6 +114,7 @@
 {{- range $a.sameAs -}}{{- $sameAs = $sameAs | append .url -}}{{- end -}}
 {{- $personne := dict
     "@type" "Person"
+    "@id" $a.canonicalProfileUrl
     "name" $a.name
     "url" $a.canonicalProfileUrl
     "sameAs" $sameAs -}}

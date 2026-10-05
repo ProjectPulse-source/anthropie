@@ -4,7 +4,7 @@
       "@type" "ScholarlyArticle"
       "name" $page.Title
       "url" $page.Permalink
-      "author" (dict "@type" "Person" "name" "Stéphane Lalut") -}}
+      "author" (dict "@type" "Person" "@id" site.Data.author.author.canonicalProfileUrl "name" site.Data.author.author.name) -}}
   {{- with $page.Params.doi_zenodo -}}{{- $item = merge $item (dict "identifier" (printf "https://doi.org/%s" .)) -}}{{- end -}}
   {{- $items = $items | append (dict
       "@type" "ListItem"

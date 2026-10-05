@@ -17,8 +17,11 @@ descriptionFr = "Économiste, chercheur indépendant et essayiste. Auteur du cad
 descriptionEn = "Economist, independent researcher and essayist. Author of the framework of anthropy."
 
 # Domaines de compétence — utilisé pour JSON-LD knowsAbout (résolu par langue dans head.html)
-knowsAbout = ["anthropie", "dette publique", "transition énergétique", "économie institutionnelle"]
-knowsAboutEn = ["anthropy", "public debt", "energy transition", "institutional economics"]
+# Trois territoires, chacun avec un livre et des pages (auteur, 05/10/2026 ; arbitrage
+# D:\PRO\06_PROMOTION\ARBITRAGE_CONTRE_EXPERTISE_DOCTRINE_PROMOTION_2026-10-05.md, D1).
+# Un quatrième ne s'ajoute que lorsqu'il a un dossier sur le site.
+knowsAbout = ["dette publique", "pouvoirs du président de la République et promesses électorales", "anthropie et coûts déplacés"]
+knowsAboutEn = ["public debt", "powers of the French President and campaign promises", "anthropy and displaced costs"]
 
 # Identifiants externes — ordre du sameAs JSON-LD actuel préservé
 [[author.sameAs]]

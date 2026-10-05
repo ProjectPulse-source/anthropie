@@ -105,7 +105,7 @@
   "@context" "https://schema.org"
   "@type" "Book"
   "name" .Title
-  "author" (dict "@type" "Person" "name" site.Data.author.author.name "url" site.Data.author.author.url "sameAs" $authorUrls)
+  "author" (dict "@type" "Person" "@id" site.Data.author.author.canonicalProfileUrl "name" site.Data.author.author.name "url" site.Data.author.author.url "sameAs" $authorUrls)
   "description" (partial "desc-figures.html" (dict "text" .Description "isbn" .Params.isbn))
   "inLanguage" (cond (eq .Lang "en") "en" "fr")
   "publisher" (dict "@type" "Organization" "name" "Stéphane Lalut")
@@ -128,7 +128,7 @@
       "height" .Height
       "caption" $caption
       "representativeOfPage" true
-      "creator" (dict "@type" "Person" "name" site.Data.author.author.name)
+      "creator" (dict "@type" "Person" "@id" site.Data.author.author.canonicalProfileUrl "name" site.Data.author.author.name)
       "creditText" site.Data.author.author.name
       "copyrightNotice" (printf "© %s" site.Data.author.author.name)
       "license" (absURL "transparence-contacts/#droits-images")

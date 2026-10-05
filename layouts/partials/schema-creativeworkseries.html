@@ -16,6 +16,7 @@
 {{- end -}}
 {{- $publisher := dict
     "@type" "Person"
+    "@id" site.Data.author.author.canonicalProfileUrl
     "name" site.Data.author.author.name
     "sameAs" $orcidUrl -}}
 
