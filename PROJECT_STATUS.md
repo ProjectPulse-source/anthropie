@@ -53,6 +53,18 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-04/05 — AWP-09 publié (FR + EN), Wikidata, renvois du dossier dette ; POUSSÉ, déploiements verts
+
+- Fiches `/awp/awp-09/` (`397f347`) et `/en/awp/awp-09/` (`37a4e53`) : Zenodo 10.5281/zenodo.23143030 (FR) et
+  10.5281/zenodo.23145963 (EN, isDerivedFrom FR) ; compteurs à neuf, vedette d'accueil, `llms.txt`.
+- Wikidata Q141641858 (`bf83158`, navette close `9c94824`) : `wikidata_qid` en fiche, `sameAs` du ScholarlyArticle.
+- Renvois (`e321016`) : une phrase sur Pourquoi, Qui paie, Générations futures, Coût, Comparaison, Collectivités (miroirs
+  EN existants compris) ; `related: awp-09` sur quatre publications. IndexNow du déploiement : HTTP 200, 74 URL.
+- Session de maillage du 05/10 (brief `D:\PRO\00_PILOTAGE\BRIEF_SESSION_GEO_MAILLAGE_AWP09.md`) : fiche D0 écrite après
+  publication dans `D:\PRO\06_PROMOTION\FEUILLE_DE_ROUTE_GEO_RESSOURCES.md` ; corrections validées par l'auteur et
+  commitées en `5b3adc4` (fiche AWP-09 liée aux cinq pages du dossier, « in French » corrigé en EN, FAQ datée,
+  `llms.txt` du dossier dette, `Dataset.citation`, faux positif de `check-geo-coverage`) ; push sur demande.
+
 ### 2026-10-04 (soir, suite) — Figures : nuages de pays nommés, placement calculé, titres harmonisés ; COMMITÉ ET POUSSÉ
 
 Demande de l'auteur sur `/enseignants/` (premier graphe : pays les moins endettés anonymes), étendue à « tous les graphes
