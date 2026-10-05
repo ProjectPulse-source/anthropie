@@ -251,6 +251,8 @@ def plf_mesures() -> dict:
     dgf = lire("plf", r"En %s, ce montant est égal à ([\d ]+) €" % an, "montant de la DGF")[0] / 1e9
     dgf_hausse = lire("plf", r"nouvelle augmentation du montant de la DGF en %s à hauteur de (\d+) millions d'euros" % an,
                       "hausse de la DGF")[0]
+    dgf_hausse_courant = lire("plf", r"À périmètre courant, le montant nominal de la DGF augmente donc de (\d+) millions",
+                              "hausse de la DGF à périmètre courant")[0]
     cpeb = lire("plf", r"contribution progressive à l'effort budgétaire \(CPEB\), dont le rendement attendu s'élève à "
                        r"([\d,]+) milliards", "rendement de la contribution progressive")[0]
     part_com, part_dep = lire("plf", r"Le dispositif s'applique à (\d+) % des communes, à (\d+) % des départements",
@@ -277,20 +279,20 @@ def plf_mesures() -> dict:
     src_plf = "projet de loi de finances pour %d, " % n
     mesures = [
         {"cle": "cpeb", "mesure": "Contribution progressive à l'effort budgétaire, prélevée sur les avances de fiscalité",
-         "texte": "article 37", "nature": "prélèvement sur les recettes fiscales, institué pour %d" % n, "md": cpeb,
+         "texte": "article 37", "nature": "prélèvement sur les avances de fiscalité, institué pour %d" % n, "md": cpeb,
          "source": src_plf + "article 37, exposé des motifs"},
         {"cle": "fctva", "mesure": "Fonds de compensation pour la TVA : taux abaissé de %d points, sauf dépenses vertes et voirie"
                                     % fctva_pts,
-         "texte": "articles 35 et 41", "nature": "moindre concours de l'État à l'investissement", "md": fctva,
+         "texte": "articles 35 et 41", "nature": "réduction d'un concours de l'État lié aux dépenses d'investissement éligibles", "md": fctva,
          "source": src_plf + "article 41, exposé des motifs"},
         {"cle": "tva", "mesure": "TVA affectée, hors régions : hausse annuelle réduite de l'inflation",
-         "texte": "article 36", "nature": "moindre progression d'une recette fiscale", "md": tva,
+         "texte": "article 36", "nature": "écrêtement de la progression de la TVA affectée, hors régions", "md": tva,
          "source": "Haut Conseil des finances publiques, avis n° 2026-5"},
         {"cle": "ministeres", "mesure": "Contributions de certains ministères aux collectivités",
-         "texte": "crédits des missions", "nature": "moindres concours de l'État", "md": minist,
+         "texte": "crédits des missions", "nature": "réduction de contributions de certains ministères", "md": minist,
          "source": "Haut Conseil des finances publiques, avis n° 2026-5"},
         {"cle": "dilico", "mesure": "Sommes mises en réserve en 2025 et 2026 (DILICO) : reversement sur cinq ans au lieu de trois",
-         "texte": "article 84", "nature": "report de calendrier, montant total restitué inchangé", "md": dilico,
+         "texte": "article 84", "nature": "étalement du reversement ; montant total restitué inchangé", "md": dilico,
          "source": "Haut Conseil des finances publiques, avis n° 2026-5"},
     ]
     depot = re.search(r"déposé le (.+)$", a["plf"]["titre"])
@@ -304,13 +306,14 @@ def plf_mesures() -> dict:
             fail("projet de loi de finances : la page ne cite pas la source archivée (%s) — nouvelle édition ? relire la "
                  "section « projet de loi de finances »" % a[doc]["url"])
     return {"plf_edition": n, "plf_depot": depot.group(1).replace(" ", "\u00a0"),  # insecables en caractere : le jeton sert aussi au JSON-LD
-            "plf_dgf": dgf, "plf_dgf_hausse_m": dgf_hausse, "plf_cpeb": cpeb,
+            "plf_dgf": dgf, "plf_dgf_hausse_m": dgf_hausse, "plf_dgf_hausse_courant_m": dgf_hausse_courant, "plf_cpeb": cpeb,
             "plf_cpeb_communes_pct": part_com, "plf_cpeb_dep_pct": part_dep, "plf_fctva": fctva, "plf_fctva_pts": fctva_pts,
             "plf_tva": tva, "plf_ministeres": minist, "plf_dilico": dilico, "plf_regions_m": regions,
-            "plf_psr": psr, "plf_psr_lfi_prec": psr_lfi / 1000, "plf_psr_tableau": psr_tab / 1000,
+            "plf_psr": psr, "plf_psr_lfi_prec": psr_lfi / 1000, "plf_psr_rev_prec": psr_rev / 1000,
+            "plf_psr_tableau": psr_tab / 1000,
             "plf_ressources_md": res_md, "plf_ressources_pct": res_pct,
             "plf_inv_n_pct": -inv_n, "plf_inv_n1_pct": -inv_n1, "plf_temoin_cpeb": h_cpeb, "plf_temoin_fctva": h_fctva,
-            "plf_somme": sum(m["md"] for m in mesures), "plf_mesures": mesures,
+            "plf_mesures": mesures,
             "plf_sources": {"plf": {k: a["plf"][k] for k in ("titre", "url", "sha256_pdf")},
                             "hcfp": {k: a["hcfp"][k] for k in ("titre", "url", "sha256_pdf")}}}
 
@@ -558,20 +561,18 @@ def calculer(J: Jeu) -> tuple[dict, list[dict]]:
         ("la cascade se referme sur le solde", abs(r["cascade_somme"] - r["ep_solde_delta"]) < 1e-9),
     ]
     r.update(plf_mesures())
-    baisse_dgf_max = max(-d for d in r["dgf_vote_baisses"])
-    r["plf_dgf_baisse_annuelle_max"] = baisse_dgf_max
     gardes += [
-        ("projet de loi de finances : « la DGF augmente »", r["plf_dgf_hausse_m"] > 0),
-        ("projet de loi de finances : « les prélèvements sur recettes au profit des collectivités baissent »",
-         r["plf_psr"] < r["plf_psr_lfi_prec"]),
+        ("projet de loi de finances : « la DGF augmente » (abondements et montant à périmètre courant)",
+         r["plf_dgf_hausse_m"] > 0 and r["plf_dgf_hausse_courant_m"] > 0),
+        ("projet de loi de finances : « les prélèvements sur recettes au profit des collectivités baissent » (contre la "
+         "prévision révisée et contre la loi de finances initiale de l'année en cours)",
+         r["plf_psr"] < r["plf_psr_rev_prec"] < r["plf_psr_lfi_prec"]),
         ("projet de loi de finances : témoin entre sources — la contribution progressive est chiffrée au même montant par le "
          "projet de loi et par le Haut Conseil", abs(r["plf_cpeb"] - r["plf_temoin_cpeb"]) < 0.05),
         ("projet de loi de finances : témoin entre sources — FCTVA, projet de loi et Haut Conseil à 0,05 Md€ près",
          abs(r["plf_fctva"] - r["plf_temoin_fctva"]) < 0.05),
         ("projet de loi de finances : témoin interne — l'article et le tableau des recettes donnent le même total de "
          "prélèvements sur recettes", abs(r["plf_psr"] - r["plf_psr_tableau"]) < 0.001),
-        ("projet de loi de finances : « la somme des cinq mesures dépasse chacune des baisses annuelles de DGF de 2014-2017 »",
-         r["plf_somme"] > baisse_dgf_max),
         ("projet de loi de finances : « l'investissement local reculerait deux années de suite » (Haut Conseil)",
          r["plf_inv_n_pct"] < 0 and r["plf_inv_n1_pct"] < 0),
         ("projet de loi de finances : « des ressources en hausse malgré la contribution » (lecture du Gouvernement)",
@@ -621,16 +622,16 @@ def affichage(r: dict) -> dict:
         "dilico_2025": dilico_montant(),
         "plf_edition": str(r["plf_edition"]), "plf_prec": str(r["plf_edition"] - 1), "plf_depot": r["plf_depot"],
         "plf_dgf": fr1(r["plf_dgf"]), "plf_dgf_hausse_m": fr1(r["plf_dgf_hausse_m"], 0),
+        "plf_dgf_hausse_courant_m": fr1(r["plf_dgf_hausse_courant_m"], 0),
         "plf_cpeb": fr1(r["plf_cpeb"]), "plf_cpeb_communes_pct": fr1(r["plf_cpeb_communes_pct"], 0),
         "plf_cpeb_dep_pct": fr1(r["plf_cpeb_dep_pct"], 0),
         "plf_fctva": fr1(r["plf_fctva"]), "plf_fctva_pts": fr1(r["plf_fctva_pts"], 0),
         "plf_tva": fr1(r["plf_tva"]), "plf_ministeres": fr1(r["plf_ministeres"]), "plf_dilico": fr1(r["plf_dilico"]),
-        "plf_somme": fr1(r["plf_somme"]), "plf_regions_m": fr1(r["plf_regions_m"], 0),
-        "plf_psr": fr1(r["plf_psr"]), "plf_psr_lfi_prec": fr1(r["plf_psr_lfi_prec"]),
-        "plf_psr_baisse": fr1(r["plf_psr_lfi_prec"] - r["plf_psr"]),
+        "plf_regions_m": fr1(r["plf_regions_m"], 0), "plf_psr_rev_prec": fr1(r["plf_psr_rev_prec"], 2),
+        "plf_psr": fr1(r["plf_psr"]), "plf_psr_lfi_prec": fr1(r["plf_psr_lfi_prec"], 2),
         "plf_ressources_md": fr1(r["plf_ressources_md"], 0), "plf_ressources_pct": fr1(r["plf_ressources_pct"]),
         "plf_inv_n_pct": fr1(-r["plf_inv_n_pct"]), "plf_inv_n1_pct": fr1(-r["plf_inv_n1_pct"]),
-        "plf_dgf_baisse_annuelle_max": fr1(r["plf_dgf_baisse_annuelle_max"]),
+
         "dgf_vote_13": fr1(r["dgf_vote"][2013]), "dgf_vote_17": fr1(r["dgf_vote"][2017]),
         "dgf_vote_baisse": fr1(r["dgf_vote"][2013] - r["dgf_vote"][2017]),
         "dgf_vote_b14": fr1(-r["dgf_vote_baisses"][0]), "dgf_vote_b15": fr1(-r["dgf_vote_baisses"][1]),

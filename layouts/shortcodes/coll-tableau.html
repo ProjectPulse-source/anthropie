@@ -40,7 +40,6 @@
 {{- range $c.plf_mesures }}
 <tr><td>{{ .mesure }}</td><td>{{ .texte }}</td><td>{{ .nature }}</td><td>{{ replace (printf $f1 .md) "." "," }}</td></tr>
 {{- end }}
-<tr><td><strong>Somme arithmétique</strong></td><td></td><td>grandeurs de nature différente</td><td><strong>{{ replace (printf $f1 $c.plf_somme) "." "," }}</strong></td></tr>
 </tbody></table></div>
 <p><small>Montants pour {{ $c.plf_edition }}, tels que le projet déposé les prévoit, avant examen par le Parlement. Sources&nbsp;: projet de loi de finances (exposés des motifs) pour les deux premières lignes&nbsp;; avis du Haut Conseil des finances publiques pour les trois suivantes, que le texte du projet ne chiffre pas.</small></p>
 {{- else -}}

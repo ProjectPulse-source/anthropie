@@ -1,5 +1,5 @@
 {
- "releve_le": "2026-10-02",
+ "releve_le": "2026-10-05",
  "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Eurostat, OFGL, Légifrance",
  "meta": {
   "page": "https://stephane-lalut.com/dette-publique-collectivites-locales/",
@@ -17,8 +17,8 @@
    },
    "pib": {
     "jeu": "nama_10_gdp",
-    "maj_source": "2026-10-02T11:00:00+0200",
-    "sha256": "095a354aaf3e33a6b60f183002c992f3734a300ce8b67c97599323cc44415a71"
+    "maj_source": "2026-10-02T23:00:00+0200",
+    "sha256": "b84aa1363034fec2504d55765bc43791685c8098d2e36d83fd0589e2cc8ad52c"
    },
    "dette": {
     "jeu": "gov_10q_ggdebt",
@@ -32,7 +32,7 @@
    },
    "ofgl": {
     "jeu": "data.ofgl.fr (4 bases consolidees)",
-    "maj_source": "2026-10-02T",
+    "maj_source": "2026-10-05T",
     "sha256": "ecf3e95c1d7499a6f5833097cd167e115b916ed7e7c179258aee148094ae3fb1"
    }
   },
@@ -193,11 +193,11 @@
    "ok": true
   },
   {
-   "garde": "projet de loi de finances : « la DGF augmente »",
+   "garde": "projet de loi de finances : « la DGF augmente » (abondements et montant à périmètre courant)",
    "ok": true
   },
   {
-   "garde": "projet de loi de finances : « les prélèvements sur recettes au profit des collectivités baissent »",
+   "garde": "projet de loi de finances : « les prélèvements sur recettes au profit des collectivités baissent » (contre la prévision révisée et contre la loi de finances initiale de l'année en cours)",
    "ok": true
   },
   {
@@ -210,10 +210,6 @@
   },
   {
    "garde": "projet de loi de finances : témoin interne — l'article et le tableau des recettes donnent le même total de prélèvements sur recettes",
-   "ok": true
-  },
-  {
-   "garde": "projet de loi de finances : « la somme des cinq mesures dépasse chacune des baisses annuelles de DGF de 2014-2017 »",
    "ok": true
   },
   {
@@ -794,6 +790,7 @@
   "plf_depot": "1er octobre 2026",
   "plf_dgf": 27.543261857,
   "plf_dgf_hausse_m": 150.0,
+  "plf_dgf_hausse_courant_m": 137.0,
   "plf_cpeb": 2.5,
   "plf_cpeb_communes_pct": 40.0,
   "plf_cpeb_dep_pct": 60.0,
@@ -805,6 +802,7 @@
   "plf_regions_m": 156.9,
   "plf_psr": 43.096363228,
   "plf_psr_lfi_prec": 44.824,
+  "plf_psr_rev_prec": 44.462,
   "plf_psr_tableau": 43.096,
   "plf_ressources_md": 5.0,
   "plf_ressources_pct": 1.7,
@@ -812,13 +810,12 @@
   "plf_inv_n1_pct": -4.2,
   "plf_temoin_cpeb": 2.5,
   "plf_temoin_fctva": 2.1,
-  "plf_somme": 6.192,
   "plf_mesures": [
    {
     "cle": "cpeb",
     "mesure": "Contribution progressive à l'effort budgétaire, prélevée sur les avances de fiscalité",
     "texte": "article 37",
-    "nature": "prélèvement sur les recettes fiscales, institué pour 2027",
+    "nature": "prélèvement sur les avances de fiscalité, institué pour 2027",
     "md": 2.5,
     "source": "projet de loi de finances pour 2027, article 37, exposé des motifs"
    },
@@ -826,7 +823,7 @@
     "cle": "fctva",
     "mesure": "Fonds de compensation pour la TVA : taux abaissé de 5 points, sauf dépenses vertes et voirie",
     "texte": "articles 35 et 41",
-    "nature": "moindre concours de l'État à l'investissement",
+    "nature": "réduction d'un concours de l'État lié aux dépenses d'investissement éligibles",
     "md": 2.092,
     "source": "projet de loi de finances pour 2027, article 41, exposé des motifs"
    },
@@ -834,7 +831,7 @@
     "cle": "tva",
     "mesure": "TVA affectée, hors régions : hausse annuelle réduite de l'inflation",
     "texte": "article 36",
-    "nature": "moindre progression d'une recette fiscale",
+    "nature": "écrêtement de la progression de la TVA affectée, hors régions",
     "md": 0.6,
     "source": "Haut Conseil des finances publiques, avis n° 2026-5"
    },
@@ -842,7 +839,7 @@
     "cle": "ministeres",
     "mesure": "Contributions de certains ministères aux collectivités",
     "texte": "crédits des missions",
-    "nature": "moindres concours de l'État",
+    "nature": "réduction de contributions de certains ministères",
     "md": 0.7,
     "source": "Haut Conseil des finances publiques, avis n° 2026-5"
    },
@@ -850,7 +847,7 @@
     "cle": "dilico",
     "mesure": "Sommes mises en réserve en 2025 et 2026 (DILICO) : reversement sur cinq ans au lieu de trois",
     "texte": "article 84",
-    "nature": "report de calendrier, montant total restitué inchangé",
+    "nature": "étalement du reversement ; montant total restitué inchangé",
     "md": 0.3,
     "source": "Haut Conseil des finances publiques, avis n° 2026-5"
    }
@@ -866,8 +863,7 @@
     "url": "https://www.hcfp.fr/sites/default/files/2026-10/Avis%20HCFP%202026-5%20-%20PLF-PLFSS%202027.pdf",
     "sha256_pdf": "cf02528c4a5defd0430175fd6a1f98697bce43e1127888b68639f1694d5ff378"
    }
-  },
-  "plf_dgf_baisse_annuelle_max": 3.513990999999997
+  }
  },
  "series": {
   "serie_inv_fr": {
@@ -1001,6 +997,7 @@
   "plf_depot": "1er octobre 2026",
   "plf_dgf": "27,5",
   "plf_dgf_hausse_m": "150",
+  "plf_dgf_hausse_courant_m": "137",
   "plf_cpeb": "2,5",
   "plf_cpeb_communes_pct": "40",
   "plf_cpeb_dep_pct": "60",
@@ -1009,16 +1006,14 @@
   "plf_tva": "0,6",
   "plf_ministeres": "0,7",
   "plf_dilico": "0,3",
-  "plf_somme": "6,2",
   "plf_regions_m": "157",
+  "plf_psr_rev_prec": "44,46",
   "plf_psr": "43,1",
-  "plf_psr_lfi_prec": "44,8",
-  "plf_psr_baisse": "1,7",
+  "plf_psr_lfi_prec": "44,82",
   "plf_ressources_md": "5",
   "plf_ressources_pct": "1,7",
   "plf_inv_n_pct": "4,0",
   "plf_inv_n1_pct": "4,2",
-  "plf_dgf_baisse_annuelle_max": "3,5",
   "dgf_vote_13": "41,5",
   "dgf_vote_17": "30,9",
   "dgf_vote_baisse": "10,6",
