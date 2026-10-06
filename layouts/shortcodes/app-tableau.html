@@ -1,0 +1,20 @@
+{{- /* {{< app-tableau "lois" "Résumé" >}} — un tableau du bloc `tableaux` de data/promesses_appliquer.json
+       (scripts/update_promesses_appliquer.py), replié sous sa figure. Aucune valeur saisie : entêtes et lignes
+       viennent du générateur ; tableau absent = échec de build. La classe dette-monde-table est celle des tableaux
+       de données du site (défile dans .table-scroll sur téléphone). */ -}}
+{{- $nom := .Get 0 -}}
+{{- $t := "" -}}
+{{- with site.Data.promesses_appliquer -}}{{- $t = index .tableaux $nom -}}{{- end -}}
+{{- if not $t -}}{{- errorf "app-tableau: tableau %q absent de data/promesses_appliquer.json (page %s)" $nom .Page.RelPermalink -}}{{- end -}}
+<details class="repli"><summary>{{ .Get 1 }}</summary>
+<div class="table-scroll">
+<table class="dette-monde-table">
+<thead><tr>{{ range $t.entetes }}<th scope="col">{{ . }}</th>{{ end }}</tr></thead>
+<tbody>
+{{- range $t.lignes }}
+<tr>{{ range $i, $c := . }}{{ if eq $i 0 }}<th scope="row">{{ $c }}</th>{{ else }}<td>{{ $c }}</td>{{ end }}{{ end }}</tr>
+{{- end }}
+</tbody>
+</table>
+</div>
+</details>

@@ -1,0 +1,738 @@
+{
+ "releve_le": "2026-10-06",
+ "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Assemblée nationale et LexImpact (données DILA), Sénat, Secrétariat général du Gouvernement, Légifrance",
+ "meta": {
+  "page": "https://stephane-lalut.com/une-loi-votee-s-applique-t-elle-tout-de-suite/",
+  "protocole": "fiches de preuve v2, volet Appliquer, E1 à E3",
+  "sources": {
+   "barometre": [
+    "# source: https://barometre.assemblee-nationale.fr/barometre_application_lois_assemblee.csv ; version du 05/10/2026 ; sha256 5a79d54f9fec5cd7366a2dabb7ccb3d0a444b317f29d36531d9015dcb52692b8 ; 2059 lois au fichier complet ; extrait : lois publiees du 01/10/2017 au 30/09/2025 (553)",
+    "# source: https://barometre.assemblee-nationale.fr/barometre_application_mesures_assemblee.csv ; version du 05/10/2026 ; sha256 8e7d8623335fe9575cebb87e67403d3bc4640e709e616a0208bf2fb4ece3dc76 ; 15134 mesures au fichier complet ; extrait : mesures des lois de l'extrait des lois (5398)"
+   ],
+   "code_civil_art1": "LEGIARTI000006419280",
+   "senat_pages": {
+    "r18-542|5": "1325ba21aaeb5d1b38e60644fbac7fe43bced621ac102c6f08b4894836169060",
+    "r18-542|539": "1325ba21aaeb5d1b38e60644fbac7fe43bced621ac102c6f08b4894836169060",
+    "r19-523|7": "155f182632cd559bd3d0c8d42045ba53a438125948b7d28b24aca7324417b6f9",
+    "r19-523|13": "155f182632cd559bd3d0c8d42045ba53a438125948b7d28b24aca7324417b6f9",
+    "r25-802|7": "b2cd059c7a1f1904c7a0e1dbbb37f5028559101938f46e12b18a5e494bbc26ba",
+    "r25-802|45": "b2cd059c7a1f1904c7a0e1dbbb37f5028559101938f46e12b18a5e494bbc26ba",
+    "r25-802|47": "b2cd059c7a1f1904c7a0e1dbbb37f5028559101938f46e12b18a5e494bbc26ba",
+    "r25-802|271": "b2cd059c7a1f1904c7a0e1dbbb37f5028559101938f46e12b18a5e494bbc26ba",
+    "r24-710|3": "7d11e25d09ec9699177449e1262f50218ee76a6d091d0b44ceb0ca5789c207fc",
+    "cp20051201.html|html": "17d2d56799ec0609030d29ca57c5e5fb93790ceea661a72e6fd5eb53e5504d4f",
+    "cp20031202a.html|html": "d5a3e8ca790db6461951a6fe6f3cada7e65593a241fe15affc6f5d6b4350ee46",
+    "appleg_06-syn|2": "e639e54f5c5ecf8460bbe56dd4f356188081c40358b31b7c998196a249d3011a",
+    "apleg_08-syn|1": "8a5afdbdae257f20273e22462f6c41eaf5cf0feaf946efa5e6ad89606706105d",
+    "apleg_09-syn|2": "fcadee48cb29c748cad3a6c2c5f3a49b64450d2cbe647865c6543bdf690ede23",
+    "cp20110110.html|html": "1a6911f77b0cbcd92a4f1670dfa8b5cd857798cf257802a97de416ceeb711346",
+    "r11-323|11": "e81b6331b4d087aa7642a3d93e10d6a289a36c001ddae2c5ef4ccf1e63617949",
+    "r12-654|8": "4bed963728fabd330fe121609bb779130f540afbdc274f2f5f59a4532f188f48",
+    "r13-623|15": "4e51e34b481cb6b1c8578ed58f4ec016457b78cfe512ac16e7840be2aa0188e9",
+    "r14-495|5": "81e74614d6162b1eb9d3a211a2b551ac244faca83410b16c41362a86105e0539",
+    "r15-650|11": "4a6474420bf61b207c6b536a9758ac281cc46a80e61b8757fb2ee9e51f6124dc",
+    "r16-677|11": "1ba5de8f563f673afed6a32c0b01a0fea49b487b2166a19ed17b827a51104928",
+    "r17-510|18": "1c5f76a5edf08b12842994ff8ad881f08503e1b96fc8c7c4914897d166e4f8d6",
+    "r20-645|16": "914adc69c0d98bd0798bba1687cf0f407448689613de0c0d7fe6d3c7ad6fa142",
+    "r21-658|3": "c35a7ea6c13a6db16ed710cfed53d7e51121cb855e1a1444deb44dfece92d6fd",
+    "r22-636|3": "1eefa0e5a017a56e7597801f3282d8325e98310a5142cbaac8ed842e591050f3",
+    "r23-624|3": "a87f9eff690f11ab77ca415327096dc408c7eee23116550048f87bc8788fcc72"
+   }
+  },
+  "definitions": {
+   "session": "lois publiées du 1er octobre au 30 septembre suivant",
+   "directe": "loi qui n'appelle aucune mesure réglementaire d'application ; le baromètre la déduit de son échéancier (aucune mesure autre que « sans objet »), le Sénat la classe dans ses annexes",
+   "U_lois": "lois classées différemment par les deux sources, même quand une règle explique l'écart",
+   "P": "mesure à l'état « appliqué » avec un identifiant d'acte",
+   "A": "mesure « en attente d'application »",
+   "S": "mesure indiquée « sans objet »",
+   "U_mesures": "mesure « appliquée » sans identifiant d'acte"
+  },
+  "limites": "état courant seulement : aucun taux à six ou douze mois ne se calcule sans historique daté des échéanciers ; les taux du Sénat et du Gouvernement ne se comparent pas entre eux ni d'un segment de définition à l'autre"
+ },
+ "gardes": [
+  "A1 : code civil art. 1, report de l'entree en vigueur des dispositions qui appellent des mesures",
+  "A7 : 13 citations du Senat, 5 extraits du SGG, 23 valeurs de serie retrouvees mot pour mot",
+  "A2 : 399 lois au champ, 154 conventions ecartees, registre identique loi par loi",
+  "A3 : directes du barometre recalculees = registre ; effectifs du Senat = annonces (2024-2025 : 22 par commissions)",
+  "A4 : aucune phrase generale ; 2018-2019 : barometre 25/49 ; 24 lois classees differemment",
+  "A5 : 5398 mesures, N = P + A + S + U ; coherence loi par loi avec le fichier des lois du meme producteur",
+  "A6 : 2025-138 : 1 mesure(s) « sans objet » portant un arrete au barometre, en attente au SGG (31/12/2025)"
+ ],
+ "calcul": {
+  "lois": [
+   {
+    "session": "2017-2018",
+    "N": 41,
+    "D": 11,
+    "U": 3,
+    "baro": 12,
+    "senat": 13,
+    "senat_publie": 13,
+    "conventions": 25
+   },
+   {
+    "session": "2018-2019",
+    "N": 49,
+    "D": 22,
+    "U": 3,
+    "baro": 25,
+    "senat": 22,
+    "senat_publie": 22,
+    "conventions": 25
+   },
+   {
+    "session": "2019-2020",
+    "N": 43,
+    "D": 15,
+    "U": 1,
+    "baro": 16,
+    "senat": 15,
+    "senat_publie": 15,
+    "conventions": 14
+   },
+   {
+    "session": "2020-2021",
+    "N": 51,
+    "D": 17,
+    "U": 3,
+    "baro": 19,
+    "senat": 18,
+    "senat_publie": 18,
+    "conventions": 22
+   },
+   {
+    "session": "2021-2022",
+    "N": 64,
+    "D": 15,
+    "U": 9,
+    "baro": 21,
+    "senat": 18,
+    "senat_publie": 18,
+    "conventions": 18
+   },
+   {
+    "session": "2022-2023",
+    "N": 44,
+    "D": 10,
+    "U": 1,
+    "baro": 10,
+    "senat": 11,
+    "senat_publie": 11,
+    "conventions": 23
+   },
+   {
+    "session": "2023-2024",
+    "N": 51,
+    "D": 21,
+    "U": 0,
+    "baro": 21,
+    "senat": 21,
+    "senat_publie": 21,
+    "conventions": 12
+   },
+   {
+    "session": "2024-2025",
+    "N": 56,
+    "D": 19,
+    "U": 6,
+    "baro": 20,
+    "senat": 22,
+    "senat_publie": 24,
+    "conventions": 15
+   }
+  ],
+  "mesures": {
+   "2017-2018": {
+    "P": 520,
+    "A": 18,
+    "S": 18
+   },
+   "2018-2019": {
+    "P": 822,
+    "A": 47,
+    "S": 64
+   },
+   "2019-2020": {
+    "P": 563,
+    "A": 63,
+    "S": 54
+   },
+   "2020-2021": {
+    "P": 646,
+    "A": 90,
+    "S": 41
+   },
+   "2021-2022": {
+    "A": 75,
+    "P": 516,
+    "S": 57,
+    "U": 4
+   },
+   "2022-2023": {
+    "P": 421,
+    "S": 65,
+    "A": 62,
+    "U": 1
+   },
+   "2023-2024": {
+    "P": 601,
+    "S": 36,
+    "A": 93
+   },
+   "2024-2025": {
+    "A": 119,
+    "P": 289,
+    "S": 113
+   }
+  },
+  "total_mesures": {
+   "P": 4378,
+   "A": 567,
+   "S": 448,
+   "U": 5
+  },
+  "sans_objet_avec_acte": {
+   "2020-2021": 3,
+   "2023-2024": 4,
+   "2024-2025": 91
+  },
+  "attente_mention_differe": {
+   "2018-2019": 6,
+   "2019-2020": 14,
+   "2020-2021": 24,
+   "2021-2022": 20,
+   "2022-2023": 10,
+   "2023-2024": 21,
+   "2024-2025": 21
+  }
+ },
+ "serie_senat": [
+  {
+   "session": "2002-2003",
+   "valeur": 9.7,
+   "document": "cp20051201.html|html",
+   "citation": "en 2002-2003 ( 9,7 % )",
+   "segment": 1,
+   "definition": "lois de l'année parlementaire, arrêt au 30 septembre de la même année"
+  },
+  {
+   "session": "2003-2004",
+   "valeur": 14.4,
+   "document": "cp20051201.html|html",
+   "citation": "qui passe de 14,4 % en 2003-2004 à 16,4 % en 2004-2005",
+   "segment": 1,
+   "definition": "lois de l'année parlementaire, arrêt au 30 septembre de la même année"
+  },
+  {
+   "session": "2004-2005",
+   "valeur": 16.4,
+   "document": "cp20051201.html|html",
+   "citation": "qui passe de 14,4 % en 2003-2004 à 16,4 % en 2004-2005",
+   "segment": 1,
+   "definition": "lois de l'année parlementaire, arrêt au 30 septembre de la même année"
+  },
+  {
+   "session": "2005-2006",
+   "valeur": 30,
+   "document": "appleg_06-syn|2",
+   "citation": "en 2005-2006, à 30 %",
+   "segment": 1,
+   "definition": "lois de l'année parlementaire, arrêt au 30 septembre de la même année"
+  },
+  {
+   "session": "2006-2007",
+   "valeur": 32.1,
+   "document": "apleg_08-syn|1",
+   "citation": "32,1 % en 2006-2007 à 24,6 % en 2007-2008",
+   "segment": 1,
+   "definition": "lois de l'année parlementaire, arrêt au 30 septembre de la même année"
+  },
+  {
+   "session": "2007-2008",
+   "valeur": 24.6,
+   "document": "apleg_08-syn|1",
+   "citation": "32,1 % en 2006-2007 à 24,6 % en 2007-2008",
+   "segment": 1,
+   "definition": "lois de l'année parlementaire, arrêt au 30 septembre de la même année"
+  },
+  {
+   "session": "2008-2009",
+   "valeur": 27,
+   "document": "apleg_09-syn|2",
+   "citation": "a atteint 27 % en 2008-2009",
+   "segment": 1,
+   "definition": "lois de l'année parlementaire, arrêt au 30 septembre de la même année"
+  },
+  {
+   "session": "2010-2011",
+   "valeur": 64,
+   "document": "r11-323|11",
+   "citation": "346 mesures réglementaires sur les 540 prévues avaient été publiées, soit 64 %",
+   "segment": 2,
+   "definition": "âge minimal de six mois, session ordinaire seule"
+  },
+  {
+   "session": "2011-2012",
+   "valeur": 66,
+   "document": "r12-654|8",
+   "citation": "atteint en effet un taux global de 66 %",
+   "segment": 3,
+   "definition": "« nouvelles bornes » : lois du 14 juillet 2011 au 30 septembre 2012"
+  },
+  {
+   "session": "2012-2013",
+   "valeur": 64,
+   "document": "r13-623|15",
+   "citation": "ou à environ 64 % (si on compte en nombre de mesures)",
+   "segment": 4,
+   "definition": "lois du 1er octobre au 30 septembre, arrêt au 31 mars suivant"
+  },
+  {
+   "session": "2013-2014",
+   "valeur": 55,
+   "document": "r14-495|5",
+   "citation": "ce taux s'élève à 55 %",
+   "segment": 4,
+   "definition": "lois du 1er octobre au 30 septembre, arrêt au 31 mars suivant"
+  },
+  {
+   "session": "2014-2015",
+   "valeur": 62,
+   "document": "r15-650|11",
+   "citation": "mise en œuvre des mesures législatives) 62 %",
+   "segment": 4,
+   "definition": "lois du 1er octobre au 30 septembre, arrêt au 31 mars suivant"
+  },
+  {
+   "session": "2015-2016",
+   "valeur": 71,
+   "document": "r16-677|11",
+   "citation": "mesures législatives) 71 % (+ 9%)",
+   "segment": 4,
+   "definition": "lois du 1er octobre au 30 septembre, arrêt au 31 mars suivant"
+  },
+  {
+   "session": "2016-2017",
+   "valeur": 73,
+   "document": "r17-510|18",
+   "citation": "session parlementaire 2016-2017 73% (+2 points)",
+   "segment": 4,
+   "definition": "lois du 1er octobre au 30 septembre, arrêt au 31 mars suivant"
+  },
+  {
+   "session": "2017-2018",
+   "valeur": 78,
+   "document": "r18-542|5",
+   "citation": "Il atteint désormais 78 % - 86 % si on exclut",
+   "segment": 5,
+   "definition": "même calendrier, mesures différées comprises (un second taux les exclut)"
+  },
+  {
+   "session": "2018-2019",
+   "valeur": 72,
+   "document": "r19-523|7",
+   "citation": "Le taux global d'application des lois calculé par le Sénat est de 72 %",
+   "segment": 5,
+   "definition": "même calendrier, mesures différées comprises (un second taux les exclut)"
+  },
+  {
+   "session": "2019-2020",
+   "valeur": 62,
+   "document": "r20-645|16",
+   "citation": "est de 62 % - en retrait de dix points",
+   "segment": 5,
+   "definition": "même calendrier, mesures différées comprises (un second taux les exclut)"
+  },
+  {
+   "session": "2020-2021",
+   "valeur": 57,
+   "document": "r21-658|3",
+   "citation": "Le taux global d'application des lois calculé par le Sénat est de 57 %",
+   "segment": 5,
+   "definition": "même calendrier, mesures différées comprises (un second taux les exclut)"
+  },
+  {
+   "session": "2021-2022",
+   "valeur": 65,
+   "document": "r22-636|3",
+   "citation": "Le taux global d'application des lois calculé par le Sénat est de 65 %",
+   "segment": 5,
+   "definition": "même calendrier, mesures différées comprises (un second taux les exclut)"
+  },
+  {
+   "session": "2022-2023",
+   "valeur": 64,
+   "document": "r23-624|3",
+   "citation": "Le taux global d'application des lois calculé par le Sénat est de 64 %",
+   "segment": 5,
+   "definition": "même calendrier, mesures différées comprises (un second taux les exclut)"
+  },
+  {
+   "session": "2023-2024",
+   "valeur": 59,
+   "document": "r24-710|3",
+   "citation": "et s'établit à 59 %",
+   "segment": 5,
+   "definition": "même calendrier, mesures différées comprises (un second taux les exclut)"
+  },
+  {
+   "session": "2024-2025",
+   "valeur": 66,
+   "document": "r25-802|7",
+   "citation": "Taux d'application global des lois 66 % (+ 4 points)",
+   "segment": 6,
+   "definition": "un seul taux, sans mesures éventuelles ni différées au-delà du 31 mars 2026"
+  }
+ ],
+ "tableaux": {
+  "lois": {
+   "entetes": [
+    "Session",
+    "Lois promulguées (hors conventions)",
+    "D'application directe selon le baromètre",
+    "Selon le Sénat",
+    "Bornes : directes pour les deux sources, puis en comptant les classements divergents"
+   ],
+   "lignes": [
+    [
+     "2017-2018",
+     "41",
+     "12",
+     "13",
+     "de 11 à 14 sur 41"
+    ],
+    [
+     "2018-2019",
+     "49",
+     "25",
+     "22",
+     "de 22 à 25 sur 49"
+    ],
+    [
+     "2019-2020",
+     "43",
+     "16",
+     "15",
+     "de 15 à 16 sur 43"
+    ],
+    [
+     "2020-2021",
+     "51",
+     "19",
+     "18",
+     "de 17 à 20 sur 51"
+    ],
+    [
+     "2021-2022",
+     "64",
+     "21",
+     "18",
+     "de 15 à 24 sur 64"
+    ],
+    [
+     "2022-2023",
+     "44",
+     "10",
+     "11",
+     "de 10 à 11 sur 44"
+    ],
+    [
+     "2023-2024",
+     "51",
+     "21",
+     "21",
+     "21 sur 51"
+    ],
+    [
+     "2024-2025",
+     "56",
+     "20",
+     "22 (24 dans une autre page du même rapport)",
+     "de 19 à 25 sur 56"
+    ]
+   ]
+  },
+  "mesures": {
+   "entetes": [
+    "Session de la loi",
+    "Mesures",
+    "Acte publié identifié",
+    "En attente",
+    "Indiquées sans objet",
+    "Statut incomplet"
+   ],
+   "lignes": [
+    [
+     "2017-2018",
+     "556",
+     "520",
+     "18",
+     "18",
+     "0"
+    ],
+    [
+     "2018-2019",
+     "933",
+     "822",
+     "47",
+     "64",
+     "0"
+    ],
+    [
+     "2019-2020",
+     "680",
+     "563",
+     "63",
+     "54",
+     "0"
+    ],
+    [
+     "2020-2021",
+     "777",
+     "646",
+     "90",
+     "41",
+     "0"
+    ],
+    [
+     "2021-2022",
+     "652",
+     "516",
+     "75",
+     "57",
+     "4"
+    ],
+    [
+     "2022-2023",
+     "549",
+     "421",
+     "62",
+     "65",
+     "1"
+    ],
+    [
+     "2023-2024",
+     "730",
+     "601",
+     "93",
+     "36",
+     "0"
+    ],
+    [
+     "2024-2025",
+     "521",
+     "289",
+     "119",
+     "113",
+     "0"
+    ],
+    [
+     "Total",
+     "5 398",
+     "4 378",
+     "567",
+     "448",
+     "5"
+    ]
+   ]
+  },
+  "serie": {
+   "entetes": [
+    "Session",
+    "Taux publié par le Sénat",
+    "Définition (segment)",
+    "Document"
+   ],
+   "lignes": [
+    [
+     "2002-2003",
+     "9,7 %",
+     "lois de l'année parlementaire, arrêt au 30 septembre de la même année",
+     "cp20051201.html"
+    ],
+    [
+     "2003-2004",
+     "14,4 %",
+     "lois de l'année parlementaire, arrêt au 30 septembre de la même année",
+     "cp20051201.html"
+    ],
+    [
+     "2004-2005",
+     "16,4 %",
+     "lois de l'année parlementaire, arrêt au 30 septembre de la même année",
+     "cp20051201.html"
+    ],
+    [
+     "2005-2006",
+     "30 %",
+     "lois de l'année parlementaire, arrêt au 30 septembre de la même année",
+     "appleg_06-syn"
+    ],
+    [
+     "2006-2007",
+     "32,1 %",
+     "lois de l'année parlementaire, arrêt au 30 septembre de la même année",
+     "apleg_08-syn"
+    ],
+    [
+     "2007-2008",
+     "24,6 %",
+     "lois de l'année parlementaire, arrêt au 30 septembre de la même année",
+     "apleg_08-syn"
+    ],
+    [
+     "2008-2009",
+     "27 %",
+     "lois de l'année parlementaire, arrêt au 30 septembre de la même année",
+     "apleg_09-syn"
+    ],
+    [
+     "2010-2011",
+     "64 %",
+     "âge minimal de six mois, session ordinaire seule",
+     "r11-323"
+    ],
+    [
+     "2011-2012",
+     "66 %",
+     "« nouvelles bornes » : lois du 14 juillet 2011 au 30 septembre 2012",
+     "r12-654"
+    ],
+    [
+     "2012-2013",
+     "64 %",
+     "lois du 1er octobre au 30 septembre, arrêt au 31 mars suivant",
+     "r13-623"
+    ],
+    [
+     "2013-2014",
+     "55 %",
+     "lois du 1er octobre au 30 septembre, arrêt au 31 mars suivant",
+     "r14-495"
+    ],
+    [
+     "2014-2015",
+     "62 %",
+     "lois du 1er octobre au 30 septembre, arrêt au 31 mars suivant",
+     "r15-650"
+    ],
+    [
+     "2015-2016",
+     "71 %",
+     "lois du 1er octobre au 30 septembre, arrêt au 31 mars suivant",
+     "r16-677"
+    ],
+    [
+     "2016-2017",
+     "73 %",
+     "lois du 1er octobre au 30 septembre, arrêt au 31 mars suivant",
+     "r17-510"
+    ],
+    [
+     "2017-2018",
+     "78 %",
+     "même calendrier, mesures différées comprises (un second taux les exclut)",
+     "r18-542"
+    ],
+    [
+     "2018-2019",
+     "72 %",
+     "même calendrier, mesures différées comprises (un second taux les exclut)",
+     "r19-523"
+    ],
+    [
+     "2019-2020",
+     "62 %",
+     "même calendrier, mesures différées comprises (un second taux les exclut)",
+     "r20-645"
+    ],
+    [
+     "2019-2020",
+     "60 % (valeur reprise l'année suivante)",
+     "même calendrier, mesures différées comprises (un second taux les exclut)",
+     "r21-658"
+    ],
+    [
+     "2020-2021",
+     "57 %",
+     "même calendrier, mesures différées comprises (un second taux les exclut)",
+     "r21-658"
+    ],
+    [
+     "2021-2022",
+     "65 %",
+     "même calendrier, mesures différées comprises (un second taux les exclut)",
+     "r22-636"
+    ],
+    [
+     "2022-2023",
+     "64 %",
+     "même calendrier, mesures différées comprises (un second taux les exclut)",
+     "r23-624"
+    ],
+    [
+     "2023-2024",
+     "59 %",
+     "même calendrier, mesures différées comprises (un second taux les exclut)",
+     "r24-710"
+    ],
+    [
+     "2024-2025",
+     "66 %",
+     "un seul taux, sans mesures éventuelles ni différées au-delà du 31 mars 2026",
+     "r25-802"
+    ]
+   ]
+  }
+ },
+ "affichage": {
+  "releve": "05/10/2026",
+  "nmes": "5 398",
+  "P": "4 378",
+  "A": "567",
+  "S": "448",
+  "U": "5",
+  "A_pct": "10,5",
+  "A_1718": "18",
+  "N_1718": "556",
+  "A_2425": "119",
+  "N_2425": "521",
+  "differ_A": "116",
+  "obs_acte": "98",
+  "obs_acte_2425": "91",
+  "cas_2025_138": "Arrêté du 5 février 2026",
+  "nlois": "399",
+  "conventions": "154",
+  "ndesacc": "24",
+  "ct_session": "2018-2019",
+  "ct_baro": "25",
+  "ct_senat": "22",
+  "ct_N": "49",
+  "s25_baro": "20",
+  "s25_senat": "22",
+  "s25_publie": "24",
+  "s25_N": "56",
+  "nsessions": "huit",
+  "releve_le": "05/10/2026 (baromètre de l'application des lois) ; rapports du Sénat lus le 06/10/2026 ; bilan du SGG au 31/12/2025, lu le 06/10/2026",
+  "age_1718": "huit",
+  "senat_1819": "72 %",
+  "sgg_1819": "82,4 %",
+  "cit_sgg_1718": "ces 28 lois appelaient 461 mesures réglementaires d'application et nous en avons pris 393, soit un taux d'application de 85 %",
+  "cit_senat_1718": "Il atteint désormais 78 % - 86 % si on exclut les mesures dont l'entrée en vigueur est différée",
+  "cit_senat_1819": "Le taux global d'application des lois calculé par le Sénat est de 72 %",
+  "cit_sgg_1819": "les services du Secrétariat général du Gouvernement parviennent pour leur part à un taux global de 82,4 %",
+  "cit_diverge": "Le taux calculé par le Sénat peut diverger de celui calculé par le Gouvernement pour des raisons techniques, qui sont de deux ordres.",
+  "cit_arretes": "le Sénat effectue un contrôle global des mesures d'application des lois, en incluant les arrêtés dont la publication est prévue par la loi. Ce n'est pas le cas du secrétariat général du Gouvernement.",
+  "cit_politique": "Il peut également diverger pour des raisons politiques, notamment lorsque le Sénat considère qu'un décret pris ne respecte pas la volonté du législateur, et donc que la mesure attendue n'est pas prise.",
+  "cit_differees": "le Sénat intègre dans son taux les mesures attendues pour des articles dont l'entrée en vigueur est différée, à la différence du Gouvernement.",
+  "cit_802_22": "Plus précisément, 22 d'entre elles (soit 39 %) étaient d'application directe",
+  "cit_802_24": "le nombre de lois promulguées lors de la session 2024-2025 s'établit à 56, dont 24 d'application directe",
+  "cit_802_66": "Taux d'application global des lois 66 % (+ 4 points)",
+  "cit_802_note": "Les données prises en compte sont celles des mesures prévues, non éventuelles et non différées au-delà du 31 mars 2026, par les dispositions législatives.",
+  "cit_six_mois": "cette année, pour la première fois, afin de ne mesurer le nombre de mesures réglementaires prises qu'à l'expiration du délai de six mois que s'impose à lui-même le Gouvernement, la période retenue comprend trois mois de moins pour les lois promulguées retenues et trois mois de plus pour les mesures réglementaires prises.",
+  "cit_cciv": "Toutefois, l'entrée en vigueur de celles de leurs dispositions dont l'exécution nécessite des mesures d'application est reportée à la date d'entrée en vigueur de ces mesures.",
+  "cit_sgg16_def": "fait apparaître le taux d'application au 31 décembre 2025 des lois qui, parmi celles votées entre le 1er juillet 2022 et le 9 juin 2024, appellent des décrets d'application.",
+  "cit_sgg17_def": "fait apparaître le taux d'application au 31 décembre 2025 des lois qui, parmi celles publiées entre le 18 juillet 2024 et le 30 juin 2025, appellent des décrets ou des arrêtés d'application."
+ }
+}

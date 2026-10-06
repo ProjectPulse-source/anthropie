@@ -1,0 +1,28 @@
+{
+ "fr": [
+  {
+   "id": "mesures",
+   "fichier": "appliquer-mesures",
+   "titre": "Les mesures d'application des lois, par session de la loi",
+   "montre": "Au 05/10/2026, sur les 5 398 mesures d'application recensées par le baromètre pour les lois promulguées d'octobre 2017 à septembre 2025, 4 378 ont un acte publié identifié, 567 sont en attente et 448 sont indiquées sans objet.",
+   "source": "Baromètre de l'application des lois (Assemblée nationale, LexImpact ; données DILA), état au 05/10/2026",
+   "precaution": "Lois promulguées par session (1er oct.-30 sept.), hors conventions. État à la date du relevé : ni un taux historique, ni une efficacité."
+  },
+  {
+   "id": "lois",
+   "fichier": "appliquer-lois",
+   "titre": "Les lois qui n'appellent aucune mesure d'application, par session",
+   "montre": "Aucune phrase générale ne tient sur les huit sessions : en 2018-2019, le baromètre compte 25 lois d'application directe sur 49, le Sénat 22 ; les deux sources classent différemment 24 des 399 lois.",
+   "source": "Baromètre de l'application des lois (état au 05/10/2026) ; rapports annuels du Sénat sur l'application des lois",
+   "precaution": "Gris : lois que le baromètre et le Sénat classent différemment (2024-2025 : 2 lois sans liste nominative en plus)."
+  },
+  {
+   "id": "serie",
+   "fichier": "appliquer-serie",
+   "titre": "Le taux d'application des lois publié par le Sénat, 2002-2003 à 2024-2025",
+   "montre": "Le taux publié par le Sénat a changé six fois de définition depuis 2002-2003 : les segments ne se relient pas entre eux.",
+   "source": "Sénat, bilans annuels de l'application des lois, 2003-2026 (taux tels que publiés, page citée dans le tableau)",
+   "precaution": "Six définitions successives : ne pas relier les segments. Une révision de chiffre et une rupture de définition sont deux faits distincts."
+  }
+ ]
+}

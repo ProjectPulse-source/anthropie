@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 378" role="img" font-variant-numeric="tabular-nums" aria-labelledby="am-t am-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="am-t">Les mesures d&#x27;application des lois, par session de la loi</title><desc id="am-d">Barres horizontales, une par session de 2017-2018 à 2024-2025 : mesures avec un acte publié identifié, en attente, indiquées sans objet. Au total 5 398 mesures, dont 567 en attente. Les valeurs sont dans le tableau sous la figure.</desc>
+<rect width="720" height="378" fill="#ffffff"/>
+<text x="0.0" y="18.0" font-size="13" fill="#0A0A0E" text-anchor="start" font-weight="600">Les mesures d&#x27;application des lois, par session de la loi</text>
+<text x="0.0" y="36.0" font-size="12" fill="#52514e" text-anchor="start">nombre de mesures recensées et leur état au 05/10/2026</text>
+<rect x="0" y="49" width="11" height="11" fill="#184f95"/>
+<text x="16.0" y="58.0" font-size="10" fill="#52514e" text-anchor="start">acte publié identifié</text>
+<rect x="164" y="49" width="11" height="11" fill="#eb6834"/>
+<text x="180.2" y="58.0" font-size="10" fill="#52514e" text-anchor="start">en attente</text>
+<rect x="260" y="49" width="11" height="11" fill="#c9c5c0"/>
+<text x="276.2" y="58.0" font-size="10" fill="#52514e" text-anchor="start">indiquées sans objet</text>
+<rect x="418" y="49" width="11" height="11" fill="#8a8781"/>
+<text x="434.2" y="58.0" font-size="10" fill="#52514e" text-anchor="start">statut incomplet</text>
+<line x1="78.0" y1="70" x2="78.0" y2="300" stroke="#e1e0d9"/>
+<text x="78.0" y="314.0" font-size="9" fill="#898781" text-anchor="middle">0</text>
+<line x1="227.0" y1="70" x2="227.0" y2="300" stroke="#e1e0d9"/>
+<text x="227.0" y="314.0" font-size="9" fill="#898781" text-anchor="middle">250</text>
+<line x1="376.0" y1="70" x2="376.0" y2="300" stroke="#e1e0d9"/>
+<text x="376.0" y="314.0" font-size="9" fill="#898781" text-anchor="middle">500</text>
+<line x1="525.0" y1="70" x2="525.0" y2="300" stroke="#e1e0d9"/>
+<text x="525.0" y="314.0" font-size="9" fill="#898781" text-anchor="middle">750</text>
+<line x1="674.0" y1="70" x2="674.0" y2="300" stroke="#e1e0d9"/>
+<text x="674.0" y="314.0" font-size="9" fill="#898781" text-anchor="middle">1 000</text>
+<text x="0.0" y="89.0" font-size="10" fill="#0A0A0E" text-anchor="start">2017-2018</text>
+<rect x="78.0" y="74" width="309.9" height="20" fill="#184f95"/>
+<rect x="387.9" y="74" width="10.7" height="20" fill="#eb6834"/>
+<rect x="398.6" y="74" width="10.7" height="20" fill="#c9c5c0"/>
+<text x="413.4" y="88.0" font-size="9" fill="#52514e" text-anchor="start">18 en attente</text>
+<text x="0.0" y="117.0" font-size="10" fill="#0A0A0E" text-anchor="start">2018-2019</text>
+<rect x="78.0" y="102" width="489.9" height="20" fill="#184f95"/>
+<rect x="567.9" y="102" width="28.0" height="20" fill="#eb6834"/>
+<rect x="595.9" y="102" width="38.1" height="20" fill="#c9c5c0"/>
+<text x="638.1" y="116.0" font-size="9" fill="#52514e" text-anchor="start">47 en attente</text>
+<text x="0.0" y="145.0" font-size="10" fill="#0A0A0E" text-anchor="start">2019-2020</text>
+<rect x="78.0" y="130" width="335.5" height="20" fill="#184f95"/>
+<rect x="413.5" y="130" width="37.5" height="20" fill="#eb6834"/>
+<rect x="451.1" y="130" width="32.2" height="20" fill="#c9c5c0"/>
+<text x="487.3" y="144.0" font-size="9" fill="#52514e" text-anchor="start">63 en attente</text>
+<text x="0.0" y="173.0" font-size="10" fill="#0A0A0E" text-anchor="start">2020-2021</text>
+<rect x="78.0" y="158" width="385.0" height="20" fill="#184f95"/>
+<rect x="463.0" y="158" width="53.6" height="20" fill="#eb6834"/>
+<rect x="516.7" y="158" width="24.4" height="20" fill="#c9c5c0"/>
+<text x="545.1" y="172.0" font-size="9" fill="#52514e" text-anchor="start">90 en attente</text>
+<text x="0.0" y="201.0" font-size="10" fill="#0A0A0E" text-anchor="start">2021-2022</text>
+<rect x="78.0" y="186" width="307.5" height="20" fill="#184f95"/>
+<rect x="385.5" y="186" width="44.7" height="20" fill="#eb6834"/>
+<rect x="430.2" y="186" width="34.0" height="20" fill="#c9c5c0"/>
+<rect x="464.2" y="186" width="2.4" height="20" fill="#8a8781"/>
+<text x="470.6" y="200.0" font-size="9" fill="#52514e" text-anchor="start">75 en attente</text>
+<text x="0.0" y="229.0" font-size="10" fill="#0A0A0E" text-anchor="start">2022-2023</text>
+<rect x="78.0" y="214" width="250.9" height="20" fill="#184f95"/>
+<rect x="328.9" y="214" width="37.0" height="20" fill="#eb6834"/>
+<rect x="365.9" y="214" width="38.7" height="20" fill="#c9c5c0"/>
+<rect x="404.6" y="214" width="0.6" height="20" fill="#8a8781"/>
+<text x="409.2" y="228.0" font-size="9" fill="#52514e" text-anchor="start">62 en attente</text>
+<text x="0.0" y="257.0" font-size="10" fill="#0A0A0E" text-anchor="start">2023-2024</text>
+<rect x="78.0" y="242" width="358.2" height="20" fill="#184f95"/>
+<rect x="436.2" y="242" width="55.4" height="20" fill="#eb6834"/>
+<rect x="491.6" y="242" width="21.5" height="20" fill="#c9c5c0"/>
+<text x="517.1" y="256.0" font-size="9" fill="#52514e" text-anchor="start">93 en attente</text>
+<text x="0.0" y="285.0" font-size="10" fill="#0A0A0E" text-anchor="start">2024-2025</text>
+<rect x="78.0" y="270" width="172.2" height="20" fill="#184f95"/>
+<rect x="250.2" y="270" width="70.9" height="20" fill="#eb6834"/>
+<rect x="321.2" y="270" width="67.3" height="20" fill="#c9c5c0"/>
+<text x="392.5" y="284.0" font-size="9" fill="#52514e" text-anchor="start">119 en attente</text>
+<line x1="0" y1="332" x2="720" y2="332" stroke="#e1e0d9"/>
+<text x="0" y="345" font-size="9" fill="#52514e">Baromètre de l&#x27;application des lois (Assemblée nationale, LexImpact ; données DILA), état au 05/10/2026</text>
+<text x="0" y="357" font-size="9" fill="#52514e">Lois promulguées par session (1er oct.-30 sept.), hors conventions. État à la date du relevé : ni un taux historique, ni une efficacité.</text>
+<text x="0" y="369" font-size="9" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/une-loi-votee-s-applique-t-elle-tout-de-suite/</text>
+</svg>

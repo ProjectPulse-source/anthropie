@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 378" role="img" font-variant-numeric="tabular-nums" aria-labelledby="al-t al-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="al-t">Les lois qui n&#x27;appellent aucune mesure d&#x27;application, par session</title><desc id="al-d">Barres horizontales, une par session : lois d&#x27;application directe pour les deux sources, lois classées différemment par le baromètre et par le Sénat, lois qui appellent des mesures. En 2018-2019, le baromètre compte 25 lois d&#x27;application directe sur 49. Les valeurs sont dans le tableau sous la figure.</desc>
+<rect width="720" height="378" fill="#ffffff"/>
+<text x="0.0" y="18.0" font-size="13" fill="#0A0A0E" text-anchor="start" font-weight="600">Les lois qui n&#x27;appellent aucune mesure d&#x27;application, par session</text>
+<text x="0.0" y="36.0" font-size="12" fill="#52514e" text-anchor="start">nombre de lois promulguées, hors conventions ; trait noir : la moitié des lois de la session</text>
+<rect x="0" y="49" width="11" height="11" fill="#184f95"/>
+<text x="16.0" y="58.0" font-size="10" fill="#52514e" text-anchor="start">application directe (les deux sources)</text>
+<rect x="269" y="49" width="11" height="11" fill="#8a8781"/>
+<text x="285.6" y="58.0" font-size="10" fill="#52514e" text-anchor="start">classement divergent</text>
+<rect x="427" y="49" width="11" height="11" fill="#c9c5c0"/>
+<text x="443.6" y="58.0" font-size="10" fill="#52514e" text-anchor="start">appellent des mesures</text>
+<line x1="78.0" y1="70" x2="78.0" y2="300" stroke="#e1e0d9"/>
+<text x="78.0" y="314.0" font-size="9" fill="#898781" text-anchor="middle">0</text>
+<line x1="161.1" y1="70" x2="161.1" y2="300" stroke="#e1e0d9"/>
+<text x="161.1" y="314.0" font-size="9" fill="#898781" text-anchor="middle">10</text>
+<line x1="244.3" y1="70" x2="244.3" y2="300" stroke="#e1e0d9"/>
+<text x="244.3" y="314.0" font-size="9" fill="#898781" text-anchor="middle">20</text>
+<line x1="327.4" y1="70" x2="327.4" y2="300" stroke="#e1e0d9"/>
+<text x="327.4" y="314.0" font-size="9" fill="#898781" text-anchor="middle">30</text>
+<line x1="410.6" y1="70" x2="410.6" y2="300" stroke="#e1e0d9"/>
+<text x="410.6" y="314.0" font-size="9" fill="#898781" text-anchor="middle">40</text>
+<line x1="493.7" y1="70" x2="493.7" y2="300" stroke="#e1e0d9"/>
+<text x="493.7" y="314.0" font-size="9" fill="#898781" text-anchor="middle">50</text>
+<line x1="576.9" y1="70" x2="576.9" y2="300" stroke="#e1e0d9"/>
+<text x="576.9" y="314.0" font-size="9" fill="#898781" text-anchor="middle">60</text>
+<line x1="660.0" y1="70" x2="660.0" y2="300" stroke="#e1e0d9"/>
+<text x="660.0" y="314.0" font-size="9" fill="#898781" text-anchor="middle">70</text>
+<text x="0.0" y="89.0" font-size="10" fill="#0A0A0E" text-anchor="start">2017-2018</text>
+<rect x="78.0" y="74" width="91.5" height="20" fill="#184f95"/>
+<rect x="169.5" y="74" width="24.9" height="20" fill="#8a8781"/>
+<rect x="194.4" y="74" width="224.5" height="20" fill="#c9c5c0"/>
+<line x1="248.4" y1="71" x2="248.4" y2="97" stroke="#0A0A0E" stroke-width="2"/>
+<text x="422.9" y="88.0" font-size="9" fill="#52514e" text-anchor="start">41 lois</text>
+<text x="0.0" y="117.0" font-size="10" fill="#0A0A0E" text-anchor="start">2018-2019</text>
+<rect x="78.0" y="102" width="182.9" height="20" fill="#184f95"/>
+<rect x="260.9" y="102" width="24.9" height="20" fill="#8a8781"/>
+<rect x="285.9" y="102" width="199.5" height="20" fill="#c9c5c0"/>
+<line x1="281.7" y1="99" x2="281.7" y2="125" stroke="#0A0A0E" stroke-width="2"/>
+<text x="489.4" y="116.0" font-size="9" fill="#52514e" text-anchor="start">49 lois</text>
+<text x="0.0" y="145.0" font-size="10" fill="#0A0A0E" text-anchor="start">2019-2020</text>
+<rect x="78.0" y="130" width="124.7" height="20" fill="#184f95"/>
+<rect x="202.7" y="130" width="8.3" height="20" fill="#8a8781"/>
+<rect x="211.0" y="130" width="224.5" height="20" fill="#c9c5c0"/>
+<line x1="256.8" y1="127" x2="256.8" y2="153" stroke="#0A0A0E" stroke-width="2"/>
+<text x="439.5" y="144.0" font-size="9" fill="#52514e" text-anchor="start">43 lois</text>
+<text x="0.0" y="173.0" font-size="10" fill="#0A0A0E" text-anchor="start">2020-2021</text>
+<rect x="78.0" y="158" width="141.3" height="20" fill="#184f95"/>
+<rect x="219.3" y="158" width="24.9" height="20" fill="#8a8781"/>
+<rect x="244.3" y="158" width="257.7" height="20" fill="#c9c5c0"/>
+<line x1="290.0" y1="155" x2="290.0" y2="181" stroke="#0A0A0E" stroke-width="2"/>
+<text x="506.0" y="172.0" font-size="9" fill="#52514e" text-anchor="start">51 lois</text>
+<text x="0.0" y="201.0" font-size="10" fill="#0A0A0E" text-anchor="start">2021-2022</text>
+<rect x="78.0" y="186" width="124.7" height="20" fill="#184f95"/>
+<rect x="202.7" y="186" width="74.8" height="20" fill="#8a8781"/>
+<rect x="277.5" y="186" width="332.6" height="20" fill="#c9c5c0"/>
+<line x1="344.1" y1="183" x2="344.1" y2="209" stroke="#0A0A0E" stroke-width="2"/>
+<text x="614.1" y="200.0" font-size="9" fill="#52514e" text-anchor="start">64 lois</text>
+<text x="0.0" y="229.0" font-size="10" fill="#0A0A0E" text-anchor="start">2022-2023</text>
+<rect x="78.0" y="214" width="83.1" height="20" fill="#184f95"/>
+<rect x="161.1" y="214" width="8.3" height="20" fill="#8a8781"/>
+<rect x="169.5" y="214" width="274.4" height="20" fill="#c9c5c0"/>
+<line x1="260.9" y1="211" x2="260.9" y2="237" stroke="#0A0A0E" stroke-width="2"/>
+<text x="447.8" y="228.0" font-size="9" fill="#52514e" text-anchor="start">44 lois</text>
+<text x="0.0" y="257.0" font-size="10" fill="#0A0A0E" text-anchor="start">2023-2024</text>
+<rect x="78.0" y="242" width="174.6" height="20" fill="#184f95"/>
+<rect x="252.6" y="242" width="249.4" height="20" fill="#c9c5c0"/>
+<line x1="290.0" y1="239" x2="290.0" y2="265" stroke="#0A0A0E" stroke-width="2"/>
+<text x="506.0" y="256.0" font-size="9" fill="#52514e" text-anchor="start">51 lois</text>
+<text x="0.0" y="285.0" font-size="10" fill="#0A0A0E" text-anchor="start">2024-2025</text>
+<rect x="78.0" y="270" width="158.0" height="20" fill="#184f95"/>
+<rect x="236.0" y="270" width="49.9" height="20" fill="#8a8781"/>
+<rect x="285.9" y="270" width="257.7" height="20" fill="#c9c5c0"/>
+<line x1="310.8" y1="267" x2="310.8" y2="293" stroke="#0A0A0E" stroke-width="2"/>
+<text x="547.6" y="284.0" font-size="9" fill="#52514e" text-anchor="start">56 lois</text>
+<line x1="0" y1="332" x2="720" y2="332" stroke="#e1e0d9"/>
+<text x="0" y="345" font-size="9" fill="#52514e">Baromètre de l&#x27;application des lois (état au 05/10/2026) ; rapports annuels du Sénat sur l&#x27;application des lois</text>
+<text x="0" y="357" font-size="9" fill="#52514e">Gris : lois que le baromètre et le Sénat classent différemment (2024-2025 : 2 lois sans liste nominative en plus).</text>
+<text x="0" y="369" font-size="9" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/une-loi-votee-s-applique-t-elle-tout-de-suite/</text>
+</svg>

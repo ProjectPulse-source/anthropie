@@ -1,0 +1,75 @@
+{
+ "2017-2018": {
+  "document": "r18-542",
+  "annonces": {
+   "directe": 13,
+   "mise_en_application": 11,
+   "partielle": 17
+  }
+ },
+ "2018-2019": {
+  "document": "r19-523",
+  "annonces": {
+   "directe": 22,
+   "mise_en_application": 6,
+   "partielle": 15,
+   "non_mise": 6
+  }
+ },
+ "2019-2020": {
+  "document": "r20-645",
+  "annonces": {
+   "directe": 15,
+   "mise_en_application": 10,
+   "partielle": 12,
+   "non_mise": 6
+  }
+ },
+ "2020-2021": {
+  "document": "r21-658",
+  "annonces": {
+   "directe": 18,
+   "mise_en_application": 12,
+   "partielle": 12,
+   "non_mise": 4
+  }
+ },
+ "2021-2022": {
+  "document": "r22-636",
+  "annonces": {
+   "directe": 18,
+   "mise_en_application": 14,
+   "partielle": 25,
+   "non_mise": 7
+  }
+ },
+ "2022-2023": {
+  "document": "r23-624",
+  "annonces": {
+   "directe": 11,
+   "mise_en_application": 9,
+   "partielle": 17,
+   "non_mise": 7
+  }
+ },
+ "2023-2024": {
+  "document": "r24-710",
+  "annonces": {
+   "directe": 21,
+   "mise_en_application": 4,
+   "partielle": 17,
+   "non_mise": 9
+  }
+ },
+ "2024-2025": {
+  "document": "r25-802",
+  "annonces": null,
+  "annonces_commissions": {
+   "I. COMMISSION DES AFFAIRES ÉCONOMIQUES": "Sur ces 12 lois, 2 étaient d’application directe",
+   "III. COMMISSION DES AFFAIRES SOCIALES": "Sur ces 12 lois, 3 étaient d’application directe",
+   "V. COMMISSION DE LA CULTURE, DE L’ÉDUCATION,": "Sur ces 3 lois, 2 étaient d’application directe",
+   "VI. COMMISSION DES FINANCES": "Sur ces cinq lois, trois étaient d’application directe",
+   "VII. COMMISSION DES LOIS CONSTITUTIONNELLES,": "Sur ces 21 lois, 12 étaient d’application directe"
+  }
+ }
+}

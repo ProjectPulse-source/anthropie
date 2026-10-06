@@ -1,0 +1,96 @@
+﻿serie,session,categorie,valeur,unite,source
+lois,2017-2018,lois_promulguees_hors_conventions,41,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2017-2018,lois_directes_barometre,12,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2017-2018,lois_directes_senat_liste,13,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2017-2018,lois_directes_deux_sources,11,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2017-2018,lois_classement_incertain,3,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2018-2019,lois_promulguees_hors_conventions,49,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2018-2019,lois_directes_barometre,25,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2018-2019,lois_directes_senat_liste,22,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2018-2019,lois_directes_deux_sources,22,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2018-2019,lois_classement_incertain,3,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2019-2020,lois_promulguees_hors_conventions,43,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2019-2020,lois_directes_barometre,16,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2019-2020,lois_directes_senat_liste,15,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2019-2020,lois_directes_deux_sources,15,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2019-2020,lois_classement_incertain,1,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2020-2021,lois_promulguees_hors_conventions,51,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2020-2021,lois_directes_barometre,19,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2020-2021,lois_directes_senat_liste,18,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2020-2021,lois_directes_deux_sources,17,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2020-2021,lois_classement_incertain,3,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2021-2022,lois_promulguees_hors_conventions,64,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2021-2022,lois_directes_barometre,21,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2021-2022,lois_directes_senat_liste,18,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2021-2022,lois_directes_deux_sources,15,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2021-2022,lois_classement_incertain,9,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2022-2023,lois_promulguees_hors_conventions,44,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2022-2023,lois_directes_barometre,10,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2022-2023,lois_directes_senat_liste,11,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2022-2023,lois_directes_deux_sources,10,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2022-2023,lois_classement_incertain,1,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2023-2024,lois_promulguees_hors_conventions,51,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2023-2024,lois_directes_barometre,21,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2023-2024,lois_directes_senat_liste,21,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2023-2024,lois_directes_deux_sources,21,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2023-2024,lois_classement_incertain,0,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2024-2025,lois_promulguees_hors_conventions,56,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2024-2025,lois_directes_barometre,20,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2024-2025,lois_directes_senat_liste,22,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2024-2025,lois_directes_deux_sources,19,lois,barometre 05/10/2026 ; rapports du Senat
+lois,2024-2025,lois_classement_incertain,6,lois,barometre 05/10/2026 ; rapports du Senat
+mesures,2017-2018,acte_publie_identifie,520,mesures,"barometre, etat au 05/10/2026"
+mesures,2017-2018,en_attente,18,mesures,"barometre, etat au 05/10/2026"
+mesures,2017-2018,sans_objet,18,mesures,"barometre, etat au 05/10/2026"
+mesures,2017-2018,statut_incomplet,0,mesures,"barometre, etat au 05/10/2026"
+mesures,2018-2019,acte_publie_identifie,822,mesures,"barometre, etat au 05/10/2026"
+mesures,2018-2019,en_attente,47,mesures,"barometre, etat au 05/10/2026"
+mesures,2018-2019,sans_objet,64,mesures,"barometre, etat au 05/10/2026"
+mesures,2018-2019,statut_incomplet,0,mesures,"barometre, etat au 05/10/2026"
+mesures,2019-2020,acte_publie_identifie,563,mesures,"barometre, etat au 05/10/2026"
+mesures,2019-2020,en_attente,63,mesures,"barometre, etat au 05/10/2026"
+mesures,2019-2020,sans_objet,54,mesures,"barometre, etat au 05/10/2026"
+mesures,2019-2020,statut_incomplet,0,mesures,"barometre, etat au 05/10/2026"
+mesures,2020-2021,acte_publie_identifie,646,mesures,"barometre, etat au 05/10/2026"
+mesures,2020-2021,en_attente,90,mesures,"barometre, etat au 05/10/2026"
+mesures,2020-2021,sans_objet,41,mesures,"barometre, etat au 05/10/2026"
+mesures,2020-2021,statut_incomplet,0,mesures,"barometre, etat au 05/10/2026"
+mesures,2021-2022,acte_publie_identifie,516,mesures,"barometre, etat au 05/10/2026"
+mesures,2021-2022,en_attente,75,mesures,"barometre, etat au 05/10/2026"
+mesures,2021-2022,sans_objet,57,mesures,"barometre, etat au 05/10/2026"
+mesures,2021-2022,statut_incomplet,4,mesures,"barometre, etat au 05/10/2026"
+mesures,2022-2023,acte_publie_identifie,421,mesures,"barometre, etat au 05/10/2026"
+mesures,2022-2023,en_attente,62,mesures,"barometre, etat au 05/10/2026"
+mesures,2022-2023,sans_objet,65,mesures,"barometre, etat au 05/10/2026"
+mesures,2022-2023,statut_incomplet,1,mesures,"barometre, etat au 05/10/2026"
+mesures,2023-2024,acte_publie_identifie,601,mesures,"barometre, etat au 05/10/2026"
+mesures,2023-2024,en_attente,93,mesures,"barometre, etat au 05/10/2026"
+mesures,2023-2024,sans_objet,36,mesures,"barometre, etat au 05/10/2026"
+mesures,2023-2024,statut_incomplet,0,mesures,"barometre, etat au 05/10/2026"
+mesures,2024-2025,acte_publie_identifie,289,mesures,"barometre, etat au 05/10/2026"
+mesures,2024-2025,en_attente,119,mesures,"barometre, etat au 05/10/2026"
+mesures,2024-2025,sans_objet,113,mesures,"barometre, etat au 05/10/2026"
+mesures,2024-2025,statut_incomplet,0,mesures,"barometre, etat au 05/10/2026"
+taux_senat,2002-2003,segment_1,9.7,%,"Senat, cp20051201.html p. html"
+taux_senat,2003-2004,segment_1,14.4,%,"Senat, cp20051201.html p. html"
+taux_senat,2004-2005,segment_1,16.4,%,"Senat, cp20051201.html p. html"
+taux_senat,2005-2006,segment_1,30,%,"Senat, appleg_06-syn p. 2"
+taux_senat,2006-2007,segment_1,32.1,%,"Senat, apleg_08-syn p. 1"
+taux_senat,2007-2008,segment_1,24.6,%,"Senat, apleg_08-syn p. 1"
+taux_senat,2008-2009,segment_1,27,%,"Senat, apleg_09-syn p. 2"
+taux_senat,2010-2011,segment_2,64,%,"Senat, r11-323 p. 11"
+taux_senat,2011-2012,segment_3,66,%,"Senat, r12-654 p. 8"
+taux_senat,2012-2013,segment_4,64,%,"Senat, r13-623 p. 15"
+taux_senat,2013-2014,segment_4,55,%,"Senat, r14-495 p. 5"
+taux_senat,2014-2015,segment_4,62,%,"Senat, r15-650 p. 11"
+taux_senat,2015-2016,segment_4,71,%,"Senat, r16-677 p. 11"
+taux_senat,2016-2017,segment_4,73,%,"Senat, r17-510 p. 18"
+taux_senat,2017-2018,segment_5,78,%,"Senat, r18-542 p. 5"
+taux_senat,2018-2019,segment_5,72,%,"Senat, r19-523 p. 7"
+taux_senat,2019-2020,segment_5,62,%,"Senat, r20-645 p. 16"
+taux_senat,2020-2021,segment_5,57,%,"Senat, r21-658 p. 3"
+taux_senat,2021-2022,segment_5,65,%,"Senat, r22-636 p. 3"
+taux_senat,2022-2023,segment_5,64,%,"Senat, r23-624 p. 3"
+taux_senat,2023-2024,segment_5,59,%,"Senat, r24-710 p. 3"
+taux_senat,2024-2025,segment_6,66,%,"Senat, r25-802 p. 7"
+taux_senat,2019-2020,segment_5_revision,60,%,"Senat, r21-658 p. 3"
