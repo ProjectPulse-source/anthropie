@@ -10,6 +10,10 @@ blocs:
     titre: "Public debt"
     barre: "propre"   # each page calls `dossier-dette volet="…"`
     chapo: "Why it rises, what it costs, who pays, how it compares elsewhere and under what conditions it can come down."
+  - id: promesses
+    titre: "Presidential promises: from power to results"
+    titre_barre: "Presidential promises"   # bar badge: the full title overflows at 390 px
+    chapo: "Who can decide, with whose agreement, within what time — and how to check the result? The French case."
   - id: notions
     titre: "Concepts"
     chapo: "Definitions of the anthropic framework, each tied to its sources."

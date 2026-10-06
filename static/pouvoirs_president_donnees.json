@@ -17,7 +17,9 @@
   "G2 : 7 citations de « qui fixe les regles » retrouvees",
   "G2 : 13 citations entre guillemets des fiches retrouvees",
   "G3 : inventaire complet, 8 renvois relus dans l'article 19 (8, 11, 12, 16, 18, 54, 56, 61)",
-  "G4 : « seulement » tenu (2 sur 8)"
+  "G4 : « seulement » tenu (2 sur 8)",
+  "G2 : 4 citations du texte de la page retrouvees (FR et EN)",
+  "G2-EN : 32 citations anglaises (Conseil constitutionnel) et 18 citations des fiches anglaises retrouvees"
  ],
  "inventaire": [
   {
@@ -276,7 +278,26 @@
   "n_limite": "cinq",
   "n_seuls": "deux",
   "n_seuls_maj": "Deux",
+  "cit19": "Les actes du Président de la République autres que ceux prévus aux articles 8 (1er alinéa), 11, 12, 16, 18, 54, 56 et 61 sont contresignés par le Premier ministre et, le cas échéant, par les ministres responsables.",
+  "cit5": "par son arbitrage, le fonctionnement régulier des pouvoirs publics ainsi que la continuité de l'Etat",
+  "cit37": "Les matières autres que celles qui sont du domaine de la loi ont un caractère réglementaire",
+  "cit20": "Le Gouvernement détermine et conduit la politique de la Nation.",
   "seuls_liste": "nommer le Premier ministre et adresser un message au Parlement",
   "releve_le": "06/10/2026 (textes lus sur Légifrance du 30/09/2026 au 06/10/2026)"
+ },
+ "affichage_en": {
+  "n_renvois": "eight",
+  "n_condition": "three",
+  "n_autre": "six",
+  "n_partage": "three",
+  "n_limite": "five",
+  "n_seuls": "two",
+  "n_seuls_maj": "Two",
+  "cit19": "Instruments of the President of the Republic, other than those provided for under articles 8 (paragraph one), 11, 12, 16, 18, 54, 56 and 61, shall be countersigned by the Prime Minister and, where required, by the ministers concerned.",
+  "cit5": "by his arbitration, the proper functioning of the public authorities and the continuity of the State",
+  "cit37": "Matters other than those coming under the scope of statute law shall be matters for regulation",
+  "cit20": "The Government shall determine and conduct the policy of the Nation.",
+  "seuls_liste": "appoint the Prime Minister and send a message to Parliament",
+  "releve_le": "6 October 2026 (texts read on Légifrance from 30 September 2026 to 6 October 2026; quoted in the English translation published by the Conseil constitutionnel)"
  }
 }

@@ -16,7 +16,12 @@ Gardes (toutes ARRÊTENT, rien n'est écrit) :
   G3  TÉMOIN DE COMPLÉTUDE : la liste des renvois de l'inventaire est relue dans le texte de l'article 19 lui-même ;
       un renvoi manquant ou en trop arrête ;
   G4  les qualificatifs de la prose (« seulement ») sont recalculés : faux dans les données, arrêt.
-Autotest de mutation (à chaque exécution) : une citation altérée doit faire mordre G2, un renvoi retiré G3.
+  G2-EN version anglaise (06/10/2026) : data/pouvoirs_president_en.yaml couvre chaque entrée de la base ; chaque
+      citation anglaise de la Constitution figure mot pour mot dans la traduction publiée par le Conseil constitutionnel
+      (scripts/sources_promesses_en/), article par article ; tout passage entre “…” d'une fiche anglaise figure dans la
+      traduction de l'un des articles de la fiche, tout passage entre « … » dans leur texte français.
+Autotest de mutation (à chaque exécution) : une citation altérée doit faire mordre G2, un renvoi retiré G3, une
+citation anglaise altérée G2-EN.
 
 Écrit : data/pouvoirs_president_donnees.json (+ copie static/), static/pouvoirs_president_donnees.csv (UTF-8 BOM,
 format long), data/figures_pouvoirs.json, static/img/pouvoirs-article19.svg + .png (ensemble ou pas du tout).
@@ -37,6 +42,26 @@ from pathlib import Path
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "scripts" / "sources_promesses_en"))
+import constitution_en as cen  # noqa: E402
+SRC_EN = ROOT / "data" / "pouvoirs_president_en.yaml"
+PAGE_URL_EN = "stephane-lalut.com/en/what-can-the-french-president-decide-alone/"
+ATTRIBUTS_EN = {"condition": "Recommendation or consultation required before the act",
+                "autre_autorite": "Another actor steps in for what follows",
+                "partage": "Other authorities hold a power of the same kind",
+                "limite": "Other written limit: time, subject or effect"}
+# Citations du texte courant de la page (hors base) : un jeton par citation, vérifié dans les deux langues.
+PROSE = {
+    "cit19": ("19", "Les actes du Président de la République autres que ceux prévus aux articles 8 (1er alinéa), 11, 12, 16, 18, 54, 56 et 61 sont contresignés par le Premier ministre et, le cas échéant, par les ministres responsables.",
+              "Instruments of the President of the Republic, other than those provided for under articles 8 (paragraph one), 11, 12, 16, 18, 54, 56 and 61, shall be countersigned by the Prime Minister and, where required, by the ministers concerned."),
+    "cit5": ("5", "par son arbitrage, le fonctionnement régulier des pouvoirs publics ainsi que la continuité de l'Etat",  # graphie de Légifrance
+             "by his arbitration, the proper functioning of the public authorities and the continuity of the State"),
+    "cit37": ("37", "Les matières autres que celles qui sont du domaine de la loi ont un caractère réglementaire",
+              "Matters other than those coming under the scope of statute law shall be matters for regulation"),
+    "cit20": ("20", "Le Gouvernement détermine et conduit la politique de la Nation.",
+              "The Government shall determine and conduct the policy of the Nation."),
+}
+LETTRES_EN = {0: "none", 1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six", 7: "seven", 8: "eight"}
 ARCHIVE = ROOT.parents[1] / "02_FABRIQUE" / "sources" / "archive"
 SRC = ROOT / "data" / "pouvoirs_president.yaml"
 OUT_DATA = ROOT / "data" / "pouvoirs_president_donnees.json"
@@ -150,7 +175,61 @@ def calculer(base: dict, textes: dict) -> tuple[dict, list[str]]:
     gardes.append("G4 : « seulement » tenu (%d sur %d)" % (len(seuls), n))
     r = {"n": n, "compte": compte, "seuls": [e["pouvoir"] for e in seuls], "seuls_renvois": [e["renvoi"] for e in seuls],
          "inventaire": inv, "regles": base["regles"]}
+    for k, (art, c_fr, c_en) in PROSE.items():
+        verifier_cite({"art": art, "cite": c_fr}, textes, "texte de la page, " + k)
+        try:
+            cen.citer(art, c_en)
+        except ValueError as e:
+            raise Arret("G2-EN texte de la page, %s : %s" % (k, e))
+    gardes.append("G2 : %d citations du texte de la page retrouvees (FR et EN)" % len(PROSE))
+    if base.get("_en") is not None:
+        gardes.append(verifier_en(base, base["_en"], textes))
     return r, gardes
+
+
+def verifier_en(base: dict, en: dict, textes: dict) -> str:
+    """G2-EN : couverture de la couche anglaise, citations dans la traduction du Conseil constitutionnel."""
+    try:
+        tcen = cen.texte()
+        n = 0
+        for e in base["inventaire_19"]:
+            x = en["inventaire_19"].get(e["renvoi"])
+            if not x or not x.get("pouvoir"):
+                raise Arret("G2-EN : renvoi %s sans traduction" % e["renvoi"])
+            for k in ["acte"] + [a for a, _ in ATTRIBUTS]:
+                if bool(e.get(k)) != bool(x.get(k)):
+                    raise Arret("G2-EN : renvoi %s, %s : presence differente entre FR et EN" % (e["renvoi"], k))
+                if e.get(k):
+                    cen.citer(str(e[k]["art"]), x[k], tcen)
+                    n += 1
+        if len(en["regles"]) != len(base["regles"]):
+            raise Arret("G2-EN : regles : %d en anglais pour %d" % (len(en["regles"]), len(base["regles"])))
+        for c, x in zip(base["regles"], en["regles"]):
+            cen.citer(str(c["art"]), x["cite"], tcen)
+            n += 1
+        for g in base["groupes"]:
+            if not (en["groupes"].get(g["id"]) or {}).get("titre"):
+                raise Arret("G2-EN : groupe %s sans traduction" % g["id"])
+        q = 0
+        for p in base["pouvoirs"]:
+            x = en["pouvoirs"].get(p["id"])
+            if not x or any(not x.get(k) for k in ("question", "pouvoir", "decide", "condition", "tiers", "portee_texte")):
+                raise Arret("G2-EN : fiche %s : traduction incomplete" % p["id"])
+            corpus = " ".join(cen.article(str(a), tcen) for a in p["articles"]).casefold()
+            corpus_fr = " ".join(norm(textes[str(a)]) for a in p["articles"] if str(a) in textes).casefold()
+            for champ in ("decide", "condition", "tiers", "portee_texte"):
+                for s in re.findall(r"“(.+?)”", x[champ]):
+                    if cen.norm(s).rstrip(".,;:").casefold() not in corpus:
+                        raise Arret("G2-EN fiche %s, %s : citation absente de la traduction des articles %s : %r"
+                                    % (p["id"], champ, ",".join(p["articles"]), s[:60]))
+                    q += 1
+                for s in re.findall(r"«\s*(.+?)\s*»", x[champ]):
+                    if norm(s).casefold() not in corpus_fr:
+                        raise Arret("G2-EN fiche %s, %s : citation francaise absente : %r" % (p["id"], champ, s[:60]))
+                    q += 1
+    except ValueError as e:
+        raise Arret("G2-EN : %s" % e)
+    return "G2-EN : %d citations anglaises (Conseil constitutionnel) et %d citations des fiches anglaises retrouvees" % (n, q)
 
 
 def affichage(r: dict) -> dict:
@@ -163,11 +242,34 @@ def affichage(r: dict) -> dict:
         "n_limite": LETTRES_F[r["compte"]["limite"]],
         "n_seuls": LETTRES_F[len(r["seuls"])],
         "n_seuls_maj": LETTRES_F[len(r["seuls"])].capitalize(),
+        **{k: v[1] for k, v in PROSE.items()},
         "seuls_liste": " et ".join(seuls) if len(seuls) <= 2 else ", ".join(seuls[:-1]) + " et " + seuls[-1],
         # Deux dates distinctes (pièce entrante du 05/10, point 1) : la dernière lecture et l'étendue des lectures.
         "releve_le": "%s (textes lus sur Légifrance du %s au %s)" % (
             date.fromisoformat(r["releve_le"]).strftime("%d/%m/%Y"),
             date.fromisoformat(r["lu_min"]).strftime("%d/%m/%Y"), date.fromisoformat(r["releve_le"]).strftime("%d/%m/%Y")),
+    }
+
+
+def affichage_en(r: dict, en: dict) -> dict:
+    seuls = [en["inventaire_19"][s]["pouvoir"] for s in r["seuls_renvois"]]
+    seuls = [s[0].lower() + s[1:] for s in seuls]
+    return {
+        "n_renvois": LETTRES_EN[r["n"]],
+        "n_condition": LETTRES_EN[r["compte"]["condition"]],
+        "n_autre": LETTRES_EN[r["compte"]["autre_autorite"]],
+        "n_partage": LETTRES_EN[r["compte"]["partage"]],
+        "n_limite": LETTRES_EN[r["compte"]["limite"]],
+        "n_seuls": LETTRES_EN[len(r["seuls"])],
+        "n_seuls_maj": LETTRES_EN[len(r["seuls"])].capitalize(),
+        **{k: v[2] for k, v in PROSE.items()},
+        "seuls_liste": " and ".join(seuls) if len(seuls) <= 2 else ", ".join(seuls[:-1]) + " and " + seuls[-1],
+        "releve_le": "%s (texts read on Légifrance from %s to %s; quoted in the English translation published by the "
+                     "Conseil constitutionnel)" % (
+            date.fromisoformat(r["releve_le"]).strftime("%-d %B %Y") if sys.platform != "win32"
+            else date.fromisoformat(r["releve_le"]).strftime("%#d %B %Y"),
+            date.fromisoformat(r["lu_min"]).strftime("%#d %B %Y" if sys.platform == "win32" else "%-d %B %Y"),
+            date.fromisoformat(r["releve_le"]).strftime("%#d %B %Y" if sys.platform == "win32" else "%-d %B %Y")),
     }
 
 
@@ -177,6 +279,7 @@ BLEU = "#184f95"
 INK, INK2, MUTED, GRID = "#0A0A0E", "#52514e", "#898781", "#e1e0d9"
 FONT = "system-ui, -apple-system, Segoe UI, sans-serif"
 LICENCE = "Compilation Stéphane Lalut, CC BY 4.0 · " + PAGE_URL
+LICENCE_EN = "Compiled by Stéphane Lalut, CC BY 4.0 · " + PAGE_URL_EN
 
 
 def esc(s) -> str:
@@ -188,22 +291,35 @@ def txt(x, y, s, size=11, fill=INK2, anchor="start", weight=None) -> str:
     return '<text x="%.1f" y="%.1f" font-size="%d" fill="%s" text-anchor="%s"%s>%s</text>' % (x, y, size, fill, anchor, w, esc(s))
 
 
-def figure(r: dict) -> str:
+def figure(r: dict, en: dict | None = None) -> str:
     inv = r["inventaire"]
+    if en is not None:
+        inv = [dict(e, pouvoir=en["inventaire_19"][e["renvoi"]]["pouvoir"],
+                    court=en["inventaire_19"][e["renvoi"]].get("court", en["inventaire_19"][e["renvoi"]]["pouvoir"])) for e in inv]
+    attributs = [(a, ATTRIBUTS_EN[a]) for a, _ in ATTRIBUTS] if en is not None else ATTRIBUTS
     top, pas, col0, colw = 126, 34, 330, 97
     H = top + pas * len(inv) + 8
     cart_h = 48
-    titre = "Les huit dispositions que l’article 19 dispense de contreseing : ce que leur texte exige ou fait intervenir"
-    desc = ("Matrice de %d lignes et 4 colonnes. Une case pleine signifie que l'article lui-même contient une citation "
-            "exacte de l'élément ; seules %s lignes n'ont ni condition préalable, ni autre autorité, ni pouvoir partagé : %s."
-            % (r["n"], LETTRES_F[len(r["seuls"])], " et ".join(r["seuls"])))
+    if en is None:
+        titre = "Les huit dispositions que l’article 19 dispense de contreseing : ce que leur texte exige ou fait intervenir"
+        desc = ("Matrice de %d lignes et 4 colonnes. Une case pleine signifie que l'article lui-même contient une citation "
+                "exacte de l'élément ; seules %s lignes n'ont ni condition préalable, ni autre autorité, ni pouvoir partagé : %s."
+                % (r["n"], LETTRES_F[len(r["seuls"])], " et ".join(r["seuls"])))
+        t1, t2 = "Les huit dispositions que l’article 19 dispense de contreseing", "ce que le texte de chaque article exige ou fait intervenir"
+    else:
+        seuls_en = [en["inventaire_19"][s]["pouvoir"] for s in r["seuls_renvois"]]
+        titre = "The eight provisions that article 19 of the French Constitution exempts from countersignature: what their text requires or brings in"
+        desc = ("Matrix of %d rows and 4 columns. A filled cell means that the article itself contains an exact quotation of the "
+                "element; only %s rows have no prior condition, no other authority and no shared power: %s."
+                % (r["n"], LETTRES_EN[len(r["seuls"])], " and ".join(seuls_en)))
+        t1, t2 = "The eight provisions that article 19 exempts from countersignature", "what the text of each article requires or brings in"
     e = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" role="img" aria-labelledby="pv-t pv-d" font-family="%s">'
          % (W, H + cart_h, FONT),
          '<title id="pv-t">%s</title><desc id="pv-d">%s</desc>' % (esc(titre), esc(desc)),
          '<rect width="%d" height="%d" fill="#ffffff"/>' % (W, H + cart_h),
-         txt(0, 18, "Les huit dispositions que l’article 19 dispense de contreseing", 13, INK, weight="600"),
-         txt(0, 36, "ce que le texte de chaque article exige ou fait intervenir", 12, INK2)]
-    for k, (_, lib) in enumerate(ATTRIBUTS):
+         txt(0, 18, t1, 13, INK, weight="600"),
+         txt(0, 36, t2, 12, INK2)]
+    for k, (_, lib) in enumerate(attributs):
         cx = col0 + colw * k + colw / 2
         mots, lignes, cur = lib.split(), [], ""
         for m in mots:
@@ -222,33 +338,49 @@ def figure(r: dict) -> str:
         if i % 2 == 0:
             e.append('<rect x="0" y="%.1f" width="%d" height="%d" fill="#f7f5f0"/>' % (y - pas / 2, W, pas))
         e.append(txt(0, y + 4, ent.get("court", ent["pouvoir"]), 11, INK))
-        e.append(txt(col0 - 10, y + 4, "art. " + ent["renvoi"], 10, MUTED, "end"))
-        for k, (a, _) in enumerate(ATTRIBUTS):
+        e.append(txt(col0 - 10, y + 4, "art. " + (ent["renvoi"].replace("al.", "para.") if en is not None else ent["renvoi"]), 10, MUTED, "end"))
+        for k, (a, _) in enumerate(attributs):
             cx = col0 + colw * k + colw / 2
             if ent.get(a):
                 e.append('<circle cx="%.1f" cy="%.1f" r="7" fill="%s"/>' % (cx, y, BLEU))
             else:
                 e.append('<circle cx="%.1f" cy="%.1f" r="6.5" fill="none" stroke="%s" stroke-width="1.5"/>' % (cx, y, GRID))
     y0 = H + 2
-    src = "Constitution du 4 octobre 1958, art. 8, 11, 12, 16, 18, 19, 54, 56, 61, versions en vigueur lues sur Légifrance"
-    note = "Case pleine : citation exacte de l’article (liste sur la page). Case vide : rien dans cet article ; ni autres articles, ni pratique."
+    if en is None:
+        src = "Constitution du 4 octobre 1958, art. 8, 11, 12, 16, 18, 19, 54, 56, 61, versions en vigueur lues sur Légifrance"
+        note = "Case pleine : citation exacte de l’article (liste sur la page). Case vide : rien dans cet article ; ni autres articles, ni pratique."
+        lic = LICENCE
+    else:
+        src = "Constitution of 4 October 1958, arts. 8, 11, 12, 16, 18, 19, 54, 56, 61 (Légifrance; English translation: Conseil constitutionnel)"
+        note = "Filled cell: exact quotation of the article (list on the page). Empty cell: nothing in that article; says nothing of others or of practice."
+        lic = LICENCE_EN
     e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y0, W, y0, GRID))
-    for k, (t, c) in enumerate(((src, INK2), (note, INK2), (LICENCE, MUTED))):
+    for k, (t, c) in enumerate(((src, INK2), (note, INK2), (lic, MUTED))):
         e.append('<text x="0" y="%.1f" font-size="9" fill="%s">%s</text>' % (y0 + 13 + 12 * k, c, esc(t)))
     e.append("</svg>")
     return "\n".join(e)
 
 
-def fiches_figures(svg: str, A: dict) -> dict:
+def fiches_figures(svg: str, A: dict, svg_en: str, A_en: dict) -> dict:
     titre = html.unescape(re.search(r"<title[^>]*>(.*?)</title>", svg).group(1))
     cart = [html.unescape(t) for t in re.findall(r'<text x="0" y="[0-9.]+" font-size="9" fill="[^"]+">(.*?)</text>', svg)]
     if len(cart) != 3 or cart[-1] != LICENCE:
         raise Arret("fiche : cartouche illisible dans le SVG")
+    titre_en = html.unescape(re.search(r"<title[^>]*>(.*?)</title>", svg_en).group(1))
+    cart_en = [html.unescape(t) for t in re.findall(r'<text x="0" y="[0-9.]+" font-size="9" fill="[^"]+">(.*?)</text>', svg_en)]
+    if len(cart_en) != 3 or cart_en[-1] != LICENCE_EN:
+        raise Arret("fiche : cartouche illisible dans le SVG anglais")
+    montre_en = ("Of the %s provisions that article 19 of the French Constitution exempts from countersignature, only %s contain "
+                 "no prior condition, no later intervention of another actor and no power of the same kind given to other "
+                 "authorities: %s. This does not mean that the president has only %s powers of his own."
+                 % (A_en["n_renvois"], A_en["n_seuls"], A_en["seuls_liste"], A_en["n_seuls"]))
     montre = ("Sur les %s dispositions que l'article 19 dispense de contreseing, %s seulement ne contiennent ni condition "
               "préalable, ni intervention ultérieure d'un autre acteur, ni pouvoir de même nature attribué à d'autres autorités : %s. "
               "Cette observation ne signifie pas que le président ne disposerait que de %s pouvoirs propres."
               % (A["n_renvois"], A["n_seuls"], A["seuls_liste"], A["n_seuls"]))
-    return {"fr": [dict(id="article19", fichier=FIG, titre=titre, montre=montre, source=cart[0], precaution=cart[1])]}
+    return {"fr": [dict(id="article19", fichier=FIG, titre=titre, montre=montre, source=cart[0], precaution=cart[1])],
+            "en": [dict(id="article19", fichier=FIG + "-en", titre=titre_en, montre=montre_en, source=cart_en[0],
+                        precaution=cart_en[1])]}
 
 
 def csv_texte(r: dict, base: dict) -> str:
@@ -290,6 +422,16 @@ def autotest(base: dict, textes: dict) -> list[str]:
             raise
         out.append("guillemets de fiche alteres -> " + str(e)[:60])
     m = copy.deepcopy(base)
+    m["_en"] = copy.deepcopy(base["_en"])
+    m["_en"]["inventaire_19"]["12"]["condition"] += " without delay"
+    try:
+        calculer(m, textes)
+        raise Arret("mutation citation anglaise : G2-EN n'a pas mordu, controle ABSENT")
+    except Arret as e:
+        if not str(e).startswith("G2-EN"):
+            raise
+        out.append("citation anglaise alteree -> " + str(e)[:60])
+    m = copy.deepcopy(base)
     del m["inventaire_19"][4]
     try:
         calculer(m, textes)
@@ -313,6 +455,7 @@ def main() -> int:
 def _main() -> int:
     check = "--check" in sys.argv[1:]
     base = yaml.safe_load(SRC.read_text(encoding="utf-8"))
+    base["_en"] = yaml.safe_load(SRC_EN.read_text(encoding="utf-8"))
     textes = charger_articles(base)
     r, gardes = calculer(base, textes)
     for m in autotest(base, textes):
@@ -321,7 +464,9 @@ def _main() -> int:
            for c in [e.get(k) for k in ["acte"] + [a for a, _ in ATTRIBUTS]] if c]
     lus += [str(base["articles"][str(c["art"])]["lu_le"]) for c in r["regles"]]
     r["releve_le"], r["lu_min"] = max(lus), min(lus)
-    A = affichage(r)
+    A, A_en = affichage(r), affichage_en(r, base["_en"])
+    if set(A) != set(A_en):
+        raise Arret("blocs affichage et affichage_en : cles differentes (%s)" % sorted(set(A) ^ set(A_en)))
     if check:
         log("--check : %d gardes tenues, rien ecrit." % len(gardes))
         return 0
@@ -330,7 +475,8 @@ def _main() -> int:
     except ImportError:
         raise Arret("cairosvg absent : SVG et PNG se produisent ensemble ou pas du tout")
     svg = figure(r)
-    fiches = fiches_figures(svg, A)
+    svg_en = figure(r, base["_en"])
+    fiches = fiches_figures(svg, A, svg_en, A_en)
     csvt = csv_texte(r, base)
     payload = {
         "releve_le": r["releve_le"],
@@ -346,11 +492,13 @@ def _main() -> int:
         "regles": r["regles"],
         "comptes": dict(r["compte"], n=r["n"], sans_condition_ni_autre_autorite_ni_partage=r["seuls_renvois"]),
         "affichage": A,
+        "affichage_en": A_en,
     }
     txt_json = json.dumps(payload, ensure_ascii=False, indent=1, default=str)
     if (OUT_DATA.exists() and OUT_DATA.read_text(encoding="utf-8") == txt_json and OUT_CSV.exists()
             and OUT_CSV.read_text(encoding="utf-8-sig") == csvt and (OUT_IMG / (FIG + ".svg")).exists()
             and (OUT_IMG / (FIG + ".svg")).read_text(encoding="utf-8") == svg and (OUT_IMG / (FIG + ".png")).exists()
+            and (OUT_IMG / (FIG + "-en.svg")).exists() and (OUT_IMG / (FIG + "-en.svg")).read_text(encoding="utf-8") == svg_en
             and OUT_FIGURES.exists() and json.loads(OUT_FIGURES.read_text(encoding="utf-8")) == fiches):
         log("Donnees et figure identiques : rien ecrit.")
         return 0
@@ -358,6 +506,9 @@ def _main() -> int:
     OUT_STATIC.write_text(txt_json, encoding="utf-8")
     OUT_CSV.write_text(csvt, encoding="utf-8-sig", newline="\n")
     (OUT_IMG / (FIG + ".svg")).write_text(svg, encoding="utf-8")
+    (OUT_IMG / (FIG + "-en.svg")).write_text(svg_en, encoding="utf-8")
+    cairosvg.svg2png(url=str(OUT_IMG / (FIG + "-en.svg")), write_to=str(OUT_IMG / (FIG + "-en.png")), output_width=1440,
+                     background_color="white")
     cairosvg.svg2png(url=str(OUT_IMG / (FIG + ".svg")), write_to=str(OUT_IMG / (FIG + ".png")), output_width=1440,
                      background_color="white")
     OUT_FIGURES.write_text(json.dumps(fiches, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")

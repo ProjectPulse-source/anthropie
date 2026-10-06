@@ -16,5 +16,23 @@
    "source": "DREES, Dossier n° 76 (2021), graphique 8, source ONDPS (1972-2020) ; ONDPS, bilan 2021-2025 (admis)",
    "precaution": "Places pourvues ; champ élargi aux passerelles et droits au remords à partir de 2010-2011 ; numerus apertus depuis 2021."
   }
+ ],
+ "en": [
+  {
+   "id": "cursus",
+   "fichier": "delais-cursus-en",
+   "titre": "Training a general practitioner in France, and the length of a presidential term",
+   "montre": "Under the rules in force for students who entered the third cycle from the start of the 2023 academic year, the standard general medicine curriculum in France takes at least ten years from the first year, twice the length of a presidential term. Comparison of scale only.",
+   "source": "Order of 8 April 2013, art. 1; Education Code, art. L632-2; Law no. 2022-1616, art. 37; Constitution, art. 6",
+   "precaution": "Comparison of scale only: neither the effect of a policy nor the date of its first effects. Minimum durations; care before the end."
+  },
+  {
+   "id": "admissions",
+   "fichier": "delais-admissions-en",
+   "titre": "Admissions to medical studies in France, 1972-2025, by year",
+   "montre": "Places in French medical studies were divided by 2.5 between 1972 and 1993 (3,500 places), then rose again; 55,078 students were admitted from 2021 to 2025.",
+   "source": "DREES, Dossier no. 76 (2021), chart 8, source ONDPS (1972-2020); ONDPS, 2021-2025 report (admissions)",
+   "precaution": "Places filled; scope widened to bridging and second-chance entries from 2010-2011; numerus apertus since 2021."
+  }
  ]
 }

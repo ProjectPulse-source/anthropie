@@ -4,7 +4,7 @@
 Même fabrique que les cartes du dossier Dette (og_dossier_dette.carte). Les nombres sont LUS dans
 data/promesses_appliquer.json (scripts/update_promesses_appliquer.py), eux-mêmes tirés du baromètre de l'application
 des lois. Année, champ, unité et source figurent sur la carte (arbitrage PRO-20261005-153428, angle 12).
-Écrit : static/images/og-appliquer-promesse.jpg et vig-appliquer-promesse.jpg.
+Écrit : static/images/{og,vig}-appliquer-promesse{,-en}.jpg.
 """
 from __future__ import annotations
 
@@ -20,7 +20,7 @@ ORANGE = (235, 104, 52)
 GRIS_CLAIR = (201, 197, 192)
 
 
-def barres(d, m: dict) -> None:
+def barres(d, m: dict, lang: str = "fr") -> None:
     x0, x1, y = 780, 1126, 96
     vmax = 1000
     X = lambda v: x0 + (x1 - x0) * v / vmax  # noqa: E731
@@ -34,7 +34,8 @@ def barres(d, m: dict) -> None:
                 d.rectangle([X(a), y, X(a + v) - 1, y + 28], fill=col)
             a += v
         y += 40
-    d.text((x0 - 96, y + 6), "mesures par session de la loi ; état au 05/10/2026", font=fa, fill=og.URL_GREY)
+    d.text((x0 - 96, y + 6), "measures by session of the law; status at 5 October 2026" if lang == "en"
+           else "mesures par session de la loi ; état au 05/10/2026", font=fa, fill=og.URL_GREY)
 
 
 def main() -> int:
@@ -45,6 +46,14 @@ def main() -> int:
     A, m = j["affichage"], j["calcul"]["mesures"]
     if not int(A["A"].replace(" ", "")) > 0:
         og.fail("carte : plus aucune mesure en attente, le titre serait faux")
+    E = j["affichage_en"]
+    og.carte("og-appliquer-promesse-en.jpg",
+             ["%s measures" % E["A"], "still pending"],
+             "French laws passed from October 2017 to September 2025.",
+             "Barometer of the application of laws (National Assembly, LexImpact, DILA) · CC BY 4.0",
+             "stephane-lalut.com/en/does-a-law-apply-as-soon-as-it-is-passed/",
+             lambda d: barres(d, m, "en"),
+             [(BLEU, "Published: %s" % E["P"]), (ORANGE, "Pending: %s" % E["A"]), (GRIS_CLAIR, "Moot: %s" % E["S"])])
     og.carte("og-appliquer-promesse.jpg",
              ["%s mesures" % A["A"], "encore attendues"],
              "Lois votées d'octobre 2017 à septembre 2025.",

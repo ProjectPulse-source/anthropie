@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 318" role="img" font-variant-numeric="tabular-nums" aria-labelledby="mr-t mr-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="mr-t">ILO-unemployed and category A registrants in France, 2024</title><desc id="mr-d">Bar in three segments: 863,000 ILO-unemployed not registered in category A, 1.43 million people in both at once, 1.47 million category A registrants who are not ILO-unemployed (Insee estimate, 2024).</desc>
+<rect width="720" height="318" fill="#ffffff"/>
+<text x="0.0" y="18.0" font-size="13" fill="#0A0A0E" text-anchor="start" font-weight="600">ILO-unemployed and category A registrants in France, 2024</text>
+<text x="0.0" y="36.0" font-size="12" fill="#52514e" text-anchor="start">two definitions, populations that partly overlap (thousands of people)</text>
+<rect x="0.0" y="118" width="165.4" height="46" fill="#c9cdd3"/>
+<rect x="165.4" y="118" width="273.5" height="46" fill="#184f95"/>
+<rect x="439.0" y="118" width="281.0" height="46" fill="#c9cdd3"/>
+<text x="82.7" y="146.0" font-size="15" fill="#0A0A0E" text-anchor="middle" font-weight="600">863</text>
+<text x="302.2" y="146.0" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="600">1,427</text>
+<text x="579.5" y="146.0" font-size="15" fill="#0A0A0E" text-anchor="middle" font-weight="600">1,466</text>
+<path d="M1.0 112 v-8 H439.0 v8" fill="none" stroke="#52514e" stroke-width="1.5"/>
+<text x="219.5" y="98.0" font-size="12" fill="#0A0A0E" text-anchor="middle" font-weight="600">Unemployed (ILO definition): 2,290</text>
+<path d="M165.4 170 v8 H719.0 v-8" fill="none" stroke="#52514e" stroke-width="1.5"/>
+<text x="442.7" y="194.0" font-size="12" fill="#0A0A0E" text-anchor="middle" font-weight="600">Registered in category A at France Travail: 2,893</text>
+<text x="0.0" y="226.0" font-size="10" fill="#52514e" text-anchor="start">of whom: not registered 524; registered in B or C 240;</text>
+<text x="0.0" y="239.0" font-size="10" fill="#52514e" text-anchor="start">registered in D or E 99</text>
+<text x="720.0" y="226.0" font-size="10" fill="#52514e" text-anchor="end">of whom: halo around unemployment 727;</text>
+<text x="720.0" y="239.0" font-size="10" fill="#52514e" text-anchor="end">inactive outside the halo 503; in work 236</text>
+<text x="302.2" y="226.0" font-size="10" fill="#184f95" text-anchor="middle" font-weight="600">in both</text>
+<line x1="0" y1="272" x2="720" y2="272" stroke="#e1e0d9"/>
+<text x="0" y="285" font-size="9" fill="#52514e">Insee Références, Emploi, chômage, revenus du travail, 2026 ed., file 1, figures 2 and 8 (Dares-Insee-France Travail matching)</text>
+<text x="0" y="297" font-size="9" fill="#52514e">Insee estimate, 2024 average, France excluding Mayotte, aged 15-64, ordinary housing; two distinct definitions.</text>
+<text x="0" y="309" font-size="9" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/how-to-tell-whether-a-promise-was-kept/</text>
+</svg>

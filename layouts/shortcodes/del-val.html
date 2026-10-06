@@ -1,13 +1,13 @@
 {{- /* {{< del-val "duree" >}} — émet UNE valeur du bloc affichage de data/promesses_delais.json,
        écrit par scripts/update_promesses_delais.py (textes en vigueur, DREES, ONDPS).
        Même contrat que mes-val : aucun chiffre en dur dans la prose de la page, clé inconnue ou données
-       absentes = échec de build. Page française seulement (version anglaise non décidée : arbitrage
-       PRO-20261005-153428, « français d'abord »). */ -}}
+       absentes = échec de build. Page anglaise : bloc affichage_en, sans repli sur le français (06/10/2026). */ -}}
 {{- $k := .Get 0 -}}
 {{- $a := "" -}}
-{{- with site.Data.promesses_delais -}}{{- $a = .affichage -}}{{- end -}}
+{{- $en := eq .Page.Lang "en" -}}
+{{- with site.Data.promesses_delais -}}{{- $a = cond $en .affichage_en .affichage -}}{{- end -}}
 {{- if not $a -}}
-  {{- errorf "del-val: data/promesses_delais.json absent ou sans bloc affichage (page %s)" .Page.RelPermalink -}}
+  {{- errorf "del-val: data/promesses_delais.json absent ou sans bloc affichage de la langue (page %s)" .Page.RelPermalink -}}
 {{- else -}}
   {{- $v := index $a $k -}}
   {{- if not $v -}}

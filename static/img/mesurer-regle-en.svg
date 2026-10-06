@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 408" role="img" font-variant-numeric="tabular-nums" aria-labelledby="mg-t mg-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="mg-t">Category A registrants: published series and series without RSA recipients or youth programmes</title><desc id="mg-d">Two panels from 2018 to 2026, on the same scale: left, published category A; right, the series excluding RSA recipients and young people in programmes; in each, a line marks 1 January 2025, change of rules.</desc>
+<rect width="720" height="408" fill="#ffffff"/>
+<text x="0.0" y="18.0" font-size="13" fill="#0A0A0E" text-anchor="start" font-weight="600">Category A registrants: published series and series without RSA recipients or youth programmes</text>
+<text x="0.0" y="36.0" font-size="12" fill="#52514e" text-anchor="start">France excluding Mayotte, end of quarter, seasonally and working-day adjusted; same scale for both panels</text>
+<text x="56.0" y="70.0" font-size="11" fill="#184f95" text-anchor="start" font-weight="600">Published category A</text>
+<line x1="56" y1="300.0" x2="356" y2="300.0" stroke="#e1e0d9"/>
+<text x="50.0" y="304.0" font-size="10" fill="#898781" text-anchor="end">2.2m</text>
+<line x1="56" y1="262.9" x2="356" y2="262.9" stroke="#e1e0d9"/>
+<text x="50.0" y="266.9" font-size="10" fill="#898781" text-anchor="end">2.6m</text>
+<line x1="56" y1="225.8" x2="356" y2="225.8" stroke="#e1e0d9"/>
+<text x="50.0" y="229.8" font-size="10" fill="#898781" text-anchor="end">3.0m</text>
+<line x1="56" y1="188.7" x2="356" y2="188.7" stroke="#e1e0d9"/>
+<text x="50.0" y="192.7" font-size="10" fill="#898781" text-anchor="end">3.4m</text>
+<line x1="56" y1="151.6" x2="356" y2="151.6" stroke="#e1e0d9"/>
+<text x="50.0" y="155.6" font-size="10" fill="#898781" text-anchor="end">3.8m</text>
+<line x1="56" y1="114.5" x2="356" y2="114.5" stroke="#e1e0d9"/>
+<text x="50.0" y="118.5" font-size="10" fill="#898781" text-anchor="end">4.2m</text>
+<text x="56.0" y="315.0" font-size="10" fill="#898781" text-anchor="middle">2018</text>
+<text x="128.7" y="315.0" font-size="10" fill="#898781" text-anchor="middle">2020</text>
+<text x="201.5" y="315.0" font-size="10" fill="#898781" text-anchor="middle">2022</text>
+<text x="274.2" y="315.0" font-size="10" fill="#898781" text-anchor="middle">2024</text>
+<text x="346.9" y="315.0" font-size="10" fill="#898781" text-anchor="middle">2026</text>
+<line x1="306.0" y1="88" x2="306.0" y2="300" stroke="#52514e" stroke-dasharray="3 3"/>
+<polyline points="56.0,160.1 65.1,160.6 74.2,160.9 83.3,162.8 92.4,165.1 101.5,167.8 110.5,169.4 119.6,173.4 128.7,172.3 137.8,96.4 146.9,140.4 156.0,148.3 165.1,151.6 174.2,158.2 183.3,175.7 192.4,192.3 201.5,206.9 210.5,210.2 219.6,211.5 228.7,221.3 237.8,224.6 246.9,224.6 256.0,222.2 265.1,223.5 274.2,224.9 283.3,223.9 292.4,221.5 301.5,213.9 310.5,189.6 319.6,205.2 328.7,199.5 337.8,194.9 346.9,198.5 356.0,195.9" fill="none" stroke="#184f95" stroke-width="2.4"/>
+<text x="302.0" y="86.0" font-size="9" fill="#52514e" text-anchor="end">1 Jan. 2025: change of rules</text>
+<text x="406.0" y="70.0" font-size="11" fill="#52514e" text-anchor="start" font-weight="600">Excluding RSA recipients and young people in programmes</text>
+<line x1="406" y1="300.0" x2="706" y2="300.0" stroke="#e1e0d9"/>
+<line x1="406" y1="262.9" x2="706" y2="262.9" stroke="#e1e0d9"/>
+<line x1="406" y1="225.8" x2="706" y2="225.8" stroke="#e1e0d9"/>
+<line x1="406" y1="188.7" x2="706" y2="188.7" stroke="#e1e0d9"/>
+<line x1="406" y1="151.6" x2="706" y2="151.6" stroke="#e1e0d9"/>
+<line x1="406" y1="114.5" x2="706" y2="114.5" stroke="#e1e0d9"/>
+<text x="406.0" y="315.0" font-size="10" fill="#898781" text-anchor="middle">2018</text>
+<text x="478.7" y="315.0" font-size="10" fill="#898781" text-anchor="middle">2020</text>
+<text x="551.5" y="315.0" font-size="10" fill="#898781" text-anchor="middle">2022</text>
+<text x="624.2" y="315.0" font-size="10" fill="#898781" text-anchor="middle">2024</text>
+<text x="696.9" y="315.0" font-size="10" fill="#898781" text-anchor="middle">2026</text>
+<line x1="656.0" y1="88" x2="656.0" y2="300" stroke="#52514e" stroke-dasharray="3 3"/>
+<polyline points="406.0,236.2 415.1,242.5 424.2,242.1 433.3,241.2 442.4,244.5 451.5,251.0 460.5,250.9 469.6,251.4 478.7,250.4 487.8,189.7 496.9,231.7 506.0,238.6 515.1,240.8 524.2,246.2 533.3,261.0 542.4,272.4 551.5,282.4 560.5,286.9 569.6,286.1 578.7,292.4 587.8,294.2 596.9,294.7 606.0,292.2 615.1,292.2 624.2,292.9 633.3,292.4 642.4,290.5 651.5,283.5 660.5,274.2 669.6,281.1 678.7,279.5 687.8,273.7 696.9,278.0 706.0,278.2" fill="none" stroke="#8a8f98" stroke-width="2.4" stroke-dasharray="5 3"/>
+<text x="652.0" y="86.0" font-size="9" fill="#52514e" text-anchor="end">1 Jan. 2025: change of rules</text>
+<text x="0.0" y="336.0" font-size="10" fill="#52514e" text-anchor="start">This gap between panels does not measure the effect of the reform: they are two distinct populations.</text>
+<line x1="0" y1="362" x2="720" y2="362" stroke="#e1e0d9"/>
+<text x="0" y="375" font-size="9" fill="#52514e">Dares and France Travail, registrants at end of quarter, France excluding Mayotte, seasonally adjusted (series &#x27;excluding RSA&#x27; since 2018)</text>
+<text x="0" y="387" font-size="9" fill="#52514e">Scope and period differ from the 2024 cross-tabulation figure. Official label suspended for 1 Jan. 2025 to 20 May 2026.</text>
+<text x="0" y="399" font-size="9" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/how-to-tell-whether-a-promise-was-kept/</text>
+</svg>

@@ -17,7 +17,7 @@ import og_dossier_dette as og  # noqa: E402
 GRIS_CLAIR = (201, 205, 211)
 
 
-def barre(d, c: dict) -> None:
+def barre(d, c: dict, lang: str = "fr") -> None:
     x0, x1, y, h = 660, 1126, 220, 70
     tot = c["bit_seul"] + c["commun"] + c["a_seul"]
     a = x0 + (x1 - x0) * c["bit_seul"] / tot
@@ -27,15 +27,15 @@ def barre(d, c: dict) -> None:
     d.rectangle([b, y, x1, y + h], fill=GRIS_CLAIR)
     f = og.font("inter", 22, 600)
     for (u, v, n, col) in ((x0, a, c["bit_seul"], og.INK), (a, b, c["commun"], (255, 255, 255)), (b, x1, c["a_seul"], og.INK)):
-        s = "{:,}".format(n).replace(",", " ")
+        s = "{:,}".format(n) if lang == "en" else "{:,}".format(n).replace(",", " ")
         w = d.textlength(s, font=f)
         d.text(((u + v) / 2 - w / 2, y + 22), s, font=f, fill=col)
     fl = og.font("inter", 17, 400)
     d.line([(x0, y - 14), (b, y - 14)], fill=og.GREY, width=2)
-    d.text((x0, y - 44), "Chômeurs au sens du BIT", font=fl, fill=og.GREY)
+    d.text((x0, y - 44), "Unemployed (ILO)" if lang == "en" else "Chômeurs au sens du BIT", font=fl, fill=og.GREY)
     d.line([(a, y + h + 14), (x1, y + h + 14)], fill=og.GREY, width=2)
-    d.text((a, y + h + 22), "Inscrits en catégorie A", font=fl, fill=og.GREY)
-    d.text((x0, y + h + 70), "En milliers, moyenne 2024, 15-64 ans", font=fl, fill=og.URL_GREY)
+    d.text((a, y + h + 22), "Registered in category A" if lang == "en" else "Inscrits en catégorie A", font=fl, fill=og.GREY)
+    d.text((x0, y + h + 70), "Thousands, 2024 average, aged 15-64" if lang == "en" else "En milliers, moyenne 2024, 15-64 ans", font=fl, fill=og.URL_GREY)
 
 
 def main() -> int:
@@ -46,6 +46,13 @@ def main() -> int:
     c = j["calcul"]
     if not (c["commun"] > 2 and c["bit_seul"] > 2 and c["a_seul"] > 2):
         og.fail("carte : « se recoupent en partie » n'est plus vrai dans les données")
+    og.carte("og-mesurer-promesse-en.jpg",
+             ["Two measures,", "two populations"],
+             "In France, they overlap only in part.",
+             "Insee 2024 estimate · Dares · CC BY 4.0",
+             "stephane-lalut.com/en/how-to-tell-whether-a-promise-was-kept/",
+             lambda d: barre(d, c, "en"),
+             [(og.C1, "In both at once"), (GRIS_CLAIR, "In only one of the two")])
     og.carte("og-mesurer-promesse.jpg",
              ["Deux mesures,", "deux populations"],
              "Chômage BIT et catégorie A : un recoupement partiel.",

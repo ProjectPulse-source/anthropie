@@ -30,6 +30,11 @@ Autotest de mutation à chaque exécution : loi appliquée après décret reclas
 réintégrée au champ -> A2 ; une mesure « appliquée » passée « en attente » -> A5 ; citation du Sénat altérée -> A7 ;
 2018-2019 ramenée sous la moitié -> A4.
 
+Bilingue (06/10/2026) : un calcul, deux blocs (affichage, affichage_en) aux mêmes clés, deux jeux de tableaux, des figures
+-en au même dessin ; la Constitution se cite en anglais dans la traduction du Conseil constitutionnel (vérifiée, garde A1) ;
+les autres textes français en français, suivis de notre traduction (clés *_tr), dont chaque nombre doit figurer dans
+l'original (garde A7 bis).
+
 Écrit : data/promesses_appliquer.json (+ static/), static/promesses_appliquer.csv, data/figures_appliquer.json,
 static/img/appliquer-{mesures,lois,serie}.svg/.png. Rien n'est écrit à données identiques.
 """
@@ -47,8 +52,11 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "scripts" / "sources_promesses_en"))
+import constitution_en as cen  # noqa: E402
 SRC = ROOT / "scripts" / "sources_appliquer"
 PAGE_URL = "stephane-lalut.com/une-loi-votee-s-applique-t-elle-tout-de-suite/"
+PAGE_URL_EN = "stephane-lalut.com/en/does-a-law-apply-as-soon-as-it-is-passed/"
 OUT_DATA = ROOT / "data" / "promesses_appliquer.json"
 OUT_STATIC = ROOT / "static" / "promesses_appliquer.json"
 OUT_CSV = ROOT / "static" / "promesses_appliquer.csv"
@@ -65,6 +73,48 @@ SESSIONS = ["%d-%d" % (a, a + 1) for a in range(2017, 2025)]
 RELEVE = "05/10/2026"
 MOTS = {"un": 1, "deux": 2, "trois": 3, "quatre": 4, "cinq": 5, "six": 6, "sept": 7, "huit": 8, "neuf": 9, "dix": 10}
 LETTRES = {v: k for k, v in MOTS.items()}
+LETTRES_EN = {1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six", 7: "seven", 8: "eight", 9: "nine", 10: "ten"}
+CONST_EN = {"art10": ("10", "The President of the Republic shall promulgate Acts of Parliament within fifteen days following the "
+                             "final passage of an Act and its transmission to the Government."),
+            "art61": ("61", "referral to the Constitutional Council shall suspend the time allotted for promulgation.")}
+# Notre traduction des citations françaises hors Constitution ; chaque nombre doit figurer dans l'original (garde A7 bis).
+TR = {
+    "cit_cciv": "However, the entry into force of those of their provisions whose implementation requires implementing "
+                "measures is postponed to the date on which those measures enter into force.",
+    "cit_sgg_1718": "these 28 laws called for 461 implementing regulations and we adopted 393 of them, an application rate of 85%",
+    "cit_senat_1718": "It now stands at 78% - 86% if measures whose entry into force is deferred are excluded",
+    "cit_senat_1819": "The overall rate of application of laws calculated by the Senate is 72%",
+    "cit_sgg_1819": "the departments of the General Secretariat of the Government arrive for their part at an overall rate of 82.4%",
+    "cit_diverge": "The rate calculated by the Senate may differ from the one calculated by the Government for technical "
+                   "reasons, of two kinds.",
+    "cit_arretes": "the Senate carries out a comprehensive check of the implementing measures of laws, including the ministerial "
+                   "orders (arrêtés) whose publication is provided for by the law. This is not the case of the General "
+                   "Secretariat of the Government.",
+    "cit_politique": "It may also differ for political reasons, in particular when the Senate considers that a decree adopted "
+                     "does not respect the will of the legislator, and therefore that the expected measure has not been taken.",
+    "cit_differees": "the Senate includes in its rate the measures expected for articles whose entry into force is deferred, "
+                     "unlike the Government.",
+    "cit_802_22": "More precisely, 22 of them (39%) were directly applicable",
+    "cit_802_24": "the number of laws promulgated during the 2024-2025 session stands at 56, of which 24 directly applicable",
+    "cit_802_66": "Overall rate of application of laws 66% (+ 4 points)",
+    "cit_802_note": "The data taken into account are those of the measures provided for by the legislative provisions, "
+                    "excluding optional measures and measures deferred beyond 31 March 2026.",
+    "cit_six_mois": "this year, for the first time, in order to measure the number of regulations adopted only at the end of "
+                    "the six-month period the Government sets itself, the period used includes three months fewer for the "
+                    "laws promulgated and three months more for the regulations adopted.",
+    "cit_sgg16_def": "shows the rate of application at 31 December 2025 of the laws which, among those passed between 1 July 2022 "
+                     "and 9 June 2024, call for implementing decrees.",
+    "cit_sgg17_def": "shows the rate of application at 31 December 2025 of the laws which, among those published between 18 July "
+                     "2024 and 30 June 2025, call for implementing decrees or orders.",
+}
+SEGMENTS_EN = {
+    1: "laws of the parliamentary year, cut-off on 30 September of the same year",
+    2: "period shifted by three months to wait for the Government's six-month deadline, ordinary session only",
+    3: "'new bounds': laws of 14 July 2011 to 30 September 2012",
+    4: "laws of 1 October to 30 September, cut-off on the following 31 March",
+    5: "same calendar, deferred measures included (a second rate excludes them)",
+    6: "a single rate, excluding optional measures and measures deferred beyond 31 March 2026",
+}
 
 
 class Arret(Exception):
@@ -78,6 +128,14 @@ def log(m: str) -> None:
 def norm(s: str) -> str:
     s = s.replace("\u00a0", " ").replace("\u202f", " ").replace("\u2019", "'").replace("\u2013", "-")
     return re.sub(r"\s+", " ", s).strip()
+
+
+def en(n, dec=0) -> str:
+    return ("{:,.%df}" % dec).format(n)
+
+
+def nombres(s: str) -> set:
+    return {x.replace(",", ".") for x in re.findall(r"\d+(?:[.,]\d+)?", s)}
 
 
 def fr(n, dec=0) -> str:
@@ -204,8 +262,19 @@ def calculer(S: dict) -> tuple[dict, list[str]]:
     for k, c in CIT_CONST.items():
         if S["const"][k]["etat"] != "VIGUEUR" or norm(c) not in S["const"][k]["texte"]:
             raise Arret("A1 : Constitution %s : texte non en vigueur ou citation introuvable" % k)
-    g.append("A1 : Constitution art. 10 et 61, code civil art. 1 : promulgation, suspension, report de l'entree en vigueur")
+    try:
+        tcen = cen.texte()
+        cit_en = {"cit_" + k: cen.citer(a, c, tcen) for k, (a, c) in CONST_EN.items()}
+    except ValueError as e:
+        raise Arret("A1 : %s" % e)
+    g.append("A1 : Constitution art. 10 et 61 (FR Legifrance, EN Conseil constitutionnel), code civil art. 1")
     cit = verifier_citations(S)
+    orig = dict(cit, cit_cciv=norm(CIT_CCIV), cit_sgg16_def=norm(CIT_SGG["sgg16_def"]), cit_sgg17_def=norm(CIT_SGG["sgg17_def"]))
+    for k, tr in TR.items():
+        if k not in orig:
+            raise Arret("A7 bis : traduction %s sans original" % k)
+        if not nombres(tr) <= nombres(orig[k]):
+            raise Arret("A7 bis : %s : nombres de la traduction absents de l'original : %s" % (k, nombres(tr) - nombres(orig[k])))
     g.append("A7 : %d citations du Senat, %d extraits du SGG, %d valeurs de serie retrouvees mot pour mot"
              % (len(CITATIONS), len(CIT_SGG), len(SERIE) + 1))
 
@@ -334,7 +403,7 @@ def calculer(S: dict) -> tuple[dict, list[str]]:
         raise Arret("A5 : « des mesures attendent encore » faux")
     r = {"lignes": lignes, "ct": ct, "ndesacc": ndesacc, "nregistre": len(reg), "conventions": sum(ecartees.values()),
          "cl": {s: dict(cl[s]) for s in SESSIONS}, "tot": dict(tot), "nmes": nmes, "obs_acte": dict(obs_acte),
-         "differ_A": dict(differ_A), "cas_2025_138": cas[0][1].strip(), "citations": cit}
+         "differ_A": dict(differ_A), "cas_2025_138": cas[0][1].strip(), "citations": cit, "cit_en": cit_en}
     return r, g
 
 
@@ -376,7 +445,59 @@ def affichage(r: dict) -> dict:
     A["nsegments"] = LETTRES[len(SEGMENTS)]
     A["cit_sgg16_def"] = norm(CIT_SGG["sgg16_def"])
     A["cit_sgg17_def"] = norm(CIT_SGG["sgg17_def"])
+    A.update({k + "_tr": v for k, v in TR.items()})
     return A
+
+
+def affichage_en(r: dict, A_fr: dict) -> dict:
+    t, ct, cl = r["tot"], r["ct"], r["cl"]
+    l25 = r["lignes"][-1]
+    A = {
+        "releve": "5 October 2026", "nmes": en(r["nmes"]), "P": en(t.get("P", 0)), "A": en(t.get("A", 0)), "S": en(t.get("S", 0)),
+        "U": en(t.get("U", 0)), "A_pct": en(100 * t.get("A", 0) / r["nmes"], 1),
+        "A_1718": en(cl["2017-2018"].get("A", 0)), "N_1718": en(sum(cl["2017-2018"].values())),
+        "A_2425": en(cl["2024-2025"].get("A", 0)), "N_2425": en(sum(cl["2024-2025"].values())),
+        "differ_A": en(sum(r["differ_A"].values())), "obs_acte": en(sum(r["obs_acte"].values())),
+        "obs_acte_2425": en(r["obs_acte"].get("2024-2025", 0)), "cas_2025_138": r["cas_2025_138"],
+        "nlois": en(r["nregistre"]), "conventions": en(r["conventions"]), "ndesacc": en(r["ndesacc"]),
+        "ct_session": ct["session"], "ct_baro": en(ct["baro"]), "ct_senat": en(ct["senat"]), "ct_N": en(ct["N"]),
+        "s25_baro": en(l25["baro"]), "s25_senat": en(l25["senat"]), "s25_publie": en(l25["senat_publie"]),
+        "s25_N": en(l25["N"]),
+        "nsessions": LETTRES_EN[len(SESSIONS)], "nautres": LETTRES_EN[len(SESSIONS) - 1],
+        "nsegments": LETTRES_EN[len(SEGMENTS)],
+        "age_1718": LETTRES_EN[MOTS[A_fr["age_1718"]]],
+        "releve_le": "5 October 2026 (barometer of the application of laws); Senate reports read on 6 October 2026; "
+                     "General Secretariat of the Government report at 31 December 2025, read on 6 October 2026",
+    }
+    for k in ("senat_1819", "sgg_1819"):
+        A[k] = A_fr[k].replace("\u00a0", "").replace(",", ".")
+    for k, v in A_fr.items():  # citations françaises : l'original, suivi de sa traduction (_tr)
+        if k.startswith("cit_") and k not in ("cit_art10", "cit_art61"):
+            A[k] = v
+    A.update(r["cit_en"])
+    A.update({k + "_tr": v for k, v in TR.items()})
+    return A
+
+
+def tableaux_en(r: dict) -> dict:
+    lois = []
+    for x in r["lignes"]:
+        b = "%d out of %d" % (x["D"], x["N"]) if x["U"] == 0 else "%d to %d out of %d" % (x["D"], x["D"] + x["U"], x["N"])
+        lois.append([x["session"], str(x["N"]), str(x["baro"]),
+                     str(x["senat"]) + (" (%d on another page of the same report)" % x["senat_publie"] if x["senat_publie"] != x["senat"] else ""),
+                     b])
+    mes = [[s, en(sum(r["cl"][s].values()))] + [en(r["cl"][s].get(k, 0)) for k in "PASU"] for s in SESSIONS]
+    mes.append(["Total", en(r["nmes"])] + [en(r["tot"].get(k, 0)) for k in "PASU"])
+    serie = [[s, ("%g" % v) + "%", SEGMENTS_EN[seg], pg.split("|")[0]] for s, v, pg, _, seg in SERIE]
+    serie.insert(17, [REVISION[0], "60% (figure revised the following year)", SEGMENTS_EN[5], REVISION[2].split("|")[0]])
+    return {
+        "lois": {"entetes": ["Session", "Laws promulgated (excluding treaties)", "Directly applicable according to the barometer",
+                             "According to the Senate", "Bounds: directly applicable for both sources, then counting divergent classifications"],
+                 "lignes": lois},
+        "mesures": {"entetes": ["Session of the law", "Measures", "Identified published instrument", "Pending", "Listed as moot",
+                                "Incomplete status"], "lignes": mes},
+        "serie": {"entetes": ["Session", "Rate published by the Senate", "Definition (segment)", "Document"], "lignes": serie},
+    }
 
 
 def tableaux(r: dict) -> dict:
@@ -409,7 +530,12 @@ W = 720
 BLEU, ORANGE, GRIS, GRIS_CLAIR = "#184f95", "#eb6834", "#8a8781", "#c9c5c0"
 INK, INK2, MUTED, GRID = "#0A0A0E", "#52514e", "#898781", "#e1e0d9"
 FONT = "system-ui, -apple-system, Segoe UI, sans-serif"
-LICENCE = "Compilation Stéphane Lalut, CC BY 4.0 · " + PAGE_URL
+LICENCES = {"fr": "Compilation Stéphane Lalut, CC BY 4.0 · " + PAGE_URL, "en": "Compiled by Stéphane Lalut, CC BY 4.0 · " + PAGE_URL_EN}
+LANG = "fr"
+
+
+def nb(n) -> str:
+    return en(n) if LANG == "en" else fr(n)
 
 
 def esc(s) -> str:
@@ -431,7 +557,7 @@ def cadre(H, ident, titre, sous, desc) -> list[str]:
 
 def cartouche(H, src, note) -> list[str]:
     out = ['<line x1="0" y1="%d" x2="%d" y2="%d" stroke="%s"/>' % (H + 2, W, H + 2, GRID)]
-    for k, (t, c) in enumerate(((src, INK2), (note, INK2), (LICENCE, MUTED))):
+    for k, (t, c) in enumerate(((src, INK2), (note, INK2), (LICENCES[LANG], MUTED))):
         out.append('<text x="0" y="%d" font-size="9" fill="%s">%s</text>' % (H + 15 + 12 * k, c, esc(t)))
     return out
 
@@ -444,12 +570,52 @@ def legende(e, y, items) -> None:
         x += 16 + 6.2 * len(lab) + 18
 
 
-SRC1 = "Baromètre de l'application des lois (Assemblée nationale, LexImpact ; données DILA), état au " + RELEVE
-NOTE1 = "Lois promulguées par session (1er oct.-30 sept.), hors conventions. État à la date du relevé : ni un taux historique, ni une efficacité."
-SRC2 = "Baromètre de l'application des lois (état au %s) ; rapports annuels du Sénat sur l'application des lois" % RELEVE
-NOTE2 = "Gris : lois que le baromètre et le Sénat classent différemment (2024-2025 : 2 lois sans liste nominative en plus)."
-SRC3 = "Sénat, bilans annuels de l'application des lois, 2003-2026 (taux tels que publiés, page citée dans le tableau)"
-NOTE3 = LETTRES[len(SEGMENTS)].capitalize() + " définitions successives : ne pas relier les segments. Une révision de chiffre et une rupture de définition sont deux faits distincts."
+T = {
+    "fr": {"src1": "Baromètre de l'application des lois (Assemblée nationale, LexImpact ; données DILA), état au " + RELEVE,
+           "note1": "Lois promulguées par session (1er oct.-30 sept.), hors conventions. État à la date du relevé : ni un taux historique, ni une efficacité.",
+           "src2": "Baromètre de l'application des lois (état au %s) ; rapports annuels du Sénat sur l'application des lois" % RELEVE,
+           "note2": "Gris : lois que le baromètre et le Sénat classent différemment (2024-2025 : 2 lois sans liste nominative en plus).",
+           "src3": "Sénat, bilans annuels de l'application des lois, 2003-2026 (taux tels que publiés, page citée dans le tableau)",
+           "note3": LETTRES[len(SEGMENTS)].capitalize() + " définitions successives : ne pas relier les segments. Une révision de chiffre et une rupture de définition sont deux faits distincts.",
+           "t1": "Les mesures d'application des lois, par session de la loi", "s1": "nombre de mesures recensées et leur état au %s" % RELEVE,
+           "d1": "Barres horizontales, une par session de 2017-2018 à 2024-2025 : mesures avec un acte publié identifié, en attente, "
+                 "indiquées sans objet. Au total {nmes} mesures, dont {A} en attente. Les valeurs sont dans le tableau sous la figure.",
+           "l1": ["acte publié identifié", "en attente", "indiquées sans objet", "statut incomplet"], "attente": "{} en attente",
+           "t2": "Les lois qui n'appellent aucune mesure d'application, par session",
+           "s2": "nombre de lois promulguées, hors conventions ; trait noir : la moitié des lois de la session",
+           "d2": "Barres horizontales, une par session : lois d'application directe pour les deux sources, lois classées différemment "
+                 "par le baromètre et par le Sénat, lois qui appellent des mesures. En {ct_session}, le baromètre compte {ct_baro} lois "
+                 "d'application directe sur {ct_N}. Les valeurs sont dans le tableau sous la figure.",
+           "l2": ["application directe (les deux sources)", "classement divergent", "appellent des mesures"], "lois": "{} lois",
+           "t3": "Le taux d'application des lois publié par le Sénat, 2002-2003 à 2024-2025",
+           "s3": "en %% des mesures attendues ; %s définitions successives, fonds alternés : un segment ne se compare pas à un autre" % LETTRES[len(SEGMENTS)],
+           "d3": "Points par session, regroupés en %s segments séparés par des ruptures de définition : de {a} %% à {b} %% dans le premier "
+                 "segment ({c} à {d}), de {e} %% à {f} %% dans les suivants. Les valeurs, leur document et leur définition sont dans le "
+                 "tableau sous la figure." % LETTRES[len(SEGMENTS)],
+           "pct": "{} %", "leg3": "1 à 6 : segments (définitions dans le tableau) ; cercle vide : valeur 2019-2020 reprise l'année suivante"},
+    "en": {"src1": "Barometer of the application of laws (National Assembly, LexImpact; DILA data), status at 5 October 2026",
+           "note1": "Laws promulgated per session (1 Oct.-30 Sept.), excluding treaties. Status at the reading date: neither a past rate nor efficiency.",
+           "src2": "Barometer of the application of laws (status at 5 October 2026); Senate annual reports on the application of laws",
+           "note2": "Grey: laws that the barometer and the Senate classify differently (2024-2025: plus 2 laws with no list of names).",
+           "src3": "French Senate, annual reports on the application of laws, 2003-2026 (rates as published, page cited in the table)",
+           "note3": LETTRES_EN[len(SEGMENTS)].capitalize() + " successive definitions: do not join the segments. A revised figure and a change of definition are two distinct facts.",
+           "t1": "Implementing measures of French laws, by session of the law", "s1": "number of measures listed and their status at 5 October 2026",
+           "d1": "Horizontal bars, one per session from 2017-2018 to 2024-2025: measures with an identified published instrument, pending, "
+                 "listed as moot. In total {nmes} measures, {A} of them pending. The values are in the table below the figure.",
+           "l1": ["identified published instrument", "pending", "listed as moot", "incomplete status"], "attente": "{} pending",
+           "t2": "French laws that call for no implementing measure, by session",
+           "s2": "number of laws promulgated, excluding treaties; black mark: half of the session's laws",
+           "d2": "Horizontal bars, one per session: laws directly applicable for both sources, laws classified differently by the "
+                 "barometer and the Senate, laws that call for measures. In {ct_session}, the barometer counts {ct_baro} directly "
+                 "applicable laws out of {ct_N}. The values are in the table below the figure.",
+           "l2": ["directly applicable (both sources)", "divergent classification", "call for measures"], "lois": "{} laws",
+           "t3": "The rate of application of laws published by the French Senate, 2002-2003 to 2024-2025",
+           "s3": "in %% of expected measures; %s successive definitions, alternating backgrounds: one segment does not compare with another" % LETTRES_EN[len(SEGMENTS)],
+           "d3": "Points by session, grouped in %s segments separated by changes of definition: from {a}%% to {b}%% in the first segment "
+                 "({c} to {d}), from {e}%% to {f}%% in the following ones. The values, their document and their definition are in the "
+                 "table below the figure." % LETTRES_EN[len(SEGMENTS)],
+           "pct": "{}%", "leg3": "1 to 6: segments (definitions in the table); open circle: 2019-2020 figure revised the following year"},
+}
 
 
 def fig_mesures(r: dict, A: dict) -> str:
@@ -458,16 +624,12 @@ def fig_mesures(r: dict, A: dict) -> str:
     vmax = 1000
     X = lambda v: x0 + v / vmax * (x1 - x0)  # noqa: E731
     pas = 28
-    e = cadre(H, "am", "Les mesures d'application des lois, par session de la loi",
-              "nombre de mesures recensées et leur état au %s" % RELEVE,
-              "Barres horizontales, une par session de 2017-2018 à 2024-2025 : mesures avec un acte publié identifié, en attente, "
-              "indiquées sans objet. Au total %s mesures, dont %s en attente. Les valeurs sont dans le tableau sous la figure."
-              % (A["nmes"], A["A"]))
-    legende(e, 58, [(BLEU, "acte publié identifié"), (ORANGE, "en attente"), (GRIS_CLAIR, "indiquées sans objet"),
-                    (GRIS, "statut incomplet")])
+    L = T[LANG]
+    e = cadre(H, "am", L["t1"], L["s1"], L["d1"].format(**A))
+    legende(e, 58, list(zip((BLEU, ORANGE, GRIS_CLAIR, GRIS), L["l1"])))
     for v in range(0, vmax + 1, 250):
         e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s"/>' % (X(v), y0 - 4, X(v), y0 + pas * 8 + 2, GRID))
-        e.append(txt(X(v), y0 + pas * 8 + 16, fr(v), 9, MUTED, "middle"))
+        e.append(txt(X(v), y0 + pas * 8 + 16, nb(v), 9, MUTED, "middle"))
     for i, s in enumerate(SESSIONS):
         c = r["cl"][s]
         y = y0 + i * pas
@@ -478,8 +640,8 @@ def fig_mesures(r: dict, A: dict) -> str:
             if v:
                 e.append('<rect x="%.1f" y="%d" width="%.1f" height="20" fill="%s"/>' % (X(a), y, X(a + v) - X(a), col))
             a += v
-        e.append(txt(X(a) + 4, y + 14, "%s en attente" % fr(c.get("A", 0)), 9, INK2))
-    e += cartouche(H, SRC1, NOTE1)
+        e.append(txt(X(a) + 4, y + 14, L["attente"].format(nb(c.get("A", 0))), 9, INK2))
+    e += cartouche(H, L["src1"], L["note1"])
     e.append("</svg>")
     return "\n".join(e)
 
@@ -490,13 +652,9 @@ def fig_lois(r: dict, A: dict) -> str:
     vmax = 70
     X = lambda v: x0 + v / vmax * (x1 - x0)  # noqa: E731
     pas = 28
-    e = cadre(H, "al", "Les lois qui n'appellent aucune mesure d'application, par session",
-              "nombre de lois promulguées, hors conventions ; trait noir : la moitié des lois de la session",
-              "Barres horizontales, une par session : lois d'application directe pour les deux sources, lois classées différemment "
-              "par le baromètre et par le Sénat, lois qui appellent des mesures. En %s, le baromètre compte %s lois d'application "
-              "directe sur %s. Les valeurs sont dans le tableau sous la figure." % (A["ct_session"], A["ct_baro"], A["ct_N"]))
-    legende(e, 58, [(BLEU, "application directe (les deux sources)"), (GRIS, "classement divergent"),
-                    (GRIS_CLAIR, "appellent des mesures")])
+    L = T[LANG]
+    e = cadre(H, "al", L["t2"], L["s2"], L["d2"].format(**A))
+    legende(e, 58, list(zip((BLEU, GRIS, GRIS_CLAIR), L["l2"])))
     for v in range(0, vmax + 1, 10):
         e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s"/>' % (X(v), y0 - 4, X(v), y0 + pas * 8 + 2, GRID))
         e.append(txt(X(v), y0 + pas * 8 + 16, str(v), 9, MUTED, "middle"))
@@ -509,8 +667,8 @@ def fig_lois(r: dict, A: dict) -> str:
                 e.append('<rect x="%.1f" y="%d" width="%.1f" height="20" fill="%s"/>' % (X(a), y, X(a + v) - X(a), col))
             a += v
         e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="2"/>' % (X(x["N"] / 2), y - 3, X(x["N"] / 2), y + 23, INK))
-        e.append(txt(X(x["N"]) + 4, y + 14, "%d lois" % x["N"], 9, INK2))
-    e += cartouche(H, SRC2, NOTE2)
+        e.append(txt(X(x["N"]) + 4, y + 14, L["lois"].format(x["N"]), 9, INK2))
+    e += cartouche(H, L["src2"], L["note2"])
     e.append("</svg>")
     return "\n".join(e)
 
@@ -522,18 +680,15 @@ def fig_serie(r: dict, A: dict) -> str:
     bw = (x1 - x0) / len(sess)
     X = lambda s: x0 + (sess.index(s) + 0.5) * bw  # noqa: E731
     Y = lambda v: y1 - v / 100 * (y1 - y0)  # noqa: E731
-    e = cadre(H, "as", "Le taux d'application des lois publié par le Sénat, 2002-2003 à 2024-2025",
-              "en %% des mesures attendues ; %s définitions successives, fonds alternés : un segment ne se compare pas à un autre" % LETTRES[len(SEGMENTS)],
-              "Points par session, regroupés en %s segments séparés par des ruptures de définition : de %s %% à %s %% dans "
-              "le premier segment (%s à %s), de %s %% à %s %% dans les suivants. Les valeurs, leur document et leur définition "
-              "sont dans le tableau sous la figure." % (LETTRES[len(SEGMENTS)],
-                  fr(min(v for _, v, _, _, g in SERIE if g == 1), 1).replace(",0", ""),
-                  fr(max(v for _, v, _, _, g in SERIE if g == 1), 1).replace(",0", ""),
-                  SERIE[0][0], [s for s, _, _, _, g in SERIE if g == 1][-1],
-                  fr(min(v for _, v, _, _, g in SERIE if g > 1)), fr(max(v for _, v, _, _, g in SERIE if g > 1))))
+    L = T[LANG]
+    nb1 = (lambda v: ("%g" % v)) if LANG == "en" else (lambda v: fr(v, 1).replace(",0", ""))
+    e = cadre(H, "as", L["t3"], L["s3"], L["d3"].format(
+        a=nb1(min(v for _, v, _, _, g in SERIE if g == 1)), b=nb1(max(v for _, v, _, _, g in SERIE if g == 1)),
+        c=SERIE[0][0], d=[s for s, _, _, _, g in SERIE if g == 1][-1],
+        e=nb(min(v for _, v, _, _, g in SERIE if g > 1)), f=nb(max(v for _, v, _, _, g in SERIE if g > 1))))
     for v in range(0, 101, 25):
         e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (x0, Y(v), x1, Y(v), GRID))
-        e.append(txt(x0 - 6, Y(v) + 4, "%d %%" % v, 9, MUTED, "end"))
+        e.append(txt(x0 - 6, Y(v) + 4, L["pct"].format(v), 9, MUTED, "end"))
     segs = collections.OrderedDict()
     for s, v, _, _, seg in SERIE:
         segs.setdefault(seg, []).append((s, v))
@@ -552,13 +707,24 @@ def fig_serie(r: dict, A: dict) -> str:
         a = int(s[:4])
         if a % 5 == 2 or s == "2024-2025":
             e.append(txt(X(s), y1 + 14, s, 9, MUTED, "middle"))
-    e.append(txt(x1, y1 + 30, "1 à 6 : segments (définitions dans le tableau) ; cercle vide : valeur 2019-2020 reprise l'année suivante", 9, INK2, "end"))
-    e += cartouche(H, SRC3, NOTE3)
+    e.append(txt(x1, y1 + 30, L["leg3"], 9, INK2, "end"))
+    e += cartouche(H, L["src3"], L["note3"])
     e.append("</svg>")
     return "\n".join(e)
 
 
-def fiches(figs: dict, A: dict) -> dict:
+MONTRE_EN = {
+    "mesures": "On {releve}, of the {nmes} implementing measures listed by the barometer for the laws promulgated in France from "
+               "October 2017 to September 2025, {P} have an identified published instrument, {A} are pending and {S} are listed as moot.",
+    "lois": "'Fewer than half in every session' does not hold: in {ct_session}, the barometer counts {ct_baro} directly applicable "
+            "laws out of {ct_N}; in the {nautres} other sessions, even the upper bound stays below half. The two sources classify "
+            "{ndesacc} of the {nlois} laws differently.",
+    "serie": "The rate published by the French Senate rests on {nsegments} successive definitions since 2002-2003: the segments "
+             "do not read as a single series.",
+}
+
+
+def fiches(figs: dict, A: dict, A_en: dict) -> dict:
     montre = {
         "mesures": ("appliquer-mesures", "Au %s, sur les %s mesures d'application recensées par le baromètre pour les lois "
                     "promulguées d'octobre 2017 à septembre 2025, %s ont un acte publié identifié, %s sont en attente et %s sont "
@@ -570,15 +736,19 @@ def fiches(figs: dict, A: dict) -> dict:
         "serie": ("appliquer-serie", "Le taux publié par le Sénat repose sur %s définitions successives depuis 2002-2003 : les "
                   "segments ne se lisent pas comme une seule série." % LETTRES[len(SEGMENTS)]),
     }
-    out = []
-    for ident, (fichier, m) in montre.items():
-        svg = figs[fichier + ".svg"]
-        titre = html.unescape(re.search(r"<title[^>]*>(.*?)</title>", svg).group(1))
-        cart = [html.unescape(t) for t in re.findall(r'<text x="0" y="[0-9.]+" font-size="9" fill="[^"]+">(.*?)</text>', svg)]
-        if len(cart) != 3 or cart[-1] != LICENCE:
-            raise Arret("fiche %s : cartouche illisible" % fichier)
-        out.append(dict(id=ident, fichier=fichier, titre=titre, montre=m, source=cart[0], precaution=cart[1]))
-    return {"fr": out}
+    res = {}
+    for lang, suf in (("fr", ""), ("en", "-en")):
+        out = []
+        for ident, (fichier, m) in montre.items():
+            svg = figs[fichier + suf + ".svg"]
+            titre = html.unescape(re.search(r"<title[^>]*>(.*?)</title>", svg).group(1))
+            cart = [html.unescape(t) for t in re.findall(r'<text x="0" y="[0-9.]+" font-size="9" fill="[^"]+">(.*?)</text>', svg)]
+            if len(cart) != 3 or cart[-1] != LICENCES[lang]:
+                raise Arret("fiche %s%s : cartouche illisible" % (fichier, suf))
+            out.append(dict(id=ident, fichier=fichier + suf, titre=titre,
+                            montre=m if lang == "fr" else MONTRE_EN[ident].format(**A_en), source=cart[0], precaution=cart[1]))
+        res[lang] = out
+    return res
 
 
 def csv_texte(r: dict) -> str:
@@ -647,6 +817,17 @@ def autotest(S: dict) -> list[str]:
             if not str(e).startswith(pref) or str(e).startswith("mutation"):
                 raise
             out.append("%s -> %s" % (nom, str(e)[:70]))
+    sauve = TR["cit_senat_1819"]  # traduction faussée : un nombre absent de l'original doit arrêter (A7 bis)
+    TR["cit_senat_1819"] = sauve.replace("72%", "73%")
+    try:
+        calculer(S)
+        raise Arret("mutation traduction faussee : aucune garde n'a mordu, controle ABSENT")
+    except Arret as e:
+        if not str(e).startswith("A7 bis"):
+            raise
+        out.append("traduction faussee -> %s" % str(e)[:70])
+    finally:
+        TR["cit_senat_1819"] = sauve
     return out
 
 
@@ -665,13 +846,21 @@ def _main() -> int:
     for m in autotest(S):
         log("autotest : la mutation a mordu : " + m)
     A = affichage(r)
+    A_en = affichage_en(r, A)
+    if set(A) != set(A_en):
+        raise Arret("blocs affichage et affichage_en : cles differentes (%s)" % sorted(set(A) ^ set(A_en)))
     if "--check" in sys.argv[1:]:
         log("--check : %d gardes tenues, rien ecrit." % len(g))
         return 0
     import cairosvg
-    figs = {"appliquer-mesures.svg": fig_mesures(r, A), "appliquer-lois.svg": fig_lois(r, A),
-            "appliquer-serie.svg": fig_serie(r, A)}
-    fi = fiches(figs, A)
+    global LANG
+    figs = {}
+    for LANG, suf, AA in (("fr", "", A), ("en", "-en", A_en)):
+        figs["appliquer-mesures%s.svg" % suf] = fig_mesures(r, AA)
+        figs["appliquer-lois%s.svg" % suf] = fig_lois(r, AA)
+        figs["appliquer-serie%s.svg" % suf] = fig_serie(r, AA)
+    LANG = "fr"
+    fi = fiches(figs, A, A_en)
     csvt = csv_texte(r)
     payload = {
         "releve_le": "2026-10-06",
@@ -696,7 +885,9 @@ def _main() -> int:
         "serie_senat": [{"session": s, "valeur": v, "document": pg, "citation": norm(c), "segment": seg,
                          "definition": SEGMENTS[seg]} for s, v, pg, c, seg in SERIE],
         "tableaux": tableaux(r),
+        "tableaux_en": tableaux_en(r),
         "affichage": A,
+        "affichage_en": A_en,
     }
     txt_json = json.dumps(payload, ensure_ascii=False, indent=1, default=str)
     if (OUT_DATA.exists() and OUT_DATA.read_text(encoding="utf-8") == txt_json and OUT_CSV.exists()
@@ -715,7 +906,7 @@ def _main() -> int:
     OUT_FIGURES.write_text(json.dumps(fi, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     for x in g:
         log("OK " + x)
-    log("Ecrit : data/promesses_appliquer.json, static/promesses_appliquer.{json,csv}, data/figures_appliquer.json, 3 figures SVG + PNG")
+    log("Ecrit : data/promesses_appliquer.json, static/promesses_appliquer.{json,csv}, data/figures_appliquer.json, 6 figures SVG + PNG (FR, EN)")
     return 0
 
 

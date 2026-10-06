@@ -28,7 +28,7 @@
   "limites": "l'origine formelle n'observe ni l'influence du Gouvernement sur une proposition, ni les amendements ; les dépôts extraits ne concordent pas texte par texte avec les bulletins de l'Assemblée : E1 est publié sur la borne du pire cas"
  },
  "gardes": [
-  "B1 : 8 citations de la Constitution, 3 des temoins, retrouvees mot pour mot",
+  "B1 : 8 citations de la Constitution (FR Legifrance, EN Conseil constitutionnel), 3 des temoins, retrouvees mot pour mot",
   "B2 : origine concordante AN/Dosleg ; parlementaires XIV 98/214, XV 103-108/202, XVI 55/83",
   "B3 : champ par session = barometre (8 sessions) ; 2024-2025 45/56 = Senat ; 2023-2024 30/51 ~ 58 %",
   "B4 : engagements XIV 6, XV 1, XVI 23 (= fiche 64 et bulletins) ; XVI 21 PLF/PLFSS + 2 LPFP ; 0 motion adoptee XIV-XVI",
@@ -326,6 +326,190 @@
    ]
   }
  },
+ "tableaux_en": {
+  "lois": {
+   "entetes": [
+    "Legislature of promulgation",
+    "Laws",
+    "Government bill",
+    "Private member's bill tabled in the Assembly",
+    "Private member's bill tabled in the Senate",
+    "Parliamentary origin",
+    "Laws authorising a treaty (excluded)"
+   ],
+   "lignes": [
+    [
+     "14th legislature (2012-2017)",
+     "214",
+     "116",
+     "55",
+     "43",
+     "98 (at least 87)",
+     "188"
+    ],
+    [
+     "15th legislature (2017-2022)",
+     "202",
+     "94",
+     "77",
+     "31",
+     "108 (at least 103)",
+     "104"
+    ],
+    [
+     "16th legislature (2022-2024)",
+     "83",
+     "28",
+     "32",
+     "23",
+     "55",
+     "41"
+    ],
+    [
+     "17th legislature (since 2024, ongoing on 6 October 2026)",
+     "97",
+     "19",
+     "48",
+     "30",
+     "78",
+     "32"
+    ]
+   ]
+  },
+  "sessions": {
+   "entetes": [
+    "Session",
+    "Laws promulgated, excluding treaties",
+    "Of parliamentary origin",
+    "Share"
+   ],
+   "lignes": [
+    [
+     "2017-2018",
+     "41",
+     "12",
+     "29%"
+    ],
+    [
+     "2018-2019",
+     "49",
+     "25",
+     "51%"
+    ],
+    [
+     "2019-2020",
+     "43",
+     "18",
+     "42%"
+    ],
+    [
+     "2020-2021",
+     "51",
+     "19",
+     "37%"
+    ],
+    [
+     "2021-2022",
+     "64",
+     "41",
+     "64%"
+    ],
+    [
+     "2022-2023",
+     "44",
+     "29",
+     "66%"
+    ],
+    [
+     "2023-2024",
+     "51",
+     "30",
+     "59%"
+    ],
+    [
+     "2024-2025",
+     "56",
+     "45",
+     "80%"
+    ]
+   ]
+  },
+  "engagements": {
+   "entetes": [
+    "Legislature",
+    "Uses of art. 49, para. 3",
+    "On a Finance Bill or Social Security Financing Bill",
+    "On another bill",
+    "Motions of no confidence carried"
+   ],
+   "lignes": [
+    [
+     "14th",
+     "6",
+     "0",
+     "6",
+     "0"
+    ],
+    [
+     "15th",
+     "1",
+     "0",
+     "1",
+     "0"
+    ],
+    [
+     "16th",
+     "23",
+     "21",
+     "2",
+     "0"
+    ],
+    [
+     "17th (ongoing)",
+     "8",
+     "8",
+     "0",
+     "1"
+    ]
+   ]
+  },
+  "e1": {
+   "entetes": [
+    "Legislature of tabling",
+    "Ordinary private members' bills tabled first in the Assembly",
+    "Not observed debated in the chamber before the end of the legislature",
+    "Worst case: excess over the bulletins removed",
+    "Bills tabled: data / bulletins",
+    "Median time from tabling to end of legislature (days)"
+   ],
+   "lignes": [
+    [
+     "14th (2012-2017)",
+     "1,555",
+     "1,402",
+     "1,385 out of 1,538",
+     "1,711 / 1,694",
+     "1,064"
+    ],
+    [
+     "15th (2017-2022)",
+     "2,160",
+     "1,964",
+     "1,959 out of 2,155",
+     "2,296 / 2,291",
+     "868"
+    ],
+    [
+     "16th (2022-2024)",
+     "1,241",
+     "1,131",
+     "1,128 out of 1,238",
+     "1,318 / 1,315",
+     "381"
+    ]
+   ]
+  }
+ },
  "affichage": {
   "releve": "06/10/2026",
   "N14": "214",
@@ -364,18 +548,22 @@
   "Efin14": "0",
   "Etextes14": "2",
   "Eautre14": "6",
+  "Efois14": "6 fois",
   "E15": "1",
   "Efin15": "0",
   "Etextes15": "1",
   "Eautre15": "1",
+  "Efois15": "1 fois",
   "E16": "23",
   "Efin16": "21",
   "Etextes16": "6",
   "Eautre16": "2",
+  "Efois16": "23 fois",
   "E17": "8",
   "Efin17": "8",
   "Etextes17": "3",
   "Eautre17": "0",
+  "Efois17": "8 fois",
   "Z14": "1 402",
   "NZ14": "1 555",
   "Zw14": "1 385",
@@ -416,6 +604,108 @@
   "cit_fiche64": "Cet instrument a néanmoins été utilisé à six reprises, sur deux projets de loi différents, sous la XIVe législature, à une reprise sous la XVe législature, et à 23 reprises sous la XVIe législature.",
   "cit_censure": "La première motion déposée a été adoptée selon la majorité qualifiée requise",
   "cit_senat_origine": "Sur la session, 80 % des lois adoptées (45 sur 56) sont d'origine parlementaire, contre 58 % en 2023-2024",
-  "censure_date": "2 décembre 2024"
+  "censure_date": "2 décembre 2024",
+  "cit_fiche64_tr": "This instrument was nevertheless used six times, on two different bills, under the 14th legislature, once under the 15th legislature, and 23 times under the 16th legislature.",
+  "cit_censure_tr": "The first motion tabled was carried by the required qualified majority",
+  "cit_senat_origine_tr": "Over the session, 80% of the laws adopted (45 out of 56) are of parliamentary origin, against 58% in 2023-2024"
+ },
+ "affichage_en": {
+  "releve": "6 October 2026",
+  "N14": "214",
+  "P14": "98",
+  "Pmin14": "87",
+  "G14": "116",
+  "AN14": "55",
+  "SEN14": "43",
+  "T14": "188",
+  "Ppct14": "46",
+  "N15": "202",
+  "P15": "108",
+  "Pmin15": "103",
+  "G15": "94",
+  "AN15": "77",
+  "SEN15": "31",
+  "T15": "104",
+  "Ppct15": "53",
+  "N16": "83",
+  "P16": "55",
+  "Pmin16": "55",
+  "G16": "28",
+  "AN16": "32",
+  "SEN16": "23",
+  "T16": "41",
+  "Ppct16": "66",
+  "N17": "97",
+  "P17": "78",
+  "Pmin17": "78",
+  "G17": "19",
+  "AN17": "48",
+  "SEN17": "30",
+  "T17": "32",
+  "Ppct17": "80",
+  "E14": "6",
+  "Efin14": "0",
+  "Etextes14": "2",
+  "Eautre14": "6",
+  "Efois14": "6 times",
+  "E15": "1",
+  "Efin15": "0",
+  "Etextes15": "1",
+  "Eautre15": "1",
+  "Efois15": "once",
+  "E16": "23",
+  "Efin16": "21",
+  "Etextes16": "6",
+  "Eautre16": "2",
+  "Efois16": "23 times",
+  "E17": "8",
+  "Efin17": "8",
+  "Etextes17": "3",
+  "Eautre17": "0",
+  "Efois17": "8 times",
+  "Z14": "1,402",
+  "NZ14": "1,555",
+  "Zw14": "1,385",
+  "Nw14": "1,538",
+  "exces14": "17",
+  "bul14": "1,694",
+  "ext14": "1,711",
+  "med14": "1,064",
+  "Z15": "1,964",
+  "NZ15": "2,160",
+  "Zw15": "1,959",
+  "Nw15": "2,155",
+  "exces15": "5",
+  "bul15": "2,291",
+  "ext15": "2,296",
+  "med15": "868",
+  "Z16": "1,131",
+  "NZ16": "1,241",
+  "Zw16": "1,128",
+  "Nw16": "1,238",
+  "exces16": "3",
+  "bul16": "1,315",
+  "ext16": "1,318",
+  "med16": "381",
+  "s1718_P": "12",
+  "s1718_N": "41",
+  "s2425_P": "45",
+  "s2425_N": "56",
+  "releve_le": "6 October 2026 (National Assembly open data and the Senate's Dosleg database of 6 October 2026, Journal officiel; National Assembly statistical bulletins)",
+  "cit_art24": "Parliament shall pass statutes.",
+  "cit_art39": "Both the Prime Minister and Members of Parliament shall have the right to initiate legislation.",
+  "cit_art48": "During two weeks of sittings out of four, priority shall be given, in the order determined by the Government, to the consideration of texts and to debates which it requests to be included on the agenda.",
+  "cit_art49a": "The Prime Minister may, after deliberation by the Council of Ministers, make the passing of a Finance Bill or Social Security Financing Bill an issue of a vote of confidence before the National Assembly. In that event, the Bill shall be considered passed unless a resolution of no-confidence, tabled within the subsequent twenty-four hours, is carried as provided for in the foregoing paragraph.",
+  "cit_art45a": "Every Government or Private Member's Bill shall be considered successively in the two Houses of Parliament with a view to the passing of an identical text.",
+  "cit_art45b": "may convene a joint committee, composed of an equal number of members from each House, to propose a text on the provisions still under debate.",
+  "cit_art45c": "the Government may, after a further reading by the National Assembly and by the Senate, ask the National Assembly to reach a final decision.",
+  "cit_art49b": "In addition, the Prime Minister may use the said procedure for one other Government or Private Members' Bill per session.",
+  "cit_fiche64": "Cet instrument a néanmoins été utilisé à six reprises, sur deux projets de loi différents, sous la XIVe législature, à une reprise sous la XVe législature, et à 23 reprises sous la XVIe législature.",
+  "cit_censure": "La première motion déposée a été adoptée selon la majorité qualifiée requise",
+  "cit_senat_origine": "Sur la session, 80 % des lois adoptées (45 sur 56) sont d'origine parlementaire, contre 58 % en 2023-2024",
+  "censure_date": "2 December 2024",
+  "cit_fiche64_tr": "This instrument was nevertheless used six times, on two different bills, under the 14th legislature, once under the 15th legislature, and 23 times under the 16th legislature.",
+  "cit_censure_tr": "The first motion tabled was carried by the required qualified majority",
+  "cit_senat_origine_tr": "Over the session, 80% of the laws adopted (45 out of 56) are of parliamentary origin, against 58% in 2023-2024"
  }
 }

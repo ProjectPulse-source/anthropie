@@ -33,8 +33,13 @@ Autotest de mutation à chaque exécution : origine d'une loi changée dans une 
 retirée -> B3 ; un engagement de la XVIe retiré -> B4 ; citation de l'art. 49 altérée -> B1 ; XIVe rendue majoritaire
 -> B2.
 
+Bilingue (06/10/2026, version anglaise demandée par l'auteur) : un calcul, deux blocs (affichage, affichage_en) aux
+mêmes clés, deux jeux de tableaux, des figures -en au même dessin ; la Constitution se cite en anglais dans la traduction
+publiée par le Conseil constitutionnel (scripts/sources_promesses_en/, vérifiée mot pour mot, garde B1) ; les autres
+textes français se citent en français, suivis de notre traduction (clés *_tr).
+
 Écrit : data/promesses_adopter.json (+ static/), static/promesses_adopter.csv, data/figures_adopter.json,
-static/img/adopter-{origine,493}.svg/.png. Rien n'est écrit à données identiques.
+static/img/adopter-{origine,493}{,-en}.svg/.png. Rien n'est écrit à données identiques.
 """
 from __future__ import annotations
 
@@ -49,9 +54,12 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "scripts" / "sources_promesses_en"))
+import constitution_en as cen  # noqa: E402
 SRC = ROOT / "scripts" / "sources_adopter"
 REG_APPLIQUER = ROOT / "scripts" / "sources_appliquer" / "registre_concordance.csv"
 PAGE_URL = "stephane-lalut.com/qui-peut-faire-adopter-une-loi/"
+PAGE_URL_EN = "stephane-lalut.com/en/who-can-get-a-law-passed-in-france/"
 OUT_DATA = ROOT / "data" / "promesses_adopter.json"
 OUT_STATIC = ROOT / "static" / "promesses_adopter.json"
 OUT_CSV = ROOT / "static" / "promesses_adopter.csv"
@@ -61,6 +69,37 @@ RELEVE = "06/10/2026"
 LEGS = ["14", "15", "16"]
 ROMAIN = {"14": "XIVe", "15": "XVe", "16": "XVIe", "17": "XVIIe"}
 PERIODE = {"14": "2012-2017", "15": "2017-2022", "16": "2022-2024", "17": "depuis 2024"}
+ROMAIN_EN = {"14": "14th", "15": "15th", "16": "16th", "17": "17th"}
+PERIODE_EN = {"14": "2012-2017", "15": "2017-2022", "16": "2022-2024", "17": "since 2024"}
+# Citations anglaises de la Constitution : traduction publiée par le Conseil constitutionnel, vérifiée par cen.citer().
+CONST_EN = {
+    "24": ("24", "Parliament shall pass statutes."),
+    "39": ("39", "Both the Prime Minister and Members of Parliament shall have the right to initiate legislation."),
+    "48": ("48", "During two weeks of sittings out of four, priority shall be given, in the order determined by the Government, "
+                 "to the consideration of texts and to debates which it requests to be included on the agenda."),
+    "49a": ("49", "The Prime Minister may, after deliberation by the Council of Ministers, make the passing of a Finance Bill or "
+                  "Social Security Financing Bill an issue of a vote of confidence before the National Assembly. In that event, "
+                  "the Bill shall be considered passed unless a resolution of no-confidence, tabled within the subsequent "
+                  "twenty-four hours, is carried as provided for in the foregoing paragraph."),
+    "45a": ("45", "Every Government or Private Member's Bill shall be considered successively in the two Houses of Parliament "
+                  "with a view to the passing of an identical text."),
+    "45b": ("45", "may convene a joint committee, composed of an equal number of members from each House, to propose a text on "
+                  "the provisions still under debate."),
+    "45c": ("45", "the Government may, after a further reading by the National Assembly and by the Senate, ask the National "
+                  "Assembly to reach a final decision."),
+    "49b": ("49", "In addition, the Prime Minister may use the said procedure for one other Government or Private Members' Bill "
+                  "per session."),
+}
+# Notre traduction des citations de témoins (fiche de l'AN, rapport du Sénat), affichée après l'original français.
+TEMOINS_TR = {
+    "cit_fiche64": "This instrument was nevertheless used six times, on two different bills, under the 14th legislature, once "
+                   "under the 15th legislature, and 23 times under the 16th legislature.",
+    "cit_censure": "The first motion tabled was carried by the required qualified majority",
+    "cit_senat_origine": "Over the session, 80% of the laws adopted (45 out of 56) are of parliamentary origin, against 58% in "
+                         "2023-2024",
+}
+MOIS_EN = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November",
+           "December"]
 SESSIONS = ["%d-%d" % (a, a + 1) for a in range(2017, 2025)]
 MOTS = {"une": 1, "un": 1, "deux": 2, "trois": 3, "quatre": 4, "cinq": 5, "six": 6, "sept": 7, "huit": 8, "neuf": 9, "dix": 10}
 CONST = {  # article -> (fichier, citation exacte)
@@ -118,6 +157,10 @@ def fr(n, dec=0) -> str:
     return ("{:,.%df}" % dec).format(n).replace(",", "\u202f").replace(".", ",")
 
 
+def en(n, dec=0) -> str:
+    return ("{:,.%df}" % dec).format(n)
+
+
 def session(d: str) -> str:
     a = int(d[:4]) if int(d[5:7]) >= 10 else int(d[:4]) - 1
     return "%d-%d" % (a, a + 1)
@@ -150,7 +193,14 @@ def calculer(S: dict) -> tuple[dict, list[str]]:
         if norm(c) not in S["pages"][pg]["texte"]:
             raise Arret("B1 : citation %s absente de %s" % (k, pg))
         cit[k] = norm(c)
-    g.append("B1 : %d citations de la Constitution, %d des temoins, retrouvees mot pour mot" % (len(CONST), len(TEMOINS)))
+    try:
+        tcen = cen.texte()
+        for k, (art, c) in CONST_EN.items():
+            cit["en_cit_art" + k] = cen.citer(art, c, tcen)
+    except ValueError as e:
+        raise Arret("B1 : %s" % e)
+    g.append("B1 : %d citations de la Constitution (FR Legifrance, EN Conseil constitutionnel), %d des temoins, retrouvees mot pour mot"
+             % (len(CONST), len(TEMOINS)))
 
     # --- E2
     L = S["lois"]
@@ -231,6 +281,7 @@ def calculer(S: dict) -> tuple[dict, list[str]]:
     MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"]
     an, mo, jo = map(int, cens[0]["date"].split("-"))
     cit["censure_date"] = "%d%s %s %d" % (jo, "er" if jo == 1 else "", MOIS[mo - 1], an)
+    cit["en_censure_date"] = "%d %s %d" % (jo, MOIS_EN[mo - 1], an)
     g.append("B4 : engagements XIV %d, XV %d, XVI %d (= fiche 64 et bulletins) ; XVI %d PLF/PLFSS + %d LPFP ; 0 motion adoptee XIV-XVI"
              % (eng["14"]["n"], eng["15"]["n"], eng["16"]["n"], eng["16"]["fin"], eng["16"]["lpfp"]))
 
@@ -266,7 +317,7 @@ def affichage(r: dict) -> dict:
                   "Ppct%s" % l: fr(100 * x["P"] / x["N"])})
     for l, x in r["eng"].items():
         A.update({"E%s" % l: fr(x["n"]), "Efin%s" % l: fr(x["fin"]), "Etextes%s" % l: fr(x["textes"]),
-                  "Eautre%s" % l: fr(x["n"] - x["fin"])})
+                  "Eautre%s" % l: fr(x["n"] - x["fin"]), "Efois%s" % l: fr(x["n"]) + " fois"})
     for l, x in r["e1"].items():
         A.update({"Z%s" % l: fr(x["Z"]), "NZ%s" % l: fr(x["N"]), "Zw%s" % l: fr(x["Zw"]), "Nw%s" % l: fr(x["Nw"]),
                   "exces%s" % l: fr(x["exces"]), "bul%s" % l: fr(x["bul"]), "ext%s" % l: fr(x["ext"]),
@@ -275,8 +326,61 @@ def affichage(r: dict) -> dict:
     A.update({"s1718_P": fr(s1["P"]), "s1718_N": fr(s1["N"]), "s2425_P": fr(s2["P"]), "s2425_N": fr(s2["N"]),
               "releve_le": "06/10/2026 (données de l'Assemblée nationale et base Dosleg du Sénat du 06/10/2026, Journal "
                            "officiel ; bulletins statistiques de l'Assemblée nationale)"})
-    A.update(r["cit"])
+    A.update({k: v for k, v in r["cit"].items() if not k.startswith("en_")})
+    A.update({k + "_tr": v for k, v in TEMOINS_TR.items()})
     return A
+
+
+def affichage_en(r: dict) -> dict:
+    A = {"releve": "6 October 2026"}
+    for l, x in r["leg"].items():
+        A.update({"N%s" % l: en(x["N"]), "P%s" % l: en(x["P"]), "Pmin%s" % l: en(x["Pmin"]), "G%s" % l: en(x["gouv"]),
+                  "AN%s" % l: en(x["AN"]), "SEN%s" % l: en(x["SEN"]), "T%s" % l: en(x["traites"]),
+                  "Ppct%s" % l: en(100 * x["P"] / x["N"])})
+    for l, x in r["eng"].items():
+        A.update({"E%s" % l: en(x["n"]), "Efin%s" % l: en(x["fin"]), "Etextes%s" % l: en(x["textes"]),
+                  "Eautre%s" % l: en(x["n"] - x["fin"]),
+                  "Efois%s" % l: {1: "once", 2: "twice"}.get(x["n"], en(x["n"]) + " times")})
+    for l, x in r["e1"].items():
+        A.update({"Z%s" % l: en(x["Z"]), "NZ%s" % l: en(x["N"]), "Zw%s" % l: en(x["Zw"]), "Nw%s" % l: en(x["Nw"]),
+                  "exces%s" % l: en(x["exces"]), "bul%s" % l: en(x["bul"]), "ext%s" % l: en(x["ext"]),
+                  "med%s" % l: en(x["mediane_jours"])})
+    s1, s2 = r["ses"]["2017-2018"], r["ses"]["2024-2025"]
+    A.update({"s1718_P": en(s1["P"]), "s1718_N": en(s1["N"]), "s2425_P": en(s2["P"]), "s2425_N": en(s2["N"]),
+              "releve_le": "6 October 2026 (National Assembly open data and the Senate's Dosleg database of 6 October 2026, "
+                           "Journal officiel; National Assembly statistical bulletins)"})
+    for k, v in r["cit"].items():
+        if k.startswith("cit_art"):
+            A[k] = r["cit"]["en_" + k]
+        elif not k.startswith("en_") and k != "censure_date":
+            A[k] = v  # citation de témoin : l'original français, suivi de sa traduction (_tr)
+    A["censure_date"] = r["cit"]["en_censure_date"]
+    A.update({k + "_tr": v for k, v in TEMOINS_TR.items()})
+    return A
+
+
+def tableaux_en(r: dict) -> dict:
+    lois = [[ROMAIN_EN[l] + " legislature (" + PERIODE_EN[l] + (", ongoing on 6 October 2026" if l == "17" else "") + ")",
+             en(x["N"]), en(x["gouv"]), en(x["AN"]), en(x["SEN"]),
+             en(x["P"]) + ("" if x["Pmin"] == x["P"] else " (at least %s)" % en(x["Pmin"])), en(x["traites"])]
+            for l, x in r["leg"].items()]
+    ses = [[s, en(x["N"]), en(x["P"]), en(100 * x["P"] / x["N"]) + "%"] for s, x in r["ses"].items()]
+    eng = [[ROMAIN_EN[l] + (" (ongoing)" if l == "17" else ""), en(x["n"]), en(x["fin"]), en(x["n"] - x["fin"]), en(x["adoptees"])]
+           for l, x in r["eng"].items()]
+    e1 = [[ROMAIN_EN[l] + " (" + PERIODE_EN[l] + ")", en(x["N"]), en(x["Z"]), "%s out of %s" % (en(x["Zw"]), en(x["Nw"])),
+           "%s / %s" % (en(x["ext"]), en(x["bul"])), en(x["mediane_jours"])] for l, x in r["e1"].items()]
+    return {
+        "lois": {"entetes": ["Legislature of promulgation", "Laws", "Government bill", "Private member's bill tabled in the Assembly",
+                             "Private member's bill tabled in the Senate", "Parliamentary origin", "Laws authorising a treaty (excluded)"],
+                 "lignes": lois},
+        "sessions": {"entetes": ["Session", "Laws promulgated, excluding treaties", "Of parliamentary origin", "Share"], "lignes": ses},
+        "engagements": {"entetes": ["Legislature", "Uses of art. 49, para. 3", "On a Finance Bill or Social Security Financing Bill",
+                                    "On another bill", "Motions of no confidence carried"], "lignes": eng},
+        "e1": {"entetes": ["Legislature of tabling", "Ordinary private members' bills tabled first in the Assembly",
+                           "Not observed debated in the chamber before the end of the legislature",
+                           "Worst case: excess over the bulletins removed", "Bills tabled: data / bulletins",
+                           "Median time from tabling to end of legislature (days)"], "lignes": e1},
+    }
 
 
 def tableaux(r: dict) -> dict:
@@ -307,7 +411,8 @@ W = 720
 BLEU, BLEU_CLAIR, GRIS, GRIS_CLAIR = "#184f95", "#7fa3cf", "#8a8781", "#c9c5c0"
 INK, INK2, MUTED, GRID = "#0A0A0E", "#52514e", "#898781", "#e1e0d9"
 FONT = "system-ui, -apple-system, Segoe UI, sans-serif"
-LICENCE = "Compilation Stéphane Lalut, CC BY 4.0 · " + PAGE_URL
+LICENCES = {"fr": "Compilation Stéphane Lalut, CC BY 4.0 · " + PAGE_URL, "en": "Compiled by Stéphane Lalut, CC BY 4.0 · " + PAGE_URL_EN}
+LANG = "fr"
 
 
 def esc(s) -> str:
@@ -329,7 +434,7 @@ def cadre(H, ident, titre, sous, desc) -> list[str]:
 
 def cartouche(H, src, note) -> list[str]:
     out = ['<line x1="0" y1="%d" x2="%d" y2="%d" stroke="%s"/>' % (H + 2, W, H + 2, GRID)]
-    for k, (t, c) in enumerate(((src, INK2), (note, INK2), (LICENCE, MUTED))):
+    for k, (t, c) in enumerate(((src, INK2), (note, INK2), (LICENCES[LANG], MUTED))):
         out.append('<text x="0" y="%d" font-size="9" fill="%s">%s</text>' % (H + 15 + 12 * k, c, esc(t)))
     return out
 
@@ -342,10 +447,52 @@ def legende(e, y, items) -> None:
         x += 16 + 6.2 * len(lab) + 18
 
 
-SRC1 = "Assemblée nationale (données ouvertes, dossiers législatifs) et Sénat (base Dosleg), 06/10/2026 ; Journal officiel"
-NOTE1 = "Hors traités, lois de finances, de financement de la sécurité sociale et organiques. Origine au dépôt, non l'influence."
-SRC2 = "Assemblée nationale : dossiers législatifs, bulletins statistiques, fiche n° 64 (engagements de responsabilité)"
-NOTE2 = "Catégories de l'art. 49, al. 3 : la loi de programmation des finances publiques est un « autre projet ». XVIIe en cours au " + RELEVE + "."
+T = {
+    "fr": {"src1": "Assemblée nationale (données ouvertes, dossiers législatifs) et Sénat (base Dosleg), 06/10/2026 ; Journal officiel",
+           "note1": "Hors traités, lois de finances, de financement de la sécurité sociale et organiques. Origine au dépôt, non l'influence.",
+           "src2": "Assemblée nationale : dossiers législatifs, bulletins statistiques, fiche n° 64 (engagements de responsabilité)",
+           "note2": "Catégories de l'art. 49, al. 3 : la loi de programmation des finances publiques est un « autre projet ». XVIIe en cours au " + RELEVE + ".",
+           "t1": "Qui est à l'origine des lois ordinaires promulguées ?",
+           "s1": "nombre de lois, par législature de promulgation ; trait noir : la moitié des lois",
+           "d1": "Barres horizontales par législature : lois issues d'un projet du Gouvernement, d'une proposition déposée à "
+                 "l'Assemblée, d'une proposition déposée au Sénat. XIVe : {P14} d'origine parlementaire sur {N14} ; XVe : {P15} sur "
+                 "{N15} ; XVIe : {P16} sur {N16} ; XVIIe en cours.",
+           "l1": ["projet du Gouvernement", "proposition déposée à l'Assemblée", "proposition déposée au Sénat"],
+           "lois": "{} lois", "encours": "* en cours au " + RELEVE,
+           "t2": "Engagements de responsabilité sur un texte (art. 49, al. 3)",
+           "s2": "nombre d'engagements, par législature ; un engagement par texte et par étape de lecture",
+           "d2": "Barres horizontales par législature : engagements sur un projet de loi de finances ou de financement de la "
+                 "sécurité sociale, et sur un autre projet ou une proposition. XIVe : {E14}, sur d'autres projets ; XVe : {E15} ; "
+                 "XVIe : {E16}, dont {Eautre16} sur la loi de programmation des finances publiques ; XVIIe en cours.",
+           "l2": ["projet de loi de finances ou de financement de la sécurité sociale", "autre projet ou proposition"]},
+    "en": {"src1": "National Assembly (open data, legislative files) and Senate (Dosleg database), 6 October 2026; Journal officiel",
+           "note1": "Excluding treaties, finance, social security financing and institutional acts. Origin at tabling, not influence.",
+           "src2": "National Assembly: legislative files, statistical bulletins, summary sheet no. 64 (Government responsibility)",
+           "note2": "Categories of art. 49, para. 3: the public finance programming act is 'one other bill'. 17th ongoing on 6 October 2026.",
+           "t1": "Who initiated the laws promulgated in France?",
+           "s1": "number of laws, by legislature of promulgation; black mark: half of the laws",
+           "d1": "Horizontal bars by legislature: laws arising from a Government bill, from a private member's bill tabled in the "
+                 "National Assembly, from one tabled in the Senate. 14th: {P14} of parliamentary origin out of {N14}; 15th: {P15} "
+                 "out of {N15}; 16th: {P16} out of {N16}; 17th ongoing.",
+           "l1": ["Government bill", "private member's bill, National Assembly", "private member's bill, Senate"],
+           "lois": "{} laws", "encours": "* ongoing on 6 October 2026",
+           "t2": "Bills made an issue of a vote of confidence (art. 49, para. 3)",
+           "s2": "number of uses, by legislature; one per bill and per reading stage",
+           "d2": "Horizontal bars by legislature: uses on a Finance Bill or Social Security Financing Bill, and on another "
+                 "bill. 14th: {E14}, on other bills; 15th: {E15}; 16th: {E16}, including {Eautre16} on the public finance "
+                 "programming act; 17th ongoing.",
+           "l2": ["Finance Bill or Social Security Financing Bill", "other bill"]},
+}
+
+
+def lib_leg(l: str) -> str:
+    if LANG == "en":
+        return ROMAIN_EN[l] + " (" + PERIODE_EN[l] + ")" + (" *" if l == "17" else "")
+    return ROMAIN[l] + " (" + PERIODE[l] + ")" + (" *" if l == "17" else "")
+
+
+def nb(n) -> str:
+    return en(n) if LANG == "en" else fr(n)
 
 
 def fig_origine(r: dict, A: dict) -> str:
@@ -353,27 +500,23 @@ def fig_origine(r: dict, A: dict) -> str:
     x0, x1, y0, pas = 150, W - 70, 74, 34
     vmax = 250
     X = lambda v: x0 + v / vmax * (x1 - x0)  # noqa: E731
-    e = cadre(H, "ao", "Qui est à l'origine des lois ordinaires promulguées ?",
-              "nombre de lois, par législature de promulgation ; trait noir : la moitié des lois",
-              "Barres horizontales par législature : lois issues d'un projet du Gouvernement, d'une proposition déposée à "
-              "l'Assemblée, d'une proposition déposée au Sénat. XIVe : %s d'origine parlementaire sur %s ; XVe : %s sur %s ; "
-              "XVIe : %s sur %s ; XVIIe en cours." % (A["P14"], A["N14"], A["P15"], A["N15"], A["P16"], A["N16"]))
-    legende(e, 58, [(GRIS_CLAIR, "projet du Gouvernement"), (BLEU, "proposition déposée à l'Assemblée"),
-                    (BLEU_CLAIR, "proposition déposée au Sénat")])
+    L = T[LANG]
+    e = cadre(H, "ao", L["t1"], L["s1"], L["d1"].format(**A))
+    legende(e, 58, list(zip((GRIS_CLAIR, BLEU, BLEU_CLAIR), L["l1"])))
     for v in range(0, vmax + 1, 50):
         e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s"/>' % (X(v), y0 - 4, X(v), y0 + pas * 4 - 6, GRID))
         e.append(txt(X(v), y0 + pas * 4 + 8, str(v), 9, MUTED, "middle"))
     for i, (l, x) in enumerate(r["leg"].items()):
         y = y0 + i * pas
-        e.append(txt(0, y + 14, ROMAIN[l] + " (" + PERIODE[l] + ")" + (" *" if l == "17" else ""), 10, INK))
+        e.append(txt(0, y + 14, lib_leg(l), 10, INK))
         a = 0
         for v, col in ((x["gouv"], GRIS_CLAIR), (x["AN"], BLEU), (x["SEN"], BLEU_CLAIR)):
             e.append('<rect x="%.1f" y="%d" width="%.1f" height="20" fill="%s"/>' % (X(a), y, X(a + v) - X(a), col))
             a += v
         e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="2"/>' % (X(x["N"] / 2), y - 3, X(x["N"] / 2), y + 23, INK))
-        e.append(txt(X(a) + 4, y + 14, "%s lois" % fr(x["N"]), 9, INK2))
-    e.append(txt(0, y0 + pas * 4 + 22, "* en cours au %s" % RELEVE, 9, INK2))
-    e += cartouche(H, SRC1, NOTE1)
+        e.append(txt(X(a) + 4, y + 14, L["lois"].format(nb(x["N"])), 9, INK2))
+    e.append(txt(0, y0 + pas * 4 + 22, L["encours"], 9, INK2))
+    e += cartouche(H, L["src1"], L["note1"])
     e.append("</svg>")
     return "\n".join(e)
 
@@ -383,32 +526,38 @@ def fig_493(r: dict, A: dict) -> str:
     x0, x1, y0, pas = 150, W - 90, 74, 34
     vmax = 25
     X = lambda v: x0 + v / vmax * (x1 - x0)  # noqa: E731
-    e = cadre(H, "a4", "Engagements de responsabilité sur un texte (art. 49, al. 3)",
-              "nombre d'engagements, par législature ; un engagement par texte et par étape de lecture",
-              "Barres horizontales par législature : engagements sur un projet de loi de finances ou de financement de la "
-              "sécurité sociale, et sur un autre projet ou une proposition. XIVe : %s, sur d'autres projets ; XVe : %s ; XVIe : "
-              "%s, dont %s sur la loi de programmation des finances publiques ; XVIIe en cours."
-              % (A["E14"], A["E15"], A["E16"], A["Eautre16"]))
-    legende(e, 58, [(BLEU, "projet de loi de finances ou de financement de la sécurité sociale"), (GRIS_CLAIR, "autre projet ou proposition")])
+    L = T[LANG]
+    e = cadre(H, "a4", L["t2"], L["s2"], L["d2"].format(**A))
+    legende(e, 58, list(zip((BLEU, GRIS_CLAIR), L["l2"])))
     for v in range(0, vmax + 1, 5):
         e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s"/>' % (X(v), y0 - 4, X(v), y0 + pas * 4 - 6, GRID))
         e.append(txt(X(v), y0 + pas * 4 + 8, str(v), 9, MUTED, "middle"))
     for i, (l, x) in enumerate(r["eng"].items()):
         y = y0 + i * pas
-        e.append(txt(0, y + 14, ROMAIN[l] + " (" + PERIODE[l] + ")" + (" *" if l == "17" else ""), 10, INK))
+        e.append(txt(0, y + 14, lib_leg(l), 10, INK))
         a = 0
         for v, col in ((x["fin"], BLEU), (x["n"] - x["fin"], GRIS_CLAIR)):
             if v:
                 e.append('<rect x="%.1f" y="%d" width="%.1f" height="20" fill="%s"/>' % (X(a), y, X(a + v) - X(a), col))
             a += v
-        e.append(txt(X(a) + 4, y + 14, "%s" % fr(x["n"]), 10, INK, weight="600"))
-    e.append(txt(0, y0 + pas * 4 + 22, "* en cours au %s" % RELEVE, 9, INK2))
-    e += cartouche(H, SRC2, NOTE2)
+        e.append(txt(X(a) + 4, y + 14, nb(x["n"]), 10, INK, weight="600"))
+    e.append(txt(0, y0 + pas * 4 + 22, L["encours"], 9, INK2))
+    e += cartouche(H, L["src2"], L["note2"])
     e.append("</svg>")
     return "\n".join(e)
 
 
-def fiches(figs: dict, A: dict) -> dict:
+MONTRE_EN = {
+    "origine": "Among the laws promulgated in the scope studied (excluding treaties, finance, social security financing and "
+               "institutional acts), {P14} out of {N14} are of parliamentary origin under the 14th legislature, {P15} out of {N15} "
+               "under the 15th and {P16} out of {N16} under the 16th; formal origin at the initial tabling.",
+    "493": "The Government made the passing of a bill an issue of a vote of confidence (art. 49, para. 3) {E14} times under the 14th legislature, "
+           "{Efois15} under the 15th and {E16} times under the 16th, including {Efin16} on a Finance Bill or Social Security "
+           "Financing Bill.",
+}
+
+
+def fiches(figs: dict, A: dict, A_en: dict) -> dict:
     montre = {
         "origine": ("adopter-origine", "Parmi les lois promulguées du champ étudié (hors traités, lois de finances, de financement "
                     "de la sécurité sociale et organiques), %s sur %s sont d'origine parlementaire sous la "
@@ -418,16 +567,20 @@ def fiches(figs: dict, A: dict) -> dict:
                 "législature, %s fois sous la XVe et %s fois sous la XVIe, dont %s sur un projet de loi de finances ou de "
                 "financement de la sécurité sociale." % (A["E14"], A["E15"], A["E16"], A["Efin16"])),
     }
-    out = []
-    for ident, (fichier, m) in montre.items():
-        svg = figs[fichier + ".svg"]
-        titre = html.unescape(re.search(r"<title[^>]*>(.*?)</title>", svg).group(1))
-        cart = [html.unescape(t) for t in re.findall(r'<text x="0" y="[0-9.]+" font-size="9" fill="[^"]+">(.*?)</text>', svg)]
-        cart = [c for c in cart if not c.startswith("* en cours")]
-        if len(cart) != 3 or cart[-1] != LICENCE:
-            raise Arret("fiche %s : cartouche illisible" % fichier)
-        out.append(dict(id=ident, fichier=fichier, titre=titre, montre=m, source=cart[0], precaution=cart[1]))
-    return {"fr": out}
+    res = {}
+    for lang, suf in (("fr", ""), ("en", "-en")):
+        out = []
+        for ident, (fichier, m) in montre.items():
+            svg = figs[fichier + suf + ".svg"]
+            titre = html.unescape(re.search(r"<title[^>]*>(.*?)</title>", svg).group(1))
+            cart = [html.unescape(t) for t in re.findall(r'<text x="0" y="[0-9.]+" font-size="9" fill="[^"]+">(.*?)</text>', svg)]
+            cart = [c for c in cart if not c.startswith("* ")]
+            if len(cart) != 3 or cart[-1] != LICENCES[lang]:
+                raise Arret("fiche %s%s : cartouche illisible" % (fichier, suf))
+            out.append(dict(id=ident, fichier=fichier + suf, titre=titre,
+                            montre=m if lang == "fr" else MONTRE_EN[ident].format(**A_en), source=cart[0], precaution=cart[1]))
+        res[lang] = out
+    return res
 
 
 def csv_texte(r: dict) -> str:
@@ -516,13 +669,20 @@ def _main() -> int:
     r, g = calculer(S)
     for m in autotest(S):
         log("autotest : la mutation a mordu : " + m)
-    A = affichage(r)
+    A, A_en = affichage(r), affichage_en(r)
+    if set(A) != set(A_en):
+        raise Arret("blocs affichage et affichage_en : cles differentes (%s)" % sorted(set(A) ^ set(A_en)))
     if "--check" in sys.argv[1:]:
         log("--check : %d gardes tenues, rien ecrit." % len(g))
         return 0
     import cairosvg
-    figs = {"adopter-origine.svg": fig_origine(r, A), "adopter-493.svg": fig_493(r, A)}
-    fi = fiches(figs, A)
+    global LANG
+    figs = {}
+    for LANG, suf, AA in (("fr", "", A), ("en", "-en", A_en)):
+        figs["adopter-origine%s.svg" % suf] = fig_origine(r, AA)
+        figs["adopter-493%s.svg" % suf] = fig_493(r, AA)
+    LANG = "fr"
+    fi = fiches(figs, A, A_en)
     csvt = csv_texte(r)
     payload = {
         "releve_le": "2026-10-06",
@@ -550,7 +710,9 @@ def _main() -> int:
         "gardes": g,
         "calcul": {"legislatures": r["leg"], "sessions": r["ses"], "engagements": r["eng"]},
         "tableaux": tableaux(r),
+        "tableaux_en": tableaux_en(r),
         "affichage": A,
+        "affichage_en": A_en,
     }
     txt_json = json.dumps(payload, ensure_ascii=False, indent=1, default=str)
     if (OUT_DATA.exists() and OUT_DATA.read_text(encoding="utf-8") == txt_json and OUT_CSV.exists()
@@ -569,7 +731,7 @@ def _main() -> int:
     OUT_FIGURES.write_text(json.dumps(fi, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     for x in g:
         log("OK " + x)
-    log("Ecrit : data/promesses_adopter.json, static/promesses_adopter.{json,csv}, data/figures_adopter.json, 2 figures SVG + PNG")
+    log("Ecrit : data/promesses_adopter.json, static/promesses_adopter.{json,csv}, data/figures_adopter.json, 4 figures SVG + PNG (FR, EN)")
     return 0
 
 

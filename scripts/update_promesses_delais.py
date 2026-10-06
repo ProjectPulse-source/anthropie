@@ -30,8 +30,12 @@ Gardes (toutes ARRÊTENT, rien n'est écrit) :
 Autotest de mutation à chaque exécution : « quatre années » altéré -> D1 ; admis 2023 altéré -> D6 ; valeur DREES 2003
 altérée -> D5.
 
+Bilingue (06/10/2026) : un calcul, deux blocs (affichage, affichage_en) aux mêmes clés, des figures -en au même dessin ;
+l'art. 6 de la Constitution se cite en anglais dans la traduction du Conseil constitutionnel (vérifiée, garde D2) ; les
+autres textes en français, suivis de notre traduction (clés *_tr), dont chaque nombre doit figurer dans l'original (D1 ter).
+
 Écrit : data/promesses_delais.json (+ static/), static/promesses_delais.csv, data/figures_delais.json,
-static/img/delais-cursus.svg/.png, static/img/delais-admissions.svg/.png. Rien n'est écrit à données identiques.
+static/img/delais-{cursus,admissions}{,-en}.svg/.png. Rien n'est écrit à données identiques.
 """
 from __future__ import annotations
 
@@ -46,8 +50,11 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "scripts" / "sources_promesses_en"))
+import constitution_en as cen  # noqa: E402
 SRC = ROOT / "scripts" / "sources_delais"
 PAGE_URL = "stephane-lalut.com/une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/"
+PAGE_URL_EN = "stephane-lalut.com/en/can-a-promise-take-effect-within-five-years/"
 OUT_DATA = ROOT / "data" / "promesses_delais.json"
 OUT_STATIC = ROOT / "static" / "promesses_delais.json"
 OUT_CSV = ROOT / "static" / "promesses_delais.csv"
@@ -60,6 +67,22 @@ LEGI = {"arrete_2013": "f89e9d3991814a43b91e67bcf31ffbd98b57ac38ce05d32ae5e5f740
 ART37 = "loi_2022-1616_art37_JORFARTI000046791824.xml"
 MOTS = {"un": 1, "deux": 2, "trois": 3, "quatre": 4, "cinq": 5, "six": 6, "sept": 7, "huit": 8, "neuf": 9, "dix": 10}
 LETTRES = {v: k for k, v in MOTS.items()}
+LETTRES_EN = {1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six", 7: "seven", 8: "eight", 9: "nine", 10: "ten"}
+CIT_ART6_EN = "The President of the Republic shall be elected for a term of five years by direct universal suffrage."
+# Notre traduction des textes français cités ; chaque nombre doit figurer dans l'original (garde D1 ter).
+TR = {
+    "cit_cycle1": "The general training diploma in medical sciences concludes the first cycle; it comprises six semesters of training",
+    "cit_cycle2": "The advanced training diploma in medical sciences, defined in this order, concludes the second cycle; it "
+                  "comprises six semesters of training",
+    "cit_mg": "which, for the specialty of general medicine, lasts four years",
+    "cit_37": "The duration of the third cycle of medical studies for the specialty of general medicine mentioned in 2° of I applies "
+              "to students who begin this third cycle at the start of the 2023 academic year.",
+    "cit_supervision": "The last year of the diploma of specialised studies in general medicine is carried out as an internship, "
+                       "under a regime of supervised autonomy",
+    "cit_dj1": "The acts performed under this regime are performed by the junior doctor alone.",
+    "cit_dj2": "The junior doctor exercises his functions by delegation and under the responsibility of the practitioner he "
+               "reports to.",
+}
 
 
 class Arret(Exception):
@@ -74,6 +97,14 @@ def norm(s: str) -> str:
     s = s.replace("\u00a0", " ").replace("\u202f", " ").replace("\u2019", "'")
     s = re.sub(r"\s+", " ", s)
     return re.sub(r" ([,.;:])", r"\1", s).strip()
+
+
+def en(n, dec=0) -> str:
+    return ("{:,.%df}" % dec).format(n)
+
+
+def nombres(s: str) -> set:
+    return {x.replace(",", ".") for x in re.findall(r"\d+(?:[.,]\d+)?", s)}
 
 
 def fr(n, dec=0) -> str:
@@ -138,7 +169,13 @@ def calculer(S: dict) -> tuple[dict, list[str]]:
     if not m6:
         raise Arret("D2 : duree du mandat introuvable dans l'art. 6")
     mandat = MOTS[m6.group(1)]
-    g.append("D2 : mandat %d ans" % mandat)
+    try:
+        cen.citer("6", CIT_ART6_EN)
+    except ValueError as e:
+        raise Arret("D2 : %s" % e)
+    if "five years" not in CIT_ART6_EN or mandat != 5:
+        raise Arret("D2 : duree du mandat differente entre le texte francais et la traduction")
+    g.append("D2 : mandat %d ans (FR Legifrance, EN Conseil constitutionnel)" % mandat)
     # Comparaison d'ÉCHELLE seulement (contre-expertise PRO-20261006-130420, P1) : « soit N fois la durée d'un mandat ».
     # La référence aux « deux mandats consécutifs » autorisés est retirée : elle chargeait la comparaison d'un sous-entendu.
     rapport = duree / mandat
@@ -203,6 +240,11 @@ def citations(T: dict) -> dict:
         if norm(c) not in T[src]["texte"]:
             raise Arret("D1 bis : citation %s absente du texte %s : %r" % (k, src, c[:60]))
         out[k] = c
+    for k, tr in TR.items():
+        if k not in out:
+            raise Arret("D1 ter : traduction %s sans original" % k)
+        if not nombres(tr) <= nombres(out[k]):
+            raise Arret("D1 ter : %s : nombres de la traduction absents de l'original : %s" % (k, nombres(tr) - nombres(out[k])))
     return out
 
 
@@ -211,7 +253,7 @@ def affichage(r: dict) -> dict:
     q = o["quinquennaux_figure2"]
     return {
         "duree": LETTRES[int(r["duree"])], "duree_chiffre": "%d" % r["duree"], "mandat": LETTRES[r["mandat"]],
-        "nmax": LETTRES[r["nmax"]], "ecart_pct": fr(100 * abs(r["ecarts"]["2016-2020"]) / r["ondps"]["quinquennaux_figure2"]["2016-2020"], 1), "cycle1": LETTRES[r["s1"]], "cycle2": LETTRES[r["s2"]], "mg": LETTRES[r["mg"]],
+        "nmax": LETTRES[r["nmax"]], "nfois": LETTRES[r["nmax"]] + " fois", "ecart_pct": fr(100 * abs(r["ecarts"]["2016-2020"]) / r["ondps"]["quinquennaux_figure2"]["2016-2020"], 1), "cycle1": LETTRES[r["s1"]], "cycle2": LETTRES[r["s2"]], "mg": LETTRES[r["mg"]],
         "an_min": str(r["amin"]), "places_min": fr(r["dd76"][r["amin"]]), "places_1972": fr(r["dd76"][1972]),
         "places_2020": fr(r["dd76"][2020]), "rapport_baisse": fr(r["dd76"][1972] / r["dd76"][r["amin"]], 1),
         "admis_2025": fr(o["admis_medecine"]["2025"]), "capacites_2025": fr(o["capacites_2025"]),
@@ -224,12 +266,37 @@ def affichage(r: dict) -> dict:
     }
 
 
+def affichage_en(r: dict) -> dict:
+    o = r["ondps"]
+    q = o["quinquennaux_figure2"]
+    return {
+        "duree": LETTRES_EN[int(r["duree"])], "duree_chiffre": "%d" % r["duree"], "mandat": LETTRES_EN[r["mandat"]],
+        "nmax": LETTRES_EN[r["nmax"]],
+        "nfois": {1: "once", 2: "twice", 3: "three times"}.get(r["nmax"], LETTRES_EN[r["nmax"]] + " times"), "ecart_pct": en(100 * abs(r["ecarts"]["2016-2020"]) / q["2016-2020"], 1),
+        "cycle1": LETTRES_EN[r["s1"]], "cycle2": LETTRES_EN[r["s2"]], "mg": LETTRES_EN[r["mg"]],
+        "an_min": str(r["amin"]), "places_min": en(r["dd76"][r["amin"]]), "places_1972": en(r["dd76"][1972]),
+        "places_2020": en(r["dd76"][2020]), "rapport_baisse": en(r["dd76"][1972] / r["dd76"][r["amin"]], 1),
+        "admis_2025": en(o["admis_medecine"]["2025"]), "capacites_2025": en(o["capacites_2025"]),
+        "admis_2021_2025": en(o["total_admis_2021_2025"]), "onp": en(o["onp_2021_2025"]),
+        "admis_2016_2020": en(q["2016-2020"]),
+        "hausse_quinquennale": en(100 * (o["total_admis_2021_2025"] / q["2016-2020"] - 1), 0),
+        "ecart_2016_2020": en(abs(r["ecarts"]["2016-2020"])),
+        "etr_p12": en(r["p12"], 1), "etr_p26": en(r["p26"], 1), "etr_26": en(r["etr26"]), "tot_26": en(r["tot26"]),
+        "releve_le": "6 October 2026 (texts read on Légifrance on 5 and 6 October 2026; DREES, 2 July 2026; ONDPS, 19 December 2025)",
+    }
+
+
 # ------------------------------------------------------------------ figures
 W = 720
 BLEU, BLEU_CLAIR, GRIS, GRIS_CLAIR = "#184f95", "#7fa3cf", "#8a8f98", "#c9cdd3"
 INK, INK2, MUTED, GRID = "#0A0A0E", "#52514e", "#898781", "#e1e0d9"
 FONT = "system-ui, -apple-system, Segoe UI, sans-serif"
-LICENCE = "Compilation Stéphane Lalut, CC BY 4.0 · " + PAGE_URL
+LICENCES = {"fr": "Compilation Stéphane Lalut, CC BY 4.0 · " + PAGE_URL, "en": "Compiled by Stéphane Lalut, CC BY 4.0 · " + PAGE_URL_EN}
+LANG = "fr"
+
+
+def nb(n) -> str:
+    return en(n) if LANG == "en" else fr(n)
 
 
 def esc(s) -> str:
@@ -251,15 +318,44 @@ def cadre(H, ident, titre, sous, desc) -> list[str]:
 
 def cartouche(H, src, note) -> list[str]:
     out = ['<line x1="0" y1="%d" x2="%d" y2="%d" stroke="%s"/>' % (H + 2, W, H + 2, GRID)]
-    for k, (t, c) in enumerate(((src, INK2), (note, INK2), (LICENCE, MUTED))):
+    for k, (t, c) in enumerate(((src, INK2), (note, INK2), (LICENCES[LANG], MUTED))):
         out.append('<text x="0" y="%d" font-size="9" fill="%s">%s</text>' % (H + 15 + 12 * k, c, esc(t)))
     return out
 
 
-SRC1 = "Arrêté du 8 avril 2013, art. 1 ; code de l'éducation, art. L632-2 ; loi n° 2022-1616, art. 37 ; Constitution, art. 6 (Légifrance)"
-NOTE1 = "Comparaison d'échelle seulement : ni l'effet d'une politique, ni la date de ses premiers effets. Durées minimales ; soins avant la fin du cursus."
-SRC2 = "DREES, Dossier n° 76 (2021), graphique 8, source ONDPS (1972-2020) ; ONDPS, bilan 2021-2025 (admis)"
-NOTE2 = "Places pourvues ; champ élargi aux passerelles et droits au remords à partir de 2010-2011 ; numerus apertus depuis 2021."
+T = {
+    "fr": {"src1": "Arrêté du 8 avril 2013, art. 1 ; code de l'éducation, art. L632-2 ; loi n° 2022-1616, art. 37 ; Constitution, art. 6 (Légifrance)",
+           "note1": "Comparaison d'échelle seulement : ni l'effet d'une politique, ni la date de ses premiers effets. Durées minimales ; soins avant la fin du cursus.",
+           "src2": "DREES, Dossier n° 76 (2021), graphique 8, source ONDPS (1972-2020) ; ONDPS, bilan 2021-2025 (admis)",
+           "note2": "Places pourvues ; champ élargi aux passerelles et droits au remords à partir de 2010-2011 ; numerus apertus depuis 2021.",
+           "t1": "Former un médecin généraliste, et la durée d'un mandat présidentiel",
+           "s1": "en années, durées minimales écrites dans les textes en vigueur",
+           "d1": "Deux barres de même échelle. En haut, le cursus de médecine générale : {a} ans de premier cycle, {b} ans de "
+                 "deuxième cycle, {c} ans de troisième cycle, soit {d} ans. En bas, un mandat présidentiel de {e} ans. Comparaison "
+                 "d'échelle seulement.",
+           "mg": "Médecine générale", "cycles": ["1er cycle", "2e cycle", "3e cycle", "4e année"],
+           "auto": "dernière année : autonomie supervisée", "mandat": "Mandat présidentiel", "ans": "{} ans",
+           "t2": "Admissions en études de médecine, 1972-2025, à leur année",
+           "s2": "places pourvues jusqu'en 2020 (DREES, ONDPS), admis depuis 2021 (ONDPS)",
+           "d2": "Barres annuelles : {places_1972} places en 1972, minimum de {places_min} en {an_min}, {places_2020} en 2020 ; puis de "
+                 "{min_admis} à {admis_2025} admis par an de 2021 à 2025.",
+           "r1": "2010-2011 : passerelles incluses", "r2": "2021 : numerus apertus", "annot": "%s : %s"},
+    "en": {"src1": "Order of 8 April 2013, art. 1; Education Code, art. L632-2; Law no. 2022-1616, art. 37; Constitution, art. 6",
+           "note1": "Comparison of scale only: neither the effect of a policy nor the date of its first effects. Minimum durations; care before the end.",
+           "src2": "DREES, Dossier no. 76 (2021), chart 8, source ONDPS (1972-2020); ONDPS, 2021-2025 report (admissions)",
+           "note2": "Places filled; scope widened to bridging and second-chance entries from 2010-2011; numerus apertus since 2021.",
+           "t1": "Training a general practitioner in France, and the length of a presidential term",
+           "s1": "in years, minimum durations written in the texts in force",
+           "d1": "Two bars on the same scale. Above, the general medicine curriculum: {a} years of first cycle, {b} years of second "
+                 "cycle, {c} years of third cycle, {d} years in all. Below, a presidential term of {e} years. Comparison of scale only.",
+           "mg": "General medicine", "cycles": ["1st cycle", "2nd cycle", "3rd cycle", "4th year"],
+           "auto": "last year: supervised autonomy", "mandat": "Presidential term", "ans": "{} years",
+           "t2": "Admissions to medical studies in France, 1972-2025, by year",
+           "s2": "places filled until 2020 (DREES, ONDPS), admissions since 2021 (ONDPS)",
+           "d2": "Annual bars: {places_1972} places in 1972, a minimum of {places_min} in {an_min}, {places_2020} in 2020; then from "
+                 "{min_admis} to {admis_2025} admissions a year from 2021 to 2025.",
+           "r1": "2010-2011: bridging entries included", "r2": "2021: numerus apertus", "annot": "%s: %s"},
+}
 
 
 def fig_cursus(r: dict, A: dict) -> str:
@@ -267,27 +363,25 @@ def fig_cursus(r: dict, A: dict) -> str:
     x0, x1 = 120, W - 10
     an = x1 - x0
     X = lambda a: x0 + a / r["duree"] * an  # noqa: E731
-    titre = "Former un médecin généraliste, et la durée d'un mandat présidentiel"
-    e = cadre(H, "dc", titre, "en années, durées minimales écrites dans les textes en vigueur",
-              "Deux barres de même échelle. En haut, le cursus de médecine générale : %s ans de premier cycle, %s ans de "
-              "deuxième cycle, %s ans de troisième cycle, soit %s ans. En bas, un mandat présidentiel de %s ans. Comparaison "
-              "d'échelle seulement." % (r["s1"] / 2, r["s2"] / 2, r["mg"], A["duree_chiffre"], r["mandat"]))
+    L = T[LANG]
+    e = cadre(H, "dc", L["t1"], L["s1"], L["d1"].format(a="%g" % (r["s1"] / 2), b="%g" % (r["s2"] / 2), c=r["mg"],
+                                                          d=A["duree_chiffre"], e=r["mandat"]))
     y = 70
-    segs = [(0, r["s1"] / 2, "1er cycle", GRIS_CLAIR), (r["s1"] / 2, r["s2"] / 2, "2e cycle", GRIS_CLAIR),
-            (r["s1"] / 2 + r["s2"] / 2, r["mg"] - 1, "3e cycle", BLEU_CLAIR), (r["duree"] - 1, 1, "4e année", BLEU)]
-    e.append(txt(0, y + 21, "Médecine générale", 11, INK, weight="600"))
+    segs = [(0, r["s1"] / 2, L["cycles"][0], GRIS_CLAIR), (r["s1"] / 2, r["s2"] / 2, L["cycles"][1], GRIS_CLAIR),
+            (r["s1"] / 2 + r["s2"] / 2, r["mg"] - 1, L["cycles"][2], BLEU_CLAIR), (r["duree"] - 1, 1, L["cycles"][3], BLEU)]
+    e.append(txt(0, y + 21, L["mg"], 11, INK, weight="600"))
     for a0, l, lab, col in segs:
         e.append('<rect x="%.1f" y="%d" width="%.1f" height="32" fill="%s" stroke="#ffffff" stroke-width="2"/>' % (X(a0), y, X(a0 + l) - X(a0), col))
         e.append(txt((X(a0) + X(a0 + l)) / 2, y + 20, lab, 10, "#ffffff" if col == BLEU else INK, "middle"))
-    e.append(txt(X(r["duree"]), y + 46, "dernière année : autonomie supervisée", 9, BLEU, "end"))
+    e.append(txt(X(r["duree"]), y + 46, L["auto"], 9, BLEU, "end"))
     y2 = 132
-    e.append(txt(0, y2 + 21, "Mandat présidentiel", 11, INK, weight="600"))
+    e.append(txt(0, y2 + 21, L["mandat"], 11, INK, weight="600"))
     e.append('<rect x="%.1f" y="%d" width="%.1f" height="32" fill="%s"/>' % (X(0), y2, X(r["mandat"]) - X(0), GRIS))
-    e.append(txt(X(r["mandat"] / 2), y2 + 20, "%d ans" % r["mandat"], 10, "#ffffff", "middle"))
+    e.append(txt(X(r["mandat"] / 2), y2 + 20, L["ans"].format(r["mandat"]), 10, "#ffffff", "middle"))
     e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s"/>' % (X(0), y2 + 33, X(r["duree"]), y2 + 33, GRID))
     for a in range(0, int(r["duree"]) + 1):
         e.append(txt(X(a), y2 + 50, str(a), 9, MUTED, "middle"))
-    e += cartouche(H, SRC1, NOTE1)
+    e += cartouche(H, L["src1"], L["note1"])
     e.append("</svg>")
     return "\n".join(e)
 
@@ -302,32 +396,39 @@ def fig_admissions(r: dict, A: dict) -> str:
     bw = (x1 - x0) / len(ans)
     X = lambda a: x0 + (a - 1972) * bw  # noqa: E731
     Y = lambda v: y1 - v / vmax * (y1 - y0)  # noqa: E731
-    titre = "Admissions en études de médecine, 1972-2025, à leur année"
-    e = cadre(H, "da", titre, "places pourvues jusqu'en 2020 (DREES, ONDPS), admis depuis 2021 (ONDPS)",
-              "Barres annuelles : %s places en 1972, minimum de %s en %s, %s en 2020 ; puis de 10 806 à %s admis par an de "
-              "2021 à 2025." % (A["places_1972"], A["places_min"], A["an_min"], A["places_2020"], A["admis_2025"]))
+    L = T[LANG]
+    e = cadre(H, "da", L["t2"], L["s2"], L["d2"].format(min_admis=nb(min(o.values())), **A))
     for v in range(0, vmax + 1, 3000):
         e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (x0, Y(v), x1, Y(v), GRID))
-        e.append(txt(x0 - 6, Y(v) + 4, fr(v), 10, MUTED, "end"))
+        e.append(txt(x0 - 6, Y(v) + 4, nb(v), 10, MUTED, "end"))
     for a in ans:
         v = d.get(a, o.get(a))
         col = BLEU if a <= 2020 else BLEU_CLAIR
         e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="%s"/>' % (X(a) + 0.6, Y(v), bw - 1.2, y1 - Y(v), col))
         if a % 10 == 0 or a == 1972:
             e.append(txt(X(a) + bw / 2, y1 + 14, str(a), 10, MUTED, "middle"))
-    for a, lab in ((2010, "2010-2011 : passerelles incluses"), (2021, "2021 : numerus apertus")):
+    for a, lab in ((2010, L["r1"]), (2021, L["r2"])):
         e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-dasharray="3 3"/>' % (X(a), y0 - 4, X(a), y1, INK2))
         e.append(txt(X(a) - 4, y0 - 8, lab, 9, INK2, "end"))
     voisins = max(d[a] for a in range(r["amin"] - 2, r["amin"] + 3))
     ya = Y(voisins) - 22
     e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s"/>' % (X(r["amin"]) + bw / 2, ya + 4, X(r["amin"]) + bw / 2, Y(d[r["amin"]]) - 2, INK2))
-    e.append(txt(X(r["amin"]) + bw / 2, ya, "%s : %s" % (r["amin"], A["places_min"]), 10, INK, "middle", "600"))
-    e += cartouche(H, SRC2, NOTE2)
+    e.append(txt(X(r["amin"]) + bw / 2, ya, (L["annot"] % (r["amin"], A["places_min"])), 10, INK, "middle", "600"))
+    e += cartouche(H, L["src2"], L["note2"])
     e.append("</svg>")
     return "\n".join(e)
 
 
-def fiches(figs: dict, A: dict) -> dict:
+MONTRE_EN = {
+    "cursus": "Under the rules in force for students who entered the third cycle from the start of the 2023 academic year, the "
+              "standard general medicine curriculum in France takes at least {duree} years from the first year, {nfois} the "
+              "length of a presidential term. Comparison of scale only.",
+    "admissions": "Places in French medical studies were divided by {rapport_baisse} between 1972 and {an_min} ({places_min} "
+                  "places), then rose again; {admis_2021_2025} students were admitted from 2021 to 2025.",
+}
+
+
+def fiches(figs: dict, A: dict, A_en: dict) -> dict:
     montre = {
         "cursus": ("delais-cursus", "Aux règles en vigueur pour les étudiants entrés en troisième cycle depuis la rentrée 2023, le "
                    "cursus standard de médecine générale dure au moins %s ans depuis la première année, soit %s fois la durée "
@@ -336,15 +437,19 @@ def fiches(figs: dict, A: dict) -> dict:
                        "puis sont remontées ; %s étudiants ont été admis de 2021 à 2025." % (A["rapport_baisse"], A["an_min"],
                                                                                           A["places_min"], A["admis_2021_2025"])),
     }
-    out = []
-    for ident, (fichier, m) in montre.items():
-        svg = figs[fichier + ".svg"]
-        titre = html.unescape(re.search(r"<title[^>]*>(.*?)</title>", svg).group(1))
-        cart = [html.unescape(t) for t in re.findall(r'<text x="0" y="[0-9.]+" font-size="9" fill="[^"]+">(.*?)</text>', svg)]
-        if len(cart) != 3 or cart[-1] != LICENCE:
-            raise Arret("fiche %s : cartouche illisible" % fichier)
-        out.append(dict(id=ident, fichier=fichier, titre=titre, montre=m, source=cart[0], precaution=cart[1]))
-    return {"fr": out}
+    res = {}
+    for lang, suf in (("fr", ""), ("en", "-en")):
+        out = []
+        for ident, (fichier, m) in montre.items():
+            svg = figs[fichier + suf + ".svg"]
+            titre = html.unescape(re.search(r"<title[^>]*>(.*?)</title>", svg).group(1))
+            cart = [html.unescape(t) for t in re.findall(r'<text x="0" y="[0-9.]+" font-size="9" fill="[^"]+">(.*?)</text>', svg)]
+            if len(cart) != 3 or cart[-1] != LICENCES[lang]:
+                raise Arret("fiche %s%s : cartouche illisible" % (fichier, suf))
+            out.append(dict(id=ident, fichier=fichier + suf, titre=titre,
+                            montre=m if lang == "fr" else MONTRE_EN[ident].format(**A_en), source=cart[0], precaution=cart[1]))
+        res[lang] = out
+    return res
 
 
 def csv_texte(r: dict) -> str:
@@ -399,14 +504,28 @@ def _main() -> int:
     r, g = calculer(S)
     for m in autotest(S):
         log("autotest : la mutation a mordu : " + m)
-    A = dict(affichage(r), **citations(S["textes"]))
-    g.append("D1 bis : %d citations des textes retrouvees mot pour mot" % len(CITATIONS))
+    cit = citations(S["textes"])
+    A = dict(affichage(r), **cit)
+    A.update({k + "_tr": v for k, v in TR.items()})
+    A["cit_art6a_en"] = CIT_ART6_EN
+    A_en = dict(affichage_en(r), **cit)
+    A_en.update({k + "_tr": v for k, v in TR.items()})
+    A_en["cit_art6a_en"] = CIT_ART6_EN
+    if set(A) != set(A_en):
+        raise Arret("blocs affichage et affichage_en : cles differentes (%s)" % sorted(set(A) ^ set(A_en)))
+    g.append("D1 bis : %d citations des textes retrouvees mot pour mot ; D1 ter : %d traductions, nombres controles"
+             % (len(CITATIONS), len(TR)))
     if "--check" in sys.argv[1:]:
         log("--check : %d gardes tenues, rien ecrit." % len(g))
         return 0
     import cairosvg
-    figs = {"delais-cursus.svg": fig_cursus(r, A), "delais-admissions.svg": fig_admissions(r, A)}
-    fi = fiches(figs, A)
+    global LANG
+    figs = {}
+    for LANG, suf, AA in (("fr", "", A), ("en", "-en", A_en)):
+        figs["delais-cursus%s.svg" % suf] = fig_cursus(r, AA)
+        figs["delais-admissions%s.svg" % suf] = fig_admissions(r, AA)
+    LANG = "fr"
+    fi = fiches(figs, A, A_en)
     csvt = csv_texte(r)
     T = S["textes"]
     payload = {
@@ -429,6 +548,7 @@ def _main() -> int:
         "calcul": {k: v for k, v in r.items() if k not in ("dd76", "ondps")},
         "series": {"places_pourvues": r["dd76"], "admis_2021_2025": r["ondps"]["admis_medecine"]},
         "affichage": A,
+        "affichage_en": A_en,
     }
     txt_json = json.dumps(payload, ensure_ascii=False, indent=1, default=str)
     if (OUT_DATA.exists() and OUT_DATA.read_text(encoding="utf-8") == txt_json and OUT_CSV.exists()
@@ -447,7 +567,7 @@ def _main() -> int:
     OUT_FIGURES.write_text(json.dumps(fi, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     for x in g:
         log("OK " + x)
-    log("Ecrit : data/promesses_delais.json, static/promesses_delais.{json,csv}, data/figures_delais.json, 2 figures SVG + PNG")
+    log("Ecrit : data/promesses_delais.json, static/promesses_delais.{json,csv}, data/figures_delais.json, 4 figures SVG + PNG (FR, EN)")
     return 0
 
 

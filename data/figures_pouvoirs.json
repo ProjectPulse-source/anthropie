@@ -8,5 +8,15 @@
    "source": "Constitution du 4 octobre 1958, art. 8, 11, 12, 16, 18, 19, 54, 56, 61, versions en vigueur lues sur Légifrance",
    "precaution": "Case pleine : citation exacte de l’article (liste sur la page). Case vide : rien dans cet article ; ni autres articles, ni pratique."
   }
+ ],
+ "en": [
+  {
+   "id": "article19",
+   "fichier": "pouvoirs-article19-en",
+   "titre": "The eight provisions that article 19 of the French Constitution exempts from countersignature: what their text requires or brings in",
+   "montre": "Of the eight provisions that article 19 of the French Constitution exempts from countersignature, only two contain no prior condition, no later intervention of another actor and no power of the same kind given to other authorities: appoint the Prime Minister and send a message to Parliament. This does not mean that the president has only two powers of his own.",
+   "source": "Constitution of 4 October 1958, arts. 8, 11, 12, 16, 18, 19, 54, 56, 61 (Légifrance; English translation: Conseil constitutionnel)",
+   "precaution": "Filled cell: exact quotation of the article (list on the page). Empty cell: nothing in that article; says nothing of others or of practice."
+  }
  ]
 }

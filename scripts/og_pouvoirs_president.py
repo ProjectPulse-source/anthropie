@@ -17,12 +17,13 @@ import og_dossier_dette as og  # noqa: E402
 
 ATTRIBUTS = ["condition", "autre_autorite", "partage", "limite"]
 COLS = ["Condition", "Autre", "Partagé", "Cadre"]
+COLS_EN = ["Condition", "Other", "Shared", "Limit"]
 
 
-def matrice(d, inv: list[dict]) -> None:
+def matrice(d, inv: list[dict], lang: str = "fr") -> None:
     x0, top, colw, pas = 700, 128, 108, 33
     fh = og.font("inter", 16, 500)
-    for k, lib in enumerate(COLS):
+    for k, lib in enumerate(COLS_EN if lang == "en" else COLS):
         cx = x0 + colw * k + colw / 2
         w = d.textlength(lib, font=fh)
         d.text((cx - w / 2, top - 34), lib, font=fh, fill=og.URL_GREY)
@@ -36,8 +37,10 @@ def matrice(d, inv: list[dict]) -> None:
                 d.ellipse([cx - 9, y - 9, cx + 9, y + 9], outline=og.GRID, width=3)
     fl = og.font("inter", 17, 400)
     bas = top + pas * len(inv) + 12
-    d.text((x0, bas), "Une ligne par acte de l'article 19 ;", font=fl, fill=og.URL_GREY)
-    d.text((x0, bas + 22), "case pleine : citation exacte de l'article", font=fl, fill=og.URL_GREY)
+    l1, l2 = (("One row per act of article 19;", "filled: exact quotation of the article") if lang == "en"
+              else ("Une ligne par acte de l'article 19 ;", "case pleine : citation exacte de l'article"))
+    d.text((x0, bas), l1, font=fl, fill=og.URL_GREY)
+    d.text((x0, bas + 22), l2, font=fl, fill=og.URL_GREY)
 
 
 def main() -> int:
@@ -48,6 +51,16 @@ def main() -> int:
     A, inv, c = j["affichage"], j["inventaire"], j["comptes"]
     if len(inv) != c["n"] or len(c["sans_condition_ni_autre_autorite_ni_partage"]) * 2 >= c["n"]:
         og.fail("carte : « seulement » n'est plus vrai dans les données")
+    E = j["affichage_en"]
+    og.carte("og-pouvoirs-president-en.jpg",
+             ["Deciding alone:", "what the text says"],
+             "%s acts out of %s with no condition or third party in their text."
+             % (E["n_seuls"].capitalize(), E["n_renvois"]),
+             "French Constitution of 1958 (Légifrance, Conseil constitutionnel) · CC BY 4.0",
+             "stephane-lalut.com/en/what-can-the-french-president-decide-alone/",
+             lambda d: matrice(d, inv, "en"),
+             [(og.C1, "Exact quotation in the article"),
+              (og.GRID, "Nothing in that article")])
     og.carte("og-pouvoirs-president.jpg",
              ["Décider seul :", "ce que dit le texte"],
              "%s actes sur %s sans condition ni tiers dans leur texte."

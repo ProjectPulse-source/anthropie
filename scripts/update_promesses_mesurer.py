@@ -48,6 +48,8 @@ URL_DARES = ("https://data.dares.travail-emploi.gouv.fr/api/explore/v2.1/catalog
              "dares_defm_stock_france_cvs_trim/exports/csv?use_labels=true")
 URL_DARES_META = "https://data.dares.travail-emploi.gouv.fr/api/explore/v2.1/catalog/datasets/dares_defm_stock_france_cvs_trim"
 PAGE_URL = "stephane-lalut.com/comment-savoir-si-une-promesse-est-tenue/"
+PAGE_URL_EN = "stephane-lalut.com/en/how-to-tell-whether-a-promise-was-kept/"
+# Bilingue (06/10/2026) : un calcul, deux blocs (affichage, affichage_en) aux mêmes clés, des figures -en au même dessin.
 OUT_DATA = ROOT / "data" / "promesses_mesurer.json"
 OUT_STATIC = ROOT / "static" / "promesses_mesurer.json"
 OUT_CSV = ROOT / "static" / "promesses_mesurer.csv"
@@ -187,6 +189,27 @@ def calculer(I: dict, D: dict) -> tuple[dict, list[str]]:
     return r, g
 
 
+def affichage_en(r: dict) -> dict:
+    def m(v):  # thousands -> "1.43 million" or "863,000"
+        return ("%.2f million" % (v / 1000)) if v >= 1000 else "{:,.0f}".format(v * 1000)
+    da, dh = r["dares_a"], r["dares_a_hors"]
+    t_fin = max(da)
+    e = lambda v, d=0: ("{:,.%df}" % d).format(v)  # noqa: E731
+    return {
+        "commun": m(r["commun"]), "bit_seul": m(r["bit_seul"]), "a_seul": m(r["a_seul"]),
+        "commun_env": "about " + m(r["commun"]), "a_seul_env": "about " + m(r["a_seul"]),
+        "bit_total": m(r["bit_total"]), "a_total": m(r["a_total"]),
+        "p_a": e(r["p_a"]), "p_b": e(r["p_b"]),
+        "bit_non_inscrits": m(r["bit_non_inscrits"]), "bit_bc": m(r["bit_bc"]), "bit_de": m(r["bit_de"]),
+        "a_halo": m(r["a_halo"]), "a_hors_halo": m(r["a_hors_halo"]), "a_emploi": m(r["a_emploi"]),
+        "commun_2021": m(r["f8_2021"]["commun"]), "a_seul_2021": m(r["f8_2021"]["a_seul"]),
+        "bit_seul_2021": m(r["f8_2021"]["bit_seul"]),
+        "dares_fin": "%s quarter of %s" % ({"1": "first", "2": "second", "3": "third", "4": "fourth"}[t_fin[-1]], t_fin[:4]),
+        "dares_a_fin": m(da[t_fin] / 1000), "dares_a_hors_fin": m(dh[max(dh)] / 1000),
+        "dares_a_2024t4": m(da["2024-T4"] / 1000), "dares_a_hors_2024t4": m(dh["2024-T4"] / 1000),
+    }
+
+
 def affichage(r: dict) -> dict:
     def m(v):  # milliers -> « 1,43 million » ou « 863 000 »
         return (fr(v / 1000, 2) + " million" + ("s" if v >= 2000 else "")) if v >= 1000 else fr(v * 1000, 0)
@@ -213,7 +236,12 @@ W = 720
 BLEU, GRIS, GRIS_CLAIR = "#184f95", "#8a8f98", "#c9cdd3"
 INK, INK2, MUTED, GRID = "#0A0A0E", "#52514e", "#898781", "#e1e0d9"
 FONT = "system-ui, -apple-system, Segoe UI, sans-serif"
-LICENCE = "Compilation Stéphane Lalut, CC BY 4.0 · " + PAGE_URL
+LICENCES = {"fr": "Compilation Stéphane Lalut, CC BY 4.0 · " + PAGE_URL, "en": "Compiled by Stéphane Lalut, CC BY 4.0 · " + PAGE_URL_EN}
+LANG = "fr"
+
+
+def nbl(v) -> str:  # nombre selon la langue de la figure (nb() normalise du texte, plus haut)
+    return "{:,.0f}".format(v) if LANG == "en" else fr(v)
 
 
 def esc(s) -> str:
@@ -235,15 +263,51 @@ def cadre(H: int, ident: str, titre: str, sous: str, desc: str) -> list[str]:
 
 def cartouche(H: int, src: str, note: str) -> list[str]:
     out = ['<line x1="0" y1="%d" x2="%d" y2="%d" stroke="%s"/>' % (H + 2, W, H + 2, GRID)]
-    for k, (t, c) in enumerate(((src, INK2), (note, INK2), (LICENCE, MUTED))):
+    for k, (t, c) in enumerate(((src, INK2), (note, INK2), (LICENCES[LANG], MUTED))):
         out.append('<text x="0" y="%d" font-size="9" fill="%s">%s</text>' % (H + 15 + 12 * k, c, esc(t)))
     return out
 
 
-SRC1 = "Insee Références, Emploi, chômage, revenus du travail, éd. 2026, dossier 1, figures 2 et 8 (appariement Dares-Insee-France Travail)"
-NOTE1 = "Estimation de l'Insee, moyenne 2024, France hors Mayotte, 15-64 ans, logement ordinaire ; deux définitions distinctes."
-SRC2 = "Dares et France Travail, inscrits en fin de trimestre, France hors Mayotte, données CVS-CJO (série « hors RSA » depuis 2018)"
-NOTE2 = "Champ et période différents de la figure du croisement 2024. Labellisation suspendue pour la période du 01/01/2025 au 20/05/2026."
+T = {
+    "fr": {"src1": "Insee Références, Emploi, chômage, revenus du travail, éd. 2026, dossier 1, figures 2 et 8 (appariement Dares-Insee-France Travail)",
+           "note1": "Estimation de l'Insee, moyenne 2024, France hors Mayotte, 15-64 ans, logement ordinaire ; deux définitions distinctes.",
+           "src2": "Dares et France Travail, inscrits en fin de trimestre, France hors Mayotte, données CVS-CJO (série « hors RSA » depuis 2018)",
+           "note2": "Champ et période différents de la figure du croisement 2024. Labellisation suspendue pour la période du 01/01/2025 au 20/05/2026.",
+           "t1": "Chômeurs au sens du BIT et inscrits en catégorie A, 2024",
+           "s1": "deux définitions, des populations qui se recoupent en partie (en milliers de personnes)",
+           "d1": "Barre en trois segments : {bit_seul} chômeurs au sens du BIT non inscrits en catégorie A, {commun} personnes dans les deux "
+                 "à la fois, {a_seul} inscrits en catégorie A non chômeurs au sens du BIT (estimation Insee, 2024).",
+           "bit": "Chômeurs au sens du BIT : %s", "insc": "Inscrits en catégorie A à France Travail : %s",
+           "dont1": "dont : non inscrits %s ; inscrits en B ou C %s ;", "dont2": "inscrits en D ou E %s",
+           "dont3": "dont : halo autour du chômage %s ;", "dont4": "inactifs hors halo %s ; en emploi %s", "deux": "dans les deux",
+           "t2": "Inscrits en catégorie A : série publiée et série hors bénéficiaires du RSA et jeunes en parcours",
+           "s2": "France hors Mayotte, fin de trimestre, données CVS-CJO ; même échelle pour les deux panneaux",
+           "d2": "Deux panneaux de 2018 à %s, sur la même échelle : à gauche la catégorie A publiée, à droite la série hors "
+                 "bénéficiaires du RSA et hors jeunes en parcours ; dans chacun, une ligne marque le 1er janvier 2025, changement de règles.",
+           "p1": "Catégorie A publiée", "p2": "Hors bénéficiaires du RSA et jeunes en parcours",
+           "rupture": "01/01/2025 : changement de règles",
+           "ecart": "Cet écart entre panneaux ne mesure pas l'effet de la réforme : ce sont deux populations distinctes.",
+           "M": lambda v: fr(v / 1e6, 1) + " M"},
+    "en": {"src1": "Insee Références, Emploi, chômage, revenus du travail, 2026 ed., file 1, figures 2 and 8 (Dares-Insee-France Travail matching)",
+           "note1": "Insee estimate, 2024 average, France excluding Mayotte, aged 15-64, ordinary housing; two distinct definitions.",
+           "src2": "Dares and France Travail, registrants at end of quarter, France excluding Mayotte, seasonally adjusted (series 'excluding RSA' since 2018)",
+           "note2": "Scope and period differ from the 2024 cross-tabulation figure. Official label suspended for 1 Jan. 2025 to 20 May 2026.",
+           "t1": "ILO-unemployed and category A registrants in France, 2024",
+           "s1": "two definitions, populations that partly overlap (thousands of people)",
+           "d1": "Bar in three segments: {bit_seul} ILO-unemployed not registered in category A, {commun} people in both at once, {a_seul} "
+                 "category A registrants who are not ILO-unemployed (Insee estimate, 2024).",
+           "bit": "Unemployed (ILO definition): %s", "insc": "Registered in category A at France Travail: %s",
+           "dont1": "of whom: not registered %s; registered in B or C %s;", "dont2": "registered in D or E %s",
+           "dont3": "of whom: halo around unemployment %s;", "dont4": "inactive outside the halo %s; in work %s", "deux": "in both",
+           "t2": "Category A registrants: published series and series without RSA recipients or youth programmes",
+           "s2": "France excluding Mayotte, end of quarter, seasonally and working-day adjusted; same scale for both panels",
+           "d2": "Two panels from 2018 to %s, on the same scale: left, published category A; right, the series excluding RSA recipients "
+                 "and young people in programmes; in each, a line marks 1 January 2025, change of rules.",
+           "p1": "Published category A", "p2": "Excluding RSA recipients and young people in programmes",
+           "rupture": "1 Jan. 2025: change of rules",
+           "ecart": "This gap between panels does not measure the effect of the reform: they are two distinct populations.",
+           "M": lambda v: "%.1fm" % (v / 1e6)},
+}
 
 
 def fig_recoupement(r: dict, A: dict) -> str:
@@ -252,31 +316,27 @@ def fig_recoupement(r: dict, A: dict) -> str:
     tot = r["bit_seul"] + r["commun"] + r["a_seul"]
     X = lambda v: x0 + v / tot * (x1 - x0)  # noqa: E731
     y, h = 118, 46
-    titre = "Chômeurs au sens du BIT et inscrits en catégorie A : deux populations qui se recoupent en partie"
-    e = cadre(H, "mr", "Chômeurs au sens du BIT et inscrits en catégorie A, 2024",
-              "deux définitions, des populations qui se recoupent en partie (en milliers de personnes)",
-              "Barre en trois segments : %s chômeurs au sens du BIT non inscrits en catégorie A, %s personnes dans les deux "
-              "à la fois, %s inscrits en catégorie A non chômeurs au sens du BIT (estimation Insee, 2024)."
-              % (A["bit_seul"], A["commun"], A["a_seul"]))
+    L = T[LANG]
+    e = cadre(H, "mr", L["t1"], L["s1"], L["d1"].format(**A))
     a, b = X(r["bit_seul"]), X(r["bit_seul"] + r["commun"])
     e.append('<rect x="%.1f" y="%d" width="%.1f" height="%d" fill="%s"/>' % (x0, y, a - x0, h, GRIS_CLAIR))
     e.append('<rect x="%.1f" y="%d" width="%.1f" height="%d" fill="%s"/>' % (a, y, b - a, h, BLEU))
     e.append('<rect x="%.1f" y="%d" width="%.1f" height="%d" fill="%s"/>' % (b, y, x1 - b, h, GRIS_CLAIR))
-    e.append(txt((x0 + a) / 2, y + 28, fr(r["bit_seul"]), 15, INK, "middle", "600"))
-    e.append(txt((a + b) / 2, y + 28, fr(r["commun"]), 15, "#ffffff", "middle", "600"))
-    e.append(txt((b + x1) / 2, y + 28, fr(r["a_seul"]), 15, INK, "middle", "600"))
+    e.append(txt((x0 + a) / 2, y + 28, nbl(r["bit_seul"]), 15, INK, "middle", "600"))
+    e.append(txt((a + b) / 2, y + 28, nbl(r["commun"]), 15, "#ffffff", "middle", "600"))
+    e.append(txt((b + x1) / 2, y + 28, nbl(r["a_seul"]), 15, INK, "middle", "600"))
     # accolades : au-dessus, les chômeurs BIT ; au-dessous, les inscrits en A
     e.append('<path d="M%.1f %d v-8 H%.1f v8" fill="none" stroke="%s" stroke-width="1.5"/>' % (x0 + 1, y - 6, b, INK2))
-    e.append(txt((x0 + b) / 2, y - 20, "Chômeurs au sens du BIT : %s" % fr(r["bit_total"]), 12, INK, "middle", "600"))
+    e.append(txt((x0 + b) / 2, y - 20, L["bit"] % nbl(r["bit_total"]), 12, INK, "middle", "600"))
     e.append('<path d="M%.1f %d v8 H%.1f v-8" fill="none" stroke="%s" stroke-width="1.5"/>' % (a, y + h + 6, x1 - 1, INK2))
-    e.append(txt((a + x1) / 2, y + h + 30, "Inscrits en catégorie A à France Travail : %s" % fr(r["a_total"]), 12, INK, "middle", "600"))
+    e.append(txt((a + x1) / 2, y + h + 30, L["insc"] % nbl(r["a_total"]), 12, INK, "middle", "600"))
     yy = y + h + 62
-    e.append(txt(x0, yy, "dont : non inscrits %s ; inscrits en B ou C %s ;" % (fr(r["bit_non_inscrits"]), fr(r["bit_bc"])), 10, INK2))
-    e.append(txt(x0, yy + 13, "inscrits en D ou E %s" % fr(r["bit_de"]), 10, INK2))
-    e.append(txt(x1, yy, "dont : halo autour du chômage %s ;" % fr(r["a_halo"]), 10, INK2, "end"))
-    e.append(txt(x1, yy + 13, "inactifs hors halo %s ; en emploi %s" % (fr(r["a_hors_halo"]), fr(r["a_emploi"])), 10, INK2, "end"))
-    e.append(txt((a + b) / 2, yy, "dans les deux", 10, BLEU, "middle", "600"))
-    e += cartouche(H, SRC1, NOTE1)
+    e.append(txt(x0, yy, L["dont1"] % (nbl(r["bit_non_inscrits"]), nbl(r["bit_bc"])), 10, INK2))
+    e.append(txt(x0, yy + 13, L["dont2"] % nbl(r["bit_de"]), 10, INK2))
+    e.append(txt(x1, yy, L["dont3"] % nbl(r["a_halo"]), 10, INK2, "end"))
+    e.append(txt(x1, yy + 13, L["dont4"] % (nbl(r["a_hors_halo"]), nbl(r["a_emploi"])), 10, INK2, "end"))
+    e.append(txt((a + b) / 2, yy, L["deux"], 10, BLEU, "middle", "600"))
+    e += cartouche(H, L["src1"], L["note1"])
     e.append("</svg>")
     return "\n".join(e)
 
@@ -290,23 +350,19 @@ def fig_regle(r: dict, A: dict) -> str:
     tout = [v for s in (da, dh) for k, v in s.items() if k in cles]
     vmin = int(min(tout) // 200_000) * 200_000  # échelle tirée des données, commune aux deux panneaux
     vmax = int(-(-max(tout) // 200_000)) * 200_000
-    e = cadre(H, "mg", "Inscrits en catégorie A : série publiée et série hors bénéficiaires du RSA et jeunes en parcours",
-              "France hors Mayotte, fin de trimestre, données CVS-CJO ; même échelle pour les deux panneaux",
-              "Deux panneaux de 2018 à %s, sur la même échelle : à gauche la catégorie A publiée, à droite la série hors "
-              "bénéficiaires du RSA et hors jeunes en parcours ; dans chacun, une ligne marque le 1er janvier 2025, "
-              "changement de règles." % max(dh)[:4])
+    L = T[LANG]
+    e = cadre(H, "mg", L["t2"], L["s2"], L["d2"] % max(dh)[:4])
     pw, gap, x0g = 300, 50, 56
     y0, y1 = 96, 300
     Y = lambda v: y1 - (v - vmin) / (vmax - vmin) * (y1 - y0)  # noqa: E731
-    for k, (s, col, nom) in enumerate(((da, BLEU, "Catégorie A publiée"),
-                                       (dh, GRIS, "Hors bénéficiaires du RSA et jeunes en parcours"))):
+    for k, (s, col, nom) in enumerate(((da, BLEU, L["p1"]), (dh, GRIS, L["p2"]))):
         x0 = x0g + k * (pw + gap)
         X = lambda i, x0=x0: x0 + i / (len(cles) - 1) * pw  # noqa: E731
         e.append(txt(x0, y0 - 26, nom, 11, col if col == BLEU else INK2, "start", "600"))
         for v in range(vmin, vmax + 1, 400_000):
             e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (x0, Y(v), x0 + pw, Y(v), GRID))
             if k == 0:
-                e.append(txt(x0 - 6, Y(v) + 4, fr(v / 1e6, 1) + " M", 10, MUTED, "end"))
+                e.append(txt(x0 - 6, Y(v) + 4, L["M"](v), 10, MUTED, "end"))
         for i, c in enumerate(cles):
             if c.endswith("T1") and int(c[:4]) % 2 == 0:
                 e.append(txt(X(i), y1 + 15, c[:4], 10, MUTED, "middle"))
@@ -315,16 +371,24 @@ def fig_regle(r: dict, A: dict) -> str:
         pts = " ".join("%.1f,%.1f" % (X(i), Y(s[c])) for i, c in enumerate(cles))
         e.append('<polyline points="%s" fill="none" stroke="%s" stroke-width="2.4"%s/>'
                  % (pts, col, "" if col == BLEU else ' stroke-dasharray="5 3"'))
-        e.append(txt(X(i25) - 4, y0 - 10, "01/01/2025 : changement de règles", 9, INK2, "end"))
-    e.append(txt(0, y1 + 36, "Cet écart entre panneaux ne mesure pas l'effet de la réforme : ce sont deux populations distinctes.",
-                 10, INK2))
-    e += cartouche(H, SRC2, NOTE2)
+        e.append(txt(X(i25) - 4, y0 - 10, L["rupture"], 9, INK2, "end"))
+    e.append(txt(0, y1 + 36, L["ecart"], 10, INK2))
+    e += cartouche(H, L["src2"], L["note2"])
     e.append("</svg>")
     return "\n".join(e)
 
 
-def fiches(figs: dict, A: dict) -> dict:
-    out = []
+MONTRE_EN = {
+    "recoupement": "In 2024, according to the Insee estimate, about {commun} people are both unemployed in the ILO sense and "
+                   "registered in category A; about {a_seul} category A registrants are not ILO-unemployed, and {bit_seul} "
+                   "ILO-unemployed are not registered in category A.",
+    "regle": "Since 1 January 2025, some groups are registered automatically with France Travail; the Dares also publishes a "
+             "series that excludes RSA recipients and young people in programmes. The two panels describe two populations, and "
+             "the gap between them does not measure the effect of the reform.",
+}
+
+
+def fiches(figs: dict, A: dict, A_en: dict) -> dict:
     montre = {
         "recoupement": ("mesurer-recoupement", "En 2024, selon l'estimation de l'Insee, environ %s de personnes sont à la fois chômeurs au sens "
                         "du BIT et inscrites en catégorie A ; environ %s inscrits en catégorie A ne sont pas chômeurs au sens du BIT, "
@@ -333,14 +397,19 @@ def fiches(figs: dict, A: dict) -> dict:
                   "aussi une série qui exclut les bénéficiaires du RSA et les jeunes en parcours. Les deux panneaux décrivent deux "
                   "populations, et leur écart ne mesure pas l'effet de la réforme."),
     }
-    for ident, (fichier, m) in montre.items():
-        svg = figs[fichier + ".svg"]
-        titre = html.unescape(re.search(r"<title[^>]*>(.*?)</title>", svg).group(1))
-        cart = [html.unescape(t) for t in re.findall(r'<text x="0" y="[0-9.]+" font-size="9" fill="[^"]+">(.*?)</text>', svg)]
-        if len(cart) != 3 or cart[-1] != LICENCE:
-            raise Arret("fiche %s : cartouche illisible" % fichier)
-        out.append(dict(id=ident, fichier=fichier, titre=titre, montre=m, source=cart[0], precaution=cart[1]))
-    return {"fr": out}
+    res = {}
+    for lang, suf in (("fr", ""), ("en", "-en")):
+        out = []
+        for ident, (fichier, m) in montre.items():
+            svg = figs[fichier + suf + ".svg"]
+            titre = html.unescape(re.search(r"<title[^>]*>(.*?)</title>", svg).group(1))
+            cart = [html.unescape(t) for t in re.findall(r'<text x="0" y="[0-9.]+" font-size="9" fill="[^"]+">(.*?)</text>', svg)]
+            if len(cart) != 3 or cart[-1] != LICENCES[lang]:
+                raise Arret("fiche %s%s : cartouche illisible" % (fichier, suf))
+            out.append(dict(id=ident, fichier=fichier + suf, titre=titre,
+                            montre=m if lang == "fr" else MONTRE_EN[ident].format(**A_en), source=cart[0], precaution=cart[1]))
+        res[lang] = out
+    return res
 
 
 def csv_texte(r: dict) -> str:
@@ -397,7 +466,9 @@ def _main() -> int:
     r, g = calculer(I, D)
     for m in autotest(I, D):
         log("autotest : la mutation a mordu : " + m)
-    A = affichage(r)
+    A, A_en = affichage(r), affichage_en(r)
+    if set(A) != set(A_en):
+        raise Arret("blocs affichage et affichage_en : cles differentes (%s)" % sorted(set(A) ^ set(A_en)))
     if check:
         log("--check : %d gardes tenues, rien ecrit." % len(g))
         return 0
@@ -405,8 +476,13 @@ def _main() -> int:
         import cairosvg
     except ImportError:
         raise Arret("cairosvg absent : SVG et PNG ensemble ou pas du tout")
-    figs = {"mesurer-recoupement.svg": fig_recoupement(r, A), "mesurer-regle.svg": fig_regle(r, A)}
-    fi = fiches(figs, A)
+    global LANG
+    figs = {}
+    for LANG, suf, AA in (("fr", "", A), ("en", "-en", A_en)):
+        figs["mesurer-recoupement%s.svg" % suf] = fig_recoupement(r, AA)
+        figs["mesurer-regle%s.svg" % suf] = fig_regle(r, AA)
+    LANG = "fr"
+    fi = fiches(figs, A, A_en)
     csvt = csv_texte(r)
     sha = {"insee_xlsx": hashlib.sha256(bx).hexdigest(), "dares_csv": hashlib.sha256(bd).hexdigest()}
     # Date de relevé = mise à jour publiée par la Dares (métadonnées) : elle ne change que si la source change.
@@ -428,6 +504,8 @@ def _main() -> int:
         "series": {"inscrits_A": r["dares_a"], "inscrits_A_hors_RSA_et_jeunes_en_parcours": r["dares_a_hors"]},
         "affichage": dict(A, releve_le="%s (séries Dares mises à jour à cette date, jusqu'au %s ; Insee, édition du 02/07/2026)"
                           % ("/".join(reversed(releve.split("-"))), A["dares_fin"])),
+        "affichage_en": dict(A_en, releve_le="%s (Dares series updated on that date, up to the %s; Insee, edition of 2 July 2026)"
+                             % (releve, A_en["dares_fin"])),
     }
     txt_json = json.dumps(payload, ensure_ascii=False, indent=1, default=str)
     same = (OUT_DATA.exists() and OUT_DATA.read_text(encoding="utf-8") == txt_json and OUT_CSV.exists()
@@ -448,7 +526,7 @@ def _main() -> int:
     for x in g:
         log("OK " + x)
     log("Sources : Insee %s ; Dares %s" % (ox, od))
-    log("Ecrit : data/promesses_mesurer.json, static/promesses_mesurer.{json,csv}, data/figures_mesurer.json, 2 figures SVG + PNG")
+    log("Ecrit : data/promesses_mesurer.json, static/promesses_mesurer.{json,csv}, data/figures_mesurer.json, 4 figures SVG + PNG (FR, EN)")
     return 0
 
 

@@ -16,5 +16,23 @@
    "source": "Assemblée nationale : dossiers législatifs, bulletins statistiques, fiche n° 64 (engagements de responsabilité)",
    "precaution": "Catégories de l'art. 49, al. 3 : la loi de programmation des finances publiques est un « autre projet ». XVIIe en cours au 06/10/2026."
   }
+ ],
+ "en": [
+  {
+   "id": "origine",
+   "fichier": "adopter-origine-en",
+   "titre": "Who initiated the laws promulgated in France?",
+   "montre": "Among the laws promulgated in the scope studied (excluding treaties, finance, social security financing and institutional acts), 98 out of 214 are of parliamentary origin under the 14th legislature, 108 out of 202 under the 15th and 55 out of 83 under the 16th; formal origin at the initial tabling.",
+   "source": "National Assembly (open data, legislative files) and Senate (Dosleg database), 6 October 2026; Journal officiel",
+   "precaution": "Excluding treaties, finance, social security financing and institutional acts. Origin at tabling, not influence."
+  },
+  {
+   "id": "493",
+   "fichier": "adopter-493-en",
+   "titre": "Bills made an issue of a vote of confidence (art. 49, para. 3)",
+   "montre": "The Government made the passing of a bill an issue of a vote of confidence (art. 49, para. 3) 6 times under the 14th legislature, once under the 15th and 23 times under the 16th, including 21 on a Finance Bill or Social Security Financing Bill.",
+   "source": "National Assembly: legislative files, statistical bulletins, summary sheet no. 64 (Government responsibility)",
+   "precaution": "Categories of art. 49, para. 3: the public finance programming act is 'one other bill'. 17th ongoing on 6 October 2026."
+  }
  ]
 }

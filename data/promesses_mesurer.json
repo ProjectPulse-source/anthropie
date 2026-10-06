@@ -283,5 +283,31 @@
   "dares_a_2024t4": "3,13 millions",
   "dares_a_hors_2024t4": "2,38 millions",
   "releve_le": "28/07/2026 (séries Dares mises à jour à cette date, jusqu'au 2e trimestre 2026 ; Insee, édition du 02/07/2026)"
+ },
+ "affichage_en": {
+  "commun": "1.43 million",
+  "bit_seul": "863,000",
+  "a_seul": "1.47 million",
+  "commun_env": "about 1.43 million",
+  "a_seul_env": "about 1.47 million",
+  "bit_total": "2.29 million",
+  "a_total": "2.89 million",
+  "p_a": "49",
+  "p_b": "62",
+  "bit_non_inscrits": "524,000",
+  "bit_bc": "240,000",
+  "bit_de": "99,000",
+  "a_halo": "727,000",
+  "a_hors_halo": "503,000",
+  "a_emploi": "236,000",
+  "commun_2021": "1.61 million",
+  "a_seul_2021": "1.76 million",
+  "bit_seul_2021": "758,000",
+  "dares_fin": "second quarter of 2026",
+  "dares_a_fin": "3.32 million",
+  "dares_a_hors_fin": "2.44 million",
+  "dares_a_2024t4": "3.13 million",
+  "dares_a_hors_2024t4": "2.38 million",
+  "releve_le": "2026-07-28 (Dares series updated on that date, up to the second quarter of 2026; Insee, edition of 2 July 2026)"
  }
 }

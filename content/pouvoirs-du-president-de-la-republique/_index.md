@@ -66,19 +66,19 @@ Chaque citation est contrôlée à chaque génération des données&nbsp;: le sc
 
 ## Que signifie «&nbsp;décider seul&nbsp;» pour un président&nbsp;? {#decider-seul}
 
-L'article&nbsp;19 pose la règle générale&nbsp;: «&nbsp;Les actes du Président de la République autres que ceux prévus aux articles&nbsp;8 (1er&nbsp;alinéa), 11, 12, 16, 18, 54, 56 et 61 sont contresignés par le Premier ministre et, le cas échéant, par les ministres responsables.&nbsp;» Le contreseing est la signature d'un membre du Gouvernement à côté de celle du président. La liste des exceptions est donc la liste des actes qu'aucun ministre n'a à signer.
+L'article&nbsp;19 pose la règle générale&nbsp;: «&nbsp;{{< pv-val "cit19" >}}&nbsp;» Le contreseing est la signature d'un membre du Gouvernement à côté de celle du président. La liste des exceptions est donc la liste des actes qu'aucun ministre n'a à signer.
 
 Ce critère ne dit pas tout. Un acte dispensé de contreseing peut exiger une proposition (le référendum), une consultation (la dissolution, les pouvoirs exceptionnels), faire intervenir les électeurs ou le Conseil constitutionnel pour la suite, ou appartenir aussi à d'autres autorités&nbsp;: le Premier ministre, les présidents des assemblées et soixante députés ou sénateurs peuvent, eux aussi, saisir le Conseil constitutionnel. Les quatre colonnes de la matrice sont ces quatre éléments, et ils se cumulent.
 
 ## Quels actes le président signe-t-il sans contreseing&nbsp;? {#sans-contreseing}
 
-Les fiches qui suivent reprennent, pour chacune des {{< pv-val "n_renvois" >}} dispositions, qui décide, la condition, le tiers qui intervient et ce que l'acte produit. Ils se lisent avec la fonction que l'article&nbsp;5 assigne au président&nbsp;: veiller au respect de la Constitution et assurer, «&nbsp;par son arbitrage, le fonctionnement régulier des pouvoirs publics ainsi que la continuité de l'État&nbsp;».
+Les fiches qui suivent reprennent, pour chacune des {{< pv-val "n_renvois" >}} dispositions, qui décide, la condition, le tiers qui intervient et ce que l'acte produit. Ils se lisent avec la fonction que l'article&nbsp;5 assigne au président&nbsp;: veiller au respect de la Constitution et assurer, «&nbsp;{{< pv-val "cit5" >}}&nbsp;».
 
 {{< pouvoirs-president vue="sans_contreseing" >}}
 
 ## Qui fixe les règles que le citoyen ressent&nbsp;? {#qui-fixe-les-regles}
 
-**Signer ne suffit pas à gouverner.** Lorsqu'un président promet une baisse d'impôt, une réforme ou une règle nouvelle, par quelles autres signatures doit-il passer&nbsp;? Les impôts, les prestations, les obligations&nbsp;: le texte les répartit entre deux instruments, la loi et le règlement. **La loi**, votée par le Parlement, fixe les règles dans les matières de l'article&nbsp;34, dont l'impôt. **Le règlement** couvre le reste&nbsp;: «&nbsp;Les matières autres que celles qui sont du domaine de la loi ont un caractère réglementaire&nbsp;» (article&nbsp;37). Le pouvoir réglementaire est exercé par le Premier ministre (article&nbsp;21), sous réserve des décrets délibérés en Conseil des ministres, que le président signe (article&nbsp;13) et qui sont soumis au contreseing (article&nbsp;19). Après habilitation du Parlement, le Gouvernement peut aussi prendre par ordonnances des mesures du domaine de la loi (article&nbsp;38).
+**Signer ne suffit pas à gouverner.** Lorsqu'un président promet une baisse d'impôt, une réforme ou une règle nouvelle, par quelles autres signatures doit-il passer&nbsp;? Les impôts, les prestations, les obligations&nbsp;: le texte les répartit entre deux instruments, la loi et le règlement. **La loi**, votée par le Parlement, fixe les règles dans les matières de l'article&nbsp;34, dont l'impôt. **Le règlement** couvre le reste&nbsp;: «&nbsp;{{< pv-val "cit37" >}}&nbsp;» (article&nbsp;37). Le pouvoir réglementaire est exercé par le Premier ministre (article&nbsp;21), sous réserve des décrets délibérés en Conseil des ministres, que le président signe (article&nbsp;13) et qui sont soumis au contreseing (article&nbsp;19). Après habilitation du Parlement, le Gouvernement peut aussi prendre par ordonnances des mesures du domaine de la loi (article&nbsp;38).
 
 {{< pouvoirs-president vue="regles" >}}
 
@@ -92,7 +92,7 @@ Chef des armées, droit de grâce, traités, décrets, nominations&nbsp;: ce son
 
 ## Qui détermine la politique de la Nation&nbsp;? {#politique-de-la-nation}
 
-L'article&nbsp;20 répond sans détour&nbsp;: «&nbsp;Le Gouvernement détermine et conduit la politique de la Nation.&nbsp;» Il dispose de l'administration et de la force armée, et il est responsable devant le Parlement. C'est la phrase qui sépare le mieux ce qu'un président promet de ce qu'il signe.
+L'article&nbsp;20 répond sans détour&nbsp;: «&nbsp;{{< pv-val "cit20" >}}&nbsp;» Il dispose de l'administration et de la force armée, et il est responsable devant le Parlement. C'est la phrase qui sépare le mieux ce qu'un président promet de ce qu'il signe.
 
 {{< pouvoirs-president vue="gouvernement" >}}
 

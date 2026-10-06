@@ -4,7 +4,8 @@
        de données du site (défile dans .table-scroll sur téléphone). */ -}}
 {{- $nom := .Get 0 -}}
 {{- $t := "" -}}
-{{- with site.Data.promesses_adopter -}}{{- $t = index .tableaux $nom -}}{{- end -}}
+{{- $en := eq .Page.Lang "en" -}}
+{{- with site.Data.promesses_adopter -}}{{- $t = index (cond $en .tableaux_en .tableaux) $nom -}}{{- end -}}
 {{- if not $t -}}{{- errorf "ado-tableau: tableau %q absent de data/promesses_adopter.json (page %s)" $nom .Page.RelPermalink -}}{{- end -}}
 <details class="repli"><summary>{{ .Get 1 }}</summary>
 <div class="table-scroll">

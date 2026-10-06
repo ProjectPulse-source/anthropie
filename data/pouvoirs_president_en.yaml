@@ -1,0 +1,191 @@
+# English layer of data/pouvoirs_president.yaml (page /en/what-can-the-french-president-decide-alone/), 06/10/2026.
+#
+# One key per French entry, same ids: the generator (scripts/update_pouvoirs_president.py, guard G2-EN) STOPS if an
+# entry is missing, if an English citation of the Constitution (cite) is not found word for word in the English
+# translation published by the Conseil constitutionnel (scripts/sources_promesses_en/), or if a passage in curly quotes
+# “…” inside a fiche is not found in that translation of one of the fiche's articles. French passages kept in « … » are
+# checked against the French text, like the French page.
+#
+# Wording: the fields say only what the text says, as in the French base; where the published translation departs
+# from the French text, the fiche says so.
+
+inventaire_19:
+  "8, al. 1":
+    pouvoir: "Appoint the Prime Minister"
+    acte: "The President of the Republic shall appoint the Prime Minister."
+    limite: "He shall terminate the appointment of the Prime Minister when the latter tenders the resignation of the Government."
+  "11":
+    pouvoir: "Submit a Government Bill to a referendum"
+    acte: "submit to a referendum any Government Bill"
+    condition: "on a recommendation from the Government when Parliament is in session, or on a joint motion of the two Houses"
+    autre_autorite: "Where the outcome of the referendum is favourable to the Government Bill or to the Private Members' Bill"
+    limite: "which deals with the organization of the public authorities, or with reforms relating to the economic, social or environmental policy of the Nation, and to the public services contributing thereto"
+  "12":
+    pouvoir: "Dissolve the National Assembly"
+    acte: "declare the National Assembly dissolved"
+    condition: "after consulting the Prime Minister and the Presidents of the Houses of Parliament"
+    autre_autorite: "A general election shall take place no fewer than twenty days and no more than forty days after the dissolution."
+    limite: "No further dissolution shall take place within a year following said election."
+  "16":
+    pouvoir: "Exercise emergency powers"
+    acte: "the President of the Republic shall take measures required by these circumstances"
+    condition: "after formally consulting the Prime Minister, the Presidents of the Houses of Parliament and the Constitutional Council"
+    autre_autorite: "It shall, as of right, carry out such an examination and shall make its decision in the same manner after sixty days of the exercise of emergency powers"
+    limite: "are under serious and immediate threat, and where the proper functioning of the constitutional public authorities is interrupted"
+  "18":
+    pouvoir: "Send a message to Parliament"
+    acte: "The President of the Republic shall communicate with the two Houses of Parliament by messages which he shall cause to be read aloud"
+    limite: "which shall not give rise to any debate"
+  "54":
+    pouvoir: "Refer an international undertaking to the Constitutional Council"
+    court: "Refer a treaty to the Constitutional Council"
+    acte: "on a referral from the President of the Republic"
+    autre_autorite: "has held that an international undertaking contains a clause contrary to the Constitution"
+    partage: "from the Prime Minister, from the President of one or the other Houses, or from sixty Members of the National Assembly or sixty Senators"
+  "56":
+    pouvoir: "Appoint three members of the Constitutional Council and its President"
+    court: "Appoint to the Constitutional Council"
+    acte: "Three of its members shall be appointed by the President of the Republic"
+    autre_autorite: "The procedure provided for in the last paragraph of article 13 shall be applied to these appointments."
+    partage: "three by the President of the National Assembly and three by the President of the Senate"
+  "61":
+    pouvoir: "Refer a law to the Constitutional Council"
+    court: "Refer a law to the Constitutional Council"
+    acte: "Acts of Parliament may be referred to the Constitutional Council, before their promulgation, by the President of the Republic"
+    autre_autorite: "the Constitutional Council must deliver its ruling within one month"
+    partage: "the Prime Minister, the President of the National Assembly, the President of the Senate, sixty Members of the National Assembly or sixty Senators"
+
+# Same order as `regles` in the French base.
+regles:
+  - {cite: "Statutes shall determine the rules concerning", objet: "the matters of article 34, including taxation"}
+  - {cite: "the base, rates and methods of collection of all types of taxes", objet: "taxation"}
+  - {cite: "Matters other than those coming under the scope of statute law shall be matters for regulation.", objet: "the rest"}
+  - {cite: "he shall have power to make regulations", objet: "the Prime Minister"}
+  - {cite: "In order to implement its programme, the Government may ask Parliament for authorization, for a limited period, to take measures by Ordinance that are normally the preserve of statute law.", objet: "ordinances"}
+  - {cite: "The President of the Republic shall sign the Ordinances and Decrees deliberated upon in the Council of Ministers.", objet: "the president, for one category of decrees"}
+  - {cite: "shall be countersigned by the Prime Minister and, where required, by the ministers concerned", objet: "countersignature"}
+
+groupes:
+  sans_contreseing:
+    titre: "Acts the president signs without countersignature"
+    chapo: "Article 19 lists them: they are the only instruments of the president that neither the Prime Minister nor a minister countersigns. Without countersignature does not mean without condition."
+  contresigne:
+    titre: "Powers attributed to him personally that are countersigned"
+    chapo: "The president's other instruments are countersigned by the Prime Minister and, where required, by the ministers concerned (art. 19)."
+  gouvernement:
+    titre: "What the Constitution entrusts to the Government"
+    chapo: "Several decisions attributed to the president belong, in the text, to the Government or to the Prime Minister."
+
+pouvoirs:
+  nommer-premier-ministre:
+    question: "Can the president appoint and dismiss the Prime Minister?"
+    pouvoir: "Appoint the Prime Minister"
+    decide: "The president, alone, for the appointment (art. 8, para. 1)."
+    condition: "No written condition for the appointment."
+    tiers: "None for the appointment. Afterwards, the Government is accountable to Parliament under articles 49 and 50 (art. 20)."
+    portee_texte: "The appointment takes effect by his signature alone. The appointment ends “when the latter tenders the resignation of the Government” (art. 8, para. 1): it is the only route the article describes."
+  referendum:
+    question: "Can the president call a referendum alone?"
+    pouvoir: "Submit a Government Bill to a referendum"
+    decide: "The president submits the text to the people; the people decide."
+    condition: "A recommendation from the Government when Parliament is in session, or a joint motion of the two Houses, published in the Journal officiel. The subject is limited: organisation of the public authorities, reforms relating to the economic, social or environmental policy of the Nation and to the public services contributing thereto, authorisation to ratify certain treaties."
+    tiers: "The Government or the two Houses to propose; the voters to adopt."
+    portee_texte: "The initiative belongs to the Government or to the two Houses, which propose; the president decides to submit. In the shared-initiative referendum (one fifth of the members of Parliament, supported by one tenth of registered voters), the French text binds him: if the two Houses have not considered the bill within the period set by the Institutional Act, he « la soumet » (submits it) to a referendum. The English translation published by the Conseil constitutionnel reads “may submit it to a referendum”, which the French text does not say."
+  dissolution:
+    question: "Can the president dissolve the National Assembly without the Prime Minister's agreement?"
+    pouvoir: "Dissolve the National Assembly"
+    decide: "The president, “after consulting the Prime Minister and the Presidents of the Houses of Parliament”."
+    condition: "Consultation is required, not agreement. No further dissolution within a year following the election; no dissolution during the exercise of emergency powers (art. 16)."
+    tiers: "The voters: “A general election shall take place no fewer than twenty days and no more than forty days after the dissolution.”"
+    portee_texte: "The dissolution takes effect by his decision alone. The majority that comes out of it belongs to the voters."
+  pouvoirs-exceptionnels:
+    question: "What are the emergency powers of article 16?"
+    pouvoir: "Exercise emergency powers"
+    decide: "The president “shall take measures required by these circumstances”."
+    condition: "Two cumulative conditions: a serious and immediate threat to the institutions, the independence of the Nation, the integrity of its territory or the fulfilment of its international commitments, and the interruption of the proper functioning of the constitutional public authorities. Formal consultation of the Prime Minister, the Presidents of the Houses and the Constitutional Council; an address to the Nation."
+    tiers: "Parliament sits as of right. After thirty days, the matter may be referred to the Constitutional Council to decide whether the conditions still apply; it does so as of right after sixty days and at any moment thereafter, by public announcement."
+    portee_texte: "The measures must be designed to provide the constitutional public authorities, “as swiftly as possible”, with the means to carry out their duties: the power is bounded by its purpose and checked in its duration."
+  messages-parlement:
+    question: "Can the president address Parliament?"
+    pouvoir: "Send a message to Parliament, speak before Congress"
+    decide: "The president."
+    condition: "Messages read aloud, without debate. Before Congress, his statement may give rise, in his absence, to a debate without vote."
+    tiers: "None."
+    portee_texte: "The effect is that of speech: no vote follows."
+  saisir-cc-traite:
+    question: "Can the president have a treaty reviewed on his own?"
+    pouvoir: "Refer an international undertaking to the Constitutional Council"
+    decide: "The Constitutional Council."
+    condition: "None to refer. The Prime Minister, the President of each House, sixty deputies or sixty senators can also do so."
+    tiers: "The Constitutional Council; then, if a clause is contrary to the Constitution, the body that amends the Constitution."
+    portee_texte: "If the Council holds that a clause is contrary to the Constitution, authorisation to ratify “may be given only after amending the Constitution”. The president obtains the review, not the decision."
+  nommer-conseil-constitutionnel:
+    question: "Who appoints the members of the Constitutional Council?"
+    pouvoir: "Appoint three members of the Constitutional Council and its President"
+    decide: "The president, for three of the nine members and for the President of the Council; three others are appointed by the President of the National Assembly, three by the President of the Senate."
+    condition: "For these appointments, the procedure of the last paragraph of article 13: public consultation of the relevant standing committee in each House."
+    tiers: "The parliamentary committees: the appointment cannot be made when the negative votes represent at least three fifths of the votes cast in the two committees (art. 13)."
+    portee_texte: "The choice is his; a qualified opposition in Parliament can prevent it."
+  saisir-cc-loi:
+    question: "Can the president have a law reviewed before it is promulgated?"
+    pouvoir: "Refer a law to the Constitutional Council before its promulgation"
+    decide: "The Constitutional Council, which rules on the conformity of the law with the Constitution."
+    condition: "Before promulgation. The Prime Minister, the Presidents of the two Houses, sixty deputies or sixty senators can also do so."
+    tiers: "The Constitutional Council, which must rule within one month (eight days in cases of urgency, at the Government's request)."
+    portee_texte: "Referral suspends the time allotted for promulgation. It obtains a review of constitutionality, not a judgement of expediency."
+  nommer-ministres:
+    question: "Does the president choose ministers alone?"
+    pouvoir: "Appoint the ministers and terminate their appointments"
+    decide: "The president, “On the recommendation of the Prime Minister” (art. 8, para. 2)."
+    condition: "A recommendation of the Prime Minister."
+    tiers: "The Prime Minister, who recommends and countersigns."
+    portee_texte: "Neither the appointment nor the dismissal of a minister is in the list of article 19."
+  promulguer:
+    question: "Can the president refuse to promulgate a law?"
+    pouvoir: "Promulgate laws, ask for a new deliberation"
+    decide: "The president promulgates; Parliament deliberates again if he asks."
+    condition: "Promulgation within fifteen days following the final passage of an Act and its transmission to the Government. Before this time limit expires, he may ask Parliament to reopen debate on the Act or any sections thereof."
+    tiers: "Parliament: “Such reopening of debate shall not be refused”, and Parliament votes again."
+    portee_texte: "The text sets a time limit for promulgation and opens a second reading, whose outcome belongs to Parliament; it provides for no veto."
+  decrets-ordonnances:
+    question: "Can the president govern by decree?"
+    pouvoir: "Sign the Ordinances and Decrees deliberated upon in the Council of Ministers"
+    decide: "The president signs the Ordinances and Decrees deliberated upon in the Council of Ministers, over which he presides (art. 9). Other regulatory decrees fall in principle to the Prime Minister, who has power to make regulations subject to article 13 (art. 21)."
+    condition: "A deliberation in the Council of Ministers."
+    tiers: "The Prime Minister and the ministers responsible, who countersign."
+    portee_texte: "The text says “shall sign”; it does not specify whether the president may refuse. The text gives the general power to make regulations to the Prime Minister (art. 21)."
+  nominations-emplois:
+    question: "Does the president alone appoint senior officials?"
+    pouvoir: "Make appointments to the civil and military posts of the State"
+    decide: "The president for the posts filled in the Council of Ministers (Conseillers d'État, ambassadors, prefects, recteurs, directors of central government departments, highest-ranking military officers…); the Prime Minister for the others, subject to article 13 (art. 21)."
+    condition: "Deliberation in the Council of Ministers for the listed posts. For the posts set by an Institutional Act, public consultation of the relevant standing committee in each House."
+    tiers: "The Prime Minister and the ministers, who countersign; the parliamentary committees, which can prevent an appointment by three fifths of the votes cast."
+    portee_texte: "The power of appointment is shared with the Prime Minister and, for a list of posts, subject to a qualified parliamentary veto."
+  chef-des-armees:
+    question: "Does the president decide alone in military matters?"
+    pouvoir: "Commander-in-Chief of the Armed Forces"
+    decide: "The president “shall be Commander-in-Chief of the Armed Forces” and presides over the higher national defence councils and committees (art. 15)."
+    condition: "None written for the capacity of Commander-in-Chief; his instruments are countersigned."
+    tiers: "The Government “shall have at its disposal the civil service and the armed forces” (art. 20); the Prime Minister “shall be responsible for national defence” (art. 21)."
+    portee_texte: "The Constitution spreads military matters over three titles: Commander-in-Chief, disposal of the armed forces, responsibility for national defence. None reads alone."
+  grace:
+    question: "Can the president grant a pardon alone?"
+    pouvoir: "Power of pardon"
+    decide: "The president."
+    condition: "“in an individual capacity”, a precision added in 2008: the 1958 text said only « le droit de faire grâce » (the right to grant pardons)."
+    tiers: "The Prime Minister and the minister responsible, who countersign."
+    portee_texte: "A personal power in the image, a countersigned act in the text."
+  traites:
+    question: "Can the president sign a treaty alone?"
+    pouvoir: "Negotiate and ratify treaties"
+    decide: "The president “shall negotiate and ratify treaties”; he is informed of agreements not subject to ratification."
+    condition: "If the Constitutional Council has held that a clause is contrary to the Constitution, ratification comes only after amending the Constitution (art. 54)."
+    tiers: "The Prime Minister and the ministers responsible, who countersign; the Constitutional Council if a referral is made."
+    portee_texte: "Ratifying is not in the list of article 19: ratification is subject to countersignature."
+  politique-nation:
+    question: "Who determines the policy of the Nation?"
+    pouvoir: "Determine and conduct the policy of the Nation"
+    decide: "The Government (art. 20), whose action the Prime Minister directs, and who ensures the implementation of legislation (art. 21)."
+    condition: "The Government is accountable to Parliament (art. 20)."
+    tiers: "The National Assembly, to which it answers; the ministers, who countersign the Prime Minister's instruments where they are responsible for their implementation (art. 22)."
+    portee_texte: "The president “shall ensure due respect for the Constitution” and ensures, by his arbitration, the proper functioning of the public authorities (art. 5); the text gives the Government the determination and conduct of the policy of the Nation."

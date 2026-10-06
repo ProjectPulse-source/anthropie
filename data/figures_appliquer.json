@@ -24,5 +24,31 @@
    "source": "Sénat, bilans annuels de l'application des lois, 2003-2026 (taux tels que publiés, page citée dans le tableau)",
    "precaution": "Six définitions successives : ne pas relier les segments. Une révision de chiffre et une rupture de définition sont deux faits distincts."
   }
+ ],
+ "en": [
+  {
+   "id": "mesures",
+   "fichier": "appliquer-mesures-en",
+   "titre": "Implementing measures of French laws, by session of the law",
+   "montre": "On 5 October 2026, of the 5,398 implementing measures listed by the barometer for the laws promulgated in France from October 2017 to September 2025, 4,378 have an identified published instrument, 567 are pending and 448 are listed as moot.",
+   "source": "Barometer of the application of laws (National Assembly, LexImpact; DILA data), status at 5 October 2026",
+   "precaution": "Laws promulgated per session (1 Oct.-30 Sept.), excluding treaties. Status at the reading date: neither a past rate nor efficiency."
+  },
+  {
+   "id": "lois",
+   "fichier": "appliquer-lois-en",
+   "titre": "French laws that call for no implementing measure, by session",
+   "montre": "'Fewer than half in every session' does not hold: in 2018-2019, the barometer counts 25 directly applicable laws out of 49; in the seven other sessions, even the upper bound stays below half. The two sources classify 24 of the 399 laws differently.",
+   "source": "Barometer of the application of laws (status at 5 October 2026); Senate annual reports on the application of laws",
+   "precaution": "Grey: laws that the barometer and the Senate classify differently (2024-2025: plus 2 laws with no list of names)."
+  },
+  {
+   "id": "serie",
+   "fichier": "appliquer-serie-en",
+   "titre": "The rate of application of laws published by the French Senate, 2002-2003 to 2024-2025",
+   "montre": "The rate published by the French Senate rests on six successive definitions since 2002-2003: the segments do not read as a single series.",
+   "source": "French Senate, annual reports on the application of laws, 2003-2026 (rates as published, page cited in the table)",
+   "precaution": "Six successive definitions: do not join the segments. A revised figure and a change of definition are two distinct facts."
+  }
  ]
 }
