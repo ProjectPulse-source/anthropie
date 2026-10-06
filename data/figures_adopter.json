@@ -1,0 +1,20 @@
+{
+ "fr": [
+  {
+   "id": "origine",
+   "fichier": "adopter-origine",
+   "titre": "Qui est à l'origine des lois ordinaires promulguées ?",
+   "montre": "Parmi les lois ordinaires promulguées, 98 sur 214 sont d'origine parlementaire sous la XIVe législature, 108 sur 202 sous la XVe et 55 sur 83 sous la XVIe ; origine formelle au dépôt initial.",
+   "source": "Assemblée nationale (données ouvertes, dossiers législatifs) et Sénat (base Dosleg), 06/10/2026 ; Journal officiel",
+   "precaution": "Origine formelle au dépôt initial : elle ne mesure ni l'influence du Gouvernement ni les amendements. Traités exclus."
+  },
+  {
+   "id": "493",
+   "fichier": "adopter-493",
+   "titre": "Engagements de responsabilité sur un texte (art. 49, al. 3)",
+   "montre": "Le Gouvernement a engagé sa responsabilité sur un texte 6 fois sous la XIVe législature, 1 fois sous la XVe et 23 fois sous la XVIe, toutes sur des textes financiers.",
+   "source": "Assemblée nationale : dossiers législatifs, bulletins statistiques, fiche n° 64 (engagements de responsabilité)",
+   "precaution": "Un engagement par texte et par étape de lecture. XVIIe législature en cours au 06/10/2026."
+  }
+ ]
+}

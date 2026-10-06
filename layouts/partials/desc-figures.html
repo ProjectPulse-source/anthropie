@@ -64,6 +64,14 @@
   {{- end -}}
 {{- end -}}
 {{- if in $text "{app." -}}{{- errorf "desc-figures: placeholder {app.*} non resolu dans : %s" $text -}}{{- end -}}
+{{- /* Dossier Promesses, volet « Adopter » : placeholders {ado.<cle>}, depuis data/promesses_adopter.json
+       (bloc affichage, scripts/update_promesses_adopter.py). Page en français seulement. Meme contrat. */ -}}
+{{- with site.Data.promesses_adopter -}}
+  {{- range $k, $v := .affichage -}}
+    {{- $text = replace $text (printf "{ado.%s}" $k) $v -}}
+  {{- end -}}
+{{- end -}}
+{{- if in $text "{ado." -}}{{- errorf "desc-figures: placeholder {ado.*} non resolu dans : %s" $text -}}{{- end -}}
 {{- /* Dossier Promesses, volet « Mesurer » : placeholders {mes.<cle>}, depuis data/promesses_mesurer.json
        (bloc affichage, scripts/update_promesses_mesurer.py). Page en français seulement. Meme contrat. */ -}}
 {{- with site.Data.promesses_mesurer -}}

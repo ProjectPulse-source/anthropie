@@ -1,0 +1,61 @@
+﻿serie,periode,categorie,valeur,unite,source
+lois_ordinaires_promulguees,legislature_14,N,214,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,legislature_14,gouv,116,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,legislature_14,AN,55,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,legislature_14,SEN,43,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,legislature_14,P,98,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,legislature_14,Pmin,87,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,legislature_14,traites,188,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,legislature_14,autres,46,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,legislature_15,N,202,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,legislature_15,gouv,94,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,legislature_15,AN,77,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,legislature_15,SEN,31,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,legislature_15,P,108,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,legislature_15,Pmin,103,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,legislature_15,traites,104,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,legislature_15,autres,47,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,legislature_16,N,83,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,legislature_16,gouv,28,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,legislature_16,AN,32,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,legislature_16,SEN,23,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,legislature_16,P,55,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,legislature_16,Pmin,55,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,legislature_16,traites,41,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,legislature_16,autres,12,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,legislature_17,N,97,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,legislature_17,gouv,19,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,legislature_17,AN,48,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,legislature_17,SEN,30,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,legislature_17,P,78,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,legislature_17,Pmin,78,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,legislature_17,traites,32,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,legislature_17,autres,15,lois,"AN, Dosleg, JO"
+lois_hors_traites,2017-2018,N,41,lois,"AN, Dosleg, JO"
+lois_hors_traites,2017-2018,origine_parlementaire,12,lois,"AN, Dosleg, JO"
+lois_hors_traites,2018-2019,N,49,lois,"AN, Dosleg, JO"
+lois_hors_traites,2018-2019,origine_parlementaire,25,lois,"AN, Dosleg, JO"
+lois_hors_traites,2019-2020,N,43,lois,"AN, Dosleg, JO"
+lois_hors_traites,2019-2020,origine_parlementaire,18,lois,"AN, Dosleg, JO"
+lois_hors_traites,2020-2021,N,51,lois,"AN, Dosleg, JO"
+lois_hors_traites,2020-2021,origine_parlementaire,19,lois,"AN, Dosleg, JO"
+lois_hors_traites,2021-2022,N,64,lois,"AN, Dosleg, JO"
+lois_hors_traites,2021-2022,origine_parlementaire,41,lois,"AN, Dosleg, JO"
+lois_hors_traites,2022-2023,N,44,lois,"AN, Dosleg, JO"
+lois_hors_traites,2022-2023,origine_parlementaire,29,lois,"AN, Dosleg, JO"
+lois_hors_traites,2023-2024,N,51,lois,"AN, Dosleg, JO"
+lois_hors_traites,2023-2024,origine_parlementaire,30,lois,"AN, Dosleg, JO"
+lois_hors_traites,2024-2025,N,56,lois,"AN, Dosleg, JO"
+lois_hors_traites,2024-2025,origine_parlementaire,45,lois,"AN, Dosleg, JO"
+engagements_49_3,legislature_14,n,6,engagements,AN
+engagements_49_3,legislature_14,fin,0,engagements,AN
+engagements_49_3,legislature_14,adoptees,0,engagements,AN
+engagements_49_3,legislature_15,n,1,engagements,AN
+engagements_49_3,legislature_15,fin,0,engagements,AN
+engagements_49_3,legislature_15,adoptees,0,engagements,AN
+engagements_49_3,legislature_16,n,23,engagements,AN
+engagements_49_3,legislature_16,fin,23,engagements,AN
+engagements_49_3,legislature_16,adoptees,0,engagements,AN
+engagements_49_3,legislature_17,n,8,engagements,AN
+engagements_49_3,legislature_17,fin,8,engagements,AN
+engagements_49_3,legislature_17,adoptees,1,engagements,AN

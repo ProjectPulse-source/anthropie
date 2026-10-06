@@ -1,0 +1,345 @@
+{
+ "releve_le": "2026-10-06",
+ "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Assemblée nationale, Sénat (Dosleg), Journal officiel (DILA), Légifrance",
+ "meta": {
+  "page": "https://stephane-lalut.com/qui-peut-faire-adopter-une-loi/",
+  "protocole": "fiches de preuve v2, volet Adopter, E2 et E3 (E1 non publié)",
+  "constitution": {
+   "24": "LEGIARTI000019241014",
+   "39": "LEGIARTI000019241026",
+   "48": "LEGIARTI000019241057",
+   "49a": "LEGIARTI000019241062",
+   "49b": "LEGIARTI000019241062"
+  },
+  "temoins": {
+   "fiche64": "9e19aab58f1e39dc054aa926dd13699253ae5532924b2b894920b7fda4d5165d",
+   "r25-802|44": "b2cd059c7a1f1904c7a0e1dbbb37f5028559101938f46e12b18a5e494bbc26ba"
+  },
+  "definitions": {
+   "origine": "origine formelle au dépôt initial : projet du Gouvernement, proposition déposée à l'Assemblée nationale, proposition déposée au Sénat ; rattachement à la législature de promulgation",
+   "Pmin": "origine parlementaire établie par les deux sources (AN et Dosleg) ; l'écart avec P vient de lois dont le dossier manque aux fichiers de l'AN pour un motif établi (dépôt sous la législature précédente)",
+   "engagement": "un engagement de responsabilité (art. 49, al. 3) par texte et par étape de lecture",
+   "texte_financier": "loi de finances, de financement de la sécurité sociale ou de programmation des finances publiques (titre du dossier)"
+  },
+  "limites": "l'origine formelle n'observe ni l'influence du Gouvernement sur une proposition, ni les amendements ; le parcours des propositions jusqu'à la séance (E1) n'est pas publié : le décompte des dépôts ne concorde pas encore avec les bulletins de l'Assemblée"
+ },
+ "gardes": [
+  "B1 : 5 citations de la Constitution, 3 des temoins, retrouvees mot pour mot",
+  "B2 : origine concordante AN/Dosleg ; parlementaires XIV 98/214, XV 103-108/202, XVI 55/83",
+  "B3 : champ par session = barometre (8 sessions) ; 2024-2025 45/56 = Senat ; 2023-2024 30/51 ~ 58 %",
+  "B4 : engagements XIV 6, XV 1, XVI 23 (= fiche 64 et bulletins) ; XVI tous financiers ; 0 motion adoptee XIV-XVI"
+ ],
+ "calcul": {
+  "legislatures": {
+   "14": {
+    "N": 214,
+    "P": 98,
+    "Pmin": 87,
+    "gouv": 116,
+    "AN": 55,
+    "SEN": 43,
+    "traites": 188,
+    "autres": 46
+   },
+   "15": {
+    "N": 202,
+    "P": 108,
+    "Pmin": 103,
+    "gouv": 94,
+    "AN": 77,
+    "SEN": 31,
+    "traites": 104,
+    "autres": 47
+   },
+   "16": {
+    "N": 83,
+    "P": 55,
+    "Pmin": 55,
+    "gouv": 28,
+    "AN": 32,
+    "SEN": 23,
+    "traites": 41,
+    "autres": 12
+   },
+   "17": {
+    "N": 97,
+    "P": 78,
+    "Pmin": 78,
+    "gouv": 19,
+    "AN": 48,
+    "SEN": 30,
+    "traites": 32,
+    "autres": 15
+   }
+  },
+  "sessions": {
+   "2017-2018": {
+    "N": 41,
+    "P": 12
+   },
+   "2018-2019": {
+    "N": 49,
+    "P": 25
+   },
+   "2019-2020": {
+    "N": 43,
+    "P": 18
+   },
+   "2020-2021": {
+    "N": 51,
+    "P": 19
+   },
+   "2021-2022": {
+    "N": 64,
+    "P": 41
+   },
+   "2022-2023": {
+    "N": 44,
+    "P": 29
+   },
+   "2023-2024": {
+    "N": 51,
+    "P": 30
+   },
+   "2024-2025": {
+    "N": 56,
+    "P": 45
+   }
+  },
+  "engagements": {
+   "14": {
+    "n": 6,
+    "fin": 0,
+    "textes": 2,
+    "adoptees": 0
+   },
+   "15": {
+    "n": 1,
+    "fin": 0,
+    "textes": 1,
+    "adoptees": 0
+   },
+   "16": {
+    "n": 23,
+    "fin": 23,
+    "textes": 6,
+    "adoptees": 0
+   },
+   "17": {
+    "n": 8,
+    "fin": 8,
+    "textes": 3,
+    "adoptees": 1
+   }
+  }
+ },
+ "tableaux": {
+  "lois": {
+   "entetes": [
+    "Législature de promulgation",
+    "Lois ordinaires",
+    "Projet du Gouvernement",
+    "Proposition déposée à l'Assemblée",
+    "Proposition déposée au Sénat",
+    "Origine parlementaire",
+    "Lois autorisant un traité (exclues)"
+   ],
+   "lignes": [
+    [
+     "XIVe (2012-2017)",
+     "214",
+     "116",
+     "55",
+     "43",
+     "98 (au moins 87)",
+     "188"
+    ],
+    [
+     "XVe (2017-2022)",
+     "202",
+     "94",
+     "77",
+     "31",
+     "108 (au moins 103)",
+     "104"
+    ],
+    [
+     "XVIe (2022-2024)",
+     "83",
+     "28",
+     "32",
+     "23",
+     "55",
+     "41"
+    ],
+    [
+     "XVIIe (depuis 2024, en cours au 06/10/2026)",
+     "97",
+     "19",
+     "48",
+     "30",
+     "78",
+     "32"
+    ]
+   ]
+  },
+  "sessions": {
+   "entetes": [
+    "Session",
+    "Lois promulguées hors traités",
+    "D'origine parlementaire",
+    "Part"
+   ],
+   "lignes": [
+    [
+     "2017-2018",
+     "41",
+     "12",
+     "29 %"
+    ],
+    [
+     "2018-2019",
+     "49",
+     "25",
+     "51 %"
+    ],
+    [
+     "2019-2020",
+     "43",
+     "18",
+     "42 %"
+    ],
+    [
+     "2020-2021",
+     "51",
+     "19",
+     "37 %"
+    ],
+    [
+     "2021-2022",
+     "64",
+     "41",
+     "64 %"
+    ],
+    [
+     "2022-2023",
+     "44",
+     "29",
+     "66 %"
+    ],
+    [
+     "2023-2024",
+     "51",
+     "30",
+     "59 %"
+    ],
+    [
+     "2024-2025",
+     "56",
+     "45",
+     "80 %"
+    ]
+   ]
+  },
+  "engagements": {
+   "entetes": [
+    "Législature",
+    "Engagements (art. 49, al. 3)",
+    "Sur un texte financier",
+    "Sur un autre texte",
+    "Motions de censure adoptées"
+   ],
+   "lignes": [
+    [
+     "XIVe",
+     "6",
+     "0",
+     "6",
+     "0"
+    ],
+    [
+     "XVe",
+     "1",
+     "0",
+     "1",
+     "0"
+    ],
+    [
+     "XVIe",
+     "23",
+     "23",
+     "0",
+     "0"
+    ],
+    [
+     "XVIIe (en cours)",
+     "8",
+     "8",
+     "0",
+     "1"
+    ]
+   ]
+  }
+ },
+ "affichage": {
+  "releve": "06/10/2026",
+  "N14": "214",
+  "P14": "98",
+  "Pmin14": "87",
+  "G14": "116",
+  "AN14": "55",
+  "SEN14": "43",
+  "T14": "188",
+  "Ppct14": "46",
+  "N15": "202",
+  "P15": "108",
+  "Pmin15": "103",
+  "G15": "94",
+  "AN15": "77",
+  "SEN15": "31",
+  "T15": "104",
+  "Ppct15": "53",
+  "N16": "83",
+  "P16": "55",
+  "Pmin16": "55",
+  "G16": "28",
+  "AN16": "32",
+  "SEN16": "23",
+  "T16": "41",
+  "Ppct16": "66",
+  "N17": "97",
+  "P17": "78",
+  "Pmin17": "78",
+  "G17": "19",
+  "AN17": "48",
+  "SEN17": "30",
+  "T17": "32",
+  "Ppct17": "80",
+  "E14": "6",
+  "Efin14": "0",
+  "Etextes14": "2",
+  "E15": "1",
+  "Efin15": "0",
+  "Etextes15": "1",
+  "E16": "23",
+  "Efin16": "23",
+  "Etextes16": "6",
+  "E17": "8",
+  "Efin17": "8",
+  "Etextes17": "3",
+  "s1718_P": "12",
+  "s1718_N": "41",
+  "s2425_P": "45",
+  "s2425_N": "56",
+  "releve_le": "06/10/2026 (données de l'Assemblée nationale et base Dosleg du Sénat du 06/10/2026, Journal officiel ; bulletins statistiques de l'Assemblée nationale)",
+  "cit_art24": "Le Parlement vote la loi.",
+  "cit_art39": "L'initiative des lois appartient concurremment au Premier ministre et aux membres du Parlement.",
+  "cit_art48": "Deux semaines de séance sur quatre sont réservées par priorité, et dans l'ordre que le Gouvernement a fixé, à l'examen des textes et aux débats dont il demande l'inscription à l'ordre du jour.",
+  "cit_art49a": "Le Premier ministre peut, après délibération du Conseil des ministres, engager la responsabilité du Gouvernement devant l'Assemblée nationale sur le vote d'un projet de loi de finances ou de financement de la sécurité sociale. Dans ce cas, ce projet est considéré comme adopté, sauf si une motion de censure, déposée dans les vingt-quatre heures qui suivent, est votée dans les conditions prévues à l'alinéa précédent.",
+  "cit_art49b": "Le Premier ministre peut, en outre, recourir à cette procédure pour un autre projet ou une proposition de loi par session.",
+  "cit_fiche64": "Cet instrument a néanmoins été utilisé à six reprises, sur deux projets de loi différents, sous la XIVe législature, à une reprise sous la XVe législature, et à 23 reprises sous la XVIe législature.",
+  "cit_censure": "La première motion déposée a été adoptée selon la majorité qualifiée requise",
+  "cit_senat_origine": "Sur la session, 80 % des lois adoptées (45 sur 56) sont d'origine parlementaire, contre 58 % en 2023-2024",
+  "censure_date": "2 décembre 2024"
+ }
+}
