@@ -4,17 +4,17 @@
    "id": "origine",
    "fichier": "adopter-origine",
    "titre": "Qui est à l'origine des lois ordinaires promulguées ?",
-   "montre": "Parmi les lois ordinaires promulguées, 98 sur 214 sont d'origine parlementaire sous la XIVe législature, 108 sur 202 sous la XVe et 55 sur 83 sous la XVIe ; origine formelle au dépôt initial.",
+   "montre": "Parmi les lois promulguées du champ étudié (hors traités, lois de finances, de financement de la sécurité sociale et organiques), 98 sur 214 sont d'origine parlementaire sous la XIVe législature, 108 sur 202 sous la XVe et 55 sur 83 sous la XVIe ; origine formelle au dépôt initial.",
    "source": "Assemblée nationale (données ouvertes, dossiers législatifs) et Sénat (base Dosleg), 06/10/2026 ; Journal officiel",
-   "precaution": "Origine formelle au dépôt initial : elle ne mesure ni l'influence du Gouvernement ni les amendements. Traités exclus."
+   "precaution": "Hors traités, lois de finances, de financement de la sécurité sociale et organiques. Origine au dépôt, non l'influence."
   },
   {
    "id": "493",
    "fichier": "adopter-493",
    "titre": "Engagements de responsabilité sur un texte (art. 49, al. 3)",
-   "montre": "Le Gouvernement a engagé sa responsabilité sur un texte 6 fois sous la XIVe législature, 1 fois sous la XVe et 23 fois sous la XVIe, toutes sur des textes financiers.",
+   "montre": "Le Gouvernement a engagé sa responsabilité sur un texte (art. 49, al. 3) 6 fois sous la XIVe législature, 1 fois sous la XVe et 23 fois sous la XVIe, dont 21 sur un projet de loi de finances ou de financement de la sécurité sociale.",
    "source": "Assemblée nationale : dossiers législatifs, bulletins statistiques, fiche n° 64 (engagements de responsabilité)",
-   "precaution": "Un engagement par texte et par étape de lecture. XVIIe législature en cours au 06/10/2026."
+   "precaution": "Catégories de l'art. 49, al. 3 : la loi de programmation des finances publiques est un « autre projet ». XVIIe en cours au 06/10/2026."
   }
  ]
 }

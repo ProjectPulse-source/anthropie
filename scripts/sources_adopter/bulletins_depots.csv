@@ -1,0 +1,18 @@
+fichier,page,debut,fin,legislature,pjl_an_premiere_lecture,ppl_an_premiere_lecture,ppl_retraits_an,lecture
+ban_14e_2011_2012.pdf,20-21,2012-06-20,2012-09-30,14,25,95,0,lecture humaine de l'image de la page (tableaux 3.1.1 et 3.1.2)
+ban_14e_2012_2013.pdf,19-20,2012-10-01,2013-09-30,14,74,497,6,lecture humaine de l'image de la page
+ban_14e_2013_2014.pdf,19-20,2013-10-01,2014-09-30,14,57,275,5,lecture humaine de l'image de la page
+ban_14e_2014_2015.pdf,28,2014-10-01,2015-09-30,14,51,300,3,lecture humaine de l'image de la page (tableau 3.1.2)
+ban_14e_2015_2016.pdf,28,2015-10-01,2016-09-30,14,64,295,2,lecture humaine de l'image de la page (tableau 3.1.2)
+ban_14e_2016_2017.pdf,28,2016-10-01,2017-06-20,14,23,232,3,lecture humaine de l'image de la page (tableau 3.1.2)
+ban_15e_2016_2017.pdf,26,2017-06-21,2017-09-30,15,21,86,0,lecture humaine de l'image de la page (tableau 3.1.1)
+ban_15e_2017_2018.pdf,29,2017-10-01,2018-09-30,15,58,461,4,lecture humaine de l'image de la page (tableau 3.1.2)
+ban_15e_2018_2019.pdf,28,2018-10-01,2019-09-30,15,46,432,3,lecture humaine de l'image de la page (tableau 3.1.2)
+ban_15e_2019_2020.pdf,29,2019-10-01,2020-09-30,15,57,540,6,lecture humaine de l'image de la page (tableau 3.1.2)
+ban_15e_2020_2021.pdf,27,2020-10-01,2021-09-30,15,70,444,5,lecture humaine de l'image de la page (tableau 3.1.2)
+BAN-2021-2022.pdf,27,2021-10-01,2022-06-21,15,19,328,3,lecture humaine de l'image de la page (tableau 3.1.2)
+BAN_2021-2022_16e.pdf,26,2022-06-22,2022-09-30,16,19,92,1,lecture humaine de l'image de la page (tableau 3.1.1)
+AN_BAN_2022_2023.pdf,27,2022-10-01,2023-09-30,16,38,772,30,extraction PyMuPDF par blocs relue (tableau 3.1.2)
+Ban-2023-2024.pdf,27,2023-10-01,2024-06-09,16,21,451,14,lecture humaine de l'image de la page (tableau 3.1.2)
+an_download_1116527.pdf,27,2024-07-18,2024-09-30,17,2,99,0,lecture humaine de l'image de la page (tableau 3.1.1)
+an_download_1121279.pdf,27,2024-10-01,2025-09-30,17,19,849,27,lecture humaine de l'image de la page (tableau 3.1.2)

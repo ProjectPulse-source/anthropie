@@ -47,15 +47,46 @@ lois_hors_traites,2023-2024,N,51,lois,"AN, Dosleg, JO"
 lois_hors_traites,2023-2024,origine_parlementaire,30,lois,"AN, Dosleg, JO"
 lois_hors_traites,2024-2025,N,56,lois,"AN, Dosleg, JO"
 lois_hors_traites,2024-2025,origine_parlementaire,45,lois,"AN, Dosleg, JO"
+propositions_deposees_AN,legislature_14,N,1555,textes,"AN, bulletins statistiques"
+propositions_deposees_AN,legislature_14,Z,1402,textes,"AN, bulletins statistiques"
+propositions_deposees_AN,legislature_14,U,0,textes,"AN, bulletins statistiques"
+propositions_deposees_AN,legislature_14,exces,17,textes,"AN, bulletins statistiques"
+propositions_deposees_AN,legislature_14,Nw,1538,textes,"AN, bulletins statistiques"
+propositions_deposees_AN,legislature_14,Zw,1385,textes,"AN, bulletins statistiques"
+propositions_deposees_AN,legislature_14,ext,1711,textes,"AN, bulletins statistiques"
+propositions_deposees_AN,legislature_14,bul,1694,textes,"AN, bulletins statistiques"
+propositions_deposees_AN,legislature_14,mediane_jours,1064,textes,"AN, bulletins statistiques"
+propositions_deposees_AN,legislature_15,N,2160,textes,"AN, bulletins statistiques"
+propositions_deposees_AN,legislature_15,Z,1964,textes,"AN, bulletins statistiques"
+propositions_deposees_AN,legislature_15,U,1,textes,"AN, bulletins statistiques"
+propositions_deposees_AN,legislature_15,exces,5,textes,"AN, bulletins statistiques"
+propositions_deposees_AN,legislature_15,Nw,2155,textes,"AN, bulletins statistiques"
+propositions_deposees_AN,legislature_15,Zw,1959,textes,"AN, bulletins statistiques"
+propositions_deposees_AN,legislature_15,ext,2296,textes,"AN, bulletins statistiques"
+propositions_deposees_AN,legislature_15,bul,2291,textes,"AN, bulletins statistiques"
+propositions_deposees_AN,legislature_15,mediane_jours,868,textes,"AN, bulletins statistiques"
+propositions_deposees_AN,legislature_16,N,1241,textes,"AN, bulletins statistiques"
+propositions_deposees_AN,legislature_16,Z,1131,textes,"AN, bulletins statistiques"
+propositions_deposees_AN,legislature_16,U,1,textes,"AN, bulletins statistiques"
+propositions_deposees_AN,legislature_16,exces,3,textes,"AN, bulletins statistiques"
+propositions_deposees_AN,legislature_16,Nw,1238,textes,"AN, bulletins statistiques"
+propositions_deposees_AN,legislature_16,Zw,1128,textes,"AN, bulletins statistiques"
+propositions_deposees_AN,legislature_16,ext,1318,textes,"AN, bulletins statistiques"
+propositions_deposees_AN,legislature_16,bul,1315,textes,"AN, bulletins statistiques"
+propositions_deposees_AN,legislature_16,mediane_jours,381,textes,"AN, bulletins statistiques"
 engagements_49_3,legislature_14,n,6,engagements,AN
 engagements_49_3,legislature_14,fin,0,engagements,AN
+engagements_49_3,legislature_14,lpfp,0,engagements,AN
 engagements_49_3,legislature_14,adoptees,0,engagements,AN
 engagements_49_3,legislature_15,n,1,engagements,AN
 engagements_49_3,legislature_15,fin,0,engagements,AN
+engagements_49_3,legislature_15,lpfp,0,engagements,AN
 engagements_49_3,legislature_15,adoptees,0,engagements,AN
 engagements_49_3,legislature_16,n,23,engagements,AN
-engagements_49_3,legislature_16,fin,23,engagements,AN
+engagements_49_3,legislature_16,fin,21,engagements,AN
+engagements_49_3,legislature_16,lpfp,2,engagements,AN
 engagements_49_3,legislature_16,adoptees,0,engagements,AN
 engagements_49_3,legislature_17,n,8,engagements,AN
 engagements_49_3,legislature_17,fin,8,engagements,AN
+engagements_49_3,legislature_17,lpfp,0,engagements,AN
 engagements_49_3,legislature_17,adoptees,1,engagements,AN

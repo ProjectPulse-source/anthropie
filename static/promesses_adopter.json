@@ -3,12 +3,15 @@
  "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Assemblée nationale, Sénat (Dosleg), Journal officiel (DILA), Légifrance",
  "meta": {
   "page": "https://stephane-lalut.com/qui-peut-faire-adopter-une-loi/",
-  "protocole": "fiches de preuve v2, volet Adopter, E2 et E3 (E1 non publié)",
+  "protocole": "fiches de preuve v2, volet Adopter, E1 (pire cas, écart déclaré), E2 et E3",
   "constitution": {
    "24": "LEGIARTI000019241014",
    "39": "LEGIARTI000019241026",
    "48": "LEGIARTI000019241057",
    "49a": "LEGIARTI000019241062",
+   "45a": "LEGIARTI000019241040",
+   "45b": "LEGIARTI000019241040",
+   "45c": "LEGIARTI000019241040",
    "49b": "LEGIARTI000019241062"
   },
   "temoins": {
@@ -19,15 +22,17 @@
    "origine": "origine formelle au dépôt initial : projet du Gouvernement, proposition déposée à l'Assemblée nationale, proposition déposée au Sénat ; rattachement à la législature de promulgation",
    "Pmin": "origine parlementaire établie par les deux sources (AN et Dosleg) ; l'écart avec P vient de lois dont le dossier manque aux fichiers de l'AN pour un motif établi (dépôt sous la législature précédente)",
    "engagement": "un engagement de responsabilité (art. 49, al. 3) par texte et par étape de lecture",
-   "texte_financier": "loi de finances, de financement de la sécurité sociale ou de programmation des finances publiques (titre du dossier)"
+   "fin": "engagement sur un projet de loi de finances ou de financement de la sécurité sociale (rectificatives comprises), catégorie de l'art. 49, al. 3 ; la loi de programmation des finances publiques relève d'« un autre projet »",
+   "E1": "proposition de loi ordinaire déposée en premier lieu à l'Assemblée ; « sans examen en séance observé avant la fin de la législature » ; pire cas : excès des dépôts extraits sur les bulletins statistiques de l'AN retiré du champ et des propositions sans examen (écart au protocole déclaré)"
   },
-  "limites": "l'origine formelle n'observe ni l'influence du Gouvernement sur une proposition, ni les amendements ; le parcours des propositions jusqu'à la séance (E1) n'est pas publié : le décompte des dépôts ne concorde pas encore avec les bulletins de l'Assemblée"
+  "limites": "l'origine formelle n'observe ni l'influence du Gouvernement sur une proposition, ni les amendements ; les dépôts extraits ne concordent pas texte par texte avec les bulletins de l'Assemblée : E1 est publié sur la borne du pire cas"
  },
  "gardes": [
-  "B1 : 5 citations de la Constitution, 3 des temoins, retrouvees mot pour mot",
+  "B1 : 8 citations de la Constitution, 3 des temoins, retrouvees mot pour mot",
   "B2 : origine concordante AN/Dosleg ; parlementaires XIV 98/214, XV 103-108/202, XVI 55/83",
   "B3 : champ par session = barometre (8 sessions) ; 2024-2025 45/56 = Senat ; 2023-2024 30/51 ~ 58 %",
-  "B4 : engagements XIV 6, XV 1, XVI 23 (= fiche 64 et bulletins) ; XVI tous financiers ; 0 motion adoptee XIV-XVI"
+  "B4 : engagements XIV 6, XV 1, XVI 23 (= fiche 64 et bulletins) ; XVI 21 PLF/PLFSS + 2 LPFP ; 0 motion adoptee XIV-XVI",
+  "B5 : E1 pire cas XIV 1385/1538, XV 1959/2155, XVI 1128/1238 (exces sur bulletins 17, 5, 3)"
  ],
  "calcul": {
   "legislatures": {
@@ -111,24 +116,28 @@
     "n": 6,
     "fin": 0,
     "textes": 2,
+    "lpfp": 0,
     "adoptees": 0
    },
    "15": {
     "n": 1,
     "fin": 0,
     "textes": 1,
+    "lpfp": 0,
     "adoptees": 0
    },
    "16": {
     "n": 23,
-    "fin": 23,
+    "fin": 21,
     "textes": 6,
+    "lpfp": 2,
     "adoptees": 0
    },
    "17": {
     "n": 8,
     "fin": 8,
     "textes": 3,
+    "lpfp": 0,
     "adoptees": 1
    }
   }
@@ -245,8 +254,8 @@
    "entetes": [
     "Législature",
     "Engagements (art. 49, al. 3)",
-    "Sur un texte financier",
-    "Sur un autre texte",
+    "Sur un projet de loi de finances ou de financement de la sécurité sociale",
+    "Sur un autre projet ou une proposition",
     "Motions de censure adoptées"
    ],
    "lignes": [
@@ -267,8 +276,8 @@
     [
      "XVIe",
      "23",
-     "23",
-     "0",
+     "21",
+     "2",
      "0"
     ],
     [
@@ -277,6 +286,42 @@
      "8",
      "0",
      "1"
+    ]
+   ]
+  },
+  "e1": {
+   "entetes": [
+    "Législature de dépôt",
+    "Propositions de loi ordinaires déposées à l'Assemblée",
+    "Sans examen en séance observé avant la fin de la législature",
+    "Pire cas : excès sur les bulletins retiré",
+    "Dépôts de propositions : données / bulletins",
+    "Durée médiane entre dépôt et fin de législature (jours)"
+   ],
+   "lignes": [
+    [
+     "XIVe (2012-2017)",
+     "1 555",
+     "1 402",
+     "1 385 sur 1 538",
+     "1 711 / 1 694",
+     "1 064"
+    ],
+    [
+     "XVe (2017-2022)",
+     "2 160",
+     "1 964",
+     "1 959 sur 2 155",
+     "2 296 / 2 291",
+     "868"
+    ],
+    [
+     "XVIe (2022-2024)",
+     "1 241",
+     "1 131",
+     "1 128 sur 1 238",
+     "1 318 / 1 315",
+     "381"
     ]
    ]
   }
@@ -318,15 +363,43 @@
   "E14": "6",
   "Efin14": "0",
   "Etextes14": "2",
+  "Eautre14": "6",
   "E15": "1",
   "Efin15": "0",
   "Etextes15": "1",
+  "Eautre15": "1",
   "E16": "23",
-  "Efin16": "23",
+  "Efin16": "21",
   "Etextes16": "6",
+  "Eautre16": "2",
   "E17": "8",
   "Efin17": "8",
   "Etextes17": "3",
+  "Eautre17": "0",
+  "Z14": "1 402",
+  "NZ14": "1 555",
+  "Zw14": "1 385",
+  "Nw14": "1 538",
+  "exces14": "17",
+  "bul14": "1 694",
+  "ext14": "1 711",
+  "med14": "1 064",
+  "Z15": "1 964",
+  "NZ15": "2 160",
+  "Zw15": "1 959",
+  "Nw15": "2 155",
+  "exces15": "5",
+  "bul15": "2 291",
+  "ext15": "2 296",
+  "med15": "868",
+  "Z16": "1 131",
+  "NZ16": "1 241",
+  "Zw16": "1 128",
+  "Nw16": "1 238",
+  "exces16": "3",
+  "bul16": "1 315",
+  "ext16": "1 318",
+  "med16": "381",
   "s1718_P": "12",
   "s1718_N": "41",
   "s2425_P": "45",
@@ -336,6 +409,9 @@
   "cit_art39": "L'initiative des lois appartient concurremment au Premier ministre et aux membres du Parlement.",
   "cit_art48": "Deux semaines de séance sur quatre sont réservées par priorité, et dans l'ordre que le Gouvernement a fixé, à l'examen des textes et aux débats dont il demande l'inscription à l'ordre du jour.",
   "cit_art49a": "Le Premier ministre peut, après délibération du Conseil des ministres, engager la responsabilité du Gouvernement devant l'Assemblée nationale sur le vote d'un projet de loi de finances ou de financement de la sécurité sociale. Dans ce cas, ce projet est considéré comme adopté, sauf si une motion de censure, déposée dans les vingt-quatre heures qui suivent, est votée dans les conditions prévues à l'alinéa précédent.",
+  "cit_art45a": "Tout projet ou proposition de loi est examiné successivement dans les deux Assemblées du Parlement en vue de l'adoption d'un texte identique.",
+  "cit_art45b": "ont la faculté de provoquer la réunion d'une commission mixte paritaire chargée de proposer un texte sur les dispositions restant en discussion.",
+  "cit_art45c": "le Gouvernement peut, après une nouvelle lecture par l'Assemblée nationale et par le Sénat, demander à l'Assemblée nationale de statuer définitivement.",
   "cit_art49b": "Le Premier ministre peut, en outre, recourir à cette procédure pour un autre projet ou une proposition de loi par session.",
   "cit_fiche64": "Cet instrument a néanmoins été utilisé à six reprises, sur deux projets de loi différents, sous la XIVe législature, à une reprise sous la XVe législature, et à 23 reprises sous la XVIe législature.",
   "cit_censure": "La première motion déposée a été adoptée selon la majorité qualifiée requise",

@@ -7,6 +7,9 @@
                          et nature au dépôt initial, motif de chaque absence (test décisif du 06/10/2026)
   e3_engagements.csv     une ligne par engagement de responsabilité (art. 49, al. 3), motions et issue
   bulletins_493.csv      témoin : engagements et motions lus dans les bulletins statistiques de l'AN, par session
+  bulletins_depots.csv   témoin d'E1 : dépôts de projets et de propositions en première lecture, par session (bulletins)
+  e1_initiatives_extrait.csv  une ligne par initiative déposée en premier lieu à l'AN (XIV à XVII), état à la fin de
+                         la législature (colonnes utiles d'e1_initiatives.csv)
   pages_temoins.json     texte des pages citées (fiche n° 64 de l'AN ; rapport n° 802 du Sénat, p. 44), avec
                          l'empreinte du document entier
 Les articles de la Constitution sont les réponses Légifrance archivées (legifrance_<sha>.json), copiées telles quelles.
@@ -32,8 +35,16 @@ def norm(s: str) -> str:
 
 def main() -> None:
     import fitz
-    for f in ("e2_lois.csv", "e3_engagements.csv", "bulletins_493.csv"):
+    for f in ("e2_lois.csv", "e3_engagements.csv", "bulletins_493.csv", "bulletins_depots.csv"):
         shutil.copyfile(TEST / f, ICI / f)
+    import csv
+    with (TEST / "e1_initiatives.csv").open(encoding="utf-8") as src, \
+            (ICI / "e1_initiatives_extrait.csv").open("w", encoding="utf-8", newline="") as dst:
+        K = ["texte_depose", "legislature", "date_depot", "duree_jours", "origine", "nature", "etat"]
+        w = csv.writer(dst, lineterminator="\n")
+        w.writerow(K)
+        for r in csv.DictReader(src):
+            w.writerow([r[k] for k in K])
     out = {}
     for k, (f, p) in PIECES.items():
         d = fitz.open(f)
