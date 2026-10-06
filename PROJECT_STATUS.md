@@ -53,6 +53,23 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-06 — Pastille du dossier collante ; en-tête de dossier dans `/ressources/` (variante A) ; POUSSÉ (`16fc5e8`, `99de828`), production vérifiée
+
+Demande de l'auteur : la barre collante doit englober la pastille bleu marine ; l'index doit mieux signaler l'idée de
+dossier. Maquettes : `D:\PRO\06_PROMOTION\MAQUETTES_INDEX_DOSSIERS_2026-10-06\` ; variante A retenue pour Dette, Pour
+enseigner et Promesses (Notions, Corpus, Guides gardent l'en-tête simple).
+
+- `16fc5e8` : enveloppe `.dossier-collant` (pastille + source + onglets) dans `partials/dossier-barre.html`, collée sous
+  l'en-tête du site à sa hauteur mesurée. Deux défauts EN LIGNE corrigés au passage : barre Promesses qui faisait
+  déborder la page de 177 px à 1 680 px (libellés courts désormais posés par mesure, classe `is-court`) ; 4 px de
+  pastille sous l'en-tête à 390 px (54 px en dur pour 58,5). Marges d'ancre reportées sur l'enveloppe.
+- `99de828` : `dossier: true` dans `content/ressources/_index*.md` → pastille des pages, décompte, grand titre, bande des
+  questions ; sommaire en pastilles pleines « Dossier ». Libellés des cinq questions Dette sortis du shortcode vers
+  `data/dossier_dette.yaml` (source unique barre + index) ; build comparé à l'octet avant/après : identique.
+- Contrôles : build 0, `check-all --ci` 0, `audit-liens-build.py` 0 critique (2 signalements UX préexistants sur
+  `/en/publications/`), 390/1 280 px FR et EN sans débordement de page, ancres visibles sous le bloc (5 cas). Non
+  testé : impression. En ligne : `/pouvoirs-du-president-de-la-republique/` collant à 67 px, sans débordement.
+
 ### 2026-10-04/05 — AWP-09 publié (FR + EN), Wikidata, renvois du dossier dette ; POUSSÉ, déploiements verts
 
 - Fiches `/awp/awp-09/` (`397f347`) et `/en/awp/awp-09/` (`37a4e53`) : Zenodo 10.5281/zenodo.23143030 (FR) et
