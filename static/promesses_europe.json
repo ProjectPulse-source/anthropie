@@ -1,0 +1,1153 @@
+{
+ "releve_le": "2026-10-06",
+ "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources : TFUE (EUR-Lex), Conseil de l'UE, SWP / GESIS (doi 10.7802/2560, CC BY 4.0), Commission européenne",
+ "meta": {
+  "page": "https://stephane-lalut.com/ce-que-la-france-peut-decider-dans-l-union-europeenne/",
+  "protocole": "fiches de preuve, prolongement U (U-E1 à U-E4)",
+  "releve_conseil": {
+   "date": "2026-10-06",
+   "entrees": 1755,
+   "doublons": 8,
+   "debut": "2009-12-22",
+   "fin": "2026-10-01",
+   "regles": {
+    "Majorité qualifiée": 1622,
+    "Unanimité": 132,
+    "Majorité qualifiée sans proposition de la Commission": 1
+   }
+  },
+  "temoin_votes": "Public Voting Data of the Council of the EU, v2.0.0, SWP, doi 10.7802/2560",
+  "temoin_bases": "Secrétariat général du Conseil, Guide to the ordinary legislative procedure, annexe III, doi 10.2860/74684",
+  "ecarts_expliques": {
+   "PL_contre": 1,
+   "BG_abstention": 1,
+   "IT_abstention": 1,
+   "RO_abstention": 1,
+   "FR_contre": -2
+  }
+ },
+ "gardes": [
+  "U1 : typologie complète et citée (5 exclusives, 11 partagées, 7 d'appui)",
+  "U2 : 81 bases PLO (74 articles), 2 conditionnelles, 51 bases à l'unanimité ; témoin du Conseil : concordance exacte",
+  "U3 : relevé du Conseil concordant avec SWP pays par pays (écarts expliqués seulement)",
+  "U4 : France 2 contre, 3 abstentions, 1750 pour (liste des actes cohérente)",
+  "U5 : transposition contrôlée par le texte de la Commission"
+ ],
+ "calcul": {
+  "votes": {
+   "etats_identiques": 23,
+   "fr_contre": 2,
+   "fr_abst": 3,
+   "fr_np": 0,
+   "fr_pour": 1750
+  },
+  "bases": {
+   "plo": [
+    "100(2)",
+    "114(1)",
+    "116, al. 2",
+    "118, al. 1",
+    "121(6)",
+    "129(3)",
+    "133, al. 1",
+    "14, al. 1",
+    "149, al. 1",
+    "15(3)",
+    "153(2)",
+    "157(3)",
+    "16(2)",
+    "164, al. 1",
+    "165(4)",
+    "166(4)",
+    "167(5)",
+    "168(4)",
+    "168(5)",
+    "169(3)",
+    "172, al. 1",
+    "173(3)",
+    "175, al. 3",
+    "177, al. 1",
+    "177, al. 2",
+    "178, al. 1",
+    "18, al. 2",
+    "182(1)",
+    "182(5)",
+    "188, al. 2",
+    "189(2)",
+    "19(2)",
+    "192(1)",
+    "192(3)",
+    "194(2)",
+    "195(2)",
+    "196(2)",
+    "197(2)",
+    "207(2)",
+    "209(1)",
+    "21(2)",
+    "212(2)",
+    "214(3)",
+    "214(5)",
+    "224, al. 1",
+    "24, al. 1",
+    "257, al. 1",
+    "281, al. 2",
+    "291(3)",
+    "298(2)",
+    "322(1)",
+    "325(4)",
+    "33, al. 1",
+    "336, al. 1",
+    "338(1)",
+    "42, al. 1",
+    "43(2)",
+    "46, al. 1",
+    "48, al. 1",
+    "50(1)",
+    "51, al. 2",
+    "52(2)",
+    "53(1)",
+    "56, al. 2",
+    "59(1)",
+    "62, al. 1",
+    "64(2)",
+    "75, al. 1",
+    "77(2)",
+    "78(2)",
+    "79(2)",
+    "79(4)",
+    "81(2)",
+    "82(1)",
+    "82(2)",
+    "83(1)",
+    "84, al. 1",
+    "85(1)",
+    "87(2)",
+    "88(2)",
+    "91(1)"
+   ],
+   "cond": [
+    "136(1)",
+    "83(2)"
+   ],
+   "una": [
+    "108(2)",
+    "113, al. 1",
+    "115, al. 1",
+    "118, al. 2",
+    "126(14)",
+    "127(6)",
+    "140(3)",
+    "153(2)",
+    "155(2)",
+    "19(1)",
+    "192(2)",
+    "194(3)",
+    "203, al. 1",
+    "207(4)",
+    "21(3)",
+    "218(8)",
+    "219(1)",
+    "22(1)",
+    "22(2)",
+    "223(1)",
+    "223(2)",
+    "246, al. 3",
+    "25, al. 2",
+    "252, al. 1",
+    "257, al. 4",
+    "262, al. 1",
+    "293(1)",
+    "294(9)",
+    "301, al. 2",
+    "305, al. 2",
+    "308, al. 3",
+    "311, al. 3",
+    "312(2)",
+    "329(2)",
+    "331(2)",
+    "332, al. 1",
+    "333(1)",
+    "333(2)",
+    "342, al. 1",
+    "346(2)",
+    "352(1)",
+    "64(3)",
+    "65(4)",
+    "77(3)",
+    "81(3)",
+    "82(2)",
+    "83(1)",
+    "86(1)",
+    "87(3)",
+    "89, al. 1",
+    "92, al. 1"
+   ],
+   "plo_art": 74,
+   "una_art": 48,
+   "mixtes": [
+    "153(2)",
+    "82(2)",
+    "83(1)"
+   ],
+   "ecartes_plo": 11,
+   "ecartes_una": 7,
+   "temoin": 83
+  }
+ },
+ "tableaux": {
+  "competences": {
+   "entetes": [
+    "Catégorie",
+    "Domaine (texte du traité)"
+   ],
+   "lignes": [
+    [
+     "Exclusive (art. 3, § 1)",
+     "l'union douanière"
+    ],
+    [
+     "Exclusive (art. 3, § 1)",
+     "l'établissement des règles de concurrence nécessaires au fonctionnement du marché intérieur"
+    ],
+    [
+     "Exclusive (art. 3, § 1)",
+     "la politique monétaire pour les États membres dont la monnaie est l'euro"
+    ],
+    [
+     "Exclusive (art. 3, § 1)",
+     "la conservation des ressources biologiques de la mer dans le cadre de la politique commune de la pêche"
+    ],
+    [
+     "Exclusive (art. 3, § 1)",
+     "la politique commerciale commune"
+    ],
+    [
+     "Partagée (art. 4, § 2)",
+     "le marché intérieur"
+    ],
+    [
+     "Partagée (art. 4, § 2)",
+     "la politique sociale, pour les aspects définis dans le présent traité"
+    ],
+    [
+     "Partagée (art. 4, § 2)",
+     "la cohésion économique, sociale et territoriale"
+    ],
+    [
+     "Partagée (art. 4, § 2)",
+     "l'agriculture et la pêche, à l'exclusion de la conservation des ressources biologiques de la mer"
+    ],
+    [
+     "Partagée (art. 4, § 2)",
+     "l'environnement"
+    ],
+    [
+     "Partagée (art. 4, § 2)",
+     "la protection des consommateurs"
+    ],
+    [
+     "Partagée (art. 4, § 2)",
+     "les transports"
+    ],
+    [
+     "Partagée (art. 4, § 2)",
+     "les réseaux transeuropéens"
+    ],
+    [
+     "Partagée (art. 4, § 2)",
+     "l'énergie"
+    ],
+    [
+     "Partagée (art. 4, § 2)",
+     "l'espace de liberté, de sécurité et de justice"
+    ],
+    [
+     "Partagée (art. 4, § 2)",
+     "les enjeux communs de sécurité en matière de santé publique, pour les aspects définis dans le présent traité"
+    ],
+    [
+     "Appui, coordination, complément (art. 6)",
+     "la protection et l'amélioration de la santé humaine"
+    ],
+    [
+     "Appui, coordination, complément (art. 6)",
+     "l'industrie"
+    ],
+    [
+     "Appui, coordination, complément (art. 6)",
+     "la culture"
+    ],
+    [
+     "Appui, coordination, complément (art. 6)",
+     "le tourisme"
+    ],
+    [
+     "Appui, coordination, complément (art. 6)",
+     "l'éducation, la formation professionnelle, la jeunesse et le sport"
+    ],
+    [
+     "Appui, coordination, complément (art. 6)",
+     "la protection civile"
+    ],
+    [
+     "Appui, coordination, complément (art. 6)",
+     "la coopération administrative"
+    ]
+   ]
+  },
+  "instruments": {
+   "entetes": [
+    "Matière",
+    "Base (TFUE)",
+    "Règle au Conseil"
+   ],
+   "lignes": [
+    [
+     "Marché intérieur (rapprochement des législations)",
+     "art. 114(1)",
+     "procédure législative ordinaire (majorité qualifiée)"
+    ],
+    [
+     "Fiscalité indirecte (TVA, accises)",
+     "art. 113, al. 1",
+     "unanimité au Conseil"
+    ],
+    [
+     "Politique commerciale : cadre de mise en œuvre",
+     "art. 207(2)",
+     "procédure législative ordinaire (majorité qualifiée)"
+    ],
+    [
+     "Politique commerciale : certains accords",
+     "art. 207(4)",
+     "unanimité au Conseil"
+    ],
+    [
+     "Environnement",
+     "art. 192(1)",
+     "procédure législative ordinaire (majorité qualifiée)"
+    ],
+    [
+     "Environnement : dispositions fiscales, aménagement du territoire, énergie",
+     "art. 192(2)",
+     "unanimité au Conseil"
+    ],
+    [
+     "Agriculture et pêche : organisation commune des marchés",
+     "art. 43(2)",
+     "procédure législative ordinaire (majorité qualifiée)"
+    ],
+    [
+     "Asile",
+     "art. 78(2)",
+     "procédure législative ordinaire (majorité qualifiée)"
+    ],
+    [
+     "Immigration",
+     "art. 79(2)",
+     "procédure législative ordinaire (majorité qualifiée)"
+    ],
+    [
+     "Politique sociale",
+     "art. 153(2)",
+     "les deux, selon les mesures"
+    ],
+    [
+     "Ressources propres de l'Union",
+     "art. 311, al. 3",
+     "unanimité au Conseil"
+    ],
+    [
+     "Cadre financier pluriannuel",
+     "art. 312(2)",
+     "unanimité au Conseil"
+    ]
+   ]
+  },
+  "france": {
+   "entetes": [
+    "Date",
+    "Vote de la France",
+    "Acte"
+   ],
+   "lignes": [
+    [
+     "17 février 2014",
+     "contre",
+     "Règlement sur les vins aromatisés (n° 251/2014)"
+    ],
+    [
+     "8 mai 2014",
+     "abstention",
+     "Directive modifiant la directive 2001/110/CE relative au miel"
+    ],
+    [
+     "1er octobre 2015",
+     "abstention",
+     "Règlement sur le commerce des produits dérivés du phoque"
+    ],
+    [
+     "8 juillet 2025",
+     "abstention",
+     "Décision sur l'accord d'interprétation du traité sur la Charte de l'énergie"
+    ],
+    [
+     "23 février 2026",
+     "contre",
+     "Règlement sur la notion de « pays tiers sûr » (2025/0132 (COD))"
+    ]
+   ]
+  },
+  "etats": {
+   "entetes": [
+    "État membre",
+    "Contre",
+    "Abstention",
+    "Ne participe pas"
+   ],
+   "lignes": [
+    [
+     "Allemagne",
+     "32",
+     "48",
+     "0"
+    ],
+    [
+     "Autriche",
+     "36",
+     "67",
+     "0"
+    ],
+    [
+     "Belgique",
+     "7",
+     "47",
+     "0"
+    ],
+    [
+     "Bulgarie",
+     "19",
+     "48",
+     "1"
+    ],
+    [
+     "Chypre",
+     "13",
+     "1",
+     "1"
+    ],
+    [
+     "Croatie",
+     "4",
+     "12",
+     "1"
+    ],
+    [
+     "Danemark",
+     "29",
+     "12",
+     "159"
+    ],
+    [
+     "Espagne",
+     "17",
+     "14",
+     "2"
+    ],
+    [
+     "Estonie",
+     "7",
+     "26",
+     "3"
+    ],
+    [
+     "Finlande",
+     "19",
+     "11",
+     "1"
+    ],
+    [
+     "France",
+     "2",
+     "3",
+     "0"
+    ],
+    [
+     "Grèce",
+     "7",
+     "7",
+     "1"
+    ],
+    [
+     "Hongrie",
+     "79",
+     "47",
+     "4"
+    ],
+    [
+     "Irlande",
+     "5",
+     "12",
+     "106"
+    ],
+    [
+     "Italie",
+     "18",
+     "12",
+     "2"
+    ],
+    [
+     "Lettonie",
+     "7",
+     "20",
+     "3"
+    ],
+    [
+     "Lituanie",
+     "6",
+     "7",
+     "3"
+    ],
+    [
+     "Luxembourg",
+     "15",
+     "18",
+     "0"
+    ],
+    [
+     "Malte",
+     "15",
+     "17",
+     "0"
+    ],
+    [
+     "Pays-Bas",
+     "41",
+     "24",
+     "1"
+    ],
+    [
+     "Pologne",
+     "57",
+     "40",
+     "4"
+    ],
+    [
+     "Portugal",
+     "8",
+     "19",
+     "0"
+    ],
+    [
+     "Roumanie",
+     "9",
+     "11",
+     "3"
+    ],
+    [
+     "Royaume-Uni",
+     "56",
+     "118",
+     "72"
+    ],
+    [
+     "Slovaquie",
+     "23",
+     "35",
+     "4"
+    ],
+    [
+     "Slovénie",
+     "6",
+     "15",
+     "0"
+    ],
+    [
+     "Suède",
+     "41",
+     "13",
+     "2"
+    ],
+    [
+     "Tchéquie",
+     "19",
+     "54",
+     "3"
+    ]
+   ]
+  },
+  "transposition": {
+   "entetes": [
+    "Indicateur, au 30 novembre 2025",
+    "France",
+    "Moyenne de l'UE"
+   ],
+   "lignes": [
+    [
+     "Déficit de transposition (directives non transposées)",
+     "1,1 %",
+     "1,1 %"
+    ],
+    [
+     "Directives en retard",
+     "11",
+     "11"
+    ],
+    [
+     "En retard de plus de deux ans",
+     "1",
+     "1"
+    ],
+    [
+     "Retard moyen (mois)",
+     "10,2",
+     "9,7"
+    ],
+    [
+     "Déficit de conformité (directives mal transposées)",
+     "1,5 %",
+     "1,1 %"
+    ],
+    [
+     "Durée des procédures d'infraction pour retard (mois)",
+     "17,9",
+     "15,2"
+    ]
+   ]
+  }
+ },
+ "tableaux_en": {
+  "competences": {
+   "entetes": [
+    "Category",
+    "Area (French text of the Treaty)"
+   ],
+   "lignes": [
+    [
+     "Exclusive (art. 3(1))",
+     "l'union douanière"
+    ],
+    [
+     "Exclusive (art. 3(1))",
+     "l'établissement des règles de concurrence nécessaires au fonctionnement du marché intérieur"
+    ],
+    [
+     "Exclusive (art. 3(1))",
+     "la politique monétaire pour les États membres dont la monnaie est l'euro"
+    ],
+    [
+     "Exclusive (art. 3(1))",
+     "la conservation des ressources biologiques de la mer dans le cadre de la politique commune de la pêche"
+    ],
+    [
+     "Exclusive (art. 3(1))",
+     "la politique commerciale commune"
+    ],
+    [
+     "Shared (art. 4(2))",
+     "le marché intérieur"
+    ],
+    [
+     "Shared (art. 4(2))",
+     "la politique sociale, pour les aspects définis dans le présent traité"
+    ],
+    [
+     "Shared (art. 4(2))",
+     "la cohésion économique, sociale et territoriale"
+    ],
+    [
+     "Shared (art. 4(2))",
+     "l'agriculture et la pêche, à l'exclusion de la conservation des ressources biologiques de la mer"
+    ],
+    [
+     "Shared (art. 4(2))",
+     "l'environnement"
+    ],
+    [
+     "Shared (art. 4(2))",
+     "la protection des consommateurs"
+    ],
+    [
+     "Shared (art. 4(2))",
+     "les transports"
+    ],
+    [
+     "Shared (art. 4(2))",
+     "les réseaux transeuropéens"
+    ],
+    [
+     "Shared (art. 4(2))",
+     "l'énergie"
+    ],
+    [
+     "Shared (art. 4(2))",
+     "l'espace de liberté, de sécurité et de justice"
+    ],
+    [
+     "Shared (art. 4(2))",
+     "les enjeux communs de sécurité en matière de santé publique, pour les aspects définis dans le présent traité"
+    ],
+    [
+     "Support, coordination, supplement (art. 6)",
+     "la protection et l'amélioration de la santé humaine"
+    ],
+    [
+     "Support, coordination, supplement (art. 6)",
+     "l'industrie"
+    ],
+    [
+     "Support, coordination, supplement (art. 6)",
+     "la culture"
+    ],
+    [
+     "Support, coordination, supplement (art. 6)",
+     "le tourisme"
+    ],
+    [
+     "Support, coordination, supplement (art. 6)",
+     "l'éducation, la formation professionnelle, la jeunesse et le sport"
+    ],
+    [
+     "Support, coordination, supplement (art. 6)",
+     "la protection civile"
+    ],
+    [
+     "Support, coordination, supplement (art. 6)",
+     "la coopération administrative"
+    ]
+   ]
+  },
+  "instruments": {
+   "entetes": [
+    "Area",
+    "Legal basis (TFEU)",
+    "Rule in the Council"
+   ],
+   "lignes": [
+    [
+     "Internal market (approximation of laws)",
+     "art. 114(1)",
+     "ordinary legislative procedure (qualified majority)"
+    ],
+    [
+     "Indirect taxation (VAT, excise duties)",
+     "art. 113, al. 1",
+     "unanimity in the Council"
+    ],
+    [
+     "Commercial policy: implementing framework",
+     "art. 207(2)",
+     "ordinary legislative procedure (qualified majority)"
+    ],
+    [
+     "Commercial policy: certain agreements",
+     "art. 207(4)",
+     "unanimity in the Council"
+    ],
+    [
+     "Environment",
+     "art. 192(1)",
+     "ordinary legislative procedure (qualified majority)"
+    ],
+    [
+     "Environment: fiscal provisions, land use, energy mix",
+     "art. 192(2)",
+     "unanimity in the Council"
+    ],
+    [
+     "Agriculture and fisheries: common market organisation",
+     "art. 43(2)",
+     "ordinary legislative procedure (qualified majority)"
+    ],
+    [
+     "Asylum",
+     "art. 78(2)",
+     "ordinary legislative procedure (qualified majority)"
+    ],
+    [
+     "Immigration",
+     "art. 79(2)",
+     "ordinary legislative procedure (qualified majority)"
+    ],
+    [
+     "Social policy",
+     "art. 153(2)",
+     "both, depending on the measure"
+    ],
+    [
+     "The Union's own resources",
+     "art. 311, al. 3",
+     "unanimity in the Council"
+    ],
+    [
+     "Multiannual financial framework",
+     "art. 312(2)",
+     "unanimity in the Council"
+    ]
+   ]
+  },
+  "france": {
+   "entetes": [
+    "Date",
+    "France's vote",
+    "Act"
+   ],
+   "lignes": [
+    [
+     "17 February 2014",
+     "against",
+     "Regulation on aromatised wine products (No 251/2014)"
+    ],
+    [
+     "8 May 2014",
+     "abstention",
+     "Directive amending Council Directive 2001/110/EC relating to honey"
+    ],
+    [
+     "1 October 2015",
+     "abstention",
+     "Regulation on trade in seal products"
+    ],
+    [
+     "8 July 2025",
+     "abstention",
+     "Decision on the agreement on the interpretation of the Energy Charter Treaty"
+    ],
+    [
+     "23 February 2026",
+     "against",
+     "Regulation on the 'safe third country' concept (2025/0132 (COD))"
+    ]
+   ]
+  },
+  "etats": {
+   "entetes": [
+    "Member State",
+    "Against",
+    "Abstention",
+    "Not taking part"
+   ],
+   "lignes": [
+    [
+     "Austria",
+     "36",
+     "67",
+     "0"
+    ],
+    [
+     "Belgium",
+     "7",
+     "47",
+     "0"
+    ],
+    [
+     "Bulgaria",
+     "19",
+     "48",
+     "1"
+    ],
+    [
+     "Croatia",
+     "4",
+     "12",
+     "1"
+    ],
+    [
+     "Cyprus",
+     "13",
+     "1",
+     "1"
+    ],
+    [
+     "Czechia",
+     "19",
+     "54",
+     "3"
+    ],
+    [
+     "Denmark",
+     "29",
+     "12",
+     "159"
+    ],
+    [
+     "Estonia",
+     "7",
+     "26",
+     "3"
+    ],
+    [
+     "Finland",
+     "19",
+     "11",
+     "1"
+    ],
+    [
+     "France",
+     "2",
+     "3",
+     "0"
+    ],
+    [
+     "Germany",
+     "32",
+     "48",
+     "0"
+    ],
+    [
+     "Greece",
+     "7",
+     "7",
+     "1"
+    ],
+    [
+     "Hungary",
+     "79",
+     "47",
+     "4"
+    ],
+    [
+     "Ireland",
+     "5",
+     "12",
+     "106"
+    ],
+    [
+     "Italy",
+     "18",
+     "12",
+     "2"
+    ],
+    [
+     "Latvia",
+     "7",
+     "20",
+     "3"
+    ],
+    [
+     "Lithuania",
+     "6",
+     "7",
+     "3"
+    ],
+    [
+     "Luxembourg",
+     "15",
+     "18",
+     "0"
+    ],
+    [
+     "Malta",
+     "15",
+     "17",
+     "0"
+    ],
+    [
+     "Netherlands",
+     "41",
+     "24",
+     "1"
+    ],
+    [
+     "Poland",
+     "57",
+     "40",
+     "4"
+    ],
+    [
+     "Portugal",
+     "8",
+     "19",
+     "0"
+    ],
+    [
+     "Romania",
+     "9",
+     "11",
+     "3"
+    ],
+    [
+     "Slovakia",
+     "23",
+     "35",
+     "4"
+    ],
+    [
+     "Slovenia",
+     "6",
+     "15",
+     "0"
+    ],
+    [
+     "Spain",
+     "17",
+     "14",
+     "2"
+    ],
+    [
+     "Sweden",
+     "41",
+     "13",
+     "2"
+    ],
+    [
+     "United Kingdom",
+     "56",
+     "118",
+     "72"
+    ]
+   ]
+  },
+  "transposition": {
+   "entetes": [
+    "Indicator, as at 30 November 2025",
+    "France",
+    "EU average"
+   ],
+   "lignes": [
+    [
+     "Transposition deficit (directives not transposed)",
+     "1.1%",
+     "1.1%"
+    ],
+    [
+     "Overdue directives",
+     "11",
+     "11"
+    ],
+    [
+     "Overdue by more than two years",
+     "1",
+     "1"
+    ],
+    [
+     "Average delay (months)",
+     "10.2",
+     "9.7"
+    ],
+    [
+     "Conformity deficit (directives incorrectly transposed)",
+     "1.5%",
+     "1.1%"
+    ],
+    [
+     "Duration of infringement proceedings for late transposition (months)",
+     "17.9",
+     "15.2"
+    ]
+   ]
+  }
+ },
+ "affichage": {
+  "exclusives": "l'union douanière, l'établissement des règles de concurrence nécessaires au fonctionnement du marché intérieur, la politique monétaire pour les États membres dont la monnaie est l'euro, la conservation des ressources biologiques de la mer dans le cadre de la politique commune de la pêche et la politique commerciale commune",
+  "n_exclusives": "5",
+  "partagees": "le marché intérieur, la politique sociale, pour les aspects définis dans le présent traité, la cohésion économique, sociale et territoriale, l'agriculture et la pêche, à l'exclusion de la conservation des ressources biologiques de la mer, l'environnement, la protection des consommateurs, les transports, les réseaux transeuropéens, l'énergie, l'espace de liberté, de sécurité et de justice et les enjeux communs de sécurité en matière de santé publique, pour les aspects définis dans le présent traité",
+  "n_partagees": "11",
+  "appui": "la protection et l'amélioration de la santé humaine, l'industrie, la culture, le tourisme, l'éducation, la formation professionnelle, la jeunesse et le sport, la protection civile et la coopération administrative",
+  "n_appui": "7",
+  "cit_2_1": "Lorsque les traités attribuent à l'Union une compétence exclusive dans un domaine déterminé, seule l'Union peut légiférer et adopter des actes juridiquement contraignants, les États membres ne pouvant le faire par eux-mêmes que s'ils sont habilités par l'Union, ou pour mettre en œuvre les actes de l'Union.",
+  "cit_2_2": "Lorsque les traités attribuent à l'Union une compétence partagée avec les États membres dans un domaine déterminé, l'Union et les États membres peuvent légiférer et adopter des actes juridiquement contraignants dans ce domaine. Les États membres exercent leur compétence dans la mesure où l'Union n'a pas exercé la sienne. Les États membres exercent à nouveau leur compétence dans la mesure où l'Union a décidé de cesser d'exercer la sienne.",
+  "cit_2_5": "Dans certains domaines et dans les conditions prévues par les traités, l'Union dispose d'une compétence pour mener des actions pour appuyer, coordonner ou compléter l'action des États membres, sans pour autant remplacer leur compétence dans ces domaines.",
+  "cit_4_3": "Dans les domaines de la recherche, du développement technologique et de l'espace, l'Union dispose d'une compétence pour mener des actions, notamment pour définir et mettre en œuvre des programmes, sans que l'exercice de cette compétence ne puisse avoir pour effet d'empêcher les États membres d'exercer la leur.",
+  "cit_3_2": "L'Union dispose également d'une compétence exclusive pour la conclusion d'un accord international lorsque cette conclusion est prévue dans un acte législatif de l'Union, ou est nécessaire pour lui permettre d'exercer sa compétence interne, ou dans la mesure où elle est susceptible d'affecter des règles communes ou d'en altérer la portée.",
+  "n_plo": "81",
+  "n_plo_art": "74",
+  "n_una": "51",
+  "n_una_art": "48",
+  "n_cond": "2",
+  "n_temoin": "83",
+  "debut": "22 décembre 2009",
+  "fin": "1er octobre 2026",
+  "entrees": "1 755",
+  "entrees_min": "1 747",
+  "doublons": "8",
+  "fr_contre": "deux fois",
+  "fr_abst": "trois fois",
+  "fr_c": "2",
+  "fr_a": "3",
+  "fr_pour": "1 750",
+  "de_c": "32",
+  "de_a": "48",
+  "nl_c": "41",
+  "pl_c": "57",
+  "hu_c": "79",
+  "it_c": "18",
+  "es_c": "17",
+  "uk_c": "56",
+  "qmv": "1 622",
+  "una": "132",
+  "releve": "6 octobre 2026",
+  "tr_date": "30 novembre 2025",
+  "tr_def": "1,1",
+  "tr_def_ue": "1,1",
+  "tr_retard": "11",
+  "tr_dues": "1 022",
+  "tr_conf": "1,5",
+  "tr_conf_ue": "1,1",
+  "tr_mois": "10,2",
+  "tr_mois_ue": "9,7",
+  "tr_inf": "17,9",
+  "tr_inf_ue": "15,2",
+  "tr_double": "neuf",
+  "cit_tue16": "Une minorité de blocage doit inclure au moins quatre membres du Conseil",
+  "etats_identiques": "23",
+  "etats_total": "28",
+  "releve_le": "6 octobre 2026 (votes du Conseil, relevé à cette date ; transposition au 30 novembre 2025)"
+ },
+ "affichage_en": {
+  "exclusives": "",
+  "partagees": "",
+  "appui": "",
+  "cit_2_1": "",
+  "cit_2_2": "",
+  "cit_2_5": "",
+  "cit_4_3": "",
+  "cit_3_2": "",
+  "n_exclusives": "5",
+  "n_partagees": "11",
+  "n_appui": "7",
+  "n_plo": "81",
+  "n_plo_art": "74",
+  "n_una": "51",
+  "n_una_art": "48",
+  "n_cond": "2",
+  "n_temoin": "83",
+  "debut": "22 December 2009",
+  "fin": "1 October 2026",
+  "entrees": "1,755",
+  "entrees_min": "1,747",
+  "doublons": "8",
+  "fr_contre": "twice",
+  "fr_abst": "three times",
+  "fr_c": "2",
+  "fr_a": "3",
+  "fr_pour": "1,750",
+  "de_c": "32",
+  "de_a": "48",
+  "nl_c": "41",
+  "pl_c": "57",
+  "hu_c": "79",
+  "it_c": "18",
+  "es_c": "17",
+  "uk_c": "56",
+  "qmv": "1,622",
+  "una": "132",
+  "releve": "6 October 2026",
+  "tr_date": "30 November 2025",
+  "tr_def": "1.1",
+  "tr_def_ue": "1.1",
+  "tr_retard": "11",
+  "tr_dues": "1,022",
+  "tr_conf": "1.5",
+  "tr_conf_ue": "1.1",
+  "tr_mois": "10.2",
+  "tr_mois_ue": "9.7",
+  "tr_inf": "17.9",
+  "tr_inf_ue": "15.2",
+  "tr_double": "nine",
+  "cit_tue16": "",
+  "etats_identiques": "23",
+  "etats_total": "28",
+  "releve_le": "6 October 2026 (Council votes, retrieved on that date; transposition as at 30 November 2025)"
+ }
+}

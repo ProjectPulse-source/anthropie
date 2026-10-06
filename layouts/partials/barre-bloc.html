@@ -19,6 +19,12 @@
        déborde à 390 px (bloc « Promesses présidentielles : du pouvoir aux résultats »). Défaut : le titre. */ -}}
 {{- $titre := .bloc.titre_barre | default .bloc.titre -}}
 {{- $pages := sort (where site.Pages "Params.ressource.bloc" $bloc) "Params.ressource.rang" -}}
+{{- /* PROLONGEMENTS (06/10/2026, dossier Promesses) : une page qui déclare `ressource.prolongement: true` traite un cas
+       particulier du dossier ; règle 1 du modèle, jamais en onglet. Elle va dans le panneau « Prolongements » (« Further
+       topics »), comme le dossier Dette (shortcode dossier-dette), et compte dans la règle des deux entrées. Libellés :
+       `onglet.long`, `onglet.role`. Un bloc sans prolongement est rendu exactement comme avant. */ -}}
+{{- $prolong := where $pages "Params.ressource.prolongement" true -}}
+{{- $pages = where $pages "Params.ressource.prolongement" "!=" true -}}
 {{- $onglets := slice -}}
 {{- range $pages -}}
   {{- $o := .Params.onglet | default dict -}}
@@ -43,6 +49,21 @@
     {{- $panneau = dict "titre" "In French" "court" "French" "role" (printf "%d more" (len .)) "nom" "in French" "entete" "Pages of this section available in French only" "entrees" . -}}
   {{- end -}}
 {{- end -}}
+{{- $prEntrees := slice -}}
+{{- range $prolong -}}
+  {{- $o := .Params.onglet | default dict -}}
+  {{- $prEntrees = $prEntrees | append (dict "url" .RelPermalink "titre" ($o.long | default .Title) "role" $o.role "ici" (eq .RelPermalink $page.RelPermalink)) -}}
+{{- end -}}
+{{- if $prEntrees -}}
+  {{- /* Page anglaise : les entrées « in French » déjà réunies (pages du bloc sans traduction, prolongements compris)
+         rejoignent le même panneau, après les prolongements anglais. */ -}}
+  {{- with $panneau }}{{ $prEntrees = $prEntrees | append .entrees }}{{ end -}}
+  {{- $panneau = dict "titre" (cond $en "Further topics" "Prolongements") "court" (cond $en "More" "Plus")
+        "role" (printf "%d %s" (len $prEntrees) (cond $en (cond (eq (len $prEntrees) 1) "topic" "topics") (cond (eq (len $prEntrees) 1) "thème" "thèmes"))) "nom" (cond $en "further topics" "prolongements")
+        "actif" (in $prolong $page) "entete" (cond $en "Further topics in the dossier" "Prolongements du dossier") "entrees" $prEntrees -}}
+{{- end -}}
+{{- /* Page anglaise d'un bloc dont les prolongements n'existent qu'en français : ils restent dans « In French », avec les
+       autres pages non traduites. */ -}}
 {{- $n := len $onglets -}}
 {{- with $panneau }}{{ $n = add $n (len .entrees) }}{{ end -}}
 {{- if ge $n 2 -}}

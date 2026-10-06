@@ -1,0 +1,729 @@
+{
+ "releve_le": "2026-10-05",
+ "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Conseil constitutionnel (DILA, CONSTIT), Journal officiel, Assemblée nationale",
+ "meta": {
+  "page": "https://stephane-lalut.com/un-president-peut-il-recourir-au-referendum/",
+  "protocole": "fiches de preuve, prolongement R (R-E1, R-E2)",
+  "arrete": "2026-10-05",
+  "constitution": {
+   "3": {
+    "legiarti": "LEGIARTI000019240995",
+    "archive": "2026-10/2b5639c959fce37006de2d076ddd81a76e9d7599c4d9e9cab4ad35deb29ecc50.json"
+   },
+   "11": {
+    "legiarti": "LEGIARTI000019241004",
+    "archive": "2026-09/e4718a1b13a755204ea409d81c5025811a2bfb29fb5e6fae0bc10a87d19367d8.json"
+   },
+   "60": {
+    "legiarti": "LEGIARTI000006527548",
+    "archive": "2026-10/71b380ebc25814f0688b85855d579f19d6f05d7193d05b00ad8bc7d3881f0c9e.json"
+   },
+   "89": {
+    "legiarti": "LEGIARTI000019240655",
+    "archive": "2026-10/0caaf2457602bce55a86b6825cd567e7bca2a4a2d82794135566b840d7c58eee.json"
+   }
+  },
+  "temoin_jo": {
+   "1961-01-08": [
+    "1960-12-08",
+    "JORFTEXT000000852818",
+    "61-44",
+    "JORFTEXT000000314906"
+   ],
+   "1962-04-08": [
+    "1962-03-20",
+    "JORFTEXT000000496969",
+    "62-421",
+    "JORFTEXT000000509045"
+   ],
+   "1962-10-28": [
+    null,
+    null,
+    "62-1292",
+    "JORFTEXT000000684037"
+   ],
+   "1969-04-27": [
+    "1969-04-02",
+    "JORFTEXT000000499637",
+    null,
+    null
+   ],
+   "1972-04-23": [
+    "1972-04-05",
+    "JORFTEXT000000513770",
+    "72-339",
+    "JORFTEXT000000684055"
+   ],
+   "1988-11-06": [
+    "1988-10-05",
+    "JORFTEXT000000872797",
+    "88-1028",
+    "JORFTEXT000000687687"
+   ],
+   "1992-09-20": [
+    "1992-07-01",
+    "JORFTEXT000000504610",
+    "92-1017",
+    "JORFTEXT000000726005"
+   ],
+   "2000-09-24": [
+    "2000-07-12",
+    "JORFTEXT000000766148",
+    "2000-964",
+    "JORFTEXT000000219201"
+   ],
+   "2005-05-29": [
+    "2005-03-09",
+    "JORFTEXT000000627571",
+    null,
+    null
+   ]
+  },
+  "depots_sans_saisine": [
+   {
+    "numero": "1749",
+    "legislature": "XVe",
+    "date": "2019-03-06",
+    "objet": "mesures d'exception contre les djihadistes français ayant combattu en Irak et en Syrie",
+    "objet_en": "exceptional measures against French jihadists who fought in Iraq and Syria"
+   },
+   {
+    "numero": "5203",
+    "legislature": "XVe",
+    "date": "2022-04-05",
+    "objet": "lutter contre les mauvais traitements envers les animaux",
+    "objet_en": "combating the mistreatment of animals"
+   }
+  ],
+  "hors_champ": "référendum du 28/09/1958 (antérieur au Conseil constitutionnel) ; consultations locales (art. 72-1, 72-4, 73, 76, 77)"
+ },
+ "gardes": [
+  "R1 : 9 proclamations, nombres cohérents, décret lu dans chaque visa",
+  "R2 : témoin JO concordant (décret indéterminé au témoin : 1962-10-28)",
+  "R3 : 7 saisines, solutions et conditions lues",
+  "R4 : 7 citations de la Constitution et 6 motifs retrouvés mot pour mot",
+  "R4 : décision 2007-560 DC (2007-12-20) citée mot pour mot",
+  "R5 : phrases recalculées (N=9, A=7, R=2, S=7, C=1, soutiens réunis=0)"
+ ],
+ "calcul": {
+  "N": 9,
+  "A": 7,
+  "R": 2,
+  "dernier": "2005-05-29",
+  "art89": 1,
+  "S": 7,
+  "C": 1,
+  "reunis": 0,
+  "cond2": 4,
+  "cond3": 2,
+  "rejetes": [
+   "1969-04-27",
+   "2005-05-29"
+  ]
+ },
+ "registre": [
+  {
+   "id": "CONSTEXT000017665193",
+   "numero": "61-4",
+   "ecli": "ECLI:FR:CC:1961:61.4.REF",
+   "date_decision": "1961-01-14",
+   "date_scrutin": "1961-01-08",
+   "decret_date": "1960-12-08",
+   "nature": "projet de loi",
+   "inscrits": 32520233,
+   "votants": 23986913,
+   "exprimes": 23265444,
+   "oui": 17447669,
+   "non": 5817775
+  },
+  {
+   "id": "CONSTEXT000017665212",
+   "numero": "62-7",
+   "ecli": "ECLI:FR:CC:1962:62.7.REF",
+   "date_decision": "1962-04-13",
+   "date_scrutin": "1962-04-08",
+   "decret_date": "1962-03-20",
+   "nature": "projet de loi",
+   "inscrits": 27582072,
+   "votants": 20779303,
+   "exprimes": 19675497,
+   "oui": 17866423,
+   "non": 1809074
+  },
+  {
+   "id": "CONSTEXT000017665213",
+   "numero": "62-9",
+   "ecli": "ECLI:FR:CC:1962:62.9.REF",
+   "date_decision": "1962-11-06",
+   "date_scrutin": "1962-10-28",
+   "decret_date": "1962-10-02",
+   "nature": "projet de loi",
+   "inscrits": 28185478,
+   "votants": 21694563,
+   "exprimes": 21125054,
+   "oui": 13150516,
+   "non": 7974538
+  },
+  {
+   "id": "CONSTEXT000017665497",
+   "numero": "69-10",
+   "ecli": "ECLI:FR:CC:1969:69.10.REF",
+   "date_decision": "1969-05-02",
+   "date_scrutin": "1969-04-27",
+   "decret_date": "1969-04-02",
+   "nature": "projet de loi",
+   "inscrits": 29392390,
+   "votants": 23552611,
+   "exprimes": 22908855,
+   "oui": 10901753,
+   "non": 12007102
+  },
+  {
+   "id": "CONSTEXT000017665626",
+   "numero": "72-11",
+   "ecli": "ECLI:FR:CC:1972:72.11.REF",
+   "date_decision": "1972-04-28",
+   "date_scrutin": "1972-04-23",
+   "decret_date": "1972-04-05",
+   "nature": "projet de loi",
+   "inscrits": 29820464,
+   "votants": 17964607,
+   "exprimes": 15878488,
+   "oui": 10847554,
+   "non": 5030934
+  },
+  {
+   "id": "CONSTEXT000017667501",
+   "numero": "88-14",
+   "ecli": "ECLI:FR:CC:1988:88.14.REF",
+   "date_decision": "1988-11-09",
+   "date_scrutin": "1988-11-06",
+   "decret_date": "1988-10-05",
+   "nature": "projet de loi",
+   "inscrits": 38025823,
+   "votants": 14028705,
+   "exprimes": 12371046,
+   "oui": 9896498,
+   "non": 2474548
+  },
+  {
+   "id": "CONSTEXT000017667514",
+   "numero": "92-19",
+   "ecli": "ECLI:FR:CC:1992:92.19.REF",
+   "date_decision": "1992-09-23",
+   "date_scrutin": "1992-09-20",
+   "decret_date": "1992-07-01",
+   "nature": "projet de loi",
+   "inscrits": 38305534,
+   "votants": 26695951,
+   "exprimes": 25786574,
+   "oui": 13162992,
+   "non": 12623582
+  },
+  {
+   "id": "CONSTEXT000017664374",
+   "numero": "2000-29",
+   "ecli": "ECLI:FR:CC:2000:2000.29.REF",
+   "date_decision": "2000-09-28",
+   "date_scrutin": "2000-09-24",
+   "decret_date": "2000-07-12",
+   "nature": "révision de la Constitution",
+   "inscrits": 39941192,
+   "votants": 12058688,
+   "exprimes": 10118348,
+   "oui": 7407697,
+   "non": 2710651
+  },
+  {
+   "id": "CONSTEXT000017664881",
+   "numero": "2005-38",
+   "ecli": "ECLI:FR:CC:2005:2005.38.REF",
+   "date_decision": "2005-06-01",
+   "date_scrutin": "2005-05-29",
+   "decret_date": "2005-03-09",
+   "nature": "projet de loi",
+   "inscrits": 41789202,
+   "votants": 28988300,
+   "exprimes": 28257778,
+   "oui": 12808270,
+   "non": 15449508
+  }
+ ],
+ "rip": {
+  "2019-1": {
+   "numero": "2019-1",
+   "id": "CONSTEXT000038657449",
+   "date": "2019-05-09",
+   "titre": "Proposition de loi visant à affirmer le caractère de service public national de l'exploitation des aérodromes de Paris",
+   "solution": "Conformité",
+   "condition": [],
+   "soutiens": 1093030,
+   "seuil": 4717396,
+   "declaration": "2019-1-8"
+  },
+  "2021-2": {
+   "numero": "2021-2",
+   "id": "CONSTEXT000044038553",
+   "date": "2021-08-06",
+   "titre": "Proposition de loi de programmation pour garantir un accès universel à un service public hospitalier de qualité",
+   "solution": "Non conformité",
+   "condition": [
+    "3"
+   ],
+   "soutiens": null,
+   "seuil": null
+  },
+  "2022-3": {
+   "numero": "2022-3",
+   "id": "CONSTEXT000046588240",
+   "date": "2022-10-25",
+   "titre": "Proposition de loi portant création d'une contribution additionnelle sur les bénéfices exceptionnels des grandes entreprises",
+   "solution": "Non conformité",
+   "condition": [
+    "2"
+   ],
+   "soutiens": null,
+   "seuil": null
+  },
+  "2023-4": {
+   "numero": "2023-4",
+   "id": "CONSTEXT000047482263",
+   "date": "2023-04-14",
+   "titre": "Proposition de loi visant à affirmer que l'âge légal de départ à la retraite ne peut être fixé au-delà de 62 ans",
+   "solution": "Non conformité",
+   "condition": [
+    "2"
+   ],
+   "soutiens": null,
+   "seuil": null
+  },
+  "2023-5": {
+   "numero": "2023-5",
+   "id": "CONSTEXT000047529918",
+   "date": "2023-05-03",
+   "titre": "Proposition de loi visant à interdire un âge légal de départ à la retraite supérieur à 62 ans",
+   "solution": "Non conformité",
+   "condition": [
+    "2"
+   ],
+   "soutiens": null,
+   "seuil": null
+  },
+  "2024-6": {
+   "numero": "2024-6",
+   "id": "CONSTEXT000049424617",
+   "date": "2024-04-11",
+   "titre": "Proposition de loi visant à réformer l'accès aux prestations sociales des étrangers",
+   "solution": "Non conformité",
+   "condition": [
+    "3"
+   ],
+   "soutiens": null,
+   "seuil": null
+  },
+  "2026-7": {
+   "numero": "2026-7",
+   "id": "CONSTEXT000054293154",
+   "date": "2026-06-17",
+   "titre": "Proposition de loi visant à exclure de la notion de soin la provocation active de la mort",
+   "solution": "Non conformité",
+   "condition": [
+    "2"
+   ],
+   "soutiens": null,
+   "seuil": null
+  }
+ },
+ "motifs_cites": {
+  "2021-2": "sont contraires à la Constitution",
+  "2022-3": "ne porte sur aucun des autres objets mentionnés au premier alinéa de l'article 11 de la Constitution",
+  "2023-4": "elle ne porte pas, au sens de l'article 11 de la Constitution, sur une « réforme » relative à la politique sociale",
+  "2023-5": "la proposition de loi ne porte pas, au sens de l'article 11 de la Constitution, sur une réforme relative à la politique sociale",
+  "2024-6": "portent une atteinte disproportionnée à ces exigences",
+  "2026-7": "la proposition de loi ne porte pas non plus sur une « réforme » au sens de l'article 11 de la Constitution"
+ },
+ "tableaux": {
+  "registre": {
+   "entetes": [
+    "Scrutin",
+    "Objet",
+    "Article",
+    "Inscrits",
+    "Participation",
+    "Oui (exprimés)",
+    "Issue"
+   ],
+   "lignes": [
+    [
+     "8 janvier 1961",
+     "Autodétermination des populations algériennes",
+     "11",
+     "32 520 233",
+     "73,8 %",
+     "74,99 %",
+     "Adopté (loi n° 61-44)"
+    ],
+    [
+     "8 avril 1962",
+     "Accords d'Évian sur l'Algérie",
+     "11",
+     "27 582 072",
+     "75,3 %",
+     "90,81 %",
+     "Adopté (loi n° 62-421)"
+    ],
+    [
+     "28 octobre 1962",
+     "Élection du président de la République au suffrage universel",
+     "11",
+     "28 185 478",
+     "77,0 %",
+     "62,25 %",
+     "Adopté (loi n° 62-1292)"
+    ],
+    [
+     "27 avril 1969",
+     "Création de régions et rénovation du Sénat",
+     "11",
+     "29 392 390",
+     "80,1 %",
+     "47,59 %",
+     "Rejeté"
+    ],
+    [
+     "23 avril 1972",
+     "Élargissement de la Communauté européenne",
+     "11",
+     "29 820 464",
+     "60,2 %",
+     "68,32 %",
+     "Adopté (loi n° 72-339)"
+    ],
+    [
+     "6 novembre 1988",
+     "Statut de la Nouvelle-Calédonie et autodétermination en 1998",
+     "11",
+     "38 025 823",
+     "36,9 %",
+     "80,00 %",
+     "Adopté (loi n° 88-1028)"
+    ],
+    [
+     "20 septembre 1992",
+     "Ratification du traité sur l'Union européenne (Maastricht)",
+     "11",
+     "38 305 534",
+     "69,7 %",
+     "51,05 %",
+     "Adopté (loi n° 92-1017)"
+    ],
+    [
+     "24 septembre 2000",
+     "Durée du mandat du président de la République (quinquennat)",
+     "89",
+     "39 941 192",
+     "30,2 %",
+     "73,21 %",
+     "Adopté (loi n° 2000-964)"
+    ],
+    [
+     "29 mai 2005",
+     "Ratification du traité établissant une Constitution pour l'Europe",
+     "11",
+     "41 789 202",
+     "69,4 %",
+     "45,33 %",
+     "Rejeté"
+    ]
+   ]
+  },
+  "rip": {
+   "entetes": [
+    "Décision",
+    "Numéro",
+    "Proposition de loi",
+    "Solution"
+   ],
+   "lignes": [
+    [
+     "9 mai 2019",
+     "2019-1 RIP",
+     "Aérodromes de Paris, service public national",
+     "Conforme ; 1 093 030 soutiens pour 4 717 396 requis"
+    ],
+    [
+     "6 août 2021",
+     "2021-2 RIP",
+     "Service public hospitalier (loi de programmation)",
+     "Non conforme : une disposition contraire à la Constitution (3° de l'art. 45-2)"
+    ],
+    [
+     "25 octobre 2022",
+     "2022-3 RIP",
+     "Contribution sur les bénéfices exceptionnels des grandes entreprises",
+     "Non conforme : pas d'objet visé par l'article 11 (2°)"
+    ],
+    [
+     "14 avril 2023",
+     "2023-4 RIP",
+     "Âge légal de départ à la retraite : pas au-delà de 62 ans",
+     "Non conforme : pas une « réforme » au sens de l'article 11 (2°)"
+    ],
+    [
+     "3 mai 2023",
+     "2023-5 RIP",
+     "Âge légal de départ à la retraite : pas au-delà de 62 ans (seconde proposition)",
+     "Non conforme : pas une « réforme » au sens de l'article 11 (2°)"
+    ],
+    [
+     "11 avril 2024",
+     "2024-6 RIP",
+     "Accès des étrangers aux prestations sociales",
+     "Non conforme : une disposition contraire à la Constitution (3°)"
+    ],
+    [
+     "17 juin 2026",
+     "2026-7 RIP",
+     "Exclure de la notion de soin la provocation active de la mort",
+     "Non conforme : pas une « réforme » au sens de l'article 11 (2°)"
+    ]
+   ]
+  }
+ },
+ "tableaux_en": {
+  "registre": {
+   "entetes": [
+    "Vote",
+    "Subject",
+    "Article",
+    "Registered voters",
+    "Turnout",
+    "Yes (valid votes)",
+    "Outcome"
+   ],
+   "lignes": [
+    [
+     "8 January 1961",
+     "Self-determination of the Algerian populations",
+     "11",
+     "32,520,233",
+     "73.8%",
+     "74.99%",
+     "Adopted (Act No. 61-44)"
+    ],
+    [
+     "8 April 1962",
+     "Évian agreements on Algeria",
+     "11",
+     "27,582,072",
+     "75.3%",
+     "90.81%",
+     "Adopted (Act No. 62-421)"
+    ],
+    [
+     "28 October 1962",
+     "Election of the President by universal suffrage",
+     "11",
+     "28,185,478",
+     "77.0%",
+     "62.25%",
+     "Adopted (Act No. 62-1292)"
+    ],
+    [
+     "27 April 1969",
+     "Creation of regions and reform of the Senate",
+     "11",
+     "29,392,390",
+     "80.1%",
+     "47.59%",
+     "Rejected"
+    ],
+    [
+     "23 April 1972",
+     "Enlargement of the European Community",
+     "11",
+     "29,820,464",
+     "60.2%",
+     "68.32%",
+     "Adopted (Act No. 72-339)"
+    ],
+    [
+     "6 November 1988",
+     "Status of New Caledonia and self-determination in 1998",
+     "11",
+     "38,025,823",
+     "36.9%",
+     "80.00%",
+     "Adopted (Act No. 88-1028)"
+    ],
+    [
+     "20 September 1992",
+     "Ratification of the Treaty on European Union (Maastricht)",
+     "11",
+     "38,305,534",
+     "69.7%",
+     "51.05%",
+     "Adopted (Act No. 92-1017)"
+    ],
+    [
+     "24 September 2000",
+     "Length of the presidential term (five years)",
+     "89",
+     "39,941,192",
+     "30.2%",
+     "73.21%",
+     "Adopted (Act No. 2000-964)"
+    ],
+    [
+     "29 May 2005",
+     "Ratification of the Treaty establishing a Constitution for Europe",
+     "11",
+     "41,789,202",
+     "69.4%",
+     "45.33%",
+     "Rejected"
+    ]
+   ]
+  },
+  "rip": {
+   "entetes": [
+    "Decision",
+    "Number",
+    "Private Members' Bill",
+    "Outcome"
+   ],
+   "lignes": [
+    [
+     "9 May 2019",
+     "2019-1 RIP",
+     "Paris airports as a national public service",
+     "Valid; 1,093,030 signatures of support for 4,717,396 required"
+    ],
+    [
+     "6 August 2021",
+     "2021-2 RIP",
+     "Public hospital service (programming act)",
+     "Not valid: a provision contrary to the Constitution (art. 45-2, 3°)"
+    ],
+    [
+     "25 October 2022",
+     "2022-3 RIP",
+     "Contribution on large companies' windfall profits",
+     "Not valid: no subject covered by article 11 (2°)"
+    ],
+    [
+     "14 April 2023",
+     "2023-4 RIP",
+     "Legal retirement age: not above 62",
+     "Not valid: not a 'reform' within the meaning of article 11 (2°)"
+    ],
+    [
+     "3 May 2023",
+     "2023-5 RIP",
+     "Legal retirement age: not above 62 (second bill)",
+     "Not valid: not a 'reform' within the meaning of article 11 (2°)"
+    ],
+    [
+     "11 April 2024",
+     "2024-6 RIP",
+     "Foreigners' access to social benefits",
+     "Not valid: a provision contrary to the Constitution (3°)"
+    ],
+    [
+     "17 June 2026",
+     "2026-7 RIP",
+     "Excluding the active causing of death from the notion of care",
+     "Not valid: not a 'reform' within the meaning of article 11 (2°)"
+    ]
+   ]
+  }
+ },
+ "affichage": {
+  "N": "neuf",
+  "N_chiffre": "9",
+  "A": "sept",
+  "R": "deux",
+  "dernier": "29 mai 2005",
+  "arrete": "5 octobre 2026",
+  "annees_depuis": "21",
+  "S": "sept",
+  "C": "une",
+  "cond2": "quatre",
+  "cond3": "deux",
+  "soutiens": "1 093 030",
+  "seuil": "4 717 396",
+  "part_seuil": "23",
+  "rip_conf_date": "9 mai 2019",
+  "rip_depuis": "2015",
+  "part_2005": "69,4",
+  "non_2005": "54,67",
+  "part_2000": "30,2",
+  "part_1988": "36,9",
+  "part_max": "80,1",
+  "part_min": "30,2",
+  "oui_1992": "51,05",
+  "non_1969": "52,41",
+  "depots_sans_saisine": "deux",
+  "n_loi": "Huit",
+  "n_rev": "un seul",
+  "part_min_an": "2000",
+  "part_max_an": "1969",
+  "non_conformes": "six",
+  "cond2_maj": "Quatre",
+  "cond3_maj": "Deux",
+  "cit_motif_2023_4": "ne porte pas, au sens de l'article 11 de la Constitution, sur une « réforme » relative à la politique sociale",
+  "cit_2007_560": "ne peut intervenir qu'après révision de la Constitution",
+  "cit_art3": "La souveraineté nationale appartient au peuple qui l'exerce par ses représentants et par la voie du référendum.",
+  "cit_art11_1": "sur proposition du Gouvernement pendant la durée des sessions ou sur proposition conjointe des deux assemblées",
+  "cit_art11_objet": "portant sur l'organisation des pouvoirs publics, sur des réformes relatives à la politique économique, sociale ou environnementale de la nation et aux services publics qui y concourent, ou tendant à autoriser la ratification d'un traité qui, sans être contraire à la Constitution, aurait des incidences sur le fonctionnement des institutions",
+  "cit_art11_rip": "à l'initiative d'un cinquième des membres du Parlement, soutenue par un dixième des électeurs inscrits sur les listes électorales",
+  "cit_art11_soumet": "le Président de la République la soumet au référendum",
+  "cit_art89_voies": "le projet de révision n'est pas présenté au référendum lorsque le Président de la République décide de le soumettre au Parlement convoqué en Congrès",
+  "cit_art60": "Il en proclame les résultats.",
+  "releve_le": "5 octobre 2026 (registre du Conseil constitutionnel, stock DILA arrêté à cette date)"
+ },
+ "affichage_en": {
+  "N": "nine",
+  "N_chiffre": "9",
+  "A": "seven",
+  "R": "two",
+  "dernier": "29 May 2005",
+  "arrete": "5 October 2026",
+  "annees_depuis": "21",
+  "S": "seven",
+  "C": "one",
+  "cond2": "four",
+  "cond3": "two",
+  "soutiens": "1,093,030",
+  "seuil": "4,717,396",
+  "part_seuil": "23",
+  "rip_conf_date": "9 May 2019",
+  "rip_depuis": "2015",
+  "part_2005": "69.4",
+  "non_2005": "54.67",
+  "part_2000": "30.2",
+  "part_1988": "36.9",
+  "part_max": "80.1",
+  "part_min": "30.2",
+  "oui_1992": "51.05",
+  "non_1969": "52.41",
+  "depots_sans_saisine": "two",
+  "n_loi": "Eight",
+  "n_rev": "only one",
+  "part_min_an": "2000",
+  "part_max_an": "1969",
+  "non_conformes": "six",
+  "cond2_maj": "Four",
+  "cond3_maj": "Two",
+  "cit_motif_2023_4": "",
+  "cit_2007_560": "",
+  "cit_art3": "National sovereignty shall vest in the people, who shall exercise it through their representatives and by means of referendum.",
+  "cit_art11_1": "on a recommendation from the Government when Parliament is in session, or on a joint motion of the two Houses",
+  "cit_art11_objet": "which deals with the organization of the public authorities, or with reforms relating to the economic, social or environmental policy of the Nation, and to the public services contributing thereto, or which provides for authorization to ratify a treaty which, although not contrary to the Constitution, would affect the functioning of the institutions",
+  "cit_art11_rip": "upon the initiative of one fifth of the members of Parliament, supported by one tenth of the voters enrolled on the electoral lists",
+  "cit_art11_soumet": "the President of the Republic may submit it to a referendum",
+  "cit_art89_voies": "",
+  "cit_art60": "",
+  "releve_le": "5 October 2026 (Conseil constitutionnel register, DILA database as at that date)"
+ }
+}

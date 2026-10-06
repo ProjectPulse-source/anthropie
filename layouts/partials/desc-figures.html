@@ -64,6 +64,17 @@
   {{- end -}}
 {{- end -}}
 {{- if in $text "{app." -}}{{- errorf "desc-figures: placeholder {app.*} non resolu dans : %s" $text -}}{{- end -}}
+{{- /* Dossier Promesses, prolongements « Référendum » et « Europe » : placeholders {ref.<cle>} et {ue.<cle>}, depuis
+       data/promesses_referendum.json et data/promesses_europe.json (scripts/update_promesses_{referendum,europe}.py).
+       Page anglaise : bloc affichage_en (strict). Meme contrat. */ -}}
+{{- range $pref, $jeu := dict "ref" "promesses_referendum" "ue" "promesses_europe" -}}
+  {{- with index site.Data $jeu -}}
+    {{- range $k, $v := (cond (eq site.Language.Lang "en") .affichage_en .affichage) -}}
+      {{- $text = replace $text (printf "{%s.%s}" $pref $k) (string $v) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if or (in $text "{ref.") (in $text "{ue.") -}}{{- errorf "desc-figures: placeholder {ref.*} ou {ue.*} non resolu dans : %s" $text -}}{{- end -}}
 {{- /* Dossier Promesses, volet « Adopter » : placeholders {ado.<cle>}, depuis data/promesses_adopter.json
        (bloc affichage, scripts/update_promesses_adopter.py). Page anglaise : bloc affichage_en (strict). Meme contrat. */ -}}
 {{- with site.Data.promesses_adopter -}}
