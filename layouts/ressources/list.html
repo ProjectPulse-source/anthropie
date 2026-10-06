@@ -49,7 +49,7 @@
 
   {{- /* Sommaire en pastilles (règle des énumérations, 01/10/2026) : une rangée d'ancres, pas une phrase. */}}
   <nav class="pastilles pastilles--ancres ressources-index__sommaire" aria-label="{{ if $isEn }}Sections{{ else }}Blocs{{ end }}">
-    <ul>{{- range $blocs }}<li><a href="#{{ .id }}">{{ partial "fr-typo.html" .titre }}</a></li>{{ end -}}</ul>
+    <ul>{{- range $blocs }}<li{{ if .dossier }} class="is-dossier"{{ end }}><a href="#{{ .id }}">{{ if .dossier }}<span class="ressources-index__mot-dossier">{{ i18n "dossier_mot" | default "Dossier" }}</span>{{ partial "fr-typo.html" (.titre_barre | default .titre) }}{{ else }}{{ partial "fr-typo.html" .titre }}{{ end }}</a></li>{{ end -}}</ul>
   </nav>
 
   {{- /* HIÉRARCHIE (variante C retenue par l'auteur, 01/10/2026). Dans un bloc, les pages qui publient un jeu de
@@ -89,10 +89,61 @@
     <section class="ressources-index__bloc" id="{{ $id }}" aria-labelledby="bloc-{{ $id }}">
       {{- /* En-tête de bloc (01/10/2026, accord avec Série AWP et Publications) : intitulé court, phrase en italique,
              filet bleu. `section-title` exempte le h2 du grand titre à filet des pages. */}}
+      {{- if .dossier }}
+      {{- /* EN-TÊTE DE DOSSIER, variante A (auteur, 06/10/2026 ; maquettes : 06_PROMOTION\MAQUETTES_INDEX_DOSSIERS_2026-10-06\).
+             Un bloc qui déclare `dossier: true` (Dette, Pour enseigner, Promesses) reprend la pastille qui colle en haut
+             de ses pages — le lecteur reconnaît à l'arrivée l'objet choisi ici —, son décompte, et la bande de ses
+             questions, miniature de la barre d'onglets. Tout se déduit des pages : libellés de la Dette lus dans
+             `bande_donnees` (data/dossier_dette.yaml, la source de la barre), thèmes d'une discipline, `onglet.court`
+             des autres pages. Les blocs ordinaires (Notions, Corpus, Guides) gardent l'en-tête simple. */}}
+      {{- $b := . -}}
+      {{- $L := cond $isEn "en" "fr" -}}
+      {{- $bande := slice -}}{{- $meta := slice -}}
+      {{- with .bande_donnees -}}
+        {{- range index site.Data . "volets" }}{{ $bande = $bande | append (dict "url" (index .url $L) "t" (index .titre $L)) }}{{ end -}}
+      {{- else -}}
+        {{- with $b.disciplines -}}
+          {{- $ouvertes := 0 -}}{{- $avenirN := 0 -}}
+          {{- range . -}}
+            {{- $d := . -}}{{- $vu := false -}}
+            {{- range $items -}}
+              {{- if eq .r.discipline $d.id }}{{ $vu = true }}{{ $bande = $bande | append (dict "url" .page.RelPermalink "t" (printf "%s · %s" ($d.court | default $d.titre) (.r.theme | default .page.Title))) }}{{ end -}}
+            {{- end -}}
+            {{- if $vu }}{{ $ouvertes = add $ouvertes 1 }}{{ else }}{{ $avenirN = add $avenirN 1 }}{{ end -}}
+          {{- end -}}
+          {{- $meta = $meta | append (i18n "dossier_disciplines" $ouvertes) (i18n "dossier_themes" (len $bande)) -}}
+          {{- if $avenirN }}{{ $meta = $meta | append (i18n "dossier_avenir" $avenirN) }}{{ end -}}
+        {{- else -}}
+          {{- range $items -}}
+            {{- if .page.Params.ressource.prolongement }}{{ continue }}{{ end -}}
+            {{- $o := .page.Params.onglet | default dict -}}
+            {{- $bande = $bande | append (dict "url" .page.RelPermalink "t" ($o.court | default ($o.long | default .page.Title))) -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+      {{- if not $b.disciplines -}}
+        {{- $meta = $meta | append (i18n "dossier_questions" (len $bande)) -}}
+        {{- with $prolong }}{{ $meta = $meta | append (i18n "dossier_prolongements" (len .)) }}{{ end -}}
+      {{- end }}
+      <div class="ressources-index__tete ressources-index__tete--dossier">
+        <div class="ressources-index__ligne">
+          <span class="dossier-dette__titre ressources-index__pastille">{{ partial "fr-typo.html" (.pastille | default (.titre_barre | default .titre)) }}</span>
+          <span class="ressources-index__meta">{{ range $i, $m := $meta }}{{ if $i }} · {{ end }}<span>{{ $m }}</span>{{ end }}</span>
+        </div>
+        <h2 id="bloc-{{ $id }}" class="ressources-index__titre-dossier section-title">{{ partial "fr-typo.html" .titre }}</h2>
+        {{ with .chapo }}<p class="ressources-index__chapo">{{ partial "fr-typo.html" . }}</p>{{ end }}
+        {{- with $bande }}
+        <ul class="ressources-index__bande" aria-label="{{ i18n "dossier_bande" | default "Questions du dossier" }}">
+          {{- range . }}<li><a href="{{ .url }}">{{ partial "fr-typo.html" .t }}</a></li>{{ end -}}
+        </ul>
+        {{- end }}
+      </div>
+      {{- else }}
       <div class="ressources-index__tete">
         <h2 id="bloc-{{ $id }}" class="ressources-index__titre-bloc section-title">{{ partial "fr-typo.html" .titre }}</h2>
         {{ with .chapo }}<p class="ressources-index__chapo">{{ partial "fr-typo.html" . }}</p>{{ end }}
       </div>
+      {{- end }}
       {{- with .disciplines }}
         {{- $avenir := slice -}}
         {{- range . -}}

@@ -20,6 +20,53 @@
 }
 .ressources-index__chapo { font-style: italic; color: var(--color-text-muted); max-width: 70ch; margin: 0; }
 @media (max-width: 640px) { .ressources-index__tete { grid-template-columns: minmax(0, 1fr); } }
+
+// EN-TÊTE DE DOSSIER, variante A (auteur, 06/10/2026) : pastille des pages (classe .dossier-dette__titre, même dessin),
+// décompte, grand titre, chapô, bande des questions en mini-onglets posés sur le filet.
+.ressources-index__tete--dossier {
+  display: block; border-bottom: 0; padding: 0.5rem 0 0; margin: 0 0 0.4rem;
+}
+.ressources-index__ligne {
+  display: flex; align-items: center; justify-content: space-between; gap: 0.4rem 1rem; flex-wrap: wrap;
+}
+.ressources-index__pastille { display: inline-block; }
+.ressources-index__meta {
+  font-family: var(--font-mono); font-size: 0.76rem; font-weight: 600; letter-spacing: 0.03em;
+  color: var(--color-text-subtle);
+  span { white-space: nowrap; }   // « 2 à venir » ne se coupe pas
+}
+.home-section .ressources-index__tete--dossier h2.ressources-index__titre-dossier {
+  font-family: var(--font-serif); font-size: 1.65rem; font-weight: 500; line-height: 1.15; letter-spacing: 0;
+  text-transform: none; color: var(--color-text); margin: 0.5rem 0 0.2rem; padding: 0; border: 0;
+}
+main .ressources-index__bande {
+  display: flex; gap: 0.25rem; list-style: none; margin: 0.75rem 0 0 !important; padding: 0 !important;
+  border-bottom: 1px solid var(--color-rule-medium);
+  overflow-x: auto; overflow-y: hidden; scrollbar-width: none; -webkit-overflow-scrolling: touch;
+  font-family: var(--font-sans); font-size: 0.82rem;
+  li { margin: 0 !important; padding: 0 !important; flex: 0 0 auto; }
+  a {
+    display: block; white-space: nowrap; margin-bottom: -1px; padding: 0.3rem 0.65rem 0.38rem;
+    border: 1px solid var(--color-rule-medium); border-bottom-color: transparent; border-radius: 5px 5px 0 0;
+    background: var(--color-accent-faint); color: var(--color-accent); font-weight: 600; text-decoration: none;
+  }
+  a:hover { background: var(--color-bg-elevated); border-color: var(--color-accent); border-bottom-color: transparent; }
+  a:focus-visible { outline: 2px solid var(--color-pivot); outline-offset: -2px; }
+}
+main .ressources-index__bande::-webkit-scrollbar { display: none; }
+@media (max-width: 640px) {
+  .home-section .ressources-index__tete--dossier h2.ressources-index__titre-dossier { font-size: 1.35rem; }
+}
+// Sommaire : les dossiers en pastille pleine, préfixés du mot « Dossier » et de leur titre court (`titre_barre`).
+.ressources-index__sommaire li.is-dossier a {
+  background: var(--color-accent); border-color: var(--color-accent); color: #FFFFFF;
+}
+.ressources-index__sommaire li.is-dossier a::after { color: #FFFFFF; }
+.ressources-index__sommaire li.is-dossier a:hover { background: var(--color-accent); opacity: 0.9; }
+.ressources-index__mot-dossier {
+  font-family: var(--font-mono); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+  padding-right: 6px; border-right: 1px solid rgba(255, 255, 255, 0.45);
+}
 .ressources-index__sous {
   font-family: var(--font-sans); font-size: 12px; font-weight: 600;
   letter-spacing: 0.1em; text-transform: uppercase;

@@ -43,3 +43,24 @@ other = "Ouvrir la ressource"
 [ressources_prolongements]
 one = "Prolongement du dossier"
 other = "Prolongements du dossier"
+
+# En-tête de dossier de l'index /ressources/ (variante A, 06/10/2026)
+[dossier_mot]
+other = "Dossier"
+[dossier_bande]
+other = "Questions du dossier"
+[dossier_questions]
+one = "{{ .Count }} question"
+other = "{{ .Count }} questions"
+[dossier_prolongements]
+one = "{{ .Count }} prolongement"
+other = "{{ .Count }} prolongements"
+[dossier_disciplines]
+one = "{{ .Count }} discipline ouverte"
+other = "{{ .Count }} disciplines ouvertes"
+[dossier_themes]
+one = "{{ .Count }} thème"
+other = "{{ .Count }} thèmes"
+[dossier_avenir]
+one = "{{ .Count }} à venir"
+other = "{{ .Count }} à venir"

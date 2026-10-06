@@ -43,3 +43,24 @@ other = "Open the resource"
 [ressources_prolongements]
 one = "Extension of the dossier"
 other = "Extensions of the dossier"
+
+# Dossier header of the /resources/ index (variant A, 06/10/2026)
+[dossier_mot]
+other = "Dossier"
+[dossier_bande]
+other = "Questions in this dossier"
+[dossier_questions]
+one = "{{ .Count }} question"
+other = "{{ .Count }} questions"
+[dossier_prolongements]
+one = "{{ .Count }} further topic"
+other = "{{ .Count }} further topics"
+[dossier_disciplines]
+one = "{{ .Count }} subject open"
+other = "{{ .Count }} subjects open"
+[dossier_themes]
+one = "{{ .Count }} topic"
+other = "{{ .Count }} topics"
+[dossier_avenir]
+one = "{{ .Count }} coming soon"
+other = "{{ .Count }} coming soon"

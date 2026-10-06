@@ -9,9 +9,13 @@ blocs:
   - id: dette
     titre: "Dette publique"
     barre: "propre"   # chaque page appelle `dossier-dette volet="…"` (questions, source, prolongements)
+    dossier: true     # en-tête de dossier dans l'index (variante A, auteur, 06/10/2026)
+    pastille: "Dossier dette publique"   # celle de la barre des pages
+    bande_donnees: "dossier_dette"       # libellés des questions : data/dossier_dette.yaml, source de la barre
     chapo: "Pourquoi elle augmente, ce qu'elle coûte, qui la paie, ce qui se passe ailleurs et à quelles conditions elle peut baisser."
   - id: enseigner
     titre: "Pour enseigner"
+    dossier: true
     chapo: "Un dossier par discipline, des activités prêtes pour la classe : fiches élèves et corrigés, et en SES des figures et des données tirées des mêmes séries que les analyses."
     # UN DOSSIER PAR DISCIPLINE (auteur, 03/10/2026) : l'index montre une carte par discipline, qui ouvre la page à
     # onglets de ses thèmes. Les pages déclarent `ressource.discipline` et `ressource.theme` ; une discipline sans page
@@ -30,6 +34,7 @@ blocs:
   - id: promesses
     titre: "Promesses présidentielles : du pouvoir aux résultats"
     titre_barre: "Promesses présidentielles"   # pastille de la barre : le titre entier déborde à 390 px
+    dossier: true
     chapo: "Qui peut décider, avec quels accords, dans quel délai — et comment vérifier le résultat ?"
     # Remplace le bloc « Pouvoir et institutions » (arbitrage PRO-20261005-153428, décision de l'auteur du 05/10).
   - id: notions

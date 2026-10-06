@@ -9,10 +9,14 @@ blocs:
   - id: dette
     titre: "Public debt"
     barre: "propre"   # each page calls `dossier-dette volet="…"`
+    dossier: true     # dossier header in the index (variant A, 06/10/2026)
+    pastille: "Public debt dossier"
+    bande_donnees: "dossier_dette"
     chapo: "Why it rises, what it costs, who pays, how it compares elsewhere and under what conditions it can come down."
   - id: promesses
     titre: "Presidential promises: from power to results"
     titre_barre: "Presidential promises"   # bar badge: the full title overflows at 390 px
+    dossier: true
     chapo: "Who can decide, with whose agreement, within what time — and how to check the result? The French case."
   - id: notions
     titre: "Concepts"

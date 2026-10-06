@@ -1,0 +1,37 @@
+# Les cinq questions du dossier dette publique, dans l'ordre de la barre (06/10/2026). Source UNIQUE de leurs libellés :
+# lue par la barre des pages (layouts/shortcodes/dossier-dette.html) et par la bande du dossier dans l'index /ressources/
+# (layouts/ressources/list.html, `bande_donnees: dossier_dette`). Avant, les libellés n'existaient que dans le shortcode ;
+# l'index en aurait porté une copie, qui aurait dérivé.
+# titre : libellé de l'onglet (question courte) · court : téléphone · nom : question complète, lue par les lecteurs
+# d'écran · role : sous-titre de l'onglet.
+volets:
+  - volet: hausse
+    url: { fr: "/pourquoi-la-dette-publique-augmente/", en: "/en/why-does-public-debt-rise/" }
+    titre: { fr: "Pourquoi augmente-t-elle ?", en: "Why does it rise?" }
+    court: { fr: "Hausse", en: "Rise" }
+    nom: { fr: "pourquoi la dette publique augmente-t-elle ?", en: "why does public debt rise?" }
+    role: { fr: "dynamique", en: "dynamics" }
+  - volet: "1"
+    url: { fr: "/cout-de-la-dette-publique/", en: "/en/cost-of-french-public-debt/" }
+    titre: { fr: "Combien coûte-t-elle ?", en: "What does it cost?" }
+    court: { fr: "Coût", en: "Cost" }
+    nom: { fr: "combien coûte la dette publique ?", en: "what does public debt cost?" }
+    role: { fr: "charge d'intérêts", en: "interest burden" }
+  - volet: "2"
+    url: { fr: "/qui-paie-la-dette-publique/", en: "/en/who-really-pays-public-debt/" }
+    titre: { fr: "Qui paie ?", en: "Who pays?" }
+    court: { fr: "Qui paie", en: "Who pays" }
+    nom: { fr: "qui paie vraiment la dette publique ?", en: "who really pays public debt?" }
+    role: { fr: "répartition", en: "distribution" }
+  - volet: "3"
+    url: { fr: "/dette-publique-comparaison-internationale/", en: "/en/public-debt-international-comparison/" }
+    titre: { fr: "Qu’en est-il ailleurs ?", en: "What about elsewhere?" }
+    court: { fr: "Ailleurs", en: "Abroad" }
+    nom: { fr: "qu’en est-il de la dette publique ailleurs ?", en: "how does public debt compare elsewhere?" }
+    role: { fr: "comparaisons", en: "comparisons" }
+  - volet: baisse
+    url: { fr: "/dette-publique-peut-elle-baisser/", en: "/en/can-public-debt-come-down/" }
+    titre: { fr: "Peut-elle baisser ?", en: "Can it come down?" }
+    court: { fr: "Baisse", en: "Down" }
+    nom: { fr: "la dette publique peut-elle baisser ?", en: "can public debt come down?" }
+    role: { fr: "conditions", en: "conditions" }

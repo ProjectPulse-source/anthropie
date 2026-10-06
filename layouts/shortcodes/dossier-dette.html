@@ -75,26 +75,14 @@
   {{- $src = printf "%s · %s" (cond $en "Updated" "Mise à jour") (.Page.Lastmod.Format "01/2006") -}}
   {{- $srcTitre = cond $en "Last editorial update of this page. Data vintages are given next to each figure." "Mise à jour éditoriale de la page. Les millésimes des données sont indiqués auprès de chaque figure." -}}
 {{- end -}}
-{{- $items := slice
-    (dict "n" "hausse" "url" (cond $en "/en/why-does-public-debt-rise/" "/pourquoi-la-dette-publique-augmente/")
-          "titre" (cond $en "Why does it rise?" "Pourquoi augmente-t-elle ?") "court" (cond $en "Rise" "Hausse")
-          "nom" (cond $en "why does public debt rise?" "pourquoi la dette publique augmente-t-elle ?")
-          "role" (cond $en "dynamics" "dynamique"))
-    (dict "n" "1" "url" (cond $en "/en/cost-of-french-public-debt/" "/cout-de-la-dette-publique/")
-          "titre" (cond $en "What does it cost?" "Combien coûte-t-elle ?") "court" (cond $en "Cost" "Coût")
-          "nom" (cond $en "what does public debt cost?" "combien coûte la dette publique ?")
-          "role" (cond $en "interest burden" "charge d'intérêts"))
-    (dict "n" "2" "url" (cond $en "/en/who-really-pays-public-debt/" "/qui-paie-la-dette-publique/")
-          "titre" (cond $en "Who pays?" "Qui paie ?") "court" (cond $en "Who pays" "Qui paie")
-          "nom" (cond $en "who really pays public debt?" "qui paie vraiment la dette publique ?")
-          "role" (cond $en "distribution" "répartition"))
-    (dict "n" "3" "url" (cond $en "/en/public-debt-international-comparison/" "/dette-publique-comparaison-internationale/")
-          "titre" (cond $en "What about elsewhere?" "Qu’en est-il ailleurs ?") "court" (cond $en "Abroad" "Ailleurs")
-          "nom" (cond $en "how does public debt compare elsewhere?" "qu’en est-il de la dette publique ailleurs ?")
-          "role" (cond $en "comparisons" "comparaisons")) -}}
-{{- $items = $items | append (dict "n" "baisse" "url" (cond $en "/en/can-public-debt-come-down/" "/dette-publique-peut-elle-baisser/")
-      "titre" (cond $en "Can it come down?" "Peut-elle baisser ?") "court" (cond $en "Down" "Baisse")
-      "nom" (cond $en "can public debt come down?" "la dette publique peut-elle baisser ?") "role" "conditions") -}}
+{{- /* Les cinq questions : data/dossier_dette.yaml, source unique partagée avec la bande de l'index /ressources/. */ -}}
+{{- $L := cond $en "en" "fr" -}}
+{{- $items := slice -}}
+{{- range site.Data.dossier_dette.volets -}}
+  {{- $items = $items | append (dict "n" .volet "url" (index .url $L) "titre" (index .titre $L) "court" (index .court $L)
+        "nom" (index .nom $L) "role" (index .role $L)) -}}
+{{- end -}}
+{{- if ne (len $items) 5 }}{{ errorf "dossier-dette : data/dossier_dette.yaml doit porter les cinq volets (%d lus)" (len $items) }}{{ end -}}
 {{- /* Prolongements : ceux de la langue de la page ; une page anglaise sans prolongement anglais montre ceux de la page
        française, marqués « in French » et hreflang="fr" (miroir de la barre demandé par l'auteur, 03/10/2026). */ -}}
 {{- $prolong := where site.Pages "Params.dossier_dette" "prolongement" -}}
