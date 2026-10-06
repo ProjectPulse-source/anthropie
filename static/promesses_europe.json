@@ -620,100 +620,100 @@
   "competences": {
    "entetes": [
     "Category",
-    "Area (French text of the Treaty)"
+    "Area (text of the Treaty)"
    ],
    "lignes": [
     [
      "Exclusive (art. 3(1))",
-     "l'union douanière"
+     "customs union"
     ],
     [
      "Exclusive (art. 3(1))",
-     "l'établissement des règles de concurrence nécessaires au fonctionnement du marché intérieur"
+     "the establishing of the competition rules necessary for the functioning of the internal market"
     ],
     [
      "Exclusive (art. 3(1))",
-     "la politique monétaire pour les États membres dont la monnaie est l'euro"
+     "monetary policy for the Member States whose currency is the euro"
     ],
     [
      "Exclusive (art. 3(1))",
-     "la conservation des ressources biologiques de la mer dans le cadre de la politique commune de la pêche"
+     "the conservation of marine biological resources under the common fisheries policy"
     ],
     [
      "Exclusive (art. 3(1))",
-     "la politique commerciale commune"
+     "common commercial policy"
     ],
     [
      "Shared (art. 4(2))",
-     "le marché intérieur"
+     "internal market"
     ],
     [
      "Shared (art. 4(2))",
-     "la politique sociale, pour les aspects définis dans le présent traité"
+     "social policy, for the aspects defined in this Treaty"
     ],
     [
      "Shared (art. 4(2))",
-     "la cohésion économique, sociale et territoriale"
+     "economic, social and territorial cohesion"
     ],
     [
      "Shared (art. 4(2))",
-     "l'agriculture et la pêche, à l'exclusion de la conservation des ressources biologiques de la mer"
+     "agriculture and fisheries, excluding the conservation of marine biological resources"
     ],
     [
      "Shared (art. 4(2))",
-     "l'environnement"
+     "environment"
     ],
     [
      "Shared (art. 4(2))",
-     "la protection des consommateurs"
+     "consumer protection"
     ],
     [
      "Shared (art. 4(2))",
-     "les transports"
+     "transport"
     ],
     [
      "Shared (art. 4(2))",
-     "les réseaux transeuropéens"
+     "trans-European networks"
     ],
     [
      "Shared (art. 4(2))",
-     "l'énergie"
+     "energy"
     ],
     [
      "Shared (art. 4(2))",
-     "l'espace de liberté, de sécurité et de justice"
+     "area of freedom, security and justice"
     ],
     [
      "Shared (art. 4(2))",
-     "les enjeux communs de sécurité en matière de santé publique, pour les aspects définis dans le présent traité"
+     "common safety concerns in public health matters, for the aspects defined in this Treaty"
     ],
     [
      "Support, coordination, supplement (art. 6)",
-     "la protection et l'amélioration de la santé humaine"
+     "protection and improvement of human health"
     ],
     [
      "Support, coordination, supplement (art. 6)",
-     "l'industrie"
+     "industry"
     ],
     [
      "Support, coordination, supplement (art. 6)",
-     "la culture"
+     "culture"
     ],
     [
      "Support, coordination, supplement (art. 6)",
-     "le tourisme"
+     "tourism"
     ],
     [
      "Support, coordination, supplement (art. 6)",
-     "l'éducation, la formation professionnelle, la jeunesse et le sport"
+     "education, vocational training, youth and sport"
     ],
     [
      "Support, coordination, supplement (art. 6)",
-     "la protection civile"
+     "civil protection"
     ],
     [
      "Support, coordination, supplement (art. 6)",
-     "la coopération administrative"
+     "administrative cooperation"
     ]
    ]
   },
@@ -1095,14 +1095,14 @@
   "releve_le": "6 octobre 2026 (votes du Conseil, relevé à cette date ; transposition au 30 novembre 2025)"
  },
  "affichage_en": {
-  "exclusives": "",
-  "partagees": "",
-  "appui": "",
-  "cit_2_1": "",
-  "cit_2_2": "",
-  "cit_2_5": "",
-  "cit_4_3": "",
-  "cit_3_2": "",
+  "exclusives": "customs union, the establishing of the competition rules necessary for the functioning of the internal market, monetary policy for the Member States whose currency is the euro, the conservation of marine biological resources under the common fisheries policy and common commercial policy",
+  "partagees": "internal market, social policy, for the aspects defined in this Treaty, economic, social and territorial cohesion, agriculture and fisheries, excluding the conservation of marine biological resources, environment, consumer protection, transport, trans-European networks, energy, area of freedom, security and justice and common safety concerns in public health matters, for the aspects defined in this Treaty",
+  "appui": "protection and improvement of human health, industry, culture, tourism, education, vocational training, youth and sport, civil protection and administrative cooperation",
+  "cit_2_1": "When the Treaties confer on the Union exclusive competence in a specific area, only the Union may legislate and adopt legally binding acts, the Member States being able to do so themselves only if so empowered by the Union or for the implementation of Union acts.",
+  "cit_2_2": "When the Treaties confer on the Union a competence shared with the Member States in a specific area, the Union and the Member States may legislate and adopt legally binding acts in that area. The Member States shall exercise their competence to the extent that the Union has not exercised its competence. The Member States shall again exercise their competence to the extent that the Union has decided to cease exercising its competence.",
+  "cit_2_5": "In certain areas and under the conditions laid down in the Treaties, the Union shall have competence to carry out actions to support, coordinate or supplement the actions of the Member States, without thereby superseding their competence in these areas.",
+  "cit_4_3": "In the areas of research, technological development and space, the Union shall have competence to carry out activities, in particular to define and implement programmes; however, the exercise of that competence shall not result in Member States being prevented from exercising theirs.",
+  "cit_3_2": "The Union shall also have exclusive competence for the conclusion of an international agreement when its conclusion is provided for in a legislative act of the Union or is necessary to enable the Union to exercise its internal competence, or in so far as its conclusion may affect common rules or alter their scope.",
   "n_exclusives": "5",
   "n_partagees": "11",
   "n_appui": "7",
@@ -1145,7 +1145,7 @@
   "tr_inf": "17.9",
   "tr_inf_ue": "15.2",
   "tr_double": "nine",
-  "cit_tue16": "",
+  "cit_tue16": "A blocking minority must include at least four Council members",
   "etats_identiques": "23",
   "etats_total": "28",
   "releve_le": "6 October 2026 (Council votes, retrieved on that date; transposition as at 30 November 2025)"

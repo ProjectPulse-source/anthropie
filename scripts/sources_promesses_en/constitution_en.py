@@ -41,7 +41,9 @@ def article(n: str, t: str | None = None) -> str:
     # La page porte d'abord une table des matières (« Article 24 Article 25 … ») : on garde l'occurrence la plus longue,
     # celle du corps de l'article.
     ms = re.findall(r"Article %s (.*?)(?= Article \d+(?:-\d+)? | Title [IVXL]+ - )" % re.escape(n), t)
-    ms = [m for m in ms if len(m) > 40]
+    # Dernier article d'un titre dans la table (« Article 89 Title XVII - (Repealed) … ») : l'entrée commence par le titre
+    # suivant, que l'expression ne coupe pas ; ce n'est pas un corps d'article (défaut vu le 06/10/2026 sur l'art. 89).
+    ms = [m for m in ms if len(m) > 40 and not m.startswith("Title ")]
     if len(ms) != 1:
         raise ValueError("constitution_en : article %s : %d occurrences de corps" % (n, len(ms)))
     return ms[0]

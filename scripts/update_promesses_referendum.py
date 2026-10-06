@@ -79,8 +79,8 @@ CIT = {
     "art11_soumet": ("11", "le Président de la République la soumet au référendum",
                      "the President of the Republic may submit it to a referendum"),
     "art89_voies": ("89", "le projet de révision n'est pas présenté au référendum lorsque le Président de la République décide de le soumettre au Parlement convoqué en Congrès",
-                    None),
-    "art60": ("60", "Il en proclame les résultats.", None),
+                    "a Government Bill to amend the Constitution shall not be submitted to referendum where the President of the Republic decides to submit it to Parliament convened in Congress"),
+    "art60": ("60", "Il en proclame les résultats.", "shall proclaim the results of the referendum"),
 }
 # Témoin du JO (test_decisif/referendum/temoin_jo.py, 06/10/2026) : date du scrutin -> décret (date, JORFTEXT), loi.
 TEMOIN_JO = {
@@ -382,7 +382,8 @@ def affichage(R, S, r) -> tuple[dict, dict]:
          "part_min_an": min(R, key=part)["date_scrutin"][:4], "part_max_an": max(R, key=part)["date_scrutin"][:4],
          "non_conformes": CHIFFRES_EN[r["S"] - r["C"]], "cond2_maj": CHIFFRES_EN[r["cond2"]].capitalize(),
          "cond3_maj": CHIFFRES_EN[r["cond3"]].capitalize(),
-         "cit_motif_2023_4": "", "cit_2007_560": ""}
+         # décisions françaises : citées en français sur la page anglaise, suivies de « our translation »
+         "cit_motif_2023_4": MOTIFS["2023-4"].replace("elle ne porte", "ne porte"), "cit_2007_560": CIT_2007_560[0]}
     for k, (n, f, e) in CIT.items():  # sans traduction vérifiée, la clé anglaise reste vide : la page anglaise ne cite pas
         A["cit_" + k] = f
         E["cit_" + k] = e or ""

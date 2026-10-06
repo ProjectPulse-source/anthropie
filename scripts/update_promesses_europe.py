@@ -261,6 +261,51 @@ def citation_tue16() -> str:
     return TUE16[2]
 
 
+# Texte anglais officiel du TFUE et du TUE (même JO C 202, expression anglaise de Cellar, téléchargée le 06/10/2026).
+EN_DIR = RECH / "sondes" / "europe" / "tfue" / "en"
+EN_SHA = {"2": "b53b68d7e26334a6a9f57cfee091334d8982acf30acd312371a62c1e872d4900",
+          "3": "2a579b28498f2f4520f374c3aba5dc8a8aee4b04bc1c34451f358bf2ff9d5faf",
+          "4": "56392afb9746318b086731d8bb1ec51ce88939b2dbdf6f41839b72a2e9fba440",
+          "5": "1a52a53bbe83d2f2075f46cf4729e4582d569d58ba67d14c74728bc0d361a576",
+          "6": "c26a6161fd8c60d02b12cc190643ac5da233f453591569f2ecf60f34338cade3",
+          "tue16": "4fc20ceebf6057fd31bcda4d8df15c1564ff6a6b0c79ccc485ab7a77b719691a"}
+TUE16_EN = "A blocking minority must include at least four Council members"
+
+
+def paragraphes_en(art: str) -> list[str]:
+    import hashlib
+    b = (EN_DIR / ("art%s.xhtml" % art)).read_bytes()
+    if hashlib.sha256(b).hexdigest() != EN_SHA[art]:
+        raise Arret("U1 : empreinte du texte anglais, art. %s, changée" % art)
+    x = b.decode("utf-8")
+    return [ue1.normal(html.unescape(re.sub(r"<[^>]+>", "", p))) for p in re.findall(r'<p class="normal">(.*?)</p>', x, re.S)]
+
+
+def typologie_en(typ: dict) -> dict:
+    """Mêmes listes, même nombre de domaines, mêmes lettres que le texte français ; sinon arrêt."""
+    out = {"listes": [], "paragraphes": {}}
+    for l in typ["listes"]:
+        ps = paragraphes_en(l["article"])
+        debut = 0 if l["paragraphe"] is None else next(i for i, p in enumerate(ps) if p.startswith(l["paragraphe"] + ". "))
+        items, i = [], debut + 1
+        while i + 1 < len(ps) and re.fullmatch(r"\(?[a-z]\)", ps[i]):  # « (a) » en anglais, « a) » en français
+            items.append(ps[i + 1])
+            i += 2
+        if len(items) != len(l["domaines"]):
+            raise Arret("U1 : art. %s, %d domaines en anglais pour %d en français" % (l["article"], len(items), len(l["domaines"])))
+        out["listes"].append(items)
+    for k in typ["paragraphes"]:
+        art, par = k.split(".")
+        p = next((p for p in paragraphes_en(art) if p.startswith(par + ". ")), None)
+        if not p:
+            raise Arret("U1 : paragraphe %s absent du texte anglais" % k)
+        out["paragraphes"][k] = p[len(par) + 2:].strip()
+    t16 = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", (EN_DIR / "arttue16.xhtml").read_bytes().decode("utf-8"))))
+    if TUE16_EN not in t16:
+        raise Arret("U2 : citation anglaise du TUE, art. 16, introuvable")
+    return out
+
+
 def double_deficit() -> int:
     """Nombre d'États que la Commission range à double déficit élevé, lu dans son texte (la France doit y figurer)."""
     m = re.search(r"(\d+) Member States \(([^)]*)\) combine both a high transposition deficit", ue4.texte_page())
@@ -295,7 +340,12 @@ def affichage(typ, B, V, tr) -> tuple[dict, dict]:
          "tr_inf": fr(tr["duree_infractions_mois"][0], 1), "tr_inf_ue": fr(tr["duree_infractions_mois"][1], 1),
          "tr_double": {9: "neuf", 8: "huit", 10: "dix", 7: "sept"}.get(double_deficit(), str(double_deficit())),
          "cit_tue16": citation_tue16(), "etats_identiques": str(V["etats_identiques"]), "etats_total": str(len(NOMS))}
-    E = {"exclusives": "", "partagees": "", "appui": "", "cit_2_1": "", "cit_2_2": "", "cit_2_5": "", "cit_4_3": "", "cit_3_2": "",
+    te_ = typologie_en(typ)
+    dom_en = lambda L: [d.rstrip(";.") for d in L]  # noqa: E731
+    jen = lambda L: ", ".join(L[:-1]) + " and " + L[-1]  # noqa: E731
+    E = {"exclusives": jen(dom_en(te_["listes"][0])), "partagees": jen(dom_en(te_["listes"][1])), "appui": jen(dom_en(te_["listes"][2])),
+         "cit_2_1": te_["paragraphes"]["2.1"], "cit_2_2": te_["paragraphes"]["2.2"], "cit_2_5": te_["paragraphes"]["2.5"],
+         "cit_4_3": te_["paragraphes"]["4.3"], "cit_3_2": te_["paragraphes"]["3.2"],
          "n_exclusives": A["n_exclusives"], "n_partagees": A["n_partagees"], "n_appui": A["n_appui"],
          "n_plo": A["n_plo"], "n_plo_art": A["n_plo_art"], "n_una": A["n_una"], "n_una_art": A["n_una_art"], "n_cond": A["n_cond"],
          "n_temoin": A["n_temoin"], "debut": date_en(deb), "fin": date_en(fin), "entrees": "{:,}".format(RELEVE["entrees"]),
@@ -311,7 +361,7 @@ def affichage(typ, B, V, tr) -> tuple[dict, dict]:
          "tr_mois": "%.1f" % tr["retard_moyen_mois"][0], "tr_mois_ue": "%.1f" % tr["retard_moyen_mois"][1],
          "tr_inf": "%.1f" % tr["duree_infractions_mois"][0], "tr_inf_ue": "%.1f" % tr["duree_infractions_mois"][1],
          "tr_double": {9: "nine", 8: "eight", 10: "ten", 7: "seven"}.get(double_deficit(), str(double_deficit())),
-         "cit_tue16": "", "etats_identiques": str(V["etats_identiques"]), "etats_total": str(len(NOMS))}
+         "cit_tue16": TUE16_EN, "etats_identiques": str(V["etats_identiques"]), "etats_total": str(len(NOMS))}
     return A, E
 
 
@@ -340,7 +390,9 @@ def tableaux(typ, B, tr) -> tuple[dict, dict]:
         for d in l["domaines"]:
             lignes.append([cfr, d["domaine"].rstrip(";.")])
     t["competences"] = {"entetes": ["Catégorie", "Domaine (texte du traité)"], "lignes": lignes}
-    te["competences"] = {"entetes": ["Category", "Area (French text of the Treaty)"], "lignes": [[{"Exclusive (art. 3, § 1)": "Exclusive (art. 3(1))", "Partagée (art. 4, § 2)": "Shared (art. 4(2))"}.get(a, "Support, coordination, supplement (art. 6)"), b] for a, b in lignes]}
+    te_ = typologie_en(typ)
+    te["competences"] = {"entetes": ["Category", "Area (text of the Treaty)"],
+                         "lignes": [[c, d.rstrip(";.")] for c, L in zip(("Exclusive (art. 3(1))", "Shared (art. 4(2))", "Support, coordination, supplement (art. 6)"), te_["listes"]) for d in L]}
     li, lie = [], []
     for unites, lfr, len_ in INSTRUMENTS:
         u = unites[0]
