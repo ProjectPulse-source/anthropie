@@ -79,11 +79,11 @@ CONST_EN = {"art10": ("10", "The President of the Republic shall promulgate Acts
             "art61": ("61", "referral to the Constitutional Council shall suspend the time allotted for promulgation.")}
 # Notre traduction des citations françaises hors Constitution ; chaque nombre doit figurer dans l'original (garde A7 bis).
 TR = {
-    "cit_cciv": "However, the entry into force of those of their provisions whose implementation requires implementing "
-                "measures is postponed to the date on which those measures enter into force.",
-    "cit_sgg_1718": "these 28 laws called for 461 implementing regulations and we adopted 393 of them, an application rate of 85%",
+    "cit_cciv": "However, provisions whose implementation requires implementing measures do not enter into force until "
+                "those measures themselves enter into force.",
+    "cit_sgg_1718": "these 28 laws called for 461 implementing regulations and we adopted 393 of them, an implementation rate of 85%",
     "cit_senat_1718": "It now stands at 78% - 86% if measures whose entry into force is deferred are excluded",
-    "cit_senat_1819": "The overall rate of application of laws calculated by the Senate is 72%",
+    "cit_senat_1819": "The overall implementation rate of laws calculated by the Senate is 72%",
     "cit_sgg_1819": "the departments of the General Secretariat of the Government arrive for their part at an overall rate of 82.4%",
     "cit_diverge": "The rate calculated by the Senate may differ from the one calculated by the Government for technical "
                    "reasons, of two kinds.",
@@ -91,20 +91,20 @@ TR = {
                    "orders (arrêtés) whose publication is provided for by the law. This is not the case of the General "
                    "Secretariat of the Government.",
     "cit_politique": "It may also differ for political reasons, in particular when the Senate considers that a decree adopted "
-                     "does not respect the will of the legislator, and therefore that the expected measure has not been taken.",
+                     "does not reflect the legislature's intent, and therefore that the expected measure has not been taken.",
     "cit_differees": "the Senate includes in its rate the measures expected for articles whose entry into force is deferred, "
                      "unlike the Government.",
     "cit_802_22": "More precisely, 22 of them (39%) were directly applicable",
     "cit_802_24": "the number of laws promulgated during the 2024-2025 session stands at 56, of which 24 directly applicable",
-    "cit_802_66": "Overall rate of application of laws 66% (+ 4 points)",
+    "cit_802_66": "Overall implementation rate of laws 66% (+ 4 points)",
     "cit_802_note": "The data taken into account are those of the measures provided for by the legislative provisions, "
                     "excluding optional measures and measures deferred beyond 31 March 2026.",
     "cit_six_mois": "this year, for the first time, in order to measure the number of regulations adopted only at the end of "
                     "the six-month period the Government sets itself, the period used includes three months fewer for the "
                     "laws promulgated and three months more for the regulations adopted.",
-    "cit_sgg16_def": "shows the rate of application at 31 December 2025 of the laws which, among those passed between 1 July 2022 "
+    "cit_sgg16_def": "shows the implementation rate at 31 December 2025 of the laws which, among those passed between 1 July 2022 "
                      "and 9 June 2024, call for implementing decrees.",
-    "cit_sgg17_def": "shows the rate of application at 31 December 2025 of the laws which, among those published between 18 July "
+    "cit_sgg17_def": "shows the implementation rate at 31 December 2025 of the laws which, among those published between 18 July "
                      "2024 and 30 June 2025, call for implementing decrees or orders.",
 }
 SEGMENTS_EN = {
@@ -494,7 +494,7 @@ def tableaux_en(r: dict) -> dict:
         "lois": {"entetes": ["Session", "Laws promulgated (excluding treaties)", "Directly applicable according to the barometer",
                              "According to the Senate", "Bounds: directly applicable for both sources, then counting divergent classifications"],
                  "lignes": lois},
-        "mesures": {"entetes": ["Session of the law", "Measures", "Identified published instrument", "Pending", "Listed as moot",
+        "mesures": {"entetes": ["Session of the law", "Measures", "Identified published instrument", "Pending", "Classified “not applicable” (sans objet)",
                                 "Incomplete status"], "lignes": mes},
         "serie": {"entetes": ["Session", "Rate published by the Senate", "Definition (segment)", "Document"], "lignes": serie},
     }
@@ -594,22 +594,22 @@ T = {
                  "tableau sous la figure." % LETTRES[len(SEGMENTS)],
            "pct": "{} %", "leg3": "1 à 6 : segments (définitions dans le tableau) ; cercle vide : valeur 2019-2020 reprise l'année suivante"},
     "en": {"src1": "Barometer of the application of laws (National Assembly, LexImpact; DILA data), status at 5 October 2026",
-           "note1": "Laws promulgated per session (1 Oct.-30 Sept.), excluding treaties. Status at the reading date: neither a past rate nor efficiency.",
+           "note1": "Laws promulgated per session (1 Oct.-30 Sept.), excluding treaties. Status at the reading date: neither a historical rate nor efficiency.",
            "src2": "Barometer of the application of laws (status at 5 October 2026); Senate annual reports on the application of laws",
            "note2": "Grey: laws that the barometer and the Senate classify differently (2024-2025: plus 2 laws with no list of names).",
            "src3": "French Senate, annual reports on the application of laws, 2003-2026 (rates as published, page cited in the table)",
            "note3": LETTRES_EN[len(SEGMENTS)].capitalize() + " successive definitions: do not join the segments. A revised figure and a change of definition are two distinct facts.",
            "t1": "Implementing measures of French laws, by session of the law", "s1": "number of measures listed and their status at 5 October 2026",
            "d1": "Horizontal bars, one per session from 2017-2018 to 2024-2025: measures with an identified published instrument, pending, "
-                 "listed as moot. In total {nmes} measures, {A} of them pending. The values are in the table below the figure.",
-           "l1": ["identified published instrument", "pending", "listed as moot", "incomplete status"], "attente": "{} pending",
+                 "classified as “not applicable”. In total {nmes} measures, {A} of them pending. The values are in the table below the figure.",
+           "l1": ["identified published instrument", "pending", "classified as “not applicable”", "incomplete status"], "attente": "{} pending",
            "t2": "French laws that call for no implementing measure, by session",
            "s2": "number of laws promulgated, excluding treaties; black mark: half of the session's laws",
            "d2": "Horizontal bars, one per session: laws directly applicable for both sources, laws classified differently by the "
                  "barometer and the Senate, laws that call for measures. In {ct_session}, the barometer counts {ct_baro} directly "
                  "applicable laws out of {ct_N}. The values are in the table below the figure.",
            "l2": ["directly applicable (both sources)", "divergent classification", "call for measures"], "lois": "{} laws",
-           "t3": "The rate of application of laws published by the French Senate, 2002-2003 to 2024-2025",
+           "t3": "The implementation rate of laws published by the French Senate, 2002-2003 to 2024-2025",
            "s3": "in %% of expected measures; %s successive definitions, alternating backgrounds: one segment does not compare with another" % LETTRES_EN[len(SEGMENTS)],
            "d3": "Points by session, grouped in %s segments separated by changes of definition: from {a}%% to {b}%% in the first segment "
                  "({c} to {d}), from {e}%% to {f}%% in the following ones. The values, their document and their definition are in the "
@@ -715,7 +715,7 @@ def fig_serie(r: dict, A: dict) -> str:
 
 MONTRE_EN = {
     "mesures": "On {releve}, of the {nmes} implementing measures listed by the barometer for the laws promulgated in France from "
-               "October 2017 to September 2025, {P} have an identified published instrument, {A} are pending and {S} are listed as moot.",
+               "October 2017 to September 2025, {P} have an identified published instrument, {A} are pending and {S} are classified as “not applicable” (sans objet).",
     "lois": "'Fewer than half in every session' does not hold: in {ct_session}, the barometer counts {ct_baro} directly applicable "
             "laws out of {ct_N}; in the {nautres} other sessions, even the upper bound stays below half. The two sources classify "
             "{ndesacc} of the {nlois} laws differently.",

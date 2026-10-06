@@ -53,7 +53,7 @@ def main() -> int:
              "Barometer of the application of laws (National Assembly, LexImpact, DILA) · CC BY 4.0",
              "stephane-lalut.com/en/does-a-law-apply-as-soon-as-it-is-passed/",
              lambda d: barres(d, m, "en"),
-             [(BLEU, "Published: %s" % E["P"]), (ORANGE, "Pending: %s" % E["A"]), (GRIS_CLAIR, "Moot: %s" % E["S"])])
+             [(BLEU, "Published: %s" % E["P"]), (ORANGE, "Pending: %s" % E["A"]), (GRIS_CLAIR, "Not applicable: %s" % E["S"])])
     og.carte("og-appliquer-promesse.jpg",
              ["%s mesures" % A["A"], "encore attendues"],
              "Lois votées d'octobre 2017 à septembre 2025.",

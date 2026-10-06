@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 378" role="img" font-variant-numeric="tabular-nums" aria-labelledby="am-t am-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-<title id="am-t">Implementing measures of French laws, by session of the law</title><desc id="am-d">Horizontal bars, one per session from 2017-2018 to 2024-2025: measures with an identified published instrument, pending, listed as moot. In total 5,398 measures, 567 of them pending. The values are in the table below the figure.</desc>
+<title id="am-t">Implementing measures of French laws, by session of the law</title><desc id="am-d">Horizontal bars, one per session from 2017-2018 to 2024-2025: measures with an identified published instrument, pending, classified as “not applicable”. In total 5,398 measures, 567 of them pending. The values are in the table below the figure.</desc>
 <rect width="720" height="378" fill="#ffffff"/>
 <text x="0.0" y="18.0" font-size="13" fill="#0A0A0E" text-anchor="start" font-weight="600">Implementing measures of French laws, by session of the law</text>
 <text x="0.0" y="36.0" font-size="12" fill="#52514e" text-anchor="start">number of measures listed and their status at 5 October 2026</text>
@@ -8,9 +8,9 @@
 <rect x="226" y="49" width="11" height="11" fill="#eb6834"/>
 <text x="242.2" y="58.0" font-size="10" fill="#52514e" text-anchor="start">pending</text>
 <rect x="303" y="49" width="11" height="11" fill="#c9c5c0"/>
-<text x="319.6" y="58.0" font-size="10" fill="#52514e" text-anchor="start">listed as moot</text>
-<rect x="424" y="49" width="11" height="11" fill="#8a8781"/>
-<text x="440.4" y="58.0" font-size="10" fill="#52514e" text-anchor="start">incomplete status</text>
+<text x="319.6" y="58.0" font-size="10" fill="#52514e" text-anchor="start">classified as “not applicable”</text>
+<rect x="523" y="49" width="11" height="11" fill="#8a8781"/>
+<text x="539.6" y="58.0" font-size="10" fill="#52514e" text-anchor="start">incomplete status</text>
 <line x1="78.0" y1="70" x2="78.0" y2="300" stroke="#e1e0d9"/>
 <text x="78.0" y="314.0" font-size="9" fill="#898781" text-anchor="middle">0</text>
 <line x1="227.0" y1="70" x2="227.0" y2="300" stroke="#e1e0d9"/>
@@ -65,6 +65,6 @@
 <text x="392.5" y="284.0" font-size="9" fill="#52514e" text-anchor="start">119 pending</text>
 <line x1="0" y1="332" x2="720" y2="332" stroke="#e1e0d9"/>
 <text x="0" y="345" font-size="9" fill="#52514e">Barometer of the application of laws (National Assembly, LexImpact; DILA data), status at 5 October 2026</text>
-<text x="0" y="357" font-size="9" fill="#52514e">Laws promulgated per session (1 Oct.-30 Sept.), excluding treaties. Status at the reading date: neither a past rate nor efficiency.</text>
+<text x="0" y="357" font-size="9" fill="#52514e">Laws promulgated per session (1 Oct.-30 Sept.), excluding treaties. Status at the reading date: neither a historical rate nor efficiency.</text>
 <text x="0" y="369" font-size="9" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/does-a-law-apply-as-soon-as-it-is-passed/</text>
 </svg>

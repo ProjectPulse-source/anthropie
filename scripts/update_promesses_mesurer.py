@@ -48,7 +48,7 @@ URL_DARES = ("https://data.dares.travail-emploi.gouv.fr/api/explore/v2.1/catalog
              "dares_defm_stock_france_cvs_trim/exports/csv?use_labels=true")
 URL_DARES_META = "https://data.dares.travail-emploi.gouv.fr/api/explore/v2.1/catalog/datasets/dares_defm_stock_france_cvs_trim"
 PAGE_URL = "stephane-lalut.com/comment-savoir-si-une-promesse-est-tenue/"
-PAGE_URL_EN = "stephane-lalut.com/en/how-to-tell-whether-a-promise-was-kept/"
+PAGE_URL_EN = "stephane-lalut.com/en/how-can-we-tell-whether-a-promise-was-kept/"
 # Bilingue (06/10/2026) : un calcul, deux blocs (affichage, affichage_en) aux mêmes clés, des figures -en au même dessin.
 OUT_DATA = ROOT / "data" / "promesses_mesurer.json"
 OUT_STATIC = ROOT / "static" / "promesses_mesurer.json"
@@ -289,13 +289,13 @@ T = {
            "ecart": "Cet écart entre panneaux ne mesure pas l'effet de la réforme : ce sont deux populations distinctes.",
            "M": lambda v: fr(v / 1e6, 1) + " M"},
     "en": {"src1": "Insee Références, Emploi, chômage, revenus du travail, 2026 ed., file 1, figures 2 and 8 (Dares-Insee-France Travail matching)",
-           "note1": "Insee estimate, 2024 average, France excluding Mayotte, aged 15-64, ordinary housing; two distinct definitions.",
+           "note1": "Insee estimate, 2024 average, France excluding Mayotte, aged 15-64, ordinary households; two distinct definitions.",
            "src2": "Dares and France Travail, registrants at end of quarter, France excluding Mayotte, seasonally adjusted (series 'excluding RSA' since 2018)",
-           "note2": "Scope and period differ from the 2024 cross-tabulation figure. Official label suspended for 1 Jan. 2025 to 20 May 2026.",
-           "t1": "ILO-unemployed and category A registrants in France, 2024",
+           "note2": "Scope and period differ from the 2024 cross-tabulation figure. Quality label suspended for 1 Jan. 2025 to 20 May 2026.",
+           "t1": "ILO-defined unemployment and category A registration in France, 2024",
            "s1": "two definitions, populations that partly overlap (thousands of people)",
-           "d1": "Bar in three segments: {bit_seul} ILO-unemployed not registered in category A, {commun} people in both at once, {a_seul} "
-                 "category A registrants who are not ILO-unemployed (Insee estimate, 2024).",
+           "d1": "Bar in three segments: {bit_seul} people unemployed under the ILO definition not registered in category A, {commun} people in both at once, {a_seul} "
+                 "category A registrants who are not unemployed under the ILO definition (Insee estimate, 2024).",
            "bit": "Unemployed (ILO definition): %s", "insc": "Registered in category A at France Travail: %s",
            "dont1": "of whom: not registered %s; registered in B or C %s;", "dont2": "registered in D or E %s",
            "dont3": "of whom: halo around unemployment %s;", "dont4": "inactive outside the halo %s; in work %s", "deux": "in both",
@@ -380,8 +380,8 @@ def fig_regle(r: dict, A: dict) -> str:
 
 MONTRE_EN = {
     "recoupement": "In 2024, according to the Insee estimate, about {commun} people are both unemployed in the ILO sense and "
-                   "registered in category A; about {a_seul} category A registrants are not ILO-unemployed, and {bit_seul} "
-                   "ILO-unemployed are not registered in category A.",
+                   "registered in category A; about {a_seul} category A registrants are not unemployed under the ILO definition, and {bit_seul} "
+                   "people unemployed under the ILO definition are not registered in category A.",
     "regle": "Since 1 January 2025, some groups are registered automatically with France Travail; the Dares also publishes a "
              "series that excludes RSA recipients and young people in programmes. The two panels describe two populations, and "
              "the gap between them does not measure the effect of the reform.",

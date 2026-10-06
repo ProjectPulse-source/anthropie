@@ -11,46 +11,46 @@
 
 inventaire_19:
   "8, al. 1":
-    pouvoir: "Appoint the Prime Minister"
+    pouvoir: "Appointing the Prime Minister"
     acte: "The President of the Republic shall appoint the Prime Minister."
     limite: "He shall terminate the appointment of the Prime Minister when the latter tenders the resignation of the Government."
   "11":
-    pouvoir: "Submit a Government Bill to a referendum"
+    pouvoir: "Submitting a government bill to a referendum"
     acte: "submit to a referendum any Government Bill"
     condition: "on a recommendation from the Government when Parliament is in session, or on a joint motion of the two Houses"
     autre_autorite: "Where the outcome of the referendum is favourable to the Government Bill or to the Private Members' Bill"
     limite: "which deals with the organization of the public authorities, or with reforms relating to the economic, social or environmental policy of the Nation, and to the public services contributing thereto"
   "12":
-    pouvoir: "Dissolve the National Assembly"
+    pouvoir: "Dissolving the National Assembly"
     acte: "declare the National Assembly dissolved"
     condition: "after consulting the Prime Minister and the Presidents of the Houses of Parliament"
     autre_autorite: "A general election shall take place no fewer than twenty days and no more than forty days after the dissolution."
     limite: "No further dissolution shall take place within a year following said election."
   "16":
-    pouvoir: "Exercise emergency powers"
+    pouvoir: "Exercising emergency powers"
     acte: "the President of the Republic shall take measures required by these circumstances"
     condition: "after formally consulting the Prime Minister, the Presidents of the Houses of Parliament and the Constitutional Council"
     autre_autorite: "It shall, as of right, carry out such an examination and shall make its decision in the same manner after sixty days of the exercise of emergency powers"
     limite: "are under serious and immediate threat, and where the proper functioning of the constitutional public authorities is interrupted"
   "18":
-    pouvoir: "Send a message to Parliament"
+    pouvoir: "Addressing Parliament by message"
     acte: "The President of the Republic shall communicate with the two Houses of Parliament by messages which he shall cause to be read aloud"
     limite: "which shall not give rise to any debate"
   "54":
-    pouvoir: "Refer an international undertaking to the Constitutional Council"
-    court: "Refer a treaty to the Constitutional Council"
+    pouvoir: "Referring an international undertaking to the Constitutional Council"
+    court: "Referring a treaty to the Constitutional Council"
     acte: "on a referral from the President of the Republic"
     autre_autorite: "has held that an international undertaking contains a clause contrary to the Constitution"
     partage: "from the Prime Minister, from the President of one or the other Houses, or from sixty Members of the National Assembly or sixty Senators"
   "56":
-    pouvoir: "Appoint three members of the Constitutional Council and its President"
-    court: "Appoint to the Constitutional Council"
+    pouvoir: "Appointing three members of the Constitutional Council and its President"
+    court: "Appointing to the Constitutional Council"
     acte: "Three of its members shall be appointed by the President of the Republic"
     autre_autorite: "The procedure provided for in the last paragraph of article 13 shall be applied to these appointments."
     partage: "three by the President of the National Assembly and three by the President of the Senate"
   "61":
-    pouvoir: "Refer a law to the Constitutional Council"
-    court: "Refer a law to the Constitutional Council"
+    pouvoir: "Referring a law to the Constitutional Council"
+    court: "Referring a law to the Constitutional Council"
     acte: "Acts of Parliament may be referred to the Constitutional Council, before their promulgation, by the President of the Republic"
     autre_autorite: "the Constitutional Council must deliver its ruling within one month"
     partage: "the Prime Minister, the President of the National Assembly, the President of the Senate, sixty Members of the National Assembly or sixty Senators"
@@ -86,18 +86,18 @@ pouvoirs:
     portee_texte: "The appointment takes effect by his signature alone. The appointment ends “when the latter tenders the resignation of the Government” (art. 8, para. 1): it is the only route the article describes."
   referendum:
     question: "Can the president call a referendum alone?"
-    pouvoir: "Submit a Government Bill to a referendum"
+    pouvoir: "Submit a government bill to a referendum"
     decide: "The president submits the text to the people; the people decide."
     condition: "A recommendation from the Government when Parliament is in session, or a joint motion of the two Houses, published in the Journal officiel. The subject is limited: organisation of the public authorities, reforms relating to the economic, social or environmental policy of the Nation and to the public services contributing thereto, authorisation to ratify certain treaties."
     tiers: "The Government or the two Houses to propose; the voters to adopt."
-    portee_texte: "The initiative belongs to the Government or to the two Houses, which propose; the president decides to submit. In the shared-initiative referendum (one fifth of the members of Parliament, supported by one tenth of registered voters), the French text binds him: if the two Houses have not considered the bill within the period set by the Institutional Act, he « la soumet » (submits it) to a referendum. The English translation published by the Conseil constitutionnel reads “may submit it to a referendum”, which the French text does not say."
+    portee_texte: "The initiative belongs to the Government or to the two Houses, which propose; the president decides to submit. In the shared-initiative referendum (one fifth of the members of Parliament, supported by one tenth of registered voters), if the two Houses have not considered the bill within the period set by the Institutional Act, the French text uses the indicative « la soumet » (submits it), whereas the English translation published by the Conseil constitutionnel reads “may submit it to a referendum”."
   dissolution:
     question: "Can the president dissolve the National Assembly without the Prime Minister's agreement?"
     pouvoir: "Dissolve the National Assembly"
     decide: "The president, “after consulting the Prime Minister and the Presidents of the Houses of Parliament”."
     condition: "Consultation is required, not agreement. No further dissolution within a year following the election; no dissolution during the exercise of emergency powers (art. 16)."
     tiers: "The voters: “A general election shall take place no fewer than twenty days and no more than forty days after the dissolution.”"
-    portee_texte: "The dissolution takes effect by his decision alone. The majority that comes out of it belongs to the voters."
+    portee_texte: "The dissolution takes effect by his decision alone. The voters determine the resulting majority."
   pouvoirs-exceptionnels:
     question: "What are the emergency powers of article 16?"
     pouvoir: "Exercise emergency powers"
@@ -167,7 +167,7 @@ pouvoirs:
     decide: "The president “shall be Commander-in-Chief of the Armed Forces” and presides over the higher national defence councils and committees (art. 15)."
     condition: "None written for the capacity of Commander-in-Chief; his instruments are countersigned."
     tiers: "The Government “shall have at its disposal the civil service and the armed forces” (art. 20); the Prime Minister “shall be responsible for national defence” (art. 21)."
-    portee_texte: "The Constitution spreads military matters over three titles: Commander-in-Chief, disposal of the armed forces, responsibility for national defence. None reads alone."
+    portee_texte: "The Constitution spreads military matters over three titles: Commander-in-Chief, disposal of the armed forces, responsibility for national defence. None can be read in isolation."
   grace:
     question: "Can the president grant a pardon alone?"
     pouvoir: "Power of pardon"

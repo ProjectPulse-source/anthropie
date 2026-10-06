@@ -54,7 +54,7 @@ sys.path.insert(0, str(ROOT / "scripts" / "sources_promesses_en"))
 import constitution_en as cen  # noqa: E402
 SRC = ROOT / "scripts" / "sources_delais"
 PAGE_URL = "stephane-lalut.com/une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/"
-PAGE_URL_EN = "stephane-lalut.com/en/can-a-promise-take-effect-within-five-years/"
+PAGE_URL_EN = "stephane-lalut.com/en/can-a-campaign-promise-produce-results-within-five-years/"
 OUT_DATA = ROOT / "data" / "promesses_delais.json"
 OUT_STATIC = ROOT / "static" / "promesses_delais.json"
 OUT_CSV = ROOT / "static" / "promesses_delais.csv"
@@ -74,13 +74,13 @@ TR = {
     "cit_cycle1": "The general training diploma in medical sciences concludes the first cycle; it comprises six semesters of training",
     "cit_cycle2": "The advanced training diploma in medical sciences, defined in this order, concludes the second cycle; it "
                   "comprises six semesters of training",
-    "cit_mg": "which, for the specialty of general medicine, lasts four years",
-    "cit_37": "The duration of the third cycle of medical studies for the specialty of general medicine mentioned in 2° of I applies "
+    "cit_mg": "which, for the specialty of general practice, lasts four years",
+    "cit_37": "The duration of the third cycle of medical studies for the specialty of general practice mentioned in 2° of I applies "
               "to students who begin this third cycle at the start of the 2023 academic year.",
-    "cit_supervision": "The last year of the diploma of specialised studies in general medicine is carried out as an internship, "
+    "cit_supervision": "The last year of the diploma of specialised studies in general practice is carried out as an internship, "
                        "under a regime of supervised autonomy",
-    "cit_dj1": "The acts performed under this regime are performed by the junior doctor alone.",
-    "cit_dj2": "The junior doctor exercises his functions by delegation and under the responsibility of the practitioner he "
+    "cit_dj1": "The acts performed under this regime are performed by the docteur junior alone.",
+    "cit_dj2": "The docteur junior exercises his functions by delegation and under the responsibility of the practitioner he "
                "reports to.",
 }
 
@@ -343,18 +343,18 @@ T = {
     "en": {"src1": "Order of 8 April 2013, art. 1; Education Code, art. L632-2; Law no. 2022-1616, art. 37; Constitution, art. 6",
            "note1": "Comparison of scale only: neither the effect of a policy nor the date of its first effects. Minimum durations; care before the end.",
            "src2": "DREES, Dossier no. 76 (2021), chart 8, source ONDPS (1972-2020); ONDPS, 2021-2025 report (admissions)",
-           "note2": "Places filled; scope widened to bridging and second-chance entries from 2010-2011; numerus apertus since 2021.",
+           "note2": "Places filled; scope widened to alternative-entry routes (passerelles) and reorientation entries (droit au remords) from 2010-2011; numerus apertus since 2021.",
            "t1": "Training a general practitioner in France, and the length of a presidential term",
            "s1": "in years, minimum durations written in the texts in force",
-           "d1": "Two bars on the same scale. Above, the general medicine curriculum: {a} years of first cycle, {b} years of second "
+           "d1": "Two bars on the same scale. Above, the general practice curriculum: {a} years of first cycle, {b} years of second "
                  "cycle, {c} years of third cycle, {d} years in all. Below, a presidential term of {e} years. Comparison of scale only.",
-           "mg": "General medicine", "cycles": ["1st cycle", "2nd cycle", "3rd cycle", "4th year"],
+           "mg": "General practice", "cycles": ["1st cycle", "2nd cycle", "3rd cycle", "4th year"],
            "auto": "last year: supervised autonomy", "mandat": "Presidential term", "ans": "{} years",
            "t2": "Admissions to medical studies in France, 1972-2025, by year",
            "s2": "places filled until 2020 (DREES, ONDPS), admissions since 2021 (ONDPS)",
            "d2": "Annual bars: {places_1972} places in 1972, a minimum of {places_min} in {an_min}, {places_2020} in 2020; then from "
                  "{min_admis} to {admis_2025} admissions a year from 2021 to 2025.",
-           "r1": "2010-2011: bridging entries included", "r2": "2021: numerus apertus", "annot": "%s: %s"},
+           "r1": "2010-2011: passerelles included", "r2": "2021: numerus apertus", "annot": "%s: %s"},
 }
 
 
@@ -421,7 +421,7 @@ def fig_admissions(r: dict, A: dict) -> str:
 
 MONTRE_EN = {
     "cursus": "Under the rules in force for students who entered the third cycle from the start of the 2023 academic year, the "
-              "standard general medicine curriculum in France takes at least {duree} years from the first year, {nfois} the "
+              "standard general practice curriculum in France takes at least {duree} years from the first year, {nfois} the "
               "length of a presidential term. Comparison of scale only.",
     "admissions": "Places in French medical studies were divided by {rapport_baisse} between 1972 and {an_min} ({places_min} "
                   "places), then rose again; {admis_2021_2025} students were admitted from 2021 to 2025.",

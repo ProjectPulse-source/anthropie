@@ -163,11 +163,11 @@
   "cit_dj2": "Le docteur junior exerce ses fonctions par délégation et sous la responsabilité du praticien dont il relève.",
   "cit_cycle1_tr": "The general training diploma in medical sciences concludes the first cycle; it comprises six semesters of training",
   "cit_cycle2_tr": "The advanced training diploma in medical sciences, defined in this order, concludes the second cycle; it comprises six semesters of training",
-  "cit_mg_tr": "which, for the specialty of general medicine, lasts four years",
-  "cit_37_tr": "The duration of the third cycle of medical studies for the specialty of general medicine mentioned in 2° of I applies to students who begin this third cycle at the start of the 2023 academic year.",
-  "cit_supervision_tr": "The last year of the diploma of specialised studies in general medicine is carried out as an internship, under a regime of supervised autonomy",
-  "cit_dj1_tr": "The acts performed under this regime are performed by the junior doctor alone.",
-  "cit_dj2_tr": "The junior doctor exercises his functions by delegation and under the responsibility of the practitioner he reports to.",
+  "cit_mg_tr": "which, for the specialty of general practice, lasts four years",
+  "cit_37_tr": "The duration of the third cycle of medical studies for the specialty of general practice mentioned in 2° of I applies to students who begin this third cycle at the start of the 2023 academic year.",
+  "cit_supervision_tr": "The last year of the diploma of specialised studies in general practice is carried out as an internship, under a regime of supervised autonomy",
+  "cit_dj1_tr": "The acts performed under this regime are performed by the docteur junior alone.",
+  "cit_dj2_tr": "The docteur junior exercises his functions by delegation and under the responsibility of the practitioner he reports to.",
   "cit_art6a_en": "The President of the Republic shall be elected for a term of five years by direct universal suffrage."
  },
  "affichage_en": {
@@ -207,11 +207,11 @@
   "cit_dj2": "Le docteur junior exerce ses fonctions par délégation et sous la responsabilité du praticien dont il relève.",
   "cit_cycle1_tr": "The general training diploma in medical sciences concludes the first cycle; it comprises six semesters of training",
   "cit_cycle2_tr": "The advanced training diploma in medical sciences, defined in this order, concludes the second cycle; it comprises six semesters of training",
-  "cit_mg_tr": "which, for the specialty of general medicine, lasts four years",
-  "cit_37_tr": "The duration of the third cycle of medical studies for the specialty of general medicine mentioned in 2° of I applies to students who begin this third cycle at the start of the 2023 academic year.",
-  "cit_supervision_tr": "The last year of the diploma of specialised studies in general medicine is carried out as an internship, under a regime of supervised autonomy",
-  "cit_dj1_tr": "The acts performed under this regime are performed by the junior doctor alone.",
-  "cit_dj2_tr": "The junior doctor exercises his functions by delegation and under the responsibility of the practitioner he reports to.",
+  "cit_mg_tr": "which, for the specialty of general practice, lasts four years",
+  "cit_37_tr": "The duration of the third cycle of medical studies for the specialty of general practice mentioned in 2° of I applies to students who begin this third cycle at the start of the 2023 academic year.",
+  "cit_supervision_tr": "The last year of the diploma of specialised studies in general practice is carried out as an internship, under a regime of supervised autonomy",
+  "cit_dj1_tr": "The acts performed under this regime are performed by the docteur junior alone.",
+  "cit_dj2_tr": "The docteur junior exercises his functions by delegation and under the responsibility of the practitioner he reports to.",
   "cit_art6a_en": "The President of the Republic shall be elected for a term of five years by direct universal suffrage."
  }
 }

@@ -50,7 +50,7 @@ def main() -> int:
              ["Two measures,", "two populations"],
              "In France, they overlap only in part.",
              "Insee 2024 estimate · Dares · CC BY 4.0",
-             "stephane-lalut.com/en/how-to-tell-whether-a-promise-was-kept/",
+             "stephane-lalut.com/en/how-can-we-tell-whether-a-promise-was-kept/",
              lambda d: barre(d, c, "en"),
              [(og.C1, "In both at once"), (GRIS_CLAIR, "In only one of the two")])
     og.carte("og-mesurer-promesse.jpg",

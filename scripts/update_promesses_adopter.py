@@ -92,10 +92,10 @@ CONST_EN = {
 }
 # Notre traduction des citations de témoins (fiche de l'AN, rapport du Sénat), affichée après l'original français.
 TEMOINS_TR = {
-    "cit_fiche64": "This instrument was nevertheless used six times, on two different bills, under the 14th legislature, once "
-                   "under the 15th legislature, and 23 times under the 16th legislature.",
+    "cit_fiche64": "This instrument was nevertheless used six times, on two different bills, during the 14th legislature, once "
+                   "during the 15th legislature, and 23 times during the 16th legislature.",
     "cit_censure": "The first motion tabled was carried by the required qualified majority",
-    "cit_senat_origine": "Over the session, 80% of the laws adopted (45 out of 56) are of parliamentary origin, against 58% in "
+    "cit_senat_origine": "Over the session, 80% of the laws adopted (45 out of 56) originated as private members' bills, against 58% in "
                          "2023-2024",
 }
 MOIS_EN = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November",
@@ -549,10 +549,10 @@ def fig_493(r: dict, A: dict) -> str:
 
 MONTRE_EN = {
     "origine": "Among the laws promulgated in the scope studied (excluding treaties, finance, social security financing and "
-               "institutional acts), {P14} out of {N14} are of parliamentary origin under the 14th legislature, {P15} out of {N15} "
-               "under the 15th and {P16} out of {N16} under the 16th; formal origin at the initial tabling.",
-    "493": "The Government made the passing of a bill an issue of a vote of confidence (art. 49, para. 3) {E14} times under the 14th legislature, "
-           "{Efois15} under the 15th and {E16} times under the 16th, including {Efin16} on a Finance Bill or Social Security "
+               "institutional acts), {P14} out of {N14} originated as private members' bills during the 14th legislature, {P15} out of {N15} "
+               "during the 15th and {P16} out of {N16} during the 16th; formal origin at the initial tabling.",
+    "493": "The Government made the passing of a bill an issue of a vote of confidence (art. 49, para. 3) {E14} times during the 14th legislature, "
+           "{Efois15} during the 15th and {E16} times during the 16th, including {Efin16} on a Finance Bill or Social Security "
            "Financing Bill.",
 }
 

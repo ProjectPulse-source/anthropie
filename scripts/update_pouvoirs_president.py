@@ -371,9 +371,9 @@ def fiches_figures(svg: str, A: dict, svg_en: str, A_en: dict) -> dict:
     if len(cart_en) != 3 or cart_en[-1] != LICENCE_EN:
         raise Arret("fiche : cartouche illisible dans le SVG anglais")
     montre_en = ("Of the %s provisions that article 19 of the French Constitution exempts from countersignature, only %s contain "
-                 "no prior condition, no later intervention of another actor and no power of the same kind given to other "
-                 "authorities: %s. This does not mean that the president has only %s powers of his own."
-                 % (A_en["n_renvois"], A_en["n_seuls"], A_en["seuls_liste"], A_en["n_seuls"]))
+                 "no prior condition, no subsequent intervention by another actor and no equivalent power vested in another "
+                 "authority: %s. This does not mean that these are the president's only powers of his own."
+                 % (A_en["n_renvois"], A_en["n_seuls"], A_en["seuls_liste"]))
     montre = ("Sur les %s dispositions que l'article 19 dispense de contreseing, %s seulement ne contiennent ni condition "
               "préalable, ni intervention ultérieure d'un autre acteur, ni pouvoir de même nature attribué à d'autres autorités : %s. "
               "Cette observation ne signifie pas que le président ne disposerait que de %s pouvoirs propres."

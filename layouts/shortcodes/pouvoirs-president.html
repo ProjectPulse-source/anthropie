@@ -146,8 +146,8 @@
       <dt>Basis</dt><dd>{{ range $i, $n := .articles }}{{ if $i }}, {{ end }}<a href="{{ $lf }}{{ (index $d.articles $n).legiarti }}" hreflang="fr">art. {{ $n }}</a>{{ end }}</dd>
       <dt>Who decides</dt><dd>{{ $x.decide }}</dd>
       <dt>Condition</dt><dd>{{ $x.condition }}</dd>
-      <dt>Third party needed</dt><dd>{{ $x.tiers }}</dd>
-      <dt>What the act produces</dt><dd>{{ $x.portee_texte }}</dd>
+      <dt>Other actor involved</dt><dd>{{ $x.tiers }}</dd>
+      <dt>Effect of the act</dt><dd>{{ $x.portee_texte }}</dd>
     </dl>
   </section>
   {{- else }}

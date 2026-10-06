@@ -21,10 +21,10 @@
   {
    "id": "recoupement",
    "fichier": "mesurer-recoupement-en",
-   "titre": "ILO-unemployed and category A registrants in France, 2024",
-   "montre": "In 2024, according to the Insee estimate, about 1.43 million people are both unemployed in the ILO sense and registered in category A; about 1.47 million category A registrants are not ILO-unemployed, and 863,000 ILO-unemployed are not registered in category A.",
+   "titre": "ILO-defined unemployment and category A registration in France, 2024",
+   "montre": "In 2024, according to the Insee estimate, about 1.43 million people are both unemployed in the ILO sense and registered in category A; about 1.47 million category A registrants are not unemployed under the ILO definition, and 863,000 people unemployed under the ILO definition are not registered in category A.",
    "source": "Insee Références, Emploi, chômage, revenus du travail, 2026 ed., file 1, figures 2 and 8 (Dares-Insee-France Travail matching)",
-   "precaution": "Insee estimate, 2024 average, France excluding Mayotte, aged 15-64, ordinary housing; two distinct definitions."
+   "precaution": "Insee estimate, 2024 average, France excluding Mayotte, aged 15-64, ordinary households; two distinct definitions."
   },
   {
    "id": "regle",
@@ -32,7 +32,7 @@
    "titre": "Category A registrants: published series and series without RSA recipients or youth programmes",
    "montre": "Since 1 January 2025, some groups are registered automatically with France Travail; the Dares also publishes a series that excludes RSA recipients and young people in programmes. The two panels describe two populations, and the gap between them does not measure the effect of the reform.",
    "source": "Dares and France Travail, registrants at end of quarter, France excluding Mayotte, seasonally adjusted (series 'excluding RSA' since 2018)",
-   "precaution": "Scope and period differ from the 2024 cross-tabulation figure. Official label suspended for 1 Jan. 2025 to 20 May 2026."
+   "precaution": "Scope and period differ from the 2024 cross-tabulation figure. Quality label suspended for 1 Jan. 2025 to 20 May 2026."
   }
  ]
 }

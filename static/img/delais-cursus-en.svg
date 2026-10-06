@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 248" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dc-t dc-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-<title id="dc-t">Training a general practitioner in France, and the length of a presidential term</title><desc id="dc-d">Two bars on the same scale. Above, the general medicine curriculum: 3 years of first cycle, 3 years of second cycle, 4 years of third cycle, 10 years in all. Below, a presidential term of 5 years. Comparison of scale only.</desc>
+<title id="dc-t">Training a general practitioner in France, and the length of a presidential term</title><desc id="dc-d">Two bars on the same scale. Above, the general practice curriculum: 3 years of first cycle, 3 years of second cycle, 4 years of third cycle, 10 years in all. Below, a presidential term of 5 years. Comparison of scale only.</desc>
 <rect width="720" height="248" fill="#ffffff"/>
 <text x="0.0" y="18.0" font-size="13" fill="#0A0A0E" text-anchor="start" font-weight="600">Training a general practitioner in France, and the length of a presidential term</text>
 <text x="0.0" y="36.0" font-size="12" fill="#52514e" text-anchor="start">in years, minimum durations written in the texts in force</text>
-<text x="0.0" y="91.0" font-size="11" fill="#0A0A0E" text-anchor="start" font-weight="600">General medicine</text>
+<text x="0.0" y="91.0" font-size="11" fill="#0A0A0E" text-anchor="start" font-weight="600">General practice</text>
 <rect x="120.0" y="70" width="177.0" height="32" fill="#c9cdd3" stroke="#ffffff" stroke-width="2"/>
 <text x="208.5" y="90.0" font-size="10" fill="#0A0A0E" text-anchor="middle">1st cycle</text>
 <rect x="297.0" y="70" width="177.0" height="32" fill="#c9cdd3" stroke="#ffffff" stroke-width="2"/>
@@ -31,5 +31,5 @@
 <line x1="0" y1="202" x2="720" y2="202" stroke="#e1e0d9"/>
 <text x="0" y="215" font-size="9" fill="#52514e">Order of 8 April 2013, art. 1; Education Code, art. L632-2; Law no. 2022-1616, art. 37; Constitution, art. 6</text>
 <text x="0" y="227" font-size="9" fill="#52514e">Comparison of scale only: neither the effect of a policy nor the date of its first effects. Minimum durations; care before the end.</text>
-<text x="0" y="239" font-size="9" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/can-a-promise-take-effect-within-five-years/</text>
+<text x="0" y="239" font-size="9" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/can-a-campaign-promise-produce-results-within-five-years/</text>
 </svg>

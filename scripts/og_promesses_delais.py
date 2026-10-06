@@ -24,7 +24,7 @@ def barres(d, c: dict, lang: str = "fr") -> None:
     X = lambda a: x0 + (x1 - x0) * a / duree  # noqa: E731
     fl = og.font("inter", 17, 500)
     y = 186
-    d.text((x0, y - 30), "General medicine" if lang == "en" else "Médecine générale", font=fl, fill=og.INK)
+    d.text((x0, y - 30), "General practice" if lang == "en" else "Médecine générale", font=fl, fill=og.INK)
     segs = ((0, c["s1"] / 2, GRIS_CLAIR), (c["s1"] / 2, c["s2"] / 2, GRIS_CLAIR), (c["s1"] / 2 + c["s2"] / 2, c["mg"], BLEU_CLAIR))
     for a0, l, col in segs:
         d.rectangle([X(a0) + 2, y, X(a0 + l) - 2, y + 54], fill=col)
@@ -51,7 +51,7 @@ def main() -> int:
              ["At least %s years to" % E["duree_chiffre"], "train a GP in France"],
              "%s the length of a presidential term." % {"two": "Twice", "three": "Three times"}.get(E["nmax"], E["nmax"].capitalize() + " times"),
              "Texts in force (Légifrance) · DREES · ONDPS · CC BY 4.0",
-             "stephane-lalut.com/en/can-a-promise-take-effect-within-five-years/",
+             "stephane-lalut.com/en/can-a-campaign-promise-produce-results-within-five-years/",
              lambda d: barres(d, c, "en"),
              [(BLEU_CLAIR, "Third cycle: %s years" % E["mg"]), (og.C1, "Term: %s years" % E["mandat"])])
     og.carte("og-delais-promesse.jpg",

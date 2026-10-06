@@ -29,7 +29,7 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
   fichiers: ["pouvoirs_president_donnees.csv", "pouvoirs_president_donnees.json"]
 faq:
   - question: "What can the French president decide alone?"
-    answer: "The Constitution does not speak of deciding alone. In article 19, it lists eight provisions whose instruments are exempt from the Prime Minister's countersignature: appointing the Prime Minister, submitting a Government Bill to a referendum, dissolving the National Assembly, exercising emergency powers, sending messages to Parliament, referring a treaty to the Constitutional Council, appointing to the Constitutional Council, referring a law to it. Several have written conditions: the referendum requires a recommendation from the Government or from the two Houses, dissolution requires consulting the Prime Minister and the Presidents of the Houses, emergency powers require a defined crisis and review by the Constitutional Council. His other instruments are subject to the countersignature provided for by article 19: that of the Prime Minister and, where required, of the ministers concerned."
+    answer: "The Constitution does not speak of deciding alone. In article 19, it lists eight provisions whose instruments are exempt from the Prime Minister's countersignature: appointing the Prime Minister, submitting a government bill to a referendum, dissolving the National Assembly, exercising emergency powers, sending messages to Parliament, referring a treaty to the Constitutional Council, appointing to the Constitutional Council, referring a law to it. Several have written conditions: the referendum requires a recommendation from the Government or from the two Houses, dissolution requires consulting the Prime Minister and the Presidents of the Houses, emergency powers require a defined crisis and review by the Constitutional Council. His other instruments are subject to the countersignature provided for by article 19: that of the Prime Minister and, where required, of the ministers concerned."
   - question: "Can the French president dismiss the Prime Minister?"
     answer: "Article 8 describes a single route: the president terminates the Prime Minister's appointment \"when the latter tenders the resignation of the Government\" (English translation published by the Conseil constitutionnel). The text provides for no dismissal by the president; it provides for the Government's accountability to the National Assembly (article 20, which refers to articles 49 and 50)."
   - question: "Can the French president refuse to promulgate a law?"
@@ -58,7 +58,7 @@ onglet:  # bar of its block (partials/barre-bloc.html, set by the template)
 
 <div class="resultat-phrase">
 
-**The finding in one sentence.** Of the {{< pv-val "n_renvois" >}} provisions that article 19 exempts from countersignature, only {{< pv-val "n_seuls" >}} contain, in their text, no prior condition, no later intervention of another actor and no power of the same kind given to other authorities: {{< pv-val "seuls_liste" >}}. This does not mean that the president has only {{< pv-val "n_seuls" >}} powers of his own.
+**The finding in one sentence.** Of the {{< pv-val "n_renvois" >}} provisions that article 19 exempts from countersignature, only {{< pv-val "n_seuls" >}} contain, in the text of the relevant article, no prior condition, no subsequent intervention by another actor and no equivalent power vested in another authority: {{< pv-val "seuls_liste" >}}. This does not mean that these are the president's only powers of his own.
 
 </div>
 
@@ -78,7 +78,7 @@ This criterion does not say everything. An act exempt from countersignature may 
 
 ## Which acts does the president sign without countersignature? {#sans-contreseing}
 
-The fiches that follow set out, for each of the {{< pv-val "n_renvois" >}} provisions, who decides, the condition, the third party involved and what the act produces. They are read alongside the role that article 5 gives the president: to ensure due respect for the Constitution and to ensure, "{{< pv-val "cit5" >}}".
+The entries below set out, for each of the {{< pv-val "n_renvois" >}} provisions, who decides, the condition, the other actors involved and the effect of the act. They are read alongside the role that article 5 gives the president: to ensure due respect for the Constitution and to ensure, "{{< pv-val "cit5" >}}".
 
 {{< pouvoirs-president vue="sans_contreseing" >}}
 
@@ -118,12 +118,12 @@ This page says who signs. The book asks the next question: once the elected offi
 
 ## Sources {#sources}
 
-All the articles cited here were read in their version in force, on Légifrance, on the date indicated, and are quoted in the English translation published by the Conseil constitutionnel ([Constitution of 4 October 1958](https://www.conseil-constitutionnel.fr/en/constitution-of-4-october-1958)). Each fiche refers to the articles on which it rests.
+All the articles cited here were read in their version in force, on Légifrance, on the date indicated, and are quoted in the English translation published by the Conseil constitutionnel ([Constitution of 4 October 1958](https://www.conseil-constitutionnel.fr/en/constitution-of-4-october-1958)). Each entry refers to the articles on which it rests.
 
 {{< pouvoirs-president vue="sources" >}}
 
 The inventory, quotations and matrix are produced by a single script, which rereads the archived texts and refuses to write if a quotation stops appearing in its article; no cell is filled by hand. **Download the data** (CC BY 4.0 licence): [CSV](/pouvoirs_president_donnees.csv), long format, one row per element and per article (French quotations); [JSON](/pouvoirs_president_donnees.json), with definitions and the record of the checks (in French).
 
 {{< reutiliser figures="figures_pouvoirs" jeu="pouvoirs_president_donnees" sources="Légifrance (Constitution of 4 October 1958) and the Conseil constitutionnel's English translation" donnees="The inventory of the eight provisions of article 19, each element with its exact quotation, its article and its reading date, and the articles that assign statute law and regulation; the same content exists as CSV, in long format, readable in a spreadsheet." >}}
-This page reads, in the text of the French Constitution, the {{< pv-val "n_renvois" >}} provisions that article 19 exempts from countersignature. Only {{< pv-val "n_seuls" >}}, {{< pv-val "seuls_liste" >}}, contain in their article no prior condition, no later intervention of another actor and no power of the same kind given to other authorities; this does not mean that the president has only these powers of his own. Statute law, passed by Parliament, sets taxes in particular (art. 34); regulation belongs to the Prime Minister (art. 21), except for the decrees deliberated upon in the Council of Ministers, which are countersigned.
+This page reads, in the text of the French Constitution, the {{< pv-val "n_renvois" >}} provisions that article 19 exempts from countersignature. Only {{< pv-val "n_seuls" >}}, {{< pv-val "seuls_liste" >}}, contain in their article no prior condition, no subsequent intervention by another actor and no equivalent power vested in another authority; this does not mean that these are the president's only powers of his own. Statute law, passed by Parliament, sets taxes in particular (art. 34); regulation belongs to the Prime Minister (art. 21), except for the decrees deliberated upon in the Council of Ministers, which are countersigned.
 {{< /reutiliser >}}
