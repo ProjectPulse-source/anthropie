@@ -27,7 +27,9 @@ def norm(s: str) -> str:
 
 
 def texte() -> str:
-    b = FICHIER.read_bytes()
+    # Fins de ligne normalisées avant l'empreinte : git (core.autocrlf) peut réécrire le fichier en CRLF au checkout ;
+    # l'empreinte d'origine (LF) reste celle du document téléchargé.
+    b = FICHIER.read_bytes().replace(b"\r\n", b"\n")
     if hashlib.sha256(b).hexdigest() != SHA256:
         raise ValueError("constitution_en : empreinte du fichier archivé changée")
     return norm(html.unescape(re.sub(r"<[^>]+>", " ", b.decode("utf-8"))))
