@@ -48,9 +48,9 @@ FIG = "pouvoirs-article19"
 PAGE_URL = "stephane-lalut.com/pouvoirs-du-president-de-la-republique/"
 LEGIFRANCE = "https://www.legifrance.gouv.fr/loda/article_lc/"
 ATTRIBUTS = [("condition", "Proposition ou consultation exigée avant l'acte"),
-             ("autre_autorite", "Une autre autorité intervient pour la suite"),
-             ("partage", "D'autres autorités disposent aussi de ce pouvoir"),
-             ("limite", "Limite écrite de temps ou d'objet")]
+             ("autre_autorite", "Un autre acteur intervient pour la suite"),
+             ("partage", "D'autres autorités disposent d'un pouvoir de même nature"),
+             ("limite", "Autre encadrement écrit : temps, objet ou effet")]
 LETTRES_F = {0: "aucune", 1: "une", 2: "deux", 3: "trois", 4: "quatre", 5: "cinq", 6: "six", 7: "sept", 8: "huit"}
 
 
@@ -190,7 +190,7 @@ def txt(x, y, s, size=11, fill=INK2, anchor="start", weight=None) -> str:
 
 def figure(r: dict) -> str:
     inv = r["inventaire"]
-    top, pas, col0, colw = 112, 34, 330, 97
+    top, pas, col0, colw = 126, 34, 330, 97
     H = top + pas * len(inv) + 8
     cart_h = 48
     titre = "Les huit dispositions que l’article 19 dispense de contreseing : ce que leur texte exige ou fait intervenir"
@@ -213,8 +213,10 @@ def figure(r: dict) -> str:
             else:
                 cur = (cur + " " + m).strip()
         lignes.append(cur)
-        for i, l in enumerate(lignes[-4:]):
-            e.append(txt(cx, top - 12 - 13 * (len(lignes[-4:]) - 1 - i), l, 10, INK2, "middle"))
+        if len(lignes) > 5:  # jamais de troncature silencieuse d'un libellé (défaut vu le 06/10 : « D'autres » perdu)
+            raise Arret("figure : libellé de colonne trop long (%d lignes) : %r" % (len(lignes), lib))
+        for i, l in enumerate(lignes):
+            e.append(txt(cx, top - 12 - 13 * (len(lignes) - 1 - i), l, 10, INK2, "middle"))
     for i, ent in enumerate(inv):
         y = top + pas * i + pas / 2
         if i % 2 == 0:
@@ -243,8 +245,9 @@ def fiches_figures(svg: str, A: dict) -> dict:
     if len(cart) != 3 or cart[-1] != LICENCE:
         raise Arret("fiche : cartouche illisible dans le SVG")
     montre = ("Sur les %s dispositions que l'article 19 dispense de contreseing, %s seulement ne contiennent ni condition "
-              "préalable, ni autre autorité appelée à intervenir, ni pouvoir partagé avec d'autres autorités : %s."
-              % (A["n_renvois"], A["n_seuls"], A["seuls_liste"]))
+              "préalable, ni intervention ultérieure d'un autre acteur, ni pouvoir de même nature attribué à d'autres autorités : %s. "
+              "Cette observation ne signifie pas que le président ne disposerait que de %s pouvoirs propres."
+              % (A["n_renvois"], A["n_seuls"], A["seuls_liste"], A["n_seuls"]))
     return {"fr": [dict(id="article19", fichier=FIG, titre=titre, montre=montre, source=cart[0], precaution=cart[1])]}
 
 

@@ -16,7 +16,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import og_dossier_dette as og  # noqa: E402
 
 ATTRIBUTS = ["condition", "autre_autorite", "partage", "limite"]
-COLS = ["Condition", "Autre", "Partagé", "Limite"]
+COLS = ["Condition", "Autre", "Partagé", "Cadre"]
 
 
 def matrice(d, inv: list[dict]) -> None:

@@ -1,20 +1,20 @@
 {
- "releve_le": "2026-10-05",
+ "releve_le": "2026-10-06",
  "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; texte de la Constitution : Légifrance (DILA), Licence Ouverte",
  "meta": {
   "page": "https://stephane-lalut.com/pouvoirs-du-president-de-la-republique/",
   "protocole": "fiches de preuve v2, volet Décider, E1",
   "definitions": {
    "condition": "Proposition ou consultation exigée avant l'acte",
-   "autre_autorite": "Une autre autorité intervient pour la suite",
-   "partage": "D'autres autorités disposent aussi de ce pouvoir",
-   "limite": "Limite écrite de temps ou d'objet"
+   "autre_autorite": "Un autre acteur intervient pour la suite",
+   "partage": "D'autres autorités disposent d'un pouvoir de même nature",
+   "limite": "Autre encadrement écrit : temps, objet ou effet"
   },
   "lecture": "Une case renseignée = une citation exacte de l'article indiqué ; une case vide ne dit rien des autres articles ni de la pratique institutionnelle."
  },
  "gardes": [
   "G2 : 25 citations de l'inventaire retrouvees mot pour mot",
-  "G2 : 6 citations de « qui fixe les regles » retrouvees",
+  "G2 : 7 citations de « qui fixe les regles » retrouvees",
   "G2 : 13 citations entre guillemets des fiches retrouvees",
   "G3 : inventaire complet, 8 renvois relus dans l'article 19 (8, 11, 12, 16, 18, 54, 56, 61)",
   "G4 : « seulement » tenu (2 sur 8)"
@@ -242,6 +242,11 @@
    "objet": "le Premier ministre"
   },
   {
+   "art": "38",
+   "cite": "Le Gouvernement peut, pour l'exécution de son programme, demander au Parlement l'autorisation de prendre par ordonnances, pendant un délai limité, des mesures qui sont normalement du domaine de la loi.",
+   "objet": "les ordonnances"
+  },
+  {
    "art": "13",
    "cite": "Le Président de la République signe les ordonnances et les décrets délibérés en Conseil des ministres.",
    "objet": "le président, pour une catégorie de décrets"
@@ -272,6 +277,6 @@
   "n_seuls": "deux",
   "n_seuls_maj": "Deux",
   "seuls_liste": "nommer le Premier ministre et adresser un message au Parlement",
-  "releve_le": "05/10/2026 (textes lus sur Légifrance du 30/09/2026 au 05/10/2026)"
+  "releve_le": "06/10/2026 (textes lus sur Légifrance du 30/09/2026 au 06/10/2026)"
  }
 }

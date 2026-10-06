@@ -41,6 +41,7 @@ articles:
   "56": { legiarti: LEGIARTI000019241071, vigueur_depuis: 2008-07-25, lu_le: 2026-09-30, empreinte: c6d8dbe2edebbf0a32d14d554fb991194a111ab317fb5abf3b3f92e78c237344 }
   "61": { legiarti: LEGIARTI000019241074, vigueur_depuis: 2008-07-25, lu_le: 2026-09-30, empreinte: c14abed78a1e9932d2cf37f84e6366e03847a41174d17466b5f83b4a0a3d299c }
   "34": { legiarti: LEGIARTI000049255019, vigueur_depuis: 2024-03-10, lu_le: 2026-10-05, empreinte: e1e942eccace67bff5f064c59a0baf9cb139f99b91b629155f48f76b89a6a067 }
+  "38": { legiarti: LEGIARTI000019241024, vigueur_depuis: 2008-07-25, lu_le: 2026-10-06, empreinte: bc3e829192910fef29fd8db680ad2dc63d5179d6463ed498b9db48ec9fa12a9f }
   "37": { legiarti: LEGIARTI000006527508, vigueur_depuis: 1958-10-05, lu_le: 2026-10-05, empreinte: e0f7c95680179e006c8fc8da8378bef366615e09b1b10ef28d5a3c3bd6876c36 }
 
 # ── Inventaire de l'article 19, en CITATIONS (fiches de preuve v2, Décider E1 ; arbitrage PRO-20261005-164029) ──
@@ -51,10 +52,10 @@ articles:
 # Attributs cumulables, jamais exclusifs :
 #   acte           — ce que le texte fait faire au président ;
 #   condition      — une proposition ou une consultation que le texte exige AVANT l'acte ;
-#   autre_autorite — une autre autorité que le texte fait intervenir pour la suite ou l'issue ;
+#   autre_autorite — un autre acteur (autorité, électeurs) que le texte fait intervenir pour la suite ou l'issue ;
 #   partage        — d'autres autorités disposent aussi de ce pouvoir, nommées par le texte (art. 56 : chacune pour
 #                    des sièges différents ; libellé « même pouvoir » retiré, pièce entrante du 05/10) ;
-#   limite         — une limite écrite de temps ou d'objet.
+#   limite         — un autre encadrement écrit : temps, objet ou effet (libellé corrigé le 06/10, PRO-20261006-DECIDER).
 inventaire_19:
   - renvoi: "8, al. 1"
     pouvoir: "Nommer le Premier ministre"
@@ -130,6 +131,7 @@ regles:
   - {art: "34", cite: "l'assiette, le taux et les modalités de recouvrement des impositions de toutes natures", objet: "l'impôt"}
   - {art: "37", cite: "Les matières autres que celles qui sont du domaine de la loi ont un caractère réglementaire.", objet: "le reste"}
   - {art: "21", cite: "il exerce le pouvoir réglementaire", objet: "le Premier ministre"}
+  - {art: "38", cite: "Le Gouvernement peut, pour l'exécution de son programme, demander au Parlement l'autorisation de prendre par ordonnances, pendant un délai limité, des mesures qui sont normalement du domaine de la loi.", objet: "les ordonnances"}
   - {art: "13", cite: "Le Président de la République signe les ordonnances et les décrets délibérés en Conseil des ministres.", objet: "le président, pour une catégorie de décrets"}
   - {art: "19", cite: "sont contresignés par le Premier ministre et, le cas échéant, par les ministres responsables", objet: "le contreseing"}
 
@@ -139,7 +141,7 @@ groupes:
     chapo: "L'article 19 les énumère : ce sont les seuls actes du président que ni le Premier ministre ni un ministre ne contresignent. Sans contreseing ne veut pas dire sans condition."
   - id: contresigne
     titre: "Les pouvoirs qu'on lui prête en propre, et qui sont contresignés"
-    chapo: "Tous les autres actes du président portent la signature du Premier ministre et, le cas échéant, des ministres responsables (art. 19). La Constitution l'exige."
+    chapo: "Les autres actes du président sont soumis au contreseing du Premier ministre et, le cas échéant, des ministres responsables (art. 19)."
   - id: gouvernement
     titre: "Ce que la Constitution confie au Gouvernement"
     chapo: "Plusieurs décisions que l'on attribue au président appartiennent, dans le texte, au Gouvernement ou au Premier ministre."
@@ -153,7 +155,7 @@ pouvoirs:
     articles: ["8", "19", "20"]
     decide: "Le président, seul, pour la nomination (art. 8, al. 1)."
     condition: "Aucune condition écrite pour nommer."
-    tiers: "L'Assemblée nationale : le Gouvernement est responsable devant le Parlement dans les conditions des articles 49 et 50 (art. 20)."
+    tiers: "Aucun pour la nomination. Ensuite, le Gouvernement est responsable devant le Parlement dans les conditions des articles 49 et 50 (art. 20)."
     portee_texte: "La nomination est acquise par sa seule signature. La fin des fonctions intervient « sur la présentation par celui-ci de la démission du Gouvernement » (art. 8, al. 1) : c'est la seule voie que l'article décrit."
 
   - id: referendum
@@ -252,7 +254,7 @@ pouvoirs:
     question: "Le président peut-il gouverner par décret ?"
     pouvoir: "Signer les ordonnances et les décrets délibérés en Conseil des ministres"
     articles: ["13", "9", "21", "19"]
-    decide: "Le président signe les ordonnances et les décrets délibérés en Conseil des ministres, qu'il préside (art. 9). Les autres décrets relèvent du Premier ministre, qui exerce le pouvoir réglementaire sous réserve de l'article 13 (art. 21)."
+    decide: "Le président signe les ordonnances et les décrets délibérés en Conseil des ministres, qu'il préside (art. 9). Les autres décrets réglementaires relèvent en principe du Premier ministre, qui exerce le pouvoir réglementaire sous réserve de l'article 13 (art. 21)."
     condition: "Une délibération en Conseil des ministres."
     tiers: "Le Premier ministre et les ministres responsables, qui contresignent."
     portee_texte: "Le texte dit « signe » ; il ne précise pas si le président peut refuser. Le texte confie le pouvoir réglementaire de droit commun au Premier ministre (art. 21)."
@@ -295,7 +297,7 @@ pouvoirs:
     decide: "Le président « négocie et ratifie les traités » ; il est informé des accords non soumis à ratification."
     condition: "Si le Conseil constitutionnel a déclaré une clause contraire à la Constitution, la ratification n'intervient qu'après révision (art. 54)."
     tiers: "Le Premier ministre et les ministres responsables, qui contresignent ; le Conseil constitutionnel s'il est saisi."
-    portee_texte: "Ratifier n'est pas dans la liste de l'article 19 : même l'acte le plus personnel de la diplomatie porte un contreseing."
+    portee_texte: "Ratifier n'est pas dans la liste de l'article 19 : la ratification est soumise au contreseing."
 
   # ── Gouvernement ────────────────────────────────────────────────────────────
   - id: politique-nation
@@ -306,4 +308,4 @@ pouvoirs:
     decide: "Le Gouvernement (art. 20), dont le Premier ministre dirige l'action et assure l'exécution des lois (art. 21)."
     condition: "Le Gouvernement est responsable devant le Parlement (art. 20)."
     tiers: "L'Assemblée nationale, devant laquelle il répond ; les ministres, qui contresignent les actes du Premier ministre chargés de leur exécution (art. 22)."
-    portee_texte: "Le président veille au respect de la Constitution et assure, par son arbitrage, le fonctionnement régulier des pouvoirs publics (art. 5) ; la politique de la Nation est, dans le texte, l'affaire du Gouvernement."
+    portee_texte: "Le président veille au respect de la Constitution et assure, par son arbitrage, le fonctionnement régulier des pouvoirs publics (art. 5) ; le texte attribue au Gouvernement la détermination et la conduite de la politique de la Nation."

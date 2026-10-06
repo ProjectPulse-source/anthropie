@@ -46,7 +46,7 @@
 {{- else if eq $vue "citations" -}}
 {{- /* Inventaire de l'article 19, une ligne par attribut renseigné : la citation exacte que le générateur a
        retrouvée mot pour mot dans le texte archivé (scripts/update_pouvoirs_president.py, garde G2). */ -}}
-{{- $libs := dict "acte" "Acte" "condition" "Proposition ou consultation exigée avant l'acte" "autre_autorite" "Une autre autorité intervient pour la suite" "partage" "D'autres autorités disposent aussi de ce pouvoir" "limite" "Limite écrite de temps ou d'objet" -}}
+{{- $libs := dict "acte" "Acte" "condition" "Proposition ou consultation exigée avant l'acte" "autre_autorite" "Un autre acteur intervient pour la suite" "partage" "D'autres autorités disposent d'un pouvoir de même nature" "limite" "Autre encadrement écrit : temps, objet ou effet" -}}
 {{- if not $d.inventaire_19 -}}{{ errorf "pouvoirs-president: inventaire_19 absent (%s)" .Page.File.Path }}{{- end -}}
 <div class="table-scroll">
 <table class="pouvoirs-table pouvoirs-citations">
