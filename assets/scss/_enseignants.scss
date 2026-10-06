@@ -9,8 +9,9 @@
 
 // Arrivée par ancre sous l'en-tête ET la barre des thèmes, tous deux collants (mesuré le 02/10/2026 : 178 px à
 // 1 280 px, 177 px à 390 px ; sans cette marge le titre visé se posait à 0 px, donc dessous).
-.dossier-dette--enseignants ~ [id],
-.dossier-dette--enseignants ~ * [id] { scroll-margin-top: 12rem; }
+// Depuis le 06/10/2026 la pastille colle avec la barre, dans l'enveloppe .dossier-collant : les cibles sont ses voisines.
+.dossier-collant:has(.dossier-dette--enseignants) ~ [id],
+.dossier-collant:has(.dossier-dette--enseignants) ~ * [id] { scroll-margin-top: 13.5rem; }
 
 @media print {
   // Page entière : chaque fiche commence une page, corrigés compris.
@@ -24,6 +25,7 @@
   body.imprime-une-fiche .imprime-cible { break-before: auto; }
   body.imprime-une-fiche .imprime-cible .fiche__corrige { display: none !important; }
   body.imprime-une-fiche .site-header,
+  body.imprime-une-fiche .dossier-collant,
   body.imprime-une-fiche .dossier-dette,
   body.imprime-une-fiche .dossier-entete,
   body.imprime-une-fiche .site-footer { display: none !important; }

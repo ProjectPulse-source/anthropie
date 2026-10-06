@@ -437,6 +437,9 @@ a.dossier-dette__onglet:focus-visible { outline: 2px solid var(--color-pivot); o
   .dossier-dette--v2 .dossier-dette__long { display: none; }
   .dossier-dette--v2 .dossier-dette__court { display: inline; }
 }
+// Même bascule, posée par le script de la barre quand les libellés longs débordent (partials/dossier-barre.html).
+.dossier-dette--v2.is-court .dossier-dette__long { display: none; }
+.dossier-dette--v2.is-court .dossier-dette__court { display: inline; }
 @container (max-width: 520px) {
   .dossier-dette--v2 .dossier-dette__role { display: none; }
   .dossier-dette--v2 .dossier-dette__volets { overflow-x: auto; scrollbar-width: thin; -webkit-overflow-scrolling: touch; gap: 0.1rem; }
@@ -460,6 +463,44 @@ a.dossier-dette__onglet:focus-visible { outline: 2px solid var(--color-pivot); o
   .dossier-entete .dossier-dette__titre { font-size: 0.72rem; padding: 0.18rem 0.45rem; }
   .dossier-entete__source { font-size: 0.74rem; }
 }
+// BLOC COLLANT (auteur, 06/10/2026 : « il faut qu'elle englobe l'étiquette en bleu marine ») : la pastille du dossier
+// et sa source collent AVEC les onglets. Le lecteur arrivé au milieu d'une page voit de quel dossier il lit un volet,
+// pas seulement le nom du volet. C'est l'enveloppe (partials/dossier-barre.html) qui colle et porte le fond ; la barre
+// redevient un bloc ordinaire, positionné (relative) pour que le panneau « Prolongements » s'ancre toujours sous elle.
+.dossier-collant {
+  --dossier-top: 66px;
+  position: sticky;
+  top: var(--dossier-top);
+  z-index: 60;
+  margin: 0 0 1.6rem;
+  padding-top: 0.35rem;
+  background: var(--color-bg);
+  background: color-mix(in srgb, var(--color-bg) 94%, transparent);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  .dossier-entete { margin-bottom: 0.15rem; }
+  .dossier-dette {
+    position: relative; top: auto; z-index: auto;
+    margin: 0;
+    background: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+@media (max-width: 1120px) {
+  .dossier-collant { --dossier-top: 54px; }
+}
+// Téléphone : la pleine largeur passe de la barre à l'enveloppe, sinon le fond de la pastille serait plus étroit que
+// celui des onglets.
+@media (max-width: 700px) {
+  .dossier-collant {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .dossier-collant .dossier-dette--v2 { margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
+}
 
 // Deux barres collantes se superposent à une ancre : les cibles internes gagnent
 // la marge correspondante, sinon le titre visé se cache derrière elles.
@@ -467,7 +508,9 @@ a.dossier-dette__onglet:focus-visible { outline: 2px solid var(--color-pivot); o
 // Barre A+ v2 : un titre atteint par ancre se cachait sous l'en-tête et la rangée collante (mesure du 03/10 : titre à
 // 0 px sous 132 px de barres à 1 280 px, 102 px à 390 px ; 178 px avec l'ancienne barre, défaut déjà en ligne). Même
 // parade que la barre des enseignants (_enseignants.scss).
-.dossier-dette--v2 ~ [id], .dossier-dette--v2 ~ * [id] { scroll-margin-top: 9.5rem; }
+// Depuis le 06/10/2026 la pastille colle aussi (bloc .dossier-collant, ~1,8 rem de plus) : les cibles sont les
+// voisines de l'enveloppe, non plus de la barre.
+.dossier-collant ~ [id], .dossier-collant ~ * [id] { scroll-margin-top: 11.5rem; }
 
 .qp-tableau {
   margin: 0 0 1.4rem;

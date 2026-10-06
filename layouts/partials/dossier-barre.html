@@ -16,6 +16,8 @@
        Nom accessible : le libellé visible d'abord, la question ensuite (WCAG 2.5.3). */ -}}
 {{- $en := eq .page.Lang "en" -}}
 {{- $sep := cond $en ": " " : " -}}
+{{- /* Bloc collant (auteur, 06/10/2026) : la pastille du dossier reste visible avec les onglets au défilement. */ -}}
+<div class="dossier-collant">
 <div class="dossier-entete">
   <span class="dossier-dette__titre">{{ .titre }}</span>
   {{- with .src }}
@@ -59,17 +61,33 @@
     </ol>
   </div>
 </nav>
+</div>
 <script>
 // Téléphone : si la bande des onglets défile, l'onglet actif est ramené en vue à l'ouverture (horizontalement seulement).
 (function () {
   var b = document.currentScript && document.currentScript.previousElementSibling;
   var o = b && b.querySelector(".dossier-dette__volets"), a = o && o.querySelector(".is-actif");
+  var n = b && b.querySelector(".dossier-dette--v2");
+  // Le bloc colle juste sous l'en-tête du site, à sa hauteur mesurée (58,5 px à 390 px pour 54 px en dur : la pastille
+  // passait de 4 px sous l'en-tête). Sans script, la valeur de la feuille de style reste le repli.
+  var h = document.querySelector(".site-header");
+  // Libellés courts dès que les longs ne tiennent pas, MESURÉ et non deviné (06/10/2026) : le seuil fixe de la requête
+  // de conteneur (967 px) est calibré sur la barre Dette ; celle des Promesses demandait 1 521 px pour 992 et faisait
+  // déborder la page de 177 px à 1 680 px de large.
+  function ajuster() {
+    if (b && h) b.style.setProperty("--dossier-top", Math.round(h.getBoundingClientRect().height) + "px");
+    if (!o || !n) return;
+    n.classList.remove("is-court");
+    if (o.scrollWidth > o.clientWidth + 1) n.classList.add("is-court");
+  }
   function centrer() {
+    ajuster();
     if (!o || !a || o.scrollWidth <= o.clientWidth) return;
     var ro = o.getBoundingClientRect(), ra = a.getBoundingClientRect();
     o.scrollLeft += (ra.left - ro.left) - (o.clientWidth - ra.width) / 2;
   }
   centrer();
   window.addEventListener("load", centrer);
+  window.addEventListener("resize", ajuster);
 })();
 </script>
