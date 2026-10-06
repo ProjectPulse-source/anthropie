@@ -1,0 +1,20 @@
+{
+ "fr": [
+  {
+   "id": "cursus",
+   "fichier": "delais-cursus",
+   "titre": "Former un médecin généraliste, et la durée d'un mandat présidentiel",
+   "montre": "Aux règles en vigueur pour les étudiants entrés en troisième cycle depuis la rentrée 2023, le cursus standard de médecine générale dure au moins dix ans depuis la première année, soit deux fois la durée d'un mandat présidentiel. Comparaison d'échelle seulement.",
+   "source": "Arrêté du 8 avril 2013, art. 1 ; code de l'éducation, art. L632-2 ; loi n° 2022-1616, art. 37 ; Constitution, art. 6 (Légifrance)",
+   "precaution": "Comparaison d'échelle seulement : ni l'effet d'une politique, ni la date de ses premiers effets. Durées minimales ; soins avant la fin du cursus."
+  },
+  {
+   "id": "admissions",
+   "fichier": "delais-admissions",
+   "titre": "Admissions en études de médecine, 1972-2025, à leur année",
+   "montre": "Les places en études de médecine ont été divisées par 2,5 entre 1972 et 1993 (3 500 places), puis sont remontées ; 55 078 étudiants ont été admis de 2021 à 2025.",
+   "source": "DREES, Dossier n° 76 (2021), graphique 8, source ONDPS (1972-2020) ; ONDPS, bilan 2021-2025 (admis)",
+   "precaution": "Places pourvues ; champ élargi aux passerelles et droits au remords à partir de 2010-2011 ; numerus apertus depuis 2021."
+  }
+ ]
+}

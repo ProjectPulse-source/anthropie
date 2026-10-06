@@ -1,0 +1,23 @@
+{
+ "source": "ONDPS, Bilan des formations des professionnels de santé 2021-2025, note du 19/12/2025, page 7, figures 1 et 2 (images)",
+ "fichier": "ondps_bilan_formation_ps_2021_2025_20251219.pdf",
+ "sha256_pdf": "958d98772b532db841d61b278444076054aea66cfc1022e3cb1d28c78a893a91",
+ "transcrit_le": "2026-10-06",
+ "methode": "lecture de l'image rendue (page 7, 150 dpi) ; contrôles : somme des admis = total imprimé, présent aussi dans le texte du PDF ; admis 2025 présent dans le texte",
+ "admis_medecine": {
+  "2021": 11310,
+  "2022": 10806,
+  "2023": 10882,
+  "2024": 10947,
+  "2025": 11133
+ },
+ "total_admis_2021_2025": 55078,
+ "capacites_2025": 11277,
+ "onp_2021_2025": 51505,
+ "quinquennaux_figure2": {
+  "2001-2005": 25650,
+  "2006-2010": 36328,
+  "2011-2015": 39158,
+  "2016-2020": 43518
+ }
+}

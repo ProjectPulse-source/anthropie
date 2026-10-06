@@ -48,6 +48,14 @@
   {{- end -}}
 {{- end -}}
 {{- if in $text "{dyn." -}}{{- errorf "desc-figures: placeholder {dyn.*} non resolu dans : %s" $text -}}{{- end -}}
+{{- /* Dossier Promesses, volet « Délais » : placeholders {del.<cle>}, depuis data/promesses_delais.json
+       (bloc affichage, scripts/update_promesses_delais.py). Page en français seulement. Meme contrat. */ -}}
+{{- with site.Data.promesses_delais -}}
+  {{- range $k, $v := .affichage -}}
+    {{- $text = replace $text (printf "{del.%s}" $k) $v -}}
+  {{- end -}}
+{{- end -}}
+{{- if in $text "{del." -}}{{- errorf "desc-figures: placeholder {del.*} non resolu dans : %s" $text -}}{{- end -}}
 {{- /* Dossier Promesses, volet « Mesurer » : placeholders {mes.<cle>}, depuis data/promesses_mesurer.json
        (bloc affichage, scripts/update_promesses_mesurer.py). Page en français seulement. Meme contrat. */ -}}
 {{- with site.Data.promesses_mesurer -}}

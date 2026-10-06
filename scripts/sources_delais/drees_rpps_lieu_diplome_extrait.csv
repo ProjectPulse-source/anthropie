@@ -1,0 +1,6 @@
+# Extrait de drees_medecins_rpps_2012_2026.xlsx (DREES, publication du 2 juillet 2026, onglet « Effectifs par lieu diplome »), SHA-256 16481f22ab583c6426fe3dc8d76b30021b32e2ec8f024a66d275b11999269a08
+region,region_diplome,specialites_agregees,specialites,effectif_2012,effectif_2013,effectif_2014,effectif_2015,effectif_2016,effectif_2017,effectif_2018,effectif_2019,effectif_2020,effectif_2021,effectif_2022,effectif_2023,effectif_2024,effectif_2025,effectif_2026
+00-Ensemble,00-Ensemble,0-Ensemble,00-Ensemble,215930,217598,219566,221001,222453,223739,225046,225064,227298,227946,228858,230143,233416,237214,242185
+00-Ensemble,00-Ensemble,1-Médecine générale,00-Ensemble,101435,101385,101904,101935,101799,101755,101939,101381,101355,100621,99941,99457,99009,100019,100974
+00-Ensemble,99-Etranger,0-Ensemble,00-Ensemble,14163,15096,16051,17381,18617,19675,20548,21162,21813,22330,23054,24006,23961,25667,27464
+00-Ensemble,99-Etranger,1-Médecine générale,00-Ensemble,3480,3515,3624,3776,3928,4107,4330,4446,4516,4625,4712,4710,4150,4583,4920

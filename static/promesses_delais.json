@@ -1,0 +1,164 @@
+{
+ "releve_le": "2026-10-06",
+ "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Légifrance (DILA), DREES, ONDPS",
+ "meta": {
+  "page": "https://stephane-lalut.com/une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/",
+  "protocole": "fiches de preuve v2, volet Délais, E1 à E3",
+  "textes": {
+   "arrete_2013": {
+    "id": "LEGIARTI000039331500",
+    "sha256": "f89e9d3991814a43b91e67bcf31ffbd98b57ac38ce05d32ae5e5f74011ee913d"
+   },
+   "L632-2": {
+    "id": "LEGIARTI000046812307",
+    "sha256": "804e64dca7a58af716c9d862f5a06d70b5603c7ab2690167ba5da4958e21df54"
+   },
+   "R6153-1-2": {
+    "id": "LEGIARTI000046148025",
+    "sha256": "ef0a7e80801badd6e432f9b51c5e64ec546441fa8c14d102343930acf2a29dd1"
+   },
+   "art6": {
+    "id": "LEGIARTI000019241002",
+    "sha256": "496783ff67a6d9cefb20a451d4d559d20101f0a63a39dad41c42448fe8c461ad"
+   },
+   "art37": {
+    "id": "JORFARTI000046791824",
+    "sha256": "858ac859533f4a75501ebffed4889baf6f34b0dc65736ad65fe86f048985c625"
+   }
+  },
+  "definitions": {
+   "duree_cursus": "somme des durées minimales écrites (sans redoublement, interruption ni passerelle), pour les étudiants qui commencent le troisième cycle à partir de la rentrée 2023",
+   "places_pourvues": "jusqu'en 2009, numerus clausus principal ; à partir de 2011 (2010 partiellement), numerus clausus principal et complémentaire, passerelles et droits au remords (DREES, note du graphique 8)",
+   "diplome_etranger": "médecins actifs au 1er janvier dont le diplôme a été obtenu à l'étranger : un stock, pas un flux d'arrivées ; le lieu du diplôme ne dit pas la nationalité"
+  },
+  "ecart_documente": {
+   "2016-2020": "la somme des valeurs DREES dépasse de 101 le total imprimé par l'ONDPS ; non expliqué (la valeur 2020 de la DREES porte un astérisque sans légende trouvée) ; publié, non corrigé"
+  }
+ },
+ "gardes": [
+  "D1 : cursus MG = 6 + 6 semestres + 4 annees = 10 ans (entrants en 3e cycle depuis la rentree 2023)",
+  "D2 : mandat 5 ans",
+  "D3 : cursus = 2 fois la duree d'un mandat (comparaison d'echelle)",
+  "D4 : minimum 1993 (3500 places), 1972 / minimum = 2.45",
+  "D5 : DREES = ONDPS sur 2001-2015 ; ecart publie 2016-2020 : +101",
+  "D6 : admis 2021-2025 (55078) controles par la somme et par le texte du PDF",
+  "D7 : diplome a l'etranger 6.6 % (2012) -> 11.3 % (2026), stock",
+  "D1 bis : 8 citations des textes retrouvees mot pour mot"
+ ],
+ "calcul": {
+  "s1": 6,
+  "s2": 6,
+  "mg": 4,
+  "duree": 10.0,
+  "mandat": 5,
+  "nmax": 2,
+  "amin": 1993,
+  "ecarts": {
+   "2001-2005": 0,
+   "2006-2010": 0,
+   "2011-2015": 0,
+   "2016-2020": 101
+  },
+  "etr12": 14163,
+  "tot12": 215930,
+  "etr26": 27464,
+  "tot26": 242185,
+  "p12": 6.559070069003844,
+  "p26": 11.340091252554865
+ },
+ "series": {
+  "places_pourvues": {
+   "1972": 8588,
+   "1973": 8571,
+   "1974": 8564,
+   "1975": 8607,
+   "1976": 8669,
+   "1977": 8736,
+   "1978": 8281,
+   "1979": 7913,
+   "1980": 7121,
+   "1981": 6389,
+   "1982": 6389,
+   "1983": 5900,
+   "1984": 5000,
+   "1985": 4754,
+   "1986": 4754,
+   "1987": 4460,
+   "1988": 4100,
+   "1989": 4100,
+   "1990": 4000,
+   "1991": 4000,
+   "1992": 3750,
+   "1993": 3500,
+   "1994": 3570,
+   "1995": 3570,
+   "1996": 3576,
+   "1997": 3576,
+   "1998": 3583,
+   "1999": 3700,
+   "2000": 3850,
+   "2001": 4100,
+   "2002": 4700,
+   "2003": 5100,
+   "2004": 5550,
+   "2005": 6200,
+   "2006": 7013,
+   "2007": 7100,
+   "2008": 7300,
+   "2009": 7400,
+   "2010": 7515,
+   "2011": 7668,
+   "2012": 7850,
+   "2013": 7870,
+   "2014": 7890,
+   "2015": 7880,
+   "2016": 8018,
+   "2017": 8473,
+   "2018": 8563,
+   "2019": 9204,
+   "2020": 9361
+  },
+  "admis_2021_2025": {
+   "2021": 11310,
+   "2022": 10806,
+   "2023": 10882,
+   "2024": 10947,
+   "2025": 11133
+  }
+ },
+ "affichage": {
+  "duree": "dix",
+  "duree_chiffre": "10",
+  "mandat": "cinq",
+  "nmax": "deux",
+  "ecart_pct": "0,2",
+  "cycle1": "six",
+  "cycle2": "six",
+  "mg": "quatre",
+  "an_min": "1993",
+  "places_min": "3 500",
+  "places_1972": "8 588",
+  "places_2020": "9 361",
+  "rapport_baisse": "2,5",
+  "admis_2025": "11 133",
+  "capacites_2025": "11 277",
+  "admis_2021_2025": "55 078",
+  "onp": "51 505",
+  "admis_2016_2020": "43 518",
+  "hausse_quinquennale": "27",
+  "ecart_2016_2020": "101",
+  "etr_p12": "6,6",
+  "etr_p26": "11,3",
+  "etr_26": "27 464",
+  "tot_26": "242 185",
+  "releve_le": "06/10/2026 (textes lus sur Légifrance les 05 et 06/10/2026 ; DREES, 2 juillet 2026 ; ONDPS, 19 décembre 2025)",
+  "cit_cycle1": "Le diplôme de formation générale en sciences médicales sanctionne le premier cycle ; il comprend six semestres de formation",
+  "cit_cycle2": "Le diplôme de formation approfondie en sciences médicales, défini au présent arrêté, sanctionne le deuxième cycle ; il comprend six semestres de formation",
+  "cit_mg": "qui, pour la spécialité de médecine générale, est d'une durée de quatre années",
+  "cit_37": "La durée du troisième cycle des études de médecine pour la spécialité de médecine générale mentionnée au 2° du I s'applique aux étudiants qui commencent ce troisième cycle à la rentrée de l'année universitaire 2023.",
+  "cit_art6a": "Le Président de la République est élu pour cinq ans au suffrage universel direct.",
+  "cit_supervision": "La dernière année du diplôme d'études spécialisées de médecine générale est effectuée en stage, sous un régime d'autonomie supervisée",
+  "cit_dj1": "Les actes réalisés sous ce régime le sont par le docteur junior seul.",
+  "cit_dj2": "Le docteur junior exerce ses fonctions par délégation et sous la responsabilité du praticien dont il relève."
+ }
+}

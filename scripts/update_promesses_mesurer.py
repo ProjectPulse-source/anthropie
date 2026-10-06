@@ -432,7 +432,8 @@ def _main() -> int:
     txt_json = json.dumps(payload, ensure_ascii=False, indent=1, default=str)
     same = (OUT_DATA.exists() and OUT_DATA.read_text(encoding="utf-8") == txt_json and OUT_CSV.exists()
             and OUT_CSV.read_text(encoding="utf-8-sig") == csvt
-            and all((OUT_IMG / n).exists() and (OUT_IMG / n).read_text(encoding="utf-8") == s for n, s in figs.items()))
+            and all((OUT_IMG / n).exists() and (OUT_IMG / n).read_text(encoding="utf-8") == s for n, s in figs.items())
+            and OUT_FIGURES.exists() and json.loads(OUT_FIGURES.read_text(encoding="utf-8")) == fi)
     if same:
         log("Donnees et figures identiques : rien ecrit.")
         return 0

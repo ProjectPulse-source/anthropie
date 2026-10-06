@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 248" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dc-t dc-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="dc-t">Former un médecin généraliste, et la durée d&#x27;un mandat présidentiel</title><desc id="dc-d">Deux barres de même échelle. En haut, le cursus de médecine générale : 3.0 ans de premier cycle, 3.0 ans de deuxième cycle, 4 ans de troisième cycle, soit 10 ans. En bas, un mandat présidentiel de 5 ans. Comparaison d&#x27;échelle seulement.</desc>
+<rect width="720" height="248" fill="#ffffff"/>
+<text x="0.0" y="18.0" font-size="13" fill="#0A0A0E" text-anchor="start" font-weight="600">Former un médecin généraliste, et la durée d&#x27;un mandat présidentiel</text>
+<text x="0.0" y="36.0" font-size="12" fill="#52514e" text-anchor="start">en années, durées minimales écrites dans les textes en vigueur</text>
+<text x="0.0" y="91.0" font-size="11" fill="#0A0A0E" text-anchor="start" font-weight="600">Médecine générale</text>
+<rect x="120.0" y="70" width="177.0" height="32" fill="#c9cdd3" stroke="#ffffff" stroke-width="2"/>
+<text x="208.5" y="90.0" font-size="10" fill="#0A0A0E" text-anchor="middle">1er cycle</text>
+<rect x="297.0" y="70" width="177.0" height="32" fill="#c9cdd3" stroke="#ffffff" stroke-width="2"/>
+<text x="385.5" y="90.0" font-size="10" fill="#0A0A0E" text-anchor="middle">2e cycle</text>
+<rect x="474.0" y="70" width="177.0" height="32" fill="#7fa3cf" stroke="#ffffff" stroke-width="2"/>
+<text x="562.5" y="90.0" font-size="10" fill="#0A0A0E" text-anchor="middle">3e cycle</text>
+<rect x="651.0" y="70" width="59.0" height="32" fill="#184f95" stroke="#ffffff" stroke-width="2"/>
+<text x="680.5" y="90.0" font-size="10" fill="#ffffff" text-anchor="middle">4e année</text>
+<text x="710.0" y="116.0" font-size="9" fill="#184f95" text-anchor="end">dernière année : autonomie supervisée</text>
+<text x="0.0" y="153.0" font-size="11" fill="#0A0A0E" text-anchor="start" font-weight="600">Mandat présidentiel</text>
+<rect x="120.0" y="132" width="295.0" height="32" fill="#8a8f98"/>
+<text x="267.5" y="152.0" font-size="10" fill="#ffffff" text-anchor="middle">5 ans</text>
+<line x1="120.0" y1="165" x2="710.0" y2="165" stroke="#e1e0d9"/>
+<text x="120.0" y="182.0" font-size="9" fill="#898781" text-anchor="middle">0</text>
+<text x="179.0" y="182.0" font-size="9" fill="#898781" text-anchor="middle">1</text>
+<text x="238.0" y="182.0" font-size="9" fill="#898781" text-anchor="middle">2</text>
+<text x="297.0" y="182.0" font-size="9" fill="#898781" text-anchor="middle">3</text>
+<text x="356.0" y="182.0" font-size="9" fill="#898781" text-anchor="middle">4</text>
+<text x="415.0" y="182.0" font-size="9" fill="#898781" text-anchor="middle">5</text>
+<text x="474.0" y="182.0" font-size="9" fill="#898781" text-anchor="middle">6</text>
+<text x="533.0" y="182.0" font-size="9" fill="#898781" text-anchor="middle">7</text>
+<text x="592.0" y="182.0" font-size="9" fill="#898781" text-anchor="middle">8</text>
+<text x="651.0" y="182.0" font-size="9" fill="#898781" text-anchor="middle">9</text>
+<text x="710.0" y="182.0" font-size="9" fill="#898781" text-anchor="middle">10</text>
+<line x1="0" y1="202" x2="720" y2="202" stroke="#e1e0d9"/>
+<text x="0" y="215" font-size="9" fill="#52514e">Arrêté du 8 avril 2013, art. 1 ; code de l&#x27;éducation, art. L632-2 ; loi n° 2022-1616, art. 37 ; Constitution, art. 6 (Légifrance)</text>
+<text x="0" y="227" font-size="9" fill="#52514e">Comparaison d&#x27;échelle seulement : ni l&#x27;effet d&#x27;une politique, ni la date de ses premiers effets. Durées minimales ; soins avant la fin du cursus.</text>
+<text x="0" y="239" font-size="9" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/</text>
+</svg>

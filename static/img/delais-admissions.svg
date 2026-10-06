@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 378" role="img" font-variant-numeric="tabular-nums" aria-labelledby="da-t da-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="da-t">Admissions en études de médecine, 1972-2025, à leur année</title><desc id="da-d">Barres annuelles : 8 588 places en 1972, minimum de 3 500 en 1993, 9 361 en 2020 ; puis de 10 806 à 11 133 admis par an de 2021 à 2025.</desc>
+<rect width="720" height="378" fill="#ffffff"/>
+<text x="0.0" y="18.0" font-size="13" fill="#0A0A0E" text-anchor="start" font-weight="600">Admissions en études de médecine, 1972-2025, à leur année</text>
+<text x="0.0" y="36.0" font-size="12" fill="#52514e" text-anchor="start">places pourvues jusqu&#x27;en 2020 (DREES, ONDPS), admis depuis 2021 (ONDPS)</text>
+<line x1="50" y1="280.0" x2="712" y2="280.0" stroke="#e1e0d9"/>
+<text x="44.0" y="284.0" font-size="10" fill="#898781" text-anchor="end">0</text>
+<line x1="50" y1="225.0" x2="712" y2="225.0" stroke="#e1e0d9"/>
+<text x="44.0" y="229.0" font-size="10" fill="#898781" text-anchor="end">3 000</text>
+<line x1="50" y1="170.0" x2="712" y2="170.0" stroke="#e1e0d9"/>
+<text x="44.0" y="174.0" font-size="10" fill="#898781" text-anchor="end">6 000</text>
+<line x1="50" y1="115.0" x2="712" y2="115.0" stroke="#e1e0d9"/>
+<text x="44.0" y="119.0" font-size="10" fill="#898781" text-anchor="end">9 000</text>
+<line x1="50" y1="60.0" x2="712" y2="60.0" stroke="#e1e0d9"/>
+<text x="44.0" y="64.0" font-size="10" fill="#898781" text-anchor="end">12 000</text>
+<rect x="50.6" y="122.6" width="11.1" height="157.4" fill="#184f95"/>
+<text x="56.1" y="294.0" font-size="10" fill="#898781" text-anchor="middle">1972</text>
+<rect x="62.9" y="122.9" width="11.1" height="157.1" fill="#184f95"/>
+<rect x="75.1" y="123.0" width="11.1" height="157.0" fill="#184f95"/>
+<rect x="87.4" y="122.2" width="11.1" height="157.8" fill="#184f95"/>
+<rect x="99.6" y="121.1" width="11.1" height="158.9" fill="#184f95"/>
+<rect x="111.9" y="119.8" width="11.1" height="160.2" fill="#184f95"/>
+<rect x="124.2" y="128.2" width="11.1" height="151.8" fill="#184f95"/>
+<rect x="136.4" y="134.9" width="11.1" height="145.1" fill="#184f95"/>
+<rect x="148.7" y="149.4" width="11.1" height="130.6" fill="#184f95"/>
+<text x="154.2" y="294.0" font-size="10" fill="#898781" text-anchor="middle">1980</text>
+<rect x="160.9" y="162.9" width="11.1" height="117.1" fill="#184f95"/>
+<rect x="173.2" y="162.9" width="11.1" height="117.1" fill="#184f95"/>
+<rect x="185.5" y="171.8" width="11.1" height="108.2" fill="#184f95"/>
+<rect x="197.7" y="188.3" width="11.1" height="91.7" fill="#184f95"/>
+<rect x="210.0" y="192.8" width="11.1" height="87.2" fill="#184f95"/>
+<rect x="222.2" y="192.8" width="11.1" height="87.2" fill="#184f95"/>
+<rect x="234.5" y="198.2" width="11.1" height="81.8" fill="#184f95"/>
+<rect x="246.7" y="204.8" width="11.1" height="75.2" fill="#184f95"/>
+<rect x="259.0" y="204.8" width="11.1" height="75.2" fill="#184f95"/>
+<rect x="271.3" y="206.7" width="11.1" height="73.3" fill="#184f95"/>
+<text x="276.8" y="294.0" font-size="10" fill="#898781" text-anchor="middle">1990</text>
+<rect x="283.5" y="206.7" width="11.1" height="73.3" fill="#184f95"/>
+<rect x="295.8" y="211.2" width="11.1" height="68.8" fill="#184f95"/>
+<rect x="308.0" y="215.8" width="11.1" height="64.2" fill="#184f95"/>
+<rect x="320.3" y="214.6" width="11.1" height="65.4" fill="#184f95"/>
+<rect x="332.6" y="214.6" width="11.1" height="65.4" fill="#184f95"/>
+<rect x="344.8" y="214.4" width="11.1" height="65.6" fill="#184f95"/>
+<rect x="357.1" y="214.4" width="11.1" height="65.6" fill="#184f95"/>
+<rect x="369.3" y="214.3" width="11.1" height="65.7" fill="#184f95"/>
+<rect x="381.6" y="212.2" width="11.1" height="67.8" fill="#184f95"/>
+<rect x="393.9" y="209.4" width="11.1" height="70.6" fill="#184f95"/>
+<text x="399.4" y="294.0" font-size="10" fill="#898781" text-anchor="middle">2000</text>
+<rect x="406.1" y="204.8" width="11.1" height="75.2" fill="#184f95"/>
+<rect x="418.4" y="193.8" width="11.1" height="86.2" fill="#184f95"/>
+<rect x="430.6" y="186.5" width="11.1" height="93.5" fill="#184f95"/>
+<rect x="442.9" y="178.2" width="11.1" height="101.8" fill="#184f95"/>
+<rect x="455.2" y="166.3" width="11.1" height="113.7" fill="#184f95"/>
+<rect x="467.4" y="151.4" width="11.1" height="128.6" fill="#184f95"/>
+<rect x="479.7" y="149.8" width="11.1" height="130.2" fill="#184f95"/>
+<rect x="491.9" y="146.2" width="11.1" height="133.8" fill="#184f95"/>
+<rect x="504.2" y="144.3" width="11.1" height="135.7" fill="#184f95"/>
+<rect x="516.5" y="142.2" width="11.1" height="137.8" fill="#184f95"/>
+<text x="522.0" y="294.0" font-size="10" fill="#898781" text-anchor="middle">2010</text>
+<rect x="528.7" y="139.4" width="11.1" height="140.6" fill="#184f95"/>
+<rect x="541.0" y="136.1" width="11.1" height="143.9" fill="#184f95"/>
+<rect x="553.2" y="135.7" width="11.1" height="144.3" fill="#184f95"/>
+<rect x="565.5" y="135.3" width="11.1" height="144.7" fill="#184f95"/>
+<rect x="577.7" y="135.5" width="11.1" height="144.5" fill="#184f95"/>
+<rect x="590.0" y="133.0" width="11.1" height="147.0" fill="#184f95"/>
+<rect x="602.3" y="124.7" width="11.1" height="155.3" fill="#184f95"/>
+<rect x="614.5" y="123.0" width="11.1" height="157.0" fill="#184f95"/>
+<rect x="626.8" y="111.3" width="11.1" height="168.7" fill="#184f95"/>
+<rect x="639.0" y="108.4" width="11.1" height="171.6" fill="#184f95"/>
+<text x="644.6" y="294.0" font-size="10" fill="#898781" text-anchor="middle">2020</text>
+<rect x="651.3" y="72.7" width="11.1" height="207.3" fill="#7fa3cf"/>
+<rect x="663.6" y="81.9" width="11.1" height="198.1" fill="#7fa3cf"/>
+<rect x="675.8" y="80.5" width="11.1" height="199.5" fill="#7fa3cf"/>
+<rect x="688.1" y="79.3" width="11.1" height="200.7" fill="#7fa3cf"/>
+<rect x="700.3" y="75.9" width="11.1" height="204.1" fill="#7fa3cf"/>
+<line x1="515.9" y1="56" x2="515.9" y2="280" stroke="#52514e" stroke-dasharray="3 3"/>
+<text x="511.9" y="52.0" font-size="9" fill="#52514e" text-anchor="end">2010-2011 : passerelles incluses</text>
+<line x1="650.7" y1="56" x2="650.7" y2="280" stroke="#52514e" stroke-dasharray="3 3"/>
+<text x="646.7" y="52.0" font-size="9" fill="#52514e" text-anchor="end">2021 : numerus apertus</text>
+<line x1="313.6" y1="188.7" x2="313.6" y2="213.8" stroke="#52514e"/>
+<text x="313.6" y="184.7" font-size="10" fill="#0A0A0E" text-anchor="middle" font-weight="600">1993 : 3 500</text>
+<line x1="0" y1="332" x2="720" y2="332" stroke="#e1e0d9"/>
+<text x="0" y="345" font-size="9" fill="#52514e">DREES, Dossier n° 76 (2021), graphique 8, source ONDPS (1972-2020) ; ONDPS, bilan 2021-2025 (admis)</text>
+<text x="0" y="357" font-size="9" fill="#52514e">Places pourvues ; champ élargi aux passerelles et droits au remords à partir de 2010-2011 ; numerus apertus depuis 2021.</text>
+<text x="0" y="369" font-size="9" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/</text>
+</svg>

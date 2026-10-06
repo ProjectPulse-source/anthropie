@@ -350,7 +350,8 @@ def _main() -> int:
     txt_json = json.dumps(payload, ensure_ascii=False, indent=1, default=str)
     if (OUT_DATA.exists() and OUT_DATA.read_text(encoding="utf-8") == txt_json and OUT_CSV.exists()
             and OUT_CSV.read_text(encoding="utf-8-sig") == csvt and (OUT_IMG / (FIG + ".svg")).exists()
-            and (OUT_IMG / (FIG + ".svg")).read_text(encoding="utf-8") == svg and (OUT_IMG / (FIG + ".png")).exists()):
+            and (OUT_IMG / (FIG + ".svg")).read_text(encoding="utf-8") == svg and (OUT_IMG / (FIG + ".png")).exists()
+            and OUT_FIGURES.exists() and json.loads(OUT_FIGURES.read_text(encoding="utf-8")) == fiches):
         log("Donnees et figure identiques : rien ecrit.")
         return 0
     OUT_DATA.write_text(txt_json, encoding="utf-8")
