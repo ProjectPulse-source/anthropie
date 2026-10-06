@@ -606,6 +606,10 @@ def gardes(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, aux):
          fr(x["S2"]["base"] - x["CoA"]["base"]) != fr(x["IBP"]["base"])),
         ("COR : baisse des ressources « autant » que hausse des dépenses (rapport 0,75 à 1,33)",
          0.75 < (C["ressources0"] - C["ressources1"]) / cor_var < 1.33),
+        # Paragraphe « Deux projections, deux jeux d'hypothèses » (remarque du secrétariat du COR, 06/10/2026) : il décrit
+        # les hypothèses de ces deux éditions (Insee nouvelle, Agirc-Arrco 2038 ; rapport de 2024 sur le vieillissement).
+        ("hypothèses du COR et de la Commission décrites pour ces éditions : une autre édition impose de relire le paragraphe",
+         SOURCES["cor"]["lib"] == "rapport annuel de juin 2026" and SOURCES["dsm"]["lib"] == "Debt Sustainability Monitor 2025"),
     ]
     if "--mutation-garde" in sys.argv:   # témoin positif : part investie de la première décennie mise sous la dernière
         G[5] = (G[5][0], d3["part_actifs"] - 1 > d2["part_actifs"] > d3["part_actifs"])
