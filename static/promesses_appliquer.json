@@ -51,7 +51,7 @@
   "limites": "état courant seulement : aucun taux à six ou douze mois ne se calcule sans historique daté des échéanciers ; les taux du Sénat et du Gouvernement ne se comparent pas entre eux ni d'un segment de définition à l'autre"
  },
  "gardes": [
-  "A1 : code civil art. 1, report de l'entree en vigueur des dispositions qui appellent des mesures",
+  "A1 : Constitution art. 10 et 61, code civil art. 1 : promulgation, suspension, report de l'entree en vigueur",
   "A7 : 13 citations du Senat, 5 extraits du SGG, 23 valeurs de serie retrouvees mot pour mot",
   "A2 : 399 lois au champ, 154 conventions ecartees, registre identique loi par loi",
   "A3 : directes du barometre recalculees = registre ; effectifs du Senat = annonces (2024-2025 : 22 par commissions)",
@@ -270,7 +270,7 @@
    "document": "r11-323|11",
    "citation": "346 mesures réglementaires sur les 540 prévues avaient été publiées, soit 64 %",
    "segment": 2,
-   "definition": "âge minimal de six mois, session ordinaire seule"
+   "definition": "période décalée de trois mois pour attendre le délai de six mois du Gouvernement, session ordinaire seule"
   },
   {
    "session": "2011-2012",
@@ -590,7 +590,7 @@
     [
      "2010-2011",
      "64 %",
-     "âge minimal de six mois, session ordinaire seule",
+     "période décalée de trois mois pour attendre le délai de six mois du Gouvernement, session ordinaire seule",
      "r11-323"
     ],
     [
@@ -732,6 +732,10 @@
   "cit_802_note": "Les données prises en compte sont celles des mesures prévues, non éventuelles et non différées au-delà du 31 mars 2026, par les dispositions législatives.",
   "cit_six_mois": "cette année, pour la première fois, afin de ne mesurer le nombre de mesures réglementaires prises qu'à l'expiration du délai de six mois que s'impose à lui-même le Gouvernement, la période retenue comprend trois mois de moins pour les lois promulguées retenues et trois mois de plus pour les mesures réglementaires prises.",
   "cit_cciv": "Toutefois, l'entrée en vigueur de celles de leurs dispositions dont l'exécution nécessite des mesures d'application est reportée à la date d'entrée en vigueur de ces mesures.",
+  "cit_art10": "Le Président de la République promulgue les lois dans les quinze jours qui suivent la transmission au Gouvernement de la loi définitivement adoptée.",
+  "cit_art61": "la saisine du Conseil constitutionnel suspend le délai de promulgation.",
+  "nautres": "sept",
+  "nsegments": "six",
   "cit_sgg16_def": "fait apparaître le taux d'application au 31 décembre 2025 des lois qui, parmi celles votées entre le 1er juillet 2022 et le 9 juin 2024, appellent des décrets d'application.",
   "cit_sgg17_def": "fait apparaître le taux d'application au 31 décembre 2025 des lois qui, parmi celles publiées entre le 18 juillet 2024 et le 30 juin 2025, appellent des décrets ou des arrêtés d'application."
  }

@@ -55,6 +55,12 @@ OUT_CSV = ROOT / "static" / "promesses_appliquer.csv"
 OUT_FIGURES = ROOT / "data" / "figures_appliquer.json"
 OUT_IMG = ROOT / "static" / "img"
 CCIV = "legifrance_cc0765ea833ba2ee7901764e2b924cd6bebc1122f1273afe63316f12a6604f33.json"
+# Du vote à l'entrée en vigueur (contre-expertise PRO-20261006-142218, P8) : promulgation (art. 10), suspendue par la
+# saisine du Conseil constitutionnel (art. 61).
+CONST = {"art10": "legifrance_09785484a231a183e5290643bbb832eeab7a232b4102ab55206f6b4cfcb2a5bb.json",
+         "art61": "legifrance_c14abed78a1e9932d2cf37f84e6366e03847a41174d17466b5f83b4a0a3d299c.json"}
+CIT_CONST = {"art10": "Le Président de la République promulgue les lois dans les quinze jours qui suivent la transmission au Gouvernement de la loi définitivement adoptée.",
+             "art61": "la saisine du Conseil constitutionnel suspend le délai de promulgation."}
 SESSIONS = ["%d-%d" % (a, a + 1) for a in range(2017, 2025)]
 RELEVE = "05/10/2026"
 MOTS = {"un": 1, "deux": 2, "trois": 3, "quatre": 4, "cinq": 5, "six": 6, "sept": 7, "huit": 8, "neuf": 9, "dix": 10}
@@ -96,7 +102,12 @@ def lire() -> dict:
     tl, L = csv_extrait("barometre_lois_extrait.csv")
     tm, M = csv_extrait("barometre_mesures_extrait.csv")
     reg = list(csv.DictReader(io.StringIO((SRC / "registre_concordance.csv").read_text(encoding="utf-8")), delimiter=";"))
-    return {"cciv": {"etat": c["etat"], "texte": norm(c["texte"]), "id": c["id"]},
+    const = {}
+    for k, f in CONST.items():
+        a = json.loads((SRC / f).read_text(encoding="utf-8"))
+        a = a.get("contenu") or a.get("article")
+        const[k] = {"etat": a["etat"], "texte": norm(a["texte"]), "id": a["id"]}
+    return {"cciv": {"etat": c["etat"], "texte": norm(c["texte"]), "id": c["id"]}, "const": const,
             "lois": L, "mesures": M, "tetes": [tl, tm], "registre": reg,
             "effectifs": json.loads((SRC / "senat_effectifs.json").read_text(encoding="utf-8")),
             "pages": json.loads((SRC / "senat_pages.json").read_text(encoding="utf-8")),
@@ -158,7 +169,7 @@ SERIE = [
 REVISION = ("2019-2020", 60, "r21-658|3", "soit un taux inférieur à celui de l'année précédente (60 %)")
 SEGMENTS = {
     1: "lois de l'année parlementaire, arrêt au 30 septembre de la même année",
-    2: "âge minimal de six mois, session ordinaire seule",
+    2: "période décalée de trois mois pour attendre le délai de six mois du Gouvernement, session ordinaire seule",
     3: "« nouvelles bornes » : lois du 14 juillet 2011 au 30 septembre 2012",
     4: "lois du 1er octobre au 30 septembre, arrêt au 31 mars suivant",
     5: "même calendrier, mesures différées comprises (un second taux les exclut)",
@@ -190,7 +201,10 @@ def calculer(S: dict) -> tuple[dict, list[str]]:
     g = []
     if S["cciv"]["etat"] != "VIGUEUR" or norm(CIT_CCIV) not in S["cciv"]["texte"]:
         raise Arret("A1 : code civil, art. 1 : texte non en vigueur ou phrase du report introuvable")
-    g.append("A1 : code civil art. 1, report de l'entree en vigueur des dispositions qui appellent des mesures")
+    for k, c in CIT_CONST.items():
+        if S["const"][k]["etat"] != "VIGUEUR" or norm(c) not in S["const"][k]["texte"]:
+            raise Arret("A1 : Constitution %s : texte non en vigueur ou citation introuvable" % k)
+    g.append("A1 : Constitution art. 10 et 61, code civil art. 1 : promulgation, suspension, report de l'entree en vigueur")
     cit = verifier_citations(S)
     g.append("A7 : %d citations du Senat, %d extraits du SGG, %d valeurs de serie retrouvees mot pour mot"
              % (len(CITATIONS), len(CIT_SGG), len(SERIE) + 1))
@@ -356,6 +370,10 @@ def affichage(r: dict) -> dict:
         A[k] = m.group(1) + " %"
     A.update(r["citations"])
     A["cit_cciv"] = norm(CIT_CCIV)
+    A["cit_art10"] = norm(CIT_CONST["art10"])
+    A["cit_art61"] = norm(CIT_CONST["art61"])
+    A["nautres"] = LETTRES[len(SESSIONS) - 1]
+    A["nsegments"] = LETTRES[len(SEGMENTS)]
     A["cit_sgg16_def"] = norm(CIT_SGG["sgg16_def"])
     A["cit_sgg17_def"] = norm(CIT_SGG["sgg17_def"])
     return A
@@ -431,7 +449,7 @@ NOTE1 = "Lois promulguées par session (1er oct.-30 sept.), hors conventions. É
 SRC2 = "Baromètre de l'application des lois (état au %s) ; rapports annuels du Sénat sur l'application des lois" % RELEVE
 NOTE2 = "Gris : lois que le baromètre et le Sénat classent différemment (2024-2025 : 2 lois sans liste nominative en plus)."
 SRC3 = "Sénat, bilans annuels de l'application des lois, 2003-2026 (taux tels que publiés, page citée dans le tableau)"
-NOTE3 = "Six définitions successives : ne pas relier les segments. Une révision de chiffre et une rupture de définition sont deux faits distincts."
+NOTE3 = LETTRES[len(SEGMENTS)].capitalize() + " définitions successives : ne pas relier les segments. Une révision de chiffre et une rupture de définition sont deux faits distincts."
 
 
 def fig_mesures(r: dict, A: dict) -> str:
@@ -505,10 +523,10 @@ def fig_serie(r: dict, A: dict) -> str:
     X = lambda s: x0 + (sess.index(s) + 0.5) * bw  # noqa: E731
     Y = lambda v: y1 - v / 100 * (y1 - y0)  # noqa: E731
     e = cadre(H, "as", "Le taux d'application des lois publié par le Sénat, 2002-2003 à 2024-2025",
-              "en % des mesures attendues ; six définitions successives, fonds alternés : un segment ne se compare pas à un autre",
-              "Points par session, regroupés en six segments séparés par des ruptures de définition : de %s %% à %s %% dans "
+              "en %% des mesures attendues ; %s définitions successives, fonds alternés : un segment ne se compare pas à un autre" % LETTRES[len(SEGMENTS)],
+              "Points par session, regroupés en %s segments séparés par des ruptures de définition : de %s %% à %s %% dans "
               "le premier segment (%s à %s), de %s %% à %s %% dans les suivants. Les valeurs, leur document et leur définition "
-              "sont dans le tableau sous la figure." % (
+              "sont dans le tableau sous la figure." % (LETTRES[len(SEGMENTS)],
                   fr(min(v for _, v, _, _, g in SERIE if g == 1), 1).replace(",0", ""),
                   fr(max(v for _, v, _, _, g in SERIE if g == 1), 1).replace(",0", ""),
                   SERIE[0][0], [s for s, _, _, _, g in SERIE if g == 1][-1],
@@ -545,11 +563,12 @@ def fiches(figs: dict, A: dict) -> dict:
         "mesures": ("appliquer-mesures", "Au %s, sur les %s mesures d'application recensées par le baromètre pour les lois "
                     "promulguées d'octobre 2017 à septembre 2025, %s ont un acte publié identifié, %s sont en attente et %s sont "
                     "indiquées sans objet." % (A["releve"], A["nmes"], A["P"], A["A"], A["S"])),
-        "lois": ("appliquer-lois", "Aucune phrase générale ne tient sur les %s sessions : en %s, le baromètre compte %s lois "
-                 "d'application directe sur %s, le Sénat %s ; les deux sources classent différemment %s des %s lois."
-                 % (A["nsessions"], A["ct_session"], A["ct_baro"], A["ct_N"], A["ct_senat"], A["ndesacc"], A["nlois"])),
-        "serie": ("appliquer-serie", "Le taux publié par le Sénat a changé six fois de définition depuis 2002-2003 : les "
-                  "segments ne se relient pas entre eux."),
+        "lois": ("appliquer-lois", "« Moins de la moitié dans chaque session » ne tient pas : en %s, le baromètre compte %s lois "
+                 "d'application directe sur %s ; dans les %s autres sessions, même la borne haute reste sous la moitié. Les deux "
+                 "sources classent différemment %s des %s lois."
+                 % (A["ct_session"], A["ct_baro"], A["ct_N"], A["nautres"], A["ndesacc"], A["nlois"])),
+        "serie": ("appliquer-serie", "Le taux publié par le Sénat repose sur %s définitions successives depuis 2002-2003 : les "
+                  "segments ne se lisent pas comme une seule série." % LETTRES[len(SEGMENTS)]),
     }
     out = []
     for ident, (fichier, m) in montre.items():

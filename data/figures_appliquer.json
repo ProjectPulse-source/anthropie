@@ -12,7 +12,7 @@
    "id": "lois",
    "fichier": "appliquer-lois",
    "titre": "Les lois qui n'appellent aucune mesure d'application, par session",
-   "montre": "Aucune phrase générale ne tient sur les huit sessions : en 2018-2019, le baromètre compte 25 lois d'application directe sur 49, le Sénat 22 ; les deux sources classent différemment 24 des 399 lois.",
+   "montre": "« Moins de la moitié dans chaque session » ne tient pas : en 2018-2019, le baromètre compte 25 lois d'application directe sur 49 ; dans les sept autres sessions, même la borne haute reste sous la moitié. Les deux sources classent différemment 24 des 399 lois.",
    "source": "Baromètre de l'application des lois (état au 05/10/2026) ; rapports annuels du Sénat sur l'application des lois",
    "precaution": "Gris : lois que le baromètre et le Sénat classent différemment (2024-2025 : 2 lois sans liste nominative en plus)."
   },
@@ -20,7 +20,7 @@
    "id": "serie",
    "fichier": "appliquer-serie",
    "titre": "Le taux d'application des lois publié par le Sénat, 2002-2003 à 2024-2025",
-   "montre": "Le taux publié par le Sénat a changé six fois de définition depuis 2002-2003 : les segments ne se relient pas entre eux.",
+   "montre": "Le taux publié par le Sénat repose sur six définitions successives depuis 2002-2003 : les segments ne se lisent pas comme une seule série.",
    "source": "Sénat, bilans annuels de l'application des lois, 2003-2026 (taux tels que publiés, page citée dans le tableau)",
    "precaution": "Six définitions successives : ne pas relier les segments. Une révision de chiffre et une rupture de définition sont deux faits distincts."
   }
