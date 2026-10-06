@@ -410,9 +410,9 @@ def tableaux(R, S) -> tuple[dict, dict]:
         o, oe = OBJET_RIP[n]
         if s["solution"] == "Conformité":
             issue = "Conforme ; %s soutiens pour %s requis" % (fr(s["soutiens"]), fr(s["seuil"]))
-            issue_en = "Valid; %s signatures of support for %s required" % ("{:,}".format(s["soutiens"]), "{:,}".format(s["seuil"]))
+            issue_en = "Met the statutory conditions; %s signatures of support for %s required" % ("{:,}".format(s["soutiens"]), "{:,}".format(s["seuil"]))
         else:
-            issue, issue_en = ("Non conforme : " + MOTIFS_COURTS[n][0]), ("Not valid: " + MOTIFS_COURTS[n][1])
+            issue, issue_en = ("Non conforme : " + MOTIFS_COURTS[n][0]), ("Did not meet the statutory conditions: " + MOTIFS_COURTS[n][1])
         lr.append([date_fr(s["date"]), "%s RIP" % n, o, issue])
         lre.append([date_en(s["date"]), "%s RIP" % n, oe, issue_en])
     t["rip"] = {"entetes": ["Décision", "Numéro", "Proposition de loi", "Solution"], "lignes": lr}
@@ -473,10 +473,10 @@ T = {
            "adopte": "adopted", "rejete": "rejected", "aucun": "no referendum for {annees_depuis} years",
            "moitie": "50% of valid votes",
            "t2": "The shared-initiative referendum, 2015 to {arrete}", "s2": "Private Members' Bills referred to the Conseil constitutionnel, and what became of them",
-           "d2": "{S} referrals to the Conseil constitutionnel; {C} valid; {soutiens} signatures of support for {seuil} required; no referendum.",
+           "d2": "{S} referrals to the Conseil constitutionnel; {C} meeting the statutory conditions; {soutiens} signatures of support for {seuil} required; no referendum.",
            "src2": "Conseil constitutionnel, 'RIP' decisions (DILA CONSTIT database, as at 5 Oct. 2026); Constitution, art. 11",
            "note2": "Two other bills tabled in the National Assembly 'under article 11' gave rise to no decision.",
-           "e1": "Referrals", "e2": "Found valid", "e3": "One tenth of voters' support reached", "e4": "Put to a referendum",
+           "e1": "Referrals", "e2": "Met the statutory conditions", "e3": "One tenth of voters' support reached", "e4": "Put to a referendum",
            "sout": "Signatures collected: {soutiens}", "seuil": "Threshold: {seuil} (one tenth of registered voters)"},
 }
 
@@ -554,8 +554,8 @@ def fig_rip(S, r, A):
 MONTRE = {
     "fr": {"registre": "Du 4 octobre 1958 au {arrete}, {N} référendums nationaux ont été organisés ; {A} ont adopté le texte soumis, {R} l'ont rejeté ; le dernier date du {dernier}.",
            "rip": "De 2015 au {arrete}, le Conseil constitutionnel a été saisi de {S} propositions de loi au titre de l'article 11 ; {C} a été jugée conforme et n'a pas réuni le soutien d'un dixième des électeurs inscrits ; aucune n'a été soumise au référendum."},
-    "en": {"registre": "From 4 October 1958 to {arrete}, {N} national referendums were held; {A} adopted the text put to the vote and {R} rejected it; the last one took place on {dernier}.",
-           "rip": "From 2015 to {arrete}, the Conseil constitutionnel received {S} Private Members' Bills under article 11; {C} was found valid and did not gather the support of one tenth of registered voters; none was put to a referendum."},
+    "en": {"registre": "From 4 October 1958 to {arrete}, {N} national referendums were held; the proposed text was approved in {A} and rejected in {R}; the last one took place on {dernier}.",
+           "rip": "From 2015 to {arrete}, the Conseil constitutionnel received {S} Private Members' Bills under article 11; {C} was found to meet the statutory conditions and did not gather the support of one tenth of registered voters; none was put to a referendum."},
 }
 
 

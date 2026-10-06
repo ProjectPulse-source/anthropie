@@ -386,13 +386,13 @@ def tableaux(typ, B, tr) -> tuple[dict, dict]:
     t, te = {}, {}
     lignes, le = [], []
     for l, (cfr, cen) in zip(typ["listes"], (("Exclusive (art. 3, § 1)", "Exclusive (art. 3(1))"), ("Partagée (art. 4, § 2)", "Shared (art. 4(2))"),
-                                             ("Appui, coordination, complément (art. 6)", "Support, coordination, supplement (art. 6)"))):
+                                             ("Appui, coordination, complément (art. 6)", "Competence to support, coordinate or supplement (art. 6)"))):
         for d in l["domaines"]:
             lignes.append([cfr, d["domaine"].rstrip(";.")])
     t["competences"] = {"entetes": ["Catégorie", "Domaine (texte du traité)"], "lignes": lignes}
     te_ = typologie_en(typ)
     te["competences"] = {"entetes": ["Category", "Area (text of the Treaty)"],
-                         "lignes": [[c, d.rstrip(";.")] for c, L in zip(("Exclusive (art. 3(1))", "Shared (art. 4(2))", "Support, coordination, supplement (art. 6)"), te_["listes"]) for d in L]}
+                         "lignes": [[c, d.rstrip(";.")] for c, L in zip(("Exclusive (art. 3(1))", "Shared (art. 4(2))", "Competence to support, coordinate or supplement (art. 6)"), te_["listes"]) for d in L]}
     li, lie = [], []
     for unites, lfr, len_ in INSTRUMENTS:
         u = unites[0]

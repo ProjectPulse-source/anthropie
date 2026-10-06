@@ -22,7 +22,7 @@
    "id": "registre",
    "fichier": "referendum-registre-en",
    "titre": "National referendums in France since 1958",
-   "montre": "From 4 October 1958 to 5 October 2026, nine national referendums were held; seven adopted the text put to the vote and two rejected it; the last one took place on 29 May 2005.",
+   "montre": "From 4 October 1958 to 5 October 2026, nine national referendums were held; the proposed text was approved in seven and rejected in two; the last one took place on 29 May 2005.",
    "source": "Conseil constitutionnel, proclamations of results (DILA CONSTIT database, as at 5 Oct. 2026); Journal officiel",
    "precaution": "National referendums under articles 11 and 89 only; excludes the vote of 28 Sept. 1958 and local consultations."
   },
@@ -30,7 +30,7 @@
    "id": "rip",
    "fichier": "referendum-rip-en",
    "titre": "The shared-initiative referendum, 2015 to 5 October 2026",
-   "montre": "From 2015 to 5 October 2026, the Conseil constitutionnel received seven Private Members' Bills under article 11; one was found valid and did not gather the support of one tenth of registered voters; none was put to a referendum.",
+   "montre": "From 2015 to 5 October 2026, the Conseil constitutionnel received seven Private Members' Bills under article 11; one was found to meet the statutory conditions and did not gather the support of one tenth of registered voters; none was put to a referendum.",
    "source": "Conseil constitutionnel, 'RIP' decisions (DILA CONSTIT database, as at 5 Oct. 2026); Constitution, art. 11",
    "precaution": "Two other bills tabled in the National Assembly 'under article 11' gave rise to no decision."
   }
