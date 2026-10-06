@@ -6,7 +6,7 @@
    "titre": "Votes contre et abstentions au Conseil de l'UE, par État membre",
    "montre": "Sur les votes publics du Conseil de l'Union européenne sur des actes législatifs, du 22 décembre 2009 au 1er octobre 2026, la France a voté contre deux fois et s'est abstenue trois fois ; elle a voté pour dans tous les autres cas.",
    "source": "Conseil de l'UE, recherche des résultats de vote (relevé du 06/10/2026) ; contrôle : SWP / GESIS, doi 10.7802/2560 (2009-2023)",
-   "precaution": "Royaume-Uni jusqu'à son retrait (2020), Croatie depuis 2013. Le Danemark et l'Irlande ne participent pas à certains actes."
+   "precaution": "Comptes bruts, pas un classement d'influence : Royaume-Uni jusqu'en 2020, Croatie depuis 2013 ; Danemark et Irlande hors de certains actes."
   }
  ],
  "en": [
@@ -16,7 +16,7 @@
    "titre": "Votes against and abstentions in the Council of the EU, by Member State",
    "montre": "In the public votes of the Council of the European Union on legislative acts, from 22 December 2009 to 1 October 2026, France voted against twice and abstained three times; it voted in favour in every other case.",
    "source": "Council of the EU, voting results search (retrieved 6 Oct. 2026); check: SWP / GESIS, doi 10.7802/2560 (2009-2023)",
-   "precaution": "United Kingdom until its withdrawal (2020), Croatia since 2013. Denmark and Ireland do not take part in some acts."
+   "precaution": "Raw counts, not a ranking of influence: United Kingdom until 2020, Croatia since 2013; Denmark and Ireland outside some acts."
   }
  ]
 }

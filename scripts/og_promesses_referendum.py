@@ -49,15 +49,15 @@ def main() -> int:
     if j["calcul"]["N"] != len(reg) or j["calcul"]["dernier"] != max(l["date_scrutin"] for l in reg):
         og.fail("carte : registre et calcul divergent")
     og.carte("og-referendum-promesse-en.jpg",
-             ["%s referendums" % e["N"].capitalize(), "since 1958"],
-             "National referendums; none since %s." % e["dernier"],
+             ["%s national referendums" % e["N"].capitalize(), "since 4 October 1958"],
+             "None since %s." % e["dernier"],
              "Conseil constitutionnel, as at %s · CC BY 4.0" % e["arrete"],
              "stephane-lalut.com/en/can-the-french-president-call-a-referendum/",
              lambda d: frise(d, reg, "en"),
              [(og.C1, "Adopted"), (GRIS, "Rejected")])
     og.carte("og-referendum-promesse.jpg",
-             ["%s référendums" % a["N"].capitalize(), "depuis 1958"],
-             "Référendums nationaux ; aucun depuis le %s." % a["dernier"],
+             ["%s référendums nationaux" % a["N"].capitalize(), "depuis le 4 octobre 1958"],
+             "Aucun depuis le %s." % a["dernier"],
              "Conseil constitutionnel, arrêté au %s · CC BY 4.0" % a["arrete"],
              "stephane-lalut.com/un-president-peut-il-recourir-au-referendum/",
              lambda d: frise(d, reg),

@@ -190,13 +190,13 @@ T = {
            "s": "votes publics sur des actes législatifs, du {debut} au {fin}",
            "d": "Barres horizontales par État membre, triées : votes contre (foncé) et abstentions (clair). La France compte {fr_c} votes contre et {fr_a} abstentions sur {entrees} votes publiés.",
            "src": "Conseil de l'UE, recherche des résultats de vote (relevé du 06/10/2026) ; contrôle : SWP / GESIS, doi 10.7802/2560 (2009-2023)",
-           "note": "Royaume-Uni jusqu'à son retrait (2020), Croatie depuis 2013. Le Danemark et l'Irlande ne participent pas à certains actes.",
+           "note": "Comptes bruts, pas un classement d'influence : Royaume-Uni jusqu'en 2020, Croatie depuis 2013 ; Danemark et Irlande hors de certains actes.",
            "contre": "contre", "abst": "abstention"},
     "en": {"t": "Votes against and abstentions in the Council of the EU, by Member State",
            "s": "public votes on legislative acts, {debut} to {fin}",
            "d": "Horizontal bars by Member State, sorted: votes against (dark) and abstentions (light). France has {fr_c} votes against and {fr_a} abstentions out of {entrees} published votes.",
            "src": "Council of the EU, voting results search (retrieved 6 Oct. 2026); check: SWP / GESIS, doi 10.7802/2560 (2009-2023)",
-           "note": "United Kingdom until its withdrawal (2020), Croatia since 2013. Denmark and Ireland do not take part in some acts.",
+           "note": "Raw counts, not a ranking of influence: United Kingdom until 2020, Croatia since 2013; Denmark and Ireland outside some acts.",
            "contre": "against", "abst": "abstention"},
 }
 
@@ -364,7 +364,7 @@ def tableaux(typ, B, tr) -> tuple[dict, dict]:
             ("Directives en retard", "Overdue directives", "%s", tr["directives_en_retard"]),
             ("En retard de plus de deux ans", "Overdue by more than two years", "%s", tr["en_retard_2_ans"]),
             ("Retard moyen (mois)", "Average delay (months)", "%s", tr["retard_moyen_mois"]),
-            ("Déficit de conformité (directives mal transposées)", "Conformity deficit (directives incorrectly transposed)", "%s %%", tr["deficit_conformite"]),
+            ("Déficit de conformité (procédures pour transposition incorrecte)", "Conformity deficit (proceedings for incorrect transposition)", "%s %%", tr["deficit_conformite"]),
             ("Durée des procédures d'infraction pour retard (mois)", "Duration of infringement proceedings for late transposition (months)", "%s", tr["duree_infractions_mois"])]
     f1 = lambda v: fr(v, 1) if isinstance(v, float) else str(v)  # noqa: E731
     t["transposition"] = {"entetes": ["Indicateur, au %s" % date_fr(tr["date_arrete"]), "France", "Moyenne de l'UE"],
