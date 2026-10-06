@@ -29,6 +29,7 @@ blocs:
         titre: "Philosophie"
   - id: promesses
     titre: "Promesses présidentielles : du pouvoir aux résultats"
+    titre_barre: "Promesses présidentielles"   # pastille de la barre : le titre entier déborde à 390 px
     chapo: "Qui peut décider, avec quels accords, dans quel délai — et comment vérifier le résultat ?"
     # Remplace le bloc « Pouvoir et institutions » (arbitrage PRO-20261005-153428, décision de l'auteur du 05/10).
   - id: notions

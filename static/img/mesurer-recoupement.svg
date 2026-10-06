@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 318" role="img" font-variant-numeric="tabular-nums" aria-labelledby="mr-t mr-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="mr-t">Chômeurs au sens du BIT et inscrits en catégorie A, 2024</title><desc id="mr-d">Barre en trois segments : 863 000 chômeurs au sens du BIT non inscrits en catégorie A, 1,43 million personnes dans les deux à la fois, 1,47 million inscrits en catégorie A non chômeurs au sens du BIT (estimation Insee, 2024).</desc>
+<rect width="720" height="318" fill="#ffffff"/>
+<text x="0.0" y="18.0" font-size="13" fill="#0A0A0E" text-anchor="start" font-weight="600">Chômeurs au sens du BIT et inscrits en catégorie A, 2024</text>
+<text x="0.0" y="36.0" font-size="12" fill="#52514e" text-anchor="start">deux définitions, des populations qui se recoupent en partie (en milliers de personnes)</text>
+<rect x="0.0" y="118" width="165.4" height="46" fill="#c9cdd3"/>
+<rect x="165.4" y="118" width="273.5" height="46" fill="#184f95"/>
+<rect x="439.0" y="118" width="281.0" height="46" fill="#c9cdd3"/>
+<text x="82.7" y="146.0" font-size="15" fill="#0A0A0E" text-anchor="middle" font-weight="600">863</text>
+<text x="302.2" y="146.0" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="600">1 427</text>
+<text x="579.5" y="146.0" font-size="15" fill="#0A0A0E" text-anchor="middle" font-weight="600">1 466</text>
+<path d="M1.0 112 v-8 H439.0 v8" fill="none" stroke="#52514e" stroke-width="1.5"/>
+<text x="219.5" y="98.0" font-size="12" fill="#0A0A0E" text-anchor="middle" font-weight="600">Chômeurs au sens du BIT : 2 290</text>
+<path d="M165.4 170 v8 H719.0 v-8" fill="none" stroke="#52514e" stroke-width="1.5"/>
+<text x="442.7" y="194.0" font-size="12" fill="#0A0A0E" text-anchor="middle" font-weight="600">Inscrits en catégorie A à France Travail : 2 893</text>
+<text x="0.0" y="226.0" font-size="10" fill="#52514e" text-anchor="start">dont : non inscrits 524 ; inscrits en B ou C 240 ;</text>
+<text x="0.0" y="239.0" font-size="10" fill="#52514e" text-anchor="start">inscrits en D ou E 99</text>
+<text x="720.0" y="226.0" font-size="10" fill="#52514e" text-anchor="end">dont : halo autour du chômage 727 ;</text>
+<text x="720.0" y="239.0" font-size="10" fill="#52514e" text-anchor="end">inactifs hors halo 503 ; en emploi 236</text>
+<text x="302.2" y="226.0" font-size="10" fill="#184f95" text-anchor="middle" font-weight="600">dans les deux</text>
+<line x1="0" y1="272" x2="720" y2="272" stroke="#e1e0d9"/>
+<text x="0" y="285" font-size="9" fill="#52514e">Insee Références, Emploi, chômage, revenus du travail, éd. 2026, dossier 1, figures 2 et 8 (appariement Dares-Insee-France Travail)</text>
+<text x="0" y="297" font-size="9" fill="#52514e">Estimation de l&#x27;Insee, moyenne 2024, France hors Mayotte, 15-64 ans, logement ordinaire ; deux définitions distinctes.</text>
+<text x="0" y="309" font-size="9" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/comment-savoir-si-une-promesse-est-tenue/</text>
+</svg>

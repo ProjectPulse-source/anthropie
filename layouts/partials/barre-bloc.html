@@ -15,7 +15,9 @@
 {{- $page := .page -}}
 {{- $en := eq $page.Lang "en" -}}
 {{- $bloc := .bloc.id -}}
-{{- $titre := .bloc.titre -}}
+{{- /* `titre_barre` (facultatif, 05/10/2026) : intitulé court de la pastille quand le titre du bloc, en capitales,
+       déborde à 390 px (bloc « Promesses présidentielles : du pouvoir aux résultats »). Défaut : le titre. */ -}}
+{{- $titre := .bloc.titre_barre | default .bloc.titre -}}
 {{- $pages := sort (where site.Pages "Params.ressource.bloc" $bloc) "Params.ressource.rang" -}}
 {{- $onglets := slice -}}
 {{- range $pages -}}

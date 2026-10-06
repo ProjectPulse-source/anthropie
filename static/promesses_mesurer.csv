@@ -1,0 +1,192 @@
+﻿serie,periode,statut_bit,categorie_inscription,valeur,unite,champ,source
+croisement_bit_inscription,2024,En emploi,Catégorie A,236,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,En emploi,Catégorie B,645,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,En emploi,Catégorie C,1505,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,En emploi,Catégorie D,82,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,En emploi,Catégorie E,405,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,En emploi,Non inscrits,25491,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,En emploi,Ensemble,28364,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,Chômeur,Catégorie A,1427,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,Chômeur,Catégorie B,184,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,Chômeur,Catégorie C,56,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,Chômeur,Catégorie D,74,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,Chômeur,Catégorie E,25,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,Chômeur,Non inscrits,524,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,Chômeur,Ensemble,2290,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,Inactif dans le halo,Catégorie A,727,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,Inactif dans le halo,Catégorie B,61,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,Inactif dans le halo,Catégorie C,22,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,Inactif dans le halo,Catégorie D,118,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,Inactif dans le halo,Catégorie E,17,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,Inactif dans le halo,Non inscrits,895,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,Inactif dans le halo,Ensemble,1840,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,Inactif hors halo,Catégorie A,503,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,Inactif hors halo,Catégorie B,33,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,Inactif hors halo,Catégorie C,15,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,Inactif hors halo,Catégorie D,105,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,Inactif hors halo,Catégorie E,10,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,Inactif hors halo,Non inscrits,7969,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,Inactif hors halo,Ensemble,8635,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,Ensemble,Catégorie A,2893,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,Ensemble,Catégorie B,923,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,Ensemble,Catégorie C,1597,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,Ensemble,Catégorie D,378,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,Ensemble,Catégorie E,457,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,Ensemble,Non inscrits,34878,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+croisement_bit_inscription,2024,Ensemble,Ensemble,41128,milliers de personnes,"France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire.","Insee Références ECRT 2026, dossier 1, figure 2 (estimation)"
+inscrits_categorie_A,1996-T1,,A,3325600,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,1996-T2,,A,3334800,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,1996-T3,,A,3343100,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,1996-T4,,A,3372800,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,1997-T1,,A,3391600,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,1997-T2,,A,3401300,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,1997-T3,,A,3377000,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,1997-T4,,A,3364800,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,1998-T1,,A,3339100,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,1998-T2,,A,3317900,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,1998-T3,,A,3301000,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,1998-T4,,A,3303900,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,1999-T1,,A,3293900,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,1999-T2,,A,3269600,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,1999-T3,,A,3160400,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,1999-T4,,A,3073000,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2000-T1,,A,2996100,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2000-T2,,A,2894600,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2000-T3,,A,2809400,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2000-T4,,A,2683100,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2001-T1,,A,2596600,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2001-T2,,A,2567600,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2001-T3,,A,2607000,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2001-T4,,A,2668800,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2002-T1,,A,2696800,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2002-T2,,A,2730200,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2002-T3,,A,2757000,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2002-T4,,A,2777000,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2003-T1,,A,2823800,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2003-T2,,A,2850800,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2003-T3,,A,2882500,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2003-T4,,A,2905700,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2004-T1,,A,2860600,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2004-T2,,A,2860100,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2004-T3,,A,2882300,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2004-T4,,A,2890900,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2005-T1,,A,2894400,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2005-T2,,A,2893800,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2005-T3,,A,2838000,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2005-T4,,A,2776100,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2006-T1,,A,2708400,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2006-T2,,A,2606800,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2006-T3,,A,2524000,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2006-T4,,A,2466600,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2007-T1,,A,2376600,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2007-T2,,A,2303500,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2007-T3,,A,2268500,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2007-T4,,A,2206100,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2008-T1,,A,2159500,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2008-T2,,A,2163400,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2008-T3,,A,2219100,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2008-T4,,A,2339200,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2009-T1,,A,2537000,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2009-T2,,A,2697200,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2009-T3,,A,2770200,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2009-T4,,A,2846300,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2010-T1,,A,2873100,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2010-T2,,A,2898300,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2010-T3,,A,2906600,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2010-T4,,A,2908300,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2011-T1,,A,2924800,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2011-T2,,A,2938400,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2011-T3,,A,2991600,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2011-T4,,A,3053700,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2012-T1,,A,3111200,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2012-T2,,A,3159100,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2012-T3,,A,3256400,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2012-T4,,A,3359600,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2013-T1,,A,3450300,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2013-T2,,A,3520700,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2013-T3,,A,3525200,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2013-T4,,A,3549900,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2014-T1,,A,3600400,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2014-T2,,A,3645700,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2014-T3,,A,3680900,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2014-T4,,A,3732600,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2015-T1,,A,3767300,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2015-T2,,A,3818200,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2015-T3,,A,3806300,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2015-T4,,A,3837100,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2016-T1,,A,3825500,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2016-T2,,A,3779500,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2016-T3,,A,3756800,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2016-T4,,A,3727100,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2017-T1,,A,3748700,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2017-T2,,A,3745900,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2017-T3,,A,3745100,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2017-T4,,A,3727300,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2018-T1,,A,3708600,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2018-T2,,A,3703100,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2018-T3,,A,3699900,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2018-T4,,A,3680100,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2019-T1,,A,3655200,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2019-T2,,A,3626000,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2019-T3,,A,3607900,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2019-T4,,A,3565500,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2020-T1,,A,3577200,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2020-T2,,A,4395600,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2020-T3,,A,3920900,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2020-T4,,A,3835500,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2021-T1,,A,3800400,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2021-T2,,A,3729500,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2021-T3,,A,3540700,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2021-T4,,A,3361700,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2022-T1,,A,3204500,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2022-T2,,A,3168100,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2022-T3,,A,3153900,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2022-T4,,A,3048300,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2023-T1,,A,3013000,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2023-T2,,A,3013400,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2023-T3,,A,3039400,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2023-T4,,A,3025400,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2024-T1,,A,3010100,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2024-T2,,A,3020900,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2024-T3,,A,3046100,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2024-T4,,A,3129000,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2025-T1,,A,3390200,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2025-T2,,A,3222500,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2025-T3,,A,3284000,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2025-T4,,A,3333800,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2026-T1,,A,3295100,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A,2026-T2,,A,3323000,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2018-T1,,A hors RSA et jeunes en parcours,2888200,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2018-T2,,A hors RSA et jeunes en parcours,2820400,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2018-T3,,A hors RSA et jeunes en parcours,2824800,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2018-T4,,A hors RSA et jeunes en parcours,2833800,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2019-T1,,A hors RSA et jeunes en parcours,2798800,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2019-T2,,A hors RSA et jeunes en parcours,2727900,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2019-T3,,A hors RSA et jeunes en parcours,2729700,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2019-T4,,A hors RSA et jeunes en parcours,2724000,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2020-T1,,A hors RSA et jeunes en parcours,2735200,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2020-T2,,A hors RSA et jeunes en parcours,3389500,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2020-T3,,A hors RSA et jeunes en parcours,2936300,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2020-T4,,A hors RSA et jeunes en parcours,2861700,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2021-T1,,A hors RSA et jeunes en parcours,2837900,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2021-T2,,A hors RSA et jeunes en parcours,2780500,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2021-T3,,A hors RSA et jeunes en parcours,2620200,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2021-T4,,A hors RSA et jeunes en parcours,2497700,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2022-T1,,A hors RSA et jeunes en parcours,2390100,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2022-T2,,A hors RSA et jeunes en parcours,2341600,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2022-T3,,A hors RSA et jeunes en parcours,2350000,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2022-T4,,A hors RSA et jeunes en parcours,2282100,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2023-T1,,A hors RSA et jeunes en parcours,2262100,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2023-T2,,A hors RSA et jeunes en parcours,2257600,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2023-T3,,A hors RSA et jeunes en parcours,2283900,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2023-T4,,A hors RSA et jeunes en parcours,2284500,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2024-T1,,A hors RSA et jeunes en parcours,2276900,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2024-T2,,A hors RSA et jeunes en parcours,2282000,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2024-T3,,A hors RSA et jeunes en parcours,2302000,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2024-T4,,A hors RSA et jeunes en parcours,2378400,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2025-T1,,A hors RSA et jeunes en parcours,2478700,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2025-T2,,A hors RSA et jeunes en parcours,2404200,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2025-T3,,A hors RSA et jeunes en parcours,2421600,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2025-T4,,A hors RSA et jeunes en parcours,2483100,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2026-T1,,A hors RSA et jeunes en parcours,2437200,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail
+inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours,2026-T2,,A hors RSA et jeunes en parcours,2435300,personnes,"France hors Mayotte, CVS-CJO",Dares-France Travail

@@ -1,0 +1,20 @@
+{
+ "fr": [
+  {
+   "id": "recoupement",
+   "fichier": "mesurer-recoupement",
+   "titre": "Chômeurs au sens du BIT et inscrits en catégorie A, 2024",
+   "montre": "En 2024, selon l'estimation de l'Insee, environ 1,43 million de personnes sont à la fois chômeurs au sens du BIT et inscrites en catégorie A ; environ 1,47 million inscrits en catégorie A ne sont pas chômeurs au sens du BIT, et 863 000 chômeurs au sens du BIT ne sont pas inscrits en catégorie A.",
+   "source": "Insee Références, Emploi, chômage, revenus du travail, éd. 2026, dossier 1, figures 2 et 8 (appariement Dares-Insee-France Travail)",
+   "precaution": "Estimation de l'Insee, moyenne 2024, France hors Mayotte, 15-64 ans, logement ordinaire ; deux définitions distinctes."
+  },
+  {
+   "id": "regle",
+   "fichier": "mesurer-regle",
+   "titre": "Inscrits en catégorie A : série publiée et série hors bénéficiaires du RSA et jeunes en parcours",
+   "montre": "Depuis le 1er janvier 2025, des publics sont inscrits d'office à France Travail ; la Dares publie aussi une série qui exclut les bénéficiaires du RSA et les jeunes en parcours. Les deux panneaux décrivent deux populations, et leur écart ne mesure pas l'effet de la réforme.",
+   "source": "Dares et France Travail, inscrits en fin de trimestre, France hors Mayotte, données CVS-CJO (série « hors RSA » depuis 2018)",
+   "precaution": "Champ et période différents de la figure du croisement 2024. Labellisation suspendue pour la période du 01/01/2025 au 20/05/2026."
+  }
+ ]
+}
