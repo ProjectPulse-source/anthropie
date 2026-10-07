@@ -266,6 +266,9 @@ volume sur la librairie en ligne par le guichet `/ressources-offertes/`, et cré
 
 - page qui porte un bloc d'achat : un bandeau avec bouton, en pied du bloc, **dans `appel-livre`**, automatique dès que le livre a une page au
   guichet (`consultation="non"` la retire) ;
+- page de débat public envoyée à des élus, syndicats ou journalistes : `appel-livre … offert="avant"` (auteur,
+  07/10/2026, page lycée) — l'exemplaire offert en tête, seul bouton plein, l'achat en une ligne discrète ;
+  « étudiants » n'est pas ajouté aux publics (coût par exemplaire, à expérimenter à part) ;
 - page sans bloc d'achat (notions, guides, corpus) : `{{< consultation slug="…" >}}` en fin de page ;
 - pages des enseignants : `exemplaire`, avec leur façade (couche pédagogique, points 5 et 7).
 

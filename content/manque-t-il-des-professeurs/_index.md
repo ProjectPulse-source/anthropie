@@ -148,7 +148,7 @@ Le «&nbsp;manque de professeurs&nbsp;» recouvre au moins quatre réalités que
 
 {{< faq-visible >}}
 
-{{< appel-livre slug="la-societe-du-premier-coup" sur="Après un premier échec, qui peut recommencer ?" avis="non" >}}
+{{< appel-livre slug="la-societe-du-premier-coup" sur="Après un premier échec, qui peut recommencer ?" avis="non" offert="avant" >}}
 Cette page mesure les moyens du lycée. La question qui vient ensuite est celle des parcours&nbsp;: quand un élève échoue une première fois, à un examen, une orientation, une première année d'études, qui peut réellement recommencer, et à quel coût selon son milieu&nbsp;? Le livre montre que cette possibilité de recommencer n'est pas également distribuée.
 {{< /appel-livre >}}
 

@@ -413,6 +413,16 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
 .appel-livre__consultation-offre { margin: 0; font-size: 15px; color: var(--color-text); }
 .appel-livre__consultation-btn { flex: 0 0 auto; background: var(--color-bg-elevated); white-space: nowrap; }
 @media print { .appel-livre__consultation { display: none !important; } }
+// offert="avant" (07/10/2026) : l'exemplaire offert en tête, encadré léger ; l'achat en une ligne de texte discrète.
+.appel-livre__offert {
+  margin: 0 0 12px; padding: 14px 16px; background: var(--color-accent-faint);
+  border-left: 2px solid var(--color-accent); font-family: var(--font-sans);
+}
+.appel-livre__offert .appel-livre__actions { margin: 10px 0 0; }
+.appel-livre__achat-discret {
+  font-family: var(--font-sans); font-size: var(--fs-small); color: var(--color-text-subtle); margin: 0 0 8px;
+}
+@media print { .appel-livre__offert { display: none !important; } }
 // Très petits écrans (mesure du 03/10/2026) : 260 px fixes pour le texte, plus les marges du bloc, faisaient déborder la
 // page de 19 px à 320 px sur toutes les pages qui portent le bloc. Couverture et texte s'empilent ; le bandeau
 // d'exemplaire suit la marge réduite du bloc (ses marges négatives valaient 26 px). (min() n'est pas accepté par le

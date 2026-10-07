@@ -85,6 +85,26 @@
     <h3 class="appel-livre__titre"><a href="{{ $livre.RelPermalink }}"{{ $hl | safeHTMLAttr }}>{{ partial "fr-typo.html" $livre.Title }}</a>{{ with $mention }}<span class="appel-livre__langue">{{ . }}</span>{{ end }}</h3>
     {{- with $p.subtitle }}<p class="appel-livre__soustitre">{{ partial "fr-typo.html" . }}</p>{{ end }}
     <div class="appel-livre__argu">{{ .Inner | markdownify }}</div>
+    {{- /* offert="avant" (auteur, 07/10/2026, page « Manque-t-il des professeurs au lycée ? ») : sur une page envoyée à
+           des élus, des syndicats et des journalistes pendant un débat public, l'exemplaire offert passe en tête, seul
+           bouton plein ; l'achat reste, en une ligne discrète. Le bandeau de pied n'est alors pas répété. */ -}}
+    {{- $guichet := site.GetPage (printf "/ressources-offertes/%s" $slug) -}}
+    {{- $offert := eq (.Get "offert") "avant" -}}
+    {{- if and $offert (or $en (not $guichet) (not $p.promo_slug)) -}}
+      {{- errorf "appel-livre: offert=\"avant\" exige une page française et un livre doté d'une page au guichet (%s)" .Page.File.Path -}}
+    {{- end -}}
+    {{- $origine := path.Base (path.Dir .Page.File.Path) -}}
+    {{- if $offert }}
+    <div class="appel-livre__offert">
+      <p class="appel-livre__consultation-publics">{{ partial "consultation-publics.html" . | strings.TrimSpace }}</p>
+      <p class="appel-livre__consultation-offre"><strong>Exemplaire numérique de consultation offert</strong>, sans contrepartie, dans la limite du stock.</p>
+      <p class="appel-livre__actions"><a class="appel-livre__btn appel-livre__btn--plein" href="{{ $guichet.RelPermalink }}?src=consultation-{{ $origine }}">Demander l'exemplaire offert&nbsp;→</a></p>
+    </div>
+    <p class="appel-livre__achat-discret">
+      {{- with $broche }}Version papier&nbsp;:&nbsp;<a href="{{ . }}">{{ with $prix }}{{ . | safeHTML }}{{ else }}broché{{ end }}</a>{{ end }}
+      {{- with $kindle }}{{ if $broche }} · {{ end }}Kindle&nbsp;:&nbsp;<a href="{{ . }}">{{ with $prixK }}{{ . | safeHTML }}{{ else }}édition Kindle{{ end }}</a>{{ end }}
+    </p>
+    {{- else }}
     <p class="appel-livre__meta">
       {{- with $prix }}<span class="appel-livre__prix">{{ . | safeHTML }}</span>{{ end }}
       {{- with $p.pages }}<span>{{ printf $T.pages (string .) | safeHTML }}</span>{{ end }}
@@ -105,6 +125,7 @@
       {{- with $broche }}<a class="appel-livre__btn appel-livre__btn--plein" href="{{ . }}">{{ $T.acheter }}{{ with $prix }}&nbsp;— {{ . | safeHTML }}{{ end }}</a>{{ end }}
       {{- with $kindle }}<a class="appel-livre__btn" href="{{ . }}">{{ $T.kindle }}{{ with $prixK }}&nbsp;— {{ . | safeHTML }}{{ end }}</a>{{ end }}
     </p>
+    {{- end }}
     <p class="appel-livre__fiche"><a href="{{ $livre.RelPermalink }}"{{ $hl | safeHTMLAttr }}>{{ $T.fiche | safeHTML }}</a>{{ with $mention }}<span class="appel-livre__langue">{{ . }}</span>{{ end }}</p>
   </div>
     {{- /* EXEMPLAIRE DE CONSULTATION (auteur, 02/10/2026 : « la généralisation au niveau des ressources »). Un bandeau
@@ -114,13 +135,11 @@
            Conditions : page française (le guichet attribue des exemplaires Amazon.fr), livre doté d'une page au
            guichet. consultation="non" la retire d'une page. `src` : la page d'origine se lit dans la mesure
            d'audience, pour savoir d'où viennent les demandes (un exemplaire attribué reste un coût, non un résultat). */ -}}
-    {{- $guichet := site.GetPage (printf "/ressources-offertes/%s" $slug) -}}
-    {{- if and (not $en) $guichet $p.promo_slug (ne (.Get "consultation") "non") }}
-    {{- $origine := path.Base (path.Dir .Page.File.Path) -}}
+    {{- if and (not $en) $guichet $p.promo_slug (ne (.Get "consultation") "non") (not $offert) }}
     <div class="appel-livre__consultation">
       <div class="appel-livre__consultation-texte">
         <p class="appel-livre__consultation-publics">{{ partial "consultation-publics.html" . | strings.TrimSpace }}</p>
-        <p class="appel-livre__consultation-offre"><strong>Exemplaire numérique de consultation</strong>, sans contrepartie, dans la limite du stock.</p>
+        <p class="appel-livre__consultation-offre"><strong>Exemplaire numérique de consultation offert</strong>, sans contrepartie, dans la limite du stock.</p>
       </div>
       <a class="appel-livre__btn appel-livre__consultation-btn" href="{{ $guichet.RelPermalink }}?src=consultation-{{ $origine }}">Demander un exemplaire&nbsp;→</a>
     </div>

@@ -101,6 +101,9 @@ deux contre-expertises arbitrées, énoncés des acteurs relus à la source et v
   l'extrait se calcule hors dépôt sur des pièces en partie ignorées et lues par position. Témoin : `essai` 0 échec (les
   sept retrouvent l'édition lue ; concours et OCDE comparés à l'extrait figé) ; falsification (édition lue reculée)
   signale les six éditions, dont la session 2026 des concours manquée le 07/10.
+- **Encadré du livre** (pièce entrante arbitrée le 07/10) : `appel-livre offert="avant"` sur cette page — exemplaire
+  offert en tête, achat en une ligne ; libellé « Exemplaire numérique de consultation offert » partout. hugo 0, check-all 0,
+  390 px sans débordement de contenu.
 - **Reste** : registre des ressources, diffusion par lot ; rendez-vous du 16/10 (bilan des recteurs).
 
 ### 2026-10-07 — FR↔EN sans décrochage : sélecteur de langue à repli, huit pages traduites, contre-expertise retenue ; POUSSÉ (`72f26e5`, `63cc811`), production vérifiée
