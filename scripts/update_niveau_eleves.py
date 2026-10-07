@@ -17,7 +17,7 @@ de seconde 2026, note de la DEPP), puis PISA 2029 (publication prévue fin 2030)
 et extrait_niveau.py dans le dossier de recherche, recopier l'extrait et son empreinte, relancer ce script.
 Page en français seulement (exclusion déclarée : débat, programme et statistique français).
 
-Usage : python scripts/update_niveau_eleves.py [--check] [--mutation=maths|lecture|sommet|social|seconde|lycee|recrutement|manque]
+Usage : python scripts/update_niveau_eleves.py [--check] [--mutation=maths|lecture|sommet|social|seconde|lycee|recrutement|haut_ocde]
 Sorties : data/ et static/niveau_eleves.json, static/niveau_eleves.csv, data/figures_niveau.json,
           static/img/niveau-{baisse,sommet,seconde}.svg + .png
 """
@@ -133,9 +133,11 @@ def mutation(c):
     elif m == "recrutement":  # la sélectivité aurait monté en anglais
         c["p1"] = json.loads(json.dumps(c["p1"]))
         c["p1"]["anglais"]["var"] = 0.05
-    elif m == "manque":       # le manque déclaré de 2025 dépasserait celui de 2022
-        c["p4"] = json.loads(json.dumps(c["p4"]))
-        c["p4"]["france"]["2025"] = 70.0
+    elif m == "haut_ocde":    # le quart favorisé de l'OCDE aurait reculé autant que celui de la France
+        c["P"] = json.loads(json.dumps(c["P"]))
+        o = c["P"]["lecture"]["social"][OC]
+        f_ = c["P"]["lecture"]["social"]["France"]
+        o["haut"]["2025"] = o["haut"]["2015"] - (f_["haut"]["2015"] - f_["haut"]["2025"])
     elif m is not None:
         fail("mutation inconnue : %s" % m)
     return m
@@ -172,6 +174,20 @@ def gardes(c):
     s = P["sciences"]["n2"]
     g(s["q1"] <= s["france"] <= s["q3"], "sciences : « comme les autres »")
     g(m["rang"] <= m["n"] // 4, "maths : rang dans le premier quart")
+    # « l'écart au premier quartile est du même ordre que la marge d'erreur de la variation française » (maths)
+    eq = m["q1"] - m["france"]
+    g(0.5 <= eq / P["mathematiques"]["dif"]["2015"]["se"] <= 2.0, "maths : écart au premier quartile « du même ordre » que l'erreur type")
+    # écart social : le quart favorisé recule « presque deux fois plus » que dans l'OCDE ; le quart défavorisé « comme dans l'OCDE »
+    for d in ("lecture", "mathematiques"):
+        fr_, oc_ = P[d]["social"]["France"], P[d]["social"][OC]
+        dh = lambda s_: s_["haut"]["2015"] - s_["haut"]["2025"]
+        db = lambda s_: s_["bas"]["2015"] - s_["bas"]["2025"]
+        g(1.7 <= dh(fr_) / dh(oc_) < 2.0, "%s : quart favorisé « presque deux fois plus » que l'OCDE" % d)
+        g(abs(db(fr_) / db(oc_) - 1) < 0.2, "%s : quart défavorisé « comme dans l'OCDE »" % d)
+    # « en lecture, le même resserrement par le haut existe dans l'OCDE ; en mathématiques, les deux quarts reculent autant »
+    ol, om = P["lecture"]["social"][OC], P["mathematiques"]["social"][OC]
+    g(ol["haut"]["2015"] - ol["haut"]["2025"] > 1.2 * (ol["bas"]["2015"] - ol["bas"]["2025"]), "OCDE lecture : resserrement par le haut")
+    g(abs((om["haut"]["2015"] - om["haut"]["2025"]) / (om["bas"]["2015"] - om["bas"]["2025"]) - 1) < 0.1, "OCDE maths : « les deux quarts reculent autant »")
     # « l'essentiel s'est produit depuis 2018 » : la baisse 2018-2025 dépasse celle de 2015-2018, dans chaque domaine
     for d in DOM:
         f_ = P[d]["france"]
@@ -190,7 +206,6 @@ def gardes(c):
         g(so_["bas"]["2025"] < so_["bas"]["2015"], "%s : le quart bas baisse aussi" % d)
     # seconde : « retour au niveau de 2019 » en français (GT) ; « environ deux candidats par admis » dans au moins trois disciplines
     g(c["sec"]["GT francais"]["2025"] == c["sec"]["GT francais"]["2019"], "seconde : « retour au niveau de 2019 »")
-    g(sum(1.8 <= v["m1"] <= 2.2 for v in c["p1"].values()) >= 3, "P1 : « deux candidats présents pour un admis environ, dans la plupart »")
     # N3 : le bas gonfle plus que le haut ne fond ; perte au sommet bien plus forte que l'OCDE en lecture et maths
     for d in DOM:
         f = P[d]["niveaux"]["France"]
@@ -227,19 +242,10 @@ def gardes(c):
     # P1 : sélectivité en baisse dans les cinq disciplines, seuil d'un tiers atteint en anglais seulement
     p1 = c["p1"]
     g(all(v["var"] < 0 for v in p1.values()), "P1 : « moins de candidats par admis dans les cinq disciplines »")
-    g([d for d, v in p1.items() if v["var"] <= -1 / 3] == ["anglais"], "P1 : « seul l'anglais franchit le seuil d'un tiers »")
     g(min(-v["var"] for v in p1.values()) > 0.2, "P1 : « d'un quart à un tiers » (au moins un cinquième partout)")
     # P2/P3 : « de moitié » ; au secondaire plus que l'OCDE, l'inverse avec le primaire
     p2 = c["p2"]
     g(1.4 <= p2[max(p2)] / p2[min(p2)] <= 1.6, "P2 : « a augmenté de moitié »")
-    g(c["p3"]["France"]["secondaire"] > c["p3"]["OECD average"]["secondaire"], "P3 : secondaire au-dessus de l'OCDE")
-    g(c["p3"]["France"]["primaire+secondaire"] < c["p3"]["OECD average"]["primaire+secondaire"], "P3 : primaire et secondaire en dessous")
-    # P4 : plus qu'en 2015, beaucoup moins qu'en 2022, série heurtée
-    f = c["p4"]["france"]
-    g(f["2025"] - f["2015"] > 10 and c["p4"]["var_sig"], "P4 : « plus qu'en 2015 » (plus de 10 points, significatif)")
-    g(f["2022"] - f["2025"] > 15, "P4 : « beaucoup moins qu'en 2022 »")
-    g(f["2018"] < f["2015"], "P4 : série heurtée (2018 sous 2015)")
-    g(not c["p4"]["qualif_sig"], "P4 : « enseignants peu qualifiés » sans évolution significative")
     return n
 
 
@@ -275,6 +281,10 @@ def affichage(c):
         A[k + "_oec25"] = nb(soo["ecart"]["2025"], 0)
         A[k + "_qh"] = nb(so["haut"]["2015"] - so["haut"]["2025"], 0)
         A[k + "_qb"] = nb(so["bas"]["2015"] - so["bas"]["2025"], 0)
+        A[k + "_oqh"] = nb(soo["haut"]["2015"] - soo["haut"]["2025"], 0)
+        A[k + "_oqb"] = nb(soo["bas"]["2015"] - soo["bas"]["2025"], 0)
+    A["math_ecart_q1"] = nb(P["mathematiques"]["n2"]["q1"] - P["mathematiques"]["n2"]["france"], 0)
+    A["math_se"] = nb(P["mathematiques"]["dif"]["2015"]["se"], 0)
     A["n_ocde"] = str(P["mathematiques"]["n2"]["n"])
     A["n_etoile"] = LETTRES[P["mathematiques"]["n2"]["n"] - P["mathematiques"]["n2"]["variantes"]["sans_asterisque"]["n"]]
     A["n_autres"] = str(P["mathematiques"]["n2"]["n"] - 1)
@@ -297,23 +307,11 @@ def affichage(c):
     p1 = c["p1"]
     A["p1_min"] = nb(-100 * max(v["var"] for v in p1.values()), 0)
     A["p1_max"] = nb(-100 * min(v["var"] for v in p1.values()), 0)
-    for d, k in (("mathematiques", "math"), ("physique-chimie", "pc"), ("lettres modernes", "lm"), ("histoire-geographie", "hg"), ("anglais", "ang")):
-        A["p1_" + k] = nb(-100 * p1[d]["var"], 0)
-        A["p1_%s_0" % k] = nb(p1[d]["m0"], 1)
-        A["p1_%s_1" % k] = nb(p1[d]["m1"], 1)
     p2 = c["p2"]
     A["contr_a0"], A["contr_a1"] = str(min(p2)), str(max(p2))
     A["contr_0"], A["contr_1"] = nb(p2[min(p2)]), nb(p2[max(p2)])
     A["nq_fr"] = nb(c["p3"]["France"]["secondaire"])
     A["nq_ocde"] = nb(c["p3"]["OECD average"]["secondaire"])
-    A["nq_fr_ps"] = nb(c["p3"]["France"]["primaire+secondaire"])
-    A["nq_ocde_ps"] = nb(c["p3"]["OECD average"]["primaire+secondaire"])
-    f = c["p4"]["france"]
-    for a in ("2015", "2018", "2022", "2025"):
-        A["manque_" + a[2:]] = nb(f[a], 0)
-    A["manque_ocde_25"] = nb(c["p4"]["ocde"]["2025"], 0)
-    A["qualif_15"] = nb(c["p4"]["qualif_france"]["2015"], 0)
-    A["qualif_25"] = nb(c["p4"]["qualif_france"]["2025"], 0)
     return A
 
 

@@ -666,7 +666,7 @@ def carte_niveau() -> None:
         fail("carte niveau : le contraste annoncé n'est plus vrai dans les données")
     carte("og-niveau-eleves.jpg",
           ["Le niveau des élèves", "baisse-t-il ?"],
-          "En maths, la France recule plus que %s pays sur %s." % (A["math_mieux"], A["n_autres"]),
+          "En maths, une des plus fortes baisses de l'OCDE.",
           "OCDE, PISA 2025 · calcul de l'auteur · CC BY 4.0",
           "stephane-lalut.com/le-niveau-des-eleves-baisse-t-il/",
           lambda d: figure_niveau_mini(d, P),
