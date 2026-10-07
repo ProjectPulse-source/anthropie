@@ -42,8 +42,9 @@ meta:
       1 388 → 1 387 voix (graphies d'un même auteur réunies) ; pages 694 → 680. Nouvelle couverture
       (recto marine retenu par l'auteur le 04/10, à la place du recto « papier » du même jour, qui ressortait
       mal sur KDP). Chiffres lus sur le livre fabriqué (bilan des Promenades,
-      témoin temoin_livre_final.py du dépôt du livre). Mis en ligne le 04/10, avec la publication KDP en cours
-      (description Amazon déjà à jour ; pagination de la fiche Amazon en cours de traitement).
+      témoin temoin_livre_final.py du dépôt du livre). Mis en ligne le 04/10 avec la publication KDP ; broché
+      (680 p., couverture marine) et Kindle en ligne sur Amazon dans leur nouvelle version le 05/10 (constat de
+      l'auteur). Wikidata Q140517745 : P1104 = 680 (passe du 04/10, readback API).
       Aucun ajout d'œuvre ; total_works inchangé.
     v1_21: |
       « Un président peut-il tenir ses promesses ? » rangé dans le corpus anthropique sur le site
