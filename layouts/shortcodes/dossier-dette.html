@@ -53,7 +53,7 @@
 {{- else if eq $v "baisse" -}}
   {{- with site.Data.dette_baisse -}}
     {{- $src = printf "%s · Eurostat %s" $donnees .affichage.annee_fin -}}
-    {{- $srcTitre = "Dernière année des données Eurostat de cette page — c'est le millésime des DONNÉES, non la date de relecture du texte" -}}
+    {{- $srcTitre = cond $en "Latest year of the Eurostat data on this page — the vintage of the DATA, not the date the text was reviewed" "Dernière année des données Eurostat de cette page — c'est le millésime des DONNÉES, non la date de relecture du texte" -}}
   {{- end -}}
 {{- else if eq $v "3" -}}
   {{- with site.Data.dette_monde -}}
@@ -63,12 +63,12 @@
 {{- else if and (eq $v "prolongement") (in (.Page.Params.donnees | default (slice)) "dette_collectivites") -}}
   {{- with site.Data.dette_collectivites -}}
     {{- $src = printf "%s · Eurostat %s" $donnees .affichage.an_fin -}}
-    {{- $srcTitre = "Dernière année des données Eurostat de cette page — c'est le millésime des DONNÉES, non la date de relecture du texte" -}}
+    {{- $srcTitre = cond $en "Latest year of the Eurostat data on this page" "Dernière année des données Eurostat de cette page — c'est le millésime des DONNÉES, non la date de relecture du texte" -}}
   {{- end -}}
 {{- else if and (eq $v "prolongement") (in (.Page.Params.donnees | default (slice)) "dette_generations") -}}
   {{- with site.Data.dette_generations -}}
-    {{- $src = printf "%s · Eurostat et BCE %s · projections %s" $donnees .affichage.fin .affichage.proj_an -}}
-    {{- $srcTitre = "Dernière année des séries Eurostat et BCE de cette page, et édition des projections de la Commission et du COR — millésimes des DONNÉES, non date de relecture du texte" -}}
+    {{- $src = printf "%s · Eurostat %s %s · %s %s" $donnees (cond $en "and ECB" "et BCE") .affichage.fin "projections" .affichage.proj_an -}}
+    {{- $srcTitre = cond $en "Latest year of the Eurostat and ECB series on this page, and edition of the Commission and COR projections — vintages of the DATA, not the date the text was reviewed" "Dernière année des séries Eurostat et BCE de cette page, et édition des projections de la Commission et du COR — millésimes des DONNÉES, non date de relecture du texte" -}}
   {{- end -}}
 {{- end -}}
 {{- if not $src -}}
@@ -85,11 +85,13 @@
 {{- if ne (len $items) 5 }}{{ errorf "dossier-dette : data/dossier_dette.yaml doit porter les cinq volets (%d lus)" (len $items) }}{{ end -}}
 {{- /* Prolongements : ceux de la langue de la page ; une page anglaise sans prolongement anglais montre ceux de la page
        française, marqués « in French » et hreflang="fr" (miroir de la barre demandé par l'auteur, 03/10/2026). */ -}}
+{{- /* 07/10/2026 (première page anglaise de prolongement, /en/local-government-debt/) : sur une page anglaise, la
+       liste part TOUJOURS des prolongements français, et chacun prend sa traduction anglaise si elle existe, sinon reste en
+       français marqué « in French ». Avant, une seule traduction anglaise faisait disparaître en silence tous les
+       prolongements encore en français de la barre anglaise. */ -}}
 {{- $prolong := where site.Pages "Params.dossier_dette" "prolongement" -}}
-{{- $enFrancais := false -}}
-{{- if and $en (not $prolong) -}}
+{{- if $en -}}
   {{- range site.Sites }}{{ if eq .Language.Lang "fr" }}{{ $prolong = where .Pages "Params.dossier_dette" "prolongement" }}{{ end }}{{ end -}}
-  {{- $enFrancais = true -}}
 {{- end -}}
 {{- $prolong = sort $prolong "Params.ressource.rang" -}}
 {{- $plusActif := eq $v "prolongement" -}}
@@ -103,8 +105,14 @@
 {{- with $prolong -}}
   {{- $entrees := slice -}}
   {{- range . -}}
-    {{- if $enFrancais -}}
-      {{- $entrees = $entrees | append (dict "url" .RelPermalink "titre" (.Params.dossier_dette_titre_en | default .Title) "role" .Params.dossier_dette_role_en "hreflang" "fr" "lang" "en" "note" "in French") -}}
+    {{- if $en -}}
+      {{- $tr := "" -}}
+      {{- range .Translations }}{{ if eq .Lang "en" }}{{ $tr = . }}{{ end }}{{ end -}}
+      {{- with $tr -}}
+        {{- $entrees = $entrees | append (dict "url" .RelPermalink "titre" (.Params.dossier_dette_titre | default .Title) "role" .Params.dossier_dette_role "ici" (eq .RelPermalink $page.RelPermalink)) -}}
+      {{- else -}}
+        {{- $entrees = $entrees | append (dict "url" .RelPermalink "titre" (.Params.dossier_dette_titre_en | default .Title) "role" .Params.dossier_dette_role_en "hreflang" "fr" "lang" "en" "note" "in French") -}}
+      {{- end -}}
     {{- else -}}
       {{- $entrees = $entrees | append (dict "url" .RelPermalink "titre" (.Params.dossier_dette_titre | default .Title) "role" .Params.dossier_dette_role "ici" (eq .RelPermalink $page.RelPermalink)) -}}
     {{- end -}}

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 352" role="img" font-variant-numeric="tabular-nums" aria-labelledby="ga-t ga-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="ga-t">France: what public deficits corresponded to</title><desc id="ga-d">For each period, general government net borrowing, set at 100, split between three uses: net acquisitions of assets (investment minus depreciation of capital, land, inventories), net capital transfers to other sectors, current spending not covered by current revenue. 1996-2005: 28.6 points of GDP of net borrowing, of which 32% in assets, 18% in transfers, 50% in current spending. 2006-2015: 47.6 points of GDP of net borrowing, of which 19% in assets, 17% in transfers, 64% in current spending. 2016-2025: 48.3 points of GDP of net borrowing, of which 10% in assets, 14% in transfers, 76% in current spending. 1996-2025: 124.5 points of GDP of net borrowing, of which 18% in assets, 16% in transfers, 66% in current spending.</desc>
+<rect width="720" height="352" fill="#ffffff"/>
+<text x="0" y="18" font-size="15" font-weight="600" fill="#26262f">France: what public deficits corresponded to</text>
+<rect x="0" y="36" width="10" height="10" fill="#184f95"/>
+<text x="14" y="45" font-size="11" fill="#55524f">assets (net investment, land)</text>
+<rect x="206" y="36" width="10" height="10" fill="#c9c5c0"/>
+<text x="220" y="45" font-size="11" fill="#55524f">capital transfers</text>
+<rect x="340" y="36" width="10" height="10" fill="#eb6834"/>
+<text x="354" y="45" font-size="11" fill="#55524f">uncovered current spending</text>
+<text x="720" y="72" font-size="10" fill="#96928f" text-anchor="end">net borrowing,</text>
+<text x="720" y="84" font-size="10" fill="#96928f" text-anchor="end">points of GDP</text>
+<text x="0" y="117.0" font-size="12" font-weight="600" fill="#26262f">1996-2005</text>
+<rect x="132.0" y="96.0" width="167.0" height="34" fill="#184f95"/>
+<text x="215.5" y="117.0" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">32%</text>
+<rect x="299.0" y="96.0" width="93.6" height="34" fill="#c9c5c0"/>
+<text x="345.8" y="117.0" font-size="11" font-weight="600" fill="#26262f" text-anchor="middle">18%</text>
+<rect x="392.7" y="96.0" width="263.3" height="34" fill="#eb6834"/>
+<text x="524.3" y="117.0" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">50%</text>
+<text x="720" y="117.0" font-size="11" font-weight="600" fill="#55524f" text-anchor="end">28.6</text>
+<text x="0" y="167.0" font-size="12" font-weight="600" fill="#26262f">2006-2015</text>
+<rect x="132.0" y="146.0" width="99.5" height="34" fill="#184f95"/>
+<text x="181.7" y="167.0" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">19%</text>
+<rect x="231.5" y="146.0" width="87.9" height="34" fill="#c9c5c0"/>
+<text x="275.4" y="167.0" font-size="11" font-weight="600" fill="#26262f" text-anchor="middle">17%</text>
+<rect x="319.4" y="146.0" width="336.6" height="34" fill="#eb6834"/>
+<text x="487.7" y="167.0" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">64%</text>
+<text x="720" y="167.0" font-size="11" font-weight="600" fill="#55524f" text-anchor="end">47.6</text>
+<text x="0" y="217.0" font-size="12" font-weight="600" fill="#26262f">2016-2025</text>
+<rect x="132.0" y="196.0" width="52.3" height="34" fill="#184f95"/>
+<text x="158.1" y="217.0" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">10%</text>
+<rect x="184.3" y="196.0" width="72.5" height="34" fill="#c9c5c0"/>
+<text x="220.6" y="217.0" font-size="11" font-weight="600" fill="#26262f" text-anchor="middle">14%</text>
+<rect x="256.8" y="196.0" width="399.2" height="34" fill="#eb6834"/>
+<text x="456.4" y="217.0" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">76%</text>
+<text x="720" y="217.0" font-size="11" font-weight="600" fill="#55524f" text-anchor="end">48.3</text>
+<line x1="0" y1="248.0" x2="720" y2="248.0" stroke="#dcd8d3"/>
+<text x="0" y="281.0" font-size="12" font-weight="600" fill="#26262f">1996-2025</text>
+<rect x="132.0" y="260.0" width="96.7" height="34" fill="#184f95"/>
+<text x="180.3" y="281.0" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">18%</text>
+<rect x="228.7" y="260.0" width="83.2" height="34" fill="#c9c5c0"/>
+<text x="270.3" y="281.0" font-size="11" font-weight="600" fill="#26262f" text-anchor="middle">16%</text>
+<rect x="311.9" y="260.0" width="344.1" height="34" fill="#eb6834"/>
+<text x="484.0" y="281.0" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">66%</text>
+<text x="720" y="281.0" font-size="11" font-weight="600" fill="#55524f" text-anchor="end">124.5</text>
+<line x1="0" y1="304.0" x2="720" y2="304.0" stroke="#dcd8d3"/>
+<text x="0" y="317.0" font-size="9" fill="#55524f">Eurostat gov_10a_main (B9, B8N, P51G, P51C, NP, P52_P53, D9), gov_10dd_edpt1 (GDP), general government, France, 1996-2025</text>
+<text x="0" y="329.0" font-size="9" fill="#55524f">Accounting identity: it shows what deficits corresponded to, not what they produced; education does not count as an asset.</text>
+<text x="0" y="341.0" font-size="9" fill="#96928f">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/public-debt-future-generations/</text>
+</svg>

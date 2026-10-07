@@ -24,5 +24,31 @@
    "source": "Commission européenne, Debt Sustainability Monitor 2025, tableaux par pays : indicateur S2 et ses deux composantes, France",
    "precaution": "Projections conditionnelles aux hypothèses de la Commission (Ageing Report 2024, réforme des retraites de 2023 appliquée)."
   }
+ ],
+ "en": [
+  {
+   "id": "actifs",
+   "fichier": "dette-generations-actifs-en",
+   "titre": "France: what public deficits corresponded to",
+   "montre": "Over thirty years, the share of French deficits that corresponded to a net increase in public assets has fallen decade by decade; most of it covered current spending.",
+   "source": "Eurostat gov_10a_main (B9, B8N, P51G, P51C, NP, P52_P53, D9), gov_10dd_edpt1 (GDP), general government, France, 1996-2025",
+   "precaution": "Accounting identity: it shows what deficits corresponded to, not what they produced; education does not count as an asset."
+  },
+  {
+   "id": "detention",
+   "fichier": "dette-generations-detention-en",
+   "titre": "Who holds French public debt",
+   "montre": "The share of French debt held by non-residents has been above half in most years since the early 2000s; Banque de France purchases pushed it down, and the ebb of its holdings is pushing it back up.",
+   "source": "ECB, government finance statistics (GFS): Maastricht debt of general government by holding sector, France, 1995-2025",
+   "precaution": "Residence of the registered holder (fund, custodian), not of the final saver; nominal value. Banque de France: securities counted as resident."
+  },
+  {
+   "id": "vieillissement",
+   "fichier": "dette-generations-vieillissement-en",
+   "titre": "France: where the effort that would stabilise the debt comes from (S2 indicator)",
+   "montre": "According to the Commission's indicator, the effort that would stabilise French debt stems from the current budgetary position more than from ageing, unless two unfavourable assumptions are combined.",
+   "source": "European Commission, Debt Sustainability Monitor 2025, country tables: S2 indicator and its two components, France",
+   "precaution": "Projections conditional on the Commission's assumptions (2024 Ageing Report, 2023 pension reform applied)."
+  }
  ]
 }

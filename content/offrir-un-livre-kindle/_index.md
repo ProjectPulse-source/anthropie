@@ -11,6 +11,7 @@ faq:
     answer: "Les exemplaires non réclamés sont remboursables pendant 60 jours, et le lien reste ré-offrable à tout moment. Rien n'est perdu."
   - question: "Peut-on acheter plusieurs exemplaires d'un coup ?"
     answer: "Oui : la fonction « Acheter pour d'autres » permet d'acheter plusieurs exemplaires en une commande ; Amazon génère un lien d'échange par exemplaire, à envoyer par e-mail ou à distribuer soi-même."
+lang_repli: "/en/books/"  # pas de version anglaise (exclusion déclarée) : cible de l'onglet EN, partials/lang-cible.html
 ---
 
 Offrir un livre numérique est moins connu qu'offrir un livre papier — et pourtant simple. Amazon appelle cela «&nbsp;**Acheter pour d'autres personnes**&nbsp;»&nbsp;: vous payez l'ebook, Amazon génère un **lien prépayé** que le destinataire échange contre le livre. Voici le mode d'emploi, en quatre étapes, avec les règles à connaître.

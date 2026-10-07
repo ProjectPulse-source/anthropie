@@ -15,4 +15,8 @@ og_image_alt: "Livres offerts — des livres numériques déjà financés, trans
 _build:
   list: never        # exclue du sitemap et des listes internes
   render: always     # l'URL reste servie pour qui possède le lien
+# Guichet en français seulement (exemplaires Amazon.fr) : cible de l'onglet EN, pour la page et toutes ses pages filles.
+lang_repli: "/en/books/"
+cascade:
+  lang_repli: "/en/books/"
 ---

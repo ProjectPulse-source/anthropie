@@ -366,7 +366,7 @@ def carte_baisse() -> None:
            (C1, "Debt: %s → %s%%" % (E["d3_dette_deb"], E["d3_dette_fin"]))])
 
 
-def figure_generations_mini(d: ImageDraw.ImageDraw, periodes: list[dict]) -> None:
+def figure_generations_mini(d: ImageDraw.ImageDraw, periodes: list[dict], lang: str = "fr") -> None:
     """Prolongement « Générations futures » : la figure signature réduite — par décennie, part du besoin de financement
     en actifs (bleu), en transferts en capital (gris) et en dépenses courantes non couvertes (orange). Valeurs lues dans
     data/dette_generations.json."""
@@ -380,8 +380,11 @@ def figure_generations_mini(d: ImageDraw.ImageDraw, periodes: list[dict]) -> Non
             w = (x1 - x0) * max(p[cle], 0) / 100
             d.rectangle([x, y, x + w, y + 46], fill=col)
             x += w
-    d.text((x0, top + 300), "Part des déficits publics français, par décennie :", font=font("inter", 17, 400), fill=URL_GREY)
-    d.text((x0, top + 322), "actifs, transferts en capital, dépenses courantes", font=font("inter", 17, 400), fill=URL_GREY)
+    en = lang == "en"
+    d.text((x0, top + 300), "Share of French public deficits, by decade:" if en
+           else "Part des déficits publics français, par décennie :", font=font("inter", 17, 400), fill=URL_GREY)
+    d.text((x0, top + 322), "assets, capital transfers, current spending" if en
+           else "actifs, transferts en capital, dépenses courantes", font=font("inter", 17, 400), fill=URL_GREY)
 
 
 def carte_generations() -> None:
@@ -404,6 +407,19 @@ def carte_generations() -> None:
           [(C1, "Actifs : %s %% → %s %%" % (A["d1_part"], A["d3_part"])),
            (SEC, "Transferts en capital"),
            (C2, "Dépenses courantes non couvertes")])
+    # Version anglaise (07/10/2026, miroir de la page) : même figure, même contrôle ; chaînes du bloc affichage_en.
+    E = j.get("affichage_en")
+    if not E:
+        fail("carte générations EN : bloc affichage_en absent de data/dette_generations.json")
+    carte("og-dette-generations-en.jpg",
+          ["Deficits for", "current spending"],
+          "%s: only %s%% in recorded assets." % (E["d3_lib"], E["d3_part"]),
+          "Eurostat, France %s-%s · CC BY 4.0" % (E["a0"], E["fin"]),
+          "stephane-lalut.com/en/public-debt-future-generations/",
+          lambda d: figure_generations_mini(d, per, "en"),
+          [(C1, "Assets: %s%% → %s%%" % (E["d1_part"], E["d3_part"])),
+           (SEC, "Capital transfers"),
+           (C2, "Uncovered current spending")])
 
 
 def carte_monde() -> None:
@@ -454,7 +470,7 @@ def carte_monde() -> None:
           cle_en)
 
 
-def figure_collectivites(d: ImageDraw.ImageDraw, inv: dict, tr: dict) -> None:
+def figure_collectivites(d: ImageDraw.ImageDraw, inv: dict, tr: dict, lang: str = "fr") -> None:
     """Prolongement « Collectivités » (01/10/2026) : la figure signature de la page, réduite — investissement local (bleu)
     et transferts reçus (gris, série comparable jusqu'en 2017), bande de la baisse des dotations 2014-2017."""
     x0, x1, top, bas = 660, 1126, 100, 424
@@ -475,8 +491,11 @@ def figure_collectivites(d: ImageDraw.ImageDraw, inv: dict, tr: dict) -> None:
     fa = font("inter", 18, 500)
     d.text((x0, bas + 14), str(a0), font=fa, fill=URL_GREY)
     d.text((x1 - 44, bas + 14), str(a1), font=fa, fill=URL_GREY)
-    d.text((x0, bas + 40), "Collectivités, France, en % du PIB :", font=font("inter", 17, 400), fill=URL_GREY)
-    d.text((x0, bas + 62), "bande : baisse des dotations 2014-2017", font=font("inter", 17, 400), fill=URL_GREY)
+    en = lang == "en"
+    d.text((x0, bas + 40), "Local government, France, in % of GDP:" if en
+           else "Collectivités, France, en % du PIB :", font=font("inter", 17, 400), fill=URL_GREY)
+    d.text((x0, bas + 62), "band: grant cuts 2014-2017" if en
+           else "bande : baisse des dotations 2014-2017", font=font("inter", 17, 400), fill=URL_GREY)
 
 
 def carte_collectivites() -> None:

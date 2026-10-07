@@ -53,6 +53,7 @@ faq:
 related_awp:
   - label: "La réversibilité sociale comme dimension de l'inégalité"
     awp: "awp-08"
+lang_repli: "/en/books/"  # pas de version anglaise (exclusion déclarée) : cible de l'onglet EN, partials/lang-cible.html
 ---
 
 Nous ne disposons pas tous du même nombre d'essais.

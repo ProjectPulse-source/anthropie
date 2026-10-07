@@ -14,6 +14,7 @@ faq:
     answer: "Livresque des mots : {citations} citations, {auteurs} voix, {siecles} siècles — sans classement thématique ni alphabétique. Le recueil se lit comme un roman, au fil des voisinages ; c'est un objet littéraire qui s'offre bien précisément parce qu'il ne ressemble pas à un dictionnaire."
   - question: "Peut-on offrir ces livres en version numérique ?"
     answer: "Oui : les deux existent en Kindle, et Amazon permet d'offrir un ebook par lien prépayé (fonction « Acheter pour d'autres »). Le mode d'emploi complet est sur la page Offrir un livre Kindle."
+lang_repli: "/en/books/"  # pas de version anglaise (exclusion déclarée) : cible de l'onglet EN, partials/lang-cible.html
 ---
 
 Une transparence d'abord&nbsp;: les deux livres recommandés ici sont les miens. Cette page n'est pas un comparatif — c'est un argumentaire d'auteur, qui vous dit précisément *pourquoi* et *à qui* ces livres s'offrent bien. À vous de juger si les raisons tiennent.

@@ -30,7 +30,9 @@ Une garde numérique protège contre une variation des données, jamais contre u
 défaut est conceptuel se corrige dans la prose, pas par une garde (même arbitrage).
 
 Chaque qualificatif de la page est une garde (fonction gardes) ; une donnée qui dément une phrase arrête tout, rien
-n'est écrit. Page en français seulement (le prolongement n'a pas de miroir anglais : exclusion déclarée).
+n'est écrit. Bilingue depuis le 07/10/2026 (page anglaise /en/public-debt-future-generations/, sur le modèle de
+update_dette_baisse.py) : un calcul, deux blocs (affichage, affichage_en) aux mêmes clés, un tableau ue.tableau_en et
+des figures -en au même dessin ; les gardes ne lisent que des nombres, une passe vaut pour les deux langues.
 
 MISE À JOUR. Séries Eurostat et BCE : workflow dette-monde.yml (mêmes notifications d'avril et d'octobre).
 Pièces : à la main, à chaque édition — Debt Sustainability Monitor (publication annuelle, début d'année), rapport
@@ -40,7 +42,7 @@ ci-dessous et SHA256SUMS, relancer ; si une garde refuse, réécrire la phrase, 
 
 Usage : python scripts/update_dette_generations.py [--check] [--mutation-garde]
 Sorties : data/ et static/dette_generations.json, static/dette_generations.csv, data/figures_generations.json,
-          static/img/dette-generations-{actifs,detention,vieillissement}.svg + .png
+          static/img/dette-generations-{actifs,detention,vieillissement}{,-en}.svg + .png
 """
 from __future__ import annotations
 
@@ -64,19 +66,21 @@ OUT_FIGURES = ROOT / "data" / "figures_generations.json"
 OUT_IMG = ROOT / "static" / "img"
 PIECES = ROOT / "scripts" / "sources_generations"
 PAGE_URL = "stephane-lalut.com/dette-publique-generations-futures/"
+PAGE_URL_EN = "stephane-lalut.com/en/public-debt-future-generations/"
 
 # Pièces sans API : fichier, libellé de l'édition (dit dans la page par jeton, jamais saisi dans la prose)
 SOURCES = {
     "dsm": dict(fichier="dsm2025_country_fiches.xlsx", lib="Debt Sustainability Monitor 2025", publie="2026-02",
                 producteur="Commission européenne, DG ECFIN, Institutional Paper 332, février 2026",
                 url="https://economy-finance.ec.europa.eu/publications/debt-sustainability-monitor-2025_en"),
-    "cor": dict(fichier="cor_ra2026_synthese.xlsx", lib="rapport annuel de juin 2026", publie="2026-06",
+    "cor": dict(fichier="cor_ra2026_synthese.xlsx", lib="rapport annuel de juin 2026", lib_en="annual report of June 2026", publie="2026-06",
                 producteur="Conseil d'orientation des retraites, données de la synthèse, scénario de référence",
                 url="https://www.cor-retraites.fr/rapports-du-cor/rapport-annuel-cor-juin-2026-evolutions-perspectives-retraites-france"),
     # Témoin de périmètre État (règle constante de l'auteur, 03/10/2026 : anti-robot -> changer de canal, jamais abandonner
     # la donnée). L'API Webstat ne sert pas ces observations aux scripts ; le CSV est celui du bouton « Télécharger les
     # données » de la page publique de la série (format long), archivé tel quel. Mise à jour : trimestrielle, à la main.
     "det": dict(fichier="webstat_DET.Q.FR.1315.F33000.M.Z9.8.F.csv", lib="Banque de France, série DET.Q.FR.1315.F33000.M.Z9.8.F",
+                lib_en="Banque de France, series DET.Q.FR.1315.F33000.M.Z9.8.F",
                 producteur="Banque de France, Webstat : détention par les non-résidents de la dette négociable de l'État (en %), valeur de marché",
                 url="https://webstat.banque-france.fr/fr/catalogue/det/DET.Q.FR.1315.F33000.M.Z9.8.F"),
     # Dernière observation (arbitrage PRO-20261003-195656, B3) : relevé daté du graphique de l'AFT, source Banque de
@@ -96,7 +100,7 @@ W = 720
 FONT = "Inter, 'Helvetica Neue', Arial, sans-serif"
 BLEU, ORANGE, GRIS, GRIS_CLAIR = "#184f95", "#eb6834", "#8a8781", "#c9c5c0"
 INK, INK2, MUTED, GRID = "#26262f", "#55524f", "#96928f", "#dcd8d3"
-LICENCE = "Compilation Stéphane Lalut, CC BY 4.0 · " + PAGE_URL
+LICENCES = {"fr": "Compilation Stéphane Lalut, CC BY 4.0 · " + PAGE_URL, "en": "Compiled by Stéphane Lalut, CC BY 4.0 · " + PAGE_URL_EN}
 
 PAYS = {"AT": ("Autriche", "l'Autriche"), "BE": ("Belgique", "la Belgique"), "BG": ("Bulgarie", "la Bulgarie"),
         "CY": ("Chypre", "Chypre"), "CZ": ("Tchéquie", "la Tchéquie"), "DE": ("Allemagne", "l'Allemagne"),
@@ -111,6 +115,15 @@ TRIM = ["premier trimestre", "deuxième trimestre", "troisième trimestre", "qua
 MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"]
 LETTRES = ["zéro", "un", "deux", "trois", "quatre", "cinq", "six", "sept", "huit", "neuf", "dix", "onze", "douze",
            "treize", "quatorze", "quinze", "seize"]
+PAYS_EN = {"AT": "Austria", "BE": "Belgium", "BG": "Bulgaria", "CY": "Cyprus", "CZ": "Czechia", "DE": "Germany", "DK": "Denmark",
+           "EE": "Estonia", "EL": "Greece", "ES": "Spain", "FI": "Finland", "FR": "France", "HR": "Croatia", "HU": "Hungary",
+           "IE": "Ireland", "IT": "Italy", "LT": "Lithuania", "LU": "Luxembourg", "LV": "Latvia", "MT": "Malta",
+           "NL": "the Netherlands", "PL": "Poland", "PT": "Portugal", "RO": "Romania", "SE": "Sweden", "SI": "Slovenia",
+           "SK": "Slovakia"}
+TRIM_EN = ["first quarter of", "second quarter of", "third quarter of", "fourth quarter of"]
+MOIS_EN = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+LETTRES_EN = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve",
+              "thirteen", "fourteen", "fifteen", "sixteen"]
 
 
 def log(msg: str) -> None:
@@ -145,6 +158,63 @@ def enumere(noms: list[str]) -> str:
 
 def maj(s: str) -> str:
     return s[:1].upper() + s[1:]
+
+
+# ---- Deux langues, un seul calcul (modèle : update_dette_baisse.py) : use(lang) rebranche les formats ; les gardes, elles,
+# ne lisent que des nombres. Les chaînes anglaises : point décimal, pas de séparateur insécable devant %, noms anglais.
+FR_FMT = dict(fr=fr, signe=signe, lettres=lettres, enumere=enumere)
+
+
+def _en_nb(v: float, dec: int = 1) -> str:
+    s_ = ("%." + str(dec) + "f") % v
+    if float(s_) == 0:
+        s_ = s_.replace("-", "")
+    return s_.replace("-", "−")
+
+
+def _en_signe(v: float, dec: int = 1) -> str:
+    s_ = _en_nb(v, dec)
+    return s_ if s_.startswith("−") else "+" + s_
+
+
+EN_FMT = dict(fr=_en_nb, signe=_en_signe,
+              lettres=lambda n: LETTRES_EN[n] if 0 <= n < len(LETTRES_EN) else str(n),
+              enumere=lambda noms: noms[0] if len(noms) == 1 else ", ".join(noms[:-1]) + " and " + noms[-1])
+LANG = "fr"
+SUFFIXE = {"fr": "", "en": "-en"}
+
+
+def use(lang: str) -> None:
+    global LANG
+    LANG = lang
+    globals().update(FR_FMT if lang == "fr" else EN_FMT)
+
+
+def art(code: str) -> str:
+    """Nom de pays dans la prose (avec article en français)."""
+    return PAYS[code][1] if LANG == "fr" else PAYS_EN[code]
+
+
+def nom_pays(code: str) -> str:
+    """Nom de pays seul (tableau)."""
+    n = PAYS[code][0] if LANG == "fr" else PAYS_EN[code]
+    return n[:1].upper() + n[1:]
+
+
+def lib(cle: str) -> str:
+    """Libellé d'une pièce dans la langue courante (lib_en s'il existe : un titre anglais d'origine n'a pas de traduction)."""
+    return SOURCES[cle].get("lib_en", SOURCES[cle]["lib"]) if LANG == "en" else SOURCES[cle]["lib"]
+
+
+def date_longue(iso: str) -> str:
+    """AAAA-MM-JJ -> « 6 octobre 2026 » / « 6 October 2026 »."""
+    m = (MOIS if LANG == "fr" else MOIS_EN)[int(iso[5:7]) - 1]
+    return iso[8:10].lstrip("0") + " " + m + " " + iso[:4]
+
+
+def pc() -> str:
+    """Signe pourcent après un nombre : insécable en français, collé en anglais."""
+    return " %" if LANG == "fr" else "%"
 
 
 # ------------------------------------------------------------------ données
@@ -432,7 +502,7 @@ def calcul():
 # ------------------------------------------------------------------ affichage et gardes
 def affichage(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, cons, etat):
     A = {"fin": str(fin), "a0": str(total["debut"]), "tolerance": fr(TOL, 2),
-         "dsm_lib": SOURCES["dsm"]["lib"], "cor_lib": SOURCES["cor"]["lib"],
+         "dsm_lib": lib("dsm"), "cor_lib": lib("cor"),
          "proj_an": max(SOURCES[k]["publie"] for k in ("dsm", "cor"))[:4]}   # année de publication des projections
     t = total
     A.update(b=fr(t["besoin"]), k=fr(t["actifs"]), e=fr(t["desepargne"]), t=fr(t["transferts"]), d92=fr(t["aides_investissement"]),
@@ -462,9 +532,9 @@ def affichage(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, cons, etat
     inf = [x for x in groupe if x["part_actifs"] < frc["part_actifs"]]
     exc = [x for x in cp if x["besoin"] < SEUIL_BESOIN]
     A["cp_fr_part"] = fr(frc["part_actifs"], 0)
-    A["cp_sup_n"] = lettres(len(sup)); A["cp_sup_pays"] = enumere([PAYS[x["pays"]][1] for x in sorted(sup, key=lambda x: -x["part_actifs"])])
-    A["cp_inf_n"] = lettres(len(inf)); A["cp_inf_pays"] = enumere([PAYS[x["pays"]][1] for x in sorted(inf, key=lambda x: -x["part_actifs"])])
-    A["cp_exc_pays"] = enumere([PAYS[x["pays"]][1] for x in exc]) if exc else ""
+    A["cp_sup_n"] = lettres(len(sup)); A["cp_sup_pays"] = enumere([art(x["pays"]) for x in sorted(sup, key=lambda x: -x["part_actifs"])])
+    A["cp_inf_n"] = lettres(len(inf)); A["cp_inf_pays"] = enumere([art(x["pays"]) for x in sorted(inf, key=lambda x: -x["part_actifs"])])
+    A["cp_exc_pays"] = enumere([art(x["pays"]) for x in exc]) if exc else ""
     A["cp_seuil"] = fr(SEUIL_BESOIN, 0); A["cp_groupe_n"] = str(len(groupe))
     A["cp_exc_pays_maj"] = maj(A["cp_exc_pays"])
     # détention
@@ -492,11 +562,11 @@ def affichage(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, cons, etat
     emin_apres = min((x for x in etat["fins"] if x["annee"] > emax["annee"]), key=lambda x: x["part"])
     A.update(etat_a0=str(etat["fins"][0]["annee"]), etat_0=fr(etat["fins"][0]["part"]), etat_fin=fr(ef[d1["annee"]]),
              etat_max=fr(emax["part"]), etat_max_annee=str(emax["annee"]), etat_min=fr(emin_apres["part"]),
-             etat_min_annee=str(emin_apres["annee"]), etat_maj=etat["maj"][8:10].lstrip("0") + " " + MOIS[int(etat["maj"][5:7]) - 1] + " " + etat["maj"][:4],
-             etat_lib=SOURCES["det"]["lib"])
+             etat_min_annee=str(emin_apres["annee"]), etat_maj=date_longue(etat["maj"]),
+             etat_lib=lib("det"))
     rp = etat["releve"]["periode"]
-    A.update(etat_der=fr(etat["releve"]["valeur"]), etat_der_trim=TRIM[int(rp[-1]) - 1] + " " + rp[:4],
-             etat_der_lu=etat["releve"]["lu_le"][8:10].lstrip("0") + " " + MOIS[int(etat["releve"]["lu_le"][5:7]) - 1] + " " + etat["releve"]["lu_le"][:4])
+    A.update(etat_der=fr(etat["releve"]["valeur"]), etat_der_trim=(TRIM if LANG == "fr" else TRIM_EN)[int(rp[-1]) - 1] + " " + rp[:4],
+             etat_der_lu=date_longue(etat["releve"]["lu_le"]))
     for p, x in det_pays.items():
         A["h_" + p.lower()] = fr(x["part_non_residents"], 0)
     # S2
@@ -535,7 +605,7 @@ def gardes(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, aux):
         ("la désépargne est le premier emploi du besoin de financement", total["desepargne"] > max(total["actifs"], total["transferts"])),
         ("« la part investie a baissé de décennie en décennie »", d1["part_actifs"] > d2["part_actifs"] > d3["part_actifs"]),
         ("dernière décennie : « que » — moins d'un demi-point de PIB par an d'acquisitions nettes d'actifs", d3["actifs"] / d3["annees"] < 0.5),
-        ("recettes courantes supérieures aux dépenses courantes au plus trois années sur trente", sum(1 for r in annees if r["desepargne"] < 0) <= 3),
+        ("recettes courantes supérieures aux dépenses courantes deux à trois années sur trente (phrase au pluriel, années énumérées)", 2 <= sum(1 for r in annees if r["desepargne"] < 0) <= 3),
         ("« aucune année l'investissement n'a égalé le besoin de financement »", all(r["actifs"] < r["besoin"] for r in annees)),
         ("en comptant toutes les aides à l'investissement versées : « toujours moins de la moitié »",
          (total["actifs"] + total["aides_investissement"]) / total["besoin"] < 0.5),
@@ -620,6 +690,80 @@ def gardes(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, aux):
 
 
 # ------------------------------------------------------------------ figures
+# Textes des figures, par langue (les chaînes françaises sont celles des figures publiées avant le miroir anglais).
+TXT = {
+ "fr": dict(
+  pc=" %",
+  act_titre="France : à quoi ont correspondu les déficits publics",
+  act_desc=("Pour chaque période, le besoin de financement des administrations publiques, ramené à 100, partagé entre trois emplois : "
+            "acquisitions nettes d'actifs (investissement moins usure du capital, terrains, stocks), transferts en capital nets vers "
+            "d'autres secteurs, dépenses courantes non couvertes par les recettes courantes. "),
+  act_desc_per="%s : %s points de PIB de besoin de financement, dont %s %% en actifs, %s %% en transferts, %s %% en dépenses courantes.",
+  act_leg=("actifs (investissement net, terrains)", "transferts en capital", "dépenses courantes non couvertes"),
+  act_axe=("besoin de financement,", "points de PIB"),
+  act_src="Eurostat gov_10a_main (B9, B8N, P51G, P51C, NP, P52_P53, D9), gov_10dd_edpt1 (PIB), administrations publiques, France, %s-%s",
+  act_note="Identité comptable : elle dit à quoi les déficits ont correspondu, non ce qu'ils ont produit ; l'éducation n'y est pas un actif.",
+  det_titre="Qui détient la dette publique française",
+  det_desc=("Parts de la dette des administrations publiques détenues par les non-résidents, par la Banque de France et par les autres "
+            "résidents, de %s à %s. Non-résidents : %s %% en %s, %s %% au plus haut en %s, %s %% en %s. Banque de France : %s %% en %s, "
+            "%s %% en %s, %s %% en %s."),
+  det_lib=("non-résidents", "autres résidents", "Banque de France"),
+  det_moitie="moitié de la dette",
+  det_src="BCE, statistiques de finances publiques (GFS) : dette de Maastricht des administrations publiques par secteur détenteur, France, %s-%s",
+  det_note="Résidence du détenteur enregistré (fonds, dépositaire), non de l'épargnant final ; valeur nominale. Banque de France : titres comptés comme résidents.",
+  vie_titre="France : d'où vient l'effort qui stabiliserait la dette (indicateur S2)",
+  vie_groupes=("Scénario de base", "Productivité plus faible", "Risque santé et dépendance", "Édition précédente (%d)"),
+  vie_desc=("Ajustement permanent du solde primaire structurel qui stabiliserait la dette, en points de PIB, partagé entre la position "
+            "budgétaire présente et le coût du vieillissement, selon la Commission européenne (%s), dans trois scénarios et dans "
+            "l'édition précédente. "),
+  vie_desc_g="%s : position présente %s, vieillissement %s.",
+  vie_leg=("position budgétaire présente", "coût du vieillissement"),
+  vie_axe="points de PIB",
+  vie_src="Commission européenne, %s, tableaux par pays : indicateur S2 et ses deux composantes, France",
+  vie_note="Projections conditionnelles aux hypothèses de la Commission (Ageing Report 2024, réforme des retraites de 2023 appliquée).",
+  montre=[("actifs", "Depuis trente ans, la part des déficits français qui a correspondu à un accroissement net des actifs publics "
+                     "a baissé de décennie en décennie ; l'essentiel a couvert des dépenses courantes."),
+          ("detention", "La part de la dette française détenue par des non-résidents dépasse la moitié la plupart des années depuis le "
+                        "début des années 2000 ; les achats de la Banque de France l'ont fait reculer, son reflux la fait remonter."),
+          ("vieillissement", "Selon l'indicateur de la Commission, l'effort qui stabiliserait la dette française tient à la position "
+                             "budgétaire présente plus qu'au vieillissement, sauf à cumuler deux hypothèses défavorables.")]),
+ "en": dict(
+  pc="%",
+  act_titre="France: what public deficits corresponded to",
+  act_desc=("For each period, general government net borrowing, set at 100, split between three uses: net acquisitions of assets "
+            "(investment minus depreciation of capital, land, inventories), net capital transfers to other sectors, current spending "
+            "not covered by current revenue. "),
+  act_desc_per="%s: %s points of GDP of net borrowing, of which %s%% in assets, %s%% in transfers, %s%% in current spending.",
+  act_leg=("assets (net investment, land)", "capital transfers", "uncovered current spending"),
+  act_axe=("net borrowing,", "points of GDP"),
+  act_src="Eurostat gov_10a_main (B9, B8N, P51G, P51C, NP, P52_P53, D9), gov_10dd_edpt1 (GDP), general government, France, %s-%s",
+  act_note="Accounting identity: it shows what deficits corresponded to, not what they produced; education does not count as an asset.",
+  det_titre="Who holds French public debt",
+  det_desc=("Shares of general government debt held by non-residents, by the Banque de France and by other residents, from %s to %s. "
+            "Non-residents: %s%% in %s, %s%% at the peak in %s, %s%% in %s. Banque de France: %s%% in %s, %s%% in %s, %s%% in %s."),
+  det_lib=("non-residents", "other residents", "Banque de France"),
+  det_moitie="half of the debt",
+  det_src="ECB, government finance statistics (GFS): Maastricht debt of general government by holding sector, France, %s-%s",
+  det_note="Residence of the registered holder (fund, custodian), not of the final saver; nominal value. Banque de France: securities counted as resident.",
+  vie_titre="France: where the effort that would stabilise the debt comes from (S2 indicator)",
+  vie_groupes=("Baseline scenario", "Lower productivity", "Health and long-term care risk", "Previous edition (%d)"),
+  vie_desc=("Permanent adjustment of the structural primary balance that would stabilise the debt, in points of GDP, split between the "
+            "current budgetary position and the cost of ageing, according to the European Commission (%s), in three scenarios and in "
+            "the previous edition. "),
+  vie_desc_g="%s: current position %s, ageing %s.",
+  vie_leg=("current budgetary position", "cost of ageing"),
+  vie_axe="points of GDP",
+  vie_src="European Commission, %s, country tables: S2 indicator and its two components, France",
+  vie_note="Projections conditional on the Commission's assumptions (2024 Ageing Report, 2023 pension reform applied).",
+  montre=[("actifs", "Over thirty years, the share of French deficits that corresponded to a net increase in public assets has fallen "
+                     "decade by decade; most of it covered current spending."),
+          ("detention", "The share of French debt held by non-residents has been above half in most years since the early 2000s; "
+                        "Banque de France purchases pushed it down, and the ebb of its holdings is pushing it back up."),
+          ("vieillissement", "According to the Commission's indicator, the effort that would stabilise French debt stems from the current "
+                             "budgetary position more than from ageing, unless two unfavourable assumptions are combined.")]),
+}
+
+
 def esc(s: str) -> str:
     return html.escape(s, quote=False)
 
@@ -634,7 +778,7 @@ def entete(h, ident, titre, desc):
 
 def cartouche(y0, source, note):
     out = ['<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y0, W, y0, GRID)]
-    for k, (t, c) in enumerate([(source, INK2), (note, INK2), (LICENCE, MUTED)]):
+    for k, (t, c) in enumerate([(source, INK2), (note, INK2), (LICENCES[LANG], MUTED)]):
         out.append('<text x="0" y="%.1f" font-size="9" fill="%s">%s</text>' % (y0 + 13 + 12 * k, c, esc(t)))
     return out
 
@@ -649,46 +793,42 @@ def legende(e, items, y=36, x=0):
 def fig_actifs(total, dec, A):
     """Signature : 100 % du besoin de financement de chaque période, partagé entre ses trois emplois."""
     H, X0, X1 = 300, 132, W - 64
-    titre = "France : à quoi ont correspondu les déficits publics"
+    T = TXT[LANG]
+    titre = T["act_titre"]
     rang = [(A["d%d_lib" % k], d) for k, d in enumerate(dec, 1)] + [("%s-%s" % (A["a0"], A["fin"]), total)]
-    desc = ("Pour chaque période, le besoin de financement des administrations publiques, ramené à 100, partagé entre trois emplois : "
-            "acquisitions nettes d'actifs (investissement moins usure du capital, terrains, stocks), transferts en capital nets vers "
-            "d'autres secteurs, dépenses courantes non couvertes par les recettes courantes. "
-            + " ".join("%s : %s points de PIB de besoin de financement, dont %s %% en actifs, %s %% en transferts, %s %% en dépenses courantes."
-                       % (lib, fr(d["besoin"]), fr(d["part_actifs"], 0), fr(d["part_transferts"], 0), fr(d["part_desepargne"], 0)) for lib, d in rang))
+    desc = (T["act_desc"]
+            + " ".join(T["act_desc_per"]
+                       % (lib_, fr(d["besoin"]), fr(d["part_actifs"], 0), fr(d["part_transferts"], 0), fr(d["part_desepargne"], 0)) for lib_, d in rang))
     e = entete(H, "ga", titre, desc)
-    legende(e, [(BLEU, "actifs (investissement net, terrains)"), (GRIS_CLAIR, "transferts en capital"), (ORANGE, "dépenses courantes non couvertes")])
-    e.append('<text x="%d" y="72" font-size="10" fill="%s" text-anchor="end">besoin de financement,</text>' % (W, MUTED))
-    e.append('<text x="%d" y="84" font-size="10" fill="%s" text-anchor="end">points de PIB</text>' % (W, MUTED))
+    legende(e, [(BLEU, T["act_leg"][0]), (GRIS_CLAIR, T["act_leg"][1]), (ORANGE, T["act_leg"][2])])
+    e.append('<text x="%d" y="72" font-size="10" fill="%s" text-anchor="end">%s</text>' % (W, MUTED, T["act_axe"][0]))
+    e.append('<text x="%d" y="84" font-size="10" fill="%s" text-anchor="end">%s</text>' % (W, MUTED, T["act_axe"][1]))
     top, hb, pas = 96, 34, 50
-    for k, (lib, d) in enumerate(rang):
+    for k, (lib_, d) in enumerate(rang):
         y = top + pas * k + (14 if k == 3 else 0)
         if k == 3:
             e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y - 12, W, y - 12, GRID))
-        e.append('<text x="0" y="%.1f" font-size="12" font-weight="600" fill="%s">%s</text>' % (y + hb / 2 + 4, INK, esc(lib)))
+        e.append('<text x="0" y="%.1f" font-size="12" font-weight="600" fill="%s">%s</text>' % (y + hb / 2 + 4, INK, esc(lib_)))
         x = X0
         for cle, col, txt in (("part_actifs", BLEU, "#ffffff"), ("part_transferts", GRIS_CLAIR, INK), ("part_desepargne", ORANGE, "#ffffff")):
             w = (X1 - X0) * max(d[cle], 0) / 100
             e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%d" fill="%s"/>' % (x, y, max(w, 0.6), hb, col))
             if w >= 30:
-                e.append('<text x="%.1f" y="%.1f" font-size="11" font-weight="600" fill="%s" text-anchor="middle">%s %%</text>'
-                         % (x + w / 2, y + hb / 2 + 4, txt, fr(d[cle], 0)))
+                e.append('<text x="%.1f" y="%.1f" font-size="11" font-weight="600" fill="%s" text-anchor="middle">%s%s</text>'
+                         % (x + w / 2, y + hb / 2 + 4, txt, fr(d[cle], 0), T["pc"]))
             x += w
         e.append('<text x="%d" y="%.1f" font-size="11" font-weight="600" fill="%s" text-anchor="end">%s</text>' % (W, y + hb / 2 + 4, INK2, fr(d["besoin"])))
-    e += cartouche(H + 4, "Eurostat gov_10a_main (B9, B8N, P51G, P51C, NP, P52_P53, D9), gov_10dd_edpt1 (PIB), administrations publiques, France, %s-%s"
-                   % (A["a0"], A["fin"]),
-                   "Identité comptable : elle dit à quoi les déficits ont correspondu, non ce qu'ils ont produit ; l'éducation n'y est pas un actif.")
+    e += cartouche(H + 4, T["act_src"] % (A["a0"], A["fin"]), T["act_note"])
     e.append("</svg>")
     return "\n".join(e)
 
 
 def fig_detention(det, A):
     H, X0, X1, TOP, BAS = 300, 40, W - 128, 60, 276
-    titre = "Qui détient la dette publique française"
-    desc = ("Parts de la dette des administrations publiques détenues par les non-résidents, par la Banque de France et par les autres "
-            "résidents, de %s à %s. Non-résidents : %s %% en %s, %s %% au plus haut en %s, %s %% en %s. Banque de France : %s %% en %s, "
-            "%s %% en %s, %s %% en %s." % (A["h0"], A["h_fin"], A["nr0"], A["h0"], A["nr_max"], A["nr_max_annee"], A["nr_fin"], A["h_fin"],
-                                         A["bc0"], A["h0"], A["bc_max"], A["bc_max_annee"], A["bc_fin"], A["h_fin"]))
+    T = TXT[LANG]
+    titre = T["det_titre"]
+    desc = T["det_desc"] % (A["h0"], A["h_fin"], A["nr0"], A["h0"], A["nr_max"], A["nr_max_annee"], A["nr_fin"], A["h_fin"],
+                            A["bc0"], A["h0"], A["bc_max"], A["bc_max_annee"], A["bc_fin"], A["h_fin"])
     e = entete(H, "gd", titre, desc)
     n = len(det)
     X = lambda k: X0 + (X1 - X0) * k / (n - 1)
@@ -704,74 +844,65 @@ def fig_detention(det, A):
         bas_cumul = haut
     for g in range(0, 101, 25):
         e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="0.6" stroke-opacity="0.8"/>' % (X0, Y(g), X1, Y(g), "#ffffff"))
-        e.append('<text x="%d" y="%.1f" font-size="10" fill="%s" text-anchor="end">%d %%</text>' % (X0 - 6, Y(g) + 3, MUTED, g))
+        e.append('<text x="%d" y="%.1f" font-size="10" fill="%s" text-anchor="end">%d%s</text>' % (X0 - 6, Y(g) + 3, MUTED, g, T["pc"]))
     e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="1.2" stroke-dasharray="4 3"/>' % (X0, Y(50), X1, Y(50), INK))
     for k, r in enumerate(det):
         if r["annee"] % 5 == 0 or k == n - 1:
             e.append('<text x="%.1f" y="%d" font-size="10" fill="%s" text-anchor="middle">%d</text>' % (X(k), BAS + 14, INK2, r["annee"]))
     last = det[-1]
-    for cle, lib in (("part_non_residents", "non-résidents"), ("part_autres_residents", "autres résidents"), ("part_banque_centrale", "Banque de France")):
-        e.append('<text x="%d" y="%.1f" font-size="11" fill="%s">%s</text>' % (X1 + 8, Y(milieux[cle]) - 2, INK2, esc(lib)))
-        e.append('<text x="%d" y="%.1f" font-size="11" font-weight="600" fill="%s">%s %%</text>' % (X1 + 8, Y(milieux[cle]) + 11, INK, fr(last[cle], 0)))
-    e.append('<text x="%d" y="%.1f" font-size="10" fill="%s">moitié de la dette</text>' % (X0 + 4, Y(50) - 4, INK))
-    e += cartouche(H + 4, "BCE, statistiques de finances publiques (GFS) : dette de Maastricht des administrations publiques par secteur détenteur, France, %s-%s"
-                   % (A["h0"], A["h_fin"]),
-                   "Résidence du détenteur enregistré (fonds, dépositaire), non de l'épargnant final ; valeur nominale. Banque de France : titres comptés comme résidents.")
+    for cle, lib_ in zip(("part_non_residents", "part_autres_residents", "part_banque_centrale"), T["det_lib"]):
+        e.append('<text x="%d" y="%.1f" font-size="11" fill="%s">%s</text>' % (X1 + 8, Y(milieux[cle]) - 2, INK2, esc(lib_)))
+        e.append('<text x="%d" y="%.1f" font-size="11" font-weight="600" fill="%s">%s%s</text>' % (X1 + 8, Y(milieux[cle]) + 11, INK, fr(last[cle], 0), T["pc"]))
+    e.append('<text x="%d" y="%.1f" font-size="10" fill="%s">%s</text>' % (X0 + 4, Y(50) - 4, INK, T["det_moitie"]))
+    e += cartouche(H + 4, T["det_src"] % (A["h0"], A["h_fin"]), T["det_note"])
     e.append("</svg>")
     return "\n".join(e)
 
 
 def fig_vieillissement(S2fr, C, A):
     H, X0, X1 = 270, 210, W - 40
-    titre = "France : d'où vient l'effort qui stabiliserait la dette (indicateur S2)"
-    groupes = [("Scénario de base", S2fr["IBP"]["base"], S2fr["CoA"]["base"]),
-               ("Productivité plus faible", S2fr["IBP"]["productivite"], S2fr["CoA"]["productivite"]),
-               ("Risque santé et dépendance", S2fr["IBP"]["risque"], S2fr["CoA"]["risque"]),
-               ("Édition précédente (%d)" % (int(A["dsm_lib"][-4:]) - 1), S2fr["IBP"]["base_precedente"], S2fr["CoA"]["base_precedente"])]
-    desc = ("Ajustement permanent du solde primaire structurel qui stabiliserait la dette, en points de PIB, partagé entre la position "
-            "budgétaire présente et le coût du vieillissement, selon la Commission européenne (%s), dans trois scénarios et dans "
-            "l'édition précédente. " % A["dsm_lib"]
-            + " ".join("%s : position présente %s, vieillissement %s." % (g, fr(a), fr(b)) for g, a, b in groupes))
+    T = TXT[LANG]
+    titre = T["vie_titre"]
+    g1, g2, g3, g4 = T["vie_groupes"]
+    groupes = [(g1, S2fr["IBP"]["base"], S2fr["CoA"]["base"]),
+               (g2, S2fr["IBP"]["productivite"], S2fr["CoA"]["productivite"]),
+               (g3, S2fr["IBP"]["risque"], S2fr["CoA"]["risque"]),
+               (g4 % (int(A["dsm_lib"][-4:]) - 1), S2fr["IBP"]["base_precedente"], S2fr["CoA"]["base_precedente"])]
+    desc = (T["vie_desc"] % A["dsm_lib"]
+            + " ".join(T["vie_desc_g"] % (g, fr(a), fr(b)) for g, a, b in groupes))
     e = entete(H, "gv", titre, desc)
-    legende(e, [(ORANGE, "position budgétaire présente"), (GRIS, "coût du vieillissement")])
+    legende(e, [(ORANGE, T["vie_leg"][0]), (GRIS, T["vie_leg"][1])])
     vmax = (int(max(max(a, b) for _, a, b in groupes)) + 1)
     Xv = lambda v: X0 + (X1 - X0) * v / vmax
     top, pas, hb = 64, 44, 15
     for g in range(0, vmax + 1):
         e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="%s"/>' % (Xv(g), top - 6, Xv(g), top + pas * len(groupes) - 8, GRID, 1.4 if g == 0 else 0.6))
         e.append('<text x="%.1f" y="%d" font-size="10" fill="%s" text-anchor="middle">%d</text>' % (Xv(g), top + pas * len(groupes) + 6, MUTED, g))
-    for k, (lib, a, b) in enumerate(groupes):
+    for k, (lib_, a, b) in enumerate(groupes):
         y = top + pas * k
-        e.append('<text x="0" y="%d" font-size="11.5" font-weight="600" fill="%s">%s</text>' % (y + hb + 2, INK, esc(lib)))
+        e.append('<text x="0" y="%d" font-size="11.5" font-weight="600" fill="%s">%s</text>' % (y + hb + 2, INK, esc(lib_)))
         for j, (v, col) in enumerate(((a, ORANGE), (b, GRIS))):
             yy = y + j * (hb + 2)
             x0_, x1_ = sorted((Xv(0), Xv(v)))
             e.append('<rect x="%.1f" y="%d" width="%.1f" height="%d" fill="%s"/>' % (x0_, yy, max(x1_ - x0_, 0.6), hb, col))
             e.append('<text x="%.1f" y="%d" font-size="10" font-weight="600" fill="%s">%s</text>' % (max(x1_, Xv(0)) + 4, yy + 11, INK, fr(v)))
-    e.append('<text x="%d" y="%d" font-size="10" fill="%s" text-anchor="end">points de PIB</text>' % (X1, top + pas * len(groupes) + 21, MUTED))
-    e += cartouche(H + 4, "Commission européenne, %s, tableaux par pays : indicateur S2 et ses deux composantes, France" % A["dsm_lib"],
-                   "Projections conditionnelles aux hypothèses de la Commission (Ageing Report 2024, réforme des retraites de 2023 appliquée).")
+    e.append('<text x="%d" y="%d" font-size="10" fill="%s" text-anchor="end">%s</text>' % (X1, top + pas * len(groupes) + 21, MUTED, T["vie_axe"]))
+    e += cartouche(H + 4, T["vie_src"] % A["dsm_lib"], T["vie_note"])
     e.append("</svg>")
     return "\n".join(e)
 
 
-MONTRE = [("actifs", "Depuis trente ans, la part des déficits français qui a correspondu à un accroissement net des actifs publics "
-                     "a baissé de décennie en décennie ; l'essentiel a couvert des dépenses courantes."),
-          ("detention", "La part de la dette française détenue par des non-résidents dépasse la moitié la plupart des années depuis le "
-                        "début des années 2000 ; les achats de la Banque de France l'ont fait reculer, son reflux la fait remonter."),
-          ("vieillissement", "Selon l'indicateur de la Commission, l'effort qui stabiliserait la dette française tient à la position "
-                             "budgétaire présente plus qu'au vieillissement, sauf à cumuler deux hypothèses défavorables.")]
-
-
 def fiches(figs):
-    out = []
-    for ident, montre in MONTRE:
-        f = "dette-generations-%s" % ident
-        svg = figs[f + ".svg"]
-        titre = html.unescape(re.search(r"<title[^>]*>(.*?)</title>", svg).group(1))
-        cart = [html.unescape(t) for t in re.findall(r'<text x="0" y="[0-9.]+" font-size="9" fill="[^"]+">(.*?)</text>', svg)]
-        out.append(dict(id=ident, fichier=f, titre=titre, montre=montre, source=cart[0], precaution=cart[1]))
-    return {"fr": out}
+    out = {}
+    for lang in ("fr", "en"):
+        out[lang] = []
+        for ident, montre in TXT[lang]["montre"]:
+            f = "dette-generations-%s%s" % (ident, SUFFIXE[lang])
+            svg = figs[f + ".svg"]
+            titre = html.unescape(re.search(r"<title[^>]*>(.*?)</title>", svg).group(1))
+            cart = [html.unescape(t) for t in re.findall(r'<text x="0" y="[0-9.]+" font-size="9" fill="[^"]+">(.*?)</text>', svg)]
+            out[lang].append(dict(id=ident, fichier=f, titre=titre, montre=montre, source=cart[0], precaution=cart[1]))
+    return out
 
 
 def csv_texte(total, dec, annees, cp, pat, det, det_pays, S2, C, etat):
@@ -817,7 +948,15 @@ def main() -> int:
         except ImportError:
             fail("cairosvg absent : SVG et PNG se produisent ensemble ou pas du tout (pip install cairosvg)")
     fin, total, dec, annees, cp, pat, det, det_pays, det_controle, S2, C, cons, etat = calcul()
+    use("en")
+    A_en = affichage(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, cons, etat)[0]
+    use("fr")
     A, aux = affichage(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, cons, etat)
+    if set(A) != set(A_en):
+        fail("blocs affichage et affichage_en : cles differentes (%s)" % sorted(set(A) ^ set(A_en)))
+    vides = sorted(k for k in A if bool(A[k]) != bool(A_en[k]))
+    if vides:
+        fail("blocs affichage et affichage_en : valeur vide dans une seule langue (%s)" % vides)
     n = gardes(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, aux)
     log("France %s-%s : besoin %.1f pts = actifs %.1f (%.0f %%) + transferts %.1f + depenses courantes %.1f ; non-residents %.1f %% (%s) ; "
         "S2 %.2f = IBP %.2f + CoA %.2f ; %d annees-pays ecartees sur %d"
@@ -827,12 +966,21 @@ def main() -> int:
     if check:
         log("--check : %d gardes passees (%d cles d'affichage), rien ecrit." % (n, len(A)))
         return 0
-    figs = {"dette-generations-actifs.svg": fig_actifs(total, dec, A), "dette-generations-detention.svg": fig_detention(det, A),
-            "dette-generations-vieillissement.svg": fig_vieillissement(S2["FR"], C, A)}
-    tableau = [dict(pays=x["pays"], nom=x["nom"], besoin=fr(x["besoin"]), actifs=fr(x["actifs"]), transferts=fr(x["transferts"]),
-                    desepargne=fr(x["desepargne"]), part=("au-delà du besoin" if x["part_actifs"] > 100 else fr(x["part_actifs"], 0) + "\u00a0%")
-                    if x["besoin"] > 0 else "sans objet")
-               for x in sorted(cp, key=lambda x: -(x["part_actifs"] if x["besoin"] > 0 else 1e9))]
+    figs, tableaux = {}, {}
+    for lang, AA in (("fr", A), ("en", A_en)):
+        use(lang)
+        x_ = SUFFIXE[lang]
+        figs["dette-generations-actifs%s.svg" % x_] = fig_actifs(total, dec, AA)
+        figs["dette-generations-detention%s.svg" % x_] = fig_detention(det, AA)
+        figs["dette-generations-vieillissement%s.svg" % x_] = fig_vieillissement(S2["FR"], C, AA)
+        # Libellés du tableau dans la langue de la page (le shortcode gen-tableau les cite entre guillemets dans sa note).
+        au_dela, sans_objet = ("au-delà du besoin", "sans objet") if lang == "fr" else ("above net borrowing", "not applicable")
+        tableaux[lang] = [dict(pays=x["pays"], nom=nom_pays(x["pays"]), besoin=fr(x["besoin"]), actifs=fr(x["actifs"]), transferts=fr(x["transferts"]),
+                               desepargne=fr(x["desepargne"]), part=(au_dela if x["part_actifs"] > 100 else fr(x["part_actifs"], 0) + pc())
+                               if x["besoin"] > 0 else sans_objet)
+                          for x in sorted(cp, key=lambda x: -(x["part_actifs"] if x["besoin"] > 0 else 1e9))]
+    use("fr")
+    tableau = tableaux["fr"]
     payload = {"meta": {"releve_le": datetime.now(timezone.utc).strftime("%Y-%m-%d"), "page": "https://" + PAGE_URL, "licence": "CC BY 4.0",
                         "perimetre": "administrations publiques (S.13), SEC 2010, monnaie nationale, PIB de la notification de déficit et de dette",
                         "identite": "-B9 = -B8N + (P51G - P51C + NP + P52_P53) + (D9PAY - D9REC)",
@@ -847,8 +995,9 @@ def main() -> int:
                                         "detention": "BCE, GFS : dette de Maastricht par zone (W1 reste du monde, W2 résidents) et secteur détenteur (S121 banque centrale)",
                                         "S2": "ajustement permanent du solde primaire structurel en 2027 qui stabiliserait la dette à horizon infini ; IBP : position budgétaire initiale ; CoA : coût du vieillissement (Commission européenne)"}},
                "france": {"periodes": [total] + dec, "annees": annees, "patrimoine": pat, "detention": det},
-               "ue": {"emplois": cp, "tableau": tableau, "part_non_residents": det_pays, "s2": S2},
-               "cor": C, "etat_negociable": etat, "controles": {"detention_bce_eurostat_annees": det_controle}, "conservation": cons, "affichage": A}
+               "ue": {"emplois": cp, "tableau": tableau, "tableau_en": tableaux["en"], "part_non_residents": det_pays, "s2": S2},
+               "cor": C, "etat_negociable": etat, "controles": {"detention_bce_eurostat_annees": det_controle}, "conservation": cons,
+               "affichage": A, "affichage_en": A_en}
     releve = payload["meta"]["releve_le"]
     if OUT_DATA.exists():
         try:

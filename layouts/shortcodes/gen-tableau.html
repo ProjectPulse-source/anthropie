@@ -1,14 +1,27 @@
 {{- /* {{< gen-tableau >}} — les pays de l'Union, même fenêtre : à quoi a correspondu le besoin de financement des
-       administrations publiques. Lignes lues dans data/dette_generations.json (ue.tableau, chaînes déjà formatées et
-       gardées par scripts/update_dette_generations.py, triées par part en actifs) : aucun chiffre recopié ici. */ -}}
+       administrations publiques. Lignes lues dans data/dette_generations.json (ue.tableau, ou ue.tableau_en sur une page
+       anglaise : chaînes déjà formatées et gardées par scripts/update_dette_generations.py, triées par part en actifs) :
+       aucun chiffre recopié ici. Bilingue depuis le 07/10/2026 : tableau ou bloc anglais absent = échec, jamais un repli
+       sur le français. */ -}}
 {{- $j := site.Data.dette_generations -}}
 {{- if not $j -}}{{ errorf "gen-tableau: data/dette_generations.json absent (%s)" .Page.File.Path }}{{- end -}}
-{{- $A := $j.affichage -}}
+{{- $en := eq .Page.Lang "en" -}}
+{{- $A := cond $en $j.affichage_en $j.affichage -}}
+{{- $rows := cond $en $j.ue.tableau_en $j.ue.tableau -}}
+{{- if or (not $A) (not $rows) -}}{{ errorf "gen-tableau: bloc %s ou tableau %s absent de data/dette_generations.json (%s)" (cond $en "affichage_en" "affichage") (cond $en "ue.tableau_en" "ue.tableau") .Page.File.Path }}{{- end -}}
 <div class="table-scroll"><table class="dette-monde-table">
+{{- if $en }}
+<thead><tr><th>Country</th><th>Net borrowing</th><th>Assets</th><th>Capital transfers</th><th>Uncovered current spending</th><th>Share in assets</th></tr></thead>
+{{- else }}
 <thead><tr><th>Pays</th><th>Besoin de financement</th><th>Actifs</th><th>Transferts en capital</th><th>Dépenses courantes non couvertes</th><th>Part en actifs</th></tr></thead>
+{{- end }}
 <tbody>
-{{- range $j.ue.tableau }}
+{{- range $rows }}
 <tr><td>{{ .nom }}</td><td>{{ .besoin }}</td><td>{{ .actifs }}</td><td>{{ .transferts }}</td><td>{{ .desepargne }}</td><td>{{ .part }}</td></tr>
 {{- end }}
 </tbody></table></div>
+{{- if $en }}
+<p><small>Points of GDP cumulated from {{ $A.cp_a0 }} to {{ $A.fin }}; assets: investment minus depreciation of capital, land and inventories; negative net borrowing means cumulated surpluses (“not applicable”); “above net borrowing”: net acquisitions of assets exceed net borrowing, the difference corresponding to positive public saving. Source: Eurostat, author’s calculation.</small></p>
+{{- else }}
 <p><small>Points de PIB cumulés de {{ $A.cp_a0 }} à {{ $A.fin }}&nbsp;; actifs&nbsp;: investissement moins usure du capital, terrains et stocks&nbsp;; un besoin de financement négatif désigne des excédents cumulés («&nbsp;sans objet&nbsp;»)&nbsp;; «&nbsp;au-delà du besoin&nbsp;»&nbsp;: les acquisitions nettes d'actifs dépassent le besoin de financement, la différence correspondant à une épargne publique positive. Source&nbsp;: Eurostat, calcul de l'auteur.</small></p>
+{{- end }}

@@ -7,7 +7,8 @@ Sources, toutes interrogees a chaque passage (aucun chiffre saisi a la main) :
   - Legifrance : CGCT art. L. 1613-1 (DGF votee 2013-2017) et loi n° 2025-127 art. 186 (DILICO), reponses de l'API
     archivees dans scripts/sources_collectivites/ et controlees par empreinte.
 Ecrit : data/dette_collectivites.json (+ copie static/), static/dette_collectivites.csv (UTF-8 BOM), data/figures_collectivites.json,
-static/img/collectivites-*.svg + .png (ensemble ou pas du tout). Rien n'est ecrit a donnees identiques (releve_le conserve).
+static/img/collectivites-*.svg + .png (ensemble ou pas du tout), en francais et en anglais (-en, depuis le 07/10/2026 :
+blocs affichage et affichage_en aux memes cles, figures au meme dessin). Rien n'est ecrit a donnees identiques (releve_le conserve).
 
 Chaque qualificatif de la prose est une GARDE (calculer()) : si la donnee le dement, arret, aucun fichier ecrit. A chaque
 passage, une mutation reelle sur une copie des donnees doit faire mordre une garde (autotest_mutation), sinon arret.
@@ -181,11 +182,46 @@ class Jeu:
 
 
 EN_LETTRES = {0: "aucune", 1: "une", 2: "deux", 3: "trois", 4: "quatre", 5: "cinq", 6: "six", 7: "sept", 8: "huit"}
+# Page anglaise /en/local-government-debt/ (07/10/2026) : un calcul, deux blocs (affichage, affichage_en) aux memes cles,
+# et des figures -en au meme dessin ; les gardes ne lisent que des nombres, une passe vaut pour les deux langues.
+LETTRES_ANGLAIS = {0: "none", 1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six", 7: "seven", 8: "eight"}
+NOMS_EN = {"FR": "France", "DE": "Germany", "IT": "Italy", "ES": "Spain"}
+CATS_EN = {"communes": "Municipalities", "intercommunalites": "Inter-municipal groupings", "departements": "Departments",
+           "regions": "Regions"}
+MOIS_FR = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"]
+MOIS_EN = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
 
 def fr1(v: float, dec: int = 1) -> str:
     s = ("%." + str(dec) + "f") % v
     return s.replace("-", "−").replace(".", ",")
+
+
+def en1(v: float, dec: int = 1) -> str:
+    """Format anglais : point decimal, separateur de milliers, moins typographique (comme update_dette_baisse.py)."""
+    s = ("{:,.%df}" % dec).format(v)
+    if float(s.replace(",", "")) == 0:
+        s = s.replace("-", "")
+    return s.replace("-", "−")
+
+
+def date_en(s: str) -> str:
+    """« 1er octobre 2026 » -> « 1 October 2026 ». Format inattendu = arret, jamais une date francaise sur la page anglaise."""
+    import re
+    m = re.fullmatch(r"(\d{1,2})(?:er)?[\s ]+(\S+)[\s ]+(\d{4})", s.strip())
+    if not m or m.group(2) not in MOIS_FR:
+        fail("date de depot du projet de loi de finances illisible pour l'anglais : %r" % s)
+    return "%d %s %s" % (int(m.group(1)), MOIS_EN[MOIS_FR.index(m.group(2))], m.group(3))
+
+
+def montant_en(s: str) -> str:
+    """« un milliard d’euros » / « 1,5 milliard d’euros » -> « €1 billion » / « €1.5 billion ». Sinon arret."""
+    import re
+    m = re.fullmatch(r"(un|deux|trois|quatre|cinq|[\d,]+)[\s ]+milliards?[\s ]+d[’']euros", s.strip())
+    if not m:
+        fail("montant du DILICO illisible pour l'anglais : %r" % s)
+    mots = {"un": "1", "deux": "2", "trois": "3", "quatre": "4", "cinq": "5"}
+    return "€%s billion" % mots.get(m.group(1), m.group(1).replace(",", "."))
 
 
 LEGI = DON / "legifrance_CGCT_L1613-1_v2017.json"
@@ -295,7 +331,22 @@ def plf_mesures() -> dict:
          "texte": "article 84", "nature": "étalement du reversement ; montant total restitué inchangé", "md": dilico,
          "source": "Haut Conseil des finances publiques, avis n° 2026-5"},
     ]
-    depot = re.search(r"déposé le (.+)$", a["plf"]["titre"])
+    # Libelles de la page anglaise : memes mesures, meme ordre, memes nombres (lus ci-dessus).
+    en = {
+        "cpeb": ("Progressive contribution to the budgetary effort, levied on tax advances", "article 37",
+                 "levy on tax advances, introduced for %d" % n),
+        "fctva": ("VAT compensation fund: rate cut by %d points, except green spending and roads" % fctva_pts,
+                  "articles 35 and 41", "cut in a central government grant tied to eligible investment spending"),
+        "tva": ("Assigned VAT, excluding regions: annual increase reduced by inflation", "article 36",
+                "capping of the growth of assigned VAT, excluding regions"),
+        "ministeres": ("Contributions of certain ministries to local authorities", "budget mission appropriations",
+                       "cut in contributions from certain ministries"),
+        "dilico": ("Sums placed in reserve in 2025 and 2026 (DILICO): repaid over five years instead of three", "article 84",
+                   "repayment spread out; total amount returned unchanged"),
+    }
+    for m_ in mesures:
+        m_["mesure_en"], m_["texte_en"], m_["nature_en"] = en[m_["cle"]]
+    depot =re.search(r"déposé le (.+)$", a["plf"]["titre"])
     if not depot:
         fail("projet de loi de finances : date de dépôt introuvable dans le titre de l'archive")
     # La page cite ces deux documents par leur adresse : texte fige autour de montants qui changent a chaque edition.
@@ -436,7 +487,7 @@ def calculer(J: Jeu) -> tuple[dict, list[dict]]:
         excedents = sum(1 for y in range(2012, 2020) if (terr_pc(g, "B9", y) or 0) > 0)
         federe = J.dette(g, "S1312", max(ys)) is not None
         pays.append({
-            "geo": g, "nom": NOMS[g], "federe": federe,
+            "geo": g, "nom": NOMS[g], "nom_en": NOMS_EN[g], "federe": federe,
             "dette_deb": serie[min(ys)], "dette_pic": serie[ypic], "dette_pic_annee": ypic, "dette_fin": serie[max(ys)],
             "inv_max": inv_avant[yi_max], "inv_max_annee": yi_max, "inv_min": inv_apres[yi_min], "inv_min_annee": yi_min,
             "inv_rapport": inv_apres[yi_min] / inv_avant[yi_max],
@@ -497,7 +548,7 @@ def calculer(J: Jeu) -> tuple[dict, list[dict]]:
     r["of_eq_com_20"], r["of_eq_com_fin"] = eq[2020], eq[an_of]
     cats = []
     for cat, nom in (("communes", "Communes"), ("intercommunalites", "Intercommunalités"), ("departements", "Départements"), ("regions", "Régions")):
-        row = {"cat": cat, "nom": nom}
+        row = {"cat": cat, "nom": nom, "nom_en": CATS_EN[cat]}
         for ag, k in (("Epargne brute", "eb"), ("Dépenses d'équipement", "eq"), ("Encours de dette", "dette"), ("Concours de l'Etat", "concours")):
             row[k + "_21"] = J.of(cat, ag, 2021)
             row[k + "_fin"] = J.of(cat, ag, an_of)
@@ -585,8 +636,10 @@ def calculer(J: Jeu) -> tuple[dict, list[dict]]:
     return r, rapport
 
 
-def affichage(r: dict) -> dict:
+def affichage(r: dict, lang: str = "fr") -> dict:
+    """Un bloc par langue, memes cles ; seul le format change (en1 : point decimal, separateur de milliers)."""
     P = {p["geo"]: p for p in r["pays"]}
+    fr1 = en1 if lang == "en" else globals()["fr1"]  # noqa: F811 -- format de la langue demandee
     a = {
         "an_fin": str(r["an_fin"]), "an_dette_deb": str(r["an_dette_deb"]), "an_dette_fin": str(r["an_dette_fin"]),
         "dette_apu_deb": fr1(r["dette_apu_deb"]), "dette_apu_fin": fr1(r["dette_apu_fin"]),
@@ -619,8 +672,8 @@ def affichage(r: dict) -> dict:
         "of_eq_com_20": fr1(r["of_eq_com_20"]), "of_eq_com_fin": fr1(r["of_eq_com_fin"]),
         "of_eq_com_hausse_pct": fr1(100 * (r["of_eq_com_fin"] / r["of_eq_com_20"] - 1), 0),
         "ep_transf_md": fr1(r["ep_transf_md"], 1), "ep_inv_md": fr1(r["ep_inv_md"], 1),
-        "dilico_2025": dilico_montant(),
-        "plf_edition": str(r["plf_edition"]), "plf_prec": str(r["plf_edition"] - 1), "plf_depot": r["plf_depot"],
+        "dilico_2025": montant_en(dilico_montant()) if lang == "en" else dilico_montant(),
+        "plf_edition": str(r["plf_edition"]), "plf_prec": str(r["plf_edition"] - 1), "plf_depot": date_en(r["plf_depot"]) if lang == "en" else r["plf_depot"],
         "plf_dgf": fr1(r["plf_dgf"]), "plf_dgf_hausse_m": fr1(r["plf_dgf_hausse_m"], 0),
         "plf_dgf_hausse_courant_m": fr1(r["plf_dgf_hausse_courant_m"], 0),
         "plf_cpeb": fr1(r["plf_cpeb"]), "plf_cpeb_communes_pct": fr1(r["plf_cpeb_communes_pct"], 0),
@@ -656,7 +709,7 @@ def affichage(r: dict) -> dict:
         a[f"{k}_detenu_etat"] = fr1(p["detenu_etat"])
         a[f"{k}_detenu_total"] = fr1(p["detenu_total"])
         a[f"{k}_part_etat_pct"] = fr1(p["part_etat_pct"], 0)
-        a[f"{k}_excedents"] = EN_LETTRES.get(p["excedents_2012_2019"], str(p["excedents_2012_2019"]))
+        a[f"{k}_excedents"] = (LETTRES_ANGLAIS if lang == "en" else EN_LETTRES).get(p["excedents_2012_2019"], str(p["excedents_2012_2019"]))
     return a
 
 
@@ -671,7 +724,10 @@ FONT = "system-ui, -apple-system, Segoe UI, sans-serif"
 TY_TITRE, TY_AXE, TY_ANNOT = 13, 11, 11
 CARTOUCHE_H = 48
 PAGE_URL = "stephane-lalut.com/dette-publique-collectivites-locales/"
-LICENCE = "Compilation Stéphane Lalut, CC BY 4.0 · " + PAGE_URL
+PAGE_URL_EN = "stephane-lalut.com/en/local-government-debt/"
+LICENCES = {"fr": "Compilation Stéphane Lalut, CC BY 4.0 · " + PAGE_URL, "en": "Compiled by Stéphane Lalut, CC BY 4.0 · " + PAGE_URL_EN}
+LICENCE = LICENCES["fr"]
+SUFFIXE = {"fr": "", "en": "-en"}
 
 
 def esc(s) -> str:
@@ -686,8 +742,8 @@ def entete(h: int, ident: str, titre: str, desc: str) -> list[str]:
             '<text x="0" y="18" font-size="%d" font-weight="600" fill="%s">%s</text>' % (TY_TITRE, INK, esc(titre))]
 
 
-def cartouche(y0: float, source: str, note: str) -> list[str]:
-    lignes = [(source, INK2)] + ([(note, INK2)] if note else []) + [(LICENCE, MUTED)]
+def cartouche(y0: float, source: str, note: str, lang: str = "fr") -> list[str]:
+    lignes = [(source, INK2)] + ([(note, INK2)] if note else []) + [(LICENCES[lang], MUTED)]
     out = ['<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y0, W, y0, GRID)]
     for k, (t, c) in enumerate(lignes):
         out.append('<text x="0" y="%.1f" font-size="9" fill="%s">%s</text>' % (y0 + 13 + 12 * k, c, esc(t)))
@@ -705,9 +761,21 @@ SRC_CASCADE = "Eurostat gov_10a_main, administrations locales (S1313), France ; 
 NOTE_CASCADE = "Lecture comptable : les postes reconstituent exactement la variation du solde ; ils ne disent pas ce qui l'a décidé."
 SRC_EUROPE = "Eurostat gov_10q_ggdebt (4e trimestre) et gov_10dd_ggd (détention), S1312 + S1313, en % du PIB"
 NOTE_EUROPE = "Périmètre statistique, non compétences : la France et l'Italie n'ont pas d'échelon d'États fédérés (S1312)."
+# Textes des figures anglaises : meme dessin, memes donnees ; seuls les mots et le format des nombres changent.
+FIG_EN = dict(
+    src_signature="Eurostat gov_10a_main (S1313: P51G, D73REC; S13: TE in % of GDP for the denominator), local government, France",
+    note_signature="Transfers: comparable series stops in 2017 (the regions' DGF grant was replaced by a share of VAT in 2018).",
+    src_cascade="Eurostat gov_10a_main, local government (S1313), France; points of GDP",
+    note_cascade="An accounting reading: the items add up exactly to the change in the balance; they do not say what decided it.",
+    src_europe="Eurostat gov_10q_ggdebt (4th quarter) and gov_10dd_ggd (holdings), S1312 + S1313, in % of GDP",
+    note_europe="Statistical scope, not responsibilities: France and Italy have no state-government tier (S1312).",
+    postes=["Transfers received from other government units", "Local and shared taxes", "Other revenue",
+            "Investment (lower spending)", "Other spending (lower spending)"],
+)
 
 
-def fig_signature(r: dict) -> str:
+def fig_signature(r: dict, lang: str = "fr") -> str:
+    en = lang == "en"
     H = 420
     x0, x1, y0, y1 = 48, W - 12, 64, 352
     inv, tr = r["serie_inv_fr"], r["serie_transf_fr"]
@@ -715,48 +783,65 @@ def fig_signature(r: dict) -> str:
     vmin, vmax = 1.5, 5.0
     X = lambda a: x0 + (a - a_min) / (a_max - a_min) * (x1 - x0)  # noqa: E731
     Y = lambda v: y1 - (v - vmin) / (vmax - vmin) * (y1 - y0)  # noqa: E731
-    titre = "Investissement des collectivités et transferts reçus, France, en % du PIB"
-    e = entete(H, "cs", titre, "Deux courbes depuis %d : l'investissement local oscille autour de 2 %% du PIB, avec un creux "
-               "marqué après %s ; les transferts reçus baissent de %s à %s." % (a_min, r["ep_a0"], r["ep_a0"], r["ep_a1"]))
+    if en:
+        titre = "Local government investment and transfers received, France, in % of GDP"
+        e = entete(H, "cs", titre, "Two lines since %d: local investment hovers around 2%% of GDP, with a marked trough "
+                   "after %s; transfers received fall from %s to %s." % (a_min, r["ep_a0"], r["ep_a0"], r["ep_a1"]))
+    else:
+        titre = "Investissement des collectivités et transferts reçus, France, en % du PIB"
+        e = entete(H, "cs", titre, "Deux courbes depuis %d : l'investissement local oscille autour de 2 %% du PIB, avec un creux "
+                   "marqué après %s ; les transferts reçus baissent de %s à %s." % (a_min, r["ep_a0"], r["ep_a0"], r["ep_a1"]))
     bx0, bx1 = X(2014), X(2017.999)
     e.append('<rect x="%.1f" y="%d" width="%.1f" height="%d" fill="%s"/>' % (bx0, y0, bx1 - bx0, y1 - y0, BANDE))
     for v in (2, 3, 4, 5):
         e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (x0, Y(v), x1, Y(v), GRID))
-        e.append(txt(x0 - 6, Y(v) + 4, "%d %%" % v, TY_AXE, MUTED, "end"))
+        e.append(txt(x0 - 6, Y(v) + 4, ("%d%%" if en else "%d %%") % v, TY_AXE, MUTED, "end"))
     for a in range(a_min, a_max + 1, 5):
         e.append(txt(X(a), y1 + 15, str(a), TY_AXE, MUTED, "middle"))
     e.append(txt((bx0 + bx1) / 2, y1 + 32, "2014-2017", TY_ANNOT, INK2, "middle"))
-    e.append(txt((bx0 + bx1) / 2, y1 + 45, "baisse des dotations", TY_ANNOT, INK2, "middle"))
+    e.append(txt((bx0 + bx1) / 2, y1 + 45, "grant cuts" if en else "baisse des dotations", TY_ANNOT, INK2, "middle"))
     for m in MUNICIPALES:
         e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-dasharray="2 4"/>' % (X(m), y0, X(m), y1, AXIS))
-        e.append(txt(X(m), y0 - 6, "municipales %d" % m, 10, MUTED, "middle"))
+        e.append(txt(X(m), y0 - 6, ("municipal elections %d" if en else "municipales %d") % m, 10, MUTED, "middle"))
     for s, col in ((tr, GRIS), (inv, BLEU)):
         pts = " ".join("%.1f,%.1f" % (X(a), Y(v)) for a, v in sorted(s.items()) if v is not None)
         e.append('<polyline points="%s" fill="none" stroke="%s" stroke-width="2.6"/>' % (pts, col))
     a_pic = max(tr, key=tr.get)
-    e.append(txt(X(a_pic) + 8, Y(tr[a_pic]) + 4, "%d : compensation" % a_pic))
-    e.append(txt(X(a_pic) + 8, Y(tr[a_pic]) + 17, "de la taxe professionnelle"))
-    e.append(txt(X(2003), Y(tr[2003]) - 12, "transferts reçus", TY_ANNOT, GRIS, "middle", "600"))
-    e.append(txt(X(1997), Y(inv[1997]) + 22, "investissement local", TY_ANNOT, BLEU, "middle", "600"))
-    e += cartouche(H + 2, SRC_SIGNATURE, NOTE_SIGNATURE)
+    e.append(txt(X(a_pic) + 8, Y(tr[a_pic]) + 4, ("%d: compensation for the" if en else "%d : compensation") % a_pic))
+    e.append(txt(X(a_pic) + 8, Y(tr[a_pic]) + 17, "abolished business tax" if en else "de la taxe professionnelle"))
+    e.append(txt(X(2003), Y(tr[2003]) - 12, "transfers received" if en else "transferts reçus", TY_ANNOT, GRIS, "middle", "600"))
+    e.append(txt(X(1997), Y(inv[1997]) + 22, "local investment" if en else "investissement local", TY_ANNOT, BLEU, "middle", "600"))
+    e += (cartouche(H + 2, FIG_EN["src_signature"], FIG_EN["note_signature"], "en") if en
+          else cartouche(H + 2, SRC_SIGNATURE, NOTE_SIGNATURE))
     e.append("</svg>")
     return "\n".join(e)
 
 
-def fig_cascade(r: dict) -> str:
+def fig_cascade(r: dict, lang: str = "fr") -> str:
+    en = lang == "en"
+    nb = en1 if en else fr1
     H = 330
     x0, x1, y0, y1 = 330, W - 50, 40, 300
-    rows = ([("Solde " + str(r["ep_a0"]), r["ep_solde_a0"], "base")] + [(c["poste"], c["pt_pib"], "pas") for c in r["ep_cascade"]]
-            + [("Solde " + str(r["ep_a1"]), r["ep_solde_a1"], "base")])
+    solde = "Balance " if en else "Solde "
+    postes = FIG_EN["postes"] if en else [c["poste"] for c in r["ep_cascade"]]
+    if len(postes) != len(r["ep_cascade"]):
+        fail("cascade : libelles anglais et postes en nombre different")
+    rows = ([(solde + str(r["ep_a0"]), r["ep_solde_a0"], "base")] + [(p_, c["pt_pib"], "pas") for p_, c in zip(postes, r["ep_cascade"])]
+            + [(solde + str(r["ep_a1"]), r["ep_solde_a1"], "base")])
     vmin, vmax = -1.2, 1.4
     X = lambda v: x0 + (v - vmin) / (vmax - vmin) * (x1 - x0)  # noqa: E731
     h = (y1 - y0) / len(rows)
-    titre = "D’où vient l’amélioration du solde des collectivités, %s-%s" % (r["ep_a0"], r["ep_a1"])
-    e = entete(H, "cc", titre, "Cascade en points de PIB : la baisse des transferts creuse le solde ; la hausse des impôts et "
-               "la baisse des dépenses, surtout d'investissement, le remontent jusqu'à un léger excédent.")
+    if en:
+        titre = "Where the improvement in the local government balance came from, %s-%s" % (r["ep_a0"], r["ep_a1"])
+        e = entete(H, "cc", titre, "Waterfall in points of GDP: lower transfers worsen the balance; higher taxes and lower "
+                   "spending, mainly on investment, bring it back up to a slight surplus.")
+    else:
+        titre = "D’où vient l’amélioration du solde des collectivités, %s-%s" % (r["ep_a0"], r["ep_a1"])
+        e = entete(H, "cc", titre, "Cascade en points de PIB : la baisse des transferts creuse le solde ; la hausse des impôts et "
+                   "la baisse des dépenses, surtout d'investissement, le remontent jusqu'à un léger excédent.")
     for v in (-1, -0.5, 0, 0.5, 1):
         e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s"/>' % (X(v), y0, X(v), y1, AXIS if v == 0 else GRID))
-        e.append(txt(X(v), y1 + 15, fr1(v, 1), TY_AXE, MUTED, "middle"))
+        e.append(txt(X(v), y1 + 15, nb(v, 1), TY_AXE, MUTED, "middle"))
     cum = 0.0
     for k, (lab, v, t) in enumerate(rows):
         yy, hh = y0 + k * h + h * 0.18, h * 0.64
@@ -768,58 +853,73 @@ def fig_cascade(r: dict) -> str:
             cum += v
         e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="%s"/>' % (X(a), yy, max(X(b) - X(a), 1.5), hh, col))
         e.append(txt(x0 - 10, yy + hh / 2 + 4, lab, TY_ANNOT, INK, "end"))
-        e.append(txt(X(b) + 6, yy + hh / 2 + 4, ("+" if v > 0 and t == "pas" else "") + fr1(v, 2)))
-    e += cartouche(H + 2, SRC_CASCADE, NOTE_CASCADE)
+        e.append(txt(X(b) + 6, yy + hh / 2 + 4, ("+" if v > 0 and t == "pas" else "") + nb(v, 2)))
+    e += (cartouche(H + 2, FIG_EN["src_cascade"], FIG_EN["note_cascade"], "en") if en
+          else cartouche(H + 2, SRC_CASCADE, NOTE_CASCADE))
     e.append("</svg>")
     return "\n".join(e)
 
 
-def fig_europe(r: dict) -> str:
+def fig_europe(r: dict, lang: str = "fr") -> str:
+    en = lang == "en"
+    nb = en1 if en else fr1
     H = 300
     pw, ph, gap = 150, 170, 22
     vmax = 30.0
-    titre = "Dette des administrations territoriales et part détenue par l’État central, en % du PIB"
-    e = entete(H, "ce", titre, "Quatre petits graphiques. France : entre 7 et 10 %. Allemagne : entre 20 et 30 %, portée par les "
-               "Länder. Italie : monte puis redescend sous 5 %. Espagne : d'environ 9 % à plus de 20 %, dont plus de la moitié "
-               "détenue par l'État central.")
+    if en:
+        titre = "Subnational government debt and the share held by central government, in % of GDP"
+        e = entete(H, "ce", titre, "Four small charts. France: between 7 and 10%. Germany: between 20 and 30%, carried by the "
+                   "Länder. Italy: rises, then falls back below 5%. Spain: from about 9% to more than 20%, more than half of it "
+                   "held by central government.")
+    else:
+        titre = "Dette des administrations territoriales et part détenue par l’État central, en % du PIB"
+        e = entete(H, "ce", titre, "Quatre petits graphiques. France : entre 7 et 10 %. Allemagne : entre 20 et 30 %, portée par les "
+                   "Länder. Italie : monte puis redescend sous 5 %. Espagne : d'environ 9 % à plus de 20 %, dont plus de la moitié "
+                   "détenue par l'État central.")
     for k, p in enumerate(r["pays"]):
         ox, oy = 46 + k * (pw + gap), 78
         s = p["serie_dette"]
         a0, a1 = min(s), max(s)
         X = lambda a: ox + (a - a0) / (a1 - a0) * pw  # noqa: E731
         Y = lambda v: oy + ph - v / vmax * ph  # noqa: E731
-        e.append(txt(ox, oy - 14, p["nom"], TY_ANNOT, INK, "start", "600"))
+        e.append(txt(ox, oy - 14, p["nom_en"] if en else p["nom"], TY_ANNOT, INK, "start", "600"))
         for v in (0, 10, 20, 30):
             e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (ox, Y(v), ox + pw, Y(v), GRID))
             if k == 0:
-                e.append(txt(ox - 6, Y(v) + 4, "%d %%" % v, TY_AXE, MUTED, "end"))
+                e.append(txt(ox - 6, Y(v) + 4, ("%d%%" if en else "%d %%") % v, TY_AXE, MUTED, "end"))
         se = {a: v for a, v in p["serie_detenu_etat"].items() if a >= a0}  # meme fenetre que la dette, rien hors du panneau
         if se:
             pts = " ".join("%.1f,%.1f" % (X(a), Y(v)) for a, v in sorted(se.items()))
             e.append('<polyline points="%s" fill="none" stroke="%s" stroke-width="2.2" stroke-dasharray="4 3"/>' % (pts, GRIS))
             if p["part_etat_pct"] >= 40:  # etiquette seulement la ou la part est majoritaire ; les autres sont dans le texte
-                e.append(txt(X(a1), Y(se[a1]) + 16, "dont État central " + fr1(se[a1]), 10, INK2, "end"))
+                e.append(txt(X(a1), Y(se[a1]) + 16, ("of which central govt " if en else "dont État central ") + nb(se[a1]), 10, INK2, "end"))
         pts = " ".join("%.1f,%.1f" % (X(a), Y(v)) for a, v in sorted(s.items()))
         e.append('<polyline points="%s" fill="none" stroke="%s" stroke-width="2.4"/>' % (pts, BLEU))
-        e.append(txt(X(a0), Y(s[a0]) - 6, fr1(s[a0]), 10))
-        e.append(txt(X(a1), Y(s[a1]) - 6, fr1(s[a1]), 10, INK, "end", "600"))
+        e.append(txt(X(a0), Y(s[a0]) - 6, nb(s[a0]), 10))
+        e.append(txt(X(a1), Y(s[a1]) - 6, nb(s[a1]), 10, INK, "end", "600"))
         e.append(txt(ox, oy + ph + 15, str(a0), TY_AXE, MUTED))
         e.append(txt(ox + pw, oy + ph + 15, str(a1), TY_AXE, MUTED, "end"))
     e.append('<line x1="0" y1="36" x2="18" y2="36" stroke="%s" stroke-width="2.4"/>' % BLEU)
-    e.append(txt(24, 40, "dette des administrations territoriales", 10))
+    e.append(txt(24, 40, "subnational government debt" if en else "dette des administrations territoriales", 10))
     e.append('<line x1="230" y1="36" x2="248" y2="36" stroke="%s" stroke-width="2.2" stroke-dasharray="4 3"/>' % GRIS)
-    e.append(txt(254, 40, "dont détenue par l’État central (publiée depuis 2020 pour l’Espagne, la France et l’Italie)", 10))
-    e += cartouche(H + 2, SRC_EUROPE, NOTE_EUROPE)
+    e.append(txt(254, 40, "of which held by central government (published since 2020 for Spain, France and Italy)" if en
+                 else "dont détenue par l’État central (publiée depuis 2020 pour l’Espagne, la France et l’Italie)", 10))
+    e += (cartouche(H + 2, FIG_EN["src_europe"], FIG_EN["note_europe"], "en") if en
+          else cartouche(H + 2, SRC_EUROPE, NOTE_EUROPE))
     e.append("</svg>")
     return "\n".join(e)
 
 
 def figures(r: dict) -> dict:
-    return {"collectivites-investissement.svg": fig_signature(r), "collectivites-cascade.svg": fig_cascade(r),
-            "collectivites-europe.svg": fig_europe(r)}
+    out = {}
+    for lang, x in SUFFIXE.items():
+        out["collectivites-investissement%s.svg" % x] = fig_signature(r, lang)
+        out["collectivites-cascade%s.svg" % x] = fig_cascade(r, lang)
+        out["collectivites-europe%s.svg" % x] = fig_europe(r, lang)
+    return out
 
 
-def fiches_figures(figs: dict, A: dict) -> dict:
+def fiches_figures(figs: dict, A: dict, A_en: dict) -> dict:
     """Cartes du bloc « Réutiliser » : « montre » est écrit ici, ses chiffres viennent des jetons gardés ; titre,
     source et précaution sont relus dans le SVG."""
     import re as _re
@@ -835,16 +935,32 @@ def fiches_figures(figs: dict, A: dict) -> dict:
          "Une même dette territoriale peut recouvrir des architectures opposées : en Espagne, %s %% en est détenue par l'État "
          "central ; en France, %s %%." % (A["es_part_etat_pct"], A["fr_part_etat_pct"])),
     ]
-    out = []
-    for ident, fichier, montre in MONTRE:
-        svg = figs[fichier + ".svg"]
-        titre = html.unescape(_re.search(r"<title[^>]*>(.*?)</title>", svg).group(1))
-        cart = [html.unescape(t) for t in _re.findall(r'<text x="0" y="[0-9.]+" font-size="9" fill="[^"]+">(.*?)</text>', svg)]
-        if len(cart) < 2 or cart[-1] != LICENCE:
-            fail("fiche %s : cartouche illisible dans le SVG" % fichier)
-        out.append(dict(id=ident, fichier=fichier, titre=titre, montre=montre, source=cart[0],
-                        precaution=cart[1] if len(cart) == 3 else ""))
-    return {"fr": out}
+    MONTRE_EN = [
+        ("investissement", "collectivites-investissement",
+         "From %s to %s, the transfers received by local authorities fell by %s points of GDP and their investment by %s points; "
+         "the fall in investment after the 2014 municipal elections clearly exceeds that of the other terms of office."
+         % (A_en["ep_a0"], A_en["ep_a1"], A_en["ep_transf"], A_en["ep_inv"])),
+        ("cascade", "collectivites-cascade",
+         "The local government balance improved by %s points of GDP between %s and %s, mainly through lower spending, "
+         "despite lower transfers received." % (A_en["ep_solde_delta"], A_en["ep_a0"], A_en["ep_a1"])),
+        ("europe", "collectivites-europe",
+         "The same subnational debt can conceal opposite architectures: in Spain, %s%% of it is held by central government; "
+         "in France, %s%%." % (A_en["es_part_etat_pct"], A_en["fr_part_etat_pct"])),
+    ]
+    res = {}
+    for lang, liste in (("fr", MONTRE), ("en", MONTRE_EN)):
+        out = []
+        for ident, fichier, montre in liste:
+            fichier = fichier + SUFFIXE[lang]
+            svg = figs[fichier + ".svg"]
+            titre = html.unescape(_re.search(r"<title[^>]*>(.*?)</title>", svg).group(1))
+            cart = [html.unescape(t) for t in _re.findall(r'<text x="0" y="[0-9.]+" font-size="9" fill="[^"]+">(.*?)</text>', svg)]
+            if len(cart) < 2 or cart[-1] != LICENCES[lang]:
+                fail("fiche %s : cartouche illisible dans le SVG" % fichier)
+            out.append(dict(id=ident, fichier=fichier, titre=titre, montre=montre, source=cart[0],
+                            precaution=cart[1] if len(cart) == 3 else ""))
+        res[lang] = out
+    return res
 
 
 # ------------------------------------------------------------------ sorties
@@ -926,11 +1042,14 @@ def _main() -> int:
     mord = autotest_mutation(b)
     log("autotest : la mutation a fait mordre -> " + mord)
     a = affichage(r)
+    a_en = affichage(r, "en")
+    if set(a) != set(a_en):
+        fail("blocs affichage et affichage_en : cles differentes (%s)" % sorted(set(a) ^ set(a_en)))
     if check:
         log("--check : %d gardes tenues, rien ecrit." % len(rapport))
         return 0
     figs = figures(r)
-    fiches = fiches_figures(figs, a)
+    fiches = fiches_figures(figs, a, a_en)
     csvt = csv_texte(r)
     payload = {
         "meta": {"page": "https://" + PAGE_URL, "licence": "CC BY 4.0",
@@ -944,6 +1063,7 @@ def _main() -> int:
         "calcul": {k: v for k, v in r.items() if not k.startswith("serie_")},
         "series": {k: v for k, v in r.items() if k.startswith("serie_")},
         "affichage": a,
+        "affichage_en": a_en,
     }
     releve = b["releve_le"]
     if OUT_DATA.exists():

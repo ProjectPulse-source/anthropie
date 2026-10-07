@@ -78,7 +78,7 @@
   },
   {
    "id": "dette-collectivites", "producteur": "Eurostat, OFGL", "objet": "administrations locales", "mode": "api",
-   "pages": ["/dette-publique-collectivites-locales/"], "generateurs": ["update_dette_collectivites.py"], "jeu": "data/dette_collectivites.json",
+   "pages": ["/dette-publique-collectivites-locales/", "/en/local-government-debt/"], "generateurs": ["update_dette_collectivites.py"], "jeu": "data/dette_collectivites.json",
    "cadence": "trimestrielle", "workflow": "dette-collectivites.yml"
   },
   {

@@ -1,23 +1,26 @@
-{{- /* {{< gen-val "part_k" >}} — émet UNE valeur du bloc affichage de data/dette_generations.json (chaînes françaises
-       précalculées et gardées par scripts/update_dette_generations.py). Même contrat que coll-val : aucun chiffre en dur
-       dans la prose ; clé inconnue ou données absentes = échec de build. « date_donnees » : date du relevé (releve_le).
-       Page en français seulement (exclusion déclarée : pas de bloc affichage_en). */ -}}
+{{- /* {{< gen-val "part_k" >}} — émet UNE valeur du bloc affichage de data/dette_generations.json (chaînes précalculées
+       et gardées par scripts/update_dette_generations.py). Même contrat que coll-val : aucun chiffre en dur dans la prose ;
+       clé inconnue ou données absentes = échec de build. « date_donnees » : date du relevé (releve_le).
+       Bilingue depuis le 07/10/2026 (modèle : baisse-val) : la langue CHOISIT le bloc (affichage_en sur une page anglaise),
+       elle ne formate rien ici ; bloc anglais absent = échec, jamais un repli sur les chaînes françaises (« 54,3 » serait
+       faux en anglais). */ -}}
 {{- $k := .Get 0 -}}
+{{- $en := eq $.Page.Lang "en" -}}
 {{- if eq $k "date_donnees" -}}
   {{- with site.Data.dette_generations.releve_le -}}
     {{- $t := time . -}}
-    {{- $mois := slice "janvier" "février" "mars" "avril" "mai" "juin" "juillet" "août" "septembre" "octobre" "novembre" "décembre" -}}
+    {{- $mois := cond $en (slice "January" "February" "March" "April" "May" "June" "July" "August" "September" "October" "November" "December") (slice "janvier" "février" "mars" "avril" "mai" "juin" "juillet" "août" "septembre" "octobre" "novembre" "décembre") -}}
     {{- printf "%d %s %d" $t.Day (index $mois (sub (int $t.Month) 1)) $t.Year -}}
   {{- else -}}{{- errorf "gen-val: releve_le absent de data/dette_generations.json (page %s)" $.Page.RelPermalink -}}{{- end -}}
 {{- else -}}
 {{- $a := "" -}}
-{{- with site.Data.dette_generations -}}{{- $a = .affichage -}}{{- end -}}
+{{- with site.Data.dette_generations -}}{{- $a = cond $en .affichage_en .affichage -}}{{- end -}}
 {{- if not $a -}}
-  {{- errorf "gen-val: data/dette_generations.json absent ou sans bloc affichage (page %s)" .Page.RelPermalink -}}
+  {{- errorf "gen-val: data/dette_generations.json absent ou sans bloc %s (page %s)" (cond $en "affichage_en" "affichage") .Page.RelPermalink -}}
 {{- else -}}
   {{- $v := index $a $k -}}
   {{- if not $v -}}
-    {{- errorf "gen-val: cle %q inconnue du bloc affichage (page %s)" $k .Page.RelPermalink -}}
+    {{- errorf "gen-val: cle %q inconnue du bloc %s (page %s)" $k (cond $en "affichage_en" "affichage") .Page.RelPermalink -}}
   {{- else -}}{{- $v -}}{{- end -}}
 {{- end -}}
 {{- end -}}

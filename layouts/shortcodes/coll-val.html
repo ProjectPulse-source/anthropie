@@ -1,15 +1,18 @@
 {{- /* {{< coll-val "ep_transf" >}} — émet UNE valeur du bloc affichage de data/dette_collectivites.json
-       (chaînes françaises précalculées et gardées par scripts/update_dette_collectivites.py). Même contrat que
+       (chaînes précalculées et gardées par scripts/update_dette_collectivites.py). Même contrat que
        monde-val : aucun chiffre en dur dans la prose ; clé inconnue ou données absentes = échec de build.
-       Page en français seulement (exclusion déclarée : pas de bloc affichage_en). */ -}}
+       Bilingue depuis le 07/10/2026 (page /en/local-government-debt/) : la langue CHOISIT le bloc (affichage_en sur une
+       page anglaise), elle ne formate rien ici ; bloc anglais absent = échec, jamais un repli sur les chaînes françaises
+       (« 9,3 » serait faux en anglais). */ -}}
 {{- $k := .Get 0 -}}
+{{- $en := eq .Page.Lang "en" -}}
 {{- $a := "" -}}
-{{- with site.Data.dette_collectivites -}}{{- $a = .affichage -}}{{- end -}}
+{{- with site.Data.dette_collectivites -}}{{- $a = cond $en .affichage_en .affichage -}}{{- end -}}
 {{- if not $a -}}
-  {{- errorf "coll-val: data/dette_collectivites.json absent ou sans bloc affichage (page %s)" .Page.RelPermalink -}}
+  {{- errorf "coll-val: data/dette_collectivites.json absent ou sans bloc %s (page %s)" (cond $en "affichage_en" "affichage") .Page.RelPermalink -}}
 {{- else -}}
   {{- $v := index $a $k -}}
   {{- if not $v -}}
-    {{- errorf "coll-val: cle %q inconnue du bloc affichage (page %s)" $k .Page.RelPermalink -}}
+    {{- errorf "coll-val: cle %q inconnue du bloc %s (page %s)" $k (cond $en "affichage_en" "affichage") .Page.RelPermalink -}}
   {{- else -}}{{- $v -}}{{- end -}}
 {{- end -}}

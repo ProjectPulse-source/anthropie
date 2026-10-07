@@ -24,5 +24,31 @@
    "source": "Eurostat gov_10q_ggdebt (4e trimestre) et gov_10dd_ggd (détention), S1312 + S1313, en % du PIB",
    "precaution": "Périmètre statistique, non compétences : la France et l'Italie n'ont pas d'échelon d'États fédérés (S1312)."
   }
+ ],
+ "en": [
+  {
+   "id": "investissement",
+   "fichier": "collectivites-investissement-en",
+   "titre": "Local government investment and transfers received, France, in % of GDP",
+   "montre": "From 2013 to 2017, the transfers received by local authorities fell by 0.64 points of GDP and their investment by 0.50 points; the fall in investment after the 2014 municipal elections clearly exceeds that of the other terms of office.",
+   "source": "Eurostat gov_10a_main (S1313: P51G, D73REC; S13: TE in % of GDP for the denominator), local government, France",
+   "precaution": "Transfers: comparable series stops in 2017 (the regions' DGF grant was replaced by a share of VAT in 2018)."
+  },
+  {
+   "id": "cascade",
+   "fichier": "collectivites-cascade-en",
+   "titre": "Where the improvement in the local government balance came from, 2013-2017",
+   "montre": "The local government balance improved by 0.45 points of GDP between 2013 and 2017, mainly through lower spending, despite lower transfers received.",
+   "source": "Eurostat gov_10a_main, local government (S1313), France; points of GDP",
+   "precaution": "An accounting reading: the items add up exactly to the change in the balance; they do not say what decided it."
+  },
+  {
+   "id": "europe",
+   "fichier": "collectivites-europe-en",
+   "titre": "Subnational government debt and the share held by central government, in % of GDP",
+   "montre": "The same subnational debt can conceal opposite architectures: in Spain, 59% of it is held by central government; in France, 1%.",
+   "source": "Eurostat gov_10q_ggdebt (4th quarter) and gov_10dd_ggd (holdings), S1312 + S1313, in % of GDP",
+   "precaution": "Statistical scope, not responsibilities: France and Italy have no state-government tier (S1312)."
+  }
  ]
 }

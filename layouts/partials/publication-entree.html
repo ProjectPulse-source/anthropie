@@ -30,7 +30,7 @@
       {{- with $p.Params.related_book }}
         {{- $slug := . }}{{ $book := site.GetPage (printf "/livres/%s" $slug) }}
         {{- if not $book }}{{ range site.Sites }}{{ if eq .Language.Lang "fr" }}{{ $book = .GetPage (printf "/livres/%s" $slug) }}{{ end }}{{ end }}{{ end }}
-        {{- with $book }}<a class="pub-card__related-book" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}
+        {{- with $book }}<a class="pub-card__related-book" href="{{ .RelPermalink }}"{{ if and $isEn (ne .Lang "en") }} hreflang="fr" lang="fr"{{ end }}>{{ .Title }}{{ if and $isEn (ne .Lang "en") }} <span lang="en">(in French)</span>{{ end }}</a>{{ end }}
       {{- end }}
     </p>
     {{- end }}

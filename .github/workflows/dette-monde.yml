@@ -125,7 +125,11 @@ jobs:
                   static/images/og-dette-generations.jpg static/images/vig-dette-generations.jpg \
                   static/img/dette-generations-actifs.svg static/img/dette-generations-actifs.png \
                   static/img/dette-generations-detention.svg static/img/dette-generations-detention.png \
-                  static/img/dette-generations-vieillissement.svg static/img/dette-generations-vieillissement.png
+                  static/img/dette-generations-vieillissement.svg static/img/dette-generations-vieillissement.png \
+                  static/images/og-dette-generations-en.jpg static/images/vig-dette-generations-en.jpg \
+                  static/img/dette-generations-actifs-en.svg static/img/dette-generations-actifs-en.png \
+                  static/img/dette-generations-detention-en.svg static/img/dette-generations-detention-en.png \
+                  static/img/dette-generations-vieillissement-en.svg static/img/dette-generations-vieillissement-en.png
           git commit -m "data(dette-monde): Eurostat/OCDE/FMI/Banque mondiale du $(date -u +%Y-%m-%d)"
           pushed=0
           for attempt in 1 2 3; do

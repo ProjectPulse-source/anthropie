@@ -67,6 +67,7 @@ related_awp:
     awp: "awp-04"
   - label: "Infrastructures numériques et dette technologique"
     awp: "awp-06"
+lang_repli: "/en/books/"  # pas de version anglaise (exclusion déclarée) : cible de l'onglet EN, partials/lang-cible.html
 ---
 
 Application du cadre anthropique à la dette publique française.

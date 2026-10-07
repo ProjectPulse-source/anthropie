@@ -57,6 +57,7 @@ faq:
     answer: "Non. Aucun conseil de vote, aucune promesse déclarée bonne ou mauvaise, aucun candidat qualifié de sincère ou de menteur. Le livre examine ce qui, dans la chaîne de décision, permet ou empêche un résultat : une majorité à convaincre, un acteur dont la signature manque, une règle européenne, une capacité à construire, un délai qu'aucun décret n'abrège. Le jugement reste au lecteur."
   - question: "Sur quelles sources l'enquête repose-t-elle ?"
     answer: "290 entrées sourcées : Constitution, Légifrance, comptes rendus de l'Assemblée nationale et du Sénat, décisions du Conseil constitutionnel, statistique publique. Lorsque les pièces ne permettent pas de conclure, le livre le dit au lieu de trancher."
+lang_repli: "/en/books/"  # pas de version anglaise (exclusion déclarée) : cible de l'onglet EN, partials/lang-cible.html
 ---
 
 Un président peut décider sans que rien ne se fasse. Il peut faire sans obtenir. Il peut obtenir sans avoir causé.

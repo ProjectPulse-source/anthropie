@@ -52,6 +52,7 @@ faq:
   # (scan du 09/07, reports/geo_audit/B4_EUROCENTRISME_ODYSSEE_PROJET.md).
   - question: "L'Odyssée des idées est-elle eurocentrée ?"
     answer: "Le livre assume son point d'ancrage : la traversée suit principalement la tradition européenne — et singulièrement française — parce que c'est de là que l'auteur lit le monde, et il ne prétend pas à une histoire universelle des idées. Mais la fresque n'est pas fermée : Bouddha, Confucius et Sun Tzu, l'islam classique qui invente et transmet (Al-Khwârizmî, Avicenne, Averroès, Ibn Khaldoun, le zéro venu de l'Inde), Gandhi, Senghor, Mandela ou le rêve chinois comptent parmi les 250 escales. Surtout, la question elle-même est posée dans le livre : Valladolid demande qui compte comme un homme, Lévi-Strauss tend au lecteur « le barbare et son miroir », Ferry expose l'école qui libère et l'empire qui domine. Un regard situé, qui se sait situé — c'est le parti pris."
+lang_repli: "/en/books/"  # pas de version anglaise (exclusion déclarée) : cible de l'onglet EN, partials/lang-cible.html
 ---
 
 Une traversée de l'histoire des idées, des premiers signes à l'intelligence artificielle. Nouvelle édition entièrement recomposée (2026)&nbsp;: 250 escales, sept chemins de lecture, 696 pages.

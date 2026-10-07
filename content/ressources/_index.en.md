@@ -24,6 +24,9 @@ blocs:
   - id: corpus
     titre: "Corpus and documentation"
     chapo: "The documentary apparatus behind the books, usable in its own right."
+  - id: guides
+    titre: "Guides and perspectives"
+    chapo: "Two texts on method, on writing and on research outside an institution."
 ---
 
 Pages marked *in French* have no English version yet.

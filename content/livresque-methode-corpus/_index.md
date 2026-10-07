@@ -14,6 +14,7 @@ faq:
     answer: "Toute source distincte à qui une citation est attribuée : écrivains, philosophes, scientifiques, mais aussi répliques de cinéma, chansons, mots d'esprit — le recueil est éclectique par principe. C'est pourquoi le livre parle de voix plutôt que d'auteurs au sens strict."
   - question: "Comment les citations sont-elles classées ?"
     answer: "Elles ne le sont pas — c'est le principe du recueil. Ni ordre thématique, ni alphabétique, ni chronologique : les citations sont tissées pour que le sens naisse du voisinage, et le recueil se lit comme un roman, de page en page ; pour retrouver une voix, l'édition brochée se clôt sur un index des auteurs. Quarante ans de lectures derrière la sélection : une curation d'auteur, pas une compilation."
+lang_repli: "/en/books/"  # appareil d'un livre paru en français seul : pas de version anglaise (exclusion déclarée), cible de l'onglet EN
 ---
 
 Cette page est la référence publique du corpus de [*Livresque des mots*](/livres/livresque-des-mots/)&nbsp;: les chiffres exacts de l'édition courante, l'explication des écarts avec les notices plus anciennes, et la méthode du recueil. Si vous citez le livre — notice, article, fiche —, ce sont les chiffres de cette page qui font foi.

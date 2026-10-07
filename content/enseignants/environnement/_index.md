@@ -26,6 +26,7 @@ ressource:
 onglet:  # barre de la discipline (partials/barre-discipline.html)
   court: "Climat"
   role: "Terminale"
+lang_repli: "/en/resources/"  # pas de version anglaise (exclusion déclarée) : cible de l'onglet EN, partials/lang-cible.html
 ---
 
 **Terminale, chapitre sur l'action publique pour l'environnement.** La France publie deux totaux d'émissions de gaz à

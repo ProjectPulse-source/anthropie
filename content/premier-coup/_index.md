@@ -20,6 +20,7 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
   long: "La Société du premier coup"
   court: "Premier coup"
   long_en: "La Société du premier coup"
+lang_repli: "/en/books/"  # appareil d'un livre paru en français seul : pas de version anglaise (exclusion déclarée), cible de l'onglet EN
 ---
 
 Cette page est le **compagnon documentaire** de *La Société du premier coup*. Elle porte ce que le livre annonce page&nbsp;105&nbsp;: le répertoire complet, ses sources et ses mises à jour.

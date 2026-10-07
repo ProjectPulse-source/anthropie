@@ -1,12 +1,61 @@
 {{- /* {{< coll-tableau "cycles" >}} | {{< coll-tableau "categories" >}} | {{< coll-tableau "pays" >}}
        Tableaux de la page collectivités, lus dans data/dette_collectivites.json (bloc calcul) : aucun chiffre
        recopié. Les nombres sont formatés ici à la française (virgule décimale, moins typographique). Échoue sur
-       un type inconnu ou un jeu absent. */ -}}
+       un type inconnu ou un jeu absent.
+       Bilingue depuis le 07/10/2026 (page /en/local-government-debt/) : sur une page anglaise, nombres au format anglais
+       (point décimal), libellés lus dans les champs *_en du calcul (nom_en, mesure_en, texte_en, nature_en) écrits par
+       scripts/update_dette_collectivites.py ; un libellé anglais absent = échec, jamais un repli sur le français. */ -}}
 {{- $t := .Get 0 -}}
 {{- $j := site.Data.dette_collectivites -}}
 {{- if not $j -}}{{ errorf "coll-tableau: data/dette_collectivites.json absent (%s)" .Page.File.Path }}{{- end -}}
 {{- $c := $j.calcul -}}
+{{- $en := eq .Page.Lang "en" -}}
 {{- $f2 := "%.2f" -}}{{- $f1 := "%.1f" -}}
+{{- if $en -}}
+{{- if not $j.affichage_en -}}{{ errorf "coll-tableau: bloc affichage_en absent de data/dette_collectivites.json (%s)" .Page.File.Path }}{{- end -}}
+{{- $page := .Page -}}
+{{- if eq $t "cycles" -}}
+<div class="table-scroll"><table class="dette-monde-table">
+<thead><tr><th>Municipal elections</th><th>Year before, % of GDP</th><th>Lowest of the next three years</th><th>Change, points of GDP</th></tr></thead>
+<tbody>
+{{- range $c.cycles }}
+<tr><td>{{ .municipales }}</td><td>{{ .pic_annee }}: {{ printf $f2 .pic }}</td><td>{{ .creux_annee }}: {{ printf $f2 .creux }}</td><td>{{ replace (printf $f2 .baisse) "-" "−" }}</td></tr>
+{{- end }}
+</tbody></table></div>
+{{- else if eq $t "categories" -}}
+<div class="table-scroll"><table class="dette-monde-table">
+<thead><tr><th>Category, 2021 → {{ $c.of_an }}</th><th>Central government grants</th><th>Gross savings</th><th>Capital expenditure</th><th>Debt outstanding</th></tr></thead>
+<tbody>
+{{- range $c.categories }}
+{{- if not .nom_en }}{{ errorf "coll-tableau: nom_en absent pour la categorie %q (%s)" .cat $page.File.Path }}{{ end }}
+<tr><td>{{ .nom_en }}</td><td>{{ printf $f1 .concours_21 }} → {{ printf $f1 .concours_fin }}</td><td>{{ printf $f1 .eb_21 }} → {{ printf $f1 .eb_fin }}</td><td>{{ printf $f1 .eq_21 }} → {{ printf $f1 .eq_fin }}</td><td>{{ printf $f1 .dette_21 }} → {{ printf $f1 .dette_fin }}</td></tr>
+{{- end }}
+</tbody></table></div>
+<p><small>Billions of euros, current prices. Source: OFGL, consolidated databases of the management accounts (DGFiP).</small></p>
+{{- else if eq $t "pays" -}}
+<div class="table-scroll"><table class="dette-monde-table">
+<thead><tr><th>Country</th><th>Subnational debt {{ $c.an_dette_deb }}</th><th>Peak</th><th>{{ $c.an_dette_fin }}</th><th>Subnational investment: highest 2000-2010 → lowest 2011-2019</th><th>Years in surplus 2012-2019</th><th>Share held by central government, {{ $c.an_ggd }}</th></tr></thead>
+<tbody>
+{{- range $c.pays }}
+{{- if not .nom_en }}{{ errorf "coll-tableau: nom_en absent pour le pays %q (%s)" .geo $page.File.Path }}{{ end }}
+<tr><td>{{ .nom_en }}</td><td>{{ printf $f1 .dette_deb }}</td><td>{{ printf $f1 .dette_pic }} ({{ .dette_pic_annee }})</td><td>{{ printf $f1 .dette_fin }}</td><td>{{ printf $f1 .inv_max }} → {{ printf $f1 .inv_min }}</td><td>{{ .excedents_2012_2019 }}/8</td><td>{{ printf "%.0f" .part_etat_pct }}%</td></tr>
+{{- end }}
+</tbody></table></div>
+<p><small>In % of GDP. Subnational scope: S1312 + S1313 (cross-holdings between the two tiers at most {{ index $j.affichage_en "consolidation_ecart" }} point). Source: Eurostat.</small></p>
+{{- else if eq $t "plf" -}}
+<div class="table-scroll"><table class="dette-monde-table">
+<thead><tr><th>Measure in the {{ $c.plf_edition }} draft budget bill</th><th>Text</th><th>Nature</th><th>Amount, €bn</th></tr></thead>
+<tbody>
+{{- range $c.plf_mesures }}
+{{- if not (and .mesure_en .texte_en .nature_en) }}{{ errorf "coll-tableau: libelles anglais absents pour la mesure %q (%s)" .cle $page.File.Path }}{{ end }}
+<tr><td>{{ .mesure_en }}</td><td>{{ .texte_en }}</td><td>{{ .nature_en }}</td><td>{{ printf $f1 .md }}</td></tr>
+{{- end }}
+</tbody></table></div>
+<p><small>Amounts for {{ $c.plf_edition }}, as provided for in the bill as tabled, before examination by Parliament. Sources: draft budget bill (explanatory memoranda) for the first two rows; opinion of the High Council of Public Finance for the next three, which the text of the bill does not quantify.</small></p>
+{{- else -}}
+{{ errorf "coll-tableau: type %q inconnu (cycles, categories, pays, plf) dans %s" $t .Page.File.Path }}
+{{- end -}}
+{{- else -}}
 {{- if eq $t "cycles" -}}
 <div class="table-scroll"><table class="dette-monde-table">
 <thead><tr><th>Municipales</th><th>Année précédente, % du PIB</th><th>Plus bas des trois années suivantes</th><th>Écart, point de PIB</th></tr></thead>
@@ -44,4 +93,5 @@
 <p><small>Montants pour {{ $c.plf_edition }}, tels que le projet déposé les prévoit, avant examen par le Parlement. Sources&nbsp;: projet de loi de finances (exposés des motifs) pour les deux premières lignes&nbsp;; avis du Haut Conseil des finances publiques pour les trois suivantes, que le texte du projet ne chiffre pas.</small></p>
 {{- else -}}
 {{ errorf "coll-tableau: type %q inconnu (cycles, categories, pays, plf) dans %s" $t .Page.File.Path }}
+{{- end -}}
 {{- end -}}

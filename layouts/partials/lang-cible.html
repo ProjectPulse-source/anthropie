@@ -1,0 +1,26 @@
+{{- /* Cible du sélecteur de langue (en-tête et menu mobile) — RETOURNE un dict {url, exacte}.
+
+       Motif (2026-10-07) : une page sans traduction renvoyait à l'accueil de l'autre langue ; le lecteur perdait
+       le fil (« décrochage »). Ordre de résolution :
+         1. la traduction de la page (exacte = true) ;
+         2. `lang_repli` en front matter — chemin explicite dans l'autre langue, pour une page dont l'équivalent
+            n'est pas un ancêtre (ex. fiche d'un livre paru en français seulement → /en/books/) ;
+         3. la traduction de l'ancêtre traduit le plus proche (section, puis section de la section) ;
+         4. l'accueil de l'autre langue.
+       Présence lue dans le dépôt (`.Translations`), jamais dans une liste. */ -}}
+{{- $autre := cond (eq .Lang "fr") "en" "fr" -}}
+{{- $url := cond (eq $autre "en") "/en/" "/" -}}
+{{- $exacte := false -}}
+{{- $trouve := false -}}
+{{- range .Translations -}}{{- if and (not $trouve) (eq .Lang $autre) -}}{{- $url = .RelPermalink -}}{{- $exacte = true -}}{{- $trouve = true -}}{{- end -}}{{- end -}}
+{{- if and (not $trouve) .Params.lang_repli -}}{{- $url = .Params.lang_repli -}}{{- $trouve = true -}}{{- end -}}
+{{- if not $trouve -}}
+  {{- $p := .Parent -}}
+  {{- range seq 6 -}}
+    {{- if and (not $trouve) $p (not $p.IsHome) -}}
+      {{- range $p.Translations -}}{{- if and (not $trouve) (eq .Lang $autre) -}}{{- $url = .RelPermalink -}}{{- $trouve = true -}}{{- end -}}{{- end -}}
+      {{- $p = $p.Parent -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return (dict "url" $url "exacte" $exacte "autre" $autre) -}}

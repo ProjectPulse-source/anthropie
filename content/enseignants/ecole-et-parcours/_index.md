@@ -26,6 +26,7 @@ onglet:  # barre de la discipline (partials/barre-discipline.html)
   court: "École"
   role: "Terminale"
   id: "droit-a-l-erreur"   # ancre publiée le 02/10, portée par ce lien sur /enseignants/ : ne se retire pas
+lang_repli: "/en/resources/"  # pas de version anglaise (exclusion déclarée) : cible de l'onglet EN, partials/lang-cible.html
 ---
 
 **Terminale, chapitre sur l'École.** Deux activités, une par objectif du chapitre. La première regarde où

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 322" role="img" font-variant-numeric="tabular-nums" aria-labelledby="gv-t gv-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="gv-t">France: where the effort that would stabilise the debt comes from (S2 indicator)</title><desc id="gv-d">Permanent adjustment of the structural primary balance that would stabilise the debt, in points of GDP, split between the current budgetary position and the cost of ageing, according to the European Commission (Debt Sustainability Monitor 2025), in three scenarios and in the previous edition. Baseline scenario: current position 3.0, ageing 0.1. Lower productivity: current position 3.3, ageing 0.5. Health and long-term care risk: current position 3.0, ageing 2.4. Previous edition (2024): current position 3.3, ageing 0.1.</desc>
+<rect width="720" height="322" fill="#ffffff"/>
+<text x="0" y="18" font-size="15" font-weight="600" fill="#26262f">France: where the effort that would stabilise the debt comes from (S2 indicator)</text>
+<rect x="0" y="36" width="10" height="10" fill="#eb6834"/>
+<text x="14" y="45" font-size="11" fill="#55524f">current budgetary position</text>
+<rect x="188" y="36" width="10" height="10" fill="#8a8781"/>
+<text x="202" y="45" font-size="11" fill="#55524f">cost of ageing</text>
+<line x1="210.0" y1="58" x2="210.0" y2="232" stroke="#dcd8d3" stroke-width="1.4"/>
+<text x="210.0" y="246" font-size="10" fill="#96928f" text-anchor="middle">0</text>
+<line x1="327.5" y1="58" x2="327.5" y2="232" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="327.5" y="246" font-size="10" fill="#96928f" text-anchor="middle">1</text>
+<line x1="445.0" y1="58" x2="445.0" y2="232" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="445.0" y="246" font-size="10" fill="#96928f" text-anchor="middle">2</text>
+<line x1="562.5" y1="58" x2="562.5" y2="232" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="562.5" y="246" font-size="10" fill="#96928f" text-anchor="middle">3</text>
+<line x1="680.0" y1="58" x2="680.0" y2="232" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="680.0" y="246" font-size="10" fill="#96928f" text-anchor="middle">4</text>
+<text x="0" y="81" font-size="11.5" font-weight="600" fill="#26262f">Baseline scenario</text>
+<rect x="210.0" y="64" width="357.2" height="15" fill="#eb6834"/>
+<text x="571.2" y="75" font-size="10" font-weight="600" fill="#26262f">3.0</text>
+<rect x="210.0" y="81" width="8.8" height="15" fill="#8a8781"/>
+<text x="222.8" y="92" font-size="10" font-weight="600" fill="#26262f">0.1</text>
+<text x="0" y="125" font-size="11.5" font-weight="600" fill="#26262f">Lower productivity</text>
+<rect x="210.0" y="108" width="388.5" height="15" fill="#eb6834"/>
+<text x="602.5" y="119" font-size="10" font-weight="600" fill="#26262f">3.3</text>
+<rect x="210.0" y="125" width="54.3" height="15" fill="#8a8781"/>
+<text x="268.3" y="136" font-size="10" font-weight="600" fill="#26262f">0.5</text>
+<text x="0" y="169" font-size="11.5" font-weight="600" fill="#26262f">Health and long-term care risk</text>
+<rect x="210.0" y="152" width="355.7" height="15" fill="#eb6834"/>
+<text x="569.7" y="163" font-size="10" font-weight="600" fill="#26262f">3.0</text>
+<rect x="210.0" y="169" width="280.2" height="15" fill="#8a8781"/>
+<text x="494.2" y="180" font-size="10" font-weight="600" fill="#26262f">2.4</text>
+<text x="0" y="213" font-size="11.5" font-weight="600" fill="#26262f">Previous edition (2024)</text>
+<rect x="210.0" y="196" width="391.8" height="15" fill="#eb6834"/>
+<text x="605.8" y="207" font-size="10" font-weight="600" fill="#26262f">3.3</text>
+<rect x="210.0" y="213" width="6.6" height="15" fill="#8a8781"/>
+<text x="220.6" y="224" font-size="10" font-weight="600" fill="#26262f">0.1</text>
+<text x="680" y="261" font-size="10" fill="#96928f" text-anchor="end">points of GDP</text>
+<line x1="0" y1="274.0" x2="720" y2="274.0" stroke="#dcd8d3"/>
+<text x="0" y="287.0" font-size="9" fill="#55524f">European Commission, Debt Sustainability Monitor 2025, country tables: S2 indicator and its two components, France</text>
+<text x="0" y="299.0" font-size="9" fill="#55524f">Projections conditional on the Commission's assumptions (2024 Ageing Report, 2023 pension reform applied).</text>
+<text x="0" y="311.0" font-size="9" fill="#96928f">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/public-debt-future-generations/</text>
+</svg>

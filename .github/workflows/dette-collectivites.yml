@@ -79,7 +79,11 @@ jobs:
                   static/img/collectivites-investissement.svg static/img/collectivites-investissement.png \
                   static/img/collectivites-cascade.svg static/img/collectivites-cascade.png \
                   static/img/collectivites-europe.svg static/img/collectivites-europe.png \
-                  static/images/og-collectivites.jpg static/images/vig-collectivites.jpg
+                  static/images/og-collectivites.jpg static/images/vig-collectivites.jpg \
+                  static/img/collectivites-investissement-en.svg static/img/collectivites-investissement-en.png \
+                  static/img/collectivites-cascade-en.svg static/img/collectivites-cascade-en.png \
+                  static/img/collectivites-europe-en.svg static/img/collectivites-europe-en.png \
+                  static/images/og-collectivites-en.jpg static/images/vig-collectivites-en.jpg
           git commit -m "data(collectivites): Eurostat/OFGL du $(date -u +%Y-%m-%d)"
           pushed=0
           for attempt in 1 2 3; do

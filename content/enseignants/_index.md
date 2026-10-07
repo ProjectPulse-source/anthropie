@@ -31,6 +31,7 @@ ressource:
 onglet:  # barre de la discipline (partials/barre-discipline.html)
   court: "Dette"
   role: "Première et Terminale"
+lang_repli: "/en/resources/"  # pas de version anglaise (exclusion déclarée) : cible de l'onglet EN, partials/lang-cible.html
 ---
 
 Chaque activité part d'une figure du site, projetable telle quelle, et d'une question du programme. La fiche élève et

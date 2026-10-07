@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 348" role="img" font-variant-numeric="tabular-nums" aria-labelledby="ce-t ce-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="ce-t">Subnational government debt and the share held by central government, in % of GDP</title><desc id="ce-d">Four small charts. France: between 7 and 10%. Germany: between 20 and 30%, carried by the Länder. Italy: rises, then falls back below 5%. Spain: from about 9% to more than 20%, more than half of it held by central government.</desc>
+<rect width="720" height="348" fill="#ffffff"/>
+<text x="0" y="18" font-size="13" font-weight="600" fill="#0A0A0E">Subnational government debt and the share held by central government, in % of GDP</text>
+<text x="46.0" y="64.0" font-size="11" fill="#0A0A0E" text-anchor="start" font-weight="600">France</text>
+<line x1="46" y1="248.0" x2="196" y2="248.0" stroke="#e1e0d9"/>
+<text x="40.0" y="252.0" font-size="11" fill="#898781" text-anchor="end">0%</text>
+<line x1="46" y1="191.3" x2="196" y2="191.3" stroke="#e1e0d9"/>
+<text x="40.0" y="195.3" font-size="11" fill="#898781" text-anchor="end">10%</text>
+<line x1="46" y1="134.7" x2="196" y2="134.7" stroke="#e1e0d9"/>
+<text x="40.0" y="138.7" font-size="11" fill="#898781" text-anchor="end">20%</text>
+<line x1="46" y1="78.0" x2="196" y2="78.0" stroke="#e1e0d9"/>
+<text x="40.0" y="82.0" font-size="11" fill="#898781" text-anchor="end">30%</text>
+<polyline points="166.0,247.4 172.0,247.4 178.0,247.4 184.0,247.4 190.0,247.4 196.0,247.4" fill="none" stroke="#8a8f98" stroke-width="2.2" stroke-dasharray="4 3"/>
+<polyline points="46.0,207.2 52.0,208.9 58.0,210.0 64.0,210.0 70.0,210.0 76.0,209.5 82.0,208.9 88.0,207.8 94.0,206.1 100.0,202.1 106.0,201.5 112.0,201.5 118.0,200.4 124.0,199.3 130.0,198.7 136.0,197.6 142.0,197.6 148.0,198.7 154.0,198.7 160.0,199.3 166.0,191.9 172.0,192.5 178.0,195.3 184.0,197.6 190.0,197.0 196.0,195.3" fill="none" stroke="#184f95" stroke-width="2.4"/>
+<text x="46.0" y="201.2" font-size="10" fill="#52514e" text-anchor="start">7.2</text>
+<text x="196.0" y="189.3" font-size="10" fill="#0A0A0E" text-anchor="end" font-weight="600">9.3</text>
+<text x="46.0" y="263.0" font-size="11" fill="#898781" text-anchor="start">2000</text>
+<text x="196.0" y="263.0" font-size="11" fill="#898781" text-anchor="end">2025</text>
+<text x="218.0" y="64.0" font-size="11" fill="#0A0A0E" text-anchor="start" font-weight="600">Germany</text>
+<line x1="218" y1="248.0" x2="368" y2="248.0" stroke="#e1e0d9"/>
+<line x1="218" y1="191.3" x2="368" y2="191.3" stroke="#e1e0d9"/>
+<line x1="218" y1="134.7" x2="368" y2="134.7" stroke="#e1e0d9"/>
+<line x1="218" y1="78.0" x2="368" y2="78.0" stroke="#e1e0d9"/>
+<polyline points="218.0,244.6 224.0,244.6 230.0,244.6 236.0,245.2 242.0,245.2 248.0,245.2 254.0,245.7 260.0,245.7 266.0,245.7 272.0,245.7 278.0,245.7 284.0,245.7 290.0,245.7 296.0,246.3 302.0,245.7 308.0,245.7 314.0,246.3 320.0,246.3 326.0,246.3 332.0,246.3 338.0,246.9 344.0,246.9 350.0,246.9 356.0,246.9 362.0,246.9 368.0,246.9" fill="none" stroke="#8a8f98" stroke-width="2.2" stroke-dasharray="4 3"/>
+<polyline points="218.0,125.0 224.0,121.1 230.0,114.8 236.0,106.3 242.0,101.8 248.0,97.3 254.0,100.1 260.0,106.3 266.0,101.2 272.0,84.2 278.0,77.4 284.0,80.3 290.0,76.3 296.0,83.7 302.0,90.5 308.0,96.1 314.0,103.5 320.0,114.3 326.0,121.6 332.0,123.3 338.0,111.4 344.0,119.9 350.0,133.0 356.0,140.3 362.0,138.6 368.0,136.4" fill="none" stroke="#184f95" stroke-width="2.4"/>
+<text x="218.0" y="119.0" font-size="10" fill="#52514e" text-anchor="start">21.7</text>
+<text x="368.0" y="130.4" font-size="10" fill="#0A0A0E" text-anchor="end" font-weight="600">19.7</text>
+<text x="218.0" y="263.0" font-size="11" fill="#898781" text-anchor="start">2000</text>
+<text x="368.0" y="263.0" font-size="11" fill="#898781" text-anchor="end">2025</text>
+<text x="390.0" y="64.0" font-size="11" fill="#0A0A0E" text-anchor="start" font-weight="600">Italy</text>
+<line x1="390" y1="248.0" x2="540" y2="248.0" stroke="#e1e0d9"/>
+<line x1="390" y1="191.3" x2="540" y2="191.3" stroke="#e1e0d9"/>
+<line x1="390" y1="134.7" x2="540" y2="134.7" stroke="#e1e0d9"/>
+<line x1="390" y1="78.0" x2="540" y2="78.0" stroke="#e1e0d9"/>
+<polyline points="510.0,235.0 516.0,238.4 522.0,240.1 528.0,240.6 534.0,241.2 540.0,241.2" fill="none" stroke="#8a8f98" stroke-width="2.2" stroke-dasharray="4 3"/>
+<polyline points="390.0,218.0 396.0,216.8 402.0,214.0 408.0,212.9 414.0,210.6 420.0,207.2 426.0,204.4 432.0,204.4 438.0,203.8 444.0,200.4 450.0,201.5 456.0,202.1 462.0,202.7 468.0,199.3 474.0,198.1 480.0,200.4 486.0,203.2 492.0,205.5 498.0,207.2 504.0,208.9 510.0,206.1 516.0,211.2 522.0,214.6 528.0,218.5 534.0,219.7 540.0,221.4" fill="none" stroke="#184f95" stroke-width="2.4"/>
+<text x="390.0" y="212.0" font-size="10" fill="#52514e" text-anchor="start">5.3</text>
+<text x="540.0" y="215.4" font-size="10" fill="#0A0A0E" text-anchor="end" font-weight="600">4.7</text>
+<text x="390.0" y="263.0" font-size="11" fill="#898781" text-anchor="start">2000</text>
+<text x="540.0" y="263.0" font-size="11" fill="#898781" text-anchor="end">2025</text>
+<text x="562.0" y="64.0" font-size="11" fill="#0A0A0E" text-anchor="start" font-weight="600">Spain</text>
+<line x1="562" y1="248.0" x2="712" y2="248.0" stroke="#e1e0d9"/>
+<line x1="562" y1="191.3" x2="712" y2="191.3" stroke="#e1e0d9"/>
+<line x1="562" y1="134.7" x2="712" y2="134.7" stroke="#e1e0d9"/>
+<line x1="562" y1="78.0" x2="712" y2="78.0" stroke="#e1e0d9"/>
+<polyline points="682.0,154.5 688.0,162.4 694.0,168.1 700.0,170.4 706.0,170.4 712.0,176.6" fill="none" stroke="#8a8f98" stroke-width="2.2" stroke-dasharray="4 3"/>
+<text x="712.0" y="192.6" font-size="10" fill="#52514e" text-anchor="end">of which central govt 12.6</text>
+<polyline points="562.0,195.9 568.0,196.4 574.0,196.4 580.0,197.0 586.0,197.6 592.0,197.0 598.0,199.3 604.0,199.8 610.0,193.6 616.0,180.6 622.0,164.1 628.0,151.1 634.0,120.5 640.0,108.6 646.0,97.3 652.0,92.7 658.0,91.6 664.0,94.4 670.0,99.0 676.0,104.1 682.0,84.8 688.0,94.4 694.0,108.0 700.0,116.0 706.0,120.5 712.0,126.7" fill="none" stroke="#184f95" stroke-width="2.4"/>
+<text x="562.0" y="189.9" font-size="10" fill="#52514e" text-anchor="start">9.2</text>
+<text x="712.0" y="120.7" font-size="10" fill="#0A0A0E" text-anchor="end" font-weight="600">21.4</text>
+<text x="562.0" y="263.0" font-size="11" fill="#898781" text-anchor="start">2000</text>
+<text x="712.0" y="263.0" font-size="11" fill="#898781" text-anchor="end">2025</text>
+<line x1="0" y1="36" x2="18" y2="36" stroke="#184f95" stroke-width="2.4"/>
+<text x="24.0" y="40.0" font-size="10" fill="#52514e" text-anchor="start">subnational government debt</text>
+<line x1="230" y1="36" x2="248" y2="36" stroke="#8a8f98" stroke-width="2.2" stroke-dasharray="4 3"/>
+<text x="254.0" y="40.0" font-size="10" fill="#52514e" text-anchor="start">of which held by central government (published since 2020 for Spain, France and Italy)</text>
+<line x1="0" y1="302.0" x2="720" y2="302.0" stroke="#e1e0d9"/>
+<text x="0" y="315.0" font-size="9" fill="#52514e">Eurostat gov_10q_ggdebt (4th quarter) and gov_10dd_ggd (holdings), S1312 + S1313, in % of GDP</text>
+<text x="0" y="327.0" font-size="9" fill="#52514e">Statistical scope, not responsibilities: France and Italy have no state-government tier (S1312).</text>
+<text x="0" y="339.0" font-size="9" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/local-government-debt/</text>
+</svg>

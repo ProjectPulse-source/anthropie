@@ -176,7 +176,7 @@ Debt converts present spending into future obligations. Those who come later the
 
 <details class="repli"><summary>Net debt does not settle it either: it deducts neither roads nor human capital; the objection "we owe it to ourselves" is dealt with on a separate page</summary>
 
-The stock is not enough to settle the matter, and net debt does no better: the measure INSEE publishes deducts only certain financial assets — cash, loans, securities —, not roads, human capital or the environment. Whatever the borrowing finances, one point remains: the decision is taken without those who will bear part of it. The objection "we owe it to ourselves" and its answer are developed on the page [Is public debt a burden on future generations?](/dette-publique-generations-futures/) (in French).
+The stock is not enough to settle the matter, and net debt does no better: the measure INSEE publishes deducts only certain financial assets — cash, loans, securities —, not roads, human capital or the environment. Whatever the borrowing finances, one point remains: the decision is taken without those who will bear part of it. The objection "we owe it to ourselves" and its answer are developed on the page [Is public debt a burden on future generations?](/en/public-debt-future-generations/).
 
 </details>
 
@@ -186,7 +186,7 @@ Not all taxpayers are equal in the face of an adjustment. Households and firms t
 
 <details class="repli"><summary>To test it: groups defined independently of the result, a specified adjustment, a chosen measure of effort — and the cases that would weaken it, which cannot be reread afterwards as confirmations</summary>
 
-To test it, these groups must be defined independently of the result, the adjustment studied must be specified — a given tax reform, a given benefit freeze — and a measure of effort chosen. It would be weakened by an adjustment falling mainly on other groups, or by compensation granted to the losers identified; such cases cannot be reread after the fact as confirmations. The territorial channel — the State shifting part of its constraint onto local authorities — is examined on the page [Public debt: why are local authorities the adjustment variable?](/dette-publique-collectivites-locales/) (in French).
+To test it, these groups must be defined independently of the result, the adjustment studied must be specified — a given tax reform, a given benefit freeze — and a measure of effort chosen. It would be weakened by an adjustment falling mainly on other groups, or by compensation granted to the losers identified; such cases cannot be reread after the fact as confirmations. The territorial channel — the State shifting part of its constraint onto local authorities — is examined on the page [Public debt: why are local authorities the adjustment variable?](/en/local-government-debt/).
 
 </details>
 
@@ -250,9 +250,9 @@ What can be established is the effect of a specific decision — a reform, a fre
 **On generations, only one statement withstands the balance-sheet objection.** Whether a debt weighs on or benefits those who come after depends on its use, its financing and the claims passed on: the stock does not say, and the published net debt does not say either, since it deducts only certain financial assets. What remains true in every case is of another order: the decision is taken without those who will bear part of it.
 
 <div class="prolongements" role="group" aria-label="Further reading in this dossier">
-<p class="prolongements__titre">Further reading in this dossier: two applications of "who pays?" (in French)</p>
-<a class="prolongements__carte" href="/dette-publique-collectivites-locales/" hreflang="fr"><b>Local authorities</b><span>How a constraint on the State can pass down to local authorities that carry little debt but are tightly regulated. (In French)</span></a>
-<a class="prolongements__carte" href="/dette-publique-generations-futures/" hreflang="fr"><b>Future generations</b><span>When does debt really amount to a transfer to those who come after? (In French)</span></a>
+<p class="prolongements__titre">Further reading in this dossier: two applications of "who pays?"</p>
+<a class="prolongements__carte" href="/en/local-government-debt/"><b>Local authorities</b><span>How a constraint on the State can pass down to local authorities that carry little debt but are tightly regulated.</span></a>
+<a class="prolongements__carte" href="/en/public-debt-future-generations/"><b>Future generations</b><span>When does debt really amount to a transfer to those who come after?</span></a>
 </div>
 
 ## Frequently asked questions {#questions}

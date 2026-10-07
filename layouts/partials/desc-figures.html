@@ -92,9 +92,10 @@
 {{- end -}}
 {{- if in $text "{mes." -}}{{- errorf "desc-figures: placeholder {mes.*} non resolu dans : %s" $text -}}{{- end -}}
 {{- /* Prolongement « Collectivités locales » : placeholders {coll.<cle>}, depuis data/dette_collectivites.json
-       (bloc affichage, scripts/update_dette_collectivites.py). Page en français seulement : pas de bloc anglais. */ -}}
+       (bloc affichage, scripts/update_dette_collectivites.py). Bilingue depuis le 07/10/2026 : bloc choisi selon la langue
+       (affichage_en sur /en/local-government-debt/) ; bloc absent = placeholder non resolu = echec. */ -}}
 {{- with site.Data.dette_collectivites -}}
-  {{- range $k, $v := .affichage -}}
+  {{- range $k, $v := (cond (eq site.Language.Lang "en") .affichage_en .affichage) -}}
     {{- $text = replace $text (printf "{coll.%s}" $k) $v -}}
   {{- end -}}
 {{- end -}}
@@ -108,9 +109,9 @@
 {{- end -}}
 {{- if in $text "{baisse." -}}{{- errorf "desc-figures: placeholder {baisse.*} non resolu dans : %s" $text -}}{{- end -}}
 {{- /* Prolongement « Générations futures » : placeholders {gen.<cle>}, depuis data/dette_generations.json (bloc affichage,
-       scripts/update_dette_generations.py). Page en français seulement : pas de bloc anglais. */ -}}
+       scripts/update_dette_generations.py). Bilingue depuis le 07/10/2026 : bloc choisi selon la langue (affichage_en strict). */ -}}
 {{- with site.Data.dette_generations -}}
-  {{- range $k, $v := .affichage -}}
+  {{- range $k, $v := (cond (eq site.Language.Lang "en") .affichage_en .affichage) -}}
     {{- $text = replace $text (printf "{gen.%s}" $k) $v -}}
   {{- end -}}
 {{- end -}}

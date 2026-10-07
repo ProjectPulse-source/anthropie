@@ -1,3 +1,4 @@
+{{- $lc := partial "lang-cible.html" . -}}
 <header class="site-header">
   <div class="site-header__inner">
     <a href="{{ "/" | relLangURL }}" class="wordmark">Stéphane <span class="wordmark__sep">·</span> Lalut</a>
@@ -9,9 +10,9 @@
         <span class="primary-nav__lang">
           {{ if eq .Lang "fr" }}
             <span class="primary-nav__lang-active">FR</span>
-            {{ if .IsTranslated }}{{ range .Translations }}<a href="{{ .Permalink }}" hreflang="{{ .Lang }}" title="Cette page en anglais">EN</a>{{ end }}{{ else }}<a href="/en/" class="primary-nav__lang--site" title="Site en anglais — cette page n'est pas traduite">EN</a>{{ end }}
+            {{ if $lc.exacte }}<a href="{{ $lc.url }}" hreflang="en" title="Cette page en anglais">EN</a>{{ else }}<a href="{{ $lc.url }}" hreflang="en" class="primary-nav__lang--site" title="Cette page n'est pas traduite — page anglaise la plus proche">EN</a>{{ end }}
           {{ else }}
-            {{ if .IsTranslated }}{{ range .Translations }}<a href="{{ .Permalink }}" hreflang="{{ .Lang }}" title="This page in French">FR</a>{{ end }}{{ else }}<a href="/" class="primary-nav__lang--site" title="French site — this page is not translated">FR</a>{{ end }}
+            {{ if $lc.exacte }}<a href="{{ $lc.url }}" hreflang="fr" title="This page in French">FR</a>{{ else }}<a href="{{ $lc.url }}" hreflang="fr" class="primary-nav__lang--site" title="This page is not translated — closest French page">FR</a>{{ end }}
             <span class="primary-nav__lang-active">EN</span>
           {{ end }}
         </span>
@@ -29,9 +30,9 @@
       {{ end }}
       {{ if hugo.IsMultilingual }}
         {{ if eq .Lang "fr" }}
-          {{ if .IsTranslated }}{{ range .Translations }}<a href="{{ .Permalink }}" hreflang="{{ .Lang }}">English — cette page</a>{{ end }}{{ else }}<a href="/en/" class="mobile-menu__lang--site">English (site)</a>{{ end }}
+          {{ if $lc.exacte }}<a href="{{ $lc.url }}" hreflang="en">English — cette page</a>{{ else }}<a href="{{ $lc.url }}" hreflang="en" class="mobile-menu__lang--site">English (page la plus proche)</a>{{ end }}
         {{ else }}
-          {{ if .IsTranslated }}{{ range .Translations }}<a href="{{ .Permalink }}" hreflang="{{ .Lang }}">Français — this page</a>{{ end }}{{ else }}<a href="/" class="mobile-menu__lang--site">Français (site)</a>{{ end }}
+          {{ if $lc.exacte }}<a href="{{ $lc.url }}" hreflang="fr">Français — this page</a>{{ else }}<a href="{{ $lc.url }}" hreflang="fr" class="mobile-menu__lang--site">Français (closest page)</a>{{ end }}
         {{ end }}
       {{ end }}
     </nav>

@@ -1,6 +1,6 @@
 ---
 title: "Les collectivités locales sont-elles une variable d'ajustement des finances publiques ?"
-description: "Depuis {coll.an_dette_deb}, la dette des collectivités est passée de {coll.dette_loc_deb} % à {coll.dette_loc_fin} % du PIB pendant que la dette publique doublait. Mais de {coll.ep_a0} à {coll.ep_a1}, la baisse des dotations a coïncidé avec un recul de leur investissement. Comptes Eurostat et OFGL, par catégorie, comparés à l'Allemagne, l'Italie et l'Espagne."
+description: "Depuis {coll.an_dette_deb}, la dette des collectivités est passée de {coll.dette_loc_deb} % à {coll.dette_loc_fin} % du PIB pendant que la dette publique doublait presque. Mais de {coll.ep_a0} à {coll.ep_a1}, la baisse des dotations a coïncidé avec un recul de leur investissement. Comptes Eurostat et OFGL, par catégorie, comparés à l'Allemagne, l'Italie et l'Espagne."
 chapo: "Les comptes ne permettent pas d'en faire une règle générale : depuis {coll.an_dette_deb}, la dette publique française est passée de {coll.dette_apu_deb} % à {coll.dette_apu_fin} % du PIB, celle des collectivités de {coll.dette_loc_deb} % à {coll.dette_loc_fin} % seulement. Mais de {coll.ep_a0} à {coll.ep_a1}, la baisse des concours de l'État a coïncidé avec un redressement du solde local passé surtout par la baisse des dépenses, notamment d'équipement. Les comptes montrent où l'ajustement apparaît ; ils n'établissent pas, seuls, ce qui l'a causé."
 date: 2026-07-24
 lastmod: 2026-10-02

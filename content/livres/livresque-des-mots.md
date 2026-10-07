@@ -44,6 +44,7 @@ faq:
     answer: "Oui. L'édition brochée se clôt sur un index des auteurs qui renvoie à la page de chaque citation ; l'anthologie, elle, reste sans classement. Un fil pour flâner, un index pour retrouver. En version Kindle, la recherche plein texte ramène une citation, un auteur ou un mot."
   - question: "À qui offrir Livresque des mots ?"
     answer: "À l'amoureux de la langue et des formules, à l'écrivain en quête de compagnie, au lecteur qui aime ouvrir un livre au hasard. Une anthologie sans ordre imposé se prête naturellement au cadeau ; en version Kindle, le cadeau passe par un lien prépayé (mode d'emploi sur la page Offrir un livre Kindle)."
+lang_repli: "/en/books/"  # pas de version anglaise (exclusion déclarée) : cible de l'onglet EN, partials/lang-cible.html
 ---
 
 Une anthologie qui refuse l'ordre alphabétique.
