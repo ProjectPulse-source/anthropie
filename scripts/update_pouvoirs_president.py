@@ -166,13 +166,21 @@ def calculer(base: dict, textes: dict) -> tuple[dict, list[str]]:
 
     n = len(inv)
     compte = {a: sum(1 for e in inv if e.get(a)) for a, _ in ATTRIBUTS}
-    seuls = [e for e in inv if not (e.get("condition") or e.get("autre_autorite") or e.get("partage"))]
-    # G4 : « seulement » n'est écrit que si les actes sans condition, ni autre autorité, ni pouvoir partagé sont
-    # strictement minoritaires ; sinon la phrase de la page serait fausse.
+    # Le compte repose sur deux colonnes, celles qui font intervenir un autre acteur autour de l'acte : avant (condition)
+    # et après (autre_autorite). Contre-expertise du dossier complet (anthropie-site-20261007-161427) : un pouvoir que
+    # d'autres autorités détiennent aussi (partage) n'est pas une intervention dans l'acte du président ; la page dit
+    # que cette colonne « n'y change rien », ce que G4 bis vérifie.
+    seuls = [e for e in inv if not (e.get("condition") or e.get("autre_autorite"))]
+    # G4 : « seulement » n'est écrit que si les actes sans condition ni intervention ultérieure sont strictement
+    # minoritaires ; sinon la phrase de la page serait fausse.
     if not (0 < len(seuls) and 2 * len(seuls) < n):
-        raise Arret("G4 : %d actes sur %d sans condition ni autre autorite ni pouvoir partage : « seulement » est faux"
+        raise Arret("G4 : %d actes sur %d sans condition ni intervention ulterieure : « seulement » est faux"
                     % (len(seuls), n))
     gardes.append("G4 : « seulement » tenu (%d sur %d)" % (len(seuls), n))
+    partage_seul = [e["renvoi"] for e in seuls if e.get("partage")]
+    if partage_seul:
+        raise Arret("G4 bis : %s : seul un pouvoir partage les distingue ; « n'y change rien » est faux" % partage_seul)
+    gardes.append("G4 bis : la colonne des pouvoirs partages ne change pas le compte")
     r = {"n": n, "compte": compte, "seuls": [e["pouvoir"] for e in seuls], "seuls_renvois": [e["renvoi"] for e in seuls],
          "inventaire": inv, "regles": base["regles"]}
     for k, (art, c_fr, c_en) in PROSE.items():
@@ -370,14 +378,16 @@ def fiches_figures(svg: str, A: dict, svg_en: str, A_en: dict) -> dict:
     cart_en = [html.unescape(t) for t in re.findall(r'<text x="0" y="[0-9.]+" font-size="9" fill="[^"]+">(.*?)</text>', svg_en)]
     if len(cart_en) != 3 or cart_en[-1] != LICENCE_EN:
         raise Arret("fiche : cartouche illisible dans le SVG anglais")
-    montre_en = ("Of the %s provisions that article 19 of the French Constitution exempts from countersignature, only %s contain "
-                 "no prior condition, no subsequent intervention by another actor and no equivalent power vested in another "
-                 "authority: %s. This does not mean that these are the president's only powers of his own."
+    montre_en = ("Of the %s provisions that article 19 of the French Constitution exempts from countersignature, only %s "
+                 "provide, in their text, for neither a recommendation or consultation before the act nor the intervention "
+                 "of another actor afterwards: %s. This count describes the text, not practice: it measures neither the "
+                 "president's autonomy nor the number of his own powers."
                  % (A_en["n_renvois"], A_en["n_seuls"], A_en["seuls_liste"]))
-    montre = ("Sur les %s dispositions que l'article 19 dispense de contreseing, %s seulement ne contiennent ni condition "
-              "préalable, ni intervention ultérieure d'un autre acteur, ni pouvoir de même nature attribué à d'autres autorités : %s. "
-              "Cette observation ne signifie pas que le président ne disposerait que de %s pouvoirs propres."
-              % (A["n_renvois"], A["n_seuls"], A["seuls_liste"], A["n_seuls"]))
+    montre = ("Sur les %s dispositions que l'article 19 dispense de contreseing, %s seulement ne prévoient, dans leur texte, "
+              "ni proposition ou consultation avant l'acte, ni intervention d'un autre acteur pour la suite : %s. "
+              "Ce compte décrit le texte, non la pratique : il ne mesure ni l'autonomie du président ni le nombre de ses "
+              "pouvoirs propres."
+              % (A["n_renvois"], A["n_seuls"], A["seuls_liste"]))
     return {"fr": [dict(id="article19", fichier=FIG, titre=titre, montre=montre, source=cart[0], precaution=cart[1])],
             "en": [dict(id="article19", fichier=FIG + "-en", titre=titre_en, montre=montre_en, source=cart_en[0],
                         precaution=cart_en[1])]}
@@ -431,6 +441,16 @@ def autotest(base: dict, textes: dict) -> list[str]:
         if not str(e).startswith("G2-EN"):
             raise
         out.append("citation anglaise alteree -> " + str(e)[:60])
+    m = copy.deepcopy(base)
+    e54 = next(e for e in m["inventaire_19"] if e["renvoi"].startswith("54"))
+    e54["autre_autorite"] = None  # art. 54 ne garderait que le pouvoir partagé
+    try:
+        calculer(m, textes)
+        raise Arret("mutation pouvoir partage seul : G4 bis n'a pas mordu, controle ABSENT")
+    except Arret as e:
+        if not str(e).startswith("G4 bis"):
+            raise
+        out.append("pouvoir partage seul -> " + str(e)[:60])
     m = copy.deepcopy(base)
     del m["inventaire_19"][4]
     try:

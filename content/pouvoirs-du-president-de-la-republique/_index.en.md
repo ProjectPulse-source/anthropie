@@ -60,7 +60,7 @@ onglet:  # bar of its block (partials/barre-bloc.html, set by the template)
 
 <div class="resultat-phrase">
 
-**The finding in one sentence.** Of the {{< pv-val "n_renvois" >}} provisions that article 19 exempts from countersignature, only {{< pv-val "n_seuls" >}} contain, in the text of the relevant article, no prior condition, no subsequent intervention by another actor and no equivalent power vested in another authority: {{< pv-val "seuls_liste" >}}. This does not mean that these are the president's only powers of his own.
+**The finding in one sentence.** Of the {{< pv-val "n_renvois" >}} provisions that article 19 exempts from countersignature, only {{< pv-val "n_seuls" >}} provide, in the text of the relevant article, for neither a recommendation or consultation before the act nor the intervention of another actor afterwards: {{< pv-val "seuls_liste" >}}. This count describes the text, not practice: it measures neither the president's autonomy nor the number of his own powers, and the fact that other authorities hold an equivalent power, which the matrix also records, does not change it.
 
 </div>
 
@@ -113,9 +113,9 @@ page of this dossier, apply to any promise, whichever candidate makes it:
 2. **Is a law needed, and who can get it passed?** See [who can get a law passed](/en/who-can-get-a-law-passed-in-france/), and, for a reform put to the voters, [the referendum](/en/can-the-french-president-call-a-referendum/).
 3. **Is the decision taken in Paris?** In some matters it is taken in the European Union, with other States: see [what France can decide in the European Union](/en/what-can-france-decide-in-the-european-union/).
 4. **Once passed, does the measure apply, and how long does it take to produce its effects?** See [the implementation of laws](/en/does-a-law-apply-as-soon-as-it-is-passed/) and [the time a training takes](/en/can-a-campaign-promise-produce-results-within-five-years/).
-5. **Which indicator will say whether it was kept?** See [how to tell whether a promise was kept](/en/how-can-we-tell-whether-a-promise-was-kept/).
+5. **Which observable criterion will say whether it was kept?** An indicator, an act, a threshold or a deadline, set in advance. See [how to tell whether a promise was kept](/en/how-can-we-tell-whether-a-promise-was-kept/).
 
-These questions do not say whether a promise is good or bad: they say what its fulfilment depends on.
+These questions do not say whether a promise is good or bad: they say what its fulfilment depends on. That another actor intervenes does not mean that it blocks: it only means that the outcome does not rest on a single signature. And they concern authorisations and procedures, not means: appropriations voted in the finance act, staff and departments to carry it out, local authorities and public bodies that apply it, courts that may be seized. A promise may clear every step of this series and still lack those means.
 
 ## What this page does not say {#limites}
 
@@ -140,5 +140,5 @@ All the articles cited here were read in their version in force, on Légifrance,
 The inventory, quotations and matrix are produced by a single script, which rereads the archived texts and refuses to write if a quotation stops appearing in its article; no cell is filled by hand. **Download the data** (CC BY 4.0 licence): [CSV](/pouvoirs_president_donnees.csv), long format, one row per element and per article (French quotations); [JSON](/pouvoirs_president_donnees.json), with definitions and the record of the checks (in French). This dataset is also archived on Zenodo, with the six others of the same series and their methods note, under a permanent identifier for citation: [doi:10.5281/zenodo.23212665](https://doi.org/10.5281/zenodo.23212665).
 
 {{< reutiliser figures="figures_pouvoirs" jeu="pouvoirs_president_donnees" sources="Légifrance (Constitution of 4 October 1958) and the Conseil constitutionnel's English translation" donnees="The inventory of the eight provisions of article 19, each element with its exact quotation, its article and its reading date, and the articles that assign statute law and regulation; the same content exists as CSV, in long format, readable in a spreadsheet." >}}
-This page reads, in the text of the French Constitution, the {{< pv-val "n_renvois" >}} provisions that article 19 exempts from countersignature. Only {{< pv-val "n_seuls" >}}, {{< pv-val "seuls_liste" >}}, contain in their article no prior condition, no subsequent intervention by another actor and no equivalent power vested in another authority; this does not mean that these are the president's only powers of his own. Statute law, passed by Parliament, sets taxes in particular (art. 34); regulation belongs to the Prime Minister (art. 21), except for the decrees deliberated upon in the Council of Ministers, which are countersigned.
+This page reads, in the text of the French Constitution, the {{< pv-val "n_renvois" >}} provisions that article 19 exempts from countersignature. Only {{< pv-val "n_seuls" >}}, {{< pv-val "seuls_liste" >}}, provide in their article for neither a recommendation or consultation before the act nor the intervention of another actor afterwards; this count describes the text, not practice, and measures neither the president's autonomy nor the number of his own powers. Statute law, passed by Parliament, sets taxes in particular (art. 34); regulation belongs to the Prime Minister (art. 21), except for the decrees deliberated upon in the Council of Ministers, which are countersigned.
 {{< /reutiliser >}}

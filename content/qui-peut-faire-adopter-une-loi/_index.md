@@ -1,7 +1,7 @@
 ---
 title: "Qui peut faire adopter une loi ?"
 description: "Le Parlement vote la loi, mais qui en a l'initiative, combien de propositions arrivent en séance, et que change l'article 49.3 ? L'origine des lois promulguées sous les trois dernières législatures complètes, rapprochée loi par loi entre l'Assemblée nationale, le Sénat et le Journal officiel, le sort des propositions de loi déposées et les engagements de responsabilité. Données ouvertes."
-chapo: "Le Parlement vote la loi, et l'initiative appartient au Premier ministre comme aux parlementaires. Dans le champ étudié, {ado.P14} des {ado.N14} lois promulguées sous la XIVe législature sont d'origine parlementaire, {ado.P15} sur {ado.N15} sous la XVe et {ado.P16} sur {ado.N16} sous la XVIe. Cette origine dit qui a déposé le texte, non qui l'a façonné ni quels textes déposés ont échoué : dans chacune de ces législatures, plus de la moitié des propositions de loi ordinaires déposées à l'Assemblée sont restées sans examen en séance observé avant sa fin. La voie ordinaire fait intervenir les deux assemblées ; à l'Assemblée nationale, l'article 49, alinéa 3 permet en outre au Gouvernement d'engager sa responsabilité pour qu'un texte soit considéré comme adopté à l'étape concernée, sauf censure."
+chapo: "Le Parlement vote la loi, et l'initiative appartient au Premier ministre comme aux parlementaires. Hors lois de finances, de financement de la sécurité sociale et organiques, et hors traités, {ado.P14} des {ado.N14} lois promulguées sous la XIVe législature sont d'origine parlementaire, {ado.P15} sur {ado.N15} sous la XVe et {ado.P16} sur {ado.N16} sous la XVIe. Cette origine dit qui a déposé le texte, non qui l'a façonné ni quels textes déposés ont échoué : dans chacune de ces législatures, plus de la moitié des propositions de loi ordinaires déposées à l'Assemblée sont restées sans examen en séance observé avant sa fin. La voie ordinaire fait intervenir les deux assemblées ; à l'Assemblée nationale, l'article 49, alinéa 3 permet en outre au Gouvernement d'engager sa responsabilité pour qu'un texte soit considéré comme adopté à l'étape concernée, sauf censure."
 date: 2026-10-06
 lastmod: 2026-10-06
 donnees: [promesses_adopter]
@@ -28,7 +28,7 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
   apropos: "promesses électorales et institutions politiques françaises"
 faq:
   - question: "Qui peut proposer une loi en France ?"
-    answer: "Selon l'article 39 de la Constitution, « {ado.cit_art39} » Un texte du Gouvernement est un projet de loi ; un texte d'un député ou d'un sénateur est une proposition de loi. Dans le champ étudié, {ado.P16} des {ado.N16} lois promulguées sous la XVIe législature étaient issues d'une proposition, {ado.G16} d'un projet."
+    answer: "Selon l'article 39 de la Constitution, « {ado.cit_art39} » Un texte du Gouvernement est un projet de loi ; un texte d'un député ou d'un sénateur est une proposition de loi. Hors lois de finances, de financement de la sécurité sociale et organiques, et hors traités, {ado.P16} des {ado.N16} lois promulguées sous la XVIe législature étaient issues d'une proposition, {ado.G16} d'un projet."
   - question: "Parmi les lois promulguées, quelle part vient d'un projet du Gouvernement ?"
     answer: "Cela varie selon la législature. Dans le champ étudié (hors traités, lois de finances, de financement de la sécurité sociale et organiques), {ado.G14} des {ado.N14} lois promulguées venaient d'un projet du Gouvernement sous la XIVe législature, {ado.G15} sur {ado.N15} sous la XVe et {ado.G16} sur {ado.N16} sous la XVIe. C'est l'origine au dépôt du texte : elle ne mesure pas l'influence du Gouvernement sur une proposition, ni les amendements du Parlement sur un projet."
   - question: "Combien de propositions de loi arrivent en séance ?"
@@ -49,7 +49,7 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
 
 Une promesse qui nécessite une loi doit franchir l'étape parlementaire. La Constitution le dit en une phrase&nbsp;: «&nbsp;{{< ado-val "cit_art24" >}}&nbsp;» (art.&nbsp;24). Elle partage l'initiative&nbsp;: «&nbsp;{{< ado-val "cit_art39" >}}&nbsp;» (art.&nbsp;39). Cette page compte, loi par loi, qui a déposé les lois promulguées depuis 2012, combien de propositions de loi arrivent en séance, et combien de fois le Gouvernement a engagé sa responsabilité sur un texte au titre de l'article&nbsp;49, alinéa&nbsp;3. Tous les nombres viennent des données publiques de l'Assemblée nationale, du Sénat et du Journal officiel, rapprochées loi par loi, et aucun n'est saisi à la main.
 
-**Réponse courte.** Le Parlement vote la loi, mais le texte voté peut venir du Gouvernement ou d'un parlementaire. Dans le champ étudié, {{< ado-val "P16" >}} des {{< ado-val "N16" >}} lois promulguées sous la XVIe législature étaient issues d'une proposition de loi. Mais plus de la moitié des propositions de loi déposées à l'Assemblée restent sans examen en séance observé avant la fin de la législature. Et le Gouvernement peut engager sa responsabilité sur un texte&nbsp;: à l'étape concernée, le texte est alors considéré comme adopté, sauf si une motion de censure est votée.
+**Réponse courte.** Le Parlement vote la loi, mais le texte voté peut venir du Gouvernement ou d'un parlementaire. Hors lois de finances, de financement de la sécurité sociale et organiques, et hors traités, {{< ado-val "P16" >}} des {{< ado-val "N16" >}} lois promulguées sous la XVIe législature étaient issues d'une proposition de loi. Mais plus de la moitié des propositions de loi déposées à l'Assemblée restent sans examen en séance observé avant la fin de la législature. Et le Gouvernement peut engager sa responsabilité sur un texte&nbsp;: à l'étape concernée, le texte est alors considéré comme adopté, sauf si une motion de censure est votée.
 
 ## Qui est à l'origine des lois promulguées&nbsp;? {#origine-des-lois}
 
@@ -61,7 +61,7 @@ Une promesse qui nécessite une loi doit franchir l'étape parlementaire. La Con
 
 <div class="resultat-phrase">
 
-**Le résultat en une phrase.** Dans le champ étudié, {{< ado-val "P14" >}} des {{< ado-val "N14" >}} lois promulguées sous la XIVe législature sont d'origine parlementaire, {{< ado-val "P15" >}} sur {{< ado-val "N15" >}} sous la XVe et {{< ado-val "P16" >}} sur {{< ado-val "N16" >}} sous la XVIe.
+**Le résultat en une phrase.** Hors lois de finances, de financement de la sécurité sociale et organiques, et hors traités, {{< ado-val "P14" >}} des {{< ado-val "N14" >}} lois promulguées sous la XIVe législature sont d'origine parlementaire, {{< ado-val "P15" >}} sur {{< ado-val "N15" >}} sous la XVe et {{< ado-val "P16" >}} sur {{< ado-val "N16" >}} sous la XVIe.
 
 </div>
 
@@ -97,7 +97,7 @@ L'initiative n'épuise pas les leviers de procédure&nbsp;: selon l'article&nbsp
 
 ## Que change l'article 49, alinéa 3&nbsp;? {#article-49-3}
 
-Il permet au Gouvernement d'engager sa responsabilité sur un texte devant l'Assemblée nationale. Selon l'article&nbsp;49 de la Constitution, «&nbsp;{{< ado-val "cit_art49a" >}}&nbsp;» Hors de ces textes, «&nbsp;{{< ado-val "cit_art49b" >}}&nbsp;» Le texte n'est pas voté à cette étape&nbsp;: il est considéré comme adopté, sauf si une motion de censure l'est.
+Il permet au Gouvernement d'engager sa responsabilité sur un texte devant l'Assemblée nationale. Selon l'article&nbsp;49 de la Constitution, «&nbsp;{{< ado-val "cit_art49a" >}}&nbsp;» Hors de ces textes, «&nbsp;{{< ado-val "cit_art49b" >}}&nbsp;» Le texte n'est pas voté à cette étape&nbsp;: il est considéré comme adopté, sauf si une motion de censure l'est. Ce relevé porte sur tous les textes, lois de finances comprises, que le compte de l'origine des lois laisse de côté.
 
 {{< figure-svg fichier="adopter-493" alt="Barres horizontales par législature : engagements de responsabilité sur un projet de loi de finances ou de financement de la sécurité sociale, et sur un autre projet ou une proposition. Ceux de la XIVe et de la XVe portent sur d'autres projets ; ceux de la XVIe portent en majorité sur des projets de loi de finances ou de financement de la sécurité sociale. Les valeurs sont dans le tableau sous la figure." >}}Engagements de responsabilité du Gouvernement sur un texte, un par texte et par étape de lecture, selon les catégories de l'article&nbsp;49, alinéa&nbsp;3&nbsp;: la loi de programmation des finances publiques y relève d'«&nbsp;un autre projet&nbsp;».{{< /figure-svg >}}
 

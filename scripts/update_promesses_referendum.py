@@ -81,6 +81,10 @@ CIT = {
     "art89_voies": ("89", "le projet de révision n'est pas présenté au référendum lorsque le Président de la République décide de le soumettre au Parlement convoqué en Congrès",
                     "a Government Bill to amend the Constitution shall not be submitted to referendum where the President of the Republic decides to submit it to Parliament convened in Congress"),
     "art60": ("60", "Il en proclame les résultats.", "shall proclaim the results of the referendum"),
+    # Contre-expertise du dossier complet (anthropie-site-20261007-161427) : le Congrès n'est ouvert qu'au projet de
+    # révision ; une proposition de révision d'origine parlementaire passe par le référendum (art. 89, al. 2 et 3).
+    "art89_ref": ("89", "La révision est définitive après avoir été approuvée par référendum.",
+                  "The amendment shall take effect after approval by referendum."),
 }
 # Témoin du JO (test_decisif/referendum/temoin_jo.py, 06/10/2026) : date du scrutin -> décret (date, JORFTEXT), loi.
 TEMOIN_JO = {
@@ -288,11 +292,31 @@ def verifier_citations(textes: dict, motifs: dict, S: dict) -> list[str]:
 
 # Décision n° 2007-560 DC (traité de Lisbonne), citée par la page : (citation, numéro).
 CIT_2007_560 = ("ne peut intervenir qu'après révision de la Constitution", "2007-560")
+# Intitulé du traité, cité par la page (section 2005) : lu dans la même décision.
+TITRE_LISBONNE = "Traité de Lisbonne modifiant le traité sur l'Union européenne et le traité instituant la Communauté européenne"
+
+
+# Révision de la Constitution par l'article 11 (même contre-expertise) : la page dit que le projet de 1962, adopté,
+# modifie la Constitution (loi n° 62-1292, témoin du JO) et que le Conseil s'est déclaré incompétent pour la juger.
+DEC_62_20 = ("62-20", "1962-11-06", "Incompétence pour statuer", "Président du Sénat", "n'a pas compétence")
+
+
+def verifier_62_20(par_id: dict, dec=DEC_62_20) -> str:
+    num, date, sol, saisi, dispositif = dec
+    s = next((s for s in par_id.values() if champ(s, "NUMERO") == num and champ(s, "NATURE") == "DC"), None)
+    if not s or champ(s, "DATE_DEC") != date or champ(s, "SOLUTION") != sol:
+        raise Arret("R7 : décision %s DC absente du stock, ou date / solution différentes" % num)
+    t = norm(contenu(s))
+    if norm(saisi) not in t or norm(dispositif) not in t:
+        raise Arret("R7 : décision %s DC : saisine ou dispositif cités introuvables" % num)
+    if TEMOIN_JO["1962-10-28"][2] != "62-1292":
+        raise Arret("R7 : loi référendaire du 28 octobre 1962 : témoin du JO différent de 62-1292")
+    return "R7 : décision %s DC (%s, %s), saisine du président du Sénat ; loi 62-1292 au témoin du JO" % (num, date, sol)
 
 
 def verifier_2007_560(par_id: dict) -> str:
     s = next((s for s in par_id.values() if champ(s, "NUMERO") == CIT_2007_560[1] and champ(s, "NATURE") == "DC"), None)
-    if not s or CIT_2007_560[0] not in norm(contenu(s)):
+    if not s or CIT_2007_560[0] not in norm(contenu(s)) or norm(TITRE_LISBONNE) not in norm(s):
         raise Arret("R4 : citation de la décision %s DC introuvable" % CIT_2007_560[1])
     return "R4 : décision %s DC (%s) citée mot pour mot" % (CIT_2007_560[1], champ(s, "DATE_DEC"))
 
@@ -671,6 +695,12 @@ def _main() -> int:
         log("autotest : la mutation a mordu : dépôt retiré -> R6")
     g += verifier_citations(textes, MOTIFS, S)
     g.append(verifier_2007_560(par_id))
+    g.append(verifier_62_20(par_id))
+    try:
+        verifier_62_20(par_id, DEC_62_20[:2] + ("Conformité",) + DEC_62_20[3:])
+        raise RuntimeError("R7 : la mutation « solution changée » n'a pas mordu")
+    except Arret:
+        log("autotest : la mutation a mordu : solution de 62-20 changée -> R7")
     r = resultat(R, S)
     phrases(r)
     g.append("R5 : phrases recalculées (N=%d, A=%d, R=%d, S=%d, C=%d, soutiens réunis=%d)" % (r["N"], r["A"], r["R"], r["S"], r["C"], r["reunis"]))

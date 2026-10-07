@@ -390,7 +390,7 @@ DATASETS = {
             "référendums nationaux et des référendums d'initiative partagée ; les votes publics de chaque État au "
             "Conseil de l'Union européenne sur les actes législatifs (2009-2026).</p>"
             "<p>Chaque jeu est produit par un script unique qui relit les sources officielles archivées, refuse d'écrire "
-            "si une donnée cesse de soutenir une phrase publiée, et est contrôlé par un témoin indépendant. Aucun nombre "
+            "si une donnée cesse de soutenir une phrase publiée, et est contrôlé par un témoin indépendant lorsqu'un témoin comparable existe ; sinon, la page le dit et décrit les contrôles de cohérence appliqués. Aucun nombre "
             "n'est saisi à la main. Chaque jeu accompagne une page publique de stephane-lalut.com, qui en donne la "
             "lecture, les limites et les sources ; la note de méthode jointe décrit sources, témoins, limites et "
             "empreintes SHA-256 des fichiers.</p>"
@@ -400,7 +400,7 @@ DATASETS = {
             "training, the overlap between ILO unemployment and registered jobseekers, the register of national and "
             "shared-initiative referendums, and the public votes of each Member State in the Council of the EU on "
             "legislative acts (2009-2026). Each dataset is produced by a single script that rereads archived official "
-            "sources and is checked against an independent witness.</em></p>"),
+            "sources and is checked against an independent witness where a comparable one exists; where none exists, the page says so and describes the consistency checks applied.</em></p>"),
         "keywords": ["Constitution française", "contreseing", "procédure législative", "article 49.3",
                      "application des lois", "référendum", "référendum d'initiative partagée",
                      "Conseil de l'Union européenne", "votes au Conseil", "promesses électorales", "chômage BIT",
