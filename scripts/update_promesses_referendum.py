@@ -108,11 +108,16 @@ OBJET = {
 }
 # Témoin de l'Assemblée nationale (test_decisif/referendum/test_r_e2.py) : dépôts « en application de l'article 11 »
 # sans décision du Conseil (décision de l'auteur, 06/10/2026 : dits au lecteur, sans cause).
+# Témoin du Sénat ajouté le 07/10/2026 (Dosleg, type « refe » ; EVALUATION_UNICITE_PUBLICS.md, C1) : ppl17-459.
+# Auteurs relus dans les textes déposés : n° 459 et n° 1749, un député et un sénateur ; n° 5203, un député.
 DEPOTS_SANS_SAISINE = [
-    {"numero": "1749", "legislature": "XVe", "date": "2019-03-06",
+    {"chambre": "Sénat", "numero": "459", "legislature": "2017-2018", "date": "2018-04-20", "auteurs": 2,
+     "objet": "renforcer le contrôle de l'immigration en France",
+     "objet_en": "strengthening immigration control in France"},
+    {"chambre": "AN", "numero": "1749", "legislature": "XVe", "date": "2019-03-06", "auteurs": 2,
      "objet": "mesures d'exception contre les djihadistes français ayant combattu en Irak et en Syrie",
      "objet_en": "exceptional measures against French jihadists who fought in Iraq and Syria"},
-    {"numero": "5203", "legislature": "XVe", "date": "2022-04-05",
+    {"chambre": "AN", "numero": "5203", "legislature": "XVe", "date": "2022-04-05", "auteurs": 1,
      "objet": "lutter contre les mauvais traitements envers les animaux",
      "objet_en": "combating the mistreatment of animals"},
 ]
@@ -360,7 +365,10 @@ def affichage(R, S, r) -> tuple[dict, dict]:
          "part_max": fr(max(part(l) for l in R), 1), "part_min": fr(min(part(l) for l in R), 1),
          "oui_1992": fr(100 * d["1992-09-20"]["oui"] / d["1992-09-20"]["exprimes"], 2),
          "non_1969": fr(100 * d["1969-04-27"]["non"] / d["1969-04-27"]["exprimes"], 2),
-         "depots_sans_saisine": "deux" if len(DEPOTS_SANS_SAISINE) == 2 else str(len(DEPOTS_SANS_SAISINE)),
+         "depots_sans_saisine": CHIFFRES_FR[len(DEPOTS_SANS_SAISINE)],
+         "depots_sans_saisine_maj": CHIFFRES_FR[len(DEPOTS_SANS_SAISINE)].capitalize(),
+         "depots_auteurs": ", ".join(CHIFFRES_FR[d["auteurs"]] for d in DEPOTS_SANS_SAISINE[:-1])
+                           + " et " + CHIFFRES_FR[DEPOTS_SANS_SAISINE[-1]["auteurs"]],
          "n_loi": CHIFFRES_FR[r["N"] - r["art89"]].capitalize(), "n_rev": "un seul" if r["art89"] == 1 else CHIFFRES_FR[r["art89"]],
          "part_min_an": min(R, key=part)["date_scrutin"][:4], "part_max_an": max(R, key=part)["date_scrutin"][:4],
          "non_conformes": CHIFFRES_FR[r["S"] - r["C"]], "cond2_maj": CHIFFRES_FR[r["cond2"]].capitalize(),
@@ -377,7 +385,10 @@ def affichage(R, S, r) -> tuple[dict, dict]:
          "part_max": "%.1f" % max(part(l) for l in R), "part_min": "%.1f" % min(part(l) for l in R),
          "oui_1992": "%.2f" % (100 * d["1992-09-20"]["oui"] / d["1992-09-20"]["exprimes"]),
          "non_1969": "%.2f" % (100 * d["1969-04-27"]["non"] / d["1969-04-27"]["exprimes"]),
-         "depots_sans_saisine": "two" if len(DEPOTS_SANS_SAISINE) == 2 else str(len(DEPOTS_SANS_SAISINE)),
+         "depots_sans_saisine": CHIFFRES_EN[len(DEPOTS_SANS_SAISINE)],
+         "depots_sans_saisine_maj": CHIFFRES_EN[len(DEPOTS_SANS_SAISINE)].capitalize(),
+         "depots_auteurs": ", ".join(CHIFFRES_EN[d["auteurs"]] for d in DEPOTS_SANS_SAISINE[:-1])
+                           + " and " + CHIFFRES_EN[DEPOTS_SANS_SAISINE[-1]["auteurs"]],
          "n_loi": CHIFFRES_EN[r["N"] - r["art89"]].capitalize(), "n_rev": "only one" if r["art89"] == 1 else CHIFFRES_EN[r["art89"]],
          "part_min_an": min(R, key=part)["date_scrutin"][:4], "part_max_an": max(R, key=part)["date_scrutin"][:4],
          "non_conformes": CHIFFRES_EN[r["S"] - r["C"]], "cond2_maj": CHIFFRES_EN[r["cond2"]].capitalize(),
@@ -463,7 +474,7 @@ T = {
            "t2": "Le référendum d'initiative partagée, de 2015 au {arrete}", "s2": "propositions de loi soumises au Conseil constitutionnel, et ce qu'elles sont devenues",
            "d2": "{S} saisines du Conseil constitutionnel ; {C} conforme ; {soutiens} soutiens recueillis pour {seuil} requis ; aucun référendum.",
            "src2": "Conseil constitutionnel, décisions « RIP » (stock CONSTIT, arrêté au 05/10/2026) ; Constitution, art. 11",
-           "note2": "Deux autres propositions déposées à l'Assemblée « en application de l'article 11 » n'ont fait l'objet d'aucune décision.",
+           "note2": "%s autres propositions déposées « en application de l'article 11 » (Sénat, Assemblée) n'ont fait l'objet d'aucune décision." % CHIFFRES_FR[len(DEPOTS_SANS_SAISINE)].capitalize(),
            "e1": "Saisines du Conseil", "e2": "Jugées conformes", "e3": "Soutien d'un dixième des inscrits réuni", "e4": "Soumises au référendum",
            "sout": "Soutiens recueillis : {soutiens}", "seuil": "Seuil : {seuil} (un dixième des inscrits)"},
     "en": {"t1": "National referendums in France since 1958", "s1": "date of the vote and share of 'yes' among valid votes, as at {arrete}",
@@ -475,7 +486,7 @@ T = {
            "t2": "The shared-initiative referendum, 2015 to {arrete}", "s2": "Private Members' Bills referred to the Conseil constitutionnel, and what became of them",
            "d2": "{S} referrals to the Conseil constitutionnel; {C} meeting the statutory conditions; {soutiens} signatures of support for {seuil} required; no referendum.",
            "src2": "Conseil constitutionnel, 'RIP' decisions (DILA CONSTIT database, as at 5 Oct. 2026); Constitution, art. 11",
-           "note2": "Two other bills tabled in the National Assembly 'under article 11' gave rise to no decision.",
+           "note2": "%s other bills tabled 'under article 11' (Senate, National Assembly) gave rise to no decision." % CHIFFRES_EN[len(DEPOTS_SANS_SAISINE)].capitalize(),
            "e1": "Referrals", "e2": "Met the statutory conditions", "e3": "One tenth of voters' support reached", "e4": "Put to a referendum",
            "sout": "Signatures collected: {soutiens}", "seuil": "Threshold: {seuil} (one tenth of registered voters)"},
 }
@@ -590,8 +601,11 @@ def csv_texte(R, S) -> str:
             w.writerow(["rip", n, s["date"], OBJET_RIP[n][0], "11 al. 3", "soutiens", s["soutiens"], "décision %s RIP" % s.get("declaration")])
             w.writerow(["rip", n, s["date"], OBJET_RIP[n][0], "11 al. 3", "seuil", s["seuil"], "décision %s RIP" % s.get("declaration")])
     for d in DEPOTS_SANS_SAISINE:
-        w.writerow(["depot_art11_sans_saisine", "AN %s %s" % (d["legislature"], d["numero"]), d["date"], d["objet"], "11 al. 3",
-                    "decision_du_conseil", "aucune", "Assemblée nationale, données ouvertes"])
+        src = "Sénat, base Dosleg" if d["chambre"] == "Sénat" else "Assemblée nationale, données ouvertes"
+        w.writerow(["depot_art11_sans_saisine", "%s %s %s" % (d["chambre"], d["legislature"], d["numero"]), d["date"], d["objet"],
+                    "11 al. 3", "decision_du_conseil", "aucune", src])
+        w.writerow(["depot_art11_sans_saisine", "%s %s %s" % (d["chambre"], d["legislature"], d["numero"]), d["date"], d["objet"],
+                    "11 al. 3", "auteurs", d["auteurs"], "texte déposé"])
     return buf.getvalue()
 
 
@@ -625,12 +639,36 @@ def main() -> int:
         return 1
 
 
+TEMOIN_RIP = PRO / "06_PROMOTION" / "RECHERCHE_DOSSIER_PROMESSES_2026-10-05" / "test_decisif" / "referendum" / "registre_rip.json"
+
+
+def verifier_depots(depots=None) -> str:
+    """R6 (07/10/2026) : la liste des dépôts « article 11 » sans décision est celle qu'a trouvée le témoin
+    (test_r_e2.py : Assemblée XIV à XVII, Dosleg type « refe »). Un écart dans un sens ou dans l'autre arrête."""
+    depots = DEPOTS_SANS_SAISINE if depots is None else depots
+    if not TEMOIN_RIP.exists():
+        raise Arret("R6 : sortie du témoin absente (%s) : lancer test_r_e2.py" % TEMOIN_RIP)
+    t = json.loads(TEMOIN_RIP.read_text(encoding="utf-8"))
+    vus = {("AN", re.sub(r"\D", "", d["uid"][-5:]).lstrip("0")) for d in t.get("depots_sans_saisine", [])}
+    vus |= {("Sénat", re.search(r"-(\d+)$", k).group(1)) for k in t.get("depots_senat_sans_decision", {})}
+    liste = {(d["chambre"], d["numero"]) for d in depots}
+    if liste != vus:
+        raise Arret("R6 : dépôts sans saisine, liste %s contre témoin %s" % (sorted(liste), sorted(vus)))
+    return "R6 : %d dépôts sans saisine, identiques au témoin (Assemblée et Sénat)" % len(liste)
+
+
 def _main() -> int:
     check = "--check" in sys.argv[1:]
     par_id = charger_constit()
     R, S = registre(par_id), rip(par_id)
     textes = {n: article_fr(n) for n in ARTICLES}
     g = gardes(R, S)
+    g.append(verifier_depots())
+    try:
+        verifier_depots(DEPOTS_SANS_SAISINE[1:])
+        raise RuntimeError("R6 : la mutation « dépôt retiré » n'a pas mordu")
+    except Arret:
+        log("autotest : la mutation a mordu : dépôt retiré -> R6")
     g += verifier_citations(textes, MOTIFS, S)
     g.append(verifier_2007_560(par_id))
     r = resultat(R, S)
