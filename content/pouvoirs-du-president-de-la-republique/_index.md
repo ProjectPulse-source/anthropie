@@ -96,6 +96,19 @@ L'article&nbsp;20 répond sans détour&nbsp;: «&nbsp;{{< pv-val "cit20" >}}&nbs
 
 {{< pouvoirs-president vue="gouvernement" >}}
 
+## Avant d'évaluer une promesse présidentielle, que faut-il vérifier&nbsp;? {#avant-d-evaluer}
+
+Une promesse de campagne ne se juge pas à sa formule, mais au chemin qu'elle devra suivre. Cinq vérifications, chacune
+appuyée sur une page de ce dossier, s'appliquent à toute promesse, quel que soit le candidat qui la porte&nbsp;:
+
+1. **Qui signe&nbsp;?** L'acte relève-t-il du président seul, ou d'autres signatures sont-elles nécessaires&nbsp;? Voir ci-dessus, et [qui fixe les règles](#qui-fixe-les-regles).
+2. **Faut-il une loi, et qui peut la faire voter&nbsp;?** Voir [qui peut faire adopter une loi](/qui-peut-faire-adopter-une-loi/), et, pour une réforme soumise aux électeurs, [le référendum](/un-president-peut-il-recourir-au-referendum/).
+3. **La décision se prend-elle à Paris&nbsp;?** Dans certaines matières, elle se prend dans l'Union européenne, avec d'autres États&nbsp;: voir [ce que la France peut décider dans l'Union européenne](/ce-que-la-france-peut-decider-dans-l-union-europeenne/).
+4. **Une fois votée, la mesure s'applique-t-elle, et en combien de temps produit-elle ses effets&nbsp;?** Voir [l'application des lois](/une-loi-votee-s-applique-t-elle-tout-de-suite/) et [le temps d'une formation](/une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/).
+5. **Avec quel indicateur dira-t-on qu'elle est tenue&nbsp;?** Voir [comment savoir si une promesse est tenue](/comment-savoir-si-une-promesse-est-tenue/).
+
+Ces questions ne disent pas si une promesse est bonne ou mauvaise&nbsp;: elles disent ce dont sa réalisation dépend.
+
 ## Ce que cette page ne dit pas {#limites}
 
 Elle s'en tient au texte en vigueur, relu sur Légifrance. Elle ne décrit ni la pratique des institutions ni la jurisprudence, et elle n'est pas un avis juridique&nbsp;: une case vide de la matrice signifie que l'article concerné ne contient pas l'élément, pas qu'aucun autre article ni aucune pratique ne le contient. Là où le texte se tait, par exemple sur la possibilité, pour le président, de refuser de signer une ordonnance, la page le dit sans trancher.

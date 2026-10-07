@@ -102,6 +102,19 @@ Article 20 answers plainly: "{{< pv-val "cit20" >}}" It has at its disposal the 
 
 {{< pouvoirs-president vue="gouvernement" >}}
 
+## Before assessing a presidential promise, what should be checked? {#avant-d-evaluer}
+
+A campaign promise is not judged by its wording, but by the path it will have to follow. Five checks, each based on a
+page of this dossier, apply to any promise, whichever candidate makes it:
+
+1. **Who signs?** Is the act for the president alone, or are other signatures needed? See above, and [who sets the rules](#qui-fixe-les-regles).
+2. **Is a law needed, and who can get it passed?** See [who can get a law passed](/en/who-can-get-a-law-passed-in-france/), and, for a reform put to the voters, [the referendum](/en/can-the-french-president-call-a-referendum/).
+3. **Is the decision taken in Paris?** In some matters it is taken in the European Union, with other States: see [what France can decide in the European Union](/en/what-can-france-decide-in-the-european-union/).
+4. **Once passed, does the measure apply, and how long does it take to produce its effects?** See [the implementation of laws](/en/does-a-law-apply-as-soon-as-it-is-passed/) and [the time a training takes](/en/can-a-campaign-promise-produce-results-within-five-years/).
+5. **Which indicator will say whether it was kept?** See [how to tell whether a promise was kept](/en/how-can-we-tell-whether-a-promise-was-kept/).
+
+These questions do not say whether a promise is good or bad: they say what its fulfilment depends on.
+
 ## What this page does not say {#limites}
 
 It keeps to the text in force, reread on Légifrance. It describes neither institutional practice nor case law, and it is not legal advice: an empty cell in the matrix means that the article concerned does not contain the element, not that no other article or practice does. Where the text is silent, for instance on whether the president may refuse to sign an ordinance, the page says so without deciding.
