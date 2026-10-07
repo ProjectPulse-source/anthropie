@@ -68,6 +68,8 @@ Le premier cycle et le deuxième cycle comptent chacun {{< del-val "cycle1" >}} 
 - **Application** (loi n°&nbsp;2022-1616 du 23&nbsp;décembre 2022, art.&nbsp;37, II)&nbsp;: «&nbsp;{{< del-val "cit_37" >}}&nbsp;»
 - **Mandat** (Constitution, art.&nbsp;6)&nbsp;: «&nbsp;{{< del-val "cit_art6a" >}}&nbsp;»
 
+L'ordre de grandeur est aussi celui du service statistique du ministère de la Santé, qui écrivait en 2021&nbsp;: «&nbsp;{{< del-val "cit_dd76" >}}&nbsp;» (DREES, *Les Dossiers de la DREES* n°&nbsp;76). La page le précise à partir des textes en vigueur, quatrième année de médecine générale comprise.
+
 Ces citations sont extraites des textes officiels par le script qui produit la page, et vérifiées mot pour mot à chaque génération&nbsp;; les durées de la figure sont calculées à partir des mots «&nbsp;six semestres&nbsp;», «&nbsp;quatre années&nbsp;» et «&nbsp;cinq ans&nbsp;», et le script recalcule leur rapport à chaque génération. Les autres spécialités ont des troisièmes cycles de durées différentes, que cette page ne décrit pas.
 
 </details>

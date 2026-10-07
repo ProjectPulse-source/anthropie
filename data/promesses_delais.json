@@ -24,6 +24,10 @@
    "art37": {
     "id": "JORFARTI000046791824",
     "sha256": "858ac859533f4a75501ebffed4889baf6f34b0dc65736ad65fe86f048985c625"
+   },
+   "dd76_pdf": {
+    "id": "drees_DD76_2021.pdf, page 5 (extrait archivé)",
+    "sha256": "8ca17d6661cb7ae742cf71e4dd043ca8ead9c72ee8127cbaddb4b101c47e6ed4"
    }
   },
   "definitions": {
@@ -43,7 +47,7 @@
   "D5 : DREES = ONDPS sur 2001-2015 ; ecart publie 2016-2020 : +101",
   "D6 : admis 2021-2025 (55078) controles par la somme et par le texte du PDF",
   "D7 : diplome a l'etranger 6.6 % (2012) -> 11.3 % (2026), stock",
-  "D1 bis : 8 citations des textes retrouvees mot pour mot ; D1 ter : 7 traductions, nombres controles"
+  "D1 bis : 9 citations des textes retrouvees mot pour mot ; D1 ter : 8 traductions, nombres controles"
  ],
  "calcul": {
   "s1": 6,
@@ -161,6 +165,7 @@
   "cit_supervision": "La dernière année du diplôme d'études spécialisées de médecine générale est effectuée en stage, sous un régime d'autonomie supervisée",
   "cit_dj1": "Les actes réalisés sous ce régime le sont par le docteur junior seul.",
   "cit_dj2": "Le docteur junior exerce ses fonctions par délégation et sous la responsabilité du praticien dont il relève.",
+  "cit_dd76": "il faut ainsi compter de cinq à dix ans (respectivement pour le cas des sages-femmes et des médecins) pour qu’une politique axée sur ce levier ne commence à produire ses effets",
   "cit_cycle1_tr": "The general training diploma in medical sciences concludes the first cycle; it comprises six semesters of training",
   "cit_cycle2_tr": "The advanced training diploma in medical sciences, defined in this order, concludes the second cycle; it comprises six semesters of training",
   "cit_mg_tr": "which, for the specialty of general practice, lasts four years",
@@ -168,6 +173,7 @@
   "cit_supervision_tr": "The last year of the diploma of specialised studies in general practice is carried out as an internship, under a regime of supervised autonomy",
   "cit_dj1_tr": "The acts performed under this regime are performed by the docteur junior alone.",
   "cit_dj2_tr": "The docteur junior exercises his functions by delegation and under the responsibility of the practitioner he reports to.",
+  "cit_dd76_tr": "it therefore takes five to ten years (respectively for midwives and doctors) for a policy based on this lever to begin to produce its effects",
   "cit_art6a_en": "The President of the Republic shall be elected for a term of five years by direct universal suffrage."
  },
  "affichage_en": {
@@ -205,6 +211,7 @@
   "cit_supervision": "La dernière année du diplôme d'études spécialisées de médecine générale est effectuée en stage, sous un régime d'autonomie supervisée",
   "cit_dj1": "Les actes réalisés sous ce régime le sont par le docteur junior seul.",
   "cit_dj2": "Le docteur junior exerce ses fonctions par délégation et sous la responsabilité du praticien dont il relève.",
+  "cit_dd76": "il faut ainsi compter de cinq à dix ans (respectivement pour le cas des sages-femmes et des médecins) pour qu’une politique axée sur ce levier ne commence à produire ses effets",
   "cit_cycle1_tr": "The general training diploma in medical sciences concludes the first cycle; it comprises six semesters of training",
   "cit_cycle2_tr": "The advanced training diploma in medical sciences, defined in this order, concludes the second cycle; it comprises six semesters of training",
   "cit_mg_tr": "which, for the specialty of general practice, lasts four years",
@@ -212,6 +219,7 @@
   "cit_supervision_tr": "The last year of the diploma of specialised studies in general practice is carried out as an internship, under a regime of supervised autonomy",
   "cit_dj1_tr": "The acts performed under this regime are performed by the docteur junior alone.",
   "cit_dj2_tr": "The docteur junior exercises his functions by delegation and under the responsibility of the practitioner he reports to.",
+  "cit_dd76_tr": "it therefore takes five to ten years (respectively for midwives and doctors) for a policy based on this lever to begin to produce its effects",
   "cit_art6a_en": "The President of the Republic shall be elected for a term of five years by direct universal suffrage."
  }
 }

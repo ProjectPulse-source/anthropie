@@ -73,6 +73,8 @@ The first and second cycles each comprise {{< del-val "cycle1" >}} semesters. Th
 - **Application** (Law no. 2022-1616 of 23 December 2022, art. 37, II): «&nbsp;{{< del-val "cit_37" >}}&nbsp;» [our translation: "{{< del-val "cit_37_tr" >}}"]
 - **Term** (Constitution, art. 6, English translation published by the Conseil constitutionnel): "{{< del-val "cit_art6a_en" >}}"
 
+The order of magnitude is also that of the statistical service of the French health ministry, which wrote in 2021: "{{< del-val "cit_dd76" >}}" (DREES, *Les Dossiers de la DREES* No. 76, our translation). The page makes it precise from the texts in force, including the fourth year of general practice.
+
 These quotations are extracted from the official texts by the script that produces the page, and checked word for word at each run; the durations in the figure are calculated from the words «&nbsp;six semestres&nbsp;», «&nbsp;quatre années&nbsp;» and «&nbsp;cinq ans&nbsp;», and the script recalculates their ratio at each run. Other specialties have third cycles of different lengths, which this page does not describe.
 
 </details>

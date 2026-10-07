@@ -82,6 +82,8 @@ TR = {
     "cit_dj1": "The acts performed under this regime are performed by the docteur junior alone.",
     "cit_dj2": "The docteur junior exercises his functions by delegation and under the responsibility of the practitioner he "
                "reports to.",
+    "cit_dd76": "it therefore takes five to ten years (respectively for midwives and doctors) for a policy based on this "
+                "lever to begin to produce its effects",
 }
 
 
@@ -138,6 +140,10 @@ def lire() -> dict:
     import fitz
     pdf = SRC / ondps["fichier"]
     texte_pdf = norm(" ".join(p.get_text() for p in fitz.open(pdf)))
+    # C6 (07/10/2026) : synthèse du Dossier n° 76 de la DREES, citée comme accord (le PDF est archivé dans sondes\delais).
+    ext = (SRC / "drees_DD76_2021_page5_extrait.txt").read_text(encoding="utf-8")
+    t["dd76_pdf"] = {"id": "drees_DD76_2021.pdf, page 5 (extrait archivé)", "texte": norm(re.sub(r"\s+", " ", ext)),
+                     "sha": re.search(r"SHA-256 du PDF d'origine : ([0-9a-f]{64})", ext).group(1)}
     rpps = list(csv.reader(l for l in (SRC / "drees_rpps_lieu_diplome_extrait.csv").read_text(encoding="utf-8").splitlines()
                            if not l.startswith("#")))
     return {"textes": t, "dd76": serie, "ondps": ondps, "pdf_sha": hashlib.sha256(pdf.read_bytes()).hexdigest(),
@@ -231,6 +237,7 @@ CITATIONS = {  # clé -> (texte source, citation exacte). Vérifiées mot pour m
     "cit_supervision": ("L632-2", "La dernière année du diplôme d'études spécialisées de médecine générale est effectuée en stage, sous un régime d'autonomie supervisée"),
     "cit_dj1": ("R6153-1-2", "Les actes réalisés sous ce régime le sont par le docteur junior seul."),
     "cit_dj2": ("R6153-1-2", "Le docteur junior exerce ses fonctions par délégation et sous la responsabilité du praticien dont il relève."),
+    "cit_dd76": ("dd76_pdf", "il faut ainsi compter de cinq à dix ans (respectivement pour le cas des sages-femmes et des médecins) pour qu’une politique axée sur ce levier ne commence à produire ses effets"),
 }
 
 

@@ -1,0 +1,58 @@
+# Extrait de la page 5 de : DREES, Les Dossiers de la DREES n° 76, mars 2021 (drees_DD76_2021.pdf)
+# SHA-256 du PDF d'origine : 8ca17d6661cb7ae742cf71e4dd043ca8ead9c72ee8127cbaddb4b101c47e6ed4 ; PDF archivé dans 06_PROMOTION\RECHERCHE_DOSSIER_PROMESSES_2026-10-05\sondes\delais
+# Texte extrait par PyMuPDF le 07/10/2026, sans retouche.
+2 ■ Synthèse -uelle démographie récente et à venir pour les professions médicales et pharmaceutique ? > Les dossiers de la DREES n° 76 > mars 2021 
+SYNTHÈSE 
+La démographie des professions médicales et pharmaceutiques est un enjeu central des politiques d’organisation de l’offre de 
+soins : combien de professionnels sont disponibles pour apporter des soins à la population ? Combien le seront dans les 
+années à venir ? Cette évolution répondra-t-elle à l’augmentation de la population et aux évolutions des besoins ?  
+À court terme, l’organisation des soins doit tenir compte de la démographie présente des professions : leur nombre, leur âge, 
+leur mode d’exercice par exemple. À plus long terme, les capacités de formation sont un levier majeur des politiques d’offre 
+de soins. Néanmoins, ce levier ne peut affecter la situation démographique qu’avec un délai équivalent à la durée des études 
+concernées : pour ce qui concerne les professions médicales et pharmaceutiques, il faut ainsi compter de cinq à dix ans 
+(respectivement pour le cas des sages-femmes et des médecins) pour qu’une politique axée sur ce levier ne commence à 
+produire ses effets.  
+Depuis les années 1970, les capacités de formation pour les professions médicales et pharmaceutiques ont ainsi progressi-
+vement été constituées en outil explicite de politique publique par l’établissement du numerus clausus, fixé annuellement par 
+décret ministériel, qui détermine le nombre d’étudiants admis à entrer en formation. Introduit dès la rentrée 1972 pour la 
+médecine et l’odontologie, il est instauré à partir de la rentrée 1977 pour la maïeutique et à partir de la rentrée 1980 pour la 
+pharmacie.  
+La réforme des études de santé portée par la Loi Organisation et transformation du système de santé de 2019 met fin à ce 
+dispositif, dont la dernière occurrence concerne la rentrée 2020. Elle consacre l’utilisation de ce levier comme outil de pilotage 
+à long terme mais en modifie la nature : le numerus apertus a pour ambition de proposer des flux d’entrée aux études de santé 
+de façon plus flexible et plus concertée, avec un objectif de réponse aux besoins de santé des territoires. Il est ainsi fixé dans 
+le cadre d’une Conférence nationale, rassemblant l’ensemble des acteurs du monde de la santé, qui élabore des objectifs 
+quinquennaux de formation sur le fondement de propositions émanant des acteurs locaux.  
+Ce dossier accompagne la tenue de la première édition de la Conférence nationale de santé. Il établit un état des lieux des 
+données actuellement disponibles sur la démographie présente et à venir des quatre professions concernées : médecins, 
+chirurgiens-dentistes, sages-femmes et pharmaciens. Une première partie décrit les évolutions démographiques constatées 
+sur les neuf dernières années, de 2012 à 2021. Les deuxième et troisième parties sont consacrées aux travaux de projection 
+démographique menés par la DREES : les modèles de projection relatifs aux quatre professions ont fait l’objet d’une actuali-
+sation qui permet d’étudier les tendances démographiques jusqu’à l’horizon 2050. Ces modèles sont construits sur une hypo-
+thèse centrale de comportements et de législation constante par rapport à la période récente. Les scénarios dits tendanciels 
+faits sous cette hypothèse permettent d’identifier les grandes évolutions démographiques impliquées par les tendances ré-
+centes. Ces scénarios peuvent être étudiés sous l’angle des effectifs de professionnels actifs sur la période de projection, mais 
+aussi sous l’angle de la tension entre offre et demande de soins, par une approche en densité ou densité standardisée qui 
+tient compte de la consommation de soins par âge. Enfin, les modèles de projection constituent un outil précieux pour étudier 
+la sensibilité de la démographie des professions à un changement législatif ou comportemental : la troisième partie de ce 
+dossier illustre les apports d’une telle approche par la présentation de variantes touchant au nombre d’étudiants admis au sein 
+des cursus d’études relatifs à chaque profession et au nombre de diplômés à l’étranger débutant une activité en France.  
+Au 1er janvier 2021, on compte 42 000 chirurgiens-dentistes de moins de 70 ans en activité. Depuis 2012, les effectifs de la 
+profession sont en croissance et elle s’est rajeunie et féminisée. Elle est très majoritairement libérale, mais ce mode d’exercice 
+connaît une légère désaffection sur la période 2012-2021, au profit du salariat non hospitalier et de l’exercice mixte.  
+Sous hypothèses de comportements et de législation constants, le modèle de projection des effectifs de chirurgiens-dentistes 
+montre une croissance soutenue des effectifs jusqu’en 2050 (+46 % par rapport à 2021), qui se décline en une hausse des 
+effectifs de libéraux comme de salariés. La densité standardisée, qui permet de tenir compte de la croissance et du vieillisse-
+ment de la population, évoluerait de manière plus modérée (+39 % entre 2021 et 2050). Cette croissance des effectifs est 
+fortement portée par l’arrivée de chirurgiens-dentistes diplômés à l’étranger : elle ne serait que de 5 %, pour les effectifs, en 
+l’absence de ce flux. 
+En augmentation constante depuis 2012 avec une dynamique particulièrement forte jusqu’en 2017, le nombre de sages-
+femmes s’est stabilisé autour de 23 400 en 2021. La profession est essentiellement féminine (97 % de femmes) et jeune : les 
+professionnelles en exercice ont en moyenne 41 ans. Les sages-femmes exercent majoritairement à l’hôpital. Toutefois, depuis 
+2012, une part croissante d’entre elles choisit un exercice libéral ou mixte. La proportion de diplômées à l’étranger parmi les 
+professionnelles en exercice est en constante augmentation, en particulier du fait de l’augmentation du nombre de françaises 
+détenant un diplôme européen, mais reste à un niveau relativement bas (7,5 % des professionnels en exercice). 
+Sous hypothèses de comportements et de législation constants, le modèle de projection des effectifs de sages-femmes montre 
+une croissance à un rythme modéré des effectifs jusqu’au milieu des années 2040, avant d’amorcer un léger recul. À l’horizon 
+2050, les effectifs progresseraient de 24 %. Le nombre de sages-femmes salariées resterait stable (+1 % sur la période), 
+tandis que l’exercice libéral ou mixte continuerait à progresser (+70 % sur la période). La densité standardisée évoluerait de 
