@@ -141,3 +141,9 @@ main .pouvoirs-table {
 }
 
 .pouvoirs-sources { font-size: var(--fs-small); }
+
+// Arrivée par une ancre de titre : l'en-tête collant (≈ 60 px) masquait le titre visé sur les pages sans barre de dossier
+// (mesuré le 07/10/2026, page lycée, 390 et 1280 px : titre à 0 px sous un en-tête de 59-63 px). Règle générale de faible
+// spécificité : les règles propres aux barres de dossier (_enseignants.scss, dossier dette) restent prioritaires.
+main :is(h2, h3, h4)[id] { scroll-margin-top: 5rem; }
+

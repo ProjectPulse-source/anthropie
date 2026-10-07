@@ -21,9 +21,12 @@ notes de la DEPP sur le temps d'enseignement non assuré, les élèves par struc
 projections d'effectifs, concours de la session, OCDE), qui ouvre un ticket par édition nouvelle ; INTÉGRÉE à la main,
 parce que l'extrait se calcule hors dépôt : relancer test_decisif.py puis extrait.py dans le dossier de recherche,
 recopier l'extrait et son empreinte, relancer ce script, porter l'édition lue (« lu ») au registre.
+Encadré #regions-lycees (bâti des lycées, 07/10/2026) : second extrait figé, extrait_bati.json, écrit par bati/extrait_bati.py
+du même dépôt de recherche (protocoles 1 à 4 du bâti) ; balances DGFiP annuelles, hors module de mise à jour : rendez-vous de
+rattrapage en juillet 2027 (exercice 2026) — relancer les tests du bâti puis extrait_bati.py, recopier l'extrait et son empreinte.
 Page en français seulement (exclusion déclarée : débat, programme et statistique français).
 
-Usage : python scripts/update_lycee_professeurs.py [--check] [--mutation=organisation|classes|concours|concours26|eleves|ocde]
+Usage : python scripts/update_lycee_professeurs.py [--check] [--mutation=organisation|classes|concours|concours26|eleves|ocde|bati]
 Sorties : data/ et static/lycee_professeurs.json, static/lycee_professeurs.csv, data/figures_lycee.json,
           static/img/lycee-{heures,classes,concours}.svg + .png
 """
@@ -157,6 +160,134 @@ def calcul(X):
     )
 
 
+# ------------------------------------------------------------------ bâti des lycées (encadré #regions-lycees)
+# Extrait figé extrait_bati.json, écrit par bati/extrait_bati.py du dépôt de recherche (protocoles 1 à 4 du bâti, écrits
+# avant calcul, trois contre-expertises arbitrées). Ici : rangs de Spearman, médianes, rapports, pente log-log.
+LIEU = {"11": "en Île-de-France", "24": "en Centre-Val de Loire", "27": "en Bourgogne-Franche-Comté",
+        "28": "en Normandie", "32": "dans les Hauts-de-France", "44": "dans le Grand Est",
+        "52": "dans les Pays de la Loire", "53": "en Bretagne", "75": "en Nouvelle-Aquitaine", "76": "en Occitanie",
+        "84": "en Auvergne-Rhône-Alpes", "93": "en Provence-Alpes-Côte d'Azur", "94": "en Corse"}
+LETTRES = {3: "trois", 4: "quatre", 5: "cinq", 6: "six", 7: "sept", 8: "huit", 9: "neuf", 10: "dix"}
+
+
+def rangs(xs):
+    o = sorted(range(len(xs)), key=lambda i: xs[i])
+    r, i = [0.0] * len(xs), 0
+    while i < len(xs):
+        j = i
+        while j + 1 < len(xs) and xs[o[j + 1]] == xs[o[i]]:
+            j += 1
+        for k in range(i, j + 1):
+            r[o[k]] = (i + j) / 2 + 1
+        i = j + 1
+    return r
+
+
+def spearman(a, b):
+    """Même calcul que test_bati.spearman (rangs moyens en cas d'égalité) ; série constante : None, jamais 0."""
+    if len(set(a)) == 1 or len(set(b)) == 1:
+        return None
+    ra, rb = rangs(a), rangs(b)
+    ma, mb = sum(ra) / len(ra), sum(rb) / len(rb)
+    num = sum((x - ma) * (y - mb) for x, y in zip(ra, rb))
+    return num / (sum((x - ma) ** 2 for x in ra) * sum((y - mb) ** 2 for y in rb)) ** 0.5
+
+
+def mediane(xs):
+    s = sorted(xs)
+    n = len(s)
+    return s[n // 2] if n % 2 else (s[n // 2 - 1] + s[n // 2]) / 2
+
+
+def cv(xs):
+    m = sum(xs) / len(xs)
+    return (sum((x - m) ** 2 for x in xs) / len(xs)) ** 0.5 / m
+
+
+BATI_UNITES = {
+    "inv_total_3ans": "EUR, investissement rubrique 222 cumule sur la fenetre",
+    "lyceens_moyens": "eleves (lycees publics, moyenne ponderee par annee budgetaire)",
+    "inv_par_lyceen_3ans": "EUR par lyceen, cumul sur trois exercices",
+    "inv_hors_204_par_lyceen_3ans": "EUR par lyceen, hors subventions d'equipement (compte 204)",
+    "fonct_hors_personnel_par_lyceen": "EUR par lyceen et par an, hors chapitre 64",
+    "fonct_hors_personnel_par_lycee": "EUR par lycee et par an, hors chapitre 64",
+    "fonct_hors_personnel_par_lyceen_2019": "EUR par lyceen, exercice 2019, hors chapitre 64",
+    "fonct_par_lycee_2019": "EUR par lycee, exercice 2019, hors chapitre 64",
+    "lyceens_2019": "eleves (lycees publics, rentree)", "lyceens_2025": "eleves (lycees publics, rentree)",
+    "part_prive": "part des lyceens scolarises dans le prive (rentrees 2024-2025)",
+    "taille_lycees": "eleves par lycee public (rentrees 2023-2024)",
+}
+
+
+def calcul_bati(B):
+    import math
+    R = B["regions"]
+    cs = sorted(R)
+    v = lambda k: {c: R[c][k] for c in cs}
+    rho = lambda X, Y, cc=cs: spearman([X[c] for c in cc], [Y[c] for c in cc])
+    rap = lambda X: max(X.values()) / min(X.values())
+    inv, inv204, fon = v("inv_par_lyceen_3ans"), v("inv_hors_204_par_lyceen_3ans"), v("fonct_hors_personnel_par_lyceen")
+    fon_lyc, fon19, P, T = v("fonct_hors_personnel_par_lycee"), v("fonct_hors_personnel_par_lyceen_2019"), v("part_prive"), v("taille_lycees")
+    dL = {c: R[c]["lyceens_2025"] / R[c]["lyceens_2019"] - 1 for c in cs}
+    x = {c: math.log(1 + dL[c]) for c in cs}
+    dFN = {c: math.log(R[c]["fonct_hors_personnel_par_lycee"] / R[c]["fonct_par_lycee_2019"]) for c in cs}
+    lx = [math.log(R[c]["lyceens_moyens"]) for c in cs]
+    ly = [math.log(R[c]["inv_total_3ans"]) for c in cs]
+    mx, my = sum(lx) / len(lx), sum(ly) / len(ly)
+    elast = sum((a - mx) * (b - my) for a, b in zip(lx, ly)) / sum((a - mx) ** 2 for a in lx)
+    bas = [fon[c] for c in cs if dL[c] < 0]
+    haut = [fon[c] for c in cs if dL[c] > 0]
+    ordre_inv = sorted(cs, key=inv.get)
+    sans_corse = {c: inv204[c] for c in cs if c != "94"}
+    return dict(
+        R=R, cs=cs, inv=inv, fon=fon, dL=dL, P=P, elast=elast, rap_inv=rap(inv), cv_inv=cv(list(inv.values())),
+        cv_fon=cv(list(fon.values())), inv_min1=ordre_inv[0], inv_min2=ordre_inv[1], inv_max=ordre_inv[-1],
+        rap204=rap(inv204), rap204_sc=rap(sans_corse), min204=min(inv204, key=inv204.get),
+        rho_pt=rho(P, T), rho_pf=rho(P, fon), prive_top=sorted(cs, key=P.get)[-2:], inv_top=ordre_inv[-2:],
+        rho_lf=rho(dL, fon), rho_ll=rho(dL, fon_lyc), med_bas=mediane(bas), med_haut=mediane(haut),
+        n_bas=len(bas), n_haut=len(haut), meca=rap({c: 1 / (1 + dL[c]) for c in cs}),
+        rho_19=rho(x, fon19), rho_creuse=rho(x, dFN), an=B["annees"], fen=B["fenetre_investissement"],
+    )
+
+
+def gardes_bati(b, g):
+    """Chaque qualificatif de l'encadré #regions-lycees est une condition sur les nombres."""
+    g(0.9 <= b["elast"] <= 1.1, "bâti : « à proportion de leurs lycéens, en moyenne » (élasticité %.2f)" % b["elast"])
+    g(2 < b["rap_inv"] < 3, "bâti : « du simple à plus du double » (rapport %.2f)" % b["rap_inv"])
+    g(b["cv_fon"] < 0.75 * b["cv_inv"], "bâti : « dépenses courantes bien plus régulières » (CV %.3f contre %.3f)" % (b["cv_fon"], b["cv_inv"]))
+    g(b["rap204"] >= 2 and b["rap204_sc"] >= 2, "bâti : « l'écart ne disparaît pas hors subventions » (%.2f ; %.2f)" % (b["rap204"], b["rap204_sc"]))
+    g(b["min204"] == "94", "bâti : « sans la Corse » suppose la Corse au plus bas hors subventions")
+    g(abs(b["rho_pt"]) < 0.6 and abs(b["rho_pf"]) < 0.6, "bâti : « aucune relation lisible avec la part du privé » (%.2f ; %.2f)" % (b["rho_pt"], b["rho_pf"]))
+    g(set(b["prive_top"]) == {"52", "53"} and all(0.35 <= b["P"][c] <= 0.45 for c in ("52", "53")),
+      "bâti : « Bretagne et Pays de la Loire, environ quatre lycéens sur dix dans le privé »")
+    g(set(b["inv_top"]) == {"52", "53"}, "bâti : « elles se distinguent par leur investissement » (deux plus forts)")
+    g(b["rho_lf"] is not None and b["rho_lf"] <= -0.6, "bâti : « plus le recul, plus la dépense » (rho %.2f)" % (b["rho_lf"] or 0))
+    g(b["med_bas"] > b["med_haut"], "bâti : médiane des régions en recul au-dessus")
+    g(b["meca"] - 1 < (b["med_bas"] / b["med_haut"] - 1) and b["meca"] < 1.2,
+      "bâti : « la seule baisse des effectifs ne suffit pas » (effet maximal %.3f)" % b["meca"])
+    g(b["rho_ll"] is not None and -0.6 < b["rho_ll"] <= -0.3 and abs(b["rho_ll"]) < abs(b["rho_lf"]),
+      "bâti : « la dépense rapportée aux lycées va dans le même sens, moins nettement » (rho %.2f)" % (b["rho_ll"] or 0))
+    g(b["rho_19"] is not None and b["rho_19"] <= -0.6, "bâti : « différence déjà visible en %d »" % b["an"]["avant"])
+    g(b["rho_creuse"] is None or b["rho_creuse"] > -0.6, "bâti : « qu'elle se soit creusée, les comptes ne permettent pas de l'établir »")
+    g(b["n_bas"] in LETTRES and b["n_haut"] in LETTRES, "bâti : effectifs des groupes en toutes lettres")
+
+
+def affichage_bati(b):
+    R = b["R"]
+    return {
+        "bt_a0": str(b["fen"][0]), "bt_a1": str(b["fen"][1]),
+        "bt_inv_min1": nb(b["inv"][b["inv_min1"]], 0), "bt_inv_min1_lieu": LIEU[b["inv_min1"]],
+        "bt_inv_min2": nb(b["inv"][b["inv_min2"]], 0), "bt_inv_min2_lieu": LIEU[b["inv_min2"]],
+        "bt_inv_max": nb(b["inv"][b["inv_max"]], 0), "bt_inv_max_lieu": LIEU[b["inv_max"]],
+        "bt_rap": nb(b["rap_inv"], 2), "bt_rap204": nb(b["rap204"], 2), "bt_rap204_sc": nb(b["rap204_sc"], 2),
+        "bt_l0": str(b["an"]["lyceens"][0]), "bt_l1": str(b["an"]["lyceens"][1]),
+        "bt_f": "%d-%d" % tuple(b["an"]["fonctionnement"]), "bt_avant": str(b["an"]["avant"]),
+        "bt_med_bas": nb(b["med_bas"], 0), "bt_med_haut": nb(b["med_haut"], 0),
+        "bt_n_bas": LETTRES[b["n_bas"]], "bt_n_haut": LETTRES[b["n_haut"]],
+        "bt_n_regions": {13: "treize"}[len(R)],
+    }
+
+
 def mutation(c):
     m = next((a.split("=", 1)[1] for a in sys.argv[1:] if a.startswith("--mutation=")), None)
     if m == "organisation":   # les absences individuelles l'emporteraient au lycée en 2024-2025
@@ -173,6 +304,8 @@ def mutation(c):
         c["c3"] = {a: (dict(v, FRA=v["OECD"] * 0.95) if a == min(c["c3"]) else v) for a, v in c["c3"].items()}
     elif m == "concours26":   # le CAPES de mathématiques 2026 n'aurait pourvu que 85 % de ses postes
         c["t26"] = dict(c["t26"], maths=85.0)
+    elif m == "bati":         # la dépense par lycéen de 2019 serait la même partout (rien de « déjà visible »)
+        c["bati"] = dict(c["bati"], rho_19=None)
     elif m is not None:
         fail("mutation inconnue : %s" % m)
     return m
@@ -243,6 +376,7 @@ def gardes(c):
     g(2.5 <= c["e5_f"] < 2.95, "E5 « multiplié par environ 2,6, pas tout à fait triplé » : %.2f" % c["e5_f"])
     var = c["sd"]["total"]["2024-2025"] - c["sd"]["total"]["2022-2023"]
     g(-2.5 < var < 0, "E6 « baisse de 1 point environ sur la mesure DEPP, non de 3 » : %.1f" % var)
+    gardes_bati(c["bati"], g)
     return n
 
 
@@ -322,6 +456,7 @@ def affichage(c):
         "e9_j": nb(c["e9"]["journees_2023"], 0), "e9_h": nb(c["e9"]["hausse_depuis_2018"]),
         "e10_2d": nb(abs(c["e4"]["eleves_2026_2d_variation"]), 0),
         "e1_snes": nb(c["e1"]["snes"], 0), "e1_snpden": nb(c["e1"]["snpden"], 0),
+        **affichage_bati(c["bati"]),
     }
 
 
@@ -515,6 +650,10 @@ def csv_texte(c):
         w.writerow(["ocde_depense_publique_par_eleve_general", "OCDE", a, v["OECD"], "USD PPA"])
     for k, v in sorted(c["acad"].items()):
         w.writerow(["eleves_par_structure_academie_2025", k, "", v, "eleves"])
+    for code, r in sorted(c["bati"]["R"].items()):
+        for k, v in r.items():
+            if k != "nom":
+                w.writerow(["bati_regions_rubrique_222", r["nom"], k, v, BATI_UNITES[k]])
     return buf.getvalue()
 
 
@@ -523,6 +662,7 @@ def main() -> int:
     check = "--check" in sys.argv[1:] or any(a.startswith("--mutation") for a in sys.argv[1:])
     X = lire()
     c = calcul(X)
+    c["bati"] = calcul_bati(json.loads((SRC / "extrait_bati.json").read_text(encoding="utf-8")))
     m = mutation(c)
     n = gardes(c)
     if m:
@@ -544,6 +684,7 @@ def main() -> int:
                             "session_2026_ministere": {k: {"postes": c["p26"][k], "taux": round(c["t26"][k], 1)} for k in c["t26"]}},
                "heures_non_assurees_deciles_2024_2025": c["dec"],
                "depense_2025_provisoire": c["c1_2025"], "ocde_depp": c["ocde_depp"],
+               "bati_regions_rubrique_222": c["bati"]["R"],
                "affichage": A}
     if OUT_DATA.exists():
         try:

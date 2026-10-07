@@ -41,7 +41,6 @@ valide visuellement les YAML avant push manuel.
 l'onglet Actions du repo GitHub après push, pour vérifier que la chaîne
 complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
-
 > **À lire avant** : toute intervention sur le site, technique 
 > ou éditoriale. Décrit l'état architectural, les doctrines 
 > en place, les chantiers en cours et les chantiers reportés.
@@ -63,6 +62,13 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
   10.5281/zenodo.23212664, qui mène toujours à la dernière version (le DOI de la version 1 menait à la note non corrigée).
 - Contrôles sur arbre propre (worktree d'`origin/main`) : hugo 0, `check-all --ci` 0, `audit-liens-build` 0 critique ;
   `Dataset.identifier` relu dans le HTML construit.
+
+### 2026-10-07 — Page lycée : encadré « Les régions dépensent-elles pour leurs lycées à proportion de leurs élèves ? » (`#regions-lycees`) ; NON POUSSÉ
+
+- **Contenu** : phrase centrale du test 1 et quatre phrases arbitrées des tests 2 à 4 du bâti (dépôt de recherche `D:\PRO\06_PROMOTION\RECHERCHE_LYCEES_MOYENS_2026-10-07\bati\`, protocoles 1 à 4, trois contre-expertises arbitrées : PRO-20261007-190635, -203155, -210111). Aucun chiffre saisi : extrait figé `scripts/sources_lycee_professeurs/extrait_bati.json` (écrit par `bati/extrait_bati.py`, témoins dans les sorties des tests), empreinte dans `SHA256SUMS` ; 15 gardes de prose dans `update_lycee_professeurs.py` (`gardes_bati`), mutation `--mutation=bati` vue mordre ; jeu JSON/CSV complété (`bati_regions_rubrique_222`).
+- **Défaut trouvé et corrigé** (antérieur, toutes les ancres de la page lycée) : arrivée par une ancre de titre sous l'en-tête collant (titre à 0 px sous un en-tête de 59-63 px, 390 et 1280 px). Règle générale `main :is(h2, h3, h4)[id] { scroll-margin-top: 5rem; }` (`_page-common.scss`) ; les règles des barres de dossier restent prioritaires (page dette inchangée à 184 px). ⚠ Mesure locale : la page appelle sa feuille par une URL absolue de production — construire avec `--baseURL http://localhost:PORT/` pour mesurer un CSS non déployé.
+- **Mise à jour** : sources hors module (balances DGFiP annuelles, publiées en juillet). Rendez-vous de rattrapage : **juillet 2027**, exercice 2026 — relancer les protocoles du bâti, `extrait_bati.py`, recopier l'extrait et son empreinte, relancer le générateur.
+- Vérifié : générateur `--check` (57 gardes), build `$?` 0, HTML relu (jetons résolus, ancre), rendu 390 px sans débordement, `check-all --reseau` 0, `audit-liens-build` 0.
 
 ### 2026-10-07 — Dépôt Zenodo des sept jeux « Promesses » publié (doi:10.5281/zenodo.23212665) ; DOI sur les pages
 
@@ -1862,7 +1868,6 @@ réécrit en « rien à faire », correction portée en tête de `02`. ⚠ **Le
 dossier avait été ouvert dans l'explorateur avant que je voie les commits de l'autre session** : c'est
 la fenêtre où l'auteur aurait pu suivre une consigne fausse. J'avais relevé les sessions pairs en début
 de session, pas avant d'écrire — **le relevé se refait avant de produire, pas une fois par jour.**
-
 
 
 
