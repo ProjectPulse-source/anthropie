@@ -36,6 +36,8 @@ faq:
     answer: "On {app.releve}, the barometer of the application of laws lists {app.nmes} measures for the laws promulgated from October 2017 to September 2025, excluding treaties: {app.P} have an identified published instrument, {app.A} are pending, {app.S} are classified as “not applicable” (sans objet) and {app.U} have an incomplete status. For the laws of 2017-2018, {app.A_1718} measures out of {app.N_1718} are still pending. This is neither a historical rate nor a measure of efficiency."
   - question: "What is the implementation rate of laws in France?"
     answer: "It depends on counting conventions. For the 2018-2019 session, the Senate publishes {app.senat_1819} and reports that the General Secretariat of the Government arrives at {app.sgg_1819}: according to the Senate, it counts ministerial orders and measures whose entry into force is deferred, the Government does not. The two levels are not directly comparable without harmonising these conventions."
+  - question: "Is one law in two left unapplied?"
+    answer: "The phrase depends on what is counted. A fully applied law, a published implementing measure, a status recorded on a given date: these are not the same objects. The Senate counts orders and measures whose entry into force is deferred, the General Secretariat of the Government does not; the National Assembly's barometer gives a status on a date, not a rate. Before repeating \"one law in two\", one must know which convention the phrase uses, on what date and for which laws."
 ressource:  # index /en/resources/ (layouts/ressources/list.html)
   bloc: "promesses"
   rang: 30

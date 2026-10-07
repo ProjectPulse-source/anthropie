@@ -30,6 +30,8 @@ faq:
     answer: "Au {app.releve}, le baromètre de l'application des lois recense {app.nmes} mesures pour les lois promulguées d'octobre 2017 à septembre 2025, hors conventions : {app.P} ont un acte publié identifié, {app.A} sont en attente, {app.S} sont indiquées sans objet et {app.U} ont un statut incomplet. Pour les lois de 2017-2018, {app.A_1718} mesures sur {app.N_1718} sont encore en attente. Ce n'est ni un taux historique ni une mesure d'efficacité."
   - question: "Quel est le taux d'application des lois ?"
     answer: "Il dépend des conventions de calcul. Pour la session 2018-2019, le Sénat publie {app.senat_1819} et rapporte que le Secrétariat général du Gouvernement parvient à {app.sgg_1819} : selon le Sénat, il compte les arrêtés et les mesures dont l'entrée en vigueur est différée, le Gouvernement non. Les deux niveaux ne sont pas directement comparables sans harmoniser ces conventions."
+  - question: "Une loi sur deux n'est-elle pas appliquée ?"
+    answer: "La formule dépend de ce que l'on compte. Une loi entièrement appliquée, une mesure d'application publiée, un état relevé à une date : ce ne sont pas les mêmes objets. Le Sénat compte les arrêtés et les mesures dont l'entrée en vigueur est différée, le Secrétariat général du Gouvernement non ; le baromètre de l'Assemblée donne un état à une date, pas un taux. Avant de reprendre « une loi sur deux », il faut savoir quelle convention la formule retient, à quelle date et sur quelles lois."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   bloc: "promesses"
   rang: 30
