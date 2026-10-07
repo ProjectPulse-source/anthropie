@@ -53,6 +53,17 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-07 — Dépôt Zenodo des sept jeux « Promesses » publié (doi:10.5281/zenodo.23212665) ; DOI sur les pages
+
+- **Dépôt** publié sur ordre de l'auteur : `zenodo_deposit.py --create-dataset promesses-2026-10` (brouillon, `1a3a665`),
+  publication par l'API ; 15 fichiers (14 jeux tirés du blob git, identiques au site, + note de méthode PDF). Le DOI
+  résout. Note et état : `D:\PRO\06_PROMOTION\RECHERCHE_DOSSIER_PROMESSES_2026-10-05\DEPOT_DONNEES\`.
+- **Pages** (7 FR + 7 EN) : phrase visible après les liens de téléchargement ; `dataset.doi` → `Dataset.identifier`.
+- **Défaut corrigé** : `schema-dataset-page.html` déclarait « dette publique » comme sujet de **tout** jeu ; champ
+  `apropos` facultatif (défaut inchangé pour la dette), posé sur les sept pages Promesses et sur la page lycée.
+- Contrôles sur arbre propre du HEAD : hugo 0, `check-all --ci` 0, `audit-liens-build` 0 critique ; JSON-LD relu dans le
+  HTML construit (14 pages portent le DOI ; page dette : sujet inchangé).
+
 ### 2026-10-07 — Ressource « Manque-t-il des professeurs au lycée ? » et bloc « École et lycée » (FR seulement) ; NON POUSSÉ
 
 Pendant le mouvement lycéen et la consultation nationale des lycéens (5-23/10/2026). Recherche, protocole écrit avant calcul,
