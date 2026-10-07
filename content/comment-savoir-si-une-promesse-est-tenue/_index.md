@@ -87,6 +87,8 @@ La Dares publie également une série d'inscrits en catégorie A **hors bénéfi
 
 Les deux panneaux décrivent **deux populations différentes**, et la seconde exclut ces publics sur toute la période, avant comme après 2025. Leur écart n'est donc pas l'effet de la réforme, et un faible écart ne prouverait pas un faible effet. L'Insee signale de son côté que les changements de 2025 peuvent aussi affecter les comportements de recherche d'emploi, donc la mesure au sens du BIT&nbsp;: aucune des deux séries n'est un témoin intact de ce qui se serait passé sans la loi.
 
+Sur la mesure au sens du BIT, l'Insee a chiffré la place des publics visés par la loi dans la hausse du chômage&nbsp;: «&nbsp;{{< mes-val "cit_ir192" >}}&nbsp;» (*Informations rapides* n°&nbsp;192, 7&nbsp;août 2026). Il précise aussitôt&nbsp;: «&nbsp;{{< mes-val "cit_ir192_reserve" >}}&nbsp;». C'est donc une contribution comptable, non un effet de la loi. L'Unédic, organisme paritaire qui gère l'assurance chômage, reprend le chiffre en écrivant que «&nbsp;{{< mes-val "cit_unedic" >}}&nbsp;», tout en citant la réserve de l'Insee&nbsp;: le verbe dit plus que la mesure.
+
 ## Comment juger une promesse avec ces chiffres&nbsp;? {#juger-une-promesse}
 
 Une promesse de baisse du chômage, prise comme exemple et sans viser personne, se juge en quatre gestes, qui sont les quatre dernières questions de la grille du livre&nbsp;:

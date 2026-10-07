@@ -27,7 +27,8 @@
   "M3 : recoupement partiel (commun 1427, BIT hors A 863, A hors BIT 1466 milliers)",
   "M4 : les trois ensembles restitues egalent la figure 8 imprimee",
   "M5 (coherence algebrique, non temoin) : 49 et 62 % retrouves",
-  "M6 : series Dares A (1996-T1-2026-T2) et A hors RSA (2018-T1-2026-T2)"
+  "M6 : series Dares A (1996-T1-2026-T2) et A hors RSA (2018-T1-2026-T2)",
+  "M7 : citations Insee (IR n° 192) et Unédic retrouvées mot pour mot ; traductions contrôlées"
  ],
  "calcul": {
   "commun": 1427,
@@ -282,6 +283,9 @@
   "dares_a_hors_fin": "2,44 millions",
   "dares_a_2024t4": "3,13 millions",
   "dares_a_hors_2024t4": "2,38 millions",
+  "cit_ir192": "les deux publics cibles de la loi pour le plein emploi contribuent pour près de la moitié de la hausse du taux de chômage depuis fin 2024 (+0,44 point sur +0,98 point au total)",
+  "cit_ir192_reserve": "Il s’agit par ailleurs de contributions comptables, qui ne permettent pas de distinguer les effets de la loi pour le plein emploi des effets conjoncturels affectant ces publics",
+  "cit_unedic": "cette loi expliquerait près de la moitié de la hausse du taux de chômage depuis fin 2024",
   "releve_le": "28/07/2026 (séries Dares mises à jour à cette date, jusqu'au 2e trimestre 2026 ; Insee, édition du 02/07/2026)"
  },
  "affichage_en": {
@@ -308,6 +312,9 @@
   "dares_a_hors_fin": "2.44 million",
   "dares_a_2024t4": "3.13 million",
   "dares_a_hors_2024t4": "2.38 million",
+  "cit_ir192": "the two target groups of the full employment law account for nearly half of the rise in the unemployment rate since end-2024 (+0.44 point out of +0.98 point in total)",
+  "cit_ir192_reserve": "these are moreover accounting contributions, which do not make it possible to distinguish the effects of the full employment law from the cyclical effects affecting these groups",
+  "cit_unedic": "this law would explain nearly half of the rise in the unemployment rate since end-2024",
   "releve_le": "2026-07-28 (Dares series updated on that date, up to the second quarter of 2026; Insee, edition of 2 July 2026)"
  }
 }

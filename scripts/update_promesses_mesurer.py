@@ -189,6 +189,38 @@ def calculer(I: dict, D: dict) -> tuple[dict, list[str]]:
     return r, g
 
 
+# C5 (07/10/2026, contre-expertise PRO-20261007-102607) : contribution des publics de la loi à la hausse du chômage
+# BIT, citée de l'Insee avec sa réserve, et lecture de l'Unédic (partie prenante) mise à côté. Extraits archivés avec
+# l'empreinte de la page complète ; garde M7 : chaque citation retrouvée mot pour mot.
+CIT_C5 = {
+    "cit_ir192": ("insee_ir192_2026-08-07_extrait.txt",
+                  "les deux publics cibles de la loi pour le plein emploi contribuent pour près de la moitié de la hausse du taux de chômage depuis fin 2024 (+0,44 point sur +0,98 point au total)"),
+    "cit_ir192_reserve": ("insee_ir192_2026-08-07_extrait.txt",
+                          "Il s’agit par ailleurs de contributions comptables, qui ne permettent pas de distinguer les effets de la loi pour le plein emploi des effets conjoncturels affectant ces publics"),
+    "cit_unedic": ("unedic_comprendre_bit_2026-09-04_extrait.txt",
+                   "cette loi expliquerait près de la moitié de la hausse du taux de chômage depuis fin 2024"),
+}
+TR_C5 = {
+    "cit_ir192": "the two target groups of the full employment law account for nearly half of the rise in the unemployment rate since end-2024 (+0.44 point out of +0.98 point in total)",
+    "cit_ir192_reserve": "these are moreover accounting contributions, which do not make it possible to distinguish the effects of the full employment law from the cyclical effects affecting these groups",
+    "cit_unedic": "this law would explain nearly half of the rise in the unemployment rate since end-2024",
+}
+
+
+def verifier_c5() -> tuple[str, dict]:
+    out = {}
+    for k, (f, c) in CIT_C5.items():
+        texte = re.sub(r"\s+", " ", (SRCDIR / f).read_text(encoding="utf-8"))
+        if c not in texte:
+            raise Arret("M7 : citation %s introuvable dans %s" % (k, f))
+        out[k] = c
+    num = lambda s: sorted(re.findall(r"\d+[,.]\d+", s))  # noqa: E731
+    for k, tr in TR_C5.items():
+        if num(tr.replace(".", ",")) != num(out[k]):
+            raise Arret("M7 : nombres de la traduction %s différents de l'original" % k)
+    return "M7 : citations Insee (IR n° 192) et Unédic retrouvées mot pour mot ; traductions contrôlées", out
+
+
 def affichage_en(r: dict) -> dict:
     def m(v):  # thousands -> "1.43 million" or "863,000"
         return ("%.2f million" % (v / 1000)) if v >= 1000 else "{:,.0f}".format(v * 1000)
@@ -467,6 +499,19 @@ def _main() -> int:
     for m in autotest(I, D):
         log("autotest : la mutation a mordu : " + m)
     A, A_en = affichage(r), affichage_en(r)
+    m7, c5 = verifier_c5()
+    g.append(m7)
+    sauve = CIT_C5["cit_unedic"]
+    try:  # mutation : une citation altérée doit arrêter M7
+        CIT_C5["cit_unedic"] = (sauve[0], sauve[1].replace("expliquerait", "explique"))
+        verifier_c5()
+        raise RuntimeError("M7 : la mutation « citation altérée » n'a pas mordu")
+    except Arret:
+        log("autotest : la mutation a mordu : citation Unédic altérée -> M7")
+    finally:
+        CIT_C5["cit_unedic"] = sauve
+    A.update(c5)
+    A_en.update(TR_C5)
     if set(A) != set(A_en):
         raise Arret("blocs affichage et affichage_en : cles differentes (%s)" % sorted(set(A) ^ set(A_en)))
     if check:

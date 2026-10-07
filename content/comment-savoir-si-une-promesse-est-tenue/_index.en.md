@@ -92,6 +92,8 @@ The Dares also publishes a series of category A registrants **excluding RSA reci
 
 The two panels describe **two different populations**, and the second excludes these groups over the whole period, before as well as after 2025. Their gap is therefore not the effect of the reform, and a small gap would not prove a small effect. Insee notes for its part that the 2025 changes may also affect job search behaviour, and therefore the ILO measure: neither series is an intact witness of what would have happened without the law.
 
+On the ILO measure, Insee quantified the share of the groups targeted by the law in the rise in unemployment: "{{< mes-val "cit_ir192" >}}" (*Informations rapides* No. 192, 7 August 2026, our translation). It adds straight away: "{{< mes-val "cit_ir192_reserve" >}}". This is therefore an accounting contribution, not an effect of the law. Unédic, the joint body that runs unemployment insurance, repeats the figure, writing that "{{< mes-val "cit_unedic" >}}", while quoting Insee's caveat: the verb says more than the measurement.
+
 ## How should a promise be judged with these figures? {#juger-une-promesse}
 
 A promise to reduce unemployment, taken as an example and aimed at no one, is judged in four steps, which are the last four questions of the book's grid:
