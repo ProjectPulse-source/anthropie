@@ -53,6 +53,31 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-07 — FR↔EN sans décrochage : sélecteur de langue à repli, huit pages traduites, contre-expertise retenue ; POUSSÉ (`72f26e5`, `63cc811`), production vérifiée
+
+Constat de l'auteur : l'onglet EN de la page Europe « ne basculait pas ». Le HTML en ligne était juste (version anglaise
+publiée 33 min après la française, page en cache) ; le balayage des sitemaps a trouvé le vrai défaut : 20 pages FR sans
+équivalent, dont l'onglet menait à l'accueil anglais.
+
+- **Sélecteur** : `partials/lang-cible.html` (traduction → `lang_repli` du front matter → ancêtre traduit → accueil),
+  appelé par `partials/header.html` (en-tête et menu mobile). Une page neuve sans traduction et sans ancêtre traduit
+  tombe sur l'accueil : lui donner `lang_repli`. Seule `/presse/` (non indexée, sans lien entrant) y reste.
+- **Exclusions déclarées** (`lang_repli`) : fiches des livres parus en français seul, `/premier-coup/`,
+  `/livresque/methode-et-corpus/`, `/offrir-un-livre-*`, `/ressources-offertes/` (cascade) → `/en/books/` ;
+  `/enseignants/*` → `/en/resources/`.
+- **Huit versions anglaises** : negative-commons, rebound-effect, technological-debt, independent-researcher,
+  how-writing-transformed-thought, transparency-personal-data, et deux pages de données sans chiffre saisi —
+  public-debt-future-generations, local-government-debt (blocs `affichage_en` des générateurs, `gen-*`/`coll-*`
+  bilingues sans repli français, figures et cartes `-en`, sorties ajoutées aux `git add` de `dette-monde.yml` et
+  `dette-collectivites.yml`).
+- **Contre-expertise** `anthropie-site-20261007-101620` : publiable après corrections, aucun bloquant ; arbitrage dans
+  `.claude/external-audits/ARBITRATIONS/` ; intitulé commun « Tested against the research literature » (six pages EN).
+- **Contrôles** : hugo rc=0, `check-all --ci` à 0, `audit-liens-build` 0 critique 0 UX ; arbre HEAD reconstruit seul
+  (`git archive`) avant push ; en ligne : 8 pages en 200, sélecteur relu sur 7 pages.
+- **Points ouverts, nommés** : `desc` du SVG `collectivites-europe` porte des ordres de grandeur saisis à la main
+  (« entre 7 et 10 % »), FR et EN — écart antérieur à la règle « aucun chiffre saisi » ; l'encadré `appel-livre`
+  affiche le sous-titre français du livre sur les pages anglaises (choix existant, aussi sur can-public-debt-come-down).
+
 ### 2026-10-06 — Pastille du dossier collante ; en-tête de dossier dans `/ressources/` (variante A) ; POUSSÉ (`16fc5e8`, `99de828`), production vérifiée
 
 Demande de l'auteur : la barre collante doit englober la pastille bleu marine ; l'index doit mieux signaler l'idée de

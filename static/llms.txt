@@ -94,6 +94,10 @@ All nine Anthropie Working Papers exist in English with distinct Zenodo DOIs. Th
   - [Who really pays for public debt?](https://stephane-lalut.com/en/who-really-pays-public-debt/) — holding is not paying: holders, net transfers by income decile, incidence by instrument
   - [Public debt: why 100% of GDP does not carry the same burden everywhere](https://stephane-lalut.com/en/public-debt-international-comparison/) — stock, rates and revenue compared across the 27 EU countries and beyond
   - [Can public debt come down?](https://stephane-lalut.com/en/can-public-debt-come-down/) — thirty years of European windows, debt-stabilising primary balance, sustainability
+  - [Is public debt a burden on future generations?](https://stephane-lalut.com/en/public-debt-future-generations/) — what French deficits financed since 1996, who holds the debt, and the ageing component of the stabilisation effort
+  - [Local government debt](https://stephane-lalut.com/en/local-government-debt/) — French local authorities as an adjustment variable: debt, grants and investment, compared across Europe by statistical scope
+- Explainers: [negative commons](https://stephane-lalut.com/en/negative-commons/), [the rebound effect (Jevons paradox)](https://stephane-lalut.com/en/rebound-effect/), [technological debt](https://stephane-lalut.com/en/technological-debt/) — definitions, origins and sources
+- Guides: [independent researcher — working and publishing outside institutions](https://stephane-lalut.com/en/independent-researcher/), [how writing transformed thought](https://stephane-lalut.com/en/how-writing-transformed-thought/)
 - [ANTHROPY — English edition](https://stephane-lalut.com/en/livres/anthropie-ordre-ici-dette-ailleurs/) — the complete framework in one volume (paperback and Kindle)
 - [Glossary](https://stephane-lalut.com/en/glossaire/) — working vocabulary, anchored entries (e.g. /en/glossaire/#technological-debt)
 - [Resources](https://stephane-lalut.com/en/resources/) — index of data, explainers and reference material, each entry typed by the nature of its content
