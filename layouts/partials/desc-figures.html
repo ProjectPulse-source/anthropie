@@ -124,6 +124,14 @@
   {{- end -}}
 {{- end -}}
 {{- if in $text "{infl." -}}{{- errorf "desc-figures: placeholder {infl.*} non resolu dans : %s" $text -}}{{- end -}}
+{{- /* Ressource « Manque-t-il des professeurs au lycée ? » : placeholders {lyc.<cle>}, depuis data/lycee_professeurs.json
+       (bloc affichage, scripts/update_lycee_professeurs.py). Français seulement (exclusion déclarée). */ -}}
+{{- with site.Data.lycee_professeurs -}}
+  {{- range $k, $v := .affichage -}}
+    {{- $text = replace $text (printf "{lyc.%s}" $k) $v -}}
+  {{- end -}}
+{{- end -}}
+{{- if in $text "{lyc." -}}{{- errorf "desc-figures: placeholder {lyc.*} non resolu dans : %s" $text -}}{{- end -}}
 {{- with .isbn -}}
   {{- range where site.Data.works.works "isbn" . -}}
     {{- with .corpus_stats -}}

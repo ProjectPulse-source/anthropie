@@ -53,6 +53,24 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-07 — Ressource « Manque-t-il des professeurs au lycée ? » et bloc « École et lycée » (FR seulement) ; NON POUSSÉ
+
+Pendant le mouvement lycéen et la consultation nationale des lycéens (5-23/10/2026). Recherche, protocole écrit avant calcul,
+deux contre-expertises arbitrées, énoncés des acteurs relus à la source et verdict :
+`D:\PRO\06_PROMOTION\RECHERCHE_LYCEES_MOYENS_2026-10-07\`.
+
+- **Page** `content/manque-t-il-des-professeurs/_index.md` : heures non assurées par motif (signature), concours par
+  discipline, classes et taille vécue, moyens (heures par élève, dépense, OCDE, crédits), académies, tableau des énoncés,
+  limites, FAQ, appel au livre *La Société du premier coup* (volet 2 annoncé), sources, « Réutiliser ». `lang_repli`.
+- **Générateur** `scripts/update_lycee_professeurs.py` : extrait figé `scripts/sources_lycee_professeurs/` (SHA256SUMS),
+  37 gardes, mutations `organisation`, `classes`, `concours`, `ocde` vues mordre. Jeu `lycee_professeurs` (JSON, CSV),
+  trois figures SVG + PNG, `data/figures_lycee.json`, shortcode `lyc-val`, jetons `{lyc.*}` (`desc-figures.html`).
+- **Carte et vignette** : `carte_lycee()` dans `og_dossier_dette.py` (`--lycee`).
+- **Bloc** `ecole` dans `content/ressources/_index.md` (pas dans l'index anglais : aucune page EN).
+- **Mise à jour** : à la main, hors module (déclaré dans le générateur) ; rendez-vous **septembre 2027** (RERS 2027).
+- Contrôles : hugo 0, `check-all --ci` 0, `audit-liens-build` 0 critique, rendu 390 px sans débordement de contenu.
+- **Reste** : fiche D0 (feuille de route GEO), contre-expertise de la page construite (règle 12), push sur ordre de l'auteur.
+
 ### 2026-10-07 — FR↔EN sans décrochage : sélecteur de langue à repli, huit pages traduites, contre-expertise retenue ; POUSSÉ (`72f26e5`, `63cc811`), production vérifiée
 
 Constat de l'auteur : l'onglet EN de la page Europe « ne basculait pas ». Le HTML en ligne était juste (version anglaise
@@ -149,7 +167,7 @@ seuil 3). Build `$?` = 0, `check-all --ci` à 0 ; HTML construit : `numberOfPage
 « 694 ». Poussé le 04/10 à la demande de l'auteur : relevé amazon.fr du jour, description révisée déjà en ligne, bloc
 « pages » encore à 694 (traitement KDP en cours). Restent : navette Wikidata (680 p.), Open Library.
 
-### 2026-10-03 (nuit) — « Générations futures » : contre-expertise PRO-20261003-195656 arbitrée et exécutée ; COMMITÉ, NON POUSSÉ
+### 2026-10-03 (nuit) — « Générations futures » : contre-expertise PRO-20261003-195656 arbitrée et exécutée ; POUSSÉ (`fe064bf`, `9a36f66`, `577aacb`), déploiement et production vérifiés
 
 Arbitrage `D:\PRO\.claude\external-audits\ARBITRATIONS\PRO-20261003-195656_arbitrage.md` : publier après corrections ;
 4 bloquantes acceptées (2 avec modification), affirmations du contradicteur vérifiées à la source avant d'être retenues.
@@ -164,7 +182,6 @@ Arbitrage `D:\PRO\.claude\external-audits\ARBITRATIONS\PRO-20261003-195656_arbit
   cartouche « projections 2026 », docstring. 54 gardes ; build 0 ; `check-all --ci` 0 ; audit des liens 0 critique.
 - Leçon transversale en candidate : `~/.claude/knowledge/candidates/garde-numerique-ne-valide-pas-une-interpretation.md`.
 
-
 ### 2026-10-03 (soir, suite) — « Générations futures » : témoin État rétabli par la règle constante « anti-robot → changer de canal »
 
 Règle de l'auteur (`Downloads\Regle_constante.txt`, mémoire `feedback_anti_robot_changer_de_canal`) : la part non
@@ -173,7 +190,6 @@ Webstat (série DET, 1999-2025), téléchargé avec l'accord de l'auteur, archiv
 6 gardes de concordance avec la série BCE (52 au total). Table des pays : « au-delà du besoin » au lieu de parts > 100 %.
 Défaut trouvé à la relecture du diff du premier commit et corrigé avant lui : continuations du `git add` de
 `dette-monde.yml` écrites en `\n` littéraux (heredoc — récidive de la mémoire « texte avec `\` : Write/Edit »).
-
 
 ### 2026-10-03 (soir) — `/dette-publique-generations-futures/` refondue en ressource de données ; COMMITÉ, NON POUSSÉ
 
@@ -191,8 +207,7 @@ les trois arguments tombent, le troisième sous condition (cumul COR + risque sa
   `audit-liens-build.py` 0 critique, 390 px : figures et tableau tiennent (débordement résiduel de 15 px commun aux pages de
   référence, dû à la barre/à la mesure en iframe). Fiche D0 écrite. Contre-expertise de la page : à faire.
 
-
-### 2026-10-03 (nuit, suite) — Barres de dossier posées par le gabarit, plus aucun appel manuel ; NI COMMITÉ NI POUSSÉ
+### 2026-10-03 (nuit, suite) — Barres de dossier posées par le gabarit, plus aucun appel manuel ; POUSSÉ (`b53ed8c`, déploiement vérifié)
 
 Question de l'auteur : « l'ensemble est-il structurellement acquis pour que les prochains dossiers se structurent ainsi ? »
 Réponse mesurée : non, deux trous silencieux — la barre dépendait d'un appel manuel `{{< dossier >}}` (une page qui
@@ -240,99 +255,6 @@ onglets ; Littérature et Philosophie « visibles, à venir » ; barre pour les 
 - Contrôles : build 0, `check-all --ci` 0, audit des liens 0 ; mesure 13 pages × 7 largeurs (1 280 → 320) : aucun
   débordement, aucun onglet coupé, actif visible ; ancres enseignants sous la barre. **Écart déclaré** : Notions (6
   onglets) défile à 390 px (433 px pour 358) — tenir sans défilement exigerait d'abréger les noms des concepts.
-
-### 2026-10-03 (fin d'après-midi) — Miroir anglais : page /en/can-public-debt-come-down/ et barre anglaise ; NI COMMITÉ NI POUSSÉ
-
-Demande de l'auteur (03/10) : « ajuster la version anglaise en miroir de la version française ».
-- `scripts/update_dette_baisse.py` bilingue : un calcul, blocs `affichage` et `affichage_en` aux mêmes clés (contrôlé),
-  figures `-en` au même dessin ; les figures françaises n'ont pas bougé d'un octet ; 51 gardes, une passe pour les deux langues.
-- Page `content/dette-publique-peut-elle-baisser/_index.en.md` (traduction de la version française arbitrée) ; carte
-  `og-dette-baisse-en.jpg` et vignette ; `baisse-val`, `baisse-tableau`, `desc-figures` choisissent le bloc de la langue.
-- Barre anglaise : cinq questions (« Can it come down? ») et « Further topics », qui renvoie aux deux prolongements
-  français, marqués « in French » et `hreflang="fr"` (libellés `dossier_dette_titre_en`, `dossier_dette_role_en`).
-- Renvois anglais : « separate analysis » de la comparaison internationale et « Nothing about the future » du volet 1
-  pointent vers la page ; pastilles ajoutées. Workflow `dette-monde.yml` et `data/sources_maj.json` complétés.
-- Contrôles : build, `check-all --ci` (11/11 pages de données conformes), audit des liens à 0, balises de langue réciproques,
-  barre anglaise mesurée de 1 280 à 390 px sans débordement ni onglet coupé (rangée naturelle de 868 px à 1 280 px).
-- Non traduits, déclarés : les deux prolongements (collectivités : public français, exclusion déjà déclarée ; générations
-  futures : à décider).
-
-### 2026-10-03 (après-midi) — Barre du dossier dette « A+ v2 » CONSTRUITE en local ; NI COMMITÉE NI POUSSÉE
-
-Décision de l'auteur (03/10) : « gris, construis A+ v2 ». Maquettes et trois avis arbitrés :
-`D:\PRO\06_PROMOTION\MAQUETTES_BARRE_DOSSIER_DETTE_2026-10-03\`.
-- `layouts/shortcodes/dossier-dette.html` réécrit : en-tête qui défile (pastille + source en GRIS, propre à la page) ;
-  rangée collante de cinq questions sans numéros (« Peut-elle baisser ? » devient un onglet, FR seulement) ; filet puis
-  « Prolongements » qui déplie un panneau ; les prolongements viennent du dépôt (`dossier_dette: prolongement`, tri
-  par `ressource.rang`) ; nom accessible (libellé visible puis question, texte masqué) ; onglet actif recentré sur
-  téléphone. Volet `collectivites` accepté comme ancien nom de `prolongement`.
-- `assets/scss/_reutiliser.scss` : modificateur `.dossier-dette--v2` (la barre des enseignants garde l'organe
-  d'origine) ; bascule vers les libellés courts sous 968 px de barre (rangée naturelle mesurée : 936 px, réserve 32 px) ;
-  `.sr-only` ; marge d'ancre sous les barres collantes. `_print.scss` : l'en-tête s'imprime, la rangée non.
-- Pages : « Peut-elle baisser » sort des prolongements de l'index (`rang: 35`, grille du dossier) ; « Générations
-  futures » reçoit la barre et déclare `dossier_dette: prolongement` ; collectivités déclare de même (fichier qui porte
-  aussi le travail non commité d'une autre session).
-- Mesures (build de production, 9 pages × 7 largeurs de 1 280 à 320 px) : aucun onglet coupé, onglet actif visible
-  partout, page sans débordement de 1 280 à 390 px ; impression conforme ; ancres dégagées (titre à 152 px sous 132 px
-  de barres). `check-all --ci` et `audit-liens-build.py` à 0.
-- Défauts trouvés en mesurant : (1) titre atteint par ancre caché sous les barres collantes, DÉJÀ EN LIGNE (178 px
-  masqués) — corrigé ; (2) les textes masqués s'échappaient de la bande défilante et faisaient déborder la page à
-  390 px — corrigé avant tout commit ; (3) à 320 px, le bloc du livre (`appel-livre`) déborde de 19 px sur les pages
-  qui le portent, DÉJÀ EN LIGNE, hors de ce chantier — NON corrigé, point ouvert.
-- Ouvert : sous-titres de l'index `/ressources/` (« Le dossier, en cinq pages » s'affiche ; le chapô du bloc Dette
-  est dans un fichier d'une autre session) ; version anglaise de « Peut-elle baisser ».
-
-### 2026-10-03 (matin, suite) — Avis entrant final arbitré et appliqué ; NI COMMITÉ NI POUSSÉ
-
-Arbitrage `D:\PRO\.claude\external-audits\ARBITRATIONS\ENTRANTE_2026-10-03_Solution_Dette_arbitrage.md`. Addition
-complète de la décennie dans le résultat et le résumé ; mécanisme exact dans la FAQ ; légende « S : déficits (+) ou
-excédents (−) primaires » ; Belgique en addition observée ; programme grec jusqu'au 20/08/2018 (MES) ; décompte des
-années au-dessus du repère (neuf de baisse sur onze) ; repli retitré et bornes « de 0 à moins de 2 % » ; limites en
-quatre groupes ; bloc du livre réécrit ; carte « Les déficits ont pesé plus lourd ». 51 gardes ; build, `check-all --ci`,
-audit des liens, 390 et 1 280 px à 0.
-
-### 2026-10-03 (matin) — Contre-expertise de la page construite ARBITRÉE et corrections appliquées ; NI COMMITÉ NI POUSSÉ
-
-Audit `PRO-20261003-064640` (clos), verdict « publier après corrections » ; arbitrage
-`D:\PRO\.claude\external-audits\ARBITRATIONS\PRO-20261003-064640_arbitrage.md`. Cinq corrections bloquantes acceptées :
-ratio et montant distingués dès le chapô (le montant de la dette n'a baissé dans aucun des trois pays en excédent) ;
-allègement taux-croissance de 2016-2025 dit concentré en 2021-2023 ; sensibilité du groupe au seuil (80 et 100 %)
-affichée après la figure ; solde stabilisant dit « hors autres ajustements » partout ; troisième barre « autres
-ajustements » sur la figure des pays. Programmes d'assistance datés et sourcés (Commission européenne, lu le 03/10).
-Générateur : 47 gardes, encours, sensibilité, classe 0-2 % du repli, contrôle de la dette de départ contre le volet 1.
-Build, `check-all --ci`, audit des liens, 390 et 1 280 px à 0 ; mutations rejouées. Ouvert : la formule « s'arrête si
-une phrase cessait d'être vraie » reste sur les autres volets ; la « méthode » promise par le bloc du livre n'est pas
-vérifiée contre le livre.
-
-### 2026-10-03 — Page `/dette-publique-peut-elle-baisser/` CONSTRUITE en local ; volet 1 corrigé (PIB, témoin) ; NI COMMITÉ NI POUSSÉ
-
-Décision de l'auteur (02/10) : « construis la page autour du constat français ». Recherche, test décisif, contre-expertise
-`PRO-20261002-195300` et arbitrage : `D:\PRO\06_PROMOTION\RECHERCHE_SOLUTIONS_DETTE_2026-10-02\`.
-
-- **Page** `content/dette-publique-peut-elle-baisser/_index.md` (français seulement) : de 2016 à 2025, l'effet
-  taux-croissance retire 15,1 points au ratio de dette, les déficits primaires en ajoutent 30,6 ; sept pays partis de
-  plus de 90 % fin 2015 (désignés par une règle) ; solde primaire observé et solde stabilisant ; fenêtres européennes
-  en repli. Jetons `{baisse.*}`, shortcodes `baisse-val` et `baisse-tableau`.
-- **Générateur** `scripts/update_dette_baisse.py` : jeu `dette_baisse` (JSON, CSV long), trois figures SVG et PNG,
-  37 gardes de prose, conservation des années-pays (805 = 795 + 10, motif par écart). Vus mordre : une garde
-  (`--mutation-garde`) et le témoin (`--mutation-pib`). Carte et vignette : `carte_baisse` de `og_dossier_dette.py`.
-  Câblé dans `dette-monde.yml` (après `update_dette_dynamique.py`, qu'il lit) et `data/sources_maj.json`.
-- **Défaut du volet 1 corrigé** (`scripts/update_dette_dynamique.py`) : (1) le « témoin comptable » était
-  algébriquement égal au résidu flux-stock, il ne pouvait rien rejeter ; remplacé par les ratios qu'Eurostat publie en
-  % du PIB (tolérance 0,11 point, bloquant) ; (2) le PIB venait de `nama_10_gdp` en `CP_MEUR`, donc en écus avant 1999 :
-  dette de 1995 à 57,5 % au lieu des 57,8 % publiés (et que `/cout-de-la-dette-publique/` affiche). PIB de la
-  notification désormais (`gov_10dd_edpt1`, B1GQ). Chiffres affichés du volet 1 : départ 57,5 → 57,8 ; fin 115,7 → 115,6 ;
-  hausse 58,2 → 57,7 ; ses gardes passent sans changement de prose. Phrases « seconde identité comptable » réécrites
-  (FR et EN), figures et cartes régénérées.
-- **Barre du dossier : cinquième onglet essayé, MESURÉ, retiré.** À 390 px le dernier onglet finit à 406 px ; à
-  1 280 px les onglets recouvrent le badge de date. La page prend la barre sans onglet actif et se range dans
-  « Prolongements du dossier » (`ressource.prolongement: true`) jusqu'à décision de l'auteur sur la barre.
-- **Contrôles** : build de production (code 0), HTML relu (jetons résolus, FAQPage et Dataset valides), `check-all --ci`
-  à 0, `audit-liens-build.py` à 0 critique, 390 et 1 280 px sans débordement après retrait de l'onglet.
-- **Ouvert** : version anglaise (exclusion déclarée) ; pastille vers la page sur `/cout-de-la-dette-publique/` et
-  `/qui-paie-la-dette-publique/` (la première porte le travail non commité d'une autre session) ; programmes
-  d'assistance de la Grèce, de Chypre et du Portugal cités de mémoire, non relus à la source ; scénarios officiels et
-  cadre juridique européen hors de cette page ; contre-expertise de la page construite ; `llms.txt`.
 
 ### 2026-10-03 (fin d'après-midi) — Miroir anglais : page /en/can-public-debt-come-down/ et barre anglaise ; NI COMMITÉ NI POUSSÉ
 
@@ -873,6 +795,18 @@ FAQ « Pas systématiquement » et « ne permettent pas d'estimer le risque de c
 badge « Données : » lu de `releve_le` ; ancres figées sur toutes les sections. `check-all --reseau` à 0. Fiche D0
 dans `D:\PRO\06_PROMOTION\FEUILLE_DE_ROUTE_GEO_RESSOURCES.md`. Toujours `draft: true` : la publication (retrait du
 brouillon, volet 3 du dossier dette, push) attend la demande de l'auteur.
+
+### 2026-09-30 — Page « Que peut décider le président de la République seul ? » (D3 GEO-PLUS), NON COMMITÉE
+
+Étape 1 de `D:\PRO\06_PROMOTION\FEUILLE_DE_ROUTE_GEO_RESSOURCES.md` (fiche D0 écrite avant le texte).
+`/pouvoirs-du-president-de-la-republique/`, vue de `data/pouvoirs_president.yaml` par le shortcode
+`pouvoirs-president` : 16 pouvoirs en trois groupes (les huit dispositions de l'art. 19 sans contreseing, sept pouvoirs
+contresignés, l'art. 20 pour le Gouvernement) ; 19 articles lus le 30/09 sur Légifrance (API PISTE), identifiant et
+empreinte SHA-256 de chaque réponse dans la base. **Garde de preuve vue mordre** : `lu_le` retiré sur l'art. 17 →
+`WARN` et fiche masquée (15 au lieu de 16) ; article cité hors registre → build arrêté. Bloc `institutions` ajouté au
+hub `/ressources/`. `check-all --reseau` à 0 ; la page ouvre la première porte hors catalogue vers la fiche du livre
+(signal `check-geo-coverage` levé). Relue dans le navigateur sur ordinateur ; **largeur téléphone non vue** (la
+fenêtre n'a pas pu être réduite). Attend la lecture de l'auteur, puis le commit.
 
 ### 2026-09-30 — Mise à jour automatique de la page internationale (`dette-monde.yml`), contre-expertise lancée
 

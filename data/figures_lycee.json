@@ -1,0 +1,28 @@
+{
+ "fr": [
+  {
+   "id": "heures",
+   "fichier": "lycee-heures",
+   "titre": "Une heure de cours sur dix n'a pas lieu au lycée : pourquoi ?",
+   "montre": "Au lycée général et technologique, plus de la moitié des heures perdues en 2024-2025 tient à l'organisation (fermetures pour examens, enseignants mobilisés par les examens ou les commissions, formation) ; au collège, les deux parts s'équilibrent.",
+   "source": "DEPP, enquête sur le temps d'enseignement non assuré (Note d'Information 26-14), établissements publics, 2024-2025",
+   "precaution": "En % des heures d'enseignement prévues. Absences individuelles : maladie, congés, grèves, convenances. Enquête déclarative par échantillon."
+  },
+  {
+   "id": "classes",
+   "fichier": "lycee-classes",
+   "titre": "Élèves par classe au lycée général et technologique, 1994-2025",
+   "montre": "Depuis 2020, les classes de lycée GT comptent plus de 30 élèves en moyenne, un niveau jamais atteint de 1994 à 2015 ; la moyenne est stable depuis.",
+   "source": "DEPP, Repères et références statistiques 2026, fiches 2.05 et 2.06 (public et privé sous contrat)",
+   "precaution": "Nombre moyen d'élèves par division (classe entière). Devant un professeur, les élèves sont moins nombreux : une partie des heures se fait en groupe."
+  },
+  {
+   "id": "concours",
+   "fichier": "lycee-concours",
+   "titre": "Part des postes pourvus aux concours externes d'enseignants, 2008-2025",
+   "montre": "Les CAPES de mathématiques et de physique-chimie restent sous quatre postes pourvus sur cinq aux trois dernières sessions, quand l'ensemble des concours se redresse.",
+   "source": "DEPP, Repères et références statistiques 2026, fiches 9.27 et 9.28 (concours externes, enseignement public)",
+   "precaution": "Admis rapportés aux postes offerts. Ensemble des concours externes d'enseignants du second degré : années publiées seulement."
+  }
+ ]
+}

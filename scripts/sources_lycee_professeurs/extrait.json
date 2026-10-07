@@ -1,0 +1,1028 @@
+{
+ "releve_le": "2026-10-07",
+ "champ": "France, lycee general et technologique sauf mention",
+ "ed_gt": {
+  "1994": 28.9,
+  "1995": 28.8,
+  "1996": 28.7,
+  "1997": 28.7,
+  "1998": 28.5,
+  "1999": 28.1,
+  "2000": 27.9,
+  "2001": 27.8,
+  "2002": 27.8,
+  "2003": 27.8,
+  "2004": 28.0,
+  "2005": 28.1,
+  "2006": 27.8,
+  "2007": 27.7,
+  "2008": 27.8,
+  "2009": 27.8,
+  "2010": 27.9,
+  "2011": 28.5,
+  "2012": 29.0,
+  "2013": 29.2,
+  "2014": 29.2,
+  "2015": 29.4,
+  "2016": 29.6,
+  "2017": 29.6,
+  "2018": 29.4,
+  "2019": 29.9,
+  "2020": 30.3,
+  "2021": 30.4,
+  "2022": 30.3,
+  "2023": 30.3,
+  "2024": 30.1,
+  "2025": 30.2
+ },
+ "v1": [
+  {
+   "annee": 2005,
+   "divisions": 53562.0,
+   "eleves": 1505092,
+   "he": 1.41
+  },
+  {
+   "annee": 2010,
+   "divisions": 50765.0,
+   "eleves": 1416344,
+   "he": 1.41
+  },
+  {
+   "annee": 2015,
+   "divisions": 52405.0,
+   "eleves": 1540707,
+   "he": 1.33
+  },
+  {
+   "annee": 2020,
+   "divisions": 52871.0,
+   "eleves": 1601991,
+   "he": 1.31
+  },
+  {
+   "annee": 2021,
+   "divisions": 53267.0,
+   "eleves": 1619317,
+   "he": 1.31
+  },
+  {
+   "annee": 2022,
+   "divisions": 53452.0,
+   "eleves": 1619596,
+   "he": 1.33
+  },
+  {
+   "annee": 2023,
+   "divisions": 53425.0,
+   "eleves": 1618778,
+   "he": 1.33
+  },
+  {
+   "annee": 2024,
+   "divisions": 52996.0,
+   "eleves": 1595180,
+   "he": 1.33
+  },
+  {
+   "annee": 2025,
+   "divisions": 52859.0,
+   "eleves": 1596342,
+   "he": 1.32
+  }
+ ],
+ "v3": {
+  "public": {
+   "moyenne": 30.499499499499503,
+   "vecue": 31.330828054744167,
+   "eleves_35": 23.5649348518166,
+   "eleves_30": 76.03137615281106,
+   "divisions_35": 20.420420420420424,
+   "max": 37,
+   "distribution": {
+    "10": 0.9,
+    "11": 0.2,
+    "12": 0.2,
+    "13": 0.2,
+    "14": 0.2,
+    "15": 0.3,
+    "16": 0.4,
+    "17": 0.4,
+    "18": 0.5,
+    "19": 0.7,
+    "20": 0.9,
+    "21": 1.0,
+    "22": 1.6,
+    "23": 2.0,
+    "24": 3.7,
+    "25": 2.5,
+    "26": 2.7,
+    "27": 2.9,
+    "28": 3.9,
+    "29": 4.9,
+    "30": 6.9,
+    "31": 7.4,
+    "32": 9.9,
+    "33": 11.4,
+    "34": 13.8,
+    "35": 16.6,
+    "36": 3.6,
+    "37": 0.2
+   }
+  },
+  "prive": {
+   "moyenne": 29.33967935871744,
+   "vecue": 30.66893207199207,
+   "eleves_35": 22.30115091697688,
+   "eleves_30": 67.85628906116595,
+   "divisions_35": 18.036072144288582,
+   "max": 50,
+   "distribution": {
+    "10": 1.8,
+    "11": 0.5,
+    "12": 0.5,
+    "13": 0.5,
+    "14": 0.6,
+    "15": 0.6,
+    "16": 0.8,
+    "17": 0.9,
+    "18": 1.1,
+    "19": 1.1,
+    "20": 1.3,
+    "21": 1.6,
+    "22": 1.8,
+    "23": 2.2,
+    "24": 3.0,
+    "25": 3.2,
+    "26": 3.8,
+    "27": 4.4,
+    "28": 4.9,
+    "29": 5.6,
+    "30": 7.6,
+    "31": 8.0,
+    "32": 8.6,
+    "33": 8.9,
+    "34": 8.5,
+    "35": 7.6,
+    "36": 5.6,
+    "37": 2.1,
+    "38": 1.1,
+    "39": 0.7,
+    "40": 0.4,
+    "41": 0.1,
+    "42": 0.1,
+    "43": 0.1,
+    "50": 0.2
+   }
+  },
+  "tranches": {
+   "2015": {
+    "div_30": 60.89999999999999,
+    "div_35": 22.5
+   },
+   "2024": {
+    "div_30": 67.7,
+    "div_35": 19.8
+   },
+   "2025": {
+    "div_30": 67.5,
+    "div_35": 19.9
+   }
+  }
+ },
+ "v4": {
+  "es_disciplines": [
+   {
+    "discipline": "Mathématiques",
+    "es": 25.3
+   },
+   {
+    "discipline": "Lettres",
+    "es": 25.4
+   },
+   {
+    "discipline": "Langues",
+    "es": 22.4
+   },
+   {
+    "discipline": "Physique-Chimie",
+    "es": 21.4
+   },
+   {
+    "discipline": "Sciences de la Vie et de la Terre",
+    "es": 20.2
+   },
+   {
+    "discipline": "Sciences économiques et sociales",
+    "es": 26.5
+   },
+   {
+    "discipline": "Histoire-Géographie",
+    "es": 27.3
+   },
+   {
+    "discipline": "Philosophie",
+    "es": 27.6
+   },
+   {
+    "discipline": "Arts plastiques",
+    "es": 17.5
+   },
+   {
+    "discipline": "Education musicale",
+    "es": 15.3
+   },
+   {
+    "discipline": "Education physique et sportive",
+    "es": 30.4
+   },
+   {
+    "discipline": "Total disciplines générales",
+    "es": 24.5
+   },
+   {
+    "discipline": "Disciplines du domaine de production",
+    "es": 18.8
+   },
+   {
+    "discipline": "Disciplines de domaine des services",
+    "es": 22.1
+   },
+   {
+    "discipline": "Enseignement spécialisé",
+    "es": 18.9
+   },
+   {
+    "discipline": "Toutes disciplines",
+    "es": 24.0
+   }
+  ],
+  "groupes": {
+   "Seconde GT": {
+    "2015": 56.1,
+    "2016": 56,
+    "2017": 55.9,
+    "2018": 55.5,
+    "2019": 50.7,
+    "2020": 49.5,
+    "2021": 49,
+    "2022": 49.5,
+    "2023": 49.3,
+    "2024": 49.3,
+    "2025": 49.4
+   },
+   "Première générale": {
+    "2015": 50.4,
+    "2016": 50.4,
+    "2017": 50.1,
+    "2018": 49.6,
+    "2019": 67,
+    "2020": 67.2,
+    "2021": 66.9,
+    "2022": 67.4,
+    "2023": 67.7,
+    "2024": 67.9,
+    "2025": 68.0
+   },
+   "Première technologique": {
+    "2015": 44.8,
+    "2016": 45.7,
+    "2017": 46,
+    "2018": 46.3,
+    "2019": 43.1,
+    "2020": 43.4,
+    "2021": 42.4,
+    "2022": 43.3,
+    "2023": 42.4,
+    "2024": 42.2,
+    "2025": 41.8
+   },
+   "Terminale générale": {
+    "2015": 51.1,
+    "2016": 51.5,
+    "2017": 51.6,
+    "2018": 51.3,
+    "2019": 50.6,
+    "2020": 69.5,
+    "2021": 69.8,
+    "2022": 70,
+    "2023": 70.0,
+    "2024": 70.1,
+    "2025": 70.1
+   },
+   "Terminale technologique": {
+    "2015": 51.9,
+    "2016": 52.5,
+    "2017": 53.4,
+    "2018": 55.1,
+    "2019": 54.3,
+    "2020": 49.6,
+    "2021": 49.3,
+    "2022": 49.6,
+    "2023": 49.7,
+    "2024": 49.3,
+    "2025": 48.8
+   },
+   "Total": {
+    "2015": 52.1,
+    "2016": 52.2,
+    "2017": 52.2,
+    "2018": 52.2,
+    "2019": 54,
+    "2020": 57.6,
+    "2021": 57.3,
+    "2022": 57.8,
+    "2023": 57.7,
+    "2024": 57.7,
+    "2025": 57.6
+   }
+  },
+  "es_gt_public": {
+   "2009": 22.8,
+   "2010": 23.2,
+   "2011": 24.2,
+   "2012": 24.2,
+   "2013": 24.1,
+   "2014": 24.2,
+   "2015": 24.3,
+   "2016": 24.4,
+   "2017": 24.3,
+   "2018": 24.1,
+   "2019": 24.4,
+   "2020": 24.3,
+   "2021": 24.3,
+   "2022": 24.2,
+   "2023": 24.1,
+   "2024": 23.9,
+   "2025": 23.97
+  }
+ },
+ "d2": {
+  "serie_5": {
+   "Agrégation de mathématiques": {
+    "2008": 100.0,
+    "2009": 100.0,
+    "2010": 100.0,
+    "2011": 100.0,
+    "2012": 100.0,
+    "2013": 82.6,
+    "2014": 69.6,
+    "2015": 60.0,
+    "2016": 65.1,
+    "2017": 66.5,
+    "2018": 83.1,
+    "2019": 78.4,
+    "2020": 81.9,
+    "2021": 85.2,
+    "2022": 91.3,
+    "2023": 88.8,
+    "2024": 84.5,
+    "2025": 83.1
+   },
+   "Capes de mathématiques": {
+    "2008": 98.7,
+    "2009": 98.4,
+    "2010": 98.7,
+    "2011": 61.2,
+    "2012": 69.6,
+    "2013": 68.5,
+    "2014": 58.6,
+    "2015": 77.2,
+    "2016": 80.1,
+    "2017": 76.3,
+    "2018": 90.7,
+    "2019": 80.7,
+    "2020": 87.8,
+    "2021": 91.8,
+    "2022": 52.4,
+    "2023": 71.4,
+    "2024": 75.2,
+    "2025": 71.4
+   },
+   "Capes de lettres modernes": {
+    "2008": 100.0,
+    "2009": 100.0,
+    "2010": 100.0,
+    "2011": 80.6,
+    "2012": 92.9,
+    "2013": 100.0,
+    "2014": 81.4,
+    "2015": 85.0,
+    "2016": 82.5,
+    "2017": 88.7,
+    "2018": 100.0,
+    "2019": 99.9,
+    "2020": 99.6,
+    "2021": 97.6,
+    "2022": 77.0,
+    "2023": 76.3,
+    "2024": 83.9,
+    "2025": 87.9
+   },
+   "Capes d'anglais": {
+    "2008": 100.0,
+    "2009": 100.0,
+    "2010": 100.0,
+    "2011": 83.6,
+    "2012": 83.7,
+    "2013": 74.7,
+    "2014": 77.3,
+    "2015": 79.6,
+    "2016": 87.0,
+    "2017": 72.4,
+    "2018": 100.0,
+    "2019": 100.1,
+    "2020": 100.0,
+    "2021": 99.3,
+    "2022": 87.9,
+    "2023": 95.1,
+    "2024": 95.0,
+    "2025": 94.0
+   },
+   "Capes de physique-chimie": {
+    "2008": 100.0,
+    "2009": 100.0,
+    "2010": 100.2,
+    "2011": 100.0,
+    "2012": 100.0,
+    "2013": 100.0,
+    "2014": 100.0,
+    "2015": 100.0,
+    "2016": 100.0,
+    "2017": 100.0,
+    "2018": 100.0,
+    "2019": 68.3,
+    "2020": 100.0,
+    "2021": 99.8,
+    "2022": 48.2,
+    "2023": 72.7,
+    "2024": 65.1,
+    "2025": 73.7
+   }
+  },
+  "detail_2025": {
+   "Agrégation / ensemble": {
+    "postes": 1764.0,
+    "couverture": 94.6
+   },
+   "Agrégation / Disciplines scientifiques": {
+    "postes": 609.0,
+    "couverture": 90.1
+   },
+   "Agrégation / mathématiques": {
+    "postes": 355.0,
+    "couverture": 83.1
+   },
+   "Agrégation / physique-chimie": {
+    "postes": 170.0,
+    "couverture": 100.0
+   },
+   "Agrégation / Disciplines littéraires et sciences humaines": {
+    "postes": 489.0,
+    "couverture": 98.6
+   },
+   "Agrégation / lettres modernes": {
+    "postes": 151.0,
+    "couverture": 100.0
+   },
+   "Agrégation / histoire et géographie": {
+    "postes": 141.0,
+    "couverture": 100.0
+   },
+   "Agrégation / Langues": {
+    "postes": 311.0,
+    "couverture": 99.7
+   },
+   "Agrégation / anglais": {
+    "postes": 192.0,
+    "couverture": 99.5
+   },
+   "Agrégation / espagnol": {
+    "postes": 60.0,
+    "couverture": 100.0
+   },
+   "Agrégation / Disciplines professionnelles": {
+    "postes": 248.0,
+    "couverture": 88.7
+   },
+   "Agrégation / économie et gestion": {
+    "postes": 107.0,
+    "couverture": 91.6
+   },
+   "Agrégation / sciences industrielles de l’ingénieur": {
+    "postes": 84.0,
+    "couverture": 77.4
+   },
+   "Agrégation / Disciplines artistiques": {
+    "postes": 56.0,
+    "couverture": 100.0
+   },
+   "Agrégation / Éducation physique et sportive": {
+    "postes": 51.0,
+    "couverture": 100.0
+   },
+   "Capes / ensemble": {
+    "postes": 5246.0,
+    "couverture": 87.5
+   },
+   "Capes / Disciplines scientifiques": {
+    "postes": 1930.0,
+    "couverture": 77.2
+   },
+   "Capes / mathématiques": {
+    "postes": 1142.0,
+    "couverture": 71.4
+   },
+   "Capes / physique-chimie": {
+    "postes": 391.0,
+    "couverture": 73.7
+   },
+   "Capes / Disciplines littéraires et sciences humaines": {
+    "postes": 1808.0,
+    "couverture": 94.1
+   },
+   "Capes / lettres modernes": {
+    "postes": 709.0,
+    "couverture": 87.9
+   },
+   "Capes / histoire et géographie": {
+    "postes": 652.0,
+    "couverture": 100.0
+   },
+   "Capes / Langues": {
+    "postes": 1301.0,
+    "couverture": 92.9
+   },
+   "Capes / anglais": {
+    "postes": 845.0,
+    "couverture": 94.0
+   },
+   "Capes / espagnol": {
+    "postes": 293.0,
+    "couverture": 96.6
+   },
+   "Capes / Disciplines artistiques": {
+    "postes": 205.0,
+    "couverture": 91.2
+   },
+   "Capes / Langages spéciaux": {
+    "postes": 2.0,
+    "couverture": 50.0
+   },
+   "Capeps / ensemble": {
+    "postes": 675.0,
+    "couverture": 100.0
+   },
+   "Capet / ensemble": {
+    "postes": 565.0,
+    "couverture": 86.4
+   },
+   "Capet / économie et gestion": {
+    "postes": 292.0,
+    "couverture": 96.6
+   },
+   "Capet / sciences industrielles de l’ingénieur": {
+    "postes": 164.0,
+    "couverture": 59.1
+   },
+   "CAPLP / ensemble": {
+    "postes": 1205.0,
+    "couverture": 84.9
+   },
+   "CAPLP / Disciplines d’enseignement général": {
+    "postes": 428.0,
+    "couverture": 75.5
+   },
+   "CAPLP / mathématiques-physique chimie": {
+    "postes": 181.0,
+    "couverture": 56.4
+   },
+   "CAPLP / lettres-histoire et géographie": {
+    "postes": 145.0,
+    "couverture": 93.8
+   },
+   "CAPLP / Disciplines professionnelles": {
+    "postes": 777.0,
+    "couverture": 90.1
+   },
+   "CAPLP / économie et gestion": {
+    "postes": 196.0,
+    "couverture": 100.0
+   },
+   "CAPLP / biotechnologies": {
+    "postes": 131.0,
+    "couverture": 81.7
+   },
+   "CAPLP / Tous concours": {
+    "postes": 9455.0,
+    "couverture": 89.3
+   }
+  },
+  "detail_2024": {
+   "Agrégation / ensemble": {
+    "postes": 1767.0,
+    "couverture": 94.0
+   },
+   "Agrégation / Disciplines scientifiques": {
+    "postes": 620.0,
+    "couverture": 90.5
+   },
+   "Agrégation / mathématiques": {
+    "postes": 380.0,
+    "couverture": 84.5
+   },
+   "Agrégation / physique-chimie": {
+    "postes": 158.0,
+    "couverture": 100.0
+   },
+   "Agrégation / Disciplines littéraires et sciences humaines": {
+    "postes": 482.0,
+    "couverture": 95.9
+   },
+   "Agrégation / lettres modernes": {
+    "postes": 140.0,
+    "couverture": 100.0
+   },
+   "Agrégation / histoire et géographie": {
+    "postes": 135.0,
+    "couverture": 100.0
+   },
+   "Agrégation / Langues": {
+    "postes": 308.0,
+    "couverture": 100.0
+   },
+   "Agrégation / anglais": {
+    "postes": 191.0,
+    "couverture": 100.0
+   },
+   "Agrégation / espagnol": {
+    "postes": 53.0,
+    "couverture": 100.0
+   },
+   "Agrégation / Disciplines professionnelles": {
+    "postes": 252.0,
+    "couverture": 89.3
+   },
+   "Agrégation / économie et gestion": {
+    "postes": 103.0,
+    "couverture": 93.2
+   },
+   "Agrégation / sciences industrielles de l’ingénieur": {
+    "postes": 93.0,
+    "couverture": 78.5
+   },
+   "Agrégation / Disciplines artistiques": {
+    "postes": 54.0,
+    "couverture": 100.0
+   },
+   "Agrégation / Éducation physique et sportive": {
+    "postes": 51.0,
+    "couverture": 100.0
+   },
+   "Capes / ensemble": {
+    "postes": 5582.0,
+    "couverture": 84.8
+   },
+   "Capes / Disciplines scientifiques": {
+    "postes": 2053.0,
+    "couverture": 77.1
+   },
+   "Capes / mathématiques": {
+    "postes": 1226.0,
+    "couverture": 75.2
+   },
+   "Capes / physique-chimie": {
+    "postes": 450.0,
+    "couverture": 65.1
+   },
+   "Capes / Disciplines littéraires et sciences humaines": {
+    "postes": 1864.0,
+    "couverture": 91.6
+   },
+   "Capes / lettres modernes": {
+    "postes": 763.0,
+    "couverture": 83.9
+   },
+   "Capes / histoire et géographie": {
+    "postes": 634.0,
+    "couverture": 99.8
+   },
+   "Capes / Langues": {
+    "postes": 1431.0,
+    "couverture": 87.2
+   },
+   "Capes / anglais": {
+    "postes": 879.0,
+    "couverture": 95.0
+   },
+   "Capes / espagnol": {
+    "postes": 314.0,
+    "couverture": 87.6
+   },
+   "Capes / Disciplines artistiques": {
+    "postes": 232.0,
+    "couverture": 84.1
+   },
+   "Capes / Langages spéciaux": {
+    "postes": 2.0,
+    "couverture": 100.0
+   },
+   "Capeps / ensemble": {
+    "postes": 690.0,
+    "couverture": 100.0
+   },
+   "Capet / ensemble": {
+    "postes": 624.0,
+    "couverture": 74.5
+   },
+   "Capet / économie et gestion": {
+    "postes": 292.0,
+    "couverture": 89.0
+   },
+   "Capet / sciences industrielles de l’ingénieur": {
+    "postes": 226.0,
+    "couverture": 43.8
+   },
+   "CAPLP / ensemble": {
+    "postes": 1305.0,
+    "couverture": 76.9
+   },
+   "CAPLP / Disciplines d’enseignement général": {
+    "postes": 501.0,
+    "couverture": 70.9
+   },
+   "CAPLP / mathématiques-physique chimie": {
+    "postes": 245.0,
+    "couverture": 48.6
+   },
+   "CAPLP / lettres-histoire et géographie": {
+    "postes": 145.0,
+    "couverture": 100.0
+   },
+   "CAPLP / Disciplines professionnelles": {
+    "postes": 804.0,
+    "couverture": 80.6
+   },
+   "CAPLP / économie et gestion": {
+    "postes": 177.0,
+    "couverture": 100.0
+   },
+   "CAPLP / biotechnologies": {
+    "postes": 165.0,
+    "couverture": 58.2
+   },
+   "CAPLP / Tous concours": {
+    "postes": 9968.0,
+    "couverture": 85.8
+   }
+  },
+  "externes_national": {
+   "2005": 98.8,
+   "2010": 99.2,
+   "2015": 86.7,
+   "2020": 93.1,
+   "2021": 93.5,
+   "2022": 78.7,
+   "2023": 83.5,
+   "2024": 85.8,
+   "2025": 89.3
+  },
+  "contractuels": {
+   "2015": 7.5,
+   "2016": 8.1,
+   "2017": 8.9,
+   "2018": 9.0,
+   "2019": 8.7,
+   "2020": 9.0,
+   "2021": 8.9,
+   "2022": 9.5,
+   "2023": 10.4,
+   "2024": 11.1,
+   "2025": 11.2
+  }
+ },
+ "d3": {
+  "es_gt": {
+   "Clermont-Ferrand": 23.8,
+   "Grenoble": 24.3,
+   "Lyon": 24.6,
+   "Besançon": 23.8,
+   "Dijon": 23.8,
+   "Bretagne (Rennes)": 24.3,
+   "Centre-Val de Loire (Orléans-Tours)": 24.2,
+   "Corse": 22.2,
+   "Nancy-Metz": 23.7,
+   "Reims": 24.4,
+   "Strasbourg": 23.8,
+   "Amiens": 24.2,
+   "Lille": 22.6,
+   "Créteil": 23.9,
+   "Paris": 25.1,
+   "Versailles": 24.5,
+   "Normandie": 24.4,
+   "Bordeaux": 24.1,
+   "Limoges": 23.2,
+   "Poitiers": 23.8,
+   "Montpellier": 24.4,
+   "Toulouse": 23.9,
+   "Pays de la Loire (Nantes)": 24.2,
+   "Aix-Marseille": 23.3,
+   "Nice": 24.5,
+   "Guadeloupe": 21.8,
+   "Guyane": 19.3,
+   "Martinique": 20.1,
+   "Mayotte": 25.0,
+   "La Réunion": 23.0,
+   "DROM": 22.3,
+   "Ensemble public": 24.0,
+   "Privé sous contrat": 24.2,
+   "Ensemble public + privé sous contrat": 24.0
+  },
+  "drom": [
+   "Guadeloupe",
+   "Guyane",
+   "Martinique",
+   "La Réunion",
+   "Mayotte"
+  ]
+ },
+ "d4": {
+  "2023-2024": {
+   "precision": "unite",
+   "par_etablissement": {
+    "En lycée général": {
+     "fermeture": 3,
+     "non_remplacement": 7,
+     "systeme": 2,
+     "formation": 1,
+     "individuelles": 4,
+     "total": 10
+    },
+    "En collège": {
+     "fermeture": 1,
+     "non_remplacement": 8,
+     "systeme": 2,
+     "formation": 1,
+     "individuelles": 5,
+     "total": 9
+    },
+    "En lycée professionnel": {
+     "fermeture": 2,
+     "non_remplacement": 7,
+     "systeme": 2,
+     "formation": 1,
+     "individuelles": 4,
+     "total": 9
+    },
+    "Ensemble": {
+     "fermeture": 2,
+     "non_remplacement": 7,
+     "systeme": 2,
+     "formation": 1,
+     "individuelles": 4,
+     "total": 9
+    }
+   }
+  },
+  "2024-2025": {
+   "precision": "dixieme",
+   "par_etablissement": {
+    "En lycée général": {
+     "fermeture": 3.3,
+     "non_remplacement": 7.1,
+     "systeme": 1.9,
+     "formation": 1.4,
+     "individuelles": 3.9,
+     "total": 10.4
+    },
+    "En collège": {
+     "fermeture": 1.8,
+     "non_remplacement": 7.7,
+     "systeme": 1.8,
+     "formation": 1.3,
+     "individuelles": 4.7,
+     "total": 9.5
+    },
+    "En lycée professionnel": {
+     "fermeture": 2.1,
+     "non_remplacement": 7.4,
+     "systeme": 2.1,
+     "formation": 1.3,
+     "individuelles": 4,
+     "total": 9.5
+    },
+    "Ensemble": {
+     "fermeture": 2.3,
+     "non_remplacement": 7.5,
+     "systeme": 1.9,
+     "formation": 1.3,
+     "individuelles": 4.3,
+     "total": 9.8
+    }
+   }
+  },
+  "second_degre": {
+   "individuelles": {
+    "2022-2023": 5.3,
+    "2024-2025": 4.3
+   },
+   "total": {
+    "2022-2023": 11,
+    "2024-2025": 9.8
+   }
+  }
+ },
+ "c1": {
+  "1990": 9390.0,
+  "2000": 12830.0,
+  "2005": 12670.0,
+  "2010": 14150.0,
+  "2015": 13080.0,
+  "2020": 12470.0,
+  "2023": 12910.0,
+  "2024": 13020.0
+ },
+ "c3": {
+  "2012": {
+   "OECD": 7316,
+   "FRA": 11555
+  },
+  "2013": {
+   "OECD": 7760,
+   "FRA": 12031
+  },
+  "2015": {
+   "OECD": 8310,
+   "FRA": 12024
+  },
+  "2016": {
+   "OECD": 7912,
+   "FRA": 12454
+  },
+  "2017": {
+   "OECD": 8649,
+   "FRA": 12628
+  },
+  "2018": {
+   "OECD": 9077,
+   "FRA": 13086
+  },
+  "2019": {
+   "OECD": 9983,
+   "FRA": 14334
+  },
+  "2020": {
+   "OECD": 10450,
+   "FRA": 14606
+  },
+  "2021": {
+   "OECD": 10863,
+   "FRA": 14855
+  },
+  "2022": {
+   "OECD": 11689,
+   "FRA": 15701
+  },
+  "2023": {
+   "OECD": 12279,
+   "FRA": 16674
+  }
+ },
+ "enonces": {
+  "e4": {
+   "credits_2017": 48.8,
+   "credits_2027": 64.0,
+   "prix_pib": {
+    "2017": 101.107,
+    "2018": 102.234,
+    "2019": 103.471,
+    "2020": 106.552,
+    "2021": 107.854,
+    "2022": 111.11,
+    "2023": 116.732,
+    "2024": 119.117,
+    "2025": 120.414
+   },
+   "eleves_2017": 12340269,
+   "eleves_2027": 11429225,
+   "eleves_2026_2d_variation": -36193
+  },
+  "e5": {
+   "rcd_2022": 4.5,
+   "rcd_2023": 10.5,
+   "rcd_2024": 11.7
+  },
+  "e7": {
+   "enonce_2026": 96.1,
+   "enonce_2025": 90.6
+  },
+  "e9": {
+   "journees_2023": 949493.0,
+   "hausse_depuis_2018": 93.2
+  },
+  "e1": {
+   "snes": 53,
+   "snpden": 65
+  }
+ }
+}

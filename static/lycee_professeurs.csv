@@ -1,0 +1,339 @@
+﻿tableau,variable,cle,valeur,unite
+classes,eleves_par_division_lycee_gt,1994,28.9,eleves
+classes,eleves_par_division_lycee_gt,1995,28.8,eleves
+classes,eleves_par_division_lycee_gt,1996,28.7,eleves
+classes,eleves_par_division_lycee_gt,1997,28.7,eleves
+classes,eleves_par_division_lycee_gt,1998,28.5,eleves
+classes,eleves_par_division_lycee_gt,1999,28.1,eleves
+classes,eleves_par_division_lycee_gt,2000,27.9,eleves
+classes,eleves_par_division_lycee_gt,2001,27.8,eleves
+classes,eleves_par_division_lycee_gt,2002,27.8,eleves
+classes,eleves_par_division_lycee_gt,2003,27.8,eleves
+classes,eleves_par_division_lycee_gt,2004,28.0,eleves
+classes,eleves_par_division_lycee_gt,2005,28.1,eleves
+classes,eleves_par_division_lycee_gt,2006,27.8,eleves
+classes,eleves_par_division_lycee_gt,2007,27.7,eleves
+classes,eleves_par_division_lycee_gt,2008,27.8,eleves
+classes,eleves_par_division_lycee_gt,2009,27.8,eleves
+classes,eleves_par_division_lycee_gt,2010,27.9,eleves
+classes,eleves_par_division_lycee_gt,2011,28.5,eleves
+classes,eleves_par_division_lycee_gt,2012,29.0,eleves
+classes,eleves_par_division_lycee_gt,2013,29.2,eleves
+classes,eleves_par_division_lycee_gt,2014,29.2,eleves
+classes,eleves_par_division_lycee_gt,2015,29.4,eleves
+classes,eleves_par_division_lycee_gt,2016,29.6,eleves
+classes,eleves_par_division_lycee_gt,2017,29.6,eleves
+classes,eleves_par_division_lycee_gt,2018,29.4,eleves
+classes,eleves_par_division_lycee_gt,2019,29.9,eleves
+classes,eleves_par_division_lycee_gt,2020,30.3,eleves
+classes,eleves_par_division_lycee_gt,2021,30.4,eleves
+classes,eleves_par_division_lycee_gt,2022,30.3,eleves
+classes,eleves_par_division_lycee_gt,2023,30.3,eleves
+classes,eleves_par_division_lycee_gt,2024,30.1,eleves
+classes,eleves_par_division_lycee_gt,2025,30.2,eleves
+eleves_divisions_heures,eleves,2005,1505092,eleves
+eleves_divisions_heures,divisions,2005,53562.0,divisions
+eleves_divisions_heures,he,2005,1.41,"heures par eleve et par semaine (public, GT et post-bac)"
+eleves_divisions_heures,eleves,2010,1416344,eleves
+eleves_divisions_heures,divisions,2010,50765.0,divisions
+eleves_divisions_heures,he,2010,1.41,"heures par eleve et par semaine (public, GT et post-bac)"
+eleves_divisions_heures,eleves,2015,1540707,eleves
+eleves_divisions_heures,divisions,2015,52405.0,divisions
+eleves_divisions_heures,he,2015,1.33,"heures par eleve et par semaine (public, GT et post-bac)"
+eleves_divisions_heures,eleves,2020,1601991,eleves
+eleves_divisions_heures,divisions,2020,52871.0,divisions
+eleves_divisions_heures,he,2020,1.31,"heures par eleve et par semaine (public, GT et post-bac)"
+eleves_divisions_heures,eleves,2021,1619317,eleves
+eleves_divisions_heures,divisions,2021,53267.0,divisions
+eleves_divisions_heures,he,2021,1.31,"heures par eleve et par semaine (public, GT et post-bac)"
+eleves_divisions_heures,eleves,2022,1619596,eleves
+eleves_divisions_heures,divisions,2022,53452.0,divisions
+eleves_divisions_heures,he,2022,1.33,"heures par eleve et par semaine (public, GT et post-bac)"
+eleves_divisions_heures,eleves,2023,1618778,eleves
+eleves_divisions_heures,divisions,2023,53425.0,divisions
+eleves_divisions_heures,he,2023,1.33,"heures par eleve et par semaine (public, GT et post-bac)"
+eleves_divisions_heures,eleves,2024,1595180,eleves
+eleves_divisions_heures,divisions,2024,52996.0,divisions
+eleves_divisions_heures,he,2024,1.33,"heures par eleve et par semaine (public, GT et post-bac)"
+eleves_divisions_heures,eleves,2025,1596342,eleves
+eleves_divisions_heures,divisions,2025,52859.0,divisions
+eleves_divisions_heures,he,2025,1.32,"heures par eleve et par semaine (public, GT et post-bac)"
+distribution_2025_public,moyenne,,30.50,eleves
+distribution_2025_public,vecue,,31.33,eleves
+distribution_2025_public,eleves_35,,23.56,%
+distribution_2025_public,eleves_30,,76.03,%
+distribution_2025_public,divisions_35,,20.42,%
+distribution_2025_prive,moyenne,,29.34,eleves
+distribution_2025_prive,vecue,,30.67,eleves
+distribution_2025_prive,eleves_35,,22.30,%
+distribution_2025_prive,eleves_30,,67.86,%
+distribution_2025_prive,divisions_35,,18.04,%
+tranches_divisions,div_30,2015,60.9,% des divisions
+tranches_divisions,div_35,2015,22.5,% des divisions
+tranches_divisions,div_30,2024,67.7,% des divisions
+tranches_divisions,div_35,2024,19.8,% des divisions
+tranches_divisions,div_30,2025,67.5,% des divisions
+tranches_divisions,div_35,2025,19.9,% des divisions
+eleves_par_structure_discipline_2025,Education musicale,,15.3,eleves
+eleves_par_structure_discipline_2025,Arts plastiques,,17.5,eleves
+eleves_par_structure_discipline_2025,Sciences de la Vie et de la Terre,,20.2,eleves
+eleves_par_structure_discipline_2025,Physique-Chimie,,21.4,eleves
+eleves_par_structure_discipline_2025,Langues,,22.4,eleves
+eleves_par_structure_discipline_2025,Mathématiques,,25.3,eleves
+eleves_par_structure_discipline_2025,Lettres,,25.4,eleves
+eleves_par_structure_discipline_2025,Sciences économiques et sociales,,26.5,eleves
+eleves_par_structure_discipline_2025,Histoire-Géographie,,27.3,eleves
+eleves_par_structure_discipline_2025,Philosophie,,27.6,eleves
+eleves_par_structure_discipline_2025,Education physique et sportive,,30.4,eleves
+heures_en_groupe,Seconde GT,2015,56.1,% des heures
+heures_en_groupe,Seconde GT,2016,56,% des heures
+heures_en_groupe,Seconde GT,2017,55.9,% des heures
+heures_en_groupe,Seconde GT,2018,55.5,% des heures
+heures_en_groupe,Seconde GT,2019,50.7,% des heures
+heures_en_groupe,Seconde GT,2020,49.5,% des heures
+heures_en_groupe,Seconde GT,2021,49,% des heures
+heures_en_groupe,Seconde GT,2022,49.5,% des heures
+heures_en_groupe,Seconde GT,2023,49.3,% des heures
+heures_en_groupe,Seconde GT,2024,49.3,% des heures
+heures_en_groupe,Seconde GT,2025,49.4,% des heures
+heures_en_groupe,Première générale,2015,50.4,% des heures
+heures_en_groupe,Première générale,2016,50.4,% des heures
+heures_en_groupe,Première générale,2017,50.1,% des heures
+heures_en_groupe,Première générale,2018,49.6,% des heures
+heures_en_groupe,Première générale,2019,67,% des heures
+heures_en_groupe,Première générale,2020,67.2,% des heures
+heures_en_groupe,Première générale,2021,66.9,% des heures
+heures_en_groupe,Première générale,2022,67.4,% des heures
+heures_en_groupe,Première générale,2023,67.7,% des heures
+heures_en_groupe,Première générale,2024,67.9,% des heures
+heures_en_groupe,Première générale,2025,68.0,% des heures
+heures_en_groupe,Première technologique,2015,44.8,% des heures
+heures_en_groupe,Première technologique,2016,45.7,% des heures
+heures_en_groupe,Première technologique,2017,46,% des heures
+heures_en_groupe,Première technologique,2018,46.3,% des heures
+heures_en_groupe,Première technologique,2019,43.1,% des heures
+heures_en_groupe,Première technologique,2020,43.4,% des heures
+heures_en_groupe,Première technologique,2021,42.4,% des heures
+heures_en_groupe,Première technologique,2022,43.3,% des heures
+heures_en_groupe,Première technologique,2023,42.4,% des heures
+heures_en_groupe,Première technologique,2024,42.2,% des heures
+heures_en_groupe,Première technologique,2025,41.8,% des heures
+heures_en_groupe,Terminale générale,2015,51.1,% des heures
+heures_en_groupe,Terminale générale,2016,51.5,% des heures
+heures_en_groupe,Terminale générale,2017,51.6,% des heures
+heures_en_groupe,Terminale générale,2018,51.3,% des heures
+heures_en_groupe,Terminale générale,2019,50.6,% des heures
+heures_en_groupe,Terminale générale,2020,69.5,% des heures
+heures_en_groupe,Terminale générale,2021,69.8,% des heures
+heures_en_groupe,Terminale générale,2022,70,% des heures
+heures_en_groupe,Terminale générale,2023,70.0,% des heures
+heures_en_groupe,Terminale générale,2024,70.1,% des heures
+heures_en_groupe,Terminale générale,2025,70.1,% des heures
+heures_en_groupe,Terminale technologique,2015,51.9,% des heures
+heures_en_groupe,Terminale technologique,2016,52.5,% des heures
+heures_en_groupe,Terminale technologique,2017,53.4,% des heures
+heures_en_groupe,Terminale technologique,2018,55.1,% des heures
+heures_en_groupe,Terminale technologique,2019,54.3,% des heures
+heures_en_groupe,Terminale technologique,2020,49.6,% des heures
+heures_en_groupe,Terminale technologique,2021,49.3,% des heures
+heures_en_groupe,Terminale technologique,2022,49.6,% des heures
+heures_en_groupe,Terminale technologique,2023,49.7,% des heures
+heures_en_groupe,Terminale technologique,2024,49.3,% des heures
+heures_en_groupe,Terminale technologique,2025,48.8,% des heures
+heures_en_groupe,Total,2015,52.1,% des heures
+heures_en_groupe,Total,2016,52.2,% des heures
+heures_en_groupe,Total,2017,52.2,% des heures
+heures_en_groupe,Total,2018,52.2,% des heures
+heures_en_groupe,Total,2019,54,% des heures
+heures_en_groupe,Total,2020,57.6,% des heures
+heures_en_groupe,Total,2021,57.3,% des heures
+heures_en_groupe,Total,2022,57.8,% des heures
+heures_en_groupe,Total,2023,57.7,% des heures
+heures_en_groupe,Total,2024,57.7,% des heures
+heures_en_groupe,Total,2025,57.6,% des heures
+heures_non_assurees_2023-2024,En lycée général,fermeture,3,% des heures prevues
+heures_non_assurees_2023-2024,En lycée général,non_remplacement,7,% des heures prevues
+heures_non_assurees_2023-2024,En lycée général,systeme,2,% des heures prevues
+heures_non_assurees_2023-2024,En lycée général,formation,1,% des heures prevues
+heures_non_assurees_2023-2024,En lycée général,individuelles,4,% des heures prevues
+heures_non_assurees_2023-2024,En lycée général,total,10,% des heures prevues
+heures_non_assurees_2023-2024,En collège,fermeture,1,% des heures prevues
+heures_non_assurees_2023-2024,En collège,non_remplacement,8,% des heures prevues
+heures_non_assurees_2023-2024,En collège,systeme,2,% des heures prevues
+heures_non_assurees_2023-2024,En collège,formation,1,% des heures prevues
+heures_non_assurees_2023-2024,En collège,individuelles,5,% des heures prevues
+heures_non_assurees_2023-2024,En collège,total,9,% des heures prevues
+heures_non_assurees_2023-2024,En lycée professionnel,fermeture,2,% des heures prevues
+heures_non_assurees_2023-2024,En lycée professionnel,non_remplacement,7,% des heures prevues
+heures_non_assurees_2023-2024,En lycée professionnel,systeme,2,% des heures prevues
+heures_non_assurees_2023-2024,En lycée professionnel,formation,1,% des heures prevues
+heures_non_assurees_2023-2024,En lycée professionnel,individuelles,4,% des heures prevues
+heures_non_assurees_2023-2024,En lycée professionnel,total,9,% des heures prevues
+heures_non_assurees_2023-2024,Ensemble,fermeture,2,% des heures prevues
+heures_non_assurees_2023-2024,Ensemble,non_remplacement,7,% des heures prevues
+heures_non_assurees_2023-2024,Ensemble,systeme,2,% des heures prevues
+heures_non_assurees_2023-2024,Ensemble,formation,1,% des heures prevues
+heures_non_assurees_2023-2024,Ensemble,individuelles,4,% des heures prevues
+heures_non_assurees_2023-2024,Ensemble,total,9,% des heures prevues
+heures_non_assurees_2024-2025,En lycée général,fermeture,3.3,% des heures prevues
+heures_non_assurees_2024-2025,En lycée général,non_remplacement,7.1,% des heures prevues
+heures_non_assurees_2024-2025,En lycée général,systeme,1.9,% des heures prevues
+heures_non_assurees_2024-2025,En lycée général,formation,1.4,% des heures prevues
+heures_non_assurees_2024-2025,En lycée général,individuelles,3.9,% des heures prevues
+heures_non_assurees_2024-2025,En lycée général,total,10.4,% des heures prevues
+heures_non_assurees_2024-2025,En collège,fermeture,1.8,% des heures prevues
+heures_non_assurees_2024-2025,En collège,non_remplacement,7.7,% des heures prevues
+heures_non_assurees_2024-2025,En collège,systeme,1.8,% des heures prevues
+heures_non_assurees_2024-2025,En collège,formation,1.3,% des heures prevues
+heures_non_assurees_2024-2025,En collège,individuelles,4.7,% des heures prevues
+heures_non_assurees_2024-2025,En collège,total,9.5,% des heures prevues
+heures_non_assurees_2024-2025,En lycée professionnel,fermeture,2.1,% des heures prevues
+heures_non_assurees_2024-2025,En lycée professionnel,non_remplacement,7.4,% des heures prevues
+heures_non_assurees_2024-2025,En lycée professionnel,systeme,2.1,% des heures prevues
+heures_non_assurees_2024-2025,En lycée professionnel,formation,1.3,% des heures prevues
+heures_non_assurees_2024-2025,En lycée professionnel,individuelles,4,% des heures prevues
+heures_non_assurees_2024-2025,En lycée professionnel,total,9.5,% des heures prevues
+heures_non_assurees_2024-2025,Ensemble,fermeture,2.3,% des heures prevues
+heures_non_assurees_2024-2025,Ensemble,non_remplacement,7.5,% des heures prevues
+heures_non_assurees_2024-2025,Ensemble,systeme,1.9,% des heures prevues
+heures_non_assurees_2024-2025,Ensemble,formation,1.3,% des heures prevues
+heures_non_assurees_2024-2025,Ensemble,individuelles,4.3,% des heures prevues
+heures_non_assurees_2024-2025,Ensemble,total,9.8,% des heures prevues
+couverture_concours,capes_mathematiques,2008,98.7,%
+couverture_concours,capes_mathematiques,2009,98.4,%
+couverture_concours,capes_mathematiques,2010,98.7,%
+couverture_concours,capes_mathematiques,2011,61.2,%
+couverture_concours,capes_mathematiques,2012,69.6,%
+couverture_concours,capes_mathematiques,2013,68.5,%
+couverture_concours,capes_mathematiques,2014,58.6,%
+couverture_concours,capes_mathematiques,2015,77.2,%
+couverture_concours,capes_mathematiques,2016,80.1,%
+couverture_concours,capes_mathematiques,2017,76.3,%
+couverture_concours,capes_mathematiques,2018,90.7,%
+couverture_concours,capes_mathematiques,2019,80.7,%
+couverture_concours,capes_mathematiques,2020,87.8,%
+couverture_concours,capes_mathematiques,2021,91.8,%
+couverture_concours,capes_mathematiques,2022,52.4,%
+couverture_concours,capes_mathematiques,2023,71.4,%
+couverture_concours,capes_mathematiques,2024,75.2,%
+couverture_concours,capes_mathematiques,2025,71.4,%
+couverture_concours,capes_physique_chimie,2008,100.0,%
+couverture_concours,capes_physique_chimie,2009,100.0,%
+couverture_concours,capes_physique_chimie,2010,100.2,%
+couverture_concours,capes_physique_chimie,2011,100.0,%
+couverture_concours,capes_physique_chimie,2012,100.0,%
+couverture_concours,capes_physique_chimie,2013,100.0,%
+couverture_concours,capes_physique_chimie,2014,100.0,%
+couverture_concours,capes_physique_chimie,2015,100.0,%
+couverture_concours,capes_physique_chimie,2016,100.0,%
+couverture_concours,capes_physique_chimie,2017,100.0,%
+couverture_concours,capes_physique_chimie,2018,100.0,%
+couverture_concours,capes_physique_chimie,2019,68.3,%
+couverture_concours,capes_physique_chimie,2020,100.0,%
+couverture_concours,capes_physique_chimie,2021,99.8,%
+couverture_concours,capes_physique_chimie,2022,48.2,%
+couverture_concours,capes_physique_chimie,2023,72.7,%
+couverture_concours,capes_physique_chimie,2024,65.1,%
+couverture_concours,capes_physique_chimie,2025,73.7,%
+couverture_concours,agregation_mathematiques,2008,100.0,%
+couverture_concours,agregation_mathematiques,2009,100.0,%
+couverture_concours,agregation_mathematiques,2010,100.0,%
+couverture_concours,agregation_mathematiques,2011,100.0,%
+couverture_concours,agregation_mathematiques,2012,100.0,%
+couverture_concours,agregation_mathematiques,2013,82.6,%
+couverture_concours,agregation_mathematiques,2014,69.6,%
+couverture_concours,agregation_mathematiques,2015,60.0,%
+couverture_concours,agregation_mathematiques,2016,65.1,%
+couverture_concours,agregation_mathematiques,2017,66.5,%
+couverture_concours,agregation_mathematiques,2018,83.1,%
+couverture_concours,agregation_mathematiques,2019,78.4,%
+couverture_concours,agregation_mathematiques,2020,81.9,%
+couverture_concours,agregation_mathematiques,2021,85.2,%
+couverture_concours,agregation_mathematiques,2022,91.3,%
+couverture_concours,agregation_mathematiques,2023,88.8,%
+couverture_concours,agregation_mathematiques,2024,84.5,%
+couverture_concours,agregation_mathematiques,2025,83.1,%
+couverture_concours,externes_second_degre_ensemble,2005,98.8,%
+couverture_concours,externes_second_degre_ensemble,2010,99.2,%
+couverture_concours,externes_second_degre_ensemble,2015,86.7,%
+couverture_concours,externes_second_degre_ensemble,2020,93.1,%
+couverture_concours,externes_second_degre_ensemble,2021,93.5,%
+couverture_concours,externes_second_degre_ensemble,2022,78.7,%
+couverture_concours,externes_second_degre_ensemble,2023,83.5,%
+couverture_concours,externes_second_degre_ensemble,2024,85.8,%
+couverture_concours,externes_second_degre_ensemble,2025,89.3,%
+contractuels,part_enseignants_second_degre_public,2015,7.5,%
+contractuels,part_enseignants_second_degre_public,2016,8.1,%
+contractuels,part_enseignants_second_degre_public,2017,8.9,%
+contractuels,part_enseignants_second_degre_public,2018,9.0,%
+contractuels,part_enseignants_second_degre_public,2019,8.7,%
+contractuels,part_enseignants_second_degre_public,2020,9.0,%
+contractuels,part_enseignants_second_degre_public,2021,8.9,%
+contractuels,part_enseignants_second_degre_public,2022,9.5,%
+contractuels,part_enseignants_second_degre_public,2023,10.4,%
+contractuels,part_enseignants_second_degre_public,2024,11.1,%
+contractuels,part_enseignants_second_degre_public,2025,11.2,%
+depense_par_lyceen_gt,euros_2024,1990,9390.0,EUR (prix 2024)
+depense_par_lyceen_gt,euros_2024,2000,12830.0,EUR (prix 2024)
+depense_par_lyceen_gt,euros_2024,2005,12670.0,EUR (prix 2024)
+depense_par_lyceen_gt,euros_2024,2010,14150.0,EUR (prix 2024)
+depense_par_lyceen_gt,euros_2024,2015,13080.0,EUR (prix 2024)
+depense_par_lyceen_gt,euros_2024,2020,12470.0,EUR (prix 2024)
+depense_par_lyceen_gt,euros_2024,2023,12910.0,EUR (prix 2024)
+depense_par_lyceen_gt,euros_2024,2024,13020.0,EUR (prix 2024)
+ocde_depense_publique_par_eleve_general,France,2012,11555,USD PPA
+ocde_depense_publique_par_eleve_general,OCDE,2012,7316,USD PPA
+ocde_depense_publique_par_eleve_general,France,2013,12031,USD PPA
+ocde_depense_publique_par_eleve_general,OCDE,2013,7760,USD PPA
+ocde_depense_publique_par_eleve_general,France,2015,12024,USD PPA
+ocde_depense_publique_par_eleve_general,OCDE,2015,8310,USD PPA
+ocde_depense_publique_par_eleve_general,France,2016,12454,USD PPA
+ocde_depense_publique_par_eleve_general,OCDE,2016,7912,USD PPA
+ocde_depense_publique_par_eleve_general,France,2017,12628,USD PPA
+ocde_depense_publique_par_eleve_general,OCDE,2017,8649,USD PPA
+ocde_depense_publique_par_eleve_general,France,2018,13086,USD PPA
+ocde_depense_publique_par_eleve_general,OCDE,2018,9077,USD PPA
+ocde_depense_publique_par_eleve_general,France,2019,14334,USD PPA
+ocde_depense_publique_par_eleve_general,OCDE,2019,9983,USD PPA
+ocde_depense_publique_par_eleve_general,France,2020,14606,USD PPA
+ocde_depense_publique_par_eleve_general,OCDE,2020,10450,USD PPA
+ocde_depense_publique_par_eleve_general,France,2021,14855,USD PPA
+ocde_depense_publique_par_eleve_general,OCDE,2021,10863,USD PPA
+ocde_depense_publique_par_eleve_general,France,2022,15701,USD PPA
+ocde_depense_publique_par_eleve_general,OCDE,2022,11689,USD PPA
+ocde_depense_publique_par_eleve_general,France,2023,16674,USD PPA
+ocde_depense_publique_par_eleve_general,OCDE,2023,12279,USD PPA
+eleves_par_structure_academie_2025,Aix-Marseille,,23.3,eleves
+eleves_par_structure_academie_2025,Amiens,,24.2,eleves
+eleves_par_structure_academie_2025,Besançon,,23.8,eleves
+eleves_par_structure_academie_2025,Bordeaux,,24.1,eleves
+eleves_par_structure_academie_2025,Bretagne (Rennes),,24.3,eleves
+eleves_par_structure_academie_2025,Centre-Val de Loire (Orléans-Tours),,24.2,eleves
+eleves_par_structure_academie_2025,Clermont-Ferrand,,23.8,eleves
+eleves_par_structure_academie_2025,Corse,,22.2,eleves
+eleves_par_structure_academie_2025,Créteil,,23.9,eleves
+eleves_par_structure_academie_2025,DROM,,22.3,eleves
+eleves_par_structure_academie_2025,Dijon,,23.8,eleves
+eleves_par_structure_academie_2025,Ensemble public,,24.0,eleves
+eleves_par_structure_academie_2025,Ensemble public + privé sous contrat,,24.0,eleves
+eleves_par_structure_academie_2025,Grenoble,,24.3,eleves
+eleves_par_structure_academie_2025,Guadeloupe,,21.8,eleves
+eleves_par_structure_academie_2025,Guyane,,19.3,eleves
+eleves_par_structure_academie_2025,La Réunion,,23.0,eleves
+eleves_par_structure_academie_2025,Lille,,22.6,eleves
+eleves_par_structure_academie_2025,Limoges,,23.2,eleves
+eleves_par_structure_academie_2025,Lyon,,24.6,eleves
+eleves_par_structure_academie_2025,Martinique,,20.1,eleves
+eleves_par_structure_academie_2025,Mayotte,,25.0,eleves
+eleves_par_structure_academie_2025,Montpellier,,24.4,eleves
+eleves_par_structure_academie_2025,Nancy-Metz,,23.7,eleves
+eleves_par_structure_academie_2025,Nice,,24.5,eleves
+eleves_par_structure_academie_2025,Normandie,,24.4,eleves
+eleves_par_structure_academie_2025,Paris,,25.1,eleves
+eleves_par_structure_academie_2025,Pays de la Loire (Nantes),,24.2,eleves
+eleves_par_structure_academie_2025,Poitiers,,23.8,eleves
+eleves_par_structure_academie_2025,Privé sous contrat,,24.2,eleves
+eleves_par_structure_academie_2025,Reims,,24.4,eleves
+eleves_par_structure_academie_2025,Strasbourg,,23.8,eleves
+eleves_par_structure_academie_2025,Toulouse,,23.9,eleves
+eleves_par_structure_academie_2025,Versailles,,24.5,eleves

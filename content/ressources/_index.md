@@ -13,6 +13,12 @@ blocs:
     pastille: "Dossier dette publique"   # celle de la barre des pages
     bande_donnees: "dossier_dette"       # libellés des questions : data/dossier_dette.yaml, source de la barre
     chapo: "Pourquoi elle augmente, ce qu'elle coûte, qui la paie, ce qui se passe ailleurs et à quelles conditions elle peut baisser."
+  - id: ecole
+    titre: "École et lycée"
+    dossier: true
+    chapo: "Ce que les séries officielles disent des moyens du lycée et des parcours d'élèves : recrutement, classes, cours perdus, dépense, et ce qu'elles ne disent pas."
+    # Bloc créé le 07/10/2026 (ressource « Manque-t-il des professeurs au lycée ? », pendant la consultation nationale des
+    # lycéens). Français seulement : pas de bloc dans _index.en.md tant qu'aucune page anglaise n'existe (exclusion déclarée).
   - id: enseigner
     titre: "Pour enseigner"
     dossier: true
