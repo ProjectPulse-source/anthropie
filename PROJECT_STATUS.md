@@ -63,7 +63,7 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 - Contrôles sur arbre propre (worktree d'`origin/main`) : hugo 0, `check-all --ci` 0, `audit-liens-build` 0 critique ;
   `Dataset.identifier` relu dans le HTML construit.
 
-### 2026-10-07 — Page lycée : encadré « Les régions dépensent-elles pour leurs lycées à proportion de leurs élèves ? » (`#regions-lycees`) ; NON POUSSÉ
+### 2026-10-07 — Page lycée : encadré « Les dépenses des régions suivent-elles le nombre de lycéens ? » (`#regions-lycees`) ; EN LIGNE le 07/10 au soir, après contre-expertise de l'assemblage
 
 - **Contenu** : phrase centrale du test 1 et quatre phrases arbitrées des tests 2 à 4 du bâti (dépôt de recherche `D:\PRO\06_PROMOTION\RECHERCHE_LYCEES_MOYENS_2026-10-07\bati\`, protocoles 1 à 4, trois contre-expertises arbitrées : PRO-20261007-190635, -203155, -210111). Aucun chiffre saisi : extrait figé `scripts/sources_lycee_professeurs/extrait_bati.json` (écrit par `bati/extrait_bati.py`, témoins dans les sorties des tests), empreinte dans `SHA256SUMS` ; 15 gardes de prose dans `update_lycee_professeurs.py` (`gardes_bati`), mutation `--mutation=bati` vue mordre ; jeu JSON/CSV complété (`bati_regions_rubrique_222`).
 - **Défaut trouvé et corrigé** (antérieur, toutes les ancres de la page lycée) : arrivée par une ancre de titre sous l'en-tête collant (titre à 0 px sous un en-tête de 59-63 px, 390 et 1280 px). Règle générale `main :is(h2, h3, h4)[id] { scroll-margin-top: 5rem; }` (`_page-common.scss`) ; les règles des barres de dossier restent prioritaires (page dette inchangée à 184 px). ⚠ Mesure locale : la page appelle sa feuille par une URL absolue de production — construire avec `--baseURL http://localhost:PORT/` pour mesurer un CSS non déployé.
