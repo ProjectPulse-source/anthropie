@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 302" role="img" font-variant-numeric="tabular-nums" aria-labelledby="niv-g-t niv-g-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="niv-g-t">Une même génération, deux évaluations : écart entre 2021-2022 et 2024-2025</title><desc id="niv-g-d">Barres horizontales, écart standardisé entre la génération de 2021-2022 et celle de 2024-2025. Français : test de seconde −13, PISA lecture −16. Mathématiques : test de seconde +9, PISA −18.</desc>
+<rect width="720" height="302" fill="#ffffff"/>
+<text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">Une même génération, deux évaluations : écart entre 2021-2022 et 2024-2025</text>
+<line x1="330.0" y1="52" x2="330.0" y2="212" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="330.0" y="226" font-size="10" fill="#96928f" text-anchor="middle">−25</text>
+<line x1="375.0" y1="52" x2="375.0" y2="212" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="375.0" y="226" font-size="10" fill="#96928f" text-anchor="middle">−20</text>
+<line x1="420.0" y1="52" x2="420.0" y2="212" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="420.0" y="226" font-size="10" fill="#96928f" text-anchor="middle">−15</text>
+<line x1="465.0" y1="52" x2="465.0" y2="212" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="465.0" y="226" font-size="10" fill="#96928f" text-anchor="middle">−10</text>
+<line x1="510.0" y1="52" x2="510.0" y2="212" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="510.0" y="226" font-size="10" fill="#96928f" text-anchor="middle">−5</text>
+<line x1="555.0" y1="52" x2="555.0" y2="212" stroke="#55524f" stroke-width="1"/>
+<text x="555.0" y="226" font-size="10" fill="#96928f" text-anchor="middle">0</text>
+<line x1="600.0" y1="52" x2="600.0" y2="212" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="600.0" y="226" font-size="10" fill="#96928f" text-anchor="middle">+5</text>
+<line x1="645.0" y1="52" x2="645.0" y2="212" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="645.0" y="226" font-size="10" fill="#96928f" text-anchor="middle">+10</text>
+<line x1="690.0" y1="52" x2="690.0" y2="212" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="690.0" y="226" font-size="10" fill="#96928f" text-anchor="middle">+15</text>
+<text x="0" y="75" font-size="11.5" fill="#26262f">Test de seconde, français</text>
+<rect x="442.1" y="60" width="112.9" height="22" fill="#184f95"/>
+<text x="436.1" y="75" font-size="10.5" fill="#26262f" text-anchor="end">−13</text>
+<text x="0" y="113" font-size="11.5" fill="#26262f">PISA, compréhension de l'écrit</text>
+<rect x="409.6" y="98" width="145.4" height="22" fill="#eb6834"/>
+<text x="403.6" y="113" font-size="10.5" fill="#26262f" text-anchor="end">−16</text>
+<text x="0" y="163" font-size="11.5" fill="#26262f">Test de seconde, mathématiques</text>
+<rect x="555.0" y="148" width="82.8" height="22" fill="#184f95"/>
+<text x="643.8" y="163" font-size="10.5" fill="#26262f" text-anchor="start">+9</text>
+<text x="0" y="201" font-size="11.5" fill="#26262f">PISA, culture mathématique</text>
+<rect x="395.6" y="186" width="159.4" height="22" fill="#eb6834"/>
+<text x="389.6" y="201" font-size="10.5" fill="#26262f" text-anchor="end">−18</text>
+<line x1="0" y1="252.0" x2="720" y2="252.0" stroke="#dcd8d3"/>
+<text x="0" y="265.0" font-size="9" fill="#55524f">DEPP, Note d'Information 26-40, figure 11 web (tests de positionnement de seconde 2021 et 2024 ; PISA 2022 et 2025)</text>
+<text x="0" y="277.0" font-size="9" fill="#55524f">Écart entre deux générations d'élèves, en centièmes d'écart-type (d de Cohen), calculé par la DEPP. Seconde : deux voies.</text>
+<text x="0" y="289.0" font-size="9" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/le-niveau-des-eleves-baisse-t-il/</text>
+</svg>

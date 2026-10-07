@@ -52,6 +52,17 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-08 — Ressource « Le niveau des élèves baisse-t-il ? » (FR seulement), deuxième onglet du bloc « École et lycée » ; NON POUSSÉE
+
+- **`/le-niveau-des-eleves-baisse-t-il/`** : PISA 2025 placé parmi les 38 pays de l'OCDE, perte au sommet, écart social
+  réduit par le haut, désaccord PISA / test de seconde sur une même génération, TIMSS Advanced, recrutement des professeurs
+  (question distincte). Recherche : `D:\PRO\06_PROMOTION\RECHERCHE_LYCEES_NIVEAU_2026-10-07\` (protocole `2986dfc`,
+  verdict `266e151`). Générateur `scripts/update_niveau_eleves.py` (56 gardes, 8 mutations vues mordre), extrait figé
+  `scripts/sources_niveau_eleves/` (SHA256SUMS), shortcode `niv-val`, jetons `{niv.*}`, carte `og_dossier_dette.py --niveau`.
+- Contrôles : hugo exit 0 ; `check-all --reseau` 0 ; `audit-liens-build` 0 ; 390 px sans débordement. Fiche D0 écrite.
+- **Reste** : contre-expertise de la page construite, arbitrage, puis push sur décision de l'auteur. Mise à jour :
+  rendez-vous au printemps 2027 (test de seconde 2026), puis PISA 2029 ; hors module de mise à jour pour l'instant.
+
 ### 2026-10-08 — Page inflation et dette après contre-expertise ; livre français en une ligne sur les pages anglaises
 
 - **`/inflation-et-dette-publique/`** (FR et EN, `05218e6`) : contre-expertise de la page en ligne (Wolf-05), arbitrage

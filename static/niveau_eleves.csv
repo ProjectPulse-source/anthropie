@@ -1,0 +1,300 @@
+﻿tableau,variable,cle,valeur,unite
+pisa_score_moyen_france,lecture,2000,504.74,points PISA
+pisa_score_moyen_france,lecture,2003,496.19,points PISA
+pisa_score_moyen_france,lecture,2006,487.71,points PISA
+pisa_score_moyen_france,lecture,2009,495.62,points PISA
+pisa_score_moyen_france,lecture,2012,505.48,points PISA
+pisa_score_moyen_france,lecture,2015,499.31,points PISA
+pisa_score_moyen_france,lecture,2018,492.61,points PISA
+pisa_score_moyen_france,lecture,2022,473.85,points PISA
+pisa_score_moyen_france,lecture,2025,456.33,points PISA
+pisa_score_moyen_ocde35,lecture,2012,493.51,points PISA
+pisa_score_moyen_ocde35,lecture,2015,490.27,points PISA
+pisa_score_moyen_ocde35,lecture,2018,487.62,points PISA
+pisa_score_moyen_ocde35,lecture,2022,477.35,points PISA
+pisa_score_moyen_ocde35,lecture,2025,463.01,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Australia,-12.04,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Austria,-17.65,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Belgium,-32.2,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Canada,-36.84,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Chile,-22.92,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Colombia,-25.64,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Costa Rica,-11.45,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Czechia,-18.89,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Denmark,-39.81,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Estonia,-19.9,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Finland,-52.13,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,France,-42.97,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Germany,-43.82,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Greece,-44.38,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Hungary,-17.22,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Iceland,-59.24,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Ireland,-20.37,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Israel,-43.12,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Italy,-10.47,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Japan,-13.24,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Korea,-16.88,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Latvia,-58.08,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Lithuania,-8.35,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Luxembourg,-38.21,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Mexico,-15.34,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Netherlands,-61.61,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,New Zealand,-12.23,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Norway,-60.39,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Poland,-24.16,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Portugal,-36.1,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Slovak Republic,-4.55,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Slovenia,-60.47,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Spain,-44.22,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Sweden,-33.72,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Switzerland,-22.15,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,Turkiye,43.76,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,United Kingdom,-3.74,points PISA
+pisa_variation_2015_2025_pays_ocde,lecture,United States,-7.42,points PISA
+pisa_niveaux_france,lecture,bas15,21.49,% des eleves (bas : sous le niveau 2 ; haut : niveaux 5-6)
+pisa_niveaux_france,lecture,bas25,32.67,% des eleves (bas : sous le niveau 2 ; haut : niveaux 5-6)
+pisa_niveaux_france,lecture,haut15,12.51,% des eleves (bas : sous le niveau 2 ; haut : niveaux 5-6)
+pisa_niveaux_france,lecture,haut25,4.52,% des eleves (bas : sous le niveau 2 ; haut : niveaux 5-6)
+pisa_ecart_social_france,lecture,2015,121.73,"points (quart haut moins quart bas du statut economique, social et culturel)"
+pisa_ecart_social_france,lecture,2018,106.9,"points (quart haut moins quart bas du statut economique, social et culturel)"
+pisa_ecart_social_france,lecture,2022,114.1,"points (quart haut moins quart bas du statut economique, social et culturel)"
+pisa_ecart_social_france,lecture,2025,90.94,"points (quart haut moins quart bas du statut economique, social et culturel)"
+pisa_niveaux_ocde35,lecture,bas15,20.82,% des eleves (bas : sous le niveau 2 ; haut : niveaux 5-6)
+pisa_niveaux_ocde35,lecture,bas25,30.36,% des eleves (bas : sous le niveau 2 ; haut : niveaux 5-6)
+pisa_niveaux_ocde35,lecture,haut15,8.09,% des eleves (bas : sous le niveau 2 ; haut : niveaux 5-6)
+pisa_niveaux_ocde35,lecture,haut25,5.77,% des eleves (bas : sous le niveau 2 ; haut : niveaux 5-6)
+pisa_ecart_social_ocde35,lecture,2015,84.65,"points (quart haut moins quart bas du statut economique, social et culturel)"
+pisa_ecart_social_ocde35,lecture,2018,87.87,"points (quart haut moins quart bas du statut economique, social et culturel)"
+pisa_ecart_social_ocde35,lecture,2022,93.4,"points (quart haut moins quart bas du statut economique, social et culturel)"
+pisa_ecart_social_ocde35,lecture,2025,76.52,"points (quart haut moins quart bas du statut economique, social et culturel)"
+pisa_score_moyen_france,mathematiques,2003,510.8,points PISA
+pisa_score_moyen_france,mathematiques,2006,495.54,points PISA
+pisa_score_moyen_france,mathematiques,2009,496.78,points PISA
+pisa_score_moyen_france,mathematiques,2012,494.98,points PISA
+pisa_score_moyen_france,mathematiques,2015,492.92,points PISA
+pisa_score_moyen_france,mathematiques,2018,495.41,points PISA
+pisa_score_moyen_france,mathematiques,2022,473.94,points PISA
+pisa_score_moyen_france,mathematiques,2025,457.66,points PISA
+pisa_score_moyen_ocde35,mathematiques,2006,490.72,points PISA
+pisa_score_moyen_ocde35,mathematiques,2012,490.54,points PISA
+pisa_score_moyen_ocde35,mathematiques,2015,487.24,points PISA
+pisa_score_moyen_ocde35,mathematiques,2018,489.68,points PISA
+pisa_score_moyen_ocde35,mathematiques,2022,474.84,points PISA
+pisa_score_moyen_ocde35,mathematiques,2025,465.49,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Australia,-16.37,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Austria,-19.55,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Belgium,-27.3,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Canada,-30.31,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Chile,-20.03,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Colombia,-9.12,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Costa Rica,-13.16,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Czechia,-15.18,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Denmark,-40.46,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Estonia,-11.63,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Finland,-42.38,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,France,-35.27,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Germany,-42.17,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Greece,-29.78,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Hungary,-17.34,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Iceland,-38.3,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Ireland,-23.85,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Israel,-36.29,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Italy,-21.97,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Japan,-7.06,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Korea,-1.81,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Latvia,-21.81,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Lithuania,-7.89,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Luxembourg,-27.63,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Mexico,-20.44,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Netherlands,-28.98,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,New Zealand,-15.6,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Norway,-49.95,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Poland,-20.35,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Portugal,-31.68,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Slovak Republic,-6.13,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Slovenia,-50.08,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Spain,-28.39,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Sweden,-29.67,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Switzerland,-22.1,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,Turkiye,41.09,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,United Kingdom,-4.9,points PISA
+pisa_variation_2015_2025_pays_ocde,mathematiques,United States,-6.78,points PISA
+pisa_niveaux_france,mathematiques,bas15,23.48,% des eleves (bas : sous le niveau 2 ; haut : niveaux 5-6)
+pisa_niveaux_france,mathematiques,bas25,35.66,% des eleves (bas : sous le niveau 2 ; haut : niveaux 5-6)
+pisa_niveaux_france,mathematiques,haut15,11.44,% des eleves (bas : sous le niveau 2 ; haut : niveaux 5-6)
+pisa_niveaux_france,mathematiques,haut25,5.25,% des eleves (bas : sous le niveau 2 ; haut : niveaux 5-6)
+pisa_ecart_social_france,mathematiques,2015,110.06,"points (quart haut moins quart bas du statut economique, social et culturel)"
+pisa_ecart_social_france,mathematiques,2018,108.73,"points (quart haut moins quart bas du statut economique, social et culturel)"
+pisa_ecart_social_france,mathematiques,2022,112.49,"points (quart haut moins quart bas du statut economique, social et culturel)"
+pisa_ecart_social_france,mathematiques,2025,94.48,"points (quart haut moins quart bas du statut economique, social et culturel)"
+pisa_niveaux_ocde35,mathematiques,bas15,24.61,% des eleves (bas : sous le niveau 2 ; haut : niveaux 5-6)
+pisa_niveaux_ocde35,mathematiques,bas25,33.85,% des eleves (bas : sous le niveau 2 ; haut : niveaux 5-6)
+pisa_niveaux_ocde35,mathematiques,haut15,10.4,% des eleves (bas : sous le niveau 2 ; haut : niveaux 5-6)
+pisa_niveaux_ocde35,mathematiques,haut25,8.13,% des eleves (bas : sous le niveau 2 ; haut : niveaux 5-6)
+pisa_ecart_social_ocde35,mathematiques,2015,82.24,"points (quart haut moins quart bas du statut economique, social et culturel)"
+pisa_ecart_social_ocde35,mathematiques,2018,86.7,"points (quart haut moins quart bas du statut economique, social et culturel)"
+pisa_ecart_social_ocde35,mathematiques,2022,93.67,"points (quart haut moins quart bas du statut economique, social et culturel)"
+pisa_ecart_social_ocde35,mathematiques,2025,82.52,"points (quart haut moins quart bas du statut economique, social et culturel)"
+pisa_score_moyen_france,sciences,2006,495.22,points PISA
+pisa_score_moyen_france,sciences,2009,498.23,points PISA
+pisa_score_moyen_france,sciences,2012,498.97,points PISA
+pisa_score_moyen_france,sciences,2015,494.98,points PISA
+pisa_score_moyen_france,sciences,2018,492.98,points PISA
+pisa_score_moyen_france,sciences,2022,487.23,points PISA
+pisa_score_moyen_france,sciences,2025,483.42,points PISA
+pisa_score_moyen_ocde35,sciences,2006,495.23,points PISA
+pisa_score_moyen_ocde35,sciences,2012,498.51,points PISA
+pisa_score_moyen_ocde35,sciences,2015,490.79,points PISA
+pisa_score_moyen_ocde35,sciences,2018,489.16,points PISA
+pisa_score_moyen_ocde35,sciences,2022,486.75,points PISA
+pisa_score_moyen_ocde35,sciences,2025,483.93,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Australia,-0.89,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Austria,1.88,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Belgium,-12.29,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Canada,-17.65,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Chile,-4.6,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Colombia,-2.0,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Costa Rica,4.36,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Czechia,-2.55,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Denmark,-24.4,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Estonia,-7.08,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Finland,-26.29,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,France,-11.56,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Germany,-23.62,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Greece,-20.54,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Hungary,3.16,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Iceland,-31.85,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Ireland,-2.98,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Israel,-24.54,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Italy,2.44,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Japan,-0.81,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Korea,10.3,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Latvia,-21.86,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Lithuania,12.33,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Luxembourg,-9.04,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Mexico,-2.14,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Netherlands,-23.12,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,New Zealand,-3.91,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Norway,-28.27,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Poland,-6.37,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Portugal,-19.38,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Slovak Republic,14.1,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Slovenia,-29.14,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Spain,-15.66,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Sweden,-8.31,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Switzerland,-4.27,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,Turkiye,68.78,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,United Kingdom,2.13,points PISA
+pisa_variation_2015_2025_pays_ocde,sciences,United States,5.34,points PISA
+pisa_niveaux_france,sciences,bas15,22.06,% des eleves (bas : sous le niveau 2 ; haut : niveaux 5-6)
+pisa_niveaux_france,sciences,bas25,25.83,% des eleves (bas : sous le niveau 2 ; haut : niveaux 5-6)
+pisa_niveaux_france,sciences,haut15,7.99,% des eleves (bas : sous le niveau 2 ; haut : niveaux 5-6)
+pisa_niveaux_france,sciences,haut25,6.7,% des eleves (bas : sous le niveau 2 ; haut : niveaux 5-6)
+pisa_ecart_social_france,sciences,2015,117.66,"points (quart haut moins quart bas du statut economique, social et culturel)"
+pisa_ecart_social_france,sciences,2018,110.4,"points (quart haut moins quart bas du statut economique, social et culturel)"
+pisa_ecart_social_france,sciences,2022,121.3,"points (quart haut moins quart bas du statut economique, social et culturel)"
+pisa_ecart_social_france,sciences,2025,99.98,"points (quart haut moins quart bas du statut economique, social et culturel)"
+pisa_niveaux_ocde35,sciences,bas15,22.09,% des eleves (bas : sous le niveau 2 ; haut : niveaux 5-6)
+pisa_niveaux_ocde35,sciences,bas25,25.03,% des eleves (bas : sous le niveau 2 ; haut : niveaux 5-6)
+pisa_niveaux_ocde35,sciences,haut15,7.51,% des eleves (bas : sous le niveau 2 ; haut : niveaux 5-6)
+pisa_niveaux_ocde35,sciences,haut25,7.45,% des eleves (bas : sous le niveau 2 ; haut : niveaux 5-6)
+pisa_ecart_social_ocde35,sciences,2015,86.59,"points (quart haut moins quart bas du statut economique, social et culturel)"
+pisa_ecart_social_ocde35,sciences,2018,86.07,"points (quart haut moins quart bas du statut economique, social et culturel)"
+pisa_ecart_social_ocde35,sciences,2022,96.66,"points (quart haut moins quart bas du statut economique, social et culturel)"
+pisa_ecart_social_ocde35,sciences,2025,83.81,"points (quart haut moins quart bas du statut economique, social et culturel)"
+pisa_2025_echantillon_france_classe,CAP 1 an,effectif,222.0,eleves
+pisa_2025_echantillon_france_classe,Troisième en retard,effectif,560.0,eleves
+pisa_2025_echantillon_france_classe,Seconde pro,effectif,1259.0,eleves
+pisa_2025_echantillon_france_classe,Seconde GT,effectif,4145.0,eleves
+pisa_2025_echantillon_france_classe,Première GT,effectif,174.0,eleves
+pisa_2025_echantillon_france_classe,Troisième à l'heure,effectif,983.0,eleves
+test_positionnement_seconde_score_moyen,GT francais,2019,263.0,points (echelle 250/50 en 2019)
+test_positionnement_seconde_score_moyen,GT francais,2020,272.0,points (echelle 250/50 en 2019)
+test_positionnement_seconde_score_moyen,GT francais,2021,272.0,points (echelle 250/50 en 2019)
+test_positionnement_seconde_score_moyen,GT francais,2022,270.0,points (echelle 250/50 en 2019)
+test_positionnement_seconde_score_moyen,GT francais,2023,268.0,points (echelle 250/50 en 2019)
+test_positionnement_seconde_score_moyen,GT francais,2024,268.0,points (echelle 250/50 en 2019)
+test_positionnement_seconde_score_moyen,GT francais,2025,263.0,points (echelle 250/50 en 2019)
+test_positionnement_seconde_score_moyen,GT maths,2019,263.0,points (echelle 250/50 en 2019)
+test_positionnement_seconde_score_moyen,GT maths,2020,260.0,points (echelle 250/50 en 2019)
+test_positionnement_seconde_score_moyen,GT maths,2021,255.0,points (echelle 250/50 en 2019)
+test_positionnement_seconde_score_moyen,GT maths,2022,257.0,points (echelle 250/50 en 2019)
+test_positionnement_seconde_score_moyen,GT maths,2023,260.0,points (echelle 250/50 en 2019)
+test_positionnement_seconde_score_moyen,GT maths,2024,262.0,points (echelle 250/50 en 2019)
+test_positionnement_seconde_score_moyen,GT maths,2025,261.0,points (echelle 250/50 en 2019)
+test_positionnement_seconde_score_moyen,Pro francais,2019,210.0,points (echelle 250/50 en 2019)
+test_positionnement_seconde_score_moyen,Pro francais,2020,215.0,points (echelle 250/50 en 2019)
+test_positionnement_seconde_score_moyen,Pro francais,2021,219.0,points (echelle 250/50 en 2019)
+test_positionnement_seconde_score_moyen,Pro francais,2022,217.0,points (echelle 250/50 en 2019)
+test_positionnement_seconde_score_moyen,Pro francais,2023,215.0,points (echelle 250/50 en 2019)
+test_positionnement_seconde_score_moyen,Pro francais,2024,214.0,points (echelle 250/50 en 2019)
+test_positionnement_seconde_score_moyen,Pro francais,2025,209.0,points (echelle 250/50 en 2019)
+test_positionnement_seconde_score_moyen,Pro maths,2019,211.0,points (echelle 250/50 en 2019)
+test_positionnement_seconde_score_moyen,Pro maths,2020,205.0,points (echelle 250/50 en 2019)
+test_positionnement_seconde_score_moyen,Pro maths,2021,199.0,points (echelle 250/50 en 2019)
+test_positionnement_seconde_score_moyen,Pro maths,2022,199.0,points (echelle 250/50 en 2019)
+test_positionnement_seconde_score_moyen,Pro maths,2023,205.0,points (echelle 250/50 en 2019)
+test_positionnement_seconde_score_moyen,Pro maths,2024,205.0,points (echelle 250/50 en 2019)
+test_positionnement_seconde_score_moyen,Pro maths,2025,202.0,points (echelle 250/50 en 2019)
+depp_ecart_generations_2021_2024,Tests de positionnement de seconde / Français,100 x d de Cohen,-12.54,centiemes d'ecart-type
+depp_ecart_generations_2021_2024,Tests de positionnement de seconde / Mathématiques,100 x d de Cohen,9.2,centiemes d'ecart-type
+depp_ecart_generations_2021_2024,PISA / Compréhension de l'écrit,100 x d de Cohen,-16.15,centiemes d'ecart-type
+depp_ecart_generations_2021_2024,PISA / Culture mathématique,100 x d de Cohen,-17.71,centiemes d'ecart-type
+timss_advanced_terminale_s_france,maths,1995,569,points TIMSS
+timss_advanced_terminale_s_france,maths,2015,463,points TIMSS
+timss_advanced_terminale_s_france,physique,1995,469,points TIMSS
+timss_advanced_terminale_s_france,physique,2015,373,points TIMSS
+capes_externe_postes_presents_admis,mathematiques,2010,868/2860/857,postes/presents/admis
+capes_externe_postes_presents_admis,mathematiques,2011,973/1427/595,postes/presents/admis
+capes_externe_postes_presents_admis,mathematiques,2012,980/1632/682,postes/presents/admis
+capes_externe_postes_presents_admis,mathematiques,2023,1234/1799/881,postes/presents/admis
+capes_externe_postes_presents_admis,mathematiques,2024,1226/1848/922,postes/presents/admis
+capes_externe_postes_presents_admis,mathematiques,2025,1142/1804/815,postes/presents/admis
+capes_externe_postes_presents_admis,physique-chimie,2010,480/1641/481,postes/presents/admis
+capes_externe_postes_presents_admis,physique-chimie,2011,300/814/300,postes/presents/admis
+capes_externe_postes_presents_admis,physique-chimie,2023,450/658/327,postes/presents/admis
+capes_externe_postes_presents_admis,physique-chimie,2024,450/611/293,postes/presents/admis
+capes_externe_postes_presents_admis,physique-chimie,2025,391/605/288,postes/presents/admis
+capes_externe_postes_presents_admis,lettres modernes,2010,710/2648/710,postes/presents/admis
+capes_externe_postes_presents_admis,lettres modernes,2011,800/1523/645,postes/presents/admis
+capes_externe_postes_presents_admis,lettres modernes,2012,733/1411/681,postes/presents/admis
+capes_externe_postes_presents_admis,lettres modernes,2023,820/1181/626,postes/presents/admis
+capes_externe_postes_presents_admis,lettres modernes,2024,763/1262/640,postes/presents/admis
+capes_externe_postes_presents_admis,lettres modernes,2025,709/1159/623,postes/presents/admis
+capes_externe_postes_presents_admis,histoire-geographie,2010,610/3484/610,postes/presents/admis
+capes_externe_postes_presents_admis,histoire-geographie,2011,550/2179/550,postes/presents/admis
+capes_externe_postes_presents_admis,histoire-geographie,2012,580/2117/580,postes/presents/admis
+capes_externe_postes_presents_admis,histoire-geographie,2023,594/1813/593,postes/presents/admis
+capes_externe_postes_presents_admis,histoire-geographie,2024,634/1920/633,postes/presents/admis
+capes_externe_postes_presents_admis,histoire-geographie,2025,652/2056/652,postes/presents/admis
+capes_externe_postes_presents_admis,anglais,2010,913/3125/913,postes/presents/admis
+capes_externe_postes_presents_admis,anglais,2011,801/1842/670,postes/presents/admis
+capes_externe_postes_presents_admis,anglais,2012,805/1865/674,postes/presents/admis
+capes_externe_postes_presents_admis,anglais,2023,874/1611/831,postes/presents/admis
+capes_externe_postes_presents_admis,anglais,2024,879/1573/835,postes/presents/admis
+capes_externe_postes_presents_admis,anglais,2025,845/1581/794,postes/presents/admis
+contractuels_second_degre_public,part,2015,7.5,% des personnels a mission d'enseignement
+contractuels_second_degre_public,part,2016,8.1,% des personnels a mission d'enseignement
+contractuels_second_degre_public,part,2017,8.9,% des personnels a mission d'enseignement
+contractuels_second_degre_public,part,2018,9.0,% des personnels a mission d'enseignement
+contractuels_second_degre_public,part,2019,8.7,% des personnels a mission d'enseignement
+contractuels_second_degre_public,part,2020,9.0,% des personnels a mission d'enseignement
+contractuels_second_degre_public,part,2021,8.9,% des personnels a mission d'enseignement
+contractuels_second_degre_public,part,2022,9.5,% des personnels a mission d'enseignement
+contractuels_second_degre_public,part,2023,10.4,% des personnels a mission d'enseignement
+contractuels_second_degre_public,part,2024,11.1,% des personnels a mission d'enseignement
+contractuels_second_degre_public,part,2025,11.2,% des personnels a mission d'enseignement
+ocde_non_pleinement_qualifies,France,secondaire,11.11,"% des enseignants (ETP, public)"
+ocde_non_pleinement_qualifies,France,primaire+secondaire,7.07,"% des enseignants (ETP, public)"
+ocde_non_pleinement_qualifies,France,p+s 2017/18,4.96,"% des enseignants (ETP, public)"
+ocde_non_pleinement_qualifies,OECD average,secondaire,8.37,"% des enseignants (ETP, public)"
+ocde_non_pleinement_qualifies,OECD average,primaire+secondaire,9.13,"% des enseignants (ETP, public)"
+ocde_non_pleinement_qualifies,OECD average,p+s 2017/18,7.33,"% des enseignants (ETP, public)"
+pisa_manque_enseignants_declare,france,2015,34.73,% des eleves (chef d'etablissement : enseignement entrave)
+pisa_manque_enseignants_declare,france,2018,17.12,% des eleves (chef d'etablissement : enseignement entrave)
+pisa_manque_enseignants_declare,france,2022,67.04,% des eleves (chef d'etablissement : enseignement entrave)
+pisa_manque_enseignants_declare,france,2025,45.37,% des eleves (chef d'etablissement : enseignement entrave)
+pisa_manque_enseignants_declare,ocde,2015,29.76,% des eleves (chef d'etablissement : enseignement entrave)
+pisa_manque_enseignants_declare,ocde,2018,27.42,% des eleves (chef d'etablissement : enseignement entrave)
+pisa_manque_enseignants_declare,ocde,2022,46.67,% des eleves (chef d'etablissement : enseignement entrave)
+pisa_manque_enseignants_declare,ocde,2025,38.97,% des eleves (chef d'etablissement : enseignement entrave)

@@ -631,6 +631,48 @@ def carte_lycee() -> None:
           [(C2, "Absences individuelles : %s %%" % A["h_indiv"]), (C1, "Fermetures, examens, formation : %s %%" % A["h_org"])])
 
 
+def figure_niveau_mini(d: ImageDraw.ImageDraw, P: dict) -> None:
+    """Ressource « Le niveau des élèves baisse-t-il ? » (08/10/2026) : variation des scores PISA 2015-2025, France (orange)
+    contre la médiane des pays de l'OCDE (gris), par domaine."""
+    x0, x1, top = 660, 1126, 150
+    vmax = 50.0
+    sx = lambda v: (x1 - x0 - 90) * v / vmax
+    fa, fb = font("inter", 20, 500), font("inter", 22, 600)
+    for k, (dom, lib) in enumerate((("lecture", "Lecture"), ("mathematiques", "Mathématiques"), ("sciences", "Sciences"))):
+        y = top + k * 92
+        fr, med = -P[dom]["variation_2015_2025"]["v"], -P[dom]["mediane_ocde"]
+        d.text((x0, y), lib, font=fa, fill=URL_GREY)
+        d.rectangle([x0, y + 30, x0 + sx(fr), y + 54], fill=C2)
+        d.text((x0 + sx(fr) + 10, y + 28), "−%d" % round(fr), font=fb, fill=C2)
+        d.rectangle([x0, y + 58, x0 + sx(med), y + 72], fill=(170, 166, 160))
+    d.text((x0, top + 280), "Baisse du score PISA de 2015 à 2025, en points :", font=font("inter", 17, 400), fill=URL_GREY)
+    d.text((x0, top + 302), "France (orange), médiane des pays de l'OCDE (gris)", font=font("inter", 17, 400), fill=URL_GREY)
+
+
+def carte_niveau() -> None:
+    """Ressource « Le niveau des élèves baisse-t-il ? » (08/10/2026). Chiffres lus dans le jeu publié ; le contraste annoncé
+    (en mathématiques, baisse française plus forte que dans les trois quarts des pays) est contrôlé ici. Français seulement."""
+    f = ROOT / "data" / "niveau_eleves.json"
+    if not f.is_file():
+        fail("jeu de données absent : %s — lancer scripts/update_niveau_eleves.py d'abord" % f)
+    j = json.loads(f.read_text(encoding="utf-8"))
+    A, P = j["affichage"], j["pisa"]
+    for dom in P:
+        pays = sorted(P[dom]["pays_ocde_2015_2025"].values())
+        n = len(pays)
+        P[dom]["mediane_ocde"] = (pays[n // 2] + pays[(n - 1) // 2]) / 2
+        P[dom]["q1"] = sorted(pays)[n // 4]
+    if not (P["mathematiques"]["variation_2015_2025"]["v"] < P["mathematiques"]["q1"]):
+        fail("carte niveau : le contraste annoncé n'est plus vrai dans les données")
+    carte("og-niveau-eleves.jpg",
+          ["Le niveau des élèves", "baisse-t-il ?"],
+          "En maths, la France recule plus que %s pays sur %s." % (A["math_mieux"], A["n_autres"]),
+          "OCDE, PISA 2025 · calcul de l'auteur · CC BY 4.0",
+          "stephane-lalut.com/le-niveau-des-eleves-baisse-t-il/",
+          lambda d: figure_niveau_mini(d, P),
+          [(C2, "France, 2015-2025 : −%s points en maths" % A["math_v15"]), ((170, 166, 160), "Médiane des pays de l'OCDE : −%s" % A["math_med"])])
+
+
 def main() -> int:
     if "--collectivites" in sys.argv[1:]:
         carte_collectivites()
@@ -643,6 +685,9 @@ def main() -> int:
         return 0
     if "--lycee" in sys.argv[1:]:
         carte_lycee()
+        return 0
+    if "--niveau" in sys.argv[1:]:
+        carte_niveau()
         return 0
     if "--monde" in sys.argv[1:]:
         carte_monde()
@@ -657,6 +702,7 @@ def main() -> int:
     carte_generations()
     carte_inflation()
     carte_lycee()
+    carte_niveau()
     qp = ROOT / "data" / "qui_paie_donnees.json"
     do = ROOT / "data" / "dette_officielle.json"
     for f in (qp, do):

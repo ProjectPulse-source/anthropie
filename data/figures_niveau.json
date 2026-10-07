@@ -1,0 +1,28 @@
+{
+ "fr": [
+  {
+   "id": "baisse",
+   "fichier": "niveau-baisse",
+   "titre": "PISA, 2015-2025 : la France parmi les 38 pays de l'OCDE",
+   "montre": "En lecture et en sciences, la baisse française est dans la moitié centrale des pays de l'OCDE, la lecture tout près de sa limite ; en mathématiques, elle est plus forte que dans les trois quarts d'entre eux.",
+   "source": "OCDE, PISA 2025, volume I, tableaux I.B1.2a.36 à 38 (variation du score moyen entre 2015 et 2025)",
+   "precaution": "Chaque point est un pays membre de l'OCDE. Bande bleue : la moitié centrale des pays (du premier au troisième quartile)."
+  },
+  {
+   "id": "sommet",
+   "fichier": "niveau-sommet",
+   "titre": "Les élèves en difficulté et les meilleurs élèves, 2015 et 2025",
+   "montre": "La part des élèves en difficulté augmente en France à peu près comme dans l'OCDE ; la part des meilleurs élèves y baisse bien davantage, surtout en lecture.",
+   "source": "OCDE, PISA 2025, volume I, tableaux I.B1.2a.34 et 35 ; moyenne de l'OCDE sur 35 pays comparables",
+   "precaution": "En % des élèves de 15 ans. En difficulté : sous le niveau 2. Meilleurs élèves : niveaux 5 et 6."
+  },
+  {
+   "id": "seconde",
+   "fichier": "niveau-seconde",
+   "titre": "Une même génération, deux évaluations : écart entre 2021-2022 et 2024-2025",
+   "montre": "En français, le test de seconde et PISA baissent tous les deux ; en mathématiques, le test de seconde monte quand PISA baisse.",
+   "source": "DEPP, Note d'Information 26-40, figure 11 web (tests de positionnement de seconde 2021 et 2024 ; PISA 2022 et 2025)",
+   "precaution": "Écart entre deux générations d'élèves, en centièmes d'écart-type (d de Cohen), calculé par la DEPP. Seconde : deux voies."
+  }
+ ]
+}
