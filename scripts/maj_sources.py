@@ -261,7 +261,10 @@ def detecter_insee(reg: dict, publication: str | None = None) -> list[dict]:
             # Une panne de réseau n'est pas « pas encore parue » : on le dit, et l'essai hebdomadaire guette la panne durable.
             log("  insee-empreinte : page annuelle du SDES injoignable, rien a conclure aujourd'hui")
             return []
-        if code != 200 or ("1990 à %d" % annee) not in texte(page):
+        parue_sdes = code == 200 and ("1990 à %d" % annee) in texte(page)
+        # Depuis le 07/10/2026, le SDES répond 403 (et non plus 404) pour l'année suivante : un 403 ne permet pas de
+        # distinguer « absente » de « refusée au script ». On interroge alors le flux de l'Insee, voie indépendante.
+        if not parue_sdes and code != 403:
             return []                               # 404 ou page d'une autre année : pas encore parue
         code, flux = http("https://www.insee.fr/fr/flux/1")
         if code == 200:
@@ -270,6 +273,9 @@ def detecter_insee(reg: dict, publication: str | None = None) -> list[dict]:
                 if re.search(r"empreinte carbone de la France en %d" % annee, t):
                     url = html.unescape(lien).strip()
                     break
+        if not url and not parue_sdes:
+            log("  insee-empreinte : page annuelle du SDES refusee (403), flux de l'Insee sans l'edition %d : pas encore parue" % annee)
+            return []
         if not url:
             raise Anomalie("insee-empreinte : l'edition %d est parue (page du SDES), mais l'Insee Premiere n'est pas dans le flux des "
                            "parutions. Designer la piece : python scripts/maj_sources.py integrer --publication <adresse>" % annee)
