@@ -30,7 +30,7 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
     - "https://www.conseil-constitutionnel.fr/en/constitution-of-4-october-1958"
   mots: ["French Parliament", "private member's bill", "government bill", "article 49.3", "article 45", "National Assembly", "Senate", "France", "political promises"]
   fichiers: ["promesses_adopter.csv", "promesses_adopter.json"]
-  doi: "10.5281/zenodo.23212665"
+  doi: "10.5281/zenodo.23212664"
   apropos: "electoral promises and French political institutions"
 faq:
   - question: "Who can propose a law in France?"
@@ -141,7 +141,7 @@ This page shows who tables laws, how many private members' bills are debated in 
 
 **Journal officiel**, DILA data; **Constitution**, arts. 24, 39, 45, 48 and 49, read on Légifrance (API) in French and quoted in the English translation published by the Conseil constitutionnel.
 
-The figures, quotations, checks and charts are produced by a single script; each quotation is checked word for word in its document, and no figure on this page is entered by hand. **Download the data** (CC BY 4.0 licence): [CSV](/promesses_adopter.csv), long format; [JSON](/promesses_adopter.json), with definitions and the record of the checks (field names and some labels in French). This dataset is also archived on Zenodo, with the six others of the same series and their methods note, under a permanent identifier for citation: [doi:10.5281/zenodo.23212665](https://doi.org/10.5281/zenodo.23212665).
+The figures, quotations, checks and charts are produced by a single script; each quotation is checked word for word in its document, and no figure on this page is entered by hand. **Download the data** (CC BY 4.0 licence): [CSV](/promesses_adopter.csv), long format; [JSON](/promesses_adopter.json), with definitions and the record of the checks (field names and some labels in French). This dataset is also archived on Zenodo, with the six others of the same series and their methods note, under a permanent identifier for citation: [doi:10.5281/zenodo.23212664](https://doi.org/10.5281/zenodo.23212664).
 
 {{< reutiliser figures="figures_adopter" jeu="promesses_adopter" sources="National Assembly, Senate (Dosleg), Journal officiel, Conseil constitutionnel" donnees="The origin of the laws promulgated by legislature and by session, the private members' bills tabled in the National Assembly and not debated in the chamber, and the uses of article 49, paragraph 3; the same content exists as CSV, in long format, readable in a spreadsheet." >}}
 In the scope studied (excluding treaties, finance, social security financing and institutional acts), {{< ado-val "P14" >}} of the {{< ado-val "N14" >}} laws promulgated in France during the 14th legislature originated as private members' bills, {{< ado-val "P15" >}} out of {{< ado-val "N15" >}} during the 15th and {{< ado-val "P16" >}} out of {{< ado-val "N16" >}} during the 16th; this is the origin at tabling, not influence. More than half of the ordinary private members' bills tabled in the National Assembly have no observed plenary debate before the end of the legislature, even on the worst-case bound. The Government made the passing of a bill an issue of a vote of confidence {{< ado-val "E16" >}} times during the 16th legislature, {{< ado-val "Efin16" >}} of them on Finance Bills or Social Security Financing Bills.

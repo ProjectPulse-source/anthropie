@@ -22,7 +22,7 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
     - "https://data.dares.travail-emploi.gouv.fr/explore/dataset/dares_defm_stock_france_cvs_trim/"
   mots: ["chômage", "BIT", "France Travail", "catégorie A", "promesse électorale", "indicateur", "loi pour le plein emploi"]
   fichiers: ["promesses_mesurer.csv", "promesses_mesurer.json"]
-  doi: "10.5281/zenodo.23212665"
+  doi: "10.5281/zenodo.23212664"
   apropos: "promesses électorales et institutions politiques françaises"
 faq:
   - question: "Quelle est la différence entre le chômage au sens du BIT et les inscrits en catégorie A ?"
@@ -120,7 +120,7 @@ Cette page montre qu'on ne juge pas une promesse sans choisir son indicateur ni 
 
 **Autorité de la statistique publique**, délibération du 14&nbsp;novembre 2024 sur les statistiques du marché du travail. **Loi** n°&nbsp;2023-1196 du 18&nbsp;décembre 2023 pour le plein emploi.
 
-Les chiffres, les contrôles et les figures sont produits par un script unique, qui relit les fichiers publiés par l'Insee et la Dares et refuse d'écrire si une donnée cesse de soutenir une phrase&nbsp;; aucun chiffre de cette page n'est saisi à la main. **Télécharger les données** (licence CC BY 4.0)&nbsp;: [CSV](/promesses_mesurer.csv), en format long&nbsp;; [JSON](/promesses_mesurer.json), avec les définitions et le compte rendu des contrôles. Ce jeu est aussi archivé sur Zenodo, avec les six autres de la même série et leur note de méthode, sous un identifiant permanent à citer&nbsp;: [doi:10.5281/zenodo.23212665](https://doi.org/10.5281/zenodo.23212665).
+Les chiffres, les contrôles et les figures sont produits par un script unique, qui relit les fichiers publiés par l'Insee et la Dares et refuse d'écrire si une donnée cesse de soutenir une phrase&nbsp;; aucun chiffre de cette page n'est saisi à la main. **Télécharger les données** (licence CC BY 4.0)&nbsp;: [CSV](/promesses_mesurer.csv), en format long&nbsp;; [JSON](/promesses_mesurer.json), avec les définitions et le compte rendu des contrôles. Ce jeu est aussi archivé sur Zenodo, avec les six autres de la même série et leur note de méthode, sous un identifiant permanent à citer&nbsp;: [doi:10.5281/zenodo.23212664](https://doi.org/10.5281/zenodo.23212664).
 
 {{< reutiliser figures="figures_mesurer" jeu="promesses_mesurer" sources="Insee et Dares" donnees="Le croisement 2024 du statut au sens du BIT et de la catégorie d'inscription (24 cases et totaux, en milliers), et les séries trimestrielles des inscrits en catégorie A avec et sans les publics inscrits d'office ; le même contenu existe en CSV, en format long, lisible dans un tableur." >}}
 Pour juger une promesse sur le chômage, il faut d'abord choisir son chiffre&nbsp;: en 2024, selon l'estimation de l'Insee, {{< mes-val "commun_env" >}} de personnes sont comptées à la fois comme chômeurs au sens du BIT et comme inscrits en catégorie A, {{< mes-val "a_seul_env" >}} d'inscrits en catégorie A ne sont pas chômeurs au sens du BIT et {{< mes-val "bit_seul" >}} chômeurs ne sont pas inscrits en catégorie A. Depuis le 1er&nbsp;janvier 2025, la loi pour le plein emploi inscrit d'office de nouveaux publics, et la labellisation des séries d'inscrits a été suspendue pour la période du 1er&nbsp;janvier 2025 au 20&nbsp;mai 2026. Une comparaison avant et après doit traiter cette rupture, et une évolution observée ne dit pas sa cause.

@@ -27,7 +27,7 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
     - "https://www.conseil-constitutionnel.fr/en/constitution-of-4-october-1958"
   mots: ["French president", "countersignature", "article 19", "French Constitution", "presidential powers", "statute law", "political promises"]
   fichiers: ["pouvoirs_president_donnees.csv", "pouvoirs_president_donnees.json"]
-  doi: "10.5281/zenodo.23212665"
+  doi: "10.5281/zenodo.23212664"
   apropos: "electoral promises and French political institutions"
 faq:
   - question: "What can the French president decide alone?"
@@ -137,7 +137,7 @@ All the articles cited here were read in their version in force, on Légifrance,
 
 {{< pouvoirs-president vue="sources" >}}
 
-The inventory, quotations and matrix are produced by a single script, which rereads the archived texts and refuses to write if a quotation stops appearing in its article; no cell is filled by hand. **Download the data** (CC BY 4.0 licence): [CSV](/pouvoirs_president_donnees.csv), long format, one row per element and per article (French quotations); [JSON](/pouvoirs_president_donnees.json), with definitions and the record of the checks (in French). This dataset is also archived on Zenodo, with the six others of the same series and their methods note, under a permanent identifier for citation: [doi:10.5281/zenodo.23212665](https://doi.org/10.5281/zenodo.23212665).
+The inventory, quotations and matrix are produced by a single script, which rereads the archived texts and refuses to write if a quotation stops appearing in its article; no cell is filled by hand. **Download the data** (CC BY 4.0 licence): [CSV](/pouvoirs_president_donnees.csv), long format, one row per element and per article (French quotations); [JSON](/pouvoirs_president_donnees.json), with definitions and the record of the checks (in French). This dataset is also archived on Zenodo, with the six others of the same series and their methods note, under a permanent identifier for citation: [doi:10.5281/zenodo.23212664](https://doi.org/10.5281/zenodo.23212664).
 
 {{< reutiliser figures="figures_pouvoirs" jeu="pouvoirs_president_donnees" sources="Légifrance (Constitution of 4 October 1958) and the Conseil constitutionnel's English translation" donnees="The inventory of the eight provisions of article 19, each element with its exact quotation, its article and its reading date, and the articles that assign statute law and regulation; the same content exists as CSV, in long format, readable in a spreadsheet." >}}
 This page reads, in the text of the French Constitution, the {{< pv-val "n_renvois" >}} provisions that article 19 exempts from countersignature. Only {{< pv-val "n_seuls" >}}, {{< pv-val "seuls_liste" >}}, provide in their article for neither a recommendation or consultation before the act nor the intervention of another actor afterwards; this count describes the text, not practice, and measures neither the president's autonomy nor the number of his own powers. Statute law, passed by Parliament, sets taxes in particular (art. 34); regulation belongs to the Prime Minister (art. 21), except for the decrees deliberated upon in the Council of Ministers, which are countersigned.

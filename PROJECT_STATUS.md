@@ -53,6 +53,17 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-07 (soir) — Dépôt Zenodo « Promesses » : version 2 publiée ; les pages citent le DOI de concept
+
+- **Version 2** (ordre de l'auteur, « nouvelle version Zenodo ») : doi:10.5281/zenodo.23222297, version `2026-10-07.2`.
+  Note de méthode et description corrigées sur le témoin (« lorsqu'un témoin comparable existe ; sinon, la page le
+  dit »), arbitrage de la contre-expertise du dossier complet ; 15 fichiers, MD5 relus égaux aux fichiers du site ;
+  aucune valeur des jeux modifiée (quatre JSON portent en plus citations, parts `Zpct` et gardes).
+- **Pages** (7 FR + 7 EN) : `dataset.doi` et phrase de téléchargement passent au **DOI de concept**
+  10.5281/zenodo.23212664, qui mène toujours à la dernière version (le DOI de la version 1 menait à la note non corrigée).
+- Contrôles sur arbre propre (worktree d'`origin/main`) : hugo 0, `check-all --ci` 0, `audit-liens-build` 0 critique ;
+  `Dataset.identifier` relu dans le HTML construit.
+
 ### 2026-10-07 — Dépôt Zenodo des sept jeux « Promesses » publié (doi:10.5281/zenodo.23212665) ; DOI sur les pages
 
 - **Dépôt** publié sur ordre de l'auteur : `zenodo_deposit.py --create-dataset promesses-2026-10` (brouillon, `1a3a665`),

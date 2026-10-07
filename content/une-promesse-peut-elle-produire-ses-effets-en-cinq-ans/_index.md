@@ -23,7 +23,7 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
     - "https://drees.solidarites-sante.gouv.fr/sites/default/files/2021-03/DD76_0.pdf"
   mots: ["médecins", "études de médecine", "numerus clausus", "médecine générale", "mandat présidentiel", "délais"]
   fichiers: ["promesses_delais.csv", "promesses_delais.json"]
-  doi: "10.5281/zenodo.23212665"
+  doi: "10.5281/zenodo.23212664"
   apropos: "promesses électorales et institutions politiques françaises"
 faq:
   - question: "Combien de temps faut-il pour former un médecin généraliste ?"
@@ -120,7 +120,7 @@ Cette page mesure une horloge&nbsp;: le temps qu'il faut pour former un médecin
 
 **ONDPS**, bilan des formations des professionnels de santé 2021-2025, note du 19&nbsp;décembre 2025.
 
-Les chiffres, les citations, les contrôles et les figures sont produits par un script unique&nbsp;; aucun chiffre ni aucune durée de cette page n'est saisi à la main. **Télécharger les données** (licence CC BY 4.0)&nbsp;: [CSV](/promesses_delais.csv), en format long&nbsp;; [JSON](/promesses_delais.json), avec les définitions et le compte rendu des contrôles. Ce jeu est aussi archivé sur Zenodo, avec les six autres de la même série et leur note de méthode, sous un identifiant permanent à citer&nbsp;: [doi:10.5281/zenodo.23212665](https://doi.org/10.5281/zenodo.23212665).
+Les chiffres, les citations, les contrôles et les figures sont produits par un script unique&nbsp;; aucun chiffre ni aucune durée de cette page n'est saisi à la main. **Télécharger les données** (licence CC BY 4.0)&nbsp;: [CSV](/promesses_delais.csv), en format long&nbsp;; [JSON](/promesses_delais.json), avec les définitions et le compte rendu des contrôles. Ce jeu est aussi archivé sur Zenodo, avec les six autres de la même série et leur note de méthode, sous un identifiant permanent à citer&nbsp;: [doi:10.5281/zenodo.23212664](https://doi.org/10.5281/zenodo.23212664).
 
 {{< reutiliser figures="figures_delais" jeu="promesses_delais" sources="Légifrance, DREES et ONDPS" donnees="Les durées du cursus de médecine générale et du mandat lues dans les textes, les places pourvues de 1972 à 2020, les admis de 2021 à 2025 et les médecins actifs diplômés à l'étranger ; le même contenu existe en CSV, en format long, lisible dans un tableur." >}}
 Aux règles en vigueur, former un médecin généraliste prend au moins {{< del-val "duree" >}} ans depuis la première année d'études, soit {{< del-val "nmax" >}} fois la durée d'un mandat présidentiel&nbsp;; comparaison d'échelle seulement. Les étudiants soignent avant la fin du cursus, en autonomie supervisée, et {{< del-val "etr_p26" >}}&nbsp;% des médecins actifs ont été diplômés à l'étranger. Les places en études de médecine ont été divisées par {{< del-val "rapport_baisse" >}} entre 1972 et {{< del-val "an_min" >}}, avant de remonter&nbsp;; {{< del-val "admis_2021_2025" >}} étudiants ont été admis de 2021 à 2025.

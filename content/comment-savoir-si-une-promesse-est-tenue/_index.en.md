@@ -27,7 +27,7 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
     - "https://data.dares.travail-emploi.gouv.fr/explore/dataset/dares_defm_stock_france_cvs_trim/"
   mots: ["unemployment", "ILO", "France Travail", "category A", "election promise", "indicator", "full employment act", "France"]
   fichiers: ["promesses_mesurer.csv", "promesses_mesurer.json"]
-  doi: "10.5281/zenodo.23212665"
+  doi: "10.5281/zenodo.23212664"
   apropos: "electoral promises and French political institutions"
 faq:
   - question: "What is the difference between ILO unemployment and category A registrants in France?"
@@ -125,7 +125,7 @@ This page shows that a promise cannot be judged without choosing its indicator a
 
 **Autorité de la statistique publique** (French Official Statistics Authority), decision of 14 November 2024 on labour market statistics. **Law** no. 2023-1196 of 18 December 2023 on full employment (in French).
 
-The figures, checks and charts are produced by a single script, which rereads the files published by Insee and the Dares and refuses to write if a figure stops supporting a sentence; no figure on this page is entered by hand. **Download the data** (CC BY 4.0 licence): [CSV](/promesses_mesurer.csv), long format; [JSON](/promesses_mesurer.json), with definitions and the record of the checks (field names and some labels in French). This dataset is also archived on Zenodo, with the six others of the same series and their methods note, under a permanent identifier for citation: [doi:10.5281/zenodo.23212665](https://doi.org/10.5281/zenodo.23212665).
+The figures, checks and charts are produced by a single script, which rereads the files published by Insee and the Dares and refuses to write if a figure stops supporting a sentence; no figure on this page is entered by hand. **Download the data** (CC BY 4.0 licence): [CSV](/promesses_mesurer.csv), long format; [JSON](/promesses_mesurer.json), with definitions and the record of the checks (field names and some labels in French). This dataset is also archived on Zenodo, with the six others of the same series and their methods note, under a permanent identifier for citation: [doi:10.5281/zenodo.23212664](https://doi.org/10.5281/zenodo.23212664).
 
 {{< reutiliser figures="figures_mesurer" jeu="promesses_mesurer" sources="Insee and Dares" donnees="The 2024 cross-tabulation of ILO status and registration category (24 cells and totals, in thousands), and the quarterly series of category A registrants with and without the groups registered automatically; the same content exists as CSV, in long format, readable in a spreadsheet." >}}
 To judge a promise on unemployment in France, one must first choose its figure: in 2024, according to the Insee estimate, {{< mes-val "commun_env" >}} people are counted both as unemployed in the ILO sense and as category A registrants, {{< mes-val "a_seul_env" >}} category A registrants are not unemployed under the ILO definition and {{< mes-val "bit_seul" >}} unemployed are not registered in category A. Since 1 January 2025, the full employment act registers new groups automatically, and the statistical quality label of the registrant series was suspended for the period from 1 January 2025 to 20 May 2026. A before-and-after comparison must deal with this break, and an observed change does not tell its cause.

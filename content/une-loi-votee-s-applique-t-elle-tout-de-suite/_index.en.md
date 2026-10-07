@@ -29,7 +29,7 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
     - "https://www.conseil-constitutionnel.fr/en/constitution-of-4-october-1958"
   mots: ["application of laws", "implementing decrees", "regulations", "French Senate", "General Secretariat of the Government", "France", "political promises"]
   fichiers: ["promesses_appliquer.csv", "promesses_appliquer.json"]
-  doi: "10.5281/zenodo.23212665"
+  doi: "10.5281/zenodo.23212664"
   apropos: "electoral promises and French political institutions"
 faq:
   - question: "Does a French law apply as soon as it is published in the Journal officiel?"
@@ -148,7 +148,7 @@ This page counts what a law still waits for after the vote. The book follows nin
 
 **Constitution**, arts. 10 and 61, quoted in the English translation published by the Conseil constitutionnel; **Civil Code**, art. 1, read on Légifrance (API).
 
-The figures, quotations, checks and charts are produced by a single script; each quotation is checked word for word in the page of the document it comes from, and no figure on this page is entered by hand. **Download the data** (CC BY 4.0 licence): [CSV](/promesses_appliquer.csv), long format; [JSON](/promesses_appliquer.json), with definitions and the record of the checks (field names and some labels in French). This dataset is also archived on Zenodo, with the six others of the same series and their methods note, under a permanent identifier for citation: [doi:10.5281/zenodo.23212665](https://doi.org/10.5281/zenodo.23212665).
+The figures, quotations, checks and charts are produced by a single script; each quotation is checked word for word in the page of the document it comes from, and no figure on this page is entered by hand. **Download the data** (CC BY 4.0 licence): [CSV](/promesses_appliquer.csv), long format; [JSON](/promesses_appliquer.json), with definitions and the record of the checks (field names and some labels in French). This dataset is also archived on Zenodo, with the six others of the same series and their methods note, under a permanent identifier for citation: [doi:10.5281/zenodo.23212664](https://doi.org/10.5281/zenodo.23212664).
 
 {{< reutiliser figures="figures_appliquer" jeu="promesses_appliquer" sources="National Assembly and LexImpact (DILA data), French Senate, General Secretariat of the Government, Légifrance" donnees="The status of implementing measures by session of the law, the laws directly applicable according to the two sources, and the rates published by the Senate since 2002-2003; the same content exists as CSV, in long format, readable in a spreadsheet." >}}
 On {{< app-val "releve" >}}, of the {{< app-val "nmes" >}} implementing measures listed for the laws promulgated in France from October 2017 to September 2025, {{< app-val "A" >}} are pending. For two sessions, the French Senate's reports publish its implementation rate and report a different rate calculated by the General Secretariat of the Government, under other counting conventions; the Senate's series rests on {{< app-val "nsegments" >}} successive definitions since 2002-2003.

@@ -28,7 +28,7 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
     - "https://drees.solidarites-sante.gouv.fr/sites/default/files/2021-03/DD76_0.pdf"
   mots: ["doctors", "medical studies", "numerus clausus", "general practice", "presidential term", "France", "political promises"]
   fichiers: ["promesses_delais.csv", "promesses_delais.json"]
-  doi: "10.5281/zenodo.23212665"
+  doi: "10.5281/zenodo.23212664"
   apropos: "electoral promises and French political institutions"
 faq:
   - question: "How long does it take to train a general practitioner in France?"
@@ -125,7 +125,7 @@ This page measures one clock: the time it takes to train a doctor. The book foll
 
 **ONDPS**, report on the training of health professionals 2021-2025, note of 19 December 2025 (in French).
 
-The figures, quotations, checks and charts are produced by a single script; no figure and no duration on this page is entered by hand. **Download the data** (CC BY 4.0 licence): [CSV](/promesses_delais.csv), long format; [JSON](/promesses_delais.json), with definitions and the record of the checks (field names and some labels in French). This dataset is also archived on Zenodo, with the six others of the same series and their methods note, under a permanent identifier for citation: [doi:10.5281/zenodo.23212665](https://doi.org/10.5281/zenodo.23212665).
+The figures, quotations, checks and charts are produced by a single script; no figure and no duration on this page is entered by hand. **Download the data** (CC BY 4.0 licence): [CSV](/promesses_delais.csv), long format; [JSON](/promesses_delais.json), with definitions and the record of the checks (field names and some labels in French). This dataset is also archived on Zenodo, with the six others of the same series and their methods note, under a permanent identifier for citation: [doi:10.5281/zenodo.23212664](https://doi.org/10.5281/zenodo.23212664).
 
 {{< reutiliser figures="figures_delais" jeu="promesses_delais" sources="Légifrance, Conseil constitutionnel, DREES and ONDPS" donnees="The lengths of the general practice curriculum and of the term read in the texts, the places filled from 1972 to 2020, the admissions from 2021 to 2025 and the practising doctors who qualified abroad; the same content exists as CSV, in long format, readable in a spreadsheet." >}}
 Under the rules in force, training a general practitioner in France takes at least {{< del-val "duree" >}} years from the first year of studies, {{< del-val "nfois" >}} the length of a presidential term; comparison of scale only. Students provide care before the end of the curriculum, under supervised autonomy, and {{< del-val "etr_p26" >}}% of practising doctors qualified abroad. Places in medical studies were divided by {{< del-val "rapport_baisse" >}} between 1972 and {{< del-val "an_min" >}}, before rising again; {{< del-val "admis_2021_2025" >}} students were admitted from 2021 to 2025.

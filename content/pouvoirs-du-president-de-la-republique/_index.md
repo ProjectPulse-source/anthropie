@@ -21,7 +21,7 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
     - "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000571356/"
   mots: ["président de la République", "contreseing", "article 19", "Constitution de 1958", "pouvoirs du président", "domaine de la loi"]
   fichiers: ["pouvoirs_president_donnees.csv", "pouvoirs_president_donnees.json"]
-  doi: "10.5281/zenodo.23212665"
+  doi: "10.5281/zenodo.23212664"
   apropos: "promesses électorales et institutions politiques françaises"
 faq:
   - question: "Que peut décider le président de la République seul ?"
@@ -131,7 +131,7 @@ Tous les articles cités ici ont été lus dans leur version en vigueur, sur Lé
 
 {{< pouvoirs-president vue="sources" >}}
 
-L'inventaire, les citations et la matrice sont produits par un script unique, qui relit les textes archivés et refuse d'écrire si une citation cesse de figurer dans son article&nbsp;; aucune case n'est remplie à la main. **Télécharger les données** (licence CC BY 4.0)&nbsp;: [CSV](/pouvoirs_president_donnees.csv), en format long, une ligne par élément et par article&nbsp;; [JSON](/pouvoirs_president_donnees.json), avec les définitions et le compte rendu des contrôles. Ce jeu est aussi archivé sur Zenodo, avec les six autres de la même série et leur note de méthode, sous un identifiant permanent à citer&nbsp;: [doi:10.5281/zenodo.23212665](https://doi.org/10.5281/zenodo.23212665).
+L'inventaire, les citations et la matrice sont produits par un script unique, qui relit les textes archivés et refuse d'écrire si une citation cesse de figurer dans son article&nbsp;; aucune case n'est remplie à la main. **Télécharger les données** (licence CC BY 4.0)&nbsp;: [CSV](/pouvoirs_president_donnees.csv), en format long, une ligne par élément et par article&nbsp;; [JSON](/pouvoirs_president_donnees.json), avec les définitions et le compte rendu des contrôles. Ce jeu est aussi archivé sur Zenodo, avec les six autres de la même série et leur note de méthode, sous un identifiant permanent à citer&nbsp;: [doi:10.5281/zenodo.23212664](https://doi.org/10.5281/zenodo.23212664).
 
 {{< reutiliser figures="figures_pouvoirs" jeu="pouvoirs_president_donnees" sources="Légifrance (Constitution du 4 octobre 1958)" donnees="L'inventaire des huit dispositions de l'article 19, chaque élément avec sa citation exacte, son article et sa date de lecture, et les articles qui attribuent la loi et le règlement ; le même contenu existe en CSV, en format long, lisible dans un tableur." >}}
 Cette page lit dans le texte de la Constitution les {{< pv-val "n_renvois" >}} dispositions que l'article&nbsp;19 dispense de contreseing. {{< pv-val "n_seuls_maj" >}} seulement, {{< pv-val "seuls_liste" >}}, ne prévoient dans leur article ni proposition ou consultation avant l'acte, ni intervention d'un autre acteur pour la suite&nbsp;; ce compte décrit le texte, non la pratique, et ne mesure ni l'autonomie du président ni le nombre de ses pouvoirs propres. La loi, votée par le Parlement, fixe notamment l'impôt (art.&nbsp;34)&nbsp;; le règlement appartient au Premier ministre (art.&nbsp;21), hors les décrets délibérés en Conseil des ministres, soumis au contreseing.
