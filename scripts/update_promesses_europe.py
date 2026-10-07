@@ -32,6 +32,7 @@ from __future__ import annotations
 
 import copy
 import csv
+import hashlib
 import html
 import io
 import json
@@ -82,6 +83,51 @@ FR_ACTES = [
     ("2025-07-08", "abstention", "Décision sur l'accord d'interprétation du traité sur la Charte de l'énergie", "Decision on the agreement on the interpretation of the Energy Charter Treaty"),
     ("2026-02-23", "contre", "Règlement sur la notion de « pays tiers sûr » (2025/0132 (COD))", "Regulation on the 'safe third country' concept (2025/0132 (COD))"),
 ]
+# --- C2 (07/10/2026, contre-expertise PRO-20261007-102607) : publications de la SWP qui chiffraient déjà les votes de la
+# France. Citées mot pour mot (garde U7 sur le texte des PDF archivés), nos décomptes posés à côté sur la même fenêtre.
+PUB_SWP = RECH / "sondes" / "europe" / "publications_swp"
+SWP_PUBS = {
+    "swp21": ("SWP_WP5_2021-12_Mintel_vonOndarza_Consensus_per_video.pdf",
+              "c3310458f4fff66f5d8c62c3edd39596b9d7ceb5495d4361487d5d4fb83fe234",
+              "France has only been outvoted once and abstained twice in all public votes since 2010", "2010-01-01", "2021-12-31"),
+    "swp24": ("SWP_Comment_2024-16_vonOndarza_Stuerzer.pdf",
+              "b8efc2ea800f45c8d18f48e9e5979694b591ad6dc0bca07a8637331174e0bd9d",
+              "France, which was only outvoted five times in the entire observation period", "2010-01-01", "2023-09-30"),
+}
+POLIDORI = ("Polidori_2014_Unanimity_Lisbon_Eurostudium3w.pdf",
+            "ad05d58bb183f9b5fd23b151df5cf189d0fd9838dad577cda087dc444eea5e16",
+            "are 68 (13 as to TEU; 55 as to TFEU)")  # C4 : autre périmètre (Conseil européen compris), pas un témoin
+SWP24_ANNONCE = 5  # « five times », lu dans la citation ci-dessus (la garde vérifie le mot)
+
+
+def verifier_swp() -> tuple[str, dict]:
+    import fitz
+    vals = {}
+    for k, (f, sha, cit, deb, fin) in SWP_PUBS.items():
+        p = PUB_SWP / f
+        if not p.is_file() or hashlib.sha256(p.read_bytes()).hexdigest() != sha:
+            raise Arret("U7 : publication SWP absente ou modifiée (%s)" % f)
+        t = re.sub(r"\s+", " ", " ".join(pg.get_text() for pg in fitz.open(p))).replace("- ", "")
+        if cit not in t:
+            raise Arret("U7 : citation introuvable dans %s : %s" % (f, cit))
+        sel = [a for a in FR_ACTES if deb <= a[0] <= fin]
+        vals[k] = {"contre": sum(a[1] == "contre" for a in sel), "abst": sum(a[1] == "abstention" for a in sel)}
+    if (vals["swp21"]["contre"], vals["swp21"]["abst"]) != (1, 2) or "once and abstained twice" not in SWP_PUBS["swp21"][2]:
+        raise Arret("U7 : la phrase de 2021 (« once », « twice ») ne correspond plus au relevé 2010-2021 : %s" % vals["swp21"])
+    if "five times" not in SWP_PUBS["swp24"][2]:
+        raise Arret("U7 : le nombre annoncé par la SWP en 2024 ne se lit plus dans la citation")
+    ecart = SWP24_ANNONCE - (vals["swp24"]["contre"] + vals["swp24"]["abst"])
+    if ecart != -ECARTS_EXPLIQUES[("FR", 0)]:
+        raise Arret("U7 : écart SWP 2024 (%d) différent des deux entrées SWP écartées (%d)" % (ecart, -ECARTS_EXPLIQUES[("FR", 0)]))
+    p = PUB_SWP / POLIDORI[0]
+    if not p.is_file() or hashlib.sha256(p.read_bytes()).hexdigest() != POLIDORI[1]:
+        raise Arret("U7 : inventaire de 2014 absent ou modifié")
+    if POLIDORI[2] not in re.sub(r"\s+", " ", " ".join(pg.get_text() for pg in fitz.open(p))):
+        raise Arret("U7 : le compte de l'inventaire de 2014 ne se lit plus dans le PDF")
+    vals["polidori_tfue"] = re.search(r"(\d+) as to TFEU", POLIDORI[2]).group(1)
+    return "U7 : citations SWP 2021 et 2024 retrouvées ; écart 2024 égal aux entrées écartées (%d)" % ecart, vals
+
+
 NOMS = {"AT": ("Autriche", "Austria"), "BE": ("Belgique", "Belgium"), "BG": ("Bulgarie", "Bulgaria"), "CY": ("Chypre", "Cyprus"),
         "CZ": ("Tchéquie", "Czechia"), "DE": ("Allemagne", "Germany"), "DK": ("Danemark", "Denmark"), "EE": ("Estonie", "Estonia"),
         "EL": ("Grèce", "Greece"), "ES": ("Espagne", "Spain"), "FI": ("Finlande", "Finland"), "FR": ("France", "France"),
@@ -506,6 +552,25 @@ def _main() -> int:
     for m in autotest(sw):
         log("autotest : la mutation a mordu : " + m)
     A, E = affichage(typ, B, V, ue4.FR)
+    msg, sv = verifier_swp()
+    g.append(msg)
+    sauve = ECARTS_EXPLIQUES[("FR", 0)]
+    try:  # mutation : un écart expliqué différent doit arrêter U7
+        ECARTS_EXPLIQUES[("FR", 0)] = -1
+        verifier_swp()
+        raise RuntimeError("U7 : la mutation « écart modifié » n'a pas mordu")
+    except Arret:
+        log("autotest : la mutation a mordu : écart SWP modifié -> U7")
+    finally:
+        ECARTS_EXPLIQUES[("FR", 0)] = sauve
+    LETTRES = {0: ("aucun", "no"), 1: ("un", "one"), 2: ("deux", "two"), 3: ("trois", "three"), 4: ("quatre", "four"), 5: ("cinq", "five")}
+    for d, i in ((A, 0), (E, 1)):
+        d["swp21_cit"], d["swp24_cit"] = SWP_PUBS["swp21"][2], SWP_PUBS["swp24"][2]
+        d["swp21_contre"] = LETTRES[sv["swp21"]["contre"]][i]
+        d["swp21_abst"] = LETTRES[sv["swp21"]["abst"]][i]
+        d["swp24_nonpour"] = LETTRES[sv["swp24"]["contre"] + sv["swp24"]["abst"]][i]
+        d["swp24_ecart"] = LETTRES[-ECARTS_EXPLIQUES[("FR", 0)]][i]
+        d["polidori_tfue"] = sv["polidori_tfue"]
     if set(A) != set(E):
         raise Arret("blocs affichage : clés différentes (%s)" % sorted(set(A) ^ set(E)))
     if check:

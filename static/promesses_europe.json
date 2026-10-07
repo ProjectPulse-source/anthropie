@@ -31,7 +31,8 @@
   "U2 : 81 bases PLO (74 articles), 2 conditionnelles, 51 bases à l'unanimité ; témoin du Conseil : concordance exacte",
   "U3 : relevé du Conseil concordant avec SWP pays par pays (écarts expliqués seulement)",
   "U4 : France 2 contre, 3 abstentions, 1750 pour (liste des actes cohérente)",
-  "U5 : transposition contrôlée par le texte de la Commission"
+  "U5 : transposition contrôlée par le texte de la Commission",
+  "U7 : citations SWP 2021 et 2024 retrouvées ; écart 2024 égal aux entrées écartées (2)"
  ],
  "calcul": {
   "votes": {
@@ -1092,6 +1093,13 @@
   "cit_tue16": "Une minorité de blocage doit inclure au moins quatre membres du Conseil",
   "etats_identiques": "23",
   "etats_total": "28",
+  "swp21_cit": "France has only been outvoted once and abstained twice in all public votes since 2010",
+  "swp24_cit": "France, which was only outvoted five times in the entire observation period",
+  "swp21_contre": "un",
+  "swp21_abst": "deux",
+  "swp24_nonpour": "trois",
+  "swp24_ecart": "deux",
+  "polidori_tfue": "55",
   "releve_le": "6 octobre 2026 (votes du Conseil, relevé à cette date ; transposition au 30 novembre 2025)"
  },
  "affichage_en": {
@@ -1148,6 +1156,13 @@
   "cit_tue16": "A blocking minority must include at least four Council members",
   "etats_identiques": "23",
   "etats_total": "28",
+  "swp21_cit": "France has only been outvoted once and abstained twice in all public votes since 2010",
+  "swp24_cit": "France, which was only outvoted five times in the entire observation period",
+  "swp21_contre": "one",
+  "swp21_abst": "two",
+  "swp24_nonpour": "three",
+  "swp24_ecart": "two",
+  "polidori_tfue": "55",
   "releve_le": "6 October 2026 (Council votes, retrieved on that date; transposition as at 30 November 2025)"
  }
 }
