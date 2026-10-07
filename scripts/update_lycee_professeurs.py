@@ -18,7 +18,7 @@ au printemps, note sur les élèves par structure fin août) : relancer test_dec
 recherche, recopier l'extrait et son empreinte, relancer ce script. Rendez-vous : septembre 2027 (RERS 2027).
 Page en français seulement (exclusion déclarée : débat, programme et statistique français).
 
-Usage : python scripts/update_lycee_professeurs.py [--check] [--mutation=organisation|classes|concours|ocde]
+Usage : python scripts/update_lycee_professeurs.py [--check] [--mutation=organisation|classes|concours|eleves|ocde]
 Sorties : data/ et static/lycee_professeurs.json, static/lycee_professeurs.csv, data/figures_lycee.json,
           static/img/lycee-{heures,classes,concours}.svg + .png
 """
@@ -72,8 +72,19 @@ def nb(v: float, dec: int = 1) -> str:
         groupes.insert(0, ent[-3:])
         ent = ent[:-3]
     groupes.insert(0, ent)
-    s = ("-" if neg else "") + " ".join(groupes) + ("," + frac if frac else "")
+    s = ("−" if neg else "") + " ".join(groupes) + ("," + frac if frac else "")  # signe moins typographique
     return s
+
+
+def pts(v: float) -> str:
+    """« 1,9 point », « 3,3 points » : le pluriel français commence à 2."""
+    return nb(v) + " " + ("point" if abs(v) < 2 else "points")
+
+
+def disc(s: str) -> str:
+    """Libellé de discipline de la DEPP en milieu de phrase : capitale non accentuée rétablie, minuscule initiale."""
+    s = s.replace("Education", "Éducation")
+    return s[0].lower() + s[1:]
 
 
 # ------------------------------------------------------------------ données
@@ -145,6 +156,8 @@ def mutation(c):
         c["tr"]["2025"]["div_35"] = 25.0
     elif m == "concours":     # le CAPES de mathématiques serait pourvu à 85 % en 2024
         c["maths"] = dict(c["maths"], **{"2024": 85.0})
+    elif m == "eleves":       # les élèves seraient plus nombreux en 2027 qu'en 2017
+        c["e4_el"] = 0.02
     elif m == "ocde":         # l'écart avec l'OCDE ne se resserrerait plus
         c["c3"] = {a: (dict(v, FRA=v["OECD"] * 1.6) if a == max(c["c3"]) else v) for a, v in c["c3"].items()}
     elif m is not None:
@@ -206,6 +219,7 @@ def gardes(c):
     g(max(c["metro"].values()) - min(c["metro"].values()) >= 2, "« les académies ne sont pas à égalité »")
     # Énoncés
     g(c["e4_reel"] > 0 and c["e4_par_el"] > c["e4_reel"], "E4 : majorants positifs, par élève plus fort")
+    g(c["e4_el"] < 0, "« les élèves seront moins nombreux en 2027 qu'en 2017 » : %.3f" % c["e4_el"])
     g(2.5 <= c["e5_f"] < 2.95, "E5 « multiplié par environ 2,6, pas tout à fait triplé » : %.2f" % c["e5_f"])
     var = c["sd"]["total"]["2024-2025"] - c["sd"]["total"]["2022-2023"]
     g(-2.5 < var < 0, "E6 « baisse de 1 point environ sur la mesure DEPP, non de 3 » : %.1f" % var)
@@ -229,7 +243,8 @@ def affichage(c):
         "h_total": nb(h4gt["total"]), "h_un_sur": str(round(100 / h4gt["total"])),
         "h_un_sur_l": {8: "huit", 9: "neuf", 10: "dix", 11: "onze", 12: "douze"}[round(100 / h4gt["total"])],
         "h_ferm": nb(h4gt["fermeture"]), "h_sys": nb(h4gt["systeme"]), "h_form": nb(h4gt["formation"]),
-        "h_indiv": nb(h4gt["individuelles"]), "h_nr": nb(h4gt["non_remplacement"]),
+        "h_indiv": nb(h4gt["individuelles"]), "h_indiv_pt": pts(h4gt["individuelles"]),
+        "h_ferm_pt": pts(h4gt["fermeture"]), "h_sys_pt": pts(h4gt["systeme"]), "h_form_pt": pts(h4gt["formation"]), "h_nr": nb(h4gt["non_remplacement"]),
         "h_org": nb(c["org4"]), "h_org_part": str(round(100 * c["org4"] / h4gt["total"])),
         "h3_total": nb(c["h3"][GT]["total"], 0), "h3_org": nb(c["org3"], 0), "h3_indiv": nb(c["h3"][GT]["individuelles"], 0),
         "col_total": nb(h4col["total"]), "col_indiv": nb(h4col["individuelles"]), "col_org": nb(c["org4_col"]),
@@ -246,23 +261,24 @@ def affichage(c):
         "div30_15": nb(c["tr"]["2015"]["div_30"]), "div30_25": nb(c["tr"]["2025"]["div_30"]),
         "div35_15": nb(c["tr"]["2015"]["div_35"]), "div35_25": nb(c["tr"]["2025"]["div_35"]),
         "es_gt": nb(c["es_toutes"]),
-        "es_min": nb(dmin["es"]), "es_min_disc": dmin["discipline"].lower(), "es_max": nb(dmax["es"]), "es_max_disc": dmax["discipline"],
+        "es_min": nb(dmin["es"]), "es_min_disc": disc(dmin["discipline"]), "es_max": nb(dmax["es"]), "es_max_disc": disc(dmax["discipline"]),
         "es_maths": nb(disc_txt["Mathématiques"]), "es_hg": nb(disc_txt["Histoire-Géographie"]), "es_philo": nb(disc_txt["Philosophie"]),
         "es_ses": nb(disc_txt["Sciences économiques et sociales"]), "es_svt": nb(disc_txt["Sciences de la Vie et de la Terre"]),
         "grp_1g_18": nb(c["grp"]["Première générale"]["2018"]), "grp_1g_19": nb(c["grp"]["Première générale"]["2019"]),
         "grp_1g": nb(c["grp"]["Première générale"][an_grp]), "grp_tg": nb(c["grp"]["Terminale générale"][an_grp]),
         "grp_2nde": nb(c["grp"]["Seconde GT"][an_grp]), "grp_an": an_grp,
         # moyens
-        "a0": str(c["a0"]), "a1": str(c["a1"]), "el_var": nb(100 * c["el_var"]), "div_var": nb(100 * c["div_var"]),
-        "he_var": nb(100 * c["he_var"], 0), "he_a0": nb(c["v1"][c["a0"]]["he"], 2), "he_a1": nb(c["v1"][c["a1"]]["he"], 2),
+        "a0": str(c["a0"]), "a1": str(c["a1"]), "el_var": nb(100 * c["el_var"]), "div_var": nb(100 * c["div_var"]), "div_baisse": nb(-100 * c["div_var"]),
+        "he_var": nb(100 * c["he_var"], 0), "he_baisse": nb(-100 * c["he_var"], 0), "he_a0": nb(c["v1"][c["a0"]]["he"], 2), "he_a1": nb(c["v1"][c["a1"]]["he"], 2),
         "he_2010": nb(c["he_2010"], 2), "he_2015": nb(c["he_2015"], 2),
         "c1_max": nb(c["c1"][2010], 0), "c1_dern": nb(c["c1"][max(c["c1"])], 0), "c1_an": str(max(c["c1"])),
         "c1_var": nb(100 * (c["c1"][max(c["c1"])] / c["c1"][2010] - 1), 0),
+        "c1_baisse": nb(100 * (1 - c["c1"][max(c["c1"])] / c["c1"][2010]), 0),
         "c3_an": str(max(c["c3"])), "c3_fra": nb(c["c3"][max(c["c3"])]["FRA"], 0), "c3_oecd": nb(c["c3"][max(c["c3"])]["OECD"], 0),
         "c3_pct": nb(100 * (rap[max(rap)] - 1), 0), "c3_pct_debut": nb(100 * (rap[a_rmin] - 1), 0), "c3_debut": str(a_rmin),
         "e4_17": nb(c["e4"]["credits_2017"]), "e4_27": nb(c["e4"]["credits_2027"], 0), "e4_nom": nb(100 * c["e4_nom"], 0),
         "e4_prix": nb(100 * c["e4_prix"], 0), "e4_prix_an": str(c["p_dern"]), "e4_reel": nb(100 * c["e4_reel"], 0),
-        "e4_el": nb(100 * c["e4_el"], 0), "e4_par_el": nb(100 * c["e4_par_el"], 0),
+        "e4_el": nb(100 * c["e4_el"], 0), "e4_el_baisse": nb(-100 * c["e4_el"], 0), "e4_par_el": nb(100 * c["e4_par_el"], 0),
         # concours
         "m23": nb(c["maths"]["2023"]), "m24": nb(c["maths"]["2024"]), "m25": nb(c["maths"]["2025"]),
         "pc23": nb(c["pc"]["2023"]), "pc24": nb(c["pc"]["2024"]), "pc25": nb(c["pc"]["2025"]),

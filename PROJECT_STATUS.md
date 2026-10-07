@@ -64,7 +64,7 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 - Contrôles sur arbre propre du HEAD : hugo 0, `check-all --ci` 0, `audit-liens-build` 0 critique ; JSON-LD relu dans le
   HTML construit (14 pages portent le DOI ; page dette : sujet inchangé).
 
-### 2026-10-07 — Ressource « Manque-t-il des professeurs au lycée ? » et bloc « École et lycée » (FR seulement) ; NON POUSSÉ
+### 2026-10-07 — Ressource « Manque-t-il des professeurs au lycée ? » et bloc « École et lycée » (FR seulement) ; EN LIGNE le 07/10 (parti avec le push Zenodo `8f70a2a`)
 
 Pendant le mouvement lycéen et la consultation nationale des lycéens (5-23/10/2026). Recherche, protocole écrit avant calcul,
 deux contre-expertises arbitrées, énoncés des acteurs relus à la source et verdict :
@@ -80,7 +80,12 @@ deux contre-expertises arbitrées, énoncés des acteurs relus à la source et v
 - **Bloc** `ecole` dans `content/ressources/_index.md` (pas dans l'index anglais : aucune page EN).
 - **Mise à jour** : à la main, hors module (déclaré dans le générateur) ; rendez-vous **septembre 2027** (RERS 2027).
 - Contrôles : hugo 0, `check-all --ci` 0, `audit-liens-build` 0 critique, rendu 390 px sans débordement de contenu.
-- **Reste** : fiche D0 (feuille de route GEO), contre-expertise de la page construite (règle 12), push sur ordre de l'auteur.
+- **Relecture de la page en ligne** (même jour) : nombres négatifs écrits « −1,3 % de classes », « −7 % moins nombreux »
+  (clés `*_baisse` en valeur absolue, signe moins typographique dans `nb()`) ; « 1,9 points » (`pts()`, pluriel à partir
+  de 2) ; « education musicale », capitale non accentuée de la DEPP (`disc()`) ; « En trois phrases » qui en comptait
+  deux ; « deux contre-expertises indépendantes » du protocole, inexact (une sur le protocole, l'autre sur le cahier
+  des charges). Garde nouvelle « élèves moins nombreux en 2027 », mutation `eleves` vue mordre ; 38 gardes.
+- **Reste** : contre-expertise de la page construite (règle 12), registre des ressources, diffusion par lot.
 
 ### 2026-10-07 — FR↔EN sans décrochage : sélecteur de langue à repli, huit pages traduites, contre-expertise retenue ; POUSSÉ (`72f26e5`, `63cc811`), production vérifiée
 
