@@ -365,6 +365,79 @@ def cmd_create_paper(key: str, apply: bool):
     print("Édition web   :", dep.get("links", {}).get("html", ""))
 
 
+# Jeux de données (upload_type « dataset »), ajouté le 2026-10-07 pour le dossier « Promesses présidentielles »
+# (décision D1 de l'arbitrage PRO-20261007-102607). Pas de communauté : `anthropie-working-papers` réunit les working
+# papers, un jeu de données n'y a pas sa place (choix délégué par l'auteur le 07/10). Fichiers et note de méthode :
+# D:\PRO\06_PROMOTION\RECHERCHE_DOSSIER_PROMESSES_2026-10-05\DEPOT_DONNEES\ (note_methode.py les tire du dépôt git,
+# identiques au site octet pour octet).
+_PAGES_PROMESSES = ["pouvoirs-du-president-de-la-republique", "qui-peut-faire-adopter-une-loi",
+                    "une-loi-votee-s-applique-t-elle-tout-de-suite",
+                    "une-promesse-peut-elle-produire-ses-effets-en-cinq-ans",
+                    "comment-savoir-si-une-promesse-est-tenue", "un-president-peut-il-recourir-au-referendum",
+                    "ce-que-la-france-peut-decider-dans-l-union-europeenne"]
+DATASETS = {
+    "promesses-2026-10": {
+        "marqueurs": ["sept jeux de données vérifiés sur les institutions françaises"],
+        "titre": ("Ce qu'un président peut décider, faire voter, faire appliquer et mesurer : sept jeux de données "
+                  "vérifiés sur les institutions françaises (version du 7 octobre 2026)"),
+        "language": "fra",
+        "version": "2026-10-07",
+        "description": (
+            "<p>Sept jeux de données sur le chemin d'une promesse présidentielle en France : les huit dispositions que "
+            "l'article 19 de la Constitution dispense de contreseing ; l'origine de chaque loi promulguée depuis 2012 et "
+            "le sort des propositions de loi déposées ; l'état des mesures d'application ; la durée de formation des "
+            "médecins ; le croisement du chômage au sens du BIT et des inscrits en catégorie A ; le registre des "
+            "référendums nationaux et des référendums d'initiative partagée ; les votes publics de chaque État au "
+            "Conseil de l'Union européenne sur les actes législatifs (2009-2026).</p>"
+            "<p>Chaque jeu est produit par un script unique qui relit les sources officielles archivées, refuse d'écrire "
+            "si une donnée cesse de soutenir une phrase publiée, et est contrôlé par un témoin indépendant. Aucun nombre "
+            "n'est saisi à la main. Chaque jeu accompagne une page publique de stephane-lalut.com, qui en donne la "
+            "lecture, les limites et les sources ; la note de méthode jointe décrit sources, témoins, limites et "
+            "empreintes SHA-256 des fichiers.</p>"
+            "<p><em>Seven verified datasets on what a French president can decide, get passed, get implemented and "
+            "measure: the eight provisions exempt from countersignature (art. 19), the origin of every law promulgated "
+            "since 2012 and the fate of bills tabled, the status of implementing measures, the length of medical "
+            "training, the overlap between ILO unemployment and registered jobseekers, the register of national and "
+            "shared-initiative referendums, and the public votes of each Member State in the Council of the EU on "
+            "legislative acts (2009-2026). Each dataset is produced by a single script that rereads archived official "
+            "sources and is checked against an independent witness.</em></p>"),
+        "keywords": ["Constitution française", "contreseing", "procédure législative", "article 49.3",
+                     "application des lois", "référendum", "référendum d'initiative partagée",
+                     "Conseil de l'Union européenne", "votes au Conseil", "promesses électorales", "chômage BIT",
+                     "formation des médecins"],
+        "related": ([{"relation": "isSupplementTo", "identifier": f"https://stephane-lalut.com/{p}/",
+                      "resource_type": "publication-other"} for p in _PAGES_PROMESSES]
+                    + [{"relation": "references", "identifier": "10.7802/2560", "scheme": "doi"}]),
+    },
+}
+
+
+def cmd_create_dataset(key: str, apply: bool):
+    """Brouillon de jeu de données + réservation du DOI. Jamais de publication par script."""
+    fiche = DATASETS.get(key)
+    if fiche is None:
+        sys.exit(f"Jeu inconnu : {key!r}. Disponibles : {', '.join(DATASETS)}")
+    for d in api("GET", "/deposit/depositions?status=draft&size=50") or []:
+        t = d.get("title") or d.get("metadata", {}).get("title", "")
+        if any(m in t for m in fiche["marqueurs"]):
+            sys.exit(f"REFUS anti-doublon : brouillon existant (id={d['id']}, titre={t!r}).")
+    payload = {"metadata": {
+        "title": fiche["titre"], "upload_type": "dataset", "description": fiche["description"],
+        "creators": CREATORS, "language": fiche["language"], "license": "cc-by-4.0", "keywords": fiche["keywords"],
+        "prereserve_doi": True, "version": fiche["version"], "related_identifiers": fiche["related"],
+    }}
+    if not apply:
+        print(f"DRY-RUN — payload {key} :")
+        print(json.dumps(payload, ensure_ascii=False, indent=2))
+        return
+    dep = api("POST", "/deposit/depositions", payload)
+    doi = dep.get("metadata", {}).get("prereserve_doi", {}).get("doi", "(non retourné)")
+    print(f"BROUILLON {key} CRÉÉ (NON publié).")
+    print("deposition_id :", dep.get("id"))
+    print("DOI réservé   :", doi)
+    print("Édition web   :", dep.get("links", {}).get("html", ""))
+
+
 def cmd_upload(dep_id: str, filepath: str):
     fp = Path(filepath)
     if not fp.is_file():
@@ -397,9 +470,12 @@ if __name__ == "__main__":
     p.add_argument("--create-en", action="store_true",
                    help="alias historique (fiche AWP-08 EN codée en dur)")
     p.add_argument("--upload", nargs=2, metavar=("DEPOSITION_ID", "FILEPATH"))
+    p.add_argument("--create-dataset", metavar="JEU", help="ex. promesses-2026-10 (registre DATASETS)")
     p.add_argument("--apply", action="store_true")
     a = p.parse_args()
-    if a.list:
+    if a.create_dataset:
+        cmd_create_dataset(a.create_dataset, a.apply)
+    elif a.list:
         cmd_list()
     elif a.papers:
         cmd_papers()
