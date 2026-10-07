@@ -267,8 +267,8 @@ def gardes_bati(b, g):
       "bâti : « la seule baisse des effectifs ne suffit pas » (effet maximal %.3f)" % b["meca"])
     g(b["rho_ll"] is not None and -0.6 < b["rho_ll"] <= -0.3 and abs(b["rho_ll"]) < abs(b["rho_lf"]),
       "bâti : « la dépense rapportée aux lycées va dans le même sens, moins nettement » (rho %.2f)" % (b["rho_ll"] or 0))
-    g(b["rho_19"] is not None and b["rho_19"] <= -0.6, "bâti : « différence déjà visible en %d »" % b["an"]["avant"])
-    g(b["rho_creuse"] is None or b["rho_creuse"] > -0.6, "bâti : « qu'elle se soit creusée, les comptes ne permettent pas de l'établir »")
+    g(b["rho_19"] is not None and b["rho_19"] <= -0.6, "bâti : « relation déjà visible en %d »" % b["an"]["avant"])
+    g(b["rho_creuse"] is None or b["rho_creuse"] > -0.6, "bâti : « que l'écart se soit creusé, les comptes ne permettent pas de l'établir »")
     g(b["n_bas"] in LETTRES and b["n_haut"] in LETTRES, "bâti : effectifs des groupes en toutes lettres")
 
 
