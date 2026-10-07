@@ -519,6 +519,78 @@ def carte_collectivites() -> None:
           [(C1, "Investissement : −%s pt de PIB (%s-%s)" % (A["ep_inv"], A["ep_a0"], A["ep_a1"])),
            (SEC, "Transferts reçus : −%s pt de PIB" % A["ep_transf"]),
            (URL_GREY, "Dette locale : %s → %s %% du PIB (%s-%s)" % (A["dette_loc_deb"], A["dette_loc_fin"], A["an_dette_deb"], A["an_dette_fin"]))])
+    # Version anglaise (07/10/2026, page /en/local-government-debt/) : même figure, même contrôle ; chaînes du bloc
+    # affichage_en, celles que la page anglaise imprime.
+    E = j.get("affichage_en")
+    if not E:
+        fail("carte collectivités EN : bloc affichage_en absent de data/dette_collectivites.json")
+    carte("og-collectivites-en.jpg",
+          ["Local adjustment,", "outside the debt"],
+          "Local debt stayed contained; investment fell.",
+          "Eurostat %s · OFGL · CC BY 4.0" % E["an_fin"],
+          "stephane-lalut.com/en/local-government-debt/",
+          lambda d: figure_collectivites(d, inv, tr, "en"),
+          [(C1, "Investment: −%s pts of GDP (%s-%s)" % (E["ep_inv"], E["ep_a0"], E["ep_a1"])),
+           (SEC, "Transfers received: −%s pts of GDP" % E["ep_transf"]),
+           (URL_GREY, "Local debt: %s → %s%% of GDP (%s-%s)" % (E["dette_loc_deb"], E["dette_loc_fin"], E["an_dette_deb"], E["an_dette_fin"]))])
+
+
+def figure_inflation_mini(d: ImageDraw.ImageDraw, cal: dict, lo: float, hi: float, lang: str = "fr") -> None:
+    """Prolongement « Inflation et dette » : la figure signature réduite — érosion réelle cumulée des paiements promis
+    sur la dette de l'État à taux fixe de fin 2020, au fil des paiements. Valeurs lues dans data/dette_inflation.json."""
+    x0, x1, top, bas = 660, 1126, 110, 424
+    ans = sorted(int(a) for a in cal)
+    a0, a1, vmax = 2020, ans[-1], 200
+
+    def X(a):
+        return x0 + (x1 - x0) * (a - a0) / (a1 - a0)
+
+    def Y(v):
+        return bas - (bas - top) * v / vmax
+
+    for g in range(0, vmax + 1, 50):
+        d.line([(x0, Y(g)), (x1, Y(g))], fill=GRID, width=3 if g == 0 else 1)
+    d.rectangle([X(2052), Y(hi), x1, Y(lo)], fill=(226, 223, 219))
+    pts = [(X(a0), Y(0))] + [(X(a), Y(cal[str(a)])) for a in ans]
+    d.line(pts, fill=C1, width=6, joint="curve")
+    fa = font("inter", 18, 500)
+    for a in (2025, 2045, 2065):
+        d.text((X(a) - fa.getlength(str(a)) / 2, bas + 14), str(a), font=fa, fill=URL_GREY)
+    en = lang == "en"
+    d.text((x0, bas + 40), "Fixed-rate State debt at end-2020: real erosion" if en
+           else "Dette de l'État à taux fixe de fin 2020 : érosion réelle", font=font("inter", 17, 400), fill=URL_GREY)
+    d.text((x0, bas + 62), "of promised payments, cumulative, €bn of 2020" if en
+           else "des paiements promis, cumulée, en Md€ de 2020", font=font("inter", 17, 400), fill=URL_GREY)
+
+
+def carte_inflation() -> None:
+    """Prolongement « L'inflation a-t-elle vraiment allégé la dette française ? » (07/10/2026). Chiffres lus dans le jeu
+    publié ; le contraste annoncé (érosion acquise, réalisée lentement : moins d'un quart payé fin 2023) est contrôlé ici."""
+    f = ROOT / "data" / "dette_inflation.json"
+    if not f.is_file():
+        fail("jeu de données absent : %s — lancer scripts/update_dette_inflation.py d'abord" % f)
+    j = json.loads(f.read_text(encoding="utf-8"))
+    A, E, cal = j["affichage"], j.get("affichage_en"), j["calendrier"]
+    T = j["resultats"]["central"]
+    lo, hi = min(v["r=0%"] for v in j["famille_A"].values()), max(v["r=0%"] for v in j["famille_A"].values())
+    if not (cal["2023"] < 0.25 * T and abs(cal[max(cal, key=int)] - T) < 0.2):
+        fail("carte inflation : le contraste annoncé n'est plus vrai dans les données")
+    if not E:
+        fail("carte inflation EN : bloc affichage_en absent de data/dette_inflation.json")
+    carte("og-dette-inflation.jpg",
+          ["L'inflation a allégé", "la vieille dette"],
+          "Environ %s Md€ de 2020 : mesurés, non encaissés." % A["t"],
+          "AFT, Eurostat, BCE · calcul de l'auteur · CC BY 4.0",
+          "stephane-lalut.com/inflation-et-dette-publique/",
+          lambda d: figure_inflation_mini(d, cal, lo, hi),
+          [(C1, "Érosion cumulée : %s Md€" % A["t"]), ((226, 223, 219), "Prévisions de début 2021 : %s à %s" % (A["a_bas"], A["a_haut"]))])
+    carte("og-dette-inflation-en.jpg",
+          ["Inflation eroded", "the old debt"],
+          "About €%sbn of 2020: measured, not banked." % E["t"],
+          "AFT, Eurostat, ECB · author's calculation · CC BY 4.0",
+          "stephane-lalut.com/en/inflation-and-french-public-debt/",
+          lambda d: figure_inflation_mini(d, cal, lo, hi, "en"),
+          [(C1, "Cumulative erosion: €%sbn" % E["t"]), ((226, 223, 219), "Early-2021 forecasts: %s to %s" % (E["a_bas"], E["a_haut"]))])
 
 
 def main() -> int:
@@ -527,6 +599,9 @@ def main() -> int:
         return 0
     if "--generations" in sys.argv[1:]:
         carte_generations()
+        return 0
+    if "--inflation" in sys.argv[1:]:
+        carte_inflation()
         return 0
     if "--monde" in sys.argv[1:]:
         carte_monde()
@@ -539,6 +614,7 @@ def main() -> int:
     carte_baisse()
     carte_collectivites()
     carte_generations()
+    carte_inflation()
     qp = ROOT / "data" / "qui_paie_donnees.json"
     do = ROOT / "data" / "dette_officielle.json"
     for f in (qp, do):

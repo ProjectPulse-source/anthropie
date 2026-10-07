@@ -1,0 +1,111 @@
+{
+ "T1_parts_2020T4_brut": {
+  "total_MdEUR": 2409.8,
+  "non_residents": 50.09,
+  "BdF": 23.08,
+  "banques": 6.78,
+  "assureurs": 17.45,
+  "OPC": 1.39
+ },
+ "T1_ecart_max_vs_item1_pts": 0.002,
+ "T2_part_BdF_pct": {
+  "2020T1": 18.52,
+  "2020T2": 20.04,
+  "2020T3": 21.69,
+  "2020T4": 23.08,
+  "2021T1": 24.04,
+  "2021T2": 25.39,
+  "2021T3": 26.46,
+  "2021T4": 27.57,
+  "2022T1": 28.01,
+  "2022T2": 28.24,
+  "2022T3": 28.29,
+  "2022T4": 28.09,
+  "2023T1": 27.42,
+  "2023T2": 26.56,
+  "2023T3": 26.32,
+  "2023T4": 25.71
+ },
+ "T2_part_BdF_moyenne_2021T2_2022T4": 27.44,
+ "T2_transfert_hors_BdF_si_part_fenetre": 103.9,
+ "T2_transfert_hors_BdF_si_part_max_2022T3": 102.7,
+ "T2_transfert_hors_BdF_dossier_2020T4": 110.1,
+ "T3_variation_valeur_marche_2020T4_2022T4_pct": {
+  "non_residents": -11.9,
+  "BdF": 7.8,
+  "banques": -6.9,
+  "assureurs": -36.7,
+  "OPC": -6.9,
+  "total": -11.4
+ },
+ "T3_note": "flux nets inconnus : la variation melange prix et achats/ventes ; le total nominal de la dette negociable a augmente de ~14 % sur la periode (AFT, 2 001 -> ~2 280 Md, valeur a reverifier)",
+ "T4_recul_cumule_2023_2025_par_poste_MdEUR": {
+  "charge_interets_comptes_institutions_financieres": -65.5,
+  "produit_interets_preleves_comptes_institutions_financieres": -9.2,
+  "charge_interets_position_TARGET": -13.6,
+  "revenus_titres_de_politique_monetaire": 2.4,
+  "solde_repartition_revenu_monetaire": 8.2,
+  "resultat_ordinaire_avant_impot": -46.2,
+  "residu_autres_postes": 31.5
+ },
+ "T4_variante_base_2021_2022": -46.7,
+ "T4_variante_base_2020_2022_hors_taux_negatifs": -37.1,
+ "T4_reprises_provisions_FRG_RRRODE_2023_2025": 32.2,
+ "T5_reserves_par_annee": {
+  "2021": {
+   "reserves_MdEUR": 556.2,
+   "taux_depot_moy": -0.5,
+   "pi_R": 2.1,
+   "pi_E": 0.91,
+   "transfert_reel_MdEUR2020": 6.4
+  },
+  "2022": {
+   "reserves_MdEUR": 679.3,
+   "taux_depot_moy": 0.08,
+   "pi_R": 5.9,
+   "pi_E": 1.26,
+   "transfert_reel_MdEUR2020": 25.0
+  },
+  "2023": {
+   "reserves_MdEUR": 599.6,
+   "taux_depot_moy": 3.31,
+   "pi_R": 5.7,
+   "pi_E": 1.5,
+   "transfert_reel_MdEUR2020": 1.6
+  },
+  "2024": {
+   "reserves_MdEUR": 603.5,
+   "taux_depot_moy": 3.73,
+   "pi_R": 2.3,
+   "pi_E": 1.59,
+   "transfert_reel_MdEUR2020": -18.3
+  },
+  "2025": {
+   "reserves_MdEUR": 561.0,
+   "taux_depot_moy": 2.26,
+   "pi_R": 0.9,
+   "pi_E": 1.69,
+   "transfert_reel_MdEUR2020": -16.8
+  }
+ },
+ "T5_transfert_sur_reserves_2021_2023": 33.0,
+ "T5_transfert_sur_reserves_2021_2025": -2.1,
+ "T5_T_consolide_dossier": 110.1,
+ "T5_T_consolide_reserves_2021_2023": 143.1,
+ "T5_T_consolide_reserves_2021_2025": 108.1,
+ "T5_note": "pi_E 2025 = anticipation LT (1,69) et pi_R 2024-2025 realises, contrairement au choc ferme ; les reserves au jour le jour se reevaluent : l'avantage sur elles se retourne des 2024 et sans fin dans le monde ferme (taux 2026 figes)",
+ "T6_versements_Etat_par_exercice_MdEUR": {
+  "2020": 3.55,
+  "2021": 2.46,
+  "2022": 1.07,
+  "2023": 0.0,
+  "2024": 0.0,
+  "2025": 1.55
+ },
+ "T6_manque_a_gagner_2023_2025_vs_moy_2020_2022": 5.5,
+ "T6_manque_a_gagner_2023_2025_vs_moy_2020_2021": 7.5,
+ "T7_recul_EUR_courants": -46.2,
+ "T7_recul_EUR_2020": -39.9,
+ "T8_WAM_avoirs_PSPP_France_fin2020_ans": 7.22,
+ "T8_WAM_dette_Etat_fin2020_ans_AFT": 8.2
+}

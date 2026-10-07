@@ -71,6 +71,10 @@
     {{- $srcTitre = cond $en "Latest year of the Eurostat and ECB series on this page, and edition of the Commission and COR projections — vintages of the DATA, not the date the text was reviewed" "Dernière année des séries Eurostat et BCE de cette page, et édition des projections de la Commission et du COR — millésimes des DONNÉES, non date de relecture du texte" -}}
   {{- end -}}
 {{- end -}}
+{{- if and (eq $v "prolongement") (in (.Page.Params.donnees | default (slice)) "dette_inflation") -}}
+  {{- $src = printf "%s · %s" $donnees (cond $en "AFT, Eurostat, ECB 2020-2023" "AFT, Eurostat, BCE 2020-2023") -}}
+  {{- $srcTitre = cond $en "Period of the data on this page: the 2021-2023 inflation episode — a closed episode, not an update date" "Période des données de cette page : l'épisode d'inflation 2021-2023 — un épisode clos, non une date de mise à jour" -}}
+{{- end -}}
 {{- if not $src -}}
   {{- $src = printf "%s · %s" (cond $en "Updated" "Mise à jour") (.Page.Lastmod.Format "01/2006") -}}
   {{- $srcTitre = cond $en "Last editorial update of this page. Data vintages are given next to each figure." "Mise à jour éditoriale de la page. Les millésimes des données sont indiqués auprès de chaque figure." -}}

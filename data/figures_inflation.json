@@ -1,0 +1,22 @@
+{
+ "fr": [
+  {
+   "id": "calendrier",
+   "fichier": "dette-inflation-calendrier",
+   "titre": "Dette de l'État à taux fixe de fin 2020 : l'érosion due à la surprise d'inflation, au fil des paiements",
+   "montre": "L'érosion est acquise fin 2023 dans ce contrefactuel, mais elle se matérialise au rythme des paiements : environ la moitié d'ici 2027.",
+   "source": "AFT (encours au 31/12/2020), Eurostat (IPCH mensuel, France), BCE (SPF, janvier 2021) ; calcul de l'auteur",
+   "precaution": "Md€ de 2020 aux prix à la consommation, non actualisés ; contrefactuel : inflation anticipée début 2021. Ni gain budgétaire net, ni perte finale."
+  }
+ ],
+ "en": [
+  {
+   "id": "calendrier",
+   "fichier": "dette-inflation-calendrier-en",
+   "titre": "French fixed-rate State debt at end-2020: erosion from the inflation surprise, as payments fall due",
+   "montre": "In this counterfactual the erosion is locked in by end-2023, but it materialises as payments fall due: about half by 2027.",
+   "source": "AFT (outstanding debt, 31/12/2020), Eurostat (monthly HICP, France), ECB (SPF, January 2021); author's calculation",
+   "precaution": "€bn of 2020 at French consumer prices, undiscounted; counterfactual: inflation expected in early 2021. Neither a net fiscal gain nor a final loss."
+  }
+ ]
+}

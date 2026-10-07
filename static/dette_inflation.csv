@@ -1,0 +1,80 @@
+﻿tableau,variable,cle,valeur,unite
+calendrier,erosion_cumulee_realisee,2021,3.7,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2022,12.9,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2023,30.2,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2024,42.9,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2025,58.6,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2026,73.8,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2027,82.9,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2028,91.7,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2029,103.0,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2030,110.6,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2031,115.6,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2032,119.3,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2033,120.0,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2034,123.6,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2035,126.5,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2036,129.9,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2037,130.4,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2038,132.9,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2039,135.3,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2040,136.4,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2041,139.4,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2042,139.6,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2043,139.9,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2044,140.1,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2045,142.0,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2046,142.2,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2047,142.4,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2048,144.4,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2049,144.5,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2050,146.5,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2051,146.6,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2052,147.8,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2053,147.9,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2054,148.0,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2055,149.1,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2056,149.1,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2057,149.2,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2058,149.2,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2059,149.3,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2060,150.2,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2061,150.2,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2062,150.2,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2063,150.2,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2064,150.2,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2065,150.2,Md EUR 2020
+calendrier,erosion_cumulee_realisee,2066,150.8,Md EUR 2020
+famille_A_previsions,"SPF BCE, 1er trimestre 2021 (zone euro)",r=-1%,166.1,Md EUR 2020
+famille_A_previsions,"SPF BCE, 1er trimestre 2021 (zone euro)",r=0%,150.8,Md EUR 2020
+famille_A_previsions,"SPF BCE, 1er trimestre 2021 (zone euro)",r=+1%,137.9,Md EUR 2020
+famille_A_previsions,"Banque de France, décembre 2020",r=-1%,188.9,Md EUR 2020
+famille_A_previsions,"Banque de France, décembre 2020",r=0%,171.5,Md EUR 2020
+famille_A_previsions,"Banque de France, décembre 2020",r=+1%,156.8,Md EUR 2020
+famille_A_previsions,"Commission, automne 2020 (2023 = 1,5, règle)",r=-1%,162.5,Md EUR 2020
+famille_A_previsions,"Commission, automne 2020 (2023 = 1,5, règle)",r=0%,147.5,Md EUR 2020
+famille_A_previsions,"Commission, automne 2020 (2023 = 1,5, règle)",r=+1%,134.9,Md EUR 2020
+famille_A_previsions,"Commission, hiver 2021 (2023 = 1,5, règle)",r=-1%,158.7,Md EUR 2020
+famille_A_previsions,"Commission, hiver 2021 (2023 = 1,5, règle)",r=0%,144.1,Md EUR 2020
+famille_A_previsions,"Commission, hiver 2021 (2023 = 1,5, règle)",r=+1%,131.8,Md EUR 2020
+famille_B_marche_sensibilite,"point mort France 10 ans au 31/12/2020 (0,861, plat)",r=0%,174.8,Md EUR 2020
+famille_B_marche_sensibilite,"point mort zone euro 10 ans au 31/12/2020 (1,162, plat)",r=0%,157.3,Md EUR 2020
+resultats,central_ipch_mensuel,,150.8,Md EUR 2020
+resultats,meme_calcul_moyennes_annuelles,,143.2,Md EUR 2020
+resultats,deflateur_pib_anticipation_spf_annuel,,79.5,Md EUR 2020
+resultats,deflateur_pib_contre_prevision_commission_annuel,,92.4,Md EUR 2020
+resultats,indexes_transfert_renonce_paires_jumelles,,19.8,Md EUR 2020
+resultats,indexes_point_unique_1_162,,20.1,Md EUR 2020
+resultats,indexes_cout_total_avec_ecart_indice,,22.8,Md EUR 2020
+resultats,consolide_etat_bdf_fin_2023,,149.0,Md EUR 2020
+resultats,consolide_etat_bdf_fin_2025,,113.9,Md EUR 2020
+annexe_allocation_mecanique,non_residents,part_detention_2020T4_pct,50.09,%
+annexe_allocation_mecanique,non_residents,allocation,75.5,Md EUR 2020
+annexe_allocation_mecanique,BdF,part_detention_2020T4_pct,23.08,%
+annexe_allocation_mecanique,BdF,allocation,34.8,Md EUR 2020
+annexe_allocation_mecanique,banques,part_detention_2020T4_pct,6.78,%
+annexe_allocation_mecanique,banques,allocation,10.2,Md EUR 2020
+annexe_allocation_mecanique,assureurs,part_detention_2020T4_pct,17.45,%
+annexe_allocation_mecanique,assureurs,allocation,26.3,Md EUR 2020
+annexe_allocation_mecanique,OPC,part_detention_2020T4_pct,1.39,%
+annexe_allocation_mecanique,OPC,allocation,2.1,Md EUR 2020

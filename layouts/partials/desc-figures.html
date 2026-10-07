@@ -116,6 +116,14 @@
   {{- end -}}
 {{- end -}}
 {{- if in $text "{gen." -}}{{- errorf "desc-figures: placeholder {gen.*} non resolu dans : %s" $text -}}{{- end -}}
+{{- /* Prolongement « Inflation et dette » : placeholders {infl.<cle>}, depuis data/dette_inflation.json (bloc affichage,
+       scripts/update_dette_inflation.py). Bilingue dès sa création (07/10/2026) : affichage_en strict. */ -}}
+{{- with site.Data.dette_inflation -}}
+  {{- range $k, $v := (cond (eq site.Language.Lang "en") .affichage_en .affichage) -}}
+    {{- $text = replace $text (printf "{infl.%s}" $k) $v -}}
+  {{- end -}}
+{{- end -}}
+{{- if in $text "{infl." -}}{{- errorf "desc-figures: placeholder {infl.*} non resolu dans : %s" $text -}}{{- end -}}
 {{- with .isbn -}}
   {{- range where site.Data.works.works "isbn" . -}}
     {{- with .corpus_stats -}}

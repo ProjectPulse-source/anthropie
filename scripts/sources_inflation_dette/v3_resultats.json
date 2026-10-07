@@ -1,0 +1,364 @@
+{
+ "op1_ipch_mensuel": {
+  "transfert_central_spf_mdeur": 150.8,
+  "meme_calcul_moyennes_annuelles_v2_mdeur": 143.2,
+  "sans_correction_saisonniere_mdeur": 150.9,
+  "facteurs_saisonniers": {
+   "1": 0.9953,
+   "2": 0.9951,
+   "3": 1.0011,
+   "4": 1.0017,
+   "5": 1.0027,
+   "6": 1.0026,
+   "7": 1.0008,
+   "8": 1.0036,
+   "9": 0.9993,
+   "10": 0.9987,
+   "11": 0.9981,
+   "12": 1.0
+  },
+  "ecart_niveau_prix_dec2023_pct": 10.77,
+  "en_pts_pib2020": 6.51,
+  "annee_demi_realisation": 2027,
+  "cumul_realise_par_annee": {
+   "2021": 3.7,
+   "2022": 12.9,
+   "2023": 30.2,
+   "2024": 42.9,
+   "2025": 58.6,
+   "2026": 73.8,
+   "2027": 82.9,
+   "2028": 91.7,
+   "2029": 103.0,
+   "2030": 110.6,
+   "2031": 115.6,
+   "2032": 119.3,
+   "2033": 120.0,
+   "2034": 123.6,
+   "2035": 126.5,
+   "2036": 129.9,
+   "2037": 130.4,
+   "2038": 132.9,
+   "2039": 135.3,
+   "2040": 136.4,
+   "2041": 139.4,
+   "2042": 139.6,
+   "2043": 139.9,
+   "2044": 140.1,
+   "2045": 142.0,
+   "2046": 142.2,
+   "2047": 142.4,
+   "2048": 144.4,
+   "2049": 144.5,
+   "2050": 146.5,
+   "2051": 146.6,
+   "2052": 147.8,
+   "2053": 147.9,
+   "2054": 148.0,
+   "2055": 149.1,
+   "2056": 149.1,
+   "2057": 149.2,
+   "2058": 149.2,
+   "2059": 149.3,
+   "2060": 150.2,
+   "2061": 150.2,
+   "2062": 150.2,
+   "2063": 150.2,
+   "2064": 150.2,
+   "2065": 150.2,
+   "2066": 150.8
+  }
+ },
+ "op2_famille_A": {
+  "SPF BCE, 1er trimestre 2021 (zone euro)": {
+   "r=-1%": 166.1,
+   "r=0%": 150.8,
+   "r=+1%": 137.9
+  },
+  "Banque de France, décembre 2020": {
+   "r=-1%": 188.9,
+   "r=0%": 171.5,
+   "r=+1%": 156.8
+  },
+  "Commission, automne 2020 (2023 = 1,5, règle)": {
+   "r=-1%": 162.5,
+   "r=0%": 147.5,
+   "r=+1%": 134.9
+  },
+  "Commission, hiver 2021 (2023 = 1,5, règle)": {
+   "r=-1%": 158.7,
+   "r=0%": 144.1,
+   "r=+1%": 131.8
+  }
+ },
+ "op2_plage_publiee_famille_A_mdeur": [
+  131.8,
+  188.9
+ ],
+ "op2_plage_famille_A_r0_mdeur": [
+  144.1,
+  171.5
+ ],
+ "op2_famille_B_sensibilite": {
+  "point mort France 10 ans au 31/12/2020 (0,861, plat)": 174.8,
+  "point mort zone euro 10 ans au 31/12/2020 (1,162, plat)": 157.3
+ },
+ "op3_regle_commission": "prévision d'automne 2020 : IPCH France 0,9 (2021), 1,5 (2022) ; d'hiver 2021 : 1,1 et 1,5 ; 2023 non publié, posé égal au dernier horizon publié (1,5) ; au-delà de 2023, chemin du SPF de janvier 2021",
+ "op4_indexes": {
+  "transfert_renonce_paires_jumelles_mdeur": 19.8,
+  "transfert_renonce_point_unique_1_162_mdeur": 20.1,
+  "meme_point_unique_calcul_annuel_v2_mdeur": 18.9,
+  "ecart_indice_mdeur_repris_v2": 3.0,
+  "cout_total_paires_jumelles_mdeur": 22.8,
+  "points_morts_utilises": {
+   "FR": [
+    [
+     5.0,
+     0.48
+    ],
+    [
+     15.2,
+     0.861
+    ]
+   ],
+   "EU": [
+    [
+     5.0,
+     0.7809999999999999
+    ],
+    [
+     15.6,
+     1.162
+    ],
+    [
+     32.6,
+     1.382
+    ]
+   ]
+  },
+  "detail": [
+   {
+    "isin": "FR0013140035",
+    "type": "OAT€i",
+    "echeance": "2021-03-01",
+    "maturite_ans": 0.2,
+    "point_mort": 0.781,
+    "transfert_renonce_mdeur": 0.1
+   },
+   {
+    "isin": "FR0011347046",
+    "type": "OATi",
+    "echeance": "2021-07-25",
+    "maturite_ans": 0.6,
+    "point_mort": 0.48,
+    "transfert_renonce_mdeur": 0.1
+   },
+   {
+    "isin": "FR0010899765",
+    "type": "OAT€i",
+    "echeance": "2022-07-25",
+    "maturite_ans": 1.6,
+    "point_mort": 0.781,
+    "transfert_renonce_mdeur": 1.4
+   },
+   {
+    "isin": "FR0010585901",
+    "type": "OATi",
+    "echeance": "2023-07-25",
+    "maturite_ans": 2.6,
+    "point_mort": 0.48,
+    "transfert_renonce_mdeur": 2.0
+   },
+   {
+    "isin": "FR0011427848",
+    "type": "OAT€i",
+    "echeance": "2024-07-25",
+    "maturite_ans": 3.6,
+    "point_mort": 0.781,
+    "transfert_renonce_mdeur": 1.8
+   },
+   {
+    "isin": "FR0012558310",
+    "type": "OATi",
+    "echeance": "2025-03-01",
+    "maturite_ans": 4.2,
+    "point_mort": 0.48,
+    "transfert_renonce_mdeur": 1.1
+   },
+   {
+    "isin": "FR0013519253",
+    "type": "OAT€i",
+    "echeance": "2026-03-01",
+    "maturite_ans": 5.2,
+    "point_mort": 0.787,
+    "transfert_renonce_mdeur": 0.5
+   },
+   {
+    "isin": "FR0011008705",
+    "type": "OAT€i",
+    "echeance": "2027-07-25",
+    "maturite_ans": 6.6,
+    "point_mort": 0.837,
+    "transfert_renonce_mdeur": 2.4
+   },
+   {
+    "isin": "FR0013238268",
+    "type": "OATi",
+    "echeance": "2028-03-01",
+    "maturite_ans": 7.2,
+    "point_mort": 0.561,
+    "transfert_renonce_mdeur": 1.2
+   },
+   {
+    "isin": "FR0013410552",
+    "type": "OAT€i",
+    "echeance": "2029-03-01",
+    "maturite_ans": 8.2,
+    "point_mort": 0.895,
+    "transfert_renonce_mdeur": 0.8
+   },
+   {
+    "isin": "FR0000186413",
+    "type": "OATi",
+    "echeance": "2029-07-25",
+    "maturite_ans": 8.6,
+    "point_mort": 0.613,
+    "transfert_renonce_mdeur": 1.4
+   },
+   {
+    "isin": "FR0011982776",
+    "type": "OAT€i",
+    "echeance": "2030-07-25",
+    "maturite_ans": 9.6,
+    "point_mort": 0.945,
+    "transfert_renonce_mdeur": 1.6
+   },
+   {
+    "isin": "FR0000188799",
+    "type": "OAT€i",
+    "echeance": "2032-07-25",
+    "maturite_ans": 11.6,
+    "point_mort": 1.017,
+    "transfert_renonce_mdeur": 1.7
+   },
+   {
+    "isin": "FR0013524014",
+    "type": "OATi",
+    "echeance": "2036-03-01",
+    "maturite_ans": 15.2,
+    "point_mort": 0.86,
+    "transfert_renonce_mdeur": 0.4
+   },
+   {
+    "isin": "FR0013327491",
+    "type": "OAT€i",
+    "echeance": "2036-07-25",
+    "maturite_ans": 15.6,
+    "point_mort": 1.161,
+    "transfert_renonce_mdeur": 0.7
+   },
+   {
+    "isin": "FR0010447367",
+    "type": "OAT€i",
+    "echeance": "2040-07-25",
+    "maturite_ans": 19.6,
+    "point_mort": 1.213,
+    "transfert_renonce_mdeur": 1.7
+   },
+   {
+    "isin": "FR0013209871",
+    "type": "OAT€i",
+    "echeance": "2047-07-25",
+    "maturite_ans": 26.6,
+    "point_mort": 1.304,
+    "transfert_renonce_mdeur": 1.0
+   }
+  ]
+ },
+ "op5_consolidation": {
+  "identite": "T_cons(t) = T x (1 - s) + somme_{a<=t} L_res(a) ; s = part des titres de l'État détenue par la Banque de France fin 2020 ; L_res(a) = H(a-1)/P_R(a-1) x [(1+i_E)/(1+pi_E(a)) - (1+i_a)/(1+pi_R(a))], perte réelle des porteurs de réserves, H = avoirs de la BdF en titres de l'État (valeur de marché, qui approche les réserves créées pour les acheter), i_E = taux de dépôt attendu (-0,5 %), i_a = taux de dépôt moyen réalisé. Dans le bilan consolidé, l'OAT détenue par la BdF s'annule contre l'actif de la BdF et la dette de l'ensemble devient la réserve bancaire, rémunérée au taux de dépôt.",
+  "part_BdF_fin_2020": 0.2308,
+  "pertes_porteurs_reserves_mdeur2020": {
+   "2021": 6.4,
+   "2022": 25.0,
+   "2023": 1.6,
+   "2024": -18.3,
+   "2025": -16.8
+  },
+  "T_consolide_fin_2023_mdeur": 149.0,
+  "T_consolide_fin_2025_mdeur": 113.9,
+  "limites": "réserves approchées par la valeur de marché des avoirs (et non leur nominal) ; inflation annuelle pour les réserves ; après 2023, les pertes sur réserves suivent les taux et l'inflation réalisés 2024-2025, hors choc fermé ; modèle simplifié, non une consolidation statistique (la BdF est hors APU)"
+ },
+ "op8_pallotti_residu": {
+  "pallotti": {
+   "choc_implicite_log": 0.1231,
+   "choc_bornes_arrondi": [
+    0.1203,
+    0.126
+   ],
+   "anticipation_implicite_annuelle_pct": 0.53,
+   "gain_Pallotti_pct_pib_annuel": 14.4,
+   "gain_Pallotti_mdeur_si_pib2017": 330.0,
+   "gain_Pallotti_mdeur_si_pib2020": 333.8,
+   "notre_T_pct_pib_triennal_2020": 2.06,
+   "notre_T_pct_pib_triennal_2017": 2.08,
+   "notre_T_pct_pib_triennal_2021_2023": 1.79,
+   "rapport_eux_sur_nous_pib_annuel": 2.33,
+   "pont_pct_pib_annuel": [
+    [
+     "Nous : T, r = 0, État taux fixe, IPCH moyennes annuelles, SPF",
+     6.18
+    ],
+    [
+     "Choc instantané (tout l'écart de 2023 sur tous les flux)",
+     8.23
+    ],
+    [
+     "Base au nominal plutôt qu'en flux réels non actualisés",
+     7.83
+    ],
+    [
+     "Base à la valeur de marché approchée (courbe plate 2020)",
+     9.46
+    ],
+    [
+     "Choc de Pallotti (IPCH déc.-déc., Consensus) au lieu du nôtre",
+     11.42
+    ],
+    [
+     "Périmètre : passifs nominaux bruts des APU en valeur de marché, 2020 (F2+F3+F4)",
+     16.32
+    ],
+    [
+     "Net des actifs nominaux des APU (F2+F3+F4), 2020",
+     14.67
+    ],
+    [
+     "Date : ratio de 2017 au lieu de 2020",
+     12.53
+    ],
+    [
+     "Résidu jusqu'à la position de Pallotti (0,39 x 3 = 1,17 PIB)",
+     14.4
+    ]
+   ],
+   "comptes_financiers": {
+    "brut_2017": 2547.2,
+    "actifs_2017": 214.0,
+    "net_2017": 2333.1,
+    "net_2017_pct_pib": 101.8,
+    "brut_2020": 3073.3,
+    "actifs_2020": 309.2,
+    "net_2020": 2764.1,
+    "brut_2020_pct_pib": 132.6,
+    "net_2020_pct_pib": 119.2,
+    "F3_passif_2017": 2219.6,
+    "F3_passif_2020": 2729.3,
+    "F51_actif_2017": 455.9,
+    "maastricht_2020_pct_pib": 114.9
+   },
+   "position_Pallotti_mdeur_si_pib2017": 2681.3,
+   "residu_position_mdeur_2017": 348.1
+  }
+ }
+}

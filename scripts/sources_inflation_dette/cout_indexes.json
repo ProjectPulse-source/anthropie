@@ -1,0 +1,19 @@
+{
+ "titres_indexes_fin_2020": 17,
+ "encours_indexe_mdeur": 220.1,
+ "transfert_renonce_si_taux_fixe_mdeur": 18.9,
+ "rapport_niveau_ipch_za_sur_fr_fin_2023": 1.0257,
+ "rapport_ipc_hors_tabac_sur_ipch_fr_2023_vs_2021": 0.9868,
+ "gain_porteurs_oatei_ecart_indice_mdeur": 3.9,
+ "gain_porteurs_oati_ecart_indice_mdeur": -0.9,
+ "cout_economique_total_mdeur": 21.9,
+ "en_pts_pib2020": 0.94,
+ "charge_budgetaire_aft_mdeur_nominaux": {
+  "2021": 8.0,
+  "2022": 23.0,
+  "2023": 8.5,
+  "2024": 4.7,
+  "2025": 5.3
+ },
+ "charge_budgetaire_aft_cumul_2021_2025": 49.5
+}
