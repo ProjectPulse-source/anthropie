@@ -131,6 +131,9 @@
 {{ with .Params.dataset }}
   {{- partial "schema-dataset-page.html" $ -}}
 {{ end }}
+{{ with .Params.activite }}
+  {{- partial "schema-activite.html" $ -}}
+{{ end }}
 
 <!-- Schema.org ItemList + CreativeWorkSeries série AWP -->
 {{ if eq .Section "serie-awp" }}

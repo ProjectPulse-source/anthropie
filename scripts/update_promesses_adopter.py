@@ -28,7 +28,9 @@ Gardes (toutes ARRÊTENT, rien n'est écrit) :
       les autres textes sont tous la loi de programmation des finances publiques ; aucune motion adoptée de la XIVe à la
       XVIe (bulletins) ; une en 2024-2025.
   B5  E1 : excès de dépôts sur les bulletins = extraction - bulletin, par législature ; phrase « plus de la moitié des
-      propositions de loi ordinaires […] sans examen en séance observé » seulement si 2 (Z - e) > N - e partout.
+      propositions de loi ordinaires […] sans examen en séance observé » seulement si 2 (Z - e) > N - e partout ;
+      part affichée (jeton Zpct, corrigé de l'activité d'EMC, avis entrant du 07/10/2026) seulement si l'arrondi de
+      Z / N est celui du pire cas (Z - e) / (N - e).
 Autotest de mutation à chaque exécution : origine d'une loi changée dans une source -> B2 ; une loi de 2024-2025
 retirée -> B3 ; un engagement de la XVIe retiré -> B4 ; citation de l'art. 49 altérée -> B1 ; XIVe rendue majoritaire
 -> B2.
@@ -302,6 +304,8 @@ def calculer(S: dict) -> tuple[dict, list[str]]:
                  "mediane_jours": dur[(len(dur) - 1) // 2]}
         if not 2 * (Z - e) > N - e:
             raise Arret("B5 : %s : pire cas %d/%d : « plus de la moitie » faux" % (l, Z - e, N - e))
+        if round(100 * Z / N) != round(100 * (Z - e) / (N - e)):
+            raise Arret("B5 : %s : part sans examen %d/%d et pire cas %d/%d : arrondis differents" % (l, Z, N, Z - e, N - e))
     if not 2 * e1["16"]["mediane_jours"] < e1["14"]["mediane_jours"]:  # « plus de deux fois plus court »
         raise Arret("B5 : duree mediane XVIe pas deux fois plus courte que XIVe")
     g.append("B5 : E1 pire cas XIV %d/%d, XV %d/%d, XVI %d/%d (exces sur bulletins %d, %d, %d)"
@@ -319,7 +323,7 @@ def affichage(r: dict) -> dict:
         A.update({"E%s" % l: fr(x["n"]), "Efin%s" % l: fr(x["fin"]), "Etextes%s" % l: fr(x["textes"]),
                   "Eautre%s" % l: fr(x["n"] - x["fin"]), "Efois%s" % l: fr(x["n"]) + " fois"})
     for l, x in r["e1"].items():
-        A.update({"Z%s" % l: fr(x["Z"]), "NZ%s" % l: fr(x["N"]), "Zw%s" % l: fr(x["Zw"]), "Nw%s" % l: fr(x["Nw"]),
+        A.update({"Z%s" % l: fr(x["Z"]), "NZ%s" % l: fr(x["N"]), "Zpct%s" % l: fr(100 * x["Z"] / x["N"]), "Zw%s" % l: fr(x["Zw"]), "Nw%s" % l: fr(x["Nw"]),
                   "exces%s" % l: fr(x["exces"]), "bul%s" % l: fr(x["bul"]), "ext%s" % l: fr(x["ext"]),
                   "med%s" % l: fr(x["mediane_jours"])})
     s1, s2 = r["ses"]["2017-2018"], r["ses"]["2024-2025"]
@@ -342,7 +346,7 @@ def affichage_en(r: dict) -> dict:
                   "Eautre%s" % l: en(x["n"] - x["fin"]),
                   "Efois%s" % l: {1: "once", 2: "twice"}.get(x["n"], en(x["n"]) + " times")})
     for l, x in r["e1"].items():
-        A.update({"Z%s" % l: en(x["Z"]), "NZ%s" % l: en(x["N"]), "Zw%s" % l: en(x["Zw"]), "Nw%s" % l: en(x["Nw"]),
+        A.update({"Z%s" % l: en(x["Z"]), "NZ%s" % l: en(x["N"]), "Zpct%s" % l: en(100 * x["Z"] / x["N"]), "Zw%s" % l: en(x["Zw"]), "Nw%s" % l: en(x["Nw"]),
                   "exces%s" % l: en(x["exces"]), "bul%s" % l: en(x["bul"]), "ext%s" % l: en(x["ext"]),
                   "med%s" % l: en(x["mediane_jours"])})
     s1, s2 = r["ses"]["2017-2018"], r["ses"]["2024-2025"]

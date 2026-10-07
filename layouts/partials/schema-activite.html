@@ -1,0 +1,41 @@
+{{- /* JSON-LD LearningResource d'une activité pour enseignants (07/10/2026, avis entrant
+       ENTRANTE_20261007_Ressource-loi-depot, point 11) — émis pour toute page dont le front matter porte un bloc
+       `activite:`. Rend la nature de la page non ambiguë pour les moteurs et les assistants : une activité de classe,
+       pas une page de données (celles-ci portent `dataset:`).
+
+       activite:
+         nom: "…"                        # intitulé de l'activité
+         niveau: "Terminale"             # educationalLevel
+         discipline: "…"                 # about
+         type: "Activité pédagogique"    # learningResourceType
+         duree: "PT45M"                  # timeRequired, ISO 8601
+         enseigne: ["…"]                 # teaches
+         sources: ["https://…"]          # isBasedOn
+
+       Date : lastmod de la page, aucune date saisie ici. */ -}}
+{{- $p := .Params.activite -}}
+{{- range slice "nom" "niveau" "type" "duree" -}}
+  {{- if not (index $p .) -}}{{- errorf "schema-activite: champ %q absent (page %s)" . $.RelPermalink -}}{{- end -}}
+{{- end -}}
+{{- $a := site.Data.author.author -}}
+{{- $personne := dict "@type" "Person" "@id" $a.canonicalProfileUrl "name" $a.name "url" $a.canonicalProfileUrl -}}
+{{- $lr := dict
+    "@context" "https://schema.org"
+    "@type" "LearningResource"
+    "name" $p.nom
+    "description" .Description
+    "url" .Permalink
+    "inLanguage" site.Language.Lang
+    "educationalLevel" $p.niveau
+    "learningResourceType" $p.type
+    "timeRequired" $p.duree
+    "audience" (slice (dict "@type" "EducationalAudience" "educationalRole" "teacher") (dict "@type" "EducationalAudience" "educationalRole" "student"))
+    "license" "https://creativecommons.org/licenses/by/4.0/"
+    "author" $personne
+    "dateModified" (.Lastmod.Format "2006-01-02") -}}
+{{- with $p.discipline }}{{ $lr = merge $lr (dict "about" (dict "@type" "Thing" "name" .)) }}{{ end -}}
+{{- with $p.enseigne }}{{ $lr = merge $lr (dict "teaches" .) }}{{ end -}}
+{{- with $p.sources }}{{ $lr = merge $lr (dict "isBasedOn" .) }}{{ end -}}
+<script type="application/ld+json">
+{{ $lr | jsonify (dict "indent" "  ") | safeJS }}
+</script>

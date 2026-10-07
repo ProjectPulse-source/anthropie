@@ -67,8 +67,13 @@ CCIV = "legifrance_cc0765ea833ba2ee7901764e2b924cd6bebc1122f1273afe63316f12a6604
 # saisine du Conseil constitutionnel (art. 61).
 CONST = {"art10": "legifrance_09785484a231a183e5290643bbb832eeab7a232b4102ab55206f6b4cfcb2a5bb.json",
          "art61": "legifrance_c14abed78a1e9932d2cf37f84e6366e03847a41174d17466b5f83b4a0a3d299c.json"}
+# Activité d'EMC (/enseignants/emc/, avis entrant du 07/10/2026) : le contrôle de l'art. 61 se distingue selon le texte,
+# facultatif pour une loi votée (al. 2), obligatoire pour une proposition de l'art. 11 (al. 1). Même pièce archivée.
+CONST["art61_saisine"] = CONST["art61_rip"] = CONST["art61"]
 CIT_CONST = {"art10": "Le Président de la République promulgue les lois dans les quinze jours qui suivent la transmission au Gouvernement de la loi définitivement adoptée.",
-             "art61": "la saisine du Conseil constitutionnel suspend le délai de promulgation."}
+             "art61": "la saisine du Conseil constitutionnel suspend le délai de promulgation.",
+             "art61_saisine": "les lois peuvent être déférées au Conseil constitutionnel, avant leur promulgation, par le Président de la République, le Premier ministre, le Président de l'Assemblée nationale, le Président du Sénat ou soixante députés ou soixante sénateurs.",
+             "art61_rip": "les propositions de loi mentionnées à l'article 11 avant qu'elles ne soient soumises au référendum"}
 SESSIONS = ["%d-%d" % (a, a + 1) for a in range(2017, 2025)]
 RELEVE = "05/10/2026"
 MOTS = {"un": 1, "deux": 2, "trois": 3, "quatre": 4, "cinq": 5, "six": 6, "sept": 7, "huit": 8, "neuf": 9, "dix": 10}
@@ -76,7 +81,11 @@ LETTRES = {v: k for k, v in MOTS.items()}
 LETTRES_EN = {1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six", 7: "seven", 8: "eight", 9: "nine", 10: "ten"}
 CONST_EN = {"art10": ("10", "The President of the Republic shall promulgate Acts of Parliament within fifteen days following the "
                              "final passage of an Act and its transmission to the Government."),
-            "art61": ("61", "referral to the Constitutional Council shall suspend the time allotted for promulgation.")}
+            "art61": ("61", "referral to the Constitutional Council shall suspend the time allotted for promulgation."),
+            "art61_saisine": ("61", "Acts of Parliament may be referred to the Constitutional Council, before their promulgation, by the "
+                                    "President of the Republic, the Prime Minister, the President of the National Assembly, the "
+                                    "President of the Senate, sixty Members of the National Assembly or sixty Senators."),
+            "art61_rip": ("61", "Private Members' Bills mentioned in article 11 before they are submitted to referendum")}
 # Notre traduction des citations françaises hors Constitution ; chaque nombre doit figurer dans l'original (garde A7 bis).
 TR = {
     "cit_cciv": "However, provisions whose implementation requires implementing measures do not enter into force until "
@@ -441,6 +450,8 @@ def affichage(r: dict) -> dict:
     A["cit_cciv"] = norm(CIT_CCIV)
     A["cit_art10"] = norm(CIT_CONST["art10"])
     A["cit_art61"] = norm(CIT_CONST["art61"])
+    A["cit_art61_saisine"] = norm(CIT_CONST["art61_saisine"])
+    A["cit_art61_rip"] = norm(CIT_CONST["art61_rip"])
     A["nautres"] = LETTRES[len(SESSIONS) - 1]
     A["nsegments"] = LETTRES[len(SEGMENTS)]
     A["cit_sgg16_def"] = norm(CIT_SGG["sgg16_def"])
@@ -472,7 +483,7 @@ def affichage_en(r: dict, A_fr: dict) -> dict:
     for k in ("senat_1819", "sgg_1819"):
         A[k] = A_fr[k].replace("\u00a0", "").replace(",", ".")
     for k, v in A_fr.items():  # citations françaises : l'original, suivi de sa traduction (_tr)
-        if k.startswith("cit_") and k not in ("cit_art10", "cit_art61"):
+        if k.startswith("cit_") and k not in ("cit_art10", "cit_art61", "cit_art61_saisine", "cit_art61_rip"):
             A[k] = v
     A.update(r["cit_en"])
     A.update({k + "_tr": v for k, v in TR.items()})

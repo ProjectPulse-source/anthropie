@@ -1035,6 +1035,8 @@
   "cit_cciv": "Toutefois, l'entrée en vigueur de celles de leurs dispositions dont l'exécution nécessite des mesures d'application est reportée à la date d'entrée en vigueur de ces mesures.",
   "cit_art10": "Le Président de la République promulgue les lois dans les quinze jours qui suivent la transmission au Gouvernement de la loi définitivement adoptée.",
   "cit_art61": "la saisine du Conseil constitutionnel suspend le délai de promulgation.",
+  "cit_art61_saisine": "les lois peuvent être déférées au Conseil constitutionnel, avant leur promulgation, par le Président de la République, le Premier ministre, le Président de l'Assemblée nationale, le Président du Sénat ou soixante députés ou soixante sénateurs.",
+  "cit_art61_rip": "les propositions de loi mentionnées à l'article 11 avant qu'elles ne soient soumises au référendum",
   "nautres": "sept",
   "nsegments": "six",
   "cit_sgg16_def": "fait apparaître le taux d'application au 31 décembre 2025 des lois qui, parmi celles votées entre le 1er juillet 2022 et le 9 juin 2024, appellent des décrets d'application.",
@@ -1123,6 +1125,8 @@
   "cit_sgg16_def_tr": "shows the implementation rate at 31 December 2025 of the laws which, among those passed between 1 July 2022 and 9 June 2024, call for implementing decrees.",
   "cit_sgg17_def_tr": "shows the implementation rate at 31 December 2025 of the laws which, among those published between 18 July 2024 and 30 June 2025, call for implementing decrees or orders.",
   "cit_art10": "The President of the Republic shall promulgate Acts of Parliament within fifteen days following the final passage of an Act and its transmission to the Government.",
-  "cit_art61": "referral to the Constitutional Council shall suspend the time allotted for promulgation."
+  "cit_art61": "referral to the Constitutional Council shall suspend the time allotted for promulgation.",
+  "cit_art61_saisine": "Acts of Parliament may be referred to the Constitutional Council, before their promulgation, by the President of the Republic, the Prime Minister, the President of the National Assembly, the President of the Senate, sixty Members of the National Assembly or sixty Senators.",
+  "cit_art61_rip": "Private Members' Bills mentioned in article 11 before they are submitted to referendum"
  }
 }

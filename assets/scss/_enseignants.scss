@@ -6,6 +6,14 @@
 }
 .fiche__actions { margin: 0 0 1rem; }
 .fiche ol { padding-left: 1.4rem; }
+// Frise à compléter (activité d'EMC, 07/10/2026) : cases vides assez hautes pour écrire à la main, imprimées avec leurs
+// bordures ; largeur fixe à 100 % (mesuré le 07/10/2026 : en display block, la frise se réduisait à 248 px sur 386).
+.fiche__frise { width: 100%; table-layout: fixed; border-collapse: collapse; margin: 0.5rem 0 1.5rem; font-size: 0.95em; }
+.fiche__frise th, .fiche__frise td { border: 1px solid #8a94a6; padding: 0.4rem 0.5rem; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.fiche__frise td { height: 2.6rem; }
+.fiche__frise th:first-child, .fiche__frise td:first-child { width: 34%; }
+.fiche__frise th:nth-child(2), .fiche__frise td:nth-child(2) { width: 14%; }
+@media print { .fiche__frise { break-inside: avoid; } .fiche__frise td { height: 1.6cm; } }
 
 // Arrivée par ancre sous l'en-tête ET la barre des thèmes, tous deux collants (mesuré le 02/10/2026 : 178 px à
 // 1 280 px, 177 px à 390 px ; sans cette marge le titre visé se posait à 0 px, donc dessous).
