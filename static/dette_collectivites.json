@@ -17,8 +17,8 @@
    },
    "pib": {
     "jeu": "nama_10_gdp",
-    "maj_source": "2026-10-06T23:00:00+0200",
-    "sha256": "15553565b97da9997ad55b07ffaca4d7be05bc0eba568ea4d67910baf2a4dd9d"
+    "maj_source": "2026-10-07T11:00:00+0200",
+    "sha256": "70e53a701677bf8b8a01484e617d614cddc833519abc72164805e5ce9cf2596c"
    },
    "dette": {
     "jeu": "gov_10q_ggdebt",
@@ -792,7 +792,7 @@
    -3.3852389999999986,
    -2.3618010000000034
   ],
-  "of_encours_total": 218.49580536858997,
+  "of_encours_total": 218.49580536859,
   "dette_loc_md": 278.6971321678322,
   "plf_edition": 2027,
   "plf_depot": "1er octobre 2026",
