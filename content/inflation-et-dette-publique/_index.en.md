@@ -33,7 +33,7 @@ faq:
   - question: "Why is this not a fiscal gain for the State?"
     answer: "Because the erosion falls on payments spread out until {infl.fin}: only a fifth had been paid by end-2023, about half will have been by {infl.demi}. Because the State then borrowed at higher rates, and no one can say how much of that rise the episode caused. And because inflation-linked bonds, the Banque de France and the unit of account change the reading: measured in units of domestic output rather than in consumer purchasing power, the same erosion is smaller."
   - question: "Who lost what the debt lost in real value?"
-    answer: "The direct holders of the bonds, in the first place: at end-2020, half of France's negotiable State debt was held by non-residents and nearly a quarter by the Banque de France. But the direct holder is not necessarily the final loser: insurers, banks and funds have nominal liabilities of their own, and bonds change hands. The page gives a mechanical allocation by end-2020 holdings, which does not identify the final incidence."
+    answer: "We know which sectors held the bonds; we cannot infer from that who bore the final loss. At end-2020, half of France's negotiable State debt was held by non-residents and nearly a quarter by the Banque de France. But the direct holder is not necessarily the final loser: insurers, banks and funds have nominal liabilities of their own, and bonds change hands. The page gives a mechanical allocation by end-2020 holdings, which does not identify the final incidence."
 ressource:
   bloc: "dette"
   rang: 45
@@ -77,7 +77,7 @@ The available data do not identify how much of the later rise in funding costs w
 
 **Inflation-linked bonds worked the other way.** At end-2020, {{< infl-val "idx_n" >}} inflation-linked bonds, worth €{{< infl-val "idx_encours" >}}bn, escaped the erosion. Issued at a fixed rate, they would have transferred about €{{< infl-val "idx" >}}bn more. In the State budget, their indexation charge peaked at €{{< infl-val "charge22" >}}bn (current euros) in 2022 (AFT).
 
-<details class="repli"><summary>Simplified consolidation with the Banque de France: the erosion stays almost whole during the episode, then part of it is given back</summary>
+<details class="repli"><summary>Simplified consolidation with the Banque de France: the erosion stays almost whole during the episode, then the consolidated advantage shrinks</summary>
 
 At end-2020 the Banque de France held {{< infl-val "s_bdf" >}}% of the State's negotiable debt, bought by creating bank reserves. In a balance sheet that combines the State and its central bank, those bonds cancel against the central bank's assets, and the liability of the whole becomes, for that share, the reserves, remunerated at the deposit facility rate. The identity reads:
 
@@ -91,7 +91,7 @@ Because the deposit rate stayed at −0.5% until July 2022 while prices rose, re
 
 ## What moves the number {#sensibilite}
 
-**The starting forecast.** Four inflation forecasts for France published between November 2020 and February 2021 give: €{{< infl-val "spf" >}}bn with the ECB Survey of Professional Forecasters (January 2021, used as the reference), {{< infl-val "bdf" >}} with the Banque de France projections (December 2020), {{< infl-val "ce_aut" >}} and {{< infl-val "ce_hiv" >}} with those of the European Commission (autumn 2020, winter 2021). The Commission published no 2023 horizon: its 2022 forecast, 1.5%, is carried over to 2023, its last published horizon. Beyond 2023, all of them return to the ECB survey's path, so only the years of the episode differ.
+**The starting forecast.** Four inflation forecasts published between November 2020 and February 2021 give: €{{< infl-val "spf" >}}bn with the ECB Survey of Professional Forecasters (January 2021, euro area), {{< infl-val "bdf" >}} with the Banque de France projections (December 2020), {{< infl-val "ce_aut" >}} and {{< infl-val "ce_hiv" >}} with those of the European Commission (autumn 2020, winter 2021). The Commission published no 2023 horizon: its 2022 forecast, 1.5%, is carried over to 2023, its last published horizon. Beyond 2023, all of them return to the ECB survey's path, so only the years of the episode differ. The ECB survey is the reference because it is the only one of the four to cover the whole horizon of payments, beyond 2023 to the long term, and it fixes a single information date, January 2021, when the December 2020 price level is known; it covers the euro area, and the three forecasts specific to France bracket the result it gives.
 
 **The market price.** Breakeven inflation rates, the yield gap between nominal and inflation-linked bonds at 31 December 2020 (AFT), would give more: €{{< infl-val "b_fr" >}}bn with the French 10-year breakeven, {{< infl-val "b_eu" >}} with the euro-area one. They embed risk and liquidity premia, which then pulled them down: they serve only as a sensitivity here, not for the range.
 
@@ -122,7 +122,7 @@ They do not measure the total fiscal effect of inflation: neither tax revenue sw
 
 ## Key takeaways {#retenir}
 
-Inflation did ease the old debt: about €{{< infl-val "t" >}}bn of 2020 of payments promised on France's fixed-rate State debt at end-2020 are worth less than expected, and that loss of real value will not be given back if the price gap persists.
+Inflation did ease the real value of the old debt: about €{{< infl-val "t" >}}bn of 2020 of payments promised on France's fixed-rate State debt at end-2020 are worth less than expected, and that loss of real value will not be given back if the price gap persists.
 
 We can measure the erosion of the old nominal debt quite well. What we cannot honestly turn it into is an equally precise fiscal gain: it is realised slowly, it is measured differently depending on the unit of account, and the cost of the borrowing that followed cannot be attributed to the episode in any known proportion.
 
@@ -142,7 +142,7 @@ This page measures what the 2021-2023 inflation took, in real terms, from the St
 
 **Expectations.** ECB, *Survey of Professional Forecasters*, first quarter of 2021 (euro area; 2024 interpolated between its 2023 and 2025 horizons, then its long-term expectation); Banque de France, December 2020 projections; European Commission, autumn 2020 and winter 2021 forecasts. Breakevens at 31 December 2020: AFT (Bloomberg data).
 
-**Inflation-linked bonds.** In the counterfactual, the {{< infl-val "idx_n" >}} inflation-linked bonds outstanding at end-2020 receive a fixed coupon equal to their real coupon plus the breakeven of the same index and maturity: at 31 December 2020 the AFT publishes four points (France 5 and 10 years, euro area 10 and 30 years), interpolated by residual maturity; with no short euro-area point, the French curve is shifted by the gap observed at 10 years. Result: €{{< infl-val "idx_j" >}}bn, against {{< infl-val "idx_1" >}} with the euro-area 10-year breakeven alone. Adding the gap between each bond's index and the French HICP (€{{< infl-val "idx_ecart" >}}bn), the economic cost of the protection reaches €{{< infl-val "idx_tot" >}}bn. The AFT's indexation charge (€{{< infl-val "charge_cum" >}}bn in current euros from 2021 to 2025) covers the whole indexed stock of each year, new issues included: it is not the same quantity.
+**Inflation-linked bonds.** In the counterfactual, the {{< infl-val "idx_n" >}} inflation-linked bonds outstanding at end-2020 receive a fixed coupon equal to their real coupon plus the breakeven of the same index and maturity: at 31 December 2020 the AFT publishes four points (France 5 and 10 years, euro area 10 and 30 years), interpolated by residual maturity; with no short euro-area point, the French curve is shifted by the gap observed at 10 years. Result: €{{< infl-val "idx_j" >}}bn, against {{< infl-val "idx_1" >}} with the euro-area 10-year breakeven alone. Adding the gap between each bond's index and the French HICP (€{{< infl-val "idx_ecart" >}}bn), what the protection sold to holders cost the State, once the risk materialised, reaches €{{< infl-val "idx_tot" >}}bn. The AFT's indexation charge (€{{< infl-val "charge_cum" >}}bn in current euros from 2021 to 2025) covers the whole indexed stock of each year, new issues included: it is not the same quantity.
 
 **Consolidation.** Banque de France share of the State's negotiable debt at end-2020: Banque de France, Webstat (holdings by sector, market value). Reserves proxied by the market value of the Banque de France's holdings of State bonds at the start of each year; ECB deposit rate, annual average.
 
@@ -156,7 +156,7 @@ This is a mechanical allocation, not a measure of who lost. Bonds change hands o
 
 </details>
 
-No number on this page is typed by hand: all come from a reproducible calculation by the author, whose extract is archived with its checksums; the script that writes the page checks the main numerical statements and stops if their conditions no longer hold. Before the page was written, the calculation went through seven internal reviews and four independent counter-reviews.
+No number on this page is typed by hand: all come from a reproducible calculation by the author, whose extract is archived with its checksums; the script that writes the page checks the main numerical statements and stops if their conditions no longer hold. Before the page was written, the calculation went through external counter-reviews, which changed the price timing, the construction of the range and the treatment of inflation-linked bonds.
 
 {{< reutiliser figures="figures_inflation" jeu="dette_inflation" sources="AFT, Eurostat, ECB, Banque de France, European Commission" donnees="Cumulative real erosion by year of payment, results for each forecast and each breakeven, inflation-linked bonds, simplified consolidation and mechanical allocation by holder; the same content is available as CSV, in long format." >}}
 In this page's counterfactual, the gap between realised 2021-2023 inflation and the inflation expected in early 2021 cuts by about €{{< infl-val "t" >}}bn of 2020 the real value of the payments promised on France's fixed-rate State debt at end-2020 (€{{< infl-val "a_bas" >}}bn to €{{< infl-val "a_haut" >}}bn depending on the forecast used); about half materialises by {{< infl-val "demi" >}}. It is not an identifiable net fiscal gain.

@@ -578,7 +578,7 @@ def carte_inflation() -> None:
     if not E:
         fail("carte inflation EN : bloc affichage_en absent de data/dette_inflation.json")
     carte("og-dette-inflation.jpg",
-          ["L'inflation a allégé", "la vieille dette"],
+          ["L'inflation a érodé", "la vieille dette"],
           "Environ %s Md€ de 2020 : mesurés, non encaissés." % A["t"],
           "AFT, Eurostat, BCE · calcul de l'auteur · CC BY 4.0",
           "stephane-lalut.com/inflation-et-dette-publique/",

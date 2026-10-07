@@ -15,7 +15,7 @@ Témoins de la méthode, dans le script de recherche : IPCH mensuel Eurostat con
 en moyennes annuelles (v2, 143,2) et sans correction saisonnière ; identité de consolidation contre l'arbitre 5. Ici, la
 seule cohérence vérifiée est l'agrégation par année de paiement, qui partage la fonction de perte : elle n'est pas un témoin.
 
-Usage : python scripts/update_dette_inflation.py [--check] [--mutation=demi|indexes|consolidation]
+Usage : python scripts/update_dette_inflation.py [--check] [--mutation=demi|indexes|consolidation|encadre]
 Sorties : data/ et static/dette_inflation.json, static/dette_inflation.csv, data/figures_inflation.json,
           static/img/dette-inflation-calendrier{,-en}.svg + .png
 """
@@ -123,6 +123,8 @@ def mutation(c):
         c["idx_j"] = 27.0
     elif m == "consolidation":  # la consolidation retirerait l'érosion pendant l'épisode
         c["cons23"] = 0.8 * c["T"]
+    elif m == "encadre":       # le SPF sortirait de l'intervalle des trois prévisions françaises
+        list(c["A"].values())[0]["r=0%"] = 999.0
     elif m is not None:
         fail("mutation inconnue : %s" % m)
     return m
@@ -143,6 +145,8 @@ def gardes(c):
     # cohérence (non indépendante : même fonction de perte) : l'agrégation par année redonne le total
     g(abs(c["cum"][max(c["cum"])] - T) <= 0.15, "le cumul par année de paiement ne redonne pas le total (%.1f contre %.1f)" % (c["cum"][max(c["cum"])], T))
     g(c["A_r0"][0] <= T <= c["A_r0"][1], "le central (SPF) doit être dans la plage de la famille A")
+    fr = [v["r=0%"] for v in list(c["A"].values())[1:]]  # Banque de France, Commission automne, hiver : propres à la France
+    g(min(fr) < list(c["A"].values())[0]["r=0%"] < max(fr), "« les trois prévisions propres à la France encadrent » le SPF : %s" % fr)
     g(min(c["B"].values()) > T, "« les points morts de marché donneraient davantage » : %s" % c["B"])
     g(c["T"] > c["T_annuel"], "« plus élevé que le calcul en moyennes annuelles »")
     g(abs(c["T_sans_saison"] - T) < 1.0, "« la correction saisonnière ne change presque rien »")
@@ -155,7 +159,7 @@ def gardes(c):
     g(c["defl_spf"] < c["T_annuel"] and c["defl_ce"] < c["T_annuel"], "« plus faible en unités de production intérieure »")
     g(abs(c["idx_j"] - 20) <= 2.5 and abs(c["idx_1"] - c["idx_j"]) <= 1.0, "« environ 20 Md€, la même chose avec un seul point mort » : %.1f / %.1f" % (c["idx_j"], c["idx_1"]))
     g(c["cons23"] >= 0.95 * T, "« consolidée, l'érosion reste presque entière fin 2023 » : %.1f" % c["cons23"])
-    g(c["cons25"] < c["cons23"] - 10, "« puis une partie est rendue en 2024-2025 »")
+    g(c["cons25"] < c["cons23"] - 10, "« puis l'avantage consolidé se réduit en 2024-2025 »")
     g(0.10 <= c["pal_residu"] / c["pal_total"] <= 0.16, "« résidu d'environ 13 %% » : %.3f" % (c["pal_residu"] / c["pal_total"]))
     g(c["charge_aft"][2022] == max(c["charge_aft"].values()), "« la charge d'indexation a culminé en 2022 »")
     g(0 < 100 - sum(c["parts"].values()) < 5 and c["parts"]["non_residents"] == max(c["parts"].values()),
