@@ -52,6 +52,15 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-08 — Page inflation et dette après contre-expertise ; livre français en une ligne sur les pages anglaises
+
+- **`/inflation-et-dette-publique/`** (FR et EN, `05218e6`) : contre-expertise de la page en ligne (Wolf-05), arbitrage
+  dans le dépôt de recherche (`07_RECHERCHE/inflation_dette_wolf/contre_expertise/Wolf-05_2026-10-08_arbitrage.md`) ;
+  cinq corrections et deux de plus ; garde « encadrent » ajoutée, vue mordre (`--mutation=encadre`) ; carte FR « a érodé ».
+- **`appel-livre`** (`c6bc7b5`, ordre de l'auteur) : sur une page anglaise, un livre qui n'existe qu'en français
+  s'annonce en une ligne vers sa fiche, sans couverture, prix ni bouton d'achat. 15 pages EN (dossier dette, Promesses) ;
+  16 blocs FR inchangés. Le bloc complet revient de lui-même dès qu'une fiche anglaise existe.
+
 ### 2026-10-07 (soir) — Dépôt Zenodo « Promesses » : version 2 publiée ; les pages citent le DOI de concept
 
 - **Version 2** (ordre de l'auteur, « nouvelle version Zenodo ») : doi:10.5281/zenodo.23222297, version `2026-10-07.2`.
