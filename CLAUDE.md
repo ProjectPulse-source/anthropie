@@ -300,6 +300,9 @@ feuille attendue), jamais un code HTTP — la page d'une édition absente peut r
 
 Hors du module à ce jour, déclaré : les sources à API du dossier dette gardent leurs workflows `dette-*.yml` (elles
 figurent au registre pour le tableau d'état) ; `generer_figures_qui_paie.py` se met à jour à la main.
+**Mode « veille »** (page lycée, 07/10/2026) : quand l'extrait d'une page se calcule hors dépôt, ses sources sont au
+registre en mode `veille` — détection validée par le contenu, un ticket par édition nouvelle (`maj_sources.py veille`),
+témoin dans `essai`, intégration humaine puis « lu » porté au registre.
 
 ## Règle de surface — « la présence vient du dépôt » (actée 2026-08-11)
 

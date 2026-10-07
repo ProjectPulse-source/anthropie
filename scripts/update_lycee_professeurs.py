@@ -16,9 +16,11 @@ Entrée : l'extrait FIGÉ du test décisif, scripts/sources_lycee_professeurs/ex
 de recherche, qui retrouve ses valeurs phares dans la sortie du test), contrôlé contre SHA256SUMS. Ce générateur ne
 recalcule que des rapports simples ; il met en forme et GARDE : chaque qualificatif de la prose est une condition sur les
 nombres (fonction gardes) ; si l'extrait la dément, arrêt.
-Mise à jour : à la main, à chaque nouvelle édition de la DEPP (RERS fin août, note sur le temps d'enseignement non assuré
-au printemps, note sur les élèves par structure fin août) : relancer test_decisif.py puis extrait.py dans le dépôt de
-recherche, recopier l'extrait et son empreinte, relancer ce script. Rendez-vous : septembre 2027 (RERS 2027).
+Mise à jour : DÉTECTÉE par le module de mise à jour (data/sources_maj.json, sources « lycee-* » en mode veille : RERS,
+notes de la DEPP sur le temps d'enseignement non assuré, les élèves par structure, le compte de l'éducation et les
+projections d'effectifs, concours de la session, OCDE), qui ouvre un ticket par édition nouvelle ; INTÉGRÉE à la main,
+parce que l'extrait se calcule hors dépôt : relancer test_decisif.py puis extrait.py dans le dossier de recherche,
+recopier l'extrait et son empreinte, relancer ce script, porter l'édition lue (« lu ») au registre.
 Page en français seulement (exclusion déclarée : débat, programme et statistique français).
 
 Usage : python scripts/update_lycee_professeurs.py [--check] [--mutation=organisation|classes|concours|concours26|eleves|ocde]

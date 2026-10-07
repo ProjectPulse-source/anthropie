@@ -91,6 +91,55 @@
    "objet": "indicateur S2 et ses composantes ; dépenses et ressources du système de retraite projetées (scénario de référence) ; part non résidente de la dette négociable de l'État", "mode": "fichier",
    "pages": ["/dette-publique-generations-futures/"], "generateurs": ["update_dette_generations.py"], "jeu": "data/dette_generations.json",
    "cadence": "annuelle", "detection": "aucune à ce jour : pièces dans scripts/sources_generations/ (SHA256SUMS), mises à jour à la main ; rendez-vous : Debt Sustainability Monitor 2026 (attendu au premier trimestre 2027), rapport du COR de juin 2027 ; série Webstat DET chaque trimestre (fichier du bouton « Télécharger les données » : l'API ne la sert pas aux scripts)"
+  },
+  {
+   "id": "lycee-rers", "producteur": "DEPP", "objet": "Repères et références statistiques (classes, distribution des tailles, élèves par structure, concours 2008-N, contractuels, dépense par élève), séries de la RERS interactive",
+   "mode": "veille", "pages": ["/manque-t-il-des-professeurs/"], "generateurs": ["update_lycee_professeurs.py"], "jeu": "data/lycee_professeurs.json",
+   "cadence": "annuelle (fin août)", "lu": 2026,
+   "detection": "catalogue rers.depp.education.fr/data/<année>/index.xml de l'année suivante, validé par sa racine XML <tbef> (une année absente répond 200 avec la page HTML de l'application)",
+   "integration": "relancer test_decisif.py puis extrait.py (D:/PRO/06_PROMOTION/RECHERCHE_LYCEES_MOYENS_2026-10-07/test_decisif), recopier extrait.json et son empreinte dans scripts/sources_lycee_professeurs/, relancer update_lycee_professeurs.py, porter « lu » ici ; l'indice des prix du PIB (Eurostat) est relu par extrait.py à chaque passage, sans veille propre"
+  },
+  {
+   "id": "lycee-tenae", "producteur": "DEPP", "objet": "Note d'Information annuelle sur le temps d'enseignement non assuré (heures non assurées par motif et par type d'établissement, déciles)",
+   "mode": "veille", "pages": ["/manque-t-il-des-professeurs/"], "generateurs": ["update_lycee_professeurs.py"], "jeu": "data/lycee_professeurs.json",
+   "cadence": "annuelle (printemps)", "lu": "10.48464/ni-26-14", "phrase_hal": "enseignement non assuré",
+   "detection": "dépôt HAL des Notes d'Information (DOI 10.48464/ni-…) dont le titre contient la phrase ; les pages d'education.gouv.fr refusent les scripts, HAL non",
+   "integration": "archiver la note et son tableur dans le dossier de recherche (pieces/, SHA256SUMS), adapter extrait.py, puis comme lycee-rers"
+  },
+  {
+   "id": "lycee-es", "producteur": "DEPP", "objet": "Note d'Information annuelle sur le nombre d'élèves devant un enseignant (élèves par structure selon la discipline, heures en groupe)",
+   "mode": "veille", "pages": ["/manque-t-il-des-professeurs/"], "generateurs": ["update_lycee_professeurs.py"], "jeu": "data/lycee_professeurs.json",
+   "cadence": "annuelle (fin août)", "lu": "10.48464/ni-26-38", "phrase_hal": "devant un enseignant",
+   "detection": "dépôt HAL des Notes d'Information dont le titre contient la phrase",
+   "integration": "comme lycee-tenae"
+  },
+  {
+   "id": "lycee-compte", "producteur": "DEPP", "objet": "Note d'Information annuelle du compte de l'éducation (dépense par lycéen de l'année, provisoire ; comparaison de la DEPP avec l'OCDE)",
+   "mode": "veille", "pages": ["/manque-t-il-des-professeurs/"], "generateurs": ["update_lycee_professeurs.py"], "jeu": "data/lycee_professeurs.json",
+   "cadence": "annuelle (fin septembre)", "lu": "10.48464/ni-26-42", "phrase_hal": "consacrés à l'éducation",
+   "detection": "dépôt HAL des Notes d'Information dont le titre contient la phrase",
+   "integration": "comme lycee-tenae"
+  },
+  {
+   "id": "lycee-projections", "producteur": "DEPP", "objet": "Note d'Information sur les projections d'effectifs scolaires (élèves 2027, majorant du budget par élève)",
+   "mode": "veille", "pages": ["/manque-t-il-des-professeurs/"], "generateurs": ["update_lycee_professeurs.py"], "jeu": "data/lycee_professeurs.json",
+   "cadence": "annuelle (printemps)", "lu": "10.48464/ni-26-09", "phrase_hal": "Projections d'effectifs",
+   "detection": "dépôt HAL des Notes d'Information dont le titre contient la phrase",
+   "integration": "comme lycee-tenae"
+  },
+  {
+   "id": "lycee-concours", "producteur": "ministère de l'Éducation nationale (devenirenseignant.gouv.fr)", "objet": "données statistiques des concours de la session (CAPES, CAPLP : postes et admis par discipline)",
+   "mode": "veille", "pages": ["/manque-t-il-des-professeurs/"], "generateurs": ["update_lycee_professeurs.py"], "jeu": "data/lycee_professeurs.json",
+   "cadence": "annuelle (septembre)", "lu": 2026,
+   "detection": "plan du site devenirenseignant.gouv.fr, page du CAPES de la session suivante, validée par ses tableaux « Capes externe bac + N - <session> »",
+   "integration": "archiver les pages CAPES et CAPLP de la session dans le dossier de recherche (pieces/), puis comme lycee-rers ; la série DEPP de la session suit dans la RERS de l'année suivante"
+  },
+  {
+   "id": "lycee-ocde", "producteur": "OCDE (Regards sur l'éducation)", "objet": "dépense publique des établissements par élève, second cycle général, USD PPA, France et agrégat OCDE",
+   "mode": "veille", "pages": ["/manque-t-il-des-professeurs/"], "generateurs": ["update_lycee_professeurs.py"], "jeu": "data/lycee_professeurs.json",
+   "cadence": "annuelle (septembre)", "lu": 2023,
+   "detection": "API SDMX de l'OCDE (DF_UOE_INDIC_FIN_PERSTUD) : une observation de la France pour une année postérieure à l'année lue",
+   "integration": "relancer le téléchargement de la série dans le dossier de recherche (cache/oecd_fin_perstud.csv), puis comme lycee-rers"
   }
  ]
 }

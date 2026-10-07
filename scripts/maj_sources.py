@@ -10,6 +10,7 @@ ce module leur apporte l'édition nouvelle et laisse les gardes des générateur
     python scripts/maj_sources.py detecter    cherche les éditions nouvelles, n'écrit rien
     python scripts/maj_sources.py integrer    détecte, archive, inscrit au registre, relance les générateurs
     python scripts/maj_sources.py essai       TÉMOIN POSITIF : chaque détecteur retrouve-t-il l'édition déjà connue ?
+    python scripts/maj_sources.py veille      sources en veille (page lycée) : éditions nouvelles à signaler, rien écrit
     python scripts/maj_sources.py sorties     chemins à commiter (pour le workflow)
     python scripts/maj_sources.py controle    sortie 1 si une édition attendue n'est pas intégrée après sa fenêtre
 
@@ -31,8 +32,20 @@ signale une fois la fenêtre passée. L'Insee Première se retrouve par le flux 
 que les parutions récentes : ce maillon ne se teste qu'au jour d'une parution réelle (`integrer --publication URL`
 désigne la pièce à la main).
 
-CONDITION DE MORT (R2), en prédicat : ce module disparaît si aucune source du registre n'est plus en mode « fichier »,
-ou si deux années passent sans qu'il ait adopté une seule édition (`git log -- data/sources_maj.json`).
+MODE « VEILLE » (page lycée, 07/10/2026, arbitrage PRO-20261007-160259, point 11). Le générateur de
+/manque-t-il-des-professeurs/ lit un extrait FIGÉ calculé hors dépôt (test décisif de l'auteur : une vingtaine de pièces,
+dont des PDF lus par position et validés à la main) : l'adoption automatique n'y est ni légère ni sûre. Le module y fait
+donc le seul geste que le défaut constaté exigeait -- deux publications parues après l'édition lue avaient été manquées :
+il DÉTECTE l'édition nouvelle, la valide par son contenu (racine XML du catalogue, titre et DOI de la note, tableaux des
+concours, observation de l'OCDE), et la SIGNALE par un ticket, un seul par édition (titre unique) :
+    python scripts/maj_sources.py veille      une ligne « VEILLE<TAB>titre<TAB>détail » par édition nouvelle
+L'intégration reste humaine : relancer extrait.py dans le dossier de recherche, recopier l'extrait et son empreinte,
+relancer le générateur, puis porter l'édition lue (« lu ») au registre. Les détecteurs de veille ont leur témoin dans
+`essai`, comme les autres.
+
+CONDITION DE MORT (R2), en prédicat : ce module disparaît si aucune source du registre n'est plus en mode « fichier »
+ni « veille », ou si deux années passent sans qu'il ait adopté ou signalé une seule édition
+(`git log -- data/sources_maj.json`).
 """
 from __future__ import annotations
 
@@ -268,6 +281,196 @@ def detecter_insee(reg: dict, publication: str | None = None) -> list[dict]:
     return [dict(source="insee-empreinte", quoi="donnees %d (%s)" % (annee, edition), pieces=[(nom, xlsx)], inscrire=inscrire)]
 
 
+# ------------------------------------------------------------------ veille (détection et signal, sans adoption)
+HAL = "https://api.archives-ouvertes.fr/search/?q=title_t:%s&fl=title_s,doiId_s,producedDate_s&rows=10&sort=producedDate_s%%20desc"
+RERS = "https://rers.depp.education.fr/data/%d/index.xml"
+SITEMAP_CONCOURS = "https://www.devenirenseignant.gouv.fr/sitemap.xml"
+OCDE_PERSTUD = ("https://sdmx.oecd.org/public/rest/data/OECD.EDU.IMEP,DSD_EAG_UOE_FIN@DF_UOE_INDIC_FIN_PERSTUD,/FRA........"
+                "?format=csvfilewithlabels&startPeriod=%d")
+EXTRAIT_LYCEE = ROOT / "scripts" / "sources_lycee_professeurs" / "extrait.json"
+
+
+class Injoignable(Exception):
+    """La source ne répond pas : rien à conclure aujourd'hui (ce n'est ni « rien de nouveau » ni une anomalie)."""
+
+
+def notes_hal(s: dict) -> list[tuple[str, str, str]]:
+    """Notes de la DEPP déposées sur HAL dont le titre contient la phrase du registre : (DOI, date, titre), récentes
+    d'abord. Validées par le titre et par le préfixe DOI des Notes d'Information, jamais par un code HTTP."""
+    import urllib.parse
+    code, corps = http(HAL % urllib.parse.quote('"%s"' % s["phrase_hal"]))
+    if code != 200:
+        raise Injoignable("%s : HAL code %s" % (s["id"], code))
+    norm = lambda t: t.replace("’", "'").lower()
+    out = [(d.get("doiId_s", ""), d.get("producedDate_s", ""), d["title_s"][0]) for d in json.loads(corps)["response"]["docs"]]
+    out = [x for x in out if x[0].startswith("10.48464/ni-") and norm(s["phrase_hal"]) in norm(x[2])]
+    if not out:
+        raise Anomalie("%s : HAL ne rend plus aucune note dont le titre contient « %s » (détecteur à revoir)" % (s["id"], s["phrase_hal"]))
+    return out
+
+
+def catalogue_rers(annee: int) -> bool:
+    """Le catalogue de la RERS interactive existe-t-il pour `annee` ? Une année absente répond 200 avec la page HTML de
+    l'application : seule la racine XML <tbef> prouve l'édition."""
+    code, corps = http(RERS % annee)
+    if code == 0:
+        raise Injoignable("lycee-rers : rers.depp.education.fr injoignable")
+    return code == 200 and corps.lstrip()[:200].startswith(b"<?xml") and b"<tbef>" in corps[:400]
+
+
+def tableaux_concours(page: bytes) -> dict[str, list[list[str]]]:
+    """Tableaux d'une page « données statistiques des concours » : {intitulé (attribut summary): lignes de cellules}."""
+    from html.parser import HTMLParser
+
+    class P(HTMLParser):
+        def __init__(self):
+            super().__init__()
+            self.t, self.cur, self.row, self.cell = {}, None, None, None
+
+        def handle_starttag(self, tag, attrs):
+            if tag == "table":
+                self.cur = dict(attrs).get("summary", "")
+                self.t[self.cur] = []
+            elif tag == "tr" and self.cur is not None:
+                self.row = []
+            elif tag in ("td", "th") and self.row is not None:
+                self.cell = ""
+
+        def handle_endtag(self, tag):
+            if tag in ("td", "th") and self.cell is not None:
+                self.row.append(" ".join(self.cell.split()))
+                self.cell = None
+            elif tag == "tr" and self.row is not None:
+                self.t[self.cur].append(self.row)
+                self.row = None
+            elif tag == "table":
+                self.cur = None
+
+        def handle_data(self, d):
+            if self.cell is not None:
+                self.cell += d
+    p = P()
+    p.feed(page.decode("utf-8", "replace"))
+    return p.t
+
+
+def page_concours(session: int) -> tuple[str, dict] | None:
+    """Page du CAPES de la session, trouvée par le plan du site et validée par ses tableaux de résultats de la session."""
+    code, plan = http(SITEMAP_CONCOURS)
+    if code != 200:
+        raise Injoignable("lycee-concours : plan du site code %s" % code)
+    urls = re.findall(r"<loc>([^<]*les-donnees-statistiques-des-concours-du-capes-de-la-session-%d-\d+)</loc>" % session,
+                      plan.decode("utf-8", "replace"))
+    if not urls:
+        return None
+    code, page = http(urls[0])
+    if code != 200:
+        raise Anomalie("lycee-concours : page %s listée par le plan du site mais illisible (code %s)" % (urls[0], code))
+    t = {k: v for k, v in tableaux_concours(page).items() if re.search(r"Capes externe bac \+ \d - %d" % session, k)}
+    if not t:
+        return None                                  # page annoncée, résultats pas encore en ligne
+    return urls[0], t
+
+
+def ocde_annees() -> dict[int, float]:
+    """Dépense publique par élève du second cycle général, France, USD PPA : {année: valeur} servie par l'API de l'OCDE."""
+    import csv
+    code, corps = http(OCDE_PERSTUD % 2019, 180)
+    if code != 200:
+        raise Injoignable("lycee-ocde : API de l'OCDE code %s" % code)
+    out = {}
+    for d in csv.DictReader(io.StringIO(corps.decode("utf-8-sig", "replace"))):
+        if (d.get("EDUCATION_LEV") == "ISCED11_34" and d.get("UNIT_MEASURE") == "USD_PPP_ST" and d.get("PRICE_BASE") == "V"
+                and d.get("EXP_SOURCE") == "S13" and d.get("EXP_DESTINATION") == "INST_EDU"
+                and d.get("EXPENDITURE_TYPE") == "DIR_EXP" and d.get("OBS_VALUE")):
+            out[int(d["TIME_PERIOD"])] = float(d["OBS_VALUE"])
+    if not out:
+        raise Anomalie("lycee-ocde : l'API répond mais ne sert plus la série (dimensions changées ?)")
+    return out
+
+
+def veille_source(s: dict) -> list[tuple[str, str]]:
+    """Éditions nouvelles d'une source en veille, au-delà de l'édition lue (« lu ») : [(titre du signal, détail)]."""
+    lu = s["lu"]
+    if s["id"] == "lycee-rers":
+        return [("RERS %d" % (lu + 1), RERS % (lu + 1))] if catalogue_rers(lu + 1) else []
+    if "phrase_hal" in s:
+        notes = notes_hal(s)
+        doi, quand, titre = notes[0]
+        if doi == lu:
+            return []
+        if not any(d == lu for d, _, _ in notes):
+            raise Anomalie("%s : l'édition lue %s n'est plus parmi les notes rendues par HAL" % (s["id"], lu))
+        return [("%s (%s)" % (doi, quand[:10]), "%s -- https://doi.org/%s" % (titre, doi))]
+    if s["id"] == "lycee-concours":
+        p = page_concours(lu + 1)
+        return [("concours de la session %d" % (lu + 1), p[0])] if p else []
+    if s["id"] == "lycee-ocde":
+        nouvelles = sorted(a for a in ocde_annees() if a > lu)
+        return [("dépense par élève %d" % a, "API SDMX de l'OCDE, DF_UOE_INDIC_FIN_PERSTUD") for a in nouvelles]
+    raise Anomalie("%s : source en veille sans détecteur" % s["id"])
+
+
+def veille() -> int:
+    """Une ligne par édition nouvelle ; le workflow en fait un ticket par titre. Une source injoignable n'est pas une
+    édition absente : elle est dite, et le témoin du lundi guette la panne durable."""
+    n = 0
+    for s in [x for x in lire_registre()["sources"] if x["mode"] == "veille"]:
+        try:
+            for titre, detail in veille_source(s):
+                n += 1
+                # En UTF-8 sur la sortie binaire : un titre de note peut porter un caractère absent de la console cp1252.
+                ligne = "VEILLE\tEdition nouvelle (%s) : %s\t%s -- a integrer a la main : %s\n" % (s["id"], titre, detail, s["integration"])
+                sys.stdout.flush()
+                sys.stdout.buffer.write(ligne.encode("utf-8"))
+                sys.stdout.buffer.flush()
+        except Injoignable as e:
+            log("  %s : rien a conclure aujourd'hui" % e)
+        except Anomalie as e:
+            # Un détecteur en panne ne bloque pas l'adoption des autres sources : il devient un ticket, un seul.
+            ligne = "VEILLE\tDetecteur de veille en panne (%s)\t%s\n" % (s["id"], e)
+            sys.stdout.flush()
+            sys.stdout.buffer.write(ligne.encode("utf-8"))
+            sys.stdout.buffer.flush()
+    log("Veille : %d edition(s) nouvelle(s) signalee(s)." % n)
+    return 0
+
+
+def essai_veille(verdict) -> None:
+    """Témoin positif des détecteurs de veille : chacun doit retrouver à la source l'édition déjà lue."""
+    extrait = json.loads(EXTRAIT_LYCEE.read_text(encoding="utf-8"))
+    for s in [x for x in lire_registre()["sources"] if x["mode"] == "veille"]:
+        lu, nom = s["lu"], s["id"]
+        try:
+            if nom == "lycee-rers":
+                verdict(nom, catalogue_rers(lu), "catalogue %d retrouve (racine XML)" % lu)
+                log("  [info] catalogue %d : %s" % (lu + 1, "PRESENT" if catalogue_rers(lu + 1) else "absent (attendu tant qu'il n'est pas paru)"))
+            elif "phrase_hal" in s:
+                notes = notes_hal(s)
+                verdict(nom, notes[0][0] == lu, "note la plus recente rendue par HAL : %s (edition lue : %s)" % (notes[0][0], lu))
+            elif nom == "lycee-concours":
+                p = page_concours(lu)
+                ok = False
+                if p:
+                    # Les valeurs lues dans la page doivent être celles de l'extrait figé de la page lycée.
+                    lignes = [r for t in p[1].values() for r in t if r and r[0] == "Mathématiques" and len(r) >= 6]
+                    retrouve = sorted((int(re.sub(r"\D", "", r[1])), int(re.sub(r"\D", "", r[5]))) for r in lignes)
+                    fige = sorted((v["postes"], v["admis"]) for v in extrait["concours_2026"]["capes"]["Mathématiques"].values())
+                    ok = retrouve == fige
+                verdict(nom, ok, "session %d retrouvee, CAPES de mathematiques identique a l'extrait fige" % lu if ok
+                        else "session %d non retrouvee ou valeurs differentes de l'extrait fige" % lu)
+            elif nom == "lycee-ocde":
+                v = ocde_annees().get(lu)
+                fige = extrait["c3"][str(lu)]["FRA"]
+                verdict(nom, v is not None and round(v) == fige, "France %d : %s (extrait fige : %s)" % (lu, v, fige))
+            else:
+                verdict(nom, False, "source en veille sans temoin")
+        except Injoignable as e:
+            log("  [NON CONCLUANT] %s -- %s" % (nom, e))
+        except Anomalie as e:
+            verdict(nom, False, str(e))
+
+
 def detecter(reg: dict, publication: str | None = None) -> list[dict]:
     trouve = detecter_sies(reg)
     # La figure « après le bac » suit la cohorte de la licence : on regarde les fiches APRÈS avoir inscrit la cohorte neuve.
@@ -415,6 +618,7 @@ def essai() -> int:
     code, flux = http("https://www.insee.fr/fr/flux/1")
     n = len(re.findall(r"<item>", flux.decode("utf-8", "replace"))) if code == 200 else 0
     verdict("insee-empreinte (flux des parutions)", n > 5, "%d parutions lues ; le filtrage par titre ne se prouve qu'un jour de parution" % n)
+    essai_veille(verdict)
     log("Essai : %d echec(s), %d non concluant(s)%s." % (echecs, len(non_conclus), (" (" + ", ".join(non_conclus) + ")") if non_conclus else ""))
     return 1 if echecs else 0
 
@@ -442,6 +646,7 @@ def etat(controle: bool) -> int:
         releve = json.loads(jeu.read_text(encoding="utf-8")).get("releve_le", "?") if jeu.is_file() else "ABSENT"
         p = prochaine(s) if s["mode"] == "fichier" and "fenetre" in s else None
         suite = ("attendu : %s, fenetre close le %s" % (p[0], p[1].isoformat())) if p else \
+            ("veille (signal par ticket, integration a la main) : edition lue %s" % s["lu"]) if s["mode"] == "veille" else \
             ("workflow %s" % s["workflow"] if s.get("workflow") else "aucune detection (mise a jour a la main)")
         if p and date.today() > p[1]:
             retards.append("%s : %s non integre, fenetre close depuis le %s" % (s["id"], p[0], p[1].isoformat()))
@@ -478,6 +683,8 @@ def main() -> int:
             return sorties()
         if cmd == "essai":
             return essai()
+        if cmd == "veille":
+            return veille()
         if cmd == "detecter":
             trouve = detecter(lire_registre(), publication)
             for t in trouve:
@@ -489,7 +696,7 @@ def main() -> int:
     except Anomalie as e:
         log("ECHEC : %s" % e)
         return 1
-    log("Commande inconnue : %s (etat, detecter, integrer, essai, sorties, controle)" % cmd)
+    log("Commande inconnue : %s (etat, detecter, integrer, essai, veille, sorties, controle)" % cmd)
     return 2
 
 

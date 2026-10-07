@@ -20,6 +20,8 @@
 #
 # SORTIES : la liste a commiter vient du registre (`maj_sources.py sorties`), jamais d'une enumeration recopiee ici.
 #
+# SOURCES EN VEILLE (page lycee) : detectees et signalees par ticket, jamais adoptees ici (voir l'en-tete du script).
+#
 # LES SOURCES A API (dossier dette) gardent leurs workflows dette-*.yml ; elles figurent au registre pour le tableau
 # d'etat. Les y fondre est une suite possible.
 #
@@ -72,6 +74,32 @@ jobs:
       - name: Temoin positif des detecteurs (lundi)
         if: github.event.schedule == '10 6 * * 1' || inputs.essai
         run: python3 scripts/maj_sources.py essai
+
+      # VEILLE (page lycee, 07/10/2026) : sources dont l'adoption reste humaine (extrait calcule hors depot). Une edition
+      # nouvelle ouvre UN ticket, au titre unique ; un titre deja vu (ouvert ou ferme) n'en rouvre pas : l'alerte part sur
+      # changement, jamais chaque matin. L'edition integree, on porte « lu » au registre et le titre suivant sera neuf.
+      - name: Veille des sources a integration humaine
+        if: github.event.schedule != '10 6 * * 1' && !inputs.essai
+        run: python3 scripts/maj_sources.py veille | tee "${{ runner.temp }}/veille.txt"
+
+      - name: Un ticket par edition nouvelle en veille
+        if: github.event.schedule != '10 6 * * 1' && !inputs.essai
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          script: |
+            const fs = require('fs');
+            const lignes = fs.readFileSync('${{ runner.temp }}/veille.txt', 'utf8').split('\n').filter(l => l.startsWith('VEILLE\t'));
+            if (!lignes.length) { core.info('Veille : aucune edition nouvelle.'); return; }
+            const tous = await github.paginate(github.rest.issues.listForRepo, { owner: context.repo.owner, repo: context.repo.repo, state: 'all', per_page: 100 });
+            const vus = new Set(tous.map(i => i.title));
+            for (const l of lignes) {
+              const [, titre, detail] = l.split('\t');
+              if (vus.has(titre)) { core.info('Deja signale : ' + titre); continue; }
+              await github.rest.issues.create({ owner: context.repo.owner, repo: context.repo.repo, title: titre,
+                body: detail + '\n\nSignal du module de mise a jour (mode veille) : la page ne se reecrit pas seule pour cette source. ' +
+                  'Une fois l edition integree, porter « lu » dans data/sources_maj.json.' });
+              core.info('Ticket ouvert : ' + titre);
+            }
 
       - name: Detecter, archiver, inscrire, relancer (exit 1 si une edition est refusee)
         if: github.event.schedule != '10 6 * * 1' && !inputs.essai

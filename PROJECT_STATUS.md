@@ -78,7 +78,8 @@ deux contre-expertises arbitrées, énoncés des acteurs relus à la source et v
   trois figures SVG + PNG, `data/figures_lycee.json`, shortcode `lyc-val`, jetons `{lyc.*}` (`desc-figures.html`).
 - **Carte et vignette** : `carte_lycee()` dans `og_dossier_dette.py` (`--lycee`).
 - **Bloc** `ecole` dans `content/ressources/_index.md` (pas dans l'index anglais : aucune page EN).
-- **Mise à jour** : à la main, hors module (déclaré dans le générateur) ; rendez-vous **septembre 2027** (RERS 2027).
+- **Mise à jour** : détectée par le module (sources `lycee-*` en mode veille, ticket par édition nouvelle), intégrée à
+  la main (extrait calculé hors dépôt).
 - Contrôles : hugo 0, `check-all --ci` 0, `audit-liens-build` 0 critique, rendu 390 px sans débordement de contenu.
 - **Relecture de la page en ligne** (même jour) : nombres négatifs écrits « −1,3 % de classes », « −7 % moins nombreux »
   (clés `*_baisse` en valeur absolue, signe moins typographique dans `nb()`) ; « 1,9 points » (`pts()`, pluriel à partir
@@ -93,8 +94,14 @@ deux contre-expertises arbitrées, énoncés des acteurs relus à la source et v
   encadré des déciles d'établissements (3 % / 19 %, NI 26-14) ; tableau des énoncés neutralisé (USL, ministère).
   41 gardes ; mutations `concours26` et `ocde` (nouvelle forme) vues mordre. hugo 0, `check-all --ci` 0, liens 0.
   Rendu 390 px non remesuré (texte seul, mise en page inchangée).
-- **Reste** : registre des ressources, diffusion par lot ; inscription de la page au module de mise à jour (point ouvert
-  de l'arbitrage) ; rendez-vous du 16/10 (bilan des recteurs).
+- **Rattachement au module de mise à jour** (point 11 de l'arbitrage) : mode `veille` dans `maj_sources.py`, sept
+  sources au registre (RERS par son catalogue XML ; notes DEPP Tenae, élèves par structure, compte de l'éducation,
+  projections par HAL ; concours par le plan du site devenirenseignant ; OCDE par SDMX), validées par le contenu ; un
+  ticket par édition nouvelle dans `maj-sources.yml`, détecteur en panne compris. Intégration automatique écartée :
+  l'extrait se calcule hors dépôt sur des pièces en partie ignorées et lues par position. Témoin : `essai` 0 échec (les
+  sept retrouvent l'édition lue ; concours et OCDE comparés à l'extrait figé) ; falsification (édition lue reculée)
+  signale les six éditions, dont la session 2026 des concours manquée le 07/10.
+- **Reste** : registre des ressources, diffusion par lot ; rendez-vous du 16/10 (bilan des recteurs).
 
 ### 2026-10-07 — FR↔EN sans décrochage : sélecteur de langue à repli, huit pages traduites, contre-expertise retenue ; POUSSÉ (`72f26e5`, `63cc811`), production vérifiée
 
