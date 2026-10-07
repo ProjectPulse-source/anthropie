@@ -335,11 +335,11 @@ def plf_mesures() -> dict:
     en = {
         "cpeb": ("Progressive contribution to the budgetary effort, levied on tax advances", "article 37",
                  "levy on tax advances, introduced for %d" % n),
-        "fctva": ("VAT compensation fund: rate cut by %d points, except green spending and roads" % fctva_pts,
+        "fctva": ("VAT compensation fund: rate cut by %d percentage points, except green spending and roads" % fctva_pts,
                   "articles 35 and 41", "cut in a central government grant tied to eligible investment spending"),
         "tva": ("Assigned VAT, excluding regions: annual increase reduced by inflation", "article 36",
                 "capping of the growth of assigned VAT, excluding regions"),
-        "ministeres": ("Contributions of certain ministries to local authorities", "budget mission appropriations",
+        "ministeres": ("Contributions of certain ministries to local authorities", "appropriations under State budget missions",
                        "cut in contributions from certain ministries"),
         "dilico": ("Sums placed in reserve in 2025 and 2026 (DILICO): repaid over five years instead of three", "article 84",
                    "repayment spread out; total amount returned unchanged"),

@@ -22,7 +22,7 @@
 {{- if eq $publie "oui" -}}
 <details class="repli confrontation" id="confrontation-recherche">
 {{- if eq .Page.Lang "en" }}
-<summary>Testing against research{{ with $resume }}<span class="confrontation__resume">: {{ . | safeHTML }}</span>{{ else }}: what the literature does to this reading{{ end }}</summary>
+<summary>Tested against the research literature{{ with $resume }}<span class="confrontation__resume">: {{ . | safeHTML }}</span>{{ else }}: what the literature does to this reading{{ end }}</summary>
 {{ .Inner | .Page.RenderString }}
 <p class="confrontation__date">Literature review checked on {{ (time $verifie).Format "2 January 2006" }}: every reference cited was read in full on that date, in the version indicated.</p>
 {{- else }}

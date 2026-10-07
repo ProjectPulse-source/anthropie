@@ -37,7 +37,7 @@ Technological debt in the anthropic sense designates something else: an **econom
 Three operations turn an infrastructure cost into a debt:
 
 1. **Commitment** — long-term energy purchase contracts, land leases of several decades, equipment orders that straddle political cycles: the future cost is locked in at the present.
-2. **Guarantee** — public schemes that alter the risk profile of private investment to make it attractive to institutional capital (the *derisking* described by Daniela Gabor): if the bet fails, the community pays.
+2. **Guarantee** — public schemes that alter the risk profile of private investment to make it attractive to institutional capital (the *derisking* described by Daniela Gabor): if the bet fails, the public bears the cost.
 3. **Irreversibilisation** — once the network is built, the territory equipped, the uses installed, going back costs more than continuing: yesterday's choice becomes tomorrow's constraint.
 
 [AWP-06](/en/awp/awp-06/) proposes a testable grid of **four coupled cost registers** — energy, matter, territory, attention. These registers do not add up: they couple. Reducing one often shifts the burden to the other three.

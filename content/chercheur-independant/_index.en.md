@@ -30,7 +30,7 @@ An independent researcher is a researcher who conducts and publishes work **with
 
 What was impossible twenty years ago is now well equipped. An independent researcher's minimal toolkit:
 
-1. **One DOI per text** — an open repository such as [Zenodo](https://zenodo.org) (operated by CERN) assigns each working paper a permanent identifier, a certain date and version control. This is the difference between a published text and a file on a website: the DOI makes the work **citable**.
+1. **One DOI per text** — an open repository such as [Zenodo](https://zenodo.org) (operated by CERN) assigns each working paper a permanent identifier, a verifiable publication date and version control. This is the difference between a published text and a file on a website: the DOI makes the work **citable**.
 2. **A researcher identity** — [ORCID](https://orcid.org) provides a unique identifier, independent of any institution, that links works to their author in academic databases.
 3. **Circulation through preprints** — platforms such as SSRN expose texts to disciplinary communities, with no affiliation filter.
 4. **Academic indexing** — clean metadata (titles, abstracts, keywords, classification codes) lets Google Scholar and other engines discover and link the work.

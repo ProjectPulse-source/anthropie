@@ -31,7 +31,7 @@
 <tr><td>{{ .nom_en }}</td><td>{{ printf $f1 .concours_21 }} → {{ printf $f1 .concours_fin }}</td><td>{{ printf $f1 .eb_21 }} → {{ printf $f1 .eb_fin }}</td><td>{{ printf $f1 .eq_21 }} → {{ printf $f1 .eq_fin }}</td><td>{{ printf $f1 .dette_21 }} → {{ printf $f1 .dette_fin }}</td></tr>
 {{- end }}
 </tbody></table></div>
-<p><small>Billions of euros, current prices. Source: OFGL, consolidated databases of the management accounts (DGFiP).</small></p>
+<p><small>Billions of euros, current prices. Source: OFGL, consolidated databases of the local government accounts (DGFiP).</small></p>
 {{- else if eq $t "pays" -}}
 <div class="table-scroll"><table class="dette-monde-table">
 <thead><tr><th>Country</th><th>Subnational debt {{ $c.an_dette_deb }}</th><th>Peak</th><th>{{ $c.an_dette_fin }}</th><th>Subnational investment: highest 2000-2010 → lowest 2011-2019</th><th>Years in surplus 2012-2019</th><th>Share held by central government, {{ $c.an_ggd }}</th></tr></thead>

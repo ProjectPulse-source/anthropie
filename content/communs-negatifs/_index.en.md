@@ -24,7 +24,7 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
   long_en: "Negative commons"
 ---
 
-Negative commons designate what we inherit collectively **without having chosen it**: nuclear waste, polluted soils, power plants to be dismantled, industrial ruins, obsolete infrastructures. The notion was developed by the philosopher Alexandre Monnin with Emmanuel Bonnet and Diego Landivar (*Héritage et fermeture. Une écologie du démantèlement*, 2021 — in French, "Legacy and Closure: An Ecology of Dismantling"): no longer common goods to be preserved, but **common burdens** to be managed, closed or dismantled — sometimes over generations.
+Negative commons designate what we inherit collectively **without having chosen it**: nuclear waste, polluted soils, power plants to be dismantled, industrial ruins, obsolete infrastructures. The notion was developed by the philosopher Alexandre Monnin with Emmanuel Bonnet and Diego Landivar (*Héritage et fermeture. Une écologie du démantèlement*, 2021 — in French; title translated here as "Legacy and Closure: An Ecology of Dismantling"): no longer common goods to be preserved, but **common burdens** to be managed, closed or dismantled — sometimes over generations.
 
 ## The inversion of a classic figure
 
@@ -36,13 +36,13 @@ The reversal is also a reversal of the economic gaze: to think in negative commo
 
 Standard economics files these realities under the category of **externality**: an unbilled cost, which the analysis imagines can be corrected by a price — a tax, a quota, a market in rights. The notion of negative commons challenges the sufficiency of this reading. A stock of radioactive waste is not a price discrepancy: it is a material reality installed for millennia, which demands institutions, skills, labour and vigilance — not only a monetary internalisation. The question is no longer "how much does it cost?" but "**who takes care of it, how, and for how long?**"
 
-This critique joins the one that K. William Kapp's *cost-shifting* tradition already addressed to the externality: shifting costs is not a market failure but a systemic mechanism — and correcting it takes more than a price.
+This critique echoes K. William Kapp's *cost-shifting* tradition, which had already challenged the concept of externality: shifting costs is not a market failure but a systemic mechanism — and correcting it takes more than a price.
 
 ## The anthropic reading: transfer turned into matter
 
 The framework of [anthropy](/en/quest-ce-que-lanthropie/) offers a genealogy of these legacies. A social system produces its order by displacing its disorder — toward other places, other times, other groups. When the receptacle accumulates and saturates, what remains on the ground, in the water tables, in end-of-life infrastructures is **the anthropic transfer crystallised in the materiality of the world**: a negative common is a displacement of disorder that has become an inheritance.
 
-This reading links the two notions without conflating them: negative commons describe **what remains**; the [anthropic loop](/en/anthropic-loop/) describes **the route** — displacement, accumulation, saturation, return. And it sheds light on the question of responsibility that Guillaume Vuillemey raises about the firm: when limited liability separates acting from answering, damages slide toward common goods — the firm disappears, the inheritance remains.
+This reading links the two notions without conflating them: negative commons describe **what remains**; the [anthropic loop](/en/anthropic-loop/) describes **the route** — displacement, accumulation, saturation, return. And it sheds light on the question of responsibility that Guillaume Vuillemey raises about the firm: when limited liability separates action from accountability, damages slide toward common goods — the firm disappears, the inheritance remains.
 
 ## The coming textbook case: digital technology
 
@@ -52,7 +52,7 @@ The working paper [AWP-06 — *Digital Infrastructures and Technological Debt*](
 
 **Are negative commons a pessimistic notion?** No — it is a notion of **action**. It shifts attention from promises alone (building, innovating) to neglected gestures: maintaining, closing, dismantling, cleaning up. Whole trades, institutions and know-how rest on this "care of remains".
 
-**Who introduced the notion?** It stabilised around the work of Alexandre Monnin, Emmanuel Bonnet and Diego Landivar (*Héritage et fermeture*, 2021; article "Les 'communs négatifs'", journal *Étvdes*, 2021 — both in French), in the field of the ecology of dismantling and of ecological redirection.
+**Who introduced the notion?** It stabilised around the work of Alexandre Monnin, Emmanuel Bonnet and Diego Landivar (*Héritage et fermeture*, 2021; article "Les 'communs négatifs'", journal *Études*, 2021 — both in French), in the field of the ecology of dismantling and of ecological redirection.
 
 **Where is it applied in the anthropic corpus?** In [AWP-06](/en/awp/awp-06/) (digital technology as a candidate negative common), in the [glossary](/en/glossaire/#negative-commons), and in the background of [technological debt](/en/technological-debt/): a debt whose creditors are the generations that will inherit the equipment.
 

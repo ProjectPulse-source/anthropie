@@ -1,7 +1,7 @@
 ---
 title: "Transparency and personal data"
 url: /en/transparency-personal-data/
-description: "How your data is processed when you receive a professional approach or make a request on the Free books page, how to exercise your rights or object to any further contact."
+description: "How your data is processed when you are contacted for professional purposes or make a request on the Free books page, how to exercise your rights or object to any further contact."
 draft: false
 ---
 

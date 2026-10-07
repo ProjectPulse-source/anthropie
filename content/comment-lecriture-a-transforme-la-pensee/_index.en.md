@@ -36,11 +36,11 @@ For most of its history, humanity thought without writing. An oral culture is no
 
 ## The shift: when memory leaves the body
 
-Writing was born in Mesopotamia some 5,000 years ago — not for poetry, but for **counting**: sheep, jars, debts. This founding detail says the essential: to write, first of all, is to fix a trace that commits — accounting and law before literature.
+Writing was born in Mesopotamia some 5,000 years ago — not for poetry, but for **counting**: sheep, jars, debts. This founding detail says the essential: to write, first of all, is to create a binding record — accounting and law before literature.
 
 Then the trace reveals its powers. The anthropologist Jack Goody (*The Domestication of the Savage Mind*; in French, *La Raison graphique*) showed that writing does not merely record pre-existing thoughts: it **creates new intellectual operations**. The list, the table, the column do not exist orally — and it is these that make classification, term-by-term comparison and formal logic possible. Walter Ong (*Orality and Literacy*) summed it up in a formula: writing restructures consciousness. A text, unlike speech, can be reread: one can return to it, confront it with another, find the contradiction in it — **the critical mind is a child of writing**.
 
-The shift had its trial, and it has remained famous: in Plato's *Phaedrus*, King Thamus predicts that writing will produce forgetfulness — people will trust the external sign rather than living memory, and the text, when questioned, “keeps a solemn silence” (our translation). The irony is double: this criticism has reached us only in writing, and Socrates — the philosopher without books, who never wrote a line — still thinks **in us** today only through the texts of his students. Each subsequent medium would replay exactly this trial.
+The shift had its trial, and it has remained famous: in Plato's *Phaedrus*, King Thamus predicts that writing will produce forgetfulness — people will trust the external sign rather than living memory, and written words, when questioned, “preserve a solemn silence” (275d, tr. Harold N. Fowler). The irony is double: this criticism has reached us only in writing, and Socrates — the philosopher without books, who never wrote a line — still thinks **in us** today only through the texts of his students. Each subsequent medium would replay exactly this trial.
 
 ## The printing press: thought changes scale
 
