@@ -4,10 +4,13 @@
 Découverte de la page (dépôt de pilotage de l'auteur, 06_PROMOTION/RECHERCHE_LYCEES_MOYENS_2026-10-07, test décisif du
 07/10/2026, protocole écrit avant calcul, deux contre-expertises arbitrées) : « le manque de professeurs » recouvre
 quatre mesures qui ne disent pas la même chose. Au lycée général et technologique, une heure de cours sur dix n'a pas
-lieu, et en 2024-2025 plus de la moitié de ces heures tient à l'organisation (examens, fermetures, formation) plutôt
-qu'aux absences individuelles ; les concours de mathématiques et de physique-chimie restent sous quatre postes pourvus
-sur cinq quand la couverture nationale atteint son meilleur niveau depuis 2015 ; les classes dépassent 30 élèves depuis
-2020, mais les divisions de 35 et plus sont moins fréquentes qu'en 2015.
+lieu, et en 2024-2025 plus de la moitié de ces heures tient aux fermetures, aux examens et commissions et à la
+formation plutôt qu'aux absences individuelles ; les CAPES de mathématiques et de physique-chimie sont restés sous quatre
+postes pourvus sur cinq de 2023 à 2025, puis au-delà de neuf sur dix à la session double de 2026, quand le CAPLP de
+mathématiques-physique-chimie en pourvoit moins de deux sur trois ; les classes dépassent 30 élèves depuis 2020, mais la
+part des divisions de 35 et plus est plus faible qu'en 2015.
+Compléments du 07/10 (contre-expertise PRO-20261007-160259) : concours 2026 détaillés (ministère), dépense 2025
+provisoire et comparaison OCDE de la DEPP (NI 26-42), dispersion entre établissements (NI 26-14).
 
 Entrée : l'extrait FIGÉ du test décisif, scripts/sources_lycee_professeurs/extrait.json (écrit par extrait.py du dépôt
 de recherche, qui retrouve ses valeurs phares dans la sortie du test), contrôlé contre SHA256SUMS. Ce générateur ne
@@ -18,7 +21,7 @@ au printemps, note sur les élèves par structure fin août) : relancer test_dec
 recherche, recopier l'extrait et son empreinte, relancer ce script. Rendez-vous : septembre 2027 (RERS 2027).
 Page en français seulement (exclusion déclarée : débat, programme et statistique français).
 
-Usage : python scripts/update_lycee_professeurs.py [--check] [--mutation=organisation|classes|concours|eleves|ocde]
+Usage : python scripts/update_lycee_professeurs.py [--check] [--mutation=organisation|classes|concours|concours26|eleves|ocde]
 Sorties : data/ et static/lycee_professeurs.json, static/lycee_professeurs.csv, data/figures_lycee.json,
           static/img/lycee-{heures,classes,concours}.svg + .png
 """
@@ -122,7 +125,11 @@ def calcul(X):
     e4_reel = (1 + e4_nom) / (1 + e4_prix) - 1
     e4_el = e4["eleves_2027"] / e4["eleves_2017"] - 1
     e4_par_el = (1 + e4_reel) / (1 + e4_el) - 1
-    ecart_base = e7["enonce_2025"] - nat[max(nat)]
+    c26 = X["concours_2026"]
+    taux = lambda d: 100 * sum(s["admis"] for s in d.values()) / sum(s["postes"] for s in d.values())
+    postes = lambda d: sum(s["postes"] for s in d.values())
+    k26 = {"maths": c26["capes"]["Mathématiques"], "pc": c26["capes"]["Physique - chimie"],
+           "lp": c26["caplp"]["Mathématiques - physique chimie"]}
     return dict(
         ed=ed, ed_max_avant=max(v for a, v in ed.items() if a <= 2015),
         ed_an_max_avant=max((a for a, v in ed.items() if a <= 2015), key=lambda a: ed[a]),
@@ -134,7 +141,9 @@ def calcul(X):
         pub=X["v3"]["public"], prive=X["v3"]["prive"], tr=X["v3"]["tranches"],
         h4=h4, h3=h3, org4=org(h4[GT]), org3=org(h3[GT]), org4_col=org(h4[COL]), org4_lp=org(h4[LP]),
         maths=maths, pc=pc, agreg_maths=s5["Agrégation de mathématiques"],
-        nat=nat, contr=contr, ecart_base=ecart_base, e7=e7, enonce_base_depp=e7["enonce_2026"] - ecart_base,
+        nat=nat, contr=contr, e7=e7,
+        t26={k: taux(d) for k, d in k26.items()}, p26={k: postes(d) for k, d in k26.items()},
+        c1_2025=X["c1_2025"], ocde_depp=X["ocde_depp"], dec=X["d4"]["deciles"],
         c1=c1, c1_max_an=max(c1, key=c1.get), c3=c3,
         acad=acad, metro=metro, disc=disc_ok, grp=grp,
         es_toutes=next(d["es"] for d in X["v4"]["es_disciplines"] if d["discipline"] == "Toutes disciplines"),
@@ -158,8 +167,10 @@ def mutation(c):
         c["maths"] = dict(c["maths"], **{"2024": 85.0})
     elif m == "eleves":       # les élèves seraient plus nombreux en 2027 qu'en 2017
         c["e4_el"] = 0.02
-    elif m == "ocde":         # l'écart avec l'OCDE ne se resserrerait plus
-        c["c3"] = {a: (dict(v, FRA=v["OECD"] * 1.6) if a == max(c["c3"]) else v) for a, v in c["c3"].items()}
+    elif m == "ocde":         # une année, la France serait sous l'agrégat de l'OCDE
+        c["c3"] = {a: (dict(v, FRA=v["OECD"] * 0.95) if a == min(c["c3"]) else v) for a, v in c["c3"].items()}
+    elif m == "concours26":   # le CAPES de mathématiques 2026 n'aurait pourvu que 85 % de ses postes
+        c["t26"] = dict(c["t26"], maths=85.0)
     elif m is not None:
         fail("mutation inconnue : %s" % m)
     return m
@@ -178,7 +189,10 @@ def gardes(c):
     h4gt = c["h4"][GT]
     # Heures non assurées
     g(round(100 / h4gt["total"]) == 10, "« une heure sur dix » : %.1f %%" % h4gt["total"])
-    g(c["org4"] - 3 * 0.05 > h4gt["individuelles"] + 0.05, "« plus de la moitié tient à l'organisation, devant les absences individuelles » (2024-2025)")
+    g(c["org4"] - 3 * 0.05 > h4gt["individuelles"] + 0.05, "« fermetures, examens, formation pèsent plus que les absences individuelles » (2024-2025)")
+    d = c["dec"]
+    g(17 <= d["plus"]["total"] <= 20, "« près d'une heure sur cinq dans les plus touchés » : %s" % d["plus"]["total"])
+    g(round(d["plus"]["total"] / d["moins"]["total"]) == 6,"« six fois plus » (déciles, DEPP) : %s / %s" % (d["plus"]["total"], d["moins"]["total"]))
     org4 = c["h4"][GT]["fermeture"] + c["h4"][GT]["systeme"] + c["h4"][GT]["formation"]
     g(org4 / h4gt["total"] > 0.5, "« plus de la moitié des heures perdues » : %.2f" % (org4 / h4gt["total"]))
     g(c["org3"] > c["h3"][GT]["individuelles"], "« même sens en 2023-2024 » (chiffres à l'unité)")
@@ -192,6 +206,8 @@ def gardes(c):
     g(c["tr"]["2025"]["div_35"] < c["tr"]["2015"]["div_35"], "« les divisions de 35 et plus sont moins fréquentes qu'en 2015 »")
     g(c["tr"]["2025"]["div_30"] > c["tr"]["2015"]["div_30"] + 3, "« les divisions de 30 et plus sont plus fréquentes qu'en 2015 »")
     g(62 <= c["tr"]["2025"]["div_30"] <= 71, "« deux divisions sur trois » : %.1f" % c["tr"]["2025"]["div_30"])
+    d3034 = c["tr"]["2025"]["div_30"] - c["tr"]["2025"]["div_35"]
+    g(40 <= d3034 <= 55, "« près d'une classe sur deux de 30 à 34 élèves » : %.1f" % d3034)
     g(22 <= c["pub"]["eleves_35"] < 25, "« près d'un lycéen du public sur quatre » : %.1f" % c["pub"]["eleves_35"])
     g(c["pub"]["vecue"] > c["pub"]["moyenne"] + 0.5, "« la classe vécue est plus grande que la moyenne »")
     for niv in ("Première générale", "Terminale générale"):
@@ -205,15 +221,17 @@ def gardes(c):
     g(c["c1_max_an"] == 2010 and c["c1"][max(c["c1"])] < 0.95 * c["c1"][2010], "« dépense par lycéen sous son maximum de 2010 »")
     rap = {a: v["FRA"] / v["OECD"] for a, v in c["c3"].items()}
     g(all(r > 1.10 for r in rap.values()), "« au-dessus de l'OCDE chaque année »")
-    g(rap[max(rap)] < rap[min(rap)] - 0.1, "« l'écart se resserre »")
+    g(c["ocde_depp"]["france"] > c["ocde_depp"]["moyenne_ocde"], "« la DEPP trouve aussi la France au-dessus de la moyenne de l'OCDE »")
     # Concours
     for nom, s in (("mathématiques", c["maths"]), ("physique-chimie", c["pc"])):
         g(all(s[a] < 80 for a in ("2023", "2024", "2025")), "« moins de quatre postes sur cinq, trois sessions » : CAPES %s" % nom)
     for cle in ("Capet / sciences industrielles de l’ingénieur", "CAPLP / mathématiques-physique chimie"):
         g(all(c["detail"][an_][cle]["couverture"] < 85 for an_ in ("2024", "2025")), "« d'autres concours sous 85 %% en 2024 et 2025 » : %s" % cle)
     g(c["agreg_maths"]["2023"] >= 85, "« l'agrégation de mathématiques ne remplit pas le critère des trois sessions »")
-    g(c["enonce_base_depp"] > max(v for a, v in c["nat"].items() if 2015 <= a <= 2025), "« 96,1 % : au-dessus des années publiées depuis 2015 »")
-    g(c["enonce_base_depp"] < min(c["nat"][2005], c["nat"][2010]), "« sous 2005 et 2010 »")
+    g(c["t26"]["maths"] > 90 and c["t26"]["pc"] > 90, "« 2026 : plus de neuf postes sur dix en mathématiques et en physique-chimie »")
+    g(c["t26"]["lp"] < 200 / 3, "« CAPLP mathématiques-physique-chimie 2026 : moins de deux postes sur trois » : %.1f" % c["t26"]["lp"])
+    g(c["p26"]["maths"] > 1.1 * c["detail"]["2025"]["Capes / mathématiques"]["postes"],
+      "« plus de postes offerts en mathématiques en 2026 qu'en 2025 »")
     g(c["contr"][max(c["contr"])] - c["contr"][min(c["contr"])] >= 2, "« la part des contractuels monte »")
     # Académies
     g(max(c["metro"].values()) - min(c["metro"].values()) >= 2, "« les académies ne sont pas à égalité »")
@@ -232,7 +250,6 @@ def affichage(c):
     rap = {a: v["FRA"] / v["OECD"] for a, v in c["c3"].items()}
     a_rmin, a_rmax = min(rap), max(rap)
     nat = c["nat"]
-    nat_max_an = max((a for a in nat if 2015 <= a <= 2025), key=nat.get)
     lo_m, hi_m = min(c["metro"], key=c["metro"].get), max(c["metro"], key=c["metro"].get)
     lo_a, hi_a = min(c["acad"], key=c["acad"].get), max(c["acad"], key=c["acad"].get)
     dmin, dmax = c["disc"][0], c["disc"][-1]
@@ -245,7 +262,7 @@ def affichage(c):
         "h_ferm": nb(h4gt["fermeture"]), "h_sys": nb(h4gt["systeme"]), "h_form": nb(h4gt["formation"]),
         "h_indiv": nb(h4gt["individuelles"]), "h_indiv_pt": pts(h4gt["individuelles"]),
         "h_ferm_pt": pts(h4gt["fermeture"]), "h_sys_pt": pts(h4gt["systeme"]), "h_form_pt": pts(h4gt["formation"]), "h_nr": nb(h4gt["non_remplacement"]),
-        "h_org": nb(c["org4"]), "h_org_part": str(round(100 * c["org4"] / h4gt["total"])),
+        "h_org": nb(c["org4"]), "h_org_pt": pts(c["org4"]),"h_org_part": str(round(100 * c["org4"] / h4gt["total"])),
         "h3_total": nb(c["h3"][GT]["total"], 0), "h3_org": nb(c["org3"], 0), "h3_indiv": nb(c["h3"][GT]["individuelles"], 0),
         "col_total": nb(h4col["total"]), "col_indiv": nb(h4col["individuelles"]), "col_org": nb(c["org4_col"]),
         "lp_total": nb(h4lp["total"]), "lp_indiv": nb(h4lp["individuelles"]), "lp_org": nb(c["org4_lp"]),
@@ -275,7 +292,14 @@ def affichage(c):
         "c1_var": nb(100 * (c["c1"][max(c["c1"])] / c["c1"][2010] - 1), 0),
         "c1_baisse": nb(100 * (1 - c["c1"][max(c["c1"])] / c["c1"][2010]), 0),
         "c3_an": str(max(c["c3"])), "c3_fra": nb(c["c3"][max(c["c3"])]["FRA"], 0), "c3_oecd": nb(c["c3"][max(c["c3"])]["OECD"], 0),
-        "c3_pct": nb(100 * (rap[max(rap)] - 1), 0), "c3_pct_debut": nb(100 * (rap[a_rmin] - 1), 0), "c3_debut": str(a_rmin),
+        "c3_pct": nb(100 * (rap[max(rap)] - 1), 0), "c3_debut": str(a_rmin),
+        "ocde_depp_pct": nb(100 * (c["ocde_depp"]["france"] / c["ocde_depp"]["moyenne_ocde"] - 1)), "ocde_depp_an": str(c["ocde_depp"]["annee"]),
+        "c1_25": nb(c["c1_2025"]["gt"], 0), "c1_25_an": str(c["c1_2025"]["annee"]),
+        "dec_moins": nb(c["dec"]["moins"]["total"], 0), "dec_plus": nb(c["dec"]["plus"]["total"], 0),
+        "dec_plus_indiv": nb(c["dec"]["plus"]["individuelles"], 0), "dec_plus_ferm": nb(c["dec"]["plus"]["fermeture"], 0),
+        "div30_34": nb(c["tr"]["2025"]["div_30"] - c["tr"]["2025"]["div_35"]),
+        "m26": nb(c["t26"]["maths"]), "pc26": nb(c["t26"]["pc"]), "lp26": nb(c["t26"]["lp"]),
+        "m26_postes": nb(c["p26"]["maths"], 0), "m25_postes": nb(c["detail"]["2025"]["Capes / mathématiques"]["postes"], 0), "pc26_postes": nb(c["p26"]["pc"], 0), "lp26_postes": nb(c["p26"]["lp"], 0),
         "e4_17": nb(c["e4"]["credits_2017"]), "e4_27": nb(c["e4"]["credits_2027"], 0), "e4_nom": nb(100 * c["e4_nom"], 0),
         "e4_prix": nb(100 * c["e4_prix"], 0), "e4_prix_an": str(c["p_dern"]), "e4_reel": nb(100 * c["e4_reel"], 0),
         "e4_el": nb(100 * c["e4_el"], 0), "e4_el_baisse": nb(-100 * c["e4_el"], 0), "e4_par_el": nb(100 * c["e4_par_el"], 0),
@@ -283,10 +307,8 @@ def affichage(c):
         "m23": nb(c["maths"]["2023"]), "m24": nb(c["maths"]["2024"]), "m25": nb(c["maths"]["2025"]),
         "pc23": nb(c["pc"]["2023"]), "pc24": nb(c["pc"]["2024"]), "pc25": nb(c["pc"]["2025"]),
         "agm23": nb(c["agreg_maths"]["2023"]),
-        "nat15": nb(nat[2015]), "nat22": nb(nat[2022]), "nat25": nb(nat[max(nat)]), "nat_max": nb(nat[nat_max_an]),
-        "nat_max_an": str(nat_max_an), "nat05": nb(nat[2005]), "nat10": nb(nat[2010]),
-        "e7": nb(c["e7"]["enonce_2026"]), "e7_25": nb(c["e7"]["enonce_2025"]), "e7_base": nb(c["enonce_base_depp"]),
-        "e7_ecart": nb(c["ecart_base"]),
+        "nat15": nb(nat[2015]), "nat22": nb(nat[2022]), "nat25": nb(nat[max(nat)]),
+        "e7": nb(c["e7"]["enonce_2026"]), "e7_25": nb(c["e7"]["enonce_2025"]),
         "contr_debut": nb(c["contr"][min(c["contr"])]), "contr_fin": nb(c["contr"][max(c["contr"])]),
         "contr_a0": str(min(c["contr"])), "contr_a1": str(max(c["contr"])),
         # académies
@@ -327,7 +349,7 @@ FIG = {
         titre="Une heure de cours sur dix n'a pas lieu au lycée : pourquoi ?",
         source="DEPP, enquête sur le temps d'enseignement non assuré (Note d'Information 26-14), établissements publics, 2024-2025",
         note="En % des heures d'enseignement prévues. Absences individuelles : maladie, congés, grèves, convenances. Enquête déclarative par échantillon.",
-        montre="Au lycée général et technologique, plus de la moitié des heures perdues en 2024-2025 tient à l'organisation (fermetures pour examens, enseignants mobilisés par les examens ou les commissions, formation) ; au collège, les deux parts s'équilibrent."),
+        montre="Au lycée général et technologique, en 2024-2025, les fermetures (surtout pour les examens), les enseignants mobilisés par les examens ou les commissions et la formation pèsent ensemble plus que les absences individuelles des enseignants ; au collège, les deux parts s'équilibrent."),
     "classes": dict(
         titre="Élèves par classe au lycée général et technologique, 1994-{ed_an}",
         source="DEPP, Repères et références statistiques 2026, fiches 2.05 et 2.06 (public et privé sous contrat)",
@@ -337,7 +359,7 @@ FIG = {
         titre="Part des postes pourvus aux concours externes d'enseignants, 2008-2025",
         source="DEPP, Repères et références statistiques 2026, fiches 9.27 et 9.28 (concours externes, enseignement public)",
         note="Admis rapportés aux postes offerts. Ensemble des concours externes d'enseignants du second degré : années publiées seulement.",
-        montre="Les CAPES de mathématiques et de physique-chimie restent sous quatre postes pourvus sur cinq aux trois dernières sessions, quand l'ensemble des concours se redresse."),
+        montre="De 2023 à 2025, les CAPES de mathématiques et de physique-chimie sont restés sous quatre postes pourvus sur cinq, quand l'ensemble des concours se redressait ; la session double de 2026, hors de cette série, les a portés au-delà de neuf sur dix."),
 }
 
 
@@ -477,10 +499,15 @@ def csv_texte(c):
             w.writerow(["couverture_concours", nom, a, v, "%"])
     for a, v in sorted(c["nat"].items()):
         w.writerow(["couverture_concours", "externes_second_degre_ensemble", a, v, "%"])
+    for k, nom in (("maths", "capes_mathematiques"), ("pc", "capes_physique_chimie"), ("lp", "caplp_mathematiques_physique_chimie")):
+        w.writerow(["couverture_concours_2026_double_session", nom, "2026", "%.1f" % c["t26"][k], "% (admis / postes, bac+3 et bac+5, ministère)"])
+    for k in ("moins", "plus"):
+        w.writerow(["heures_non_assurees_deciles_2024_2025", "etablissements_" + k + "_concernes", "total", c["dec"][k]["total"], "% des heures prevues (second degre public)"])
     for a, v in sorted(c["contr"].items()):
         w.writerow(["contractuels", "part_enseignants_second_degre_public", a, v, "%"])
     for a, v in sorted(c["c1"].items()):
         w.writerow(["depense_par_lyceen_gt", "euros_2024", a, v, "EUR (prix 2024)"])
+    w.writerow(["depense_par_lyceen_gt", "euros_2025_provisoire", c["c1_2025"]["annee"], c["c1_2025"]["gt"], "EUR (prix 2025, NI 26-42)"])
     for a, v in sorted(c["c3"].items()):
         w.writerow(["ocde_depense_publique_par_eleve_general", "France", a, v["FRA"], "USD PPA"])
         w.writerow(["ocde_depense_publique_par_eleve_general", "OCDE", a, v["OECD"], "USD PPA"])
@@ -511,7 +538,10 @@ def main() -> int:
                         "source_calcul": "test décisif de l'auteur (protocole écrit avant calcul) ; extrait figé scripts/sources_lycee_professeurs/ (SHA256SUMS)"},
                "classes": {str(a): v for a, v in sorted(c["ed"].items())},
                "heures_non_assurees": {"2023-2024": c["h3"], "2024-2025": c["h4"]},
-               "concours": {"capes_mathematiques": c["maths"], "capes_physique_chimie": c["pc"], "ensemble_externes": {str(a): v for a, v in c["nat"].items()}},
+               "concours": {"capes_mathematiques": c["maths"], "capes_physique_chimie": c["pc"], "ensemble_externes": {str(a): v for a, v in c["nat"].items()},
+                            "session_2026_ministere": {k: {"postes": c["p26"][k], "taux": round(c["t26"][k], 1)} for k in c["t26"]}},
+               "heures_non_assurees_deciles_2024_2025": c["dec"],
+               "depense_2025_provisoire": c["c1_2025"], "ocde_depp": c["ocde_depp"],
                "affichage": A}
     if OUT_DATA.exists():
         try:

@@ -930,6 +930,17 @@
     "2022-2023": 11,
     "2024-2025": 9.8
    }
+  },
+  "deciles": {
+   "champ": "second degré public, France hors Mayotte, 2024-2025 (NI 26-14, figure 4 web), entiers",
+   "moins": {
+    "total": 3
+   },
+   "plus": {
+    "total": 19,
+    "fermeture": 5,
+    "individuelles": 8
+   }
   }
  },
  "c1": {
@@ -1024,5 +1035,54 @@
    "snes": 53,
    "snpden": 65
   }
+ },
+ "concours_2026": {
+  "source": "ministère, devenirenseignant.gouv.fr, données statistiques des concours de la session 2026",
+  "capes": {
+   "Mathématiques": {
+    "bac+3": {
+     "postes": 700,
+     "admis": 700
+    },
+    "bac+5": {
+     "postes": 730,
+     "admis": 632
+    }
+   },
+   "Physique - chimie": {
+    "bac+3": {
+     "postes": 275,
+     "admis": 269
+    },
+    "bac+5": {
+     "postes": 275,
+     "admis": 269
+    }
+   }
+  },
+  "caplp": {
+   "Mathématiques - physique chimie": {
+    "bac+3": {
+     "postes": 95,
+     "admis": 42
+    },
+    "bac+5": {
+     "postes": 95,
+     "admis": 80
+    }
+   }
+  }
+ },
+ "c1_2025": {
+  "annee": 2025,
+  "statut": "provisoire, euros de 2025 (NI 26-42)",
+  "gt": 13200,
+  "pro": 14590
+ },
+ "ocde_depp": {
+  "annee": 2023,
+  "france": 19530,
+  "moyenne_ocde": 15290,
+  "champ": "second cycle du secondaire, dépense au titre des établissements, toutes sources (NI 26-42, figure 8bis 4)"
  }
 }

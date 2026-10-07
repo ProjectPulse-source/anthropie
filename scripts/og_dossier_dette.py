@@ -595,13 +595,13 @@ def carte_inflation() -> None:
 
 def figure_lycee_mini(d: ImageDraw.ImageDraw, h: dict) -> None:
     """Ressource « Manque-t-il des professeurs au lycée ? » (07/10/2026) : la figure signature réduite — heures de cours
-    non assurées au lycée GT, 2024-2025, absences individuelles (orange) contre organisation (bleu)."""
+    non assurées au lycée GT, 2024-2025, absences individuelles (orange) contre fermetures, examens et formation (bleu)."""
     x0, x1, top = 660, 1126, 196
     vmax = 12.0
     sx = lambda v: (x1 - x0) * v / vmax
     org = h["fermeture"] + h["systeme"] + h["formation"]
     fa, fb = font("inter", 20, 500), font("inter", 26, 600)
-    for k, (lib, v, col) in enumerate((("Absences individuelles", h["individuelles"], C2), ("Organisation : examens, fermetures, formation", org, C1))):
+    for k, (lib, v, col) in enumerate((("Absences individuelles", h["individuelles"], C2), ("Fermetures, examens et commissions, formation", org, C1))):
         y = top + k * 110
         d.text((x0, y), lib, font=fa, fill=URL_GREY)
         d.rectangle([x0, y + 34, x0 + sx(v), y + 84], fill=col)
@@ -613,7 +613,7 @@ def figure_lycee_mini(d: ImageDraw.ImageDraw, h: dict) -> None:
 
 def carte_lycee() -> None:
     """Ressource « Manque-t-il des professeurs au lycée ? » (07/10/2026). Chiffres lus dans le jeu publié ; le contraste
-    annoncé (l'organisation pèse plus que les absences individuelles) est contrôlé ici. Français seulement."""
+    annoncé (fermetures, examens et formation pèsent plus que les absences individuelles) est contrôlé ici. Français seulement."""
     f = ROOT / "data" / "lycee_professeurs.json"
     if not f.is_file():
         fail("jeu de données absent : %s — lancer scripts/update_lycee_professeurs.py d'abord" % f)
@@ -628,7 +628,7 @@ def carte_lycee() -> None:
           "DEPP · calcul de l'auteur · CC BY 4.0",
           "stephane-lalut.com/manque-t-il-des-professeurs/",
           lambda d: figure_lycee_mini(d, h),
-          [(C2, "Absences individuelles : %s %%" % A["h_indiv"]), (C1, "Organisation : %s %%" % A["h_org"])])
+          [(C2, "Absences individuelles : %s %%" % A["h_indiv"]), (C1, "Fermetures, examens, formation : %s %%" % A["h_org"])])
 
 
 def main() -> int:

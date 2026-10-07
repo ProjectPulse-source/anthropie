@@ -162,7 +162,44 @@
    "2023": 83.5,
    "2024": 85.8,
    "2025": 89.3
+  },
+  "session_2026_ministere": {
+   "maths": {
+    "postes": 1430,
+    "taux": 93.1
+   },
+   "pc": {
+    "postes": 550,
+    "taux": 97.8
+   },
+   "lp": {
+    "postes": 190,
+    "taux": 64.2
+   }
   }
+ },
+ "heures_non_assurees_deciles_2024_2025": {
+  "champ": "second degré public, France hors Mayotte, 2024-2025 (NI 26-14, figure 4 web), entiers",
+  "moins": {
+   "total": 3
+  },
+  "plus": {
+   "total": 19,
+   "fermeture": 5,
+   "individuelles": 8
+  }
+ },
+ "depense_2025_provisoire": {
+  "annee": 2025,
+  "statut": "provisoire, euros de 2025 (NI 26-42)",
+  "gt": 13200,
+  "pro": 14590
+ },
+ "ocde_depp": {
+  "annee": 2023,
+  "france": 19530,
+  "moyenne_ocde": 15290,
+  "champ": "second cycle du secondaire, dépense au titre des établissements, toutes sources (NI 26-42, figure 8bis 4)"
  },
  "affichage": {
   "h_total": "10,4",
@@ -178,6 +215,7 @@
   "h_form_pt": "1,4 point",
   "h_nr": "7,1",
   "h_org": "6,6",
+  "h_org_pt": "6,6 points",
   "h_org_part": "63",
   "h3_total": "10",
   "h3_org": "6",
@@ -248,8 +286,23 @@
   "c3_fra": "16 674",
   "c3_oecd": "12 279",
   "c3_pct": "36",
-  "c3_pct_debut": "58",
   "c3_debut": "2012",
+  "ocde_depp_pct": "27,7",
+  "ocde_depp_an": "2023",
+  "c1_25": "13 200",
+  "c1_25_an": "2025",
+  "dec_moins": "3",
+  "dec_plus": "19",
+  "dec_plus_indiv": "8",
+  "dec_plus_ferm": "5",
+  "div30_34": "47,6",
+  "m26": "93,1",
+  "pc26": "97,8",
+  "lp26": "64,2",
+  "m26_postes": "1 430",
+  "m25_postes": "1 142",
+  "pc26_postes": "550",
+  "lp26_postes": "190",
   "e4_17": "48,8",
   "e4_27": "64",
   "e4_nom": "31",
@@ -269,14 +322,8 @@
   "nat15": "86,7",
   "nat22": "78,7",
   "nat25": "89,3",
-  "nat_max": "93,5",
-  "nat_max_an": "2021",
-  "nat05": "98,8",
-  "nat10": "99,2",
   "e7": "96,1",
   "e7_25": "90,6",
-  "e7_base": "94,8",
-  "e7_ecart": "1,3",
   "contr_debut": "7,5",
   "contr_fin": "11,2",
   "contr_a0": "2015",

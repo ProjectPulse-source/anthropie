@@ -85,7 +85,16 @@ deux contre-expertises arbitrées, énoncés des acteurs relus à la source et v
   de 2) ; « education musicale », capitale non accentuée de la DEPP (`disc()`) ; « En trois phrases » qui en comptait
   deux ; « deux contre-expertises indépendantes » du protocole, inexact (une sur le protocole, l'autre sur le cahier
   des charges). Garde nouvelle « élèves moins nombreux en 2027 », mutation `eleves` vue mordre ; 38 gardes.
-- **Reste** : contre-expertise de la page construite (règle 12), registre des ressources, diffusion par lot.
+- **Contre-expertise de la page construite** (`PRO-20261007-160259`, arbitrage dans `D:\PRO\.claude\external-audits\ARBITRATIONS\`) :
+  deux publications parues avant la construction et manquées — CAPES 2026 détaillés (ministère : maths 93,1 %, PC 97,8 %,
+  CAPLP maths-PC 64,2 %) et NI 26-42 (dépense 2025 provisoire, 13 200 € ; écart OCDE selon la DEPP + 27,7 %) ; ajoutées
+  par l'extrait de recherche (témoins : totaux de section des concours, texte des notes). E/S relu « côté enseignant » ;
+  « 94,8 % » et « l'écart OCDE se resserre » retirés avec leurs gardes ; « organisation » sorti du texte et de la carte ;
+  encadré des déciles d'établissements (3 % / 19 %, NI 26-14) ; tableau des énoncés neutralisé (USL, ministère).
+  41 gardes ; mutations `concours26` et `ocde` (nouvelle forme) vues mordre. hugo 0, `check-all --ci` 0, liens 0.
+  Rendu 390 px non remesuré (texte seul, mise en page inchangée).
+- **Reste** : registre des ressources, diffusion par lot ; inscription de la page au module de mise à jour (point ouvert
+  de l'arbitrage) ; rendez-vous du 16/10 (bilan des recteurs).
 
 ### 2026-10-07 — FR↔EN sans décrochage : sélecteur de langue à repli, huit pages traduites, contre-expertise retenue ; POUSSÉ (`72f26e5`, `63cc811`), production vérifiée
 

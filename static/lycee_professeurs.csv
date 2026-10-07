@@ -262,6 +262,11 @@ couverture_concours,externes_second_degre_ensemble,2022,78.7,%
 couverture_concours,externes_second_degre_ensemble,2023,83.5,%
 couverture_concours,externes_second_degre_ensemble,2024,85.8,%
 couverture_concours,externes_second_degre_ensemble,2025,89.3,%
+couverture_concours_2026_double_session,capes_mathematiques,2026,93.1,"% (admis / postes, bac+3 et bac+5, ministère)"
+couverture_concours_2026_double_session,capes_physique_chimie,2026,97.8,"% (admis / postes, bac+3 et bac+5, ministère)"
+couverture_concours_2026_double_session,caplp_mathematiques_physique_chimie,2026,64.2,"% (admis / postes, bac+3 et bac+5, ministère)"
+heures_non_assurees_deciles_2024_2025,etablissements_moins_concernes,total,3,% des heures prevues (second degre public)
+heures_non_assurees_deciles_2024_2025,etablissements_plus_concernes,total,19,% des heures prevues (second degre public)
 contractuels,part_enseignants_second_degre_public,2015,7.5,%
 contractuels,part_enseignants_second_degre_public,2016,8.1,%
 contractuels,part_enseignants_second_degre_public,2017,8.9,%
@@ -281,6 +286,7 @@ depense_par_lyceen_gt,euros_2024,2015,13080.0,EUR (prix 2024)
 depense_par_lyceen_gt,euros_2024,2020,12470.0,EUR (prix 2024)
 depense_par_lyceen_gt,euros_2024,2023,12910.0,EUR (prix 2024)
 depense_par_lyceen_gt,euros_2024,2024,13020.0,EUR (prix 2024)
+depense_par_lyceen_gt,euros_2025_provisoire,2025,13200,"EUR (prix 2025, NI 26-42)"
 ocde_depense_publique_par_eleve_general,France,2012,11555,USD PPA
 ocde_depense_publique_par_eleve_general,OCDE,2012,7316,USD PPA
 ocde_depense_publique_par_eleve_general,France,2013,12031,USD PPA
