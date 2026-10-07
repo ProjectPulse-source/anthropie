@@ -18,6 +18,8 @@
        d'amazon.fr et les prix en euros : pointer vers amazon.com afficherait un
        prix EUR à côté d'une boutique en USD, c'est-à-dire un prix faux sous un
        bouton d'achat. L'édition est française et le bloc le dit.
+       Depuis le 08/10/2026, ne vaut que pour un livre doté d'une édition anglaise :
+       un livre seulement français s'annonce en une ligne (voir plus bas).
 
        Échoue bruyamment si le slug ne désigne aucune fiche : un bloc muet en
        fin de page passerait inaperçu à la relecture. */ -}}
@@ -76,6 +78,14 @@
 {{- /* Et le lecteur le lit AVANT de cliquer (arbitrage Architecture_Dette-02, B et D : la mention visible compte
        plus que l'attribut). Seul cas présent : livre français sur une page anglaise. */ -}}
 {{- $mention := cond (and (ne $livre.Lang .Page.Lang) (eq $livre.Lang "fr")) " (in French)" "" -}}
+{{- /* LIVRE FRANÇAIS SUR UNE PAGE ANGLAISE (auteur, 08/10/2026) : une ligne discrète vers la fiche, sans couverture, sans
+       prix ni bouton d'achat. Un lecteur anglophone ne peut presque pas acheter un livre en français ; le bloc d'achat ne
+       vendait rien et donnait un signal commercial là où la page établit sa crédibilité (même règle que « la langue
+       gouverne » en publicité). La fiche du livre garde prix et liens. Revient au bloc complet dès qu'une édition
+       anglaise existe (fiche en `en`). L'argument propre à la page (.Inner) n'est pas affiché. */ -}}
+{{- if and $en (eq $livre.Lang "fr") }}
+<p class="appel-livre-ligne"><span class="appel-livre__sur">{{ with .Get "sur" }}{{ . }}{{ else }}{{ $T.sur }}{{ end }}</span> <a href="{{ $livre.RelPermalink }}"{{ $hl | safeHTMLAttr }}><cite>{{ partial "fr-typo.html" $livre.Title }}</cite>, the author's book, in French: contents, excerpts and reviews&nbsp;→</a></p>
+{{- else }}
 <aside class="appel-livre">
   {{ partial "book-cover.html" (dict "slug" $slug "alt" (printf "Couverture — %s" $livre.Title) "wrapClass" "appel-livre__cover-wrap" "class" "appel-livre__cover" "sizes" "150px" "lang" $livre.Lang) }}
   <div class="appel-livre__corps">
@@ -149,3 +159,4 @@
     </div>
     {{- end }}
 </aside>
+{{- end }}
