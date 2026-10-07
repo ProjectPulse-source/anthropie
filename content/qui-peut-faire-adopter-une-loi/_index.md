@@ -24,6 +24,8 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
     - "https://www.legifrance.gouv.fr/constitution"
   mots: ["loi", "proposition de loi", "projet de loi", "Parlement", "article 49.3", "article 45", "Assemblée nationale", "Sénat", "promesses"]
   fichiers: ["promesses_adopter.csv", "promesses_adopter.json"]
+  doi: "10.5281/zenodo.23212665"
+  apropos: "promesses électorales et institutions politiques françaises"
 faq:
   - question: "Qui peut proposer une loi en France ?"
     answer: "Selon l'article 39 de la Constitution, « {ado.cit_art39} » Un texte du Gouvernement est un projet de loi ; un texte d'un député ou d'un sénateur est une proposition de loi. Dans le champ étudié, {ado.P16} des {ado.N16} lois promulguées sous la XVIe législature étaient issues d'une proposition, {ado.G16} d'un projet."
@@ -133,7 +135,7 @@ Cette page dit qui dépose les lois, combien de propositions arrivent en séance
 
 **Journal officiel**, données de la DILA&nbsp;; **Constitution**, art.&nbsp;24, 39, 45, 48 et 49, lus sur Légifrance (API).
 
-Les chiffres, les citations, les contrôles et les figures sont produits par un script unique&nbsp;; chaque citation est vérifiée mot pour mot dans son document, et aucun chiffre de cette page n'est saisi à la main. **Télécharger les données** (licence CC BY 4.0)&nbsp;: [CSV](/promesses_adopter.csv), en format long&nbsp;; [JSON](/promesses_adopter.json), avec les définitions et le compte rendu des contrôles.
+Les chiffres, les citations, les contrôles et les figures sont produits par un script unique&nbsp;; chaque citation est vérifiée mot pour mot dans son document, et aucun chiffre de cette page n'est saisi à la main. **Télécharger les données** (licence CC BY 4.0)&nbsp;: [CSV](/promesses_adopter.csv), en format long&nbsp;; [JSON](/promesses_adopter.json), avec les définitions et le compte rendu des contrôles. Ce jeu est aussi archivé sur Zenodo, avec les six autres de la même série et leur note de méthode, sous un identifiant permanent à citer&nbsp;: [doi:10.5281/zenodo.23212665](https://doi.org/10.5281/zenodo.23212665).
 
 {{< reutiliser figures="figures_adopter" jeu="promesses_adopter" sources="Assemblée nationale, Sénat (Dosleg), Journal officiel, Légifrance" donnees="L'origine des lois promulguées par législature et par session, les propositions de loi déposées à l'Assemblée et restées sans examen en séance, et les engagements de responsabilité de l'article 49, alinéa 3 ; le même contenu existe en CSV, en format long, lisible dans un tableur." >}}
 Dans le champ étudié (hors traités, lois de finances, de financement de la sécurité sociale et organiques), {{< ado-val "P14" >}} des {{< ado-val "N14" >}} lois promulguées sous la XIVe législature sont d'origine parlementaire, {{< ado-val "P15" >}} sur {{< ado-val "N15" >}} sous la XVe et {{< ado-val "P16" >}} sur {{< ado-val "N16" >}} sous la XVIe&nbsp;; c'est l'origine au dépôt, non l'influence. Plus de la moitié des propositions de loi ordinaires déposées à l'Assemblée restent sans examen en séance observé avant la fin de la législature, même sous la borne du pire cas. Le Gouvernement a engagé sa responsabilité sur un texte {{< ado-val "E16" >}} fois sous la XVIe législature, dont {{< ado-val "Efin16" >}} sur des projets de loi de finances ou de financement de la sécurité sociale.

@@ -32,6 +32,7 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html) ; jetons résolu
     - "https://data-explorer.oecd.org/"
   mots: ["lycée", "professeurs", "enseignants", "concours", "CAPES", "taille des classes", "remplacement", "heures non assurées", "DEPP", "éducation"]
   fichiers: ["lycee_professeurs.csv", "lycee_professeurs.json"]
+  apropos: "professeurs du second degré et lycée"
 faq:
   - question: "Manque-t-il des professeurs au lycée ?"
     answer: "Aucune statistique publique ne mesure le besoin d'enseignants. Ce qu'elles mesurent dit plusieurs choses à la fois : les concours de mathématiques et de physique-chimie restent sous quatre postes pourvus sur cinq ({lyc.m25} % et {lyc.pc25} % en 2025), alors que l'ensemble des concours externes se redresse ; la part des contractuels parmi les enseignants du second degré public est passée de {lyc.contr_debut} % à {lyc.contr_fin} % ; une heure de cours sur {lyc.h_un_sur_l} n'a pas lieu au lycée général et technologique."

@@ -30,6 +30,8 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
     - "https://single-market-scoreboard.ec.europa.eu/enforcement-tools/transposition_en"
   mots: ["European Union", "Council of the European Union", "qualified majority", "unanimity", "EU competences", "TFEU", "transposition", "France", "promises"]
   fichiers: ["promesses_europe.csv", "promesses_europe.json"]
+  doi: "10.5281/zenodo.23212665"
+  apropos: "electoral promises and French political institutions"
 faq:
   - question: "Can France block a European law?"
     answer: "That depends on the voting rule the Treaty sets for the area. Under the ordinary legislative procedure, the Council acts by qualified majority: no Member State can block alone. Where the Treaty requires unanimity in the Council (indirect taxation, article 113 TFEU, or the multiannual financial framework, article 312), a single Member State can object. The TFEU contains {ue.n_plo} legal bases of the ordinary legislative procedure and {ue.n_una} legal bases where the Council acts unanimously; these numbers measure neither the weight of the areas nor how often acts are adopted on each base."
@@ -138,7 +140,7 @@ This page shows what France can decide alone, what it decides within the Union a
 
 **European Commission**, Single Market and Competitiveness Scoreboard, transposition, edition as at {{< ue-val "tr_date" >}}.
 
-The figures, the checks and the chart are produced by a single script, which rereads the Treaty, the SWP dataset and the archived records, and refuses to write if a piece of data stops supporting a sentence. **Download the data** (CC BY 4.0 licence): [CSV](/promesses_europe.csv), long format; [JSON](/promesses_europe.json), with the legal bases, the explained gaps and the report of the checks.
+The figures, the checks and the chart are produced by a single script, which rereads the Treaty, the SWP dataset and the archived records, and refuses to write if a piece of data stops supporting a sentence. **Download the data** (CC BY 4.0 licence): [CSV](/promesses_europe.csv), long format; [JSON](/promesses_europe.json), with the legal bases, the explained gaps and the report of the checks. This dataset is also archived on Zenodo, with the six others of the same series and their methods note, under a permanent identifier for citation: [doi:10.5281/zenodo.23212665](https://doi.org/10.5281/zenodo.23212665).
 
 {{< reutiliser figures="figures_europe" jeu="promesses_europe" sources="TFEU, Council of the EU, SWP / GESIS and European Commission" donnees="The votes against, abstentions and non-participation of each Member State in the Council, the acts on which France did not vote in favour, the TFEU legal bases by decision rule and France's transposition indicators; the same content exists in CSV, long format, readable in a spreadsheet." >}}
 What France can decide in the European Union depends on the area: exclusive competence of the Union, shared with the Member States, or mere support, under articles 2 to 6 of the Treaty on the Functioning of the European Union. In the Council, the rule is most often qualified majority, sometimes unanimity. In the public votes of the Council on legislative acts, from {{< ue-val "debut" >}} to {{< ue-val "fin" >}}, France voted against {{< ue-val "fr_contre" >}} and abstained {{< ue-val "fr_abst" >}}; a vote in favour does not say what it obtained or gave up in the negotiation.

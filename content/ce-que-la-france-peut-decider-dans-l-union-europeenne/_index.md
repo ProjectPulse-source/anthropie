@@ -25,6 +25,8 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
     - "https://single-market-scoreboard.ec.europa.eu/enforcement-tools/transposition_en"
   mots: ["Union européenne", "Conseil de l'Union européenne", "majorité qualifiée", "unanimité", "compétences de l'Union", "TFUE", "transposition", "promesses"]
   fichiers: ["promesses_europe.csv", "promesses_europe.json"]
+  doi: "10.5281/zenodo.23212665"
+  apropos: "promesses électorales et institutions politiques françaises"
 faq:
   - question: "La France peut-elle bloquer une loi européenne ?"
     answer: "Cela dépend de la règle de vote que fixe le traité pour la matière. Dans la procédure législative ordinaire, le Conseil statue à la majorité qualifiée : un État seul ne bloque pas. Là où le traité exige l'unanimité au Conseil (la fiscalité indirecte, à l'article 113 du TFUE, ou le cadre financier pluriannuel, à l'article 312), un seul État peut s'opposer. Le relevé du TFUE compte {ue.n_plo} bases de la procédure législative ordinaire et {ue.n_una} bases où le Conseil statue à l'unanimité ; ce nombre ne mesure pas le poids des matières."
@@ -133,7 +135,7 @@ Cette page montre ce que la France peut décider seule, ce qu'elle décide dans 
 
 **Commission européenne**, tableau d'affichage du marché unique et de la compétitivité, transposition, édition arrêtée au {{< ue-val "tr_date" >}}.
 
-Les chiffres, les contrôles et la figure sont produits par un script unique, qui relit le traité, le jeu SWP et les relevés archivés, et refuse d'écrire si une donnée cesse de soutenir une phrase. **Télécharger les données** (licence CC BY 4.0)&nbsp;: [CSV](/promesses_europe.csv), en format long&nbsp;; [JSON](/promesses_europe.json), avec les bases juridiques, les écarts expliqués et le compte rendu des contrôles.
+Les chiffres, les contrôles et la figure sont produits par un script unique, qui relit le traité, le jeu SWP et les relevés archivés, et refuse d'écrire si une donnée cesse de soutenir une phrase. **Télécharger les données** (licence CC BY 4.0)&nbsp;: [CSV](/promesses_europe.csv), en format long&nbsp;; [JSON](/promesses_europe.json), avec les bases juridiques, les écarts expliqués et le compte rendu des contrôles. Ce jeu est aussi archivé sur Zenodo, avec les six autres de la même série et leur note de méthode, sous un identifiant permanent à citer&nbsp;: [doi:10.5281/zenodo.23212665](https://doi.org/10.5281/zenodo.23212665).
 
 {{< reutiliser figures="figures_europe" jeu="promesses_europe" sources="TFUE, Conseil de l'UE, SWP / GESIS et Commission" donnees="Les votes contre, abstentions et non-participations de chaque État membre au Conseil, les actes où la France n'a pas voté pour, les bases juridiques du TFUE par règle de décision et les indicateurs de transposition de la France ; le même contenu existe en CSV, en format long, lisible dans un tableur." >}}
 Ce que la France peut décider dans l'Union dépend de la matière&nbsp;: compétence exclusive de l'Union, partagée avec les États, ou simple appui, selon les articles&nbsp;2 à 6 du traité sur le fonctionnement de l'Union européenne. Au Conseil, la règle est le plus souvent la majorité qualifiée, parfois l'unanimité. Sur les votes publics du Conseil sur des actes législatifs, du {{< ue-val "debut" >}} au {{< ue-val "fin" >}}, la France a voté contre {{< ue-val "fr_contre" >}} et s'est abstenue {{< ue-val "fr_abst" >}}&nbsp;; un vote pour ne dit pas ce qu'elle a obtenu ou cédé dans la négociation.

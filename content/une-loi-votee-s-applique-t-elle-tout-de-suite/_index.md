@@ -23,6 +23,8 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
     - "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006419280"
   mots: ["application des lois", "décrets d'application", "mesures réglementaires", "Sénat", "Secrétariat général du Gouvernement", "promesses"]
   fichiers: ["promesses_appliquer.csv", "promesses_appliquer.json"]
+  doi: "10.5281/zenodo.23212665"
+  apropos: "promesses électorales et institutions politiques françaises"
 faq:
   - question: "Une loi s'applique-t-elle dès sa publication au Journal officiel ?"
     answer: "Pas du seul fait du vote : « {app.cit_art10} » (Constitution, art. 10). Une fois publiée, elle entre en vigueur à la date qu'elle fixe ou, à défaut, le lendemain de sa publication. Mais, selon l'article 1er du code civil, « {app.cit_cciv} » Une loi peut donc être en vigueur pour une part et attendre ses décrets et ses arrêtés pour une autre."
@@ -140,7 +142,7 @@ Cette page compte ce qu'une loi attend encore après son vote. Le livre suit neu
 
 **Constitution**, art.&nbsp;10 et 61, et **code civil**, art.&nbsp;1er, lus sur Légifrance (API).
 
-Les chiffres, les citations, les contrôles et les figures sont produits par un script unique&nbsp;; chaque citation est vérifiée mot pour mot dans la page du document dont elle est tirée, et aucun chiffre de cette page n'est saisi à la main. **Télécharger les données** (licence CC BY 4.0)&nbsp;: [CSV](/promesses_appliquer.csv), en format long&nbsp;; [JSON](/promesses_appliquer.json), avec les définitions et le compte rendu des contrôles.
+Les chiffres, les citations, les contrôles et les figures sont produits par un script unique&nbsp;; chaque citation est vérifiée mot pour mot dans la page du document dont elle est tirée, et aucun chiffre de cette page n'est saisi à la main. **Télécharger les données** (licence CC BY 4.0)&nbsp;: [CSV](/promesses_appliquer.csv), en format long&nbsp;; [JSON](/promesses_appliquer.json), avec les définitions et le compte rendu des contrôles. Ce jeu est aussi archivé sur Zenodo, avec les six autres de la même série et leur note de méthode, sous un identifiant permanent à citer&nbsp;: [doi:10.5281/zenodo.23212665](https://doi.org/10.5281/zenodo.23212665).
 
 {{< reutiliser figures="figures_appliquer" jeu="promesses_appliquer" sources="Assemblée nationale et LexImpact (données DILA), Sénat, SGG, Légifrance" donnees="L'état des mesures d'application par session de la loi, les lois d'application directe selon les deux sources et les taux publiés par le Sénat depuis 2002-2003 ; le même contenu existe en CSV, en format long, lisible dans un tableur." >}}
 Au {{< app-val "releve" >}}, sur les {{< app-val "nmes" >}} mesures d'application recensées pour les lois promulguées d'octobre 2017 à septembre 2025, {{< app-val "A" >}} sont en attente. Pour deux sessions, les rapports du Sénat publient son taux d'application et rapportent un taux différent calculé par le Secrétariat général du Gouvernement, selon d'autres conventions de calcul&nbsp;; la série du Sénat repose sur {{< app-val "nsegments" >}} définitions successives depuis 2002-2003.

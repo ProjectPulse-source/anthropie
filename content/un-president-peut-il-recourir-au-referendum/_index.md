@@ -23,6 +23,8 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
     - "https://www.legifrance.gouv.fr/loda/id/LEGITEXT000006071194"
   mots: ["référendum", "article 11", "article 89", "référendum d'initiative partagée", "Conseil constitutionnel", "Ve République", "promesses"]
   fichiers: ["promesses_referendum.csv", "promesses_referendum.json"]
+  doi: "10.5281/zenodo.23212665"
+  apropos: "promesses électorales et institutions politiques françaises"
 faq:
   - question: "Le président de la République peut-il organiser un référendum quand il le veut ?"
     answer: "Non, pas seul et pas sur tout sujet. Selon l'article 11 de la Constitution, il peut soumettre au référendum un projet de loi « {ref.cit_art11_1} », et seulement un projet « {ref.cit_art11_objet} ». La révision de la Constitution suit l'article 89, qui lui laisse le choix entre le référendum et le Parlement réuni en Congrès."
@@ -130,7 +132,7 @@ Cette page montre que le référendum tranche un texte, pas ses suites. Le livre
 
 **Journal officiel** (Légifrance), décrets de soumission au référendum et lois adoptées par référendum&nbsp;; **Assemblée nationale**, données ouvertes des législatures XV à XVII (dépôts au titre de l'article&nbsp;11).
 
-Les chiffres, les contrôles et les figures sont produits par un script unique, qui relit les décisions et les articles archivés et refuse d'écrire si une donnée cesse de soutenir une phrase&nbsp;; aucun chiffre de cette page n'est saisi à la main. **Télécharger les données** (licence CC BY 4.0)&nbsp;: [CSV](/promesses_referendum.csv), en format long&nbsp;; [JSON](/promesses_referendum.json), avec les identifiants des décisions et le compte rendu des contrôles.
+Les chiffres, les contrôles et les figures sont produits par un script unique, qui relit les décisions et les articles archivés et refuse d'écrire si une donnée cesse de soutenir une phrase&nbsp;; aucun chiffre de cette page n'est saisi à la main. **Télécharger les données** (licence CC BY 4.0)&nbsp;: [CSV](/promesses_referendum.csv), en format long&nbsp;; [JSON](/promesses_referendum.json), avec les identifiants des décisions et le compte rendu des contrôles. Ce jeu est aussi archivé sur Zenodo, avec les six autres de la même série et leur note de méthode, sous un identifiant permanent à citer&nbsp;: [doi:10.5281/zenodo.23212665](https://doi.org/10.5281/zenodo.23212665).
 
 {{< reutiliser figures="figures_referendum" jeu="promesses_referendum" sources="Conseil constitutionnel et Journal officiel" donnees="Le registre des référendums nationaux (inscrits, votants, exprimés, oui, non, article, issue), les décisions sur le référendum d'initiative partagée et les dépôts sans décision ; le même contenu existe en CSV, en format long, lisible dans un tableur." >}}
 Un président peut soumettre un projet de loi au référendum, sur proposition du Gouvernement pendant la durée des sessions ou sur proposition conjointe des deux assemblées, et sur les sujets que fixe l'article&nbsp;11 de la Constitution. Du 4&nbsp;octobre 1958 au {{< ref-val "arrete" >}}, {{< ref-val "N" >}} référendums nationaux ont été organisés&nbsp;; {{< ref-val "A" >}} ont adopté le texte soumis, {{< ref-val "R" >}} l'ont rejeté, et le dernier date du {{< ref-val "dernier" >}}. Le référendum d'initiative partagée, ouvert en {{< ref-val "rip_depuis" >}}, n'a encore conduit à aucun scrutin.

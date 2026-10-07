@@ -28,6 +28,8 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
     - "https://www.legifrance.gouv.fr/loda/id/LEGITEXT000006071194"
   mots: ["referendum", "France", "article 11", "article 89", "shared-initiative referendum", "Conseil constitutionnel", "Fifth Republic", "promises"]
   fichiers: ["promesses_referendum.csv", "promesses_referendum.json"]
+  doi: "10.5281/zenodo.23212665"
+  apropos: "electoral promises and French political institutions"
 faq:
   - question: "Can the French president hold a referendum whenever he wants?"
     answer: "No, not alone and not on any subject. Under article 11 of the Constitution, he may submit to a referendum a Government Bill, \"{ref.cit_art11_1}\", and only a Bill \"{ref.cit_art11_objet}\". Amendments to the Constitution follow article 89, which leaves him the choice between a referendum and Parliament convened in Congress."
@@ -135,7 +137,7 @@ This page shows that a referendum settles a text, not what follows from it. The 
 
 **Journal officiel** (Légifrance), decrees putting texts to a referendum and acts adopted by referendum; **National Assembly**, open data of the 15th to 17th legislatures (bills under article 11), and Congress vote of 4 February 2008.
 
-The figures, the checks and the charts are produced by a single script, which rereads the archived decisions and articles and refuses to write if a piece of data stops supporting a sentence; no figure on this page is typed by hand. **Download the data** (CC BY 4.0 licence): [CSV](/promesses_referendum.csv), long format; [JSON](/promesses_referendum.json), with the identifiers of the decisions and the report of the checks.
+The figures, the checks and the charts are produced by a single script, which rereads the archived decisions and articles and refuses to write if a piece of data stops supporting a sentence; no figure on this page is typed by hand. **Download the data** (CC BY 4.0 licence): [CSV](/promesses_referendum.csv), long format; [JSON](/promesses_referendum.json), with the identifiers of the decisions and the report of the checks. This dataset is also archived on Zenodo, with the six others of the same series and their methods note, under a permanent identifier for citation: [doi:10.5281/zenodo.23212665](https://doi.org/10.5281/zenodo.23212665).
 
 {{< reutiliser figures="figures_referendum" jeu="promesses_referendum" sources="Conseil constitutionnel and Journal officiel" donnees="The register of national referendums (registered voters, voters, valid votes, yes, no, article, outcome), the decisions on the shared-initiative referendum and the bills with no decision; the same content exists in CSV, long format, readable in a spreadsheet." >}}
 A French president may put a Government Bill to a referendum, on a recommendation from the Government when Parliament is in session or on a joint motion of the two Houses, and on the subjects set by article 11 of the Constitution. From 4 October 1958 to {{< ref-val "arrete" >}}, {{< ref-val "N" >}} national referendums were held; the proposed text was approved in {{< ref-val "A" >}} and rejected in {{< ref-val "R" >}}, and the last one took place on {{< ref-val "dernier" >}}. The shared-initiative referendum, open since {{< ref-val "rip_depuis" >}}, has not yet led to any vote.

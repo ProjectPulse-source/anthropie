@@ -15,6 +15,9 @@
          fichiers: ["qui_paie_donnees.csv", "qui_paie_donnees.json"]   # publiés à la racine de static/
          citation: ["https://doi.org/…"]  # facultatif : article à citer avec le jeu (DOI de l'AWP qui en expose la
                                           # méthode) ; schema.org Dataset.citation, lu par Google Dataset Search
+         doi: "10.5281/zenodo.…"         # facultatif : dépôt archivé du jeu, émis en Dataset.identifier (07/10/2026)
+         apropos: "…"                     # facultatif : sujet du jeu ; à défaut « dette publique » (Wikidata
+                                          # Q3024794), qui ne vaut que pour les jeux de la dette
 
        Date : `releve_le` du jeu (racine, puis bloc affichage), à défaut `_genere_le`. Aucune date saisie ici. */ -}}
 {{- $p := .Params.dataset -}}
@@ -58,12 +61,13 @@
     "dateModified" $date
     "temporalCoverage" (partial "desc-figures.html" (dict "text" $p.couverture_temporelle) | htmlUnescape)
     "spatialCoverage" (dict "@type" "Place" "name" $p.couverture_spatiale)
-    "about" (dict "@type" "Thing" "name" "dette publique" "sameAs" "https://www.wikidata.org/wiki/Q3024794")
+    "about" (cond (isset $p "apropos") (dict "@type" "Thing" "name" $p.apropos) (dict "@type" "Thing" "name" "dette publique" "sameAs" "https://www.wikidata.org/wiki/Q3024794"))
     "isBasedOn" $p.sources
     "variableMeasured" $vars
     "keywords" $p.mots
     "distribution" $dist -}}
 {{- with $p.citation }}{{ $ds = merge $ds (dict "citation" .) }}{{ end -}}
+{{- with $p.doi }}{{ $ds = merge $ds (dict "identifier" (printf "https://doi.org/%s" .)) }}{{ end -}}
 <script type="application/ld+json">
 {{ $ds | jsonify (dict "indent" "  ") | safeJS }}
 </script>
