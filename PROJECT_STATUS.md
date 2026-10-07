@@ -103,7 +103,9 @@ deux contre-expertises arbitrées, énoncés des acteurs relus à la source et v
   signale les six éditions, dont la session 2026 des concours manquée le 07/10.
 - **Encadré du livre** (pièce entrante arbitrée le 07/10) : `appel-livre offert="avant"` sur cette page — exemplaire
   offert en tête, achat en une ligne ; libellé « Exemplaire numérique de consultation offert » partout. hugo 0, check-all 0,
-  390 px sans débordement de contenu.
+  390 px sans débordement de contenu. **Généralisé le même jour à toutes les ressources** (auteur) : défaut d'`appel-livre`
+  sur toute page française dont le livre a une page au guichet (16 pages ; `offert="non"` rend l'ancienne mise en page) ;
+  pages anglaises inchangées. hugo 0, check-all --ci 0, audit-liens 0.
 - **Reste** : registre des ressources, diffusion par lot ; rendez-vous du 16/10 (bilan des recteurs).
 
 ### 2026-10-07 — FR↔EN sans décrochage : sélecteur de langue à repli, huit pages traduites, contre-expertise retenue ; POUSSÉ (`72f26e5`, `63cc811`), production vérifiée

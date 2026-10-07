@@ -264,11 +264,12 @@ volume sur la librairie en ligne par le guichet `/ressources-offertes/`, et cré
 (presse, enseignement, recherche, responsables publics, associations). **Deux organes, un seul texte de publics**
 (`partials/consultation-publics.html`) :
 
-- page qui porte un bloc d'achat : un bandeau avec bouton, en pied du bloc, **dans `appel-livre`**, automatique dès que le livre a une page au
-  guichet (`consultation="non"` la retire) ;
-- page de débat public envoyée à des élus, syndicats ou journalistes : `appel-livre … offert="avant"` (auteur,
-  07/10/2026, page lycée) — l'exemplaire offert en tête, seul bouton plein, l'achat en une ligne discrète ;
-  « étudiants » n'est pas ajouté aux publics (coût par exemplaire, à expérimenter à part) ;
+- page qui porte un bloc d'achat : l'exemplaire **dans `appel-livre`**, automatique dès que le livre a une page au
+  guichet (`consultation="non"` le retire), sous la forme de l'encadré ci-dessous ;
+- **encadré « exemplaire offert en tête »** (auteur, 07/10/2026, modèle : page lycée, puis « à toutes les pages des
+  ressources ») : **défaut d'`appel-livre`** sur toute page française dont le livre a une page au guichet —
+  l'exemplaire offert en tête, seul bouton plein, l'achat en une ligne discrète ; `offert="non"` rend la mise en
+  page d'achat (bandeau de pied) ; « étudiants » n'est pas ajouté aux publics (coût par exemplaire, à expérimenter à part) ;
 - page sans bloc d'achat (notions, guides, corpus) : `{{< consultation slug="…" >}}` en fin de page ;
 - pages des enseignants : `exemplaire`, avec leur façade (couche pédagogique, points 5 et 7).
 

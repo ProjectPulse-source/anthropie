@@ -87,10 +87,14 @@
     <div class="appel-livre__argu">{{ .Inner | markdownify }}</div>
     {{- /* offert="avant" (auteur, 07/10/2026, page « Manque-t-il des professeurs au lycée ? ») : sur une page envoyée à
            des élus, des syndicats et des journalistes pendant un débat public, l'exemplaire offert passe en tête, seul
-           bouton plein ; l'achat reste, en une ligne discrète. Le bandeau de pied n'est alors pas répété. */ -}}
+           bouton plein ; l'achat reste, en une ligne discrète. Le bandeau de pied n'est alors pas répété.
+           Généralisé le même jour à toutes les ressources (auteur : « à toutes les pages des ressources ») : c'est le
+           défaut de toute page française dont le livre a une page au guichet. offert="non" rend la mise en page
+           d'achat ; consultation="non" retire l'exemplaire ; offert="avant" explicite échoue si la page n'y a pas droit. */ -}}
     {{- $guichet := site.GetPage (printf "/ressources-offertes/%s" $slug) -}}
-    {{- $offert := eq (.Get "offert") "avant" -}}
-    {{- if and $offert (or $en (not $guichet) (not $p.promo_slug)) -}}
+    {{- $eligible := and (not $en) $guichet $p.promo_slug (ne (.Get "consultation") "non") -}}
+    {{- $offert := and $eligible (ne (.Get "offert") "non") -}}
+    {{- if and (eq (.Get "offert") "avant") (not $eligible) -}}
       {{- errorf "appel-livre: offert=\"avant\" exige une page française et un livre doté d'une page au guichet (%s)" .Page.File.Path -}}
     {{- end -}}
     {{- $origine := path.Base (path.Dir .Page.File.Path) -}}
