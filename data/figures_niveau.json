@@ -19,10 +19,10 @@
   {
    "id": "composition",
    "fichier": "niveau-composition",
-   "titre": "PISA, culture scientifique : la répartition entre classes masque une partie de la baisse",
-   "montre": "Avec la répartition entre classes de 2015, le score de 2025 serait plus bas : la baisse serait près de deux fois plus forte, parce qu'à 15 ans moins d'élèves sont encore au collège.",
-   "source": "DEPP, Notes d'Information 16-37 (PISA 2015, figure 3) et 26-39 (PISA 2025, figure 10 web) ; calcul de l'auteur",
-   "precaution": "Moyenne des classes pondérée par leur part. Ne neutralise pas les changements de population à l'intérieur de chaque classe."
+   "titre": "PISA 2015-2025 : la répartition entre classes masque une partie de la baisse",
+   "montre": "Dans les trois domaines, la baisse est plus forte quand on repondère 2025 avec la répartition entre classes de 2015, parce qu'à 15 ans moins d'élèves sont encore au collège.",
+   "source": "OCDE, bases PISA 2015 et 2025 (données individuelles) ; calcul de l'auteur (valeurs plausibles, poids répliqués)",
+   "precaution": "Baisse du score moyen, en points. Repondération descriptive : ne neutralise pas qui se trouve dans chaque classe."
   },
   {
    "id": "seconde",

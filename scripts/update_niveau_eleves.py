@@ -161,6 +161,10 @@ def mutation(c):
     elif m == "effort_micro":  # le recul de l'effort déclaré rendrait compte de la moitié de la baisse
         c["p5"] = json.loads(json.dumps(c["p5"]))
         c["p5"]["N21"]["mathematiques"] = 0.5
+    elif m == "sciences_premiere":  # la première reculerait aussi en sciences : « ne baisse pas » deviendrait faux
+        c["p5"] = json.loads(json.dumps(c["p5"]))
+        a, b = c["p5"]["N18"]["sciences"]["classes"]["d_premiere"]
+        c["p5"]["N18"]["sciences"]["classes"]["d_premiere"] = [a, a - 5]
     elif m == "amortisseur":  # en France, le haut reculerait moins que le bas en mathématiques
         c["pct"] = json.loads(json.dumps(c["pct"]))
         c["pct"]["mathematiques"]["France"][4] = c["pct"]["mathematiques"]["France"][0] / 2
@@ -211,6 +215,11 @@ def gardes(c):
         g(x["s"] < 0 and x["rec"] < x["m25"], "données individuelles, %s : la répartition entre classes « masque » la baisse" % d)
     for d in ("mathematiques", "lecture"):
         g(all(b < a for a, b in p5["N18"][d]["classes"].values()), "données individuelles, %s : « dans chacune des catégories, plus bas »" % d)
+    sc = p5["N18"]["sciences"]["classes"]
+    g([k for k, (a, b) in sc.items() if not b < a] == ["d_premiere"],
+      "données individuelles, sciences : « trois catégories sur quatre reculent ; la première et après ne baisse pas »")
+    g(c["comp"]["parts_2025"]["d_premiere"] < 5 and c["comp"]["parts_2025"]["d_premiere"] == min(c["comp"]["parts_2025"].values()),
+      "composition : « la petite catégorie première et après, environ 3 % des élèves »")
     g(p5["n19_tous"], "données individuelles : le haut recule « dans tous les milieux »")
     for d in ("lecture", "mathematiques"):
         q = p5["N19"][d]
@@ -222,8 +231,6 @@ def gardes(c):
     D_ = cp["moyenne_2025"] - cp["moyenne_2015"]
     g(cp["recompose_2025"] < cp["moyenne_2025"] and cp["recompose_2025"] - cp["moyenne_2015"] < D_,
       "composition : « à composition de 2015, la baisse serait plus forte »")
-    g(1.6 <= (cp["recompose_2025"] - cp["moyenne_2015"]) / D_ < 2.0, "composition : « près de deux fois plus forte »")
-    g(all(cp["scores_2025"][k] - cp["scores_2015"][k] < D_ for k in cp["scores_2015"]), "composition : « chaque classe recule davantage que la moyenne »")
     g(20 <= cp["parts_2015"]["a_troisieme_et_moins"] < 25 and cp["parts_2025"]["a_troisieme_et_moins"] < 10,
       "composition : « de près d'un quart à moins d'un dixième »")
     g(1.7 <= cp["parts_2025"]["c_seconde_pro_cap"] / cp["parts_2015"]["c_seconde_pro_cap"] < 2.0, "composition : voie professionnelle « presque doublée »")
@@ -440,12 +447,7 @@ def affichage(c):
     A["comp_retard25"] = nb(cp["parts_2025"]["a_troisieme_et_moins"], 0)
     A["comp_pro15"] = nb(cp["parts_2015"]["c_seconde_pro_cap"], 0)
     A["comp_pro25"] = nb(cp["parts_2025"]["c_seconde_pro_cap"], 0)
-    A["comp_baisse_obs"] = nb(cp["moyenne_2015"] - cp["moyenne_2025"], 0)
-    A["comp_baisse_rec"] = nb(cp["moyenne_2015"] - cp["recompose_2025"], 0)
-    dcl = [cp["scores_2015"][k] - cp["scores_2025"][k] for k in cp["scores_2015"]]
-    A["comp_cl_min"], A["comp_cl_max"] = nb(min(dcl), 0), nb(max(dcl), 0)
-    A["comp_effet"] = nb(cp["moyenne_2025"] - cp["recompose_2025"], 0)
-    A["comp_gt"] = nb(cp["scores_2015"]["b_seconde_gt"] - cp["scores_2025"]["b_seconde_gt"], 0)
+    A["comp_prem25"] = nb(cp["parts_2025"]["d_premiere"], 0)
     pct = c["pct"]
     for d in DOM:
         k = COURT[d]
@@ -487,10 +489,10 @@ FIG = {
         note="Chaque point est un pays membre de l'OCDE. Bande bleue : la moitié centrale des pays (du premier au troisième quartile).",
         montre="En lecture et en sciences, la baisse française est dans la moitié centrale des pays de l'OCDE, la lecture pratiquement à sa frontière ; en mathématiques, elle compte, sur les estimations ponctuelles, parmi le quart des plus fortes."),
     "composition": dict(
-        titre="PISA, culture scientifique : la répartition entre classes masque une partie de la baisse",
-        source="DEPP, Notes d'Information 16-37 (PISA 2015, figure 3) et 26-39 (PISA 2025, figure 10 web) ; calcul de l'auteur",
-        note="Moyenne des classes pondérée par leur part. Ne neutralise pas les changements de population à l'intérieur de chaque classe.",
-        montre="Avec la répartition entre classes de 2015, le score de 2025 serait plus bas : la baisse serait près de deux fois plus forte, parce qu'à 15 ans moins d'élèves sont encore au collège."),
+        titre="PISA 2015-2025 : la répartition entre classes masque une partie de la baisse",
+        source="OCDE, bases PISA 2015 et 2025 (données individuelles) ; calcul de l'auteur (valeurs plausibles, poids répliqués)",
+        note="Baisse du score moyen, en points. Repondération descriptive : ne neutralise pas qui se trouve dans chaque classe.",
+        montre="Dans les trois domaines, la baisse est plus forte quand on repondère 2025 avec la répartition entre classes de 2015, parce qu'à 15 ans moins d'élèves sont encore au collège."),
     "thermometres": dict(
         titre="Quatre évaluations, leur dernière variation en France",
         source="IEA (TIMSS 2023, rapport international) ; DEPP (PIRLS 2021, NI 23-21 ; test de positionnement de seconde, NI 26-22) ; OCDE (PISA 2025)",
@@ -557,25 +559,29 @@ def fig_thermometres(c, A):
 
 def fig_composition(c, A):
     t = FIG["composition"]
-    cp = c["comp"]
-    pts_ = [("2015, observé", cp["moyenne_2015"], GRIS), ("2025, à la répartition entre classes de 2015", cp["recompose_2025"], ORANGE),
-            ("2025, observé", cp["moyenne_2025"], BLEU)]
-    desc = ("Score moyen PISA en culture scientifique, moyenne des classes : 2015 observé %s ; 2025 recalculé avec la répartition "
-            "entre classes de 2015 %s ; 2025 observé %s. Baisse observée %s points ; à répartition de 2015, %s ; effet de la "
-            "répartition entre classes +%s." % (nb(cp["moyenne_2015"], 0), nb(cp["recompose_2025"], 0), nb(cp["moyenne_2025"], 0),
-                                              A["comp_baisse_obs"], A["comp_baisse_rec"], A["comp_effet"]))
-    h = 230
+    N = c["p5"]["N18"]
+    doms = (("mathematiques", "Mathématiques"), ("lecture", "Compréhension de l'écrit"), ("sciences", "Culture scientifique"))
+    desc = "Baisse du score moyen PISA de 2015 à 2025, observée puis avec la répartition entre classes de 2015 : " + " ; ".join(
+        "%s %s points, %s" % (lib.lower(), nb(N[d]["m15"] - N[d]["m25"], 0), nb(N[d]["m15"] - N[d]["rec"], 0)) for d, lib in doms) + "."
+    h = 236
     e = tete("niv-c", t["titre"], desc, h + 52)
-    X0, X1, vmin, vmax = 300, 690, 465, 500
-    sx = lambda v: X0 + (X1 - X0) * (v - vmin) / (vmax - vmin)
-    for gv in range(vmin, vmax + 1, 5):
-        e.append('<line x1="%.1f" y1="44" x2="%.1f" y2="%d" stroke="%s" stroke-width="0.6"/>' % (sx(gv), sx(gv), 44 + 150, GRID))
-        e.append('<text x="%.1f" y="%d" font-size="10" fill="%s" text-anchor="middle">%d</text>' % (sx(gv), 44 + 164, MUTED, gv))
-    for i, (lib, v, col) in enumerate(pts_):
-        y = 70 + i * 50
-        e.append('<text x="0" y="%d" font-size="11.5" fill="%s">%s</text>' % (y + 4, INK, esc(lib)))
-        e.append('<circle cx="%.1f" cy="%d" r="7" fill="%s"/>' % (sx(v), y, col))
-        e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle" font-weight="600">%s</text>' % (sx(v), y - 12, col, nb(v, 0)))
+    X0, X1, vmax = 200, 680, 60
+    sx = lambda v: X0 + (X1 - X0) * v / vmax
+    for k, (lib, col) in enumerate((("Baisse observée", GRIS), ("Avec la répartition entre classes de 2015", ORANGE))):
+        x = X0 + 150 * k
+        e.append('<rect x="%d" y="32" width="10" height="10" fill="%s"/>' % (x, col))
+        e.append('<text x="%d" y="41" font-size="10.5" fill="%s">%s</text>' % (x + 14, INK2, esc(lib)))
+    y_bas = 58 + 3 * 52
+    for gv in range(0, vmax + 1, 10):
+        e.append('<line x1="%.1f" y1="54" x2="%.1f" y2="%d" stroke="%s" stroke-width="0.6"/>' % (sx(gv), sx(gv), y_bas, GRID))
+        e.append('<text x="%.1f" y="%d" font-size="10" fill="%s" text-anchor="middle">%d</text>' % (sx(gv), y_bas + 14, MUTED, gv))
+    for i, (d, lib) in enumerate(doms):
+        y = 62 + 52 * i
+        e.append('<text x="0" y="%d" font-size="11.5" fill="%s">%s</text>' % (y + 18, INK, esc(lib)))
+        for k, (v, col) in enumerate(((N[d]["m15"] - N[d]["m25"], GRIS), (N[d]["m15"] - N[d]["rec"], ORANGE))):
+            yy = y + 20 * k
+            e.append('<rect x="%d" y="%d" width="%.1f" height="16" fill="%s"/>' % (X0, yy, sx(v) - X0, col))
+            e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" font-weight="600">%s</text>' % (sx(v) + 5, yy + 12, col, nb(v, 0)))
     return pied(e, h + 2, t["source"], t["note"])
 
 
@@ -749,6 +755,13 @@ def csv_texte(c):
             w.writerow(["pisa_sciences_composition_par_classe", k, an, round(v, 2), "% de l'echantillon"])
             w.writerow(["pisa_sciences_score_par_classe", k, an, round(cp["scores_" + an][k], 2), "points PISA"])
     w.writerow(["pisa_sciences_composition_par_classe", "score_2025_aux_parts_2015", "2025", round(cp["recompose_2025"], 2), "points PISA (calcul)"])
+    for d, x in c["p5"]["N18"].items():
+        w.writerow(["pisa_donnees_individuelles_score_moyen", d, "2015", round(x["m15"], 2), "points PISA (calcul)"])
+        w.writerow(["pisa_donnees_individuelles_score_moyen", d, "2025", round(x["m25"], 2), "points PISA (calcul)"])
+        w.writerow(["pisa_donnees_individuelles_score_moyen", d, "2025_aux_parts_2015", round(x["rec"], 2), "points PISA (calcul)"])
+        for k, (a, b) in x["classes"].items():
+            w.writerow(["pisa_donnees_individuelles_score_par_classe", d + " " + k, "2015", round(a, 2), "points PISA (calcul)"])
+            w.writerow(["pisa_donnees_individuelles_score_par_classe", d + " " + k, "2025", round(b, 2), "points PISA (calcul)"])
     for d, v in c["pct"].items():
         for z in ("France", "OCDE"):
             for p_, x in zip((10, 25, 50, 75, 90), v[z]):
