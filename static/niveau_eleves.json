@@ -520,6 +520,7 @@
    "(b) sans asterisque PISA": "TIENT",
    "(c) brut": "TIENT"
   },
+  "verdict_sciences": "NON ETABLI",
   "n": 28,
   "rang": 4,
   "G_france": -1.1434021202515083,
@@ -1258,8 +1259,6 @@
   "nq_ocde": "8,4",
   "t3_n": "28",
   "t3_rang_l": "quatre",
-  "t3_avant": "la Suède, la Roumanie et Hong Kong",
-  "t3_apres": "la Finlande, le Japon et l'Irlande",
   "t3_fr_dt": "4",
   "t3_fr_dp": "16",
   "t3_autre": "13",
