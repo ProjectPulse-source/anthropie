@@ -108,7 +108,7 @@ def calcul(X):
         seconde_gt=part("Seconde GT"), seconde_pro=part("Seconde pro"),
         sec=X["seconde"], timss=X["timss_adv"], gen=gen, p1=p1, p2={int(a): v for a, v in X["p2"].items()},
         p3=X["p3"], p4=X["p4"], releve=X["releve_le"],
-        t3=X["p3_timss_pisa_maths"], t4=X["p4_timss_pisa_facteurs"],
+        t3=X["p3_timss_pisa_maths"], t4=X["p4_timss_pisa_facteurs"], p5=X["p5_donnees_individuelles"],
         comp=X["p2_composition_sciences"], pct=X["p2_percentiles"], eff=X["p2_effort"], ae=X["p2_autres_evaluations"],
     )
 
@@ -152,6 +152,15 @@ def mutation(c):
         c["t3"]["rang"] = c["t3"]["n"] // 2
     elif m == "facteurs":     # l'effort déclaré rendrait compte de l'écart TIMSS / PISA
         c["t4"] = dict(c["t4"], N16="TIENT")
+    elif m == "classes_micro":  # la répartition entre classes aurait contribué à la baisse en mathématiques
+        c["p5"] = json.loads(json.dumps(c["p5"]))
+        c["p5"]["N18"]["mathematiques"]["s"] = 0.6
+    elif m == "quarts":       # le 90e percentile du quart défavorisé n'aurait presque pas reculé en lecture
+        c["p5"] = json.loads(json.dumps(c["p5"]))
+        c["p5"]["N19"]["lecture"]["1"][0] = -5.0
+    elif m == "effort_micro":  # le recul de l'effort déclaré rendrait compte de la moitié de la baisse
+        c["p5"] = json.loads(json.dumps(c["p5"]))
+        c["p5"]["N21"]["mathematiques"] = 0.5
     elif m == "amortisseur":  # en France, le haut reculerait moins que le bas en mathématiques
         c["pct"] = json.loads(json.dumps(c["pct"]))
         c["pct"]["mathematiques"]["France"][4] = c["pct"]["mathematiques"]["France"][0] / 2
@@ -195,6 +204,19 @@ def gardes(c):
     g(t4["N13b"] == "TIENT" and t4["N17"] == "TIENT", "TIMSS / PISA : la France reste parmi les écarts défavorables après le niveau initial")
     g(t4["N13"] != "TIENT" and t4["N14"] != "RELATION LISIBLE" and t4["N15"] != "RELATION LISIBLE" and t4["N16"] != "TIENT",
       "TIMSS / PISA : « ni le niveau de départ, ni la couverture, ni la structure par classe, ni l'effort ne rendent compte »")
+    # protocole 5 (données individuelles)
+    p5 = c["p5"]
+    for d in ("mathematiques", "lecture", "sciences"):
+        x = p5["N18"][d]
+        g(x["s"] < 0 and x["rec"] < x["m25"], "données individuelles, %s : la répartition entre classes « masque » la baisse" % d)
+    for d in ("mathematiques", "lecture"):
+        g(all(b < a for a, b in p5["N18"][d]["classes"].values()), "données individuelles, %s : « dans chacune des catégories, plus bas »" % d)
+    g(p5["n19_tous"], "données individuelles : le haut recule « dans tous les milieux »")
+    for d in ("lecture", "mathematiques"):
+        q = p5["N19"][d]
+        g(abs(q["4"][0] - q["1"][0]) < 0.5 * abs(q["tous"][0]) and all(q[k][0] < 0 for k in ("1", "2", "3", "4")),
+          "données individuelles, %s : « à peu près autant chez les favorisés que chez les défavorisés »" % d)
+    g(all(abs(v) < 0.1 for v in p5["N21"].values()), "données individuelles : l'effort ne rend compte que de « moins d'un dixième » de la baisse")
     # protocole 2, N8 : la composition masque la baisse (sciences)
     cp = c["comp"]
     D_ = cp["moyenne_2025"] - cp["moyenne_2015"]
@@ -387,6 +409,18 @@ def affichage(c):
     A["contr_0"], A["contr_1"] = nb(p2[min(p2)]), nb(p2[max(p2)])
     A["nq_fr"] = nb(c["p3"]["France"]["secondaire"])
     A["nq_ocde"] = nb(c["p3"]["OECD average"]["secondaire"])
+    # protocole 5
+    p5 = c["p5"]
+    for d, k in (("mathematiques", "math"), ("lecture", "lect"), ("sciences", "sci")):
+        x = p5["N18"][d]
+        A["p5_%s_obs" % k] = nb(x["m15"] - x["m25"], 0)
+        A["p5_%s_rec" % k] = nb(x["m15"] - x["rec"], 0)
+    for d, k in (("mathematiques", "math"), ("lecture", "lect")):
+        a, b = p5["N18"][d]["classes"]["b_seconde_gt"]
+        A["p5_%s_gt15" % k], A["p5_%s_gt25" % k], A["p5_%s_gtd" % k] = nb(a, 0), nb(b, 0), nb(a - b, 0)
+        q = p5["N19"][d]
+        vals = [-q[j][0] for j in ("1", "2", "3", "4")]
+        A["p5_%s_q_min" % k], A["p5_%s_q_max" % k] = nb(min(vals), 0), nb(max(vals), 0)
     # protocole 3
     p3 = c["t3"]
     A["t3_n"] = str(p3["n"])
@@ -756,6 +790,7 @@ def main() -> int:
                "depp_ecart_generations": c["X"]["depp_generations"],
                "timss_advanced": c["timss"],
                "protocole_3_timss_pisa_maths": c["t3"],
+               "protocole_5_donnees_individuelles": c["p5"],
                "protocole_2": {"composition_sciences": c["comp"], "percentiles": c["pct"], "effort_declare": c["eff"],
                                "autres_evaluations": c["ae"]},
                "recrutement": {"capes_externe": c["X"]["p1"], "contractuels": c["X"]["p2"], "non_pleinement_qualifies_ocde": c["p3"],
