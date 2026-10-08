@@ -583,7 +583,7 @@ def svg_detention(r: dict, lang: str = "fr") -> tuple[str, int]:
                  % (y, W, y, AXIS))
     y += 28
     corps.append(txt(0, y, S("B · Qui détient les titres négociables de l'État ? 1er trimestre 2026",
-                             "B · Who holds the State's negotiable securities? Q1 2026"),
+                             "B · Who holds central-government marketable securities? Q1 2026"),
                      TY_ANNOT, INK, weight="600"))
     corps.append(txt(0, y + 16, S("Valeur de marché, en % · classement par résidence du détenteur, "
                                   "non par nationalité",
@@ -632,7 +632,7 @@ def svg_detention(r: dict, lang: str = "fr") -> tuple[str, int]:
                 "value: "
                 + "; ".join("%s €%sbn" % (libelle_en(SS_EN, s["libelle"]), en(s["mdeur"]))
                             for s in ss)
-                + ", out of €%sbn, %s. B, at market value, holders of the State's negotiable "
+                + ", out of €%sbn, %s. B, at market value, holders of central-government marketable "
                   "securities in Q1 2026: " % (en(total, 1), periode_en(r["periode_a"]))
                 + "; ".join("%s %s%%" % (noms[d["libelle"]].rstrip(" *"), en(d["pct"], 1))
                             for d in det) + ".")
@@ -1443,7 +1443,7 @@ def main() -> int:
     cartes["en"] = [
         {"id": "detention", "fichier": "qui-paie-detention-en",
          "titre": "Who borrows? Who holds French government securities?",
-         "montre": "The levels of government that borrow, then the holders of the State's "
+         "montre": "The levels of government that borrow, then the holders of central-government "
                    "securities: two separate scopes, with no proportional link.",
          "source": "INSEE, IR no. 79 (27 March 2026), %s  ·  Banque de France via Agence "
                    "France Trésor (French Treasury agency), Q1 2026" % periode_en(r["periode_a"]),

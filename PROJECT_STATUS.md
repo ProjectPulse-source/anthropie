@@ -52,6 +52,13 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-08 — Lexique anglais Wolf-07 porté sur « qui paie » et « générations futures » (EN)
+
+- *central-government marketable debt/securities* (émetteur) et *the government* (acteur) au lieu de *State negotiable* /
+  *the State* : `qui-paie` (15), `generations-futures` (5) ; figure `qui-paie-detention-en` régénérée (panneau B, fiche),
+  données inchangées. Contrôles : hugo 0, `check-all --ci` 0, `audit-liens-build` 0. Hors champ, déclaré : « the State »
+  acteur ou budget sur coût, collectivités, peut-elle baisser, UE (non visé par la relecture).
+
 ### 2026-10-08 — Page inflation et dette : passe linguistique anglaise (Wolf-07), équilibre FR / EN ; NON POUSSÉE
 
 - **`/en/inflation-and-french-public-debt/`** : relecture externe de l'anglais (Wolf-07), arbitrage
