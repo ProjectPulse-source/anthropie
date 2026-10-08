@@ -108,7 +108,7 @@ def calcul(X):
         seconde_gt=part("Seconde GT"), seconde_pro=part("Seconde pro"),
         sec=X["seconde"], timss=X["timss_adv"], gen=gen, p1=p1, p2={int(a): v for a, v in X["p2"].items()},
         p3=X["p3"], p4=X["p4"], releve=X["releve_le"],
-        t3=X["p3_timss_pisa_maths"],
+        t3=X["p3_timss_pisa_maths"], t4=X["p4_timss_pisa_facteurs"],
         comp=X["p2_composition_sciences"], pct=X["p2_percentiles"], eff=X["p2_effort"], ae=X["p2_autres_evaluations"],
     )
 
@@ -150,6 +150,8 @@ def mutation(c):
     elif m == "timss_pisa":   # la France serait au milieu des écarts TIMSS 4e / PISA
         c["t3"] = json.loads(json.dumps(c["t3"]))
         c["t3"]["rang"] = c["t3"]["n"] // 2
+    elif m == "facteurs":     # l'effort déclaré rendrait compte de l'écart TIMSS / PISA
+        c["t4"] = dict(c["t4"], N16="TIENT")
     elif m == "amortisseur":  # en France, le haut reculerait moins que le bas en mathématiques
         c["pct"] = json.loads(json.dumps(c["pct"]))
         c["pct"]["mathematiques"]["France"][4] = c["pct"]["mathematiques"]["France"][0] / 2
@@ -188,6 +190,11 @@ def gardes(c):
     autre = sum(1 for v in p3["pays"].values() if v["dP"] > v["dT"])
     g(autre >= p3["n"] / 3 and p3["rho"] < 0.5, "TIMSS / PISA : « peu liées d'un pays à l'autre », « au contraire dans N pays »")
     g(p3["verdict_sciences"] != "TIENT", "TIMSS / PISA : « le même test n'est pas concluant en sciences »")
+    # protocole 4 : « elle y reste une fois pris en compte le niveau de départ » ; limite : aucun des facteurs testés
+    t4 = c["t4"]
+    g(t4["N13b"] == "TIENT" and t4["N17"] == "TIENT", "TIMSS / PISA : la France reste parmi les écarts défavorables après le niveau initial")
+    g(t4["N13"] != "TIENT" and t4["N14"] != "RELATION LISIBLE" and t4["N15"] != "RELATION LISIBLE" and t4["N16"] != "TIENT",
+      "TIMSS / PISA : « ni le niveau de départ, ni la couverture, ni la structure par classe, ni l'effort ne rendent compte »")
     # protocole 2, N8 : la composition masque la baisse (sciences)
     cp = c["comp"]
     D_ = cp["moyenne_2025"] - cp["moyenne_2015"]

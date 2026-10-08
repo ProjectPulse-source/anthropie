@@ -1242,5 +1242,17 @@
     "G": 1.4081184805633835
    }
   }
+ },
+ "p4_timss_pisa_facteurs": {
+  "N14": "PAS DE RELATION",
+  "N15": "PAS DE RELATION",
+  "N16": "PAS DE RELATION LISIBLE",
+  "N13": "PAS DE RELATION LISIBLE",
+  "N13_robuste": false,
+  "N13b": "TIENT",
+  "N13b_rang": 3,
+  "N17": "TIENT",
+  "N17_rang": 3,
+  "n": 28
  }
 }
