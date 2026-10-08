@@ -298,3 +298,70 @@ pisa_manque_enseignants_declare,ocde,2015,29.76,% des eleves (chef d'etablisseme
 pisa_manque_enseignants_declare,ocde,2018,27.42,% des eleves (chef d'etablissement : enseignement entrave)
 pisa_manque_enseignants_declare,ocde,2022,46.67,% des eleves (chef d'etablissement : enseignement entrave)
 pisa_manque_enseignants_declare,ocde,2025,38.97,% des eleves (chef d'etablissement : enseignement entrave)
+pisa_sciences_composition_par_classe,a_troisieme_et_moins,2015,24.1,% de l'echantillon
+pisa_sciences_score_par_classe,a_troisieme_et_moins,2015,395.04,points PISA
+pisa_sciences_composition_par_classe,b_seconde_gt,2015,58.7,% de l'echantillon
+pisa_sciences_score_par_classe,b_seconde_gt,2015,545.0,points PISA
+pisa_sciences_composition_par_classe,c_seconde_pro_cap,2015,12.3,% de l'echantillon
+pisa_sciences_score_par_classe,c_seconde_pro_cap,2015,435.0,points PISA
+pisa_sciences_composition_par_classe,d_premiere,2015,2.9,% de l'echantillon
+pisa_sciences_score_par_classe,d_premiere,2015,614.0,points PISA
+pisa_sciences_composition_par_classe,a_troisieme_et_moins,2025,9.0,% de l'echantillon
+pisa_sciences_score_par_classe,a_troisieme_et_moins,2025,375.97,points PISA
+pisa_sciences_composition_par_classe,b_seconde_gt,2025,64.9,% de l'echantillon
+pisa_sciences_score_par_classe,b_seconde_gt,2025,525.13,points PISA
+pisa_sciences_composition_par_classe,c_seconde_pro_cap,2025,23.2,% de l'echantillon
+pisa_sciences_score_par_classe,c_seconde_pro_cap,2025,400.84,points PISA
+pisa_sciences_composition_par_classe,d_premiere,2025,2.7,% de l'echantillon
+pisa_sciences_score_par_classe,d_premiere,2025,595.51,points PISA
+pisa_sciences_composition_par_classe,score_2025_aux_parts_2015,2025,474.93,points PISA (calcul)
+pisa_variation_percentiles_2015_2025_france,sciences,P10,-12.73,points PISA
+pisa_variation_percentiles_2015_2025_france,sciences,P25,-14.43,points PISA
+pisa_variation_percentiles_2015_2025_france,sciences,P50,-11.55,points PISA
+pisa_variation_percentiles_2015_2025_france,sciences,P75,-11.42,points PISA
+pisa_variation_percentiles_2015_2025_france,sciences,P90,-8.51,points PISA
+pisa_variation_percentiles_2015_2025_ocde,sciences,P10,-13.6,points PISA
+pisa_variation_percentiles_2015_2025_ocde,sciences,P25,-10.63,points PISA
+pisa_variation_percentiles_2015_2025_ocde,sciences,P50,-6.87,points PISA
+pisa_variation_percentiles_2015_2025_ocde,sciences,P75,-3.38,points PISA
+pisa_variation_percentiles_2015_2025_ocde,sciences,P90,-0.13,points PISA
+pisa_variation_percentiles_2015_2025_france,lecture,P10,-29.04,points PISA
+pisa_variation_percentiles_2015_2025_france,lecture,P25,-42.18,points PISA
+pisa_variation_percentiles_2015_2025_france,lecture,P50,-48.87,points PISA
+pisa_variation_percentiles_2015_2025_france,lecture,P75,-49.29,points PISA
+pisa_variation_percentiles_2015_2025_france,lecture,P90,-46.61,points PISA
+pisa_variation_percentiles_2015_2025_ocde,lecture,P10,-34.62,points PISA
+pisa_variation_percentiles_2015_2025_ocde,lecture,P25,-33.43,points PISA
+pisa_variation_percentiles_2015_2025_ocde,lecture,P50,-29.28,points PISA
+pisa_variation_percentiles_2015_2025_ocde,lecture,P75,-23.02,points PISA
+pisa_variation_percentiles_2015_2025_ocde,lecture,P90,-17.35,points PISA
+pisa_variation_percentiles_2015_2025_france,mathematiques,P10,-30.29,points PISA
+pisa_variation_percentiles_2015_2025_france,mathematiques,P25,-36.64,points PISA
+pisa_variation_percentiles_2015_2025_france,mathematiques,P50,-39.53,points PISA
+pisa_variation_percentiles_2015_2025_france,mathematiques,P75,-37.71,points PISA
+pisa_variation_percentiles_2015_2025_france,mathematiques,P90,-33.17,points PISA
+pisa_variation_percentiles_2015_2025_ocde,mathematiques,P10,-27.85,points PISA
+pisa_variation_percentiles_2015_2025_ocde,mathematiques,P25,-27.3,points PISA
+pisa_variation_percentiles_2015_2025_ocde,mathematiques,P50,-23.67,points PISA
+pisa_variation_percentiles_2015_2025_ocde,mathematiques,P75,-18.37,points PISA
+pisa_variation_percentiles_2015_2025_ocde,mathematiques,P90,-13.08,points PISA
+pisa_indice_effort_declare_france,indice (1 a 10),2018,7.16,"DEPP, NI 26-40"
+pisa_indice_effort_declare_france,indice (1 a 10),2022,7.04,"DEPP, NI 26-40"
+pisa_indice_effort_declare_france,indice (1 a 10),2025,6.43,"DEPP, NI 26-40"
+timss_france,TIMSS CM1 maths,2015,488,points TIMSS (p : significativement au-dessus de 2023)
+timss_france,TIMSS CM1 maths,2019,485,points TIMSS (p : significativement au-dessus de 2023)
+timss_france,TIMSS CM1 maths,2023,484,points TIMSS (p : significativement au-dessus de 2023)
+timss_france,TIMSS 4e maths,1995,530,points TIMSS (p : significativement au-dessus de 2023) p
+timss_france,TIMSS 4e maths,2019,483,points TIMSS (p : significativement au-dessus de 2023)
+timss_france,TIMSS 4e maths,2023,479,points TIMSS (p : significativement au-dessus de 2023)
+timss_france,TIMSS CM1 sciences,2015,487,points TIMSS (p : significativement au-dessus de 2023)
+timss_france,TIMSS CM1 sciences,2019,488,points TIMSS (p : significativement au-dessus de 2023)
+timss_france,TIMSS CM1 sciences,2023,488,points TIMSS (p : significativement au-dessus de 2023)
+timss_france,TIMSS 4e sciences,1995,488,points TIMSS (p : significativement au-dessus de 2023)
+timss_france,TIMSS 4e sciences,2019,489,points TIMSS (p : significativement au-dessus de 2023)
+timss_france,TIMSS 4e sciences,2023,486,points TIMSS (p : significativement au-dessus de 2023)
+pirls_france_cm1,lecture,2001,525.0,points PIRLS (significativement au-dessus de 2021)
+pirls_france_cm1,lecture,2006,522.0,points PIRLS (significativement au-dessus de 2021)
+pirls_france_cm1,lecture,2011,520.0,points PIRLS
+pirls_france_cm1,lecture,2016,511.0,points PIRLS
+pirls_france_cm1,lecture,2021,514.0,points PIRLS

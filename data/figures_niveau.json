@@ -1,10 +1,18 @@
 {
  "fr": [
   {
+   "id": "thermometres",
+   "fichier": "niveau-thermometres",
+   "titre": "Quatre évaluations, leur dernière variation en France",
+   "montre": "Sur leur dernière période, PIRLS en CM1 et TIMSS en CM1 et en quatrième sont stables ; le test d'entrée en seconde monte en mathématiques ; PISA, à 15 ans, baisse nettement.",
+   "source": "IEA (TIMSS 2023, rapport international) ; DEPP (PIRLS 2021, NI 23-21 ; test de positionnement de seconde, NI 26-22) ; OCDE (PISA 2025)",
+   "precaution": "Chaque évaluation a son échelle : les points ne se comparent pas d'une ligne à l'autre. Significativité publiée par l'institution ; aucune pour le test de seconde."
+  },
+  {
    "id": "baisse",
    "fichier": "niveau-baisse",
    "titre": "PISA, 2015-2025 : la France parmi les 38 pays de l'OCDE",
-   "montre": "En lecture et en sciences, la baisse française est dans la moitié centrale des pays de l'OCDE, la lecture tout près de sa limite ; en mathématiques, elle est plus forte que dans les trois quarts d'entre eux.",
+   "montre": "En lecture et en sciences, la baisse française est dans la moitié centrale des pays de l'OCDE, la lecture pratiquement à sa frontière ; en mathématiques, elle compte, sur les estimations ponctuelles, parmi le quart des plus fortes.",
    "source": "OCDE, PISA 2025, volume I, tableaux I.B1.2a.36 à 38 (variation du score moyen entre 2015 et 2025)",
    "precaution": "Chaque point est un pays membre de l'OCDE. Bande bleue : la moitié centrale des pays (du premier au troisième quartile)."
   },

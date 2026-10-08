@@ -106,6 +106,7 @@ def calcul(X):
         seconde_gt=part("Seconde GT"), seconde_pro=part("Seconde pro"),
         sec=X["seconde"], timss=X["timss_adv"], gen=gen, p1=p1, p2={int(a): v for a, v in X["p2"].items()},
         p3=X["p3"], p4=X["p4"], releve=X["releve_le"],
+        comp=X["p2_composition_sciences"], pct=X["p2_percentiles"], eff=X["p2_effort"], ae=X["p2_autres_evaluations"],
     )
 
 
@@ -138,6 +139,13 @@ def mutation(c):
         o = c["P"]["lecture"]["social"][OC]
         f_ = c["P"]["lecture"]["social"]["France"]
         o["haut"]["2025"] = o["haut"]["2015"] - (f_["haut"]["2015"] - f_["haut"]["2025"])
+    elif m == "thermometres": # TIMSS 4e aurait baissé significativement de 2019 à 2023
+        c["ae"] = json.loads(json.dumps(c["ae"]))
+        c["ae"]["timss"]["TIMSS 4e maths"]["2019"]["sym"] = "p"
+    elif m == "composition":  # la composition aurait contribué à la baisse au lieu de la masquer
+        c["comp"] = dict(c["comp"], recompose_2025=c["comp"]["moyenne_2025"] + 5)
+    elif m == "effort":       # la France ne serait que troisième pour la baisse de l'effort déclaré
+        c["eff"] = dict(c["eff"], rang=3)
     elif m is not None:
         fail("mutation inconnue : %s" % m)
     return m
@@ -154,6 +162,36 @@ def gardes(c):
             fail("garde : " + msg)
 
     P = c["P"]
+    # protocole 2, N11 : « les évaluations par classe ne montrent pas la baisse récente » ; « sur trente ans, elles baissent aussi »
+    ae = c["ae"]
+    for lib in ("TIMSS CM1 maths", "TIMSS 4e maths", "TIMSS CM1 sciences", "TIMSS 4e sciences"):
+        s_ = ae["timss"][lib]
+        g(s_[sorted(s_)[-2]]["sym"] == "", "%s : « stable » sur la dernière période (aucun symbole de l'IEA)" % lib)
+    g(not ae["pirls"]["2016"]["sup_2021"], "PIRLS : « stable » de 2016 à 2021")
+    g(ae["timss"]["TIMSS 4e maths"]["1995"]["sym"] == "p", "TIMSS 4e maths : 1995 significativement au-dessus de 2023")
+    g(ae["pirls"]["2001"]["sup_2021"] and ae["pirls"]["2006"]["sup_2021"], "PIRLS : 2001 et 2006 significativement au-dessus de 2021")
+    # protocole 2, N8 : la composition masque la baisse (sciences)
+    cp = c["comp"]
+    D_ = cp["moyenne_2025"] - cp["moyenne_2015"]
+    g(cp["recompose_2025"] < cp["moyenne_2025"] and cp["recompose_2025"] - cp["moyenne_2015"] < D_,
+      "composition : « à composition de 2015, la baisse serait plus forte »")
+    g(1.6 <= (cp["recompose_2025"] - cp["moyenne_2015"]) / D_ < 2.0, "composition : « près de deux fois plus forte »")
+    g(all(cp["scores_2025"][k] - cp["scores_2015"][k] < D_ for k in cp["scores_2015"]), "composition : « chaque classe recule davantage que la moyenne »")
+    g(20 <= cp["parts_2015"]["a_troisieme_et_moins"] < 25 and cp["parts_2025"]["a_troisieme_et_moins"] < 10,
+      "composition : « de près d'un quart à moins d'un dixième »")
+    g(1.7 <= cp["parts_2025"]["c_seconde_pro_cap"] / cp["parts_2015"]["c_seconde_pro_cap"] < 2.0, "composition : voie professionnelle « presque doublée »")
+    # protocole 2, N9 : dans l'OCDE, la baisse surtout en bas ; en France, tout le spectre (maths, sciences), le haut en lecture
+    pct = c["pct"]
+    for d in DOM:
+        g(pct[d]["OCDE"][4] - pct[d]["OCDE"][0] > 10, "%s : OCDE « surtout en bas » (P90 recule bien moins que P10)" % d)
+    for d in ("mathematiques", "sciences"):
+        g(abs(pct[d]["France"][4] - pct[d]["France"][0]) <= 5, "%s : France « tout le spectre »" % d)
+    g(pct["lecture"]["France"][4] - pct["lecture"]["France"][0] < -5, "lecture : France, « le haut davantage »")
+    g(pct["mathematiques"]["France"][4] < 2 * pct["mathematiques"]["OCDE"][4], "maths : P90 France recule plus de deux fois plus que l'OCDE")
+    # protocole 2, N10 (descriptif) : « la plus forte baisse de l'effort déclaré des pays de l'OCDE », « deux fois la moyenne »
+    ef = c["eff"]
+    g(ef["rang"] == 1 and ef["france_sig"], "effort : « la plus forte baisse », significative")
+    g(1.8 <= ef["france_d"] / ef["ocde_d"] < 2.2, "effort : « deux fois la moyenne de l'OCDE »")
     for d in DOM:
         x = P[d]["dif"]["2015"]
         g(x["v"] < 0 and x["sig"], "%s : « baisse depuis 2015 » exige une baisse significative" % d)
@@ -312,6 +350,32 @@ def affichage(c):
     A["contr_0"], A["contr_1"] = nb(p2[min(p2)]), nb(p2[max(p2)])
     A["nq_fr"] = nb(c["p3"]["France"]["secondaire"])
     A["nq_ocde"] = nb(c["p3"]["OECD average"]["secondaire"])
+    # protocole 2
+    ae = c["ae"]
+    for lib, k in (("TIMSS CM1 maths", "tcm1"), ("TIMSS 4e maths", "t4e"), ("TIMSS CM1 sciences", "tcm1s"), ("TIMSS 4e sciences", "t4es")):
+        for a, v in ae["timss"][lib].items():
+            A["%s_%s" % (k, a[2:])] = str(v["score"])
+    for a, v in ae["pirls"].items():
+        A["pirls_" + a[2:]] = nb(v["score"], 0)
+    cp = c["comp"]
+    A["comp_retard15"] = nb(cp["parts_2015"]["a_troisieme_et_moins"], 0)
+    A["comp_retard25"] = nb(cp["parts_2025"]["a_troisieme_et_moins"], 0)
+    A["comp_pro15"] = nb(cp["parts_2015"]["c_seconde_pro_cap"], 0)
+    A["comp_pro25"] = nb(cp["parts_2025"]["c_seconde_pro_cap"], 0)
+    A["comp_baisse_obs"] = nb(cp["moyenne_2015"] - cp["moyenne_2025"], 0)
+    A["comp_baisse_rec"] = nb(cp["moyenne_2015"] - cp["recompose_2025"], 0)
+    dcl = [cp["scores_2015"][k] - cp["scores_2025"][k] for k in cp["scores_2015"]]
+    A["comp_cl_min"], A["comp_cl_max"] = nb(min(dcl), 0), nb(max(dcl), 0)
+    A["comp_gt"] = nb(cp["scores_2015"]["b_seconde_gt"] - cp["scores_2025"]["b_seconde_gt"], 0)
+    pct = c["pct"]
+    for d in DOM:
+        k = COURT[d]
+        A[k + "_p10"], A[k + "_p90"] = nb(-pct[d]["France"][0], 0), nb(-pct[d]["France"][4], 0)
+        A[k + "_op10"], A[k + "_op90"] = nb(-pct[d]["OCDE"][0], 0), nb(-pct[d]["OCDE"][4], 0)
+    ef = c["eff"]
+    A["eff_22"], A["eff_25"] = nb(ef["france"]["2022"], 2), nb(ef["france"]["2025"], 2)
+    A["eff_d"], A["eff_od"] = nb(-ef["france_d"], 2), nb(-ef["ocde_d"], 2)
+    A["eff_n"] = str(ef["n_pays"])
     return A
 
 
@@ -341,7 +405,12 @@ FIG = {
         titre="PISA, 2015-2025 : la France parmi les {n_ocde} pays de l'OCDE",
         source="OCDE, PISA 2025, volume I, tableaux I.B1.2a.36 à 38 (variation du score moyen entre 2015 et 2025)",
         note="Chaque point est un pays membre de l'OCDE. Bande bleue : la moitié centrale des pays (du premier au troisième quartile).",
-        montre="En lecture et en sciences, la baisse française est dans la moitié centrale des pays de l'OCDE, la lecture tout près de sa limite ; en mathématiques, elle est plus forte que dans les trois quarts d'entre eux."),
+        montre="En lecture et en sciences, la baisse française est dans la moitié centrale des pays de l'OCDE, la lecture pratiquement à sa frontière ; en mathématiques, elle compte, sur les estimations ponctuelles, parmi le quart des plus fortes."),
+    "thermometres": dict(
+        titre="Quatre évaluations, leur dernière variation en France",
+        source="IEA (TIMSS 2023, rapport international) ; DEPP (PIRLS 2021, NI 23-21 ; test de positionnement de seconde, NI 26-22) ; OCDE (PISA 2025)",
+        note="Chaque évaluation a son échelle : les points ne se comparent pas d'une ligne à l'autre. Significativité publiée par l'institution ; aucune pour le test de seconde.",
+        montre="Sur leur dernière période, PIRLS en CM1 et TIMSS en CM1 et en quatrième sont stables ; le test d'entrée en seconde monte en mathématiques ; PISA, à 15 ans, baisse nettement."),
     "sommet": dict(
         titre="Les élèves en difficulté et les meilleurs élèves, 2015 et 2025",
         source="OCDE, PISA 2025, volume I, tableaux I.B1.2a.34 et 35 ; moyenne de l'OCDE sur 35 pays comparables",
@@ -353,6 +422,50 @@ FIG = {
         note="Écart entre deux générations d'élèves, en centièmes d'écart-type (d de Cohen), calculé par la DEPP. Seconde : deux voies.",
         montre="En français, le test de seconde et PISA baissent tous les deux ; en mathématiques, le test de seconde monte quand PISA baisse."),
 }
+
+
+def fig_thermometres(c, A):
+    t = FIG["thermometres"]
+    ae, P, sec = c["ae"], c["P"], c["sec"]
+    lignes = []
+    for lib, pop, k in (("PIRLS, compréhension de l'écrit", "CM1", None), ("TIMSS, mathématiques", "CM1", "TIMSS CM1 maths"),
+                        ("TIMSS, mathématiques", "quatrième", "TIMSS 4e maths")):
+        if k is None:
+            a0, a1 = "2016", "2021"
+            d = ae["pirls"][a1]["score"] - ae["pirls"][a0]["score"]
+            st = "baisse significative" if ae["pirls"][a0]["sup_2021"] else "stable"
+        else:
+            s_ = ae["timss"][k]
+            a0, a1 = sorted(s_)[-2], "2023"
+            d = s_[a1]["score"] - s_[a0]["score"]
+            st = "baisse significative" if s_[a0]["sym"] == "p" else ("hausse significative" if s_[a0]["sym"] == "q" else "stable")
+        lignes.append((lib, pop, "%s-%s" % (a0, a1), d, st))
+    lignes.append(("Test de positionnement, mathématiques", "entrée en seconde GT", "2021-2024",
+                   sec["GT maths"]["2024"] - sec["GT maths"]["2021"], "hausse (sans test publié)"))
+    lignes.append(("Test de positionnement, français", "entrée en seconde GT", "2021-2024",
+                   sec["GT francais"]["2024"] - sec["GT francais"]["2021"], "baisse (sans test publié)"))
+    for d_, lib in (("mathematiques", "PISA, culture mathématique"), ("lecture", "PISA, compréhension de l'écrit")):
+        x = P[d_]["dif"]["2022"]
+        lignes.append((lib, "15 ans", "2022-2025", x["v"], "baisse significative" if x["sig"] and x["v"] < 0 else "stable"))
+    desc = "Tableau, dernière variation de chaque évaluation en France, dans sa propre échelle : " + " ; ".join(
+        "%s (%s, %s) %s%s points, %s" % (l, p, per, "+" if v > 0 else "", nb(v, 0), st) for l, p, per, v, st in lignes) + "."
+    h = 60 + 34 * len(lignes) + 10
+    e = tete("niv-t", t["titre"], desc, h + 52)
+    cols = (0, 240, 395, 480, 545)
+    for x, lib in zip(cols, ("Évaluation", "Élèves", "Période", "Variation", "Lecture")):
+        e.append('<text x="%d" y="48" font-size="10.5" fill="%s" font-weight="600">%s</text>' % (x, MUTED, esc(lib)))
+    for i, (lib, pop, per, v, st) in enumerate(lignes):
+        y = 60 + 34 * i
+        if i % 2 == 0:
+            e.append('<rect x="0" y="%d" width="%d" height="34" fill="#f6f4f1"/>' % (y, W))
+        col = ORANGE if st.startswith("baisse") else (BLEU if st.startswith("hausse") else GRIS)
+        e.append('<text x="%d" y="%d" font-size="11.5" fill="%s">%s</text>' % (cols[0] + 6, y + 21, INK, esc(lib)))
+        e.append('<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (cols[1], y + 21, INK2, esc(pop)))
+        e.append('<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (cols[2], y + 21, INK2, per))
+        e.append('<text x="%d" y="%d" font-size="11.5" fill="%s" font-weight="600">%s%s</text>' % (cols[3], y + 21, col, "+" if v > 0 else "", nb(v, 0)))
+        e.append('<rect x="%d" y="%d" width="10" height="10" rx="5" fill="%s"/>' % (cols[4], y + 12, col))
+        e.append('<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (cols[4] + 16, y + 21, INK, esc(st)))
+    return pied(e, h + 2, t["source"], t["note"])
 
 
 def fig_baisse(c, A):
@@ -466,7 +579,7 @@ def fig_seconde(c, A):
 
 def fiches(figs):
     out = []
-    for fid in ("baisse", "sommet", "seconde"):
+    for fid in ("thermometres", "baisse", "sommet", "seconde"):
         svg = figs["niveau-%s.svg" % fid]
         titre = html.unescape(re.search(r"<title[^>]*>(.*?)</title>", svg).group(1))
         cart = [html.unescape(t) for t in re.findall(r'<text x="0" y="[0-9.]+" font-size="9" fill="[^"]+">(.*?)</text>', svg)]
@@ -515,6 +628,23 @@ def csv_texte(c):
     for z in ("france", "ocde"):
         for a, v in sorted(c["p4"][z].items()):
             w.writerow(["pisa_manque_enseignants_declare", z, a, round(v, 2), "% des eleves (chef d'etablissement : enseignement entrave)"])
+    cp = c["comp"]
+    for an in ("2015", "2025"):
+        for k, v in cp["parts_" + an].items():
+            w.writerow(["pisa_sciences_composition_par_classe", k, an, round(v, 2), "% de l'echantillon"])
+            w.writerow(["pisa_sciences_score_par_classe", k, an, round(cp["scores_" + an][k], 2), "points PISA"])
+    w.writerow(["pisa_sciences_composition_par_classe", "score_2025_aux_parts_2015", "2025", round(cp["recompose_2025"], 2), "points PISA (calcul)"])
+    for d, v in c["pct"].items():
+        for z in ("France", "OCDE"):
+            for p_, x in zip((10, 25, 50, 75, 90), v[z]):
+                w.writerow(["pisa_variation_percentiles_2015_2025_" + z.lower(), d, "P%d" % p_, round(x, 2), "points PISA"])
+    for a, v in c["eff"]["france"].items():
+        w.writerow(["pisa_indice_effort_declare_france", "indice (1 a 10)", a, v, "DEPP, NI 26-40"])
+    for lib, s_ in c["ae"]["timss"].items():
+        for a, v in sorted(s_.items()):
+            w.writerow(["timss_france", lib, a, v["score"], "points TIMSS (p : significativement au-dessus de 2023)" + (" p" if v["sym"] == "p" else "")])
+    for a, v in sorted(c["ae"]["pirls"].items()):
+        w.writerow(["pirls_france_cm1", "lecture", a, v["score"], "points PIRLS" + (" (significativement au-dessus de 2021)" if v["sup_2021"] else "")])
     return buf.getvalue()
 
 
@@ -533,7 +663,7 @@ def main() -> int:
         log("--check : %d gardes passees (%d cles d'affichage), rien ecrit." % (n, len(A)))
         return 0
     import cairosvg
-    figs = {"niveau-baisse.svg": fig_baisse(c, A), "niveau-sommet.svg": fig_sommet(c, A), "niveau-seconde.svg": fig_seconde(c, A)}
+    figs = {"niveau-thermometres.svg": fig_thermometres(c, A), "niveau-baisse.svg": fig_baisse(c, A), "niveau-sommet.svg": fig_sommet(c, A), "niveau-seconde.svg": fig_seconde(c, A)}
     P = c["P"]
     payload = {"meta": {"page": "https://" + PAGE_URL, "licence": "CC BY 4.0",
                         "champ": "France ; jeunes de 15 ans (PISA), élèves entrant en seconde (DEPP), terminale S (TIMSS Advanced), concours externes du second degré public",
@@ -544,6 +674,8 @@ def main() -> int:
                "test_positionnement_seconde": c["sec"],
                "depp_ecart_generations": c["X"]["depp_generations"],
                "timss_advanced": c["timss"],
+               "protocole_2": {"composition_sciences": c["comp"], "percentiles": c["pct"], "effort_declare": c["eff"],
+                               "autres_evaluations": c["ae"]},
                "recrutement": {"capes_externe": c["X"]["p1"], "contractuels": c["X"]["p2"], "non_pleinement_qualifies_ocde": c["p3"],
                                "manque_enseignants_declare_pisa": c["p4"]},
                "affichage": A}

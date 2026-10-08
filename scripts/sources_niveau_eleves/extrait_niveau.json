@@ -896,5 +896,194 @@
    "primaire+secondaire": 9.13002540669163,
    "p+s 2017/18": 7.333107446004025
   }
+ },
+ "p2_composition_sciences": {
+  "parts_2015": {
+   "a_troisieme_et_moins": 24.1,
+   "b_seconde_gt": 58.7,
+   "c_seconde_pro_cap": 12.3,
+   "d_premiere": 2.9
+  },
+  "parts_2025": {
+   "a_troisieme_et_moins": 9.0,
+   "b_seconde_gt": 64.9,
+   "c_seconde_pro_cap": 23.2,
+   "d_premiere": 2.7
+  },
+  "scores_2015": {
+   "a_troisieme_et_moins": 395.0414937759336,
+   "b_seconde_gt": 545.0,
+   "c_seconde_pro_cap": 435.0,
+   "d_premiere": 614.0
+  },
+  "scores_2025": {
+   "a_troisieme_et_moins": 375.96600000000007,
+   "b_seconde_gt": 525.13,
+   "c_seconde_pro_cap": 400.838275862069,
+   "d_premiere": 595.51
+  },
+  "moyenne_2015": 496.358163265306,
+  "moyenne_2025": 484.68893787575155,
+  "recompose_2025": 474.93062646023924,
+  "s": -0.8362432886288506,
+  "sensibilites": {
+   "sans premiere": -0.9274760597129273,
+   "autres en (a)": -1.0849739700070262
+  }
+ },
+ "p2_percentiles": {
+  "sciences": {
+   "France": [
+    -12.72789,
+    -14.42716,
+    -11.552230000000002,
+    -11.42101,
+    -8.512920000000001
+   ],
+   "OCDE": [
+    -13.604800000000001,
+    -10.625060000000001,
+    -6.872210000000001,
+    -3.3805600000000005,
+    -0.12628
+   ],
+   "ocde_libelle": "OECD average-35"
+  },
+  "lecture": {
+   "France": [
+    -29.04173,
+    -42.18179000000001,
+    -48.86961,
+    -49.287940000000006,
+    -46.61314
+   ],
+   "OCDE": [
+    -34.624810000000004,
+    -33.43213,
+    -29.276490000000003,
+    -23.021490000000004,
+    -17.35021
+   ],
+   "ocde_libelle": "OECD average-35"
+  },
+  "mathematiques": {
+   "France": [
+    -30.290020000000002,
+    -36.635180000000005,
+    -39.52752,
+    -37.70543,
+    -33.17154
+   ],
+   "OCDE": [
+    -27.853240000000003,
+    -27.298330000000004,
+    -23.673890000000004,
+    -18.3674,
+    -13.079180000000001
+   ],
+   "ocde_libelle": "OECD average-35"
+  }
+ },
+ "p2_effort": {
+  "france": {
+   "2018": 7.16,
+   "2022": 7.04,
+   "2025": 6.43
+  },
+  "france_d": -0.61,
+  "france_sig": true,
+  "ocde_d": -0.3116,
+  "rang": 1,
+  "n_pays": 38,
+  "verdict": "NON FAIT (controle 3 de couverture echoue : mathematiques 2022 : couverture 478.8 contre 473.9 publie ; lecture 2022 : couverture 479.7 contre 473.9 publie)"
+ },
+ "p2_autres_evaluations": {
+  "timss": {
+   "TIMSS CM1 maths": {
+    "2023": {
+     "score": 484,
+     "sym": ""
+    },
+    "2019": {
+     "score": 485,
+     "sym": ""
+    },
+    "2015": {
+     "score": 488,
+     "sym": ""
+    }
+   },
+   "TIMSS 4e maths": {
+    "2023": {
+     "score": 479,
+     "sym": ""
+    },
+    "2019": {
+     "score": 483,
+     "sym": ""
+    },
+    "1995": {
+     "score": 530,
+     "sym": "p"
+    }
+   },
+   "TIMSS CM1 sciences": {
+    "2023": {
+     "score": 488,
+     "sym": ""
+    },
+    "2019": {
+     "score": 488,
+     "sym": ""
+    },
+    "2015": {
+     "score": 487,
+     "sym": ""
+    }
+   },
+   "TIMSS 4e sciences": {
+    "2023": {
+     "score": 486,
+     "sym": ""
+    },
+    "2019": {
+     "score": 489,
+     "sym": ""
+    },
+    "1995": {
+     "score": 488,
+     "sym": ""
+    }
+   }
+  },
+  "pirls": {
+   "2001": {
+    "score": 525.0,
+    "sup_2021": true
+   },
+   "2006": {
+    "score": 522.0,
+    "sup_2021": true
+   },
+   "2011": {
+    "score": 520.0,
+    "sup_2021": false
+   },
+   "2016": {
+    "score": 511.0,
+    "sup_2021": false
+   },
+   "2021": {
+    "score": 514.0,
+    "sup_2021": false
+   }
+  },
+  "verdicts": {
+   "TIMSS CM1 maths": "STABLE",
+   "TIMSS 4e maths": "STABLE",
+   "TIMSS CM1 sciences": "STABLE",
+   "TIMSS 4e sciences": "STABLE",
+   "PIRLS CM1": "STABLE"
+  }
  }
 }
