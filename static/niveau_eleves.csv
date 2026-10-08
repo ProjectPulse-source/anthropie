@@ -298,6 +298,90 @@ pisa_manque_enseignants_declare,ocde,2015,29.76,% des eleves (chef d'etablisseme
 pisa_manque_enseignants_declare,ocde,2018,27.42,% des eleves (chef d'etablissement : enseignement entrave)
 pisa_manque_enseignants_declare,ocde,2022,46.67,% des eleves (chef d'etablissement : enseignement entrave)
 pisa_manque_enseignants_declare,ocde,2025,38.97,% des eleves (chef d'etablissement : enseignement entrave)
+timss4e_2019_2023_pisa_2022_2025_maths,Australia,dT,-8.0,points TIMSS
+timss4e_2019_2023_pisa_2022_2025_maths,Australia,dP,-9.56,points PISA
+timss4e_2019_2023_pisa_2022_2025_maths,Australia,G,-0.357,ecart standardise (z(dP) - z(dT))
+timss4e_2019_2023_pisa_2022_2025_maths,Chile,dT,-25.0,points TIMSS
+timss4e_2019_2023_pisa_2022_2025_maths,Chile,dP,-9.05,points PISA
+timss4e_2019_2023_pisa_2022_2025_maths,Chile,G,0.7212,ecart standardise (z(dP) - z(dT))
+timss4e_2019_2023_pisa_2022_2025_maths,Chinese Taipei,dT,-10.0,points TIMSS
+timss4e_2019_2023_pisa_2022_2025_maths,Chinese Taipei,dP,-0.91,points PISA
+timss4e_2019_2023_pisa_2022_2025_maths,Chinese Taipei,G,0.4622,ecart standardise (z(dP) - z(dT))
+timss4e_2019_2023_pisa_2022_2025_maths,Cyprus,dT,-7.0,points TIMSS
+timss4e_2019_2023_pisa_2022_2025_maths,Cyprus,dP,-6.53,points PISA
+timss4e_2019_2023_pisa_2022_2025_maths,Cyprus,G,-0.1737,ecart standardise (z(dP) - z(dT))
+timss4e_2019_2023_pisa_2022_2025_maths,Finland,dT,-5.0,points TIMSS
+timss4e_2019_2023_pisa_2022_2025_maths,Finland,dP,-15.44,points PISA
+timss4e_2019_2023_pisa_2022_2025_maths,Finland,G,-1.0143,ecart standardise (z(dP) - z(dT))
+timss4e_2019_2023_pisa_2022_2025_maths,France,dT,-4.0,points TIMSS
+timss4e_2019_2023_pisa_2022_2025_maths,France,dP,-16.29,points PISA
+timss4e_2019_2023_pisa_2022_2025_maths,France,G,-1.1434,ecart standardise (z(dP) - z(dT))
+timss4e_2019_2023_pisa_2022_2025_maths,Georgia,dT,6.0,points TIMSS
+timss4e_2019_2023_pisa_2022_2025_maths,Georgia,dP,26.34,points PISA
+timss4e_2019_2023_pisa_2022_2025_maths,Georgia,G,1.6807,ecart standardise (z(dP) - z(dT))
+timss4e_2019_2023_pisa_2022_2025_maths,Hong Kong (China),dT,-3.0,points TIMSS
+timss4e_2019_2023_pisa_2022_2025_maths,Hong Kong (China),dP,-18.64,points PISA
+timss4e_2019_2023_pisa_2022_2025_maths,Hong Kong (China),G,-1.3941,ecart standardise (z(dP) - z(dT))
+timss4e_2019_2023_pisa_2022_2025_maths,Hungary,dT,-11.0,points TIMSS
+timss4e_2019_2023_pisa_2022_2025_maths,Hungary,dP,-13.29,points PISA
+timss4e_2019_2023_pisa_2022_2025_maths,Hungary,G,-0.4744,ecart standardise (z(dP) - z(dT))
+timss4e_2019_2023_pisa_2022_2025_maths,Ireland,dT,-2.0,points TIMSS
+timss4e_2019_2023_pisa_2022_2025_maths,Ireland,dP,-11.77,points PISA
+timss4e_2019_2023_pisa_2022_2025_maths,Ireland,G,-0.9016,ecart standardise (z(dP) - z(dT))
+timss4e_2019_2023_pisa_2022_2025_maths,Israel,dT,-32.0,points TIMSS
+timss4e_2019_2023_pisa_2022_2025_maths,Israel,dP,-24.52,points PISA
+timss4e_2019_2023_pisa_2022_2025_maths,Israel,G,-0.098,ecart standardise (z(dP) - z(dT))
+timss4e_2019_2023_pisa_2022_2025_maths,Italy,dT,4.0,points TIMSS
+timss4e_2019_2023_pisa_2022_2025_maths,Italy,dP,-3.5,points PISA
+timss4e_2019_2023_pisa_2022_2025_maths,Italy,G,-0.6009,ecart standardise (z(dP) - z(dT))
+timss4e_2019_2023_pisa_2022_2025_maths,Japan,dT,1.0,points TIMSS
+timss4e_2019_2023_pisa_2022_2025_maths,Japan,dP,-10.2,points PISA
+timss4e_2019_2023_pisa_2022_2025_maths,Japan,G,-0.9582,ecart standardise (z(dP) - z(dT))
+timss4e_2019_2023_pisa_2022_2025_maths,Jordan,dT,-32.0,points TIMSS
+timss4e_2019_2023_pisa_2022_2025_maths,Jordan,dP,26.33,points PISA
+timss4e_2019_2023_pisa_2022_2025_maths,Jordan,G,3.9992,ecart standardise (z(dP) - z(dT))
+timss4e_2019_2023_pisa_2022_2025_maths,Kazakhstan,dT,-34.0,points TIMSS
+timss4e_2019_2023_pisa_2022_2025_maths,Kazakhstan,dP,-11.72,points PISA
+timss4e_2019_2023_pisa_2022_2025_maths,Kazakhstan,G,1.0551,ecart standardise (z(dP) - z(dT))
+timss4e_2019_2023_pisa_2022_2025_maths,Korea,dT,-11.0,points TIMSS
+timss4e_2019_2023_pisa_2022_2025_maths,Korea,dP,-5.0,points PISA
+timss4e_2019_2023_pisa_2022_2025_maths,Korea,G,0.1929,ecart standardise (z(dP) - z(dT))
+timss4e_2019_2023_pisa_2022_2025_maths,Lithuania,dT,-6.0,points TIMSS
+timss4e_2019_2023_pisa_2022_2025_maths,Lithuania,dP,-4.66,points PISA
+timss4e_2019_2023_pisa_2022_2025_maths,Lithuania,G,-0.084,ecart standardise (z(dP) - z(dT))
+timss4e_2019_2023_pisa_2022_2025_maths,Malaysia,dT,-50.0,points TIMSS
+timss4e_2019_2023_pisa_2022_2025_maths,Malaysia,dP,-11.26,points PISA
+timss4e_2019_2023_pisa_2022_2025_maths,Malaysia,G,2.0685,ecart standardise (z(dP) - z(dT))
+timss4e_2019_2023_pisa_2022_2025_maths,Morocco,dT,-10.0,points TIMSS
+timss4e_2019_2023_pisa_2022_2025_maths,Morocco,dP,-10.01,points PISA
+timss4e_2019_2023_pisa_2022_2025_maths,Morocco,G,-0.2714,ecart standardise (z(dP) - z(dT))
+timss4e_2019_2023_pisa_2022_2025_maths,New Zealand,dT,3.0,points TIMSS
+timss4e_2019_2023_pisa_2022_2025_maths,New Zealand,dP,0.54,points PISA
+timss4e_2019_2023_pisa_2022_2025_maths,New Zealand,G,-0.2143,ecart standardise (z(dP) - z(dT))
+timss4e_2019_2023_pisa_2022_2025_maths,Portugal,dT,-25.0,points TIMSS
+timss4e_2019_2023_pisa_2022_2025_maths,Portugal,dP,-11.97,points PISA
+timss4e_2019_2023_pisa_2022_2025_maths,Portugal,G,0.4863,ecart standardise (z(dP) - z(dT))
+timss4e_2019_2023_pisa_2022_2025_maths,Qatar,dT,8.0,points TIMSS
+timss4e_2019_2023_pisa_2022_2025_maths,Qatar,dP,2.06,points PISA
+timss4e_2019_2023_pisa_2022_2025_maths,Qatar,G,-0.3977,ecart standardise (z(dP) - z(dT))
+timss4e_2019_2023_pisa_2022_2025_maths,Romania,dT,17.0,points TIMSS
+timss4e_2019_2023_pisa_2022_2025_maths,Romania,dP,-8.64,points PISA
+timss4e_2019_2023_pisa_2022_2025_maths,Romania,G,-1.8083,ecart standardise (z(dP) - z(dT))
+timss4e_2019_2023_pisa_2022_2025_maths,Saudi Arabia,dT,3.0,points TIMSS
+timss4e_2019_2023_pisa_2022_2025_maths,Saudi Arabia,dP,1.1,points PISA
+timss4e_2019_2023_pisa_2022_2025_maths,Saudi Arabia,G,-0.1692,ecart standardise (z(dP) - z(dT))
+timss4e_2019_2023_pisa_2022_2025_maths,Singapore,dT,-11.0,points TIMSS
+timss4e_2019_2023_pisa_2022_2025_maths,Singapore,dP,-11.77,points PISA
+timss4e_2019_2023_pisa_2022_2025_maths,Singapore,G,-0.3518,ecart standardise (z(dP) - z(dT))
+timss4e_2019_2023_pisa_2022_2025_maths,Sweden,dT,14.0,points TIMSS
+timss4e_2019_2023_pisa_2022_2025_maths,Sweden,dP,-17.51,points PISA
+timss4e_2019_2023_pisa_2022_2025_maths,Sweden,G,-2.3405,ecart standardise (z(dP) - z(dT))
+timss4e_2019_2023_pisa_2022_2025_maths,United Arab Emirates,dT,16.0,points TIMSS
+timss4e_2019_2023_pisa_2022_2025_maths,United Arab Emirates,dP,21.48,points PISA
+timss4e_2019_2023_pisa_2022_2025_maths,United Arab Emirates,G,0.6789,ecart standardise (z(dP) - z(dT))
+timss4e_2019_2023_pisa_2022_2025_maths,United States,dT,-27.0,points TIMSS
+timss4e_2019_2023_pisa_2022_2025_maths,United States,dP,-2.04,points PISA
+timss4e_2019_2023_pisa_2022_2025_maths,United States,G,1.4081,ecart standardise (z(dP) - z(dT))
 pisa_sciences_composition_par_classe,a_troisieme_et_moins,2015,24.1,% de l'echantillon
 pisa_sciences_score_par_classe,a_troisieme_et_moins,2015,395.04,points PISA
 pisa_sciences_composition_par_classe,b_seconde_gt,2015,58.7,% de l'echantillon

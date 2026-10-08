@@ -17,7 +17,7 @@ de seconde 2026, note de la DEPP), puis PISA 2029 (publication prévue fin 2030)
 et extrait_niveau.py dans le dossier de recherche, recopier l'extrait et son empreinte, relancer ce script.
 Page en français seulement (exclusion déclarée : débat, programme et statistique français).
 
-Usage : python scripts/update_niveau_eleves.py [--check] [--mutation=maths|lecture|sommet|social|seconde|lycee|recrutement|haut_ocde]
+Usage : python scripts/update_niveau_eleves.py [--check] [--mutation=maths|lecture|sommet|social|seconde|lycee|recrutement|haut_ocde|thermometres|composition|effort|amortisseur|timss_pisa]
 Sorties : data/ et static/niveau_eleves.json, static/niveau_eleves.csv, data/figures_niveau.json,
           static/img/niveau-{baisse,sommet,seconde}.svg + .png
 """
@@ -31,6 +31,8 @@ import json
 import re
 import sys
 from pathlib import Path
+
+import numpy as np
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "scripts" / "sources_niveau_eleves"
@@ -77,6 +79,20 @@ def nb(v: float, dec: int = 1) -> str:
     return s
 
 
+# noms français des pays du protocole 3 (TIMSS 4e / PISA), avec leur article ; un pays absent arrête le générateur
+PAYS_FR = {"Sweden": "la Suède", "Romania": "la Roumanie", "Hong Kong (China)": "Hong Kong", "France": "la France",
+           "Finland": "la Finlande", "Japan": "le Japon", "Ireland": "l'Irlande", "Italy": "l'Italie", "Hungary": "la Hongrie",
+           "Qatar": "le Qatar", "Australia": "l'Australie", "Singapore": "Singapour", "Morocco": "le Maroc",
+           "New Zealand": "la Nouvelle-Zélande", "Cyprus": "Chypre", "Saudi Arabia": "l'Arabie saoudite", "Israel": "Israël",
+           "Lithuania": "la Lituanie", "Korea": "la Corée du Sud", "Chinese Taipei": "Taïwan", "Portugal": "le Portugal",
+           "United Arab Emirates": "les Émirats arabes unis", "Chile": "le Chili", "Kazakhstan": "le Kazakhstan",
+           "United States": "les États-Unis", "Georgia": "la Géorgie", "Malaysia": "la Malaisie", "Jordan": "la Jordanie"}
+
+
+def liste_fr(noms):
+    return noms[0] if len(noms) == 1 else ", ".join(noms[:-1]) + " et " + noms[-1]
+
+
 LETTRES = {2: "deux", 3: "trois", 4: "quatre", 5: "cinq", 6: "six", 7: "sept", 8: "huit", 9: "neuf", 10: "dix"}
 
 
@@ -106,6 +122,7 @@ def calcul(X):
         seconde_gt=part("Seconde GT"), seconde_pro=part("Seconde pro"),
         sec=X["seconde"], timss=X["timss_adv"], gen=gen, p1=p1, p2={int(a): v for a, v in X["p2"].items()},
         p3=X["p3"], p4=X["p4"], releve=X["releve_le"],
+        t3=X["p3_timss_pisa_maths"],
         comp=X["p2_composition_sciences"], pct=X["p2_percentiles"], eff=X["p2_effort"], ae=X["p2_autres_evaluations"],
     )
 
@@ -144,6 +161,9 @@ def mutation(c):
         c["ae"]["timss"]["TIMSS 4e maths"]["2019"]["sym"] = "p"
     elif m == "composition":  # la composition aurait contribué à la baisse au lieu de la masquer
         c["comp"] = dict(c["comp"], recompose_2025=c["comp"]["moyenne_2025"] + 5)
+    elif m == "timss_pisa":   # la France serait au milieu des écarts TIMSS 4e / PISA
+        c["t3"] = json.loads(json.dumps(c["t3"]))
+        c["t3"]["rang"] = c["t3"]["n"] // 2
     elif m == "amortisseur":  # en France, le haut reculerait moins que le bas en mathématiques
         c["pct"] = json.loads(json.dumps(c["pct"]))
         c["pct"]["mathematiques"]["France"][4] = c["pct"]["mathematiques"]["France"][0] / 2
@@ -173,6 +193,19 @@ def gardes(c):
     g(not ae["pirls"]["2016"]["sup_2021"], "PIRLS : « stable » de 2016 à 2021")
     g(ae["timss"]["TIMSS 4e maths"]["1995"]["sym"] == "p", "TIMSS 4e maths : 1995 significativement au-dessus de 2023")
     g(ae["pirls"]["2001"]["sup_2021"] and ae["pirls"]["2006"]["sup_2021"], "PIRLS : 2001 et 2006 significativement au-dessus de 2021")
+    # protocole 3, N12 : « l'un des quatre pays où l'écart TIMSS 4e / PISA est le plus défavorable » ; « ailleurs, souvent l'autre sens »
+    p3 = c["t3"]
+    g(p3["verdict"] == "TIENT" and all(v == "TIENT" for v in p3["variantes"].values()), "TIMSS / PISA : verdict robuste")
+    g(p3["rang"] <= p3["n"] // 4 and p3["rang"] in LETTRES, "TIMSS / PISA : France dans le quart le plus défavorable")
+    g(all(k in PAYS_FR for k in p3["pays"]), "TIMSS / PISA : nom français manquant")
+    fr3 = p3["pays"]["France"]
+    g(fr3["dT"] < 0 and fr3["dP"] < 0, "TIMSS / PISA : la France recule dans les deux")
+    brut = sorted(v["dP"] - v["dT"] for v in p3["pays"].values())
+    q1_brut = float(np.percentile(brut, 25))
+    ecart_q1 = q1_brut - (fr3["dP"] - fr3["dT"])
+    g(0 < ecart_q1 < 1.5 * P["mathematiques"]["dif"]["2022"]["se"], "TIMSS / PISA : écart au premier quartile « du même ordre » que la marge d'erreur")
+    autre = sum(1 for v in p3["pays"].values() if v["dP"] > v["dT"])
+    g(autre >= p3["n"] / 3 and p3["rho"] < 0.5, "TIMSS / PISA : « ailleurs, souvent dans l'autre sens », pas d'effet général")
     # protocole 2, N8 : la composition masque la baisse (sciences)
     cp = c["comp"]
     D_ = cp["moyenne_2025"] - cp["moyenne_2015"]
@@ -365,6 +398,17 @@ def affichage(c):
     A["contr_0"], A["contr_1"] = nb(p2[min(p2)]), nb(p2[max(p2)])
     A["nq_fr"] = nb(c["p3"]["France"]["secondaire"])
     A["nq_ocde"] = nb(c["p3"]["OECD average"]["secondaire"])
+    # protocole 3
+    p3 = c["t3"]
+    tri = [k for k, _ in sorted(p3["pays"].items(), key=lambda kv: kv[1]["G"])]
+    i = tri.index("France")
+    A["t3_n"] = str(p3["n"])
+    A["t3_rang_l"] = LETTRES[p3["rang"]]
+    A["t3_avant"] = liste_fr([PAYS_FR[k] for k in tri[:i]])
+    A["t3_apres"] = liste_fr([PAYS_FR[k] for k in tri[i + 1:i + 4]])
+    A["t3_fr_dt"] = nb(-p3["pays"]["France"]["dT"], 0)
+    A["t3_fr_dp"] = nb(-p3["pays"]["France"]["dP"], 0)
+    A["t3_autre"] = str(sum(1 for v in p3["pays"].values() if v["dP"] > v["dT"]))
     # protocole 2
     ae = c["ae"]
     for lib, k in (("TIMSS CM1 maths", "tcm1"), ("TIMSS 4e maths", "t4e"), ("TIMSS CM1 sciences", "tcm1s"), ("TIMSS 4e sciences", "t4es")):
@@ -676,6 +720,10 @@ def csv_texte(c):
     for z in ("france", "ocde"):
         for a, v in sorted(c["p4"][z].items()):
             w.writerow(["pisa_manque_enseignants_declare", z, a, round(v, 2), "% des eleves (chef d'etablissement : enseignement entrave)"])
+    for k, v in sorted(c["t3"]["pays"].items()):
+        w.writerow(["timss4e_2019_2023_pisa_2022_2025_maths", k, "dT", round(v["dT"], 2), "points TIMSS"])
+        w.writerow(["timss4e_2019_2023_pisa_2022_2025_maths", k, "dP", round(v["dP"], 2), "points PISA"])
+        w.writerow(["timss4e_2019_2023_pisa_2022_2025_maths", k, "G", round(v["G"], 4), "ecart standardise (z(dP) - z(dT))"])
     cp = c["comp"]
     for an in ("2015", "2025"):
         for k, v in cp["parts_" + an].items():
@@ -722,6 +770,7 @@ def main() -> int:
                "test_positionnement_seconde": c["sec"],
                "depp_ecart_generations": c["X"]["depp_generations"],
                "timss_advanced": c["timss"],
+               "protocole_3_timss_pisa_maths": c["t3"],
                "protocole_2": {"composition_sciences": c["comp"], "percentiles": c["pct"], "effort_declare": c["eff"],
                                "autres_evaluations": c["ae"]},
                "recrutement": {"capes_externe": c["X"]["p1"], "contractuels": c["X"]["p2"], "non_pleinement_qualifies_ocde": c["p3"],
