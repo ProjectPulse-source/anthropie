@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 344" role="img" font-variant-numeric="tabular-nums" aria-labelledby="infl-t infl-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
-<title id="infl-t">French fixed-rate State debt at end-2020: erosion from the inflation surprise, as payments fall due</title><desc id="infl-d">Cumulative real erosion of promised payments, 2021 to 2066, in billions of 2020 euros: 30 by end-2023, 83 by end-2027, 150.8 in total; range of forecasts published in early 2021: 145 to 170.</desc>
+<title id="infl-t">End-2020 fixed-rate government debt: erosion from the inflation surprise, as payments fall due</title><desc id="infl-d">Cumulative real-value erosion of promised payments, 2021 to 2066, in billions of 2020 euros: 30 by end-2023, 83 by end-2027, 150.8 in total; range of forecasts published in early 2021: 145 to 170.</desc>
 <rect width="720" height="344" fill="#ffffff"/>
-<text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">French fixed-rate State debt at end-2020: erosion from the inflation surprise, as payments fall due</text>
+<text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">End-2020 fixed-rate government debt: erosion from the inflation surprise, as payments fall due</text>
 <line x1="54" y1="262.0" x2="690" y2="262.0" stroke="#dcd8d3" stroke-width="1.2"/>
 <text x="48" y="265.0" font-size="10" fill="#96928f" text-anchor="end">0</text>
 <line x1="54" y1="207.5" x2="690" y2="207.5" stroke="#dcd8d3" stroke-width="0.6"/>
@@ -12,7 +12,7 @@
 <text x="48" y="101.5" font-size="10" fill="#96928f" text-anchor="end">150</text>
 <line x1="54" y1="44.0" x2="690" y2="44.0" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="48" y="47.0" font-size="10" fill="#96928f" text-anchor="end">200</text>
-<text x="54" y="36" font-size="10" fill="#96928f">€bn of 2020, cumulative</text>
+<text x="54" y="36" font-size="10" fill="#96928f">€bn in 2020 euros, cumulative</text>
 <rect x="496.4" y="75.1" width="193.6" height="29.9" fill="#c9c5c0" opacity="0.35"/>
 <text x="690.0" y="70.1" font-size="10" fill="#55524f" text-anchor="end">published forecasts: 145 to 170</text>
 <text x="123.1" y="276" font-size="10" fill="#96928f" text-anchor="middle">2025</text>
@@ -26,13 +26,13 @@
 <text x="676.2" y="276" font-size="10" fill="#96928f" text-anchor="middle">2065</text>
 <path d="M54.0,262.0 L67.8,258.0 L81.7,247.9 L95.5,229.1 L109.3,215.2 L123.1,198.1 L137.0,181.6 L150.8,171.6 L164.6,162.0 L178.4,149.7 L192.3,141.4 L206.1,136.0 L219.9,132.0 L233.7,131.2 L247.6,127.3 L261.4,124.1 L275.2,120.4 L289.0,119.9 L302.9,117.1 L316.7,114.5 L330.5,113.3 L344.3,110.1 L358.2,109.8 L372.0,109.5 L385.8,109.3 L399.7,107.2 L413.5,107.0 L427.3,106.8 L441.1,104.6 L455.0,104.5 L468.8,102.3 L482.6,102.2 L496.4,100.9 L510.3,100.8 L524.1,100.7 L537.9,99.5 L551.7,99.5 L565.6,99.4 L579.4,99.4 L593.2,99.3 L607.0,98.3 L620.9,98.3 L634.7,98.3 L648.5,98.3 L662.3,98.3 L676.2,98.3 L690.0,97.6" fill="none" stroke="#184f95" stroke-width="2.4" stroke-linejoin="round"/>
 <circle cx="95.5" cy="229.1" r="3.6" fill="#184f95"/>
-<text x="102.5" y="241.1" font-size="10.5" fill="#26262f">end-2023 : 30</text>
+<text x="102.5" y="241.1" font-size="10.5" fill="#26262f">end-2023: 30</text>
 <circle cx="150.8" cy="171.6" r="3.6" fill="#184f95"/>
 <text x="157.8" y="183.6" font-size="10.5" fill="#26262f">half reached in 2027</text>
 <circle cx="690.0" cy="97.6" r="3.6" fill="#184f95"/>
 <text x="684.0" y="113.6" font-size="10.5" font-weight="600" fill="#184f95" text-anchor="end">total: 150.8</text>
 <line x1="0" y1="294.0" x2="720" y2="294.0" stroke="#dcd8d3"/>
 <text x="0" y="307.0" font-size="9" fill="#55524f">AFT (outstanding debt, 31/12/2020), Eurostat (monthly HICP, France), ECB (SPF, January 2021); author's calculation</text>
-<text x="0" y="319.0" font-size="9" fill="#55524f">€bn of 2020 at French consumer prices, undiscounted; counterfactual: inflation expected in early 2021. Neither a net fiscal gain nor a final loss.</text>
+<text x="0" y="319.0" font-size="9" fill="#55524f">€bn in 2020 euros at French consumer prices, undiscounted; counterfactual: inflation expected in early 2021. Neither a net fiscal gain nor a final loss.</text>
 <text x="0" y="331.0" font-size="9" fill="#96928f">Computed by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/inflation-and-french-public-debt/</text>
 </svg>

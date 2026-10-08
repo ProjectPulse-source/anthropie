@@ -1,9 +1,9 @@
 ---
 title: "L'inflation a-t-elle vraiment allégé la dette française ?"
-description: "L'inflation de 2021-2023, plus forte que prévu, a réduit d'environ {infl.t} milliards d'euros de 2020 le pouvoir d'achat des paiements promis sur la dette de l'État à taux fixe de fin 2020. Cette érosion se mesure bien ; elle ne se convertit pas en un gain budgétaire net identifiable. Calcul sur l'encours ligne à ligne de l'AFT et l'IPCH mensuel."
+description: "L'inflation de 2021-2023, plus forte que prévu, a réduit d'environ {infl.t} milliards d'euros de 2020 la valeur réelle des paiements promis sur la dette de l'État à taux fixe de fin 2020. Cette érosion se mesure bien ; elle ne se convertit pas en un gain budgétaire net identifiable. Calcul sur l'encours ligne à ligne de l'AFT et l'IPCH mensuel."
 chapo: "Oui, sur les engagements nominaux hérités : l'écart entre l'inflation de 2021-2023 et celle que l'on prévoyait début 2021 a réduit d'environ {infl.t} milliards d'euros de 2020 la valeur réelle des paiements promis sur la dette de l'État à taux fixe de fin 2020. Mais ce ne sont ni {infl.t} milliards encaissés, ni un gain net, ni un perdant final identifié. Cette étude mesure le canal de la dette nominale. Elle ne mesure pas l'effet budgétaire total de l'inflation sur les finances publiques."
 date: 2026-10-07
-lastmod: 2026-10-07
+lastmod: 2026-10-08
 og_title: "L'inflation a-t-elle vraiment allégé la dette française ? — S. Lalut"
 og_image: "images/og-dette-inflation.jpg"
 og_image_alt: "Carte de partage : « L'inflation a érodé la vieille dette » — érosion réelle cumulée des paiements promis sur la dette de l'État à taux fixe de fin 2020, au fil des paiements, et plage des prévisions publiées début 2021."
@@ -46,8 +46,8 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 dossier_dette: prolongement
 dossier_dette_titre: "L'inflation a-t-elle allégé la dette ?"
 dossier_dette_role: "2021-2023, dette de l'État"
-dossier_dette_titre_en: "Did inflation ease the debt?"
-dossier_dette_role_en: "2021-2023, State debt"
+dossier_dette_titre_en: "Did inflation ease the debt burden?"
+dossier_dette_role_en: "2021–2023, government debt"
 ---
 
 {{< dossier-dette volet="prolongement" >}}
@@ -65,7 +65,7 @@ dossier_dette_role_en: "2021-2023, State debt"
 
 <div class="resultat-phrase">
 
-**Le résultat en une phrase.** Dans notre contrefactuel, l'écart entre l'inflation réalisée en 2021-2023 et celle anticipée début 2021 réduit d'environ {{< infl-val "t" >}}&nbsp;milliards d'euros de 2020 le pouvoir d'achat cumulé des paiements promis sur la dette négociable à taux fixe existant fin 2020, soit environ {{< infl-val "pts_pib" >}}&nbsp;% du PIB de 2020&nbsp;; selon la prévision retenue parmi celles publiées début 2021, l'estimation va de {{< infl-val "a_bas" >}} à {{< infl-val "a_haut" >}}&nbsp;milliards. Sur cette dette, environ la moitié de l'érosion se matérialise dans les paiements effectués d'ici {{< infl-val "demi" >}}.
+**Le résultat en une phrase.** Dans notre contrefactuel, l'écart entre l'inflation réalisée en 2021-2023 et celle anticipée début 2021 réduit d'environ {{< infl-val "t" >}}&nbsp;milliards d'euros de 2020 la valeur réelle cumulée des paiements promis sur la dette négociable à taux fixe existant fin 2020, soit environ {{< infl-val "pts_pib" >}}&nbsp;% du PIB de 2020&nbsp;; selon la prévision retenue parmi celles publiées début 2021, l'estimation va de {{< infl-val "a_bas" >}} à {{< infl-val "a_haut" >}}&nbsp;milliards. Sur cette dette, environ la moitié de l'érosion se matérialise dans les paiements effectués d'ici {{< infl-val "demi" >}}.
 
 </div>
 
@@ -73,7 +73,7 @@ Fin 2020, l'État devait des coupons et des remboursements fixés en euros, lign
 
 Les montants sont exprimés en euros de 2020 aux prix à la consommation français. Ce numéraire répond à une question précise, ce que représentent ces paiements pour un ménage qui dépense en France. Un créancier étranger ne raisonne pas dans nos prix, et l'État ne lève pas ses recettes sur le panier du consommateur&nbsp;: la section suivante donne la même érosion dans une autre unité.
 
-Dans ce contrefactuel où l'écart de niveau des prix créé en 2021-2023 persiste, la baisse de valeur réelle des flux nominaux déjà contractés n'est pas annulée par une hausse ultérieure des taux, qui porte sur les nouveaux financements. Elle est pourtant loin d'être payée&nbsp;: fin 2023, {{< infl-val "part23" >}}&nbsp;% seulement de l'érosion avait été réalisée dans des paiements effectifs, et environ {{< infl-val "part27" >}}&nbsp;% le seront fin {{< infl-val "demi" >}}. La maturité de la dette en détermine fortement le calendrier&nbsp;; son effet sur un éventuel solde budgétaire dépend de la mesure retenue.
+Dans ce contrefactuel où l'écart de niveau des prix créé en 2021-2023 persiste, la baisse de valeur réelle des flux nominaux déjà contractés n'est pas annulée par une hausse ultérieure des taux, qui porte sur les nouveaux financements. Pour l'essentiel, elle ne s'était pourtant pas encore traduite dans les paiements&nbsp;: fin 2023, {{< infl-val "part23" >}}&nbsp;% seulement de l'érosion avait été réalisée dans des paiements effectifs, et environ {{< infl-val "part27" >}}&nbsp;% le seront fin {{< infl-val "demi" >}}. La maturité de la dette en détermine fortement le calendrier&nbsp;; son effet sur un éventuel solde budgétaire dépend de la mesure retenue.
 
 ## Pourquoi ce n'est pas un gain budgétaire net {#gain-net}
 
@@ -81,7 +81,7 @@ Les données disponibles ne permettent pas d'identifier quelle part de la hausse
 
 **Le numéraire change le montant.** Exprimée en unités de production intérieure (déflateur du PIB) plutôt qu'en pouvoir d'achat du consommateur, la même érosion est de l'ordre de {{< infl-val "defl_bas" >}} à {{< infl-val "defl_haut" >}}&nbsp;milliards, contre {{< infl-val "t_annuel" >}} aux prix à la consommation dans le même calcul en moyennes annuelles. Les deux mesures répondent à des questions différentes&nbsp;; aucune n'est un gain budgétaire net de l'État. L'écart entre les deux indices de prix est mesuré ici, non expliqué.
 
-**Les titres indexés ont joué en sens inverse.** Fin 2020, {{< infl-val "idx_n" >}}&nbsp;titres indexés sur l'inflation, pour {{< infl-val "idx_encours" >}}&nbsp;milliards d'euros, échappaient à l'érosion. Émis à taux fixe, ils auraient transféré environ {{< infl-val "idx" >}}&nbsp;milliards de plus. Dans le budget de l'État, leur charge d'indexation a culminé à {{< infl-val "charge22" >}}&nbsp;milliards d'euros courants en 2022 (AFT).
+**Les titres indexés ont joué en sens inverse.** Fin 2020, {{< infl-val "idx_n" >}}&nbsp;titres indexés sur l'inflation, pour {{< infl-val "idx_encours" >}}&nbsp;milliards d'euros, échappaient à l'érosion. Si des titres comparables avaient été émis en nominal à taux fixe, l'érosion aurait été plus forte d'environ {{< infl-val "idx" >}}&nbsp;milliards. Dans le budget de l'État, leur charge d'indexation a culminé à {{< infl-val "charge22" >}}&nbsp;milliards d'euros courants en 2022 (AFT).
 
 <details class="repli"><summary>Consolidation simplifiée avec la Banque de France&nbsp;: l'érosion reste presque entière pendant l'épisode, puis l'avantage consolidé se réduit</summary>
 
@@ -91,7 +91,7 @@ Fin 2020, la Banque de France détenait {{< infl-val "s_bdf" >}}&nbsp;% de la de
 
 où la perte réelle d'une année vaut l'encours des réserves en début d'année, en euros de 2020, multiplié par l'écart entre le rendement réel attendu (taux de dépôt de −0,5&nbsp;% et inflation anticipée) et le rendement réel obtenu (taux de dépôt et inflation réalisés).
 
-Parce que le taux de dépôt est resté à −0,5&nbsp;% jusqu'en juillet 2022 pendant que les prix montaient, les porteurs de réserves ont perdu comme des créanciers à taux fixe&nbsp;: consolidée, l'érosion vaut encore environ {{< infl-val "cons23" >}}&nbsp;milliards fin 2023. Le retournement vient ensuite&nbsp;: en 2024 et 2025, les réserves sont rémunérées au-dessus de l'inflation, et l'érosion consolidée tombe à environ {{< infl-val "cons25" >}}&nbsp;milliards fin 2025. C'est un modèle simplifié, non une consolidation statistique&nbsp;: la Banque de France n'appartient pas aux administrations publiques, et ses pertes atteignent l'État par ses dividendes et son impôt, avec retard.
+Parce que le taux de dépôt est resté à −0,5&nbsp;% jusqu'en juillet 2022 pendant que les prix montaient, les porteurs de réserves ont obtenu des rendements réels négatifs, comme les porteurs de créances nominales à taux fixe&nbsp;: consolidée, l'érosion vaut encore environ {{< infl-val "cons23" >}}&nbsp;milliards fin 2023. Le retournement vient ensuite&nbsp;: en 2024 et 2025, les réserves sont rémunérées au-dessus de l'inflation, et l'érosion consolidée tombe à environ {{< infl-val "cons25" >}}&nbsp;milliards fin 2025. C'est un modèle simplifié, non une consolidation statistique&nbsp;: la Banque de France n'appartient pas aux administrations publiques, et ses pertes atteignent l'État par ses dividendes et son impôt, avec retard.
 
 </details>
 
@@ -99,7 +99,7 @@ Parce que le taux de dépôt est resté à −0,5&nbsp;% jusqu'en juillet 2022 p
 
 **La prévision de départ.** Quatre prévisions d'inflation publiées entre novembre 2020 et février 2021 donnent&nbsp;: {{< infl-val "spf" >}}&nbsp;milliards avec l'enquête de la BCE auprès des prévisionnistes professionnels (janvier 2021, zone euro), {{< infl-val "bdf" >}} avec les projections de la Banque de France (décembre 2020), {{< infl-val "ce_aut" >}} et {{< infl-val "ce_hiv" >}} avec celles de la Commission européenne (automne 2020, hiver 2021). La Commission ne publiait pas d'horizon 2023&nbsp;: sa prévision de 2022, 1,5&nbsp;%, est reconduite pour 2023, son dernier horizon publié. Au-delà de 2023, toutes reviennent au chemin de l'enquête de la BCE, si bien que seules les années de l'épisode diffèrent. L'enquête de la BCE sert de référence parce qu'elle est la seule des quatre à couvrir tout l'horizon des paiements, au-delà de 2023 jusqu'au long terme, et qu'elle fixe une date d'information unique, janvier 2021, quand le niveau des prix de décembre 2020 est connu&nbsp;; elle porte sur la zone euro, et les trois prévisions propres à la France encadrent le résultat qu'elle donne.
 
-**Le prix de marché.** Les points morts d'inflation, écarts de rendement entre titres nominaux et indexés au 31&nbsp;décembre 2020 (AFT), donneraient davantage&nbsp;: {{< infl-val "b_fr" >}}&nbsp;milliards avec le point mort français à 10&nbsp;ans, {{< infl-val "b_eu" >}} avec celui de la zone euro. Ils incorporent des primes de risque et de liquidité, qui les tiraient alors vers le bas&nbsp;: ils ne servent ici qu'à la sensibilité, non à la plage.
+**Les points morts d'inflation.** Les écarts de rendement entre titres nominaux et indexés au 31&nbsp;décembre 2020 (AFT) donneraient davantage&nbsp;: {{< infl-val "b_fr" >}}&nbsp;milliards avec le point mort français à 10&nbsp;ans, {{< infl-val "b_eu" >}} avec celui de la zone euro. Ils incorporent des primes de risque et de liquidité, qui les tiraient alors vers le bas&nbsp;: ils ne servent ici qu'à la sensibilité, non à la plage.
 
 **L'actualisation.** Les montants sont sommés sans actualisation. Actualisés à un taux réel de −1&nbsp;% à +1&nbsp;%, ils vont de {{< infl-val "a_tout_bas" >}} à {{< infl-val "a_tout_haut" >}}&nbsp;milliards sur l'ensemble des prévisions.
 
@@ -109,7 +109,7 @@ Parce que le taux de dépôt est resté à −0,5&nbsp;% jusqu'en juillet 2022 p
 
 Elles ne mesurent pas l'effet budgétaire total de l'inflation&nbsp;: ni les recettes fiscales gonflées par les prix, ni l'indexation des pensions et des prestations, ni les mesures de soutien, ni les actifs nominaux détenus par les administrations. Elles ne portent que sur la dette négociable de l'État, non sur celle de la Sécurité sociale ou des collectivités. Elles ne disent pas qui a finalement supporté la perte. Elles ne permettent pas d'attribuer à l'épisode une part de la hausse des taux qui a suivi. Et elles reposent sur un contrefactuel&nbsp;: une autre anticipation de départ donne un autre chiffre, dans la plage indiquée.
 
-{{< confrontation-recherche verifie="2026-10-07" publie="oui" resume="l'ordre de grandeur est retrouvé chez Pallotti et al. une fois les conventions alignées ; la lecture d'un gain budgétaire net est mise en danger" >}}
+{{< confrontation-recherche verifie="2026-10-07" publie="oui" resume="l'ordre de grandeur est retrouvé chez Pallotti et al. une fois les conventions alignées, mais la littérature ne permet pas d'y lire un gain budgétaire net" >}}
 **Mesuré ici.** L'érosion réelle des paiements promis sur la dette de l'État à taux fixe de fin 2020, au rythme où l'écart de prix s'est formé, avec son calendrier de réalisation.
 
 **Cohérent avec.** Pallotti, Paz-Pardo, Slacalek, Tristani et Violante mesurent un gain bien plus élevé pour les administrations publiques françaises, {{< infl-val "pal_rapport" >}}&nbsp;fois le nôtre dans une même unité. L'écart se décompose&nbsp;: leur choc est instantané et mesuré de décembre à décembre contre une anticipation plus basse, ils valorisent la dette au prix de marché, et leur périmètre couvre toutes les administrations publiques et leurs titres indexés. Ces trois facteurs expliquent environ {{< infl-val "pal_explique" >}}&nbsp;% de l'écart&nbsp;; un résidu d'environ {{< infl-val "pal_residu" >}}&nbsp;% reste à réconcilier. Les deux calculs ne portent pas sur le même objet. Hilscher, Raviv et Reis ont posé la méthode qui rapporte l'allègement à la maturité de la dette&nbsp;; Andreolli et Rey l'appliquent ex post à la France jusqu'à la mi-2022.

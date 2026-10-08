@@ -13,10 +13,10 @@
   {
    "id": "calendrier",
    "fichier": "dette-inflation-calendrier-en",
-   "titre": "French fixed-rate State debt at end-2020: erosion from the inflation surprise, as payments fall due",
+   "titre": "End-2020 fixed-rate government debt: erosion from the inflation surprise, as payments fall due",
    "montre": "In this counterfactual the erosion is locked in by end-2023, but it materialises as payments fall due: about half by 2027.",
    "source": "AFT (outstanding debt, 31/12/2020), Eurostat (monthly HICP, France), ECB (SPF, January 2021); author's calculation",
-   "precaution": "€bn of 2020 at French consumer prices, undiscounted; counterfactual: inflation expected in early 2021. Neither a net fiscal gain nor a final loss."
+   "precaution": "€bn in 2020 euros at French consumer prices, undiscounted; counterfactual: inflation expected in early 2021. Neither a net fiscal gain nor a final loss."
   }
  ]
 }

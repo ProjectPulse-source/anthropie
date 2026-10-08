@@ -205,12 +205,12 @@ TXT = {
                note="Md€ de 2020 aux prix à la consommation, non actualisés ; contrefactuel : inflation anticipée début 2021. Ni gain budgétaire net, ni perte finale.",
                axe="Md€ de 2020, cumul", total="total : {t_exact}", demi="moitié atteinte en {demi}", plage="prévisions publiées : {a_bas} à {a_haut}",
                montre="L'érosion est acquise fin 2023 dans ce contrefactuel, mais elle se matérialise au rythme des paiements : environ la moitié d'ici {demi}."),
-    "en": dict(titre="French fixed-rate State debt at end-2020: erosion from the inflation surprise, as payments fall due",
-               desc="Cumulative real erosion of promised payments, 2021 to {fin}, in billions of 2020 euros: {cum23} by end-2023, "
+    "en": dict(titre="End-2020 fixed-rate government debt: erosion from the inflation surprise, as payments fall due",
+               desc="Cumulative real-value erosion of promised payments, 2021 to {fin}, in billions of 2020 euros: {cum23} by end-2023, "
                     "{cum27} by end-{demi}, {t_exact} in total; range of forecasts published in early 2021: {a_bas} to {a_haut}.",
                source="AFT (outstanding debt, 31/12/2020), Eurostat (monthly HICP, France), ECB (SPF, January 2021); author's calculation",
-               note="€bn of 2020 at French consumer prices, undiscounted; counterfactual: inflation expected in early 2021. Neither a net fiscal gain nor a final loss.",
-               axe="€bn of 2020, cumulative", total="total: {t_exact}", demi="half reached in {demi}", plage="published forecasts: {a_bas} to {a_haut}",
+               note="€bn in 2020 euros at French consumer prices, undiscounted; counterfactual: inflation expected in early 2021. Neither a net fiscal gain nor a final loss.",
+               axe="€bn in 2020 euros, cumulative", total="total: {t_exact}", demi="half reached in {demi}", plage="published forecasts: {a_bas} to {a_haut}",
                montre="In this counterfactual the erosion is locked in by end-2023, but it materialises as payments fall due: about half by {demi}."),
 }
 
@@ -251,7 +251,7 @@ def fig_calendrier(c, Aff, lang):
     d = " ".join(("M" if k == 0 else "L") + "%.1f,%.1f" % (X(a), Y(v)) for k, (a, v) in enumerate(pts))
     e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.4" stroke-linejoin="round"/>' % (d, BLEU))
     # jalons : fin 2023, demi-réalisation, total
-    for a, lib in ((2023, "%s : %s" % ("fin 2023" if lang == "fr" else "end-2023", Aff["cum23"])), (c["demi"], t["demi"])):
+    for a, lib in ((2023, ("fin 2023 : %s" if lang == "fr" else "end-2023: %s") % Aff["cum23"]), (c["demi"], t["demi"])):
         v = c["cum"][a]
         e.append('<circle cx="%.1f" cy="%.1f" r="3.6" fill="%s"/>' % (X(a), Y(v), BLEU))
         e.append('<text x="%.1f" y="%.1f" font-size="10.5" fill="%s">%s</text>' % (X(a) + 7, Y(v) + 12, INK, esc(lib)))
@@ -328,6 +328,7 @@ def main() -> int:
                "resultats": {"central": c["T"], "moyennes_annuelles": c["T_annuel"], "deflateur": [c["defl_spf"], c["defl_ce"]],
                              "indexes_paires_jumelles": c["idx_j"], "consolide_2023": c["cons23"], "consolide_2025": c["cons25"]},
                "affichage": Aff["fr"], "affichage_en": Aff["en"]}
+    releve = None
     if OUT_DATA.exists():
         try:
             prev = json.loads(OUT_DATA.read_text(encoding="utf-8"))
@@ -336,9 +337,11 @@ def main() -> int:
                     and OUT_CSV.exists() and OUT_CSV.read_text(encoding="utf-8-sig") == csv_texte(c):
                 log("Donnees et figures identiques : rien ecrit (releve_le conserve : %s)." % prev["releve_le"])
                 return 0
+            if same:  # donnees identiques, seul le texte d'une figure change : la date de releve reste celle des donnees
+                releve = prev["releve_le"]
         except (ValueError, KeyError):
             pass
-    payload = {"releve_le": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+    payload = {"releve_le": releve or datetime.now(timezone.utc).strftime("%Y-%m-%d"),
                "_licence": "CC BY 4.0 — calcul Stéphane Lalut ; sources AFT, Eurostat, BCE, Banque de France, Commission européenne", **payload}
     txt = json.dumps(payload, ensure_ascii=False, indent=1)
     OUT_DATA.write_text(txt, encoding="utf-8")

@@ -52,6 +52,22 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-08 — Page inflation et dette : passe linguistique anglaise (Wolf-07), équilibre FR / EN ; NON POUSSÉE
+
+- **`/en/inflation-and-french-public-debt/`** : relecture externe de l'anglais (Wolf-07), arbitrage
+  `07_RECHERCHE/inflation_dette_wolf/contre_expertise/Wolf-07_2026-10-08_arbitrage.md`. Lexique verrouillé (en tête du
+  `.en.md`) : *marketable government debt* (périmètre : *central-government*), *legacy debt*, *real value*, « €Xbn in 2020
+  euros », demi-cadratin dans les plages d'années ; titre « …ease France's debt burden? », chapô, description, FAQ,
+  « Challenged by » (convention des autres pages EN). Jetons identiques avant/après.
+- **FR, même sens** : valeur réelle (et non pouvoir d'achat) pour l'objet ; contrefactuel des indexés ; porteurs de réserves
+  (« rendements réels négatifs ») ; « loin d'être payée » ; « Les points morts d'inflation » ; résumé de la confrontation.
+- **JSON-LD** (`schema-dataset-page.html`) : `about` « public debt » sur les pages anglaises (7 pages corrigées).
+- **Figure et carte EN** régénérées (lexique ; titre raccourci après débordement vu sur l'image) ; FR inchangées à l'octet ;
+  `update_dette_inflation.py` garde `releve_le` quand seules les figures changent (07/10 conservé).
+- Contrôles : hugo exit 0 ; `check-all --ci` 0 ; `audit-liens-build` 0 ; libellé de barre (37 car.) plus court qu'un
+  libellé déjà mesuré (45). **Reste** : push sur décision de l'auteur ; même lexique à porter sur `qui-paie` et
+  `generations-futures` EN (point ouvert de l'arbitrage).
+
 ### 2026-10-08 — Ressource « Le niveau des élèves baisse-t-il ? » (FR seulement), deuxième onglet du bloc « École et lycée » ; NON POUSSÉE
 
 - **`/le-niveau-des-eleves-baisse-t-il/`** : PISA 2025 placé parmi les 38 pays de l'OCDE, perte au sommet, écart social

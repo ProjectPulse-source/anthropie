@@ -557,9 +557,9 @@ def figure_inflation_mini(d: ImageDraw.ImageDraw, cal: dict, lo: float, hi: floa
     for a in (2025, 2045, 2065):
         d.text((X(a) - fa.getlength(str(a)) / 2, bas + 14), str(a), font=fa, fill=URL_GREY)
     en = lang == "en"
-    d.text((x0, bas + 40), "Fixed-rate State debt at end-2020: real erosion" if en
+    d.text((x0, bas + 40), "End-2020 fixed-rate government debt: real erosion" if en
            else "Dette de l'État à taux fixe de fin 2020 : érosion réelle", font=font("inter", 17, 400), fill=URL_GREY)
-    d.text((x0, bas + 62), "of promised payments, cumulative, €bn of 2020" if en
+    d.text((x0, bas + 62), "of promised payments, cumulative, €bn (2020 euros)" if en
            else "des paiements promis, cumulée, en Md€ de 2020", font=font("inter", 17, 400), fill=URL_GREY)
 
 
@@ -585,8 +585,8 @@ def carte_inflation() -> None:
           lambda d: figure_inflation_mini(d, cal, lo, hi),
           [(C1, "Érosion cumulée : %s Md€" % A["t"]), ((226, 223, 219), "Prévisions de début 2021 : %s à %s" % (A["a_bas"], A["a_haut"]))])
     carte("og-dette-inflation-en.jpg",
-          ["Inflation eroded", "the old debt"],
-          "About €%sbn of 2020: measured, not banked." % E["t"],
+          ["Inflation eroded", "legacy debt"],
+          "About €%sbn in 2020 euros: measured, not banked." % E["t"],
           "AFT, Eurostat, ECB · author's calculation · CC BY 4.0",
           "stephane-lalut.com/en/inflation-and-french-public-debt/",
           lambda d: figure_inflation_mini(d, cal, lo, hi, "en"),
