@@ -1,0 +1,174 @@
+annee	poste	valeur_Meur	source	temoin
+2014	produit_net_interet	5792	RA_BdF_2015_rapport-activite	
+2014	interets_titres_politique_monetaire	2011	RA_BdF_2015_rapport-activite	
+2014	interets_position_target	-58	RA_BdF_2015_rapport-activite	
+2014	solde_revenu_monetaire	129	RA_BdF_2015_rapport-activite	
+2014	resultat_ordinaire_avant_impot	4809	RA_BdF_2015_rapport-activite	
+2014	dotation_FRG_RRRODE_provisions	-592	RA_BdF_2015_rapport-activite	
+2014	resultat_exceptionnel	0	RA_BdF_2015_rapport-activite	
+2014	impot_benefices	-2151	RA_BdF_2015_rapport-activite	
+2014	resultat_net	2066	RA_BdF_2015_rapport-activite	
+2015	produit_net_interet	5928	RA_BdF_2015_rapport-activite	RA_BdF_2016_rapport-activite
+2015	interets_titres_politique_monetaire	1891	RA_BdF_2015_rapport-activite	RA_BdF_2016_rapport-activite
+2015	interets_position_target	-31	RA_BdF_2015_rapport-activite	RA_BdF_2016_rapport-activite
+2015	solde_revenu_monetaire	-71	RA_BdF_2015_rapport-activite	RA_BdF_2016_rapport-activite
+2015	revenu_monetaire_mis_en_commun	-1879	RA_BdF_2015_rapport-activite	
+2015	revenu_monetaire_alloue	1809	RA_BdF_2015_rapport-activite	
+2015	resultat_ordinaire_avant_impot	4713	RA_BdF_2015_rapport-activite	RA_BdF_2016_rapport-activite
+2015	dotation_FRG_RRRODE_provisions	-504	RA_BdF_2015_rapport-activite	RA_BdF_2016_rapport-activite
+2015	resultat_exceptionnel	-80	RA_BdF_2015_rapport-activite	RA_BdF_2016_rapport-activite
+2015	impot_benefices	-1902	RA_BdF_2015_rapport-activite	RA_BdF_2016_rapport-activite
+2015	resultat_net	2228	RA_BdF_2015_rapport-activite	RA_BdF_2016_rapport-activite
+2015	dividende_etat	1543	RA_BdF_2015_rapport-activite	graphique_RA_2025
+2016	produit_net_interet	6773	RA_BdF_2016_rapport-activite	RA_BdF_2017_EN
+2016	interets_titres_politique_monetaire	2152	RA_BdF_2016_rapport-activite	RA_BdF_2017_EN
+2016	interets_position_target	-6	RA_BdF_2016_rapport-activite	RA_BdF_2017_EN
+2016	solde_revenu_monetaire	-321	RA_BdF_2016_rapport-activite	RA_BdF_2017_EN
+2016	revenu_monetaire_mis_en_commun	-2317	RA_BdF_2016_rapport-activite	
+2016	revenu_monetaire_alloue	1996	RA_BdF_2016_rapport-activite	
+2016	resultat_ordinaire_avant_impot	5555	RA_BdF_2016_rapport-activite	RA_BdF_2017_EN
+2016	dotation_FRG_RRRODE_provisions	4	RA_BdF_2016_rapport-activite	RA_BdF_2017_EN
+2016	resultat_exceptionnel	0	RA_BdF_2016_rapport-activite	RA_BdF_2017_EN
+2016	impot_benefices	-2038	RA_BdF_2016_rapport-activite	RA_BdF_2017_EN
+2016	resultat_net	3522	RA_BdF_2016_rapport-activite	RA_BdF_2017_EN
+2016	dividende_etat	2463.9	RA_BdF_2016_rapport-activite	graphique_RA_2025
+2017	produit_net_interet	7632	RA_BdF_2017_EN	RA_BdF_2018_EN
+2017	interets_titres_politique_monetaire	2795	RA_BdF_2017_EN	RA_BdF_2018_EN
+2017	produits_nets_politique_monetaire_hors_titres	1112	RA_BdF_2018_EN	RA_BdF_2017_EN
+2017	interets_position_target	0	RA_BdF_2017_EN	RA_BdF_2018_EN
+2017	solde_revenu_monetaire	-521	RA_BdF_2017_EN	RA_BdF_2018_EN
+2017	revenu_monetaire_mis_en_commun	-2682	RA_BdF_2017_EN	RA_BdF_2018_EN
+2017	revenu_monetaire_alloue	2173	RA_BdF_2017_EN	RA_BdF_2018_EN
+2017	resultat_ordinaire_avant_impot	6018	RA_BdF_2017_EN	RA_BdF_2018_EN
+2017	dotation_FRG_RRRODE_provisions	-1	RA_BdF_2017_EN	RA_BdF_2018_EN
+2017	resultat_exceptionnel	0	RA_BdF_2017_EN	RA_BdF_2018_EN
+2017	impot_benefices	-2690	RA_BdF_2017_EN	RA_BdF_2018_EN
+2017	resultat_net	3328	RA_BdF_2017_EN	RA_BdF_2018_EN
+2017	dividende_etat	2306.2	RA_BdF_2017_EN	graphique_RA_2025
+2018	produit_net_interet	8710	RA_BdF_2019	RA_BdF_2018_EN
+2018	interets_titres_politique_monetaire	3711	RA_BdF_2019	RA_BdF_2018_EN
+2018	produits_nets_politique_monetaire_hors_titres	1335	RA_BdF_2019	RA_BdF_2018_EN
+2018	interets_position_target	0	RA_BdF_2019	RA_BdF_2018_EN
+2018	solde_revenu_monetaire	-566	RA_BdF_2019	RA_BdF_2018_EN
+2018	revenu_monetaire_mis_en_commun	-3073	RA_BdF_2019	RA_BdF_2018_EN
+2018	revenu_monetaire_alloue	2459	RA_BdF_2019	RA_BdF_2018_EN
+2018	resultat_ordinaire_avant_impot	7019	RA_BdF_2019	RA_BdF_2018_EN
+2018	dotation_FRG_RRRODE_provisions	5	RA_BdF_2019	RA_BdF_2018_EN
+2018	resultat_exceptionnel	0	RA_BdF_2019	RA_BdF_2018_EN
+2018	impot_benefices	-2400	RA_BdF_2019	RA_BdF_2018_EN
+2018	resultat_net	4624	RA_BdF_2019	RA_BdF_2018_EN
+2018	dividende_etat	3222	RA_BdF_2018_EN	graphique_RA_2025
+2019	produit_net_interet	8128	RA_BdF_2019	RA_BdF_2020
+2019	interets_titres_politique_monetaire	3215	RA_BdF_2019	RA_BdF_2020
+2019	produits_nets_politique_monetaire_hors_titres	1415	RA_BdF_2019	RA_BdF_2020
+2019	interets_position_target	0	RA_BdF_2019	RA_BdF_2020
+2019	solde_revenu_monetaire	-740	RA_BdF_2019	RA_BdF_2020
+2019	revenu_monetaire_mis_en_commun	-3057	RA_BdF_2019	RA_BdF_2020
+2019	revenu_monetaire_alloue	2306	RA_BdF_2019	RA_BdF_2020
+2019	resultat_ordinaire_avant_impot	6493	RA_BdF_2019	RA_BdF_2020
+2019	dotation_FRG_RRRODE_provisions	4	RA_BdF_2019	RA_BdF_2020
+2019	resultat_exceptionnel	0	RA_BdF_2019	RA_BdF_2020
+2019	impot_benefices	-2650	RA_BdF_2019	RA_BdF_2020
+2019	resultat_net	3846	RA_BdF_2019	RA_BdF_2020
+2019	dividende_etat	3478	RA_BdF_2019	
+2020	produit_net_interet	5986	RA_BdF_2020	RA_BdF_2021
+2020	interets_titres_politique_monetaire	2494	RA_BdF_2020	RA_BdF_2021
+2020	produits_nets_politique_monetaire_hors_titres	194	RA_BdF_2020	
+2020	interets_preleves_depots_institutions_financieres	2470	RA_BdF_2021	
+2020	interets_verses_depots_institutions_financieres	0	RA_BdF_2021	
+2020	interets_refinancement_bancaire	-2276	RA_BdF_2021	
+2020	interets_position_target	0	RA_BdF_2020	RA_BdF_2021
+2020	solde_revenu_monetaire	-824	RA_BdF_2020	RA_BdF_2021
+2020	revenu_monetaire_mis_en_commun	-1713	RA_BdF_2020	RA_BdF_2021
+2020	revenu_monetaire_alloue	883	RA_BdF_2020	RA_BdF_2021
+2020	resultat_ordinaire_avant_impot	4971	RA_BdF_2020	RA_BdF_2021
+2020	dotation_FRG_RRRODE_provisions	-1149	RA_BdF_2020	RA_BdF_2021
+2020	resultat_exceptionnel	0	RA_BdF_2020	RA_BdF_2021
+2020	impot_benefices	-1633	RA_BdF_2020	RA_BdF_2021
+2020	resultat_net	2190	RA_BdF_2020	RA_BdF_2021
+2020	dividende_etat	1913	RA_BdF_2020	graphique_RA_2025
+2020	surcouverture_retraite_etat	700	graphique_RA_2025	
+2021	produit_net_interet	6728	RA_BdF_2021	RA_BdF_2022
+2021	interets_titres_politique_monetaire	4093	RA_BdF_2021	RA_BdF_2022
+2021	interets_preleves_depots_institutions_financieres	4164	RA_BdF_2021	RA_BdF_2022
+2021	interets_verses_depots_institutions_financieres	0	RA_BdF_2021	RA_BdF_2022
+2021	interets_refinancement_bancaire	-4585	RA_BdF_2021	RA_BdF_2022
+2021	interets_position_target	0	RA_BdF_2021	RA_BdF_2022
+2021	solde_revenu_monetaire	-627	RA_BdF_2021	RA_BdF_2022
+2021	revenu_monetaire_mis_en_commun	-897	RA_BdF_2021	RA_BdF_2022
+2021	revenu_monetaire_alloue	239	RA_BdF_2021	RA_BdF_2022
+2021	resultat_ordinaire_avant_impot	5456	RA_BdF_2021	RA_BdF_2022
+2021	dotation_FRG_RRRODE_provisions	-2798	RA_BdF_2021	RA_BdF_2022
+2021	resultat_exceptionnel	0	RA_BdF_2021	RA_BdF_2022
+2021	impot_benefices	-1895	RA_BdF_2021	RA_BdF_2022
+2021	resultat_net	763	RA_BdF_2021	RA_BdF_2022
+2021	dividende_etat	569	RA_BdF_2021	
+2021	surcouverture_retraite_etat	1200	graphique_RA_2025	
+2022	produit_net_interet	7458	RA_BdF_2022	RA_BdF_2023
+2022	interets_titres_politique_monetaire	8451	RA_BdF_2022	RA_BdF_2023
+2022	interets_preleves_depots_institutions_financieres	2523	RA_BdF_2022	RA_BdF_2023
+2022	interets_verses_depots_institutions_financieres	-3986	RA_BdF_2022	RA_BdF_2023
+2022	interets_refinancement_bancaire	-2275	RA_BdF_2022	RA_BdF_2023
+2022	interets_position_target	-602	RA_BdF_2022	RA_BdF_2023
+2022	solde_revenu_monetaire	-94	RA_BdF_2022	RA_BdF_2023
+2022	revenu_monetaire_mis_en_commun	-1559	RA_BdF_2022	RA_BdF_2023
+2022	revenu_monetaire_alloue	1457	RA_BdF_2022	RA_BdF_2023
+2022	resultat_ordinaire_avant_impot	5477	RA_BdF_2022	RA_BdF_2023
+2022	dotation_FRG_RRRODE_provisions	-4410	RA_BdF_2022	RA_BdF_2023
+2022	resultat_exceptionnel	0	RA_BdF_2022	RA_BdF_2023
+2022	impot_benefices	-1067	RA_BdF_2022	RA_BdF_2023
+2022	resultat_net	0	RA_BdF_2022	RA_BdF_2023
+2022	dividende_etat	0	RA_BdF_2022	graphique_RA_2025
+2023	produit_net_interet	-16838	RA_BdF_2023	RA_BdF_2024
+2023	interets_titres_politique_monetaire	6023	RA_BdF_2023	RA_BdF_2024
+2023	interets_preleves_depots_institutions_financieres	0	RA_BdF_2023	RA_BdF_2024
+2023	interets_verses_depots_institutions_financieres	-30895	RA_BdF_2023	RA_BdF_2024
+2023	interets_refinancement_bancaire	6550	RA_BdF_2023	RA_BdF_2024
+2023	interets_position_target	-3255	RA_BdF_2023	RA_BdF_2024
+2023	solde_revenu_monetaire	2159	RA_BdF_2023	RA_BdF_2024
+2023	revenu_monetaire_mis_en_commun	-6088	RA_BdF_2023	RA_BdF_2024
+2023	revenu_monetaire_alloue	8258	RA_BdF_2023	RA_BdF_2024
+2023	rm_titres_risques_non_partages_mis_en_commun	26962	RA_BdF_2023	
+2023	rm_titres_risques_non_partages_solde	-1059	RA_BdF_2023	RA_BdF_2024
+2023	resultat_ordinaire_avant_impot	-12446	RA_BdF_2023	RA_BdF_2024
+2023	dotation_FRG_RRRODE_provisions	12446	RA_BdF_2023	RA_BdF_2024
+2023	resultat_exceptionnel	0	RA_BdF_2023	RA_BdF_2024
+2023	impot_benefices	0	RA_BdF_2023	RA_BdF_2024
+2023	resultat_net	0	RA_BdF_2023	RA_BdF_2024
+2023	dividende_etat	0	RA_BdF_2023	graphique_RA_2025
+2023	surcouverture_retraite_etat	800	graphique_RA_2025	
+2024	produit_net_interet	-19274	RA_BdF_2024	RA_BdF_2025
+2024	interets_titres_politique_monetaire	5713	RA_BdF_2024	RA_BdF_2025
+2024	interets_preleves_depots_institutions_financieres	0	RA_BdF_2024	RA_BdF_2025
+2024	interets_verses_depots_institutions_financieres	-25897	RA_BdF_2024	RA_BdF_2025
+2024	interets_refinancement_bancaire	1420	RA_BdF_2024	RA_BdF_2025
+2024	interets_position_target	-6357	RA_BdF_2024	RA_BdF_2025
+2024	solde_revenu_monetaire	3262	RA_BdF_2024	RA_BdF_2025
+2024	revenu_monetaire_mis_en_commun	-5743	RA_BdF_2024	RA_BdF_2025
+2024	revenu_monetaire_alloue	9009	RA_BdF_2024	RA_BdF_2025
+2024	rm_titres_risques_non_partages_mis_en_commun	27699	RA_BdF_2024	
+2024	rm_titres_risques_non_partages_solde	-1636	RA_BdF_2024	RA_BdF_2025
+2024	resultat_ordinaire_avant_impot	-17855	RA_BdF_2024	RA_BdF_2025
+2024	dotation_FRG_RRRODE_provisions	10121	RA_BdF_2024	RA_BdF_2025
+2024	resultat_exceptionnel	0	RA_BdF_2024	RA_BdF_2025
+2024	impot_benefices	0	RA_BdF_2024	RA_BdF_2025
+2024	resultat_net	-7734	RA_BdF_2024	RA_BdF_2025
+2024	dividende_etat	0	RA_BdF_2024	graphique_RA_2025
+2024	surcouverture_retraite_etat	200	graphique_RA_2025	
+2025	produit_net_interet	-6230	RA_BdF_2025	
+2025	interets_titres_politique_monetaire	5662	RA_BdF_2025	
+2025	interets_preleves_depots_institutions_financieres	1	RA_BdF_2025	
+2025	interets_verses_depots_institutions_financieres	-12656	RA_BdF_2025	
+2025	interets_refinancement_bancaire	19	RA_BdF_2025	
+2025	interets_position_target	-4636	RA_BdF_2025	
+2025	solde_revenu_monetaire	1276	RA_BdF_2025	
+2025	revenu_monetaire_mis_en_commun	-3662	RA_BdF_2025	
+2025	revenu_monetaire_alloue	4938	RA_BdF_2025	
+2025	rm_titres_risques_non_partages_mis_en_commun	13518	RA_BdF_2025	
+2025	rm_titres_risques_non_partages_solde	-834	RA_BdF_2025	
+2025	resultat_ordinaire_avant_impot	-3	RA_BdF_2025	
+2025	dotation_FRG_RRRODE_provisions	9671	RA_BdF_2025	
+2025	resultat_exceptionnel	0	RA_BdF_2025	
+2025	impot_benefices	-1547	RA_BdF_2025	graphique_RA_2025
+2025	resultat_net	8120	RA_BdF_2025	
+2025	surcouverture_retraite_etat	655	RA_BdF_2025	graphique_RA_2025

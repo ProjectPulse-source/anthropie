@@ -7,6 +7,14 @@
    "montre": "L'érosion est acquise fin 2023 dans ce contrefactuel, mais elle se matérialise au rythme des paiements : environ la moitié d'ici 2027.",
    "source": "AFT (encours au 31/12/2020), Eurostat (IPCH mensuel, France), BCE (SPF, janvier 2021) ; calcul de l'auteur",
    "precaution": "Md€ de 2020 aux prix à la consommation, non actualisés ; contrefactuel : inflation anticipée début 2021. Ni gain budgétaire net, ni perte finale."
+  },
+  {
+   "id": "achats",
+   "fichier": "dette-inflation-achats",
+   "titre": "Un point de plus sur toute la courbe des taux : le surcoût de la première année",
+   "montre": "Fin 2022, les achats de la banque centrale avaient rendu l'ensemble État + Banque de France 2,8 fois plus exposé la première année que la seule dette de marché ; l'écart se resserre depuis, sans disparaître.",
+   "source": "AFT (bulletins mensuels, ligne à ligne), Banque de France (Webstat), BCE ; décision (UE) 2016/2248 ; calcul de l'auteur",
+   "precaution": "Dette de l'État à taux fixe, encours constant ; titres de la Banque de France au taux de référence de la BCE. Une exposition, non le coût du QE."
   }
  ],
  "en": [
@@ -17,6 +25,14 @@
    "montre": "In this counterfactual the erosion is locked in by end-2023, but it materialises as payments fall due: about half by 2027.",
    "source": "AFT (outstanding debt, 31/12/2020), Eurostat (monthly HICP, France), ECB (SPF, January 2021); author's calculation",
    "precaution": "€bn in 2020 euros at French consumer prices, undiscounted; counterfactual: inflation expected in early 2021. Neither a net fiscal gain nor a final loss."
+  },
+  {
+   "id": "achats",
+   "fichier": "dette-inflation-achats-en",
+   "titre": "One point more across the whole yield curve: the extra cost in the first year",
+   "montre": "At end-2022, central-bank purchases had made the government and the Banque de France together 2.8 times more exposed in the first year than market debt alone; the gap has narrowed since, without closing.",
+   "source": "AFT (monthly bulletins, line by line), Banque de France (Webstat), ECB; Decision (EU) 2016/2248; author's calculation",
+   "precaution": "Fixed-rate central-government debt, constant stock; Banque de France holdings at the ECB reference rate. An exposure, not the cost of QE."
   }
  ]
 }

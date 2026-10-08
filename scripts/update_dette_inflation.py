@@ -15,9 +15,16 @@ Témoins de la méthode, dans le script de recherche : IPCH mensuel Eurostat con
 en moyennes annuelles (v2, 143,2) et sans correction saisonnière ; identité de consolidation contre l'arbitre 5. Ici, la
 seule cohérence vérifiée est l'agrégation par année de paiement, qui partage la fonction de perte : elle n'est pas un témoin.
 
-Usage : python scripts/update_dette_inflation.py [--check] [--mutation=demi|indexes|consolidation|encadre]
+Section « achats de la banque centrale » (09/10/2026) : extrait FIGÉ du chantier « QE et maturité consolidée » (dépôt de
+recherche, VERDICT.md, phrases P1 à P4, contre-expertise PRO-20261008-194156 arbitrée), scripts/sources_qe_maturite/,
+contrôlé contre son SHA256SUMS. Mêmes règles : rien recalculé hors de sommes et de rapports, chaque qualificatif gardé.
+Témoins publiés que le calcul n'utilise pas : figure 1.16 de l'OCDE (SBO 2023) mesurée au pixel ; « jusqu'à deux ans »
+de la Bundesbank (avril 2024) ; comptes de la Banque de France (résultat ordinaire, versements à l'État).
+
+Usage : python scripts/update_dette_inflation.py [--check]
+        [--mutation=demi|indexes|consolidation|encadre|qe_cinq|qe_partage|qe_ocde]
 Sorties : data/ et static/dette_inflation.json, static/dette_inflation.csv, data/figures_inflation.json,
-          static/img/dette-inflation-calendrier{,-en}.svg + .png
+          static/img/dette-inflation-calendrier{,-en}.svg + .png, static/img/dette-inflation-achats{,-en}.svg + .png
 """
 from __future__ import annotations
 
@@ -33,6 +40,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "scripts" / "sources_inflation_dette"
+SRC_QE = ROOT / "scripts" / "sources_qe_maturite"
 OUT_DATA = ROOT / "data" / "dette_inflation.json"
 OUT_STATIC = ROOT / "static" / "dette_inflation.json"
 OUT_CSV = ROOT / "static" / "dette_inflation.csv"
@@ -115,6 +123,79 @@ def calcul(v3, sens, ci):
     }
 
 
+def tsv(nom_):
+    return list(csv.DictReader((SRC_QE / nom_).open(encoding="utf-8"), delimiter="\t"))
+
+
+def lire_qe():
+    for ligne in (SRC_QE / "SHA256SUMS").read_text(encoding="utf-8").splitlines():
+        h, nom_ = ligne.split()
+        if hashlib.sha256((SRC_QE / nom_.lstrip("*")).read_bytes()).hexdigest() != h:
+            fail("empreinte de %s differente de SHA256SUMS : extrait QE modifie hors du depot de recherche" % nom_)
+    return {k: tsv(k + ".tsv") for k in ("indicateurs_mensuels", "sensibilite_mensuelle", "rendement_cycle",
+                                         "t4_pays_annuel", "releve_T1_T2", "mesure_figure_ocde")}
+
+
+def calcul_qe(x):
+    ind = {r["situation"]: r for r in x["indicateurs_mensuels"]}
+    sen = {r["situation"]: r for r in x["sensibilite_mensuelle"]}
+    F = lambda r, k: float(r[k])
+    d0, d22 = "2015-03-31", "2022-12-31"
+    fen = [r for d, r in ind.items() if d0 <= d <= d22]
+    emis = {}
+    for r in x["indicateurs_mensuels"]:
+        if r["emission_maturite"]:
+            a = int(r["situation"][:4])
+            s, w = emis.get(a, (0.0, 0.0))
+            emis[a] = (s + F(r, "emission_MLT_Md"), w + F(r, "emission_MLT_Md") * F(r, "emission_maturite"))
+    emis = {a: w / s for a, (s, w) in emis.items()}
+    e1 = max((r for r in ind.values() if r["ecart_E1"]), key=lambda r: F(r, "ecart_E1"))
+    dern = max(sen)
+    serie = [(d, F(r, "S_m_1_Md"), F(r, "S_c_1_Md")) for d, r in sorted(sen.items())]
+    # T4, base homogène BCE : rapport consolidée / marché à un an = r1 / F1, par pays et par année
+    t4 = {}
+    for r in x["t4_pays_annuel"]:
+        t4.setdefault(r["pays"], {})[int(r["annee"])] = F(r, "r1") / F(r, "F1")
+    # bloc 3 : portage net C (M€), soldes de partage publiés ; champ vide = non publié (ligne des titres avant 2023, quand
+    # le taux de référence était nul : la recherche le compte pour zéro, convention dite dans SENSIBILITE.md, § 5)
+    rc = {int(r["annee"]): r for r in x["rendement_cycle"]}
+    C = {a: float(r["C_Meur"]) for a, r in rc.items() if r["C_Meur"]}
+    st = {a: float(r["solde_partage_total_Meur"]) for a, r in rc.items() if r["solde_partage_total_Meur"]}
+    ns = {a: float(r["solde_partage_titres_Meur"]) for a, r in rc.items() if r["solde_partage_titres_Meur"]}
+    som = lambda d, lo, hi: sum(d.get(a, 0.0) for a in range(lo, hi + 1)) / 1e3
+    rdt = [float(rc[a]["rendement_comptable_A71"]) for a in C]
+    tref = [float(r["taux_reference_moyen"]) for r in rc.values()]
+    # comptes de la Banque de France (lecture de l'institution, éprouvée sur son périmètre)
+    bdf = {}
+    for r in x["releve_T1_T2"]:
+        bdf.setdefault(r["poste"], {})[int(r["annee"])] = float(r["valeur_Meur"])
+    # versements à l'État = impôt (relevé en charge, négatif) + dividende ; une année non relevée fait échouer (KeyError),
+    # jamais un zéro : le dividende de l'exercice 2025 n'est pas relevé, la page ne cite donc que 2015-2022
+    verse = lambda lo, hi: sum(-bdf["impot_benefices"][a] + bdf["dividende_etat"][a] for a in range(lo, hi + 1)) / 1e3
+    ocde = {r["pays"]: r for r in x["mesure_figure_ocde"]}
+    return {
+        "atr15": F(ind[d0], "ATR_fixe"), "atr22": F(ind[d22], "ATR_fixe"),
+        "aj_min": min(F(r, "ATR_fixe_aj") for r in fen), "aj_max": max(F(r, "ATR_fixe_aj") for r in fen),
+        "em14": emis[2014], "em_min": min(emis[a] for a in range(2016, 2023)), "em_max": max(emis[a] for a in range(2016, 2023)),
+        "e1_max": F(e1, "ecart_E1"), "e1_date": e1["situation"],
+        "sm1": F(sen[d22], "S_m_1_Md"), "sc1": F(sen[d22], "S_c_1_Md"), "sc1_pib": F(sen[d22], "S_c_1_pPIB"),
+        "sm5": F(sen[d22], "S_m_5_Md"), "sc5": F(sen[d22], "S_c_5_Md"),
+        "dern": dern, "sm1_d": F(sen[dern], "S_m_1_Md"), "sc1_d": F(sen[dern], "S_c_1_Md"), "h_d": F(sen[dern], "h"),
+        "h22": F(sen[d22], "h"), "serie": serie,
+        "t4_2015": {p: v[2015] for p, v in t4.items()}, "t4_max": {p: max(v.values()) for p, v in t4.items()},
+        "gain": som(C, 2016, 2022), "cout": som(C, 2023, 2025), "solde": som(C, 2016, 2025),
+        "net_total": som(C, 2016, 2025) + som(st, 2016, 2025), "net_titres": som(C, 2016, 2025) + som(ns, 2016, 2025),
+        "rdt_min": min(rdt), "rdt_max": max(rdt), "tref_min": min(tref), "tref_max": max(tref),
+        "bdf_ro_avant": sum(bdf["resultat_ordinaire_avant_impot"][a] for a in range(2015, 2023)) / 1e3,
+        "bdf_ro_apres": sum(bdf["resultat_ordinaire_avant_impot"][a] for a in range(2023, 2026)) / 1e3,
+        "bdf_verse_avant": verse(2015, 2022),
+        "ocde_effet": float(ocde["FRA"]["ATR"]) - float(ocde["FRA"]["ATR_ajuste"]), "ocde_aj": float(ocde["FRA"]["ATR_ajuste"]),
+        "nous_effet": F(ind[d22], "ATR_ocde") - F(ind[d22], "ATR_ocde_aj"),
+        "C": C, "st": st, "ns": ns, "t4": t4, "rc": rc,
+        "atr": [(d, F(r, "ATR_fixe"), F(r, "ATR_fixe_aj")) for d, r in sorted(ind.items()) if r["ATR_fixe_aj"]],
+    }
+
+
 def mutation(c):
     m = next((a.split("=", 1)[1] for a in sys.argv[1:] if a.startswith("--mutation=")), None)
     if m == "demi":            # la moitié n'est plus atteinte en 2027
@@ -125,6 +206,12 @@ def mutation(c):
         c["cons23"] = 0.8 * c["T"]
     elif m == "encadre":       # le SPF sortirait de l'intervalle des trois prévisions françaises
         list(c["A"].values())[0]["r=0%"] = 999.0
+    elif m == "qe_cinq":       # à cinq ans, l'écart resterait aussi grand qu'à un an : « avancé » serait faux
+        c["qe"]["sc5"] = c["qe"]["sm5"] * c["qe"]["sc1"] / c["qe"]["sm1"]
+    elif m == "qe_partage":    # la redistribution entre banques centrales déplacerait le solde de plus de quelques milliards
+        c["qe"]["net_total"] = c["qe"]["solde"] / 3
+    elif m == "qe_ocde":       # le témoin OCDE ne retrouverait plus l'effet des achats
+        c["qe"]["ocde_effet"] += 0.6
     elif m is not None:
         fail("mutation inconnue : %s" % m)
     return m
@@ -164,6 +251,33 @@ def gardes(c):
     g(c["charge_aft"][2022] == max(c["charge_aft"].values()), "« la charge d'indexation a culminé en 2022 »")
     g(0 < 100 - sum(c["parts"].values()) < 5 and c["parts"]["non_residents"] == max(c["parts"].values()),
       "annexe : parts de détention incohérentes, ou les non-résidents ne sont plus le premier groupe : %s" % c["parts"])
+    # --- section « achats de la banque centrale » (VERDICT P1 à P4)
+    q = c["qe"]
+    g(q["atr22"] > q["atr15"] + 1, "P1 : « la durée moyenne de refixation est passée de %.1f à %.1f ans »" % (q["atr15"], q["atr22"]))
+    g(q["aj_max"] - q["aj_min"] < 1 and q["aj_max"] < q["atr22"] - 1,
+      "P1 : « l'indicateur ajusté est resté entre %.1f et %.1f ans », sous l'indicateur brut" % (q["aj_min"], q["aj_max"]))
+    g(q["em_min"] > q["em14"] + 1, "« l'AFT émettait plus long » : %.1f en 2014, %.1f à %.1f ensuite" % (q["em14"], q["em_min"], q["em_max"]))
+    r1, r5 = q["sc1"] / q["sm1"], q["sc5"] / q["sm5"]
+    g(r1 > 2, "P2 : « plus du double à un an » : %.2f" % r1)
+    g(1 < r5 < 1.5 and r5 < r1 / 1.8, "P2 : « à cinq ans l'écart n'est plus que de 1,3 fois : les achats ont surtout avancé » : %.2f contre %.2f" % (r5, r1))
+    g(q["sc1_d"] / q["sm1_d"] > 1.8 and q["sc1_d"] / q["sm1_d"] < r1,
+      "figure : « l'écart s'est resserré sans disparaître » au dernier mois : %.2f" % (q["sc1_d"] / q["sm1_d"]))
+    g(q["h_d"] < q["h22"], "figure : « la Banque de France détient moins de titres qu'en 2022 » : h %.3f contre %.3f" % (q["h_d"], q["h22"]))
+    g(all(1.05 <= v <= 1.4 for v in q["t4_2015"].values()), "P3 : « de 1,1 à 1,35 en 2015 » : %s" % q["t4_2015"])
+    g(all(1.85 <= v <= 2.95 for v in q["t4_max"].values()), "P3 : « au plus de 1,9 à 2,9 » : %s" % q["t4_max"])
+    g(q["t4_max"]["FR"] < r1, "P3 : « pour la France, la base homogène donne moins que la mesure sur la dette de l'État »")
+    g(q["gain"] > 0 > q["cout"] and abs(q["cout"]) > 3 * q["gain"], "P4 : « gain de 2016 à 2022, coût plus lourd de 2023 à 2025 »")
+    g(abs(q["gain"] + q["cout"] - q["solde"]) < 0.05, "P4 : le solde n'est pas la somme des deux phases")
+    g(max(abs(q["net_total"] - q["solde"]), abs(q["net_titres"] - q["solde"])) <= 5 and q["net_total"] < 0 and q["net_titres"] < 0,
+      "P4 : « la redistribution le déplace de quelques milliards » : %.1f / %.1f contre %.1f" % (q["net_titres"], q["net_total"], q["solde"]))
+    g(q["tref_min"] == 0 and 3.5 <= q["tref_max"] < 4.5, "P4 : « le taux de référence est passé de 0 à environ 4 %% » : %.2f" % q["tref_max"])
+    g(q["rdt_max"] < 1, "P4 : « les titres rapportaient moins de 1 %% » : %.2f" % q["rdt_max"])
+    g(max(float(r["taux_reference_moyen"]) for a, r in q["rc"].items() if a <= 2021) < 0.1,
+      "P4 : « le taux de référence, proche de zéro jusqu'en 2021 »")
+    g(q["bdf_ro_avant"] > 0 > q["bdf_ro_apres"] and q["bdf_ro_avant"] > 3 * q["gain"],
+      "lecture de la Banque de France : « bénéfices, puis pertes ; ses bénéfices passés venaient pour l'essentiel d'ailleurs »")
+    g(abs(q["nous_effet"] - q["ocde_effet"]) <= 0.2, "témoin OCDE : « l'effet que nous retrouvons » : %.2f contre %.2f" % (q["nous_effet"], q["ocde_effet"]))
+    g(1.8 <= q["e1_max"] <= 2.3, "témoin Bundesbank : « jusqu'à deux ans » : %.2f" % q["e1_max"])
     return n
 
 
@@ -193,6 +307,35 @@ def affichage(c, lang):
         **{"part_" + k: f(v, 0) for k, v in c["parts"].items()},
         **{"alloc_" + k: f(c["T"] * v / 100, 0) for k, v in c["parts"].items()},
         "part_autres": f(100 - sum(c["parts"].values()), 0), "alloc_autres": f(c["T"] * (100 - sum(c["parts"].values())) / 100, 0),
+        **affichage_qe(c["qe"], lang),
+    }
+
+
+MOIS = {"fr": "janvier février mars avril mai juin juillet août septembre octobre novembre décembre".split(),
+        "en": "January February March April May June July August September October November December".split()}
+
+
+def affichage_qe(q, lang):
+    # arrondi au plus proche, moitié vers le haut, sur la valeur décimale lue : l'extrait porte deux décimales, et 12,35 doit
+    # s'afficher 12,4 comme dans le verdict de la recherche, non 12,3 par la représentation binaire du flottant
+    from decimal import Decimal, ROUND_HALF_UP
+    f = lambda v, d=1: nb(float(Decimal(repr(v)).quantize(Decimal(1).scaleb(-d), rounding=ROUND_HALF_UP)), d, lang)
+    mois = lambda d: "%s %s" % (MOIS[lang][int(d[5:7]) - 1], d[:4])
+    return {
+        "qe_atr15": f(q["atr15"]), "qe_atr22": f(q["atr22"]), "qe_aj_min": f(q["aj_min"]), "qe_aj_max": f(q["aj_max"]),
+        "qe_em14": f(q["em14"]), "qe_em_min": f(q["em_min"]), "qe_em_max": f(q["em_max"]),
+        "qe_sc1": f(q["sc1"]), "qe_sm1": f(q["sm1"], 2), "qe_sc1_pib": f(q["sc1_pib"], 2), "qe_r1": f(q["sc1"] / q["sm1"]),
+        "qe_sc5": f(q["sc5"]), "qe_sm5": f(q["sm5"]), "qe_r5": f(q["sc5"] / q["sm5"]),
+        "qe_dern": mois(q["dern"]), "qe_sc1_d": f(q["sc1_d"]), "qe_sm1_d": f(q["sm1_d"]), "qe_r_d": f(q["sc1_d"] / q["sm1_d"]),
+        "qe_h22": f(100 * q["h22"], 0), "qe_h_d": f(100 * q["h_d"], 0),
+        "qe_t4_2015_bas": f(min(q["t4_2015"].values())), "qe_t4_2015_haut": f(max(q["t4_2015"].values()), 2),
+        "qe_t4_bas": f(min(q["t4_max"].values())), "qe_t4_haut": f(max(q["t4_max"].values())), "qe_t4_fr": f(q["t4_max"]["FR"]),
+        "qe_gain": f(q["gain"], 0), "qe_cout": f(abs(q["cout"]), 0), "qe_solde": f(abs(q["solde"]), 0),
+        "qe_net_bas": f(abs(max(q["net_total"], q["net_titres"])), 0), "qe_net_haut": f(abs(min(q["net_total"], q["net_titres"])), 0),
+        "qe_rdt_min": f(q["rdt_min"]), "qe_rdt_max": f(q["rdt_max"]), "qe_tref_max": f(q["tref_max"], 0),
+        "qe_bdf_ro_avant": f(q["bdf_ro_avant"]), "qe_bdf_ro_apres": f(abs(q["bdf_ro_apres"])), "qe_bdf_verse": f(q["bdf_verse_avant"]),
+        "qe_ocde_effet": f(q["ocde_effet"], 2), "qe_nous_effet": f(q["nous_effet"], 2), "qe_ocde_aj": f(q["ocde_aj"]),
+        "qe_e1_max": f(q["e1_max"]), "qe_e1_date": mois(q["e1_date"]),
     }
 
 
@@ -265,14 +408,92 @@ def fig_calendrier(c, Aff, lang):
     return "\n".join(e)
 
 
+TXT_QE = {
+    "fr": dict(titre="Un point de plus sur toute la courbe des taux : le surcoût de la première année",
+               desc="Courbes mensuelles, de mars 2015 à {qe_dern}, en milliards d'euros : surcoût la première année pour l'ensemble "
+                    "État + Banque de France ({qe_sc1} fin 2022, {qe_sc1_d} en {qe_dern}) et pour la seule dette de marché de l'État "
+                    "({qe_sm1} fin 2022, {qe_sm1_d} en {qe_dern}).",
+               source="AFT (bulletins mensuels, ligne à ligne), Banque de France (Webstat), BCE ; décision (UE) 2016/2248 ; calcul de l'auteur",
+               note="Dette de l'État à taux fixe, encours constant ; titres de la Banque de France au taux de référence de la BCE. Une exposition, non le coût du QE.",
+               axe="Md€ la première année", cons="État + Banque de France", marche="dette de marché seule", jalon="fin 2022",
+               montre="Fin 2022, les achats de la banque centrale avaient rendu l'ensemble État + Banque de France {qe_r1} fois plus "
+                      "exposé la première année que la seule dette de marché ; l'écart se resserre depuis, sans disparaître."),
+    "en": dict(titre="One point more across the whole yield curve: the extra cost in the first year",
+               desc="Monthly lines, March 2015 to {qe_dern}, in billions of euros: first-year extra cost for the government and the "
+                    "Banque de France taken together ({qe_sc1} at end-2022, {qe_sc1_d} in {qe_dern}) and for the government's market "
+                    "debt alone ({qe_sm1} at end-2022, {qe_sm1_d} in {qe_dern}).",
+               source="AFT (monthly bulletins, line by line), Banque de France (Webstat), ECB; Decision (EU) 2016/2248; author's calculation",
+               note="Fixed-rate central-government debt, constant stock; Banque de France holdings at the ECB reference rate. An exposure, not the cost of QE.",
+               axe="€bn in the first year", cons="Government + Banque de France", marche="market debt alone", jalon="end-2022",
+               montre="At end-2022, central-bank purchases had made the government and the Banque de France together {qe_r1} times "
+                      "more exposed in the first year than market debt alone; the gap has narrowed since, without closing."),
+}
+
+
+def fig_achats(q, Aff, lang):
+    t = {k: v.format(**Aff) for k, v in TXT_QE[lang].items()}
+    h = 292
+    X0, X1, TOP, BAS = 54, 640, 44, 262
+    serie = q["serie"]
+    mois = lambda d: int(d[:4]) + (int(d[5:7]) - 0.5) / 12
+    m0, m1 = mois(serie[0][0]), mois(serie[-1][0])
+    vmax = 2 * (int(max(s for _, _, s in serie) / 2) + 1)
+
+    def X(m):
+        return X0 + (X1 - X0) * (m - m0) / (m1 - m0)
+
+    def Y(v):
+        return BAS - (BAS - TOP) * v / vmax
+
+    e = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" role="img" font-variant-numeric="tabular-nums" '
+         'aria-labelledby="achats-t achats-d" font-family="%s">' % (W, h + 52, FONT),
+         '<title id="achats-t">%s</title><desc id="achats-d">%s</desc>' % (esc(t["titre"]), esc(t["desc"])),
+         '<rect width="%d" height="%d" fill="#ffffff"/>' % (W, h + 52),
+         '<text x="0" y="18" font-size="14" font-weight="600" fill="%s">%s</text>' % (INK, esc(t["titre"]))]
+    for gv in range(0, vmax + 1, 2):
+        e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="%s"/>' % (X0, Y(gv), X1, Y(gv), GRID, 1.2 if gv == 0 else 0.6))
+        e.append('<text x="%d" y="%.1f" font-size="10" fill="%s" text-anchor="end">%d</text>' % (X0 - 6, Y(gv) + 3, MUTED, gv))
+    e.append('<text x="%d" y="%d" font-size="10" fill="%s">%s</text>' % (X0, TOP - 8, MUTED, esc(t["axe"])))
+    for a in range(int(m0) + 1, int(m1) + 1, 2):
+        e.append('<text x="%.1f" y="%d" font-size="10" fill="%s" text-anchor="middle">%d</text>' % (X(a), BAS + 14, MUTED, a))
+    for k, col, larg in ((1, GRIS, 2.0), (2, ORANGE, 2.4)):
+        d = " ".join(("M" if i == 0 else "L") + "%.1f,%.1f" % (X(mois(r[0])), Y(r[k])) for i, r in enumerate(serie))
+        e.append('<path d="%s" fill="none" stroke="%s" stroke-width="%s" stroke-linejoin="round"/>' % (d, col, larg))
+    # noms posés sur les séries, au milieu de la période d'achats (2018) : la consolidée au-dessus, le marché en dessous
+    r18 = min(serie, key=lambda r: abs(mois(r[0]) - 2018.5))
+    e.append('<text x="%.1f" y="%.1f" font-size="10.5" fill="%s" text-anchor="middle">%s</text>' % (X(mois(r18[0])), Y(r18[2]) - 9, ORANGE, esc(t["cons"])))
+    e.append('<text x="%.1f" y="%.1f" font-size="10.5" fill="%s" text-anchor="middle">%s</text>' % (X(mois(r18[0])), Y(r18[1]) + 16, INK2, esc(t["marche"])))
+    # jalon fin 2022 : date au-dessus du point consolidé, valeur du marché sous son point
+    r22 = next(r for r in serie if r[0] == "2022-12-31")
+    x22 = X(mois(r22[0]))
+    e.append('<circle cx="%.1f" cy="%.1f" r="3.6" fill="%s"/>' % (x22, Y(r22[2]), ORANGE))
+    e.append('<circle cx="%.1f" cy="%.1f" r="3.6" fill="%s"/>' % (x22, Y(r22[1]), GRIS))
+    e.append('<text x="%.1f" y="%.1f" font-size="10.5" fill="%s" text-anchor="middle">%s%s%s</text>' % (x22, Y(r22[2]) - 9, INK, esc(t["jalon"]), " : " if lang == "fr" else ": ", Aff["qe_sc1"]))
+    e.append('<text x="%.1f" y="%.1f" font-size="10.5" fill="%s" text-anchor="middle">%s</text>' % (x22, Y(r22[1]) + 16, INK, Aff["qe_sm1"]))
+    # valeurs terminales
+    rd = serie[-1]
+    for k, col, lib in ((2, ORANGE, Aff["qe_sc1_d"]), (1, GRIS, Aff["qe_sm1_d"])):
+        e.append('<circle cx="%.1f" cy="%.1f" r="3.6" fill="%s"/>' % (X1, Y(rd[k]), col))
+        e.append('<text x="%.1f" y="%.1f" font-size="12" font-weight="600" fill="%s">%s</text>' % (X1 + 7, Y(rd[k]) + 4, ORANGE if k == 2 else INK2, lib))
+    e.append('<text x="%.1f" y="%.1f" font-size="9.5" fill="%s">%s</text>' % (X1 + 7, Y(rd[2]) - 10, MUTED, esc(Aff["qe_dern"])))
+    y0 = h + 2
+    e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y0, W, y0, GRID))
+    for k, (tx, col) in enumerate([(t["source"], INK2), (t["note"], INK2), (LICENCES[lang], MUTED)]):
+        e.append('<text x="0" y="%.1f" font-size="9" fill="%s">%s</text>' % (y0 + 13 + 12 * k, col, esc(tx)))
+    e.append("</svg>")
+    return "\n".join(e)
+
+
 def fiches(figs, Aff):
     out = {}
     for lang in ("fr", "en"):
-        f = "dette-inflation-calendrier%s" % SUFFIXE[lang]
-        svg = figs[f + ".svg"]
-        titre = html.unescape(re.search(r"<title[^>]*>(.*?)</title>", svg).group(1))
-        cart = [html.unescape(t) for t in re.findall(r'<text x="0" y="[0-9.]+" font-size="9" fill="[^"]+">(.*?)</text>', svg)]
-        out[lang] = [dict(id="calendrier", fichier=f, titre=titre, montre=TXT[lang]["montre"].format(**Aff[lang]), source=cart[0], precaution=cart[1])]
+        out[lang] = []
+        for id_, base, txt in (("calendrier", "dette-inflation-calendrier", TXT), ("achats", "dette-inflation-achats", TXT_QE)):
+            f = base + SUFFIXE[lang]
+            svg = figs[f + ".svg"]
+            titre = html.unescape(re.search(r"<title[^>]*>(.*?)</title>", svg).group(1))
+            cart = [html.unescape(t) for t in re.findall(r'<text x="0" y="[0-9.]+" font-size="9" fill="[^"]+">(.*?)</text>', svg)]
+            out[lang].append(dict(id=id_, fichier=f, titre=titre, montre=txt[lang]["montre"].format(**Aff[lang]), source=cart[0], precaution=cart[1]))
     return out
 
 
@@ -296,6 +517,22 @@ def csv_texte(c):
     for k, v in c["parts"].items():
         w.writerow(["annexe_allocation_mecanique", k, "part_detention_2020T4_pct", "%.2f" % v, "%"])
         w.writerow(["annexe_allocation_mecanique", k, "allocation", "%.1f" % (c["T"] * v / 100), "Md EUR 2020"])
+    q = c["qe"]
+    for d, sm, sc in q["serie"]:
+        w.writerow(["achats_surcout_premiere_annee", "dette_de_marche_seule", d, "%.2f" % sm, "Md EUR courants"])
+        w.writerow(["achats_surcout_premiere_annee", "etat_plus_banque_de_france", d, "%.2f" % sc, "Md EUR courants"])
+    for d, a, aj in q["atr"]:
+        w.writerow(["achats_duree_refixation", "dette_etat_taux_fixe", d, "%.3f" % a, "annees"])
+        w.writerow(["achats_duree_refixation", "ajustee_titres_detenus_par_la_banque_de_france", d, "%.3f" % aj, "annees"])
+    for a in sorted(q["C"]):
+        w.writerow(["achats_portage_net", "rendement_moins_taux_de_reference", a, "%.0f" % q["C"][a], "M EUR courants"])
+        if a in q["st"]:
+            w.writerow(["achats_portage_net", "solde_partage_revenu_monetaire_total", a, "%.0f" % q["st"][a], "M EUR courants"])
+        if a in q["ns"]:
+            w.writerow(["achats_portage_net", "solde_partage_ligne_des_titres", a, "%.0f" % q["ns"][a], "M EUR courants"])
+    for pays, v in sorted(q["t4"].items()):
+        for a, r in sorted(v.items()):
+            w.writerow(["achats_comparaison_pays", pays, a, "%.3f" % r, "rapport consolidee / marche a un an"])
     return buf.getvalue()
 
 
@@ -304,6 +541,7 @@ def main() -> int:
     check = "--check" in sys.argv[1:] or any(a.startswith("--mutation") for a in sys.argv[1:])
     v3, sens, ci = lire()
     c = calcul(v3, sens, ci)
+    c["qe"] = calcul_qe(lire_qe())
     m = mutation(c)
     n = gardes(c)
     if m:
@@ -318,6 +556,8 @@ def main() -> int:
         return 0
     import cairosvg
     figs = {"dette-inflation-calendrier%s.svg" % SUFFIXE[lang]: fig_calendrier(c, Aff[lang], lang) for lang in ("fr", "en")}
+    figs.update({"dette-inflation-achats%s.svg" % SUFFIXE[lang]: fig_achats(c["qe"], Aff[lang], lang) for lang in ("fr", "en")})
+    q_ = c["qe"]
     payload = {"meta": {"page": "https://" + PAGE_URL, "licence": "CC BY 4.0",
                         "perimetre": "dette négociable de l'État à taux fixe au 31/12/2020 (OAT à taux fixe et BTF), flux promis (coupons et principal)",
                         "numeraire": "euros de 2020 aux prix à la consommation français (IPCH, moyenne annuelle 2020)",
@@ -327,6 +567,14 @@ def main() -> int:
                "famille_A": c["A"], "famille_B": c["B"],
                "resultats": {"central": c["T"], "moyennes_annuelles": c["T_annuel"], "deflateur": [c["defl_spf"], c["defl_ce"]],
                              "indexes_paires_jumelles": c["idx_j"], "consolide_2023": c["cons23"], "consolide_2025": c["cons25"]},
+               "achats_banque_centrale": {
+                   "perimetre": "dette négociable de l'État à taux fixe (AFT, ligne à ligne, fin de mois) ; titres de l'État détenus par la Banque de France, tous portefeuilles (Webstat), au nominal",
+                   "regle": "décision (UE) 2016/2248 : titres détenus réputés rapporter le taux de référence de la BCE dans le revenu mis en commun",
+                   "source_calcul": "dépôt de recherche de l'auteur, chantier QE et maturité consolidée (VERDICT.md) ; extrait figé scripts/sources_qe_maturite/ (SHA256SUMS)",
+                   "fin_2022": {"surcout_1an_marche": q_["sm1"], "surcout_1an_consolide": q_["sc1"], "surcout_5ans_marche": q_["sm5"], "surcout_5ans_consolide": q_["sc5"]},
+                   "portage_net_mdeur": {"2016_2022": round(q_["gain"], 1), "2023_2025": round(q_["cout"], 1), "solde": round(q_["solde"], 1),
+                                         "apres_partage_total": round(q_["net_total"], 1), "apres_partage_ligne_des_titres": round(q_["net_titres"], 1)},
+                   "rapport_pays_max": {k: round(v, 3) for k, v in q_["t4_max"].items()}},
                "affichage": Aff["fr"], "affichage_en": Aff["en"]}
     releve = None
     if OUT_DATA.exists():
