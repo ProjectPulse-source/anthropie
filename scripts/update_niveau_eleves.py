@@ -144,6 +144,9 @@ def mutation(c):
         c["ae"]["timss"]["TIMSS 4e maths"]["2019"]["sym"] = "p"
     elif m == "composition":  # la composition aurait contribué à la baisse au lieu de la masquer
         c["comp"] = dict(c["comp"], recompose_2025=c["comp"]["moyenne_2025"] + 5)
+    elif m == "amortisseur":  # en France, le haut reculerait moins que le bas en mathématiques
+        c["pct"] = json.loads(json.dumps(c["pct"]))
+        c["pct"]["mathematiques"]["France"][4] = c["pct"]["mathematiques"]["France"][0] / 2
     elif m == "effort":       # la France ne serait que troisième pour la baisse de l'effort déclaré
         c["eff"] = dict(c["eff"], rang=3)
     elif m is not None:
@@ -180,6 +183,7 @@ def gardes(c):
     g(20 <= cp["parts_2015"]["a_troisieme_et_moins"] < 25 and cp["parts_2025"]["a_troisieme_et_moins"] < 10,
       "composition : « de près d'un quart à moins d'un dixième »")
     g(1.7 <= cp["parts_2025"]["c_seconde_pro_cap"] / cp["parts_2015"]["c_seconde_pro_cap"] < 2.0, "composition : voie professionnelle « presque doublée »")
+    g(cp["moyenne_2025"] - cp["recompose_2025"] > 0, "composition : l'effet de répartition « relève » la moyenne")
     # protocole 2, N9 : dans l'OCDE, la baisse surtout en bas ; en France, tout le spectre (maths, sciences), le haut en lecture
     pct = c["pct"]
     for d in DOM:
@@ -188,6 +192,17 @@ def gardes(c):
         g(abs(pct[d]["France"][4] - pct[d]["France"][0]) <= 5, "%s : France « tout le spectre »" % d)
     g(pct["lecture"]["France"][4] - pct["lecture"]["France"][0] < -5, "lecture : France, « le haut davantage »")
     g(pct["mathematiques"]["France"][4] < 2 * pct["mathematiques"]["OCDE"][4], "maths : P90 France recule plus de deux fois plus que l'OCDE")
+    for d in DOM:   # « dans la moyenne de l'OCDE, la baisse s'atténue quand on remonte la distribution »
+        o_ = pct[d]["OCDE"]
+        g(o_[0] < o_[2] < o_[4], "%s : OCDE, recul P10 > P50 > P90" % d)
+    for d in ("lecture", "mathematiques"):   # « en France, le milieu et le haut reculent au moins autant que le bas »
+        f_ = pct[d]["France"]
+        g(f_[2] <= f_[0] and f_[4] <= f_[0], "%s : France, P50 et P90 reculent au moins autant que P10" % d)
+    f_ = pct["lecture"]["France"]
+    g(f_[2] <= 1.4 * f_[0] and f_[4] <= 1.4 * f_[0], "lecture : France, milieu et haut « bien davantage » que le bas")
+    g(all(v < cp["s"] for v in cp["sensibilites"].values()), "composition : variantes « même sens, effet un peu plus fort »")
+    f_ = pct["sciences"]["France"]
+    g(f_[2] <= 0.65 * f_[0] and f_[4] <= 0.65 * f_[0], "sciences : France, « presque autant »")
     # protocole 2, N10 (descriptif) : « la plus forte baisse de l'effort déclaré des pays de l'OCDE », « deux fois la moyenne »
     ef = c["eff"]
     g(ef["rang"] == 1 and ef["france_sig"], "effort : « la plus forte baisse », significative")
@@ -366,10 +381,12 @@ def affichage(c):
     A["comp_baisse_rec"] = nb(cp["moyenne_2015"] - cp["recompose_2025"], 0)
     dcl = [cp["scores_2015"][k] - cp["scores_2025"][k] for k in cp["scores_2015"]]
     A["comp_cl_min"], A["comp_cl_max"] = nb(min(dcl), 0), nb(max(dcl), 0)
+    A["comp_effet"] = nb(cp["moyenne_2025"] - cp["recompose_2025"], 0)
     A["comp_gt"] = nb(cp["scores_2015"]["b_seconde_gt"] - cp["scores_2025"]["b_seconde_gt"], 0)
     pct = c["pct"]
     for d in DOM:
         k = COURT[d]
+        A[k + "_p50"], A[k + "_op50"] = nb(-pct[d]["France"][2], 0), nb(-pct[d]["OCDE"][2], 0)
         A[k + "_p10"], A[k + "_p90"] = nb(-pct[d]["France"][0], 0), nb(-pct[d]["France"][4], 0)
         A[k + "_op10"], A[k + "_op90"] = nb(-pct[d]["OCDE"][0], 0), nb(-pct[d]["OCDE"][4], 0)
     ef = c["eff"]
@@ -406,10 +423,15 @@ FIG = {
         source="OCDE, PISA 2025, volume I, tableaux I.B1.2a.36 à 38 (variation du score moyen entre 2015 et 2025)",
         note="Chaque point est un pays membre de l'OCDE. Bande bleue : la moitié centrale des pays (du premier au troisième quartile).",
         montre="En lecture et en sciences, la baisse française est dans la moitié centrale des pays de l'OCDE, la lecture pratiquement à sa frontière ; en mathématiques, elle compte, sur les estimations ponctuelles, parmi le quart des plus fortes."),
+    "composition": dict(
+        titre="PISA, culture scientifique : la répartition entre classes masque une partie de la baisse",
+        source="DEPP, Notes d'Information 16-37 (PISA 2015, figure 3) et 26-39 (PISA 2025, figure 10 web) ; calcul de l'auteur",
+        note="Moyenne des classes pondérée par leur part. Ne neutralise pas les changements de population à l'intérieur de chaque classe.",
+        montre="Avec la répartition entre classes de 2015, le score de 2025 serait plus bas : la baisse serait près de deux fois plus forte, parce qu'à 15 ans moins d'élèves sont encore au collège."),
     "thermometres": dict(
         titre="Quatre évaluations, leur dernière variation en France",
         source="IEA (TIMSS 2023, rapport international) ; DEPP (PIRLS 2021, NI 23-21 ; test de positionnement de seconde, NI 26-22) ; OCDE (PISA 2025)",
-        note="Chaque évaluation a son échelle : les points ne se comparent pas d'une ligne à l'autre. Significativité publiée par l'institution ; aucune pour le test de seconde.",
+        note="Chaque évaluation a son échelle : les points ne se comparent pas d'une ligne à l'autre. Point plein : significativité publiée ; point creux : test de seconde, sans test publié.",
         montre="Sur leur dernière période, PIRLS en CM1 et TIMSS en CM1 et en quatrième sont stables ; le test d'entrée en seconde monte en mathématiques ; PISA, à 15 ans, baisse nettement."),
     "sommet": dict(
         titre="Les élèves en difficulté et les meilleurs élèves, 2015 et 2025",
@@ -441,9 +463,9 @@ def fig_thermometres(c, A):
             st = "baisse significative" if s_[a0]["sym"] == "p" else ("hausse significative" if s_[a0]["sym"] == "q" else "stable")
         lignes.append((lib, pop, "%s-%s" % (a0, a1), d, st))
     lignes.append(("Test de positionnement, mathématiques", "entrée en seconde GT", "2021-2024",
-                   sec["GT maths"]["2024"] - sec["GT maths"]["2021"], "hausse (sans test publié)"))
+                   sec["GT maths"]["2024"] - sec["GT maths"]["2021"], "hausse, descriptif (sans test)"))
     lignes.append(("Test de positionnement, français", "entrée en seconde GT", "2021-2024",
-                   sec["GT francais"]["2024"] - sec["GT francais"]["2021"], "baisse (sans test publié)"))
+                   sec["GT francais"]["2024"] - sec["GT francais"]["2021"], "baisse, descriptif (sans test)"))
     for d_, lib in (("mathematiques", "PISA, culture mathématique"), ("lecture", "PISA, compréhension de l'écrit")):
         x = P[d_]["dif"]["2022"]
         lignes.append((lib, "15 ans", "2022-2025", x["v"], "baisse significative" if x["sig"] and x["v"] < 0 else "stable"))
@@ -452,19 +474,45 @@ def fig_thermometres(c, A):
     h = 60 + 34 * len(lignes) + 10
     e = tete("niv-t", t["titre"], desc, h + 52)
     cols = (0, 240, 395, 480, 545)
-    for x, lib in zip(cols, ("Évaluation", "Élèves", "Période", "Variation", "Lecture")):
+    for x, lib in zip(cols, ("Évaluation", "Élèves", "Période", "Variation", "Statut")):
         e.append('<text x="%d" y="48" font-size="10.5" fill="%s" font-weight="600">%s</text>' % (x, MUTED, esc(lib)))
     for i, (lib, pop, per, v, st) in enumerate(lignes):
         y = 60 + 34 * i
         if i % 2 == 0:
             e.append('<rect x="0" y="%d" width="%d" height="34" fill="#f6f4f1"/>' % (y, W))
         col = ORANGE if st.startswith("baisse") else (BLEU if st.startswith("hausse") else GRIS)
+        creux = "descriptif" in st
         e.append('<text x="%d" y="%d" font-size="11.5" fill="%s">%s</text>' % (cols[0] + 6, y + 21, INK, esc(lib)))
         e.append('<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (cols[1], y + 21, INK2, esc(pop)))
         e.append('<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (cols[2], y + 21, INK2, per))
         e.append('<text x="%d" y="%d" font-size="11.5" fill="%s" font-weight="600">%s%s</text>' % (cols[3], y + 21, col, "+" if v > 0 else "", nb(v, 0)))
-        e.append('<rect x="%d" y="%d" width="10" height="10" rx="5" fill="%s"/>' % (cols[4], y + 12, col))
+        e.append('<rect x="%d" y="%d" width="10" height="10" rx="5" fill="%s" stroke="%s" stroke-width="1.6"/>'
+                 % (cols[4], y + 12, "#ffffff" if creux else col, col))
         e.append('<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (cols[4] + 16, y + 21, INK, esc(st)))
+    return pied(e, h + 2, t["source"], t["note"])
+
+
+def fig_composition(c, A):
+    t = FIG["composition"]
+    cp = c["comp"]
+    pts_ = [("2015, observé", cp["moyenne_2015"], GRIS), ("2025, à la répartition entre classes de 2015", cp["recompose_2025"], ORANGE),
+            ("2025, observé", cp["moyenne_2025"], BLEU)]
+    desc = ("Score moyen PISA en culture scientifique, moyenne des classes : 2015 observé %s ; 2025 recalculé avec la répartition "
+            "entre classes de 2015 %s ; 2025 observé %s. Baisse observée %s points ; à répartition de 2015, %s ; effet de la "
+            "répartition entre classes +%s." % (nb(cp["moyenne_2015"], 0), nb(cp["recompose_2025"], 0), nb(cp["moyenne_2025"], 0),
+                                              A["comp_baisse_obs"], A["comp_baisse_rec"], A["comp_effet"]))
+    h = 230
+    e = tete("niv-c", t["titre"], desc, h + 52)
+    X0, X1, vmin, vmax = 300, 690, 465, 500
+    sx = lambda v: X0 + (X1 - X0) * (v - vmin) / (vmax - vmin)
+    for gv in range(vmin, vmax + 1, 5):
+        e.append('<line x1="%.1f" y1="44" x2="%.1f" y2="%d" stroke="%s" stroke-width="0.6"/>' % (sx(gv), sx(gv), 44 + 150, GRID))
+        e.append('<text x="%.1f" y="%d" font-size="10" fill="%s" text-anchor="middle">%d</text>' % (sx(gv), 44 + 164, MUTED, gv))
+    for i, (lib, v, col) in enumerate(pts_):
+        y = 70 + i * 50
+        e.append('<text x="0" y="%d" font-size="11.5" fill="%s">%s</text>' % (y + 4, INK, esc(lib)))
+        e.append('<circle cx="%.1f" cy="%d" r="7" fill="%s"/>' % (sx(v), y, col))
+        e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle" font-weight="600">%s</text>' % (sx(v), y - 12, col, nb(v, 0)))
     return pied(e, h + 2, t["source"], t["note"])
 
 
@@ -579,7 +627,7 @@ def fig_seconde(c, A):
 
 def fiches(figs):
     out = []
-    for fid in ("thermometres", "baisse", "sommet", "seconde"):
+    for fid in ("thermometres", "baisse", "composition", "seconde", "sommet"):
         svg = figs["niveau-%s.svg" % fid]
         titre = html.unescape(re.search(r"<title[^>]*>(.*?)</title>", svg).group(1))
         cart = [html.unescape(t) for t in re.findall(r'<text x="0" y="[0-9.]+" font-size="9" fill="[^"]+">(.*?)</text>', svg)]
@@ -663,7 +711,7 @@ def main() -> int:
         log("--check : %d gardes passees (%d cles d'affichage), rien ecrit." % (n, len(A)))
         return 0
     import cairosvg
-    figs = {"niveau-thermometres.svg": fig_thermometres(c, A), "niveau-baisse.svg": fig_baisse(c, A), "niveau-sommet.svg": fig_sommet(c, A), "niveau-seconde.svg": fig_seconde(c, A)}
+    figs = {"niveau-thermometres.svg": fig_thermometres(c, A), "niveau-baisse.svg": fig_baisse(c, A), "niveau-composition.svg": fig_composition(c, A), "niveau-sommet.svg": fig_sommet(c, A), "niveau-seconde.svg": fig_seconde(c, A)}
     P = c["P"]
     payload = {"meta": {"page": "https://" + PAGE_URL, "licence": "CC BY 4.0",
                         "champ": "France ; jeunes de 15 ans (PISA), élèves entrant en seconde (DEPP), terminale S (TIMSS Advanced), concours externes du second degré public",

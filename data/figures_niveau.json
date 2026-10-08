@@ -6,7 +6,7 @@
    "titre": "Quatre évaluations, leur dernière variation en France",
    "montre": "Sur leur dernière période, PIRLS en CM1 et TIMSS en CM1 et en quatrième sont stables ; le test d'entrée en seconde monte en mathématiques ; PISA, à 15 ans, baisse nettement.",
    "source": "IEA (TIMSS 2023, rapport international) ; DEPP (PIRLS 2021, NI 23-21 ; test de positionnement de seconde, NI 26-22) ; OCDE (PISA 2025)",
-   "precaution": "Chaque évaluation a son échelle : les points ne se comparent pas d'une ligne à l'autre. Significativité publiée par l'institution ; aucune pour le test de seconde."
+   "precaution": "Chaque évaluation a son échelle : les points ne se comparent pas d'une ligne à l'autre. Point plein : significativité publiée ; point creux : test de seconde, sans test publié."
   },
   {
    "id": "baisse",
@@ -17,12 +17,12 @@
    "precaution": "Chaque point est un pays membre de l'OCDE. Bande bleue : la moitié centrale des pays (du premier au troisième quartile)."
   },
   {
-   "id": "sommet",
-   "fichier": "niveau-sommet",
-   "titre": "Les élèves en difficulté et les meilleurs élèves, 2015 et 2025",
-   "montre": "La part des élèves en difficulté augmente en France à peu près comme dans l'OCDE ; la part des meilleurs élèves y baisse bien davantage, surtout en lecture.",
-   "source": "OCDE, PISA 2025, volume I, tableaux I.B1.2a.34 et 35 ; moyenne de l'OCDE sur 35 pays comparables",
-   "precaution": "En % des élèves de 15 ans. En difficulté : sous le niveau 2. Meilleurs élèves : niveaux 5 et 6."
+   "id": "composition",
+   "fichier": "niveau-composition",
+   "titre": "PISA, culture scientifique : la répartition entre classes masque une partie de la baisse",
+   "montre": "Avec la répartition entre classes de 2015, le score de 2025 serait plus bas : la baisse serait près de deux fois plus forte, parce qu'à 15 ans moins d'élèves sont encore au collège.",
+   "source": "DEPP, Notes d'Information 16-37 (PISA 2015, figure 3) et 26-39 (PISA 2025, figure 10 web) ; calcul de l'auteur",
+   "precaution": "Moyenne des classes pondérée par leur part. Ne neutralise pas les changements de population à l'intérieur de chaque classe."
   },
   {
    "id": "seconde",
@@ -31,6 +31,14 @@
    "montre": "En français, le test de seconde et PISA baissent tous les deux ; en mathématiques, le test de seconde monte quand PISA baisse.",
    "source": "DEPP, Note d'Information 26-40, figure 11 web (tests de positionnement de seconde 2021 et 2024 ; PISA 2022 et 2025)",
    "precaution": "Écart entre deux générations d'élèves, en centièmes d'écart-type (d de Cohen), calculé par la DEPP. Seconde : deux voies."
+  },
+  {
+   "id": "sommet",
+   "fichier": "niveau-sommet",
+   "titre": "Les élèves en difficulté et les meilleurs élèves, 2015 et 2025",
+   "montre": "La part des élèves en difficulté augmente en France à peu près comme dans l'OCDE ; la part des meilleurs élèves y baisse bien davantage, surtout en lecture.",
+   "source": "OCDE, PISA 2025, volume I, tableaux I.B1.2a.34 et 35 ; moyenne de l'OCDE sur 35 pays comparables",
+   "precaution": "En % des élèves de 15 ans. En difficulté : sous le niveau 2. Meilleurs élèves : niveaux 5 et 6."
   }
  ]
 }

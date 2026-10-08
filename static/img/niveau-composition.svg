@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 282" role="img" font-variant-numeric="tabular-nums" aria-labelledby="niv-c-t niv-c-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="niv-c-t">PISA, culture scientifique : la répartition entre classes masque une partie de la baisse</title><desc id="niv-c-d">Score moyen PISA en culture scientifique, moyenne des classes : 2015 observé 496 ; 2025 recalculé avec la répartition entre classes de 2015 475 ; 2025 observé 485. Baisse observée 12 points ; à répartition de 2015, 21 ; effet de la répartition entre classes +10.</desc>
+<rect width="720" height="282" fill="#ffffff"/>
+<text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">PISA, culture scientifique : la répartition entre classes masque une partie de la baisse</text>
+<line x1="300.0" y1="44" x2="300.0" y2="194" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="300.0" y="208" font-size="10" fill="#96928f" text-anchor="middle">465</text>
+<line x1="355.7" y1="44" x2="355.7" y2="194" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="355.7" y="208" font-size="10" fill="#96928f" text-anchor="middle">470</text>
+<line x1="411.4" y1="44" x2="411.4" y2="194" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="411.4" y="208" font-size="10" fill="#96928f" text-anchor="middle">475</text>
+<line x1="467.1" y1="44" x2="467.1" y2="194" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="467.1" y="208" font-size="10" fill="#96928f" text-anchor="middle">480</text>
+<line x1="522.9" y1="44" x2="522.9" y2="194" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="522.9" y="208" font-size="10" fill="#96928f" text-anchor="middle">485</text>
+<line x1="578.6" y1="44" x2="578.6" y2="194" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="578.6" y="208" font-size="10" fill="#96928f" text-anchor="middle">490</text>
+<line x1="634.3" y1="44" x2="634.3" y2="194" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="634.3" y="208" font-size="10" fill="#96928f" text-anchor="middle">495</text>
+<line x1="690.0" y1="44" x2="690.0" y2="194" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="690.0" y="208" font-size="10" fill="#96928f" text-anchor="middle">500</text>
+<text x="0" y="74" font-size="11.5" fill="#26262f">2015, observé</text>
+<circle cx="649.4" cy="70" r="7" fill="#8a8781"/>
+<text x="649.4" y="58" font-size="11" fill="#8a8781" text-anchor="middle" font-weight="600">496</text>
+<text x="0" y="124" font-size="11.5" fill="#26262f">2025, à la répartition entre classes de 2015</text>
+<circle cx="410.7" cy="120" r="7" fill="#eb6834"/>
+<text x="410.7" y="108" font-size="11" fill="#eb6834" text-anchor="middle" font-weight="600">475</text>
+<text x="0" y="174" font-size="11.5" fill="#26262f">2025, observé</text>
+<circle cx="519.4" cy="170" r="7" fill="#184f95"/>
+<text x="519.4" y="158" font-size="11" fill="#184f95" text-anchor="middle" font-weight="600">485</text>
+<line x1="0" y1="232.0" x2="720" y2="232.0" stroke="#dcd8d3"/>
+<text x="0" y="245.0" font-size="9" fill="#55524f">DEPP, Notes d'Information 16-37 (PISA 2015, figure 3) et 26-39 (PISA 2025, figure 10 web) ; calcul de l'auteur</text>
+<text x="0" y="257.0" font-size="9" fill="#55524f">Moyenne des classes pondérée par leur part. Ne neutralise pas les changements de population à l'intérieur de chaque classe.</text>
+<text x="0" y="269.0" font-size="9" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/le-niveau-des-eleves-baisse-t-il/</text>
+</svg>
