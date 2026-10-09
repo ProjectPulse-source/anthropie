@@ -52,6 +52,18 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-09 — Échecs CI du 05 et du 07/10 corrigés : pièces archivées en octets exacts, EESR injoignable ≠ fiche absente ; EN LIGNE
+
+- **07/10, « Donnees dette (comparaison internationale) »** arrêté sur l'empreinte du CSV Webstat (`8b4ddbf3…` au lieu de
+  `5773dd1f…`) : pièce versionnée en LF, empreinte calculée sur le CRLF du poste. Huit pièces dans ce cas (générations,
+  inflation, lycée, niveau des élèves), seul `sources_enseignants` était protégé. `-text` étendu à `scripts/sources_*/**`,
+  25 fichiers renormalisés (`236c979`). Mesure sur un checkout sans conversion : 0 écart d'empreinte (HEAD, témoin :
+  8) ; les 8 générateurs `--check` à 0.
+- **05/10, test du lundi** : un délai dépassé de l'EESR compté comme « fiche non retrouvée » ; le correctif `eda7ef1`
+  n'avait couvert que le SIES (`5db0585`, testé par mutation).
+- Relance manuelle du workflow dette : succès, données du 09/10 publiées (`f381a61`). Sans objet ailleurs, déclaré : le
+  dépôt `D:\PRO` porte le même réglage, mais aucune CI n'y rejoue les empreintes.
+
 ### 2026-10-08 — Lexique anglais Wolf-07 porté sur « qui paie » et « générations futures » (EN)
 
 - *central-government marketable debt/securities* (émetteur) et *the government* (acteur) au lieu de *State negotiable* /
