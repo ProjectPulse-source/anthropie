@@ -1,4 +1,6 @@
 # Pieces archivees : octets exacts, jamais de conversion de fins de ligne. Leurs empreintes (SHA256SUMS) sont
 # verifiees par les generateurs ; une conversion LF -> CRLF au checkout (core.autocrlf sous Windows) les ferait
 # echouer sur un clone neuf. Mesure le 02/10/2026 : export de l'arbre, generateur arrete sur l'empreinte.
-scripts/sources_enseignants/** -text
+# Etendu a tous les dossiers de pieces le 08/10/2026 : huit pieces versionnees en LF ne rendaient plus leur empreinte
+# (CRLF sur le poste), dont le CSV Webstat qui a arrete la mise a jour hebdomadaire de la dette le 07/10.
+scripts/sources_*/** -text
