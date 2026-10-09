@@ -432,6 +432,17 @@ pisa_donnees_individuelles_score_par_classe,sciences c_seconde_pro_cap,2015,431.
 pisa_donnees_individuelles_score_par_classe,sciences c_seconde_pro_cap,2025,401.74,points PISA (calcul)
 pisa_donnees_individuelles_score_par_classe,sciences d_premiere,2015,591.45,points PISA (calcul)
 pisa_donnees_individuelles_score_par_classe,sciences d_premiere,2025,594.97,points PISA (calcul)
+pisa_donnees_individuelles_score_moyen,mathematiques,2025_composition_2015_classe_sexe_diplome_origine,457.27,points PISA (calcul)
+pisa_donnees_individuelles_score_moyen,lecture,2025_composition_2015_classe_sexe_diplome_origine,455.77,points PISA (calcul)
+pisa_donnees_individuelles_score_moyen,sciences,2025_composition_2015_classe_sexe_diplome_origine,482.38,points PISA (calcul)
+pisa_variation_mediane_par_quart_social_2015_2025,lecture,quart 1,-19.75,"points PISA (calcul, erreur type 7.39)"
+pisa_variation_mediane_par_quart_social_2015_2025,lecture,quart 2,-40.87,"points PISA (calcul, erreur type 7.38)"
+pisa_variation_mediane_par_quart_social_2015_2025,lecture,quart 3,-41.36,"points PISA (calcul, erreur type 6.35)"
+pisa_variation_mediane_par_quart_social_2015_2025,lecture,quart 4,-52.6,"points PISA (calcul, erreur type 6.09)"
+pisa_variation_mediane_par_quart_social_2015_2025,mathematiques,quart 1,-24.84,"points PISA (calcul, erreur type 6.74)"
+pisa_variation_mediane_par_quart_social_2015_2025,mathematiques,quart 2,-29.36,"points PISA (calcul, erreur type 6.15)"
+pisa_variation_mediane_par_quart_social_2015_2025,mathematiques,quart 3,-30.72,"points PISA (calcul, erreur type 5.72)"
+pisa_variation_mediane_par_quart_social_2015_2025,mathematiques,quart 4,-37.86,"points PISA (calcul, erreur type 5.56)"
 pisa_variation_percentiles_2015_2025_france,sciences,P10,-12.73,points PISA
 pisa_variation_percentiles_2015_2025_france,sciences,P25,-14.43,points PISA
 pisa_variation_percentiles_2015_2025_france,sciences,P50,-11.55,points PISA

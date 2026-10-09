@@ -109,6 +109,7 @@ def calcul(X):
         sec=X["seconde"], timss=X["timss_adv"], gen=gen, p1=p1, p2={int(a): v for a, v in X["p2"].items()},
         p3=X["p3"], p4=X["p4"], releve=X["releve_le"],
         t3=X["p3_timss_pisa_maths"], t4=X["p4_timss_pisa_facteurs"], p5=X["p5_donnees_individuelles"],
+        p6=X["p6_composition_conjointe"],
         comp=X["p2_composition_sciences"], pct=X["p2_percentiles"], eff=X["p2_effort"], ae=X["p2_autres_evaluations"],
     )
 
@@ -165,6 +166,17 @@ def mutation(c):
         c["p5"] = json.loads(json.dumps(c["p5"]))
         a, b = c["p5"]["N18"]["sciences"]["classes"]["d_premiere"]
         c["p5"]["N18"]["sciences"]["classes"]["d_premiere"] = [a, a - 5]
+    elif m == "conjointe":    # à composition conjointe de 2015, la baisse en mathématiques se réduirait de 8 points
+        c["p6"] = json.loads(json.dumps(c["p6"]))
+        x = c["p6"]["N22"]["central"]["mathematiques"]
+        x["rec"] = x["m25"] + 8
+    elif m == "mediane_quart":  # l'élève médian du quart le moins favorisé ne reculerait pas significativement en lecture
+        c["p6"] = json.loads(json.dumps(c["p6"]))
+        c["p6"]["N23"]["lecture"]["1"]["P50"] = [-3.0, 7.4]
+    elif m == "non_reponse":  # la non-réponse sur le diplôme des parents n'aurait pas augmenté
+        c["p6"] = json.loads(json.dumps(c["p6"]))
+        a, b = c["p6"]["compo"]["diplome"]["manquant"]
+        c["p6"]["compo"]["diplome"]["manquant"] = [a, a + 1]
     elif m == "amortisseur":  # en France, le haut reculerait moins que le bas en mathématiques
         c["pct"] = json.loads(json.dumps(c["pct"]))
         c["pct"]["mathematiques"]["France"][4] = c["pct"]["mathematiques"]["France"][0] / 2
@@ -226,6 +238,16 @@ def gardes(c):
         g(abs(q["4"][0] - q["1"][0]) < 0.5 * abs(q["tous"][0]) and all(q[k][0] < 0 for k in ("1", "2", "3", "4")),
           "données individuelles, %s : « à peu près autant chez les favorisés que chez les défavorisés »" % d)
     g(all(abs(v) < 0.1 for v in p5["N21"].values()), "données individuelles : l'effort ne rend compte que de « moins d'un dixième » de la baisse")
+    # protocole 6 : composition conjointe (classe, sexe, diplôme des parents, origine) ; médiane par quart social
+    p6 = c["p6"]
+    g(p6["v22"] == "TIENT" and p6["v22_robuste"]
+      and all(abs(x["rec"] - x["m25"]) < 1.5 for x in p6["N22"]["central"].values()),
+      "composition conjointe : la baisse « reste pratiquement la même » dans les trois domaines")
+    g(all(p6["N23"][d][q]["P50"][0] < 0 and abs(p6["N23"][d][q]["P50"][0]) > 1.96 * p6["N23"][d][q]["P50"][1]
+          for d in ("lecture", "mathematiques") for q in "1234"),
+      "médiane par quart social : l'élève médian « recule » dans chacun des quatre quarts, significativement")
+    a, b = p6["compo"]["diplome"]["manquant"]
+    g(b > 2 * a, "composition conjointe : le diplôme des parents est « bien plus souvent » non renseigné en 2025 qu'en 2015")
     # protocole 2, N8 : la composition masque la baisse (sciences)
     cp = c["comp"]
     D_ = cp["moyenne_2025"] - cp["moyenne_2015"]
@@ -428,6 +450,15 @@ def affichage(c):
         q = p5["N19"][d]
         vals = [-q[j][0] for j in ("1", "2", "3", "4")]
         A["p5_%s_q_min" % k], A["p5_%s_q_max" % k] = nb(min(vals), 0), nb(max(vals), 0)
+    # protocole 6
+    p6 = c["p6"]
+    for d, k in (("mathematiques", "math"), ("lecture", "lect"), ("sciences", "sci")):
+        x = p6["N22"]["central"][d]
+        A["p6_%s_rec" % k] = nb(x["m15"] - x["rec"], 0)
+    A["p6_dipl_nr15"], A["p6_dipl_nr25"] = (nb(v, 0) for v in p6["compo"]["diplome"]["manquant"])
+    for d, k in (("mathematiques", "math"), ("lecture", "lect")):
+        vals = [-p6["N23"][d][q]["P50"][0] for q in "1234"]
+        A["p6_%s_med_min" % k], A["p6_%s_med_max" % k] = nb(min(vals), 0), nb(max(vals), 0)
     # protocole 3
     p3 = c["t3"]
     A["t3_n"] = str(p3["n"])
@@ -762,6 +793,11 @@ def csv_texte(c):
         for k, (a, b) in x["classes"].items():
             w.writerow(["pisa_donnees_individuelles_score_par_classe", d + " " + k, "2015", round(a, 2), "points PISA (calcul)"])
             w.writerow(["pisa_donnees_individuelles_score_par_classe", d + " " + k, "2025", round(b, 2), "points PISA (calcul)"])
+    for d, x in c["p6"]["N22"]["central"].items():
+        w.writerow(["pisa_donnees_individuelles_score_moyen", d, "2025_composition_2015_classe_sexe_diplome_origine", round(x["rec"], 2), "points PISA (calcul)"])
+    for d, v in c["p6"]["N23"].items():
+        for q, x in v.items():
+            w.writerow(["pisa_variation_mediane_par_quart_social_2015_2025", d, "quart %s" % q, round(x["P50"][0], 2), "points PISA (calcul, erreur type %s)" % round(x["P50"][1], 2)])
     for d, v in c["pct"].items():
         for z in ("France", "OCDE"):
             for p_, x in zip((10, 25, 50, 75, 90), v[z]):
@@ -804,6 +840,7 @@ def main() -> int:
                "timss_advanced": c["timss"],
                "protocole_3_timss_pisa_maths": c["t3"],
                "protocole_5_donnees_individuelles": c["p5"],
+               "protocole_6_composition_conjointe": c["p6"],
                "protocole_2": {"composition_sciences": c["comp"], "percentiles": c["pct"], "effort_declare": c["eff"],
                                "autres_evaluations": c["ae"]},
                "recrutement": {"capes_externe": c["X"]["p1"], "contractuels": c["X"]["p2"], "non_pleinement_qualifies_ocde": c["p3"],
