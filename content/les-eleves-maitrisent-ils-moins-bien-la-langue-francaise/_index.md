@@ -150,7 +150,7 @@ En partie, et c'est là que les évaluations françaises sont les plus nettes. E
 
 ## Ce qu'il faut retenir {#retenir}
 
-La langue des élèves ne s'effondre pas d'un bloc, et elle ne tient pas non plus. Le recul le plus ancien est celui de l'orthographe grammaticale, de la lecture en fin d'école et du temps passé à lire pour le plaisir&nbsp;: il est engagé avant le smartphone. Il porte sur les accords plus que sur les mots. La baisse récente se voit à 15 ans, dans PISA, depuis 2012, quand les évaluations des élèves plus jeunes ne reculent pas, et elle se double d'un recul du goût de lire et d'écarts qui se creusent dans les établissements les plus défavorisés. Le vocabulaire, enfin, que l'on croit en chute libre, n'est mesuré par personne&nbsp;: c'est la première chose qu'il faudrait suivre pour répondre à la question.
+La langue des élèves ne s'effondre pas d'un bloc, et elle ne tient pas non plus. Le recul le plus ancien est celui de l'orthographe grammaticale, de la lecture en fin d'école et du temps passé à lire pour le plaisir&nbsp;: il est engagé avant le smartphone. Il porte sur les accords plus que sur les mots. La baisse récente se voit à 15 ans, dans PISA, depuis 2012, quand les évaluations des élèves plus jeunes ne reculent pas, et elle va de pair avec un recul du goût de lire et, en fin de collège, avec un recul significatif de l'éducation prioritaire quand l'ensemble ne bouge pas significativement. Le vocabulaire, enfin, que l'on croit en chute libre, n'est mesuré par personne&nbsp;: c'est la première chose qu'il faudrait suivre pour répondre à la question.
 
 ## Questions fréquentes {#questions}
 
