@@ -701,7 +701,7 @@ def carte_langue() -> None:
         fail("carte langue : le contraste annoncé n'est plus vrai dans les données")
     carte("og-langue-eleves.jpg",
           ["Les élèves maîtrisent-ils", "moins bien la langue ?"],
-          "Même dictée : ce sont surtout les accords qui reculent.",
+          "Même dictée : c'est surtout la grammaire qui recule.",
           "DEPP, NI 22.37 · calcul de l'auteur · CC BY 4.0",
           "stephane-lalut.com/les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/",
           lambda d: figure_langue_mini(d, A, j),

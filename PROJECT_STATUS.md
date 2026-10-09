@@ -87,6 +87,16 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
   libellé déjà mesuré (45). **Reste** : push sur décision de l'auteur ; même lexique à porter sur `qui-paie` et
   `generations-futures` EN (point ouvert de l'arbitrage).
 
+### 2026-10-10 — « Langue » : contre-expertise PRO-20261009-202511 arbitrée et appliquée ; NON POUSSÉE
+
+- Verdict externe « publiable après corrections » ; arbitrage `D:\PRO\.claude\external-audits\ARBITRATIONS\PRO-20261009-202511_arbitrage.md`
+  (audit CLOS). Prose : généralisation du smartphone (et non son arrivée) ; « surtout l'orthographe grammaticale », avec le
+  détail par type de la NI 08.38 (extrait enrichi, contrôle de seconde lecture 107/0) ; plus de « plus jeunes » (CEDRE fin
+  de collège = troisième) ; vocabulaire « aucune série publique » ; écrans : « indéterminé » d'abord ; écart EP 17 → 22
+  (DEPP, témoin du calcul des tableaux), sans test publié ; conclusion réécrite. Générateur : 42 gardes, 19 mutations vues
+  mordre ; carte de partage et figure de la dictée régénérées. hugo 0, `check-all --ci` 0, `audit-liens-build` 0, 390 px.
+  **Reste** : push sur décision de l'auteur ; Li et Yan 2024 à télécharger par l'auteur.
+
 ### 2026-10-09 — Ressource « Les élèves maîtrisent-ils moins bien la langue française ? » (FR seulement), troisième onglet du bloc « École et lycée » ; NON POUSSÉE
 
 - **`/les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/`** : frise de onze mesures face à l'arrivée du smartphone,

@@ -4,10 +4,11 @@ troisième onglet).
 
 Découverte de la page (dépôt de pilotage de l'auteur, 06_PROMOTION/RECHERCHE_LYCEES_LECTURE_2026-10-09, protocole écrit
 avant calcul, commit ddab2bc ; verdict du 09/10/2026) : la langue des élèves ne recule pas d'un bloc. Les reculs les plus
-anciens (orthographe et lecture en fin d'école, temps de lecture pour le plaisir à 15 ans) précèdent l'arrivée du
-smartphone chez les adolescents ; à la même dictée, l'orthographe des mots bouge peu quand les autres erreurs (accords,
-conjugaison, ponctuation) doublent ; la baisse de PISA commence après 2012, quand les évaluations des plus jeunes ne
-reculent pas sur la même période ; le vocabulaire lui-même n'est suivi par aucune série publique.
+anciens (orthographe et lecture en fin d'école, temps de lecture pour le plaisir à 15 ans) précèdent la généralisation
+du smartphone chez les adolescents ; à la même dictée, l'orthographe des mots bouge peu quand les autres erreurs, surtout
+grammaticales (NI 08.38, tableau 4), doublent ; PISA ne baisse qu'après 2012, quand PIRLS et CEDRE ne reculent pas
+significativement sur des périodes qui recouvrent en partie cette baisse ; le vocabulaire n'est suivi par aucune série
+publique. Prose corrigée après la contre-expertise PRO-20261009-202511 (arbitrage dans D:\PRO\.claude\external-audits).
 
 Entrée : l'extrait FIGÉ du calcul, scripts/sources_langue_eleves/extrait_langue.json (écrit par extrait_langue.py du dépôt
 de recherche, qui lit chaque valeur par une ancre dans les pièces archivées), contrôlé contre SHA256SUMS. Ce générateur
@@ -101,7 +102,8 @@ def calcul(X):
     return dict(X=X, sm=sm, seuil=seuil, P=P, d_00_12=d_00_12, se_00_12=se_00_12, q5=t7[Q5], q6=t7[Q6],
                 dic=X["dictee"], lc=X["lecture_cm2"], ce=X["cedre_ecole"], cc=X["cedre_college"], six=X["sixieme"],
                 pirls=X["pirls"], sec=X["seconde_francais"], oc=X["ocde_lecture_loisir"], cul=X["culture"],
-                pr=X["pratiques_2023_ne_lit_pas_pour_plaisir"], releve=X["releve_le"])
+                pr=X["pratiques_2023_ne_lit_pas_pour_plaisir"], releve=X["releve_le"],
+                dty=X["dictee_types_1987_2007"], cct=X["cedre_college_textes"])
 
 
 def mutation(c):
@@ -143,6 +145,11 @@ def mutation(c):
         X["dictee"]["citations_depp"] = X["dictee"]["citations_depp"][:1]
     elif m == "tranches":  # la baisse se verrait aussi chez les eleves qui declarent peu d'ecran
         X["t7"]["questions"][Q5]["b"]["aucune_ou_1h"]["baisse_sig"] = True
+    elif m == "grammaticales":  # la hausse 1987-2007 ne serait pas surtout grammaticale
+        X["dictee_types_1987_2007"]["grammaticales"]["2007"] = 8.0  # meme total : la hausse passerait par la ponctuation
+        X["dictee_types_1987_2007"]["ponctuation"]["2007"] = 3.7
+    elif m == "ecart_ep":  # le calcul des tableaux ne retrouverait pas l'ecart ecrit par la DEPP
+        X["cedre_college"]["groupes"]["Public hors EP"]["2021"] = 245.0
     else:
         fail("mutation inconnue : %s" % m)
     c.update(calcul(X))
@@ -170,7 +177,7 @@ def gardes(c):
     g(hs["d2009_2000"] < 0 and abs(hs["d2009_2000"]) >= 1.96 * hs["d2009_2000_et"] and 2009 < c["seuil"],
       "temps de lecture pour le plaisir à 15 ans : baisse significative de 2000 à 2009, « avant le smartphone »")
     g(abs(hs["d2018_2009"]) < 1.96 * hs["d2018_2009_et"], "temps de lecture : « sans évolution significative de 2009 à 2018 »")
-    g(abs(c["d_00_12"]) < 1.96 * c["se_00_12"], "PISA : « pas de recul de 2000 à 2012 »")
+    g(abs(c["d_00_12"]) < 1.96 * c["se_00_12"], "PISA : « aucune baisse significative de 2000 à 2012 »")
     s = P["score"]
     g(s["2012"] > s["2015"] > s["2018"] > s["2022"] > s["2025"], "PISA : « recule à chaque enquête depuis 2012 »")
     v12 = P["variation_vers_2025"]["2012"], P["variation_vers_2025_et"]["2012"]
@@ -198,6 +205,13 @@ def gardes(c):
     g(1.7 <= (tot["2015"] - tot["2007"]) / (tot["2021"] - tot["2015"]) <= 2.6, "dictée : hausse de 2015 à 2021 « deux fois moins forte » que de 2007 à 2015")
     g(lx["2021"] - lx["1987"] < 0.25 * (tot["2021"] - tot["1987"]), "dictée : l'orthographe des mots « bouge peu » au regard du total")
     g(1.8 <= autres["2021"] / autres["1987"] < 2.2, "dictée : les autres erreurs « ont presque doublé, ou doublé »")
+    dty = c["dty"]
+    g(dty["citation_depp"] == "principalement_grammaticales" and dty["lexicales"]["1987"] == lx["1987"] and dty["lexicales"]["2007"] == lx["2007"]
+      and all(abs(sum(dty[k][a] for k in ("lexicales", "grammaticales", "ponctuation", "autres")) - tot[a]) <= 0.15 for a in ("1987", "2007")),
+      "dictée : la décomposition de la NI 08.38 retrouve les totaux et les erreurs lexicales de la NI 22.37")
+    gr = dty["grammaticales"]
+    g(gr["2007"] - gr["1987"] >= 0.8 * (tot["2007"] - tot["1987"]) and dty["ponctuation"]["2007"] <= dty["ponctuation"]["1987"],
+      "dictée : de 1987 à 2007, la hausse est « surtout grammaticale » (au moins les quatre cinquièmes), la ponctuation ne monte pas")
     g(dic["vingt_cinq_ou_plus"]["2021"] > 3.5 * dic["vingt_cinq_ou_plus"]["1987"], "dictée : la part à 25 erreurs ou plus « a quadruplé »")
     sat = six["satisfaisant_par_domaine_2025"]
     ecarts = {d: sat["Groupe d'IPS 5"][d] - sat["Groupe d'IPS 1"][d] for d in DOMAINES_6E}
@@ -217,6 +231,12 @@ def gardes(c):
     gs = cc["groupes_significatif"]
     g(gs["EP"]["2021"] and gs["Garçons"]["2021"] and cc["groupes"]["EP"]["2021"] < cc["groupes"]["EP"]["2015"]
       and cc["groupes"]["Garçons"]["2021"] < cc["groupes"]["Garçons"]["2015"], "CEDRE fin de collège : éducation prioritaire et garçons « en baisse significative »")
+    ct, grp = c["cct"], cc["groupes"]
+    ec = {a: grp["Public hors EP"][a] - grp["EP"][a] for a in ("2015", "2021")}
+    g(all(round(ec[a]) == ct["ecart_hors_ep_ep_points"][a] for a in ec) and ec["2021"] > ec["2015"] and ct["ecart_ep_dit_augmenter"]
+      and not gs["Public hors EP"]["2021"] and not ct["test_de_l_ecart_publie"]
+      and ct["ecart_filles_garcons_dit_augmenter"] and grp["Filles"]["2021"] - grp["Garçons"]["2021"] > grp["Filles"]["2015"] - grp["Garçons"]["2015"],
+      "CEDRE fin de collège : l'écart avec le public hors éducation prioritaire « passe de 17 à 22 points », celui entre filles et garçons « augmente aussi » (DEPP), sans test publié")
     g(not ce["secteurs_significatif"]["EP"]["2021"] and ce["secteurs_significatif"]["Public hors EP"]["2021"],
       "CEDRE fin d'école : « la hausse vient du public hors éducation prioritaire »")
     # écrans (PISA 2022-2025)
@@ -261,6 +281,9 @@ def affichage(c):
     g_ = cc["groupes"]
     A["ccep15"], A["ccep21"] = nb(g_["EP"]["2015"], 0), nb(g_["EP"]["2021"], 0)
     A["ccg15"], A["ccg21"] = nb(g_["Garçons"]["2015"], 0), nb(g_["Garçons"]["2021"], 0)
+    A["ccec15"], A["ccec21"] = (nb(c["cct"]["ecart_hors_ep_ep_points"][a], 0) for a in ("2015", "2021"))
+    dty = c["dty"]
+    A["gram87"], A["gram07"] = nbp(dty["grammaticales"]["1987"]), nbp(dty["grammaticales"]["2007"])
     sf = six["score_francais"]
     A["six17"], A["six21"], A["six25"] = nb(sf["2017"], 0), nb(sf["2021"], 0), nb(sf["2025"], 0)
     gt = c["sec"]["GT"]
@@ -313,12 +336,12 @@ FIG = {
         titre="La langue des élèves : quand chaque mesure recule, tient ou progresse",
         source="DEPP (Notes d'Information) ; OCDE (PISA 2025 ; 21st-Century Readers) ; IEA (PIRLS) ; ministère de la Culture ; CREDOC",
         note="Chaque ligne a sa propre échelle ; seul le sens est montré. Plein : test publié (PISA 2000-2012 : test de l'auteur) ; tirets : sans test.",
-        montre="Les reculs les plus anciens (dictée et lecture en CM2, temps de lecture pour le plaisir à 15 ans) précèdent 2013 ; PISA ne recule qu'après 2012, quand PIRLS, CEDRE et la sixième ne reculent pas sur la même période."),
+        montre="Les reculs les plus anciens (dictée et lecture en CM2, temps de lecture pour le plaisir à 15 ans) précèdent 2013 ; PISA ne baisse significativement qu'après 2012, quand PIRLS et CEDRE ne reculent pas significativement sur des périodes qui recouvrent en partie cette baisse."),
     "dictee": dict(
         titre="La même dictée en CM2 : nombre moyen d'erreurs",
         source="DEPP, Note d'Information 22.37 (dictée de 67 mots, 1987, 2007, 2015, 2021 ; secteur public) ; NI 08.38 pour 1987-2007",
-        note="Erreurs lexicales : orthographe des mots eux-mêmes. Autres erreurs : accords, conjugaison, ponctuation (total moins lexicales).",
-        montre="L'orthographe des mots bouge peu ; ce sont les autres erreurs, surtout les accords, qui ont presque doublé, avant de se stabiliser après 2015."),
+        note="Erreurs lexicales : orthographe des mots eux-mêmes. Autres erreurs : grammaire (accords, conjugaison), ponctuation, oublis (total moins lexicales).",
+        montre="L'orthographe des mots eux-mêmes bouge peu ; ce sont les autres erreurs, surtout grammaticales, qui ont presque doublé, avant de se stabiliser après 2015."),
     "plaisir": dict(
         titre="Élèves qui déclarent ne pas lire pour leur plaisir, selon la classe (2023)",
         source="DEPP, Note d'Information 25.66, figure 1.1 web (questionnaires des évaluations nationales, septembre 2023)",
@@ -428,7 +451,7 @@ def fig_dictee(c, A):
         e.append('<text x="%.1f" y="%.1f" font-size="10.5" fill="#ffffff" text-anchor="middle">%s</text>' % (x + bw / 2, base - sy(l) - sy(o) / 2 + 4, nbp(round(o, 1))))
         e.append('<text x="%.1f" y="%d" font-size="11.5" fill="%s" text-anchor="middle">%s</text>' % (x + bw / 2, base + 16, INK2, a))
     yl = base + 40
-    for k, (col, lib) in enumerate(((BLEU, "Erreurs lexicales (orthographe des mots)"), (ORANGE, "Autres erreurs (accords, conjugaison, ponctuation)"))):
+    for k, (col, lib) in enumerate(((BLEU, "Erreurs lexicales (orthographe des mots)"), (ORANGE, "Autres erreurs (grammaire, ponctuation, oublis)"))):
         e.append('<rect x="%d" y="%d" width="12" height="12" fill="%s"/>' % (k * 300, yl - 10, col))
         e.append('<text x="%d" y="%d" font-size="10.5" fill="%s">%s</text>' % (k * 300 + 18, yl, INK2, esc(lib)))
     return pied(e, h + 2, t["source"], t["note"])

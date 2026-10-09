@@ -4,7 +4,7 @@
    "id": "chronologie",
    "fichier": "langue-chronologie",
    "titre": "La langue des élèves : quand chaque mesure recule, tient ou progresse",
-   "montre": "Les reculs les plus anciens (dictée et lecture en CM2, temps de lecture pour le plaisir à 15 ans) précèdent 2013 ; PISA ne recule qu'après 2012, quand PIRLS, CEDRE et la sixième ne reculent pas sur la même période.",
+   "montre": "Les reculs les plus anciens (dictée et lecture en CM2, temps de lecture pour le plaisir à 15 ans) précèdent 2013 ; PISA ne baisse significativement qu'après 2012, quand PIRLS et CEDRE ne reculent pas significativement sur des périodes qui recouvrent en partie cette baisse.",
    "source": "DEPP (Notes d'Information) ; OCDE (PISA 2025 ; 21st-Century Readers) ; IEA (PIRLS) ; ministère de la Culture ; CREDOC",
    "precaution": "Chaque ligne a sa propre échelle ; seul le sens est montré. Plein : test publié (PISA 2000-2012 : test de l'auteur) ; tirets : sans test."
   },
@@ -12,9 +12,9 @@
    "id": "dictee",
    "fichier": "langue-dictee",
    "titre": "La même dictée en CM2 : nombre moyen d'erreurs",
-   "montre": "L'orthographe des mots bouge peu ; ce sont les autres erreurs, surtout les accords, qui ont presque doublé, avant de se stabiliser après 2015.",
+   "montre": "L'orthographe des mots eux-mêmes bouge peu ; ce sont les autres erreurs, surtout grammaticales, qui ont presque doublé, avant de se stabiliser après 2015.",
    "source": "DEPP, Note d'Information 22.37 (dictée de 67 mots, 1987, 2007, 2015, 2021 ; secteur public) ; NI 08.38 pour 1987-2007",
-   "precaution": "Erreurs lexicales : orthographe des mots eux-mêmes. Autres erreurs : accords, conjugaison, ponctuation (total moins lexicales)."
+   "precaution": "Erreurs lexicales : orthographe des mots eux-mêmes. Autres erreurs : grammaire (accords, conjugaison), ponctuation, oublis (total moins lexicales)."
   },
   {
    "id": "plaisir",

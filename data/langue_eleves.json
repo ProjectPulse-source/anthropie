@@ -41,6 +41,25 @@
    "hausse_2015_2021_deux_fois_moindre"
   ]
  },
+ "dictee_types_1987_2007": {
+  "lexicales": {
+   "1987": 2.1,
+   "2007": 2.6
+  },
+  "grammaticales": {
+   "1987": 7.1,
+   "2007": 10.8
+  },
+  "ponctuation": {
+   "1987": 1.1,
+   "2007": 0.9
+  },
+  "autres": {
+   "1987": 0.3,
+   "2007": 0.4
+  },
+  "citation_depp": "principalement_grammaticales"
+ },
  "lecture_cm2": {
   "score": {
    "1987": 0.0,
@@ -105,6 +124,15 @@
    }
   },
   "stable_2003_2015_declare": true
+ },
+ "cedre_college_textes": {
+  "ecart_hors_ep_ep_points": {
+   "2015": 17.0,
+   "2021": 22.0
+  },
+  "ecart_ep_dit_augmenter": true,
+  "ecart_filles_garcons_dit_augmenter": true,
+  "test_de_l_ecart_publie": false
  },
  "cedre_college": {
   "score": {
@@ -805,6 +833,10 @@
   "ccep21": "225",
   "ccg15": "247",
   "ccg21": "241",
+  "ccec15": "17",
+  "ccec21": "22",
+  "gram87": "7,1",
+  "gram07": "10,8",
   "six17": "250",
   "six21": "261",
   "six25": "256",
