@@ -186,11 +186,12 @@ def detecter_sies(reg: dict) -> list[dict]:
 
 def fiche_eesr(annee: int, numero: str) -> tuple[str, bytes] | None:
     """Fiche 13 ou 09 de l'édition qui porte sur les bacheliers de `annee`. Validée par le titre du tableau : la page
-    d'une édition absente répond 200."""
+    d'une édition absente répond 200 : un autre code dit que le site ne répond pas, jamais que la fiche manque
+    (05/10/2026 : délai dépassé depuis GitHub, compté à tort comme « fiche non retrouvée »)."""
     n = annee - 2005
     code, page = http(EESR % (n, numero, SLUG_13 if numero == "13" else SLUG_09))
     if code != 200:
-        return None
+        raise Injoignable("eesr-acces : fiche %s des bacheliers %d, code %s" % (numero, annee, code))
     t = texte(page)
     marque = ("Nouveaux bacheliers %d inscrits dans les différentes filières" % annee) if numero == "13" \
         else ("poursuivants ou non par origine sociale en %d" % annee)
@@ -205,9 +206,20 @@ def detecter_eesr(reg: dict) -> list[dict]:
     s = src(reg, "eesr-acces")
     annee = max(int(k) for k in src(reg, "sies-licence")["cohortes"])
     out = []
+
+    def fiche(a: int, numero: str, requise: bool) -> tuple[str, bytes] | None:
+        # Fiche requise injoignable : l'adoption de la cohorte attend, avec le vrai motif. Fiche facultative
+        # (témoin de l'année suivante, cherché chaque jour) : rien à conclure aujourd'hui.
+        try:
+            return fiche_eesr(a, numero)
+        except Injoignable as e:
+            if requise:
+                raise Anomalie("%s : site injoignable, la cohorte %d attend sa fiche" % (e, annee))
+            log("  %s : rien a conclure aujourd'hui" % e)
+            return None
     for a in (annee, annee + 1):
         if str(a) not in s["fiches_acces"]:
-            f = fiche_eesr(a, "13")
+            f = fiche(a, "13", a == annee)
             if f is None and a == annee:
                 raise Anomalie("eesr-acces : fiche 13 des bacheliers %d introuvable, la figure ne peut pas suivre la cohorte %d" % (a, a))
             if f is not None:
@@ -215,7 +227,7 @@ def detecter_eesr(reg: dict) -> list[dict]:
                     src(r, "eesr-acces")["fiches_acces"][str(a)] = [nom, "n° %d" % (a - 2005)]
                 out.append(dict(source="eesr-acces", quoi="fiche 13, bacheliers %d" % a, pieces=[f], inscrire=inscrire))
     if str(annee) not in s["fiches_bac"]:
-        f = fiche_eesr(annee, "09")
+        f = fiche(annee, "09", True)
         if f is None:
             raise Anomalie("eesr-acces : fiche 09 des bacheliers %d introuvable (temoin du baccalaureat)" % annee)
 
@@ -593,10 +605,17 @@ def essai() -> int:
     r = json.loads(json.dumps(reg))
     e_ = src(r, "eesr-acces")
     an = max(int(k) for k in e_["fiches_acces"])
-    f = fiche_eesr(an, "13")
+    try:
+        f = fiche_eesr(an, "13")
+    except Injoignable as e:
+        # Même règle que l'archive publique du SIES : un site muet ne dit rien du détecteur.
+        f = False
+        non_conclus.append("eesr-acces")
+        print("::warning::Temoin eesr-acces NON CONCLUANT : %s" % e)
+        log("  [NON CONCLUANT] %s" % e)
     if f is None:
         verdict("eesr-acces", False, "fiche 13 des bacheliers %d non retrouvee" % an)
-    else:
+    elif f:
         def tableau(octets: bytes) -> str:
             t = texte(octets)
             i = t.find("Origine sociale renseignée")
@@ -605,8 +624,13 @@ def essai() -> int:
         ok = tableau(f[1]) == tableau(archive) and len(tableau(archive)) > 200
         verdict("eesr-acces", ok, "fiche 13 des bacheliers %d retrouvee, tableau identique a la piece archivee" % an if ok
                 else "fiche 13 retrouvee mais tableau different de la piece archivee")
-    f9 = fiche_eesr(max(int(k) for k in e_["fiches_bac"]), "09")
-    verdict("eesr-acces (fiche 09)", f9 is not None, "fiche 09 retrouvee" if f9 else "fiche 09 non retrouvee")
+    try:
+        f9 = fiche_eesr(max(int(k) for k in e_["fiches_bac"]), "09")
+        verdict("eesr-acces (fiche 09)", f9 is not None, "fiche 09 retrouvee" if f9 else "fiche 09 non retrouvee")
+    except Injoignable as e:
+        non_conclus.append("eesr-acces (fiche 09)")
+        print("::warning::Temoin eesr-acces (fiche 09) NON CONCLUANT : %s" % e)
+        log("  [NON CONCLUANT] %s" % e)
     # INSEE : la page annuelle du SDES existe pour l'année en cours, et la publication connue rend le même fichier.
     i_ = src(reg, "insee-empreinte")
     an = int(i_["annee_donnees"])
