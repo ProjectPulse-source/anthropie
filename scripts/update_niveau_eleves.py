@@ -4,7 +4,7 @@
 Découverte de la page (dépôt de pilotage de l'auteur, 06_PROMOTION/RECHERCHE_LYCEES_NIVEAU_2026-10-07, protocole écrit
 avant calcul, commit 2986dfc ; verdict du 08/10/2026) : de 2015 à 2025, les jeunes de 15 ans ont reculé à PISA dans les
 trois domaines ; en lecture et en sciences comme les autres pays de l'OCDE, en mathématiques plus que les trois quarts
-d'entre eux ; la France perd aussi ses meilleurs élèves, et l'écart lié au milieu social s'est réduit par le haut ; sur
+d'entre eux ; la France perd aussi ses meilleurs élèves, et le sommet recule dans tous les milieux sociaux ; sur
 la même génération, le test de positionnement de seconde ne baisse pas en mathématiques quand PISA baisse (rapprochement
 fait par la DEPP elle-même). Question distincte, jamais reliée à la précédente : le recrutement des professeurs.
 
@@ -17,7 +17,7 @@ de seconde 2026, note de la DEPP), puis PISA 2029 (publication prévue fin 2030)
 et extrait_niveau.py dans le dossier de recherche, recopier l'extrait et son empreinte, relancer ce script.
 Page en français seulement (exclusion déclarée : débat, programme et statistique français).
 
-Usage : python scripts/update_niveau_eleves.py [--check] [--mutation=maths|lecture|sommet|social|seconde|lycee|recrutement|haut_ocde|thermometres|composition|effort|amortisseur|timss_pisa]
+Usage : python scripts/update_niveau_eleves.py [--check] [--mutation=<nom>]  (noms : les branches de mutation())
 Sorties : data/ et static/niveau_eleves.json, static/niveau_eleves.csv, data/figures_niveau.json,
           static/img/niveau-{baisse,sommet,seconde}.svg + .png
 """
@@ -109,7 +109,7 @@ def calcul(X):
         sec=X["seconde"], timss=X["timss_adv"], gen=gen, p1=p1, p2={int(a): v for a, v in X["p2"].items()},
         p3=X["p3"], p4=X["p4"], releve=X["releve_le"],
         t3=X["p3_timss_pisa_maths"], t4=X["p4_timss_pisa_facteurs"], p5=X["p5_donnees_individuelles"],
-        p6=X["p6_composition_conjointe"],
+        p6=X["p6_composition_conjointe"], p7=X["p7_controles"],
         comp=X["p2_composition_sciences"], pct=X["p2_percentiles"], eff=X["p2_effort"], ae=X["p2_autres_evaluations"],
     )
 
@@ -126,10 +126,6 @@ def mutation(c):
         c["P"] = json.loads(json.dumps(c["P"]))
         n = c["P"]["lecture"]["niveaux"]
         n["France"]["haut25"] = n["France"]["haut15"] + n[OC]["haut25"] - n[OC]["haut15"]
-    elif m == "social":       # le quart le plus favorisé aurait moins baissé que le quart le moins favorisé
-        c["P"] = json.loads(json.dumps(c["P"]))
-        s = c["P"]["lecture"]["social"]["France"]
-        s["haut"]["2025"] = s["haut"]["2015"] - 5
     elif m == "seconde":      # le test de seconde baisserait aussi en mathématiques
         c["sec"] = json.loads(json.dumps(c["sec"]))
         c["sec"]["GT maths"]["2024"] = c["sec"]["GT maths"]["2021"] - 3
@@ -138,11 +134,6 @@ def mutation(c):
     elif m == "recrutement":  # la sélectivité aurait monté en anglais
         c["p1"] = json.loads(json.dumps(c["p1"]))
         c["p1"]["anglais"]["var"] = 0.05
-    elif m == "haut_ocde":    # le quart favorisé de l'OCDE aurait reculé autant que celui de la France
-        c["P"] = json.loads(json.dumps(c["P"]))
-        o = c["P"]["lecture"]["social"][OC]
-        f_ = c["P"]["lecture"]["social"]["France"]
-        o["haut"]["2025"] = o["haut"]["2015"] - (f_["haut"]["2015"] - f_["haut"]["2025"])
     elif m == "thermometres": # TIMSS 4e aurait baissé significativement de 2019 à 2023
         c["ae"] = json.loads(json.dumps(c["ae"]))
         c["ae"]["timss"]["TIMSS 4e maths"]["2019"]["sym"] = "p"
@@ -177,6 +168,23 @@ def mutation(c):
         c["p6"] = json.loads(json.dumps(c["p6"]))
         a, b = c["p6"]["compo"]["diplome"]["manquant"]
         c["p6"]["compo"]["diplome"]["manquant"] = [a, a + 1]
+    elif m == "escs_lecture":  # avec la profession des parents, l'écart ne se réduirait plus en lecture
+        c["p7"] = json.loads(json.dumps(c["p7"]))
+        c["p7"]["A"]["I1"]["lecture"]["d_ecart"] = [-5.0, 7.3]
+    elif m == "escs_maths":   # avec la mesure composite, l'écart se réduirait significativement en mathématiques
+        c["p7"] = json.loads(json.dumps(c["p7"]))
+        c["p7"]["A"]["I2"]["mathematiques"]["d_ecart"] = [-20.0, 6.7]
+    elif m == "quarts_hisei":  # avec la profession des parents, la médiane d'un quart ne reculerait pas
+        c["p7"] = json.loads(json.dumps(c["p7"]))
+        c["p7"]["A"]["I1"]["lecture"]["P50"]["1"] = [-2.0, 7.9]
+    elif m == "cas_complets":  # sur les élèves à la famille renseignée, la repondération réduirait la baisse en lecture
+        c["p7"] = json.loads(json.dumps(c["p7"]))
+        x = c["p7"]["B"]["B3"]["lecture"]
+        x["rec"] = x["m25"] + 3
+    elif m == "pro_cap":      # la part de la seconde pro et du CAP n'aurait que peu augmenté
+        c["p6"] = json.loads(json.dumps(c["p6"]))
+        a, b = c["p6"]["compo"]["classe"]["c_seconde_pro_cap"]
+        c["p6"]["compo"]["classe"]["c_seconde_pro_cap"] = [a, a * 1.2]
     elif m == "amortisseur":  # en France, le haut reculerait moins que le bas en mathématiques
         c["pct"] = json.loads(json.dumps(c["pct"]))
         c["pct"]["mathematiques"]["France"][4] = c["pct"]["mathematiques"]["France"][0] / 2
@@ -230,7 +238,8 @@ def gardes(c):
     sc = p5["N18"]["sciences"]["classes"]
     g([k for k, (a, b) in sc.items() if not b < a] == ["d_premiere"],
       "données individuelles, sciences : « trois catégories sur quatre reculent ; la première et après ne baisse pas »")
-    g(c["comp"]["parts_2025"]["d_premiere"] < 5 and c["comp"]["parts_2025"]["d_premiere"] == min(c["comp"]["parts_2025"].values()),
+    g(c["p6"]["compo"]["classe"]["d_premiere"][1] < 5
+      and c["p6"]["compo"]["classe"]["d_premiere"][1] == min(v[1] for v in c["p6"]["compo"]["classe"].values()),
       "composition : « la petite catégorie première et après, environ 3 % des élèves »")
     g(p5["n19_tous"], "données individuelles : le haut recule « dans tous les milieux »")
     for d in ("lecture", "mathematiques"):
@@ -240,9 +249,17 @@ def gardes(c):
     g(all(abs(v) < 0.1 for v in p5["N21"].values()), "données individuelles : l'effort ne rend compte que de « moins d'un dixième » de la baisse")
     # protocole 6 : composition conjointe (classe, sexe, diplôme des parents, origine) ; médiane par quart social
     p6 = c["p6"]
-    g(p6["v22"] == "TIENT" and p6["v22_robuste"]
-      and all(abs(x["rec"] - x["m25"]) < 1.5 for x in p6["N22"]["central"].values()),
-      "composition conjointe : la baisse « reste pratiquement la même » dans les trois domaines")
+    B7 = c["p7"]["B"]
+    g(p6["v22"] == "TIENT" and p6["v22_robuste"] and all(x["rec"] <= x["m25"] for x in p6["N22"]["central"].values()),
+      "composition conjointe : la baisse « ne diminue pas » dans les trois domaines")
+    variantes = [p6["N22"][k] for k in ("a_classe_x_diplome", "b_diplome_deux_groupes", "c_avec_profession")] + [B7[k] for k in ("B2", "B3", "B4")]
+    g(all(v[d]["rec"] - v[d]["m25"] < 1 for v in variantes for d in ("mathematiques", "lecture", "sciences")),
+      "composition conjointe : « dans aucune variante, la baisse ne diminue de plus d'un point »")
+    g(all(B7["B3"][d]["rec"] <= B7["B3"][d]["m25"] for d in ("mathematiques", "lecture", "sciences")),
+      "composition conjointe : sur les élèves à la famille renseignée, la repondération « ne réduit pas non plus la baisse »")
+    g(B7["B5"]["ecart_max"] < 1, "composition conjointe : croisements retrouvés « à moins d'un point »")
+    a_, b_ = p6["compo"]["origine"]["manquant"]
+    g(b_ > 2 * a_, "composition conjointe : l'origine est bien plus souvent non renseignée en 2025")
     g(all(p6["N23"][d][q]["P50"][0] < 0 and abs(p6["N23"][d][q]["P50"][0]) > 1.96 * p6["N23"][d][q]["P50"][1]
           for d in ("lecture", "mathematiques") for q in "1234"),
       "médiane par quart social : l'élève médian « recule » dans chacun des quatre quarts, significativement")
@@ -253,9 +270,10 @@ def gardes(c):
     D_ = cp["moyenne_2025"] - cp["moyenne_2015"]
     g(cp["recompose_2025"] < cp["moyenne_2025"] and cp["recompose_2025"] - cp["moyenne_2015"] < D_,
       "composition : « à composition de 2015, la baisse serait plus forte »")
-    g(20 <= cp["parts_2015"]["a_troisieme_et_moins"] < 25 and cp["parts_2025"]["a_troisieme_et_moins"] < 10,
+    pc = c["p6"]["compo"]["classe"]   # parts citées dans la prose : données individuelles (protocole 7 D)
+    g(20 <= pc["a_troisieme_et_moins"][0] < 25 and pc["a_troisieme_et_moins"][1] < 10,
       "composition : « de près d'un quart à moins d'un dixième »")
-    g(1.7 <= cp["parts_2025"]["c_seconde_pro_cap"] / cp["parts_2015"]["c_seconde_pro_cap"] < 2.0, "composition : voie professionnelle « presque doublée »")
+    g(pc["c_seconde_pro_cap"][1] / pc["c_seconde_pro_cap"][0] > 1.5, "composition : la voie professionnelle « a nettement augmenté »")
     g(cp["moyenne_2025"] - cp["recompose_2025"] > 0, "composition : l'effet de répartition « relève » la moyenne")
     # protocole 2, N9 : dans l'OCDE, la baisse surtout en bas ; en France, tout le spectre (maths, sciences), le haut en lecture
     pct = c["pct"]
@@ -303,17 +321,6 @@ def gardes(c):
     # « l'écart au premier quartile est du même ordre que la marge d'erreur de la variation française » (maths)
     eq = m["q1"] - m["france"]
     g(0.5 <= eq / P["mathematiques"]["dif"]["2015"]["se"] <= 2.0, "maths : écart au premier quartile « du même ordre » que l'erreur type")
-    # écart social : le quart favorisé recule « presque deux fois plus » que dans l'OCDE ; le quart défavorisé « comme dans l'OCDE »
-    for d in ("lecture", "mathematiques"):
-        fr_, oc_ = P[d]["social"]["France"], P[d]["social"][OC]
-        dh = lambda s_: s_["haut"]["2015"] - s_["haut"]["2025"]
-        db = lambda s_: s_["bas"]["2015"] - s_["bas"]["2025"]
-        g(1.7 <= dh(fr_) / dh(oc_) < 2.0, "%s : quart favorisé « presque deux fois plus » que l'OCDE" % d)
-        g(abs(db(fr_) / db(oc_) - 1) < 0.2, "%s : quart défavorisé « comme dans l'OCDE »" % d)
-    # « en lecture, le même resserrement par le haut existe dans l'OCDE ; en mathématiques, les deux quarts reculent autant »
-    ol, om = P["lecture"]["social"][OC], P["mathematiques"]["social"][OC]
-    g(ol["haut"]["2015"] - ol["haut"]["2025"] > 1.2 * (ol["bas"]["2015"] - ol["bas"]["2025"]), "OCDE lecture : resserrement par le haut")
-    g(abs((om["haut"]["2015"] - om["haut"]["2025"]) / (om["bas"]["2015"] - om["bas"]["2025"]) - 1) < 0.1, "OCDE maths : « les deux quarts reculent autant »")
     # « l'essentiel s'est produit depuis 2018 » : la baisse 2018-2025 dépasse celle de 2015-2018, dans chaque domaine
     for d in DOM:
         f_ = P[d]["france"]
@@ -326,10 +333,6 @@ def gardes(c):
         g(0 < f_["bas25"] - f_["bas15"] < 1.5 * (o_["bas25"] - o_["bas15"]), "%s : hausse du bas « comme l'OCDE »" % d)
     fm = P["mathematiques"]["niveaux"]["France"]
     g(2.0 <= fm["haut15"] / fm["haut25"] < 2.5, "maths : « plus que divisée par deux »")
-    # « en lecture et en mathématiques, le haut descend plus vite que le bas » (et le bas descend aussi)
-    for d in ("lecture", "mathematiques"):
-        so_ = P[d]["social"]["France"]
-        g(so_["bas"]["2025"] < so_["bas"]["2015"], "%s : le quart bas baisse aussi" % d)
     # seconde : « retour au niveau de 2019 » en français (GT) ; « environ deux candidats par admis » dans au moins trois disciplines
     g(c["sec"]["GT francais"]["2025"] == c["sec"]["GT francais"]["2019"], "seconde : « retour au niveau de 2019 »")
     # N3 : le bas gonfle plus que le haut ne fond ; perte au sommet bien plus forte que l'OCDE en lecture et maths
@@ -341,13 +344,22 @@ def gardes(c):
         g(f["haut15"] - f["haut25"] > 2 * (o["haut15"] - o["haut25"]), "%s : « bien plus que l'OCDE » au sommet (plus du double)" % d)
     fl = P["lecture"]["niveaux"]["France"]
     g(2.5 <= fl["haut15"] / fl["haut25"] < 3.0, "lecture : « presque divisée par trois »")
-    # N7 : écart social réduit significativement, et par le haut
-    for d in DOM:
-        so = P[d]["social"]["France"]
-        g(so["var"] < 0 and so["var_sig"], "%s : « l'écart social s'est réduit » (significatif)" % d)
-        g(so["haut"]["2025"] - so["haut"]["2015"] < so["bas"]["2025"] - so["bas"]["2015"], "%s : « par le haut »" % d)
+    # écart social (protocole 7) : réduit avec l'indice de l'OCDE ; avec des mesures comparables entre 2015 et 2025,
+    # réduit en lecture seulement, moins fortement ; non significatif en mathématiques et en sciences
     so = P["lecture"]["social"]["France"]
-    g(so["haut"]["2015"] - so["haut"]["2025"] > 2 * (so["bas"]["2015"] - so["bas"]["2025"]), "lecture : « plus de deux fois plus »")
+    g(so["var"] < 0 and so["var_sig"] and so["haut"]["2015"] - so["haut"]["2025"] > 2 * (so["bas"]["2015"] - so["bas"]["2025"]),
+      "lecture, indice de l'OCDE : l'écart « se réduit nettement », le quart favorisé perdant plus du double")
+    p7 = c["p7"]["A"]
+    sg = lambda v: abs(v[0]) > 1.96 * v[1]
+    g(all(p7[i]["lecture"]["d_ecart"][0] < 0 and sg(p7[i]["lecture"]["d_ecart"])
+          and abs(p7[i]["lecture"]["d_ecart"][0]) < abs(so["var"]) for i in ("I1", "I2")),
+      "mesures comparables : en lecture, l'écart « se réduit aussi, moins fortement »")
+    g(not any(sg(p7[i][d]["d_ecart"]) for i in ("I1", "I2") for d in ("mathematiques", "sciences")),
+      "mesures comparables : « pas de réduction significative en mathématiques ni en sciences »")
+    g(c["p7"]["a3"] == "TIENT" and c["p7"]["a4"] == "TIENT"
+      and all(p7[i][d][p][q][0] < 0 and sg(p7[i][d][p][q]) for i in ("I1", "I2") for d in ("lecture", "mathematiques")
+              for p in ("P90", "P50") for q in "1234"),
+      "mesures comparables : le sommet et la médiane « reculent aussi dans chaque quart »")
     # échantillon : « près de huit sur dix au lycée »
     g(75 <= c["lycee"] < 82, "« près de huit élèves sur dix au lycée »")
     g(c["seconde_gt"] > 50, "« plus de la moitié en seconde générale et technologique »")
@@ -401,14 +413,11 @@ def affichage(c):
             A[k + "_" + kk] = nb(nv[kk])
             A[k + "_o" + kk] = nb(no[kk])
         A[k + "_dbas"] = nb(nv["bas25"] - nv["bas15"], 0)
-        so, soo = P[d]["social"]["France"], P[d]["social"][OC]
+        so = P[d]["social"]["France"]
         A[k + "_ec15"] = nb(so["ecart"]["2015"], 0)
         A[k + "_ec25"] = nb(so["ecart"]["2025"], 0)
-        A[k + "_oec25"] = nb(soo["ecart"]["2025"], 0)
         A[k + "_qh"] = nb(so["haut"]["2015"] - so["haut"]["2025"], 0)
         A[k + "_qb"] = nb(so["bas"]["2015"] - so["bas"]["2025"], 0)
-        A[k + "_oqh"] = nb(soo["haut"]["2015"] - soo["haut"]["2025"], 0)
-        A[k + "_oqb"] = nb(soo["bas"]["2015"] - soo["bas"]["2025"], 0)
     A["math_ecart_q1"] = nb(P["mathematiques"]["n2"]["q1"] - P["mathematiques"]["n2"]["france"], 0)
     A["math_se"] = nb(P["mathematiques"]["dif"]["2015"]["se"], 0)
     A["n_ocde"] = str(P["mathematiques"]["n2"]["n"])
@@ -456,6 +465,7 @@ def affichage(c):
         x = p6["N22"]["central"][d]
         A["p6_%s_rec" % k] = nb(x["m15"] - x["rec"], 0)
     A["p6_dipl_nr15"], A["p6_dipl_nr25"] = (nb(v, 0) for v in p6["compo"]["diplome"]["manquant"])
+    A["p6_orig_nr15"], A["p6_orig_nr25"] = (nb(v, 0) for v in p6["compo"]["origine"]["manquant"])
     for d, k in (("mathematiques", "math"), ("lecture", "lect")):
         vals = [-p6["N23"][d][q]["P50"][0] for q in "1234"]
         A["p6_%s_med_min" % k], A["p6_%s_med_max" % k] = nb(min(vals), 0), nb(max(vals), 0)
@@ -474,11 +484,12 @@ def affichage(c):
     for a, v in ae["pirls"].items():
         A["pirls_" + a[2:]] = nb(v["score"], 0)
     cp = c["comp"]
-    A["comp_retard15"] = nb(cp["parts_2015"]["a_troisieme_et_moins"], 0)
-    A["comp_retard25"] = nb(cp["parts_2025"]["a_troisieme_et_moins"], 0)
-    A["comp_pro15"] = nb(cp["parts_2015"]["c_seconde_pro_cap"], 0)
-    A["comp_pro25"] = nb(cp["parts_2025"]["c_seconde_pro_cap"], 0)
-    A["comp_prem25"] = nb(cp["parts_2025"]["d_premiere"], 0)
+    pc = c["p6"]["compo"]["classe"]   # données individuelles (protocole 7 D)
+    A["comp_retard15"], A["comp_retard25"] = (nb(v, 0) for v in pc["a_troisieme_et_moins"])
+    A["comp_pro15"], A["comp_pro25"] = (nb(v, 0) for v in pc["c_seconde_pro_cap"])
+    A["comp_prem25"] = nb(pc["d_premiere"][1], 0)
+    i1 = c["p7"]["A"]["I1"]["lecture"]
+    A["p7_lect_i1_15"], A["p7_lect_i1_25"] = nb(i1["ecart_2015"][0], 0), nb(i1["ecart_2025"][0], 0)
     pct = c["pct"]
     for d in DOM:
         k = COURT[d]
@@ -841,6 +852,7 @@ def main() -> int:
                "protocole_3_timss_pisa_maths": c["t3"],
                "protocole_5_donnees_individuelles": c["p5"],
                "protocole_6_composition_conjointe": c["p6"],
+               "protocole_7_controles": c["p7"],
                "protocole_2": {"composition_sciences": c["comp"], "percentiles": c["pct"], "effort_declare": c["eff"],
                                "autres_evaluations": c["ae"]},
                "recrutement": {"capes_externe": c["X"]["p1"], "contractuels": c["X"]["p2"], "non_pleinement_qualifies_ocde": c["p3"],
