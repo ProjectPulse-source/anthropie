@@ -165,7 +165,7 @@ def calcul_qe(x):
     som = lambda d, lo, hi: sum(d.get(a, 0.0) for a in range(lo, hi + 1)) / 1e3
     rdt = [float(rc[a]["rendement_comptable_A71"]) for a in C]
     tref = [float(r["taux_reference_moyen"]) for r in rc.values()]
-    # comptes de la Banque de France (lecture de l'institution, éprouvée sur son périmètre)
+    # comptes de la Banque de France (lecture de l'institution, confrontée à son périmètre)
     bdf = {}
     for r in x["releve_T1_T2"]:
         bdf.setdefault(r["poste"], {})[int(r["annee"])] = float(r["valeur_Meur"])
@@ -212,6 +212,8 @@ def mutation(c):
         c["qe"]["net_total"] = c["qe"]["solde"] / 3
     elif m == "qe_ocde":       # le témoin OCDE ne retrouverait plus l'effet des achats
         c["qe"]["ocde_effet"] += 0.6
+    elif m == "qe_bdf":        # la Banque de France serait restée bénéficiaire après 2023 : « puis pertes » serait faux
+        c["qe"]["bdf_ro_apres"] = 5.0
     elif m is not None:
         fail("mutation inconnue : %s" % m)
     return m
@@ -262,7 +264,7 @@ def gardes(c):
     g(1 < r5 < 1.5 and r5 < r1 / 1.8, "P2 : « à cinq ans l'écart n'est plus que de 1,3 fois : les achats ont surtout avancé » : %.2f contre %.2f" % (r5, r1))
     g(q["sc1_d"] / q["sm1_d"] > 1.8 and q["sc1_d"] / q["sm1_d"] < r1,
       "figure : « l'écart s'est resserré sans disparaître » au dernier mois : %.2f" % (q["sc1_d"] / q["sm1_d"]))
-    g(q["h_d"] < q["h22"], "figure : « la Banque de France détient moins de titres qu'en 2022 » : h %.3f contre %.3f" % (q["h_d"], q["h22"]))
+    g(0.05 < q["h_d"] < q["h22"], "figure : « la Banque de France détient encore des titres, moins de titres qu'en 2022 » : h %.3f contre %.3f" % (q["h_d"], q["h22"]))
     g(all(1.05 <= v <= 1.4 for v in q["t4_2015"].values()), "P3 : « de 1,1 à 1,35 en 2015 » : %s" % q["t4_2015"])
     g(all(1.85 <= v <= 2.95 for v in q["t4_max"].values()), "P3 : « au plus de 1,9 à 2,9 » : %s" % q["t4_max"])
     g(q["t4_max"]["FR"] < r1, "P3 : « pour la France, la base homogène donne moins que la mesure sur la dette de l'État »")
@@ -274,9 +276,9 @@ def gardes(c):
     g(q["rdt_max"] < 1, "P4 : « les titres rapportaient moins de 1 %% » : %.2f" % q["rdt_max"])
     g(max(float(r["taux_reference_moyen"]) for a, r in q["rc"].items() if a <= 2021) < 0.1,
       "P4 : « le taux de référence, proche de zéro jusqu'en 2021 »")
-    g(q["bdf_ro_avant"] > 0 > q["bdf_ro_apres"] and q["bdf_ro_avant"] > 3 * q["gain"],
-      "lecture de la Banque de France : « bénéfices, puis pertes ; ses bénéfices passés venaient pour l'essentiel d'ailleurs »")
-    g(abs(q["nous_effet"] - q["ocde_effet"]) <= 0.2, "témoin OCDE : « l'effet que nous retrouvons » : %.2f contre %.2f" % (q["nous_effet"], q["ocde_effet"]))
+    g(q["bdf_ro_avant"] > 0 > q["bdf_ro_apres"] and q["solde"] < 0,
+      "comptes de la Banque de France : « bénéfices, puis pertes, sur tout le bilan ; sur les seuls titres publics, le portage ne s'équilibre pas »")
+    g(abs(q["nous_effet"] - q["ocde_effet"]) <= 0.2, "témoin OCDE : « proche de celui que nous mesurons » : %.2f contre %.2f" % (q["nous_effet"], q["ocde_effet"]))
     g(1.8 <= q["e1_max"] <= 2.3, "témoin Bundesbank : « jusqu'à deux ans » : %.2f" % q["e1_max"])
     return n
 
@@ -409,24 +411,24 @@ def fig_calendrier(c, Aff, lang):
 
 
 TXT_QE = {
-    "fr": dict(titre="Un point de plus sur toute la courbe des taux : le surcoût de la première année",
-               desc="Courbes mensuelles, de mars 2015 à {qe_dern}, en milliards d'euros : surcoût la première année pour l'ensemble "
+    "fr": dict(titre="Si toute la courbe des taux montait d'un point : la hausse de charge la première année",
+               desc="Courbes mensuelles, de mars 2015 à {qe_dern}, en milliards d'euros : hausse de la charge d'intérêts la première année, en scénario, pour l'ensemble "
                     "État + Banque de France ({qe_sc1} fin 2022, {qe_sc1_d} en {qe_dern}) et pour la seule dette de marché de l'État "
                     "({qe_sm1} fin 2022, {qe_sm1_d} en {qe_dern}).",
                source="AFT (bulletins mensuels, ligne à ligne), Banque de France (Webstat), BCE ; décision (UE) 2016/2248 ; calcul de l'auteur",
-               note="Dette de l'État à taux fixe, encours constant ; titres de la Banque de France au taux de référence de la BCE. Une exposition, non le coût du QE.",
+               note="Scénario : +1 point sur toute la courbe, encours constant ; titres de la Banque de France au taux de référence de la BCE. Ni une prévision, ni le coût du QE.",
                axe="Md€ la première année", cons="État + Banque de France", marche="dette de marché seule", jalon="fin 2022",
-               montre="Fin 2022, les achats de la banque centrale avaient rendu l'ensemble État + Banque de France {qe_r1} fois plus "
-                      "exposé la première année que la seule dette de marché ; l'écart se resserre depuis, sans disparaître."),
-    "en": dict(titre="One point more across the whole yield curve: the extra cost in the first year",
-               desc="Monthly lines, March 2015 to {qe_dern}, in billions of euros: first-year extra cost for the government and the "
+               montre="Fin 2022, si toute la courbe des taux avait monté d'un point, la charge de l'ensemble État + Banque de France aurait "
+                      "augmenté la première année {qe_r1} fois plus que celle de la seule dette de marché ; l'écart se resserre depuis, sans disparaître."),
+    "en": dict(titre="If the whole yield curve rose by one point: the first-year rise in the interest bill",
+               desc="Monthly lines, March 2015 to {qe_dern}, in billions of euros: first-year rise in the interest bill, in a scenario, for the government and the "
                     "Banque de France taken together ({qe_sc1} at end-2022, {qe_sc1_d} in {qe_dern}) and for the government's market "
                     "debt alone ({qe_sm1} at end-2022, {qe_sm1_d} in {qe_dern}).",
                source="AFT (monthly bulletins, line by line), Banque de France (Webstat), ECB; Decision (EU) 2016/2248; author's calculation",
-               note="Fixed-rate central-government debt, constant stock; Banque de France holdings at the ECB reference rate. An exposure, not the cost of QE.",
+               note="Scenario: +1 point across the whole curve, constant stock; Banque de France holdings at the ECB reference rate. Not a forecast, nor the cost of QE.",
                axe="€bn in the first year", cons="Government + Banque de France", marche="market debt alone", jalon="end-2022",
-               montre="At end-2022, central-bank purchases had made the government and the Banque de France together {qe_r1} times "
-                      "more exposed in the first year than market debt alone; the gap has narrowed since, without closing."),
+               montre="At end-2022, had the whole yield curve risen by one point, the first-year interest bill of the government and the Banque de France "
+                      "together would have risen {qe_r1} times as much as that of market debt alone; the gap has narrowed since, without closing."),
 }
 
 

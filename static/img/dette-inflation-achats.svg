@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 344" role="img" font-variant-numeric="tabular-nums" aria-labelledby="achats-t achats-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
-<title id="achats-t">Un point de plus sur toute la courbe des taux : le surcoût de la première année</title><desc id="achats-d">Courbes mensuelles, de mars 2015 à juin 2026, en milliards d'euros : surcoût la première année pour l'ensemble État + Banque de France (7,6 fin 2022, 7,3 en juin 2026) et pour la seule dette de marché de l'État (2,75 fin 2022, 3,6 en juin 2026).</desc>
+<title id="achats-t">Si toute la courbe des taux montait d'un point : la hausse de charge la première année</title><desc id="achats-d">Courbes mensuelles, de mars 2015 à juin 2026, en milliards d'euros : hausse de la charge d'intérêts la première année, en scénario, pour l'ensemble État + Banque de France (7,6 fin 2022, 7,3 en juin 2026) et pour la seule dette de marché de l'État (2,75 fin 2022, 3,6 en juin 2026).</desc>
 <rect width="720" height="344" fill="#ffffff"/>
-<text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">Un point de plus sur toute la courbe des taux : le surcoût de la première année</text>
+<text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">Si toute la courbe des taux montait d'un point : la hausse de charge la première année</text>
 <line x1="54" y1="262.0" x2="640" y2="262.0" stroke="#dcd8d3" stroke-width="1.2"/>
 <text x="48" y="265.0" font-size="10" fill="#96928f" text-anchor="end">0</text>
 <line x1="54" y1="218.4" x2="640" y2="218.4" stroke="#dcd8d3" stroke-width="0.6"/>
@@ -36,6 +36,6 @@
 <text x="647.0" y="93.7" font-size="9.5" fill="#96928f">juin 2026</text>
 <line x1="0" y1="294.0" x2="720" y2="294.0" stroke="#dcd8d3"/>
 <text x="0" y="307.0" font-size="9" fill="#55524f">AFT (bulletins mensuels, ligne à ligne), Banque de France (Webstat), BCE ; décision (UE) 2016/2248 ; calcul de l'auteur</text>
-<text x="0" y="319.0" font-size="9" fill="#55524f">Dette de l'État à taux fixe, encours constant ; titres de la Banque de France au taux de référence de la BCE. Une exposition, non le coût du QE.</text>
+<text x="0" y="319.0" font-size="9" fill="#55524f">Scénario : +1 point sur toute la courbe, encours constant ; titres de la Banque de France au taux de référence de la BCE. Ni une prévision, ni le coût du QE.</text>
 <text x="0" y="331.0" font-size="9" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/inflation-et-dette-publique/</text>
 </svg>

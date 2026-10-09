@@ -11,10 +11,10 @@
   {
    "id": "achats",
    "fichier": "dette-inflation-achats",
-   "titre": "Un point de plus sur toute la courbe des taux : le surcoût de la première année",
-   "montre": "Fin 2022, les achats de la banque centrale avaient rendu l'ensemble État + Banque de France 2,8 fois plus exposé la première année que la seule dette de marché ; l'écart se resserre depuis, sans disparaître.",
+   "titre": "Si toute la courbe des taux montait d'un point : la hausse de charge la première année",
+   "montre": "Fin 2022, si toute la courbe des taux avait monté d'un point, la charge de l'ensemble État + Banque de France aurait augmenté la première année 2,8 fois plus que celle de la seule dette de marché ; l'écart se resserre depuis, sans disparaître.",
    "source": "AFT (bulletins mensuels, ligne à ligne), Banque de France (Webstat), BCE ; décision (UE) 2016/2248 ; calcul de l'auteur",
-   "precaution": "Dette de l'État à taux fixe, encours constant ; titres de la Banque de France au taux de référence de la BCE. Une exposition, non le coût du QE."
+   "precaution": "Scénario : +1 point sur toute la courbe, encours constant ; titres de la Banque de France au taux de référence de la BCE. Ni une prévision, ni le coût du QE."
   }
  ],
  "en": [
@@ -29,10 +29,10 @@
   {
    "id": "achats",
    "fichier": "dette-inflation-achats-en",
-   "titre": "One point more across the whole yield curve: the extra cost in the first year",
-   "montre": "At end-2022, central-bank purchases had made the government and the Banque de France together 2.8 times more exposed in the first year than market debt alone; the gap has narrowed since, without closing.",
+   "titre": "If the whole yield curve rose by one point: the first-year rise in the interest bill",
+   "montre": "At end-2022, had the whole yield curve risen by one point, the first-year interest bill of the government and the Banque de France together would have risen 2.8 times as much as that of market debt alone; the gap has narrowed since, without closing.",
    "source": "AFT (monthly bulletins, line by line), Banque de France (Webstat), ECB; Decision (EU) 2016/2248; author's calculation",
-   "precaution": "Fixed-rate central-government debt, constant stock; Banque de France holdings at the ECB reference rate. An exposure, not the cost of QE."
+   "precaution": "Scenario: +1 point across the whole curve, constant stock; Banque de France holdings at the ECB reference rate. Not a forecast, nor the cost of QE."
   }
  ]
 }

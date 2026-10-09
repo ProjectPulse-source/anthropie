@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 344" role="img" font-variant-numeric="tabular-nums" aria-labelledby="achats-t achats-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
-<title id="achats-t">One point more across the whole yield curve: the extra cost in the first year</title><desc id="achats-d">Monthly lines, March 2015 to June 2026, in billions of euros: first-year extra cost for the government and the Banque de France taken together (7.6 at end-2022, 7.3 in June 2026) and for the government's market debt alone (2.75 at end-2022, 3.6 in June 2026).</desc>
+<title id="achats-t">If the whole yield curve rose by one point: the first-year rise in the interest bill</title><desc id="achats-d">Monthly lines, March 2015 to June 2026, in billions of euros: first-year rise in the interest bill, in a scenario, for the government and the Banque de France taken together (7.6 at end-2022, 7.3 in June 2026) and for the government's market debt alone (2.75 at end-2022, 3.6 in June 2026).</desc>
 <rect width="720" height="344" fill="#ffffff"/>
-<text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">One point more across the whole yield curve: the extra cost in the first year</text>
+<text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">If the whole yield curve rose by one point: the first-year rise in the interest bill</text>
 <line x1="54" y1="262.0" x2="640" y2="262.0" stroke="#dcd8d3" stroke-width="1.2"/>
 <text x="48" y="265.0" font-size="10" fill="#96928f" text-anchor="end">0</text>
 <line x1="54" y1="218.4" x2="640" y2="218.4" stroke="#dcd8d3" stroke-width="0.6"/>
@@ -36,6 +36,6 @@
 <text x="647.0" y="93.7" font-size="9.5" fill="#96928f">June 2026</text>
 <line x1="0" y1="294.0" x2="720" y2="294.0" stroke="#dcd8d3"/>
 <text x="0" y="307.0" font-size="9" fill="#55524f">AFT (monthly bulletins, line by line), Banque de France (Webstat), ECB; Decision (EU) 2016/2248; author's calculation</text>
-<text x="0" y="319.0" font-size="9" fill="#55524f">Fixed-rate central-government debt, constant stock; Banque de France holdings at the ECB reference rate. An exposure, not the cost of QE.</text>
+<text x="0" y="319.0" font-size="9" fill="#55524f">Scenario: +1 point across the whole curve, constant stock; Banque de France holdings at the ECB reference rate. Not a forecast, nor the cost of QE.</text>
 <text x="0" y="331.0" font-size="9" fill="#96928f">Computed by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/inflation-and-french-public-debt/</text>
 </svg>
