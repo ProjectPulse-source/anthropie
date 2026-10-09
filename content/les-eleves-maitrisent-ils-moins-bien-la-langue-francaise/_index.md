@@ -157,7 +157,7 @@ La langue des élèves ne s'effondre pas d'un bloc, et elle ne tient pas non plu
 {{< faq-visible >}}
 
 {{< appel-livre slug="livresque-des-mots" sur="Et si l'on rouvrait les livres par les mots ?" avis="non" offert="avant" >}}
-Cette page montre que le goût de lire recule avant même les écrans, et que personne ne mesure le vocabulaire des élèves. *Livresque des mots* prend la question par l'autre bout&nbsp;: une anthologie qui fait rencontrer, sans ordre imposé, des phrases d'auteurs de vingt-cinq siècles, pour donner envie de lire plutôt que d'en mesurer le manque.
+Cette page montre que le temps passé à lire pour le plaisir recule avant même les écrans, que le goût de lire recule ensuite, et que personne ne mesure le vocabulaire des élèves. *Livresque des mots* prend la question par l'autre bout&nbsp;: une anthologie qui fait rencontrer, sans ordre imposé, des phrases d'auteurs de vingt-cinq siècles, pour donner envie de lire plutôt que d'en mesurer le manque.
 {{< /appel-livre >}}
 
 ## D'où viennent ces chiffres {#sources}
