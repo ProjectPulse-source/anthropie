@@ -1,9 +1,9 @@
 {
- "releve_le": "2026-09-30",
+ "releve_le": "2026-10-09",
  "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Eurostat, OCDE, FMI, Banque mondiale",
  "meta": {
   "annee": "2025",
-  "releve_le": "2026-09-30",
+  "releve_le": "2026-10-09",
   "page": "https://stephane-lalut.com/dette-publique-comparaison-internationale/",
   "licence": "CC BY 4.0",
   "definitions": {
@@ -297,9 +297,9 @@
    "nom_en": "Latvia",
    "euro": true,
    "stock_fin": 46.9,
-   "stock": 43.69779343748693,
+   "stock": 43.06946229317426,
    "prix": 2.53064915033375,
-   "recettes": 43.55299794078957,
+   "recettes": 42.92674881282085,
    "charge": 2.5390625,
    "inflation": 9.2,
    "inflation_fenetres": {
@@ -317,9 +317,9 @@
    "nom_en": "Lithuania",
    "euro": true,
    "stock_fin": 39.5,
-   "stock": 35.59567044078901,
+   "stock": 35.2384264535519,
    "prix": 2.5079854095398137,
-   "recettes": 39.40539770704265,
+   "recettes": 39.00991867205876,
    "charge": 2.2655125262783793,
    "inflation": 9.499999999999998,
    "inflation_fenetres": {
@@ -337,9 +337,9 @@
    "nom_en": "Luxembourg",
    "euro": true,
    "stock_fin": 26.5,
-   "stock": 25.28789173550488,
+   "stock": 24.7838077210668,
    "prix": 1.3260830193346616,
-   "recettes": 47.10756633881246,
+   "recettes": 46.1685330892697,
    "charge": 0.711856850851525,
    "inflation": 4.466666666666666,
    "inflation_fenetres": {
@@ -357,9 +357,9 @@
    "nom_en": "Hungary",
    "euro": false,
    "stock_fin": 74.6,
-   "stock": 68.77650178434156,
+   "stock": 68.5700383152005,
    "prix": 5.530712328503067,
-   "recettes": 42.60064563435371,
+   "recettes": 42.47276071934455,
    "charge": 8.929044165077753,
    "inflation": 12.0,
    "inflation_fenetres": {
@@ -417,9 +417,9 @@
    "nom_en": "Austria",
    "euro": true,
    "stock_fin": 81.5,
-   "stock": 76.8091613116219,
+   "stock": 76.23583041246354,
    "prix": 2.092336915401577,
-   "recettes": 50.85141177392408,
+   "recettes": 50.47183874984779,
    "charge": 3.160396890608087,
    "inflation": 6.3999999999999995,
    "inflation_fenetres": {
@@ -437,9 +437,9 @@
    "nom_en": "Poland",
    "euro": false,
    "stock_fin": 59.7,
-   "stock": 51.439003463872396,
+   "stock": 51.40325596862027,
    "prix": 4.875486922648859,
-   "recettes": 43.59983571333459,
+   "recettes": 43.569536041583554,
    "charge": 5.752090222337637,
    "inflation": 9.266666666666667,
    "inflation_fenetres": {
@@ -575,21 +575,21 @@
  "statistiques": {
   "charge_stock": {
    "n": 27,
-   "pente": 0.04251629614407951,
-   "ordonnee": 1.0191653354292933,
-   "r2": 0.40488444408214497
+   "pente": 0.04248968421247077,
+   "ordonnee": 1.0244331619609066,
+   "r2": 0.4052300520769669
   },
   "spearman_rho": 0.7631257631257631,
   "charge_stock_euro": {
    "n": 20,
-   "pente": 0.04624678037848432,
-   "ordonnee": 0.2019432849456333,
-   "r2": 0.817890301974938,
+   "pente": 0.046169834974426484,
+   "ordonnee": 0.21197532198137425,
+   "r2": 0.8183635231971516,
    "stock_min": 22.335867872801778,
    "stock_max": 146.95331698299643
   },
   "prix_moyen_euro": 2.1839409579875353,
-  "prix_stock_r2_euro": 0.07303400801339967,
+  "prix_stock_r2_euro": 0.07303048683495508,
   "prix_inflation_euro": {
    "n": 20,
    "pente": 0.08151305514584249,
@@ -598,21 +598,21 @@
   },
   "charge_stock_hors": {
    "n": 7,
-   "pente": 0.1784867135484676,
-   "ordonnee": -3.093587278344202,
-   "r2": 0.8296941718071773,
+   "pente": 0.17920031701232772,
+   "ordonnee": -3.117394545721611,
+   "r2": 0.8300720261058703,
    "stock_min": 21.528414051921118,
-   "stock_max": 68.77650178434156
+   "stock_max": 68.5700383152005
   },
   "prix_moyen_hors": 3.9550145328268456,
-  "prix_stock_r2_hors": 0.5464737553392922,
+  "prix_stock_r2_hors": 0.5468073473231507,
   "prix_inflation_hors": {
    "n": 7,
    "pente": 0.42925965612779426,
    "ordonnee": 0.394203480566762,
    "r2": 0.6081501839982616
   },
-  "prix_stock_r2": 0.004021079791261093,
+  "prix_stock_r2": 0.003956881750503525,
   "prix_euro_inflation": {
    "n": 27,
    "effet_euro": -1.3338998304012464,
@@ -620,8 +620,8 @@
    "r2": 0.6524876199808434
   },
   "pente_hors_loo": {
-   "min": 0.16451628992089204,
-   "max": 0.21007500900764167
+   "min": 0.16513377399647616,
+   "max": 0.21122584404024794
   },
   "robustesse_inflation": [
    {
@@ -662,19 +662,19 @@
   {
    "bas": "SI",
    "haut": "HU",
-   "ecart_stock": 5.892337373987296,
+   "ecart_stock": 5.68587390484624,
    "rapport_charge": 3.293166857828827
   },
   {
    "bas": "HR",
    "haut": "PL",
-   "ecart_stock": 1.5687373183370283,
+   "ecart_stock": 1.6044848135891527,
    "rapport_charge": 1.9364839289605749
   },
   {
    "bas": "PL",
    "haut": "RO",
-   "ecart_stock": 1.0943242157656883,
+   "ecart_stock": 1.0585767205135639,
    "rapport_charge": 1.3950230980642766
   }
  ],
@@ -1013,7 +1013,7 @@
   "fr_recettes": "52,2 %",
   "fr_charge": "4,3 %",
   "fr_prix": "2,02 %",
-  "r2_charge_stock": "0,40",
+  "r2_charge_stock": "0,41",
   "spearman": "0,76",
   "r2_euro": "0,82",
   "r2_hors": "0,83",
@@ -1026,7 +1026,7 @@
   "effet_euro": "1,3",
   "effet_inflation": "0,21",
   "pente_hors_loo_min": "0,165",
-  "pente_hors_loo_max": "0,210",
+  "pente_hors_loo_max": "0,211",
   "j_bas": "Slovénie",
   "j_haut": "Hongrie",
   "j_bas_le": "la Slovénie",
@@ -1040,7 +1040,7 @@
   "j_bas_prix": "2,01 %",
   "j_haut_prix": "5,53 %",
   "j_bas_rec": "47 %",
-  "j_haut_rec": "43 %",
+  "j_haut_rec": "42 %",
   "j_rapport": "3,3",
   "plus_charges_moins_endettes": "Roumanie, Pologne, Hongrie, Portugal, Espagne, Belgique",
   "n_plus_charges_moins_endettes": "6",
@@ -1143,7 +1143,7 @@
   "fr_recettes": "52.2%",
   "fr_charge": "4.3%",
   "fr_prix": "2.02%",
-  "r2_charge_stock": "0.40",
+  "r2_charge_stock": "0.41",
   "spearman": "0.76",
   "r2_euro": "0.82",
   "r2_hors": "0.83",
@@ -1156,7 +1156,7 @@
   "effet_euro": "1.3",
   "effet_inflation": "0.21",
   "pente_hors_loo_min": "0.165",
-  "pente_hors_loo_max": "0.210",
+  "pente_hors_loo_max": "0.211",
   "j_bas": "Slovenia",
   "j_haut": "Hungary",
   "j_bas_le": "Slovenia",
@@ -1170,7 +1170,7 @@
   "j_bas_prix": "2.01%",
   "j_haut_prix": "5.53%",
   "j_bas_rec": "47%",
-  "j_haut_rec": "43%",
+  "j_haut_rec": "42%",
   "j_rapport": "3.3",
   "plus_charges_moins_endettes": "Romania, Poland, Hungary, Portugal, Spain, Belgium",
   "n_plus_charges_moins_endettes": "6",
