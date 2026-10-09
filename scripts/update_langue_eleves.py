@@ -494,6 +494,11 @@ def csv_texte(c):
     for k in ("total", "lexicales", "deux_erreurs_ou_moins", "vingt_cinq_ou_plus"):
         for a, v in sorted(X["dictee"][k].items()):
             w.writerow(["depp_dictee_cm2", k, a, v, "erreurs (moyenne)" if k in ("total", "lexicales") else "% des eleves"])
+    for k in ("lexicales", "grammaticales", "ponctuation", "autres"):
+        for a, v in sorted(X["dictee_types_1987_2007"][k].items()):
+            w.writerow(["depp_dictee_cm2_types_ni08_38", k, a, v, "erreurs (moyenne)"])
+    for a, v in sorted(X["cedre_college_textes"]["ecart_hors_ep_ep_points"].items()):
+        w.writerow(["depp_cedre_fin_college", "ecart public hors EP - EP (texte de la DEPP)", a, v, "points ; evolution sans test publie"])
     for a, v in sorted(X["lecture_cm2"]["score"].items()):
         w.writerow(["depp_lecture_cm2_epreuves_1987", "score", a, v, "ecart-type de 1987"])
     for a, v in sorted(X["cedre_ecole"]["score"].items()):

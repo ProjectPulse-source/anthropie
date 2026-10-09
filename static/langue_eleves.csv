@@ -15,6 +15,16 @@ depp_dictee_cm2,vingt_cinq_ou_plus,1987,6.9,% des eleves
 depp_dictee_cm2,vingt_cinq_ou_plus,2007,13.2,% des eleves
 depp_dictee_cm2,vingt_cinq_ou_plus,2015,22.7,% des eleves
 depp_dictee_cm2,vingt_cinq_ou_plus,2021,27.5,% des eleves
+depp_dictee_cm2_types_ni08_38,lexicales,1987,2.1,erreurs (moyenne)
+depp_dictee_cm2_types_ni08_38,lexicales,2007,2.6,erreurs (moyenne)
+depp_dictee_cm2_types_ni08_38,grammaticales,1987,7.1,erreurs (moyenne)
+depp_dictee_cm2_types_ni08_38,grammaticales,2007,10.8,erreurs (moyenne)
+depp_dictee_cm2_types_ni08_38,ponctuation,1987,1.1,erreurs (moyenne)
+depp_dictee_cm2_types_ni08_38,ponctuation,2007,0.9,erreurs (moyenne)
+depp_dictee_cm2_types_ni08_38,autres,1987,0.3,erreurs (moyenne)
+depp_dictee_cm2_types_ni08_38,autres,2007,0.4,erreurs (moyenne)
+depp_cedre_fin_college,ecart public hors EP - EP (texte de la DEPP),2015,17.0,points ; evolution sans test publie
+depp_cedre_fin_college,ecart public hors EP - EP (texte de la DEPP),2021,22.0,points ; evolution sans test publie
 depp_lecture_cm2_epreuves_1987,score,1987,0.0,ecart-type de 1987
 depp_lecture_cm2_epreuves_1987,score,1997,-0.03,ecart-type de 1987
 depp_lecture_cm2_epreuves_1987,score,2007,-0.37,ecart-type de 1987
