@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 412" role="img" font-variant-numeric="tabular-nums" aria-labelledby="lan-d-t lan-d-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="lan-d-t">La même dictée en CM2 : nombre moyen d'erreurs</title><desc id="lan-d-d">Barres empilées, nombre moyen d'erreurs à la même dictée en CM2 : 1987 : 2,1 erreurs lexicales et 8,6 autres erreurs, 10,7 au total ; 2007 : 2,6 erreurs lexicales et 12,1 autres erreurs, 14,7 au total ; 2015 : 3 erreurs lexicales et 15 autres erreurs, 18 au total ; 2021 : 3 erreurs lexicales et 16,4 autres erreurs, 19,4 au total.</desc>
+<rect width="720" height="412" fill="#ffffff"/>
+<text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">La même dictée en CM2 : nombre moyen d'erreurs</text>
+<line x1="100" y1="300.0" x2="680" y2="300.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="94" y="303.5" font-size="10" fill="#96928f" text-anchor="end">0</text>
+<line x1="100" y1="256.0" x2="680" y2="256.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="94" y="259.5" font-size="10" fill="#96928f" text-anchor="end">5</text>
+<line x1="100" y1="212.0" x2="680" y2="212.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="94" y="215.5" font-size="10" fill="#96928f" text-anchor="end">10</text>
+<line x1="100" y1="168.0" x2="680" y2="168.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="94" y="171.5" font-size="10" fill="#96928f" text-anchor="end">15</text>
+<line x1="100" y1="124.0" x2="680" y2="124.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="94" y="127.5" font-size="10" fill="#96928f" text-anchor="end">20</text>
+<line x1="100" y1="80.0" x2="680" y2="80.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="94" y="83.5" font-size="10" fill="#96928f" text-anchor="end">25</text>
+<rect x="110" y="281.5" width="90" height="18.5" fill="#184f95"/>
+<rect x="110" y="205.8" width="90" height="75.7" fill="#eb6834"/>
+<text x="155.0" y="199.8" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">10,7</text>
+<text x="155.0" y="294.8" font-size="10.5" fill="#ffffff" text-anchor="middle">2,1</text>
+<text x="155.0" y="247.7" font-size="10.5" fill="#ffffff" text-anchor="middle">8,6</text>
+<text x="155.0" y="316" font-size="11.5" fill="#55524f" text-anchor="middle">1987</text>
+<rect x="260" y="277.1" width="90" height="22.9" fill="#184f95"/>
+<rect x="260" y="170.6" width="90" height="106.5" fill="#eb6834"/>
+<text x="305.0" y="164.6" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">14,7</text>
+<text x="305.0" y="292.6" font-size="10.5" fill="#ffffff" text-anchor="middle">2,6</text>
+<text x="305.0" y="227.9" font-size="10.5" fill="#ffffff" text-anchor="middle">12,1</text>
+<text x="305.0" y="316" font-size="11.5" fill="#55524f" text-anchor="middle">2007</text>
+<rect x="410" y="273.6" width="90" height="26.4" fill="#184f95"/>
+<rect x="410" y="141.6" width="90" height="132.0" fill="#eb6834"/>
+<text x="455.0" y="135.6" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">18</text>
+<text x="455.0" y="290.8" font-size="10.5" fill="#ffffff" text-anchor="middle">3</text>
+<text x="455.0" y="211.6" font-size="10.5" fill="#ffffff" text-anchor="middle">15</text>
+<text x="455.0" y="316" font-size="11.5" fill="#55524f" text-anchor="middle">2015</text>
+<rect x="560" y="273.6" width="90" height="26.4" fill="#184f95"/>
+<rect x="560" y="129.3" width="90" height="144.3" fill="#eb6834"/>
+<text x="605.0" y="123.3" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">19,4</text>
+<text x="605.0" y="290.8" font-size="10.5" fill="#ffffff" text-anchor="middle">3</text>
+<text x="605.0" y="205.4" font-size="10.5" fill="#ffffff" text-anchor="middle">16,4</text>
+<text x="605.0" y="316" font-size="11.5" fill="#55524f" text-anchor="middle">2021</text>
+<rect x="0" y="330" width="12" height="12" fill="#184f95"/>
+<text x="18" y="340" font-size="10.5" fill="#55524f">Erreurs lexicales (orthographe des mots)</text>
+<rect x="300" y="330" width="12" height="12" fill="#eb6834"/>
+<text x="318" y="340" font-size="10.5" fill="#55524f">Autres erreurs (accords, conjugaison, ponctuation)</text>
+<line x1="0" y1="362.0" x2="720" y2="362.0" stroke="#dcd8d3"/>
+<text x="0" y="375.0" font-size="9" fill="#55524f">DEPP, Note d'Information 22.37 (dictée de 67 mots, 1987, 2007, 2015, 2021 ; secteur public) ; NI 08.38 pour 1987-2007</text>
+<text x="0" y="387.0" font-size="9" fill="#55524f">Erreurs lexicales : orthographe des mots eux-mêmes. Autres erreurs : accords, conjugaison, ponctuation (total moins lexicales).</text>
+<text x="0" y="399.0" font-size="9" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/</text>
+</svg>

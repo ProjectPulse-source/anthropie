@@ -1,0 +1,184 @@
+﻿tableau,variable,cle,valeur,unite
+depp_dictee_cm2,total,1987,10.7,erreurs (moyenne)
+depp_dictee_cm2,total,2007,14.7,erreurs (moyenne)
+depp_dictee_cm2,total,2015,18.0,erreurs (moyenne)
+depp_dictee_cm2,total,2021,19.4,erreurs (moyenne)
+depp_dictee_cm2,lexicales,1987,2.1,erreurs (moyenne)
+depp_dictee_cm2,lexicales,2007,2.6,erreurs (moyenne)
+depp_dictee_cm2,lexicales,2015,3.0,erreurs (moyenne)
+depp_dictee_cm2,lexicales,2021,3.0,erreurs (moyenne)
+depp_dictee_cm2,deux_erreurs_ou_moins,1987,12.9,% des eleves
+depp_dictee_cm2,deux_erreurs_ou_moins,2007,5.8,% des eleves
+depp_dictee_cm2,deux_erreurs_ou_moins,2015,2.0,% des eleves
+depp_dictee_cm2,deux_erreurs_ou_moins,2021,1.9,% des eleves
+depp_dictee_cm2,vingt_cinq_ou_plus,1987,6.9,% des eleves
+depp_dictee_cm2,vingt_cinq_ou_plus,2007,13.2,% des eleves
+depp_dictee_cm2,vingt_cinq_ou_plus,2015,22.7,% des eleves
+depp_dictee_cm2,vingt_cinq_ou_plus,2021,27.5,% des eleves
+depp_lecture_cm2_epreuves_1987,score,1987,0.0,ecart-type de 1987
+depp_lecture_cm2_epreuves_1987,score,1997,-0.03,ecart-type de 1987
+depp_lecture_cm2_epreuves_1987,score,2007,-0.37,ecart-type de 1987
+depp_cedre_fin_ecole,score,2003,250.0,points (250 en 2003)
+depp_cedre_fin_ecole,score,2009,251.0,points (250 en 2003)
+depp_cedre_fin_ecole,score,2015,251.0,points (250 en 2003)
+depp_cedre_fin_ecole,score,2021,254.3,points (250 en 2003) ; evolution significative
+depp_cedre_fin_college,Garçons,2015,247.1,points (250 en 2015)
+depp_cedre_fin_college,Garçons,2021,240.7,points (250 en 2015) ; evolution significative
+depp_cedre_fin_college,Filles,2015,252.9,points (250 en 2015)
+depp_cedre_fin_college,Filles,2021,252.6,points (250 en 2015)
+depp_cedre_fin_college,Public hors EP,2015,250.3,points (250 en 2015)
+depp_cedre_fin_college,Public hors EP,2021,247.3,points (250 en 2015)
+depp_cedre_fin_college,EP,2015,233.1,points (250 en 2015)
+depp_cedre_fin_college,EP,2021,225.3,points (250 en 2015) ; evolution significative
+depp_cedre_fin_college,Privé,2015,259.7,points (250 en 2015)
+depp_cedre_fin_college,Privé,2021,260.4,points (250 en 2015)
+depp_cedre_fin_college,ensemble,2015,250.0,points (250 en 2015)
+depp_cedre_fin_college,ensemble,2021,246.6,points (250 en 2015)
+depp_sixieme_francais,score,2017,250.0,points (250 en 2017)
+depp_sixieme_francais,score,2018,254.0,points (250 en 2017)
+depp_sixieme_francais,score,2019,255.0,points (250 en 2017)
+depp_sixieme_francais,score,2020,261.0,points (250 en 2017)
+depp_sixieme_francais,score,2021,261.0,points (250 en 2017)
+depp_sixieme_francais,score,2022,257.0,points (250 en 2017)
+depp_sixieme_francais,score,2023,257.0,points (250 en 2017)
+depp_sixieme_francais,score,2024,256.0,points (250 en 2017)
+depp_sixieme_francais,score,2025,256.0,points (250 en 2017)
+depp_sixieme_2025_maitrise_satisfaisante,Ensemble / Compréhension de l'écrit,2025,42.6,% des eleves
+depp_sixieme_2025_maitrise_satisfaisante,Ensemble / Lexique,2025,44.2,% des eleves
+depp_sixieme_2025_maitrise_satisfaisante,Ensemble / Compréhension de l'oral,2025,59.4,% des eleves
+depp_sixieme_2025_maitrise_satisfaisante,Ensemble / Grammaire,2025,49.5,% des eleves
+depp_sixieme_2025_maitrise_satisfaisante,Ensemble / Orthographe,2025,42.7,% des eleves
+depp_sixieme_2025_maitrise_satisfaisante,Privé sous contrat / Compréhension de l'écrit,2025,55.3,% des eleves
+depp_sixieme_2025_maitrise_satisfaisante,Privé sous contrat / Lexique,2025,57.6,% des eleves
+depp_sixieme_2025_maitrise_satisfaisante,Privé sous contrat / Compréhension de l'oral,2025,70.8,% des eleves
+depp_sixieme_2025_maitrise_satisfaisante,Privé sous contrat / Grammaire,2025,61.9,% des eleves
+depp_sixieme_2025_maitrise_satisfaisante,Privé sous contrat / Orthographe,2025,54.9,% des eleves
+depp_sixieme_2025_maitrise_satisfaisante,REP+ / Compréhension de l'écrit,2025,21.6,% des eleves
+depp_sixieme_2025_maitrise_satisfaisante,REP+ / Lexique,2025,20.7,% des eleves
+depp_sixieme_2025_maitrise_satisfaisante,REP+ / Compréhension de l'oral,2025,35.8,% des eleves
+depp_sixieme_2025_maitrise_satisfaisante,REP+ / Grammaire,2025,27.4,% des eleves
+depp_sixieme_2025_maitrise_satisfaisante,REP+ / Orthographe,2025,21.8,% des eleves
+depp_sixieme_2025_maitrise_satisfaisante,Groupe d'IPS 1 / Compréhension de l'écrit,2025,26.2,% des eleves
+depp_sixieme_2025_maitrise_satisfaisante,Groupe d'IPS 1 / Lexique,2025,26.4,% des eleves
+depp_sixieme_2025_maitrise_satisfaisante,Groupe d'IPS 1 / Compréhension de l'oral,2025,41.8,% des eleves
+depp_sixieme_2025_maitrise_satisfaisante,Groupe d'IPS 1 / Grammaire,2025,32.9,% des eleves
+depp_sixieme_2025_maitrise_satisfaisante,Groupe d'IPS 1 / Orthographe,2025,27.0,% des eleves
+depp_sixieme_2025_maitrise_satisfaisante,Groupe d'IPS 5 / Compréhension de l'écrit,2025,59.8,% des eleves
+depp_sixieme_2025_maitrise_satisfaisante,Groupe d'IPS 5 / Lexique,2025,61.5,% des eleves
+depp_sixieme_2025_maitrise_satisfaisante,Groupe d'IPS 5 / Compréhension de l'oral,2025,74.2,% des eleves
+depp_sixieme_2025_maitrise_satisfaisante,Groupe d'IPS 5 / Grammaire,2025,65.7,% des eleves
+depp_sixieme_2025_maitrise_satisfaisante,Groupe d'IPS 5 / Orthographe,2025,59.0,% des eleves
+depp_test_seconde_francais,GT,2019,263.0,points (250 en 2019)
+depp_test_seconde_francais,GT,2020,272.0,points (250 en 2019)
+depp_test_seconde_francais,GT,2021,272.0,points (250 en 2019)
+depp_test_seconde_francais,GT,2022,270.0,points (250 en 2019)
+depp_test_seconde_francais,GT,2023,268.0,points (250 en 2019)
+depp_test_seconde_francais,GT,2024,268.0,points (250 en 2019)
+depp_test_seconde_francais,GT,2025,263.0,points (250 en 2019)
+depp_test_seconde_francais,Pro,2019,210.0,points (250 en 2019)
+depp_test_seconde_francais,Pro,2020,215.0,points (250 en 2019)
+depp_test_seconde_francais,Pro,2021,219.0,points (250 en 2019)
+depp_test_seconde_francais,Pro,2022,217.0,points (250 en 2019)
+depp_test_seconde_francais,Pro,2023,215.0,points (250 en 2019)
+depp_test_seconde_francais,Pro,2024,214.0,points (250 en 2019)
+depp_test_seconde_francais,Pro,2025,209.0,points (250 en 2019)
+iea_pirls_france_cm1,score,2001,525.0,points PIRLS
+iea_pirls_france_cm1,score,2006,522.0,points PIRLS
+iea_pirls_france_cm1,score,2011,520.0,points PIRLS
+iea_pirls_france_cm1,score,2016,511.0,points PIRLS
+iea_pirls_france_cm1,score,2021,514.0,points PIRLS
+ocde_pisa_lecture_france,score,2000,504.74,points PISA (erreur type 2.73)
+ocde_pisa_lecture_france,score,2003,496.19,points PISA (erreur type 2.68)
+ocde_pisa_lecture_france,score,2006,487.71,points PISA (erreur type 4.06)
+ocde_pisa_lecture_france,score,2009,495.62,points PISA (erreur type 3.44)
+ocde_pisa_lecture_france,score,2012,505.48,points PISA (erreur type 2.83)
+ocde_pisa_lecture_france,score,2015,499.31,points PISA (erreur type 2.51)
+ocde_pisa_lecture_france,score,2018,492.61,points PISA (erreur type 2.32)
+ocde_pisa_lecture_france,score,2022,473.85,points PISA (erreur type 3.07)
+ocde_pisa_lecture_france,score,2025,456.33,points PISA (erreur type 3.24)
+ocde_temps_lecture_plaisir_france,2000,,3.84,heures par semaine
+ocde_temps_lecture_plaisir_france,2009,,3.295,heures par semaine
+ocde_temps_lecture_plaisir_france,2018,,3.521,heures par semaine
+ocde_temps_lecture_plaisir_france,d2009_2000,,-0.544,heures par semaine
+ocde_temps_lecture_plaisir_france,d2009_2000_et,,0.13,heures par semaine
+ocde_temps_lecture_plaisir_france,d2018_2000,,-0.319,heures par semaine
+ocde_temps_lecture_plaisir_france,d2018_2000_et,,0.118,heures par semaine
+ocde_temps_lecture_plaisir_france,d2018_2009,,0.225,heures par semaine
+ocde_temps_lecture_plaisir_france,d2018_2009_et,,0.13,heures par semaine
+ocde_indice_plaisir_de_lire_france,2009,,0.014,indice (OCDE = 0 en 2009)
+ocde_indice_plaisir_de_lire_france,2009_et,,0.0256,indice (OCDE = 0 en 2009)
+ocde_indice_plaisir_de_lire_france,2018,,-0.1221,indice (OCDE = 0 en 2009)
+ocde_indice_plaisir_de_lire_france,2018_et,,0.0206,indice (OCDE = 0 en 2009)
+ocde_indice_plaisir_de_lire_france,variation,,-0.1361,indice (OCDE = 0 en 2009)
+ocde_indice_plaisir_de_lire_france,variation_et,,0.0329,indice (OCDE = 0 en 2009)
+ocde_lit_seulement_si_oblige_france,2009,,33.89,% des eleves
+ocde_lit_seulement_si_oblige_france,2009_et,,1.0,% des eleves
+ocde_lit_seulement_si_oblige_france,2018,,43.03,% des eleves
+ocde_lit_seulement_si_oblige_france,2018_et,,0.73,% des eleves
+culture_pratiques_culturelles,au_moins_un_livre / ensemble,1973,70.0,% (enquetes 1973-2008)
+culture_pratiques_culturelles,au_moins_un_livre / ensemble,1981,74.0,% (enquetes 1973-2008)
+culture_pratiques_culturelles,au_moins_un_livre / ensemble,1988,75.0,% (enquetes 1973-2008)
+culture_pratiques_culturelles,au_moins_un_livre / ensemble,1997,73.0,% (enquetes 1973-2008)
+culture_pratiques_culturelles,au_moins_un_livre / ensemble,2008,70.0,% (enquetes 1973-2008)
+culture_pratiques_culturelles,au_moins_un_livre / 15_24,1973,88.0,% (enquetes 1973-2008)
+culture_pratiques_culturelles,au_moins_un_livre / 15_24,1981,91.0,% (enquetes 1973-2008)
+culture_pratiques_culturelles,au_moins_un_livre / 15_24,1988,83.0,% (enquetes 1973-2008)
+culture_pratiques_culturelles,au_moins_un_livre / 15_24,1997,84.0,% (enquetes 1973-2008)
+culture_pratiques_culturelles,au_moins_un_livre / 15_24,2008,78.0,% (enquetes 1973-2008)
+culture_pratiques_culturelles,vingt_livres_ou_plus / ensemble,1973,28.0,% (enquetes 1973-2008)
+culture_pratiques_culturelles,vingt_livres_ou_plus / ensemble,1981,26.0,% (enquetes 1973-2008)
+culture_pratiques_culturelles,vingt_livres_ou_plus / ensemble,1988,24.0,% (enquetes 1973-2008)
+culture_pratiques_culturelles,vingt_livres_ou_plus / ensemble,1997,20.0,% (enquetes 1973-2008)
+culture_pratiques_culturelles,vingt_livres_ou_plus / ensemble,2008,16.0,% (enquetes 1973-2008)
+culture_pratiques_culturelles,vingt_livres_ou_plus / 15_24,1973,41.0,% (enquetes 1973-2008)
+culture_pratiques_culturelles,vingt_livres_ou_plus / 15_24,1981,37.0,% (enquetes 1973-2008)
+culture_pratiques_culturelles,vingt_livres_ou_plus / 15_24,1988,25.0,% (enquetes 1973-2008)
+culture_pratiques_culturelles,vingt_livres_ou_plus / 15_24,1997,20.0,% (enquetes 1973-2008)
+culture_pratiques_culturelles,vingt_livres_ou_plus / 15_24,2008,16.0,% (enquetes 1973-2008)
+credoc_smartphone_12_17_ans,equipes,2011,22.0,%
+credoc_smartphone_12_17_ans,equipes,2012,46.0,%
+credoc_smartphone_12_17_ans,equipes,2013,55.0,%
+credoc_smartphone_12_17_ans,equipes,2014,59.0,%
+credoc_smartphone_12_17_ans,equipes,2015,81.0,%
+depp_2023_ne_lit_pas_pour_son_plaisir,Ensemble,2023,25.59,% des eleves
+depp_2023_ne_lit_pas_pour_son_plaisir,Sixième,2023,12.4,% des eleves
+depp_2023_ne_lit_pas_pour_son_plaisir,Quatrième,2023,28.38,% des eleves
+depp_2023_ne_lit_pas_pour_son_plaisir,Seconde générale et technologique,2023,32.18,% des eleves
+depp_2023_ne_lit_pas_pour_son_plaisir,Seconde professionnelle,2023,48.74,% des eleves
+depp_2023_ne_lit_pas_pour_son_plaisir,CAP,2023,47.09,% des eleves
+pisa_numerique_loisir_jours_de_classe,non_reponse,2022,11.9,% des eleves (calcul)
+pisa_numerique_loisir_jours_de_classe,aucune_ou_1h / part,2022,30.91,% des repondants (calcul)
+pisa_numerique_loisir_jours_de_classe,aucune_ou_1h / lecture,2022,456.95,points PISA (calcul)
+pisa_numerique_loisir_jours_de_classe,1_a_3h / part,2022,37.36,% des repondants (calcul)
+pisa_numerique_loisir_jours_de_classe,1_a_3h / lecture,2022,506.99,points PISA (calcul)
+pisa_numerique_loisir_jours_de_classe,3_a_5h / part,2022,21.23,% des repondants (calcul)
+pisa_numerique_loisir_jours_de_classe,3_a_5h / lecture,2022,505.29,points PISA (calcul)
+pisa_numerique_loisir_jours_de_classe,plus_de_5h / part,2022,10.5,% des repondants (calcul)
+pisa_numerique_loisir_jours_de_classe,plus_de_5h / lecture,2022,471.45,points PISA (calcul)
+pisa_numerique_loisir_jours_de_classe,non_reponse,2025,22.82,% des eleves (calcul)
+pisa_numerique_loisir_jours_de_classe,aucune_ou_1h / part,2025,34.32,% des repondants (calcul)
+pisa_numerique_loisir_jours_de_classe,aucune_ou_1h / lecture,2025,460.4,points PISA (calcul)
+pisa_numerique_loisir_jours_de_classe,1_a_3h / part,2025,39.39,% des repondants (calcul)
+pisa_numerique_loisir_jours_de_classe,1_a_3h / lecture,2025,500.38,points PISA (calcul)
+pisa_numerique_loisir_jours_de_classe,3_a_5h / part,2025,18.34,% des repondants (calcul)
+pisa_numerique_loisir_jours_de_classe,3_a_5h / lecture,2025,484.46,points PISA (calcul)
+pisa_numerique_loisir_jours_de_classe,plus_de_5h / part,2025,7.94,% des repondants (calcul)
+pisa_numerique_loisir_jours_de_classe,plus_de_5h / lecture,2025,450.03,points PISA (calcul)
+pisa_numerique_loisir_week_end,non_reponse,2022,11.34,% des eleves (calcul)
+pisa_numerique_loisir_week_end,aucune_ou_1h / part,2022,16.61,% des repondants (calcul)
+pisa_numerique_loisir_week_end,aucune_ou_1h / lecture,2022,446.63,points PISA (calcul)
+pisa_numerique_loisir_week_end,1_a_3h / part,2022,22.4,% des repondants (calcul)
+pisa_numerique_loisir_week_end,1_a_3h / lecture,2022,498.8,points PISA (calcul)
+pisa_numerique_loisir_week_end,3_a_5h / part,2022,26.75,% des repondants (calcul)
+pisa_numerique_loisir_week_end,3_a_5h / lecture,2022,503.17,points PISA (calcul)
+pisa_numerique_loisir_week_end,plus_de_5h / part,2022,34.24,% des repondants (calcul)
+pisa_numerique_loisir_week_end,plus_de_5h / lecture,2022,486.59,points PISA (calcul)
+pisa_numerique_loisir_week_end,non_reponse,2025,22.52,% des eleves (calcul)
+pisa_numerique_loisir_week_end,aucune_ou_1h / part,2025,19.81,% des repondants (calcul)
+pisa_numerique_loisir_week_end,aucune_ou_1h / lecture,2025,451.54,points PISA (calcul)
+pisa_numerique_loisir_week_end,1_a_3h / part,2025,25.76,% des repondants (calcul)
+pisa_numerique_loisir_week_end,1_a_3h / lecture,2025,494.93,points PISA (calcul)
+pisa_numerique_loisir_week_end,3_a_5h / part,2025,26.17,% des repondants (calcul)
+pisa_numerique_loisir_week_end,3_a_5h / lecture,2025,500.36,points PISA (calcul)
+pisa_numerique_loisir_week_end,plus_de_5h / part,2025,28.26,% des repondants (calcul)
+pisa_numerique_loisir_week_end,plus_de_5h / lecture,2025,464.75,points PISA (calcul)

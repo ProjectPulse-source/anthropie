@@ -673,7 +673,45 @@ def carte_niveau() -> None:
           [(C2, "France, 2015-2025 : −%s points en maths" % A["math_v15"]), ((170, 166, 160), "Médiane des pays de l'OCDE : −%s" % A["math_med"])])
 
 
+def figure_langue_mini(d: ImageDraw.ImageDraw, A: dict, X: dict) -> None:
+    """Ressource « Les élèves maîtrisent-ils moins bien la langue française ? » (09/10/2026) : même dictée de CM2, erreurs
+    lexicales (bleu) et autres erreurs (orange), 1987-2021."""
+    x0, top, base, hmax, bw, gap = 680, 120, 430, 280, 80, 30
+    tot, lx = X["dictee"]["total"], X["dictee"]["lexicales"]
+    sy = lambda v: hmax * v / 22.0
+    fb, fa = font("inter", 22, 600), font("inter", 18, 500)
+    for i, a in enumerate(("1987", "2007", "2015", "2021")):
+        x = x0 + i * (bw + gap)
+        d.rectangle([x, base - sy(lx[a]), x + bw, base], fill=C1)
+        d.rectangle([x, base - sy(tot[a]), x + bw, base - sy(lx[a])], fill=C2)
+        d.text((x + 8, base - sy(tot[a]) - 32), A["tot" + a[2:]], font=fb, fill=C2)
+        d.text((x + 16, base + 8), a, font=fa, fill=URL_GREY)
+
+
+def carte_langue() -> None:
+    """Ressource « Les élèves maîtrisent-ils moins bien la langue française ? » (09/10/2026). Chiffres lus dans le jeu
+    publié ; le contraste annoncé (orthographe des mots stable au regard des autres erreurs) est contrôlé ici."""
+    f = ROOT / "data" / "langue_eleves.json"
+    if not f.is_file():
+        fail("jeu de données absent : %s — lancer scripts/update_langue_eleves.py d'abord" % f)
+    j = json.loads(f.read_text(encoding="utf-8"))
+    A, dic = j["affichage"], j["dictee"]
+    t, l = dic["total"], dic["lexicales"]
+    if not (l["2021"] - l["1987"] < 0.25 * (t["2021"] - t["1987"])):
+        fail("carte langue : le contraste annoncé n'est plus vrai dans les données")
+    carte("og-langue-eleves.jpg",
+          ["Les élèves maîtrisent-ils", "moins bien la langue ?"],
+          "Même dictée : ce sont surtout les accords qui reculent.",
+          "DEPP, NI 22.37 · calcul de l'auteur · CC BY 4.0",
+          "stephane-lalut.com/les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/",
+          lambda d: figure_langue_mini(d, A, j),
+          [(C1, "Orthographe des mots : %s puis %s erreurs" % (A["lex87"], A["lex21"])), (C2, "Autres erreurs : %s puis %s" % (A["aut87"], A["aut21"]))])
+
+
 def main() -> int:
+    if "--langue" in sys.argv[1:]:
+        carte_langue()
+        return 0
     if "--collectivites" in sys.argv[1:]:
         carte_collectivites()
         return 0
@@ -703,6 +741,7 @@ def main() -> int:
     carte_inflation()
     carte_lycee()
     carte_niveau()
+    carte_langue()
     qp = ROOT / "data" / "qui_paie_donnees.json"
     do = ROOT / "data" / "dette_officielle.json"
     for f in (qp, do):

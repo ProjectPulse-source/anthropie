@@ -87,6 +87,17 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
   libellé déjà mesuré (45). **Reste** : push sur décision de l'auteur ; même lexique à porter sur `qui-paie` et
   `generations-futures` EN (point ouvert de l'arbitrage).
 
+### 2026-10-09 — Ressource « Les élèves maîtrisent-ils moins bien la langue française ? » (FR seulement), troisième onglet du bloc « École et lycée » ; NON POUSSÉE
+
+- **`/les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/`** : frise de onze mesures face à l'arrivée du smartphone,
+  dictée de CM2 (mots contre accords), vocabulaire non mesuré, lecture pour le plaisir, numérique de loisir dans PISA
+  2022-2025, écarts. Recherche : `D:\PRO\06_PROMOTION\RECHERCHE_LYCEES_LECTURE_2026-10-09\` (plan contre-analysé,
+  protocole `ddab2bc`, verdict `a256b3d`). Générateur `scripts/update_langue_eleves.py` (39 gardes, 17 mutations vues
+  mordre), extrait figé `scripts/sources_langue_eleves/` ; shortcode `lan-val` ; jetons `{lan.*}` dans
+  `partials/desc-figures.html` ; carte `og_dossier_dette.py --langue`. Appel au livre : *Livresque des mots*. Hors module de
+  mise à jour (rattrapage : évaluations de sixième et de seconde, CEDRE suivant, PISA 2029). Contre-expertise de la page
+  avant publication.
+
 ### 2026-10-08 — Ressource « Le niveau des élèves baisse-t-il ? » (FR seulement), deuxième onglet du bloc « École et lycée » ; NON POUSSÉE
 
 - **`/le-niveau-des-eleves-baisse-t-il/`** : PISA 2025 placé parmi les 38 pays de l'OCDE, perte au sommet, écart social

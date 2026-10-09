@@ -140,6 +140,14 @@
   {{- end -}}
 {{- end -}}
 {{- if in $text "{niv." -}}{{- errorf "desc-figures: placeholder {niv.*} non resolu dans : %s" $text -}}{{- end -}}
+{{- /* Ressource « Les élèves maîtrisent-ils moins bien la langue française ? » : placeholders {lan.<cle>}, depuis
+       data/langue_eleves.json (bloc affichage, scripts/update_langue_eleves.py). Français seulement (exclusion déclarée). */ -}}
+{{- with site.Data.langue_eleves -}}
+  {{- range $k, $v := .affichage -}}
+    {{- $text = replace $text (printf "{lan.%s}" $k) $v -}}
+  {{- end -}}
+{{- end -}}
+{{- if in $text "{lan." -}}{{- errorf "desc-figures: placeholder {lan.*} non resolu dans : %s" $text -}}{{- end -}}
 {{- with .isbn -}}
   {{- range where site.Data.works.works "isbn" . -}}
     {{- with .corpus_stats -}}
