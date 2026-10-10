@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 601" role="img" font-variant-numeric="tabular-nums" aria-labelledby="niv-gm-t niv-gm-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 618" role="img" font-variant-numeric="tabular-nums" aria-labelledby="niv-gm-t niv-gm-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
 <title id="niv-gm-t">Test de seconde et PISA, cohortes largement correspondantes</title><desc id="niv-gm-d">Barres horizontales, écart standardisé entre les cohortes de 2021-2022 et celles de 2024-2025. Français : test de seconde −13, PISA lecture −16. Mathématiques : test de seconde +9, PISA −18.</desc>
-<rect width="300" height="601" fill="#ffffff"/>
+<rect width="300" height="618" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Test de seconde et PISA,</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">cohortes largement</text>
 <text x="0" y="64" font-size="17" font-weight="600" fill="#26262f">correspondantes</text>
@@ -32,6 +32,7 @@
 <text x="0" y="519.0" font-size="13.5" fill="#55524f">largement correspondantes, pas les</text>
 <text x="0" y="536.0" font-size="13.5" fill="#55524f">mêmes élèves. Seconde : deux voies,</text>
 <text x="0" y="553.0" font-size="13.5" fill="#55524f">sans test publié.</text>
-<text x="0" y="574.0" font-size="13.5" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 ·</text>
-<text x="0" y="591.0" font-size="13.5" fill="#96928f">stephane-lalut.com</text>
+<text x="0" y="574.0" font-size="13.5" fill="#96928f">Graphique Stéphane Lalut d'après le</text>
+<text x="0" y="591.0" font-size="13.5" fill="#96928f">calcul de la DEPP (NI 26-40, fig. 11</text>
+<text x="0" y="608.0" font-size="13.5" fill="#96928f">web), CC BY 4.0</text>
 </svg>

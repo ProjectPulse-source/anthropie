@@ -6,7 +6,7 @@
    "titre": "Quatre évaluations, leur dernière variation en France",
    "montre": "Sur leurs dernières périodes, différentes, PISA à 15 ans baisse significativement ; PIRLS en CM1 et TIMSS en CM1 et en quatrième ne mettent pas en évidence de baisse significative ; le score du test d'entrée en seconde monte en mathématiques, sans test publié. Ces écarts de significativité ne prouvent pas que les tendances diffèrent.",
    "source": "IEA (TIMSS 2023, rapport international) ; DEPP (PIRLS 2021, NI 23-21 ; test de positionnement de seconde, NI 26-22) ; OCDE (PISA 2025)",
-   "precaution": "Chaque évaluation a son échelle : les points ne se comparent pas d'une ligne à l'autre. Point plein : significativité publiée ; point creux : test de seconde, sans test publié."
+   "precaution": "Chaque évaluation a son échelle : les points ne se comparent pas d'une ligne à l'autre. Point plein : test publié, significatif ou non ; point creux : aucun test publié. Couleur : sens de la variation."
   },
   {
    "id": "baisse",
@@ -14,15 +14,15 @@
    "titre": "PISA, 2015-2025 : la France parmi les 38 pays de l'OCDE",
    "montre": "En lecture et en sciences, la baisse française est dans la moitié centrale des pays de l'OCDE, la lecture pratiquement à sa frontière ; en mathématiques, elle compte, sur les estimations ponctuelles, parmi le quart des plus fortes.",
    "source": "OCDE, PISA 2025, volume I, tableaux I.B1.2a.36 à 38 (variation du score moyen entre 2015 et 2025)",
-   "precaution": "Chaque point est un pays membre de l'OCDE. Bande bleue : la moitié centrale des pays (du premier au troisième quartile)."
+   "precaution": "Chaque point est un pays membre de l'OCDE. Bande bleue : la moitié centrale des pays (du premier au troisième quartile). Rangs sur estimations ponctuelles ; différences entre pays non testées."
   },
   {
    "id": "composition",
    "fichier": "niveau-composition",
-   "titre": "PISA 2015-2025 : baisse observée et baisse à la répartition entre classes de 2015",
-   "montre": "Dans les trois domaines, la baisse est plus forte quand on applique à 2025 la répartition entre classes de 2015 : à 15 ans, moins d'élèves sont encore au collège. Ajustée aussi du sexe, du diplôme des parents et de l'origine migratoire, elle revient au niveau observé ; ces calculs décrivent, ils n'attribuent pas de cause.",
+   "titre": "PISA 2015-2025 : trois mesures de la baisse, selon la composition retenue",
+   "montre": "Trois mesures de la même baisse : observée ; plus forte à la répartition entre classes de 2015, parce qu'à 15 ans moins d'élèves sont encore au collège ; revenue près du niveau observé à la composition de 2015 pour la classe, le sexe et la famille. Ces calculs décrivent, ils n'attribuent pas de cause.",
    "source": "OCDE, bases PISA 2015 et 2025 (données individuelles) ; calcul de l'auteur (valeurs plausibles, poids répliqués)",
-   "precaution": "Baisse du score moyen, en points. Standardisation descriptive (scores de 2025, répartition entre classes de 2015) : ni « la vraie baisse », ni l'effet du redoublement."
+   "precaution": "Baisse du score moyen, en points. Une baisse observée et deux standardisations descriptives, trois questions : aucune n'est « la vraie baisse », aucune ne mesure l'effet du redoublement."
   },
   {
    "id": "seconde",

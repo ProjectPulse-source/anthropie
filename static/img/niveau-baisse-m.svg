@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 605" role="img" font-variant-numeric="tabular-nums" aria-labelledby="niv-bm-t niv-bm-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 639" role="img" font-variant-numeric="tabular-nums" aria-labelledby="niv-bm-t niv-bm-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
 <title id="niv-bm-t">PISA, 2015-2025 : la France parmi les 38 pays de l'OCDE</title><desc id="niv-bm-d">Pour chaque domaine, variation du score moyen PISA de 2015 à 2025 des 38 pays de l'OCDE, France en orange. Lecture : France −43 points, médiane −24, 11e plus forte baisse. Mathématiques : France −35, médiane −22, 8e plus forte baisse. Sciences : France −12, médiane −5, 15e plus forte baisse.</desc>
-<rect width="300" height="605" fill="#ffffff"/>
+<rect width="300" height="639" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">PISA, 2015-2025 : la France</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">parmi les 38 pays de l'OCDE</text>
 <rect x="0" y="78" width="22" height="12" fill="#184f95" opacity="0.14"/>
@@ -9,7 +9,7 @@
 <circle cx="11" cy="104" r="6" fill="#eb6834"/>
 <text x="30" y="109" font-size="13.5" fill="#55524f">France · gris : autres pays</text>
 <text x="0" y="150" font-size="15" font-weight="600" fill="#26262f">Compréhension de l'écrit</text>
-<text x="0" y="168" font-size="13.5" fill="#eb6834">France −43 points · 11ᵉ baisse sur 38</text>
+<text x="0" y="168" font-size="13.5" fill="#eb6834">France −43 · 11ᵉ plus forte baisse estimée</text>
 <rect x="92.9" y="178" width="92.5" height="24" fill="#184f95" opacity="0.14"/>
 <line x1="154.6" y1="178" x2="154.6" y2="202" stroke="#184f95" stroke-width="1.6"/>
 <line x1="228.9" y1="176" x2="228.9" y2="204" stroke="#55524f"/>
@@ -52,7 +52,7 @@
 <circle cx="367.0" cy="184.0" r="3" fill="#8a8781" opacity="0.75"/>
 <circle cx="93.3" cy="190" r="6.5" fill="#eb6834" stroke="#ffffff" stroke-width="1.5"/>
 <text x="0" y="238" font-size="15" font-weight="600" fill="#26262f">Culture mathématique</text>
-<text x="0" y="256" font-size="13.5" fill="#eb6834">France −35 points · 8ᵉ baisse sur 38</text>
+<text x="0" y="256" font-size="13.5" fill="#eb6834">France −35 · 8ᵉ plus forte baisse estimée</text>
 <rect x="133.7" y="266" width="52.1" height="24" fill="#184f95" opacity="0.14"/>
 <line x1="159.8" y1="266" x2="159.8" y2="290" stroke="#184f95" stroke-width="1.6"/>
 <line x1="228.9" y1="264" x2="228.9" y2="292" stroke="#55524f"/>
@@ -95,7 +95,7 @@
 <circle cx="358.6" cy="272.0" r="3" fill="#8a8781" opacity="0.75"/>
 <circle cx="117.6" cy="278" r="6.5" fill="#eb6834" stroke="#ffffff" stroke-width="1.5"/>
 <text x="0" y="326" font-size="15" font-weight="600" fill="#26262f">Culture scientifique</text>
-<text x="0" y="344" font-size="13.5" fill="#eb6834">France −12 points · 15ᵉ baisse sur 38</text>
+<text x="0" y="344" font-size="13.5" fill="#eb6834">France −12 · 15ᵉ plus forte baisse estimée</text>
 <rect x="165.0" y="354" width="67.7" height="24" fill="#184f95" opacity="0.14"/>
 <line x1="211.6" y1="354" x2="211.6" y2="378" stroke="#184f95" stroke-width="1.6"/>
 <line x1="228.9" y1="352" x2="228.9" y2="380" stroke="#55524f"/>
@@ -150,7 +150,9 @@
 <text x="0" y="506.0" font-size="13.5" fill="#55524f">Chaque point est un pays membre de</text>
 <text x="0" y="523.0" font-size="13.5" fill="#55524f">l'OCDE. Bande bleue : la moitié</text>
 <text x="0" y="540.0" font-size="13.5" fill="#55524f">centrale des pays (du premier au</text>
-<text x="0" y="557.0" font-size="13.5" fill="#55524f">troisième quartile).</text>
-<text x="0" y="578.0" font-size="13.5" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 ·</text>
-<text x="0" y="595.0" font-size="13.5" fill="#96928f">stephane-lalut.com</text>
+<text x="0" y="557.0" font-size="13.5" fill="#55524f">troisième quartile). Rangs sur</text>
+<text x="0" y="574.0" font-size="13.5" fill="#55524f">estimations ponctuelles ; différences</text>
+<text x="0" y="591.0" font-size="13.5" fill="#55524f">entre pays non testées.</text>
+<text x="0" y="612.0" font-size="13.5" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 ·</text>
+<text x="0" y="629.0" font-size="13.5" fill="#96928f">stephane-lalut.com</text>
 </svg>

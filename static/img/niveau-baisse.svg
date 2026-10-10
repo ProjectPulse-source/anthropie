@@ -65,7 +65,7 @@
 <circle cx="839.9" cy="79.0" r="3" fill="#8a8781" opacity="0.75"/>
 <circle cx="329.2" cy="84" r="6" fill="#eb6834" stroke="#ffffff" stroke-width="1.5"/>
 <text x="329.2" y="68" font-size="10.5" fill="#eb6834" text-anchor="middle" font-weight="600">France −43</text>
-<text x="0" y="104" font-size="10" fill="#55524f">11ᵉ baisse sur 38</text>
+<text x="0" y="104" font-size="10" fill="#55524f">11ᵉ plus forte baisse estimée sur 38</text>
 <text x="0" y="158" font-size="11.5" fill="#26262f" font-weight="600">Culture mathématique</text>
 <rect x="404.5" y="143" width="97.2" height="22" fill="#184f95" opacity="0.14"/>
 <line x1="453.3" y1="143" x2="453.3" y2="165" stroke="#184f95" stroke-width="1.6"/>
@@ -108,7 +108,7 @@
 <circle cx="824.2" cy="149.0" r="3" fill="#8a8781" opacity="0.75"/>
 <circle cx="374.5" cy="154" r="6" fill="#eb6834" stroke="#ffffff" stroke-width="1.5"/>
 <text x="374.5" y="138" font-size="10.5" fill="#eb6834" text-anchor="middle" font-weight="600">France −35</text>
-<text x="0" y="174" font-size="10" fill="#55524f">8ᵉ baisse sur 38</text>
+<text x="0" y="174" font-size="10" fill="#55524f">8ᵉ plus forte baisse estimée sur 38</text>
 <text x="0" y="228" font-size="11.5" fill="#26262f" font-weight="600">Culture scientifique</text>
 <rect x="462.9" y="213" width="126.4" height="22" fill="#184f95" opacity="0.14"/>
 <line x1="549.9" y1="213" x2="549.9" y2="235" stroke="#184f95" stroke-width="1.6"/>
@@ -151,9 +151,9 @@
 <circle cx="987.3" cy="219.0" r="3" fill="#8a8781" opacity="0.75"/>
 <circle cx="514.2" cy="224" r="6" fill="#eb6834" stroke="#ffffff" stroke-width="1.5"/>
 <text x="514.2" y="208" font-size="10.5" fill="#eb6834" text-anchor="middle" font-weight="600">France −12</text>
-<text x="0" y="244" font-size="10" fill="#55524f">15ᵉ baisse sur 38</text>
+<text x="0" y="244" font-size="10" fill="#55524f">15ᵉ plus forte baisse estimée sur 38</text>
 <line x1="0" y1="294.0" x2="720" y2="294.0" stroke="#dcd8d3"/>
 <text x="0" y="307.0" font-size="9" fill="#55524f">OCDE, PISA 2025, volume I, tableaux I.B1.2a.36 à 38 (variation du score moyen entre 2015 et 2025)</text>
-<text x="0" y="319.0" font-size="9" fill="#55524f">Chaque point est un pays membre de l'OCDE. Bande bleue : la moitié centrale des pays (du premier au troisième quartile).</text>
+<text x="0" y="319.0" font-size="9" fill="#55524f">Chaque point est un pays membre de l'OCDE. Bande bleue : la moitié centrale des pays (du premier au troisième quartile). Rangs sur estimations ponctuelles ; différences entre pays non testées.</text>
 <text x="0" y="331.0" font-size="9" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/le-niveau-des-eleves-baisse-t-il/</text>
 </svg>

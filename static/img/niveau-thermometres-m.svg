@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 771" role="img" font-variant-numeric="tabular-nums" aria-labelledby="niv-tm-t niv-tm-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 788" role="img" font-variant-numeric="tabular-nums" aria-labelledby="niv-tm-t niv-tm-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
 <title id="niv-tm-t">Quatre évaluations, leur dernière variation en France</title><desc id="niv-tm-d">Tableau, dernière variation de chaque évaluation en France, dans sa propre échelle : PIRLS, compréhension de l'écrit (CM1, 2016-2021) +3 points, non significative ; TIMSS, mathématiques (CM1, 2019-2023) −1 points, non significative ; TIMSS, mathématiques (quatrième, 2019-2023) −4 points, non significative ; Test de positionnement, mathématiques (entrée en seconde GT, 2021-2024) +7 points, hausse observée, sans test ; Test de positionnement, français (entrée en seconde GT, 2021-2024) −4 points, baisse observée, sans test ; PISA, culture mathématique (15 ans, 2022-2025) −16 points, baisse significative ; PISA, compréhension de l'écrit (15 ans, 2022-2025) −18 points, baisse significative.</desc>
-<rect width="300" height="771" fill="#ffffff"/>
+<rect width="300" height="788" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Quatre évaluations, leur</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">dernière variation en France</text>
 <text x="0" y="100" font-size="14.5" fill="#26262f">PIRLS, compréhension de l'écrit</text>
@@ -45,9 +45,10 @@
 <text x="0" y="634.0" font-size="13.5" fill="#55524f">seconde, NI 26-22) ; OCDE (PISA 2025)</text>
 <text x="0" y="655.0" font-size="13.5" fill="#55524f">Chaque évaluation a son échelle : les</text>
 <text x="0" y="672.0" font-size="13.5" fill="#55524f">points ne se comparent pas d'une ligne</text>
-<text x="0" y="689.0" font-size="13.5" fill="#55524f">à l'autre. Point plein :</text>
-<text x="0" y="706.0" font-size="13.5" fill="#55524f">significativité publiée ; point creux</text>
-<text x="0" y="723.0" font-size="13.5" fill="#55524f">: test de seconde, sans test publié.</text>
-<text x="0" y="744.0" font-size="13.5" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 ·</text>
-<text x="0" y="761.0" font-size="13.5" fill="#96928f">stephane-lalut.com</text>
+<text x="0" y="689.0" font-size="13.5" fill="#55524f">à l'autre. Point plein : test publié,</text>
+<text x="0" y="706.0" font-size="13.5" fill="#55524f">significatif ou non ; point creux :</text>
+<text x="0" y="723.0" font-size="13.5" fill="#55524f">aucun test publié. Couleur : sens de</text>
+<text x="0" y="740.0" font-size="13.5" fill="#55524f">la variation.</text>
+<text x="0" y="761.0" font-size="13.5" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 ·</text>
+<text x="0" y="778.0" font-size="13.5" fill="#96928f">stephane-lalut.com</text>
 </svg>

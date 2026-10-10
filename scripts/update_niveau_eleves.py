@@ -161,6 +161,9 @@ def mutation(c):
         c["p6"] = json.loads(json.dumps(c["p6"]))
         x = c["p6"]["N22"]["central"]["mathematiques"]
         x["rec"] = x["m25"] + 8
+    elif m == "ocde_moyenne":  # la moyenne de l'OCDE perdrait plus que la France en sciences
+        c["P"] = json.loads(json.dumps(c["P"]))
+        c["P"]["sciences"]["ocde35_dif2015"] = c["P"]["sciences"]["dif"]["2015"]["v"] - 5
     elif m == "conjointe_forte":  # a composition conjointe de 2015, la baisse serait nettement plus forte qu'observee
         c["p6"] = json.loads(json.dumps(c["p6"]))
         x = c["p6"]["N22"]["central"]["mathematiques"]
@@ -251,6 +254,9 @@ def gardes(c):
         g(abs(q["4"][0] - q["1"][0]) < 0.5 * abs(q["tous"][0]) and all(q[k][0] < 0 for k in ("1", "2", "3", "4")),
           "données individuelles, %s : « à peu près autant chez les favorisés que chez les défavorisés »" % d)
     g(all(abs(v) < 0.1 for v in p5["N21"].values()), "données individuelles : l'effort ne rend compte que de « moins d'un dixième » de la baisse")
+    # contre-expertise de la page (10/10/2026, P1) : « la France perd davantage de points que la moyenne de l'OCDE »
+    g(all(P[d]["dif"]["2015"]["v"] < P[d]["ocde35_dif2015"] for d in DOM),
+      "PISA 2015-2025 : la France perd davantage de points que la moyenne de l'OCDE dans les trois domaines")
     # protocole 6 : composition conjointe (classe, sexe, diplôme des parents, origine) ; médiane par quart social
     p6 = c["p6"]
     B7 = c["p7"]["B"]
@@ -524,9 +530,9 @@ def tete(fid, titre, desc, h):
             '<text x="0" y="18" font-size="14" font-weight="600" fill="%s">%s</text>' % (INK, esc(titre))]
 
 
-def pied(e, y0, source, note):
+def pied(e, y0, source, note, licence=None):
     e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y0, W, y0, GRID))
-    for k, (tx, col) in enumerate([(source, INK2), (note, INK2), (LICENCE, MUTED)]):
+    for k, (tx, col) in enumerate([(source, INK2), (note, INK2), (licence or LICENCE, MUTED)]):
         e.append('<text x="0" y="%.1f" font-size="9" fill="%s">%s</text>' % (y0 + 13 + 12 * k, col, esc(tx)))
     e.append("</svg>")
     return "\n".join(e)
@@ -536,17 +542,17 @@ FIG = {
     "baisse": dict(
         titre="PISA, 2015-2025 : la France parmi les {n_ocde} pays de l'OCDE",
         source="OCDE, PISA 2025, volume I, tableaux I.B1.2a.36 à 38 (variation du score moyen entre 2015 et 2025)",
-        note="Chaque point est un pays membre de l'OCDE. Bande bleue : la moitié centrale des pays (du premier au troisième quartile).",
+        note="Chaque point est un pays membre de l'OCDE. Bande bleue : la moitié centrale des pays (du premier au troisième quartile). Rangs sur estimations ponctuelles ; différences entre pays non testées.",
         montre="En lecture et en sciences, la baisse française est dans la moitié centrale des pays de l'OCDE, la lecture pratiquement à sa frontière ; en mathématiques, elle compte, sur les estimations ponctuelles, parmi le quart des plus fortes."),
     "composition": dict(
-        titre="PISA 2015-2025 : baisse observée et baisse à la répartition entre classes de 2015",
+        titre="PISA 2015-2025 : trois mesures de la baisse, selon la composition retenue",
         source="OCDE, bases PISA 2015 et 2025 (données individuelles) ; calcul de l'auteur (valeurs plausibles, poids répliqués)",
-        note="Baisse du score moyen, en points. Standardisation descriptive (scores de 2025, répartition entre classes de 2015) : ni « la vraie baisse », ni l'effet du redoublement.",
-        montre="Dans les trois domaines, la baisse est plus forte quand on applique à 2025 la répartition entre classes de 2015 : à 15 ans, moins d'élèves sont encore au collège. Ajustée aussi du sexe, du diplôme des parents et de l'origine migratoire, elle revient au niveau observé ; ces calculs décrivent, ils n'attribuent pas de cause."),
+        note="Baisse du score moyen, en points. Une baisse observée et deux standardisations descriptives, trois questions : aucune n'est « la vraie baisse », aucune ne mesure l'effet du redoublement.",
+        montre="Trois mesures de la même baisse : observée ; plus forte à la répartition entre classes de 2015, parce qu'à 15 ans moins d'élèves sont encore au collège ; revenue près du niveau observé à la composition de 2015 pour la classe, le sexe et la famille. Ces calculs décrivent, ils n'attribuent pas de cause."),
     "thermometres": dict(
         titre="Quatre évaluations, leur dernière variation en France",
         source="IEA (TIMSS 2023, rapport international) ; DEPP (PIRLS 2021, NI 23-21 ; test de positionnement de seconde, NI 26-22) ; OCDE (PISA 2025)",
-        note="Chaque évaluation a son échelle : les points ne se comparent pas d'une ligne à l'autre. Point plein : significativité publiée ; point creux : test de seconde, sans test publié.",
+        note="Chaque évaluation a son échelle : les points ne se comparent pas d'une ligne à l'autre. Point plein : test publié, significatif ou non ; point creux : aucun test publié. Couleur : sens de la variation.",
         montre="Sur leurs dernières périodes, différentes, PISA à 15 ans baisse significativement ; PIRLS en CM1 et TIMSS en CM1 et en quatrième ne mettent pas en évidence de baisse significative ; le score du test d'entrée en seconde monte en mathématiques, sans test publié. Ces écarts de significativité ne prouvent pas que les tendances diffèrent."),
     "sommet": dict(
         titre="Les élèves en difficulté et les meilleurs élèves, 2015 et 2025",
@@ -607,31 +613,48 @@ def fig_thermometres(c, A):
     return pied(e, h + 2, t["source"], t["note"])
 
 
+def baisses_composition(c):
+    """Trois mesures de la baisse 2015-2025 par domaine : observée, à la répartition entre classes de 2015 (protocole 5),
+    à la composition conjointe de 2015 -- classe, sexe, diplôme des parents, origine (protocole 6)."""
+    N, J = c["p5"]["N18"], c["p6"]["N22"]["central"]
+    out = []
+    for d, lib in (("mathematiques", "Mathématiques"), ("lecture", "Compréhension de l'écrit"), ("sciences", "Culture scientifique")):
+        m15 = N[d]["m15"]
+        out.append((lib, m15 - N[d]["m25"], m15 - N[d]["rec"], m15 - J[d]["rec"]))
+    return out
+
+
+SERIES_COMPO = (("Baisse observée", GRIS), ("À la répartition entre classes de 2015", ORANGE),
+                ("À la composition de 2015 (classe, sexe, famille)", GRIS_CLAIR))
+
+
+def desc_composition(B):
+    return "Baisse du score moyen PISA de 2015 à 2025 : observée, à la répartition entre classes de 2015, puis à la composition de 2015 pour la classe, le sexe et la famille : " + " ; ".join(
+        "%s %s, %s, %s points" % (lib.lower(), nb(a, 0), nb(b, 0), nb(cj, 0)) for lib, a, b, cj in B) + "."
+
+
 def fig_composition(c, A):
     t = FIG["composition"]
-    N = c["p5"]["N18"]
-    doms = (("mathematiques", "Mathématiques"), ("lecture", "Compréhension de l'écrit"), ("sciences", "Culture scientifique"))
-    desc = "Baisse du score moyen PISA de 2015 à 2025, observée puis avec la répartition entre classes de 2015 : " + " ; ".join(
-        "%s %s points, %s" % (lib.lower(), nb(N[d]["m15"] - N[d]["m25"], 0), nb(N[d]["m15"] - N[d]["rec"], 0)) for d, lib in doms) + "."
-    h = 236
-    e = tete("niv-c", t["titre"], desc, h + 52)
+    B = baisses_composition(c)
+    h = 300
+    e = tete("niv-c", t["titre"], desc_composition(B), h + 52)
     X0, X1, vmax = 200, 680, 60
     sx = lambda v: X0 + (X1 - X0) * v / vmax
-    for k, (lib, col) in enumerate((("Baisse observée", GRIS), ("Avec la répartition entre classes de 2015", ORANGE))):
-        x = X0 + 150 * k
+    for k, (lib, col) in enumerate(SERIES_COMPO):
+        x = (0, 120, 360)[k]
         e.append('<rect x="%d" y="32" width="10" height="10" fill="%s"/>' % (x, col))
         e.append('<text x="%d" y="41" font-size="10.5" fill="%s">%s</text>' % (x + 14, INK2, esc(lib)))
-    y_bas = 58 + 3 * 52
+    y_bas = 58 + 3 * 72
     for gv in range(0, vmax + 1, 10):
         e.append('<line x1="%.1f" y1="54" x2="%.1f" y2="%d" stroke="%s" stroke-width="0.6"/>' % (sx(gv), sx(gv), y_bas, GRID))
         e.append('<text x="%.1f" y="%d" font-size="10" fill="%s" text-anchor="middle">%d</text>' % (sx(gv), y_bas + 14, MUTED, gv))
-    for i, (d, lib) in enumerate(doms):
-        y = 62 + 52 * i
-        e.append('<text x="0" y="%d" font-size="11.5" fill="%s">%s</text>' % (y + 18, INK, esc(lib)))
-        for k, (v, col) in enumerate(((N[d]["m15"] - N[d]["m25"], GRIS), (N[d]["m15"] - N[d]["rec"], ORANGE))):
+    for i, (lib, a, b, cj) in enumerate(B):
+        y = 62 + 72 * i
+        e.append('<text x="0" y="%d" font-size="11.5" fill="%s">%s</text>' % (y + 26, INK, esc(lib)))
+        for k, (v, (_, col)) in enumerate(zip((a, b, cj), SERIES_COMPO)):
             yy = y + 20 * k
             e.append('<rect x="%d" y="%d" width="%.1f" height="16" fill="%s"/>' % (X0, yy, sx(v) - X0, col))
-            e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" font-weight="600">%s</text>' % (sx(v) + 5, yy + 12, col, nb(v, 0)))
+            e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" font-weight="600">%s</text>' % (sx(v) + 5, yy + 12, INK2 if col == GRIS_CLAIR else col, nb(v, 0)))
     return pied(e, h + 2, t["source"], t["note"])
 
 
@@ -676,7 +699,7 @@ def fig_baisse(c, A):
         e.append('<circle cx="%.1f" cy="%d" r="6" fill="%s" stroke="#ffffff" stroke-width="1.5"/>' % (sx(fr), y, ORANGE))
         e.append('<text x="%.1f" y="%d" font-size="10.5" fill="%s" text-anchor="middle" font-weight="600">France %s</text>'
                  % (sx(fr), y - 16, ORANGE, nb(fr, 0)))
-        e.append('<text x="0" y="%d" font-size="10" fill="%s">%sᵉ baisse sur %s</text>' % (y + 20, INK2, n2["rang"], n2["n"]))
+        e.append('<text x="0" y="%d" font-size="10" fill="%s">%sᵉ plus forte baisse estimée sur %s</text>' % (y + 20, INK2, n2["rang"], n2["n"]))
     return pied(e, h + 2, t["source"], t["note"])
 
 
@@ -744,7 +767,7 @@ def fig_seconde(c, A):
         e.append('<rect x="%.1f" y="%d" width="%.1f" height="22" fill="%s"/>' % (x, y, abs(sx(v) - sx(0)), ORANGE if pisa else BLEU))
         e.append('<text x="%.1f" y="%d" font-size="10.5" fill="%s" text-anchor="%s">%s%s</text>'
                  % (sx(v) + (6 if v > 0 else -6), y + 15, INK, "start" if v > 0 else "end", "+" if v > 0 else "", nb(v, 0)))
-    return pied(e, h + 2, t["source"], t["note"])
+    return pied(e, h + 2, t["source"], t["note"], CREDIT_SECONDE)
 
 
 # ------------------------------------------------------------------ figures mobiles (refonte du 10/10/2026)
@@ -753,6 +776,8 @@ def fig_seconde(c, A):
 # avec la version détaillée contrôlée par parite_mobile, sur les sorties.
 WM, FS_MIN = 300, 13.5
 LICENCE_M = "Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com"
+# Figure seconde : l'écart standardisé est un calcul de la DEPP, repris tel quel (contre-expertise de la page, P2 6.2)
+CREDIT_SECONDE = "Graphique Stéphane Lalut d'après le calcul de la DEPP (NI 26-40, fig. 11 web), CC BY 4.0"
 
 
 def coupe(s, n):
@@ -777,10 +802,10 @@ def tete_m(fid, titre, desc):
     return e, 20 + 22 * len(lignes)
 
 
-def finir_m(e, y0, source, note):
+def finir_m(e, y0, source, note, licence=None):
     e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y0, WM, y0, GRID))
     y = y0 + 4
-    for tx, col in ((source, INK2), (note, INK2), (LICENCE_M, MUTED)):
+    for tx, col in ((source, INK2), (note, INK2), (licence or LICENCE_M, MUTED)):
         for ligne in coupe(tx, 38):
             y += 17
             e.append('<text x="0" y="%.1f" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, col, esc(ligne)))
@@ -833,7 +858,7 @@ def fig_baisse_m(c, A):
         y += 34
         e.append('<text x="0" y="%d" font-size="15" font-weight="600" fill="%s">%s</text>' % (y, INK, esc(LIB[d])))
         y += 18
-        e.append('<text x="0" y="%d" font-size="%s" fill="%s">France %s points · %sᵉ baisse sur %s</text>' % (y, FS_MIN, ORANGE, nb(n2["france"], 0), n2["rang"], n2["n"]))
+        e.append('<text x="0" y="%d" font-size="%s" fill="%s">France %s · %sᵉ plus forte baisse estimée</text>' % (y, FS_MIN, ORANGE, nb(n2["france"], 0), n2["rang"]))
         y += 22
         e.append('<rect x="%.1f" y="%d" width="%.1f" height="24" fill="%s" opacity="0.14"/>' % (sx(n2["q1"]), y - 12, sx(n2["q3"]) - sx(n2["q1"]), BLEU))
         e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="1.6"/>' % (sx(n2["mediane"]), y - 12, sx(n2["mediane"]), y + 12, BLEU))
@@ -858,26 +883,25 @@ def fig_baisse_m(c, A):
 
 def fig_composition_m(c, A):
     t = FIG["composition"]
-    N = c["p5"]["N18"]
-    desc = html.unescape(re.search(r"<desc[^>]*>(.*?)</desc>", fig_composition(c, A)).group(1))
-    doms = (("mathematiques", "Mathématiques"), ("lecture", "Compréhension de l'écrit"), ("sciences", "Culture scientifique"))
-    e, y = tete_m("niv-cm", "PISA 2015-2025 : baisse observée et à la répartition entre classes de 2015", desc)
+    B = baisses_composition(c)
+    e, y = tete_m("niv-cm", "PISA 2015-2025 : trois mesures de la baisse", desc_composition(B))
     sx = lambda v: 220 * v / 60.0
-    for lib, col in (("Baisse observée", GRIS), ("À la répartition entre classes de 2015", ORANGE)):
+    for lib, col in SERIES_COMPO:
         y += 22
         e.append('<rect x="0" y="%d" width="14" height="14" fill="%s"/>' % (y - 12, col))
-        for k, l2 in enumerate(coupe(lib, 32)):
+        lignes = coupe(lib, 32)
+        for k, l2 in enumerate(lignes):
             e.append('<text x="22" y="%d" font-size="%s" fill="%s">%s</text>' % (y + 18 * k, FS_MIN, INK2, esc(l2)))
-        y += 18 * (len(coupe(lib, 32)) - 1)
+        y += 18 * (len(lignes) - 1)
     y += 8
-    for d, lib in doms:
+    for lib, a, b, cj in B:
         y += 34
         e.append('<text x="0" y="%d" font-size="15" font-weight="600" fill="%s">%s</text>' % (y, INK, esc(lib)))
-        for v, col in ((N[d]["m15"] - N[d]["m25"], GRIS), (N[d]["m15"] - N[d]["rec"], ORANGE)):
-            y += 10
-            e.append('<rect x="0" y="%d" width="%.1f" height="20" fill="%s"/>' % (y, sx(v), col))
-            e.append('<text x="%.1f" y="%d" font-size="15" font-weight="600" fill="%s">%s</text>' % (sx(v) + 6, y + 15, col, nb(v, 0)))
-            y += 20
+        for v, (_, col) in zip((a, b, cj), SERIES_COMPO):
+            y += 8
+            e.append('<rect x="0" y="%d" width="%.1f" height="18" fill="%s"/>' % (y, sx(v), col))
+            e.append('<text x="%.1f" y="%d" font-size="15" font-weight="600" fill="%s">%s</text>' % (sx(v) + 6, y + 14, INK2 if col == GRIS_CLAIR else col, nb(v, 0)))
+            y += 18
     return finir_m(e, y + 20, t["source"], t["note"])
 
 
@@ -933,7 +957,7 @@ def fig_seconde_m(c, A):
                  % (sx(v) + (6 if v > 0 else -6), y + 15, INK, "start" if v > 0 else "end", "+" if v > 0 else "", nb(v, 0)))
         e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s"/>' % (sx(0), y - 3, sx(0), y + 23, INK2))  # zéro : dans la bande de la barre seulement, il ne barre aucun libellé
         y += 20
-    return finir_m(e, y + 22, t["source"], t["note"])
+    return finir_m(e, y + 22, t["source"], t["note"], CREDIT_SECONDE)
 
 
 def parite_mobile(figs):

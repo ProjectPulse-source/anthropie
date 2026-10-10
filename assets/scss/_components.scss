@@ -448,6 +448,15 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
 // ----- Figure du ciseau (page /cout-de-la-dette-publique/) -----
 .figure-ciseau { margin: 32px 0; }
 .figure-ciseau img { width: 100%; max-width: 720px; height: auto; display: block; }
+// Téléphone (10/10/2026, contre-expertise de la page « Niveau », P1 de recette à 320 px) : les figures composées pour
+// le téléphone (<picture>, versions -m) prennent presque toute la largeur — 12 px de marge au lieu des 52 px du
+// conteneur (.site-main 20 px + .home-section 2 rem) — pour qu'aucun texte n'y descende sous 12 px affichés, même à
+// 320 px. Marge exacte, jamais 100vw (règle 13 du CLAUDE.md du site).
+@media (max-width: 600px) {
+  .figure-ciseau picture { display: block; margin-left: calc(-8px - 2rem); margin-right: calc(-8px - 2rem); }
+  // Plafond : entre 450 et 600 px, la version mobile étirée devenait démesurément haute.
+  .figure-ciseau picture img { max-width: 420px; }
+}
 // ----- Agrandissement d'une figure (static/js/figure-zoom.js) -----
 // Le lecteur qui veut lire une etiquette ou un cartouche n'avait aucun moyen de
 // le faire : les figures sont servies a 720 px et reduites par le CSS (auteur,
