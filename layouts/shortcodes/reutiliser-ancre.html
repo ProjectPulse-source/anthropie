@@ -4,4 +4,5 @@
        lecteur venu chercher une figure ou une citation ne sait pas qu'elles
        existent. Arbitrage PRO-20260921-MAQUETTES-REUTILISER, point 6. */ -}}
 {{- $isEn := eq .Page.Lang "en" -}}
-<p><a class="reutiliser-ancre" href="#reutiliser">↓ {{ if $isEn }}Charts, data and citations to reuse{{ else }}Graphiques, données et citations à réutiliser{{ end }}</a></p>
+{{- /* Libellé court sur téléphone (10/10/2026) : le long passait sur deux lignes dans un cadre de 83 px, avant la première preuve. */ -}}
+<p class="reutiliser-ancre-ligne"><a class="reutiliser-ancre" href="#reutiliser">↓ <span class="ra-long">{{ if $isEn }}Charts, data and citations to reuse{{ else }}Graphiques, données et citations à réutiliser{{ end }}</span><span class="ra-court">{{ if $isEn }}Reuse this page{{ else }}Réutiliser cette page{{ end }}</span></a></p>

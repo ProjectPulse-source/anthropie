@@ -1,0 +1,19 @@
+{{- /* sommaire-ressource.html — « Dans cette page », replié, sur toute ressource d'au moins cinq sections
+       (décision de gabarit du 10/10/2026, refonte pilote de la page Langue ; évaluation OPTIMUM-04, point C).
+       Replié en une ligne : il ne retarde pas la première preuve sur téléphone (P1 des contre-expertises).
+       La présence vient du texte : les titres de niveau 2 de la page, dans l'ordre (même collecte que le sommaire
+       de /quest-ce-que-lanthropie/). Ancres écrites telles quelles (safeHTMLAttr) : encodées, l'audit des liens
+       du déploiement les jugeait sans cible (01/10/2026). */ -}}
+{{- if .Params.ressource -}}
+{{- $isEn := eq .Lang "en" -}}
+{{- $titres := slice -}}
+{{- range .Fragments.Headings -}}
+  {{- if eq .Level 2 }}{{ $titres = $titres | append . }}{{ else }}{{ range .Headings }}{{ if eq .Level 2 }}{{ $titres = $titres | append . }}{{ end }}{{ end }}{{ end -}}
+{{- end -}}
+{{- if ge (len $titres) 5 }}
+<details class="sommaire-page">
+  <summary>{{ if $isEn }}On this page · {{ len $titres }} sections{{ else }}Dans cette page · {{ len $titres }} sections{{ end }}</summary>
+  <ol>{{ range $titres }}<li><a {{ printf `href="#%s"` .ID | safeHTMLAttr }}>{{ .Title | safeHTML }}</a></li>{{ end }}</ol>
+</details>
+{{- end -}}
+{{- end -}}

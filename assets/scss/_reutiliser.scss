@@ -170,6 +170,34 @@
   &:focus-visible { outline: 2px solid var(--color-pivot); outline-offset: 2px; }
 }
 
+.reutiliser-ancre .ra-court { display: none; }
+
+// Téléphone (décision de gabarit du 10/10/2026, mesurée sur Langue et Dette à 390 px) : les informations de service
+// cèdent la place à la première preuve — le bouton devient un lien d'une ligne (83 → environ 30 px), la ligne des
+// références resserre son interligne. Rien n'est retiré : mêmes liens, mêmes références.
+@media (max-width: 600px) {
+  .reutiliser-ancre-ligne { margin: 0 0 0.55rem; }
+  .reutiliser-ancre {
+    display: inline; margin: 0; padding: 0; border: 0;
+    font-size: 0.85rem; text-decoration: underline; text-underline-offset: 2px;
+    .ra-long { display: none; }
+    .ra-court { display: inline; }
+  }
+  .donnees-ligne { line-height: 1.45; margin-bottom: 0.9rem; }
+}
+
+// Sommaire replié des ressources (partials/sommaire-ressource.html).
+.sommaire-page {
+  margin: 0 0 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  summary { cursor: pointer; color: var(--color-accent); font-weight: 500; padding: 0.15rem 0; }
+  summary:focus-visible { outline: 2px solid var(--color-pivot); outline-offset: 2px; }
+  ol { margin: 0.4rem 0 0.2rem; padding-left: 1.4rem; line-height: 1.5; }
+  li { margin: 0.15rem 0; }
+  a { color: var(--color-text-body); }
+}
+
 .fig-actions {
   // Marge basse : sans elle, la ligne colle au paragraphe qui suit la figure
   // (constate sur la page en ligne le 2026-09-21).
