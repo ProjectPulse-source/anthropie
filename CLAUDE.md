@@ -248,6 +248,12 @@ contrôle.
     ligne des références resserre son interligne. **Aucune pleine largeur en `100vw`** (la barre de défilement d'un
     navigateur de bureau fait déborder ou rogner) : marge négative exacte du conteneur, `calc(-20px - 2rem)`. La barre
     collante garde la pastille du dossier (décision de l'auteur du 06/10) : la compacter se décide avec lui.
+14. **La divergence entre indicateurs est une information à expliquer, pas encore une explication** (contre-expertise
+    de la page « Niveau », 10/10/2026). Grille de contrôle, pas plan : résultat → instrument → population et temps →
+    inférence → mécanisme encore inconnu. Une baisse significative d'un côté et une évolution non significative de
+    l'autre **ne prouvent pas** que les tendances diffèrent (« seul X recule » est interdit sans test de la différence) ;
+    une standardisation est descriptive (« à la répartition de telle année »), jamais « la vraie baisse » ni l'effet
+    d'une cause ; un indice déclaré non comparable dans le temps ne fonde aucune tendance.
 
 ## Couche pédagogique — `/enseignants/` (actée par l'auteur, 2026-09-30)
 
