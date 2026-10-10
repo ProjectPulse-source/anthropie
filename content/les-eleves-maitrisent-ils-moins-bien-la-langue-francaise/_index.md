@@ -70,7 +70,7 @@ Oui. La mesure en est une même dictée de 67&nbsp;mots, donnée à des élèves
 <figure class="figure-ciseau">
   <picture>
     <source media="(max-width: 600px)" srcset="/img/langue-dictee-m.svg" width="300" height="689">
-    <img src="/img/langue-dictee.svg" alt="Barres empilées, nombre moyen d'erreurs à la même dictée de CM2 : en 1987, {{< lan-val "lex87" >}} erreurs lexicales et {{< lan-val "aut87" >}} autres erreurs, {{< lan-val "tot87" >}} au total ; en 2007, {{< lan-val "lex07" >}} et {{< lan-val "aut07" >}}, {{< lan-val "tot07" >}} ; en 2015, {{< lan-val "lex15" >}} et {{< lan-val "aut15" >}}, {{< lan-val "tot15" >}} ; en 2021, {{< lan-val "lex21" >}} et {{< lan-val "aut21" >}}, {{< lan-val "tot21" >}}." width="720" height="412" loading="lazy">
+    <img src="/img/langue-dictee.svg" alt="Barres empilées, nombre moyen d'erreurs à la même dictée de CM2 : en 1987, {{< lan-val "lex87" >}} erreurs lexicales et {{< lan-val "aut87" >}} autres erreurs, {{< lan-val "tot87" >}} au total ; en 2007, {{< lan-val "lex07" >}} et {{< lan-val "aut07" >}}, {{< lan-val "tot07" >}} ; en 2015, {{< lan-val "lex15" >}} et {{< lan-val "aut15" >}}, {{< lan-val "tot15" >}} ; en 2021, {{< lan-val "lex21" >}} et {{< lan-val "aut21" >}}, {{< lan-val "tot21" >}}." width="720" height="427" loading="lazy">
   </picture>
   <figcaption>Nombre moyen d'erreurs à la même dictée de 67 mots, élèves de CM2 du public (DEPP, Note d'Information 22.37).</figcaption>
 </figure>
@@ -103,8 +103,8 @@ La frise les détaille&nbsp;: la couleur donne le sens observé, le trait plein 
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/langue-chronologie-m.svg" width="300" height="1076">
-    <img src="/img/langue-chronologie.svg" alt="Frise de 1985 à 2025, une ligne par mesure de la langue des élèves, avec le sens de chaque intervalle et un repère en {{< lan-val "smart_seuil" >}}, année où plus de la moitié des 12-17 ans ont un smartphone. Reculs significatifs avant ce repère : dictée de CM2 de 1987 à 2007, lecture en CM2 de 1997 à 2007, temps de lecture pour le plaisir à 15 ans de 2000 à 2009. PISA, compréhension de l'écrit, sans baisse significative de 2000 à 2012, en recul significatif de 2012 à 2025. Sur la période récente : PIRLS en CM1 sans évolution significative de 2016 à 2021, CEDRE fin d'école en hausse significative de 2015 à 2021, CEDRE fin de collège sans évolution significative, sixième en hausse puis en léger recul sans test publié." width="720" height="526" loading="lazy">
+    <source media="(max-width: 600px)" srcset="/img/langue-chronologie-m.svg" width="300" height="1094">
+    <img src="/img/langue-chronologie.svg" alt="Frise de 1985 à 2025, une ligne par mesure de la langue des élèves, avec le sens de chaque intervalle et un repère en {{< lan-val "smart_seuil" >}}, année où plus de la moitié des 12-17 ans ont un smartphone. Reculs significatifs avant ce repère : dictée de CM2 de 1987 à 2007, lecture en CM2 de 1997 à 2007, temps de lecture pour le plaisir à 15 ans de 2000 à 2009. PISA, compréhension de l'écrit, sans baisse significative de 2000 à 2012, en recul significatif de 2012 à 2025. Sur la période récente : PIRLS en CM1 sans évolution significative de 2016 à 2021, CEDRE fin d'école en hausse significative de 2015 à 2021, CEDRE fin de collège sans évolution significative, sixième en hausse puis en léger recul sans test publié." width="720" height="541" loading="lazy">
   </picture>
   <figcaption>Sens de chaque intervalle pour onze mesures de la langue des élèves, chacune dans sa propre échelle (DEPP, OCDE, IEA, ministère de la Culture, CREDOC).</figcaption>
 </figure>
@@ -135,7 +135,7 @@ Deux choses reculent l'une après l'autre&nbsp;: d'abord le temps de lecture, en
 <figure class="figure-ciseau">
   <picture>
     <source media="(max-width: 600px)" srcset="/img/langue-plaisir-m.svg" width="300" height="572">
-    <img src="/img/langue-plaisir.svg" alt="Barres, part des élèves qui déclarent ne pas lire pour leur plaisir en 2023 : sixième {{< lan-val "np6" >}} %, quatrième {{< lan-val "np4" >}} %, seconde générale et technologique {{< lan-val "np2gt" >}} %, seconde professionnelle {{< lan-val "np2pro" >}} %, première année de CAP {{< lan-val "npcap" >}} %." width="720" height="306" loading="lazy">
+    <img src="/img/langue-plaisir.svg" alt="Barres, part des élèves qui déclarent ne pas lire pour leur plaisir en 2023 : sixième {{< lan-val "np6" >}} %, quatrième {{< lan-val "np4" >}} %, seconde générale et technologique {{< lan-val "np2gt" >}} %, seconde professionnelle {{< lan-val "np2pro" >}} %, première année de CAP {{< lan-val "npcap" >}} %." width="720" height="321" loading="lazy">
   </picture>
   <figcaption>Part des élèves qui déclarent ne pas lire pour leur plaisir, selon la classe, septembre 2023 (DEPP, Note d'Information 25.66).</figcaption>
 </figure>
@@ -171,7 +171,7 @@ Aucune des séries de cette page ne départage d'ailleurs les explications en pr
 <figure class="figure-ciseau">
   <picture>
     <source media="(max-width: 600px)" srcset="/img/langue-ecarts-m.svg" width="300" height="747">
-    <img src="/img/langue-ecarts.svg" alt="Score CEDRE en fin de collège, 2015 puis 2021 : ensemble des élèves {{< lan-val "cc15" >}} puis {{< lan-val "cc21" >}}, sans évolution significative ; éducation prioritaire {{< lan-val "ccep15" >}} puis {{< lan-val "ccep21" >}}, baisse significative ; garçons {{< lan-val "ccg15" >}} puis {{< lan-val "ccg21" >}}, baisse significative ; public hors éducation prioritaire, privé et filles sans évolution significative. Aucun test de l'évolution des écarts entre groupes n'est publié." width="720" height="390" loading="lazy">
+    <img src="/img/langue-ecarts.svg" alt="Score CEDRE en fin de collège, 2015 puis 2021 : ensemble des élèves {{< lan-val "cc15" >}} puis {{< lan-val "cc21" >}}, sans évolution significative ; éducation prioritaire {{< lan-val "ccep15" >}} puis {{< lan-val "ccep21" >}}, baisse significative ; garçons {{< lan-val "ccg15" >}} puis {{< lan-val "ccg21" >}}, baisse significative ; public hors éducation prioritaire, privé et filles sans évolution significative. Aucun test de l'évolution des écarts entre groupes n'est publié." width="720" height="405" loading="lazy">
   </picture>
   <figcaption>Score en fin de collège, 2015 et 2021, selon le secteur et le sexe (DEPP, CEDRE compétences langagières et littératie, Note d'Information 22.29).</figcaption>
 </figure>

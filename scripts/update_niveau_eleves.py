@@ -32,6 +32,8 @@ import re
 import sys
 from pathlib import Path
 
+import pied_figure  # pied commun des figures détaillées (scripts/pied_figure.py)
+
 import numpy as np
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -531,11 +533,8 @@ def tete(fid, titre, desc, h):
 
 
 def pied(e, y0, source, note, licence=None):
-    e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y0, W, y0, GRID))
-    for k, (tx, col) in enumerate([(source, INK2), (note, INK2), (licence or LICENCE, MUTED)]):
-        e.append('<text x="0" y="%.1f" font-size="9" fill="%s">%s</text>' % (y0 + 13 + 12 * k, col, esc(tx)))
-    e.append("</svg>")
-    return "\n".join(e)
+    return pied_figure.pied(e, y0, W, [(source, INK2, "pied-source"), (note, INK2, "pied-note"),
+                                       (licence or LICENCE, MUTED, "pied-licence")], GRID)
 
 
 FIG = {
@@ -981,7 +980,7 @@ def fiches(figs):
     for fid in ("thermometres", "baisse", "composition", "seconde", "sommet"):
         svg = figs["niveau-%s.svg" % fid]
         titre = html.unescape(re.search(r"<title[^>]*>(.*?)</title>", svg).group(1))
-        cart = [html.unescape(t) for t in re.findall(r'<text x="0" y="[0-9.]+" font-size="9" fill="[^"]+">(.*?)</text>', svg)]
+        cart = [pied_figure.lire(svg, "pied-source"), pied_figure.lire(svg, "pied-note")]
         out.append(dict(id=fid, fichier="niveau-" + fid, titre=titre, montre=FIG[fid]["montre"], source=cart[0], precaution=cart[1]))
     return {"fr": out}
 
@@ -1081,6 +1080,9 @@ def main() -> int:
     figs = {"niveau-thermometres.svg": fig_thermometres(c, A), "niveau-baisse.svg": fig_baisse(c, A), "niveau-composition.svg": fig_composition(c, A), "niveau-sommet.svg": fig_sommet(c, A), "niveau-seconde.svg": fig_seconde(c, A),
             "niveau-thermometres-m.svg": fig_thermometres_m(c, A), "niveau-baisse-m.svg": fig_baisse_m(c, A), "niveau-composition-m.svg": fig_composition_m(c, A), "niveau-sommet-m.svg": fig_sommet_m(c, A), "niveau-seconde-m.svg": fig_seconde_m(c, A)}
     parite_mobile(figs)
+    ecarts = pied_figure.controler_page((ROOT / "content" / "le-niveau-des-eleves-baisse-t-il" / "_index.md").read_text(encoding="utf-8"), figs)
+    if ecarts:
+        fail("page : " + " ; ".join(ecarts))
     P = c["P"]
     payload = {"meta": {"page": "https://" + PAGE_URL, "licence": "CC BY 4.0",
                         "champ": "France ; jeunes de 15 ans (PISA), élèves entrant en seconde (DEPP), terminale S (TIMSS Advanced), concours externes du second degré public",

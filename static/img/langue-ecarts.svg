@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 390" role="img" font-variant-numeric="tabular-nums" aria-labelledby="lan-e-t lan-e-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
-<title id="lan-e-t">Fin de collège : la moyenne ne baisse pas significativement, l'éducation prioritaire si (CEDRE, 2015-2021)</title><desc id="lan-e-d">Score CEDRE en fin de collège, 2015 puis 2021 : Ensemble des élèves 250,0 puis 246,6, sans évolution significative ; Public hors éducation prioritaire 250,3 puis 247,3, sans évolution significative ; Éducation prioritaire 233,1 puis 225,3, baisse significative ; Privé 259,7 puis 260,4, sans évolution significative ; Filles 252,9 puis 252,6, sans évolution significative ; Garçons 247,1 puis 240,7, baisse significative.</desc>
-<rect width="720" height="390" fill="#ffffff"/>
-<text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">Fin de collège : la moyenne ne baisse pas significativement, l'éducation prioritaire si (CEDRE, 2015-2021)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 405" role="img" font-variant-numeric="tabular-nums" aria-labelledby="lan-e-t lan-e-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="lan-e-t">Fin de collège : la moyenne ne baisse pas significativement, l'éducation prioritaire si</title><desc id="lan-e-d">Score CEDRE en fin de collège, 2015 puis 2021 : Ensemble des élèves 250,0 puis 246,6, sans évolution significative ; Public hors éducation prioritaire 250,3 puis 247,3, sans évolution significative ; Éducation prioritaire 233,1 puis 225,3, baisse significative ; Privé 259,7 puis 260,4, sans évolution significative ; Filles 252,9 puis 252,6, sans évolution significative ; Garçons 247,1 puis 240,7, baisse significative.</desc>
+<rect width="720" height="405" fill="#ffffff"/>
+<text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">Fin de collège : la moyenne ne baisse pas significativement, l'éducation prioritaire si</text>
 <line x1="300.0" y1="54" x2="300.0" y2="288" stroke="#dcd8d3" stroke-width="0.5"/>
 <text x="300.0" y="304" font-size="9.5" fill="#96928f" text-anchor="middle">220</text>
 <line x1="343.3" y1="54" x2="343.3" y2="288" stroke="#dcd8d3" stroke-width="0.5"/>
@@ -67,7 +67,8 @@
 <line x1="320" y1="320" x2="342" y2="320" stroke="#8a8781" stroke-width="5"/>
 <text x="348" y="324" font-size="10" fill="#55524f">sans évolution significative</text>
 <line x1="0" y1="340.0" x2="720" y2="340.0" stroke="#dcd8d3"/>
-<text x="0" y="353.0" font-size="9" fill="#55524f">DEPP, Note d'Information 22.29 et tableaux de données (CEDRE, compétences langagières et littératie en fin de collège)</text>
-<text x="0" y="365.0" font-size="9" fill="#55524f">Échelle fixée à 250 en 2015. Orange : baisse significative selon la DEPP ; gris : sans évolution significative. Aucun test de l'évolution des écarts entre groupes n'est publié.</text>
-<text x="0" y="377.0" font-size="9" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/</text>
+<text class="pied-source" x="0" y="355.0" font-size="11" fill="#55524f">DEPP, Note d'Information 22.29 et tableaux de données (CEDRE, compétences langagières et littératie en fin de collège)</text>
+<text class="pied-note" x="0" y="369.0" font-size="11" fill="#55524f">Échelle fixée à 250 en 2015. Orange : baisse significative selon la DEPP ; gris : sans évolution significative. Aucun</text>
+<text class="pied-note" x="0" y="383.0" font-size="11" fill="#55524f">test de l'évolution des écarts entre groupes n'est publié.</text>
+<text class="pied-licence" x="0" y="397.0" font-size="11" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/</text>
 </svg>

@@ -37,6 +37,8 @@ import re
 import sys
 from pathlib import Path
 
+import pied_figure  # pied commun des figures détaillées (scripts/pied_figure.py)
+
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "scripts" / "sources_langue_eleves"
 OUT_DATA = ROOT / "data" / "langue_eleves.json"
@@ -387,11 +389,8 @@ def tete(fid, titre, desc, h):
 
 
 def pied(e, y0, source, note):
-    e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y0, W, y0, GRID))
-    for k, (tx, col) in enumerate([(source, INK2), (note, INK2), (LICENCE, MUTED)]):
-        e.append('<text x="0" y="%.1f" font-size="9" fill="%s">%s</text>' % (y0 + 13 + 12 * k, col, esc(tx)))
-    e.append("</svg>")
-    return "\n".join(e)
+    return pied_figure.pied(e, y0, W, [(source, INK2, "pied-source"), (note, INK2, "pied-note"),
+                                       (LICENCE, MUTED, "pied-licence")], GRID)
 
 
 FIG = {
@@ -414,7 +413,7 @@ FIG = {
 
 
 FIG["ecarts"] = dict(
-    titre="Fin de collège : la moyenne ne baisse pas significativement, l'éducation prioritaire si (CEDRE, 2015-2021)",
+    titre="Fin de collège : la moyenne ne baisse pas significativement, l'éducation prioritaire si",
     source="DEPP, Note d'Information 22.29 et tableaux de données (CEDRE, compétences langagières et littératie en fin de collège)",
     note="Échelle fixée à 250 en 2015. Orange : baisse significative selon la DEPP ; gris : sans évolution significative. "
          "Aucun test de l'évolution des écarts entre groupes n'est publié.",
@@ -546,7 +545,7 @@ def fig_chronologie(c, A):
                               ((BLEU, True), "hausse significative"), ((ORANGE, False), "tirets : sens observé, sans test publié")):
         e.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-width="4"%s/>' % (x, yl, x + 22, yl, col, "" if plein else ' stroke-dasharray="5 3"'))
         e.append('<text x="%d" y="%d" font-size="10" fill="%s">%s</text>' % (x + 28, yl + 4, INK2, esc(lib)))
-        x += 34 + 7 * len(lib)
+        x += 34 + int(5.2 * len(lib))   # 7 px par caractère sortaient la 4e entrée du cadre (coupée à 720, mesure du 11/10/2026)
     return pied(e, h + 2, t["source"], t["note"])
 
 
@@ -800,7 +799,7 @@ def fiches(figs):
     for fid in ("chronologie", "dictee", "plaisir", "ecarts"):
         svg = figs["langue-%s.svg" % fid]
         titre = html.unescape(re.search(r"<title[^>]*>(.*?)</title>", svg).group(1))
-        cart = [html.unescape(t) for t in re.findall(r'<text x="0" y="[0-9.]+" font-size="9" fill="[^"]+">(.*?)</text>', svg)]
+        cart = [pied_figure.lire(svg, "pied-source"), pied_figure.lire(svg, "pied-note")]
         out.append(dict(id=fid, fichier="langue-" + fid, titre=titre, montre=FIG[fid]["montre"], source=cart[0], precaution=cart[1]))
     return {"fr": out}
 
@@ -895,6 +894,9 @@ def main() -> int:
             "langue-chronologie-m.svg": fig_chronologie_m(c, A), "langue-dictee-m.svg": fig_dictee_m(c, A), "langue-plaisir-m.svg": fig_plaisir_m(c, A),
             "langue-ecarts.svg": fig_ecarts(c, A), "langue-ecarts-m.svg": fig_ecarts_m(c, A)}
     parite_mobile(figs)
+    ecarts = pied_figure.controler_page((ROOT / "content" / "les-eleves-maitrisent-ils-moins-bien-la-langue-francaise" / "_index.md").read_text(encoding="utf-8"), figs)
+    if ecarts:
+        fail("page : " + " ; ".join(ecarts))
     X = c["X"]
     payload = {"meta": {"page": "https://" + PAGE_URL, "licence": "CC BY 4.0",
                         "champ": "France ; élèves de CM1, CM2, sixième, troisième, seconde ; jeunes de 15 ans (PISA) ; 15-24 ans (enquêtes Pratiques culturelles)",

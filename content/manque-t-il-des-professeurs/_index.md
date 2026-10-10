@@ -74,7 +74,7 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
 <figure class="figure-ciseau">
   <picture>
     <source media="(max-width: 600px)" srcset="/img/lycee-heures-m.svg" width="300" height="669">
-    <img src="/img/lycee-heures.svg" alt="Barres empilées, 2024-2025, part des heures de cours non assurées : lycée général et technologique {{< lyc-val "h_total" >}} %, dont absences individuelles {{< lyc-val "h_indiv" >}}, examens et commissions {{< lyc-val "h_sys" >}}, fermeture {{< lyc-val "h_ferm" >}}, formation {{< lyc-val "h_form" >}} ; lycée professionnel {{< lyc-val "lp_total" >}} % ; collège {{< lyc-val "col_total" >}} %, dont absences individuelles {{< lyc-val "col_indiv" >}}." width="720" height="322" loading="lazy">
+    <img src="/img/lycee-heures.svg" alt="Barres empilées, 2024-2025, part des heures de cours non assurées : lycée général et technologique {{< lyc-val "h_total" >}} %, dont absences individuelles {{< lyc-val "h_indiv" >}}, examens et commissions {{< lyc-val "h_sys" >}}, fermeture {{< lyc-val "h_ferm" >}}, formation {{< lyc-val "h_form" >}} ; lycée professionnel {{< lyc-val "lp_total" >}} % ; collège {{< lyc-val "col_total" >}} %, dont absences individuelles {{< lyc-val "col_indiv" >}}." width="720" height="337" loading="lazy">
   </picture>
   <figcaption>Heures d'enseignement prévues et non assurées, par motif, dans les établissements publics du second degré, 2024-2025 (DEPP, Note d'Information 26-14).</figcaption>
 </figure>
@@ -108,7 +108,7 @@ Ils en comptent deux fois moins par poste qu'en {{< lyc-val "fx_a0" >}}. Les pro
 <figure class="figure-ciseau">
   <picture>
     <source media="(max-width: 600px)" srcset="/img/lycee-concours-m.svg" width="300" height="674">
-    <img src="/img/lycee-concours.svg" alt="Courbes 2008-2025 de la part des postes pourvus aux concours externes : CAPES de mathématiques {{< lyc-val "m23" >}} % en 2023, {{< lyc-val "m24" >}} en 2024, {{< lyc-val "m25" >}} en 2025 ; CAPES de physique-chimie {{< lyc-val "pc23" >}}, {{< lyc-val "pc24" >}}, {{< lyc-val "pc25" >}} ; ensemble des concours externes d'enseignants du second degré {{< lyc-val "nat15" >}} % en 2015, {{< lyc-val "nat25" >}} en 2025. À part, après une rupture, la session 2026 à deux concours : mathématiques {{< lyc-val "m26" >}} %, physique-chimie {{< lyc-val "pc26" >}} %." width="720" height="342" loading="lazy">
+    <img src="/img/lycee-concours.svg" alt="Courbes 2008-2025 de la part des postes pourvus aux concours externes : CAPES de mathématiques {{< lyc-val "m23" >}} % en 2023, {{< lyc-val "m24" >}} en 2024, {{< lyc-val "m25" >}} en 2025 ; CAPES de physique-chimie {{< lyc-val "pc23" >}}, {{< lyc-val "pc24" >}}, {{< lyc-val "pc25" >}} ; ensemble des concours externes d'enseignants du second degré {{< lyc-val "nat15" >}} % en 2015, {{< lyc-val "nat25" >}} en 2025. À part, après une rupture, la session 2026 à deux concours : mathématiques {{< lyc-val "m26" >}} %, physique-chimie {{< lyc-val "pc26" >}} %." width="720" height="343" loading="lazy">
   </picture>
   <figcaption>Part des postes offerts aux concours externes pourvus par des admis, enseignement public (DEPP, Repères et références statistiques 2026)&nbsp;; session 2026 à part (ministère, résultats par concours).</figcaption>
 </figure>
@@ -126,7 +126,7 @@ Le recours aux contractuels a augmenté&nbsp;: leur part parmi les enseignants d
 <figure class="figure-ciseau">
   <picture>
     <source media="(max-width: 600px)" srcset="/img/lycee-classes-m.svg" width="300" height="518">
-    <img src="/img/lycee-classes.svg" alt="Courbe du nombre moyen d'élèves par classe au lycée général et technologique, de 1994 à {{< lyc-val "ed_an" >}} : {{< lyc-val "ed_1994" >}} en 1994, {{< lyc-val "ed_max_avant" >}} en {{< lyc-val "ed_an_max_avant" >}}, {{< lyc-val "ed_2021" >}} en 2021, {{< lyc-val "ed" >}} en {{< lyc-val "ed_an" >}}." width="720" height="322" loading="lazy">
+    <img src="/img/lycee-classes.svg" alt="Courbe du nombre moyen d'élèves par classe au lycée général et technologique, de 1994 à {{< lyc-val "ed_an" >}} : {{< lyc-val "ed_1994" >}} en 1994, {{< lyc-val "ed_max_avant" >}} en {{< lyc-val "ed_an_max_avant" >}}, {{< lyc-val "ed_2021" >}} en 2021, {{< lyc-val "ed" >}} en {{< lyc-val "ed_an" >}}." width="720" height="337" loading="lazy">
   </picture>
   <figcaption>Nombre moyen d'élèves par division, formations générales et technologiques en lycée, public et privé sous contrat (DEPP).</figcaption>
 </figure>

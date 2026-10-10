@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" font-variant-numeric="tabular-nums" aria-labelledby="niv-t-t niv-t-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 389" role="img" font-variant-numeric="tabular-nums" aria-labelledby="niv-t-t niv-t-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
 <title id="niv-t-t">Quatre évaluations, leur dernière variation en France</title><desc id="niv-t-d">Tableau, dernière variation de chaque évaluation en France, dans sa propre échelle : PIRLS, compréhension de l'écrit (CM1, 2016-2021) +3 points, non significative ; TIMSS, mathématiques (CM1, 2019-2023) −1 points, non significative ; TIMSS, mathématiques (quatrième, 2019-2023) −4 points, non significative ; Test de positionnement, mathématiques (entrée en seconde GT, 2021-2024) +7 points, hausse observée, sans test ; Test de positionnement, français (entrée en seconde GT, 2021-2024) −4 points, baisse observée, sans test ; PISA, culture mathématique (15 ans, 2022-2025) −16 points, baisse significative ; PISA, compréhension de l'écrit (15 ans, 2022-2025) −18 points, baisse significative.</desc>
-<rect width="720" height="360" fill="#ffffff"/>
+<rect width="720" height="389" fill="#ffffff"/>
 <text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">Quatre évaluations, leur dernière variation en France</text>
 <text x="0" y="48" font-size="10.5" fill="#96928f" font-weight="600">Évaluation</text>
 <text x="240" y="48" font-size="10.5" fill="#96928f" font-weight="600">Élèves</text>
@@ -54,7 +54,9 @@
 <rect x="545" y="276" width="10" height="10" rx="5" fill="#eb6834" stroke="#eb6834" stroke-width="1.6"/>
 <text x="561" y="285" font-size="11" fill="#26262f">baisse significative</text>
 <line x1="0" y1="310.0" x2="720" y2="310.0" stroke="#dcd8d3"/>
-<text x="0" y="323.0" font-size="9" fill="#55524f">IEA (TIMSS 2023, rapport international) ; DEPP (PIRLS 2021, NI 23-21 ; test de positionnement de seconde, NI 26-22) ; OCDE (PISA 2025)</text>
-<text x="0" y="335.0" font-size="9" fill="#55524f">Chaque évaluation a son échelle : les points ne se comparent pas d'une ligne à l'autre. Point plein : test publié, significatif ou non ; point creux : aucun test publié. Couleur : sens de la variation.</text>
-<text x="0" y="347.0" font-size="9" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/le-niveau-des-eleves-baisse-t-il/</text>
+<text class="pied-source" x="0" y="325.0" font-size="11" fill="#55524f">IEA (TIMSS 2023, rapport international) ; DEPP (PIRLS 2021, NI 23-21 ; test de positionnement de seconde, NI 26-22) ;</text>
+<text class="pied-source" x="0" y="339.0" font-size="11" fill="#55524f">OCDE (PISA 2025)</text>
+<text class="pied-note" x="0" y="353.0" font-size="11" fill="#55524f">Chaque évaluation a son échelle : les points ne se comparent pas d'une ligne à l'autre. Point plein : test publié,</text>
+<text class="pied-note" x="0" y="367.0" font-size="11" fill="#55524f">significatif ou non ; point creux : aucun test publié. Couleur : sens de la variation.</text>
+<text class="pied-licence" x="0" y="381.0" font-size="11" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/le-niveau-des-eleves-baisse-t-il/</text>
 </svg>

@@ -42,6 +42,8 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+import pied_figure  # pied commun des figures détaillées (scripts/pied_figure.py)
+
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "scripts" / "sources_lycee_professeurs"
 OUT_DATA = ROOT / "data" / "lycee_professeurs.json"
@@ -567,11 +569,8 @@ def tete(fid, titre, desc, h):
 
 
 def pied(e, y0, source, note):
-    e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y0, W, y0, GRID))
-    for k, (tx, col) in enumerate([(source, INK2), (note, INK2), (LICENCE, MUTED)]):
-        e.append('<text x="0" y="%.1f" font-size="9" fill="%s">%s</text>' % (y0 + 13 + 12 * k, col, esc(tx)))
-    e.append("</svg>")
-    return "\n".join(e)
+    return pied_figure.pied(e, y0, W, [(source, INK2, "pied-source"), (note, INK2, "pied-note"),
+                                       (LICENCE, MUTED, "pied-licence")], GRID)
 
 
 FIG = {
@@ -873,7 +872,7 @@ def fiches(figs, Aff):
     for fid in ("heures", "classes", "concours"):
         svg = figs["lycee-%s.svg" % fid]
         titre = html.unescape(re.search(r"<title[^>]*>(.*?)</title>", svg).group(1))
-        cart = [html.unescape(t) for t in re.findall(r'<text x="0" y="[0-9.]+" font-size="9" fill="[^"]+">(.*?)</text>', svg)]
+        cart = [pied_figure.lire(svg, "pied-source"), pied_figure.lire(svg, "pied-note")]
         out.append(dict(id=fid, fichier="lycee-" + fid, titre=titre, montre=FIG[fid]["montre"], source=cart[0], precaution=cart[1]))
     return {"fr": out}
 
@@ -957,13 +956,9 @@ def main() -> int:
     for fid, fn in (("heures", fig_heures_m), ("classes", fig_classes_m), ("concours", fig_concours_m)):
         figs["lycee-%s-m.svg" % fid] = fn(c, A, figs["lycee-%s.svg" % fid])
     parite_mobile(figs)   # avant --check : la parité se contrôle aussi sans écrire
-    # Les hauteurs des <source> de la page sont recopiées : une figure mobile qui change de hauteur doit les faire suivre.
-    page = (ROOT / "content" / "manque-t-il-des-professeurs" / "_index.md").read_text(encoding="utf-8")
-    for fid in ("heures", "classes", "concours"):
-        h_svg = re.search(r'viewBox="0 0 %d (\d+)"' % WM, figs["lycee-%s-m.svg" % fid]).group(1)
-        h_page = re.search(r'srcset="/img/lycee-%s-m\.svg" width="%d" height="(\d+)"' % (fid, WM), page)
-        if not h_page or h_page.group(1) != h_svg:
-            fail("page : hauteur de lycee-%s-m.svg a %s dans le <source>, %s dans le SVG" % (fid, h_page and h_page.group(1), h_svg))
+    ecarts = pied_figure.controler_page((ROOT / "content" / "manque-t-il-des-professeurs" / "_index.md").read_text(encoding="utf-8"), figs)
+    if ecarts:
+        fail("page : " + " ; ".join(ecarts))
     if check:
         log("--check : %d gardes passees (%d cles d'affichage), parite des %d figures mobiles controlee, rien ecrit." % (n, len(A), 3))
         return 0

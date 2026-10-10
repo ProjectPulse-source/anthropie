@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 344" role="img" font-variant-numeric="tabular-nums" aria-labelledby="niv-b-t niv-b-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 359" role="img" font-variant-numeric="tabular-nums" aria-labelledby="niv-b-t niv-b-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
 <title id="niv-b-t">PISA, 2015-2025 : la France parmi les 38 pays de l'OCDE</title><desc id="niv-b-d">Pour chaque domaine, variation du score moyen PISA de 2015 à 2025 des 38 pays de l'OCDE, France en orange. Lecture : France −43 points, médiane −24, 11e plus forte baisse. Mathématiques : France −35, médiane −22, 8e plus forte baisse. Sciences : France −12, médiane −5, 15e plus forte baisse.</desc>
-<rect width="720" height="344" fill="#ffffff"/>
+<rect width="720" height="359" fill="#ffffff"/>
 <text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">PISA, 2015-2025 : la France parmi les 38 pays de l'OCDE</text>
 <line x1="170.0" y1="50" x2="170.0" y2="260" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="170.0" y="274" font-size="10" fill="#96928f" text-anchor="middle">−70</text>
@@ -153,7 +153,8 @@
 <text x="514.2" y="208" font-size="10.5" fill="#eb6834" text-anchor="middle" font-weight="600">France −12</text>
 <text x="0" y="244" font-size="10" fill="#55524f">15ᵉ plus forte baisse estimée sur 38</text>
 <line x1="0" y1="294.0" x2="720" y2="294.0" stroke="#dcd8d3"/>
-<text x="0" y="307.0" font-size="9" fill="#55524f">OCDE, PISA 2025, volume I, tableaux I.B1.2a.36 à 38 (variation du score moyen entre 2015 et 2025)</text>
-<text x="0" y="319.0" font-size="9" fill="#55524f">Chaque point est un pays membre de l'OCDE. Bande bleue : la moitié centrale des pays (du premier au troisième quartile). Rangs sur estimations ponctuelles ; différences entre pays non testées.</text>
-<text x="0" y="331.0" font-size="9" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/le-niveau-des-eleves-baisse-t-il/</text>
+<text class="pied-source" x="0" y="309.0" font-size="11" fill="#55524f">OCDE, PISA 2025, volume I, tableaux I.B1.2a.36 à 38 (variation du score moyen entre 2015 et 2025)</text>
+<text class="pied-note" x="0" y="323.0" font-size="11" fill="#55524f">Chaque point est un pays membre de l'OCDE. Bande bleue : la moitié centrale des pays (du premier au troisième</text>
+<text class="pied-note" x="0" y="337.0" font-size="11" fill="#55524f">quartile). Rangs sur estimations ponctuelles ; différences entre pays non testées.</text>
+<text class="pied-licence" x="0" y="351.0" font-size="11" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/le-niveau-des-eleves-baisse-t-il/</text>
 </svg>

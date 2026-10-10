@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 412" role="img" font-variant-numeric="tabular-nums" aria-labelledby="lan-d-t lan-d-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 427" role="img" font-variant-numeric="tabular-nums" aria-labelledby="lan-d-t lan-d-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
 <title id="lan-d-t">La même dictée en CM2 : nombre moyen d'erreurs</title><desc id="lan-d-d">Barres empilées, nombre moyen d'erreurs à la même dictée en CM2 : 1987 : 2,1 erreurs lexicales et 8,6 autres erreurs, 10,7 au total ; 2007 : 2,6 erreurs lexicales et 12,1 autres erreurs, 14,7 au total ; 2015 : 3 erreurs lexicales et 15 autres erreurs, 18 au total ; 2021 : 3 erreurs lexicales et 16,4 autres erreurs, 19,4 au total.</desc>
-<rect width="720" height="412" fill="#ffffff"/>
+<rect width="720" height="427" fill="#ffffff"/>
 <text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">La même dictée en CM2 : nombre moyen d'erreurs</text>
 <line x1="100" y1="300.0" x2="680" y2="300.0" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="94" y="303.5" font-size="10" fill="#96928f" text-anchor="end">0</text>
@@ -43,7 +43,8 @@
 <rect x="300" y="330" width="12" height="12" fill="#eb6834"/>
 <text x="318" y="340" font-size="10.5" fill="#55524f">Autres erreurs (grammaire, ponctuation, oublis)</text>
 <line x1="0" y1="362.0" x2="720" y2="362.0" stroke="#dcd8d3"/>
-<text x="0" y="375.0" font-size="9" fill="#55524f">DEPP, Note d'Information 22.37 (dictée de 67 mots, 1987, 2007, 2015, 2021 ; secteur public) ; NI 08.38 pour 1987-2007</text>
-<text x="0" y="387.0" font-size="9" fill="#55524f">Erreurs lexicales : orthographe des mots eux-mêmes. Autres erreurs : grammaire (accords, conjugaison), ponctuation, oublis (total moins lexicales).</text>
-<text x="0" y="399.0" font-size="9" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/</text>
+<text class="pied-source" x="0" y="377.0" font-size="11" fill="#55524f">DEPP, Note d'Information 22.37 (dictée de 67 mots, 1987, 2007, 2015, 2021 ; secteur public) ; NI 08.38 pour 1987-2007</text>
+<text class="pied-note" x="0" y="391.0" font-size="11" fill="#55524f">Erreurs lexicales : orthographe des mots eux-mêmes. Autres erreurs : grammaire (accords, conjugaison), ponctuation,</text>
+<text class="pied-note" x="0" y="405.0" font-size="11" fill="#55524f">oublis (total moins lexicales).</text>
+<text class="pied-licence" x="0" y="419.0" font-size="11" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/</text>
 </svg>

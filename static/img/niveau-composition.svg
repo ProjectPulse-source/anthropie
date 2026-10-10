@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 352" role="img" font-variant-numeric="tabular-nums" aria-labelledby="niv-c-t niv-c-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 367" role="img" font-variant-numeric="tabular-nums" aria-labelledby="niv-c-t niv-c-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
 <title id="niv-c-t">PISA 2015-2025 : trois mesures de la baisse, selon la composition retenue</title><desc id="niv-c-d">Baisse du score moyen PISA de 2015 à 2025 : observée, à la répartition entre classes de 2015, puis à la composition de 2015 pour la classe, le sexe et la famille : mathématiques 35, 43, 36 points ; compréhension de l'écrit 43, 51, 44 points ; culture scientifique 12, 21, 13 points.</desc>
-<rect width="720" height="352" fill="#ffffff"/>
+<rect width="720" height="367" fill="#ffffff"/>
 <text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">PISA 2015-2025 : trois mesures de la baisse, selon la composition retenue</text>
 <rect x="0" y="32" width="10" height="10" fill="#8a8781"/>
 <text x="14" y="41" font-size="10.5" fill="#55524f">Baisse observée</text>
@@ -44,7 +44,8 @@
 <rect x="200" y="246" width="100.8" height="16" fill="#c9c5c0"/>
 <text x="305.8" y="258" font-size="11" fill="#55524f" font-weight="600">13</text>
 <line x1="0" y1="302.0" x2="720" y2="302.0" stroke="#dcd8d3"/>
-<text x="0" y="315.0" font-size="9" fill="#55524f">OCDE, bases PISA 2015 et 2025 (données individuelles) ; calcul de l'auteur (valeurs plausibles, poids répliqués)</text>
-<text x="0" y="327.0" font-size="9" fill="#55524f">Baisse du score moyen, en points. Une baisse observée et deux standardisations descriptives, trois questions : aucune n'est « la vraie baisse », aucune ne mesure l'effet du redoublement.</text>
-<text x="0" y="339.0" font-size="9" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/le-niveau-des-eleves-baisse-t-il/</text>
+<text class="pied-source" x="0" y="317.0" font-size="11" fill="#55524f">OCDE, bases PISA 2015 et 2025 (données individuelles) ; calcul de l'auteur (valeurs plausibles, poids répliqués)</text>
+<text class="pied-note" x="0" y="331.0" font-size="11" fill="#55524f">Baisse du score moyen, en points. Une baisse observée et deux standardisations descriptives, trois questions : aucune</text>
+<text class="pied-note" x="0" y="345.0" font-size="11" fill="#55524f">n'est « la vraie baisse », aucune ne mesure l'effet du redoublement.</text>
+<text class="pied-licence" x="0" y="359.0" font-size="11" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/le-niveau-des-eleves-baisse-t-il/</text>
 </svg>

@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 526" role="img" font-variant-numeric="tabular-nums" aria-labelledby="lan-c-t lan-c-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 541" role="img" font-variant-numeric="tabular-nums" aria-labelledby="lan-c-t lan-c-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
 <title id="lan-c-t">La langue des élèves : quand chaque mesure recule, progresse ou n'évolue pas significativement</title><desc id="lan-c-d">Frise 1985-2026, une ligne par mesure, sens de chaque intervalle ; repère : 2013, plus de la moitié des 12-17 ans équipés d'un smartphone. PIRLS, lecture (CM1) : 2001-2006 recul, sans test publié, 2006-2011 recul, sans test publié, 2011-2016 recul significatif, 2016-2021 sans évolution significative ; Dictée (erreurs en hausse = recul) (CM2) : 1987-2007 recul significatif, 2007-2015 recul, sans test publié, 2015-2021 recul, sans test publié ; Lecture, épreuves de 1987 (CM2) : 1987-1997 sans évolution significative, 1997-2007 recul significatif ; CEDRE, maîtrise de la langue (CM2) : 2003-2009 sans évolution significative, 2009-2015 sans évolution significative, 2015-2021 hausse significative ; Évaluation de début de sixième (6e) : 2017-2021 hausse, sans test publié, 2021-2025 recul, sans test publié ; CEDRE, langue et littératie (3e) : 2015-2021 sans évolution significative ; PISA, compréhension de l'écrit (15 ans) : 2000-2012 sans évolution significative, 2012-2025 recul significatif ; PISA, temps de lecture-plaisir (15 ans) : 2000-2009 recul significatif, 2009-2018 sans évolution significative ; PISA, plaisir de lire (indice) (15 ans) : 2009-2018 recul significatif ; Test d'entrée, français (GT) (seconde) : 2019-2021 hausse, sans test publié, 2021-2025 recul, sans test publié ; 20 livres ou plus dans l'année (15-24 ans) : 1988-1997 recul, sans test publié, 1997-2008 recul, sans test publié.</desc>
-<rect width="720" height="526" fill="#ffffff"/>
+<rect width="720" height="541" fill="#ffffff"/>
 <text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">La langue des élèves : quand chaque mesure recule, progresse ou n'évolue pas significativement</text>
 <rect x="563.9" y="52" width="140.1" height="352" fill="#f1efec"/>
 <line x1="563.9" y1="52" x2="563.9" y2="404" stroke="#55524f" stroke-width="1.2"/>
@@ -104,14 +104,15 @@
 <circle cx="510.0" cy="382" r="3.2" fill="#ffffff" stroke="#55524f" stroke-width="1.4"/>
 <line x1="0" y1="438" x2="22" y2="438" stroke="#eb6834" stroke-width="4"/>
 <text x="28" y="442" font-size="10" fill="#55524f">recul significatif</text>
-<line x1="160" y1="438" x2="182" y2="438" stroke="#8a8781" stroke-width="4"/>
-<text x="188" y="442" font-size="10" fill="#55524f">sans évolution significative</text>
-<line x1="390" y1="438" x2="412" y2="438" stroke="#184f95" stroke-width="4"/>
-<text x="418" y="442" font-size="10" fill="#55524f">hausse significative</text>
-<line x1="564" y1="438" x2="586" y2="438" stroke="#eb6834" stroke-width="4" stroke-dasharray="5 3"/>
-<text x="592" y="442" font-size="10" fill="#55524f">tirets : sens observé, sans test publié</text>
+<line x1="127" y1="438" x2="149" y2="438" stroke="#8a8781" stroke-width="4"/>
+<text x="155" y="442" font-size="10" fill="#55524f">sans évolution significative</text>
+<line x1="306" y1="438" x2="328" y2="438" stroke="#184f95" stroke-width="4"/>
+<text x="334" y="442" font-size="10" fill="#55524f">hausse significative</text>
+<line x1="444" y1="438" x2="466" y2="438" stroke="#eb6834" stroke-width="4" stroke-dasharray="5 3"/>
+<text x="472" y="442" font-size="10" fill="#55524f">tirets : sens observé, sans test publié</text>
 <line x1="0" y1="476.0" x2="720" y2="476.0" stroke="#dcd8d3"/>
-<text x="0" y="489.0" font-size="9" fill="#55524f">DEPP (Notes d'Information) ; OCDE (PISA 2025 ; 21st-Century Readers) ; IEA (PIRLS) ; ministère de la Culture ; CREDOC</text>
-<text x="0" y="501.0" font-size="9" fill="#55524f">Chaque ligne a sa propre échelle ; seul le sens est montré. Plein : test publié (PISA 2000-2012 : test de l'auteur) ; tirets : sans test.</text>
-<text x="0" y="513.0" font-size="9" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/</text>
+<text class="pied-source" x="0" y="491.0" font-size="11" fill="#55524f">DEPP (Notes d'Information) ; OCDE (PISA 2025 ; 21st-Century Readers) ; IEA (PIRLS) ; ministère de la Culture ; CREDOC</text>
+<text class="pied-note" x="0" y="505.0" font-size="11" fill="#55524f">Chaque ligne a sa propre échelle ; seul le sens est montré. Plein : test publié (PISA 2000-2012 : test de l'auteur) ;</text>
+<text class="pied-note" x="0" y="519.0" font-size="11" fill="#55524f">tirets : sans test.</text>
+<text class="pied-licence" x="0" y="533.0" font-size="11" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/</text>
 </svg>

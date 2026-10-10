@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 302" role="img" font-variant-numeric="tabular-nums" aria-labelledby="niv-g-t niv-g-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 317" role="img" font-variant-numeric="tabular-nums" aria-labelledby="niv-g-t niv-g-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
 <title id="niv-g-t">Test de seconde et PISA, cohortes largement correspondantes : écart 2021-2022 / 2024-2025</title><desc id="niv-g-d">Barres horizontales, écart standardisé entre les cohortes de 2021-2022 et celles de 2024-2025. Français : test de seconde −13, PISA lecture −16. Mathématiques : test de seconde +9, PISA −18.</desc>
-<rect width="720" height="302" fill="#ffffff"/>
+<rect width="720" height="317" fill="#ffffff"/>
 <text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">Test de seconde et PISA, cohortes largement correspondantes : écart 2021-2022 / 2024-2025</text>
 <line x1="330.0" y1="52" x2="330.0" y2="212" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="330.0" y="226" font-size="10" fill="#96928f" text-anchor="middle">−25</text>
@@ -33,7 +33,8 @@
 <rect x="395.6" y="186" width="159.4" height="22" fill="#eb6834"/>
 <text x="389.6" y="201" font-size="10.5" fill="#26262f" text-anchor="end">−18</text>
 <line x1="0" y1="252.0" x2="720" y2="252.0" stroke="#dcd8d3"/>
-<text x="0" y="265.0" font-size="9" fill="#55524f">DEPP, Note d'Information 26-40, figure 11 web (tests de positionnement de seconde 2021 et 2024 ; PISA 2022 et 2025)</text>
-<text x="0" y="277.0" font-size="9" fill="#55524f">En centièmes d'écart-type (d de Cohen), calculé par la DEPP. Cohortes largement correspondantes, pas les mêmes élèves. Seconde : deux voies, sans test publié.</text>
-<text x="0" y="289.0" font-size="9" fill="#96928f">Graphique Stéphane Lalut d'après le calcul de la DEPP (NI 26-40, fig. 11 web), CC BY 4.0</text>
+<text class="pied-source" x="0" y="267.0" font-size="11" fill="#55524f">DEPP, Note d'Information 26-40, figure 11 web (tests de positionnement de seconde 2021 et 2024 ; PISA 2022 et 2025)</text>
+<text class="pied-note" x="0" y="281.0" font-size="11" fill="#55524f">En centièmes d'écart-type (d de Cohen), calculé par la DEPP. Cohortes largement correspondantes, pas les mêmes élèves.</text>
+<text class="pied-note" x="0" y="295.0" font-size="11" fill="#55524f">Seconde : deux voies, sans test publié.</text>
+<text class="pied-licence" x="0" y="309.0" font-size="11" fill="#96928f">Graphique Stéphane Lalut d'après le calcul de la DEPP (NI 26-40, fig. 11 web), CC BY 4.0</text>
 </svg>

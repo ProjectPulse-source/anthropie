@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 342" role="img" font-variant-numeric="tabular-nums" aria-labelledby="lyc-k-t lyc-k-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 343" role="img" font-variant-numeric="tabular-nums" aria-labelledby="lyc-k-t lyc-k-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
 <title id="lyc-k-t">Part des postes pourvus aux concours externes d'enseignants, 2008-2025 et 2026</title><desc id="lyc-k-d">Courbes 2008-2025 de la part des postes pourvus. CAPES de mathématiques : 71,4 % en 2023, 75,2 en 2024, 71,4 en 2025. CAPES de physique-chimie : 72,7, 65,1, 73,7. Ensemble des concours externes (années publiées) : 86,7 % en 2015, 89,3 en 2025. Session 2026, hors série (deux concours, bac+3 et bac+5, ministère) : CAPES de mathématiques 93,1 %, de physique-chimie 97,8 %.</desc>
-<rect width="720" height="342" fill="#ffffff"/>
+<rect width="720" height="343" fill="#ffffff"/>
 <text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">Part des postes pourvus aux concours externes d'enseignants, 2008-2025 et 2026</text>
 <line x1="44" y1="260.0" x2="420" y2="260.0" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="38" y="263.0" font-size="10" fill="#96928f" text-anchor="end">40 %</text>
@@ -36,7 +36,7 @@
 <circle cx="660" cy="51.9" r="4" fill="#ffffff" stroke="#eb6834" stroke-width="2"/>
 <text x="668" y="55.9" font-size="10.5" fill="#eb6834">97,8</text>
 <line x1="0" y1="292.0" x2="720" y2="292.0" stroke="#dcd8d3"/>
-<text x="0" y="305.0" font-size="9" fill="#55524f">DEPP, RERS 2026, fiches 9.27 et 9.28 (concours externes, public) ; 2026 : ministère, résultats par concours</text>
-<text x="0" y="317.0" font-size="9" fill="#55524f">Admis rapportés aux postes offerts ; ne mesure pas le besoin. 2026 : deux concours (bac+3, bac+5), hors série.</text>
-<text x="0" y="329.0" font-size="9" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/manque-t-il-des-professeurs/</text>
+<text class="pied-source" x="0" y="307.0" font-size="11" fill="#55524f">DEPP, RERS 2026, fiches 9.27 et 9.28 (concours externes, public) ; 2026 : ministère, résultats par concours</text>
+<text class="pied-note" x="0" y="321.0" font-size="11" fill="#55524f">Admis rapportés aux postes offerts ; ne mesure pas le besoin. 2026 : deux concours (bac+3, bac+5), hors série.</text>
+<text class="pied-licence" x="0" y="335.0" font-size="11" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/manque-t-il-des-professeurs/</text>
 </svg>
