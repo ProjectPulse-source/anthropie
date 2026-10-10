@@ -55,13 +55,13 @@
 .mobile-menu__lang--site { opacity: 0.6; }
 
 // ----- Signal de traduction (partials/lang-alternate.html, posé par baseof) -----
-// Aligné sur la colonne de contenu (.home-section : padding 0 2rem) et volontairement
+// Aligné sur la colonne de contenu (.home-section : padding 0 var(--marge-colonne)) et volontairement
 // discret : il informe, il ne détourne pas. La pastille reprend le vocabulaire du
 // sélecteur de langue de l'en-tête — aucun élément visuel nouveau.
 .lang-alt {
   max-width: var(--container-max);
   margin: 0 auto 1.75rem;
-  padding: 0 2rem;
+  padding: 0 var(--marge-colonne);
 }
 .lang-alt__link {
   display: inline-flex;
@@ -449,11 +449,12 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
 .figure-ciseau { margin: 32px 0; }
 .figure-ciseau img { width: 100%; max-width: 720px; height: auto; display: block; }
 // Téléphone (10/10/2026, contre-expertise de la page « Niveau », P1 de recette à 320 px) : les figures composées pour
-// le téléphone (<picture>, versions -m) prennent presque toute la largeur — 12 px de marge au lieu des 52 px du
-// conteneur (.site-main 20 px + .home-section 2 rem) — pour qu'aucun texte n'y descende sous 12 px affichés, même à
+// le téléphone (<picture>, versions -m) prennent presque toute la largeur — 12 px de marge, quelle que soit celle du
+// conteneur (--marge-main + --marge-colonne, _layout.scss) — pour qu'aucun texte n'y descende sous 12 px affichés, même à
 // 320 px. Marge exacte, jamais 100vw (règle 13 du CLAUDE.md du site).
 @media (max-width: 600px) {
-  .figure-ciseau picture { display: block; margin-left: calc(-8px - 2rem); margin-right: calc(-8px - 2rem); }
+  // 12 px du bord, quelle que soit la marge du conteneur (variables de _layout.scss).
+  .figure-ciseau picture { display: block; margin-left: calc(12px - var(--marge-main) - var(--marge-colonne)); margin-right: calc(12px - var(--marge-main) - var(--marge-colonne)); }
   // Plafond : entre 450 et 600 px, la version mobile étirée devenait démesurément haute.
   .figure-ciseau picture img { max-width: 420px; }
 }

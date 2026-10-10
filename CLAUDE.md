@@ -246,7 +246,8 @@ contrôle.
 13. **Gabarit (10/10/2026)** : sommaire replié automatique sur toute ressource d'au moins cinq sections
     (`partials/sommaire-ressource.html`) ; sur téléphone, le bouton « Réutiliser » devient un lien d'une ligne et la
     ligne des références resserre son interligne. **Aucune pleine largeur en `100vw`** (la barre de défilement d'un
-    navigateur de bureau fait déborder ou rogner) : marge négative exacte du conteneur, `calc(-20px - 2rem)`. La barre
+    navigateur de bureau fait déborder ou rogner) : marge négative exacte du conteneur, calculée depuis `--marge-main` et `--marge-colonne` (`_layout.scss`, 11/10/2026 :
+    20 px de marge de page sous 600 px au lieu de 52, aucune valeur recopiée). La barre
     collante garde la pastille du dossier (décision de l'auteur du 06/10) : la compacter se décide avec lui.
 14. **La divergence entre indicateurs est une information à expliquer, pas encore une explication** (contre-expertise
     de la page « Niveau », 10/10/2026). Grille de contrôle, pas plan : résultat → instrument → population et temps →

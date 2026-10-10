@@ -2,6 +2,17 @@
 // _layout.scss — Layout v3.1
 // =======================================================================
 
+// Marges latérales du site (gabarit mobile, 11/10/2026). Deux variables, une seule source : tout élément qui déborde
+// de la colonne (figures mobiles, figure de la boucle, barre collante du dossier) calcule sa marge négative avec elles,
+// au lieu de recopier « 20px + 2rem ». Mesure avant : 52 px de marge de chaque côté sur téléphone, un paragraphe de
+// 133 px à 320 px sur les ressources ; sous 600 px, la colonne cède sa marge et seuls les 20 px de .site-main restent.
+:root {
+  --marge-main: 2rem;      // .site-main
+  --marge-colonne: 2rem;   // .home-section et les autres colonnes de contenu
+}
+@media (max-width: 768px) { :root { --marge-main: 20px; } }
+@media (max-width: 600px) { :root { --marge-colonne: 0px; } }
+
 .site-wrapper {
   min-height: 100vh;
   display: flex;
@@ -12,7 +23,7 @@
   flex: 1;
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: 3rem 2rem;
+  padding: 3rem var(--marge-main);
   width: 100%;
 }
 
@@ -25,11 +36,11 @@
 .home-section {
   max-width: var(--container-max);
   margin: 0 auto 6rem;
-  padding: 0 2rem;
+  padding: 0 var(--marge-colonne);
 }
 
 @media (max-width: 768px) {
-  .site-main { padding: 2rem 20px; }
+  .site-main { padding: 2rem var(--marge-main); }
   .article { padding: 48px 20px; }
   .content-narrow { max-width: 100%; }
 }

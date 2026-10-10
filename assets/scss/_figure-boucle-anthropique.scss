@@ -26,13 +26,15 @@
 
 /* Mobile : full-bleed sur le SVG, légende reste contenue */
 @media (max-width: 768px) {
-  // Marge négative EXACTE du conteneur (.site-main 20 px sous 768 px + .home-section 2 rem), pas 100vw : 100vw compte
+  // Marge négative EXACTE du conteneur (--marge-main + --marge-colonne, _layout.scss), pas 100vw : 100vw compte
   // la barre de défilement d'un navigateur de bureau et rognait la figure de 7 à 8 px de chaque côté (mesuré le
-  // 10/10/2026 sur /boucle-anthropique/ et /quest-ce-que-lanthropie/ ; corrigé : 0..largeur visible). Même correctif que
-  // .dossier-collant (_reutiliser.scss) ; si les marges du conteneur changent, ces deux valeurs changent avec elles.
+  // 10/10/2026 sur /boucle-anthropique/ et /quest-ce-que-lanthropie/). Même correctif que .dossier-collant (_reutiliser.scss).
+  // Mesure du 11/10/2026 : avec « width: 100% » (règle commune ci-dessus), la marge négative droite n'élargissait pas
+  // la figure, elle la décalait (0 px à gauche, 104 px à droite à 320 comme à 768 px). « width: auto » la rend pleine largeur.
   .figure-boucle-anthropique picture {
     display: block;
-    margin-left: calc(-20px - 2rem);
-    margin-right: calc(-20px - 2rem);
+    width: auto;
+    margin-left: calc(-1 * (var(--marge-main) + var(--marge-colonne)));
+    margin-right: calc(-1 * (var(--marge-main) + var(--marge-colonne)));
   }
 }

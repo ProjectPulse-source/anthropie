@@ -491,6 +491,13 @@ a.dossier-dette__onglet:focus-visible { outline: 2px solid var(--color-pivot); o
   .dossier-entete .dossier-dette__titre { font-size: 0.72rem; padding: 0.18rem 0.45rem; }
   .dossier-entete__source { font-size: 0.74rem; }
 }
+// Téléphone (mesure du 11/10/2026) : sur une ligne, la source la plus longue (« Données · Eurostat et BCE 2025 ·
+// projections… », générations futures) débordait de 47 px à 320 px (34 px en anglais). Passée à la ligne, elle portait
+// la barre collante à 137 px de haut (81 px ailleurs), un quart d'écran pendant toute la lecture : elle se tronque, la
+// source entière reste dans l'infobulle (title) et dans la section des sources de la page.
+@media (max-width: 600px) {
+  .dossier-entete__source { min-width: 0; max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
+}
 // BLOC COLLANT (auteur, 06/10/2026 : « il faut qu'elle englobe l'étiquette en bleu marine ») : la pastille du dossier
 // et sa source collent AVEC les onglets. Le lecteur arrivé au milieu d'une page voit de quel dossier il lit un volet,
 // pas seulement le nom du volet. C'est l'enveloppe (partials/dossier-barre.html) qui colle et porte le fond ; la barre
@@ -521,13 +528,13 @@ a.dossier-dette__onglet:focus-visible { outline: 2px solid var(--color-pivot); o
 // Téléphone : la pleine largeur passe de la barre à l'enveloppe, sinon le fond de la pastille serait plus étroit que
 // celui des onglets.
 @media (max-width: 700px) {
-  // Marge négative EXACTE du conteneur (.site-main 20 px sous 768 px + .home-section 2 rem), pas calc(50% - 50vw) :
+  // Marge négative EXACTE du conteneur (--marge-main + --marge-colonne), pas calc(50% - 50vw) :
   // 50vw compte la barre de défilement d'un navigateur de bureau, d'où 15 px de débordement horizontal sur toutes
   // les ressources (mesuré le 10/10/2026 ; correctif vérifié sur Langue, Dette, Enseignants : barre 0..largeur visible).
-  // Si les marges de .site-main ou de .home-section changent, ces deux valeurs changent avec elles.
+  // Calculée depuis --marge-main et --marge-colonne (_layout.scss, 11/10/2026) : elle suit d'elle-même.
   .dossier-collant {
-    margin-left: calc(-20px - 2rem);
-    margin-right: calc(-20px - 2rem);
+    margin-left: calc(-1 * (var(--marge-main) + var(--marge-colonne)));
+    margin-right: calc(-1 * (var(--marge-main) + var(--marge-colonne)));
     padding-left: 16px;
     padding-right: 16px;
   }

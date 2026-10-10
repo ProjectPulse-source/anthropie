@@ -102,7 +102,7 @@
 .home-axes {
   max-width: var(--container-max);
   margin: 0 auto 4rem;
-  padding: 0 2rem;
+  padding: 0 var(--marge-colonne);
 
   h2 {
     font-family: var(--font-serif);
@@ -187,7 +187,7 @@
 .frontiere-contemporaine {
   max-width: var(--container-max);
   margin: 4rem auto;            // explicite, aligné avec .home-axes margin-bottom et .home-awp
-  padding: 0 2rem 1rem;         // padding-bottom : rythme intra-section (compense l'absence de <p> autour du link inline)
+  padding: 0 var(--marge-colonne) 1rem;         // padding-bottom : rythme intra-section (compense l'absence de <p> autour du link inline)
 }
 
 .frontiere-contemporaine__inner {
@@ -250,7 +250,7 @@
 .home-awp {
   max-width: var(--container-max);
   margin: 0 auto 4rem;
-  padding: 0 2rem;
+  padding: 0 var(--marge-colonne);
 }
 .home-awp h2, .home-livres h2, .home-reception h2 {
   font-family: var(--font-serif);

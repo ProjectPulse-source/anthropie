@@ -36,7 +36,7 @@
 .awp-article {
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 var(--marge-colonne);
 }
 
 .awp-article__layout {
@@ -205,6 +205,8 @@
     font-family: var(--font-sans);
     font-size: var(--fs-small);
     margin: 0;
+    min-width: 0;
+    overflow-wrap: anywhere;  // un DOI sans espace débordait de 4 px à 320 px (mesure du 11/10/2026)
     a { color: var(--color-accent); }
   }
 }
