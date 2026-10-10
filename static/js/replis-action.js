@@ -60,9 +60,24 @@
     s.appendChild(ligne);
   }
 
+  // Ancre visant un repli ou son contenu (contre-expertise de la page « Professeurs », 10/10/2026) : le repli s'ouvre,
+  // sinon le lecteur arrivé par le lien croit qu'il n'a rien révélé. Seulement à l'arrivée par une ancre : aucun repli
+  // n'est ouvert autrement, et le lecteur garde la main pour le refermer.
+  function ouvrirCible() {
+    var id = decodeURIComponent((location.hash || "").slice(1));
+    var cible = id && document.getElementById(id);
+    var d = cible && cible.closest("details.repli");
+    if (d && !d.open) {
+      d.open = true;
+      cible.scrollIntoView();
+    }
+  }
+
   function init() {
     Array.prototype.forEach.call(document.querySelectorAll("details.repli"), poser);
+    ouvrirCible();
   }
+  window.addEventListener("hashchange", ouvrirCible);
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();
 })();
