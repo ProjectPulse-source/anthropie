@@ -98,12 +98,10 @@ L'OCDE ne publie pas de test de l'écart entre la baisse française et celle des
 
 PISA n'est pas seule à suivre les élèves français. Trois autres évaluations le font, chacune avec ses élèves, sa compétence et sa période&nbsp;:
 
-| Évaluation | Qui | Ce qu'elle mesure | Dernière période comparée |
-|---|---|---|---|
-| PISA (OCDE) | jeunes de 15 ans, toutes classes | compétences appliquées, épreuve sans enjeu | 2022-2025 |
-| PIRLS (IEA, association internationale de chercheurs en éducation) | élèves de CM1 | compréhension de l'écrit | 2016-2021 |
-| TIMSS (IEA) | élèves de CM1 et de quatrième | mathématiques et sciences, proches des programmes | 2019-2023 |
-| Test de positionnement (DEPP, service statistique du ministère) | tous les élèves entrant en seconde | français et mathématiques, sans test de significativité publié | 2021-2024 |
+- **PISA** (OCDE)&nbsp;: les jeunes de 15 ans, toutes classes confondues&nbsp;; des compétences appliquées, dans une épreuve sans enjeu&nbsp;; dernière période comparée, 2022-2025.
+- **PIRLS** (IEA, association internationale de chercheurs en éducation)&nbsp;: les élèves de CM1&nbsp;; la compréhension de l'écrit&nbsp;; 2016-2021.
+- **TIMSS** (IEA)&nbsp;: les élèves de CM1 et de quatrième&nbsp;; les mathématiques et les sciences, proches des programmes&nbsp;; 2019-2023.
+- **Test de positionnement** (DEPP, service statistique du ministère de l'Éducation nationale)&nbsp;: tous les élèves entrant en seconde&nbsp;; le français et les mathématiques, sans test de significativité publié&nbsp;; 2021-2024.
 
 <figure class="figure-ciseau">
   <picture>
