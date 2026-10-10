@@ -54,7 +54,7 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ### 2026-10-10 — « Ce qu'il faut retenir » en exergue sur toutes les ressources (modèle B de l'auteur)
 
-- Cinq maquettes soumises (`docs/maquettes/retenir-en-exergue.html`), modèle B retenu par l'auteur : carte blanche,
+- Cinq maquettes soumises (`docs/ARBITRAGE_RETENIR_EN_EXERGUE_2026-10-10.html`, décision portée en tête), modèle B retenu par l'auteur : carte blanche,
   liseré bleu marine en tête, corps à 19 px (18 px sous 520 px). Classe `.retenir` dans `_dette-monde.scss` ;
   surtitre de la maquette retiré (redondant avec le titre).
 - 17 pages (10 FR, 7 EN) : section enveloppée d'un `<div class="retenir">`, texte inchangé. Ancres publiées gardées
