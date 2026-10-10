@@ -159,6 +159,8 @@ The working paper [AWP-09](/en/awp/awp-09/) gives the verdict of these accounts 
 - Breunig, C. and Busemeyer, M. R. (2012), “Fiscal austerity and the trade-off between public investment and social spending”, *Journal of European Public Policy*, 19(6), pp. 921-938.
 {{< /confrontation-recherche >}}
 
+<div class="retenir">
+
 ## What to take away {#takeaways}
 
 A debt does not leave only a charge: it also leaves what was acquired at the same time. In France, over thirty years, net acquisitions of recorded assets corresponded to only {{< gen-val "part_k" >}}% of deficits, and this share fell decade by decade, down to {{< gen-val "d3_part" >}}% in {{< gen-val "d3_lib" >}}. General government net worth fell from {{< gen-val "pn0" >}}% to {{< gen-val "pn1" >}}% of GDP.
@@ -168,6 +170,8 @@ A debt does not leave only a charge: it also leaves what was acquired at the sam
 Ageing is not, according to the Commission’s indicator, what makes French debt hard to stabilise: it is the present gap between revenue and spending ({{< gen-val "ibp" >}} points of GDP, against {{< gen-val "coa" >}} for ageing), in all its scenarios.
 
 These accounts say neither what current spending produced, nor who, within each generation, will bear the adjustment: that is the subject of [Who really pays for public debt?](/en/who-really-pays-public-debt/)
+
+</div>
 
 ## Frequently asked questions {#questions}
 

@@ -52,6 +52,18 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-10 — « Ce qu'il faut retenir » en exergue sur toutes les ressources (modèle B de l'auteur)
+
+- Cinq maquettes soumises (`docs/maquettes/retenir-en-exergue.html`), modèle B retenu par l'auteur : carte blanche,
+  liseré bleu marine en tête, corps à 19 px (18 px sous 520 px). Classe `.retenir` dans `_dette-monde.scss` ;
+  surtitre de la maquette retiré (redondant avec le titre).
+- 17 pages (10 FR, 7 EN) : section enveloppée d'un `<div class="retenir">`, texte inchangé. Ancres publiées gardées
+  telles quelles, y compris les ancres automatiques de *Coût* et *Qui paie* (`#ce-quil-faut-retenir`, `#what-to-take-away`).
+- Mesuré au navigateur : `.home-section h2:not(…):not(…)` (0-3-1) imposait 77 px de vide et un second filet en tête de
+  carte ; sélecteur relevé, écart ramené à 29 px. 390 px : 0 élément débordant sur 4 pages (dont 1 EN).
+- Build `$?`=0 ; HTML construit : 17 cartes, h2 et ancre en tête, paragraphes comptés = source, 0 jeton non résolu ;
+  `check-all --ci` à 0 ; `audit-liens-build.py` à 0.
+
 ### 2026-10-09 — Échecs CI du 05 et du 07/10 corrigés : pièces archivées en octets exacts, EESR injoignable ≠ fiche absente ; EN LIGNE
 
 - **07/10, « Donnees dette (comparaison internationale) »** arrêté sur l'empreinte du CSV Webstat (`8b4ddbf3…` au lieu de

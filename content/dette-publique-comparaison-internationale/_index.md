@@ -214,6 +214,8 @@ Seules des mesures indicatives existent&nbsp;: la dette selon le FMI, et les int
 - Laubach, T., «&nbsp;New Evidence on the Interest Rate Effects of Budget Deficits and Debt&nbsp;», Finance and Economics Discussion Series 2003-12, Federal Reserve (publié, révisé, dans le *Journal of the European Economic Association*, 7(4), 2009).
 {{< /confrontation-recherche >}}
 
+<div class="retenir">
+
 ## Ce qu'il faut retenir {#retenir}
 
 Le niveau d'une dette ne dit pas, à lui seul, ce qu'elle pèse. Dans l'Union, à dette voisine, la part des recettes absorbée par les intérêts varie de 1 à {{< monde-val "j_rapport" >}}&nbsp;: la charge dépend aussi du prix payé sur le stock et du niveau des recettes publiques.
@@ -225,6 +227,8 @@ Cette position est une photographie, et elle a une échéance. Le taux implicite
 La monnaie commune ne fixe pas ce prix. L'euro a supprimé le risque de change entre ses membres, non l'écart de taux&nbsp;: en 2012, la Grèce empruntait {{< monde-val "ec_el_2012" >}}&nbsp;points au-dessus de l'Allemagne, et la détente n'est venue qu'après les interventions de la BCE.
 
 Reste la trajectoire&nbsp;: un même niveau de dette peut monter ou baisser selon l'écart entre taux et croissance et selon le solde primaire. C'est l'objet de [La dette publique peut-elle baisser&nbsp;?](/dette-publique-peut-elle-baisser/)
+
+</div>
 
 ## Questions fréquentes {#questions}
 

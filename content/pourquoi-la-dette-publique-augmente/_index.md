@@ -126,6 +126,8 @@ Sur les {{< dyn-val "annees_total" >}} années de la série, le solde primaire n
 - Heyer, É., Plane, M., Ragot, X., Sampognaro, R. et Timbeau, X., «&nbsp;Quelles trajectoires pour les finances publiques de la France&nbsp;?&nbsp;», document de travail de l'OFCE n°&nbsp;13, juillet 2025.
 {{< /confrontation-recherche >}}
 
+<div class="retenir">
+
 ## Ce qu'il faut retenir {#retenir}
 
 En trente ans, la dette publique française a doublé en part de PIB, de {{< dyn-val "dette_depart" >}}&nbsp;% à {{< dyn-val "dette_fin" >}}&nbsp;%. Les intérêts l'ont poussée, mais sur l'ensemble de la période la croissance du PIB nominal en a effacé presque autant&nbsp;; ce qui reste, dans la décomposition Eurostat utilisée ici, ce sont les déficits primaires, {{< dyn-val "part_deficits" >}}&nbsp;% de la hausse&nbsp;: hors intérêts, les comptes publics n'ont été excédentaires que {{< dyn-val "annees_excedent" >}} années sur {{< dyn-val "annees_total" >}}.
@@ -135,6 +137,8 @@ Cette quasi-annulation est une compensation dans le temps, non une neutralité. 
 En {{< dyn-val "annee_fin" >}}, la compensation s'est refermée&nbsp;: taux implicite ({{< dyn-val "taux_implicite_dernier" >}}&nbsp;%) et croissance nominale ({{< dyn-val "croissance_derniere" >}}&nbsp;%) étaient presque égaux. Tant qu'ils le restent, la croissance n'efface que ce que coûtent les intérêts, et le sens du ratio se joue sur le solde primaire, aux ajustements flux-stock près&nbsp;: un déficit primaire le fait monter d'autant, un excédent le fait baisser d'autant. Le taux implicite, lui, remonte depuis son point bas, à mesure que la dette ancienne se refinance aux conditions nouvelles&nbsp;: s'il repasse au-dessus de la croissance, le même déficit pèsera davantage.
 
 Reste ce que la comptabilité ne dit pas&nbsp;: pourquoi ces déficits ont existé, et lequel de leurs deux termes, dépenses ou recettes, les explique. Ce qu'il a fallu ailleurs pour que la dette baisse est l'objet de [La dette publique peut-elle baisser&nbsp;?](/dette-publique-peut-elle-baisser/)
+
+</div>
 
 ## Questions fréquentes {#questions}
 

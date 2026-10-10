@@ -234,6 +234,8 @@ Ce qui peut s'établir, c'est l'effet d'une décision déterminée — une réfo
 - Barro, R. J. (1989), «&nbsp;The Ricardian Approach to Budget Deficits&nbsp;», *Journal of Economic Perspectives*, 3(2), p.&nbsp;37-54.
 {{< /confrontation-recherche >}}
 
+<div class="retenir">
+
 ## Ce qu'il faut retenir
 
 **Une question de répartition n'a pas de réponse en soi&nbsp;; elle en a une par décision.** L'incidence d'un euro d'intérêts ne se lit nulle part dans les comptes, parce qu'elle se forme ailleurs&nbsp;: dans l'ajustement retenu cette année-là — impôt, dépense, inflation, report — et dans l'alternative à laquelle on le compare. Nommer les deux transforme une opinion en énoncé vérifiable&nbsp;; ne nommer ni l'un ni l'autre produit une réponse qui ne peut être ni établie, ni réfutée.
@@ -243,6 +245,8 @@ Ce qui peut s'établir, c'est l'effet d'une décision déterminée — une réfo
 **Une moyenne de groupe ne décrit pas ses membres.** C'est le résultat le moins intuitif de cette page&nbsp;: un dixième de niveau de vie peut recevoir plus qu'il ne verse *en moyenne* alors que la majorité des personnes qui le composent versent plus qu'elles ne reçoivent — quelques soldes très positifs suffisent à porter la moyenne. Une statistique de dixièmes répond donc à «&nbsp;comment se répartit la masse&nbsp;?&nbsp;», pas à «&nbsp;que vit une personne de ce dixième&nbsp;?&nbsp;».
 
 **Sur les générations, un seul énoncé résiste à l'objection du bilan.** Qu'une dette pèse ou profite à ceux qui suivent dépend de son usage, du financement et des créances transmises&nbsp;: l'encours ne le dit pas, et la dette nette publiée ne le dit pas davantage, puisqu'elle ne déduit que certains actifs financiers. Ce qui reste vrai dans tous les cas est d'un autre ordre&nbsp;: la décision se prend sans ceux qui en porteront une part.
+
+</div>
 
 <div class="prolongements" role="group" aria-label="Prolongements du dossier">
 <p class="prolongements__titre">Prolongements du dossier&nbsp;: deux applications de «&nbsp;qui paie&nbsp;?&nbsp;»</p>

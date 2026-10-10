@@ -128,6 +128,8 @@ Over the {{< dyn-val "annees_total" >}} years of the series, the primary balance
 - Heyer, É., Plane, M., Ragot, X., Sampognaro, R. and Timbeau, X., "Quelles trajectoires pour les finances publiques de la France ?" [What paths for France's public finances?], OFCE working paper no. 13, July 2025 (in French).
 {{< /confrontation-recherche >}}
 
+<div class="retenir">
+
 ## What to take away {#retenir}
 
 In thirty years, French public debt doubled as a share of GDP, from {{< dyn-val "dette_depart" >}}% to {{< dyn-val "dette_fin" >}}%. Interest pushed it up, but over the whole period nominal GDP growth erased almost as much; what remains, in the Eurostat decomposition used here, is primary deficits, {{< dyn-val "part_deficits" >}}% of the rise: excluding interest, the public accounts were in surplus in only {{< dyn-val "annees_excedent" >}} years out of {{< dyn-val "annees_total" >}}.
@@ -137,6 +139,8 @@ This near-cancellation is an offset over time, not neutrality. Before {{< dyn-va
 In {{< dyn-val "annee_fin" >}}, the offset closed: the implicit rate ({{< dyn-val "taux_implicite_dernier" >}}%) and nominal growth ({{< dyn-val "croissance_derniere" >}}%) were almost equal. As long as they stay so, growth erases only what interest costs, and the direction of the ratio is set by the primary balance, give or take stock-flow adjustments: a primary deficit pushes it up by as much, a surplus pulls it down by as much. The implicit rate, for its part, has been rising from its low point as old debt is refinanced on new terms: if it moves back above growth, the same deficit will weigh more.
 
 What the accounts do not say remains: why these deficits existed, and which of their two terms, spending or revenue, explains them. What it took elsewhere for debt to come down is the subject of [Can public debt come down?](/en/can-public-debt-come-down/)
+
+</div>
 
 ## Frequently asked questions {#questions}
 

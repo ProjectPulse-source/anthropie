@@ -173,6 +173,8 @@ These frequencies describe past periods, in a few countries. They give neither a
 - Heyer, É., Plane, M., Ragot, X., Sampognaro, R. and Timbeau, X., "Quelles trajectoires pour les finances publiques de la France ?" [What paths for France's public finances?], OFCE working paper no. 13, July 2025 (in French).
 {{< /confrontation-recherche >}}
 
+<div class="retenir">
+
 ## What to take away {#retenir}
 
 The weight of a debt can fall without its amount decreasing, and it has fallen elsewhere: among EU countries that started from higher debt than France, the ratio fell by {{< baisse-val "cmp_exc_baisse_min" >}} to {{< baisse-val "cmp_exc_baisse_max" >}} points in ten years in the {{< baisse-val "cmp_exc_n" >}} that ran an average primary surplus, without their debt in euros decreasing.
@@ -182,6 +184,8 @@ In France, over the same decade, interest rates and growth helped: {{< baisse-va
 That help has run out: in {{< baisse-val "annee_fin" >}}, the implicit interest rate and nominal growth were almost equal. On those terms, and excluding other adjustments, an unchanged primary balance would push the ratio up by about {{< baisse-val "ecart_dernier" >}} points a year; stabilising it means closing that gap, bringing it down means going further. And, at this level of debt, one additional point of gap between the interest rate and growth would raise the balance to be reached by about {{< baisse-val "sens_pt" >}} points of GDP.
 
 These comparisons say neither which policy would produce this result, nor at what price: the surplus countries had stronger nominal growth than France, and three of them received official financing. Who would bear the adjustment is the subject of [Who really pays for public debt?](/en/who-really-pays-public-debt/)
+
+</div>
 
 ## Frequently asked questions {#questions}
 

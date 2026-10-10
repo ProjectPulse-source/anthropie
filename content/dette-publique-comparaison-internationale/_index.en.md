@@ -214,6 +214,8 @@ Only indicative measures exist: debt according to the IMF, and central-governmen
 - Laubach, T., "New Evidence on the Interest Rate Effects of Budget Deficits and Debt", Finance and Economics Discussion Series 2003-12, Federal Reserve (published, revised, in the *Journal of the European Economic Association*, 7(4), 2009).
 {{< /confrontation-recherche >}}
 
+<div class="retenir">
+
 ## What to take away {#retenir}
 
 The level of a debt does not, on its own, tell what it weighs. In the Union, for similar debt levels, the share of revenue absorbed by interest varies from 1 to {{< monde-val "j_rapport" >}}: the burden also depends on the average interest cost of the stock and on the level of public revenue.
@@ -225,6 +227,8 @@ This position is a snapshot, and it has an expiry date. The implicit rate covers
 A common currency does not set that cost. The euro removed exchange-rate risk between its members, not the interest-rate gap: in 2012, Greece was borrowing {{< monde-val "ec_el_2012" >}} points above Germany, and the easing came only after the ECB's interventions.
 
 What remains is the trajectory: the same level of debt can rise or fall depending on the gap between interest rates and growth and on the primary balance. That is the subject of [Can public debt come down?](/en/can-public-debt-come-down/)
+
+</div>
 
 ## Frequently asked questions {#questions}
 

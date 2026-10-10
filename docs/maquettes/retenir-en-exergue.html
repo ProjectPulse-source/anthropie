@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maquettes « Ce qu'il faut retenir »</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Jetons repris tels quels de assets/scss/_variables.scss */
+:root {
+  --color-bg: #FAFAF6;
+  --color-bg-card: #F2F0E8;
+  --color-bg-elevated: #FFFFFF;
+  --color-text: #0A0A0E;
+  --color-text-body: #1A1A1F;
+  --color-text-muted: #3A3A40;
+  --color-text-subtle: #5A5A60;
+  --color-accent: #1B2A4E;
+  --color-accent-faint: rgba(27, 42, 78, 0.08);
+  --color-accent-rule: rgba(27, 42, 78, 0.60);
+  --color-pivot: #4A6FA5;
+  --color-dossier-tint: #EBEFF5;
+  --color-rule-strong: rgba(15, 15, 18, 0.20);
+  --color-rule-soft: rgba(15, 15, 18, 0.13);
+  --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Menlo, monospace;
+  --fs-h2: clamp(22px, 2.4vw, 28px);
+  --fs-small: 14px;
+  --lh-tight: 1.06;
+  --lh-body: 1.7;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--color-bg); color: var(--color-text-body);
+  font-family: var(--font-serif); font-size: 17px; line-height: var(--lh-body);
+}
+h2 { font-family: var(--font-serif); font-weight: 400; letter-spacing: -0.018em; line-height: var(--lh-tight);
+     color: var(--color-text); font-size: var(--fs-h2); margin: 2em 0 0.8em; }
+p { margin: 0 0 1.2em; }
+ul { padding-left: 1.2em; }
+
+/* Cadre de la planche */
+.planche { max-width: 760px; margin: 0 auto; padding: 32px 16px 80px; }
+.planche > header h1 { font-family: var(--font-serif); font-weight: 400; font-size: clamp(28px, 4vw, 38px); margin: 0 0 .4em; }
+.planche > header p { font-family: var(--font-sans); font-size: 15px; color: var(--color-text-muted); }
+.variante { margin: 64px 0 0; }
+.variante__etiquette {
+  font-family: var(--font-sans); font-size: 13px; color: var(--color-text-subtle);
+  border-top: 2px solid var(--color-text); padding-top: 10px; margin-bottom: 4px;
+  display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+}
+.variante__etiquette strong { color: var(--color-text); font-weight: 600; }
+.variante__note { font-family: var(--font-sans); font-size: 13px; color: var(--color-text-subtle); margin: 6px 0 0; }
+.contexte { color: var(--color-text-subtle); }
+.contexte p, .contexte li { font-size: 16px; }
+.contexte h2 { color: var(--color-text-subtle); }
+
+/* ---------- A. Filet d'accent + teinte « dossier » ---------- */
+.retenir-a {
+  margin: 2.4em 0; padding: 22px 26px 8px;
+  background: var(--color-dossier-tint);
+  border-left: 4px solid var(--color-accent);
+}
+.retenir-a h2 {
+  margin: 0 0 .7em; font-family: var(--font-sans); font-size: 13px; font-weight: 600;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--color-accent);
+}
+.retenir-a p { font-size: 18px; color: var(--color-text); }
+
+/* ---------- B. Carte blanche, surtitre, corps agrandi ---------- */
+.retenir-b {
+  margin: 2.6em 0; padding: 28px 30px 10px;
+  background: var(--color-bg-elevated);
+  border: 0.5px solid var(--color-rule-strong);
+  box-shadow: 0 2px 14px rgba(15, 15, 18, 0.07);
+  position: relative;
+}
+.retenir-b::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: var(--color-accent);
+}
+.retenir-b .surtitre {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--color-pivot); margin: 0 0 .5em;
+}
+.retenir-b h2 { margin: 0 0 .6em; }
+.retenir-b p { font-size: 19px; line-height: 1.65; color: var(--color-text); }
+
+/* ---------- C. Bandeau sombre, contraste maximal ---------- */
+.retenir-c {
+  margin: 2.6em 0; padding: 30px 32px 12px;
+  background: var(--color-accent); color: #F4F5F8;
+}
+.retenir-c h2 { margin: 0 0 .7em; color: #FFFFFF; }
+.retenir-c p { font-size: 18px; color: #E9ECF3; }
+
+/* ---------- D. Typographique : filets, sans fond ---------- */
+.retenir-d {
+  margin: 3em 0; padding: 26px 0 10px;
+  border-top: 2px solid var(--color-accent);
+  border-bottom: 0.5px solid var(--color-rule-strong);
+}
+.retenir-d h2 { margin: 0 0 .7em; color: var(--color-accent); }
+.retenir-d p { font-size: 20px; line-height: 1.6; color: var(--color-text); }
+
+/* ---------- E. Carte teintée, constats découpés ---------- */
+.retenir-e {
+  margin: 2.6em 0; padding: 24px 28px 12px;
+  background: var(--color-bg-card);
+  border-left: 4px solid var(--color-accent);
+}
+.retenir-e h2 { margin: 0 0 .8em; }
+.retenir-e ol { list-style: none; padding: 0; margin: 0 0 1em; counter-reset: c; }
+.retenir-e li {
+  counter-increment: c; position: relative; padding: 0 0 0 38px; margin: 0 0 .9em; font-size: 17.5px; color: var(--color-text);
+}
+.retenir-e li::before {
+  content: counter(c); position: absolute; left: 0; top: .15em;
+  width: 24px; height: 24px; border-radius: 50%;
+  background: var(--color-accent); color: #fff; font-family: var(--font-sans); font-size: 12px; font-weight: 600;
+  display: flex; align-items: center; justify-content: center;
+}
+.retenir-e .conclusion { font-style: italic; color: var(--color-text-muted); }
+
+@media (max-width: 520px) {
+  .retenir-a, .retenir-b, .retenir-c, .retenir-e { padding-left: 18px; padding-right: 18px; }
+  .retenir-b p, .retenir-d p { font-size: 18px; }
+}
+</style>
+</head>
+<body>
+<main class="planche">
+<header>
+  <h1>« Ce qu'il faut retenir » en exergue</h1>
+  <p>Cinq maquettes sur le texte réel de <em>Manque-t-il des professeurs ?</em>, aux couleurs et polices du site (jetons de <code>_variables.scss</code>). La section précédente et la suivante sont grisées pour montrer l'insertion dans la page. Toutes gardent le titre <code>h2</code> et l'ancre <code>#retenir</code>.</p>
+</header>
+
+<!-- ======================= A ======================= -->
+<section class="variante">
+  <div class="variante__etiquette"><strong>A — Filet d'accent, fond bleuté</strong><span>sobre, dans la famille des encadrés « dossier »</span></div>
+  <div class="contexte">
+    <ul><li><strong>L'enquête sur les heures non assurées</strong> est déclarative et faite sur un échantillon d'établissements publics ; les grèves y sont comptées parmi les absences individuelles.</li></ul>
+  </div>
+  <aside class="retenir-a" id="retenir-a">
+    <h2>Ce qu'il faut retenir</h2>
+    <p>Le « manque de professeurs » recouvre au moins quatre réalités que les chiffres séparent : un recrutement longtemps déficitaire en mathématiques et en physique-chimie, dont la session double de 2026 a pourvu plus de neuf postes sur dix, quand le concours de mathématiques-physique-chimie des lycées professionnels reste loin du compte ; des classes de plus de 30 élèves en moyenne, tandis que la part des divisions de 35 élèves ou plus est plus faible qu'en 2015 ; une heure de cours sur dix perdue au lycée, davantage par les fermetures, les examens et la formation que par les absences, et six fois plus dans les établissements les plus touchés que dans les moins touchés ; une dépense par élève élevée en comparaison internationale, mais inférieure à son niveau de 2010. Aucune de ces mesures ne suffit, seule, à répondre oui ou non.</p>
+  </aside>
+  <div class="contexte"><h2>Questions fréquentes</h2></div>
+  <p class="variante__note">Titre réduit en petites capitales bleu marine : il signale plus qu'il ne concurrence les autres titres. Le texte passe de 16 à 18 px.</p>
+</section>
+
+<!-- ======================= B ======================= -->
+<section class="variante">
+  <div class="variante__etiquette"><strong>B — Carte blanche, surtitre, liseré haut</strong><span>même famille que l'encadré du livre (<code>.appel-livre</code>)</span></div>
+  <div class="contexte">
+    <ul><li><strong>L'enquête sur les heures non assurées</strong> est déclarative et faite sur un échantillon d'établissements publics ; les grèves y sont comptées parmi les absences individuelles.</li></ul>
+  </div>
+  <aside class="retenir-b">
+    <p class="surtitre">En une page, la réponse</p>
+    <h2>Ce qu'il faut retenir</h2>
+    <p>Le « manque de professeurs » recouvre au moins quatre réalités que les chiffres séparent : un recrutement longtemps déficitaire en mathématiques et en physique-chimie, dont la session double de 2026 a pourvu plus de neuf postes sur dix, quand le concours de mathématiques-physique-chimie des lycées professionnels reste loin du compte ; des classes de plus de 30 élèves en moyenne, tandis que la part des divisions de 35 élèves ou plus est plus faible qu'en 2015 ; une heure de cours sur dix perdue au lycée, davantage par les fermetures, les examens et la formation que par les absences, et six fois plus dans les établissements les plus touchés que dans les moins touchés ; une dépense par élève élevée en comparaison internationale, mais inférieure à son niveau de 2010. Aucune de ces mesures ne suffit, seule, à répondre oui ou non.</p>
+  </aside>
+  <div class="contexte"><h2>Questions fréquentes</h2></div>
+  <p class="variante__note">Le surtitre est facultatif (texte à choisir, ou supprimé). Corps à 19 px : le passage se lit comme la conclusion du dossier.</p>
+</section>
+
+<!-- ======================= C ======================= -->
+<section class="variante">
+  <div class="variante__etiquette"><strong>C — Bandeau bleu marine, texte clair</strong><span>le plus visible ; rupture nette avec le reste</span></div>
+  <div class="contexte">
+    <ul><li><strong>L'enquête sur les heures non assurées</strong> est déclarative et faite sur un échantillon d'établissements publics ; les grèves y sont comptées parmi les absences individuelles.</li></ul>
+  </div>
+  <aside class="retenir-c">
+    <h2>Ce qu'il faut retenir</h2>
+    <p>Le « manque de professeurs » recouvre au moins quatre réalités que les chiffres séparent : un recrutement longtemps déficitaire en mathématiques et en physique-chimie, dont la session double de 2026 a pourvu plus de neuf postes sur dix, quand le concours de mathématiques-physique-chimie des lycées professionnels reste loin du compte ; des classes de plus de 30 élèves en moyenne, tandis que la part des divisions de 35 élèves ou plus est plus faible qu'en 2015 ; une heure de cours sur dix perdue au lycée, davantage par les fermetures, les examens et la formation que par les absences, et six fois plus dans les établissements les plus touchés que dans les moins touchés ; une dépense par élève élevée en comparaison internationale, mais inférieure à son niveau de 2010. Aucune de ces mesures ne suffit, seule, à répondre oui ou non.</p>
+  </aside>
+  <div class="contexte"><h2>Questions fréquentes</h2></div>
+  <p class="variante__note">Fort à l'écran ; un long paragraphe en texte clair sur fond sombre se lit moins bien sur les pages éducation (texte de 150 à 230 mots). Mieux adapté aux pages dette, où le passage tient en deux phrases.</p>
+</section>
+
+<!-- ======================= D ======================= -->
+<section class="variante">
+  <div class="variante__etiquette"><strong>D — Typographique, filets seuls</strong><span>le plus discret ; aucun fond</span></div>
+  <div class="contexte">
+    <ul><li><strong>L'enquête sur les heures non assurées</strong> est déclarative et faite sur un échantillon d'établissements publics ; les grèves y sont comptées parmi les absences individuelles.</li></ul>
+  </div>
+  <aside class="retenir-d">
+    <h2>Ce qu'il faut retenir</h2>
+    <p>Le « manque de professeurs » recouvre au moins quatre réalités que les chiffres séparent : un recrutement longtemps déficitaire en mathématiques et en physique-chimie, dont la session double de 2026 a pourvu plus de neuf postes sur dix, quand le concours de mathématiques-physique-chimie des lycées professionnels reste loin du compte ; des classes de plus de 30 élèves en moyenne, tandis que la part des divisions de 35 élèves ou plus est plus faible qu'en 2015 ; une heure de cours sur dix perdue au lycée, davantage par les fermetures, les examens et la formation que par les absences, et six fois plus dans les établissements les plus touchés que dans les moins touchés ; une dépense par élève élevée en comparaison internationale, mais inférieure à son niveau de 2010. Aucune de ces mesures ne suffit, seule, à répondre oui ou non.</p>
+  </aside>
+  <div class="contexte"><h2>Questions fréquentes</h2></div>
+  <p class="variante__note">L'exergue vient de la taille du corps (20 px) et du filet épais : registre de revue, cohérent avec la sobriété du site.</p>
+</section>
+
+<!-- ======================= E ======================= -->
+<section class="variante">
+  <div class="variante__etiquette"><strong>E — Constats numérotés</strong><span>le plus lisible en survol ; demande de réécrire chaque page</span></div>
+  <div class="contexte">
+    <ul><li><strong>L'enquête sur les heures non assurées</strong> est déclarative et faite sur un échantillon d'établissements publics ; les grèves y sont comptées parmi les absences individuelles.</li></ul>
+  </div>
+  <aside class="retenir-e">
+    <h2>Ce qu'il faut retenir</h2>
+    <p>Le « manque de professeurs » recouvre au moins quatre réalités que les chiffres séparent :</p>
+    <ol>
+      <li>un recrutement longtemps déficitaire en mathématiques et en physique-chimie, dont la session double de 2026 a pourvu plus de neuf postes sur dix, quand le concours de mathématiques-physique-chimie des lycées professionnels reste loin du compte ;</li>
+      <li>des classes de plus de 30 élèves en moyenne, tandis que la part des divisions de 35 élèves ou plus est plus faible qu'en 2015 ;</li>
+      <li>une heure de cours sur dix perdue au lycée, davantage par les fermetures, les examens et la formation que par les absences, et six fois plus dans les établissements les plus touchés que dans les moins touchés ;</li>
+      <li>une dépense par élève élevée en comparaison internationale, mais inférieure à son niveau de 2010.</li>
+    </ol>
+    <p class="conclusion">Aucune de ces mesures ne suffit, seule, à répondre oui ou non.</p>
+  </aside>
+  <div class="contexte"><h2>Questions fréquentes</h2></div>
+  <p class="variante__note">Même texte, découpé. Ne s'applique tel quel qu'aux pages dont le passage est déjà une énumération (professeurs, niveau des élèves) ; ailleurs il faudrait réécrire, donc relire chaque page.</p>
+</section>
+</main>
+</body>
+</html>

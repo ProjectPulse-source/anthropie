@@ -204,6 +204,8 @@ Ces données n'attribuent pas cet écart à la dette&nbsp;; ce qu'elles établis
 - Breunig, C. et Busemeyer, M. R. (2012), «&nbsp;Fiscal austerity and the trade-off between public investment and social spending&nbsp;», *Journal of European Public Policy*, 19(6), p.&nbsp;921-938.
 {{< /confrontation-recherche >}}
 
+<div class="retenir">
+
 ## Ce qu'il faut retenir
 
 Pendant environ vingt-cinq ans, la facture n'a pas suivi la dette&nbsp;: la baisse du coût moyen du stock a compensé la hausse de l'encours. Son retournement accroît désormais la contrainte budgétaire.
@@ -219,6 +221,8 @@ Une conséquence mérite d'être vue d'avance&nbsp;: **stabiliser le ratio de de
 Une règle gouverne enfin toutes les comparaisons de cette page&nbsp;: **le millésime commun le plus récent, le même pour tous les termes**. La ventilation des dépenses par fonction paraissant avec près de deux ans de retard, les masses comparées portent sur {{< dette-val "equiv_annee" >}}, quand la charge d'intérêts la plus récente porte sur {{< dette-val "interets_annee" >}}. Les deux années sont dites, jamais mélangées.
 
 </details>
+
+</div>
 
 ## Questions fréquentes {#questions}
 

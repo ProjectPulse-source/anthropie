@@ -175,6 +175,8 @@ Ces fréquences décrivent des périodes passées, dans quelques pays. Elles ne 
 - Heyer, É., Plane, M., Ragot, X., Sampognaro, R. et Timbeau, X., «&nbsp;Quelles trajectoires pour les finances publiques de la France&nbsp;?&nbsp;», document de travail de l'OFCE n°&nbsp;13, juillet 2025.
 {{< /confrontation-recherche >}}
 
+<div class="retenir">
+
 ## Ce qu'il faut retenir {#retenir}
 
 Le poids d'une dette peut baisser sans que son montant diminue, et il a baissé ailleurs&nbsp;: parmi les pays de l'Union partis d'une dette plus élevée que la France, le ratio a reculé de {{< baisse-val "cmp_exc_baisse_min" >}} à {{< baisse-val "cmp_exc_baisse_max" >}} points en dix ans dans les {{< baisse-val "cmp_exc_n" >}} qui ont dégagé un excédent primaire moyen, sans que leur dette en euros diminue.
@@ -184,6 +186,8 @@ En France, sur la même décennie, les taux et la croissance ont aidé&nbsp;: {{
 Cette aide s'est éteinte&nbsp;: en {{< baisse-val "annee_fin" >}}, taux implicite et croissance nominale étaient presque égaux. À ces conditions, et hors autres ajustements, un solde primaire inchangé ferait monter le ratio d'environ {{< baisse-val "ecart_dernier" >}} points par an&nbsp;; le stabiliser demande de combler cet écart, le faire baisser d'aller au-delà. Et, à ce niveau de dette, un point supplémentaire d'écart entre le taux et la croissance relèverait d'environ {{< baisse-val "sens_pt" >}} point de PIB le solde à atteindre.
 
 Ces comparaisons ne disent ni quelle politique produirait ce résultat, ni à quel prix&nbsp;: les pays en excédent ont eu une croissance nominale plus forte que la France, et trois d'entre eux des financements officiels. Qui supporterait l'ajustement est l'objet de [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/)
+
+</div>
 
 ## Questions fréquentes {#questions}
 

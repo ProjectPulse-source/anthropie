@@ -189,6 +189,8 @@ Hence an apparent paradox: if budgets rise, why do hospitals, schools and courts
 
 These data do not attribute that gap to debt; what they do establish is that, for given revenue and borrowing, the interest burden **squeezes the room that would close it**: the {{< dette-val "interets_mdeur" >}} billion of interest paid in {{< dette-val "interets_annee" >}} reduce, every year, the fiscal space available to close that gap, all else equal — which is not the same as saying that every euro of interest is a euro taken from health or education. The question the data poses is therefore not "are budgets falling?" but "**who will absorb the adjustment**" as debt service climbs: higher taxes, cuts to other spending, wider deficits, inflation, or future generations.
 
+<div class="retenir">
+
 ## What to take away
 
 For about twenty-five years the bill did not follow the debt: the falling average cost of the stock offset the rising stock. Its reversal now tightens the budget constraint.
@@ -200,6 +202,8 @@ One consequence is worth seeing in advance: **stabilising the debt ratio would n
 One rule finally governs every comparison on this page: **the most recent common vintage, the same for every term**. Since spending by function is published with close to a two-year lag, the compared magnitudes are for {{< dette-val "equiv_annee" >}}, while the most recent interest figure is for {{< dette-val "interets_annee" >}}. Both years are stated, never mixed.
 
 The {{< dette-val "interets_mdeur" >}} billion euros of interest paid in {{< dette-val "interets_annee" >}} are not subtracted from any single budget: for given revenue and borrowing, they narrow everyone's room for manoeuvre, every year, before any trade-off is made. That is why the comparison with the courts budget conveys scale without naming a victim.
+
+</div>
 
 ## Frequently asked questions {#questions}
 

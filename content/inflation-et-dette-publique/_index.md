@@ -155,11 +155,15 @@ Elles ne mesurent pas l'effet budgétaire total de l'inflation&nbsp;: ni les rec
 - Andreolli, M. et Rey, H. (2024), «&nbsp;Fiscal Consequences of Missing an Inflation Target&nbsp;», version de mars 2024 (NBER Working Paper 30819&nbsp;; *IMF Economic Review*, 72(2)).
 {{< /confrontation-recherche >}}
 
+<div class="retenir">
+
 ## Ce qu'il faut retenir {#retenir}
 
 L'inflation a bien allégé la valeur réelle de la dette ancienne&nbsp;: environ {{< infl-val "t" >}}&nbsp;milliards d'euros de 2020 de paiements promis sur la dette de l'État à taux fixe de fin 2020 valent moins que prévu, et cette perte de valeur réelle ne sera pas rendue si l'écart de prix persiste.
 
 On mesure assez bien cette érosion de la vieille dette nominale. On ne peut pas, honnêtement, la convertir en un gain budgétaire aussi précis&nbsp;: elle se réalise lentement, elle se mesure différemment selon le numéraire, et le coût des financements qui ont suivi n'est pas attribuable à l'épisode dans une proportion connue. Les achats de la banque centrale y ajoutent une question de calendrier&nbsp;: ils ont surtout avancé dans le temps l'exposition de l'ensemble État + Banque de France aux taux, ce qui change le moment où les coûts arrivent, sans permettre de calculer un gain net de l'inflation.
+
+</div>
 
 ## Questions fréquentes {#questions}
 

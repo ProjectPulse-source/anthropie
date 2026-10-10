@@ -162,6 +162,8 @@ Le working paper [AWP-09](/awp/awp-09/) rend le verdict de ces comptes sur la le
 - Breunig, C. et Busemeyer, M. R. (2012), «&nbsp;Fiscal austerity and the trade-off between public investment and social spending&nbsp;», *Journal of European Public Policy*, 19(6), p.&nbsp;921-938.
 {{< /confrontation-recherche >}}
 
+<div class="retenir">
+
 ## Ce qu'il faut retenir {#retenir}
 
 Une dette ne laisse pas seulement une charge&nbsp;: elle laisse aussi ce qui a été acquis en même temps. En France, sur trente ans, les acquisitions nettes d'actifs comptabilisés n'ont correspondu qu'à {{< gen-val "part_k" >}}&nbsp;% des déficits, et cette part a baissé de décennie en décennie, jusqu'à {{< gen-val "d3_part" >}}&nbsp;% de {{< gen-val "d3_lib" >}}. Le patrimoine net des administrations publiques a reculé de {{< gen-val "pn0" >}}&nbsp;% à {{< gen-val "pn1" >}}&nbsp;% du PIB.
@@ -171,6 +173,8 @@ Une dette ne laisse pas seulement une charge&nbsp;: elle laisse aussi ce qui a �
 Le vieillissement n'est pas, selon l'indicateur de la Commission, ce qui rend la dette française difficile à stabiliser&nbsp;: c'est l'écart présent entre recettes et dépenses ({{< gen-val "ibp" >}} points de PIB, contre {{< gen-val "coa" >}} pour le vieillissement), dans tous ses scénarios.
 
 Ces comptes ne disent ni ce que les dépenses courantes ont produit, ni qui, dans chaque génération, portera l'ajustement&nbsp;: c'est l'objet de [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/)
+
+</div>
 
 ## Questions fréquentes {#questions}
 

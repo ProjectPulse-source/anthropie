@@ -239,6 +239,8 @@ What can be established is the effect of a specific decision — a reform, a fre
 - Barro, R. J. (1989), "The Ricardian Approach to Budget Deficits", *Journal of Economic Perspectives*, 3(2), pp. 37-54.
 {{< /confrontation-recherche >}}
 
+<div class="retenir">
+
 ## What to take away
 
 **A question of distribution has no answer in itself; it has one per decision.** The incidence of a euro of interest cannot be read anywhere in the accounts, because it is determined elsewhere: in the adjustment chosen that year — tax, spending, inflation, postponement — and in the alternative it is compared with. Naming both turns an opinion into a verifiable statement; naming neither produces an answer that can be neither established nor refuted.
@@ -248,6 +250,8 @@ What can be established is the effect of a specific decision — a reform, a fre
 **A group average does not describe its members.** This is the least intuitive result on this page: a standard-of-living decile can receive more than it pays *on average* while most of the people in it pay more than they receive — a few very positive balances are enough to carry the average. A statistic by decile therefore answers "how is the total distributed?", not "what does a person in this decile experience?".
 
 **On generations, only one statement withstands the balance-sheet objection.** Whether a debt weighs on or benefits those who come after depends on its use, its financing and the claims passed on: the stock does not say, and the published net debt does not say either, since it deducts only certain financial assets. What remains true in every case is of another order: the decision is taken without those who will bear part of it.
+
+</div>
 
 <div class="prolongements" role="group" aria-label="Further reading in this dossier">
 <p class="prolongements__titre">Further reading in this dossier: two applications of "who pays?"</p>

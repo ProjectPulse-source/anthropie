@@ -156,9 +156,13 @@ Le SNES-FSU avance aussi un nombre de postes perdus au CAPES externe 2026&nbsp;;
 - **Le vécu des élèves**&nbsp;: la qualité des cours, la charge de travail, les conditions matérielles ne sont pas dans ces chiffres. La consultation nationale des lycéens, ouverte jusqu'au 23&nbsp;octobre 2026, en recueille une partie.
 - **L'enquête sur les heures non assurées** est déclarative et faite sur un échantillon d'établissements publics&nbsp;; les grèves y sont comptées parmi les absences individuelles.
 
+<div class="retenir">
+
 ## Ce qu'il faut retenir {#retenir}
 
 Le «&nbsp;manque de professeurs&nbsp;» recouvre au moins quatre réalités que les chiffres séparent&nbsp;: un recrutement longtemps déficitaire en mathématiques et en physique-chimie, dont la session double de 2026 a pourvu plus de neuf postes sur dix, quand le concours de mathématiques-physique-chimie des lycées professionnels reste loin du compte&nbsp;; des classes de plus de 30&nbsp;élèves en moyenne, tandis que la part des divisions de 35&nbsp;élèves ou plus est plus faible qu'en 2015&nbsp;; une heure de cours sur {{< lyc-val "h_un_sur_l" >}} perdue au lycée, davantage par les fermetures, les examens et la formation que par les absences, et six fois plus dans les établissements les plus touchés que dans les moins touchés&nbsp;; une dépense par élève élevée en comparaison internationale, mais inférieure à son niveau de 2010. Aucune de ces mesures ne suffit, seule, à répondre oui ou non.
+
+</div>
 
 ## Questions fréquentes {#questions}
 

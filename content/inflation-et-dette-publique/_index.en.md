@@ -151,11 +151,15 @@ They do not measure the total fiscal effect of inflation: neither tax revenue sw
 - Andreolli, M. and Rey, H. (2024), "Fiscal Consequences of Missing an Inflation Target", March 2024 version (NBER Working Paper 30819; *IMF Economic Review*, 72(2)).
 {{< /confrontation-recherche >}}
 
+<div class="retenir">
+
 ## Key takeaways {#retenir}
 
 Inflation reduced the real value of legacy debt: relative to the inflation path expected in early 2021, the real value of payments promised on France's end-2020 fixed-rate marketable government debt is about €{{< infl-val "t" >}}bn lower in 2020 euros, and that loss of real value will not be given back if the price gap persists.
 
 We can measure the erosion of legacy nominal debt quite well. What we cannot honestly turn it into is an equally precise fiscal gain: it is realised slowly, it is measured differently depending on the unit of account, and the cost of the borrowing that followed cannot be attributed to the episode in any known proportion. Central-bank purchases add a question of timing: they mainly brought forward the exposure of the government and the Banque de France taken together to interest rates, which changes when the costs arrive, without making it possible to compute a net gain from inflation.
+
+</div>
 
 ## Frequently asked questions {#questions}
 
