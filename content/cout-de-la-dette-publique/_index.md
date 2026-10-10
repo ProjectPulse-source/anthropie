@@ -206,6 +206,8 @@ Ces données n'attribuent pas cet écart à la dette&nbsp;; ce qu'elles établis
 
 <div class="retenir">
 
+<p class="retenir__surtitre">Synthèse</p>
+
 ## Ce qu'il faut retenir
 
 Pendant environ vingt-cinq ans, la facture n'a pas suivi la dette&nbsp;: la baisse du coût moyen du stock a compensé la hausse de l'encours. Son retournement accroît désormais la contrainte budgétaire.

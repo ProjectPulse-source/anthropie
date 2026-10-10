@@ -167,6 +167,8 @@ Certains, et c'est là que les évaluations françaises sont les plus nettes. En
 
 <div class="retenir">
 
+<p class="retenir__surtitre">Synthèse</p>
+
 ## Ce qu'il faut retenir {#retenir}
 
 La langue des élèves ne s'effondre pas d'un bloc, et elle ne tient pas non plus. Le recul le plus ancien est celui de l'orthographe grammaticale, de la lecture en fin d'école et du temps passé à lire pour le plaisir&nbsp;: il est engagé avant la généralisation du smartphone, et il porte sur la grammaire plus que sur l'orthographe des mots. La baisse récente se voit à 15 ans, dans PISA, depuis 2012&nbsp;; sur des périodes qui la recouvrent en partie, les évaluations de l'école et du collège ne suivent pas toutes la même évolution. Elle va de pair avec un recul du goût de lire et, en fin de collège, avec un recul significatif de l'éducation prioritaire quand l'ensemble ne bouge pas significativement. Le vocabulaire, que l'on croit en chute libre, n'est suivi par aucune des séries publiques recensées&nbsp;: c'est la première chose qu'il faudrait mesurer pour répondre à la question. Aucune de ces observations ne permet, à elle seule, d'attribuer ces évolutions aux écrans. Le résultat le plus solide n'est pas un déclin général, mais des compétences, des élèves et des périodes dont les évolutions ne se superposent pas&nbsp;: la question n'est pas seulement de savoir si le niveau baisse, mais quelles compétences reculent, chez quels élèves, et à quel moment de leur scolarité.

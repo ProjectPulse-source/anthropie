@@ -128,6 +128,8 @@ Sur les {{< dyn-val "annees_total" >}} années de la série, le solde primaire n
 
 <div class="retenir">
 
+<p class="retenir__surtitre">Synthèse</p>
+
 ## Ce qu'il faut retenir {#retenir}
 
 En trente ans, la dette publique française a doublé en part de PIB, de {{< dyn-val "dette_depart" >}}&nbsp;% à {{< dyn-val "dette_fin" >}}&nbsp;%. Les intérêts l'ont poussée, mais sur l'ensemble de la période la croissance du PIB nominal en a effacé presque autant&nbsp;; ce qui reste, dans la décomposition Eurostat utilisée ici, ce sont les déficits primaires, {{< dyn-val "part_deficits" >}}&nbsp;% de la hausse&nbsp;: hors intérêts, les comptes publics n'ont été excédentaires que {{< dyn-val "annees_excedent" >}} années sur {{< dyn-val "annees_total" >}}.

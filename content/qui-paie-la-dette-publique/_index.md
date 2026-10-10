@@ -236,6 +236,8 @@ Ce qui peut s'établir, c'est l'effet d'une décision déterminée — une réfo
 
 <div class="retenir">
 
+<p class="retenir__surtitre">Synthèse</p>
+
 ## Ce qu'il faut retenir
 
 **Une question de répartition n'a pas de réponse en soi&nbsp;; elle en a une par décision.** L'incidence d'un euro d'intérêts ne se lit nulle part dans les comptes, parce qu'elle se forme ailleurs&nbsp;: dans l'ajustement retenu cette année-là — impôt, dépense, inflation, report — et dans l'alternative à laquelle on le compare. Nommer les deux transforme une opinion en énoncé vérifiable&nbsp;; ne nommer ni l'un ni l'autre produit une réponse qui ne peut être ni établie, ni réfutée.

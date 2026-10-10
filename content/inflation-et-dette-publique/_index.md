@@ -157,6 +157,8 @@ Elles ne mesurent pas l'effet budgétaire total de l'inflation&nbsp;: ni les rec
 
 <div class="retenir">
 
+<p class="retenir__surtitre">Synthèse</p>
+
 ## Ce qu'il faut retenir {#retenir}
 
 L'inflation a bien allégé la valeur réelle de la dette ancienne&nbsp;: environ {{< infl-val "t" >}}&nbsp;milliards d'euros de 2020 de paiements promis sur la dette de l'État à taux fixe de fin 2020 valent moins que prévu, et cette perte de valeur réelle ne sera pas rendue si l'écart de prix persiste.

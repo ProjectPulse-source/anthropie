@@ -153,6 +153,8 @@ They do not measure the total fiscal effect of inflation: neither tax revenue sw
 
 <div class="retenir">
 
+<p class="retenir__surtitre">Summary</p>
+
 ## Key takeaways {#retenir}
 
 Inflation reduced the real value of legacy debt: relative to the inflation path expected in early 2021, the real value of payments promised on France's end-2020 fixed-rate marketable government debt is about €{{< infl-val "t" >}}bn lower in 2020 euros, and that loss of real value will not be given back if the price gap persists.

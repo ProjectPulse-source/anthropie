@@ -162,6 +162,8 @@ Les données publiques ne permettent ni de relier le recrutement des professeurs
 
 <div class="retenir">
 
+<p class="retenir__surtitre">Synthèse</p>
+
 ## Ce qu'il faut retenir {#retenir}
 
 Les évaluations françaises racontent trois histoires à la fois. Une dégradation ancienne, que TIMSS, PIRLS et PISA montrent sur la longue période. Une divergence récente&nbsp;: PISA, à 15 ans, recule nettement depuis 2018, quand les évaluations passées par classe sont stables sur leurs dernières périodes et que le test d'entrée en seconde progresse en mathématiques. Et une scolarité plus fluide qui masque une partie du recul&nbsp;: moins d'élèves sont en retard à 15 ans, tandis que les scores baissent dans les catégories de classe, en mathématiques et en lecture dans chacune d'elles. Ce qui distingue la France de la moyenne de l'OCDE est au milieu et au sommet de la distribution, qui reculent presque autant que le bas, ou davantage. Le «&nbsp;niveau&nbsp;» dépend de ce qu'on mesure, sur qui, et quand&nbsp;; une seule évaluation ne suffit pas à le dire.

@@ -191,6 +191,8 @@ These data do not attribute that gap to debt; what they do establish is that, fo
 
 <div class="retenir">
 
+<p class="retenir__surtitre">Summary</p>
+
 ## What to take away
 
 For about twenty-five years the bill did not follow the debt: the falling average cost of the stock offset the rising stock. Its reversal now tightens the budget constraint.

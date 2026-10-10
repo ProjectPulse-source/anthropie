@@ -175,6 +175,8 @@ These frequencies describe past periods, in a few countries. They give neither a
 
 <div class="retenir">
 
+<p class="retenir__surtitre">Summary</p>
+
 ## What to take away {#retenir}
 
 The weight of a debt can fall without its amount decreasing, and it has fallen elsewhere: among EU countries that started from higher debt than France, the ratio fell by {{< baisse-val "cmp_exc_baisse_min" >}} to {{< baisse-val "cmp_exc_baisse_max" >}} points in ten years in the {{< baisse-val "cmp_exc_n" >}} that ran an average primary surplus, without their debt in euros decreasing.

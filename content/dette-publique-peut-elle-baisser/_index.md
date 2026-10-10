@@ -177,6 +177,8 @@ Ces fréquences décrivent des périodes passées, dans quelques pays. Elles ne 
 
 <div class="retenir">
 
+<p class="retenir__surtitre">Synthèse</p>
+
 ## Ce qu'il faut retenir {#retenir}
 
 Le poids d'une dette peut baisser sans que son montant diminue, et il a baissé ailleurs&nbsp;: parmi les pays de l'Union partis d'une dette plus élevée que la France, le ratio a reculé de {{< baisse-val "cmp_exc_baisse_min" >}} à {{< baisse-val "cmp_exc_baisse_max" >}} points en dix ans dans les {{< baisse-val "cmp_exc_n" >}} qui ont dégagé un excédent primaire moyen, sans que leur dette en euros diminue.

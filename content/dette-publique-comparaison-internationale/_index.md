@@ -216,6 +216,8 @@ Seules des mesures indicatives existent&nbsp;: la dette selon le FMI, et les int
 
 <div class="retenir">
 
+<p class="retenir__surtitre">Synthèse</p>
+
 ## Ce qu'il faut retenir {#retenir}
 
 Le niveau d'une dette ne dit pas, à lui seul, ce qu'elle pèse. Dans l'Union, à dette voisine, la part des recettes absorbée par les intérêts varie de 1 à {{< monde-val "j_rapport" >}}&nbsp;: la charge dépend aussi du prix payé sur le stock et du niveau des recettes publiques.

@@ -63,6 +63,9 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
   carte ; sélecteur relevé, écart ramené à 29 px. 390 px : 0 élément débordant sur 4 pages (dont 1 EN).
 - Build `$?`=0 ; HTML construit : 17 cartes, h2 et ancre en tête, paragraphes comptés = source, 0 jeton non résolu ;
   `check-all --ci` à 0 ; `audit-liens-build.py` à 0.
+- Même jour, demande de l'auteur : surtitre « Synthèse » sur les 17 cartes, écrit dans la source
+  (`p.retenir__surtitre`) ; « Summary » sur les 7 pages anglaises (un mot français y serait une coquille). HTML construit :
+  10 « Synthèse », 7 « Summary » ; rendu calculé : 11 px, mono, capitales, `--color-pivot`, titre à 0 de marge.
 
 ### 2026-10-09 — Échecs CI du 05 et du 07/10 corrigés : pièces archivées en octets exacts, EESR injoignable ≠ fiche absente ; EN LIGNE
 

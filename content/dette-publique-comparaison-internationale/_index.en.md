@@ -216,6 +216,8 @@ Only indicative measures exist: debt according to the IMF, and central-governmen
 
 <div class="retenir">
 
+<p class="retenir__surtitre">Summary</p>
+
 ## What to take away {#retenir}
 
 The level of a debt does not, on its own, tell what it weighs. In the Union, for similar debt levels, the share of revenue absorbed by interest varies from 1 to {{< monde-val "j_rapport" >}}: the burden also depends on the average interest cost of the stock and on the level of public revenue.

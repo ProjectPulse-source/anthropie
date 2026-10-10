@@ -241,6 +241,8 @@ What can be established is the effect of a specific decision — a reform, a fre
 
 <div class="retenir">
 
+<p class="retenir__surtitre">Summary</p>
+
 ## What to take away
 
 **A question of distribution has no answer in itself; it has one per decision.** The incidence of a euro of interest cannot be read anywhere in the accounts, because it is determined elsewhere: in the adjustment chosen that year — tax, spending, inflation, postponement — and in the alternative it is compared with. Naming both turns an opinion into a verifiable statement; naming neither produces an answer that can be neither established nor refuted.

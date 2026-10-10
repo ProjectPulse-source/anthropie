@@ -130,6 +130,8 @@ Over the {{< dyn-val "annees_total" >}} years of the series, the primary balance
 
 <div class="retenir">
 
+<p class="retenir__surtitre">Summary</p>
+
 ## What to take away {#retenir}
 
 In thirty years, French public debt doubled as a share of GDP, from {{< dyn-val "dette_depart" >}}% to {{< dyn-val "dette_fin" >}}%. Interest pushed it up, but over the whole period nominal GDP growth erased almost as much; what remains, in the Eurostat decomposition used here, is primary deficits, {{< dyn-val "part_deficits" >}}% of the rise: excluding interest, the public accounts were in surplus in only {{< dyn-val "annees_excedent" >}} years out of {{< dyn-val "annees_total" >}}.

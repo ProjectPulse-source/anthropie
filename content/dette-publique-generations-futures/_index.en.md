@@ -161,6 +161,8 @@ The working paper [AWP-09](/en/awp/awp-09/) gives the verdict of these accounts 
 
 <div class="retenir">
 
+<p class="retenir__surtitre">Summary</p>
+
 ## What to take away {#takeaways}
 
 A debt does not leave only a charge: it also leaves what was acquired at the same time. In France, over thirty years, net acquisitions of recorded assets corresponded to only {{< gen-val "part_k" >}}% of deficits, and this share fell decade by decade, down to {{< gen-val "d3_part" >}}% in {{< gen-val "d3_lib" >}}. General government net worth fell from {{< gen-val "pn0" >}}% to {{< gen-val "pn1" >}}% of GDP.

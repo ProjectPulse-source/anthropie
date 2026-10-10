@@ -164,6 +164,8 @@ Le working paper [AWP-09](/awp/awp-09/) rend le verdict de ces comptes sur la le
 
 <div class="retenir">
 
+<p class="retenir__surtitre">Synthèse</p>
+
 ## Ce qu'il faut retenir {#retenir}
 
 Une dette ne laisse pas seulement une charge&nbsp;: elle laisse aussi ce qui a été acquis en même temps. En France, sur trente ans, les acquisitions nettes d'actifs comptabilisés n'ont correspondu qu'à {{< gen-val "part_k" >}}&nbsp;% des déficits, et cette part a baissé de décennie en décennie, jusqu'à {{< gen-val "d3_part" >}}&nbsp;% de {{< gen-val "d3_lib" >}}. Le patrimoine net des administrations publiques a reculé de {{< gen-val "pn0" >}}&nbsp;% à {{< gen-val "pn1" >}}&nbsp;% du PIB.
