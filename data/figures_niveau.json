@@ -4,7 +4,7 @@
    "id": "thermometres",
    "fichier": "niveau-thermometres",
    "titre": "Quatre évaluations, leur dernière variation en France",
-   "montre": "Sur leur dernière période, PIRLS en CM1 et TIMSS en CM1 et en quatrième sont stables ; le test d'entrée en seconde monte en mathématiques ; PISA, à 15 ans, baisse nettement.",
+   "montre": "Sur leurs dernières périodes, différentes, PISA à 15 ans baisse significativement ; PIRLS en CM1 et TIMSS en CM1 et en quatrième ne mettent pas en évidence de baisse significative ; le score du test d'entrée en seconde monte en mathématiques, sans test publié. Ces écarts de significativité ne prouvent pas que les tendances diffèrent.",
    "source": "IEA (TIMSS 2023, rapport international) ; DEPP (PIRLS 2021, NI 23-21 ; test de positionnement de seconde, NI 26-22) ; OCDE (PISA 2025)",
    "precaution": "Chaque évaluation a son échelle : les points ne se comparent pas d'une ligne à l'autre. Point plein : significativité publiée ; point creux : test de seconde, sans test publié."
   },
@@ -19,18 +19,18 @@
   {
    "id": "composition",
    "fichier": "niveau-composition",
-   "titre": "PISA 2015-2025 : la répartition entre classes masque une partie de la baisse",
-   "montre": "Dans les trois domaines, la baisse est plus forte quand on repondère 2025 avec la répartition entre classes de 2015, parce qu'à 15 ans moins d'élèves sont encore au collège.",
+   "titre": "PISA 2015-2025 : baisse observée et baisse à la répartition entre classes de 2015",
+   "montre": "Dans les trois domaines, la baisse est plus forte quand on applique à 2025 la répartition entre classes de 2015 : à 15 ans, moins d'élèves sont encore au collège. Ajustée aussi du sexe, du diplôme des parents et de l'origine migratoire, elle revient au niveau observé ; ces calculs décrivent, ils n'attribuent pas de cause.",
    "source": "OCDE, bases PISA 2015 et 2025 (données individuelles) ; calcul de l'auteur (valeurs plausibles, poids répliqués)",
-   "precaution": "Baisse du score moyen, en points. Repondération descriptive : ne neutralise pas qui se trouve dans chaque classe."
+   "precaution": "Baisse du score moyen, en points. Standardisation descriptive (scores de 2025, répartition entre classes de 2015) : ni « la vraie baisse », ni l'effet du redoublement."
   },
   {
    "id": "seconde",
    "fichier": "niveau-seconde",
-   "titre": "Une même génération, deux évaluations : écart entre 2021-2022 et 2024-2025",
-   "montre": "En français, le test de seconde et PISA baissent tous les deux ; en mathématiques, le test de seconde monte quand PISA baisse.",
+   "titre": "Test de seconde et PISA, cohortes largement correspondantes : écart 2021-2022 / 2024-2025",
+   "montre": "En français, le test de seconde et PISA baissent tous les deux ; en mathématiques, le score du test de seconde monte quand PISA baisse. Les deux épreuves ne mesurent ni les mêmes compétences ni les mêmes élèves.",
    "source": "DEPP, Note d'Information 26-40, figure 11 web (tests de positionnement de seconde 2021 et 2024 ; PISA 2022 et 2025)",
-   "precaution": "Écart entre deux générations d'élèves, en centièmes d'écart-type (d de Cohen), calculé par la DEPP. Seconde : deux voies."
+   "precaution": "En centièmes d'écart-type (d de Cohen), calculé par la DEPP. Cohortes largement correspondantes, pas les mêmes élèves. Seconde : deux voies, sans test publié."
   },
   {
    "id": "sommet",

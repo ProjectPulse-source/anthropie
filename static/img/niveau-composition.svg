@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 288" role="img" font-variant-numeric="tabular-nums" aria-labelledby="niv-c-t niv-c-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
-<title id="niv-c-t">PISA 2015-2025 : la répartition entre classes masque une partie de la baisse</title><desc id="niv-c-d">Baisse du score moyen PISA de 2015 à 2025, observée puis avec la répartition entre classes de 2015 : mathématiques 35 points, 43 ; compréhension de l'écrit 43 points, 51 ; culture scientifique 12 points, 21.</desc>
+<title id="niv-c-t">PISA 2015-2025 : baisse observée et baisse à la répartition entre classes de 2015</title><desc id="niv-c-d">Baisse du score moyen PISA de 2015 à 2025, observée puis avec la répartition entre classes de 2015 : mathématiques 35 points, 43 ; compréhension de l'écrit 43 points, 51 ; culture scientifique 12 points, 21.</desc>
 <rect width="720" height="288" fill="#ffffff"/>
-<text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">PISA 2015-2025 : la répartition entre classes masque une partie de la baisse</text>
+<text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">PISA 2015-2025 : baisse observée et baisse à la répartition entre classes de 2015</text>
 <rect x="200" y="32" width="10" height="10" fill="#8a8781"/>
 <text x="214" y="41" font-size="10.5" fill="#55524f">Baisse observée</text>
 <rect x="350" y="32" width="10" height="10" fill="#eb6834"/>
@@ -37,6 +37,6 @@
 <text x="373.7" y="198" font-size="11" fill="#eb6834" font-weight="600">21</text>
 <line x1="0" y1="238.0" x2="720" y2="238.0" stroke="#dcd8d3"/>
 <text x="0" y="251.0" font-size="9" fill="#55524f">OCDE, bases PISA 2015 et 2025 (données individuelles) ; calcul de l'auteur (valeurs plausibles, poids répliqués)</text>
-<text x="0" y="263.0" font-size="9" fill="#55524f">Baisse du score moyen, en points. Repondération descriptive : ne neutralise pas qui se trouve dans chaque classe.</text>
+<text x="0" y="263.0" font-size="9" fill="#55524f">Baisse du score moyen, en points. Standardisation descriptive (scores de 2025, répartition entre classes de 2015) : ni « la vraie baisse », ni l'effet du redoublement.</text>
 <text x="0" y="275.0" font-size="9" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/le-niveau-des-eleves-baisse-t-il/</text>
 </svg>

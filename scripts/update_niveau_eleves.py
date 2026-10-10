@@ -161,6 +161,10 @@ def mutation(c):
         c["p6"] = json.loads(json.dumps(c["p6"]))
         x = c["p6"]["N22"]["central"]["mathematiques"]
         x["rec"] = x["m25"] + 8
+    elif m == "conjointe_forte":  # a composition conjointe de 2015, la baisse serait nettement plus forte qu'observee
+        c["p6"] = json.loads(json.dumps(c["p6"]))
+        x = c["p6"]["N22"]["central"]["mathematiques"]
+        x["rec"] = x["m25"] - 8
     elif m == "mediane_quart":  # l'élève médian du quart le moins favorisé ne reculerait pas significativement en lecture
         c["p6"] = json.loads(json.dumps(c["p6"]))
         c["p6"]["N23"]["lecture"]["1"]["P50"] = [-3.0, 7.4]
@@ -210,8 +214,8 @@ def gardes(c):
     ae = c["ae"]
     for lib in ("TIMSS CM1 maths", "TIMSS 4e maths", "TIMSS CM1 sciences", "TIMSS 4e sciences"):
         s_ = ae["timss"][lib]
-        g(s_[sorted(s_)[-2]]["sym"] == "", "%s : « stable » sur la dernière période (aucun symbole de l'IEA)" % lib)
-    g(not ae["pirls"]["2016"]["sup_2021"], "PIRLS : « stable » de 2016 à 2021")
+        g(s_[sorted(s_)[-2]]["sym"] == "", "%s : « aucune variation significative » sur la dernière période (aucun symbole de l'IEA)" % lib)
+    g(not ae["pirls"]["2016"]["sup_2021"], "PIRLS : « aucune variation significative » de 2016 à 2021")
     g(ae["timss"]["TIMSS 4e maths"]["1995"]["sym"] == "p", "TIMSS 4e maths : 1995 significativement au-dessus de 2023")
     g(ae["pirls"]["2001"]["sup_2021"] and ae["pirls"]["2006"]["sup_2021"], "PIRLS : 2001 et 2006 significativement au-dessus de 2021")
     # protocole 3, N12 : « l'un des quatre pays où l'écart TIMSS 4e / PISA est le plus défavorable » ; « ailleurs, souvent l'autre sens »
@@ -232,7 +236,7 @@ def gardes(c):
     p5 = c["p5"]
     for d in ("mathematiques", "lecture", "sciences"):
         x = p5["N18"][d]
-        g(x["s"] < 0 and x["rec"] < x["m25"], "données individuelles, %s : la répartition entre classes « masque » la baisse" % d)
+        g(x["s"] < 0 and x["rec"] < x["m25"], "données individuelles, %s : à la répartition entre classes de 2015, la baisse est plus forte (« atténue arithmétiquement »)" % d)
     for d in ("mathematiques", "lecture"):
         g(all(b < a for a, b in p5["N18"][d]["classes"].values()), "données individuelles, %s : « dans chacune des catégories, plus bas »" % d)
     sc = p5["N18"]["sciences"]["classes"]
@@ -250,6 +254,10 @@ def gardes(c):
     # protocole 6 : composition conjointe (classe, sexe, diplôme des parents, origine) ; médiane par quart social
     p6 = c["p6"]
     B7 = c["p7"]["B"]
+    # refonte du 10/10/2026 (contre-expertise de phase A, P1-2) : la prose dit que l'ajustement conjoint ramene la baisse
+    # « a peu pres au niveau observe » -- borne dans les deux sens, a 2 points
+    g(all(abs(x["rec"] - x["m25"]) <= 2 for x in p6["N22"]["central"].values()),
+      "composition conjointe : la baisse revient « a peu pres au niveau observe » (a 2 points pres, trois domaines)")
     g(p6["v22"] == "TIENT" and p6["v22_robuste"] and all(x["rec"] <= x["m25"] for x in p6["N22"]["central"].values()),
       "composition conjointe : la baisse « ne diminue pas » dans les trois domaines")
     variantes = [p6["N22"][k] for k in ("a_classe_x_diplome", "b_diplome_deux_groupes", "c_avec_profession")] + [B7[k] for k in ("B2", "B3", "B4")]
@@ -307,7 +315,7 @@ def gardes(c):
       "lecture : baisse significative depuis le premier cycle")
     g(P["mathematiques"]["dif"][str(P["mathematiques"]["premier_cycle"])]["sig"], "mathématiques : baisse significative depuis le premier cycle")
     g(not P["sciences"]["dif"][str(P["sciences"]["premier_cycle"])]["sig"], "sciences : « pas significatif depuis 2006 »")
-    g(P["sciences"]["dif"]["2022"]["sig"] is False, "sciences : « stable depuis 2022 » (non significatif)")
+    g(P["sciences"]["dif"]["2022"]["sig"] is False, "sciences : « l'évolution n'est pas significative » depuis 2022")
     g(P["lecture"]["dif"]["2022"]["sig"] and P["mathematiques"]["dif"]["2022"]["sig"], "lecture et maths : baisse significative depuis 2022")
     # N2 : mathématiques plus forte sous les trois variantes ; lecture à la limite ; sciences dans la moyenne
     m = P["mathematiques"]["n2"]
@@ -348,7 +356,7 @@ def gardes(c):
     # réduit en lecture seulement, moins fortement ; non significatif en mathématiques et en sciences
     so = P["lecture"]["social"]["France"]
     g(so["var"] < 0 and so["var_sig"] and so["haut"]["2015"] - so["haut"]["2025"] > 2 * (so["bas"]["2015"] - so["bas"]["2025"]),
-      "lecture, indice de l'OCDE : l'écart « se réduit nettement », le quart favorisé perdant plus du double")
+      "lecture, indice de l'OCDE : l'écart « passerait de … à … » (valeurs affichées ; aucune tendance tirée de cet indice)")
     p7 = c["p7"]["A"]
     sg = lambda v: abs(v[0]) > 1.96 * v[1]
     g(all(p7[i]["lecture"]["d_ecart"][0] < 0 and sg(p7[i]["lecture"]["d_ecart"])
@@ -531,25 +539,25 @@ FIG = {
         note="Chaque point est un pays membre de l'OCDE. Bande bleue : la moitié centrale des pays (du premier au troisième quartile).",
         montre="En lecture et en sciences, la baisse française est dans la moitié centrale des pays de l'OCDE, la lecture pratiquement à sa frontière ; en mathématiques, elle compte, sur les estimations ponctuelles, parmi le quart des plus fortes."),
     "composition": dict(
-        titre="PISA 2015-2025 : la répartition entre classes masque une partie de la baisse",
+        titre="PISA 2015-2025 : baisse observée et baisse à la répartition entre classes de 2015",
         source="OCDE, bases PISA 2015 et 2025 (données individuelles) ; calcul de l'auteur (valeurs plausibles, poids répliqués)",
-        note="Baisse du score moyen, en points. Repondération descriptive : ne neutralise pas qui se trouve dans chaque classe.",
-        montre="Dans les trois domaines, la baisse est plus forte quand on repondère 2025 avec la répartition entre classes de 2015, parce qu'à 15 ans moins d'élèves sont encore au collège."),
+        note="Baisse du score moyen, en points. Standardisation descriptive (scores de 2025, répartition entre classes de 2015) : ni « la vraie baisse », ni l'effet du redoublement.",
+        montre="Dans les trois domaines, la baisse est plus forte quand on applique à 2025 la répartition entre classes de 2015 : à 15 ans, moins d'élèves sont encore au collège. Ajustée aussi du sexe, du diplôme des parents et de l'origine migratoire, elle revient au niveau observé ; ces calculs décrivent, ils n'attribuent pas de cause."),
     "thermometres": dict(
         titre="Quatre évaluations, leur dernière variation en France",
         source="IEA (TIMSS 2023, rapport international) ; DEPP (PIRLS 2021, NI 23-21 ; test de positionnement de seconde, NI 26-22) ; OCDE (PISA 2025)",
         note="Chaque évaluation a son échelle : les points ne se comparent pas d'une ligne à l'autre. Point plein : significativité publiée ; point creux : test de seconde, sans test publié.",
-        montre="Sur leur dernière période, PIRLS en CM1 et TIMSS en CM1 et en quatrième sont stables ; le test d'entrée en seconde monte en mathématiques ; PISA, à 15 ans, baisse nettement."),
+        montre="Sur leurs dernières périodes, différentes, PISA à 15 ans baisse significativement ; PIRLS en CM1 et TIMSS en CM1 et en quatrième ne mettent pas en évidence de baisse significative ; le score du test d'entrée en seconde monte en mathématiques, sans test publié. Ces écarts de significativité ne prouvent pas que les tendances diffèrent."),
     "sommet": dict(
         titre="Les élèves en difficulté et les meilleurs élèves, 2015 et 2025",
         source="OCDE, PISA 2025, volume I, tableaux I.B1.2a.34 et 35 ; moyenne de l'OCDE sur 35 pays comparables",
         note="En % des élèves de 15 ans. En difficulté : sous le niveau 2. Meilleurs élèves : niveaux 5 et 6.",
         montre="La part des élèves en difficulté augmente en France à peu près comme dans l'OCDE ; la part des meilleurs élèves y baisse bien davantage, surtout en lecture."),
     "seconde": dict(
-        titre="Une même génération, deux évaluations : écart entre 2021-2022 et 2024-2025",
+        titre="Test de seconde et PISA, cohortes largement correspondantes : écart 2021-2022 / 2024-2025",
         source="DEPP, Note d'Information 26-40, figure 11 web (tests de positionnement de seconde 2021 et 2024 ; PISA 2022 et 2025)",
-        note="Écart entre deux générations d'élèves, en centièmes d'écart-type (d de Cohen), calculé par la DEPP. Seconde : deux voies.",
-        montre="En français, le test de seconde et PISA baissent tous les deux ; en mathématiques, le test de seconde monte quand PISA baisse."),
+        note="En centièmes d'écart-type (d de Cohen), calculé par la DEPP. Cohortes largement correspondantes, pas les mêmes élèves. Seconde : deux voies, sans test publié.",
+        montre="En français, le test de seconde et PISA baissent tous les deux ; en mathématiques, le score du test de seconde monte quand PISA baisse. Les deux épreuves ne mesurent ni les mêmes compétences ni les mêmes élèves."),
 }
 
 
@@ -562,20 +570,20 @@ def fig_thermometres(c, A):
         if k is None:
             a0, a1 = "2016", "2021"
             d = ae["pirls"][a1]["score"] - ae["pirls"][a0]["score"]
-            st = "baisse significative" if ae["pirls"][a0]["sup_2021"] else "stable"
+            st = "baisse significative" if ae["pirls"][a0]["sup_2021"] else "non significative"
         else:
             s_ = ae["timss"][k]
             a0, a1 = sorted(s_)[-2], "2023"
             d = s_[a1]["score"] - s_[a0]["score"]
-            st = "baisse significative" if s_[a0]["sym"] == "p" else ("hausse significative" if s_[a0]["sym"] == "q" else "stable")
+            st = "baisse significative" if s_[a0]["sym"] == "p" else ("hausse significative" if s_[a0]["sym"] == "q" else "non significative")
         lignes.append((lib, pop, "%s-%s" % (a0, a1), d, st))
     lignes.append(("Test de positionnement, mathématiques", "entrée en seconde GT", "2021-2024",
-                   sec["GT maths"]["2024"] - sec["GT maths"]["2021"], "hausse, descriptif (sans test)"))
+                   sec["GT maths"]["2024"] - sec["GT maths"]["2021"], "hausse observée, sans test"))
     lignes.append(("Test de positionnement, français", "entrée en seconde GT", "2021-2024",
-                   sec["GT francais"]["2024"] - sec["GT francais"]["2021"], "baisse, descriptif (sans test)"))
+                   sec["GT francais"]["2024"] - sec["GT francais"]["2021"], "baisse observée, sans test"))
     for d_, lib in (("mathematiques", "PISA, culture mathématique"), ("lecture", "PISA, compréhension de l'écrit")):
         x = P[d_]["dif"]["2022"]
-        lignes.append((lib, "15 ans", "2022-2025", x["v"], "baisse significative" if x["sig"] and x["v"] < 0 else "stable"))
+        lignes.append((lib, "15 ans", "2022-2025", x["v"], "baisse significative" if x["sig"] and x["v"] < 0 else "non significative"))
     desc = "Tableau, dernière variation de chaque évaluation en France, dans sa propre échelle : " + " ; ".join(
         "%s (%s, %s) %s%s points, %s" % (l, p, per, "+" if v > 0 else "", nb(v, 0), st) for l, p, per, v, st in lignes) + "."
     h = 60 + 34 * len(lignes) + 10
@@ -588,7 +596,7 @@ def fig_thermometres(c, A):
         if i % 2 == 0:
             e.append('<rect x="0" y="%d" width="%d" height="34" fill="#f6f4f1"/>' % (y, W))
         col = ORANGE if st.startswith("baisse") else (BLEU if st.startswith("hausse") else GRIS)
-        creux = "descriptif" in st
+        creux = "sans test" in st
         e.append('<text x="%d" y="%d" font-size="11.5" fill="%s">%s</text>' % (cols[0] + 6, y + 21, INK, esc(lib)))
         e.append('<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (cols[1], y + 21, INK2, esc(pop)))
         e.append('<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (cols[2], y + 21, INK2, per))
