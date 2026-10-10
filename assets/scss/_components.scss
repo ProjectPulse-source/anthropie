@@ -147,7 +147,9 @@
   .mobile-menu {
     display: flex; flex-direction: column;
     position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-    width: 100vw; height: 100vh;
+    // Pas de width: 100vw (10/10/2026) : sur un navigateur de bureau, 100vw compte la barre de défilement et la page
+    // débordait de 15 px dans toute fenêtre sous la bascule du menu ; left/right à 0 donnent déjà la pleine largeur.
+    height: 100vh;
     background: #ffffff; z-index: 200;
     padding: 88px 32px 32px; margin: 0;
     visibility: hidden; opacity: 0; pointer-events: none;

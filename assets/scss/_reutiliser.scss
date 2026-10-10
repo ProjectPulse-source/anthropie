@@ -493,9 +493,13 @@ a.dossier-dette__onglet:focus-visible { outline: 2px solid var(--color-pivot); o
 // Téléphone : la pleine largeur passe de la barre à l'enveloppe, sinon le fond de la pastille serait plus étroit que
 // celui des onglets.
 @media (max-width: 700px) {
+  // Marge négative EXACTE du conteneur (.site-main 20 px sous 768 px + .home-section 2 rem), pas calc(50% - 50vw) :
+  // 50vw compte la barre de défilement d'un navigateur de bureau, d'où 15 px de débordement horizontal sur toutes
+  // les ressources (mesuré le 10/10/2026 ; correctif vérifié sur Langue, Dette, Enseignants : barre 0..largeur visible).
+  // Si les marges de .site-main ou de .home-section changent, ces deux valeurs changent avec elles.
   .dossier-collant {
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
+    margin-left: calc(-20px - 2rem);
+    margin-right: calc(-20px - 2rem);
     padding-left: 16px;
     padding-right: 16px;
   }
