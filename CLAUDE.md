@@ -203,6 +203,34 @@ sous-titres propres, à déclarer alors par bloc dans `content/ressources/_index
     S1313 seul et concluait à tort que la France était le seul pays où la dette locale avait augmenté (arbitrage
     `D:\PRO\.claude\external-audits\ARBITRATIONS\PRO-20261001-145721_arbitrage.md`).
 
+## Doctrine éditoriale des ressources — refonte et lecture (auteur, 2026-10-10)
+
+Pièce : `D:\PRO\00_PILOTAGE\_PIECES_RECUES\DOCTRINE_EDITORIALE_RESSOURCES_ANTHROPIE_CC_2026-10-10.md` (SHA-256
+`be2a2301…`) ; arbitrage point par point : `docs/ARBITRAGE_DOCTRINE_EDITORIALE_RESSOURCES_2026-10-10.md`. **Lire les deux
+avant de refondre une ressource.** Deux principes de l'auteur gouvernent : **liberté maximale sur la construction
+narrative** (réorganiser, condenser, créer des visualisations, redistribuer entre ressources) ; **intransigeance sur la
+rigueur** (aucune dramatisation, simplification abusive ni causalité inventée pour l'engagement). On standardise
+l'exigence et le contrôle, jamais l'architecture narrative.
+
+1. **Articulation avec le modèle dette.** « Surprendre → montrer → expliquer → documenter » reste l'invariant **à
+   l'intérieur d'une section** ; l'ordre des sections et l'architecture de la page se choisissent entre au moins deux
+   scénarios (enquête, paradoxe, chaîne causale, chronologie, anatomie d'un chiffre…), jamais par habitude.
+2. **Condenser la redite, jamais la preuve** : la preuve longue passe en repli sur la même URL ; tout élément retiré
+   d'un endroit a sa destination écrite (tableau de traçabilité). Une ancre publiée ne change pas.
+3. **La limite d'une inférence s'écrit au contact de l'inférence**, pas seulement dans « Ce que ces données ne disent pas ».
+4. **Revue sans score** : sept dimensions (exactitude et causalité, progression, pédagogie, redondance, forme et mobile,
+   circulation, robustesse) jugées *tenu / partiel / manqué* avec justification ; défauts classés P0-P3 ; publication si
+   aucun P0 et aucun P1 non traité.
+5. **Recette d'une refonte** : 390, 768 et 1280 px, arrivée par chaque ancre sous les éléments collants, clavier.
+6. **Critère de succès** : après lecture, on peut dire sans jargon ce qu'on croyait, ce qu'on sait, sur quelles
+   preuves, et quelle question s'ouvre.
+7. **Livrables** : page pilote (`/les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/`) — diagnostic, scénarios,
+   traçabilité, page, recette, revue avant/après, note inter-pages ; pages suivantes — un fichier de chantier unique et
+   la recette. On généralise la méthode, jamais le plan du pilote.
+
+Rien de cela n'est câblé en contrôle machine (aucun capteur objectif) : la session le tient, la contre-expertise le
+contrôle.
+
 ## Couche pédagogique — `/enseignants/` (actée par l'auteur, 2026-09-30)
 
 Une page d'**usage** pour les enseignants, qui transforme les ressources en activités sans les recopier ; les pages de
