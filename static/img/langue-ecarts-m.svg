@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 747" role="img" font-variant-numeric="tabular-nums" aria-labelledby="lan-em-t lan-em-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="lan-em-t">Fin de collège : pas de baisse significative en moyenne, une baisse significative en éducation prioritaire</title><desc id="lan-em-d">Score CEDRE en fin de collège, 2015 puis 2021 : Ensemble des élèves 250,0 puis 246,6, sans évolution significative ; Public hors éducation prioritaire 250,3 puis 247,3, sans évolution significative ; Éducation prioritaire 233,1 puis 225,3, baisse significative ; Privé 259,7 puis 260,4, sans évolution significative ; Filles 252,9 puis 252,6, sans évolution significative ; Garçons 247,1 puis 240,7, baisse significative.</desc>
+<rect width="300" height="747" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Fin de collège : pas de baisse</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">significative en moyenne, une</text>
+<text x="0" y="64" font-size="17" font-weight="600" fill="#26262f">baisse significative en</text>
+<text x="0" y="86" font-size="17" font-weight="600" fill="#26262f">éducation prioritaire</text>
+<line x1="0" y1="133" x2="24" y2="133" stroke="#eb6834" stroke-width="5"/>
+<text x="32" y="138" font-size="13.5" fill="#55524f">baisse significative</text>
+<line x1="0" y1="153" x2="24" y2="153" stroke="#8a8781" stroke-width="5"/>
+<text x="32" y="158" font-size="13.5" fill="#55524f">sans évolution significative</text>
+<text x="0" y="178" font-size="13.5" fill="#55524f">rond blanc : 2015 · rond plein : 2021</text>
+<text x="0" y="228" font-size="14.5" fill="#26262f" font-weight="600">Ensemble des élèves</text>
+<line x1="188.7" y1="246" x2="171.1" y2="246" stroke="#8a8781" stroke-width="6"/>
+<circle cx="188.7" cy="246" r="5" fill="#ffffff" stroke="#55524f" stroke-width="1.6"/>
+<circle cx="171.1" cy="246" r="5.5" fill="#8a8781"/>
+<text x="163.1" y="251" font-size="13.5" fill="#55524f" text-anchor="end">246,6</text>
+<text x="196.7" y="251" font-size="13.5" fill="#55524f">250,0</text>
+<text x="0" y="282" font-size="14.5" fill="#26262f">Public hors éducation prioritaire</text>
+<line x1="190.2" y1="300" x2="174.7" y2="300" stroke="#8a8781" stroke-width="6"/>
+<circle cx="190.2" cy="300" r="5" fill="#ffffff" stroke="#55524f" stroke-width="1.6"/>
+<circle cx="174.7" cy="300" r="5.5" fill="#8a8781"/>
+<text x="166.7" y="305" font-size="13.5" fill="#55524f" text-anchor="end">247,3</text>
+<text x="198.2" y="305" font-size="13.5" fill="#55524f">250,3</text>
+<text x="0" y="336" font-size="14.5" fill="#26262f">Éducation prioritaire</text>
+<line x1="101.5" y1="354" x2="61.3" y2="354" stroke="#eb6834" stroke-width="6"/>
+<circle cx="101.5" cy="354" r="5" fill="#ffffff" stroke="#55524f" stroke-width="1.6"/>
+<circle cx="61.3" cy="354" r="5.5" fill="#eb6834"/>
+<text x="53.3" y="359" font-size="13.5" fill="#55524f" text-anchor="end">225,3</text>
+<text x="109.5" y="359" font-size="13.5" fill="#55524f">233,1</text>
+<text x="0" y="390" font-size="14.5" fill="#26262f">Privé</text>
+<line x1="238.7" y1="408" x2="242.3" y2="408" stroke="#8a8781" stroke-width="6"/>
+<circle cx="238.7" cy="408" r="5" fill="#ffffff" stroke="#55524f" stroke-width="1.6"/>
+<circle cx="242.3" cy="408" r="5.5" fill="#8a8781"/>
+<text x="230.7" y="413" font-size="13.5" fill="#55524f" text-anchor="end">259,7</text>
+<text x="250.3" y="413" font-size="13.5" fill="#55524f">260,4</text>
+<text x="0" y="444" font-size="14.5" fill="#26262f">Filles</text>
+<line x1="203.6" y1="462" x2="202.1" y2="462" stroke="#8a8781" stroke-width="6"/>
+<circle cx="203.6" cy="462" r="5" fill="#ffffff" stroke="#55524f" stroke-width="1.6"/>
+<circle cx="202.1" cy="462" r="5.5" fill="#8a8781"/>
+<text x="194.1" y="467" font-size="13.5" fill="#55524f" text-anchor="end">252,6</text>
+<text x="211.6" y="467" font-size="13.5" fill="#55524f">252,9</text>
+<text x="0" y="498" font-size="14.5" fill="#26262f">Garçons</text>
+<line x1="173.7" y1="516" x2="140.7" y2="516" stroke="#eb6834" stroke-width="6"/>
+<circle cx="173.7" cy="516" r="5" fill="#ffffff" stroke="#55524f" stroke-width="1.6"/>
+<circle cx="140.7" cy="516" r="5.5" fill="#eb6834"/>
+<text x="132.7" y="521" font-size="13.5" fill="#55524f" text-anchor="end">240,7</text>
+<text x="181.7" y="521" font-size="13.5" fill="#55524f">247,1</text>
+<line x1="0" y1="538.0" x2="300" y2="538.0" stroke="#dcd8d3"/>
+<text x="0" y="559.0" font-size="13.5" fill="#55524f">DEPP, Note d'Information 22.29 et</text>
+<text x="0" y="576.0" font-size="13.5" fill="#55524f">tableaux de données (CEDRE,</text>
+<text x="0" y="593.0" font-size="13.5" fill="#55524f">compétences langagières et littératie</text>
+<text x="0" y="610.0" font-size="13.5" fill="#55524f">en fin de collège)</text>
+<text x="0" y="631.0" font-size="13.5" fill="#55524f">Échelle fixée à 250 en 2015. Orange :</text>
+<text x="0" y="648.0" font-size="13.5" fill="#55524f">baisse significative selon la DEPP ;</text>
+<text x="0" y="665.0" font-size="13.5" fill="#55524f">gris : sans évolution significative.</text>
+<text x="0" y="682.0" font-size="13.5" fill="#55524f">Aucun test de l'évolution des écarts</text>
+<text x="0" y="699.0" font-size="13.5" fill="#55524f">entre groupes n'est publié.</text>
+<text x="0" y="720.0" font-size="13.5" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 ·</text>
+<text x="0" y="737.0" font-size="13.5" fill="#96928f">stephane-lalut.com</text>
+</svg>

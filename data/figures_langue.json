@@ -3,7 +3,7 @@
   {
    "id": "chronologie",
    "fichier": "langue-chronologie",
-   "titre": "La langue des élèves : quand chaque mesure recule, tient ou progresse",
+   "titre": "La langue des élèves : quand chaque mesure recule, progresse ou n'évolue pas significativement",
    "montre": "Les reculs les plus anciens (dictée et lecture en CM2, temps de lecture pour le plaisir à 15 ans) précèdent 2013 ; PISA ne baisse significativement qu'après 2012, quand PIRLS et CEDRE ne reculent pas significativement sur des périodes qui recouvrent en partie cette baisse.",
    "source": "DEPP (Notes d'Information) ; OCDE (PISA 2025 ; 21st-Century Readers) ; IEA (PIRLS) ; ministère de la Culture ; CREDOC",
    "precaution": "Chaque ligne a sa propre échelle ; seul le sens est montré. Plein : test publié (PISA 2000-2012 : test de l'auteur) ; tirets : sans test."
@@ -23,6 +23,14 @@
    "montre": "Dans l'enquête de 2023, la part des élèves qui ne lisent pas pour leur plaisir est plus élevée en seconde qu'en sixième, et près de la moitié en seconde professionnelle : des élèves différents la même année, pas une évolution.",
    "source": "DEPP, Note d'Information 25.66, figure 1.1 web (questionnaires des évaluations nationales, septembre 2023)",
    "precaution": "Une seule enquête : l'écart entre classes compare des élèves différents la même année, ce n'est pas une évolution dans le temps."
+  },
+  {
+   "id": "ecarts",
+   "fichier": "langue-ecarts",
+   "titre": "Fin de collège : la moyenne ne baisse pas significativement, l'éducation prioritaire si (CEDRE, 2015-2021)",
+   "montre": "En fin de collège, le score de l'ensemble des élèves n'évolue pas significativement de 2015 à 2021, quand celui de l'éducation prioritaire et celui des garçons baissent significativement ; l'évolution des écarts entre groupes n'est pas testée.",
+   "source": "DEPP, Note d'Information 22.29 et tableaux de données (CEDRE, compétences langagières et littératie en fin de collège)",
+   "precaution": "Échelle fixée à 250 en 2015. Orange : baisse significative selon la DEPP ; gris : sans évolution significative. Aucun test de l'évolution des écarts entre groupes n'est publié."
   }
  ]
 }

@@ -396,7 +396,7 @@ def pied(e, y0, source, note):
 
 FIG = {
     "chronologie": dict(
-        titre="La langue des élèves : quand chaque mesure recule, tient ou progresse",
+        titre="La langue des élèves : quand chaque mesure recule, progresse ou n'évolue pas significativement",
         source="DEPP (Notes d'Information) ; OCDE (PISA 2025 ; 21st-Century Readers) ; IEA (PIRLS) ; ministère de la Culture ; CREDOC",
         note="Chaque ligne a sa propre échelle ; seul le sens est montré. Plein : test publié (PISA 2000-2012 : test de l'auteur) ; tirets : sans test.",
         montre="Les reculs les plus anciens (dictée et lecture en CM2, temps de lecture pour le plaisir à 15 ans) précèdent 2013 ; PISA ne baisse significativement qu'après 2012, quand PIRLS et CEDRE ne reculent pas significativement sur des périodes qui recouvrent en partie cette baisse."),
@@ -411,6 +411,67 @@ FIG = {
         note="Une seule enquête : l'écart entre classes compare des élèves différents la même année, ce n'est pas une évolution dans le temps.",
         montre="Dans l'enquête de 2023, la part des élèves qui ne lisent pas pour leur plaisir est plus élevée en seconde qu'en sixième, et près de la moitié en seconde professionnelle : des élèves différents la même année, pas une évolution."),
 }
+
+
+FIG["ecarts"] = dict(
+    titre="Fin de collège : la moyenne ne baisse pas significativement, l'éducation prioritaire si (CEDRE, 2015-2021)",
+    source="DEPP, Note d'Information 22.29 et tableaux de données (CEDRE, compétences langagières et littératie en fin de collège)",
+    note="Échelle fixée à 250 en 2015. Orange : baisse significative selon la DEPP ; gris : sans évolution significative. "
+         "Aucun test de l'évolution des écarts entre groupes n'est publié.",
+    montre="En fin de collège, le score de l'ensemble des élèves n'évolue pas significativement de 2015 à 2021, quand celui de "
+           "l'éducation prioritaire et celui des garçons baissent significativement ; l'évolution des écarts entre groupes n'est pas testée.")
+
+# Ordre et libellés des lignes de la figure des écarts (refonte du 10/10/2026, évaluation OPTIMUM-04)
+ECARTS = (("Ensemble des élèves", None), ("Public hors éducation prioritaire", "Public hors EP"), ("Éducation prioritaire", "EP"),
+          ("Privé", "Privé"), ("Filles", "Filles"), ("Garçons", "Garçons"))
+
+
+def lignes_ecarts(c):
+    cc = c["cc"]
+    out = []
+    for lib, k in ECARTS:
+        s = cc["score"] if k is None else cc["groupes"][k]
+        sig = cc["significatif"]["2021"] if k is None else cc["groupes_significatif"][k]["2021"]
+        out.append((lib, s["2015"], s["2021"], sig))
+    return out
+
+
+def desc_ecarts(L):
+    return "Score CEDRE en fin de collège, 2015 puis 2021 : " + " ; ".join(
+        "%s %s puis %s%s" % (lib, nb(a), nb(b), ", baisse significative" if sg and b < a else ", sans évolution significative")
+        for lib, a, b, sg in L) + "."
+
+
+def fig_ecarts(c, A):
+    t = FIG["ecarts"]
+    L = lignes_ecarts(c)
+    v0, v1, x0, x1 = 220, 265, 300, 690
+    sx = lambda v: x0 + (x1 - x0) * (v - v0) / (v1 - v0)
+    top, pas = 70, 38
+    h = top + pas * len(L) + 40
+    e = tete("lan-e", t["titre"], desc_ecarts(L), h + 52)
+    for v in range(v0, v1 + 1, 5):
+        e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="0.5"/>' % (sx(v), top - 16, sx(v), top + pas * len(L) - 10, GRID))
+        e.append('<text x="%.1f" y="%d" font-size="9.5" fill="%s" text-anchor="middle">%d</text>' % (sx(v), top + pas * len(L) + 6, MUTED, v))
+    for i, (lib, a, b, sg) in enumerate(L):
+        y = top + pas * i
+        col = ORANGE if sg and b < a else GRIS
+        e.append('<text x="0" y="%d" font-size="11.5" fill="%s"%s>%s</text>' % (y + 4, INK, ' font-weight="600"' if i == 0 else "", esc(lib)))
+        e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="5"/>' % (sx(a), y, sx(b), y, col))
+        e.append('<circle cx="%.1f" cy="%d" r="4.5" fill="#ffffff" stroke="%s" stroke-width="1.6"/>' % (sx(a), y, INK2))
+        e.append('<circle cx="%.1f" cy="%d" r="5" fill="%s"/>' % (sx(b), y, col))
+        gauche, droite = (b, a) if b < a else (a, b)
+        e.append('<text x="%.1f" y="%d" font-size="10.5" fill="%s" text-anchor="end">%s</text>' % (sx(gauche) - 9, y + 4, INK2, nb(gauche)))
+        e.append('<text x="%.1f" y="%d" font-size="10.5" fill="%s">%s</text>' % (sx(droite) + 9, y + 4, INK2, nb(droite)))
+    yl = top + pas * len(L) + 26
+    e.append('<circle cx="6" cy="%d" r="4.5" fill="#ffffff" stroke="%s" stroke-width="1.6"/>' % (yl - 4, INK2))
+    e.append('<text x="16" y="%d" font-size="10" fill="%s">2015</text>' % (yl, INK2))
+    e.append('<circle cx="62" cy="%d" r="5" fill="%s"/>' % (yl - 4, GRIS))
+    e.append('<text x="72" y="%d" font-size="10" fill="%s">2021</text>' % (yl, INK2))
+    for k, (col, lib) in enumerate(((ORANGE, "baisse significative"), (GRIS, "sans évolution significative"))):
+        e.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-width="5"/>' % (130 + 190 * k, yl - 4, 152 + 190 * k, yl - 4, col))
+        e.append('<text x="%d" y="%d" font-size="10" fill="%s">%s</text>' % (158 + 190 * k, yl, INK2, lib))
+    return pied(e, h + 2, t["source"], t["note"])
 
 
 def statut(sig, baisse):
@@ -647,7 +708,7 @@ def fig_chronologie_m(c, A):
         "%s (%s) : %s" % (lib, pop, ", ".join("%d-%d %s" % (u, v, mots[statut(sg, bs)]) for u, v, sg, bs in seg)) for lib, pop, seg in L) + "."
     longues = [r for r in L if min(u for u, *_ in r[2]) < 2009]
     recentes = [r for r in L if min(u for u, *_ in r[2]) >= 2009]
-    e, y = tete_m("lan-cm", "Quand chaque mesure de la langue recule, tient ou progresse", desc, 0)
+    e, y = tete_m("lan-cm", "Quand chaque mesure de la langue recule, progresse ou n'évolue pas significativement", desc, 0)
     y += 8
     for col, plein, lib in ((ORANGE, True, "recul significatif"), (GRIS, True, "sans évolution significative"),
                             (BLEU, True, "hausse significative"), (ORANGE, False, "tirets : sens observé, sans test")):
@@ -688,10 +749,39 @@ def fig_chronologie_m(c, A):
     return finir_m(e, h)
 
 
+def fig_ecarts_m(c, A):
+    t = FIG["ecarts"]
+    L = lignes_ecarts(c)
+    v0, v1, x0, x1 = 220, 265, 34, WM - 34
+    sx = lambda v: x0 + (x1 - x0) * (v - v0) / (v1 - v0)
+    e, y = tete_m("lan-em", "Fin de collège : pas de baisse significative en moyenne, une baisse significative en éducation prioritaire", desc_ecarts(L), 0)
+    y += 10
+    for col, plein, lib in ((ORANGE, True, "baisse significative"), (GRIS, True, "sans évolution significative")):
+        y += 20
+        e.append('<line x1="0" y1="%d" x2="24" y2="%d" stroke="%s" stroke-width="5"/>' % (y - 5, y - 5, col))
+        e.append('<text x="32" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, INK2, lib))
+    y += 20
+    e.append('<text x="0" y="%d" font-size="%s" fill="%s">rond blanc : 2015 · rond plein : 2021</text>' % (y, FS_MIN, INK2))
+    y += 14
+    for i, (lib, a, b, sg) in enumerate(L):
+        col = ORANGE if sg and b < a else GRIS
+        y += 36  # un groupe = son libellé et son trait, serrés ; l'air va ENTRE les groupes
+        e.append('<text x="0" y="%d" font-size="14.5" fill="%s"%s>%s</text>' % (y, INK, ' font-weight="600"' if i == 0 else "", esc(lib)))
+        y += 18
+        e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="6"/>' % (sx(a), y, sx(b), y, col))
+        e.append('<circle cx="%.1f" cy="%d" r="5" fill="#ffffff" stroke="%s" stroke-width="1.6"/>' % (sx(a), y, INK2))
+        e.append('<circle cx="%.1f" cy="%d" r="5.5" fill="%s"/>' % (sx(b), y, col))
+        gauche, droite = (b, a) if b < a else (a, b)
+        e.append('<text x="%.1f" y="%d" font-size="%s" fill="%s" text-anchor="end">%s</text>' % (sx(gauche) - 8, y + 5, FS_MIN, INK2, nb(gauche)))
+        e.append('<text x="%.1f" y="%d" font-size="%s" fill="%s">%s</text>' % (sx(droite) + 8, y + 5, FS_MIN, INK2, nb(droite)))
+    e, h = pied_m(e, y + 22, t["source"], t["note"])
+    return finir_m(e, h)
+
+
 def parite_mobile(figs):
     """Les figures mobiles portent les mêmes valeurs et les mêmes intervalles que la version détaillée (R5 : comparaison
     sur les SORTIES, pas sur les fonctions qui les écrivent)."""
-    for fid in ("chronologie", "dictee", "plaisir"):
+    for fid in ("chronologie", "dictee", "plaisir", "ecarts"):
         d, m = figs["langue-%s.svg" % fid], figs["langue-%s-m.svg" % fid]
         desc = lambda s: html.unescape(re.search(r"<desc[^>]*>(.*?)</desc>", s).group(1))
         corps = lambda s: desc(s).split("smartphone. ", 1)[1] if fid == "chronologie" else desc(s).split(" : ", 1)[1]
@@ -707,7 +797,7 @@ def parite_mobile(figs):
 
 def fiches(figs):
     out = []
-    for fid in ("chronologie", "dictee", "plaisir"):
+    for fid in ("chronologie", "dictee", "plaisir", "ecarts"):
         svg = figs["langue-%s.svg" % fid]
         titre = html.unescape(re.search(r"<title[^>]*>(.*?)</title>", svg).group(1))
         cart = [html.unescape(t) for t in re.findall(r'<text x="0" y="[0-9.]+" font-size="9" fill="[^"]+">(.*?)</text>', svg)]
@@ -802,7 +892,8 @@ def main() -> int:
         return 0
     import cairosvg
     figs = {"langue-chronologie.svg": fig_chronologie(c, A), "langue-dictee.svg": fig_dictee(c, A), "langue-plaisir.svg": fig_plaisir(c, A),
-            "langue-chronologie-m.svg": fig_chronologie_m(c, A), "langue-dictee-m.svg": fig_dictee_m(c, A), "langue-plaisir-m.svg": fig_plaisir_m(c, A)}
+            "langue-chronologie-m.svg": fig_chronologie_m(c, A), "langue-dictee-m.svg": fig_dictee_m(c, A), "langue-plaisir-m.svg": fig_plaisir_m(c, A),
+            "langue-ecarts.svg": fig_ecarts(c, A), "langue-ecarts-m.svg": fig_ecarts_m(c, A)}
     parite_mobile(figs)
     X = c["X"]
     payload = {"meta": {"page": "https://" + PAGE_URL, "licence": "CC BY 4.0",

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 390" role="img" font-variant-numeric="tabular-nums" aria-labelledby="lan-e-t lan-e-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="lan-e-t">Fin de collège : la moyenne ne baisse pas significativement, l'éducation prioritaire si (CEDRE, 2015-2021)</title><desc id="lan-e-d">Score CEDRE en fin de collège, 2015 puis 2021 : Ensemble des élèves 250,0 puis 246,6, sans évolution significative ; Public hors éducation prioritaire 250,3 puis 247,3, sans évolution significative ; Éducation prioritaire 233,1 puis 225,3, baisse significative ; Privé 259,7 puis 260,4, sans évolution significative ; Filles 252,9 puis 252,6, sans évolution significative ; Garçons 247,1 puis 240,7, baisse significative.</desc>
+<rect width="720" height="390" fill="#ffffff"/>
+<text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">Fin de collège : la moyenne ne baisse pas significativement, l'éducation prioritaire si (CEDRE, 2015-2021)</text>
+<line x1="300.0" y1="54" x2="300.0" y2="288" stroke="#dcd8d3" stroke-width="0.5"/>
+<text x="300.0" y="304" font-size="9.5" fill="#96928f" text-anchor="middle">220</text>
+<line x1="343.3" y1="54" x2="343.3" y2="288" stroke="#dcd8d3" stroke-width="0.5"/>
+<text x="343.3" y="304" font-size="9.5" fill="#96928f" text-anchor="middle">225</text>
+<line x1="386.7" y1="54" x2="386.7" y2="288" stroke="#dcd8d3" stroke-width="0.5"/>
+<text x="386.7" y="304" font-size="9.5" fill="#96928f" text-anchor="middle">230</text>
+<line x1="430.0" y1="54" x2="430.0" y2="288" stroke="#dcd8d3" stroke-width="0.5"/>
+<text x="430.0" y="304" font-size="9.5" fill="#96928f" text-anchor="middle">235</text>
+<line x1="473.3" y1="54" x2="473.3" y2="288" stroke="#dcd8d3" stroke-width="0.5"/>
+<text x="473.3" y="304" font-size="9.5" fill="#96928f" text-anchor="middle">240</text>
+<line x1="516.7" y1="54" x2="516.7" y2="288" stroke="#dcd8d3" stroke-width="0.5"/>
+<text x="516.7" y="304" font-size="9.5" fill="#96928f" text-anchor="middle">245</text>
+<line x1="560.0" y1="54" x2="560.0" y2="288" stroke="#dcd8d3" stroke-width="0.5"/>
+<text x="560.0" y="304" font-size="9.5" fill="#96928f" text-anchor="middle">250</text>
+<line x1="603.3" y1="54" x2="603.3" y2="288" stroke="#dcd8d3" stroke-width="0.5"/>
+<text x="603.3" y="304" font-size="9.5" fill="#96928f" text-anchor="middle">255</text>
+<line x1="646.7" y1="54" x2="646.7" y2="288" stroke="#dcd8d3" stroke-width="0.5"/>
+<text x="646.7" y="304" font-size="9.5" fill="#96928f" text-anchor="middle">260</text>
+<line x1="690.0" y1="54" x2="690.0" y2="288" stroke="#dcd8d3" stroke-width="0.5"/>
+<text x="690.0" y="304" font-size="9.5" fill="#96928f" text-anchor="middle">265</text>
+<text x="0" y="74" font-size="11.5" fill="#26262f" font-weight="600">Ensemble des élèves</text>
+<line x1="560.0" y1="70" x2="530.5" y2="70" stroke="#8a8781" stroke-width="5"/>
+<circle cx="560.0" cy="70" r="4.5" fill="#ffffff" stroke="#55524f" stroke-width="1.6"/>
+<circle cx="530.5" cy="70" r="5" fill="#8a8781"/>
+<text x="521.5" y="74" font-size="10.5" fill="#55524f" text-anchor="end">246,6</text>
+<text x="569.0" y="74" font-size="10.5" fill="#55524f">250,0</text>
+<text x="0" y="112" font-size="11.5" fill="#26262f">Public hors éducation prioritaire</text>
+<line x1="562.6" y1="108" x2="536.6" y2="108" stroke="#8a8781" stroke-width="5"/>
+<circle cx="562.6" cy="108" r="4.5" fill="#ffffff" stroke="#55524f" stroke-width="1.6"/>
+<circle cx="536.6" cy="108" r="5" fill="#8a8781"/>
+<text x="527.6" y="112" font-size="10.5" fill="#55524f" text-anchor="end">247,3</text>
+<text x="571.6" y="112" font-size="10.5" fill="#55524f">250,3</text>
+<text x="0" y="150" font-size="11.5" fill="#26262f">Éducation prioritaire</text>
+<line x1="413.5" y1="146" x2="345.9" y2="146" stroke="#eb6834" stroke-width="5"/>
+<circle cx="413.5" cy="146" r="4.5" fill="#ffffff" stroke="#55524f" stroke-width="1.6"/>
+<circle cx="345.9" cy="146" r="5" fill="#eb6834"/>
+<text x="336.9" y="150" font-size="10.5" fill="#55524f" text-anchor="end">225,3</text>
+<text x="422.5" y="150" font-size="10.5" fill="#55524f">233,1</text>
+<text x="0" y="188" font-size="11.5" fill="#26262f">Privé</text>
+<line x1="644.1" y1="184" x2="650.1" y2="184" stroke="#8a8781" stroke-width="5"/>
+<circle cx="644.1" cy="184" r="4.5" fill="#ffffff" stroke="#55524f" stroke-width="1.6"/>
+<circle cx="650.1" cy="184" r="5" fill="#8a8781"/>
+<text x="635.1" y="188" font-size="10.5" fill="#55524f" text-anchor="end">259,7</text>
+<text x="659.1" y="188" font-size="10.5" fill="#55524f">260,4</text>
+<text x="0" y="226" font-size="11.5" fill="#26262f">Filles</text>
+<line x1="585.1" y1="222" x2="582.5" y2="222" stroke="#8a8781" stroke-width="5"/>
+<circle cx="585.1" cy="222" r="4.5" fill="#ffffff" stroke="#55524f" stroke-width="1.6"/>
+<circle cx="582.5" cy="222" r="5" fill="#8a8781"/>
+<text x="573.5" y="226" font-size="10.5" fill="#55524f" text-anchor="end">252,6</text>
+<text x="594.1" y="226" font-size="10.5" fill="#55524f">252,9</text>
+<text x="0" y="264" font-size="11.5" fill="#26262f">Garçons</text>
+<line x1="534.9" y1="260" x2="479.4" y2="260" stroke="#eb6834" stroke-width="5"/>
+<circle cx="534.9" cy="260" r="4.5" fill="#ffffff" stroke="#55524f" stroke-width="1.6"/>
+<circle cx="479.4" cy="260" r="5" fill="#eb6834"/>
+<text x="470.4" y="264" font-size="10.5" fill="#55524f" text-anchor="end">240,7</text>
+<text x="543.9" y="264" font-size="10.5" fill="#55524f">247,1</text>
+<circle cx="6" cy="320" r="4.5" fill="#ffffff" stroke="#55524f" stroke-width="1.6"/>
+<text x="16" y="324" font-size="10" fill="#55524f">2015</text>
+<circle cx="62" cy="320" r="5" fill="#8a8781"/>
+<text x="72" y="324" font-size="10" fill="#55524f">2021</text>
+<line x1="130" y1="320" x2="152" y2="320" stroke="#eb6834" stroke-width="5"/>
+<text x="158" y="324" font-size="10" fill="#55524f">baisse significative</text>
+<line x1="320" y1="320" x2="342" y2="320" stroke="#8a8781" stroke-width="5"/>
+<text x="348" y="324" font-size="10" fill="#55524f">sans évolution significative</text>
+<line x1="0" y1="340.0" x2="720" y2="340.0" stroke="#dcd8d3"/>
+<text x="0" y="353.0" font-size="9" fill="#55524f">DEPP, Note d'Information 22.29 et tableaux de données (CEDRE, compétences langagières et littératie en fin de collège)</text>
+<text x="0" y="365.0" font-size="9" fill="#55524f">Échelle fixée à 250 en 2015. Orange : baisse significative selon la DEPP ; gris : sans évolution significative. Aucun test de l'évolution des écarts entre groupes n'est publié.</text>
+<text x="0" y="377.0" font-size="9" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/</text>
+</svg>
