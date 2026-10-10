@@ -255,6 +255,13 @@ contrôle.
     l'autre **ne prouvent pas** que les tendances diffèrent (« seul X recule » est interdit sans test de la différence) ;
     une standardisation est descriptive (« à la répartition de telle année »), jamais « la vraie baisse » ni l'effet
     d'une cause ; un indice déclaré non comparable dans le temps ne fonde aucune tendance.
+15. **Une décomposition comptable n'est ni une attribution causale, ni une répartition des responsabilités, ni une mesure
+    des sommes décaissées** (contre-expertise du volet 1 du dossier dette, 11/10/2026). Une contribution en points d'un
+    ratio n'est pas un montant versé (les intérêts de la comptabilité nationale sont en droits constatés : l'indexation
+    des titres indexés y est comptée avant son décaissement) ; un mécanisme (refinancement, indexation) ne s'écrit pas
+    sans la mesure qui le sépare des autres. **Une comparaison de fenêtres change ses deux bornes** : avant de dire qu'un
+    diagnostic « dépend de l'année de départ », tester la fenêtre commune (cas fondateur : 2017-2024 et 2019-2025 donnent
+    deux diagnostics, 2019-2024 retourne le second ; l'année d'arrivée comptait autant que celle de départ).
 
 ## Couche pédagogique — `/enseignants/` (actée par l'auteur, 2026-09-30)
 
