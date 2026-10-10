@@ -77,7 +77,7 @@ Oui. La mesure en est une même dictée de 67&nbsp;mots, donnée à des élèves
 
 <div class="resultat-phrase">
 
-**Le résultat en une phrase.** Sur les {{< lan-val "h_tot" >}}&nbsp;erreurs supplémentaires de 1987 à 2021, {{< lan-val "h_lex" >}} portent sur l'orthographe des mots eux-mêmes&nbsp;; les autres erreurs ont presque doublé, et de 1987 à 2007, seule période détaillée par type d'erreur, la hausse est grammaticale pour {{< lan-val "h_gram0707" >}}&nbsp;erreurs sur {{< lan-val "h_tot0707" >}}.
+**Le résultat en une phrase.** Sur les {{< lan-val "h_tot" >}}&nbsp;erreurs supplémentaires de 1987 à 2021, {{< lan-val "h_lex" >}} portent sur l'orthographe des mots eux-mêmes&nbsp;; pour les autres, le détail par type d'erreur n'est publié que de 1987 à 2007, où il s'agit surtout de grammaire.
 
 </div>
 
@@ -92,7 +92,7 @@ Ce que cette dictée ne mesure pas compte autant&nbsp;: écrire correctement un 
 Onze mesures de la langue des élèves, de 1987 à 2025, conduisent à trois constats&nbsp;:
 
 - **certains reculs étaient déjà engagés avant 2013**, année où plus de la moitié des 12-17 ans ont un smartphone&nbsp;: l'orthographe à la dictée, la lecture en fin d'école, le temps de lecture pour le plaisir à 15 ans&nbsp;;
-- **les indicateurs n'évoluent pas ensemble**&nbsp;: PISA recule depuis 2012, quand PIRLS et CEDRE ne reculent pas significativement sur des périodes qui recouvrent en partie cette baisse&nbsp;;
+- **les indicateurs n'évoluent pas ensemble**&nbsp;: PISA, l'enquête de l'OCDE auprès des jeunes de 15 ans, recule depuis 2012, quand PIRLS (la lecture en CM1) et CEDRE (les évaluations du ministère en fin d'école et de collège) ne montrent aucun recul établi par un test sur des périodes qui recouvrent en partie cette baisse&nbsp;;
 - **aucun ne désigne une cause unique**, ni l'âge auquel un recul commencerait.
 
 La frise les détaille&nbsp;: la couleur donne le sens observé, le trait plein une évolution testée, les tirets un sens observé sans test publié.
@@ -148,7 +148,7 @@ Le goût de lire recule de 2009 à 2018, période où le smartphone se général
 
 ## Les écrans expliquent-ils la baisse&nbsp;? {#ecrans}
 
-Les données disponibles ne permettent pas de le dire. La chronologie n'écarte qu'une explication&nbsp;: la généralisation du smartphone comme seule cause des reculs qui lui sont antérieurs.
+Les données disponibles ne permettent pas de le dire. La chronologie ne règle qu'un point&nbsp;: la généralisation du smartphone ne peut pas être la seule cause des reculs qui lui sont antérieurs. Tout le reste demeure ouvert, des premiers usages du smartphone aux autres écrans.
 
 Les réponses des élèves de 15 ans eux-mêmes, dans PISA, ne tranchent pas davantage. De 2022 à 2025, parmi ceux qui répondent, la part qui déclare plus de trois heures de numérique de loisir par jour, avant et après l'école, passe de {{< lan-val "e3h22" >}}&nbsp;% à {{< lan-val "e3h25" >}}&nbsp;%, et le week-end de {{< lan-val "w3h22" >}}&nbsp;% à {{< lan-val "w3h25" >}}&nbsp;%. Mais la part de ceux qui ne répondent pas à la question a presque doublé, de {{< lan-val "nr22" >}}&nbsp;% à {{< lan-val "nr25" >}}&nbsp;%, et le verdict change selon la tranche où on les classe&nbsp;: s'ils passaient tous plus de trois heures devant un écran les jours de classe, cette part aurait augmenté. L'évolution reste donc indéterminée. Ces non-répondants ont par ailleurs des scores de lecture très inférieurs aux autres ({{< lan-val "nrs25" >}}&nbsp;points en 2025, contre {{< lan-val "reps25" >}})&nbsp;: un fait sur ce groupe, qui ne renseigne pas sur son temps d'écran. Et 2022 suit de peu la crise sanitaire.
 
@@ -166,7 +166,7 @@ Reste ce que la question de départ vise le plus directement, et que ces enquêt
 
 ## Les élèves connaissent-ils moins de mots&nbsp;? {#vocabulaire}
 
-Aucune des séries publiques françaises recensées ici ne permet de le dire. L'évaluation CEDRE note la grammaire, le vocabulaire, l'orthographe et la conjugaison, mais n'en publie qu'un score global par année&nbsp;; l'évaluation de sixième contient un test de lexique dont les questions changent d'une année à l'autre&nbsp;; le test de seconde n'en a un qu'en voie professionnelle, et depuis 2025 seulement. Ce constat ne dit pas que le vocabulaire des élèves se maintient&nbsp;: il dit qu'aucune série publique ne permet d'en suivre l'évolution. Le chiffre souvent cité selon lequel les jeunes n'utiliseraient plus que quelques centaines de mots ne repose sur aucune étude retrouvée, et il ne dit pas ce qu'il compte&nbsp;: mots employés spontanément, reconnus, compris en contexte, ou disponibles pour s'exprimer avec précision.
+Aucune des séries publiques françaises recensées pour cette page, dont la liste figure dans «&nbsp;D'où viennent ces chiffres&nbsp;», ne permet de le dire. L'évaluation CEDRE note la grammaire, le vocabulaire, l'orthographe et la conjugaison, mais n'en publie qu'un score global par année&nbsp;; l'évaluation de sixième contient un test de lexique dont les questions changent d'une année à l'autre&nbsp;; le test de seconde n'en a un qu'en voie professionnelle, et depuis 2025 seulement. Ce constat ne dit pas que le vocabulaire des élèves se maintient&nbsp;: il dit qu'aucune série publique ne permet d'en suivre l'évolution. Le chiffre souvent cité selon lequel les jeunes n'utiliseraient plus que quelques centaines de mots ne repose sur aucune étude retrouvée, et il ne dit pas ce qu'il compte&nbsp;: mots employés spontanément, reconnus, compris en contexte, ou disponibles pour s'exprimer avec précision.
 
 Le seul test de lexique récent renseigne sur les écarts. En début de sixième, en 2025, {{< lan-val "lex_sat" >}}&nbsp;% des élèves ont une maîtrise satisfaisante du lexique&nbsp;: {{< lan-val "lex_ips1" >}}&nbsp;% dans les collèges qui accueillent les élèves les plus défavorisés, {{< lan-val "lex_ips5" >}}&nbsp;% dans les plus favorisés. Parmi les cinq domaines de français évalués, c'est en lexique que cet écart est le plus grand.
 
