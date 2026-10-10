@@ -153,7 +153,7 @@ They do not measure the total fiscal effect of inflation: neither tax revenue sw
 
 <div class="retenir">
 
-<p class="retenir__surtitre">Summary</p>
+<p class="retenir__surtitre">Synthèse</p>
 
 ## Key takeaways {#retenir}
 

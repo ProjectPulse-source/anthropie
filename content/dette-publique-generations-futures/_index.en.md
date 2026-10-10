@@ -161,7 +161,7 @@ The working paper [AWP-09](/en/awp/awp-09/) gives the verdict of these accounts 
 
 <div class="retenir">
 
-<p class="retenir__surtitre">Summary</p>
+<p class="retenir__surtitre">Synthèse</p>
 
 ## What to take away {#takeaways}
 

@@ -216,7 +216,7 @@ Only indicative measures exist: debt according to the IMF, and central-governmen
 
 <div class="retenir">
 
-<p class="retenir__surtitre">Summary</p>
+<p class="retenir__surtitre">Synthèse</p>
 
 ## What to take away {#retenir}
 

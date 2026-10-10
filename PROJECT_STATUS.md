@@ -66,6 +66,7 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 - Même jour, demande de l'auteur : surtitre « Synthèse » sur les 17 cartes, écrit dans la source
   (`p.retenir__surtitre`) ; « Summary » sur les 7 pages anglaises (un mot français y serait une coquille). HTML construit :
   10 « Synthèse », 7 « Summary » ; rendu calculé : 11 px, mono, capitales, `--color-pivot`, titre à 0 de marge.
+- Même jour, décision de l'auteur : « Synthèse » aussi sur les 7 pages anglaises (« Summary » retiré).
 
 ### 2026-10-09 — Échecs CI du 05 et du 07/10 corrigés : pièces archivées en octets exacts, EESR injoignable ≠ fiche absente ; EN LIGNE
 

@@ -191,7 +191,7 @@ These data do not attribute that gap to debt; what they do establish is that, fo
 
 <div class="retenir">
 
-<p class="retenir__surtitre">Summary</p>
+<p class="retenir__surtitre">Synthèse</p>
 
 ## What to take away
 

@@ -241,7 +241,7 @@ What can be established is the effect of a specific decision — a reform, a fre
 
 <div class="retenir">
 
-<p class="retenir__surtitre">Summary</p>
+<p class="retenir__surtitre">Synthèse</p>
 
 ## What to take away
 
