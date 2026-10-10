@@ -267,6 +267,61 @@ couverture_concours_2026_double_session,capes_physique_chimie,2026,97.8,"% (admi
 couverture_concours_2026_double_session,caplp_mathematiques_physique_chimie,2026,64.2,"% (admis / postes, bac+3 et bac+5, ministère)"
 heures_non_assurees_deciles_2024_2025,etablissements_moins_concernes,total,3,% des heures prevues (second degre public)
 heures_non_assurees_deciles_2024_2025,etablissements_plus_concernes,total,19,% des heures prevues (second degre public)
+fermeture_lycee_gt_2024_2025,part_examens,,3.0,"% du temps d'enseignement (lycee GT public, y compris LPO)"
+fermeture_lycee_gt_2024_2025,part_total,,3.28,"% du temps d'enseignement (lycee GT public, y compris LPO)"
+fermeture_lycee_gt_2024_2025,jours_examens,,5.8,jours de fermeture totale
+fermeture_lycee_gt_2024_2025,jours_total,,6.3,jours de fermeture totale
+concours_externes_second_degre_public,postes,2005,13475,nombre (annees publiees)
+concours_externes_second_degre_public,presents,2005,80222,nombre (annees publiees)
+concours_externes_second_degre_public,admis,2005,13316,nombre (annees publiees)
+concours_externes_second_degre_public,postes,2010,8300,nombre (annees publiees)
+concours_externes_second_degre_public,presents,2010,43954,nombre (annees publiees)
+concours_externes_second_degre_public,admis,2010,8237,nombre (annees publiees)
+concours_externes_second_degre_public,postes,2015,12609,nombre (annees publiees)
+concours_externes_second_degre_public,presents,2015,42845,nombre (annees publiees)
+concours_externes_second_degre_public,admis,2015,10933,nombre (annees publiees)
+concours_externes_second_degre_public,postes,2020,10170,nombre (annees publiees)
+concours_externes_second_degre_public,presents,2020,39357,nombre (annees publiees)
+concours_externes_second_degre_public,admis,2020,9471,nombre (annees publiees)
+concours_externes_second_degre_public,postes,2021,10160,nombre (annees publiees)
+concours_externes_second_degre_public,presents,2021,39531,nombre (annees publiees)
+concours_externes_second_degre_public,admis,2021,9501,nombre (annees publiees)
+concours_externes_second_degre_public,postes,2022,10120,nombre (annees publiees)
+concours_externes_second_degre_public,presents,2022,27000,nombre (annees publiees)
+concours_externes_second_degre_public,admis,2022,7960,nombre (annees publiees)
+concours_externes_second_degre_public,postes,2023,10213,nombre (annees publiees)
+concours_externes_second_degre_public,presents,2023,28928,nombre (annees publiees)
+concours_externes_second_degre_public,admis,2023,8528,nombre (annees publiees)
+concours_externes_second_degre_public,postes,2024,9968,nombre (annees publiees)
+concours_externes_second_degre_public,presents,2024,28962,nombre (annees publiees)
+concours_externes_second_degre_public,admis,2024,8553,nombre (annees publiees)
+concours_externes_second_degre_public,postes,2025,9455,nombre (annees publiees)
+concours_externes_second_degre_public,presents,2025,28570,nombre (annees publiees)
+concours_externes_second_degre_public,admis,2025,8443,nombre (annees publiees)
+enseignants_formations_gt_lycee,public_prive,2011,114049,"enseignants face a eleves, au prorata (RERS 9.09)"
+enseignants_formations_gt_lycee,public_prive,2012,116045,"enseignants face a eleves, au prorata (RERS 9.09)"
+enseignants_formations_gt_lycee,public_prive,2013,118498,"enseignants face a eleves, au prorata (RERS 9.09)"
+enseignants_formations_gt_lycee,public_prive,2014,120399,"enseignants face a eleves, au prorata (RERS 9.09)"
+enseignants_formations_gt_lycee,public_prive,2015,118351,"enseignants face a eleves, au prorata (RERS 9.09)"
+enseignants_formations_gt_lycee,public_prive,2016,121242,"enseignants face a eleves, au prorata (RERS 9.09)"
+enseignants_formations_gt_lycee,public_prive,2017,123507,"enseignants face a eleves, au prorata (RERS 9.09)"
+enseignants_formations_gt_lycee,public_prive,2018,123154,"enseignants face a eleves, au prorata (RERS 9.09)"
+enseignants_formations_gt_lycee,public_prive,2019,121020,"enseignants face a eleves, au prorata (RERS 9.09)"
+enseignants_formations_gt_lycee,public_prive,2020,119509,"enseignants face a eleves, au prorata (RERS 9.09)"
+enseignants_formations_gt_lycee,public_prive,2021,119588,"enseignants face a eleves, au prorata (RERS 9.09)"
+enseignants_formations_gt_lycee,public_prive,2022,119602,"enseignants face a eleves, au prorata (RERS 9.09)"
+enseignants_formations_gt_lycee,public_prive,2023,119460,"enseignants face a eleves, au prorata (RERS 9.09)"
+enseignants_formations_gt_lycee,public_prive,2024,118959,"enseignants face a eleves, au prorata (RERS 9.09)"
+enseignants_formations_gt_lycee,public_prive,2025,118582,"enseignants face a eleves, au prorata (RERS 9.09)"
+enseignants_public_2025_par_formation,gt,ensemble,92968,"enseignants (RERS 9.09, tableau 2)"
+enseignants_public_2025_par_formation,gt,contractuels,5895,"enseignants (RERS 9.09, tableau 2)"
+enseignants_public_2025_par_formation,gt,fonctionnaires,87073,"enseignants (RERS 9.09, tableau 2)"
+enseignants_public_2025_par_formation,pro,ensemble,60036,"enseignants (RERS 9.09, tableau 2)"
+enseignants_public_2025_par_formation,pro,contractuels,12897,"enseignants (RERS 9.09, tableau 2)"
+enseignants_public_2025_par_formation,pro,fonctionnaires,47140,"enseignants (RERS 9.09, tableau 2)"
+enseignants_public_2025_par_formation,total,ensemble,361767,"enseignants (RERS 9.09, tableau 2)"
+enseignants_public_2025_par_formation,total,contractuels,34569,"enseignants (RERS 9.09, tableau 2)"
+enseignants_public_2025_par_formation,total,fonctionnaires,327198,"enseignants (RERS 9.09, tableau 2)"
 contractuels,part_enseignants_second_degre_public,2015,7.5,%
 contractuels,part_enseignants_second_degre_public,2016,8.1,%
 contractuels,part_enseignants_second_degre_public,2017,8.9,%

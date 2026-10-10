@@ -157,6 +157,11 @@ def calcul(X):
         sd=X["d4"]["second_degre"], releve=X["releve_le"],
         e1=X["enonces"]["e1"],
         detail={"2024": X["d2"]["detail_2024"], "2025": X["d2"]["detail_2025"]},
+        # Phase B de la refonte (10/10/2026) : candidats et postes des concours externes, motifs de fermeture du lycée.
+        flux={int(a): v for a, v in X["d2"]["externes_flux"].items()}, ferm=X["d4"]["fermeture_gt"],
+        # Contre-expertise de la page refondue (10/10/2026) : enseignants par niveau de formation (RERS 9.09).
+        ens={int(a): v for a, v in X["d2"]["enseignants_niveau"]["gt_public_prive"].items()},
+        ens_pub=X["d2"]["enseignants_niveau"]["public_2025"],
     )
 
 
@@ -306,6 +311,12 @@ def mutation(c):
         c["t26"] = dict(c["t26"], maths=85.0)
     elif m == "bati":         # la dépense par lycéen de 2019 serait la même partout (rien de « déjà visible »)
         c["bati"] = dict(c["bati"], rho_19=None)
+    elif m == "fermeture":    # les examens ne feraient plus que la moitié des fermetures du lycée
+        c["ferm"] = dict(c["ferm"], part_examens=c["ferm"]["part_total"] / 2)
+    elif m == "candidats":    # les candidats présents n'auraient baissé que de moitié depuis 2005
+        fx = dict(c["flux"])
+        fx[max(fx)] = dict(fx[max(fx)], presents=fx[min(fx)]["presents"] // 2)
+        c["flux"] = fx
     elif m is not None:
         fail("mutation inconnue : %s" % m)
     return m
@@ -334,6 +345,49 @@ def gardes(c):
     g(abs(c["org4_col"] - c["h4"][COL]["individuelles"]) <= 0.5, "« au collège, les deux s'équilibrent » : %.1f / %.1f" % (c["org4_col"], c["h4"][COL]["individuelles"]))
     g(h4gt["fermeture"] > c["h4"][COL]["fermeture"] and h4gt["fermeture"] > c["h4"][LP]["fermeture"], "« le lycée GT ferme davantage »")
     g(abs(h4gt["total"] - 10) <= 0.5, "énoncé « 10 % des heures dans les lycées » : exact à 0,5 point")
+    f = c["ferm"]
+    g(f["part_examens"] / f["part_total"] >= 0.85 and f["jours_examens"] / f["jours_total"] >= 0.85,
+      "« la fermeture du lycée tient presque toute aux examens » : %.2f du temps, %.1f jours sur %.1f" % (f["part_examens"] / f["part_total"], f["jours_examens"], f["jours_total"]))
+    g(abs(f["part_total"] - h4gt["fermeture"]) <= 0.05, "motifs de fermeture : même total que la figure 2 de la DEPP")
+    g(h4gt["individuelles"] > max(h4gt[k] for k in ("fermeture", "systeme", "formation")),
+      "« aucun des trois autres motifs ne pèse, seul, autant que les absences individuelles » (panel après, 10/10 : lu à l'envers)")
+    ecarts = {k: h4gt[k] - c["h4"][COL][k] for k in ("fermeture", "systeme", "formation", "individuelles")}
+    g(ecarts["fermeture"] > sum(v for k, v in ecarts.items() if k != "fermeture" and v > 0),
+      "« entre lycée GT et collège, la différence se fait surtout sur la fermeture » : %s" % {k: round(v, 1) for k, v in ecarts.items()})
+    g(max(v["presents"] for a, v in c["flux"].items() if a > min(c["flux"])) < 0.6 * c["flux"][min(c["flux"])]["presents"],
+      "« les candidats n'ont jamais approché leur niveau de %d »" % min(c["flux"]))
+    g(round(h4gt["individuelles"] + c["org4"], 1) != round(h4gt["total"], 1),
+      "« les parts arrondies totalisent %s pour %s publiés » : l'écart d'arrondi a disparu, la phrase est à retirer"
+      % (nb(h4gt["individuelles"] + c["org4"]), nb(h4gt["total"])))
+    # Concours : candidats et postes (RERS 9.27)
+    fx = c["flux"]
+    f0, f1 = fx[min(fx)], fx[max(fx)]
+    r_pres = f0["presents"] / f1["presents"]
+    g(2.5 <= r_pres < 3, "« près de trois fois moins de candidats présents » : %.2f" % r_pres)
+    g(f1["postes"] / f0["postes"] > f1["presents"] / f0["presents"], "« les postes offerts ont moins baissé que les candidats »")
+    cpp = lambda r: r["presents"] / r["postes"]
+    g(1.8 <= cpp(f0) / cpp(f1) <= 2.2, "« deux fois moins de candidats par poste » : %.2f" % (cpp(f0) / cpp(f1)))
+    suites = {a: fx[a]["presents"] / fx[a - 1]["presents"] - 1 for a in fx if a - 1 in fx}
+    g(min(suites, key=suites.get) == 2022 and suites[2022] < -0.25,
+      "« la plus forte baisse d'une session à la suivante est celle de 2022 » : %s" % {a: round(v, 3) for a, v in suites.items()})
+    # Enseignants des formations GT (RERS 9.09, public + privé) : hausse jusqu'en 2017, recul depuis
+    en, v1 = c["ens"], c["v1"]
+    a_max = max(en, key=en.get)
+    g(a_max == 2017 and en[max(en)] < en[a_max] and en[min(en)] < en[a_max],
+      "« les enseignants des formations GT ont augmenté jusqu'en 2017, puis reculé » : %s" % en)
+    g(v1[2025]["eleves"] / v1[2015]["eleves"] - 1 > en[2025] / en[2015] - 1 + 0.02,
+      "« de 2015 à 2025, les élèves ont augmenté nettement plus que les enseignants »")
+    pc_ = {k: 100 * v["contractuels"] / v["ensemble"] for k, v in c["ens_pub"].items()}
+    g(pc_["gt"] < pc_["total"] < pc_["pro"], "« contractuels : moins en formations GT, plus en formations professionnelles » : %s" % pc_)
+    # Trajectoires par discipline (R2 : jamais « longtemps déficitaire » pour les deux)
+    m_, p_ = {int(a): v for a, v in c["maths"].items()}, {int(a): v for a, v in c["pc"].items()}
+    g(all(m_[a] >= 98 for a in (2008, 2009, 2010)), "« le CAPES de mathématiques pourvoyait presque tous ses postes jusqu'en 2010 »")
+    g(max(v for a, v in m_.items() if a >= 2011) < 93, "« depuis 2011, jamais plus de neuf postes sur dix ou presque » (mathématiques)")
+    g(all(p_[a] >= 99.5 for a in range(2008, 2022) if a != 2019) and p_[2019] < 80,
+      "« physique-chimie : presque tous ses postes de 2008 à 2021, sauf en 2019 »")
+    g(all(p_[a] < 75 for a in p_ if a >= 2022), "« physique-chimie : sous trois postes sur quatre depuis 2022 »")
+    # E6 : base publiée à l'unité (R9) -- l'écart réel tient entre deux bornes
+    g(c["sd"]["total"]["2022-2023"] + 0.5 - c["sd"]["total"]["2024-2025"] < 3, "E6 : « même la borne haute de la baisse reste sous 3 points »")
     # Classes
     g(min(c["ed_depuis20"]) > c["ed_max_avant"], "« depuis 2020, au-dessus de tout niveau de 1994-2015 »")
     g(min(c["ed_depuis20"]) >= 30, "« plus de 30 élèves depuis 2020 »")
@@ -457,6 +511,45 @@ def affichage(c):
         "e10_2d": nb(abs(c["e4"]["eleves_2026_2d_variation"]), 0),
         "e1_snes": nb(c["e1"]["snes"], 0), "e1_snpden": nb(c["e1"]["snpden"], 0),
         **affichage_bati(c["bati"]),
+        **affichage_phase_b(c),
+    }
+
+
+def affichage_phase_b(c):
+    """Jetons ajoutés par la refonte (phase B, 10/10/2026)."""
+    h4gt, f, fx = c["h4"][GT], c["ferm"], c["flux"]
+    a0, a1 = min(fx), max(fx)
+    cpp = lambda r: r["presents"] / r["postes"]
+    m_, p_ = {int(a): v for a, v in c["maths"].items()}, {int(a): v for a, v in c["pc"].items()}
+    t22, t24 = c["sd"]["total"]["2022-2023"], c["sd"]["total"]["2024-2025"]
+    return {
+        "h_somme": nb(h4gt["individuelles"] + c["org4"]), "col_ferm": nb(c["h4"][COL]["fermeture"]),
+        "ferm_j": nb(f["jours_total"]), "ferm_j_exam": nb(f["jours_examens"]),
+        "ferm_pt_exam": pts(f["part_examens"]),
+        "fx_a0": str(a0), "fx_a1": str(a1),
+        "fx_pres0": nb(fx[a0]["presents"], 0), "fx_pres1": nb(fx[a1]["presents"], 0),
+        "fx_postes0": nb(fx[a0]["postes"], 0), "fx_postes1": nb(fx[a1]["postes"], 0),
+        "fx_pres_baisse": nb(100 * (1 - fx[a1]["presents"] / fx[a0]["presents"]), 0),
+        "fx_postes_baisse": nb(100 * (1 - fx[a1]["postes"] / fx[a0]["postes"]), 0),
+        "fx_cpp0": nb(cpp(fx[a0])), "fx_cpp1": nb(cpp(fx[a1])),
+        "fx_pres21": nb(fx[2021]["presents"], 0), "fx_pres22": nb(fx[2022]["presents"], 0),
+        "fx_chute22": nb(100 * (1 - fx[2022]["presents"] / fx[2021]["presents"]), 0),
+        "fx_postes10": nb(fx[2010]["postes"], 0), "fx_postes15": nb(fx[2015]["postes"], 0),
+        "m_max_11": nb(max(v for a, v in m_.items() if a >= 2011)),
+        "pc19": nb(p_[2019]), "pc22": nb(p_[2022]), "m22": nb(m_[2022]), "m11": nb(m_[2011]),
+        "sd_var_lo": nb(t22 - 0.5 - t24), "sd_var_hi": nb(t22 + 0.5 - t24),
+        "en_a0": str(min(c["ens"])), "en_a1": str(max(c["ens"])), "en0": nb(c["ens"][min(c["ens"])], 0),
+        "en1": nb(c["ens"][max(c["ens"])], 0), "en_max": nb(max(c["ens"].values()), 0),
+        "en_max_an": str(max(c["ens"], key=c["ens"].get)),
+        "en_recul": nb(100 * (1 - c["ens"][max(c["ens"])] / max(c["ens"].values()))),
+        "en_var15": nb(100 * (c["ens"][2025] / c["ens"][2015] - 1)),
+        "el_var15": nb(100 * (c["v1"][2025]["eleves"] / c["v1"][2015]["eleves"] - 1)),
+        "epe15": nb(c["v1"][2015]["eleves"] / c["ens"][2015]), "epe25": nb(c["v1"][2025]["eleves"] / c["ens"][2025]),
+        "en_pub": nb(c["ens_pub"]["gt"]["ensemble"], 0), "en_pub_contr": nb(c["ens_pub"]["gt"]["contractuels"], 0),
+        "en_pub_contr_pct": nb(100 * c["ens_pub"]["gt"]["contractuels"] / c["ens_pub"]["gt"]["ensemble"]),
+        "en_pro_contr_pct": nb(100 * c["ens_pub"]["pro"]["contractuels"] / c["ens_pub"]["pro"]["ensemble"], 0),
+        "en_tot_contr_pct": nb(100 * c["ens_pub"]["total"]["contractuels"] / c["ens_pub"]["total"]["ensemble"]),
+        "sd_nr_sys": nb(c["h4"]["Ensemble"]["systeme"]), "sd_nr_form": nb(c["h4"]["Ensemble"]["formation"]),
     }
 
 
@@ -485,18 +578,18 @@ FIG = {
     "heures": dict(
         titre="Une heure de cours sur dix n'a pas lieu au lycée : pourquoi ?",
         source="DEPP, enquête sur le temps d'enseignement non assuré (Note d'Information 26-14), établissements publics, 2024-2025",
-        note="En % des heures d'enseignement prévues. Absences individuelles : maladie, congés, grèves, convenances. Enquête déclarative par échantillon.",
-        montre="Au lycée général et technologique, en 2024-2025, les fermetures (surtout pour les examens), les enseignants mobilisés par les examens ou les commissions et la formation pèsent ensemble plus que les absences individuelles des enseignants ; au collège, les deux parts s'équilibrent."),
+        note="En % des heures prévues. Examens, formation : enseignants absents eux aussi. Individuelles : maladie, congés, grèves. Enquête par échantillon, une année.",
+        montre="Au lycée général et technologique public, en 2024-2025, les absences individuelles d'enseignants non remplacées pèsent moins que les trois autres motifs réunis : fermetures (presque toutes pour les examens), enseignants mobilisés par les examens ou les commissions, formation ; au collège, les deux parts s'équilibrent. Une seule année publiée au dixième."),
     "classes": dict(
         titre="Élèves par classe au lycée général et technologique, 1994-{ed_an}",
         source="DEPP, Repères et références statistiques 2026, fiches 2.05 et 2.06 (public et privé sous contrat)",
         note="Nombre moyen d'élèves par division (classe entière). Devant un professeur, les élèves sont moins nombreux : une partie des heures se fait en groupe.",
         montre="Depuis 2020, les classes de lycée GT comptent plus de 30 élèves en moyenne, un niveau jamais atteint de 1994 à 2015 ; la moyenne est stable depuis."),
     "concours": dict(
-        titre="Part des postes pourvus aux concours externes d'enseignants, 2008-2025",
-        source="DEPP, Repères et références statistiques 2026, fiches 9.27 et 9.28 (concours externes, enseignement public)",
-        note="Admis rapportés aux postes offerts. Ensemble des concours externes d'enseignants du second degré : années publiées seulement.",
-        montre="De 2023 à 2025, les CAPES de mathématiques et de physique-chimie sont restés sous quatre postes pourvus sur cinq, quand l'ensemble des concours se redressait ; la session double de 2026, hors de cette série, les a portés au-delà de neuf sur dix."),
+        titre="Part des postes pourvus aux concours externes d'enseignants, 2008-2025 et 2026",
+        source="DEPP, RERS 2026, fiches 9.27 et 9.28 (concours externes, public) ; 2026 : ministère, résultats par concours",
+        note="Admis rapportés aux postes offerts ; ne mesure pas le besoin. 2026 : deux concours (bac+3, bac+5), hors série.",
+        montre="De 2023 à 2025, les CAPES de mathématiques et de physique-chimie sont restés sous quatre postes pourvus sur cinq. En 2026, deux concours (bac+3 et bac+5) et davantage de postes : plus de neuf sur dix pourvus, un résultat qui ne prolonge pas la série et ne mesure pas le besoin."),
 }
 
 
@@ -504,8 +597,9 @@ def fig_heures(c, A):
     t = FIG["heures"]
     lignes = [("Lycée général et technologique", c["h4"][GT]), ("Lycée professionnel", c["h4"][LP]), ("Collège", c["h4"][COL])]
     desc = ("Barres empilées, 2024-2025, en %% des heures prévues. Lycée GT : %s au total, dont absences individuelles %s, "
-            "examens et commissions %s, fermeture %s, formation %s. Lycée professionnel : %s. Collège : %s, dont absences individuelles %s."
-            % (A["h_total"], A["h_indiv"], A["h_sys"], A["h_ferm"], A["h_form"], A["lp_total"], A["col_total"], A["col_indiv"]))
+            "examens et commissions %s, fermeture %s, formation %s. Lycée professionnel : %s. Collège : %s, dont absences individuelles %s. "
+            "%s"
+            % (A["h_total"], A["h_indiv"], A["h_sys"], A["h_ferm"], A["h_form"], A["lp_total"], A["col_total"], A["col_indiv"], arrondi_txt(A)))
     h = 270
     e = tete("lyc-h", t["titre"], desc, h + 52)
     X0, X1 = 200, 690
@@ -531,7 +625,13 @@ def fig_heures(c, A):
                 e.append('<text x="%.1f" y="%d" font-size="10.5" fill="%s" text-anchor="middle">%s</text>' % (x + w / 2, y + 17, fc, nb(v[cle])))
             x += w
         e.append('<text x="%.1f" y="%d" font-size="11.5" font-weight="600" fill="%s">%s %%</text>' % (x + 6, y + 17, INK, nb(v["total"])))
+    e.append('<text x="0" y="%d" font-size="10.5" fill="%s">%s</text>' % (h - 14, INK2, esc(arrondi_txt(A))))
     return pied(e, h + 2, t["source"], t["note"])
+
+
+def arrondi_txt(A):
+    """Contre-expertise de la page refondue (10/10/2026) : l'écart d'arrondi doit se lire dans l'image autonome."""
+    return "Lycée GT : les quatre motifs arrondis totalisent %s ; total publié par la DEPP : %s (écart d'arrondi)." % (A["h_somme"], A["h_total"])
 
 
 def fig_classes(c, A):
@@ -568,11 +668,12 @@ def fig_concours(c, A):
     nat = c["nat"]
     a0, a1 = 2008, max(m)
     desc = ("Courbes 2008-%d de la part des postes pourvus. CAPES de mathématiques : %s %% en 2023, %s en 2024, %s en 2025. "
-            "CAPES de physique-chimie : %s, %s, %s. Ensemble des concours externes (années publiées) : %s %% en 2015, %s en 2025."
-            % (a1, A["m23"], A["m24"], A["m25"], A["pc23"], A["pc24"], A["pc25"], A["nat15"], A["nat25"]))
+            "CAPES de physique-chimie : %s, %s, %s. Ensemble des concours externes (années publiées) : %s %% en 2015, %s en 2025. "
+            "Session 2026, hors série (deux concours, bac+3 et bac+5, ministère) : CAPES de mathématiques %s %%, de physique-chimie %s %%."
+            % (a1, A["m23"], A["m24"], A["m25"], A["pc23"], A["pc24"], A["pc25"], A["nat15"], A["nat25"], A["m26"], A["pc26"]))
     h = 290
     e = tete("lyc-k", t["titre"], desc, h + 52)
-    X0, X1, TOP, BAS = 44, 500, 44, 260
+    X0, X1, TOP, BAS = 44, 420, 44, 260
     X = lambda a: X0 + (X1 - X0) * (a - a0) / (a1 - a0)
     Y = lambda v: BAS - (BAS - TOP) * (v - 40) / 60
     for gv in range(40, 101, 20):
@@ -594,7 +695,177 @@ def fig_concours(c, A):
         etiq[k][0] = max(etiq[k][0], etiq[k - 1][0] + 14)
     for y, col, txt in etiq:
         e.append('<text x="%.1f" y="%.1f" font-size="10.5" fill="%s">%s</text>' % (X1 + 8, y, col, esc(txt)))
+    # 2026 : autre régime (deux concours, autre source) -- colonne séparée par une rupture, points creux, jamais reliés
+    XR, X26 = 624, 660
+    e.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-dasharray="3 3"/>' % (XR, TOP - 4, XR, BAS, INK2))
+    e.append('<text x="%d" y="%d" font-size="10" fill="%s" text-anchor="middle">2026</text>' % (X26 + 14, BAS + 14, MUTED))
+    e.append('<text x="%d" y="%d" font-size="10" fill="%s" text-anchor="middle">deux concours</text>' % (X26 + 14, TOP - 8, INK2))
+    for v, col in ((c["t26"]["maths"], BLEU), (c["t26"]["pc"], ORANGE)):
+        e.append('<circle cx="%d" cy="%.1f" r="4" fill="#ffffff" stroke="%s" stroke-width="2"/>' % (X26, Y(min(v, 100)), col))
+        e.append('<text x="%d" y="%.1f" font-size="10.5" fill="%s">%s</text>' % (X26 + 8, Y(min(v, 100)) + 4, col, nb(v)))
     return pied(e, h + 2, t["source"], t["note"])
+
+
+# ------------------------------------------------------------------ figures mobiles (phase B de la refonte, 10/10/2026)
+# Composées pour 300 px de large, jamais rétrécies : police minimale FS_MIN ; chaque valeur dessinée doit figurer dans la
+# description de la version détaillée (parite_mobile). Patron : scripts/update_niveau_eleves.py.
+WM, FS_MIN = 300, 13.5
+LICENCE_M = "Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com"
+SEGS = [("individuelles", "Absences individuelles", ORANGE, 1.0), ("systeme", "Examens, commissions", BLEU, 1.0),
+        ("fermeture", "Fermeture (examens surtout)", BLEU, 0.62), ("formation", "Formation", BLEU, 0.35)]
+
+
+def coupe(s, n):
+    out, cur = [], ""
+    for mot in s.split():
+        if cur and len(cur) + 1 + len(mot) > n:
+            out.append(cur)
+            cur = mot
+        else:
+            cur = (cur + " " + mot).strip()
+    return out + ([cur] if cur else [])
+
+
+def tete_m(fid, titre, desc):
+    e = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d 0" role="img" font-variant-numeric="tabular-nums" '
+         'aria-labelledby="%s-t %s-d" font-family="%s">' % (WM, fid, fid, FONT),
+         '<title id="%s-t">%s</title><desc id="%s-d">%s</desc>' % (fid, esc(titre), fid, esc(desc)),
+         '<rect width="%d" height="0" fill="#ffffff"/>' % WM]
+    lignes = coupe(titre, 30)
+    for k, ligne in enumerate(lignes):
+        e.append('<text x="0" y="%d" font-size="17" font-weight="600" fill="%s">%s</text>' % (20 + 22 * k, INK, esc(ligne)))
+    return e, 20 + 22 * len(lignes)
+
+
+def finir_m(e, y0, source, note):
+    e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y0, WM, y0, GRID))
+    y = y0 + 4
+    for tx, col in ((source, INK2), (note, INK2), (LICENCE_M, MUTED)):
+        for ligne in coupe(tx, 38):
+            y += 17
+            e.append('<text x="0" y="%.1f" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, col, esc(ligne)))
+        y += 4
+    e.append("</svg>")
+    h = y + 6
+    s = "\n".join(e)
+    return s.replace('viewBox="0 0 %d 0"' % WM, 'viewBox="0 0 %d %d"' % (WM, h), 1).replace(
+        '<rect width="%d" height="0"' % WM, '<rect width="%d" height="%d"' % (WM, h), 1)
+
+
+def desc_de(svg):
+    return html.unescape(re.search(r"<desc[^>]*>(.*?)</desc>", svg).group(1))
+
+
+def fig_heures_m(c, A, svg_d):
+    t = FIG["heures"]
+    e, y = tete_m("lyc-hm", "Heures de cours non assurées, 2024-2025 : pourquoi ?", desc_de(svg_d))
+    gt = c["h4"][GT]
+    y += 4
+    e.append('<text x="0" y="%d" font-size="%s" fill="%s">Au lycée général et technologique :</text>' % (y + 14, FS_MIN, INK2))
+    y += 14
+    for cle, lib, col, op in SEGS:   # légende chiffrée : les quatre motifs au lycée GT
+        y += 24
+        e.append('<rect x="0" y="%d" width="14" height="14" fill="%s" opacity="%s"/>' % (y - 12, col, op))
+        e.append('<text x="22" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, INK, esc(lib)))
+        e.append('<text x="%d" y="%d" font-size="15" font-weight="600" fill="%s" text-anchor="end">%s</text>' % (WM, y, INK, nb(gt[cle])))
+    sx = lambda v: (WM - 64) * v / 11.0
+    for lib, v in (("Lycée général et technologique", gt), ("Lycée professionnel", c["h4"][LP]), ("Collège", c["h4"][COL])):
+        y += 36
+        e.append('<text x="0" y="%d" font-size="15" font-weight="600" fill="%s">%s</text>' % (y, INK, esc(lib)))
+        y += 8
+        x = 0.0
+        for cle, _, col, op in SEGS:
+            w = sx(v[cle])
+            e.append('<rect x="%.1f" y="%d" width="%.1f" height="22" fill="%s" opacity="%s" stroke="#ffffff" stroke-width="1"/>' % (x, y, w, col, op))
+            x += w
+        e.append('<text x="%.1f" y="%d" font-size="15" font-weight="600" fill="%s">%s %%</text>' % (x + 6, y + 16, INK, nb(v["total"])))
+        y += 22
+    y += 14
+    for ligne in coupe(arrondi_txt(A), 38):
+        y += 18
+        e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, INK2, esc(ligne)))
+    return finir_m(e, y + 16, t["source"], t["note"])
+
+
+def fig_classes_m(c, A, svg_d):
+    t = {k: v.format(**A) for k, v in FIG["classes"].items()}
+    ed = c["ed"]
+    a0, a1 = min(ed), max(ed)
+    e, y = tete_m("lyc-cm", t["titre"], desc_de(svg_d))
+    X0, X1, TOP = 26, WM - 6, y + 34
+    BAS = TOP + 170
+    vmin, vmax = 26, 31
+    X = lambda a: X0 + (X1 - X0) * (a - a0) / (a1 - a0)
+    Y = lambda v: BAS - (BAS - TOP) * (v - vmin) / (vmax - vmin)
+    for gv in range(vmin + 1, vmax + 1, 2):
+        e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="0.6"/>' % (X0, Y(gv), X1, Y(gv), GRID))
+        e.append('<text x="%d" y="%.1f" font-size="%s" fill="%s" text-anchor="end">%d</text>' % (X0 - 4, Y(gv) + 4, FS_MIN, MUTED, gv))
+    e.append('<rect x="%.1f" y="%d" width="%.1f" height="%d" fill="%s" opacity="0.25"/>' % (X(2020) - 3, TOP, X(a1) - X(2020) + 6, BAS - TOP, GRIS_CLAIR))
+    e.append('<text x="%.1f" y="%d" font-size="%s" fill="%s" text-anchor="end">depuis 2020 : plus de 30</text>' % (X1, TOP - 10, FS_MIN, INK2))
+    for a in (1995, 2005, 2015, a1):   # la dernière année s'aligne à droite : centrée, elle sortait du cadre
+        e.append('<text x="%.1f" y="%d" font-size="%s" fill="%s" text-anchor="%s">%d</text>' % (X(a), BAS + 18, FS_MIN, MUTED, "end" if a == a1 else "middle", a))
+    d = " ".join(("M" if k == 0 else "L") + "%.1f,%.1f" % (X(a), Y(v)) for k, (a, v) in enumerate(sorted(ed.items())))
+    e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.6" stroke-linejoin="round"/>' % (d, BLEU))
+    for a, anc in ((a0, "start"), (c["ed_an_max_avant"], "middle"), (a1, "end")):
+        e.append('<circle cx="%.1f" cy="%.1f" r="3.6" fill="%s"/>' % (X(a), Y(ed[a]), BLEU))
+        e.append('<text x="%.1f" y="%.1f" font-size="15" font-weight="600" fill="%s" text-anchor="%s">%s</text>' % (X(a), Y(ed[a]) + 22, INK, anc, nb(ed[a])))
+    return finir_m(e, BAS + 36, t["source"], t["note"])
+
+
+def fig_concours_m(c, A, svg_d):
+    t = FIG["concours"]
+    m = {int(a): v for a, v in c["maths"].items()}
+    p = {int(a): v for a, v in c["pc"].items()}
+    e, y = tete_m("lyc-km", "Part des postes pourvus aux CAPES, 2008-2025 et 2026", desc_de(svg_d))
+    a0, a1 = 2008, max(m)
+    X0, X1, TOP = 40, 222, y + 34
+    BAS = TOP + 170
+    X = lambda a: X0 + (X1 - X0) * (a - a0) / (a1 - a0)
+    Y = lambda v: BAS - (BAS - TOP) * (v - 40) / 60
+    for gv in range(40, 101, 20):
+        e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="0.6"/>' % (X0, Y(gv), X1, Y(gv), GRID))
+        e.append('<text x="%d" y="%.1f" font-size="%s" fill="%s" text-anchor="end">%d</text>' % (X0 - 4, Y(gv) + 4, FS_MIN, MUTED, gv))
+    for a in (2010, 2020):
+        e.append('<text x="%.1f" y="%d" font-size="%s" fill="%s" text-anchor="middle">%d</text>' % (X(a), BAS + 18, FS_MIN, MUTED, a))
+    for serie, col in ((m, BLEU), (p, ORANGE)):
+        d = " ".join(("M" if k == 0 else "L") + "%.1f,%.1f" % (X(a), Y(min(v, 100))) for k, (a, v) in enumerate(sorted(serie.items())))
+        e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.4" stroke-linejoin="round"/>' % (d, col))
+    XR, X26 = 246, 276
+    e.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-dasharray="3 3"/>' % (XR, TOP - 6, XR, BAS, INK2))
+    e.append('<text x="%d" y="%d" font-size="%s" fill="%s" text-anchor="middle">2026</text>' % (X26, BAS + 18, FS_MIN, MUTED))
+    for v, col in ((c["t26"]["maths"], BLEU), (c["t26"]["pc"], ORANGE)):
+        e.append('<circle cx="%d" cy="%.1f" r="5" fill="#ffffff" stroke="%s" stroke-width="2.2"/>' % (X26, Y(min(v, 100)), col))
+    y = BAS + 30
+    for lib, col, v25, v26 in (("CAPES de mathématiques", BLEU, A["m25"], A["m26"]), ("CAPES de physique-chimie", ORANGE, A["pc25"], A["pc26"])):
+        y += 26
+        e.append('<rect x="0" y="%d" width="14" height="4" fill="%s"/>' % (y - 6, col))
+        e.append('<text x="22" y="%d" font-size="15" font-weight="600" fill="%s">%s</text>' % (y, INK, lib))
+        y += 22
+        e.append('<text x="22" y="%d" font-size="%s" fill="%s">2025 : %s %% · 2026 : %s %%</text>' % (y, FS_MIN, col, v25, v26))
+    y += 26
+    for ligne in coupe("Point creux, 2026 : deux concours (bac+3 et bac+5), plus de postes, hors série. Deux CAPES seulement : "
+                       "l'ensemble des concours figure dans la version détaillée.", 38):
+        e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, INK2, esc(ligne)))
+        y += 18
+    return finir_m(e, y + 6, t["source"], t["note"])
+
+
+def parite_mobile(figs):
+    """Chaque valeur dessinée dans la version mobile figure dans la description de la version détaillée ; police >= FS_MIN."""
+    for fid in ("heures", "classes", "concours"):
+        d, m = figs["lycee-%s.svg" % fid], figs["lycee-%s-m.svg" % fid]
+        nombres_d = set(re.findall(r"\d+(?:,\d+)?", desc_de(d)))
+        textes_m = re.findall(r'<text [^>]*font-weight="600"[^>]*>([^<]*)</text>', m) + \
+            re.findall(r'<text [^>]*fill="(?:%s|%s)"[^>]*>([^<]*)</text>' % (BLEU, ORANGE), m)
+        dessines = set(n for tx in textes_m for n in re.findall(r"\d+(?:,\d+)?", html.unescape(tx)) if not re.fullmatch(r"(19|20)\d\d", n))
+        if not dessines:
+            fail("parite mobile : %s -- aucune valeur dessinee lue (controle aveugle)" % fid)
+        manquants = dessines - nombres_d
+        if manquants:
+            fail("parite mobile : %s -- valeurs dessinees absentes de la version detaillee : %s" % (fid, sorted(manquants)))
+        tailles = [float(x) for x in re.findall(r'font-size="([0-9.]+)"', m)]
+        if min(tailles) < FS_MIN:
+            fail("parite mobile : %s -- police %.1f sous le minimum %.1f" % (fid, min(tailles), FS_MIN))
 
 
 def fiches(figs, Aff):
@@ -640,6 +911,18 @@ def csv_texte(c):
         w.writerow(["couverture_concours_2026_double_session", nom, "2026", "%.1f" % c["t26"][k], "% (admis / postes, bac+3 et bac+5, ministère)"])
     for k in ("moins", "plus"):
         w.writerow(["heures_non_assurees_deciles_2024_2025", "etablissements_" + k + "_concernes", "total", c["dec"][k]["total"], "% des heures prevues (second degre public)"])
+    for k in ("part_examens", "part_total"):
+        w.writerow(["fermeture_lycee_gt_2024_2025", k, "", c["ferm"][k], "% du temps d'enseignement (lycee GT public, y compris LPO)"])
+    for k in ("jours_examens", "jours_total"):
+        w.writerow(["fermeture_lycee_gt_2024_2025", k, "", c["ferm"][k], "jours de fermeture totale"])
+    for a, f in sorted(c["flux"].items()):
+        for k in ("postes", "presents", "admis"):
+            w.writerow(["concours_externes_second_degre_public", k, a, f[k], "nombre (annees publiees)"])
+    for a, v in sorted(c["ens"].items()):
+        w.writerow(["enseignants_formations_gt_lycee", "public_prive", a, v, "enseignants face a eleves, au prorata (RERS 9.09)"])
+    for k, v in c["ens_pub"].items():
+        for kk, x in v.items():
+            w.writerow(["enseignants_public_2025_par_formation", k, kk, x, "enseignants (RERS 9.09, tableau 2)"])
     for a, v in sorted(c["contr"].items()):
         w.writerow(["contractuels", "part_enseignants_second_degre_public", a, v, "%"])
     for a, v in sorted(c["c1"].items()):
@@ -670,11 +953,21 @@ def main() -> int:
     A = affichage(c)
     log("Lycee GT : heures non assurees %s %% (organisation %s, individuelles %s) ; E/D %s ; CAPES maths %s/%s/%s ; OCDE x%s"
         % (A["h_total"], A["h_org"], A["h_indiv"], A["ed"], A["m23"], A["m24"], A["m25"], A["c3_pct"]))
+    figs = {"lycee-heures.svg": fig_heures(c, A), "lycee-classes.svg": fig_classes(c, A), "lycee-concours.svg": fig_concours(c, A)}
+    for fid, fn in (("heures", fig_heures_m), ("classes", fig_classes_m), ("concours", fig_concours_m)):
+        figs["lycee-%s-m.svg" % fid] = fn(c, A, figs["lycee-%s.svg" % fid])
+    parite_mobile(figs)   # avant --check : la parité se contrôle aussi sans écrire
+    # Les hauteurs des <source> de la page sont recopiées : une figure mobile qui change de hauteur doit les faire suivre.
+    page = (ROOT / "content" / "manque-t-il-des-professeurs" / "_index.md").read_text(encoding="utf-8")
+    for fid in ("heures", "classes", "concours"):
+        h_svg = re.search(r'viewBox="0 0 %d (\d+)"' % WM, figs["lycee-%s-m.svg" % fid]).group(1)
+        h_page = re.search(r'srcset="/img/lycee-%s-m\.svg" width="%d" height="(\d+)"' % (fid, WM), page)
+        if not h_page or h_page.group(1) != h_svg:
+            fail("page : hauteur de lycee-%s-m.svg a %s dans le <source>, %s dans le SVG" % (fid, h_page and h_page.group(1), h_svg))
     if check:
-        log("--check : %d gardes passees (%d cles d'affichage), rien ecrit." % (n, len(A)))
+        log("--check : %d gardes passees (%d cles d'affichage), parite des %d figures mobiles controlee, rien ecrit." % (n, len(A), 3))
         return 0
     import cairosvg
-    figs = {"lycee-heures.svg": fig_heures(c, A), "lycee-classes.svg": fig_classes(c, A), "lycee-concours.svg": fig_concours(c, A)}
     payload = {"meta": {"page": "https://" + PAGE_URL, "licence": "CC BY 4.0",
                         "champ": "France ; lycée général et technologique sauf mention ; public et privé sous contrat sauf mention",
                         "source_calcul": "test décisif de l'auteur (protocole écrit avant calcul) ; extrait figé scripts/sources_lycee_professeurs/ (SHA256SUMS)"},
@@ -683,6 +976,9 @@ def main() -> int:
                "concours": {"capes_mathematiques": c["maths"], "capes_physique_chimie": c["pc"], "ensemble_externes": {str(a): v for a, v in c["nat"].items()},
                             "session_2026_ministere": {k: {"postes": c["p26"][k], "taux": round(c["t26"][k], 1)} for k in c["t26"]}},
                "heures_non_assurees_deciles_2024_2025": c["dec"],
+               "fermeture_lycee_gt_2024_2025": c["ferm"],
+               "concours_externes_postes_presents_admis": {str(a): v for a, v in sorted(c["flux"].items())},
+               "enseignants_formations_gt": {"public_prive": {str(a): v for a, v in sorted(c["ens"].items())}, "public_2025": c["ens_pub"]},
                "depense_2025_provisoire": c["c1_2025"], "ocde_depp": c["ocde_depp"],
                "bati_regions_rubrique_222": c["bati"]["R"],
                "affichage": A}

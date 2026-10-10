@@ -1,5 +1,5 @@
 {
- "releve_le": "2026-10-07",
+ "releve_le": "2026-10-10",
  "_licence": "CC BY 4.0 — calcul Stéphane Lalut ; sources DEPP, ministère de l'Éducation nationale, OCDE, Eurostat, Cour des comptes, Sénat",
  "meta": {
   "page": "https://stephane-lalut.com/manque-t-il-des-professeurs/",
@@ -187,6 +187,96 @@
    "total": 19,
    "fermeture": 5,
    "individuelles": 8
+  }
+ },
+ "fermeture_lycee_gt_2024_2025": {
+  "champ": "lycée général et technologique public, y compris LPO, France hors Mayotte, 2024-2025 (NI 26-14, figures 3 et 3.1 web)",
+  "part_examens": 3.0,
+  "part_total": 3.28,
+  "jours_examens": 5.8,
+  "jours_total": 6.3
+ },
+ "concours_externes_postes_presents_admis": {
+  "2005": {
+   "postes": 13475,
+   "presents": 80222,
+   "admis": 13316
+  },
+  "2010": {
+   "postes": 8300,
+   "presents": 43954,
+   "admis": 8237
+  },
+  "2015": {
+   "postes": 12609,
+   "presents": 42845,
+   "admis": 10933
+  },
+  "2020": {
+   "postes": 10170,
+   "presents": 39357,
+   "admis": 9471
+  },
+  "2021": {
+   "postes": 10160,
+   "presents": 39531,
+   "admis": 9501
+  },
+  "2022": {
+   "postes": 10120,
+   "presents": 27000,
+   "admis": 7960
+  },
+  "2023": {
+   "postes": 10213,
+   "presents": 28928,
+   "admis": 8528
+  },
+  "2024": {
+   "postes": 9968,
+   "presents": 28962,
+   "admis": 8553
+  },
+  "2025": {
+   "postes": 9455,
+   "presents": 28570,
+   "admis": 8443
+  }
+ },
+ "enseignants_formations_gt": {
+  "public_prive": {
+   "2011": 114049,
+   "2012": 116045,
+   "2013": 118498,
+   "2014": 120399,
+   "2015": 118351,
+   "2016": 121242,
+   "2017": 123507,
+   "2018": 123154,
+   "2019": 121020,
+   "2020": 119509,
+   "2021": 119588,
+   "2022": 119602,
+   "2023": 119460,
+   "2024": 118959,
+   "2025": 118582
+  },
+  "public_2025": {
+   "gt": {
+    "ensemble": 92968,
+    "contractuels": 5895,
+    "fonctionnaires": 87073
+   },
+   "pro": {
+    "ensemble": 60036,
+    "contractuels": 12897,
+    "fonctionnaires": 47140
+   },
+   "total": {
+    "ensemble": 361767,
+    "contractuels": 34569,
+    "fonctionnaires": 327198
+   }
   }
  },
  "depense_2025_provisoire": {
@@ -561,6 +651,51 @@
   "bt_med_haut": "699",
   "bt_n_bas": "huit",
   "bt_n_haut": "cinq",
-  "bt_n_regions": "treize"
+  "bt_n_regions": "treize",
+  "h_somme": "10,5",
+  "col_ferm": "1,8",
+  "ferm_j": "6,3",
+  "ferm_j_exam": "5,8",
+  "ferm_pt_exam": "3,0 points",
+  "fx_a0": "2005",
+  "fx_a1": "2025",
+  "fx_pres0": "80 222",
+  "fx_pres1": "28 570",
+  "fx_postes0": "13 475",
+  "fx_postes1": "9 455",
+  "fx_pres_baisse": "64",
+  "fx_postes_baisse": "30",
+  "fx_cpp0": "6,0",
+  "fx_cpp1": "3,0",
+  "fx_pres21": "39 531",
+  "fx_pres22": "27 000",
+  "fx_chute22": "32",
+  "fx_postes10": "8 300",
+  "fx_postes15": "12 609",
+  "m_max_11": "91,8",
+  "pc19": "68,3",
+  "pc22": "48,2",
+  "m22": "52,4",
+  "m11": "61,2",
+  "sd_var_lo": "0,7",
+  "sd_var_hi": "1,7",
+  "en_a0": "2011",
+  "en_a1": "2025",
+  "en0": "114 049",
+  "en1": "118 582",
+  "en_max": "123 507",
+  "en_max_an": "2017",
+  "en_recul": "4,0",
+  "en_var15": "0,2",
+  "el_var15": "3,6",
+  "epe15": "13,0",
+  "epe25": "13,5",
+  "en_pub": "92 968",
+  "en_pub_contr": "5 895",
+  "en_pub_contr_pct": "6,3",
+  "en_pro_contr_pct": "21",
+  "en_tot_contr_pct": "9,6",
+  "sd_nr_sys": "1,9",
+  "sd_nr_form": "1,3"
  }
 }

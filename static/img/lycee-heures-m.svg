@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 669" role="img" font-variant-numeric="tabular-nums" aria-labelledby="lyc-hm-t lyc-hm-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="lyc-hm-t">Heures de cours non assurées, 2024-2025 : pourquoi ?</title><desc id="lyc-hm-d">Barres empilées, 2024-2025, en % des heures prévues. Lycée GT : 10,4 au total, dont absences individuelles 3,9, examens et commissions 1,9, fermeture 3,3, formation 1,4. Lycée professionnel : 9,5. Collège : 9,5, dont absences individuelles 4,7. Lycée GT : les quatre motifs arrondis totalisent 10,5 ; total publié par la DEPP : 10,4 (écart d'arrondi).</desc>
+<rect width="300" height="669" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Heures de cours non assurées,</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">2024-2025 : pourquoi ?</text>
+<text x="0" y="82" font-size="13.5" fill="#55524f">Au lycée général et technologique :</text>
+<rect x="0" y="94" width="14" height="14" fill="#eb6834" opacity="1.0"/>
+<text x="22" y="106" font-size="13.5" fill="#26262f">Absences individuelles</text>
+<text x="300" y="106" font-size="15" font-weight="600" fill="#26262f" text-anchor="end">3,9</text>
+<rect x="0" y="118" width="14" height="14" fill="#184f95" opacity="1.0"/>
+<text x="22" y="130" font-size="13.5" fill="#26262f">Examens, commissions</text>
+<text x="300" y="130" font-size="15" font-weight="600" fill="#26262f" text-anchor="end">1,9</text>
+<rect x="0" y="142" width="14" height="14" fill="#184f95" opacity="0.62"/>
+<text x="22" y="154" font-size="13.5" fill="#26262f">Fermeture (examens surtout)</text>
+<text x="300" y="154" font-size="15" font-weight="600" fill="#26262f" text-anchor="end">3,3</text>
+<rect x="0" y="166" width="14" height="14" fill="#184f95" opacity="0.35"/>
+<text x="22" y="178" font-size="13.5" fill="#26262f">Formation</text>
+<text x="300" y="178" font-size="15" font-weight="600" fill="#26262f" text-anchor="end">1,4</text>
+<text x="0" y="214" font-size="15" font-weight="600" fill="#26262f">Lycée général et technologique</text>
+<rect x="0.0" y="222" width="83.7" height="22" fill="#eb6834" opacity="1.0" stroke="#ffffff" stroke-width="1"/>
+<rect x="83.7" y="222" width="40.8" height="22" fill="#184f95" opacity="1.0" stroke="#ffffff" stroke-width="1"/>
+<rect x="124.4" y="222" width="70.8" height="22" fill="#184f95" opacity="0.62" stroke="#ffffff" stroke-width="1"/>
+<rect x="195.2" y="222" width="30.0" height="22" fill="#184f95" opacity="0.35" stroke="#ffffff" stroke-width="1"/>
+<text x="231.3" y="238" font-size="15" font-weight="600" fill="#26262f">10,4 %</text>
+<text x="0" y="280" font-size="15" font-weight="600" fill="#26262f">Lycée professionnel</text>
+<rect x="0.0" y="288" width="85.8" height="22" fill="#eb6834" opacity="1.0" stroke="#ffffff" stroke-width="1"/>
+<rect x="85.8" y="288" width="45.1" height="22" fill="#184f95" opacity="1.0" stroke="#ffffff" stroke-width="1"/>
+<rect x="130.9" y="288" width="45.1" height="22" fill="#184f95" opacity="0.62" stroke="#ffffff" stroke-width="1"/>
+<rect x="175.9" y="288" width="27.9" height="22" fill="#184f95" opacity="0.35" stroke="#ffffff" stroke-width="1"/>
+<text x="209.8" y="304" font-size="15" font-weight="600" fill="#26262f">9,5 %</text>
+<text x="0" y="346" font-size="15" font-weight="600" fill="#26262f">Collège</text>
+<rect x="0.0" y="354" width="100.8" height="22" fill="#eb6834" opacity="1.0" stroke="#ffffff" stroke-width="1"/>
+<rect x="100.8" y="354" width="38.6" height="22" fill="#184f95" opacity="1.0" stroke="#ffffff" stroke-width="1"/>
+<rect x="139.5" y="354" width="38.6" height="22" fill="#184f95" opacity="0.62" stroke="#ffffff" stroke-width="1"/>
+<rect x="178.1" y="354" width="27.9" height="22" fill="#184f95" opacity="0.35" stroke="#ffffff" stroke-width="1"/>
+<text x="212.0" y="370" font-size="15" font-weight="600" fill="#26262f">9,5 %</text>
+<text x="0" y="408" font-size="13.5" fill="#55524f">Lycée GT : les quatre motifs arrondis</text>
+<text x="0" y="426" font-size="13.5" fill="#55524f">totalisent 10,5 ; total publié par la</text>
+<text x="0" y="444" font-size="13.5" fill="#55524f">DEPP : 10,4 (écart d'arrondi).</text>
+<line x1="0" y1="460.0" x2="300" y2="460.0" stroke="#dcd8d3"/>
+<text x="0" y="481.0" font-size="13.5" fill="#55524f">DEPP, enquête sur le temps</text>
+<text x="0" y="498.0" font-size="13.5" fill="#55524f">d'enseignement non assuré (Note</text>
+<text x="0" y="515.0" font-size="13.5" fill="#55524f">d'Information 26-14), établissements</text>
+<text x="0" y="532.0" font-size="13.5" fill="#55524f">publics, 2024-2025</text>
+<text x="0" y="553.0" font-size="13.5" fill="#55524f">En % des heures prévues. Examens,</text>
+<text x="0" y="570.0" font-size="13.5" fill="#55524f">formation : enseignants absents eux</text>
+<text x="0" y="587.0" font-size="13.5" fill="#55524f">aussi. Individuelles : maladie,</text>
+<text x="0" y="604.0" font-size="13.5" fill="#55524f">congés, grèves. Enquête par</text>
+<text x="0" y="621.0" font-size="13.5" fill="#55524f">échantillon, une année.</text>
+<text x="0" y="642.0" font-size="13.5" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 ·</text>
+<text x="0" y="659.0" font-size="13.5" fill="#96928f">stephane-lalut.com</text>
+</svg>

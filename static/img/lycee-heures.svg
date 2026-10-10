@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 322" role="img" font-variant-numeric="tabular-nums" aria-labelledby="lyc-h-t lyc-h-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
-<title id="lyc-h-t">Une heure de cours sur dix n'a pas lieu au lycée : pourquoi ?</title><desc id="lyc-h-d">Barres empilées, 2024-2025, en % des heures prévues. Lycée GT : 10,4 au total, dont absences individuelles 3,9, examens et commissions 1,9, fermeture 3,3, formation 1,4. Lycée professionnel : 9,5. Collège : 9,5, dont absences individuelles 4,7.</desc>
+<title id="lyc-h-t">Une heure de cours sur dix n'a pas lieu au lycée : pourquoi ?</title><desc id="lyc-h-d">Barres empilées, 2024-2025, en % des heures prévues. Lycée GT : 10,4 au total, dont absences individuelles 3,9, examens et commissions 1,9, fermeture 3,3, formation 1,4. Lycée professionnel : 9,5. Collège : 9,5, dont absences individuelles 4,7. Lycée GT : les quatre motifs arrondis totalisent 10,5 ; total publié par la DEPP : 10,4 (écart d'arrondi).</desc>
 <rect width="720" height="322" fill="#ffffff"/>
 <text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">Une heure de cours sur dix n'a pas lieu au lycée : pourquoi ?</text>
 <rect x="0" y="34" width="11" height="11" fill="#eb6834" opacity="1.0"/>
@@ -40,8 +40,9 @@
 <rect x="538.9" y="194" width="53.1" height="26" fill="#184f95" opacity="0.35" stroke="#ffffff" stroke-width="1"/>
 <text x="565.5" y="211" font-size="10.5" fill="#26262f" text-anchor="middle">1,3</text>
 <text x="598.0" y="211" font-size="11.5" font-weight="600" fill="#26262f">9,5 %</text>
+<text x="0" y="256" font-size="10.5" fill="#55524f">Lycée GT : les quatre motifs arrondis totalisent 10,5 ; total publié par la DEPP : 10,4 (écart d'arrondi).</text>
 <line x1="0" y1="272.0" x2="720" y2="272.0" stroke="#dcd8d3"/>
 <text x="0" y="285.0" font-size="9" fill="#55524f">DEPP, enquête sur le temps d'enseignement non assuré (Note d'Information 26-14), établissements publics, 2024-2025</text>
-<text x="0" y="297.0" font-size="9" fill="#55524f">En % des heures d'enseignement prévues. Absences individuelles : maladie, congés, grèves, convenances. Enquête déclarative par échantillon.</text>
+<text x="0" y="297.0" font-size="9" fill="#55524f">En % des heures prévues. Examens, formation : enseignants absents eux aussi. Individuelles : maladie, congés, grèves. Enquête par échantillon, une année.</text>
 <text x="0" y="309.0" font-size="9" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/manque-t-il-des-professeurs/</text>
 </svg>

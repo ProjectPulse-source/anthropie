@@ -4,9 +4,9 @@
    "id": "heures",
    "fichier": "lycee-heures",
    "titre": "Une heure de cours sur dix n'a pas lieu au lycée : pourquoi ?",
-   "montre": "Au lycée général et technologique, en 2024-2025, les fermetures (surtout pour les examens), les enseignants mobilisés par les examens ou les commissions et la formation pèsent ensemble plus que les absences individuelles des enseignants ; au collège, les deux parts s'équilibrent.",
+   "montre": "Au lycée général et technologique public, en 2024-2025, les absences individuelles d'enseignants non remplacées pèsent moins que les trois autres motifs réunis : fermetures (presque toutes pour les examens), enseignants mobilisés par les examens ou les commissions, formation ; au collège, les deux parts s'équilibrent. Une seule année publiée au dixième.",
    "source": "DEPP, enquête sur le temps d'enseignement non assuré (Note d'Information 26-14), établissements publics, 2024-2025",
-   "precaution": "En % des heures d'enseignement prévues. Absences individuelles : maladie, congés, grèves, convenances. Enquête déclarative par échantillon."
+   "precaution": "En % des heures prévues. Examens, formation : enseignants absents eux aussi. Individuelles : maladie, congés, grèves. Enquête par échantillon, une année."
   },
   {
    "id": "classes",
@@ -19,10 +19,10 @@
   {
    "id": "concours",
    "fichier": "lycee-concours",
-   "titre": "Part des postes pourvus aux concours externes d'enseignants, 2008-2025",
-   "montre": "De 2023 à 2025, les CAPES de mathématiques et de physique-chimie sont restés sous quatre postes pourvus sur cinq, quand l'ensemble des concours se redressait ; la session double de 2026, hors de cette série, les a portés au-delà de neuf sur dix.",
-   "source": "DEPP, Repères et références statistiques 2026, fiches 9.27 et 9.28 (concours externes, enseignement public)",
-   "precaution": "Admis rapportés aux postes offerts. Ensemble des concours externes d'enseignants du second degré : années publiées seulement."
+   "titre": "Part des postes pourvus aux concours externes d'enseignants, 2008-2025 et 2026",
+   "montre": "De 2023 à 2025, les CAPES de mathématiques et de physique-chimie sont restés sous quatre postes pourvus sur cinq. En 2026, deux concours (bac+3 et bac+5) et davantage de postes : plus de neuf sur dix pourvus, un résultat qui ne prolonge pas la série et ne mesure pas le besoin.",
+   "source": "DEPP, RERS 2026, fiches 9.27 et 9.28 (concours externes, public) ; 2026 : ministère, résultats par concours",
+   "precaution": "Admis rapportés aux postes offerts ; ne mesure pas le besoin. 2026 : deux concours (bac+3, bac+5), hors série."
   }
  ]
 }
