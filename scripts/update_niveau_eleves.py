@@ -639,9 +639,9 @@ def fig_baisse(c, A):
     t = {k: v.format(**A) for k, v in FIG["baisse"].items()}
     P = c["P"]
     desc = ("Pour chaque domaine, variation du score moyen PISA de 2015 à 2025 des %s pays de l'OCDE, France en orange. "
-            "Lecture : France −%s points, médiane −%s. Mathématiques : France −%s, médiane −%s, %se plus forte baisse. "
-            "Sciences : France −%s, médiane −%s." % (A["n_ocde"], A["lect_v15"], A["lect_med"], A["math_v15"], A["math_med"],
-                                                    A["math_rang"], A["sci_v15"], A["sci_med"]))
+            "Lecture : France −%s points, médiane −%s, %se plus forte baisse. Mathématiques : France −%s, médiane −%s, %se plus forte baisse. "
+            "Sciences : France −%s, médiane −%s, %se plus forte baisse." % (A["n_ocde"], A["lect_v15"], A["lect_med"], A["lect_rang"],
+                                                    A["math_v15"], A["math_med"], A["math_rang"], A["sci_v15"], A["sci_med"], A["sci_rang"]))
     h = 292
     e = tete("niv-b", t["titre"], desc, h + 52)
     X0, X1 = 170, 700
@@ -684,9 +684,12 @@ def fig_sommet(c, A):
     t = FIG["sommet"]
     P = c["P"]
     desc = ("Barres, en %% des élèves, 2015 puis 2025. Lecture, sous le niveau 2 : France %s puis %s, OCDE %s puis %s ; "
-            "niveaux 5-6 : France %s puis %s, OCDE %s puis %s. Mathématiques, sous le niveau 2 : France %s puis %s ; niveaux 5-6 : France %s puis %s."
+            "niveaux 5-6 : France %s puis %s, OCDE %s puis %s. Mathématiques, sous le niveau 2 : France %s puis %s, OCDE %s puis %s ; "
+            "niveaux 5-6 : France %s puis %s, OCDE %s puis %s."
             % (A["lect_bas15"], A["lect_bas25"], A["lect_obas15"], A["lect_obas25"], A["lect_haut15"], A["lect_haut25"],
-               A["lect_ohaut15"], A["lect_ohaut25"], A["math_bas15"], A["math_bas25"], A["math_haut15"], A["math_haut25"]))
+               A["lect_ohaut15"], A["lect_ohaut25"], A["math_bas15"], A["math_bas25"],
+               nb(P["mathematiques"]["niveaux"][OC]["bas15"]), nb(P["mathematiques"]["niveaux"][OC]["bas25"]),
+               A["math_haut15"], A["math_haut25"], A["math_ohaut15"], A["math_ohaut25"]))
     h = 300
     e = tete("niv-s", t["titre"], desc, h + 52)
     # légende
@@ -713,7 +716,7 @@ def fig_sommet(c, A):
 
 def fig_seconde(c, A):
     t = FIG["seconde"]
-    desc = ("Barres horizontales, écart standardisé entre la génération de 2021-2022 et celle de 2024-2025. Français : test de seconde −%s, "
+    desc = ("Barres horizontales, écart standardisé entre les cohortes de 2021-2022 et celles de 2024-2025. Français : test de seconde −%s, "
             "PISA lecture −%s. Mathématiques : test de seconde +%s, PISA −%s." % (A["g_tf"], A["g_pf"], A["g_tm"], A["g_pm"]))
     h = 250
     e = tete("niv-g", t["titre"], desc, h + 52)
@@ -742,6 +745,211 @@ def fig_seconde(c, A):
         e.append('<text x="%.1f" y="%d" font-size="10.5" fill="%s" text-anchor="%s">%s%s</text>'
                  % (sx(v) + (6 if v > 0 else -6), y + 15, INK, "start" if v > 0 else "end", "+" if v > 0 else "", nb(v, 0)))
     return pied(e, h + 2, t["source"], t["note"])
+
+
+# ------------------------------------------------------------------ figures mobiles (refonte du 10/10/2026)
+# Composées pour le téléphone, pas réduites (règle 13 du CLAUDE.md du site ; modèle : update_langue_eleves.py) : viewBox
+# de WM unités, affiché vers 270 px à 390 px d'écran, aucune police sous FS_MIN (≈ 12 px affichés). Parité des valeurs
+# avec la version détaillée contrôlée par parite_mobile, sur les sorties.
+WM, FS_MIN = 300, 13.5
+LICENCE_M = "Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com"
+
+
+def coupe(s, n):
+    out, cur = [], ""
+    for mot in s.split():
+        if cur and len(cur) + 1 + len(mot) > n:
+            out.append(cur)
+            cur = mot
+        else:
+            cur = (cur + " " + mot).strip()
+    return out + ([cur] if cur else [])
+
+
+def tete_m(fid, titre, desc):
+    e = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d 0" role="img" font-variant-numeric="tabular-nums" '
+         'aria-labelledby="%s-t %s-d" font-family="%s">' % (WM, fid, fid, FONT),
+         '<title id="%s-t">%s</title><desc id="%s-d">%s</desc>' % (fid, esc(titre), fid, esc(desc)),
+         '<rect width="%d" height="0" fill="#ffffff"/>' % WM]
+    lignes = coupe(titre, 30)
+    for k, ligne in enumerate(lignes):
+        e.append('<text x="0" y="%d" font-size="17" font-weight="600" fill="%s">%s</text>' % (20 + 22 * k, INK, esc(ligne)))
+    return e, 20 + 22 * len(lignes)
+
+
+def finir_m(e, y0, source, note):
+    e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y0, WM, y0, GRID))
+    y = y0 + 4
+    for tx, col in ((source, INK2), (note, INK2), (LICENCE_M, MUTED)):
+        for ligne in coupe(tx, 38):
+            y += 17
+            e.append('<text x="0" y="%.1f" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, col, esc(ligne)))
+        y += 4
+    e.append("</svg>")
+    h = y + 6
+    s = "\n".join(e)
+    return s.replace('viewBox="0 0 %d 0"' % WM, 'viewBox="0 0 %d %d"' % (WM, h), 1).replace(
+        '<rect width="%d" height="0"' % WM, '<rect width="%d" height="%d"' % (WM, h), 1)
+
+
+def fig_thermometres_m(c, A):
+    t = FIG["thermometres"]
+    svg_d = fig_thermometres(c, A)
+    desc = html.unescape(re.search(r"<desc[^>]*>(.*?)</desc>", svg_d).group(1))
+    lignes = [m for m in re.findall(r"([^;:]+?) \(([^,]+), (\d{4}-\d{4})\) ([+−-]?\d+) points, ([^;.]+)", desc)]
+    e, y = tete_m("niv-tm", "Quatre évaluations, leur dernière variation en France", desc)
+    y += 6
+    for lib, pop, per, v, st in lignes:
+        col = ORANGE if st.startswith("baisse") else (BLEU if st.startswith("hausse") else GRIS)
+        creux = "sans test" in st
+        y += 30
+        e.append('<text x="0" y="%d" font-size="14.5" fill="%s">%s</text>' % (y, INK, esc(lib.strip())))
+        y += 19
+        e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s · %s</text>' % (y, FS_MIN, INK2, esc(pop), per))
+        e.append('<text x="%d" y="%d" font-size="16" font-weight="600" fill="%s" text-anchor="end">%s</text>' % (WM, y, col, v))
+        y += 19
+        e.append('<circle cx="6" cy="%d" r="5" fill="%s" stroke="%s" stroke-width="1.6"/>' % (y - 5, "#ffffff" if creux else col, col))
+        e.append('<text x="18" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, INK, esc(st)))
+    return finir_m(e, y + 16, t["source"], t["note"])
+
+
+def fig_baisse_m(c, A):
+    t = {k: v.format(**A) for k, v in FIG["baisse"].items()}
+    P = c["P"]
+    desc = html.unescape(re.search(r"<desc[^>]*>(.*?)</desc>", fig_baisse(c, A)).group(1))
+    e, y = tete_m("niv-bm", t["titre"], desc)
+    x0, x1, vmin, vmax = 8, WM - 8, -70, 20
+    sx = lambda v: x0 + (x1 - x0) * (v - vmin) / (vmax - vmin)
+    y += 8
+    e.append('<rect x="0" y="%d" width="22" height="12" fill="%s" opacity="0.14"/>' % (y + 6, BLEU))
+    e.append('<line x1="11" y1="%d" x2="11" y2="%d" stroke="%s" stroke-width="1.6"/>' % (y + 4, y + 20, BLEU))
+    e.append('<text x="30" y="%d" font-size="%s" fill="%s">moitié centrale, trait : médiane</text>' % (y + 17, FS_MIN, INK2))
+    y += 26
+    e.append('<circle cx="11" cy="%d" r="6" fill="%s"/>' % (y + 6, ORANGE))
+    e.append('<text x="30" y="%d" font-size="%s" fill="%s">France · gris : autres pays</text>' % (y + 11, FS_MIN, INK2))
+    y += 18
+    for d in DOM:
+        n2 = P[d]["n2"]
+        y += 34
+        e.append('<text x="0" y="%d" font-size="15" font-weight="600" fill="%s">%s</text>' % (y, INK, esc(LIB[d])))
+        y += 18
+        e.append('<text x="0" y="%d" font-size="%s" fill="%s">France %s points · %sᵉ baisse sur %s</text>' % (y, FS_MIN, ORANGE, nb(n2["france"], 0), n2["rang"], n2["n"]))
+        y += 22
+        e.append('<rect x="%.1f" y="%d" width="%.1f" height="24" fill="%s" opacity="0.14"/>' % (sx(n2["q1"]), y - 12, sx(n2["q3"]) - sx(n2["q1"]), BLEU))
+        e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="1.6"/>' % (sx(n2["mediane"]), y - 12, sx(n2["mediane"]), y + 12, BLEU))
+        e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s"/>' % (sx(0), y - 14, sx(0), y + 14, INK2))
+        vus = {}
+        for p_, v in sorted(n2["pays"].items(), key=lambda kv: kv[1]):
+            if p_ == "France":
+                continue
+            b = round(v / 3.0)
+            k = vus.get(b, 0)
+            vus[b] = k + 1
+            e.append('<circle cx="%.1f" cy="%.1f" r="3" fill="%s" opacity="0.75"/>' % (sx(v), y + (k % 3 - 1) * 6, GRIS))
+        e.append('<circle cx="%.1f" cy="%d" r="6.5" fill="%s" stroke="#ffffff" stroke-width="1.5"/>' % (sx(n2["france"]), y, ORANGE))
+        y += 14
+    y += 6
+    for gv in range(-60, vmax + 1, 20):  # la dernière étiquette s'aligne à droite : centrée, elle sortait du cadre
+        e.append('<text x="%.1f" y="%d" font-size="%s" fill="%s" text-anchor="%s">%s</text>' % (sx(gv), y + 12, FS_MIN, MUTED, "end" if gv == vmax else "middle", ("+" if gv > 0 else "") + nb(gv, 0)))
+    y += 30
+    e.append('<text x="0" y="%d" font-size="%s" fill="%s">points de score, 2025 moins 2015</text>' % (y, FS_MIN, MUTED))
+    return finir_m(e, y + 14, t["source"], t["note"])
+
+
+def fig_composition_m(c, A):
+    t = FIG["composition"]
+    N = c["p5"]["N18"]
+    desc = html.unescape(re.search(r"<desc[^>]*>(.*?)</desc>", fig_composition(c, A)).group(1))
+    doms = (("mathematiques", "Mathématiques"), ("lecture", "Compréhension de l'écrit"), ("sciences", "Culture scientifique"))
+    e, y = tete_m("niv-cm", "PISA 2015-2025 : baisse observée et à la répartition entre classes de 2015", desc)
+    sx = lambda v: 220 * v / 60.0
+    for lib, col in (("Baisse observée", GRIS), ("À la répartition entre classes de 2015", ORANGE)):
+        y += 22
+        e.append('<rect x="0" y="%d" width="14" height="14" fill="%s"/>' % (y - 12, col))
+        for k, l2 in enumerate(coupe(lib, 32)):
+            e.append('<text x="22" y="%d" font-size="%s" fill="%s">%s</text>' % (y + 18 * k, FS_MIN, INK2, esc(l2)))
+        y += 18 * (len(coupe(lib, 32)) - 1)
+    y += 8
+    for d, lib in doms:
+        y += 34
+        e.append('<text x="0" y="%d" font-size="15" font-weight="600" fill="%s">%s</text>' % (y, INK, esc(lib)))
+        for v, col in ((N[d]["m15"] - N[d]["m25"], GRIS), (N[d]["m15"] - N[d]["rec"], ORANGE)):
+            y += 10
+            e.append('<rect x="0" y="%d" width="%.1f" height="20" fill="%s"/>' % (y, sx(v), col))
+            e.append('<text x="%.1f" y="%d" font-size="15" font-weight="600" fill="%s">%s</text>' % (sx(v) + 6, y + 15, col, nb(v, 0)))
+            y += 20
+    return finir_m(e, y + 20, t["source"], t["note"])
+
+
+def fig_sommet_m(c, A):
+    t = FIG["sommet"]
+    P = c["P"]
+    desc = html.unescape(re.search(r"<desc[^>]*>(.*?)</desc>", fig_sommet(c, A)).group(1))
+    e, y = tete_m("niv-sm", t["titre"], desc)
+    sx = lambda v: 200 * v / 40.0
+    for k, (lib, col, op) in enumerate((("France 2015", BLEU, 0.4), ("France 2025", BLEU, 1.0), ("OCDE 2015", GRIS, 0.4), ("OCDE 2025", GRIS, 1.0))):
+        if k % 2 == 0:
+            y += 22
+        x = 0 if k % 2 == 0 else 150
+        e.append('<rect x="%d" y="%d" width="14" height="14" fill="%s" opacity="%s"/>' % (x, y - 12, col, op))
+        e.append('<text x="%d" y="%d" font-size="%s" fill="%s">%s</text>' % (x + 20, y, FS_MIN, INK2, lib))
+    panneaux = [("lecture", "bas", "Lecture : élèves en difficulté"), ("lecture", "haut", "Lecture : meilleurs élèves"),
+                ("mathematiques", "bas", "Mathématiques : en difficulté"), ("mathematiques", "haut", "Mathématiques : meilleurs élèves")]
+    for d, cote, lib in panneaux:
+        f, o = P[d]["niveaux"]["France"], P[d]["niveaux"][OC]
+        y += 34
+        e.append('<text x="0" y="%d" font-size="15" font-weight="600" fill="%s">%s</text>' % (y, INK, esc(lib)))
+        for v, col, op in ((f[cote + "15"], BLEU, 0.4), (f[cote + "25"], BLEU, 1.0), (o[cote + "15"], GRIS, 0.4), (o[cote + "25"], GRIS, 1.0)):
+            y += 6
+            e.append('<rect x="0" y="%d" width="%.1f" height="16" fill="%s" opacity="%s"/>' % (y, sx(v), col, op))
+            e.append('<text x="%.1f" y="%d" font-size="%s" fill="%s">%s</text>' % (sx(v) + 6, y + 13, FS_MIN, INK, nb(v)))
+            y += 16
+    return finir_m(e, y + 20, t["source"], t["note"])
+
+
+def fig_seconde_m(c, A):
+    t = FIG["seconde"]
+    desc = html.unescape(re.search(r"<desc[^>]*>(.*?)</desc>", fig_seconde(c, A)).group(1))
+    e, y = tete_m("niv-gm", "Test de seconde et PISA, cohortes largement correspondantes", desc)
+    x0, x1, vmin, vmax = 8, WM - 30, -25, 15
+    sx = lambda v: x0 + (x1 - x0) * (v - vmin) / (vmax - vmin)
+    gen = c["gen"]
+    y += 8
+    e.append('<text x="0" y="%d" font-size="%s" fill="%s">écart 2021-2022 / 2024-2025, en</text>' % (y + 12, FS_MIN, INK2))
+    e.append('<text x="0" y="%d" font-size="%s" fill="%s">centièmes d\'écart-type</text>' % (y + 29, FS_MIN, INK2))
+    y += 34
+    top = y
+    for i, (ev, dom, lib) in enumerate((("Tests de positionnement de seconde", "Français", "Test de seconde, français"),
+                                        ("PISA", "Compréhension de l'écrit", "PISA, compréhension de l'écrit"),
+                                        ("Tests de positionnement de seconde", "Mathématiques", "Test de seconde, mathématiques"),
+                                        ("PISA", "Culture mathématique", "PISA, culture mathématique"))):
+        v = next(x for k, x in gen.items() if k[0] == ev and k[1] == dom)["d100"]
+        y += 30 + (10 if i == 2 else 0)
+        e.append('<text x="0" y="%d" font-size="14.5" fill="%s">%s</text>' % (y, INK, esc(lib)))
+        y += 8
+        xa = min(sx(0), sx(v))
+        e.append('<rect x="%.1f" y="%d" width="%.1f" height="20" fill="%s"/>' % (xa, y, abs(sx(v) - sx(0)), ORANGE if ev == "PISA" else BLEU))
+        e.append('<text x="%.1f" y="%d" font-size="15" font-weight="600" fill="%s" text-anchor="%s">%s%s</text>'
+                 % (sx(v) + (6 if v > 0 else -6), y + 15, INK, "start" if v > 0 else "end", "+" if v > 0 else "", nb(v, 0)))
+        e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s"/>' % (sx(0), y - 3, sx(0), y + 23, INK2))  # zéro : dans la bande de la barre seulement, il ne barre aucun libellé
+        y += 20
+    return finir_m(e, y + 22, t["source"], t["note"])
+
+
+def parite_mobile(figs):
+    for fid in ("thermometres", "baisse", "composition", "sommet", "seconde"):
+        d, m = figs["niveau-%s.svg" % fid], figs["niveau-%s-m.svg" % fid]
+        # valeurs dessinées (textes) de la version mobile : chacune doit figurer dans la description de la détaillée
+        desc_d = html.unescape(re.search(r"<desc[^>]*>(.*?)</desc>", d).group(1))
+        nombres_d = set(re.findall(r"\d+(?:,\d+)?", desc_d))
+        textes_m = re.findall(r'<text [^>]*font-weight="600"[^>]*>([^<]*)</text>', m) + re.findall(r'<text [^>]*fill="#eb6834"[^>]*>([^<]*)</text>', m)
+        dessines = set(n for tx in textes_m for n in re.findall(r"\d+(?:,\d+)?", html.unescape(tx)) if not re.fullmatch(r"(19|20)\d\d", n))
+        manquants = dessines - nombres_d
+        if manquants:
+            fail("parite mobile : %s -- valeurs dessinees absentes de la version detaillee : %s" % (fid, sorted(manquants)))
+        tailles = [float(x) for x in re.findall(r'font-size="([0-9.]+)"', m)]
+        if min(tailles) < FS_MIN:
+            fail("parite mobile : %s -- police %.1f sous le minimum %.1f" % (fid, min(tailles), FS_MIN))
 
 
 def fiches(figs):
@@ -846,7 +1054,9 @@ def main() -> int:
         log("--check : %d gardes passees (%d cles d'affichage), rien ecrit." % (n, len(A)))
         return 0
     import cairosvg
-    figs = {"niveau-thermometres.svg": fig_thermometres(c, A), "niveau-baisse.svg": fig_baisse(c, A), "niveau-composition.svg": fig_composition(c, A), "niveau-sommet.svg": fig_sommet(c, A), "niveau-seconde.svg": fig_seconde(c, A)}
+    figs = {"niveau-thermometres.svg": fig_thermometres(c, A), "niveau-baisse.svg": fig_baisse(c, A), "niveau-composition.svg": fig_composition(c, A), "niveau-sommet.svg": fig_sommet(c, A), "niveau-seconde.svg": fig_seconde(c, A),
+            "niveau-thermometres-m.svg": fig_thermometres_m(c, A), "niveau-baisse-m.svg": fig_baisse_m(c, A), "niveau-composition-m.svg": fig_composition_m(c, A), "niveau-sommet-m.svg": fig_sommet_m(c, A), "niveau-seconde-m.svg": fig_seconde_m(c, A)}
+    parite_mobile(figs)
     P = c["P"]
     payload = {"meta": {"page": "https://" + PAGE_URL, "licence": "CC BY 4.0",
                         "champ": "France ; jeunes de 15 ans (PISA), élèves entrant en seconde (DEPP), terminale S (TIMSS Advanced), concours externes du second degré public",
@@ -887,7 +1097,7 @@ def main() -> int:
     OUT_CSV.write_text(csv_texte(c), encoding="utf-8-sig", newline="\n")
     for f, s in figs.items():
         (OUT_IMG / f).write_text(s, encoding="utf-8")
-        cairosvg.svg2png(url=str(OUT_IMG / f), write_to=str(OUT_IMG / f.replace(".svg", ".png")), output_width=1440, background_color="white")
+        cairosvg.svg2png(url=str(OUT_IMG / f), write_to=str(OUT_IMG / f.replace(".svg", ".png")), output_width=900 if f.endswith("-m.svg") else 1440, background_color="white")
     OUT_FIGURES.write_text(json.dumps(fiches(figs), ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     log("Ecrit : data/ et static/niveau_eleves.json, static/niveau_eleves.csv, data/figures_niveau.json, %d figures SVG + PNG" % len(figs))
     return 0

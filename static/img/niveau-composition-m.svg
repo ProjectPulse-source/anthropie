@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 650" role="img" font-variant-numeric="tabular-nums" aria-labelledby="niv-cm-t niv-cm-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="niv-cm-t">PISA 2015-2025 : baisse observée et à la répartition entre classes de 2015</title><desc id="niv-cm-d">Baisse du score moyen PISA de 2015 à 2025, observée puis avec la répartition entre classes de 2015 : mathématiques 35 points, 43 ; compréhension de l'écrit 43 points, 51 ; culture scientifique 12 points, 21.</desc>
+<rect width="300" height="650" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">PISA 2015-2025 : baisse</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">observée et à la répartition</text>
+<text x="0" y="64" font-size="17" font-weight="600" fill="#26262f">entre classes de 2015</text>
+<rect x="0" y="96" width="14" height="14" fill="#8a8781"/>
+<text x="22" y="108" font-size="13.5" fill="#55524f">Baisse observée</text>
+<rect x="0" y="118" width="14" height="14" fill="#eb6834"/>
+<text x="22" y="130" font-size="13.5" fill="#55524f">À la répartition entre classes</text>
+<text x="22" y="148" font-size="13.5" fill="#55524f">de 2015</text>
+<text x="0" y="190" font-size="15" font-weight="600" fill="#26262f">Mathématiques</text>
+<rect x="0" y="200" width="129.3" height="20" fill="#8a8781"/>
+<text x="135.3" y="215" font-size="15" font-weight="600" fill="#8a8781">35</text>
+<rect x="0" y="230" width="155.9" height="20" fill="#eb6834"/>
+<text x="161.9" y="245" font-size="15" font-weight="600" fill="#eb6834">43</text>
+<text x="0" y="284" font-size="15" font-weight="600" fill="#26262f">Compréhension de l'écrit</text>
+<rect x="0" y="294" width="157.6" height="20" fill="#8a8781"/>
+<text x="163.6" y="309" font-size="15" font-weight="600" fill="#8a8781">43</text>
+<rect x="0" y="324" width="187.1" height="20" fill="#eb6834"/>
+<text x="193.1" y="339" font-size="15" font-weight="600" fill="#eb6834">51</text>
+<text x="0" y="378" font-size="15" font-weight="600" fill="#26262f">Culture scientifique</text>
+<rect x="0" y="388" width="42.4" height="20" fill="#8a8781"/>
+<text x="48.4" y="403" font-size="15" font-weight="600" fill="#8a8781">12</text>
+<rect x="0" y="418" width="77.3" height="20" fill="#eb6834"/>
+<text x="83.3" y="433" font-size="15" font-weight="600" fill="#eb6834">21</text>
+<line x1="0" y1="458.0" x2="300" y2="458.0" stroke="#dcd8d3"/>
+<text x="0" y="479.0" font-size="13.5" fill="#55524f">OCDE, bases PISA 2015 et 2025 (données</text>
+<text x="0" y="496.0" font-size="13.5" fill="#55524f">individuelles) ; calcul de l'auteur</text>
+<text x="0" y="513.0" font-size="13.5" fill="#55524f">(valeurs plausibles, poids répliqués)</text>
+<text x="0" y="534.0" font-size="13.5" fill="#55524f">Baisse du score moyen, en points.</text>
+<text x="0" y="551.0" font-size="13.5" fill="#55524f">Standardisation descriptive (scores de</text>
+<text x="0" y="568.0" font-size="13.5" fill="#55524f">2025, répartition entre classes de</text>
+<text x="0" y="585.0" font-size="13.5" fill="#55524f">2015) : ni « la vraie baisse », ni</text>
+<text x="0" y="602.0" font-size="13.5" fill="#55524f">l'effet du redoublement.</text>
+<text x="0" y="623.0" font-size="13.5" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 ·</text>
+<text x="0" y="640.0" font-size="13.5" fill="#96928f">stephane-lalut.com</text>
+</svg>

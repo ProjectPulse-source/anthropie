@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 601" role="img" font-variant-numeric="tabular-nums" aria-labelledby="niv-gm-t niv-gm-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="niv-gm-t">Test de seconde et PISA, cohortes largement correspondantes</title><desc id="niv-gm-d">Barres horizontales, écart standardisé entre les cohortes de 2021-2022 et celles de 2024-2025. Français : test de seconde −13, PISA lecture −16. Mathématiques : test de seconde +9, PISA −18.</desc>
+<rect width="300" height="601" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Test de seconde et PISA,</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">cohortes largement</text>
+<text x="0" y="64" font-size="17" font-weight="600" fill="#26262f">correspondantes</text>
+<text x="0" y="106" font-size="13.5" fill="#55524f">écart 2021-2022 / 2024-2025, en</text>
+<text x="0" y="123" font-size="13.5" fill="#55524f">centièmes d'écart-type</text>
+<text x="0" y="158" font-size="14.5" fill="#26262f">Test de seconde, français</text>
+<rect x="89.6" y="166" width="82.1" height="20" fill="#184f95"/>
+<text x="83.6" y="181" font-size="15" font-weight="600" fill="#26262f" text-anchor="end">−13</text>
+<line x1="171.8" y1="163" x2="171.8" y2="189" stroke="#55524f"/>
+<text x="0" y="216" font-size="14.5" fill="#26262f">PISA, compréhension de l'écrit</text>
+<rect x="66.0" y="224" width="105.8" height="20" fill="#eb6834"/>
+<text x="60.0" y="239" font-size="15" font-weight="600" fill="#26262f" text-anchor="end">−16</text>
+<line x1="171.8" y1="221" x2="171.8" y2="247" stroke="#55524f"/>
+<text x="0" y="284" font-size="14.5" fill="#26262f">Test de seconde, mathématiques</text>
+<rect x="171.8" y="292" width="60.3" height="20" fill="#184f95"/>
+<text x="238.0" y="307" font-size="15" font-weight="600" fill="#26262f" text-anchor="start">+9</text>
+<line x1="171.8" y1="289" x2="171.8" y2="315" stroke="#55524f"/>
+<text x="0" y="342" font-size="14.5" fill="#26262f">PISA, culture mathématique</text>
+<rect x="55.7" y="350" width="116.0" height="20" fill="#eb6834"/>
+<text x="49.7" y="365" font-size="15" font-weight="600" fill="#26262f" text-anchor="end">−18</text>
+<line x1="171.8" y1="347" x2="171.8" y2="373" stroke="#55524f"/>
+<line x1="0" y1="392.0" x2="300" y2="392.0" stroke="#dcd8d3"/>
+<text x="0" y="413.0" font-size="13.5" fill="#55524f">DEPP, Note d'Information 26-40, figure</text>
+<text x="0" y="430.0" font-size="13.5" fill="#55524f">11 web (tests de positionnement de</text>
+<text x="0" y="447.0" font-size="13.5" fill="#55524f">seconde 2021 et 2024 ; PISA 2022 et</text>
+<text x="0" y="464.0" font-size="13.5" fill="#55524f">2025)</text>
+<text x="0" y="485.0" font-size="13.5" fill="#55524f">En centièmes d'écart-type (d de</text>
+<text x="0" y="502.0" font-size="13.5" fill="#55524f">Cohen), calculé par la DEPP. Cohortes</text>
+<text x="0" y="519.0" font-size="13.5" fill="#55524f">largement correspondantes, pas les</text>
+<text x="0" y="536.0" font-size="13.5" fill="#55524f">mêmes élèves. Seconde : deux voies,</text>
+<text x="0" y="553.0" font-size="13.5" fill="#55524f">sans test publié.</text>
+<text x="0" y="574.0" font-size="13.5" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 ·</text>
+<text x="0" y="591.0" font-size="13.5" fill="#96928f">stephane-lalut.com</text>
+</svg>

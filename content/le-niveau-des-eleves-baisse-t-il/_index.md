@@ -67,7 +67,10 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
 ## Que mesure PISA, et combien baisse-t-il&nbsp;? {#baisse}
 
 <figure class="figure-ciseau">
-  <img src="/img/niveau-baisse.svg" alt="Pour chaque domaine de PISA, variation du score moyen de 2015 à 2025 des {{< niv-val "n_ocde" >}} pays de l'OCDE, France en orange : compréhension de l'écrit −{{< niv-val "lect_v15" >}} points ({{< niv-val "lect_rang" >}}e plus forte baisse), culture mathématique −{{< niv-val "math_v15" >}} ({{< niv-val "math_rang" >}}e), culture scientifique −{{< niv-val "sci_v15" >}} ({{< niv-val "sci_rang" >}}e)." width="720" height="344" loading="lazy">
+  <picture>
+    <source media="(max-width: 600px)" srcset="/img/niveau-baisse-m.svg" width="300" height="605">
+    <img src="/img/niveau-baisse.svg" alt="Pour chaque domaine de PISA, variation du score moyen de 2015 à 2025 des {{< niv-val "n_ocde" >}} pays de l'OCDE, France en orange : compréhension de l'écrit −{{< niv-val "lect_v15" >}} points ({{< niv-val "lect_rang" >}}e plus forte baisse), culture mathématique −{{< niv-val "math_v15" >}} ({{< niv-val "math_rang" >}}e), culture scientifique −{{< niv-val "sci_v15" >}} ({{< niv-val "sci_rang" >}}e)." width="720" height="344" loading="lazy">
+  </picture>
   <figcaption>Variation du score moyen PISA entre 2015 et 2025, pays membres de l'OCDE (OCDE, PISA 2025, volume&nbsp;I).</figcaption>
 </figure>
 
@@ -103,7 +106,10 @@ PISA n'est pas seule à suivre les élèves français. Trois autres évaluations
 | Test de positionnement (DEPP, service statistique du ministère) | tous les élèves entrant en seconde | français et mathématiques, sans test de significativité publié | 2021-2024 |
 
 <figure class="figure-ciseau">
-  <img src="/img/niveau-thermometres.svg" alt="Tableau de la dernière variation de chaque évaluation en France, dans sa propre échelle : PIRLS CM1, compréhension de l'écrit, 2016-2021, de {{< niv-val "pirls_16" >}} à {{< niv-val "pirls_21" >}}, non significative ; TIMSS CM1, mathématiques, 2019-2023, de {{< niv-val "tcm1_19" >}} à {{< niv-val "tcm1_23" >}}, non significative ; TIMSS quatrième, mathématiques, 2019-2023, de {{< niv-val "t4e_19" >}} à {{< niv-val "t4e_23" >}}, non significative ; test de positionnement de seconde GT, mathématiques, 2021-2024, de {{< niv-val "sm_21" >}} à {{< niv-val "sm_24" >}}, hausse observée, sans test publié ; français, de {{< niv-val "sf_21" >}} à {{< niv-val "sf_24" >}}, baisse observée, sans test publié ; PISA, 15 ans, 2022-2025, mathématiques −{{< niv-val "math_v22" >}} et compréhension de l'écrit −{{< niv-val "lect_v22" >}}, baisses significatives." width="720" height="360" loading="lazy">
+  <picture>
+    <source media="(max-width: 600px)" srcset="/img/niveau-thermometres-m.svg" width="300" height="771">
+    <img src="/img/niveau-thermometres.svg" alt="Tableau de la dernière variation de chaque évaluation en France, dans sa propre échelle : PIRLS CM1, compréhension de l'écrit, 2016-2021, de {{< niv-val "pirls_16" >}} à {{< niv-val "pirls_21" >}}, non significative ; TIMSS CM1, mathématiques, 2019-2023, de {{< niv-val "tcm1_19" >}} à {{< niv-val "tcm1_23" >}}, non significative ; TIMSS quatrième, mathématiques, 2019-2023, de {{< niv-val "t4e_19" >}} à {{< niv-val "t4e_23" >}}, non significative ; test de positionnement de seconde GT, mathématiques, 2021-2024, de {{< niv-val "sm_21" >}} à {{< niv-val "sm_24" >}}, hausse observée, sans test publié ; français, de {{< niv-val "sf_21" >}} à {{< niv-val "sf_24" >}}, baisse observée, sans test publié ; PISA, 15 ans, 2022-2025, mathématiques −{{< niv-val "math_v22" >}} et compréhension de l'écrit −{{< niv-val "lect_v22" >}}, baisses significatives." width="720" height="360" loading="lazy">
+  </picture>
   <figcaption>Dernière variation publiée de chaque évaluation en France, chacune dans sa propre échelle (IEA, DEPP, OCDE).</figcaption>
 </figure>
 
@@ -129,7 +135,10 @@ Un rapprochement va plus loin. La DEPP a confronté PISA au test d'entrée en se
 ## Que disent les tests d'entrée en seconde&nbsp;? {#seconde}
 
 <figure class="figure-ciseau">
-  <img src="/img/niveau-seconde.svg" alt="Barres horizontales, écart standardisé entre les cohortes de 2021-2022 et celles de 2024-2025, calculé par la DEPP. Français : test de seconde −{{< niv-val "g_tf" >}}, PISA compréhension de l'écrit −{{< niv-val "g_pf" >}}. Mathématiques : test de seconde +{{< niv-val "g_tm" >}}, PISA culture mathématique −{{< niv-val "g_pm" >}}." width="720" height="302" loading="lazy">
+  <picture>
+    <source media="(max-width: 600px)" srcset="/img/niveau-seconde-m.svg" width="300" height="601">
+    <img src="/img/niveau-seconde.svg" alt="Barres horizontales, écart standardisé entre les cohortes de 2021-2022 et celles de 2024-2025, calculé par la DEPP. Français : test de seconde −{{< niv-val "g_tf" >}}, PISA compréhension de l'écrit −{{< niv-val "g_pf" >}}. Mathématiques : test de seconde +{{< niv-val "g_tm" >}}, PISA culture mathématique −{{< niv-val "g_pm" >}}." width="720" height="302" loading="lazy">
+  </picture>
   <figcaption>Écart entre deux cohortes d'élèves, en centièmes d'écart-type, test de positionnement de seconde et PISA (DEPP, Note d'Information 26-40).</figcaption>
 </figure>
 
@@ -142,7 +151,10 @@ Si les mesures divergent sur l'ampleur du recul, PISA permet au moins de voir qu
 ## Qui décroche&nbsp;: les plus faibles ou les meilleurs&nbsp;? {#qui-decroche}
 
 <figure class="figure-ciseau">
-  <img src="/img/niveau-sommet.svg" alt="Barres, en % des élèves de 15 ans, 2015 puis 2025. Lecture, sous le niveau 2 : France {{< niv-val "lect_bas15" >}} puis {{< niv-val "lect_bas25" >}}, OCDE {{< niv-val "lect_obas15" >}} puis {{< niv-val "lect_obas25" >}} ; niveaux 5-6 : France {{< niv-val "lect_haut15" >}} puis {{< niv-val "lect_haut25" >}}, OCDE {{< niv-val "lect_ohaut15" >}} puis {{< niv-val "lect_ohaut25" >}}. Mathématiques, sous le niveau 2 : France {{< niv-val "math_bas15" >}} puis {{< niv-val "math_bas25" >}} ; niveaux 5-6 : France {{< niv-val "math_haut15" >}} puis {{< niv-val "math_haut25" >}}." width="720" height="352" loading="lazy">
+  <picture>
+    <source media="(max-width: 600px)" srcset="/img/niveau-sommet-m.svg" width="300" height="796">
+    <img src="/img/niveau-sommet.svg" alt="Barres, en % des élèves de 15 ans, 2015 puis 2025. Lecture, sous le niveau 2 : France {{< niv-val "lect_bas15" >}} puis {{< niv-val "lect_bas25" >}}, OCDE {{< niv-val "lect_obas15" >}} puis {{< niv-val "lect_obas25" >}} ; niveaux 5-6 : France {{< niv-val "lect_haut15" >}} puis {{< niv-val "lect_haut25" >}}, OCDE {{< niv-val "lect_ohaut15" >}} puis {{< niv-val "lect_ohaut25" >}}. Mathématiques, sous le niveau 2 : France {{< niv-val "math_bas15" >}} puis {{< niv-val "math_bas25" >}} ; niveaux 5-6 : France {{< niv-val "math_haut15" >}} puis {{< niv-val "math_haut25" >}}." width="720" height="352" loading="lazy">
+  </picture>
   <figcaption>Part des élèves de 15 ans sous le niveau 2 et aux niveaux 5 et 6, France et moyenne de l'OCDE, 2015 et 2025 (OCDE, PISA 2025).</figcaption>
 </figure>
 
@@ -159,7 +171,10 @@ Une question demeure&nbsp;: la baisse tient-elle à la façon dont les jeunes de
 ## Le changement de répartition entre classes explique-t-il la baisse&nbsp;? {#composition}
 
 <figure class="figure-ciseau">
-  <img src="/img/niveau-composition.svg" alt="Baisse du score moyen PISA de 2015 à 2025, observée puis à la répartition entre classes de 2015 : mathématiques {{< niv-val "p5_math_obs" >}} puis {{< niv-val "p5_math_rec" >}} points, compréhension de l'écrit {{< niv-val "p5_lect_obs" >}} puis {{< niv-val "p5_lect_rec" >}}, culture scientifique {{< niv-val "p5_sci_obs" >}} puis {{< niv-val "p5_sci_rec" >}}." width="720" height="288" loading="lazy">
+  <picture>
+    <source media="(max-width: 600px)" srcset="/img/niveau-composition-m.svg" width="300" height="650">
+    <img src="/img/niveau-composition.svg" alt="Baisse du score moyen PISA de 2015 à 2025, observée puis à la répartition entre classes de 2015 : mathématiques {{< niv-val "p5_math_obs" >}} puis {{< niv-val "p5_math_rec" >}} points, compréhension de l'écrit {{< niv-val "p5_lect_obs" >}} puis {{< niv-val "p5_lect_rec" >}}, culture scientifique {{< niv-val "p5_sci_obs" >}} puis {{< niv-val "p5_sci_rec" >}}." width="720" height="288" loading="lazy">
+  </picture>
   <figcaption>Baisse du score moyen, observée et à la répartition entre classes de 2015, trois domaines (OCDE, bases PISA 2015 et 2025, données individuelles&nbsp;; calcul de l'auteur).</figcaption>
 </figure>
 

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 771" role="img" font-variant-numeric="tabular-nums" aria-labelledby="niv-tm-t niv-tm-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="niv-tm-t">Quatre évaluations, leur dernière variation en France</title><desc id="niv-tm-d">Tableau, dernière variation de chaque évaluation en France, dans sa propre échelle : PIRLS, compréhension de l'écrit (CM1, 2016-2021) +3 points, non significative ; TIMSS, mathématiques (CM1, 2019-2023) −1 points, non significative ; TIMSS, mathématiques (quatrième, 2019-2023) −4 points, non significative ; Test de positionnement, mathématiques (entrée en seconde GT, 2021-2024) +7 points, hausse observée, sans test ; Test de positionnement, français (entrée en seconde GT, 2021-2024) −4 points, baisse observée, sans test ; PISA, culture mathématique (15 ans, 2022-2025) −16 points, baisse significative ; PISA, compréhension de l'écrit (15 ans, 2022-2025) −18 points, baisse significative.</desc>
+<rect width="300" height="771" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Quatre évaluations, leur</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">dernière variation en France</text>
+<text x="0" y="100" font-size="14.5" fill="#26262f">PIRLS, compréhension de l'écrit</text>
+<text x="0" y="119" font-size="13.5" fill="#55524f">CM1 · 2016-2021</text>
+<text x="300" y="119" font-size="16" font-weight="600" fill="#8a8781" text-anchor="end">+3</text>
+<circle cx="6" cy="133" r="5" fill="#8a8781" stroke="#8a8781" stroke-width="1.6"/>
+<text x="18" y="138" font-size="13.5" fill="#26262f">non significative </text>
+<text x="0" y="168" font-size="14.5" fill="#26262f">TIMSS, mathématiques</text>
+<text x="0" y="187" font-size="13.5" fill="#55524f">CM1 · 2019-2023</text>
+<text x="300" y="187" font-size="16" font-weight="600" fill="#8a8781" text-anchor="end">−1</text>
+<circle cx="6" cy="201" r="5" fill="#8a8781" stroke="#8a8781" stroke-width="1.6"/>
+<text x="18" y="206" font-size="13.5" fill="#26262f">non significative </text>
+<text x="0" y="236" font-size="14.5" fill="#26262f">TIMSS, mathématiques</text>
+<text x="0" y="255" font-size="13.5" fill="#55524f">quatrième · 2019-2023</text>
+<text x="300" y="255" font-size="16" font-weight="600" fill="#8a8781" text-anchor="end">−4</text>
+<circle cx="6" cy="269" r="5" fill="#8a8781" stroke="#8a8781" stroke-width="1.6"/>
+<text x="18" y="274" font-size="13.5" fill="#26262f">non significative </text>
+<text x="0" y="304" font-size="14.5" fill="#26262f">Test de positionnement, mathématiques</text>
+<text x="0" y="323" font-size="13.5" fill="#55524f">entrée en seconde GT · 2021-2024</text>
+<text x="300" y="323" font-size="16" font-weight="600" fill="#184f95" text-anchor="end">+7</text>
+<circle cx="6" cy="337" r="5" fill="#ffffff" stroke="#184f95" stroke-width="1.6"/>
+<text x="18" y="342" font-size="13.5" fill="#26262f">hausse observée, sans test </text>
+<text x="0" y="372" font-size="14.5" fill="#26262f">Test de positionnement, français</text>
+<text x="0" y="391" font-size="13.5" fill="#55524f">entrée en seconde GT · 2021-2024</text>
+<text x="300" y="391" font-size="16" font-weight="600" fill="#eb6834" text-anchor="end">−4</text>
+<circle cx="6" cy="405" r="5" fill="#ffffff" stroke="#eb6834" stroke-width="1.6"/>
+<text x="18" y="410" font-size="13.5" fill="#26262f">baisse observée, sans test </text>
+<text x="0" y="440" font-size="14.5" fill="#26262f">PISA, culture mathématique</text>
+<text x="0" y="459" font-size="13.5" fill="#55524f">15 ans · 2022-2025</text>
+<text x="300" y="459" font-size="16" font-weight="600" fill="#eb6834" text-anchor="end">−16</text>
+<circle cx="6" cy="473" r="5" fill="#eb6834" stroke="#eb6834" stroke-width="1.6"/>
+<text x="18" y="478" font-size="13.5" fill="#26262f">baisse significative </text>
+<text x="0" y="508" font-size="14.5" fill="#26262f">PISA, compréhension de l'écrit</text>
+<text x="0" y="527" font-size="13.5" fill="#55524f">15 ans · 2022-2025</text>
+<text x="300" y="527" font-size="16" font-weight="600" fill="#eb6834" text-anchor="end">−18</text>
+<circle cx="6" cy="541" r="5" fill="#eb6834" stroke="#eb6834" stroke-width="1.6"/>
+<text x="18" y="546" font-size="13.5" fill="#26262f">baisse significative</text>
+<line x1="0" y1="562.0" x2="300" y2="562.0" stroke="#dcd8d3"/>
+<text x="0" y="583.0" font-size="13.5" fill="#55524f">IEA (TIMSS 2023, rapport</text>
+<text x="0" y="600.0" font-size="13.5" fill="#55524f">international) ; DEPP (PIRLS 2021, NI</text>
+<text x="0" y="617.0" font-size="13.5" fill="#55524f">23-21 ; test de positionnement de</text>
+<text x="0" y="634.0" font-size="13.5" fill="#55524f">seconde, NI 26-22) ; OCDE (PISA 2025)</text>
+<text x="0" y="655.0" font-size="13.5" fill="#55524f">Chaque évaluation a son échelle : les</text>
+<text x="0" y="672.0" font-size="13.5" fill="#55524f">points ne se comparent pas d'une ligne</text>
+<text x="0" y="689.0" font-size="13.5" fill="#55524f">à l'autre. Point plein :</text>
+<text x="0" y="706.0" font-size="13.5" fill="#55524f">significativité publiée ; point creux</text>
+<text x="0" y="723.0" font-size="13.5" fill="#55524f">: test de seconde, sans test publié.</text>
+<text x="0" y="744.0" font-size="13.5" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 ·</text>
+<text x="0" y="761.0" font-size="13.5" fill="#96928f">stephane-lalut.com</text>
+</svg>
