@@ -199,7 +199,7 @@ def gardes(c):
     g(c["seuil"] == 2013 and c["sm"][2011] < 25, "« en 2013, plus de la moitié des 12-17 ans » ; « en 2011, moins d'un quart »")
     g(dic["hausse_significative_1987_2007"] and 2007 < c["seuil"], "dictée : hausse significative des erreurs de 1987 à 2007, « avant le smartphone »")
     g(lc["stable_1987_1997"] and lc["baisse_significative_1997_2007"] and lc["score"]["2007"] < lc["score"]["1997"] <= lc["score"]["1987"] + 0.05,
-      "lecture CM2 : « stable de 1987 à 1997, en baisse significative de 1997 à 2007 »")
+      "lecture CM2 : « sans évolution significative de 1987 à 1997, en baisse significative de 1997 à 2007 »")
     hs = oc["heures_semaine"]
     g(hs["d2009_2000"] < 0 and abs(hs["d2009_2000"]) >= 1.96 * hs["d2009_2000_et"] and 2009 < c["seuil"],
       "temps de lecture pour le plaisir à 15 ans : baisse significative de 2000 à 2009, « avant le smartphone »")
@@ -214,7 +214,7 @@ def gardes(c):
     g(c["X"]["pirls_baisses_2016_significatives_a_5_10_15_ans"] and c["pirls"]["2016"]["score"] < c["pirls"]["2011"]["score"],
       "PIRLS : baisse significative de 2011 à 2016")
     g(ce["significatif"]["2021"] and ce["score"]["2021"] > ce["score"]["2015"] and ce["stable_2003_2015_declare"],
-      "CEDRE fin d'école : « stable de 2003 à 2015, en hausse significative en 2021 »")
+      "CEDRE fin d'école : « sans évolution significative de 2003 à 2015, en hausse significative en 2021 »")
     g(not cc["significatif"]["2021"] and abs(cc["score"]["2021"] - cc["score"]["2015"]) < 5, "CEDRE fin de collège : « sans évolution significative »")
     sf = six["score_francais"]
     g(sf["2025"] > sf["2017"] and min(sf.values()) == sf["2017"] and max(sf.values()) == sf["2021"] == sf["2020"] and sf["2025"] < sf["2021"],
