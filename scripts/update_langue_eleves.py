@@ -173,6 +173,8 @@ def mutation(c):
         X["dictee"]["lexicales"]["2021"] = 2.15
     elif m == "borne_haute":  # la borne haute ne ferait plus apparaitre de hausse
         X["t7"]["questions"][Q5]["c_bornes"]["haute"] = "indetermine"
+    elif m == "dispersion_relative":  # l'ecart-type aurait augmente plus vite que la moyenne
+        X["dictee"]["ecart_type"]["2021"] = 16.0
     elif m == "ecart_ep":  # le calcul des tableaux ne retrouverait pas l'ecart ecrit par la DEPP
         X["cedre_college"]["groupes"]["Public hors EP"]["2021"] = 245.0
     else:
@@ -232,6 +234,11 @@ def gardes(c):
     # la prose dit la part de la HAUSSE (« environ un dixième »), et borne « grammaticales » à 1987-2007.
     h_tot, h_lex = tot["2021"] - tot["1987"], lx["2021"] - lx["1987"]
     g(h_lex > 0 and 0.07 <= h_lex / h_tot <= 0.14, "dictée : l'orthographe des mots compte pour « environ un dixième » de la hausse 1987-2021, et elle augmente")
+    # dispersion (10/10/2026, evaluation OPTIMUM-04) : la prose dit LES DEUX MOITIES -- l'ecart-type monte, rapporte a la
+    # moyenne il baisse ; une seule des deux serait fausse par omission
+    et = dic["ecart_type"]
+    g(et["2021"] > et["1987"] and et["2021"] / tot["2021"] < et["1987"] / tot["1987"],
+      "dictee : l'ecart-type « passe de … a … » (hausse absolue) et, « rapporte a la moyenne, il baisse »")
     g(1.8 <= autres["2021"] / autres["1987"] < 2.2, "dictée : les autres erreurs « ont presque doublé, ou doublé »")
     dty = c["dty"]
     g(dty["citation_depp"] == "principalement_grammaticales" and dty["lexicales"]["1987"] == lx["1987"] and dty["lexicales"]["2007"] == lx["2007"]
@@ -304,6 +311,9 @@ def affichage(c):
         A["tot" + a[2:]] = nbp(tot[a])
         A["lex" + a[2:]] = nbp(lx[a])
         A["aut" + a[2:]] = nbp(round(tot[a] - lx[a], 1))
+    et = dic["ecart_type"]
+    A["et87"], A["et21"] = nb(et["1987"]), nb(et["2021"])
+    A["cv87"], A["cv21"] = nb(et["1987"] / tot["1987"], 2), nb(et["2021"] / tot["2021"], 2)
     A["peu87"], A["peu21"] = nb(dic["deux_erreurs_ou_moins"]["1987"]), nb(dic["deux_erreurs_ou_moins"]["2021"])
     A["bcp87"], A["bcp21"] = nb(dic["vingt_cinq_ou_plus"]["1987"]), nb(dic["vingt_cinq_ou_plus"]["2021"])
     A["lcm2_07"] = nb(-lc["score"]["2007"], 2)
@@ -710,9 +720,10 @@ def csv_texte(c):
     w = csv.writer(buf, lineterminator="\n")
     w.writerow(["tableau", "variable", "cle", "valeur", "unite"])
     X = c["X"]
-    for k in ("total", "lexicales", "deux_erreurs_ou_moins", "vingt_cinq_ou_plus"):
+    for k in ("total", "lexicales", "ecart_type", "deux_erreurs_ou_moins", "vingt_cinq_ou_plus"):
         for a, v in sorted(X["dictee"][k].items()):
-            w.writerow(["depp_dictee_cm2", k, a, v, "erreurs (moyenne)" if k in ("total", "lexicales") else "% des eleves"])
+            w.writerow(["depp_dictee_cm2", k, a, v, "erreurs (moyenne)" if k in ("total", "lexicales") else
+                        "erreurs (ecart-type, NI 22.37 tableau 1)" if k == "ecart_type" else "% des eleves"])
     for k in ("lexicales", "grammaticales", "ponctuation", "autres"):
         for a, v in sorted(X["dictee_types_1987_2007"][k].items()):
             w.writerow(["depp_dictee_cm2_types_ni08_38", k, a, v, "erreurs (moyenne)"])

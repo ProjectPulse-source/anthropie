@@ -21,7 +21,7 @@ dataset:
   couverture_temporelle: "1973/2025"
   couverture_spatiale: "France"
   variables:
-    - {nom: "Erreurs à la dictée de CM2", unite: "erreurs (moyenne)", description: "total et erreurs lexicales, 1987, 2007, 2015, 2021 (DEPP)"}
+    - {nom: "Erreurs à la dictée de CM2", unite: "erreurs (moyenne)", description: "total, erreurs lexicales et écart-type, 1987, 2007, 2015, 2021 (DEPP)"}
     - {nom: "Score CEDRE, maîtrise de la langue", unite: "points", description: "fin d'école 2003-2021, fin de collège 2015-2021, avec la significativité publiée par la DEPP"}
     - {nom: "Score PISA en compréhension de l'écrit", unite: "points", description: "France, 2000-2025, avec erreurs types (OCDE)"}
     - {nom: "Lecture pour le plaisir", unite: "heures par semaine ; indice ; %", description: "PISA 2000, 2009, 2018 (OCDE) ; élèves de la sixième à la seconde en 2023 (DEPP)"}
@@ -86,6 +86,8 @@ Oui. La mesure en est une même dictée de 67&nbsp;mots, donnée à des élèves
 **De 1987 à 2007 seulement, ce que l'on sait de ces autres erreurs.** Pour ces deux années, la DEPP (le service statistique du ministère de l'Éducation nationale) publie le détail par type. Les erreurs grammaticales passent de {{< lan-val "gram87" >}} à {{< lan-val "gram07" >}}&nbsp;: elles font {{< lan-val "h_gram0707" >}} des {{< lan-val "h_tot0707" >}}&nbsp;erreurs supplémentaires, et la ponctuation ne progresse pas. La DEPP le résume&nbsp;: «&nbsp;ce sont principalement les erreurs grammaticales qui ont augmenté&nbsp;» — l'accord du verbe avec son sujet, de l'adjectif, du participe passé. **Ce partage ne vaut que pour 1987-2007.** Après 2007, la DEPP indique seulement que la baisse sur les accords n'a porté que sur 1987-2015. La hausse de 2015 à 2021, deux fois moins forte que celle de 2007 à 2015, n'est pas détaillée par type.
 
 La répartition des élèves a changé avec la moyenne (mêmes seuils, même note de la DEPP). La part de ceux qui font vingt-cinq erreurs ou plus a quadruplé, de {{< lan-val "bcp87" >}}&nbsp;% à {{< lan-val "bcp21" >}}&nbsp;%. Celle des élèves qui en font deux ou moins est tombée de {{< lan-val "peu87" >}}&nbsp;% à {{< lan-val "peu21" >}}&nbsp;%. La hausse de 1987 à 2007 est significative selon la DEPP, qui rappelle aussi que des épreuves identiques ne suffisent pas à garantir la comparabilité d'une époque à l'autre.
+
+Un indicateur de dispersion, publié dans la même note, précise ce changement. L'écart-type du nombre d'erreurs, qui mesure l'écart habituel à la moyenne, passe de {{< lan-val "et87" >}} en 1987 à {{< lan-val "et21" >}} en 2021&nbsp;: en nombre de fautes, les élèves sont plus éloignés les uns des autres. Rapporté à la moyenne, il baisse pourtant, de {{< lan-val "cv87" >}} à {{< lan-val "cv21" >}}&nbsp;: la dispersion a grandi moins vite que le nombre moyen d'erreurs. Aucune de ces deux mesures ne dit si les écarts entre groupes d'élèves se sont creusés.
 
 Ce que cette dictée ne mesure pas compte autant&nbsp;: écrire correctement un mot dicté n'est ni le connaître ni l'employer. Elle ne dit rien du vocabulaire des élèves. Et elle ne dit qu'un âge, le CM2&nbsp;: les autres mesures de la langue racontent-elles la même histoire, et depuis quand&nbsp;?
 

@@ -7,6 +7,10 @@ depp_dictee_cm2,lexicales,1987,2.1,erreurs (moyenne)
 depp_dictee_cm2,lexicales,2007,2.6,erreurs (moyenne)
 depp_dictee_cm2,lexicales,2015,3.0,erreurs (moyenne)
 depp_dictee_cm2,lexicales,2021,3.0,erreurs (moyenne)
+depp_dictee_cm2,ecart_type,1987,8.4,"erreurs (ecart-type, NI 22.37 tableau 1)"
+depp_dictee_cm2,ecart_type,2007,9.1,"erreurs (ecart-type, NI 22.37 tableau 1)"
+depp_dictee_cm2,ecart_type,2015,9.9,"erreurs (ecart-type, NI 22.37 tableau 1)"
+depp_dictee_cm2,ecart_type,2021,11.0,"erreurs (ecart-type, NI 22.37 tableau 1)"
 depp_dictee_cm2,deux_erreurs_ou_moins,1987,12.9,% des eleves
 depp_dictee_cm2,deux_erreurs_ou_moins,2007,5.8,% des eleves
 depp_dictee_cm2,deux_erreurs_ou_moins,2015,2.0,% des eleves
