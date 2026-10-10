@@ -690,18 +690,20 @@ def figure_langue_mini(d: ImageDraw.ImageDraw, A: dict, X: dict) -> None:
 
 def carte_langue() -> None:
     """Ressource « Les élèves maîtrisent-ils moins bien la langue française ? » (09/10/2026). Chiffres lus dans le jeu
-    publié ; le contraste annoncé (orthographe des mots stable au regard des autres erreurs) est contrôlé ici."""
+    publié ; la part de la hausse annoncée (orthographe des mots, environ un dixième) est contrôlée ici."""
     f = ROOT / "data" / "langue_eleves.json"
     if not f.is_file():
         fail("jeu de données absent : %s — lancer scripts/update_langue_eleves.py d'abord" % f)
     j = json.loads(f.read_text(encoding="utf-8"))
     A, dic = j["affichage"], j["dictee"]
     t, l = dic["total"], dic["lexicales"]
-    if not (l["2021"] - l["1987"] < 0.25 * (t["2021"] - t["1987"])):
-        fail("carte langue : le contraste annoncé n'est plus vrai dans les données")
+    # Refonte du 10/10 (arbitrage de phase A, C1) : la carte dit la part de la HAUSSE, plus « surtout la grammaire »
+    # (le détail par type n'existe que pour 1987-2007).
+    if not (0 < l["2021"] - l["1987"] and 0.07 <= (l["2021"] - l["1987"]) / (t["2021"] - t["1987"]) <= 0.14):
+        fail("carte langue : « environ un dixième de la hausse » n'est plus vrai dans les données")
     carte("og-langue-eleves.jpg",
           ["Les élèves maîtrisent-ils", "moins bien la langue ?"],
-          "Même dictée : c'est surtout la grammaire qui recule.",
+          "Même dictée : %s erreurs de plus, dont %s sur l'orthographe des mots." % (A["h_tot"], A["h_lex"]),
           "DEPP, NI 22.37 · calcul de l'auteur · CC BY 4.0",
           "stephane-lalut.com/les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/",
           lambda d: figure_langue_mini(d, A, j),

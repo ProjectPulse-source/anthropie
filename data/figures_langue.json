@@ -12,7 +12,7 @@
    "id": "dictee",
    "fichier": "langue-dictee",
    "titre": "La même dictée en CM2 : nombre moyen d'erreurs",
-   "montre": "L'orthographe des mots eux-mêmes bouge peu ; ce sont les autres erreurs, surtout grammaticales, qui ont presque doublé, avant de se stabiliser après 2015.",
+   "montre": "De 1987 à 2021, l'orthographe des mots eux-mêmes ne compte que pour un dixième environ de la hausse des erreurs ; les autres erreurs ont presque doublé, et de 1987 à 2007, période seule détaillée par type, la hausse est surtout grammaticale.",
    "source": "DEPP, Note d'Information 22.37 (dictée de 67 mots, 1987, 2007, 2015, 2021 ; secteur public) ; NI 08.38 pour 1987-2007",
    "precaution": "Erreurs lexicales : orthographe des mots eux-mêmes. Autres erreurs : grammaire (accords, conjugaison), ponctuation, oublis (total moins lexicales)."
   },

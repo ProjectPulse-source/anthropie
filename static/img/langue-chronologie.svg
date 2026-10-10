@@ -109,7 +109,7 @@
 <line x1="390" y1="438" x2="412" y2="438" stroke="#184f95" stroke-width="4"/>
 <text x="418" y="442" font-size="10" fill="#55524f">hausse significative</text>
 <line x1="564" y1="438" x2="586" y2="438" stroke="#eb6834" stroke-width="4" stroke-dasharray="5 3"/>
-<text x="592" y="442" font-size="10" fill="#55524f">tirets : sans test publié</text>
+<text x="592" y="442" font-size="10" fill="#55524f">tirets : sens observé, sans test publié</text>
 <line x1="0" y1="476.0" x2="720" y2="476.0" stroke="#dcd8d3"/>
 <text x="0" y="489.0" font-size="9" fill="#55524f">DEPP (Notes d'Information) ; OCDE (PISA 2025 ; 21st-Century Readers) ; IEA (PIRLS) ; ministère de la Culture ; CREDOC</text>
 <text x="0" y="501.0" font-size="9" fill="#55524f">Chaque ligne a sa propre échelle ; seul le sens est montré. Plein : test publié (PISA 2000-2012 : test de l'auteur) ; tirets : sans test.</text>

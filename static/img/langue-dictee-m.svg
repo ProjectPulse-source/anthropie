@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 689" role="img" font-variant-numeric="tabular-nums" aria-labelledby="lan-dm-t lan-dm-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="lan-dm-t">La même dictée en CM2 : nombre moyen d'erreurs</title><desc id="lan-dm-d">Barres horizontales empilées, nombre moyen d'erreurs à la même dictée en CM2 : 1987 : 2,1 erreurs lexicales et 8,6 autres erreurs, 10,7 au total ; 2007 : 2,6 erreurs lexicales et 12,1 autres erreurs, 14,7 au total ; 2015 : 3 erreurs lexicales et 15 autres erreurs, 18 au total ; 2021 : 3 erreurs lexicales et 16,4 autres erreurs, 19,4 au total.</desc>
+<rect width="300" height="689" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">La même dictée en CM2 : nombre</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">moyen d'erreurs</text>
+<rect x="0" y="66" width="14" height="14" fill="#184f95"/>
+<text x="22" y="78" font-size="13.5" fill="#55524f">Erreurs lexicales (orthographe</text>
+<text x="22" y="96" font-size="13.5" fill="#55524f">des mots)</text>
+<rect x="0" y="104" width="14" height="14" fill="#eb6834"/>
+<text x="22" y="116" font-size="13.5" fill="#55524f">Autres erreurs (grammaire,</text>
+<text x="22" y="134" font-size="13.5" fill="#55524f">ponctuation, oublis)</text>
+<text x="0" y="168" font-size="15" font-weight="600" fill="#26262f">1987</text>
+<rect x="0" y="176" width="21.2" height="26" fill="#184f95"/>
+<rect x="21.2" y="176" width="86.8" height="26" fill="#eb6834"/>
+<text x="114.0" y="195" font-size="16" font-weight="600" fill="#26262f">10,7</text>
+<text x="0" y="220" font-size="13.5" fill="#55524f">lexicales 2,1 · autres 8,6</text>
+<text x="0" y="246" font-size="15" font-weight="600" fill="#26262f">2007</text>
+<rect x="0" y="254" width="26.2" height="26" fill="#184f95"/>
+<rect x="26.2" y="254" width="122.1" height="26" fill="#eb6834"/>
+<text x="154.3" y="273" font-size="16" font-weight="600" fill="#26262f">14,7</text>
+<text x="0" y="298" font-size="13.5" fill="#55524f">lexicales 2,6 · autres 12,1</text>
+<text x="0" y="324" font-size="15" font-weight="600" fill="#26262f">2015</text>
+<rect x="0" y="332" width="30.3" height="26" fill="#184f95"/>
+<rect x="30.3" y="332" width="151.4" height="26" fill="#eb6834"/>
+<text x="187.6" y="351" font-size="16" font-weight="600" fill="#26262f">18</text>
+<text x="0" y="376" font-size="13.5" fill="#55524f">lexicales 3 · autres 15</text>
+<text x="0" y="402" font-size="15" font-weight="600" fill="#26262f">2021</text>
+<rect x="0" y="410" width="30.3" height="26" fill="#184f95"/>
+<rect x="30.3" y="410" width="165.5" height="26" fill="#eb6834"/>
+<text x="201.8" y="429" font-size="16" font-weight="600" fill="#26262f">19,4</text>
+<text x="0" y="454" font-size="13.5" fill="#55524f">lexicales 3 · autres 16,4</text>
+<line x1="0" y1="480.0" x2="300" y2="480.0" stroke="#dcd8d3"/>
+<text x="0" y="501.0" font-size="13.5" fill="#55524f">DEPP, Note d'Information 22.37 (dictée</text>
+<text x="0" y="518.0" font-size="13.5" fill="#55524f">de 67 mots, 1987, 2007, 2015, 2021 ;</text>
+<text x="0" y="535.0" font-size="13.5" fill="#55524f">secteur public) ; NI 08.38 pour</text>
+<text x="0" y="552.0" font-size="13.5" fill="#55524f">1987-2007</text>
+<text x="0" y="573.0" font-size="13.5" fill="#55524f">Erreurs lexicales : orthographe des</text>
+<text x="0" y="590.0" font-size="13.5" fill="#55524f">mots eux-mêmes. Autres erreurs :</text>
+<text x="0" y="607.0" font-size="13.5" fill="#55524f">grammaire (accords, conjugaison),</text>
+<text x="0" y="624.0" font-size="13.5" fill="#55524f">ponctuation, oublis (total moins</text>
+<text x="0" y="641.0" font-size="13.5" fill="#55524f">lexicales).</text>
+<text x="0" y="662.0" font-size="13.5" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 ·</text>
+<text x="0" y="679.0" font-size="13.5" fill="#96928f">stephane-lalut.com</text>
+</svg>

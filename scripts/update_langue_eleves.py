@@ -5,8 +5,8 @@ troisième onglet).
 Découverte de la page (dépôt de pilotage de l'auteur, 06_PROMOTION/RECHERCHE_LYCEES_LECTURE_2026-10-09, protocole écrit
 avant calcul, commit ddab2bc ; verdict du 09/10/2026) : la langue des élèves ne recule pas d'un bloc. Les reculs les plus
 anciens (orthographe et lecture en fin d'école, temps de lecture pour le plaisir à 15 ans) précèdent la généralisation
-du smartphone chez les adolescents ; à la même dictée, l'orthographe des mots bouge peu quand les autres erreurs, surtout
-grammaticales (NI 08.38, tableau 4), doublent ; PISA ne baisse qu'après 2012, quand PIRLS et CEDRE ne reculent pas
+du smartphone chez les adolescents ; à la même dictée, l'orthographe des mots compte pour un dixième environ de la hausse des
+erreurs, et la hausse de 1987 à 2007, seule détaillée par type, est surtout grammaticale (NI 08.38, tableau 4) ; PISA ne baisse qu'après 2012, quand PIRLS et CEDRE ne reculent pas
 significativement sur des périodes qui recouvrent en partie cette baisse ; le vocabulaire n'est suivi par aucune série
 publique. Prose corrigée après la contre-expertise PRO-20261009-202511 (arbitrage dans D:\PRO\.claude\external-audits).
 
@@ -23,7 +23,8 @@ Section « textes » : extrait_textes.json (Gate 0 de l'étude sur la langue off
 
 Usage : python scripts/update_langue_eleves.py [--check] [--mutation=<nom>]  (noms : les branches de mutation())
 Sorties : data/ et static/langue_eleves.json, static/langue_eleves.csv, data/figures_langue.json,
-          static/img/langue-{chronologie,dictee,plaisir}.svg + .png
+          static/img/langue-{chronologie,dictee,plaisir}.svg + .png, et leurs versions mobiles -m (composées pour le
+          téléphone, servies par <picture> sous 600 px (mesure du 10/10 : à 768 px, la version mobile étirée doublait la hauteur) ; parité des valeurs contrôlée par parite_mobile)
 """
 from __future__ import annotations
 
@@ -166,6 +167,12 @@ def mutation(c):
         X["textes_offerts"]["emmanuelle"]["disciplines_saisies"].append("français")
     elif m == "rappel":  # le cadre par titre retrouverait Daniel et Valerie
         X["textes_offerts"]["temoins_bnf"]["daniel et valérie"]["r1"] = 5
+    elif m == "part_lexicale":  # les erreurs lexicales porteraient le quart de la hausse
+        X["dictee"]["lexicales"]["2021"] = 4.3
+    elif m == "lexicales_stables":  # les erreurs lexicales n'augmenteraient presque pas (la prose dit qu'elles augmentent)
+        X["dictee"]["lexicales"]["2021"] = 2.15
+    elif m == "borne_haute":  # la borne haute ne ferait plus apparaitre de hausse
+        X["t7"]["questions"][Q5]["c_bornes"]["haute"] = "indetermine"
     elif m == "ecart_ep":  # le calcul des tableaux ne retrouverait pas l'ecart ecrit par la DEPP
         X["cedre_college"]["groupes"]["Public hors EP"]["2021"] = 245.0
     else:
@@ -221,7 +228,10 @@ def gardes(c):
     g({"mots_usuels_neuf_sur_dix", "accords_baisse_1987_2015_seulement", "hausse_2015_2021_deux_fois_moindre"} <= cit,
       "dictée : citations de la DEPP (« neuf élèves sur dix », baisse des accords « sur 1987-2015 », hausse « deux fois moins forte »)")
     g(1.7 <= (tot["2015"] - tot["2007"]) / (tot["2021"] - tot["2015"]) <= 2.6, "dictée : hausse de 2015 à 2021 « deux fois moins forte » que de 2007 à 2015")
-    g(lx["2021"] - lx["1987"] < 0.25 * (tot["2021"] - tot["1987"]), "dictée : l'orthographe des mots « bouge peu » au regard du total")
+    # Refonte du 10/10 (arbitrage de phase A, C1) : plus de « bouge peu » (les erreurs lexicales montent de 43 %) ;
+    # la prose dit la part de la HAUSSE (« environ un dixième »), et borne « grammaticales » à 1987-2007.
+    h_tot, h_lex = tot["2021"] - tot["1987"], lx["2021"] - lx["1987"]
+    g(h_lex > 0 and 0.07 <= h_lex / h_tot <= 0.14, "dictée : l'orthographe des mots compte pour « environ un dixième » de la hausse 1987-2021, et elle augmente")
     g(1.8 <= autres["2021"] / autres["1987"] < 2.2, "dictée : les autres erreurs « ont presque doublé, ou doublé »")
     dty = c["dty"]
     g(dty["citation_depp"] == "principalement_grammaticales" and dty["lexicales"]["1987"] == lx["1987"] and dty["lexicales"]["2007"] == lx["2007"]
@@ -270,6 +280,9 @@ def gardes(c):
         p = q["c"]["part_plus_de_3h"]
         g(p["2025"][0] < p["2022"][0], "PISA : la part des élèves à plus de 3 h de numérique de loisir « ne progresse pas, elle recule »")
         g(q["c_verdict"] == "indetermine", "PISA : verdict de substitution « indéterminé » (bornes de non-réponse)")
+    cb = c["q5"]["c_bornes"]  # refonte du 10/10 (réserve 3) : l'indétermination se dit par les bornes calculées
+    g(cb["haute"] == "compatible" and cb["centrale"] == "indetermine",
+      "PISA : « s'ils passaient tous plus de trois heures devant un écran les jours de classe, cette part aurait augmenté »")
     a5 = c["q5"]["a"]
     r = a5["2025"]["non_reponse"][0] / a5["2022"]["non_reponse"][0]
     g(1.7 <= r < 2.0, "PISA : la non-réponse « a presque doublé »")
@@ -310,6 +323,11 @@ def affichage(c):
     A["ccec15"], A["ccec21"] = (nb(c["cct"]["ecart_hors_ep_ep_points"][a], 0) for a in ("2015", "2021"))
     dty = c["dty"]
     A["gram87"], A["gram07"] = nbp(dty["grammaticales"]["1987"]), nbp(dty["grammaticales"]["2007"])
+    # décomposition de la hausse (arbitrage de phase A, C1)
+    A["h_tot"] = nb(tot["2021"] - tot["1987"])
+    A["h_lex"] = nb(lx["2021"] - lx["1987"])
+    A["h_tot0707"] = nb(tot["2007"] - tot["1987"])
+    A["h_gram0707"] = nb(dty["grammaticales"]["2007"] - dty["grammaticales"]["1987"])
     sf = six["score_francais"]
     A["six17"], A["six21"], A["six25"] = nb(sf["2017"], 0), nb(sf["2021"], 0), nb(sf["2025"], 0)
     gt = c["sec"]["GT"]
@@ -376,7 +394,7 @@ FIG = {
         titre="La même dictée en CM2 : nombre moyen d'erreurs",
         source="DEPP, Note d'Information 22.37 (dictée de 67 mots, 1987, 2007, 2015, 2021 ; secteur public) ; NI 08.38 pour 1987-2007",
         note="Erreurs lexicales : orthographe des mots eux-mêmes. Autres erreurs : grammaire (accords, conjugaison), ponctuation, oublis (total moins lexicales).",
-        montre="L'orthographe des mots eux-mêmes bouge peu ; ce sont les autres erreurs, surtout grammaticales, qui ont presque doublé, avant de se stabiliser après 2015."),
+        montre="De 1987 à 2021, l'orthographe des mots eux-mêmes ne compte que pour un dixième environ de la hausse des erreurs ; les autres erreurs ont presque doublé, et de 1987 à 2007, période seule détaillée par type, la hausse est surtout grammaticale."),
     "plaisir": dict(
         titre="Élèves qui déclarent ne pas lire pour leur plaisir, selon la classe (2023)",
         source="DEPP, Note d'Information 25.66, figure 1.1 web (questionnaires des évaluations nationales, septembre 2023)",
@@ -454,7 +472,7 @@ def fig_chronologie(c, A):
     yl = top + pas * len(L) + 34
     x = 0
     for (col, plein), lib in ((( ORANGE, True), "recul significatif"), ((GRIS, True), "sans évolution significative"),
-                              ((BLEU, True), "hausse significative"), ((ORANGE, False), "tirets : sans test publié")):
+                              ((BLEU, True), "hausse significative"), ((ORANGE, False), "tirets : sens observé, sans test publié")):
         e.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-width="4"%s/>' % (x, yl, x + 22, yl, col, "" if plein else ' stroke-dasharray="5 3"'))
         e.append('<text x="%d" y="%d" font-size="10" fill="%s">%s</text>' % (x + 28, yl + 4, INK2, esc(lib)))
         x += 34 + 7 * len(lib)
@@ -509,6 +527,172 @@ def fig_plaisir(c, A):
         e.append('<rect x="%d" y="%d" width="%.1f" height="22" fill="%s"/>' % (x0, y + 4, sx(pr[k]), ORANGE))
         e.append('<text x="%.1f" y="%d" font-size="12" font-weight="600" fill="%s">%s %%</text>' % (x0 + sx(pr[k]) + 8, y + 20, INK, nb(pr[k], 0)))
     return pied(e, h + 2, t["source"], t["note"])
+
+
+# ------------------------------------------------------------------ figures mobiles (refonte du 10/10, arbitrage C5)
+# Composées pour le téléphone, pas réduites : viewBox de WM unités, affiché vers 270 px à un écran de 390 px, donc
+# aucune police sous FS_MIN unités (≈ 12 px affichés). Mêmes valeurs que la version détaillée (parite_mobile).
+WM, FS_MIN = 300, 13.5
+LICENCE_M = "Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com"  # l'URL de la page ne se coupe pas en 300 unités
+
+
+def coupe(s: str, n: int) -> list:
+    out, cur = [], ""
+    for mot in s.split():
+        if cur and len(cur) + 1 + len(mot) > n:
+            out.append(cur)
+            cur = mot
+        else:
+            cur = (cur + " " + mot).strip()
+    return out + ([cur] if cur else [])
+
+
+def tete_m(fid, titre, desc, h):
+    e = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" role="img" font-variant-numeric="tabular-nums" '
+         'aria-labelledby="%s-t %s-d" font-family="%s">' % (WM, h, fid, fid, FONT),
+         '<title id="%s-t">%s</title><desc id="%s-d">%s</desc>' % (fid, esc(titre), fid, esc(desc)),
+         '<rect width="%d" height="%d" fill="#ffffff"/>' % (WM, h)]
+    for k, ligne in enumerate(coupe(titre, 30)):
+        e.append('<text x="0" y="%d" font-size="17" font-weight="600" fill="%s">%s</text>' % (20 + 22 * k, INK, esc(ligne)))
+    return e, 20 + 22 * len(coupe(titre, 30))
+
+
+def pied_m(e, y0, source, note):
+    """Renvoie (svg, hauteur) ; le pied se coupe en lignes courtes."""
+    e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y0, WM, y0, GRID))
+    y = y0 + 4
+    for tx, col in ((source, INK2), (note, INK2), (LICENCE_M, MUTED)):
+        for ligne in coupe(tx, 38):
+            y += 17
+            e.append('<text x="0" y="%.1f" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, col, esc(ligne)))
+        y += 4
+    e.append("</svg>")
+    return e, y + 6
+
+
+def finir_m(e, h_vraie):
+    s = "\n".join(e)
+    return re.sub(r'viewBox="0 0 %d \d+"' % WM, 'viewBox="0 0 %d %d"' % (WM, h_vraie), s, count=1).replace(
+        '<rect width="%d" height="0"' % WM, '<rect width="%d" height="%d"' % (WM, h_vraie), 1)
+
+
+def fig_dictee_m(c, A):
+    t = FIG["dictee"]
+    tot, lx = c["dic"]["total"], c["dic"]["lexicales"]
+    ans = ("1987", "2007", "2015", "2021")
+    sx = lambda v: 222 * v / 22.0
+    desc = "Barres horizontales empilées, nombre moyen d'erreurs à la même dictée en CM2 : " + " ; ".join(
+        "%s : %s erreurs lexicales et %s autres erreurs, %s au total" % (a, nbp(lx[a]), nbp(round(tot[a] - lx[a], 1)), nbp(tot[a])) for a in ans) + "."
+    e, y = tete_m("lan-dm", t["titre"], desc, 0)
+    y += 14
+    for k, (col, lib) in enumerate(((BLEU, "Erreurs lexicales (orthographe des mots)"), (ORANGE, "Autres erreurs (grammaire, ponctuation, oublis)"))):
+        for j, ligne in enumerate(coupe(lib, 32)):
+            if j == 0:
+                e.append('<rect x="0" y="%d" width="14" height="14" fill="%s"/>' % (y - 12, col))
+            e.append('<text x="22" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, INK2, esc(ligne)))
+            y += 18
+        y += 2
+    y += 10
+    for a in ans:
+        l, o = lx[a], round(tot[a] - lx[a], 1)
+        e.append('<text x="0" y="%d" font-size="15" font-weight="600" fill="%s">%s</text>' % (y + 4, INK, a))
+        y += 12
+        e.append('<rect x="0" y="%d" width="%.1f" height="26" fill="%s"/>' % (y, sx(l), BLEU))
+        e.append('<rect x="%.1f" y="%d" width="%.1f" height="26" fill="%s"/>' % (sx(l), y, sx(o), ORANGE))
+        e.append('<text x="%.1f" y="%d" font-size="16" font-weight="600" fill="%s">%s</text>' % (sx(l + o) + 6, y + 19, INK, nbp(tot[a])))
+        y += 26 + 18
+        e.append('<text x="0" y="%d" font-size="%s" fill="%s">lexicales %s · autres %s</text>' % (y, FS_MIN, INK2, nbp(l), nbp(o)))
+        y += 22
+    e, h = pied_m(e, y + 4, t["source"], t["note"])
+    return finir_m(e, h)
+
+
+def fig_plaisir_m(c, A):
+    t = FIG["plaisir"]
+    pr = c["pr"]
+    libs = {"Sixième": "Sixième", "Quatrième": "Quatrième", "Seconde générale et technologique": "Seconde générale et technologique",
+            "Seconde professionnelle": "Seconde professionnelle", "CAP": "Première année de CAP"}
+    sx = lambda v: 240 * v / 60
+    desc = "Barres, part des élèves qui déclarent ne pas lire pour leur plaisir en 2023 : " + " ; ".join(
+        "%s %s %%" % (libs[k], nb(pr[k], 0)) for k in NIVEAUX_2023) + "."
+    e, y = tete_m("lan-pm", t["titre"], desc, 0)
+    y += 14
+    for k in NIVEAUX_2023:
+        e.append('<text x="0" y="%d" font-size="14.5" fill="%s">%s</text>' % (y + 4, INK, esc(libs[k])))
+        y += 10
+        e.append('<rect x="0" y="%d" width="%.1f" height="22" fill="%s"/>' % (y, sx(pr[k]), ORANGE))
+        e.append('<text x="%.1f" y="%d" font-size="16" font-weight="600" fill="%s">%s %%</text>' % (sx(pr[k]) + 6, y + 17, INK, nb(pr[k], 0)))
+        y += 22 + 24
+    e, h = pied_m(e, y, t["source"], t["note"])
+    return finir_m(e, h)
+
+
+def fig_chronologie_m(c, A):
+    """Deux panneaux à axes propres : les mesures qui remontent avant 2009, puis les mesures récentes (axe 2008-2026)."""
+    t = FIG["chronologie"]
+    L = lignes_chrono(c)
+    mots = {(ORANGE, True): "recul significatif", (BLEU, True): "hausse significative", (GRIS, True): "sans évolution significative",
+            (ORANGE, False): "recul, sans test publié", (BLEU, False): "hausse, sans test publié"}
+    desc = "Frise en deux panneaux, une ligne par mesure, sens de chaque intervalle ; repère : %s, plus de la moitié des 12-17 ans équipés d'un smartphone. " % A["smart_seuil"] + " ; ".join(
+        "%s (%s) : %s" % (lib, pop, ", ".join("%d-%d %s" % (u, v, mots[statut(sg, bs)]) for u, v, sg, bs in seg)) for lib, pop, seg in L) + "."
+    longues = [r for r in L if min(u for u, *_ in r[2]) < 2009]
+    recentes = [r for r in L if min(u for u, *_ in r[2]) >= 2009]
+    e, y = tete_m("lan-cm", "Quand chaque mesure de la langue recule, tient ou progresse", desc, 0)
+    y += 8
+    for col, plein, lib in ((ORANGE, True, "recul significatif"), (GRIS, True, "sans évolution significative"),
+                            (BLEU, True, "hausse significative"), (ORANGE, False, "tirets : sens observé, sans test")):
+        y += 20
+        e.append('<line x1="0" y1="%d" x2="24" y2="%d" stroke="%s" stroke-width="5"%s/>' % (y - 5, y - 5, col, "" if plein else ' stroke-dasharray="6 3"'))
+        e.append('<text x="32" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, INK2, lib))
+    for titre_p, rows, a0, a1, pas_ax in (("Les séries longues", longues, 1985, 2026, 10), ("Les séries récentes", recentes, 2008, 2026, 5)):
+        y += 34
+        e.append('<text x="0" y="%d" font-size="15.5" font-weight="600" fill="%s">%s</text>' % (y, INK, titre_p))
+        y += 10
+        x0, x1 = 6, WM - 6
+        sx = lambda a, a0=a0, a1=a1: x0 + (x1 - x0) * (a - a0) / (a1 - a0)
+        haut = 48 * len(rows) + 8
+        xs = sx(c["seuil"])
+        for i in range(len(rows)):  # repère 2013 dans la seule bande des barres : il ne barre aucun libellé
+            yb = y + 48 * i + 36
+            e.append('<rect x="%.1f" y="%d" width="%.1f" height="20" fill="#f1efec"/>' % (xs, yb - 10, x1 - xs))
+            e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="1.4"/>' % (xs, yb - 10, xs, yb + 10, INK2))
+        for i, (lib, pop, seg) in enumerate(rows):
+            yl = y + 48 * i + 20
+            e.append('<text x="0" y="%d" font-size="14" fill="%s">%s <tspan fill="%s">· %s</tspan></text>' % (yl, INK, esc(lib), MUTED, esc(pop)))
+            yb = yl + 16
+            for u, v, sg, bs in seg:
+                col, plein = statut(sg, bs)
+                e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="%s"%s/>'
+                         % (sx(u), yb, sx(v), yb, col, "6" if plein else "4.5", "" if plein else ' stroke-dasharray="7 4"'))
+            for a in sorted({u for u, *_ in seg} | {v for _, v, *_ in seg}):
+                e.append('<circle cx="%.1f" cy="%d" r="3.6" fill="#ffffff" stroke="%s" stroke-width="1.5"/>' % (sx(a), yb, INK2))
+        y += haut
+        for a in range(a0 + (pas_ax - a0 % pas_ax) % pas_ax, a1 + 1, pas_ax):
+            e.append('<text x="%.1f" y="%d" font-size="%s" fill="%s" text-anchor="middle">%d</text>' % (sx(a), y + 18, FS_MIN, MUTED, a))
+        y += 24
+        if titre_p == "Les séries longues":  # arbitrage multi-angle du 10/10 : dire ce que 2013 désigne
+            for k, ligne in enumerate(("%s : plus de la moitié des 12-17 ans" % A["smart_seuil"], "ont un smartphone (trait vertical)")):
+                e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y + 16 + 18 * k, FS_MIN, INK2, ligne))
+            y += 34
+    e, h = pied_m(e, y + 14, t["source"], t["note"])
+    return finir_m(e, h)
+
+
+def parite_mobile(figs):
+    """Les figures mobiles portent les mêmes valeurs et les mêmes intervalles que la version détaillée (R5 : comparaison
+    sur les SORTIES, pas sur les fonctions qui les écrivent)."""
+    for fid in ("chronologie", "dictee", "plaisir"):
+        d, m = figs["langue-%s.svg" % fid], figs["langue-%s-m.svg" % fid]
+        desc = lambda s: html.unescape(re.search(r"<desc[^>]*>(.*?)</desc>", s).group(1))
+        corps = lambda s: desc(s).split("smartphone. ", 1)[1] if fid == "chronologie" else desc(s).split(" : ", 1)[1]
+        nums = lambda s: sorted(re.findall(r"\d+(?:,\d+)?", corps(s)))
+        if nums(d) != nums(m):
+            fail("parite mobile : %s -- valeurs differentes entre version detaillee et mobile" % fid)
+        tailles = [float(x) for x in re.findall(r'font-size="([0-9.]+)"', m)]
+        if min(tailles) < FS_MIN:
+            fail("parite mobile : %s -- police %.1f sous le minimum %.1f" % (fid, min(tailles), FS_MIN))
+        if not re.search(r'viewBox="0 0 %d \d+"' % WM, m):
+            fail("parite mobile : %s -- viewBox inattendu" % fid)
 
 
 def fiches(figs):
@@ -606,7 +790,9 @@ def main() -> int:
         log("--check : %d gardes passees (%d cles d'affichage), rien ecrit." % (n, len(A)))
         return 0
     import cairosvg
-    figs = {"langue-chronologie.svg": fig_chronologie(c, A), "langue-dictee.svg": fig_dictee(c, A), "langue-plaisir.svg": fig_plaisir(c, A)}
+    figs = {"langue-chronologie.svg": fig_chronologie(c, A), "langue-dictee.svg": fig_dictee(c, A), "langue-plaisir.svg": fig_plaisir(c, A),
+            "langue-chronologie-m.svg": fig_chronologie_m(c, A), "langue-dictee-m.svg": fig_dictee_m(c, A), "langue-plaisir-m.svg": fig_plaisir_m(c, A)}
+    parite_mobile(figs)
     X = c["X"]
     payload = {"meta": {"page": "https://" + PAGE_URL, "licence": "CC BY 4.0",
                         "champ": "France ; élèves de CM1, CM2, sixième, troisième, seconde ; jeunes de 15 ans (PISA) ; 15-24 ans (enquêtes Pratiques culturelles)",
@@ -631,7 +817,8 @@ def main() -> int:
     OUT_CSV.write_text(csv_texte(c), encoding="utf-8-sig", newline="\n")
     for f, s in figs.items():
         (OUT_IMG / f).write_text(s, encoding="utf-8")
-        cairosvg.svg2png(url=str(OUT_IMG / f), write_to=str(OUT_IMG / f.replace(".svg", ".png")), output_width=1440, background_color="white")
+        cairosvg.svg2png(url=str(OUT_IMG / f), write_to=str(OUT_IMG / f.replace(".svg", ".png")),
+                         output_width=900 if f.endswith("-m.svg") else 1440, background_color="white")
     OUT_FIGURES.write_text(json.dumps(fiches(figs), ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     log("Ecrit : data/ et static/langue_eleves.json, static/langue_eleves.csv, data/figures_langue.json, %d figures SVG + PNG" % len(figs))
     return 0
