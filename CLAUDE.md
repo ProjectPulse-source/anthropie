@@ -231,6 +231,24 @@ l'exigence et le contrôle, jamais l'architecture narrative.
 Rien de cela n'est câblé en contrôle machine (aucun capteur objectif) : la session le tient, la contre-expertise le
 contrôle.
 
+**Leçons du pilote (10/10/2026 ; trois contre-expertises, un panel, une passe MAGNIFIER — `D:\PRO\06_PROMOTION\RECHERCHE_LYCEES_LECTURE_2026-10-09\REFONTE_PILOTE\`)** :
+
+8. **Une limite qui fixe le sens d'un résultat a son unité de texte propre** (phrase, intertitre en gras), jamais une
+   subordonnée : en subordonnée, 5 lecteurs simulés sur 5 l'avaient oubliée.
+9. **« Non significatif » n'est ni « stable », ni « tient », ni « inchangé »** ; une baisse significative d'un groupe ne
+   prouve pas que l'écart avec un autre se creuse (sans test de l'écart, on le dit).
+10. **Une dispersion se donne en deux moitiés** : l'écart-type (absolu) et l'écart-type rapporté à la moyenne (relatif) ;
+    deux parts aux seuils ne mesurent pas une dispersion.
+11. **Un générateur qui conclut « rien écrit » compare toutes ses sorties, fiches « Réutiliser » comprises** (défaut
+    silencieux trouvé dans quatre générateurs le 10/10).
+12. **MAGNIFIER s'emploie en finition, jamais sans mesure** : consigne `REFONTE_PILOTE\MAGNIFIER\CONSIGNE_PASSE_RESSOURCE.md`
+    (jetons et gardes intouchables), puis les mêmes lecteurs simulés avant et après.
+13. **Gabarit (10/10/2026)** : sommaire replié automatique sur toute ressource d'au moins cinq sections
+    (`partials/sommaire-ressource.html`) ; sur téléphone, le bouton « Réutiliser » devient un lien d'une ligne et la
+    ligne des références resserre son interligne. **Aucune pleine largeur en `100vw`** (la barre de défilement d'un
+    navigateur de bureau fait déborder ou rogner) : marge négative exacte du conteneur, `calc(-20px - 2rem)`. La barre
+    collante garde la pastille du dossier (décision de l'auteur du 06/10) : la compacter se décide avec lui.
+
 ## Couche pédagogique — `/enseignants/` (actée par l'auteur, 2026-09-30)
 
 Une page d'**usage** pour les enseignants, qui transforme les ressources en activités sans les recopier ; les pages de
