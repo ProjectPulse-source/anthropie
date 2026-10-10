@@ -192,3 +192,13 @@ pisa_numerique_loisir_week_end,3_a_5h / part,2025,26.17,% des repondants (calcul
 pisa_numerique_loisir_week_end,3_a_5h / lecture,2025,500.36,points PISA (calcul)
 pisa_numerique_loisir_week_end,plus_de_5h / part,2025,28.26,% des repondants (calcul)
 pisa_numerique_loisir_week_end,plus_de_5h / lecture,2025,464.75,points PISA (calcul)
+emmanuelle_manuels_recenses,disciplines saisies,2026-10-10,8,"disciplines (grec, latin, anglais, allemand, italien, espagnol, histoire, géographie) ; francais : saisie en cours"
+emmanuelle_manuels_recenses,notices de la base,2026-10-10,27595,notices
+bnf_rappel_cadre_par_titre,daniel et valérie / notices au catalogue (1970s),2026-10-10,16,notices
+bnf_rappel_cadre_par_titre,daniel et valérie / retrouvees par titre lecture + niveau (1970s),2026-10-10,0,notices
+bnf_rappel_cadre_par_titre,rémi et colette / notices au catalogue (1970s),2026-10-10,9,notices
+bnf_rappel_cadre_par_titre,rémi et colette / retrouvees par titre lecture + niveau (1970s),2026-10-10,0,notices
+bnf_rappel_cadre_par_titre,taoki / notices au catalogue (2010s),2026-10-10,13,notices
+bnf_rappel_cadre_par_titre,taoki / retrouvees par titre lecture + niveau (2010s),2026-10-10,4,notices
+precision_comparaison_de_periodes,"ouvrages par periode pour un ecart de 0,5 ecart-type",,63,"ouvrages (bilateral 5 %, puissance 80 %)"
+precision_comparaison_de_periodes,"ouvrages par periode pour un ecart de 1,0 ecart-type",,16,"ouvrages (bilateral 5 %, puissance 80 %)"

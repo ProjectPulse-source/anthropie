@@ -19,6 +19,8 @@ DEPP), évaluations de sixième et test de seconde (chaque automne), PISA 2029. 
 pour PISA) dans le dossier de recherche, recopier l'extrait et son empreinte, relancer ce script.
 Page en français seulement (exclusion déclarée : langue, programmes et statistique français).
 
+Section « textes » : extrait_textes.json (Gate 0 de l'étude sur la langue offerte aux enfants, 10/10/2026).
+
 Usage : python scripts/update_langue_eleves.py [--check] [--mutation=<nom>]  (noms : les branches de mutation())
 Sorties : data/ et static/langue_eleves.json, static/langue_eleves.csv, data/figures_langue.json,
           static/img/langue-{chronologie,dictee,plaisir}.svg + .png
@@ -88,7 +90,19 @@ def lire():
         h, nom_ = ligne.split()
         if hashlib.sha256((SRC / nom_.lstrip("*")).read_bytes()).hexdigest() != h:
             fail("empreinte de %s differente de SHA256SUMS : extrait modifie hors du depot de recherche" % nom_)
-    return json.loads((SRC / "extrait_langue.json").read_text(encoding="utf-8"))
+    X = json.loads((SRC / "extrait_langue.json").read_text(encoding="utf-8"))
+    # Gate 0 de l'étude « langue offerte aux enfants » (06_PROMOTION/RECHERCHE_LANGUE_OFFERTE_2026-10-10/gate0,
+    # extrait_textes.py) : recensement Emmanuelle et rappel du catalogue de la BnF, pour la section « textes »
+    X["textes_offerts"] = json.loads((SRC / "extrait_textes.json").read_text(encoding="utf-8"))
+    return X
+
+
+def effectif(d: float) -> int:
+    """Ouvrages par période pour détecter un écart de d écarts-types (bilatéral 5 %, puissance 80 %)."""
+    from math import ceil
+    from statistics import NormalDist
+    z = NormalDist().inv_cdf(0.975) + NormalDist().inv_cdf(0.80)
+    return ceil(2 * z * z / (d * d))
 
 
 def calcul(X):
@@ -103,7 +117,7 @@ def calcul(X):
                 dic=X["dictee"], lc=X["lecture_cm2"], ce=X["cedre_ecole"], cc=X["cedre_college"], six=X["sixieme"],
                 pirls=X["pirls"], sec=X["seconde_francais"], oc=X["ocde_lecture_loisir"], cul=X["culture"],
                 pr=X["pratiques_2023_ne_lit_pas_pour_plaisir"], releve=X["releve_le"],
-                dty=X["dictee_types_1987_2007"], cct=X["cedre_college_textes"])
+                dty=X["dictee_types_1987_2007"], cct=X["cedre_college_textes"], tx=X["textes_offerts"])
 
 
 def mutation(c):
@@ -148,6 +162,10 @@ def mutation(c):
     elif m == "grammaticales":  # la hausse 1987-2007 ne serait pas surtout grammaticale
         X["dictee_types_1987_2007"]["grammaticales"]["2007"] = 8.0  # meme total : la hausse passerait par la ponctuation
         X["dictee_types_1987_2007"]["ponctuation"]["2007"] = 3.7
+    elif m == "emmanuelle":  # le francais aurait ete saisi dans la base Emmanuelle
+        X["textes_offerts"]["emmanuelle"]["disciplines_saisies"].append("français")
+    elif m == "rappel":  # le cadre par titre retrouverait Daniel et Valerie
+        X["textes_offerts"]["temoins_bnf"]["daniel et valérie"]["r1"] = 5
     elif m == "ecart_ep":  # le calcul des tableaux ne retrouverait pas l'ecart ecrit par la DEPP
         X["cedre_college"]["groupes"]["Public hors EP"]["2021"] = 245.0
     else:
@@ -239,6 +257,14 @@ def gardes(c):
       "CEDRE fin de collège : l'écart avec le public hors éducation prioritaire « passe de 17 à 22 points », celui entre filles et garçons « augmente aussi » (DEPP), sans test publié")
     g(not ce["secteurs_significatif"]["EP"]["2021"] and ce["secteurs_significatif"]["Public hors EP"]["2021"],
       "CEDRE fin d'école : « la hausse vient du public hors éducation prioritaire »")
+    # textes offerts (Gate 0)
+    em, tb = c["tx"]["emmanuelle"], c["tx"]["temoins_bnf"]
+    g(len(em["disciplines_saisies"]) == 8 and "français" not in em["disciplines_saisies"] and em["francais_en_cours"]
+      and not em["daniel_et_valerie_trouve"], "Emmanuelle : huit disciplines saisies, « pas le français », dont la saisie est annoncée en cours")
+    g(all(tb[k]["periode"] == "1970s" and tb[k]["catalogue"] > 0 and tb[k]["r1"] == 0 for k in ("daniel et valérie", "rémi et colette")),
+      "BnF : les méthodes des années 1970 sont au catalogue, « aucune n'est retrouvée » par le titre")
+    g(0 < tb["taoki"]["r1"] < tb["taoki"]["catalogue"], "BnF : Taoki « retrouvé en partie »")
+    g(effectif(0.5) > 3 * effectif(1.0), "précision : un écart deux fois plus petit demande « environ quatre fois plus » d'ouvrages")
     # écrans (PISA 2022-2025)
     for q in (c["q5"], c["q6"]):
         p = q["c"]["part_plus_de_3h"]
@@ -307,6 +333,15 @@ def affichage(c):
     A["nrs25"], A["reps25"] = nb(a5["2025"]["lecture_non_repondants"][0], 0), nb(a5["2025"]["lecture_repondants"][0], 0)
     b = c["q5"]["b"]
     A["d35"], A["d5p"] = nb(-b["3_a_5h"]["variation"], 0), nb(-b["plus_de_5h"]["variation"], 0)
+    em, tb = c["tx"]["emmanuelle"], c["tx"]["temoins_bnf"]
+    A["emma_ndisc"], A["emma_notices"] = nb(len(em["disciplines_saisies"]), 0), nb(em["notices_base"], 0)
+    A["dv_cat"], A["dv_r1"] = nb(tb["daniel et valérie"]["catalogue"], 0), nb(tb["daniel et valérie"]["r1"], 0)
+    A["rc_cat"], A["rc_r1"] = nb(tb["rémi et colette"]["catalogue"], 0), nb(tb["rémi et colette"]["r1"], 0)
+    A["taoki_cat"], A["taoki_r1"] = nb(tb["taoki"]["catalogue"], 0), nb(tb["taoki"]["r1"], 0)
+    A["n_d05"], A["n_d1"] = nb(effectif(0.5), 0), nb(effectif(1.0), 0)
+    j, mo, an = c["tx"]["releve_le"].split("-")[2], c["tx"]["releve_le"].split("-")[1], c["tx"]["releve_le"].split("-")[0]
+    A["tx_date"] = "%d %s %s" % (int(j), ("janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre",
+                                          "novembre", "décembre")[int(mo) - 1], an)
     return A
 
 
@@ -543,6 +578,16 @@ def csv_texte(c):
             for t_, v in a["tranches"].items():
                 w.writerow(["pisa_numerique_loisir_" + lib, t_ + " / part", an, round(v["part"][0], 2), "% des repondants (calcul)"])
                 w.writerow(["pisa_numerique_loisir_" + lib, t_ + " / lecture", an, round(v["lecture"][0], 2), "points PISA (calcul)"])
+    tx = X["textes_offerts"]
+    w.writerow(["emmanuelle_manuels_recenses", "disciplines saisies", tx["releve_le"], len(tx["emmanuelle"]["disciplines_saisies"]),
+                "disciplines (" + ", ".join(tx["emmanuelle"]["disciplines_saisies"]) + ") ; francais : saisie en cours"])
+    w.writerow(["emmanuelle_manuels_recenses", "notices de la base", tx["releve_le"], tx["emmanuelle"]["notices_base"], "notices"])
+    for k, v in tx["temoins_bnf"].items():
+        w.writerow(["bnf_rappel_cadre_par_titre", k + " / notices au catalogue (" + v["periode"] + ")", tx["releve_le"], v["catalogue"], "notices"])
+        w.writerow(["bnf_rappel_cadre_par_titre", k + " / retrouvees par titre lecture + niveau (" + v["periode"] + ")", tx["releve_le"], v["r1"], "notices"])
+    for d in (0.5, 1.0):
+        w.writerow(["precision_comparaison_de_periodes", "ouvrages par periode pour un ecart de %s ecart-type" % nb(d), "", effectif(d),
+                    "ouvrages (bilateral 5 %, puissance 80 %)"])
     return buf.getvalue()
 
 

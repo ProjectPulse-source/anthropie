@@ -1,0 +1,38 @@
+{
+ "releve_le": "2026-10-10",
+ "emmanuelle": {
+  "disciplines_saisies": [
+   "grec",
+   "latin",
+   "anglais",
+   "allemand",
+   "italien",
+   "espagnol",
+   "histoire",
+   "géographie"
+  ],
+  "francais_en_cours": true,
+  "notices_base": 27595,
+  "daniel_et_valerie_trouve": false
+ },
+ "temoins_bnf": {
+  "daniel et valérie": {
+   "periode": "1970s",
+   "catalogue": 16,
+   "r1": 0,
+   "retenu": 0
+  },
+  "rémi et colette": {
+   "periode": "1970s",
+   "catalogue": 9,
+   "r1": 0,
+   "retenu": 0
+  },
+  "taoki": {
+   "periode": "2010s",
+   "catalogue": 13,
+   "r1": 4,
+   "retenu": 4
+  }
+ }
+}

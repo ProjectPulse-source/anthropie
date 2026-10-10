@@ -793,6 +793,44 @@
    }
   }
  },
+ "textes_offerts": {
+  "releve_le": "2026-10-10",
+  "emmanuelle": {
+   "disciplines_saisies": [
+    "grec",
+    "latin",
+    "anglais",
+    "allemand",
+    "italien",
+    "espagnol",
+    "histoire",
+    "géographie"
+   ],
+   "francais_en_cours": true,
+   "notices_base": 27595,
+   "daniel_et_valerie_trouve": false
+  },
+  "temoins_bnf": {
+   "daniel et valérie": {
+    "periode": "1970s",
+    "catalogue": 16,
+    "r1": 0,
+    "retenu": 0
+   },
+   "rémi et colette": {
+    "periode": "1970s",
+    "catalogue": 9,
+    "r1": 0,
+    "retenu": 0
+   },
+   "taoki": {
+    "periode": "2010s",
+    "catalogue": 13,
+    "r1": 4,
+    "retenu": 4
+   }
+  }
+ },
  "affichage": {
   "tot87": "10,7",
   "lex87": "2,1",
@@ -867,6 +905,17 @@
   "nrs25": "381",
   "reps25": "480",
   "d35": "21",
-  "d5p": "21"
+  "d5p": "21",
+  "emma_ndisc": "8",
+  "emma_notices": "27 595",
+  "dv_cat": "16",
+  "dv_r1": "0",
+  "rc_cat": "9",
+  "rc_r1": "0",
+  "taoki_cat": "13",
+  "taoki_r1": "4",
+  "n_d05": "63",
+  "n_d1": "16",
+  "tx_date": "10 octobre 2026"
  }
 }
