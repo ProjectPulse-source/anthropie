@@ -394,12 +394,12 @@ FIG = {
         titre="La même dictée en CM2 : nombre moyen d'erreurs",
         source="DEPP, Note d'Information 22.37 (dictée de 67 mots, 1987, 2007, 2015, 2021 ; secteur public) ; NI 08.38 pour 1987-2007",
         note="Erreurs lexicales : orthographe des mots eux-mêmes. Autres erreurs : grammaire (accords, conjugaison), ponctuation, oublis (total moins lexicales).",
-        montre="De 1987 à 2021, l'orthographe des mots eux-mêmes ne compte que pour un dixième environ de la hausse des erreurs ; les autres erreurs ont presque doublé, et de 1987 à 2007, période seule détaillée par type, la hausse est surtout grammaticale."),
+        montre="De 1987 à 2021, l'orthographe des mots eux-mêmes ne compte que pour un dixième environ de la hausse des erreurs ; les autres erreurs ont presque doublé. Le détail par type d'erreur n'existe que pour 1987-2007 : la hausse y est surtout grammaticale."),
     "plaisir": dict(
         titre="Élèves qui déclarent ne pas lire pour leur plaisir, selon la classe (2023)",
         source="DEPP, Note d'Information 25.66, figure 1.1 web (questionnaires des évaluations nationales, septembre 2023)",
         note="Une seule enquête : l'écart entre classes compare des élèves différents la même année, ce n'est pas une évolution dans le temps.",
-        montre="Une part croissante d'élèves ne lit pas pour son plaisir, de la sixième à la seconde ; près de la moitié en seconde professionnelle."),
+        montre="Dans l'enquête de 2023, la part des élèves qui ne lisent pas pour leur plaisir est plus élevée en seconde qu'en sixième, et près de la moitié en seconde professionnelle : des élèves différents la même année, pas une évolution."),
 }
 
 
@@ -804,7 +804,11 @@ def main() -> int:
             prev = json.loads(OUT_DATA.read_text(encoding="utf-8"))
             same = {k: v for k, v in prev.items() if k not in ("releve_le", "_licence")} == json.loads(json.dumps(payload, ensure_ascii=False))
             if same and all((OUT_IMG / f).exists() and (OUT_IMG / f).read_text(encoding="utf-8") == s for f, s in figs.items()) \
-                    and OUT_CSV.exists() and OUT_CSV.read_text(encoding="utf-8-sig") == csv_texte(c):
+                    and OUT_CSV.exists() and OUT_CSV.read_text(encoding="utf-8-sig") == csv_texte(c) \
+                    and OUT_FIGURES.exists() \
+                    and OUT_FIGURES.read_text(encoding="utf-8") == json.dumps(fiches(figs), ensure_ascii=False, indent=1) + "\n":
+                # (10/10/2026) les fiches « Réutiliser » entrent dans la comparaison : sans elles, une légende corrigée
+                # n'était jamais réécrite, et le script disait « rien écrit » sur une sortie périmée.
                 log("Donnees et figures identiques : rien ecrit (releve_le conserve : %s)." % prev["releve_le"])
                 return 0
         except (ValueError, KeyError):

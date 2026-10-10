@@ -863,7 +863,10 @@ def main() -> int:
             prev = json.loads(OUT_DATA.read_text(encoding="utf-8"))
             same = {k: v for k, v in prev.items() if k not in ("releve_le", "_licence")} == json.loads(json.dumps(payload, ensure_ascii=False))
             if same and all((OUT_IMG / f).exists() and (OUT_IMG / f).read_text(encoding="utf-8") == s for f, s in figs.items()) \
-                    and OUT_CSV.exists() and OUT_CSV.read_text(encoding="utf-8-sig") == csv_texte(c):
+                    and OUT_CSV.exists() and OUT_CSV.read_text(encoding="utf-8-sig") == csv_texte(c) \
+                    and OUT_FIGURES.exists() \
+                    and OUT_FIGURES.read_text(encoding="utf-8") == json.dumps(fiches(figs), ensure_ascii=False, indent=1) + "\n":
+                # (10/10/2026) fiches « Réutiliser » comparées aussi : sans elles, une légende corrigée n'était jamais réécrite.
                 log("Donnees et figures identiques : rien ecrit (releve_le conserve : %s)." % prev["releve_le"])
                 return 0
         except (ValueError, KeyError):
