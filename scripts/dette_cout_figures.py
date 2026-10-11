@@ -218,7 +218,7 @@ def PF_desc(svg):
 
 
 # ------------------------------------------------------------------- ciseau
-def fig_ciseau_m(dette_annuel, d41_pib, lang, C, licence_m, svg_d, titre, source, note):
+def fig_ciseau_m(dette_annuel, d41_pib, lang, C, licence_m, svg_d, titre, source, note, fin=("", "")):
     """Deux panneaux empilés sur le même axe des années : la dette (bleu), la charge (orange), en % du PIB."""
     nb = C["nb"][lang]
     pc = " %" if lang == "fr" else "%"
@@ -226,7 +226,9 @@ def fig_ciseau_m(dette_annuel, d41_pib, lang, C, licence_m, svg_d, titre, source
     a0, a1 = min(min(dette_annuel), min(d41_pib)), max(max(dette_annuel), max(d41_pib))
     lib = ({"fr": ("Dette publique, en % du PIB", "Intérêts, en % du PIB"),
             "en": ("Public debt, % of GDP", "Interest, % of GDP")})[lang]
-    for k, (serie, coul, vmax, ticks) in enumerate(((dette_annuel, C["BLEU"], 125, (0, 40, 80, 120)),
+    # Haut de l'echelle de la dette a 140 : l'etiquette finale (valeur et date) se pose alors sous le titre du
+    # panneau au lieu de le chevaucher (rendu du 11/10/2026).
+    for k, (serie, coul, vmax, ticks) in enumerate(((dette_annuel, C["BLEU"], 140, (0, 40, 80, 120)),
                                                      (d41_pib, C["ORANGE"], 4, (0, 1, 2, 3, 4)))):
         y += 14
         e.append('<text x="0" y="%d" font-size="%s" font-weight="600" fill="%s">%s</text>' % (y, FS, C["INK"], esc(lib[k])))
@@ -235,9 +237,11 @@ def fig_ciseau_m(dette_annuel, d41_pib, lang, C, licence_m, svg_d, titre, source
         X, Y = _courbe_m(e, y, 130, [(pts, coul, 2.6)], a0, a1, 0, vmax, ticks, C)
         premier, dernier = pts[0], pts[-1]
         e.append('<circle cx="%.1f" cy="%.1f" r="4" fill="%s"/>' % (X(dernier[0]), Y(dernier[1]), coul))
+        # Les deux series ne finissent pas a la meme date (dette : dernier trimestre ; interets : derniere annee) :
+        # chaque valeur finale porte sa date (OPTIMUM-18).
         e.append('<text x="%.1f" y="%.1f" font-size="15" font-weight="600" fill="%s" text-anchor="end">%s</text>'
                  % (X(dernier[0]) - 6, Y(dernier[1]) - 9 if k == 0 else Y(dernier[1]) - 10, C["INK"],
-                    esc(nb(dernier[1]) + pc)))
+                    esc(nb(dernier[1]) + pc + " · " + fin[k])))
         e.append('<text x="%.1f" y="%.1f" font-size="%s" font-weight="600" fill="%s">%s</text>'
                  % (X(premier[0]) + 2, Y(premier[1]) - 9, FS, coul, esc(nb(premier[1]) + pc)))
         if k == 1:
@@ -354,8 +358,11 @@ def fig_longue_m(annuel, pct_courant, label_courant, seuils, lang, C, licence_m,
     # meme trace que la version detaillee : la serie annuelle, prolongee par le dernier trimestre publie
     pts = sorted(annuel.items()) + [(max(annuel) + 0.25, pct_courant)]
     y += 14
+    # Dernier repere de l'axe : la derniere OBSERVATION (le trimestre publie), non l'annee civile (OPTIMUM-18)
     X, Y = _courbe_m(e, y, 190, [(pts, C["BLEU"], 2.6)], pts[0][0], pts[-1][0], 0, 130, (0, 30, 60, 90, 120), C,
-                     mr=14, ans_axe=(pts[0][0], max(annuel)))
+                     mr=14, ans_axe=(pts[0][0],))
+    e.append('<text x="%.1f" y="%.1f" font-size="%s" fill="%s" text-anchor="end">%s</text>'
+             % (X(pts[-1][0]), y + 190 + 19, FS, C["MUTED"], esc(label_courant)))
     e.append('<circle cx="%.1f" cy="%.1f" r="4.5" fill="%s"/>' % (X(pts[-1][0]), Y(pts[-1][1]), C["ORANGE"]))
     y += 190 + 36
     e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>'

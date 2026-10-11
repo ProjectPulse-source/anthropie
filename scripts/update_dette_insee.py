@@ -2502,7 +2502,7 @@ def main() -> int:
             (g["OUT_SVG_DECOMP" + suf], lambda d: FIG.fig_decomp_m(dec_rows, dec_cumul, lang, CTX, LIC_M[lang], d)),
             (g["OUT_SVG" + suf], lambda d: FIG.fig_ciseau_m(
                 dq, dpib, lang, CTX, LIC_M[lang], d, Cl["titre_ciseau"] % quarter(lastq),
-                Cl["src_ciseau"] % (quarter(lastq), last_y), Cl["ciseau"])),
+                Cl["src_ciseau"] % (quarter(lastq), last_y), Cl["ciseau"], fin=(quarter(lastq), last_y))),
             (g["OUT_SVG_CHARGE" + suf], lambda d: FIG.fig_charge_m(
                 inter_md, trajectoire["charge_md"], lang, CTX, LIC_M[lang], d,
                 Cl["titre_charge"] % (min(inter_md), max(inter_md)),
