@@ -30,7 +30,7 @@ faq:
     answer: "Aux règles en vigueur pour les étudiants qui commencent le troisième cycle depuis la rentrée 2023, au moins {del.duree} ans depuis la première année : {del.cycle1} semestres de premier cycle, {del.cycle2} semestres de deuxième cycle (arrêté du 8 avril 2013), puis un troisième cycle de médecine générale « d'une durée de quatre années » (code de l'éducation, art. L632-2). C'est une durée minimale, sans redoublement, interruption ni passerelle. La dernière année se déroule en stage, sous un régime d'autonomie supervisée."
   - question: "Une hausse des admissions produit-elle de nouveaux médecins généralistes formés en cinq ans ?"
     answer: "Pas pour les étudiants qui entrent alors en première année : aux règles en vigueur pour ceux qui commencent le troisième cycle depuis 2023, leur cursus complet dure au moins {del.duree} ans. Des actes de soins sont toutefois réalisés avant son achèvement, sous supervision, comme le prévoient le code de l'éducation (art. L632-2) et le code de la santé publique (art. R6153-1-2)."
-  - question: "Combien d'étudiants sont admis en deuxième année de médecine ?"
+  - question: "Combien d'étudiants sont admis dans le cursus de médecine ?"
     answer: "{del.admis_2025} en 2025, pour {del.capacites_2025} places, selon l'ONDPS ; {del.admis_2021_2025} de 2021 à 2025. Les places avaient été divisées par {del.rapport_baisse} entre 1972 ({del.places_1972}) et {del.an_min} ({del.places_min}), avant de remonter. Le champ des places a changé en 2010-2011 (passerelles et droits au remords inclus), et la série relève depuis 2021 du régime du numerus apertus."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["juridique-institutionnel", "quantitatif"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
@@ -83,7 +83,7 @@ Oui, et les textes l'organisent. «&nbsp;{{< del-val "cit_supervision" >}}&nbsp;
 
 Cette durée de formation ne décrit pas, à elle seule, l'effectif des médecins déjà en activité. À titre distinct, au 1er&nbsp;janvier 2026, selon la DREES, {{< del-val "etr_26" >}} des {{< del-val "tot_26" >}} médecins actifs, soit {{< del-val "etr_p26" >}}&nbsp;%, avaient obtenu leur diplôme à l'étranger, contre {{< del-val "etr_p12" >}}&nbsp;% en 2012. C'est un effectif présent, non le nombre d'arrivées d'une année, et le lieu du diplôme ne dit pas la nationalité. Ce rapprochement ne mesure aucune compensation des capacités de formation françaises par les diplômes obtenus à l'étranger.
 
-## Combien d'étudiants sont admis en deuxième année de médecine&nbsp;? {#admissions}
+## Combien d'étudiants sont admis dans le cursus de médecine&nbsp;? {#admissions}
 
 {{< figure-svg fichier="delais-admissions" alt="Barres annuelles des admissions en études de médecine de 1972 à 2025 : une baisse jusqu'à un minimum au début des années 1990, puis une remontée ; deux lignes en pointillés marquent les changements de champ de 2010-2011 et de 2021. Les valeurs sont dans le texte qui suit." >}}Places pourvues en études de médecine de 1972 à 2020 (DREES, source ONDPS), puis admis de 2021 à 2025 (ONDPS), à leur année. Chaque barre restitue les places pourvues ou les admis rattachés à l'année publiée par la source&nbsp;; aucune valeur n'est déplacée vers une année d'exercice supposée.{{< /figure-svg >}}
 

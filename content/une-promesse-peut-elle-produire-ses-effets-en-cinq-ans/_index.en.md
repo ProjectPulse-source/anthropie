@@ -35,7 +35,7 @@ faq:
     answer: "Under the rules in force for students who start the third cycle from the 2023 academic year, at least {del.duree} years from the first year: {del.cycle1} semesters of first cycle, {del.cycle2} semesters of second cycle (order of 8 April 2013), then a third cycle in general practice lasting four years (Education Code, art. L632-2). This is a minimum duration, without repeating a year, interruption or alternative-entry route. The last year is spent as an internship, under a regime of supervised autonomy."
   - question: "Does a rise in admissions produce newly trained general practitioners within five years?"
     answer: "Not for the students who enter the first year at that point: under the rules in force for those who start the third cycle from 2023, their full curriculum takes at least {del.duree} years. Doctors in training nevertheless provide care before it ends, under supervision, as provided for by the Education Code (art. L632-2) and the Public Health Code (art. R6153-1-2)."
-  - question: "How many students are admitted to the second year of medical school in France?"
+  - question: "How many students are admitted to medical school in France?"
     answer: "{del.admis_2025} in 2025, for {del.capacites_2025} places, according to the ONDPS; {del.admis_2021_2025} from 2021 to 2025. Places had been divided by {del.rapport_baisse} between 1972 ({del.places_1972}) and {del.an_min} ({del.places_min}), before rising again. The scope of places changed in 2010-2011 (alternative-entry routes (passerelles) and reorientation entries (droit au remords) included), and since 2021 the series falls under the numerus apertus regime."
 ressource:  # index /en/resources/ (layouts/ressources/list.html)
   type: ["juridique-institutionnel", "quantitatif"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
@@ -88,7 +88,7 @@ Yes, and the texts organise it. «&nbsp;{{< del-val "cit_supervision" >}}&nbsp;�
 
 This length of training does not, on its own, describe the number of doctors already in practice. Separately, on 1 January 2026, according to the DREES, {{< del-val "etr_26" >}} of the {{< del-val "tot_26" >}} practising doctors, or {{< del-val "etr_p26" >}}%, had obtained their diploma abroad, against {{< del-val "etr_p12" >}}% in 2012. This is a stock present at a date, not the number of arrivals in a year, and the place of the diploma does not tell nationality. This comparison does not measure any compensation of French training capacity by diplomas obtained abroad.
 
-## How many students are admitted to the second year of medical school? {#admissions}
+## How many students are admitted to medical school? {#admissions}
 
 {{< figure-svg fichier="delais-admissions-en" alt="Annual bars of admissions to medical studies from 1972 to 2025: a fall to a minimum in the early 1990s, then a rise; two dotted lines mark the changes of scope of 2010-2011 and 2021. The values are in the text that follows." >}}Places filled in medical studies from 1972 to 2020 (DREES, source ONDPS), then admissions from 2021 to 2025 (ONDPS), by year. Each bar shows the places filled or the admissions attached to the year published by the source; no value is shifted to an assumed year of practice.{{< /figure-svg >}}
 
