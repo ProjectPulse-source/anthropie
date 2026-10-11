@@ -57,10 +57,11 @@ Promising to put a reform to the voters means promising to use a route other tha
 
 ## Who can put a text to a referendum? {#qui-peut}
 
-Two articles of the Constitution open the way, under different conditions.
+Three articles of the Constitution open the way, under different conditions.
 
 - **Article 11** allows the president to submit to a referendum a Government Bill, "{{< ref-val "cit_art11_1" >}}". The subject is defined: a Bill "{{< ref-val "cit_art11_objet" >}}".
 - **Article 89** governs amendments to the Constitution. A Bill to amend the Constitution passed by the two Houses is in principle submitted to a referendum. "However, {{< ref-val "cit_art89_voies" >}}", where it must obtain a three-fifths majority of the votes cast. A Private Member's Bill to amend the Constitution does not have that second route: "{{< ref-val "cit_art89_ref" >}}"
+- **Article 88-5** covers a single case: "any Government Bill authorising the ratification of a treaty pertaining to the accession of a State to the European Union shall be submitted to referendum by the President of the Republic" (our translation). Parliament may, however, by a motion adopted in identical terms by each House by a three-fifths majority, authorise the passing of the Bill under the Congress procedure (Article 89, paragraph 3).
 
 The act by which the president submits a Bill to a referendum (art. 11) does not need the countersignature of the Prime Minister: it is one of the exceptions of article 19 (see [what the president can decide alone](/en/what-can-the-french-president-decide-alone/)). But he cannot take it without the recommendation or motion that precedes it, and it is the electorate that adopts or rejects the text. The Conseil constitutionnel ensures the proper conduct of the proceedings; under article 60, it "{{< ref-val "cit_art60" >}}".
 

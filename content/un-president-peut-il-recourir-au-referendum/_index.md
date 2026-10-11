@@ -52,10 +52,11 @@ Promettre de soumettre une réforme aux électeurs, c'est promettre de passer pa
 
 ## Qui peut soumettre un texte au référendum&nbsp;? {#qui-peut}
 
-Deux articles de la Constitution ouvrent la voie, à des conditions différentes.
+Trois articles de la Constitution ouvrent la voie, à des conditions différentes.
 
 - **L'article 11** permet au président de soumettre au référendum un projet de loi, «&nbsp;{{< ref-val "cit_art11_1" >}}&nbsp;». Le sujet est délimité&nbsp;: un projet «&nbsp;{{< ref-val "cit_art11_objet" >}}&nbsp;».
 - **L'article 89** organise la révision de la Constitution. Un projet de révision voté par les deux assemblées est en principe soumis au référendum, «&nbsp;Toutefois, {{< ref-val "cit_art89_voies" >}}&nbsp;», où il doit réunir les trois cinquièmes des suffrages exprimés. Une proposition de révision, d'origine parlementaire, n'a pas cette seconde voie&nbsp;: «&nbsp;{{< ref-val "cit_art89_ref" >}}&nbsp;»
+- **L'article 88-5** vise un seul cas&nbsp;: «&nbsp;Tout projet de loi autorisant la ratification d'un traité relatif à l'adhésion d'un État à l'Union européenne est soumis au référendum par le Président de la République.&nbsp;» Le Parlement peut toutefois, par une motion adoptée en termes identiques par chaque assemblée à la majorité des trois cinquièmes, autoriser l'adoption du projet selon la procédure du Congrès (art.&nbsp;89, al.&nbsp;3).
 
 L'acte par lequel le président soumet un projet au référendum (art.&nbsp;11) n'a pas besoin du contreseing du Premier ministre&nbsp;: c'est l'une des exceptions de l'article&nbsp;19 (voir [ce que le président peut décider seul](/pouvoirs-du-president-de-la-republique/)). Mais il ne peut pas l'accomplir sans la proposition qui le précède, et c'est le corps électoral qui adopte ou rejette le texte. Le Conseil constitutionnel veille à la régularité des opérations&nbsp;; selon l'article&nbsp;60, «&nbsp;{{< ref-val "cit_art60" >}}&nbsp;»
 
