@@ -1,4 +1,4 @@
-# relu le 2026-10-11 ; texte servi de /qui-paie-la-dette-publique/, build de 86a46f0 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-11 ; texte servi de /qui-paie-la-dette-publique/, build de 4f032c2 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Qui paie vraiment la dette publique ?
 Un même effort de 10 milliards d'euros ne tombe pas sur les mêmes ménages selon la décision prise : par l'enseignement, il pèse surtout sur les plus modestes, par l'impôt sur les plus aisés.
@@ -202,7 +202,7 @@ Les générations suivantes héritent des infrastructures, de la formation et du
 Cela ne neutralise pas nécessairement la charge : certains modèles identifient un canal d’éviction du capital productif, que cette page ne mesure pas en France.
 Le transfert net dépend de l’usage, du financement, des créances transmises et de l’alternative retenue.
 La dette nette publiée par l’INSEE ne tranche pas non plus : elle ne déduit que certains actifs financiers, pas les routes, le capital humain ni l’environnement.
-La page La dette publique est-elle un fardeau pour les générations futures ? mesure ce que les déficits ont effectivement financé.
+La page La dette publique est-elle un fardeau pour les générations futures ? décompose, dans les comptes, les emplois des déficits, sans dire quel euro emprunté a payé quelle dépense.
 Les groupes moins mobiles — une hypothèse à tester
 Les ménages et les entreprises qui peuvent déplacer leurs revenus, leur patrimoine ou leur activité échappent plus facilement à un prélèvement que les salariés, les retraités ou les usagers d’un service public local.
 D’où l’hypothèse : quand l’ajustement suit la ligne de moindre résistance, il peut peser davantage sur ceux qui ne peuvent pas partir.
@@ -290,7 +290,7 @@ Pas mécaniquement.
 Les générations suivantes héritent des engagements, mais aussi de ce qu'ils ont financé — infrastructures, formation, patrimoine public — et d'une partie des titres eux-mêmes, détenus directement ou par l'assurance-vie — ce qui ne neutralise pas nécessairement la charge, la dette pouvant aussi évincer du capital productif.
 Le transfert net dépend de l'usage : une dette qui finance une consommation courante sans contrepartie durable leur transmet surtout un coût ; un investissement dont elles profiteront peut leur transmettre davantage qu'il ne coûte.
 Ce qui reste vrai dans tous les cas : la décision est prise sans elles.
-Ce que les déficits ont effectivement financé, dans les comptes, est mesuré sur la page « La dette publique est-elle un fardeau pour les générations futures ? » du même dossier.
+La page « La dette publique est-elle un fardeau pour les générations futures ? » du même dossier décompose, dans les comptes, les emplois des déficits.
 Qui détient la dette publique française, et qui en touche les intérêts ?
 L'État porte 82 % de la dette publique (fin 2025, INSEE).
 Au 1er trimestre 2026, ses titres négociables sont détenus en valeur de marché à 57,5 % par des non-résidents, 21,9 % par des banques, assureurs et fonds résidents, 20,6 % par d'autres porteurs résidents, parmi lesquels la Banque de France, dont la part n'est pas publiée (Banque de France, via l'Agence France Trésor).

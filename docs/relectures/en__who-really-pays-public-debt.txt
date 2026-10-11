@@ -1,4 +1,4 @@
-# relu le 2026-10-11 ; texte servi de /en/who-really-pays-public-debt/, build de 86a46f0 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-11 ; texte servi de /en/who-really-pays-public-debt/, build de 4f032c2 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Who really pays for public debt?
 The same €10 billion adjustment falls on different households depending on the decision taken: through education, it weighs mostly on the least well-off; through taxes, on the best-off.
@@ -209,7 +209,7 @@ The next generations inherit the infrastructure, education and public assets fin
 This does not necessarily neutralise the burden: some models identify a channel through which debt crowds out productive capital, which this page does not measure for France.
 The net transfer depends on the use, the financing, the claims passed on and the alternative chosen.
 Net debt as published by INSEE does not settle the matter either: it deducts only certain financial assets, not roads, human capital or the environment.
-The page Is public debt a burden on future generations? measures what deficits actually financed.
+The page Is public debt a burden on future generations? breaks down, in the accounts, what deficits were used for, without saying which borrowed euro paid for which expense.
 Less mobile groups — a hypothesis to be tested
 Households and firms that can move their income, wealth or activity escape a levy more easily than employees, retirees or users of a local public service.
 Hence the hypothesis: when adjustment follows the line of least resistance, it may weigh more on those who cannot leave.

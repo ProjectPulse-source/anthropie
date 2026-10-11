@@ -195,7 +195,7 @@ Debt converts present spending into future obligations: those who come after inh
 
 <details class="repli"><summary>What the net transfer depends on, and what net debt does not say</summary>
 
-The next generations inherit the infrastructure, education and public assets financed, and securities that their parents hold directly or through assurance-vie. This does not necessarily neutralise the burden: some models identify a channel through which debt crowds out productive capital, which this page does not measure for France. The net transfer depends on the use, the financing, the claims passed on and the alternative chosen. Net debt as published by INSEE does not settle the matter either: it deducts only certain financial assets, not roads, human capital or the environment. The page [Is public debt a burden on future generations?](/en/public-debt-future-generations/) measures what deficits actually financed.
+The next generations inherit the infrastructure, education and public assets financed, and securities that their parents hold directly or through assurance-vie. This does not necessarily neutralise the burden: some models identify a channel through which debt crowds out productive capital, which this page does not measure for France. The net transfer depends on the use, the financing, the claims passed on and the alternative chosen. Net debt as published by INSEE does not settle the matter either: it deducts only certain financial assets, not roads, human capital or the environment. The page [Is public debt a burden on future generations?](/en/public-debt-future-generations/) breaks down, in the accounts, what deficits were used for, without saying which borrowed euro paid for which expense.
 
 </details>
 
