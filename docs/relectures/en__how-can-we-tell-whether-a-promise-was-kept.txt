@@ -1,0 +1,268 @@
+# relu le 2026-10-12 ; texte servi de /en/how-can-we-tell-whether-a-promise-was-kept/, build de 664e06c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+FRThis page is also available in French — version française
+How can we tell whether a promise was kept?
+Two accurate figures can tell two different stories.
+In 2024, according to Insee, only 49% of category A registrants at France Travail are unemployed in the sense of the International Labour Organization (ILO).
+And the rule for counting registrants changed in 2022, at the end of 2024 and in 2025, sometimes downwards, sometimes upwards.
+To judge a promise on unemployment, four questions: by which indicator, since when, has the rule stayed the same, what share can be attributed.
+Presidential promises
+↓ Charts, data and citations to reuseReuse this page
+When a candidate promises to “bring unemployment down”, we think we know what we will look at five years later: the unemployment figure.
+In France there are at least two, published by two institutions under two definitions, and they do not count the same people.
+This page puts to them the four questions that the book asks of any promise of results — by which indicator, since when, has the rule stayed the same, what share can be attributed — and answers each one with the data published by Insee, the French statistics institute, and the Dares.
+French texts are quoted in our translation.
+By which indicator?
+Two measures, two populations
+The first indicator is unemployment in the sense of the International Labour Organization (ILO), measured each quarter by Insee from the Labour Force Survey.
+According to Insee, an unemployed person is “a person aged 15 or over without a job, available to take one within fifteen days and who has actively looked for a job in the previous month (or has found one starting within three months)”.
+The second is the number of registrants in category A at France Travail, the public employment service, taken from its register: category A groups “people who did no work during the month and are required to look for work”.
+A survey measures a situation; a register records a step taken and an administrative category, which depend on the registration rules.
+One can actively look for a job without being registered, and be registered without meeting the ILO criteria.
+To measure this gap, Insee, the Dares and France Travail matched the two sources for 2024:
+Cross-tabulation of ILO status and registration with France Travail, 2024 average, France excluding Mayotte, people aged 15 to 64 living in ordinary households.
+Insee estimate (Dares-Insee-France Travail matching).
+Download · Cite · Data
+The finding in one sentence.
+In 2024, according to the Insee estimate, only 49% of category A registrants are unemployed in the ILO sense, and 62% of the people unemployed under the ILO definition are registered in category A.
+The two measures have about 1.43 million people in common.
+The category A registrants who are not unemployed in the ILO sense, about 1.47 million, are, for the most part, not people in work: 236,000 of them have a job in the ILO sense.
+The other 1.23 million are without a job.
+Among them, 727,000 are in the “halo around unemployment”: they want to work, but are not available within two weeks or have not searched actively in the month.
+The remaining 503,000 are inactive, outside that halo.
+These counts are a survey estimate, whose margin is not published
+The matching rests on the respondents of the Labour Force Survey, and Insee attributes to “the random error associated with survey data” the difference between the number of registrants it finds this way and the published number.
+The thousands shown restate the estimate; they do not give its precision.
+And the people unemployed in the ILO sense who are not registered in category A?
+There are 863,000 of them.
+Among them, 524,000 are not registered at all with France Travail, 240,000 are registered in category B or C (they worked a few hours in the month, which takes them out of category A) and 99,000 in category D or E (registrants who are not required to look for work, for instance because they are in training or in a subsidised job).
+Since when?
+The starting point changes the reading
+Judging a promise means comparing two dates.
+Over the long run, the two measures published by Insee, as annual averages, do not follow the same path:
+ILO unemployed and category A registrants at France Travail, annual averages published by Insee, 2012-2025, France excluding Mayotte, aged 15-64.
+Markers: rule changes documented by Insee and the Dares.
+Download · Cite · Data
+The gap between category A registrants and the ILO unemployed went from 0.3 million in 2012 to 1.5 million in 2020, the year of the health crisis.
+It came back down to 0.7 million in 2024, before rising again to 0.9 million in 2025.
+Insee sums up the period in the title of its study, “the gap narrowed between 2021 and 2024 but remains large”, and notes for 2025 that “the two indicators diverge again”.
+The same period can therefore show two different trends depending on the indicator chosen.
+The gap year by year
+Year
+Gap between category A registrants and the ILO unemployed (annual average)
+2012
+0.3 million
+2019
+1.1 million
+2020
+1.5 million
+2021
+1.2 million
+2024
+0.7 million
+2025
+0.9 million
+Annual averages published by Insee (Emploi, chômage, revenus du travail, 2026 edition, file 1, figure 1).
+These movements do not stem from the labour market alone: Insee links part of them to registration rules and to the redesign of the survey, marked on the figure.
+To judge a promise, the starting date is set before looking at the data, never afterwards; that is why the figure cuts out no term of office.
+Has the rule stayed the same?
+Changes in opposite directions
+No, and not only in 2025.
+For registrants, the counting rule has changed several times since 2022.
+The register is kept by France Travail; the series are produced with the Dares, “the ministerial statistical service responsible for the labour market” according to Insee (that of the labour ministry), which itself dates these breaks, and quantifies several of them, in its publications.
+Here is the effect of each on category A, as the source describes it:
+Date
+What changes
+Effect on category A, according to the source
+2022
+New monthly updating form, which records hours worked better
+Down: about 105,000 registrants, mostly reclassified into categories B and C (Dares)
+October-November 2024
+Form changed again
+Up: about 36,000 registrants (Dares and France Travail)
+January 2025
+Automatic registration of the groups covered by the full employment act (RSA, young people in programmes, disabled people)
+Up: the 2025 rise partly results from it (Insee)
+January-March 2025
+Automatic updating of new registrants without entitlement to a France Travail allowance
+Up in the first quarter (Dares)
+April 2025
+Automatic updating restricted to first-time registrations
+Down in the second quarter (Dares)
+June 2025
+New sanctions regime
+Fewer removals from the register (Dares, Insee)
+The updating form, by which registrants declare their activity each month, is France Travail’s, according to Insee; the documents read do not say who decided its changes of 2022 and 2024.
+Automatic registration comes from the full employment act of 18 December 2023, passed by Parliament.
+On the survey side, the ILO unemployment series was rebuilt after the redesign of the Labour Force Survey in 2021.
+What the sources say, date by date
+2019-2021.
+The unemployment insurance reform, applied from November 2019 to December 2021, includes, according to Insee, “measures likely to affect registration behaviour with France Travail regardless of the situation on the labour market”.
+2021.
+The Labour Force Survey is redesigned; for ILO status, “back-cast weights were used to correct as far as possible for the impact of these changes” (Insee).
+The ILO unemployment series is therefore rebuilt as well.
+2022.
+A new monthly updating form, which records hours worked better, has, according to the Dares, “a lasting downward impact on the number of registrants in category A”: it estimates it at about 105,000 fewer registrants in category A between January and November 2022, mostly reclassified into categories B and C.
+October-November 2024.
+The form changes again, this time upwards: “between October and November 2024, a change in the monthly updating form led to an increase in the number of jobseekers in category A”, by about 36,000 people at national level in the fourth quarter of 2024 (Dares and France Travail, quarterly publication reproduced by the regional labour directorate of Normandy).
+January 2025.
+The full employment act of 18 December 2023 provides for automatic registration.
+According to the Dares, applicants for and recipients of the RSA (minimum income), young people followed by local youth employment services (missions locales) in a youth commitment contract (CEJ) or a contractual support pathway (Pacea), and disabled people followed by Cap emploi, the specialised support network, are now registered systematically; for people already on the RSA, registration is gradual.
+Two new categories, F and G, take in people directed to a social pathway and those awaiting orientation.
+January to April 2025.
+From January to March, new registrants without benefit entitlement are updated automatically, and therefore counted in category A until they sign their commitment contract; the rule is restricted in April to first-time registrations.
+In March, an incident wrongly counts 36,000 people in category A, reclassified into category G in April (Dares).
+Since June 2025.
+A decree changes the sanctions regime: a “suspension-remobilisation” now precedes any removal from the register, which reduces the number of removals (Dares, Insee).
+The Dares also publishes a series of category A registrants excluding RSA recipients and young people in programmes, available since 2018.
+It removes the groups covered by the law; it does not remove the other changes.
+Category A registrants at France Travail, quarterly average of end-of-month registrants, France excluding Mayotte, seasonally and working-day adjusted, with and without RSA recipients and young people in programmes.
+Latest point: second quarter of 2026.
+These levels cannot be compared directly with those of the 2024 cross-tabulation, which covers a different scope.
+Download · Cite · Data
+The series excluding RSA also carries the 2025 break.
+In the first quarter of 2025, it jumps (+100,300, against +261,200 for the published series).
+In the second, it falls back (−74,500, against −167,700).
+This is the signature of the automatic updating from January to March 2025, which applied to all new registrants without entitlement to a France Travail allowance, not only to the groups covered by the law.
+And the starting point of the comparison, the fourth quarter of 2024, already carries the form changed in October-November 2024.
+Over the whole period, between the fourth quarter of 2024 and the second quarter of 2026, published category A has 194,000 more registrants.
+The series excluding RSA has 56,900 more.
+The levels of the two series
+Fourth quarter of 2024
+Latest point (second quarter of 2026)
+Change
+Published category A
+3.13 million
+3.32 million
+194,000 more
+Excluding RSA recipients and young people in programmes
+2.38 million
+2.44 million
+56,900 more
+The cross-tabulation is a 2024 annual average for people aged 15-64 living in ordinary households; the Dares series are averages, over each quarter, of the registrants counted at the end of each month, on a different scope.
+The two series describe two different populations: their gap is not the effect of the reform, and a small gap would not prove a small effect.
+Neither is an intact witness of what would have happened without the law.
+These series have not carried a statistical quality label since 1 January 2025.
+On 14 November 2024, the French Official Statistics Authority (Autorité de la statistique publique), which certifies the quality of public statistics, suspended their label for the time it still had to run.
+Its reason: the 2025 changes affect both the number of registrants and their categories, “which will make the previously labelled statistical series on jobseekers difficult to interpret”.
+It asks the Dares and France Travail for clear and educational communication to avoid misinterpretations; its decision calls into question neither the published figures nor the way they are produced.
+The Authority’s decision, in quotations
+The label of the registrant series “had been renewed and extended on 21 May 2021 for a period of five years”.
+The decision of 14 November 2024 is to suspend “the label of these series for the period remaining between 1 January 2025 and 20 May 2026”.
+The Authority also asks for published monitoring of reclassifications between categories, and has since kept to regular monitoring, “until it is in a position to consider a labelling process for the new series, once the permanent regime has been reached”.
+On 28 July 2026, the Dares metadata still state that the Authority “suspended, from 1 January 2025, the label of the statistical series on jobseekers produced by France Travail and the Dares”.
+The stated reason concerns the stability and interpretation of the series while the law is being phased in.
+What share can be attributed?
+Contribution, effect, and what the sources say
+On the ILO measure, Insee quantified the share of the groups targeted by the law in the rise in unemployment: “the two target groups of the full employment act account for nearly half of the rise in the unemployment rate since end-2024 (+0.44 points out of +0.98 points in total)” (Informations rapides No.
+192, 7 August 2026).
+Insee attaches two caveats to this figure: “these contributions should however be treated with caution, because of survey error and the small share of the populations concerned”, and “these are moreover accounting contributions, which do not make it possible to distinguish the effects of the full employment act from the cyclical effects affecting these groups”.
+This figure covers France including Mayotte, whereas the cross-tabulation and the Dares series cover France excluding Mayotte.
+An accounting contribution is neither an effect of the law nor proof that there was no effect.
+It says what share of the rise is found among these groups; it does not say what caused it, nor what unemployment would have been without the law.
+In its review of 2025, Insee devotes a box to the law, headed “In 2025, the full employment act has relatively limited effects on labour market indicators in the ILO sense”.
+The heading speaks of effects; the figures presented remain contributions.
+What the Insee box says
+In this box (Emploi, chômage, revenus du travail, 2026 edition, overview, box 5), Insee describes a mechanism: “RSA recipients look for work more often”; this more frequent search is, according to Insee, part of the rise in their activity rate, whose corollary is the rise in their unemployment rate.
+It reports “a small upward contribution of RSA recipients to the activity and unemployment rates”, and recalls the limits of any survey-based measure: “sampling error, which causes some variability, and the difficulty of identifying the groups concerned precisely”.
+Unédic, the joint body that runs unemployment insurance, repeats Insee’s figure, writing that “this law would explain nearly half of the rise in the unemployment rate since end-2024”, while quoting its caveats: the verb “explain” lends the contribution an explanatory power that the measurement does not establish.
+Neither Insee nor Unédic measures what unemployment would have been without the law; saying so either way requires an evaluation that these publications do not yet contain.
+Judging a promise: the four questions
+A promise to reduce unemployment, taken as an example and aimed at no one, is judged with four questions, which are the last four of the book’s grid:
+By which indicator?
+ILO unemployment or category A registrants: in 2024, only 49% of the latter are counted in the former, and one cannot be swapped for the other along the way.
+Against which point of comparison?
+A date and a value stated in advance: the gap between the two measures went from 1.5 million in 2020 to 0.7 million in 2024, so the choice of starting year can change the diagnosis.
+Has the rule that will say whether it was kept stayed the same?
+For registrants, no: the 2022 form (about 105,000 fewer registrants in category A), the late-2024 form (about 36,000 more), automatic registration and automatic updating in 2025; for ILO unemployment, the survey redesigned in 2021.
+A before-and-after comparison names these breaks, or changes indicator.
+What share of the result can honestly be attributed to whoever made the promise?
+A contribution is not an effect; an observed change is not enough either to establish its cause or to rule it out.
+What this page does not say
+It does not say which of the two measures is the right one: one describes people’s situation, the other their registration.
+It measures the effect of no policy, including the full employment act.
+The cross-tabulation is an Insee estimate for the 2024 average: it describes neither 2025 nor 2026, which the matching does not cover.
+Judging a promise to the end Un président peut-il tenir ses promesses ?, the author's book, in French: contents, excerpts and reviews →
+Frequently asked questions
+What is the difference between ILO unemployment and category A registrants in France?
+They are two definitions.
+According to Insee, an unemployed person in the ILO sense is "a person aged 15 or over without a job, available to take one within fifteen days and who has actively looked for a job in the previous month (or has found one starting within three months)" (our translation); this is measured by the Labour Force Survey.
+Category A at France Travail groups "people who did no work during the month and are required to look for work" (our translation); it is an administrative register.
+For 2024, Insee estimates that 49% of category A registrants are unemployed in the ILO sense and that 62% of the people unemployed under the ILO definition are registered in category A.
+Why did the number of category A registrants change in 2025?
+For several reasons at once, according to the Dares.
+Since January 2025, the full employment act of 18 December 2023 has applicants for and recipients of the RSA (minimum income), young people followed by local youth employment services (missions locales) and disabled people followed by Cap emploi (the specialised employment service for disabled people) registered automatically with France Travail; from January to March 2025, new registrants without entitlement to a France Travail allowance were updated automatically, and therefore counted in category A; in June 2025, the sanctions regime changed.
+The rule had already changed in 2022 and at the end of 2024, with two versions of the monthly updating form.
+The French Official Statistics Authority suspended the statistical quality label of these series from 1 January 2025.
+How should a promise to reduce unemployment be judged?
+By setting in advance the indicator (ILO unemployment or category A registrants) and the point of comparison (the starting date and value), by checking that the measurement rule has not changed between the two dates, and then by asking what share of the change can honestly be attributed to the decisions of whoever made the promise.
+An observed change is not enough either to establish its cause or to rule it out.
+Sources
+Insee, Emploi, chômage, revenus du travail [Employment, unemployment, labour income], Insee Références, 2026 edition (published 2 July 2026): file 1, figures 1, 2 and 8, definitions, boxes and sources (Dares-Insee-France Travail matching of the Historical Statistical File and the Labour Force Survey); overview, box 5.
+Informations rapides No.
+192, 7 August 2026 (in French).
+Dares and France Travail, registrants at France Travail, quarterly stock, France, seasonally and working-day adjusted data, and the dataset’s metadata (updated 28 July 2026): procedural changes of 2022 and 2025, categories F and G, series excluding RSA recipients and young people in programmes.
+October-November 2024 updating form: warning of the fourth-quarter 2024 quarterly publication (regional labour directorate of Normandy, source France Travail-Dares) (in French).
+Autorité de la statistique publique (French Official Statistics Authority), decision of 14 November 2024 on labour market statistics.
+Law no.
+2023-1196 of 18 December 2023 on full employment.
+Unédic, “Comprendre le chômage au sens du BIT” (in French).
+Download the data (CC BY 4.0 licence): CSV, long format; JSON, with definitions, dated breaks and the record of the checks (field names and some labels in French).
+An earlier version of this dataset, without the long series, is archived on Zenodo with the six others of the same series and their methods note, under a permanent identifier: doi:10.5281/zenodo.23212664.
+How these figures were checked
+The counts of the cross-tabulation come from the spreadsheet published by Insee; a second extraction, written separately from the published PDF document, finds the same 35 values (24 cells and 11 totals), the same year and the same scope, and the three sets restated by subtraction equal those Insee prints in another table of the same file.
+The gaps of the long series equal those Insee writes in the text of the file.
+These checks verify that the page restates exactly what is published; they do not redo the matching, whose individual data are not public.
+The figures, quoted passages, checks and charts are produced by a single script, which rereads the files published by Insee, the Dares, the French Official Statistics Authority, Unédic and the regional labour directorate of Normandy, archived on 12 October 2026, and stops if a reread figure no longer meets the conditions on which the main sentences rest; each quoted passage and each number in the timeline is found word for word in these files, and only the dates of the timeline are written into the text.
+The Dares data are those of the 28 July 2026 update; a later release enters only after a new reading.
+Reusing this page
+The charts, the data and a ready-made citation, under an open licence.
+Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it does not come apart from what makes it readable.
+ILO-defined unemployment and category A registration in France, 2024
+In 2024, according to the Insee estimate, about 1.43 million people are both unemployed in the ILO sense and registered in category A; about 1.47 million category A registrants are not unemployed under the ILO definition, and 863,000 people unemployed under the ILO definition are not registered in category A.
+Reading caveat.
+Insee estimate, 2024 average, France excluding Mayotte, aged 15-64, ordinary households; two distinct definitions; survey margin not published.
+Insee Références, Emploi, chômage, revenus du travail, 2026 ed., file 1, figures 2 and 8 (Dares-Insee-France Travail matching)
+Download PNG
+SVG
+Category A registrants: published series and series without RSA recipients or youth programmes
+Both series of category A registrants carry the rule changes: monthly updating form in 2022, automatic registration and automatic updating in 2025.
+They describe two populations, and the gap between them does not measure the effect of the reform.
+Reading caveat.
+Scope and period differ from the 2024 cross-tabulation figure.
+Statistical quality label suspended since 1 Jan.
+2025 (2021 label, which ran until 20 May 2026).
+Dares and France Travail, quarterly average of end-of-month registrants, France excluding Mayotte, seasonally adjusted (series 'excluding RSA' since 2018)
+Download PNG
+SVG
+ILO unemployment and category A registrants in France, 2012-2025
+From 2012 to 2025, the gap between category A registrants and the ILO unemployed goes from 0.3 million in 2012 to 1.1 million in 2019, 1.2 million in 2021 and 0.7 million in 2024, according to the annual averages published by Insee; registration rules and the survey changed in the meantime.
+Reading caveat.
+Published annual averages, in millions, France excluding Mayotte, aged 15-64.
+Markers: Insee (1, 2) and Dares (3, 4).
+Insee Références, Emploi, chômage, revenus du travail, 2026 ed., file 1, figure 1 (Insee, Labour Force Survey, long series; Dares-France Travail, STMT)
+Download PNG
+SVG
+Cite this page
+Lalut, Stéphane (2026).
+“How can we tell whether a promise was kept?”.
+Insee and Dares data, retrieved 2026-10-12 (Dares series updated on 2026-07-28, up to the second quarter of 2026; Insee, edition of 2 July 2026). https://stephane-lalut.com/en/how-can-we-tell-whether-a-promise-was-kept/
+Copy citation
+In three sentences
+To judge a promise on unemployment in France, one must first choose its figure: in 2024, according to the Insee estimate, only 49% of category A registrants are unemployed in the ILO sense.
+One must then check the rule: the counting of registrants changed in 2022 (about 105,000 fewer registrants in category A), at the end of 2024 (about 36,000 more) and in 2025 (automatic registration, automatic updating), and the statistical quality label of these series has been suspended since 1 January 2025.
+A contribution is not an effect, and an observed change does not tell its cause.
+Copy summary
+The data
+The 2024 cross-tabulation of ILO status and registration category (24 cells and totals, in thousands), the quarterly series of category A registrants with and without the groups registered automatically, and the 2012-2025 annual averages of both measures; the same content exists as CSV, in long format, readable in a spreadsheet.
+Download JSON CSV
+Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
+Text under copyright — short quotation free, full reproduction on request.
+The raw series belong to their producers (Insee and Dares), under their own terms.
+All resources: data, explainers and reference material →
+Share
+WhatsApp
+Bluesky
+LinkedIn
+X
+Email
+Copy link

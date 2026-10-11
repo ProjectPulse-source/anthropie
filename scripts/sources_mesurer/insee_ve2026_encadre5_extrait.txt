@@ -1,0 +1,594 @@
+# Extrait de https://www.insee.fr/fr/statistiques/fichier/8733111/ECRT2026-VE.pdf (Insee References, ed. 2026, Vue d'ensemble)
+# PDF lu le 12/10/2026 ; SHA-256 du PDF : e0f0453fa78de5cc02cd365b093dd2a73291e2cc4f28db8b1561c97f3a6e4add
+# Texte extrait par pdftotext -enc UTF-8, sans retouche : p. 13 (deux paragraphes) puis l'encadre 5 en entier.
+La hausse d’ensemble est d’ampleur inédite depuis 2013 ; elle fait suite à sept années consécutives de diminution, puis à une stabilisation en 2023 et 2024. En 2025, le taux de chômage reste toutefois 2,7 points au‑dessous de son pic de 2015. La hausse du taux de chômage est encore plus nette en comparant les fins d’années 2024 et 2025 : +0,6 point. Elle résulte surtout du net ralentissement de l’emploi alors que la population active continue d’augmenter solidement. Elle s’inscrit également dans le contexte de mise en œuvre de la loi pour le plein emploi, entrée en vigueur en début d’année ; notamment les personnes au RSA, concernées par la loi, contribuent pour +0,2 point à la hausse d’ensemble encadré 5.
+Mise en œuvre à compter de janvier 2025, la loi pour le plein emploi acte l’inscription automatique sur les listes de France Travail des bénéficiaires du RSA, des jeunes en recherche d’emploi accompagnés par les missions locales et des personnes en situation de handicap suivies par Cap emploi. À compter de juin 2025, le décret relatif aux sanctions applicables aux inscrits à France Travail met fin aux radiations automatiques dès le premier manquement, au profit d’un système de « suspension‑remobilisation » plus progressif fondé sur un faisceau d’indices communiqués par le conseiller. Au sein des deux catégories créées en janvier 2025, 0,1 million de personnes sont inscrites en parcours social (catégorie F, données brutes) et 0,8 million en attente d’orientation (catégorie G, données brutes), en moyenne sur l’année. Le nombre de personnes en attente diminue progressivement depuis le deuxième trimestre, au fil des décisions d’orientation vers les autres catégories.
+En moyenne en 2025, le nombre d’inscrits à France Travail augmente de 8,4 % en catégorie A. Cette évolution reflète pour partie la montée en charge de la loi pour le plein emploi. Pour éclairer l’évolution conjoncturelle du marché du travail, la Dares et France Travail ont constitué deux séries complémentaires corrigées des effets du décret relatif aux sanctions sur le champ des catégories A et A, B, C hors nouveaux publics. En moyenne en 2025, l’évolution du nombre d’inscrits en catégorie A serait alors de +2,8 %.
+ Encadré 5 – En 2025, la loi pour le plein emploi a des effets relativement limités sur les indicateurs du marché du travail au sens du BIT
+La loi pour le plein emploi, votée en décembre 2023, a prévu une inscription systématique auprès de France Travail, à compter de janvier 2025, des allocataires du revenu de solidarité active (RSA), des jeunes en recherche d’emploi accompagnés par les missions locales et des personnes en situation de handicap accompagnées par Cap emploi. Elle a entraîné de façon mécanique une forte hausse du nombre d’inscrits à France Travail au premier trimestre 2025 [Insee, 2026b].
+L’Insee a publié une photographie de la situation sur le marché du travail des bénéficiaires du RSA au second semestre 2024, à la veille de la mise en œuvre de la loi [Castelain, Guérin, 2025]. Depuis lors, dans ses publications conjoncturelles trimestrielles sur le marché du travail, l’Insee suit la contribution aux principaux indicateurs au sens du Bureau international du travail (BIT) des publics concernés par la loi. Ces indicateurs sont estimés avec l’enquête Emploi en continu (EEC). Ils distinguent la contribution
+
+28
+
+Emploi, chômage, revenus du travail – Insee Références – Édition 2026
+
+des publics ciblés aux évolutions de l’enquête, avec les limites inhérentes à toute mesure par enquête : notamment l’aléa d’échantillonnage conduisant à une certaine variabilité et la difficulté à distinguer précisément les publics concernés.
+Pour consolider ces indicateurs après une année de mise en œuvre de la loi, un appariement des données de l’enquête Emploi a été réalisé avec les données administratives des bénéficiaires du RSA disponibles dans le dispositif Pasrau (Passage des revenus autres). Cet appariement sur chacun des trimestres de l’enquête Emploi permet de couvrir les 10 % des bénéficiaires du RSA qui ne sont pas spontanément distingués en tant que tels dans la question déclarative disponible chaque trimestre dans l’enquête.
+Après une année de mise en œuvre de la loi, une faible contribution haussière des bénéficiaires du RSA sur les taux d’activité et de chômage
+Au quatrième trimestre 2025, en données brutes, 5,7 % de la population est bénéficiaire du RSA, part en baisse de 0,2 point sur un an figure A. Leur taux d’activité atteint 50,2 % (contre 76,7 % dans le reste des 15‑64 ans, hors jeunes de 15 à 29 ans inscrits à France Travail). Ce taux a augmenté de 2,8 points sur un an. Compte tenu de leur poids dans la population, ils contribuent4 pour +0,21 point à l’évolution globale du taux d’activité sur un an (sur +0,73 point au total). Ces chiffres, qui bénéficient d’une meilleure couverture, sont du même ordre de grandeur que ceux publiés par l’Insee (2026a) portant sur le quatrième trimestre 2025 : la contribution des bénéficiaires du RSA était alors estimée à +0,12 point, sur +0,74 point au total (les résultats sur les autres indicateurs sont également globalement confirmés).
+
+A. Principaux indicateurs du marché du travail au T4 2025 selon les publics ciblés par la loi pour le plein emploi
+en points de %
+
+Indicateur
+
+Part dans la Évolution population de la part, au T4 2025 par rapport
+(en %) au T4 2024
+
+Taux au T4 2025 (en %)
+
+Évolution Contribution à l’évolution du
+
+du taux par taux par rapport au T4 2024
+
+rapport au T4 2024
+
+Estimée avec l’enquête Emploi
+
+Estimée avec la seule
+
+et le dispositif enquête
+
+Pasrau
+
+Emploi1
+
+Taux d’activité parmi les 15-64 ans 100,0
+
+so
+
+75,2
+
+0,7
+
+Bénéficiaires du RSA2
+
+5,7
+
+-0,2
+
+50,2
+
+2,8
+
+Jeunes inscrits à France Travail3
+
+3,9
+
+0,5
+
+77,8
+
+0,2
+
+Reste de la population
+
+90,4
+
+-0,3
+
+76,7
+
+0,5
+
+Taux d’emploi parmi les 15-64 ans 100,0
+
+so
+
+69,1
+
+0,2
+
+Bénéficiaires du RSA2
+
+5,7
+
+-0,2
+
+28,9
+
+-0,5
+
+Jeunes inscrits à France Travail3
+
+3,9
+
+0,5
+
+40,4
+
+-0,1
+
+Reste de la population
+
+90,4
+
+-0,3
+
+72,9
+
+0,3
+
+Taux de chômage (parmi les actifs
+
+de 15 ans ou plus)
+
+100,0
+
+so
+
+8,0
+
+0,6
+
+Bénéficiaires du RSA2
+
+3,8
+
+0,0
+
+42,0
+
+3,8
+
+Jeunes inscrits à France Travail3
+
+3,9
+
+0,4
+
+48,1
+
+0,3
+
+Reste de la population
+
+92,2
+
+-0,4
+
+4,9
+
+0,2
+
+0,73 0,21 0,01 0,51
+0,20 0,05 0,00 0,15
+0,56 0,16 0,01 0,39
+
+0,74 0,12 0,02 0,60
+0,23 0,02 -0,02 0,23
+0,62 0,11 0,04 0,47
+
+Part du halo parmi les 15-64 ans
+
+100,0
+
+so
+
+4,2
+
+-0,2
+
+-0,16
+
+nd
+
+Bénéficiaires du RSA2
+
+5,7
+
+-0,2
+
+16,0
+
+-1,5
+
+-0,05
+
+nd
+
+Jeunes inscrits à France Travail3
+
+3,9
+
+0,5
+
+13,2
+
+0,0
+
+0,00
+
+nd
+
+Reste de la population
+
+90,4
+
+-0,3
+
+3,0
+
+-0,1
+
+-0,10
+
+nd
+
+so : sans objet ; nd : non disponible. 1 Chiffres publiés dans Insee (2026a). 2 P ersonnes vivant dans un ménage dans lequel au moins une personne déclare percevoir le RSA dans l’enquête Emploi
+ou dans un ménage avec un individu déclaré dans le dispositif Pasrau. 3 P ersonnes âgées de 15 à 29 ans se déclarant inscrites à France Travail dans l’interrogation à l’enquête Emploi et
+non bénéficiaires du RSA. Lecture : Au quatrième trimestre 2025, le taux d’activité des bénéficiaires du RSA est de 50,2 %. Il augmente de 2,8 points par rapport au quatrième trimestre 2024. Compte tenu de l’évolution de la part de bénéficiaires du RSA, ces derniers contribuent de +0,21 point à l’évolution globale du taux d’activité sur un an (+0,73 point). Champ : France hors Mayotte, personnes âgées de 15 ans ou plus vivant dans un logement ordinaire. Source : Insee, enquête Emploi, dispositif Pasrau.
+
+4 L es contributions dans cet encadré sont calculées selon les mêmes principes et conventions que dans la méthodologie détaillée dans les publications conjoncturelles sur le sujet [Insee, 2026a].
+
+Insee Références – Édition 2026 – Vue d’ensemble – Le marché du travail en 2025 : l’emploi marque le pas, le chômage augmente à nouveau
+
+29
+
+Le taux d’emploi des bénéficiaires du RSA atteint 28,9 % au quatrième trimestre 2025 (contre 72,9 % des 15‑64 ans non ciblés par la loi), en baisse de 0,5 point sur un an. Pourtant, du fait de la baisse de la part des bénéficiaires de RSA dans la population et parce que leur taux d’emploi est structurellement plus bas que celui de l’ensemble de la population, ils contribuent pour +0,05 point à la hausse du taux d’emploi des 15-64 ans (+0,20 point).
+La hausse du taux d’activité et la baisse du taux d’emploi des bénéficiaires du RSA ont pour corollaire une hausse de leur taux de chômage. Ainsi, au quatrième trimestre 2025, il atteint 42,0 % (contre 4,9 % dans le reste de la population non ciblée), en hausse de 3,8 points par rapport à un an auparavant. Leur contribution est de +0,16 point à la hausse du chômage sur un an (+0,56 point).
+Enfin, la part du halo parmi les bénéficiaires du RSA (16,0 %) a diminué de 1,5 point entre les quatrièmes trimestres 2024 et 2025. Les bénéficiaires du RSA contribuent pour un tiers à la baisse globale de la part du halo parmi les 15‑64 ans (‑0,16 point). Cette baisse du halo traduit une plus grande disponibilité sur le marché du travail et est une contrepartie de la hausse des taux d’activité et du taux de chômage.
+Une contribution quasi nulle des jeunes inscrits à France Travail
+La deuxième population concernée par la loi pour le plein emploi est celle des jeunes en recherche d’emploi suivis par une mission locale. L’enquête Emploi ne permet pas de les identifier spécifiquement, mais permet de suivre une population proche et plus large : celle des jeunes de 15 à 29 ans inscrits à France Travail. Fin 2025, en données brutes, ils représentent 3,9 % de la population, part en hausse de 0,5 point sur un an.
+Au quatrième trimestre 2025, le taux d’activité des jeunes de 15 à 29 ans inscrits à France Travail atteint 77,8 %, légèrement plus élevé que celui du reste de la population, hors bénéficiaires du RSA (76,7 %). Il n’augmente que légèrement sur un an (+0,2 point) et ne contribue que marginalement à la hausse globale.
+Le taux d’emploi des jeunes de 15 à 29 ans inscrits à France Travail atteint 40,4 % (contre 72,9 % des 15‑64 ans non ciblés par la loi), soit une quasi‑stabilité sur un an (‑0,1 point). Ils ne contribuent donc presque pas à la hausse du taux d’emploi des 15-64 ans).
+Le taux de chômage des jeunes de 15 à 29 ans inscrits à France Travail atteint 48,1 %, en hausse de 0,3 point sur un an. Compte tenu de leur faible poids dans la population, ils ne contribuent pas à la hausse globale du taux de chômage.
+Enfin, la part du halo parmi les jeunes de 15 à 29 ans inscrits à France Travail est stable sur un an à 13,2 %. Ils ne contribuent donc pas à la baisse globale de la part du halo.
+Au total, les effets de la loi pour le plein emploi sur les jeunes de 15 à 29 ans inscrits à France Travail ne semblent pas significatifs à ce stade sur les indicateurs du marché du travail au sens du BIT. Il n’est toutefois pas certain que ce diagnostic soit identique pour la population plus restreinte des jeunes en recherche d’emploi suivis par une mission locale.
+Les bénéficiaires du RSA recherchent plus souvent un emploi
+Entre les quatrièmes trimestres 2024 et 2025, parmi les personnes sans emploi, la part de bénéficiaires du RSA déclarant avoir activement recherché un emploi dans les quatre dernières semaines augmente de 3,7 points, à 34,1 % : c’est une composante essentielle de l’accroissement de leur taux d’activité
+figure B. Parmi ces recherches, le fait d’avoir « étudié des offres d’emploi » augmente de 3,4 points et le fait « d’avoir passé une annonce pour trouver un emploi ou répondu à une offre d’emploi » croît de 3,3 points. Au quatrième trimestre 2025, 26,1 % des bénéficiaires du RSA déclarent avoir contacté France Travail (ou une mission locale, Cap emploi, l’Apec, une chambre des métiers) pour trouver un emploi, ou avoir répondu à l’une de leurs offres, soit une hausse de 3,1 points sur un an.
+
+30
+
+Emploi, chômage, revenus du travail – Insee Références – Édition 2026
+
+B. Moyens de recherche d’emploi parmi les personnes sans emploi
+
+en %
+
+Recherche et moyen de recherche
+
+Bénéficiaires du RSA1
+
+Jeunes de 15 à 29 ans inscrits à France Travail2
+
+Autres personnes
+
+2024 2025 Évolution 2024 2025 Évolution 2024 2025 Évolution
+
+(en points)
+
+(en points)
+
+(en points)
+
+Au moins une recherche Moyens de recherche A contacté France Travail A contacté une mission d’intérim A fait appel à son entourage A déposé un CV sur Internet A passé une annonce ou répondu
+à une offre d’emploi A étudié des offres d’emploi A passé un concours de la fonction
+publique A passé un test ou un entretien
+d’embauche A fait une candidature spontanée A fait des démarches pour s’installer
+à son compte
+
+30,4 34,1
+
+3,7
+
+65,0 66,7
+
+1,7
+
+14,2 14,8
+
+0,6
+
+23,1 26,1
+
+3,1
+
+53,0 54,7
+
+1,8
+
+13,0 14,5
+
+1,5
+
+29,7 33,0
+
+3,3
+
+18,6 19,4
+
+0,9
+
+41,9 45,1
+
+3,2
+
+17,4 19,9
+
+2,5
+
+47,8 53,1
+
+5,3
+
+8,6 8,7
+
+0,2
+
+5,4 6,2
+
+0,8
+
+8,8 9,6
+
+0,8
+
+9,1 9,7
+
+0,7
+
+12,3 15,6
+
+3,3
+
+31,7 38,3
+
+6,5
+
+6,5 6,8
+
+0,3
+
+25,8 29,3
+
+3,4
+
+58,3 60,4
+
+2,1
+
+11,8 12,2
+
+0,5
+
+0,3 0,9
+
+0,6
+
+1,2 2,3
+
+1,2
+
+0,1 0,3
+
+0,1
+
+5,9 7,3
+
+1,4
+
+23,4 23,8
+
+0,4
+
+10,1 11,8
+
+1,7
+
+27,7 29,3
+
+1,7
+
+4,1 4,3
+
+0,2
+
+5,7 6,5
+
+0,8
+
+3,2 3,4
+
+0,1
+
+3,7 3,7
+
+0,0
+
+1,6 1,6
+
+0,0
+
+1 Personnes vivant dans un ménage dans lequel au moins une personne déclare percevoir le RSA dans l’enquête Emploi ou dans un ménage avec un individu déclaré dans le dispositif Pasrau.
+2 P ersonnes se déclarant inscrites à France Travail dans l’interrogation à l’enquête Emploi et non bénéficiaires du RSA. Lecture : Au quatrième trimestre 2025, parmi les personnes sans emploi, 26,1 % des bénéficiaires du RSA ont contacté France Travail dans le cadre d’une recherche d’emploi, au cours des quatre dernières semaines, soit une hausse de 3,1 points sur un an. Champ : France hors Mayotte, personnes âgées de 15 ans ou plus vivant dans un logement ordinaire, sans emploi. Source : Insee, enquête Emploi, dispositif Pasrau.
+
+Le même mouvement est identifiable pour les jeunes de 15 à 29 ans inscrits à France Travail et sans emploi, bien que nettement moins marqué : parmi eux, au quatrième trimestre 2025, 66,7 % ont effectué une démarche active de recherche d’emploi lors des quatre dernières semaines précédant la semaine de référence de l’enquête, en hausse de 1,7 point sur un an. Les modalités de recherche sont légèrement différentes : avoir passé une annonce ou répondu à une offre augmente de 6,5 points sur un an (à 38,3 %) et « avoir déposé ou actualisé son CV sur internet » augmente de 5,3 points, à 53,1 %. Le mode de recherche le plus fréquent reste néanmoins d’avoir étudié des offres d’emploi (60,4 %), en hausse de 2,1 points sur un an.
+Les bénéficiaires du RSA restent plus fréquemment inactifs pour raisons de santé ou familiales
+Au quatrième trimestre 2025, 54,1 % des bénéficiaires du RSA sont inactifs pour des raisons de santé (avoir des problèmes de santé ou être en situation de handicap) ou des raisons familiales (être sur le point d’avoir un enfant, ou s’occuper d’un enfant ou d’un proche) figure C. C’est 22,1 points de plus que pour la population totale inactive des 15‑64 ans. La baisse du taux d’inactivité des bénéficiaires du RSA entre 2024 et 2025 repose pour l’essentiel sur le recul des motifs familiaux. Le motif de retraite (comprenant des situations « proches de la retraite ») est minoritaire pour les bénéficiaires du RSA (4,0 %) tandis qu’il est le deuxième motif d’inactivité pour le reste de la population, hors jeunes de 15 à 29 ans inscrits à France Travail (18,9 %). Au quatrième trimestre 2025, l’inactivité pour études est prépondérante à la fois pour les jeunes de 15 à 29 ans inscrits à France Travail (32,7 %) et pour le reste de la population hors bénéficiaires du RSA (45,7 %).
+
+Insee Références – Édition 2026 – Vue d’ensemble – Le marché du travail en 2025 : l’emploi marque le pas, le chômage augmente à nouveau
+
+31
+
+C. Motifs d’inactivité
+
+en %
+
+Situation des sans emploi
+
+Taux
+
+Motifs d’inactivité
+
+d’inactivité Santé Famille Retraite Études Motif Découragement Autre Ensemble
+
+temporaire
+
+motif
+
+Ensemble
+
+T4 2024
+
+25,5 18,9 12,4 17,1 43,0
+
+3,4
+
+T4 2025
+
+24,8 19,6 12,5 16,5 43,2
+
+2,9
+
+Évolution en points
+
+-0,7
+
+0,7 0,0 -0,6 0,1
+
+-0,4
+
+Bénéficiaires du RSA1
+
+T4 2024
+
+52,5 30,3 26,0 3,9 24,2
+
+5,9
+
+T4 2025
+
+49,8 32,5 21,7 4,0 27,4
+
+5,3
+
+Évolution en points
+
+-2,8
+
+2,2 -4,3 0,1 3,2
+
+-0,6
+
+Jeunes inscrits à France Travail2
+
+T4 2024
+
+22,4
+
+8,0 17,0
+
+0,0 33,8
+
+23,3
+
+T4 2025
+
+22,2 14,6 16,0
+
+0,0 32,7
+
+13,9
+
+Évolution en points
+
+-0,2
+
+6,6 -1,1 0,0 -1,1
+
+-9,5
+
+Autres
+
+T4 2024
+
+23,9 17,6 10,3 19,6 46,1
+
+2,3
+
+T4 2025
+
+23,3 18,1 11,1 18,9 45,7
+
+2,2
+
+Évolution en points
+
+-0,6
+
+0,5 0,7 -0,7 -0,4
+
+-0,1
+
+1,1
+
+4,0 100,0
+
+1,4
+
+3,9 100,0
+
+0,3
+
+-0,2
+
+so
+
+3,6
+
+6,2 100,0
+
+4,0
+
+5,1 100,0
+
+0,4
+
+-1,0
+
+so
+
+3,8
+
+14,0 100,0
+
+4,7
+
+18,1 100,0
+
+0,9
+
+4,1
+
+so
+
+0,7
+
+3,4 100,0
+
+1,0
+
+3,1 100,0
+
+0,3
+
+-0,3
+
+so
+
+so : sans objet 1 Personnes vivant dans un ménage dans lequel au moins une personne déclare percevoir le RSA dans l’enquête Emploi
+en continu (EEC) ou dans un ménage avec un individu déclaré dans le dispositif Pasrau. 2 P ersonnes se déclarant inscrites à France Travail dans l’interrogation à l’EEC et non bénéficiaires du RSA. Lecture : Au quatrième trimestre 2025, 49,8 % des bénéficiaires du RSA sont inactifs, soit une baisse de 2,8 points sur un an. Parmi eux, au quatrième trimestre 2025, 32,5 % sont inactifs pour des raisons de santé, soit une hausse de 2,2 points sur un an. Champ : France hors Mayotte, personnes âgées de 15 ans ou plus vivant dans un logement ordinaire, sans emploi. Source : Insee, enquête Emploi, dispositif Pasrau.
+
+Auteur : Guillaume Graindorge (Insee)

@@ -1,9 +1,9 @@
 {
- "releve_le": "2026-07-28",
+ "releve_le": "2026-10-12",
  "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Insee (Insee Références 2026), Dares-France Travail",
  "meta": {
   "page": "https://stephane-lalut.com/comment-savoir-si-une-promesse-est-tenue/",
-  "protocole": "fiches de preuve v2, volet Mesurer, E1 et E2",
+  "protocole": "fiches de preuve v2, volet Mesurer, E1 et E2 ; phase B du 12/10/2026 (E3, série longue)",
   "sources": {
    "insee": {
     "url": "https://www.insee.fr/fr/statistiques/fichier/8733119/ECRT2026-D1.xlsx",
@@ -12,23 +12,72 @@
    "dares": {
     "url": "https://data.dares.travail-emploi.gouv.fr/api/explore/v2.1/catalog/datasets/dares_defm_stock_france_cvs_trim/exports/csv?use_labels=true",
     "sha256": "c9e95526e6172c4f6ec7802e6cb0ea50888b218614d303d0bcdf73b9c5d3c022",
-    "metadonnees": "https://data.dares.travail-emploi.gouv.fr/api/explore/v2.1/catalog/datasets/dares_defm_stock_france_cvs_trim"
-   }
+    "metadonnees": "https://data.dares.travail-emploi.gouv.fr/api/explore/v2.1/catalog/datasets/dares_defm_stock_france_cvs_trim",
+    "mise_a_jour": "2026-07-28"
+   },
+   "releve_fige": "2026-10-12 (scripts/sources_mesurer/SHA256SUMS)"
   },
   "definitions": {
    "chomeur_bit": "« une personne âgée de 15 ans ou plus sans emploi, disponible pour en occuper un dans les quinze jours et qui a activement cherché un emploi dans le mois précédent (ou en a trouvé un qui commence dans moins de trois mois) » (Insee, ECRT 2026, dossier 1)",
    "categorie_a": "« les personnes sans activité au cours du mois et tenues de rechercher un emploi » (Insee, ibid.)",
-   "estimation": "appariement du Fichier historique statistique de France Travail et de l'enquête Emploi de l'Insee"
-  }
+   "estimation": "appariement du Fichier historique statistique de France Travail et de l'enquête Emploi de l'Insee",
+   "series_dares": "moyenne trimestrielle des inscrits en fin de mois, France hors Mayotte, CVS-CJO"
+  },
+  "ruptures": [
+   {
+    "date": "2019-11/2021-12",
+    "objet": "réforme de l'assurance chômage",
+    "touche": "inscription (Insee)"
+   },
+   {
+    "date": "2021",
+    "objet": "enquête Emploi rénovée, pondérations rétropolées",
+    "touche": "chômage BIT (Insee)"
+   },
+   {
+    "date": "2022-01/2022-11",
+    "objet": "nouveau formulaire d'actualisation",
+    "touche": "catégorie A, -105000 (Dares)"
+   },
+   {
+    "date": "2024-10/2024-11",
+    "objet": "évolution du formulaire d'actualisation",
+    "touche": "catégorie A, +36000 environ au 4e trimestre 2024 (Dares-France Travail, Dreets Normandie)"
+   },
+   {
+    "date": "2025-01",
+    "objet": "loi pour le plein emploi : inscription d'office",
+    "touche": "catégorie A et série hors RSA (Dares)"
+   },
+   {
+    "date": "2025-01/2025-03",
+    "objet": "actualisation automatique des nouveaux inscrits non indemnisables, restreinte en avril",
+    "touche": "catégorie A et série hors RSA (Dares)"
+   },
+   {
+    "date": "2025-03/2025-04",
+    "objet": "incident : 36000 personnes comptées à tort en A, reclassées en G",
+    "touche": "catégorie A (Dares)"
+   },
+   {
+    "date": "2025-06",
+    "objet": "décret relatif aux sanctions",
+    "touche": "radiations (Dares, Insee)"
+   }
+  ]
  },
  "gardes": [
+  "M0 : 10 fichiers lus, empreintes conformes au releve fige",
   "M1 : figure 2, moyenne 2024, champ « France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire. »",
   "M2 : effectifs additifs a l'arrondi publie pres",
   "M3 : recoupement partiel (commun 1427, BIT hors A 863, A hors BIT 1466 milliers)",
   "M4 : les trois ensembles restitues egalent la figure 8 imprimee",
   "M5 (coherence algebrique, non temoin) : 49 et 62 % retrouves",
   "M6 : series Dares A (1996-T1-2026-T2) et A hors RSA (2018-T1-2026-T2)",
-  "M7 : citations Insee (IR n° 192) et Unédic retrouvées mot pour mot ; traductions contrôlées"
+  "M9 : les deux series montent au 1er trimestre 2025 et reculent au 2e (A +261200 / -167700 ; hors RSA +100300 / -74500)",
+  "M8 : serie longue 2012-2025 ; ecarts 2012, 2019, 2020, 2021, 2024 et variations 2025 egaux au texte de l'Insee",
+  "M7 : 23 citations et 4 preuves retrouvees mot pour mot ; 3 nombres lus dans les sources ; traductions controlees",
+  "parite : 6 versions telephone conformes a leur figure detaillee"
  ],
  "calcul": {
   "commun": 1427,
@@ -95,6 +144,16 @@
     "Non inscrits": 34878,
     "Ensemble": 41128
    }
+  },
+  "sauts_2025": {
+   "a": [
+    261200,
+    -167700
+   ],
+   "a_hors": [
+    100300,
+    -74500
+   ]
   }
  },
  "series": {
@@ -259,6 +318,57 @@
    "2026-T2": 2435300
   }
  },
+ "series_longues_insee": {
+  "unite": "millions de personnes, moyenne annuelle",
+  "chomeurs_bit": {
+   "2012": 2.9,
+   "2013": 3,
+   "2014": 3,
+   "2015": 3.1,
+   "2016": 3,
+   "2017": 2.8,
+   "2018": 2.7,
+   "2019": 2.5,
+   "2020": 2.4,
+   "2021": 2.4,
+   "2022": 2.2,
+   "2023": 2.3,
+   "2024": 2.3,
+   "2025": 2.4
+  },
+  "inscrits_A": {
+   "2012": 3.2,
+   "2013": 3.5,
+   "2014": 3.7,
+   "2015": 3.8,
+   "2016": 3.8,
+   "2017": 3.7,
+   "2018": 3.7,
+   "2019": 3.6,
+   "2020": 3.9,
+   "2021": 3.6,
+   "2022": 3.1,
+   "2023": 3,
+   "2024": 3,
+   "2025": 3.3
+  },
+  "ecart": {
+   "2012": 0.3,
+   "2013": 0.5,
+   "2014": 0.7,
+   "2015": 0.7,
+   "2016": 0.8,
+   "2017": 0.9,
+   "2018": 1.0,
+   "2019": 1.1,
+   "2020": 1.5,
+   "2021": 1.2,
+   "2022": 0.9,
+   "2023": 0.7,
+   "2024": 0.7,
+   "2025": 0.9
+  }
+ },
  "affichage": {
   "commun": "1,43 million",
   "bit_seul": "863 000",
@@ -275,18 +385,51 @@
   "a_halo": "727 000",
   "a_hors_halo": "503 000",
   "a_emploi": "236 000",
-  "commun_2021": "1,61 million",
-  "a_seul_2021": "1,76 million",
-  "bit_seul_2021": "758 000",
+  "a_sans_emploi": "1,23 million",
   "dares_fin": "2e trimestre 2026",
   "dares_a_fin": "3,32 millions",
   "dares_a_hors_fin": "2,44 millions",
   "dares_a_2024t4": "3,13 millions",
   "dares_a_hors_2024t4": "2,38 millions",
+  "rupture_2022": "105 000",
+  "formulaire_2024": "36 000",
+  "incident_2025": "36 000",
+  "ecart_2012": "0,3 million",
+  "ecart_2019": "1,1 million",
+  "ecart_2020": "1,5 million",
+  "ecart_2021": "1,2 million",
+  "ecart_2024": "0,7 million",
+  "ecart_2025": "0,9 million",
+  "dares_a_var": "194 000",
+  "dares_a_hors_var": "56 900",
+  "dares_a_t1_2025": "+261 200",
+  "dares_a_t2_2025": "−167 700",
+  "dares_hors_t1_2025": "+100 300",
+  "dares_hors_t2_2025": "−74 500",
+  "chomeur_bit": "une personne âgée de 15 ans ou plus sans emploi, disponible pour en occuper un dans les quinze jours et qui a activement cherché un emploi dans le mois précédent (ou en a trouvé un qui commence dans moins de trois mois)",
+  "categorie_a": "les personnes sans activité au cours du mois et tenues de rechercher un emploi",
+  "cit_dares_ssm": "service statistique ministériel en charge du marché du travail",
+  "cit_alea": "l’aléa associé à des données d’enquête",
+  "cit_insee_titre": "l’écart s’est réduit entre 2021 et 2024 mais demeure élevé",
+  "cit_divergent": "les deux indicateurs divergent de nouveau",
+  "cit_2019": "des mesures susceptibles d’affecter le comportement d’inscription à France Travail indépendamment de la situation sur le marché du travail",
+  "cit_2021": "des pondérations rétropolées ont été utilisées pour corriger au mieux l’impact de ces changements",
+  "cit_2022": "un impact pérenne à la baisse sur le nombre d'inscrits en catégorie A",
+  "cit_2024": "entre octobre et novembre 2024, une évolution dans le formulaire d’actualisation a conduit à augmenter le nombre de demandeurs d’emploi en catégorie A",
   "cit_ir192": "les deux publics cibles de la loi pour le plein emploi contribuent pour près de la moitié de la hausse du taux de chômage depuis fin 2024 (+0,44 point sur +0,98 point au total)",
+  "cit_ir192_prudence": "Ces contributions doivent toutefois être considérées avec prudence, du fait des aléas d’enquête et de la faible part des populations concernées",
   "cit_ir192_reserve": "Il s’agit par ailleurs de contributions comptables, qui ne permettent pas de distinguer les effets de la loi pour le plein emploi des effets conjoncturels affectant ces publics",
   "cit_unedic": "cette loi expliquerait près de la moitié de la hausse du taux de chômage depuis fin 2024",
-  "releve_le": "28/07/2026 (séries Dares mises à jour à cette date, jusqu'au 2e trimestre 2026 ; Insee, édition du 02/07/2026)"
+  "cit_ve_titre": "En 2025, la loi pour le plein emploi a des effets relativement limités sur les indicateurs du marché du travail au sens du BIT",
+  "cit_ve_contrib": "une faible contribution haussière des bénéficiaires du RSA sur les taux d’activité et de chômage",
+  "cit_ve_recherche": "Les bénéficiaires du RSA recherchent plus souvent un emploi",
+  "cit_ve_limites": "l’aléa d’échantillonnage conduisant à une certaine variabilité et la difficulté à distinguer précisément les publics concernés",
+  "cit_asp": "ce qui rendra difficilement interprétables les séries statistiques de demandeurs d’emploi jusqu’ici labellisées",
+  "cit_asp_2021": "avait été renouvelée et étendue le 21 mai 2021 pour une période de cinq ans",
+  "cit_asp_suspend": "la labellisation de ces séries pour la période restant à courir entre le 1er janvier 2025 et le 20 mai 2026",
+  "cit_asp_attente": "dans l’attente d’être à même d’envisager un processus de labellisation des nouvelles séries, lorsque le régime pérenne sera atteint",
+  "cit_dares_label": "a suspendu, à partir du 1er janvier 2025, la labellisation des séries statistiques sur les demandeurs d'emploi produites par France Travail et la Dares",
+  "releve_le": "12/10/2026 (séries Dares mises à jour le 28/07/2026, jusqu'au 2e trimestre 2026 ; Insee, édition du 02/07/2026)"
  },
  "affichage_en": {
   "commun": "1.43 million",
@@ -304,17 +447,50 @@
   "a_halo": "727,000",
   "a_hors_halo": "503,000",
   "a_emploi": "236,000",
-  "commun_2021": "1.61 million",
-  "a_seul_2021": "1.76 million",
-  "bit_seul_2021": "758,000",
+  "a_sans_emploi": "1.23 million",
   "dares_fin": "second quarter of 2026",
   "dares_a_fin": "3.32 million",
   "dares_a_hors_fin": "2.44 million",
   "dares_a_2024t4": "3.13 million",
   "dares_a_hors_2024t4": "2.38 million",
-  "cit_ir192": "the two target groups of the full employment law account for nearly half of the rise in the unemployment rate since end-2024 (+0.44 point out of +0.98 point in total)",
-  "cit_ir192_reserve": "these are moreover accounting contributions, which do not make it possible to distinguish the effects of the full employment law from the cyclical effects affecting these groups",
+  "rupture_2022": "105,000",
+  "formulaire_2024": "36,000",
+  "incident_2025": "36,000",
+  "ecart_2012": "0.3 million",
+  "ecart_2019": "1.1 million",
+  "ecart_2020": "1.5 million",
+  "ecart_2021": "1.2 million",
+  "ecart_2024": "0.7 million",
+  "ecart_2025": "0.9 million",
+  "dares_a_var": "194,000",
+  "dares_a_hors_var": "56,900",
+  "dares_a_t1_2025": "+261,200",
+  "dares_a_t2_2025": "−167,700",
+  "dares_hors_t1_2025": "+100,300",
+  "dares_hors_t2_2025": "−74,500",
+  "chomeur_bit": "a person aged 15 or over without a job, available to take one within fifteen days and who has actively looked for a job in the previous month (or has found one starting within three months)",
+  "categorie_a": "people who did no work during the month and are required to look for work",
+  "cit_dares_ssm": "the ministerial statistical service responsible for the labour market",
+  "cit_alea": "the random error associated with survey data",
+  "cit_insee_titre": "the gap narrowed between 2021 and 2024 but remains large",
+  "cit_divergent": "the two indicators diverge again",
+  "cit_2019": "measures likely to affect registration behaviour with France Travail regardless of the situation on the labour market",
+  "cit_2021": "back-cast weights were used to correct as far as possible for the impact of these changes",
+  "cit_2022": "a lasting downward impact on the number of registrants in category A",
+  "cit_2024": "between October and November 2024, a change in the monthly updating form led to an increase in the number of jobseekers in category A",
+  "cit_ir192": "the two target groups of the full employment act account for nearly half of the rise in the unemployment rate since end-2024 (+0.44 points out of +0.98 points in total)",
+  "cit_ir192_prudence": "these contributions should however be treated with caution, because of survey error and the small share of the populations concerned",
+  "cit_ir192_reserve": "these are moreover accounting contributions, which do not make it possible to distinguish the effects of the full employment act from the cyclical effects affecting these groups",
   "cit_unedic": "this law would explain nearly half of the rise in the unemployment rate since end-2024",
-  "releve_le": "2026-07-28 (Dares series updated on that date, up to the second quarter of 2026; Insee, edition of 2 July 2026)"
+  "cit_ve_titre": "In 2025, the full employment act has relatively limited effects on labour market indicators in the ILO sense",
+  "cit_ve_contrib": "a small upward contribution of RSA recipients to the activity and unemployment rates",
+  "cit_ve_recherche": "RSA recipients look for work more often",
+  "cit_ve_limites": "sampling error, which causes some variability, and the difficulty of identifying the groups concerned precisely",
+  "cit_asp": "which will make the previously labelled statistical series on jobseekers difficult to interpret",
+  "cit_asp_2021": "had been renewed and extended on 21 May 2021 for a period of five years",
+  "cit_asp_suspend": "the label of these series for the period remaining between 1 January 2025 and 20 May 2026",
+  "cit_asp_attente": "until it is in a position to consider a labelling process for the new series, once the permanent regime has been reached",
+  "cit_dares_label": "suspended, from 1 January 2025, the label of the statistical series on jobseekers produced by France Travail and the Dares",
+  "releve_le": "2026-10-12 (Dares series updated on 2026-07-28, up to the second quarter of 2026; Insee, edition of 2 July 2026)"
  }
 }

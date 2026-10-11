@@ -4,17 +4,25 @@
    "id": "recoupement",
    "fichier": "mesurer-recoupement",
    "titre": "Chômeurs au sens du BIT et inscrits en catégorie A, 2024",
-   "montre": "En 2024, selon l'estimation de l'Insee, environ 1,43 million de personnes sont à la fois chômeurs au sens du BIT et inscrites en catégorie A ; environ 1,47 million inscrits en catégorie A ne sont pas chômeurs au sens du BIT, et 863 000 chômeurs au sens du BIT ne sont pas inscrits en catégorie A.",
+   "montre": "En 2024, selon l'estimation de l'Insee, environ 1,43 million de personnes sont à la fois chômeurs au sens du BIT et inscrites en catégorie A ; environ 1,47 million d'inscrits en catégorie A ne sont pas chômeurs au sens du BIT, et 863 000 chômeurs au sens du BIT ne sont pas inscrits en catégorie A.",
    "source": "Insee Références, Emploi, chômage, revenus du travail, éd. 2026, dossier 1, figures 2 et 8 (appariement Dares-Insee-France Travail)",
-   "precaution": "Estimation de l'Insee, moyenne 2024, France hors Mayotte, 15-64 ans, logement ordinaire ; deux définitions distinctes."
+   "precaution": "Estimation de l'Insee, moyenne 2024, France hors Mayotte, 15-64 ans, logement ordinaire ; deux définitions distinctes ; marge d'enquête non publiée."
   },
   {
    "id": "regle",
    "fichier": "mesurer-regle",
    "titre": "Inscrits en catégorie A : série publiée et série hors bénéficiaires du RSA et jeunes en parcours",
-   "montre": "Depuis le 1er janvier 2025, des publics sont inscrits d'office à France Travail ; la Dares publie aussi une série qui exclut les bénéficiaires du RSA et les jeunes en parcours. Les deux panneaux décrivent deux populations, et leur écart ne mesure pas l'effet de la réforme.",
-   "source": "Dares et France Travail, inscrits en fin de trimestre, France hors Mayotte, données CVS-CJO (série « hors RSA » depuis 2018)",
-   "precaution": "Champ et période différents de la figure du croisement 2024. Labellisation suspendue pour la période du 01/01/2025 au 20/05/2026."
+   "montre": "Les deux séries d'inscrits en catégorie A portent les changements de règles : formulaire d'actualisation en 2022, inscription d'office et actualisation automatique en 2025. Elles décrivent deux populations, et leur écart ne mesure pas l'effet de la réforme.",
+   "source": "Dares et France Travail, moyenne trimestrielle des inscrits en fin de mois, France hors Mayotte, données CVS-CJO (série « hors RSA » depuis 2018)",
+   "precaution": "Champ et période différents de la figure du croisement 2024. Labellisation de l'ASP suspendue depuis le 01/01/2025 (label de 2021, qui courait jusqu'au 20/05/2026)."
+  },
+  {
+   "id": "serie-longue",
+   "fichier": "mesurer-serie-longue",
+   "titre": "Chômeurs au sens du BIT et inscrits en catégorie A, 2012-2025",
+   "montre": "De 2012 à 2025, l'écart entre inscrits en catégorie A et chômeurs au sens du BIT passe de 0,3 million en 2012 à 1,1 million en 2019, 1,2 million en 2021 et 0,7 million en 2024, selon les moyennes annuelles publiées par l'Insee ; les règles d'inscription et l'enquête ont changé dans l'intervalle.",
+   "source": "Insee Références, Emploi, chômage, revenus du travail, éd. 2026, dossier 1, figure 1 (Insee, enquête Emploi, séries longues ; Dares-France Travail, STMT)",
+   "precaution": "Moyennes annuelles publiées, en millions, France hors Mayotte, 15-64 ans. Repères : Insee (1, 2) et Dares (3, 4)."
   }
  ],
  "en": [
@@ -24,15 +32,23 @@
    "titre": "ILO-defined unemployment and category A registration in France, 2024",
    "montre": "In 2024, according to the Insee estimate, about 1.43 million people are both unemployed in the ILO sense and registered in category A; about 1.47 million category A registrants are not unemployed under the ILO definition, and 863,000 people unemployed under the ILO definition are not registered in category A.",
    "source": "Insee Références, Emploi, chômage, revenus du travail, 2026 ed., file 1, figures 2 and 8 (Dares-Insee-France Travail matching)",
-   "precaution": "Insee estimate, 2024 average, France excluding Mayotte, aged 15-64, ordinary households; two distinct definitions."
+   "precaution": "Insee estimate, 2024 average, France excluding Mayotte, aged 15-64, ordinary households; two distinct definitions; survey margin not published."
   },
   {
    "id": "regle",
    "fichier": "mesurer-regle-en",
    "titre": "Category A registrants: published series and series without RSA recipients or youth programmes",
-   "montre": "Since 1 January 2025, some groups are registered automatically with France Travail; the Dares also publishes a series that excludes RSA recipients and young people in programmes. The two panels describe two populations, and the gap between them does not measure the effect of the reform.",
-   "source": "Dares and France Travail, registrants at end of quarter, France excluding Mayotte, seasonally adjusted (series 'excluding RSA' since 2018)",
-   "precaution": "Scope and period differ from the 2024 cross-tabulation figure. Quality label suspended for 1 Jan. 2025 to 20 May 2026."
+   "montre": "Both series of category A registrants carry the rule changes: monthly updating form in 2022, automatic registration and automatic updating in 2025. They describe two populations, and the gap between them does not measure the effect of the reform.",
+   "source": "Dares and France Travail, quarterly average of end-of-month registrants, France excluding Mayotte, seasonally adjusted (series 'excluding RSA' since 2018)",
+   "precaution": "Scope and period differ from the 2024 cross-tabulation figure. Statistical quality label suspended since 1 Jan. 2025 (2021 label, which ran until 20 May 2026)."
+  },
+  {
+   "id": "serie-longue",
+   "fichier": "mesurer-serie-longue-en",
+   "titre": "ILO unemployment and category A registrants in France, 2012-2025",
+   "montre": "From 2012 to 2025, the gap between category A registrants and the ILO unemployed goes from 0.3 million in 2012 to 1.1 million in 2019, 1.2 million in 2021 and 0.7 million in 2024, according to the annual averages published by Insee; registration rules and the survey changed in the meantime.",
+   "source": "Insee Références, Emploi, chômage, revenus du travail, 2026 ed., file 1, figure 1 (Insee, Labour Force Survey, long series; Dares-France Travail, STMT)",
+   "precaution": "Published annual averages, in millions, France excluding Mayotte, aged 15-64. Markers: Insee (1, 2) and Dares (3, 4)."
   }
  ]
 }
