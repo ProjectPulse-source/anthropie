@@ -2024,6 +2024,11 @@ def main() -> int:
         fail("decomposition : la somme des variations annuelles ne restitue pas la variation totale")
     saut = max(dec_rows, key=lambda r: taux_apparent[str(r["annee"])] - taux_apparent[str(r["annee"] - 1)])
     dec_apres = somme([r for r in dec_rows if r["annee"] > saut["annee"]]) if saut["annee"] < an_fin else None
+    # OPTIMUM-16 : le partage depend de la base. Depuis 2019 (reference fixe d'avant la crise sanitaire, comme pour la
+    # charge), l'annee 2020 entre dans le calcul : la charge y baisse, le taux implicite aussi. Le partage s'inverse.
+    dec19 = somme([dict(annee=a, **contrib(a - 1, a)) for a in range(2020, an_fin + 1)])
+    prose(dec19["volume"] > dec19["taux"] > 0,
+          "depuis 2019, c'est l'encours qui pese le plus dans la hausse (le partage depend de la base)")
     prose(dec_cumul["taux"] > dec_cumul["volume"] > 0,
           "sur l'ensemble depuis le creux, le taux implicite pese plus que l'encours, et les deux poussent")
     prose(saut["taux"] > saut["volume"], "l'annee du saut du taux implicite, c'est le taux qui domine")
@@ -2214,6 +2219,7 @@ def main() -> int:
             "dec_delta": nb(dec_cumul["delta"]), "dec_volume": nb(dec_cumul["volume"]),
             "dec_taux": nb(dec_cumul["taux"]),
             "dec_part_taux_pct": nb(dec_cumul["taux"] / dec_cumul["delta"] * 100, 0),
+            "dec19_delta": nb(dec19["delta"]), "dec19_volume": nb(dec19["volume"]), "dec19_taux": nb(dec19["taux"]),
             "dec_saut_annee": str(saut["annee"]), "dec_saut_delta": nb(saut["delta"]),
             "dec_saut_taux": nb(saut["taux"]), "dec_saut_volume": nb(saut["volume"]),
             "dec_apres_delta": nb(dec_apres["delta"]), "dec_apres_volume": nb(dec_apres["volume"]),
