@@ -65,7 +65,7 @@ From 1995 to the turn of the 2020s the two curves open like a pair of scissors: 
 
 The **implicit interest rate** is a year's interest divided by the debt outstanding at the end of the previous year. It is a proxy for the average cost of the stock, not the rate at which France borrows today. For twenty-five years its fall offset the rising stock: that is why doubling the debt did not double the bill.
 
-## Where has the rise since the trough come from: the amount of debt or its price? {#rise-since-the-trough}
+## Where has the rise since the trough come from: the debt stock or the implicit rate? {#rise-since-the-trough}
 
 {{< figure-svg fichier="charge-encours-taux-en" alt="Stacked bars by year since 2021, in billion euros: the contribution of the larger debt stock, in blue, and of the higher implicit rate, in orange, to the change in the interest burden; the 2022 bar is dominated by the implicit rate, the following years mostly by the stock." >}}Accounting decomposition of the annual change in the interest burden between the rise in the debt stock (blue) and in the implicit rate (orange), in billion euros; the black dot is the change. Computed on Eurostat and INSEE series.{{< /figure-svg >}}
 {{< fig-actions id="decomp" >}}

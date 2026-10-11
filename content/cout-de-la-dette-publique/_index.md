@@ -62,7 +62,7 @@ De 1995 au tournant des années 2020, les deux courbes font ciseau&nbsp;: l'enco
 
 Le **taux implicite** est le rapport entre les intérêts d'une année et l'encours de dette à la fin de l'année précédente. C'est un indicateur du coût moyen du stock, non le taux auquel la France emprunte aujourd'hui. Pendant vingt-cinq ans, sa baisse a compensé la hausse de l'encours&nbsp;: c'est pourquoi doubler la dette n'a pas doublé la facture.
 
-## D'où vient la hausse depuis le creux&nbsp;: la quantité de dette ou son prix&nbsp;? {#hausse-depuis-le-creux}
+## D'où vient la hausse depuis le creux&nbsp;: de l'encours ou du taux implicite&nbsp;? {#hausse-depuis-le-creux}
 
 {{< figure-svg fichier="charge-encours-taux" alt="Barres empilées par année depuis 2021, en milliards d'euros : la contribution de la hausse de l'encours, en bleu, et celle du taux implicite, en orange, à la variation de la charge d'intérêts ; la barre de 2022 est dominée par le taux implicite, celles des années suivantes surtout par l'encours." >}}Décomposition comptable de la variation annuelle de la charge d'intérêts entre la hausse de l'encours (bleu) et celle du taux implicite (orange), en milliards d'euros&nbsp;; le point noir est la variation. Calcul sur séries Eurostat et INSEE.{{< /figure-svg >}}
 {{< fig-actions id="decomp" >}}
