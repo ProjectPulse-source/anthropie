@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 690" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dcm2-t dcm2-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="dcm2-t">Rise in interest: the debt stock or the implicit rate?</title><desc id="dcm2-d">Stacked bars by year, from 2021 to 2025, in billion euros: in blue the contribution of the rise in the debt stock, in orange that of the implicit rate; the black dot is the change in interest. In 2021: +5.1 (stock +3.5, implicit rate +1.6). In 2022: +16.1 (stock +2.6, implicit rate +13.5). In 2023: +2.5 (stock +2.3, implicit rate +0.2). In 2024: +6.7 (stock +2.8, implicit rate +3.9). In 2025: +6.5 (stock +4.0, implicit rate +2.5). Overall, from 2020 to 2025, interest rises by +36.9 billion: +15.1 from the stock, +21.8 from the implicit rate. An accounting decomposition, not a causal one.</desc>
+<rect width="300" height="690" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Rise in interest: the debt</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">stock or the implicit rate?</text>
+<text x="0" y="68" font-size="13.5" fill="#52514e">billion euros, year by year</text>
+<text x="0" y="94" font-size="13.5" fill="#52514e">From 2020 to 2025:</text>
+<text x="300" y="94" font-size="17" font-weight="600" fill="#0A0A0E" text-anchor="end">+36.9 bn</text>
+<text x="0" y="114" font-size="13.5" fill="#52514e">stock +15.1 · implicit rate +21.8</text>
+<rect x="0" y="125" width="12" height="12" fill="#184f95"/>
+<text x="18" y="136" font-size="13.5" fill="#52514e">rise in the debt stock</text>
+<rect x="0" y="145" width="12" height="12" fill="#eb6834"/>
+<text x="18" y="156" font-size="13.5" fill="#52514e">rise in the implicit rate</text>
+<text x="0" y="200" font-size="13.5" fill="#52514e">2021</text>
+<text x="300" y="200" font-size="15" font-weight="600" fill="#0A0A0E" text-anchor="end">+5.1</text>
+<rect x="4.0" y="208" width="63.9" height="14" fill="#184f95"/>
+<rect x="67.9" y="208" width="28.5" height="14" fill="#eb6834"/>
+<text x="0" y="248" font-size="13.5" fill="#52514e">2022</text>
+<text x="300" y="248" font-size="15" font-weight="600" fill="#0A0A0E" text-anchor="end">+16.1</text>
+<rect x="4.0" y="256" width="46.4" height="14" fill="#184f95"/>
+<rect x="50.4" y="256" width="245.6" height="14" fill="#eb6834"/>
+<text x="0" y="296" font-size="13.5" fill="#52514e">2023</text>
+<text x="300" y="296" font-size="15" font-weight="600" fill="#0A0A0E" text-anchor="end">+2.5</text>
+<rect x="4.0" y="304" width="41.5" height="14" fill="#184f95"/>
+<rect x="45.5" y="304" width="3.9" height="14" fill="#eb6834"/>
+<text x="0" y="344" font-size="13.5" fill="#52514e">2024</text>
+<text x="300" y="344" font-size="15" font-weight="600" fill="#0A0A0E" text-anchor="end">+6.7</text>
+<rect x="4.0" y="352" width="50.1" height="14" fill="#184f95"/>
+<rect x="54.1" y="352" width="71.4" height="14" fill="#eb6834"/>
+<text x="0" y="392" font-size="13.5" fill="#52514e">2025</text>
+<text x="300" y="392" font-size="15" font-weight="600" fill="#0A0A0E" text-anchor="end">+6.5</text>
+<rect x="4.0" y="400" width="72.7" height="14" fill="#184f95"/>
+<rect x="76.7" y="400" width="45.2" height="14" fill="#eb6834"/>
+<line x1="0" y1="430.0" x2="300" y2="430.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="451.0" font-size="13.5" fill="#52514e">Computed on Eurostat (gov_10a_main,</text>
+<text class="pied-source" x="0" y="468.0" font-size="13.5" fill="#52514e">D41PAY) and INSEE (Maastricht debt at</text>
+<text class="pied-source" x="0" y="485.0" font-size="13.5" fill="#52514e">31 December) series, 2020-2025</text>
+<text class="pied-note" x="0" y="506.0" font-size="13.5" fill="#52514e">Accounting decomposition, debt stock /</text>
+<text class="pied-note" x="0" y="523.0" font-size="13.5" fill="#52514e">implicit rate (midpoint contributions,</text>
+<text class="pied-note" x="0" y="540.0" font-size="13.5" fill="#52514e">computed each year and then added up).</text>
+<text class="pied-note" x="0" y="557.0" font-size="13.5" fill="#52514e">The implicit-rate part mixes</text>
+<text class="pied-note" x="0" y="574.0" font-size="13.5" fill="#52514e">refinancing, the composition of the</text>
+<text class="pied-note" x="0" y="591.0" font-size="13.5" fill="#52514e">debt and the indexation of</text>
+<text class="pied-note" x="0" y="608.0" font-size="13.5" fill="#52514e">inflation-linked bonds: on its own, it</text>
+<text class="pied-note" x="0" y="625.0" font-size="13.5" fill="#52514e">does not measure the effect of market</text>
+<text class="pied-note" x="0" y="642.0" font-size="13.5" fill="#52514e">rates.</text>
+<text class="pied-licence" x="0" y="663.0" font-size="13.5" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="680.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+</svg>

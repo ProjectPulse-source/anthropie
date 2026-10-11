@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 504" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dlm-t dlm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="dlm-t">Debt since 1978, as a % of GDP</title><desc id="dlm-d">It starts at 21.6% of GDP in 1978, crosses 30% in 1984, 60% in 1996, 80% in 2009, 100% in 2020, and reaches 119.0% in Q2 2026. Open circles, not joined to the curve, show the path of the 2027 budget bill, reaching 121.7% in 2027: a forecast, not an observation.</desc>
+<rect width="300" height="504" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Debt since 1978, as a % of GDP</text>
+<line x1="34" y1="246.0" x2="286" y2="246.0" stroke="#c3c2b7"/>
+<text x="29" y="251.0" font-size="13.5" fill="#898781" text-anchor="end">0</text>
+<line x1="34" y1="202.2" x2="286" y2="202.2" stroke="#e1e0d9"/>
+<text x="29" y="207.2" font-size="13.5" fill="#898781" text-anchor="end">30</text>
+<line x1="34" y1="158.3" x2="286" y2="158.3" stroke="#e1e0d9"/>
+<text x="29" y="163.3" font-size="13.5" fill="#898781" text-anchor="end">60</text>
+<line x1="34" y1="114.5" x2="286" y2="114.5" stroke="#e1e0d9"/>
+<text x="29" y="119.5" font-size="13.5" fill="#898781" text-anchor="end">90</text>
+<line x1="34" y1="70.6" x2="286" y2="70.6" stroke="#e1e0d9"/>
+<text x="29" y="75.6" font-size="13.5" fill="#898781" text-anchor="end">120</text>
+<text x="34.0" y="265.0" font-size="13.5" fill="#898781" text-anchor="start">1978</text>
+<text x="284.7" y="265.0" font-size="13.5" fill="#898781" text-anchor="middle">2025</text>
+<path d="M34.0,214.4 L39.3,214.4 L44.7,214.9 L50.0,213.0 L55.3,207.7 L60.7,205.5 L66.0,201.9 L71.3,199.4 L76.7,198.6 L82.0,195.1 L87.3,195.3 L92.7,194.1 L98.0,192.2 L103.3,190.8 L108.7,185.1 L114.0,175.6 L119.3,170.6 L124.7,161.5 L130.0,157.4 L135.3,155.4 L140.7,155.2 L146.0,156.3 L151.3,158.7 L156.7,159.3 L162.0,156.4 L167.3,150.4 L172.7,148.2 L178.0,146.3 L183.3,150.4 L188.7,150.3 L194.0,144.0 L199.3,123.1 L204.7,119.9 L210.0,116.4 L215.3,112.0 L220.7,107.7 L226.0,105.4 L231.3,104.2 L236.7,102.6 L242.0,101.6 L247.3,102.0 L252.7,102.5 L258.0,78.1 L263.3,81.1 L268.7,83.2 L274.0,86.0 L279.3,81.4 L284.7,76.9 L286.0,72.1" fill="none" stroke="#184f95" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="286.0" cy="72.1" r="4.5" fill="#eb6834"/>
+<text x="0" y="282" font-size="13.5" fill="#52514e">Thresholds crossed (year-end):</text>
+<text x="0" y="303" font-size="13.5" fill="#52514e">1978</text>
+<text x="140" y="303" font-size="13.5" font-weight="600" fill="#184f95" text-anchor="end">21.6%</text>
+<text x="154" y="303" font-size="13.5" fill="#52514e">1984</text>
+<text x="294" y="303" font-size="13.5" font-weight="600" fill="#184f95" text-anchor="end">&gt; 30%</text>
+<text x="0" y="324" font-size="13.5" fill="#52514e">1996</text>
+<text x="140" y="324" font-size="13.5" font-weight="600" fill="#184f95" text-anchor="end">&gt; 60%</text>
+<text x="154" y="324" font-size="13.5" fill="#52514e">2009</text>
+<text x="294" y="324" font-size="13.5" font-weight="600" fill="#184f95" text-anchor="end">&gt; 80%</text>
+<text x="0" y="345" font-size="13.5" fill="#52514e">2020</text>
+<text x="140" y="345" font-size="13.5" font-weight="600" fill="#184f95" text-anchor="end">&gt; 100%</text>
+<text x="154" y="345" font-size="13.5" fill="#52514e">Q2 2026</text>
+<text x="294" y="345" font-size="13.5" font-weight="600" fill="#184f95" text-anchor="end">119.0%</text>
+<line x1="0" y1="363.0" x2="300" y2="363.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="384.0" font-size="13.5" fill="#52514e">INSEE, Maastricht debt, 1978-Q2 2026</text>
+<text class="pied-note" x="0" y="405.0" font-size="13.5" fill="#52514e">Maastricht debt, general government.</text>
+<text class="pied-note" x="0" y="422.0" font-size="13.5" fill="#52514e">"&gt; 80%": first year-end above the</text>
+<text class="pied-note" x="0" y="439.0" font-size="13.5" fill="#52514e">threshold; in quarterly data it may be</text>
+<text class="pied-note" x="0" y="456.0" font-size="13.5" fill="#52514e">crossed earlier.</text>
+<text class="pied-licence" x="0" y="477.0" font-size="13.5" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="494.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+</svg>

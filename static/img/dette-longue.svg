@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 368" width="720" height="368" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dl-t dl-d">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 389" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dl-t dl-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="dl-t">Dette publique française en % du PIB, de 1978 à T2 2026</title>
-<desc id="dl-d">Elle part de 21,6 % du PIB en 1978, franchit 30 % en 1984, 60 % en 1996, 80 % en 2009, 100 % en 2020, et atteint 119,0 % au T2 2026. Un prolongement en pointillés montre la trajectoire du projet de loi de finances pour 2027, qui atteint 121,7 % en 2027 : une prévision, non une observation.</desc>
-<rect width="720" height="320" fill="#fff"/>
+<desc id="dl-d">Elle part de 21,6 % du PIB en 1978, franchit 30 % en 1984, 60 % en 1996, 80 % en 2009, 100 % en 2020, et atteint 119,0 % au T2 2026. Des cercles évidés, non reliés à la courbe, portent la trajectoire du projet de loi de finances pour 2027, qui atteint 121,7 % en 2027 : une prévision, non une observation.</desc>
+<rect width="720" height="389" fill="#fff"/>
 <line x1="44.0" y1="294.0" x2="592.0" y2="294.0" stroke="#e1e0d9" stroke-width="1"/>
 <text x="37.0" y="298.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="11" fill="#898781" text-anchor="end">0 %</text>
 <line x1="44.0" y1="244.0" x2="592.0" y2="244.0" stroke="#e1e0d9" stroke-width="1"/>
@@ -16,7 +16,8 @@
 <text x="37.0" y="48.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="11" fill="#898781" text-anchor="end">125 %</text>
 <line x1="44.0" y1="174.0" x2="592.0" y2="174.0" stroke="#c3c2b7" stroke-width="1" stroke-dasharray="5 4"/>
 <text x="50.0" y="169.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" fill="#898781">référence Maastricht, 60 %</text>
-<path d="M572.4,56.0 L580.8,55.4 L592.0,50.6" fill="none" stroke="#184f95" stroke-width="2.4" stroke-dasharray="6 5" stroke-linejoin="round" opacity="0.75"/>
+<path d="M580.8,55.4 L592.0,50.6" fill="none" stroke="#184f95" stroke-width="2" stroke-dasharray="4 4" opacity="0.6"/>
+<circle cx="580.8" cy="55.4" r="4" fill="#ffffff" stroke="#184f95" stroke-width="2"/>
 <circle cx="592.0" cy="50.6" r="4" fill="#ffffff" stroke="#184f95" stroke-width="2"/>
 <text x="601.0" y="51.6" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#184f95">121,7 %</text>
 <text x="601.0" y="66.6" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="11" fill="#898781">trajectoire PLF 2027</text>
@@ -51,8 +52,9 @@
 <text x="390.7" y="314.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" fill="#898781" text-anchor="middle">crise financière</text>
 <text x="519.3" y="302.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" fill="#898781" text-anchor="middle">2020-2021</text>
 <text x="519.3" y="314.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" fill="#898781" text-anchor="middle">crise sanitaire</text>
-<line x1="0" y1="324.0" x2="720" y2="324.0" stroke="#e1e0d9" stroke-width="1"/>
-<text x="0" y="337.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">INSEE, dette de Maastricht, 1978-T2 2026</text>
-<text x="0" y="349.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Dette au sens de Maastricht, toutes administrations publiques. « &gt; 80 % » : première fin d'année au-delà du seuil ; en trimestriel, il peut être franchi plus tôt.</text>
-<text x="0" y="361.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/cout-de-la-dette-publique/</text>
+<line x1="0" y1="324.0" x2="720" y2="324.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="339.0" font-size="11" fill="#52514e">INSEE, dette de Maastricht, 1978-T2 2026</text>
+<text class="pied-note" x="0" y="353.0" font-size="11" fill="#52514e">Dette au sens de Maastricht, toutes administrations publiques. « &gt; 80 % » : première fin d'année au-delà du seuil ; en</text>
+<text class="pied-note" x="0" y="367.0" font-size="11" fill="#52514e">trimestriel, il peut être franchi plus tôt.</text>
+<text class="pied-licence" x="0" y="381.0" font-size="11" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/cout-de-la-dette-publique/</text>
 </svg>

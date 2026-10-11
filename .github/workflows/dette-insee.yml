@@ -126,7 +126,35 @@ jobs:
                   static/img/charge-interets-mdeur.svg \
                   static/img/charge-interets-mdeur-en.svg \
                   static/img/charge-interets-mdeur.png \
-                  static/img/charge-interets-mdeur-en.png
+                  static/img/charge-interets-mdeur-en.png \
+                  static/img/charge-encours-taux.svg \
+                  static/img/charge-encours-taux.png \
+                  static/img/charge-encours-taux-en.svg \
+                  static/img/charge-encours-taux-en.png \
+                  static/img/charge-encours-taux-m.svg \
+                  static/img/charge-encours-taux-m.png \
+                  static/img/charge-encours-taux-en-m.svg \
+                  static/img/charge-encours-taux-en-m.png \
+                  static/img/ciseau-dette-interets-m.svg \
+                  static/img/ciseau-dette-interets-m.png \
+                  static/img/ciseau-dette-interets-en-m.svg \
+                  static/img/ciseau-dette-interets-en-m.png \
+                  static/img/charge-interets-mdeur-m.svg \
+                  static/img/charge-interets-mdeur-m.png \
+                  static/img/charge-interets-mdeur-en-m.svg \
+                  static/img/charge-interets-mdeur-en-m.png \
+                  static/img/masses-comparees-m.svg \
+                  static/img/masses-comparees-m.png \
+                  static/img/masses-comparees-en-m.svg \
+                  static/img/masses-comparees-en-m.png \
+                  static/img/dette-longue-m.svg \
+                  static/img/dette-longue-m.png \
+                  static/img/dette-longue-en-m.svg \
+                  static/img/dette-longue-en-m.png \
+                  static/img/taux-marche-apparent-m.svg \
+                  static/img/taux-marche-apparent-m.png \
+                  static/img/taux-marche-apparent-en-m.svg \
+                  static/img/taux-marche-apparent-en-m.png \n                  static/img/taux-apparent-dette-m.svg \n                  static/img/taux-apparent-dette-m.png \n                  static/img/taux-apparent-dette-en-m.svg \n                  static/img/taux-apparent-dette-en-m.png
           git commit -m "data(dette): series INSEE/Eurostat du $(date -u +%Y-%m-%d)"
           # Le rebase couvre le seul cas reel de non-fast-forward : un commit
           # humain pousse sur main pendant les ~40 s du run. Le 500 transitoire

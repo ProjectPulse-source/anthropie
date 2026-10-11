@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 413" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dc-t dc-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="dc-t">Where does the rise in interest come from: the debt stock or the implicit rate?</title>
+<desc id="dc-d">Stacked bars by year, from 2021 to 2025, in billion euros: in blue the contribution of the rise in the debt stock, in orange that of the implicit rate; the black dot is the change in interest. In 2021: +5.1 (stock +3.5, implicit rate +1.6). In 2022: +16.1 (stock +2.6, implicit rate +13.5). In 2023: +2.5 (stock +2.3, implicit rate +0.2). In 2024: +6.7 (stock +2.8, implicit rate +3.9). In 2025: +6.5 (stock +4.0, implicit rate +2.5). Overall, from 2020 to 2025, interest rises by +36.9 billion: +15.1 from the stock, +21.8 from the implicit rate. An accounting decomposition, not a causal one.</desc>
+<rect width="720" height="413" fill="#ffffff"/>
+<text x="0" y="22" font-size="15" font-weight="600" fill="#0A0A0E">Where does the rise in interest come from: the debt stock or the implicit rate?</text>
+<text x="0" y="42" font-size="12" fill="#52514e">Annual change in interest, billion euros, and what it is made of</text>
+<text x="0" y="64" font-size="13" font-weight="600" fill="#0A0A0E">From 2020 to 2025: +36.9 bn, of which +15.1 from the stock and +21.8 from the implicit rate</text>
+<rect x="0" y="72" width="12" height="12" fill="#184f95"/>
+<text x="17" y="83" font-size="12" fill="#52514e">rise in the debt stock</text>
+<rect x="175" y="72" width="12" height="12" fill="#eb6834"/>
+<text x="192" y="83" font-size="12" fill="#52514e">rise in the implicit rate</text>
+<circle cx="375" cy="78" r="5" fill="#0A0A0E"/>
+<text x="386" y="83" font-size="12" fill="#52514e">change in interest</text>
+<line x1="56" y1="290.0" x2="696" y2="290.0" stroke="#c3c2b7"/>
+<text x="50" y="294.0" font-size="11" fill="#898781" text-anchor="end">0</text>
+<line x1="56" y1="236.5" x2="696" y2="236.5" stroke="#e1e0d9"/>
+<text x="50" y="240.5" font-size="11" fill="#898781" text-anchor="end">+5</text>
+<line x1="56" y1="183.1" x2="696" y2="183.1" stroke="#e1e0d9"/>
+<text x="50" y="187.1" font-size="11" fill="#898781" text-anchor="end">+10</text>
+<line x1="56" y1="129.6" x2="696" y2="129.6" stroke="#e1e0d9"/>
+<text x="50" y="133.6" font-size="11" fill="#898781" text-anchor="end">+15</text>
+<rect x="92.0" y="252.3" width="56.0" height="37.7" fill="#184f95"/>
+<rect x="92.0" y="235.5" width="56.0" height="16.8" fill="#eb6834"/>
+<circle cx="120.0" cy="235.5" r="5" fill="#0A0A0E" stroke="#ffffff" stroke-width="1.5"/>
+<text x="120.0" y="226.5" font-size="12" font-weight="600" fill="#0A0A0E" text-anchor="middle">+5.1</text>
+<text x="120.0" y="308.0" font-size="11" fill="#898781" text-anchor="middle">2021</text>
+<rect x="220.0" y="262.6" width="56.0" height="27.4" fill="#184f95"/>
+<rect x="220.0" y="117.8" width="56.0" height="144.8" fill="#eb6834"/>
+<circle cx="248.0" cy="117.8" r="5" fill="#0A0A0E" stroke="#ffffff" stroke-width="1.5"/>
+<text x="248.0" y="108.8" font-size="12" font-weight="600" fill="#0A0A0E" text-anchor="middle">+16.1</text>
+<text x="248.0" y="308.0" font-size="11" fill="#898781" text-anchor="middle">2022</text>
+<rect x="348.0" y="265.6" width="56.0" height="24.4" fill="#184f95"/>
+<rect x="348.0" y="263.3" width="56.0" height="2.3" fill="#eb6834"/>
+<circle cx="376.0" cy="263.3" r="5" fill="#0A0A0E" stroke="#ffffff" stroke-width="1.5"/>
+<text x="376.0" y="254.3" font-size="12" font-weight="600" fill="#0A0A0E" text-anchor="middle">+2.5</text>
+<text x="376.0" y="308.0" font-size="11" fill="#898781" text-anchor="middle">2023</text>
+<rect x="476.0" y="260.5" width="56.0" height="29.5" fill="#184f95"/>
+<rect x="476.0" y="218.3" width="56.0" height="42.1" fill="#eb6834"/>
+<circle cx="504.0" cy="218.3" r="5" fill="#0A0A0E" stroke="#ffffff" stroke-width="1.5"/>
+<text x="504.0" y="209.3" font-size="12" font-weight="600" fill="#0A0A0E" text-anchor="middle">+6.7</text>
+<text x="504.0" y="308.0" font-size="11" fill="#898781" text-anchor="middle">2024</text>
+<rect x="604.0" y="247.1" width="56.0" height="42.9" fill="#184f95"/>
+<rect x="604.0" y="220.5" width="56.0" height="26.6" fill="#eb6834"/>
+<circle cx="632.0" cy="220.5" r="5" fill="#0A0A0E" stroke="#ffffff" stroke-width="1.5"/>
+<text x="632.0" y="211.5" font-size="12" font-weight="600" fill="#0A0A0E" text-anchor="middle">+6.5</text>
+<text x="632.0" y="308.0" font-size="11" fill="#898781" text-anchor="middle">2025</text>
+<line x1="0" y1="334.0" x2="720" y2="334.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="349.0" font-size="11" fill="#52514e">Computed on Eurostat (gov_10a_main, D41PAY) and INSEE (Maastricht debt at 31 December) series, 2020-2025</text>
+<text class="pied-note" x="0" y="363.0" font-size="11" fill="#52514e">Accounting decomposition, debt stock / implicit rate (midpoint contributions, computed each year and then added up).</text>
+<text class="pied-note" x="0" y="377.0" font-size="11" fill="#52514e">The implicit-rate part mixes refinancing, the composition of the debt and the indexation of inflation-linked bonds: on</text>
+<text class="pied-note" x="0" y="391.0" font-size="11" fill="#52514e">its own, it does not measure the effect of market rates.</text>
+<text class="pied-licence" x="0" y="405.0" font-size="11" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/cost-of-french-public-debt/</text>
+</svg>

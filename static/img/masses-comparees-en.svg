@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 428" role="img" aria-labelledby="ma-t ma-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-<title id="ma-t">Interest paid against the main public budgets, 1995-2024</title>
-<desc id="ma-d">Four curves in billion euros, from 1995 to 2024. Health and education rise steadily and stay the highest. Interest paid falls until the early 2020s, then climbs back above the public order and safety function.</desc>
-<text x="0" y="22" font-size="13" font-weight="600" fill="#0A0A0E">Interest paid compared with a few large functions of spending</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 463" role="img" aria-labelledby="ma-t ma-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="ma-t">Interest due against the main public budgets, 1995-2024</title>
+<desc id="ma-d">Four curves in billion euros, from 1995 to 2024. Health and education rise steadily and stay the highest. Interest due falls until the early 2020s, then climbs back above the public order and safety function. In 2024: Interest due 60, Health 261, Education 149, Public order and safety 52; changes since 2020: Interest due +102%, Health +26%, Education +24%, Public order and safety +26%.</desc>
+<text x="0" y="22" font-size="13" font-weight="600" fill="#0A0A0E">Interest due compared with a few large functions of spending</text>
 <text x="0" y="40" font-size="11" fill="#52514e">France · general government · billion euros, current prices</text>
 <line x1="52.0" y1="346.0" x2="524.0" y2="346.0" stroke="#c3c2b7" stroke-width="1"/>
 <text x="45.0" y="350.0" font-size="11" fill="#898781" text-anchor="end">0</text>
@@ -32,14 +32,17 @@
 <text x="536.0" y="117.5" font-size="10" fill="#898781">+26% since 2020</text>
 <text x="536.0" y="194.2" font-size="11" fill="#898781"><tspan font-weight="600">Education</tspan> 149</text>
 <text x="536.0" y="207.2" font-size="10" fill="#898781">secondary 64 · primary 42</text>
-<text x="536.0" y="220.2" font-size="10" fill="#898781">tertiary 12 · ancillary 20 · other 10</text>
-<text x="536.0" y="233.2" font-size="10" fill="#898781">+24% since 2020</text>
-<text x="536.0" y="285.2" font-size="12" fill="#eb6834"><tspan font-weight="700">Interest paid</tspan> 60</text>
+<text x="536.0" y="220.2" font-size="10" fill="#898781">tertiary 12 · ancillary 20</text>
+<text x="536.0" y="233.2" font-size="10" fill="#898781">other 10</text>
+<text x="536.0" y="246.2" font-size="10" fill="#898781">+24% since 2020</text>
+<text x="536.0" y="285.2" font-size="12" fill="#eb6834"><tspan font-weight="700">Interest due</tspan> 60</text>
 <text x="536.0" y="298.2" font-size="10" fill="#898781">+102% since 2020</text>
 <text x="536.0" y="317.2" font-size="11" fill="#a5a39a"><tspan font-weight="600">Public order and safety</tspan> 52</text>
 <text x="536.0" y="330.2" font-size="10" fill="#898781">+26% since 2020</text>
-<line x1="0" y1="384.0" x2="720" y2="384.0" stroke="#e1e0d9" stroke-width="1"/>
-<text x="0" y="397.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Eurostat: interest paid (gov_10a_main, D41PAY) and general government expenditure by function (gov_10a_exp, COFOG), 1995-2024</text>
-<text x="0" y="409.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Interest is a type of spending, the other three are functions: not the same breakdown, and no transfer from one to the other is established.</text>
-<text x="0" y="421.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/cost-of-french-public-debt/</text>
+<line x1="0" y1="384.0" x2="720" y2="384.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="399.0" font-size="11" fill="#52514e">Eurostat: interest due (gov_10a_main, D41PAY) and general government expenditure by function (gov_10a_exp, COFOG),</text>
+<text class="pied-source" x="0" y="413.0" font-size="11" fill="#52514e">1995-2024</text>
+<text class="pied-note" x="0" y="427.0" font-size="11" fill="#52514e">Interest is a type of spending, the other three are functions: not the same breakdown, and no transfer from one to the</text>
+<text class="pied-note" x="0" y="441.0" font-size="11" fill="#52514e">other is established.</text>
+<text class="pied-licence" x="0" y="455.0" font-size="11" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/cost-of-french-public-debt/</text>
 </svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 582" role="img" font-variant-numeric="tabular-nums" aria-labelledby="chm-t chm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="chm-t">Interest due in billion euros, 1995-2025</title><desc id="chm-d">One curve in billion euros, from 1995 to 2025. Interest due falls to its trough in 2020 (29.7 billion), then climbs steeply to 66.6 billion in 2025. Two open circles, not joined to the curve, show the Government's forecast in the 2027 budget bill: 79.2 billion in 2026, 91 in 2027. A forecast, not an observation, on a 2025 base not reconciled with Eurostat.</desc>
+<rect width="300" height="582" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Interest due in billion euros,</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">1995-2025</text>
+<line x1="34" y1="270.0" x2="286" y2="270.0" stroke="#c3c2b7"/>
+<text x="29" y="275.0" font-size="13.5" fill="#898781" text-anchor="end">0</text>
+<line x1="34" y1="233.7" x2="286" y2="233.7" stroke="#e1e0d9"/>
+<text x="29" y="238.7" font-size="13.5" fill="#898781" text-anchor="end">20</text>
+<line x1="34" y1="197.4" x2="286" y2="197.4" stroke="#e1e0d9"/>
+<text x="29" y="202.4" font-size="13.5" fill="#898781" text-anchor="end">40</text>
+<line x1="34" y1="161.1" x2="286" y2="161.1" stroke="#e1e0d9"/>
+<text x="29" y="166.1" font-size="13.5" fill="#898781" text-anchor="end">60</text>
+<line x1="34" y1="124.8" x2="286" y2="124.8" stroke="#e1e0d9"/>
+<text x="29" y="129.8" font-size="13.5" fill="#898781" text-anchor="end">80</text>
+<line x1="34" y1="88.4" x2="286" y2="88.4" stroke="#e1e0d9"/>
+<text x="29" y="93.4" font-size="13.5" fill="#898781" text-anchor="end">100</text>
+<text x="34.0" y="289.0" font-size="13.5" fill="#898781" text-anchor="start">1995</text>
+<text x="286.0" y="289.0" font-size="13.5" fill="#898781" text-anchor="end">2027</text>
+<path d="M34.0,193.4 L41.9,187.4 L49.8,187.6 L57.6,187.8 L65.5,192.1 L73.4,190.8 L81.2,185.2 L89.1,183.2 L97.0,185.2 L104.9,183.8 L112.8,183.2 L120.6,182.7 L128.5,175.4 L136.4,166.1 L144.2,180.5 L152.1,178.0 L160.0,168.3 L167.9,170.3 L175.8,180.3 L183.6,184.1 L191.5,188.8 L199.4,193.0 L207.2,195.6 L215.1,194.3 L223.0,203.0 L230.9,216.1 L238.8,206.8 L246.6,177.6 L254.5,173.0 L262.4,160.9 L270.2,149.1" fill="none" stroke="#eb6834" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="230.9" cy="216.1" r="3.5" fill="#eb6834"/>
+<text x="230.9" y="236.1" font-size="13.5" font-weight="600" fill="#eb6834" text-anchor="middle">29.7</text>
+<circle cx="270.2" cy="149.1" r="4.5" fill="#eb6834"/>
+<text x="262.2" y="145.1" font-size="15" font-weight="600" fill="#0A0A0E" text-anchor="end">66.6 bn</text>
+<circle cx="278.1" cy="126.2" r="4" fill="#ffffff" stroke="#eb6834" stroke-width="2"/>
+<circle cx="286.0" cy="104.8" r="4" fill="#ffffff" stroke="#eb6834" stroke-width="2"/>
+<text x="0" y="304" font-size="13.5" fill="#52514e">Government forecast:</text>
+<text x="0" y="323" font-size="13.5" font-weight="600" fill="#eb6834">2026: 79.2 bn</text>
+<text x="0" y="342" font-size="13.5" font-weight="600" fill="#eb6834">2027: 91 bn</text>
+<line x1="0" y1="356.0" x2="300" y2="356.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="377.0" font-size="13.5" fill="#52514e">Eurostat, interest due by general</text>
+<text class="pied-source" x="0" y="394.0" font-size="13.5" fill="#52514e">government (gov_10a_main, D41PAY),</text>
+<text class="pied-source" x="0" y="411.0" font-size="13.5" fill="#52514e">1995-2025; Government forecast, 2027</text>
+<text class="pied-source" x="0" y="428.0" font-size="13.5" fill="#52514e">budget bill (HCFP opinion, para. 115)</text>
+<text class="pied-note" x="0" y="449.0" font-size="13.5" fill="#52514e">Billion euros at current prices, not</text>
+<text class="pied-note" x="0" y="466.0" font-size="13.5" fill="#52514e">adjusted for inflation. Open circles:</text>
+<text class="pied-note" x="0" y="483.0" font-size="13.5" fill="#52514e">Government forecast, whose 2025 base</text>
+<text class="pied-note" x="0" y="500.0" font-size="13.5" fill="#52514e">is not reconciled with Eurostat; no</text>
+<text class="pied-note" x="0" y="517.0" font-size="13.5" fill="#52514e">change can be read between the</text>
+<text class="pied-note" x="0" y="534.0" font-size="13.5" fill="#52514e">observed and the forecast values.</text>
+<text class="pied-licence" x="0" y="555.0" font-size="13.5" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="572.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+</svg>

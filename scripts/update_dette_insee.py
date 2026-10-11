@@ -58,6 +58,10 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import pied_figure  # noqa: E402
+import dette_cout_figures as FIG  # noqa: E402
+
 REPO = Path(__file__).resolve().parent.parent
 OUT_JSON = REPO / "data" / "dette_officielle.json"
 OUT_ENDPOINT = REPO / "static" / "dette_officielle.json"
@@ -78,6 +82,13 @@ OUT_SVG_MASSES = REPO / "static" / "img" / "masses-comparees.svg"
 OUT_SVG_MASSES_EN = REPO / "static" / "img" / "masses-comparees-en.svg"
 OUT_SVG_CHARGE = REPO / "static" / "img" / "charge-interets-mdeur.svg"
 OUT_SVG_CHARGE_EN = REPO / "static" / "img" / "charge-interets-mdeur-en.svg"
+OUT_SVG_DECOMP = REPO / "static" / "img" / "charge-encours-taux.svg"
+OUT_SVG_DECOMP_EN = REPO / "static" / "img" / "charge-encours-taux-en.svg"
+
+
+def mobile(p: Path) -> Path:
+    """Version telephone d'une figure : meme nom, suffixe -m (le shortcode figure-svg la sert d'office)."""
+    return p.with_name(p.stem + "-m.svg")
 TRAJECTOIRE = REPO / "data" / "trajectoire_plf.json"
 
 
@@ -108,10 +119,27 @@ def lire_trajectoire() -> dict:
                "edition_prec": int(t["edition_precedente"]["edition"]),
                "source": t["source"]["publication"], "url": t["source"]["url"],
                "page": t["source"]["page"],
-               "lu_le": t["source"]["lu_le"]}
+               "lu_le": t["source"]["lu_le"],
+               "sensibilite": t["sensibilite"], "hausse_vs_2025": float(t["hausse_vs_2025"]["plus_de_mdeur"]),
+               "ecart_lfi": float(t["ecart_lfi_n"]["mdeur"])}
     except Exception as exc:                       # noqa: BLE001
         arret("trajectoire du projet de loi de finances illisible (%s) : %s" % (TRAJECTOIRE.name, exc))
     return out
+
+
+def lire_aft() -> dict:
+    """Releves de l'Agence France Tresor (duree de vie moyenne, titres indexes), saisis a la main et dates : le site
+    refuse les scripts (403), lecture par le navigateur. Absent ou incoherent : arret, la page les cite."""
+    try:
+        a = json.loads(AFT.read_text(encoding="utf-8"))
+        dvm = a["duree_vie_moyenne"]
+        if not (0 < a["titres_indexes_mdeur"] < a["encours_mdeur"] and 1 <= dvm["ans"] <= 20 and 0 <= dvm["jours"] < 366):
+            raise ValueError("valeurs hors bornes")
+        if not (a["date"]["fr"] and a["date"]["en"] and a["source"]["lu_le"]):
+            raise ValueError("date ou lecture absente")
+    except Exception as exc:                       # noqa: BLE001
+        arret("releves de l'AFT illisibles (%s) : %s" % (AFT.name, exc))
+    return a
 
 
 def faits_prevision(traj: dict, dernier_obs: int, charge_obs: float) -> dict:
@@ -198,6 +226,26 @@ EURO_COFOG_PIB = EURO + ("gov_10a_exp?format=JSON&geo=FR&na_item=TE&sector=S13"
 EURO_LT = EURO + "irt_lt_mcby_a?format=JSON&geo=FR&lang=en"
 EURO_TR = EURO + ("gov_10a_main?format=JSON&geo=FR&na_item=TR"
                   "&sector=S13&unit=MIO_EUR&lang=en")
+
+# Phase B du volet 2 (OPTIMUM-13, 11/10/2026) : interets RECUS par les administrations (la charge nette se dit en
+# complement de la charge brute) ; depenses des dix grandes fonctions COFOG (« plus vite que chacune des grandes
+# fonctions » se garde contre toutes, pas contre trois).
+EURO_D41REC = EURO + ("gov_10a_main?format=JSON&geo=FR&na_item=D41REC"
+                      "&sector=S13&unit=MIO_EUR&lang=en")
+FONCTIONS_COFOG = ("GF01", "GF02", "GF03", "GF04", "GF05", "GF06", "GF07", "GF08", "GF09", "GF10")
+EURO_COFOG10 = EURO + ("gov_10a_exp?format=JSON&geo=FR&na_item=TE&sector=S13&unit=MIO_EUR&"
+                       + "&".join("cofog99=" + c for c in FONCTIONS_COFOG) + "&lang=en")
+NOMS_COFOG = {
+    "fr": {"GF01": "services publics généraux", "GF02": "défense", "GF03": "ordre et sécurité publics",
+           "GF04": "affaires économiques", "GF05": "protection de l'environnement",
+           "GF06": "logement et équipements collectifs", "GF07": "santé", "GF08": "loisirs, culture et culte",
+           "GF09": "enseignement", "GF10": "protection sociale"},
+    "en": {"GF01": "general public services", "GF02": "defence", "GF03": "public order and safety",
+           "GF04": "economic affairs", "GF05": "environmental protection", "GF06": "housing and community amenities",
+           "GF07": "health", "GF08": "recreation, culture and religion", "GF09": "education",
+           "GF10": "social protection"},
+}
+AFT = REPO / "data" / "dette_negociable_aft.json"
 
 RE_QUARTER = re.compile(r"^\d{4}-Q[1-4]$")
 RE_YEAR = re.compile(r"^\d{4}$")
@@ -547,12 +595,15 @@ LABELS_CARTOUCHE = {
         "montre_ciseau": ("L'encours double en part de PIB pendant que la charge "
                           "d'intérêts baisse, jusqu'au retournement de 2022."),
         "montre_taux": ("Le coût moyen du stock : il baisse pendant vingt-cinq "
-                        "ans, puis remonte depuis 2021."),
+                        "ans, puis remonte depuis son point bas, surtout par un saut en 2022."),
         "montre_longue": ("La dette monte par paliers, chacun installé par une "
                           "crise ; dans la série observée, le ratio n\'est jamais revenu à son niveau de dix ans auparavant."),
-        "charge": ("Milliards d'euros courants, non corrigés de l'inflation : "
-                   "la facture, non son poids dans la richesse produite."),
+        "charge": ("Milliards d'euros courants, non corrigés de l'inflation. Cercles évidés : prévision du "
+                   "Gouvernement, dont la base 2025 n'est pas réconciliée avec Eurostat ; aucune variation ne se lit "
+                   "entre l'observé et le prévu."),
         "titre_charge": "La charge d'intérêts en milliards d'euros, %s-%s",
+        "src_charge_m": ("Eurostat, intérêts dus par les administrations publiques (gov_10a_main, D41PAY), %s-%s ; "
+                         "prévision du Gouvernement, projet de loi de finances pour %d (avis du HCFP, § 115)"),
         "montre_charge": ("Ce que la dette coûte en euros, et non en part de PIB : "
                           "le creux, puis la remontée."),
         "masses": ("Les intérêts sont une nature de dépense, les trois autres des "
@@ -561,12 +612,18 @@ LABELS_CARTOUCHE = {
         "titre_masses": "La charge d'intérêts face aux grands budgets, %s-%s",
         "montre_masses": ("La charge d'intérêts est longtemps restée sous le poste "
                           "« ordre et sécurité » ; elle est repassée au-dessus."),
-        "marche": ("Le taux à 10 ans, repère du coût des emprunts nouveaux ; le "
-                   "taux implicite, coût de tout le stock, ne le suit qu'au fil des "
-                   "refinancements."),
+        "marche": ("Le taux à 10 ans est un indicateur de référence, non le coût effectif des émissions ; le "
+                   "taux implicite, coût moyen de tout le stock, ne suit les taux de marché qu'au fil des "
+                   "renouvellements, et inclut l'indexation des titres indexés sur l'inflation."),
         "src_marche": ("Eurostat irt_lt_mcby_a (taux à 10 ans)  ·  taux implicite : "
                        "Eurostat gov_10a_main et INSEE, %s-%s"),
         "titre_marche": "Taux de marché et coût moyen du stock, %s-%s",
+        "titre_decomp": "D'où vient la hausse de la charge d'intérêts : encours ou taux implicite, %s-%s",
+        "montre_decomp": ("Ce qui, dans la hausse de la charge, tient à la hausse de l'encours et ce qui tient à celle du "
+                          "taux implicite, année par année."),
+        "src_decomp": "Calcul sur séries Eurostat (gov_10a_main, D41PAY) et INSEE (dette au 31 décembre), %s-%s",
+        "decomp": ("Décomposition comptable encours / taux implicite : la part du taux implicite mêle refinancement, "
+                   "composition de la dette et indexation ; elle ne mesure pas à elle seule l'effet des taux de marché."),
         "montre_marche": ("Le coût moyen du stock suit le taux à 10 ans avec des "
                           "années de retard : il descend moins bas, et remonte moins vite."),
     },
@@ -588,26 +645,35 @@ LABELS_CARTOUCHE = {
         "montre_ciseau": ("The stock doubles as a share of GDP while the interest "
                           "burden falls, until the 2022 turn."),
         "montre_taux": ("The average cost of the stock: falling for twenty-five "
-                        "years, rising again since 2021."),
+                        "years, then rising from its low, mostly through a jump in 2022."),
         "montre_longue": ("Debt climbs in steps, each set by a crisis; in the observed series, the ratio has "
                           "never returned to its level of ten years earlier."),
-        "charge": ("Billion euros at current prices, not adjusted for inflation: "
-                   "the bill itself, not its weight in national income."),
-        "titre_charge": "Interest paid in billion euros, %s-%s",
+        "charge": ("Billion euros at current prices, not adjusted for inflation. Open circles: Government "
+                   "forecast, whose 2025 base is not reconciled with Eurostat; no change can be read between the "
+                   "observed and the forecast values."),
+        "titre_charge": "Interest due in billion euros, %s-%s",
+        "src_charge_m": ("Eurostat, interest due by general government (gov_10a_main, D41PAY), %s-%s; Government "
+                         "forecast, %d budget bill (HCFP opinion, para. 115)"),
         "montre_charge": ("What the debt costs in euros rather than as a share of GDP: "
                           "the trough, then the climb."),
         "masses": ("Interest is a type of spending, the other three are functions: not "
                    "the same breakdown, and no transfer from one to the other is "
                    "established."),
-        "titre_masses": "Interest paid against the main public budgets, %s-%s",
-        "montre_masses": ("Interest paid long stayed below the public order and safety "
+        "titre_masses": "Interest due against the main public budgets, %s-%s",
+        "montre_masses": ("Interest due long stayed below the public order and safety "
                           "function; it has moved back above it."),
-        "marche": ("The 10-year yield benchmarks the cost of new borrowing; the implicit "
-                   "rate, the cost of the whole stock, follows it only as old debt is "
-                   "refinanced."),
+        "marche": ("The 10-year yield is a reference indicator, not the actual cost of issuance; the implicit "
+                   "rate, the average cost of the whole stock, follows market rates only as debt is renewed, and "
+                   "includes the indexation of inflation-linked bonds."),
         "src_marche": ("Eurostat irt_lt_mcby_a (10-year yield)  ·  implicit rate: "
                        "Eurostat gov_10a_main and INSEE, %s-%s"),
         "titre_marche": "Market rate and average cost of the stock, %s-%s",
+        "titre_decomp": "Where the rise in interest comes from: debt stock or implicit rate, %s-%s",
+        "montre_decomp": ("How much of the rise in interest comes from the larger debt stock and how much from the higher "
+                          "implicit rate, year by year."),
+        "src_decomp": "Computed on Eurostat (gov_10a_main, D41PAY) and INSEE (debt at 31 December) series, %s-%s",
+        "decomp": ("Accounting decomposition, debt stock / implicit rate: the implicit-rate part mixes refinancing, debt "
+                   "composition and indexation; on its own, it does not measure the effect of market rates."),
         "montre_marche": ("The average cost of the stock follows the 10-year rate "
                           "years behind: it falls less far, and climbs back more slowly."),
     },
@@ -617,6 +683,17 @@ LABELS_CARTOUCHE = {
 def _esc(s: str) -> str:
     """Le cartouche porte des URL et des libelles : `&` casserait le XML."""
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def fin_pied(e: list, w: int, y0: float, source: str, note_cle: str, lang: str) -> str:
+    """Pied commun (pied_figure : 11 px, retour a la ligne, classes) ; remplace cartouche() a la phase B du volet 2
+    (11/10/2026). Ferme le SVG et ajuste sa hauteur ; la page lit cette hauteur dans le viewBox (shortcode figure-svg)."""
+    T = LABELS_CARTOUCHE[lang]
+    blocs = [(source, INK2, "pied-source")]
+    if T.get(note_cle):
+        blocs.append((T[note_cle], INK2, "pied-note"))
+    blocs.append((T["licence"], MUTED, "pied-licence"))
+    return pied_figure.pied(e, y0, w, blocs, GRID) + "\n"
 
 
 def cartouche(w: int, y0: float, source: str, note_cle: str,
@@ -724,8 +801,9 @@ LABELS_MASSES = {
         "desc": "Quatre courbes en milliards d'euros courants, de %s à %s. La santé et "
                 "l'enseignement progressent régulièrement et restent les plus élevés. La charge "
                 "d'intérêts baisse jusqu'au début des années 2020, puis remonte et repasse "
-                "au-dessus du poste « ordre et sécurité ».",
-        "src": "Eurostat : intérêts versés (gov_10a_main, D41PAY) et dépenses des "
+                "au-dessus du poste « ordre et sécurité ».%s",
+        "desc_fin": " En %d : %s ; évolutions depuis %d : %s.",
+        "src": "Eurostat : intérêts dus (gov_10a_main, D41PAY) et dépenses des "
                "administrations par fonction (gov_10a_exp, COFOG), %s-%s",
         # Pas de cle « note » ici : la note affichee sous la figure est la precaution
         # C["masses"], et elle porte deja en TETE la phrase qui empeche la figure
@@ -735,19 +813,20 @@ LABELS_MASSES = {
         # le 2026-09-29, verifie par grep.)
     },
     "en": {
-        "titre": "Interest paid against the main public budgets, %s-%s",
-        "panneau": "Interest paid compared with a few large functions of spending",
+        "titre": "Interest due against the main public budgets, %s-%s",
+        "panneau": "Interest due compared with a few large functions of spending",
         "champ": "France · general government · billion euros, current prices",
-        "series": {"interets": "Interest paid", "GF07": "Health",
+        "series": {"interets": "Interest due", "GF07": "Health",
                    "GF09": "Education", "GF03": "Public order and safety"},
         "postes": {"GF0703": "hospital", "GF0702": "outpatient",
                    "GF0701": "medical products", "GF0902": "secondary",
                    "GF0901": "primary", "GF0904": "tertiary",
                    "GF0906": "ancillary", "reste": "other"},
         "desc": "Four curves in billion euros, from %s to %s. Health and education rise "
-                "steadily and stay the highest. Interest paid falls until the early 2020s, then "
-                "climbs back above the public order and safety function.",
-        "src": "Eurostat: interest paid (gov_10a_main, D41PAY) and general government "
+                "steadily and stay the highest. Interest due falls until the early 2020s, then "
+                "climbs back above the public order and safety function.%s",
+        "desc_fin": " In %d: %s; changes since %d: %s.",
+        "src": "Eurostat: interest due (gov_10a_main, D41PAY) and general government "
                "expenditure by function (gov_10a_exp, COFOG), %s-%s",
         # Voir le commentaire du bloc francais : la note vient de C["masses"].
     },
@@ -764,7 +843,7 @@ LABELS_CISEAU = {
                 "en %s.",
         "panneau_a": "Dette publique des administrations, en % du PIB "
                      "(INSEE, trimestriel)",
-        "panneau_b": "Intérêts versés par les administrations, en % du PIB "
+        "panneau_b": "Intérêts dus par les administrations, en % du PIB "
                      "(Eurostat, annuel)",
         "retournement": "2022 : le retournement",
         "en_annee": NBSP + "% en ",
@@ -776,11 +855,11 @@ LABELS_CISEAU = {
         "titre": "The scissor of French public debt: outstanding stock and "
                  "interest burden, 1995-2026",
         "desc": "Two curves as a percentage of GDP. Above, public debt rises "
-                "from %s%% of GDP in %s to %s%% in %s. Below, interest paid by "
+                "from %s%% of GDP in %s to %s%% in %s. Below, interest due by "
                 "general government falls from %s%% of GDP in %s to a trough of "
                 "%s%% in %s, then climbs back to %s%% in %s.",
         "panneau_a": "General government debt, % of GDP (INSEE, quarterly)",
-        "panneau_b": "Interest paid by general government, % of GDP "
+        "panneau_b": "Interest due by general government, % of GDP "
                      "(Eurostat, annual)",
         "retournement": "2022: the turning point",
         "en_annee": "% in ",
@@ -921,11 +1000,9 @@ def build_svg(dette_pib: dict[str, float], d41_pib: dict[str, float],
               dec(d41_pib[trough_y]) + L["en_annee"] + trough_y, anchor="middle", dx=0, dy=18)
 
     src = LABELS_CARTOUCHE[lang]["src_ciseau"]
-    e += cartouche(SVG_W, SVG_H + 4,
+    return fin_pied(e, SVG_W, SVG_H + 4,
                    src % (quarter(max(dette_pib)), max(d41_pib)),
                    "ciseau", lang)
-    e.append("</svg>")
-    return "\n".join(e) + "\n"
 
 
 LABELS_TAUX = {
@@ -1026,9 +1103,7 @@ def build_svg_taux(taux: dict[str, float], lang: str = "fr") -> str:
 
     src = LABELS_CARTOUCHE[lang]["src_taux"]
     pc = " %" if lang == "fr" else "%"
-    e += cartouche(W, H + 4, src % (first, last), "taux", lang)
-    e.append("</svg>")
-    return "\n".join(e) + "\n"
+    return fin_pied(e, W, H + 4, src % (first, last), "taux", lang)
 
 
 LABELS_LONGUE = {
@@ -1134,9 +1209,7 @@ def build_svg_marche(apparent: dict, marche: dict, lang: str = "fr") -> str:
 
     src = LABELS_CARTOUCHE[lang]["src_marche"]
     pc = " %" if lang == "fr" else "%"
-    e += cartouche(W, H + 4, src % (first, last), "marche", lang)
-    e.append("</svg>")
-    return "\n".join(e) + "\n"
+    return fin_pied(e, W, H + 4, src % (first, last), "marche", lang)
 
 
 def build_svg_charge(interets_md: dict, lang: str = "fr", prev: dict | None = None,
@@ -1149,26 +1222,27 @@ def build_svg_charge(interets_md: dict, lang: str = "fr", prev: dict | None = No
     num = fr if lang == "fr" else en
     T = ({"panneau": "Charge d'intérêts des administrations publiques, en milliards d'euros courants",
           "creux": "creux de", "titre": "La charge d'intérêts en milliards d'euros, %s-%s",
-          "src": "Eurostat, intérêts versés par les administrations publiques "
+          "src": "Eurostat, intérêts dus par les administrations publiques "
                  "(gov_10a_main, D41PAY), %s-%s",
           "desc": "Une courbe en milliards d'euros courants, de %s à %s. La charge d'intérêts "
-                  "descend jusqu'au creux de %s, puis remonte fortement pour atteindre %s "
+                  "descend jusqu'au creux de %s (%s milliards), puis remonte fortement pour atteindre %s "
                   "milliards en %s.",
-          "desc_prev": " Un prolongement en pointillés montre la prévision du Gouvernement dans le "
-                       "projet de loi de finances pour %d : %s milliards en %d. Une prévision, non "
-                       "une observation.",
+          "desc_prev": " Deux cercles évidés, non reliés à la courbe, portent la prévision du Gouvernement dans le "
+                       "projet de loi de finances pour %d : %s milliards en %d, %s en %d. Une prévision, non "
+                       "une observation, sur une base 2025 non réconciliée avec Eurostat.",
           "etiq_prev": "prévision PLF %d",
-          "src_prev": " ; pointillés : prévision du Gouvernement, projet de loi de finances pour %d"}
+          "src_prev": " ; cercles évidés : prévision du Gouvernement, projet de loi de finances pour %d (avis du HCFP, § 115)"}
          if lang == "fr" else
-         {"panneau": "Interest paid by general government, billion euros, current prices",
-          "creux": "trough of", "titre": "Interest paid in billion euros, %s-%s",
-          "src": "Eurostat, interest paid by general government (gov_10a_main, D41PAY), %s-%s",
-          "desc": "One curve in billion euros, from %s to %s. Interest paid falls to its trough "
-                  "in %s, then climbs steeply to %s billion in %s.",
-          "desc_prev": " A dotted extension shows the Government's forecast in the %d budget "
-                       "bill: %s billion in %d. A forecast, not an observation.",
-          "etiq_prev": "%d budget bill forecast",
-          "src_prev": "; dotted: Government forecast, %d budget bill"})
+         {"panneau": "Interest due by general government, billion euros, current prices",
+          "creux": "trough of", "titre": "Interest due in billion euros, %s-%s",
+          "src": "Eurostat, interest due by general government (gov_10a_main, D41PAY), %s-%s",
+          "desc": "One curve in billion euros, from %s to %s. Interest due falls to its trough "
+                  "in %s (%s billion), then climbs steeply to %s billion in %s.",
+          "desc_prev": " Two open circles, not joined to the curve, show the Government's forecast in the %d budget "
+                       "bill: %s billion in %d, %s in %d. A forecast, not an observation, on a 2025 base not "
+                       "reconciled with Eurostat.",
+          "etiq_prev": "%d budget forecast",
+          "src_prev": "; open circles: Government forecast, %d budget bill (HCFP opinion, para. 115)"})
     ans = sorted(int(a) for a in interets_md)
     a0, a1 = ans[0], ans[-1]
     creux = min(ans, key=lambda a: interets_md[a])
@@ -1192,9 +1266,10 @@ def build_svg_charge(interets_md: dict, lang: str = "fr", prev: dict | None = No
     e = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" role="img" '
          'aria-labelledby="ch-t ch-d" font-family="%s">' % (W, H + CARTOUCHE_H, FONT),
          '<title id="ch-t">%s</title>' % _esc(T["titre"] % (a0, a1)),
-         '<desc id="ch-d">%s</desc>' % _esc(T["desc"] % (a0, a1, creux,
+         '<desc id="ch-d">%s</desc>' % _esc(T["desc"] % (a0, a1, creux, num(interets_md[creux], 1),
                                                          num(interets_md[a1], 1), a1)
-                                            + (T["desc_prev"] % (edition, num(pv[-1][1], dprev), pv[-1][0])
+                                            + (T["desc_prev"] % (edition, num(pv[0][1], 0 if pv[0][1] == round(pv[0][1]) else 1),
+                                                                 pv[0][0], num(pv[-1][1], dprev), pv[-1][0])
                                                if pv else "")),
          '<text x="0" y="22" font-size="%d" font-weight="600" fill="%s">%s</text>'
          % (TY_TITRE, INK, _esc(T["panneau"]))]
@@ -1220,10 +1295,16 @@ def build_svg_charge(interets_md: dict, lang: str = "fr", prev: dict | None = No
              % (cx, cy + 20, TY_MINEUR, MUTED, _esc(T["creux"]), num(interets_md[creux], 1), creux))
     lx, ly = pts[-1]
     if pv:
-        ppts = [(lx, ly)] + [(X(a), Y(v)) for a, v in pv]
-        e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.4" '
-                 'stroke-dasharray="6 5" stroke-linejoin="round" opacity="0.75"/>'
-                 % (_line_path(ppts), COL_INTER))
+        # OPTIMUM-13 (P1 nouveau) : la base 2025 du Gouvernement n'est pas la valeur d'Eurostat ; un trait depuis le
+        # dernier point observe ferait lire une trajectoire homogene que rien ne garantit. Cercles evides seuls,
+        # pointille entre previsions seulement.
+        ppts = [(X(a), Y(v)) for a, v in pv]
+        if len(ppts) > 1:
+            e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2" '
+                     'stroke-dasharray="4 4" opacity="0.6"/>' % (_line_path(ppts), COL_INTER))
+        for qx, qy in ppts[:-1]:
+            e.append('<circle cx="%.1f" cy="%.1f" r="4" fill="#ffffff" stroke="%s" stroke-width="2"/>'
+                     % (qx, qy, COL_INTER))
         px, py = ppts[-1]
         e.append('<circle cx="%.1f" cy="%.1f" r="4" fill="#ffffff" stroke="%s" stroke-width="2"/>'
                  % (px, py, COL_INTER))
@@ -1242,10 +1323,8 @@ def build_svg_charge(interets_md: dict, lang: str = "fr", prev: dict | None = No
     e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s" text-anchor="%s">%s %d</text>'
              % (lx + dx, ly + 9 if pv else ly + 17, TY_MINEUR, MUTED, ancre,
                 "Md€" if lang == "fr" else "bn", a1))
-    e += cartouche(W, H + 4, T["src"] % (a0, a1) + (T["src_prev"] % edition if pv else ""),
+    return fin_pied(e, W, H + 4, T["src"] % (a0, a1) + (T["src_prev"] % edition if pv else ""),
                    "charge", lang)
-    e.append("</svg>")
-    return "\n".join(e) + "\n"
 
 
 def build_svg_masses(interets: dict, cofog: dict, lang: str = "fr") -> str:
@@ -1277,7 +1356,15 @@ def build_svg_masses(interets: dict, cofog: dict, lang: str = "fr") -> str:
     e = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" role="img" '
          'aria-labelledby="ma-t ma-d" font-family="%s">' % (W, H + CARTOUCHE_H, FONT),
          '<title id="ma-t">%s</title>' % _esc(L["titre"] % (a0, a1)),
-         '<desc id="ma-d">%s</desc>' % _esc(L["desc"] % (a0, a1)),
+         '<desc id="ma-d">%s</desc>' % _esc(L["desc"] % (a0, a1, L["desc_fin"] % (
+             a1, ", ".join("%s %s" % (L["series"][c], num((interets if c == "interets" else cofog[c])[a1], 0))
+                           for c in ("interets", "GF07", "GF09", "GF03")),
+             min(ans, key=lambda a: interets[a]),
+             ", ".join("%s %+d%s" % (L["series"][c], round(((interets if c == "interets" else cofog[c])[a1]
+                                                            / (interets if c == "interets" else cofog[c])[
+                                                                min(ans, key=lambda a: interets[a])] - 1) * 100),
+                                     " %" if lang == "fr" else "%")
+                       for c in ("interets", "GF07", "GF09", "GF03"))))),
          '<text x="0" y="22" font-size="%d" font-weight="600" fill="%s">%s</text>'
          % (TY_TITRE, INK, _esc(L["panneau"])),
          '<text x="0" y="40" font-size="%d" fill="%s">%s</text>' % (TY_AXE, INK2, _esc(L["champ"]))]
@@ -1343,10 +1430,17 @@ def build_svg_masses(interets: dict, cofog: dict, lang: str = "fr") -> str:
         # nombre de postes : « secondaire 64 · primaire 42 · superieur 12 » et
         # « annexes 20 · autres 10 » comptent 3 et 2 postes mais debordent la
         # marge d'un cote et la laissent vide de l'autre.
-        milieu = min(range(1, len(mots)),
-                     key=lambda k: abs(len(" · ".join(mots[:k]))
-                                       - len(" · ".join(mots[k:]))))
-        detail[fonction] = [" · ".join(mots[:milieu]), " · ".join(mots[milieu:])]
+        # Lignes d'au plus 30 caracteres (11/10/2026) : la coupe en deux moities egales sortait du cadre a droite
+        # (« superieur 12 · annexes 20 · autres 10 », contre-expertise OPTIMUM-13), sans rien casser ni se voir.
+        lignes_d, cur = [], ""
+        for mot in mots:
+            cand = (cur + " · " + mot) if cur else mot
+            if cur and len(cand) > 30:
+                lignes_d.append(cur)
+                cur = mot
+            else:
+                cur = cand
+        detail[fonction] = lignes_d + [cur]
 
     bouts.sort()
     PAS = 13.0                            # interligne des lignes secondaires
@@ -1376,9 +1470,7 @@ def build_svg_masses(interets: dict, cofog: dict, lang: str = "fr") -> str:
         e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s">%+d%s %s %d</text>'
                  % (W - mr + 12, dy + PAS, TY_MINEUR - 1, MUTED, round(croiss),
                     " %" if lang == "fr" else "%", "depuis" if lang == "fr" else "since", ref))
-    e += cartouche(W, H + 4, L["src"] % (a0, a1), "masses", lang)
-    e.append("</svg>")
-    return "\n".join(e) + "\n"
+    return fin_pied(e, W, H + 4, L["src"] % (a0, a1), "masses", lang)
 
 
 def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
@@ -1416,18 +1508,18 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
             + " L %.1f %.1f Z" % (X(pts[-1][0]), h - mb))   # ferme sur l'OBSERVE
 
     e = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" '
-         'width="%d" height="%d" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dl-t dl-d">'
-         % (w, h + CARTOUCHE_H, w, h + CARTOUCHE_H)]
+         'role="img" font-variant-numeric="tabular-nums" aria-labelledby="dl-t dl-d" font-family="%s">'
+         % (w, h + CARTOUCHE_H, FONT)]
     e.append('<title id="dl-t">' + L["titre"] % (ans[0], label_courant) + '</title>')
     e.append('<desc id="dl-d">' + L["desc"]
              % (nb(annuel[ans[0]]), ans[0], seuils[30], seuils[60], seuils[80],
                 seuils[100], nb(pct_courant), label_courant)
              + (("" if not prev else
-                 (" Un prolongement en pointillés montre la trajectoire du projet de loi de "
+                 (" Des cercles évidés, non reliés à la courbe, portent la trajectoire du projet de loi de "
                   "finances pour %d, qui atteint %s%s en %d : une prévision, non une "
                   "observation." % (edition, nb(prev[-1][1]), U, prev[-1][0]))) if lang == "fr" else
                 ("" if not prev else
-                 (" A dotted extension shows the path of the %d budget bill, reaching %s%s "
+                 (" Open circles, not joined to the curve, show the path of the %d budget bill, reaching %s%s "
                   "in %d: a forecast, not an observation."
                   % (edition, nb(prev[-1][1]), U, prev[-1][0]))))
              + '</desc>')
@@ -1451,10 +1543,15 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
     if prev:
         # le prolongement part du dernier point OBSERVE : aucun saut, aucune
         # valeur intercalee entre les deux regimes.
-        ppts = [(X(pts[-1][0]), Y(pct_courant))] + [(X(float(a)), Y(v)) for a, v in prev]
-        e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.4" '
-                 'stroke-dasharray="6 5" stroke-linejoin="round" opacity="0.75"/>'
-                 % (_line_path(ppts), COL_DETTE))
+        # Meme regle que la charge (OPTIMUM-13) : prevision annuelle en comptabilite nationale contre serie
+        # trimestrielle de l'INSEE, aucune ligne ne les relie.
+        ppts = [(X(float(a)), Y(v)) for a, v in prev]
+        if len(ppts) > 1:
+            e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2" '
+                     'stroke-dasharray="4 4" opacity="0.6"/>' % (_line_path(ppts), COL_DETTE))
+        for qx, qy in ppts[:-1]:
+            e.append('<circle cx="%.1f" cy="%.1f" r="4" fill="#ffffff" stroke="%s" stroke-width="2"/>'
+                     % (qx, qy, COL_DETTE))
         px, py = ppts[-1]
         e.append('<circle cx="%.1f" cy="%.1f" r="4" fill="#ffffff" stroke="%s" '
                  'stroke-width="2"/>' % (px, py, COL_DETTE))
@@ -1468,7 +1565,7 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
                  'fill="%s">%s</text>'
                  % (px + 9, py + 16, FONT, TY_MINEUR, MUTED,
                     _esc(("trajectoire PLF %d" if lang == "fr"
-                          else "%d budget bill path") % edition)))
+                          else "%d budget path") % edition)))
     e += bandes
     e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.8" '
              'stroke-linejoin="round"/>' % (ligne, COL_DETTE))
@@ -1573,9 +1670,7 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
                  % (cx, h - 6, FONT, TY_MINEUR - 1, MUTED, _esc(lib)))
 
     src = LABELS_CARTOUCHE[lang]["src_longue"]
-    e += cartouche(w, h + 4, src % (ans[0], label_courant), "longue", lang)
-    e.append("</svg>")
-    return "\n".join(e) + "\n"
+    return fin_pied(e, w, h + 4, src % (ans[0], label_courant), "longue", lang)
 
 
 # ------------------------------------------------------------------- sortie
@@ -1619,7 +1714,8 @@ def csv_dette(payload: dict) -> str:
     w.writerow(["serie", "periode", "variable", "valeur", "unite", "source"])
     blocs = [("dette_trimestrielle", "dette_trimestrielle"), ("dette_annuelle_longue", "dette_annuelle_longue"),
              ("interets_annuels", "interets_annuels"), ("recettes_annuelles", "recettes_annuelles"),
-             ("depenses_fonction_annuelles", "depenses_fonction_annuelles"), ("taux_long_terme_annuels", "taux_long_terme_annuels")]
+             ("depenses_fonction_annuelles", "depenses_fonction_annuelles"), ("taux_long_terme_annuels", "taux_long_terme_annuels"),
+             ("interets_recus_annuels", "interets_recus_annuels"), ("decomposition_charge", "decomposition_charge")]
     for cle, nom in blocs:
         b = payload.get(cle)
         if not isinstance(b, dict) or "series" not in b:
@@ -1646,7 +1742,7 @@ def atomic_write(path: Path, text: str) -> None:
 
 
 def meta_figures(lastq: str, last_y: str, taux: dict, annuel: dict,
-                 masses: tuple[int, int], charge: tuple[int, int]) -> dict:
+                 masses: tuple[int, int], charge: tuple[int, int], decomp: tuple[int, int] = (0, 0)) -> dict:
     """Donnees des cartes « Reutiliser » : meme texte que les cartouches.
 
     Source UNIQUE de la precaution de lecture : elle est ecrite une fois, dans
@@ -1663,6 +1759,9 @@ def meta_figures(lastq: str, last_y: str, taux: dict, annuel: dict,
         q = quarter(lastq)
         suf = "" if lang == "fr" else "-en"
         out[lang] = [
+            {"id": "decomp", "fichier": "charge-encours-taux" + suf,
+             "titre": C["titre_decomp"] % decomp, "montre": C["montre_decomp"],
+             "source": C["src_decomp"] % decomp, "precaution": C["decomp"]},
             {"id": "ciseau", "fichier": "ciseau-dette-interets" + suf,
              "titre": C["titre_ciseau"] % q, "montre": C["montre_ciseau"],
              "source": C["src_ciseau"] % (q, last_y),
@@ -1678,9 +1777,9 @@ def meta_figures(lastq: str, last_y: str, taux: dict, annuel: dict,
              "source": C["src_marche"] % (t0, t1), "precaution": C["marche"]},
             {"id": "charge", "fichier": "charge-interets-mdeur" + suf,
              "titre": C["titre_charge"] % (c0, c1), "montre": C["montre_charge"],
-             "source": (("Eurostat, intérêts versés par les administrations publiques "
+             "source": (("Eurostat, intérêts dus par les administrations publiques "
                          "(gov_10a_main, D41PAY), %s-%s") if lang == "fr" else
-                        ("Eurostat, interest paid by general government "
+                        ("Eurostat, interest due by general government "
                          "(gov_10a_main, D41PAY), %s-%s")) % (c0, c1),
              "precaution": C["charge"]},
             {"id": "masses", "fichier": "masses-comparees" + suf,
@@ -1756,6 +1855,9 @@ def main() -> int:
         taux_marche = None
     tr_mdeur = {y: round(v / 1000.0, 1) for y, v in
                 parse_eurostat(fetch(EURO_TR), "sector").get("S13", {}).items()}
+    d41rec_mdeur = {y: round(v / 1000.0, 1) for y, v in
+                    parse_eurostat(fetch(EURO_D41REC), "sector").get("S13", {}).items()}
+    cofog10 = parse_eurostat(fetch(EURO_COFOG10), "cofog99")
 
     dette_mdeur = insee.get("010777616", {})
     dette_pib = insee.get("010777608", {})
@@ -1798,6 +1900,10 @@ def main() -> int:
             in_band("part %s dans %s (%s)" % (code, fonction, an), part, lo, hi)
         in_band("reste de %s (%s)" % (fonction, an), 1.0 - cumul, 0.0, 0.40)
     check_annual("recettes_mdeur", tr_mdeur, 300, 3000)
+    check_annual("interets_recus_mdeur", d41rec_mdeur, 0.1, 30)
+    for code in FONCTIONS_COFOG:
+        if len(cofog10.get(code, {})) < 20:
+            fail("cofog niveau I : %s absent ou trop court" % code)
     check_consolidated_anchors(dette_mdeur, dette_pib, d41_mio)
     check_delta_vs_committed(payload_prev, dette_mdeur, dette_pib, d41_mdeur)
 
@@ -1877,6 +1983,7 @@ def main() -> int:
     # qui repond a « tout monte plus vite que les interets » -- vraie sur trente
     # ans, fausse depuis le creux. Le creux se calcule ; la prose s'arrete si le
     # rapport s'inverse un jour.
+    trajectoire_lue = lire_trajectoire()
     an_c = [a for a in d41_mdeur if a in cofog_mio.get("GF07", {})]
     creux_ref = min(an_c, key=lambda a: d41_mdeur[a])
     fin_c = max(an_c)
@@ -1888,6 +1995,120 @@ def main() -> int:
               "fonctions depuis le creux (%.0f %% contre %.0f %%)." % (croiss_int, croiss_fonc_max))
         return 1
     in_band("interets/recettes " + equiv_y, int_sur_recettes_equiv, 1.0, 15.0)
+
+    # -- phase B du volet 2 (OPTIMUM-13, 11/10/2026) : chaque qualificatif de la prose nouvelle est une garde ------
+    def prose(ok: bool, msg: str) -> None:
+        if not ok:
+            fail("la page affirme ce que les donnees ne soutiennent plus : " + msg)
+
+    # (1) Decomposition COMPTABLE de la variation de la charge : charge(y) = encours(T4 y-1) x taux implicite(y),
+    # contributions a mi-chemin. Identite exacte par construction (le taux est tire de la charge) : elle ne dit pas
+    # POURQUOI le taux implicite bouge (refinancement, composition, indexation melanges).
+    def contrib(y0: int, y1: int) -> dict:
+        b0, b1 = dette_mdeur["%d-Q4" % (y0 - 1)], dette_mdeur["%d-Q4" % (y1 - 1)]
+        c0, c1 = d41_mdeur[str(y0)], d41_mdeur[str(y1)]
+        i0, i1 = c0 / b0, c1 / b1
+        vol, tx = (b1 - b0) * (i0 + i1) / 2, (i1 - i0) * (b0 + b1) / 2
+        if abs(vol + tx - (c1 - c0)) > 0.05:
+            fail("decomposition %d-%d : identite rompue (%.3f + %.3f != %.3f)" % (y0, y1, vol, tx, c1 - c0))
+        return {"delta": c1 - c0, "volume": vol, "taux": tx}
+    an_creux, an_fin = int(trough_y), int(last_y)
+    dec_rows = [dict(annee=a, **contrib(a - 1, a)) for a in range(an_creux + 1, an_fin + 1)]
+    # Cumul = SOMME des contributions annuelles (OPTIMUM-14) : la figure additionne ses barres, le titre doit dire la
+    # meme chose. La decomposition directe entre les deux extremites repartit autrement (15,0 / 21,9 contre 15,15 /
+    # 21,75 en 2020-2025) ; elle n'est plus publiee, et la note de la figure dit la methode.
+    def somme(rows):
+        return {k: sum(r[k] for r in rows) for k in ("delta", "volume", "taux")}
+    dec_cumul = dict(a0=an_creux, a1=an_fin, **somme(dec_rows))
+    if abs(dec_cumul["delta"] - (d41_mdeur[str(an_fin)] - d41_mdeur[str(an_creux)])) > 0.05:
+        fail("decomposition : la somme des variations annuelles ne restitue pas la variation totale")
+    saut = max(dec_rows, key=lambda r: taux_apparent[str(r["annee"])] - taux_apparent[str(r["annee"] - 1)])
+    dec_apres = somme([r for r in dec_rows if r["annee"] > saut["annee"]]) if saut["annee"] < an_fin else None
+    prose(dec_cumul["taux"] > dec_cumul["volume"] > 0,
+          "sur l'ensemble depuis le creux, le taux implicite pese plus que l'encours, et les deux poussent")
+    prose(saut["taux"] > saut["volume"], "l'annee du saut du taux implicite, c'est le taux qui domine")
+    prose(dec_apres is not None and dec_apres["volume"] > dec_apres["taux"] > 0,
+          "depuis l'annee du saut, l'encours pese davantage que le taux implicite")
+    prose(all(r["volume"] > 0 for r in dec_rows), "l'encours augmente chaque annee depuis le creux")
+    prose(saut["annee"] == 2022, "le saut du taux implicite est en 2022 (annee citee avec l'indexation)")
+
+    # (2) Temoin de la serie longue : le niveau de la derniere annee, situe dans la serie (D1).
+    pib_fin = d41_pib[last_y]
+    rec_ratio = {y: d41_mdeur[y] / tr_mdeur[y] * 100 for y in d41_mdeur if y in tr_mdeur}
+    niv_pib = [y for y in d41_pib if y < last_y and d41_pib[y] >= pib_fin]
+    niv_rec = [y for y in rec_ratio if y < last_y and rec_ratio[y] >= rec_ratio[last_y]]
+    prose(bool(niv_pib) and bool(niv_rec), "le niveau de la derniere annee a deja ete atteint dans la serie")
+    prose(pib_fin < d41_pib[min(d41_pib)], "la charge reste sous son niveau de la premiere annee, en part du PIB")
+    an_niv_pib, an_niv_rec = (max(niv_pib) if niv_pib else ""), (max(niv_rec) if niv_rec else "")
+
+    # (3) Charge nette des interets recus : complement, jamais « cout economique net » (Q4).
+    net = {y: d41_mdeur[y] - d41rec_mdeur[y] for y in d41_mdeur if y in d41rec_mdeur}
+    prose(last_y in net and trough_y in net and net[last_y] > net[trough_y] > 0,
+          "nette des interets recus, la charge augmente aussi depuis le creux")
+    prose(last_y in d41rec_mdeur and d41rec_mdeur[last_y] < d41_mdeur[last_y] / 4,
+          "les interets recus restent un complement mineur de la charge brute")
+
+    # (4) Croissance depuis le creux contre les dix grandes fonctions (D4). GF01 contient elle-meme les interets
+    # (operations de la dette publique) : la comparaison porte sur les neuf autres, et la page le dit.
+    autres = [c for c in FONCTIONS_COFOG if c != "GF01"]
+    croiss_autres = {c: (cofog10[c][fin_c] / cofog10[c][creux_ref] - 1) * 100 for c in autres
+                     if fin_c in cofog10.get(c, {}) and creux_ref in cofog10.get(c, {})}
+    prose(len(croiss_autres) == 9, "les neuf autres grandes fonctions sont toutes lues")
+    c_max = max(croiss_autres, key=croiss_autres.get) if croiss_autres else "GF06"
+    prose(croiss_int > croiss_autres.get(c_max, 1e9),
+          "depuis le creux, la charge progresse plus vite que chacune des neuf autres grandes fonctions")
+
+    # (5) Qualificatifs anciens, desormais gardes (D5).
+    prose(hist["retour_10_ans"] == 0, "dans la serie observee, le ratio n'est jamais revenu a son niveau de dix ans auparavant")
+    prose(int_equiv > cof24["GF03"], "la charge depasse le poste « ordre et securite » tout entier")
+    prose(any(d41_mdeur[y] < cofog_mio["GF03"][y] / 1000.0 for y in d41_mdeur if y in cofog_mio["GF03"] and y < equiv_y),
+          "la charge etait auparavant sous le poste « ordre et securite » (« repassee au-dessus »)")
+    # Sante et enseignement : en EUROS, en hausse depuis le creux ; en PART DU PIB, au-dessus de 2019 (reference fixe
+    # d'avant la crise sanitaire, comme pour la charge) mais SOUS leur pic de 2020-2021, quand le PIB s'est contracte.
+    # La phrase publiee jusqu'au 11/10/2026 (« stables ou en hausse, en euros comme en part de PIB ») ne nommait aucune
+    # annee de reference : vraie contre 2019, fausse contre 2020 -- trouve par cette garde, a sa premiere execution.
+    pic_pib = {}
+    for c in ("GF07", "GF09"):
+        prose(cofog_mio[c][equiv_y] >= cofog_mio[c][creux_ref],
+              "%s n'a pas baisse en euros depuis le creux de la charge" % c)
+        prose(cofog_pib[c][equiv_y] >= cofog_pib[c]["2019"], "%s, en part du PIB, est au-dessus de 2019" % c)
+        pic_pib[c] = max((y for y in cofog_pib[c] if "2019" < y <= equiv_y), key=lambda y: cofog_pib[c][y])
+        prose(cofog_pib[c][equiv_y] < cofog_pib[c][pic_pib[c]] and pic_pib[c] in ("2020", "2021"),
+              "%s, en part du PIB, reste sous son pic de 2020-2021" % c)
+    s60 = hist["seuils"][60]
+    sous60 = [a for a in sorted(annuel) if a > s60 and annuel[a] < 60]
+    prose(bool(sous60) and all(1999 <= a <= 2003 for a in sous60),
+          "apres %s, la dette ne repasse sous 60 %% qu'au tournant des annees 2000" % s60)
+    s80, s100 = hist["seuils"][80], hist["seuils"][100]
+    choc_fin = annuel[s80] - annuel[s80 - 2]
+    choc_san = annuel[s100] - annuel[s100 - 1]
+    prose(15 <= choc_fin <= 25 and 12 <= choc_san <= 22, "ordres de grandeur des chocs de 2008-2009 et de 2020")
+
+    # (6) Prevision et sensibilite : la base 2025 du Gouvernement n'est pas la valeur d'Eurostat (P1 nouveau).
+    base_gouv_max = trajectoire_lue["charge_md"][trajectoire_lue["edition"]] - trajectoire_lue["hausse_vs_2025"]
+    prose(base_gouv_max < d41_mdeur[last_y],
+          "« plus de 25 Md EUR par rapport a 2025 » suppose une base 2025 inferieure a la valeur d'Eurostat")
+    niv_prev = [y for y in d41_pib if d41_pib[y] >= trajectoire_lue["charge_pct"][trajectoire_lue["edition"]]]
+    prose(bool(niv_prev), "la charge prevue en part du PIB a deja ete atteinte dans la serie")
+    an_niv_prev = max(niv_prev) if niv_prev else ""
+    sens = trajectoire_lue["sensibilite"]
+    prose(trajectoire_lue["ecart_lfi"] > 0, "la charge prevue pour l'annee N depasse celle de la loi de finances initiale")
+    prose(0 < sens["taux_1pt_premiere_annee_mdeur"] < sens["taux_1pt_deuxieme_annee_mdeur"],
+          "la sensibilite du HCFP croit de la premiere a la deuxieme annee")
+    # (7) Gardes de la prose reecrite (phase B) : ordre des masses, croissance sur toute la periode, taux de marche.
+    prose(cof24["GF03"] < int_equiv < cof24["GF09"] < cof24["GF07"],
+          "les interets se situent entre « ordre et securite » et l'enseignement, loin de la sante")
+    a_deb = min(a for a in d41_mdeur if all(a in cofog_mio.get(c, {}) for c in ("GF03", "GF07", "GF09")))
+    prose(all(cofog_mio[c][equiv_y] / cofog_mio[c][a_deb] > d41_mdeur[equiv_y] / d41_mdeur[a_deb]
+              for c in ("GF03", "GF07", "GF09")),
+          "sur l'ensemble de la periode, ces trois budgets ont cru plus vite que la charge")
+    if taux_marche:
+        communs = [y for y in taux_apparent if y in taux_marche]
+        prose(min(taux_apparent[y] for y in communs) > min(taux_marche[y] for y in communs)
+              and taux_apparent[max(communs)] < taux_marche[max(communs)],
+              "le taux implicite descend moins bas que le taux a 10 ans et finit sous lui")
+        prose(max(taux_marche) == last_y, "le taux a 10 ans cite porte sur la meme annee que la charge")
+    aft = lire_aft()
     if FAILURES:
         print("ECHEC: %d garde(s) sur les derives -- AUCUNE ecriture." % len(FAILURES))
         return 1
@@ -1987,10 +2208,59 @@ def main() -> int:
             "prev_dette_n1_pct_pib": nb(trajectoire["dette"][fprev["n1"]]),
             "prev_dette_n1_prec_pct_pib": nb(trajectoire["dette_prec"][fprev["n1"]]),
             "prev_dette_revision_pts": nb(fprev["revision"]),
+            # -- phase B du volet 2 (OPTIMUM-13) -------------------------------------------------------
+            # decomposition comptable encours / taux implicite (Md EUR, signes explicites)
+            "dec_a0": str(dec_cumul["a0"]), "dec_a1": str(dec_cumul["a1"]),
+            "dec_delta": nb(dec_cumul["delta"]), "dec_volume": nb(dec_cumul["volume"]),
+            "dec_taux": nb(dec_cumul["taux"]),
+            "dec_part_taux_pct": nb(dec_cumul["taux"] / dec_cumul["delta"] * 100, 0),
+            "dec_saut_annee": str(saut["annee"]), "dec_saut_delta": nb(saut["delta"]),
+            "dec_saut_taux": nb(saut["taux"]), "dec_saut_volume": nb(saut["volume"]),
+            "dec_apres_delta": nb(dec_apres["delta"]), "dec_apres_volume": nb(dec_apres["volume"]),
+            "dec_apres_taux": nb(dec_apres["taux"]),
+            "taux_marche_dernier": nb(taux_marche[max(taux_marche)]) if taux_marche else "",
+            "taux_marche_dernier_annee": max(taux_marche) if taux_marche else "",
+            "taux_saut_avant": nb(taux_apparent[str(saut["annee"] - 1)], 2),
+            "taux_saut_apres": nb(taux_apparent[str(saut["annee"])], 2),
+            # temoin de la serie longue
+            "niv_pib_annee": an_niv_pib, "niv_rec_annee": an_niv_rec,
+            "interets_1995_sur_recettes_pct": nb(rec_ratio[min(rec_ratio)]),
+            "recettes_premiere_annee": min(rec_ratio),
+            "prev_niveau_annee": an_niv_prev,
+            # sante et enseignement en part du PIB (reference 2019, pic de la crise sanitaire)
+            "sante_pct_2019": nb(cofog_pib["GF07"]["2019"]), "sante_pct_equiv": nb(cofog_pib["GF07"][equiv_y]),
+            "sante_pct_pic": nb(cofog_pib["GF07"][pic_pib["GF07"]]), "sante_pic_annee": pic_pib["GF07"],
+            "education_pct_2019": nb(cofog_pib["GF09"]["2019"]), "education_pct_equiv": nb(cofog_pib["GF09"][equiv_y]),
+            "education_pct_pic": nb(cofog_pib["GF09"][pic_pib["GF09"]]), "education_pic_annee": pic_pib["GF09"],
+            # charge nette
+            "interets_recus_mdeur": nb(d41rec_mdeur[last_y]), "interets_nets_mdeur": nb(net[last_y]),
+            "interets_nets_creux_mdeur": nb(net[trough_y]),
+            "interets_nets_hausse_pct": nb((net[last_y] / net[trough_y] - 1) * 100, 0),
+            # neuf autres grandes fonctions
+            "croiss_max_autres_pct": nb(croiss_autres[c_max], 0),
+            "croiss_max_autres_nom": NOMS_COFOG["fr" if nb is fr else "en"][c_max],
+            # paliers de la serie longue
+            "hist_sous60_annees": (" et " if nb is fr else " and ").join(str(a) for a in sous60),
+            "hist_choc_crise_pts": nb(choc_fin, 0), "hist_choc_crise_debut": str(s80 - 2),
+            "hist_choc_sanitaire_pts": nb(choc_san, 0),
+            # prevision et sensibilite (HCFP, § 115-116)
+            "prev_hausse_plus_de_mdeur": nb(trajectoire["hausse_vs_2025"], 0),
+            "prev_charge_n_pct_niveau": an_niv_prev,
+            "sens_taux_an1_mdeur": nb(sens["taux_1pt_premiere_annee_mdeur"]),
+            "sens_taux_an2_mdeur": nb(sens["taux_1pt_deuxieme_annee_mdeur"]),
+            "sens_inflation_mdeur": nb(sens["inflation_1pt_meme_annee_mdeur"], 0),
+            "prev_ecart_lfi_mdeur": nb(trajectoire["ecart_lfi"]),
+            # Agence France Tresor (dette negociable de l'Etat), date affichee
+            "aft_date": aft["date"]["fr" if nb is fr else "en"],
+            "aft_dvm_ans": str(aft["duree_vie_moyenne"]["ans"]),
+            "aft_dvm_jours": str(aft["duree_vie_moyenne"]["jours"]),
+            "aft_encours_mdeur": nb(aft["encours_mdeur"], 0),
+            "aft_indexes_mdeur": nb(aft["titres_indexes_mdeur"], 0),
+            "aft_part_indexes_pct": nb(aft["titres_indexes_mdeur"] / aft["encours_mdeur"] * 100),
             "releve_le": date_affichee,
         }
 
-    trajectoire = lire_trajectoire()
+    trajectoire = trajectoire_lue
     fprev = faits_prevision(trajectoire, int(last_y), d41_mdeur[last_y])
     affichage = bloc_affichage(fr, fr_quarter, now_fr)
     affichage_en = bloc_affichage(en, en_quarter, now_en)
@@ -2048,7 +2318,7 @@ def main() -> int:
             },
         },
         "interets_annuels": {
-            "source": ("Eurostat, gov_10a_main — intérêts versés (D41PAY) "
+            "source": ("Eurostat, gov_10a_main — intérêts dus (D41PAY) "
                        "par les administrations publiques (S13), France"),
             "dataset": "gov_10a_main",
             "unite": {"mdeur": "milliards d'euros courants",
@@ -2059,7 +2329,7 @@ def main() -> int:
                 "pct_pib": {y: d41_pib[y] for y in sorted(d41_pib)},
                 "taux_apparent_pct": dict(sorted(taux_apparent.items())),
             },
-            "taux_apparent_definition": ("intérêts versés l'année N / encours de "
+            "taux_apparent_definition": ("intérêts dus l'année N / encours de "
                                          "dette au T4 de l'année N-1 — coût moyen "
                                          "du stock, pas le taux d'émission courant"),
         },
@@ -2071,11 +2341,34 @@ def main() -> int:
             "derniere_periode": tr_last,
             "series": {"mdeur": {y: tr_mdeur[y] for y in sorted(tr_mdeur)}},
         },
+        "interets_recus_annuels": {
+            "source": ("Eurostat, gov_10a_main — intérêts reçus (D41REC) par les administrations publiques (S13), "
+                       "France. Charge nette = intérêts dus moins intérêts reçus : un solde comptable, non un coût "
+                       "économique net."),
+            "dataset": "gov_10a_main",
+            "unite": {"mdeur": "milliards d'euros courants"},
+            "derniere_periode": max(d41rec_mdeur),
+            "series": {"mdeur": {y: d41rec_mdeur[y] for y in sorted(d41rec_mdeur)}},
+        },
+        "decomposition_charge": {
+            "source": ("Calcul : charge d'intérêts (Eurostat, D41PAY) = encours de dette au 31 décembre précédent "
+                       "(INSEE) × taux implicite ; variation décomposée en contributions à mi-chemin. Décomposition "
+                       "COMPTABLE : la part du taux implicite mêle refinancement, composition de la dette et "
+                       "indexation des titres indexés ; elle ne mesure pas l'effet des taux de marché."),
+            "unite": {"delta": "milliards d'euros courants", "volume": "milliards d'euros courants",
+                      "taux": "milliards d'euros courants"},
+            "derniere_periode": str(an_fin),
+            "series": {k: {str(r["annee"]): round(r[k], 2) for r in dec_rows} for k in ("delta", "volume", "taux")},
+            "cumul": {k: (round(v, 2) if isinstance(v, float) else v) for k, v in dec_cumul.items()},
+        },
         "depenses_fonction_annuelles": {
             "source": ("Eurostat, gov_10a_exp — dépenses totales (TE) des "
                        "administrations publiques (S13) par fonction COFOG, "
                        "France"),
             "dataset": "gov_10a_exp",
+            "fonctions_niveau_1": {c: NOMS_COFOG["fr"][c] for c in FONCTIONS_COFOG},
+            "series_niveau_1_mdeur": {c: {y: round(v / 1000.0, 1) for y, v in sorted(cofog10.get(c, {}).items())}
+                                      for c in FONCTIONS_COFOG},
             "fonctions": {"GF0303": "justice (tribunaux)",
                           "GF03": "ordre et sécurité publics (ensemble)",
                           "GF07": "santé", "GF09": "enseignement"},
@@ -2127,14 +2420,6 @@ def main() -> int:
             if isinstance(prec, dict) and "releve_le" in prec:
                 bloc["releve_le"] = prec["releve_le"]
 
-    if check_only:
-        print("OK (--check): gardes passees, rien n'est ecrit. Dette %s = %s "
-              "Md EUR / %s %% PIB ; interets %s = %s Md EUR%s"
-              % (lastq, dette_mdeur[lastq], dette_pib[lastq],
-                 last_y, d41_mdeur[last_y],
-                 " -- INCHANGE depuis le releve du " + str(payload["releve_le"])
-                 if inchange else " -- DONNEES NOUVELLES"))
-        return 0
 
     txt = json.dumps(payload, ensure_ascii=False, indent=1) + "\n"
     # TOUT est construit avant la premiere ecriture. Mesure du 2026-09-20 :
@@ -2157,7 +2442,7 @@ def main() -> int:
         (OUT_FIGURES, json.dumps(meta_figures(
             lastq, last_y, taux_apparent, annuel,
             (ans_masses[0], ans_masses[-1]),
-            (min(inter_md), max(inter_md))),
+            (min(inter_md), max(inter_md)), (dec_cumul["a0"], dec_cumul["a1"])),
             ensure_ascii=False, indent=1) + "\n"),
         (OUT_JSON, txt),
         (OUT_ENDPOINT, txt),
@@ -2185,6 +2470,68 @@ def main() -> int:
             (OUT_SVG_MARCHE_EN, build_svg_marche(taux_apparent, taux_marche,
                                                  lang="en")),
         ]
+    # -- phase B du volet 2 (OPTIMUM-13) : decomposition encours / taux implicite, versions telephone ------------
+    def signe(nbf):
+        def f(v, d=1):
+            t = nbf(abs(v), d)
+            return ("+" + t) if v > 0.0005 else (("\u2212" + t) if v < -0.0005 else t)
+        return f
+    CTX = {"INK": INK, "INK2": INK2, "MUTED": MUTED, "GRID": GRID, "AXIS": AXIS, "CTX3": CTX3,
+           "BLEU": COL_DETTE, "ORANGE": COL_INTER, "FONT": FONT,
+           "nb": {"fr": fr, "en": en}, "sg": {"fr": signe(fr), "en": signe(en)}}
+    LIC_M = {"fr": "Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com",
+             "en": "Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com"}
+    detaillees = dict(sorties)
+    for p_fr, p_en in ((OUT_SVG_DECOMP, OUT_SVG_DECOMP_EN),):
+        for lang, p in (("fr", p_fr), ("en", p_en)):
+            detaillees[p] = FIG.fig_decomp(dec_rows, dec_cumul, lang, CTX, LABELS_CARTOUCHE[lang]["licence"])
+            sorties.append((p, detaillees[p]))
+    dq = {int(p[:4]) + (int(p[-1]) - 1) * 0.25 + 0.125: v for p, v in dette_pib.items()}
+    dpib = {int(y) + 0.5: v for y, v in d41_pib.items()}
+    for lang, quarter in (("fr", fr_quarter), ("en", en_quarter)):
+        Cl = LABELS_CARTOUCHE[lang]
+        suf = "" if lang == "fr" else "_EN"
+        g = globals()
+        mob = [
+            (g["OUT_SVG_DECOMP" + suf], lambda d: FIG.fig_decomp_m(dec_rows, dec_cumul, lang, CTX, LIC_M[lang], d)),
+            (g["OUT_SVG" + suf], lambda d: FIG.fig_ciseau_m(
+                dq, dpib, lang, CTX, LIC_M[lang], d, Cl["titre_ciseau"] % quarter(lastq),
+                Cl["src_ciseau"] % (quarter(lastq), last_y), Cl["ciseau"])),
+            (g["OUT_SVG_CHARGE" + suf], lambda d: FIG.fig_charge_m(
+                inter_md, trajectoire["charge_md"], lang, CTX, LIC_M[lang], d,
+                Cl["titre_charge"] % (min(inter_md), max(inter_md)),
+                LABELS_CARTOUCHE[lang]["src_charge_m"] % (min(inter_md), max(inter_md), trajectoire["edition"]),
+                Cl["charge"])),
+            (g["OUT_SVG_MASSES" + suf], lambda d: FIG.fig_masses_m(
+                inter_md, cofog_md, LABELS_MASSES[lang]["series"], lang, CTX, LIC_M[lang], d,
+                Cl["titre_masses"] % (ans_masses[0], ans_masses[-1]),
+                LABELS_MASSES[lang]["src"] % (ans_masses[0], ans_masses[-1]), Cl["masses"])),
+            (g["OUT_SVG_LONGUE" + suf], lambda d: FIG.fig_longue_m(
+                annuel, dette_pib[lastq], quarter(lastq), hist["seuils"], lang, CTX, LIC_M[lang], d,
+                Cl["titre_longue"] % min(annuel), Cl["src_longue"] % (min(annuel), quarter(lastq)), Cl["longue"])),
+        ]
+        mob.append((g["OUT_SVG_TAUX" + suf], lambda d: FIG.fig_taux_m(
+            taux_apparent, lang, CTX, LIC_M[lang], d, Cl["titre_taux"] % (min(taux_apparent), max(taux_apparent)),
+            Cl["src_taux"] % (min(taux_apparent), max(taux_apparent)), Cl["taux"])))
+        if taux_marche:
+            mob.append((g["OUT_SVG_MARCHE" + suf], lambda d: FIG.fig_marche_m(
+                taux_apparent, taux_marche, lang, CTX, LIC_M[lang], d,
+                Cl["titre_marche"] % (min(taux_apparent), max(taux_apparent)),
+                Cl["src_marche"] % (min(taux_apparent), max(taux_apparent)), Cl["marche"])))
+        for p, faire in mob:
+            svg_m = faire(detaillees[p])
+            # Parite : tout nombre dessine en telephone est dans la description de la detaillee ; police >= 13,5.
+            ecarts = pied_figure.parite(detaillees[p], svg_m, FIG.FS, couleurs=(COL_INTER, COL_DETTE))
+            if ecarts:
+                print("ECHEC: parite %s : %s" % (mobile(p).name, " ; ".join(ecarts)))
+                return 1
+            sorties.append((mobile(p), svg_m))
+    # Textes hors cadre : estimation, signalee (le rendu tranche, jamais l'estimation).
+    for chemin, contenu in sorties:
+        if chemin.suffix == ".svg":
+            larg = 300 if chemin.stem.endswith("-m") else 720
+            for h_c in pied_figure.hors_cadre(contenu, larg):
+                print("AVERTISSEMENT hors cadre (estimation) %s : %s" % (chemin.name, h_c))
     # Le workflow enumere a la main les fichiers qu'il commite. Deux fois deja
     # -- le 16/08 (courbe du taux implicite) et le 20/09 (courbe longue EN) --
     # une sortie NOUVELLE a failli rester hors de cette liste : elle aurait ete
@@ -2208,6 +2555,15 @@ def main() -> int:
                   % (wf.name, ", ".join(oubliees)))
             print("       -- elles seraient regenerees en CI et jamais publiees.")
             return 1
+
+    if check_only:
+        print("OK (--check): gardes, figures et parites passees, rien n'est ecrit. Dette %s = %s "
+              "Md EUR / %s %% PIB ; interets %s = %s Md EUR%s"
+              % (lastq, dette_mdeur[lastq], dette_pib[lastq],
+                 last_y, d41_mdeur[last_y],
+                 " -- INCHANGE depuis le releve du " + str(payload["releve_le"])
+                 if inchange else " -- DONNEES NOUVELLES"))
+        return 0
 
     for chemin, contenu in sorties:
         atomic_write(chemin, contenu)

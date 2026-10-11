@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 447" role="img" font-variant-numeric="tabular-nums" aria-labelledby="tam-t tam-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="tam-t">Le taux implicite, 1996-2025</title><desc id="tam-d">Une courbe, en pourcentage par an. Le taux implicite de la dette descend de 6,5 % en 1996 à 1,2 % en 2020, son minimum sur la série, puis remonte à 2,0 % en 2025. La baisse court sur près de vingt-cinq ans ; la remontée sur les dernières années.</desc>
+<rect width="300" height="447" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Le taux implicite, 1996-2025</text>
+<line x1="34" y1="272.0" x2="286" y2="272.0" stroke="#c3c2b7"/>
+<text x="29" y="277.0" font-size="13.5" fill="#898781" text-anchor="end">0</text>
+<line x1="34" y1="214.9" x2="286" y2="214.9" stroke="#e1e0d9"/>
+<text x="29" y="219.9" font-size="13.5" fill="#898781" text-anchor="end">2</text>
+<line x1="34" y1="157.7" x2="286" y2="157.7" stroke="#e1e0d9"/>
+<text x="29" y="162.7" font-size="13.5" fill="#898781" text-anchor="end">4</text>
+<line x1="34" y1="100.6" x2="286" y2="100.6" stroke="#e1e0d9"/>
+<text x="29" y="105.6" font-size="13.5" fill="#898781" text-anchor="end">6</text>
+<text x="34.0" y="291.0" font-size="13.5" fill="#898781" text-anchor="start">1996</text>
+<text x="286.0" y="291.0" font-size="13.5" fill="#898781" text-anchor="end">2025</text>
+<path d="M34.0,86.6 L42.7,100.3 L51.4,110.0 L60.1,125.4 L68.8,126.6 L77.4,120.3 L86.1,121.4 L94.8,134.0 L103.5,144.0 L112.2,151.7 L120.9,157.7 L129.6,148.6 L138.3,143.1 L147.0,170.6 L155.7,182.9 L164.3,179.1 L173.0,186.3 L181.7,198.3 L190.4,204.6 L199.1,210.3 L207.8,215.1 L216.5,218.6 L225.2,219.4 L233.9,226.6 L242.6,236.6 L251.2,234.6 L259.9,220.6 L268.6,220.3 L277.3,216.6 L286.0,214.6" fill="none" stroke="#eb6834" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="34.0" cy="86.6" r="4" fill="#eb6834"/>
+<text x="40.0" y="76.6" font-size="15" font-weight="600" fill="#0A0A0E" text-anchor="start">6,5 %</text>
+<circle cx="242.6" cy="236.6" r="4" fill="#eb6834"/>
+<text x="242.6" y="258.6" font-size="15" font-weight="600" fill="#0A0A0E" text-anchor="middle">1,2 %</text>
+<circle cx="286.0" cy="214.6" r="4" fill="#eb6834"/>
+<text x="286.0" y="202.6" font-size="15" font-weight="600" fill="#0A0A0E" text-anchor="end">2,0 %</text>
+<line x1="0" y1="306.0" x2="300" y2="306.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="327.0" font-size="13.5" fill="#52514e">Calcul sur séries Eurostat</text>
+<text class="pied-source" x="0" y="344.0" font-size="13.5" fill="#52514e">(gov_10a_main) et INSEE, 1996-2025</text>
+<text class="pied-note" x="0" y="365.0" font-size="13.5" fill="#52514e">Taux implicite = intérêts de l'année /</text>
+<text class="pied-note" x="0" y="382.0" font-size="13.5" fill="#52514e">encours au 31 décembre précédent, non</text>
+<text class="pied-note" x="0" y="399.0" font-size="13.5" fill="#52514e">le taux d'emprunt du jour.</text>
+<text class="pied-licence" x="0" y="420.0" font-size="13.5" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="437.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+</svg>

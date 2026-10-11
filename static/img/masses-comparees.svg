@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 428" role="img" aria-labelledby="ma-t ma-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 463" role="img" aria-labelledby="ma-t ma-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="ma-t">La charge d'intérêts face aux grands budgets publics, 1995-2024</title>
-<desc id="ma-d">Quatre courbes en milliards d'euros courants, de 1995 à 2024. La santé et l'enseignement progressent régulièrement et restent les plus élevés. La charge d'intérêts baisse jusqu'au début des années 2020, puis remonte et repasse au-dessus du poste « ordre et sécurité ».</desc>
+<desc id="ma-d">Quatre courbes en milliards d'euros courants, de 1995 à 2024. La santé et l'enseignement progressent régulièrement et restent les plus élevés. La charge d'intérêts baisse jusqu'au début des années 2020, puis remonte et repasse au-dessus du poste « ordre et sécurité ». En 2024 : Charge d'intérêts 60, Santé 261, Enseignement 149, Ordre et sécurité 52 ; évolutions depuis 2020 : Charge d'intérêts +102 %, Santé +26 %, Enseignement +24 %, Ordre et sécurité +26 %.</desc>
 <text x="0" y="22" font-size="13" font-weight="600" fill="#0A0A0E">La charge d'intérêts comparée à quelques grandes fonctions de dépense</text>
 <text x="0" y="40" font-size="11" fill="#52514e">France · administrations publiques · milliards d'euros courants</text>
 <line x1="52.0" y1="346.0" x2="524.0" y2="346.0" stroke="#c3c2b7" stroke-width="1"/>
@@ -28,18 +28,22 @@
 <text x="458.9" y="332.5" font-size="11" fill="#eb6834" text-anchor="middle">29,7 — 2020</text>
 <text x="536.0" y="78.5" font-size="11" fill="#52514e"><tspan font-weight="600">Santé</tspan> 261</text>
 <text x="536.0" y="91.5" font-size="10" fill="#898781">hôpital 109 · ambulatoire 92</text>
-<text x="536.0" y="104.5" font-size="10" fill="#898781">produits médicaux 44 · autres 16</text>
-<text x="536.0" y="117.5" font-size="10" fill="#898781">+26 % depuis 2020</text>
+<text x="536.0" y="104.5" font-size="10" fill="#898781">produits médicaux 44</text>
+<text x="536.0" y="117.5" font-size="10" fill="#898781">autres 16</text>
+<text x="536.0" y="130.5" font-size="10" fill="#898781">+26 % depuis 2020</text>
 <text x="536.0" y="194.2" font-size="11" fill="#898781"><tspan font-weight="600">Enseignement</tspan> 149</text>
 <text x="536.0" y="207.2" font-size="10" fill="#898781">secondaire 64 · primaire 42</text>
-<text x="536.0" y="220.2" font-size="10" fill="#898781">supérieur 12 · annexes 20 · autres 10</text>
-<text x="536.0" y="233.2" font-size="10" fill="#898781">+24 % depuis 2020</text>
+<text x="536.0" y="220.2" font-size="10" fill="#898781">supérieur 12 · annexes 20</text>
+<text x="536.0" y="233.2" font-size="10" fill="#898781">autres 10</text>
+<text x="536.0" y="246.2" font-size="10" fill="#898781">+24 % depuis 2020</text>
 <text x="536.0" y="285.2" font-size="12" fill="#eb6834"><tspan font-weight="700">Charge d'intérêts</tspan> 60</text>
 <text x="536.0" y="298.2" font-size="10" fill="#898781">+102 % depuis 2020</text>
 <text x="536.0" y="317.2" font-size="11" fill="#a5a39a"><tspan font-weight="600">Ordre et sécurité</tspan> 52</text>
 <text x="536.0" y="330.2" font-size="10" fill="#898781">+26 % depuis 2020</text>
-<line x1="0" y1="384.0" x2="720" y2="384.0" stroke="#e1e0d9" stroke-width="1"/>
-<text x="0" y="397.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Eurostat : intérêts versés (gov_10a_main, D41PAY) et dépenses des administrations par fonction (gov_10a_exp, COFOG), 1995-2024</text>
-<text x="0" y="409.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Les intérêts sont une nature de dépense, les trois autres des fonctions : ce n'est pas le même découpage, et aucun transfert n'est établi de l'un vers l'autre.</text>
-<text x="0" y="421.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/cout-de-la-dette-publique/</text>
+<line x1="0" y1="384.0" x2="720" y2="384.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="399.0" font-size="11" fill="#52514e">Eurostat : intérêts dus (gov_10a_main, D41PAY) et dépenses des administrations par fonction (gov_10a_exp, COFOG),</text>
+<text class="pied-source" x="0" y="413.0" font-size="11" fill="#52514e">1995-2024</text>
+<text class="pied-note" x="0" y="427.0" font-size="11" fill="#52514e">Les intérêts sont une nature de dépense, les trois autres des fonctions : ce n'est pas le même découpage, et aucun</text>
+<text class="pied-note" x="0" y="441.0" font-size="11" fill="#52514e">transfert n'est établi de l'un vers l'autre.</text>
+<text class="pied-licence" x="0" y="455.0" font-size="11" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/cout-de-la-dette-publique/</text>
 </svg>

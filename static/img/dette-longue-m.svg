@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 560" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dlm-t dlm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="dlm-t">La dette depuis 1978, en % du PIB</title><desc id="dlm-d">Elle part de 21,6 % du PIB en 1978, franchit 30 % en 1984, 60 % en 1996, 80 % en 2009, 100 % en 2020, et atteint 119,0 % au T2 2026. Des cercles évidés, non reliés à la courbe, portent la trajectoire du projet de loi de finances pour 2027, qui atteint 121,7 % en 2027 : une prévision, non une observation.</desc>
+<rect width="300" height="560" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">La dette depuis 1978, en % du</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">PIB</text>
+<line x1="34" y1="268.0" x2="286" y2="268.0" stroke="#c3c2b7"/>
+<text x="29" y="273.0" font-size="13.5" fill="#898781" text-anchor="end">0</text>
+<line x1="34" y1="224.2" x2="286" y2="224.2" stroke="#e1e0d9"/>
+<text x="29" y="229.2" font-size="13.5" fill="#898781" text-anchor="end">30</text>
+<line x1="34" y1="180.3" x2="286" y2="180.3" stroke="#e1e0d9"/>
+<text x="29" y="185.3" font-size="13.5" fill="#898781" text-anchor="end">60</text>
+<line x1="34" y1="136.5" x2="286" y2="136.5" stroke="#e1e0d9"/>
+<text x="29" y="141.5" font-size="13.5" fill="#898781" text-anchor="end">90</text>
+<line x1="34" y1="92.6" x2="286" y2="92.6" stroke="#e1e0d9"/>
+<text x="29" y="97.6" font-size="13.5" fill="#898781" text-anchor="end">120</text>
+<text x="34.0" y="287.0" font-size="13.5" fill="#898781" text-anchor="start">1978</text>
+<text x="284.7" y="287.0" font-size="13.5" fill="#898781" text-anchor="middle">2025</text>
+<path d="M34.0,236.4 L39.3,236.4 L44.7,236.9 L50.0,235.0 L55.3,229.7 L60.7,227.5 L66.0,223.9 L71.3,221.4 L76.7,220.6 L82.0,217.1 L87.3,217.3 L92.7,216.1 L98.0,214.2 L103.3,212.8 L108.7,207.1 L114.0,197.6 L119.3,192.6 L124.7,183.5 L130.0,179.4 L135.3,177.4 L140.7,177.2 L146.0,178.3 L151.3,180.7 L156.7,181.3 L162.0,178.4 L167.3,172.4 L172.7,170.2 L178.0,168.3 L183.3,172.4 L188.7,172.3 L194.0,166.0 L199.3,145.1 L204.7,141.9 L210.0,138.4 L215.3,134.0 L220.7,129.7 L226.0,127.4 L231.3,126.2 L236.7,124.6 L242.0,123.6 L247.3,124.0 L252.7,124.5 L258.0,100.1 L263.3,103.1 L268.7,105.2 L274.0,108.0 L279.3,103.4 L284.7,98.9 L286.0,94.1" fill="none" stroke="#184f95" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="286.0" cy="94.1" r="4.5" fill="#eb6834"/>
+<text x="0" y="304" font-size="13.5" fill="#52514e">Seuils franchis (fin d'année) :</text>
+<text x="0" y="325" font-size="13.5" fill="#52514e">1978</text>
+<text x="140" y="325" font-size="13.5" font-weight="600" fill="#184f95" text-anchor="end">21,6 %</text>
+<text x="154" y="325" font-size="13.5" fill="#52514e">1984</text>
+<text x="294" y="325" font-size="13.5" font-weight="600" fill="#184f95" text-anchor="end">&gt; 30 %</text>
+<text x="0" y="346" font-size="13.5" fill="#52514e">1996</text>
+<text x="140" y="346" font-size="13.5" font-weight="600" fill="#184f95" text-anchor="end">&gt; 60 %</text>
+<text x="154" y="346" font-size="13.5" fill="#52514e">2009</text>
+<text x="294" y="346" font-size="13.5" font-weight="600" fill="#184f95" text-anchor="end">&gt; 80 %</text>
+<text x="0" y="367" font-size="13.5" fill="#52514e">2020</text>
+<text x="140" y="367" font-size="13.5" font-weight="600" fill="#184f95" text-anchor="end">&gt; 100 %</text>
+<text x="154" y="367" font-size="13.5" fill="#52514e">T2 2026</text>
+<text x="294" y="367" font-size="13.5" font-weight="600" fill="#184f95" text-anchor="end">119,0 %</text>
+<line x1="0" y1="385.0" x2="300" y2="385.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="406.0" font-size="13.5" fill="#52514e">INSEE, dette de Maastricht,</text>
+<text class="pied-source" x="0" y="423.0" font-size="13.5" fill="#52514e">1978-T2 2026</text>
+<text class="pied-note" x="0" y="444.0" font-size="13.5" fill="#52514e">Dette au sens de Maastricht, toutes</text>
+<text class="pied-note" x="0" y="461.0" font-size="13.5" fill="#52514e">administrations publiques.</text>
+<text class="pied-note" x="0" y="478.0" font-size="13.5" fill="#52514e">« &gt; 80 % » : première fin d'année</text>
+<text class="pied-note" x="0" y="495.0" font-size="13.5" fill="#52514e">au-delà du seuil ; en trimestriel, il</text>
+<text class="pied-note" x="0" y="512.0" font-size="13.5" fill="#52514e">peut être franchi plus tôt.</text>
+<text class="pied-licence" x="0" y="533.0" font-size="13.5" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="550.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+</svg>

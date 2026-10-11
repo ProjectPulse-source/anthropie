@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 610" role="img" font-variant-numeric="tabular-nums" aria-labelledby="mam-t mam-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="mam-t">Interest due against the main public budgets, 1995-2024</title><desc id="mam-d">Four curves in billion euros, from 1995 to 2024. Health and education rise steadily and stay the highest. Interest due falls until the early 2020s, then climbs back above the public order and safety function. In 2024: Interest due 60, Health 261, Education 149, Public order and safety 52; changes since 2020: Interest due +102%, Health +26%, Education +24%, Public order and safety +26%.</desc>
+<rect width="300" height="610" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Interest due against the main</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">public budgets, 1995-2024</text>
+<line x1="34" y1="278.0" x2="292" y2="278.0" stroke="#c3c2b7"/>
+<text x="29" y="283.0" font-size="13.5" fill="#898781" text-anchor="end">0</text>
+<line x1="34" y1="207.1" x2="292" y2="207.1" stroke="#e1e0d9"/>
+<text x="29" y="212.1" font-size="13.5" fill="#898781" text-anchor="end">100</text>
+<line x1="34" y1="136.2" x2="292" y2="136.2" stroke="#e1e0d9"/>
+<text x="29" y="141.2" font-size="13.5" fill="#898781" text-anchor="end">200</text>
+<text x="34.0" y="297.0" font-size="13.5" fill="#898781" text-anchor="start">1995</text>
+<text x="292.0" y="297.0" font-size="13.5" fill="#898781" text-anchor="end">2024</text>
+<path d="M34.0,218.3 L42.9,215.2 L51.8,215.4 L60.7,212.9 L69.6,210.4 L78.5,205.9 L87.4,202.1 L96.3,196.4 L105.2,191.1 L114.1,186.3 L123.0,180.6 L131.9,177.2 L140.8,173.6 L149.7,171.2 L158.6,166.4 L167.4,162.8 L176.3,159.2 L185.2,157.1 L194.1,154.4 L203.0,150.7 L211.9,149.7 L220.8,147.1 L229.7,143.3 L238.6,140.8 L247.5,137.5 L256.4,130.5 L265.3,111.6 L274.2,107.3 L283.1,101.0 L292.0,92.8" fill="none" stroke="#52514e" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M34.0,228.2 L42.9,226.9 L51.8,226.5 L60.7,225.0 L69.6,222.1 L78.5,219.9 L87.4,217.3 L96.3,213.8 L105.2,212.1 L114.1,211.9 L123.0,209.7 L131.9,207.2 L140.8,206.0 L149.7,203.0 L158.6,200.7 L167.4,199.7 L176.3,200.0 L185.2,199.3 L194.1,198.1 L203.0,197.0 L211.9,195.9 L220.8,196.2 L229.7,193.8 L238.6,192.5 L247.5,191.2 L256.4,192.8 L265.3,187.9 L274.2,183.0 L283.1,177.6 L292.0,172.6" fill="none" stroke="#898781" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M34.0,265.1 L42.9,264.9 L51.8,265.1 L60.7,264.7 L69.6,264.2 L78.5,263.7 L87.4,262.0 L96.3,260.6 L105.2,259.8 L114.1,259.4 L123.0,259.0 L131.9,258.6 L140.8,257.8 L149.7,256.1 L158.6,255.1 L167.4,254.3 L176.3,254.1 L185.2,253.8 L194.1,253.5 L203.0,253.1 L211.9,252.6 L220.8,252.0 L229.7,251.2 L238.6,250.6 L247.5,249.5 L256.4,248.8 L265.3,247.7 L274.2,245.8 L283.1,243.5 L292.0,241.0" fill="none" stroke="#a5a39a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M34.0,248.1 L42.9,245.7 L51.8,245.8 L60.7,245.9 L69.6,247.6 L78.5,247.1 L87.4,244.9 L96.3,244.1 L105.2,244.9 L114.1,244.3 L123.0,244.1 L131.9,243.9 L140.8,241.1 L149.7,237.4 L158.6,243.0 L167.4,242.0 L176.3,238.3 L185.2,239.1 L194.1,243.0 L203.0,244.5 L211.9,246.3 L220.8,247.9 L229.7,248.9 L238.6,248.4 L247.5,251.8 L256.4,256.9 L265.3,253.3 L274.2,241.9 L283.1,240.1 L292.0,235.4" fill="none" stroke="#eb6834" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="0" y="316" font-size="13.5" fill="#52514e">In 2024, and change since 2020:</text>
+<line x1="0" y1="332" x2="14" y2="332" stroke="#52514e" stroke-width="1.6"/>
+<text x="20" y="337" font-size="13.5" fill="#52514e">Health</text>
+<text x="238" y="337" font-size="13.5" font-weight="600" fill="#0A0A0E" text-anchor="end">261 bn</text>
+<text x="300" y="337" font-size="13.5" fill="#898781" text-anchor="end">+26%</text>
+<line x1="0" y1="353" x2="14" y2="353" stroke="#898781" stroke-width="1.6"/>
+<text x="20" y="358" font-size="13.5" fill="#52514e">Education</text>
+<text x="238" y="358" font-size="13.5" font-weight="600" fill="#0A0A0E" text-anchor="end">149 bn</text>
+<text x="300" y="358" font-size="13.5" fill="#898781" text-anchor="end">+24%</text>
+<line x1="0" y1="374" x2="14" y2="374" stroke="#eb6834" stroke-width="2.6"/>
+<text x="20" y="379" font-size="13.5" fill="#52514e">Interest due</text>
+<text x="238" y="379" font-size="13.5" font-weight="600" fill="#0A0A0E" text-anchor="end">60 bn</text>
+<text x="300" y="379" font-size="13.5" fill="#898781" text-anchor="end">+102%</text>
+<line x1="0" y1="395" x2="14" y2="395" stroke="#a5a39a" stroke-width="1.6"/>
+<text x="20" y="400" font-size="13.5" fill="#52514e">Public order and safety</text>
+<text x="238" y="400" font-size="13.5" font-weight="600" fill="#0A0A0E" text-anchor="end">52 bn</text>
+<text x="300" y="400" font-size="13.5" fill="#898781" text-anchor="end">+26%</text>
+<line x1="0" y1="418.0" x2="300" y2="418.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="439.0" font-size="13.5" fill="#52514e">Eurostat: interest due (gov_10a_main,</text>
+<text class="pied-source" x="0" y="456.0" font-size="13.5" fill="#52514e">D41PAY) and general government</text>
+<text class="pied-source" x="0" y="473.0" font-size="13.5" fill="#52514e">expenditure by function (gov_10a_exp,</text>
+<text class="pied-source" x="0" y="490.0" font-size="13.5" fill="#52514e">COFOG), 1995-2024</text>
+<text class="pied-note" x="0" y="511.0" font-size="13.5" fill="#52514e">Interest is a type of spending, the</text>
+<text class="pied-note" x="0" y="528.0" font-size="13.5" fill="#52514e">other three are functions: not the</text>
+<text class="pied-note" x="0" y="545.0" font-size="13.5" fill="#52514e">same breakdown, and no transfer from</text>
+<text class="pied-note" x="0" y="562.0" font-size="13.5" fill="#52514e">one to the other is established.</text>
+<text class="pied-licence" x="0" y="583.0" font-size="13.5" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="600.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+</svg>

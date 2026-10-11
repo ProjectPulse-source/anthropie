@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 588" role="img" font-variant-numeric="tabular-nums" aria-labelledby="tmm-t tmm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="tmm-t">Market rate and average cost of the stock, 1996-2025</title><desc id="tmm-d">Two curves in percent per year. The 10-year rate goes from 6.3% in 1996 to -0.1% in 2020, then climbs back to 3.3% in 2025. The implicit rate, the average cost of the stock, goes from 6.5% to 1.2%, then rises only to 2.0% in 2025.</desc>
+<rect width="300" height="588" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Market rate and average cost</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">of the stock, 1996-2025</text>
+<line x1="34" y1="253.0" x2="292" y2="253.0" stroke="#e1e0d9"/>
+<text x="29" y="258.0" font-size="13.5" fill="#898781" text-anchor="end">0</text>
+<line x1="34" y1="203.0" x2="292" y2="203.0" stroke="#e1e0d9"/>
+<text x="29" y="208.0" font-size="13.5" fill="#898781" text-anchor="end">2</text>
+<line x1="34" y1="153.0" x2="292" y2="153.0" stroke="#e1e0d9"/>
+<text x="29" y="158.0" font-size="13.5" fill="#898781" text-anchor="end">4</text>
+<line x1="34" y1="103.0" x2="292" y2="103.0" stroke="#e1e0d9"/>
+<text x="29" y="108.0" font-size="13.5" fill="#898781" text-anchor="end">6</text>
+<text x="34.0" y="297.0" font-size="13.5" fill="#898781" text-anchor="start">1996</text>
+<text x="292.0" y="297.0" font-size="13.5" fill="#898781" text-anchor="end">2025</text>
+<path d="M34.0,95.2 L42.9,113.5 L51.8,137.0 L60.7,137.8 L69.6,118.2 L78.5,129.5 L87.4,131.5 L96.3,149.8 L105.2,150.5 L114.1,167.8 L123.0,158.0 L131.9,145.5 L140.8,147.2 L149.7,161.8 L158.6,175.0 L167.4,170.0 L176.3,189.5 L185.2,198.0 L194.1,211.2 L203.0,232.0 L211.9,241.2 L220.8,232.8 L229.7,233.5 L238.6,249.8 L247.5,256.8 L256.4,252.8 L265.3,210.5 L274.2,178.2 L283.1,178.8 L292.0,169.3" fill="none" stroke="#52514e" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M34.0,90.8 L42.9,102.8 L51.8,111.2 L60.7,124.8 L69.6,125.8 L78.5,120.2 L87.4,121.2 L96.3,132.2 L105.2,141.0 L114.1,147.8 L123.0,153.0 L131.9,145.0 L140.8,140.2 L149.7,164.2 L158.6,175.0 L167.4,171.8 L176.3,178.0 L185.2,188.5 L194.1,194.0 L203.0,199.0 L211.9,203.2 L220.8,206.2 L229.7,207.0 L238.6,213.2 L247.5,222.0 L256.4,220.2 L265.3,208.0 L274.2,207.8 L283.1,204.5 L292.0,202.8" fill="none" stroke="#eb6834" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="292.0" cy="169.3" r="4" fill="#52514e"/>
+<circle cx="292.0" cy="202.8" r="4" fill="#eb6834"/>
+<line x1="0" y1="309" x2="18" y2="309" stroke="#52514e" stroke-width="1.6"/>
+<text x="24" y="314" font-size="13.5" fill="#52514e">10-year rate 2025</text>
+<text x="300" y="314" font-size="15" font-weight="600" fill="#52514e" text-anchor="end">3.3%</text>
+<line x1="0" y1="331" x2="18" y2="331" stroke="#eb6834" stroke-width="2.6"/>
+<text x="24" y="336" font-size="13.5" fill="#52514e">Implicit rate 2025</text>
+<text x="300" y="336" font-size="15" font-weight="600" fill="#eb6834" text-anchor="end">2.0%</text>
+<line x1="0" y1="362.0" x2="300" y2="362.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="383.0" font-size="13.5" fill="#52514e">Eurostat irt_lt_mcby_a (10-year yield)</text>
+<text class="pied-source" x="0" y="400.0" font-size="13.5" fill="#52514e">· implicit rate: Eurostat gov_10a_main</text>
+<text class="pied-source" x="0" y="417.0" font-size="13.5" fill="#52514e">and INSEE, 1996-2025</text>
+<text class="pied-note" x="0" y="438.0" font-size="13.5" fill="#52514e">The 10-year yield is a reference</text>
+<text class="pied-note" x="0" y="455.0" font-size="13.5" fill="#52514e">indicator, not the actual cost of</text>
+<text class="pied-note" x="0" y="472.0" font-size="13.5" fill="#52514e">issuance; the implicit rate, the</text>
+<text class="pied-note" x="0" y="489.0" font-size="13.5" fill="#52514e">average cost of the whole stock,</text>
+<text class="pied-note" x="0" y="506.0" font-size="13.5" fill="#52514e">follows market rates only as debt is</text>
+<text class="pied-note" x="0" y="523.0" font-size="13.5" fill="#52514e">renewed, and includes the indexation</text>
+<text class="pied-note" x="0" y="540.0" font-size="13.5" fill="#52514e">of inflation-linked bonds.</text>
+<text class="pied-licence" x="0" y="561.0" font-size="13.5" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="578.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+</svg>

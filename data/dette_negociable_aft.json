@@ -1,0 +1,27 @@
+{
+ "_avertissement": "Valeurs PUBLIÉES par l'Agence France Trésor, saisies à la main après lecture à la source. Le site de l'AFT refuse les scripts (403, relevé le 2026-10-11) : lecture par le navigateur, règle constante « anti-robot → changement de canal ». Chaque valeur porte sa date ; la page l'affiche. À relire à chaque mise à jour de la trajectoire du projet de loi de finances (data/trajectoire_plf.json), au plus tard.",
+ "source": {
+  "publication": "Agence France Trésor, « Principaux chiffres » (tableau repris du Bulletin mensuel)",
+  "page": "https://www.aft.gouv.fr/fr/principaux-chiffres-dette",
+  "canal": "navigateur (403 aux scripts)",
+  "lu_le": "2026-10-11"
+ },
+ "perimetre": "Dette négociable de l'État (et non l'ensemble des administrations publiques)",
+ "date": {
+  "fr": "fin août 2026",
+  "en": "end of August 2026",
+  "iso": "2026-08-31"
+ },
+ "encours_mdeur": 2904,
+ "titres_indexes_mdeur": 314,
+ "duree_vie_moyenne": {
+  "ans": 8,
+  "jours": 142
+ },
+ "duree_vie_moyenne_fin_2025": {
+  "ans": 8,
+  "jours": 184
+ },
+ "court_terme_mdeur": 219,
+ "duree_vie_moyenne_court_terme_jours": 124
+}

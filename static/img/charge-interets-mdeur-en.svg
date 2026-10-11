@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 388" role="img" aria-labelledby="ch-t ch-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-<title id="ch-t">Interest paid in billion euros, 1995-2025</title>
-<desc id="ch-d">One curve in billion euros, from 1995 to 2025. Interest paid falls to its trough in 2020, then climbs steeply to 66.6 billion in 2025. A dotted extension shows the Government's forecast in the 2027 budget bill: 91 billion in 2027. A forecast, not an observation.</desc>
-<text x="0" y="22" font-size="13" font-weight="600" fill="#0A0A0E">Interest paid by general government, billion euros, current prices</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 423" role="img" aria-labelledby="ch-t ch-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="ch-t">Interest due in billion euros, 1995-2025</title>
+<desc id="ch-d">One curve in billion euros, from 1995 to 2025. Interest due falls to its trough in 2020 (29.7 billion), then climbs steeply to 66.6 billion in 2025. Two open circles, not joined to the curve, show the Government's forecast in the 2027 budget bill: 79.2 billion in 2026, 91 in 2027. A forecast, not an observation, on a 2025 base not reconciled with Eurostat.</desc>
+<text x="0" y="22" font-size="13" font-weight="600" fill="#0A0A0E">Interest due by general government, billion euros, current prices</text>
 <line x1="52.0" y1="306.0" x2="588.0" y2="306.0" stroke="#c3c2b7" stroke-width="1"/>
 <text x="45.0" y="310.0" font-size="11" fill="#898781" text-anchor="end">0</text>
 <line x1="52.0" y1="255.0" x2="588.0" y2="255.0" stroke="#e1e0d9" stroke-width="1"/>
@@ -25,16 +25,19 @@
 <path d="M52.0,198.3 L68.8,189.9 L85.5,190.2 L102.2,190.4 L119.0,196.6 L135.8,194.8 L152.5,186.9 L169.2,184.1 L186.0,186.9 L202.8,184.8 L219.5,184.1 L236.2,183.3 L253.0,173.1 L269.8,160.1 L286.5,180.2 L303.2,176.7 L320.0,163.1 L336.8,165.9 L353.5,180.0 L370.2,185.3 L387.0,192.0 L403.8,197.8 L420.5,201.4 L437.2,199.6 L454.0,211.9 L470.8,230.2 L487.5,217.2 L504.2,176.2 L521.0,169.8 L537.8,152.7 L554.5,136.1" fill="none" stroke="#eb6834" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
 <circle cx="470.8" cy="230.2" r="3.5" fill="#eb6834"/>
 <text x="470.8" y="250.2" font-size="11" fill="#898781" text-anchor="middle">trough of 29.7 (2020)</text>
-<path d="M554.5,136.1 L571.2,104.0 L588.0,73.9" fill="none" stroke="#eb6834" stroke-width="2.4" stroke-dasharray="6 5" stroke-linejoin="round" opacity="0.75"/>
+<path d="M571.2,104.0 L588.0,73.9" fill="none" stroke="#eb6834" stroke-width="2" stroke-dasharray="4 4" opacity="0.6"/>
+<circle cx="571.2" cy="104.0" r="4" fill="#ffffff" stroke="#eb6834" stroke-width="2"/>
 <circle cx="588.0" cy="73.9" r="4" fill="#ffffff" stroke="#eb6834" stroke-width="2"/>
 <text x="597.0" y="74.9" font-size="12" font-weight="600" fill="#eb6834">91</text>
 <text x="597.0" y="89.9" font-size="11" fill="#898781">bn 2027</text>
-<text x="597.0" y="103.9" font-size="11" fill="#898781">2027 budget bill forecast</text>
+<text x="597.0" y="103.9" font-size="11" fill="#898781">2027 budget forecast</text>
 <circle cx="554.5" cy="136.1" r="5" fill="#eb6834"/>
 <text x="544.5" y="130.1" font-size="15" font-weight="700" fill="#0A0A0E" text-anchor="end">66.6</text>
 <text x="544.5" y="145.1" font-size="11" fill="#898781" text-anchor="end">bn 2025</text>
-<line x1="0" y1="344.0" x2="720" y2="344.0" stroke="#e1e0d9" stroke-width="1"/>
-<text x="0" y="357.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Eurostat, interest paid by general government (gov_10a_main, D41PAY), 1995-2025; dotted: Government forecast, 2027 budget bill</text>
-<text x="0" y="369.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Billion euros at current prices, not adjusted for inflation: the bill itself, not its weight in national income.</text>
-<text x="0" y="381.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/cost-of-french-public-debt/</text>
+<line x1="0" y1="344.0" x2="720" y2="344.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="359.0" font-size="11" fill="#52514e">Eurostat, interest due by general government (gov_10a_main, D41PAY), 1995-2025; open circles: Government forecast,</text>
+<text class="pied-source" x="0" y="373.0" font-size="11" fill="#52514e">2027 budget bill (HCFP opinion, para. 115)</text>
+<text class="pied-note" x="0" y="387.0" font-size="11" fill="#52514e">Billion euros at current prices, not adjusted for inflation. Open circles: Government forecast, whose 2025 base is not</text>
+<text class="pied-note" x="0" y="401.0" font-size="11" fill="#52514e">reconciled with Eurostat; no change can be read between the observed and the forecast values.</text>
+<text class="pied-licence" x="0" y="415.0" font-size="11" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/cost-of-french-public-debt/</text>
 </svg>

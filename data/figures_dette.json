@@ -1,6 +1,14 @@
 {
  "fr": [
   {
+   "id": "decomp",
+   "fichier": "charge-encours-taux",
+   "titre": "D'où vient la hausse de la charge d'intérêts : encours ou taux implicite, 2020-2025",
+   "montre": "Ce qui, dans la hausse de la charge, tient à la hausse de l'encours et ce qui tient à celle du taux implicite, année par année.",
+   "source": "Calcul sur séries Eurostat (gov_10a_main, D41PAY) et INSEE (dette au 31 décembre), 2020-2025",
+   "precaution": "Décomposition comptable encours / taux implicite : la part du taux implicite mêle refinancement, composition de la dette et indexation ; elle ne mesure pas à elle seule l'effet des taux de marché."
+  },
+  {
    "id": "ciseau",
    "fichier": "ciseau-dette-interets",
    "titre": "Le ciseau : encours et charge d'intérêts, 1995-T2 2026",
@@ -12,7 +20,7 @@
    "id": "taux",
    "fichier": "taux-apparent-dette",
    "titre": "Le taux implicite, 1996-2025",
-   "montre": "Le coût moyen du stock : il baisse pendant vingt-cinq ans, puis remonte depuis 2021.",
+   "montre": "Le coût moyen du stock : il baisse pendant vingt-cinq ans, puis remonte depuis son point bas, surtout par un saut en 2022.",
    "source": "Calcul sur séries Eurostat (gov_10a_main) et INSEE, 1996-2025",
    "precaution": "Taux implicite = intérêts de l'année / encours au 31 décembre précédent, non le taux d'emprunt du jour."
   },
@@ -30,26 +38,34 @@
    "titre": "Taux de marché et coût moyen du stock, 1996-2025",
    "montre": "Le coût moyen du stock suit le taux à 10 ans avec des années de retard : il descend moins bas, et remonte moins vite.",
    "source": "Eurostat irt_lt_mcby_a (taux à 10 ans)  ·  taux implicite : Eurostat gov_10a_main et INSEE, 1996-2025",
-   "precaution": "Le taux à 10 ans, repère du coût des emprunts nouveaux ; le taux implicite, coût de tout le stock, ne le suit qu'au fil des refinancements."
+   "precaution": "Le taux à 10 ans est un indicateur de référence, non le coût effectif des émissions ; le taux implicite, coût moyen de tout le stock, ne suit les taux de marché qu'au fil des renouvellements, et inclut l'indexation des titres indexés sur l'inflation."
   },
   {
    "id": "charge",
    "fichier": "charge-interets-mdeur",
    "titre": "La charge d'intérêts en milliards d'euros, 1995-2025",
    "montre": "Ce que la dette coûte en euros, et non en part de PIB : le creux, puis la remontée.",
-   "source": "Eurostat, intérêts versés par les administrations publiques (gov_10a_main, D41PAY), 1995-2025",
-   "precaution": "Milliards d'euros courants, non corrigés de l'inflation : la facture, non son poids dans la richesse produite."
+   "source": "Eurostat, intérêts dus par les administrations publiques (gov_10a_main, D41PAY), 1995-2025",
+   "precaution": "Milliards d'euros courants, non corrigés de l'inflation. Cercles évidés : prévision du Gouvernement, dont la base 2025 n'est pas réconciliée avec Eurostat ; aucune variation ne se lit entre l'observé et le prévu."
   },
   {
    "id": "masses",
    "fichier": "masses-comparees",
    "titre": "La charge d'intérêts face aux grands budgets, 1995-2024",
    "montre": "La charge d'intérêts est longtemps restée sous le poste « ordre et sécurité » ; elle est repassée au-dessus.",
-   "source": "Eurostat : intérêts versés (gov_10a_main, D41PAY) et dépenses des administrations par fonction (gov_10a_exp, COFOG), 1995-2024",
+   "source": "Eurostat : intérêts dus (gov_10a_main, D41PAY) et dépenses des administrations par fonction (gov_10a_exp, COFOG), 1995-2024",
    "precaution": "Les intérêts sont une nature de dépense, les trois autres des fonctions : ce n'est pas le même découpage, et aucun transfert n'est établi de l'un vers l'autre."
   }
  ],
  "en": [
+  {
+   "id": "decomp",
+   "fichier": "charge-encours-taux-en",
+   "titre": "Where the rise in interest comes from: debt stock or implicit rate, 2020-2025",
+   "montre": "How much of the rise in interest comes from the larger debt stock and how much from the higher implicit rate, year by year.",
+   "source": "Computed on Eurostat (gov_10a_main, D41PAY) and INSEE (debt at 31 December) series, 2020-2025",
+   "precaution": "Accounting decomposition, debt stock / implicit rate: the implicit-rate part mixes refinancing, debt composition and indexation; on its own, it does not measure the effect of market rates."
+  },
   {
    "id": "ciseau",
    "fichier": "ciseau-dette-interets-en",
@@ -62,7 +78,7 @@
    "id": "taux",
    "fichier": "taux-apparent-dette-en",
    "titre": "The implicit interest rate, 1996-2025",
-   "montre": "The average cost of the stock: falling for twenty-five years, rising again since 2021.",
+   "montre": "The average cost of the stock: falling for twenty-five years, then rising from its low, mostly through a jump in 2022.",
    "source": "Computed on Eurostat (gov_10a_main) and INSEE series, 1996-2025",
    "precaution": "Implicit rate = a year's interest / debt outstanding at the end of the previous year, not today's borrowing rate."
   },
@@ -80,22 +96,22 @@
    "titre": "Market rate and average cost of the stock, 1996-2025",
    "montre": "The average cost of the stock follows the 10-year rate years behind: it falls less far, and climbs back more slowly.",
    "source": "Eurostat irt_lt_mcby_a (10-year yield)  ·  implicit rate: Eurostat gov_10a_main and INSEE, 1996-2025",
-   "precaution": "The 10-year yield benchmarks the cost of new borrowing; the implicit rate, the cost of the whole stock, follows it only as old debt is refinanced."
+   "precaution": "The 10-year yield is a reference indicator, not the actual cost of issuance; the implicit rate, the average cost of the whole stock, follows market rates only as debt is renewed, and includes the indexation of inflation-linked bonds."
   },
   {
    "id": "charge",
    "fichier": "charge-interets-mdeur-en",
-   "titre": "Interest paid in billion euros, 1995-2025",
+   "titre": "Interest due in billion euros, 1995-2025",
    "montre": "What the debt costs in euros rather than as a share of GDP: the trough, then the climb.",
-   "source": "Eurostat, interest paid by general government (gov_10a_main, D41PAY), 1995-2025",
-   "precaution": "Billion euros at current prices, not adjusted for inflation: the bill itself, not its weight in national income."
+   "source": "Eurostat, interest due by general government (gov_10a_main, D41PAY), 1995-2025",
+   "precaution": "Billion euros at current prices, not adjusted for inflation. Open circles: Government forecast, whose 2025 base is not reconciled with Eurostat; no change can be read between the observed and the forecast values."
   },
   {
    "id": "masses",
    "fichier": "masses-comparees-en",
-   "titre": "Interest paid against the main public budgets, 1995-2024",
-   "montre": "Interest paid long stayed below the public order and safety function; it has moved back above it.",
-   "source": "Eurostat: interest paid (gov_10a_main, D41PAY) and general government expenditure by function (gov_10a_exp, COFOG), 1995-2024",
+   "titre": "Interest due against the main public budgets, 1995-2024",
+   "montre": "Interest due long stayed below the public order and safety function; it has moved back above it.",
+   "source": "Eurostat: interest due (gov_10a_main, D41PAY) and general government expenditure by function (gov_10a_exp, COFOG), 1995-2024",
    "precaution": "Interest is a type of spending, the other three are functions: not the same breakdown, and no transfer from one to the other is established."
   }
  ],

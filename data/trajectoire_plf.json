@@ -51,5 +51,26 @@
  "divergence_commission_europeenne": {
   "_statut": "NON VÉRIFIÉ",
   "_note": "Une pièce externe cite, pour les prévisions de printemps 2026 de la Commission européenne à politiques inchangées, 118,1 % (2026) et 120,2 % (2027) de dette, et 2,6 puis 2,8 % du PIB d'intérêts. À lire à la source (AMECO) avant toute impression."
+ },
+ "sensibilite": {
+  "_statut": "PUBLIÉ (scénario de sensibilité du Gouvernement, rapporté par le Haut Conseil), relu à la source le 2026-10-11",
+  "_emplacement": "§ 116, p. 38 (taux) ; § 115, p. 38 (inflation)",
+  "_nature": "Sensibilité, non prévision : elle dit l'ordre de grandeur de la transmission d'un choc, jamais une trajectoire.",
+  "taux_1pt_premiere_annee_mdeur": 3.4,
+  "taux_1pt_deuxieme_annee_mdeur": 8.1,
+  "taux_1pt_libelle": "« le supplément de charge d'intérêts à attendre d'une hausse permanente d'un point des taux d'intérêt s'élève à +3,4 Md€ la première année et +8,1 Md€ la deuxième année ; cette hausse s'amplifierait pendant de nombreuses années au fur et à mesure du renouvellement des obligations qui arrivent à échéance »",
+  "inflation_1pt_meme_annee_mdeur": 3.0,
+  "inflation_1pt_libelle": "« une variation de l'inflation de +1 point entraîne une variation de la charge d'environ +3 Md€ la même année »"
+ },
+ "hausse_vs_2025": {
+  "_statut": "PUBLIÉ, § 115, p. 38, relu le 2026-10-11",
+  "plus_de_mdeur": 25.0,
+  "libelle": "« en hausse de plus de 25 Md€ par rapport à 2025 »",
+  "_usage": "Cité sous le nom du Haut Conseil, jamais recalculé contre Eurostat : 91 − 25 < 66,6 montre que la base 2025 du Gouvernement n'est pas la valeur d'Eurostat (garde du générateur)."
+ },
+ "ecart_lfi_n": {
+  "_statut": "PUBLIÉ, § 115, p. 38, relu le 2026-10-11",
+  "mdeur": 4.5,
+  "libelle": "« En 2026, le Gouvernement prévoit une charge d'intérêts de 79,2 Md€, c'est-à-dire 4,5 Md€ de plus que ce qui était attendu dans la LFI 2026. […] Le surcroît en 2026 par rapport à la LFI provient essentiellement des obligations OATi et OAT€i indexées sur l'indice des prix »"
  }
 }
