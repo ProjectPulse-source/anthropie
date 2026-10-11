@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /comment-savoir-si-une-promesse-est-tenue/, build de 664e06c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /comment-savoir-si-une-promesse-est-tenue/, build de c9c1823 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Comment savoir si une promesse est tenue ?
 Deux chiffres exacts peuvent raconter deux histoires différentes.
@@ -105,7 +105,7 @@ Octobre-novembre 2024.
 Le formulaire change de nouveau, cette fois à la hausse : « entre octobre et novembre 2024, une évolution dans le formulaire d’actualisation a conduit à augmenter le nombre de demandeurs d’emploi en catégorie A », d’environ 36 000 personnes au niveau national au 4e trimestre 2024 (Dares et France Travail, publication trimestrielle reprise par la Dreets de Normandie).
 Janvier 2025.
 La loi du 18 décembre 2023 pour le plein emploi prévoit l’inscription d’office.
-Selon la Dares, les demandeurs et bénéficiaires du RSA, les jeunes suivis par les missions locales en contrat d’engagement jeune (CEJ) ou en parcours contractualisé d’accompagnement (Pacea), et les personnes handicapées suivies par Cap emploi, le réseau d’accompagnement spécialisé, sont désormais inscrits systématiquement ; pour les personnes déjà au RSA, l’inscription est progressive.
+Selon la Dares, les demandeurs et bénéficiaires du RSA, les jeunes suivis par les missions locales en contrat d’engagement jeune (CEJ) ou en parcours contractualisé d’accompagnement (Pacea), et les personnes handicapées suivies par Cap emploi, le réseau d’accompagnement spécialisé, sont désormais inscrits systématiquement ; pour les personnes déjà au RSA, l’orientation est progressive.
 Deux catégories nouvelles, F et G, accueillent les personnes orientées en parcours social et celles qui attendent leur orientation.
 Janvier à avril 2025.
 De janvier à mars, les nouveaux inscrits non indemnisables sont actualisés automatiquement, donc classés en catégorie A jusqu’à la signature de leur contrat d’engagement ; la règle est restreinte en avril aux premières inscriptions.
@@ -198,7 +198,7 @@ La catégorie A de France Travail regroupe « les personnes sans activité au co
 En 2024, l'Insee estime que 49 % des inscrits en catégorie A sont chômeurs au sens du BIT et que 62 % des chômeurs au sens du BIT sont inscrits en catégorie A.
 Pourquoi le nombre d'inscrits en catégorie A a-t-il changé en 2025 ?
 Pour plusieurs raisons à la fois, selon la Dares.
-Depuis janvier 2025, la loi pour le plein emploi du 18 décembre 2023 fait inscrire d'office à France Travail les demandeurs et bénéficiaires du RSA, les jeunes suivis par les missions locales et les personnes handicapées suivies par Cap emploi ; de janvier à mars 2025, les nouveaux inscrits sans droit à une allocation de France Travail ont été actualisés automatiquement, donc classés en catégorie A ; en juin 2025, le régime des sanctions a changé.
+Depuis janvier 2025, la loi pour le plein emploi du 18 décembre 2023 prévoit l'inscription d'office de plusieurs publics à France Travail ; la Dares cite les demandeurs et bénéficiaires du RSA, les jeunes suivis par les missions locales et les personnes handicapées suivies par Cap emploi ; de janvier à mars 2025, les nouveaux inscrits sans droit à une allocation de France Travail ont été actualisés automatiquement, donc classés en catégorie A ; en juin 2025, le régime des sanctions a changé.
 La règle avait déjà changé en 2022 et à la fin de 2024, avec deux versions du formulaire d'actualisation.
 L'Autorité de la statistique publique a suspendu la labellisation de ces séries à partir du 1er janvier 2025.
 Comment juger une promesse de baisse du chômage ?
@@ -236,7 +236,7 @@ Les deux séries d'inscrits en catégorie A portent les changements de règles :
 Elles décrivent deux populations, et leur écart ne mesure pas l'effet de la réforme.
 Précaution d'interprétation.
 Champ et période différents de la figure du croisement 2024.
-Labellisation de l'ASP suspendue depuis le 01/01/2025 (label de 2021, qui courait jusqu'au 20/05/2026).
+Séries non labellisées depuis le 01/01/2025 (label de 2021 suspendu par l'ASP, qui courait jusqu'au 20/05/2026).
 Dares et France Travail, moyenne trimestrielle des inscrits en fin de mois, France hors Mayotte, données CVS-CJO (série « hors RSA » depuis 2018)
 Télécharger en PNG
 SVG
@@ -255,7 +255,7 @@ Données Insee et Dares, relevé du 12/10/2026 (séries Dares mises à jour le 2
 Copier la citation
 En trois phrases
 Pour juger une promesse sur le chômage, il faut d’abord choisir son chiffre : en 2024, selon l’estimation de l’Insee, 49 % seulement des inscrits en catégorie A sont chômeurs au sens du BIT.
-Il faut ensuite vérifier la règle : le comptage des inscrits a changé en 2022 (environ 105 000 inscrits de moins en catégorie A), à la fin de 2024 (environ 36 000 de plus) et en 2025 (inscription d’office, actualisation automatique), et la labellisation de ces séries est suspendue depuis le 1er janvier 2025.
+Il faut ensuite vérifier la règle : le comptage des inscrits a changé en 2022 (environ 105 000 inscrits de moins en catégorie A), à la fin de 2024 (environ 36 000 de plus) et en 2025 (inscription d’office, actualisation automatique), et ces séries ne sont plus labellisées depuis le 1er janvier 2025.
 Une contribution n’est pas un effet, et une évolution observée ne dit pas sa cause.
 Copier le résumé
 Les données

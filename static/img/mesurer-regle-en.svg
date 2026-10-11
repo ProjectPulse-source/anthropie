@@ -47,7 +47,7 @@
 <line x1="0" y1="362.0" x2="720" y2="362.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="377.0" font-size="11" fill="#52514e">Dares and France Travail, quarterly average of end-of-month registrants, France excluding Mayotte, seasonally adjusted</text>
 <text class="pied-source" x="0" y="391.0" font-size="11" fill="#52514e">(series 'excluding RSA' since 2018)</text>
-<text class="pied-note" x="0" y="405.0" font-size="11" fill="#52514e">Scope and period differ from the 2024 cross-tabulation figure. Statistical quality label suspended since 1 Jan. 2025</text>
-<text class="pied-note" x="0" y="419.0" font-size="11" fill="#52514e">(2021 label, which ran until 20 May 2026).</text>
+<text class="pied-note" x="0" y="405.0" font-size="11" fill="#52514e">Scope and period differ from the 2024 cross-tabulation figure. Series not labelled since 1 Jan. 2025 (2021 label</text>
+<text class="pied-note" x="0" y="419.0" font-size="11" fill="#52514e">suspended by the ASP, which ran until 20 May 2026).</text>
 <text class="pied-licence" x="0" y="433.0" font-size="11" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/how-can-we-tell-whether-a-promise-was-kept/</text>
 </svg>

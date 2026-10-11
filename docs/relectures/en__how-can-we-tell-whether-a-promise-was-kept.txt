@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /en/how-can-we-tell-whether-a-promise-was-kept/, build de 664e06c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /en/how-can-we-tell-whether-a-promise-was-kept/, build de c9c1823 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 How can we tell whether a promise was kept?
 Two accurate figures can tell two different stories.
@@ -106,7 +106,7 @@ October-November 2024.
 The form changes again, this time upwards: “between October and November 2024, a change in the monthly updating form led to an increase in the number of jobseekers in category A”, by about 36,000 people at national level in the fourth quarter of 2024 (Dares and France Travail, quarterly publication reproduced by the regional labour directorate of Normandy).
 January 2025.
 The full employment act of 18 December 2023 provides for automatic registration.
-According to the Dares, applicants for and recipients of the RSA (minimum income), young people followed by local youth employment services (missions locales) in a youth commitment contract (CEJ) or a contractual support pathway (Pacea), and disabled people followed by Cap emploi, the specialised support network, are now registered systematically; for people already on the RSA, registration is gradual.
+According to the Dares, applicants for and recipients of the RSA (minimum income), young people followed by local youth employment services (missions locales) in a youth commitment contract (CEJ) or a contractual support pathway (Pacea), and disabled people followed by Cap emploi, the specialised support network, are now registered systematically; for people already on the RSA, their direction to a support track is gradual.
 Two new categories, F and G, take in people directed to a social pathway and those awaiting orientation.
 January to April 2025.
 From January to March, new registrants without benefit entitlement are updated automatically, and therefore counted in category A until they sign their commitment contract; the rule is restricted in April to first-time registrations.
@@ -190,7 +190,7 @@ Category A at France Travail groups "people who did no work during the month and
 For 2024, Insee estimates that 49% of category A registrants are unemployed in the ILO sense and that 62% of the people unemployed under the ILO definition are registered in category A.
 Why did the number of category A registrants change in 2025?
 For several reasons at once, according to the Dares.
-Since January 2025, the full employment act of 18 December 2023 has applicants for and recipients of the RSA (minimum income), young people followed by local youth employment services (missions locales) and disabled people followed by Cap emploi (the specialised employment service for disabled people) registered automatically with France Travail; from January to March 2025, new registrants without entitlement to a France Travail allowance were updated automatically, and therefore counted in category A; in June 2025, the sanctions regime changed.
+Since January 2025, the full employment act of 18 December 2023 has provided for the automatic registration of several groups with France Travail; the Dares lists applicants for and recipients of the RSA (minimum income), young people followed by local youth employment services (missions locales) and disabled people followed by Cap emploi (the specialised employment service for disabled people); from January to March 2025, new registrants without entitlement to a France Travail allowance were updated automatically, and therefore counted in category A; in June 2025, the sanctions regime changed.
 The rule had already changed in 2022 and at the end of 2024, with two versions of the monthly updating form.
 The French Official Statistics Authority suspended the statistical quality label of these series from 1 January 2025.
 How should a promise to reduce unemployment be judged?
@@ -229,8 +229,8 @@ Both series of category A registrants carry the rule changes: monthly updating f
 They describe two populations, and the gap between them does not measure the effect of the reform.
 Reading caveat.
 Scope and period differ from the 2024 cross-tabulation figure.
-Statistical quality label suspended since 1 Jan.
-2025 (2021 label, which ran until 20 May 2026).
+Series not labelled since 1 Jan.
+2025 (2021 label suspended by the ASP, which ran until 20 May 2026).
 Dares and France Travail, quarterly average of end-of-month registrants, France excluding Mayotte, seasonally adjusted (series 'excluding RSA' since 2018)
 Download PNG
 SVG
@@ -249,7 +249,7 @@ Insee and Dares data, retrieved 2026-10-12 (Dares series updated on 2026-07-28, 
 Copy citation
 In three sentences
 To judge a promise on unemployment in France, one must first choose its figure: in 2024, according to the Insee estimate, only 49% of category A registrants are unemployed in the ILO sense.
-One must then check the rule: the counting of registrants changed in 2022 (about 105,000 fewer registrants in category A), at the end of 2024 (about 36,000 more) and in 2025 (automatic registration, automatic updating), and the statistical quality label of these series has been suspended since 1 January 2025.
+One must then check the rule: the counting of registrants changed in 2022 (about 105,000 fewer registrants in category A), at the end of 2024 (about 36,000 more) and in 2025 (automatic registration, automatic updating), and these series have not carried the statistical quality label since 1 January 2025.
 A contribution is not an effect, and an observed change does not tell its cause.
 Copy summary
 The data

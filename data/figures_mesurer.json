@@ -14,7 +14,7 @@
    "titre": "Inscrits en catégorie A : série publiée et série hors bénéficiaires du RSA et jeunes en parcours",
    "montre": "Les deux séries d'inscrits en catégorie A portent les changements de règles : formulaire d'actualisation en 2022, inscription d'office et actualisation automatique en 2025. Elles décrivent deux populations, et leur écart ne mesure pas l'effet de la réforme.",
    "source": "Dares et France Travail, moyenne trimestrielle des inscrits en fin de mois, France hors Mayotte, données CVS-CJO (série « hors RSA » depuis 2018)",
-   "precaution": "Champ et période différents de la figure du croisement 2024. Labellisation de l'ASP suspendue depuis le 01/01/2025 (label de 2021, qui courait jusqu'au 20/05/2026)."
+   "precaution": "Champ et période différents de la figure du croisement 2024. Séries non labellisées depuis le 01/01/2025 (label de 2021 suspendu par l'ASP, qui courait jusqu'au 20/05/2026)."
   },
   {
    "id": "serie-longue",
@@ -40,7 +40,7 @@
    "titre": "Category A registrants: published series and series without RSA recipients or youth programmes",
    "montre": "Both series of category A registrants carry the rule changes: monthly updating form in 2022, automatic registration and automatic updating in 2025. They describe two populations, and the gap between them does not measure the effect of the reform.",
    "source": "Dares and France Travail, quarterly average of end-of-month registrants, France excluding Mayotte, seasonally adjusted (series 'excluding RSA' since 2018)",
-   "precaution": "Scope and period differ from the 2024 cross-tabulation figure. Statistical quality label suspended since 1 Jan. 2025 (2021 label, which ran until 20 May 2026)."
+   "precaution": "Scope and period differ from the 2024 cross-tabulation figure. Series not labelled since 1 Jan. 2025 (2021 label suspended by the ASP, which ran until 20 May 2026)."
   },
   {
    "id": "serie-longue",
