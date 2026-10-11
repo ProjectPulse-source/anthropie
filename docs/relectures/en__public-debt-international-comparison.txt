@@ -1,4 +1,4 @@
-# relu le 2026-10-11 ; texte servi de /en/public-debt-international-comparison/, build de 86a46f0 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-11 ; texte servi de /en/public-debt-international-comparison/, build de 9bd4833 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Public debt: why 100% of GDP does not carry the same burden everywhere
 At almost equal debt levels, Hungary devotes 8.9% of its public revenue to interest; Slovenia, 2.7%.
@@ -537,7 +537,7 @@ Saka, O., Fuertes, A.-M. and Kalotychou, E., “ECB Policy and Eurozone Fragilit
 397, 2014 (published in the Journal of International Money and Finance, 54, 2015).
 Laubach, T., “New Evidence on the Interest Rate Effects of Budget Deficits and Debt”, Finance and Economics Discussion Series 2003-12, Federal Reserve (published, revised, in the Journal of the European Economic Association, 7(4), 2009).
 Literature review checked on 30 September 2026: every reference cited was read in full on that date, in the version indicated.
-Synthèse
+Summary
 What to take away
 The level of a debt does not, on its own, say what it weighs.
 In the Union, at similar debt levels, the share of revenue absorbed by interest varies by a factor of 3.3; between Hungary and Slovenia, most of the gap comes from the price paid on the debt, not from its level.

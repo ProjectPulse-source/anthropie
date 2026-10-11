@@ -178,7 +178,7 @@ What the data does establish is narrower: a higher interest burden **raises the 
 
 <div class="retenir">
 
-<p class="retenir__surtitre">Synthèse</p>
+<p class="retenir__surtitre">Summary</p>
 
 ## What to take away
 

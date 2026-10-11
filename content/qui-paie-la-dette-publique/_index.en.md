@@ -255,7 +255,7 @@ No statistic says, on its own, who ultimately bears the burden of French debt: t
 
 <div class="retenir">
 
-<p class="retenir__surtitre">Synthèse</p>
+<p class="retenir__surtitre">Summary</p>
 
 ## What to take away
 

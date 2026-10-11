@@ -207,7 +207,7 @@ They do not measure the total fiscal effect of inflation (revenue, indexed benef
 
 <div class="retenir">
 
-<p class="retenir__surtitre">Synthèse</p>
+<p class="retenir__surtitre">Summary</p>
 
 ## What we know, and what remains undetermined {#retenir}
 

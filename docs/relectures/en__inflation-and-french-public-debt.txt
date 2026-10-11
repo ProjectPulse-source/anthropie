@@ -1,4 +1,4 @@
-# relu le 2026-10-11 ; texte servi de /en/inflation-and-french-public-debt/, build de 4824a6f + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-11 ; texte servi de /en/inflation-and-french-public-debt/, build de 9bd4833 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Did inflation really ease France's debt burden?
 Did the French government gain €150bn from inflation?
@@ -185,7 +185,7 @@ Office for Budget Responsibility (2021), Economic and fiscal outlook, March 2021
 Andreolli, M. and Rey, H.
 (2024), “Fiscal Consequences of Missing an Inflation Target”, March 2024 version (NBER Working Paper 30819; IMF Economic Review, 72(2)).
 Literature review checked on 8 October 2026: every reference cited was read in full on that date, in the version indicated.
-Synthèse
+Summary
 What we know, and what remains undetermined
 Legacy debt can lose real value without falling in euros.
 The unexpected 2021–2023 inflation reduced the real value of the government’s legacy nominal liabilities by about €150bn in 2020 euros: a gross advantage, measurable in the scenario used.

@@ -1,4 +1,4 @@
-# relu le 2026-10-11 ; texte servi de /en/can-public-debt-come-down/, build de 86a46f0 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-11 ; texte servi de /en/can-public-debt-come-down/, build de 9bd4833 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Can public debt come down?
 Yes: what can fall is the weight of debt in GDP, even while its amount rises.
@@ -331,7 +331,7 @@ French Treasury (Direction générale du Trésor), “Finances publiques : une s
 Heyer, É., Plane, M., Ragot, X., Sampognaro, R. and Timbeau, X., “Quelles trajectoires pour les finances publiques de la France ?” [What paths for France’s public finances?], OFCE working paper no.
 13, July 2025 (in French).
 Literature review checked on 3 October 2026: every reference cited was read in full on that date, in the version indicated.
-Synthèse
+Summary
 What to take away
 The weight of a debt can fall without its amount decreasing: in Portugal, debt went from 235 to 275 billion euros in ten years while its weight fell from 131.0% to 89.7% of GDP.
 Among EU countries whose debt started from a higher level than France’s, the ratio fell markedly in three of them: Cyprus, Portugal and Greece.

@@ -1,4 +1,4 @@
-# relu le 2026-10-11 ; texte servi de /en/cost-of-french-public-debt/, build de 86a46f0 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-11 ; texte servi de /en/cost-of-french-public-debt/, build de 9bd4833 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 What does French public debt actually cost?
 In 2025, French general government owes 66.6 billion euros of interest, 4.3% of its revenue, and 124% more, in euros, than at the 2020 trough.
@@ -170,7 +170,7 @@ Within the framework of anthropy, which the author sets out in the working paper
 The series on this page establish the fall and then the rise of the burden and of its average cost; they do not test that reading, nor do they say that the return was inevitable or how large it will be.
 Comparing the cost of new issuance with the average cost of the stock, as the working paper AWP-09 proposes, measures delayed transmission; on its own, it does not distinguish this reading from an ordinary financial explanation based on the maturity of the debt.
 Testing it would require a prediction of its own.
-Synthèse
+Summary
 What to take away
 Why the bill long fell.
 For twenty-five years, the falling average cost of the stock offset the rising stock: the debt doubled as a share of GDP while its burden fell.

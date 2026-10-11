@@ -166,7 +166,7 @@ Each year, the debt-to-GDP ratio moves under the effect of three terms. The **in
 
 <div class="retenir">
 
-<p class="retenir__surtitre">Synthèse</p>
+<p class="retenir__surtitre">Summary</p>
 
 ## What to take away {#retenir}
 
