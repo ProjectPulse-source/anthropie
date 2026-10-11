@@ -311,6 +311,15 @@ case » tirait d'un reclassement une conclusion sur les montants. Une phrase d'a
 divergent, et une garde de prose interdit la formule qui conclut plus que la série (modèle :
 `update_dette_collectivites.py`). Les gardes vérifient les nombres ; la contre-expertise vérifie ce qu'on leur fait dire.
 
+**Une phrase de méthode publiée dit ce que le script fait, jamais plus** (audit du 12/10/2026, 22 fichiers sur 29 en
+défaut). « Aucun chiffre n'est saisi à la main » et « refuse d'écrire si une donnée cesse de soutenir une phrase » étaient
+faux presque partout : des valeurs sont transcrites (images, PDF refusés aux scripts, rapports), et les gardes testent des
+conditions sur les données sans relire le texte servi. Chaque valeur se range dans une catégorie — lue par le script ;
+transcrite et vérifiée contre la source archivée (dire par quoi) ; transcrite et contrôlée autrement (dire la portée) ;
+transcrite sans contrôle ; écrite en clair (étude citée) — et la phrase de méthode les déclare. Formule exacte des gardes :
+« s'arrête si une donnée ne remplit plus les conditions dont dépendent les principales phrases ». Grille et cas :
+`D:\PRO\06_PROMOTION\RECHERCHE_LYCEES_LECTURE_2026-10-09\REFONTE_PILOTE\AUDIT_AFFIRMATIONS_METHODE_REQUALIFIE_2026-10-12.md`.
+
 **Type d'une page** (`ressource.type`, liste ; une page peut en déclarer deux) et son protocole de preuve :
 
 - `quantitatif` (dette, école, comparaisons) : définitions, périmètres, millésimes, unités, calculs reproductibles,
