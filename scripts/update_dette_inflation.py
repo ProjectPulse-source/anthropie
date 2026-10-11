@@ -22,9 +22,9 @@ Témoins publiés que le calcul n'utilise pas : figure 1.16 de l'OCDE (SBO 2023)
 de la Bundesbank (avril 2024) ; comptes de la Banque de France (résultat ordinaire, versements à l'État).
 
 Usage : python scripts/update_dette_inflation.py [--check]
-        [--mutation=demi|indexes|consolidation|encadre|qe_cinq|qe_partage|qe_ocde]
+        [--mutation=demi|indexes|consolidation|encadre|qe_cinq|qe_partage|qe_ocde|qe_bdf|fonds]
 Sorties : data/ et static/dette_inflation.json, static/dette_inflation.csv, data/figures_inflation.json,
-          static/img/dette-inflation-calendrier{,-en}.svg + .png, static/img/dette-inflation-achats{,-en}.svg + .png
+          static/img/dette-inflation-{calendrier,achats}{,-en}{,-m}.svg + .png (versions téléphone -m : refonte du 11/10/2026)
 """
 from __future__ import annotations
 
@@ -38,6 +38,8 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+import pied_figure  # pied commun, version téléphone, parité (scripts/pied_figure.py)
+
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "scripts" / "sources_inflation_dette"
 SRC_QE = ROOT / "scripts" / "sources_qe_maturite"
@@ -50,11 +52,13 @@ PAGE_URL = "stephane-lalut.com/inflation-et-dette-publique/"
 PAGE_URL_EN = "stephane-lalut.com/en/inflation-and-french-public-debt/"
 
 W = 720
+WM, FS_MIN = pied_figure.LARGEUR_M, pied_figure.POLICE_M
 FONT = "Inter, 'Helvetica Neue', Arial, sans-serif"
 BLEU, ORANGE, GRIS, GRIS_CLAIR = "#184f95", "#eb6834", "#8a8781", "#c9c5c0"
 INK, INK2, MUTED, GRID = "#26262f", "#55524f", "#96928f", "#dcd8d3"
 LICENCES = {"fr": "Calcul Stéphane Lalut, CC BY 4.0 · " + PAGE_URL, "en": "Computed by Stéphane Lalut, CC BY 4.0 · " + PAGE_URL_EN}
 SUFFIXE = {"fr": "", "en": "-en"}
+LICENCES_M = {"fr": "Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com", "en": "Computed by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com"}
 
 
 def log(msg: str) -> None:
@@ -214,6 +218,8 @@ def mutation(c):
         c["qe"]["ocde_effet"] += 0.6
     elif m == "qe_bdf":        # la Banque de France serait restée bénéficiaire après 2023 : « puis pertes » serait faux
         c["qe"]["bdf_ro_apres"] = 5.0
+    elif m == "fonds":         # « fonds et autres » dépasserait la part des banques : l'ordre dit dans la page serait faux
+        c["parts"]["assureurs"] -= 5
     elif m is not None:
         fail("mutation inconnue : %s" % m)
     return m
@@ -251,6 +257,12 @@ def gardes(c):
     g(c["cons25"] < c["cons23"] - 10, "« puis l'avantage consolidé se réduit en 2024-2025 »")
     g(0.10 <= c["pal_residu"] / c["pal_total"] <= 0.16, "« résidu d'environ 13 %% » : %.3f" % (c["pal_residu"] / c["pal_total"]))
     g(c["charge_aft"][2022] == max(c["charge_aft"].values()), "« la charge d'indexation a culminé en 2022 »")
+    fa = 100 - sum(v for k, v in c["parts"].items() if k != "OPC")
+    g(1 < fa < 5 and fa < c["parts"]["banques"], "« fonds et autres » : petite part, sous celle des banques : %.2f" % fa)
+    g(1 < c["parts"]["OPC"] < 2 and 1 < 100 - sum(c["parts"].values()) < 2,
+      "annexe : « les fonds et les autres détenteurs pèsent chacun un peu plus de 1 %% » : %.2f / %.2f" % (c["parts"]["OPC"], 100 - sum(c["parts"].values())))
+    g(c["parts"]["assureurs"] > c["parts"]["banques"] and c["parts"]["BdF"] > c["parts"]["assureurs"],
+      "ordre des détenteurs dit dans la page (non-résidents, Banque de France, assureurs, banques) : %s" % c["parts"])
     g(0 < 100 - sum(c["parts"].values()) < 5 and c["parts"]["non_residents"] == max(c["parts"].values()),
       "annexe : parts de détention incohérentes, ou les non-résidents ne sont plus le premier groupe : %s" % c["parts"])
     # --- section « achats de la banque centrale » (VERDICT P1 à P4)
@@ -309,6 +321,10 @@ def affichage(c, lang):
         **{"part_" + k: f(v, 0) for k, v in c["parts"].items()},
         **{"alloc_" + k: f(c["T"] * v / 100, 0) for k, v in c["parts"].items()},
         "part_autres": f(100 - sum(c["parts"].values()), 0), "alloc_autres": f(c["T"] * (100 - sum(c["parts"].values())) / 100, 0),
+        # « fonds et autres » arrondi sur les parts EXACTES (1,39 + 1,21 = 2,60 -> 3), jamais en additionnant deux arrondis
+        # (1 + 1) : défaut relevé par la contre-expertise OPTIMUM-27 (11/10/2026)
+        "part_fonds_autres": f(100 - sum(v for k, v in c["parts"].items() if k != "OPC"), 0),
+        "alloc_fonds_autres": f(c["T"] * (100 - sum(v for k, v in c["parts"].items() if k != "OPC")) / 100, 0),
         **affichage_qe(c["qe"], lang),
     }
 
@@ -345,18 +361,26 @@ def affichage_qe(q, lang):
 TXT = {
     "fr": dict(titre="Dette de l'État à taux fixe de fin 2020 : l'érosion due à la surprise d'inflation, au fil des paiements",
                desc="Courbe cumulée de l'érosion réelle des paiements promis, de 2021 à {fin}, en milliards d'euros de 2020 : {cum23} fin 2023, "
-                    "{cum27} fin {demi}, {t_exact} au total ; plage des prévisions publiées début 2021 : {a_bas} à {a_haut}.",
+                    "{cum27} fin {demi}, soit environ {part27} %, {t_exact} au total ; plage des prévisions publiées début 2021 : {a_bas} à {a_haut}. "
+                    "Après 2023, l'écart de prix est supposé persister.",
                source="AFT (encours au 31/12/2020), Eurostat (IPCH mensuel, France), BCE (SPF, janvier 2021) ; calcul de l'auteur",
-               note="Md€ de 2020 aux prix à la consommation, non actualisés ; contrefactuel : inflation anticipée début 2021. Ni gain budgétaire net, ni perte finale.",
-               axe="Md€ de 2020, cumul", total="total : {t_exact}", demi="moitié atteinte en {demi}", plage="prévisions publiées : {a_bas} à {a_haut}",
-               montre="L'érosion est acquise fin 2023 dans ce contrefactuel, mais elle se matérialise au rythme des paiements : environ la moitié d'ici {demi}."),
+               note="Somme non actualisée des écarts de valeur réelle des paiements promis, en Md€ de 2020 aux prix à la consommation : ni de la dette effacée, "
+                    "ni un gain budgétaire net, ni une perte finale. Contrefactuel : inflation anticipée début 2021 ; après 2023, l'écart de prix est supposé persister.",
+               axe="Md€ de 2020, cumul", total="total : {t_exact}", demi="environ {part27} % d'ici fin {demi}", plage="prévisions publiées : {a_bas} à {a_haut}",
+               apres="après 2023 : écart de prix supposé persistant",
+               titre_m="L'érosion de la dette ancienne, au fil des paiements", axe_m="Md€ de 2020, cumul",
+               montre="L'érosion est acquise fin 2023 dans ce contrefactuel, mais elle se matérialise au rythme des paiements : environ {part27} % d'ici fin {demi}."),
     "en": dict(titre="End-2020 fixed-rate government debt: erosion from the inflation surprise, as payments fall due",
                desc="Cumulative real-value erosion of promised payments, 2021 to {fin}, in billions of 2020 euros: {cum23} by end-2023, "
-                    "{cum27} by end-{demi}, {t_exact} in total; range of forecasts published in early 2021: {a_bas} to {a_haut}.",
+                    "{cum27} by end-{demi}, about {part27}%, {t_exact} in total; range of forecasts published in early 2021: {a_bas} to {a_haut}. "
+                    "After 2023, the price gap is assumed to persist.",
                source="AFT (outstanding debt, 31/12/2020), Eurostat (monthly HICP, France), ECB (SPF, January 2021); author's calculation",
-               note="€bn in 2020 euros at French consumer prices, undiscounted; counterfactual: inflation expected in early 2021. Neither a net fiscal gain nor a final loss.",
-               axe="€bn in 2020 euros, cumulative", total="total: {t_exact}", demi="half reached in {demi}", plage="published forecasts: {a_bas} to {a_haut}",
-               montre="In this counterfactual the erosion is locked in by end-2023, but it materialises as payments fall due: about half by {demi}."),
+               note="Undiscounted sum of the real-value differences in promised payments, €bn in 2020 euros at French consumer prices: not debt written off, "
+                    "not a net fiscal gain, not a final loss. Counterfactual: inflation expected in early 2021; after 2023, the price gap is assumed to persist.",
+               axe="€bn in 2020 euros, cumulative", total="total: {t_exact}", demi="about {part27}% by end-{demi}", plage="published forecasts: {a_bas} to {a_haut}",
+               apres="after 2023: price gap assumed to persist",
+               titre_m="The erosion of legacy debt, as payments fall due", axe_m="€bn in 2020 euros, cumulative",
+               montre="In this counterfactual the erosion is locked in by end-2023, but it materialises as payments fall due: about {part27}% by end-{demi}."),
 }
 
 
@@ -392,9 +416,14 @@ def fig_calendrier(c, Aff, lang):
     e.append('<text x="%.1f" y="%.1f" font-size="10" fill="%s" text-anchor="end">%s</text>' % (X1, Y(hi) - 5, INK2, esc(t["plage"])))
     for a in range(2025, a1 + 1, 5):
         e.append('<text x="%.1f" y="%d" font-size="10" fill="%s" text-anchor="middle">%d</text>' % (X(a), BAS + 14, MUTED, a))
+    # trait plein jusqu'à fin 2023 (inflation réalisée), pointillé ensuite : au-delà, les paiements sont évalués sous
+    # l'hypothèse du contrefactuel (l'écart de prix persiste), pas observés (contre-expertise OPTIMUM-27, 11/10/2026)
     pts = [(a0, 0.0)] + sorted(c["cum"].items())
-    d = " ".join(("M" if k == 0 else "L") + "%.1f,%.1f" % (X(a), Y(v)) for k, (a, v) in enumerate(pts))
-    e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.4" stroke-linejoin="round"/>' % (d, BLEU))
+    trace = lambda ps: " ".join(("M" if k == 0 else "L") + "%.1f,%.1f" % (X(a), Y(v)) for k, (a, v) in enumerate(ps))
+    e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.4" stroke-linejoin="round"/>' % (trace([p for p in pts if p[0] <= 2023]), BLEU))
+    e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.4" stroke-dasharray="6 4" stroke-linejoin="round"/>'
+             % (trace([p for p in pts if p[0] >= 2023]), BLEU))
+    e.append('<text x="%.1f" y="%.1f" font-size="10" fill="%s">%s</text>' % (X(2034), Y(c["cum"][2034]) + 22, INK2, esc(t["apres"])))
     # jalons : fin 2023, demi-réalisation, total
     for a, lib in ((2023, ("fin 2023 : %s" if lang == "fr" else "end-2023: %s") % Aff["cum23"]), (c["demi"], t["demi"])):
         v = c["cum"][a]
@@ -402,31 +431,33 @@ def fig_calendrier(c, Aff, lang):
         e.append('<text x="%.1f" y="%.1f" font-size="10.5" fill="%s">%s</text>' % (X(a) + 7, Y(v) + 12, INK, esc(lib)))
     e.append('<circle cx="%.1f" cy="%.1f" r="3.6" fill="%s"/>' % (X(a1), Y(c["T"]), BLEU))
     e.append('<text x="%.1f" y="%.1f" font-size="10.5" font-weight="600" fill="%s" text-anchor="end">%s</text>' % (X(a1) - 6, Y(c["T"]) + 16, BLEU, esc(t["total"])))
-    y0 = h + 2
-    e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y0, W, y0, GRID))
-    for k, (tx, col) in enumerate([(t["source"], INK2), (t["note"], INK2), (LICENCES[lang], MUTED)]):
-        e.append('<text x="0" y="%.1f" font-size="9" fill="%s">%s</text>' % (y0 + 13 + 12 * k, col, esc(tx)))
-    e.append("</svg>")
-    return "\n".join(e)
+    return pied_figure.pied(e, h + 2, W, [(t["source"], INK2, "pied-source"), (t["note"], INK2, "pied-note"),
+                                          (LICENCES[lang], MUTED, "pied-licence")], GRID)
 
 
 TXT_QE = {
-    "fr": dict(titre="Si toute la courbe des taux montait d'un point : la hausse de charge la première année",
+    "fr": dict(titre="Hausse durable d'un point des taux : combien d'intérêts supplémentaires dès la première année ?",
+               titre_m="Un point de taux en plus : intérêts supplémentaires la première année",
                desc="Courbes mensuelles, de mars 2015 à {qe_dern}, en milliards d'euros : hausse de la charge d'intérêts la première année, en scénario, pour l'ensemble "
                     "État + Banque de France ({qe_sc1} fin 2022, {qe_sc1_d} en {qe_dern}) et pour la seule dette de marché de l'État "
                     "({qe_sm1} fin 2022, {qe_sm1_d} en {qe_dern}).",
                source="AFT (bulletins mensuels, ligne à ligne), Banque de France (Webstat), BCE ; décision (UE) 2016/2248 ; calcul de l'auteur",
-               note="Scénario : +1 point sur toute la courbe, encours constant ; titres de la Banque de France au taux de référence de la BCE. Ni une prévision, ni le coût du QE.",
-               axe="Md€ la première année", cons="État + Banque de France", marche="dette de marché seule", jalon="fin 2022",
-               montre="Fin 2022, si toute la courbe des taux avait monté d'un point, la charge de l'ensemble État + Banque de France aurait "
+               note="Scénario : +1 point sur toute la courbe, encours constant ; titres de la Banque de France au taux de référence de la BCE. "
+                    "Ni une prévision, ni une série de dépenses constatées, ni le coût du QE.",
+               axe="Md€ la première année", cons="État + Banque de France (périmètre d'analyse)", marche="dette de marché de l'État seule", jalon="fin 2022",
+               cons_m="État + Banque de France", marche_m="dette de marché seule",
+               montre="Fin 2022, si toute la courbe des taux avait augmenté d'un point, la charge de l'ensemble État + Banque de France aurait "
                       "augmenté la première année {qe_r1} fois plus que celle de la seule dette de marché ; l'écart se resserre depuis, sans disparaître."),
-    "en": dict(titre="If the whole yield curve rose by one point: the first-year rise in the interest bill",
+    "en": dict(titre="A lasting one-point rise in rates: how much extra interest in the first year?",
+               titre_m="One more point on rates: extra interest in the first year",
                desc="Monthly lines, March 2015 to {qe_dern}, in billions of euros: first-year rise in the interest bill, in a scenario, for the government and the "
                     "Banque de France taken together ({qe_sc1} at end-2022, {qe_sc1_d} in {qe_dern}) and for the government's market "
                     "debt alone ({qe_sm1} at end-2022, {qe_sm1_d} in {qe_dern}).",
                source="AFT (monthly bulletins, line by line), Banque de France (Webstat), ECB; Decision (EU) 2016/2248; author's calculation",
-               note="Scenario: +1 point across the whole curve, constant stock; Banque de France holdings at the ECB reference rate. Not a forecast, nor the cost of QE.",
-               axe="€bn in the first year", cons="Government + Banque de France", marche="market debt alone", jalon="end-2022",
+               note="Scenario: +1 point across the whole curve, constant stock; Banque de France holdings at the ECB reference rate. "
+                    "Not a forecast, not a series of recorded spending, nor the cost of QE.",
+               axe="€bn in the first year", cons="Government + Banque de France (analytical scope)", marche="government market debt alone", jalon="end-2022",
+               cons_m="Government + Banque de France", marche_m="market debt alone",
                montre="At end-2022, had the whole yield curve risen by one point, the first-year interest bill of the government and the Banque de France "
                       "together would have risen {qe_r1} times as much as that of market debt alone; the gap has narrowed since, without closing."),
 }
@@ -478,12 +509,86 @@ def fig_achats(q, Aff, lang):
         e.append('<circle cx="%.1f" cy="%.1f" r="3.6" fill="%s"/>' % (X1, Y(rd[k]), col))
         e.append('<text x="%.1f" y="%.1f" font-size="12" font-weight="600" fill="%s">%s</text>' % (X1 + 7, Y(rd[k]) + 4, ORANGE if k == 2 else INK2, lib))
     e.append('<text x="%.1f" y="%.1f" font-size="9.5" fill="%s">%s</text>' % (X1 + 7, Y(rd[2]) - 10, MUTED, esc(Aff["qe_dern"])))
-    y0 = h + 2
-    e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y0, W, y0, GRID))
-    for k, (tx, col) in enumerate([(t["source"], INK2), (t["note"], INK2), (LICENCES[lang], MUTED)]):
-        e.append('<text x="0" y="%.1f" font-size="9" fill="%s">%s</text>' % (y0 + 13 + 12 * k, col, esc(tx)))
-    e.append("</svg>")
-    return "\n".join(e)
+    return pied_figure.pied(e, h + 2, W, [(t["source"], INK2, "pied-source"), (t["note"], INK2, "pied-note"),
+                                          (LICENCES[lang], MUTED, "pied-licence")], GRID)
+
+
+# ------------------------------------------------------------------ versions téléphone (300 de large, recomposées)
+# Composées pour le téléphone, jamais réduites : titre court, résultats décisifs seulement, police >= FS_MIN, pied lisible.
+# Chaque valeur dessinée en gras ou en couleur figure dans la description de la version détaillée (pied_figure.parite).
+def desc_de(svg):
+    return html.unescape(re.search(r"<desc[^>]*>(.*?)</desc>", svg, re.S).group(1))
+
+
+def fig_calendrier_m(c, Aff, lang, svg_d):
+    t = {k: v.format(**Aff) for k, v in TXT[lang].items()}
+    e, y = pied_figure.tete_mobile("inflm", t["titre_m"], desc_de(svg_d), INK, FONT)
+    X0, X1, TOP = 34, WM - 4, y + 34
+    BAS = TOP + 200
+    a0, a1, vmax = 2020, max(c["cum"]), 200
+    X = lambda a: X0 + (X1 - X0) * (a - a0) / (a1 - a0)
+    Y = lambda v: BAS - (BAS - TOP) * v / vmax
+    e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (TOP - 14, FS_MIN, MUTED, esc(t["axe_m"])))
+    for gv in range(0, vmax + 1, 50):
+        e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="%s"/>' % (X0, Y(gv), X1, Y(gv), GRID, 1.2 if gv == 0 else 0.6))
+        e.append('<text x="%d" y="%.1f" font-size="%s" fill="%s" text-anchor="end">%d</text>' % (X0 - 4, Y(gv) + 4, FS_MIN, MUTED, gv))
+    for a in (2021, 2045, a1):
+        e.append('<text x="%.1f" y="%d" font-size="%s" fill="%s" text-anchor="%s">%d</text>'
+                 % (X(a), BAS + 18, FS_MIN, MUTED, "start" if a == 2021 else ("end" if a == a1 else "middle"), a))
+    pts = [(a0, 0.0)] + sorted(c["cum"].items())
+    trace = lambda ps: " ".join(("M" if k == 0 else "L") + "%.1f,%.1f" % (X(a), Y(v)) for k, (a, v) in enumerate(ps))
+    e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.6"/>' % (trace([p for p in pts if p[0] <= 2023]), BLEU))
+    e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.6" stroke-dasharray="6 4"/>' % (trace([p for p in pts if p[0] >= 2023]), BLEU))
+    for a in (2023, c["demi"], a1):
+        e.append('<circle cx="%.1f" cy="%.1f" r="4" fill="%s"/>' % (X(a), Y(c["cum"][a]), BLEU))
+    y = BAS + 30
+    lignes = [(("fin 2023 : %s" if lang == "fr" else "end-2023: %s") % Aff["cum23"], INK),
+              (t["demi"], INK), (t["total"], BLEU)]
+    for lib, col in lignes:
+        y += 20
+        e.append('<text x="0" y="%d" font-size="15" font-weight="600" fill="%s">%s</text>' % (y, col, esc(lib)))
+    for l in pied_figure.coupe(t["apres"], 38):
+        y += 19
+        e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, INK2, esc(l)))
+    return pied_figure.pied_mobile(e, y + 14, [(t["source"], INK2, "pied-source"), (t["note"], INK2, "pied-note"),
+                                               (LICENCES_M[lang], MUTED, "pied-licence")], GRID)
+
+
+def fig_achats_m(q, Aff, lang, svg_d):
+    t = {k: v.format(**Aff) for k, v in TXT_QE[lang].items()}
+    e, y = pied_figure.tete_mobile("achm", t["titre_m"], desc_de(svg_d), INK, FONT)
+    serie = q["serie"]
+    mois = lambda d: int(d[:4]) + (int(d[5:7]) - 0.5) / 12
+    m0, m1 = mois(serie[0][0]), mois(serie[-1][0])
+    vmax = 2 * (int(max(s for _, _, s in serie) / 2) + 1)
+    X0, X1, TOP = 26, WM - 4, y + 34
+    BAS = TOP + 190
+    X = lambda m: X0 + (X1 - X0) * (m - m0) / (m1 - m0)
+    Y = lambda v: BAS - (BAS - TOP) * v / vmax
+    e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (TOP - 14, FS_MIN, MUTED, esc(t["axe"])))
+    for gv in range(0, vmax + 1, 4):
+        e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="%s"/>' % (X0, Y(gv), X1, Y(gv), GRID, 1.2 if gv == 0 else 0.6))
+        e.append('<text x="%d" y="%.1f" font-size="%s" fill="%s" text-anchor="end">%d</text>' % (X0 - 4, Y(gv) + 4, FS_MIN, MUTED, gv))
+    for a in (2016, 2021, 2026):
+        if m0 <= a <= m1 + 0.5:
+            e.append('<text x="%.1f" y="%d" font-size="%s" fill="%s" text-anchor="%s">%d</text>'
+                     % (min(X(a), X1), BAS + 18, FS_MIN, MUTED, "end" if X(a) > X1 - 20 else "middle", a))
+    for k, col, larg in ((1, GRIS, 2.2), (2, ORANGE, 2.6)):
+        d = " ".join(("M" if i == 0 else "L") + "%.1f,%.1f" % (X(mois(r[0])), Y(r[k])) for i, r in enumerate(serie))
+        e.append('<path d="%s" fill="none" stroke="%s" stroke-width="%s"/>' % (d, col, larg))
+    r22 = next(r for r in serie if r[0] == "2022-12-31")
+    for k, col in ((2, ORANGE), (1, GRIS)):
+        e.append('<circle cx="%.1f" cy="%.1f" r="4" fill="%s"/>' % (X(mois(r22[0])), Y(r22[k]), col))
+    y = BAS + 30
+    sep = " : " if lang == "fr" else ": "
+    for lib, col in (((t["jalon"] + sep).capitalize(), INK2),
+                     ("%s%s%s" % (t["cons_m"], sep, Aff["qe_sc1"]), ORANGE), ("%s%s%s" % (t["marche_m"], sep, Aff["qe_sm1"]), INK2),
+                     ("%s%s%s" % (Aff["qe_dern"], sep, "%s / %s" % (Aff["qe_sc1_d"], Aff["qe_sm1_d"])), INK2)):
+        y += 20
+        poids = ' font-weight="600"' if col == ORANGE else ""
+        e.append('<text x="0" y="%d" font-size="15"%s fill="%s">%s</text>' % (y, poids, col, esc(lib)))
+    return pied_figure.pied_mobile(e, y + 14, [(t["source"], INK2, "pied-source"), (t["note"], INK2, "pied-note"),
+                                               (LICENCES_M[lang], MUTED, "pied-licence")], GRID)
 
 
 def fiches(figs, Aff):
@@ -494,8 +599,8 @@ def fiches(figs, Aff):
             f = base + SUFFIXE[lang]
             svg = figs[f + ".svg"]
             titre = html.unescape(re.search(r"<title[^>]*>(.*?)</title>", svg).group(1))
-            cart = [html.unescape(t) for t in re.findall(r'<text x="0" y="[0-9.]+" font-size="9" fill="[^"]+">(.*?)</text>', svg)]
-            out[lang].append(dict(id=id_, fichier=f, titre=titre, montre=txt[lang]["montre"].format(**Aff[lang]), source=cart[0], precaution=cart[1]))
+            out[lang].append(dict(id=id_, fichier=f, titre=titre, montre=txt[lang]["montre"].format(**Aff[lang]),
+                                  source=pied_figure.lire(svg, "pied-source"), precaution=pied_figure.lire(svg, "pied-note")))
     return out
 
 
@@ -553,12 +658,26 @@ def main() -> int:
         fail("blocs affichage et affichage_en : cles differentes")
     log("Erosion %.1f Md EUR 2020 (annuel %.1f) ; famille A %s ; demi %s ; indexes %.1f ; consolide %.1f -> %.1f"
         % (c["T"], c["T_annuel"], c["A_r0"], c["demi"], c["idx_j"], c["cons23"], c["cons25"]))
-    if check:
-        log("--check : %d gardes passees (%d cles d'affichage), rien ecrit." % (n, len(Aff["fr"])))
-        return 0
-    import cairosvg
     figs = {"dette-inflation-calendrier%s.svg" % SUFFIXE[lang]: fig_calendrier(c, Aff[lang], lang) for lang in ("fr", "en")}
     figs.update({"dette-inflation-achats%s.svg" % SUFFIXE[lang]: fig_achats(c["qe"], Aff[lang], lang) for lang in ("fr", "en")})
+    for lang in ("fr", "en"):
+        sf = SUFFIXE[lang]
+        figs["dette-inflation-calendrier%s-m.svg" % sf] = fig_calendrier_m(c, Aff[lang], lang, figs["dette-inflation-calendrier%s.svg" % sf])
+        figs["dette-inflation-achats%s-m.svg" % sf] = fig_achats_m(c["qe"], Aff[lang], lang, figs["dette-inflation-achats%s.svg" % sf])
+        for fid in ("calendrier", "achats"):
+            ec = pied_figure.parite(figs["dette-inflation-%s%s.svg" % (fid, sf)], figs["dette-inflation-%s%s-m.svg" % (fid, sf)], FS_MIN)
+            if ec:
+                fail("parite mobile %s %s : %s" % (fid, lang, " ; ".join(ec)))
+    for page, sf in (("_index.md", ""), ("_index.en.md", "-en")):
+        ec = pied_figure.controler_page((ROOT / "content" / "inflation-et-dette-publique" / page).read_text(encoding="utf-8"),
+                                        {f: v for f, v in figs.items() if re.fullmatch(r"dette-inflation-[a-z]+%s(-m)?\.svg" % sf, f)})
+        if ec:
+            fail("page %s : %s" % (page, " ; ".join(ec)))
+    if check:   # après les figures : parité téléphone et hauteurs déclarées se contrôlent aussi sans écrire
+        log("--check : %d gardes passees (%d cles d'affichage), parite des 4 figures telephone et hauteurs des pages controlees, rien ecrit."
+            % (n, len(Aff["fr"])))
+        return 0
+    import cairosvg
     q_ = c["qe"]
     payload = {"meta": {"page": "https://" + PAGE_URL, "licence": "CC BY 4.0",
                         "perimetre": "dette négociable de l'État à taux fixe au 31/12/2020 (OAT à taux fixe et BTF), flux promis (coupons et principal)",
@@ -590,7 +709,10 @@ def main() -> int:
                 # (10/10/2026) fiches « Réutiliser » comparées aussi : sans elles, une légende corrigée n'était jamais réécrite.
                 log("Donnees et figures identiques : rien ecrit (releve_le conserve : %s)." % prev["releve_le"])
                 return 0
-            if same:  # donnees identiques, seul le texte d'une figure change : la date de releve reste celle des donnees
+            # données identiques hors blocs d'affichage (texte d'une figure, clé d'affichage nouvelle) : la date de relevé
+            # reste celle des DONNÉES, sinon la page afficherait « Calcul du » au jour d'une simple retouche (11/10/2026)
+            hors_aff = lambda d: {k: v for k, v in d.items() if k not in ("releve_le", "_licence", "affichage", "affichage_en")}
+            if same or hors_aff(prev) == hors_aff(json.loads(json.dumps(payload, ensure_ascii=False))):
                 releve = prev["releve_le"]
         except (ValueError, KeyError):
             pass

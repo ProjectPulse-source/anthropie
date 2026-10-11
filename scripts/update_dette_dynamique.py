@@ -562,6 +562,9 @@ def affichage(a0, d_depart, rows, total, per, dr):
             A[k + "_flux"] = sg(t["flux_stock"])
         A["effet_2021_2023"] = nb(-sum(r["effet_taux_croissance"] for r in infl))
         A["deficits_2021_2023"] = nb(sum(r["contribution_solde_primaire"] for r in infl))
+        # recul OBSERVÉ du ratio en 2021-2023, cité par la page « inflation » pour que -16,8 ne se lise pas comme la baisse
+        # du ratio (contre-expertise OPTIMUM-27, 11/10/2026) ; sans signe : la prose dit « a reculé de »
+        A["recul_2021_2023"] = nb(-sum(r["variation"] for r in infl))
         for a in (2009, 2020):
             A["hausse_%d" % a] = nb(by[a]["variation"])
             A["deficits_%d" % a] = nb(by[a]["contribution_solde_primaire"])
@@ -628,6 +631,8 @@ def affichage(a0, d_depart, rows, total, per, dr):
     p1, p2, p3 = per
     affirmations = [
         ("titre de la figure : « la dette a doublé » (rapport 1,85 à 2,2)", 1.85 < last["dette_pct_pib"] / d_depart < 2.2),
+        ("page inflation : « le ratio a reculé en 2021-2023, beaucoup moins que l'effet taux-croissance »",
+         sum(r["variation"] for r in infl) < 0 and -sum(r["effet_taux_croissance"] for r in infl) > -2 * sum(r["variation"] for r in infl)),
         ("chaque période : « le ratio gagne » (variation positive)", all(t["variation"] > 0 for t in per)),
         ("période 1 : l'effet taux-croissance « ajoute » (positif)", p1["effet_taux_croissance"] > 0),
         ("les déficits primaires portent plus des trois quarts de la hausse", total["contribution_solde_primaire"] > 0.75 * total["variation"]),
