@@ -5,8 +5,8 @@
    "fichier": "dette-monde-charge",
    "titre": "Même dette, charge différente : les 27 pays de l'UE en 2025",
    "montre": "À dette voisine, la part des recettes consacrée aux intérêts peut varier de 1 à 3,3 ; hors de la zone euro, elle croît plus vite avec la dette.",
-   "source": "Eurostat gov_10a_main (D41PAY, TR), gov_10dd_edpt1 (GD), nama_10_gdp (B1GQ), 2025 ; administrations publiques S.13, monnaie nationale",
-   "precaution": "Pointillés : faux jumeaux (plus proche voisin en stock, écart < 10 points, trois plus grands écarts de charge)."
+   "source": "Eurostat gov_10a_main (D41PAY, TR), gov_10dd_edpt1 (GD), nama_10_gdp (B1GQ), 2025 ; administrations publiques S.13, monnaie nationale",
+   "precaution": "Pointillés : faux jumeaux (plus proche voisin en stock, écart < 10 points, trois plus grands écarts de charge)."
   },
   {
    "id": "prix",
@@ -31,6 +31,14 @@
    "montre": "Le classement le plus cité : il ne dit ni le prix payé sur la dette, ni la part des recettes qu'elle absorbe.",
    "source": "Eurostat gov_10dd_edpt1, dette de Maastricht, fin 2025",
    "precaution": "Stock brut, sans les actifs publics ni les engagements hors dette (retraites)."
+  },
+  {
+   "id": "ecarts",
+   "fichier": "dette-monde-ecarts",
+   "titre": "Trente ans d'écarts de taux avec l'Allemagne, 1995-2025",
+   "montre": "Convergence avant l'euro, Suède comprise ; décrochage des membres fragiles en 2012, puis resserrement : trente ans d'écarts avec l'Allemagne, pays restés hors de l'euro en comparateurs.",
+   "source": "Eurostat irt_lt_mcby_a (rendements de convergence à 10 ans des emprunts d'État)",
+   "precaution": "Taux de marché à 10 ans, non le taux implicite du stock. Comparateurs, non groupe de contrôle."
   }
  ],
  "en": [
@@ -65,6 +73,14 @@
    "montre": "The most quoted ranking: it shows neither the average interest cost of the debt nor the share of revenue it absorbs.",
    "source": "Eurostat gov_10dd_edpt1, Maastricht debt, end-2025",
    "precaution": "Gross stock, excluding public assets and liabilities outside debt (pensions)."
+  },
+  {
+   "id": "ecarts",
+   "fichier": "dette-monde-ecarts-en",
+   "titre": "Thirty years of yield spreads over Germany, 1995-2025",
+   "montre": "Convergence before the euro, Sweden included; the fragile members' break in 2012, then narrowing: thirty years of spreads over Germany, with countries outside the euro as comparators.",
+   "source": "Eurostat irt_lt_mcby_a (10-year convergence yields on government bonds)",
+   "precaution": "10-year market yields, not the implicit interest rate on the stock. Comparators, not a control group."
   }
  ]
 }

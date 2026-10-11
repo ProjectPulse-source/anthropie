@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 745" role="img" font-variant-numeric="tabular-nums" aria-labelledby="ms-m-t ms-m-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="ms-m-t">Public debt as a % of GDP, end-2025</title><desc id="ms-m-d">Maastricht gross debt of general government, 27 European Union countries, end-2025; France: 115.6%.</desc>
+<rect width="300" height="745" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Public debt as a % of GDP,</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">end-2025</text>
+<circle cx="6.0" cy="83.0" r="5.0" fill="#184f95"/>
+<text x="16.0" y="88.0" font-size="13.5" fill="#52514e" text-anchor="start">euro area</text>
+<rect x="145.5" y="78.5" width="9.0" height="9.0" fill="#eb6834"/>
+<text x="160.0" y="88.0" font-size="13.5" fill="#52514e" text-anchor="start">outside euro area</text>
+<text x="90.0" y="110.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Greece</text>
+<rect x="96" y="100.0" width="148.0" height="13" fill="#184f95"/>
+<text x="248.0" y="110.0" font-size="13.5" fill="#52514e" text-anchor="start">146.1%</text>
+<text x="90.0" y="129.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Italy</text>
+<rect x="96" y="119.0" width="138.9" height="13" fill="#184f95"/>
+<text x="238.9" y="129.0" font-size="13.5" fill="#52514e" text-anchor="start">137.1%</text>
+<text x="90.0" y="148.0" font-size="13.5" fill="#0A0A0E" text-anchor="end" font-weight="600">France</text>
+<rect x="96" y="138.0" width="117.1" height="13" fill="#184f95"/>
+<text x="217.1" y="148.0" font-size="13.5" fill="#0A0A0E" text-anchor="start" font-weight="600">115.6%</text>
+<text x="90.0" y="167.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Belgium</text>
+<rect x="96" y="157.0" width="109.3" height="13" fill="#184f95"/>
+<text x="209.3" y="167.0" font-size="13.5" fill="#52514e" text-anchor="start">107.9%</text>
+<text x="90.0" y="186.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Spain</text>
+<rect x="96" y="176.0" width="102.0" height="13" fill="#184f95"/>
+<text x="202.0" y="186.0" font-size="13.5" fill="#52514e" text-anchor="start">100.7%</text>
+<text x="90.0" y="205.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Portugal</text>
+<rect x="96" y="195.0" width="90.9" height="13" fill="#184f95"/>
+<text x="190.9" y="205.0" font-size="13.5" fill="#52514e" text-anchor="start">89.7%</text>
+<text x="90.0" y="224.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Finland</text>
+<rect x="96" y="214.0" width="89.7" height="13" fill="#184f95"/>
+<text x="189.7" y="224.0" font-size="13.5" fill="#52514e" text-anchor="start">88.5%</text>
+<text x="90.0" y="243.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Austria</text>
+<rect x="96" y="233.0" width="82.6" height="13" fill="#184f95"/>
+<text x="182.6" y="243.0" font-size="13.5" fill="#52514e" text-anchor="start">81.5%</text>
+<text x="90.0" y="262.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Hungary</text>
+<rect x="96" y="252.0" width="75.6" height="13" fill="#eb6834"/>
+<text x="175.6" y="262.0" font-size="13.5" fill="#52514e" text-anchor="start">74.6%</text>
+<text x="90.0" y="281.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Slovenia</text>
+<rect x="96" y="271.0" width="66.6" height="13" fill="#184f95"/>
+<text x="166.6" y="281.0" font-size="13.5" fill="#52514e" text-anchor="start">65.7%</text>
+<text x="90.0" y="300.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Germany</text>
+<rect x="96" y="290.0" width="64.3" height="13" fill="#184f95"/>
+<text x="164.3" y="300.0" font-size="13.5" fill="#52514e" text-anchor="start">63.5%</text>
+<text x="90.0" y="319.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Slovakia</text>
+<rect x="96" y="309.0" width="62.2" height="13" fill="#184f95"/>
+<text x="162.2" y="319.0" font-size="13.5" fill="#52514e" text-anchor="start">61.4%</text>
+<text x="90.0" y="338.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Poland</text>
+<rect x="96" y="328.0" width="60.5" height="13" fill="#eb6834"/>
+<text x="160.5" y="338.0" font-size="13.5" fill="#52514e" text-anchor="start">59.7%</text>
+<text x="90.0" y="357.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Romania</text>
+<rect x="96" y="347.0" width="60.1" height="13" fill="#eb6834"/>
+<text x="160.1" y="357.0" font-size="13.5" fill="#52514e" text-anchor="start">59.3%</text>
+<text x="90.0" y="376.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Croatia</text>
+<rect x="96" y="366.0" width="57.0" height="13" fill="#184f95"/>
+<text x="157.0" y="376.0" font-size="13.5" fill="#52514e" text-anchor="start">56.3%</text>
+<text x="90.0" y="395.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Cyprus</text>
+<rect x="96" y="385.0" width="55.7" height="13" fill="#184f95"/>
+<text x="155.7" y="395.0" font-size="13.5" fill="#52514e" text-anchor="start">55.0%</text>
+<text x="90.0" y="414.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Latvia</text>
+<rect x="96" y="404.0" width="47.5" height="13" fill="#184f95"/>
+<text x="147.5" y="414.0" font-size="13.5" fill="#52514e" text-anchor="start">46.9%</text>
+<text x="90.0" y="433.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Malta</text>
+<rect x="96" y="423.0" width="47.0" height="13" fill="#184f95"/>
+<text x="147.0" y="433.0" font-size="13.5" fill="#52514e" text-anchor="start">46.4%</text>
+<text x="90.0" y="452.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Netherlands</text>
+<rect x="96" y="442.0" width="45.0" height="13" fill="#184f95"/>
+<text x="145.0" y="452.0" font-size="13.5" fill="#52514e" text-anchor="start">44.4%</text>
+<text x="90.0" y="471.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Czechia</text>
+<rect x="96" y="461.0" width="44.9" height="13" fill="#eb6834"/>
+<text x="144.9" y="471.0" font-size="13.5" fill="#52514e" text-anchor="start">44.3%</text>
+<text x="90.0" y="490.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Lithuania</text>
+<rect x="96" y="480.0" width="40.0" height="13" fill="#184f95"/>
+<text x="140.0" y="490.0" font-size="13.5" fill="#52514e" text-anchor="start">39.5%</text>
+<text x="90.0" y="509.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Sweden</text>
+<rect x="96" y="499.0" width="35.6" height="13" fill="#eb6834"/>
+<text x="135.6" y="509.0" font-size="13.5" fill="#52514e" text-anchor="start">35.1%</text>
+<text x="90.0" y="528.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Ireland</text>
+<rect x="96" y="518.0" width="33.3" height="13" fill="#184f95"/>
+<text x="133.3" y="528.0" font-size="13.5" fill="#52514e" text-anchor="start">32.9%</text>
+<text x="90.0" y="547.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Bulgaria</text>
+<rect x="96" y="537.0" width="30.3" height="13" fill="#eb6834"/>
+<text x="130.3" y="547.0" font-size="13.5" fill="#52514e" text-anchor="start">29.9%</text>
+<text x="90.0" y="566.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Denmark</text>
+<rect x="96" y="556.0" width="28.3" height="13" fill="#eb6834"/>
+<text x="128.3" y="566.0" font-size="13.5" fill="#52514e" text-anchor="start">27.9%</text>
+<text x="90.0" y="585.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Luxembourg</text>
+<rect x="96" y="575.0" width="26.8" height="13" fill="#184f95"/>
+<text x="126.8" y="585.0" font-size="13.5" fill="#52514e" text-anchor="start">26.5%</text>
+<text x="90.0" y="604.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Estonia</text>
+<rect x="96" y="594.0" width="24.4" height="13" fill="#184f95"/>
+<text x="124.4" y="604.0" font-size="13.5" fill="#52514e" text-anchor="start">24.1%</text>
+<line x1="0" y1="621.0" x2="300" y2="621.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="642.0" font-size="13.5" fill="#52514e">Eurostat gov_10dd_edpt1, Maastricht</text>
+<text class="pied-source" x="0" y="659.0" font-size="13.5" fill="#52514e">debt, end-2025</text>
+<text class="pied-note" x="0" y="680.0" font-size="13.5" fill="#52514e">Gross stock, excluding public assets</text>
+<text class="pied-note" x="0" y="697.0" font-size="13.5" fill="#52514e">and liabilities outside debt.</text>
+<text class="pied-licence" x="0" y="718.0" font-size="13.5" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="735.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+</svg>

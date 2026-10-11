@@ -58,6 +58,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "scripts"))
+import pied_figure as PF  # noqa: E402  (organe commun des pieds et des figures téléphone)
 OUT_DATA = ROOT / "data" / "dette_monde.json"
 OUT_STATIC = ROOT / "static" / "dette_monde.json"
 # CSV : demandé par l'avis du 30/09 (« plus exploitable qu'un JSON par un journaliste ou un enseignant »).
@@ -118,8 +120,13 @@ NOMS_EN = {
     "ZAF": "South Africa",
 }
 ARTICLE_EN = {c: ("the " + n if c == "NL" else n) for c, n in NOMS_EN.items() if c in ARTICLE}
-ORD_FR = {1: "première", 2: "deuxième", 3: "troisième", 4: "quatrième", 5: "cinquième", 6: "sixième"}
-ORD_EN = {1: "first", 2: "second", 3: "third", 4: "fourth", 5: "fifth", 6: "sixth"}
+ORD_FR = {1: "première", 2: "deuxième", 3: "troisième", 4: "quatrième", 5: "cinquième", 6: "sixième", 7: "septième",
+          8: "huitième", 9: "neuvième", 10: "dixième"}
+ORD_EN = {1: "first", 2: "second", 3: "third", 4: "fourth", 5: "fifth", 6: "sixth", 7: "seventh", 8: "eighth", 9: "ninth",
+          10: "tenth"}
+# Entrées dans la zone euro APRÈS l'année des données (décision du Conseil de l'UE du 8 juillet 2025 pour la Bulgarie) : la
+# page classe le pays selon l'année des données et le dit (défaut M11 de la phase A du volet 4).
+ENTREES_EURO = {"BG": ("1er janvier 2026", "1 January 2026")}
 PAGE_URL_EN = "stephane-lalut.com/en/public-debt-international-comparison/"
 AVANCES = ["USA", "JPN", "GBR", "CAN", "CHE", "NOR", "FRA"]
 EMERGENTS = ["CHN", "IND", "BRA", "ZAF"]
@@ -306,7 +313,9 @@ def niveau_europe() -> tuple[str, list[dict]]:
     R = eurostat("gov_10a_main", [an], na_item="TR", sector="S13", unit="MIO_NAC")
     Y = eurostat("nama_10_gdp", [an], na_item="B1GQ", unit="CP_MNAC")
     D = eurostat("gov_10dd_edpt1", [an_1, an], na_item="GD", sector="S13", unit="MIO_NAC")
-    DP = eurostat("gov_10dd_edpt1", [an], na_item="GD", sector="S13", unit="PC_GDP")
+    # Fin d'année précédente rapportée à SON PIB (contre-expertise OPTIMUM-22) : pour dire la variation du ratio
+    # et empêcher de lire l'écart entre stock de départ et stock de clôture comme une hausse annuelle du ratio.
+    DP = eurostat("gov_10dd_edpt1", [an_1, an], na_item="GD", sector="S13", unit="PC_GDP")
     ans_inf = [str(int(an) - k) for k in (3, 2, 1)]
     # Cinq ans d'inflation : la fenêtre de 3 ans est celle de la page, 2, 4 et 5 ans servent au test de
     # robustesse demandé par la contre-expertise PRO-20260930-061613 (recalculé et gardé à chaque passage).
@@ -331,7 +340,8 @@ def niveau_europe() -> tuple[str, list[dict]]:
             v = [H.get((g, str(int(an) - j))) for j in range(1, k + 1)]
             fen[str(k)] = sum(v) / k if None not in v else None
         part1 = (100 * M1[(g, an)] / MT[(g, an)]) if (g, an) in M1 and MT.get((g, an)) else None
-        rows.append(dict(code=g, nom=NOMS[g], nom_en=NOMS_EN[g], euro=g in euro, stock_fin=dp, stock=stock, prix=prix, recettes=rec,
+        rows.append(dict(code=g, nom=NOMS[g], nom_en=NOMS_EN[g], euro=g in euro, stock_fin=dp,
+                         stock_fin_prec=DP.get((g, an_1)), stock=stock, prix=prix, recettes=rec,
                          charge=charge, inflation=(sum(infl) / len(infl)) if len(infl) == 3 else None,
                          inflation_fenetres=fen, taux10=T10.get((g, an)), part_1an=part1))
     if manquants:
@@ -453,6 +463,12 @@ ECARTS_PAYS = [("FR", 1999), ("IT", 1999), ("ES", 1999), ("PT", 1999), ("IE", 19
                ("SE", None), ("DK", None), ("PL", None), ("HU", None)]
 
 
+SERIE_ECARTS = ["EL", "IT", "PT", "FR", "SE", "HU"]
+# Un style par pays (épaisseur, tirets), le même dans les deux versions : la couleur dit le groupe (zone euro ou non), le
+# trait dit le pays — trois lignes bleues identiques ne se distinguaient qu'à leur extrémité (rendu du 11/10).
+STYLE_ECARTS = {"FR": (2.8, ""), "IT": (1.8, ""), "EL": (1.1, ""), "PT": (1.5, "2 3"), "SE": (2.6, "7 3"), "HU": (1.4, "7 3")}
+
+
 def ecarts_allemagne(an: str) -> dict:
     ans = ["1995", "1998", "2007", "2012", an]
     T = eurostat("irt_lt_mcby_a", ans, int_rt="MCBY")
@@ -462,7 +478,15 @@ def ecarts_allemagne(an: str) -> dict:
     for g, entree in ECARTS_PAYS:
         e = {a: (T[(g, a)] - T[("DE", a)]) if (g, a) in T else None for a in ans}
         pays.append(dict(code=g, nom=NOMS[g], nom_en=NOMS_EN[g], euro_depuis=entree, ecarts=e))
-    return dict(annees=ans, allemagne={a: T[("DE", a)] for a in ans}, pays=pays,
+    # Séries annuelles complètes (cinquième figure, contre-expertise OPTIMUM-22) : peu de pays, ceux que la prose cite.
+    ans_s = [str(a) for a in range(1995, int(an) + 1)]
+    TS = eurostat("irt_lt_mcby_a", ans_s, int_rt="MCBY")
+    if any(("DE", a) not in TS for a in ans_s):
+        fail("Eurostat irt_lt_mcby_a : taux allemand absent pour une des annees 1995-%s" % an)
+    series = {g: {a: round(TS[(g, a)] - TS[("DE", a)], 2) for a in ans_s if (g, a) in TS} for g in SERIE_ECARTS}
+    if any(len(v) < 10 for v in series.values()):
+        fail("series d'ecarts trop courtes : %s" % {g: len(v) for g, v in series.items()})
+    return dict(annees=ans, allemagne={a: T[("DE", a)] for a in ans}, pays=pays, series=series,
                 source_en="Eurostat irt_lt_mcby_a (10-year convergence yields on government bonds)",
                 source="Eurostat irt_lt_mcby_a (rendements de convergence à 10 ans des emprunts d'État)")
 
@@ -515,19 +539,32 @@ LIB_FIG = {
 }
 
 
-def cartouche(y0: float, source: str, note: str, lang: str = "fr") -> list[str]:
-    lignes = [(source, INK2)] + ([(note, INK2)] if note else []) + [(LIB_FIG[lang]["licence"], MUTED)]
-    out = ['<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y0, W, y0, GRID)]
-    for k, (t, c) in enumerate(lignes):
-        out.append('<text x="0" y="%.1f" font-size="9" fill="%s">%s</text>' % (y0 + 13 + 12 * k, c, esc(t)))
-    return out
+def blocs_pied(source: str, note: str, lang: str, licence: str = "") -> list:
+    return ([(source, INK2, "pied-source")] + ([(note, INK2, "pied-note")] if note else [])
+            + [(licence or LIB_FIG[lang]["licence"], MUTED, "pied-licence")])
+
+
+def pied_monde(e: list[str], y0: float, source: str, note: str, lang: str) -> str:
+    """Pied commun (pied_figure, 11 px, renvoi à la ligne) à la place du cartouche en 9 px (défaut M3 de la phase A du
+    volet 4) ; la hauteur du SVG suit. Les fiches « Réutiliser » relisent le pied par classe."""
+    return PF.pied(e, y0, W, blocs_pied(source, note, lang), GRID)
+
+
+def marque(x: float, y: float, euro: bool, r: float = 5.5, liseré: bool = True) -> str:
+    """Rond pour la zone euro, carré pour les pays hors zone euro (OPTIMUM-22, M4 : la couleur porte le groupe, et la
+    forme le double pour qui ne distingue pas les couleurs)."""
+    bord = ' stroke="#fff" stroke-width="1"' if liseré else ""
+    if euro:
+        return '<circle cx="%.1f" cy="%.1f" r="%.1f" fill="%s"%s/>' % (x, y, r, COL_EURO, bord)
+    c = r * 0.9
+    return '<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="%s"%s/>' % (x - c, y - c, 2 * c, 2 * c, COL_HORS, bord)
 
 
 def legende(x: float, y: float, lang: str = "fr") -> list[str]:
     L = LIB_FIG[lang]
-    return ['<circle cx="%.1f" cy="%.1f" r="5" fill="%s"/>' % (x, y - 4, COL_EURO),
+    return [marque(x, y - 4, True, 5, False),
             '<text x="%.1f" y="%.1f" font-size="%d" fill="%s">%s</text>' % (x + 9, y, TY_ANNOT, INK2, L["euro"]),
-            '<circle cx="%.1f" cy="%.1f" r="5" fill="%s"/>' % (x + 90, y - 4, COL_HORS),
+            marque(x + 90, y - 4, False, 5, False),
             '<text x="%.1f" y="%.1f" font-size="%d" fill="%s">%s</text>' % (x + 99, y, TY_ANNOT, INK2, L["hors"])]
 
 
@@ -594,8 +631,7 @@ def nuage(rows, fx, fy, xmax, ymax, pasx, pasy, lx, ly, ident, titre, desc, sour
         e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1.2" opacity="0.7"/>'
                  % (sx(xa), sy(a + b * xa), sx(xb), sy(a + b * xb), col))
     for x in rows:
-        e.append('<circle cx="%.1f" cy="%.1f" r="5.5" fill="%s" stroke="#fff" stroke-width="1"/>'
-                 % (sx(fx(x)), sy(fy(x)), COL_EURO if x["euro"] else COL_HORS))
+        e.append(marque(sx(fx(x)), sy(fy(x)), x["euro"]))
     # Placement CALCULÉ (charte du 28/09 : « toute règle graphique doit être calculable, anti-chevauchement
     # compris ») : les points bougent à chaque millésime, et une étiquette posée à la main finit par recouvrir
     # un point, une autre étiquette ou un trait sans que rien ne le dise (« Allemagne » sur les Pays-Bas, nuage
@@ -668,9 +704,7 @@ def nuage(rows, fx, fy, xmax, ymax, pasx, pasy, lx, ly, ident, titre, desc, sour
                  % (px + dx, py + dy, TY_ANNOT, INK, anc, gras, esc(lib)))
     if echecs:
         fail("%s (%s) : aucune position libre -- %s" % (ident, lang, " ; ".join(echecs)))
-    e += cartouche(H + 2, source, note, lang)
-    e.append("</svg>")
-    return "\n".join(e)
+    return pied_monde(e, H + 2, source, note, lang)
 
 
 def barres_stock(rows, an, source, lang="fr"):
@@ -680,10 +714,12 @@ def barres_stock(rows, an, source, lang="fr"):
     X0, X1 = 110, W - 60
     vmax = math.ceil(max(x["stock_fin"] for x in rows) / 20) * 20
     T = {"fr": ("Le stock : dette publique en %% du PIB, fin %s",
-                "Dette brute de Maastricht des administrations publiques, 27 pays de l'Union européenne, fin %s.",
+                "Dette brute de Maastricht des administrations publiques, 27 pays de l'Union européenne, fin %s ; France : "
+                + pct(next(x["stock_fin"] for x in rows if x["code"] == "FR")).replace("%", "%%") + ".",
                 "Stock brut, sans les actifs publics ni les engagements hors dette (retraites)."),
          "en": ("The stock: public debt as a %% of GDP, end-%s",
-                "Maastricht gross debt of general government, 27 European Union countries, end-%s.",
+                "Maastricht gross debt of general government, 27 European Union countries, end-%s; France: "
+                + pct_en(next(x["stock_fin"] for x in rows if x["code"] == "FR")).replace("%", "%%") + ".",
                 "Gross stock, excluding public assets and liabilities outside debt (pensions).")}[lang]
     titre = T[0] % an
     e = entete(H, "ms", titre, T[1] % an)
@@ -696,13 +732,12 @@ def barres_stock(rows, an, source, lang="fr"):
                  % (X0 - 8, y + 10, TY_ANNOT, INK, ' font-weight="600"' if x["code"] == "FR" else "", esc(x[LOC[lang]["nom"]])))
         e.append('<rect x="%d" y="%.1f" width="%.1f" height="%d" fill="%s"/>' % (X0, y + 1, w, hb - 4, COL_EURO if x["euro"] else COL_HORS))
         e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s">%s</text>' % (X0 + w + 5, y + 10, TY_ANNOT, INK2, LOC[lang]["pct"](x["stock_fin"])))
-    e += cartouche(H + 2, source, T[2], lang)
-    e.append("</svg>")
-    return "\n".join(e)
+    return pied_monde(e, H + 2, source, T[2], lang)
 
 
 def transmission(rows, an, source, lang="fr"):
     g = [x for x in rows if x["part_1an"] is not None and x["taux10"] is not None]
+    by = {x["code"]: x for x in rows}
     fx = lambda x: x["part_1an"]  # noqa: E731
     fy = lambda x: x["taux10"] - x["prix"]  # noqa: E731
     xmax = math.ceil(max(fx(x) for x in g) / 5) * 5
@@ -720,7 +755,8 @@ def transmission(rows, an, source, lang="fr"):
                 "Chaque point est un pays : à droite, une plus grande part de la dette arrive à échéance dans l'année ; en haut, "
                 "le rendement harmonisé à 10 ans dépasse davantage le taux implicite du stock. Si les conditions de financement "
                 "restaient supérieures au coût de la dette remplacée, les refinancements pousseraient le coût moyen à la hausse. "
-                "Sous zéro, l'indicateur est orienté dans l'autre sens. Repère, non prévision.",
+                "Sous zéro, l'indicateur est orienté dans l'autre sens. Repère, non prévision. France : %s de la dette à moins "
+                "d'un an, écart de %s." % (pct(by["FR"]["part_1an"]), LOC["fr"]["point"](by["FR"]["taux10"] - by["FR"]["prix"])),
                 "Rendement de convergence à 10 ans, non le coût de toutes les émissions nouvelles. Repère, non prévision."),
          "en": ("Refinancing pressure: maturities and rate gap, %s",
                 "share of debt with a residual maturity of less than one year",
@@ -728,11 +764,291 @@ def transmission(rows, an, source, lang="fr"):
                 "Each dot is a country: further right, a larger share of the debt falls due within the year; higher up, "
                 "the harmonised 10-year yield exceeds the implicit interest rate on the stock by more. If financing conditions "
                 "stayed above the cost of the debt being replaced, refinancing would push the average cost up. "
-                "Below zero, the indicator points the other way. A marker, not a forecast.",
+                "Below zero, the indicator points the other way. A marker, not a forecast. France: %s of debt due within a "
+                "year, gap of %s." % (pct_en(by["FR"]["part_1an"]), LOC["en"]["point"](by["FR"]["taux10"] - by["FR"]["prix"])),
                 "10-year convergence yield, not the cost of all new issuance. A marker, not a forecast.")}[lang]
     nb, pt = LOC[lang]["nb"], LIB_FIG[lang]["pt"]
     return nuage(g, fx, fy, xmax, ymax, 5, 0.5, T[1], T[2], "mt", T[0] % an, T[3], source, T[4],
                  etiq, ymin=ymin, fmt_y=lambda v: nb(v, 1) + pt, lang=lang)
+
+
+# ------------------------------------------------------------------ écarts avec l'Allemagne, 1995-an
+def ecarts_figure(ecarts: dict, an: str, lang: str = "fr") -> str:
+    """Cinquième figure (contre-expertise OPTIMUM-22) : trente ans d'écarts de taux à 10 ans avec l'Allemagne, peu de pays
+    (ceux que la prose cite), pays restés hors de l'euro en témoins. Échelle bornée à 10 points pour que les écarts
+    ordinaires restent lisibles : la Grèce, qui sort du cadre en 2010-2013, porte sa valeur de 2012 en toutes lettres."""
+    S, nb = ecarts["series"], LOC[lang]["nb"]
+    L = LIB_FIG[lang]
+    ans = sorted({a for v in S.values() for a in v}, key=int)
+    a0, a1 = int(ans[0]), int(ans[-1])
+    H, X0, X1, Y0, Y1 = 400, 46, W - 92, 70, 340
+    vmin, vmax = -1.0, 10.0
+    sx = lambda a: X0 + (int(a) - a0) / (a1 - a0) * (X1 - X0)  # noqa: E731
+    sy = lambda v: Y1 - (min(max(v, vmin), vmax) - vmin) / (vmax - vmin) * (Y1 - Y0)  # noqa: E731
+    T = {"fr": ("Trente ans d'écarts de taux avec l'Allemagne, %s-%s" % (a0, a1),
+                "écart de rendement à 10 ans avec l'Allemagne, en points",
+                "avant l'euro", "2012", "Grèce : %s points en 2012 ; ▲ hors échelle",
+                "Rendement de convergence à 10 ans moins celui de l'Allemagne, en points. Cercles : membres de la zone euro "
+                "aujourd'hui ; carrés : pays restés hors de l'euro.",
+                "Taux de marché à 10 ans, non le taux implicite du stock. Comparateurs, non groupe de contrôle."),
+         "en": ("Thirty years of yield spreads over Germany, %s-%s" % (a0, a1),
+                "10-year yield spread over Germany, in percentage points",
+                "before the euro", "2012", "Greece: %s points in 2012; ▲ off the scale",
+                "10-year convergence yield minus Germany's, in percentage points. Circles: current euro-area members; "
+                "squares: countries that stayed outside the euro.",
+                "10-year market yields, not the implicit interest rate on the stock. Comparators, not a control group.")}[lang]
+    eur = {"EL", "IT", "PT", "FR", "ES", "IE"}
+    v = lambda g, a: S[g].get(str(a))  # noqa: E731
+    desc = (T[5] + " " + {"fr": "Italie : %s en 1995, %s en 1998 ; Suède : %s en 1995, %s en 1998 ; Grèce : %s en 2012, "
+                                "Portugal : %s ; en %s, Hongrie : %s, Italie : %s, Grèce : %s, France : %s, Portugal : %s, Suède : %s.",
+                          "en": "Italy: %s in 1995, %s in 1998; Sweden: %s in 1995, %s in 1998; Greece: %s in 2012, "
+                                "Portugal: %s; in %s, Hungary: %s, Italy: %s, Greece: %s, France: %s, Portugal: %s, Sweden: %s."}[lang]
+            % (nb(v("IT", 1995), 2), nb(v("IT", 1998), 2), nb(v("SE", 1995), 2), nb(v("SE", 1998), 2),
+               nb(v("EL", 2012), 1), nb(v("PT", 2012), 2), an, nb(v("HU", an), 2), nb(v("IT", an), 2), nb(v("EL", an), 2),
+               nb(v("FR", an), 2), nb(v("PT", an), 2), nb(v("SE", an), 2)))
+    e = entete(H, "me", T[0], desc)
+    e.append('<text x="0" y="18" font-size="%d" font-weight="600" fill="%s">%s</text>' % (TY_TITRE, INK, esc(T[0])))
+    e += legende(W - 250, 18, lang)
+    # Bande « avant l'euro » (1995-1998), libellée sous elle ; repère 2012.
+    e.append('<rect x="%.1f" y="%d" width="%.1f" height="%d" fill="#f0efe9"/>' % (sx(1995), Y0, sx(1998) - sx(1995), Y1 - Y0))
+    e.append('<text x="%.1f" y="%d" font-size="%d" fill="%s" text-anchor="middle">%s</text>'
+             % ((sx(1995) + sx(1998)) / 2, Y1 + 30, TY_AXE, INK2, esc(T[2])))
+    e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-dasharray="3 3"/>' % (sx(2012), Y0, sx(2012), Y1, MUTED))
+    for g in range(-1, 11):
+        if g % 2 and g != -1:
+            continue
+        yy = sy(g)
+        e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (X0, yy, X1, yy, AXIS if g == 0 else GRID))
+        e.append('<text x="%d" y="%.1f" font-size="%d" fill="%s" text-anchor="end">%s</text>'
+                 % (X0 - 6, yy + 4, TY_AXE, MUTED, nb(g, 0)))
+    e.append('<text x="%d" y="%d" font-size="%d" fill="%s">%s</text>' % (X0, Y0 - 10, TY_AXE, INK2, esc(T[1])))
+    for a in range(a0, a1 + 1, 5):
+        e.append('<text x="%.1f" y="%d" font-size="%d" fill="%s" text-anchor="%s">%d</text>'
+                 % (sx(a), Y1 + 15, TY_AXE, MUTED, "end" if a == a1 else ("start" if a == a0 else "middle"), a))
+    e.append('<defs><clipPath id="me-clip"><rect x="%d" y="%d" width="%d" height="%d"/></clipPath></defs>' % (X0, Y0 - 2, X1 - X0, Y1 - Y0 + 2))
+    fins = []
+    for g in SERIE_ECARTS:
+        pts = sorted(S[g].items(), key=lambda p: int(p[0]))
+        col = COL_EURO if g in eur else COL_HORS
+        w, dd = STYLE_ECARTS[g]
+        dash = ' stroke-dasharray="%s"' % dd if dd else ""
+        e.append('<polyline points="%s" fill="none" stroke="%s" stroke-width="%.1f"%s clip-path="url(#me-clip)"/>'
+                 % (" ".join("%.1f,%.1f" % (sx(a), Y1 - (vv - vmin) / (vmax - vmin) * (Y1 - Y0)) for a, vv in pts), col, w, dash))
+        fins.append((sy(pts[-1][1]), g, col, pts[-1][1]))
+    # Étiquettes directes en fin de ligne, écart minimal garanti (même règle que les autres figures du dossier).
+    fins.sort()
+    pos = []
+    for yy, g, col, val in fins:
+        y_ = max(yy, pos[-1] + 13) if pos else yy
+        pos.append(y_)
+    debord = pos[-1] - (Y1 - 2)
+    if debord > 0:
+        pos = [p - debord for p in pos]
+    for (yy, g, col, val), y_ in zip(fins, pos):
+        e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s"%s>%s</text>'
+                 % (X1 + 6, y_ + 4, TY_ANNOT, col, ' font-weight="600"' if g == "FR" else "",
+                    esc("%s %s" % (NOMS[g] if lang == "fr" else NOMS_EN[g], nb(val, 2)))))
+    # Valeurs hors échelle marquées (OPTIMUM-23) : un triangle au bord supérieur pour chaque année où un pays dépasse 10 points.
+    for g in SERIE_ECARTS:
+        for a, vv in S[g].items():
+            if vv > vmax:
+                x = sx(a)
+                e.append('<polygon points="%.1f,%d %.1f,%d %.1f,%d" fill="%s"/>' % (x - 4, Y0 + 1, x + 4, Y0 + 1, x, Y0 - 6, COL_EURO if g in eur else COL_HORS))
+    for trait in ('fill="#fff" stroke="#fff" stroke-width="4" stroke-linejoin="round" aria-hidden="true"',
+                  'fill="%s"' % COL_EURO):
+        e.append('<text x="%.1f" y="%d" font-size="%d" %s>%s</text>'
+                 % (sx(2012) + 8, Y0 + 12, TY_ANNOT, trait, esc(T[4] % nb(v("EL", 2012), 1))))
+    return pied_monde(e, H + 2, ecarts["source"] if lang == "fr" else ecarts["source_en"], T[6], lang)
+
+
+# ------------------------------------------------------------------ téléphone
+# Versions téléphone (phase B du volet 4, OPTIMUM-22 : « véritable figure éditoriale, non simple réduction ») : 300 de large,
+# police jamais sous 13,5, organe commun pied_figure ; servies d'office par le shortcode figure-svg. On ne nomme que les
+# points qui fondent le propos ; le tableau de la page donne les autres. Chaque valeur dessinée en gras figure dans la
+# description de la version détaillée (PF.parite).
+WM, FSM = PF.LARGEUR_M, PF.POLICE_M
+
+
+def tm(x, y, s, fill=INK2, anchor="start", weight=None, size=None):
+    w = ' font-weight="%s"' % weight if weight else ""
+    return ('<text x="%.1f" y="%.1f" font-size="%s" fill="%s" text-anchor="%s"%s>%s</text>'
+            % (x, y, size or FSM, fill, anchor, w, esc(s)))
+
+
+def desc_de(svg: str) -> str:
+    import html as _h
+    import re as _r
+    return _h.unescape(_r.search(r"<desc[^>]*>(.*?)</desc>", svg, _r.S).group(1))
+
+
+def lignes_m(e: list[str], y: float, texte: str, fill=MUTED, weight=None) -> float:
+    for l in PF.coupe(texte, 38):
+        y += 18
+        e.append(tm(0, y, l, fill, weight=weight))
+    return y
+
+
+def legende_m(e: list[str], y: float, lang: str) -> float:
+    L = LIB_FIG[lang]
+    y += 20
+    e.append(marque(6, y - 5, True, 5, False))
+    e.append(tm(16, y, L["euro"]))
+    e.append(marque(150, y - 5, False, 5, False))
+    e.append(tm(160, y, L["hors"]))
+    return y
+
+
+def pied_m(e: list[str], y: float, source: str, note: str, lang: str) -> str:
+    lic = {"fr": "Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com",
+           "en": "Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com"}[lang]
+    return PF.pied_mobile(e, y, blocs_pied(source, note, lang, lic), GRID)
+
+
+def nuage_m(rows, fx, fy, xmax, ymin, ymax, pasx, pasy, fmt_x, fmt_y, lx, ly, ident, titre, svg_d, source, note, lang,
+            noms, valeurs=None, jumeaux=(), droites=None, liste=None, x0=40):
+    """liste : [(code, valeur)] dits SOUS la figure quand leurs points sont trop serrés pour être nommés dedans."""
+    e, y = PF.tete_mobile(ident, titre, desc_de(svg_d), INK, FONT)
+    y = legende_m(e, y + 4, lang)
+    y = lignes_m(e, y + 4, ly)
+    X0, X1, Y0 = x0, WM - 8, y + 14
+    Y1 = Y0 + 230
+    sx = lambda v: X0 + v / xmax * (X1 - X0)  # noqa: E731
+    sy = lambda v: Y1 - (v - ymin) / (ymax - ymin) * (Y1 - Y0)  # noqa: E731
+    v = ymin
+    while v <= ymax + 1e-9:
+        e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (X0, sy(v), X1, sy(v), AXIS if v == 0 else GRID))
+        e.append(tm(X0 - 5, sy(v) + 5, fmt_y(v), MUTED, "end"))
+        v += pasy
+    v = 0
+    while v <= xmax + 1e-9:
+        e.append(tm(sx(v), Y1 + 19, fmt_x(v), MUTED, "middle" if 0 < v < xmax else ("start" if v == 0 else "end")))
+        v += pasx
+    by = {x["code"]: x for x in rows}
+    for j in jumeaux:
+        a, b = by[j["bas"]], by[j["haut"]]
+        e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1.5" stroke-dasharray="3 3"/>'
+                 % (sx(fx(a)), sy(fy(a)), sx(fx(b)), sy(fy(b)), MUTED))
+    for (a, b, xa, xb, col) in (droites or []):
+        e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1.2" opacity="0.7"/>'
+                 % (sx(xa), sy(a + b * xa), sx(xb), sy(a + b * xb), col))
+    pts = [(x["code"], sx(fx(x)), sy(fy(x))) for x in rows]
+    for x in rows:
+        e.append(marque(sx(fx(x)), sy(fy(x)), x["euro"], 4.2))
+    boites, echecs = [], []
+    for code in noms:
+        x = by.get(code)
+        if not x:
+            continue
+        px, py = sx(fx(x)), sy(fy(x))
+        lib = x[LOC[lang]["nom"]] + ((" " + valeurs[code]) if valeurs and code in valeurs else "")
+        gras = valeurs and code in valeurs
+        larg = largeur_texte(lib, FSM) * (1.08 if gras else 1.0)
+        ok = None
+        for dx, dy, anc in ((7, 5, "start"), (-7, 5, "end"), (0, -9, "middle"), (0, 19, "middle"), (6, -7, "start"),
+                            (-6, -7, "end"), (6, 17, "start"), (-6, 17, "end")):
+            gx = {"start": px + dx, "end": px + dx - larg, "middle": px + dx - larg / 2}[anc]
+            b = (gx, py + dy - FSM * 0.75, gx + larg, py + dy + 2)
+            if b[0] < 0 or b[2] > WM or b[1] < Y0 - 4 or b[3] > Y1 + 2:
+                continue
+            if any(c != code and b[0] - 4 < cx < b[2] + 4 and b[1] - 4 < cy < b[3] + 4 for c, cx, cy in pts):
+                continue
+            if any(b[0] < o[2] and o[0] < b[2] and b[1] < o[3] and o[1] < b[3] for o in boites):
+                continue
+            ok = (dx, dy, anc, b)
+            break
+        if not ok:
+            echecs.append(lib)
+            continue
+        dx, dy, anc, b = ok
+        boites.append(b)
+        e.append('<text x="%.1f" y="%.1f" font-size="%s" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" '
+                 'text-anchor="%s"%s aria-hidden="true">%s</text>'
+                 % (px + dx, py + dy, FSM, anc, ' font-weight="600"' if gras else "", esc(lib)))
+        e.append(tm(px + dx, py + dy, lib, INK, anc, "600" if gras else None))
+    if echecs:
+        fail("%s (%s, téléphone) : aucune position libre pour %s" % (ident, lang, ", ".join(echecs)))
+    y = lignes_m(e, Y1 + 26, lx)
+    for code, val in (liste or []):
+        x = by[code]
+        y += 22
+        e.append(marque(6, y - 5, x["euro"], 5, False))
+        e.append(tm(18, y, x[LOC[lang]["nom"]], INK2))
+        e.append(tm(WM, y, val, INK, "end", "600"))
+    return pied_m(e, y + 14, source, note, lang)
+
+
+def barres_stock_m(rows, an, svg_d, source, note, titre, lang):
+    rows = sorted(rows, key=lambda x: -x["stock_fin"])
+    e, y = PF.tete_mobile("ms-m", titre, desc_de(svg_d), INK, FONT)
+    y = legende_m(e, y + 4, lang)
+    X0, X1 = 96, WM - 56
+    vmax = max(x["stock_fin"] for x in rows)
+    y += 10
+    for x in rows:
+        fr_ = x["code"] == "FR"
+        w = x["stock_fin"] / vmax * (X1 - X0)
+        e.append(tm(X0 - 6, y + 12, x[LOC[lang]["nom"]], INK, "end", "600" if fr_ else None))
+        e.append('<rect x="%d" y="%.1f" width="%.1f" height="13" fill="%s"/>' % (X0, y + 2, w, COL_EURO if x["euro"] else COL_HORS))
+        e.append(tm(X0 + w + 4, y + 12, LOC[lang]["pct"](x["stock_fin"]), INK if fr_ else INK2, weight="600" if fr_ else None))
+        y += 19
+    return pied_m(e, y + 10, source, note, lang)
+
+
+def ecarts_figure_m(ecarts, an, svg_d, lang):
+    S, nb = ecarts["series"], LOC[lang]["nb"]
+    ans = sorted({a for v in S.values() for a in v}, key=int)
+    a0, a1 = int(ans[0]), int(ans[-1])
+    T = {"fr": ("Trente ans d'écarts de taux avec l'Allemagne", "Écart à 10 ans avec l'Allemagne, en points · Grèce hors "
+                "échelle en 2010-2013", "avant l'euro", "Grèce : %s points en 2012", "en %s :" % a1,
+                "Taux de marché à 10 ans, non le taux implicite. Comparateurs, non groupe de contrôle."),
+         "en": ("Thirty years of yield spreads over Germany", "10-year spread over Germany, in points · Greece off the "
+                "scale in 2010-2013", "before the euro", "Greece: %s points in 2012", "in %s:" % a1,
+                "10-year market yields, not the implicit rate. Comparators, not a control group.")}[lang]
+    e, y = PF.tete_mobile("me-m", T[0], desc_de(svg_d), INK, FONT)
+    SERIE_M = [g for g in SERIE_ECARTS if g != "PT"]  # cinq lignes au plus sur un téléphone ; le Portugal reste dans la détaillée
+    y = legende_m(e, y + 4, lang)
+    y = lignes_m(e, y + 4, T[1])
+    X0, X1, Y0 = 26, WM - 6, y + 14
+    Y1 = Y0 + 220
+    vmin, vmax = -1.0, 10.0
+    sx = lambda a: X0 + (int(a) - a0) / (a1 - a0) * (X1 - X0)  # noqa: E731
+    sy = lambda v: Y1 - (min(max(v, vmin), vmax) - vmin) / (vmax - vmin) * (Y1 - Y0)  # noqa: E731
+    e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="#f0efe9"/>' % (sx(1995), Y0, sx(1998) - sx(1995), Y1 - Y0))
+    e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-dasharray="3 3"/>' % (sx(2012), Y0, sx(2012), Y1, MUTED))
+    for g in (0, 2, 4, 6, 8, 10):
+        e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (X0, sy(g), X1, sy(g), AXIS if g == 0 else GRID))
+        e.append(tm(X0 - 4, sy(g) + 5, nb(g, 0), MUTED, "end"))
+    for a, anc in ((a0, "start"), (2012, "middle"), (a1, "end")):
+        e.append(tm(sx(a), Y1 + 19, str(a), MUTED, anc))
+    e.append('<defs><clipPath id="mem-clip"><rect x="%d" y="%.1f" width="%d" height="%.1f"/></clipPath></defs>' % (X0, Y0 - 2, X1 - X0, Y1 - Y0 + 2))
+    eur = {"EL", "IT", "PT", "FR", "ES", "IE"}
+    for g in SERIE_M:
+        pts = sorted(S[g].items(), key=lambda p: int(p[0]))
+        col = COL_EURO if g in eur else COL_HORS
+        w, dd = STYLE_ECARTS[g]
+        dash = ' stroke-dasharray="%s"' % dd if dd else ""
+        e.append('<polyline points="%s" fill="none" stroke="%s" stroke-width="%.1f"%s clip-path="url(#mem-clip)"/>'
+                 % (" ".join("%.1f,%.1f" % (sx(a), Y1 - (vv - vmin) / (vmax - vmin) * (Y1 - Y0)) for a, vv in pts), col, w, dash))
+    for g in SERIE_M:
+        for a, vv in S[g].items():
+            if vv > vmax:
+                x = sx(a)
+                e.append('<polygon points="%.1f,%.1f %.1f,%.1f %.1f,%.1f" fill="%s"/>' % (x - 4, Y0 + 1, x + 4, Y0 + 1, x, Y0 - 6, COL_EURO if g in eur else COL_HORS))
+    e.append(tm(X0 + 4, Y0 + 14, T[3] % nb(S["EL"]["2012"], 1), COL_EURO))
+    y = Y1 + 44
+    e.append('<rect x="%d" y="%.1f" width="14" height="12" fill="#f0efe9" stroke="%s"/>' % (X0, y - 11, GRID))
+    e.append(tm(X0 + 20, y, T[2], INK2))
+    y += 22
+    e.append(tm(0, y, T[4], INK2))
+    for g in sorted(SERIE_M, key=lambda g: -S[g][str(a1)]):
+        y += 21
+        col = COL_EURO if g in eur else COL_HORS
+        w, dd = STYLE_ECARTS[g]
+        e.append('<line x1="0" y1="%.1f" x2="20" y2="%.1f" stroke="%s" stroke-width="%.1f"%s/>'
+                 % (y - 5, y - 5, col, w, ' stroke-dasharray="%s"' % dd if dd else ""))
+        e.append(tm(26, y, NOMS[g] if lang == "fr" else NOMS_EN[g], INK2))
+        e.append(tm(WM, y, nb(S[g][str(a1)], 2) + LIB_FIG[lang]["pt"], INK, "end", "600"))
+    return pied_m(e, y + 16, ecarts["source"] if lang == "fr" else ecarts["source_en"], T[5], lang)
 
 
 # ------------------------------------------------------------------ affichage
@@ -821,8 +1137,35 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts) -> tuple
                      ("DK", "2012"), ("HU", "2012"), ("SE", an), ("DK", an), ("FR", an), ("IT", an), ("PL", an), ("HU", an)):
             A["ec_%s_%s" % (c.lower(), "an" if a == an else a)] = nb(abs(E[c][a]), 1 if abs(E[c][a]) >= 10 else 2)
         A["usa_fra_rapport"] = nb(av["USA"]["charge"] / av["FRA"]["charge"], 1)
+        # --- Phase B (OPTIMUM-22) ---
+        # M1 : les deux dénominateurs de la charge française, et ce que change le dénominateur.
+        A["fr_ipib"] = pc(ipib["FR"], 2)
+        A["fr_rang_ipib"] = L["ordinal"](rang_ipib)
+        A["fr_rang_charge"] = L["ordinal"](rang_charge)
+        A["n_plus_ipib"] = str(len(plus_ipib))
+        A["plus_ipib"] = ", ".join(x[nom] for x in plus_ipib)
+        A["fr_rang_recettes"] = L["ordinal"](rang_rec)
+        # Décomposition des faux jumeaux (identité vérifiée : produit = rapport des charges).
+        A["j_f_stock"], A["j_f_prix"], A["j_f_rec"] = nb(f_stock, 2), nb(f_prix, 2), nb(f_rec, 2)
+        # Les deux droites : rapport des pentes.
+        A["pente_rapport"] = nb(s["charge_stock_hors"]["pente"] / s["charge_stock_euro"]["pente"], 1)
+        # Trois temporalités françaises : stock de départ, stock de clôture, ratio de fin d'année précédente.
+        A["fr_stock_fin_prec"] = pc(F["stock_fin_prec"])
+        A["fr_var_ratio"] = nb(F["stock_fin"] - F["stock_fin_prec"], 1)
+        A["fr_ecart_stocks"] = nb(F["stock_fin"] - F["stock"], 1)
+        A["fr_rang_prix_euro"] = L["ordinal"](rang_prix_euro)
+        A["bg_entree"] = ENTREES_EURO["BG"][0 if L is LOC["fr"] else 1]
         return A
 
+    # Calculs de la phase B, communs aux deux langues.
+    ipib = {x["code"]: x["charge"] * x["recettes"] / 100 for x in rows}
+    rang_ipib = sorted(ipib, key=lambda c: -ipib[c]).index("FR") + 1
+    rang_charge = sorted(rows, key=lambda x: -x["charge"]).index(F) + 1
+    plus_ipib = sorted((x for x in rows if x["stock"] < F["stock"] and ipib[x["code"]] > ipib["FR"]), key=lambda x: x["stock"])
+    rang_rec = sorted(rows, key=lambda x: -x["recettes"]).index(F) + 1
+    f_stock, f_prix, f_rec = hi["stock"] / lo["stock"], hi["prix"] / lo["prix"], lo["recettes"] / hi["recettes"]
+    euro_prix = sorted((x for x in rows if x["euro"]), key=lambda x: x["prix"])
+    rang_prix_euro = euro_prix.index(F) + 1
     A = bloc(LOC["fr"])
     A_en = bloc(LOC["en"])
     if list(A) != list(A_en):
@@ -869,7 +1212,21 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts) -> tuple
          0 < E["FR"][an] < E["IT"][an]),
         ("aujourd'hui, la Pologne et la Hongrie, hors euro, paient plus que l'Italie",
          E["PL"][an] > E["IT"][an] and E["HU"][an] > E["IT"][an]),
-        ("le prix français est dans la moyenne de la zone euro", abs(F["prix"] - stats["prix_moyen_euro"]) < 0.4),
+        ("le prix français est un peu sous la moyenne simple de la zone euro (écart < 0,4 point)",
+         F["prix"] < stats["prix_moyen_euro"] and stats["prix_moyen_euro"] - F["prix"] < 0.4),
+        # Phase B (OPTIMUM-22), chaque phrase nouvelle :
+        ("changer de dénominateur déplace la France : rapporté au PIB, moins de pays moins endettés la dépassent",
+         0 < len(plus_ipib) < len(moins_chers_que_fr)),
+        ("recettes françaises « parmi les plus élevées de l'Union » (trois premiers rangs)", rang_rec <= 3),
+        ("décomposition des faux jumeaux : produit des trois facteurs = rapport des charges",
+         abs(f_stock * f_prix * f_rec - hi["charge"] / lo["charge"]) < 1e-9),
+        ("l'essentiel de l'écart des faux jumeaux vient du taux implicite", f_prix > f_stock and f_prix > f_rec),
+        ("relation nettement plus pentue hors de l'euro (rapport des pentes > 2)",
+         stats["charge_stock_hors"]["pente"] > 2 * stats["charge_stock_euro"]["pente"]),
+        ("l'écart entre stock de départ et stock de clôture n'est pas la variation annuelle du ratio",
+         F["stock_fin_prec"] is not None and (F["stock_fin"] - F["stock_fin_prec"]) < (F["stock_fin"] - F["stock"])),
+        ("la Bulgarie, classée hors zone euro pour l'année des données, y entre après elle",
+         not by["BG"]["euro"] and "BG" in ENTREES_EURO),
         ("des pays moins endettés que la France ont une charge plus lourde", len(moins_chers_que_fr) >= 2),
         ("les faux jumeaux : le plus chargé paie plus cher", hi["prix"] > lo["prix"]),
         ("la France est troisième, derrière la Grèce et l'Italie",
@@ -903,6 +1260,9 @@ def fiches_figures(figs: dict, A: dict, A_en: dict) -> dict:
              "pression sur le coût moyen, non une prévision."),
             ("stock", "dette-monde-stock",
              "Le classement le plus cité : il ne dit ni le prix payé sur la dette, ni la part des recettes qu'elle absorbe."),
+            ("ecarts", "dette-monde-ecarts",
+             "Convergence avant l'euro, Suède comprise ; décrochage des membres fragiles en 2012, puis resserrement : "
+             "trente ans d'écarts avec l'Allemagne, pays restés hors de l'euro en comparateurs."),
         ],
         "en": [
             ("charge", "dette-monde-charge-en",
@@ -916,6 +1276,9 @@ def fiches_figures(figs: dict, A: dict, A_en: dict) -> dict:
              "pressure on the average cost, not a forecast."),
             ("stock", "dette-monde-stock-en",
              "The most quoted ranking: it shows neither the average interest cost of the debt nor the share of revenue it absorbs."),
+            ("ecarts", "dette-monde-ecarts-en",
+             "Convergence before the euro, Sweden included; the fragile members' break in 2012, then narrowing: "
+             "thirty years of spreads over Germany, with countries outside the euro as comparators."),
         ],
     }
     res = {}
@@ -924,11 +1287,11 @@ def fiches_figures(figs: dict, A: dict, A_en: dict) -> dict:
         for ident, fichier, montre in MONTRE[lang]:
             svg = figs[fichier + ".svg"]
             titre = _html.unescape(_re.search(r"<title[^>]*>(.*?)</title>", svg).group(1))
-            cart = [_html.unescape(t) for t in _re.findall(r'<text x="0" y="[0-9.]+" font-size="9" fill="[^"]+">(.*?)</text>', svg)]
-            if len(cart) < 2 or cart[-1] != LIB_FIG[lang]["licence"]:
-                fail("fiche %s : cartouche illisible dans le SVG" % fichier)
-            out.append(dict(id=ident, fichier=fichier, titre=titre, montre=montre, source=cart[0],
-                            precaution=cart[1] if len(cart) == 3 else ""))
+            # Pied relu PAR CLASSE (pied_figure.lire), non plus par la taille de police du cartouche.
+            source, note, licence = (PF.lire(svg, k) for k in ("pied-source", "pied-note", "pied-licence"))
+            if not source or licence != LIB_FIG[lang]["licence"]:
+                fail("fiche %s : pied illisible dans le SVG" % fichier)
+            out.append(dict(id=ident, fichier=fichier, titre=titre, montre=montre, source=source, precaution=note))
         res[lang] = out
     return res
 
@@ -955,11 +1318,12 @@ def csv_texte(an: str, rows: list[dict], avances: list[dict], emergents: list[di
     return buf.getvalue()
 
 
-def figures(lang: str, an: str, rows: list[dict], stats: dict, jum: list[dict]) -> dict[str, str]:
+def figures(lang: str, an: str, rows: list[dict], stats: dict, jum: list[dict], ecarts: dict) -> dict[str, str]:
     """Les quatre figures d'une langue : même dessin, mêmes données, seuls les textes changent. Fichiers anglais
     suffixés -en (dette-monde-charge-en.svg), comme ceux de update_dette_insee.py."""
     an_1, an_3 = str(int(an) - 1), str(int(an) - 3)
     suf = "" if lang == "fr" else "-en"
+    by = {x["code"]: x for x in rows}
     T = {
         "fr": dict(
             src_stock="Eurostat gov_10dd_edpt1, dette de Maastricht, fin %s" % an,
@@ -969,14 +1333,17 @@ def figures(lang: str, an: str, rows: list[dict], stats: dict, jum: list[dict]) 
             c_ly="charge : intérêts en % des recettes publiques",
             c_titre="Même dette, charge différente : les 27 pays de l'UE en %s" % an,
             c_desc="Chaque point est un pays. Les pointillés relient les faux jumeaux désignés par la règle publiée : dette voisine, "
-                   "charge très différente. Deux droites de moindres carrés, une par groupe, sur leur plage observée.",
+                   "charge très différente. Deux droites de moindres carrés, une par groupe, sur leur plage observée. "
+                   "Charge : Hongrie %s, Slovénie %s, France %s, Italie %s." % tuple(
+                       pct(by[c]["charge"]) for c in ("HU", "SI", "FR", "IT")),
             c_note="Pointillés : faux jumeaux (plus proche voisin en stock, écart < 10 points, trois plus grands écarts de charge).",
             p_lx="inflation moyenne %s-%s (IPCH)" % (an_3, an_1),
             p_ly="taux implicite : intérêts %s / dette fin %s" % (an, an_1),
             p_titre="Prix de la dette et inflation récente : l'Europe en %s" % an,
             p_desc="Hors de la zone euro, le taux implicite est étroitement associé à l'inflation récente ; dans la zone euro, beaucoup "
                    "moins : les pays baltes ont connu une forte inflation sans taux élevé. La Suède, hors euro, a le même taux implicite "
-                   "que l'Allemagne. Association observée sur une année, non causalité.",
+                   "que l'Allemagne. Association observée sur une année, non causalité. Taux implicite : Hongrie %s, Roumanie %s, "
+                   "France %s, Allemagne %s, Suède %s." % tuple(pct(by[c]["prix"], 2) for c in ("HU", "RO", "FR", "DE", "SE")),
             p_src="Eurostat prc_hicp_aind (IPCH), gov_10a_main, gov_10dd_edpt1, %s" % an,
             p_note="Relation descriptive sur une année, non causale.",
             src_tr="Eurostat gov_10dd_ggd (dette par échéance résiduelle), irt_lt_mcby_a (taux à 10 ans), %s" % an),
@@ -988,7 +1355,9 @@ def figures(lang: str, an: str, rows: list[dict], stats: dict, jum: list[dict]) 
             c_ly="burden: interest as a % of public revenue",
             c_titre="Same debt, different burden: the 27 EU countries in %s" % an,
             c_desc="Each dot is a country. Dotted lines link the look-alike pairs picked out by the published rule: similar debt, "
-                   "very different burden. Two least-squares lines, one per group, over their observed range.",
+                   "very different burden. Two least-squares lines, one per group, over their observed range. "
+                   "Burden: Hungary %s, Slovenia %s, France %s, Italy %s." % tuple(
+                       pct_en(by[c]["charge"]) for c in ("HU", "SI", "FR", "IT")),
             c_note="Dotted lines: look-alike pairs (nearest neighbour by debt stock, gap under 10 percentage points, "
                    "three largest gaps in burden).",
             p_lx="average inflation %s-%s (HICP)" % (an_3, an_1),
@@ -996,12 +1365,14 @@ def figures(lang: str, an: str, rows: list[dict], stats: dict, jum: list[dict]) 
             p_titre="Average interest cost and recent inflation: Europe in %s" % an,
             p_desc="Outside the euro area, the implicit interest rate is closely associated with recent inflation; within the "
                    "euro area, much less so: the Baltic states saw high inflation without a high rate. Sweden, outside the euro, "
-                   "has the same implicit interest rate as Germany. Association observed over one year, not causation.",
+                   "has the same implicit interest rate as Germany. Association observed over one year, not causation. Implicit "
+                   "rate: Hungary %s, Romania %s, France %s, Germany %s, Sweden %s." % tuple(
+                       pct_en(by[c]["prix"], 2) for c in ("HU", "RO", "FR", "DE", "SE")),
             p_src="Eurostat prc_hicp_aind (HICP), gov_10a_main, gov_10dd_edpt1, %s" % an,
             p_note="Descriptive relationship over one year, not causal.",
             src_tr="Eurostat gov_10dd_ggd (debt by residual maturity), irt_lt_mcby_a (10-year yields), %s" % an),
     }[lang]
-    return {
+    D = {
         "dette-monde-stock%s.svg" % suf: barres_stock(rows, an, T["src_stock"], lang),
         "dette-monde-charge%s.svg" % suf: nuage(
             rows, lambda x: x["stock"], lambda x: x["charge"], 160, 10, 20, 2,
@@ -1023,7 +1394,65 @@ def figures(lang: str, an: str, rows: list[dict], stats: dict, jum: list[dict]) 
              # Les deux taux implicites les plus bas (auteur, 04/10 : nommer le bas de l'échelle).
              "LU": "g", "IE": "b"}, lang=lang),
         "dette-monde-transmission%s.svg" % suf: transmission(rows, an, T["src_tr"], lang),
+        "dette-monde-ecarts%s.svg" % suf: ecarts_figure(ecarts, an, lang),
     }
+    return dict(D, **figures_m(lang, an, rows, stats, jum, ecarts, D, T, suf))
+
+
+def figures_m(lang, an, rows, stats, jum, ecarts, D, T, suf):
+    """Versions téléphone, recomposées ; contrôlées contre les versions détaillées (parité, police)."""
+    nb, pc, pt = LOC[lang]["nb"], LIB_FIG[lang]["pc"], LIB_FIG[lang]["pt"]
+    by = {x["code"]: x for x in rows}
+    P = LOC[lang]["pct"]
+    an_1 = str(int(an) - 1)
+    titres = {"fr": ("Même dette, charge différente : l'UE en %s" % an, "Prix de la dette et inflation récente, %s" % an,
+                     "Pression de refinancement, %s" % an, "Dette publique en % du PIB, fin " + an),
+              "en": ("Same debt, different burden: the EU in %s" % an, "Average interest cost and recent inflation, %s" % an,
+                     "Refinancing pressure, %s" % an, "Public debt as a % of GDP, end-" + an)}[lang]
+    lx = {"fr": ("Stock : dette fin %s / PIB %s" % (an_1, an), "Inflation moyenne des trois années précédentes (IPCH)",
+                 "Part de la dette à moins d'un an"),
+          "en": ("Stock: debt end-%s / %s GDP" % (an_1, an), "Average inflation over the three previous years (HICP)",
+                 "Share of debt due within a year")}[lang]
+    ly = {"fr": ("Charge : intérêts en % des recettes", "Taux implicite du stock", "Rendement à 10 ans − taux implicite"),
+          "en": ("Burden: interest as a % of revenue", "Implicit interest rate on the stock", "10-year yield − implicit rate")}[lang]
+    infl = [x for x in rows if x["inflation"] is not None]
+    trans = [x for x in rows if x["part_1an"] is not None and x["taux10"] is not None]
+    tr_y = [x["taux10"] - x["prix"] for x in trans]
+    sortie = {
+        "dette-monde-charge%s-m.svg" % suf: nuage_m(
+            rows, lambda x: x["stock"], lambda x: x["charge"], 160, 0, 10, 80, 2, lambda v: nb(v, 0) + pc, lambda v: nb(v, 0) + pc,
+            lx[0], ly[0], "mc-m", titres[0], D["dette-monde-charge%s.svg" % suf], T["src_eu"], T["c_note"], lang,
+            ["HU", "SI", "FR", "IT", "EL", "RO"], {c: P(by[c]["charge"]) for c in ("HU", "SI", "FR")}, jumeaux=jum[:1],
+            droites=[(stats["charge_stock_euro"]["ordonnee"], stats["charge_stock_euro"]["pente"],
+                      stats["charge_stock_euro"]["stock_min"], stats["charge_stock_euro"]["stock_max"], COL_EURO),
+                     (stats["charge_stock_hors"]["ordonnee"], stats["charge_stock_hors"]["pente"],
+                      stats["charge_stock_hors"]["stock_min"], stats["charge_stock_hors"]["stock_max"], COL_HORS)]),
+        "dette-monde-prix%s-m.svg" % suf: nuage_m(
+            infl, lambda x: x["inflation"], lambda x: x["prix"], 14, 0, 6, 7, 1, lambda v: nb(v, 0) + pc, lambda v: nb(v, 0) + pc,
+            lx[1], ly[1], "mp-m", titres[1], D["dette-monde-prix%s.svg" % suf], T["p_src"], T["p_note"], lang,
+            ["HU", "RO", "PL", "EE"], None,
+            liste=[(c, P(by[c]["prix"], 2)) for c in ("HU", "FR", "DE", "SE")]),
+        "dette-monde-transmission%s-m.svg" % suf: nuage_m(
+            trans, lambda x: x["part_1an"], lambda x: x["taux10"] - x["prix"],
+            math.ceil(max(x["part_1an"] for x in trans) / 10) * 10, min(-1.0, math.floor(min(tr_y))), math.ceil(max(tr_y)),
+            10, 0.5, lambda v: nb(v, 0) + pc, lambda v: nb(v, 1) + pt,
+            lx[2], ly[2], "mt-m", titres[2], D["dette-monde-transmission%s.svg" % suf], T["src_tr"],
+            {"fr": "Repère, non prévision.", "en": "A marker, not a forecast."}[lang], lang,
+            ["FR", "DK", "SE", "PT"], {"FR": nb(by["FR"]["taux10"] - by["FR"]["prix"], 2) + pt}, x0=56),
+        "dette-monde-stock%s-m.svg" % suf: barres_stock_m(
+            rows, an, D["dette-monde-stock%s.svg" % suf], T["src_stock"],
+            {"fr": "Stock brut, sans les actifs publics ni les engagements hors dette.",
+             "en": "Gross stock, excluding public assets and liabilities outside debt."}[lang], titres[3], lang),
+        "dette-monde-ecarts%s-m.svg" % suf: ecarts_figure_m(ecarts, an, D["dette-monde-ecarts%s.svg" % suf], lang),
+    }
+    for nom, svg in sortie.items():
+        d = D[nom.replace("-m.svg", ".svg")]
+        ecarts_ = PF.parite(d, svg, FSM)
+        if ecarts_:
+            fail("%s : %s" % (nom, " ; ".join(ecarts_)))
+        for h in PF.hors_cadre(svg, WM):
+            log("  a verifier au rendu, %s : %s" % (nom, h))
+    return sortie
 
 
 # ------------------------------------------------------------------ main
@@ -1056,7 +1485,7 @@ def main() -> int:
         return 0
     figs = {}
     for lang in ("fr", "en"):
-        figs.update(figures(lang, an, rows, stats, jum))
+        figs.update(figures(lang, an, rows, stats, jum, ecarts))
     payload = {
         "meta": {"annee": an, "releve_le": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
                  "page": "https://" + PAGE_URL, "licence": "CC BY 4.0",

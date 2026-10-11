@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 587" role="img" font-variant-numeric="tabular-nums" aria-labelledby="mc-m-t mc-m-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="mc-m-t">Même dette, charge différente : l'UE en 2025</title><desc id="mc-m-d">Chaque point est un pays. Les pointillés relient les faux jumeaux désignés par la règle publiée : dette voisine, charge très différente. Deux droites de moindres carrés, une par groupe, sur leur plage observée. Charge : Hongrie 8,9 %, Slovénie 2,7 %, France 4,3 %, Italie 8,0 %.</desc>
+<rect width="300" height="587" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Même dette, charge</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">différente : l'UE en 2025</text>
+<circle cx="6.0" cy="83.0" r="5.0" fill="#184f95"/>
+<text x="16.0" y="88.0" font-size="13.5" fill="#52514e" text-anchor="start">zone euro</text>
+<rect x="145.5" y="78.5" width="9.0" height="9.0" fill="#eb6834"/>
+<text x="160.0" y="88.0" font-size="13.5" fill="#52514e" text-anchor="start">hors zone euro</text>
+<text x="0.0" y="110.0" font-size="13.5" fill="#898781" text-anchor="start">Charge : intérêts en % des recettes</text>
+<line x1="40" y1="354.0" x2="292" y2="354.0" stroke="#c3c2b7"/>
+<text x="35.0" y="359.0" font-size="13.5" fill="#898781" text-anchor="end">0 %</text>
+<line x1="40" y1="308.0" x2="292" y2="308.0" stroke="#e1e0d9"/>
+<text x="35.0" y="313.0" font-size="13.5" fill="#898781" text-anchor="end">2 %</text>
+<line x1="40" y1="262.0" x2="292" y2="262.0" stroke="#e1e0d9"/>
+<text x="35.0" y="267.0" font-size="13.5" fill="#898781" text-anchor="end">4 %</text>
+<line x1="40" y1="216.0" x2="292" y2="216.0" stroke="#e1e0d9"/>
+<text x="35.0" y="221.0" font-size="13.5" fill="#898781" text-anchor="end">6 %</text>
+<line x1="40" y1="170.0" x2="292" y2="170.0" stroke="#e1e0d9"/>
+<text x="35.0" y="175.0" font-size="13.5" fill="#898781" text-anchor="end">8 %</text>
+<line x1="40" y1="124.0" x2="292" y2="124.0" stroke="#e1e0d9"/>
+<text x="35.0" y="129.0" font-size="13.5" fill="#898781" text-anchor="end">10 %</text>
+<text x="40.0" y="373.0" font-size="13.5" fill="#898781" text-anchor="start">0 %</text>
+<text x="166.0" y="373.0" font-size="13.5" fill="#898781" text-anchor="middle">80 %</text>
+<text x="292.0" y="373.0" font-size="13.5" fill="#898781" text-anchor="end">160 %</text>
+<line x1="139.0" y1="291.6" x2="148.0" y2="148.6" stroke="#898781" stroke-width="1.5" stroke-dasharray="3 3"/>
+<line x1="75.2" y1="325.4" x2="271.5" y2="193.1" stroke="#184f95" stroke-width="1.2" opacity="0.7"/>
+<line x1="73.9" y1="336.7" x2="148.0" y2="143.0" stroke="#eb6834" stroke-width="1.2" opacity="0.7"/>
+<circle cx="198.0" cy="249.6" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<rect x="70.1" y="300.7" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<rect x="100.3" y="277.2" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<rect x="81.4" y="313.8" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<circle cx="133.7" cy="300.8" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="75.2" cy="328.3" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="96.4" cy="307.1" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="271.5" cy="208.8" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="191.0" cy="226.0" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="214.1" cy="255.9" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="123.5" cy="285.7" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="246.3" cy="169.4" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="134.2" cy="293.8" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="107.8" cy="295.6" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="95.5" cy="301.9" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="79.0" cy="337.6" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<rect x="144.2" y="144.9" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<circle cx="107.8" cy="273.5" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="106.1" cy="315.7" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="160.1" cy="281.3" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<rect x="117.2" y="217.9" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<circle cx="178.3" cy="250.9" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<rect x="115.0" y="165.7" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<circle cx="139.0" cy="291.6" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="129.5" cy="272.1" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="167.1" cy="284.7" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<rect x="88.1" y="321.2" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<text x="155.0" y="153.6" font-size="13.5" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" font-weight="600" aria-hidden="true">Hongrie 8,9 %</text>
+<text x="155.0" y="153.6" font-size="13.5" fill="#0A0A0E" text-anchor="start" font-weight="600">Hongrie 8,9 %</text>
+<text x="145.0" y="308.6" font-size="13.5" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" font-weight="600" aria-hidden="true">Slovénie 2,7 %</text>
+<text x="145.0" y="308.6" font-size="13.5" fill="#0A0A0E" text-anchor="start" font-weight="600">Slovénie 2,7 %</text>
+<text x="214.1" y="274.9" font-size="13.5" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" font-weight="600" aria-hidden="true">France 4,3 %</text>
+<text x="214.1" y="274.9" font-size="13.5" fill="#0A0A0E" text-anchor="middle" font-weight="600">France 4,3 %</text>
+<text x="253.3" y="174.4" font-size="13.5" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Italie</text>
+<text x="253.3" y="174.4" font-size="13.5" fill="#0A0A0E" text-anchor="start">Italie</text>
+<text x="264.5" y="213.8" font-size="13.5" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="end" aria-hidden="true">Grèce</text>
+<text x="264.5" y="213.8" font-size="13.5" fill="#0A0A0E" text-anchor="end">Grèce</text>
+<text x="125.7" y="174.4" font-size="13.5" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Roumanie</text>
+<text x="125.7" y="174.4" font-size="13.5" fill="#0A0A0E" text-anchor="start">Roumanie</text>
+<text x="0.0" y="398.0" font-size="13.5" fill="#898781" text-anchor="start">Stock : dette fin 2024 / PIB 2025</text>
+<line x1="0" y1="412.0" x2="300" y2="412.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="433.0" font-size="13.5" fill="#52514e">Eurostat gov_10a_main (D41PAY, TR),</text>
+<text class="pied-source" x="0" y="450.0" font-size="13.5" fill="#52514e">gov_10dd_edpt1 (GD), nama_10_gdp</text>
+<text class="pied-source" x="0" y="467.0" font-size="13.5" fill="#52514e">(B1GQ), 2025 ; administrations</text>
+<text class="pied-source" x="0" y="484.0" font-size="13.5" fill="#52514e">publiques S.13, monnaie nationale</text>
+<text class="pied-note" x="0" y="505.0" font-size="13.5" fill="#52514e">Pointillés : faux jumeaux (plus proche</text>
+<text class="pied-note" x="0" y="522.0" font-size="13.5" fill="#52514e">voisin en stock, écart &lt; 10 points,</text>
+<text class="pied-note" x="0" y="539.0" font-size="13.5" fill="#52514e">trois plus grands écarts de charge).</text>
+<text class="pied-licence" x="0" y="560.0" font-size="13.5" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="577.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+</svg>

@@ -91,18 +91,16 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # Enumeration explicite : toute sortie NOUVELLE du script doit etre ajoutee ICI.
+          # Exception, les figures de update_dette_monde.py : un motif (dette-monde-*) couvre les versions detaillees,
+          # anglaises (-en), telephone (-m) et la figure des ecarts (11/10/2026) : une liste nominative de 20 fichiers
+          # laisserait hors commit la prochaine figure ajoutee.
           git add data/dette_monde.json static/dette_monde.json static/dette_monde.csv \
                   data/figures_monde.json static/images/og-dette-monde.jpg \
                   data/dette_dynamique.json static/dette_dynamique.json static/dette_dynamique.csv \
                   data/figures_dynamique.json static/images/og-dette-dynamique.jpg \
                   static/img/dette-dynamique-cascade.svg static/img/dette-dynamique-cascade.png \
                   static/img/dette-dynamique-annuelle.svg static/img/dette-dynamique-annuelle.png \
-                  static/img/dette-monde-stock.png static/img/dette-monde-charge.png \
-                  static/img/dette-monde-prix.png static/img/dette-monde-transmission.png \
-                  static/img/dette-monde-stock.svg \
-                  static/img/dette-monde-charge.svg \
-                  static/img/dette-monde-prix.svg \
-                  static/img/dette-monde-transmission.svg \
+                  static/img/dette-monde-*.svg static/img/dette-monde-*.png \
                   static/images/og-dette-monde-en.jpg static/images/og-dette-dynamique-en.jpg \
                   static/images/vig-dette-monde.jpg static/images/vig-dette-monde-en.jpg \
                   static/images/vig-dette-dynamique.jpg static/images/vig-dette-dynamique-en.jpg \
@@ -117,10 +115,6 @@ jobs:
                   static/img/dette-baisse-decennies-en.svg static/img/dette-baisse-decennies-en.png \
                   static/img/dette-baisse-comparaison-en.svg static/img/dette-baisse-comparaison-en.png \
                   static/img/dette-baisse-stabilisant-en.svg static/img/dette-baisse-stabilisant-en.png \
-                  static/img/dette-monde-stock-en.svg static/img/dette-monde-stock-en.png \
-                  static/img/dette-monde-charge-en.svg static/img/dette-monde-charge-en.png \
-                  static/img/dette-monde-prix-en.svg static/img/dette-monde-prix-en.png \
-                  static/img/dette-monde-transmission-en.svg static/img/dette-monde-transmission-en.png \
                   data/dette_generations.json static/dette_generations.json static/dette_generations.csv data/figures_generations.json \
                   static/images/og-dette-generations.jpg static/images/vig-dette-generations.jpg \
                   static/img/dette-generations-actifs.svg static/img/dette-generations-actifs.png \

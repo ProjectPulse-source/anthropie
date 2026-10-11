@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 488" role="img" font-variant-numeric="tabular-nums" aria-labelledby="mp-t mp-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-<title id="mp-t">Prix de la dette et inflation récente : l'Europe en 2025</title><desc id="mp-d">Hors de la zone euro, le taux implicite est étroitement associé à l'inflation récente ; dans la zone euro, beaucoup moins : les pays baltes ont connu une forte inflation sans taux élevé. La Suède, hors euro, a le même taux implicite que l'Allemagne. Association observée sur une année, non causalité.</desc>
-<rect width="720" height="488" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 493" role="img" font-variant-numeric="tabular-nums" aria-labelledby="mp-t mp-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="mp-t">Prix de la dette et inflation récente : l'Europe en 2025</title><desc id="mp-d">Hors de la zone euro, le taux implicite est étroitement associé à l'inflation récente ; dans la zone euro, beaucoup moins : les pays baltes ont connu une forte inflation sans taux élevé. La Suède, hors euro, a le même taux implicite que l'Allemagne. Association observée sur une année, non causalité. Taux implicite : Hongrie 5,53 %, Roumanie 5,65 %, France 2,02 %, Allemagne 1,84 %, Suède 1,84 %.</desc>
+<rect width="720" height="493" fill="#ffffff"/>
 <text x="0" y="18" font-size="13" font-weight="600" fill="#0A0A0E">Prix de la dette et inflation récente : l'Europe en 2025</text>
-<circle cx="470.0" cy="14.0" r="5" fill="#184f95"/>
+<circle cx="470.0" cy="14.0" r="5.0" fill="#184f95"/>
 <text x="479.0" y="18.0" font-size="11" fill="#52514e">zone euro</text>
-<circle cx="560.0" cy="14.0" r="5" fill="#eb6834"/>
+<rect x="555.5" y="9.5" width="9.0" height="9.0" fill="#eb6834"/>
 <text x="569.0" y="18.0" font-size="11" fill="#52514e">hors zone euro</text>
 <line x1="58.0" y1="388.0" x2="700.0" y2="388.0" stroke="#e1e0d9"/>
 <text x="52.0" y="392.0" font-size="11" fill="#898781" text-anchor="end">0 %</text>
@@ -32,9 +32,9 @@
 <text x="700.0" y="403.0" font-size="11" fill="#898781" text-anchor="middle">14 %</text>
 <text x="379.0" y="420.0" font-size="11" fill="#52514e" text-anchor="middle">inflation moyenne 2022-2024 (IPCH)</text>
 <circle cx="316.3" cy="268.3" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="427.9" cy="181.8" r="5.5" fill="#eb6834" stroke="#fff" stroke-width="1"/>
-<circle cx="508.9" cy="215.4" r="5.5" fill="#eb6834" stroke="#fff" stroke-width="1"/>
-<circle cx="259.8" cy="238.3" r="5.5" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<rect x="423.0" y="176.9" width="9.9" height="9.9" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<rect x="504.0" y="210.4" width="9.9" height="9.9" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<rect x="254.8" y="233.3" width="9.9" height="9.9" fill="#eb6834" stroke="#fff" stroke-width="1"/>
 <circle cx="320.9" cy="288.7" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="550.2" cy="271.4" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="281.2" cy="313.6" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
@@ -47,17 +47,17 @@
 <circle cx="479.9" cy="251.3" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="493.6" cy="252.6" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="262.8" cy="316.4" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="608.3" cy="89.3" r="5.5" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<rect x="603.3" y="84.4" width="9.9" height="9.9" fill="#eb6834" stroke="#fff" stroke-width="1"/>
 <circle cx="273.5" cy="235.8" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="346.9" cy="294.6" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="351.5" cy="275.0" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="482.9" cy="124.7" r="5.5" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<rect x="478.0" y="119.8" width="9.9" height="9.9" fill="#eb6834" stroke="#fff" stroke-width="1"/>
 <circle cx="304.1" cy="269.1" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="478.4" cy="82.9" r="5.5" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<rect x="473.4" y="78.0" width="9.9" height="9.9" fill="#eb6834" stroke="#fff" stroke-width="1"/>
 <circle cx="340.8" cy="279.4" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="460.0" cy="240.8" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="249.1" cy="279.7" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="302.6" cy="288.6" r="5.5" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<rect x="297.6" y="283.6" width="9.9" height="9.9" fill="#eb6834" stroke="#fff" stroke-width="1"/>
 <text x="436.9" y="185.8" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Bulgarie</text>
 <text x="436.9" y="185.8" font-size="11" fill="#0A0A0E" text-anchor="start">Bulgarie</text>
 <text x="508.9" y="206.4" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Tchéquie</text>
@@ -87,7 +87,7 @@
 <text x="293.6" y="304.6" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="end" aria-hidden="true">Suède</text>
 <text x="293.6" y="304.6" font-size="11" fill="#0A0A0E" text-anchor="end">Suède</text>
 <line x1="0" y1="442.0" x2="720" y2="442.0" stroke="#e1e0d9"/>
-<text x="0" y="455.0" font-size="9" fill="#52514e">Eurostat prc_hicp_aind (IPCH), gov_10a_main, gov_10dd_edpt1, 2025</text>
-<text x="0" y="467.0" font-size="9" fill="#52514e">Relation descriptive sur une année, non causale.</text>
-<text x="0" y="479.0" font-size="9" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/dette-publique-comparaison-internationale/</text>
+<text class="pied-source" x="0" y="457.0" font-size="11" fill="#52514e">Eurostat prc_hicp_aind (IPCH), gov_10a_main, gov_10dd_edpt1, 2025</text>
+<text class="pied-note" x="0" y="471.0" font-size="11" fill="#52514e">Relation descriptive sur une année, non causale.</text>
+<text class="pied-licence" x="0" y="485.0" font-size="11" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/dette-publique-comparaison-internationale/</text>
 </svg>
