@@ -228,8 +228,9 @@ l'exigence et le contrôle, jamais l'architecture narrative.
    traçabilité, page, recette, revue avant/après, note inter-pages ; pages suivantes — un fichier de chantier unique et
    la recette. On généralise la méthode, jamais le plan du pilote.
 
-Rien de cela n'est câblé en contrôle machine (aucun capteur objectif) : la session le tient, la contre-expertise le
-contrôle.
+Ces sept points restent un jugement (aucun capteur objectif) : la session le tient, la contre-expertise le contrôle. Ce
+qui s'en vérifie par machine depuis le 11/10/2026 (figures téléphone, motifs de langue, relecture attestée) est dans la
+section « Production des ressources » ci-dessous.
 
 **Leçons du pilote (10/10/2026 ; trois contre-expertises, un panel, une passe MAGNIFIER — `D:\PRO\06_PROMOTION\RECHERCHE_LYCEES_LECTURE_2026-10-09\REFONTE_PILOTE\`)** :
 
@@ -271,6 +272,75 @@ contrôle.
     dans une énumération (`_mots`). Texte brut lu dans un SVG puis passé par `fr-typo.html` (`safeHTML`) : **échappé avant**,
     sinon un « < » ouvre une balise et tronque la phrase (corrigé dans `reutiliser.html`). Tournures familières à proscrire :
     « a monté » (→ « a augmenté »), « partis de plus de 90 % de dette » (→ « dont la dette dépassait 90 % du PIB »).
+
+## Production des ressources — garanties communes, protocoles, deux gates (OPTIMUM-26, 2026-10-11)
+
+Arbitrage : `D:\PRO\06_PROMOTION\RECHERCHE_LYCEES_LECTURE_2026-10-09\REFONTE_PILOTE\INDUSTRIALISATION_ARBITRAGE_2026-10-11.md`
+(pièce `00_PILOTAGE\_PIECES_RECUES\OPTIMUM-26_2026-10-11.txt`, SHA-256 `2c4a195c…`). **On standardise les garanties,
+jamais les démonstrations.** Cette section est la méthode de production ; le fichier de reprise du chantier y renvoie.
+
+**Niveau d'une page = `ressource.refonte`** (date de la relecture attestée ; absent = pas encore refondue). Les
+exigences de la refonte bloquent sur les pages refondues et ne font qu'inventorier le travail des autres. Une page de
+données nouvelle naît refondue ; les dix pages de données non refondues du 11/10 forment une liste figée
+(`NON_REFONDUES` de `check-ressource-modele.py`) qui ne peut que diminuer — une page en sort au geste qui pose sa
+`refonte`. Les pages sans données (notions, guides, corpus, enseignants) n'ont pas de liste : elles déclarent leur
+`refonte` quand elles passent par la méthode allégée.
+
+**Matrice des contrôles** (état exact ; tout ce qui n'y figure pas est une discipline de session, sans verrou) :
+
+| Niveau | Contrôles |
+|---|---|
+| Bloque la publication (`hugo.yml`) | `check-all --ci` (dont `check-ressource-modele.py` : modèle des pages de données, `ressource.type` et `refonte` sur toute page à `ressource:`, FR = EN, liste figée ; `test_langue_generee.py`) ; build Hugo (jeton inconnu = échec) ; `audit-liens-build.py` ; `check-rendu-ressources.py` (pages refondues : figure sans `-m.svg` servi ou sans pied commun, motifs de langue de sa table `MOTIFS`) ; `check-relecture.py` (page refondue sans instantané relu dans `docs/relectures/`) |
+| Bloque la mise à jour des données | gardes de prose et témoins de chaque générateur (workflows de données) |
+| Alerte sans bloquer | phrase servie absente de l'instantané relu → issue « Relecture ciblée : <page> » (tâche `relecture` de `hugo.yml`, une issue par page, mise à jour et non doublée ; décision de l'auteur du 11/10) ; `smoke-production` après déploiement |
+| Discipline de session | fiche de conception, protocole du type, panel, contre-expertises, relecture phrase à phrase, recette 320-1280, gate éditorial, attestation de la version servie |
+
+Les trois contrôles du build se lancent aussi en local, sur un build : `python scripts/check-rendu-ressources.py <build>
+[--detail]`, `python scripts/check-relecture.py <build> --strict`, chacun avec `--temoin` (témoin positif).
+**Après chaque relecture d'une page refondue**, refaire son instantané : `check-relecture.py <build> --instantane
+<url>` (sans URL : toutes les pages refondues), puis commit. Une faute de langue nouvelle d'une classe connue entre
+dans `MOTIFS` (avec son exemple dans `EXEMPLES`, que `--temoin` injecte) ; une faute de générateur se corrige avec
+`scripts/langue_generee.py` (nombre, signe, valeur sans signe, accord de « point » sur la valeur affichée, lettres
+jusqu'à seize, énumération), adopté générateur par générateur à sa phase B, sortie vérifiée identique ou écart
+expliqué, jamais en masse.
+
+**Type d'une page** (`ressource.type`, liste ; une page peut en déclarer deux) et son protocole de preuve :
+
+- `quantitatif` (dette, école, comparaisons) : définitions, périmètres, millésimes, unités, calculs reproductibles,
+  changements de série, dénominateurs, décompositions et incertitudes ; chaque chiffre important se relie à sa source,
+  son calcul, sa figure et sa formulation.
+- `juridique-institutionnel` (promesses, pouvoirs) : distinguer pouvoir formel, initiative, décision, contreseing, mise
+  en œuvre et effet réel ; références juridiques datées, conditions, exceptions et séquences de décision contrôlées
+  séparément. Aucun jeu de données artificiel pour satisfaire le modèle statistique.
+- `explicatif-causal` (inflation, générations futures, mécanismes) : mécanisme, hypothèses concurrentes,
+  contrefactuels, temporalités ; séparer constat, interprétation et causalité ; dire ce qui ferait varier la conclusion.
+- `notion` (protocole court ajouté à l'arbitrage) : une définition sourcée, son origine (qui l'a forgée, d'où), sa
+  frontière avec les notions voisines, un exemple et un contre-exemple.
+- `usage` (enseignants, guides, corpus ; idem) : la ressource source citée sans être recopiée, ce que l'usager fait de
+  la page, et les limites de la ressource reprises telles quelles.
+
+**Phase A, section 0 — fiche de conception** (neuf champs, avant toute réécriture) : question centrale · enjeu ·
+croyance initiale · découverte principale · mécanisme explicatif · preuve décisive · limite · valeur finale ·
+**singularité** (« cette page existe parce qu'elle révèle X, que le lecteur ne découvre pas dans Y »). Les affirmations
+calculables ont leurs gardes ; les autres se relient à leur preuve par le champ « preuve décisive » et le bloc
+« Confrontation à la recherche » — pas de second registre.
+
+**Gate éditorial** (phase B, avant la contre-expertise de la page ; jugement argumenté, jamais une note, une erreur
+grave ne se compense pas) : six critères — exactitude, clarté, accroche, progression, originalité, valeur finale —
+jugés *tenu / partiel / manqué* ; cinq fonctions que la page remplit, sans en faire des sections — **accrocher** (une
+tension véritable), **révéler** (le fait qui change la perspective), **expliquer** (le mécanisme invisible),
+**éprouver** (cas contraire, limite, ordre de grandeur, objection sérieuse), **transformer** (réponse nette, conditions
+de validité, outil réutilisable) ; et **chaque bloc significatif apporte du nouveau** (information, relation,
+difficulté résolue ou question nécessaire), sinon il est supprimé, fusionné ou réécrit. L'accord de l'auteur reste la
+décision finale ; la règle du push est inchangée.
+
+**Méthode d'une refonte, dans l'ordre** : phase A (version de référence, fiche de conception, protocole du type,
+diagnostic, défauts des règles 8 à 16, panel « avant », deux ou trois scénarios, contre-expertise) → arbitrage (pièce
+archivée verbatim avant lecture, chaque affirmation vérifiée sur les données) → phase B (texte, gardes nouvelles vues
+mordre, figures téléphone et pied commun, langue générée par le module, recette 320/390/768/1280, panel « après »,
+gate éditorial, relecture phrase à phrase FR et EN du texte servi, contre-expertise de la page) → `ressource.refonte`
+posé, page retirée de `NON_REFONDUES`, instantané de relecture → accord de l'auteur → push → attestation de la version
+servie. Lecteurs réels (trois à cinq, pages pilotes) : point ouvert à l'auteur ; le panel simulé reste une hypothèse.
 
 ## Couche pédagogique — `/enseignants/` (actée par l'auteur, 2026-09-30)
 
