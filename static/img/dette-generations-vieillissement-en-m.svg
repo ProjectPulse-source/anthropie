@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 812" role="img" font-variant-numeric="tabular-nums" aria-labelledby="gvm-t gvm-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
+<title id="gvm-t">France: the S2 adjustment that would stabilise the debt</title><desc id="gvm-d">Permanent adjustment of the structural primary balance, from 2027, that would stabilise the debt over an infinite horizon, in points of GDP, split between the initial budgetary position and the effect of future changes in age-related spending, according to the European Commission (Debt Sustainability Monitor 2025), in three scenarios and in the previous edition. Baseline scenario: S2 3.1, of which initial position 3.0 and effect of future changes in age-related spending 0.1. Lower productivity: S2 3.8, of which initial position 3.3 and effect of future changes in age-related spending 0.5. Health and long-term care risk: S2 5.4, of which initial position 3.0 and effect of future changes in age-related spending 2.4. Previous edition (2024): S2 3.4, of which initial position 3.3 and effect of future changes in age-related spending 0.1.</desc>
+<rect width="300" height="812" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">France: the S2 adjustment that</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">would stabilise the debt</text>
+<rect x="0" y="71" width="12" height="12" fill="#eb6834"/>
+<text x="18" y="82" font-size="13.5" fill="#55524f">initial position (current</text>
+<text x="18" y="100" font-size="13.5" fill="#55524f">spending, pensions included)</text>
+<rect x="0" y="111" width="12" height="12" fill="#8a8781"/>
+<text x="18" y="122" font-size="13.5" fill="#55524f">effect of future changes in</text>
+<text x="18" y="140" font-size="13.5" fill="#55524f">age-related spending</text>
+<text x="0" y="174" font-size="15" font-weight="600" fill="#26262f">Baseline scenario</text>
+<text x="0" y="193" font-size="13.5" font-weight="600" fill="#55524f">S2: 3.1</text>
+<rect x="0.0" y="201" width="197.6" height="16" fill="#eb6834"/>
+<text x="202.6" y="214" font-size="13.5" font-weight="600" fill="#26262f">3.0</text>
+<rect x="0.0" y="220" width="4.9" height="16" fill="#8a8781"/>
+<text x="9.9" y="233" font-size="13.5" font-weight="600" fill="#26262f">0.1</text>
+<text x="0" y="269" font-size="15" font-weight="600" fill="#26262f">Lower productivity</text>
+<text x="0" y="288" font-size="13.5" font-weight="600" fill="#55524f">S2: 3.8</text>
+<rect x="0.0" y="296" width="214.9" height="16" fill="#eb6834"/>
+<text x="219.9" y="309" font-size="13.5" font-weight="600" fill="#26262f">3.3</text>
+<rect x="0.0" y="315" width="30.0" height="16" fill="#8a8781"/>
+<text x="35.0" y="328" font-size="13.5" font-weight="600" fill="#26262f">0.5</text>
+<text x="0" y="364" font-size="15" font-weight="600" fill="#26262f">Health and long-term care risk</text>
+<text x="0" y="383" font-size="13.5" font-weight="600" fill="#55524f">S2: 5.4</text>
+<rect x="0.0" y="391" width="196.8" height="16" fill="#eb6834"/>
+<text x="201.8" y="404" font-size="13.5" font-weight="600" fill="#26262f">3.0</text>
+<rect x="0.0" y="410" width="155.0" height="16" fill="#8a8781"/>
+<text x="160.0" y="423" font-size="13.5" font-weight="600" fill="#26262f">2.4</text>
+<text x="0" y="459" font-size="15" font-weight="600" fill="#26262f">Previous edition (2024)</text>
+<text x="0" y="478" font-size="13.5" font-weight="600" fill="#55524f">S2: 3.4 · another set of projections</text>
+<rect x="0.0" y="486" width="216.7" height="16" fill="#eb6834"/>
+<text x="221.7" y="499" font-size="13.5" font-weight="600" fill="#26262f">3.3</text>
+<rect x="0.0" y="505" width="3.7" height="16" fill="#8a8781"/>
+<text x="8.7" y="518" font-size="13.5" font-weight="600" fill="#26262f">0.1</text>
+<text x="0" y="538" font-size="13.5" fill="#96928f">points of GDP</text>
+<line x1="0" y1="552.0" x2="300" y2="552.0" stroke="#dcd8d3"/>
+<text class="pied-source" x="0" y="573.0" font-size="13.5" fill="#55524f">European Commission, Debt</text>
+<text class="pied-source" x="0" y="590.0" font-size="13.5" fill="#55524f">Sustainability Monitor 2025, France</text>
+<text class="pied-note" x="0" y="611.0" font-size="13.5" fill="#55524f">Current pension spending is in the</text>
+<text class="pied-note" x="0" y="628.0" font-size="13.5" fill="#55524f">initial position; the second term</text>
+<text class="pied-note" x="0" y="645.0" font-size="13.5" fill="#55524f">measures only the projected change in</text>
+<text class="pied-note" x="0" y="662.0" font-size="13.5" fill="#55524f">age-related spending. The previous</text>
+<text class="pied-note" x="0" y="679.0" font-size="13.5" fill="#55524f">edition is another set of projections,</text>
+<text class="pied-note" x="0" y="696.0" font-size="13.5" fill="#55524f">not an observed change. Projections</text>
+<text class="pied-note" x="0" y="713.0" font-size="13.5" fill="#55524f">conditional on the Commission's</text>
+<text class="pied-note" x="0" y="730.0" font-size="13.5" fill="#55524f">assumptions (2024 Ageing Report, 2023</text>
+<text class="pied-note" x="0" y="747.0" font-size="13.5" fill="#55524f">pension reform applied).</text>
+<text class="pied-licence" x="0" y="768.0" font-size="13.5" fill="#96928f">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="785.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
+<text class="pied-licence" x="0" y="802.0" font-size="13.5" fill="#96928f">/en/public-debt-future-generations/</text>
+</svg>

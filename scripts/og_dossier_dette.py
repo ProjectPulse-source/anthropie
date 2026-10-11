@@ -99,7 +99,7 @@ def habillage(d: ImageDraw.ImageDraw, titre: list[str], accroche: str,
     # CLÉ DE COULEUR. Sans elle la figure est muette : à cette taille aucune
     # étiquette ne tient sur les barres, et un aperçu de partage se lit en une
     # seconde. Elle occupe la colonne de gauche, restée vide sous l'accroche.
-    yc = 322
+    yc = max(322, y + 62)  # titre de trois lignes : la clé descend sous l'accroche ; inchangé pour deux lignes
     fc = font("inter", 19, 500)
     for couleur, libelle in cle:
         d.rectangle([70, yc, 88, yc + 18], fill=couleur)
@@ -398,8 +398,12 @@ def carte_generations() -> None:
     if not (per[0]["part_actifs"] > per[1]["part_actifs"] > per[2]["part_actifs"] and per[2]["part_actifs"] < 15
             and per[2]["part_desepargne"] > 60):
         fail("carte générations : le contraste annoncé n'est plus vrai dans les données")
+    # Titre arrêté par l'auteur le 11/10/2026 (contre-expertise du rendu) : « correspondu », jamais « financé ».
+    n_ans = int(A["fin"]) - int(A["a0"]) + 1
+    if n_ans != 30:
+        fail("carte générations : le titre dit « trente ans », la période en compte %d" % n_ans)
     carte("og-dette-generations.jpg",
-          ["Des déficits", "pour le courant"],
+          ["À quoi ont", "correspondu trente", "ans de déficits ?"],
           "%s : %s %% seulement en actifs comptabilisés." % (A["d3_lib"], A["d3_part"]),
           "Eurostat, France %s-%s · CC BY 4.0" % (A["a0"], A["fin"]),
           "stephane-lalut.com/dette-publique-generations-futures/",
@@ -412,7 +416,7 @@ def carte_generations() -> None:
     if not E:
         fail("carte générations EN : bloc affichage_en absent de data/dette_generations.json")
     carte("og-dette-generations-en.jpg",
-          ["Deficits for", "current spending"],
+          ["What did thirty", "years of deficits", "correspond to?"],
           "%s: only %s%% in recorded assets." % (E["d3_lib"], E["d3_part"]),
           "Eurostat, France %s-%s · CC BY 4.0" % (E["a0"], E["fin"]),
           "stephane-lalut.com/en/public-debt-future-generations/",

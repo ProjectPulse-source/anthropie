@@ -1,44 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 322" role="img" font-variant-numeric="tabular-nums" aria-labelledby="gv-t gv-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
-<title id="gv-t">France : d'où vient l'effort qui stabiliserait la dette (indicateur S2)</title><desc id="gv-d">Ajustement permanent du solde primaire structurel qui stabiliserait la dette, en points de PIB, partagé entre la position budgétaire présente et le coût du vieillissement, selon la Commission européenne (Debt Sustainability Monitor 2025), dans trois scénarios et dans l'édition précédente. Scénario de base : position présente 3,0, vieillissement 0,1. Productivité plus faible : position présente 3,3, vieillissement 0,5. Risque santé et dépendance : position présente 3,0, vieillissement 2,4. Édition précédente (2024) : position présente 3,3, vieillissement 0,1.</desc>
-<rect width="720" height="322" fill="#ffffff"/>
-<text x="0" y="18" font-size="15" font-weight="600" fill="#26262f">France : d'où vient l'effort qui stabiliserait la dette (indicateur S2)</text>
-<rect x="0" y="36" width="10" height="10" fill="#eb6834"/>
-<text x="14" y="45" font-size="11" fill="#55524f">position budgétaire présente</text>
-<rect x="200" y="36" width="10" height="10" fill="#8a8781"/>
-<text x="214" y="45" font-size="11" fill="#55524f">coût du vieillissement</text>
-<line x1="210.0" y1="58" x2="210.0" y2="232" stroke="#dcd8d3" stroke-width="1.4"/>
-<text x="210.0" y="246" font-size="10" fill="#96928f" text-anchor="middle">0</text>
-<line x1="327.5" y1="58" x2="327.5" y2="232" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="327.5" y="246" font-size="10" fill="#96928f" text-anchor="middle">1</text>
-<line x1="445.0" y1="58" x2="445.0" y2="232" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="445.0" y="246" font-size="10" fill="#96928f" text-anchor="middle">2</text>
-<line x1="562.5" y1="58" x2="562.5" y2="232" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="562.5" y="246" font-size="10" fill="#96928f" text-anchor="middle">3</text>
-<line x1="680.0" y1="58" x2="680.0" y2="232" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="680.0" y="246" font-size="10" fill="#96928f" text-anchor="middle">4</text>
-<text x="0" y="81" font-size="11.5" font-weight="600" fill="#26262f">Scénario de base</text>
-<rect x="210.0" y="64" width="357.2" height="15" fill="#eb6834"/>
-<text x="571.2" y="75" font-size="10" font-weight="600" fill="#26262f">3,0</text>
-<rect x="210.0" y="81" width="8.8" height="15" fill="#8a8781"/>
-<text x="222.8" y="92" font-size="10" font-weight="600" fill="#26262f">0,1</text>
-<text x="0" y="125" font-size="11.5" font-weight="600" fill="#26262f">Productivité plus faible</text>
-<rect x="210.0" y="108" width="388.5" height="15" fill="#eb6834"/>
-<text x="602.5" y="119" font-size="10" font-weight="600" fill="#26262f">3,3</text>
-<rect x="210.0" y="125" width="54.3" height="15" fill="#8a8781"/>
-<text x="268.3" y="136" font-size="10" font-weight="600" fill="#26262f">0,5</text>
-<text x="0" y="169" font-size="11.5" font-weight="600" fill="#26262f">Risque santé et dépendance</text>
-<rect x="210.0" y="152" width="355.7" height="15" fill="#eb6834"/>
-<text x="569.7" y="163" font-size="10" font-weight="600" fill="#26262f">3,0</text>
-<rect x="210.0" y="169" width="280.2" height="15" fill="#8a8781"/>
-<text x="494.2" y="180" font-size="10" font-weight="600" fill="#26262f">2,4</text>
-<text x="0" y="213" font-size="11.5" font-weight="600" fill="#26262f">Édition précédente (2024)</text>
-<rect x="210.0" y="196" width="391.8" height="15" fill="#eb6834"/>
-<text x="605.8" y="207" font-size="10" font-weight="600" fill="#26262f">3,3</text>
-<rect x="210.0" y="213" width="6.6" height="15" fill="#8a8781"/>
-<text x="220.6" y="224" font-size="10" font-weight="600" fill="#26262f">0,1</text>
-<text x="680" y="261" font-size="10" fill="#96928f" text-anchor="end">points de PIB</text>
-<line x1="0" y1="274.0" x2="720" y2="274.0" stroke="#dcd8d3"/>
-<text x="0" y="287.0" font-size="9" fill="#55524f">Commission européenne, Debt Sustainability Monitor 2025, tableaux par pays : indicateur S2 et ses deux composantes, France</text>
-<text x="0" y="299.0" font-size="9" fill="#55524f">Projections conditionnelles aux hypothèses de la Commission (Ageing Report 2024, réforme des retraites de 2023 appliquée).</text>
-<text x="0" y="311.0" font-size="9" fill="#96928f">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/dette-publique-generations-futures/</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 411" role="img" font-variant-numeric="tabular-nums" aria-labelledby="gv-t gv-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="gv-t">France : l'ajustement qui stabiliserait la dette (indicateur S2) et ses deux composantes</title><desc id="gv-d">Ajustement permanent du solde primaire structurel, à partir de 2027, qui stabiliserait la dette sur un horizon infini, en points de PIB, partagé entre la position budgétaire de départ et l'effet des variations futures des dépenses liées à l'âge, selon la Commission européenne (Debt Sustainability Monitor 2025), dans trois scénarios et dans l'édition précédente. Scénario de base : S2 3,1, dont position de départ 3,0 et effet des variations futures des dépenses liées à l'âge 0,1. Productivité plus faible : S2 3,8, dont position de départ 3,3 et effet des variations futures des dépenses liées à l'âge 0,5. Risque santé et dépendance : S2 5,4, dont position de départ 3,0 et effet des variations futures des dépenses liées à l'âge 2,4. Édition précédente (2024) : S2 3,4, dont position de départ 3,3 et effet des variations futures des dépenses liées à l'âge 0,1.</desc>
+<rect width="720" height="411" fill="#ffffff"/>
+<text x="0" y="18" font-size="15" font-weight="600" fill="#26262f">France : l'ajustement qui stabiliserait la dette (indicateur S2) et ses deux composantes</text>
+<rect x="0" y="34" width="10" height="10" fill="#eb6834"/>
+<text x="14" y="43" font-size="11" fill="#55524f">position budgétaire de départ (dépenses actuelles comprises, retraites incluses)</text>
+<rect x="0" y="50" width="10" height="10" fill="#8a8781"/>
+<text x="14" y="59" font-size="11" fill="#55524f">effet des variations futures des dépenses liées à l'âge</text>
+<line x1="230.0" y1="74" x2="230.0" y2="266" stroke="#dcd8d3" stroke-width="1.4"/>
+<text x="230.0" y="280" font-size="10" fill="#96928f" text-anchor="middle">0</text>
+<line x1="342.5" y1="74" x2="342.5" y2="266" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="342.5" y="280" font-size="10" fill="#96928f" text-anchor="middle">1</text>
+<line x1="455.0" y1="74" x2="455.0" y2="266" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="455.0" y="280" font-size="10" fill="#96928f" text-anchor="middle">2</text>
+<line x1="567.5" y1="74" x2="567.5" y2="266" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="567.5" y="280" font-size="10" fill="#96928f" text-anchor="middle">3</text>
+<line x1="680.0" y1="74" x2="680.0" y2="266" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="680.0" y="280" font-size="10" fill="#96928f" text-anchor="middle">4</text>
+<text x="0" y="92" font-size="11.5" font-weight="600" fill="#26262f">Scénario de base</text>
+<text x="0" y="107" font-size="11" fill="#55524f">S2 : 3,1</text>
+<rect x="230.0" y="80" width="342.0" height="15" fill="#eb6834"/>
+<text x="576.0" y="91" font-size="10" font-weight="600" fill="#26262f">3,0</text>
+<rect x="230.0" y="97" width="8.4" height="15" fill="#8a8781"/>
+<text x="242.4" y="108" font-size="10" font-weight="600" fill="#26262f">0,1</text>
+<text x="0" y="142" font-size="11.5" font-weight="600" fill="#26262f">Productivité plus faible</text>
+<text x="0" y="157" font-size="11" fill="#55524f">S2 : 3,8</text>
+<rect x="230.0" y="130" width="372.0" height="15" fill="#eb6834"/>
+<text x="606.0" y="141" font-size="10" font-weight="600" fill="#26262f">3,3</text>
+<rect x="230.0" y="147" width="52.0" height="15" fill="#8a8781"/>
+<text x="286.0" y="158" font-size="10" font-weight="600" fill="#26262f">0,5</text>
+<text x="0" y="192" font-size="11.5" font-weight="600" fill="#26262f">Risque santé et dépendance</text>
+<text x="0" y="207" font-size="11" fill="#55524f">S2 : 5,4</text>
+<rect x="230.0" y="180" width="340.5" height="15" fill="#eb6834"/>
+<text x="574.5" y="191" font-size="10" font-weight="600" fill="#26262f">3,0</text>
+<rect x="230.0" y="197" width="268.3" height="15" fill="#8a8781"/>
+<text x="502.3" y="208" font-size="10" font-weight="600" fill="#26262f">2,4</text>
+<text x="0" y="242" font-size="11.5" font-weight="600" fill="#26262f">Édition précédente (2024)</text>
+<text x="0" y="257" font-size="11" fill="#55524f">S2 : 3,4 · autre jeu de projections</text>
+<rect x="230.0" y="230" width="375.1" height="15" fill="#eb6834"/>
+<text x="609.1" y="241" font-size="10" font-weight="600" fill="#26262f">3,3</text>
+<rect x="230.0" y="247" width="6.4" height="15" fill="#8a8781"/>
+<text x="240.4" y="258" font-size="10" font-weight="600" fill="#26262f">0,1</text>
+<text x="680" y="295" font-size="10" fill="#96928f" text-anchor="end">points de PIB</text>
+<line x1="0" y1="304.0" x2="720" y2="304.0" stroke="#dcd8d3"/>
+<text class="pied-source" x="0" y="319.0" font-size="11" fill="#55524f">Commission européenne, Debt Sustainability Monitor 2025, tableaux par pays : indicateur S2 et ses deux composantes,</text>
+<text class="pied-source" x="0" y="333.0" font-size="11" fill="#55524f">France</text>
+<text class="pied-note" x="0" y="347.0" font-size="11" fill="#55524f">La dépense actuelle de retraite est dans la position de départ ; le second terme ne mesure que l'évolution projetée</text>
+<text class="pied-note" x="0" y="361.0" font-size="11" fill="#55524f">des dépenses liées à l'âge. L'édition précédente est un autre jeu de projections, non une évolution observée.</text>
+<text class="pied-note" x="0" y="375.0" font-size="11" fill="#55524f">Projections conditionnelles aux hypothèses de la Commission (Ageing Report 2024, réforme des retraites de 2023</text>
+<text class="pied-note" x="0" y="389.0" font-size="11" fill="#55524f">appliquée).</text>
+<text class="pied-licence" x="0" y="403.0" font-size="11" fill="#96928f">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/dette-publique-generations-futures/</text>
 </svg>

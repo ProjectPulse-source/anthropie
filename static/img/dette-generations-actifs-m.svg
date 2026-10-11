@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 747" role="img" font-variant-numeric="tabular-nums" aria-labelledby="gam-t gam-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
+<title id="gam-t">France : à quoi ont correspondu les déficits publics</title><desc id="gam-d">Pour chaque période, le besoin de financement des administrations publiques, ramené à 100, partagé entre trois emplois : acquisitions nettes d'actifs (investissement moins usure du capital, terrains, stocks), transferts en capital nets vers d'autres secteurs, dépenses courantes non couvertes par les recettes courantes. 1996-2005 : 28,6 points de PIB de besoin de financement cumulé, dont 32 % en actifs, 18 % en transferts, 50 % en dépenses courantes. 2006-2015 : 47,6 points de PIB de besoin de financement cumulé, dont 19 % en actifs, 17 % en transferts, 64 % en dépenses courantes. 2016-2025 : 48,3 points de PIB de besoin de financement cumulé, dont 10 % en actifs, 14 % en transferts, 76 % en dépenses courantes. 1996-2025 : 124,5 points de PIB de besoin de financement cumulé, dont 18 % en actifs, 16 % en transferts, 66 % en dépenses courantes.</desc>
+<rect width="300" height="747" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">France : à quoi ont</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">correspondu les déficits</text>
+<text x="0" y="64" font-size="17" font-weight="600" fill="#26262f">publics</text>
+<rect x="0" y="95" width="12" height="12" fill="#184f95"/>
+<text x="18" y="106" font-size="13.5" fill="#55524f">actifs (investissement net, terrains)</text>
+<rect x="0" y="115" width="12" height="12" fill="#c9c5c0"/>
+<text x="18" y="126" font-size="13.5" fill="#55524f">transferts en capital</text>
+<rect x="0" y="135" width="12" height="12" fill="#eb6834"/>
+<text x="18" y="146" font-size="13.5" fill="#55524f">dépenses courantes non couvertes</text>
+<text x="0" y="186" font-size="15" font-weight="600" fill="#26262f">1996-2005</text>
+<text x="300" y="186" font-size="15" font-weight="600" fill="#184f95" text-anchor="end">actifs : 32 %</text>
+<text x="0" y="204" font-size="13.5" fill="#96928f">28,6 points de PIB cumulés</text>
+<rect x="0.0" y="212" width="95.6" height="28" fill="#184f95"/>
+<rect x="95.6" y="212" width="53.6" height="28" fill="#c9c5c0"/>
+<text x="122.4" y="231" font-size="13.5" font-weight="600" fill="#26262f" text-anchor="middle">18 %</text>
+<rect x="149.2" y="212" width="150.8" height="28" fill="#eb6834"/>
+<text x="224.6" y="231" font-size="13.5" font-weight="600" fill="#ffffff" text-anchor="middle">50 %</text>
+<text x="0" y="266" font-size="15" font-weight="600" fill="#26262f">2006-2015</text>
+<text x="300" y="266" font-size="15" font-weight="600" fill="#184f95" text-anchor="end">actifs : 19 %</text>
+<text x="0" y="284" font-size="13.5" fill="#96928f">47,6 points de PIB cumulés</text>
+<rect x="0.0" y="292" width="56.9" height="28" fill="#184f95"/>
+<rect x="56.9" y="292" width="50.3" height="28" fill="#c9c5c0"/>
+<text x="82.1" y="311" font-size="13.5" font-weight="600" fill="#26262f" text-anchor="middle">17 %</text>
+<rect x="107.3" y="292" width="192.7" height="28" fill="#eb6834"/>
+<text x="203.6" y="311" font-size="13.5" font-weight="600" fill="#ffffff" text-anchor="middle">64 %</text>
+<text x="0" y="346" font-size="15" font-weight="600" fill="#26262f">2016-2025</text>
+<text x="300" y="346" font-size="15" font-weight="600" fill="#184f95" text-anchor="end">actifs : 10 %</text>
+<text x="0" y="364" font-size="13.5" fill="#96928f">48,3 points de PIB cumulés</text>
+<rect x="0.0" y="372" width="29.9" height="28" fill="#184f95"/>
+<rect x="29.9" y="372" width="41.5" height="28" fill="#c9c5c0"/>
+<rect x="71.5" y="372" width="228.5" height="28" fill="#eb6834"/>
+<text x="185.7" y="391" font-size="13.5" font-weight="600" fill="#ffffff" text-anchor="middle">76 %</text>
+<line x1="0" y1="412" x2="300" y2="412" stroke="#dcd8d3"/>
+<text x="0" y="434" font-size="15" font-weight="600" fill="#26262f">1996-2025</text>
+<text x="300" y="434" font-size="15" font-weight="600" fill="#184f95" text-anchor="end">actifs : 18 %</text>
+<text x="0" y="452" font-size="13.5" fill="#96928f">124,5 points de PIB cumulés</text>
+<rect x="0.0" y="460" width="55.4" height="28" fill="#184f95"/>
+<rect x="55.4" y="460" width="47.7" height="28" fill="#c9c5c0"/>
+<text x="79.2" y="479" font-size="13.5" font-weight="600" fill="#26262f" text-anchor="middle">16 %</text>
+<rect x="103.0" y="460" width="197.0" height="28" fill="#eb6834"/>
+<text x="201.5" y="479" font-size="13.5" font-weight="600" fill="#ffffff" text-anchor="middle">66 %</text>
+<line x1="0" y1="504.0" x2="300" y2="504.0" stroke="#dcd8d3"/>
+<text class="pied-source" x="0" y="525.0" font-size="13.5" fill="#55524f">Eurostat (gov_10a_main,</text>
+<text class="pied-source" x="0" y="542.0" font-size="13.5" fill="#55524f">gov_10dd_edpt1), administrations</text>
+<text class="pied-source" x="0" y="559.0" font-size="13.5" fill="#55524f">publiques, France, 1996-2025</text>
+<text class="pied-note" x="0" y="580.0" font-size="13.5" fill="#55524f">Identité comptable : elle dit à quoi</text>
+<text class="pied-note" x="0" y="597.0" font-size="13.5" fill="#55524f">les déficits ont correspondu, non ce</text>
+<text class="pied-note" x="0" y="614.0" font-size="13.5" fill="#55524f">qu'ils ont produit. Ces parts ne</text>
+<text class="pied-note" x="0" y="631.0" font-size="13.5" fill="#55524f">mesurent ni la rentabilité des</text>
+<text class="pied-note" x="0" y="648.0" font-size="13.5" fill="#55524f">dépenses ni leur utilité pour les</text>
+<text class="pied-note" x="0" y="665.0" font-size="13.5" fill="#55524f">générations futures ; l'éducation n'y</text>
+<text class="pied-note" x="0" y="682.0" font-size="13.5" fill="#55524f">est pas un actif.</text>
+<text class="pied-licence" x="0" y="703.0" font-size="13.5" fill="#96928f">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="720.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
+<text class="pied-licence" x="0" y="737.0" font-size="13.5" fill="#96928f">/dette-publique-generations-futures/</text>
+</svg>

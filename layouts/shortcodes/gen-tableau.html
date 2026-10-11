@@ -2,7 +2,9 @@
        administrations publiques. Lignes lues dans data/dette_generations.json (ue.tableau, ou ue.tableau_en sur une page
        anglaise : chaînes déjà formatées et gardées par scripts/update_dette_generations.py, triées par part en actifs) :
        aucun chiffre recopié ici. Bilingue depuis le 07/10/2026 : tableau ou bloc anglais absent = échec, jamais un repli
-       sur le français. */ -}}
+       sur le français. Passe B2 (11/10/2026) : la part en actifs, colonne qui porte la comparaison du texte, vient juste
+       après le pays, pour rester visible à 390 px sans faire défiler la grille (6 colonnes, min-width 520 px) ; la France est
+       surlignée (classe is-france de _dette-monde.scss). */ -}}
 {{- $j := site.Data.dette_generations -}}
 {{- if not $j -}}{{ errorf "gen-tableau: data/dette_generations.json absent (%s)" .Page.File.Path }}{{- end -}}
 {{- $en := eq .Page.Lang "en" -}}
@@ -11,13 +13,13 @@
 {{- if or (not $A) (not $rows) -}}{{ errorf "gen-tableau: bloc %s ou tableau %s absent de data/dette_generations.json (%s)" (cond $en "affichage_en" "affichage") (cond $en "ue.tableau_en" "ue.tableau") .Page.File.Path }}{{- end -}}
 <div class="table-scroll"><table class="dette-monde-table">
 {{- if $en }}
-<thead><tr><th>Country</th><th>Net borrowing</th><th>Assets</th><th>Capital transfers</th><th>Uncovered current spending</th><th>Share in assets</th></tr></thead>
+<thead><tr><th>Country</th><th>Share in assets</th><th>Net borrowing</th><th>Assets</th><th>Capital transfers</th><th>Uncovered current spending</th></tr></thead>
 {{- else }}
-<thead><tr><th>Pays</th><th>Besoin de financement</th><th>Actifs</th><th>Transferts en capital</th><th>Dépenses courantes non couvertes</th><th>Part en actifs</th></tr></thead>
+<thead><tr><th>Pays</th><th>Part en actifs</th><th>Besoin de financement</th><th>Actifs</th><th>Transferts en capital</th><th>Dépenses courantes non couvertes</th></tr></thead>
 {{- end }}
 <tbody>
 {{- range $rows }}
-<tr><td>{{ .nom }}</td><td>{{ .besoin }}</td><td>{{ .actifs }}</td><td>{{ .transferts }}</td><td>{{ .desepargne }}</td><td>{{ .part }}</td></tr>
+<tr{{ if eq .pays "FR" }} class="is-france"{{ end }}><td>{{ .nom }}</td><td>{{ .part }}</td><td>{{ .besoin }}</td><td>{{ .actifs }}</td><td>{{ .transferts }}</td><td>{{ .desepargne }}</td></tr>
 {{- end }}
 </tbody></table></div>
 {{- if $en }}

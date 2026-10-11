@@ -47,7 +47,7 @@ jobs:
       # pour qu'aucun PNG ancien ne soit jamais offert au telechargement a cote d'un SVG neuf.
       - name: Rapatrier, calculer, valider (gardes dures et gardes de prose, exit 1 si echec)
         run: |
-          python3 -m pip install --quiet cairosvg==2.9.0 openpyxl==3.1.5
+          python3 -m pip install --quiet cairosvg==2.9.0 openpyxl==3.1.5 pyyaml  # pyyaml : gardes de texte de update_dette_generations.py (11/10/2026)
           python3 scripts/update_dette_monde.py
           # Volet « Pourquoi la dette augmente » (30/09) : memes sources Eurostat annuelles, meme cadence.
           python3 scripts/update_dette_dynamique.py
@@ -124,7 +124,8 @@ jobs:
                   static/images/og-dette-generations-en.jpg static/images/vig-dette-generations-en.jpg \
                   static/img/dette-generations-actifs-en.svg static/img/dette-generations-actifs-en.png \
                   static/img/dette-generations-detention-en.svg static/img/dette-generations-detention-en.png \
-                  static/img/dette-generations-vieillissement-en.svg static/img/dette-generations-vieillissement-en.png
+                  static/img/dette-generations-vieillissement-en.svg static/img/dette-generations-vieillissement-en.png \
+                  static/img/dette-generations-*-m.svg static/img/dette-generations-*-m.png
           git commit -m "data(dette-monde): Eurostat/OCDE/FMI/Banque mondiale du $(date -u +%Y-%m-%d)"
           pushed=0
           for attempt in 1 2 3; do

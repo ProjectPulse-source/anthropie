@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 566" role="img" font-variant-numeric="tabular-nums" aria-labelledby="gdm-t gdm-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
+<title id="gdm-t">Who holds French public debt</title><desc id="gdm-d">Shares of general government debt held by non-residents, by the Banque de France and by other residents, from 1995 to 2025. Non-residents: 38.8% in 1995, 57.1% at the peak in 2014, 54.3% in 2025. Banque de France: 1.7% in 1995, 22.6% in 2022, 16.5% in 2025. Other residents: 29.2% in 2025.</desc>
+<rect width="300" height="566" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Who holds French public debt</text>
+<polygon points="50.0,244.8 58.2,245.0 66.4,245.5 74.6,245.5 82.8,245.6 91.0,245.6 99.2,245.7 107.4,246.0 115.6,246.0 123.8,246.0 132.0,246.0 140.2,246.0 148.4,246.0 156.6,245.8 164.8,245.8 173.0,244.9 181.2,243.4 189.4,241.9 197.6,243.3 205.8,243.9 214.0,237.6 222.2,228.8 230.4,221.0 238.6,218.5 246.8,219.8 255.0,213.3 263.2,206.2 271.4,205.1 279.6,207.5 287.8,211.4 296.0,216.6 296.0,248.0 287.8,248.0 279.6,248.0 271.4,248.0 263.2,248.0 255.0,248.0 246.8,248.0 238.6,248.0 230.4,248.0 222.2,248.0 214.0,248.0 205.8,248.0 197.6,248.0 189.4,248.0 181.2,248.0 173.0,248.0 164.8,248.0 156.6,248.0 148.4,248.0 140.2,248.0 132.0,248.0 123.8,248.0 115.6,248.0 107.4,248.0 99.2,248.0 91.0,248.0 82.8,248.0 74.6,248.0 66.4,248.0 58.2,248.0 50.0,248.0" fill="#184f95"/>
+<polygon points="50.0,131.7 58.2,137.9 66.4,141.2 74.6,144.4 82.8,145.0 91.0,147.4 99.2,149.9 107.4,152.8 115.6,154.1 123.8,155.4 132.0,156.3 140.2,155.4 148.4,154.7 156.6,152.9 164.8,163.5 173.0,162.3 181.2,160.6 189.4,161.9 197.6,164.4 205.8,166.5 214.0,164.1 222.2,158.2 230.4,154.9 238.6,152.8 246.8,155.1 255.0,151.3 263.2,147.6 271.4,150.2 279.6,155.3 287.8,157.9 296.0,161.2 296.0,216.6 287.8,211.4 279.6,207.5 271.4,205.1 263.2,206.2 255.0,213.3 246.8,219.8 238.6,218.5 230.4,221.0 222.2,228.8 214.0,237.6 205.8,243.9 197.6,243.3 189.4,241.9 181.2,243.4 173.0,244.9 164.8,245.8 156.6,245.8 148.4,246.0 140.2,246.0 132.0,246.0 123.8,246.0 115.6,246.0 107.4,246.0 99.2,245.7 91.0,245.6 82.8,245.6 74.6,245.5 66.4,245.5 58.2,245.0 50.0,244.8" fill="#c9c5c0"/>
+<polygon points="50.0,58.0 58.2,58.0 66.4,58.0 74.6,58.0 82.8,58.0 91.0,58.0 99.2,58.0 107.4,58.0 115.6,58.0 123.8,58.0 132.0,58.0 140.2,58.0 148.4,58.0 156.6,58.0 164.8,58.0 173.0,58.0 181.2,58.0 189.4,58.0 197.6,58.0 205.8,58.0 214.0,58.0 222.2,58.0 230.4,58.0 238.6,58.0 246.8,58.0 255.0,58.0 263.2,58.0 271.4,58.0 279.6,58.0 287.8,58.0 296.0,58.0 296.0,161.2 287.8,157.9 279.6,155.3 271.4,150.2 263.2,147.6 255.0,151.3 246.8,155.1 238.6,152.8 230.4,154.9 222.2,158.2 214.0,164.1 205.8,166.5 197.6,164.4 189.4,161.9 181.2,160.6 173.0,162.3 164.8,163.5 156.6,152.9 148.4,154.7 140.2,155.4 132.0,156.3 123.8,155.4 115.6,154.1 107.4,152.8 99.2,149.9 91.0,147.4 82.8,145.0 74.6,144.4 66.4,141.2 58.2,137.9 50.0,131.7" fill="#eb6834"/>
+<text x="46" y="253.0" font-size="13.5" fill="#96928f" text-anchor="end">0%</text>
+<text x="46" y="158.0" font-size="13.5" fill="#96928f" text-anchor="end">50%</text>
+<text x="46" y="63.0" font-size="13.5" fill="#96928f" text-anchor="end">100%</text>
+<line x1="50" y1="153.0" x2="296" y2="153.0" stroke="#26262f" stroke-width="1.4" stroke-dasharray="4 3"/>
+<text x="50.0" y="266" font-size="13.5" fill="#96928f" text-anchor="start">1995</text>
+<text x="173.0" y="266" font-size="13.5" fill="#96928f" text-anchor="middle">2010</text>
+<text x="296.0" y="266" font-size="13.5" fill="#96928f" text-anchor="end">2025</text>
+<text x="0" y="292" font-size="13.5" fill="#55524f">in 2025:</text>
+<rect x="0" y="303" width="12" height="12" fill="#eb6834"/>
+<text x="18" y="314" font-size="15" fill="#55524f">non-residents</text>
+<text x="300" y="314" font-size="15" font-weight="600" fill="#26262f" text-anchor="end">54.3%</text>
+<rect x="0" y="325" width="12" height="12" fill="#c9c5c0"/>
+<text x="18" y="336" font-size="15" fill="#55524f">other residents</text>
+<text x="300" y="336" font-size="15" font-weight="600" fill="#26262f" text-anchor="end">29.2%</text>
+<rect x="0" y="347" width="12" height="12" fill="#184f95"/>
+<text x="18" y="358" font-size="15" fill="#55524f">Banque de France</text>
+<text x="300" y="358" font-size="15" font-weight="600" fill="#26262f" text-anchor="end">16.5%</text>
+<line x1="0" y1="374.0" x2="300" y2="374.0" stroke="#dcd8d3"/>
+<text class="pied-source" x="0" y="395.0" font-size="13.5" fill="#55524f">ECB, government finance statistics</text>
+<text class="pied-source" x="0" y="412.0" font-size="13.5" fill="#55524f">(GFS), France, 1995-2025</text>
+<text class="pied-note" x="0" y="433.0" font-size="13.5" fill="#55524f">Residence of the registered holder</text>
+<text class="pied-note" x="0" y="450.0" font-size="13.5" fill="#55524f">(fund, custodian), not of the final</text>
+<text class="pied-note" x="0" y="467.0" font-size="13.5" fill="#55524f">saver; nominal value. The non-resident</text>
+<text class="pied-note" x="0" y="484.0" font-size="13.5" fill="#55524f">share does not, on its own, measure</text>
+<text class="pied-note" x="0" y="501.0" font-size="13.5" fill="#55524f">the net transfer of wealth abroad.</text>
+<text class="pied-licence" x="0" y="522.0" font-size="13.5" fill="#96928f">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="539.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
+<text class="pied-licence" x="0" y="556.0" font-size="13.5" fill="#96928f">/en/public-debt-future-generations/</text>
+</svg>
