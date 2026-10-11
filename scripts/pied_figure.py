@@ -18,8 +18,13 @@ TAILLE, INTERLIGNE, CARACTERES = 11, 14, 118
 
 
 def coupe(s: str, n: int) -> list[str]:
+    """Coupe aux espaces ORDINAIRES seulement (11/10/2026) : str.split() sans argument coupait aussi a l'espace
+    insecable, et rejetait « : » ou « % » seul en debut de ligne (regle typographique du site). La ponctuation haute
+    francaise est d'abord soudee a ce qui la precede."""
+    s = re.sub(r" ([:;?!»%])", "\u00a0\\1", s)
+    s = s.replace("« ", "«\u00a0").replace("> ", ">\u00a0")
     out, cur = [], ""
-    for mot in s.split():
+    for mot in [m for m in s.split(" ") if m]:
         if cur and len(cur) + 1 + len(mot) > n:
             out.append(cur)
             cur = mot
@@ -97,3 +102,63 @@ def parite(svg_detaille: str, svg_mobile: str, fs_min: float, couleurs=()) -> li
     if tailles and min(tailles) < fs_min:
         ecarts.append("police %.1f sous le minimum %.1f" % (min(tailles), fs_min))
     return ecarts
+
+
+# ---------------------------------------------------------------- téléphone
+# Version téléphone d'une figure (300 de large, police jamais sous 13,5) : en-tête et pied communs. Nés dans
+# update_dette_dynamique.py (volet 1 du dossier dette, 11/10/2026), remontés ici pour le volet 2 au lieu d'être recopiés
+# (une règle, un organe). Le volet 1 garde ses deux copies tant que sa sortie n'a pas été vérifiée identique avec ces
+# fonctions : point ouvert de la reprise de la refonte.
+LARGEUR_M, POLICE_M = 300, 13.5
+
+
+def tete_mobile(ident: str, titre: str, desc: str, encre: str, police: str, car: int = 30) -> tuple[list[str], int]:
+    """Ouvre le SVG (hauteur provisoire 0, fixée par pied_mobile) et pose le titre sur plusieurs lignes."""
+    e = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d 0" role="img" font-variant-numeric="tabular-nums" '
+         'aria-labelledby="%s-t %s-d" font-family="%s">' % (LARGEUR_M, ident, ident, html.escape(police)),
+         '<title id="%s-t">%s</title><desc id="%s-d">%s</desc>'
+         % (ident, html.escape(titre, quote=False), ident, html.escape(desc, quote=False)),
+         '<rect width="%d" height="0" fill="#ffffff"/>' % LARGEUR_M]
+    lignes = coupe(titre, car)
+    for k, l in enumerate(lignes):
+        e.append('<text x="0" y="%d" font-size="17" font-weight="600" fill="%s">%s</text>'
+                 % (20 + 22 * k, encre, html.escape(l, quote=False)))
+    return e, 20 + 22 * len(lignes)
+
+
+def pied_mobile(e: list[str], y0: float, blocs, filet: str, car: int = 38) -> str:
+    """blocs : [(texte, couleur, classe)] — source, précaution, licence. Ferme le SVG et fixe sa hauteur."""
+    e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y0, LARGEUR_M, y0, filet))
+    y = y0 + 4
+    for texte, couleur, classe in blocs:
+        for l in coupe(texte, car):
+            y += 17
+            e.append('<text class="%s" x="0" y="%.1f" font-size="%s" fill="%s">%s</text>'
+                     % (classe, y, POLICE_M, couleur, html.escape(l, quote=False)))
+        y += 4
+    e.append("</svg>")
+    h = int(round(y + 6))
+    out = "\n".join(e)
+    out = out.replace('viewBox="0 0 %d 0"' % LARGEUR_M, 'viewBox="0 0 %d %d"' % (LARGEUR_M, h), 1)
+    return out.replace('<rect width="%d" height="0"' % LARGEUR_M, '<rect width="%d" height="%d"' % (LARGEUR_M, h), 1) + "\n"
+
+
+def hors_cadre(svg: str, largeur: float, coef: float = 0.52) -> list[str]:
+    """Estimation des textes qui sortent du cadre (largeur ≈ coef × police × caractères, selon l'ancrage).
+
+    Une estimation, pas une mesure : elle signale, le rendu tranche (règle « ne jamais prédire un moteur de rendu »).
+    Rend la liste des textes suspects."""
+    out = []
+    for m in re.finditer(r'<text ([^>]*)>(.*?)</text>', svg, re.S):
+        att, contenu = m.group(1), html.unescape(re.sub(r"<[^>]+>", "", m.group(2)))
+        x = re.search(r'\bx="([-0-9.]+)"', att)
+        fs = re.search(r'font-size="([0-9.]+)"', att)
+        if not x or not fs:
+            continue
+        x, l = float(x.group(1)), coef * float(fs.group(1)) * len(contenu)
+        ancre = re.search(r'text-anchor="(\w+)"', att)
+        ancre = ancre.group(1) if ancre else "start"
+        g = x if ancre == "start" else (x - l if ancre == "end" else x - l / 2)
+        if g < -1 or g + l > largeur + 1:
+            out.append("%s (%.0f à %.0f sur %d)" % (contenu[:50], g, g + l, largeur))
+    return out

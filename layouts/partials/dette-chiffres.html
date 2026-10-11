@@ -93,9 +93,22 @@
   {{- if $hist }}
   {{- $h := $d.dette_annuelle_longue -}}
   {{- if not $h }}{{ errorf "dette-chiffres: bloc dette_annuelle_longue absent du JSON (relancer le script)" }}{{ end -}}
+  {{- /* Dimensions LUES dans le viewBox (11/10/2026) : la hauteur était recopiée ici (368) et aurait menti au
+         navigateur dès que le pied de la figure change. Version téléphone servie si son fichier existe. */ -}}
+  {{- $svgf := printf "static%s" $T.svg -}}
+  {{- $vb := index (findRESubmatch `viewBox="0 0 ([0-9.]+) ([0-9.]+)"` (os.ReadFile $svgf) 1) 0 -}}
+  {{- $svgm := replace $T.svg ".svg" "-m.svg" -}}
+  {{- $alt := printf $T.alt (index $a "hist_annee_debut") (index $a "dette_periode") (index $a "hist_pct_debut") (index $a "hist_seuil_30_annee") (index $a "hist_seuil_60_annee") (index $a "hist_seuil_80_annee") (index $a "hist_seuil_100_annee") (index $a "dette_pct_pib") }}
   <figure class="dette-chiffres__figure">
-    <img src="{{ $T.svg }}" width="720" height="368" loading="lazy"
-         alt="{{ printf $T.alt (index $a "hist_annee_debut") (index $a "dette_periode") (index $a "hist_pct_debut") (index $a "hist_seuil_30_annee") (index $a "hist_seuil_60_annee") (index $a "hist_seuil_80_annee") (index $a "hist_seuil_100_annee") (index $a "dette_pct_pib") }}">
+    {{- if fileExists (printf "static%s" $svgm) }}
+    {{- $vbm := index (findRESubmatch `viewBox="0 0 ([0-9.]+) ([0-9.]+)"` (os.ReadFile (printf "static%s" $svgm)) 1) 0 }}
+    <picture>
+      <source media="(max-width: 600px)" srcset="{{ $svgm }}" width="{{ index $vbm 1 }}" height="{{ index $vbm 2 }}">
+      <img src="{{ $T.svg }}" width="{{ index $vb 1 }}" height="{{ index $vb 2 }}" loading="lazy" alt="{{ $alt }}">
+    </picture>
+    {{- else }}
+    <img src="{{ $T.svg }}" width="{{ index $vb 1 }}" height="{{ index $vb 2 }}" loading="lazy" alt="{{ $alt }}">
+    {{- end }}
   </figure>
   <ul class="dette-chiffres__faits">
     <li><b>{{ index $a "hist_pct_debut" }}{{ if $en }}%{{ else }}&nbsp;%{{ end }}</b><span>{{ printf $T.fait1 (index $a "hist_annee_debut") | safeHTML }}</span></li>

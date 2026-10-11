@@ -320,6 +320,16 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
 .dette-chiffres__figure img {
   width: 100%; height: auto; display: block;
 }
+// Version téléphone (<picture>, fichier -m, 11/10/2026) : elle occupe la largeur du bloc, plafonnée comme les autres
+// figures composées pour le téléphone (au-delà, la figure étirée devient démesurément haute).
+.dette-chiffres__figure picture { display: block; }
+// Sur téléphone, la version -m sort du rembourrage du bloc (24 px) et de la colonne, comme les autres figures composées
+// pour le téléphone (12 px du bord) : mesure du 11/10/2026, enfermée dans le bloc elle tombait à 211 px à 320 px de
+// large, soit des textes d'environ 9,5 px.
+@media (max-width: 600px) {
+  .dette-chiffres__figure picture { margin-left: calc(12px - var(--marge-main) - var(--marge-colonne) - 24px); margin-right: calc(12px - var(--marge-main) - var(--marge-colonne) - 24px); }
+  .dette-chiffres__figure picture img { max-width: 420px; }
+}
 .dette-chiffres__faits {
   list-style: none; margin: 16px 0 0; padding: 0;
   display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -457,6 +467,9 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
   .figure-ciseau picture { display: block; margin-left: calc(12px - var(--marge-main) - var(--marge-colonne)); margin-right: calc(12px - var(--marge-main) - var(--marge-colonne)); }
   // Plafond : entre 450 et 600 px, la version mobile étirée devenait démesurément haute.
   .figure-ciseau picture img { max-width: 420px; }
+  // Dans un repli (.repli : filet de 3 px et 0,9rem de rembourrage, _dette-monde.scss), la même figure sort aussi de
+  // ce cadre : mesuré le 11/10/2026, elle tombait à 245 px à 320 px de large, textes vers 11 px.
+  .repli .figure-ciseau picture { margin-left: calc(12px - var(--marge-main) - var(--marge-colonne) - 0.9rem - 3px); margin-right: calc(12px - var(--marge-main) - var(--marge-colonne) - 0.9rem); }
 }
 // ----- Agrandissement d'une figure (static/js/figure-zoom.js) -----
 // Le lecteur qui veut lire une etiquette ou un cartouche n'avait aucun moyen de
