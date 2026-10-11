@@ -180,6 +180,10 @@ def depenses_recettes():
 
 # Fenêtres des deux lectures institutionnelles du creusement récent du déficit (None = dernière année publiée).
 FENETRES_DEFICIT = {"ofce": (2017, 2024), "tresor": (2019, None)}
+# Clés d'affichage dérivées (relecture de langue du 11/10/2026) : <clé>_abs, la valeur sans signe après un verbe de sens ;
+# <clé>_pt, « point » ou « points » accordé à la valeur affichée.
+VALEURS_SANS_SIGNE = ("tc_avant", "tc_apres", "rec_fin")
+ACCORD_POINTS = ("effet_net", "ofce_rec", "ofce_dep", "tresor_dep_hi", "croise_dep_hi", "croise_dep", "rec_fin")
 
 
 def agreger(rows, a0, a1):
@@ -609,6 +613,17 @@ def affichage(a0, d_depart, rows, total, per, dr):
     A, A_en = bloc(*NB["fr"]), bloc(*NB["en"])
     for X_, lang in ((A, "fr"), (A_en, "en")):
         X_["millesime_dette"], X_["millesime_comptes"] = millesime("gov_10dd_edpt1", lang), millesime("gov_10a_main", lang)
+        # Relecture de langue du 11/10/2026. (1) Après un verbe qui porte déjà le sens (« a ajouté », « a retiré »), la
+        # valeur s'écrit sans signe : « retiré −15,7 » se lisait comme un ajout. Les sens sont couverts par les gardes
+        # « compensation dans le temps » (plus de 10 points avant la bascule, moins de −10 après) et OPTIMUM-10 (les
+        # recettes « remontent » de plus d'un demi-point la dernière année).
+        for k in VALEURS_SANS_SIGNE:
+            X_[k + "_abs"] = X_[k].lstrip("+−")
+        # (2) Accord de « point » : singulier sous 2 en français (« 1,2 point »), pluriel hors 1 en anglais. Calculé
+        # sur la valeur AFFICHÉE (arrondie), puisque c'est elle que le lecteur accorde.
+        for k in ACCORD_POINTS:
+            v = abs(float(X_[k].lstrip("+−").replace(",", "." if lang == "fr" else "")))
+            X_[k + "_pt"] = ("point" if v < 2 else "points") if lang == "fr" else ("point" if v == 1 else "points")
     p1, p2, p3 = per
     affirmations = [
         ("titre de la figure : « la dette a doublé » (rapport 1,85 à 2,2)", 1.85 < last["dette_pct_pib"] / d_depart < 2.2),

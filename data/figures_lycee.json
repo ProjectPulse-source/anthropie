@@ -6,7 +6,7 @@
    "titre": "Une heure de cours sur dix n'a pas lieu au lycée : pourquoi ?",
    "montre": "Au lycée général et technologique public, en 2024-2025, les absences individuelles d'enseignants non remplacées pèsent moins que les trois autres motifs réunis : fermetures (presque toutes pour les examens), enseignants mobilisés par les examens ou les commissions, formation ; au collège, les deux parts s'équilibrent. Une seule année publiée au dixième.",
    "source": "DEPP, enquête sur le temps d'enseignement non assuré (Note d'Information 26-14), établissements publics, 2024-2025",
-   "precaution": "En % des heures prévues. Examens, formation : enseignants absents eux aussi. Individuelles : maladie, congés, grèves. Enquête par échantillon, une année."
+   "precaution": "En % des heures prévues. Examens, formation : enseignants absents eux aussi. Individuelles : maladie, congés, grèves. Enquête par échantillon, une année."
   },
   {
    "id": "classes",
@@ -14,15 +14,15 @@
    "titre": "Élèves par classe au lycée général et technologique, 1994-2025",
    "montre": "Depuis 2020, les classes de lycée GT comptent plus de 30 élèves en moyenne, un niveau jamais atteint de 1994 à 2015 ; la moyenne est stable depuis.",
    "source": "DEPP, Repères et références statistiques 2026, fiches 2.05 et 2.06 (public et privé sous contrat)",
-   "precaution": "Nombre moyen d'élèves par division (classe entière). Devant un professeur, les élèves sont moins nombreux : une partie des heures se fait en groupe."
+   "precaution": "Nombre moyen d'élèves par division (classe entière). Devant un professeur, les élèves sont moins nombreux : une partie des heures se fait en groupe."
   },
   {
    "id": "concours",
    "fichier": "lycee-concours",
    "titre": "Part des postes pourvus aux concours externes d'enseignants, 2008-2025 et 2026",
    "montre": "De 2023 à 2025, les CAPES de mathématiques et de physique-chimie sont restés sous quatre postes pourvus sur cinq. En 2026, deux concours (bac+3 et bac+5) et davantage de postes : plus de neuf sur dix pourvus, un résultat qui ne prolonge pas la série et ne mesure pas le besoin.",
-   "source": "DEPP, RERS 2026, fiches 9.27 et 9.28 (concours externes, public) ; 2026 : ministère, résultats par concours",
-   "precaution": "Admis rapportés aux postes offerts ; ne mesure pas le besoin. 2026 : deux concours (bac+3, bac+5), hors série."
+   "source": "DEPP, RERS 2026, fiches 9.27 et 9.28 (concours externes, public) ; 2026 : ministère, résultats par concours",
+   "precaution": "Admis rapportés aux postes offerts ; ne mesure pas le besoin. 2026 : deux concours (bac+3, bac+5), hors série."
   }
  ]
 }

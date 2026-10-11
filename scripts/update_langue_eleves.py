@@ -408,7 +408,7 @@ FIG = {
         titre="Élèves qui déclarent ne pas lire pour leur plaisir, selon la classe (2023)",
         source="DEPP, Note d'Information 25.66, figure 1.1 web (questionnaires des évaluations nationales, septembre 2023)",
         note="Une seule enquête : l'écart entre classes compare des élèves différents la même année, ce n'est pas une évolution dans le temps.",
-        montre="Dans l'enquête de 2023, la part des élèves qui ne lisent pas pour leur plaisir est plus élevée en seconde qu'en sixième, et près de la moitié en seconde professionnelle : des élèves différents la même année, pas une évolution."),
+        montre="Dans l'enquête de 2023, la part des élèves qui ne lisent pas pour leur plaisir est plus élevée en seconde qu'en sixième, et atteint près de la moitié en seconde professionnelle : des élèves différents la même année, pas une évolution."),
 }
 
 

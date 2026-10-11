@@ -6,7 +6,7 @@
    "titre": "Même dette, charge différente : les 27 pays de l'UE en 2025",
    "montre": "À dette voisine, la part des recettes consacrée aux intérêts peut varier de 1 à 3,3 ; hors de la zone euro, elle croît plus vite avec la dette.",
    "source": "Eurostat gov_10a_main (D41PAY, TR), gov_10dd_edpt1 (GD), nama_10_gdp (B1GQ), 2025 ; administrations publiques S.13, monnaie nationale",
-   "precaution": "Pointillés : faux jumeaux (plus proche voisin en stock, écart < 10 points, trois plus grands écarts de charge)."
+   "precaution": "Pointillés : faux jumeaux (plus proche voisin en stock, écart inférieur à 10 points, trois plus grands écarts de charge)."
   },
   {
    "id": "prix",

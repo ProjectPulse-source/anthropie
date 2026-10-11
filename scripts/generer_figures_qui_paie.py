@@ -722,6 +722,16 @@ def lire_pieces() -> dict:
 
 
 # ------------------------------------------------------------------ F1
+# Petits effectifs en toutes lettres (relecture du 11/10/2026) : « les sept premiers dixièmes », jamais « les 7 premiers ».
+# Au-delà de la table, le chiffre revient : une valeur hors table ne casse pas la phrase, elle perd seulement la lettre.
+MOTS_FR = {1: "un", 2: "deux", 3: "trois", 4: "quatre", 5: "cinq", 6: "six", 7: "sept", 8: "huit", 9: "neuf", 10: "dix"}
+MOTS_EN = {1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six", 7: "seven", 8: "eight", 9: "nine", 10: "ten"}
+
+
+def mots(n: int, lang: str) -> str:
+    return (MOTS_FR if lang == "fr" else MOTS_EN).get(n, str(n))
+
+
 def langue(lang: str):
     """(nombre, choix fr/en, signe %) d'une langue. Le français reste la valeur
     par défaut partout : ses sorties ne bougent pas d'un octet."""
@@ -1430,8 +1440,8 @@ def svg_exposition(c: dict, lang: str = "fr") -> tuple[str, int]:
         (S("Point D1 des impôts écarté : l'impôt sur le revenu du premier vingtième y pèse "
            "%s%s%% du poste quand les vingtièmes voisins sont à zéro, et varie de 1 à %s "
            "selon le millésime." % (fr(c["part_ir_v1"]), NBSP, fr(c["ir_v1_amplitude"], 1)),
-           "D1 tax point excluded: income tax of the first twentieth makes up %s%% of the item "
-           "while the neighbouring twentieths are at zero, and varies from 1 to %s by vintage."
+           "D1 tax point excluded: income tax of the first twentile makes up %s%% of the item "
+           "while the neighbouring twentiles are at zero, and varies from 1 to %s by vintage."
            % (en(c["part_ir_v1"]), en(c["ir_v1_amplitude"], 1))), INK2),
         (S("D1 porte « ≥ » : l'écart y est calculé sur les deux leviers conservés — c'est une borne "
            "inférieure, un troisième point ne pourrait que l'élever.",
@@ -1972,6 +1982,9 @@ def affichage(r: dict, d: dict, c: dict, lang: str = "fr") -> dict:
         "tresor_sur": pz["tresor_sur"], "tresor_dette": pz["tresor_dette"], "tresor_numero": pz["tresor_numero"],
         "det_periode": _S(r["det_periode"], trimestre_en(r["det_periode"])),
         "net_contrib_n": fr(10 - bascule),
+        "net_contrib_n_mots": mots(10 - bascule, lang),
+        "net_benef_n_mots": mots(bascule, lang),
+        "benef_majo_n_mots": mots(majo, lang),
     })
     return dict(exp, **{
         "releve_le": _S(releve_le(), date_fr_vers_en(releve_le())),
@@ -2096,8 +2109,8 @@ def main() -> int:
                    "de vie, 2020-2023, base 2020) — millésime 2023",
          "precaution": "Profil d'exposition comptable, non une simulation : ni comportement ni "
                        "effet en retour. Une baisse de service valorisé n'est pas une perte de "
-                       "revenu monétaire. Le point D1 de la décision fiscale est écarté, son "
-                       "motif figure au pied de la figure."},
+                       "revenu monétaire. Le point D1 de la décision fiscale est écarté ; le motif "
+                       "en est donné au pied du graphique."},
         {"id": "mecanismes", "fichier": "qui-paie-mecanismes",
          "titre": "Par quels canaux la charge peut-elle être répartie ?",
          "montre": "Quatre mécanismes possibles, non exhaustifs, le refinancement qui renouvelle l'échéance aux taux "
@@ -2150,19 +2163,19 @@ def main() -> int:
          "titre": "The same €10 billion adjustment: who would bear it, depending on the decision "
                   "taken?",
          "montre": "What the same adjustment would represent for each standard-of-living decile "
-                   "depending on the decision taken — taxes, pensions or education —, then how "
+                   "depending on the decision taken (taxes, pensions or education), then how "
                    "much that choice changes what the same group bears.",
          "source": "Insee, distributional national accounts, table CND.101 (standard-of-living "
-                   "twentieths, 2020-2023, base 2020) — 2023 vintage",
+                   "twentiles, 2020-2023, base 2020) — 2023 vintage",
          "precaution": "An accounting exposure profile, not a simulation: no behaviour, no "
                        "feedback effect. A cut in a valued public service is not a loss of cash "
                        "income. The D1 point of the tax decision is excluded; the reason is "
                        "given in the figure's footer."},
         {"id": "mecanismes", "fichier": "qui-paie-mecanismes-en",
          "titre": "Through which channels can the burden be distributed?",
-         "montre": "Four possible mechanisms, not exhaustive, refinancing, which rolls the "
-                   "maturity over without designating a loser, and alongside what the debt has "
-                   "financed.",
+         "montre": "Four possible mechanisms (not an exhaustive list); refinancing, which rolls "
+                   "the maturity over without designating a loser; and, alongside, what the "
+                   "debt has financed.",
          "source": "Author's synthesis, non-quantitative diagram",
          "precaution": "No relative weight or causal effect is measured here."},
     ]

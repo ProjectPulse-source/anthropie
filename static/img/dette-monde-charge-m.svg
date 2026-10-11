@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 587" role="img" font-variant-numeric="tabular-nums" aria-labelledby="mc-m-t mc-m-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 604" role="img" font-variant-numeric="tabular-nums" aria-labelledby="mc-m-t mc-m-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="mc-m-t">Même dette, charge différente : l'UE en 2025</title><desc id="mc-m-d">Chaque point est un pays. Les pointillés relient les faux jumeaux désignés par la règle publiée : dette voisine, charge très différente. Deux droites de moindres carrés, une par groupe, sur leur plage observée. Charge : Hongrie 8,9 %, Slovénie 2,7 %, France 4,3 %, Italie 8,0 %.</desc>
-<rect width="300" height="587" fill="#ffffff"/>
+<rect width="300" height="604" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Même dette, charge</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">différente : l'UE en 2025</text>
 <circle cx="6.0" cy="83.0" r="5.0" fill="#184f95"/>
@@ -72,8 +72,9 @@
 <text class="pied-source" x="0" y="467.0" font-size="13.5" fill="#52514e">(B1GQ), 2025 ; administrations</text>
 <text class="pied-source" x="0" y="484.0" font-size="13.5" fill="#52514e">publiques S.13, monnaie nationale</text>
 <text class="pied-note" x="0" y="505.0" font-size="13.5" fill="#52514e">Pointillés : faux jumeaux (plus proche</text>
-<text class="pied-note" x="0" y="522.0" font-size="13.5" fill="#52514e">voisin en stock, écart &lt; 10 points,</text>
-<text class="pied-note" x="0" y="539.0" font-size="13.5" fill="#52514e">trois plus grands écarts de charge).</text>
-<text class="pied-licence" x="0" y="560.0" font-size="13.5" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="577.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+<text class="pied-note" x="0" y="522.0" font-size="13.5" fill="#52514e">voisin en stock, écart inférieur à 10</text>
+<text class="pied-note" x="0" y="539.0" font-size="13.5" fill="#52514e">points, trois plus grands écarts de</text>
+<text class="pied-note" x="0" y="556.0" font-size="13.5" fill="#52514e">charge).</text>
+<text class="pied-licence" x="0" y="577.0" font-size="13.5" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="594.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
 </svg>

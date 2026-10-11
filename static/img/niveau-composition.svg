@@ -44,8 +44,8 @@
 <rect x="200" y="246" width="100.8" height="16" fill="#c9c5c0"/>
 <text x="305.8" y="258" font-size="11" fill="#55524f" font-weight="600">13</text>
 <line x1="0" y1="302.0" x2="720" y2="302.0" stroke="#dcd8d3"/>
-<text class="pied-source" x="0" y="317.0" font-size="11" fill="#55524f">OCDE, bases PISA 2015 et 2025 (données individuelles) ; calcul de l'auteur (valeurs plausibles, poids répliqués)</text>
-<text class="pied-note" x="0" y="331.0" font-size="11" fill="#55524f">Baisse du score moyen, en points. Une baisse observée et deux standardisations descriptives, trois questions : aucune</text>
-<text class="pied-note" x="0" y="345.0" font-size="11" fill="#55524f">n'est « la vraie baisse », aucune ne mesure l'effet du redoublement.</text>
+<text class="pied-source" x="0" y="317.0" font-size="11" fill="#55524f">OCDE, bases PISA 2015 et 2025 (données individuelles) ; calcul de l'auteur (valeurs plausibles, poids répliqués)</text>
+<text class="pied-note" x="0" y="331.0" font-size="11" fill="#55524f">Baisse du score moyen, en points. Une baisse observée et deux standardisations descriptives, trois questions : aucune</text>
+<text class="pied-note" x="0" y="345.0" font-size="11" fill="#55524f">n'est « la vraie baisse », aucune ne mesure l'effet du redoublement.</text>
 <text class="pied-licence" x="0" y="359.0" font-size="11" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/le-niveau-des-eleves-baisse-t-il/</text>
 </svg>

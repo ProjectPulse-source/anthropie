@@ -122,6 +122,14 @@ NOMS_EN = {
 ARTICLE_EN = {c: ("the " + n if c == "NL" else n) for c, n in NOMS_EN.items() if c in ARTICLE}
 ORD_FR = {1: "première", 2: "deuxième", 3: "troisième", 4: "quatrième", 5: "cinquième", 6: "sixième", 7: "septième",
           8: "huitième", 9: "neuvième", 10: "dixième"}
+# Petits effectifs en toutes lettres dans la prose (relecture du 11/10/2026) : « parmi les sept pays », jamais « les 7 ».
+# Hors table, le chiffre revient : la phrase reste juste, elle perd seulement la lettre.
+MOTS_FR = {1: "un", 2: "deux", 3: "trois", 4: "quatre", 5: "cinq", 6: "six", 7: "sept", 8: "huit", 9: "neuf", 10: "dix",
+           11: "onze", 12: "douze", 13: "treize", 14: "quatorze", 15: "quinze", 16: "seize", 17: "dix-sept", 18: "dix-huit",
+           19: "dix-neuf", 20: "vingt"}
+MOTS_EN = {1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six", 7: "seven", 8: "eight", 9: "nine", 10: "ten",
+           11: "eleven", 12: "twelve", 13: "thirteen", 14: "fourteen", 15: "fifteen", 16: "sixteen", 17: "seventeen",
+           18: "eighteen", 19: "nineteen", 20: "twenty"}
 ORD_EN = {1: "first", 2: "second", 3: "third", 4: "fourth", 5: "fifth", 6: "sixth", 7: "seventh", 8: "eighth", 9: "ninth",
           10: "tenth"}
 # Entrées dans la zone euro APRÈS l'année des données (décision du Conseil de l'UE du 8 juillet 2025 pour la Bulgarie) : la
@@ -289,9 +297,15 @@ def ordinal_en(n: int) -> str:
 # Les deux pr\u00e9sentations, d\u00e9crites une fois : affichage() et les figures lisent l'une ou l'autre, jamais un litt\u00e9ral.
 LOC = {
     "fr": dict(nb=fr, pct=pct, nom="nom", article=ARTICLE, ordinal=lambda n: ORD_FR.get(n, "%de" % n),
-               liste=lambda noms: " et ".join(noms), point=lambda v: fr(v, 2) + "\u00a0point"),
+               liste=lambda noms: " et ".join(noms), point=lambda v: fr(v, 2) + "\u00a0point",
+               mots=lambda n: MOTS_FR.get(n, str(n)),
+               # Unite accordee au nombre, pour les cles « _pts » (la prose francaise garde ses propres cles).
+               unite=lambda v, mot: "\u00a0point" + ("s" if abs(v) >= 2 else "")),
     "en": dict(nb=en, pct=pct_en, nom="nom_en", article=ARTICLE_EN, ordinal=ordinal_en, liste=liste_en,
-               point=lambda v: en(v, 2) + (" percentage point" if abs(round(v, 2)) == 1 else " percentage points")),
+               point=lambda v: en(v, 2) + (" percentage point" if abs(round(v, 2)) == 1 else " percentage points"),
+               mots=lambda n: MOTS_EN.get(n, str(n)),
+               # English unit agreement: plural unless the displayed value is exactly 1 ("0.31 points").
+               unite=lambda v, mot: " " + mot + ("" if abs(v) == 1 else "s")),
 }
 
 
@@ -1083,6 +1097,8 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts) -> tuple
         nb, pc, nom, article = L["nb"], L["pct"], L["nom"], L["article"]
         A = {"annee": an, "annee_1": str(int(an) - 1), "n_pays": str(len(rows)),
              "n_euro": str(sum(x["euro"] for x in rows)), "n_hors": str(sum(not x["euro"] for x in rows))}
+        A["n_euro_mots"] = L["mots"](sum(x["euro"] for x in rows))
+        A["n_hors_mots"] = L["mots"](sum(not x["euro"] for x in rows))
         for k in ("stock_fin", "stock", "recettes", "charge"):
             A["fr_" + k] = pc(F[k])
         A["fr_prix"] = pc(F["prix"], 2)
@@ -1112,6 +1128,7 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts) -> tuple
         # Énumération sans conjonction, dans les deux langues : la prose la cite entre parenthèses.
         A["plus_charges_moins_endettes"] = ", ".join(x[nom] for x in moins_chers_que_fr)
         A["n_plus_charges_moins_endettes"] = str(len(moins_chers_que_fr))
+        A["n_plus_charges_moins_endettes_mots"] = L["mots"](len(moins_chers_que_fr))
         if se and de:
             A["se_prix"], A["de_prix"] = pc(se["prix"], 2), pc(de["prix"], 2)
         for c in ("FR", "SE", "PT", "DK", "IT", "DE"):
@@ -1127,6 +1144,10 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts) -> tuple
         A["rob_infl_max"] = nb(max(r["effet_inflation"] for r in rob), 2)
         A["rob_r2_min"] = nb(min(r["r2"] for r in rob), 2)
         A["rob_r2_max"] = nb(max(r["r2"] for r in rob), 2)
+        A["effet_euro_pts"] = A["effet_euro"] + L["unite"](round(s["prix_euro_inflation"]["effet_euro"], 1), "percentage point")
+        A["effet_inflation_pts"] = A["effet_inflation"] + L["unite"](round(s["prix_euro_inflation"]["effet_inflation"], 2), "point")
+        A["rob_euro_max_pts"] = A["rob_euro_max"] + L["unite"](round(min(r["effet_euro"] for r in rob), 1), "point")
+        A["rob_infl_max_pts"] = A["rob_infl_max"] + L["unite"](round(max(r["effet_inflation"] for r in rob), 2), "point")
         A["fr_rang_stock"] = L["ordinal"](rang)
         A["devant_fr"] = L["liste"]([x[nom] for x in classement[:rang - 1]]) if rang > 1 else ""
         # Hors UE : une clé par grandeur disponible, jamais de chiffre saisi dans la prose.
@@ -1146,6 +1167,11 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts) -> tuple
                      ("EL", "2012"), ("PT", "2012"), ("IE", "2012"), ("ES", "2012"), ("IT", "2012"), ("SE", "2012"),
                      ("DK", "2012"), ("HU", "2012"), ("SE", an), ("DK", an), ("FR", an), ("IT", an), ("PL", an), ("HU", an)):
             A["ec_%s_%s" % (c.lower(), "an" if a == an else a)] = nb(abs(E[c][a]), 1 if abs(E[c][a]) >= 10 else 2)
+        # Valeur + unite accordee, la ou la prose ecrit l'unite juste apres le nombre.
+        for c, a in (("IT", "1998"), ("SE", "2012"), ("DK", "2012"), ("SE", an), ("DK", an), ("FR", an)):
+            k = "ec_%s_%s" % (c.lower(), "an" if a == an else a)
+            v = abs(E[c][a])
+            A[k + "_pts"] = A[k] + L["unite"](round(v, 1 if v >= 10 else 2), "point")
         A["usa_fra_rapport"] = nb(av["USA"]["charge"] / av["FRA"]["charge"], 1)
         # --- Phase B (OPTIMUM-22) ---
         # M1 : les deux dénominateurs de la charge française, et ce que change le dénominateur.
@@ -1153,6 +1179,7 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts) -> tuple
         A["fr_rang_ipib"] = L["ordinal"](rang_ipib)
         A["fr_rang_charge"] = L["ordinal"](rang_charge)
         A["n_plus_ipib"] = str(len(plus_ipib))
+        A["n_plus_ipib_mots"] = L["mots"](len(plus_ipib))
         A["plus_ipib"] = ", ".join(x[nom] for x in plus_ipib)
         A["fr_rang_recettes"] = L["ordinal"](rang_rec)
         # Décomposition des faux jumeaux (identité vérifiée : produit = rapport des charges).
@@ -1346,7 +1373,7 @@ def figures(lang: str, an: str, rows: list[dict], stats: dict, jum: list[dict], 
                    "charge très différente. Deux droites de moindres carrés, une par groupe, sur leur plage observée. "
                    "Charge : Hongrie %s, Slovénie %s, France %s, Italie %s." % tuple(
                        pct(by[c]["charge"]) for c in ("HU", "SI", "FR", "IT")),
-            c_note="Pointillés : faux jumeaux (plus proche voisin en stock, écart < 10 points, trois plus grands écarts de charge).",
+            c_note="Pointillés : faux jumeaux (plus proche voisin en stock, écart inférieur à 10 points, trois plus grands écarts de charge).",
             p_lx="inflation moyenne %s-%s (IPCH)" % (an_3, an_1),
             p_ly="taux implicite : intérêts %s / dette fin %s" % (an, an_1),
             p_titre="Prix de la dette et inflation récente : l'Europe en %s" % an,

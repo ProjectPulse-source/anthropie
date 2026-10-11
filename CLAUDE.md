@@ -262,6 +262,15 @@ contrôle.
     sans la mesure qui le sépare des autres. **Une comparaison de fenêtres change ses deux bornes** : avant de dire qu'un
     diagnostic « dépend de l'année de départ », tester la fenêtre commune (cas fondateur : 2017-2024 et 2019-2025 donnent
     deux diagnostics, 2019-2024 retourne le second ; l'année d'arrivée comptait autant que celle de départ).
+16. **Relecture de langue sur le texte SERVI, jetons résolus, avant publication** (auteur, 11/10/2026 : « il ne doit pas y avoir
+    de phrase maladroite »). Relecture des onze pages refondues : environ 140 défauts, dont une phrase tronquée à l'écran et une
+    phrase agrammaticale produite par un jeton (« les baisses […] sont aucune sur 35 »). **Un contrôle par motifs ne voit que ce
+    qu'il cherche** (il n'avait rien trouvé là où « a monté » revenait cinq fois) : la relecture se fait phrase à phrase, FR et EN.
+    Défauts types à corriger dans le GÉNÉRATEUR, jamais dans la prose : signe qui contredit le verbe (« a retiré −15,7 » : jeton
+    `_abs`) ; accord de « point » (`_pt` : singulier sous 2 en français, pluriel sauf 1 en anglais) ; chiffres et lettres mêlés
+    dans une énumération (`_mots`). Texte brut lu dans un SVG puis passé par `fr-typo.html` (`safeHTML`) : **échappé avant**,
+    sinon un « < » ouvre une balise et tronque la phrase (corrigé dans `reutiliser.html`). Tournures familières à proscrire :
+    « a monté » (→ « a augmenté »), « partis de plus de 90 % de dette » (→ « dont la dette dépassait 90 % du PIB »).
 
 ## Couche pédagogique — `/enseignants/` (actée par l'auteur, 2026-09-30)
 

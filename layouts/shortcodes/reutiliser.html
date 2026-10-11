@@ -37,8 +37,9 @@
   {{- /* Repli (30/09, dette_monde) : un jeu qui ne porte sa date qu'à la racine (ISO, lue par le sitemap). On la
          formate ici plutôt que de la recopier dans `affichage` : recalculée chaque jour, elle y briserait la
          règle « rien écrit à données identiques ». */ -}}
-  {{- if and (not $releve) $jeu.releve_le -}}{{- $releve = time.Format ":date_long" (time $jeu.releve_le) -}}{{- end -}}
+  {{- if and (not $releve) $jeu.releve_le -}}{{- /* En anglais, le format du reste du site (« 11 October 2026 ») ; « :date_long » rendait « October 11, 2026 ». */ -}}{{- $releve = cond $isEn (time.Format "2 January 2006" (time $jeu.releve_le)) (time.Format ":date_long" (time $jeu.releve_le)) -}}{{- end -}}
 {{- end -}}
+{{- /* Les textes des fiches (titre, montre, precaution) sont du texte brut lu dans les SVG : echappes AVANT fr-typo, qui finit en safeHTML. Sans cela, un « < » (« ecart < 10 points ») ouvrait une balise et tronquait la phrase (volet 4, 11/10/2026). */ -}}
 {{- $sources := .Get "sources" -}}
 {{- /* Texte du bloc « Les données » propre à la page (optionnel) : le texte par
        défaut décrit le jeu de la page du coût, pas celui d'une autre page. */ -}}
@@ -115,9 +116,9 @@
            style="--carte-ratio: {{ index $vb 1 }} / {{ index $vb 2 }}"
            width="{{ index $vb 1 }}" height="{{ index $vb 2 }}" loading="lazy">
       <div class="reutiliser__corps">
-        <h3 class="reutiliser__titre">{{ if $isEn }}{{ .titre }}{{ else }}{{ partial "fr-typo.html" .titre }}{{ end }}</h3>
-        <p class="reutiliser__montre">{{ if $isEn }}{{ .montre }}{{ else }}{{ partial "fr-typo.html" .montre }}{{ end }}</p>
-        <p class="reutiliser__precaution"><strong>{{ $T.precaution }}</strong> {{ if $isEn }}{{ .precaution }}{{ else }}{{ partial "fr-typo.html" .precaution }}{{ end }}</p>
+        <h3 class="reutiliser__titre">{{ if $isEn }}{{ .titre }}{{ else }}{{ partial "fr-typo.html" (htmlEscape .titre) }}{{ end }}</h3>
+        <p class="reutiliser__montre">{{ if $isEn }}{{ .montre }}{{ else }}{{ partial "fr-typo.html" (htmlEscape .montre) }}{{ end }}</p>
+        <p class="reutiliser__precaution"><strong>{{ $T.precaution }}</strong> {{ if $isEn }}{{ .precaution }}{{ else }}{{ partial "fr-typo.html" (htmlEscape .precaution) }}{{ end }}</p>
         <p class="reutiliser__source">{{ .source }}</p>
         <div class="reutiliser__actions">
           <a class="how-to-cite__btn" href="{{ $pngRel | relURL }}" download="{{ .fichier }}.png">{{ $T.png }}</a>

@@ -38,7 +38,7 @@
    "titre": "Un même effort de 10 milliards d'euros : qui le supporterait selon la décision prise ?",
    "montre": "Ce qu'un même effort représenterait pour chaque dixième de niveau de vie selon la décision retenue — impôts, pensions ou enseignement —, puis de combien ce choix change l'effort d'un même groupe.",
    "source": "Insee, comptes nationaux distribués, tableau CND.101 (vingtièmes de niveau de vie, 2020-2023, base 2020) — millésime 2023",
-   "precaution": "Profil d'exposition comptable, non une simulation : ni comportement ni effet en retour. Une baisse de service valorisé n'est pas une perte de revenu monétaire. Le point D1 de la décision fiscale est écarté, son motif figure au pied de la figure."
+   "precaution": "Profil d'exposition comptable, non une simulation : ni comportement ni effet en retour. Une baisse de service valorisé n'est pas une perte de revenu monétaire. Le point D1 de la décision fiscale est écarté ; le motif en est donné au pied du graphique."
   },
   {
    "id": "mecanismes",
@@ -86,15 +86,15 @@
    "id": "exposition",
    "fichier": "qui-paie-exposition-en",
    "titre": "The same €10 billion adjustment: who would bear it, depending on the decision taken?",
-   "montre": "What the same adjustment would represent for each standard-of-living decile depending on the decision taken — taxes, pensions or education —, then how much that choice changes what the same group bears.",
-   "source": "Insee, distributional national accounts, table CND.101 (standard-of-living twentieths, 2020-2023, base 2020) — 2023 vintage",
+   "montre": "What the same adjustment would represent for each standard-of-living decile depending on the decision taken (taxes, pensions or education), then how much that choice changes what the same group bears.",
+   "source": "Insee, distributional national accounts, table CND.101 (standard-of-living twentiles, 2020-2023, base 2020) — 2023 vintage",
    "precaution": "An accounting exposure profile, not a simulation: no behaviour, no feedback effect. A cut in a valued public service is not a loss of cash income. The D1 point of the tax decision is excluded; the reason is given in the figure's footer."
   },
   {
    "id": "mecanismes",
    "fichier": "qui-paie-mecanismes-en",
    "titre": "Through which channels can the burden be distributed?",
-   "montre": "Four possible mechanisms, not exhaustive, refinancing, which rolls the maturity over without designating a loser, and alongside what the debt has financed.",
+   "montre": "Four possible mechanisms (not an exhaustive list); refinancing, which rolls the maturity over without designating a loser; and, alongside, what the debt has financed.",
    "source": "Author's synthesis, non-quantitative diagram",
    "precaution": "No relative weight or causal effect is measured here."
   }

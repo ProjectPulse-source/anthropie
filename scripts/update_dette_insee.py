@@ -593,7 +593,7 @@ LABELS_CARTOUCHE = {
         "titre_taux": "Le taux implicite, %s-%s",
         "titre_longue": "La dette depuis %s, en %% du PIB",
         "montre_ciseau": ("L'encours double en part de PIB pendant que la charge "
-                          "d'intérêts baisse, jusqu'au retournement de 2022."),
+                          "d'intérêts baisse jusqu'à son point bas, puis remonte, surtout à partir de 2022."),
         "montre_taux": ("Le coût moyen du stock : il baisse pendant vingt-cinq "
                         "ans, puis remonte depuis son point bas, surtout par un saut en 2022."),
         "montre_longue": ("La dette monte par paliers, chacun installé par une "
@@ -639,11 +639,11 @@ LABELS_CARTOUCHE = {
                       "Eurostat gov_10a_main, interest D41PAY (%s)",
         "src_taux": "Computed on Eurostat (gov_10a_main) and INSEE series, %s-%s",
         "src_longue": "INSEE, Maastricht debt, %s-%s",
-        "titre_ciseau": "The scissor: debt stock and interest burden, 1995-%s",
+        "titre_ciseau": "The scissors effect: debt stock and interest burden, 1995-%s",
         "titre_taux": "The implicit interest rate, %s-%s",
         "titre_longue": "Debt since %s, as a %% of GDP",
         "montre_ciseau": ("The stock doubles as a share of GDP while the interest "
-                          "burden falls, until the 2022 turn."),
+                          "burden falls to its low point, then rises again, above all from 2022."),
         "montre_taux": ("The average cost of the stock: falling for twenty-five "
                         "years, then rising from its low, mostly through a jump in 2022."),
         "montre_longue": ("Debt climbs in steps, each set by a crisis; in the observed series, the ratio has "
@@ -852,7 +852,7 @@ LABELS_CISEAU = {
         "pct": NBSP + "%",
     },
     "en": {
-        "titre": "The scissor of French public debt: outstanding stock and "
+        "titre": "The scissors effect in French public debt: outstanding stock and "
                  "interest burden, 1995-2026",
         "desc": "Two curves as a percentage of GDP. Above, public debt rises "
                 "from %s%% of GDP in %s to %s%% in %s. Below, interest due by "

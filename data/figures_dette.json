@@ -12,7 +12,7 @@
    "id": "ciseau",
    "fichier": "ciseau-dette-interets",
    "titre": "Le ciseau : encours et charge d'intérêts, 1995-T2 2026",
-   "montre": "L'encours double en part de PIB pendant que la charge d'intérêts baisse, jusqu'au retournement de 2022.",
+   "montre": "L'encours double en part de PIB pendant que la charge d'intérêts baisse jusqu'à son point bas, puis remonte, surtout à partir de 2022.",
    "source": "INSEE, dette de Maastricht (T2 2026)  ·  Eurostat gov_10a_main, intérêts D41PAY (2025)",
    "precaution": "Deux échelles distinctes, une même unité : le % du PIB."
   },
@@ -69,8 +69,8 @@
   {
    "id": "ciseau",
    "fichier": "ciseau-dette-interets-en",
-   "titre": "The scissor: debt stock and interest burden, 1995-Q2 2026",
-   "montre": "The stock doubles as a share of GDP while the interest burden falls, until the 2022 turn.",
+   "titre": "The scissors effect: debt stock and interest burden, 1995-Q2 2026",
+   "montre": "The stock doubles as a share of GDP while the interest burden falls to its low point, then rises again, above all from 2022.",
    "source": "INSEE, Maastricht debt (Q2 2026)  ·  Eurostat gov_10a_main, interest D41PAY (2025)",
    "precaution": "Two separate scales, one shared unit: % of GDP."
   },

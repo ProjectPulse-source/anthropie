@@ -154,7 +154,7 @@
 <text x="0" y="244" font-size="10" fill="#55524f">15ᵉ plus forte baisse estimée sur 38</text>
 <line x1="0" y1="294.0" x2="720" y2="294.0" stroke="#dcd8d3"/>
 <text class="pied-source" x="0" y="309.0" font-size="11" fill="#55524f">OCDE, PISA 2025, volume I, tableaux I.B1.2a.36 à 38 (variation du score moyen entre 2015 et 2025)</text>
-<text class="pied-note" x="0" y="323.0" font-size="11" fill="#55524f">Chaque point est un pays membre de l'OCDE. Bande bleue : la moitié centrale des pays (du premier au troisième</text>
-<text class="pied-note" x="0" y="337.0" font-size="11" fill="#55524f">quartile). Rangs sur estimations ponctuelles ; différences entre pays non testées.</text>
+<text class="pied-note" x="0" y="323.0" font-size="11" fill="#55524f">Chaque point est un pays membre de l'OCDE. Bande bleue : la moitié centrale des pays (du premier au troisième</text>
+<text class="pied-note" x="0" y="337.0" font-size="11" fill="#55524f">quartile). Rangs sur estimations ponctuelles ; différences entre pays non testées.</text>
 <text class="pied-licence" x="0" y="351.0" font-size="11" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/le-niveau-des-eleves-baisse-t-il/</text>
 </svg>

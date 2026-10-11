@@ -116,7 +116,7 @@
     </div>
     <p class="appel-livre__achat-discret">
       {{- with $broche }}Version papier&nbsp;:&nbsp;<a href="{{ . }}">{{ with $prix }}{{ . | safeHTML }}{{ else }}broché{{ end }}</a>{{ end }}
-      {{- with $kindle }}{{ if $broche }} · {{ end }}Kindle&nbsp;:&nbsp;<a href="{{ . }}">{{ with $prixK }}{{ . | safeHTML }}{{ else }}édition Kindle{{ end }}</a>{{ end }}
+      {{- with $kindle }}{{ if $broche }} · {{ end }}Kindle&nbsp;:&nbsp;<a href="{{ . }}">{{ with $prixK }}{{ . | safeHTML }}{{ else }}{{ cond $en "available" "disponible" }}{{ warnf "appel-livre: fiche /livres/%s sans kindle_price, repli « disponible » (%s)" $slug $.Page.RelPermalink }}{{ end }}</a>{{ end }}
     </p>
     {{- else }}
     <p class="appel-livre__meta">

@@ -737,7 +737,17 @@
   "ti_2021": "1,31",
   "ti_2022": "1,80",
   "millesime_dette": "22/04/2026",
-  "millesime_comptes": "21/07/2026"
+  "millesime_comptes": "21/07/2026",
+  "tc_avant_abs": "16,9",
+  "tc_apres_abs": "15,7",
+  "rec_fin_abs": "0,9",
+  "effet_net_pt": "point",
+  "ofce_rec_pt": "points",
+  "ofce_dep_pt": "point",
+  "tresor_dep_hi_pt": "point",
+  "croise_dep_hi_pt": "point",
+  "croise_dep_pt": "point",
+  "rec_fin_pt": "point"
  },
  "affichage_en": {
   "annee_depart": "1995",
@@ -809,6 +819,16 @@
   "ti_2021": "1.31",
   "ti_2022": "1.80",
   "millesime_dette": "22 April 2026",
-  "millesime_comptes": "21 July 2026"
+  "millesime_comptes": "21 July 2026",
+  "tc_avant_abs": "16.9",
+  "tc_apres_abs": "15.7",
+  "rec_fin_abs": "0.9",
+  "effet_net_pt": "points",
+  "ofce_rec_pt": "points",
+  "ofce_dep_pt": "points",
+  "tresor_dep_hi_pt": "points",
+  "croise_dep_hi_pt": "points",
+  "croise_dep_pt": "points",
+  "rec_fin_pt": "points"
  }
 }

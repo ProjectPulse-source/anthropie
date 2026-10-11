@@ -27,7 +27,7 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html) ; jetons résolu
   fichiers: ["qui_paie_donnees.csv", "qui_paie_donnees.json"]
 faq:
   - question: "La dette publique est-elle vraiment un problème ?"
-    answer: "L'argument rassurant est sérieux : quand le taux d'intérêt reste inférieur à la croissance, le ratio de dette peut se stabiliser, à condition que le déficit hors intérêts — le solde primaire — reste sous un seuil qui dépend de l'écart entre ces deux taux et du niveau de la dette. Au-delà, le ratio monte malgré tout. Et même stable, une dette se sert chaque année : son financement et ses ajustements répartissent des coûts et des avantages entre contribuables, usagers, épargnants et générations. La question utile porte alors sur ce qu'elle finance et sur qui supporte les ajustements — elle se traite configuration par configuration, pas par principe."
+    answer: "L'argument rassurant est sérieux : quand le taux d'intérêt reste inférieur à la croissance, le ratio de dette peut se stabiliser, à condition que le déficit hors intérêts — le solde primaire — reste sous un seuil qui dépend de l'écart entre ces deux taux et du niveau de la dette. Au-delà, le ratio monte malgré tout. Et même stable, une dette doit être servie chaque année : son financement et ses ajustements répartissent des coûts et des avantages entre contribuables, usagers, épargnants et générations. La question utile porte alors sur ce qu'elle finance et sur qui supporte les ajustements — elle se traite configuration par configuration, pas par principe."
   - question: "La dette publique est-elle un fardeau pour les générations futures ?"
     answer: "Pas mécaniquement. Les générations suivantes héritent des engagements, mais aussi de ce qu'ils ont financé — infrastructures, formation, patrimoine public — et d'une partie des titres eux-mêmes, détenus directement ou par l'assurance-vie — ce qui ne neutralise pas nécessairement la charge, la dette pouvant aussi évincer du capital productif. Le transfert net dépend de l'usage : une dette qui finance une consommation courante sans contrepartie durable leur transmet surtout un coût ; un investissement dont elles profiteront peut leur transmettre davantage qu'il ne coûte. Ce qui reste vrai dans tous les cas : la décision est prise sans elles. Ce que les déficits ont effectivement financé, dans les comptes, est mesuré sur la page « La dette publique est-elle un fardeau pour les générations futures ? » du même dossier."
   - question: "Qui détient la dette publique française, et qui en touche les intérêts ?"
@@ -45,13 +45,13 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 {{< reutiliser-ancre >}}
 
-Qui paie la dette publique&nbsp;? La réponse change avec la décision prise pour l'ajuster. Un même effort de {{< qp-val "exp_effort" >}}&nbsp;milliards d'euros pèse surtout sur les ménages les plus modestes s'il passe par l'enseignement, surtout sur les plus aisés s'il passe par l'impôt, et presque également sur tous s'il passe par les pensions. Le montant de la facture — encours, charge d'intérêts, coût moyen du stock — est mesuré sur une autre page de ce dossier, [Combien coûte la dette publique&nbsp;?](/cout-de-la-dette-publique/)&nbsp;; celle-ci demande sur qui elle retombe, ce que les données permettent, ou non, d'attribuer, et ce qu'une décision réelle, envisagée puis écartée en {{< qp-val "pens_annee" >}}, en montre.
+Qui paie la dette publique&nbsp;? La réponse change avec la décision prise pour l'ajuster. Un même effort de {{< qp-val "exp_effort" >}}&nbsp;milliards d'euros pèse surtout sur les ménages les plus modestes s'il passe par l'enseignement, surtout sur les plus aisés s'il passe par l'impôt, et presque également sur tous s'il passe par les pensions. Le montant de la facture — encours, charge d'intérêts, coût moyen du stock — est mesuré sur une autre page de ce dossier, [Combien coûte la dette publique&nbsp;?](/cout-de-la-dette-publique/)&nbsp;; celle-ci demande sur qui elle retombe, ce que les données permettent, ou non, d'attribuer, et ce qu'une décision réelle, envisagée pour {{< qp-val "pens_annee" >}} puis écartée, en montre.
 
 {{< dette-chiffres >}}
 
 ## Selon la décision, l'effort ne tombe pas sur les mêmes ménages
 
-L'exercice prend {{< qp-val "exp_effort" >}}&nbsp;milliards d'euros et les répartit trois fois — par une hausse des impôts sur les revenus et le patrimoine, par une baisse des pensions de retraite, par une baisse des dépenses d'enseignement —, chaque fois au prorata de ce que chaque **dixième de niveau de vie** — la population rangée du plus modeste au plus aisé, puis coupée en dix groupes de même taille — verse ou reçoit déjà, puis rapporte le résultat à son revenu. L'impôt retenu est la catégorie des comptes distribués «&nbsp;impôts sur les revenus et le patrimoine&nbsp;»&nbsp;: CSG, impôt sur le revenu et autres impôts de cette catégorie, comme la CRDS, la taxe d'habitation ou l'impôt sur la fortune immobilière. Ce n'est ni une prévision ni une mesure envisagée&nbsp;: aucun comportement, aucun effet en retour n'y entre. C'est la structure actuelle des postes, rendue comparable d'une décision à l'autre.
+La population est rangée du plus modeste au plus aisé, puis coupée en dix groupes de même taille, les **dixièmes de niveau de vie**. L'exercice prend {{< qp-val "exp_effort" >}}&nbsp;milliards d'euros et les répartit trois fois — par une hausse des impôts sur les revenus et le patrimoine, par une baisse des pensions de retraite, par une baisse des dépenses d'enseignement —, toujours au prorata de ce que chaque dixième verse ou reçoit déjà, puis rapporte le résultat à son revenu. L'impôt retenu est la catégorie des comptes distribués «&nbsp;impôts sur les revenus et le patrimoine&nbsp;»&nbsp;: CSG, impôt sur le revenu et autres impôts de cette catégorie, comme la CRDS, la taxe d'habitation ou l'impôt sur la fortune immobilière. Ce n'est ni une prévision ni une mesure envisagée&nbsp;: aucun comportement, aucun effet en retour n'y entre. C'est la structure actuelle des postes, rendue comparable d'une décision à l'autre.
 
 {{< figure-svg fichier="qui-paie-exposition" alt="Deux panneaux. En haut, trois courbes par dixième de niveau de vie : la baisse des dépenses d'enseignement part très haut sur le premier dixième et décroît fortement ; la hausse des impôts fait l'inverse et monte sur le dernier dixième ; les pensions restent presque plates. En bas, des barres montrant le rapport entre la décision la plus lourde et la plus légère pour chaque dixième : élevé aux deux extrémités, minimal en D7-D8." >}}Insee, comptes nationaux distribués, tableau CND.101 (vingtièmes de niveau de vie, 2020-2023, base 2020)&nbsp;; millésime 2023. Profil d'exposition comptable, non une simulation.{{< /figure-svg >}}
 
@@ -67,7 +67,7 @@ L'exercice prend {{< qp-val "exp_effort" >}}&nbsp;milliards d'euros et les répa
 
 </div>
 
-**Au milieu de l'échelle, le choix du levier compte le moins.** Pour le {{< qp-val "exp_creux_zone_mots" >}}&nbsp;dixième, un peu au-dessus du milieu, l'effort moyen changerait peu d'une décision à l'autre&nbsp;: la plus lourde y coûterait {{< qp-val "exp_ecart_creux" >}}&nbsp;fois la plus légère. Pour les 10&nbsp;% les plus aisés, elle coûterait {{< qp-val "exp_ecart_d10" >}}&nbsp;fois la plus légère, et au moins autant pour les 10&nbsp;% les plus modestes&nbsp;: aux deux bouts de l'échelle, le choix du levier décide presque tout. Ces dixièmes ne supporteraient pas moins d'effort&nbsp;; changer de levier y modifierait seulement moins leur exposition moyenne, qui ne dit pas la situation de chacun des ménages qui les composent. La convergence se retrouve dans les quatre millésimes {{< qp-val "exp_millesimes" >}} — qui partagent conventions et structures, et ne sont donc pas des réplications indépendantes —, et elle ne vaut que pour ces trois instruments ainsi répartis.
+**Au milieu de l'échelle, le choix du levier compte le moins.** Pour le {{< qp-val "exp_creux_zone_mots" >}}&nbsp;dixième, un peu au-dessus du milieu, l'effort moyen changerait peu d'une décision à l'autre&nbsp;: la plus lourde y coûterait {{< qp-val "exp_ecart_creux" >}}&nbsp;fois la plus légère. Pour les 10&nbsp;% les plus aisés, elle coûterait {{< qp-val "exp_ecart_d10" >}}&nbsp;fois la plus légère, et au moins autant pour les 10&nbsp;% les plus modestes&nbsp;: aux deux bouts de l'échelle, le choix du levier décide presque tout. Ces dixièmes ne supporteraient pas moins d'effort&nbsp;; simplement, changer de levier y modifierait moins leur exposition moyenne, qui ne dit pas la situation de chacun des ménages qui les composent. La convergence se retrouve dans les quatre millésimes {{< qp-val "exp_millesimes" >}} — qui partagent conventions et structures, et ne sont donc pas des réplications indépendantes —, et elle ne vaut que pour ces trois leviers ainsi répartis.
 
 <details class="repli"><summary>Trois épreuves du creux en {{< qp-val "exp_creux_zone" >}}, et les limites de l'exercice</summary>
 
@@ -136,11 +136,11 @@ Ce total porte sur le champ des comptes distribués, qui n'est pas celui du déf
 
 {{< fig-actions id="solde-net" >}}
 
-**Qui verse net, qui reçoit net.** En moyenne par UC, les transferts reçus dépassent les prélèvements dans chacun des {{< qp-val "net_benef_n" >}} premiers dixièmes — de {{< qp-val "net_d1" >}}&nbsp;€ par UC dans le premier —, et le solde bascule au dixième {{< qp-val "net_bascule" >}}&nbsp;: dans les {{< qp-val "net_contrib_n" >}} derniers, c'est l'inverse, et le dernier dixième verse en moyenne {{< qp-val "net_d10" >}}&nbsp;€ par UC de plus qu'il ne reçoit.
+**Qui verse net, qui reçoit net.** En moyenne par UC, les transferts reçus dépassent les prélèvements dans chacun des {{< qp-val "net_benef_n_mots" >}} premiers dixièmes — de {{< qp-val "net_d1" >}}&nbsp;€ par UC dans le premier —, et le solde bascule au dixième {{< qp-val "net_bascule" >}}&nbsp;: dans les {{< qp-val "net_contrib_n_mots" >}} derniers, c'est l'inverse, et le dernier dixième verse en moyenne {{< qp-val "net_d10" >}}&nbsp;€ par UC de plus qu'il ne reçoit.
 
 <div class="resultat-phrase">
 
-**Une moyenne de groupe ne décrit pas ses membres.** {{< qp-val "benef_ensemble" >}}&nbsp;% des personnes sont bénéficiaires nettes cette année-là, {{< qp-val "benef_d1" >}}&nbsp;% dans le premier dixième et {{< qp-val "benef_d10" >}}&nbsp;% dans le dernier. Mais elles ne sont majoritaires que dans les {{< qp-val "benef_majo_n" >}} premiers dixièmes&nbsp;: dans le dixième {{< qp-val "benef_dernier_moyen" >}}, qui reçoit en moyenne {{< qp-val "net_dernier_moyen" >}}&nbsp;€ par UC de plus qu'il ne verse, elles ne sont plus que {{< qp-val "benef_dernier_moyen_pct" >}}&nbsp;%&nbsp;: **le signe d'une moyenne ne dit pas la situation de la majorité.** Un groupe peut recevoir plus qu'il ne verse en moyenne alors que la majorité de ses membres versent plus qu'ils ne reçoivent&nbsp;: il suffit que ce que reçoivent en moyenne les bénéficiaires nets l'emporte sur ce que versent en moyenne les autres. Les données regroupées ne disent pas comment ces soldes se répartissent.
+**Une moyenne de groupe ne décrit pas ses membres.** {{< qp-val "benef_ensemble" >}}&nbsp;% des personnes sont bénéficiaires nettes cette année-là, {{< qp-val "benef_d1" >}}&nbsp;% dans le premier dixième et {{< qp-val "benef_d10" >}}&nbsp;% dans le dernier. Mais elles ne sont majoritaires que dans les {{< qp-val "benef_majo_n_mots" >}} premiers dixièmes&nbsp;: dans le dixième {{< qp-val "benef_dernier_moyen" >}}, qui reçoit en moyenne {{< qp-val "net_dernier_moyen" >}}&nbsp;€ par UC de plus qu'il ne verse, elles ne sont plus que {{< qp-val "benef_dernier_moyen_pct" >}}&nbsp;%. **Le signe d'une moyenne ne dit pas la situation de la majorité.** Un groupe peut recevoir plus qu'il ne verse en moyenne alors que la majorité de ses membres versent plus qu'ils ne reçoivent&nbsp;: il suffit que ce que reçoivent en moyenne les bénéficiaires nets l'emporte sur ce que versent en moyenne les autres. Les données regroupées ne disent pas comment ces soldes se répartissent.
 
 </div>
 
@@ -158,7 +158,7 @@ C'est le solde d'une **année**, non d'une vie&nbsp;: les pensions de retraite y
 
 {{< fig-actions id="age" >}}
 
-En {{< qp-val "cd_annee" >}}, selon ces conventions, les ménages dont l'âge moyen des adultes atteint 65&nbsp;ans ou plus reçoivent {{< qp-val "age_recu_65" >}}&nbsp;€ par unité de consommation de transferts — dont {{< qp-val "age_esp_65" >}}&nbsp;€ de prestations en espèces, pensions comprises — et versent {{< qp-val "age_prel_65" >}}&nbsp;€ de prélèvements, contre {{< qp-val "age_prel_5064" >}}&nbsp;€ pour les ménages de 50 à 64&nbsp;ans. Les pensions correspondent pour une part à des droits acquis au cours de la carrière, ici comptés comme prestations courantes&nbsp;; l'âge du ménage n'est pas le statut de retraite de chacun de ses membres, et un montant élevé de soins imputés traduit aussi des besoins plus élevés. Cette photographie ne désigne aucun payeur de demain.
+En {{< qp-val "cd_annee" >}}, selon ces conventions, les ménages dont l'âge moyen des adultes atteint 65&nbsp;ans ou plus reçoivent {{< qp-val "age_recu_65" >}}&nbsp;€ de transferts par unité de consommation — dont {{< qp-val "age_esp_65" >}}&nbsp;€ de prestations en espèces, pensions comprises — et versent {{< qp-val "age_prel_65" >}}&nbsp;€ de prélèvements, contre {{< qp-val "age_prel_5064" >}}&nbsp;€ pour les ménages de 50 à 64&nbsp;ans. Les pensions correspondent pour une part à des droits acquis au cours de la carrière, ici comptés comme prestations courantes&nbsp;; l'âge du ménage n'est pas le statut de retraite de chacun de ses membres, et un montant élevé de soins imputés traduit aussi des besoins plus élevés. Cette photographie ne désigne aucun payeur de demain.
 
 </details>
 
@@ -180,7 +180,7 @@ L'inflation attendue au moment où le taux d'un titre a été fixé tend à êtr
 
 ## Trois hypothèses à tester {#hypotheses}
 
-Les canaux disent par où la charge peut passer&nbsp;; trois hypothèses plus fortes circulent sur ceux qu'elle atteindrait. Aucune n'est établie par les données de cette page, et chacune demande sa propre épreuve.
+Les canaux disent par où la charge peut passer&nbsp;; trois hypothèses plus fortes circulent quant à ceux qu'elle atteindrait. Aucune n'est établie par les données de cette page, et chacune demande sa propre épreuve.
 
 ### Les générations futures — ce dont elles héritent
 
@@ -198,7 +198,7 @@ Les ménages et les entreprises qui peuvent déplacer leurs revenus, leur patrim
 
 <details class="repli"><summary>Pour l'éprouver&nbsp;: des groupes définis d'avance, un ajustement précis, une mesure fixée</summary>
 
-Pour l'éprouver, il faut définir ces groupes avant d'observer l'ajustement, préciser l'ajustement étudié et fixer une mesure de l'effort&nbsp;; elle serait affaiblie par un ajustement portant surtout sur d'autres groupes, ou par des compensations accordées aux perdants. Mobilité géographique, mobilité de la base imposable et capacité à remplacer un service public sont trois propriétés distinctes. Le canal territorial est examiné sur la page [Dette publique&nbsp;: pourquoi les collectivités locales sont-elles la variable d'ajustement&nbsp;?](/dette-publique-collectivites-locales/)
+Pour l'éprouver, il faut définir ces groupes avant d'observer l'ajustement, préciser l'ajustement étudié et fixer une mesure de l'effort&nbsp;; l'hypothèse serait affaiblie par un ajustement portant surtout sur d'autres groupes, ou par des compensations accordées aux perdants. Mobilité géographique, mobilité de la base imposable et capacité à remplacer un service public sont trois propriétés distinctes. Le canal territorial est examiné sur la page [Dette publique&nbsp;: pourquoi les collectivités locales sont-elles la variable d'ajustement&nbsp;?](/dette-publique-collectivites-locales/)
 
 </details>
 
@@ -208,7 +208,7 @@ Un budget contraint par le service de la dette **peut inciter à reporter** les 
 
 <details class="repli"><summary>Plausible, non établi&nbsp;: aucun agrégat ne mesure un investissement empêché par les intérêts</summary>
 
-Il reste à l'établir décision par décision — quelle dépense, reportée par quelle décision, pour quel motif budgétaire —, car aucun agrégat ne mesure un investissement empêché par les intérêts. Là où il est établi, il double le transfert&nbsp;: aux engagements transmis s'ajoute le bénéfice qui n'a pas été construit, et celui-là n'apparaît dans aucun encours.
+Il reste à l'établir décision par décision — quelle dépense, reportée par quelle décision, pour quel motif budgétaire —, car aucun agrégat ne mesure un investissement empêché par les intérêts. Là où il est établi, il alourdit le transfert&nbsp;: aux engagements transmis s'ajoute le bénéfice qui n'a pas été construit, et celui-là n'apparaît dans aucun encours.
 
 </details>
 
@@ -254,7 +254,7 @@ Aucune statistique ne dit, à elle seule, qui supporte au bout du compte la char
 
 **«&nbsp;Qui paie&nbsp;?&nbsp;» a une réponse par décision, et le choix pèse surtout aux extrémités.** Un même effort retombe sur les plus modestes par l'enseignement, sur les plus aisés par l'impôt&nbsp;; au milieu de l'échelle, les trois leviers étudiés produisent des expositions proches. Nommer la décision et l'alternative transforme une opinion en énoncé vérifiable.
 
-**Détenir n'est pas payer, et les intérêts ne se suivent que jusqu'à un point.** On observe les porteurs directs, on approche les porteurs indirects par l'épargne des ménages, mais aucune statistique ne dit quels ménages reçoivent les intérêts&nbsp;: la répartition des porteurs renseigne sur leur destination, jamais sur leur financement.
+**Détenir n'est pas payer, et les intérêts ne se suivent que jusqu'à un point.** On observe les porteurs directs, on approche les porteurs indirects par l'épargne des ménages, mais aucune statistique ne dit quels ménages reçoivent les intérêts&nbsp;: la répartition des porteurs renseigne sur la destination des intérêts, jamais sur qui les finance.
 
 **Une moyenne de groupe ne décrit pas ses membres.** Un dixième peut recevoir plus qu'il ne verse *en moyenne* alors que la majorité de ses membres versent plus qu'ils ne reçoivent. Une statistique de dixièmes répond à «&nbsp;comment se répartit la masse&nbsp;?&nbsp;», pas à «&nbsp;que vit une personne de ce dixième&nbsp;?&nbsp;».
 
