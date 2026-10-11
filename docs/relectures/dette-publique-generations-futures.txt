@@ -1,4 +1,4 @@
-# relu le 2026-10-11 ; texte servi de /dette-publique-generations-futures/, build de 57dc84f + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /dette-publique-generations-futures/, build de b8f4b66 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 La dette publique est-elle un fardeau pour les générations futures ?
 Une dette peut laisser aux générations suivantes une charge, mais aussi des écoles, des routes et d'autres équipements.
@@ -442,7 +442,9 @@ Retraites.
 COR, rapport annuel de juin 2026, données de la synthèse, scénario de référence ; règle d’indexation de l’Agirc-Arrco : partie 1, chapitre 2 du rapport.
 Contrôle : pour chaque pays et chaque année, les ratios calculés sont comparés à ceux qu’Eurostat publie en pourcentage du PIB, que le calcul n’utilise pas.
 Au-delà de 0,11 point d’écart, l’année est écartée et comptée (0 sur 837) ; pour la France, le script s’arrête.
-Aucun chiffre de cette page n’est saisi à la main : tous viennent du même script, qui vérifie les principales affirmations chiffrées et s’arrête si leurs conditions ne sont plus remplies ; leur formulation fait l’objet d’une relecture éditoriale.
+Les chiffres calculés viennent tous du même script, qui vérifie les principales affirmations chiffrées et s’arrête si leurs conditions ne sont plus remplies ; leur formulation fait l’objet d’une relecture éditoriale.
+Seule la dernière part des non-résidents, lue sur le graphique de l’Agence France Trésor, est transcrite à la main ; le relevé du trimestre précédent est contrôlé contre Webstat.
+Les chiffres des études citées sont repris tels qu’elles les publient.
 Les arguments ont été mis à l’épreuve avant l’écriture de la page, selon un protocole fixé avant le calcul.
 Réutiliser cette page
 Les figures, les données et une citation prête, sous licence libre.

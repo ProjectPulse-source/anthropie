@@ -1,4 +1,4 @@
-# relu le 2026-10-11 ; texte servi de /inflation-et-dette-publique/, build de 4824a6f + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /inflation-et-dette-publique/, build de b8f4b66 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 L'inflation a-t-elle vraiment allégé la dette française ?
 L'État a-t-il gagné 150 milliards grâce à l'inflation ?
@@ -261,7 +261,8 @@ Répartie selon les parts de détention de la dette négociable de l’État à 
 C’est une allocation mécanique, pas une mesure de qui a perdu.
 Les titres changent de mains au fil des années, et l’érosion, calculée sur des flux, est répartie selon des parts mesurées en valeur de marché.
 Le porteur direct n’est pas forcément le perdant final : un assureur a lui-même des engagements nominaux envers ses assurés, une banque des dépôts.
-Aucun chiffre de cette page n’est saisi à la main : tous viennent d’un calcul de l’auteur, reproductible, dont l’extrait est archivé avec ses empreintes ; le script qui écrit la page vérifie les principales affirmations chiffrées et s’arrête si leurs conditions ne sont plus remplies.
+Les chiffres de cette page viennent d’un calcul de l’auteur, reproductible, dont l’extrait est archivé avec ses empreintes ; le script qui écrit la page vérifie les principales affirmations chiffrées et s’arrête si leurs conditions ne sont plus remplies.
+Plusieurs valeurs publiées sont transcrites dans ce calcul avec leur source : la charge d’indexation inscrite au budget, les taux annuels des OAT et des BTF et les points morts d’inflation publiés par l’Agence France Trésor, et les prévisions d’inflation de la Banque de France et de la Commission.
 Avant l’écriture, le calcul a été soumis à des contre-expertises externes, qui ont fait changer le calendrier des prix, la construction de la plage et le traitement des titres indexés.
 Réutiliser cette page
 Les figures, les données et une citation prête, sous licence libre.

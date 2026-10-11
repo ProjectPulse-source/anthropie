@@ -1,4 +1,4 @@
-# relu le 2026-10-11 ; texte servi de /dette-publique-collectivites-locales/, build de 57dc84f + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /dette-publique-collectivites-locales/, build de b8f4b66 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Les collectivités locales sont-elles une variable d'ajustement des finances publiques ?
 La dette des collectivités ne permet pas de trancher : la règle d'équilibre de leurs budgets leur interdit d'emprunter pour compenser une baisse durable des recettes qui financent leurs dépenses courantes, si bien qu'une contrainte venue de l'État se lit dans leurs recettes et leurs dépenses.
@@ -391,7 +391,9 @@ Textes — code général des collectivités territoriales, articles L.
 8 et 29), 2025 (art.
 186) et 2026 ; projet de loi de finances déposé le 1er octobre 2026 et avis du Haut Conseil des finances publiques sur ce projet ; tous lus dans le texte et archivés avec leur empreinte ; Real Decreto-ley 21/2012 et loi organique 2/2012 (Espagne) ; loi n° 448/1998, art.
 28, et loi n° 208/2015 (Italie, pacte de stabilité interne puis règle d’équilibre) ; Insee, Les comptes des administrations publiques en 2010, 2014 et 2015 ; Cour des comptes, Les finances publiques locales 2025 et réponses publiées.
-Les calculs, les gardes et les figures sont produits par un script unique, relancé à chaque publication des sources ; aucun chiffre de cette page n’est saisi à la main, et le script refuse d’écrire si une donnée cesse de soutenir une phrase, ou si une phrase tire des chiffres une conclusion qu’ils ne portent pas.
+Les calculs, les gardes et les figures sont produits par un script unique, relancé à chaque publication des sources ; les montants sont lus dans les séries d’Eurostat et de l’OFGL et dans les textes archivés (Légifrance, projet de loi de finances).
+Le script s’arrête si une donnée ne vérifie plus l’une des phrases chiffrées qu’il contrôle, ou si la page emploie l’une des formulations qu’il interdit.
+Le partage du reversement du DILICO, tiré de l’article 186 de la loi de finances pour 2025, est écrit dans le texte.
 Télécharger les données (licence CC BY 4.0) : CSV, en format long, lisible dans un tableur ; JSON, avec les calculs, les définitions et le compte rendu des gardes.
 Réutiliser cette page
 Les figures, les données et une citation prête, sous licence libre.

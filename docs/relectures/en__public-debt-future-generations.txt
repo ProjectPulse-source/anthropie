@@ -1,4 +1,4 @@
-# relu le 2026-10-11 ; texte servi de /en/public-debt-future-generations/, build de 57dc84f + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /en/public-debt-future-generations/, build de b8f4b66 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Is public debt a burden on future generations?
 A debt can leave the next generations a charge, but also schools, roads and other equipment.
@@ -433,7 +433,9 @@ Pensions.
 COR, annual report of June 2026, data from the summary, baseline scenario; Agirc-Arrco indexation rule: part 1, chapter 2 of the report.
 Check: for each country and each year, the calculated ratios are compared with those Eurostat publishes as a percentage of GDP, which the calculation does not use.
 Beyond a gap of 0.11 points, the year is excluded and counted (0 out of 837); for France, the script stops.
-No figure on this page is entered by hand: all come from the same script, which checks the main quantitative statements and stops if their conditions are no longer met; their wording is reviewed editorially.
+The computed figures all come from the same script, which checks the main quantitative statements and stops if their conditions are no longer met; their wording is reviewed editorially.
+Only the latest non-resident share, read on the Agence France Trésor chart, is transcribed by hand; the reading for the previous quarter is checked against Webstat.
+Figures from the studies cited are given as they publish them.
 The arguments were tested before the page was written, following a protocol set before the calculation.
 Reusing this page
 The charts, the data and a ready-made citation, under an open licence.

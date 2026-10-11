@@ -1,4 +1,4 @@
-# relu le 2026-10-11 ; texte servi de /manque-t-il-des-professeurs/, build de 86a46f0 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /manque-t-il-des-professeurs/, build de b8f4b66 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Manque-t-il des professeurs au lycée ?
 Au lycée général et technologique public, 10,4 % des heures de cours prévues n'ont pas été assurées en 2024-2025, une sur dix.
 Sur ces 10,4 points, les absences individuelles d'enseignants non remplacées en représentent 3,9 ; les fermetures d'établissement, les enseignants mobilisés par les examens ou les commissions et leur formation, 6,6.
@@ -241,7 +241,8 @@ Chaque énoncé a été relu à sa source primaire quand elle existe : SNES-FSU,
 47-48 : le taux de remplacement de courte durée qu’elle cite porte sur le second degré public, France entière, bien que le rapport soit consacré au collège ; DEPP, projections d’effectifs à l’horizon 2035 (avril 2026).
 Les propos de l’Union syndicale lycéenne et du SNPDEN-Unsa ne sont connus que par la presse.
 Indice des prix du PIB : Eurostat (comptes nationaux de l’Insee).
-Aucun chiffre de cette page n’est saisi à la main : tous viennent d’un calcul de l’auteur, dont l’extrait est archivé avec ses empreintes ; le script qui écrit la page vérifie chaque affirmation chiffrée et s’arrête si elle n’est plus vraie.
+Les chiffres de cette page viennent d’un calcul de l’auteur, dont l’extrait est archivé avec ses empreintes ; le script qui écrit la page vérifie les principales affirmations chiffrées et s’arrête si l’une n’est plus vraie.
+Les pourcentages annoncés par les syndicats et par le communiqué du ministère sont repris tels qu’ils ont été publiés.
 Le protocole a été écrit et soumis à une contre-expertise externe avant le premier calcul, et chacun de ses contrôles a détecté les erreurs qu’on y avait introduites volontairement.
 La page publiée a reçu une seconde contre-expertise, qui a fait ajouter les résultats des concours 2026, la dépense de 2025 et les écarts entre établissements, et préciser plusieurs formulations ; sa refonte d’octobre 2026, une troisième, qui a fait corriger le périmètre de plusieurs chiffres et séparer la session 2026 de la série des concours.
 Réutiliser cette page

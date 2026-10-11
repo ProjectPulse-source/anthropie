@@ -1,4 +1,4 @@
-# relu le 2026-10-11 ; texte servi de /dette-publique-peut-elle-baisser/, build de 86a46f0 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /dette-publique-peut-elle-baisser/, build de b8f4b66 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 La dette publique peut-elle baisser ?
 Oui : ce qui peut baisser, c'est le poids de la dette dans le PIB, même quand son montant augmente.
@@ -370,7 +370,8 @@ Contrôle : pour chaque pays et chaque année, le ratio de dette et le solde pri
 Au-delà de 0,11 point d’écart, l’année est écartée et comptée (dix sur 805, listées dans le fichier JSON) ; pour la France et les pays comparés, le script s’arrête.
 Une fenêtre qui contient une année de croissance nominale supérieure à 35 % (hyperinflation, rupture de série) est écartée.
 Les pays comparés à la France sont désignés par une règle, non choisis : dette supérieure à 90 % du PIB à la fin de 2015 ; le même calcul est refait à 80 et à 100 %.
-Aucun chiffre de cette page n’est saisi à la main : tous viennent du même script, qui vérifie les principales affirmations chiffrées et s’arrête si leurs conditions ne sont plus remplies ; leur formulation fait l’objet d’une relecture éditoriale.
+Les chiffres calculés sur les séries d’Eurostat viennent tous du même script, qui vérifie les principales affirmations chiffrées et s’arrête si leurs conditions ne sont plus remplies ; leur formulation fait l’objet d’une relecture éditoriale.
+Les chiffres attribués à la direction générale du Trésor, au Conseil d’analyse économique et à l’OFCE sont repris tels qu’ils les publient.
 Réutiliser cette page
 Les figures, les données et une citation prête, sous licence libre.
 Chaque figure porte dans l'image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.

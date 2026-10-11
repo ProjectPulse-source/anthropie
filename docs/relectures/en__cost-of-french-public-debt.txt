@@ -1,4 +1,4 @@
-# relu le 2026-10-11 ; texte servi de /en/cost-of-french-public-debt/, build de 9bd4833 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /en/cost-of-french-public-debt/, build de b8f4b66 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 What does French public debt actually cost?
 In 2025, French general government owes 66.6 billion euros of interest, 4.3% of its revenue, and 124% more, in euros, than at the 2020 trough.
@@ -211,8 +211,8 @@ Which leaves a question these figures do not settle: who ultimately bears this b
 That is the subject of the next page.
 To take the analysis further Dette Publique : Qui paie vraiment ?, the author's book, in French: contents, excerpts and reviews →
 Where these figures come from
-The figures on this page are derived automatically from official sources (INSEE, Eurostat), never copied by hand, and re-queried every week; last retrieval that changed a value: 11 October 2026.
-Two families of values are entered by hand, with their source and date: the Government’s forecasts and the Agence France Trésor benchmarks.
+The figures on this page are derived automatically from INSEE and Eurostat series, re-queried every week; last retrieval that changed a value: 11 October 2026.
+Three sets of values are stored in the repository, each with its source and date: the 1978-1994 ratios, transcribed from an INSEE table (their junction year, 1995, is checked against the live series at every run); and, entered by hand, the Government’s forecasts and the Agence France Trésor benchmarks.
 Open data: dette_officielle.json, CC BY 4.0 licence.
 INSEE and Eurostat series, interest on an accrual basis, implicit rate on the stock at the end of the previous year, dated values entered by hand; compilation under a CC BY 4.0 licence
 Values derived automatically from official sources: quarterly Maastricht debt from INSEE (series 010777616 — stock in billions of euros — and 010777608 — % of GDP); interest due (D41PAY), interest received (D41REC) and total revenue (TR) of general government (Eurostat, gov_10a_main); expenditure by COFOG function, including the ten main functions (Eurostat, gov_10a_exp); the 10-year yield (Eurostat, irt_lt_mcby_a).

@@ -146,8 +146,7 @@ au référendum. Source&nbsp;: [Un président peut-il recourir au référendum&n
 
 ### Méthode et sources {#methode}
 
-Les nombres viennent des pages de données du site, chacune produite par un script qui relit les sources officielles
-et refuse d'écrire si une donnée cesse de soutenir une phrase&nbsp;: données ouvertes de l'Assemblée nationale et base
+Les nombres viennent des pages de données du site, chacune produite par un script qui relit ses sources et s'arrête si une donnée ne remplit plus les conditions dont dépendent les principales phrases de sa page&nbsp;: données ouvertes de l'Assemblée nationale et base
 Dosleg du Sénat, rapprochées loi par loi (documents 1 à 3)&nbsp;; baromètre de l'application des lois de l'Assemblée
 nationale et de LexImpact (document 5)&nbsp;; décisions du Conseil constitutionnel (prolongement). Le document 4 est un
 texte&nbsp;: les données du site ne comptent pas les saisines du Conseil constitutionnel sur les lois ordinaires. Les

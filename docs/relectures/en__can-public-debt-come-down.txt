@@ -1,4 +1,4 @@
-# relu le 2026-10-11 ; texte servi de /en/can-public-debt-come-down/, build de 9bd4833 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /en/can-public-debt-come-down/, build de b8f4b66 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Can public debt come down?
 Yes: what can fall is the weight of debt in GDP, even while its amount rises.
@@ -366,7 +366,8 @@ Check: for each country and each year, the calculated debt ratio and primary bal
 Beyond a gap of 0.11 points, the year is excluded and counted (ten out of 805, listed in the JSON file); for France and the compared countries, the script stops.
 A window containing a year of nominal growth above 35% (hyperinflation, series break) is excluded.
 The countries compared with France are designated by a rule, not chosen: debt above 90% of GDP at end-2015; the same calculation is redone at 80% and 100%.
-No figure on this page is entered by hand: all come from the same script, which checks the main quantitative statements and stops if their conditions are no longer met; their wording is reviewed editorially.
+The figures computed from Eurostat series all come from the same script, which checks the main quantitative statements and stops if their conditions are no longer met; their wording is reviewed editorially.
+Figures attributed to the French Treasury, the Conseil d’analyse économique and the OFCE are given as they publish them.
 Reusing this page
 The charts, the data and a ready-made citation, under an open licence.
 Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it does not come apart from what makes it readable.

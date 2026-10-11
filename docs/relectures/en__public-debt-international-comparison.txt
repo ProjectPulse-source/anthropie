@@ -1,4 +1,4 @@
-# relu le 2026-10-11 ; texte servi de /en/public-debt-international-comparison/, build de 9bd4833 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /en/public-debt-international-comparison/, build de b8f4b66 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Public debt: why 100% of GDP does not carry the same burden everywhere
 At almost equal debt levels, Hungary devotes 8.9% of its public revenue to interest; Slovenia, 2.7%.
@@ -576,7 +576,7 @@ The working paper AWP-09 uses the charge identity and these yield spreads, with 
 Advanced economies outside the EU (with caveats) — OECD, Economic Outlook: gross interest, revenue, GDP and gross financial liabilities of general government.
 Major emerging economies (indicative) — IMF, World Economic Outlook (general government gross debt); World Bank, World Development Indicators (interest as a % of central government revenue).
 Debt stocks are those of Eurostat’s annual series (gov_10dd_edpt1) as retrieved on the date shown at the top of the page; quarterly data, published at other dates, may differ slightly from them, as on the page What does French public debt actually cost?, drawn from INSEE’s quarterly series.
-The calculations, statistics and figures are produced by a single script, re-run with each release of the sources; no figure on this page is entered by hand.
+The calculations, statistics and figures are produced by a single script, re-run with each release of the sources; every computed figure comes from official series, and figures from the studies cited are given as they publish them.
 Download the data (CC BY 4.0 licence): CSV, one row per country, readable in a spreadsheet; JSON, with the statistics and definitions.
 Method: the burden, the stock and the implicit interest rate satisfy the exact identity given above, using debt at the end of the previous year (the ECB’s implicit interest rate convention, distinct from Eurostat’s “apparent cost”, based on average debt); the robustness of the coefficients is recalculated at each update over inflation windows of two to five years; the statistics are simple, descriptive least squares.
 Reusing this page

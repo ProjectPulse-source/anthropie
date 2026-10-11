@@ -208,7 +208,7 @@ This page prices the bill. It does not say who settles it — and that is where 
 
 ## Where these figures come from
 
-The figures on this page are **derived automatically from official sources** (INSEE, Eurostat), never copied by hand, and re-queried every week; last retrieval that changed a value: {{< dette-val "releve_le" >}}. Two families of values are entered by hand, with their source and date: the Government's forecasts and the Agence France Trésor benchmarks. Open data: [dette_officielle.json](/dette_officielle.json), CC BY 4.0 licence.
+The figures on this page are **derived automatically from INSEE and Eurostat series**, re-queried every week; last retrieval that changed a value: {{< dette-val "releve_le" >}}. Three sets of values are stored in the repository, each with its source and date: the 1978-1994 ratios, transcribed from an INSEE table (their junction year, 1995, is checked against the live series at every run); and, entered by hand, the Government's forecasts and the Agence France Trésor benchmarks. Open data: [dette_officielle.json](/dette_officielle.json), CC BY 4.0 licence.
 
 <details class="repli"><summary>INSEE and Eurostat series, interest on an accrual basis, implicit rate on the stock at the end of the previous year, dated values entered by hand; compilation under a CC BY 4.0 licence</summary>
 

@@ -1,4 +1,4 @@
-# relu le 2026-10-11 ; texte servi de /cout-de-la-dette-publique/, build de 86a46f0 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /cout-de-la-dette-publique/, build de b8f4b66 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Combien coûte la dette publique ?
 En 2025, les administrations publiques doivent 66,6 milliards d'euros d'intérêts, 4,3 % de leurs recettes : 124 % de plus qu'au creux de 2020.
@@ -223,8 +223,8 @@ Demander l'exemplaire offert →
 Version papier : 19 € · Kindle : 9,99 €
 Sommaire, extraits et recensions →
 D’où viennent ces chiffres
-Les valeurs de cette page sont dérivées automatiquement des sources officielles (INSEE, Eurostat), jamais recopiées, et réinterrogées chaque semaine ; dernier relevé ayant fait bouger une valeur : 11/10/2026.
-Deux familles de valeurs sont saisies à la main, avec leur source et leur date : les prévisions du Gouvernement et les repères de l’Agence France Trésor.
+Les valeurs de cette page sont dérivées automatiquement des séries de l’INSEE et d’Eurostat, réinterrogées chaque semaine ; dernier relevé ayant fait bouger une valeur : 11/10/2026.
+Trois familles de valeurs sont conservées dans le dépôt, avec leur source et leur date : les ratios de 1978 à 1994, transcrits d’un tableau de l’INSEE (leur raccord, l’année 1995, est contrôlé contre la série vivante à chaque exécution) ; et, saisies à la main, les prévisions du Gouvernement et les repères de l’Agence France Trésor.
 Données en accès libre : dette_officielle.json, licence CC BY 4.0.
 Séries INSEE et Eurostat, intérêts en droits constatés, taux implicite sur la dette de fin d'année précédente, valeurs saisies datées ; compilation sous licence CC BY 4.0
 Valeurs dérivées automatiquement des sources officielles : dette de Maastricht trimestrielle de l’INSEE (séries 010777616 — encours en milliards d’euros — et 010777608 — % du PIB) ; intérêts dus (D41PAY), intérêts reçus (D41REC) et recettes totales (TR) des administrations publiques (Eurostat, gov_10a_main) ; dépenses par fonction COFOG, dont les dix grandes fonctions (Eurostat, gov_10a_exp) ; taux à 10 ans (Eurostat, irt_lt_mcby_a).

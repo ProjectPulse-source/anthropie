@@ -1,4 +1,4 @@
-# relu le 2026-10-11 ; texte servi de /dette-publique-comparaison-internationale/, build de 86a46f0 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /dette-publique-comparaison-internationale/, build de b8f4b66 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Dette publique : pourquoi 100 % du PIB ne pèse pas partout de la même façon
 À dette presque égale, la Hongrie consacre 8,9 % de ses recettes publiques aux intérêts, la Slovénie 2,7 %.
@@ -583,7 +583,7 @@ Le working paper AWP-09 reprend l’identité de la charge et ces écarts de tau
 Économies avancées hors UE (avec réserve) — OCDE, Economic Outlook : intérêts bruts, recettes, PIB et passifs financiers bruts des administrations publiques.
 Grands émergents (indicatif) — FMI, World Economic Outlook (dette brute des administrations publiques) ; Banque mondiale, World Development Indicators (intérêts en % des recettes de l’administration centrale).
 Les stocks de dette sont ceux de la série annuelle d’Eurostat (gov_10dd_edpt1) telle que relevée à la date indiquée en tête de page ; les données trimestrielles, publiées à d’autres dates, peuvent en différer légèrement, comme sur la page Combien coûte la dette publique ?, tirée des séries trimestrielles de l’INSEE.
-Les calculs, les statistiques et les figures sont produits par un script unique, relancé à chaque publication des sources ; aucun chiffre de cette page n’est saisi à la main.
+Les calculs, les statistiques et les figures sont produits par un script unique, relancé à chaque publication des sources ; tous les chiffres calculés viennent des séries officielles, et ceux des études citées sont repris tels qu’elles les publient.
 Télécharger les données (licence CC BY 4.0) : CSV, une ligne par pays, lisible dans un tableur ; JSON, avec les statistiques et les définitions.
 Méthode : la charge, le stock et le prix vérifient l’identité exacte donnée plus haut, avec la dette de fin d’année précédente (convention du taux implicite de la BCE, distincte du « coût apparent » d’Eurostat, fondé sur la dette moyenne) ; la robustesse des coefficients est recalculée à chaque mise à jour sur des fenêtres d’inflation de deux à cinq ans ; les statistiques sont des moindres carrés simples, descriptifs.
 Réutiliser cette page

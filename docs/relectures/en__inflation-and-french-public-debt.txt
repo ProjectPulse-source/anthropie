@@ -1,4 +1,4 @@
-# relu le 2026-10-11 ; texte servi de /en/inflation-and-french-public-debt/, build de 9bd4833 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /en/inflation-and-french-public-debt/, build de b8f4b66 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Did inflation really ease France's debt burden?
 Did the French government gain €150bn from inflation?
@@ -248,7 +248,8 @@ Spread according to the shares of central-government marketable debt held at end
 This is a mechanical allocation, not a measure of who lost.
 Bonds change hands over the years, and the erosion, computed on flows, is spread according to shares measured at market value.
 The direct holder is not necessarily the one who ultimately loses: an insurer has nominal liabilities to its policyholders, a bank has deposits.
-No number on this page is typed by hand: all come from a reproducible calculation by the author, whose extract is archived with its checksums; the script that writes the page checks the main numerical statements and stops if their conditions no longer hold.
+The figures on this page come from a reproducible calculation by the author, whose extract is archived with its checksums; the script that writes the page checks the main numerical statements and stops if their conditions no longer hold.
+Several published values are transcribed in that calculation with their source: the indexation charge recorded in the budget, the annual OAT and BTF yields and the break-even inflation rates published by the Agence France Trésor, and the inflation forecasts of the Banque de France and the Commission.
 Before the page was written, the calculation was subjected to external critical review, which led to revisions to the timing of prices, the construction of the range and the treatment of inflation-linked bonds.
 Reusing this page
 The charts, the data and a ready-made citation, under an open licence.

@@ -1,4 +1,4 @@
-# relu le 2026-10-11 ; texte servi de /le-niveau-des-eleves-baisse-t-il/, build de 86a46f0 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /le-niveau-des-eleves-baisse-t-il/, build de b8f4b66 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Le niveau des élèves baisse-t-il ?
 Selon PISA, oui : de 2015 à 2025, les jeunes Français de 15 ans ont perdu 43 points en compréhension de l'écrit et 35 en mathématiques, une baisse significative.
 Mais les évaluations passées en classe, en CM1 et en quatrième, ne mettent pas en évidence la même baisse récente.
@@ -220,7 +220,7 @@ Recrutement.
 DEPP, Repères et références statistiques 2011 à 2013 et 2024 à 2026 (concours de recrutement du second degré public selon les disciplines ; troisième concours compté avec l’externe ; Capes à affectation locale compris à partir de 2021), Note d’Information 11-24 pour la session 2010 ; la session 2012 de physique-chimie n’est pas publiée par la DEPP.
 Contractuels : RERS 2026, fiche 9.02.
 Enseignants non pleinement qualifiés : OCDE, Regards sur l’éducation 2026, chapitre sur la pénurie d’enseignants, tableau 1 (France : année 2023-2024).
-Aucun chiffre de cette page n’est saisi à la main : tous viennent d’un calcul de l’auteur, dont l’extrait est archivé avec ses empreintes ; le script qui écrit la page vérifie chaque affirmation chiffrée et s’arrête si elle n’est plus vraie.
+Les chiffres de cette page viennent d’un calcul de l’auteur, qui lit les fichiers publiés et dont l’extrait est archivé avec ses empreintes ; le script qui écrit la page vérifie les principales affirmations chiffrées et s’arrête si l’une n’est plus vraie.
 Sept protocoles ont été écrits chacun avant son calcul, avec leurs seuils ; le deuxième, qui a fait entrer TIMSS, PIRLS et la composition par classe, répondait à une contre-expertise externe de la première version.
 Les scores PISA de la France, les résultats des tests de seconde, des concours, de PIRLS et la composition par classe de 2015 ont été lus deux fois, par deux extracteurs indépendants, et les séries de la France ont été comparées entre l’OCDE et la DEPP ; chacun de ces contrôles a détecté les erreurs qu’on y avait introduites volontairement.
 Réutiliser cette page

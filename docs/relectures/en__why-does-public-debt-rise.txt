@@ -1,4 +1,4 @@
-# relu le 2026-10-11 ; texte servi de /en/why-does-public-debt-rise/, build de 9bd4833 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /en/why-does-public-debt-rise/, build de b8f4b66 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Why does French public debt rise?
 Between 1995 and 2025, French public debt went from 57.8% to 115.6% of GDP: it doubled as a share of the wealth produced.
@@ -189,7 +189,8 @@ Eurostat, general government (S.13), national accounts ESA 2010, in national cur
 The primary balance is the general government balance plus interest (D41PAY).
 Each year, the identity is applied as written above; stock-flow adjustments are the residual.
 The script then compares, year by year, the debt ratio and the primary balance it computes with those Eurostat publishes as a percentage of GDP, and stops beyond a gap of 0.11 points.
-No figure on this page is entered by hand: all come from the same script, re-run with each release of the sources, which checks the main quantitative statements and stops if their conditions are no longer met; their wording is reviewed editorially.
+The figures computed from Eurostat series all come from the same script, re-run with each release of the sources, which checks the main quantitative statements and stops if their conditions are no longer met; their wording is reviewed editorially.
+Figures attributed to other studies (CAE, OFCE, French Treasury) are given as they publish them.
 Indexation cost of State bonds in 2022: French Senate, report on the 2022 budget settlement bill (in French).
 The method behind this decomposition (the identity, the benchmark formed by the ratios Eurostat publishes, and the error it rejected) and its reconciliation with three public readings of the same debt (the 2014 citizens’ audit, the iFRAP Foundation, the French Court of Audit) are set out in the working paper AWP-09 — What Public Accounts Can Establish about the Displacement of the Public Debt Burden (DOI: 10.5281/zenodo.23145963, open-access PDF).
 Reusing this page

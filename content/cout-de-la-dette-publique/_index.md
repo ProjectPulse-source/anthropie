@@ -223,7 +223,7 @@ Cette page chiffre la facture. Elle ne dit pas qui la règle — et c'est là qu
 
 ## D'où viennent ces chiffres
 
-Les valeurs de cette page sont **dérivées automatiquement des sources officielles** (INSEE, Eurostat), jamais recopiées, et réinterrogées chaque semaine&nbsp;; dernier relevé ayant fait bouger une valeur&nbsp;: {{< dette-val "releve_le" >}}. Deux familles de valeurs sont saisies à la main, avec leur source et leur date&nbsp;: les prévisions du Gouvernement et les repères de l'Agence France Trésor. Données en accès libre&nbsp;: [dette_officielle.json](/dette_officielle.json), licence CC&nbsp;BY&nbsp;4.0.
+Les valeurs de cette page sont **dérivées automatiquement des séries de l'INSEE et d'Eurostat**, réinterrogées chaque semaine&nbsp;; dernier relevé ayant fait bouger une valeur&nbsp;: {{< dette-val "releve_le" >}}. Trois familles de valeurs sont conservées dans le dépôt, avec leur source et leur date&nbsp;: les ratios de 1978 à 1994, transcrits d'un tableau de l'INSEE (leur raccord, l'année 1995, est contrôlé contre la série vivante à chaque exécution)&nbsp;; et, saisies à la main, les prévisions du Gouvernement et les repères de l'Agence France Trésor. Données en accès libre&nbsp;: [dette_officielle.json](/dette_officielle.json), licence CC&nbsp;BY&nbsp;4.0.
 
 <details class="repli"><summary>Séries INSEE et Eurostat, intérêts en droits constatés, taux implicite sur la dette de fin d'année précédente, valeurs saisies datées&nbsp;; compilation sous licence CC&nbsp;BY&nbsp;4.0</summary>
 

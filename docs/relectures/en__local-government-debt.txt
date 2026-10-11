@@ -1,4 +1,4 @@
-# relu le 2026-10-11 ; texte servi de /en/local-government-debt/, build de 57dc84f + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /en/local-government-debt/, build de b8f4b66 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Are local authorities the adjustment variable of public finances?
 Local authorities' debt does not settle the question: the balanced-budget rule forbids them to borrow to offset a lasting fall in the revenue that pays for their day-to-day spending, so a constraint coming from central government shows up in their revenue and spending.
@@ -386,7 +386,9 @@ Texts — General Code of Local Authorities, articles L.
 448/1998, art.
 28, and Law no.
 208/2015 (Italy, internal stability pact, then balanced-budget rule); Insee, Les comptes des administrations publiques [General government accounts] for 2010, 2014 and 2015 (in French); Court of Audit, Les finances publiques locales 2025 [Local public finances 2025] and published responses (in French).
-The calculations, checks and figures are produced by a single script, rerun each time the sources publish; no figure on this page is entered by hand, and the script refuses to write if a piece of data stops supporting a sentence, or if a sentence draws from the figures a conclusion they do not carry.
+The calculations, checks and figures are produced by a single script, rerun each time the sources publish; amounts are read in Eurostat and OFGL series and in archived texts (Légifrance, budget bill).
+The script stops if a piece of data no longer supports one of the numerical sentences it checks, or if the page uses one of the wordings it forbids.
+The split of the DILICO repayment, taken from Article 186 of the 2025 Finance Act, is written into the text.
 Download the data (CC BY 4.0 licence): CSV, in long format, readable in a spreadsheet; JSON, with the calculations, definitions and the report of the checks (variable names and labels in French).
 Reusing this page
 The charts, the data and a ready-made citation, under an open licence.
