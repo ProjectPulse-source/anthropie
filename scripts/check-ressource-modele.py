@@ -48,7 +48,7 @@ STATIC = ROOT / "static"
 TYPES = {"quantitatif", "juridique-institutionnel", "explicatif-causal", "notion", "usage"}
 # Figee le 2026-10-11 : ne peut que diminuer (regle 11).
 NON_REFONDUES = {
-    "ce-que-la-france-peut-decider-dans-l-union-europeenne", "comment-savoir-si-une-promesse-est-tenue",
+    "comment-savoir-si-une-promesse-est-tenue",
     "qui-peut-faire-adopter-une-loi",
     "un-president-peut-il-recourir-au-referendum", "une-loi-votee-s-applique-t-elle-tout-de-suite",
     "une-promesse-peut-elle-produire-ses-effets-en-cinq-ans",

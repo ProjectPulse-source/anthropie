@@ -1,9 +1,9 @@
 {
  "releve_le": "2026-10-06",
- "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources : TFUE (EUR-Lex), Conseil de l'UE, SWP / GESIS (doi 10.7802/2560, CC BY 4.0), Commission européenne",
+ "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources : TFUE et TUE (EUR-Lex), Conseil de l'UE, SWP / GESIS (doi 10.7802/2560, CC BY 4.0), Commission européenne",
  "meta": {
   "page": "https://stephane-lalut.com/ce-que-la-france-peut-decider-dans-l-union-europeenne/",
-  "protocole": "fiches de preuve, prolongement U (U-E1 à U-E4)",
+  "protocole": "fiches de preuve, prolongement U (U-E1 à U-E4) ; phase B du 12/10/2026 (U6, U8, U9)",
   "releve_conseil": {
    "date": "2026-10-06",
    "entrees": 1755,
@@ -24,15 +24,102 @@
    "IT_abstention": 1,
    "RO_abstention": 1,
    "FR_contre": -2
-  }
+  },
+  "actes_france": [
+   {
+    "vote": "2014-02-17",
+    "position": "contre",
+    "decompte_pour_contre_abstention_np": [
+     27,
+     1,
+     0,
+     0
+    ],
+    "note_conseil": "ST-6595-2014-INIT",
+    "celex": "32014R0251",
+    "acte": "Regulation (EU) No 251/2014",
+    "date_acte": "2014-02-26",
+    "procedure": "2011/0231 (COD)",
+    "second_jeu": "SWP"
+   },
+   {
+    "vote": "2014-05-08",
+    "position": "abstention",
+    "decompte_pour_contre_abstention_np": [
+     24,
+     2,
+     2,
+     0
+    ],
+    "note_conseil": "ST-9727-2014-INIT",
+    "celex": "32014L0063",
+    "acte": "Directive 2014/63/EU",
+    "date_acte": "2014-05-15",
+    "procedure": "2012/0260 (COD)",
+    "second_jeu": "SWP"
+   },
+   {
+    "vote": "2015-10-01",
+    "position": "abstention",
+    "decompte_pour_contre_abstention_np": [
+     23,
+     1,
+     4,
+     0
+    ],
+    "note_conseil": "ST-12596-2015-INIT",
+    "celex": "32015R1775",
+    "acte": "Regulation (EU) 2015/1775",
+    "date_acte": "2015-10-06",
+    "procedure": "2015/0028 (COD)",
+    "second_jeu": "SWP"
+   },
+   {
+    "vote": "2025-07-08",
+    "position": "abstention",
+    "decompte_pour_contre_abstention_np": [
+     22,
+     1,
+     4,
+     0
+    ],
+    "note_conseil": "ST-11350-2025-INIT",
+    "celex": "32025D1904",
+    "acte": "Decision (EU) 2025/1904",
+    "date_acte": "2025-09-10",
+    "procedure": "2024/0148 (COD)",
+    "second_jeu": "aucun"
+   },
+   {
+    "vote": "2026-02-23",
+    "position": "contre",
+    "decompte_pour_contre_abstention_np": [
+     23,
+     3,
+     0,
+     1
+    ],
+    "note_conseil": "ST-6628-2026-INIT",
+    "celex": "32026R0463",
+    "acte": "Regulation (EU) 2026/463",
+    "date_acte": "2026-02-24",
+    "procedure": "2025/0132 (COD)",
+    "second_jeu": "aucun"
+   }
+  ]
  },
  "gardes": [
   "U1 : typologie complète et citée (5 exclusives, 11 partagées, 7 d'appui)",
   "U2 : 81 bases PLO (74 articles), 2 conditionnelles, 51 bases à l'unanimité ; témoin du Conseil : concordance exacte",
-  "U3 : relevé du Conseil concordant avec SWP pays par pays (écarts expliqués seulement)",
+  "U3 : relevé du Conseil concordant avec SWP pays par pays (écarts expliqués seulement) ; règles de vote 1622 + 132 + 1 = 1755 entrées",
   "U4 : France 2 contre, 3 abstentions, 1750 pour (liste des actes cohérente)",
   "U5 : transposition contrôlée par le texte de la Commission",
-  "U7 : citations SWP 2021 et 2024 retrouvées ; écart 2024 égal aux entrées écartées (2)"
+  "U6 : 18 citations des traités (TUE 4, 5, 15, 16, 17 ; TFUE 2, 18, 76, 238, 241, 288, 293, 294) retrouvées mot pour mot, FR et EN ; protocole n° 36 relu",
+  "U8 : 5 actes relus (note du Conseil, acte publié FR et EN) ; 3 décomptes recoupés par SWP, 2 documentés à la source seulement",
+  "U3 : fiches SWP du 2021-05-17 cherchées au Conseil : aucune séance ce jour (séances 6, 10, 20, 26, 27-28 mai), une procédure écrite PESC, aucune procédure écrite législative ; SWP n'a que ces 2 fiches entre le 2021-05-10 et le 2021-05-26",
+  "U7 : citations SWP 2021 et 2024 retrouvées ; écart 2024 égal aux entrées écartées (2)",
+  "U9 : prose FR et EN relue, jetons résolus (amender sans « sauf », classement verbal, « pour dans tous les autres cas »)",
+  "Figures : version téléphone à parité avec la version détaillée (FR et EN)"
  ],
  "calcul": {
   "votes": {
@@ -367,35 +454,104 @@
   },
   "france": {
    "entetes": [
-    "Date",
+    "Date du vote",
     "Vote de la France",
-    "Acte"
+    "Acte",
+    "Décompte au Conseil",
+    "Acte publié",
+    "Second jeu",
+    "Documents"
    ],
    "lignes": [
     [
      "17 février 2014",
      "contre",
-     "Règlement sur les vins aromatisés (n° 251/2014)"
+     "Règlement sur les vins aromatisés",
+     "27 pour, 1 contre, 0 abstention",
+     "règlement (UE) n° 251/2014 du 26 février 2014",
+     "SWP : même décompte",
+     [
+      {
+       "t": "résultat du Conseil",
+       "u": "https://data.consilium.europa.eu/doc/document/ST-6595-2014-INIT/fr/pdf"
+      },
+      {
+       "t": "EUR-Lex",
+       "u": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32014R0251"
+      }
+     ]
     ],
     [
      "8 mai 2014",
      "abstention",
-     "Directive modifiant la directive 2001/110/CE relative au miel"
+     "Directive modifiant la directive 2001/110/CE relative au miel",
+     "24 pour, 2 contre, 2 abstentions",
+     "directive 2014/63/UE du 15 mai 2014",
+     "SWP : même décompte",
+     [
+      {
+       "t": "résultat du Conseil",
+       "u": "https://data.consilium.europa.eu/doc/document/ST-9727-2014-INIT/fr/pdf"
+      },
+      {
+       "t": "EUR-Lex",
+       "u": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32014L0063"
+      }
+     ]
     ],
     [
      "1er octobre 2015",
      "abstention",
-     "Règlement sur le commerce des produits dérivés du phoque"
+     "Règlement sur le commerce des produits dérivés du phoque",
+     "23 pour, 1 contre, 4 abstentions",
+     "règlement (UE) 2015/1775 du 6 octobre 2015",
+     "SWP : même décompte",
+     [
+      {
+       "t": "résultat du Conseil",
+       "u": "https://data.consilium.europa.eu/doc/document/ST-12596-2015-INIT/fr/pdf"
+      },
+      {
+       "t": "EUR-Lex",
+       "u": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32015R1775"
+      }
+     ]
     ],
     [
      "8 juillet 2025",
      "abstention",
-     "Décision sur l'accord d'interprétation du traité sur la Charte de l'énergie"
+     "Décision sur l'accord d'interprétation du traité sur la Charte de l'énergie",
+     "22 pour, 1 contre, 4 abstentions",
+     "décision (UE) 2025/1904 du 10 septembre 2025",
+     "aucun (vote postérieur au jeu SWP)",
+     [
+      {
+       "t": "résultat du Conseil",
+       "u": "https://data.consilium.europa.eu/doc/document/ST-11350-2025-INIT/fr/pdf"
+      },
+      {
+       "t": "EUR-Lex",
+       "u": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32025D1904"
+      }
+     ]
     ],
     [
      "23 février 2026",
      "contre",
-     "Règlement sur la notion de « pays tiers sûr » (2025/0132 (COD))"
+     "Règlement sur la notion de « pays tiers sûr »",
+     "23 pour, 3 contre, 0 abstention, 1 ne participe pas",
+     "règlement (UE) 2026/463 du 24 février 2026",
+     "aucun (vote postérieur au jeu SWP)",
+     [
+      {
+       "t": "résultat du Conseil",
+       "u": "https://data.consilium.europa.eu/doc/document/ST-6628-2026-INIT/fr/pdf"
+      },
+      {
+       "t": "EUR-Lex",
+       "u": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32026R0463"
+      }
+     ]
     ]
    ]
   },
@@ -789,35 +945,104 @@
   },
   "france": {
    "entetes": [
-    "Date",
+    "Date of the vote",
     "France's vote",
-    "Act"
+    "Act",
+    "Count in the Council",
+    "Published act",
+    "Second dataset",
+    "Documents"
    ],
    "lignes": [
     [
      "17 February 2014",
      "against",
-     "Regulation on aromatised wine products (No 251/2014)"
+     "Regulation on aromatised wine products",
+     "27 in favour, 1 against, 0 abstentions",
+     "Regulation (EU) No 251/2014 of 26 February 2014",
+     "SWP: same count",
+     [
+      {
+       "t": "Council result",
+       "u": "https://data.consilium.europa.eu/doc/document/ST-6595-2014-INIT/en/pdf"
+      },
+      {
+       "t": "EUR-Lex",
+       "u": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0251"
+      }
+     ]
     ],
     [
      "8 May 2014",
      "abstention",
-     "Directive amending Council Directive 2001/110/EC relating to honey"
+     "Directive amending Council Directive 2001/110/EC relating to honey",
+     "24 in favour, 2 against, 2 abstentions",
+     "Directive 2014/63/EU of 15 May 2014",
+     "SWP: same count",
+     [
+      {
+       "t": "Council result",
+       "u": "https://data.consilium.europa.eu/doc/document/ST-9727-2014-INIT/en/pdf"
+      },
+      {
+       "t": "EUR-Lex",
+       "u": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0063"
+      }
+     ]
     ],
     [
      "1 October 2015",
      "abstention",
-     "Regulation on trade in seal products"
+     "Regulation on trade in seal products",
+     "23 in favour, 1 against, 4 abstentions",
+     "Regulation (EU) 2015/1775 of 6 October 2015",
+     "SWP: same count",
+     [
+      {
+       "t": "Council result",
+       "u": "https://data.consilium.europa.eu/doc/document/ST-12596-2015-INIT/en/pdf"
+      },
+      {
+       "t": "EUR-Lex",
+       "u": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32015R1775"
+      }
+     ]
     ],
     [
      "8 July 2025",
      "abstention",
-     "Decision on the agreement on the interpretation of the Energy Charter Treaty"
+     "Decision on the agreement on the interpretation of the Energy Charter Treaty",
+     "22 in favour, 1 against, 4 abstentions",
+     "Decision (EU) 2025/1904 of 10 September 2025",
+     "none (vote later than the SWP dataset)",
+     [
+      {
+       "t": "Council result",
+       "u": "https://data.consilium.europa.eu/doc/document/ST-11350-2025-INIT/en/pdf"
+      },
+      {
+       "t": "EUR-Lex",
+       "u": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025D1904"
+      }
+     ]
     ],
     [
      "23 February 2026",
      "against",
-     "Regulation on the 'safe third country' concept (2025/0132 (COD))"
+     "Regulation on the 'safe third country' concept",
+     "23 in favour, 3 against, 0 abstentions, 1 not taking part",
+     "Regulation (EU) 2026/463 of 24 February 2026",
+     "none (vote later than the SWP dataset)",
+     [
+      {
+       "t": "Council result",
+       "u": "https://data.consilium.europa.eu/doc/document/ST-6628-2026-INIT/en/pdf"
+      },
+      {
+       "t": "EUR-Lex",
+       "u": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R0463"
+      }
+     ]
     ]
    ]
   },
@@ -1055,7 +1280,7 @@
   "n_plo_art": "74",
   "n_una": "51",
   "n_una_art": "48",
-  "n_cond": "2",
+  "n_cond": "Deux",
   "n_temoin": "83",
   "debut": "22 décembre 2009",
   "fin": "1er octobre 2026",
@@ -1093,6 +1318,37 @@
   "cit_tue16": "Une minorité de blocage doit inclure au moins quatre membres du Conseil",
   "etats_identiques": "23",
   "etats_total": "28",
+  "cit_tue4_1": "toute compétence non attribuée à l'Union dans les traités appartient aux États membres",
+  "cit_tue5_2": "l'Union n'agit que dans les limites des compétences que les États membres lui ont attribuées dans les traités pour atteindre les objectifs que ces traités établissent",
+  "cit_tue4_2": "la sécurité nationale reste de la seule responsabilité de chaque État membre",
+  "cit_tue4_3": "Les États membres prennent toute mesure générale ou particulière propre à assurer l'exécution des obligations découlant des traités ou résultant des actes des institutions de l'Union",
+  "cit_18": "Dans le domaine d'application des traités, et sans préjudice des dispositions particulières qu'ils prévoient, est interdite toute discrimination exercée en raison de la nationalité",
+  "cit_2_5b": "ne peuvent pas comporter d'harmonisation des dispositions législatives et réglementaires des États membres",
+  "cit_17_2": "Un acte législatif de l'Union ne peut être adopté que sur proposition de la Commission, sauf dans les cas où les traités en disposent autrement",
+  "cit_294_2": "La Commission présente une proposition au Parlement européen et au Conseil",
+  "cit_241": "Si la Commission ne soumet pas de proposition, elle en communique les raisons au Conseil",
+  "cit_76": "sur initiative d'un quart des États membres",
+  "cit_293_1": "le Conseil ne peut amender la proposition que statuant à l'unanimité, sauf dans les cas visés à l'article 294, paragraphes 10 et 13, aux articles 310, 312, 314 et à l'article 315, deuxième alinéa",
+  "cit_293_2": "Tant que le Conseil n'a pas statué, la Commission peut modifier sa proposition tout au long des procédures conduisant à l'adoption d'un acte de l'Union",
+  "cit_238_4": "Les abstentions des membres présents ou représentés ne font pas obstacle à l'adoption des délibérations du Conseil qui requièrent l'unanimité",
+  "cit_16_4": "au moins 55 % des membres du Conseil, comprenant au moins quinze d'entre eux et représentant des États membres réunissant au moins 65 % de la population de l'Union",
+  "cit_tue15": "Il n'exerce pas de fonction législative",
+  "cit_16_7": "Un comité des représentants permanents des gouvernements des États membres est responsable de la préparation des travaux du Conseil",
+  "cit_288": "La directive lie tout État membre destinataire quant au résultat à atteindre, tout en laissant aux instances nationales la compétence quant à la forme et aux moyens",
+  "cit_238_2": "au moins 72 % des membres du Conseil, représentant des États membres réunissant au moins 65 % de la population de l'Union",
+  "fin_temoin": "28 mars 2023",
+  "qmv_sp": "un",
+  "n_cond_min": "deux",
+  "n_ponderes": "deux",
+  "n_actes_temoin": "trois",
+  "n_actes_source": "deux",
+  "n_actes": "cinq",
+  "n_ponderes_maj": "Deux",
+  "fr_c_l": "deux",
+  "fr_a_l": "trois",
+  "dm_debut": "1er novembre 2014",
+  "dm_fin_ancien": "31 octobre 2014",
+  "dm_option_fin": "31 mars 2017",
   "swp21_cit": "France has only been outvoted once and abstained twice in all public votes since 2010",
   "swp24_cit": "France, which was only outvoted five times in the entire observation period",
   "swp21_contre": "un",
@@ -1100,6 +1356,9 @@
   "swp24_nonpour": "trois",
   "swp24_ecart": "deux",
   "polidori_tfue": "55",
+  "ecart_date": "17 mai 2021",
+  "ecart_avant": "10 mai",
+  "ecart_apres": "26 mai 2021",
   "releve_le": "6 octobre 2026 (votes du Conseil, relevé à cette date ; transposition au 30 novembre 2025)"
  },
  "affichage_en": {
@@ -1118,7 +1377,7 @@
   "n_plo_art": "74",
   "n_una": "51",
   "n_una_art": "48",
-  "n_cond": "2",
+  "n_cond": "Two",
   "n_temoin": "83",
   "debut": "22 December 2009",
   "fin": "1 October 2026",
@@ -1156,6 +1415,37 @@
   "cit_tue16": "A blocking minority must include at least four Council members",
   "etats_identiques": "23",
   "etats_total": "28",
+  "cit_tue4_1": "competences not conferred upon the Union in the Treaties remain with the Member States",
+  "cit_tue5_2": "the Union shall act only within the limits of the competences conferred upon it by the Member States in the Treaties to attain the objectives set out therein",
+  "cit_tue4_2": "national security remains the sole responsibility of each Member State",
+  "cit_tue4_3": "The Member States shall take any appropriate measure, general or particular, to ensure fulfilment of the obligations arising out of the Treaties or resulting from the acts of the institutions of the Union",
+  "cit_18": "Within the scope of application of the Treaties, and without prejudice to any special provisions contained therein, any discrimination on grounds of nationality shall be prohibited",
+  "cit_2_5b": "shall not entail harmonisation of Member States' laws or regulations",
+  "cit_17_2": "Union legislative acts may only be adopted on the basis of a Commission proposal, except where the Treaties provide otherwise",
+  "cit_294_2": "The Commission shall submit a proposal to the European Parliament and the Council",
+  "cit_241": "If the Commission does not submit a proposal, it shall inform the Council of the reasons",
+  "cit_76": "on the initiative of a quarter of the Member States",
+  "cit_293_1": "it may amend that proposal only by acting unanimously, except in the cases referred to in paragraphs 10 and 13 of Article 294, in Articles 310, 312 and 314 and in the second paragraph of Article 315",
+  "cit_293_2": "As long as the Council has not acted, the Commission may alter its proposal at any time during the procedures leading to the adoption of a Union act",
+  "cit_238_4": "Abstentions by Members present in person or represented shall not prevent the adoption by the Council of acts which require unanimity",
+  "cit_16_4": "at least 55% of the members of the Council, comprising at least fifteen of them and representing Member States comprising at least 65% of the population of the Union",
+  "cit_tue15": "It shall not exercise legislative functions",
+  "cit_16_7": "A Committee of Permanent Representatives of the Governments of the Member States shall be responsible for preparing the work of the Council",
+  "cit_288": "A directive shall be binding, as to the result to be achieved, upon each Member State to which it is addressed, but shall leave to the national authorities the choice of form and methods",
+  "cit_238_2": "at least 72% of the members of the Council, representing Member States comprising at least 65% of the population of the Union",
+  "fin_temoin": "28 March 2023",
+  "qmv_sp": "one",
+  "n_cond_min": "two",
+  "n_ponderes": "two",
+  "n_actes_temoin": "three",
+  "n_actes_source": "two",
+  "n_actes": "five",
+  "n_ponderes_maj": "Two",
+  "fr_c_l": "two",
+  "fr_a_l": "three",
+  "dm_debut": "1 November 2014",
+  "dm_fin_ancien": "31 October 2014",
+  "dm_option_fin": "31 March 2017",
   "swp21_cit": "France has only been outvoted once and abstained twice in all public votes since 2010",
   "swp24_cit": "France, which was only outvoted five times in the entire observation period",
   "swp21_contre": "one",
@@ -1163,6 +1453,9 @@
   "swp24_nonpour": "three",
   "swp24_ecart": "two",
   "polidori_tfue": "55",
+  "ecart_date": "17 May 2021",
+  "ecart_avant": "10 May",
+  "ecart_apres": "26 May 2021",
   "releve_le": "6 October 2026 (Council votes, retrieved on that date; transposition as at 30 November 2025)"
  }
 }

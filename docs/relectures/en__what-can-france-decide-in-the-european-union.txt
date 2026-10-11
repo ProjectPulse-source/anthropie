@@ -1,0 +1,599 @@
+# relu le 2026-10-12 ; texte servi de /en/what-can-france-decide-in-the-european-union/, build de 664e06c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+FRThis page is also available in French — version française
+What can France decide in the European Union?
+What the Treaties have not conferred on the Union remains with the Member States: France decides alone there, while respecting the common rules.
+Where the Union has competence, the Commission proposes and France votes with the other governments in the Council: under qualified majority, it can be outvoted; under unanimity, its single vote against can block.
+In the public votes of the Council on legislative acts, from 22 December 2009 to 1 October 2026, France voted against twice and abstained three times.
+These votes record its position at the last moment, not what it obtained in the negotiation that precedes them.
+Presidential promises
+↓ Charts, data and citations to reuseReuse this page
+The figure is surprising: across all the public votes recorded, France has almost never opposed a European law in the Council.
+It lends itself to three readings.
+France would obtain most of what it asks for before the vote; it would contribute to compromises without obtaining everything; or it would rally to texts it would have wanted otherwise.
+The vote count does not decide between these three stories, and this page does not claim to.
+A Member State’s power in the Union is not measured by the number of times it says no.
+It depends on the area, which sets who decides; on the voting rule, which sets what a single Member State can prevent; and on the negotiation, which the final vote does not show.
+The page follows that boundary: what France decides alone, what it decides with others, what it can block or must accept, and what it does with the adopted text.
+It relies on the text of the Treaties in force and on the votes published by the Council.
+What can France decide alone?
+Whatever the Treaties have not entrusted to the Union remains with the Member States: this is the principle of conferral (Treaty on European Union, or TEU, art.
+4 and 5).
+The Treaty itself names one matter that stays national: “national security remains the sole responsibility of each Member State” (TEU, art.
+4(2)).
+In other areas, the law stays national and the Union only supports, coordinates or supplements the action of the Member States, without harmonising their laws: protection and improvement of human health, industry, culture, tourism, education, vocational training, youth and sport, civil protection and administrative cooperation (Treaty on the Functioning of the European Union, or TFEU, art.
+2(5) and art.
+6).
+Holding a competence does not exempt a Member State from the common rules when it exercises it.
+Each Member State must ensure fulfilment of the obligations arising from the Treaties (sincere cooperation, TEU, art.
+4(3)) and may not discriminate on grounds of nationality (TFEU, art.
+18); a French law that affects trade may also come up against the freedoms of movement of the internal market.
+France decides alone in these matters; it does not decide outside Union law.
+The articles quoted, word for word
+The TEU sets the rule: “competences not conferred upon the Union in the Treaties remain with the Member States” (art.
+4(1)).
+The principle of conferral: “the Union shall act only within the limits of the competences conferred upon it by the Member States in the Treaties to attain the objectives set out therein” (art.
+5(2)).
+In the areas of support, coordination and supplement, the Union’s legally binding acts “shall not entail harmonisation of Member States' laws or regulations” (TFEU, art.
+2(5)).
+Sincere cooperation: “The Member States shall take any appropriate measure, general or particular, to ensure fulfilment of the obligations arising out of the Treaties or resulting from the acts of the institutions of the Union” (TEU, art.
+4(3)).
+Non-discrimination: “Within the scope of application of the Treaties, and without prejudice to any special provisions contained therein, any discrimination on grounds of nationality shall be prohibited” (TFEU, art.
+18).
+Both Treaties are quoted in their 2016 consolidated version, that is the text in force with its successive amendments incorporated, as published in the Official Journal of the Union, in their official English text and without the case law of the Court that interprets them.
+“France decides alone” does not mean “the president decides alone”.
+A national decision may require a law, a decree or the involvement of other French authorities: the page What can the French president decide alone? sets them apart.
+In which areas does the Union decide?
+The TFEU classifies the competences conferred on the Union into three categories (art.
+2 to 6).
+Exclusive competence (art.
+3): only the Union legislates, the Member States being able to do so only if empowered by the Union or to implement its acts.
+It covers customs union, the establishing of the competition rules necessary for the functioning of the internal market, monetary policy for the Member States whose currency is the euro, the conservation of marine biological resources under the common fisheries policy and common commercial policy, as well as certain international agreements.
+Shared competence (art.
+4): the Union and the Member States may legislate, the Member States as long as the Union has not exercised its competence.
+It covers in particular the internal market, agriculture and fisheries, the environment, transport and energy.
+Support, coordination, supplement (art.
+6): human health, industry, culture, education and the other areas named in the previous section, where the law stays national.
+What articles 2 to 6 of the TFEU say
+Article 2(1), on exclusive competence: “When the Treaties confer on the Union exclusive competence in a specific area, only the Union may legislate and adopt legally binding acts, the Member States being able to do so themselves only if so empowered by the Union or for the implementation of Union acts.” Article 2(2), on shared competence: “When the Treaties confer on the Union a competence shared with the Member States in a specific area, the Union and the Member States may legislate and adopt legally binding acts in that area.
+The Member States shall exercise their competence to the extent that the Union has not exercised its competence.
+The Member States shall again exercise their competence to the extent that the Union has decided to cease exercising its competence.” The list of shared competences is not closed: any competence conferred that is neither exclusive nor supporting is shared (art.
+4(1)).
+In research, technological development, space, development cooperation and humanitarian aid, Union action cannot prevent the Member States from exercising their own competence (art.
+4(3) and (4)).
+The Union also has exclusive competence for certain international agreements (art.
+3(2)).
+The Member States also coordinate their economic and employment policies under arrangements set by the Treaty, and the Union may take initiatives to coordinate their social policies (art.
+5); the common foreign and security policy follows the TEU’s own rules (art.
+2(4)).
+The areas, quoted from the Treaty
+Category
+Area (text of the Treaty)
+Exclusive (art.
+3(1))
+customs union
+Exclusive (art.
+3(1))
+the establishing of the competition rules necessary for the functioning of the internal market
+Exclusive (art.
+3(1))
+monetary policy for the Member States whose currency is the euro
+Exclusive (art.
+3(1))
+the conservation of marine biological resources under the common fisheries policy
+Exclusive (art.
+3(1))
+common commercial policy
+Shared (art.
+4(2))
+internal market
+Shared (art.
+4(2))
+social policy, for the aspects defined in this Treaty
+Shared (art.
+4(2))
+economic, social and territorial cohesion
+Shared (art.
+4(2))
+agriculture and fisheries, excluding the conservation of marine biological resources
+Shared (art.
+4(2))
+environment
+Shared (art.
+4(2))
+consumer protection
+Shared (art.
+4(2))
+transport
+Shared (art.
+4(2))
+trans-European networks
+Shared (art.
+4(2))
+energy
+Shared (art.
+4(2))
+area of freedom, security and justice
+Shared (art.
+4(2))
+common safety concerns in public health matters, for the aspects defined in this Treaty
+Competence to support, coordinate or supplement (art.
+6)
+protection and improvement of human health
+Competence to support, coordinate or supplement (art.
+6)
+industry
+Competence to support, coordinate or supplement (art.
+6)
+culture
+Competence to support, coordinate or supplement (art.
+6)
+tourism
+Competence to support, coordinate or supplement (art.
+6)
+education, vocational training, youth and sport
+Competence to support, coordinate or supplement (art.
+6)
+civil protection
+Competence to support, coordinate or supplement (art.
+6)
+administrative cooperation
+Who puts a text on the agenda, who proposes it, who adopts it?
+Where the Union has competence, three powers are distinct.
+Proposing belongs, as a rule, to the Commission (TEU, art.
+17(2); TFEU, art.
+294(2)).
+A government therefore does not itself table a draft European law.
+Putting a subject on the agenda remains open to it, together with others.
+The Council may ask the Commission to submit proposals to it, and if the Commission does not, it must give the Council its reasons (TFEU, art.
+241).
+In judicial cooperation in criminal matters and police cooperation, acts may also be adopted “on the initiative of a quarter of the Member States” (art.
+76).
+Adopting belongs, under the ordinary legislative procedure, to the European Parliament and to the Council of the European Union.
+Two institutions have similar names: in the Council of the European Union sits one minister from each Member State, depending on the subject (agriculture, finance, environment…); in the European Council sit the Heads of State or Government, who set the general political directions and do not vote on laws (TEU, art.
+15(1): “It shall not exercise legislative functions”).
+The votes on this page are those of the Council of the European Union.
+What the proposal changes for France.
+Once the proposal has been tabled, the Council may amend it only unanimously, except in the cases the Treaty lists (conciliation with the European Parliament, budgetary and financial procedures); the Commission, for its part, may alter its proposal as long as the Council has not acted (TFEU, art.
+293).
+Outside these exceptions, the rule works both ways: the other Member States cannot rewrite the proposal in the Council without France’s agreement, and a majority of Member States, France included, is not enough to rewrite it either.
+The articles quoted, word for word
+The Commission’s initiative: “Union legislative acts may only be adopted on the basis of a Commission proposal, except where the Treaties provide otherwise” (TEU, art.
+17(2)); the article describing the ordinary legislative procedure opens thus: “The Commission shall submit a proposal to the European Parliament and the Council” (TFEU, art.
+294(2)).
+The Council’s request, and what follows a refusal: “If the Commission does not submit a proposal, it shall inform the Council of the reasons” (TFEU, art.
+241).
+The Council of the European Union consists of a representative of each Member State at ministerial level (TEU, art.
+16(2)).
+Article 293 TFEU, first paragraph: where the Council acts on a proposal from the Commission, “it may amend that proposal only by acting unanimously, except in the cases referred to in paragraphs 10 and 13 of Article 294, in Articles 310, 312 and 314 and in the second paragraph of Article 315”.
+Second paragraph: “As long as the Council has not acted, the Commission may alter its proposal at any time during the procedures leading to the adoption of a Union act”.
+What voting rules apply in the Council?
+The rule depends on the legal basis, the article of the Treaty on which the act is founded.
+The general case is qualified majority, defined as “at least 55% of the members of the Council, comprising at least fifteen of them and representing Member States comprising at least 65% of the population of the Union” (TEU, art.
+16(4)); where the Council does not act on a proposal from the Commission, it takes “at least 72% of the members of the Council, representing Member States comprising at least 65% of the population of the Union” (TFEU, art.
+238(2)).
+The same article 16 adds: “A blocking minority must include at least four Council members”.
+No Member State therefore forms a blocking minority on its own, and France can be outvoted.
+The record of votes, further down, spans three regimes of qualified majority: weighted votes, then the double majority with the option of requesting the former calculation, then the double majority alone.
+The Member States’ votes were weighted until 31 October 2014.
+The double majority has applied since 1 November 2014; until 31 March 2017, a member of the Council could still request the former calculation (Protocol No 36 on transitional provisions).
+In other areas, the Council acts unanimously: indirect taxation, the Union’s own resources or the multiannual financial framework, for example (table below).
+Voting against or abstaining.
+Under qualified majority, voting against and abstaining both prevent the Member State’s vote from counting towards the favourable majority.
+But the two positions do not say the same thing politically.
+Under unanimity, an abstention does not block: a vote against can block.
+The Treaty puts it this way: “Abstentions by Members present in person or represented shall not prevent the adoption by the Council of acts which require unanimity” (TFEU, art.
+238(4)).
+The rule, area by area, for the instruments named in the book and in programmes
+Area
+Legal basis (TFEU)
+Rule in the Council
+Internal market (approximation of laws)
+art.
+114(1)
+ordinary legislative procedure (qualified majority)
+Indirect taxation (VAT, excise duties)
+art.
+113, al.
+1
+unanimity in the Council
+Commercial policy: implementing framework
+art.
+207(2)
+ordinary legislative procedure (qualified majority)
+Commercial policy: certain agreements
+art.
+207(4)
+unanimity in the Council
+Environment
+art.
+192(1)
+ordinary legislative procedure (qualified majority)
+Environment: fiscal provisions, land use, energy mix
+art.
+192(2)
+unanimity in the Council
+Agriculture and fisheries: common market organisation
+art.
+43(2)
+ordinary legislative procedure (qualified majority)
+Asylum
+art.
+78(2)
+ordinary legislative procedure (qualified majority)
+Immigration
+art.
+79(2)
+ordinary legislative procedure (qualified majority)
+Social policy
+art.
+153(2)
+both, depending on the measure
+The Union's own resources
+art.
+311, al.
+3
+unanimity in the Council
+Multiannual financial framework
+art.
+312(2)
+unanimity in the Council
+How many legal bases, and how they were counted
+The inventory of the TFEU contains 81 legal bases of the ordinary legislative procedure, in 74 articles, and 51 legal bases where the Council acts unanimously, in 48 articles; the latter ground legislative and non-legislative acts.
+These numbers measure neither the weight of the areas nor how often acts are adopted on each base.
+The text is the consolidated version of the TFEU published in the Official Journal of the European Union on 7 June 2016, read in French and in English.
+Each area of articles 3, 4 and 6 is quoted word for word, the completeness of each list is reread in the text, and the English lists have the same number of areas as the French ones.
+These 81 legal bases and the two conditional ones were compared with the list published by the General Secretariat of the Council in its guide to that procedure (annex III, 83 entries): the two lists match exactly.
+This comparison brought out bases that refer to the procedure without naming it (articles 42, 62 and 177), which were read and added.
+Two bases follow a procedure that depends on the measure (articles 83(2) and 136(1)).
+Mentions that do not ground an act (emergency brakes, bridging clauses, articles describing the procedure) are set aside, each with its reason, in the data file.
+The unanimity list relies on the word: a base that referred to unanimity without using it would escape the inventory, and the list has no second producer on the same scope.
+A 2014 academic inventory (S.
+Polidori, Eurostudium3w) counts 55 TFEU provisions requiring unanimity, European Council included; it is not the same unit, so it does not check this inventory.
+How does France vote in the Council?
+The result in one sentence.
+In the public votes of the Council of the European Union on legislative acts, from 22 December 2009 to 1 October 2026, France voted against twice and abstained three times; it voted in favour in every other case.
+All five texts were adopted.
+On the two it voted against, France was outvoted: qualified majority at work.
+On the three on which it abstained, it did not add its vote to the majority, without opposing it.
+Each row of the table links to the result published by the Council and to the act in the Official Journal, dated after the vote, once signed.
+The acts on which France did not vote in favour
+Date of the vote
+France's vote
+Act
+Count in the Council
+Published act
+Second dataset
+Documents
+17 February 2014
+against
+Regulation on aromatised wine products
+27 in favour, 1 against, 0 abstentions
+Regulation (EU) No 251/2014 of 26 February 2014
+SWP: same count
+Council result · EUR-Lex
+8 May 2014
+abstention
+Directive amending Council Directive 2001/110/EC relating to honey
+24 in favour, 2 against, 2 abstentions
+Directive 2014/63/EU of 15 May 2014
+SWP: same count
+Council result · EUR-Lex
+1 October 2015
+abstention
+Regulation on trade in seal products
+23 in favour, 1 against, 4 abstentions
+Regulation (EU) 2015/1775 of 6 October 2015
+SWP: same count
+Council result · EUR-Lex
+8 July 2025
+abstention
+Decision on the agreement on the interpretation of the Energy Charter Treaty
+22 in favour, 1 against, 4 abstentions
+Decision (EU) 2025/1904 of 10 September 2025
+none (vote later than the SWP dataset)
+Council result · EUR-Lex
+23 February 2026
+against
+Regulation on the 'safe third country' concept
+23 in favour, 3 against, 0 abstentions, 1 not taking part
+Regulation (EU) 2026/463 of 24 February 2026
+none (vote later than the SWP dataset)
+Council result · EUR-Lex
+Two votes against that the Council does not attest.
+A second dataset, drawn from the Council’s files by a German institute, SWP, counts two more votes against by France, dated 17 May 2021, with no title or subject.
+We looked for them in the Council’s publications: its summary of the month’s acts mentions neither a meeting nor a legislative act on that day, and its search of votes returns none between 10 May and 26 May 2021.
+These two entries are therefore not counted, and what they referred to remains unknown; the details of the search are in the collapsed section “How the record was compiled and checked”.
+Votes against and abstentions of each Member State in the public votes of the Council of the European Union on legislative acts, from 22 December 2009 to 1 October 2026.
+The United Kingdom appears only until its withdrawal, Croatia since its accession in 2013, and Denmark and Ireland do not take part in some acts: these raw counts are not a ranking of influence.
+Download · Cite · Data
+Each Member State's votes in a table
+Member State
+Against
+Abstention
+Not taking part
+Austria
+36
+67
+0
+Belgium
+7
+47
+0
+Bulgaria
+19
+48
+1
+Croatia
+4
+12
+1
+Cyprus
+13
+1
+1
+Czechia
+19
+54
+3
+Denmark
+29
+12
+159
+Estonia
+7
+26
+3
+Finland
+19
+11
+1
+France
+2
+3
+0
+Germany
+32
+48
+0
+Greece
+7
+7
+1
+Hungary
+79
+47
+4
+Ireland
+5
+12
+106
+Italy
+18
+12
+2
+Latvia
+7
+20
+3
+Lithuania
+6
+7
+3
+Luxembourg
+15
+18
+0
+Malta
+15
+17
+0
+Netherlands
+41
+24
+1
+Poland
+57
+40
+4
+Portugal
+8
+19
+0
+Romania
+9
+11
+3
+Slovakia
+23
+35
+4
+Slovenia
+6
+15
+0
+Spain
+17
+14
+2
+Sweden
+41
+13
+2
+United Kingdom
+56
+118
+72
+In the same record, Germany voted against 32 times and abstained 48 times.
+The Netherlands voted against 41 times, Poland 57 times.
+Hungary did so 79 times.
+What these figures do not say.
+They describe the formal position of the Member States at the final vote.
+They measure neither their influence in the negotiation, nor what they obtained or gave up, nor their general capacity to block a decision.
+The record covers only public votes on legislative acts: not non-legislative acts, not foreign policy, not the discussions that precede the vote.
+How the record was compiled and checked
+The record.
+The Council discontinued its open datasets in March 2025; its voting results are now published only through its search page, which does not accept automated programs.
+The record was therefore compiled in a browser, on 6 October 2026, page by page: 1,755 entries, exactly the total announced by the page; the search, filtered in turn on France and on Germany, returns the same entries.
+Among them, 1,622 were taken by qualified majority, 132 by unanimity and one by qualified majority without a proposal from the Commission.
+The Council displays 8 duplicate entries, identical in every field: the number of acts lies between 1,747 and 1,755.
+These duplicates are unanimous votes and change no count of votes against or abstentions.
+The second dataset.
+The dataset compiled by the German Institute for International and Security Affairs (SWP) from the Council’s data, from 22 December 2009 to 28 March 2023, was matched against the record act by act, then Member State by Member State: the counts of votes against and abstentions of 23 Member States out of 28 are identical in both sources, and the gaps of the others are explained.
+One act of 28 March 2023 is missing from the SWP dataset, frozen two weeks later.
+Two untitled, unanimous entries of the SWP dataset could not be corroborated; they change no count of votes against or abstentions.
+The two votes against of 17 May 2021.
+They appear only in the SWP dataset, with no title or subject, each with France alone against.
+They carry voting-procedure identifiers from the Council’s open files, which the Council no longer publishes.
+The Council’s monthly summary of acts for May 2021 (document ST 8962/21, published on 28 June 2021) mentions no Council meeting on that day; it lists only one act then, a common foreign and security policy decision adopted by written procedure, outside the scope of legislative acts, and no legislative written procedure in the month.
+The Council’s search of votes, read on 12 October 2026, returns votes on 10 May and then on 26 May 2021, and none in between; the Council’s document register contains no voting result in the week of 17 May 2021, while it does contain those of the previous week.
+As they could not be corroborated, the published count does not include them.
+Where these two entries come from, a data-entry error or a vote never published, none of the documents read makes it possible to say.
+The five acts.
+For each, the Council’s “voting result” note and the act published in the Official Journal, in French and in English, were archived on 12 October 2026.
+The count is read in the annex to the note and on the Council’s search page; the script checks in the archived documents the procedure, the date of the vote and, in the act, its number, its date and the mention of the Council’s decision on the date of the vote.
+The three votes covered by the SWP dataset, up to 28 March 2023, have the same count there, which the script recalculates from that dataset; the two later ones are documented at the source, with no second dataset.
+Two of these votes, held before 1 November 2014, were counted in weighted votes.
+What the producer of the second dataset already wrote.
+SWP wrote in December 2021: “France has only been outvoted once and abstained twice in all public votes since 2010”.
+Our record counts, from 2010 to 2021, one vote against and two abstentions by France: the same count, which therefore does not include the two votes against of 17 May 2021 that the dataset carries.
+In April 2024, the same institute writes, for 2010 to September 2023: “France, which was only outvoted five times in the entire observation period”.
+Our record counts three votes against or abstentions over that period; the difference corresponds to the two entries of 17 May 2021, although the 2024 note does not list the votes it counts.
+Why can a Member State vote yes to a text it wanted to be different?
+The final vote records only the last step of a sequence.
+First, each government arrives with a position: what it asks for, what it refuses.
+Next, the text is negotiated.
+The Commission may alter its proposal as long as the Council has not acted, the European Parliament adopts its own positions and, on the governments’ side, “A Committee of Permanent Representatives of the Governments of the Member States shall be responsible for preparing the work of the Council” (TEU, art.
+16(7)).
+Then a final text is put to the vote, which may depart from what each Member State asked for at the outset.
+Finally, each Member State votes in favour, against, abstains or does not take part.
+A “yes” at this last step is compatible with the three stories of the opening: the Member State obtained most of what it asked for, it contributed to a compromise without obtaining everything, or it rallied to a text it would have wanted otherwise.
+The count does not allow them to be told apart.
+That would require sources on the negotiation itself, act by act, which the record of votes does not contain.
+The final vote is an observation, not a history of preferences and concessions.
+Does France transpose directives on time?
+After the vote, France must apply what has been adopted, whether or not it voted for it.
+For a directive, the Treaty states: “A directive shall be binding, as to the result to be achieved, upon each Member State to which it is addressed, but shall leave to the national authorities the choice of form and methods” (TFEU, art.
+288); each directive sets the date by which it must be transposed.
+Twice a year, the European Commission measures the share of Single Market directives that are not transposed on time: this is the transposition deficit.
+As at 30 November 2025, this deficit stood at 1.1% in France, the same value as the EU average.
+That amounts to 11 directives out of 1,022.
+The Commission also counts the directives it considers incorrectly transposed, on the basis of its infringement proceedings: this is the conformity deficit, at 1.5% for France.
+The EU average is 1.1%, and the opening of infringement proceedings does not itself establish a breach found by the Court.
+The Commission places France among the nine Member States that combine a high transposition deficit and a high conformity deficit.
+These values come from a single edition of the scoreboard.
+They do not say whether France’s delay is growing or shrinking.
+How these values were recorded, and the target set
+The Commission publishes these values only in an interactive table, with no file: they were recorded from an archived screenshot, and the EU averages checked against the Commission’s text.
+The European Council set a transposition deficit target of 1% in 2007.
+The Commission lowered it to 0.5% (Single Market Act of 2011, Communication of March 2023).
+France's transposition indicators
+Indicator, as at 30 November 2025
+France
+EU average
+Transposition deficit (directives not transposed)
+1.1%
+1.1%
+Overdue directives
+11
+11
+Overdue by more than two years
+1
+1
+Average delay (months)
+10.2
+9.7
+Conformity deficit (proceedings for incorrect transposition)
+1.5%
+1.1%
+Duration of infringement proceedings for late transposition (months)
+17.9
+15.2
+A delay can lead to infringement proceedings: the Commission delivers a reasoned opinion, then may bring the matter before the Court of Justice (TFEU, art.
+258); another Member State may also do so (art.
+259).
+Where a Member State has failed to notify measures transposing a directive adopted under a legislative procedure, the Court may impose a lump sum or a penalty payment as soon as it finds the infringement (art.
+260(3)).
+Before assessing a European promise, what should be checked?
+A campaign promise that touches on Europe can be read with five questions, in this order.
+Has the area been conferred on the Union?
+If not, France decides alone, while respecting the common rules; if the competence is shared, the room for manoeuvre depends on what the Union has already adopted.
+Who must propose?
+As a rule the Commission: France can ask for a proposal, through the Council or with other Member States, not table one alone.
+Which voting rule does the legal basis set?
+Under qualified majority, France can be outvoted; under unanimity, its vote against can block, its abstention cannot.
+What will France have to do after adoption?
+Apply a regulation, transpose a directive by the set date, under the supervision of the Commission and the Court.
+What will the final vote show?
+France’s position at the last moment, not what it obtained along the way.
+What this page does not say
+It does not say whether the Union decides too much or too little, nor whether France carries much or little weight in it: none of the measures presented measures that.
+It does not relate votes against and abstentions to the number of votes in which each Member State could take part; such a normalisation would require building these denominators, and would still say nothing about influence.
+It counts neither acts of the Commission, nor decisions of the European Central Bank, nor judgments of the Court of Justice, nor Council votes on non-legislative acts, such as decisions on signing a trade agreement: the January 2026 decisions on signing the agreement between the Union and Mercosur, adopted by written procedure, fall outside the record, whatever each Member State’s vote.
+It reads the Treaties in force, without case law.
+The votes stand as at 1 October 2026, transposition as at 30 November 2025.
+Changing the European rules Un président peut-il tenir ses promesses ?, the author's book, in French: contents, excerpts and reviews →
+Frequently asked questions
+Can France block a European law?
+That depends on the voting rule the Treaty sets for the area.
+Under qualified majority, the most frequent rule, no Member State can block alone: a blocking minority must include at least four Council members.
+Where the Treaty requires unanimity, for example for indirect taxation (article 113 TFEU) or the multiannual financial framework (article 312), a single vote against is enough to prevent adoption; an abstention is not.
+How many times has France voted against a European law?
+In the public votes of the Council of the European Union on legislative acts, from 22 December 2009 to 1 October 2026, France voted against twice and abstained three times.
+The texts it voted against were adopted by qualified majority.
+In the same record, Germany voted against 32 times and the Netherlands 41 times; these raw counts do not measure a Member State's influence.
+Does France transpose EU directives on time?
+According to the European Commission's Single Market Scoreboard, as at 30 November 2025, 1.1% of Single Market directives whose deadline had passed had not been transposed in France, the same as the EU average.
+The Commission's target is 0.5%.
+The directives it considers incorrectly transposed, on the basis of its infringement proceedings, amounted to 1.5% for France.
+The EU average was 1.1%.
+These values come from a single edition of the scoreboard.
+Sources
+Treaty on European Union, consolidated version, Official Journal of the European Union C 202 of 7 June 2016 (EUR-Lex), art.
+4, 5, 15, 16 and 17.
+Treaty on the Functioning of the European Union, same Official Journal, art.
+2 to 6, 18, 76, 238, 241, 258 to 260, 288, 293 and 294, and the whole Treaty for the legal bases; Protocol No 36 on transitional provisions.
+Council of the European Union, search of voting results on legislative acts (recorded on 6 October 2026); “voting result” notes of the public register of documents, linked to the five acts of the table; monthly summary of Council acts, May 2021 (ST 8962/21, 28 June 2021); General Secretariat of the Council, Guide to the ordinary legislative procedure, 2010, annex III (doi 10.2860/74684).
+Official Journal of the European Union (EUR-Lex), the five acts of the table, linked row by row.
+Ondarza, Nicolai von and Bochtler, Paul, Public Voting Data of the Council of the EU, version 2.0.0, SWP, 2023, doi 10.7802/2560, CC BY 4.0 licence.
+European Commission, Single Market and Competitiveness Scoreboard, transposition, edition as at 30 November 2025.
+The figures, the checks and the chart are produced by a single script.
+It rereads the archived Treaty, where each quotation is found word for word, the SWP dataset and the archived documents of the five acts.
+The counts of votes by Member State, recorded in a browser, and the count of each act, read in the annex to the Council’s note, are transcribed in the script, which stops if the recalculation from the SWP dataset contradicts them over the common period; votes after March 2023 have no second dataset.
+For the two votes against in the SWP dataset that the count sets aside, the script rereads the archived summary of the Council’s acts for May 2021 and checks that the SWP dataset carries nothing but them between the two votes that frame them in the Council’s search, which are transcribed.
+The transposition indicators are transcribed from a screenshot, and their EU averages checked against the Commission’s text.
+Download the data (CC BY 4.0 licence): CSV, long format; JSON, with the legal bases, the explained gaps, the five acts and the report of the checks.
+An earlier version of this dataset is archived on Zenodo, with the six others of the same series and their methods note, under a permanent identifier: doi:10.5281/zenodo.23212664.
+Reusing this page
+The charts, the data and a ready-made citation, under an open licence.
+Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it does not come apart from what makes it readable.
+Raw number of votes against and abstentions — different lengths of membership and fields of participation
+In the public votes of the Council of the European Union on legislative acts, from 22 December 2009 to 1 October 2026, France voted against twice and abstained three times; it voted in favour in every other case.
+Reading caveat.
+Raw counts, not a ranking of influence: United Kingdom until its withdrawal (2020), Croatia since its accession (2013); Denmark and Ireland do not take part in some acts.
+Council of the EU, voting results search (retrieved 6 October 2026); check: SWP / GESIS, doi 10.7802/2560, 22 December 2009 to 28 March 2023
+Download PNG
+SVG
+Cite this page
+Lalut, Stéphane (2026).
+“What can France decide in the European Union?”.
+TEU and TFEU, Council of the EU, Official Journal, SWP / GESIS and European Commission data, retrieved 6 October 2026 (Council votes, retrieved on that date; transposition as at 30 November 2025). https://stephane-lalut.com/en/what-can-france-decide-in-the-european-union/
+Copy citation
+In three sentences
+What the Treaties have not conferred on the Union remains with the Member States: France decides alone there, while respecting the common rules.
+Where the Union has competence, the Commission proposes, and the Council votes most often by qualified majority, sometimes unanimously.
+In the public votes of the Council on legislative acts, from 22 December 2009 to 1 October 2026, France voted against twice and abstained three times; a vote in favour does not say what it obtained or gave up in the negotiation.
+Copy summary
+The data
+The votes against, abstentions and non-participation of each Member State in the Council, the five acts on which France did not vote in favour with their count and references, the TFEU legal bases by decision rule and France's transposition indicators; the same content exists in CSV, long format, readable in a spreadsheet.
+Download JSON CSV
+Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
+Text under copyright — short quotation free, full reproduction on request.
+The raw series belong to their producers (TEU and TFEU, Council of the EU, Official Journal, SWP / GESIS and European Commission), under their own terms.
+All resources: data, explainers and reference material →
+Share
+WhatsApp
+Bluesky
+LinkedIn
+X
+Email
+Copy link

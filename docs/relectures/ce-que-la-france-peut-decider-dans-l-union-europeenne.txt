@@ -1,0 +1,608 @@
+# relu le 2026-10-12 ; texte servi de /ce-que-la-france-peut-decider-dans-l-union-europeenne/, build de 664e06c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+ENCette page existe aussi en anglais — English version
+Ce que la France peut décider dans l'Union européenne
+Ce que les traités n'ont pas attribué à l'Union reste aux États : la France y décide seule, en respectant les règles communes.
+Là où l'Union est compétente, la Commission propose et la France vote avec les autres gouvernements au Conseil : à la majorité qualifiée, elle peut être mise en minorité ; à l'unanimité, son seul vote contre peut bloquer.
+Sur les votes publics du Conseil sur des actes législatifs, du 22 décembre 2009 au 1er octobre 2026, la France a voté contre deux fois et s'est abstenue trois fois.
+Ces votes disent sa position au dernier moment, non ce qu'elle a obtenu dans la négociation qui les précède.
+Promesses présidentielles
+↓ Graphiques, données et citations à réutiliserRéutiliser cette page
+Le chiffre surprend : sur l’ensemble des votes publics relevés, la France ne s’est presque jamais opposée à une loi européenne au Conseil.
+Il se prête à trois lectures.
+Elle obtiendrait l’essentiel de ce qu’elle demande avant le vote ; elle contribuerait à des compromis sans tout obtenir ; ou elle se rallierait à des textes qu’elle aurait voulus autres.
+Le décompte des votes ne départage pas ces trois histoires, et cette page ne prétend pas le faire.
+Le pouvoir d’un État dans l’Union ne se mesure pas au nombre de fois où il dit non.
+Il dépend de la matière, qui fixe qui décide ; de la règle de vote, qui fixe ce qu’un seul État peut empêcher ; et de la négociation, que le vote final ne montre pas.
+La page suit cette frontière : ce que la France décide seule, ce qu’elle décide avec les autres, ce qu’elle peut bloquer ou doit accepter, ce qu’elle fait du texte adopté.
+Elle s’appuie sur le texte des traités en vigueur et sur les votes que publie le Conseil.
+Que peut décider la France seule ?
+Ce que les traités n’ont pas confié à l’Union reste aux États : c’est le principe d’attribution (traité sur l’Union européenne, ou TUE, art.
+4 et 5).
+Le traité nomme lui-même une matière qui reste nationale : « la sécurité nationale reste de la seule responsabilité de chaque État membre » (TUE, art.
+4, § 2).
+Dans d’autres domaines, la loi reste nationale et l’Union ne fait qu’appuyer, coordonner ou compléter l’action des États, sans harmoniser leurs législations : la protection et l'amélioration de la santé humaine, l'industrie, la culture, le tourisme, l'éducation, la formation professionnelle, la jeunesse et le sport, la protection civile et la coopération administrative (traité sur le fonctionnement de l’Union européenne, ou TFUE, art.
+2, § 5, et art.
+6).
+Détenir une compétence ne dispense pas de respecter les règles communes en l’exerçant.
+Chaque État doit assurer l’exécution des obligations nées des traités (coopération loyale, TUE, art.
+4, § 3) et ne peut pas discriminer en raison de la nationalité (TFUE, art.
+18) ; une loi française qui touche aux échanges peut en outre rencontrer les libertés de circulation du marché intérieur.
+La France décide seule dans ces matières ; elle n’y décide pas hors du droit de l’Union.
+Les articles cités, mot pour mot
+Le TUE pose la règle : « toute compétence non attribuée à l'Union dans les traités appartient aux États membres » (art.
+4, § 1).
+Le principe d’attribution : « l'Union n'agit que dans les limites des compétences que les États membres lui ont attribuées dans les traités pour atteindre les objectifs que ces traités établissent » (art.
+5, § 2).
+Dans les domaines d’appui, de coordination et de complément, les actes de l’Union « ne peuvent pas comporter d'harmonisation des dispositions législatives et réglementaires des États membres » (TFUE, art.
+2, § 5).
+La coopération loyale : « Les États membres prennent toute mesure générale ou particulière propre à assurer l'exécution des obligations découlant des traités ou résultant des actes des institutions de l'Union » (TUE, art.
+4, § 3).
+La non-discrimination : « Dans le domaine d'application des traités, et sans préjudice des dispositions particulières qu'ils prévoient, est interdite toute discrimination exercée en raison de la nationalité » (TFUE, art.
+18).
+Les deux traités sont cités dans leur version consolidée de 2016, c’est-à-dire le texte en vigueur, modifications successives intégrées, publié au Journal officiel de l’Union, et sans la jurisprudence de la Cour qui les interprète.
+« La France décide seule » ne veut pas dire « le président décide seul ».
+Une décision nationale peut demander une loi, un décret ou l’intervention d’autres autorités françaises : la page Que peut décider le président de la République seul ? les distingue.
+Dans quelles matières l’Union décide-t-elle ?
+Le TFUE range les compétences attribuées à l’Union en trois catégories (art.
+2 à 6).
+Compétence exclusive (art.
+3) : seule l’Union légifère, les États ne le pouvant que si elle les y habilite ou pour appliquer ses actes.
+Elle couvre l'union douanière, l'établissement des règles de concurrence nécessaires au fonctionnement du marché intérieur, la politique monétaire pour les États membres dont la monnaie est l'euro, la conservation des ressources biologiques de la mer dans le cadre de la politique commune de la pêche et la politique commerciale commune, ainsi que certains accords internationaux.
+Compétence partagée (art.
+4) : l’Union et les États peuvent légiférer, les États tant que l’Union n’a pas exercé sa compétence.
+Elle couvre notamment le marché intérieur, l’agriculture et la pêche, l’environnement, les transports et l’énergie.
+Appui, coordination, complément (art.
+6) : la santé humaine, l’industrie, la culture, l’éducation et les autres domaines nommés dans la section précédente, où la loi reste nationale.
+Ce que disent les articles 2 à 6 du TFUE
+L’article 2, § 1, sur la compétence exclusive : « Lorsque les traités attribuent à l'Union une compétence exclusive dans un domaine déterminé, seule l'Union peut légiférer et adopter des actes juridiquement contraignants, les États membres ne pouvant le faire par eux-mêmes que s'ils sont habilités par l'Union, ou pour mettre en œuvre les actes de l'Union. » L’article 2, § 2, sur la compétence partagée : « Lorsque les traités attribuent à l'Union une compétence partagée avec les États membres dans un domaine déterminé, l'Union et les États membres peuvent légiférer et adopter des actes juridiquement contraignants dans ce domaine.
+Les États membres exercent leur compétence dans la mesure où l'Union n'a pas exercé la sienne.
+Les États membres exercent à nouveau leur compétence dans la mesure où l'Union a décidé de cesser d'exercer la sienne. » La liste des compétences partagées n’est pas fermée : est partagée toute compétence attribuée qui n’est ni exclusive ni d’appui (art.
+4, § 1).
+Pour la recherche, le développement technologique, l’espace, la coopération au développement et l’aide humanitaire, l’action de l’Union ne peut pas empêcher les États d’exercer leur propre compétence (art.
+4, § 3 et 4).
+L’Union dispose aussi d’une compétence exclusive pour certains accords internationaux (art.
+3, § 2).
+Les États coordonnent en outre leurs politiques économiques et de l’emploi selon les modalités du traité, et l’Union peut prendre des initiatives pour coordonner leurs politiques sociales (art.
+5) ; la politique étrangère et de sécurité commune suit les règles propres du TUE (art.
+2, § 4).
+Les domaines, cités dans le texte du traité
+Catégorie
+Domaine (texte du traité)
+Exclusive (art.
+3, § 1)
+l'union douanière
+Exclusive (art.
+3, § 1)
+l'établissement des règles de concurrence nécessaires au fonctionnement du marché intérieur
+Exclusive (art.
+3, § 1)
+la politique monétaire pour les États membres dont la monnaie est l'euro
+Exclusive (art.
+3, § 1)
+la conservation des ressources biologiques de la mer dans le cadre de la politique commune de la pêche
+Exclusive (art.
+3, § 1)
+la politique commerciale commune
+Partagée (art.
+4, § 2)
+le marché intérieur
+Partagée (art.
+4, § 2)
+la politique sociale, pour les aspects définis dans le présent traité
+Partagée (art.
+4, § 2)
+la cohésion économique, sociale et territoriale
+Partagée (art.
+4, § 2)
+l'agriculture et la pêche, à l'exclusion de la conservation des ressources biologiques de la mer
+Partagée (art.
+4, § 2)
+l'environnement
+Partagée (art.
+4, § 2)
+la protection des consommateurs
+Partagée (art.
+4, § 2)
+les transports
+Partagée (art.
+4, § 2)
+les réseaux transeuropéens
+Partagée (art.
+4, § 2)
+l'énergie
+Partagée (art.
+4, § 2)
+l'espace de liberté, de sécurité et de justice
+Partagée (art.
+4, § 2)
+les enjeux communs de sécurité en matière de santé publique, pour les aspects définis dans le présent traité
+Appui, coordination, complément (art.
+6)
+la protection et l'amélioration de la santé humaine
+Appui, coordination, complément (art.
+6)
+l'industrie
+Appui, coordination, complément (art.
+6)
+la culture
+Appui, coordination, complément (art.
+6)
+le tourisme
+Appui, coordination, complément (art.
+6)
+l'éducation, la formation professionnelle, la jeunesse et le sport
+Appui, coordination, complément (art.
+6)
+la protection civile
+Appui, coordination, complément (art.
+6)
+la coopération administrative
+Qui met un texte à l’agenda, qui le propose, qui l’adopte ?
+Là où l’Union est compétente, trois pouvoirs se distinguent.
+Proposer revient en règle à la Commission (TUE, art.
+17, § 2 ; TFUE, art.
+294, § 2).
+Un gouvernement ne dépose donc pas lui-même un projet de loi européenne.
+Mettre un sujet à l’agenda lui reste ouvert, avec d’autres.
+Le Conseil peut demander à la Commission de lui soumettre des propositions, et, si elle ne le fait pas, elle doit lui en donner les raisons (TFUE, art.
+241).
+Dans la coopération judiciaire en matière pénale et la coopération policière, les actes peuvent aussi être adoptés « sur initiative d'un quart des États membres » (art.
+76).
+Adopter revient, dans la procédure législative ordinaire, au Parlement européen et au Conseil de l’Union européenne.
+Deux institutions portent un nom voisin : au Conseil de l’Union européenne siège un ministre de chaque État, selon le sujet traité (agriculture, finances, environnement…) ; au Conseil européen siègent les chefs d’État ou de gouvernement, qui fixent les orientations générales et ne votent pas les lois (TUE, art.
+15, § 1 : « Il n'exerce pas de fonction législative »).
+Les votes de cette page sont ceux du Conseil de l’Union européenne.
+Ce que la proposition change pour la France.
+Une fois la proposition déposée, le Conseil ne peut l’amender qu’à l’unanimité, sauf dans les cas que le traité énumère (conciliation avec le Parlement européen, procédures budgétaires et financières) ; la Commission, elle, peut modifier sa proposition tant que le Conseil n’a pas statué (TFUE, art.
+293).
+Hors ces exceptions, la règle joue dans les deux sens : les autres États ne peuvent pas réécrire la proposition au Conseil sans l’accord de la France, et une majorité d’États, la France comprise, ne suffit pas non plus à la réécrire.
+Les articles cités, mot pour mot
+L’initiative de la Commission : « Un acte législatif de l'Union ne peut être adopté que sur proposition de la Commission, sauf dans les cas où les traités en disposent autrement » (TUE, art.
+17, § 2) ; l’article qui décrit la procédure législative ordinaire s’ouvre ainsi : « La Commission présente une proposition au Parlement européen et au Conseil » (TFUE, art.
+294, § 2).
+La demande du Conseil, et ce qui suit un refus : « Si la Commission ne soumet pas de proposition, elle en communique les raisons au Conseil » (TFUE, art.
+241).
+Le Conseil de l’Union européenne réunit un représentant de chaque État membre au niveau ministériel (TUE, art.
+16, § 2).
+L’article 293 du TFUE, premier paragraphe : lorsque le Conseil statue sur proposition de la Commission, « le Conseil ne peut amender la proposition que statuant à l'unanimité, sauf dans les cas visés à l'article 294, paragraphes 10 et 13, aux articles 310, 312, 314 et à l'article 315, deuxième alinéa ».
+Deuxième paragraphe : « Tant que le Conseil n'a pas statué, la Commission peut modifier sa proposition tout au long des procédures conduisant à l'adoption d'un acte de l'Union ».
+Selon quelle règle le Conseil décide-t-il ?
+La règle dépend de la base juridique, l’article du traité sur lequel l’acte est fondé.
+Le cas général est la majorité qualifiée, définie comme « au moins 55 % des membres du Conseil, comprenant au moins quinze d'entre eux et représentant des États membres réunissant au moins 65 % de la population de l'Union » (TUE, art.
+16, § 4) ; quand le Conseil ne statue pas sur proposition de la Commission, il faut « au moins 72 % des membres du Conseil, représentant des États membres réunissant au moins 65 % de la population de l'Union » (TFUE, art.
+238, § 2).
+Le même article 16 ajoute : « Une minorité de blocage doit inclure au moins quatre membres du Conseil ».
+Aucun État ne forme donc seul une minorité de blocage, et la France peut être mise en minorité.
+Le relevé des votes, plus bas, traverse trois régimes de la majorité qualifiée : les voix pondérées, puis la double majorité avec la faculté de demander l’ancien calcul, puis la double majorité seule.
+Les voix des États ont été pondérées jusqu’au 31 octobre 2014.
+La double majorité s’applique depuis le 1er novembre 2014 ; jusqu’au 31 mars 2017, un membre du Conseil pouvait encore demander l’ancien calcul (protocole n° 36 sur les dispositions transitoires).
+Dans d’autres matières, le Conseil statue à l’unanimité : la fiscalité indirecte, les ressources propres de l’Union ou le cadre financier pluriannuel, par exemple (tableau ci-dessous).
+Voter contre ou s’abstenir.
+À la majorité qualifiée, voter contre et s’abstenir empêchent tous deux que la voix de l’État contribue à la majorité favorable.
+Mais les deux positions ne disent pas la même chose politiquement.
+À l’unanimité, une abstention ne bloque pas : un vote contre peut bloquer.
+Le traité l’écrit ainsi : « Les abstentions des membres présents ou représentés ne font pas obstacle à l'adoption des délibérations du Conseil qui requièrent l'unanimité » (TFUE, art.
+238, § 4).
+La règle, matière par matière, pour les instruments que nomment le livre et les programmes
+Matière
+Base (TFUE)
+Règle au Conseil
+Marché intérieur (rapprochement des législations)
+art.
+114(1)
+procédure législative ordinaire (majorité qualifiée)
+Fiscalité indirecte (TVA, accises)
+art.
+113, al.
+1
+unanimité au Conseil
+Politique commerciale : cadre de mise en œuvre
+art.
+207(2)
+procédure législative ordinaire (majorité qualifiée)
+Politique commerciale : certains accords
+art.
+207(4)
+unanimité au Conseil
+Environnement
+art.
+192(1)
+procédure législative ordinaire (majorité qualifiée)
+Environnement : dispositions fiscales, aménagement du territoire, énergie
+art.
+192(2)
+unanimité au Conseil
+Agriculture et pêche : organisation commune des marchés
+art.
+43(2)
+procédure législative ordinaire (majorité qualifiée)
+Asile
+art.
+78(2)
+procédure législative ordinaire (majorité qualifiée)
+Immigration
+art.
+79(2)
+procédure législative ordinaire (majorité qualifiée)
+Politique sociale
+art.
+153(2)
+les deux, selon les mesures
+Ressources propres de l'Union
+art.
+311, al.
+3
+unanimité au Conseil
+Cadre financier pluriannuel
+art.
+312(2)
+unanimité au Conseil
+Combien de bases juridiques, et comment elles ont été comptées
+Le relevé du TFUE compte 81 bases de la procédure législative ordinaire, dans 74 articles, et 51 bases où le Conseil statue à l’unanimité, dans 48 articles ; ces dernières fondent des actes législatifs et non législatifs.
+Ces nombres ne mesurent ni le poids des matières, ni la fréquence des actes adoptés sur chacune de ces bases.
+Le texte est la version consolidée du TFUE publiée au Journal officiel de l’Union le 7 juin 2016.
+Chaque domaine des articles 3, 4 et 6 est cité mot pour mot, et la complétude de chaque liste est relue dans le texte.
+Ces 81 bases et les deux bases conditionnelles ont été comparées à la liste que publie le Secrétariat général du Conseil dans son guide de cette procédure (annexe III, 83 entrées) : les deux listes concordent exactement.
+Cette comparaison a fait apparaître des bases qui renvoient à la procédure sans la nommer (articles 42, 62 et 177), lues et ajoutées.
+Deux bases suivent une procédure qui dépend de la mesure (articles 83, § 2, et 136, § 1).
+Les mentions qui ne fondent pas un acte (freins d’urgence, passerelles, articles qui décrivent la procédure) sont écartées, chacune avec son motif, dans le fichier de données.
+La liste de l’unanimité repose sur le mot : une base qui y renverrait sans l’employer échapperait au relevé, et elle n’a pas de second producteur sur le même périmètre.
+Un inventaire universitaire de 2014 (S.
+Polidori, Eurostudium3w) compte 55 dispositions du TFUE à l’unanimité, Conseil européen compris ; ce n’est pas la même unité, et il ne contrôle donc pas ce relevé.
+Comment la France vote-t-elle au Conseil ?
+Le résultat en une phrase.
+Sur les votes publics du Conseil de l’Union européenne sur des actes législatifs, du 22 décembre 2009 au 1er octobre 2026, la France a voté contre deux fois et s’est abstenue trois fois ; elle a voté pour dans tous les autres cas.
+Les cinq textes ont tous été adoptés.
+Sur les deux contre lesquels elle a voté, la France a été mise en minorité : c’est la majorité qualifiée à l’œuvre.
+Sur les trois où elle s’est abstenue, elle n’a pas joint sa voix à la majorité, sans s’y opposer.
+Chaque ligne du tableau renvoie au résultat publié par le Conseil et à l’acte paru au Journal officiel, daté après le vote, le temps de la signature.
+Les actes où la France n'a pas voté pour
+Date du vote
+Vote de la France
+Acte
+Décompte au Conseil
+Acte publié
+Second jeu
+Documents
+17 février 2014
+contre
+Règlement sur les vins aromatisés
+27 pour, 1 contre, 0 abstention
+règlement (UE) n° 251/2014 du 26 février 2014
+SWP : même décompte
+résultat du Conseil · EUR-Lex
+8 mai 2014
+abstention
+Directive modifiant la directive 2001/110/CE relative au miel
+24 pour, 2 contre, 2 abstentions
+directive 2014/63/UE du 15 mai 2014
+SWP : même décompte
+résultat du Conseil · EUR-Lex
+1er octobre 2015
+abstention
+Règlement sur le commerce des produits dérivés du phoque
+23 pour, 1 contre, 4 abstentions
+règlement (UE) 2015/1775 du 6 octobre 2015
+SWP : même décompte
+résultat du Conseil · EUR-Lex
+8 juillet 2025
+abstention
+Décision sur l'accord d'interprétation du traité sur la Charte de l'énergie
+22 pour, 1 contre, 4 abstentions
+décision (UE) 2025/1904 du 10 septembre 2025
+aucun (vote postérieur au jeu SWP)
+résultat du Conseil · EUR-Lex
+23 février 2026
+contre
+Règlement sur la notion de « pays tiers sûr »
+23 pour, 3 contre, 0 abstention, 1 ne participe pas
+règlement (UE) 2026/463 du 24 février 2026
+aucun (vote postérieur au jeu SWP)
+résultat du Conseil · EUR-Lex
+Deux votes contre que le Conseil n’atteste pas.
+Un second jeu de données, tiré des fichiers du Conseil par un institut allemand, la SWP, compte deux votes contre de la France de plus, datés du 17 mai 2021, sans titre ni objet.
+Nous les avons cherchés dans les publications du Conseil : son récapitulatif des actes du mois ne mentionne ni réunion ni acte législatif ce jour-là, et sa recherche des votes n’en rend aucun entre le 10 mai et le 26 mai 2021.
+Ces deux entrées ne sont donc pas comptées, et ce qu’elles désignaient reste inconnu ; le détail de la recherche est dans le repli « Comment le relevé a été fait et contrôlé ».
+Votes contre et abstentions de chaque État membre dans les votes publics du Conseil de l’Union européenne sur des actes législatifs, du 22 décembre 2009 au 1er octobre 2026.
+Le Royaume-Uni n’y figure que jusqu’à son retrait, la Croatie depuis son adhésion en 2013, et le Danemark et l’Irlande ne participent pas à certains actes : ces comptes bruts ne constituent pas un classement d’influence.
+Télécharger · Citer · Données
+Les votes de chaque État membre en tableau
+État membre
+Contre
+Abstention
+Ne participe pas
+Allemagne
+32
+48
+0
+Autriche
+36
+67
+0
+Belgique
+7
+47
+0
+Bulgarie
+19
+48
+1
+Chypre
+13
+1
+1
+Croatie
+4
+12
+1
+Danemark
+29
+12
+159
+Espagne
+17
+14
+2
+Estonie
+7
+26
+3
+Finlande
+19
+11
+1
+France
+2
+3
+0
+Grèce
+7
+7
+1
+Hongrie
+79
+47
+4
+Irlande
+5
+12
+106
+Italie
+18
+12
+2
+Lettonie
+7
+20
+3
+Lituanie
+6
+7
+3
+Luxembourg
+15
+18
+0
+Malte
+15
+17
+0
+Pays-Bas
+41
+24
+1
+Pologne
+57
+40
+4
+Portugal
+8
+19
+0
+Roumanie
+9
+11
+3
+Royaume-Uni
+56
+118
+72
+Slovaquie
+23
+35
+4
+Slovénie
+6
+15
+0
+Suède
+41
+13
+2
+Tchéquie
+19
+54
+3
+Sur le même relevé, l’Allemagne a voté contre 32 fois et s’est abstenue 48 fois.
+Les Pays-Bas ont voté contre 41 fois, la Pologne 57 fois.
+La Hongrie l’a fait 79 fois.
+Ce que ces chiffres ne disent pas.
+Ils décrivent la position formelle des États au vote final.
+Ils ne mesurent ni leur influence dans la négociation, ni ce qu’ils ont obtenu ou cédé, ni leur capacité générale à bloquer une décision.
+Le relevé ne couvre que les votes publics sur des actes législatifs : ni les actes non législatifs, ni la politique étrangère, ni les discussions qui précèdent le vote.
+Comment le relevé a été fait et contrôlé
+Le relevé.
+Le Conseil a arrêté ses fichiers de données ouverts en mars 2025 ; ses résultats de vote ne sont plus publiés que par sa page de recherche, qui n’accepte pas les programmes.
+Le relevé a donc été fait dans un navigateur, le 6 octobre 2026, page par page : 1 755 entrées, exactement le total que la page annonce ; la recherche, filtrée tour à tour sur la France et sur l’Allemagne, rend les mêmes entrées.
+Parmi ces votes, 1 622 relevaient de la majorité qualifiée, 132 de l’unanimité et un de la majorité qualifiée sans proposition de la Commission.
+Le Conseil affiche 8 entrées en double, identiques dans tous leurs champs : le nombre d’actes est compris entre 1 747 et 1 755.
+Ces doublons sont des votes unanimes et ne changent aucun compte de votes contre ou d’abstentions.
+Le second jeu de données.
+Le jeu constitué par l’Institut allemand pour les affaires internationales et de sécurité (SWP) à partir des données du Conseil, du 22 décembre 2009 au 28 mars 2023, a été rapproché du relevé acte par acte, puis État par État : les comptes de votes contre et d’abstentions de 23 États sur 28 sont identiques dans les deux sources, et les écarts des autres s’expliquent.
+Un acte du 28 mars 2023 manque au jeu SWP, arrêté deux semaines plus tard.
+Deux entrées du jeu SWP sans titre et unanimes n’ont pas pu être corroborées ; elles ne changent aucun compte de votes contre ou d’abstentions.
+Les deux votes contre du 17 mai 2021.
+Ils n’existent que dans le jeu SWP, sans titre ni objet, chacun avec la France seule contre.
+Ils portent des identifiants de procédure de vote des fichiers ouverts du Conseil, que celui-ci ne publie plus.
+Le récapitulatif mensuel des actes du Conseil pour mai 2021 (document ST 8962/21, publié le 28 juin 2021) ne mentionne aucune réunion du Conseil ce jour-là ; il n’y porte qu’un acte, une décision de politique étrangère et de sécurité commune adoptée par procédure écrite, hors du champ des actes législatifs, et aucune procédure écrite législative dans le mois.
+La recherche des votes du Conseil, lue le 12 octobre 2026, rend des votes le 10 mai, puis le 26 mai 2021, et aucun entre les deux ; le registre des documents du Conseil ne contient aucun résultat de vote la semaine du 17 mai 2021, alors qu’il contient ceux de la semaine précédente.
+Faute d’avoir pu les corroborer, le compte publié ne les intègre pas.
+D’où viennent ces deux fiches, erreur de saisie ou vote jamais publié, aucune des pièces lues ne permet de le dire.
+Les cinq actes.
+Pour chacun, la note « résultat de vote » du Conseil et l’acte publié au Journal officiel, en français et en anglais, ont été archivés le 12 octobre 2026.
+Le décompte est lu dans l’annexe de la note et sur la page de recherche du Conseil ; le script vérifie dans les pièces archivées la procédure, la date du vote et, dans l’acte, son numéro, sa date et la mention de la décision du Conseil à la date du vote.
+Les trois votes couverts par le jeu SWP, jusqu’au 28 mars 2023, y ont le même décompte, que le script recalcule depuis ce jeu ; les deux suivants sont documentés à la source, sans second jeu.
+Deux de ces votes, antérieurs au 1er novembre 2014, ont été comptés en voix pondérées.
+Ce que le producteur du second jeu écrivait déjà.
+La SWP écrivait en décembre 2021 : « France has only been outvoted once and abstained twice in all public votes since 2010 ».
+Notre relevé compte, de 2010 à 2021, un vote contre et deux abstentions de la France : le même compte, qui ne comprend donc pas les deux votes contre du 17 mai 2021 que porte le jeu de données.
+En avril 2024, le même institut écrit, pour 2010 à septembre 2023 : « France, which was only outvoted five times in the entire observation period ».
+Notre relevé compte trois votes contre ou abstentions sur cette période ; l’écart correspond aux deux entrées du 17 mai 2021, sans que la note de 2024 liste les votes qu’elle compte.
+Pourquoi un État peut-il voter oui à un texte qu’il voulait différent ?
+Le vote final n’enregistre que la dernière étape d’une séquence.
+D’abord, chaque gouvernement arrive avec une position : ce qu’il demande, ce qu’il refuse.
+Ensuite, le texte se négocie.
+La Commission peut modifier sa proposition tant que le Conseil n’a pas statué, le Parlement européen arrête ses propres positions et, du côté des gouvernements, « Un comité des représentants permanents des gouvernements des États membres est responsable de la préparation des travaux du Conseil » (TUE, art.
+16, § 7).
+Puis un texte final est mis aux voix, qui peut s’écarter de ce que chaque État demandait au départ.
+Enfin, chaque État vote pour, contre, s’abstient ou ne participe pas.
+Un « oui » à cette dernière étape est compatible avec les trois histoires du début : l’État a obtenu l’essentiel de ce qu’il demandait, il a contribué à un compromis sans tout obtenir, ou il s’est rallié à un texte qu’il aurait voulu autre.
+Le décompte ne permet pas de les départager.
+Il faudrait, pour cela, des sources sur la négociation elle-même, acte par acte, que le relevé des votes ne contient pas.
+Le vote final est une observation, non l’historique des préférences et des concessions.
+La France transpose-t-elle les directives à temps ?
+Après le vote, la France doit appliquer ce qui a été adopté, qu’elle l’ait voté ou non.
+Pour une directive, le traité dit : « La directive lie tout État membre destinataire quant au résultat à atteindre, tout en laissant aux instances nationales la compétence quant à la forme et aux moyens » (TFUE, art.
+288) ; chaque directive fixe la date avant laquelle la transposer.
+La Commission mesure, deux fois par an, la part des directives du marché unique qui ne sont pas transposées à temps : c’est le déficit de transposition.
+Au 30 novembre 2025, ce déficit était de 1,1 % en France, la même valeur que la moyenne de l’Union.
+Cela représente 11 directives sur 1 022.
+La Commission compte aussi les directives qu’elle tient pour mal transposées, d’après ses procédures d’infraction : c’est le déficit de conformité, de 1,5 % pour la France.
+La moyenne de l’Union est de 1,1 %, et une procédure engagée n’est pas un manquement constaté par la Cour.
+La Commission range la France parmi les neuf États qui cumulent un déficit de transposition élevé et un déficit de conformité élevé.
+Ces valeurs viennent d’une seule édition du tableau d’affichage.
+Elles ne disent pas si le retard de la France augmente ou diminue.
+Comment ces valeurs ont été relevées, et l'objectif fixé
+La Commission ne publie ces valeurs que dans un tableau interactif, sans fichier : elles ont été relevées sur une capture archivée, et les moyennes de l’Union contrôlées par le texte de la Commission.
+Le Conseil européen avait fixé en 2007 un objectif de déficit de transposition de 1 %.
+La Commission l’a ramené à 0,5 % (Acte pour le marché unique de 2011, communication de mars 2023).
+Les indicateurs de transposition de la France
+Indicateur, au 30 novembre 2025
+France
+Moyenne de l'UE
+Déficit de transposition (directives non transposées)
+1,1 %
+1,1 %
+Directives en retard
+11
+11
+En retard de plus de deux ans
+1
+1
+Retard moyen (mois)
+10,2
+9,7
+Déficit de conformité (procédures pour transposition incorrecte)
+1,5 %
+1,1 %
+Durée des procédures d'infraction pour retard (mois)
+17,9
+15,2
+Un retard peut ouvrir une procédure en manquement : la Commission émet un avis motivé, puis peut saisir la Cour de justice (TFUE, art.
+258) ; un autre État peut aussi la saisir (art.
+259).
+Lorsque l’État n’a pas communiqué ses mesures de transposition d’une directive adoptée selon une procédure législative, la Cour peut lui infliger une somme forfaitaire ou une astreinte dès qu’elle constate le manquement (art.
+260, § 3).
+Avant d’évaluer une promesse européenne, que faut-il vérifier ?
+Une promesse de campagne qui touche à l’Europe se lit avec cinq questions, dans cet ordre.
+La matière a-t-elle été attribuée à l’Union ?
+Sinon, la France décide seule, dans le respect des règles communes ; si la compétence est partagée, la marge dépend de ce que l’Union a déjà adopté.
+Qui doit proposer ?
+En règle la Commission : la France peut demander une proposition, par le Conseil ou avec d’autres États, non la déposer seule.
+Quelle règle de vote fixe la base juridique ?
+À la majorité qualifiée, la France peut être mise en minorité ; à l’unanimité, son vote contre peut bloquer, son abstention non.
+Que devra faire la France après l’adoption ?
+Appliquer un règlement, transposer une directive avant la date fixée, sous le contrôle de la Commission et de la Cour.
+Que montrera le vote final ?
+La position de la France au dernier moment, non ce qu’elle a obtenu en chemin.
+Ce que cette page ne dit pas
+Elle ne dit pas si l’Union décide trop ou trop peu, ni si la France y pèse beaucoup ou peu : aucune des mesures présentées ne le mesure.
+Elle ne rapporte pas les votes contre et les abstentions au nombre de votes auxquels chaque État pouvait prendre part ; une telle normalisation demanderait de construire ces dénominateurs, et ne dirait toujours rien de l’influence.
+Elle ne compte ni les actes de la Commission, ni les décisions de la Banque centrale européenne, ni les arrêts de la Cour de justice, ni les votes du Conseil sur des actes non législatifs, comme les décisions relatives à la signature d’un accord commercial : les décisions de janvier 2026 sur la signature de l’accord entre l’Union et le Mercosur, adoptées par procédure écrite, sont hors du relevé, quel qu’ait été le vote de chaque État.
+Elle lit les traités en vigueur, sans jurisprudence.
+Les votes sont arrêtés au 1er octobre 2026, la transposition au 30 novembre 2025.
+Changer les règles européennes
+Un président peut-il tenir ses promesses ?
+Ce qu'il peut vraiment décider — et ce qui lui échappe
+Cette page trace la frontière entre ce que la France décide seule, ce qu’elle décide avec les autres États et ce qu’elle peut empêcher.
+Le livre suit deux préférences françaises jusqu’à la règle européenne, l’une adoptée, l’autre bloquée, et confronte les promesses de « changer l’Europe » à ce que le traité permet.
+Il ne donne aucun conseil de vote.
+Journalistes, enseignants, chercheurs, responsables publics ou associatifs
+Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock.
+Demander l'exemplaire offert →
+Version papier : 19,90 € · Kindle : 9,99 €
+Sommaire, extraits et recensions →
+Questions fréquentes
+La France peut-elle bloquer une loi européenne ?
+Cela dépend de la règle de vote que le traité fixe pour la matière.
+À la majorité qualifiée, la règle la plus fréquente, aucun État ne bloque seul : une minorité de blocage doit réunir au moins quatre membres du Conseil.
+Là où le traité exige l'unanimité, par exemple pour la fiscalité indirecte (article 113 du TFUE) ou le cadre financier pluriannuel (article 312), un seul vote contre suffit à empêcher l'adoption ; une abstention, non.
+Combien de fois la France a-t-elle voté contre une loi européenne ?
+Sur les votes publics du Conseil de l'Union européenne sur des actes législatifs, du 22 décembre 2009 au 1er octobre 2026, la France a voté contre deux fois et s'est abstenue trois fois.
+Les textes contre lesquels elle a voté ont été adoptés à la majorité qualifiée.
+Sur le même relevé, l'Allemagne a voté contre 32 fois et les Pays-Bas 41 fois ; ces comptes bruts ne mesurent pas l'influence d'un État.
+La France transpose-t-elle les directives européennes à temps ?
+Selon le tableau d'affichage du marché unique de la Commission, au 30 novembre 2025, 1,1 % des directives du marché unique dont l'échéance était passée n'étaient pas transposées en France, comme en moyenne dans l'Union.
+La Commission vise 0,5 %.
+Les directives qu'elle tient pour mal transposées, d'après ses procédures d'infraction, représentaient 1,5 % pour la France.
+La moyenne de l'Union était de 1,1 %.
+Ces valeurs viennent d'une seule édition du tableau d'affichage.
+Sources
+Traité sur l’Union européenne, version consolidée, Journal officiel de l’Union européenne C 202 du 7 juin 2016 (EUR-Lex), art.
+4, 5, 15, 16 et 17.
+Traité sur le fonctionnement de l’Union européenne, même Journal officiel, art.
+2 à 6, 18, 76, 238, 241, 258 à 260, 288, 293 et 294, ensemble du traité pour les bases juridiques ; protocole n° 36 sur les dispositions transitoires.
+Conseil de l’Union européenne, recherche des résultats de vote sur les actes législatifs (relevé du 6 octobre 2026) ; notes « résultat de vote » du registre public des documents, liées aux cinq actes du tableau ; récapitulatif mensuel des actes du Conseil, mai 2021 (ST 8962/21, 28 juin 2021) ; Secrétariat général du Conseil, Guide to the ordinary legislative procedure, 2010, annexe III (doi 10.2860/74684).
+Journal officiel de l’Union européenne (EUR-Lex), les cinq actes du tableau, liés ligne par ligne.
+Ondarza, Nicolai von et Bochtler, Paul, Public Voting Data of the Council of the EU, version 2.0.0, SWP, 2023, doi 10.7802/2560, licence CC BY 4.0.
+Commission européenne, tableau d’affichage du marché unique et de la compétitivité, transposition, édition arrêtée au 30 novembre 2025.
+Les chiffres, les contrôles et la figure sont produits par un script unique.
+Il relit le traité archivé, où chaque citation est retrouvée mot pour mot, le jeu SWP et les pièces archivées des cinq actes.
+Les comptes de votes par État, relevés dans le navigateur, et le décompte de chaque acte, lu dans l’annexe de la note du Conseil, sont transcrits dans le script, qui s’arrête si le recalcul depuis le jeu SWP les contredit sur la période commune ; les votes postérieurs à mars 2023 n’ont pas de second jeu.
+Pour les deux votes contre du jeu SWP que le compte écarte, le script relit le récapitulatif archivé des actes du Conseil de mai 2021 et vérifie que le jeu SWP ne porte qu’eux entre les deux votes qui les encadrent dans la recherche du Conseil, transcrits.
+Les indicateurs de transposition sont transcrits d’une capture, et leurs moyennes de l’Union contrôlées par le texte de la Commission.
+Télécharger les données (licence CC BY 4.0) : CSV, en format long ; JSON, avec les bases juridiques, les écarts expliqués, les cinq actes et le compte rendu des contrôles.
+Une version antérieure de ce jeu est archivée sur Zenodo, avec les six autres de la même série et leur note de méthode, sous un identifiant permanent : doi:10.5281/zenodo.23212664.
+Réutiliser cette page
+Les figures, les données et une citation prête, sous licence libre.
+Chaque figure porte dans l'image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
+Nombre brut de votes contre et d'abstentions — durées et champs de participation différents
+Sur les votes publics du Conseil de l'Union européenne sur des actes législatifs, du 22 décembre 2009 au 1er octobre 2026, la France a voté contre deux fois et s'est abstenue trois fois ; elle a voté pour dans tous les autres cas.
+Précaution d'interprétation.
+Comptes bruts, pas un classement d'influence : Royaume-Uni jusqu'à son retrait (2020), Croatie depuis son adhésion (2013) ; le Danemark et l'Irlande ne participent pas à certains actes.
+Conseil de l'UE, recherche des résultats de vote (relevé du 6 octobre 2026) ; contrôle : SWP / GESIS, doi 10.7802/2560, du 22 décembre 2009 au 28 mars 2023
+Télécharger en PNG
+SVG
+Citer cette page
+Lalut, Stéphane (2026). « Ce que la France peut décider dans l'Union européenne ».
+Données TUE et TFUE, Conseil de l'UE, Journal officiel, SWP / GESIS et Commission, relevé du 6 octobre 2026 (votes du Conseil, relevé à cette date ; transposition au 30 novembre 2025). https://stephane-lalut.com/ce-que-la-france-peut-decider-dans-l-union-europeenne/
+Copier la citation
+En trois phrases
+Ce que les traités n’ont pas attribué à l’Union reste aux États : la France y décide seule, en respectant les règles communes.
+Là où l’Union est compétente, la Commission propose, et le Conseil vote le plus souvent à la majorité qualifiée, parfois à l’unanimité.
+Sur les votes publics du Conseil sur des actes législatifs, du 22 décembre 2009 au 1er octobre 2026, la France a voté contre deux fois et s’est abstenue trois fois ; un vote pour ne dit pas ce qu’elle a obtenu ou cédé dans la négociation.
+Copier le résumé
+Les données
+Les votes contre, abstentions et non-participations de chaque État membre au Conseil, les cinq actes où la France n'a pas voté pour avec leur décompte et leurs références, les bases juridiques du TFUE par règle de décision et les indicateurs de transposition de la France ; le même contenu existe en CSV, en format long, lisible dans un tableur.
+Télécharger en JSON CSV
+Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
+Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
+Les séries brutes appartiennent à leurs producteurs (TUE et TFUE, Conseil de l'UE, Journal officiel, SWP / GESIS et Commission), sous leurs propres conditions.
+Toutes les ressources : données, dossiers et repères →
+Transmettre
+WhatsApp
+Bluesky
+LinkedIn
+X
+E-mail
+Copier le lien

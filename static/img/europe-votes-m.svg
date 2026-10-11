@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 1051" role="img" font-variant-numeric="tabular-nums" aria-labelledby="evm-t evm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="evm-t">Nombre brut de votes contre et d'abstentions — durées et champs de participation différents</title><desc id="evm-d">Barres horizontales par État membre, triées par total : votes contre (foncé) et abstentions (clair). Royaume-Uni : 56 contre, 118 abstentions; Hongrie : 79 contre, 47 abstentions; Autriche : 36 contre, 67 abstentions; Pologne : 57 contre, 40 abstentions; Allemagne : 32 contre, 48 abstentions; Tchéquie : 19 contre, 54 abstentions; Bulgarie : 19 contre, 48 abstentions; Pays-Bas : 41 contre, 24 abstentions; Slovaquie : 23 contre, 35 abstentions; Belgique : 7 contre, 47 abstentions; Suède : 41 contre, 13 abstentions; Danemark : 29 contre, 12 abstentions; Estonie : 7 contre, 26 abstentions; Luxembourg : 15 contre, 18 abstentions; Malte : 15 contre, 17 abstentions; Espagne : 17 contre, 14 abstentions; Finlande : 19 contre, 11 abstentions; Italie : 18 contre, 12 abstentions; Lettonie : 7 contre, 20 abstentions; Portugal : 8 contre, 19 abstentions; Slovénie : 6 contre, 15 abstentions; Roumanie : 9 contre, 11 abstentions; Irlande : 5 contre, 12 abstentions; Croatie : 4 contre, 12 abstentions; Chypre : 13 contre, 1 abstention; Grèce : 7 contre, 7 abstentions; Lituanie : 6 contre, 7 abstentions; France : 2 contre, 3 abstentions. Sur 1 755 votes publiés.</desc>
+<rect width="300" height="1051" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Nombre brut de votes contre et</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">d'abstentions — durées et</text>
+<text x="0" y="64" font-size="17" font-weight="600" fill="#0A0A0E">champs de participation</text>
+<text x="0" y="86" font-size="17" font-weight="600" fill="#0A0A0E">différents</text>
+<text x="0" y="126" font-size="13.5" fill="#52514e">par État membre, votes publics du</text>
+<text x="0" y="144" font-size="13.5" fill="#52514e">Conseil de l&#x27;UE sur des actes</text>
+<text x="0" y="162" font-size="13.5" fill="#52514e">législatifs, du 22 décembre 2009 au</text>
+<text x="0" y="180" font-size="13.5" fill="#52514e">1er octobre 2026</text>
+<rect x="0" y="192" width="12" height="12" fill="#52514e"/>
+<text x="17" y="203" font-size="13.5" fill="#52514e">contre</text>
+<rect x="110" y="192" width="12" height="12" fill="#c9cdd3"/>
+<text x="127" y="203" font-size="13.5" fill="#52514e">abstention</text>
+<text x="106" y="227" font-size="13.5" fill="#52514e" text-anchor="end">Royaume-Uni</text>
+<rect x="112" y="216" width="38.0" height="14" fill="#52514e"/>
+<rect x="150.0" y="216" width="80.0" height="14" fill="#c9cdd3"/>
+<text x="235.0" y="227" font-size="13.5" fill="#898781">56 · 118</text>
+<text x="106" y="248" font-size="13.5" fill="#52514e" text-anchor="end">Hongrie</text>
+<rect x="112" y="237" width="53.6" height="14" fill="#52514e"/>
+<rect x="165.6" y="237" width="31.9" height="14" fill="#c9cdd3"/>
+<text x="202.4" y="248" font-size="13.5" fill="#898781">79 · 47</text>
+<text x="106" y="269" font-size="13.5" fill="#52514e" text-anchor="end">Autriche</text>
+<rect x="112" y="258" width="24.4" height="14" fill="#52514e"/>
+<rect x="136.4" y="258" width="45.4" height="14" fill="#c9cdd3"/>
+<text x="186.9" y="269" font-size="13.5" fill="#898781">36 · 67</text>
+<text x="106" y="290" font-size="13.5" fill="#52514e" text-anchor="end">Pologne</text>
+<rect x="112" y="279" width="38.7" height="14" fill="#52514e"/>
+<rect x="150.7" y="279" width="27.1" height="14" fill="#c9cdd3"/>
+<text x="182.8" y="290" font-size="13.5" fill="#898781">57 · 40</text>
+<text x="106" y="311" font-size="13.5" fill="#52514e" text-anchor="end">Allemagne</text>
+<rect x="112" y="300" width="21.7" height="14" fill="#52514e"/>
+<rect x="133.7" y="300" width="32.6" height="14" fill="#c9cdd3"/>
+<text x="171.3" y="311" font-size="13.5" fill="#898781">32 · 48</text>
+<text x="106" y="332" font-size="13.5" fill="#52514e" text-anchor="end">Tchéquie</text>
+<rect x="112" y="321" width="12.9" height="14" fill="#52514e"/>
+<rect x="124.9" y="321" width="36.6" height="14" fill="#c9cdd3"/>
+<text x="166.5" y="332" font-size="13.5" fill="#898781">19 · 54</text>
+<text x="106" y="353" font-size="13.5" fill="#52514e" text-anchor="end">Bulgarie</text>
+<rect x="112" y="342" width="12.9" height="14" fill="#52514e"/>
+<rect x="124.9" y="342" width="32.6" height="14" fill="#c9cdd3"/>
+<text x="162.4" y="353" font-size="13.5" fill="#898781">19 · 48</text>
+<text x="106" y="374" font-size="13.5" fill="#52514e" text-anchor="end">Pays-Bas</text>
+<rect x="112" y="363" width="27.8" height="14" fill="#52514e"/>
+<rect x="139.8" y="363" width="16.3" height="14" fill="#c9cdd3"/>
+<text x="161.1" y="374" font-size="13.5" fill="#898781">41 · 24</text>
+<text x="106" y="395" font-size="13.5" fill="#52514e" text-anchor="end">Slovaquie</text>
+<rect x="112" y="384" width="15.6" height="14" fill="#52514e"/>
+<rect x="127.6" y="384" width="23.7" height="14" fill="#c9cdd3"/>
+<text x="156.3" y="395" font-size="13.5" fill="#898781">23 · 35</text>
+<text x="106" y="416" font-size="13.5" fill="#52514e" text-anchor="end">Belgique</text>
+<rect x="112" y="405" width="4.7" height="14" fill="#52514e"/>
+<rect x="116.7" y="405" width="31.9" height="14" fill="#c9cdd3"/>
+<text x="153.6" y="416" font-size="13.5" fill="#898781">7 · 47</text>
+<text x="106" y="437" font-size="13.5" fill="#52514e" text-anchor="end">Suède</text>
+<rect x="112" y="426" width="27.8" height="14" fill="#52514e"/>
+<rect x="139.8" y="426" width="8.8" height="14" fill="#c9cdd3"/>
+<text x="153.6" y="437" font-size="13.5" fill="#898781">41 · 13</text>
+<text x="106" y="458" font-size="13.5" fill="#52514e" text-anchor="end">Danemark</text>
+<rect x="112" y="447" width="19.7" height="14" fill="#52514e"/>
+<rect x="131.7" y="447" width="8.1" height="14" fill="#c9cdd3"/>
+<text x="144.8" y="458" font-size="13.5" fill="#898781">29 · 12</text>
+<text x="106" y="479" font-size="13.5" fill="#52514e" text-anchor="end">Estonie</text>
+<rect x="112" y="468" width="4.7" height="14" fill="#52514e"/>
+<rect x="116.7" y="468" width="17.6" height="14" fill="#c9cdd3"/>
+<text x="139.4" y="479" font-size="13.5" fill="#898781">7 · 26</text>
+<text x="106" y="500" font-size="13.5" fill="#52514e" text-anchor="end">Luxembourg</text>
+<rect x="112" y="489" width="10.2" height="14" fill="#52514e"/>
+<rect x="122.2" y="489" width="12.2" height="14" fill="#c9cdd3"/>
+<text x="139.4" y="500" font-size="13.5" fill="#898781">15 · 18</text>
+<text x="106" y="521" font-size="13.5" fill="#52514e" text-anchor="end">Malte</text>
+<rect x="112" y="510" width="10.2" height="14" fill="#52514e"/>
+<rect x="122.2" y="510" width="11.5" height="14" fill="#c9cdd3"/>
+<text x="138.7" y="521" font-size="13.5" fill="#898781">15 · 17</text>
+<text x="106" y="542" font-size="13.5" fill="#52514e" text-anchor="end">Espagne</text>
+<rect x="112" y="531" width="11.5" height="14" fill="#52514e"/>
+<rect x="123.5" y="531" width="9.5" height="14" fill="#c9cdd3"/>
+<text x="138.0" y="542" font-size="13.5" fill="#898781">17 · 14</text>
+<text x="106" y="563" font-size="13.5" fill="#52514e" text-anchor="end">Finlande</text>
+<rect x="112" y="552" width="12.9" height="14" fill="#52514e"/>
+<rect x="124.9" y="552" width="7.5" height="14" fill="#c9cdd3"/>
+<text x="137.3" y="563" font-size="13.5" fill="#898781">19 · 11</text>
+<text x="106" y="584" font-size="13.5" fill="#52514e" text-anchor="end">Italie</text>
+<rect x="112" y="573" width="12.2" height="14" fill="#52514e"/>
+<rect x="124.2" y="573" width="8.1" height="14" fill="#c9cdd3"/>
+<text x="137.3" y="584" font-size="13.5" fill="#898781">18 · 12</text>
+<text x="106" y="605" font-size="13.5" fill="#52514e" text-anchor="end">Lettonie</text>
+<rect x="112" y="594" width="4.7" height="14" fill="#52514e"/>
+<rect x="116.7" y="594" width="13.6" height="14" fill="#c9cdd3"/>
+<text x="135.3" y="605" font-size="13.5" fill="#898781">7 · 20</text>
+<text x="106" y="626" font-size="13.5" fill="#52514e" text-anchor="end">Portugal</text>
+<rect x="112" y="615" width="5.4" height="14" fill="#52514e"/>
+<rect x="117.4" y="615" width="12.9" height="14" fill="#c9cdd3"/>
+<text x="135.3" y="626" font-size="13.5" fill="#898781">8 · 19</text>
+<text x="106" y="647" font-size="13.5" fill="#52514e" text-anchor="end">Slovénie</text>
+<rect x="112" y="636" width="4.1" height="14" fill="#52514e"/>
+<rect x="116.1" y="636" width="10.2" height="14" fill="#c9cdd3"/>
+<text x="131.2" y="647" font-size="13.5" fill="#898781">6 · 15</text>
+<text x="106" y="668" font-size="13.5" fill="#52514e" text-anchor="end">Roumanie</text>
+<rect x="112" y="657" width="6.1" height="14" fill="#52514e"/>
+<rect x="118.1" y="657" width="7.5" height="14" fill="#c9cdd3"/>
+<text x="130.6" y="668" font-size="13.5" fill="#898781">9 · 11</text>
+<text x="106" y="689" font-size="13.5" fill="#52514e" text-anchor="end">Irlande</text>
+<rect x="112" y="678" width="3.4" height="14" fill="#52514e"/>
+<rect x="115.4" y="678" width="8.1" height="14" fill="#c9cdd3"/>
+<text x="128.5" y="689" font-size="13.5" fill="#898781">5 · 12</text>
+<text x="106" y="710" font-size="13.5" fill="#52514e" text-anchor="end">Croatie</text>
+<rect x="112" y="699" width="2.7" height="14" fill="#52514e"/>
+<rect x="114.7" y="699" width="8.1" height="14" fill="#c9cdd3"/>
+<text x="127.9" y="710" font-size="13.5" fill="#898781">4 · 12</text>
+<text x="106" y="731" font-size="13.5" fill="#52514e" text-anchor="end">Chypre</text>
+<rect x="112" y="720" width="8.8" height="14" fill="#52514e"/>
+<rect x="120.8" y="720" width="0.7" height="14" fill="#c9cdd3"/>
+<text x="126.5" y="731" font-size="13.5" fill="#898781">13 · 1</text>
+<text x="106" y="752" font-size="13.5" fill="#52514e" text-anchor="end">Grèce</text>
+<rect x="112" y="741" width="4.7" height="14" fill="#52514e"/>
+<rect x="116.7" y="741" width="4.7" height="14" fill="#c9cdd3"/>
+<text x="126.5" y="752" font-size="13.5" fill="#898781">7 · 7</text>
+<text x="106" y="773" font-size="13.5" fill="#52514e" text-anchor="end">Lituanie</text>
+<rect x="112" y="762" width="4.1" height="14" fill="#52514e"/>
+<rect x="116.1" y="762" width="4.7" height="14" fill="#c9cdd3"/>
+<text x="125.8" y="773" font-size="13.5" fill="#898781">6 · 7</text>
+<text x="106" y="794" font-size="13.5" fill="#0A0A0E" text-anchor="end" font-weight="600">France</text>
+<rect x="112" y="783" width="1.4" height="14" fill="#184f95"/>
+<rect x="113.4" y="783" width="2.0" height="14" fill="#9db5d8"/>
+<text x="120.4" y="794" font-size="13.5" fill="#0A0A0E" font-weight="600">2 · 3</text>
+<line x1="0" y1="808.0" x2="300" y2="808.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="829.0" font-size="13.5" fill="#52514e">Conseil de l'UE, recherche des</text>
+<text class="pied-source" x="0" y="846.0" font-size="13.5" fill="#52514e">résultats de vote (relevé du 6 octobre</text>
+<text class="pied-source" x="0" y="863.0" font-size="13.5" fill="#52514e">2026) ; contrôle : SWP / GESIS, doi</text>
+<text class="pied-source" x="0" y="880.0" font-size="13.5" fill="#52514e">10.7802/2560, du 22 décembre 2009 au</text>
+<text class="pied-source" x="0" y="897.0" font-size="13.5" fill="#52514e">28 mars 2023</text>
+<text class="pied-note" x="0" y="918.0" font-size="13.5" fill="#52514e">Comptes bruts, pas un classement</text>
+<text class="pied-note" x="0" y="935.0" font-size="13.5" fill="#52514e">d'influence : Royaume-Uni jusqu'à son</text>
+<text class="pied-note" x="0" y="952.0" font-size="13.5" fill="#52514e">retrait (2020), Croatie depuis son</text>
+<text class="pied-note" x="0" y="969.0" font-size="13.5" fill="#52514e">adhésion (2013) ; le Danemark et</text>
+<text class="pied-note" x="0" y="986.0" font-size="13.5" fill="#52514e">l'Irlande ne participent pas à</text>
+<text class="pied-note" x="0" y="1003.0" font-size="13.5" fill="#52514e">certains actes.</text>
+<text class="pied-licence" x="0" y="1024.0" font-size="13.5" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="1041.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+</svg>
