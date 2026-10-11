@@ -5,16 +5,16 @@
    "fichier": "dette-dynamique-cascade",
    "titre": "Pourquoi la dette a doublé : de 57,8 % à 115,6 % du PIB, 1995-2025",
    "montre": "Sur la période, les intérêts et la croissance nominale se sont presque annulés ; la hausse de la dette tient pour l'essentiel aux déficits primaires, hors intérêts.",
-   "source": "Eurostat gov_10dd_edpt1 (dette), gov_10a_main (B9, D41PAY), PIB de la notification, France, 1996-2025 ; mises à jour Eurostat du 22/04/2026 et du 21/07/2026",
-   "precaution": "Contributions cumulées au ratio, en points de PIB : ni des sommes versées, ni des causes. Totaux calculés avant arrondi, d'où un dixième d'écart possible."
+   "source": "Eurostat gov_10dd_edpt1 (dette), gov_10a_main (B9, D41PAY), PIB de la notification, France, 1996-2025 ; mises à jour Eurostat du 22/04/2026 et du 21/07/2026",
+   "precaution": "Contributions cumulées au ratio, en points de PIB : ni des sommes versées, ni des causes. Totaux calculés avant arrondi, d'où un dixième d'écart possible."
   },
   {
    "id": "annuelle",
    "fichier": "dette-dynamique-annuelle",
    "titre": "Année par année : ce qui a fait monter ou baisser le ratio dette/PIB, 1996-2025",
    "montre": "Année par année, ce qui a poussé ou freiné le ratio ; en 2021-2023, la croissance nominale l'a fait baisser malgré les déficits.",
-   "source": "Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), France, 1996-2025 ; mises à jour Eurostat du 22/04/2026 et du 21/07/2026",
-   "precaution": "Points de PIB par an ; solde primaire : un déficit compte en plus, un excédent en moins ; la somme des trois barres égale la variation (point noir), au centième près."
+   "source": "Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), France, 1996-2025 ; mises à jour Eurostat du 22/04/2026 et du 21/07/2026",
+   "precaution": "Points de PIB par an ; solde primaire : un déficit compte en plus, un excédent en moins ; la somme des trois barres égale la variation (point noir), au centième près."
   }
  ],
  "en": [

@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 660" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dcm-t dcm-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
 <title id="dcm-t">Dette publique : de 57,8 % à 115,6 % du PIB, 1995-2025</title><desc id="dcm-d">Cascade en points de PIB. La dette part de 57,8 % fin 1995. Les intérêts l'auraient poussée de 73,9 points, mais la croissance du PIB nominal en a effacé 72,8 : leur effet net est de +1,2 point. Les déficits primaires, hors intérêts, ajoutent 50,5 points, les ajustements flux-stock +6,0. La dette atteint 115,6 % fin 2025. Décomposition comptable, non causale.</desc>
 <rect width="300" height="660" fill="#ffffff"/>
-<text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Dette publique : de 57,8 % à</text>
-<text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">115,6 % du PIB, 1995-2025</text>
-<text x="0" y="86" font-size="13.5" fill="#55524f">en points de PIB ; + fait monter, −</text>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Dette publique : de 57,8 % à</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">115,6 % du PIB, 1995-2025</text>
+<text x="0" y="86" font-size="13.5" fill="#55524f">en points de PIB ; + fait monter, −</text>
 <text x="0" y="104" font-size="13.5" fill="#55524f">fait baisser</text>
 <text x="0" y="134" font-size="15" fill="#26262f">Dette fin 1995</text>
 <text x="300" y="134" font-size="15" font-weight="600" fill="#26262f" text-anchor="end">57,8 %</text>
@@ -26,11 +26,11 @@
 <line x1="0" y1="434.0" x2="300" y2="434.0" stroke="#dcd8d3"/>
 <text x="0" y="455.0" font-size="13.5" fill="#55524f">Eurostat gov_10dd_edpt1 (dette),</text>
 <text x="0" y="472.0" font-size="13.5" fill="#55524f">gov_10a_main (B9, D41PAY), PIB de la</text>
-<text x="0" y="489.0" font-size="13.5" fill="#55524f">notification, France, 1996-2025 ;</text>
+<text x="0" y="489.0" font-size="13.5" fill="#55524f">notification, France, 1996-2025 ;</text>
 <text x="0" y="506.0" font-size="13.5" fill="#55524f">mises à jour Eurostat du 22/04/2026 et</text>
 <text x="0" y="523.0" font-size="13.5" fill="#55524f">du 21/07/2026</text>
 <text x="0" y="544.0" font-size="13.5" fill="#55524f">Contributions cumulées au ratio, en</text>
-<text x="0" y="561.0" font-size="13.5" fill="#55524f">points de PIB : ni des sommes versées,</text>
+<text x="0" y="561.0" font-size="13.5" fill="#55524f">points de PIB : ni des sommes versées,</text>
 <text x="0" y="578.0" font-size="13.5" fill="#55524f">ni des causes. Totaux calculés avant</text>
 <text x="0" y="595.0" font-size="13.5" fill="#55524f">arrondi, d'où un dixième d'écart</text>
 <text x="0" y="612.0" font-size="13.5" fill="#55524f">possible.</text>

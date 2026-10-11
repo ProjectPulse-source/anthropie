@@ -153,9 +153,9 @@
 <circle cx="548" cy="41" r="3.2" fill="#26262f"/>
 <text x="556" y="45" font-size="11" fill="#55524f">variation du ratio</text>
 <line x1="0" y1="304.0" x2="720" y2="304.0" stroke="#dcd8d3"/>
-<text class="pied-source" x="0" y="319.0" font-size="11" fill="#55524f">Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), France, 1996-2025 ; mises à jour Eurostat du 22/04/2026 et du</text>
+<text class="pied-source" x="0" y="319.0" font-size="11" fill="#55524f">Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), France, 1996-2025 ; mises à jour Eurostat du 22/04/2026 et du</text>
 <text class="pied-source" x="0" y="333.0" font-size="11" fill="#55524f">21/07/2026</text>
-<text class="pied-note" x="0" y="347.0" font-size="11" fill="#55524f">Points de PIB par an ; solde primaire : un déficit compte en plus, un excédent en moins ; la somme des trois barres</text>
+<text class="pied-note" x="0" y="347.0" font-size="11" fill="#55524f">Points de PIB par an ; solde primaire : un déficit compte en plus, un excédent en moins ; la somme des trois barres</text>
 <text class="pied-note" x="0" y="361.0" font-size="11" fill="#55524f">égale la variation (point noir), au centième près.</text>
 <text class="pied-licence" x="0" y="375.0" font-size="11" fill="#96928f">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/pourquoi-la-dette-publique-augmente/</text>
 </svg>

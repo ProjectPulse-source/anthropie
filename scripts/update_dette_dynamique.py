@@ -522,10 +522,21 @@ def csv_texte(rows):
 
 
 # ------------------------------------------------------------------ affichage et gardes
+def dette_insee_fin(annee: int):
+    """Dette de Maastricht au T4 de la derniere annee selon l'INSEE (data/dette_officielle.json, jeu du volet 2), pour
+    dire l'ecart avec la notification d'Eurostat que la page utilise d'un bout a l'autre (OPTIMUM-15). Absente : None."""
+    try:
+        o = json.loads((ROOT / "data" / "dette_officielle.json").read_text(encoding="utf-8"))
+        return float(o["dette_trimestrielle"]["series"]["pct_pib"]["%d-Q4" % annee])
+    except (OSError, ValueError, KeyError):
+        return None
+
+
 def affichage(a0, d_depart, rows, total, per, dr):
     """Rend (affichage, affichage_en) : deux présentations d'un seul corps de valeurs, puis les gardes (une passe,
     numérique, valable pour les deux langues)."""
     last = rows[-1]
+    insee_fin = dette_insee_fin(last["annee"])
     infl = [r for r in rows if 2021 <= r["annee"] <= 2023]
     by = {r["annee"]: r for r in rows}
 
@@ -576,6 +587,11 @@ def affichage(a0, d_depart, rows, total, per, dr):
         A["croise_dep_hi"] = sg(dr[fen["ofce"][1]]["depenses_hors_interets"] - dr[fen["tresor"][0]]["depenses_hors_interets"])
         # Contre-expertise de la page construite (OPTIMUM-10) : le retournement entre les deux fenêtres de même départ.
         A["rec_fin"] = sg(dr[fen["tresor"][1]]["recettes"] - dr[fen["ofce"][1]]["recettes"])
+        # OPTIMUM-15 : marge du retournement sur la fenetre du Tresor (hausse des depenses hors interets moins recul
+        # des recettes, en points de PIB), et valeur de l'INSEE pour la derniere fin d'annee.
+        A["tresor_marge"] = nb(abs((dr[fen["tresor"][1]]["depenses_hors_interets"] - dr[fen["tresor"][0]]["depenses_hors_interets"])
+                                   + (dr[fen["tresor"][1]]["recettes"] - dr[fen["tresor"][0]]["recettes"])))
+        A["dette_insee_fin"] = nb(insee_fin) if insee_fin is not None else ""
         A["ti_creux_an"] = str(min(rows, key=lambda r: r["taux_implicite_pct"])["annee"])
         A["ti_creux"] = nb(min(r["taux_implicite_pct"] for r in rows), 2)
         A["ti_2021"], A["ti_2022"] = nb(by[2021]["taux_implicite_pct"], 2), nb(by[2022]["taux_implicite_pct"], 2)
@@ -670,6 +686,12 @@ def affichage(a0, d_depart, rows, total, per, dr):
          "recettes remontent de plus d'un demi-point la dernière année : c'est elles qui retournent la conclusion",
          abs((dr[fen["tresor"][1]]["depenses_hors_interets"] - dr[fen["ofce"][1]]["depenses_hors_interets"])) < 0.1
          and dr[fen["tresor"][1]]["recettes"] - dr[fen["ofce"][1]]["recettes"] > 0.5),
+        ("OPTIMUM-15 : le retournement 2019-2025 tient a un ecart mince (moins d'un demi-point) entre hausse des depenses "
+         "hors interets et recul des recettes",
+         0 < (dr[fen["tresor"][1]]["depenses_hors_interets"] - dr[fen["tresor"][0]]["depenses_hors_interets"])
+         + (dr[fen["tresor"][1]]["recettes"] - dr[fen["tresor"][0]]["recettes"]) < 0.5),
+        ("OPTIMUM-15 : l'INSEE publie pour la derniere fin d'annee une valeur voisine mais differente de celle d'Eurostat",
+         insee_fin is not None and 0 < abs(insee_fin - last["dette_pct_pib"]) <= 0.5),
         ("OPTIMUM-10 : « un déficit qui se réduit n'a pas disparu » — le solde primaire de la dernière année reste négatif",
          last["solde_primaire_pct_pib"] < 0),
         ("2009 et 2020 : les deux plus fortes hausses de la série",
