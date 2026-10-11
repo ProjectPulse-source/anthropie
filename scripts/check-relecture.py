@@ -70,8 +70,15 @@ def instantane(build: Path, cible: str | None) -> int:
                           capture_output=True, text=True).stdout.strip()
     DOSSIER.mkdir(parents=True, exist_ok=True)
     n = 0
-    for p in rb.pages(build):
-        if not p["refonte"] or (cible and p["url"] != cible):
+    pages = rb.pages(build)
+    if cible:   # la correspondance la plus longue seule : « /x/ » est aussi la fin de « /en/x/ »
+        c = cible.replace("\\", "/").rstrip("/")
+        ok = [p for p in pages if p["refonte"] and c.endswith(p["url"].rstrip("/"))]
+        pages = sorted(ok, key=lambda p: len(p["url"]))[-1:] if ok else []
+    for p in pages:
+        # cible comparée par la fin : Git Bash réécrit « /page/ » en « C:/Program Files/Git/page/ » (11/10/2026 : l'adresse
+        # n'était plus reconnue et TOUTES les pages refondues étaient refaites, en silence)
+        if not p["refonte"] or (cible and not cible.replace("\\", "/").rstrip("/").endswith(p["url"].rstrip("/"))):
             continue
         ph = rb.phrases(rb.texte(p["fichier"].read_text(encoding="utf-8")))
         tete = "# relu le %s ; texte servi de %s, build de %s%s ; une phrase par ligne (scripts/check-relecture.py)" % (
@@ -127,7 +134,7 @@ def main() -> int:
         return temoin(build)
     if "--instantane" in sys.argv:
         i = sys.argv.index("--instantane")
-        cible = sys.argv[i + 1] if i + 1 < len(sys.argv) and sys.argv[i + 1].startswith("/") else None
+        cible = sys.argv[i + 1] if i + 1 < len(sys.argv) and not sys.argv[i + 1].startswith("--") else None
         return instantane(build, cible)
     manquants, ecarts = controler(build)
     for p, raison in manquants:
