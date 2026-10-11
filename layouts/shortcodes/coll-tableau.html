@@ -1,4 +1,5 @@
-{{- /* {{< coll-tableau "cycles" >}} | {{< coll-tableau "categories" >}} | {{< coll-tableau "pays" >}}
+{{- /* {{< coll-tableau "cycles" >}} | "categories" | "pays" | "plf" | "plf_lectures" (11/10/2026 : somme arithmétique,
+       variation annoncée et effet net non établi, côte à côte -- valeurs lues dans les blocs d'affichage, jamais saisies)
        Tableaux de la page collectivités, lus dans data/dette_collectivites.json (bloc calcul) : aucun chiffre
        recopié. Les nombres sont formatés ici à la française (virgule décimale, moins typographique). Échoue sur
        un type inconnu ou un jeu absent.
@@ -16,7 +17,7 @@
 {{- $page := .Page -}}
 {{- if eq $t "cycles" -}}
 <div class="table-scroll"><table class="dette-monde-table">
-<thead><tr><th>Municipal elections</th><th>Year before, % of GDP</th><th>Lowest of the next three years</th><th>Change, points of GDP</th></tr></thead>
+<thead><tr><th>Municipal elections</th><th>Year before, % of GDP</th><th>Lowest of the election year and the next two</th><th>Change, points of GDP</th></tr></thead>
 <tbody>
 {{- range $c.cycles }}
 <tr><td>{{ .municipales }}</td><td>{{ .pic_annee }}: {{ printf $f2 .pic }}</td><td>{{ .creux_annee }}: {{ printf $f2 .creux }}</td><td>{{ replace (printf $f2 .baisse) "-" "−" }}</td></tr>
@@ -41,7 +42,7 @@
 <tr><td>{{ .nom_en }}</td><td>{{ printf $f1 .dette_deb }}</td><td>{{ printf $f1 .dette_pic }} ({{ .dette_pic_annee }})</td><td>{{ printf $f1 .dette_fin }}</td><td>{{ printf $f1 .inv_max }} → {{ printf $f1 .inv_min }}</td><td>{{ .excedents_2012_2019 }}/8</td><td>{{ printf "%.0f" .part_etat_pct }}%</td></tr>
 {{- end }}
 </tbody></table></div>
-<p><small>In % of GDP. Subnational scope: S1312 + S1313 (cross-holdings between the two tiers at most {{ index $j.affichage_en "consolidation_ecart" }} point). Source: Eurostat.</small></p>
+<p><small>In % of GDP. Subnational scope: S1312 + S1313 (cross-holdings between the two tiers at most {{ index $j.affichage_en "consolidation_ecart_pt" }}). Source: Eurostat.</small></p>
 {{- else if eq $t "plf" -}}
 <div class="table-scroll"><table class="dette-monde-table">
 <thead><tr><th>Measure in the {{ $c.plf_edition }} draft budget bill</th><th>Text</th><th>Nature</th><th>Amount, €bn</th></tr></thead>
@@ -52,13 +53,22 @@
 {{- end }}
 </tbody></table></div>
 <p><small>Amounts for {{ $c.plf_edition }}, as provided for in the bill as tabled, before examination by Parliament. Sources: draft budget bill (explanatory memoranda) for the first two rows; opinion of the High Council of Public Finance for the next three, which the text of the bill does not quantify.</small></p>
+{{- else if eq $t "plf_lectures" -}}
+{{- $a := $j.affichage_en -}}
+<div class="table-scroll"><table class="dette-monde-table">
+<thead><tr><th>Reading</th><th>Figure</th><th>What it is</th></tr></thead>
+<tbody>
+<tr><td>Measures listed</td><td>€{{ index $a "plf_somme" }} billion</td><td>arithmetic sum of five heterogeneous amounts (the table above), not a proven net levy</td></tr>
+<tr><td>Projected change in resources</td><td>+€{{ index $a "plf_ressources_md" }} billion (+{{ index $a "plf_ressources_pct" }}%)</td><td>Government projection between {{ index $a "plf_prec" }} and {{ index $a "plf_edition" }}, after the measures</td></tr>
+<tr><td>Net effect of the five measures</td><td>not established</td><td>adding them up does not establish it</td></tr>
+</tbody></table></div>
 {{- else -}}
-{{ errorf "coll-tableau: type %q inconnu (cycles, categories, pays, plf) dans %s" $t .Page.File.Path }}
+{{ errorf "coll-tableau: type %q inconnu (cycles, categories, pays, plf, plf_lectures) dans %s" $t .Page.File.Path }}
 {{- end -}}
 {{- else -}}
 {{- if eq $t "cycles" -}}
 <div class="table-scroll"><table class="dette-monde-table">
-<thead><tr><th>Municipales</th><th>Année précédente, % du PIB</th><th>Plus bas des trois années suivantes</th><th>Écart, point de PIB</th></tr></thead>
+<thead><tr><th>Municipales</th><th>Année précédente, % du PIB</th><th>Plus bas de l’année de l’élection et des deux suivantes</th><th>Écart, point de PIB</th></tr></thead>
 <tbody>
 {{- range $c.cycles }}
 <tr><td>{{ .municipales }}</td><td>{{ .pic_annee }}&nbsp;: {{ replace (printf $f2 .pic) "." "," }}</td><td>{{ .creux_annee }}&nbsp;: {{ replace (printf $f2 .creux) "." "," }}</td><td>{{ replace (replace (printf $f2 .baisse) "." ",") "-" "−" }}</td></tr>
@@ -81,7 +91,7 @@
 <tr><td>{{ .nom }}</td><td>{{ replace (printf $f1 .dette_deb) "." "," }}</td><td>{{ replace (printf $f1 .dette_pic) "." "," }} ({{ .dette_pic_annee }})</td><td>{{ replace (printf $f1 .dette_fin) "." "," }}</td><td>{{ replace (printf $f1 .inv_max) "." "," }} → {{ replace (printf $f1 .inv_min) "." "," }}</td><td>{{ .excedents_2012_2019 }}/8</td><td>{{ printf "%.0f" .part_etat_pct }}&nbsp;%</td></tr>
 {{- end }}
 </tbody></table></div>
-<p><small>En % du PIB. Périmètre territorial&nbsp;: S1312 + S1313 (dettes croisées entre les deux échelons au plus {{ index $j.affichage "consolidation_ecart" }}&nbsp;point). Source&nbsp;: Eurostat.</small></p>
+<p><small>En % du PIB. Périmètre territorial&nbsp;: S1312 + S1313 (dettes croisées entre les deux échelons au plus {{ index $j.affichage "consolidation_ecart_pt" }}). Source&nbsp;: Eurostat.</small></p>
 {{- else if eq $t "plf" -}}
 <div class="table-scroll"><table class="dette-monde-table">
 <thead><tr><th>Mesure du projet de loi de finances pour {{ $c.plf_edition }}</th><th>Texte</th><th>Nature</th><th>Montant, Md€</th></tr></thead>
@@ -91,7 +101,16 @@
 {{- end }}
 </tbody></table></div>
 <p><small>Montants pour {{ $c.plf_edition }}, tels que le projet déposé les prévoit, avant examen par le Parlement. Sources&nbsp;: projet de loi de finances (exposés des motifs) pour les deux premières lignes&nbsp;; avis du Haut Conseil des finances publiques pour les trois suivantes, que le texte du projet ne chiffre pas.</small></p>
+{{- else if eq $t "plf_lectures" -}}
+{{- $a := $j.affichage -}}
+<div class="table-scroll"><table class="dette-monde-table">
+<thead><tr><th>Lecture</th><th>Chiffre</th><th>Ce que c’est</th></tr></thead>
+<tbody>
+<tr><td>Mesures recensées</td><td>{{ index $a "plf_somme" }}&nbsp;Md€</td><td>somme arithmétique de cinq montants hétérogènes (tableau ci-dessus), non un prélèvement net démontré</td></tr>
+<tr><td>Variation prévue des ressources</td><td>+{{ index $a "plf_ressources_md" }}&nbsp;Md€ (+{{ index $a "plf_ressources_pct" }}&nbsp;%)</td><td>prévision du Gouvernement entre {{ index $a "plf_prec" }} et {{ index $a "plf_edition" }}, après les mesures</td></tr>
+<tr><td>Effet net des cinq mesures</td><td>non établi</td><td>leur simple addition ne l’établit pas</td></tr>
+</tbody></table></div>
 {{- else -}}
-{{ errorf "coll-tableau: type %q inconnu (cycles, categories, pays, plf) dans %s" $t .Page.File.Path }}
+{{ errorf "coll-tableau: type %q inconnu (cycles, categories, pays, plf, plf_lectures) dans %s" $t .Page.File.Path }}
 {{- end -}}
 {{- end -}}

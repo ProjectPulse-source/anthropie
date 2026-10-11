@@ -1,0 +1,451 @@
+# relu le 2026-10-11 ; texte servi de /dette-publique-collectivites-locales/, build de 57dc84f + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+ENCette page existe aussi en anglais — English version
+Les collectivités locales sont-elles une variable d'ajustement des finances publiques ?
+La dette des collectivités ne permet pas de trancher : la règle d'équilibre de leurs budgets leur interdit d'emprunter pour compenser une baisse durable des recettes qui financent leurs dépenses courantes, si bien qu'une contrainte venue de l'État se lit dans leurs recettes et leurs dépenses.
+De 2013 à 2017, les administrations publiques locales ont amélioré leur solde de 9,7 milliards d’euros.
+Leurs dépenses totales sont restées presque stables en euros courants, tandis que les recettes fiscales progressaient et que les transferts reçus reculaient.
+Rapportées au PIB, leurs dépenses ont diminué de 0,82 point, dont 0,50 point pour l'investissement.
+Ces évolutions sont concomitantes ; elles ne permettent pas, à elles seules, d'attribuer le recul de l'investissement à la baisse des dotations.
+Dossier dette publique
+Données · Eurostat 2025
+↓ Graphiques, données et citations à réutiliserRéutiliser cette page
+Projet de loi de finances pour 2027 : ce qu’il demande aux collectivités, mesure par mesure, et ce que la somme de ses montants ne dit pas → dernière section de la page.
+Comment une contrainte peut-elle ne pas apparaître dans la dette ?
+La question du titre revient à demander si l’État, quand il resserre ses finances, reporte une part de l’effort sur les collectivités, et où cela se verrait.
+Trois paradoxes organisent cette page.
+La dette locale est restée contenue, de 7,2 % du PIB en 2000 à 9,3 % en 2025 : cette observation ne dit pas, seule, si les collectivités ont supporté une contrainte.
+De 2013 à 2017, leurs dépenses sont presque stables en euros et reculent nettement en part du PIB : deux lectures exactes, qui ne racontent pas la même histoire.
+En Espagne, l’État central détient plus de la moitié de la dette territoriale : porter une dette et la financer sont deux réalités distinctes.
+Investissement des administrations publiques locales (formation brute de capital fixe) et transferts courants qu’elles reçoivent des autres administrations publiques, en % du PIB.
+Ces transferts comprennent ceux de la sécurité sociale : ce ne sont pas les seules dotations de l’État.
+Le pic de 2010 est ponctuel : l’État compense cette année-là la suppression de la taxe professionnelle, réforme « neutre sur le solde des administrations publiques locales » selon l’Insee (mai 2011).
+La série comparable des transferts s’arrête en 2017 : en 2018 puis en 2021, des dotations sont remplacées par des fractions de TVA, comptées en impôts, un reclassement qui ne dit pas, à lui seul, si les ressources ont augmenté ou baissé (détail).
+Télécharger · Citer · Données
+Le résultat en une phrase.
+De 2013 à 2017, les transferts reçus par les administrations publiques locales reculent de 8,9 milliards d’euros (0,64 point de PIB) et leur investissement de 7,5 milliards d’euros (0,50 point) ; après les élections municipales de 2014, le recul de l’investissement est 2,8 fois plus marqué que le plus fort des reculs qui ont suivi celles de 2001, 2008 et 2020.
+Ces chiffres, comme tous les résultats statistiques de cette page, portent sur les administrations publiques locales, au sens de la comptabilité nationale : les collectivités territoriales, mais aussi les syndicats intercommunaux et d’autres organismes publics locaux.
+Périmètre exact, et table de passage entre comptes de gestion et comptabilité nationale
+Ce périmètre est le sous-secteur S1313 des comptes nationaux ; il comprend les organismes divers d’administration locale, dont Île-de-France Mobilités et la Société des grands projets (Insee).
+Sa dette (279 milliards d’euros en 2025) dépasse d’environ 60 milliards la somme des encours des communes, des intercommunalités, des départements et des régions.
+Cette page s’appuie sur deux sources qui ne parlent pas la même langue.
+Eurostat publie la comptabilité nationale, harmonisée en Europe ; l’Observatoire des finances et de la gestion publique locales (OFGL) publie les agrégats des comptes de gestion, ceux que lisent les directions financières.
+Les grandeurs se correspondent, sans être identiques.
+Ce que lit une direction financière (OFGL)
+Ce que publie Eurostat
+Ce qui les sépare
+Dotation globale de fonctionnement, concours financiers de l’État
+Transferts courants reçus des autres administrations publiques (D73)
+Eurostat inclut les transferts de la sécurité sociale ; une dotation remplacée par une fraction de TVA passe dans les impôts.
+Dépenses d’équipement
+Formation brute de capital fixe (P51G)
+Les subventions d’équipement versées sont des transferts en capital, hors P51G.
+Capacité ou besoin de financement
+Capacité (+) ou besoin (−) de financement (B9)
+Même notion ; dates d’enregistrement et périmètres diffèrent.
+Épargne brute
+Épargne brute (B8G)
+Notions voisines, retraitements différents.
+Encours de dette
+Dette au sens de Maastricht
+Valeur nominale ; pour les administrations locales, consolidée à l’intérieur du sous-secteur, non entre sous-secteurs.
+La somme des encours des quatre catégories suivies par l’OFGL (218,5 milliards d’euros en 2025) reste inférieure à la dette des administrations locales au sens de Maastricht : celle-ci comprend aussi les syndicats et les organismes divers, et suit d’autres conventions.
+Elle n’est pas non plus consolidée avec l’État : la part que celui-ci en détient (0,1 point de PIB) y reste comptée, ce qui la distingue de la « contribution » des administrations locales à la dette publique consolidée que publie l’Insee.
+L’écart se documente ; il ne se corrige pas.
+Deux récits, une même série
+L’Association des maires de France, en réponse à la Cour des comptes (juin 2025) : « Considérer les collectivités locales comme la variable d’ajustement des erreurs de stratégie de l’exécutif ne fait que creuser le déficit public. » La Cour des comptes (septembre 2025), « sans se prononcer en opportunité sur son montant », appelle à « organiser dans la durée la participation des collectivités au redressement des finances publiques ».
+La même série donne un appui à chaque lecture.
+La dépense des administrations locales est passée de 9,9 % du PIB en 1995 à 11,8 % en 2009 : c’est l’argument d’une participation des collectivités à l’effort.
+Elle était revenue à 10,9 % en 2017, au terme de la baisse des dotations, et s’établit à 11,2 % en 2025 : c’est l’argument de collectivités déjà mises à contribution.
+Aucune des deux lectures ne suffit seule ; la question utile est de savoir quand, par quel canal et dans quelle unité une contrainte s’observe.
+Pourquoi la dette ne suffit pas à répondre
+L’observation tient.
+La dette des administrations locales est passée de 7,2 % du PIB en 2000 à 9,3 % en 2025, pendant que la dette publique passait de 59,7 % à 115,7 %, et elle représente moins d’un dixième de la dette publique (8 % en 2025).
+Ces administrations réalisent pourtant 54 % de l’investissement public (2,4 % du PIB en 2025).
+Le chiffre de 115,7 % vient de la série trimestrielle d’Eurostat (mise à jour du 21 juillet 2026) ; la notification du 22 avril 2026, que citent les autres pages du dossier, donnait 115,6 %.
+La raison tient à une règle.
+Le code général des collectivités territoriales impose l’équilibre réel du budget : section de fonctionnement et section d’investissement votées en équilibre, et remboursement du capital des emprunts couvert par des ressources propres, à l’exclusion du produit des emprunts (article L.
+1612-4).
+L’emprunt reste ouvert pour financer l’investissement : la règle ne fige pas le stock de dette, qui a d’ailleurs augmenté en 2020 et depuis 2023.
+Elle empêche en revanche de reporter sur l’emprunt une baisse durable des ressources de fonctionnement, qui passe alors par les recettes propres, la dépense courante, l’épargne brute ou l’investissement.
+Elle ne régit pas non plus tout le sous-secteur, qui comprend d’autres organismes que les collectivités.
+Une dette contenue est compatible avec un ajustement par les ressources et les dépenses comme avec son absence : elle ne mesure pas l’intensité d’une contrainte.
+Aucun indicateur unique ne la remplace ici.
+Les comptes permettent d’observer des mécanismes et des épisodes ; ils ne permettent ni d’en faire une règle générale depuis 2000, ni d’attribuer ces épisodes à une cause.
+2013-2017 : la baisse des dotations, en euros et en points de PIB
+Pendant ces quatre années, l’État réduit sa dotation globale de fonctionnement (DGF) au titre de la « contribution au redressement des finances publiques ».
+Trois grandeurs décrivent l’épisode, et aucune ne remplace les autres :
+Grandeur
+Ce qu’elle mesure
+De 2013 à 2017
+DGF votée (loi de finances, article L.
+1613-1 du CGCT)
+le montant de la dotation fixé chaque année
+de 41,5 à 30,9 milliards d’euros
+Transferts reçus (Eurostat, D73)
+les transferts courants de l’État et de la sécurité sociale, toutes dotations comprises
+en baisse de 8,9 milliards d’euros, soit 0,64 point de PIB
+Investissement (Eurostat, P51G)
+la formation brute de capital fixe des administrations locales
+en baisse de 7,5 milliards d’euros, soit 0,50 point de PIB
+En 2017, le niveau annuel de la DGF votée est inférieur de 10,6 milliards à celui de 2013.
+Ce n’est pas le total des économies cumulées sur les quatre exercices, qui additionnerait le manque de chaque année par rapport à 2013.
+Variation du solde des administrations publiques locales entre 2013 et 2017, décomposée en cinq postes, en milliards d’euros courants (à gauche) et en points de PIB (à droite).
+Chaque valeur est la contribution du poste à la variation du solde : pour une dépense, l’inverse de sa variation, si bien qu’une dépense en baisse améliore le solde.
+Le PIB nominal augmente de 8,1 % sur la période : c’est ce dénominateur qui sépare les deux lectures.
+Télécharger · Citer · Données
+Les deux lectures sont exactes et ne racontent pas la même chose.
+En euros courants, les recettes augmentent de 10,9 milliards d’euros, les impôts à eux seuls de 18,2 milliards, quand les transferts reçus reculent de 8,9 milliards ; les dépenses totales passent de 249,6 à 250,8 milliards.
+Le solde se redresse ainsi de 9,7 milliards d’euros (0,45 point de PIB), par le côté des recettes.
+En points de PIB, les dépenses reculent de 0,82 point, dont 0,50 point pour l’investissement, et les impôts ne compensent qu’une partie de la baisse des transferts (0,39 point contre 0,64 point).
+L’écart tient au dénominateur.
+Le PIB nominal augmente de 8,1 % entre 2013 et 2017 : une dépense presque gelée en euros recule en part du PIB.
+La baisse d’un ratio ne prouve pas une baisse de la dépense en euros.
+L’investissement, lui, recule aussi en euros, de 15 %, quand les autres dépenses augmentent de 8,7 milliards d’euros.
+Aucune lecture en volume, qui demanderait un indice des prix propre aux dépenses locales, n’est faite ici.
+Ces évolutions sont concomitantes ; elles ne permettent pas, à elles seules, d’attribuer le recul de l’investissement à la baisse des dotations.
+La comparaison ne permet pas de ramener l’ampleur du creux au seul cycle municipal.
+L’investissement local baisse habituellement après les municipales.
+Mais après les élections de 2001, 2008 et 2020, le recul n’a jamais dépassé 0,20 point de PIB ; après celles de 2014, il atteint 0,56 point en 2016, 2,8 fois plus, pendant que les concours de l’État diminuent.
+La comparaison affaiblit l’explication par le seul calendrier électoral ; elle n’isole pas l’effet des dotations, d’autant que les départements et les régions, compris dans l’agrégat, ne suivent pas ce cycle.
+Le témoin du cycle électoral, mandat par mandat, les trois mesures de la DGF et le témoin comptable de la cascade
+Municipales
+Année précédente, % du PIB
+Plus bas de l’année de l’élection et des deux suivantes
+Écart, point de PIB
+2001
+2000 : 2,23
+2002 : 2,06
+−0,17
+2008
+2007 : 2,41
+2010 : 2,21
+−0,20
+2014
+2013 : 2,36
+2016 : 1,80
+−0,56
+2020
+2019 : 2,19
+2020 : 2,09
+−0,10
+L’Insee rattache le recul de 2014 « à la suite des élections municipales » puis celui de 2015 « notamment » au cycle électoral communal, en notant cette année-là l’effet de « la baisse des transferts de l’État ».
+Les quatre épisodes ne sont pas identiques : 2008 précède la crise financière, 2020 est l’année de la pandémie.
+Isoler l’effet des dotations demanderait de comparer, collectivité par collectivité, les plus et les moins exposées à leur baisse, avant et après 2014.
+La DGF votée baisse chaque année, de 1,4 milliard d’euros en 2014, puis de 3,5, de 3,4 et de 2,4 milliards les trois années suivantes.
+Le montant de la DGF fixé par la loi de finances n’est ni la contribution demandée à chaque catégorie, ni la DGF que chaque collectivité a effectivement inscrite dans ses comptes : ces trois mesures ne s’additionnent pas.
+Les comptes de gestion montrent la troisième mesure par catégorie : la DGF des départements passe de 12,2 à 8,7 milliards d’euros, celle des régions de 5,5 à 4,1 milliards.
+La cascade se vérifie par une identité que le générateur contrôle à chaque passage : recettes totales moins dépenses totales égalent le solde publié par Eurostat.
+Sur les 31 années disponibles, l’écart maximal est de 0,1 million d’euros, un arrondi.
+Les deux cascades se referment chacune sur la variation du solde.
+La part du dénominateur se calcule exactement, sur le PIB des mêmes comptes : à dépense inchangée, la croissance du PIB aurait fait reculer de 0,87 point le ratio des dépenses au PIB ; la hausse des dépenses en euros en a repris 0,05 point, d’où le recul de 0,82 point.
+Le mécanisme change, la question demeure
+Une contrainte de l’État peut atteindre les collectivités par des canaux qui ne sont pas de même nature : certains réduisent des ressources, d’autres encadrent des dépenses, d’autres encore changent la composition des recettes.
+Depuis 2014, ils se sont succédé.
+2013-2017 : agir sur les ressources.
+La DGF votée baisse chaque année ; l’investissement recule dans le même temps.
+2018-2019 : encadrer les dépenses.
+Les contrats de Cahors imposent à certaines collectivités un objectif de progression de leurs dépenses de fonctionnement, sur la base d’une référence nationale de 1,2 % par an.
+La reprise financière prévue en cas de dépassement est suspendue pour les dépenses de 2020.
+Un nouveau canal de contrainte apparaît, qui n’implique pas la disparition des précédents ; cette page ne peut pas en mesurer l’effet propre.
+2018 et 2021 : changer la composition des recettes.
+Une dotation (2018), puis des impôts supprimés (2021), font place à des fractions de TVA ou à un prélèvement sur les recettes de l’État.
+Certaines ressources sont remplacées par des recettes d’une autre nature : leur classement comptable change, sans que ce reclassement permette, à lui seul, de conclure à une hausse ou à une baisse des ressources disponibles.
+Les séries cessent alors d’être comparables (détail ci-dessous).
+2027 : plusieurs canaux à la fois.
+Prélèvement sur les ressources, concours lié à l’investissement, calendrier de reversements : le projet de loi de finances les combine (dernière section).
+Les contrats de Cahors dans le texte : collectivités concernées, base, reprise financière
+La loi de programmation des finances publiques du 22 janvier 2018 fixe aux collectivités un objectif national d’évolution de leurs dépenses réelles de fonctionnement de 1,2 % par an, en valeur, calculé sur la base de 2017 (article 13).
+Des contrats, dits « de Cahors », le déclinent pour les exercices 2018, 2019 et 2020 ; ils visent les régions, les départements et les collectivités à statut particulier, ainsi que les communes et intercommunalités dont les dépenses réelles de fonctionnement dépassaient 60 millions d’euros en 2016 (article 29).
+Pour une collectivité signataire, un dépassement entraîne une reprise financière de 75 % de l’écart, plafonnée à 2 % des recettes réelles de fonctionnement (article 29, V) ; un taux distinct s’applique aux collectivités qui n’ont pas signé (article 29, VI).
+La loi d’urgence du 23 mars 2020 écarte cette reprise pour les dépenses de 2020 (article 12) : elle n’a donc pu s’appliquer qu’aux dépenses de 2018 et de 2019.
+L’effet des contrats ne se mesure pas dans ces séries : ils ne portent que sur le budget principal des collectivités concernées, que l’agrégat national ne sépare pas.
+Deux autres canaux échappent à ces séries : les compétences transférées sans financement complet, dont la compensation figée décroche du coût réel et se lit compétence par compétence (les allocations individuelles de solidarité des départements, par exemple), et les normes non financées, dont le coût se lit dans les évaluations préalables.
+Tous ces canaux partagent une hypothèse à tester : une décision prise à un niveau peut déplacer une partie de son coût vers un autre.
+Le document de travail AWP-09 la confronte à l’épisode 2013-2017 : les comptes la rendent compatible, sans l’établir.
+2018 et 2021 : quand une ressource change de classement
+En 2018, la DGF des régions passe de 4,1 à 0,3 milliard d’euros pendant qu’elles reçoivent 4,2 milliards de TVA (OFGL) : une recette classée parmi les transferts devient une recette fiscale.
+En 2021, les transferts reçus par l’ensemble des administrations locales chutent de 0,66 point de PIB et leurs impôts augmentent de 0,44 point : la suppression de la taxe d’habitation sur les résidences principales et celle de la part régionale de la cotisation sur la valeur ajoutée des entreprises (CVAE) sont compensées par des fractions de TVA ou, pour les communes, par la part départementale de taxe foncière.
+Une série limitée aux seules dotations ne mesure donc pas, à elle seule, l’évolution des ressources.
+Les compensations de 2021, texte par texte
+La suppression de la taxe d’habitation sur les résidences principales est compensée par une fraction de TVA aux intercommunalités et aux départements, les communes recevant la part départementale de taxe foncière (loi de finances pour 2020, article 16) ; la suppression de la part régionale de la CVAE, par une fraction de TVA aux régions (loi de finances pour 2021, article 8) ; la réduction des valeurs locatives des établissements industriels, par un prélèvement sur les recettes de l’État (même loi, article 29).
+Par catégorie de collectivités : ce que l’agrégat cache
+L’agrégat national additionne des collectivités dont les recettes et les charges n’ont rien de commun.
+Depuis 2018, l’Observatoire des finances et de la gestion publique locales (OFGL) publie les comptes de gestion consolidés de chaque catégorie, ceux que lisent les directions financières.
+Deux mouvements y apparaissent, invisibles dans l’agrégat.
+L’épargne brute des départements, c’est-à-dire leurs recettes de fonctionnement moins leurs dépenses de fonctionnement, tombe de 13,2 milliards d’euros en 2022 à 5,7 en 2024, avant de remonter à 8,0 en 2025 ; ses causes (droits de mutation, allocations de solidarité) relèvent de séries que cette page ne porte pas.
+Les dépenses d’équipement des communes passent de 20,0 milliards en 2020 à 30,1 en 2025 (+51 %), à l’approche des municipales de 2026.
+Les quatre catégories de collectivités, de 2021 à 2025 : concours de l'État, épargne brute, équipement, dette
+Catégorie, 2021 → 2025
+Concours de l’État
+Épargne brute
+Dépenses d’équipement
+Encours de dette
+Communes
+14,9 → 16,6
+14,1 → 15,3
+21,1 → 30,1
+70,6 → 73,9
+Intercommunalités
+9,6 → 10,0
+9,9 → 11,6
+12,4 → 17,7
+48,8 → 56,5
+Départements
+10,8 → 10,5
+12,4 → 8,0
+9,2 → 9,2
+42,7 → 48,9
+Régions
+2,2 → 1,8
+5,8 → 6,3
+3,9 → 3,7
+33,0 → 39,2
+Milliards d’euros courants.
+Source : OFGL, bases consolidées des comptes de gestion (DGFiP).
+Les périmètres des catégories changent au fil des réformes : la base consolidée des départements utilisée ici incorpore la métropole de Lyon (depuis 2015) et la Ville de Paris (depuis 2019), celle des régions les collectivités uniques de Guyane, de Martinique et de Corse — le rapport annuel de l’OFGL, lui, classe Lyon avec les intercommunalités et Paris avec les communes.
+Comptabilité nationale et comptes de gestion ne coïncident pas au million près : périmètres, dates d’enregistrement et retraitements diffèrent.
+Depuis 2023 : la dette des administrations locales remonte
+Depuis 2023, le besoin de financement des administrations publiques locales dépasse nettement celui de 2021 et de 2022 (moins d’un dixième de point de PIB) : 0,35 point en 2023, 0,61 point en 2024 et 0,52 point en 2025.
+Leur investissement remonte de 2,2 % à 2,4 % du PIB, et leur dette de 8,9 % à 9,3 % du PIB : c’est l’inverse du schéma de 2013-2017.
+Dans les comptes de gestion des quatre catégories de collectivités, l’encours de dette augmente aussi : 200,5 milliards d’euros en 2023, 218,5 en 2025.
+Le reste de la hausse ne s’attribue pas par différence aux syndicats et aux organismes divers : les deux sources ne consolident pas de la même façon et ne suivent pas les mêmes conventions.
+Le dispositif de lissage des recettes fiscales (DILICO), en 2025 et en 2026
+Le dispositif de lissage conjoncturel des recettes fiscales (DILICO) a prélevé en 2025 un milliard d’euros sur les ressources fiscales des collectivités, mis en réserve et reversé par tiers les trois années suivantes — 90 % aux collectivités contributrices, 10 % aux fonds de péréquation (loi de finances pour 2025, article 186) ; il est reconduit en 2026 (loi de finances pour 2026).
+Ni l’Insee ni Eurostat ne documentent son enregistrement en comptabilité nationale : son effet propre ne s’isole pas dans ces séries.
+Ailleurs en Europe : une même dette, des architectures opposées
+Les comparaisons se font ici par périmètre statistique, non par compétences exercées.
+La France et l’Italie, où les régions sont classées parmi les administrations locales, forment la comparaison principale ; l’Allemagne et l’Espagne, dont la dette territoriale additionne celle des Länder ou des communautés autonomes et celle des collectivités locales, servent de contrepoints.
+Dette des administrations territoriales en % du PIB, quatrième trimestre de chaque année, et part détenue par l’administration centrale, publiée depuis 2020 (indiquée sous chaque pays).
+Télécharger · Citer · Données
+En Espagne, la dette territoriale passe de 9,2 % du PIB en 2000 à 21,4 % en 2025, portée par les communautés autonomes, pendant que l’investissement territorial perd 64 %.
+Mais cette dette ne mesure pas un report de contrainte vers le bas : en 2025, 12,6 points de PIB sur 21,4, soit 59 %, sont détenus par l’État central lui-même, notamment par le Fondo de Liquidez Autonómico, créé en 2012, par lequel l’État prête aux communautés autonomes (Real Decreto-ley 21/2012, articles 9 et 14).
+La part équivalente est de 26 % en Italie, de 1 % en France et de 1 % en Allemagne.
+Qui porte une dette et qui la finance sont deux questions distinctes.
+En Italie, les trois indicateurs vont dans le même sens : la dette territoriale redescend de 8,8 % du PIB en 2014 à 4,7 % en 2025, le solde est excédentaire huit années sur huit entre 2012 et 2019 (France : trois), l’investissement tombe à la moitié de son maximum des années 2000.
+Ces concomitances n’isolent pas l’effet des règles nationales — le pacte de stabilité interne, institué en 1999 et abandonné pour les collectivités locales en 2016 — de celui de la crise des dettes souveraines.
+En Allemagne, la dette territoriale reste nettement sous son pic de 2012 (30,3 %, 19,7 % en 2025), avec un recul d’investissement limité (16 %) ; elle est portée surtout par les Länder.
+La comparaison ne fait apparaître aucun classement unique : dette, solde et investissement ordonnent les quatre pays différemment.
+Elle montre qu’une contrainte de finances publiques peut circuler entre niveaux d’administration sous des formes opposées — baisse de dotation, recul d’investissement, dette, ou financement du niveau territorial par le centre.
+Les quatre pays, indicateur par indicateur
+Pays
+Dette territoriale 2000
+Plus haut
+2025
+Investissement territorial : plus haut 2000-2010 → plus bas 2011-2019
+Années d’excédent 2012-2019
+Part détenue par l’État central, 2025
+France
+7,2
+9,9 (2020)
+9,3
+2,4 → 1,8
+3/8
+1 %
+Allemagne
+21,7
+30,3 (2012)
+19,7
+1,7 → 1,5
+6/8
+1 %
+Italie
+5,3
+8,8 (2014)
+4,7
+2,3 → 1,1
+8/8
+26 %
+Espagne
+9,2
+28,8 (2020)
+21,4
+3,6 → 1,3
+2/8
+59 %
+En % du PIB.
+Périmètre territorial : S1312 + S1313 (dettes croisées entre les deux échelons au plus 0,2 point).
+Source : Eurostat.
+Le sous-secteur des administrations d’États fédérés (S1312) n’existe, dans les données Eurostat, que dans quelques pays, dont l’Allemagne et l’Espagne ; les régions françaises et italiennes sont classées parmi les administrations locales (S1313).
+En Allemagne et en Espagne, la dette territoriale additionne donc les deux échelons ; les dettes croisées entre eux représentent au plus 0,2 point de PIB : le double compte est marginal et ne modifie pas les ordres de grandeur.
+En Espagne, la loi organique 2/2012 affecte en outre les excédents de chaque niveau d’administration à la réduction de son endettement net (article 32).
+Que demande le projet de loi de finances aux collectivités ?
+État du texte : projet de loi de finances pour 2027, déposé le 1er octobre 2026, avant examen par le Parlement ; ses montants peuvent changer d’ici la loi votée.
+Mesure du projet de loi de finances pour 2027
+Texte
+Nature
+Montant, Md€
+Contribution progressive à l'effort budgétaire, prélevée sur les avances de fiscalité
+article 37
+prélèvement sur les avances de fiscalité, institué pour 2027
+2,5
+Fonds de compensation pour la TVA : taux abaissé de 5 points, sauf dépenses vertes et voirie
+articles 35 et 41
+réduction d'un concours de l'État lié aux dépenses d'investissement éligibles
+2,1
+TVA affectée, hors régions : hausse annuelle réduite de l'inflation
+article 36
+écrêtement de la progression de la TVA affectée, hors régions
+0,6
+Contributions de certains ministères aux collectivités
+crédits des missions
+réduction de contributions de certains ministères
+0,7
+Sommes mises en réserve en 2025 et 2026 (DILICO) : reversement sur cinq ans au lieu de trois
+article 84
+étalement du reversement ; montant total restitué inchangé
+0,3
+Montants pour 2027, tels que le projet déposé les prévoit, avant examen par le Parlement.
+Sources : projet de loi de finances (exposés des motifs) pour les deux premières lignes ; avis du Haut Conseil des finances publiques pour les trois suivantes, que le texte du projet ne chiffre pas.
+Le projet ne baisse pas la DGF : il prévoit 150 millions d’euros d’abondements nouveaux et, compte tenu des mesures de périmètre, son montant nominal augmente de 137 millions, à 27,5 milliards.
+La mise à contribution passe par les cinq canaux du tableau et, pour les régions, par la suppression d’une fraction d’accises sur les énergies de 157 millions d’euros (article 39).
+Le Haut Conseil des finances publiques réunit ces mesures dans un même paquet de modération des recettes des collectivités.
+Comment les ressources des collectivités pourraient-elles augmenter de 5 milliards d’euros, alors que la somme arithmétique des mesures du projet atteint 6,2 milliards ?
+Lecture
+Chiffre
+Ce que c’est
+Mesures recensées
+6,2 Md€
+somme arithmétique de cinq montants hétérogènes (tableau ci-dessus), non un prélèvement net démontré
+Variation prévue des ressources
++5 Md€ (+1,7 %)
+prévision du Gouvernement entre 2026 et 2027, après les mesures
+Effet net des cinq mesures
+non établi
+leur simple addition ne l’établit pas
+Pourquoi ces chiffres coexistent-ils ?
+La somme arithmétique de 6,2 milliards rassemble cinq mesures évaluées chacune par rapport à la situation sans elle, selon des références différentes ; les 5 milliards du Gouvernement comparent deux années, mesures comprises.
+Leur différence, 1,2 milliard d’euros, ne représente donc pas un prélèvement net, et additionner les cinq mesures ne suffit pas à établir leur effet net : une ressource peut augmenter en euros tout en progressant moins vite qu’en l’absence de réforme.
+Les cinq mesures ne sont pas non plus de même nature, et deux d’entre elles portent sur des flux voisins : leur rapprochement exact n’est pas fait ici.
+Nature des cinq mesures, assiette de la contribution progressive et prélèvements sur recettes
+L’étalement du reversement des sommes mises en réserve (DILICO) déplace un calendrier sans modifier le montant total restitué (article 84) ; la baisse du taux du fonds de compensation pour la TVA dépend des investissements que les collectivités réaliseront.
+Le texte ne décrit pas de double compte entre ces montants, mais deux d’entre eux portent sur des flux voisins : la contribution progressive est imputée sur les douzièmes de fiscalité et sur les fractions de TVA, dont la progression est par ailleurs écrêtée (articles 36 et 37).
+La contribution progressive s’applique à 40 % des communes, à 60 % des départements et aux intercommunalités de métropole, à un taux qui croît avec leurs ressources, appliqué aux recettes réelles de fonctionnement de l’antépénultième exercice ; les collectivités d’outre-mer et les départements les plus fragiles socialement en sont exonérés (article 37).
+Dans le budget de l’État, les prélèvements sur recettes au profit des collectivités sont évalués à 43,1 milliards d’euros pour 2027, contre 44,46 milliards dans la prévision révisée pour 2026 (44,82 milliards dans la loi de finances initiale, article 41) : une série limitée aux dotations ne verrait pas ces canaux, pour la raison déjà rencontrée en 2018 et en 2021.
+Le Haut Conseil prévoit un recul de l’investissement des collectivités de 4,2 % en 2027, après 4,0 % en 2026, et le juge vraisemblable au regard de la position de 2027 dans le cycle électoral communal, une année après les élections, ainsi que de la réforme du fonds de compensation.
+Cette page mesure ce qu’un recul de l’investissement a représenté de 2013 à 2017 ; elle ne dit pas s’il se reproduira.
+Textes : projet de loi de finances pour 2027, articles 34 à 41 et 84 ; avis du Haut Conseil des finances publiques.
+Ce que les comptes permettent de dire
+Trois perspectives sont à tenir séparées.
+Ce qui est décidé : dotations, impôts transférés, règles de dépense, modalités de financement, que fixent les lois de finances et de programmation.
+Ce qui s’observe : recettes, dépenses, investissement, épargne, solde et dette, dans les comptes nationaux et les comptes de gestion.
+Ce qui est finalement supporté : les effets sur les contribuables, les usagers, les services et les équipements, que ces données ne mesurent pas.
+Cette page documente des décisions et des évolutions comptables concomitantes ; elle ne démontre pas la transmission des unes aux autres et ne mesure pas ce qui est finalement supporté.
+Le schéma d'analyse : une chaîne en quatre maillons
+Entre ce qui est décidé et ce qui est supporté, une chaîne en quatre maillons décrit les mécanismes possibles.
+C’est un schéma d’analyse, non une causalité démontrée sur chaque maillon :
+décision nationale : dotation réduite, recette encadrée, règle de dépense ;
+contrainte territoriale : moins de ressources, ou moins de liberté d’arbitrage ;
+réponse budgétaire locale : fiscalité, fonctionnement, épargne, investissement, emprunt ;
+incidence finale : services, équipements, contribuables, usagers, territoires.
+Les décisions relèvent du premier maillon, les évolutions comptables du troisième ; le quatrième n’est pas mesuré ici.
+Hypothèse de recherche, non testée ici : qui supporte finalement l'ajustement ?
+Les comptes ne permettent pas de savoir si l’ajustement est finalement supporté par les contribuables, les usagers, les agents publics, les fournisseurs, les propriétaires fonciers ou les ménages qui dépendent des services locaux.
+L’anthropie, cadre d’analyse proposé par l’auteur, formule l’hypothèse que certains coûts sont plus difficiles à éviter pour les ménages les moins mobiles : un ménage qui dépend du logement social, des transports publics et des équipements de proximité subit plus directement une hausse de tarif ou une fermeture qu’un ménage qui peut changer de commune.
+Cette page ne la teste pas ; elle se vérifierait décision par décision, et serait affaiblie par des ajustements portant surtout sur les ménages aisés ou compensés par des tarifs sociaux.
+Ce que ces données ne disent pas
+L’agrégat national mêle communes, intercommunalités, départements, régions, syndicats et organismes divers ; les données par catégorie ne remontent qu’à 2018, et les périmètres des catégories changent au fil des réformes (détail).
+Une baisse d’investissement concomitante d’une baisse de dotations n’établit pas que la seconde a causé la première ; l’effet des contrats de Cahors n’est pas mesuré ici.
+Les montants sont en euros courants et en points de PIB ; aucune lecture en volume n’est faite.
+Elles ne disent rien de la qualité des services rendus, ni de qui a finalement supporté l’ajustement.
+Comment lire ces résultats dans les comptes de votre collectivité ?
+Les résultats nationaux ne donnent aucun montant pour une collectivité donnée.
+Ils indiquent quoi comparer dans ses propres comptes : son compte de gestion ou son compte financier unique, ou les agrégats que l’OFGL publie collectivité par collectivité sur data.ofgl.fr, ceux qu’utilise cette page.
+Les ressources reçues de l’État (DGF et autres concours) : leur évolution en euros, sachant qu’une dotation remplacée par une fraction de TVA passe dans les recettes fiscales, comme en 2018 et en 2021.
+Les recettes fiscales : en séparant les impôts dont la collectivité vote le taux des fractions d’impôts nationaux qu’elle reçoit.
+L’épargne brute : les recettes de fonctionnement moins les dépenses de fonctionnement ; avec les autres ressources propres, elle doit couvrir le remboursement du capital de la dette.
+Les dépenses d’investissement : en euros et rapportées aux recettes, en tenant compte du cycle municipal.
+Pour 2027, l’assujettissement à la contribution progressive se vérifie dans l’article 37 du projet (critères, taux, exonérations), puis, une fois la loi votée, dans l’arrêté publié au Journal officiel qui fixera, selon le projet, le montant prélevé sur chaque collectivité.
+L’effet de la baisse du taux du fonds de compensation se lit dans ses propres dépenses éligibles ; l’étalement des sommes mises en réserve ne concerne que les collectivités qui y ont contribué en 2025 ou en 2026.
+Questions fréquentes
+Comment savoir si ma collectivité est concernée par le projet de loi de finances ?
+La contribution progressive vise 40 % des communes, 60 % des départements et les intercommunalités de métropole, selon les critères de l'article 37 du projet déposé le 1er octobre 2026 ; selon ce texte, le montant prélevé sur chaque collectivité sera fixé par un arrêté publié au Journal officiel.
+Les montants nationaux ne donnent aucun montant individuel.
+Comment interpréter la hausse de la fiscalité locale ?
+De 2013 à 2017, les impôts des administrations publiques locales augmentent de 18,2 milliards d’euros, davantage que les transferts reçus ne baissent (8,9 milliards d’euros) ; rapportés au PIB, ils n'en compensent qu'une partie (0,39 point contre 0,64 point).
+Depuis 2018, une partie des recettes fiscales provient d'un reclassement : des dotations ou des impôts supprimés sont remplacés par des fractions de TVA, et ce changement de classement ne dit pas, à lui seul, si les ressources disponibles augmentent ou baissent.
+Ces comptes ne séparent pas l'effet des taux votés de celui des bases.
+Pourquoi un recul de l'investissement ne signifie-t-il pas une baisse des dépenses totales ?
+De 2013 à 2017, l'investissement des administrations publiques locales recule de 7,5 milliards d’euros, mais leurs autres dépenses augmentent de 8,7 milliards d’euros : leurs dépenses totales restent presque stables en euros (+1,2 milliard d’euros).
+Rapportées au PIB, qui augmente de 8,1 % sur la période, elles reculent pourtant de 0,82 point.
+La baisse d'un ratio ne prouve pas une baisse de la dépense en euros.
+Dans le dossier dette publique
+Prolonger l'analyse
+Dette Publique : Qui paie vraiment ?
+La question n'est pas « combien ? » mais « qui paie ? » — et par quels canaux le coût se déplace.
+Cette page montre par où passe l’ajustement des finances locales ; elle ne dit pas qui, au bout de la chaîne, en supporte le coût.
+Le livre suit ce déplacement canal par canal — contribuable, usager, services publics, générations qui ne votent pas encore —, chiffres officiels à l’appui.
+L’analyse est aussi développée dans deux articles de l’auteur, « La commune, variable d’ajustement de la République ? » (Revue Projet, 2026) et « Budget 2026 : la dette commande, les territoires patientent » (Mediapart, 2026).
+Journalistes, enseignants, chercheurs, responsables publics ou associatifs
+Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock.
+Demander l'exemplaire offert →
+Version papier : 19 € · Kindle : 9,99 €
+Sommaire, extraits et recensions →
+D’où viennent ces chiffres
+Comptabilité nationale — Eurostat, administrations publiques par sous-secteur, SEC 2010 : comptes annuels (gov_10a_main : formation brute de capital fixe P51G, transferts courants reçus D73REC, impôts D2, D5 et D91, recettes TR, dépenses TE, solde B9), dette trimestrielle (gov_10q_ggdebt), dette par secteur détenteur (gov_10dd_ggd), PIB nominal et dette de la notification (gov_10dd_edpt1), PIB des comptes nationaux en témoin du dénominateur (nama_10_gdp).
+Les points de PIB de la cascade sont calculés sur le PIB des mêmes comptes annuels ; la croissance du PIB citée est celle de la notification.
+Comptes de gestion — OFGL, bases consolidées des communes, des intercommunalités, des départements et des régions (data.ofgl.fr, données DGFiP).
+Textes — code général des collectivités territoriales, articles L.
+1612-4 et L.
+1613-1 ; loi n° 2018-32 du 22 janvier 2018 de programmation des finances publiques pour les années 2018 à 2022, articles 13 et 29 ; loi n° 2020-290 du 23 mars 2020 d’urgence pour faire face à l’épidémie de covid-19, article 12 ; lois de finances pour 2020 (art.
+16), 2021 (art.
+8 et 29), 2025 (art.
+186) et 2026 ; projet de loi de finances déposé le 1er octobre 2026 et avis du Haut Conseil des finances publiques sur ce projet ; tous lus dans le texte et archivés avec leur empreinte ; Real Decreto-ley 21/2012 et loi organique 2/2012 (Espagne) ; loi n° 448/1998, art.
+28, et loi n° 208/2015 (Italie, pacte de stabilité interne puis règle d’équilibre) ; Insee, Les comptes des administrations publiques en 2010, 2014 et 2015 ; Cour des comptes, Les finances publiques locales 2025 et réponses publiées.
+Les calculs, les gardes et les figures sont produits par un script unique, relancé à chaque publication des sources ; aucun chiffre de cette page n’est saisi à la main, et le script refuse d’écrire si une donnée cesse de soutenir une phrase, ou si une phrase tire des chiffres une conclusion qu’ils ne portent pas.
+Télécharger les données (licence CC BY 4.0) : CSV, en format long, lisible dans un tableur ; JSON, avec les calculs, les définitions et le compte rendu des gardes.
+Réutiliser cette page
+Les figures, les données et une citation prête, sous licence libre.
+Chaque figure porte dans l'image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
+Investissement des administrations locales et transferts reçus, France, en % du PIB
+De 2013 à 2017, les transferts reçus par les administrations publiques locales reculent de 8,9 milliards d’euros (0,64 point de PIB) et leur investissement de 7,5 milliards d’euros (0,50 point) ; la série comparable des transferts s'arrête en 2017.
+Précaution d'interprétation.
+Transferts reçus : de l'État et de la sécurité sociale, toutes dotations confondues ; ce n'est pas la DGF.
+Série comparable arrêtée en 2017 : en 2018 puis en 2021, des dotations sont remplacées par des fractions de TVA, comptées en impôts.
+Ce reclassement change la catégorie de la recette ; il ne dit pas, à lui seul, si les ressources ont augmenté ou baissé.
+Eurostat gov_10a_main, administrations publiques locales (S1313) : investissement P51G, transferts courants reçus D73REC ; France.
+Données relevées le 7 octobre 2026.
+Télécharger en PNG
+SVG
+Solde des administrations locales, 2013-2017 : la même variation, en euros et en points de PIB
+De 2013 à 2017, le solde des administrations publiques locales s'améliore de 9,7 milliards d’euros (0,45 point de PIB).
+Leurs dépenses totales restent presque stables en euros courants (+1,2 milliard d’euros) ; rapportées au PIB, elles diminuent de 0,82 point, dont 0,50 point pour l'investissement, pendant que les recettes fiscales progressent et que les transferts reçus reculent.
+Ces évolutions sont concomitantes ; elles n'attribuent pas le recul de l'investissement à la baisse des dotations.
+Précaution d'interprétation.
+Barres : contribution de chaque poste à la variation du solde ; pour une dépense, l'inverse de sa variation.
+Les autres dépenses augmentent de 8,7 milliards d’euros (barre négative) et reculent de 0,32 point de PIB (barre positive) : le PIB nominal augmente de 8,1 %.
+Lecture comptable : les postes reconstituent le solde ; ils ne disent pas ce qui l'a décidé.
+Eurostat gov_10a_main, administrations publiques locales (S1313), France ; points calculés sur le PIB des mêmes comptes.
+Données relevées le 7 octobre 2026.
+Télécharger en PNG
+SVG
+Dette des administrations territoriales et part détenue par l’État central, en % du PIB
+Une même dette territoriale peut recouvrir des architectures opposées : en Espagne, 59 % en est détenue par l'État central ; en France, 1 %.
+Précaution d'interprétation.
+Périmètre statistique, non compétences : la France et l'Italie n'ont pas d'échelon d'États fédérés (S1312).
+Eurostat gov_10q_ggdebt (4e trimestre) et gov_10dd_ggd (secteur détenteur S1311), S1312 + S1313, en % du PIB.
+Données relevées le 7 octobre 2026.
+Télécharger en PNG
+SVG
+Citer cette page
+Lalut, Stéphane (2026). « Les collectivités locales sont-elles une variable d'ajustement des finances publiques ? ».
+Données Eurostat, OFGL et Légifrance, relevé du 7 octobre 2026. https://stephane-lalut.com/dette-publique-collectivites-locales/
+Copier la citation
+En trois phrases
+La dette des collectivités, encadrée par la règle d’équilibre réel, ne suffit pas à dire si une contrainte venue de l’État a pesé sur elles : cette contrainte se lit dans leurs recettes et leurs dépenses.
+De 2013 à 2017, les administrations publiques locales améliorent leur solde de 9,7 milliards d’euros, avec des dépenses presque stables en euros courants, des recettes fiscales en hausse et des transferts reçus en baisse ; rapportées au PIB, leurs dépenses diminuent de 0,82 point, dont 0,50 point pour l’investissement.
+Ces évolutions sont concomitantes et ne suffisent pas à attribuer le recul de l’investissement à la baisse des dotations ; ailleurs, la contrainte prend d’autres formes, comme en Espagne, où l’État central détient plus de la moitié de la dette territoriale.
+Copier le résumé
+Les données
+Les séries par pays et par catégorie de collectivités, la DGF votée, la décomposition 2013-2017 en milliards d'euros et en points de PIB, les mesures du projet de loi de finances et le compte rendu des contrôles ; le même contenu existe en CSV, en format long, lisible dans un tableur.
+Télécharger en JSON CSV
+Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
+Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
+Les séries brutes appartiennent à leurs producteurs (Eurostat, OFGL et Légifrance), sous leurs propres conditions.
+Toutes les ressources : données, dossiers et repères →
+Transmettre
+WhatsApp
+Bluesky
+LinkedIn
+X
+E-mail
+Copier le lien

@@ -3,26 +3,26 @@
   {
    "id": "investissement",
    "fichier": "collectivites-investissement",
-   "titre": "Investissement des collectivités et transferts reçus, France, en % du PIB",
-   "montre": "De 2013 à 2017, les transferts reçus par les collectivités reculent de 0,64 point de PIB et leur investissement de 0,50 point ; le recul de l'investissement après les municipales de 2014 dépasse nettement celui des autres mandats.",
-   "source": "Eurostat gov_10a_main (S1313 : P51G, D73REC ; S13 : TE en % du PIB pour le dénominateur), administrations locales, France",
-   "precaution": "Transferts : série comparable arrêtée en 2017 (DGF des régions remplacée par une fraction de TVA en 2018)."
+   "titre": "Investissement des administrations locales et transferts reçus, France, en % du PIB",
+   "montre": "De 2013 à 2017, les transferts reçus par les administrations publiques locales reculent de 8,9 milliards d’euros (0,64 point de PIB) et leur investissement de 7,5 milliards d’euros (0,50 point) ; la série comparable des transferts s'arrête en 2017.",
+   "source": "Eurostat gov_10a_main, administrations publiques locales (S1313) : investissement P51G, transferts courants reçus D73REC ; France. Données relevées le 7 octobre 2026.",
+   "precaution": "Transferts reçus : de l'État et de la sécurité sociale, toutes dotations confondues ; ce n'est pas la DGF. Série comparable arrêtée en 2017 : en 2018 puis en 2021, des dotations sont remplacées par des fractions de TVA, comptées en impôts. Ce reclassement change la catégorie de la recette ; il ne dit pas, à lui seul, si les ressources ont augmenté ou baissé."
   },
   {
    "id": "cascade",
    "fichier": "collectivites-cascade",
-   "titre": "D’où vient l’amélioration du solde des collectivités, 2013-2017",
-   "montre": "Le solde des collectivités s'améliore de 0,45 point de PIB entre 2013 et 2017, surtout par la baisse des dépenses, malgré la baisse des transferts reçus.",
-   "source": "Eurostat gov_10a_main, administrations locales (S1313), France ; points de PIB",
-   "precaution": "Lecture comptable : les postes reconstituent exactement la variation du solde ; ils ne disent pas ce qui l'a décidé."
+   "titre": "Solde des administrations locales, 2013-2017 : la même variation, en euros et en points de PIB",
+   "montre": "De 2013 à 2017, le solde des administrations publiques locales s'améliore de 9,7 milliards d’euros (0,45 point de PIB). Leurs dépenses totales restent presque stables en euros courants (+1,2 milliard d’euros) ; rapportées au PIB, elles diminuent de 0,82 point, dont 0,50 point pour l'investissement, pendant que les recettes fiscales progressent et que les transferts reçus reculent. Ces évolutions sont concomitantes ; elles n'attribuent pas le recul de l'investissement à la baisse des dotations.",
+   "source": "Eurostat gov_10a_main, administrations publiques locales (S1313), France ; points calculés sur le PIB des mêmes comptes. Données relevées le 7 octobre 2026.",
+   "precaution": "Barres : contribution de chaque poste à la variation du solde ; pour une dépense, l'inverse de sa variation. Les autres dépenses augmentent de 8,7 milliards d’euros (barre négative) et reculent de 0,32 point de PIB (barre positive) : le PIB nominal augmente de 8,1 %. Lecture comptable : les postes reconstituent le solde ; ils ne disent pas ce qui l'a décidé."
   },
   {
    "id": "europe",
    "fichier": "collectivites-europe",
    "titre": "Dette des administrations territoriales et part détenue par l’État central, en % du PIB",
    "montre": "Une même dette territoriale peut recouvrir des architectures opposées : en Espagne, 59 % en est détenue par l'État central ; en France, 1 %.",
-   "source": "Eurostat gov_10q_ggdebt (4e trimestre) et gov_10dd_ggd (détention), S1312 + S1313, en % du PIB",
-   "precaution": "Périmètre statistique, non compétences : la France et l'Italie n'ont pas d'échelon d'États fédérés (S1312)."
+   "source": "Eurostat gov_10q_ggdebt (4e trimestre) et gov_10dd_ggd (secteur détenteur S1311), S1312 + S1313, en % du PIB. Données relevées le 7 octobre 2026.",
+   "precaution": "Périmètre statistique, non compétences : la France et l'Italie n'ont pas d'échelon d'États fédérés (S1312)."
   }
  ],
  "en": [
@@ -30,24 +30,24 @@
    "id": "investissement",
    "fichier": "collectivites-investissement-en",
    "titre": "Local government investment and transfers received, France, in % of GDP",
-   "montre": "From 2013 to 2017, the transfers received by local authorities fell by 0.64 points of GDP and their investment by 0.50 points; the fall in investment after the 2014 municipal elections clearly exceeds that of the other terms of office.",
-   "source": "Eurostat gov_10a_main (S1313: P51G, D73REC; S13: TE in % of GDP for the denominator), local government, France",
-   "precaution": "Transfers: comparable series stops in 2017 (the regions' DGF grant was replaced by a share of VAT in 2018)."
+   "montre": "From 2013 to 2017, the transfers received by local government fell by €8.9 billion (0.64 points of GDP) and its investment by €7.5 billion (0.50 points); the comparable transfer series stops in 2017.",
+   "source": "Eurostat gov_10a_main, local government (S1313): investment P51G, current transfers received D73REC; France. Data retrieved on 7 October 2026.",
+   "precaution": "Transfers received: from central government and social security, all grants together; this is not the DGF grant. Comparable series stops in 2017: in 2018 and again in 2021, some grants were replaced by shares of VAT, counted as taxes. This reclassification changes the category of the revenue; on its own, it does not say whether resources rose or fell."
   },
   {
    "id": "cascade",
    "fichier": "collectivites-cascade-en",
-   "titre": "Where the improvement in the local government balance came from, 2013-2017",
-   "montre": "The local government balance improved by 0.45 points of GDP between 2013 and 2017, mainly through lower spending, despite lower transfers received.",
-   "source": "Eurostat gov_10a_main, local government (S1313), France; points of GDP",
-   "precaution": "An accounting reading: the items add up exactly to the change in the balance; they do not say what decided it."
+   "titre": "Local government balance, 2013-2017: the same change, in euros and in percentage points of GDP",
+   "montre": "From 2013 to 2017, the local government balance improved by €9.7 billion (0.45 points of GDP). Total spending stayed almost flat in current euros (+€1.2 billion); relative to GDP, it fell by 0.82 points, of which 0.50 points for investment, while tax revenue rose and transfers received fell. These movements are concomitant; they do not attribute the fall in investment to the grant cuts.",
+   "source": "Eurostat gov_10a_main, local government (S1313), France; percentage points computed on the GDP of the same accounts. Data retrieved on 7 October 2026.",
+   "precaution": "Bars: each item's contribution to the change in the balance; for spending, the opposite of its change. Other spending rose by €8.7 billion (negative bar) and fell by 0.32 percentage points of GDP (positive bar): nominal GDP rose by 8.1%. An accounting reading: the items add up to the balance; they do not say what decided it."
   },
   {
    "id": "europe",
    "fichier": "collectivites-europe-en",
    "titre": "Subnational government debt and the share held by central government, in % of GDP",
    "montre": "The same subnational debt can conceal opposite architectures: in Spain, 59% of it is held by central government; in France, 1%.",
-   "source": "Eurostat gov_10q_ggdebt (4th quarter) and gov_10dd_ggd (holdings), S1312 + S1313, in % of GDP",
+   "source": "Eurostat gov_10q_ggdebt (4th quarter) and gov_10dd_ggd (holding sector S1311), S1312 + S1313, in % of GDP. Data retrieved on 7 October 2026.",
    "precaution": "Statistical scope, not responsibilities: France and Italy have no state-government tier (S1312)."
   }
  ]

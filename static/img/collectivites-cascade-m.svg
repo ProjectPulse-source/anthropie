@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 803" role="img" font-variant-numeric="tabular-nums" aria-labelledby="ccm-t ccm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="ccm-t">Solde local 2013-2017, en euros et en points de PIB</title><desc id="ccm-d">Deux cascades, mêmes postes, même ordre. En milliards d'euros courants : solde de −8,3 en 2013 ; transferts reçus −8,9, impôts +18,2, autres recettes +1,6, investissement +7,5, autres dépenses −8,7 ; solde de 1,4 en 2017. En points de PIB : solde de −0,39 ; transferts −0,64, impôts +0,39, autres recettes −0,12, investissement +0,50, autres dépenses +0,32 ; solde de 0,06. Le PIB nominal augmente de 8,1 %.</desc>
+<rect width="300" height="803" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Solde local 2013-2017, en</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">euros et en points de PIB</text>
+<text x="0" y="70" font-size="15" font-weight="600" fill="#0A0A0E">Contribution à la variation du solde</text>
+<text x="120" y="94" font-size="13.5" fill="#898781" text-anchor="end">en Md€</text>
+<text x="300" y="94" font-size="13.5" fill="#898781" text-anchor="end">en points de PIB</text>
+<rect x="0" y="102" width="300" height="46" fill="#f3efe6"/>
+<text x="4" y="117" font-size="13.5" fill="#0A0A0E" font-weight="600">Solde 2013, point de départ</text>
+<text x="116" y="136" font-size="15" font-weight="600" fill="#0A0A0E" text-anchor="end">−8,3</text>
+<text x="296" y="136" font-size="15" font-weight="600" fill="#0A0A0E" text-anchor="end">−0,39</text>
+<text x="0" y="165" font-size="13.5" fill="#52514e">Transferts reçus</text>
+<text x="120" y="184" font-size="15" font-weight="600" fill="#eb6834" text-anchor="end">−8,9</text>
+<text x="300" y="184" font-size="15" font-weight="600" fill="#eb6834" text-anchor="end">−0,64</text>
+<text x="0" y="207" font-size="13.5" fill="#52514e">Impôts</text>
+<text x="120" y="226" font-size="15" font-weight="600" fill="#184f95" text-anchor="end">+18,2</text>
+<text x="300" y="226" font-size="15" font-weight="600" fill="#184f95" text-anchor="end">+0,39</text>
+<text x="0" y="249" font-size="13.5" fill="#52514e">Autres recettes</text>
+<text x="120" y="268" font-size="15" font-weight="600" fill="#184f95" text-anchor="end">+1,6</text>
+<text x="300" y="268" font-size="15" font-weight="600" fill="#eb6834" text-anchor="end">−0,12</text>
+<text x="0" y="290" font-size="13.5" font-style="italic" fill="#898781">Dépenses : signe inversé, une baisse</text>
+<text x="0" y="308" font-size="13.5" font-style="italic" fill="#898781">améliore le solde.</text>
+<text x="0" y="331" font-size="13.5" fill="#52514e">Investissement (baisse de la dépense)</text>
+<text x="120" y="350" font-size="15" font-weight="600" fill="#184f95" text-anchor="end">+7,5</text>
+<text x="300" y="350" font-size="15" font-weight="600" fill="#184f95" text-anchor="end">+0,50</text>
+<text x="0" y="373" font-size="13.5" fill="#52514e">Autres dépenses (hausse en euros, baisse</text>
+<text x="0" y="392" font-size="13.5" fill="#52514e">en points de PIB)</text>
+<text x="120" y="411" font-size="15" font-weight="600" fill="#eb6834" text-anchor="end">−8,7</text>
+<text x="300" y="411" font-size="15" font-weight="600" fill="#184f95" text-anchor="end">+0,32</text>
+<rect x="0" y="419" width="300" height="46" fill="#f3efe6"/>
+<text x="4" y="434" font-size="13.5" fill="#0A0A0E" font-weight="600">Solde 2017, point d&#x27;arrivée</text>
+<text x="116" y="453" font-size="15" font-weight="600" fill="#0A0A0E" text-anchor="end">1,4</text>
+<text x="296" y="453" font-size="15" font-weight="600" fill="#0A0A0E" text-anchor="end">0,06</text>
+<line x1="0" y1="475.0" x2="300" y2="475.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="496.0" font-size="13.5" fill="#52514e">Eurostat gov_10a_main, administrations</text>
+<text class="pied-source" x="0" y="513.0" font-size="13.5" fill="#52514e">publiques locales (S1313), France ;</text>
+<text class="pied-source" x="0" y="530.0" font-size="13.5" fill="#52514e">points calculés sur le PIB des mêmes</text>
+<text class="pied-source" x="0" y="547.0" font-size="13.5" fill="#52514e">comptes. Données relevées le 7 octobre</text>
+<text class="pied-source" x="0" y="564.0" font-size="13.5" fill="#52514e">2026.</text>
+<text class="pied-note" x="0" y="585.0" font-size="13.5" fill="#52514e">Valeurs : contribution de chaque poste</text>
+<text class="pied-note" x="0" y="602.0" font-size="13.5" fill="#52514e">à la variation du solde ; pour une</text>
+<text class="pied-note" x="0" y="619.0" font-size="13.5" fill="#52514e">dépense, l'inverse de sa variation.</text>
+<text class="pied-note" x="0" y="636.0" font-size="13.5" fill="#52514e">Les autres dépenses augmentent de</text>
+<text class="pied-note" x="0" y="653.0" font-size="13.5" fill="#52514e">8,7 milliards d’euros (contribution</text>
+<text class="pied-note" x="0" y="670.0" font-size="13.5" fill="#52514e">négative) et reculent de 0,32 point de</text>
+<text class="pied-note" x="0" y="687.0" font-size="13.5" fill="#52514e">PIB (contribution positive) : le PIB</text>
+<text class="pied-note" x="0" y="704.0" font-size="13.5" fill="#52514e">nominal augmente de 8,1 %. Lecture</text>
+<text class="pied-note" x="0" y="721.0" font-size="13.5" fill="#52514e">comptable : les postes reconstituent</text>
+<text class="pied-note" x="0" y="738.0" font-size="13.5" fill="#52514e">le solde ; ils ne disent pas ce qui</text>
+<text class="pied-note" x="0" y="755.0" font-size="13.5" fill="#52514e">l'a décidé.</text>
+<text class="pied-licence" x="0" y="776.0" font-size="13.5" fill="#898781">Stéphane Lalut, CC BY 4.0 ·</text>
+<text class="pied-licence" x="0" y="793.0" font-size="13.5" fill="#898781">stephane-lalut.com</text>
+</svg>

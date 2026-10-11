@@ -2,8 +2,8 @@
 # 3 figures SVG + PNG, carte de partage et vignette), PUIS deploiement de /dette-publique-collectivites-locales/.
 #
 # Meme mecanique que dette-monde.yml (mandat de l'auteur des 29-30/09/2026 : mise a jour sans intervention, gardee
-# par des controles qui bloquent AVANT d'ecrire) : 37 GARDES DE PROSE (une donnee qui dement une phrase de la page
-# arrete tout), temoin comptable (recettes - depenses = solde), temoin du denominateur, test de consolidation entre
+# par des controles qui bloquent AVANT d'ecrire) : GARDES DE DONNEES (une donnee qui dement une phrase de la page arrete
+# tout ; leur nombre est au compte rendu du JSON) et GARDES DE PROSE sur la page elle-meme (refonte du 11/10/2026), temoin comptable (recettes - depenses = solde), temoin du denominateur, test de consolidation entre
 # echelons, mutation reelle rejouee a chaque passage (une garde DOIT mordre), build Hugo bloquant. Un echec ouvre une
 # issue et ne publie rien. Rien n'est ecrit a donnees identiques : un passage sans nouveaute ne commite rien.
 #
@@ -83,7 +83,7 @@ jobs:
                   static/img/collectivites-investissement-en.svg static/img/collectivites-investissement-en.png \
                   static/img/collectivites-cascade-en.svg static/img/collectivites-cascade-en.png \
                   static/img/collectivites-europe-en.svg static/img/collectivites-europe-en.png \
-                  static/images/og-collectivites-en.jpg static/images/vig-collectivites-en.jpg
+                  static/images/og-collectivites-en.jpg static/images/vig-collectivites-en.jpg                   static/img/collectivites-investissement-m.svg static/img/collectivites-investissement-m.png                   static/img/collectivites-cascade-m.svg static/img/collectivites-cascade-m.png                   static/img/collectivites-europe-m.svg static/img/collectivites-europe-m.png                   static/img/collectivites-investissement-en-m.svg static/img/collectivites-investissement-en-m.png                   static/img/collectivites-cascade-en-m.svg static/img/collectivites-cascade-en-m.png                   static/img/collectivites-europe-en-m.svg static/img/collectivites-europe-en-m.png
           git commit -m "data(collectivites): Eurostat/OFGL du $(date -u +%Y-%m-%d)"
           pushed=0
           for attempt in 1 2 3; do

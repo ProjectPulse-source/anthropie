@@ -17,8 +17,8 @@
    },
    "pib": {
     "jeu": "nama_10_gdp",
-    "maj_source": "2026-10-07T11:00:00+0200",
-    "sha256": "70e53a701677bf8b8a01484e617d614cddc833519abc72164805e5ce9cf2596c"
+    "maj_source": "2026-10-09T23:00:00+0200",
+    "sha256": "c54e5090c72d94cc71f4ed8b887229c0b8e834829a73212603c3f835cabfd2df"
    },
    "dette": {
     "jeu": "gov_10q_ggdebt",
@@ -32,15 +32,22 @@
    },
    "ofgl": {
     "jeu": "data.ofgl.fr (4 bases consolidees)",
-    "maj_source": "2026-10-07T",
+    "maj_source": "2026-10-11T",
     "sha256": "ecf3e95c1d7499a6f5833097cd167e115b916ed7e7c179258aee148094ae3fb1"
+   },
+   "notif": {
+    "jeu": "gov_10dd_edpt1",
+    "maj_source": "2026-04-22T11:00:00+0200",
+    "sha256": "248239846d08a63db281b14597b4558d141b0011cc4b614d0c9f140921a2de3f"
    }
   },
   "definitions": {
    "perimetre_local": "S1313 : administrations publiques locales (collectivités, syndicats, ODAL)",
    "perimetre_territorial": "S1312 + S1313 (États fédérés, s'il en existe, et administrations locales)",
    "transferts": "D73REC : transferts courants reçus des autres administrations publiques (État et sécurité sociale)",
-   "dgf_votee": "montant de la DGF fixé par la loi de finances (CGCT art. L. 1613-1)"
+   "dgf_votee": "montant de la DGF fixé par la loi de finances (CGCT art. L. 1613-1)",
+   "cascade": "contribution de chaque poste à la variation du solde (pour une dépense, l'inverse de sa variation), en Md EUR courants (ep_cascade_md) et en points de PIB (ep_cascade)",
+   "plf_somme": "somme arithmétique des cinq montants du projet de loi de finances : descriptive, effet net non établi"
   }
  },
  "gardes": [
@@ -49,7 +56,7 @@
    "ok": true
   },
   {
-   "garde": "« la dette des collectivités a peu bougé » (moins d'un dixième de la hausse)",
+   "garde": "carte de partage : « la dette locale est restée contenue » (moins d'un dixième de la hausse de la dette publique)",
    "ok": true
   },
   {
@@ -85,7 +92,11 @@
    "ok": true
   },
   {
-   "garde": "« les impôts n'ont compensé qu'une partie de la baisse des transferts »",
+   "garde": "« en points de PIB, les impôts n'ont compensé qu'une partie de la baisse des transferts »",
+   "ok": true
+  },
+  {
+   "garde": "« en euros, la hausse des impôts dépasse la baisse des transferts »",
    "ok": true
   },
   {
@@ -93,7 +104,7 @@
    "ok": true
   },
   {
-   "garde": "« depuis trois ans, les collectivités sont de nouveau en besoin de financement »",
+   "garde": "« depuis trois ans, le besoin de financement des administrations locales dépasse 0,3 point de PIB ; il était inférieur à 0,1 point les deux années précédentes »",
    "ok": true
   },
   {
@@ -133,7 +144,7 @@
    "ok": true
   },
   {
-   "garde": "« Espagne : plus de la moitié de la dette des communautés autonomes détenue par l'État central »",
+   "garde": "« Espagne : plus de la moitié de la dette territoriale détenue par l'État central »",
    "ok": true
   },
   {
@@ -145,7 +156,7 @@
    "ok": true
   },
   {
-   "garde": "« la dépense locale a monté puis reculé » (deux récits)",
+   "garde": "« la dépense locale a augmenté puis reculé » (deux récits)",
    "ok": true
   },
   {
@@ -193,6 +204,78 @@
    "ok": true
   },
   {
+   "garde": "la cascade en euros se referme sur le solde (écart < 0,1 M€)",
+   "ok": true
+  },
+  {
+   "garde": "« dépenses totales presque stables en euros courants » (variation de moins de 1 %)",
+   "ok": true
+  },
+  {
+   "garde": "« rapportées au PIB, leurs dépenses ont diminué »",
+   "ok": true
+  },
+  {
+   "garde": "« les recettes fiscales progressaient » (en euros)",
+   "ok": true
+  },
+  {
+   "garde": "« les transferts reçus reculaient » (en euros)",
+   "ok": true
+  },
+  {
+   "garde": "« en euros, la progression des recettes explique l'essentiel du redressement du solde » (recettes > 2 × dépenses)",
+   "ok": true
+  },
+  {
+   "garde": "« les autres dépenses augmentent en euros et reculent en points de PIB » (le signe change avec l'unité)",
+   "ok": true
+  },
+  {
+   "garde": "« l'investissement recule aussi en euros »",
+   "ok": true
+  },
+  {
+   "garde": "effet du dénominateur : variation en euros + croissance du PIB = variation en points (identité)",
+   "ok": true
+  },
+  {
+   "garde": "« l'essentiel du recul en points de PIB vient de la croissance du PIB » (effet du PIB > recul total)",
+   "ok": true
+  },
+  {
+   "garde": "témoin du PIB : croissance 2013-2017 de la notification et du PIB implicite des comptes à 0,3 point près",
+   "ok": true
+  },
+  {
+   "garde": "« L'investissement local baisse habituellement après les municipales » (au moins trois mandats sur quatre)",
+   "ok": true
+  },
+  {
+   "garde": "« la dépense locale était revenue plus bas en fin d'épisode qu'aujourd'hui » (B15)",
+   "ok": true
+  },
+  {
+   "garde": "« Depuis 2023 : l'encours des quatre catégories (OFGL) augmente aussi »",
+   "ok": true
+  },
+  {
+   "garde": "dette publique : série trimestrielle et notification à 0,2 point près (écart dit sur la page, jamais corrigé)",
+   "ok": true
+  },
+  {
+   "garde": "« le stock de dette locale a augmenté en 2020 et depuis 2023 » (la règle d'équilibre ne fige pas le stock)",
+   "ok": true
+  },
+  {
+   "garde": "« Les deux lectures ne racontent pas la même chose » : en euros, les dépenses ne reculent pas",
+   "ok": true
+  },
+  {
+   "garde": "Cahors : trois exercices contractuels, la reprise de la dernière année suspendue par la loi d'urgence",
+   "ok": true
+  },
+  {
    "garde": "projet de loi de finances : « la DGF augmente » (abondements et montant à périmètre courant)",
    "ok": true
   },
@@ -218,6 +301,18 @@
   },
   {
    "garde": "projet de loi de finances : « des ressources en hausse malgré la contribution » (lecture du Gouvernement)",
+   "ok": true
+  },
+  {
+   "garde": "projet de loi de finances : « augmenter de X alors que la somme arithmétique des mesures atteint Y » (Y > X > 0 ; leur différence n'est jamais présentée comme un montant prélevé : garde de prose)",
+   "ok": true
+  },
+  {
+   "garde": "projet de loi de finances : somme arithmétique des cinq montants = somme des lignes du tableau",
+   "ok": true
+  },
+  {
+   "garde": "projet de loi de finances : la somme affichée égale la somme des montants affichés (arrondis au dixième)",
    "ok": true
   }
  ],
@@ -275,6 +370,47 @@
     "cote": "dep"
    }
   ],
+  "ep_cascade_md": [
+   {
+    "poste": "Transferts reçus des autres administrations publiques",
+    "md_eur": -8.928900000000002,
+    "cote": "rec"
+   },
+   {
+    "poste": "Impôts locaux et partagés",
+    "md_eur": 18.233,
+    "cote": "rec"
+   },
+   {
+    "poste": "Autres recettes",
+    "md_eur": 1.5802999999999976,
+    "cote": "rec"
+   },
+   {
+    "poste": "Investissement (moins de dépense)",
+    "md_eur": 7.490299999999996,
+    "cote": "dep"
+   },
+   {
+    "poste": "Autres dépenses (moins de dépense)",
+    "md_eur": -8.683699999999991,
+    "cote": "dep"
+   }
+  ],
+  "ep_tr_md": 10.884399999999994,
+  "ep_te_md": 1.1933999999999942,
+  "ep_imp_md": 18.233,
+  "ep_solde_md": 9.691,
+  "ep_te0_md": 249.57739999999998,
+  "ep_solde_a0_md": -8.281,
+  "ep_solde_a1_md": 1.41,
+  "ep_inv_pct_eur": -14.95870046252286,
+  "cascade_md_somme": 9.690999999999999,
+  "ep_te_effet_eur": 0.05210901766142876,
+  "ep_te_effet_pib": -0.8745275229267436,
+  "pib_croiss_pct": 8.080214983172596,
+  "pib_croiss_impl_pct": 8.02493222739853,
+  "ep_te_pc_a1": 10.949740276663887,
   "temoin_residu_max_meur": 0.09999999999422471,
   "temoin_annees": 31,
   "cascade_somme": 0.45216797253416807,
@@ -792,8 +928,34 @@
    -3.3852389999999986,
    -2.3618010000000034
   ],
-  "of_encours_total": 218.49580536859,
+  "of_encours_total": 218.49580536858997,
   "dette_loc_md": 278.6971321678322,
+  "of_encours_rec0_annee": 2023,
+  "of_encours_rec0": 200.53644389927,
+  "avant_soldes": [
+   -0.035575179275102786,
+   -0.04328963471938967
+  ],
+  "avant_annees": [
+   2021,
+   2022
+  ],
+  "dette_maj": "2026-07-21",
+  "notif_maj": "2026-04-22",
+  "dette_apu_notif_fin": 115.6,
+  "cahors_taux": 1.2,
+  "cahors_base": 2017,
+  "cahors_seuil_m": 60,
+  "cahors_exercices": [
+   2018,
+   2019,
+   2020
+  ],
+  "cahors_reprise_pct": 75,
+  "cahors_plafond_pct": 2,
+  "cahors_suspendu": 2020,
+  "cahors_date_lpfp": "22 janvier 2018",
+  "cahors_date_urgence": "23 mars 2020",
   "plf_edition": 2027,
   "plf_depot": "1er octobre 2026",
   "plf_dgf": 27.543261857,
@@ -875,6 +1037,7 @@
     "nature_en": "repayment spread out; total amount returned unchanged"
    }
   ],
+  "plf_somme": 6.192,
   "plf_sources": {
    "plf": {
     "titre": "Projet de loi de finances pour 2027, n° 3210, déposé le 1er octobre 2026",
@@ -1051,6 +1214,58 @@
   "pib_ecart_de": "1,3",
   "pib_ecart_it": "0,4",
   "pib_ecart_es": "0,3",
+  "ep_solde_mde": "9,7 milliards d’euros",
+  "ep_solde_pt": "0,45 point",
+  "ep_tr_mde": "10,9 milliards d’euros",
+  "ep_te_mde_s": "+1,2 milliard d’euros",
+  "ep_te0_md": "249,6",
+  "ep_te1_md": "250,8",
+  "ep_imp_mde": "18,2 milliards d’euros",
+  "ep_imp_md": "18,2",
+  "recent_a1": "2024",
+  "recent_solde_mid_pt": "0,61 point",
+  "ep_transf_mde": "8,9 milliards d’euros",
+  "ep_autres_rec_mde": "1,6 milliard d’euros",
+  "ep_inv_mde": "7,5 milliards d’euros",
+  "ep_autres_dep_mde": "8,7 milliards d’euros",
+  "ep_te_pt": "0,82 point",
+  "ep_inv_pt": "0,50 point",
+  "ep_transf_pt": "0,64 point",
+  "ep_imp_pt": "0,39 point",
+  "ep_autres_rec_pt": "0,12 point",
+  "ep_autres_dep_pt": "0,32 point",
+  "ep_solde_a0_md": "8,3",
+  "ep_solde_a1_md": "1,4",
+  "pib_croiss_pct": "8,1",
+  "ep_te_effet_pib_pt": "0,87 point",
+  "ep_te_effet_eur_pt": "0,05 point",
+  "ep_inv_pct_eur": "15",
+  "ep_te_pc_a1": "10,9",
+  "dette_apu_notif_fin": "115,6",
+  "dette_maj": "21 juillet 2026",
+  "notif_maj": "22 avril 2026",
+  "avant_a0": "2021",
+  "avant_a1": "2022",
+  "recent_solde_deb_pt": "0,35 point",
+  "recent_solde_fin_pt": "0,52 point",
+  "recent_inv_deb1": "2,2",
+  "of_encours_rec0": "200,5",
+  "of_encours_rec0_annee": "2023",
+  "of_encours_hausse": "18,0",
+  "consolidation_ecart_pt": "0,2 point",
+  "plf_somme": "6,2",
+  "plf_ecart_mde": "1,2 milliard d’euros",
+  "cahors_taux": "1,2",
+  "cahors_base": "2017",
+  "cahors_seuil_m": "60",
+  "cahors_ex1": "2018",
+  "cahors_ex2": "2019",
+  "cahors_ex3": "2020",
+  "cahors_reprise_pct": "75",
+  "cahors_plafond_pct": "2",
+  "cahors_suspendu": "2020",
+  "cahors_date_lpfp": "22 janvier 2018",
+  "cahors_date_urgence": "23 mars 2020",
   "fr_dette_deb": "7,2",
   "fr_dette_pic": "9,9",
   "fr_dette_pic_annee": "2020",
@@ -1211,6 +1426,58 @@
   "pib_ecart_de": "1.3",
   "pib_ecart_it": "0.4",
   "pib_ecart_es": "0.3",
+  "ep_solde_mde": "€9.7 billion",
+  "ep_solde_pt": "0.45 points",
+  "ep_tr_mde": "€10.9 billion",
+  "ep_te_mde_s": "+€1.2 billion",
+  "ep_te0_md": "249.6",
+  "ep_te1_md": "250.8",
+  "ep_imp_mde": "€18.2 billion",
+  "ep_imp_md": "18.2",
+  "recent_a1": "2024",
+  "recent_solde_mid_pt": "0.61 points",
+  "ep_transf_mde": "€8.9 billion",
+  "ep_autres_rec_mde": "€1.6 billion",
+  "ep_inv_mde": "€7.5 billion",
+  "ep_autres_dep_mde": "€8.7 billion",
+  "ep_te_pt": "0.82 points",
+  "ep_inv_pt": "0.50 points",
+  "ep_transf_pt": "0.64 points",
+  "ep_imp_pt": "0.39 points",
+  "ep_autres_rec_pt": "0.12 points",
+  "ep_autres_dep_pt": "0.32 points",
+  "ep_solde_a0_md": "8.3",
+  "ep_solde_a1_md": "1.4",
+  "pib_croiss_pct": "8.1",
+  "ep_te_effet_pib_pt": "0.87 points",
+  "ep_te_effet_eur_pt": "0.05 points",
+  "ep_inv_pct_eur": "15",
+  "ep_te_pc_a1": "10.9",
+  "dette_apu_notif_fin": "115.6",
+  "dette_maj": "21 July 2026",
+  "notif_maj": "22 April 2026",
+  "avant_a0": "2021",
+  "avant_a1": "2022",
+  "recent_solde_deb_pt": "0.35 points",
+  "recent_solde_fin_pt": "0.52 points",
+  "recent_inv_deb1": "2.2",
+  "of_encours_rec0": "200.5",
+  "of_encours_rec0_annee": "2023",
+  "of_encours_hausse": "18.0",
+  "consolidation_ecart_pt": "0.2 points",
+  "plf_somme": "6.2",
+  "plf_ecart_mde": "€1.2 billion",
+  "cahors_taux": "1.2",
+  "cahors_base": "2017",
+  "cahors_seuil_m": "60",
+  "cahors_ex1": "2018",
+  "cahors_ex2": "2019",
+  "cahors_ex3": "2020",
+  "cahors_reprise_pct": "75",
+  "cahors_plafond_pct": "2",
+  "cahors_suspendu": "2020",
+  "cahors_date_lpfp": "22 January 2018",
+  "cahors_date_urgence": "23 March 2020",
   "fr_dette_deb": "7.2",
   "fr_dette_pic": "9.9",
   "fr_dette_pic_annee": "2020",

@@ -353,3 +353,17 @@ projet_loi_finances_mesure_tva,FR,2027,0.600,Md EUR,"Haut Conseil des finances p
 projet_loi_finances_mesure_ministeres,FR,2027,0.700,Md EUR,"Haut Conseil des finances publiques, avis n° 2026-5 (projet, avant examen)"
 projet_loi_finances_mesure_dilico,FR,2027,0.300,Md EUR,"Haut Conseil des finances publiques, avis n° 2026-5 (projet, avant examen)"
 projet_loi_finances_dgf,FR,2027,27.543,Md EUR,"projet de loi de finances pour 2027, article 34 (projet, avant examen)"
+decomposition_solde_local_transferts_recus,FR,2013-2017,-8.929,Md EUR courants (contribution au solde),Eurostat gov_10a_main S1313
+decomposition_solde_local_transferts_recus,FR,2013-2017,-0.6362,points de PIB (contribution au solde),Eurostat gov_10a_main S1313
+decomposition_solde_local_impots,FR,2013-2017,18.233,Md EUR courants (contribution au solde),Eurostat gov_10a_main S1313
+decomposition_solde_local_impots,FR,2013-2017,0.3873,points de PIB (contribution au solde),Eurostat gov_10a_main S1313
+decomposition_solde_local_autres_recettes,FR,2013-2017,1.580,Md EUR courants (contribution au solde),Eurostat gov_10a_main S1313
+decomposition_solde_local_autres_recettes,FR,2013-2017,-0.1213,points de PIB (contribution au solde),Eurostat gov_10a_main S1313
+decomposition_solde_local_investissement,FR,2013-2017,7.490,Md EUR courants (contribution au solde),Eurostat gov_10a_main S1313
+decomposition_solde_local_investissement,FR,2013-2017,0.5025,points de PIB (contribution au solde),Eurostat gov_10a_main S1313
+decomposition_solde_local_autres_depenses,FR,2013-2017,-8.684,Md EUR courants (contribution au solde),Eurostat gov_10a_main S1313
+decomposition_solde_local_autres_depenses,FR,2013-2017,0.3199,points de PIB (contribution au solde),Eurostat gov_10a_main S1313
+variation_solde_local,FR,2013-2017,9.691,Md EUR courants,Eurostat gov_10a_main S1313 B9
+variation_solde_local,FR,2013-2017,0.4522,points de PIB,Eurostat gov_10a_main S1313 B9
+croissance_pib_nominal,FR,2013-2017,8.08,%,Eurostat gov_10dd_edpt1 B1GQ MIO_NAC (notification)
+projet_loi_finances_somme_arithmetique_cinq_mesures,FR,2027,6.192,Md EUR,"somme descriptive des cinq lignes ; effet net non etabli par addition (projet, avant examen)"
