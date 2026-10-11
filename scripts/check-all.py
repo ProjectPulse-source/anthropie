@@ -54,6 +54,10 @@ HORS_RESEAU = [
     # mecaniquement (carte de partage, resultat en une phrase, Reutiliser, Dataset, JSON + CSV, livre sans note
     # Amazon) est bloquant, sinon une ressource neuve naitrait en dessous du modele sans que personne le voie.
     ("modele des ressources de donnees", "check-ressource-modele.py", []),
+    # Langue generee (OPTIMUM-26, 11/10/2026, chantier 3) : les cas limites des mots que les generateurs ecrivent
+    # autour d'un nombre (signe, accord de « point », lettres). Bloquant : une regression du module ecrirait la faute
+    # dans toutes les pages qui l'adoptent, a la prochaine mise a jour des donnees, sans relecture.
+    ("langue generee (module commun)", "test_langue_generee.py", []),
 ]
 LOCAL_DERIVES = [
     # La CI rend les PNG, mais par une etape NON BLOQUANTE : si l'installation
