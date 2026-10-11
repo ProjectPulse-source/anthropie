@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 1072" role="img" font-variant-numeric="tabular-nums" aria-labelledby="qp-exp-m-t qp-exp-m-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-<title id="qp-exp-m-t">Un même effort de 10 milliards d'euros : qui le supporterait, selon la décision prise ?</title><desc id="qp-exp-m-d">Deux panneaux. A : pour un effort de 10 milliards d'euros réparti au prorata de chaque poste, la part du revenu disponible net que représenterait ce montant pour chaque dixième de niveau de vie, en 2023. Une baisse des dépenses d'enseignement pèse 2,75 % du revenu du premier dixième et 0,21 % du dernier ; une hausse des impôts sur les revenus et le patrimoine, 1,14 % du dernier ; les pensions restent entre 0,43 et 0,78 %. B : le rapport entre la décision la plus lourde et la plus légère pour un même groupe, en base 1. Il vaut ×5,5 au dernier dixième et au moins autant au premier, et descend à ×1,4 en D7-D8 : c'est là que le levier retenu change le moins l'exposition moyenne du dixième.</desc>
+<title id="qp-exp-m-t">Un même effort de 10 milliards d'euros : qui le supporterait, selon la décision prise ?</title><desc id="qp-exp-m-d">Deux panneaux. A : pour un effort de 10 milliards d'euros réparti au prorata de chaque poste, la part du revenu disponible net que représenterait ce montant pour chaque dixième de niveau de vie, en 2023. Une baisse des dépenses d'enseignement pèse 2,75 % du revenu du premier dixième et 0,21 % du dernier ; une hausse des impôts sur les revenus et le patrimoine, 1,14 % du dernier ; les pensions restent entre 0,43 et 0,78 %. B : le rapport entre la décision la plus lourde et la plus légère pour un même groupe, en base 1. Il vaut ×5,5 au dernier dixième et au moins autant au premier, culmine à ×7,7 en D2, et descend à ×1,4 en D7-D8 : c'est là que le levier retenu change le moins l'exposition moyenne du dixième.</desc>
 <rect width="300" height="1072" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#2b2a28">Un même effort de 10 milliards</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#2b2a28">d'euros : qui le supporterait,</text>
@@ -83,9 +83,10 @@
 <rect x="224.9" y="776.6" width="16" height="6.4" rx="2" fill="#898781"/>
 <rect x="252.4" y="768.6" width="16" height="14.4" rx="2" fill="#898781"/>
 <rect x="280.0" y="713.2" width="16" height="69.8" rx="2" fill="#898781"/>
-<text x="32.0" y="673.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">≥ ×5,5</text>
+<text x="32.0" y="657.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">≥ ×5,5</text>
 <text x="205.3" y="770.8" font-size="13.5" fill="#2b2a28" text-anchor="middle" font-weight="600">×1,4</text>
 <text x="296.0" y="707.2" font-size="13.5" fill="#2b2a28" text-anchor="end" font-weight="600">×5,5</text>
+<text x="77.6" y="693.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">×7,7</text>
 <text x="40.0" y="802.0" font-size="13.5" fill="#898781" text-anchor="middle">D1</text>
 <text x="205.3" y="802.0" font-size="13.5" fill="#52514e" text-anchor="middle">D7</text>
 <text x="232.9" y="802.0" font-size="13.5" fill="#52514e" text-anchor="middle">D8</text>

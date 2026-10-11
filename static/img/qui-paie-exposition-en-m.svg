@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 1059" role="img" font-variant-numeric="tabular-nums" aria-labelledby="qp-exp-m-t qp-exp-m-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-<title id="qp-exp-m-t">The same €10 billion adjustment: who would bear it, depending on the decision taken?</title><desc id="qp-exp-m-d">Two panels. A: for a 10 billion euro adjustment allocated pro rata to each item, the share of net disposable income this amount would represent for each standard-of-living decile, in 2023. A cut in education spending weighs 2.75% of the income of the first decile and 0.21% of the last; a rise in taxes on income and wealth, 1.14% of the last; pensions stay between 0.43 and 0.78%. B: the ratio of the heaviest to the lightest decision for the same group, base 1. It is ×5.5 in the last decile and at least as much in the first, and falls to ×1.4 in D7-D8: that is where the lever chosen changes the decile's average exposure least.</desc>
+<title id="qp-exp-m-t">The same €10 billion adjustment: who would bear it, depending on the decision taken?</title><desc id="qp-exp-m-d">Two panels. A: for a 10 billion euro adjustment allocated pro rata to each item, the share of net disposable income this amount would represent for each standard-of-living decile, in 2023. A cut in education spending weighs 2.75% of the income of the first decile and 0.21% of the last; a rise in taxes on income and wealth, 1.14% of the last; pensions stay between 0.43 and 0.78%. B: the ratio of the heaviest to the lightest decision for the same group, base 1. It is ×5.5 in the last decile and at least as much in the first, peaks at ×7.7 in D2, and falls to ×1.4 in D7-D8: that is where the lever chosen changes the decile's average exposure least.</desc>
 <rect width="300" height="1059" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#2b2a28">The same €10 billion</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#2b2a28">adjustment: who would bear it,</text>
@@ -82,9 +82,10 @@
 <rect x="224.9" y="762.6" width="16" height="6.4" rx="2" fill="#898781"/>
 <rect x="252.4" y="754.6" width="16" height="14.4" rx="2" fill="#898781"/>
 <rect x="280.0" y="699.2" width="16" height="69.8" rx="2" fill="#898781"/>
-<text x="32.0" y="659.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">≥ ×5.5</text>
+<text x="32.0" y="643.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">≥ ×5.5</text>
 <text x="205.3" y="756.8" font-size="13.5" fill="#2b2a28" text-anchor="middle" font-weight="600">×1.4</text>
 <text x="296.0" y="693.2" font-size="13.5" fill="#2b2a28" text-anchor="end" font-weight="600">×5.5</text>
+<text x="77.6" y="679.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">×7.7</text>
 <text x="40.0" y="788.0" font-size="13.5" fill="#898781" text-anchor="middle">D1</text>
 <text x="205.3" y="788.0" font-size="13.5" fill="#52514e" text-anchor="middle">D7</text>
 <text x="232.9" y="788.0" font-size="13.5" fill="#52514e" text-anchor="middle">D8</text>

@@ -109,6 +109,9 @@ PIECE_TRESOR = (SRC_DETTE / "Tresor-Eco_378_epargne_menages_2026-01-08.html",
 # à la version du 21/09 (c839300) : identiques. La date de relevé reste donc vraie et ne bouge pas.
 REGISTRE_SHA256 = "b57d875d97f9aca120ea1911f1b46e63c3ee073c4fbe17ea8f4ba8383e29337d"
 SOURCES_RELEVEES_LE = "21 septembre 2026"
+# Pièces de sources_dette/ (PLFSS 2026, instruction DSS, Trésor-Éco), relevées le jour de leur archivage : leur empreinte
+# est vérifiée par lire_pieces() ; une pièce remplacée arrête tout, et cette date se met à jour avec l'empreinte.
+PIECES_RELEVEES_LE = "11 octobre 2026"
 
 IMG = REPO / "static" / "img"
 URL_PAGE = "stephane-lalut.com/qui-paie-la-dette-publique/"
@@ -652,6 +655,14 @@ def lire_cnd(d_ia118: dict) -> dict:
             "ir_v1_amplitude": max(ir_par_an.values()) / min(ir_par_an.values()),
             "masse_d1_d5": p23["_masse_d1_d5"],
             "temoin_croise_mdeur": round(ecart, 2), "sha256": sha, "tests": tests}
+
+
+def releve_le() -> str:
+    """La plus récente des dates de relevé (registre du livre, pièces archivées) : celle qu'une citation doit porter."""
+    def cle(s):
+        j, m, a = s.split(" ")
+        return (int(a), MOIS_FR.index(m), int(j))
+    return max((SOURCES_RELEVEES_LE, PIECES_RELEVEES_LE), key=cle)
 
 
 def lire_pieces() -> dict:
@@ -1440,11 +1451,12 @@ def svg_exposition(c: dict, lang: str = "fr") -> tuple[str, int]:
                 "the income of the first decile and %s%% of the last; a rise in taxes on income "
                 "and wealth, %s%% of the last; pensions stay between %s and %s%%. B: the ratio "
                 "of the heaviest to the lightest decision for the same group, base 1. It is %s "
-                "in the last decile and at least as much in the first, and falls to %s in D7-D8: "
+                "in the last decile and at least as much in the first, peaks at %s in D%d, and falls to %s in D7-D8: "
                 "that is where the lever chosen changes the decile's average exposure least." % (
                     en(p["enseignement"][0], 2), en(p["enseignement"][9], 2),
                     en(p["fiscal"][9], 2), en(min(p["pensions"]), 2), en(max(p["pensions"]), 2),
-                    "×" + en(max(rat[0], rat[9]), 1), "×" + en(min(rat), 1)))
+                    "×" + en(max(rat[0], rat[9]), 1), "×" + en(max(rat), 1), rat.index(max(rat)) + 1,
+                    "×" + en(min(rat), 1)))
         e = entete(h, "qp-exp", "The same €10 billion adjustment: who would bear it, depending on "
                    "the decision taken?", desc) + c_
         return pied_qp(e, y, lignes)
@@ -1455,11 +1467,12 @@ def svg_exposition(c: dict, lang: str = "fr") -> tuple[str, int]:
             "sur les revenus et le patrimoine, %s %% du dernier ; les pensions restent entre "
             "%s et %s %%. B : le rapport entre la décision la plus lourde et la plus légère pour "
             "un même groupe, en base 1. Il vaut %s au dernier dixième et au moins autant au "
-            "premier, et descend à %s en D7-D8 : c'est là que le levier retenu change le moins "
+            "premier, culmine à %s en D%d, et descend à %s en D7-D8 : c'est là que le levier retenu change le moins "
             "l'exposition moyenne du dixième." % (
                 fr(p["enseignement"][0], 2), fr(p["enseignement"][9], 2), fr(p["fiscal"][9], 2),
                 fr(min(p["pensions"]), 2), fr(max(p["pensions"]), 2),
-                "×" + fr(max(rat[0], rat[9]), 1), "×" + fr(creux, 1)))
+                "×" + fr(max(rat[0], rat[9]), 1), "×" + fr(max(rat), 1), rat.index(max(rat)) + 1,
+                "×" + fr(creux, 1)))
     e = entete(h, "qp-exp", "Un même effort de 10 milliards d'euros : qui le supporterait "
                "selon la décision prise ?", desc) + c_
     return pied_qp(e, y, lignes)
@@ -1835,13 +1848,23 @@ def svg_exposition_m(c: dict, lang: str, svg_d: str) -> str:
     for i, v in enumerate(rat):
         hh = max((v - 1) * hB / (vmaxB - 1), 2.0)
         e.append('<rect x="%.1f" y="%.1f" width="16" height="%.1f" rx="2" fill="%s"/>' % (X(i) - 8, topB + hB - hh, hh, SEC))
-    for i, ancre in ((0, "start"), (rat.index(creux), "middle"), (9, "end")):
+    imax = rat.index(max(rat))
+    etiq = [(0, "start"), (rat.index(creux), "middle"), (9, "end")]
+    if imax not in (0, 9):
+        etiq.append((imax, "start"))
+    for i, ancre in etiq:
         v = rat[i]
         borne = i == 0 and any(p[k][0] is None for k in p if not k.startswith("_"))
         x = X(i) - 8 if ancre == "start" else (X(i) + 8 if ancre == "end" else X(i))
+        if i == imax and i not in (0, 9):
+            # Le maximum (D2) porte sa valeur à sa droite, au-dessus de sa barre (OPTIMUM-21) ; D1 garde la sienne
+            # au-dessus de D2, où elle était déjà posée pour ne pas chevaucher cette barre.
+            e.append(tm(X(i) + 10, YB(v) + 14, "×" + nb(v, 1), INK, "start", "600"))
+            continue
         # Au-dessus de la barre voisine si elle est plus haute : D2 dépasse D1, et l'étiquette de D1 la chevauchait.
         voisin = rat[i + 1] if i == 0 else rat[i - 1] if i == 9 else v
-        e.append(tm(x, YB(max(v, voisin)) - 6, ("≥ ×" if borne else "×") + nb(v, 1), INK, ancre, "600"))
+        e.append(tm(x, YB(max(v, voisin)) - 22 if (i == 0 and imax == 1) else YB(max(v, voisin)) - 6,
+                    ("≥ ×" if borne else "×") + nb(v, 1), INK, ancre, "600"))
     for i, lib in ((0, "D1"), (6, "D7"), (7, "D8"), (9, "D10")):
         e.append(tm(X(i), topB + hB + 19, lib, INK2 if i in (6, 7) else MUTED, "end" if i == 9 else "middle"))
     y = lignes_m(e, topB + hB + 26, S("D7-D8 : le choix du levier y change le moins l'exposition moyenne du dixième",
@@ -1951,7 +1974,7 @@ def affichage(r: dict, d: dict, c: dict, lang: str = "fr") -> dict:
         "net_contrib_n": fr(10 - bascule),
     })
     return dict(exp, **{
-        "releve_le": _S(SOURCES_RELEVEES_LE, date_fr_vers_en(SOURCES_RELEVEES_LE)),
+        "releve_le": _S(releve_le(), date_fr_vers_en(releve_le())),
         "net_bascule": "D%d" % (bascule + 1),
         "net_benef_n": fr(bascule),
         "net_d10": fr(net[9]),
@@ -1959,6 +1982,7 @@ def affichage(r: dict, d: dict, c: dict, lang: str = "fr") -> dict:
         "benef_d1": fr(part[0]), "benef_d10": fr(part[9]),
         "benef_majo_n": fr(majo),
         "benef_dernier_moyen": "D%d" % bascule, "benef_dernier_moyen_pct": fr(part[bascule - 1]),
+        "net_dernier_moyen": fr(-net[bascule - 1]),
         "benef_ensemble": fr(d["part_benef"][-1]),
         "age_recu_65": fr(age["esp"][4] + age["nat"][4]),
         "age_prel_65": fr(-age["prel"][4]),
