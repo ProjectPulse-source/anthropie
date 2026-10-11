@@ -304,6 +304,13 @@ dans `MOTIFS` (avec son exemple dans `EXEMPLES`, que `--temoin` injecte) ; une f
 jusqu'à seize, énumération), adopté générateur par générateur à sa phase B, sortie vérifiée identique ou écart
 expliqué, jamais en masse.
 
+**Une identité comptable exacte ne garantit pas une interprétation exacte : les deux se contrôlent séparément**
+(contre-expertises des pages collectivités et générations, 11/10/2026). Cas fondateurs : « le solde s'est redressé surtout par
+la baisse des dépenses » était vrai en points de PIB et faux en euros ; « les ressources ne baissent pas, elles changent de
+case » tirait d'un reclassement une conclusion sur les montants. Une phrase d'attribution porte ses deux unités quand elles
+divergent, et une garde de prose interdit la formule qui conclut plus que la série (modèle :
+`update_dette_collectivites.py`). Les gardes vérifient les nombres ; la contre-expertise vérifie ce qu'on leur fait dire.
+
 **Type d'une page** (`ressource.type`, liste ; une page peut en déclarer deux) et son protocole de preuve :
 
 - `quantitatif` (dette, école, comparaisons) : définitions, périmètres, millésimes, unités, calculs reproductibles,
