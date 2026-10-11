@@ -669,6 +669,7 @@
  },
  "affichage": {
   "annee_depart": "1995",
+  "annee_premiere_variation": "1996",
   "annee_fin": "2025",
   "dette_depart": "57,8",
   "dette_fin": "115,6",
@@ -738,6 +739,7 @@
  },
  "affichage_en": {
   "annee_depart": "1995",
+  "annee_premiere_variation": "1996",
   "annee_fin": "2025",
   "dette_depart": "57.8",
   "dette_fin": "115.6",

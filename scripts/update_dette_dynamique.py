@@ -532,7 +532,7 @@ def affichage(a0, d_depart, rows, total, per, dr):
     # Deux présentations, UN SEUL corps (même règle que bloc_affichage de update_dette_insee.py) : les blocs ne
     # peuvent diverger que sur le format, jamais sur les valeurs ni sur les clés.
     def bloc(nb, sg):
-        A = {"annee_depart": str(a0), "annee_fin": str(last["annee"]), "dette_depart": nb(d_depart), "dette_fin": nb(last["dette_pct_pib"]),
+        A = {"annee_depart": str(a0), "annee_premiere_variation": str(a0 + 1), "annee_fin": str(last["annee"]), "dette_depart": nb(d_depart), "dette_fin": nb(last["dette_pct_pib"]),
              "hausse": nb(total["variation"]), "effet_interets": nb(total["effet_interets"]),
              "effet_croissance": nb(-total["effet_croissance"]), "effet_net": sg(total["effet_taux_croissance"]),
              "deficits_primaires": nb(total["contribution_solde_primaire"]), "flux_stock": sg(total["flux_stock"]),
@@ -663,7 +663,9 @@ def affichage(a0, d_depart, rows, total, per, dr):
          by[2022]["taux_implicite_pct"] - by[2021]["taux_implicite_pct"] > 0.3
          and all(by[a]["taux_implicite_pct"] - by[a - 1]["taux_implicite_pct"] < by[2022]["taux_implicite_pct"] - by[2021]["taux_implicite_pct"]
                  for a in by if a > 2022)
-         and min(rows, key=lambda r: r["taux_implicite_pct"])["annee"] in (2020, 2021)),
+         # OPTIMUM-12 : la prose dit « point bas en 2020, légère hausse en 2021, saut en 2022 ».
+         and min(rows, key=lambda r: r["taux_implicite_pct"])["annee"] == 2020
+         and 0 < by[2021]["taux_implicite_pct"] - by[2020]["taux_implicite_pct"] < 0.3),
         ("OPTIMUM-10 : entre les deux fenêtres de même départ, les dépenses hors intérêts varient d'autant (à 0,1 près) et les "
          "recettes remontent de plus d'un demi-point la dernière année : c'est elles qui retournent la conclusion",
          abs((dr[fen["tresor"][1]]["depenses_hors_interets"] - dr[fen["ofce"][1]]["depenses_hors_interets"])) < 0.1
