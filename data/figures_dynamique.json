@@ -5,16 +5,16 @@
    "fichier": "dette-dynamique-cascade",
    "titre": "Pourquoi la dette a doublé : de 57,8 % à 115,6 % du PIB, 1995-2025",
    "montre": "Sur la période, les intérêts et la croissance nominale se sont presque annulés ; la hausse de la dette tient pour l'essentiel aux déficits primaires, hors intérêts.",
-   "source": "Eurostat gov_10dd_edpt1 (dette), gov_10a_main (B9, D41PAY), PIB de la notification, France, 1996-2025",
-   "precaution": "Décomposition comptable de la variation du ratio, non une attribution causale ; les termes se compensent en partie."
+   "source": "Eurostat gov_10dd_edpt1 (dette), gov_10a_main (B9, D41PAY), PIB de la notification, France, 1996-2025 ; mises à jour Eurostat du 22/04/2026 et du 21/07/2026",
+   "precaution": "Contributions cumulées au ratio, en points de PIB : ni des sommes versées, ni des causes. Totaux calculés avant arrondi, d'où un dixième d'écart possible."
   },
   {
    "id": "annuelle",
    "fichier": "dette-dynamique-annuelle",
-   "titre": "Année par année : ce qui a fait monter ou baisser le ratio, 1996-2025",
+   "titre": "Année par année : ce qui a fait monter ou baisser le ratio dette/PIB, 1996-2025",
    "montre": "Année par année, ce qui a poussé ou freiné le ratio ; en 2021-2023, la croissance nominale l'a fait baisser malgré les déficits.",
-   "source": "Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), France, 1996-2025",
-   "precaution": "Points de PIB par an ; la somme des trois barres égale la variation (point noir), au centième près."
+   "source": "Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), France, 1996-2025 ; mises à jour Eurostat du 22/04/2026 et du 21/07/2026",
+   "precaution": "Points de PIB par an ; solde primaire : un déficit compte en plus, un excédent en moins ; la somme des trois barres égale la variation (point noir), au centième près."
   }
  ],
  "en": [
@@ -23,16 +23,16 @@
    "fichier": "dette-dynamique-cascade-en",
    "titre": "Why the debt doubled: from 57.8% to 115.6% of GDP, 1995-2025",
    "montre": "Over the period, interest and nominal growth almost cancelled out; the rise in the debt is mostly due to primary deficits, excluding interest.",
-   "source": "Eurostat gov_10dd_edpt1 (debt), gov_10a_main (B9, D41PAY), notification GDP, France, 1996-2025",
-   "precaution": "Accounting decomposition of the change in the ratio, not a causal attribution; the terms partly offset each other."
+   "source": "Eurostat gov_10dd_edpt1 (debt), gov_10a_main (B9, D41PAY), notification GDP, France, 1996-2025; Eurostat releases of 22 April 2026 and 21 July 2026",
+   "precaution": "Cumulative contributions to the ratio, in points of GDP: neither amounts paid nor causes. Totals computed before rounding, hence a possible gap of a tenth."
   },
   {
    "id": "annuelle",
    "fichier": "dette-dynamique-annuelle-en",
-   "titre": "Year by year: what pushed the ratio up or down, 1996-2025",
+   "titre": "Year by year: what pushed the debt-to-GDP ratio up or down, 1996-2025",
    "montre": "Year by year, what pushed the ratio up or held it back; in 2021-2023, nominal growth brought it down despite the deficits.",
-   "source": "Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), France, 1996-2025",
-   "precaution": "Points of GDP per year; the three bars add up to the change (black dot), to within a hundredth."
+   "source": "Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), France, 1996-2025; Eurostat releases of 22 April 2026 and 21 July 2026",
+   "precaution": "Points of GDP per year; primary balance: a deficit counts as plus, a surplus as minus; the three bars add up to the change (black dot), to within a hundredth."
   }
  ]
 }

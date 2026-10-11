@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 382" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dc-t dc-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 413" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dc-t dc-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
 <title id="dc-t">Pourquoi la dette a doublé : de 57,8 % à 115,6 % du PIB, 1995-2025</title><desc id="dc-d">Cascade en points de PIB. La dette part de 57,8 % fin 1995. Les intérêts l'auraient poussée de 73,9 points, mais la croissance du PIB nominal en a effacé 72,8 : leur effet net est de +1,2 point. Les déficits primaires, hors intérêts, ajoutent 50,5 points, les ajustements flux-stock +6,0. La dette atteint 115,6 % fin 2025. Décomposition comptable, non causale.</desc>
-<rect width="720" height="382" fill="#ffffff"/>
+<rect width="720" height="413" fill="#ffffff"/>
 <text x="0" y="18" font-size="15" font-weight="600" fill="#26262f">Pourquoi la dette a doublé : de 57,8 % à 115,6 % du PIB, 1995-2025</text>
 <line x1="40" y1="290.0" x2="710" y2="290.0" stroke="#dcd8d3" stroke-width="1.2"/>
 <text x="34" y="293.0" font-size="10" fill="#96928f" text-anchor="end">0 %</text>
@@ -27,7 +27,8 @@
 <line x1="128.2" y1="210.5" x2="175.1" y2="210.5" stroke="#96928f" stroke-dasharray="3 2"/>
 <rect x="175.1" y="108.8" width="64.8" height="101.7" fill="#eb6834"/>
 <text x="207.5" y="102.8" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">+73,9</text>
-<text x="207.5" y="306" font-size="10.5" fill="#55524f" text-anchor="middle">Intérêts payés</text>
+<text x="207.5" y="306" font-size="10.5" fill="#55524f" text-anchor="middle">Effet des</text>
+<text x="207.5" y="319" font-size="10.5" fill="#55524f" text-anchor="middle">intérêts</text>
 <line x1="239.9" y1="108.8" x2="286.8" y2="108.8" stroke="#96928f" stroke-dasharray="3 2"/>
 <rect x="286.8" y="108.8" width="64.8" height="100.0" fill="#8a8781"/>
 <text x="319.2" y="102.8" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">−72,8</text>
@@ -47,7 +48,9 @@
 <text x="654.2" y="319" font-size="10.5" fill="#55524f" text-anchor="middle">2025</text>
 <text x="40" y="44" font-size="11" fill="#55524f">En points de PIB : bleu, le stock ; orange, ce qui le fait monter ; gris, ce qui le fait baisser.</text>
 <line x1="0" y1="334.0" x2="720" y2="334.0" stroke="#dcd8d3"/>
-<text x="0" y="347.0" font-size="9" fill="#55524f">Eurostat gov_10dd_edpt1 (dette), gov_10a_main (B9, D41PAY), PIB de la notification, France, 1996-2025</text>
-<text x="0" y="359.0" font-size="9" fill="#55524f">Décomposition comptable de la variation du ratio, non une attribution causale ; les termes se compensent en partie.</text>
-<text x="0" y="371.0" font-size="9" fill="#96928f">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/pourquoi-la-dette-publique-augmente/</text>
+<text class="pied-source" x="0" y="349.0" font-size="11" fill="#55524f">Eurostat gov_10dd_edpt1 (dette), gov_10a_main (B9, D41PAY), PIB de la notification, France, 1996-2025 ; mises à jour</text>
+<text class="pied-source" x="0" y="363.0" font-size="11" fill="#55524f">Eurostat du 22/04/2026 et du 21/07/2026</text>
+<text class="pied-note" x="0" y="377.0" font-size="11" fill="#55524f">Contributions cumulées au ratio, en points de PIB : ni des sommes versées, ni des causes. Totaux calculés avant</text>
+<text class="pied-note" x="0" y="391.0" font-size="11" fill="#55524f">arrondi, d'où un dixième d'écart possible.</text>
+<text class="pied-licence" x="0" y="405.0" font-size="11" fill="#96928f">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/pourquoi-la-dette-publique-augmente/</text>
 </svg>

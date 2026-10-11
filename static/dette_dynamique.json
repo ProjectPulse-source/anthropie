@@ -1,8 +1,8 @@
 {
- "releve_le": "2026-10-09",
+ "releve_le": "2026-10-11",
  "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; source Eurostat",
  "meta": {
-  "releve_le": "2026-10-09",
+  "releve_le": "2026-10-11",
   "page": "https://stephane-lalut.com/pourquoi-la-dette-publique-augmente/",
   "licence": "CC BY 4.0",
   "pays": "France",
@@ -413,11 +413,11 @@
  ],
  "total": {
   "variation": 57.7467025062372,
-  "effet_interets": 73.94083458807205,
+  "effet_interets": 73.94083458807208,
   "effet_croissance": -72.76079201411207,
-  "effet_taux_croissance": 1.1800425739599878,
+  "effet_taux_croissance": 1.180042573959986,
   "contribution_solde_primaire": 50.53414456604301,
-  "flux_stock": 6.032515366234201
+  "flux_stock": 6.032515366234202
  },
  "periodes": [
   {
@@ -435,17 +435,17 @@
    "effet_interets": 26.83979540433555,
    "effet_croissance": -20.777452045043795,
    "effet_taux_croissance": 6.062343359291756,
-   "contribution_solde_primaire": 26.91250455093111,
-   "flux_stock": -0.2938998868130822
+   "contribution_solde_primaire": 26.912504550931107,
+   "flux_stock": -0.29389988681308177
   },
   {
    "periode": "2020-2025",
    "variation": 17.393984351672245,
-   "effet_interets": 10.747225504120083,
+   "effet_interets": 10.747225504120081,
    "effet_croissance": -23.160989634477797,
    "effet_taux_croissance": -12.413764130357714,
    "contribution_solde_primaire": 25.728984374149853,
-   "flux_stock": 4.078764107880105
+   "flux_stock": 4.078764107880106
   }
  ],
  "depenses_recettes_pc_pib": {
@@ -704,7 +704,7 @@
   "taux_croissance_2020": "6,1",
   "net_dernier": "−0,0",
   "taux_implicite_dernier": "2,02",
-  "croissance_derniere": "2,0",
+  "croissance_derniere": "2,03",
   "annees_excedent": "4",
   "annees_total": "30",
   "tc_bascule": "2017",
@@ -726,7 +726,15 @@
   "tresor_dep": "+1,9",
   "entre_dep_hi": "−2,1",
   "croise_rec": "−1,8",
-  "croise_dep": "+1,7"
+  "croise_dep": "+1,7",
+  "croise_dep_hi": "+1,2",
+  "rec_fin": "+0,9",
+  "ti_creux_an": "2020",
+  "ti_creux": "1,25",
+  "ti_2021": "1,31",
+  "ti_2022": "1,80",
+  "millesime_dette": "22/04/2026",
+  "millesime_comptes": "21/07/2026"
  },
  "affichage_en": {
   "annee_depart": "1995",
@@ -765,7 +773,7 @@
   "taux_croissance_2020": "6.1",
   "net_dernier": "−0.0",
   "taux_implicite_dernier": "2.02",
-  "croissance_derniere": "2.0",
+  "croissance_derniere": "2.03",
   "annees_excedent": "4",
   "annees_total": "30",
   "tc_bascule": "2017",
@@ -787,6 +795,14 @@
   "tresor_dep": "+1.9",
   "entre_dep_hi": "−2.1",
   "croise_rec": "−1.8",
-  "croise_dep": "+1.7"
+  "croise_dep": "+1.7",
+  "croise_dep_hi": "+1.2",
+  "rec_fin": "+0.9",
+  "ti_creux_an": "2020",
+  "ti_creux": "1.25",
+  "ti_2021": "1.31",
+  "ti_2022": "1.80",
+  "millesime_dette": "22 April 2026",
+  "millesime_comptes": "21 July 2026"
  }
 }

@@ -42,6 +42,8 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
+import pied_figure  # pied commun, parité des figures téléphone, hauteurs déclarées (scripts/pied_figure.py)
+
 ROOT = Path(__file__).resolve().parent.parent
 OUT_DATA = ROOT / "data" / "dette_dynamique.json"
 OUT_STATIC = ROOT / "static" / "dette_dynamique.json"
@@ -84,11 +86,23 @@ def fetch(url: str, essais: int = 3) -> bytes:
     return b""
 
 
+MILLESIMES: dict[str, str] = {}   # jeu Eurostat -> date de sa dernière mise à jour (champ « updated » de l'API)
+MOIS_EN = ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
+
+
+def millesime(ds: str, lang: str) -> str:
+    a, m, j = MILLESIMES[ds][:10].split("-")
+    return "%s/%s/%s" % (j, m, a) if lang == "fr" else "%d %s %s" % (int(j), MOIS_EN[int(m) - 1], a)
+
+
 def eurostat(ds: str, **f) -> dict[int, float]:
     q = "&".join("%s=%s" % (k, v) for k, v in f.items())
     d = json.loads(fetch("https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/%s?format=JSON&geo=FR&%s" % (ds, q)))
     if "dimension" not in d:
         fail("Eurostat %s : reponse sans dimensions" % ds)
+    if not re.match(r"\d{4}-\d{2}-\d{2}", str(d.get("updated", ""))):
+        fail("Eurostat %s : date de mise a jour absente (millesime affiche dans la page et les figures)" % ds)
+    MILLESIMES[ds] = max(MILLESIMES.get(ds, ""), d["updated"])
     tm = d["dimension"]["time"]["category"]["index"]
     strides, s = {}, 1
     for dim, n in zip(reversed(d["id"]), reversed(d["size"])):
@@ -181,54 +195,66 @@ TXT = {
     "fr": {
         "licence": "Compilation Stéphane Lalut, CC BY 4.0 · " + PAGE_URL,
         "pc": " %",
-        "etapes": ("Dette fin %d", "Intérêts payés", "Croissance du PIB nominal", "Déficits primaires",
+        "etapes": ("Dette fin %d", "Effet des intérêts", "Croissance du PIB nominal", "Déficits primaires",
                    "Ajustements flux-stock"),
         "titre_cascade": "Pourquoi la dette a doublé : de %s %% à %s %% du PIB, %d-%d",
         "desc_cascade": ("Cascade en points de PIB. La dette part de %s %% fin %d. Les intérêts l'auraient poussée de %s points, mais la "
                          "croissance du PIB nominal en a effacé %s : leur effet net est de %s point. Les déficits primaires, hors intérêts, "
                          "ajoutent %s points, les ajustements flux-stock %s. La dette atteint %s %% fin %d. Décomposition comptable, non causale."),
         "legende_cascade": "En points de PIB : bleu, le stock ; orange, ce qui le fait monter ; gris, ce qui le fait baisser.",
-        "src_cascade": "Eurostat gov_10dd_edpt1 (dette), gov_10a_main (B9, D41PAY), PIB de la notification, France, %d-%d",
-        "note_cascade": "Décomposition comptable de la variation du ratio, non une attribution causale ; les termes se compensent en partie.",
-        "titre_annuelle": "Année par année : ce qui a fait monter ou baisser le ratio, %d-%d",
-        "desc_annuelle": ("Barres empilées par année, en points de PIB : en orange la contribution des déficits primaires, en bleu l'effet "
+        "src_cascade": "Eurostat gov_10dd_edpt1 (dette), gov_10a_main (B9, D41PAY), PIB de la notification, France, %d-%d ; mises à jour Eurostat du %s et du %s",
+        "note_cascade": ("Contributions cumulées au ratio, en points de PIB : ni des sommes versées, ni des causes. "
+                         "Totaux calculés avant arrondi, d'où un dixième d'écart possible."),
+        "titre_annuelle": "Année par année : ce qui a fait monter ou baisser le ratio dette/PIB, %d-%d",
+        "desc_annuelle": ("Barres empilées par année, en points de PIB : en orange la contribution du solde primaire (déficit en plus, excédent en moins), en bleu l'effet "
                           "net des taux et de la croissance, en gris les ajustements flux-stock ; le point noir est la variation effective du "
-                          "ratio. Les déficits primaires portent la hausse de 2008 à 2025 ; l'effet taux-croissance devient fortement "
-                          "négatif en 2021-2023, quand la croissance du PIB nominal, portée notamment par l'inflation, s'accélère."),
-        "legende_annuelle": ("déficits primaires", "effet taux-croissance", "ajustements flux-stock", "variation du ratio"),
-        "src_annuelle": "Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), France, %d-%d",
-        "note_annuelle": "Points de PIB par an ; la somme des trois barres égale la variation (point noir), au centième près.",
+                          "ratio. Les deux plus fortes hausses sont en 2009 (+%s points) et en 2020 (+%s). De 2021 à 2023, l'effet "
+                          "taux-croissance retire %s points au ratio, quand la croissance du PIB nominal, hausse des prix comprise, s'accélère."),
+        "legende_annuelle": ("contribution du solde primaire", "effet taux-croissance", "ajustements flux-stock", "variation du ratio"),
+        "src_annuelle": "Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), France, %d-%d ; mises à jour Eurostat du %s et du %s",
+        "note_annuelle": ("Points de PIB par an ; solde primaire : un déficit compte en plus, un excédent en moins ; la somme "
+                          "des trois barres égale la variation (point noir), au centième près."),
         "montre_cascade": ("Sur la période, les intérêts et la croissance nominale se sont presque annulés ; la hausse de la dette "
                            "tient pour l'essentiel aux déficits primaires, hors intérêts."),
         "montre_annuelle": ("Année par année, ce qui a poussé ou freiné le ratio ; en 2021-2023, la croissance nominale l'a fait baisser "
                             "malgré les déficits."),
+        "titre_cascade_m": "Dette publique : de %s %% à %s %% du PIB, %d-%d",
+        "titre_annuelle_m": "Chaque année, ce qui a poussé ou freiné le ratio dette/PIB",
+        "faits_m": ("2009 : %s points", "2020 : %s points", "2021-2023 : effet taux-croissance −%s"),
+        "points": "en points de PIB ; + fait monter, − fait baisser",
     },
     # Terminologie reprise de la page anglaise « Combien coûte » (implicit interest rate, general government, primary
     # deficits, stock-flow adjustments, nominal GDP growth, interest paid).
     "en": {
         "licence": "Compiled by Stéphane Lalut, CC BY 4.0 · " + PAGE_URL_EN,
         "pc": "%",
-        "etapes": ("Debt, end %d", "Interest paid", "Nominal GDP growth", "Primary deficits", "Stock-flow adjustments"),
+        "etapes": ("Debt, end %d", "Interest effect", "Nominal GDP growth", "Primary deficits", "Stock-flow adjustments"),
         "titre_cascade": "Why the debt doubled: from %s%% to %s%% of GDP, %d-%d",
         "desc_cascade": ("Waterfall chart in points of GDP. The debt starts at %s%% at the end of %d. Interest would have pushed it up by "
                          "%s points, but nominal GDP growth erased %s: their net effect is %s points. Primary deficits, excluding "
                          "interest, add %s points, stock-flow adjustments %s. The debt reaches %s%% at the end of %d. Accounting "
                          "decomposition, not a causal one."),
         "legende_cascade": "In points of GDP: blue, the stock; orange, what pushes it up; grey, what pushes it down.",
-        "src_cascade": "Eurostat gov_10dd_edpt1 (debt), gov_10a_main (B9, D41PAY), notification GDP, France, %d-%d",
-        "note_cascade": "Accounting decomposition of the change in the ratio, not a causal attribution; the terms partly offset each other.",
-        "titre_annuelle": "Year by year: what pushed the ratio up or down, %d-%d",
-        "desc_annuelle": ("Stacked bars per year, in points of GDP: in orange the contribution of primary deficits, in blue the net "
+        "src_cascade": "Eurostat gov_10dd_edpt1 (debt), gov_10a_main (B9, D41PAY), notification GDP, France, %d-%d; Eurostat releases of %s and %s",
+        "note_cascade": ("Cumulative contributions to the ratio, in points of GDP: neither amounts paid nor causes. "
+                         "Totals computed before rounding, hence a possible gap of a tenth."),
+        "titre_annuelle": "Year by year: what pushed the debt-to-GDP ratio up or down, %d-%d",
+        "desc_annuelle": ("Stacked bars per year, in points of GDP: in orange the primary balance contribution (deficit as plus, surplus as minus), in blue the net "
                           "effect of interest rates and growth, in grey stock-flow adjustments; the black dot is the actual change in "
-                          "the ratio. Primary deficits drive the rise from 2008 to 2025; the interest-growth effect turns sharply "
-                          "negative in 2021-2023, when nominal GDP growth, driven in part by inflation, accelerates."),
-        "legende_annuelle": ("primary deficits", "interest-growth effect", "stock-flow adjustments", "change in the ratio"),
-        "src_annuelle": "Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), France, %d-%d",
-        "note_annuelle": "Points of GDP per year; the three bars add up to the change (black dot), to within a hundredth.",
+                          "the ratio. The two largest rises are in 2009 (+%s points) and 2020 (+%s). From 2021 to 2023, the "
+                          "interest-growth effect takes %s points off the ratio, as nominal GDP growth, price rises included, accelerates."),
+        "legende_annuelle": ("primary balance contribution", "interest-growth effect", "stock-flow adjustments", "change in the ratio"),
+        "src_annuelle": "Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), France, %d-%d; Eurostat releases of %s and %s",
+        "note_annuelle": ("Points of GDP per year; primary balance: a deficit counts as plus, a surplus as minus; the three "
+                          "bars add up to the change (black dot), to within a hundredth."),
         "montre_cascade": ("Over the period, interest and nominal growth almost cancelled out; the rise in the debt is mostly due to "
                            "primary deficits, excluding interest."),
         "montre_annuelle": ("Year by year, what pushed the ratio up or held it back; in 2021-2023, nominal growth brought it down "
                             "despite the deficits."),
+        "titre_cascade_m": "Public debt: from %s%% to %s%% of GDP, %d-%d",
+        "titre_annuelle_m": "Each year, what pushed the debt-to-GDP ratio up or held it back",
+        "faits_m": ("2009: %s points", "2020: %s points", "2021-2023: interest-growth effect −%s"),
+        "points": "in points of GDP; + pushes up, − pulls down",
     },
 }
 NB = {"fr": (fr, signe), "en": (en, signe_en)}   # même calcul, deux présentations
@@ -247,11 +273,10 @@ def entete(h, ident, titre, desc):
             '<text x="0" y="18" font-size="15" font-weight="600" fill="%s">%s</text>' % (INK, esc(titre))]
 
 
-def cartouche(y0, source, note, lang="fr"):
-    out = ['<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y0, W, y0, GRID)]
-    for k, (t, c) in enumerate([(source, INK2), (note, INK2), (TXT[lang]["licence"], MUTED)]):
-        out.append('<text x="0" y="%.1f" font-size="9" fill="%s">%s</text>' % (y0 + 13 + 12 * k, c, esc(t)))
-    return out
+def pied(e, y0, source, note, lang="fr"):
+    """Pied commun (11 px, retour à la ligne, hauteur suivie) : scripts/pied_figure.py, phase B du 11/10/2026."""
+    return pied_figure.pied(e, y0, W, [(source, INK2, "pied-source"), (note, INK2, "pied-note"),
+                                       (TXT[lang]["licence"], MUTED, "pied-licence")], GRID)
 
 
 def fig_cascade(a0, d_depart, rows, total, lang="fr"):
@@ -305,9 +330,7 @@ def fig_cascade(a0, d_depart, rows, total, lang="fr"):
         if l2:
             e.append('<text x="%.1f" y="%d" font-size="10.5" fill="%s" text-anchor="middle">%s</text>' % (cx, BAS + 29, INK2, esc(l2)))
     e.append('<text x="%d" y="44" font-size="11" fill="%s">%s</text>' % (X0, INK2, esc(T["legende_cascade"])))
-    e += cartouche(H + 4, T["src_cascade"] % (a0 + 1, an_fin), T["note_cascade"], lang)
-    e.append("</svg>")
-    return "\n".join(e)
+    return pied(e, H + 4, T["src_cascade"] % ((a0 + 1, an_fin) + (millesime("gov_10dd_edpt1", lang), millesime("gov_10a_main", lang))), T["note_cascade"], lang)
 
 
 def fig_annuelle(rows, lang="fr"):
@@ -323,7 +346,10 @@ def fig_annuelle(rows, lang="fr"):
         return BAS - (BAS - TOP) * (v - vmin) / (vmax - vmin)
 
     titre = T["titre_annuelle"] % (a0, a1)
-    e = entete(H, "da", titre, T["desc_annuelle"])
+    by = {r["annee"]: r for r in rows}
+    desc = T["desc_annuelle"] % (nb(by[2009]["variation"]), nb(by[2020]["variation"]),
+                                 nb(-sum(r["effet_taux_croissance"] for r in rows if 2021 <= r["annee"] <= 2023)))
+    e = entete(H, "da", titre, desc)
     for g in range(vmin, vmax + 1, 4):
         e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="%s"/>' % (X0, Y(g), X1, Y(g), GRID, 1.4 if g == 0 else 0.6))
         e.append('<text x="%d" y="%.1f" font-size="10" fill="%s" text-anchor="end">%s</text>' % (X0 - 6, Y(g) + 3, MUTED, sg(g, 0)))
@@ -348,12 +374,125 @@ def fig_annuelle(rows, lang="fr"):
     for col, lib in leg:
         e.append('<rect x="%d" y="36" width="10" height="10" fill="%s"/>' % (x, col))
         e.append('<text x="%d" y="45" font-size="11" fill="%s">%s</text>' % (x + 14, INK2, esc(lib)))
-        x += 14 + 7 * len(lib) + 18
+        x += 14 + int(5.6 * len(lib)) + 18   # 7 px par caractère sortaient la 4e entrée du cadre (contre-expertise du 11/10/2026)
     e.append('<circle cx="%d" cy="41" r="3.2" fill="%s"/>' % (x + 4, INK))
     e.append('<text x="%d" y="45" font-size="11" fill="%s">%s</text>' % (x + 12, INK2, esc(T["legende_annuelle"][3])))
-    e += cartouche(H + 4, T["src_annuelle"] % (a0, a1), T["note_annuelle"], lang)
+    return pied(e, H + 4, T["src_annuelle"] % ((a0, a1) + (millesime("gov_10dd_edpt1", lang), millesime("gov_10a_main", lang))), T["note_annuelle"], lang)
+
+
+# ------------------------------------------------------------------ figures téléphone (phase B, 11/10/2026)
+# Composées pour 300 px, jamais rétrécies ; police minimale FS_MIN ; parité contrôlée contre la version détaillée
+# (pied_figure.parite). Patron : scripts/update_lycee_professeurs.py.
+WM, FS_MIN = 300, 13.5
+LICENCE_M = {"fr": "Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com", "en": "Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com"}
+
+
+def tete_m(ident, titre, desc):
+    e = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d 0" role="img" font-variant-numeric="tabular-nums" '
+         'aria-labelledby="%s-t %s-d" font-family="%s">' % (WM, ident, ident, FONT),
+         '<title id="%s-t">%s</title><desc id="%s-d">%s</desc>' % (ident, esc(titre), ident, esc(desc)),
+         '<rect width="%d" height="0" fill="#ffffff"/>' % WM]
+    lignes = pied_figure.coupe(titre, 30)
+    for k, l in enumerate(lignes):
+        e.append('<text x="0" y="%d" font-size="17" font-weight="600" fill="%s">%s</text>' % (20 + 22 * k, INK, esc(l)))
+    return e, 20 + 22 * len(lignes)
+
+
+def finir_m(e, y0, source, note, lang):
+    e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y0, WM, y0, GRID))
+    y = y0 + 4
+    for tx, col in ((source, INK2), (note, INK2), (LICENCE_M[lang], MUTED)):
+        for l in pied_figure.coupe(tx, 38):
+            y += 17
+            e.append('<text x="0" y="%.1f" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, col, esc(l)))
+        y += 4
     e.append("</svg>")
-    return "\n".join(e)
+    h = y + 6
+    out = "\n".join(e)
+    return out.replace('viewBox="0 0 %d 0"' % WM, 'viewBox="0 0 %d %d"' % (WM, h), 1).replace(
+        '<rect width="%d" height="0"' % WM, '<rect width="%d" height="%d"' % (WM, h), 1)
+
+
+def desc_de(svg):
+    return html.unescape(re.search(r"<desc[^>]*>(.*?)</desc>", svg, re.S).group(1))
+
+
+def fig_cascade_m(a0, d_depart, rows, total, lang, svg_d):
+    """Cascade couchée : une ligne par marche (libellé, valeur), une barre sous chaque ligne, de son niveau de départ à son niveau d'arrivée."""
+    T, (nb, sg) = TXT[lang], NB[lang]
+    an_fin = rows[-1]["annee"]
+    e, y = tete_m("dcm", T["titre_cascade_m"] % (nb(d_depart), nb(rows[-1]["dette_pct_pib"]), a0, an_fin), desc_de(svg_d))
+    etapes = [(T["etapes"][0] % a0, d_depart, "stock"), (T["etapes"][1], total["effet_interets"], "delta"),
+              (T["etapes"][2], total["effet_croissance"], "delta"), (T["etapes"][3], total["contribution_solde_primaire"], "delta"),
+              (T["etapes"][4], total["flux_stock"], "delta"), (T["etapes"][0] % an_fin, rows[-1]["dette_pct_pib"], "stock")]
+    haut = max(d_depart + max(0, total["effet_interets"]), rows[-1]["dette_pct_pib"]) * 1.04
+    sx = lambda v: (WM - 4) * v / haut
+    y += 4
+    for l in pied_figure.coupe(T["points"], 38):   # la ligne dépassait le cadre de 300 px (contre-expertise du 11/10/2026)
+        y += 18
+        e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, INK2, esc(l)))
+    niveau = 0.0
+    for lib, v, nature in etapes:
+        y += 30
+        etiq = (nb(v) + T["pc"]) if nature == "stock" else sg(v)
+        e.append('<text x="0" y="%d" font-size="15" fill="%s">%s</text>' % (y, INK, esc(lib)))
+        e.append('<text x="%d" y="%d" font-size="15" font-weight="600" fill="%s" text-anchor="end">%s</text>' % (WM, y, INK, esc(etiq)))
+        y += 8
+        if nature == "stock":
+            a, b, col, niveau = 0.0, v, BLEU, v
+        else:
+            a, b = (niveau, niveau + v) if v >= 0 else (niveau + v, niveau)
+            col = ORANGE if v >= 0 else GRIS
+            niveau += v
+        e.append('<rect x="%.1f" y="%d" width="%.1f" height="14" fill="%s"/>' % (sx(a), y, max(1.5, sx(b) - sx(a)), col))
+        y += 14
+    return finir_m(e, y + 18, T["src_cascade"] % ((a0 + 1, an_fin) + (millesime("gov_10dd_edpt1", lang), millesime("gov_10a_main", lang))), T["note_cascade"], lang)
+
+
+def fig_annuelle_m(rows, lang, svg_d):
+    T, (nb, sg) = TXT[lang], NB[lang]
+    e, y = tete_m("dam", T["titre_annuelle_m"], desc_de(svg_d))
+    hauts = [max(0, r["effet_taux_croissance"]) + max(0, r["contribution_solde_primaire"]) + max(0, r["flux_stock"]) for r in rows]
+    bas_ = [min(0, r["effet_taux_croissance"]) + min(0, r["contribution_solde_primaire"]) + min(0, r["flux_stock"]) for r in rows]
+    vmax, vmin = (int(max(hauts) / 4) + 1) * 4, -(int(-min(bas_) / 4) + 1) * 4
+    X0, X1, TOP = 30, WM - 2, y + 26
+    BAS = TOP + 210
+    Y = lambda v: BAS - (BAS - TOP) * (v - vmin) / (vmax - vmin)
+    for g in range(vmin, vmax + 1, 8):
+        e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="%s"/>' % (X0, Y(g), X1, Y(g), GRID, 1.4 if g == 0 else 0.6))
+        e.append('<text x="%d" y="%.1f" font-size="%s" fill="%s" text-anchor="end">%s</text>' % (X0 - 4, Y(g) + 4, FS_MIN, MUTED, sg(g, 0)))
+    pas = (X1 - X0) / len(rows)
+    bw = pas * 0.72
+    for k, r in enumerate(rows):
+        cx = X0 + pas * (k + 0.5)
+        pos = neg = 0.0
+        for cle, col in (("contribution_solde_primaire", ORANGE), ("effet_taux_croissance", BLEU), ("flux_stock", GRIS_CLAIR)):
+            v = r[cle]
+            if v >= 0:
+                e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="%s"/>' % (cx - bw / 2, Y(pos + v), bw, Y(pos) - Y(pos + v), col))
+                pos += v
+            else:
+                e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="%s"/>' % (cx - bw / 2, Y(neg), bw, Y(neg + v) - Y(neg), col))
+                neg += v
+        e.append('<circle cx="%.1f" cy="%.1f" r="2.4" fill="%s"/>' % (cx, Y(r["variation"]), INK))
+        if r["annee"] in (2000, 2010, 2020):
+            e.append('<text x="%.1f" y="%d" font-size="%s" fill="%s" text-anchor="middle">%d</text>' % (cx, BAS + 18, FS_MIN, INK2, r["annee"]))
+    y = BAS + 30
+    for col, lib in zip((ORANGE, BLEU, GRIS_CLAIR), T["legende_annuelle"][:3]):
+        y += 22
+        e.append('<rect x="0" y="%d" width="14" height="14" fill="%s"/>' % (y - 12, col))
+        e.append('<text x="22" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, INK2, esc(lib)))
+    y += 22
+    e.append('<circle cx="7" cy="%d" r="4" fill="%s"/>' % (y - 5, INK))
+    e.append('<text x="22" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, INK2, esc(T["legende_annuelle"][3])))
+    by = {r["annee"]: r for r in rows}
+    eff = -sum(r["effet_taux_croissance"] for r in rows if 2021 <= r["annee"] <= 2023)
+    y += 12
+    for f in (T["faits_m"][0] % sg(by[2009]["variation"]), T["faits_m"][1] % sg(by[2020]["variation"]), T["faits_m"][2] % nb(eff)):
+        for k, l in enumerate(pied_figure.coupe(f, 30)):   # 15 px gras : au-delà de 30 caractères, la ligne touchait le bord
+            y += 22 if k == 0 else 19
+            e.append('<text x="0" y="%d" font-size="15" font-weight="600" fill="%s">%s</text>' % (y, INK, esc(l)))
+    return finir_m(e, y + 18, T["src_annuelle"] % ((rows[0]["annee"], rows[-1]["annee"]) + (millesime("gov_10dd_edpt1", lang), millesime("gov_10a_main", lang))), T["note_annuelle"], lang)
 
 
 def fiches(figs, A):
@@ -366,7 +505,7 @@ def fiches(figs, A):
         for ident, f, montre in MONTRE:
             svg = figs[f + ".svg"]
             titre = html.unescape(re.search(r"<title[^>]*>(.*?)</title>", svg).group(1))
-            cart = [html.unescape(t) for t in re.findall(r'<text x="0" y="[0-9.]+" font-size="9" fill="[^"]+">(.*?)</text>', svg)]
+            cart = [pied_figure.lire(svg, "pied-source"), pied_figure.lire(svg, "pied-note")]
             out[lang].append(dict(id=ident, fichier=f, titre=titre, montre=montre, source=cart[0], precaution=cart[1]))
     return out
 
@@ -413,7 +552,7 @@ def affichage(a0, d_depart, rows, total, per, dr):
             A["taux_croissance_%d" % a] = nb(by[a]["effet_taux_croissance"])
         A["net_dernier"] = sg(last["effet_taux_croissance"])
         A["taux_implicite_dernier"] = nb(last["taux_implicite_pct"], 2)
-        A["croissance_derniere"] = nb(last["croissance_nominale_pct"])
+        A["croissance_derniere"] = nb(last["croissance_nominale_pct"], 2)   # même précision que le taux implicite (OPTIMUM-10)
         A["annees_excedent"] = str(sum(1 for r in rows if r["solde_primaire_pct_pib"] > 0))
         A["annees_total"] = str(len(rows))
         # « Ce qu'il faut retenir » (03/10/2026) : la quasi-annulation sur la série est une compensation DANS LE TEMPS
@@ -433,6 +572,13 @@ def affichage(a0, d_depart, rows, total, per, dr):
         A["croise_rec"] = sg(dr[fen["ofce"][1]]["recettes"] - dr[fen["tresor"][0]]["recettes"])
         # Quatrième tour (document de travail de l'OFCE, E6) : sur la fenêtre commune, dépenses totales.
         A["croise_dep"] = sg(dr[fen["ofce"][1]]["depenses"] - dr[fen["tresor"][0]]["depenses"])
+        # Phase B (contre-expertise du 11/10/2026, D15) : fenêtre commune, dépenses hors intérêts.
+        A["croise_dep_hi"] = sg(dr[fen["ofce"][1]]["depenses_hors_interets"] - dr[fen["tresor"][0]]["depenses_hors_interets"])
+        # Contre-expertise de la page construite (OPTIMUM-10) : le retournement entre les deux fenêtres de même départ.
+        A["rec_fin"] = sg(dr[fen["tresor"][1]]["recettes"] - dr[fen["ofce"][1]]["recettes"])
+        A["ti_creux_an"] = str(min(rows, key=lambda r: r["taux_implicite_pct"])["annee"])
+        A["ti_creux"] = nb(min(r["taux_implicite_pct"] for r in rows), 2)
+        A["ti_2021"], A["ti_2022"] = nb(by[2021]["taux_implicite_pct"], 2), nb(by[2022]["taux_implicite_pct"], 2)
         return A
 
     fen = {k: (d0, d1 or last["annee"]) for k, (d0, d1) in FENETRES_DEFICIT.items()}
@@ -445,6 +591,8 @@ def affichage(a0, d_depart, rows, total, per, dr):
         fail("« Ce qu'il faut retenir » : plus de periode finale ou l'effet taux-croissance est negatif chaque annee (bascule %s)" % bascule)
 
     A, A_en = bloc(*NB["fr"]), bloc(*NB["en"])
+    for X_, lang in ((A, "fr"), (A_en, "en")):
+        X_["millesime_dette"], X_["millesime_comptes"] = millesime("gov_10dd_edpt1", lang), millesime("gov_10a_main", lang)
     p1, p2, p3 = per
     affirmations = [
         ("titre de la figure : « la dette a doublé » (rapport 1,85 à 2,2)", 1.85 < last["dette_pct_pib"] / d_depart < 2.2),
@@ -505,6 +653,23 @@ def affichage(a0, d_depart, rows, total, per, dr):
          < (dr[fen["tresor"][1]]["recettes"] - dr[fen["tresor"][0]]["recettes"]) - 0.5),
         ("« Ce qu'il faut retenir » : excédents primaires rares (six années au plus sur la série)",
          sum(1 for r in rows if r["solde_primaire_pct_pib"] > 0) <= 6),
+        # --- phase B (contre-expertise du 11/10/2026)
+        ("D15 : sur la fenêtre commune 2019-2024, le recul des recettes dépasse la hausse des dépenses hors intérêts "
+         "(le diagnostic de 2019-2025 se retourne avec l'année d'arrivée)",
+         dr[fen["ofce"][1]]["recettes"] - dr[fen["tresor"][0]]["recettes"] < 0
+         and abs(dr[fen["ofce"][1]]["recettes"] - dr[fen["tresor"][0]]["recettes"])
+         > dr[fen["ofce"][1]]["depenses_hors_interets"] - dr[fen["tresor"][0]]["depenses_hors_interets"] > 0),
+        ("D1 : le taux implicite remonte par un saut en 2022 (plus de 0,3 point en un an, le plus fort depuis le creux), puis plus lentement",
+         by[2022]["taux_implicite_pct"] - by[2021]["taux_implicite_pct"] > 0.3
+         and all(by[a]["taux_implicite_pct"] - by[a - 1]["taux_implicite_pct"] < by[2022]["taux_implicite_pct"] - by[2021]["taux_implicite_pct"]
+                 for a in by if a > 2022)
+         and min(rows, key=lambda r: r["taux_implicite_pct"])["annee"] in (2020, 2021)),
+        ("OPTIMUM-10 : entre les deux fenêtres de même départ, les dépenses hors intérêts varient d'autant (à 0,1 près) et les "
+         "recettes remontent de plus d'un demi-point la dernière année : c'est elles qui retournent la conclusion",
+         abs((dr[fen["tresor"][1]]["depenses_hors_interets"] - dr[fen["ofce"][1]]["depenses_hors_interets"])) < 0.1
+         and dr[fen["tresor"][1]]["recettes"] - dr[fen["ofce"][1]]["recettes"] > 0.5),
+        ("OPTIMUM-10 : « un déficit qui se réduit n'a pas disparu » — le solde primaire de la dernière année reste négatif",
+         last["solde_primaire_pct_pib"] < 0),
         ("2009 et 2020 : les deux plus fortes hausses de la série",
          sorted(rows, key=lambda r: -r["variation"])[0]["annee"] in (2009, 2020) and sorted(rows, key=lambda r: -r["variation"])[1]["annee"] in (2009, 2020)),
     ]
@@ -530,13 +695,25 @@ def main() -> int:
     log("Decomposition %d-%d : hausse %.1f = interets %.1f + croissance %.1f + deficits primaires %.1f + flux-stock %.1f"
         % (rows[0]["annee"], rows[-1]["annee"], total["variation"], total["effet_interets"], total["effet_croissance"],
            total["contribution_solde_primaire"], total["flux_stock"]))
-    if check:
-        log("--check : gardes passees (%d cles d'affichage), rien ecrit." % len(aff))
-        return 0
     figs = {}
     for lang in ("fr", "en"):
-        figs["dette-dynamique-cascade%s.svg" % SUFFIXE[lang]] = fig_cascade(a0, d_depart, rows, total, lang)
-        figs["dette-dynamique-annuelle%s.svg" % SUFFIXE[lang]] = fig_annuelle(rows, lang)
+        suf = SUFFIXE[lang]
+        figs["dette-dynamique-cascade%s.svg" % suf] = fig_cascade(a0, d_depart, rows, total, lang)
+        figs["dette-dynamique-annuelle%s.svg" % suf] = fig_annuelle(rows, lang)
+        figs["dette-dynamique-cascade%s-m.svg" % suf] = fig_cascade_m(a0, d_depart, rows, total, lang, figs["dette-dynamique-cascade%s.svg" % suf])
+        figs["dette-dynamique-annuelle%s-m.svg" % suf] = fig_annuelle_m(rows, lang, figs["dette-dynamique-annuelle%s.svg" % suf])
+        for fid in ("cascade", "annuelle"):
+            ec = pied_figure.parite(figs["dette-dynamique-%s%s.svg" % (fid, suf)], figs["dette-dynamique-%s%s-m.svg" % (fid, suf)], FS_MIN)
+            if ec:
+                fail("parite mobile %s %s : %s" % (fid, lang, " ; ".join(ec)))
+    for page, suf in (("_index.md", ""), ("_index.en.md", "-en")):
+        ecarts = pied_figure.controler_page((ROOT / "content" / "pourquoi-la-dette-publique-augmente" / page).read_text(encoding="utf-8"),
+                                            {f: v for f, v in figs.items() if re.fullmatch(r"dette-dynamique-[a-z]+%s(-m)?\.svg" % suf, f)})
+        if ecarts:
+            fail("page %s : %s" % (page, " ; ".join(ecarts)))
+    if check:
+        log("--check : gardes passees (%d cles d'affichage), parite des 4 figures telephone et hauteurs des pages controlees, rien ecrit." % len(aff))
+        return 0
     payload = {"meta": {"releve_le": datetime.now(timezone.utc).strftime("%Y-%m-%d"), "page": "https://" + PAGE_URL,
                         "licence": "CC BY 4.0", "pays": "France", "perimetre": "administrations publiques (S.13), SEC 2010",
                         "identite": "d_t - d_{t-1} = i/(1+g) d_{t-1} - g/(1+g) d_{t-1} - pb_t + sfa_t",

@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 764" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dam-t dam-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="dam-t">Each year, what pushed the debt-to-GDP ratio up or held it back</title><desc id="dam-d">Stacked bars per year, in points of GDP: in orange the primary balance contribution (deficit as plus, surplus as minus), in blue the net effect of interest rates and growth, in grey stock-flow adjustments; the black dot is the actual change in the ratio. The two largest rises are in 2009 (+14.2 points) and 2020 (+16.7). From 2021 to 2023, the interest-growth effect takes 16.8 points off the ratio, as nominal GDP growth, price rises included, accelerates.</desc>
+<rect width="300" height="764" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Each year, what pushed the</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">debt-to-GDP ratio up or held</text>
+<text x="0" y="64" font-size="17" font-weight="600" fill="#26262f">it back</text>
+<line x1="30" y1="322.0" x2="298" y2="322.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="26" y="326.0" font-size="13.5" fill="#96928f" text-anchor="end">−8</text>
+<line x1="30" y1="262.0" x2="298" y2="262.0" stroke="#dcd8d3" stroke-width="1.4"/>
+<text x="26" y="266.0" font-size="13.5" fill="#96928f" text-anchor="end">+0</text>
+<line x1="30" y1="202.0" x2="298" y2="202.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="26" y="206.0" font-size="13.5" fill="#96928f" text-anchor="end">+8</text>
+<line x1="30" y1="142.0" x2="298" y2="142.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="26" y="146.0" font-size="13.5" fill="#96928f" text-anchor="end">+16</text>
+<rect x="31.3" y="259.9" width="6.4" height="2.1" fill="#eb6834"/>
+<rect x="31.3" y="244.3" width="6.4" height="15.6" fill="#184f95"/>
+<rect x="31.3" y="241.1" width="6.4" height="3.2" fill="#c9c5c0"/>
+<circle cx="34.5" cy="241.1" r="2.4" fill="#26262f"/>
+<rect x="40.2" y="260.8" width="6.4" height="1.2" fill="#eb6834"/>
+<rect x="40.2" y="249.2" width="6.4" height="11.6" fill="#184f95"/>
+<rect x="40.2" y="262.0" width="6.4" height="2.4" fill="#c9c5c0"/>
+<circle cx="43.4" cy="251.6" r="2.4" fill="#26262f"/>
+<rect x="49.1" y="262.0" width="6.4" height="7.5" fill="#eb6834"/>
+<rect x="49.1" y="256.2" width="6.4" height="5.8" fill="#184f95"/>
+<rect x="49.1" y="253.7" width="6.4" height="2.5" fill="#c9c5c0"/>
+<circle cx="52.3" cy="261.1" r="2.4" fill="#26262f"/>
+<rect x="58.1" y="262.0" width="6.4" height="11.5" fill="#eb6834"/>
+<rect x="58.1" y="255.2" width="6.4" height="6.8" fill="#184f95"/>
+<rect x="58.1" y="273.5" width="6.4" height="0.4" fill="#c9c5c0"/>
+<circle cx="61.3" cy="267.1" r="2.4" fill="#26262f"/>
+<rect x="67.0" y="262.0" width="6.4" height="12.3" fill="#eb6834"/>
+<rect x="67.0" y="274.3" width="6.4" height="2.3" fill="#184f95"/>
+<rect x="67.0" y="260.1" width="6.4" height="1.9" fill="#c9c5c0"/>
+<circle cx="70.2" cy="274.8" r="2.4" fill="#26262f"/>
+<text x="70.2" y="340" font-size="13.5" fill="#55524f" text-anchor="middle">2000</text>
+<rect x="75.9" y="262.0" width="6.4" height="12.3" fill="#eb6834"/>
+<rect x="75.9" y="255.7" width="6.4" height="6.3" fill="#184f95"/>
+<rect x="75.9" y="252.7" width="6.4" height="2.9" fill="#c9c5c0"/>
+<circle cx="79.1" cy="265.0" r="2.4" fill="#26262f"/>
+<rect x="84.9" y="260.9" width="6.4" height="1.1" fill="#eb6834"/>
+<rect x="84.9" y="251.8" width="6.4" height="9.1" fill="#184f95"/>
+<rect x="84.9" y="247.5" width="6.4" height="4.3" fill="#c9c5c0"/>
+<circle cx="88.1" cy="247.5" r="2.4" fill="#26262f"/>
+<rect x="93.8" y="252.9" width="6.4" height="9.1" fill="#eb6834"/>
+<rect x="93.8" y="243.8" width="6.4" height="9.1" fill="#184f95"/>
+<rect x="93.8" y="231.2" width="6.4" height="12.6" fill="#c9c5c0"/>
+<circle cx="97.0" cy="231.2" r="2.4" fill="#26262f"/>
+<rect x="102.7" y="256.3" width="6.4" height="5.7" fill="#eb6834"/>
+<rect x="102.7" y="262.0" width="6.4" height="0.3" fill="#184f95"/>
+<rect x="102.7" y="250.3" width="6.4" height="6.0" fill="#c9c5c0"/>
+<circle cx="105.9" cy="250.6" r="2.4" fill="#26262f"/>
+<rect x="111.7" y="256.1" width="6.4" height="5.9" fill="#eb6834"/>
+<rect x="111.7" y="254.5" width="6.4" height="1.6" fill="#184f95"/>
+<rect x="111.7" y="252.2" width="6.4" height="2.3" fill="#c9c5c0"/>
+<circle cx="114.9" cy="252.2" r="2.4" fill="#26262f"/>
+<rect x="120.6" y="261.6" width="6.4" height="0.4" fill="#eb6834"/>
+<rect x="120.6" y="262.0" width="6.4" height="3.7" fill="#184f95"/>
+<rect x="120.6" y="265.7" width="6.4" height="17.6" fill="#c9c5c0"/>
+<circle cx="123.8" cy="282.9" r="2.4" fill="#26262f"/>
+<rect x="129.5" y="259.7" width="6.4" height="2.3" fill="#eb6834"/>
+<rect x="129.5" y="262.0" width="6.4" height="3.1" fill="#184f95"/>
+<rect x="129.5" y="258.3" width="6.4" height="1.4" fill="#c9c5c0"/>
+<circle cx="132.7" cy="261.4" r="2.4" fill="#26262f"/>
+<rect x="138.5" y="257.3" width="6.4" height="4.7" fill="#eb6834"/>
+<rect x="138.5" y="248.6" width="6.4" height="8.7" fill="#184f95"/>
+<rect x="138.5" y="229.4" width="6.4" height="19.2" fill="#c9c5c0"/>
+<circle cx="141.7" cy="229.4" r="2.4" fill="#26262f"/>
+<rect x="147.4" y="225.8" width="6.4" height="36.2" fill="#eb6834"/>
+<rect x="147.4" y="192.0" width="6.4" height="33.7" fill="#184f95"/>
+<rect x="147.4" y="155.2" width="6.4" height="36.8" fill="#c9c5c0"/>
+<circle cx="150.6" cy="155.2" r="2.4" fill="#26262f"/>
+<rect x="156.3" y="227.4" width="6.4" height="34.6" fill="#eb6834"/>
+<rect x="156.3" y="227.4" width="6.4" height="0.0" fill="#184f95"/>
+<rect x="156.3" y="262.0" width="6.4" height="17.9" fill="#c9c5c0"/>
+<circle cx="159.5" cy="245.3" r="2.4" fill="#26262f"/>
+<text x="159.5" y="340" font-size="13.5" fill="#55524f" text-anchor="middle">2010</text>
+<rect x="165.3" y="242.6" width="6.4" height="19.4" fill="#eb6834"/>
+<rect x="165.3" y="262.0" width="6.4" height="0.4" fill="#184f95"/>
+<rect x="165.3" y="262.4" width="6.4" height="0.5" fill="#c9c5c0"/>
+<circle cx="168.5" cy="243.5" r="2.4" fill="#26262f"/>
+<rect x="174.2" y="242.9" width="6.4" height="19.1" fill="#eb6834"/>
+<rect x="174.2" y="231.6" width="6.4" height="11.4" fill="#184f95"/>
+<rect x="174.2" y="262.0" width="6.4" height="8.0" fill="#c9c5c0"/>
+<circle cx="177.4" cy="239.6" r="2.4" fill="#26262f"/>
+<rect x="183.1" y="242.4" width="6.4" height="19.6" fill="#eb6834"/>
+<rect x="183.1" y="235.4" width="6.4" height="7.1" fill="#184f95"/>
+<rect x="183.1" y="262.0" width="6.4" height="5.5" fill="#c9c5c0"/>
+<circle cx="186.3" cy="240.9" r="2.4" fill="#26262f"/>
+<rect x="192.1" y="244.2" width="6.4" height="17.8" fill="#eb6834"/>
+<rect x="192.1" y="238.7" width="6.4" height="5.5" fill="#184f95"/>
+<rect x="192.1" y="262.0" width="6.4" height="11.3" fill="#c9c5c0"/>
+<circle cx="195.3" cy="250.0" r="2.4" fill="#26262f"/>
+<rect x="201.0" y="248.0" width="6.4" height="14.0" fill="#eb6834"/>
+<rect x="201.0" y="262.0" width="6.4" height="0.4" fill="#184f95"/>
+<rect x="201.0" y="262.4" width="6.4" height="7.5" fill="#c9c5c0"/>
+<circle cx="204.2" cy="255.9" r="2.4" fill="#26262f"/>
+<rect x="209.9" y="248.0" width="6.4" height="14.0" fill="#eb6834"/>
+<rect x="209.9" y="243.7" width="6.4" height="4.3" fill="#184f95"/>
+<rect x="209.9" y="262.0" width="6.4" height="9.5" fill="#c9c5c0"/>
+<circle cx="213.1" cy="253.2" r="2.4" fill="#26262f"/>
+<rect x="218.9" y="250.2" width="6.4" height="11.8" fill="#eb6834"/>
+<rect x="218.9" y="262.0" width="6.4" height="5.8" fill="#184f95"/>
+<rect x="218.9" y="267.8" width="6.4" height="1.4" fill="#c9c5c0"/>
+<circle cx="222.1" cy="257.4" r="2.4" fill="#26262f"/>
+<rect x="227.8" y="257.9" width="6.4" height="4.1" fill="#eb6834"/>
+<rect x="227.8" y="262.0" width="6.4" height="6.8" fill="#184f95"/>
+<rect x="227.8" y="257.0" width="6.4" height="0.9" fill="#c9c5c0"/>
+<circle cx="231.0" cy="263.7" r="2.4" fill="#26262f"/>
+<rect x="236.7" y="255.4" width="6.4" height="6.6" fill="#eb6834"/>
+<rect x="236.7" y="262.0" width="6.4" height="12.0" fill="#184f95"/>
+<rect x="236.7" y="252.8" width="6.4" height="2.6" fill="#c9c5c0"/>
+<circle cx="239.9" cy="264.8" r="2.4" fill="#26262f"/>
+<rect x="245.7" y="204.6" width="6.4" height="57.4" fill="#eb6834"/>
+<rect x="245.7" y="158.8" width="6.4" height="45.8" fill="#184f95"/>
+<rect x="245.7" y="136.4" width="6.4" height="22.4" fill="#c9c5c0"/>
+<circle cx="248.9" cy="136.4" r="2.4" fill="#26262f"/>
+<text x="248.9" y="340" font-size="13.5" fill="#55524f" text-anchor="middle">2020</text>
+<rect x="254.6" y="223.0" width="6.4" height="39.0" fill="#eb6834"/>
+<rect x="254.6" y="262.0" width="6.4" height="54.8" fill="#184f95"/>
+<rect x="254.6" y="316.8" width="6.4" height="0.1" fill="#c9c5c0"/>
+<circle cx="257.8" cy="277.9" r="2.4" fill="#26262f"/>
+<rect x="263.5" y="240.8" width="6.4" height="21.2" fill="#eb6834"/>
+<rect x="263.5" y="262.0" width="6.4" height="32.1" fill="#184f95"/>
+<rect x="263.5" y="240.5" width="6.4" height="0.3" fill="#c9c5c0"/>
+<circle cx="266.7" cy="272.7" r="2.4" fill="#26262f"/>
+<rect x="272.5" y="235.9" width="6.4" height="26.1" fill="#eb6834"/>
+<rect x="272.5" y="262.0" width="6.4" height="38.9" fill="#184f95"/>
+<rect x="272.5" y="300.9" width="6.4" height="1.1" fill="#c9c5c0"/>
+<circle cx="275.7" cy="275.9" r="2.4" fill="#26262f"/>
+<rect x="281.4" y="234.2" width="6.4" height="27.8" fill="#eb6834"/>
+<rect x="281.4" y="262.0" width="6.4" height="13.0" fill="#184f95"/>
+<rect x="281.4" y="225.5" width="6.4" height="8.6" fill="#c9c5c0"/>
+<circle cx="284.6" cy="238.5" r="2.4" fill="#26262f"/>
+<rect x="290.3" y="240.5" width="6.4" height="21.5" fill="#eb6834"/>
+<rect x="290.3" y="262.0" width="6.4" height="0.1" fill="#184f95"/>
+<rect x="290.3" y="240.0" width="6.4" height="0.5" fill="#c9c5c0"/>
+<circle cx="293.5" cy="240.1" r="2.4" fill="#26262f"/>
+<rect x="0" y="362" width="14" height="14" fill="#eb6834"/>
+<text x="22" y="374" font-size="13.5" fill="#55524f">primary balance contribution</text>
+<rect x="0" y="384" width="14" height="14" fill="#184f95"/>
+<text x="22" y="396" font-size="13.5" fill="#55524f">interest-growth effect</text>
+<rect x="0" y="406" width="14" height="14" fill="#c9c5c0"/>
+<text x="22" y="418" font-size="13.5" fill="#55524f">stock-flow adjustments</text>
+<circle cx="7" cy="435" r="4" fill="#26262f"/>
+<text x="22" y="440" font-size="13.5" fill="#55524f">change in the ratio</text>
+<text x="0" y="474" font-size="15" font-weight="600" fill="#26262f">2009: +14.2 points</text>
+<text x="0" y="496" font-size="15" font-weight="600" fill="#26262f">2020: +16.7 points</text>
+<text x="0" y="518" font-size="15" font-weight="600" fill="#26262f">2021-2023: interest-growth</text>
+<text x="0" y="537" font-size="15" font-weight="600" fill="#26262f">effect −16.8</text>
+<line x1="0" y1="555.0" x2="300" y2="555.0" stroke="#dcd8d3"/>
+<text x="0" y="576.0" font-size="13.5" fill="#55524f">Eurostat gov_10dd_edpt1, gov_10a_main</text>
+<text x="0" y="593.0" font-size="13.5" fill="#55524f">(B9, D41PAY), France, 1996-2025;</text>
+<text x="0" y="610.0" font-size="13.5" fill="#55524f">Eurostat releases of 22 April 2026 and</text>
+<text x="0" y="627.0" font-size="13.5" fill="#55524f">21 July 2026</text>
+<text x="0" y="648.0" font-size="13.5" fill="#55524f">Points of GDP per year; primary</text>
+<text x="0" y="665.0" font-size="13.5" fill="#55524f">balance: a deficit counts as plus, a</text>
+<text x="0" y="682.0" font-size="13.5" fill="#55524f">surplus as minus; the three bars add</text>
+<text x="0" y="699.0" font-size="13.5" fill="#55524f">up to the change (black dot), to</text>
+<text x="0" y="716.0" font-size="13.5" fill="#55524f">within a hundredth.</text>
+<text x="0" y="737.0" font-size="13.5" fill="#96928f">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text x="0" y="754.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
+</svg>

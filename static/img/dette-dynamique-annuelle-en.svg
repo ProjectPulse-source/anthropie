@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 352" role="img" font-variant-numeric="tabular-nums" aria-labelledby="da-t da-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
-<title id="da-t">Year by year: what pushed the ratio up or down, 1996-2025</title><desc id="da-d">Stacked bars per year, in points of GDP: in orange the contribution of primary deficits, in blue the net effect of interest rates and growth, in grey stock-flow adjustments; the black dot is the actual change in the ratio. Primary deficits drive the rise from 2008 to 2025; the interest-growth effect turns sharply negative in 2021-2023, when nominal GDP growth, driven in part by inflation, accelerates.</desc>
-<rect width="720" height="352" fill="#ffffff"/>
-<text x="0" y="18" font-size="15" font-weight="600" fill="#26262f">Year by year: what pushed the ratio up or down, 1996-2025</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 383" role="img" font-variant-numeric="tabular-nums" aria-labelledby="da-t da-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="da-t">Year by year: what pushed the debt-to-GDP ratio up or down, 1996-2025</title><desc id="da-d">Stacked bars per year, in points of GDP: in orange the primary balance contribution (deficit as plus, surplus as minus), in blue the net effect of interest rates and growth, in grey stock-flow adjustments; the black dot is the actual change in the ratio. The two largest rises are in 2009 (+14.2 points) and 2020 (+16.7). From 2021 to 2023, the interest-growth effect takes 16.8 points off the ratio, as nominal GDP growth, price rises included, accelerates.</desc>
+<rect width="720" height="383" fill="#ffffff"/>
+<text x="0" y="18" font-size="15" font-weight="600" fill="#26262f">Year by year: what pushed the debt-to-GDP ratio up or down, 1996-2025</text>
 <line x1="40" y1="270.0" x2="710" y2="270.0" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="34" y="273.0" font-size="10" fill="#96928f" text-anchor="end">−8</text>
 <line x1="40" y1="241.4" x2="710" y2="241.4" stroke="#dcd8d3" stroke-width="0.6"/>
@@ -145,15 +145,17 @@
 <circle cx="698.8" cy="192.0" r="3.2" fill="#26262f" stroke="#ffffff" stroke-width="1"/>
 <text x="698.8" y="284" font-size="10" fill="#55524f" text-anchor="middle">2025</text>
 <rect x="40" y="36" width="10" height="10" fill="#eb6834"/>
-<text x="54" y="45" font-size="11" fill="#55524f">primary deficits</text>
-<rect x="184" y="36" width="10" height="10" fill="#184f95"/>
-<text x="198" y="45" font-size="11" fill="#55524f">interest-growth effect</text>
-<rect x="370" y="36" width="10" height="10" fill="#c9c5c0"/>
-<text x="384" y="45" font-size="11" fill="#55524f">stock-flow adjustments</text>
-<circle cx="560" cy="41" r="3.2" fill="#26262f"/>
-<text x="568" y="45" font-size="11" fill="#55524f">change in the ratio</text>
+<text x="54" y="45" font-size="11" fill="#55524f">primary balance contribution</text>
+<rect x="228" y="36" width="10" height="10" fill="#184f95"/>
+<text x="242" y="45" font-size="11" fill="#55524f">interest-growth effect</text>
+<rect x="383" y="36" width="10" height="10" fill="#c9c5c0"/>
+<text x="397" y="45" font-size="11" fill="#55524f">stock-flow adjustments</text>
+<circle cx="542" cy="41" r="3.2" fill="#26262f"/>
+<text x="550" y="45" font-size="11" fill="#55524f">change in the ratio</text>
 <line x1="0" y1="304.0" x2="720" y2="304.0" stroke="#dcd8d3"/>
-<text x="0" y="317.0" font-size="9" fill="#55524f">Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), France, 1996-2025</text>
-<text x="0" y="329.0" font-size="9" fill="#55524f">Points of GDP per year; the three bars add up to the change (black dot), to within a hundredth.</text>
-<text x="0" y="341.0" font-size="9" fill="#96928f">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/why-does-public-debt-rise/</text>
+<text class="pied-source" x="0" y="319.0" font-size="11" fill="#55524f">Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), France, 1996-2025; Eurostat releases of 22 April 2026 and 21 July</text>
+<text class="pied-source" x="0" y="333.0" font-size="11" fill="#55524f">2026</text>
+<text class="pied-note" x="0" y="347.0" font-size="11" fill="#55524f">Points of GDP per year; primary balance: a deficit counts as plus, a surplus as minus; the three bars add up to the</text>
+<text class="pied-note" x="0" y="361.0" font-size="11" fill="#55524f">change (black dot), to within a hundredth.</text>
+<text class="pied-licence" x="0" y="375.0" font-size="11" fill="#96928f">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/why-does-public-debt-rise/</text>
 </svg>

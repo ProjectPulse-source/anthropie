@@ -73,3 +73,27 @@ def controler_page(page_md: str, figs: dict) -> list[str]:
         elif d.group(1) != h:
             ecarts.append("%s : hauteur %s dans la page, %s dans le SVG" % (nom, d.group(1), h))
     return ecarts
+
+
+def parite(svg_detaille: str, svg_mobile: str, fs_min: float, couleurs=()) -> list[str]:
+    """Version téléphone contre version détaillée : chaque nombre dessiné en mobile (textes en gras ou dans une des
+    couleurs données) figure dans la description de la détaillée ; aucune police sous fs_min. Rend la liste des écarts.
+
+    Généralisation du contrôle de la page « Professeurs » (11/10/2026), vu mordre sur une valeur faussée et une police
+    trop petite. Un contrôle qui ne lit aucun nombre est aveugle : il échoue."""
+    desc = html.unescape(re.search(r"<desc[^>]*>(.*?)</desc>", svg_detaille, re.S).group(1))
+    nombres = set(re.findall(r"\d+(?:[,.]\d+)?", desc))
+    textes = re.findall(r'<text [^>]*font-weight="600"[^>]*>([^<]*)</text>', svg_mobile)
+    for c in couleurs:
+        textes += re.findall(r'<text [^>]*fill="%s"[^>]*>([^<]*)</text>' % re.escape(c), svg_mobile)
+    dessines = {n for t in textes for n in re.findall(r"\d+(?:[,.]\d+)?", html.unescape(t)) if not re.fullmatch(r"(19|20)\d\d", n)}
+    ecarts = []
+    if not dessines:
+        ecarts.append("aucune valeur dessinée lue (contrôle aveugle)")
+    manquants = dessines - nombres
+    if manquants:
+        ecarts.append("valeurs dessinées absentes de la version détaillée : %s" % sorted(manquants))
+    tailles = [float(x) for x in re.findall(r'font-size="([0-9.]+)"', svg_mobile)]
+    if tailles and min(tailles) < fs_min:
+        ecarts.append("police %.1f sous le minimum %.1f" % (min(tailles), fs_min))
+    return ecarts
