@@ -13,7 +13,11 @@
 {{- if ge (len $titres) 5 }}
 <details class="sommaire-page">
   <summary>{{ if $isEn }}On this page · {{ len $titres }} sections{{ else }}Dans cette page · {{ len $titres }} sections{{ end }}</summary>
-  <ol>{{ range $titres }}<li><a {{ printf `href="#%s"` .ID | safeHTMLAttr }}>{{ .Title | safeHTML }}</a></li>{{ end }}</ol>
+  {{- /* Libellé lu dans le CONTENU RENDU (11/10/2026) : .Fragments garde le titre source, où un shortcode n'est pas
+         résolu — un titre à jeton ({{< coll-val >}}, {{< infl-val >}}) s'affichait « HAHAHUGOSHORTCODE… » dans le
+         sommaire, en ligne sur /dette-publique-collectivites-locales/ depuis le 10/10. Repli : .Title. */ -}}
+  {{- $html := string $.Content }}
+  <ol>{{ range $titres }}{{ $lib := .Title }}{{ with findRESubmatch (printf `<h2 id="?%s"?(?: [^>]*)?>(.*?)</h2>` .ID) $html 1 }}{{ $lib = index (index . 0) 1 }}{{ end }}<li><a {{ printf `href="#%s"` .ID | safeHTMLAttr }}>{{ $lib | safeHTML }}</a></li>{{ end }}</ol>
 </details>
 {{- end -}}
 {{- end -}}

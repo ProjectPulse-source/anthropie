@@ -18,6 +18,11 @@ BLOQUENT sur les pages refondues, et ne font qu'INVENTORIER le travail des autre
    nouveau d'une classe connue y entre. Ce contrôle ne voit que ce qu'il cherche ; la relecture phrase à phrase
    reste humaine (leçon 16 du CLAUDE.md du site).
 
+3. SHORTCODE NON RENDU, sur TOUTES les pages (refondues ou non) et dans tout le <main>, sommaire et barres compris :
+   le texte de substitution de Hugo (« HAHAHUGOSHORTCODE… ») n'est jamais acceptable devant un lecteur. Cas fondateur
+   (11/10/2026) : un titre à jeton s'affichait ainsi dans le sommaire replié de /dette-publique-collectivites-locales/,
+   en ligne depuis le 10/10 ; l'extraction du texte, qui exclut le sommaire, ne pouvait pas le voir.
+
 Conservation : pages vues == refondues + non refondues ; une page attendue absente du build arrête le contrôle.
 Témoins positifs : --temoin injecte chaque motif et retire une version téléphone dans une copie du texte et du
 HTML d'une page refondue ; chaque injection doit être détectée (sortie 1 sinon).
@@ -93,11 +98,19 @@ def langue(t: str, lang: str) -> list[str]:
     return out
 
 
+def non_rendus(h: str) -> list[str]:
+    return ["shortcode non rendu dans le HTML servi (sommaire, barre ou corps) : \"...%s...\"" % m.group(0)
+            for m in re.finditer(r".{0,40}HAHAHUGOSHORTCODE\w*.{0,10}", rb.main_html(h))]
+
+
 def controler(build: Path) -> tuple[list, list, int]:
     bloquants, inventaire, vues = [], [], 0
     for p in rb.pages(build):
         vues += 1
         h = p["fichier"].read_text(encoding="utf-8")
+        nr = non_rendus(h)
+        if nr:
+            bloquants.append((p, nr))
         ecarts = figures(h, build) + langue(rb.texte(h), p["lang"])
         if ecarts:
             (bloquants if p["refonte"] else inventaire).append((p, ecarts))
@@ -114,6 +127,8 @@ def temoin(build: Path) -> int:
     nom = _IMG.findall(rb.main_html(h))[0]
     if not figures(h.replace("/img/%s-m.svg" % nom, "/img/%s-x.svg" % nom), build):
         rates.append("figure sans version telephone non detectee (%s)" % nom)
+    if not non_rendus(h.replace("</main>", "<li>Titre HAHAHUGOSHORTCODE55s31HBHB</li></main>", 1)):
+        rates.append("shortcode non rendu non detecte")
     for ident, l, _rx, _a in _MOTIFS:
         if not any(e.startswith(ident) for e in langue(EXEMPLES[ident], l or "fr")):
             rates.append("motif non detecte sur son exemple : %s" % ident)
