@@ -670,7 +670,7 @@ TXT = {
             "deficits pushed it up by more."),
   dec_src="Eurostat gov_10dd_edpt1 (debt, GDP), gov_10a_main (B9, D41PAY), France, %s-%s",
   dec_note=("An accounting decomposition, not a causal one: the three terms are not independent. Change computed on unrounded "
-            "values; the sum of the contributions shown may differ by 0.1 point."),
+            "values; the sum of the contributions shown may differ by 0.1 points."),
   cmp_titre="%s countries with debt above %s%% of GDP at end-%s: what moved their ratio in ten years",
   cmp_desc=("Countries with debt above %s%% of GDP at end-%s. For each country, in points of GDP cumulated over %s: the interest-growth effect, the contribution of the primary balance "
             "(a surplus pulls the ratio down, a deficit pushes it up), other adjustments, and the change in the ratio, their sum. "),
@@ -679,7 +679,7 @@ TXT = {
                 "it weighs about twice as much as their primary surpluses."),
   cmp_src="Eurostat gov_10dd_edpt1 (debt, GDP), gov_10a_main (B9, D41PAY), %s; countries sorted by change in the debt ratio",
   cmp_note=("Greece, Cyprus and Portugal received official financing (2010-2018). An accounting comparison: it attributes "
-            "the fall to no policy. Change computed on unrounded values; the sum of the contributions shown may differ by 0.1 point."),
+            "the fall to no policy. Change computed on unrounded values; the sum of the contributions shown may differ by 0.1 points."),
   stab_titre="France: the observed primary balance and the one that would have stabilised the debt",
   stab_desc=("Two annual lines from %s to %s, in %% of GDP: the observed primary balance, positive %s times (%s to %s), and the primary balance "
              "that would have stabilised the debt ratio, ranging from %s in %s to %s in %s. In %s, the observed balance was %s and the "

@@ -32,7 +32,7 @@
    "titre": "France: what pushed the weight of debt up or down, decade by decade",
    "montre": "From one decade to the next, the term pushing French debt up changes; over the last one, interest and growth pulled it down and primary deficits pushed it up by more.",
    "source": "Eurostat gov_10dd_edpt1 (debt, GDP), gov_10a_main (B9, D41PAY), France, 1996-2025",
-   "precaution": "An accounting decomposition, not a causal one: the three terms are not independent. Change computed on unrounded values; the sum of the contributions shown may differ by 0.1 point."
+   "precaution": "An accounting decomposition, not a causal one: the three terms are not independent. Change computed on unrounded values; the sum of the contributions shown may differ by 0.1 points."
   },
   {
    "id": "comparaison",
@@ -40,7 +40,7 @@
    "titre": "Seven countries with debt above 90% of GDP at end-2015: what moved their ratio in ten years",
    "montre": "Among countries that started from debt at least as high, the interest-growth effect pulled the ratio down everywhere; where the ratio fell markedly, it weighed about twice as much as primary surpluses.",
    "source": "Eurostat gov_10dd_edpt1 (debt, GDP), gov_10a_main (B9, D41PAY), 2016-2025; countries sorted by change in the debt ratio",
-   "precaution": "Greece, Cyprus and Portugal received official financing (2010-2018). An accounting comparison: it attributes the fall to no policy. Change computed on unrounded values; the sum of the contributions shown may differ by 0.1 point."
+   "precaution": "Greece, Cyprus and Portugal received official financing (2010-2018). An accounting comparison: it attributes the fall to no policy. Change computed on unrounded values; the sum of the contributions shown may differ by 0.1 points."
   },
   {
    "id": "stabilisant",

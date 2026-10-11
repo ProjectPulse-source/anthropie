@@ -182,7 +182,8 @@ def depenses_recettes():
 FENETRES_DEFICIT = {"ofce": (2017, 2024), "tresor": (2019, None)}
 # Clés d'affichage dérivées (relecture de langue du 11/10/2026) : <clé>_abs, la valeur sans signe après un verbe de sens ;
 # <clé>_pt, « point » ou « points » accordé à la valeur affichée.
-VALEURS_SANS_SIGNE = ("tc_avant", "tc_apres", "rec_fin")
+VALEURS_SANS_SIGNE = ("tc_avant", "tc_apres", "rec_fin",
+                      "p1_hausse", "p2_hausse", "p3_hausse", "p1_taux_croissance")   # « gagne », « ajoute » (motif de check-rendu, 11/10)
 ACCORD_POINTS = ("effet_net", "ofce_rec", "ofce_dep", "tresor_dep_hi", "croise_dep_hi", "croise_dep", "rec_fin")
 
 
@@ -627,6 +628,8 @@ def affichage(a0, d_depart, rows, total, per, dr):
     p1, p2, p3 = per
     affirmations = [
         ("titre de la figure : « la dette a doublé » (rapport 1,85 à 2,2)", 1.85 < last["dette_pct_pib"] / d_depart < 2.2),
+        ("chaque période : « le ratio gagne » (variation positive)", all(t["variation"] > 0 for t in per)),
+        ("période 1 : l'effet taux-croissance « ajoute » (positif)", p1["effet_taux_croissance"] > 0),
         ("les déficits primaires portent plus des trois quarts de la hausse", total["contribution_solde_primaire"] > 0.75 * total["variation"]),
         ("intérêts et croissance se compensent presque (effet net < 5 points)", abs(total["effet_taux_croissance"]) < 5),
         ("l'effet des intérêts dépasse 50 points et celui de la croissance aussi", total["effet_interets"] > 50 and -total["effet_croissance"] > 50),
