@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 659" role="img" font-variant-numeric="tabular-nums" aria-labelledby="qp-exp-t qp-exp-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 701" role="img" font-variant-numeric="tabular-nums" aria-labelledby="qp-exp-t qp-exp-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="qp-exp-t">The same €10 billion adjustment: who would bear it, depending on the decision taken?</title>
-<desc id="qp-exp-d">Two panels. A: for a 10 billion euro adjustment allocated pro rata to each item, the share of net disposable income this amount would represent for each standard-of-living decile, in 2023. A cut in education spending weighs 2.75% of the income of the first decile and 0.21% of the last; a rise in taxes on income and wealth, 1.14% of the last; pensions stay between 0.43 and 0.78%. B: the ratio of the heaviest to the lightest decision for the same group, base 1. It is ×5.5 in the last decile and at least as much in the first, and falls to ×1.4 in D7-D8: that is where the lever chosen differentiates households least.</desc>
+<desc id="qp-exp-d">Two panels. A: for a 10 billion euro adjustment allocated pro rata to each item, the share of net disposable income this amount would represent for each standard-of-living decile, in 2023. A cut in education spending weighs 2.75% of the income of the first decile and 0.21% of the last; a rise in taxes on income and wealth, 1.14% of the last; pensions stay between 0.43 and 0.78%. B: the ratio of the heaviest to the lightest decision for the same group, base 1. It is ×5.5 in the last decile and at least as much in the first, and falls to ×1.4 in D7-D8: that is where the lever chosen changes the decile's average exposure least.</desc>
 <text x="0.0" y="22.0" font-size="13" fill="#2b2a28" text-anchor="start" font-weight="600">The same €10 billion adjustment: who would bear it, depending on the decision taken?</text>
 <text x="0.0" y="48.0" font-size="12" fill="#2b2a28" text-anchor="start" font-weight="600">A · Amount allocated to the group, as a % of its net disposable income</text>
 <text x="0.0" y="64.0" font-size="11" fill="#898781" text-anchor="start">Adjustment allocated pro rata to the existing amounts of each item · standard-of-living deciles, 2023</text>
@@ -110,12 +110,15 @@
 <text x="519.1" y="432.7" font-size="10" fill="#52514e" text-anchor="middle">×5.5</text>
 <text x="519.1" y="520.0" font-size="11" fill="#898781" text-anchor="middle">D10</text>
 <text x="369.7" y="538.0" font-size="11" fill="#52514e" text-anchor="middle">D7-D8: minimum dispersion across the three levers</text>
-<text x="369.7" y="552.0" font-size="11" fill="#52514e" text-anchor="middle">where the lever chosen differentiates households least</text>
-<line x1="0" y1="566.0" x2="720" y2="566.0" stroke="#e1e0d9" stroke-width="1"/>
-<text x="0" y="579.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Insee, distributional national accounts, table CND.101 (2023 vintage, base 2020) · France, standard-of-living deciles</text>
-<text x="0" y="591.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">An exposure profile, not a simulation: no behaviour, no feedback effect. A cut in a valued public service is not a loss of cash income.</text>
-<text x="0" y="603.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">D1 tax point excluded: income tax of the first twentieth makes up 60% of the item while the neighbouring twentieths are at zero, and varies from 1 to 2.9 by vintage.</text>
-<text x="0" y="615.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">D1 carries “≥”: the gap there is computed on the two levers kept — a lower bound, which a third point could only raise.</text>
-<text x="0" y="627.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">The trough lies in D7 or D8 in all four vintages 2020-2023, and in the same zone with three measures of dispersion.</text>
-<text x="0" y="639.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/who-really-pays-public-debt/</text>
+<text x="369.7" y="552.0" font-size="11" fill="#52514e" text-anchor="middle">where the lever changes the decile's average exposure least</text>
+<line x1="0" y1="566.0" x2="720" y2="566.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="581.0" font-size="11" fill="#52514e">Insee, distributional national accounts, table CND.101 (2023 vintage, base 2020) · France, standard-of-living deciles</text>
+<text class="pied-note" x="0" y="595.0" font-size="11" fill="#52514e">An exposure profile, not a simulation: no behaviour, no feedback effect. A cut in a valued public service is not a</text>
+<text class="pied-note" x="0" y="609.0" font-size="11" fill="#52514e">loss of cash income.</text>
+<text class="pied-note" x="0" y="623.0" font-size="11" fill="#52514e">D1 tax point excluded: income tax of the first twentieth makes up 60% of the item while the neighbouring twentieths</text>
+<text class="pied-note" x="0" y="637.0" font-size="11" fill="#52514e">are at zero, and varies from 1 to 2.9 by vintage.</text>
+<text class="pied-note" x="0" y="651.0" font-size="11" fill="#52514e">D1 carries “≥”: the gap there is computed on the two levers kept — a lower bound, which a third point could only</text>
+<text class="pied-note" x="0" y="665.0" font-size="11" fill="#52514e">raise.</text>
+<text class="pied-note" x="0" y="679.0" font-size="11" fill="#52514e">The trough lies in D7 or D8 in all four vintages 2020-2023, and in the same zone with three measures of dispersion.</text>
+<text class="pied-licence" x="0" y="693.0" font-size="11" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/who-really-pays-public-debt/</text>
 </svg>

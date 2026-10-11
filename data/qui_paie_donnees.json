@@ -1,6 +1,6 @@
 {
  "_licence": "Compilation Stéphane Lalut, CC BY 4.0 (assemblage, grandeurs dérivées, mise en cohérence). Données d'origine : INSEE (Licence Ouverte Etalab), Banque de France via l'Agence France Trésor, sous leurs propres conditions.",
- "_genere_le": "2026-10-04",
+ "_genere_le": "2026-10-11",
  "affichage": {
   "exp_effort": "10",
   "exp_ens_d1": "2,75",
@@ -13,6 +13,7 @@
   "exp_ecart_creux": "1,4",
   "exp_creux_dixieme": "D7",
   "exp_creux_zone": "D7-D8",
+  "exp_creux_zone_mots": "7e ou 8e",
   "exp_cv_creux": "0,14",
   "exp_cv_d10": "0,67",
   "exp_creux_millesimes": "D7 ou D8",
@@ -20,6 +21,20 @@
   "exp_masse_fisc": "14,6",
   "exp_millesimes": "2020-2023",
   "exp_part_ir_v1": "60",
+  "exp_t1_rangs": "14e ou 15e",
+  "exp_t3_croise": "D7",
+  "exp_t2_progressif": "D9",
+  "exp_ens_epargne": "D8 ou D9",
+  "exp_tva_d1": "1,14",
+  "exp_tva_d10": "0,43",
+  "pens_taux": "0,9",
+  "pens_coef": "1,009",
+  "pens_annee": "2026",
+  "tresor_sur": "10",
+  "tresor_dette": "1",
+  "tresor_numero": "378",
+  "det_periode": "1er trimestre 2026",
+  "net_contrib_n": "3",
   "releve_le": "21 septembre 2026",
   "net_bascule": "D8",
   "net_benef_n": "7",
@@ -36,7 +51,7 @@
   "age_recu_jeunes": "18 200",
   "age_prel_5064": "33 800",
   "age_esp_65": "28 700",
-  "total_mdeur": "3 460,5",
+  "total_mdeur": "3 460,5",
   "periode_a": "fin 2025",
   "etat_mdeur": "2 823",
   "etat_pct": "82",
@@ -64,6 +79,7 @@
   "exp_ecart_creux": "1.4",
   "exp_creux_dixieme": "D7",
   "exp_creux_zone": "D7-D8",
+  "exp_creux_zone_mots": "7th or 8th",
   "exp_cv_creux": "0.14",
   "exp_cv_d10": "0.67",
   "exp_creux_millesimes": "D7 or D8",
@@ -71,6 +87,20 @@
   "exp_masse_fisc": "14.6",
   "exp_millesimes": "2020-2023",
   "exp_part_ir_v1": "60",
+  "exp_t1_rangs": "14th or 15th",
+  "exp_t3_croise": "D7",
+  "exp_t2_progressif": "D9",
+  "exp_ens_epargne": "D8 or D9",
+  "exp_tva_d1": "1.14",
+  "exp_tva_d10": "0.43",
+  "pens_taux": "0.9",
+  "pens_coef": "1.009",
+  "pens_annee": "2026",
+  "tresor_sur": "10",
+  "tresor_dette": "1",
+  "tresor_numero": "378",
+  "det_periode": "Q1 2026",
+  "net_contrib_n": "3",
   "releve_le": "21 September 2026",
   "net_bascule": "D8",
   "net_benef_n": "7",
@@ -506,7 +536,95 @@
    }
   },
   "nature": "Profil d'exposition comptable, non une simulation : l'effort est réparti au prorata des montants existants, sans comportement ni effet en retour. Une baisse de service valorisé n'est pas une perte de revenu monétaire.",
-  "temoin_croise_avec_IA118_mdeur": 0.1,
+  "temoin_croise_avec_IA118_mdeur": 0.0,
+  "tests_du_creux": {
+   "t1_vingtieme_min": {
+    "2020": 14,
+    "2021": 14,
+    "2022": 15,
+    "2023": 15
+   },
+   "t2_impot_progressif": {
+    "2020": "D9",
+    "2021": "D9",
+    "2022": "D9",
+    "2023": "D9"
+   },
+   "t2_pensions_d1_d3_epargnees": {
+    "2020": "D7",
+    "2021": "D7",
+    "2022": "D8",
+    "2023": "D7"
+   },
+   "t3_paires": {
+    "2020": {
+     "fiscal/enseignement": "D7",
+     "fiscal/pensions": "D9",
+     "enseignement/pensions": "D5"
+    },
+    "2021": {
+     "fiscal/enseignement": "D7",
+     "fiscal/pensions": "D9",
+     "enseignement/pensions": "D5"
+    },
+    "2022": {
+     "fiscal/enseignement": "D7",
+     "fiscal/pensions": "D8",
+     "enseignement/pensions": "D5"
+    },
+    "2023": {
+     "fiscal/enseignement": "D7",
+     "fiscal/pensions": "D8",
+     "enseignement/pensions": "D5"
+    }
+   },
+   "denominateur_ecart_max": 1.7763568394002505e-15,
+   "absolu_min": {
+    "2020": "D7",
+    "2021": "D7",
+    "2022": "D8",
+    "2023": "D8"
+   },
+   "ens_meme_montant": {
+    "2020": "D8",
+    "2021": "D8",
+    "2022": "D8",
+    "2023": "D8"
+   },
+   "ens_carre": {
+    "2020": "D7",
+    "2021": "D7",
+    "2022": "D8",
+    "2023": "D7"
+   },
+   "ens_d1_d3_epargnes": {
+    "2020": "D8",
+    "2021": "D8",
+    "2022": "D8",
+    "2023": "D9"
+   },
+   "quatre_leviers_min": {
+    "2020": "D7",
+    "2021": "D7",
+    "2022": "D8",
+    "2023": "D7"
+   },
+   "tva_d1": {
+    "2020": 1.154,
+    "2021": 1.198,
+    "2022": 1.076,
+    "2023": 1.141
+   },
+   "tva_d10": {
+    "2020": 0.517,
+    "2021": 0.488,
+    "2022": 0.477,
+    "2023": 0.427
+   },
+   "t3_impot_enseignement": "D7",
+   "t2_impot_progressif_creux": "D9",
+   "note": "Contre-expertise du 11/10/2026. T1 : minimum du rapport en vingtièmes (rang 1 à 20 ; 13 à 16 = D7-D8). T2 : variantes HYPOTHÉTIQUES, non des mesures observées — impôt au prorata du carré du poste fiscal (plus progressif), pensions de D1-D3 épargnées. T3 : dixième du rapport minimal pour chaque paire de leviers. Dénominateur : écart maximal entre le rapport calculé sur les expositions et le même rapport sur les montants seuls ; nul aux arrondis près, le revenu de référence étant commun aux trois leviers d'un même groupe. Quatre millésimes consécutifs ne sont pas des réplications indépendantes : conventions et structures distributives y sont largement communes."
+  },
   "source": {
    "publication": "Insee, comptes nationaux distribués, tableau CND.101 (vingtièmes de niveau de vie, 2020-2023, base 2020)",
    "url": "https://www.insee.fr/fr/statistiques/8574663",

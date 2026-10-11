@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 443" role="img" font-variant-numeric="tabular-nums" aria-labelledby="qp-red-t qp-red-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 437" role="img" font-variant-numeric="tabular-nums" aria-labelledby="qp-red-t qp-red-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="qp-red-t">Taxes and contributions, and public transfers, by standard-of-living decile, 2023</title>
 <desc id="qp-red-d">Bars by standard-of-living decile, in 2023, in thousand euros per consumption unit. Above zero, transfers received (cash benefits and in-kind transfers): from 27.1 for the first decile to 31.4 for the last. Below zero, taxes and contributions: from 6.4 to 89.8.</desc>
 <text x="0.0" y="22.0" font-size="13" fill="#2b2a28" text-anchor="start" font-weight="600">Taxes and contributions, and public transfers, by standard-of-living decile, 2023, € thousand per CU</text>
@@ -80,8 +80,8 @@
 <text x="566.0" y="243.9" font-size="10" fill="#898781" text-anchor="start">taxes, social contributions</text>
 <text x="46.0" y="372.0" font-size="10" fill="#898781" text-anchor="start">← least well-off 10%</text>
 <text x="552.0" y="372.0" font-size="10" fill="#898781" text-anchor="end">best-off 10% →</text>
-<line x1="0" y1="386.0" x2="720" y2="386.0" stroke="#e1e0d9" stroke-width="1"/>
-<text x="0" y="399.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Insee, distributional national accounts 2023 (Insee Analyses no. 118, 16 April 2026, figure 1c) · France, euros per CU</text>
-<text x="0" y="411.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Distribution based on imputation conventions; does not measure the specific incidence of the debt.</text>
-<text x="0" y="423.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/who-really-pays-public-debt/</text>
+<line x1="0" y1="386.0" x2="720" y2="386.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="401.0" font-size="11" fill="#52514e">Insee, distributional national accounts 2023 (Insee Analyses no. 118, 16 April 2026, figure 1c) · France, euros per CU</text>
+<text class="pied-note" x="0" y="415.0" font-size="11" fill="#52514e">Distribution based on imputation conventions; does not measure the specific incidence of the debt.</text>
+<text class="pied-licence" x="0" y="429.0" font-size="11" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/who-really-pays-public-debt/</text>
 </svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 790" role="img" font-variant-numeric="tabular-nums" aria-labelledby="qp-det-m-t qp-det-m-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="qp-det-m-t">Who borrows? Who holds French government securities?</title><desc id="qp-det-m-d">Two separate panels, with no proportional link between them. A, at nominal value: Central government €2,823bn (82%); Social security funds €293bn (8%); Local government €276bn (8%); Other central bodies €69bn (2%), out of €3,460.5bn, end of 2025. B, at market value, holders of central-government marketable securities in Q1 2026: Non-residents 57.5%; Other resident holders 20.6%; Resident banks 10.5%; Resident insurers 9.6%; Resident funds (UCITS) 1.8%.</desc>
+<rect width="300" height="790" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#2b2a28">Who borrows? Who holds French</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#2b2a28">government securities?</text>
+<text x="0.0" y="88.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">A · Who borrows? Debt by level of</text>
+<text x="0.0" y="106.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">government, end of 2025</text>
+<text x="0.0" y="124.0" font-size="13.5" fill="#898781" text-anchor="start">Nominal value, € billion</text>
+<text x="0.0" y="146.0" font-size="13.5" fill="#52514e" text-anchor="start">Central government</text>
+<rect x="0" y="152.0" width="150.0" height="12" rx="3" fill="#184f95"/>
+<text x="156.0" y="163.0" font-size="13.5" fill="#184f95" text-anchor="start" font-weight="600">€2,823bn · 82%</text>
+<text x="0.0" y="186.0" font-size="13.5" fill="#52514e" text-anchor="start">Social security funds</text>
+<rect x="0" y="192.0" width="15.6" height="12" rx="3" fill="#184f95"/>
+<text x="21.6" y="203.0" font-size="13.5" fill="#52514e" text-anchor="start">€293bn · 8%</text>
+<text x="0.0" y="226.0" font-size="13.5" fill="#52514e" text-anchor="start">Local government</text>
+<rect x="0" y="232.0" width="14.7" height="12" rx="3" fill="#184f95"/>
+<text x="20.7" y="243.0" font-size="13.5" fill="#52514e" text-anchor="start">€276bn · 8%</text>
+<text x="0.0" y="266.0" font-size="13.5" fill="#52514e" text-anchor="start">Other central bodies</text>
+<rect x="0" y="272.0" width="3.7" height="12" rx="3" fill="#184f95"/>
+<text x="9.7" y="283.0" font-size="13.5" fill="#52514e" text-anchor="start">€69bn · 2%</text>
+<line x1="0" y1="300.0" x2="300" y2="300.0" stroke="#c3c2b7"/>
+<text x="0.0" y="324.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">B · Who holds central-government</text>
+<text x="0.0" y="342.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">marketable securities? Q1 2026</text>
+<text x="0.0" y="360.0" font-size="13.5" fill="#898781" text-anchor="start">Market value · by the holder's</text>
+<text x="0.0" y="378.0" font-size="13.5" fill="#898781" text-anchor="start">residence, not nationality</text>
+<text x="0.0" y="400.0" font-size="13.5" fill="#52514e" text-anchor="start">Non-residents</text>
+<rect x="0" y="406.0" width="200.0" height="12" rx="3" fill="#eb6834"/>
+<text x="206.0" y="417.0" font-size="13.5" fill="#eb6834" text-anchor="start" font-weight="600">57.5%</text>
+<text x="0.0" y="440.0" font-size="13.5" fill="#52514e" text-anchor="start">Other resident holders *</text>
+<rect x="0" y="446.0" width="71.7" height="12" rx="3" fill="#eb6834"/>
+<text x="77.7" y="457.0" font-size="13.5" fill="#52514e" text-anchor="start">20.6%</text>
+<text x="0.0" y="480.0" font-size="13.5" fill="#52514e" text-anchor="start">Resident banks</text>
+<rect x="0" y="486.0" width="36.5" height="12" rx="3" fill="#eb6834"/>
+<text x="42.5" y="497.0" font-size="13.5" fill="#52514e" text-anchor="start">10.5%</text>
+<text x="0.0" y="520.0" font-size="13.5" fill="#52514e" text-anchor="start">Resident insurers</text>
+<rect x="0" y="526.0" width="33.4" height="12" rx="3" fill="#eb6834"/>
+<text x="39.4" y="537.0" font-size="13.5" fill="#52514e" text-anchor="start">9.6%</text>
+<text x="0.0" y="560.0" font-size="13.5" fill="#52514e" text-anchor="start">Resident funds (UCITS)</text>
+<rect x="0" y="566.0" width="6.3" height="12" rx="3" fill="#eb6834"/>
+<text x="12.3" y="577.0" font-size="13.5" fill="#52514e" text-anchor="start">1.8%</text>
+<text x="0.0" y="600.0" font-size="13.5" fill="#898781" text-anchor="start">* including the Banque de France:</text>
+<text x="0.0" y="618.0" font-size="13.5" fill="#898781" text-anchor="start">share not published by the source.</text>
+<line x1="0" y1="632.0" x2="300" y2="632.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="653.0" font-size="13.5" fill="#52514e">A: INSEE, Informations rapides no. 79</text>
+<text class="pied-source" x="0" y="670.0" font-size="13.5" fill="#52514e">(27 March 2026) · B: Banque de France,</text>
+<text class="pied-source" x="0" y="687.0" font-size="13.5" fill="#52514e">via Agence France Trésor</text>
+<text class="pied-note" x="0" y="708.0" font-size="13.5" fill="#52514e">Two separate scopes. Holding</text>
+<text class="pied-note" x="0" y="725.0" font-size="13.5" fill="#52514e">securities does not measure the final</text>
+<text class="pied-note" x="0" y="742.0" font-size="13.5" fill="#52514e">burden.</text>
+<text class="pied-licence" x="0" y="763.0" font-size="13.5" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="780.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 773" role="img" font-variant-numeric="tabular-nums" aria-labelledby="qp-det-m-t qp-det-m-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="qp-det-m-t">Qui emprunte ? Qui détient les titres de l'État ?</title><desc id="qp-det-m-d">Deux panneaux séparés, sans lien de proportion entre eux. A, en valeur nominale : État 2 823 Md€ (82 %); Sécurité sociale 293 Md€ (8 %); Collectivités 276 Md€ (8 %); Autres 69 Md€ (2 %), sur 3 460,5 Md€, fin 2025. B, en valeur de marché, porteurs des titres négociables de l'État au 1er trimestre 2026 : Non-résidents 57,5 %; Autres porteurs résidents 20,6 %; Banques résidentes 10,5 %; Assureurs résidents 9,6 %; Fonds (OPCVM) résidents 1,8 %.</desc>
+<rect width="300" height="773" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#2b2a28">Qui emprunte ? Qui détient les</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#2b2a28">titres de l'État ?</text>
+<text x="0.0" y="88.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">A · Qui emprunte ? Dette par</text>
+<text x="0.0" y="106.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">administration, fin 2025</text>
+<text x="0.0" y="124.0" font-size="13.5" fill="#898781" text-anchor="start">Valeur nominale, milliards d'euros</text>
+<text x="0.0" y="146.0" font-size="13.5" fill="#52514e" text-anchor="start">État</text>
+<rect x="0" y="152.0" width="150.0" height="12" rx="3" fill="#184f95"/>
+<text x="156.0" y="163.0" font-size="13.5" fill="#184f95" text-anchor="start" font-weight="600">2 823 Md€ · 82 %</text>
+<text x="0.0" y="186.0" font-size="13.5" fill="#52514e" text-anchor="start">Sécurité sociale</text>
+<rect x="0" y="192.0" width="15.6" height="12" rx="3" fill="#184f95"/>
+<text x="21.6" y="203.0" font-size="13.5" fill="#52514e" text-anchor="start">293 Md€ · 8 %</text>
+<text x="0.0" y="226.0" font-size="13.5" fill="#52514e" text-anchor="start">Collectivités</text>
+<rect x="0" y="232.0" width="14.7" height="12" rx="3" fill="#184f95"/>
+<text x="20.7" y="243.0" font-size="13.5" fill="#52514e" text-anchor="start">276 Md€ · 8 %</text>
+<text x="0.0" y="266.0" font-size="13.5" fill="#52514e" text-anchor="start">Autres</text>
+<rect x="0" y="272.0" width="3.7" height="12" rx="3" fill="#184f95"/>
+<text x="9.7" y="283.0" font-size="13.5" fill="#52514e" text-anchor="start">69 Md€ · 2 %</text>
+<line x1="0" y1="300.0" x2="300" y2="300.0" stroke="#c3c2b7"/>
+<text x="0.0" y="324.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">B · Qui détient les titres négociables</text>
+<text x="0.0" y="342.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">de l'État ? 1er trimestre 2026</text>
+<text x="0.0" y="360.0" font-size="13.5" fill="#898781" text-anchor="start">Valeur de marché · par résidence du</text>
+<text x="0.0" y="378.0" font-size="13.5" fill="#898781" text-anchor="start">détenteur, non par nationalité</text>
+<text x="0.0" y="400.0" font-size="13.5" fill="#52514e" text-anchor="start">Non-résidents</text>
+<rect x="0" y="406.0" width="200.0" height="12" rx="3" fill="#eb6834"/>
+<text x="206.0" y="417.0" font-size="13.5" fill="#eb6834" text-anchor="start" font-weight="600">57,5 %</text>
+<text x="0.0" y="440.0" font-size="13.5" fill="#52514e" text-anchor="start">Autres porteurs résidents *</text>
+<rect x="0" y="446.0" width="71.7" height="12" rx="3" fill="#eb6834"/>
+<text x="77.7" y="457.0" font-size="13.5" fill="#52514e" text-anchor="start">20,6 %</text>
+<text x="0.0" y="480.0" font-size="13.5" fill="#52514e" text-anchor="start">Banques résidentes</text>
+<rect x="0" y="486.0" width="36.5" height="12" rx="3" fill="#eb6834"/>
+<text x="42.5" y="497.0" font-size="13.5" fill="#52514e" text-anchor="start">10,5 %</text>
+<text x="0.0" y="520.0" font-size="13.5" fill="#52514e" text-anchor="start">Assureurs résidents</text>
+<rect x="0" y="526.0" width="33.4" height="12" rx="3" fill="#eb6834"/>
+<text x="39.4" y="537.0" font-size="13.5" fill="#52514e" text-anchor="start">9,6 %</text>
+<text x="0.0" y="560.0" font-size="13.5" fill="#52514e" text-anchor="start">Fonds (OPCVM) résidents</text>
+<rect x="0" y="566.0" width="6.3" height="12" rx="3" fill="#eb6834"/>
+<text x="12.3" y="577.0" font-size="13.5" fill="#52514e" text-anchor="start">1,8 %</text>
+<text x="0.0" y="600.0" font-size="13.5" fill="#898781" text-anchor="start">* dont la Banque de France : part non</text>
+<text x="0.0" y="618.0" font-size="13.5" fill="#898781" text-anchor="start">publiée par la source.</text>
+<line x1="0" y1="632.0" x2="300" y2="632.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="653.0" font-size="13.5" fill="#52514e">A : INSEE, Informations rapides n° 79</text>
+<text class="pied-source" x="0" y="670.0" font-size="13.5" fill="#52514e">(27/03/2026) · B : Banque de France,</text>
+<text class="pied-source" x="0" y="687.0" font-size="13.5" fill="#52514e">via l'AFT</text>
+<text class="pied-note" x="0" y="708.0" font-size="13.5" fill="#52514e">Deux champs distincts. La détention ne</text>
+<text class="pied-note" x="0" y="725.0" font-size="13.5" fill="#52514e">mesure pas la charge finale.</text>
+<text class="pied-licence" x="0" y="746.0" font-size="13.5" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="763.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+</svg>

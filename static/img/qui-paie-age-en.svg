@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 421" role="img" font-variant-numeric="tabular-nums" aria-labelledby="qp-age-t qp-age-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 443" role="img" font-variant-numeric="tabular-nums" aria-labelledby="qp-age-t qp-age-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="qp-age-t">Taxes and contributions, and public transfers, by household age, 2023</title>
 <desc id="qp-age-d">Bars by household age group, in 2023, in thousand euros per consumption unit. Transfers received rise from 18.2 for the 18-29 group to 47.8 for households whose adults are 65 or over on average, while taxes and contributions go from 23.2 to 14.6.</desc>
 <text x="0.0" y="22.0" font-size="13" fill="#2b2a28" text-anchor="start" font-weight="600">Taxes and contributions, and public transfers, by household age, 2023, € thousand per CU</text>
@@ -46,8 +46,10 @@
 <text x="566.0" y="186.3" font-size="10" fill="#898781" text-anchor="start">including pensions</text>
 <text x="566.0" y="239.3" font-size="11" fill="#eb6834" text-anchor="start" font-weight="600">Taxes and contributions</text>
 <text x="566.0" y="252.3" font-size="10" fill="#898781" text-anchor="start">taxes, social contributions</text>
-<line x1="0" y1="364.0" x2="720" y2="364.0" stroke="#e1e0d9" stroke-width="1"/>
-<text x="0" y="377.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Insee, distributional national accounts 2023 (Insee Analyses no. 118, 16 April 2026, figure 1e) · groups by mean age of the household's adults</text>
-<text x="0" y="389.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">A snapshot of one year, not the balance sheet of a generation: retirement pensions are counted here as transfers received.</text>
-<text x="0" y="401.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/who-really-pays-public-debt/</text>
+<line x1="0" y1="364.0" x2="720" y2="364.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="379.0" font-size="11" fill="#52514e">Insee, distributional national accounts 2023 (Insee Analyses no. 118, 16 April 2026, figure 1e) · groups by mean age</text>
+<text class="pied-source" x="0" y="393.0" font-size="11" fill="#52514e">of the household's adults</text>
+<text class="pied-note" x="0" y="407.0" font-size="11" fill="#52514e">A snapshot of one year, not the balance sheet of a generation: retirement pensions are counted here as transfers</text>
+<text class="pied-note" x="0" y="421.0" font-size="11" fill="#52514e">received.</text>
+<text class="pied-licence" x="0" y="435.0" font-size="11" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/who-really-pays-public-debt/</text>
 </svg>

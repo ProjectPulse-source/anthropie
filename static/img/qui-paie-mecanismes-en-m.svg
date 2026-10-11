@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 796" role="img" font-variant-numeric="tabular-nums" aria-labelledby="qp-mec-m-t qp-mec-m-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="qp-mec-m-t">Through which channels can the burden of the debt be distributed?</title><desc id="qp-mec-m-d">Diagram without quantities. Four mechanisms, not exhaustive, can change the burden of the debt and its distribution, and they combine: ordinary budget adjustment, through taxes and contributions (taxpayers) or spending and benefits (users, beneficiaries); unanticipated inflation, a price effect not decided alone (holders of claims and of poorly indexed incomes); restructuring, an extreme case (holders of the securities). Refinancing rolls the maturity over at current rates and does not, on its own, identify who will bear the burden. Alongside is what the debt has financed.</desc>
+<rect width="300" height="796" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#2b2a28">Through which channels can the</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#2b2a28">burden of the debt be</text>
+<text x="0" y="64" font-size="17" font-weight="600" fill="#2b2a28">distributed?</text>
+<rect x="1" y="96.0" width="298" height="48" rx="6" fill="#ffffff" stroke="#184f95" stroke-width="1.5"/>
+<text x="12.0" y="117.0" font-size="15" fill="#2b2a28" text-anchor="start" font-weight="600">Debt burden and its distribution</text>
+<text x="12.0" y="136.0" font-size="13.5" fill="#52514e" text-anchor="start">interest, maturing debt</text>
+<line x1="150" y1="144.0" x2="150" y2="160.0" stroke="#898781" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="0.0" y="180.0" font-size="13.5" fill="#898781" text-anchor="start" font-weight="600">Ordinary budget adjustment</text>
+<rect x="1" y="186.0" width="298" height="66" rx="6" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.5"/>
+<text x="12.0" y="207.0" font-size="15" fill="#2b2a28" text-anchor="start" font-weight="600">Taxes and contributions</text>
+<text x="12.0" y="226.0" font-size="13.5" fill="#52514e" text-anchor="start">taxpayers: taxes, social</text>
+<text x="12.0" y="244.0" font-size="13.5" fill="#52514e" text-anchor="start">contributions</text>
+<rect x="1" y="258.0" width="298" height="66" rx="6" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.5"/>
+<text x="12.0" y="279.0" font-size="15" fill="#2b2a28" text-anchor="start" font-weight="600">Spending and benefits</text>
+<text x="12.0" y="298.0" font-size="13.5" fill="#52514e" text-anchor="start">users, beneficiaries: cut, frozen,</text>
+<text x="12.0" y="316.0" font-size="13.5" fill="#52514e" text-anchor="start">postponed</text>
+<text x="0.0" y="344.0" font-size="13.5" fill="#898781" text-anchor="start" font-weight="600">Price effect, not decided alone</text>
+<rect x="1" y="350.0" width="298" height="66" rx="6" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.5"/>
+<text x="12.0" y="371.0" font-size="15" fill="#2b2a28" text-anchor="start" font-weight="600">Unanticipated inflation</text>
+<text x="12.0" y="390.0" font-size="13.5" fill="#52514e" text-anchor="start">holders of claims and of poorly</text>
+<text x="12.0" y="408.0" font-size="13.5" fill="#52514e" text-anchor="start">indexed incomes</text>
+<text x="0.0" y="436.0" font-size="13.5" fill="#898781" text-anchor="start" font-weight="600">Extreme case</text>
+<rect x="1" y="442.0" width="298" height="48" rx="6" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.5"/>
+<text x="12.0" y="463.0" font-size="15" fill="#2b2a28" text-anchor="start" font-weight="600">Restructuring</text>
+<text x="12.0" y="482.0" font-size="13.5" fill="#52514e" text-anchor="start">holders of the securities</text>
+<rect x="1" y="510.0" width="298" height="66" rx="6" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text x="12.0" y="531.0" font-size="15" fill="#2b2a28" text-anchor="start" font-weight="600">Refinancing</text>
+<text x="12.0" y="550.0" font-size="13.5" fill="#52514e" text-anchor="start">rolls the maturity over at current</text>
+<text x="12.0" y="568.0" font-size="13.5" fill="#52514e" text-anchor="start">rates, without designating a loser</text>
+<rect x="1" y="588.0" width="298" height="66" rx="6" fill="#f7f7f4" stroke="#c3c2b7" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text x="12.0" y="609.0" font-size="15" fill="#2b2a28" text-anchor="start" font-weight="600">Alongside: what the debt has financed</text>
+<text x="12.0" y="628.0" font-size="13.5" fill="#52514e" text-anchor="start">services, benefits, investment,</text>
+<text x="12.0" y="646.0" font-size="13.5" fill="#52514e" text-anchor="start">crisis support</text>
+<line x1="0" y1="672.0" x2="300" y2="672.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="693.0" font-size="13.5" fill="#52514e">Author's synthesis · non-quantitative</text>
+<text class="pied-source" x="0" y="710.0" font-size="13.5" fill="#52514e">diagram</text>
+<text class="pied-note" x="0" y="731.0" font-size="13.5" fill="#52514e">No relative weight or causal effect is</text>
+<text class="pied-note" x="0" y="748.0" font-size="13.5" fill="#52514e">measured here.</text>
+<text class="pied-licence" x="0" y="769.0" font-size="13.5" fill="#898781">Stéphane Lalut, CC BY 4.0 ·</text>
+<text class="pied-licence" x="0" y="786.0" font-size="13.5" fill="#898781">stephane-lalut.com</text>
+</svg>

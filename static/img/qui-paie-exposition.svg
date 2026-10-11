@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 659" role="img" font-variant-numeric="tabular-nums" aria-labelledby="qp-exp-t qp-exp-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 729" role="img" font-variant-numeric="tabular-nums" aria-labelledby="qp-exp-t qp-exp-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="qp-exp-t">Un même effort de 10 milliards d'euros : qui le supporterait selon la décision prise ?</title>
-<desc id="qp-exp-d">Deux panneaux. A : pour un effort de 10 milliards d'euros réparti au prorata de chaque poste, la part du revenu disponible net que représenterait ce montant pour chaque dixième de niveau de vie, en 2023. Une baisse des dépenses d'enseignement pèse 2,75 % du revenu du premier dixième et 0,21 % du dernier ; une hausse des impôts sur les revenus et le patrimoine, 1,14 % du dernier ; les pensions restent entre 0,43 et 0,78 %. B : le rapport entre la décision la plus lourde et la plus légère pour un même groupe, en base 1. Il vaut ×5,5 au dernier dixième et au moins autant au premier, et descend à ×1,4 en D7-D8 : c'est là que le levier retenu différencie le moins les ménages.</desc>
+<desc id="qp-exp-d">Deux panneaux. A : pour un effort de 10 milliards d'euros réparti au prorata de chaque poste, la part du revenu disponible net que représenterait ce montant pour chaque dixième de niveau de vie, en 2023. Une baisse des dépenses d'enseignement pèse 2,75 % du revenu du premier dixième et 0,21 % du dernier ; une hausse des impôts sur les revenus et le patrimoine, 1,14 % du dernier ; les pensions restent entre 0,43 et 0,78 %. B : le rapport entre la décision la plus lourde et la plus légère pour un même groupe, en base 1. Il vaut ×5,5 au dernier dixième et au moins autant au premier, et descend à ×1,4 en D7-D8 : c'est là que le levier retenu change le moins l'exposition moyenne du dixième.</desc>
 <text x="0.0" y="22.0" font-size="13" fill="#2b2a28" text-anchor="start" font-weight="600">Un même effort de 10 milliards d'euros : qui le supporterait, selon la décision prise ?</text>
 <text x="0.0" y="48.0" font-size="12" fill="#2b2a28" text-anchor="start" font-weight="600">A · Montant imputé au groupe, en % de son revenu disponible net</text>
 <text x="0.0" y="64.0" font-size="11" fill="#898781" text-anchor="start">Effort réparti au prorata des montants existants de chaque poste · dixièmes de niveau de vie, 2023</text>
@@ -110,12 +110,17 @@
 <text x="519.1" y="432.7" font-size="10" fill="#52514e" text-anchor="middle">×5,5</text>
 <text x="519.1" y="520.0" font-size="11" fill="#898781" text-anchor="middle">D10</text>
 <text x="369.7" y="538.0" font-size="11" fill="#52514e" text-anchor="middle">D7-D8 : dispersion minimale entre les trois leviers</text>
-<text x="369.7" y="552.0" font-size="11" fill="#52514e" text-anchor="middle">le levier choisi y différencie le moins les ménages</text>
-<line x1="0" y1="566.0" x2="720" y2="566.0" stroke="#e1e0d9" stroke-width="1"/>
-<text x="0" y="579.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Insee, comptes nationaux distribués, tableau CND.101 (millésime 2023, base 2020) · France, dixièmes de niveau de vie usuel</text>
-<text x="0" y="591.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Profil d'exposition, non une simulation : ni comportement, ni effet en retour. Une baisse de service valorisé n'est pas une perte de revenu monétaire.</text>
-<text x="0" y="603.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Point D1 des impôts écarté : l'impôt sur le revenu du premier vingtième y pèse 60 % du poste quand les vingtièmes voisins sont à zéro, et varie de 1 à 2,9 selon le millésime.</text>
-<text x="0" y="615.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">D1 porte « ≥ » : l'écart y est calculé sur les deux leviers conservés — c'est une borne inférieure, un troisième point ne pourrait que l'élever.</text>
-<text x="0" y="627.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#52514e">Le creux se situe en D7 ou D8 sur les quatre millésimes 2020-2023, et dans la même zone avec trois mesures de dispersion.</text>
-<text x="0" y="639.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/qui-paie-la-dette-publique/</text>
+<text x="369.7" y="552.0" font-size="11" fill="#52514e" text-anchor="middle">le levier y change le moins l'exposition moyenne du dixième</text>
+<line x1="0" y1="566.0" x2="720" y2="566.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="581.0" font-size="11" fill="#52514e">Insee, comptes nationaux distribués, tableau CND.101 (millésime 2023, base 2020) · France, dixièmes de niveau de vie</text>
+<text class="pied-source" x="0" y="595.0" font-size="11" fill="#52514e">usuel</text>
+<text class="pied-note" x="0" y="609.0" font-size="11" fill="#52514e">Profil d'exposition, non une simulation : ni comportement, ni effet en retour. Une baisse de service valorisé n'est</text>
+<text class="pied-note" x="0" y="623.0" font-size="11" fill="#52514e">pas une perte de revenu monétaire.</text>
+<text class="pied-note" x="0" y="637.0" font-size="11" fill="#52514e">Point D1 des impôts écarté : l'impôt sur le revenu du premier vingtième y pèse 60 % du poste quand les vingtièmes</text>
+<text class="pied-note" x="0" y="651.0" font-size="11" fill="#52514e">voisins sont à zéro, et varie de 1 à 2,9 selon le millésime.</text>
+<text class="pied-note" x="0" y="665.0" font-size="11" fill="#52514e">D1 porte « ≥ » : l'écart y est calculé sur les deux leviers conservés — c'est une borne inférieure, un troisième point</text>
+<text class="pied-note" x="0" y="679.0" font-size="11" fill="#52514e">ne pourrait que l'élever.</text>
+<text class="pied-note" x="0" y="693.0" font-size="11" fill="#52514e">Le creux se situe en D7 ou D8 sur les quatre millésimes 2020-2023, et dans la même zone avec trois mesures de</text>
+<text class="pied-note" x="0" y="707.0" font-size="11" fill="#52514e">dispersion.</text>
+<text class="pied-licence" x="0" y="721.0" font-size="11" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/qui-paie-la-dette-publique/</text>
 </svg>

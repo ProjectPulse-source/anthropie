@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 667" role="img" font-variant-numeric="tabular-nums" aria-labelledby="qp-red-m-t qp-red-m-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="qp-red-m-t">Taxes and contributions, and public transfers, by standard-of-living decile, 2023</title><desc id="qp-red-m-d">Bars by standard-of-living decile, in 2023, in thousand euros per consumption unit. Above zero, transfers received (cash benefits and in-kind transfers): from 27.1 for the first decile to 31.4 for the last. Below zero, taxes and contributions: from 6.4 to 89.8.</desc>
+<rect width="300" height="667" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#2b2a28">Taxes and contributions, and</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#2b2a28">public transfers, by</text>
+<text x="0" y="64" font-size="17" font-weight="600" fill="#2b2a28">standard-of-living decile,</text>
+<text x="0" y="86" font-size="17" font-weight="600" fill="#2b2a28">2023</text>
+<text x="0.0" y="130.0" font-size="13.5" fill="#898781" text-anchor="start">€ thousand per consumption unit (CU)</text>
+<rect x="0" y="142.0" width="12" height="12" fill="#eb6834"/>
+<text x="18.0" y="152.0" font-size="13.5" fill="#52514e" text-anchor="start">Taxes and contributions paid (left)</text>
+<rect x="0" y="162.0" width="12" height="12" fill="#184f95"/>
+<text x="18.0" y="172.0" font-size="13.5" fill="#52514e" text-anchor="start">Cash benefits received (right)</text>
+<rect x="0" y="182.0" width="12" height="12" fill="#898781"/>
+<text x="18.0" y="192.0" font-size="13.5" fill="#52514e" text-anchor="start">Valued public services received</text>
+<text x="0.0" y="219.0" font-size="13.5" fill="#898781" text-anchor="start">D1</text>
+<rect x="214.9" y="208.0" width="13.7" height="13" fill="#eb6834"/>
+<rect x="228.6" y="208.0" width="17.2" height="13" fill="#184f95"/>
+<rect x="245.8" y="208.0" width="41.0" height="13" fill="#898781"/>
+<text x="0.0" y="241.0" font-size="13.5" fill="#898781" text-anchor="start">D2</text>
+<rect x="209.8" y="230.0" width="18.9" height="13" fill="#eb6834"/>
+<rect x="228.6" y="230.0" width="22.7" height="13" fill="#184f95"/>
+<rect x="251.4" y="230.0" width="44.0" height="13" fill="#898781"/>
+<text x="0.0" y="263.0" font-size="13.5" fill="#898781" text-anchor="start">D3</text>
+<rect x="203.1" y="252.0" width="25.5" height="13" fill="#eb6834"/>
+<rect x="228.6" y="252.0" width="25.1" height="13" fill="#184f95"/>
+<rect x="253.7" y="252.0" width="37.3" height="13" fill="#898781"/>
+<text x="0.0" y="285.0" font-size="13.5" fill="#898781" text-anchor="start">D4</text>
+<rect x="196.2" y="274.0" width="32.4" height="13" fill="#eb6834"/>
+<rect x="228.6" y="274.0" width="24.7" height="13" fill="#184f95"/>
+<rect x="253.3" y="274.0" width="36.9" height="13" fill="#898781"/>
+<text x="0.0" y="307.0" font-size="13.5" fill="#898781" text-anchor="start">D5</text>
+<rect x="189.6" y="296.0" width="39.0" height="13" fill="#eb6834"/>
+<rect x="228.6" y="296.0" width="25.7" height="13" fill="#184f95"/>
+<rect x="254.4" y="296.0" width="32.2" height="13" fill="#898781"/>
+<text x="0.0" y="329.0" font-size="13.5" fill="#898781" text-anchor="start">D6</text>
+<rect x="182.5" y="318.0" width="46.1" height="13" fill="#eb6834"/>
+<rect x="228.6" y="318.0" width="27.0" height="13" fill="#184f95"/>
+<rect x="255.7" y="318.0" width="32.2" height="13" fill="#898781"/>
+<text x="0.0" y="351.0" font-size="13.5" fill="#898781" text-anchor="start">D7</text>
+<rect x="173.5" y="340.0" width="55.1" height="13" fill="#eb6834"/>
+<rect x="228.6" y="340.0" width="27.5" height="13" fill="#184f95"/>
+<rect x="256.1" y="340.0" width="31.5" height="13" fill="#898781"/>
+<text x="0.0" y="373.0" font-size="13.5" fill="#898781" text-anchor="start">D8</text>
+<rect x="160.6" y="362.0" width="68.0" height="13" fill="#eb6834"/>
+<rect x="228.6" y="362.0" width="28.7" height="13" fill="#184f95"/>
+<rect x="257.4" y="362.0" width="27.9" height="13" fill="#898781"/>
+<text x="0.0" y="395.0" font-size="13.5" fill="#898781" text-anchor="start">D9</text>
+<rect x="140.5" y="384.0" width="88.2" height="13" fill="#eb6834"/>
+<rect x="228.6" y="384.0" width="31.3" height="13" fill="#184f95"/>
+<rect x="260.0" y="384.0" width="29.2" height="13" fill="#898781"/>
+<text x="0.0" y="417.0" font-size="13.5" fill="#898781" text-anchor="start">D10</text>
+<rect x="36.0" y="406.0" width="192.6" height="13" fill="#eb6834"/>
+<rect x="228.6" y="406.0" width="39.7" height="13" fill="#184f95"/>
+<rect x="268.3" y="406.0" width="27.7" height="13" fill="#898781"/>
+<line x1="228.6" y1="204.0" x2="228.6" y2="428.0" stroke="#52514e" stroke-width="1.2"/>
+<text x="0.0" y="444.0" font-size="13.5" fill="#898781" text-anchor="start">D1: least well-off 10% · D10: best-off</text>
+<text x="0.0" y="462.0" font-size="13.5" fill="#898781" text-anchor="start">10%</text>
+<text x="0.0" y="488.0" font-size="13.5" fill="#52514e" text-anchor="start">D1</text>
+<text x="42.0" y="488.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">receives 27.1 · pays 6.4</text>
+<text x="0.0" y="510.0" font-size="13.5" fill="#52514e" text-anchor="start">D10</text>
+<text x="42.0" y="510.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">receives 31.4 · pays 89.8</text>
+<line x1="0" y1="526.0" x2="300" y2="526.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="547.0" font-size="13.5" fill="#52514e">Insee, distributional national</text>
+<text class="pied-source" x="0" y="564.0" font-size="13.5" fill="#52514e">accounts 2023 (Insee Analyses no. 118,</text>
+<text class="pied-source" x="0" y="581.0" font-size="13.5" fill="#52514e">figure 1c)</text>
+<text class="pied-note" x="0" y="602.0" font-size="13.5" fill="#52514e">Imputation conventions; does not</text>
+<text class="pied-note" x="0" y="619.0" font-size="13.5" fill="#52514e">measure the incidence of the debt.</text>
+<text class="pied-licence" x="0" y="640.0" font-size="13.5" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="657.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+</svg>

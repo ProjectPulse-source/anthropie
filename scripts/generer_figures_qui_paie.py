@@ -56,6 +56,8 @@ import sys
 from datetime import date
 from pathlib import Path
 
+import pied_figure as PF
+
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
 
@@ -76,6 +78,21 @@ XLSX_CND_SHA256 = "8e4d2ec005e9351f7105c796ac2e0ae8afc1f53b70b165d04f9387ed8cf83
 XLSX_CND_URL = "https://www.insee.fr/fr/statistiques/8574663"
 CND_ANNEES = ("2020", "2021", "2022", "2023")
 EFFORT_MDEUR = 10.0
+
+# Phase B du volet 3 (11/10/2026, contre-expertise OPTIMUM-19) : une décision réelle et datée, et les créanciers
+# indirects. Trois pièces archivées dans scripts/sources_dette/ (SHA256SUMS), LUES ici : la page n'écrit aucun de
+# leurs chiffres à la main, et une pièce remplacée sans que l'empreinte suive arrête la génération.
+SRC_DETTE = REPO / "scripts" / "sources_dette"
+PIECE_PLFSS = (SRC_DETTE / "PLFSS_2026_projet_n1907.pdf",
+               "0660a073102c0335871ff2bcf5e50bc11e667cfb7547edbdcc30ed68e09cd051",
+               "https://www.assemblee-nationale.fr/dyn/17/textes/l17b1907_projet-loi.pdf")
+PIECE_INSTR = (SRC_DETTE / "Instruction_DSS_2025-174_revalorisation_pensions_2026.pdf",
+               "12e1e1c97c357912a72b509f92e662687de77faf4b09634c09471a5364a00b19",
+               "https://legislation.lassuranceretraite.fr/Pdf/instruction_ministerielle_2025_174_15122025.pdf")
+PIECE_TRESOR = (SRC_DETTE / "Tresor-Eco_378_epargne_menages_2026-01-08.html",
+                "a9505f1f750dde3b15616b24a44ad6f87e38b02ede3730ec3b9ade7a45c6c2f1",
+                "https://www.tresor.economie.gouv.fr/Articles/2026/01/08/"
+                "que-finance-l-epargne-financiere-des-menages-francais")
 
 # DATE DE RELEVÉ DES SOURCES, publiée dans la citation prête à copier du bloc
 # « Réutiliser ». Elle était écrite à la main et ne s'appuyait sur RIEN : le XLSX
@@ -172,6 +189,15 @@ def periode_en(p: str) -> str:
     return "end of " + m.group(1)
 
 
+def trimestre_en(p: str) -> str:
+    """'1er trimestre 2026' -> 'Q1 2026'. Forme inconnue = arrêt."""
+    import re
+    m = re.fullmatch(r"(\d)(?:er|e) trimestre (\d{4})", p)
+    if not m:
+        fail("trimestre %r : aucune forme anglaise connue" % p)
+    return "Q%s %s" % m.groups()
+
+
 def age_en(g: str) -> str:
     """'18-29 ans' -> '18-29' ; '65 ans ou plus' -> '65 or over'."""
     import re
@@ -222,13 +248,17 @@ def etiquettes_directes(x: float, bouts: list, y_min: float, y_max: float,
     return out
 
 
-def cartouche(y0: float, lignes: list[tuple[str, str]]) -> list[str]:
-    out = ['<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="1"/>'
-           % (y0, W, y0, GRID)]
-    for i, (s, col) in enumerate(lignes):
-        out.append('<text x="0" y="%.1f" font-family="%s" font-size="9" fill="%s">%s</text>'
-                   % (y0 + 13 + i * 12, FONT, col, esc(s)))
-    return out
+def blocs_pied(lignes: list[tuple[str, str]]) -> list[tuple[str, str, str]]:
+    """Lignes (texte, couleur) dans l'ordre source, précaution(s), licence -> blocs classés de pied_figure."""
+    return [(s, col, "pied-source" if i == 0 else "pied-licence" if i == len(lignes) - 1 else "pied-note")
+            for i, (s, col) in enumerate(lignes)]
+
+
+def pied_qp(e: list[str], y0: float, lignes: list[tuple[str, str]]) -> tuple[str, int]:
+    """Pied commun (pied_figure, 11 px, renvoi à la ligne) à la place de l'ancien cartouche en 9 px, soit
+    environ 4 px affichés sur un téléphone de 390 px (défaut D3 de la phase A du volet 3). Hauteur suivie."""
+    svg = PF.pied(e, y0, W, blocs_pied(lignes), GRID)
+    return svg + "\n", int(float(PF.hauteur(svg, W)))
 
 
 def entete(h: float, ident: str, titre: str, desc: str) -> list[str]:
@@ -266,12 +296,19 @@ def lire_registre() -> dict:
         fail("sous-secteurs %s Md€ contre un total de %s Md€" % (somme, total_txt))
     if abs(sum(d["pct"] for d in det) - 100) > 0.05:
         fail("les parts des détenteurs ne somment pas à 100")
+    # D2 (phase A du volet 3) : la date de la répartition des porteurs était écrite en dur à trois endroits du
+    # générateur et dans la prose ; elle est lue dans la ligne de source du registre, la seule qui la porte.
+    import re
+    per = [m.group(1) for s in info["sources"]
+           for m in [re.match(r"Détenteurs :.*?(\d(?:er|e) trimestre \d{4})", s)] if m]
+    if len(per) != 1:
+        fail("registre : date de la répartition des porteurs illisible dans les sources (%r)" % info["sources"])
     ff = reg["grandeurs"]["foyers_fiscaux"]
     foyers = float(str(ff["valeur_imprimee"]).replace(",", "."))
     if not 30 < foyers < 50:
         fail("foyers fiscaux hors plage plausible : %s millions" % foyers)
     return {"ss": ss, "det": det, "total": total, "total_txt": total_txt,
-            "periode_a": periode_a, "sources": info["sources"],
+            "periode_a": periode_a, "sources": info["sources"], "det_periode": per[0],
             "foyers": {"millions": foyers, "periode": ff["periode"],
                        "periode_en": ff.get("periode_en", ""),
                        "source": ff["source_citee"], "url": ff.get("url_source", "")},
@@ -359,7 +396,9 @@ def lire_cnd(d_ia118: dict) -> dict:
 
     postes = {"csg": "Contribution sociale", "ir": "Impôt sur le revenu",
               "autres": "Autres impôts sur les revenus", "pensions": "Pensions de retraite",
-              "enseignement": "Enseignement", "rdn": "Revenu disponible net (RDN)"}
+              "enseignement": "Enseignement", "rdn": "Revenu disponible net (RDN)",
+              # Épreuve du levier « consommation » (OPTIMUM-20 et panel « après », 11/10) : hors figure, testée seulement.
+              "produits": "Taxes sur les produits"}
 
     def lire_an(an: str) -> tuple[dict, dict]:
         vals, rangs = {}, {}
@@ -450,7 +489,7 @@ def lire_cnd(d_ia118: dict) -> dict:
     if not (ir[0] > 0.5 and ir[1] + ir[2] < 0.2):
         fail("l'impôt sur le revenu du premier vingtième n'est plus atypique (V1 %.1f, "
              "V2+V3 %.1f) : l'écartement du point D1 du scénario fiscal n'a plus de motif, "
-             "la figure et son cartouche doivent être refaits" % (ir[0], ir[1] + ir[2]))
+             "la figure et son pied doivent être refaits" % (ir[0], ir[1] + ir[2]))
     if not (p23["enseignement"][0] > p23["pensions"][0]
             and p23["fiscal"][9] > p23["enseignement"][9]):
         fail("l'inversion que la figure démontre n'est plus dans les données : "
@@ -495,6 +534,108 @@ def lire_cnd(d_ia118: dict) -> dict:
              "millésime, et la figure ne peut plus l'affirmer"
              % "; ".join("%s / %s -> %s" % (a, m, d) for (a, m), d in hors_zone.items()))
 
+    # TESTS DU CREUX (contre-expertise OPTIMUM-19 § 2, phase B du volet 3). Le calcul publié ne change pas ; trois
+    # épreuves et un contrôle d'algèbre le bordent, et chacune porte une phrase de la page — d'où une garde chacune.
+    #   T1  vingtièmes : le minimum reste-t-il dans la zone de D7-D8 (V13-V16) quand on ne regroupe plus par deux ?
+    #   T2  variantes EXPLICITEMENT HYPOTHÉTIQUES, moins proportionnelles : un impôt plus progressif (au prorata du
+    #       carré du poste), des pensions épargnées pour D1-D3. Où le creux va-t-il ?
+    #   T3  paires de leviers : quel rapprochement fait le minimum global ?
+    #   Dénominateur : le rapport le plus lourd / le plus léger ne dépend pas du revenu de référence, commun aux trois
+    #   leviers d'un même groupe ; la page disait l'inverse (« un autre dénominateur déplacerait les croisements »).
+    def masses(an: str, par_dix: bool) -> tuple[dict, list]:
+        v = brut[an][0]
+        m = {"fiscal": [v["csg"][i] + v["ir"][i] + v["autres"][i] for i in range(20)],
+             "pensions": v["pensions"], "enseignement": v["enseignement"]}
+        rdn = v["rdn"]
+        return ({k: dix(x) for k, x in m.items()}, dix(rdn)) if par_dix else (m, rdn)
+
+    def rapports(m: dict, rdn: list, poids: dict, exclus: set, cles=("fiscal", "pensions", "enseignement")) -> list:
+        n = len(rdn)
+        e = {}
+        for k in cles:
+            w = poids.get(k, m[k])
+            e[k] = [EFFORT_MDEUR * w[i] / sum(w) / rdn[i] for i in range(n)]
+        out = []
+        for i in range(n):
+            vals = [e[k][i] for k in cles if (k, i) not in exclus]
+            out.append(max(vals) / min(vals) if min(vals) > 0 else float("inf"))
+        return out
+
+    def argmin(r: list, debut: int = 0) -> int:
+        return debut + r[debut:].index(min(r[debut:]))
+
+    tests = {"t1_vingtieme_min": {}, "t2_impot_progressif": {}, "t2_pensions_d1_d3_epargnees": {},
+             "t3_paires": {}, "denominateur_ecart_max": 0.0,
+             # OPTIMUM-20 (11/10) : écart ABSOLU en points de revenu ; trois répartitions non proportionnelles de la
+             # baisse d'enseignement ; un quatrième levier, les taxes sur les produits (TVA…), réparti de même.
+             "absolu_min": {}, "ens_meme_montant": {}, "ens_carre": {}, "ens_d1_d3_epargnes": {},
+             "quatre_leviers_min": {}, "tva_d1": {}, "tva_d10": {}}
+    for an in CND_ANNEES:
+        m20, r20 = masses(an, False)
+        v1 = argmin(rapports(m20, r20, {}, {("fiscal", 0)}))
+        tests["t1_vingtieme_min"][an] = v1 + 1
+        m10, r10 = masses(an, True)
+        ex = {("fiscal", 0)}
+        tests["t2_impot_progressif"][an] = "D%d" % (argmin(rapports(
+            m10, r10, {"fiscal": [x * x for x in m10["fiscal"]]}, ex), 1) + 1)
+        tests["t2_pensions_d1_d3_epargnees"][an] = "D%d" % (argmin(rapports(
+            m10, r10, {"pensions": [0 if i < 3 else x for i, x in enumerate(m10["pensions"])]}, ex), 3) + 1)
+        paires = {}
+        for a, b in (("fiscal", "enseignement"), ("fiscal", "pensions"), ("enseignement", "pensions")):
+            r = rapports(m10, r10, {}, ex, (a, b))
+            paires[a + "/" + b] = "D%d" % (argmin(r, 1 if "fiscal" in (a, b) else 0) + 1)
+        tests["t3_paires"][an] = paires
+        expos = {k: [EFFORT_MDEUR * m10[k][i] / sum(m10[k]) / r10[i] for i in range(10)] for k in m10}
+        absolu = [max(expos[k][i] for k in expos if (k, i) not in ex) - min(expos[k][i] for k in expos if (k, i) not in ex)
+                  for i in range(10)]
+        tests["absolu_min"][an] = "D%d" % (argmin(absolu) + 1)
+        ens = m10["enseignement"]
+        for cle_t, w, debut in (("ens_meme_montant", [1.0] * 10, 1), ("ens_carre", [x * x for x in ens], 1),
+                                ("ens_d1_d3_epargnes", [0 if i < 3 else x for i, x in enumerate(ens)], 3)):
+            tests[cle_t][an] = "D%d" % (argmin(rapports(m10, r10, {"enseignement": w}, ex), debut) + 1)
+        prod = dix(brut[an][0]["produits"])
+        m4 = dict(m10, produits=prod)
+        tests["quatre_leviers_min"][an] = "D%d" % (argmin(rapports(
+            m4, r10, {}, ex, ("fiscal", "pensions", "enseignement", "produits")), 1) + 1)
+        tests["tva_d1"][an] = 100 * EFFORT_MDEUR * prod[0] / sum(prod) / r10[0]
+        tests["tva_d10"][an] = 100 * EFFORT_MDEUR * prod[9] / sum(prod) / r10[9]
+        uns = [1.0] * 10
+        ecart = max(abs(x - y) for x, y in zip(rapports(m10, r10, {}, ex), rapports(m10, uns, {}, ex)))
+        tests["denominateur_ecart_max"] = max(tests["denominateur_ecart_max"], ecart)
+    if not all(13 <= v <= 16 for v in tests["t1_vingtieme_min"].values()):
+        fail("T1 : en vingtièmes, le minimum sort de la zone de D7-D8 (V13-V16) : %s — la page ne peut plus dire "
+             "que le creux survit à la désagrégation" % tests["t1_vingtieme_min"])
+    fe = {p["fiscal/enseignement"] for p in tests["t3_paires"].values()}
+    if len(fe) != 1 or not fe <= {"D7", "D8"}:
+        fail("T3 : les courbes de l'impôt et de l'enseignement ne se rapprochent plus au même dixième de D7-D8 "
+             "selon les millésimes (%s) : la page ne peut plus dire où elles se croisent" % sorted(fe))
+    prog = set(tests["t2_impot_progressif"].values())
+    if len(prog) != 1 or prog <= {"D7", "D8"}:
+        fail("T2 : avec un impôt plus progressif, le creux ne se déplace plus d'un même pas hors de D7-D8 (%s)"
+             % sorted(prog))
+    if not set(tests["t2_pensions_d1_d3_epargnees"].values()) <= {"D7", "D8"}:
+        fail("T2 : en épargnant les pensions de D1-D3, le creux sort de D7-D8 (%s) : la page dit qu'il y reste"
+             % tests["t2_pensions_d1_d3_epargnees"])
+    if tests["denominateur_ecart_max"] > 1e-9:
+        fail("le rapport entre leviers dépend du dénominateur (écart %.2e) : la page dit le contraire"
+             % tests["denominateur_ecart_max"])
+    zone = {"D7", "D8"}
+    for cle_t, phrase in (("absolu_min", "mesuré en points de revenu, l'écart entre leviers est le plus faible en D7-D8"),
+                          ("ens_meme_montant", "un même montant de baisse d'enseignement par dixième laisse le creux en D7-D8"),
+                          ("ens_carre", "une baisse d'enseignement concentrée là où la dépense est forte laisse le creux en D7-D8"),
+                          ("quatre_leviers_min", "avec les taxes sur les produits pour quatrième levier, le creux reste en D7-D8")):
+        if not set(tests[cle_t].values()) <= zone:
+            fail("OPTIMUM-20 : la page dit que %s ; les données donnent %s" % (phrase, tests[cle_t]))
+    if not set(tests["ens_d1_d3_epargnes"].values()) <= {"D7", "D8", "D9"}:
+        fail("OPTIMUM-20 : en épargnant l'enseignement de D1-D3, le creux sort de D7-D9 (%s)" % tests["ens_d1_d3_epargnes"])
+    if not all(tests["tva_d1"][an] > 2 * tests["tva_d10"][an] for an in CND_ANNEES):
+        fail("la page dit qu'une hausse des taxes sur les produits pèserait plus du double en part du revenu pour les "
+             "10 %% les plus modestes que pour les plus aisés : %s / %s" % (tests["tva_d1"], tests["tva_d10"]))
+    tests["tva_d1"] = {an: round(v, 3) for an, v in tests["tva_d1"].items()}
+    tests["tva_d10"] = {an: round(v, 3) for an, v in tests["tva_d10"].items()}
+    tests["t3_impot_enseignement"] = fe.pop()
+    tests["t2_impot_progressif_creux"] = prog.pop()
+
     creux_partout = sorted({v["creux_en"] for v in stab.values()})
     # Poids de la cellule atypique dans le poste fiscal du premier dixième, et son
     # amplitude sur les quatre millésimes : les deux chiffres du cartouche, calculés
@@ -510,7 +651,63 @@ def lire_cnd(d_ia118: dict) -> dict:
             "ir_v1_par_an": ir_par_an,
             "ir_v1_amplitude": max(ir_par_an.values()) / min(ir_par_an.values()),
             "masse_d1_d5": p23["_masse_d1_d5"],
-            "temoin_croise_mdeur": round(ecart, 2), "sha256": sha}
+            "temoin_croise_mdeur": round(ecart, 2), "sha256": sha, "tests": tests}
+
+
+def lire_pieces() -> dict:
+    """Décision réelle datée et créanciers indirects (phase B du volet 3). Chaque chiffre que la page en tire est lu
+    ici dans la pièce archivée ; l'empreinte arrête tout si la pièce change.
+
+    - PLFSS 2026, projet n° 1907, article 44, IV, 1° : coefficient de revalorisation des pensions de base « égal à un »
+      pour 2026 — le gel envisagé ;
+    - instruction interministérielle du 15/12/2025 : coefficient appliqué au 1er janvier 2026 et taux qu'elle en
+      déduit, « conformément au droit en vigueur » — le gel n'est pas dans le droit appliqué ;
+    - Trésor-Éco n° 378 (08/01/2026) : sur 10 € de patrimoine financier des ménages, la part qui finance la dette
+      des administrations publiques, après mise en transparence des intermédiaires."""
+    import io
+    import re
+    import html as _html
+    import pypdf
+
+    def ouvrir(piece) -> bytes:
+        p, sha, _url = piece
+        if not p.is_file():
+            fail("pièce absente : %s" % p)
+        b = p.read_bytes()
+        if hashlib.sha256(b).hexdigest() != sha:
+            fail("empreinte changée : %s — relire la pièce, puis mettre à jour l'empreinte ici et dans SHA256SUMS"
+                 % p.name)
+        return b
+
+    def pdf(b: bytes) -> str:
+        return re.sub(r"\s+", " ", " ".join(pg.extract_text() or "" for pg in pypdf.PdfReader(io.BytesIO(b)).pages))
+
+    projet = re.sub(r"\s+", "", pdf(ouvrir(PIECE_PLFSS)))
+    m = re.search(r"Article44I\..*?lespensionsderetraiteserviesparlesrégimesobligatoiresdebase.*?"
+                  r"1°Egalàunpourl.année(\d{4})", projet)
+    if not m:
+        fail("PLFSS 2026 : le gel des pensions de base (article 44, IV, 1°) n'est pas lu dans la pièce")
+    an_gel = m.group(1)
+    instr = pdf(ouvrir(PIECE_INSTR))
+    m = re.search(r"coefficient de (1,\d+) au 1 ?er janvier (\d{4}), soit un taux de (\d+(?:,\d+)?) ?%", instr)
+    if not m:
+        fail("instruction du 15/12/2025 : coefficient et taux de revalorisation illisibles")
+    coef, an_reval, taux = m.groups()
+    if abs((float(coef.replace(",", ".")) - 1) * 100 - float(taux.replace(",", "."))) > 1e-9 or an_reval != an_gel:
+        fail("instruction : coefficient %s, taux %s %%, année %s contre gel envisagé pour %s" % (coef, taux, an_reval,
+                                                                                               an_gel))
+    if "conformément au droit en vigueur" not in instr:
+        fail("instruction : la revalorisation n'est plus dite « conformément au droit en vigueur »")
+    page = re.sub(r"\s+", " ", _html.unescape(re.sub(r"<[^>]+>", " ", ouvrir(PIECE_TRESOR).decode("utf-8"))))
+    m = re.search(r"[Pp]our (\d+) € de patrimoine financier des ménages,.*?dont (\d+) € de dette des administrations "
+                  r"publiques \(en majorité françaises\)", page)
+    n = re.search(r"Trésor-Éco n° (\d+)", page)
+    d = re.search(r"Publié le (\d+) janvier (\d{4})", page)
+    if not (m and n and d):
+        fail("Trésor-Éco : la part de la dette publique dans le patrimoine financier des ménages n'est plus lue")
+    return {"pens_coef": coef, "pens_taux": taux, "pens_annee": an_reval,
+            "tresor_sur": m.group(1), "tresor_dette": m.group(2), "tresor_numero": n.group(1),
+            "url_plfss": PIECE_PLFSS[2], "url_instr": PIECE_INSTR[2], "url_tresor": PIECE_TRESOR[2]}
 
 
 # ------------------------------------------------------------------ F1
@@ -582,8 +779,9 @@ def svg_detention(r: dict, lang: str = "fr") -> tuple[str, int]:
     corps.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="1"/>'
                  % (y, W, y, AXIS))
     y += 28
-    corps.append(txt(0, y, S("B · Qui détient les titres négociables de l'État ? 1er trimestre 2026",
-                             "B · Who holds central-government marketable securities? Q1 2026"),
+    corps.append(txt(0, y, S("B · Qui détient les titres négociables de l'État ? " + r["det_periode"],
+                             "B · Who holds central-government marketable securities? "
+                             + trimestre_en(r["det_periode"])),
                      TY_ANNOT, INK, weight="600"))
     corps.append(txt(0, y + 16, S("Valeur de marché, en % · classement par résidence du détenteur, "
                                   "non par nationalité",
@@ -622,24 +820,26 @@ def svg_detention(r: dict, lang: str = "fr") -> tuple[str, int]:
     h = int(y + 13 + 12 * 3 + 8)
     if lang == "fr":
         desc = ("Deux panneaux séparés, sans lien de proportion entre eux. A, en valeur nominale : "
-                + "; ".join("%s %s Md€" % (s["libelle"], fr(s["mdeur"])) for s in ss)
+                + "; ".join("%s %s Md€ (%s %%)" % (s["libelle"], fr(s["mdeur"]), fr(100 * s["mdeur"] / total))
+                            for s in ss)
                 + ", sur %s Md€, %s. B, en valeur de marché, porteurs des titres négociables de "
-                  "l'État au 1er trimestre 2026 : " % (r["total_txt"], r["periode_a"])
+                  "l'État au %s : " % (r["total_txt"], r["periode_a"], r["det_periode"])
                 + "; ".join("%s %s %%" % (noms.get(d["libelle"], d["libelle"]).rstrip(" *"),
                                            fr(d["pct"], 1)) for d in det) + ".")
     else:
         desc = ("Two separate panels, with no proportional link between them. A, at nominal "
                 "value: "
-                + "; ".join("%s €%sbn" % (libelle_en(SS_EN, s["libelle"]), en(s["mdeur"]))
-                            for s in ss)
+                + "; ".join("%s €%sbn (%s%%)" % (libelle_en(SS_EN, s["libelle"]), en(s["mdeur"]),
+                                                  en(100 * s["mdeur"] / total)) for s in ss)
                 + ", out of €%sbn, %s. B, at market value, holders of central-government marketable "
-                  "securities in Q1 2026: " % (en(total, 1), periode_en(r["periode_a"]))
+                  "securities in %s: " % (en(total, 1), periode_en(r["periode_a"]),
+                                          trimestre_en(r["det_periode"]))
                 + "; ".join("%s %s%%" % (noms[d["libelle"]].rstrip(" *"), en(d["pct"], 1))
                             for d in det) + ".")
     e += entete(h, "qp-det", S("Qui emprunte ? Qui détient les titres de l'État ?",
                                "Who borrows? Who holds French government securities?"), desc)
     e += corps
-    e += cartouche(y, [
+    return pied_qp(e, y, [
         (S("A : INSEE, Informations rapides n° 79 (27/03/2026), dette de Maastricht par "
            "sous-secteur · B : Banque de France, via l'AFT",
            "A: INSEE, Informations rapides no. 79 (27 March 2026), Maastricht debt by subsector "
@@ -650,8 +850,6 @@ def svg_detention(r: dict, lang: str = "fr") -> tuple[str, int]:
            "Holding securities does not measure the final burden."), INK2),
         (S("Compilation Stéphane Lalut, CC BY 4.0 · " + URL_PAGE,
            "Compiled by Stéphane Lalut, CC BY 4.0 · " + URL_PAGE_EN), MUTED)])
-    e.append("</svg>")
-    return "\n".join(e) + "\n", h
 
 
 # ------------------------------------------------------------------ F2
@@ -742,7 +940,7 @@ def svg_redistribution(d: dict, lang: str = "fr") -> tuple[str, int]:
                               "Taxes and contributions, and public transfers, by "
                               "standard-of-living decile, 2023"),
                desc) + c
-    e += cartouche(y, [
+    return pied_qp(e, y, [
         (S("Insee, comptes nationaux distribués 2023 (Insee Analyses n° 118, 16/04/2026, figure 1c) "
            "· France, euros par UC",
            "Insee, distributional national accounts 2023 (Insee Analyses no. 118, 16 April 2026, "
@@ -753,8 +951,6 @@ def svg_redistribution(d: dict, lang: str = "fr") -> tuple[str, int]:
            "incidence of the debt."), INK2),
         (S("Compilation Stéphane Lalut, CC BY 4.0 · " + URL_PAGE,
            "Compiled by Stéphane Lalut, CC BY 4.0 · " + URL_PAGE_EN), MUTED)])
-    e.append("</svg>")
-    return "\n".join(e) + "\n", h
 
 
 # ------------------------------------------------------------------ F4
@@ -781,8 +977,11 @@ def svg_solde_net(d: dict, lang: str = "fr") -> tuple[str, int]:
     def Y(v):
         return top + (vmax - v) * k
 
-    c.append(txt(0, 38, S("A · Transferts nets, en milliers d'euros par UC",
-                          "A · Net transfers, in thousand euros per CU"), TY_AXE, MUTED))
+    # OPTIMUM-20 : la convention de signe de l'Insee s'écrit DANS l'image, pas seulement dans le texte alternatif.
+    # Le sens du signe est dit à la ligne suivante, du côté des barres qu'il décrit.
+    c.append(txt(0, 38, S("A · Solde = prélèvements moins transferts reçus, en milliers d'euros par UC",
+                          "A · Balance = taxes and contributions minus transfers received, € thousand per CU"),
+                 TY_AXE, MUTED))
     # Clé de lecture DIRECTE : chaque énoncé porte la couleur des barres qu'il
     # décrit, et se pose DU CÔTÉ où elles se trouvent — les dixièmes bénéficiaires
     # nets à gauche, les contributeurs nets à droite. Une clé posée du côté opposé
@@ -841,26 +1040,35 @@ def svg_solde_net(d: dict, lang: str = "fr") -> tuple[str, int]:
     y = bas2 + 30
     h = int(y + 13 + 12 * 3 + 8)
     if lang == "fr":
-        desc = ("Deux panneaux. A : transferts nets par dixième de niveau de vie, en milliers d'euros "
-                "par unité de consommation ; en moyenne, les sept premiers dixièmes reçoivent plus qu'ils ne "
-                "versent, les trois derniers versent plus qu'ils ne reçoivent, le dernier de %s. "
-                "B : part de personnes bénéficiaires nettes, de %s %% dans le premier dixième à "
-                "%s %% dans le dernier." % (fr(net[9], 1), fr(part[0]), fr(part[9])))
+        # D1 (phase A du volet 3) : le signe est DÉFINI avant d'être lu, et le nombre de dixièmes de chaque
+        # côté est dérivé, comme en anglais — « sept » et « trois » étaient écrits en dur.
+        n_benef = sum(1 for v in net if v < 0)
+        mots_fr = ("aucun", "un", "deux", "trois", "quatre", "cinq", "six", "sept", "huit", "neuf", "dix")
+        desc = ("Deux panneaux. A : solde des transferts publics par dixième de niveau de vie, en milliers "
+                "d'euros par unité de consommation, égal à ce que le groupe verse moins ce qu'il reçoit : "
+                "négatif quand il reçoit plus qu'il ne verse. En moyenne, les %s premiers dixièmes reçoivent "
+                "plus qu'ils ne versent, le premier de %s ; les %s derniers versent plus qu'ils ne reçoivent, "
+                "le dernier de %s. B : part de personnes bénéficiaires nettes, de %s %% dans le premier "
+                "dixième à %s %% dans le dernier."
+                % (mots_fr[n_benef], fr(-net[0], 1), mots_fr[10 - n_benef], fr(net[9], 1),
+                   fr(part[0]), fr(part[9])))
     else:
         # Le nombre de dixièmes de chaque côté est DÉRIVÉ, non recopié : la garde
         # d'affichage() vérifie déjà que la bascule est unique.
         n_benef = sum(1 for v in net if v < 0)
         mots = ("zero", "one", "two", "three", "four", "five", "six", "seven", "eight",
                 "nine", "ten")
-        desc = ("Two panels. A: net transfers by standard-of-living decile, in thousand euros "
-                "per consumption unit; on average, the first %s deciles receive more than they "
-                "pay in, the last %s pay in more than they receive, the last one by %s. B: share "
-                "of people who are net beneficiaries, from %s%% in the first decile to %s%% in "
-                "the last." % (mots[n_benef], mots[10 - n_benef], en(net[9], 1), en(part[0]),
-                               en(part[9])))
+        desc = ("Two panels. A: balance of public transfers by standard-of-living decile, in thousand "
+                "euros per consumption unit, equal to what the group pays in minus what it receives: "
+                "negative when it receives more than it pays in. On average, the first %s deciles "
+                "receive more than they pay in, the first by %s; the last %s pay in more than they "
+                "receive, the last one by %s. B: share of people who are net beneficiaries, from %s%% "
+                "in the first decile to %s%% in the last."
+                % (mots[n_benef], en(-net[0], 1), mots[10 - n_benef], en(net[9], 1), en(part[0]),
+                   en(part[9])))
     e = entete(h, "qp-net", S("Contributeurs nets et bénéficiaires nets par dixième, 2023",
                               "Net contributors and net beneficiaries by decile, 2023"), desc) + c
-    e += cartouche(y, [
+    return pied_qp(e, y, [
         (S("Insee, comptes nationaux distribués 2023 (Insee Analyses n° 118, 16/04/2026, figure 2a) "
            "· France, euros par UC",
            "Insee, distributional national accounts 2023 (Insee Analyses no. 118, 16 April 2026, "
@@ -871,8 +1079,6 @@ def svg_solde_net(d: dict, lang: str = "fr") -> tuple[str, int]:
            "of one year, not of a lifetime."), INK2),
         (S("Compilation Stéphane Lalut, CC BY 4.0 · " + URL_PAGE,
            "Compiled by Stéphane Lalut, CC BY 4.0 · " + URL_PAGE_EN), MUTED)])
-    e.append("</svg>")
-    return "\n".join(e) + "\n", h
 
 
 # ------------------------------------------------------------------ F5
@@ -942,7 +1148,7 @@ def svg_age(d: dict, lang: str = "fr") -> tuple[str, int]:
     e = entete(h, "qp-age", S("Prélèvements et transferts publics par âge du ménage, 2023",
                               "Taxes and contributions, and public transfers, by household age, "
                               "2023"), desc) + c
-    e += cartouche(y, [
+    return pied_qp(e, y, [
         (S("Insee, comptes nationaux distribués 2023 (Insee Analyses n° 118, 16/04/2026, figure 1e) "
            "· groupes d'âge moyen des adultes du ménage",
            "Insee, distributional national accounts 2023 (Insee Analyses no. 118, 16 April 2026, "
@@ -953,8 +1159,6 @@ def svg_age(d: dict, lang: str = "fr") -> tuple[str, int]:
            "are counted here as transfers received."), INK2),
         (S("Compilation Stéphane Lalut, CC BY 4.0 · " + URL_PAGE,
            "Compiled by Stéphane Lalut, CC BY 4.0 · " + URL_PAGE_EN), MUTED)])
-    e.append("</svg>")
-    return "\n".join(e) + "\n", h
 
 
 # ------------------------------------------------------------------ F3
@@ -998,16 +1202,25 @@ def svg_mecanismes(lang: str = "fr") -> tuple[str, int]:
         (S("Dépenses et prestations", "Spending and benefits"),
          S("usagers, bénéficiaires : réduites, gelées, reportées",
            "users, beneficiaries: cut, frozen, postponed")),
-        ("Inflation", S("détenteurs de créances et de revenus mal indexés",
-                        "holders of claims and of poorly indexed incomes")),
+        (S("Inflation non anticipée", "Unanticipated inflation"),
+         S("détenteurs de créances et de revenus mal indexés",
+           "holders of claims and of poorly indexed incomes")),
         (S("Restructuration (cas extrême)", "Restructuring (extreme case)"),
          S("porteurs des titres", "holders of the securities")),
     ]
-    y = 44
-    for tit, qui in canaux:
+    # Trois familles distinguées (contre-expertise OPTIMUM-19 § 8) : l'ajustement budgétaire ordinaire, décidé
+    # chaque année ; l'inflation non anticipée, qui ne se décide pas seule ; la restructuration, cas extrême.
+    familles = {0: S("Ajustement budgétaire ordinaire", "Ordinary budget adjustment"),
+                2: S("Effet de prix, non décidé seul", "Price effect, not decided alone"),
+                3: S("Cas extrême", "Extreme case")}
+    y = 40
+    for i, (tit, qui) in enumerate(canaux):
+        if i in familles:
+            y += 14
+            c.append(txt(300, y - 4, familles[i], TY_AXE, MUTED, weight="600"))
         c += boite(300, y, 418, 50, [(tit, TY_ANNOT, INK, True), (qui, TY_AXE, INK2, False)])
         c += fleche(200, 187, 296, y + 25)
-        y += 64
+        y += 56
     # « Renouvelle », et non « reporte » : un titre remboursé est remplacé par un titre
     # neuf, au taux du moment — l'échéance recule, la charge peut monter ou baisser.
     # « Reporte » suggérait une opération neutre qu'elle n'est pas (contre-expertise 29/09).
@@ -1017,30 +1230,32 @@ def svg_mecanismes(lang: str = "fr") -> tuple[str, int]:
                                 (S("aux taux du moment", "at current rates"), TY_AXE, INK2,
                                  False)], tiret=True)
     c += fleche(100, 150, 100, 118)
-    c += boite(1, 316, 717, 52, [(S("En regard : ce que la dette a financé",
+    c += boite(1, 326, 717, 52, [(S("En regard : ce que la dette a financé",
                                     "Alongside: what the debt has financed"), TY_ANNOT, INK, True),
                                  (S("services, prestations, investissements, soutien en crise — "
                                     "bénéfices présents et futurs",
                                     "services, benefits, investment, crisis support — present "
                                     "and future benefits"), TY_AXE, INK2, False)],
                tiret=True, fond="#f7f7f4")
-    y = 392
+    y = 402
     h = int(y + 13 + 12 * 3 + 8)
     desc = S("Schéma sans quantités. Quatre mécanismes, non exhaustifs, peuvent modifier la charge de la dette et sa répartition, et "
-             "se combinent : prélèvements (contribuables), dépenses et prestations (usagers, "
-             "bénéficiaires), inflation (détenteurs de créances et de revenus mal indexés), "
-             "restructuration, cas extrême (porteurs des titres). Le refinancement renouvelle "
+             "se combinent : l'ajustement budgétaire ordinaire, par les prélèvements (contribuables) ou par les "
+             "dépenses et prestations (usagers, bénéficiaires) ; l'inflation non anticipée, effet de prix qui ne "
+             "se décide pas seul (détenteurs de créances et de revenus mal indexés) ; la restructuration, cas "
+             "extrême (porteurs des titres). Le refinancement renouvelle "
              "l'échéance aux taux du moment et ne permet pas, à lui seul, d'identifier qui "
              "supportera la charge. En regard figure ce que la dette a financé.",
              "Diagram without quantities. Four mechanisms, not exhaustive, can change the burden "
-             "of the debt and its distribution, and they combine: taxes and contributions "
-             "(taxpayers), spending and benefits (users, beneficiaries), inflation (holders of "
-             "claims and of poorly indexed incomes), restructuring, an extreme case (holders of "
+             "of the debt and its distribution, and they combine: ordinary budget adjustment, "
+             "through taxes and contributions (taxpayers) or spending and benefits (users, "
+             "beneficiaries); unanticipated inflation, a price effect not decided alone (holders of "
+             "claims and of poorly indexed incomes); restructuring, an extreme case (holders of "
              "the securities). Refinancing rolls the maturity over at current rates and does not, "
              "on its own, identify who will bear the burden. Alongside is what the debt has "
              "financed.")
     e = entete(h, "qp-mec", titre, desc) + c
-    e += cartouche(y, [
+    return pied_qp(e, y, [
         (S("Synthèse de l'auteur · schéma non quantitatif, flèches d'égale épaisseur",
            "Author's synthesis · non-quantitative diagram, arrows of equal thickness"), INK2),
         (S("Schéma de mécanismes possibles. Aucun poids relatif ni effet causal n'est mesuré ici.",
@@ -1048,8 +1263,6 @@ def svg_mecanismes(lang: str = "fr") -> tuple[str, int]:
            "here."), INK2),
         (S("Stéphane Lalut, CC BY 4.0 · " + URL_PAGE,
            "Stéphane Lalut, CC BY 4.0 · " + URL_PAGE_EN), MUTED)])
-    e.append("</svg>")
-    return "\n".join(e) + "\n", h
 
 
 # ------------------------------------------------------------------ F6
@@ -1190,8 +1403,8 @@ def svg_exposition(c: dict, lang: str = "fr") -> tuple[str, int]:
     c_.append(txt(X(6), basB + 34, S("D7-D8 : dispersion minimale entre les trois leviers",
                                      "D7-D8: minimum dispersion across the three levers"),
                   TY_AXE, INK2, "middle"))
-    c_.append(txt(X(6), basB + 48, S("le levier choisi y différencie le moins les ménages",
-                                     "where the lever chosen differentiates households least"),
+    c_.append(txt(X(6), basB + 48, S("le levier y change le moins l'exposition moyenne du dixième",
+                                     "where the lever changes the decile's average exposure least"),
                   TY_AXE, INK2, "middle"))
     y = basB + 62
     lignes = [
@@ -1228,15 +1441,13 @@ def svg_exposition(c: dict, lang: str = "fr") -> tuple[str, int]:
                 "and wealth, %s%% of the last; pensions stay between %s and %s%%. B: the ratio "
                 "of the heaviest to the lightest decision for the same group, base 1. It is %s "
                 "in the last decile and at least as much in the first, and falls to %s in D7-D8: "
-                "that is where the lever chosen differentiates households least." % (
+                "that is where the lever chosen changes the decile's average exposure least." % (
                     en(p["enseignement"][0], 2), en(p["enseignement"][9], 2),
                     en(p["fiscal"][9], 2), en(min(p["pensions"]), 2), en(max(p["pensions"]), 2),
                     "×" + en(max(rat[0], rat[9]), 1), "×" + en(min(rat), 1)))
         e = entete(h, "qp-exp", "The same €10 billion adjustment: who would bear it, depending on "
                    "the decision taken?", desc) + c_
-        e += cartouche(y, lignes)
-        e.append("</svg>")
-        return "\n".join(e) + "\n", h
+        return pied_qp(e, y, lignes)
     desc = ("Deux panneaux. A : pour un effort de 10 milliards d'euros réparti au prorata de "
             "chaque poste, la part du revenu disponible net que représenterait ce montant pour "
             "chaque dixième de niveau de vie, en 2023. Une baisse des dépenses d'enseignement "
@@ -1244,16 +1455,407 @@ def svg_exposition(c: dict, lang: str = "fr") -> tuple[str, int]:
             "sur les revenus et le patrimoine, %s %% du dernier ; les pensions restent entre "
             "%s et %s %%. B : le rapport entre la décision la plus lourde et la plus légère pour "
             "un même groupe, en base 1. Il vaut %s au dernier dixième et au moins autant au "
-            "premier, et descend à %s en D7-D8 : c'est là que le levier retenu différencie le "
-            "moins les ménages." % (
+            "premier, et descend à %s en D7-D8 : c'est là que le levier retenu change le moins "
+            "l'exposition moyenne du dixième." % (
                 fr(p["enseignement"][0], 2), fr(p["enseignement"][9], 2), fr(p["fiscal"][9], 2),
                 fr(min(p["pensions"]), 2), fr(max(p["pensions"]), 2),
                 "×" + fr(max(rat[0], rat[9]), 1), "×" + fr(creux, 1)))
     e = entete(h, "qp-exp", "Un même effort de 10 milliards d'euros : qui le supporterait "
                "selon la décision prise ?", desc) + c_
-    e += cartouche(y, lignes)
-    e.append("</svg>")
-    return "\n".join(e) + "\n", h
+    return pied_qp(e, y, lignes)
+
+
+# ------------------------------------------------------------------ téléphone
+# Versions téléphone (phase B du volet 3, 11/10/2026 ; défaut D3 de la phase A, OPTIMUM-19 § 8) : RECOMPOSÉES pour
+# 300 de large, et non la figure détaillée réduite — à 390 px, son pied tombait à 4 px et ses dix colonnes de valeurs
+# se chevauchaient. Organe commun pied_figure (tête, pied, police jamais sous 13,5) ; servies d'office par le
+# shortcode figure-svg dès que <fichier>-m.svg existe. Rangées horizontales plutôt que colonnes : dix dixièmes
+# tiennent en hauteur, pas en largeur. Chaque valeur dessinée en gras doit figurer dans la description de la version
+# détaillée (PF.parite) : la version courte ne peut pas dire un chiffre que la longue ne dit pas.
+WM, FSM = PF.LARGEUR_M, PF.POLICE_M
+
+
+def tm(x, y, s, fill=INK2, anchor="start", weight=None, size=FSM):
+    return txt(x, y, s, size, fill, anchor, weight)
+
+
+def desc_de(svg_d: str) -> str:
+    import html as _h
+    import re
+    return _h.unescape(re.search(r"<desc[^>]*>(.*?)</desc>", svg_d, re.S).group(1))
+
+
+def pied_m(e: list[str], y: float, lignes: list[tuple[str, str]]) -> str:
+    return PF.pied_mobile(e, y, blocs_pied(lignes), GRID)
+
+
+def lignes_m(e: list[str], y: float, texte: str, fill=MUTED, weight=None, car: int = 38) -> float:
+    for l in PF.coupe(texte, car):
+        y += 18
+        e.append(tm(0, y, l, fill, weight=weight))
+    return y
+
+
+def licence_m(S) -> tuple[str, str]:
+    # Domaine seul, comme les figures téléphone des volets 1 et 2 : l'adresse complète de la page, d'un seul tenant,
+    # sortait du cadre de 300 (estimation 323 et 351).
+    return (S("Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com",
+              "Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com"), MUTED)
+
+
+def svg_detention_m(r: dict, lang: str, svg_d: str) -> str:
+    nb, S, pc = langue(lang)
+    e, y = PF.tete_mobile("qp-det-m", S("Qui emprunte ? Qui détient les titres de l'État ?",
+                                        "Who borrows? Who holds French government securities?"),
+                          desc_de(svg_d), INK, FONT)
+    total = r["total"]
+    y = lignes_m(e, y + 6, S("A · Qui emprunte ? Dette par administration, " + r["periode_a"],
+                             "A · Who borrows? Debt by level of government, " + periode_en(r["periode_a"])),
+                 INK, "600")
+    y = lignes_m(e, y, S("Valeur nominale, milliards d'euros", "Nominal value, € billion"))
+    domin = max(s["mdeur"] for s in r["ss"])
+    for s in r["ss"]:
+        y += 22
+        e.append(tm(0, y, S(s["libelle"], libelle_en(SS_EN, s["libelle"]))))
+        w = max(2.0, 150 * s["mdeur"] / domin)
+        e.append('<rect x="0" y="%.1f" width="%.1f" height="12" rx="3" fill="%s"/>' % (y + 6, w, C1))
+        fort = s["mdeur"] == domin
+        e.append(tm(w + 6, y + 17, S("%s%sMd€ · %s%s%%" % (fr(s["mdeur"]), NBSP, fr(100 * s["mdeur"] / total), NBSP),
+                                     "€%sbn · %s%%" % (en(s["mdeur"]), en(100 * s["mdeur"] / total))),
+                    C1 if fort else INK2, weight="600" if fort else None))
+        y += 18
+    y += 16
+    e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y, WM, y, AXIS))
+    y = lignes_m(e, y + 6, S("B · Qui détient les titres négociables de l'État ? " + r["det_periode"],
+                             "B · Who holds central-government marketable securities? "
+                             + trimestre_en(r["det_periode"])), INK, "600")
+    y = lignes_m(e, y, S("Valeur de marché · par résidence du détenteur, non par nationalité",
+                         "Market value · by the holder's residence, not nationality"))
+    noms = {"Autres (français)": "Autres porteurs résidents *",
+            "Établissements de crédit français": "Banques résidentes",
+            "Assureurs français": "Assureurs résidents",
+            "OPCVM français": "Fonds (OPCVM) résidents"}
+    if lang == "en":
+        noms = {k: libelle_en(DET_EN, k) for k in (x["libelle"] for x in r["det"])}
+    domin = max(x["pct"] for x in r["det"])
+    for d in r["det"]:
+        y += 22
+        e.append(tm(0, y, noms.get(d["libelle"], d["libelle"])))
+        w = max(2.0, 200 * d["pct"] / domin)
+        fort = d["pct"] == domin
+        e.append('<rect x="0" y="%.1f" width="%.1f" height="12" rx="3" fill="%s"/>' % (y + 6, w, C2))
+        e.append(tm(w + 6, y + 17, nb(d["pct"], 1) + pc, C2 if fort else INK2, weight="600" if fort else None))
+        y += 18
+    y = lignes_m(e, y + 4, S("* dont la Banque de France : part non publiée par la source.",
+                             "* including the Banque de France: share not published by the source."))
+    return pied_m(e, y + 14, [
+        (S("A : INSEE, Informations rapides n° 79 (27/03/2026) · B : Banque de France, via l'AFT",
+           "A: INSEE, Informations rapides no. 79 (27 March 2026) · B: Banque de France, via Agence France "
+           "Trésor"), INK2),
+        (S("Deux champs distincts. La détention ne mesure pas la charge finale.",
+           "Two separate scopes. Holding securities does not measure the final burden."), INK2),
+        licence_m(S)])
+
+
+def rangees(e: list[str], y: float, libelles: list[str], gauche: list[list], droite: list[list],
+            col_lib: float = 36, pas_r: float = 22) -> float:
+    """Barres DIVERGENTES par rangée, autour d'un axe commun : à gauche ce qui est versé, à droite ce qui est reçu.
+    gauche/droite : listes de segments [(valeur, couleur)] par rangée, empilés depuis l'axe."""
+    L = max(sum(v for v, _ in g) for g in gauche) or 1.0
+    R = max(sum(v for v, _ in d) for d in droite) or 1.0
+    larg = WM - col_lib - 4
+    k = larg / (L + R)
+    x0 = col_lib + L * k
+    for i, lib in enumerate(libelles):
+        yy = y + i * pas_r
+        e.append(tm(0, yy + 11, lib, MUTED))
+        x = x0
+        for v, col in gauche[i]:
+            e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="13" fill="%s"/>' % (x - v * k, yy, v * k, col))
+            x -= v * k
+        x = x0
+        for v, col in droite[i]:
+            e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="13" fill="%s"/>' % (x, yy, v * k, col))
+            x += v * k
+    fin = y + len(libelles) * pas_r
+    e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1.2"/>'
+             % (x0, y - 4, x0, fin, INK2))
+    return fin, x0
+
+
+def cle(e: list[str], y: float, items: list[tuple[str, str]]) -> float:
+    for nom, col in items:
+        y += 20
+        e.append('<rect x="0" y="%.1f" width="12" height="12" fill="%s"/>' % (y - 10, col))
+        e.append(tm(18, y, nom))
+    return y
+
+
+def svg_redistribution_m(d: dict, lang: str, svg_d: str) -> str:
+    nb, S, pc = langue(lang)
+    e, y = PF.tete_mobile("qp-red-m", S("Prélèvements et transferts publics par dixième de niveau de vie, 2023",
+                                        "Taxes and contributions, and public transfers, by standard-of-living "
+                                        "decile, 2023"), desc_de(svg_d), INK, FONT)
+    y = lignes_m(e, y + 4, S("Milliers d'euros par unité de consommation (UC)", "€ thousand per consumption unit (CU)"))
+    y = cle(e, y + 2, [(S("Prélèvements versés (à gauche)", "Taxes and contributions paid (left)"), C2),
+                       (S("Prestations en espèces reçues (à droite)", "Cash benefits received (right)"), C1),
+                       (S("Services publics valorisés reçus", "Valued public services received"), SEC)])
+    prel = [-v / 1000 for v in d["prel"][:10]]
+    esp = [v / 1000 for v in d["esp"][:10]]
+    nat = [v / 1000 for v in d["nat"][:10]]
+    y, _x0 = rangees(e, y + 16, ["D%d" % (i + 1) for i in range(10)], [[(p, C2)] for p in prel],
+                     [[(esp[i], C1), (nat[i], SEC)] for i in range(10)])
+    y = lignes_m(e, y - 2, S("D1 : 10 % les plus modestes · D10 : 10 % les plus aisés",
+                             "D1: least well-off 10% · D10: best-off 10%"))
+    y += 4
+    for i, nom in ((0, "D1"), (9, "D10")):
+        y += 22
+        e.append(tm(0, y, nom, INK2))
+        e.append(tm(42, y, S("reçoit %s · verse %s" % (nb(esp[i] + nat[i], 1), nb(prel[i], 1)),
+                             "receives %s · pays %s" % (nb(esp[i] + nat[i], 1), nb(prel[i], 1))), INK, weight="600"))
+    return pied_m(e, y + 16, [
+        (S("Insee, comptes nationaux distribués 2023 (Insee Analyses n° 118, figure 1c)",
+           "Insee, distributional national accounts 2023 (Insee Analyses no. 118, figure 1c)"), INK2),
+        (S("Conventions d'imputation ; ne mesure pas l'incidence de la dette.",
+           "Imputation conventions; does not measure the incidence of the debt."), INK2),
+        licence_m(S)])
+
+
+def svg_solde_net_m(d: dict, lang: str, svg_d: str) -> str:
+    nb, S, pc = langue(lang)
+    e, y = PF.tete_mobile("qp-net-m", S("Qui reçoit plus qu'il ne verse ? Par dixième, 2023",
+                                        "Who receives more than they pay in? By decile, 2023"),
+                          desc_de(svg_d), INK, FONT)
+    net = [v / 1000 for v in d["net"][:10]]
+    part = d["part_benef"][:10]
+    y = lignes_m(e, y + 4, S("A · Solde = prélèvements moins transferts reçus", "A · Balance = taxes minus transfers received"),
+                 INK, "600")
+    y = lignes_m(e, y, S("Moyenne, milliers d'euros par UC · négatif : bénéficiaire net",
+                         "Average, € thousand per CU · negative: net beneficiary"))
+    y = cle(e, y, [(S("reçoit plus qu'il ne verse (à gauche)", "receives more than it pays in (left)"), C1),
+                   (S("verse plus qu'il ne reçoit (à droite)", "pays in more than it receives (right)"), C2)])
+    y, _x0 = rangees(e, y + 16, ["D%d" % (i + 1) for i in range(10)],
+                     [[(-v, C1)] if v < 0 else [] for v in net], [[(v, C2)] if v > 0 else [] for v in net])
+    for i, nom in ((0, "D1"), (9, "D10")):
+        y += 22
+        e.append(tm(0, y, nom, INK2))
+        v = net[i]
+        e.append(tm(42, y, (S("reçoit %s de plus", "receives %s more") if v < 0 else S("verse %s de plus", "pays in %s more"))
+                    % nb(abs(v), 1), C1 if v < 0 else C2, weight="600"))
+    y += 18
+    e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y, WM, y, AXIS))
+    y = lignes_m(e, y + 6, S("B · Part de personnes bénéficiaires nettes", "B · Share of people who are net beneficiaries"),
+                 INK, "600")
+    y += 8
+    for i, p in enumerate(part):
+        yy = y + i * 22
+        e.append(tm(0, yy + 11, "D%d" % (i + 1), MUTED))
+        w = 200 * p / 100
+        e.append('<rect x="36" y="%.1f" width="%.1f" height="13" fill="%s"/>' % (yy, w, C1))
+        fort = i in (0, 9)
+        e.append(tm(42 + w, yy + 11, nb(p) + pc, INK if fort else INK2, weight="600" if fort else None))
+    y += 10 * 22
+    return pied_m(e, y + 12, [
+        (S("Insee, comptes nationaux distribués 2023 (Insee Analyses n° 118, figure 2a)",
+           "Insee, distributional national accounts 2023 (Insee Analyses no. 118, figure 2a)"), INK2),
+        (S("Moyennes par UC, solde d'une année ; pensions et services publics valorisés inclus.",
+           "Averages per CU, the balance of one year; pensions and valued public services included."), INK2),
+        licence_m(S)])
+
+
+def svg_age_m(d: dict, lang: str, svg_d: str) -> str:
+    nb, S, pc = langue(lang)
+    e, y = PF.tete_mobile("qp-age-m", S("Prélèvements et transferts publics par âge du ménage, 2023",
+                                        "Taxes and contributions, and public transfers, by household age, 2023"),
+                          desc_de(svg_d), INK, FONT)
+    a = d["age"]
+    y = lignes_m(e, y + 4, S("Milliers d'euros par UC · âge moyen des adultes du ménage",
+                             "€ thousand per CU · mean age of the household's adults"))
+    y = cle(e, y + 2, [(S("Prélèvements versés (à gauche)", "Taxes and contributions paid (left)"), C2),
+                       (S("Prestations en espèces, dont retraites", "Cash benefits, including pensions"), C1),
+                       (S("Services publics valorisés", "Valued public services"), SEC)])
+    prel = [-v / 1000 for v in a["prel"][:5]]
+    esp = [v / 1000 for v in a["esp"][:5]]
+    nat = [v / 1000 for v in a["nat"][:5]]
+    libs = [S(g, age_en(g)) for g in a["groupes"]]
+    L, R = max(prel), max(esp[i] + nat[i] for i in range(5))
+    k = (WM - 4) / (L + R)
+    x0 = L * k
+    y += 16
+    for i, lib in enumerate(libs):
+        e.append(tm(0, y + 11, lib, MUTED))
+        y += 17
+        e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="13" fill="%s"/>' % (x0 - prel[i] * k, y, prel[i] * k, C2))
+        e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="13" fill="%s"/>' % (x0, y, esp[i] * k, C1))
+        e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="13" fill="%s"/>'
+                 % (x0 + esp[i] * k, y, nat[i] * k, SEC))
+        y += 22
+    e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1.2"/>'
+             % (x0, y - 22 * 5 - 17 * 5 + 10, x0, y - 6, INK2))
+    return _age_m_fin(e, y, nb, S, prel, esp, nat, libs)
+
+
+def _age_m_fin(e, y, nb, S, prel, esp, nat, libs):
+    for i in (0, 4):
+        y += 22
+        e.append(tm(0, y, libs[i], INK2))
+        y += 18
+        e.append(tm(0, y, S("reçoit %s · verse %s" % (nb(esp[i] + nat[i], 1), nb(prel[i], 1)),
+                            "receives %s · pays %s" % (nb(esp[i] + nat[i], 1), nb(prel[i], 1))), INK, weight="600"))
+    return pied_m(e, y + 16, [
+        (S("Insee, comptes nationaux distribués 2023 (Insee Analyses n° 118, figure 1e)",
+           "Insee, distributional national accounts 2023 (Insee Analyses no. 118, figure 1e)"), INK2),
+        (S("Photographie d'une année, non le bilan d'une génération.",
+           "A snapshot of one year, not the balance sheet of a generation."), INK2),
+        licence_m(S)])
+
+
+def svg_mecanismes_m(lang: str, svg_d: str) -> str:
+    _nb, S, _pc = langue(lang)
+    e, y = PF.tete_mobile("qp-mec-m", S("Par quels canaux la charge de la dette peut-elle être répartie ?",
+                                        "Through which channels can the burden of the debt be distributed?"),
+                          desc_de(svg_d), INK, FONT)
+
+    def boite(y, titre, sous, trait=AXIS, tiret=False, fond="#ffffff"):
+        lignes = PF.coupe(sous, 36)
+        h = 30 + 18 * len(lignes)
+        d = ' stroke-dasharray="4 3"' if tiret else ""
+        e.append('<rect x="1" y="%.1f" width="%d" height="%d" rx="6" fill="%s" stroke="%s" stroke-width="1.5"%s/>'
+                 % (y, WM - 2, h, fond, trait, d))
+        e.append(tm(12, y + 21, titre, INK, weight="600", size=15))
+        for k, l in enumerate(lignes):
+            e.append(tm(12, y + 40 + 18 * k, l))
+        return y + h
+
+    y = boite(y + 10, S("Charge de la dette et sa répartition", "Debt burden and its distribution"),
+              S("intérêts, échéances", "interest, maturing debt"), trait=C1)
+    familles = [(S("Ajustement budgétaire ordinaire", "Ordinary budget adjustment"),
+                 [(S("Prélèvements", "Taxes and contributions"),
+                   S("contribuables : impôts, cotisations", "taxpayers: taxes, social contributions")),
+                  (S("Dépenses et prestations", "Spending and benefits"),
+                   S("usagers, bénéficiaires : réduites, gelées, reportées",
+                     "users, beneficiaries: cut, frozen, postponed"))]),
+                (S("Effet de prix, non décidé seul", "Price effect, not decided alone"),
+                 [(S("Inflation non anticipée", "Unanticipated inflation"),
+                   S("détenteurs de créances et de revenus mal indexés",
+                     "holders of claims and of poorly indexed incomes"))]),
+                (S("Cas extrême", "Extreme case"),
+                 [(S("Restructuration", "Restructuring"), S("porteurs des titres", "holders of the securities"))])]
+    e.append('<line x1="150" y1="%.1f" x2="150" y2="%.1f" stroke="%s" stroke-width="1.5" stroke-dasharray="5 4"/>'
+             % (y, y + 16, MUTED))
+    y += 16
+    for fam, canaux in familles:
+        y += 20
+        e.append(tm(0, y, fam, MUTED, weight="600"))
+        for tit, qui in canaux:
+            y = boite(y + 6, tit, qui)
+    y = boite(y + 20, S("Refinancement", "Refinancing"),
+              S("renouvelle l'échéance aux taux du moment, sans désigner de perdant",
+                "rolls the maturity over at current rates, without designating a loser"), tiret=True)
+    y = boite(y + 12, S("En regard : ce que la dette a financé", "Alongside: what the debt has financed"),
+              S("services, prestations, investissements, soutien en crise",
+                "services, benefits, investment, crisis support"), tiret=True, fond="#f7f7f4")
+    return pied_m(e, y + 18, [
+        (S("Synthèse de l'auteur · schéma non quantitatif", "Author's synthesis · non-quantitative diagram"), INK2),
+        (S("Aucun poids relatif ni effet causal n'est mesuré ici.",
+           "No relative weight or causal effect is measured here."), INK2),
+        (S("Stéphane Lalut, CC BY 4.0 · stephane-lalut.com", "Stéphane Lalut, CC BY 4.0 · stephane-lalut.com"),
+         MUTED)])
+
+
+def svg_exposition_m(c: dict, lang: str, svg_d: str) -> str:
+    nb, S, pc = langue(lang)
+    p, rat = c["p"], c["ratios"]
+    e, y = PF.tete_mobile("qp-exp-m", S("Un même effort de 10" + NBSP + "milliards d'euros : qui le supporterait, "
+                                        "selon la décision prise ?",
+                                        "The same €10 billion adjustment: who would bear it, depending on the "
+                                        "decision taken?"), desc_de(svg_d), INK, FONT)
+    y = lignes_m(e, y + 4, S("A · Montant imputé, en % du revenu disponible du dixième",
+                             "A · Amount allocated, as a % of the decile's disposable income"), INK, "600")
+    y = lignes_m(e, y, S("Au prorata des montants existants, 2023", "Pro rata to existing amounts, 2023"))
+    ml, larg = 40, WM - 40 - 12
+
+    def X(i):
+        return ml + larg * i / 9
+
+    top, h_ = y + 24, 170
+    vmax = 3.0
+
+    def Y(v):
+        return top + h_ - v * h_ / vmax
+
+    for g in (0, 1, 2, 3):
+        e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (ml, Y(g), WM, Y(g), AXIS if g == 0 else GRID))
+        e.append(tm(ml - 6, Y(g) + 5, nb(g) + pc, MUTED, "end"))
+    noms = {"fiscal": (S("Impôts sur les revenus et le patrimoine", "Taxes on income and wealth"), C2),
+            "pensions": (S("Pensions de retraite", "Retirement pensions"), C1),
+            "enseignement": (S("Dépenses d'enseignement", "Education spending"), SEC)}
+    for cle_ in ("enseignement", "pensions", "fiscal"):
+        col = noms[cle_][1]
+        pts = [(X(i), Y(v)) for i, v in enumerate(p[cle_]) if v is not None]
+        e.append('<polyline points="%s" fill="none" stroke="%s" stroke-width="2.4" stroke-linejoin="round"/>'
+                 % (" ".join("%.1f,%.1f" % q for q in pts), col))
+        for x, yy in pts:
+            e.append('<circle cx="%.1f" cy="%.1f" r="3" fill="%s"/>' % (x, yy, col))
+    e.append('<circle cx="%.1f" cy="%.1f" r="3.4" fill="none" stroke="%s" stroke-width="1.6" stroke-dasharray="2 2"/>'
+             % (X(0), Y(0.31), C2))
+    e.append(tm(X(0) + 8, Y(p["enseignement"][0]) + 5, nb(p["enseignement"][0], 2) + pc, INK, weight="600"))
+    for i, lib in ((0, "D1"), (4, "D5"), (9, "D10")):
+        e.append(tm(X(i), top + h_ + 19, lib, MUTED, "end" if i == 9 else "middle"))
+    y = top + h_ + 26
+    for cle_ in ("fiscal", "enseignement", "pensions"):
+        nom, col = noms[cle_]
+        y += 22
+        e.append('<line x1="0" y1="%.1f" x2="16" y2="%.1f" stroke="%s" stroke-width="3"/>' % (y - 5, y - 5, col))
+        e.append(tm(22, y, nom, INK2))
+        y += 19
+        if cle_ == "pensions":
+            e.append(tm(22, y, S("selon le dixième :", "by decile:"), INK2))
+            e.append(tm(148 if lang == "fr" else 100, y, S("%s à %s%s", "%s to %s%s")
+                        % (nb(min(p[cle_]), 2), nb(max(p[cle_]), 2), pc), INK, weight="600"))
+        else:
+            e.append(tm(22, y, S("en D10 :", "in D10:"), INK2))
+            e.append(tm(90 if lang == "fr" else 76, y, nb(p[cle_][9], 2) + pc, INK, weight="600"))
+    y = lignes_m(e, y + 6, S("○ point D1 des impôts écarté (motif au pied)", "○ D1 tax point excluded (reason below)"))
+    y += 14
+    e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y, WM, y, AXIS))
+    y = lignes_m(e, y + 6, S("B · De combien le choix change l'effort d'un même dixième",
+                             "B · How much the choice changes what the same decile bears"), INK, "600")
+    y = lignes_m(e, y, S("Décision la plus lourde ÷ la plus légère · 1 : aucun écart",
+                         "Heaviest decision ÷ lightest · 1: no gap"))
+    topB, hB = y + 34, 110
+    vmaxB = max(r for r in rat) * 1.05
+
+    def YB(v):
+        return topB + hB - (v - 1) * hB / (vmaxB - 1)
+
+    e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="#f0efe9"/>'
+             % (X(6) - larg / 18, topB - 30, larg / 9 * 2, hB + 30))
+    creux = min(rat)
+    for i, v in enumerate(rat):
+        hh = max((v - 1) * hB / (vmaxB - 1), 2.0)
+        e.append('<rect x="%.1f" y="%.1f" width="16" height="%.1f" rx="2" fill="%s"/>' % (X(i) - 8, topB + hB - hh, hh, SEC))
+    for i, ancre in ((0, "start"), (rat.index(creux), "middle"), (9, "end")):
+        v = rat[i]
+        borne = i == 0 and any(p[k][0] is None for k in p if not k.startswith("_"))
+        x = X(i) - 8 if ancre == "start" else (X(i) + 8 if ancre == "end" else X(i))
+        # Au-dessus de la barre voisine si elle est plus haute : D2 dépasse D1, et l'étiquette de D1 la chevauchait.
+        voisin = rat[i + 1] if i == 0 else rat[i - 1] if i == 9 else v
+        e.append(tm(x, YB(max(v, voisin)) - 6, ("≥ ×" if borne else "×") + nb(v, 1), INK, ancre, "600"))
+    for i, lib in ((0, "D1"), (6, "D7"), (7, "D8"), (9, "D10")):
+        e.append(tm(X(i), topB + hB + 19, lib, INK2 if i in (6, 7) else MUTED, "end" if i == 9 else "middle"))
+    y = lignes_m(e, topB + hB + 26, S("D7-D8 : le choix du levier y change le moins l'exposition moyenne du dixième",
+                                      "D7-D8: where the choice of lever changes the decile's average exposure least"), INK2)
+    return pied_m(e, y + 14, [
+        (S("Insee, comptes nationaux distribués, tableau CND.101, millésime 2023",
+           "Insee, distributional national accounts, table CND.101, 2023 vintage"), INK2),
+        (S("Profil d'exposition, non une simulation : ni comportement, ni effet en retour.",
+           "An exposure profile, not a simulation: no behaviour, no feedback effect."), INK2),
+        (S("Point D1 des impôts écarté : l'impôt sur le revenu du premier vingtième y est atypique ; D1 porte "
+           "« ≥ », borne inférieure calculée sur deux leviers.",
+           "D1 tax point excluded: income tax of the first twentieth is atypical there; D1 carries “≥”, a lower "
+           "bound computed on two levers."), INK2),
+        licence_m(S)])
 
 
 # ------------------------------------------------------------------ texte
@@ -1321,6 +1923,8 @@ def affichage(r: dict, d: dict, c: dict, lang: str = "fr") -> dict:
         "exp_ecart_d1": fr(rat[0], 1), "exp_ecart_d10": fr(rat[9], 1),
         "exp_ecart_creux": fr(creux, 1), "exp_creux_dixieme": "D%d" % (icreux + 1),
         "exp_creux_zone": "D7-D8",
+        # La même zone en toutes lettres, pour la phrase qui doit se lire sans la figure (panel « après », 11/10).
+        "exp_creux_zone_mots": _S("7e ou 8e", "7th or 8th"),
         "exp_cv_creux": fr(min(c["dispersions"]["coef_variation"][1:]), 2),
         "exp_cv_d10": fr(c["dispersions"]["coef_variation"][9], 2),
         "exp_creux_millesimes": _S(" ou ", " or ").join(c["creux_partout"]),
@@ -1328,7 +1932,24 @@ def affichage(r: dict, d: dict, c: dict, lang: str = "fr") -> dict:
         "exp_masse_fisc": fr(c["masse_d1_d5"]["fiscal"], 1),
         "exp_millesimes": "2020-2023",
         "exp_part_ir_v1": fr(c["part_ir_v1"]),
+        # Tests du creux (OPTIMUM-19) : les rangs de vingtième se disent en ordinaux.
+        "exp_t1_rangs": _S(" ou ", " or ").join(
+            _S("%de" % v, "%d%s" % (v, "th" if 10 <= v % 100 <= 20 else {1: "st", 2: "nd", 3: "rd"}.get(v % 10, "th")))
+            for v in sorted(set(c["tests"]["t1_vingtieme_min"].values()))),
+        "exp_t3_croise": c["tests"]["t3_impot_enseignement"],
+        "exp_t2_progressif": c["tests"]["t2_impot_progressif_creux"],
+        "exp_ens_epargne": _S(" ou ", " or ").join(sorted(set(c["tests"]["ens_d1_d3_epargnes"].values()))),
+        "exp_tva_d1": fr(c["tests"]["tva_d1"]["2023"], 2), "exp_tva_d10": fr(c["tests"]["tva_d10"]["2023"], 2),
     }
+    pz = c["pieces"]
+    exp.update({
+        "pens_taux": _S(pz["pens_taux"], pz["pens_taux"].replace(",", ".")),
+        "pens_coef": _S(pz["pens_coef"], pz["pens_coef"].replace(",", ".")),
+        "pens_annee": pz["pens_annee"],
+        "tresor_sur": pz["tresor_sur"], "tresor_dette": pz["tresor_dette"], "tresor_numero": pz["tresor_numero"],
+        "det_periode": _S(r["det_periode"], trimestre_en(r["det_periode"])),
+        "net_contrib_n": fr(10 - bascule),
+    })
     return dict(exp, **{
         "releve_le": _S(SOURCES_RELEVEES_LE, date_fr_vers_en(SOURCES_RELEVEES_LE)),
         "net_bascule": "D%d" % (bascule + 1),
@@ -1344,7 +1965,8 @@ def affichage(r: dict, d: dict, c: dict, lang: str = "fr") -> dict:
         "age_recu_jeunes": fr(age["esp"][0] + age["nat"][0]),
         "age_prel_5064": fr(-age["prel"][3]),
         "age_esp_65": fr(age["esp"][4]),
-        "total_mdeur": _S(r["total_txt"], en(r["total"], 1)),
+        # D9 : l'espace des milliers devient insécable, comme dans tous les autres montants de la page.
+        "total_mdeur": _S(r["total_txt"].replace(" ", NBSP), en(r["total"], 1)),
         "periode_a": _S(r["periode_a"], periode_en(r["periode_a"])),
         "etat_mdeur": fr(ss["État"]), "etat_pct": fr(etat_pct),
         "nonres_pct": fr(nonres, 1), "bafs_pct": fr(bafs, 1),
@@ -1364,6 +1986,7 @@ def main() -> int:
         fail("cairosvg absent : SVG et PNG se produisent ensemble ou pas du tout")
     r, d = lire_registre(), lire_insee()
     c = lire_cnd(d)
+    c["pieces"] = lire_pieces()
     aff = affichage(r, d, c)
     aff_en = affichage(r, d, c, "en")
     if list(aff) != list(aff_en):
@@ -1371,13 +1994,31 @@ def main() -> int:
     # Deux jeux de figures, un seul dessin : chaque fonction reçoit la langue, le
     # français garde les noms sans suffixe, l'anglais prend -en (page du coût).
     figs = []
+    mobiles = []
     for lang, suf in (("fr", ""), ("en", "-en")):
-        figs += [("qui-paie-detention" + suf, svg_detention(r, lang)),
-                 ("qui-paie-redistribution" + suf, svg_redistribution(d, lang)),
-                 ("qui-paie-solde-net" + suf, svg_solde_net(d, lang)),
-                 ("qui-paie-age" + suf, svg_age(d, lang)),
-                 ("qui-paie-mecanismes" + suf, svg_mecanismes(lang)),
-                 ("qui-paie-exposition" + suf, svg_exposition(c, lang))]
+        lot = [("qui-paie-detention" + suf, svg_detention(r, lang), lambda s: svg_detention_m(r, lang, s)),
+               ("qui-paie-redistribution" + suf, svg_redistribution(d, lang),
+                lambda s: svg_redistribution_m(d, lang, s)),
+               ("qui-paie-solde-net" + suf, svg_solde_net(d, lang), lambda s: svg_solde_net_m(d, lang, s)),
+               ("qui-paie-age" + suf, svg_age(d, lang), lambda s: svg_age_m(d, lang, s)),
+               ("qui-paie-mecanismes" + suf, svg_mecanismes(lang), lambda s: svg_mecanismes_m(lang, s)),
+               ("qui-paie-exposition" + suf, svg_exposition(c, lang), lambda s: svg_exposition_m(c, lang, s))]
+        figs += [(nom, sv) for nom, sv, _m in lot]
+        mobiles += [(nom + "-m", fm(sv[0]), sv[0]) for nom, sv, fm in lot]
+    # Contrôles des versions téléphone : parité des valeurs avec la version détaillée et police minimale (la parité
+    # n'a pas d'objet sur le schéma, qui ne porte aucun nombre : seule la police y est contrôlée) ; textes hors du
+    # cadre ESTIMÉS, signalés sans arrêt — le rendu tranche.
+    for nom, svg_m, svg_d in mobiles:
+        if "mecanismes" in nom:
+            import re as _re
+            tailles = [float(x) for x in _re.findall(r'font-size="([0-9.]+)"', svg_m)]
+            ecarts = ["police %.1f sous 13,5" % min(tailles)] if min(tailles) < FSM else []
+        else:
+            ecarts = PF.parite(svg_d, svg_m, FSM)
+        if ecarts:
+            fail("%s : %s" % (nom, " ; ".join(ecarts)))
+        for x in PF.hors_cadre(svg_m, WM):
+            print("    a verifier au rendu, %s : %s" % (nom, x))
     # TOUT est construit en mémoire avant la première écriture, PNG compris : une
     # exception en cours de route ne laisse plus un SVG neuf à côté d'un PNG ancien.
     # Les octets sont ceux qu'écrivait write_text (fin de ligne du système), pour
@@ -1389,13 +2030,15 @@ def main() -> int:
         sorties[p] = brut
         sorties[p.with_suffix(".png")] = cairosvg.svg2png(
             bytestring=brut, output_width=1440, background_color="white")
+    for nom, svg_m, _d in mobiles:
+        sorties[IMG / (nom + ".svg")] = svg_m.replace("\n", os.linesep).encode("utf-8")
     cartes = {"fr": [
         {"id": "detention", "fichier": "qui-paie-detention",
          "titre": "Qui emprunte ? Qui détient les titres de l'État ?",
          "montre": "Les administrations qui empruntent, puis les porteurs des titres de l'État : "
                    "deux champs distincts, sans lien de proportion.",
          "source": "INSEE, IR n° 79 (27/03/2026), %s  ·  Banque de France via l'AFT, "
-                   "1er trimestre 2026" % r["periode_a"],
+                   "%s" % (r["periode_a"], r["det_periode"]),
          "precaution": "A : valeur nominale ; B : valeur de marché. La détention ne mesure pas "
                        "la charge finale."},
         {"id": "redistribution", "fichier": "qui-paie-redistribution",
@@ -1430,7 +2073,7 @@ def main() -> int:
          "precaution": "Profil d'exposition comptable, non une simulation : ni comportement ni "
                        "effet en retour. Une baisse de service valorisé n'est pas une perte de "
                        "revenu monétaire. Le point D1 de la décision fiscale est écarté, son "
-                       "motif figure au cartouche."},
+                       "motif figure au pied de la figure."},
         {"id": "mecanismes", "fichier": "qui-paie-mecanismes",
          "titre": "Par quels canaux la charge peut-elle être répartie ?",
          "montre": "Quatre mécanismes possibles, non exhaustifs, le refinancement qui renouvelle l'échéance aux taux "
@@ -1446,7 +2089,8 @@ def main() -> int:
          "montre": "The levels of government that borrow, then the holders of central-government "
                    "securities: two separate scopes, with no proportional link.",
          "source": "INSEE, IR no. 79 (27 March 2026), %s  ·  Banque de France via Agence "
-                   "France Trésor (French Treasury agency), Q1 2026" % periode_en(r["periode_a"]),
+                   "France Trésor (French Treasury agency), %s" % (periode_en(r["periode_a"]),
+                                                                  trimestre_en(r["det_periode"])),
          "precaution": "A: nominal value; B: market value. Holding securities does not measure "
                        "the final burden."},
         {"id": "redistribution", "fichier": "qui-paie-redistribution-en",
@@ -1516,7 +2160,7 @@ def main() -> int:
                                 "valeurs": [{"libelle": s["libelle"], "mdeur": s["mdeur"]}
                                             for s in r["ss"]]},
             "B_detenteurs_titres_etat": {"unite": "% des titres négociables de l'État, valeur de "
-                                                  "marché", "periode": "1er trimestre 2026",
+                                                  "marché", "periode": r["det_periode"],
                                          "valeurs": [{"libelle": x["libelle"], "pct": x["pct"]}
                                                      for x in r["det"]]},
             "sources": r["sources"],
@@ -1600,6 +2244,14 @@ def main() -> int:
                        "au prorata des montants existants, sans comportement ni effet en retour. "
                        "Une baisse de service valorisé n'est pas une perte de revenu monétaire."),
             "temoin_croise_avec_IA118_mdeur": c["temoin_croise_mdeur"],
+            "tests_du_creux": dict(c["tests"], note=(
+                "Contre-expertise du 11/10/2026. T1 : minimum du rapport en vingtièmes (rang 1 à 20 ; 13 à 16 = "
+                "D7-D8). T2 : variantes HYPOTHÉTIQUES, non des mesures observées — impôt au prorata du carré du "
+                "poste fiscal (plus progressif), pensions de D1-D3 épargnées. T3 : dixième du rapport minimal pour "
+                "chaque paire de leviers. Dénominateur : écart maximal entre le rapport calculé sur les expositions "
+                "et le même rapport sur les montants seuls ; nul aux arrondis près, le revenu de référence étant "
+                "commun aux trois leviers d'un même groupe. Quatre millésimes consécutifs ne sont pas des "
+                "réplications indépendantes : conventions et structures distributives y sont largement communes.")),
             "source": {"publication": "Insee, comptes nationaux distribués, tableau CND.101 "
                                       "(vingtièmes de niveau de vie, 2020-2023, base 2020)",
                        "url": XLSX_CND_URL, "sha256_fichier": c["sha256"]},
@@ -1670,6 +2322,8 @@ def main() -> int:
         ecrits.append(chemin.relative_to(REPO).as_posix())
     for nom, (_s, h) in figs:
         print("OK  %s.svg (720 x %d) + PNG 1440 px" % (nom, h))
+    for nom, svg_m, _d in mobiles:
+        print("OK  %s.svg (%d x %s), parite controlee" % (nom, WM, PF.hauteur(svg_m, WM)))
     print("OK  data/figures_qui_paie.json, data/ et static/qui_paie_donnees.json + .csv")
     print("    registre %s...  -  Insee %s..." % (r["sha256"][:12], d["sha256"][:12]))
     if ecrits:
