@@ -51,7 +51,6 @@ NON_REFONDUES = {
     "ce-que-la-france-peut-decider-dans-l-union-europeenne", "comment-savoir-si-une-promesse-est-tenue",
     "qui-peut-faire-adopter-une-loi",
     "un-president-peut-il-recourir-au-referendum", "une-loi-votee-s-applique-t-elle-tout-de-suite",
-    "une-promesse-peut-elle-produire-ses-effets-en-cinq-ans",
 }
 
 

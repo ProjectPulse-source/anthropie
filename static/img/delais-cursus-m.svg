@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 639" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dcm-t dcm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="dcm-t">Former un médecin généraliste, et la durée d&#x27;un mandat présidentiel</title><desc id="dcm-d">Deux barres de même échelle. En haut, le cursus de médecine générale : 3 ans de premier cycle, 3 ans de deuxième cycle, puis 4 ans d&#x27;internat de médecine générale dont la dernière en autonomie supervisée, soit 10 ans depuis la première année et 9 depuis l&#x27;admission en deuxième année. En bas, un mandat présidentiel de 5 ans. Comparaison d&#x27;échelle seulement.</desc>
+<rect width="300" height="639" fill="#ffffff"/>
+<text x="0.0" y="20.0" font-size="17" fill="#0A0A0E" text-anchor="start" font-weight="600">Former un médecin généraliste,</text>
+<text x="0.0" y="42.0" font-size="17" fill="#0A0A0E" text-anchor="start" font-weight="600">et la durée d&#x27;un mandat</text>
+<text x="0.0" y="64.0" font-size="17" fill="#0A0A0E" text-anchor="start" font-weight="600">présidentiel</text>
+<text x="0.0" y="104.0" font-size="15" fill="#0A0A0E" text-anchor="start" font-weight="600">Médecine générale</text>
+<rect x="0.0" y="114" width="90.0" height="30" fill="#c9cdd3" stroke="#ffffff" stroke-width="2"/>
+<text x="45.0" y="134.0" font-size="13.5" fill="#0A0A0E" text-anchor="middle">1er</text>
+<rect x="90.0" y="114" width="90.0" height="30" fill="#c9cdd3" stroke="#ffffff" stroke-width="2"/>
+<text x="135.0" y="134.0" font-size="13.5" fill="#0A0A0E" text-anchor="middle">2e</text>
+<rect x="180.0" y="114" width="90.0" height="30" fill="#7fa3cf" stroke="#ffffff" stroke-width="2"/>
+<text x="225.0" y="134.0" font-size="13.5" fill="#0A0A0E" text-anchor="middle">Internat</text>
+<rect x="270.0" y="114" width="30.0" height="30" fill="#184f95" stroke="#ffffff" stroke-width="2"/>
+<rect x="181.0" y="114" width="118.0" height="30" fill="none" stroke="#184f95" stroke-width="1.5"/>
+<text class="val" x="0.0" y="163.0" font-size="13.5" fill="#52514e" text-anchor="start">1er cycle : 3 ans</text>
+<text class="val" x="0.0" y="182.0" font-size="13.5" fill="#52514e" text-anchor="start">2e cycle : 3 ans</text>
+<text class="val" x="0.0" y="201.0" font-size="13.5" fill="#184f95" text-anchor="start" font-weight="600">Internat de médecine générale</text>
+<text class="val" x="0.0" y="220.0" font-size="13.5" fill="#184f95" text-anchor="start">4 ans, dont la dernière en autonomie</text>
+<text class="val" x="0.0" y="239.0" font-size="13.5" fill="#184f95" text-anchor="start">supervisée</text>
+<text class="val" x="0.0" y="258.0" font-size="13.5" fill="#52514e" text-anchor="start">9 ans depuis l&#x27;admission en 2e année</text>
+<text class="val" x="0.0" y="277.0" font-size="13.5" fill="#0A0A0E" text-anchor="start" font-weight="600">Total : 10 ans depuis la 1re année</text>
+<text x="0.0" y="307.0" font-size="15" fill="#0A0A0E" text-anchor="start" font-weight="600">Mandat présidentiel</text>
+<rect x="0" y="317" width="150.0" height="30" fill="#8a8f98"/>
+<text class="val" x="75.0" y="337.0" font-size="13.5" fill="#ffffff" text-anchor="middle">5 ans</text>
+<line x1="0" y1="348" x2="300" y2="348" stroke="#e1e0d9"/>
+<text x="0.0" y="365.0" font-size="13.5" fill="#898781" text-anchor="start">0</text>
+<text x="150.0" y="365.0" font-size="13.5" fill="#898781" text-anchor="middle">5</text>
+<text x="300.0" y="365.0" font-size="13.5" fill="#898781" text-anchor="end">10</text>
+<line x1="0" y1="379.0" x2="300" y2="379.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0.0" y="400.0" font-size="13.5" fill="#52514e" text-anchor="start">Arrêté du 8 avril 2013, art. 1 ; code</text>
+<text class="pied-source" x="0.0" y="417.0" font-size="13.5" fill="#52514e" text-anchor="start">de l&#x27;éducation, art. L632-2 ; loi</text>
+<text class="pied-source" x="0.0" y="434.0" font-size="13.5" fill="#52514e" text-anchor="start">n° 2022-1616, art. 37 ; Constitution,</text>
+<text class="pied-source" x="0.0" y="451.0" font-size="13.5" fill="#52514e" text-anchor="start">art. 6 (Légifrance)</text>
+<text class="pied-note" x="0.0" y="472.0" font-size="13.5" fill="#52514e" text-anchor="start">Durées minimales, sans redoublement,</text>
+<text class="pied-note" x="0.0" y="489.0" font-size="13.5" fill="#52514e" text-anchor="start">interruption ni passerelle, pour les</text>
+<text class="pied-note" x="0.0" y="506.0" font-size="13.5" fill="#52514e" text-anchor="start">étudiants entrés en internat à partir</text>
+<text class="pied-note" x="0.0" y="523.0" font-size="13.5" fill="#52514e" text-anchor="start">de la rentrée 2023. Comparaison</text>
+<text class="pied-note" x="0.0" y="540.0" font-size="13.5" fill="#52514e" text-anchor="start">d&#x27;échelle seulement : ni l&#x27;effet d&#x27;une</text>
+<text class="pied-note" x="0.0" y="557.0" font-size="13.5" fill="#52514e" text-anchor="start">politique, ni la date de ses premiers</text>
+<text class="pied-note" x="0.0" y="574.0" font-size="13.5" fill="#52514e" text-anchor="start">effets ; les internes soignent avant</text>
+<text class="pied-note" x="0.0" y="591.0" font-size="13.5" fill="#52514e" text-anchor="start">la fin du cursus.</text>
+<text class="pied-licence" x="0.0" y="612.0" font-size="13.5" fill="#898781" text-anchor="start">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0.0" y="629.0" font-size="13.5" fill="#898781" text-anchor="start">· stephane-lalut.com</text>
+</svg>
