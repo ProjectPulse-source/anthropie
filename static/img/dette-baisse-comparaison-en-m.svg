@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 1300" role="img" font-variant-numeric="tabular-nums" aria-labelledby="bc-m-t bc-m-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
+<title id="bc-m-t">Seven countries with debt above 90% of GDP at end-2015: what moved their ratio in ten years</title><desc id="bc-m-d">Countries with debt above 90% of GDP at end-2015. For each country, in points of GDP cumulated over 2016-2025: the interest-growth effect, the contribution of the primary balance (a surplus pulls the ratio down, a deficit pushes it up), other adjustments, and the change in the ratio, their sum. Cyprus: interest and growth −46.2, primary balance −23.3, other adjustments +12.9, change −56.6. Portugal: interest and growth −33.3, primary balance −15.5, other adjustments +7.4, change −41.4. Greece: interest and growth −30.4, primary balance −15.2, other adjustments +12.1, change −33.5. Spain: interest and growth −22.5, primary balance +19.1, other adjustments +1.5, change −1.8. Belgium: interest and growth −23.8, primary balance +17.0, other adjustments +9.0, change +2.2. Italy: interest and growth −5.3, primary balance +11.6, other adjustments −4.0, change +2.3. France: interest and growth −15.1, primary balance +30.6, other adjustments +3.1, change +18.6. The interest-growth effect pulls the ratio down everywhere; in the three countries where the ratio fell markedly, it weighs about twice as much as their primary surpluses.</desc>
+<rect width="300" height="1300" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Seven countries with debt</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">above 90% of GDP at end-2015:</text>
+<text x="0" y="64" font-size="17" font-weight="600" fill="#26262f">what moved their ratio in ten</text>
+<text x="0" y="86" font-size="17" font-weight="600" fill="#26262f">years</text>
+<rect x="0" y="118.0" width="11" height="11" fill="#eb6834"/>
+<text x="17" y="128.0" font-size="13.5" fill="#55524f">pushes the ratio up</text>
+<rect x="0" y="138.0" width="11" height="11" fill="#8a8781"/>
+<text x="17" y="148.0" font-size="13.5" fill="#55524f">pulls it down</text>
+<text x="0" y="167.0" font-size="13.5" fill="#96928f">In points of GDP cumulated over ten</text>
+<text x="0" y="186.0" font-size="13.5" fill="#96928f">years</text>
+<line x1="0" y1="198.0" x2="300" y2="198.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="0" y="220.0" font-size="15" font-weight="600" fill="#26262f">Cyprus: −56.6 points</text>
+<text x="0" y="238.0" font-size="13.5" fill="#184f95">111.6 → 55.0% of GDP</text>
+<line x1="233.6" y1="246.0" x2="233.6" y2="306.0" stroke="#8f8a84" stroke-width="1.2"/>
+<text x="0" y="259.0" font-size="13.5" fill="#55524f">Interest and growth</text>
+<rect x="161.5" y="248.0" width="72.1" height="14" fill="#8a8781"/>
+<text x="237.6" y="259.0" font-size="13.5" fill="#26262f" text-anchor="start">−46.2</text>
+<text x="0" y="280.0" font-size="13.5" fill="#55524f">Primary balance</text>
+<rect x="197.3" y="269.0" width="36.3" height="14" fill="#8a8781"/>
+<text x="193.3" y="280.0" font-size="13.5" fill="#26262f" text-anchor="end">−23.3</text>
+<text x="0" y="301.0" font-size="13.5" fill="#55524f">Other adjustments</text>
+<rect x="233.6" y="290.0" width="20.2" height="14" fill="#eb6834"/>
+<text x="257.8" y="301.0" font-size="13.5" fill="#26262f" text-anchor="start">+12.9</text>
+<line x1="0" y1="321.0" x2="300" y2="321.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="0" y="343.0" font-size="15" font-weight="600" fill="#26262f">Portugal: −41.4 points</text>
+<text x="0" y="361.0" font-size="13.5" fill="#184f95">131.0 → 89.7% of GDP</text>
+<line x1="233.6" y1="369.0" x2="233.6" y2="429.0" stroke="#8f8a84" stroke-width="1.2"/>
+<text x="0" y="382.0" font-size="13.5" fill="#55524f">Interest and growth</text>
+<rect x="181.6" y="371.0" width="52.0" height="14" fill="#8a8781"/>
+<text x="177.6" y="382.0" font-size="13.5" fill="#26262f" text-anchor="end">−33.3</text>
+<text x="0" y="403.0" font-size="13.5" fill="#55524f">Primary balance</text>
+<rect x="209.5" y="392.0" width="24.1" height="14" fill="#8a8781"/>
+<text x="205.5" y="403.0" font-size="13.5" fill="#26262f" text-anchor="end">−15.5</text>
+<text x="0" y="424.0" font-size="13.5" fill="#55524f">Other adjustments</text>
+<rect x="233.6" y="413.0" width="11.6" height="14" fill="#eb6834"/>
+<text x="249.2" y="424.0" font-size="13.5" fill="#26262f" text-anchor="start">+7.4</text>
+<line x1="0" y1="444.0" x2="300" y2="444.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="0" y="466.0" font-size="15" font-weight="600" fill="#26262f">Greece: −33.5 points</text>
+<text x="0" y="484.0" font-size="13.5" fill="#184f95">179.6 → 146.1% of GDP</text>
+<line x1="233.6" y1="492.0" x2="233.6" y2="552.0" stroke="#8f8a84" stroke-width="1.2"/>
+<text x="0" y="505.0" font-size="13.5" fill="#55524f">Interest and growth</text>
+<rect x="186.2" y="494.0" width="47.4" height="14" fill="#8a8781"/>
+<text x="182.2" y="505.0" font-size="13.5" fill="#26262f" text-anchor="end">−30.4</text>
+<text x="0" y="526.0" font-size="13.5" fill="#55524f">Primary balance</text>
+<rect x="209.9" y="515.0" width="23.7" height="14" fill="#8a8781"/>
+<text x="205.9" y="526.0" font-size="13.5" fill="#26262f" text-anchor="end">−15.2</text>
+<text x="0" y="547.0" font-size="13.5" fill="#55524f">Other adjustments</text>
+<rect x="233.6" y="536.0" width="18.8" height="14" fill="#eb6834"/>
+<text x="256.4" y="547.0" font-size="13.5" fill="#26262f" text-anchor="start">+12.1</text>
+<line x1="0" y1="567.0" x2="300" y2="567.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="0" y="589.0" font-size="15" font-weight="600" fill="#26262f">Spain: −1.8 points</text>
+<text x="0" y="607.0" font-size="13.5" fill="#184f95">102.5 → 100.7% of GDP</text>
+<line x1="233.6" y1="615.0" x2="233.6" y2="675.0" stroke="#8f8a84" stroke-width="1.2"/>
+<text x="0" y="628.0" font-size="13.5" fill="#55524f">Interest and growth</text>
+<rect x="198.5" y="617.0" width="35.1" height="14" fill="#8a8781"/>
+<text x="194.5" y="628.0" font-size="13.5" fill="#26262f" text-anchor="end">−22.5</text>
+<text x="0" y="649.0" font-size="13.5" fill="#55524f">Primary balance</text>
+<rect x="233.6" y="638.0" width="29.9" height="14" fill="#eb6834"/>
+<text x="229.6" y="649.0" font-size="13.5" fill="#26262f" text-anchor="end">+19.1</text>
+<text x="0" y="670.0" font-size="13.5" fill="#55524f">Other adjustments</text>
+<rect x="233.6" y="659.0" width="2.4" height="14" fill="#eb6834"/>
+<text x="240.0" y="670.0" font-size="13.5" fill="#26262f" text-anchor="start">+1.5</text>
+<line x1="0" y1="690.0" x2="300" y2="690.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="0" y="712.0" font-size="15" font-weight="600" fill="#26262f">Belgium: +2.2 points</text>
+<text x="0" y="730.0" font-size="13.5" fill="#184f95">105.7 → 107.9% of GDP</text>
+<line x1="233.6" y1="738.0" x2="233.6" y2="798.0" stroke="#8f8a84" stroke-width="1.2"/>
+<text x="0" y="751.0" font-size="13.5" fill="#55524f">Interest and growth</text>
+<rect x="196.5" y="740.0" width="37.1" height="14" fill="#8a8781"/>
+<text x="192.5" y="751.0" font-size="13.5" fill="#26262f" text-anchor="end">−23.8</text>
+<text x="0" y="772.0" font-size="13.5" fill="#55524f">Primary balance</text>
+<rect x="233.6" y="761.0" width="26.5" height="14" fill="#eb6834"/>
+<text x="229.6" y="772.0" font-size="13.5" fill="#26262f" text-anchor="end">+17.0</text>
+<text x="0" y="793.0" font-size="13.5" fill="#55524f">Other adjustments</text>
+<rect x="233.6" y="782.0" width="14.0" height="14" fill="#eb6834"/>
+<text x="251.6" y="793.0" font-size="13.5" fill="#26262f" text-anchor="start">+9.0</text>
+<line x1="0" y1="813.0" x2="300" y2="813.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="0" y="835.0" font-size="15" font-weight="600" fill="#26262f">Italy: +2.3 points</text>
+<text x="0" y="853.0" font-size="13.5" fill="#184f95">134.8 → 137.1% of GDP</text>
+<line x1="233.6" y1="861.0" x2="233.6" y2="921.0" stroke="#8f8a84" stroke-width="1.2"/>
+<text x="0" y="874.0" font-size="13.5" fill="#55524f">Interest and growth</text>
+<rect x="225.4" y="863.0" width="8.2" height="14" fill="#8a8781"/>
+<text x="221.4" y="874.0" font-size="13.5" fill="#26262f" text-anchor="end">−5.3</text>
+<text x="0" y="895.0" font-size="13.5" fill="#55524f">Primary balance</text>
+<rect x="233.6" y="884.0" width="18.1" height="14" fill="#eb6834"/>
+<text x="255.7" y="895.0" font-size="13.5" fill="#26262f" text-anchor="start">+11.6</text>
+<text x="0" y="916.0" font-size="13.5" fill="#55524f">Other adjustments</text>
+<rect x="227.3" y="905.0" width="6.3" height="14" fill="#8a8781"/>
+<text x="223.3" y="916.0" font-size="13.5" fill="#26262f" text-anchor="end">−4.0</text>
+<line x1="0" y1="936.0" x2="300" y2="936.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="0" y="958.0" font-size="15" font-weight="600" fill="#26262f">France: +18.6 points</text>
+<text x="0" y="976.0" font-size="13.5" fill="#184f95">97.0 → 115.6% of GDP</text>
+<line x1="233.6" y1="984.0" x2="233.6" y2="1044.0" stroke="#8f8a84" stroke-width="1.2"/>
+<text x="0" y="997.0" font-size="13.5" fill="#55524f">Interest and growth</text>
+<rect x="210.0" y="986.0" width="23.6" height="14" fill="#8a8781"/>
+<text x="206.0" y="997.0" font-size="13.5" fill="#26262f" text-anchor="end">−15.1</text>
+<text x="0" y="1018.0" font-size="13.5" fill="#55524f">Primary balance</text>
+<rect x="233.6" y="1007.0" width="47.7" height="14" fill="#eb6834"/>
+<text x="229.6" y="1018.0" font-size="13.5" fill="#26262f" text-anchor="end">+30.6</text>
+<text x="0" y="1039.0" font-size="13.5" fill="#55524f">Other adjustments</text>
+<rect x="233.6" y="1028.0" width="4.8" height="14" fill="#eb6834"/>
+<text x="242.4" y="1039.0" font-size="13.5" fill="#26262f" text-anchor="start">+3.1</text>
+<line x1="0" y1="1057.0" x2="300" y2="1057.0" stroke="#dcd8d3"/>
+<text class="pied-source" x="0" y="1078.0" font-size="13.5" fill="#55524f">Eurostat gov_10dd_edpt1 (debt, GDP),</text>
+<text class="pied-source" x="0" y="1095.0" font-size="13.5" fill="#55524f">gov_10a_main (B9, D41PAY), 2016-2025;</text>
+<text class="pied-source" x="0" y="1112.0" font-size="13.5" fill="#55524f">countries sorted by change in the debt</text>
+<text class="pied-source" x="0" y="1129.0" font-size="13.5" fill="#55524f">ratio</text>
+<text class="pied-note" x="0" y="1150.0" font-size="13.5" fill="#55524f">Greece, Cyprus and Portugal received</text>
+<text class="pied-note" x="0" y="1167.0" font-size="13.5" fill="#55524f">official financing (2010-2018). An</text>
+<text class="pied-note" x="0" y="1184.0" font-size="13.5" fill="#55524f">accounting comparison: it attributes</text>
+<text class="pied-note" x="0" y="1201.0" font-size="13.5" fill="#55524f">the fall to no policy. Change computed</text>
+<text class="pied-note" x="0" y="1218.0" font-size="13.5" fill="#55524f">on unrounded values; the sum of the</text>
+<text class="pied-note" x="0" y="1235.0" font-size="13.5" fill="#55524f">contributions shown may differ by 0.1</text>
+<text class="pied-note" x="0" y="1252.0" font-size="13.5" fill="#55524f">point.</text>
+<text class="pied-licence" x="0" y="1273.0" font-size="13.5" fill="#96928f">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="1290.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
+</svg>

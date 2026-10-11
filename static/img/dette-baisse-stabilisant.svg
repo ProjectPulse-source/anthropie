@@ -1,43 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 372" role="img" font-variant-numeric="tabular-nums" aria-labelledby="bs-t bs-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
-<title id="bs-t">France : le solde primaire observé et celui qui aurait stabilisé la dette</title><desc id="bs-d">Deux courbes annuelles de 1996 à 2025, en % du PIB : le solde primaire observé, positif quatre fois (1998 à 2001), et le solde primaire qui aurait stabilisé le ratio de dette, qui va de −7,3 en 2021 à +6,1 en 2020. En 2025, le solde observé est de −2,9 et le solde stabilisant de +0,0.</desc>
-<rect width="720" height="372" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 387" role="img" font-variant-numeric="tabular-nums" aria-labelledby="bs-t bs-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="bs-t">France : le solde primaire observé et celui qui aurait stabilisé la dette</title><desc id="bs-d">Deux courbes annuelles de 1996 à 2025, en % du PIB : le solde primaire observé, positif quatre fois (1998 à 2001), et le solde primaire qui aurait stabilisé le ratio de dette, qui va de −7,3 en 2021 à +6,1 en 2020. En 2025, le solde observé est de −2,9 et le solde stabilisant de +0,0 : un écart de 2,9 points de PIB.</desc>
+<rect width="720" height="387" fill="#ffffff"/>
 <text x="0" y="18" font-size="15" font-weight="600" fill="#26262f">France : le solde primaire observé et celui qui aurait stabilisé la dette</text>
-<line x1="40" y1="280.0" x2="710" y2="280.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="34" y="283.0" font-size="10" fill="#96928f" text-anchor="end">−8 %</text>
-<line x1="40" y1="253.2" x2="710" y2="253.2" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="34" y="256.2" font-size="10" fill="#96928f" text-anchor="end">−6 %</text>
-<line x1="40" y1="226.5" x2="710" y2="226.5" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="34" y="229.5" font-size="10" fill="#96928f" text-anchor="end">−4 %</text>
-<line x1="40" y1="199.8" x2="710" y2="199.8" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="34" y="202.8" font-size="10" fill="#96928f" text-anchor="end">−2 %</text>
-<line x1="40" y1="173.0" x2="710" y2="173.0" stroke="#dcd8d3" stroke-width="1.4"/>
-<text x="34" y="176.0" font-size="10" fill="#96928f" text-anchor="end">0 %</text>
-<line x1="40" y1="146.2" x2="710" y2="146.2" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="34" y="149.2" font-size="10" fill="#96928f" text-anchor="end">+2 %</text>
-<line x1="40" y1="119.5" x2="710" y2="119.5" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="34" y="122.5" font-size="10" fill="#96928f" text-anchor="end">+4 %</text>
-<line x1="40" y1="92.8" x2="710" y2="92.8" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="34" y="95.8" font-size="10" fill="#96928f" text-anchor="end">+6 %</text>
-<line x1="40" y1="66.0" x2="710" y2="66.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="34" y="69.0" font-size="10" fill="#96928f" text-anchor="end">+8 %</text>
-<polyline points="51.2,145.2 73.5,152.3 95.8,162.6 118.2,160.9 140.5,177.1 162.8,161.7 185.2,156.8 207.5,156.7 229.8,173.6 252.2,170.2 274.5,179.7 296.8,178.5 319.2,157.5 341.5,112.8 363.8,172.9 386.2,173.7 408.5,152.7 430.8,160.4 453.2,163.2 475.5,173.7 497.8,165.2 520.2,183.4 542.5,185.1 564.8,194.4 587.2,91.3 609.5,270.8 631.8,230.3 654.2,242.3 676.5,196.2 698.8,173.2" fill="none" stroke="#8a8781" stroke-width="2.2" stroke-linejoin="round"/>
-<polyline points="51.2,176.8 73.5,175.1 95.8,159.7 118.2,152.5 140.5,151.0 162.8,151.1 185.2,175.0 207.5,189.2 229.8,183.1 252.2,183.6 274.5,173.7 296.8,177.0 319.2,181.4 341.5,237.6 363.8,234.7 386.2,207.6 408.5,207.0 430.8,207.9 453.2,204.8 475.5,197.9 497.8,197.9 520.2,194.0 542.5,180.4 564.8,184.7 587.2,275.3 609.5,242.5 631.8,210.8 654.2,219.5 676.5,222.7 698.8,211.4" fill="none" stroke="#eb6834" stroke-width="2.6" stroke-linejoin="round"/>
-<text x="140.5" y="294" font-size="10" fill="#55524f" text-anchor="middle">2000</text>
-<text x="252.2" y="294" font-size="10" fill="#55524f" text-anchor="middle">2005</text>
-<text x="363.8" y="294" font-size="10" fill="#55524f" text-anchor="middle">2010</text>
-<text x="475.5" y="294" font-size="10" fill="#55524f" text-anchor="middle">2015</text>
-<text x="587.2" y="294" font-size="10" fill="#55524f" text-anchor="middle">2020</text>
-<text x="698.8" y="294" font-size="10" fill="#55524f" text-anchor="middle">2025</text>
-<text x="581.2" y="95.3" font-size="10" fill="#55524f" text-anchor="end">2020 : recul du PIB</text>
-<text x="616.5" y="273.8" font-size="10" fill="#55524f" text-anchor="start">2021 : rebond du PIB</text>
-<circle cx="698.8" cy="173.2" r="3.4" fill="#8a8781" stroke="#ffffff" stroke-width="1"/>
-<circle cx="698.8" cy="211.4" r="3.4" fill="#eb6834" stroke="#ffffff" stroke-width="1"/>
-<line x1="40" y1="41" x2="58" y2="41" stroke="#eb6834" stroke-width="2.6"/>
-<text x="63" y="45" font-size="11" fill="#55524f">solde primaire observé</text>
-<line x1="210" y1="41" x2="228" y2="41" stroke="#8a8781" stroke-width="2.2"/>
-<text x="233" y="45" font-size="11" fill="#55524f">solde qui aurait stabilisé le ratio cette année-là, hors autres ajustements</text>
-<line x1="0" y1="324.0" x2="720" y2="324.0" stroke="#dcd8d3"/>
-<text x="0" y="337.0" font-size="9" fill="#55524f">Eurostat gov_10dd_edpt1 (dette, PIB), gov_10a_main (B9, D41PAY), France, 1996-2025</text>
-<text x="0" y="349.0" font-size="9" fill="#55524f">En % du PIB ; solde stabilisant = (taux implicite − croissance nominale) / (1 + croissance) × dette de l'année précédente, hors autres ajustements (flux-stock).</text>
-<text x="0" y="361.0" font-size="9" fill="#96928f">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/dette-publique-peut-elle-baisser/</text>
+<line x1="40" y1="290.0" x2="710" y2="290.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="294.0" font-size="11" fill="#96928f" text-anchor="end">−10 %</text>
+<line x1="40" y1="267.1" x2="710" y2="267.1" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="271.1" font-size="11" fill="#96928f" text-anchor="end">−8 %</text>
+<line x1="40" y1="244.2" x2="710" y2="244.2" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="248.2" font-size="11" fill="#96928f" text-anchor="end">−6 %</text>
+<line x1="40" y1="221.3" x2="710" y2="221.3" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="225.3" font-size="11" fill="#96928f" text-anchor="end">−4 %</text>
+<line x1="40" y1="198.4" x2="710" y2="198.4" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="202.4" font-size="11" fill="#96928f" text-anchor="end">−2 %</text>
+<line x1="40" y1="175.6" x2="710" y2="175.6" stroke="#dcd8d3" stroke-width="1.4"/>
+<text x="34" y="179.6" font-size="11" fill="#96928f" text-anchor="end">0 %</text>
+<line x1="40" y1="152.7" x2="710" y2="152.7" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="156.7" font-size="11" fill="#96928f" text-anchor="end">+2 %</text>
+<line x1="40" y1="129.8" x2="710" y2="129.8" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="133.8" font-size="11" fill="#96928f" text-anchor="end">+4 %</text>
+<line x1="40" y1="106.9" x2="710" y2="106.9" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="110.9" font-size="11" fill="#96928f" text-anchor="end">+6 %</text>
+<line x1="40" y1="84.0" x2="710" y2="84.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="88.0" font-size="11" fill="#96928f" text-anchor="end">+8 %</text>
+<polyline points="51.2,151.8 73.5,157.9 95.8,166.7 118.2,165.2 140.5,179.1 162.8,165.9 185.2,161.7 207.5,161.6 229.8,176.0 252.2,173.1 274.5,181.3 296.8,180.3 319.2,162.3 341.5,124.1 363.8,175.5 386.2,176.1 408.5,158.2 430.8,164.8 453.2,167.2 475.5,176.1 497.8,168.9 520.2,184.4 542.5,185.9 564.8,193.8 587.2,105.7 609.5,259.2 631.8,224.5 654.2,234.9 676.5,195.4 698.8,175.7" fill="none" stroke="#8a8781" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="51.2,178.8 73.5,177.4 95.8,164.2 118.2,158.0 140.5,156.7 162.8,156.8 185.2,177.2 207.5,189.4 229.8,184.2 252.2,184.6 274.5,176.2 296.8,179.0 319.2,182.8 341.5,230.9 363.8,228.3 386.2,205.2 408.5,204.6 430.8,205.4 453.2,202.8 475.5,196.9 497.8,196.9 520.2,193.6 542.5,181.9 564.8,185.6 587.2,263.1 609.5,235.0 631.8,207.9 654.2,215.3 676.5,218.0 698.8,208.4" fill="none" stroke="#eb6834" stroke-width="2.6" stroke-linejoin="round"/>
+<text x="140.5" y="306" font-size="11" fill="#55524f" text-anchor="middle">2000</text>
+<text x="252.2" y="306" font-size="11" fill="#55524f" text-anchor="middle">2005</text>
+<text x="363.8" y="306" font-size="11" fill="#55524f" text-anchor="middle">2010</text>
+<text x="475.5" y="306" font-size="11" fill="#55524f" text-anchor="middle">2015</text>
+<text x="587.2" y="306" font-size="11" fill="#55524f" text-anchor="middle">2020</text>
+<text x="698.8" y="306" font-size="11" fill="#55524f" text-anchor="middle">2025</text>
+<circle cx="587.2" cy="105.7" r="3.6" fill="#8a8781" stroke="#ffffff" stroke-width="1"/>
+<text x="580.2" y="109.7" font-size="11" fill="#55524f" text-anchor="end">2020 : recul du PIB</text>
+<circle cx="609.5" cy="259.2" r="3.6" fill="#8a8781" stroke="#ffffff" stroke-width="1"/>
+<text x="614.5" y="279.2" font-size="11" fill="#55524f" text-anchor="end">2021 : rebond du PIB</text>
+<line x1="704.8" y1="175.7" x2="704.8" y2="208.4" stroke="#55524f" stroke-width="1.4" stroke-dasharray="3 3"/>
+<circle cx="698.8" cy="175.7" r="3.6" fill="#8a8781" stroke="#ffffff" stroke-width="1"/>
+<circle cx="698.8" cy="208.4" r="3.6" fill="#eb6834" stroke="#ffffff" stroke-width="1"/>
+<line x1="0" y1="41" x2="18" y2="41" stroke="#eb6834" stroke-width="2.6"/>
+<text x="23" y="45" font-size="11" fill="#55524f">solde primaire observé</text>
+<line x1="170" y1="41" x2="188" y2="41" stroke="#8a8781" stroke-width="2.2"/>
+<text x="193" y="45" font-size="11" fill="#55524f">solde qui aurait stabilisé le ratio cette année-là, hors autres ajustements</text>
+<text x="0" y="66" font-size="11" fill="#26262f">En 2025, l'écart entre les deux courbes (pointillé) : 2,9 points de PIB.</text>
+<line x1="0" y1="322.0" x2="720" y2="322.0" stroke="#dcd8d3"/>
+<text class="pied-source" x="0" y="337.0" font-size="11" fill="#55524f">Eurostat gov_10dd_edpt1 (dette, PIB), gov_10a_main (B9, D41PAY), France, 1996-2025</text>
+<text class="pied-note" x="0" y="351.0" font-size="11" fill="#55524f">En % du PIB ; solde stabilisant = (taux implicite − croissance nominale) / (1 + croissance) × ratio dette/PIB de fin</text>
+<text class="pied-note" x="0" y="365.0" font-size="11" fill="#55524f">d'année précédente, hors autres ajustements (flux-stock). Un repère comptable de l'année, non un objectif.</text>
+<text class="pied-licence" x="0" y="379.0" font-size="11" fill="#96928f">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/dette-publique-peut-elle-baisser/</text>
 </svg>

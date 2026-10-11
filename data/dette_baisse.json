@@ -1,8 +1,8 @@
 {
- "releve_le": "2026-10-09",
+ "releve_le": "2026-10-11",
  "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; source Eurostat",
  "meta": {
-  "releve_le": "2026-10-09",
+  "releve_le": "2026-10-11",
   "page": "https://stephane-lalut.com/dette-publique-peut-elle-baisser/",
   "licence": "CC BY 4.0",
   "perimetre": "administrations publiques (S.13), SEC 2010, monnaie nationale, PIB de la notification de déficit et de dette",
@@ -32,9 +32,13 @@
     "solde_primaire_moyen": 0.24630370229713897,
     "annees_excedent": 4,
     "croissance_max": 5.617253510021869,
-    "croissance_nominale_moyenne": 3.800871506358463,
+    "croissance_nominale_moyenne": 3.8008715063584626,
     "encours_depart": 701.6383000000001,
-    "encours_fin": 1201.4706999999999
+    "encours_fin": 1201.4706999999999,
+    "taux_implicite_moyen": 5.250985471353992,
+    "dette_moyenne": 61.64474952490981,
+    "croissance_volume_moyenne": 2.360890469358854,
+    "prix_moyen": 1.410222329442434
    },
    {
     "pays": "FR",
@@ -47,13 +51,17 @@
     "croissance": -17.310437367182782,
     "taux_croissance": 7.845347495718105,
     "deficits_primaires": 22.403802666557286,
-    "flux_stock": -1.4573974834077101,
+    "flux_stock": -1.4573974834077097,
     "solde_primaire_moyen": -2.2403802666557286,
     "annees_excedent": 0,
     "croissance_max": 4.9758372196199385,
     "croissance_nominale_moyenne": 2.2721998964733836,
     "encours_depart": 1201.4706999999999,
-    "encours_fin": 2134.871
+    "encours_fin": 2134.871,
+    "taux_implicite_moyen": 3.2835781249497673,
+    "dette_moyenne": 81.04298245615934,
+    "croissance_volume_moyenne": 1.0268247063889446,
+    "prix_moyen": 1.2265254223180524
    },
    {
     "pays": "FR",
@@ -64,7 +72,7 @@
     "variation": 18.573917338207508,
     "interets": 17.722941621328765,
     "croissance": -32.82968251172923,
-    "taux_croissance": -15.106740890400463,
+    "taux_croissance": -15.106740890400461,
     "deficits_primaires": 30.593378922457113,
     "flux_stock": 3.087279306150857,
     "solde_primaire_moyen": -3.0593378922457113,
@@ -72,7 +80,11 @@
     "croissance_max": 8.188239881705206,
     "croissance_nominale_moyenne": 3.180751317224799,
     "encours_depart": 2134.871,
-    "encours_fin": 3460.4651
+    "encours_fin": 3460.4651,
+    "taux_implicite_moyen": 1.7401729771887986,
+    "dette_moyenne": 105.17761495578172,
+    "croissance_volume_moyenne": 1.2717408008338327,
+    "prix_moyen": 1.896291494656803
    }
   ],
   "annees": [
@@ -85,7 +97,9 @@
     "variation": 2.788464228361356,
     "flux_stock": 0.4300410433577627,
     "taux_implicite": 6.424022177808708,
-    "croissance_nominale": 2.732900423627571
+    "croissance_nominale": 2.732900423627571,
+    "croissance_volume": 1.3970798065059853,
+    "pib": 1246.974
    },
    {
     "annee": 1997,
@@ -96,7 +110,9 @@
     "variation": 1.389784398306091,
     "flux_stock": -0.3156856526752206,
     "taux_implicite": 6.06104040208326,
-    "croissance_nominale": 3.423888549400389
+    "croissance_nominale": 3.423888549400389,
+    "croissance_volume": 2.527061398851571,
+    "pib": 1289.669
    },
    {
     "annee": 1998,
@@ -107,7 +123,9 @@
     "variation": 0.11644403253375657,
     "flux_stock": 0.33319765464027185,
     "taux_implicite": 5.702653110140024,
-    "croissance_nominale": 4.392522422420009
+    "croissance_nominale": 4.392522422420009,
+    "croissance_volume": 3.452598306080601,
+    "pib": 1346.318
    },
    {
     "annee": 1999,
@@ -118,7 +136,9 @@
     "variation": -0.6765720980017349,
     "flux_stock": -0.047321144423390304,
     "taux_implicite": 5.1363934189365015,
-    "croissance_nominale": 3.626929150468161
+    "croissance_nominale": 3.626929150468161,
+    "croissance_volume": 3.3993051538305563,
+    "pib": 1395.148
    },
    {
     "annee": 2000,
@@ -129,7 +149,9 @@
     "variation": -1.7017373286262867,
     "flux_stock": 0.25239613794751237,
     "taux_implicite": 5.088538509248276,
-    "croissance_nominale": 5.617253510021869
+    "croissance_nominale": 5.617253510021869,
+    "croissance_volume": 4.1410021294267185,
+    "pib": 1473.517
    },
    {
     "annee": 2001,
@@ -140,7 +162,9 @@
     "variation": -0.3991339999700827,
     "flux_stock": 0.39090996430883984,
     "taux_implicite": 5.30751650445543,
-    "croissance_nominale": 3.838028336286592
+    "croissance_nominale": 3.838028336286592,
+    "croissance_volume": 1.8994638100381822,
+    "pib": 1530.071
    },
    {
     "annee": 2002,
@@ -151,7 +175,9 @@
     "variation": 1.9337891061978496,
     "flux_stock": 0.5720603422604879,
     "taux_implicite": 5.265499917040572,
-    "croissance_nominale": 3.154036642744029
+    "croissance_nominale": 3.154036642744029,
+    "croissance_volume": 1.0677515463156428,
+    "pib": 1578.33
    },
    {
     "annee": 2003,
@@ -162,7 +188,9 @@
     "variation": 4.107817338845173,
     "flux_stock": 1.68074224887552,
     "taux_implicite": 4.825922028086851,
-    "croissance_nominale": 2.7866795917203646
+    "croissance_nominale": 2.7866795917203646,
+    "croissance_volume": 0.9678262853506148,
+    "pib": 1622.313
    },
    {
     "annee": 2004,
@@ -173,7 +201,9 @@
     "variation": 1.5155426084745756,
     "flux_stock": 0.8042353435040754,
     "taux_implicite": 4.480414301535713,
-    "croissance_nominale": 4.548752306120951
+    "croissance_nominale": 4.548752306120951,
+    "croissance_volume": 2.868252923751391,
+    "pib": 1696.108
    },
    {
     "annee": 2005,
@@ -184,7 +214,9 @@
     "variation": 1.3066342030413125,
     "flux_stock": 0.30205760569519546,
     "taux_implicite": 4.217854344204581,
-    "croissance_nominale": 3.8877241307746946
+    "croissance_nominale": 3.8877241307746946,
+    "croissance_volume": 1.8885633334372764,
+    "pib": 1762.048
    },
    {
     "annee": 2006,
@@ -195,7 +227,9 @@
     "variation": -2.7852262130833054,
     "flux_stock": -2.341284308250003,
     "taux_implicite": 4.00010587024719,
-    "croissance_nominale": 4.76564770085719
+    "croissance_nominale": 4.76564770085719,
+    "croissance_volume": 2.7140651632651336,
+    "pib": 1846.021
    },
    {
     "annee": 2007,
@@ -206,7 +240,9 @@
     "variation": 0.0759638550764663,
     "flux_stock": 0.18630190992612716,
     "taux_implicite": 4.31497158938194,
-    "croissance_nominale": 4.9758372196199385
+    "croissance_nominale": 4.9758372196199385,
+    "croissance_volume": 2.530481489709735,
+    "pib": 1937.876
    },
    {
     "annee": 2008,
@@ -217,7 +253,9 @@
     "variation": 4.342401307649368,
     "flux_stock": 2.555417085427143,
     "taux_implicite": 4.5055686657623895,
-    "croissance_nominale": 2.6897489829070587
+    "croissance_nominale": 2.6897489829070587,
+    "croissance_volume": 0.3801744435942389,
+    "pib": 1990.0
    },
    {
     "annee": 2009,
@@ -228,7 +266,9 @@
     "variation": 14.236438220941878,
     "flux_stock": 4.904677039424735,
     "taux_implicite": 3.5469586331266636,
-    "croissance_nominale": -2.7216080402010068
+    "croissance_nominale": -2.7216080402010068,
+    "croissance_volume": -2.8245546144268774,
+    "pib": 1935.84
    },
    {
     "annee": 2010,
@@ -239,7 +279,9 @@
     "variation": 2.222316338146655,
     "flux_stock": -2.39322169758151,
     "taux_implicite": 3.1163012968062214,
-    "croissance_nominale": 3.1115691379452803
+    "croissance_nominale": 3.1115691379452803,
+    "croissance_volume": 2.000326940650554,
+    "pib": 1996.075
    },
    {
     "annee": 2011,
@@ -250,7 +292,9 @@
     "variation": 2.471398535624388,
     "flux_stock": -0.06892836134870839,
     "taux_implicite": 3.2514576649187577,
-    "croissance_nominale": 3.3097954736169832
+    "croissance_nominale": 3.3097954736169832,
+    "croissance_volume": 2.43757862617493,
+    "pib": 2062.141
    },
    {
     "annee": 2012,
@@ -261,7 +305,9 @@
     "variation": 2.9926202886111497,
     "flux_stock": -1.0673006152889857,
     "taux_implicite": 3.0020059161713806,
-    "croissance_nominale": 1.267905540891734
+    "croissance_nominale": 1.267905540891734,
+    "croissance_volume": 0.18383347247143966,
+    "pib": 2088.287
    },
    {
     "annee": 2013,
@@ -272,7 +318,9 @@
     "variation": 2.8158505742871256,
     "flux_stock": -0.7351986839920921,
     "taux_implicite": 2.579866994822937,
-    "croissance_nominale": 1.5354690231754509
+    "croissance_nominale": 1.5354690231754509,
+    "croissance_volume": 0.7817563562310115,
+    "pib": 2120.352
    },
    {
     "annee": 2014,
@@ -283,7 +331,9 @@
     "variation": 1.6066040143512907,
     "flux_stock": -1.5014720951947171,
     "taux_implicite": 2.359939474049883,
-    "croissance_nominale": 1.5743140761533825
+    "croissance_nominale": 1.5743140761533825,
+    "croissance_volume": 0.9978328451854201,
+    "pib": 2153.733
    },
    {
     "annee": 2015,
@@ -294,7 +344,9 @@
     "variation": 0.8133857572626653,
     "flux_stock": -0.9963877565296988,
     "taux_implicite": 2.1586051442103074,
-    "croissance_nominale": 2.2133198497678253
+    "croissance_nominale": 2.2133198497678253,
+    "croissance_volume": 1.0667523410338609,
+    "pib": 2201.402
    },
    {
     "annee": 2016,
@@ -305,7 +357,9 @@
     "variation": 1.171952821207526,
     "flux_stock": -1.2712321205258965,
     "taux_implicite": 1.9875065050768872,
-    "croissance_nominale": 1.3817103827469923
+    "croissance_nominale": 1.3817103827469923,
+    "croissance_volume": 0.8600338444451072,
+    "pib": 2231.819
    },
    {
     "annee": 2017,
@@ -316,7 +370,9 @@
     "variation": 0.6112020471721422,
     "flux_stock": -0.1874824637460497,
     "taux_implicite": 1.8726153543311042,
-    "croissance_nominale": 2.6822067560138274
+    "croissance_nominale": 2.6822067560138274,
+    "croissance_volume": 2.0836132712595434,
+    "pib": 2291.681
    },
    {
     "annee": 2018,
@@ -327,7 +383,9 @@
     "variation": -0.23103210256101647,
     "flux_stock": 0.12036785837258468,
     "taux_implicite": 1.8407131790426114,
-    "croissance_nominale": 2.778833528750302
+    "croissance_nominale": 2.778833528750302,
+    "croissance_volume": 1.64591181559528,
+    "pib": 2355.363
    },
    {
     "annee": 2019,
@@ -338,7 +396,9 @@
     "variation": -0.3721897792833886,
     "flux_stock": 0.3468619241701134,
     "taux_implicite": 1.5886418155679933,
-    "croissance_nominale": 3.262511977983862
+    "croissance_nominale": 3.262511977983862,
+    "croissance_volume": 2.0274453051981833,
+    "pib": 2432.207
    },
    {
     "annee": 2020,
@@ -349,7 +409,9 @@
     "variation": 16.74887178790999,
     "flux_stock": 2.9922494129257897,
     "taux_implicite": 1.2450411514790782,
-    "croissance_nominale": -4.68426412718983
+    "croissance_nominale": -4.68426412718983,
+    "croissance_volume": -7.440646652666027,
+    "pib": 2318.276
    },
    {
     "annee": 2021,
@@ -360,7 +422,9 @@
     "variation": -2.12087035748948,
     "flux_stock": -0.008783534321932684,
     "taux_implicite": 1.3063751289486054,
-    "croissance_nominale": 8.188239881705206
+    "croissance_nominale": 8.188239881705206,
+    "croissance_volume": 6.88233598118646,
+    "pib": 2508.102
    },
    {
     "annee": 2022,
@@ -371,7 +435,9 @@
     "variation": -1.4201459936509764,
     "flux_stock": 0.0362585187549076,
     "taux_implicite": 1.8005635643056142,
-    "croissance_nominale": 5.8169484335166555
+    "croissance_nominale": 5.8169484335166555,
+    "croissance_volume": 2.716766210017285,
+    "pib": 2653.997
    },
    {
     "annee": 2023,
@@ -382,7 +448,9 @@
     "variation": -1.8582194291051763,
     "flux_stock": -0.15214060425729148,
     "taux_implicite": 1.8070507999437415,
-    "croissance_nominale": 6.775780078123672
+    "croissance_nominale": 6.775780078123672,
+    "croissance_volume": 1.6329869888029647,
+    "pib": 2833.826
    },
    {
     "annee": 2024,
@@ -393,7 +461,9 @@
     "variation": 3.127424426549638,
     "flux_stock": 1.1491614302904414,
     "taux_implicite": 1.937676266930648,
-    "croissance_nominale": 3.57855422315978
+    "croissance_nominale": 3.57855422315978,
+    "croissance_volume": 1.5044432325055368,
+    "pib": 2935.236
    },
    {
     "annee": 2025,
@@ -404,7 +474,9 @@
     "variation": 2.9169239174582486,
     "flux_stock": 0.06201888448819082,
     "taux_implicite": 2.015546006261704,
-    "croissance_nominale": 2.026992037437525
+    "croissance_nominale": 2.026992037437525,
+    "croissance_volume": 0.8045180119939932,
+    "pib": 2994.733
    }
   ]
  },
@@ -418,15 +490,19 @@
    "variation": -56.561744807395094,
    "interets": 18.2538358378738,
    "croissance": -64.49062774236967,
-   "taux_croissance": -46.23679190449586,
+   "taux_croissance": -46.23679190449587,
    "deficits_primaires": -23.26348675047568,
-   "flux_stock": 12.93853384757645,
+   "flux_stock": 12.938533847576448,
    "solde_primaire_moyen": 2.326348675047568,
    "annees_excedent": 8,
    "croissance_max": 15.44203832569442,
    "croissance_nominale_moyenne": 7.482469216672632,
    "encours_depart": 20.024900000000002,
    "encours_fin": 20.078200000000002,
+   "taux_implicite_moyen": 2.0707246560828496,
+   "dette_moyenne": 93.2008016276944,
+   "croissance_volume_moyenne": 5.27219633478493,
+   "prix_moyen": 2.0646985800688546,
    "nom": "Chypre"
   },
   {
@@ -447,6 +523,10 @@
    "croissance_nominale_moyenne": 5.624625054258081,
    "encours_depart": 235.0461,
    "encours_fin": 275.0628,
+   "taux_implicite_moyen": 2.3921827354800747,
+   "dette_moyenne": 118.50144426155123,
+   "croissance_volume_moyenne": 2.303220097109051,
+   "prix_moyen": 3.228569937816972,
    "nom": "Portugal"
   },
   {
@@ -457,16 +537,20 @@
    "dette_fin": 146.13213397005887,
    "variation": -33.48785428287931,
    "interets": 30.613660441291152,
-   "croissance": -60.98450774161922,
-   "taux_croissance": -30.37084730032807,
+   "croissance": -60.984507741619225,
+   "taux_croissance": -30.370847300328066,
    "deficits_primaires": -15.197535827243957,
-   "flux_stock": 12.080528844692715,
+   "flux_stock": 12.080528844692713,
    "solde_primaire_moyen": 1.5197535827243958,
    "annees_excedent": 7,
    "croissance_max": 12.154408776919956,
    "croissance_nominale_moyenne": 3.7116383617725823,
    "encours_depart": 314.987,
    "encours_fin": 362.925,
+   "taux_implicite_moyen": 1.7631163694017693,
+   "dette_moyenne": 181.99101390482846,
+   "croissance_volume_moyenne": 1.7059015191745242,
+   "prix_moyen": 1.9294000360270769,
    "nom": "Grèce"
   },
   {
@@ -476,17 +560,21 @@
    "dette_depart": 102.48520851577389,
    "dette_fin": 100.65628941553577,
    "variation": -1.8289191002381244,
-   "interets": 23.85366694147405,
-   "croissance": -46.35854206921622,
-   "taux_croissance": -22.504875127742174,
+   "interets": 23.853666941474053,
+   "croissance": -46.35854206921623,
+   "taux_croissance": -22.50487512774217,
    "deficits_primaires": 19.146279254105046,
-   "flux_stock": 1.5296767733990004,
+   "flux_stock": 1.5296767733990007,
    "solde_primaire_moyen": -1.9146279254105045,
    "annees_excedent": 0,
    "croissance_max": 11.363169115659243,
-   "croissance_nominale_moyenne": 4.649004146406493,
+   "croissance_nominale_moyenne": 4.649004146406494,
    "encours_depart": 1114.129,
    "encours_fin": 1698.2246,
+   "taux_implicite_moyen": 2.375212721989195,
+   "dette_moyenne": 105.42878527649597,
+   "croissance_volume_moyenne": 2.0905127585380443,
+   "prix_moyen": 2.480561092049016,
    "nom": "Espagne"
   },
   {
@@ -497,16 +585,20 @@
    "dette_fin": 107.85736726211977,
    "variation": 2.1647230274168123,
    "interets": 20.94037432945369,
-   "croissance": -44.74790779335998,
-   "taux_croissance": -23.807533463906292,
-   "deficits_primaires": 16.972935565799048,
+   "croissance": -44.747907793359985,
+   "taux_croissance": -23.807533463906296,
+   "deficits_primaires": 16.97293556579905,
    "flux_stock": 8.999320925524056,
-   "solde_primaire_moyen": -1.6972935565799048,
+   "solde_primaire_moyen": -1.6972935565799052,
    "annees_excedent": 3,
    "croissance_max": 10.993243318014589,
    "croissance_nominale_moyenne": 4.512741445082419,
    "encours_depart": 439.19309999999996,
    "encours_fin": 692.4608000000001,
+   "taux_implicite_moyen": 2.0978355649729807,
+   "dette_moyenne": 104.18335272747024,
+   "croissance_volume_moyenne": 1.611704051510219,
+   "prix_moyen": 2.83873860465645,
    "nom": "Belgique"
   },
   {
@@ -517,16 +609,20 @@
    "dette_fin": 137.1045540337549,
    "variation": 2.3140978158906194,
    "interets": 36.885898201886356,
-   "croissance": -42.145202086458305,
-   "taux_croissance": -5.259303884571944,
+   "croissance": -42.1452020864583,
+   "taux_croissance": -5.259303884571945,
    "deficits_primaires": 11.582735771433939,
-   "flux_stock": -4.009334070971375,
+   "flux_stock": -4.0093340709713745,
    "solde_primaire_moyen": -1.1582735771433939,
    "annees_excedent": 6,
    "croissance_max": 10.328998254443578,
    "croissance_nominale_moyenne": 3.210421814505827,
    "encours_depart": 2241.9396,
    "encours_fin": 3095.8876,
+   "taux_implicite_moyen": 2.7668196388420503,
+   "dette_moyenne": 137.81122488618956,
+   "croissance_volume_moyenne": 1.2818507552995573,
+   "prix_moyen": 1.901854123652684,
    "nom": "Italie"
   },
   {
@@ -538,7 +634,7 @@
    "variation": 18.573917338207508,
    "interets": 17.722941621328765,
    "croissance": -32.82968251172923,
-   "taux_croissance": -15.106740890400463,
+   "taux_croissance": -15.106740890400461,
    "deficits_primaires": 30.593378922457113,
    "flux_stock": 3.087279306150857,
    "solde_primaire_moyen": -3.0593378922457113,
@@ -547,6 +643,10 @@
    "croissance_nominale_moyenne": 3.180751317224799,
    "encours_depart": 2134.871,
    "encours_fin": 3460.4651,
+   "taux_implicite_moyen": 1.7401729771887986,
+   "dette_moyenne": 105.17761495578172,
+   "croissance_volume_moyenne": 1.2717408008338327,
+   "prix_moyen": 1.896291494656803,
    "nom": "France"
   }
  ],
@@ -630,7 +730,7 @@
      "nom": "Slovénie",
      "dette_depart": 83.41815196693501,
      "variation": -17.698053564694575,
-     "solde_primaire_moyen": -0.4646833536982486
+     "solde_primaire_moyen": -0.4646833536982487
     },
     {
      "pays": "AT",
@@ -651,7 +751,7 @@
      "nom": "Belgique",
      "dette_depart": 105.69264423470295,
      "variation": 2.1647230274168123,
-     "solde_primaire_moyen": -1.6972935565799048
+     "solde_primaire_moyen": -1.6972935565799052
     },
     {
      "pays": "IT",
@@ -702,7 +802,7 @@
      "nom": "Belgique",
      "dette_depart": 105.69264423470295,
      "variation": 2.1647230274168123,
-     "solde_primaire_moyen": -1.6972935565799048
+     "solde_primaire_moyen": -1.6972935565799052
     },
     {
      "pays": "IT",
@@ -891,6 +991,14 @@
   "cmp_cy_enc0": "20",
   "cmp_cy_enc1": "20",
   "cmp_cy_tcdef": "−69,5",
+  "cmp_cy_int": "+18,3",
+  "cmp_cy_cr": "−64,5",
+  "cmp_cy_ti": "2,07",
+  "cmp_cy_g": "7,5",
+  "cmp_cy_dm": "93",
+  "cmp_cy_rg": "−5,4",
+  "cmp_cy_gv": "5,3",
+  "cmp_cy_gp": "2,1",
   "cmp_pt_nom": "Portugal",
   "cmp_pt_var": "−41,4",
   "cmp_pt_tc": "−33,3",
@@ -903,6 +1011,14 @@
   "cmp_pt_enc0": "235",
   "cmp_pt_enc1": "275",
   "cmp_pt_tcdef": "−48,8",
+  "cmp_pt_int": "+27,2",
+  "cmp_pt_cr": "−60,5",
+  "cmp_pt_ti": "2,39",
+  "cmp_pt_g": "5,6",
+  "cmp_pt_dm": "119",
+  "cmp_pt_rg": "−3,2",
+  "cmp_pt_gv": "2,3",
+  "cmp_pt_gp": "3,2",
   "cmp_el_nom": "Grèce",
   "cmp_el_var": "−33,5",
   "cmp_el_tc": "−30,4",
@@ -915,6 +1031,14 @@
   "cmp_el_enc0": "315",
   "cmp_el_enc1": "363",
   "cmp_el_tcdef": "−45,6",
+  "cmp_el_int": "+30,6",
+  "cmp_el_cr": "−61,0",
+  "cmp_el_ti": "1,76",
+  "cmp_el_g": "3,7",
+  "cmp_el_dm": "182",
+  "cmp_el_rg": "−1,9",
+  "cmp_el_gv": "1,7",
+  "cmp_el_gp": "1,9",
   "cmp_es_nom": "Espagne",
   "cmp_es_var": "−1,8",
   "cmp_es_tc": "−22,5",
@@ -927,6 +1051,14 @@
   "cmp_es_enc0": "1 114",
   "cmp_es_enc1": "1 698",
   "cmp_es_tcdef": "−3,4",
+  "cmp_es_int": "+23,9",
+  "cmp_es_cr": "−46,4",
+  "cmp_es_ti": "2,38",
+  "cmp_es_g": "4,6",
+  "cmp_es_dm": "105",
+  "cmp_es_rg": "−2,3",
+  "cmp_es_gv": "2,1",
+  "cmp_es_gp": "2,5",
   "cmp_be_nom": "Belgique",
   "cmp_be_var": "+2,2",
   "cmp_be_tc": "−23,8",
@@ -939,6 +1071,14 @@
   "cmp_be_enc0": "439",
   "cmp_be_enc1": "692",
   "cmp_be_tcdef": "−6,8",
+  "cmp_be_int": "+20,9",
+  "cmp_be_cr": "−44,7",
+  "cmp_be_ti": "2,10",
+  "cmp_be_g": "4,5",
+  "cmp_be_dm": "104",
+  "cmp_be_rg": "−2,4",
+  "cmp_be_gv": "1,6",
+  "cmp_be_gp": "2,8",
   "cmp_it_nom": "Italie",
   "cmp_it_var": "+2,3",
   "cmp_it_tc": "−5,3",
@@ -951,6 +1091,14 @@
   "cmp_it_enc0": "2 242",
   "cmp_it_enc1": "3 096",
   "cmp_it_tcdef": "+6,3",
+  "cmp_it_int": "+36,9",
+  "cmp_it_cr": "−42,1",
+  "cmp_it_ti": "2,77",
+  "cmp_it_g": "3,2",
+  "cmp_it_dm": "138",
+  "cmp_it_rg": "−0,4",
+  "cmp_it_gv": "1,3",
+  "cmp_it_gp": "1,9",
   "cmp_fr_nom": "France",
   "cmp_fr_var": "+18,6",
   "cmp_fr_tc": "−15,1",
@@ -963,10 +1111,43 @@
   "cmp_fr_enc0": "2 135",
   "cmp_fr_enc1": "3 460",
   "cmp_fr_tcdef": "+15,5",
+  "cmp_fr_int": "+17,7",
+  "cmp_fr_cr": "−32,8",
+  "cmp_fr_ti": "1,74",
+  "cmp_fr_g": "3,2",
+  "cmp_fr_dm": "105",
+  "cmp_fr_rg": "−1,4",
+  "cmp_fr_gv": "1,3",
+  "cmp_fr_gp": "1,9",
+  "cmp_exc_rapport_min": "2,0",
+  "cmp_exc_rapport_max": "2,2",
+  "cmp_exc_tc_min": "30,4",
+  "cmp_exc_tc_max": "46,2",
+  "cmp_exc_sp_min": "15,2",
+  "cmp_exc_sp_max": "23,3",
+  "cmp_exc_tcsfa_min": "18,3",
+  "cmp_exc_tcsfa_max": "33,3",
+  "cmp_exc_ti_min": "1,76",
+  "cmp_exc_ti_max": "2,39",
+  "cmp_exc_g_min": "3,7",
+  "cmp_exc_g_max": "7,5",
+  "cmp_exc_gv_min": "1,7",
+  "cmp_exc_gv_max": "5,3",
+  "cmp_exc_gp_min": "1,9",
+  "cmp_exc_gp_max": "3,2",
+  "cmp_dm_max_pays": "la Grèce",
+  "cmp_dm_max": "182",
   "d3_creux_lib": "2021-2023",
   "d3_creux_abs": "16,8",
   "d3_reste": "+1,7",
   "d3_reste_n": "sept",
+  "d3_creux_g": "6,9",
+  "d3_creux_gv": "3,7",
+  "d3_creux_rebond": "2021",
+  "d3_creux_rebond_gv": "6,9",
+  "ecart_md": "85",
+  "pib_dernier_md": "2 995",
+  "point_md": "30",
   "d3_pic_annee": "2020",
   "d3_pic_tc": "+6,1",
   "suff_hausse": "1998 et 2007",
@@ -1112,6 +1293,14 @@
   "cmp_cy_enc0": "20",
   "cmp_cy_enc1": "20",
   "cmp_cy_tcdef": "−69.5",
+  "cmp_cy_int": "+18.3",
+  "cmp_cy_cr": "−64.5",
+  "cmp_cy_ti": "2.07",
+  "cmp_cy_g": "7.5",
+  "cmp_cy_dm": "93",
+  "cmp_cy_rg": "−5.4",
+  "cmp_cy_gv": "5.3",
+  "cmp_cy_gp": "2.1",
   "cmp_pt_nom": "Portugal",
   "cmp_pt_var": "−41.4",
   "cmp_pt_tc": "−33.3",
@@ -1124,6 +1313,14 @@
   "cmp_pt_enc0": "235",
   "cmp_pt_enc1": "275",
   "cmp_pt_tcdef": "−48.8",
+  "cmp_pt_int": "+27.2",
+  "cmp_pt_cr": "−60.5",
+  "cmp_pt_ti": "2.39",
+  "cmp_pt_g": "5.6",
+  "cmp_pt_dm": "119",
+  "cmp_pt_rg": "−3.2",
+  "cmp_pt_gv": "2.3",
+  "cmp_pt_gp": "3.2",
   "cmp_el_nom": "Greece",
   "cmp_el_var": "−33.5",
   "cmp_el_tc": "−30.4",
@@ -1136,6 +1333,14 @@
   "cmp_el_enc0": "315",
   "cmp_el_enc1": "363",
   "cmp_el_tcdef": "−45.6",
+  "cmp_el_int": "+30.6",
+  "cmp_el_cr": "−61.0",
+  "cmp_el_ti": "1.76",
+  "cmp_el_g": "3.7",
+  "cmp_el_dm": "182",
+  "cmp_el_rg": "−1.9",
+  "cmp_el_gv": "1.7",
+  "cmp_el_gp": "1.9",
   "cmp_es_nom": "Spain",
   "cmp_es_var": "−1.8",
   "cmp_es_tc": "−22.5",
@@ -1148,6 +1353,14 @@
   "cmp_es_enc0": "1,114",
   "cmp_es_enc1": "1,698",
   "cmp_es_tcdef": "−3.4",
+  "cmp_es_int": "+23.9",
+  "cmp_es_cr": "−46.4",
+  "cmp_es_ti": "2.38",
+  "cmp_es_g": "4.6",
+  "cmp_es_dm": "105",
+  "cmp_es_rg": "−2.3",
+  "cmp_es_gv": "2.1",
+  "cmp_es_gp": "2.5",
   "cmp_be_nom": "Belgium",
   "cmp_be_var": "+2.2",
   "cmp_be_tc": "−23.8",
@@ -1160,6 +1373,14 @@
   "cmp_be_enc0": "439",
   "cmp_be_enc1": "692",
   "cmp_be_tcdef": "−6.8",
+  "cmp_be_int": "+20.9",
+  "cmp_be_cr": "−44.7",
+  "cmp_be_ti": "2.10",
+  "cmp_be_g": "4.5",
+  "cmp_be_dm": "104",
+  "cmp_be_rg": "−2.4",
+  "cmp_be_gv": "1.6",
+  "cmp_be_gp": "2.8",
   "cmp_it_nom": "Italy",
   "cmp_it_var": "+2.3",
   "cmp_it_tc": "−5.3",
@@ -1172,6 +1393,14 @@
   "cmp_it_enc0": "2,242",
   "cmp_it_enc1": "3,096",
   "cmp_it_tcdef": "+6.3",
+  "cmp_it_int": "+36.9",
+  "cmp_it_cr": "−42.1",
+  "cmp_it_ti": "2.77",
+  "cmp_it_g": "3.2",
+  "cmp_it_dm": "138",
+  "cmp_it_rg": "−0.4",
+  "cmp_it_gv": "1.3",
+  "cmp_it_gp": "1.9",
   "cmp_fr_nom": "France",
   "cmp_fr_var": "+18.6",
   "cmp_fr_tc": "−15.1",
@@ -1184,10 +1413,43 @@
   "cmp_fr_enc0": "2,135",
   "cmp_fr_enc1": "3,460",
   "cmp_fr_tcdef": "+15.5",
+  "cmp_fr_int": "+17.7",
+  "cmp_fr_cr": "−32.8",
+  "cmp_fr_ti": "1.74",
+  "cmp_fr_g": "3.2",
+  "cmp_fr_dm": "105",
+  "cmp_fr_rg": "−1.4",
+  "cmp_fr_gv": "1.3",
+  "cmp_fr_gp": "1.9",
+  "cmp_exc_rapport_min": "2.0",
+  "cmp_exc_rapport_max": "2.2",
+  "cmp_exc_tc_min": "30.4",
+  "cmp_exc_tc_max": "46.2",
+  "cmp_exc_sp_min": "15.2",
+  "cmp_exc_sp_max": "23.3",
+  "cmp_exc_tcsfa_min": "18.3",
+  "cmp_exc_tcsfa_max": "33.3",
+  "cmp_exc_ti_min": "1.76",
+  "cmp_exc_ti_max": "2.39",
+  "cmp_exc_g_min": "3.7",
+  "cmp_exc_g_max": "7.5",
+  "cmp_exc_gv_min": "1.7",
+  "cmp_exc_gv_max": "5.3",
+  "cmp_exc_gp_min": "1.9",
+  "cmp_exc_gp_max": "3.2",
+  "cmp_dm_max_pays": "Greece",
+  "cmp_dm_max": "182",
   "d3_creux_lib": "2021-2023",
   "d3_creux_abs": "16.8",
   "d3_reste": "+1.7",
   "d3_reste_n": "seven",
+  "d3_creux_g": "6.9",
+  "d3_creux_gv": "3.7",
+  "d3_creux_rebond": "2021",
+  "d3_creux_rebond_gv": "6.9",
+  "ecart_md": "85",
+  "pib_dernier_md": "2,995",
+  "point_md": "30",
   "d3_pic_annee": "2020",
   "d3_pic_tc": "+6.1",
   "suff_hausse": "1998 and 2007",

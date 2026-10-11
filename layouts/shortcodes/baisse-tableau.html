@@ -1,25 +1,49 @@
 {{- /* {{< baisse-tableau >}} — les pays partis de plus de 90 % de dette, sur la dernière décennie. Lignes lues dans
        data/dette_baisse.json (pays_dette_elevee, triés par variation de la dette) ; noms et nombres lus dans le bloc
        affichage de la langue de la page (chaînes déjà formatées et gardées par scripts/update_dette_baisse.py) : aucun
-       chiffre recopié, aucun format ici. Bilingue depuis le 03/10/2026. */ -}}
+       chiffre recopié, aucun format ici. Bilingue depuis le 03/10/2026.
+       vue="taux" (phase B du volet 5, OPTIMUM-24) : les taux eux-mêmes — taux implicite moyen, croissance nominale moyenne
+       scindée en volume et prix, écart entre les deux, dette moyenne —, parce que les contributions en points dépendent
+       aussi du niveau de la dette. Sans vue : les contributions, l'effet des taux et de la croissance séparé en intérêts et
+       croissance. */ -}}
 {{- $j := site.Data.dette_baisse -}}
 {{- if not $j -}}{{ errorf "baisse-tableau: data/dette_baisse.json absent (%s)" .Page.File.Path }}{{- end -}}
 {{- $en := eq .Page.Lang "en" -}}
 {{- $A := cond $en $j.affichage_en $j.affichage -}}
+{{- $taux := eq (.Get "vue") "taux" -}}
 <div class="table-scroll"><table class="dette-monde-table">
+{{- if $taux }}
 {{- if $en }}
-<thead><tr><th>Country</th><th>Debt, end-{{ $A.cmp_veille }}</th><th>Debt, end-{{ $A.annee_fin }}</th><th>Change</th><th>Interest-growth effect</th><th>Cumulated primary deficits</th><th>Stock-flow</th><th>Average primary balance</th></tr></thead>
+<thead><tr><th>Country</th><th>Average debt</th><th>Implicit interest rate</th><th>Nominal growth</th><th>of which volume</th><th>of which prices</th><th>Rate minus growth</th></tr></thead>
 {{- else }}
-<thead><tr><th>Pays</th><th>Dette fin {{ $A.cmp_veille }}</th><th>Dette fin {{ $A.annee_fin }}</th><th>Variation</th><th>Effet taux-croissance</th><th>Déficits primaires cumulés</th><th>Flux-stock</th><th>Solde primaire moyen</th></tr></thead>
+<thead><tr><th>Pays</th><th>Dette moyenne</th><th>Taux implicite</th><th>Croissance nominale</th><th>dont volume</th><th>dont prix</th><th>Taux moins croissance</th></tr></thead>
 {{- end }}
 <tbody>
 {{- range $j.pays_dette_elevee }}
 {{- $c := printf "cmp_%s_" (lower .pays) }}
-<tr><td>{{ index $A (printf "%snom" $c) }}</td><td>{{ index $A (printf "%sd0" $c) }}</td><td>{{ index $A (printf "%sd1" $c) }}</td><td>{{ index $A (printf "%svar" $c) }}</td><td>{{ index $A (printf "%stc" $c) }}</td><td>{{ index $A (printf "%sdef" $c) }}</td><td>{{ index $A (printf "%ssfa" $c) }}</td><td>{{ index $A (printf "%spb" $c) }}{{ if $en }}%{{ else }}&nbsp;%{{ end }}</td></tr>
+<tr><td>{{ index $A (printf "%snom" $c) }}</td><td>{{ index $A (printf "%sdm" $c) }}</td><td>{{ index $A (printf "%sti" $c) }}</td><td>{{ index $A (printf "%sg" $c) }}</td><td>{{ index $A (printf "%sgv" $c) }}</td><td>{{ index $A (printf "%sgp" $c) }}</td><td>{{ index $A (printf "%srg" $c) }}</td></tr>
 {{- end }}
 </tbody></table></div>
 {{- if $en }}
-<p><small>Debt in % of GDP; change and contributions in points of GDP cumulated over {{ $A.cmp_lib }}; a negative figure under “cumulated primary deficits” means surpluses. Source: Eurostat.</small></p>
+<p><small>Annual averages over {{ $A.cmp_lib }}: debt in % of GDP at the start of each year; rates and growth in % a year. Volume: chain-linked national-accounts volumes; prices: (1 + nominal growth) / (1 + volume growth) − 1, year by year; the two averages do not add up exactly. Source: Eurostat.</small></p>
 {{- else }}
-<p><small>Dette en&nbsp;% du PIB&nbsp;; variation et contributions en points de PIB cumulés sur {{ $A.cmp_lib }}&nbsp;; un nombre négatif dans «&nbsp;déficits primaires cumulés&nbsp;» désigne des excédents. Source&nbsp;: Eurostat.</small></p>
+<p><small>Moyennes annuelles sur {{ $A.cmp_lib }}&nbsp;: dette en&nbsp;% du PIB au début de chaque année&nbsp;; taux et croissance en&nbsp;% par an. Volume&nbsp;: volumes chaînés des comptes nationaux&nbsp;; prix&nbsp;: (1 + croissance nominale) / (1 + croissance en volume) − 1, année par année&nbsp;; les deux moyennes ne s'additionnent pas exactement. Source&nbsp;: Eurostat.</small></p>
+{{- end }}
+{{- else }}
+{{- if $en }}
+<thead><tr><th>Country</th><th>Debt, end-{{ $A.cmp_veille }}</th><th>Debt, end-{{ $A.annee_fin }}</th><th>Change</th><th>Interest and growth</th><th>of which interest</th><th>of which growth</th><th>Primary balance</th><th>Other adjustments</th><th>Average primary balance</th></tr></thead>
+{{- else }}
+<thead><tr><th>Pays</th><th>Dette fin {{ $A.cmp_veille }}</th><th>Dette fin {{ $A.annee_fin }}</th><th>Variation</th><th>Taux et croissance</th><th>dont intérêts</th><th>dont croissance</th><th>Solde primaire</th><th>Autres ajustements</th><th>Solde primaire moyen</th></tr></thead>
+{{- end }}
+<tbody>
+{{- range $j.pays_dette_elevee }}
+{{- $c := printf "cmp_%s_" (lower .pays) }}
+<tr><td>{{ index $A (printf "%snom" $c) }}</td><td>{{ index $A (printf "%sd0" $c) }}</td><td>{{ index $A (printf "%sd1" $c) }}</td><td>{{ index $A (printf "%svar" $c) }}</td><td>{{ index $A (printf "%stc" $c) }}</td><td>{{ index $A (printf "%sint" $c) }}</td><td>{{ index $A (printf "%scr" $c) }}</td><td>{{ index $A (printf "%sdef" $c) }}</td><td>{{ index $A (printf "%ssfa" $c) }}</td><td>{{ index $A (printf "%spb" $c) }}{{ if $en }}%{{ else }}&nbsp;%{{ end }}</td></tr>
+{{- end }}
+</tbody></table></div>
+{{- if $en }}
+<p><small>Debt in % of GDP; change and contributions in points of GDP cumulated over {{ $A.cmp_lib }}, contributions to the change in the ratio, not amounts paid; under “primary balance”, a negative figure means surpluses. Source: Eurostat.</small></p>
+{{- else }}
+<p><small>Dette en&nbsp;% du PIB&nbsp;; variation et contributions en points de PIB cumulés sur {{ $A.cmp_lib }}&nbsp;: des contributions à la variation du ratio, non des montants versés&nbsp;; sous «&nbsp;solde primaire&nbsp;», un nombre négatif désigne des excédents. Source&nbsp;: Eurostat.</small></p>
+{{- end }}
 {{- end }}

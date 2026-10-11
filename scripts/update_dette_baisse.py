@@ -38,6 +38,9 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import pied_figure as PF  # noqa: E402  (pied commun 11 px, versions téléphone ; phase B du volet 5, 11/10/2026)
+
 ROOT = Path(__file__).resolve().parent.parent
 OUT_DATA = ROOT / "data" / "dette_baisse.json"
 OUT_STATIC = ROOT / "static" / "dette_baisse.json"
@@ -45,6 +48,12 @@ OUT_CSV = ROOT / "static" / "dette_baisse.csv"
 OUT_FIGURES = ROOT / "data" / "figures_baisse.json"
 OUT_IMG = ROOT / "static" / "img"
 DYN = ROOT / "data" / "dette_dynamique.json"
+MONDE = ROOT / "data" / "dette_monde.json"
+PAGES = [ROOT / "content" / "dette-publique-peut-elle-baisser" / "_index.md", ROOT / "content" / "dette-publique-peut-elle-baisser" / "_index.en.md"]
+# Formules interdites dans les deux pages (contre-expertise OPTIMUM-24, Q4) : l'écart de la dernière année est un écart comptable
+# constaté pour une année, jamais un montant d'économies ni un manque à combler.
+INTERDITS = [r"il manque", r"économies? à (réaliser|faire|trouver)", r"manque à combler", r"savings? to be (made|found)",
+             r"shortfall", r"missing", r"charge d'intérêts cumulée"]
 PAGE_URL = "stephane-lalut.com/dette-publique-peut-elle-baisser/"
 PAGE_URL_EN = "stephane-lalut.com/en/can-public-debt-come-down/"
 
@@ -201,6 +210,9 @@ def panel():
     I = eurostat("gov_10a_main", na_item="D41PAY", sector="S13", unit="MIO_NAC")
     B = eurostat("gov_10a_main", na_item="B9", sector="S13", unit="MIO_NAC")
     pub = {k: eurostat("gov_10dd_edpt1", na_item=k, sector="S13", unit="PC_GDP") for k in ("GD", "B9", "D41PAY")}
+    # Volume (comptes nationaux annuels, volumes chaînés) : scission comptable de la croissance nominale en volume et prix
+    # (OPTIMUM-24, Q2). Absente pour une année : None, jamais zéro.
+    V = eurostat("nama_10_gdp", na_item="B1GQ", unit="CLV10_MNAC")
     if "--mutation-pib" in sys.argv:   # témoin positif : PIB en euros, le contrôle doit rejeter les pays hors zone euro
         Y = eurostat("nama_10_gdp", na_item="B1GQ", unit="CP_MEUR")
     R, ecartes, calculables = {}, [], 0
@@ -225,7 +237,8 @@ def panel():
             R.setdefault(p, {})[a] = dict(pays=p, annee=a, dette=d1, dette_prec=d0, variation=d1 - d0, interets=interets,
                                           encours=D[k] / 1000, encours_prec=D[k0] / 1000,
                                           croissance=croissance, taux_croissance=interets + croissance, solde_primaire=pb,
-                                          flux_stock=sfa, taux_implicite=i * 100, croissance_nominale=g * 100)
+                                          flux_stock=sfa, taux_implicite=i * 100, croissance_nominale=g * 100, pib=Y[k] / 1000,
+                                          croissance_volume=((V[k] / V[k0] - 1) * 100) if (k in V and k0 in V) else None)
     if calculables != sum(len(v) for v in R.values()) + len(ecartes):
         fail("conservation rompue : %d calculables, %d retenues, %d ecartees" % (calculables, sum(len(v) for v in R.values()), len(ecartes)))
     return R, ecartes, calculables
@@ -242,7 +255,12 @@ def fenetre(an: dict, a0: int, n: int = 10):
              taux_croissance=s("taux_croissance"), deficits_primaires=-s("solde_primaire"), flux_stock=s("flux_stock"),
              solde_primaire_moyen=s("solde_primaire") / n, annees_excedent=sum(1 for x in L if x["solde_primaire"] > 0),
              croissance_max=max(abs(x["croissance_nominale"]) for x in L), croissance_nominale_moyenne=s("croissance_nominale") / n,
-             encours_depart=L[0]["encours_prec"], encours_fin=L[-1]["encours"])
+             encours_depart=L[0]["encours_prec"], encours_fin=L[-1]["encours"],
+             taux_implicite_moyen=s("taux_implicite") / n, dette_moyenne=s("dette_prec") / n)
+    vol = [x["croissance_volume"] for x in L]
+    f["croissance_volume_moyenne"] = sum(vol) / n if None not in vol else None
+    f["prix_moyen"] = (sum(((1 + x["croissance_nominale"] / 100) / (1 + x["croissance_volume"] / 100) - 1) * 100 for x in L) / n
+                       if None not in vol else None)
     if abs(f["variation"] - (f["taux_croissance"] + f["deficits_primaires"] + f["flux_stock"])) > 1e-6:
         fail("%s %d : la somme des termes ne rend pas la variation" % (f["pays"], a0))
     return f
@@ -270,7 +288,8 @@ def calcul():
     annees = [dict(annee=a, solde_primaire=FR[a]["solde_primaire"], solde_stabilisant=FR[a]["taux_croissance"],
                    ecart=FR[a]["solde_primaire"] - FR[a]["taux_croissance"], dette=FR[a]["dette"],
                    variation=FR[a]["variation"], flux_stock=FR[a]["flux_stock"],
-                   taux_implicite=FR[a]["taux_implicite"], croissance_nominale=FR[a]["croissance_nominale"])
+                   taux_implicite=FR[a]["taux_implicite"], croissance_nominale=FR[a]["croissance_nominale"],
+                   croissance_volume=FR[a]["croissance_volume"], pib=FR[a]["pib"])
               for a in range(fin - 29, fin + 1)]
     # Pays comparés : dette >= SEUIL_DETTE à la veille de la dernière décennie ; décennie complète exigée.
     a0 = fin - 9
@@ -381,6 +400,30 @@ def affichage(fin, dec, annees, cmp_, europe, cons):
         A[c + "d0"] = fr(f["dette_depart"]); A[c + "d1"] = fr(f["dette_fin"])
         A[c + "enc0"] = milliers(f["encours_depart"]); A[c + "enc1"] = milliers(f["encours_fin"])
         A[c + "tcdef"] = signe(f["taux_croissance"] + f["deficits_primaires"])
+        # Phase B (OPTIMUM-24, B2) : taux et croissance séparés, en taux (les contributions en points dépendent aussi du
+        # niveau de la dette), et la croissance nominale scindée en volume et prix.
+        A[c + "int"] = signe(f["interets"]); A[c + "cr"] = signe(f["croissance"])
+        A[c + "ti"] = fr(f["taux_implicite_moyen"], 2); A[c + "g"] = fr(f["croissance_nominale_moyenne"])
+        A[c + "dm"] = fr(f["dette_moyenne"], 0)
+        A[c + "rg"] = signe(f["taux_implicite_moyen"] - f["croissance_nominale_moyenne"])
+        A[c + "gv"] = fr(f["croissance_volume_moyenne"]) if f["croissance_volume_moyenne"] is not None else "—"
+        A[c + "gp"] = fr(f["prix_moyen"]) if f["prix_moyen"] is not None else "—"
+    # Les trois baisses (OPTIMUM-24, B1) : hiérarchie mesurée des contributions, contrôle arithmétique.
+    rap = [-f["taux_croissance"] / -f["deficits_primaires"] for f in haut]
+    A["cmp_exc_rapport_min"] = fr(min(rap)); A["cmp_exc_rapport_max"] = fr(max(rap))
+    A["cmp_exc_tc_min"] = fr(min(-f["taux_croissance"] for f in haut)); A["cmp_exc_tc_max"] = fr(max(-f["taux_croissance"] for f in haut))
+    A["cmp_exc_sp_min"] = fr(min(-f["deficits_primaires"] for f in haut)); A["cmp_exc_sp_max"] = fr(max(-f["deficits_primaires"] for f in haut))
+    tcs = [-(f["taux_croissance"] + f["flux_stock"]) for f in haut]
+    A["cmp_exc_tcsfa_min"] = fr(min(tcs)); A["cmp_exc_tcsfa_max"] = fr(max(tcs))
+    A["cmp_exc_ti_min"] = fr(min(f["taux_implicite_moyen"] for f in haut), 2); A["cmp_exc_ti_max"] = fr(max(f["taux_implicite_moyen"] for f in haut), 2)
+    A["cmp_exc_g_min"] = fr(min(f["croissance_nominale_moyenne"] for f in haut)); A["cmp_exc_g_max"] = fr(max(f["croissance_nominale_moyenne"] for f in haut))
+    gv = [f["croissance_volume_moyenne"] for f in haut if f["croissance_volume_moyenne"] is not None]
+    gp = [f["prix_moyen"] for f in haut if f["prix_moyen"] is not None]
+    if len(gv) != len(haut) or len(gp) != len(haut):
+        fail("pays en baisse : volume du PIB absent (scission volume et prix impossible)")
+    A["cmp_exc_gv_min"] = fr(min(gv)); A["cmp_exc_gv_max"] = fr(max(gv)); A["cmp_exc_gp_min"] = fr(min(gp)); A["cmp_exc_gp_max"] = fr(max(gp))
+    dmax = max(cmp_, key=lambda f: f["dette_moyenne"])
+    A["cmp_dm_max_pays"] = art(dmax["pays"]); A["cmp_dm_max"] = fr(dmax["dette_moyenne"], 0)
     # Dernière décennie : où se concentre l'allègement (contre-expertise PRO-20261003-064640, B2)
     d3 = dec[2]
     an3 = [r for r in annees if d3["debut"] <= r["annee"] <= d3["fin"]]
@@ -389,6 +432,12 @@ def affichage(fin, dec, annees, cmp_, europe, cons):
     tc_creux = sum(r["solde_stabilisant"] for r in creux)
     A["d3_creux_lib"] = "%d-%d" % (creux[0]["annee"], creux[-1]["annee"]); A["d3_creux_abs"] = fr(abs(tc_creux))
     A["d3_reste"] = signe(d3["taux_croissance"] - tc_creux); A["d3_reste_n"] = lettres(len(an3) - 3)
+    A["d3_creux_g"] = fr(sum(r["croissance_nominale"] for r in creux) / 3)
+    A["d3_creux_gv"] = fr(sum(r["croissance_volume"] for r in creux) / 3)
+    A["d3_creux_rebond"] = str(creux[0]["annee"]); A["d3_creux_rebond_gv"] = fr(creux[0]["croissance_volume"])
+    # Écart de la dernière année en milliards d'euros (OPTIMUM-24, Q4) : écart comptable × PIB de l'année, jamais saisi.
+    A["ecart_md"] = milliers(abs(last["ecart"]) / 100 * last["pib"]); A["pib_dernier_md"] = milliers(last["pib"])
+    A["point_md"] = milliers(last["pib"] / 100)   # un point de PIB de la dernière année, en milliards (panel « après », repère d'échelle)
     pic = max(an3, key=lambda r: r["solde_stabilisant"])
     A["d3_pic_annee"] = str(pic["annee"]); A["d3_pic_tc"] = signe(pic["solde_stabilisant"])
     # Années où le solde atteint le repère sans que le ratio baisse (B4)
@@ -519,6 +568,32 @@ def gardes(fin, dec, annees, cmp_, europe, haut, bas, exc_ans):
         ("B5 : en Belgique, taux-croissance et solde primaire font baisser le ratio mais les autres ajustements le font monter",
          any(f["pays"] == "BE" and f["taux_croissance"] + f["deficits_primaires"] < 0 < f["variation"] and f["flux_stock"] > 0 for f in cmp_)),
         ("B5 : les pays en excédent ont des autres ajustements positifs (ils freinent leur baisse)", all(f["flux_stock"] > 0 for f in haut)),
+        # --- phase B (OPTIMUM-24) : hiérarchie des ressorts, taux et croissance séparés
+        ("B1 : dans chaque pays en baisse, l'effet des taux et de la croissance dépasse la contribution de l'excédent primaire",
+         all(-f["taux_croissance"] > -f["deficits_primaires"] > 0 for f in haut)),
+        ("B1 : « environ deux fois » : le rapport entre les deux contributions est compris entre 1,7 et 2,4 dans chaque pays en baisse",
+         all(1.7 <= f["taux_croissance"] / f["deficits_primaires"] <= 2.4 for f in haut)),
+        ("B1 : contrôle arithmétique : effet des taux et de la croissance plus autres ajustements reste négatif dans chaque pays en baisse",
+         all(f["taux_croissance"] + f["flux_stock"] < 0 for f in haut)),
+        ("B2 : la France a le taux implicite moyen le plus bas du groupe (« leur taux implicite n'était pas plus bas »)",
+         fr_c["taux_implicite_moyen"] == min(f["taux_implicite_moyen"] for f in cmp_)),
+        ("B2 : la croissance en volume moyenne de chaque pays en baisse dépasse celle de la France",
+         all(f["croissance_volume_moyenne"] is not None and fr_c["croissance_volume_moyenne"] is not None
+             and f["croissance_volume_moyenne"] > fr_c["croissance_volume_moyenne"] for f in haut)),
+        ("B2 : la Grèce a la dette moyenne la plus élevée du groupe (le texte : « une dette si élevée »)",
+         max(cmp_, key=lambda f: f["dette_moyenne"])["pays"] == "EL"),
+        ("B2 : écart taux-croissance de la Grèce « à peine plus favorable » que celui de la France (moins d'un point d'écart), et le moins favorable des trois pays en baisse",
+         any(f["pays"] == "EL" for f in haut)
+         and 0 < (fr_c["taux_implicite_moyen"] - fr_c["croissance_nominale_moyenne"]) - next(f["taux_implicite_moyen"] - f["croissance_nominale_moyenne"] for f in haut if f["pays"] == "EL") < 1
+         and next(f["taux_implicite_moyen"] - f["croissance_nominale_moyenne"] for f in haut if f["pays"] == "EL") == max(f["taux_implicite_moyen"] - f["croissance_nominale_moyenne"] for f in haut)),
+        ("B2 : 2021-2023 : la première année est un rebond en volume (plus de 5 %), les deux suivantes doivent davantage aux prix qu'au volume",
+         (lambda tr: tr[0]["croissance_volume"] > 5 and all((1 + r["croissance_nominale"] / 100) / (1 + r["croissance_volume"] / 100) - 1 > r["croissance_volume"] / 100 for r in tr[1:]))(
+             min([[r for r in annees if d3["debut"] <= r["annee"] <= d3["fin"]][k:k + 3] for k in range(8)], key=lambda t: sum(r["solde_stabilisant"] for r in t)))),
+        ("B2 : la Grèce paie « à peu près le même taux » que la France (moins de 0,1 point d'écart de taux implicite moyen) et sa croissance nominale « dépasse à peine » la française (moins d'un point)",
+         any(f["pays"] == "EL" and abs(f["taux_implicite_moyen"] - fr_c["taux_implicite_moyen"]) < 0.1
+             and 0 < f["croissance_nominale_moyenne"] - fr_c["croissance_nominale_moyenne"] < 1 for f in cmp_)),
+        ("solde stabilisant : il aurait fallu un excédent l'année du recul du PIB, un déficit l'aurait laissé stable l'année du rebond",
+         max(r["solde_stabilisant"] for r in annees) > 0 > min(r["solde_stabilisant"] for r in annees)),
         # --- Europe, repli
         ("dette de départ élevée, excédent d'au moins 2 % : la plupart des fenêtres commencent avant 2003", europe["haute_dette"]["excedent_2"]["debut_avant_2003"] * 2 > h["excedent_2"]["n"]),
         ("dette de départ élevée, déficit primaire moyen : aucune forte baisse", h["deficit"]["fortes_baisses"] == 0 and h["deficit"]["n"] >= 20),
@@ -529,6 +604,11 @@ def gardes(fin, dec, annees, cmp_, europe, haut, bas, exc_ans):
         G[0] = (G[0][0], -d3["taux_croissance"] < -10)
     faux = [nom for nom, ok in G if not ok]
     if faux:
+        log("Valeurs nouvelles : France %d-%d variation %+.2f, taux-croissance %+.2f, deficits primaires %+.2f, flux-stock %+.2f ; "
+            "derniere annee %d : solde primaire %+.2f, solde stabilisant %+.2f ; pays : %s"
+            % (d3["debut"], d3["fin"], d3["variation"], d3["taux_croissance"], d3["deficits_primaires"], d3["flux_stock"], last["annee"],
+               last["solde_primaire"], last["solde_stabilisant"],
+               ", ".join("%s %+.1f (tc %+.1f, sp %+.1f)" % (f["pays"], f["variation"], f["taux_croissance"], f["deficits_primaires"]) for f in cmp_)))
         fail("la page affirme ce que les donnees ne soutiennent plus : " + " ; ".join(faux))
     return len(G)
 
@@ -537,71 +617,93 @@ def gardes(fin, dec, annees, cmp_, europe, haut, bas, exc_ans):
 
 TXT = {
  "fr": dict(
-  monte="fait monter le ratio", baisse="le fait baisser",
-  tsa="T : taux et croissance · S : déficits (+) ou excédents (−) primaires · A : autres ajustements",
-  dec_titre="France : ce qui a fait monter ou baisser la dette, décennie par décennie",
-  dec_desc=("Trois groupes de trois barres, en points de PIB cumulés sur dix ans : effet des taux et de la croissance, déficits primaires, "
-            "autres ajustements (flux-stock). %s : %s, %s, %s ; dette %s. %s : %s, %s, %s ; dette %s. %s : %s, %s, %s ; dette %s. "
-            "Sur la dernière décennie, l'effet des taux et de la croissance fait baisser le ratio et les déficits primaires le font monter davantage."),
-  dec_sous="dette : %s points (%s → %s %% du PIB)",
+  monte="fait monter le ratio", baisse="le fait baisser", var_leg="variation du ratio (somme des trois)",
+  cols=["Taux et croissance", "Solde primaire", "Autres ajustements", "Variation du ratio"],
+  unite="En points de PIB cumulés sur dix ans",
+  points=" points", sous="%s → %s %% du PIB",
+  dec_titre="France : ce qui a fait monter ou baisser le poids de la dette, décennie par décennie",
+  dec_desc=("Pour chaque décennie, en points de PIB cumulés sur dix ans : effet des taux et de la croissance, contribution du solde "
+            "primaire, autres ajustements, et leur somme, la variation du ratio de dette. %s : %s, %s, %s ; variation %s. %s : %s, %s, %s ; "
+            "variation %s. %s : %s, %s, %s ; variation %s. Sur la dernière décennie, l'effet des taux et de la croissance fait baisser le "
+            "ratio et les déficits primaires le font monter davantage."),
   dec_src="Eurostat gov_10dd_edpt1 (dette, PIB), gov_10a_main (B9, D41PAY), France, %s-%s",
-  dec_note="Points de PIB cumulés sur dix ans ; décomposition comptable, non causale : les trois termes ne sont pas indépendants.",
-  cmp_titre="%s pays à plus de %s %% de dette fin %s : dix ans après",
-  cmp_desc=("Pour chaque pays, trois barres en points de PIB cumulés de %s : l'effet des taux et de la croissance, la contribution du solde "
-            "primaire (un excédent fait baisser la dette, un déficit la fait monter) et les autres ajustements. "),
-  cmp_desc_pays="%s : taux-croissance %s, solde primaire %s, autres ajustements %s, dette %s.",
-  cmp_desc_fin=(" L'effet des taux et de la croissance est favorable partout, mais d'ampleur très différente ; le ratio a baissé de plus de 15 points "
-                "là où le solde primaire a été excédentaire en moyenne."),
-  cmp_sous="ratio : %s",
-  cmp_src="Eurostat gov_10dd_edpt1 (dette, PIB), gov_10a_main (B9, D41PAY), %s ; pays triés par variation de la dette",
-  cmp_note="Points de PIB cumulés ; Grèce, Chypre et Portugal ont reçu des financements officiels (2010-2018). Comparaison comptable, non causale.",
+  dec_note=("Décomposition comptable, non causale : les trois termes ne sont pas indépendants. Variation calculée sur les valeurs non "
+            "arrondies ; la somme des contributions affichées peut différer de 0,1 point."),
+  cmp_titre="%s pays à plus de %s %% de dette fin %s : ce qui a fait bouger leur ratio en dix ans",
+  cmp_desc=("Pays dont la dette dépassait %s %% du PIB fin %s. Pour chaque pays, en points de PIB cumulés de %s : effet des taux et de la croissance, contribution du solde primaire "
+            "(un excédent fait baisser le ratio, un déficit le fait monter), autres ajustements, et la variation du ratio, leur somme. "),
+  cmp_desc_pays="%s : taux et croissance %s, solde primaire %s, autres ajustements %s, variation %s.",
+  cmp_desc_fin=(" L'effet des taux et de la croissance fait baisser le ratio partout ; dans les trois pays où le ratio a nettement baissé, "
+                "il pèse environ deux fois plus que leurs excédents primaires."),
+  cmp_src="Eurostat gov_10dd_edpt1 (dette, PIB), gov_10a_main (B9, D41PAY), %s ; pays triés par variation du ratio",
+  cmp_note=("Grèce, Chypre et Portugal ont reçu des financements officiels (2010-2018). Comparaison comptable : elle n'attribue "
+            "la baisse à aucune politique. Variation calculée sur les valeurs non arrondies ; la somme des contributions affichées peut "
+            "différer de 0,1 point."),
   stab_titre="France : le solde primaire observé et celui qui aurait stabilisé la dette",
   stab_desc=("Deux courbes annuelles de %s à %s, en %% du PIB : le solde primaire observé, positif %s fois (%s à %s), et le solde primaire qui "
-             "aurait stabilisé le ratio de dette, qui va de %s en %s à %s en %s. En %s, le solde observé est de %s et le solde stabilisant de %s."),
+             "aurait stabilisé le ratio de dette, qui va de %s en %s à %s en %s. En %s, le solde observé est de %s et le solde stabilisant de %s : "
+             "un écart de %s points de PIB."),
   pc=" %", recul="recul du PIB", rebond="rebond du PIB",
   leg_obs="solde primaire observé", leg_stab="solde qui aurait stabilisé le ratio cette année-là, hors autres ajustements", leg_stab_x=210,
+  ecart_lab="En %s, l'écart entre les deux courbes (pointillé) : %s points de PIB.",
+  m_2020="%s, recul du PIB : repère %s %%", m_2021="%s, rebond du PIB : repère %s %%",
+  m_fin="%s : observé %s %%, repère %s %%, écart %s points",
   stab_src="Eurostat gov_10dd_edpt1 (dette, PIB), gov_10a_main (B9, D41PAY), France, %s-%s",
-  stab_note="En % du PIB ; solde stabilisant = (taux implicite − croissance nominale) / (1 + croissance) × dette de l'année précédente, hors autres ajustements (flux-stock).",
+  stab_note=("En % du PIB ; solde stabilisant = (taux implicite − croissance nominale) / (1 + croissance) × ratio dette/PIB de fin d'année précédente, "
+             "hors autres ajustements (flux-stock). Un repère comptable de l'année, non un objectif."),
+  licence_m="Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com",
   montre=[("decennies", "De décennie en décennie, le terme qui fait monter la dette française change ; sur la dernière, taux et "
                         "croissance l'ont fait baisser et les déficits primaires l'ont fait monter davantage."),
-          ("comparaison", "Parmi les pays partis d'une dette au moins aussi élevée, l'effet des taux et de la croissance a été favorable "
-                          "partout ; la dette a baissé là où le solde primaire était excédentaire en moyenne."),
+          ("comparaison", "Parmi les pays partis d'une dette au moins aussi élevée, l'effet des taux et de la croissance a fait baisser "
+                          "le ratio partout ; là où le ratio a nettement baissé, il a pesé environ deux fois plus que les excédents primaires."),
           ("stabilisant", "Le solde primaire qui stabilise la dette change chaque année avec les taux et la croissance ; "
                           "le solde observé est resté le plus souvent en dessous.")]),
  "en": dict(
-  monte="pushes the ratio up", baisse="pulls it down",
-  tsa="T: interest and growth · S: primary deficits (+) or surpluses (−) · A: other adjustments",
-  dec_titre="France: what pushed the debt up or down, decade by decade",
-  dec_desc=("Three groups of three bars, in points of GDP cumulated over ten years: effect of interest rates and growth, primary deficits, "
-            "other adjustments (stock-flow). %s: %s, %s, %s; debt %s. %s: %s, %s, %s; debt %s. %s: %s, %s, %s; debt %s. "
-            "Over the last decade, the interest-growth effect pulled the ratio down and primary deficits pushed it up by more."),
-  dec_sous="debt: %s points (%s → %s%% of GDP)",
+  monte="pushes the ratio up", baisse="pulls it down", var_leg="change in the ratio (sum of the three)",
+  cols=["Interest and growth", "Primary balance", "Other adjustments", "Change in the ratio"],
+  unite="In points of GDP cumulated over ten years",
+  points=" points", sous="%s → %s%% of GDP",
+  dec_titre="France: what pushed the weight of debt up or down, decade by decade",
+  dec_desc=("For each decade, in points of GDP cumulated over ten years: effect of interest rates and growth, contribution of the primary "
+            "balance, other adjustments, and their sum, the change in the debt ratio. %s: %s, %s, %s; change %s. %s: %s, %s, %s; "
+            "change %s. %s: %s, %s, %s; change %s. Over the last decade, the interest-growth effect pulled the ratio down and primary "
+            "deficits pushed it up by more."),
   dec_src="Eurostat gov_10dd_edpt1 (debt, GDP), gov_10a_main (B9, D41PAY), France, %s-%s",
-  dec_note="Points of GDP cumulated over ten years; an accounting decomposition, not a causal one: the three terms are not independent.",
-  cmp_titre="%s countries with debt above %s%% of GDP at end-%s: ten years on",
-  cmp_desc=("For each country, three bars in points of GDP cumulated over %s: the interest-growth effect, the contribution of the primary "
-            "balance (a surplus pulls the debt down, a deficit pushes it up) and other adjustments. "),
-  cmp_desc_pays="%s: interest-growth %s, primary balance %s, other adjustments %s, debt %s.",
-  cmp_desc_fin=(" The interest-growth effect is favourable everywhere, but of very different size; the ratio fell by more than 15 points "
-                "where the primary balance was in surplus on average."),
-  cmp_sous="ratio: %s",
+  dec_note=("An accounting decomposition, not a causal one: the three terms are not independent. Change computed on unrounded "
+            "values; the sum of the contributions shown may differ by 0.1 point."),
+  cmp_titre="%s countries with debt above %s%% of GDP at end-%s: what moved their ratio in ten years",
+  cmp_desc=("Countries with debt above %s%% of GDP at end-%s. For each country, in points of GDP cumulated over %s: the interest-growth effect, the contribution of the primary balance "
+            "(a surplus pulls the ratio down, a deficit pushes it up), other adjustments, and the change in the ratio, their sum. "),
+  cmp_desc_pays="%s: interest and growth %s, primary balance %s, other adjustments %s, change %s.",
+  cmp_desc_fin=(" The interest-growth effect pulls the ratio down everywhere; in the three countries where the ratio fell markedly, "
+                "it weighs about twice as much as their primary surpluses."),
   cmp_src="Eurostat gov_10dd_edpt1 (debt, GDP), gov_10a_main (B9, D41PAY), %s; countries sorted by change in the debt ratio",
-  cmp_note="Points of GDP, cumulated; Greece, Cyprus and Portugal received official financing (2010-2018). An accounting comparison, not a causal one.",
+  cmp_note=("Greece, Cyprus and Portugal received official financing (2010-2018). An accounting comparison: it attributes "
+            "the fall to no policy. Change computed on unrounded values; the sum of the contributions shown may differ by 0.1 point."),
   stab_titre="France: the observed primary balance and the one that would have stabilised the debt",
   stab_desc=("Two annual lines from %s to %s, in %% of GDP: the observed primary balance, positive %s times (%s to %s), and the primary balance "
-             "that would have stabilised the debt ratio, ranging from %s in %s to %s in %s. In %s, the observed balance was %s and the stabilising balance %s."),
+             "that would have stabilised the debt ratio, ranging from %s in %s to %s in %s. In %s, the observed balance was %s and the "
+             "stabilising balance %s: a gap of %s points of GDP."),
   pc="%", recul="GDP fell", rebond="GDP rebound",
   leg_obs="observed primary balance", leg_stab="balance that would have stabilised the ratio that year, excluding other adjustments", leg_stab_x=215,
+  ecart_lab="In %s, the gap between the two lines (dotted): %s points of GDP.",
+  m_2020="%s, GDP fell: marker %s%%", m_2021="%s, GDP rebound: marker %s%%",
+  m_fin="%s: observed %s%%, marker %s%%, gap %s points",
   stab_src="Eurostat gov_10dd_edpt1 (debt, GDP), gov_10a_main (B9, D41PAY), France, %s-%s",
-  stab_note="In % of GDP; stabilising balance = (implicit interest rate − nominal growth) / (1 + growth) × previous year's debt, excluding other adjustments (stock-flow).",
+  stab_note=("In % of GDP; stabilising balance = (implicit interest rate − nominal growth) / (1 + growth) × debt-to-GDP ratio at the end of the previous year, "
+             "excluding other adjustments (stock-flow). An accounting marker for the year, not a target."),
+  licence_m="Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com",
   montre=[("decennies", "From one decade to the next, the term pushing French debt up changes; over the last one, interest and growth "
                         "pulled it down and primary deficits pushed it up by more."),
-          ("comparaison", "Among countries that started from debt at least as high, the interest-growth effect was favourable everywhere; "
-                          "debt fell where the primary balance was in surplus on average."),
+          ("comparaison", "Among countries that started from debt at least as high, the interest-growth effect pulled the ratio down "
+                          "everywhere; where the ratio fell markedly, it weighed about twice as much as primary surpluses."),
           ("stabilisant", "The primary balance that stabilises the debt changes every year with interest rates and growth; the observed "
                           "balance mostly stayed below it.")]),
 }
 SUFFIXE = {"fr": "", "en": "-en"}
+WM, FSM = PF.LARGEUR_M, PF.POLICE_M
+AXE = "#8f8a84"
+
 
 def esc(s: str) -> str:
     return html.escape(s, quote=False)
@@ -615,129 +717,257 @@ def entete(h, ident, titre, desc):
             '<text x="0" y="18" font-size="15" font-weight="600" fill="%s">%s</text>' % (INK, esc(titre))]
 
 
-def cartouche(y0, source, note):
-    out = ['<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y0, W, y0, GRID)]
-    for k, (t, c) in enumerate([(source, INK2), (note, INK2), (LICENCES[LANG], MUTED)]):
-        out.append('<text x="0" y="%.1f" font-size="9" fill="%s">%s</text>' % (y0 + 13 + 12 * k, c, esc(t)))
-    return out
+def blocs_pied(source, note, licence=None):
+    return [(source, INK2, "pied-source"), (note, INK2, "pied-note"), (licence or LICENCES[LANG], MUTED, "pied-licence")]
 
 
 def legende(e, items, y=36):
-    x = 40
+    x = 0
     for col, lib in items:
         e.append('<rect x="%d" y="%d" width="10" height="10" fill="%s"/>' % (x, y, col))
         e.append('<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (x + 14, y + 9, INK2, esc(lib)))
-        x += 14 + 6.2 * len(lib) + 20
+        x += 14 + 6.0 * len(lib) + 18
 
 
-def barres_groupees(e, groupes, X0, X1, TOP, BAS, pas_grille):
-    """groupes : [(libellé, sous-libellé, [(valeur, étiquette courte)]...)]. Orange : fait monter ; gris : fait baisser."""
-    vals = [v for _, _, bs in groupes for v, _ in bs]
-    vmax = (int(max(max(vals), 0) / pas_grille) + 1) * pas_grille
-    vmin = -(int(-min(min(vals), 0) / pas_grille) + 1) * pas_grille if min(vals) < 0 else 0
+def largeur(s: str, fs: float) -> float:
+    return 0.56 * fs * len(s)
 
-    def Y(v):
-        return BAS - (BAS - TOP) * (v - vmin) / (vmax - vmin)
 
-    for g in range(vmin, vmax + 1, pas_grille):
-        e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="%s"/>' % (X0, Y(g), X1, Y(g), GRID, 1.4 if g == 0 else 0.6))
-        e.append('<text x="%d" y="%.1f" font-size="10" fill="%s" text-anchor="end">%s</text>' % (X0 - 6, Y(g) + 3, MUTED, signe(g, 0) if g else "0"))
-    pas = (X1 - X0) / len(groupes)
-    for k, (lib, sous, bs) in enumerate(groupes):
-        gx = X0 + pas * k
-        bw = pas * 0.74 / len(bs)
-        for j, (v, court) in enumerate(bs):
-            x = gx + pas * 0.13 + bw * j
-            e.append('<text x="%.1f" y="%d" font-size="9" font-weight="600" fill="%s" text-anchor="middle">%s</text>' % (x + bw / 2, BAS + 13, MUTED, esc(court)))
-            col = ORANGE if v >= 0 else GRIS
-            y0, y1 = (Y(v), Y(0)) if v >= 0 else (Y(0), Y(v))
-            e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="%s"/>' % (x + 1.5, y0, bw - 3, max(y1 - y0, 0.6), col))
-            e.append('<text x="%.1f" y="%.1f" font-size="10" font-weight="600" fill="%s" text-anchor="middle">%s</text>'
-                     % (x + bw / 2, (Y(v) - 4) if v >= 0 else (Y(v) + 12), INK, signe(v)))
-        e.append('<text x="%.1f" y="%d" font-size="11.5" font-weight="600" fill="%s" text-anchor="middle">%s</text>' % (gx + pas / 2, BAS + 32, INK, esc(lib)))
-        e.append('<text x="%.1f" y="%d" font-size="10.5" fill="%s" text-anchor="middle">%s</text>' % (gx + pas / 2, BAS + 46, BLEU, esc(sous)))
-    return Y
+def place_valeur(v, xz, xe, gauche, droite, fs, txt):
+    """Valeur au bout de la barre si elle tient dans la colonne, sinon de l'autre côté du zéro (côté vide de la ligne)."""
+    w = largeur(txt, fs)
+    if v >= 0:
+        return (xe + 4, "start") if xe + 4 + w <= droite else (xz - 4, "end")
+    return (xe - 4, "end") if xe - 4 - w >= gauche else (xz + 4, "start")
+
+
+def bornes(vals, pas):
+    vmax = max(0.0, max(vals)); vmin = min(0.0, min(vals))
+    return -(int(-vmin / pas) + 1) * pas if vmin < 0 else 0, (int(vmax / pas) + 1) * pas if vmax > 0 else 0
+
+
+def multiples(ident, titre, desc, lignes, source, note, pas=10):
+    """Petits multiples (phase B, OPTIMUM-24 : « remplacer T, S et A par des expressions compréhensibles ») : une ligne par
+    décennie ou par pays, quatre colonnes intitulées en mots, même échelle partout ; la dernière, en bleu (stock), est la
+    variation du ratio, somme exacte des trois autres : l'addition se vérifie à l'œil.
+    lignes : [(libellé, sous-libellé, [taux-croissance, solde primaire, autres ajustements, variation])]"""
+    T = TXT[LANG]
+    e = entete(0, ident, titre, desc)
+    legende(e, [(ORANGE, T["monte"]), (GRIS, T["baisse"]), (BLEU, T["var_leg"])])
+    e.append('<text x="0" y="64" font-size="11" fill="%s">%s</text>' % (MUTED, esc(T["unite"])))
+    LAB, pad, RH, Y0 = 150, 10, 40, 100
+    CW = (W - LAB) / 4
+    vmin, vmax = bornes([v for _, _, vs in lignes for v in vs], pas)
+    for j, col in enumerate(T["cols"]):
+        x0c = LAB + j * CW
+        e.append('<text x="%.1f" y="88" font-size="12" font-weight="600" fill="%s" text-anchor="middle">%s</text>' % (x0c + CW / 2, INK, esc(col)))
+    yb = Y0 + RH * len(lignes)
+    for j in range(4):
+        x0c = LAB + j * CW
+        X = lambda v, x0c=x0c: x0c + pad + (v - vmin) / (vmax - vmin) * (CW - 2 * pad)  # noqa: E731
+        e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="1.2"/>' % (X(0), Y0 - 4, X(0), yb - 4, AXE))
+    for k, (lib, sous, vs) in enumerate(lignes):
+        y = Y0 + RH * k
+        if k:
+            e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="0.6"/>' % (y - 4, W, y - 4, GRID))
+        e.append('<text x="0" y="%d" font-size="12.5" font-weight="600" fill="%s">%s</text>' % (y + 13, INK, esc(lib)))
+        e.append('<text x="0" y="%d" font-size="11" fill="%s">%s</text>' % (y + 28, BLEU, esc(sous)))
+        for j, v in enumerate(vs):
+            x0c = LAB + j * CW
+            X = lambda v, x0c=x0c: x0c + pad + (v - vmin) / (vmax - vmin) * (CW - 2 * pad)  # noqa: E731
+            col = BLEU if j == 3 else (ORANGE if v >= 0 else GRIS)
+            xa, xb = sorted((X(0), X(v)))
+            e.append('<rect x="%.1f" y="%d" width="%.1f" height="16" fill="%s"/>' % (xa, y + 6, max(xb - xa, 0.8), col))
+            s = signe(v)
+            tx, anc = place_valeur(v, X(0), X(v), x0c + 2, x0c + CW - 2, 11, s)
+            e.append('<text x="%.1f" y="%d" font-size="11" font-weight="600" fill="%s" text-anchor="%s">%s</text>' % (tx, y + 18, INK, anc, s))
+    return PF.pied(e, yb + 6, W, blocs_pied(source, note), GRID)
+
+
+def multiples_m(ident, titre, svg_d, lignes, source, note, pas=10):
+    """Version téléphone : une décennie ou un pays à la fois, trois barres nommées en mots, la variation dans l'intitulé."""
+    T = TXT[LANG]
+    desc = html.unescape(re.search(r"<desc[^>]*>(.*?)</desc>", svg_d, re.S).group(1))
+    e, y = PF.tete_mobile(ident, titre, desc, INK, FONT)
+    for col, lib in ((ORANGE, T["monte"]), (GRIS, T["baisse"])):
+        y += 20
+        e.append('<rect x="0" y="%.1f" width="11" height="11" fill="%s"/>' % (y - 10, col))
+        e.append('<text x="17" y="%.1f" font-size="%s" fill="%s">%s</text>' % (y, FSM, INK2, esc(lib)))
+    for l in PF.coupe(T["unite"], 38):
+        y += 19
+        e.append('<text x="0" y="%.1f" font-size="%s" fill="%s">%s</text>' % (y, FSM, MUTED, esc(l)))
+    BX0, BX1 = 140, WM - 4
+    vmin, vmax = bornes([v for _, _, vs in lignes for v in vs[:3]], pas)
+    X = lambda v: BX0 + (v - vmin) / (vmax - vmin) * (BX1 - BX0)  # noqa: E731
+    for lib, sous, vs in lignes:
+        y += 16
+        e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="0.6"/>' % (y - 4, WM, y - 4, GRID))
+        y += 18
+        e.append('<text x="0" y="%.1f" font-size="15" font-weight="600" fill="%s">%s</text>' % (y, INK, esc("%s : %s%s" % (lib, signe(vs[3]), T["points"])
+                                                                                                          if LANG == "fr" else "%s: %s%s" % (lib, signe(vs[3]), T["points"]))))
+        y += 18
+        e.append('<text x="0" y="%.1f" font-size="%s" fill="%s">%s</text>' % (y, FSM, BLEU, esc(sous)))
+        y0 = y + 8
+        e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1.2"/>' % (X(0), y0, X(0), y0 + 3 * 21 - 3, AXE))
+        for j in range(3):
+            v = vs[j]
+            yy = y0 + 21 * j
+            e.append('<text x="0" y="%.1f" font-size="%s" fill="%s">%s</text>' % (yy + 13, FSM, INK2, esc(T["cols"][j])))
+            xa, xb = sorted((X(0), X(v)))
+            e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="14" fill="%s"/>' % (xa, yy + 2, max(xb - xa, 0.8), ORANGE if v >= 0 else GRIS))
+            s = signe(v)
+            tx, anc = place_valeur(v, X(0), X(v), BX0 - 2, WM, FSM, s)
+            e.append('<text x="%.1f" y="%.1f" font-size="%s" fill="%s" text-anchor="%s">%s</text>' % (tx, yy + 13, FSM, INK, anc, s))
+        y = y0 + 3 * 21
+    return PF.pied_mobile(e, y + 10, blocs_pied(source, note, T["licence_m"]), GRID)
+
+
+def lignes_dec(dec, A):
+    T = TXT[LANG]
+    return [(A["d%d_lib" % k], T["sous"] % (A["d%d_dette_deb" % k], A["d%d_dette_fin" % k]),
+             [f["taux_croissance"], f["deficits_primaires"], f["flux_stock"], f["variation"]]) for k, f in enumerate(dec, 1)]
+
+
+def lignes_cmp(cmp_, A):
+    T = TXT[LANG]
+    return [(nom(f["pays"]), T["sous"] % (fr(f["dette_depart"]), fr(f["dette_fin"])),
+             [f["taux_croissance"], f["deficits_primaires"], f["flux_stock"], f["variation"]]) for f in cmp_]
+
+
+def textes_dec(A):
+    T = TXT[LANG]
+    desc = (T["dec_desc"]
+            % tuple(x for k in (1, 2, 3) for x in (A["d%d_lib" % k], A["d%d_tc" % k], A["d%d_def" % k], A["d%d_sfa" % k], A["d%d_var" % k])))
+    return T["dec_titre"], desc, T["dec_src"] % (A["annee_debut"], A["annee_fin"]), T["dec_note"]
+
+
+def textes_cmp(cmp_, A):
+    T = TXT[LANG]
+    titre = T["cmp_titre"] % (A["cmp_n_maj"], A["seuil_dette"], A["cmp_veille"])
+    desc = (T["cmp_desc"] % (A["seuil_dette"], A["cmp_veille"], A["cmp_lib"])
+            + " ".join(T["cmp_desc_pays"] % (nom(f["pays"]), signe(f["taux_croissance"]), signe(f["deficits_primaires"]), signe(f["flux_stock"]), signe(f["variation"])) for f in cmp_)
+            + T["cmp_desc_fin"])
+    return titre, desc, T["cmp_src"] % A["cmp_lib"], T["cmp_note"]
 
 
 def fig_decennies(dec, A):
-    H = 356
-    T = TXT[LANG]
-    titre = T["dec_titre"]
-    d1, d2, d3 = dec
-    desc = (T["dec_desc"]
-            % tuple(x for k in (1, 2, 3) for x in (A["d%d_lib" % k], A["d%d_tc" % k], A["d%d_def" % k], A["d%d_sfa" % k], A["d%d_var" % k])))
-    e = entete(H, "bd", titre, desc)
-    legende(e, [(ORANGE, T["monte"]), (GRIS, T["baisse"])])
-    e.append('<text x="40" y="64" font-size="11" fill="%s">%s</text>' % (INK2, esc(T["tsa"])))
-    groupes = [(A["d%d_lib" % k], T["dec_sous"] % (A["d%d_var" % k], A["d%d_dette_deb" % k], A["d%d_dette_fin" % k]),
-                [(f["taux_croissance"], "T"), (f["deficits_primaires"], "S"), (f["flux_stock"], "A")]) for k, f in enumerate(dec, 1)]
-    barres_groupees(e, groupes, 40, W - 10, 78, 270, 10)
-    e += cartouche(H + 4, T["dec_src"] % (A["annee_debut"], A["annee_fin"]), T["dec_note"])
-    e.append("</svg>")
-    return "\n".join(e)
+    titre, desc, src, note = textes_dec(A)
+    return multiples("bd", titre, desc, lignes_dec(dec, A), src, note)
 
 
 def fig_comparaison(cmp_, A):
-    H = 366
+    titre, desc, src, note = textes_cmp(cmp_, A)
+    return multiples("bc", titre, desc, lignes_cmp(cmp_, A), src, note, 20)
+
+
+def stab_desc(A):
     T = TXT[LANG]
-    titre = T["cmp_titre"] % (A["cmp_n_maj"], A["seuil_dette"], A["cmp_veille"])
-    desc = (T["cmp_desc"] % A["cmp_lib"]
-            + " ".join(T["cmp_desc_pays"] % (nom(f["pays"]), signe(f["taux_croissance"]), signe(f["deficits_primaires"]), signe(f["flux_stock"]), signe(f["variation"])) for f in cmp_)
-            + T["cmp_desc_fin"])
-    e = entete(H, "bc", titre, desc)
-    legende(e, [(ORANGE, T["monte"]), (GRIS, T["baisse"])])
-    e.append('<text x="40" y="64" font-size="11" fill="%s">%s</text>' % (INK2, esc(T["tsa"])))
-    groupes = [(nom(f["pays"]), T["cmp_sous"] % signe(f["variation"]), [(f["taux_croissance"], "T"), (f["deficits_primaires"], "S"), (f["flux_stock"], "A")]) for f in cmp_]
-    barres_groupees(e, groupes, 40, W - 10, 78, 280, 20)
-    e += cartouche(H + 4, T["cmp_src"] % A["cmp_lib"], T["cmp_note"])
-    e.append("</svg>")
-    return "\n".join(e)
+    return (T["stab_desc"]
+            % (A["annee_debut"], A["annee_fin"], A["exc_n"], A["exc_premiere"], A["exc_derniere"], A["stab_min"], A["stab_min_annee"],
+               A["stab_max"], A["stab_max_annee"], A["annee_fin"], A["pb_dernier"], A["stab_dernier"], A["ecart_dernier"]))
 
 
 def fig_stabilisant(annees, A):
-    H, X0, X1, TOP, BAS = 320, 40, W - 10, 66, 280
+    H, X0, X1, TOP, BAS = 320, 40, W - 10, 84, 290
     T = TXT[LANG]
-    titre = T["stab_titre"]
-    desc = (T["stab_desc"]
-            % (A["annee_debut"], A["annee_fin"], A["exc_n"], A["exc_premiere"], A["exc_derniere"], A["stab_min"], A["stab_min_annee"],
-               A["stab_max"], A["stab_max_annee"], A["annee_fin"], A["pb_dernier"], A["stab_dernier"]))
-    e = entete(H, "bs", titre, desc)
+    e = entete(H, "bs", T["stab_titre"], stab_desc(A))
     vals = [r[k] for r in annees for k in ("solde_primaire", "solde_stabilisant")]
-    vmax, vmin = (int(max(vals) / 2) + 1) * 2, -(int(-min(vals) / 2) + 1) * 2
+    # Une graduation de marge sous le minimum : l'étiquette du rebond se pose SOUS son point, sans croiser les courbes.
+    vmax, vmin = (int(max(vals) / 2) + 1) * 2, -(int(-min(vals) / 2) + 2) * 2
 
     def Y(v):
         return BAS - (BAS - TOP) * (v - vmin) / (vmax - vmin)
 
     n = len(annees)
-    X = lambda k: X0 + (X1 - X0) * (k + 0.5) / n
+    X = lambda k: X0 + (X1 - X0) * (k + 0.5) / n  # noqa: E731
     for g in range(vmin, vmax + 1, 2):
         e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="%s"/>' % (X0, Y(g), X1, Y(g), GRID, 1.4 if g == 0 else 0.6))
-        e.append('<text x="%d" y="%.1f" font-size="10" fill="%s" text-anchor="end">%s</text>' % (X0 - 6, Y(g) + 3, MUTED, (signe(g, 0) if g else "0") + T["pc"]))
+        e.append('<text x="%d" y="%.1f" font-size="11" fill="%s" text-anchor="end">%s</text>' % (X0 - 6, Y(g) + 4, MUTED, (signe(g, 0) if g else "0") + T["pc"]))
     for cle, col, larg in (("solde_stabilisant", GRIS, 2.2), ("solde_primaire", ORANGE, 2.6)):
         pts = " ".join("%.1f,%.1f" % (X(k), Y(r[cle])) for k, r in enumerate(annees))
         e.append('<polyline points="%s" fill="none" stroke="%s" stroke-width="%s" stroke-linejoin="round"/>' % (pts, col, larg))
     for k, r in enumerate(annees):
         if r["annee"] % 5 == 0 or k == n - 1:
-            e.append('<text x="%.1f" y="%d" font-size="10" fill="%s" text-anchor="middle">%d</text>' % (X(k), BAS + 14, INK2, r["annee"]))
-    # Annotations des deux ruptures (contre-expertise PRO-20261003-064640, S4) : année du solde stabilisant le plus haut
-    # (recul du PIB nominal, gardé) et le plus bas (rebond, gardé), lues dans les données, jamais saisies.
-    for r_, lib in ((max(annees, key=lambda r: r["solde_stabilisant"]), T["recul"]), (min(annees, key=lambda r: r["solde_stabilisant"]), T["rebond"])):
+            e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle">%d</text>' % (X(k), BAS + 16, INK2, r["annee"]))
+    # Les deux ruptures (année du repère le plus haut, recul du PIB ; le plus bas, rebond ; gardées), étiquetées À GAUCHE du point :
+    # posée à droite, l'étiquette du rebond sortait du cadre (défaut B4 de la phase A).
+    for r_, lib, dy in ((max(annees, key=lambda r: r["solde_stabilisant"]), T["recul"], 4), (min(annees, key=lambda r: r["solde_stabilisant"]), T["rebond"], 20)):
         k = annees.index(r_)
-        haut = r_["solde_stabilisant"] > 0
-        e.append('<text x="%.1f" y="%.1f" font-size="10" fill="%s" text-anchor="%s">%d%s%s</text>'
-                 % (((X(k) - 6, Y(r_["solde_stabilisant"]) + 4, INK2, "end") if haut
-                     else (X(k) + 7, Y(r_["solde_stabilisant"]) + 3, INK2, "start")) + (r_["annee"], " : " if LANG == "fr" else ": ", lib)))
+        e.append('<circle cx="%.1f" cy="%.1f" r="3.6" fill="%s" stroke="#ffffff" stroke-width="1"/>' % (X(k), Y(r_["solde_stabilisant"]), GRIS))
+        e.append('<text x="%.1f" y="%.1f" font-size="11" fill="%s" text-anchor="end">%d%s%s</text>'
+                 % (X(k) - 7 + (12 if dy > 4 else 0), Y(r_["solde_stabilisant"]) + dy, INK2, r_["annee"], " : " if LANG == "fr" else ": ", esc(lib)))
     last = annees[-1]
+    e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1.4" stroke-dasharray="3 3"/>'
+             % (X(n - 1) + 6, Y(last["solde_stabilisant"]), X(n - 1) + 6, Y(last["solde_primaire"]), INK2))
     for cle, col in (("solde_stabilisant", GRIS), ("solde_primaire", ORANGE)):
-        e.append('<circle cx="%.1f" cy="%.1f" r="3.4" fill="%s" stroke="#ffffff" stroke-width="1"/>' % (X(n - 1), Y(last[cle]), col))
-    e.append('<line x1="40" y1="41" x2="58" y2="41" stroke="%s" stroke-width="2.6"/>' % ORANGE)
-    e.append('<text x="63" y="45" font-size="11" fill="%s">%s</text>' % (INK2, esc(T["leg_obs"])))
-    x2 = T["leg_stab_x"]
+        e.append('<circle cx="%.1f" cy="%.1f" r="3.6" fill="%s" stroke="#ffffff" stroke-width="1"/>' % (X(n - 1), Y(last[cle]), col))
+    e.append('<line x1="0" y1="41" x2="18" y2="41" stroke="%s" stroke-width="2.6"/>' % ORANGE)
+    e.append('<text x="23" y="45" font-size="11" fill="%s">%s</text>' % (INK2, esc(T["leg_obs"])))
+    x2 = T["leg_stab_x"] - 40
     e.append('<line x1="%d" y1="41" x2="%d" y2="41" stroke="%s" stroke-width="2.2"/>' % (x2, x2 + 18, GRIS))
     e.append('<text x="%d" y="45" font-size="11" fill="%s">%s</text>' % (x2 + 23, INK2, esc(T["leg_stab"])))
-    e += cartouche(H + 4, T["stab_src"] % (A["annee_debut"], A["annee_fin"]), T["stab_note"])
-    e.append("</svg>")
-    return "\n".join(e)
+    e.append('<text x="0" y="66" font-size="11" fill="%s">%s</text>' % (INK, esc(T["ecart_lab"] % (A["annee_fin"], A["ecart_dernier"]))))
+    return PF.pied(e, H + 2, W, blocs_pied(T["stab_src"] % (A["annee_debut"], A["annee_fin"]), T["stab_note"]), GRID)
+
+
+def fig_stabilisant_m(annees, A):
+    T = TXT[LANG]
+    e, y = PF.tete_mobile("bs-m", T["stab_titre"], stab_desc(A), INK, FONT)
+    for col, larg, lib in ((ORANGE, 2.6, T["leg_obs"]), (GRIS, 2.2, T["leg_stab"])):
+        for i, l in enumerate(PF.coupe(lib, 34)):
+            y += 19
+            if i == 0:
+                e.append('<line x1="0" y1="%.1f" x2="16" y2="%.1f" stroke="%s" stroke-width="%s"/>' % (y - 5, y - 5, col, larg))
+            e.append('<text x="22" y="%.1f" font-size="%s" fill="%s">%s</text>' % (y, FSM, INK2, esc(l)))
+    X0, X1, TOP = 46, WM - 6, y + 18
+    BAS = TOP + 200
+    vals = [r[k] for r in annees for k in ("solde_primaire", "solde_stabilisant")]
+    vmax, vmin = (int(max(vals) / 4) + 1) * 4, -(int(-min(vals) / 4) + 1) * 4
+    Y = lambda v: BAS - (BAS - TOP) * (v - vmin) / (vmax - vmin)  # noqa: E731
+    n = len(annees)
+    X = lambda k: X0 + (X1 - X0) * (k + 0.5) / n  # noqa: E731
+    for g in range(vmin, vmax + 1, 4):
+        e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="%s"/>' % (X0, Y(g), X1, Y(g), GRID, 1.4 if g == 0 else 0.6))
+        e.append('<text x="%d" y="%.1f" font-size="%s" fill="%s" text-anchor="end">%s</text>' % (X0 - 5, Y(g) + 5, FSM, MUTED, (signe(g, 0) if g else "0") + T["pc"]))
+    for cle, col, larg in (("solde_stabilisant", GRIS, 2.0), ("solde_primaire", ORANGE, 2.4)):
+        pts = " ".join("%.1f,%.1f" % (X(k), Y(r[cle])) for k, r in enumerate(annees))
+        e.append('<polyline points="%s" fill="none" stroke="%s" stroke-width="%s" stroke-linejoin="round"/>' % (pts, col, larg))
+    marques = [annees[0], next(r for r in annees if r["annee"] == 2010), annees[-1]]
+    for r in marques:
+        k = annees.index(r)
+        e.append('<text x="%.1f" y="%.1f" font-size="%s" fill="%s" text-anchor="%s">%d</text>'
+                 % (X(k), BAS + 19, FSM, INK2, "start" if k == 0 else ("end" if k == n - 1 else "middle"), r["annee"]))
+    hi = max(annees, key=lambda r: r["solde_stabilisant"]); lo = min(annees, key=lambda r: r["solde_stabilisant"])
+    last = annees[-1]
+    for r, cle, col in ((hi, "solde_stabilisant", GRIS), (lo, "solde_stabilisant", GRIS), (last, "solde_stabilisant", GRIS), (last, "solde_primaire", ORANGE)):
+        e.append('<circle cx="%.1f" cy="%.1f" r="3.6" fill="%s" stroke="#ffffff" stroke-width="1"/>' % (X(annees.index(r)), Y(r[cle]), col))
+    y = BAS + 26
+    for texte in (T["m_2020"] % (hi["annee"], A["stab_max"]), T["m_2021"] % (lo["annee"], A["stab_min"]),
+                  T["m_fin"] % (A["annee_fin"], A["pb_dernier"], A["stab_dernier"], A["ecart_dernier"])):
+        for l in PF.coupe(texte, 36):
+            y += 19
+            e.append('<text x="0" y="%.1f" font-size="%s" font-weight="600" fill="%s">%s</text>' % (y, FSM, INK, esc(l)))
+    return PF.pied_mobile(e, y + 12, blocs_pied(T["stab_src"] % (A["annee_debut"], A["annee_fin"]), T["stab_note"], T["licence_m"]), GRID)
+
+
+def figures_m(dec, cmp_, annees, A, D):
+    """Versions téléphone, contrôlées contre les versions détaillées (parité des valeurs en gras, police minimale)."""
+    x = SUFFIXE[LANG]
+    td, tc_ = textes_dec(A), textes_cmp(cmp_, A)
+    sortie = {"dette-baisse-decennies%s-m.svg" % x: multiples_m("bd-m", td[0], D["dette-baisse-decennies%s.svg" % x], lignes_dec(dec, A), td[2], td[3]),
+              "dette-baisse-comparaison%s-m.svg" % x: multiples_m("bc-m", tc_[0], D["dette-baisse-comparaison%s.svg" % x], lignes_cmp(cmp_, A), tc_[2], tc_[3], 20),
+              "dette-baisse-stabilisant%s-m.svg" % x: fig_stabilisant_m(annees, A)}
+    for nom_, svg in sortie.items():
+        ec = PF.parite(D[nom_.replace("-m.svg", ".svg")], svg, FSM)
+        if ec:
+            fail("%s : %s" % (nom_, " ; ".join(ec)))
+        for h in PF.hors_cadre(svg, WM):
+            log("  a verifier au rendu, %s : %s" % (nom_, h))
+    for nom_, svg in D.items():
+        if nom_.endswith(x + ".svg") and not nom_.endswith("-m.svg"):
+            for h in PF.hors_cadre(svg, W):
+                log("  a verifier au rendu, %s : %s" % (nom_, h))
+    return sortie
 
 
 def fiches(figs):
@@ -748,8 +978,8 @@ def fiches(figs):
             f = "dette-baisse-%s%s" % (ident, SUFFIXE[lang])
             svg = figs[f + ".svg"]
             titre = html.unescape(re.search(r"<title[^>]*>(.*?)</title>", svg).group(1))
-            cart = [html.unescape(t) for t in re.findall(r'<text x="0" y="[0-9.]+" font-size="9" fill="[^"]+">(.*?)</text>', svg)]
-            out[lang].append(dict(id=ident, fichier=f, titre=titre, montre=montre, source=cart[0], precaution=cart[1]))
+            out[lang].append(dict(id=ident, fichier=f, titre=titre, montre=montre, source=PF.lire(svg, "pied-source"),
+                                  precaution=PF.lire(svg, "pied-note")))
     return out
 
 
@@ -790,12 +1020,20 @@ def main() -> int:
     if set(A) != set(A_en):
         fail("blocs affichage et affichage_en : cles differentes (%s)" % sorted(set(A) ^ set(A_en)))
     n = gardes(fin, dec, annees, cmp_, europe, haut, bas, exc_ans)
+    # Une variation, deux pages (phase A du volet 5, B3) : la hausse du ratio de la dernière année doit être la même qu'au volet 4.
+    if MONDE.is_file():
+        m = json.loads(MONDE.read_text(encoding="utf-8"))
+        frm = next((x for x in m["europe"] if x.get("code") == "FR"), None)
+        if frm and m["affichage"].get("annee") == str(fin) and frm.get("var_ratio") is not None                 and abs(frm["var_ratio"] - annees[-1]["variation"]) > 0.005:
+            fail("volet 4 et volet 5 : variation du ratio %d differente (%.3f contre %.3f)" % (fin, frm["var_ratio"], annees[-1]["variation"]))
+    for pg in PAGES:
+        src = pg.read_text(encoding="utf-8")
+        trouves = [m_.group(0) for x in INTERDITS for m_ in re.finditer(x, src, re.I)]
+        if trouves:
+            fail("%s : formule interdite (ecart comptable lu comme un montant a trouver) : %s" % (pg.name, trouves))
     d3 = dec[2]
     log("France %s : dette %+.1f = taux-croissance %+.1f + deficits primaires %+.1f + flux-stock %+.1f ; %d pays compares ; %d annees-pays ecartees sur %d"
         % (A["d3_lib"], d3["variation"], d3["taux_croissance"], d3["deficits_primaires"], d3["flux_stock"], len(cmp_), cons["ecartees"], cons["annees_pays_calculables"]))
-    if check:
-        log("--check : %d gardes passees (%d cles d'affichage), rien ecrit." % (n, len(A)))
-        return 0
     figs = {}
     for lang, AA in (("fr", A), ("en", A_en)):
         use(lang)
@@ -803,7 +1041,11 @@ def main() -> int:
         figs["dette-baisse-decennies%s.svg" % x] = fig_decennies(dec, AA)
         figs["dette-baisse-comparaison%s.svg" % x] = fig_comparaison(cmp_, AA)
         figs["dette-baisse-stabilisant%s.svg" % x] = fig_stabilisant(annees, AA)
+        figs.update(figures_m(dec, cmp_, annees, AA, figs))
     use("fr")
+    if check:
+        log("--check : %d gardes passees (%d cles d'affichage), %d figures construites et controlees, rien ecrit." % (n, len(A), len(figs)))
+        return 0
     payload = {"meta": {"releve_le": datetime.now(timezone.utc).strftime("%Y-%m-%d"), "page": "https://" + PAGE_URL, "licence": "CC BY 4.0",
                         "perimetre": "administrations publiques (S.13), SEC 2010, monnaie nationale, PIB de la notification de déficit et de dette",
                         "identite": "d_t - d_{t-1} = i/(1+g) d_{t-1} - g/(1+g) d_{t-1} - pb_t + sfa_t",

@@ -127,6 +127,7 @@ ORD_EN = {1: "first", 2: "second", 3: "third", 4: "fourth", 5: "fifth", 6: "sixt
 # Entrées dans la zone euro APRÈS l'année des données (décision du Conseil de l'UE du 8 juillet 2025 pour la Bulgarie) : la
 # page classe le pays selon l'année des données et le dit (défaut M11 de la phase A du volet 4).
 ENTREES_EURO = {"BG": ("1er janvier 2026", "1 January 2026")}
+TOL_RATIO = 0.11  # témoin de la variation du ratio : deux ratios publiés à une décimale (même tolérance que le volet 5)
 PAGE_URL_EN = "stephane-lalut.com/en/public-debt-international-comparison/"
 AVANCES = ["USA", "JPN", "GBR", "CAN", "CHE", "NOR", "FRA"]
 EMERGENTS = ["CHN", "IND", "BRA", "ZAF"]
@@ -316,6 +317,10 @@ def niveau_europe() -> tuple[str, list[dict]]:
     # Fin d'année précédente rapportée à SON PIB (contre-expertise OPTIMUM-22) : pour dire la variation du ratio
     # et empêcher de lire l'écart entre stock de départ et stock de clôture comme une hausse annuelle du ratio.
     DP = eurostat("gov_10dd_edpt1", [an_1, an], na_item="GD", sector="S13", unit="PC_GDP")
+    # Variation du ratio calculée sur les montants (dette et PIB de la notification), non par différence de deux ratios
+    # publiés déjà arrondis (phase A du volet 5, B3 : 3,0 ici contre 2,9 au volet 5 pour la même année). Les ratios publiés
+    # restent le témoin (TOL_RATIO).
+    YN = eurostat("gov_10dd_edpt1", [an_1, an], na_item="B1GQ", sector="S1", unit="MIO_NAC")
     ans_inf = [str(int(an) - k) for k in (3, 2, 1)]
     # Cinq ans d'inflation : la fenêtre de 3 ans est celle de la page, 2, 4 et 5 ans servent au test de
     # robustesse demandé par la contre-expertise PRO-20260930-061613 (recalculé et gardé à chaque passage).
@@ -340,8 +345,13 @@ def niveau_europe() -> tuple[str, list[dict]]:
             v = [H.get((g, str(int(an) - j))) for j in range(1, k + 1)]
             fen[str(k)] = sum(v) / k if None not in v else None
         part1 = (100 * M1[(g, an)] / MT[(g, an)]) if (g, an) in M1 and MT.get((g, an)) else None
+        var_ratio = None
+        if (g, an) in D and (g, an_1) in YN and (g, an) in YN:
+            var_ratio = 100 * D[(g, an)] / YN[(g, an)] - 100 * d1 / YN[(g, an_1)]
+            if (g, an_1) in DP and abs(var_ratio - (dp - DP[(g, an_1)])) > TOL_RATIO:
+                fail("%s : variation du ratio %.3f, ratios publies %.1f -> %.1f (temoin)" % (g, var_ratio, DP[(g, an_1)], dp))
         rows.append(dict(code=g, nom=NOMS[g], nom_en=NOMS_EN[g], euro=g in euro, stock_fin=dp,
-                         stock_fin_prec=DP.get((g, an_1)), stock=stock, prix=prix, recettes=rec,
+                         stock_fin_prec=DP.get((g, an_1)), var_ratio=var_ratio, stock=stock, prix=prix, recettes=rec,
                          charge=charge, inflation=(sum(infl) / len(infl)) if len(infl) == 3 else None,
                          inflation_fenetres=fen, taux10=T10.get((g, an)), part_1an=part1))
     if manquants:
@@ -1151,7 +1161,7 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts) -> tuple
         A["pente_rapport"] = nb(s["charge_stock_hors"]["pente"] / s["charge_stock_euro"]["pente"], 1)
         # Trois temporalités françaises : stock de départ, stock de clôture, ratio de fin d'année précédente.
         A["fr_stock_fin_prec"] = pc(F["stock_fin_prec"])
-        A["fr_var_ratio"] = nb(F["stock_fin"] - F["stock_fin_prec"], 1)
+        A["fr_var_ratio"] = nb(F["var_ratio"], 1)
         A["fr_ecart_stocks"] = nb(F["stock_fin"] - F["stock"], 1)
         A["fr_rang_prix_euro"] = L["ordinal"](rang_prix_euro)
         A["bg_entree"] = ENTREES_EURO["BG"][0 if L is LOC["fr"] else 1]
