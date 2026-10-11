@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 660" role="img" font-variant-numeric="tabular-nums" aria-labelledby="achm-t achm-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 700" role="img" font-variant-numeric="tabular-nums" aria-labelledby="achm-t achm-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
 <title id="achm-t">Un point de taux en plus : intérêts supplémentaires la première année</title><desc id="achm-d">Courbes mensuelles, de mars 2015 à juin 2026, en milliards d'euros : hausse de la charge d'intérêts la première année, en scénario, pour l'ensemble État + Banque de France (7,6 fin 2022, 7,3 en juin 2026) et pour la seule dette de marché de l'État (2,75 fin 2022, 3,6 en juin 2026).</desc>
-<rect width="300" height="660" fill="#ffffff"/>
+<rect width="300" height="700" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Un point de taux en plus :</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">intérêts supplémentaires la</text>
 <text x="0" y="64" font-size="17" font-weight="600" fill="#26262f">première année</text>
@@ -21,18 +21,20 @@
 <text x="0" y="360" font-size="15" fill="#55524f">Fin 2022 : </text>
 <text x="0" y="380" font-size="15" font-weight="600" fill="#eb6834">État + Banque de France : 7,6</text>
 <text x="0" y="400" font-size="15" fill="#55524f">dette de marché seule : 2,75</text>
-<text x="0" y="420" font-size="15" fill="#55524f">juin 2026 : 7,3 / 3,6</text>
-<line x1="0" y1="434.0" x2="300" y2="434.0" stroke="#dcd8d3"/>
-<text class="pied-source" x="0" y="455.0" font-size="13.5" fill="#55524f">AFT (bulletins mensuels, ligne à</text>
-<text class="pied-source" x="0" y="472.0" font-size="13.5" fill="#55524f">ligne), Banque de France (Webstat),</text>
-<text class="pied-source" x="0" y="489.0" font-size="13.5" fill="#55524f">BCE ; décision (UE) 2016/2248 ; calcul</text>
-<text class="pied-source" x="0" y="506.0" font-size="13.5" fill="#55524f">de l'auteur</text>
-<text class="pied-note" x="0" y="527.0" font-size="13.5" fill="#55524f">Scénario : +1 point sur toute la</text>
-<text class="pied-note" x="0" y="544.0" font-size="13.5" fill="#55524f">courbe, encours constant ; titres de</text>
-<text class="pied-note" x="0" y="561.0" font-size="13.5" fill="#55524f">la Banque de France au taux de</text>
-<text class="pied-note" x="0" y="578.0" font-size="13.5" fill="#55524f">référence de la BCE. Ni une prévision,</text>
-<text class="pied-note" x="0" y="595.0" font-size="13.5" fill="#55524f">ni une série de dépenses constatées,</text>
-<text class="pied-note" x="0" y="612.0" font-size="13.5" fill="#55524f">ni le coût du QE.</text>
-<text class="pied-licence" x="0" y="633.0" font-size="13.5" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 ·</text>
-<text class="pied-licence" x="0" y="650.0" font-size="13.5" fill="#96928f">stephane-lalut.com</text>
+<text x="0" y="420" font-size="15" fill="#55524f">Juin 2026 : </text>
+<text x="0" y="440" font-size="15" font-weight="600" fill="#eb6834">État + Banque de France : 7,3</text>
+<text x="0" y="460" font-size="15" fill="#55524f">dette de marché seule : 3,6</text>
+<line x1="0" y1="474.0" x2="300" y2="474.0" stroke="#dcd8d3"/>
+<text class="pied-source" x="0" y="495.0" font-size="13.5" fill="#55524f">AFT (bulletins mensuels, ligne à</text>
+<text class="pied-source" x="0" y="512.0" font-size="13.5" fill="#55524f">ligne), Banque de France (Webstat),</text>
+<text class="pied-source" x="0" y="529.0" font-size="13.5" fill="#55524f">BCE ; décision (UE) 2016/2248 ; calcul</text>
+<text class="pied-source" x="0" y="546.0" font-size="13.5" fill="#55524f">de l'auteur</text>
+<text class="pied-note" x="0" y="567.0" font-size="13.5" fill="#55524f">Scénario : +1 point sur toute la</text>
+<text class="pied-note" x="0" y="584.0" font-size="13.5" fill="#55524f">courbe, encours constant ; titres de</text>
+<text class="pied-note" x="0" y="601.0" font-size="13.5" fill="#55524f">la Banque de France au taux de</text>
+<text class="pied-note" x="0" y="618.0" font-size="13.5" fill="#55524f">référence de la BCE. Ni une prévision,</text>
+<text class="pied-note" x="0" y="635.0" font-size="13.5" fill="#55524f">ni une série de dépenses constatées,</text>
+<text class="pied-note" x="0" y="652.0" font-size="13.5" fill="#55524f">ni le coût du QE.</text>
+<text class="pied-licence" x="0" y="673.0" font-size="13.5" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 ·</text>
+<text class="pied-licence" x="0" y="690.0" font-size="13.5" fill="#96928f">stephane-lalut.com</text>
 </svg>

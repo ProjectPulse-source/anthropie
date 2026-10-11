@@ -2,7 +2,7 @@
 title: "Did inflation really ease France's debt burden?"
 url: /en/inflation-and-french-public-debt/
 description: "The 2021–2023 inflation surprise reduced the real value of payments promised on France's end-2020 fixed-rate marketable government debt by about €{infl.t}bn in 2020 euros. The government did not pocket that money: the erosion is spread over payments until {infl.fin}, and it is not an identifiable net fiscal gain. Computed line by line on the AFT's outstanding debt and the monthly HICP."
-chapo: "Did the French government gain €{infl.t}bn from inflation? Not as revenue. The 2021–2023 inflation surprise did reduce the real value of the payments it had promised on its end-2020 fixed-rate marketable debt by about €{infl.t}bn in 2020 euros: its creditors will receive what was promised, but what was promised is worth less. That is not revenue. The erosion is spread over payments until {infl.fin}, only a fifth of it had materialised by end-2023, and it does not translate into an identifiable net fiscal gain."
+chapo: "Did the French government gain €{infl.t}bn from inflation? Not as revenue. The 2021–2023 inflation surprise reduced the real value of the payments promised on France's end-2020 fixed-rate marketable government debt by about €{infl.t}bn in 2020 euros. That relief materialises as payments fall due, until {infl.fin}: only a fifth of it by end-2023. It does not prove an equivalent net fiscal gain."
 date: 2026-10-07
 lastmod: 2026-10-11
 og_title: "Did inflation really ease France's debt burden? — S. Lalut"
@@ -37,11 +37,11 @@ dataset:
   fichiers: ["dette_inflation.csv", "dette_inflation.json"]
 faq:
   - question: "Did the French government gain money from the 2021–2023 inflation?"
-    answer: "Not in any way that can be put in figures. Relative to the inflation expected in early 2021, realised 2021–2023 inflation reduced the real value of payments promised on France's end-2020 fixed-rate marketable government debt by about €{infl.t}bn in 2020 euros, about {infl.pts_pib}% of 2020 GDP; depending on which forecast published in early 2021 is used, €{infl.a_bas}bn to €{infl.a_haut}bn. But that amount is not revenue: it is spread over payments until {infl.fin}, the government then borrowed at higher rates without anyone knowing how much of that rise the episode caused, and inflation also swelled some public revenue and some public spending, outside this calculation. That is why it is not an identifiable net fiscal gain."
+    answer: "Not as revenue. The inflation surprise reduced the real value of the payments promised on France's end-2020 fixed-rate marketable government debt by about €{infl.t}bn in 2020 euros (€{infl.a_bas}bn to €{infl.a_haut}bn depending on the starting forecast). It is a gross advantage, spread until {infl.fin}, not proof of a net fiscal gain: refinancing, revenue and spending follow other mechanisms."
   - question: "Did savers lose what the debt lost in real value?"
-    answer: "We know who held the bonds; we cannot infer from that who ultimately bore the loss. At end-2020, half of France's marketable government debt was held by non-residents, nearly a quarter by the Banque de France, about {infl.part_assureurs}% by insurers and {infl.part_banques}% by banks. Households hold almost none directly; they are exposed through their life insurance or their deposits, but that link does not allow any share of the €{infl.t}bn to be attributed to them: the return paid out, the insurer's or the bank's own liabilities and changes of holder all alter who bears the loss."
+    answer: "It cannot be quantified. At end-2020, half of France's marketable government debt was held by non-residents, nearly a quarter by the Banque de France, {infl.part_assureurs}% by insurers. Households are exposed through life insurance or deposits, but the return paid, the intermediary's own liabilities and changes of holder prevent any share of the €{infl.t}bn from being attributed to them."
   - question: "Did the ECB's bond purchases make France more sensitive to interest rates?"
-    answer: "Yes, mainly in the short run. Had the whole yield curve shifted up permanently by one point at end-2022, the combined interest bill of the government and the Banque de France would have risen by €{infl.qe_sc1}bn in the first year, against €{infl.qe_sm1}bn for the government's market debt alone, {infl.qe_r1} times as much; over five years, only {infl.qe_r5} times. The reason: when the Eurosystem computes the income it pools, government bonds bought by the Banque de France are deemed to earn the ECB reference rate. This scenario measures an exposure: it is neither a forecast nor the cost of QE, since no one knows what rates would have been without the purchases."
+    answer: "Yes, mainly in the short run. The Banque de France paid for its bond purchases with bank reserves, remunerated at current rates: a rise in rates therefore weighs on that share at once, instead of waiting for the bonds to mature. At end-2022, a lasting one-percentage-point rise across the whole yield curve would have raised the first-year interest bill by €{infl.qe_sc1}bn for the government and the Banque de France together, against €{infl.qe_sm1}bn for central-government marketable debt alone; over five years the ratio falls to {infl.qe_r5}. It measures an exposure, neither a forecast nor the cost of QE."
 ressource:
   type: ["quantitatif", "explicatif-causal"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "dette"
@@ -67,10 +67,10 @@ To measure it, we compare two worlds. In the first, inflation is what the profes
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/dette-inflation-calendrier-en-m.svg" width="300" height="700">
-    <img src="/img/dette-inflation-calendrier-en.svg" alt="Cumulative curve, from 2021 to {{< infl-val "fin" >}}, of the real-value erosion of the payments promised on France's end-2020 fixed-rate marketable government debt, solid until 2023 then dashed, the price gap being assumed to persist: €{{< infl-val "cum23" >}}bn in 2020 euros by end-2023, {{< infl-val "cum27" >}} by end-{{< infl-val "demi" >}}, about {{< infl-val "part27" >}}%, {{< infl-val "t_exact" >}} in total; a band shows the range of forecasts published in early 2021, €{{< infl-val "a_bas" >}}bn to €{{< infl-val "a_haut" >}}bn." width="720" height="373" loading="lazy">
+    <source media="(max-width: 600px)" srcset="/img/dette-inflation-calendrier-en-m.svg" width="300" height="720">
+    <img src="/img/dette-inflation-calendrier-en.svg" alt="Cumulative curve, from 2021 to {{< infl-val "fin" >}}, of the real-value erosion of the payments promised on France's end-2020 fixed-rate marketable government debt, solid until 2023 then dashed, the price gap being assumed to persist: €{{< infl-val "cum23" >}}bn in 2020 euros by end-2023, {{< infl-val "cum27" >}} by end-{{< infl-val "demi" >}}, about {{< infl-val "part27" >}}%, {{< infl-val "t_exact" >}} in total; a vertical bar at the final point shows the range depending on the starting forecast, €{{< infl-val "a_bas" >}}bn to €{{< infl-val "a_haut" >}}bn."a_bas" >}}bn to €{{< infl-val "a_haut" >}}bn." width="720" height="373" loading="lazy">
   </picture>
-  <figcaption>Cumulative real-value erosion of the payments promised on France's end-2020 fixed-rate marketable government debt, by year of payment, in billions of 2020 euros at consumer prices, undiscounted (author's calculation; AFT, Eurostat, ECB). It is a sum of real-value differences, not debt written off.</figcaption>
+  <figcaption>An undiscounted sum of real-value differences, in billions of 2020 euros, not debt written off (author's calculation; AFT, Eurostat, ECB).</figcaption>
 </figure>
 
 <div class="resultat-phrase">
@@ -79,9 +79,11 @@ To measure it, we compare two worlds. In the first, inflation is what the profes
 
 </div>
 
+Other work finds more: Pallotti et al. obtain, for French general government, an amount {{< infl-val "pal_rapport" >}} times as large, with a different perimeter, valuation and inflation shock. The comparison with the research, further down, explains most of that gap, without fully reconciling it.
+
 This figure does not say that the debt fell by €{{< infl-val "t" >}}bn: the amounts owed are unchanged in euros. Nor does it say that the government pocketed anything. The chart shows why. By end-2023 the price gap had built up, but only {{< infl-val "part23" >}}% of the erosion had materialised in actual payments, €{{< infl-val "cum23" >}}bn. About {{< infl-val "part27" >}}% will have done so by end-{{< infl-val "demi" >}}; the rest awaits distant maturities, until {{< infl-val "fin" >}}. The shock lasted three years; its effects on legacy debt are paid out over several decades.
 
-Amounts are in 2020 euros at French consumer prices: what these payments represent for a household spending in France. Another unit of account gives another amount (see below). And this figure is not the debt-ratio figure published in the debt series, which measures something else: [see the section on the ratio](#ratio).
+Amounts are in 2020 euros at French consumer prices: what these payments represent for a household spending in France. And this figure is not the debt-ratio figure published in the debt series, which measures something else: [see the section on the ratio](#ratio).
 
 ## Who held the claims whose real value fell? {#detenteurs}
 
@@ -89,23 +91,35 @@ At end-2020, France's marketable government debt was held, at market value, {{< 
 
 **The direct holder is not necessarily the one who ultimately loses.** Households hold almost no government bonds directly. They are exposed through their life insurance or their deposits, but that link does not allow any share of the €{{< infl-val "t" >}}bn to be attributed to them: the return paid to policyholders, the insurer's or the bank's own nominal liabilities, and bonds changing hands over the years all alter who ultimately bears the loss. Half of the bonds were held outside France; nearly a quarter by the central bank, whose position is examined [below](#achats-banque-centrale).
 
-A mechanical allocation of the €{{< infl-val "t" >}}bn by these shares is given in [the method](#sources): it gives orders of magnitude, it does not measure who lost.
+A mechanical allocation by these shares is given in [the method](#sources); it does not measure who lost.
 
 ## Why the government did not pocket €{{< infl-val "t" >}}bn {#gain-net}
 
-**Because the erosion materialises as payments fall due.** It is spread until {{< infl-val "fin" >}}: a fifth by end-2023, about {{< infl-val "part27" >}}% by end-{{< infl-val "demi" >}}.
+The first reason is on the chart: the erosion materialises as payments fall due, until {{< infl-val "fin" >}}. Others add to it.
 
 **Because the government then borrowed at higher rates.** From 2022 onwards it refinanced its maturing debt at higher rates. Part of that rise reflects revised inflation expectations, part reflects real rates and risk premia with causes of their own: the available data do not identify how much of the later rise in funding costs the episode caused. In the counterfactual used here, that rise does not undo the erosion already locked in: it applies to new financing, not to payments already promised.
 
-**Because inflation also worked elsewhere in the budget, outside this calculation.** It may have swollen revenue measured in current euros, VAT for instance; it also led to the uprating of pensions and benefits, and to support measures. What is demonstrated here: the inflation surprise reduced the real value of payments already promised. What is possible: the government may have benefited through other channels, including some nominal revenue. What is not established: the total fiscal balance of the inflation surprise. The amount is therefore not an identifiable net fiscal gain, which does not mean that no gain existed.
+**Because inflation also worked elsewhere in the budget, outside this calculation.** It may have swollen revenue measured in current euros, VAT for instance; it also led to the uprating of pensions and benefits, and to support measures. What is demonstrated here: the inflation surprise reduced the real value of payments already promised. What is possible: the government may have benefited through other channels, including some nominal revenue. What is not established: the total fiscal balance of the inflation surprise. The net effect on revenue is not quantified here, for lack of a comparable causal estimate: same perimeter, same unexpected shock, same period. The gross advantage measured is therefore not an identifiable net fiscal gain, which does not mean that no gain existed.
 
-**Because inflation-linked bonds worked the other way.** At end-2020, {{< infl-val "idx_n" >}} inflation-linked bonds, worth €{{< infl-val "idx_encours" >}}bn, escaped the erosion. Had the government issued them at a fixed rate rather than inflation-linked, the erosion would have been about €{{< infl-val "idx" >}}bn larger: these bonds protected their holders. In the central-government budget, their indexation charge peaked at €{{< infl-val "charge22" >}}bn (current euros) in 2022 (AFT).
+**Because inflation-linked bonds worked the other way.** At end-2020, {{< infl-val "idx_n" >}} inflation-linked bonds, worth €{{< infl-val "idx_encours" >}}bn, escaped the erosion. Had the government issued them at a fixed rate rather than inflation-linked, the erosion would have been about €{{< infl-val "idx" >}}bn larger: these bonds protected their holders.
 
 **Because the amount depends on the unit of account.** Measured in units of domestic output (the GDP deflator) rather than in consumer purchasing power, the same erosion is smaller, of the order of €{{< infl-val "defl_bas" >}}bn to €{{< infl-val "defl_haut" >}}bn ([details](#sensibilite)); neither unit measures a fiscal gain.
 
 ## The Banque de France: why interest rates can bite sooner {#achats-banque-centrale}
 
-From 2015 to 2022 the Banque de France bought government bonds. It paid for them by creating reserves, the money banks hold with it, remunerated at a short-term rate. Looking at the government and its central bank together, part of the long fixed-rate debt was thus replaced by reserves at the short-term rate: when short-term rates rise, the interest bill of the combined entity rises faster. This mechanism works through two channels, which follow different rules and give different measures.
+The central bank changes how fast a rise in interest rates weighs on the public finances. A fixed-rate bond only becomes more expensive when it is replaced, at maturity, sometimes ten years later. Yet from 2015 to 2022 the Banque de France bought part of those bonds and paid for them with bank reserves, the money banks hold with it, whose remuneration follows current rates. For the government and its central bank taken together, a rise in rates therefore weighs on that share at once, instead of waiting for the bonds to mature.
+
+At end-2022, a lasting one-percentage-point rise across the whole yield curve would have raised the first-year interest bill by €{{< infl-val "qe_sc1" >}}bn for the government and the Banque de France taken together ({{< infl-val "qe_sc1_pib" >}} percentage points of GDP), against €{{< infl-val "qe_sm1" >}}bn for central-government marketable debt alone: {{< infl-val "qe_r1" >}} times as much. Over five years the ratio falls to {{< infl-val "qe_r5" >}} (€{{< infl-val "qe_sc5" >}}bn against €{{< infl-val "qe_sm5" >}}bn): central-bank purchases mainly brought the repricing forward in time. This scenario measures an exposure, it forecasts nothing: a rise in policy rates need not shift the whole curve.
+
+<figure class="figure-ciseau">
+  <picture>
+    <source media="(max-width: 600px)" srcset="/img/dette-inflation-achats-en-m.svg" width="300" height="661">
+    <img src="/img/dette-inflation-achats-en.svg" alt="Two monthly lines, from March 2015 to {{< infl-val "qe_dern" >}}, of the first-year rise in the interest bill if the whole yield curve shifted up permanently by one point: for the government and the Banque de France taken together, €{{< infl-val "qe_sc1" >}}bn at end-2022 and {{< infl-val "qe_sc1_d" >}} in {{< infl-val "qe_dern" >}}; for the government's market debt alone, {{< infl-val "qe_sm1" >}} at end-2022 and {{< infl-val "qe_sm1_d" >}} in {{< infl-val "qe_dern" >}}." width="720" height="359" loading="lazy">
+  </picture>
+  <figcaption>A scenario at a constant stock of debt, not a forecast; the government and the Banque de France taken together are an analytical perimeter, not interest recorded in the budget (author's calculation; AFT, Banque de France, ECB).</figcaption>
+</figure>
+
+**How.** The mechanism works through two channels, which follow different rules and give different measures.
 
 **Economic channel: reserves, remunerated at the deposit rate.** Because the deposit rate stayed at −0.5% until July 2022 while prices rose, reserve holders earned negative real returns, as holders of nominal fixed-rate claims did: in a simplified consolidation, the erosion is still about €{{< infl-val "cons23" >}}bn at end-2023. In 2024 and 2025 reserves were paid above inflation, and the consolidated erosion falls to about €{{< infl-val "cons25" >}}bn at end-2025: part of the advantage has already been given back, while the payments run until {{< infl-val "fin" >}}. This is a simplified model, not a statistical consolidation: the Banque de France is outside general government, and its losses reach the government through its dividends and taxes, with a lag.
 
@@ -117,17 +131,7 @@ where one year's real loss equals the stock of reserves at the start of the year
 
 </details>
 
-**Accounting channel: pooled income, at the reference rate.** When euro-area central banks compute the income they pool, government bonds held by the Banque de France are deemed to earn the ECB reference rate, whatever their coupon (Decision (EU) 2016/2248); that income is then shared out among them according to their share in the ECB's capital, which moves the result by only a few billion. In the consolidated measure used here, the share held by the Banque de France is therefore treated as debt that reprices at once at the reference rate, in place of long-term fixed-rate debt. Since 2025, the reference rate has been the deposit rate.
-
-<figure class="figure-ciseau">
-  <picture>
-    <source media="(max-width: 600px)" srcset="/img/dette-inflation-achats-en-m.svg" width="300" height="621">
-    <img src="/img/dette-inflation-achats-en.svg" alt="Two monthly lines, from March 2015 to {{< infl-val "qe_dern" >}}, of the first-year rise in the interest bill if the whole yield curve shifted up permanently by one point: for the government and the Banque de France taken together, €{{< infl-val "qe_sc1" >}}bn at end-2022 and {{< infl-val "qe_sc1_d" >}} in {{< infl-val "qe_dern" >}}; for the government's market debt alone, {{< infl-val "qe_sm1" >}} at end-2022 and {{< infl-val "qe_sm1_d" >}} in {{< infl-val "qe_dern" >}}." width="720" height="359" loading="lazy">
-  </picture>
-  <figcaption>First-year rise in the interest bill if the whole yield curve shifted up permanently by one point, at a constant stock of debt, in billions of euros: the government's market debt alone, and the government and the Banque de France taken together, an analytical perimeter and not interest recorded in the budget (a scenario, not a forecast; author's calculation; AFT, Banque de France, ECB).</figcaption>
-</figure>
-
-**Result: the purchases mainly brought the exposure to interest rates forward.** Had the whole yield curve, from the ECB reference rate to the longest maturities, shifted up permanently by one point at end-2022, the interest bill of the government and the Banque de France taken together would have risen by €{{< infl-val "qe_sc1" >}}bn in the first year ({{< infl-val "qe_sc1_pib" >}} percentage points of GDP), against €{{< infl-val "qe_sm1" >}}bn for market debt alone: {{< infl-val "qe_r1" >}} times as much. Over five years the ratio falls to {{< infl-val "qe_r5" >}} (€{{< infl-val "qe_sc5" >}}bn against €{{< infl-val "qe_sm5" >}}bn): central-bank purchases mainly brought the repricing forward in time. This scenario measures an exposure, it forecasts nothing: a rise in policy rates need not shift the whole curve.
+**Accounting channel: pooled income, at the reference rate.** When euro-area central banks compute the income they pool, and for that calculation only, government bonds held by the Banque de France are deemed to earn the ECB reference rate, whatever their coupon, which is unchanged (Decision (EU) 2016/2248). In the consolidated measure used here, the share held by the Banque de France is therefore treated as debt that reprices at once at the reference rate, in place of long-term fixed-rate debt. Since 2025, the reference rate has been the deposit rate.
 
 <details class="repli"><summary>Refixing period, the carry turning negative, and the Banque de France's accounts</summary>
 
@@ -141,7 +145,9 @@ where one year's real loss equals the stock of reserves at the start of the year
 
 </details>
 
-**Four figures, four objects.** None is added to or subtracted from the others to make a net gain.
+These measures are not added to or subtracted from one another: no combination of them gives a net gain.
+
+<details class="repli"><summary>Why don't these four amounts add up?</summary>
 
 | Figure | What it measures |
 |---|---|
@@ -150,11 +156,11 @@ where one year's real loss equals the stock of reserves at the start of the year
 | −€{{< infl-val "qe_solde" >}}bn | the cumulative carry on French public-sector securities held, 2016–2025 |
 | −€{{< infl-val "qe_bdf_ro_apres" >}}bn | the Banque de France's ordinary result, whole balance sheet, 2023–2025 |
 
+</details>
+
 ## Why this is not the debt-to-GDP figure {#ratio}
 
-The debt series page ["Why does public debt rise?"](/en/why-does-public-debt-rise/) attributes to the interest-growth effect a contribution of −{{< dyn-val "effet_2021_2023" >}} percentage points of GDP to the change in the debt ratio in 2021–2023. That is not the observed fall in the ratio: it fell by only {{< dyn-val "recul_2021_2023" >}} points, mainly because primary deficits pushed it {{< dyn-val "deficits_2021_2023" >}} points the other way. And the {{< infl-val "pts_pib" >}}% of 2020 GDP on this page is not a {{< infl-val "pts_pib" >}}-point fall in the ratio.
-
-The two figures describe the same episode, but they differ in object, unit, horizon and counterfactual: the first is a contribution to the change in a ratio, for all of general government, and responds to all nominal GDP growth, expected inflation included; the second counts only the unexpected part of inflation, on the payments already promised by the central government, up to the last one. Bringing them together would require a decomposition that is not made here.
+The debt series page ["Why does public debt rise?"](/en/why-does-public-debt-rise/) attributes to the interest-growth effect a contribution of −{{< dyn-val "effet_2021_2023" >}} percentage points of GDP to the change in the debt ratio in 2021–2023. That is not the observed fall in the ratio: it fell by only {{< dyn-val "recul_2021_2023" >}} points, mainly because primary deficits pushed it {{< dyn-val "deficits_2021_2023" >}} points the other way. And the {{< infl-val "pts_pib" >}}% of 2020 GDP on this page is not a {{< infl-val "pts_pib" >}}-point fall in the ratio: the first figure responds to all nominal GDP growth, expected inflation included, for all of general government; the second counts only the unexpected part of inflation, on the payments already promised by the central government. Bringing them together would require a decomposition that is not made here.
 
 ## What moves the number {#sensibilite}
 
@@ -204,7 +210,13 @@ They do not measure the total fiscal effect of inflation (revenue, indexed benef
 
 ## What we know, and what remains undetermined {#retenir}
 
-Four propositions, which do not contradict one another. **Creditors lost in real value**: about €{{< infl-val "t" >}}bn in 2020 euros of payments promised on France's end-2020 fixed-rate marketable government debt are worth less than expected, and that loss will not be given back if the price gap persists. **The debtor gains a potential advantage**, which does not translate into an identifiable net fiscal gain: it is spread over decades, and inflation worked elsewhere in the budget too. **The overall fiscal effect of the inflation surprise is not established here**: it also runs through revenue, indexed benefits and support measures, which this calculation does not cover. **Exposures to interest rates are transmitted at different speeds**: the erosion of legacy debt materialises as bonds mature, while the share held by the central bank brings the effect of a rise in rates forward in time.
+**Legacy debt can lose real value without falling in euros.** The unexpected 2021–2023 inflation reduced the real value of the government's legacy nominal liabilities by about €{{< infl-val "t" >}}bn in 2020 euros: a gross advantage, measurable in the scenario used.
+
+**A gross advantage is not a net fiscal gain.** It is neither €{{< infl-val "t" >}}bn of revenue nor proof of an equivalent net fiscal gain: revenue, spending and refinancing follow other mechanisms.
+
+**The date of the shock is not the date of its effects.** The erosion is spread over payments until {{< infl-val "fin" >}}, if the price gap persists.
+
+**Financial structure sets how fast interest rates feed through.** A fixed-rate bond only becomes more expensive at maturity; the share the Banque de France paid for with reserves, remunerated at current rates, makes a rise in rates felt at once by the government and its central bank taken together.
 
 What we do not know: who ultimately bore the loss, and how much of the rise in rates the episode caused.
 
@@ -226,7 +238,7 @@ This page measures how much real value the 2021–2023 inflation took from legac
 
 **Expectations.** ECB, *Survey of Professional Forecasters*, first quarter of 2021 (euro area; 2024 interpolated between its 2023 and 2025 horizons, then its long-term expectation); Banque de France, December 2020 projections; European Commission, autumn 2020 and winter 2021 forecasts. Breakevens at 31 December 2020: AFT (Bloomberg data).
 
-**Inflation-linked bonds.** In the counterfactual, the {{< infl-val "idx_n" >}} inflation-linked bonds outstanding at end-2020 receive a fixed coupon equal to their real coupon plus the breakeven of the same index and maturity: at 31 December 2020 the AFT publishes four points (France 5 and 10 years, euro area 10 and 30 years), interpolated by residual maturity; with no short euro-area point, the French curve is shifted by the gap observed at 10 years. Result: €{{< infl-val "idx_j" >}}bn, against {{< infl-val "idx_1" >}} with the euro-area 10-year breakeven alone. Adding the gap between each bond's index and the French HICP (€{{< infl-val "idx_ecart" >}}bn), the ex-post cost to the government of the inflation protection embedded in those bonds reaches €{{< infl-val "idx_tot" >}}bn. The AFT's indexation charge (€{{< infl-val "charge_cum" >}}bn in current euros from 2021 to 2025) covers the whole indexed stock of each year, new issues included: it is not the same quantity.
+**Inflation-linked bonds.** In the counterfactual, the {{< infl-val "idx_n" >}} inflation-linked bonds outstanding at end-2020 receive a fixed coupon equal to their real coupon plus the breakeven of the same index and maturity: at 31 December 2020 the AFT publishes four points (France 5 and 10 years, euro area 10 and 30 years), interpolated by residual maturity; with no short euro-area point, the French curve is shifted by the gap observed at 10 years. Result: €{{< infl-val "idx_j" >}}bn, against {{< infl-val "idx_1" >}} with the euro-area 10-year breakeven alone. Adding the gap between each bond's index and the French HICP (€{{< infl-val "idx_ecart" >}}bn), the ex-post cost to the government of the inflation protection embedded in those bonds reaches €{{< infl-val "idx_tot" >}}bn. In the budget, the indexation charge peaked at €{{< infl-val "charge22" >}}bn (current euros) in 2022: an annual flow, on the whole indexed stock of that year, not the roughly €{{< infl-val "idx" >}}bn of the counterfactual on end-2020 bonds. The AFT's indexation charge (€{{< infl-val "charge_cum" >}}bn in current euros from 2021 to 2025) covers the whole indexed stock of each year, new issues included: it is not the same quantity.
 
 **Holders and Banque de France shares.** Three Banque de France shares appear on this page, on two perimeters and two valuations: {{< infl-val "s_bdf" >}}% of all central-government marketable debt at end-2020, at market value (Banque de France, Webstat, holdings by sector; same source for the breakdown by holder); {{< infl-val "qe_h22" >}}% at end-2022 and {{< infl-val "qe_h_d" >}}% in {{< infl-val "qe_dern" >}} of fixed-rate central-government debt, at face value (market-value share applied to the outstanding face value). The share of funds and other holders is rounded on the exact shares. Reserves in the simplified consolidation: proxied by the market value of the Banque de France's holdings of government bonds at the start of each year; ECB deposit rate, annual average.
 
@@ -245,5 +257,5 @@ This is a mechanical allocation, not a measure of who lost. Bonds change hands o
 No number on this page is typed by hand: all come from a reproducible calculation by the author, whose extract is archived with its checksums; the script that writes the page checks the main numerical statements and stops if their conditions no longer hold. Before the page was written, the calculation was subjected to external critical review, which led to revisions to the timing of prices, the construction of the range and the treatment of inflation-linked bonds.
 
 {{< reutiliser figures="figures_inflation" jeu="dette_inflation" sources="AFT, Eurostat, ECB, Banque de France, European Commission" donnees="Cumulative real-value erosion by year of payment, results for each forecast and each breakeven, inflation-linked bonds, simplified consolidation, mechanical allocation by holder and, for the central bank's purchases, the monthly exposure, the refixing period and the yield gap by year; the same content is available as CSV, in long format." >}}
-In this page's counterfactual, relative to the inflation expected in early 2021, realised 2021–2023 inflation reduces the real value of the payments promised on France's end-2020 fixed-rate marketable government debt by about €{{< infl-val "t" >}}bn in 2020 euros (€{{< infl-val "a_bas" >}}bn to €{{< infl-val "a_haut" >}}bn depending on the forecast used); about {{< infl-val "part27" >}}% materialises by end-{{< infl-val "demi" >}}. The amount is not an identifiable net fiscal gain.
+In this page's counterfactual, relative to the inflation expected in early 2021, realised 2021–2023 inflation reduces the real value of the payments promised on France's end-2020 fixed-rate marketable government debt by about €{{< infl-val "t" >}}bn in 2020 euros (€{{< infl-val "a_bas" >}}bn to €{{< infl-val "a_haut" >}}bn depending on the forecast used); about {{< infl-val "part27" >}}% materialises by end-{{< infl-val "demi" >}}. It is a gross advantage for the government, not proof of an equivalent net fiscal gain.
 {{< /reutiliser >}}

@@ -366,9 +366,9 @@ TXT = {
                source="AFT (encours au 31/12/2020), Eurostat (IPCH mensuel, France), BCE (SPF, janvier 2021) ; calcul de l'auteur",
                note="Somme non actualisée des écarts de valeur réelle des paiements promis, en Md€ de 2020 aux prix à la consommation : ni de la dette effacée, "
                     "ni un gain budgétaire net, ni une perte finale. Contrefactuel : inflation anticipée début 2021 ; après 2023, l'écart de prix est supposé persister.",
-               axe="Md€ de 2020, cumul", total="total : {t_exact}", demi="environ {part27} % d'ici fin {demi}", plage="prévisions publiées : {a_bas} à {a_haut}",
+               axe="Md€ de 2020, cumul", total="total : {t_exact}", demi="environ {part27} % d'ici fin {demi}", plage="selon la prévision de départ : {a_bas} à {a_haut}",
                apres="après 2023 : écart de prix supposé persistant",
-               titre_m="L'érosion de la dette ancienne, au fil des paiements", axe_m="Md€ de 2020, cumul",
+               titre_m="Dette à taux fixe de fin 2020 : l'érosion, au fil des paiements", axe_m="Md€ de 2020, cumul",
                montre="L'érosion est acquise fin 2023 dans ce contrefactuel, mais elle se matérialise au rythme des paiements : environ {part27} % d'ici fin {demi}."),
     "en": dict(titre="End-2020 fixed-rate government debt: erosion from the inflation surprise, as payments fall due",
                desc="Cumulative real-value erosion of promised payments, 2021 to {fin}, in billions of 2020 euros: {cum23} by end-2023, "
@@ -377,9 +377,9 @@ TXT = {
                source="AFT (outstanding debt, 31/12/2020), Eurostat (monthly HICP, France), ECB (SPF, January 2021); author's calculation",
                note="Undiscounted sum of the real-value differences in promised payments, €bn in 2020 euros at French consumer prices: not debt written off, "
                     "not a net fiscal gain, not a final loss. Counterfactual: inflation expected in early 2021; after 2023, the price gap is assumed to persist.",
-               axe="€bn in 2020 euros, cumulative", total="total: {t_exact}", demi="about {part27}% by end-{demi}", plage="published forecasts: {a_bas} to {a_haut}",
+               axe="€bn in 2020 euros, cumulative", total="total: {t_exact}", demi="about {part27}% by end-{demi}", plage="depending on the starting forecast: {a_bas} to {a_haut}",
                apres="after 2023: price gap assumed to persist",
-               titre_m="The erosion of legacy debt, as payments fall due", axe_m="€bn in 2020 euros, cumulative",
+               titre_m="End-2020 fixed-rate debt: the erosion, as payments fall due", axe_m="€bn in 2020 euros, cumulative",
                montre="In this counterfactual the erosion is locked in by end-2023, but it materialises as payments fall due: about {part27}% by end-{demi}."),
 }
 
@@ -410,10 +410,14 @@ def fig_calendrier(c, Aff, lang):
         e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="%s"/>' % (X0, Y(gv), X1, Y(gv), GRID, 1.2 if gv == 0 else 0.6))
         e.append('<text x="%d" y="%.1f" font-size="10" fill="%s" text-anchor="end">%d</text>' % (X0 - 6, Y(gv) + 3, MUTED, gv))
     e.append('<text x="%d" y="%d" font-size="10" fill="%s">%s</text>' % (X0, TOP - 8, MUTED, esc(t["axe"])))
-    # bande : plage des prévisions publiées début 2021 (famille A, sans actualisation)
+    # intervalle au POINT FINAL : la plage des prévisions de départ (famille A, sans actualisation) porte sur le total,
+    # pas sur une période ; une bande 2052-2066 se lisait comme une incertitude datée (contre-expertise OPTIMUM-28, 11/10/2026)
     lo, hi = c["A_r0"]
-    e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="%s" opacity="0.35"/>' % (X(2052), Y(hi), X1 - X(2052), Y(lo) - Y(hi), GRIS_CLAIR))
-    e.append('<text x="%.1f" y="%.1f" font-size="10" fill="%s" text-anchor="end">%s</text>' % (X1, Y(hi) - 5, INK2, esc(t["plage"])))
+    xi = X1 + 12
+    e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1.6"/>' % (xi, Y(hi), xi, Y(lo), INK2))
+    for v in (lo, hi):
+        e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1.6"/>' % (xi - 4, Y(v), xi + 4, Y(v), INK2))
+    e.append('<text x="%.1f" y="%.1f" font-size="10" fill="%s" text-anchor="end">%s</text>' % (xi + 4, Y(hi) - 7, INK2, esc(t["plage"])))
     for a in range(2025, a1 + 1, 5):
         e.append('<text x="%.1f" y="%d" font-size="10" fill="%s" text-anchor="middle">%d</text>' % (X(a), BAS + 14, MUTED, a))
     # trait plein jusqu'à fin 2023 (inflation réalisée), pointillé ensuite : au-delà, les paiements sont évalués sous
@@ -448,16 +452,16 @@ TXT_QE = {
                cons_m="État + Banque de France", marche_m="dette de marché seule",
                montre="Fin 2022, si toute la courbe des taux avait augmenté d'un point, la charge de l'ensemble État + Banque de France aurait "
                       "augmenté la première année {qe_r1} fois plus que celle de la seule dette de marché ; l'écart se resserre depuis, sans disparaître."),
-    "en": dict(titre="A lasting one-point rise in rates: how much extra interest in the first year?",
-               titre_m="One more point on rates: extra interest in the first year",
+    "en": dict(titre="A lasting one-percentage-point rise in rates: how much extra interest in the first year?",
+               titre_m="One more percentage point: extra interest in year one",
                desc="Monthly lines, March 2015 to {qe_dern}, in billions of euros: first-year rise in the interest bill, in a scenario, for the government and the "
-                    "Banque de France taken together ({qe_sc1} at end-2022, {qe_sc1_d} in {qe_dern}) and for the government's market "
+                    "Banque de France taken together ({qe_sc1} at end-2022, {qe_sc1_d} in {qe_dern}) and for central-government marketable "
                     "debt alone ({qe_sm1} at end-2022, {qe_sm1_d} in {qe_dern}).",
                source="AFT (monthly bulletins, line by line), Banque de France (Webstat), ECB; Decision (EU) 2016/2248; author's calculation",
                note="Scenario: +1 point across the whole curve, constant stock; Banque de France holdings at the ECB reference rate. "
                     "Not a forecast, not a series of recorded spending, nor the cost of QE.",
-               axe="€bn in the first year", cons="Government + Banque de France (analytical scope)", marche="government market debt alone", jalon="end-2022",
-               cons_m="Government + Banque de France", marche_m="market debt alone",
+               axe="€bn in the first year", cons="Government + Banque de France (analytical scope)", marche="central-government marketable debt alone", jalon="end-2022",
+               cons_m="Government + Banque de France", marche_m="marketable debt alone",
                montre="At end-2022, had the whole yield curve risen by one point, the first-year interest bill of the government and the Banque de France "
                       "together would have risen {qe_r1} times as much as that of market debt alone; the gap has narrowed since, without closing."),
 }
@@ -541,12 +545,20 @@ def fig_calendrier_m(c, Aff, lang, svg_d):
     e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.6" stroke-dasharray="6 4"/>' % (trace([p for p in pts if p[0] >= 2023]), BLEU))
     for a in (2023, c["demi"], a1):
         e.append('<circle cx="%.1f" cy="%.1f" r="4" fill="%s"/>' % (X(a), Y(c["cum"][a]), BLEU))
+    lo, hi = c["A_r0"]
+    xi = X1 - 1
+    e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1.8"/>' % (xi, Y(hi), xi, Y(lo), INK2))
+    for v in (lo, hi):
+        e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1.8"/>' % (xi - 4, Y(v), xi + 3, Y(v), INK2))
     y = BAS + 30
     lignes = [(("fin 2023 : %s" if lang == "fr" else "end-2023: %s") % Aff["cum23"], INK),
               (t["demi"], INK), (t["total"], BLEU)]
+    plage_m = (("prévision de départ : %s à %s" if lang == "fr" else "starting forecast: %s to %s") % (Aff["a_bas"], Aff["a_haut"]))
     for lib, col in lignes:
         y += 20
         e.append('<text x="0" y="%d" font-size="15" font-weight="600" fill="%s">%s</text>' % (y, col, esc(lib)))
+    y += 20
+    e.append('<text x="0" y="%d" font-size="15" fill="%s">%s</text>' % (y, INK2, esc(plage_m)))
     for l in pied_figure.coupe(t["apres"], 38):
         y += 19
         e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, INK2, esc(l)))
@@ -581,9 +593,11 @@ def fig_achats_m(q, Aff, lang, svg_d):
         e.append('<circle cx="%.1f" cy="%.1f" r="4" fill="%s"/>' % (X(mois(r22[0])), Y(r22[k]), col))
     y = BAS + 30
     sep = " : " if lang == "fr" else ": "
-    for lib, col in (((t["jalon"] + sep).capitalize(), INK2),
-                     ("%s%s%s" % (t["cons_m"], sep, Aff["qe_sc1"]), ORANGE), ("%s%s%s" % (t["marche_m"], sep, Aff["qe_sm1"]), INK2),
-                     ("%s%s%s" % (Aff["qe_dern"], sep, "%s / %s" % (Aff["qe_sc1_d"], Aff["qe_sm1_d"])), INK2)):
+    # chaque valeur avec sa courbe, aux deux dates (OPTIMUM-28 : « 7,3 / 3,6 » ne disait pas laquelle était laquelle)
+    lignes = []
+    for jalon, vc, vm in ((t["jalon"], Aff["qe_sc1"], Aff["qe_sm1"]), (Aff["qe_dern"], Aff["qe_sc1_d"], Aff["qe_sm1_d"])):
+        lignes += [((jalon + sep).capitalize(), INK2), ("%s%s%s" % (t["cons_m"], sep, vc), ORANGE), ("%s%s%s" % (t["marche_m"], sep, vm), INK2)]
+    for lib, col in lignes:
         y += 20
         poids = ' font-weight="600"' if col == ORANGE else ""
         e.append('<text x="0" y="%d" font-size="15"%s fill="%s">%s</text>' % (y, poids, col, esc(lib)))

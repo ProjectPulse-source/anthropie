@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 621" role="img" font-variant-numeric="tabular-nums" aria-labelledby="achm-t achm-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
-<title id="achm-t">One more point on rates: extra interest in the first year</title><desc id="achm-d">Monthly lines, March 2015 to June 2026, in billions of euros: first-year rise in the interest bill, in a scenario, for the government and the Banque de France taken together (7.6 at end-2022, 7.3 in June 2026) and for the government's market debt alone (2.75 at end-2022, 3.6 in June 2026).</desc>
-<rect width="300" height="621" fill="#ffffff"/>
-<text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">One more point on rates: extra</text>
-<text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">interest in the first year</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 661" role="img" font-variant-numeric="tabular-nums" aria-labelledby="achm-t achm-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
+<title id="achm-t">One more percentage point: extra interest in year one</title><desc id="achm-d">Monthly lines, March 2015 to June 2026, in billions of euros: first-year rise in the interest bill, in a scenario, for the government and the Banque de France taken together (7.6 at end-2022, 7.3 in June 2026) and for central-government marketable debt alone (2.75 at end-2022, 3.6 in June 2026).</desc>
+<rect width="300" height="661" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">One more percentage point:</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">extra interest in year one</text>
 <text x="0" y="84" font-size="13.5" fill="#96928f">€bn in the first year</text>
 <line x1="26" y1="288.0" x2="296" y2="288.0" stroke="#dcd8d3" stroke-width="1.2"/>
 <text x="22" y="292.0" font-size="13.5" fill="#96928f" text-anchor="end">0</text>
@@ -19,18 +19,20 @@
 <circle cx="212.0" cy="235.8" r="4" fill="#8a8781"/>
 <text x="0" y="338" font-size="15" fill="#55524f">End-2022: </text>
 <text x="0" y="358" font-size="15" font-weight="600" fill="#eb6834">Government + Banque de France: 7.6</text>
-<text x="0" y="378" font-size="15" fill="#55524f">market debt alone: 2.75</text>
-<text x="0" y="398" font-size="15" fill="#55524f">June 2026: 7.3 / 3.6</text>
-<line x1="0" y1="412.0" x2="300" y2="412.0" stroke="#dcd8d3"/>
-<text class="pied-source" x="0" y="433.0" font-size="13.5" fill="#55524f">AFT (monthly bulletins, line by line),</text>
-<text class="pied-source" x="0" y="450.0" font-size="13.5" fill="#55524f">Banque de France (Webstat), ECB;</text>
-<text class="pied-source" x="0" y="467.0" font-size="13.5" fill="#55524f">Decision (EU) 2016/2248; author's</text>
-<text class="pied-source" x="0" y="484.0" font-size="13.5" fill="#55524f">calculation</text>
-<text class="pied-note" x="0" y="505.0" font-size="13.5" fill="#55524f">Scenario: +1 point across the whole</text>
-<text class="pied-note" x="0" y="522.0" font-size="13.5" fill="#55524f">curve, constant stock; Banque de</text>
-<text class="pied-note" x="0" y="539.0" font-size="13.5" fill="#55524f">France holdings at the ECB reference</text>
-<text class="pied-note" x="0" y="556.0" font-size="13.5" fill="#55524f">rate. Not a forecast, not a series of</text>
-<text class="pied-note" x="0" y="573.0" font-size="13.5" fill="#55524f">recorded spending, nor the cost of QE.</text>
-<text class="pied-licence" x="0" y="594.0" font-size="13.5" fill="#96928f">Computed by Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="611.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
+<text x="0" y="378" font-size="15" fill="#55524f">marketable debt alone: 2.75</text>
+<text x="0" y="398" font-size="15" fill="#55524f">June 2026: </text>
+<text x="0" y="418" font-size="15" font-weight="600" fill="#eb6834">Government + Banque de France: 7.3</text>
+<text x="0" y="438" font-size="15" fill="#55524f">marketable debt alone: 3.6</text>
+<line x1="0" y1="452.0" x2="300" y2="452.0" stroke="#dcd8d3"/>
+<text class="pied-source" x="0" y="473.0" font-size="13.5" fill="#55524f">AFT (monthly bulletins, line by line),</text>
+<text class="pied-source" x="0" y="490.0" font-size="13.5" fill="#55524f">Banque de France (Webstat), ECB;</text>
+<text class="pied-source" x="0" y="507.0" font-size="13.5" fill="#55524f">Decision (EU) 2016/2248; author's</text>
+<text class="pied-source" x="0" y="524.0" font-size="13.5" fill="#55524f">calculation</text>
+<text class="pied-note" x="0" y="545.0" font-size="13.5" fill="#55524f">Scenario: +1 point across the whole</text>
+<text class="pied-note" x="0" y="562.0" font-size="13.5" fill="#55524f">curve, constant stock; Banque de</text>
+<text class="pied-note" x="0" y="579.0" font-size="13.5" fill="#55524f">France holdings at the ECB reference</text>
+<text class="pied-note" x="0" y="596.0" font-size="13.5" fill="#55524f">rate. Not a forecast, not a series of</text>
+<text class="pied-note" x="0" y="613.0" font-size="13.5" fill="#55524f">recorded spending, nor the cost of QE.</text>
+<text class="pied-licence" x="0" y="634.0" font-size="13.5" fill="#96928f">Computed by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="651.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
 </svg>

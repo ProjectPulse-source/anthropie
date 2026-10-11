@@ -13,8 +13,10 @@
 <line x1="54" y1="44.0" x2="690" y2="44.0" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="48" y="47.0" font-size="10" fill="#96928f" text-anchor="end">200</text>
 <text x="54" y="36" font-size="10" fill="#96928f">€bn in 2020 euros, cumulative</text>
-<rect x="496.4" y="75.1" width="193.6" height="29.9" fill="#c9c5c0" opacity="0.35"/>
-<text x="690.0" y="70.1" font-size="10" fill="#55524f" text-anchor="end">published forecasts: 145 to 170</text>
+<line x1="702.0" y1="75.1" x2="702.0" y2="104.9" stroke="#55524f" stroke-width="1.6"/>
+<line x1="698.0" y1="104.9" x2="706.0" y2="104.9" stroke="#55524f" stroke-width="1.6"/>
+<line x1="698.0" y1="75.1" x2="706.0" y2="75.1" stroke="#55524f" stroke-width="1.6"/>
+<text x="706.0" y="68.1" font-size="10" fill="#55524f" text-anchor="end">depending on the starting forecast: 145 to 170</text>
 <text x="123.1" y="276" font-size="10" fill="#96928f" text-anchor="middle">2025</text>
 <text x="192.3" y="276" font-size="10" fill="#96928f" text-anchor="middle">2030</text>
 <text x="261.4" y="276" font-size="10" fill="#96928f" text-anchor="middle">2035</text>

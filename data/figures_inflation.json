@@ -29,7 +29,7 @@
   {
    "id": "achats",
    "fichier": "dette-inflation-achats-en",
-   "titre": "A lasting one-point rise in rates: how much extra interest in the first year?",
+   "titre": "A lasting one-percentage-point rise in rates: how much extra interest in the first year?",
    "montre": "At end-2022, had the whole yield curve risen by one point, the first-year interest bill of the government and the Banque de France together would have risen 2.8 times as much as that of market debt alone; the gap has narrowed since, without closing.",
    "source": "AFT (monthly bulletins, line by line), Banque de France (Webstat), ECB; Decision (EU) 2016/2248; author's calculation",
    "precaution": "Scenario: +1 point across the whole curve, constant stock; Banque de France holdings at the ECB reference rate. Not a forecast, not a series of recorded spending, nor the cost of QE."

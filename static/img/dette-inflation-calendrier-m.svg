@@ -1,45 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 700" role="img" font-variant-numeric="tabular-nums" aria-labelledby="inflm-t inflm-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
-<title id="inflm-t">L'érosion de la dette ancienne, au fil des paiements</title><desc id="inflm-d">Courbe cumulée de l'érosion réelle des paiements promis, de 2021 à 2066, en milliards d'euros de 2020 : 30 fin 2023, 83 fin 2027, soit environ 55 %, 150,8 au total ; plage des prévisions publiées début 2021 : 145 à 170. Après 2023, l'écart de prix est supposé persister.</desc>
-<rect width="300" height="700" fill="#ffffff"/>
-<text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">L'érosion de la dette</text>
-<text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">ancienne, au fil des paiements</text>
-<text x="0" y="84" font-size="13.5" fill="#96928f">Md€ de 2020, cumul</text>
-<line x1="34" y1="298.0" x2="296" y2="298.0" stroke="#dcd8d3" stroke-width="1.2"/>
-<text x="30" y="302.0" font-size="13.5" fill="#96928f" text-anchor="end">0</text>
-<line x1="34" y1="248.0" x2="296" y2="248.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="30" y="252.0" font-size="13.5" fill="#96928f" text-anchor="end">50</text>
-<line x1="34" y1="198.0" x2="296" y2="198.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="30" y="202.0" font-size="13.5" fill="#96928f" text-anchor="end">100</text>
-<line x1="34" y1="148.0" x2="296" y2="148.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="30" y="152.0" font-size="13.5" fill="#96928f" text-anchor="end">150</text>
-<line x1="34" y1="98.0" x2="296" y2="98.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="30" y="102.0" font-size="13.5" fill="#96928f" text-anchor="end">200</text>
-<text x="39.7" y="316" font-size="13.5" fill="#96928f" text-anchor="start">2021</text>
-<text x="176.4" y="316" font-size="13.5" fill="#96928f" text-anchor="middle">2045</text>
-<text x="296.0" y="316" font-size="13.5" fill="#96928f" text-anchor="end">2066</text>
-<path d="M34.0,298.0 L39.7,294.3 L45.4,285.1 L51.1,267.8" fill="none" stroke="#184f95" stroke-width="2.6"/>
-<path d="M51.1,267.8 L56.8,255.1 L62.5,239.4 L68.2,224.2 L73.9,215.1 L79.6,206.3 L85.3,195.0 L91.0,187.4 L96.7,182.4 L102.3,178.7 L108.0,178.0 L113.7,174.4 L119.4,171.5 L125.1,168.1 L130.8,167.6 L136.5,165.1 L142.2,162.7 L147.9,161.6 L153.6,158.6 L159.3,158.4 L165.0,158.1 L170.7,157.9 L176.4,156.0 L182.1,155.8 L187.8,155.6 L193.5,153.6 L199.2,153.5 L204.9,151.5 L210.6,151.4 L216.3,150.2 L222.0,150.1 L227.7,150.0 L233.3,148.9 L239.0,148.9 L244.7,148.8 L250.4,148.8 L256.1,148.7 L261.8,147.8 L267.5,147.8 L273.2,147.8 L278.9,147.8 L284.6,147.8 L290.3,147.8 L296.0,147.2" fill="none" stroke="#184f95" stroke-width="2.6" stroke-dasharray="6 4"/>
-<circle cx="51.1" cy="267.8" r="4" fill="#184f95"/>
-<circle cx="73.9" cy="215.1" r="4" fill="#184f95"/>
-<circle cx="296.0" cy="147.2" r="4" fill="#184f95"/>
-<text x="0" y="348" font-size="15" font-weight="600" fill="#26262f">fin 2023 : 30</text>
-<text x="0" y="368" font-size="15" font-weight="600" fill="#26262f">environ 55 % d'ici fin 2027</text>
-<text x="0" y="388" font-size="15" font-weight="600" fill="#184f95">total : 150,8</text>
-<text x="0" y="407" font-size="13.5" fill="#55524f">après 2023 : écart de prix supposé</text>
-<text x="0" y="426" font-size="13.5" fill="#55524f">persistant</text>
-<line x1="0" y1="440.0" x2="300" y2="440.0" stroke="#dcd8d3"/>
-<text class="pied-source" x="0" y="461.0" font-size="13.5" fill="#55524f">AFT (encours au 31/12/2020), Eurostat</text>
-<text class="pied-source" x="0" y="478.0" font-size="13.5" fill="#55524f">(IPCH mensuel, France), BCE (SPF,</text>
-<text class="pied-source" x="0" y="495.0" font-size="13.5" fill="#55524f">janvier 2021) ; calcul de l'auteur</text>
-<text class="pied-note" x="0" y="516.0" font-size="13.5" fill="#55524f">Somme non actualisée des écarts de</text>
-<text class="pied-note" x="0" y="533.0" font-size="13.5" fill="#55524f">valeur réelle des paiements promis, en</text>
-<text class="pied-note" x="0" y="550.0" font-size="13.5" fill="#55524f">Md€ de 2020 aux prix à la</text>
-<text class="pied-note" x="0" y="567.0" font-size="13.5" fill="#55524f">consommation : ni de la dette effacée,</text>
-<text class="pied-note" x="0" y="584.0" font-size="13.5" fill="#55524f">ni un gain budgétaire net, ni une</text>
-<text class="pied-note" x="0" y="601.0" font-size="13.5" fill="#55524f">perte finale. Contrefactuel :</text>
-<text class="pied-note" x="0" y="618.0" font-size="13.5" fill="#55524f">inflation anticipée début 2021 ; après</text>
-<text class="pied-note" x="0" y="635.0" font-size="13.5" fill="#55524f">2023, l'écart de prix est supposé</text>
-<text class="pied-note" x="0" y="652.0" font-size="13.5" fill="#55524f">persister.</text>
-<text class="pied-licence" x="0" y="673.0" font-size="13.5" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 ·</text>
-<text class="pied-licence" x="0" y="690.0" font-size="13.5" fill="#96928f">stephane-lalut.com</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 742" role="img" font-variant-numeric="tabular-nums" aria-labelledby="inflm-t inflm-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
+<title id="inflm-t">Dette à taux fixe de fin 2020 : l'érosion, au fil des paiements</title><desc id="inflm-d">Courbe cumulée de l'érosion réelle des paiements promis, de 2021 à 2066, en milliards d'euros de 2020 : 30 fin 2023, 83 fin 2027, soit environ 55 %, 150,8 au total ; plage des prévisions publiées début 2021 : 145 à 170. Après 2023, l'écart de prix est supposé persister.</desc>
+<rect width="300" height="742" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Dette à taux fixe de fin</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">2020 : l'érosion, au fil des</text>
+<text x="0" y="64" font-size="17" font-weight="600" fill="#26262f">paiements</text>
+<text x="0" y="106" font-size="13.5" fill="#96928f">Md€ de 2020, cumul</text>
+<line x1="34" y1="320.0" x2="296" y2="320.0" stroke="#dcd8d3" stroke-width="1.2"/>
+<text x="30" y="324.0" font-size="13.5" fill="#96928f" text-anchor="end">0</text>
+<line x1="34" y1="270.0" x2="296" y2="270.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="30" y="274.0" font-size="13.5" fill="#96928f" text-anchor="end">50</text>
+<line x1="34" y1="220.0" x2="296" y2="220.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="30" y="224.0" font-size="13.5" fill="#96928f" text-anchor="end">100</text>
+<line x1="34" y1="170.0" x2="296" y2="170.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="30" y="174.0" font-size="13.5" fill="#96928f" text-anchor="end">150</text>
+<line x1="34" y1="120.0" x2="296" y2="120.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="30" y="124.0" font-size="13.5" fill="#96928f" text-anchor="end">200</text>
+<text x="39.7" y="338" font-size="13.5" fill="#96928f" text-anchor="start">2021</text>
+<text x="176.4" y="338" font-size="13.5" fill="#96928f" text-anchor="middle">2045</text>
+<text x="296.0" y="338" font-size="13.5" fill="#96928f" text-anchor="end">2066</text>
+<path d="M34.0,320.0 L39.7,316.3 L45.4,307.1 L51.1,289.8" fill="none" stroke="#184f95" stroke-width="2.6"/>
+<path d="M51.1,289.8 L56.8,277.1 L62.5,261.4 L68.2,246.2 L73.9,237.1 L79.6,228.3 L85.3,217.0 L91.0,209.4 L96.7,204.4 L102.3,200.7 L108.0,200.0 L113.7,196.4 L119.4,193.5 L125.1,190.1 L130.8,189.6 L136.5,187.1 L142.2,184.7 L147.9,183.6 L153.6,180.6 L159.3,180.4 L165.0,180.1 L170.7,179.9 L176.4,178.0 L182.1,177.8 L187.8,177.6 L193.5,175.6 L199.2,175.5 L204.9,173.5 L210.6,173.4 L216.3,172.2 L222.0,172.1 L227.7,172.0 L233.3,170.9 L239.0,170.9 L244.7,170.8 L250.4,170.8 L256.1,170.7 L261.8,169.8 L267.5,169.8 L273.2,169.8 L278.9,169.8 L284.6,169.8 L290.3,169.8 L296.0,169.2" fill="none" stroke="#184f95" stroke-width="2.6" stroke-dasharray="6 4"/>
+<circle cx="51.1" cy="289.8" r="4" fill="#184f95"/>
+<circle cx="73.9" cy="237.1" r="4" fill="#184f95"/>
+<circle cx="296.0" cy="169.2" r="4" fill="#184f95"/>
+<line x1="295.0" y1="148.5" x2="295.0" y2="175.9" stroke="#55524f" stroke-width="1.8"/>
+<line x1="291.0" y1="175.9" x2="298.0" y2="175.9" stroke="#55524f" stroke-width="1.8"/>
+<line x1="291.0" y1="148.5" x2="298.0" y2="148.5" stroke="#55524f" stroke-width="1.8"/>
+<text x="0" y="370" font-size="15" font-weight="600" fill="#26262f">fin 2023 : 30</text>
+<text x="0" y="390" font-size="15" font-weight="600" fill="#26262f">environ 55 % d'ici fin 2027</text>
+<text x="0" y="410" font-size="15" font-weight="600" fill="#184f95">total : 150,8</text>
+<text x="0" y="430" font-size="15" fill="#55524f">prévision de départ : 145 à 170</text>
+<text x="0" y="449" font-size="13.5" fill="#55524f">après 2023 : écart de prix supposé</text>
+<text x="0" y="468" font-size="13.5" fill="#55524f">persistant</text>
+<line x1="0" y1="482.0" x2="300" y2="482.0" stroke="#dcd8d3"/>
+<text class="pied-source" x="0" y="503.0" font-size="13.5" fill="#55524f">AFT (encours au 31/12/2020), Eurostat</text>
+<text class="pied-source" x="0" y="520.0" font-size="13.5" fill="#55524f">(IPCH mensuel, France), BCE (SPF,</text>
+<text class="pied-source" x="0" y="537.0" font-size="13.5" fill="#55524f">janvier 2021) ; calcul de l'auteur</text>
+<text class="pied-note" x="0" y="558.0" font-size="13.5" fill="#55524f">Somme non actualisée des écarts de</text>
+<text class="pied-note" x="0" y="575.0" font-size="13.5" fill="#55524f">valeur réelle des paiements promis, en</text>
+<text class="pied-note" x="0" y="592.0" font-size="13.5" fill="#55524f">Md€ de 2020 aux prix à la</text>
+<text class="pied-note" x="0" y="609.0" font-size="13.5" fill="#55524f">consommation : ni de la dette effacée,</text>
+<text class="pied-note" x="0" y="626.0" font-size="13.5" fill="#55524f">ni un gain budgétaire net, ni une</text>
+<text class="pied-note" x="0" y="643.0" font-size="13.5" fill="#55524f">perte finale. Contrefactuel :</text>
+<text class="pied-note" x="0" y="660.0" font-size="13.5" fill="#55524f">inflation anticipée début 2021 ; après</text>
+<text class="pied-note" x="0" y="677.0" font-size="13.5" fill="#55524f">2023, l'écart de prix est supposé</text>
+<text class="pied-note" x="0" y="694.0" font-size="13.5" fill="#55524f">persister.</text>
+<text class="pied-licence" x="0" y="715.0" font-size="13.5" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 ·</text>
+<text class="pied-licence" x="0" y="732.0" font-size="13.5" fill="#96928f">stephane-lalut.com</text>
 </svg>
