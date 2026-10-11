@@ -17,6 +17,7 @@ faq:
   - question: "What is the link between the rebound effect and anthropy?"
     answer: "In the anthropic framework (Stéphane Lalut), the rebound effect is a case of boomerang effect: the efficiency gain produces a local order — less energy per unit — whose cost comes back as a global disorder — more total consumption. The analysis is developed in AWP-04, “Energy transition or entropic transfer?” (2026, DOI 10.5281/zenodo.19269244)."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "notions"
   rang: 50
   nature: "Notion — definition, origin and sources"

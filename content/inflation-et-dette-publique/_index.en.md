@@ -44,6 +44,7 @@ faq:
   - question: "Who ultimately bore the real-value loss?"
     answer: "We know which sectors held the bonds; we cannot infer from that who ultimately bore the loss. At end-2020, half of France's marketable government debt was held by non-residents and nearly a quarter by the Banque de France. But the direct holder is not necessarily the one who ultimately loses: insurers, banks and funds have nominal liabilities of their own, and bonds change hands. The page gives a mechanical allocation by end-2020 holdings, which does not identify the ultimate incidence."
 ressource:
+  type: ["quantitatif", "explicatif-causal"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "dette"
   rang: 45
   nature: "Author's calculation on official data (AFT, Eurostat, ECB, Banque de France)"

@@ -44,6 +44,8 @@ faq:
   - question: "Une dette élevée provoque-t-elle forcément une crise ?"
     answer: "Ces données ne permettent pas d'estimer le risque de crise. Elles montrent seulement qu'un même niveau de dette peut correspondre à des charges courantes très différentes. Le risque de crise dépend aussi de la croissance, du solde primaire, de la structure des créanciers, de la monnaie, des maturités, des actifs publics et des conditions financières."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["quantitatif"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
+  refonte: "2026-10-11"  # date de la relecture attestée ; absente = page pas encore refondue
   bloc: "dette"
   rang: 30
   nature: "Séries officielles comparées (Eurostat, OCDE, FMI, Banque mondiale) et calculs de l'auteur"

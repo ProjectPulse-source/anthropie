@@ -42,6 +42,7 @@ faq:
   - question: "How many times has article 49.3 been used?"
     answer: "The Government made the passing of a bill an issue of a vote of confidence {ado.E14} times during the 14th legislature, on {ado.Etextes14} bills, {ado.Efois15} during the 15th and {ado.E16} times during the 16th, {ado.Efin16} of them on a Finance Bill or Social Security Financing Bill, counting one use per bill and per reading stage. No motion of no confidence was carried on these uses; during the 17th legislature, one was carried after the use on {ado.censure_date}."
 ressource:  # index /en/resources/ (layouts/ressources/list.html)
+  type: ["juridique-institutionnel"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "promesses"
   rang: 20
   nature: "National Assembly, Senate and Journal officiel data, matched law by law; open data"

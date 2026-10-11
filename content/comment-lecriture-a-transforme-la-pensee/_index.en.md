@@ -17,6 +17,7 @@ faq:
   - question: "Where is this journey developed?"
     answer: "In Stéphane Lalut's L'Odyssée des idées (new 2026 edition, 696 pages; in French): 250 stopovers from the first signs to artificial intelligence, of which the reading path “Les signes” (“The Signs”) follows precisely this history — writing, the alphabet, printing, the press, digital media — and its effects on how we think."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["explicatif-causal"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "guides"
   rang: 10
   nature: "Perspective — history of ideas"

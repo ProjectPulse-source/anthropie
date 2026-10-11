@@ -41,6 +41,7 @@ faq:
   - question: "Is one law in two left unapplied?"
     answer: "The phrase depends on what is counted. A fully applied law, a published implementing measure, a status recorded on a given date: these are not the same objects. The Senate counts orders and measures whose entry into force is deferred, the General Secretariat of the Government does not; the National Assembly's barometer gives a status on a date, not a rate. Before repeating \"one law in two\", one must know which convention the phrase uses, on what date and for which laws."
 ressource:  # index /en/resources/ (layouts/ressources/list.html)
+  type: ["juridique-institutionnel"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "promesses"
   rang: 30
   nature: "Barometer of the application of laws, Senate reports and Government report, matched law by law; open data"

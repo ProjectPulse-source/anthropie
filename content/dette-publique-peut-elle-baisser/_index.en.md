@@ -38,6 +38,8 @@ faq:
   - question: "Does a primary surplus always bring debt down?"
     answer: "It helps reduce the ratio, but the final change also depends on interest rates, growth and other adjustments: in France, the balance reached the stabilising benchmark excluding adjustments in {baisse.suff_hausse} without the ratio falling. In the ten-year windows of the {baisse.eu_pays} current EU members where starting debt exceeded {baisse.seuil_dette}% of GDP, the ratio fell by at least {baisse.forte_baisse} points in {baisse.eu_def_fb} of the {baisse.eu_def_n} windows with a negative average primary balance, in {baisse.eu_mid_fb} of the {baisse.eu_mid_n} with a balance from 0 to under 2%, in {baisse.eu_exc_fb} of the {baisse.eu_exc_n} with a balance of at least 2%; these windows overlap and come from a few countries."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["quantitatif"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
+  refonte: "2026-10-11"  # date de la relecture attestée ; absente = page pas encore refondue
   bloc: "dette"
   rang: 35
   nature: "Official series (Eurostat) decomposed, and the author's calculations"

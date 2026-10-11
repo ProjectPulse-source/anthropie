@@ -15,6 +15,7 @@ faq:
   - question: "Is independent research taken seriously by the academic field?"
     answer: "Structurally, it occupies a margin — and this marginality is no accident, according to the working paper AWP-05: the field maintains its order by relegating to its margins the questions that are too cross-disciplinary, the non-conforming formats, the atypical postures. Open infrastructures reduce the cost of this marginality (publishing, being cited, existing academically) without abolishing its logic."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["usage"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "guides"
   rang: 20
   nature: "Practical guide and analysis"

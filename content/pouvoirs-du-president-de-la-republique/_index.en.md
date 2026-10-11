@@ -39,6 +39,7 @@ faq:
   - question: "Who sets taxes in France: the president, the Government or Parliament?"
     answer: "Article 34 of the Constitution reserves to statute law \"the base, rates and methods of collection of all types of taxes\" (English translation published by the Conseil constitutionnel): statutes are passed by Parliament. Matters outside statute law are matters for regulation (article 37), and the power to make regulations is exercised by the Prime Minister (article 21), subject to the decrees deliberated upon in the Council of Ministers that the president signs (article 13), which are countersigned (article 19). After authorisation by Parliament, the Government may also act by ordinances (article 38), issued in the Council of Ministers and signed by the president (article 13)."
 ressource:  # index /en/resources/ (layouts/ressources/list.html)
+  type: ["juridique-institutionnel"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "promesses"
   rang: 10
   nature: "The text of the French Constitution, quotation by quotation; open data"

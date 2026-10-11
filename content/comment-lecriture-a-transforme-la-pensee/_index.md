@@ -16,6 +16,7 @@ faq:
   - question: "Où cette traversée est-elle développée ?"
     answer: "Dans L'Odyssée des idées de Stéphane Lalut (nouvelle édition 2026, 696 pages) : 250 escales des premiers signes à l'intelligence artificielle, dont le chemin de lecture « Les signes » suit précisément cette histoire — écriture, alphabet, imprimerie, presse, numérique — et ses effets sur la manière de penser."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["explicatif-causal"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "guides"
   rang: 10
   nature: "Éclairage — histoire des idées"

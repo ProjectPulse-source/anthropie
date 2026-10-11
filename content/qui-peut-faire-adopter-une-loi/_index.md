@@ -36,6 +36,7 @@ faq:
   - question: "Combien de fois l'article 49.3 a-t-il été utilisé ?"
     answer: "Le Gouvernement a engagé sa responsabilité sur un texte {ado.E14} fois sous la XIVe législature, sur {ado.Etextes14} projets de loi, {ado.E15} fois sous la XVe et {ado.E16} fois sous la XVIe, dont {ado.Efin16} sur un projet de loi de finances ou de financement de la sécurité sociale, en comptant un engagement par texte et par étape de lecture. Aucune motion de censure n'a été adoptée sur ces engagements ; sous la XVIIe législature, une motion a été adoptée après l'engagement du {ado.censure_date}."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["juridique-institutionnel"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "promesses"
   rang: 20
   nature: "Données de l'Assemblée nationale, du Sénat et du Journal officiel, rapprochées loi par loi ; données ouvertes"

@@ -15,6 +15,7 @@ faq:
   - question: "What is the link between negative commons and anthropy?"
     answer: "Negative commons are the anthropic transfer turned into matter: when a system displaces its disorder (waste, pollution, end-of-life infrastructures) and the receptacle accumulates, what remains is a shared negative inheritance. The working paper AWP-06 (Stéphane Lalut, 2026) ranks digital infrastructures — data centers, equipment to be dismantled — among candidate negative commons."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "notions"
   rang: 40
   nature: "Notion — definition, origin and sources"

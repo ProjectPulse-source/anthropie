@@ -18,6 +18,7 @@ faq:
   - question: "La boucle anthropique est-elle falsifiable ?"
     answer: "C'est l'exigence que se donne AWP-07 : un protocole ex ante impose de nommer le réceptacle et l'ordre de grandeur de la latence avant l'analyse, ce qui discipline à la fois l'affirmation d'un déplacement et la certification d'une internalisation. Un cas externe au corpus, l'amiante, est codé de bout en bout comme test de l'appareil."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "notions"
   rang: 20
   nature: "Notion — définition, origine et sources"

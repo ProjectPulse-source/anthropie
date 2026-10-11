@@ -35,6 +35,7 @@ faq:
   - question: "La France transpose-t-elle les directives européennes à temps ?"
     answer: "Selon le tableau d'affichage du marché unique de la Commission, au {ue.tr_date}, {ue.tr_def} % des directives du marché unique n'étaient pas transposées en France ({ue.tr_retard} directives), comme en moyenne dans l'Union ; l'objectif, fixé à 1 % en 2007, a été ramené à 0,5 % par la Commission. Le déficit de conformité, tiré des procédures de la Commission pour transposition incorrecte, était de {ue.tr_conf} %, contre {ue.tr_conf_ue} % en moyenne."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["juridique-institutionnel"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "promesses"
   rang: 70
   prolongement: true

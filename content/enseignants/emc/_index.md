@@ -17,6 +17,7 @@ lastmod: 2026-10-07
 # constitutionnel d'une loi votée en document 4, référendum d'initiative partagée en prolongement, hors de la chaîne.
 # Neutralité : aucune question ne demande de trancher une politique ni de juger une institution.
 ressource:
+  type: ["usage"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "enseigner"
   discipline: "emc"
   theme: "La loi, du dépôt à l'application"

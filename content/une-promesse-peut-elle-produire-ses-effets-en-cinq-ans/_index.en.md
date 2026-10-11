@@ -38,6 +38,7 @@ faq:
   - question: "How many students enter medical studies in France?"
     answer: "{del.admis_2025} in 2025, for {del.capacites_2025} places, according to the ONDPS; {del.admis_2021_2025} from 2021 to 2025. Places had been divided by {del.rapport_baisse} between 1972 ({del.places_1972}) and {del.an_min} ({del.places_min}), before rising again. The scope of places changed in 2010-2011 (alternative-entry routes (passerelles) and reorientation entries (droit au remords) included), and since 2021 the series falls under the numerus apertus regime."
 ressource:  # index /en/resources/ (layouts/ressources/list.html)
+  type: ["juridique-institutionnel", "quantitatif"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "promesses"
   rang: 40
   nature: "Texts in force and DREES and ONDPS series, checked; open data"

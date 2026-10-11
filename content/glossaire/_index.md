@@ -5,6 +5,7 @@ description: "Glossaire des termes clés du cadre anthropique."
 og_image: "images/og-glossaire.jpg"
 og_image_alt: "Glossaire — Anthropie. On ne crée pas l'ordre, on déplace le désordre."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "notions"
   rang: 10
   nature: "Définitions"

@@ -56,6 +56,8 @@ faq:
   - question: "La France dépense-t-elle peu pour ses lycéens ?"
     answer: "Pas en comparaison internationale : selon l'OCDE, la dépense publique par élève du lycée général dépasse l'agrégat de l'OCDE de {lyc.c3_pct} % en {lyc.c3_an} ; elle le dépasse chaque année depuis {lyc.c3_debut} ; la DEPP, sur l'ensemble du second cycle et toutes sources de financement, trouve {lyc.ocde_depp_pct} % de plus que la moyenne de l'OCDE. C'est une autre question que l'évolution dans le temps : la dépense par lycéen général et technologique, en euros constants, était en {lyc.c1_an} inférieure de {lyc.c1_baisse} % à son niveau de 2010 (DEPP) ; les comptes provisoires l'estiment à {lyc.c1_25} € en {lyc.c1_25_an}."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["quantitatif"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
+  refonte: "2026-10-11"  # date de la relecture attestée ; absente = page pas encore refondue
   bloc: "ecole"
   rang: 10
   nature: "Séries officielles reprises et recalculées (DEPP, OCDE) ; énoncés du débat testés"

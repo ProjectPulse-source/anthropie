@@ -50,6 +50,8 @@ faq:
   - question: "Les manuels de lecture se sont-ils simplifiés ?"
     answer: "Personne ne peut le dire aujourd'hui pour la France : aucune mesure publiée n'a été retrouvée, et il manque la liste des manuels publiés d'où tirer un échantillon. La base Emmanuelle, qui recense les manuels scolaires depuis 1789, ne couvre pas encore le français, et le catalogue de la BnF ne signale pas les manuels comme tels : une recherche par le titre manque toutes les notices des méthodes Daniel et Valérie et Rémi et Colette, des années 1970, et retrouve en partie Taoki, des années 2010. Les textes encore protégés ne peuvent en outre être analysés automatiquement qu'à défaut d'opposition de leurs ayants droit."
 ressource:
+  type: ["quantitatif"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
+  refonte: "2026-10-11"  # date de la relecture attestée ; absente = page pas encore refondue
   bloc: "ecole"
   rang: 30
   nature: "Séries officielles reprises et recalculées (DEPP, OCDE, IEA, Culture, CREDOC) ; protocole écrit avant calcul"

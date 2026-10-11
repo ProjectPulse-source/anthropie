@@ -5,6 +5,7 @@ description: "Key terms of the anthropic framework."
 og_image: "images/og-glossaire.en.jpg"
 og_image_alt: "Glossary — Anthropy. Order here. Debt elsewhere."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "notions"
   rang: 10
   nature: "Definitions"

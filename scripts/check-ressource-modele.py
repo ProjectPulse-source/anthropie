@@ -21,7 +21,18 @@ tires d'un jeu data/<jeu>.json). Brouillons exemptes et comptes. Pour chaque pag
      toute ressource a venir).
 Conservation : pages vues == conformes + en defaut + brouillons exemptes.
 
-Condition de mort : aucune -- regle permanente du modele ; a reexaminer si le modele est abandonne ou refondu.
+CLASSIFICATION (industrialisation des ressources, arbitrage OPTIMUM-26 du 2026-10-11, chantier 5). Perimetre plus large :
+TOUTE page qui declare `ressource:` (avec ou sans donnees, FR et EN), sinon 14 pages echappaient au processus.
+  8. `ressource.type` : liste non vide de TYPES (protocole de la page, CLAUDE.md du site, « Production des ressources ») ;
+  9. `ressource.refonte` (date AAAA-MM-JJ de la relecture attestee) : le NIVEAU de la page, source unique lue par les
+     controles du build (check-rendu-ressources.py) -- absent = page pas encore refondue ;
+ 10. une page anglaise declare le meme type et la meme refonte que sa page francaise ;
+ 11. une page de donnees sans `refonte` doit figurer dans NON_REFONDUES (les dix pages du 2026-10-11) ; une page de
+     la liste devenue refondue doit en sortir. La liste ne peut que diminuer : une page de donnees nouvelle nait
+     refondue. CONDITION DE MORT de la regle 11 : liste vide -> supprimer NON_REFONDUES et son code.
+
+Condition de mort (regles 1 a 10) : aucune -- regles permanentes du modele ; a reexaminer si le modele est abandonne
+ou refondu.
 Sortie console ASCII pur.
 """
 from __future__ import annotations
@@ -33,6 +44,59 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content"
 STATIC = ROOT / "static"
+
+TYPES = {"quantitatif", "juridique-institutionnel", "explicatif-causal", "notion", "usage"}
+# Figee le 2026-10-11 : ne peut que diminuer (regle 11).
+NON_REFONDUES = {
+    "ce-que-la-france-peut-decider-dans-l-union-europeenne", "comment-savoir-si-une-promesse-est-tenue",
+    "dette-publique-collectivites-locales", "dette-publique-generations-futures", "inflation-et-dette-publique",
+    "pouvoirs-du-president-de-la-republique", "qui-peut-faire-adopter-une-loi",
+    "un-president-peut-il-recourir-au-referendum", "une-loi-votee-s-applique-t-elle-tout-de-suite",
+    "une-promesse-peut-elle-produire-ses-effets-en-cinq-ans",
+}
+
+
+def bloc_ressource(fm: str) -> dict | None:
+    """Le bloc `ressource:` lu en YAML (pyyaml : installe par hugo.yml avant check-all)."""
+    import yaml
+    d = yaml.safe_load(fm) or {}
+    r = d.get("ressource")
+    return r if isinstance(r, dict) else None
+
+
+def classification() -> list[tuple[str, str]]:
+    """Regles 8 a 11 sur toute page a `ressource:`. Rend [(page, ecart)]."""
+    fautes, lues, fr = [], {}, {}
+    for p in sorted(CONTENT.rglob("*.md")):
+        texte = p.read_text(encoding="utf-8")
+        fm = front_matter(texte)
+        if not re.search(r"^ressource:", fm, re.M) or re.search(r"^draft:\s*true\s*$", fm, re.M):
+            continue
+        rel = p.relative_to(ROOT).as_posix()
+        r = bloc_ressource(fm) or {}
+        t, ref = r.get("type"), r.get("refonte")
+        if not isinstance(t, list) or not t:
+            fautes.append((rel, "ressource.type absent ou pas une liste (types : %s)" % ", ".join(sorted(TYPES))))
+        else:
+            for x in t:
+                if x not in TYPES:
+                    fautes.append((rel, "ressource.type inconnu : %r" % x))
+        if ref is not None and not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(ref)):
+            fautes.append((rel, "ressource.refonte n'est pas une date AAAA-MM-JJ : %r" % ref))
+        cle = (p.parent.as_posix(), p.name.replace(".en.md", ".md"))
+        val = (t, None if ref is None else str(ref))
+        (lues if p.name.endswith(".en.md") else fr)[cle] = (rel, val)
+        if not p.name.endswith(".en.md") and re.search(r"^donnees:", fm, re.M):
+            nom = p.parent.relative_to(CONTENT).as_posix()
+            if ref is None and nom not in NON_REFONDUES:
+                fautes.append((rel, "page de donnees sans ressource.refonte, absente de NON_REFONDUES (liste figee "
+                                    "le 2026-10-11) : une page de donnees nouvelle nait refondue"))
+            if ref is not None and nom in NON_REFONDUES:
+                fautes.append((rel, "page refondue encore dans NON_REFONDUES : la retirer de la liste"))
+    for cle, (rel, val) in lues.items():
+        if cle in fr and fr[cle][1] != val:
+            fautes.append((rel, "type ou refonte differents de la page francaise %s : %r != %r" % (fr[cle][0], val, fr[cle][1])))
+    return fautes
 
 
 def front_matter(texte: str) -> str:
@@ -70,6 +134,8 @@ def main() -> int:
                 f.append("og_image %s : nom sans 'og-', vignette d'index non derivable" % og.group(1))
             elif not (STATIC / vig).is_file():
                 f.append("vignette d'index static/%s absente (le generateur de la carte doit la produire)" % vig)
+        if not re.search(r"^ressource:", fm, re.M):
+            f.append("page de donnees sans bloc ressource: (type et niveau non declares : regles 8 a 11)")
         if 'class="resultat-phrase"' not in corps:
             f.append("pas de 'resultat en une phrase' (div.resultat-phrase)")
         if "{{< reutiliser " not in corps:
@@ -91,7 +157,15 @@ def main() -> int:
     for rel, f in fautes:
         for x in f:
             print("  ECART  %s : %s" % (rel, x))
-    if fautes:
+    classe = classification()
+    for rel, x in classe:
+        print("  ECART  %s : %s" % (rel, x))
+    if classe:
+        print("Classification des ressources : %d ecart(s) (regles 8 a 11 de l'en-tete)." % len(classe))
+    else:
+        print("Classification des ressources : type et niveau declares partout ; %d page(s) de donnees non refondue(s) "
+              "(liste figee)." % len(NON_REFONDUES))
+    if fautes or classe:
         print("Modele des ressources : %d page(s) en ecart sur %d (brouillons exemptes : %d)." % (len(fautes), vues, brouillons))
         print("  -> voir CLAUDE.md du site, section Modele d'une ressource de donnees.")
         return 1

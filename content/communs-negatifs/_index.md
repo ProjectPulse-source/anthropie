@@ -14,6 +14,7 @@ faq:
   - question: "Quel est le lien entre communs négatifs et anthropie ?"
     answer: "Les communs négatifs sont le transfert anthropique devenu matière : quand un système déplace son désordre (déchets, pollutions, infrastructures en fin de vie) et que le réceptacle s'accumule, ce qui reste est un héritage négatif partagé. Le working paper AWP-06 (Stéphane Lalut, 2026) range les infrastructures numériques — data centers, équipements à démanteler — parmi les communs négatifs candidats."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "notions"
   rang: 40
   nature: "Notion — définition, origine et sources"

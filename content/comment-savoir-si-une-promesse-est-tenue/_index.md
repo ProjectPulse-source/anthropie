@@ -32,6 +32,7 @@ faq:
   - question: "Comment juger une promesse de baisse du chômage ?"
     answer: "En fixant d'avance l'indicateur (chômage au sens du BIT ou inscrits en catégorie A), le point de comparaison (la date et la valeur de départ) et en vérifiant que la règle de mesure n'a pas changé entre les deux dates ; puis en se demandant quelle part de l'évolution peut honnêtement être attribuée aux décisions de celui qui a promis. Une évolution observée ne suffit pas à établir sa cause."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["juridique-institutionnel", "quantitatif"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "promesses"
   rang: 50
   nature: "Estimation Insee et séries Dares, vérifiées et restituées ; données ouvertes"

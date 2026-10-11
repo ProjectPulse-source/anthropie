@@ -43,6 +43,8 @@ faq:
   - question: "Is a primary deficit a sign of too much spending?"
     answer: "Not necessarily: it is a gap between spending and revenue excluding interest, which can come from rising spending, falling revenue, or a recession that does both at once. These data measure the gap; they do not say which of its two terms should be corrected."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["quantitatif", "explicatif-causal"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
+  refonte: "2026-10-11"  # date de la relecture attestée ; absente = page pas encore refondue
   bloc: "dette"
   rang: 5
   nature: "Official series (Eurostat) decomposed, and the author's calculations"

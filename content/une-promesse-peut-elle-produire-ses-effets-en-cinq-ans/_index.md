@@ -33,6 +33,7 @@ faq:
   - question: "Combien d'étudiants entrent en études de médecine ?"
     answer: "{del.admis_2025} en 2025, pour {del.capacites_2025} places, selon l'ONDPS ; {del.admis_2021_2025} de 2021 à 2025. Les places avaient été divisées par {del.rapport_baisse} entre 1972 ({del.places_1972}) et {del.an_min} ({del.places_min}), avant de remonter. Le champ des places a changé en 2010-2011 (passerelles et droits au remords inclus), et la série relève depuis 2021 du régime du numerus apertus."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["juridique-institutionnel", "quantitatif"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "promesses"
   rang: 40
   nature: "Textes en vigueur et séries DREES et ONDPS, vérifiés ; données ouvertes"

@@ -37,6 +37,7 @@ faq:
   - question: "How should a promise to reduce unemployment be judged?"
     answer: "By setting in advance the indicator (ILO unemployment or category A registrants) and the point of comparison (the starting date and value), and by checking that the measurement rule has not changed between the two dates; then by asking what share of the change can honestly be attributed to the decisions of whoever made the promise. An observed change is not enough to establish its cause."
 ressource:  # index /en/resources/ (layouts/ressources/list.html)
+  type: ["juridique-institutionnel", "quantitatif"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "promesses"
   rang: 50
   nature: "Insee estimate and Dares series, checked and restated; open data"

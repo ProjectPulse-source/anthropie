@@ -46,6 +46,7 @@ faq:
   - question: "What is the link with the anthropic framework?"
     answer: "Public debt is a textbook case of temporal transfer: a present cost can be shifted onto future payers who took no part in the decision. The framework adds a social hypothesis: within each generation, the adjustment may weigh more heavily on the least mobile groups, fiscally or geographically — a hypothesis to be tested reform by reform. The analysis is formalised in AWP-03 (DOI 10.5281/zenodo.19434094), tested against the accounts in AWP-09 (DOI 10.5281/zenodo.23145963), and developed in the book Dette Publique : Qui paie vraiment ? (2025, in French)."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["quantitatif", "explicatif-causal"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "dette"
   rang: 40
   nature: "Official series (Eurostat, ECB, European Commission, COR) and the author's calculations"

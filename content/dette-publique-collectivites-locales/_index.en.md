@@ -45,6 +45,7 @@ faq:
   - question: "Are local authorities in other European countries more indebted?"
     answer: "On a comparable statistical scope, subnational debt reaches {coll.es_dette_fin}% of GDP in Spain and {coll.de_dette_fin}% in Germany, which have a tier of state governments, against {coll.fr_dette_fin}% in France and {coll.it_dette_fin}% in Italy. But in Spain, {coll.es_part_etat_pct}% of that debt is held by central government itself: carrying a debt and financing it are two different things."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["quantitatif"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "dette"
   rang: 30
   nature: "Official series (Eurostat, OFGL) and the author's calculations"

@@ -14,6 +14,7 @@ lastmod: 2026-10-02
 # `donnees:`. Français seulement. Aucune question ne demande de trancher une politique.
 # L'ancre `#droit-a-l-erreur`, publiée quelques heures sur /enseignants/, y reste portée par la barre et renvoie ici.
 ressource:
+  type: ["usage"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "enseigner"
   discipline: "ses"   # une carte par discipline dans /ressources/ (03/10/2026)
   theme: "École et parcours"

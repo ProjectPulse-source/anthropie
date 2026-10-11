@@ -46,6 +46,7 @@ faq:
   - question: "Quel est le lien avec le livre Dette publique : qui paie vraiment ?"
     answer: "L'inflation est l'un des payeurs possibles de la dette : l'épargnant, par la perte de pouvoir d'achat de ses titres. Cette page mesure ce que l'épisode de 2021-2023 a retiré par ce canal sur la dette de l'État, et ce qu'on ne peut pas en conclure. Le livre examine les autres payeurs et les choix qui les désignent."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["quantitatif", "explicatif-causal"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "dette"
   rang: 45
   nature: "Calcul de l'auteur sur données officielles (AFT, Eurostat, BCE, Banque de France)"

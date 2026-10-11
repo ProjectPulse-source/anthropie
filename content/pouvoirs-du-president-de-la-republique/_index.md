@@ -33,6 +33,7 @@ faq:
   - question: "Qui fixe les impôts : le président, le Gouvernement ou le Parlement ?"
     answer: "L'article 34 de la Constitution réserve à la loi « l'assiette, le taux et les modalités de recouvrement des impositions de toutes natures » : la loi est votée par le Parlement. Les matières qui ne relèvent pas de la loi ont un caractère réglementaire (article 37), et le pouvoir réglementaire est exercé par le Premier ministre (article 21), sous réserve des décrets délibérés en Conseil des ministres que signe le président (article 13), soumis au contreseing (article 19). Après habilitation du Parlement, le Gouvernement peut aussi agir par ordonnances (article 38), délibérées en Conseil des ministres et signées par le président (article 13)."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["juridique-institutionnel"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "promesses"
   rang: 10
   nature: "Le texte de la Constitution, citation par citation ; données ouvertes"

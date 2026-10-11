@@ -46,6 +46,7 @@ faq:
   - question: "Les collectivités d'autres pays européens sont-elles plus endettées ?"
     answer: "À périmètre statistique comparable, la dette territoriale atteint {coll.es_dette_fin} % du PIB en Espagne et {coll.de_dette_fin} % en Allemagne, qui ont un échelon d'États fédérés, contre {coll.fr_dette_fin} % en France et {coll.it_dette_fin} % en Italie. Mais en Espagne, {coll.es_part_etat_pct} % de cette dette est détenue par l'État central lui-même : porter une dette et la financer sont deux choses distinctes."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["quantitatif"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "dette"
   rang: 30
   nature: "Séries officielles (Eurostat, OFGL) et calculs de l'auteur"

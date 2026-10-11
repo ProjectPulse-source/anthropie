@@ -19,6 +19,7 @@ faq:
   - question: "Is the anthropic loop falsifiable?"
     answer: "That is the requirement AWP-07 sets for itself: an ex ante protocol requires naming the receptacle and the order of magnitude of the latency before the analysis, which disciplines both the claim that a displacement exists and the certification that a cost has been internalised. One case external to the corpus — asbestos — is coded end to end as a test of the apparatus."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "notions"
   rang: 20
   nature: "Concept — definition, origins and sources"

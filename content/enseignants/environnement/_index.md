@@ -15,6 +15,7 @@ lastmod: 2026-10-02
 # délocalisation, ni l'effet d'une politique. La page ne teste pas la thèse d'ANTHROPIE et l'encart le dit.
 # SÉRIE RÉVISÉE à chaque édition : tout chiffre vient du fichier de l'édition en cours, jamais d'un résumé.
 ressource:
+  type: ["usage"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "enseigner"
   discipline: "ses"   # une carte par discipline dans /ressources/ (03/10/2026)
   theme: "Environnement"

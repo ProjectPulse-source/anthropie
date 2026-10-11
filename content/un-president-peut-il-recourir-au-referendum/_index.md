@@ -33,6 +33,7 @@ faq:
   - question: "Le référendum d'initiative partagée a-t-il déjà été utilisé ?"
     answer: "De {ref.rip_depuis} au {ref.arrete}, le Conseil constitutionnel a été saisi de {ref.S} propositions de loi au titre de l'article 11 ; {ref.C} a été jugée conforme, celle sur les aérodromes de Paris, et elle a recueilli {ref.soutiens} soutiens, pour {ref.seuil} requis (un dixième des électeurs inscrits). Aucune n'a été soumise au référendum."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["juridique-institutionnel"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "promesses"
   rang: 60
   prolongement: true

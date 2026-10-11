@@ -38,6 +38,8 @@ faq:
   - question: "Should public debt be repaid?"
     answer: "Each security that matures is repaid, but the debt as a whole is refinanced: the government issues new securities to repay the old ones, and the stock evolves with the deficit. Repaying the whole stock is therefore a largely theoretical hypothesis. The operative question is what happens while the debt is continuously rolled over: who bears the interest, which budgets carry the adjustments, who inherits the obligations and what they financed. Refinancing renews a maturity on the terms of the day: it can lighten or increase the burden, and on its own it does not identify who will bear it."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["quantitatif"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
+  refonte: "2026-10-11"  # date de la relecture attestée ; absente = page pas encore refondue
   bloc: "dette"
   rang: 20
   nature: "Analysis based on public data"

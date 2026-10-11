@@ -43,6 +43,8 @@ faq:
   - question: "Un excédent primaire fait-il toujours baisser la dette ?"
     answer: "Il contribue à réduire le ratio, mais la variation finale dépend aussi des taux, de la croissance et des autres ajustements : en France, le solde a atteint le repère de stabilisation hors ajustements en {baisse.suff_hausse} sans que le ratio baisse. Dans les fenêtres de dix ans des {baisse.eu_pays} pays aujourd'hui membres de l'Union où la dette de départ dépassait {baisse.seuil_dette} % du PIB, le ratio a baissé d'au moins {baisse.forte_baisse} points dans {baisse.eu_mid_fb} des {baisse.eu_mid_n} fenêtres à solde primaire moyen de 0 à moins de 2 % et dans {baisse.eu_exc_fb} des {baisse.eu_exc_n} à solde d'au moins 2 %, mais dans aucune des {baisse.eu_def_n} à solde primaire moyen négatif ; ces fenêtres se recouvrent et viennent de quelques pays."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["quantitatif"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
+  refonte: "2026-10-11"  # date de la relecture attestée ; absente = page pas encore refondue
   bloc: "dette"
   rang: 35
   nature: "Séries officielles (Eurostat) décomposées et calculs de l'auteur"

@@ -40,6 +40,7 @@ faq:
   - question: "Does France transpose EU directives on time?"
     answer: "According to the European Commission's Single Market Scoreboard, as at {ue.tr_date}, {ue.tr_def}% of Single Market directives had not been transposed in France ({ue.tr_retard} directives), the same as the EU average; the target, set at 1% in 2007, was lowered to 0.5% by the Commission. The conformity deficit, based on the Commission's proceedings for incorrect transposition, was {ue.tr_conf}%, against {ue.tr_conf_ue}% on average."
 ressource:  # index /en/resources/ (layouts/ressources/list.html)
+  type: ["juridique-institutionnel"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "promesses"
   rang: 70
   prolongement: true

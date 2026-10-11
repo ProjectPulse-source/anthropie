@@ -38,6 +38,7 @@ faq:
   - question: "Has the shared-initiative referendum ever been used?"
     answer: "From {ref.rip_depuis} to {ref.arrete}, the Conseil constitutionnel received {ref.S} bills under article 11; {ref.C} was found to meet the statutory conditions, the one on the Paris airports, and it collected {ref.soutiens} signatures of support, against {ref.seuil} required (one tenth of registered voters). None was put to a referendum."
 ressource:  # index /en/resources/ (layouts/ressources/list.html)
+  type: ["juridique-institutionnel"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "promesses"
   rang: 60
   prolongement: true

@@ -12,6 +12,7 @@ description: "Le compagnon documentaire de La Société du premier coup (Stépha
 # HORS de la nasse dans `scripts/check-geo-coverage.py` — elle n'est pas une maille,
 # elle est un compagnon. Voir docs/ARCHITECTURE_GEO_PREMIER_COUP.md.
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["usage"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "corpus"
   rang: 20
   intitule: "Inégalités et possibilités de recommencer — sources et répertoire"

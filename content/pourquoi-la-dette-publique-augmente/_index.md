@@ -44,6 +44,8 @@ faq:
   - question: "Un déficit primaire, est-ce trop de dépenses ?"
     answer: "Pas nécessairement : c'est un écart entre dépenses et recettes hors intérêts, qui peut venir de dépenses en hausse, de recettes en baisse, ou d'une récession qui fait les deux à la fois. Ces données mesurent l'écart ; elles ne disent pas lequel de ses deux termes il faudrait corriger."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["quantitatif", "explicatif-causal"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
+  refonte: "2026-10-11"  # date de la relecture attestée ; absente = page pas encore refondue
   bloc: "dette"
   rang: 5
   nature: "Séries officielles (Eurostat) décomposées et calculs de l'auteur"

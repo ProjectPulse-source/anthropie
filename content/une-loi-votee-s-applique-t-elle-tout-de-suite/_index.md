@@ -35,6 +35,7 @@ faq:
   - question: "Une loi sur deux n'est-elle pas appliquée ?"
     answer: "La formule dépend de ce que l'on compte. Une loi entièrement appliquée, une mesure d'application publiée, un état relevé à une date : ce ne sont pas les mêmes objets. Le Sénat compte les arrêtés et les mesures dont l'entrée en vigueur est différée, le Secrétariat général du Gouvernement non ; le baromètre de l'Assemblée donne un état à une date, pas un taux. Avant de reprendre « une loi sur deux », il faut savoir quelle convention la formule retient, à quelle date et sur quelles lois."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["juridique-institutionnel"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "promesses"
   rang: 30
   nature: "Baromètre de l'application des lois, rapports du Sénat et bilan du SGG, rapprochés loi par loi ; données ouvertes"

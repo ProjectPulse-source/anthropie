@@ -23,6 +23,7 @@ faq:
   - question: "Where can I read the full Register of Offloaded Costs?"
     answer: "On this page: the English version is freely browsable, milestone by milestone and anchored entry by entry. The book ANTHROPY – A Big History of Civilization's Hidden Costs (2026, 632 pages) presents the Register as its documentary epilogue, alongside the diagrams, the analytical afterword, and the seven ages developed chapter by chapter. The French version is browsable at /registre-des-couts-deportes/."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["usage", "notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "corpus"
   rang: 10
   nature: "Documented corpus — annotated chronology"

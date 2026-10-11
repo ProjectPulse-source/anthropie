@@ -47,6 +47,7 @@ faq:
   - question: "Quel est le lien avec le cadre anthropique ?"
     answer: "La dette publique est un cas type de transfert temporel : un coût présent peut être reporté vers des payeurs futurs qui n'ont pas pris part à la décision. Le cadre y ajoute une hypothèse sociale : à l'intérieur de chaque génération, l'ajustement peut peser davantage sur les groupes les moins mobiles, fiscalement ou géographiquement — une hypothèse qui se teste réforme par réforme. L'analyse est formalisée dans AWP-03 (DOI 10.5281/zenodo.19268769), mise à l'épreuve des comptes dans AWP-09 (DOI 10.5281/zenodo.23143030), et déployée dans le livre Dette Publique : Qui paie vraiment ? (2025)."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["quantitatif", "explicatif-causal"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "dette"
   rang: 40
   nature: "Séries officielles (Eurostat, BCE, Commission européenne, COR) et calculs de l'auteur"

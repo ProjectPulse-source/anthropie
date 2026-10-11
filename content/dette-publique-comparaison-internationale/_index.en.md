@@ -42,6 +42,8 @@ faq:
   - question: "Does high debt necessarily lead to a crisis?"
     answer: "These data do not make it possible to estimate the risk of a crisis. They show only that the same level of debt can correspond to very different current burdens. The risk of a crisis also depends on growth, the primary balance, the structure of creditors, the currency, maturities, public assets and financial conditions."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["quantitatif"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
+  refonte: "2026-10-11"  # date de la relecture attestée ; absente = page pas encore refondue
   bloc: "dette"
   rang: 30
   nature: "Official series compared (Eurostat, OECD, IMF, World Bank) and the author's calculations"

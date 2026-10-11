@@ -20,6 +20,7 @@ aliases: ["/enseignants/ses/"]
 # Invariant de neutralité : chaque question fait constater, calculer, comparer ou expliquer un mécanisme ;
 # aucune ne demande de trancher une politique.
 ressource:
+  type: ["usage"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "enseigner"
   discipline: "ses"   # une carte par discipline dans /ressources/ (03/10/2026)
   theme: "Dette publique"

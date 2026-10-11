@@ -16,6 +16,7 @@ faq:
   - question: "Quel est le lien entre l'effet rebond et l'anthropie ?"
     answer: "Dans le cadre anthropique (Stéphane Lalut), l'effet rebond est un cas d'effet boomerang : le gain d'efficacité produit un ordre local — moins d'énergie par unité — dont le coût revient sous forme d'un désordre global — plus de consommation totale. L'analyse est développée dans AWP-04, « Transition énergétique ou transfert entropique ? » (2026, DOI 10.5281/zenodo.19269244)."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "notions"
   rang: 50
   nature: "Notion — définition, origine et sources"

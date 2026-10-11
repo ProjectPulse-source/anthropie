@@ -15,6 +15,7 @@ faq:
   - question: "Where is the concept formalised?"
     answer: "In AWP-06, “Digital Infrastructures and Technological Debt” (Stéphane Lalut, 2026, DOI 10.5281/zenodo.20025421), sixth of the Anthropy Working Papers, and in the book ANTHROPY – A Big History of Civilization's Hidden Costs, which deploys the general framework."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "notions"
   rang: 60
   nature: "Notion — definition, origin and sources"

@@ -14,6 +14,7 @@ faq:
   - question: "La recherche indépendante est-elle prise au sérieux par le champ académique ?"
     answer: "Structurellement, elle occupe une marge — et cette marginalité n'est pas un accident, analyse le working paper AWP-05 : le champ maintient son ordre en reléguant vers ses marges les questions trop transversales, les formats non conformes, les postures atypiques. Les infrastructures ouvertes réduisent le coût de cette marginalité (publier, être cité, exister académiquement) sans en abolir la logique."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["usage"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "guides"
   rang: 20
   nature: "Guide pratique et analyse"

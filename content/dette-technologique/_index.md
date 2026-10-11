@@ -14,6 +14,7 @@ faq:
   - question: "Où le concept est-il formalisé ?"
     answer: "Dans AWP-06, « Infrastructures numériques et dette technologique » (Stéphane Lalut, 2026, DOI 10.5281/zenodo.20025421), sixième des Anthropie Working Papers, et dans le livre ANTHROPIE — Ordre ici. Dette ailleurs (2025), qui déploie le cadre général."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  type: ["notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "notions"
   rang: 60
   nature: "Notion — définition, origine et sources"
