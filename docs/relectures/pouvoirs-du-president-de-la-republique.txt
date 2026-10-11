@@ -1,0 +1,964 @@
+# relu le 2026-10-11 ; texte servi de /pouvoirs-du-president-de-la-republique/, build de 57dc84f + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+ENCette page existe aussi en anglais — English version
+Que peut décider le président de la République seul ?
+Le président nomme le Premier ministre.
+Peut-il le révoquer ?
+Non : la Constitution prévoit que ses fonctions prennent fin sur présentation de la démission du Gouvernement.
+En règle générale, un acte du président porte aussi la signature d'un ministre : c'est le contreseing.
+L'article 19 en dispense les actes de huit dispositions ; même là, le texte fait le plus souvent intervenir quelqu'un d'autre, avant ou après le président.
+Ses pouvoirs les plus visibles (armées, grâce, traités, nominations) ne sont pas dans cette liste : ils sont contresignés.
+Promesses présidentielles
+↓ Graphiques, données et citations à réutiliserRéutiliser cette page
+« Le Président de la République nomme le Premier ministre.
+Il met fin à ses fonctions sur la présentation par celui-ci de la démission du Gouvernement. » (article 8).
+La nomination tient à sa seule signature ; la fin des fonctions suppose un acte du Premier ministre, la démission qu’il présente.
+Pour mesurer l’écart entre l’image d’un président qui décide seul et ce que dit le texte, la page part de la seule liste que la Constitution établit : les actes que le président signe sans contreseing, c’est-à-dire sans la signature d’un ministre à côté de la sienne.
+Elle les lit un par un, et ne note un élément que s’il est écrit, mot pour mot, dans l’article.
+Statut : lecture documentaire de la Constitution, sans certification juridique.
+Chaque citation est vérifiée mot pour mot ; son classement est une lecture, justifiée case par case plus bas.
+Le tableau : une ligne par acte, regroupées par disposition de l’article 19 ; une colonne par élément.
+Case pleine : l’article lui-même contient une citation exacte de l’élément ; case vide : cet article ne le contient pas, ce qui ne dit rien des autres articles ni de la pratique.
+Autre acteur pour la suite : institution, autorité ou corps électoral auquel l’article attribue une intervention distincte, postérieure à l’acte présidentiel, y compris facultative ; les simples modalités matérielles d’exécution de l’acte ne sont pas comptées.
+Télécharger · Citer · Données
+Le résultat en une phrase.
+Sur les douze actes que l’article 19 dispense de contreseing, neuf font intervenir quelqu’un d’autre, avant ou après le président, dans le texte même de leur article.
+Ce compte lit le texte de chaque article, pas la pratique ni le reste de la Constitution.
+Intervenir ne veut pas toujours dire empêcher : avant de dissoudre, le président doit consulter le Premier ministre, pas obtenir son accord.
+Restent trois actes : nommer le Premier ministre, adresser un message au Parlement et désigner le président du Conseil constitutionnel.
+Pour eux, l’article ne prévoit ni proposition, consultation ou acte d’un autre acteur avant, ni intervention d’un autre acteur ensuite.
+Que signifie « décider seul » pour un président ?
+L’article 19 pose la règle : « Les actes du Président de la République autres que ceux prévus aux articles 8 (1er alinéa), 11, 12, 16, 18, 54, 56 et 61 sont contresignés par le Premier ministre et, le cas échéant, par les ministres responsables. » Les exceptions sont donc les actes qu’aucun ministre n’a à signer.
+C’est, dans le texte, ce qui se rapproche le plus de « décider seul », sans se confondre avec lui.
+Sans contreseing ne veut pas dire sans condition.
+Le texte peut exiger, avant l’acte, une proposition (pour le référendum), une consultation (pour la dissolution) ou l’acte d’un autre acteur (la démission que présente le Premier ministre).
+Il peut faire intervenir ensuite les électeurs, le Parlement ou le Conseil constitutionnel, parfois de façon seulement possible : une déclaration devant le Congrès peut être suivie d’un débat, sans vote.
+D’autres autorités peuvent détenir un pouvoir de même nature.
+Le texte peut enfin limiter l’acte dans le temps, dans son objet ou dans son effet.
+Ce sont les quatre colonnes du tableau ci-dessus ; un même acte peut en remplir plusieurs.
+Trois niveaux de lecture.
+Le tableau et les comptes ne lisent que le texte de l’article visé par l’article 19.
+Les fiches ci-dessous ajoutent ce que disent d’autres articles, des lois organiques et deux décisions de justice.
+La section sur la politique de la Nation traite enfin de la pratique.
+Ces deux derniers niveaux changent la portée d’un acte, jamais le contenu d’une case.
+Un exemple.
+Pour nommer le Premier ministre, l’article 8 ne fait intervenir personne d’autre.
+Mais le Gouvernement nommé relève de l’article 20 : « Il est responsable devant le Parlement dans les conditions et suivant les procédures prévues aux articles 49 et 50 ».
+Si l’Assemblée nationale le censure, il doit remettre sa démission (article 50).
+Quels actes le président signe-t-il sans contreseing ?
+Une fiche par disposition, soit huit : la réponse courte d’abord, puis, en dépliant, le détail citation par citation (ce que le texte exige avant l’acte, qui intervient ensuite, ce que l’acte produit, ce que d’autres textes ajoutent).
+Elles se lisent avec la fonction que l’article 5 assigne au président : veiller au respect de la Constitution et assurer, « par son arbitrage, le fonctionnement régulier des pouvoirs publics ainsi que la continuité de l'Etat ».
+Le président peut-il nommer et renvoyer le Premier ministre ?
+Nommer, oui : sa seule signature suffit.
+Renvoyer, non : l'article 8 ne prévoit que la démission que le Premier ministre présente.
+L'article 50 l'oblige à la présenter quand l'Assemblée nationale vote la censure ; ce n'est pas une révocation par le président.
+Le détail, citation par citation
+Base
+art.
+8, art.
+19, art.
+20, art.
+50
+Qui décide
+Le président, pour deux actes de l'article 8 : « Le Président de la République nomme le Premier ministre.
+Il met fin à ses fonctions sur la présentation par celui-ci de la démission du Gouvernement. »
+Exigé avant l'acte
+Pour nommer, l'article 8 n'exige ni proposition ni consultation.
+Pour mettre fin aux fonctions, il exige un acte du Premier ministre : la présentation de la démission du Gouvernement.
+Qui intervient ensuite
+L'article 8 ne fait intervenir aucun autre acteur après la nomination.
+Le Gouvernement nommé est responsable devant le Parlement « dans les conditions et suivant les procédures prévues aux articles 49 et 50 » (art.
+20).
+Ce que l'acte produit
+La nomination prend effet par sa seule signature.
+Pour la fin des fonctions, la présentation de la démission est la seule voie que l'article 8 décrit.
+Au-delà de cet article
+L'article 50 décrit le cas où cette démission devient obligatoire : lorsque l'Assemblée nationale adopte une motion de censure ou désapprouve le programme ou une déclaration de politique générale, « le Premier ministre doit remettre au Président de la République la démission du Gouvernement ».
+L'obligation pèse sur le Premier ministre et naît d'un vote de l'Assemblée : ce n'est pas une révocation par le président.
+Le président peut-il organiser un référendum seul ?
+Pas de sa seule initiative : il faut une proposition du Gouvernement ou des deux assemblées, ou bien une initiative d'un cinquième des parlementaires soutenue par un dixième des électeurs inscrits.
+Ce sont ensuite les électeurs qui tranchent, et seulement sur les sujets que l'article énumère.
+Le détail, citation par citation
+Base
+art.
+11, art.
+19, art.
+60, art.
+61, art.
+7, ord.
+58-1067, art.
+46
+Qui décide
+Le président soumet le texte au référendum ; les électeurs l'adoptent ou le rejettent.
+Exigé avant l'acte
+Deux voies.
+Pour un projet de loi, une proposition du Gouvernement « pendant la durée des sessions » ou une proposition conjointe des deux assemblées, publiées au Journal officiel.
+Pour une proposition de loi d'initiative partagée, l'initiative « d'un cinquième des membres du Parlement, soutenue par un dixième des électeurs inscrits sur les listes électorales », le contrôle du Conseil constitutionnel, puis l'absence d'examen par les deux assemblées dans le délai de la loi organique.
+Qui intervient ensuite
+Lorsque le référendum est organisé sur proposition du Gouvernement, celui-ci fait devant chaque assemblée « une déclaration qui est suivie d'un débat ».
+Puis les électeurs votent.
+Si le texte est adopté, le président « promulgue la loi dans les quinze jours qui suivent la proclamation des résultats de la consultation » : la promulgation est son acte, enfermé dans un délai.
+Ce que l'acte produit
+L'objet est limité : organisation des pouvoirs publics, réformes relatives à la politique économique, sociale ou environnementale et aux services publics qui y concourent, autorisation de ratifier certains traités.
+Dans l'initiative partagée, le texte l'oblige : si les deux assemblées n'ont pas examiné la proposition dans le délai, il « la soumet » au référendum.
+Au-delà de cet article
+Le Conseil constitutionnel « veille à la régularité des opérations de référendum » et en proclame les résultats (art.
+60) ; il « est consulté par le Gouvernement sur l'organisation des opérations de référendum » (ordonnance n° 58-1067, art.
+46) ; il contrôle les propositions d'initiative partagée « avant qu'elles ne soient soumises au référendum » (art.
+61).
+En cas de vacance ou d'empêchement, les fonctions du président sont exercées par intérim, « à l'exception de celles prévues aux articles 11 et 12 » (art.
+7).
+Le président peut-il dissoudre l'Assemblée nationale sans l'accord du Premier ministre ?
+Oui, sans l'accord de personne : il doit seulement consulter le Premier ministre et les présidents des deux assemblées.
+Les électeurs votent ensuite, vingt à quarante jours plus tard, et une nouvelle dissolution est impossible dans l'année qui suit ces élections.
+Le détail, citation par citation
+Base
+art.
+12, art.
+16, art.
+7, art.
+19
+Qui décide
+Le président.
+Exigé avant l'acte
+Il doit consulter le Premier ministre et les présidents des assemblées : « après consultation du Premier ministre et des Présidents des Assemblées ».
+La consultation est exigée, pas l'accord.
+Qui intervient ensuite
+Les électeurs : « Les élections générales ont lieu vingt jours au moins et quarante jours au plus après la dissolution. » Puis la nouvelle Assemblée « se réunit de plein droit le deuxième jeudi qui suit son élection ».
+Ce que l'acte produit
+La dissolution prend effet par sa seule décision ; la majorité qui sortira des urnes appartient aux électeurs. « Il ne peut être procédé à une nouvelle dissolution dans l'année qui suit ces élections. »
+Au-delà de cet article
+« L'Assemblée nationale ne peut être dissoute pendant l'exercice des pouvoirs exceptionnels » (art.
+16).
+En cas de vacance ou d'empêchement, les fonctions du président sont exercées par intérim, « à l'exception de celles prévues aux articles 11 et 12 » (art.
+7).
+Que sont les pouvoirs exceptionnels de l'article 16 ?
+Ce sont les mesures que le président peut prendre face à une menace grave et immédiate, quand les pouvoirs publics ne fonctionnent plus régulièrement, et seulement après des consultations officielles.
+Le Parlement se réunit alors de plein droit ; le Conseil constitutionnel peut être saisi après trente jours pour examiner si les conditions demeurent, et procède à cet examen de plein droit après soixante.
+Le texte ne donne à son avis aucun effet qui mette fin à ces pouvoirs.
+Le détail, citation par citation
+Base
+art.
+16, art.
+19, CE, 1962
+Qui décide
+Le président prend « les mesures exigées par ces circonstances ».
+Exigé avant l'acte
+Trois temps.
+Pour y recourir, deux conditions cumulées — une menace grave et immédiate sur les institutions, l'indépendance de la Nation, l'intégrité du territoire ou l'exécution des engagements internationaux, et l'interruption du « fonctionnement régulier des pouvoirs publics constitutionnels » — et la « consultation officielle du Premier ministre, des Présidents des Assemblées ainsi que du Conseil constitutionnel ».
+Pour chaque mesure : « Le Conseil constitutionnel est consulté à leur sujet. »
+Qui intervient ensuite
+« Le Parlement se réunit de plein droit. » Pour le maintien : après trente jours, le Conseil constitutionnel peut être saisi par le président de l'Assemblée nationale, le président du Sénat, soixante députés ou soixante sénateurs, pour examiner si les conditions demeurent réunies ; il le fait de plein droit après soixante jours et à tout moment au-delà, et se prononce « par un avis public ».
+Ce que l'acte produit
+Le pouvoir est borné par son but : rendre aux pouvoirs publics, « dans les moindres délais », les moyens d'accomplir leur mission.
+Sa durée est examinée par le Conseil constitutionnel ; l'article ne donne à cet avis public aucun effet qui mette fin aux pouvoirs exceptionnels.
+Au-delà de cet article
+Le juge administratif s'est déclaré incompétent pour la décision d'y recourir, acte de gouvernement « dont il n'appartient au Conseil d'Etat ni d'apprécier la légalité, ni de contrôler la durée d'application », et pour une mesure prise dans les matières de l'article 34, qui « présente le caractère d'un acte législatif » (Conseil d'État, Assemblée, 2 mars 1962, Rubin de Servens).
+Le président peut-il s'adresser au Parlement ?
+Oui, de deux façons : un message lu devant les deux assemblées, ou une déclaration devant le Parlement réuni en Congrès.
+Aucun vote ne suit ; seule la déclaration peut être suivie d'un débat, hors de sa présence.
+Le détail, citation par citation
+Base
+art.
+18, art.
+19
+Qui décide
+Le président, sous deux formes : des messages « qu'il fait lire » aux deux assemblées, ou une déclaration devant le Parlement « réuni à cet effet en Congrès ».
+Exigé avant l'acte
+L'article n'exige ni proposition ni consultation, pour l'une comme pour l'autre.
+Hors session, les assemblées « sont réunies spécialement à cet effet ».
+Qui intervient ensuite
+Le message est lu devant les assemblées, et ces messages « ne donnent lieu à aucun débat ».
+La déclaration devant le Congrès peut être suivie, « hors sa présence », d'un débat « qui ne fait l'objet d'aucun vote » : une intervention possible, non obligatoire.
+Ce que l'acte produit
+L'effet est celui d'une parole : aucun vote ne suit, ni sur le message ni sur la déclaration.
+Le président peut-il faire contrôler seul un traité ?
+Il peut saisir le Conseil constitutionnel, comme le Premier ministre, le président de chaque assemblée, soixante députés ou soixante sénateurs ; c'est le Conseil qui décide.
+Si une clause est jugée contraire à la Constitution, la ratification attend une révision de la Constitution.
+Le détail, citation par citation
+Base
+art.
+54, art.
+19
+Qui décide
+Le Conseil constitutionnel.
+Exigé avant l'acte
+Rien n'est exigé avant la saisine.
+Le Premier ministre, le président de chaque assemblée, soixante députés ou soixante sénateurs peuvent aussi saisir le Conseil.
+Qui intervient ensuite
+Le Conseil constitutionnel, qui examine ; puis, s'il déclare une clause contraire à la Constitution, le pouvoir constituant, puisque l'autorisation de ratifier « ne peut intervenir qu'après la révision de la Constitution ».
+Ce que l'acte produit
+Le président obtient l'examen, pas la décision.
+Qui nomme les membres du Conseil constitutionnel ?
+Il nomme trois des neuf membres, mais les commissions des deux assemblées peuvent l'empêcher si leurs votes négatifs, additionnés, atteignent trois cinquièmes des suffrages exprimés.
+Il désigne aussi le président du Conseil, sans avis préalable, mais parmi les membres du Conseil.
+Le détail, citation par citation
+Base
+art.
+56, art.
+13, art.
+19, ord.
+58-1067, art.
+1
+Qui décide
+Deux actes distincts.
+Le président nomme trois des neuf membres ; trois autres sont nommés par le président de l'Assemblée nationale, trois par le président du Sénat.
+Il désigne aussi le président du Conseil : « Le Président est nommé par le Président de la République. »
+Exigé avant l'acte
+Pour les trois membres, avant la nomination, « la procédure prévue au dernier alinéa de l'article 13 est applicable à ces nominations » : avis public de la commission compétente de chaque assemblée, et nomination impossible « lorsque l'addition des votes négatifs dans chaque commission représente au moins trois cinquièmes des suffrages exprimés au sein des deux commissions » (art.
+13).
+Pour la désignation du président du Conseil, l'article 56 ne prévoit aucun avis.
+Qui intervient ensuite
+Après la nomination, l'article 56 ne fait intervenir aucun autre acteur.
+Le mandat des membres « dure neuf ans et n'est pas renouvelable » ; le président du Conseil « a voix prépondérante en cas de partage ».
+Ce que l'acte produit
+Le choix lui appartient ; pour les membres, une opposition qualifiée des deux commissions peut l'empêcher.
+Au-delà de cet article
+Le président du Conseil est « nommé par décision du Président de la République » et « choisi parmi les membres du conseil, nommés ou de droit » (ordonnance n° 58-1067, art.
+1) : la désignation porte sur une personne déjà membre, nommée ou membre de droit comme les anciens présidents de la République.
+Le président peut-il faire contrôler une loi avant sa promulgation ?
+Avant la promulgation, il peut déférer une loi au Conseil constitutionnel, comme d'autres autorités.
+C'est le Conseil qui juge, en un mois, si elle est conforme à la Constitution, et la saisine suspend le délai de promulgation.
+Le détail, citation par citation
+Base
+art.
+61, art.
+10, art.
+19
+Qui décide
+Le Conseil constitutionnel, qui se prononce sur la conformité de la loi à la Constitution.
+Exigé avant l'acte
+Aucune proposition ni consultation n'est exigée ; le moment est écrit : « avant leur promulgation ».
+Le Premier ministre, les présidents des deux assemblées, soixante députés ou soixante sénateurs peuvent aussi déférer la loi.
+Qui intervient ensuite
+Le Conseil constitutionnel, qui « doit statuer dans le délai d'un mois » (huit jours en cas d'urgence, à la demande du Gouvernement).
+Ce que l'acte produit
+La saisine « suspend le délai de promulgation ».
+Elle obtient un contrôle de constitutionnalité, pas un jugement d'opportunité.
+Quels pouvoirs lui prête-t-on en propre alors qu’ils sont contresignés ?
+Chef des armées, droit de grâce, traités, décrets, nominations : ce sont les attributions les plus visibles de la fonction, et aucune ne figure dans la liste de l’article 19.
+Lorsqu’elles donnent lieu à un acte du président, cet acte est soumis au contreseing que prévoit cet article.
+Certaines font en outre intervenir le Parlement ou une autre institution : une partie des traités ne peut être ratifiée qu’en vertu d’une loi, et certaines nominations passent par un avis des commissions parlementaires ou par le Conseil supérieur de la magistrature.
+Le président choisit-il seul les ministres ?
+Non : il nomme les ministres et met fin à leurs fonctions sur la proposition du Premier ministre, qui contresigne.
+Le détail, citation par citation
+Base
+art.
+8, art.
+19
+Qui décide
+Le président, « sur la proposition du Premier ministre » (art.
+8, al.
+2).
+Exigé avant l'acte
+Une proposition du Premier ministre.
+Qui intervient ensuite
+Le Premier ministre, qui propose et contresigne.
+Ce que l'acte produit
+Ni la nomination ni le renvoi d'un ministre ne sont dans la liste de l'article 19.
+Le président peut-il refuser de promulguer une loi ?
+Le texte ne prévoit pas de veto : il doit promulguer dans les quinze jours, délai que suspend une saisine du Conseil constitutionnel (article 61).
+Il peut seulement demander une nouvelle délibération, que le Parlement ne peut refuser et dont l'issue lui appartient.
+Le détail, citation par citation
+Base
+art.
+10, art.
+61, art.
+19
+Qui décide
+Le président promulgue ; le Parlement délibère à nouveau s'il le demande.
+Exigé avant l'acte
+Aucune proposition ni consultation n'est exigée avant l'acte.
+Qui intervient ensuite
+Le Parlement : la nouvelle délibération « ne peut être refusée », et c'est lui qui vote à nouveau.
+Ce que l'acte produit
+Il promulgue dans les quinze jours qui suivent la transmission de la loi définitivement adoptée ; avant l'expiration de ce délai, il peut demander une nouvelle délibération de la loi ou de certains articles.
+Le texte fixe ce délai et ouvre une seconde lecture, dont l'issue appartient au Parlement ; il ne prévoit pas de veto.
+Saisi avant la promulgation, le Conseil constitutionnel la retarde : la saisine « suspend le délai de promulgation » (art.
+61).
+Le président peut-il gouverner par décret ?
+En partie.
+Il signe les ordonnances et les décrets délibérés en Conseil des ministres, contresignés par le Premier ministre et les ministres responsables ; les autres décrets réglementaires relèvent du Premier ministre.
+Le détail, citation par citation
+Base
+art.
+13, art.
+9, art.
+21, art.
+19, CE, 1992, CE, 2024
+Qui décide
+Le président signe « les ordonnances et les décrets délibérés en Conseil des ministres », qu'il préside (art.
+9).
+Les autres décrets réglementaires relèvent du Premier ministre, qui exerce le pouvoir réglementaire « sous réserve des dispositions de l'article 13 » (art.
+21).
+Exigé avant l'acte
+Une délibération en Conseil des ministres.
+Un décret ainsi délibéré doit être signé par le président « alors même qu'aucun texte n'imposait cette délibération » (Conseil d'État, Assemblée, 10 septembre 1992, Meyet ; règle reprise le 5 février 2024).
+Qui intervient ensuite
+Le Premier ministre et les ministres responsables, qui contresignent.
+Ce que l'acte produit
+La frontière passe par ce qui est délibéré en Conseil des ministres.
+Le texte dit « signe » ; il ne précise pas si le président peut refuser.
+Au-delà de cet article
+Les dispositions d'un décret délibéré en Conseil des ministres ne peuvent, « en principe », être modifiées que par un décret délibéré de même ; il en va autrement si ce décret prévoit qu'elles peuvent l'être « par décret en Conseil d'Etat ou par décret simple », ou si leur codification montre qu'elles en relèvent (Conseil d'État, 5 février 2024, n° 470962).
+Le président nomme-t-il seul les hauts fonctionnaires ?
+Non.
+Ses nominations sont contresignées, et il n'est pas seul à nommer : le Premier ministre nomme aussi aux emplois civils et militaires, sous réserve de l'article 13 (article 21), et une partie des nominations du président peut lui être déléguée.
+Certaines passent en outre par un avis des commissions parlementaires ou par le Conseil supérieur de la magistrature.
+Le détail, citation par citation
+Base
+art.
+13, art.
+21, art.
+19, art.
+65, ord.
+58-1136, art.
+1, ord.
+58-1136, art.
+2, ord.
+58-1136, art.
+3
+Qui décide
+Le président : « Il nomme aux emplois civils et militaires de l'Etat » (art.
+13).
+En Conseil des ministres pour les emplois que l'article 13 énumère (conseillers d'État, ambassadeurs, préfets, recteurs, directeurs d'administration centrale, officiers généraux…) et ceux qu'une loi organique y ajoute ; par décret du président pour d'autres.
+Pour les autres emplois, l'exercice de ce pouvoir peut être délégué au Premier ministre, qui nomme « sous réserve des dispositions de l'article 13 » (art.
+21).
+Exigé avant l'acte
+Délibération en Conseil des ministres pour les emplois énumérés.
+Pour les emplois qu'une loi organique désigne, avis public de la commission compétente de chaque assemblée, qui peut empêcher la nomination par trois cinquièmes des suffrages exprimés.
+Pour les magistrats du siège, le Conseil supérieur de la magistrature « fait des propositions » (Cour de cassation, premiers présidents de cour d'appel, présidents de tribunal) ou rend un « avis conforme » ; pour ceux du parquet, il « donne son avis » (art.
+65).
+Qui intervient ensuite
+Le Premier ministre et les ministres responsables, qui contresignent.
+Ce que l'acte produit
+Dans le texte, le pouvoir de nomination est général ; il est contresigné, peut être délégué au Premier ministre et, pour certains emplois, passe par un avis parlementaire ou par le Conseil supérieur de la magistrature.
+Au-delà de cet article
+L'ordonnance n° 58-1136 (loi organique) ajoute des emplois pourvus en Conseil des ministres (art.
+1) ; fait nommer « par décret du Président de la République » les membres du Conseil d'État et de la Cour des comptes, les magistrats de l'ordre judiciaire, les professeurs de l'enseignement supérieur et les officiers (art.
+2) ; permet que la nomination aux autres emplois soit déléguée au Premier ministre « par décret du Président de la République » (art.
+3).
+Le président décide-t-il seul en matière militaire ?
+Il est le chef des armées, mais le Gouvernement dispose de la force armée et le Premier ministre est responsable de la Défense nationale ; ses actes sont contresignés.
+Le détail, citation par citation
+Base
+art.
+15, art.
+20, art.
+21, art.
+19
+Qui décide
+Le président est le chef des armées et préside les conseils et comités supérieurs de la Défense nationale (art.
+15).
+Exigé avant l'acte
+Aucune proposition ni consultation n'est écrite pour la qualité de chef des armées ; ses actes sont contresignés.
+Qui intervient ensuite
+Le Gouvernement « dispose […] de la force armée » (art.
+20) ; le Premier ministre « est responsable de la Défense nationale » (art.
+21).
+Ce que l'acte produit
+La Constitution répartit le militaire entre trois titres : chef des armées, disposition de la force armée, responsabilité de la Défense nationale.
+Aucun ne se lit seul.
+Le président peut-il gracier seul ?
+Non, pas par sa seule signature.
+Le président décide de la grâce, uniquement à titre individuel, mais l'acte doit être contresigné.
+Le détail, citation par citation
+Base
+art.
+17, art.
+17 (1958), art.
+19
+Qui décide
+Le président.
+Exigé avant l'acte
+Aucune proposition ni consultation n'est exigée avant l'acte.
+Qui intervient ensuite
+Le Premier ministre et le ministre responsable, qui contresignent.
+Ce que l'acte produit
+Le texte en borne l'objet : « à titre individuel », précision ajoutée en 2008 (le texte de 1958 disait seulement qu'il « a le droit de faire grâce »).
+Un pouvoir personnel dans l'image, un acte contresigné dans le texte.
+Le président peut-il signer seul un traité ?
+Il négocie et ratifie les traités, mais la ratification est contresignée et, pour une partie des traités (paix, commerce, finances de l'État, territoire, entre autres), elle suppose une loi.
+Le détail, citation par citation
+Base
+art.
+52, art.
+53, art.
+54, art.
+19
+Qui décide
+Le président « négocie et ratifie les traités » ; il « est informé de toute négociation tendant à la conclusion d'un accord international non soumis à ratification » (art.
+52).
+Exigé avant l'acte
+Pour les traités de paix, de commerce, ceux qui engagent les finances de l'État, modifient des dispositions de nature législative, touchent à l'état des personnes ou au territoire, une loi : ils « ne peuvent être ratifiés ou approuvés qu'en vertu d'une loi » (art.
+53).
+Si le Conseil constitutionnel a déclaré une clause contraire à la Constitution, l'autorisation de ratifier n'intervient qu'après révision (art.
+54).
+Qui intervient ensuite
+Le Parlement, qui vote la loi d'autorisation pour les traités de l'article 53 ; le Premier ministre et les ministres responsables, qui contresignent ; le Conseil constitutionnel s'il est saisi.
+Ce que l'acte produit
+Ratifier n'est pas dans la liste de l'article 19 : la ratification est contresignée et, pour une partie des traités, suppose une loi.
+Qui fixe les règles que le citoyen ressent ?
+Signer ne suffit pas à gouverner.
+Une baisse d’impôt, une réforme, une règle nouvelle : par quelles autres signatures que la sienne une promesse du président doit-elle passer ?
+Le texte range les règles en deux catégories.
+La loi, qui passe par le Parlement, couvre les matières de l’article 34, dont l’impôt.
+Le règlement couvre le reste : « Les matières autres que celles qui sont du domaine de la loi ont un caractère réglementaire » (article 37).
+Le Premier ministre exerce le pouvoir réglementaire (article 21).
+Exception : les décrets délibérés en Conseil des ministres, que le président signe (article 13) et qui sont contresignés (article 19).
+Enfin, avec l’autorisation du Parlement, le Gouvernement peut prendre par ordonnances des mesures qui relèvent de la loi (article 38).
+Les articles cités, mot pour mot
+Art.
+34 : « La loi fixe les règles concernant »
+Art.
+34 : « l'assiette, le taux et les modalités de recouvrement des impositions de toutes natures »
+Art.
+37 : « Les matières autres que celles qui sont du domaine de la loi ont un caractère réglementaire. »
+Art.
+21 : « il exerce le pouvoir réglementaire »
+Art.
+38 : « Le Gouvernement peut, pour l'exécution de son programme, demander au Parlement l'autorisation de prendre par ordonnances, pendant un délai limité, des mesures qui sont normalement du domaine de la loi. »
+Art.
+13 : « Le Président de la République signe les ordonnances et les décrets délibérés en Conseil des ministres. »
+Art.
+19 : « sont contresignés par le Premier ministre et, le cas échéant, par les ministres responsables »
+Art.
+49 : « Dans ce cas, ce projet est considéré comme adopté, sauf si une motion de censure, déposée dans les vingt-quatre heures qui suivent, est votée »
+Art.
+47 : « Si le Parlement ne s'est pas prononcé dans un délai de soixante-dix jours, les dispositions du projet peuvent être mises en vigueur par ordonnance. »
+Une promesse qui porte sur un impôt passe donc par le Parlement, mais pas toujours par un vote sur le texte.
+Sur un projet de loi de finances, le Premier ministre peut, après délibération du Conseil des ministres, que le président préside (article 9), engager la responsabilité du Gouvernement : « ce projet est considéré comme adopté », sauf si une motion de censure est votée (article 49, alinéa 3).
+Et si le Parlement ne s’est pas prononcé dans le délai que fixe l’article 47, les dispositions du projet peuvent être mises en vigueur par ordonnance.
+Ces procédures sont détaillées dans la page « Qui peut faire adopter une loi ? ».
+Une promesse qui passe par un décret fait, elle aussi, intervenir d’autres signatures que celle du président : celle du Premier ministre, ou le contreseing si le décret est délibéré en Conseil des ministres.
+Qui détermine la politique de la Nation ?
+Pourquoi, alors, l’Élysée semble-t-il tout décider ?
+La réponse n’est pas dans la liste de l’article 19, mais dans l’article 20 : « Le Gouvernement détermine et conduit la politique de la Nation. » Il dispose de l’administration et de la force armée, et il répond devant le Parlement.
+Le Gouvernement répond devant l’Assemblée.
+Une motion de censure ne peut être adoptée qu’à la majorité des membres de l’Assemblée nationale (article 49) ; si elle l’est, « le Premier ministre doit remettre au Président de la République la démission du Gouvernement » (article 50).
+Le Gouvernement ne peut donc se maintenir ni contre une majorité absolue de députés qui vote sa censure, ni lorsque l’Assemblée désapprouve son programme ou une déclaration de politique générale (article 50).
+Le Premier ministre peut aussi présenter sa démission sans avoir été censuré (article 8).
+Quand la majorité de l’Assemblée soutient le président, le Gouvernement qu’il a nommé conduit la politique sur laquelle le président a été élu : c’est de là que vient l’image d’un président qui décide de tout.
+Ce lien relève de l’exercice politique, que le texte ne décrit pas.
+Lorsqu’un Premier ministre quitte ses fonctions à la demande du président, ce qui relève de la même pratique, la fin des fonctions passe encore, en droit, par la démission qu’il présente (article 8).
+Le texte ne rend cette démission obligatoire qu’après un vote de l’Assemblée (article 50).
+Quand cette majorité lui est opposée, c’est-à-dire en cohabitation, le même texte donne une autre présidence : le Gouvernement, responsable devant cette majorité, détermine et conduit la politique de la Nation, et le président garde les actes dispensés de contreseing, avec leurs conditions.
+La dissolution lui permet de redemander une majorité aux électeurs ; ce sont eux qui la donnent.
+Le droit répartit les pouvoirs ; la majorité conditionne leur exercice politique.
+Que confie la Constitution au Gouvernement ?
+Le Gouvernement détermine et conduit la politique de la Nation, et il en répond devant le Parlement.
+Le président veille au respect de la Constitution et assure, par son arbitrage, le fonctionnement régulier des pouvoirs publics.
+Le détail, citation par citation
+Base
+art.
+20, art.
+21, art.
+22, art.
+5
+Qui décide
+Le Gouvernement (art.
+20), dont le Premier ministre dirige l'action et assure l'exécution des lois (art.
+21).
+Exigé avant l'acte
+Aucune condition préalable n'est écrite ; le Gouvernement répond ensuite de sa politique devant le Parlement (art.
+20).
+Qui intervient ensuite
+L'Assemblée nationale, devant laquelle il répond ; les ministres, qui contresignent les actes du Premier ministre lorsqu'ils sont « chargés de leur exécution » (art.
+22).
+Ce que l'acte produit
+Le président veille au respect de la Constitution et assure, par son arbitrage, le fonctionnement régulier des pouvoirs publics (art.
+5) ; le texte attribue au Gouvernement la détermination et la conduite de la politique de la Nation.
+Avant d’évaluer une promesse présidentielle, que faut-il vérifier ?
+Une promesse de campagne ne se juge pas à sa formule, mais au chemin qu’elle devra suivre.
+Cinq vérifications, chacune appuyée sur une page de ce dossier, s’appliquent à toute promesse, quel que soit le candidat qui la porte :
+Qui signe ?
+L’acte relève-t-il du président sans contreseing, et que son article exige-t-il alors avant et après lui ?
+Ou d’autres signatures sont-elles nécessaires ?
+Voir les actes sans contreseing, et qui fixe les règles.
+Faut-il une loi, et qui peut la faire voter ?
+Voir qui peut faire adopter une loi, et, pour une réforme soumise aux électeurs, le référendum.
+La décision se prend-elle à Paris ?
+Dans certaines matières, elle se prend dans l’Union européenne, avec d’autres États : voir ce que la France peut décider dans l’Union européenne.
+Une fois votée, la mesure s’applique-t-elle, et en combien de temps produit-elle ses effets ?
+Voir l’application des lois et le temps d’une formation.
+Selon quel critère observable dira-t-on qu’elle est tenue ?
+Un indicateur, un acte, un seuil ou une échéance, fixés d’avance.
+Voir comment savoir si une promesse est tenue.
+Ces questions ne disent pas si une promesse est bonne ou mauvaise : elles disent ce dont sa réalisation dépend.
+Qu’un autre acteur intervienne ne veut pas dire qu’il empêche : cela dit seulement que le résultat ne tient pas à une seule signature.
+Et elles portent sur les autorisations et les procédures, non sur les moyens : crédits votés en loi de finances, agents et services pour exécuter, collectivités et opérateurs qui appliquent, juge qui peut être saisi.
+Une promesse peut franchir toutes les étapes de ce dossier et manquer de ces moyens.
+Comment le tableau est-il établi ?
+Lecture documentaire de la Constitution, sans certification juridique.
+Deux choses sont à distinguer.
+Que chaque citation figure mot pour mot dans le texte en vigueur : un script le vérifie à chaque génération des données, sur la réponse de Légifrance archivée pour chaque texte, et refuse d’écrire sinon.
+Que chaque citation soit rangée dans la bonne colonne : c’est une lecture, faite case par case par l’équipe de rédaction et soumise à une contre-expertise externe ; aucun juriste ne l’a relue à ce jour.
+Chaque classement porte sa justification, chaque case vide décisive aussi : elles sont dans le repli ci-dessous et dans les données.
+Le critère.
+Un acte est retenu quand le texte de son article n’exige avant lui ni proposition, ni consultation, ni acte d’un autre acteur, et ne fait intervenir aucun autre acteur pour la suite, même de façon facultative.
+Les pouvoirs partagés et les autres encadrements écrits n’entrent pas dans le critère.
+Compté acte par acte, il retient trois actes sur douze.
+Autre acteur pour la suite : institution, autorité ou corps électoral auquel l’article attribue une intervention distincte, postérieure à l’acte présidentiel, y compris facultative.
+Les simples modalités matérielles d’exécution de l’acte ne sont pas comptées.
+Le Conseil constitutionnel saisi d’un traité ou d’une loi statue : c’est une intervention distincte.
+La lecture du message que le président adresse aux assemblées n’est pas comptée : c’est la manière dont le message leur parvient, non une intervention distincte.
+Un acte retenu n’est donc pas un acte accompli sans personne ; de même, la nomination du Premier ministre produit un Gouvernement responsable devant le Parlement.
+Compté par disposition : pourquoi une version antérieure trouvait un autre nombre
+Une version antérieure de ces données, publiée le 6 octobre 2026, comptait par disposition : chacune y était représentée par le premier acte que son article attribue au président.
+Le même critère y retient deux dispositions sur huit ; compté acte par acte, il retient trois actes sur douze.
+L’acte qui échappait au premier compte est la désignation du président du Conseil constitutionnel, que l’article 56 prévoit après la nomination de trois membres.
+Ces nominations passent par un avis des commissions parlementaires ; la désignation du président n’en demande aucun.
+Les citations qui remplissent le tableau, acte par acte, et la raison de chaque classement
+Inventaire de l'article 19, acte par acte
+Acte
+Élément
+Texte de l'article et raison du classement
+Nommer le Premier ministre
+art.
+8, al.
+1
+Acte
+« Le Président de la République nomme le Premier ministre. »
+art.
+8, al.
+1
+Exigé avant l'acte
+Case vide.
+La première phrase de l'article 8 n'exige ni proposition, ni consultation, ni acte préalable d'un autre acteur.
+art.
+8, al.
+1
+Autre acteur pour la suite
+Case vide.
+L'article 8 ne fait intervenir aucun autre acteur après la nomination ; la responsabilité du Gouvernement devant le Parlement relève de l'article 20 (deuxième niveau de lecture).
+art.
+8, al.
+1
+Autre encadrement écrit
+Case vide.
+La phrase ne fixe ni délai, ni objet, ni effet à la nomination.
+Mettre fin aux fonctions du Premier ministre
+art.
+8, al.
+1
+Acte
+« Il met fin à ses fonctions »
+art.
+8, al.
+1
+Exigé avant l'acte
+« sur la présentation par celui-ci de la démission du Gouvernement »
+Acte d'un autre acteur (le Premier ministre) que le texte exige avant la fin des fonctions : ni une proposition ni une consultation, d'où la définition élargie de la colonne.
+art.
+8, al.
+1
+Autre acteur pour la suite
+Case vide.
+La deuxième phrase de l'article 8 ne fait intervenir personne après l'acte.
+art.
+8, al.
+1
+Autre encadrement écrit
+Case vide.
+Aucun délai, objet ou effet écrit ; l'obligation de démission de l'article 50 relève du deuxième niveau de lecture.
+Soumettre un projet de loi au référendum
+art.
+11
+Acte
+« peut soumettre au référendum tout projet de loi »
+art.
+11
+Exigé avant l'acte
+« sur proposition du Gouvernement pendant la durée des sessions ou sur proposition conjointe des deux assemblées »
+Proposition d'un autre acteur exigée avant que le président puisse soumettre le texte.
+art.
+11
+Autre acteur pour la suite
+[le Gouvernement, lorsque le référendum est organisé sur sa proposition] « celui-ci fait, devant chaque assemblée, une déclaration qui est suivie d'un débat »
+Le Gouvernement et les assemblées interviennent après la décision de soumettre, lorsque le référendum est organisé sur proposition du Gouvernement.
+art.
+11
+Autre acteur pour la suite
+« Lorsque le référendum a conclu à l'adoption du projet ou de la proposition de loi »
+Les électeurs décident de l'issue.
+art.
+11
+Autre encadrement écrit
+« portant sur l'organisation des pouvoirs publics, sur des réformes relatives à la politique économique, sociale ou environnementale de la nation et aux services publics qui y concourent »
+Objet limité par le texte.
+art.
+11
+Autre encadrement écrit
+« le Président de la République promulgue la loi dans les quinze jours qui suivent la proclamation des résultats de la consultation »
+La promulgation est un acte du président, non d'un autre acteur ; le texte l'enferme dans un délai : limite de temps.
+Soumettre au référendum une proposition de loi d'initiative partagée
+art.
+11
+Acte
+« le Président de la République la soumet au référendum »
+art.
+11
+Exigé avant l'acte
+« à l'initiative d'un cinquième des membres du Parlement, soutenue par un dixième des électeurs inscrits sur les listes électorales »
+Initiative de parlementaires soutenue par des électeurs, exigée avant l'acte.
+art.
+11
+Exigé avant l'acte
+« celles dans lesquelles le Conseil constitutionnel contrôle le respect des dispositions de l'alinéa précédent »
+Contrôle du Conseil constitutionnel prévu avant la soumission.
+art.
+11
+Exigé avant l'acte
+« Si la proposition de loi n'a pas été examinée par les deux assemblées dans un délai fixé par la loi organique »
+L'acte suppose que les deux assemblées n'aient pas examiné la proposition : compétence liée du président (« la soumet »).
+art.
+11
+Autre acteur pour la suite
+« Lorsque la proposition de loi n'est pas adoptée par le peuple français »
+Les électeurs décident de l'issue.
+art.
+11
+Autre encadrement écrit
+« ne peut avoir pour objet l'abrogation d'une disposition législative promulguée depuis moins d'un an »
+Limite d'objet.
+art.
+11
+Autre encadrement écrit
+« aucune nouvelle proposition de référendum portant sur le même sujet ne peut être présentée avant l'expiration d'un délai de deux ans suivant la date du scrutin »
+Limite de temps après un rejet.
+Dissoudre l'Assemblée nationale
+art.
+12
+Acte
+« prononcer la dissolution de l'Assemblée nationale »
+art.
+12
+Exigé avant l'acte
+« après consultation du Premier ministre et des Présidents des Assemblées »
+Consultation exigée avant l'acte ; le texte n'exige pas d'accord.
+art.
+12
+Autre acteur pour la suite
+« Les élections générales ont lieu »
+Les électeurs interviennent pour la suite.
+art.
+12
+Autre acteur pour la suite
+« L'Assemblée nationale se réunit de plein droit le deuxième jeudi qui suit son élection. »
+La nouvelle Assemblée se réunit sans convocation du président : seconde intervention écrite pour la suite.
+art.
+12
+Autre encadrement écrit
+« vingt jours au moins et quarante jours au plus après la dissolution »
+Délai des élections : limite de temps.
+art.
+12
+Autre encadrement écrit
+« Il ne peut être procédé à une nouvelle dissolution dans l'année qui suit ces élections. »
+Limite de temps sur l'acte suivant.
+Exercer les pouvoirs exceptionnels
+art.
+16
+Acte
+« le Président de la République prend les mesures exigées par ces circonstances »
+art.
+16
+Exigé avant l'acte
+« après consultation officielle du Premier ministre, des Présidents des Assemblées ainsi que du Conseil constitutionnel »
+Premier temps, la décision d'y recourir : consultation exigée avant.
+art.
+16
+Exigé avant l'acte
+[les mesures] « Le Conseil constitutionnel est consulté à leur sujet. »
+Deuxième temps, les mesures : consultation du Conseil constitutionnel sur chacune, distincte de la consultation initiale.
+art.
+16
+Autre acteur pour la suite
+« Le Parlement se réunit de plein droit. »
+Le Parlement intervient de droit pendant l'exercice des pouvoirs.
+art.
+16
+Autre acteur pour la suite (facultatif ou sous condition)
+[après trente jours] « le Conseil constitutionnel peut être saisi par le Président de l'Assemblée nationale, le Président du Sénat, soixante députés ou soixante sénateurs »
+Troisième temps, le maintien : saisine possible par d'autres acteurs après trente jours.
+art.
+16
+Autre acteur pour la suite
+[le Conseil constitutionnel] « Il procède de plein droit à cet examen et se prononce dans les mêmes conditions au terme de soixante jours d'exercice des pouvoirs exceptionnels »
+Troisième temps, le maintien : examen de plein droit, avis public ; l'article ne donne à cet avis aucun effet qui mette fin aux pouvoirs exceptionnels.
+art.
+16
+Autre encadrement écrit
+« d'une manière grave et immédiate et que le fonctionnement régulier des pouvoirs publics constitutionnels est interrompu »
+Conditions de fond cumulées : ni proposition ni consultation, donc encadrement d'objet.
+art.
+16
+Autre encadrement écrit
+« dans les moindres délais »
+But assigné aux mesures : encadrement d'objet et de temps.
+art.
+16
+Autre encadrement écrit
+« L'Assemblée nationale ne peut être dissoute pendant l'exercice des pouvoirs exceptionnels. »
+Effet sur un autre pouvoir du président.
+Adresser un message au Parlement
+art.
+18
+Acte
+« Le Président de la République communique avec les deux Assemblées du Parlement par des messages qu'il fait lire »
+art.
+18
+Exigé avant l'acte
+Case vide.
+Le premier alinéa de l'article 18 n'exige ni proposition ni consultation.
+art.
+18
+Autre acteur pour la suite
+Case vide.
+Le message est lu devant les assemblées, mais le texte n'y attache aucune intervention pour la suite : ni débat ni vote.
+art.
+18
+Autre encadrement écrit
+« qui ne donnent lieu à aucun débat »
+Effet écrit : pas de débat.
+Prendre la parole devant le Parlement réuni en Congrès
+art.
+18
+Acte
+« Il peut prendre la parole devant le Parlement réuni à cet effet en Congrès. »
+art.
+18
+Exigé avant l'acte
+Case vide.
+Le deuxième alinéa n'exige ni proposition ni consultation ; la réunion des assemblées hors session est une modalité, non une condition préalable posée à un autre acteur.
+art.
+18
+Autre acteur pour la suite (facultatif ou sous condition)
+« Sa déclaration peut donner lieu, hors sa présence, à un débat »
+Débat possible, sans vote : la matrice recense les interventions que le texte prévoit, y compris facultatives.
+art.
+18
+Autre encadrement écrit
+« qui ne fait l'objet d'aucun vote »
+Effet écrit : pas de vote.
+Saisir le Conseil constitutionnel d'un engagement international
+art.
+54
+Acte
+[le Conseil constitutionnel] « saisi par le Président de la République »
+art.
+54
+Exigé avant l'acte
+Case vide.
+Aucune proposition ni consultation n'est exigée pour saisir.
+art.
+54
+Autre acteur pour la suite
+[si le Conseil constitutionnel] « a déclaré qu'un engagement international comporte une clause contraire à la Constitution »
+Le Conseil constitutionnel décide de l'issue de la saisine.
+art.
+54
+Pouvoir de même nature ailleurs
+« par le Premier ministre, par le président de l'une ou l'autre assemblée ou par soixante députés ou soixante sénateurs »
+D'autres autorités peuvent saisir de même.
+art.
+54
+Autre encadrement écrit (facultatif ou sous condition)
+« l'autorisation de ratifier ou d'approuver l'engagement international en cause ne peut intervenir qu'après la révision de la Constitution »
+Effet conditionnel de l'examen : seulement si une clause est déclarée contraire.
+Nommer trois membres du Conseil constitutionnel
+art.
+56
+Acte
+« Trois des membres sont nommés par le Président de la République »
+art.
+56
+Exigé avant l'acte
+« La procédure prévue au dernier alinéa de l'article 13 est applicable à ces nominations. »
+Avis public des commissions compétentes, qui précède la nomination et peut l'empêcher aux trois cinquièmes (art.
+13) : d'où son rang avant l'acte.
+art.
+56
+Autre acteur pour la suite
+Case vide.
+Après la nomination, l'article 56 ne fait intervenir aucun autre acteur.
+art.
+56
+Pouvoir de même nature ailleurs
+« trois par le président de l'Assemblée nationale, trois par le président du Sénat »
+Deux autres autorités nomment chacune trois membres.
+art.
+56
+Autre encadrement écrit
+« dont le mandat dure neuf ans et n'est pas renouvelable »
+Durée et non-renouvellement du mandat.
+Désigner le président du Conseil constitutionnel
+art.
+56
+Acte
+« Le Président est nommé par le Président de la République. »
+art.
+56
+Exigé avant l'acte
+Case vide.
+La procédure de l'article 13 est « applicable à ces nominations », celles des membres ; l'article 56 n'en prévoit aucune pour la désignation du président du Conseil, qui n'est pas non plus dans la liste de la loi organique n° 2010-837.
+art.
+56
+Autre acteur pour la suite
+Case vide.
+Aucun autre acteur n'intervient après la désignation dans l'article 56.
+Le choix parmi les membres est une contrainte organique (ord.
+58-1067, art.
+1), au deuxième niveau de lecture.
+art.
+56
+Autre encadrement écrit
+[le président du Conseil] « Il a voix prépondérante en cas de partage. »
+Effet de la désignation.
+Déférer une loi au Conseil constitutionnel
+art.
+61
+Acte
+« les lois peuvent être déférées au Conseil constitutionnel, avant leur promulgation, par le Président de la République »
+art.
+61
+Exigé avant l'acte
+Case vide.
+Aucune proposition ni consultation n'est exigée pour déférer.
+art.
+61
+Autre acteur pour la suite
+« le Conseil constitutionnel doit statuer dans le délai d'un mois »
+Le Conseil constitutionnel décide de l'issue.
+art.
+61
+Pouvoir de même nature ailleurs
+« le Premier ministre, le Président de l'Assemblée nationale, le Président du Sénat ou soixante députés ou soixante sénateurs »
+D'autres autorités peuvent déférer de même.
+art.
+61
+Autre encadrement écrit
+« avant leur promulgation »
+Limite de temps de la saisine.
+art.
+61
+Autre encadrement écrit
+« la saisine du Conseil constitutionnel suspend le délai de promulgation »
+Effet juridique de la saisine, non un acteur.
+Ce que cette page ne dit pas
+Elle s’en tient aux textes en vigueur, relus sur Légifrance, et à deux décisions du Conseil d’État lues dans leur texte intégral.
+Elle ne décrit pas la pratique des institutions au-delà de ce que la section sur la politique de la Nation en dit, et elle n’est pas un avis juridique.
+Là où le texte se tait, par exemple sur la possibilité, pour le président, de refuser de signer une ordonnance, la page le dit sans trancher.
+Les comptes ne mesurent ni l’autonomie du président ni le nombre de ses pouvoirs propres.
+Suivre une promesse au-delà de la signature
+Un président peut-il tenir ses promesses ?
+Ce qu'il peut vraiment décider — et ce qui lui échappe
+Cette page dit qui signe.
+Le livre pose la question suivante : une promesse de campagne, une fois l’élu en place, passe par quelle chaîne ?
+Il propose une grille en quatre zones — ce qu’un président décide dans sa propre chaîne de pouvoir, ce qu’il doit faire voter, ce qu’il doit négocier avec ceux dont la signature manque, et ce qui ne dépendra jamais de lui — et l’éprouve sur neuf promesses écrites, datées et signées.
+Il ne donne aucun conseil de vote.
+Journalistes, enseignants, chercheurs, responsables publics ou associatifs
+Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock.
+Demander l'exemplaire offert →
+Version papier : 19,90 € · Kindle : 9,99 €
+Sommaire, extraits et recensions →
+Questions fréquentes
+Que peut décider le président de la République seul ?
+La Constitution ne parle pas de décider seul.
+L'article 19 dispense du contreseing du Premier ministre les actes de huit dispositions : nommer le Premier ministre et mettre fin à ses fonctions, soumettre un texte au référendum, dissoudre l'Assemblée nationale, exercer les pouvoirs exceptionnels, s'adresser au Parlement, saisir le Conseil constitutionnel d'un traité ou d'une loi, nommer au Conseil constitutionnel.
+Sur les douze actes qu'elles contiennent, neuf font intervenir, dans leur propre article, un autre acteur avant ou après le président : une proposition pour le référendum, une consultation puis des élections pour la dissolution.
+Ses autres actes sont contresignés.
+Le président peut-il renvoyer le Premier ministre ?
+Non.
+L'article 8 décrit une seule voie : le président met fin aux fonctions du Premier ministre « sur la présentation par celui-ci de la démission du Gouvernement ».
+L'article 50 décrit le cas où cette démission devient obligatoire : lorsque l'Assemblée nationale adopte une motion de censure ou désapprouve le programme ou une déclaration de politique générale du Gouvernement.
+Cette obligation naît d'un vote de l'Assemblée ; le texte ne la confie pas au président.
+Qui fixe les impôts : le président, le Gouvernement ou le Parlement ?
+L'article 34 réserve à la loi « l'assiette, le taux et les modalités de recouvrement des impositions de toutes natures ».
+Une promesse fiscale passe donc par le Parlement, mais pas toujours par un vote sur le texte : sur un projet de loi de finances, le Premier ministre peut, après délibération du Conseil des ministres, engager la responsabilité du Gouvernement, et le projet est considéré comme adopté si aucune motion de censure n'est votée (article 49, alinéa 3) ; si le Parlement ne s'est pas prononcé dans le délai que fixe l'article 47, les dispositions du projet peuvent être mises en vigueur par ordonnance.
+Dans aucun de ces cas la signature du président ne suffit.
+Sources
+Tous les textes cités ici ont été lus dans leur version en vigueur, sur Légifrance, à la date indiquée ; l’article 17 l’est aussi dans sa version de 1958, pour la comparaison qu’en fait la fiche du droit de grâce.
+Chaque fiche renvoie aux textes sur lesquels elle repose.
+Constitution du 4 octobre 1958, article 5 — version en vigueur depuis le 5 août 1995, lue sur Légifrance le 30 septembre 2026.
+Constitution du 4 octobre 1958, article 7 — version en vigueur depuis le 29 mars 2003, lue sur Légifrance le 11 octobre 2026.
+Constitution du 4 octobre 1958, article 8 — version en vigueur depuis le 5 octobre 1958, lue sur Légifrance le 30 septembre 2026.
+Constitution du 4 octobre 1958, article 9 — version en vigueur depuis le 5 octobre 1958, lue sur Légifrance le 30 septembre 2026.
+Constitution du 4 octobre 1958, article 10 — version en vigueur depuis le 5 octobre 1958, lue sur Légifrance le 30 septembre 2026.
+Constitution du 4 octobre 1958, article 11 — version en vigueur depuis le 25 juillet 2008, lue sur Légifrance le 30 septembre 2026.
+Constitution du 4 octobre 1958, article 12 — version en vigueur depuis le 5 août 1995, lue sur Légifrance le 30 septembre 2026.
+Constitution du 4 octobre 1958, article 13 — version en vigueur depuis le 25 juillet 2008, lue sur Légifrance le 30 septembre 2026.
+Constitution du 4 octobre 1958, article 15 — version en vigueur depuis le 5 octobre 1958, lue sur Légifrance le 30 septembre 2026.
+Constitution du 4 octobre 1958, article 16 — version en vigueur depuis le 25 juillet 2008, lue sur Légifrance le 30 septembre 2026.
+Constitution du 4 octobre 1958, article 17 — version en vigueur depuis le 25 juillet 2008, lue sur Légifrance le 30 septembre 2026.
+Constitution du 4 octobre 1958, article 17, version de 1958 (remplacée le 25 juillet 2008) — lue sur Légifrance le 11 octobre 2026.
+Constitution du 4 octobre 1958, article 18 — version en vigueur depuis le 25 juillet 2008, lue sur Légifrance le 30 septembre 2026.
+Constitution du 4 octobre 1958, article 19 — version en vigueur depuis le 5 octobre 1958, lue sur Légifrance le 30 septembre 2026.
+Constitution du 4 octobre 1958, article 20 — version en vigueur depuis le 5 octobre 1958, lue sur Légifrance le 30 septembre 2026.
+Constitution du 4 octobre 1958, article 21 — version en vigueur depuis le 5 octobre 1958, lue sur Légifrance le 30 septembre 2026.
+Constitution du 4 octobre 1958, article 22 — version en vigueur depuis le 5 octobre 1958, lue sur Légifrance le 30 septembre 2026.
+Constitution du 4 octobre 1958, article 34 — version en vigueur depuis le 10 mars 2024, lue sur Légifrance le 5 octobre 2026.
+Constitution du 4 octobre 1958, article 37 — version en vigueur depuis le 5 octobre 1958, lue sur Légifrance le 5 octobre 2026.
+Constitution du 4 octobre 1958, article 38 — version en vigueur depuis le 25 juillet 2008, lue sur Légifrance le 6 octobre 2026.
+Constitution du 4 octobre 1958, article 47 — version en vigueur depuis le 25 juillet 2008, lue sur Légifrance le 11 octobre 2026.
+Constitution du 4 octobre 1958, article 49 — version en vigueur depuis le 1er mars 2009, lue sur Légifrance le 11 octobre 2026.
+Constitution du 4 octobre 1958, article 50 — version en vigueur depuis le 5 octobre 1958, lue sur Légifrance le 11 octobre 2026.
+Constitution du 4 octobre 1958, article 52 — version en vigueur depuis le 5 octobre 1958, lue sur Légifrance le 30 septembre 2026.
+Constitution du 4 octobre 1958, article 53 — version en vigueur depuis le 5 octobre 1958, lue sur Légifrance le 11 octobre 2026.
+Constitution du 4 octobre 1958, article 54 — version en vigueur depuis le 26 juin 1992, lue sur Légifrance le 30 septembre 2026.
+Constitution du 4 octobre 1958, article 56 — version en vigueur depuis le 25 juillet 2008, lue sur Légifrance le 30 septembre 2026.
+Constitution du 4 octobre 1958, article 60 — version en vigueur depuis le 2 mars 2005, lue sur Légifrance le 11 octobre 2026.
+Constitution du 4 octobre 1958, article 61 — version en vigueur depuis le 25 juillet 2008, lue sur Légifrance le 30 septembre 2026.
+Constitution du 4 octobre 1958, article 65 — version en vigueur depuis le 25 juillet 2008, lue sur Légifrance le 11 octobre 2026.
+Ordonnance n° 58-1067 du 7 novembre 1958 portant loi organique sur le Conseil constitutionnel, article 1 — version en vigueur depuis le 9 novembre 1958, lue sur Légifrance le 11 octobre 2026.
+Ordonnance n° 58-1067 du 7 novembre 1958 portant loi organique sur le Conseil constitutionnel, article 46 — version en vigueur depuis le 9 novembre 1958, lue sur Légifrance le 11 octobre 2026.
+Ordonnance n° 58-1136 du 28 novembre 1958 portant loi organique concernant les nominations aux emplois civils et militaires de l'État, article 1 — version en vigueur depuis le 12 août 2016, lue sur Légifrance le 11 octobre 2026.
+Ordonnance n° 58-1136 du 28 novembre 1958, article 2 — version en vigueur depuis le 29 novembre 1958, lue sur Légifrance le 11 octobre 2026.
+Ordonnance n° 58-1136 du 28 novembre 1958, article 3 — version en vigueur depuis le 29 novembre 1958, lue sur Légifrance le 11 octobre 2026.
+Conseil d'État, Assemblée, 2 mars 1962, n° 55049 et 55055, Rubin de Servens — décision lue sur Légifrance le 11 octobre 2026.
+Conseil d'État, Assemblée, 10 septembre 1992, n° 140376 et autres, Meyet — décision lue sur Légifrance le 11 octobre 2026.
+Conseil d'État, 6e et 5e chambres réunies, 5 février 2024, n° 470962 — décision lue sur Légifrance le 11 octobre 2026.
+Télécharger les données (licence CC BY 4.0) : CSV, en format long, une ligne par citation ou par case vide, avec sa temporalité, son caractère facultatif et la justification de son classement ; JSON, avec les définitions, les critères de compte et le compte rendu des contrôles.
+Une version antérieure de ce jeu, une ligne par disposition, est archivée sur Zenodo avec les six autres de la même série et leur note de méthode : doi:10.5281/zenodo.23212664 ; le jeu téléchargeable ici, acte par acte, la remplace.
+Réutiliser cette page
+Les figures, les données et une citation prête, sous licence libre.
+Chaque figure porte dans l'image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
+Les huit dispositions de l’article 19, acte par acte : ce que le texte de chaque article exige avant, qui il fait intervenir ensuite
+Les huit dispositions que l'article 19 dispense de contreseing contiennent douze actes.
+Neuf de ces actes font intervenir, dans leur propre article, un autre acteur avant ou après la décision du président.
+Trois seulement n'y prévoient ni proposition, consultation ou acte d'un autre acteur avant l'acte, ni intervention d'un autre acteur pour la suite : nommer le Premier ministre, adresser un message au Parlement et désigner le président du Conseil constitutionnel.
+Ce compte décrit le texte de chaque article, non la pratique.
+Précaution d'interprétation.
+Case pleine : citation exacte de l’article (liste et justification sur la page).
+Case vide : rien dans cet article ; ne dit rien des autres articles ni de la pratique. « Exigé avant » : proposition, consultation ou acte d’un autre acteur ; « autre acteur » : institution, autorité ou corps électoral à qui l’article attribue une intervention distincte après l’acte, même facultative ; les modalités matérielles d’exécution ne comptent pas.
+Constitution du 4 octobre 1958, art.
+8, 11, 12, 16, 18, 19, 54, 56, 61, versions en vigueur lues sur Légifrance
+Télécharger en PNG
+SVG
+Citer cette page
+Lalut, Stéphane (2026). « Que peut décider le président de la République seul ? ».
+Données Légifrance (Constitution du 4 octobre 1958), relevé du 11/10/2026 (textes lus sur Légifrance du 30/09/2026 au 11/10/2026). https://stephane-lalut.com/pouvoirs-du-president-de-la-republique/
+Copier la citation
+En trois phrases
+Cette page lit dans le texte de la Constitution les huit dispositions que l’article 19 dispense de contreseing.
+Lues acte par acte, elles en contiennent douze ; trois seulement, nommer le Premier ministre, adresser un message au Parlement et désigner le président du Conseil constitutionnel, ne prévoient dans leur article ni proposition, consultation ou acte d’un autre acteur avant, ni intervention d’un autre acteur pour la suite.
+Ce compte décrit le texte de chaque article, non la pratique.
+La loi, qui passe par le Parlement mais pas toujours par un vote sur le texte (art.
+47 et 49, al.
+3), fixe notamment l’impôt (art.
+34) ; le Premier ministre exerce le pouvoir réglementaire (art.
+21), hors les décrets délibérés en Conseil des ministres, que le président signe et qui sont contresignés.
+Copier le résumé
+Les données
+L'inventaire des huit dispositions de l'article 19, acte par acte : chaque élément avec sa citation exacte, son article, sa date de lecture, sa temporalité et la justification de son classement, et les articles qui attribuent la loi et le règlement ; le même contenu existe en CSV, en format long, lisible dans un tableur.
+Télécharger en JSON CSV
+Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
+Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
+Les séries brutes appartiennent à leurs producteurs (Légifrance (Constitution du 4 octobre 1958)), sous leurs propres conditions.
+Toutes les ressources : données, dossiers et repères →
+Transmettre
+WhatsApp
+Bluesky
+LinkedIn
+X
+E-mail
+Copier le lien

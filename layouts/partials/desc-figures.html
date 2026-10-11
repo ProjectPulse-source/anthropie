@@ -148,6 +148,15 @@
   {{- end -}}
 {{- end -}}
 {{- if in $text "{lan." -}}{{- errorf "desc-figures: placeholder {lan.*} non resolu dans : %s" $text -}}{{- end -}}
+{{- /* Dossier Promesses, volet « Décider » : placeholders {pv.<cle>}, depuis data/pouvoirs_president_donnees.json
+       (bloc affichage, scripts/update_pouvoirs_president.py ; chapô et FAQ de la page, 11/10/2026). Page anglaise :
+       bloc affichage_en (strict). Meme contrat. */ -}}
+{{- with site.Data.pouvoirs_president_donnees -}}
+  {{- range $k, $v := (cond (eq site.Language.Lang "en") .affichage_en .affichage) -}}
+    {{- $text = replace $text (printf "{pv.%s}" $k) $v -}}
+  {{- end -}}
+{{- end -}}
+{{- if in $text "{pv." -}}{{- errorf "desc-figures: placeholder {pv.*} non resolu dans : %s" $text -}}{{- end -}}
 {{- with .isbn -}}
   {{- range where site.Data.works.works "isbn" . -}}
     {{- with .corpus_stats -}}

@@ -1,19 +1,24 @@
 {{- /* {{< pouvoirs-president vue="tableau" >}}          — synthèse : pouvoir, articles, contreseing
-       {{< pouvoirs-president vue="citations" >}}        — inventaire de l'article 19, citation par citation
-       {{< pouvoirs-president vue="regles" >}}           — qui fixe les règles (art. 34, 37, 21, 13, 19)
+       {{< pouvoirs-president vue="citations" >}}        — inventaire de l'article 19, acte par acte, citation par citation
+       {{< pouvoirs-president vue="regles" >}}           — qui fixe les règles (art. 34, 37, 21, 13, 19, 38, 47, 49)
        {{< pouvoirs-president vue="sans_contreseing" >}} — fiches d'un groupe (id de groupe de la base)
-       {{< pouvoirs-president vue="sources" >}}          — articles cités, lien Légifrance, date de lecture
+       {{< pouvoirs-president vue="sources" >}}          — textes cités (fiches ET règles), lien Légifrance, date de lecture
 
        Vue de data/pouvoirs_president.yaml (décision D3, registre GEO-PLUS, tour 5) : la page ne
        porte aucun contenu juridique en dur, la base est la source unique.
+
+       Refonte du 11/10/2026 : l'inventaire est ACTE PAR ACTE (douze actes pour huit renvois) ; une case pleine est une
+       LISTE de citations, chacune avec sa justification ; les cases vides décisives ont la leur (`vides`). Le registre
+       `articles` porte aussi des textes organiques (ord58-…) et des décisions du Conseil d'État (ce-…, `cetatext`), avec
+       un libellé court `ref` et un libellé long `texte` ; la vue `sources` les range par `ordre`.
 
        BILINGUE (06/10/2026) : sur une page anglaise, les textes viennent de data/pouvoirs_president_en.yaml (mêmes
        clés, vérifié par le générateur, garde G2-EN) ; les citations de la Constitution y sont celles de la traduction
        publiée par le Conseil constitutionnel, et leur lien pointe vers cette traduction. Une entrée anglaise absente
        arrête le build : jamais de repli silencieux sur le français.
 
-       RÈGLE DE PREUVE, appliquée ici : un pouvoir dont un article cité n'a pas de `lu_le` ne
-       s'affiche pas, et le build l'annonce (warnf). Un article cité absent du registre
+       RÈGLE DE PREUVE, appliquée ici : un pouvoir dont un texte cité n'a pas de `lu_le` ne
+       s'affiche pas, et le build l'annonce (warnf). Un texte cité absent du registre
        `articles` arrête le build : ce serait une référence sans lecture. Une vue inconnue ou
        un groupe vide arrêtent aussi le build : un bloc muet passerait la relecture. */ -}}
 {{- $d := site.Data.pouvoirs_president -}}
@@ -23,18 +28,19 @@
 {{- if and $en (not $E) -}}{{ errorf "pouvoirs-president: data/pouvoirs_president_en.yaml absent (%s)" .Page.File.Path }}{{- end -}}
 {{- $vue := .Get "vue" -}}
 {{- $lf := "https://www.legifrance.gouv.fr/loda/article_lc/" -}}
+{{- $jade := "https://www.legifrance.gouv.fr/ceta/id/" -}}
 {{- $cc := "https://www.conseil-constitutionnel.fr/en/constitution-of-4-october-1958" -}}
 
-{{- /* Filtre de preuve, commun aux trois vues */ -}}
+{{- /* Filtre de preuve, commun aux vues */ -}}
 {{- $lus := slice -}}
 {{- range $d.pouvoirs -}}
   {{- $ok := true -}}
   {{- range .articles -}}
     {{- $a := index $d.articles . -}}
-    {{- if not $a -}}{{ errorf "pouvoirs-president: article %s cite sans entree dans `articles`" . }}{{- end -}}
+    {{- if not $a -}}{{ errorf "pouvoirs-president: texte %s cite sans entree dans `articles`" . }}{{- end -}}
     {{- if not $a.lu_le -}}{{- $ok = false -}}{{- end -}}
   {{- end -}}
-  {{- if $ok -}}{{- $lus = $lus | append . -}}{{- else -}}{{ warnf "pouvoirs-president: '%s' masque (article non lu sur Legifrance)" .id }}{{- end -}}
+  {{- if $ok -}}{{- $lus = $lus | append . -}}{{- else -}}{{ warnf "pouvoirs-president: '%s' masque (texte non lu sur Legifrance)" .id }}{{- end -}}
 {{- end -}}
 
 {{- if eq $vue "tableau" -}}
@@ -65,34 +71,51 @@
 </div>
 
 {{- else if eq $vue "citations" -}}
-{{- /* Inventaire de l'article 19, une ligne par attribut renseigné : la citation exacte que le générateur a
-       retrouvée mot pour mot dans le texte archivé (scripts/update_pouvoirs_president.py, garde G2 ; G2-EN). */ -}}
-{{- $libs := dict "acte" "Acte" "condition" "Proposition ou consultation exigée avant l'acte" "autre_autorite" "Un autre acteur intervient pour la suite" "partage" "D'autres autorités disposent d'un pouvoir de même nature" "limite" "Autre encadrement écrit : temps, objet ou effet" -}}
-{{- if $en -}}{{- $libs = dict "acte" "Act" "condition" "Recommendation or consultation required before the act" "autre_autorite" "Another actor steps in for what follows" "partage" "Other authorities hold a power of the same kind" "limite" "Other written limit: time, subject or effect" -}}{{- end -}}
+{{- /* Inventaire de l'article 19, acte par acte : chaque citation que le générateur a retrouvée mot pour mot dans le
+       texte archivé (scripts/update_pouvoirs_president.py, garde G2 ; G2-EN), sa justification (G6), et la raison de
+       chaque case vide décisive. */ -}}
+{{- $libs := dict "acte" "Acte" "condition" "Exigé avant l'acte" "autre_autorite" "Autre acteur pour la suite" "partage" "Pouvoir de même nature ailleurs" "limite" "Autre encadrement écrit" -}}
+{{- if $en -}}{{- $libs = dict "acte" "Act" "condition" "Required before the act" "autre_autorite" "Another actor afterwards" "partage" "Power of the same kind elsewhere" "limite" "Other written limit" -}}{{- end -}}
 {{- if not $d.inventaire_19 -}}{{ errorf "pouvoirs-president: inventaire_19 absent (%s)" .Page.File.Path }}{{- end -}}
 <div class="table-scroll">
 <table class="pouvoirs-table pouvoirs-citations">
   {{- if $en }}
-  <caption>The quotations that fill the matrix, article by article (English translation published by the Conseil constitutionnel)</caption>
-  <thead><tr><th scope="col">Provision</th><th scope="col">Element</th><th scope="col">Text of the article</th></tr></thead>
+  <caption>Inventory of article 19, act by act (English translation published by the Conseil constitutionnel; the reason for each classification is given, in French, in the dataset)</caption>
+  <thead><tr><th scope="col">Act</th><th scope="col">Element</th><th scope="col">Text of the article</th></tr></thead>
   {{- else }}
-  <caption>Les citations qui remplissent la matrice, article par article</caption>
-  <thead><tr><th scope="col">Disposition</th><th scope="col">Élément</th><th scope="col">Texte de l'article</th></tr></thead>
+  <caption>Inventaire de l'article&nbsp;19, acte par acte</caption>
+  <thead><tr><th scope="col">Acte</th><th scope="col">Élément</th><th scope="col">Texte de l'article et raison du classement</th></tr></thead>
   {{- end }}
   <tbody>
   {{- range $d.inventaire_19 }}
     {{- $e := . -}}
     {{- $x := dict -}}
-    {{- if $en }}{{ $x = index $E.inventaire_19 $e.renvoi }}{{ if not $x }}{{ errorf "pouvoirs-president: renvoi %s sans traduction" $e.renvoi }}{{ end }}{{ end -}}
-    {{- range $k := slice "acte" "condition" "autre_autorite" "partage" "limite" }}
-      {{- with index $e $k }}
-      {{- if $en }}
-    <tr><th scope="row">art.&nbsp;{{ replace $e.renvoi "al." "para." }}</th><td>{{ index $libs $k }}</td>
-      <td><a href="{{ $cc }}">“{{ index $x $k }}”</a></td></tr>
+    {{- if $en }}{{ $x = index $E.inventaire_19 $e.id }}{{ if not $x }}{{ errorf "pouvoirs-president: acte %s sans traduction" $e.id }}{{ end }}{{ end -}}
+    {{- $nom := cond $en $x.pouvoir $e.pouvoir -}}
+    {{- $art := cond $en (replace $e.renvoi "al." "para.") $e.renvoi -}}
+    {{- /* L'acte */ -}}
+    {{- $ax := cond $en $x.acte $e.acte.cite -}}
+    {{- $actx := "" -}}{{- $acte_cite := $ax -}}
+    {{- if reflect.IsMap $ax }}{{ $acte_cite = $ax.cite }}{{ $actx = $ax.contexte }}{{ end -}}
+    {{- if $e.acte.contexte }}{{ if not $en }}{{ $actx = $e.acte.contexte }}{{ end }}{{ end }}
+    <tr class="pv-acte"><th scope="row">{{ if $en }}{{ $nom }}{{ else }}{{ partial "fr-typo.html" $nom }}{{ end }}<br><span class="pv-art">art.&nbsp;{{ $art }}</span></th><td>{{ index $libs "acte" }}</td>
+      <td>{{ with $actx }}[{{ . }}]&nbsp;{{ end }}{{ if $en }}<a href="{{ $cc }}">“{{ $acte_cite }}”</a>{{ else }}<a href="{{ $lf }}{{ (index $d.articles $e.acte.art).legiarti }}">«&nbsp;{{ $acte_cite }}&nbsp;»</a>{{ end }}</td></tr>
+    {{- range $k := slice "condition" "autre_autorite" "partage" "limite" }}
+      {{- $liste := index $e $k -}}
+      {{- if $liste }}
+        {{- range $i, $c := $liste }}
+          {{- $t := dict -}}
+          {{- if $en }}{{ $t = index (index $x $k) $i }}{{ end -}}
+          {{- $cite := $c.cite -}}{{- $ctx := $c.contexte -}}
+          {{- if $en }}{{ if reflect.IsMap $t }}{{ $cite = $t.cite }}{{ $ctx = $t.contexte }}{{ else }}{{ $cite = $t }}{{ $ctx = "" }}{{ end }}{{ end }}
+    <tr><th scope="row"><span class="pv-art">art.&nbsp;{{ $art }}</span></th><td>{{ index $libs $k }}{{ if $c.facultatif }}{{ if $en }} (optional or conditional){{ else }} (facultatif ou sous condition){{ end }}{{ end }}</td>
+      <td>{{ with $ctx }}[{{ . }}]&nbsp;{{ end }}{{ if $en }}<a href="{{ $cc }}">“{{ $cite }}”</a>{{ else }}<a href="{{ $lf }}{{ (index $d.articles $c.art).legiarti }}">«&nbsp;{{ $cite }}&nbsp;»</a><br><span class="pv-raison">{{ partial "fr-typo.html" $c.justification }}</span>{{ end }}</td></tr>
+        {{- end }}
       {{- else }}
-    <tr><th scope="row">art.&nbsp;{{ $e.renvoi }}</th><td>{{ index $libs $k }}</td>
-      <td><a href="{{ $lf }}{{ (index $d.articles .art).legiarti }}">«&nbsp;{{ .cite }}&nbsp;»</a></td></tr>
-      {{- end }}
+        {{- with index ($e.vides | default dict) $k }}
+    <tr><th scope="row"><span class="pv-art">art.&nbsp;{{ $art }}</span></th><td>{{ index $libs $k }}</td>
+      <td>{{ if $en }}<em>Empty cell.</em> The reason is given, in French, in the dataset.{{ else }}<em>Case vide.</em> <span class="pv-raison">{{ partial "fr-typo.html" . }}</span>{{ end }}</td></tr>
+        {{- end }}
       {{- end }}
     {{- end }}
   {{- end }}
@@ -102,6 +125,7 @@
 
 {{- else if eq $vue "regles" -}}
 {{- if not $d.regles -}}{{ errorf "pouvoirs-president: regles absent (%s)" .Page.File.Path }}{{- end -}}
+<details class="repli"><summary>{{ if $en }}The articles cited, word for word{{ else }}Les articles cités, mot pour mot{{ end }}</summary>
 <ul class="pouvoirs-regles">
 {{- range $i, $r := $d.regles }}
   {{- if $en }}
@@ -112,21 +136,26 @@
   {{- end }}
 {{- end }}
 </ul>
+</details>
 
 {{- else if eq $vue "sources" -}}
-{{- $cites := slice -}}
-{{- range $lus }}{{ range .articles }}{{ $cites = $cites | append . }}{{ end }}{{ end -}}
-{{- $cites = $cites | uniq -}}
-{{- $tries := slice -}}
-{{- range $cites }}{{ $tries = $tries | append (int .) }}{{ end -}}
+{{- /* Tous les textes cités : ceux des fiches ET ceux des règles (défaut B6 du diagnostic : les art. 34, 37 et 38,
+       cités et lus, manquaient), rangés par `ordre`. */ -}}
+{{- $cles := slice -}}
+{{- range $lus }}{{ range .articles }}{{ $cles = $cles | append . }}{{ end }}{{ end -}}
+{{- range $d.regles }}{{ $cles = $cles | append .art }}{{ end -}}
+{{- range $d.inventaire_19 }}{{ $cles = $cles | append .acte.art }}{{ end -}}
+{{- $cles = $cles | uniq -}}
+{{- $liste := slice -}}
+{{- range $cles }}{{ $liste = $liste | append (merge (index $d.articles .) (dict "cle" .)) }}{{ end -}}
 <ul class="pouvoirs-sources">
-{{- range sort $tries }}
-  {{- $n := string . -}}
-  {{- $a := index $d.articles $n }}
+{{- range sort $liste "ordre" }}
+  {{- $url := cond (isset . "cetatext") (printf "%s%s" $jade (.cetatext | default "")) (printf "%s%s" $lf (.legiarti | default "")) -}}
+  {{- $lib := .texte | default (cond $en (printf "Constitution of 4 October 1958, article %s" .cle) (printf "Constitution du 4&nbsp;octobre 1958, article&nbsp;%s" .cle)) -}}
   {{- if $en }}
-  <li><a href="{{ $lf }}{{ $a.legiarti }}" hreflang="fr">Constitution of 4 October 1958, article {{ $n }}</a> (in French) — version in force since {{ time.Format "2 January 2006" $a.vigueur_depuis }}, read on Légifrance on {{ time.Format "2 January 2006" $a.lu_le }}.</li>
+  <li><a href="{{ $url }}" hreflang="fr">{{ $lib }}</a> (in French) — {{ if and .vigueur_depuis (ne .etat "MODIFIE") }}version in force since {{ time.Format "2 January 2006" .vigueur_depuis }}, {{ end }}read on Légifrance on {{ time.Format "2 January 2006" .lu_le }}.</li>
   {{- else }}
-  <li><a href="{{ $lf }}{{ $a.legiarti }}">Constitution du 4&nbsp;octobre 1958, article&nbsp;{{ $n }}</a> — version en vigueur depuis le {{ time.Format "2 January 2006" $a.vigueur_depuis }}, lue sur Légifrance le {{ time.Format "2 January 2006" $a.lu_le }}.</li>
+  <li><a href="{{ $url }}">{{ $lib | safeHTML }}</a> — {{ if and .vigueur_depuis (ne .etat "MODIFIE") }}{{ $v := time .vigueur_depuis }}version en vigueur depuis le {{ if eq $v.Day 1 }}1er {{ time.Format "January 2006" $v }}{{ else }}{{ time.Format "2 January 2006" $v }}{{ end }}, {{ end }}{{ if isset . "cetatext" }}décision lue{{ else }}lue{{ end }} sur Légifrance le {{ $l := time .lu_le }}{{ if eq $l.Day 1 }}1er {{ time.Format "January 2006" $l }}{{ else }}{{ time.Format "2 January 2006" $l }}{{ end }}.</li>
   {{- end }}
 {{- end }}
 </ul>
@@ -138,28 +167,43 @@
 {{- if not $items -}}{{ errorf "pouvoirs-president: groupe '%s' vide (%s)" $vue .Page.File.Path }}{{- end -}}
 <div class="pouvoirs-fiches">
 {{- range $items }}
+  {{- $p := . -}}
   {{- if $en }}
   {{- $x := index $E.pouvoirs .id }}{{ if not $x }}{{ errorf "pouvoirs-president: fiche %s sans traduction" .id }}{{ end }}
   <section class="pouvoir-fiche" id="{{ .id }}">
     <h3>{{ $x.question }}</h3>
+    {{- if not $x.bref }}{{ errorf "pouvoirs-president: fiche %s sans reponse courte (bref) en anglais" .id }}{{ end }}
+    <p class="fiche-bref">{{ $x.bref }}</p>
+    <details class="repli"><summary>The detail, quotation by quotation</summary>
     <dl>
-      <dt>Basis</dt><dd>{{ range $i, $n := .articles }}{{ if $i }}, {{ end }}<a href="{{ $lf }}{{ (index $d.articles $n).legiarti }}" hreflang="fr">art. {{ $n }}</a>{{ end }}</dd>
+      <dt>Basis</dt><dd>{{ range $i, $n := .articles }}{{ $a := index $d.articles $n }}{{ if $i }}, {{ end }}<a href="{{ if $a.cetatext }}{{ $jade }}{{ $a.cetatext }}{{ else }}{{ $lf }}{{ $a.legiarti }}{{ end }}" hreflang="fr">{{ $a.ref | default (printf "art. %s" $n) }}</a>{{ end }}</dd>
       <dt>Who decides</dt><dd>{{ $x.decide }}</dd>
-      <dt>Condition</dt><dd>{{ $x.condition }}</dd>
-      <dt>Other actor involved</dt><dd>{{ $x.tiers }}</dd>
+      <dt>Required before the act</dt><dd>{{ $x.condition }}</dd>
+      <dt>Who steps in afterwards</dt><dd>{{ $x.tiers }}</dd>
       <dt>Effect of the act</dt><dd>{{ $x.portee_texte }}</dd>
+      {{- with $x.chaine }}
+      <dt>Beyond this article</dt><dd>{{ . }}</dd>
+      {{- end }}
     </dl>
+    </details>
   </section>
   {{- else }}
   <section class="pouvoir-fiche" id="{{ .id }}">
     <h3>{{ partial "fr-typo.html" .question }}</h3>
+    {{- if not .bref }}{{ errorf "pouvoirs-president: fiche %s sans reponse courte (bref)" .id }}{{ end }}
+    <p class="fiche-bref">{{ partial "fr-typo.html" .bref }}</p>
+    <details class="repli"><summary>Le détail, citation par citation</summary>
     <dl>
-      <dt>Base</dt><dd>{{ range $i, $n := .articles }}{{ if $i }}, {{ end }}<a href="{{ $lf }}{{ (index $d.articles $n).legiarti }}">art.&nbsp;{{ $n }}</a>{{ end }}</dd>
+      <dt>Base</dt><dd>{{ range $i, $n := .articles }}{{ $a := index $d.articles $n }}{{ if $i }}, {{ end }}<a href="{{ if $a.cetatext }}{{ $jade }}{{ $a.cetatext }}{{ else }}{{ $lf }}{{ $a.legiarti }}{{ end }}">{{ partial "fr-typo.html" ($a.ref | default (printf "art. %s" $n)) }}</a>{{ end }}</dd>
       <dt>Qui décide</dt><dd>{{ partial "fr-typo.html" .decide }}</dd>
-      <dt>Condition</dt><dd>{{ partial "fr-typo.html" .condition }}</dd>
-      <dt>Tiers nécessaire</dt><dd>{{ partial "fr-typo.html" .tiers }}</dd>
+      <dt>Exigé avant l'acte</dt><dd>{{ partial "fr-typo.html" .condition }}</dd>
+      <dt>Qui intervient ensuite</dt><dd>{{ partial "fr-typo.html" .tiers }}</dd>
       <dt>Ce que l'acte produit</dt><dd>{{ partial "fr-typo.html" .portee_texte }}</dd>
+      {{- with .chaine }}
+      <dt>Au-delà de cet article</dt><dd>{{ partial "fr-typo.html" . }}</dd>
+      {{- end }}
     </dl>
+    </details>
   </section>
   {{- end }}
 {{- end }}

@@ -1,30 +1,50 @@
 {
- "releve_le": "2026-10-06",
- "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; texte de la Constitution : Légifrance (DILA), Licence Ouverte",
+ "releve_le": "2026-10-11",
+ "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; textes : Légifrance (DILA), Licence Ouverte",
  "meta": {
   "page": "https://stephane-lalut.com/pouvoirs-du-president-de-la-republique/",
-  "protocole": "fiches de preuve v2, volet Décider, E1",
+  "protocole": "fiches de preuve v2, volet Décider, E1 ; refonte du 11/10/2026",
+  "statut": "lecture documentaire de la Constitution, sans certification juridique ; chaque case « lue sur le texte » par l'équipe de rédaction, aucune relue par un juriste",
   "definitions": {
-   "condition": "Proposition ou consultation exigée avant l'acte",
-   "autre_autorite": "Un autre acteur intervient pour la suite",
+   "condition": "Proposition, consultation ou acte d'un autre acteur exigé avant l'acte",
+   "autre_autorite": "Un autre acteur intervient pour la suite (y compris de façon facultative)",
    "partage": "D'autres autorités disposent d'un pouvoir de même nature",
    "limite": "Autre encadrement écrit : temps, objet ou effet"
   },
-  "lecture": "Une case renseignée = une citation exacte de l'article indiqué ; une case vide ne dit rien des autres articles ni de la pratique institutionnelle."
+  "niveaux": {
+   "1": "texte de l'article visé par l'article 19 (seul périmètre de la matrice et des comptes)",
+   "2": "chaîne constitutionnelle et organique (fiches, champ chaine)",
+   "3": "exercice politique, jurisprudence et pratique (prose de la page)"
+  },
+  "criteres": {
+   "commun": "acte sans proposition, consultation ou acte d'un autre acteur exigé avant, ni intervention prévue d'un autre acteur pour la suite, dans le texte de son article (colonnes condition et autre_autorite vides)",
+   "par_renvoi": "chaque renvoi de l'article 19 représenté par son acte principal, le premier que son article attribue au président (convention du jeu publié le 06/10/2026)",
+   "par_acte": "chaque acte distingué dans un même article"
+  },
+  "lecture": "Une case renseignée = une ou plusieurs citations exactes de l'article indiqué ; une case vide ne dit rien des autres articles ni de la pratique institutionnelle."
  },
  "gardes": [
-  "G2 : 25 citations de l'inventaire retrouvees mot pour mot",
-  "G2 : 7 citations de « qui fixe les regles » retrouvees",
-  "G2 : 13 citations entre guillemets des fiches retrouvees",
-  "G3 : inventaire complet, 8 renvois relus dans l'article 19 (8, 11, 12, 16, 18, 54, 56, 61)",
-  "G4 : « seulement » tenu (2 sur 8)",
-  "G4 bis : la colonne des pouvoirs partages ne change pas le compte",
-  "G2 : 4 citations du texte de la page retrouvees (FR et EN)",
-  "G2-EN : 32 citations anglaises (Conseil constitutionnel) et 18 citations des fiches anglaises retrouvees"
+  "G2 : 51 citations de l'inventaire retrouvees mot pour mot",
+  "G6 : chaque citation porte temporalite, facultatif et justification ; chaque case vide decisive est justifiee",
+  "G2 : 9 citations de « qui fixe les regles » retrouvees",
+  "G2 : 69 citations entre guillemets des fiches retrouvees",
+  "G3 : inventaire complet, 8 renvois relus dans l'article 19 (8, 11, 12, 16, 18, 54, 56, 61), 12 actes",
+  "G4 : « seulement » tenu par renvoi (2 sur 8) et par acte (3 sur 12)",
+  "G4 bis : la colonne des pouvoirs partages ne change aucun compte",
+  "G7 : comptes tenus (par renvoi 2, par acte 3)",
+  "G2 : 9 citations du texte de la page retrouvees (FR et EN)",
+  "G2-EN : 60 citations anglaises (Conseil constitutionnel) et 65 citations des fiches anglaises retrouvees",
+  "G5 : aucun motif « sans tiers » dans 725 textes (pages, bases)",
+  "G8 : 2 paragraphe(s) donnent le compte par renvoi, tous dans le repli de methode, avec son denominateur et le compte par acte ; chapo et description par jeton",
+  "G5 : aucun motif « sans tiers » dans 729 textes (pages, bases, figures)",
+  "G8 figure : aucun compte par disposition dans 6 textes de figure",
+  "parite telephone : 4 figures, cases identiques au bureau, police >= 13.5"
  ],
  "inventaire": [
   {
+   "id": "8-nommer",
    "renvoi": "8, al. 1",
+   "principal": true,
    "pouvoir": "Nommer le Premier ministre",
    "ancre": "nommer-premier-ministre",
    "acte": {
@@ -34,101 +54,351 @@
    "condition": null,
    "autre_autorite": null,
    "partage": null,
-   "limite": {
+   "limite": null,
+   "vides": {
+    "condition": "La première phrase de l'article 8 n'exige ni proposition, ni consultation, ni acte préalable d'un autre acteur.",
+    "autre_autorite": "L'article 8 ne fait intervenir aucun autre acteur après la nomination ; la responsabilité du Gouvernement devant le Parlement relève de l'article 20 (deuxième niveau de lecture).",
+    "limite": "La phrase ne fixe ni délai, ni objet, ni effet à la nomination."
+   },
+   "legifrance": {}
+  },
+  {
+   "id": "8-fin",
+   "renvoi": "8, al. 1",
+   "pouvoir": "Mettre fin aux fonctions du Premier ministre",
+   "court": "Mettre fin aux fonctions du Premier ministre",
+   "ancre": "nommer-premier-ministre",
+   "acte": {
     "art": "8",
-    "cite": "Il met fin à ses fonctions sur la présentation par celui-ci de la démission du Gouvernement."
+    "cite": "Il met fin à ses fonctions"
+   },
+   "condition": [
+    {
+     "art": "8",
+     "cite": "sur la présentation par celui-ci de la démission du Gouvernement",
+     "temporalite": "avant",
+     "facultatif": false,
+     "justification": "Acte d'un autre acteur (le Premier ministre) que le texte exige avant la fin des fonctions : ni une proposition ni une consultation, d'où la définition élargie de la colonne."
+    }
+   ],
+   "autre_autorite": null,
+   "partage": null,
+   "limite": null,
+   "vides": {
+    "autre_autorite": "La deuxième phrase de l'article 8 ne fait intervenir personne après l'acte.",
+    "limite": "Aucun délai, objet ou effet écrit ; l'obligation de démission de l'article 50 relève du deuxième niveau de lecture."
    },
    "legifrance": {
-    "acte": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006527467",
-    "limite": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006527467"
+    "condition": [
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006527467"
+    ]
    }
   },
   {
+   "id": "11-projet",
    "renvoi": "11",
+   "principal": true,
    "pouvoir": "Soumettre un projet de loi au référendum",
+   "court": "Référendum sur un projet de loi",
    "ancre": "referendum",
    "acte": {
     "art": "11",
     "cite": "peut soumettre au référendum tout projet de loi"
    },
-   "condition": {
-    "art": "11",
-    "cite": "sur proposition du Gouvernement pendant la durée des sessions ou sur proposition conjointe des deux assemblées"
-   },
-   "autre_autorite": {
-    "art": "11",
-    "cite": "Lorsque le référendum a conclu à l'adoption du projet ou de la proposition de loi"
-   },
+   "condition": [
+    {
+     "art": "11",
+     "cite": "sur proposition du Gouvernement pendant la durée des sessions ou sur proposition conjointe des deux assemblées",
+     "temporalite": "avant",
+     "facultatif": false,
+     "justification": "Proposition d'un autre acteur exigée avant que le président puisse soumettre le texte."
+    }
+   ],
+   "autre_autorite": [
+    {
+     "art": "11",
+     "cite": "celui-ci fait, devant chaque assemblée, une déclaration qui est suivie d'un débat",
+     "contexte": "le Gouvernement, lorsque le référendum est organisé sur sa proposition",
+     "temporalite": "après",
+     "facultatif": false,
+     "justification": "Le Gouvernement et les assemblées interviennent après la décision de soumettre, lorsque le référendum est organisé sur proposition du Gouvernement."
+    },
+    {
+     "art": "11",
+     "cite": "Lorsque le référendum a conclu à l'adoption du projet ou de la proposition de loi",
+     "temporalite": "après",
+     "facultatif": false,
+     "justification": "Les électeurs décident de l'issue."
+    }
+   ],
    "partage": null,
-   "limite": {
-    "art": "11",
-    "cite": "portant sur l'organisation des pouvoirs publics, sur des réformes relatives à la politique économique, sociale ou environnementale de la nation et aux services publics qui y concourent"
-   },
+   "limite": [
+    {
+     "art": "11",
+     "cite": "portant sur l'organisation des pouvoirs publics, sur des réformes relatives à la politique économique, sociale ou environnementale de la nation et aux services publics qui y concourent",
+     "temporalite": "permanent",
+     "facultatif": false,
+     "justification": "Objet limité par le texte."
+    },
+    {
+     "art": "11",
+     "cite": "le Président de la République promulgue la loi dans les quinze jours qui suivent la proclamation des résultats de la consultation",
+     "temporalite": "après",
+     "facultatif": false,
+     "justification": "La promulgation est un acte du président, non d'un autre acteur ; le texte l'enferme dans un délai : limite de temps."
+    }
+   ],
    "legifrance": {
-    "acte": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241004",
-    "condition": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241004",
-    "autre_autorite": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241004",
-    "limite": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241004"
+    "condition": [
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241004"
+    ],
+    "autre_autorite": [
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241004",
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241004"
+    ],
+    "limite": [
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241004",
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241004"
+    ]
    }
   },
   {
+   "id": "11-initiative",
+   "renvoi": "11",
+   "pouvoir": "Soumettre au référendum une proposition de loi d'initiative partagée",
+   "court": "Référendum d'initiative partagée",
+   "ancre": "referendum",
+   "acte": {
+    "art": "11",
+    "cite": "le Président de la République la soumet au référendum"
+   },
+   "condition": [
+    {
+     "art": "11",
+     "cite": "à l'initiative d'un cinquième des membres du Parlement, soutenue par un dixième des électeurs inscrits sur les listes électorales",
+     "temporalite": "avant",
+     "facultatif": false,
+     "justification": "Initiative de parlementaires soutenue par des électeurs, exigée avant l'acte."
+    },
+    {
+     "art": "11",
+     "cite": "celles dans lesquelles le Conseil constitutionnel contrôle le respect des dispositions de l'alinéa précédent",
+     "temporalite": "avant",
+     "facultatif": false,
+     "justification": "Contrôle du Conseil constitutionnel prévu avant la soumission."
+    },
+    {
+     "art": "11",
+     "cite": "Si la proposition de loi n'a pas été examinée par les deux assemblées dans un délai fixé par la loi organique",
+     "temporalite": "avant",
+     "facultatif": false,
+     "justification": "L'acte suppose que les deux assemblées n'aient pas examiné la proposition : compétence liée du président (« la soumet »)."
+    }
+   ],
+   "autre_autorite": [
+    {
+     "art": "11",
+     "cite": "Lorsque la proposition de loi n'est pas adoptée par le peuple français",
+     "temporalite": "après",
+     "facultatif": false,
+     "justification": "Les électeurs décident de l'issue."
+    }
+   ],
+   "partage": null,
+   "limite": [
+    {
+     "art": "11",
+     "cite": "ne peut avoir pour objet l'abrogation d'une disposition législative promulguée depuis moins d'un an",
+     "temporalite": "permanent",
+     "facultatif": false,
+     "justification": "Limite d'objet."
+    },
+    {
+     "art": "11",
+     "cite": "aucune nouvelle proposition de référendum portant sur le même sujet ne peut être présentée avant l'expiration d'un délai de deux ans suivant la date du scrutin",
+     "temporalite": "après",
+     "facultatif": false,
+     "justification": "Limite de temps après un rejet."
+    }
+   ],
+   "legifrance": {
+    "condition": [
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241004",
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241004",
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241004"
+    ],
+    "autre_autorite": [
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241004"
+    ],
+    "limite": [
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241004",
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241004"
+    ]
+   }
+  },
+  {
+   "id": "12",
    "renvoi": "12",
+   "principal": true,
    "pouvoir": "Dissoudre l'Assemblée nationale",
    "ancre": "dissolution",
    "acte": {
     "art": "12",
     "cite": "prononcer la dissolution de l'Assemblée nationale"
    },
-   "condition": {
-    "art": "12",
-    "cite": "après consultation du Premier ministre et des Présidents des Assemblées"
-   },
-   "autre_autorite": {
-    "art": "12",
-    "cite": "Les élections générales ont lieu vingt jours au moins et quarante jours au plus après la dissolution."
-   },
+   "condition": [
+    {
+     "art": "12",
+     "cite": "après consultation du Premier ministre et des Présidents des Assemblées",
+     "temporalite": "avant",
+     "facultatif": false,
+     "justification": "Consultation exigée avant l'acte ; le texte n'exige pas d'accord."
+    }
+   ],
+   "autre_autorite": [
+    {
+     "art": "12",
+     "cite": "Les élections générales ont lieu",
+     "temporalite": "après",
+     "facultatif": false,
+     "justification": "Les électeurs interviennent pour la suite."
+    },
+    {
+     "art": "12",
+     "cite": "L'Assemblée nationale se réunit de plein droit le deuxième jeudi qui suit son élection.",
+     "temporalite": "après",
+     "facultatif": false,
+     "justification": "La nouvelle Assemblée se réunit sans convocation du président : seconde intervention écrite pour la suite."
+    }
+   ],
    "partage": null,
-   "limite": {
-    "art": "12",
-    "cite": "Il ne peut être procédé à une nouvelle dissolution dans l'année qui suit ces élections."
-   },
+   "limite": [
+    {
+     "art": "12",
+     "cite": "vingt jours au moins et quarante jours au plus après la dissolution",
+     "temporalite": "après",
+     "facultatif": false,
+     "justification": "Délai des élections : limite de temps."
+    },
+    {
+     "art": "12",
+     "cite": "Il ne peut être procédé à une nouvelle dissolution dans l'année qui suit ces élections.",
+     "temporalite": "après",
+     "facultatif": false,
+     "justification": "Limite de temps sur l'acte suivant."
+    }
+   ],
    "legifrance": {
-    "acte": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006527474",
-    "condition": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006527474",
-    "autre_autorite": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006527474",
-    "limite": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006527474"
+    "condition": [
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006527474"
+    ],
+    "autre_autorite": [
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006527474",
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006527474"
+    ],
+    "limite": [
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006527474",
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006527474"
+    ]
    }
   },
   {
+   "id": "16",
    "renvoi": "16",
+   "principal": true,
    "pouvoir": "Exercer les pouvoirs exceptionnels",
    "ancre": "pouvoirs-exceptionnels",
    "acte": {
     "art": "16",
     "cite": "le Président de la République prend les mesures exigées par ces circonstances"
    },
-   "condition": {
-    "art": "16",
-    "cite": "après consultation officielle du Premier ministre, des Présidents des Assemblées ainsi que du Conseil constitutionnel"
-   },
-   "autre_autorite": {
-    "art": "16",
-    "cite": "Il procède de plein droit à cet examen et se prononce dans les mêmes conditions au terme de soixante jours d'exercice des pouvoirs exceptionnels"
-   },
+   "condition": [
+    {
+     "art": "16",
+     "cite": "après consultation officielle du Premier ministre, des Présidents des Assemblées ainsi que du Conseil constitutionnel",
+     "temporalite": "avant",
+     "facultatif": false,
+     "justification": "Premier temps, la décision d'y recourir : consultation exigée avant."
+    },
+    {
+     "art": "16",
+     "cite": "Le Conseil constitutionnel est consulté à leur sujet.",
+     "contexte": "les mesures",
+     "temporalite": "pendant",
+     "facultatif": false,
+     "justification": "Deuxième temps, les mesures : consultation du Conseil constitutionnel sur chacune, distincte de la consultation initiale."
+    }
+   ],
+   "autre_autorite": [
+    {
+     "art": "16",
+     "cite": "Le Parlement se réunit de plein droit.",
+     "temporalite": "pendant",
+     "facultatif": false,
+     "justification": "Le Parlement intervient de droit pendant l'exercice des pouvoirs."
+    },
+    {
+     "art": "16",
+     "cite": "le Conseil constitutionnel peut être saisi par le Président de l'Assemblée nationale, le Président du Sénat, soixante députés ou soixante sénateurs",
+     "contexte": "après trente jours",
+     "temporalite": "après",
+     "facultatif": true,
+     "justification": "Troisième temps, le maintien : saisine possible par d'autres acteurs après trente jours."
+    },
+    {
+     "art": "16",
+     "cite": "Il procède de plein droit à cet examen et se prononce dans les mêmes conditions au terme de soixante jours d'exercice des pouvoirs exceptionnels",
+     "contexte": "le Conseil constitutionnel",
+     "temporalite": "après",
+     "facultatif": false,
+     "justification": "Troisième temps, le maintien : examen de plein droit, avis public ; l'article ne donne à cet avis aucun effet qui mette fin aux pouvoirs exceptionnels."
+    }
+   ],
    "partage": null,
-   "limite": {
-    "art": "16",
-    "cite": "d'une manière grave et immédiate et que le fonctionnement régulier des pouvoirs publics constitutionnels est interrompu"
-   },
+   "limite": [
+    {
+     "art": "16",
+     "cite": "d'une manière grave et immédiate et que le fonctionnement régulier des pouvoirs publics constitutionnels est interrompu",
+     "temporalite": "avant",
+     "facultatif": false,
+     "justification": "Conditions de fond cumulées : ni proposition ni consultation, donc encadrement d'objet."
+    },
+    {
+     "art": "16",
+     "cite": "dans les moindres délais",
+     "temporalite": "pendant",
+     "facultatif": false,
+     "justification": "But assigné aux mesures : encadrement d'objet et de temps."
+    },
+    {
+     "art": "16",
+     "cite": "L'Assemblée nationale ne peut être dissoute pendant l'exercice des pouvoirs exceptionnels.",
+     "temporalite": "pendant",
+     "facultatif": false,
+     "justification": "Effet sur un autre pouvoir du président."
+    }
+   ],
    "legifrance": {
-    "acte": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241008",
-    "condition": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241008",
-    "autre_autorite": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241008",
-    "limite": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241008"
+    "condition": [
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241008",
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241008"
+    ],
+    "autre_autorite": [
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241008",
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241008",
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241008"
+    ],
+    "limite": [
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241008",
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241008",
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241008"
+    ]
    }
   },
   {
+   "id": "18-message",
    "renvoi": "18",
+   "principal": true,
    "pouvoir": "Adresser un message au Parlement",
    "ancre": "messages-parlement",
    "acte": {
@@ -138,88 +408,269 @@
    "condition": null,
    "autre_autorite": null,
    "partage": null,
-   "limite": {
-    "art": "18",
-    "cite": "qui ne donnent lieu à aucun débat"
+   "limite": [
+    {
+     "art": "18",
+     "cite": "qui ne donnent lieu à aucun débat",
+     "temporalite": "après",
+     "facultatif": false,
+     "justification": "Effet écrit : pas de débat."
+    }
+   ],
+   "vides": {
+    "condition": "Le premier alinéa de l'article 18 n'exige ni proposition ni consultation.",
+    "autre_autorite": "Le message est lu devant les assemblées, mais le texte n'y attache aucune intervention pour la suite : ni débat ni vote."
    },
    "legifrance": {
-    "acte": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241012",
-    "limite": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241012"
+    "limite": [
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241012"
+    ]
    }
   },
   {
+   "id": "18-congres",
+   "renvoi": "18",
+   "pouvoir": "Prendre la parole devant le Parlement réuni en Congrès",
+   "court": "Parler devant le Congrès",
+   "ancre": "messages-parlement",
+   "acte": {
+    "art": "18",
+    "cite": "Il peut prendre la parole devant le Parlement réuni à cet effet en Congrès."
+   },
+   "condition": null,
+   "autre_autorite": [
+    {
+     "art": "18",
+     "cite": "Sa déclaration peut donner lieu, hors sa présence, à un débat",
+     "temporalite": "après",
+     "facultatif": true,
+     "justification": "Débat possible, sans vote : la matrice recense les interventions que le texte prévoit, y compris facultatives."
+    }
+   ],
+   "partage": null,
+   "limite": [
+    {
+     "art": "18",
+     "cite": "qui ne fait l'objet d'aucun vote",
+     "temporalite": "après",
+     "facultatif": false,
+     "justification": "Effet écrit : pas de vote."
+    }
+   ],
+   "vides": {
+    "condition": "Le deuxième alinéa n'exige ni proposition ni consultation ; la réunion des assemblées hors session est une modalité, non une condition préalable posée à un autre acteur."
+   },
+   "legifrance": {
+    "autre_autorite": [
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241012"
+    ],
+    "limite": [
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241012"
+    ]
+   }
+  },
+  {
+   "id": "54",
    "renvoi": "54",
+   "principal": true,
    "pouvoir": "Saisir le Conseil constitutionnel d'un engagement international",
    "court": "Saisir le Conseil constitutionnel d'un traité",
    "ancre": "saisir-cc-traite",
    "acte": {
     "art": "54",
-    "cite": "saisi par le Président de la République"
+    "cite": "saisi par le Président de la République",
+    "contexte": "le Conseil constitutionnel"
    },
    "condition": null,
-   "autre_autorite": {
-    "art": "54",
-    "cite": "a déclaré qu'un engagement international comporte une clause contraire à la Constitution"
+   "autre_autorite": [
+    {
+     "art": "54",
+     "cite": "a déclaré qu'un engagement international comporte une clause contraire à la Constitution",
+     "contexte": "si le Conseil constitutionnel",
+     "temporalite": "après",
+     "facultatif": false,
+     "justification": "Le Conseil constitutionnel décide de l'issue de la saisine."
+    }
+   ],
+   "partage": [
+    {
+     "art": "54",
+     "cite": "par le Premier ministre, par le président de l'une ou l'autre assemblée ou par soixante députés ou soixante sénateurs",
+     "temporalite": "permanent",
+     "facultatif": false,
+     "justification": "D'autres autorités peuvent saisir de même."
+    }
+   ],
+   "limite": [
+    {
+     "art": "54",
+     "cite": "l'autorisation de ratifier ou d'approuver l'engagement international en cause ne peut intervenir qu'après la révision de la Constitution",
+     "temporalite": "après",
+     "facultatif": true,
+     "justification": "Effet conditionnel de l'examen : seulement si une clause est déclarée contraire."
+    }
+   ],
+   "vides": {
+    "condition": "Aucune proposition ni consultation n'est exigée pour saisir."
    },
-   "partage": {
-    "art": "54",
-    "cite": "par le Premier ministre, par le président de l'une ou l'autre assemblée ou par soixante députés ou soixante sénateurs"
-   },
-   "limite": null,
    "legifrance": {
-    "acte": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006527540",
-    "autre_autorite": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006527540",
-    "partage": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006527540"
+    "autre_autorite": [
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006527540"
+    ],
+    "partage": [
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006527540"
+    ],
+    "limite": [
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006527540"
+    ]
    }
   },
   {
+   "id": "56-membres",
    "renvoi": "56",
-   "pouvoir": "Nommer trois membres du Conseil constitutionnel et son président",
-   "court": "Nommer au Conseil constitutionnel",
+   "principal": true,
+   "pouvoir": "Nommer trois membres du Conseil constitutionnel",
+   "court": "Nommer trois membres du Conseil constitutionnel",
    "ancre": "nommer-conseil-constitutionnel",
    "acte": {
     "art": "56",
     "cite": "Trois des membres sont nommés par le Président de la République"
    },
-   "condition": null,
-   "autre_autorite": {
-    "art": "56",
-    "cite": "La procédure prévue au dernier alinéa de l'article 13 est applicable à ces nominations."
+   "condition": [
+    {
+     "art": "56",
+     "cite": "La procédure prévue au dernier alinéa de l'article 13 est applicable à ces nominations.",
+     "temporalite": "avant",
+     "facultatif": false,
+     "justification": "Avis public des commissions compétentes, qui précède la nomination et peut l'empêcher aux trois cinquièmes (art. 13) : d'où son rang avant l'acte."
+    }
+   ],
+   "autre_autorite": null,
+   "partage": [
+    {
+     "art": "56",
+     "cite": "trois par le président de l'Assemblée nationale, trois par le président du Sénat",
+     "temporalite": "permanent",
+     "facultatif": false,
+     "justification": "Deux autres autorités nomment chacune trois membres."
+    }
+   ],
+   "limite": [
+    {
+     "art": "56",
+     "cite": "dont le mandat dure neuf ans et n'est pas renouvelable",
+     "temporalite": "permanent",
+     "facultatif": false,
+     "justification": "Durée et non-renouvellement du mandat."
+    }
+   ],
+   "vides": {
+    "autre_autorite": "Après la nomination, l'article 56 ne fait intervenir aucun autre acteur."
    },
-   "partage": {
-    "art": "56",
-    "cite": "trois par le président de l'Assemblée nationale, trois par le président du Sénat"
-   },
-   "limite": null,
    "legifrance": {
-    "acte": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241071",
-    "autre_autorite": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241071",
-    "partage": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241071"
+    "condition": [
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241071"
+    ],
+    "partage": [
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241071"
+    ],
+    "limite": [
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241071"
+    ]
    }
   },
   {
+   "id": "56-president",
+   "renvoi": "56",
+   "pouvoir": "Désigner le président du Conseil constitutionnel",
+   "court": "Désigner le président du Conseil constitutionnel",
+   "ancre": "nommer-conseil-constitutionnel",
+   "acte": {
+    "art": "56",
+    "cite": "Le Président est nommé par le Président de la République."
+   },
+   "condition": null,
+   "autre_autorite": null,
+   "partage": null,
+   "limite": [
+    {
+     "art": "56",
+     "cite": "Il a voix prépondérante en cas de partage.",
+     "contexte": "le président du Conseil",
+     "temporalite": "permanent",
+     "facultatif": false,
+     "justification": "Effet de la désignation."
+    }
+   ],
+   "vides": {
+    "condition": "La procédure de l'article 13 est « applicable à ces nominations », celles des membres ; l'article 56 n'en prévoit aucune pour la désignation du président du Conseil, qui n'est pas non plus dans la liste de la loi organique n° 2010-837.",
+    "autre_autorite": "Aucun autre acteur n'intervient après la désignation dans l'article 56. Le choix parmi les membres est une contrainte organique (ord. 58-1067, art. 1), au deuxième niveau de lecture."
+   },
+   "legifrance": {
+    "limite": [
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241071"
+    ]
+   }
+  },
+  {
+   "id": "61",
    "renvoi": "61",
+   "principal": true,
    "pouvoir": "Déférer une loi au Conseil constitutionnel",
-   "court": "Déférer une loi au Conseil constitutionnel",
    "ancre": "saisir-cc-loi",
    "acte": {
     "art": "61",
     "cite": "les lois peuvent être déférées au Conseil constitutionnel, avant leur promulgation, par le Président de la République"
    },
    "condition": null,
-   "autre_autorite": {
-    "art": "61",
-    "cite": "le Conseil constitutionnel doit statuer dans le délai d'un mois"
+   "autre_autorite": [
+    {
+     "art": "61",
+     "cite": "le Conseil constitutionnel doit statuer dans le délai d'un mois",
+     "temporalite": "après",
+     "facultatif": false,
+     "justification": "Le Conseil constitutionnel décide de l'issue."
+    }
+   ],
+   "partage": [
+    {
+     "art": "61",
+     "cite": "le Premier ministre, le Président de l'Assemblée nationale, le Président du Sénat ou soixante députés ou soixante sénateurs",
+     "temporalite": "permanent",
+     "facultatif": false,
+     "justification": "D'autres autorités peuvent déférer de même."
+    }
+   ],
+   "limite": [
+    {
+     "art": "61",
+     "cite": "avant leur promulgation",
+     "temporalite": "avant",
+     "facultatif": false,
+     "justification": "Limite de temps de la saisine."
+    },
+    {
+     "art": "61",
+     "cite": "la saisine du Conseil constitutionnel suspend le délai de promulgation",
+     "temporalite": "après",
+     "facultatif": false,
+     "justification": "Effet juridique de la saisine, non un acteur."
+    }
+   ],
+   "vides": {
+    "condition": "Aucune proposition ni consultation n'est exigée pour déférer."
    },
-   "partage": {
-    "art": "61",
-    "cite": "le Premier ministre, le Président de l'Assemblée nationale, le Président du Sénat ou soixante députés ou soixante sénateurs"
-   },
-   "limite": null,
    "legifrance": {
-    "acte": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241074",
-    "autre_autorite": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241074",
-    "partage": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241074"
+    "autre_autorite": [
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241074"
+    ],
+    "partage": [
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241074"
+    ],
+    "limite": [
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241074",
+     "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019241074"
+    ]
    }
   }
  ],
@@ -258,47 +709,83 @@
    "art": "19",
    "cite": "sont contresignés par le Premier ministre et, le cas échéant, par les ministres responsables",
    "objet": "le contreseing"
+  },
+  {
+   "art": "49",
+   "cite": "Dans ce cas, ce projet est considéré comme adopté, sauf si une motion de censure, déposée dans les vingt-quatre heures qui suivent, est votée",
+   "objet": "la loi de finances adoptée sans vote sur le texte (art. 49, al. 3)"
+  },
+  {
+   "art": "47",
+   "cite": "Si le Parlement ne s'est pas prononcé dans un délai de soixante-dix jours, les dispositions du projet peuvent être mises en vigueur par ordonnance.",
+   "objet": "la loi de finances mise en vigueur par ordonnance"
   }
  ],
  "comptes": {
-  "condition": 3,
-  "autre_autorite": 6,
+  "condition": 6,
+  "autre_autorite": 7,
   "partage": 3,
-  "limite": 5,
-  "n": 8,
-  "sans_condition_ni_autre_autorite_ni_partage": [
-   "8, al. 1",
-   "18"
+  "limite": 10,
+  "n_renvois": 8,
+  "n_actes": 12,
+  "par_renvoi": [
+   "8-nommer",
+   "18-message"
+  ],
+  "par_acte": [
+   "8-nommer",
+   "18-message",
+   "56-president"
+  ],
+  "renvois_principaux": [
+   "8-nommer",
+   "11-projet",
+   "12",
+   "16",
+   "18-message",
+   "54",
+   "56-membres",
+   "61"
   ]
  },
  "affichage": {
   "n_renvois": "huit",
-  "n_condition": "trois",
-  "n_autre": "six",
-  "n_partage": "trois",
-  "n_limite": "cinq",
-  "n_seuls": "deux",
-  "n_seuls_maj": "Deux",
+  "n_actes": "douze",
+  "n_seuls_renvoi": "deux",
+  "n_seuls_acte": "trois",
+  "n_seuls_acte_maj": "Trois",
+  "n_encadres_acte": "neuf",
+  "seuls_acte_liste": "nommer le Premier ministre, adresser un message au Parlement et désigner le président du Conseil constitutionnel",
+  "seuls_renvoi_liste": "nommer le Premier ministre et adresser un message au Parlement",
   "cit19": "Les actes du Président de la République autres que ceux prévus aux articles 8 (1er alinéa), 11, 12, 16, 18, 54, 56 et 61 sont contresignés par le Premier ministre et, le cas échéant, par les ministres responsables.",
+  "cit8a": "Le Président de la République nomme le Premier ministre.",
+  "cit8b": "Il met fin à ses fonctions sur la présentation par celui-ci de la démission du Gouvernement.",
   "cit5": "par son arbitrage, le fonctionnement régulier des pouvoirs publics ainsi que la continuité de l'Etat",
   "cit37": "Les matières autres que celles qui sont du domaine de la loi ont un caractère réglementaire",
   "cit20": "Le Gouvernement détermine et conduit la politique de la Nation.",
-  "seuls_liste": "nommer le Premier ministre et adresser un message au Parlement",
-  "releve_le": "06/10/2026 (textes lus sur Légifrance du 30/09/2026 au 06/10/2026)"
+  "cit20b": "Il est responsable devant le Parlement dans les conditions et suivant les procédures prévues aux articles 49 et 50",
+  "cit50": "le Premier ministre doit remettre au Président de la République la démission du Gouvernement",
+  "cit49": "ce projet est considéré comme adopté",
+  "releve_le": "11/10/2026 (textes lus sur Légifrance du 30/09/2026 au 11/10/2026)"
  },
  "affichage_en": {
   "n_renvois": "eight",
-  "n_condition": "three",
-  "n_autre": "six",
-  "n_partage": "three",
-  "n_limite": "five",
-  "n_seuls": "two",
-  "n_seuls_maj": "Two",
+  "n_actes": "twelve",
+  "n_seuls_renvoi": "two",
+  "n_seuls_acte": "three",
+  "n_seuls_acte_maj": "Three",
+  "n_encadres_acte": "nine",
+  "seuls_acte_liste": "appointing the Prime Minister, addressing Parliament by message and appointing the President of the Constitutional Council",
+  "seuls_renvoi_liste": "appointing the Prime Minister and addressing Parliament by message",
   "cit19": "Instruments of the President of the Republic, other than those provided for under articles 8 (paragraph one), 11, 12, 16, 18, 54, 56 and 61, shall be countersigned by the Prime Minister and, where required, by the ministers concerned.",
+  "cit8a": "The President of the Republic shall appoint the Prime Minister.",
+  "cit8b": "He shall terminate the appointment of the Prime Minister when the latter tenders the resignation of the Government.",
   "cit5": "by his arbitration, the proper functioning of the public authorities and the continuity of the State",
   "cit37": "Matters other than those coming under the scope of statute law shall be matters for regulation",
   "cit20": "The Government shall determine and conduct the policy of the Nation.",
-  "seuls_liste": "appointing the Prime Minister and addressing Parliament by message",
-  "releve_le": "6 October 2026 (texts read on Légifrance from 30 September 2026 to 6 October 2026; quoted in the English translation published by the Conseil constitutionnel)"
+  "cit20b": "It shall be accountable to Parliament in accordance with the terms and procedures set out in articles 49 and 50",
+  "cit50": "the Prime Minister shall tender the resignation of the Government to the President of the Republic",
+  "cit49": "the Bill shall be considered passed",
+  "releve_le": "11 October 2026 (texts read on Légifrance from 30 September 2026 to 11 October 2026; quoted in the English translation published by the Conseil constitutionnel)"
  }
 }

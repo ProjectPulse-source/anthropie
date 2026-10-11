@@ -3,20 +3,20 @@
   {
    "id": "article19",
    "fichier": "pouvoirs-article19",
-   "titre": "Les huit dispositions que l’article 19 dispense de contreseing : ce que leur texte exige ou fait intervenir",
-   "montre": "Sur les huit dispositions que l'article 19 dispense de contreseing, deux seulement ne prévoient, dans leur texte, ni proposition ou consultation avant l'acte, ni intervention d'un autre acteur pour la suite : nommer le Premier ministre et adresser un message au Parlement. Ce compte décrit le texte, non la pratique : il ne mesure ni l'autonomie du président ni le nombre de ses pouvoirs propres.",
+   "titre": "Les huit dispositions de l’article 19, acte par acte : ce que le texte de chaque article exige avant, qui il fait intervenir ensuite",
+   "montre": "Les huit dispositions que l'article 19 dispense de contreseing contiennent douze actes. Neuf de ces actes font intervenir, dans leur propre article, un autre acteur avant ou après la décision du président. Trois seulement n'y prévoient ni proposition, consultation ou acte d'un autre acteur avant l'acte, ni intervention d'un autre acteur pour la suite : nommer le Premier ministre, adresser un message au Parlement et désigner le président du Conseil constitutionnel. Ce compte décrit le texte de chaque article, non la pratique.",
    "source": "Constitution du 4 octobre 1958, art. 8, 11, 12, 16, 18, 19, 54, 56, 61, versions en vigueur lues sur Légifrance",
-   "precaution": "Case pleine : citation exacte de l’article (liste sur la page). Case vide : rien dans cet article ; ni autres articles, ni pratique."
+   "precaution": "Case pleine : citation exacte de l’article (liste et justification sur la page). Case vide : rien dans cet article ; ne dit rien des autres articles ni de la pratique. « Exigé avant » : proposition, consultation ou acte d’un autre acteur ; « autre acteur » : institution, autorité ou corps électoral à qui l’article attribue une intervention distincte après l’acte, même facultative ; les modalités matérielles d’exécution ne comptent pas."
   }
  ],
  "en": [
   {
    "id": "article19",
    "fichier": "pouvoirs-article19-en",
-   "titre": "The eight provisions that article 19 of the French Constitution exempts from countersignature: what their text requires or brings in",
-   "montre": "Of the eight provisions that article 19 of the French Constitution exempts from countersignature, only two provide, in their text, for neither a recommendation or consultation before the act nor the intervention of another actor afterwards: appointing the Prime Minister and addressing Parliament by message. This count describes the text, not practice: it measures neither the president's autonomy nor the number of his own powers.",
+   "titre": "The eight provisions of article 19 of the French Constitution, act by act: what the text of each article requires beforehand, whom it brings in afterwards",
+   "montre": "The eight provisions that article 19 exempts from countersignature contain twelve acts. Nine of these acts bring in, in their own article, another actor before or after the president's decision. Only three provide there for neither a recommendation, consultation or act of another actor before the act nor the intervention of another actor afterwards: appointing the Prime Minister, addressing Parliament by message and appointing the President of the Constitutional Council. This count describes the text of each article, not practice.",
    "source": "Constitution of 4 October 1958, arts. 8, 11, 12, 16, 18, 19, 54, 56, 61 (Légifrance; English translation: Conseil constitutionnel)",
-   "precaution": "Filled cell: exact quotation of the article (list on the page). Empty cell: nothing in that article; says nothing of others or of practice."
+   "precaution": "Filled cell: exact quotation of the article (list and justification on the page). Empty cell: nothing in that article; says nothing of other articles or of practice. “Required before”: recommendation, consultation or act of another actor; “another actor”: an institution, authority or electorate to which the article assigns a distinct intervention after the act, even an optional one; practical arrangements for carrying out the act are not counted."
   }
  ]
 }

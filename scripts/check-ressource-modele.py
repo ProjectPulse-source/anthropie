@@ -50,7 +50,7 @@ TYPES = {"quantitatif", "juridique-institutionnel", "explicatif-causal", "notion
 NON_REFONDUES = {
     "ce-que-la-france-peut-decider-dans-l-union-europeenne", "comment-savoir-si-une-promesse-est-tenue",
     "dette-publique-collectivites-locales", "dette-publique-generations-futures",
-    "pouvoirs-du-president-de-la-republique", "qui-peut-faire-adopter-une-loi",
+    "qui-peut-faire-adopter-une-loi",
     "un-president-peut-il-recourir-au-referendum", "une-loi-votee-s-applique-t-elle-tout-de-suite",
     "une-promesse-peut-elle-produire-ses-effets-en-cinq-ans",
 }

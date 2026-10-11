@@ -21,7 +21,7 @@ COLS_EN = ["Condition", "Other", "Shared", "Limit"]
 
 
 def matrice(d, inv: list[dict], lang: str = "fr") -> None:
-    x0, top, colw, pas = 700, 128, 108, 33
+    x0, top, colw, pas = 700, 120, 108, 27
     fh = og.font("inter", 16, 500)
     for k, lib in enumerate(COLS_EN if lang == "en" else COLS):
         cx = x0 + colw * k + colw / 2
@@ -31,10 +31,10 @@ def matrice(d, inv: list[dict], lang: str = "fr") -> None:
         y = top + pas * i + pas / 2
         for k, a in enumerate(ATTRIBUTS):
             cx = x0 + colw * k + colw / 2
-            if e.get(a):
-                d.ellipse([cx - 10, y - 10, cx + 10, y + 10], fill=og.C1)
+            if e.get(a):  # liste de citations (inventaire acte par acte, 11/10/2026)
+                d.ellipse([cx - 9, y - 9, cx + 9, y + 9], fill=og.C1)
             else:
-                d.ellipse([cx - 9, y - 9, cx + 9, y + 9], outline=og.GRID, width=3)
+                d.ellipse([cx - 8, y - 8, cx + 8, y + 8], outline=og.GRID, width=3)
     fl = og.font("inter", 17, 400)
     bas = top + pas * len(inv) + 12
     l1, l2 = (("One row per act of article 19;", "filled: exact quotation of the article") if lang == "en"
@@ -49,13 +49,12 @@ def main() -> int:
         og.fail("jeu absent : %s — lancer scripts/update_pouvoirs_president.py d'abord" % f)
     j = json.loads(f.read_text(encoding="utf-8"))
     A, inv, c = j["affichage"], j["inventaire"], j["comptes"]
-    if len(inv) != c["n"] or len(c["sans_condition_ni_autre_autorite_ni_partage"]) * 2 >= c["n"]:
+    if len(inv) != c["n_actes"] or len(c["par_acte"]) * 2 >= c["n_actes"]:
         og.fail("carte : « seulement » n'est plus vrai dans les données")
     E = j["affichage_en"]
     og.carte("og-pouvoirs-president-en.jpg",
              ["Deciding alone:", "what the text says"],
-             "%s acts out of %s with no condition or third party in their text."
-             % (E["n_seuls"].capitalize(), E["n_renvois"]),
+             "%s acts out of %s bring in another actor before or after." % (E["n_encadres_acte"].capitalize(), E["n_actes"]),
              "French Constitution of 1958 (Légifrance, Conseil constitutionnel) · CC BY 4.0",
              "stephane-lalut.com/en/what-can-the-french-president-decide-alone/",
              lambda d: matrice(d, inv, "en"),
@@ -63,8 +62,7 @@ def main() -> int:
               (og.GRID, "Nothing in that article")])
     og.carte("og-pouvoirs-president.jpg",
              ["Décider seul :", "ce que dit le texte"],
-             "%s actes sur %s sans condition ni tiers dans leur texte."
-             % (A["n_seuls"].capitalize(), A["n_renvois"]),
+             "%s actes sur %s font intervenir un autre acteur avant ou après." % (A["n_encadres_acte"].capitalize(), A["n_actes"]),
              "Constitution de 1958, lue sur Légifrance · CC BY 4.0",
              "stephane-lalut.com/pouvoirs-du-president-de-la-republique/",
              lambda d: matrice(d, inv),
