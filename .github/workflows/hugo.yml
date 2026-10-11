@@ -29,6 +29,8 @@ jobs:
     runs-on: ubuntu-24.04   # epingle -- voir docs/MIGRATION_RUNNER_UBUNTU26.md
     env:
       HUGO_VERSION: 0.147.0
+    outputs:
+      relecture: ${{ steps.relecture.outputs.json }}
     steps:
       - name: Install Hugo Extended
         run: |
@@ -65,10 +67,59 @@ jobs:
       - name: Audit des liens du build (bloquant)
         run: python3 scripts/audit-liens-build.py public
 
+      # Pages ressources (arbitrage OPTIMUM-26, 11/10/2026, chantiers 1 et 2) : version telephone et pied commun de
+      # chaque figure, motifs de langue connus, sur le texte SERVI. Bloquant sur les pages refondues
+      # (`ressource.refonte`) ; les autres sont seulement inventoriees pour leur phase B.
+      - name: Rendu des pages ressources (bloquant sur les pages refondues)
+        run: python3 scripts/check-rendu-ressources.py public
+
+      # Relecture attestee (chantier 4) : bloquant si une page refondue n'a pas d'instantane relu ; une phrase
+      # changee depuis la relecture (mise a jour des donnees, retouche) n'arrete RIEN -- decision de l'auteur du
+      # 11/10/2026 -- et devient une issue « Relecture ciblee » (tache `relecture` ci-dessous).
+      - name: Relecture attestee des pages refondues
+        id: relecture
+        run: |
+          python3 scripts/check-relecture.py public --json relecture.json
+          echo "json=$(cat relecture.json)" >> "$GITHUB_OUTPUT"
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
           path: ./public
+
+  # Une issue par page dont des phrases ont change depuis leur relecture ; si elle est deja ouverte, son corps est
+  # remplace (pas un commentaire par deploiement). Le deploiement n'attend pas cette tache. Les workflows qui
+  # appellent celui-ci doivent accorder `issues: write` a leur tache `deploy`.
+  relecture:
+    needs: build
+    if: needs.build.outputs.relecture != '' && needs.build.outputs.relecture != '[]'
+    runs-on: ubuntu-24.04   # epingle -- voir docs/MIGRATION_RUNNER_UBUNTU26.md
+    permissions:
+      issues: write
+    steps:
+      - uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        env:
+          RELECTURE: ${{ needs.build.outputs.relecture }}
+        with:
+          script: |
+            const pages = JSON.parse(process.env.RELECTURE);
+            const run = context.serverUrl + '/' + context.repo.owner + '/' + context.repo.repo + '/actions/runs/' + context.runId;
+            const ouvertes = await github.paginate(github.rest.issues.listForRepo,
+              {owner: context.repo.owner, repo: context.repo.repo, state: 'open', per_page: 100});
+            for (const p of pages) {
+              const title = 'Relecture ciblee : ' + p.url;
+              const body = p.phrases.length + ' phrase(s) servie(s) absente(s) de la relecture du ' + p.relu_le +
+                ' (docs/relectures/). Les gardes de prose ont passe : ce sont des phrases a relire, pas des erreurs ' +
+                'de donnees.\n\n' + p.phrases.map(s => '- ' + s).join('\n') +
+                '\n\nRun : ' + run + '\n\nApres relecture : `python scripts/check-relecture.py public --instantane ' +
+                p.url + '` sur un build local, commit, puis fermer cette issue.';
+              const deja = ouvertes.find(i => i.title === title && !i.pull_request);
+              if (deja) {
+                await github.rest.issues.update({owner: context.repo.owner, repo: context.repo.repo, issue_number: deja.number, body});
+              } else {
+                await github.rest.issues.create({owner: context.repo.owner, repo: context.repo.repo, title, body});
+              }
+            }
 
   deploy:
     environment:

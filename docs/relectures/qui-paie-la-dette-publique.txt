@@ -1,0 +1,402 @@
+# relu le 2026-10-11 ; texte servi de /qui-paie-la-dette-publique/, build de 86a46f0 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+ENCette page existe aussi en anglais — English version
+Qui paie vraiment la dette publique ?
+Un même effort de 10 milliards d'euros ne tombe pas sur les mêmes ménages selon la décision prise : par l'enseignement, il pèse surtout sur les plus modestes, par l'impôt sur les plus aisés.
+Qui paie la dette publique dépend de ce qu'elle finance, de la manière dont elle est financée et des ajustements choisis pour la servir.
+Dossier dette publique
+Mise à jour · 10/2026
+↓ Graphiques, données et citations à réutiliserRéutiliser cette page
+Qui paie la dette publique ?
+La réponse change avec la décision prise pour l’ajuster.
+Un même effort de 10 milliards d’euros pèse surtout sur les ménages les plus modestes s’il passe par l’enseignement, surtout sur les plus aisés s’il passe par l’impôt, et presque également sur tous s’il passe par les pensions.
+Le montant de la facture — encours, charge d’intérêts, coût moyen du stock — est mesuré sur une autre page de ce dossier, Combien coûte la dette publique ? ; celle-ci demande sur qui elle retombe, ce que les données permettent, ou non, d’attribuer, et ce qu’une décision réelle, envisagée pour 2026 puis écartée, en montre.
+Dette publique française — dernière donnée officielle
+3 595,5 milliards d'euros soit 119,0 % du PIB, au T2 2026.
+Source : INSEE, dette de Maastricht des administrations publiques (séries 010777616 et 010777608) · séries relevées le 11/10/2026 · données brutes (JSON).
+Ce que cette dette coûte, et pourquoi : Combien coûte la dette publique ?
+Selon la décision, l’effort ne tombe pas sur les mêmes ménages
+La population est rangée du plus modeste au plus aisé, puis coupée en dix groupes de même taille, les dixièmes de niveau de vie.
+L’exercice prend 10 milliards d’euros et les répartit trois fois — par une hausse des impôts sur les revenus et le patrimoine, par une baisse des pensions de retraite, par une baisse des dépenses d’enseignement —, toujours au prorata de ce que chaque dixième verse ou reçoit déjà, puis rapporte le résultat à son revenu.
+L’impôt retenu est la catégorie des comptes distribués « impôts sur les revenus et le patrimoine » : CSG, impôt sur le revenu et autres impôts de cette catégorie, comme la CRDS, la taxe d’habitation ou l’impôt sur la fortune immobilière.
+Ce n’est ni une prévision ni une mesure envisagée : aucun comportement, aucun effet en retour n’y entre.
+C’est la structure actuelle des postes, rendue comparable d’une décision à l’autre.
+Insee, comptes nationaux distribués, tableau CND.101 (vingtièmes de niveau de vie, 2020-2023, base 2020) ; millésime 2023.
+Profil d’exposition comptable, non une simulation.
+Télécharger · Citer · Données
+Le classement s’inverse d’une décision à l’autre.
+Une réduction des dépenses d’enseignement représenterait 2,75 % du revenu des 10 % les plus modestes et 0,21 % de celui des plus aisés ; une hausse des impôts sur les revenus et le patrimoine ferait l’inverse, jusqu’à 1,14 % pour le dernier dixième.
+Le contraste ne vient pas seulement de ce que les petits revenus sont plus petits : en euros, la moitié la moins aisée supporterait 57,8 % de la coupe d’enseignement contre 14,6 % de l’effort fiscal.
+Une baisse des pensions se tiendrait dans une bande étroite, de 0,43 à 0,78 %, sans épargner aucun groupe en particulier.
+Et « l’impôt » n’a pas un seul profil : une hausse des taxes sur les produits, comme la TVA, répartie de même, pèserait elle aussi davantage sur les plus modestes en part de leur revenu, 1,14 % contre 0,43 % pour les plus aisés.
+Le profil favorable aux plus modestes est donc celui des impôts sur les revenus et le patrimoine, non de toute la fiscalité ; et ce calcul suit la même convention proportionnelle, sans être l’incidence finale d’une hausse réelle de TVA.
+Une exposition comptable, non une perte observée.
+Les 2,75 % du premier dixième sont la valeur des services d’enseignement que les comptes de l’Insee lui attribuent par convention, rapportée à son revenu : ni une perte de revenu effectivement subie, ni une mesure de bien-être.
+Une hausse d’impôt retire de l’argent ; une baisse de dépense retire un service, dont la valeur est imputée et dont le coût réel pour chacun dépend de ce qui est supprimé.
+Le résultat en une phrase. « Qui paie la dette ? » n’a pas de réponse en soi, il en a une par décision : un même effort pèse surtout sur les plus modestes s’il passe par l’enseignement, surtout sur les plus aisés s’il passe par l’impôt.
+Au milieu de l’échelle, le choix du levier compte le moins.
+Pour le 7e ou 8e dixième, un peu au-dessus du milieu, l’effort moyen changerait peu d’une décision à l’autre : la plus lourde y coûterait 1,4 fois la plus légère.
+Pour les 10 % les plus aisés, elle coûterait 5,5 fois la plus légère, et au moins autant pour les 10 % les plus modestes : aux deux bouts de l’échelle, le choix du levier décide presque tout.
+Ces dixièmes ne supporteraient pas moins d’effort ; simplement, changer de levier y modifierait moins leur exposition moyenne, qui ne dit pas la situation de chacun des ménages qui les composent.
+La convergence se retrouve dans les quatre millésimes 2020-2023 — qui partagent conventions et structures, et ne sont donc pas des réplications indépendantes —, et elle ne vaut que pour ces trois leviers ainsi répartis.
+Trois épreuves du creux en D7-D8, et les limites de l'exercice
+En vingtièmes.
+Découpée en vingt groupes au lieu de dix, la population place encore le minimum dans la zone de D7-D8 : au 14e ou 15e vingtième selon l’année.
+Le creux ne vient donc pas du regroupement par dixièmes.
+Par paires de leviers.
+La courbe de l’impôt monte avec le niveau de vie, celle de l’enseignement descend : prises deux à deux, elles se rapprochent le plus en D7, et c’est leur croisement qui fait le creux, la courbe des pensions, presque plate, passant tout près des deux.
+Le coefficient de variation et l’étendue rapportée à la moyenne placent le minimum dans la même zone que le rapport du plus lourd au plus léger.
+Mesuré en points de revenu plutôt qu’en rapport, l’écart entre la décision la plus lourde et la plus légère est encore le plus faible en D7-D8.
+Sans les pensions, impôt et enseignement seuls se rapprochent le plus en D7 : le creux ne doit rien à la troisième courbe.
+Avec un quatrième levier, les taxes sur les produits, il reste en D7-D8.
+Avec d’autres formes de mesures — hypothèses de calcul, non mesures envisagées.
+Une baisse d’enseignement du même montant pour chaque dixième, ou concentrée là où la dépense est déjà forte, laisse le creux en D7-D8 ; épargner l’enseignement des trois premiers dixièmes le place en D8 ou D9 selon l’année ; épargner leurs pensions le laisse en D7-D8.
+Un impôt plus progressif, réparti au prorata du carré de ce que chaque dixième paie déjà, le déplace en revanche en D9.
+Le creux résiste donc à la mesure et à plusieurs répartitions, mais sa place suit la progressivité des mesures : c’est un résultat du scénario proportionnel, non une propriété générale de la redistribution.
+Le revenu de référence ne joue que sur le niveau des courbes.
+Pour un même dixième, il est commun aux trois leviers : le rapport du plus lourd au plus léger, et les points où deux courbes se croisent, ne dépendent pas de lui.
+L’écart mesuré en points de revenu, lui, en dépend : avec un autre dénominateur, son minimum pourrait se déplacer.
+Les limites.
+Un service public valorisé n’est pas un revenu : une dépense d’enseignement imputée à un ménage ne lui est pas versée, et sa réduction ne lui coûterait pas exactement cette somme.
+Les trois décisions sont proportionnelles par construction ; la figure ne dit rien de « l’impôt » ni de « la dépense publique » en général.
+Enfin, le point du premier dixième est écarté pour la décision fiscale : l’impôt sur le revenu du premier vingtième y pèse 60 % du poste quand les vingtièmes voisins sont à zéro, une cellule atypique de la source.
+L’écart de ce dixième, calculé sur les deux autres leviers, est donc une borne inférieure.
+Qui emprunte, qui détient, qui reçoit les intérêts
+Quatre questions se confondent souvent : qui emprunte, qui finance et reçoit les intérêts, par quels mécanismes le financement et les ajustements opèrent, et qui en supporte finalement les effets.
+Ce ne sont pas quatre populations : une même personne paie l’impôt, se soigne à l’hôpital public et détient des titres de l’État par son assurance-vie.
+Et « qui paie » se dit toujours par rapport à une autre décision : moins emprunter aurait signifié un autre impôt, une autre dépense, avec leurs propres perdants.
+Deux champs distincts : A en valeur nominale (INSEE), B en valeur de marché (Banque de France, via l’Agence France Trésor).
+Les valeurs viennent du même registre que la figure de la p.
+101 du livre.
+Télécharger · Citer · Données
+Qui emprunte, qui détient.
+L’État porte l’essentiel de la dette publique : 2 823 milliards d’euros sur 3 460,5, soit 82 %, fin 2025.
+Au 1er trimestre 2026, ses titres négociables sont détenus à 57,5 % par des non-résidents ; banques, assureurs et fonds résidents en portent ensemble 21,9 % ; les autres porteurs résidents, 20,6 %, comprennent la Banque de France, dont la source ne publie pas la part.
+Les deux panneaux ne se combinent pas : l’un est en valeur nominale, l’autre en valeur de marché.
+Qui reçoit les intérêts : ce qu’on observe, ce qu’on approche, ce qu’on ignore.
+On observe les porteurs directs, classés par résidence : c’est un stock photographié à une date, non le flux des coupons, qui dépend des titres détenus et de leur date d’émission.
+On approche les porteurs indirects : en remontant les placements de l’assurance-vie, des fonds et des banques jusqu’à leur usage final, la Direction générale du Trésor estime que sur 10 euros de patrimoine financier des ménages français, 1 finance de la dette des administrations publiques, majoritairement françaises (Trésor-Éco n° 378, janvier 2026).
+On ignore qui, parmi les ménages, reçoit ces intérêts : aucune statistique publiée ne les répartit par niveau de vie ou de patrimoine, ce qui demanderait de suivre chaque titre, sa rémunération et ses intermédiaires.
+Deux lectures sont donc exclues : 57,5 % des titres ne font pas 57,5 % des intérêts, et la détention d’actifs financiers par dixième ne dit pas la part de chacun dans ces intérêts.
+L’absence de cette ventilation ne signifie pas que ces revenus sont négligeables : elle borne ce qu’on peut affirmer.
+Deux précisions encore : le porteur d’aujourd’hui n’est pas forcément celui qui a prêté à l’émission, un titre s’échangeant ensuite sur le marché ; et les titres détenus par la Banque de France au titre des programmes de l’Eurosystème ne s’analysent pas comme ceux d’un créancier privé.
+Résidence n'est pas nationalité, et financer n'est pas gagner
+Financer n’est pas gagner.
+Le créancier a avancé les fonds : les intérêts rémunèrent cette avance, le temps et le risque.
+Son rendement réel tient compte de l’inflation et de la variation de valeur du titre, et son avantage sur un autre placement se mesure à horizon et risque comparables. « On se la doit à nous-mêmes » n’est donc vrai qu’en partie, et ne dit pas lesquels d’entre « nous » reçoivent et lesquels financent.
+La répartition publiée classe les porteurs par résidence, non par nationalité : un « non-résident » peut être un fonds étranger qui gère l’épargne de ménages français, et un ménage français peut détenir des titres de l’État sans le savoir, par son assurance-vie.
+La statistique de la Banque de France sur les titres de long terme de l’ensemble des administrations publiques porte sur un autre champ que celle de l’Agence France Trésor, limitée aux titres négociables de l’État : les deux parts ne se substituent pas l’une à l’autre.
+Qui contribue, qui reçoit aujourd’hui
+Les comptes nationaux distribués de l’Insee répartissent, pour 2023, prélèvements et transferts publics entre les dixièmes de niveau de vie — la population rangée du plus modeste au plus aisé, puis coupée en dix parts d’effectif égal.
+Les montants y sont exprimés par unité de consommation (UC), l’unité qui rend comparables des ménages de tailles différentes : une personne seule compte 1 UC, un couple avec deux enfants de moins de 14 ans, 2,1.
+Insee, comptes nationaux distribués 2023 (Insee Analyses n° 118, 16 avril 2026, figure 1c), en euros par unité de consommation.
+Télécharger · Citer · Données
+Les valeurs en tableau (euros par unité de consommation, 2023)
+Dixième
+Prélèvements
+Prestations en espèces
+Transferts non monétaires
+D1
+−6 400
+8 000
+19 100
+D2
+−8 800
+10 600
+20 500
+D3
+−11 900
+11 700
+17 400
+D4
+−15 100
+11 500
+17 200
+D5
+−18 200
+12 000
+15 000
+D6
+−21 500
+12 600
+15 000
+D7
+−25 700
+12 800
+14 700
+D8
+−31 700
+13 400
+13 000
+D9
+−41 100
+14 600
+13 600
+D10
+−89 800
+18 500
+12 900
+Ensemble
+−27 000
+12 600
+15 800
+Les prélèvements vont de 6 400 € par UC pour les 10 % les plus modestes à 89 800 € pour les 10 % les plus aisés, environ 14 fois plus.
+Les transferts reçus — prestations en espèces et services publics valorisés en euros — varient beaucoup moins : ils restent compris entre 26 400 et 31 400 €, sans progression régulière.
+Ce qui est versé suit le niveau de vie ; ce qui est reçu, beaucoup moins.
+Ces prélèvements ne sont pas des paiements relevés un à un : outre l’impôt sur le revenu et les cotisations, ils comprennent les taxes sur les produits, comme la TVA, et des impôts sur la production, que l’Insee attribue aux ménages par convention.
+Où la dette entre dans ces comptes.
+En 2023, les transferts attribués aux ménages dépassent les prélèvements de 66 milliards d’euros, et l’Insee rattache cet écart à l’endettement public : c’est la part du revenu élargi de l’année qui n’est pas financée par des prélèvements de la même année.
+Ces 66 milliards ne sont pas la charge d’intérêts de 2025 (66,6 milliards) : année, champ et nature diffèrent, et la proximité des deux nombres est une coïncidence.
+Un solde réparti par convention, financé à crédit, qui ne dit pas qui paiera demain
+Ce total porte sur le champ des comptes distribués, qui n’est pas celui du déficit public : les deux montants ne se substituent pas l’un à l’autre.
+Dans cette construction, l’écart élève le niveau de vie élargi des ménages de l’année — un bénéfice présent, financé à crédit —, mais ce ne sont pas 66 milliards de versements identifiables : c’est un solde réparti par convention, que l’Insee impute pour moitié à de moindres prélèvements et pour moitié à des transferts supplémentaires quand il calcule un niveau de vie « net de l’endettement ».
+Les figures de cette page présentent les transferts courants, avant ce retraitement.
+Le solde n’implique pas que les bénéficiaires de la redistribution aient « créé » cette dette, ni que leur position dise qui la remboursera.
+Insee, comptes nationaux distribués 2023 (figure 2a).
+Deux unités, deux panneaux : euros par unité de consommation, puis part de personnes.
+Télécharger · Citer · Données
+Qui verse net, qui reçoit net.
+En moyenne par UC, les transferts reçus dépassent les prélèvements dans chacun des sept premiers dixièmes — de 20 800 € par UC dans le premier —, et le solde bascule au dixième D8 : dans les trois derniers, c’est l’inverse, et le dernier dixième verse en moyenne 58 400 € par UC de plus qu’il ne reçoit.
+Une moyenne de groupe ne décrit pas ses membres.
+56 % des personnes sont bénéficiaires nettes cette année-là, 99 % dans le premier dixième et 18 % dans le dernier.
+Mais elles ne sont majoritaires que dans les cinq premiers dixièmes : dans le dixième D7, qui reçoit en moyenne 1 800 € par UC de plus qu’il ne verse, elles ne sont plus que 36 %.
+Le signe d’une moyenne ne dit pas la situation de la majorité.
+Un groupe peut recevoir plus qu’il ne verse en moyenne alors que la majorité de ses membres versent plus qu’ils ne reçoivent : il suffit que ce que reçoivent en moyenne les bénéficiaires nets l’emporte sur ce que versent en moyenne les autres.
+Les données regroupées ne disent pas comment ces soldes se répartissent.
+Recevoir plus que l’on ne verse, en moyenne, ne protège donc pas d’un ajustement : la position dans la redistribution d’aujourd’hui et l’exposition à une décision de demain sont deux classements distincts.
+Conventions : le solde d'une année, non d'une vie ; des services publics imputés, non mesurés ; toute la redistribution, pas l'effet propre de la dette
+C’est le solde d’une année, non d’une vie : les pensions de retraite y sont comptées comme prestations courantes.
+Les transferts comprennent des services publics — soins, éducation, services collectifs — valorisés en euros et répartis par imputation statistique, non un relevé des services utilisés par chacun ; la part de bénéficiaires nets en dépend à la marge.
+Le revenu « avant transferts » est une étape de calcul, non le revenu qu’aurait chacun dans une économie sans impôts ni services publics.
+Et ce solde décrit la redistribution dans son ensemble, pas l’effet propre de la dette.
+Par âge du ménage : une photographie de l'année, non un bilan de vie
+Insee, comptes nationaux distribués 2023 (figure 1e).
+Groupes d’âge moyen des adultes du ménage.
+Télécharger · Citer · Données
+En 2023, selon ces conventions, les ménages dont l’âge moyen des adultes atteint 65 ans ou plus reçoivent 47 800 € de transferts par unité de consommation — dont 28 700 € de prestations en espèces, pensions comprises — et versent 14 600 € de prélèvements, contre 33 800 € pour les ménages de 50 à 64 ans.
+Les pensions correspondent pour une part à des droits acquis au cours de la carrière, ici comptés comme prestations courantes ; l’âge du ménage n’est pas le statut de retraite de chacun de ses membres, et un montant élevé de soins imputés traduit aussi des besoins plus élevés.
+Cette photographie ne désigne aucun payeur de demain.
+Par quels canaux la charge peut se répartir
+Quatre mécanismes peuvent modifier la charge de la dette et sa répartition, et ils se combinent.
+Les deux premiers relèvent de l’ajustement budgétaire ordinaire, décidé chaque année : les prélèvements — impôts et cotisations supplémentaires, ou baisses d’impôt auxquelles on renonce — et les dépenses et prestations réduites, gelées ou reportées.
+Le troisième ne se décide pas seul : l’inflation non anticipée réduit la valeur réelle des créances déjà émises et reporte une partie de la charge sur leurs détenteurs et sur les revenus mal indexés.
+Le quatrième est un cas extrême : la restructuration impose une perte de premier rang aux porteurs des titres, qui peuvent la répercuter sur leurs actionnaires, assurés ou épargnants.
+Schéma de mécanismes possibles : aucun poids relatif ni effet causal n’y est mesuré.
+Télécharger · Citer · Données
+Le refinancement, lui, renouvelle une échéance aux conditions du moment : il peut alléger ou alourdir la charge, sans désigner qui la supportera.
+Et en face de ces coûts se trouve ce que la dette a financé : services, prestations et investissements profitent à des ménages aujourd’hui et demain, et une analyse qui ne compterait que les coûts ne décrirait que la moitié du bilan.
+Pourquoi seule l'inflation non anticipée transfère la charge, et ce qui joue en sens inverse
+L’inflation attendue au moment où le taux d’un titre a été fixé tend à être déjà incorporée au taux exigé à l’émission, et n’opère alors aucun transfert.
+C’est l’écart entre l’inflation réalisée et celle-là qui réduit la valeur réelle des créances nominales déjà émises.
+Deux mécanismes jouent en sens inverse : les titres indexés voient leur charge monter avec les prix, et le refinancement se fait aux taux nouveaux.
+L’effet net dépend donc de la part indexée, du calendrier de refinancement et de ce qui était anticipé — et la France ne choisit pas seule son inflation.
+À ne pas confondre avec l’effet de l’inflation sur le ratio de dette, qui passe par le PIB nominal et ne désigne, lui, aucun perdant.
+La liste des canaux n’est pas exhaustive : la croissance, les cessions d’actifs et les conditions de financement interviennent aussi, et l’histoire connaît la répression financière, qui contraint les rendements.
+Trois hypothèses à tester
+Les canaux disent par où la charge peut passer ; trois hypothèses plus fortes circulent quant à ceux qu’elle atteindrait.
+Aucune n’est établie par les données de cette page, et chacune demande sa propre épreuve.
+Les générations futures — ce dont elles héritent
+La dette convertit une dépense présente en engagements futurs : ceux qui viendront après en héritent sans avoir pris part à la décision.
+Mais ils héritent aussi de ce qu’elle a financé et d’une partie des titres eux-mêmes : le transfert net n’est pas mesuré ici.
+Ce dont dépend le transfert net, et ce que la dette nette ne dit pas
+Les générations suivantes héritent des infrastructures, de la formation et du patrimoine public financés, et de titres que leurs parents détiennent directement ou par l’assurance-vie.
+Cela ne neutralise pas nécessairement la charge : certains modèles identifient un canal d’éviction du capital productif, que cette page ne mesure pas en France.
+Le transfert net dépend de l’usage, du financement, des créances transmises et de l’alternative retenue.
+La dette nette publiée par l’INSEE ne tranche pas non plus : elle ne déduit que certains actifs financiers, pas les routes, le capital humain ni l’environnement.
+La page La dette publique est-elle un fardeau pour les générations futures ? mesure ce que les déficits ont effectivement financé.
+Les groupes moins mobiles — une hypothèse à tester
+Les ménages et les entreprises qui peuvent déplacer leurs revenus, leur patrimoine ou leur activité échappent plus facilement à un prélèvement que les salariés, les retraités ou les usagers d’un service public local.
+D’où l’hypothèse : quand l’ajustement suit la ligne de moindre résistance, il peut peser davantage sur ceux qui ne peuvent pas partir.
+Pour l'éprouver : des groupes définis d'avance, un ajustement précis, une mesure fixée
+Pour l’éprouver, il faut définir ces groupes avant d’observer l’ajustement, préciser l’ajustement étudié et fixer une mesure de l’effort ; l’hypothèse serait affaiblie par un ajustement portant surtout sur d’autres groupes, ou par des compensations accordées aux perdants.
+Mobilité géographique, mobilité de la base imposable et capacité à remplacer un service public sont trois propriétés distinctes.
+Le canal territorial est examiné sur la page Dette publique : pourquoi les collectivités locales sont-elles la variable d’ajustement ?
+Les investissements à bénéfices différés — un mécanisme à établir cas par cas
+Un budget contraint par le service de la dette peut inciter à reporter les dépenses dont les bénéfices sont lointains et le report peu coûteux politiquement : recherche, entretien du patrimoine, formation, transition écologique.
+Le mécanisme est plausible, non établi.
+Plausible, non établi : aucun agrégat ne mesure un investissement empêché par les intérêts
+Il reste à l’établir décision par décision — quelle dépense, reportée par quelle décision, pour quel motif budgétaire —, car aucun agrégat ne mesure un investissement empêché par les intérêts.
+Là où il est établi, il alourdit le transfert : aux engagements transmis s’ajoute le bénéfice qui n’a pas été construit, et celui-là n’apparaît dans aucun encours.
+Une décision réelle, datée
+Exemple réel, distinct de l’exercice théorique.
+Le projet de loi de financement de la sécurité sociale pour 2026 prévoyait, à son article 44, de ne pas revaloriser en 2026 les pensions de retraite des régimes de base — un coefficient « égal à un ».
+La disposition a été écartée au cours de l’examen parlementaire : la loi de financement de la sécurité sociale pour 2026, promulguée le 30 décembre 2025, ne comporte pas de gel, et l’instruction interministérielle du 15 décembre 2025 revalorise ces pensions au 1er janvier 2026 d’un coefficient de 1,009, soit 0,9 %, « conformément au droit en vigueur ».
+C’est une décision du type « pensions », envisagée puis écartée.
+Deux limites empêchent de lui appliquer directement l’exercice : un gel des seules pensions de base n’a pas le profil d’une baisse répartie au prorata de toutes les pensions, et rien dans ces textes ne rattache la mesure envisagée à la dette plutôt qu’au déficit de la sécurité sociale.
+Un budget réel combine recettes, cotisations, prestations, dépenses et emprunt, et ne permet généralement pas de rattacher un impôt donné à un euro d’intérêts.
+Mesure non adoptée, elle ne permet pas non plus de mesurer une incidence effectivement subie : il faudrait pour cela une mesure appliquée, et la situation qui aurait prévalu sans elle.
+Les trois décisions de 10 milliards de cette page sont des hypothèses de calcul, non une description des choix de 2026.
+La politique budgétaire d’ensemble est examinée dans le volet La dette publique peut-elle baisser ?
+Ce que ces données ne permettent pas d’établir
+Aucune statistique ne dit, à elle seule, qui supporte au bout du compte la charge de la dette française : l’incidence finale d’un euro d’intérêts dépend des ajustements choisis année après année, et de l’alternative à laquelle on les compare.
+Une répartition actuelle des impôts et des prestations décrit qui contribue et qui reçoit aujourd’hui ; elle n’identifie pas les payeurs futurs.
+Une moyenne par unité de consommation n’est pas une facture individuelle.
+Ce qui peut s’établir, c’est l’effet d’une décision déterminée — une réforme, un gel, un report — sur des groupes définis d’avance : c’est à ce niveau que « qui paie ? » reçoit des réponses vérifiables.
+Confrontation à la recherche : le sens du contraste dépense / impôt est retrouvé sur des consolidations réelles ; l'argument de la créance héritée est mis en danger par l'éviction du capital
+Mesuré ici.
+Un profil comptable : un même effort de 10 milliards d’euros réparti au prorata de ce que chaque dixième verse ou reçoit déjà, d’après l’Insee, sans comportement ni effet en retour.
+La littérature éprouve les lectures qu’on en tire, pas ce profil.
+Cohérent avec.
+Le sens du contraste entre dépense et impôt : sur des consolidations effectivement observées dans 18 pays industrialisés, dont la France, de 1978 à 2009, les inégalités de revenu net augmentent ; les coupes de dépenses y paraissent défavorables, les hausses d’impôt égalisatrices, sans que ce dernier effet soit significatif dans la spécification de base (Agnello et Sousa).
+Le report des investissements : dans l’échantillon de Breunig et Busemeyer, une charge d’intérêts plus lourde va de pair avec un recul de la part de l’investissement public au profit des retraites, reporter un investissement coûtant moins, politiquement, que réduire un droit.
+Le rôle de l’usage : dans le modèle de Diamond, emprunter pour acquérir du capital physique fait de l’État un simple intermédiaire entre épargnants et entrepreneurs, sans effet.
+Mis en danger par.
+Toute lecture selon laquelle la créance héritée neutraliserait la charge : dans le cas efficace du modèle de Diamond, où le taux d’intérêt dépasse la croissance de la population, la dette détenue dans le pays abaisse davantage le bien-être de long terme que la dette extérieure, parce qu’elle prend la place du capital productif dans les patrimoines.
+Barro, qui défend l’idée inverse, la fonde sur des transferts volontaires entre parents et enfants, opérants pour la plupart des gens, et reconnaît qu’en 1989 la majorité des économistes penche encore vers les modèles standard.
+L’ampleur : dans le découpage d’Agnello et Sousa, ce sont les hausses d’impôt les plus fortes qui s’associent à une baisse significative des inégalités, et les effets tendent à disparaître en deux ans.
+La courbe « impôt » lue comme incidence finale : dans 55 082 entreprises de neuf pays européens, de 1996 à 2003, environ la moitié d’une hausse de l’impôt sur les sociétés retombe à long terme sur les salaires (Arulampalam, Devereux et Maffini) — un autre impôt que celui de la page, mais le même écart entre incidence légale et incidence finale.
+Non établi.
+Que les groupes moins mobiles supportent davantage l’ajustement : l’étude sur l’impôt sur les sociétés mesure une négociation salariale, et son seul contraste de mobilité, entre multinationales et entreprises indépendantes, n’est pas significatif.
+Que seule l’inflation non anticipée transfère la charge : nous n’avons pas trouvé, dans les textes examinés, de test séparant inflation anticipée et non anticipée.
+L’exposition « enseignement » de la page, enfin, n’a pas d’équivalent observé : un indicateur de revenu monétaire ne valorise pas directement une perte de service public.
+Références lues
+Agnello, L. et Sousa, R.
+M., « How Does Fiscal Consolidation Impact on Income Inequality? », document de travail de la Banque de France n° 382, 2012 (publié dans la Review of Income and Wealth, 60(4), 2014).
+Breunig, C. et Busemeyer, M.
+R.
+(2012), « Fiscal austerity and the trade-off between public investment and social spending », Journal of European Public Policy, 19(6), p.
+921-938.
+Arulampalam, W., Devereux, M.
+P. et Maffini, G., « The Direct Incidence of Corporate Income Tax on Wages », manuscrit révisé en février 2012 (publié dans l’European Economic Review, 56(6), 2012).
+Diamond, P.
+A.
+(1965), « National Debt in a Neoclassical Growth Model », American Economic Review, 55(5), p.
+1126-1150.
+Barro, R.
+J.
+(1989), « The Ricardian Approach to Budget Deficits », Journal of Economic Perspectives, 3(2), p.
+37-54.
+Revue de littérature vérifiée le 30 septembre 2026 : chaque référence citée a été lue en entier à cette date, dans la version indiquée.
+Synthèse
+Ce qu’il faut retenir
+« Qui paie ? » a une réponse par décision, et le choix pèse surtout aux extrémités.
+Un même effort retombe sur les plus modestes par l’enseignement, sur les plus aisés par l’impôt ; au milieu de l’échelle, les trois leviers étudiés produisent des expositions proches.
+Nommer la décision et l’alternative transforme une opinion en énoncé vérifiable.
+Détenir n’est pas payer, et les intérêts ne se suivent que jusqu’à un point.
+On observe les porteurs directs, on approche les porteurs indirects par l’épargne des ménages, mais aucune statistique ne dit quels ménages reçoivent les intérêts : la répartition des porteurs renseigne sur la destination des intérêts, jamais sur qui les finance.
+Une moyenne de groupe ne décrit pas ses membres.
+Un dixième peut recevoir plus qu’il ne verse en moyenne alors que la majorité de ses membres versent plus qu’ils ne reçoivent.
+Une statistique de dixièmes répond à « comment se répartit la masse ? », pas à « que vit une personne de ce dixième ? ».
+Prolongements du dossier : deux applications de « qui paie ? »
+Collectivités localesComment une contrainte de l'État peut descendre vers des collectivités peu endettées mais très encadrées.
+Générations futuresQuand la dette constitue-t-elle réellement un transfert vers ceux qui viennent après ?
+Questions fréquentes
+La dette publique est-elle vraiment un problème ?
+L'argument rassurant est sérieux : quand le taux d'intérêt reste inférieur à la croissance, le ratio de dette peut se stabiliser, à condition que le déficit hors intérêts — le solde primaire — reste sous un seuil qui dépend de l'écart entre ces deux taux et du niveau de la dette.
+Au-delà, le ratio monte malgré tout.
+Et même stable, une dette doit être servie chaque année : son financement et ses ajustements répartissent des coûts et des avantages entre contribuables, usagers, épargnants et générations.
+La question utile porte alors sur ce qu'elle finance et sur qui supporte les ajustements — elle se traite configuration par configuration, pas par principe.
+La dette publique est-elle un fardeau pour les générations futures ?
+Pas mécaniquement.
+Les générations suivantes héritent des engagements, mais aussi de ce qu'ils ont financé — infrastructures, formation, patrimoine public — et d'une partie des titres eux-mêmes, détenus directement ou par l'assurance-vie — ce qui ne neutralise pas nécessairement la charge, la dette pouvant aussi évincer du capital productif.
+Le transfert net dépend de l'usage : une dette qui finance une consommation courante sans contrepartie durable leur transmet surtout un coût ; un investissement dont elles profiteront peut leur transmettre davantage qu'il ne coûte.
+Ce qui reste vrai dans tous les cas : la décision est prise sans elles.
+Ce que les déficits ont effectivement financé, dans les comptes, est mesuré sur la page « La dette publique est-elle un fardeau pour les générations futures ? » du même dossier.
+Qui détient la dette publique française, et qui en touche les intérêts ?
+L'État porte 82 % de la dette publique (fin 2025, INSEE).
+Au 1er trimestre 2026, ses titres négociables sont détenus en valeur de marché à 57,5 % par des non-résidents, 21,9 % par des banques, assureurs et fonds résidents, 20,6 % par d'autres porteurs résidents, parmi lesquels la Banque de France, dont la part n'est pas publiée (Banque de France, via l'Agence France Trésor).
+Le classement se fait par résidence, non par nationalité.
+Pour les ménages, la Direction générale du Trésor estime, en remontant les placements de l'assurance-vie, des fonds et des banques, que sur 10 euros de patrimoine financier, 1 finance de la dette des administrations publiques, majoritairement françaises.
+Aucune statistique publiée ne répartit en revanche les intérêts de la dette publique par niveau de vie ou de patrimoine, et une part des titres détenus n'est pas une part des intérêts versés.
+Détenir n'est pas payer : le porteur a avancé les fonds et en reçoit la rémunération ; la répartition des porteurs ne dit pas qui supporte la charge finale.
+Faut-il rembourser la dette publique ?
+Chaque titre arrivé à échéance est remboursé, mais la dette dans son ensemble se refinance : l'État émet de nouveaux titres pour rembourser les anciens, et le stock évolue avec le déficit.
+Le remboursement intégral du stock est donc une hypothèse largement théorique.
+La question opératoire porte sur ce que la dette organise pendant qu'elle roule : qui supporte les intérêts, sur quels budgets portent les ajustements, qui hérite des engagements et de ce qu'ils ont financé.
+Le refinancement renouvelle une échéance aux conditions du moment : il peut alléger ou alourdir la charge, et ne permet pas à lui seul d'identifier qui la supportera.
+Cette analyse est développée dans le livre
+Dette Publique : Qui paie vraiment ?
+La question n'est pas « combien ? » mais « qui paie ? » — et par quels canaux le coût se déplace.
+Cette page pose la méthode : une réponse par décision, des créanciers suivis aussi loin que les données le permettent, et ce qu’il faudrait observer pour conclure.
+Le livre la déploie sur le cas français — le transfert dans le temps, les créanciers, les services publics — et la prolonge par des scénarios 2025-2035.
+Journalistes, enseignants, chercheurs, responsables publics ou associatifs
+Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock.
+Demander l'exemplaire offert →
+Version papier : 19 € · Kindle : 9,99 €
+Sommaire, extraits et recensions →
+D’où viennent ces chiffres
+Redistribution par dixième et par âge : Mathias André, Alexis Barrau et Thomas Renaud (Insee), « Revenus des ménages élargis à l’ensemble de l’économie en 2023 », Insee Analyses n° 118, 16 avril 2026 (figures 1c, 1e et 2a).
+Exposition à un même effort : Insee, comptes nationaux distribués, tableau CND.101, vingtièmes de niveau de vie, 2020-2023, base 2020 ; calcul de l’auteur, tests de robustesse publiés avec les données.
+Dette par administration : INSEE, Informations rapides n° 79, dette trimestrielle de Maastricht des administrations publiques, 27 mars 2026, fin 2025.
+Détenteurs des titres de l’État : Banque de France, via l’Agence France Trésor, 1er trimestre 2026.
+Créanciers indirects des ménages : Direction générale du Trésor, « Que finance l’épargne financière des ménages français ? », Trésor-Éco n° 378, 8 janvier 2026.
+Revalorisation des pensions en 2026 : projet de loi de financement de la sécurité sociale pour 2026, n° 1907, article 44 ; loi n° 2025-1403 du 30 décembre 2025 de financement de la sécurité sociale pour 2026 ; instruction interministérielle DSS/3A/DB/6BRS/2025/174, 15 décembre 2025.
+Chaque chiffre de cette page est lu dans ces pièces par un générateur qui en contrôle l’empreinte, et non recopié à la main ; les données compilées se téléchargent dans le bloc « Réutiliser » ci-dessous.
+D’où vient cette analyse
+L’anthropie est l’hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu’ils ne le résolvent.
+Appliquée aux finances publiques, cette hypothèse est formalisée dans le working paper AWP-03 — Dette publique et anthropie : qui paie vraiment le désordre ?
+(DOI : 10.5281/zenodo.19268769, PDF en accès libre).
+Le working paper AWP-09 met cette lecture à l’épreuve des comptes publics : l’incidence d’un même effort dépend de l’instrument retenu, mais l’asymétrie entre ménages mobiles et ménages captifs reste hors de portée des comptes, qui n’observent pas la soustraction des premiers.
+Réutiliser cette page
+Les figures, les données et une citation prête, sous licence libre.
+Chaque figure porte dans l'image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
+Qui emprunte ?
+Qui détient les titres de l'État ?
+Les administrations qui empruntent, puis les porteurs des titres de l'État : deux champs distincts, sans lien de proportion.
+Précaution d'interprétation.
+A : valeur nominale ; B : valeur de marché.
+La détention ne mesure pas la charge finale.
+INSEE, IR n° 79 (27/03/2026), fin 2025 · Banque de France via l'AFT, 1er trimestre 2026
+Télécharger en PNG
+SVG
+Prélèvements et transferts publics par dixième de niveau de vie, 2023
+Les prélèvements croissent fortement avec le niveau de vie ; les transferts reçus, prestations et services publics, varient beaucoup moins.
+Précaution d'interprétation.
+Répartition avec conventions d'imputation ; ne mesure pas l'incidence spécifique de la dette.
+Insee, comptes nationaux distribués 2023 (Insee Analyses n° 118, figure 1c)
+Télécharger en PNG
+SVG
+Contributeurs nets et bénéficiaires nets par dixième, 2023
+En moyenne par UC, les dixièmes modestes et médians reçoivent plus qu'ils ne versent, les plus aisés l'inverse ; mais dès le milieu de l'échelle, la majorité des personnes versent plus qu'elles ne reçoivent.
+Précaution d'interprétation.
+Moyennes par UC ; pensions et services publics valorisés par imputation inclus ; solde d'une année, non d'une vie ; ne mesure pas l'effet propre de la dette.
+Insee, comptes nationaux distribués 2023 (Insee Analyses n° 118, figure 2a)
+Télécharger en PNG
+SVG
+Prélèvements et transferts publics par âge du ménage, 2023
+En 2023, selon ces conventions : ce que verse et reçoit chaque groupe, classé par âge moyen des adultes du ménage, retraites et services publics compris.
+Précaution d'interprétation.
+Photographie d'une année, non le bilan d'une génération ni des générations futures ; l'âge du ménage n'est pas le statut de retraite de ses membres.
+Insee, comptes nationaux distribués 2023 (Insee Analyses n° 118, figure 1e)
+Télécharger en PNG
+SVG
+Un même effort de 10 milliards d'euros : qui le supporterait selon la décision prise ?
+Ce qu'un même effort représenterait pour chaque dixième de niveau de vie selon la décision retenue — impôts, pensions ou enseignement —, puis de combien ce choix change l'effort d'un même groupe.
+Précaution d'interprétation.
+Profil d'exposition comptable, non une simulation : ni comportement ni effet en retour.
+Une baisse de service valorisé n'est pas une perte de revenu monétaire.
+Le point D1 de la décision fiscale est écarté ; le motif en est donné au pied du graphique.
+Insee, comptes nationaux distribués, tableau CND.101 (vingtièmes de niveau de vie, 2020-2023, base 2020) — millésime 2023
+Télécharger en PNG
+SVG
+Par quels canaux la charge peut-elle être répartie ?
+Quatre mécanismes possibles, non exhaustifs, le refinancement qui renouvelle l'échéance aux taux du moment sans désigner de perdant, et en regard ce que la dette a financé.
+Précaution d'interprétation.
+Aucun poids relatif ni effet causal n'est mesuré ici.
+Synthèse de l'auteur, schéma non quantitatif
+Télécharger en PNG
+SVG
+Citer cette page
+Lalut, Stéphane (2026). « Qui paie vraiment la dette publique ? ».
+Données Insee et Banque de France via l'AFT, relevé du 11 octobre 2026. https://stephane-lalut.com/qui-paie-la-dette-publique/
+Copier la citation
+En trois phrases
+La répartition des effets de la dette publique dépend de ce qu’elle finance, de la manière dont elle est financée et des ajustements choisis pour la servir ; certaines configurations peuvent reporter des coûts sur des groupes moins capables de les éviter.
+Les données disponibles montrent qui emprunte, qui détient les titres de l’État et qui contribue ou reçoit aujourd’hui — pas qui supportera la charge finale.
+Une perte ne s’attribue qu’à une décision déterminée, comparée à son alternative.
+Copier le résumé
+Les données
+Détention de la dette publique (registre du livre, sources INSEE et Banque de France) et comptes nationaux distribués 2023 de l'Insee, avec leurs périodes, unités et conventions, et les tests de robustesse de l'exposition.
+Télécharger en JSON CSV
+Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
+Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
+Les séries brutes appartiennent à leurs producteurs (Insee et Banque de France via l'AFT), sous leurs propres conditions.
+Vous enseignez les SES ?
+Activités, figures et données prêtes pour la classe →
+Toutes les ressources : données, dossiers et repères →
+Transmettre
+WhatsApp
+Bluesky
+LinkedIn
+X
+E-mail
+Copier le lien

@@ -1,0 +1,408 @@
+# relu le 2026-10-11 ; texte servi de /en/who-really-pays-public-debt/, build de 86a46f0 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+FRThis page is also available in French — version française
+Who really pays for public debt?
+The same €10 billion adjustment falls on different households depending on the decision taken: through education, it weighs mostly on the least well-off; through taxes, on the best-off.
+Who pays for public debt depends on what it finances, how it is financed and the adjustments chosen to service it.
+Public debt dossier
+Updated · 10/2026
+↓ Charts, data and citations to reuseReuse this page
+The question arises in every indebted country.
+France is a useful case study for it: its statistical office, INSEE, publishes distributional national accounts that allocate taxes, contributions and public transfers across the income scale, which makes it possible to ask not only how much the debt costs, but how a given adjustment would be distributed across households.
+Who pays for public debt?
+The answer changes with the decision taken to adjust it.
+The same €10 billion adjustment weighs mostly on the least well-off households if it passes through education, mostly on the best-off if it passes through taxes, and almost equally on everyone if it passes through pensions.
+The size of the bill — stock, interest burden, average cost of the stock — is measured on another page of this dossier, What does French public debt actually cost?; this one asks on whom it falls, what the data do, or do not, allow us to attribute, and what a real decision, considered for 2026 and then set aside, shows.
+French public debt — latest official figure
+3,595.5 billion euros or 119.0% of GDP, in Q2 2026.
+Source: INSEE, Maastricht debt of general government (series 010777616 and 010777608) · series retrieved 11 October 2026 · raw data (JSON).
+What this debt costs, and why: What does French public debt cost?
+Depending on the decision, the adjustment falls on different households
+The population is ranked from the least to the most well-off, then cut into ten groups of equal size, the standard-of-living deciles.
+The exercise distributes €10 billion three times: through a rise in taxes on income and wealth, a cut in retirement pensions, and a cut in education spending.
+Each time, it allocates the sum in proportion to what each decile already pays or receives, then relates the result to that decile’s income.
+The tax considered is the distributional accounts’ category of “taxes on income and wealth”: the CSG (a broad-based social contribution on income), income tax and the other taxes in this category, such as the CRDS, the housing tax or the tax on real-estate wealth.
+It is neither a forecast nor a measure under consideration: no behaviour and no feedback effect enter it.
+It is the current structure of these items, made comparable from one decision to another.
+INSEE, distributional national accounts, table CND.101 (standard-of-living twentiles, 2020-2023, base 2020); 2023 vintage.
+An accounting exposure profile, not a simulation.
+Download · Cite · Data
+The ranking reverses from one decision to another.
+A cut in education spending would represent 2.75% of the income of the poorest 10% and 0.21% of that of the richest; a rise in taxes on income and wealth would do the opposite, up to 1.14% for the top decile.
+The contrast does not come only from the lower deciles’ smaller incomes: in euros, the less well-off half would bear 57.8% of the cut in education spending, against 14.6% of the tax increase.
+A cut in pensions would stay within a narrow band, from 0.43 to 0.78%, sparing no group in particular.
+And “taxes” do not have a single profile: a rise in taxes on products, such as VAT, distributed in the same way, would also weigh more on the least well-off as a share of their income, 1.14% against 0.43% for the best-off.
+The profile favourable to the least well-off is therefore that of taxes on income and wealth, not of all taxation; and this calculation follows the same proportional convention, without being the final incidence of an actual VAT rise.
+An accounting exposure, not an observed loss.
+The 2.75% for the first decile is the value of the education services that INSEE’s accounts attribute to it by convention, relative to its income: neither a loss of income actually suffered, nor a measure of well-being.
+A tax rise takes away money; a spending cut takes away a service, whose value is imputed and whose real cost for each person depends on what is cut.
+The result in one sentence.
+“Who pays for the debt?” has no answer in itself; it has one per decision: the same adjustment weighs mostly on the least well-off if it passes through education, mostly on the best-off if it passes through taxes.
+In the middle of the scale, the choice of lever matters least.
+For the 7th or 8th decile, a little above the middle, the average burden would change little from one decision to another: the heaviest would cost 1.4 times the lightest there.
+For the richest 10%, it would cost 5.5 times the lightest, and at least as much for the poorest 10%: at both ends of the scale, the choice of lever decides almost everything.
+These deciles would not bear less of the adjustment; changing the lever would simply alter their average exposure less, which does not describe the situation of each household in them.
+The convergence appears in all four vintages 2020-2023 (which share conventions and structures, and are therefore not independent replications), and it holds only for these three levers distributed in this way.
+Three tests of the trough in D7-D8, and the limits of the exercise
+In twentiles.
+With the population split into twenty groups instead of ten, the minimum still falls in the D7-D8 zone: in the 14th or 15th twentile depending on the year.
+The trough does not come from grouping by deciles.
+By pairs of levers.
+The tax curve rises with the standard of living, the education curve falls: taken two at a time, they come closest in D7, and it is their crossing that makes the trough; the pensions curve, almost flat, passes close to both.
+The coefficient of variation and the range relative to the mean place the minimum in the same zone as the ratio of the heaviest to the lightest.
+Measured in percentage points of income rather than as a ratio, the gap between the heaviest and the lightest decision is still smallest in D7-D8.
+Without pensions, taxes and education alone come closest in D7: the trough owes nothing to the third curve.
+With a fourth lever, taxes on products, it stays in D7-D8.
+With other forms of measures (calculation assumptions, not measures under consideration).
+An education cut of the same amount for each decile, or concentrated where spending is already high, leaves the trough in D7-D8; sparing the education of the first three deciles places it in D8 or D9 depending on the year; sparing their pensions leaves it in D7-D8.
+A more progressive tax, distributed in proportion to the square of what each decile already pays, moves it to D9, however.
+The trough therefore withstands the choice of measure and several distributions, but its location follows the progressivity of the measures: it is a result of the proportional scenario, not a general property of redistribution.
+The reference income only affects the level of the curves.
+For a given decile, it is common to all three levers: the ratio of the heaviest to the lightest, and the points where two curves cross, do not depend on it.
+The gap measured in percentage points of income, however, does: with another denominator, its minimum could move.
+The limits.
+A public service valued in euros is not income: education spending imputed to a household is not paid to it, and cutting it would not cost the household exactly that sum.
+The three decisions are proportional by construction; the figure says nothing about “taxes” or “public spending” in general.
+Finally, the first-decile point is excluded for the tax decision: income tax of the first twentile makes up 60% of the item there while the neighbouring twentiles are at zero, an atypical cell in the source.
+The gap for this decile, computed on the two other levers, is therefore a lower bound.
+Who borrows, who holds, who receives the interest
+Four questions are often confused: who borrows, who finances and receives the interest, through which mechanisms financing and adjustments operate, and who ultimately bears their effects.
+These are not four populations: the same person pays taxes, is treated in a public hospital and holds government securities through an assurance-vie policy.
+And “who pays” is always said relative to another decision: borrowing less would have meant another tax, another cut in spending, with their own losers.
+Two distinct scopes: A at nominal value (INSEE), B at market value (Banque de France, via Agence France Trésor).
+The values come from the same register as the figure on p.
+101 of the book.
+Download · Cite · Data
+Who borrows, who holds.
+Central government accounts for most of the public debt: 2,823 billion euros out of 3,460.5, or 82% (end of 2025).
+In Q1 2026, its marketable securities were held 57.5% by non-residents; resident banks, insurers and funds together held 21.9%; the other resident holders, 20.6%, include the Banque de France, whose share the source does not publish.
+The two panels cannot be combined: one is at nominal value, the other at market value.
+Who receives the interest: what is observed, what can be approximated, what is unknown.
+We observe the direct holders, classified by residence: a stock captured at a given date, not the flow of coupons, which depends on the securities held and when they were issued.
+We can approximate the indirect holders: tracing the investments of assurance-vie policies, funds and banks to their final use, the French Treasury (Direction générale du Trésor) estimates that out of every 10 euros of French households’ financial wealth, 1 finances general government debt, mostly French (Trésor-Éco no.
+378, January 2026, in French).
+We do not know which households receive that interest: no published statistic distributes it by income or wealth, which would require following each security, its return and its intermediaries.
+Two readings are therefore ruled out: 57.5% of the securities is not 57.5% of the interest, and holdings of financial assets by decile do not tell each decile’s share of that interest.
+The absence of this breakdown does not mean that this income is negligible: it limits what can be asserted.
+Two further points: today’s holder is not necessarily the one who lent at issuance, since a security is then traded on the market; and the securities held by the Banque de France under Eurosystem programmes cannot be analysed like those of a private creditor.
+Residence is not nationality, and financing is not gaining
+Financing is not gaining.
+The creditor advanced the funds: interest pays for that advance, for time and for risk.
+Its real return takes account of inflation and of changes in the security’s value, and its advantage over another investment is measured at a comparable horizon and risk.
+“We owe it to ourselves” is therefore only partly true, and does not say which of “us” receive and which finance.
+The published breakdown classifies holders by residence, not nationality: a “non-resident” can be a foreign fund managing the savings of French households, and a French household can hold government securities without knowing it, through its assurance-vie policy.
+The Banque de France statistic on the long-term securities of general government as a whole covers a different scope from Agence France Trésor’s, which is limited to central government’s marketable securities: the two shares are not interchangeable.
+Who contributes, who receives today
+INSEE’s distributional national accounts allocate, for 2023, taxes, contributions and public transfers across standard-of-living deciles — the population ranked from the least to the most well-off, then cut into ten groups of equal size.
+Amounts are expressed per consumption unit (CU), the unit that makes households of different sizes comparable: a single person counts as 1 CU, a couple with two children under 14 as 2.1.
+INSEE, distributional national accounts 2023 (Insee Analyses no.
+118, 16 April 2026, figure 1c), in euros per consumption unit.
+Download · Cite · Data
+The values as a table (euros per consumption unit, 2023)
+Decile
+Taxes and contributions
+Cash benefits
+In-kind transfers
+D1
+−6,400
+8,000
+19,100
+D2
+−8,800
+10,600
+20,500
+D3
+−11,900
+11,700
+17,400
+D4
+−15,100
+11,500
+17,200
+D5
+−18,200
+12,000
+15,000
+D6
+−21,500
+12,600
+15,000
+D7
+−25,700
+12,800
+14,700
+D8
+−31,700
+13,400
+13,000
+D9
+−41,100
+14,600
+13,600
+D10
+−89,800
+18,500
+12,900
+All
+−27,000
+12,600
+15,800
+Taxes and contributions range from €6,400 per CU for the poorest 10% to €89,800 for the richest 10%, about 14 times more.
+Transfers received — cash benefits and public services valued in euros — vary much less: they stay between €26,400 and €31,400, with no regular progression.
+What is paid tracks the standard of living; what is received, much less so.
+These taxes and contributions are not payments recorded one by one: besides income tax and social contributions, they include taxes on products, such as VAT, and taxes on production, which INSEE attributes to households by convention.
+Where the debt enters these accounts.
+In 2023, transfers attributed to households exceed taxes and contributions by 66 billion euros, and INSEE links this gap to public borrowing: it is the part of the year’s extended income that is not financed by the same year’s taxes and contributions.
+These 66 billion are not the 2025 interest burden (66.6 billion): year, scope and nature differ, and the closeness of the two figures is a coincidence.
+A balance allocated by convention, financed on credit, which does not say who will pay tomorrow
+This total covers the scope of the distributional accounts, which is not that of the public deficit: the two amounts are not interchangeable.
+In this construction, the gap raises households’ extended standard of living for the year (a present benefit, financed on credit), but these are not 66 billion of identifiable payments: it is a balance allocated by convention, which INSEE attributes half to lower taxes and contributions and half to additional transfers when it computes a standard of living “net of borrowing”.
+The figures on this page show current transfers, before that adjustment.
+The balance does not imply that the beneficiaries of redistribution “created” this debt, nor that their position says who will repay it.
+INSEE, distributional national accounts 2023 (figure 2a).
+Two units, two panels: euros per consumption unit, then share of people.
+Download · Cite · Data
+Net contributors, net beneficiaries.
+On average per CU, transfers received exceed taxes and contributions in each of the first seven deciles (by €20,800 per CU in the first), and the balance tips at decile D8: in the last three, it is the reverse, and the top decile pays in, on average, €58,400 per CU more than it receives.
+A group average does not describe its members.
+56% of people are net beneficiaries that year, 99% in the first decile and 18% in the top one.
+But they are a majority only in the first five deciles: in decile D7, which receives on average €1,800 per CU more than it pays in, they are only 36%.
+The sign of an average does not reveal the situation of the majority.
+A group can receive more than it pays in on average while most of its members pay in more than they receive: it is enough for what net beneficiaries receive on average to outweigh what the others pay in on average.
+The grouped data do not say how these balances are distributed.
+Receiving more than one pays in, on average, therefore offers no protection from an adjustment: position in today’s redistribution and exposure to tomorrow’s decision are two distinct rankings.
+Conventions: the balance of one year, not of a lifetime; public services imputed, not measured; redistribution as a whole, not the specific effect of the debt
+This is the balance of one year, not of a lifetime: retirement pensions count as current benefits.
+Transfers include public services — health care, education, collective services — valued in euros and allocated by statistical imputation, not a record of the services each person used; the share of net beneficiaries depends on this at the margin.
+Income “before transfers” is a step in the calculation, not the income each person would have in an economy without taxes or public services.
+And this balance describes redistribution as a whole, not the specific effect of the debt.
+By household age: a snapshot of the year, not a lifetime balance
+INSEE, distributional national accounts 2023 (figure 1e).
+Groups by average age of the adults in the household.
+Download · Cite · Data
+In 2023, under these conventions, households whose adults are on average 65 or over receive €47,800 per consumption unit in transfers — of which €28,700 in cash benefits, pensions included — and pay €14,600 in taxes and contributions, against €33,800 for households aged 50 to 64.
+Pensions partly correspond to entitlements earned over a career, counted here as current benefits; a household’s age is not the retirement status of each of its members, and a high amount of imputed health care also reflects greater needs.
+This snapshot designates no payer of tomorrow.
+Through which channels the burden can be distributed
+Four mechanisms can change the burden of the debt and its distribution, and they combine.
+The first two belong to ordinary budget adjustment, decided every year: taxes and contributions — additional taxes and contributions, or tax cuts forgone — and spending and benefits cut, frozen or postponed.
+The third is not decided alone: unanticipated inflation reduces the real value of claims already issued and shifts part of the burden onto their holders and onto poorly indexed incomes.
+The fourth is an extreme case: restructuring imposes a first-round loss on the holders of the securities, who may pass it on to their shareholders, policyholders or savers.
+A diagram of possible mechanisms: no relative weight or causal effect is measured in it.
+Download · Cite · Data
+Refinancing, for its part, renews a maturity on the terms of the day: it can lighten or increase the burden, without designating who will bear it.
+And set against these costs is what the debt financed: services, benefits and investment benefit households today and tomorrow, and an analysis that counted only the costs would describe only half of the balance sheet.
+Why only unanticipated inflation transfers the burden, and what works in the opposite direction
+The inflation expected when a security’s rate was set tends to be already built into the rate required at issuance, and then makes no transfer.
+It is the gap between realised inflation and that expectation that reduces the real value of nominal claims already issued.
+Two mechanisms work in the opposite direction: inflation-linked securities see their cost rise with prices, and refinancing takes place at the new rates.
+The net effect therefore depends on the indexed share, on the refinancing calendar and on what was anticipated — and France does not choose its inflation alone.
+Not to be confused with the effect of inflation on the debt ratio, which works through nominal GDP and, for its part, designates no loser.
+The list of channels is not exhaustive: growth, asset sales and financing conditions also play a role, and history also offers cases of financial repression, which constrains returns.
+Three hypotheses to be tested
+The channels say where the burden can pass; three stronger hypotheses circulate about whom it would reach.
+None is established by the data on this page, and each calls for its own test.
+Future generations — what they inherit
+Debt converts present spending into future obligations: those who come after inherit them without having taken part in the decision.
+But they also inherit what it financed and part of the securities themselves: the net transfer is not measured here.
+What the net transfer depends on, and what net debt does not say
+The next generations inherit the infrastructure, education and public assets financed, and securities that their parents hold directly or through assurance-vie.
+This does not necessarily neutralise the burden: some models identify a channel through which debt crowds out productive capital, which this page does not measure for France.
+The net transfer depends on the use, the financing, the claims passed on and the alternative chosen.
+Net debt as published by INSEE does not settle the matter either: it deducts only certain financial assets, not roads, human capital or the environment.
+The page Is public debt a burden on future generations? measures what deficits actually financed.
+Less mobile groups — a hypothesis to be tested
+Households and firms that can move their income, wealth or activity escape a levy more easily than employees, retirees or users of a local public service.
+Hence the hypothesis: when adjustment follows the line of least resistance, it may weigh more on those who cannot leave.
+To test it: groups defined in advance, a specified adjustment, a fixed measure
+Testing it requires defining these groups before observing the adjustment, specifying the adjustment studied and fixing a measure of effort; the hypothesis would be weakened by an adjustment falling mainly on other groups, or by compensation granted to the losers.
+Geographical mobility, mobility of the tax base and the capacity to replace a public service are three distinct properties.
+The territorial channel is examined on the page Public debt: why are local authorities the adjustment variable?
+Investments with deferred benefits — a mechanism to be established case by case
+A budget constrained by debt service may encourage the postponement of spending whose benefits are distant and whose postponement is politically cheap: research, maintenance of public assets, training, the ecological transition.
+The mechanism is plausible, not established.
+Plausible, not established: no aggregate measures an investment prevented by interest payments
+It remains to be established decision by decision (which spending, postponed by which decision, for which budgetary reason), since no aggregate measures an investment prevented by interest payments.
+Where it is established, it compounds the transfer: the benefit that was never built adds to the obligations passed on, and appears in no stock of debt.
+A real, dated decision
+A real example, distinct from the theoretical exercise.
+Article 44 of France’s 2026 social security financing bill provided that basic-scheme pensions would not be uprated in 2026: a coefficient “equal to one”.
+The provision was set aside during the parliamentary process: the 2026 social security financing act, promulgated on 30 December 2025, contains no freeze, and the interministerial instruction of 15 December 2025 uprates these pensions on 1 January 2026 by a coefficient of 1.009, or 0.9%, “in accordance with the law in force” (all three texts in French).
+This is a decision of the “pensions” type, considered and then set aside.
+Two limits prevent the exercise from applying to it directly: a freeze on basic pensions alone does not have the profile of a cut distributed in proportion to all pensions, and nothing in these texts links the measure considered to the debt rather than to the social security deficit.
+A real budget combines revenue, contributions, benefits, spending and borrowing, and generally does not allow a given tax to be linked to a euro of interest.
+Nor, since it was never adopted, can this measure show an incidence actually borne: that would require a measure that was applied, and the situation that would have prevailed without it.
+The three €10 billion decisions on this page are calculation assumptions, not a description of the choices made in 2026.
+Fiscal policy as a whole is examined on the page Can public debt come down?
+What these data do not allow us to establish
+No statistic says, on its own, who ultimately bears the burden of French debt: the final incidence of a euro of interest depends on the adjustments chosen year after year, and on the alternative they are compared with.
+A current distribution of taxes and benefits describes who contributes and who receives today; it does not identify the future payers.
+An average per consumption unit is not an individual bill.
+What can be established is the effect of a specific decision — a reform, a freeze, a postponement — on groups defined in advance: it is at that level that “who pays?” receives verifiable answers.
+Tested against the research literature: the direction of the spending/tax contrast recurs in consolidations actually observed; the inherited-claim argument is challenged by the crowding-out of capital
+Measured here.
+An accounting profile: the same €10 billion adjustment distributed in proportion to what each decile already pays or receives, according to INSEE, with no behaviour or feedback effects.
+The literature tests the readings drawn from it, not the profile itself.
+Consistent with.
+The direction of the contrast between spending and taxes: in fiscal consolidations actually observed in 18 industrialised countries, France included, from 1978 to 2009, net income inequality rises; spending cuts appear unfavourable, tax rises equalising, although the latter effect is not significant in the baseline specification (Agnello and Sousa).
+The postponement of investment: in Breunig and Busemeyer’s sample, a heavier interest burden goes with a decline in the share of public investment in favour of pensions, postponing an investment being politically less costly than cutting an entitlement.
+The role of use: in Diamond’s model, borrowing to acquire physical capital makes the government a mere intermediary between savers and entrepreneurs, with no effect.
+Challenged by.
+Any reading in which the inherited claim would neutralise the burden: in the efficient case of Diamond’s model, where the interest rate exceeds population growth, domestically held debt lowers long-run welfare more than external debt, because it takes the place of productive capital in people’s wealth.
+Barro, who defends the opposite view, bases it on voluntary transfers between parents and children, operative for most people, and acknowledges that in 1989 most economists still leaned towards the standard models.
+The magnitude: in Agnello and Sousa’s breakdown, it is the largest tax rises that are associated with a significant fall in inequality, and the effects tend to disappear within two years.
+The “tax” curve read as final incidence: in 55,082 firms in nine European countries, from 1996 to 2003, about half of a rise in corporate income tax falls in the long run on wages (Arulampalam, Devereux and Maffini) — a different tax from the one on this page, but the same gap between legal and final incidence.
+Not established.
+That less mobile groups bear more of the adjustment: the corporate tax study measures wage bargaining, and its only mobility contrast, between multinationals and independent firms, is not significant.
+That only unanticipated inflation transfers the burden: we did not find, in the texts examined, a test separating anticipated from unanticipated inflation.
+Finally, the page’s “education” exposure has no observed equivalent: a cash income indicator does not directly value a loss of public service.
+References read
+Agnello, L. and Sousa, R.
+M., “How Does Fiscal Consolidation Impact on Income Inequality?”, Banque de France working paper no.
+382, 2012 (published in the Review of Income and Wealth, 60(4), 2014).
+Breunig, C. and Busemeyer, M.
+R.
+(2012), “Fiscal austerity and the trade-off between public investment and social spending”, Journal of European Public Policy, 19(6), pp.
+921-938.
+Arulampalam, W., Devereux, M.
+P. and Maffini, G., “The Direct Incidence of Corporate Income Tax on Wages”, revised manuscript, February 2012 (published in the European Economic Review, 56(6), 2012).
+Diamond, P.
+A.
+(1965), “National Debt in a Neoclassical Growth Model”, American Economic Review, 55(5), pp.
+1126-1150.
+Barro, R.
+J.
+(1989), “The Ricardian Approach to Budget Deficits”, Journal of Economic Perspectives, 3(2), pp.
+37-54.
+Literature review checked on 30 September 2026: every reference cited was read in full on that date, in the version indicated.
+Synthèse
+What to take away
+“Who pays?” has one answer per decision, and the choice matters most at the ends of the scale.
+The same adjustment falls on the least well-off through education, on the best-off through taxes; in the middle of the scale, the three levers studied produce similar exposures.
+Naming the decision and the alternative turns an opinion into a verifiable statement.
+Holding is not paying, and interest can be traced only so far.
+Direct holders are observed, indirect holders approximated through household savings, but no statistic says which households receive the interest: the breakdown of holders tells us where the interest goes, never how it is financed.
+A group average does not describe its members.
+A decile can receive more than it pays in on average while most of its members pay in more than they receive.
+A statistic by decile answers “how is the total distributed?”, not “what does a person in this decile experience?”.
+Further reading in this dossier: two applications of "who pays?"
+Local authoritiesHow a constraint on central government can pass down to local authorities that carry little debt but are tightly regulated.
+Future generationsWhen does debt really amount to a transfer to those who come after?
+Frequently asked questions
+Is public debt really a problem?
+The reassuring argument is a serious one: when the interest rate stays below growth, the debt ratio can stabilise, provided the deficit excluding interest — the primary balance — stays below a threshold that depends on the gap between the two rates and on the level of the debt.
+Beyond it, the ratio rises regardless.
+And even when stable, a debt has to be serviced every year: its financing and its adjustments distribute costs and benefits among taxpayers, users of public services, savers and generations.
+The useful question is then what it finances and who bears the adjustments — and it is answered configuration by configuration, not in principle.
+Is public debt a burden on future generations?
+Not mechanically.
+The next generations inherit the obligations, but also what they financed — infrastructure, education, public assets — and part of the securities themselves, held directly or through French assurance-vie savings policies (life-insurance-based savings) — which does not necessarily neutralise the burden, since debt can also crowd out productive capital.
+The net transfer depends on the use: debt that finances current consumption with no lasting counterpart mostly passes on a cost; an investment they will benefit from can pass on more than it costs.
+What remains true in every case: the decision is taken without them.
+Who holds French public debt, and who receives the interest?
+Central government accounts for 82% of public debt (end of 2025, INSEE).
+In Q1 2026, its marketable securities were held, at market value, 57.5% by non-residents, 21.9% by resident banks, insurers and funds, 20.6% by other resident holders — among them the Banque de France, whose share is not published (Banque de France, via Agence France Trésor).
+Holders are classified by residence, not nationality.
+For households, the French Treasury (Direction générale du Trésor), tracing the investments of assurance-vie policies, funds and banks, estimates that out of every 10 euros of financial wealth, 1 finances general government debt, mostly French.
+No published statistic, however, distributes the interest on public debt by income or wealth, and a share of the securities held is not a share of the interest paid.
+Holding is not paying: the holder advanced the funds and receives the return on them; the breakdown of holders does not say who bears the final burden.
+Should public debt be repaid?
+Each security that matures is repaid, but the debt as a whole is refinanced: the government issues new securities to repay the old ones, and the stock evolves with the deficit.
+Repaying the whole stock is therefore a largely theoretical hypothesis.
+The operative question is what happens while the debt is continuously rolled over: who bears the interest, which budgets carry the adjustments, who inherits the obligations and what they financed.
+Refinancing renews a maturity on the terms of the day: it can lighten or increase the burden, and on its own it does not identify who will bear it.
+This analysis is developed in the book Dette Publique : Qui paie vraiment ?, the author's book, in French: contents, excerpts and reviews →
+Where these figures come from
+Redistribution by decile and by age: Mathias André, Alexis Barrau and Thomas Renaud (INSEE), “Revenus des ménages élargis à l’ensemble de l’économie en 2023”, Insee Analyses no.
+118, 16 April 2026 (figures 1c, 1e and 2a), in French.
+Exposure to the same adjustment: INSEE, distributional national accounts, table CND.101, standard-of-living twentiles, 2020-2023, base 2020; the author’s calculation, with robustness tests published with the data.
+Debt by level of government: INSEE, Informations rapides no.
+79, quarterly Maastricht debt of general government, 27 March 2026, end of 2025.
+Holders of central-government securities: Banque de France, via Agence France Trésor, Q1 2026.
+Households’ indirect claims: French Treasury (Direction générale du Trésor), “Que finance l’épargne financière des ménages français ?”, Trésor-Éco no.
+378, 8 January 2026.
+Pension uprating in 2026: 2026 social security financing bill, no.
+1907, article 44; act no.
+2025-1403 of 30 December 2025 on social security financing for 2026; interministerial instruction DSS/3A/DB/6BRS/2025/174, 15 December 2025.
+Every figure on this page is read from these documents by a generator that checks their fingerprint, not copied by hand; the compiled data can be downloaded from the “Reuse” block below.
+Where this analysis comes from
+Anthropy is the hypothesis that social systems displace disorder rather than resolve it.
+Applied to public finances, this hypothesis is formalised in the working paper AWP-03 — Public debt and anthropy: who really pays for disorder?
+(DOI: 10.5281/zenodo.19434094, open-access PDF).
+The working paper AWP-09 tests this reading against public accounts: the incidence of the same fiscal effort depends on the instrument chosen, but the asymmetry between mobile and captive households lies beyond what the accounts can test, since they do not observe the former escaping.
+Reusing this page
+The charts, the data and a ready-made citation, under an open licence.
+Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it does not come apart from what makes it readable.
+Who borrows?
+Who holds French government securities?
+The levels of government that borrow, then the holders of central-government securities: two separate scopes, with no proportional link.
+Reading caveat.
+A: nominal value; B: market value.
+Holding securities does not measure the final burden.
+INSEE, IR no.
+79 (27 March 2026), end of 2025 · Banque de France via Agence France Trésor (French Treasury agency), Q1 2026
+Download PNG
+SVG
+Taxes and contributions, and public transfers, by standard-of-living decile, 2023
+Taxes and contributions rise steeply with the standard of living; transfers received, benefits and public services, vary much less.
+Reading caveat.
+Distribution based on imputation conventions; does not measure the specific incidence of the debt.
+Insee, distributional national accounts 2023 (Insee Analyses no.
+118, figure 1c)
+Download PNG
+SVG
+Net contributors and net beneficiaries by decile, 2023
+On average per CU, the lower and middle deciles receive more than they pay in, the best-off the reverse; but from the middle of the scale, most people pay in more than they receive.
+Reading caveat.
+Averages per CU; pensions and public services valued by imputation included; the balance of one year, not of a lifetime; does not measure the specific effect of the debt.
+Insee, distributional national accounts 2023 (Insee Analyses no.
+118, figure 2a)
+Download PNG
+SVG
+Taxes and contributions, and public transfers, by household age, 2023
+In 2023, under these conventions: what each group pays in and receives, ranked by the mean age of the household's adults, pensions and public services included.
+Reading caveat.
+A snapshot of one year, not the balance sheet of a generation nor of future generations; a household's age is not the retirement status of its members.
+Insee, distributional national accounts 2023 (Insee Analyses no.
+118, figure 1e)
+Download PNG
+SVG
+The same €10 billion adjustment: who would bear it, depending on the decision taken?
+What the same adjustment would represent for each standard-of-living decile depending on the decision taken (taxes, pensions or education), then how much that choice changes what the same group bears.
+Reading caveat.
+An accounting exposure profile, not a simulation: no behaviour, no feedback effect.
+A cut in a valued public service is not a loss of cash income.
+The D1 point of the tax decision is excluded; the reason is given in the figure's footer.
+Insee, distributional national accounts, table CND.101 (standard-of-living twentiles, 2020-2023, base 2020) — 2023 vintage
+Download PNG
+SVG
+Through which channels can the burden be distributed?
+Four possible mechanisms (not an exhaustive list); refinancing, which rolls the maturity over without designating a loser; and, alongside, what the debt has financed.
+Reading caveat.
+No relative weight or causal effect is measured here.
+Author's synthesis, non-quantitative diagram
+Download PNG
+SVG
+Cite this page
+Lalut, Stéphane (2026).
+“Who really pays for public debt?”.
+INSEE and Banque de France via Agence France Trésor data, retrieved 11 October 2026. https://stephane-lalut.com/en/who-really-pays-public-debt/
+Copy citation
+In three sentences
+How the effects of public debt are distributed depends on what it finances, how it is financed and the adjustments chosen to service it; some configurations may shift costs onto groups less able to avoid them.
+The available data show who borrows, who holds central-government securities and who contributes or receives today — not who will bear the final burden.
+A loss can only be attributed to a specific decision, compared with its alternative.
+Copy summary
+The data
+Holdings of public debt (the book's register, sources INSEE and Banque de France) and INSEE's 2023 distributional national accounts, with their periods, units and conventions, and the robustness tests of the exposure profile.
+Download JSON CSV
+Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
+Text under copyright — short quotation free, full reproduction on request.
+The raw series belong to their producers (INSEE and Banque de France via Agence France Trésor), under their own terms.
+All resources: data, explainers and reference material →
+Share
+WhatsApp
+Bluesky
+LinkedIn
+X
+Email
+Copy link

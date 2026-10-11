@@ -1,0 +1,654 @@
+# relu le 2026-10-11 ; texte servi de /dette-publique-comparaison-internationale/, build de 86a46f0 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+ENCette page existe aussi en anglais — English version
+Dette publique : pourquoi 100 % du PIB ne pèse pas partout de la même façon
+À dette presque égale, la Hongrie consacre 8,9 % de ses recettes publiques aux intérêts, la Slovénie 2,7 %.
+Le stock ne suffit donc pas à mesurer ce que pèse une dette publique : il faut regarder aussi son prix, les recettes disponibles pour la servir, et le poids des emprunts anciens dans ce qu'elle coûte aujourd'hui.
+Dossier dette publique
+Données · Eurostat 2025
+↓ Graphiques, données et citations à réutiliserRéutiliser cette page
+Mise à jour : 11 octobre 2026 Les 27 pays de l'Union européenne, données principales 2025 ; hors d'Europe, le millésime est indiqué pays par pays.
+Télécharger : CSV · JSON · méthode
+Même dette, charge différente
+Stock de départ (dette de fin 2024 / PIB 2025) et charge (intérêts / recettes), 2025.
+Les pointillés relient les « faux jumeaux », deux pays de dette voisine dont la charge diffère le plus, désignés par une règle fixée avant le calcul : pour chaque pays, son plus proche voisin en stock ; couples dont l’écart est inférieur à 10 points ; les trois plus grands écarts de charge.
+Groupes de l’année des données : la Bulgarie, hors zone euro en 2025, l’a rejointe le 1er janvier 2026.
+Le résultat en une phrase.
+À niveau de dette voisin, la part des recettes absorbée par les intérêts peut varier de 1 à 3,3 : le stock ne suffit pas à déterminer la charge, parce qu’il ne fixe ni le prix de la dette ni le niveau des recettes publiques.
+Pourquoi la Hongrie paie-t-elle 3,3 fois plus que la Slovénie ?
+Pas à cause de sa dette : rapportée au PIB, elle n’est que 1,09 fois plus élevée.
+Le taux moyen payé sur cette dette est 2,75 fois plus élevé (5,53 % contre 2,01 %), et ses recettes publiques, plus faibles (42 % du PIB contre 47 %), alourdissent encore la charge d’un facteur 1,10 : 1,09 × 2,75 × 1,10 donne bien 3,3.
+L’essentiel de l’écart tient donc au prix de la dette.
+Ce calcul dit ce qui contribue arithmétiquement à l’écart, non pourquoi la Hongrie se finance à ce taux.
+Deux groupes, deux droites.
+En 2025, parmi les sept pays de l’Union restés hors de la zone euro, la relation entre dette et charge d’intérêts est 3,9 fois plus pentue que parmi les vingt membres de la zone euro.
+C’est une association entre pays observée la même année, non une vitesse d’évolution.
+Elle reflète notamment les coûts de financement élevés de certains de ces pays, et ne mesure pas un effet de la monnaie commune : les pays hors euro ne forment pas un régime monétaire homogène, certains maintenant une parité fixe avec l’euro (le Danemark, la Bulgarie jusqu’à son entrée), d’autres laissant flotter leur monnaie.
+Les statistiques de la figure : une relation en partie attendue par construction, deux droites qui ne dépendent d'aucun pays isolé
+Classés par dette et par charge, les pays s’ordonnent de façon voisine (corrélation de rang de 0,76) ; le stock ne rend compte que d’une partie de la dispersion de la charge (R² = 0,40).
+À l’intérieur de chaque groupe, il en rend compte davantage : R² = 0,82 sur les vingt pays de la zone euro, 0,83 sur les sept autres.
+Une part de cette relation est attendue par construction : la charge est le stock multiplié par le prix et divisé par les recettes, si bien qu’à prix et recettes voisins, elle suit le stock.
+Ce que la figure apporte, c’est l’hétérogénéité du prix et des recettes d’un pays à l’autre.
+La pente hors zone euro ne dépend d’aucun pays isolé : quand on retire tour à tour chacun des sept pays, elle reste comprise entre 0,165 et 0,211.
+Ce test ne dit rien du poids collectif des pays qui paient le plus cher.
+La France : deux lectures d’une même charge
+Selon la mesure, la France paraît mieux ou moins bien placée.
+En 2025, les intérêts de sa dette représentent 2,23 % du PIB et 4,3 % des recettes publiques.
+Rapportés aux recettes, ils sont plus faibles que ceux de six pays pourtant moins endettés (Roumanie, Pologne, Hongrie, Portugal, Espagne, Belgique) ; rapportés au PIB, ils placent la France au septième rang de l’Union, et seuls quatre pays moins endettés la dépassent (Roumanie, Pologne, Hongrie, Espagne).
+L’écart entre les deux lectures tient aux recettes publiques françaises, qui représentent 52,2 % du PIB, la deuxième plus forte de l’Union.
+Changer de dénominateur modifie la position relative de la France, pas le montant des intérêts qu’elle paie.
+Le niveau élevé des recettes réduit mécaniquement le rapport des intérêts aux recettes ; il ne dit, à lui seul, ni s’il serait possible de prélever davantage, ni à quelles dépenses les intérêts se substituent.
+Le premier rapport mesure la charge au regard de la richesse produite ; le second, la part des ressources publiques qu’absorbent les intérêts.
+Aucun des deux ne mesure, seul, la soutenabilité.
+Deux chiffres de dette française circulent.
+115,6 % du PIB, la dette de fin 2025 : c’est celle des classements.
+110,5 %, la dette de fin 2024 rapportée au PIB de 2025 : c’est le stock de départ, retenu comme dénominateur du taux implicite de l’année, et celui de la figure.
+Pourquoi l'écart entre ces deux chiffres n'est pas la hausse du ratio en un an
+Les 5,1 points qui séparent les deux chiffres mesurent la hausse de la dette en euros pendant 2025, rapportée au même PIB.
+Le ratio de dette, lui, se calcule chaque année sur le PIB de l’année : il valait 112,6 % fin 2024 et a augmenté de 2,9 points en 2025.
+Un troisième chiffre est un prix de marché : le rendement à 10 ans (3,35 %), qui n’est ni le coût moyen de la dette déjà émise ni nécessairement celui des emprunts à venir.
+Pourquoi ?
+Une équation, trois termes
+Ce que la dette pèse sur les recettes publiques dépend de trois termes
+la dettestock de départ, en % du PIB
+×
+son coût moyenprix : taux implicite
+÷
+les recettes publiquesen % du PIB
+=
+la chargeintérêts en % des recettes
+Identité exacte, vérifiée pour chaque pays : intérêts / recettes = (dette de fin d'année précédente / PIB) × (intérêts / dette de fin d'année précédente) ÷ (recettes / PIB)
+Le prix est le taux implicite : les intérêts versés une année, rapportés à la dette de la fin de l’année précédente.
+Il mesure le coût moyen du stock, non le taux auquel un État emprunte aujourd’hui ; Eurostat publie aussi un « coût apparent », fondé sur la dette moyenne de l’année, proche mais non identique.
+À stock de départ égal, deux pays ne peuvent différer en charge que par leur prix ou par leurs recettes.
+Un mécanisme s’y ajoute avec le temps, la transmission : les emprunts anciens continuent de peser sur le coût d’aujourd’hui, et ne sont remplacés qu’à mesure qu’ils arrivent à échéance.
+Le prix et les recettes
+Le prix ne suit pas le stock.
+Dans l’Union européenne en 2025, le niveau de la dette ne permet pas de prédire son prix (R² = 0,00), ce qui ne veut pas dire qu’il n’a jamais d’effet sur lui.
+L’Italie, très endettée, paie un taux implicite voisin de pays qui le sont beaucoup moins, et la France paie 2,02 %, un peu moins que la moyenne simple des pays de la zone euro (2,2 %) : c’est le huitième taux le plus bas sur vingt.
+Les recettes comptent aussi.
+À prix égal, un État qui prélève une plus faible part de sa richesse consacre une plus grande part de ses recettes aux intérêts : c’est le troisième facteur de l’écart entre la Hongrie et la Slovénie, et la raison des deux lectures de la charge française.
+Voir les 27 pays : stock, prix, recettes et charge
+Les quatre dimensions, 2025 — Eurostat, administrations publiques, périmètre harmonisé (strictement comparable)
+Pays
+Zone euro
+Stock de départ
+dette fin 2024 / PIB 2025
+Prix
+taux implicite
+Recettes
+% du PIB
+Charge
+intérêts / recettes
+Grèce
+oui
+147,0 %
+2,15 %
+50,0 %
+6,3 %
+Italie
+oui
+131,0 %
+2,94 %
+47,9 %
+8,0 %
+France
+oui
+110,5 %
+2,02 %
+52,2 %
+4,3 %
+Belgique
+oui
+100,3 %
+2,22 %
+49,0 %
+4,5 %
+Espagne
+oui
+95,9 %
+2,49 %
+42,9 %
+5,6 %
+Portugal
+oui
+87,8 %
+2,20 %
+43,1 %
+4,5 %
+Finlande
+oui
+80,7 %
+2,01 %
+53,7 %
+3,0 %
+Autriche
+oui
+76,2 %
+2,09 %
+50,5 %
+3,2 %
+Hongrie
+non
+68,6 %
+5,53 %
+42,5 %
+8,9 %
+Slovénie
+oui
+62,9 %
+2,01 %
+46,6 %
+2,7 %
+Chypre
+oui
+59,8 %
+1,91 %
+43,6 %
+2,6 %
+Allemagne
+oui
+59,5 %
+1,84 %
+47,2 %
+2,3 %
+Slovaquie
+oui
+56,8 %
+2,73 %
+43,5 %
+3,6 %
+Croatie
+oui
+53,0 %
+2,64 %
+47,1 %
+3,0 %
+Pologne
+non
+51,4 %
+4,88 %
+43,6 %
+5,8 %
+Roumanie
+non
+50,0 %
+5,65 %
+35,2 %
+8,0 %
+Lettonie
+oui
+43,1 %
+2,53 %
+42,9 %
+2,5 %
+Malte
+oui
+43,1 %
+2,82 %
+34,7 %
+3,5 %
+Pays-Bas
+oui
+41,9 %
+1,73 %
+43,6 %
+1,7 %
+Tchéquie
+non
+40,7 %
+3,20 %
+41,0 %
+3,2 %
+Irlande
+oui
+35,8 %
+1,38 %
+24,2 %
+2,0 %
+Lituanie
+oui
+35,2 %
+2,51 %
+39,0 %
+2,3 %
+Suède
+non
+32,9 %
+1,84 %
+48,0 %
+1,3 %
+Danemark
+non
+28,7 %
+2,77 %
+50,1 %
+1,6 %
+Luxembourg
+oui
+24,8 %
+1,33 %
+46,2 %
+0,7 %
+Estonie
+oui
+22,3 %
+2,16 %
+43,2 %
+1,1 %
+Bulgarie
+non
+21,5 %
+3,82 %
+38,1 %
+2,2 %
+Prix de la dette et inflation récente
+Taux implicite de la dette (2025) et inflation moyenne des trois années précédentes (indice des prix harmonisé, Eurostat).
+Relation descriptive sur une année.
+Hors de la zone euro, le taux implicite est étroitement associé à l’inflation récente (R² = 0,61) ; dans la zone euro, beaucoup moins (R² = 0,13) : les pays baltes ont connu une forte inflation sans payer cher.
+L’appartenance monétaire ne suffit pas pour autant : la Suède, hors de l’euro, paie 1,84 %, comme l’Allemagne.
+Ces données décrivent une année et des pays ; elles ne disent ni que l’euro rend la dette moins chère, ni l’inverse.
+Elles ne permettent pas non plus de calculer un taux « réel » : retrancher l’inflation passée d’un taux moyen payé sur des emprunts de dates diverses ne mesure ni le rendement réel des créanciers, ni l’érosion de la dette.
+Régression descriptive : −1,3 point pour la zone euro, +0,21 point par point d'inflation, stables d'une fenêtre à l'autre — des associations, non des effets causaux
+Dans une régression descriptive, l’inflation moyenne des trois années précédentes et l’appartenance à la zone euro rendent compte ensemble d’une large part de la dispersion observée (R² = 0,65).
+Le coefficient associé à la zone euro est de −1,3 point, celui associé à un point d’inflation moyenne supplémentaire de +0,21 point.
+Ces coefficients ne mesurent pas des effets causaux, et la fenêtre de trois ans est un choix : avec une inflation moyenne sur deux, quatre ou cinq ans, leur signe ne change pas et leur ordre de grandeur tient (de −1,1 à −1,3 point pour la zone euro, de +0,21 à +0,32 point par point d’inflation, R² de 0,65 à 0,73).
+Une monnaie commune suffit-elle à fixer le prix ?
+Trente ans d’écarts avec l’Allemagne
+Rendements de convergence à 10 ans, Eurostat.
+Taux de marché, non taux implicite du stock ; les pays restés hors de l’euro sont des comparateurs, non un groupe de contrôle.
+Non, à en juger par trente ans de taux à 10 ans comparés à ceux de l’Allemagne.
+Avant 1999, la convergence n’est pas propre à l’euro : l’écart italien fond de 5,36 à 0,31 point, mais celui de la Suède aussi, de 3,39 à 0,42, alors qu’elle n’adoptera pas la monnaie commune.
+En 2012, la monnaie commune ne garantit pas la convergence : la Grèce emprunte 21,0 points au-dessus de l’Allemagne, le Portugal 9,05, plus qu’aucun pays resté en dehors ; les interventions de la BCE à partir de l’été 2012 ont contribué au resserrement des écarts, sans que leur rôle puisse être isolé des autres facteurs de la période.
+Aujourd’hui, la frontière de l’euro ne sépare pas ceux qui empruntent cher des autres : la Suède et le Danemark empruntent moins cher que l’Allemagne, la France 0,76 point plus cher, la Hongrie 4,35 points.
+L’euro a supprimé le risque de change entre ses membres ; il ne leur a pas garanti le taux allemand.
+Le cas suédois réfute une explication de la convergence par la seule adoption de l’euro ; il ne mesure pas ce que l’euro a apporté à ceux qui l’ont adopté.
+Les séries : convergence avant 1999, hors de l'euro aussi ; décrochage des membres fragiles en 2012 ; resserrement après 2012
+Écart de taux à 10 ans avec l'Allemagne, en points — Eurostat, rendements de convergence des emprunts d'État
+Pays
+1995
+1998
+2007
+2012
+2025
+France
+euro depuis 1999
++0,69
++0,07
++0,08
++1,04
++0,76
+Italie
+euro depuis 1999
++5,36
++0,31
++0,27
++3,99
++1,00
+Espagne
+euro depuis 1999
++4,42
++0,26
++0,09
++4,35
++0,62
+Portugal
+euro depuis 1999
++4,62
++0,31
++0,20
++9,05
++0,48
+Irlande
+euro depuis 1999
++1,40
++0,23
++0,09
++4,67
++0,30
+Grèce
+euro depuis 2001
++10,11
++3,91
++0,28
++21,00
++0,78
+Suède
+hors euro
++3,39
++0,42
+−0,05
++0,09
+−0,15
+Danemark
+hors euro
++1,42
++0,37
++0,07
+−0,10
+−0,26
+Pologne
+hors euro
+—
+—
++1,26
++3,50
++2,93
+Hongrie
+hors euro
+—
+—
++2,52
++6,39
++4,35
+Allemagne
+taux à 10 ans
+6,85 %
+4,57 %
+4,22 %
+1,50 %
+2,59 %
+Avant l’euro, les écarts fondent, y compris hors de l’euro.
+De 1995 à 1998, l’écart italien passe de 5,36 à 0,31 point, l’écart espagnol de 4,42 à 0,26.
+Celui de la Suède passe dans le même temps de 3,39 à 0,42.
+La perspective d’entrer dans l’euro a pu peser pour les futurs membres, mais ces chiffres ne permettent pas d’en isoler la part.
+En 2012, l’euro ne protège pas ses membres les plus fragiles.
+La Grèce emprunte alors 21,0 points au-dessus de l’Allemagne, le Portugal 9,05, l’Irlande 4,67, l’Espagne 4,35, l’Italie 3,99.
+Hors de l’euro, la Suède reste à 0,09 point au-dessus de l’Allemagne et le Danemark à 0,10 point au-dessous ; mais la Hongrie paie 6,39 points : garder sa monnaie n’a pas protégé tout le monde.
+Aucun pays resté hors de l’euro n’atteint toutefois les niveaux grec et portugais, ceux d’États qui s’endettaient dans une monnaie dont ils ne maîtrisaient plus l’émission.
+Les écarts se resserrent après l’engagement de la BCE, à l’été 2012, de défendre l’euro, puis avec ses achats massifs de titres publics à partir de 2015 : ces interventions y ont contribué, sans que leur rôle puisse être isolé des autres facteurs de la période (restructuration grecque, dispositifs européens, perception du risque de sortie de l’euro).
+L’appartenance à l’euro, elle, existait déjà en 2012.
+Aujourd’hui, rester hors de l’euro ne coûte pas forcément plus cher.
+En 2025, la Suède emprunte à 10 ans 0,15 point au-dessous de l’Allemagne, le Danemark 0,26 point au-dessous ; la France paie 0,76 point de plus que l’Allemagne, l’Italie 1,00.
+Hors de l’euro, la Pologne et la Hongrie paient bien davantage (2,93 et 4,35 points), mais leur inflation récente est aussi nettement plus forte ; et puisque la Suède est, elle aussi, hors de l’euro, ce n’est pas l’appartenance à l’euro qui les sépare d’elle.
+Combien de temps l’avantage peut-il durer ?
+Part de la dette arrivant à échéance dans l’année (Eurostat, dette par échéance résiduelle) et écart entre le rendement harmonisé à 10 ans et le taux implicite du stock, 2025.
+Repère de pression, non prévision.
+Le taux implicite d’une année rémunère une dette émise à des dates différentes : il ne rejoint les conditions de marché qu’au fil des refinancements.
+Deux mesures situent cette inertie : la part de la dette qui arrive à échéance dans l’année, et l’écart entre le rendement harmonisé à 10 ans et le taux implicite.
+Ni l’une ni l’autre n’est une prévision : un État n’emprunte pas qu’à 10 ans, le rendement d’aujourd’hui n’est pas celui de demain, et la dette à moins d’un an n’épuise pas les besoins de financement à venir, auxquels s’ajoutent les déficits futurs et les renouvellements successifs de dette courte.
+En France, 9,5 % de la dette présente à fin 2025 a une échéance résiduelle inférieure à un an, et le rendement à 10 ans dépassait de 1,33 point le taux implicite du stock.
+Si les conditions de financement restaient supérieures au coût de la dette remplacée, chaque refinancement rapprocherait le prix du stock de celui du marché : les intérêts pourraient augmenter à dette inchangée.
+Leur part dans les recettes n’augmenterait pas nécessairement pour autant, si les recettes augmentaient elles aussi.
+Le mécanisme est détaillé sur la page Combien coûte la dette publique ?
+Au Danemark, l’indicateur est orienté dans l’autre sens : le rendement à 10 ans se situe sous le taux implicite du stock (−0,45 point).
+Le stock : un classement qui ne dit pas tout
+Stock de clôture : Eurostat, dette brute de Maastricht des administrations publiques, fin 2025.
+En bleu, la zone euro ; en orange, les pays hors zone euro.
+Fin 2025, la France est le troisième pays le plus endetté de l’Union européenne, à 115,6 % du PIB.
+C’est le classement que retiennent la plupart des comparaisons.
+Il mesure un stock brut, sans les actifs publics ni les engagements qui ne sont pas de la dette, comme les retraites futures ; et il ne dit ni le prix payé sur cette dette, ni la part des recettes qu’elle absorbe.
+Et hors d’Europe ?
+Hors de l’Union européenne, les données ne sont plus harmonisées.
+Pour les économies avancées, l’OCDE (Economic Outlook) permet un calcul voisin sur une base plus large, des passifs financiers bruts et non la dette de Maastricht ; le rapport des intérêts à ces passifs n’est donc pas exactement le taux implicite européen.
+La France y figure, sur la même base, pour servir d’étalon : ses intérêts y représentent 4,4 % de ses recettes, contre 4,3 % selon Eurostat, parce que les champs diffèrent.
+Trois cas éclairent la comparaison.
+Japon
+Passifs financiers bruts
+215 % du PIB
+Intérêts / passifs
+0,69 %
+Intérêts / recettes
+3,9 %
+Suisse
+Passifs financiers bruts
+39 % du PIB
+Intérêts / passifs
+0,70 %
+Intérêts / recettes
+0,8 %
+Passifs financiers nets
+−12 % du PIB
+États-Unis
+Passifs financiers bruts
+117 % du PIB
+Intérêts / passifs
+3,96 %
+Intérêts / recettes
+14,7 %
+France (même base, étalon)
+Passifs financiers bruts
+114 % du PIB
+Intérêts / passifs
+2,01 %
+Intérêts / recettes
+4,4 %
+Le Japon doit, sur cette base, près du double de la France, mais son rapport intérêts/passifs est de 0,69 % contre 2,01 %, et il consacre moins de ses recettes aux intérêts (3,9 % contre 4,4 %).
+La Suisse, avec sa propre monnaie, paie peu sur une dette faible, et ses actifs financiers dépassent ses passifs.
+Les États-Unis, pour des passifs proches de ceux de la France, consacrent aux intérêts une part de leurs recettes égale à 3,3 fois celle de la France.
+Voir toutes les économies avancées (OCDE)
+Économies avancées hors Union européenne — OCDE, Economic Outlook (comparable avec réserve)
+Pays
+Stock
+passifs financiers bruts / PIB
+Rapport intérêts / passifs financiers bruts
+Charge
+intérêts / recettes
+Passifs financiers nets
+% du PIB
+Réserve
+États-Unis
+117,0 %
+3,96 %
+14,7 %
+98 %
+—
+Japon
+214,9 %
+0,69 %
+3,9 %
+88 %
+—
+Royaume-Uni
+96,6 %
+2,60 %
+6,0 %
+76 %
+—
+Canada
+103,6 %
+3,34 %
+8,1 %
+8 %
+—
+Suisse
+38,8 %
+0,70 %
+0,8 %
+-12 %
+—
+Norvège
+—
+—
+1,9 %
+—
+passifs financiers bruts publiés jusqu'en 2023 seulement : prix non calculé
+France (base OCDE)
+113,6 %
+2,01 %
+4,4 %
+78 %
+—
+Grands émergents (indicatif) : l'Inde consacre 34 % des recettes de son administration centrale aux intérêts, le Brésil 30 % — prix et recettes non séparables sans données harmonisées
+Seules des mesures indicatives existent : la dette selon le FMI, et les intérêts de la seule administration centrale selon la Banque mondiale, toujours pris la même année.
+L’Inde consacre 34 % des recettes de son administration centrale aux intérêts, le Brésil 30 %, l’Afrique du Sud 18 %, pour des dettes de 85 %, 87 % et 76 % du PIB selon le FMI, respectivement en 2022, 2024 et 2024, dernières années publiées par la Banque mondiale.
+Une part de l’écart tient au prix payé, une autre à la faiblesse relative des recettes : sans données harmonisées, on ne peut pas les séparer.
+Grands émergents — FMI et Banque mondiale (indicatif : périmètres et définitions différents)
+Pays
+Stock
+dette brute / PIB (FMI), année
+Charge
+intérêts / recettes (Banque mondiale)
+Réserve
+Chine
+72,1 % (2021)
+3,4 %
+dette FMI et intérêts Banque mondiale de la même année ; intérêts de la seule administration centrale
+Inde
+84,6 % (2022)
+34,0 %
+dette FMI et intérêts Banque mondiale de la même année ; intérêts de la seule administration centrale
+Brésil
+87,0 % (2024)
+30,1 %
+dette FMI et intérêts Banque mondiale de la même année ; intérêts de la seule administration centrale
+Afrique du Sud
+76,0 % (2024)
+18,2 %
+dette FMI et intérêts Banque mondiale de la même année ; intérêts de la seule administration centrale
+Ce que ces données ne disent pas
+Une coupe d’une année.
+Les comparaisons de stock, de prix et de charge portent sur 2025 ; seuls les écarts de taux avec l’Allemagne couvrent trente ans.
+Des corrélations, non des causes.
+Une régression sur 27 pays décrit une association.
+L’appartenance à l’euro et l’inflation passée sont d’ailleurs liées entre elles.
+Un stock brut.
+La dette de Maastricht ne déduit pas les actifs publics ; la Suisse, dont les passifs financiers nets sont négatifs, montre l’importance de cet écart.
+Des définitions voisines, non identiques.
+Hors d’Europe, l’OCDE mesure des passifs financiers bruts, le FMI une dette brute, la Banque mondiale les seuls intérêts de l’administration centrale.
+Le risque de crise.
+Il dépend aussi de la croissance, du solde primaire, de la monnaie, des maturités et des créanciers : cette page ne le mesure pas.
+Les détenteurs de la dette.
+Banque centrale, non-résidents, épargnants nationaux : leur part change le risque et le coût d’une dette ; ce qu’on en sait pour la France est examiné sur la page Qui paie vraiment la dette publique ?
+Les engagements hors dette, comme les retraites futures, n’entrent dans aucun de ces chiffres.
+Confrontation à la recherche : l'absence de lien en coupe est retrouvée ailleurs ; la lire comme une absence d'effet est contredit dans le temps et en période de crise
+Mesuré ici.
+Sur une année et entre les 27 pays de l’Union, l’absence de relation linéaire entre le stock de départ et le taux implicite ; trente ans d’écarts de taux à 10 ans avec l’Allemagne.
+Des calculs sur séries officielles, qui se valident par reproduction : aucun des textes lus ne mesure le taux implicite en coupe.
+Cohérent avec.
+Dans leurs graphiques en coupe, Gruber et Kamin ne trouvent aucune relation apparente entre dette et taux longs de 19 pays de l’OCDE ; dans les émissions de 1999 à 2005, le ratio de dette n’explique plus les écarts de taux des membres de l’euro (Bernoth, von Hagen et Schuknecht).
+La réserve de la page tient aussi : dans les estimations fondées sur les variations internes à chaque pays, la dette projetée relève les taux longs de quelques points de base par point de PIB (Gruber et Kamin ; Laubach, sur les taux anticipés américains).
+Sur l’euro, De Grauwe et Ji estiment qu’en 2010-2011 une part importante de la hausse des écarts des pays périphériques échappe à leurs fondamentaux budgétaires, part variable selon les pays, la Grèce faisant exception ; Saka, Fuertes et Kalotychou, qui mettent cette hypothèse à l’épreuve, trouvent que les contagions significatives venues d’Espagne avant l’annonce de la BCE du 26 juillet 2012 disparaissent après.
+De 1993 à 1997, les rendements de tous les pays de l’Union sauf la Grèce, y compris hors de l’euro, se rapprochent des niveaux allemand et américain (Bernoth, von Hagen et Schuknecht).
+Mis en danger par.
+Toute lecture de l’absence de lien en coupe comme une absence d’effet : Gruber et Kamin l’attribuent à une variable omise, la solvabilité que les marchés prêtent à chaque État ; De Grauwe et Ji trouvent dans la zone euro, après 2008, une relation significative et non linéaire ; avant 1999, le niveau relatif de la dette prédisait l’écart à l’émission, après, c’est le poids du service de la dette dans les recettes (Bernoth, von Hagen et Schuknecht).
+D’où la formule de la page : le niveau ne suffit pas à prédire le prix.
+Une lecture trop large de 2012 : les primes des contrats d’assurance contre le défaut baissent partout après l’annonce, y compris hors de l’euro ; l’étude établit la fin de la contagion, non que toute la détente vienne de la BCE, et ses auteurs interprètent leurs résultats comme favorables à son programme.
+Non établi.
+Le lien entre prix de la dette et inflation passée hors de l’euro : Gruber et Kamin relient les taux longs à l’inflation projetée, non à l’inflation courante.
+La part propre de l’euro dans la convergence d’avant 1999 : Bernoth, von Hagen et Schuknecht comparent des titres émis dans une même monnaie, sans risque de change, et ne séparent pas futurs membres et pays restés en dehors.
+Références lues
+Gruber, J. et Kamin, S., « Fiscal Positions and Government Bond Yields in OECD Countries », Federal Reserve, International Finance Discussion Paper 1011, 2010.
+Bernoth, K., von Hagen, J. et Schuknecht, L., « Sovereign Risk Premiums in the European Government Bond Market », version révisée, mai 2006 (publié dans le Journal of International Money and Finance, 31(5), 2012).
+De Grauwe, P. et Ji, Y., « Self-Fulfilling Crises in the Eurozone: An Empirical Test », CEPS Working Document n° 367, 2012 (publié dans le Journal of International Money and Finance, 34, 2013).
+Saka, O., Fuertes, A.-M. et Kalotychou, E., « ECB Policy and Eurozone Fragility: Was De Grauwe Right? », CEPS Working Document n° 397, 2014 (publié dans le Journal of International Money and Finance, 54, 2015).
+Laubach, T., « New Evidence on the Interest Rate Effects of Budget Deficits and Debt », Finance and Economics Discussion Series 2003-12, Federal Reserve (publié, révisé, dans le Journal of the European Economic Association, 7(4), 2009).
+Revue de littérature vérifiée le 30 septembre 2026 : chaque référence citée a été lue en entier à cette date, dans la version indiquée.
+Synthèse
+Ce qu’il faut retenir
+Le niveau d’une dette ne dit pas, à lui seul, ce qu’elle pèse.
+Dans l’Union, à dette voisine, la part des recettes absorbée par les intérêts varie de 1 à 3,3 ; entre la Hongrie et la Slovénie, l’essentiel de l’écart tient au prix payé sur la dette, non à son niveau.
+La position de la France dépend de la mesure.
+Avec la troisième dette de l’Union, à 115,6 % du PIB, elle paie un taux implicite un peu sous la moyenne simple de la zone euro et consacre aux intérêts 4,3 % de ses recettes, mais 2,23 % de son PIB : des recettes publiques parmi les plus élevées de l’Union rendent la première mesure plus favorable que la seconde.
+Et cette position a une échéance : si le rendement de marché restait au-dessus du coût moyen, les refinancements rapprocheraient le coût moyen de ce rendement, sans que la dette ait besoin de croître.
+La monnaie commune ne fixe pas le prix.
+L’euro a supprimé le risque de change entre ses membres, non l’écart de taux : la convergence d’avant 1999 a touché la Suède, restée en dehors ; en 2012, la Grèce empruntait 21,0 points au-dessus de l’Allemagne, et les interventions de la BCE ont contribué à la détente qui a suivi, parmi d’autres facteurs.
+Reste la trajectoire : une dette de même niveau peut augmenter ou diminuer selon l’écart entre taux et croissance et selon le solde primaire.
+C’est l’objet de La dette publique peut-elle baisser ?
+Questions fréquentes
+La France est-elle plus endettée que les autres pays ?
+Plus que la plupart : fin 2025, sa dette publique atteint 115,6 % du PIB, la troisième de l'Union européenne après la Grèce et l'Italie (Eurostat, dette de Maastricht).
+Mais le niveau de la dette ne dit pas ce qu'elle coûte : en 2025, la France a consacré 4,3 % de ses recettes publiques aux intérêts, moins que six pays pourtant moins endettés (Roumanie, Pologne, Hongrie, Portugal, Espagne, Belgique).
+Rapportés au PIB, ses intérêts (2,23 %) la placent au septième rang, et quatre pays moins endettés seulement la dépassent : ses recettes publiques, la deuxième part du PIB la plus élevée de l'Union, rendent la première mesure plus favorable sans changer le montant payé.
+La dette de la France lui coûte-t-elle plus cher qu'à ses voisins ?
+Pas systématiquement.
+En 2025, son taux implicite — les intérêts de l'année rapportés à la dette de fin 2024 — est de 2,02 %, un peu sous la moyenne simple des pays de la zone euro (2,2 %) : certains pays paient moins, notamment l'Allemagne (1,84 %), d'autres davantage.
+Le rendement à 10 ans dépasse ce taux implicite de 1,33 point, et 9,5 % de la dette arrive à échéance dans l'année : si les conditions de financement restaient supérieures au coût de la dette remplacée, les refinancements pousseraient ce coût moyen à la hausse.
+L'euro fait-il baisser le coût de la dette ?
+Pas automatiquement.
+Avant 1999, les écarts de taux avec l'Allemagne ont fondu dans les futurs pays de l'euro, mais aussi en Suède, qui n'y est jamais entrée.
+En 2012, les membres les plus fragiles ont décroché (la Grèce empruntait 21,0 points au-dessus de l'Allemagne), plus qu'aucun pays resté en dehors ; les interventions de la BCE ont contribué à la détente qui a suivi.
+En 2025, la Suède et le Danemark empruntent à 10 ans moins cher que l'Allemagne, la France plus cher.
+Sur le stock de dette, la Suède paie 1,84 %, comme l'Allemagne (1,84 %).
+L'euro supprime le risque de change entre ses membres ; il ne leur garantit pas le taux allemand.
+Une dette élevée provoque-t-elle forcément une crise ?
+Ces données ne permettent pas d'estimer le risque de crise.
+Elles montrent seulement qu'un même niveau de dette peut correspondre à des charges courantes très différentes.
+Le risque de crise dépend aussi de la croissance, du solde primaire, de la structure des créanciers, de la monnaie, des maturités, des actifs publics et des conditions financières.
+Dans le dossier dette publique
+Prolonger l'analyse
+Dette Publique : Qui paie vraiment ?
+La question n'est pas « combien ? » mais « qui paie ? » — et par quels canaux le coût se déplace.
+Cette page mesure ce que la dette coûte, et pourquoi une même dette ne pèse pas partout de la même façon.
+Elle ne dit pas qui en supporte le coût.
+Le livre suit ce déplacement canal par canal — contribuable, épargnant, services publics, générations qui ne votent pas encore —, chiffres officiels à l’appui, pour montrer dans quelles configurations chacun supporte un coût.
+Il propose une méthode en trois questions — les faits sont-ils établis, le système tient-il sa promesse, qui décide — et, pour les issues qu’il envisage, le partage entre qui paie et qui gagne.
+Journalistes, enseignants, chercheurs, responsables publics ou associatifs
+Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock.
+Demander l'exemplaire offert →
+Version papier : 19 € · Kindle : 9,99 €
+Sommaire, extraits et recensions →
+D’où viennent ces chiffres
+Europe (strictement comparable) — Eurostat, administrations publiques (S.13), comptes nationaux SEC 2010, montants en monnaie nationale : intérêts versés et recettes (gov_10a_main, D41PAY et TR), dette de Maastricht (gov_10dd_edpt1), PIB (nama_10_gdp), dette par échéance résiduelle (gov_10dd_ggd), taux à 10 ans (irt_lt_mcby_a), indice des prix harmonisé (prc_hicp_aind).
+Le working paper AWP-09 reprend l’identité de la charge et ces écarts de taux, pays restés hors de l’euro en témoins, pour mettre à l’épreuve le récit d’une convergence des taux due à l’euro.
+Économies avancées hors UE (avec réserve) — OCDE, Economic Outlook : intérêts bruts, recettes, PIB et passifs financiers bruts des administrations publiques.
+Grands émergents (indicatif) — FMI, World Economic Outlook (dette brute des administrations publiques) ; Banque mondiale, World Development Indicators (intérêts en % des recettes de l’administration centrale).
+Les stocks de dette sont ceux de la série annuelle d’Eurostat (gov_10dd_edpt1) telle que relevée à la date indiquée en tête de page ; les données trimestrielles, publiées à d’autres dates, peuvent en différer légèrement, comme sur la page Combien coûte la dette publique ?, tirée des séries trimestrielles de l’INSEE.
+Les calculs, les statistiques et les figures sont produits par un script unique, relancé à chaque publication des sources ; aucun chiffre de cette page n’est saisi à la main.
+Télécharger les données (licence CC BY 4.0) : CSV, une ligne par pays, lisible dans un tableur ; JSON, avec les statistiques et les définitions.
+Méthode : la charge, le stock et le prix vérifient l’identité exacte donnée plus haut, avec la dette de fin d’année précédente (convention du taux implicite de la BCE, distincte du « coût apparent » d’Eurostat, fondé sur la dette moyenne) ; la robustesse des coefficients est recalculée à chaque mise à jour sur des fenêtres d’inflation de deux à cinq ans ; les statistiques sont des moindres carrés simples, descriptifs.
+Réutiliser cette page
+Les figures, les données et une citation prête, sous licence libre.
+Chaque figure porte dans l'image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
+Même dette, charge différente : les 27 pays de l'UE en 2025
+À dette voisine, la part des recettes consacrée aux intérêts peut varier de 1 à 3,3 ; hors de la zone euro, elle croît plus vite avec la dette.
+Précaution d'interprétation.
+Pointillés : faux jumeaux (plus proche voisin en stock, écart inférieur à 10 points, trois plus grands écarts de charge).
+Eurostat gov_10a_main (D41PAY, TR), gov_10dd_edpt1 (GD), nama_10_gdp (B1GQ), 2025 ; administrations publiques S.13, monnaie nationale
+Télécharger en PNG
+SVG
+Prix de la dette et inflation récente : l'Europe en 2025
+Hors de la zone euro, le taux implicite est étroitement associé à l'inflation récente ; dans la zone euro, beaucoup moins.
+La Suède, hors euro, paie comme l'Allemagne.
+Précaution d'interprétation.
+Relation descriptive sur une année, non causale.
+Eurostat prc_hicp_aind (IPCH), gov_10a_main, gov_10dd_edpt1, 2025
+Télécharger en PNG
+SVG
+Pression de refinancement : échéances et écart de taux, 2025
+La part de la dette qui arrive à échéance et l'écart entre taux de marché et taux implicite : un repère de pression sur le coût moyen, non une prévision.
+Précaution d'interprétation.
+Rendement de convergence à 10 ans, non le coût de toutes les émissions nouvelles.
+Repère, non prévision.
+Eurostat gov_10dd_ggd (dette par échéance résiduelle), irt_lt_mcby_a (taux à 10 ans), 2025
+Télécharger en PNG
+SVG
+Le stock : dette publique en % du PIB, fin 2025
+Le classement le plus cité : il ne dit ni le prix payé sur la dette, ni la part des recettes qu'elle absorbe.
+Précaution d'interprétation.
+Stock brut, sans les actifs publics ni les engagements hors dette (retraites).
+Eurostat gov_10dd_edpt1, dette de Maastricht, fin 2025
+Télécharger en PNG
+SVG
+Trente ans d'écarts de taux avec l'Allemagne, 1995-2025
+Convergence avant l'euro, Suède comprise ; décrochage des membres fragiles en 2012, puis resserrement : trente ans d'écarts avec l'Allemagne, pays restés hors de l'euro en comparateurs.
+Précaution d'interprétation.
+Taux de marché à 10 ans, non le taux implicite du stock.
+Comparateurs, non groupe de contrôle.
+Eurostat irt_lt_mcby_a (rendements de convergence à 10 ans des emprunts d'État)
+Télécharger en PNG
+SVG
+Citer cette page
+Lalut, Stéphane (2026). « Dette publique : pourquoi 100 % du PIB ne pèse pas partout de la même façon ».
+Données Eurostat, OCDE, FMI et Banque mondiale, relevé du 11 octobre 2026. https://stephane-lalut.com/dette-publique-comparaison-internationale/
+Copier la citation
+En trois phrases
+Cette page compare ce que représente une dette publique : son stock, son prix et les recettes qui la servent, puis le poids des emprunts anciens dans ce qu’elle coûte aujourd’hui.
+Dans l’Union européenne en 2025, deux pays de dette voisine peuvent consacrer aux intérêts des parts de leurs recettes qui vont de 1 à 3,3, surtout parce que le prix de leur dette diffère, et ce prix n’a pas de lien linéaire avec son niveau.
+Ces relations décrivent une année et des associations, non des causes ; elles ne mesurent pas le risque de crise.
+Copier le résumé
+Les données
+Les 27 pays de l'Union européenne et les économies hors d'Europe, avec leurs niveaux de comparabilité, leurs définitions et leurs statistiques ; le même contenu existe en CSV, une ligne par pays, lisible dans un tableur.
+Télécharger en JSON CSV
+Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
+Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
+Les séries brutes appartiennent à leurs producteurs (Eurostat, OCDE, FMI et Banque mondiale), sous leurs propres conditions.
+Vous enseignez les SES ?
+Activités, figures et données prêtes pour la classe →
+Toutes les ressources : données, dossiers et repères →
+Transmettre
+WhatsApp
+Bluesky
+LinkedIn
+X
+E-mail
+Copier le lien

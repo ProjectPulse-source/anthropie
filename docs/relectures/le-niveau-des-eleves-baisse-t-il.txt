@@ -1,0 +1,298 @@
+# relu le 2026-10-11 ; texte servi de /le-niveau-des-eleves-baisse-t-il/, build de 86a46f0 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+Le niveau des élèves baisse-t-il ?
+Selon PISA, oui : de 2015 à 2025, les jeunes Français de 15 ans ont perdu 43 points en compréhension de l'écrit et 35 en mathématiques, une baisse significative.
+Mais les évaluations passées en classe, en CM1 et en quatrième, ne mettent pas en évidence la même baisse récente.
+Les évaluations se contredisent-elles vraiment ?
+École et lycée
+↓ Graphiques, données et citations à réutiliserRéutiliser cette page
+Relevé du : 9 octobre 2026 OCDE : PISA 2025, volume I, et Regards sur l'éducation 2026 ; IEA : TIMSS 2023, TIMSS Advanced 2015 ; DEPP : PIRLS 2021, Notes d'Information 16-37, 26-39, 26-40 et 26-22, Repères et références statistiques.
+Télécharger : CSV · JSON · méthode
+Que mesure PISA, et combien baisse-t-il ?
+Variation du score moyen PISA entre 2015 et 2025, pays membres de l'OCDE (OCDE, PISA 2025, volume I).
+Le résultat en une phrase.
+De 2015 à 2025, PISA mesure en France une baisse significative dans les trois domaines : 43 points de moins en compréhension de l’écrit, 35 en mathématiques, 12 en sciences.
+PISA, l’enquête de l’OCDE, interroge tous les trois ans des jeunes de 15 ans, quelle que soit leur classe, sur des compétences appliquées (comprendre un texte, résoudre un problème), dans une épreuve sans enjeu pour eux ; ses résultats se lisent en points, sur une échelle propre construite autour de la moyenne des pays de l’OCDE.
+En France, 79 % de l’échantillon de 2025 était au lycée, dont 56 % en seconde générale et technologique et 17 % en seconde professionnelle : PISA parle bien de l’entrée au lycée.
+Le score moyen de la France passe de 499 à 456 en compréhension de l’écrit, de 493 à 458 en culture mathématique, de 495 à 483 en culture scientifique ; selon l’OCDE, les trois baisses sont statistiquement significatives.
+L’essentiel s’est produit depuis 2018 : entre 2022 et 2025 encore, la lecture a perdu 18 points et les mathématiques 16, quand l’évolution des sciences n’est pas significative.
+Sur une période plus longue, la lecture a perdu 48 points depuis 2000 et les mathématiques 53 depuis 2003, deux baisses significatives ; en sciences, l’écart depuis 2006 (12 points) ne l’est pas.
+L’OCDE ne signale pas l’échantillon français de 2025 comme hors normes.
+Une condition de la mesure a aussi changé : l'effort déclaré par les élèves
+À la fin de l’épreuve, les élèves notent de 1 à 10 l’effort qu’ils y ont mis : en France, l’indice est passé de 7,04 à 6,43 entre 2022 et 2025, la plus forte baisse des 38 pays de l’OCDE, deux fois celle de la moyenne (0,31).
+La répartition de l’effort déclaré a donc nettement changé.
+Mais si l’on repondère les élèves de 2025 pour leur donner la répartition des catégories d’effort déclarées en 2022, non-réponses comprises, plus des neuf dixièmes de la baisse des scores demeurent, en mathématiques comme en lecture.
+Ce calcul décrit un effet de composition ; l’effort étant déclaré après l’épreuve, il ne permet pas d’en mesurer l’effet causal sur le score.
+La France baisse-t-elle plus que les autres ?
+Le récit courant, « tout le monde baisse », est juste en moyenne : la moyenne de l’OCDE perd 27 points en lecture, 22 en mathématiques et 7 en sciences de 2015 à 2025.
+La France perd davantage de points dans les trois domaines, sur les estimations ponctuelles.
+Reste à savoir où elle se place parmi les pays pris un à un.
+Pour le vérifier, on peut placer la baisse française parmi celles des 38 pays membres de l’OCDE, sans s’arrêter au rang du score, qui dépend des autres pays.
+En sciences, la France (12 points de moins) est dans la moitié centrale des pays.
+En lecture, avec 43 points de moins, elle est pratiquement à la frontière entre la moitié centrale et le quart des pays aux plus fortes baisses, une frontière qui ne départage rien.
+En mathématiques, la France sort de la moyenne : 35 points de moins, quand la moitié des pays en perdent moins de 22.
+Sur les estimations ponctuelles, sa baisse dépasse celle de 30 des 37 autres pays, et sa place est la même si l’on ne retient que les pays de l’Union européenne membres de l’OCDE, ou si l’on écarte les cinq pays dont l’échantillon ne respecte pas toutes les normes de l’enquête.
+Ce rang reste descriptif : l’écart entre la France et le quart des pays aux plus fortes baisses (5 points) est du même ordre que la marge d’erreur de la variation française (erreur type de 5 points).
+L’OCDE ne publie pas de test de l’écart entre la baisse française et celle des autres pays : le classement des baisses est un calcul de l’auteur sur ses tableaux.
+Les évaluations passées en classe, en France, voient-elles la même chose ?
+Toutes les évaluations montrent-elles la même baisse ?
+PISA n’est pas seule à suivre les élèves français.
+Trois autres évaluations le font, chacune avec ses élèves, sa compétence et sa période :
+PISA (OCDE) : les jeunes de 15 ans, toutes classes confondues ; des compétences appliquées, dans une épreuve sans enjeu ; dernière période comparée, 2022-2025.
+PIRLS (IEA, association internationale de chercheurs en éducation) : les élèves de CM1 ; la compréhension de l’écrit ; 2016-2021.
+TIMSS (IEA) : les élèves de CM1 et de quatrième ; les mathématiques et les sciences, proches des programmes ; 2019-2023.
+Test de positionnement (DEPP, service statistique du ministère de l’Éducation nationale) : tous les élèves entrant en seconde ; le français et les mathématiques, sans test de significativité publié ; 2021-2024.
+Dernière variation publiée de chaque évaluation en France, chacune dans sa propre échelle (IEA, DEPP, OCDE).
+Le résultat en une phrase.
+Sur leurs derniers intervalles, qui ne sont pas les mêmes, la baisse significative est établie pour PISA ; PIRLS en CM1 et TIMSS en CM1 et en quatrième ne la mettent pas en évidence, et le score du test d’entrée en seconde monte en mathématiques, sans test publié.
+PIRLS en CM1 passe de 511 points en 2016 à 514 en 2021, TIMSS en CM1 de 485 en 2019 à 484 en 2023, TIMSS en quatrième de 483 à 479 en mathématiques : aucune de ces variations n’est significative, pas plus que celles des sciences de TIMSS.
+Le score du test de seconde, passé par tous les élèves, monte en mathématiques.
+PISA, lui, perd 16 points en mathématiques et 18 en lecture entre 2022 et 2025, deux baisses significatives.
+Ces résultats ne se contredisent pas pour autant.
+Une baisse significative d’un côté et une variation non significative de l’autre ne prouvent pas que les tendances diffèrent : il faudrait comparer directement les deux variations, avec leurs incertitudes, ce qu’aucun producteur ne publie.
+Et les périodes ne sont pas les mêmes (PIRLS s’arrête en 2021, TIMSS en 2023, PISA en 2025), ni les élèves ; chaque évaluation a son échelle, et les points bruts de ces échelles ne se comparent pas directement : les comparer demande une conversion explicite, comme celle que fait la DEPP plus bas pour le test de seconde et PISA.
+Elles ne réfutent donc pas PISA ; elles interdisent de dire que toutes les mesures montrent la même chute récente.
+Sur la longue période, en revanche, les évaluations par classe baissent elles aussi : TIMSS en quatrième était à 530 points en mathématiques en 1995, et PIRLS à 525 en lecture en 2001, deux niveaux significativement au-dessus des derniers résultats.
+Pour la langue seule, avec la dictée de CM2 depuis 1987 et la lecture pour le plaisir, la frise de la page voisine montre la même divergence et des reculs plus anciens : la langue des élèves recule-t-elle d’un bloc ?
+Le même décalage entre TIMSS et PISA dans les autres pays ?
+Une comparaison descriptive de 28 pays
+Une comparaison descriptive des 28 pays présents dans les deux enquêtes rapproche l’évolution de TIMSS en quatrième entre 2019 et 2023 de celle de PISA à 15 ans entre 2022 et 2025 : les périodes et les populations ne sont donc pas identiques, et ce ne sont pas les mêmes élèves qui sont suivis.
+En France, TIMSS recule de 4 points, sans variation significative, tandis que PISA perd 16 points en mathématiques.
+Selon la règle fixée avant le calcul, la France figure parmi les quatre écarts sur 28 les plus défavorables à PISA, et elle reste parmi les écarts les plus défavorables dans un ajustement descriptif tenant compte du score TIMSS initial.
+Mais les évolutions des deux enquêtes sont peu liées d’un pays à l’autre : dans 13 pays sur 28, PISA évolue au contraire plus favorablement que TIMSS.
+Ce classement reste descriptif, et le même test n’est pas concluant en sciences.
+Un rapprochement va plus loin.
+La DEPP a confronté PISA au test d’entrée en seconde pour des cohortes largement correspondantes.
+Que disent les tests d’entrée en seconde ?
+Écart entre deux cohortes d'élèves, en centièmes d'écart-type, test de positionnement de seconde et PISA (DEPP, Note d'Information 26-40).
+Depuis 2018, tous les élèves de seconde passent en septembre un test de positionnement en français et en mathématiques, sur une échelle fixée en 2019.
+On peut le rapprocher de PISA, pour des cohortes largement correspondantes : les jeunes évalués par PISA en 2022 sont, pour la plupart, entrés en seconde en 2021 ; ceux de 2025, en 2024.
+Ce ne sont pas les mêmes élèves suivis d’une épreuve à l’autre : la DEPP compare deux générations.
+En français, les deux baissent : en seconde générale et technologique, le score moyen passe de 272 en 2021 à 268 en 2024, et PISA perd 18 points en lecture.
+En mathématiques, ils divergent : le score du test de seconde passe de 255 à 262, quand PISA perd 16 points.
+Une fois les écarts ramenés à une même unité, la DEPP trouve +9 pour le test de seconde et −18 pour PISA en mathématiques, et écrit que la baisse de PISA « contraste avec la légère hausse constatée par le test de positionnement en début de seconde entre les rentrées 2021 et 2024 ».
+Ce désaccord ne signifie pas qu’une évaluation se trompe.
+Les deux épreuves ne mesurent ni exactement les mêmes compétences, ni la même population (un âge pour PISA, une classe pour le test de seconde), ni dans le même contexte : PISA n’a aucun enjeu pour l’élève, le test de seconde sert à son professeur.
+La DEPP ne l’explique pas.
+Plus récemment, elle note une baisse en français en 2025 (score de 263 en seconde générale et technologique, retour au niveau de 2019) et, en mathématiques, un score sans changement notable ; elle ne publie pas de test de significativité pour ce test, passé par tous les élèves.
+Si les mesures divergent sur l’ampleur du recul, PISA permet au moins de voir quels élèves reculent.
+Qui décroche : les plus faibles ou les meilleurs ?
+Part des élèves de 15 ans sous le niveau 2 et aux niveaux 5 et 6, France et moyenne de l'OCDE, 2015 et 2025 (OCDE, PISA 2025).
+Les deux, et c’est ce qui distingue la France.
+Dans la moyenne de l’OCDE, la baisse de 2015 à 2025 s’atténue quand on remonte la distribution : en mathématiques, le score sous lequel se trouvent les 10 % d’élèves les plus faibles recule de 28 points, le score médian, de 24 ; celui au-dessus duquel se trouvent les 10 % les plus forts, de 13.
+En France, cet amortissement disparaît : 30, 40 et 33 points.
+En lecture, le milieu et le haut reculent même bien davantage que le bas (49 et 47, contre 29).
+Ce sont des positions dans des échantillons successifs, pas les mêmes élèves suivis pendant dix ans.
+Les seuils de PISA le disent aussi, et ils mesurent autre chose : non plus une position dans la distribution, mais un niveau de compétence fixé une fois pour toutes.
+La part des élèves sous le niveau 2, celui où l’OCDE situe la maîtrise de base, passe de 21,5 % à 32,7 % en lecture et de 23,5 % à 35,7 % en mathématiques, à peu près comme dans l’OCDE.
+La part des meilleurs élèves, aux niveaux 5 et 6, a été presque divisée par trois en lecture, de 12,5 % à 4,5 %, et plus que divisée par deux en mathématiques, de 11,4 % à 5,2 % ; dans la moyenne de l’OCDE, la perte au sommet est bien plus faible (de 8,1 % à 5,8 % en lecture, de 10,4 % à 8,1 % en mathématiques).
+Les meilleurs scores ne sont pas la même chose que les élèves les plus favorisés, et les deux reculent.
+Le sommet et le milieu de la distribution reculent dans tous les milieux sociaux : le 90e percentile, score au-dessus duquel se trouvent les 10 % d’élèves les plus forts, baisse dans chacun des quatre quarts de statut social, de 37 à 46 points en lecture et de 28 à 31 en mathématiques, à peu près autant chez les favorisés que chez les défavorisés ; le score médian baisse lui aussi dans chaque quart, de 20 à 53 points en lecture et de 25 à 38 en mathématiques.
+Ces reculs se retrouvent quand les quarts sont formés avec la profession des parents.
+L’écart entre milieux sociaux, lui, ne se lit pas aussi simplement.
+Avec l’indice social de l’OCDE, il passerait de 122 à 91 points en lecture entre 2015 et 2025 ; mais l’OCDE a modifié en 2025 les questions sur la famille dont cet indice est tiré, et ne le traite plus comme comparable d’une enquête à l’autre : on n’en tire aucune tendance.
+Avec la profession des parents, codée sur la même échelle internationale en 2015 et en 2025, l’écart se réduit en lecture (de 104 à 83 points), mais la réduction n’est significative ni en mathématiques ni en sciences, y compris en ajoutant le diplôme des parents à la mesure.
+Une question demeure : la baisse tient-elle à la façon dont les jeunes de 15 ans se répartissent entre les classes ?
+Le changement de répartition entre classes explique-t-il la baisse ?
+Baisse du score moyen, observée, à la répartition entre classes de 2015 et à la composition de 2015, trois domaines (OCDE, bases PISA 2015 et 2025, données individuelles ; calcul de l'auteur).
+Le résultat en une phrase.
+En mathématiques, la baisse vaut 35 points telle qu’observée, 43 à la répartition entre classes de 2015, 36 à la composition de 2015 pour la classe, le sexe et la famille : trois réponses à trois questions différentes, dont aucune n’est « la vraie baisse ».
+Non : le changement de répartition entre classes ne suffit pas à expliquer la baisse.
+À la répartition entre classes de 2015, la baisse calculée est même plus forte, dans les trois domaines ; ajustée aussi du sexe et de la famille, elle revient près de la baisse observée.
+PISA retient un âge, non une classe.
+Entre 2015 et 2025, en même temps que reculait le redoublement, la part des jeunes de 15 ans encore en troisième ou avant est passée de près d’un quart à moins d’un dixième de l’échantillon français (24 % puis 10 %), et celle de la seconde professionnelle et du CAP de 14 % à 23 %.
+Or les élèves encore au collège à 15 ans ont des scores bien plus bas.
+Quand un groupe aux scores bas devient plus petit, la moyenne de l’ensemble monte, même si aucun élève ne progresse.
+La standardisation pose donc une question précise : que vaudrait la moyenne de 2025 avec les scores de chaque classe en 2025, mais la répartition entre classes de 2015 ?
+Les données individuelles de PISA, qui donnent pour chaque élève sa classe et son programme, permettent d’y répondre ; le calcul suit la méthode de l’OCDE et retrouve au centième les moyennes qu’elle publie : la baisse passe de 35 à 43 points en mathématiques, de 43 à 51 en lecture, et de 12 à 21 en sciences.
+Le changement de répartition entre classes atténue donc arithmétiquement la baisse observée.
+Ce n’est pas « la vraie baisse » : c’est la baisse à une autre répartition, et ce chiffre ne mesure pas l’effet du redoublement, dont le recul a aussi changé qui se trouve dans chaque classe.
+En mathématiques et en lecture, le score moyen est plus bas en 2025 dans chacune des quatre catégories de classe observées ; en sciences, trois catégories sur quatre reculent, et la petite catégorie « première et après », environ 3 % des élèves, ne baisse pas.
+Parmi les élèves classés en seconde générale et technologique chaque année, le score moyen passe de 540 à 493 en mathématiques (46 points de moins) et de 556 à 495 en lecture (61 de moins) ; ces populations ne sont pas identiques, puisque des élèves qui auraient auparavant été encore au collège peuvent désormais être en seconde.
+La DEPP avait relevé le même effet de structure entre 2006 et 2015, et ses chiffres de 2015 et 2025 en sciences, publiés par classe, donnent le même résultat que les données individuelles.
+D’autres caractéristiques ont changé en même temps.
+Si l’on applique à 2025 la répartition de 2015 à la fois pour la classe, le sexe, le diplôme des parents et l’origine migratoire, la baisse est de 36 points en mathématiques, 44 en lecture et 13 en sciences : elle revient à peu près au niveau observé.
+Trois nombres répondent ainsi à trois questions, en mathématiques : la baisse observée (35 points), la baisse à la répartition entre classes de 2015 (43), la baisse à la composition de 2015 pour l’ensemble de ces caractéristiques (36).
+Aucun ne dit la contribution de chacune.
+Deux réserves comptent, au contact de ces chiffres.
+Le calcul ne reconstitue pas les parcours scolaires.
+Et les questions sur la famille restent bien plus souvent sans réponse en 2025 : le diplôme des parents manque pour 13 % des élèves, contre 4 % en 2015, l’origine pour 8 %, contre 3 %.
+Ces élèves forment une catégorie à part dans la repondération, ce qui ne supprime pas les biais éventuels de la non-réponse ; calculée sur les seuls élèves dont la famille est renseignée, la repondération ne réduit pas non plus la baisse.
+Et à la fin du lycée ?
+La seule mesure internationale date, et elle porte sur une filière qui n’existe plus.
+TIMSS Advanced, l’enquête de l’IEA sur les élèves scientifiques en fin d’études secondaires, a évalué la terminale S en 1995 et en 2015 : le score moyen de la France est passé de 569 à 463 en mathématiques (107 points de moins) et de 469 à 373 en physique (96 points de moins), deux baisses significatives.
+L’enquête n’a pas été refaite depuis, et la série S a disparu avec la réforme du lycée : rien ne mesure aujourd’hui, dans le temps, le niveau des terminales.
+La journée défense et citoyenneté évalue chaque année la lecture des jeunes d’environ 17 ans.
+Son test a changé en 2019, et la DEPP indique que les résultats de 2024 ne se comparent pas à ceux des années précédentes : cette évaluation ne permet pas de suivre une tendance.
+Ce que ces données ne disent pas
+Pourquoi PISA baisse : ni les moyens, ni les professeurs, ni les écrans, ni la pandémie, ni l’effort mis dans l’épreuve ne peuvent être départagés avec ces séries.
+Elles mesurent un recul, pas sa cause.
+Pourquoi les évaluations divergent : âge contre classe, compétences appliquées contre programme, enjeu ou non pour l’élève, années différentes ; aucune de ces explications n’est testée ici.
+D’un pays à l’autre, aucune relation suffisamment nette n’apparaît entre l’écart TIMSS / PISA et le niveau initial, la couverture des jeunes de 15 ans, leur répartition entre classes ou l’évolution de l’effort déclaré ; ces résultats descriptifs ne permettent pas d’écarter ces facteurs comme explications.
+La composition et la mesure du milieu social : la repondération tient compte de la classe, du sexe, du diplôme des parents et de l’origine migratoire, sans reconstituer les parcours scolaires ni ce que l’enquête ne mesure pas ; les questions sur la famille sont plus souvent restées sans réponse en 2025 et ont été reformulées, et l’indice social de l’OCDE ne se compare plus d’une enquête à l’autre, ce qui limite toute comparaison des milieux sociaux dans le temps.
+Le recrutement des professeurs : aucune donnée publique ne rapproche un enseignant des résultats de ses élèves, ni ne mesure le niveau de formation des recrutés.
+Au CAPES externe, le nombre de candidats présents par admis a diminué de 23 % à 35 % entre les sessions 2010-2012 et 2023-2025, selon la discipline : ce ratio mesure la concurrence au concours, pas le niveau des recrutés.
+Les concours, les classes et les heures de cours perdues sont traités dans la page Manque-t-il des professeurs au lycée ?
+Le niveau à la sortie du lycée aujourd’hui : la dernière mesure internationale date de 2015, et la journée défense et citoyenneté ne se compare pas dans le temps.
+Le baccalauréat : un taux de réussite à un examen dont les règles changent ne mesure pas un niveau.
+Synthèse
+Ce qu’il faut retenir
+On demande souvent si le niveau baisse comme si une seule mesure pouvait répondre.
+Les évaluations françaises disent trois choses distinctes.
+PISA, à 15 ans, mesure une baisse significative depuis 2015, en mathématiques parmi le quart des plus fortes de l’OCDE sur les estimations ponctuelles.
+Les évaluations passées en classe ne la mettent pas en évidence sur leurs derniers intervalles, qui ne sont pas les mêmes, ce qui ne prouve pas que les tendances diffèrent ; sur la longue période, elles baissent aussi.
+En France, le milieu et le sommet de la distribution reculent presque autant que le bas, ou davantage, quand la moyenne de l’OCDE amortit la baisse vers le haut.
+Et le fait qu’à 15 ans moins d’élèves qu’en 2015 soient encore au collège atténue arithmétiquement la baisse observée ; à composition de 2015 pour la classe, le sexe et la famille, la baisse revient à peu près au niveau observé.
+Aucune de ces mesures ne dit pourquoi le niveau baisse : la divergence entre évaluations est une information à expliquer, pas une explication.
+Questions fréquentes
+Le niveau des élèves baisse-t-il en France ?
+Selon PISA, oui : de 2015 à 2025, le score moyen des jeunes de 15 ans a baissé de 43 points en compréhension de l'écrit, de 35 en culture mathématique et de 12 en culture scientifique, trois baisses statistiquement significatives selon l'OCDE.
+Sur leurs derniers intervalles, PIRLS en CM1 (2016-2021) et TIMSS en CM1 et en quatrième (2019-2023) ne mettent pas en évidence de baisse significative, ce qui ne prouve pas que leurs tendances diffèrent de celle de PISA.
+Sur la longue période, elles baissent elles aussi.
+Les autres évaluations confirment-elles PISA ?
+Pas sur la période récente.
+PIRLS en CM1 passe de 511 à 514 points entre 2016 et 2021, TIMSS en CM1 de 485 à 484 et TIMSS en quatrième de 483 à 479 en mathématiques entre 2019 et 2023 : aucune variation n'est significative.
+Le score du test d'entrée en seconde monte en mathématiques, sans test publié.
+Ces évaluations portent sur d'autres élèves et d'autres années que PISA : elles ne le réfutent pas, mais elles interdisent de dire que toutes les mesures montrent la même chute.
+La France baisse-t-elle plus que les autres pays ?
+Elle perd davantage de points que la moyenne de l'OCDE dans les trois domaines entre 2015 et 2025 : 43 contre 27 en compréhension de l'écrit, 35 contre 22 en mathématiques, 12 contre 7 en sciences.
+Parmi les pays pris un à un, sa baisse se situe, sur les estimations ponctuelles, près de la limite du quart des plus fortes en lecture, parmi ce quart en mathématiques, et dans la moitié centrale en sciences.
+Ces rangs ne constituent pas un test de la différence entre pays, que l'OCDE ne publie pas.
+La baisse vient-elle du changement de répartition des élèves entre classes ?
+Non.
+Entre 2015 et 2025, la part des jeunes de 15 ans encore en troisième ou avant est passée de 24 % à 10 % de l'échantillon PISA.
+Ces élèves ont des scores plus bas : la diminution de leur part relève la moyenne.
+À la répartition entre classes de 2015, la baisse passe de 35 à 43 points en mathématiques, et de 43 à 51 en lecture.
+À la composition de 2015 pour la classe, le sexe, le diplôme des parents et l'origine migratoire, elle revient à peu près au niveau observé (36 points en mathématiques, 44 en lecture).
+Ces calculs décrivent, ils n'attribuent pas de cause ; ils ne reconstituent pas les parcours scolaires et dépendent de la qualité des réponses sur les familles.
+Les meilleurs élèves baissent-ils aussi ?
+Oui, et plus qu'ailleurs.
+La part des élèves de 15 ans aux deux niveaux les plus élevés de PISA est passée de 12,5 % à 4,5 % en compréhension de l'écrit entre 2015 et 2025, et de 11,4 % à 5,2 % en mathématiques ; dans la moyenne de l'OCDE, de 8,1 % à 5,8 % et de 10,4 % à 8,1 %.
+La baisse vient-elle du recrutement des professeurs ?
+Les données publiques ne permettent pas de le dire : aucune ne relie un enseignant aux résultats de ses élèves, ni ne mesure le niveau de formation des recrutés.
+Elles montrent seulement que le nombre de candidats présents par admis au CAPES externe a diminué de 23 % à 35 % entre 2010-2012 et 2023-2025 selon la discipline, et que la part des contractuels parmi les enseignants du second degré public est passée de 7,5 % en 2015 à 11,2 % en 2025.
+Après un premier échec, qui peut recommencer ?
+La Société du premier coup
+Pourquoi certains peuvent recommencer — et d'autres non
+Cette page mesure ce que savent les élèves à un moment donné.
+La question qui vient ensuite est celle des parcours : quand un élève échoue une première fois, à un examen, une orientation, une première année d’études, qui peut réellement recommencer, et à quel coût selon son milieu ?
+Le livre montre que cette possibilité de recommencer n’est pas également distribuée.
+Journalistes, enseignants, chercheurs, responsables publics ou associatifs
+Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock.
+Demander l'exemplaire offert →
+Version papier : 13,90 € · Kindle : 5,99 €
+Sommaire, extraits et recensions →
+D’où viennent ces chiffres
+PISA.
+OCDE, PISA 2025 Results, volume I (8 septembre 2026), tableaux de l’annexe B1 : scores moyens et variations (I.B1.2a.36 à 38), niveaux de compétence (I.B1.2a.33 à 35), percentiles (I.B1.2a.39 à 41), statut économique, social et culturel (I.B1.2b.22 à 24).
+Une variation est dite significative quand elle dépasse 1,96 fois son erreur type, règle de l’OCDE.
+La moyenne de l’OCDE est celle des 35 pays comparables sur toute la période.
+Témoin : les séries de la France publiées par la DEPP (Notes d’Information 26-39 et 26-40), identiques à 0,04 point près.
+Classes des élèves de l’échantillon : Note 26-40, figure 1.
+Effort déclaré : Note 26-40, figures 31 à 34 web.
+Composition par classe.
+DEPP, Note d’Information 16-37 (PISA 2015, culture scientifique, figure 3) et Note 26-39 (PISA 2025, figure 10 web) : part de l’échantillon et score par classe.
+Classes regroupées en quatre catégories (troisième et avant, seconde générale et technologique, seconde professionnelle et CAP, première) ; la figure de 2015 n’a pas de ligne CAP ; champs un peu différents (2015 sans La Réunion, 2025 sans Mayotte).
+Deux variantes de regroupement (sans la première ; « autres » comptés avec la troisième) donnent le même sens et un effet un peu plus fort.
+Score de 2025 recalculé avec les parts de 2015 ; contrôle : les catégories doivent redonner le score moyen publié à moins de 3 points près, seuil fixé avant le calcul, ce qu’elles font les deux années.
+Données individuelles.
+OCDE, bases PISA 2015, 2022 et 2025 (fichiers élèves publics) : calculs avec les dix valeurs plausibles et les 80 poids répliqués, selon la méthode de l’OCDE ; témoin : les moyennes de la France publiées par l’OCDE, retrouvées au centième pour les trois domaines et les trois années.
+Répartition par classe à partir de la classe et du programme national de chaque élève, contrôlée contre la répartition publiée par la DEPP pour 2015.
+Quarts sociaux : quarts nationaux de l’indice de statut économique, social et culturel.
+Effort : note de 1 à 10 déclarée à la fin de l’épreuve, en quatre groupes et la non-réponse.
+Composition conjointe : repondération des élèves de 2025 par une régression logistique pondérée sur la classe, le sexe, le diplôme le plus élevé des parents (trois groupes harmonisés entre les deux cycles) et l’origine migratoire, en effets principaux, chaque réponse manquante formant une catégorie ; avec la classe seule, elle redonne au centième la repondération par classe, et les répartitions de 2015 sont retrouvées à moins d’un demi-point, à moins d’un point pour les croisements de la classe, du diplôme et de l’origine ; variantes (classe croisée avec le diplôme, diplôme en deux groupes, profession des parents ajoutée ou à la place du diplôme, poids plafonnés, élèves à la famille renseignée) : dans aucune, la baisse ne diminue de plus d’un point.
+Quarts sociaux comparables dans le temps : « contrairement aux cycles précédents, l’indice calculé pour PISA 2025 n’est pas traité comme une échelle de tendance », en raison des changements apportés aux questions sur le diplôme, la profession et les biens du foyer (OCDE, rapport technique de PISA 2025, chapitre 22, version provisoire de septembre 2026, notre traduction) ; les conséquences en sont étudiées par Cobreros, Colomer, Correig-Fraga, Gortazar et Sayol (document de travail, septembre 2026).
+Les quarts sont refaits dans chaque année avec l’indice de profession des parents (même classification internationale des professions les deux années, questions reformulées en 2025), seul ou avec leur diplôme, et l’écart entre quarts de la France est recalculé (le même calcul sur l’indice de l’OCDE redonne ses chiffres publiés).
+Médiane par quart social : bornes des quarts fixées par le poids final, erreur type par les poids répliqués et les dix valeurs plausibles.
+Les comparaisons 2015-2025 n’intègrent pas l’erreur de liaison entre cycles.
+Autres évaluations.
+IEA, TIMSS 2023 International Results (tableaux de tendance, CM1 et quatrième, mathématiques et sciences, avec la significativité de chaque écart) ; DEPP, Notes d’Information 24-47, 24-48 et 24-49 (TIMSS 2023), 23-21 (PIRLS 2021) et 17-24 (PIRLS 2016).
+Comparaison par pays : variation de TIMSS en quatrième (2019-2023, tableau de tendance de l’IEA) et de PISA (2022-2025, tableau I.B1.2a.38) pour les pays présents dans les deux, entités infranationales et pays évalués en neuvième année écartés ; écart mesuré par la différence des variations ramenées à l’écart-type entre pays (un indice de rang, non une grandeur), avec trois variantes (membres de l’OCDE seulement, sans les pays signalés par l’OCDE, écart en points) qui donnent le même résultat.
+Protocole écrit avant le calcul, scores de TIMSS relus dans le PDF de l’IEA.
+Le quatrième protocole a contrôlé le niveau de départ (régression de l’écart sur le score TIMSS de 2019, et écart de rang au lieu de l’écart standardisé) ; il a aussi testé, sans trouver de relation lisible, l’indice de couverture des 15 ans (tableau I.A2.1 de l’OCDE), la répartition par classe (I.A2.3) et l’effort déclaré (Note 26-40, figure 31 web, 15 membres de l’OCDE).
+Tests de positionnement de seconde.
+DEPP, Note d’Information 26-22 et ses données (scores moyens 2019-2025, échelle fixée à 250 en 2019, voies générale et technologique et professionnelle), document de travail 2025-E15.
+Rapprochement avec PISA : Note 26-40, figure 11 web (deux voies ensemble).
+La DEPP précise que la comparaison stricte des mathématiques entre 2024 et 2025 n’est pas possible, une partie du test ayant été renouvelée.
+Fin du lycée.
+IEA, TIMSS Advanced 2015 International Results in Advanced Mathematics and Physics ; DEPP, Notes d’Information 16-34 et 16-35.
+Journée défense et citoyenneté : DEPP, Note d’Information 25-57 et notes antérieures.
+Recrutement.
+DEPP, Repères et références statistiques 2011 à 2013 et 2024 à 2026 (concours de recrutement du second degré public selon les disciplines ; troisième concours compté avec l’externe ; Capes à affectation locale compris à partir de 2021), Note d’Information 11-24 pour la session 2010 ; la session 2012 de physique-chimie n’est pas publiée par la DEPP.
+Contractuels : RERS 2026, fiche 9.02.
+Enseignants non pleinement qualifiés : OCDE, Regards sur l’éducation 2026, chapitre sur la pénurie d’enseignants, tableau 1 (France : année 2023-2024).
+Aucun chiffre de cette page n’est saisi à la main : tous viennent d’un calcul de l’auteur, dont l’extrait est archivé avec ses empreintes ; le script qui écrit la page vérifie chaque affirmation chiffrée et s’arrête si elle n’est plus vraie.
+Sept protocoles ont été écrits chacun avant son calcul, avec leurs seuils ; le deuxième, qui a fait entrer TIMSS, PIRLS et la composition par classe, répondait à une contre-expertise externe de la première version.
+Les scores PISA de la France, les résultats des tests de seconde, des concours, de PIRLS et la composition par classe de 2015 ont été lus deux fois, par deux extracteurs indépendants, et les séries de la France ont été comparées entre l’OCDE et la DEPP ; chacun de ces contrôles a détecté les erreurs qu’on y avait introduites volontairement.
+Réutiliser cette page
+Les figures, les données et une citation prête, sous licence libre.
+Chaque figure porte dans l'image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
+Quatre évaluations, leur dernière variation en France
+Sur leurs dernières périodes, différentes, PISA à 15 ans baisse significativement ; PIRLS en CM1 et TIMSS en CM1 et en quatrième ne mettent pas en évidence de baisse significative ; le score du test d'entrée en seconde monte en mathématiques, sans test publié.
+Ces écarts de significativité ne prouvent pas que les tendances diffèrent.
+Précaution d'interprétation.
+Chaque évaluation a son échelle : les points ne se comparent pas d'une ligne à l'autre.
+Point plein : test publié, significatif ou non ; point creux : aucun test publié.
+Couleur : sens de la variation.
+IEA (TIMSS 2023, rapport international) ; DEPP (PIRLS 2021, NI 23-21 ; test de positionnement de seconde, NI 26-22) ; OCDE (PISA 2025)
+Télécharger en PNG
+SVG
+PISA, 2015-2025 : la France parmi les 38 pays de l'OCDE
+En lecture et en sciences, la baisse française est dans la moitié centrale des pays de l'OCDE, la lecture pratiquement à sa frontière ; en mathématiques, elle compte, sur les estimations ponctuelles, parmi le quart des plus fortes.
+Précaution d'interprétation.
+Chaque point est un pays membre de l'OCDE.
+Bande bleue : la moitié centrale des pays (du premier au troisième quartile).
+Rangs sur estimations ponctuelles ; différences entre pays non testées.
+OCDE, PISA 2025, volume I, tableaux I.B1.2a.36 à 38 (variation du score moyen entre 2015 et 2025)
+Télécharger en PNG
+SVG
+PISA 2015-2025 : trois mesures de la baisse, selon la composition retenue
+Trois mesures de la même baisse : observée ; plus forte à la répartition entre classes de 2015, parce qu'à 15 ans moins d'élèves sont encore au collège ; revenue près du niveau observé à la composition de 2015 pour la classe, le sexe et la famille.
+Ces calculs décrivent, ils n'attribuent pas de cause.
+Précaution d'interprétation.
+Baisse du score moyen, en points.
+Une baisse observée et deux standardisations descriptives, trois questions : aucune n'est « la vraie baisse », aucune ne mesure l'effet du redoublement.
+OCDE, bases PISA 2015 et 2025 (données individuelles) ; calcul de l'auteur (valeurs plausibles, poids répliqués)
+Télécharger en PNG
+SVG
+Test de seconde et PISA, cohortes largement correspondantes : écart 2021-2022 / 2024-2025
+En français, le test de seconde et PISA baissent tous les deux ; en mathématiques, le score du test de seconde monte quand PISA baisse.
+Les deux épreuves ne mesurent ni les mêmes compétences ni les mêmes élèves.
+Précaution d'interprétation.
+En centièmes d'écart-type (d de Cohen), calculé par la DEPP.
+Cohortes largement correspondantes, pas les mêmes élèves.
+Seconde : deux voies, sans test publié.
+DEPP, Note d'Information 26-40, figure 11 web (tests de positionnement de seconde 2021 et 2024 ; PISA 2022 et 2025)
+Télécharger en PNG
+SVG
+Les élèves en difficulté et les meilleurs élèves, 2015 et 2025
+La part des élèves en difficulté augmente en France à peu près comme dans l'OCDE ; la part des meilleurs élèves y baisse bien davantage, surtout en lecture.
+Précaution d'interprétation.
+En % des élèves de 15 ans.
+En difficulté : sous le niveau 2.
+Meilleurs élèves : niveaux 5 et 6.
+OCDE, PISA 2025, volume I, tableaux I.B1.2a.34 et 35 ; moyenne de l'OCDE sur 35 pays comparables
+Télécharger en PNG
+SVG
+Citer cette page
+Lalut, Stéphane (2026). « Le niveau des élèves baisse-t-il ? ».
+Données OCDE (PISA, Regards sur l'éducation), IEA (TIMSS, PIRLS), DEPP, relevé du 9 octobre 2026. https://stephane-lalut.com/le-niveau-des-eleves-baisse-t-il/
+Copier la citation
+En trois phrases
+PISA, à 15 ans, mesure en France une baisse significative de 2015 à 2025 (43 points en compréhension de l’écrit, 35 en mathématiques), que les évaluations passées en classe ne mettent pas en évidence sur leurs derniers intervalles, qui ne sont pas les mêmes, sans que cela prouve des tendances différentes.
+À la répartition entre classes de 2015, la baisse de PISA est plus forte dans les trois domaines, et elle revient à peu près au niveau observé quand on tient compte aussi du sexe et de la famille : ces calculs décrivent, ils n’attribuent pas de cause.
+En France, le milieu et le haut de la distribution reculent presque autant que le bas, ou davantage, quand dans la moyenne de l’OCDE la baisse s’atténue vers le haut.
+Copier le résumé
+Les données
+Scores PISA de la France et de l'OCDE, variation 2015-2025 des 38 pays de l'OCDE, percentiles, élèves en difficulté et meilleurs élèves, écart social, composition par classe dans les trois domaines, effort déclaré, TIMSS CM1 et quatrième, PIRLS CM1, test de positionnement de seconde 2019-2025, écarts entre générations de la DEPP, TIMSS Advanced, candidats et admis au CAPES externe, contractuels, enseignants non pleinement qualifiés ; le même contenu existe en CSV, au format long.
+Télécharger en JSON CSV
+Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
+Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
+Les séries brutes appartiennent à leurs producteurs (OCDE (PISA, Regards sur l'éducation), IEA (TIMSS, PIRLS), DEPP), sous leurs propres conditions.
+Toutes les ressources : données, dossiers et repères →
+Transmettre
+WhatsApp
+Bluesky
+LinkedIn
+X
+E-mail
+Copier le lien

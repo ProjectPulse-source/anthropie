@@ -185,6 +185,7 @@ jobs:
       contents: read
       pages: write
       id-token: write
+      issues: write   # tache `relecture` de hugo.yml (issue « Relecture ciblee »)
     uses: ./.github/workflows/hugo.yml
     with:
       ref: ${{ needs.update.outputs.sha }}
