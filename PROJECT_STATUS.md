@@ -52,6 +52,13 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-12 — Figure « dette-longue » : fin de courbe et libellé de bande (auteur)
+
+- Trajectoire PLF : seul le cercle d'arrivée (121,7 %) reste, relié au point orange du dernier trimestre par un
+  pointillé (`build_svg_longue`) ; descriptions FR/EN ajustées, la version téléphone (sans trajectoire) ne l'annonce plus
+  (`dette_cout_figures.fig_longue_m`). Libellé d'une bande de bord aligné sur le bord de sa bande (« 1979-1982 »).
+- `4599e37`, `7796bdb` ; check-all --ci 0, build Hugo 0, audit-liens 0 ; poussé et déployé (Pages : success).
+
 ### 2026-10-10 — « Ce qu'il faut retenir » en exergue sur toutes les ressources (modèle B de l'auteur)
 
 - Cinq maquettes soumises (`docs/ARBITRAGE_RETENIR_EN_EXERGUE_2026-10-10.html`, décision portée en tête), modèle B retenu par l'auteur : carte blanche,
