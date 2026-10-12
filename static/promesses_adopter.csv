@@ -7,6 +7,13 @@ lois_ordinaires_promulguees,legislature_14,P,98,lois,"AN, Dosleg, JO"
 lois_ordinaires_promulguees,legislature_14,Pmin,87,lois,"AN, Dosleg, JO"
 lois_ordinaires_promulguees,legislature_14,traites,188,lois,"AN, Dosleg, JO"
 lois_ordinaires_promulguees,legislature_14,autres,46,lois,"AN, Dosleg, JO"
+lois_toutes_natures_hors_traites,legislature_14,Ntot,260,lois,"AN, Dosleg, JO"
+lois_toutes_natures_hors_traites,legislature_14,Ptot,110,lois,"AN, Dosleg, JO"
+lois_toutes_natures_hors_traites,legislature_14,Ptotmin,99,lois,"AN, Dosleg, JO"
+lois_toutes_natures_hors_traites,legislature_14,Nfin,23,lois,"AN, Dosleg, JO"
+lois_toutes_natures_hors_traites,legislature_14,Norg,23,lois,"AN, Dosleg, JO"
+lois_toutes_natures_hors_traites,legislature_14,Porg,12,lois,"AN, Dosleg, JO"
+lois_toutes_natures_hors_traites,legislature_14,Ncst,0,lois,"AN, Dosleg, JO"
 lois_ordinaires_promulguees,legislature_15,N,202,lois,"AN, Dosleg, JO"
 lois_ordinaires_promulguees,legislature_15,gouv,94,lois,"AN, Dosleg, JO"
 lois_ordinaires_promulguees,legislature_15,AN,77,lois,"AN, Dosleg, JO"
@@ -15,6 +22,13 @@ lois_ordinaires_promulguees,legislature_15,P,108,lois,"AN, Dosleg, JO"
 lois_ordinaires_promulguees,legislature_15,Pmin,103,lois,"AN, Dosleg, JO"
 lois_ordinaires_promulguees,legislature_15,traites,104,lois,"AN, Dosleg, JO"
 lois_ordinaires_promulguees,legislature_15,autres,47,lois,"AN, Dosleg, JO"
+lois_toutes_natures_hors_traites,legislature_15,Ntot,249,lois,"AN, Dosleg, JO"
+lois_toutes_natures_hors_traites,legislature_15,Ptot,114,lois,"AN, Dosleg, JO"
+lois_toutes_natures_hors_traites,legislature_15,Ptotmin,109,lois,"AN, Dosleg, JO"
+lois_toutes_natures_hors_traites,legislature_15,Nfin,25,lois,"AN, Dosleg, JO"
+lois_toutes_natures_hors_traites,legislature_15,Norg,22,lois,"AN, Dosleg, JO"
+lois_toutes_natures_hors_traites,legislature_15,Porg,6,lois,"AN, Dosleg, JO"
+lois_toutes_natures_hors_traites,legislature_15,Ncst,0,lois,"AN, Dosleg, JO"
 lois_ordinaires_promulguees,legislature_16,N,83,lois,"AN, Dosleg, JO"
 lois_ordinaires_promulguees,legislature_16,gouv,28,lois,"AN, Dosleg, JO"
 lois_ordinaires_promulguees,legislature_16,AN,32,lois,"AN, Dosleg, JO"
@@ -23,6 +37,13 @@ lois_ordinaires_promulguees,legislature_16,P,55,lois,"AN, Dosleg, JO"
 lois_ordinaires_promulguees,legislature_16,Pmin,55,lois,"AN, Dosleg, JO"
 lois_ordinaires_promulguees,legislature_16,traites,41,lois,"AN, Dosleg, JO"
 lois_ordinaires_promulguees,legislature_16,autres,12,lois,"AN, Dosleg, JO"
+lois_toutes_natures_hors_traites,legislature_16,Ntot,95,lois,"AN, Dosleg, JO"
+lois_toutes_natures_hors_traites,legislature_16,Ptot,55,lois,"AN, Dosleg, JO"
+lois_toutes_natures_hors_traites,legislature_16,Ptotmin,55,lois,"AN, Dosleg, JO"
+lois_toutes_natures_hors_traites,legislature_16,Nfin,8,lois,"AN, Dosleg, JO"
+lois_toutes_natures_hors_traites,legislature_16,Norg,3,lois,"AN, Dosleg, JO"
+lois_toutes_natures_hors_traites,legislature_16,Porg,0,lois,"AN, Dosleg, JO"
+lois_toutes_natures_hors_traites,legislature_16,Ncst,1,lois,"AN, Dosleg, JO"
 lois_ordinaires_promulguees,legislature_17,N,97,lois,"AN, Dosleg, JO"
 lois_ordinaires_promulguees,legislature_17,gouv,19,lois,"AN, Dosleg, JO"
 lois_ordinaires_promulguees,legislature_17,AN,48,lois,"AN, Dosleg, JO"
@@ -31,6 +52,18 @@ lois_ordinaires_promulguees,legislature_17,P,78,lois,"AN, Dosleg, JO"
 lois_ordinaires_promulguees,legislature_17,Pmin,78,lois,"AN, Dosleg, JO"
 lois_ordinaires_promulguees,legislature_17,traites,32,lois,"AN, Dosleg, JO"
 lois_ordinaires_promulguees,legislature_17,autres,15,lois,"AN, Dosleg, JO"
+lois_toutes_natures_hors_traites,legislature_17,Ntot,112,lois,"AN, Dosleg, JO"
+lois_toutes_natures_hors_traites,legislature_17,Ptot,85,lois,"AN, Dosleg, JO"
+lois_toutes_natures_hors_traites,legislature_17,Ptotmin,85,lois,"AN, Dosleg, JO"
+lois_toutes_natures_hors_traites,legislature_17,Nfin,6,lois,"AN, Dosleg, JO"
+lois_toutes_natures_hors_traites,legislature_17,Norg,9,lois,"AN, Dosleg, JO"
+lois_toutes_natures_hors_traites,legislature_17,Porg,7,lois,"AN, Dosleg, JO"
+lois_toutes_natures_hors_traites,legislature_17,Ncst,0,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,entre_deux_legislatures_2024-06,N,4,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,entre_deux_legislatures_2024-06,gouv,0,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,entre_deux_legislatures_2024-06,AN,3,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,entre_deux_legislatures_2024-06,SEN,1,lois,"AN, Dosleg, JO"
+lois_ordinaires_promulguees,entre_deux_legislatures_2024-06,P,4,lois,"AN, Dosleg, JO"
 lois_hors_traites,2017-2018,N,41,lois,"AN, Dosleg, JO"
 lois_hors_traites,2017-2018,origine_parlementaire,12,lois,"AN, Dosleg, JO"
 lois_hors_traites,2018-2019,N,49,lois,"AN, Dosleg, JO"
@@ -55,6 +88,7 @@ propositions_deposees_AN,legislature_14,Nw,1538,textes,"AN, bulletins statistiqu
 propositions_deposees_AN,legislature_14,Zw,1385,textes,"AN, bulletins statistiques"
 propositions_deposees_AN,legislature_14,ext,1711,textes,"AN, bulletins statistiques"
 propositions_deposees_AN,legislature_14,bul,1694,textes,"AN, bulletins statistiques"
+propositions_deposees_AN,legislature_14,pjl_bul,294,textes,"AN, bulletins statistiques"
 propositions_deposees_AN,legislature_14,mediane_jours,1064,textes,"AN, bulletins statistiques"
 propositions_deposees_AN,legislature_15,N,2160,textes,"AN, bulletins statistiques"
 propositions_deposees_AN,legislature_15,Z,1964,textes,"AN, bulletins statistiques"
@@ -64,6 +98,7 @@ propositions_deposees_AN,legislature_15,Nw,2155,textes,"AN, bulletins statistiqu
 propositions_deposees_AN,legislature_15,Zw,1959,textes,"AN, bulletins statistiques"
 propositions_deposees_AN,legislature_15,ext,2296,textes,"AN, bulletins statistiques"
 propositions_deposees_AN,legislature_15,bul,2291,textes,"AN, bulletins statistiques"
+propositions_deposees_AN,legislature_15,pjl_bul,271,textes,"AN, bulletins statistiques"
 propositions_deposees_AN,legislature_15,mediane_jours,868,textes,"AN, bulletins statistiques"
 propositions_deposees_AN,legislature_16,N,1241,textes,"AN, bulletins statistiques"
 propositions_deposees_AN,legislature_16,Z,1131,textes,"AN, bulletins statistiques"
@@ -73,20 +108,33 @@ propositions_deposees_AN,legislature_16,Nw,1238,textes,"AN, bulletins statistiqu
 propositions_deposees_AN,legislature_16,Zw,1128,textes,"AN, bulletins statistiques"
 propositions_deposees_AN,legislature_16,ext,1318,textes,"AN, bulletins statistiques"
 propositions_deposees_AN,legislature_16,bul,1315,textes,"AN, bulletins statistiques"
+propositions_deposees_AN,legislature_16,pjl_bul,78,textes,"AN, bulletins statistiques"
 propositions_deposees_AN,legislature_16,mediane_jours,381,textes,"AN, bulletins statistiques"
 engagements_49_3,legislature_14,n,6,engagements,AN
 engagements_49_3,legislature_14,fin,0,engagements,AN
 engagements_49_3,legislature_14,lpfp,0,engagements,AN
 engagements_49_3,legislature_14,adoptees,0,engagements,AN
+engagements_49_3,legislature_14,textes,2,textes,AN
+lois_financieres_promulguees,legislature_14,lois_fin,23,lois,"AN, Dosleg, JO"
+lois_financieres_promulguees,legislature_14,lois_fin_engagees,0,lois,"AN, Dosleg, JO"
 engagements_49_3,legislature_15,n,1,engagements,AN
 engagements_49_3,legislature_15,fin,0,engagements,AN
 engagements_49_3,legislature_15,lpfp,0,engagements,AN
 engagements_49_3,legislature_15,adoptees,0,engagements,AN
+engagements_49_3,legislature_15,textes,1,textes,AN
+lois_financieres_promulguees,legislature_15,lois_fin,25,lois,"AN, Dosleg, JO"
+lois_financieres_promulguees,legislature_15,lois_fin_engagees,0,lois,"AN, Dosleg, JO"
 engagements_49_3,legislature_16,n,23,engagements,AN
 engagements_49_3,legislature_16,fin,21,engagements,AN
 engagements_49_3,legislature_16,lpfp,2,engagements,AN
 engagements_49_3,legislature_16,adoptees,0,engagements,AN
+engagements_49_3,legislature_16,textes,6,textes,AN
+lois_financieres_promulguees,legislature_16,lois_fin,8,lois,"AN, Dosleg, JO"
+lois_financieres_promulguees,legislature_16,lois_fin_engagees,5,lois,"AN, Dosleg, JO"
 engagements_49_3,legislature_17,n,8,engagements,AN
 engagements_49_3,legislature_17,fin,8,engagements,AN
 engagements_49_3,legislature_17,lpfp,0,engagements,AN
 engagements_49_3,legislature_17,adoptees,1,engagements,AN
+engagements_49_3,legislature_17,textes,3,textes,AN
+lois_financieres_promulguees,legislature_17,lois_fin,6,lois,"AN, Dosleg, JO"
+lois_financieres_promulguees,legislature_17,lois_fin_engagees,3,lois,"AN, Dosleg, JO"

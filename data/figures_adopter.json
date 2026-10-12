@@ -3,18 +3,18 @@
   {
    "id": "origine",
    "fichier": "adopter-origine",
-   "titre": "Qui est à l'origine des lois ordinaires promulguées ?",
-   "montre": "Parmi les lois promulguées du champ étudié (hors traités, lois de finances, de financement de la sécurité sociale et organiques), 98 sur 214 sont d'origine parlementaire sous la XIVe législature, 108 sur 202 sous la XVe et 55 sur 83 sous la XVIe ; origine formelle au dépôt initial.",
-   "source": "Assemblée nationale (données ouvertes, dossiers législatifs) et Sénat (base Dosleg), 06/10/2026 ; Journal officiel",
-   "precaution": "Hors traités, lois de finances, de financement de la sécurité sociale et organiques. Origine au dépôt, non l'influence."
+   "titre": "Qui est à l'origine des lois promulguées ?",
+   "montre": "Dans le champ étudié (hors lois autorisant un traité, lois de finances et de financement de la sécurité sociale, lois organiques et lois constitutionnelles), la part des lois promulguées issues d'une proposition de parlementaire est de 46 % sous la XIVe législature, 53 % sous la XVe (au moins 51 %), 66 % sous la XVIe et 80 % sous la XVIIe, en cours au 06/10/2026 ; toutes natures hors traités, 42, 46, 58 et 76 %. Origine formelle au dépôt initial, non l'influence.",
+   "source": "Assemblée nationale (données ouvertes, dossiers législatifs) et Sénat (base Dosleg), 06/10/2026 ; Journal officiel",
+   "precaution": "Champ : lois promulguées, hors lois autorisant un traité, lois de finances et de financement de la sécurité sociale, lois organiques et lois constitutionnelles. Origine au dépôt initial, non l'influence. Toutes natures : même compte, lois organiques, financières et constitutionnelles réintégrées, traités toujours exclus."
   },
   {
    "id": "493",
    "fichier": "adopter-493",
    "titre": "Engagements de responsabilité sur un texte (art. 49, al. 3)",
-   "montre": "Le Gouvernement a engagé sa responsabilité sur un texte (art. 49, al. 3) 6 fois sous la XIVe législature, 1 fois sous la XVe et 23 fois sous la XVIe, dont 21 sur un projet de loi de finances ou de financement de la sécurité sociale.",
-   "source": "Assemblée nationale : dossiers législatifs, bulletins statistiques, fiche n° 64 (engagements de responsabilité)",
-   "precaution": "Catégories de l'art. 49, al. 3 : la loi de programmation des finances publiques est un « autre projet ». XVIIe en cours au 06/10/2026."
+   "montre": "Le Premier ministre a engagé la responsabilité du Gouvernement sur un texte (art. 49, al. 3) 6 fois sous la XIVe législature, 1 fois sous la XVe, 23 fois sous la XVIe, dont 21 sur un projet de loi de finances ou de financement de la sécurité sociale, et 8 fois sous la XVIIe, en cours au 06/10/2026 ; un engagement par texte et par étape de lecture.",
+   "source": "Assemblée nationale : dossiers législatifs, bulletins statistiques, fiche n° 64 (engagements de responsabilité)",
+   "precaution": "Catégories de l'art. 49, al. 3 : la loi de programmation des finances publiques est un « autre projet ». Un engagement par texte et par étape de lecture. XVIIe en cours au 06/10/2026."
   }
  ],
  "en": [
@@ -22,17 +22,17 @@
    "id": "origine",
    "fichier": "adopter-origine-en",
    "titre": "Who initiated the laws promulgated in France?",
-   "montre": "Among the laws promulgated in the scope studied (excluding treaties, finance, social security financing and institutional acts), 98 out of 214 originated as private members' bills during the 14th legislature, 108 out of 202 during the 15th and 55 out of 83 during the 16th; formal origin at the initial tabling.",
+   "montre": "In the scope studied (excluding laws authorising a treaty, finance and social security financing acts, institutional acts and constitutional acts), the share of the laws promulgated in France that arose from a private member's bill is 46% during the 14th legislature, 53% during the 15th (at least 51%), 66% during the 16th and 80% during the 17th, ongoing on 6 October 2026; all kinds except treaties, 42, 46, 58 and 76%. Formal origin at the initial tabling, not influence.",
    "source": "National Assembly (open data, legislative files) and Senate (Dosleg database), 6 October 2026; Journal officiel",
-   "precaution": "Excluding treaties, finance, social security financing and institutional acts. Origin at tabling, not influence."
+   "precaution": "Scope: laws promulgated, excluding laws authorising a treaty, finance and social security financing acts, institutional acts and constitutional acts. Origin at the initial tabling, not influence. All kinds: same count with institutional, finance and constitutional acts put back in, treaties still excluded."
   },
   {
    "id": "493",
    "fichier": "adopter-493-en",
    "titre": "Bills made an issue of a vote of confidence (art. 49, para. 3)",
-   "montre": "The Government made the passing of a bill an issue of a vote of confidence (art. 49, para. 3) 6 times during the 14th legislature, once during the 15th and 23 times during the 16th, including 21 on a Finance Bill or Social Security Financing Bill.",
+   "montre": "The Prime Minister made the passing of a bill an issue of a vote of confidence (art. 49, para. 3) 6 times during the 14th legislature, once during the 15th, 23 times during the 16th, 21 of them on a Finance Bill or Social Security Financing Bill, and 8 times during the 17th, ongoing on 6 October 2026; one use per bill and per reading stage.",
    "source": "National Assembly: legislative files, statistical bulletins, summary sheet no. 64 (Government responsibility)",
-   "precaution": "Categories of art. 49, para. 3: the public finance programming act is 'one other bill'. 17th ongoing on 6 October 2026."
+   "precaution": "Categories of art. 49, para. 3: the public finance programming act is 'one other bill'. One use per bill and per reading stage. 17th ongoing on 6 October 2026."
   }
  ]
 }

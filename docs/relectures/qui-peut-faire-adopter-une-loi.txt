@@ -1,0 +1,451 @@
+# relu le 2026-10-12 ; texte servi de /qui-peut-faire-adopter-une-loi/, build de 060aec4 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+ENCette page existe aussi en anglais — English version
+Qui peut faire adopter une loi ?
+Les lois viennent-elles surtout du Gouvernement ?
+Depuis la XVe législature (2017-2022), la majorité des lois ordinaires promulguées, hors traités, est issue d'une proposition de député ou de sénateur ; pour la XVe, c'est de peu (au moins 103 lois sur 202).
+Ce résultat dépend de ce qu'on compte : en y ajoutant les lois à procédure propre (budgets de l'État et de la sécurité sociale, lois qui complètent ou modifient la Constitution), la majorité parlementaire n'apparaît qu'avec la XVIe (2022-2024).
+Pourtant, environ neuf propositions de loi sur dix déposées à l'Assemblée nationale n'ont pas été examinées en séance avant la fin de leur législature.
+Les deux constats tiennent ensemble parce que faire adopter une loi demande plusieurs clés, que la Constitution répartit : déposer un texte est ouvert au Premier ministre comme à chaque parlementaire ; le faire venir en séance dépend d'un ordre du jour fixé par chaque assemblée, où le Gouvernement dispose de priorités ; quand les deux assemblées ne s'accordent pas, seul le Gouvernement peut demander à l'Assemblée nationale de statuer définitivement.
+Le vote de la loi appartient au Parlement, avec trois exceptions au vote sur le texte : l'engagement de responsabilité du Premier ministre (article 49, alinéa 3), les ordonnances budgétaires et le référendum.
+Promesses présidentielles
+↓ Graphiques, données et citations à réutiliserRéutiliser cette page
+La Constitution confie le vote de la loi au Parlement : « Le Parlement vote la loi. » (art.
+24).
+Trois procédures font exception au vote du Parlement sur le texte.
+L’engagement de responsabilité du Premier ministre fait considérer un texte comme adopté à une étape, sauf si une motion de censure est adoptée (art.
+49, al.
+3).
+Si le Parlement ne s’est pas prononcé dans les délais, les dispositions d’un projet de loi de finances ou de financement de la sécurité sociale (le budget de l’État ou celui de la sécurité sociale) peuvent être mises en vigueur par ordonnance, sans devenir une loi votée (art.
+47 et 47-1).
+Enfin, une loi peut être adoptée par référendum (art.
+11).
+Cette page suit la voie que prennent presque toutes les lois, celle du Parlement, et compte loi par loi qui a déposé les lois promulguées depuis 2012, ce que sont devenues les propositions de loi déposées à l’Assemblée nationale, et combien de fois la responsabilité du Gouvernement a été engagée sur un texte.
+Réponse courte.
+Faire adopter une loi demande quatre clés.
+Déposer : « L'initiative des lois appartient concurremment au Premier ministre et aux membres du Parlement. » (art.
+39).
+Venir en séance : chaque assemblée fixe son ordre du jour, mais le Gouvernement y dispose de priorités (art.
+48).
+Conclure : il faut un texte identique des deux assemblées, ou, à défaut, le dernier mot de l’Assemblée nationale, que seul le Gouvernement peut lui demander (art.
+45).
+Et le Premier ministre peut faire considérer un texte comme adopté à une étape, au risque d’une censure qui oblige le Gouvernement à démissionner (art.
+49 et 50).
+Le Gouvernement ne fait donc pas adopter les lois seul, et les parlementaires, qui déposent la majorité des lois promulguées depuis 2017 dans le champ étudié, ne tiennent pas seuls les autres clés.
+Qui est à l’origine des lois promulguées ?
+Les lois viennent-elles surtout du Gouvernement ?
+L’origine de chaque loi promulguée, au dépôt du texte, permet de le vérifier.
+Un texte du Gouvernement est un projet de loi ; un texte d’un député ou d’un sénateur, une proposition de loi.
+Le compte porte sur les lois ordinaires, celles qui suivent la procédure commune.
+Il laisse de côté les lois qui ont leur procédure ou leur origine propre : lois autorisant un traité (qui autorisent la France à ratifier ou approuver un accord international), lois de finances et de financement de la sécurité sociale (les budgets de l'État et de la sécurité sociale), lois organiques (prévues par la Constitution pour en préciser certaines règles) et lois constitutionnelles (qui modifient la Constitution).
+Lois promulguées, rattachées à la législature de leur promulgation, selon l’origine du texte au dépôt initial.
+Champ étudié : lois ordinaires, hors lois autorisant un traité, lois de finances et de financement de la sécurité sociale, lois organiques et lois constitutionnelles.
+Télécharger · Citer · Données
+Les valeurs de la figure en tableau
+Législature de promulgation
+Lois du champ
+Projet du Gouvernement
+Proposition déposée à l'Assemblée
+Proposition déposée au Sénat
+Origine parlementaire
+Part d'origine parlementaire
+XIVe (2012-2017)
+214
+116
+55
+43
+98 (au moins 87)
+46 % (au moins 41 %)
+XVe (2017-2022)
+202
+94
+77
+31
+108 (au moins 103)
+53 % (au moins 51 %)
+XVIe (2022-2024)
+83
+28
+32
+23
+55
+66 %
+XVIIe (depuis 2024, en cours au 06/10/2026)
+97
+19
+48
+30
+78
+80 %
+Entre deux législatures (juin 2024)
+4
+0
+3
+1
+4
+100 %
+Le résultat en une phrase.
+Dans le champ étudié, la part des lois promulguées issues d’une proposition de parlementaire est de 46 % sous la XIVe législature (2012-2017), puis dépasse la moitié : 53 % sous la XVe (au moins 51 %), 66 % sous la XVIe et 80 % sous la XVIIe, en cours au 06/10/2026.
+Ce que l’origine ne dit pas.
+Elle dit qui a déposé le texte, non qui l’a voulu ni ce qu’il est devenu.
+Une proposition de loi peut avoir été préparée avec un ministère ou soutenue par le Gouvernement ; un projet peut être profondément modifié par le Parlement.
+La hausse de la part des propositions ne mesure donc pas une autonomie croissante des parlementaires : aucune de ces séries n’observe ces influences.
+Le champ change-t-il la réponse ?
+Pour la XVe législature, oui.
+Sous la XVe, 53 % des lois du champ étudié sont d’origine parlementaire, mais 46 % seulement toutes natures réunies hors traités (114 lois sur 249).
+Ce second compte réintègre les lois financières, organiques et constitutionnelles ; il donne aussi 42 % sous la XIVe, 58 % sous la XVIe et 76 % sous la XVIIe.
+La majorité parlementaire de la XVe dépend donc du champ retenu ; celle des XVIe et XVIIe n’en dépend pas.
+Ces lois sont écartées du compte principal parce que leur origine ou leur procédure est fixée à part.
+Les articles 47 et 47-1 de la Constitution ne parlent que de projets de loi de finances ou de financement de la sécurité sociale, et toutes ces lois viennent ici d’un projet du Gouvernement.
+Les lois organiques suivent leurs propres règles (art.
+46) : faute d’accord entre les deux assemblées, l’Assemblée nationale ne peut les adopter en dernière lecture qu’à la majorité absolue de ses membres, et celles qui concernent le Sénat doivent être votées dans les mêmes termes par les deux assemblées.
+Les lois autorisant un traité, toutes issues d’un projet, ne sont comptées nulle part.
+La lettre de l'article 46
+Article 46 : « faute d'accord entre les deux assemblées, le texte ne peut être adopté par l'Assemblée nationale en dernière lecture qu'à la majorité absolue de ses membres. » Et : « Les lois organiques relatives au Sénat doivent être votées dans les mêmes termes par les deux assemblées. »
+Toutes natures hors traités, par législature
+Législature
+Lois promulguées, toutes natures hors traités
+D'origine parlementaire
+Part
+dont lois de finances et de financement de la sécurité sociale (toutes d'un projet)
+dont lois organiques : total / d'origine parlementaire
+dont loi constitutionnelle
+Lois autorisant un traité (hors de tout calcul)
+XIVe
+260
+110 (au moins 99)
+42 %
+23
+23 / 12
+0
+188
+XVe
+249
+114 (au moins 109)
+46 %
+25
+22 / 6
+0
+104
+XVIe
+95
+55
+58 %
+8
+3 / 0
+1
+41
+XVIIe (en cours)
+112
+85
+76 %
+6
+9 / 7
+0
+32
+Enfin, quatre lois promulguées en juin 2024, après la dissolution de l’Assemblée et avant la XVIIe législature, ne relèvent d’aucune législature : elles ont leur ligne dans le tableau, et toutes sont d’origine parlementaire.
+Ce qui a été vérifié, et comment
+Chaque loi promulguée depuis juin 2012 est rapprochée, par son numéro au Journal officiel, entre les données ouvertes de l’Assemblée nationale et la base Dosleg du Sénat.
+Quand les deux sources la connaissent, elles donnent la même origine pour toutes les lois.
+Certaines lois de la XIVe et de la XVe législatures manquent aux fichiers de l’Assemblée, parce que leur dossier a été ouvert sous la législature précédente : leur origine ne repose que sur le Sénat, d’où la borne « au moins » du tableau et le triangle de la figure.
+Deux contrôles viennent d’ailleurs.
+Session par session, de 2017-2018 à 2024-2025, le nombre de lois promulguées hors traités est exactement celui que compte le baromètre de l’application des lois, publié par l’Assemblée nationale à partir des données de la DILA.
+Et le Sénat écrit, pour 2024-2025 : « Sur la session, 80 % des lois adoptées (45 sur 56) sont d'origine parlementaire, contre 58 % en 2023-2024 » ; le décompte loi par loi donne 45 lois d’origine parlementaire sur 56.
+Pour 2023-2024, il donne 30 sur 51, soit 58,8 %, que le tableau arrondit à 59 % ; le Sénat, cité ci-dessus, donne l’unité inférieure.
+Le Sénat parle de lois adoptées, ce relevé de lois promulguées : les deux comptes coïncident pour 2024-2025.
+Par session, toutes natures sauf les traités
+Session
+Lois promulguées hors traités
+D'origine parlementaire
+Part
+2017-2018
+41
+12
+29 %
+2018-2019
+49
+25
+51 %
+2019-2020
+43
+18
+42 %
+2020-2021
+51
+19
+37 %
+2021-2022
+64
+41
+64 %
+2022-2023
+44
+29
+66 %
+2023-2024
+51
+30
+59 %
+2024-2025
+56
+45
+80 %
+Combien de propositions de loi arrivent en séance ?
+Peu.
+Dans chacune des trois législatures closes, environ neuf propositions de loi ordinaires sur dix déposées en premier lieu à l’Assemblée nationale n’avaient pas été examinées en séance à la fin de la législature, d’après les données de l’Assemblée : 1 402 sur 1 555 sous la XIVe (90 %), 1 964 sur 2 160 sous la XVe (91 %), 1 131 sur 1 241 sous la XVIe (91 %).
+La XVIIe, en cours, n’est pas comptée.
+Une proposition sans examen en séance n’a été ni rejetée ni interdite, et son contenu n’a pas forcément disparu : il peut être repris par un autre texte, ou par un amendement.
+Ces fractions ne se comparent pas non plus d’une législature à l’autre comme des taux : la XVIe, écourtée par la dissolution, a laissé aux textes un temps d’examen plus de deux fois plus court (durée médiane entre dépôt et fin de législature : 381 jours, contre 1 064 sous la XIVe).
+Le pire cas : les dépôts que les bulletins de l'Assemblée ne comptent pas
+Ces nombres comptent les dépôts dans les données ouvertes de l’Assemblée.
+Ses bulletins statistiques en comptent un peu moins : 17, 5 et 3 propositions de moins selon la législature, sans liste qui permette d’identifier les textes en cause.
+En retirant tout cet excès à la fois du total et des propositions restées sans examen, il en reste 1 385 sur 1 538, 1 959 sur 2 155 et 1 128 sur 1 238 : toujours environ neuf sur dix.
+Les valeurs en tableau, avec la borne du pire cas
+Législature de dépôt
+Propositions de loi ordinaires déposées à l'Assemblée
+Sans examen en séance retrouvé dans les données de l'Assemblée avant la fin de la législature
+Pire cas : excès sur les bulletins retiré
+Dépôts de propositions : données / bulletins
+Durée médiane entre dépôt et fin de législature (jours)
+XIVe (2012-2017)
+1 555
+1 402
+1 385 sur 1 538
+1 711 / 1 694
+1 064
+XVe (2017-2022)
+2 160
+1 964
+1 959 sur 2 155
+2 296 / 2 291
+868
+XVIe (2022-2024)
+1 241
+1 131
+1 128 sur 1 238
+1 318 / 1 315
+381
+Comment ces deux constats tiennent-ils ensemble ?
+Ils ne se contredisent pas, parce qu’ils ne portent pas sur les mêmes textes.
+Le premier part des lois promulguées, propositions du Sénat comprises, rattachées à la législature de leur promulgation ; le second part des propositions déposées à l’Assemblée, rattachées à la législature de leur dépôt.
+Une petite part de propositions qui aboutissent peut fournir la majorité des lois promulguées, parce que les propositions sont bien plus nombreuses que les projets : selon les bulletins de l’Assemblée, 1 694 propositions de loi y ont été déposées en première lecture sous la XIVe législature, contre 294 projets, et l’écart dépasse un facteur cinq dans chacune des trois législatures closes.
+Ce que ces mesures établissent
+Ce qu’elles n’établissent pas
+Qui a déposé chaque loi promulguée, au dépôt initial
+Qui a voulu ou rédigé le texte, ni ce que les amendements en ont fait
+Que la plupart des propositions déposées à l’Assemblée n’ont pas été examinées en séance avant la fin de leur législature
+Pourquoi : aucune donnée ne relie ce sort à une décision d’ordre du jour, ni à l’article 40
+Le nombre d’engagements de responsabilité et les textes qui en ont fait l’objet
+Le contenu des lois qui en sont issues, ou ce qu’un vote aurait donné
+Qui décide de ce qui vient en séance ?
+Chaque assemblée, d’abord : selon l’article 48, « l'ordre du jour est fixé par chaque assemblée. » Le même article réserve au Gouvernement deux semaines de séance sur quatre, pour les textes et les débats dont il demande l’inscription, dans l’ordre qu’il fixe.
+Il lui donne aussi, s’il le demande, une priorité pour certains textes, dont les projets de budget de l’État et de la sécurité sociale.
+Et il garantit un jour de séance par mois aux groupes d’opposition et aux groupes minoritaires.
+L’ordre du jour est donc partagé, et une priorité d’ordre du jour ne garantit pas l’adoption d’un texte.
+Une autre règle limite ce que les parlementaires peuvent proposer : leurs propositions et amendements ne sont pas recevables si leur adoption diminuait les ressources publiques, ou créait ou aggravait une charge publique (art.
+40).
+Les données de cette page ne disent pas lequel de ces filtres a écarté telle ou telle proposition : elles ne contiennent ni les décisions d’inscription à l’ordre du jour, ni les déclarations d’irrecevabilité.
+La lettre des articles 48 et 40
+Article 48, alinéa 2 : « Deux semaines de séance sur quatre sont réservées par priorité, et dans l'ordre que le Gouvernement a fixé, à l'examen des textes et aux débats dont il demande l'inscription à l'ordre du jour. » Alinéa 3 : « En outre, l'examen des projets de loi de finances, des projets de loi de financement de la sécurité sociale et, sous réserve des dispositions de l'alinéa suivant, des textes transmis par l'autre assemblée depuis six semaines au moins, des projets relatifs aux états de crise et des demandes d'autorisation visées à l'article 35 est, à la demande du Gouvernement, inscrit à l'ordre du jour par priorité. » Alinéa 5 : « Un jour de séance par mois est réservé à un ordre du jour arrêté par chaque assemblée à l'initiative des groupes d'opposition de l'assemblée intéressée ainsi qu'à celle des groupes minoritaires. »
+Article 40 : « Les propositions et amendements formulés par les membres du Parlement ne sont pas recevables lorsque leur adoption aurait pour conséquence soit une diminution des ressources publiques, soit la création ou l'aggravation d'une charge publique. »
+Qui a le dernier mot entre les deux assemblées ?
+Le principe est l’accord : « Tout projet ou proposition de loi est examiné successivement dans les deux Assemblées du Parlement en vue de l'adoption d'un texte identique. » (Constitution, art.
+45).
+Quand l’accord ne vient pas, l’article 45 fixe une séquence, et chaque étape a son acteur.
+Une commission mixte paritaire, composée de députés et de sénateurs en nombre égal, peut être réunie pour proposer un texte sur les points encore en discussion.
+Elle peut l’être après deux lectures dans chaque assemblée, ou après une seule si le Gouvernement a engagé la procédure accélérée sans que les Conférences des présidents des deux assemblées s’y opposent conjointement.
+La réunir revient au Premier ministre ou, pour une proposition de loi, aux présidents des deux assemblées agissant conjointement.
+Le texte de cette commission passe par le Gouvernement : c’est lui qui peut le soumettre aux deux assemblées, et aucun amendement n’y est recevable sans son accord.
+En cas d’échec, le dernier mot de l’Assemblée nationale ne peut venir que du Gouvernement : si la commission n’aboutit pas à un texte commun, ou si ce texte n’est pas adopté, il peut, après une nouvelle lecture dans chaque assemblée, demander à l’Assemblée nationale de statuer définitivement.
+C’est vrai aussi d’une proposition de loi.
+Le Gouvernement peut ouvrir cette procédure ; il ne garantit pas que l’Assemblée vote le texte.
+Le Gouvernement dispose enfin d’un outil de séance, le vote unique (art.
+44) : s’il le demande, l’assemblée se prononce par un seul vote sur tout ou partie du texte, en ne retenant que les amendements qu’il a proposés ou acceptés.
+L’assemblée vote toujours, mais sur le texte tel que le Gouvernement l’accepte.
+La lettre des articles 45 et 44
+Article 45, alinéa 2 : « Lorsque, par suite d'un désaccord entre les deux Assemblées, un projet ou une proposition de loi n'a pu être adopté après deux lectures par chaque Assemblée ou, si le Gouvernement a décidé d'engager la procédure accélérée sans que les Conférences des présidents s'y soient conjointement opposées, après une seule lecture par chacune d'entre elles, le Premier ministre ou, pour une proposition de loi, les présidents des deux assemblées agissant conjointement, ont la faculté de provoquer la réunion d'une commission mixte paritaire chargée de proposer un texte sur les dispositions restant en discussion. » Alinéa 3 : « Le texte élaboré par la commission mixte peut être soumis par le Gouvernement pour approbation aux deux Assemblées.
+Aucun amendement n'est recevable sauf accord du Gouvernement. » Alinéa 4 : « Si la commission mixte ne parvient pas à l'adoption d'un texte commun ou si ce texte n'est pas adopté dans les conditions prévues à l'alinéa précédent, le Gouvernement peut, après une nouvelle lecture par l'Assemblée nationale et par le Sénat, demander à l'Assemblée nationale de statuer définitivement. »
+Article 44, alinéa 3 : « Si le Gouvernement le demande, l'Assemblée saisie se prononce par un seul vote sur tout ou partie du texte en discussion en ne retenant que les amendements proposés ou acceptés par le Gouvernement. »
+Que change l’article 49, alinéa 3 ?
+Il permet au Premier ministre, après délibération du Conseil des ministres, d’engager la responsabilité du Gouvernement devant l’Assemblée nationale sur un texte : le texte est alors considéré comme adopté à cette étape de son examen, sans que les députés votent sur lui, sauf si une motion de censure, déposée dans les vingt-quatre heures qui suivent, est votée.
+L’alinéa vise les projets de loi de finances et de financement de la sécurité sociale ; hors de ces textes, le Premier ministre ne peut y recourir que pour un autre projet ou une proposition de loi par session.
+Le texte n’est pas pour autant adopté définitivement : l’engagement vaut pour une étape, et l’examen continue ; c’est pourquoi les données comptent un engagement par texte et par étape de lecture.
+La contrepartie pèse sur le Gouvernement, non sur le texte.
+Les députés peuvent déposer une motion de censure, que l’alinéa 2 ne laisse adopter qu’à la majorité des membres composant l’Assemblée, seuls les votes favorables étant recensés.
+Si elle est adoptée, le texte n’est pas considéré comme adopté, et le Premier ministre doit remettre au Président de la République la démission du Gouvernement (art.
+50).
+La lettre des articles 49 et 50
+Article 49, alinéa 3 : « Le Premier ministre peut, après délibération du Conseil des ministres, engager la responsabilité du Gouvernement devant l'Assemblée nationale sur le vote d'un projet de loi de finances ou de financement de la sécurité sociale.
+Dans ce cas, ce projet est considéré comme adopté, sauf si une motion de censure, déposée dans les vingt-quatre heures qui suivent, est votée dans les conditions prévues à l'alinéa précédent. » Et : « Le Premier ministre peut, en outre, recourir à cette procédure pour un autre projet ou une proposition de loi par session. » Alinéa 2 : « Seuls sont recensés les votes favorables à la motion de censure qui ne peut être adoptée qu'à la majorité des membres composant l'Assemblée. »
+Article 50 : « Lorsque l'Assemblée nationale adopte une motion de censure ou lorsqu'elle désapprouve le programme ou une déclaration de politique générale du Gouvernement, le Premier ministre doit remettre au Président de la République la démission du Gouvernement. »
+Engagements de responsabilité du Gouvernement sur un texte, un par texte et par étape de lecture, selon les catégories de l’article 49, alinéa 3 : la loi de programmation des finances publiques y relève d’« un autre projet ».
+Ce relevé porte sur tous les textes, lois de finances comprises.
+Télécharger · Citer · Données
+Les valeurs de la figure en tableau
+Législature
+Engagements (art.
+49, al.
+3)
+Textes distincts
+Sur un projet de loi de finances ou de financement de la sécurité sociale
+Sur un autre projet ou une proposition
+Motions de censure adoptées
+Lois de finances et de financement de la sécurité sociale promulguées avec au moins un engagement
+XIVe
+6
+2
+0
+6
+0
+0 sur 23
+XVe
+1
+1
+0
+1
+0
+0 sur 25
+XVIe
+23
+6
+21
+2
+0
+5 sur 8
+XVIIe (en cours)
+8
+3
+8
+0
+1
+3 sur 6
+Sous la XIVe législature, la responsabilité du Gouvernement a été engagée 6 fois, sur 2 projets de loi qui n’étaient ni des projets de loi de finances ni de financement de la sécurité sociale ; sous la XVe, 1 fois ; sous la XVIe, 23 fois sur 6 textes, dont 21 engagements sur des projets de loi de finances ou de financement de la sécurité sociale et 2 sur la loi de programmation des finances publiques ; sous la XVIIe, en cours, 8 fois sur 3 textes, tous financiers.
+La fiche de l’Assemblée nationale consacrée à cette procédure donne les mêmes totaux jusqu’à la XVIe : « Cet instrument a néanmoins été utilisé à six reprises, sur deux projets de loi différents, sous la XIVe législature, à une reprise sous la XVe législature, et à 23 reprises sous la XVIe législature. »
+Compter en lois plutôt qu’en engagements change l’image.
+Sous la XVIe législature, 5 des 8 lois de finances ou de financement de la sécurité sociale promulguées ont fait l’objet d’au moins un engagement, à une étape au moins de leur examen ; les autres n’en ont eu aucun.
+Sous la XVIIe, en cours, c’est 3 sur 6.
+Ces nombres décrivent la procédure suivie, non le contenu des textes ni ce qu’un vote aurait donné, et ils n’expliquent pas pourquoi l’usage diffère d’une législature à l’autre.
+Aucune motion de censure n’a été adoptée sur ces engagements, de la XIVe à la XVIe législature.
+Le 2 décembre 2024, la responsabilité du Gouvernement a été engagée sur le texte de la commission mixte paritaire du projet de loi de financement de la sécurité sociale pour 2025 ; selon la même fiche, « La première motion déposée a été adoptée selon la majorité qualifiée requise ».
+Le texte n’a pas été considéré comme adopté à cette étape, et le Gouvernement a dû remettre sa démission.
+Les deux autres exceptions au vote sur le texte.
+Si le Parlement ne s’est pas prononcé dans le délai que fixe la Constitution, les dispositions du projet de budget de l’État (art.
+47) ou de celui de la sécurité sociale (art.
+47-1) peuvent être mises en vigueur par ordonnance.
+Ces ordonnances ne font pas une loi votée : elles mettent en vigueur les dispositions d’un projet.
+Le référendum, lui, adopte une loi sans vote du Parlement sur son texte : si le résultat est favorable au texte, le Président de la République promulgue la loi (art.
+11).
+Quand il est organisé sur proposition du Gouvernement, le Parlement débat sans voter : le Gouvernement fait devant chaque assemblée une déclaration suivie d’un débat.
+La page Un président peut-il recourir au référendum ? en fait le compte.
+La lettre des articles 47, 47-1 et 11
+Article 47 : « Si le Parlement ne s'est pas prononcé dans un délai de soixante-dix jours, les dispositions du projet peuvent être mises en vigueur par ordonnance. » Article 47-1 : « Si le Parlement ne s'est pas prononcé dans un délai de cinquante jours, les dispositions du projet peuvent être mises en oeuvre par ordonnance. »
+Article 11 : « Lorsque le référendum a conclu à l'adoption du projet ou de la proposition de loi, le Président de la République promulgue la loi dans les quinze jours qui suivent la proclamation des résultats de la consultation. » Et : « Lorsque le référendum est organisé sur proposition du Gouvernement, celui-ci fait, devant chaque assemblée, une déclaration qui est suivie d'un débat. »
+Ce qui a été vérifié, et comment
+Les engagements sont lus dans les dossiers législatifs de l’Assemblée nationale, et comptés deux fois par deux voies différentes du même producteur, avec les mêmes dates.
+Ils sont comparés, session par session, aux bulletins statistiques de l’Assemblée : mêmes nombres d’engagements et de motions.
+Une seule date diffère, d’un jour, pour un engagement de novembre 2022 ; le compte rendu officiel de la séance confirme la date des données.
+Pour quelques motions, les données ne contiennent pas l’acte de vote ; les bulletins donnent leurs scrutins, tous sous la majorité requise.
+Les lois financières concernées sont retrouvées par l’identifiant de dossier de l’Assemblée, commun aux deux fichiers ; le script vérifie que chaque engagement classé sur un projet de loi de finances ou de financement de la sécurité sociale porte sur une loi de cette nature, et aucun autre.
+Comment juger une promesse qui demande une loi ?
+Trois questions suffisent à situer une promesse de loi, sans rien supposer de son contenu.
+Qui déposera le texte ?
+Le Gouvernement ou un parlementaire.
+Si la mesure diminue les ressources publiques, ou crée ou aggrave une charge publique, une proposition ou un amendement de parlementaire n’est pas recevable ; l’article 40 ne vise pas les textes du Gouvernement.
+Qui l’inscrira à l’ordre du jour ?
+Le Gouvernement sur ses semaines prioritaires, une assemblée sur les siennes, un groupe d’opposition ou minoritaire sur son jour mensuel (art.
+48).
+Qui aura le dernier mot ?
+L’accord des deux assemblées ; à défaut, l’Assemblée nationale, si le Gouvernement le lui demande (art.
+45) ; ou un engagement de responsabilité, au risque d’une censure (art.
+49 et 50).
+Une loi adoptée n’est pas encore une loi appliquée : la page Une loi votée s’applique-t-elle tout de suite ? prend le relais.
+Et la page Que peut décider le président seul ? traite de ce qu’il décide sans passer par la loi.
+Ce que cette page ne dit pas
+Elle ne mesure pas l’influence du Gouvernement sur les propositions de loi, ni celle du Parlement sur les projets : l’origine d’une loi n’est pas son contenu, et les amendements ne sont pas comptés.
+Elle ne relie pas le nombre d’engagements de responsabilité à la composition de l’Assemblée : une coïncidence de dates n’établit pas un lien.
+Elle ne dit pas ce que deviennent les propositions sans examen en séance, ni pourquoi elles n’y sont pas venues.
+Les décomptes de dépôts ne concordent pas texte par texte avec les bulletins de l’Assemblée : la phrase sur les propositions ne s’appuie que sur la borne du pire cas.
+Elle ne compte ni les ordonnances budgétaires ni les lois référendaires.
+Ce qu'il faut faire voter
+Un président peut-il tenir ses promesses ?
+Ce qu'il peut vraiment décider — et ce qui lui échappe
+Cette page dit qui dépose les lois, qui les fait venir en séance, qui a le dernier mot et ce que permet l’article 49.3.
+Le livre suit neuf promesses écrites, datées et signées, le long de la chaîne qui va de la décision à son résultat : ce qu’un président décide dans sa propre chaîne de pouvoir, ce qu’il doit faire voter, ce qu’il doit négocier, et ce qui ne dépendra jamais de lui.
+Il ne donne aucun conseil de vote.
+Journalistes, enseignants, chercheurs, responsables publics ou associatifs
+Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock.
+Demander l'exemplaire offert →
+Version papier : 19,90 € · Kindle : 9,99 €
+Sommaire, extraits et recensions →
+Questions fréquentes
+Qui peut proposer une loi en France ?
+Selon l'article 39 de la Constitution, « L'initiative des lois appartient concurremment au Premier ministre et aux membres du Parlement. » Un texte du Gouvernement est un projet de loi ; un texte d'un député ou d'un sénateur est une proposition de loi.
+Dans le champ étudié (hors lois autorisant un traité, lois de finances et de financement de la sécurité sociale, lois organiques et lois constitutionnelles), 55 des 83 lois promulguées sous la XVIe législature étaient issues d'une proposition, 28 d'un projet.
+Une proposition n'est toutefois pas recevable si son adoption diminuait les ressources publiques ou créait ou aggravait une charge publique (article 40).
+Une loi peut-elle être adoptée sans vote du Parlement sur son texte ?
+Oui, dans trois cas.
+Le Premier ministre peut, après délibération du Conseil des ministres, engager la responsabilité du Gouvernement sur un texte : celui-ci est considéré comme adopté à cette étape, sauf si une motion de censure est adoptée, et le Gouvernement doit alors démissionner (articles 49, alinéa 3, et 50).
+Si le Parlement ne s'est pas prononcé dans les délais, les dispositions d'un projet de loi de finances ou de financement de la sécurité sociale peuvent être mises en vigueur par ordonnance, sans devenir une loi votée (articles 47 et 47-1).
+Et une loi peut être adoptée par référendum (article 11).
+Sources
+Assemblée nationale, données ouvertes des dossiers législatifs des XIVe à XVIIe législatures (version du 06/10/2026) ; bulletins statistiques annuels ; fiche de synthèse n° 64 sur l’engagement de la responsabilité du Gouvernement.
+Sénat, base Dosleg (version du 06/10/2026) ; rapport d’information n° 802 (2025-2026) sur l’application des lois, p.
+44.
+Journal officiel, données de la DILA ; Constitution, art.
+11, 24, 39, 40, 44, 45, 46, 47, 47-1, 48, 49 et 50, lus sur Légifrance (API).
+Les chiffres, les citations, les contrôles et les figures sont produits par un script unique.
+Il lit l’origine des lois, les propositions et les engagements dans les données de l’Assemblée nationale, du Sénat et du Journal officiel, et retrouve chaque citation mot pour mot dans son document archivé.
+Les dépôts comptés par les bulletins statistiques de l’Assemblée, publiés en image, sont transcrits à la main et ne servent qu’au calcul du pire cas ; les engagements des bulletins, lus dans leur texte, servent de témoin.
+Le script s’arrête si une donnée ne remplit plus les conditions dont dépendent les principales phrases.
+Télécharger les données (licence CC BY 4.0) : CSV, en format long ; JSON, avec les définitions et le compte rendu des contrôles.
+Ce jeu est aussi archivé sur Zenodo, avec les six autres de la même série et leur note de méthode, sous un identifiant permanent à citer : doi:10.5281/zenodo.23212664 ; la version archivée ne contient pas encore les séries ajoutées le 12/10/2026 (toutes natures, lois entre deux législatures, lois financières concernées par un engagement).
+Réutiliser cette page
+Les figures, les données et une citation prête, sous licence libre.
+Chaque figure porte dans l'image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
+Qui est à l'origine des lois promulguées ?
+Dans le champ étudié (hors lois autorisant un traité, lois de finances et de financement de la sécurité sociale, lois organiques et lois constitutionnelles), la part des lois promulguées issues d'une proposition de parlementaire est de 46 % sous la XIVe législature, 53 % sous la XVe (au moins 51 %), 66 % sous la XVIe et 80 % sous la XVIIe, en cours au 06/10/2026 ; toutes natures hors traités, 42, 46, 58 et 76 %.
+Origine formelle au dépôt initial, non l'influence.
+Précaution d'interprétation.
+Champ : lois promulguées, hors lois autorisant un traité, lois de finances et de financement de la sécurité sociale, lois organiques et lois constitutionnelles.
+Origine au dépôt initial, non l'influence.
+Toutes natures : même compte, lois organiques, financières et constitutionnelles réintégrées, traités toujours exclus.
+Assemblée nationale (données ouvertes, dossiers législatifs) et Sénat (base Dosleg), 06/10/2026 ; Journal officiel
+Télécharger en PNG
+SVG
+Engagements de responsabilité sur un texte (art.
+49, al.
+3)
+Le Premier ministre a engagé la responsabilité du Gouvernement sur un texte (art.
+49, al.
+3) 6 fois sous la XIVe législature, 1 fois sous la XVe, 23 fois sous la XVIe, dont 21 sur un projet de loi de finances ou de financement de la sécurité sociale, et 8 fois sous la XVIIe, en cours au 06/10/2026 ; un engagement par texte et par étape de lecture.
+Précaution d'interprétation.
+Catégories de l'art.
+49, al.
+3 : la loi de programmation des finances publiques est un « autre projet ».
+Un engagement par texte et par étape de lecture.
+XVIIe en cours au 06/10/2026.
+Assemblée nationale : dossiers législatifs, bulletins statistiques, fiche n° 64 (engagements de responsabilité)
+Télécharger en PNG
+SVG
+Citer cette page
+Lalut, Stéphane (2026). « Qui peut faire adopter une loi ? ».
+Données Assemblée nationale, Sénat (Dosleg), Journal officiel, Légifrance, relevé du 06/10/2026 (données de l'Assemblée nationale et base Dosleg du Sénat du 06/10/2026, Journal officiel ; bulletins statistiques de l'Assemblée nationale). https://stephane-lalut.com/qui-peut-faire-adopter-une-loi/
+Copier la citation
+En trois phrases
+Dans le champ étudié (hors lois autorisant un traité, lois de finances et de financement de la sécurité sociale, lois organiques et lois constitutionnelles), la part des lois promulguées issues d’une proposition de parlementaire est de 46 % sous la XIVe législature, 53 % sous la XVe (au moins 51 %), 66 % sous la XVIe et 80 % sous la XVIIe en cours ; toutes natures hors traités, la XVe passe sous la moitié (46 %).
+Environ neuf propositions de loi ordinaires sur dix déposées à l’Assemblée n’ont pas été examinées en séance avant la fin de leur législature, de la XIVe à la XVIe, pire cas compris.
+La responsabilité du Gouvernement a été engagée sur un texte 23 fois sous la XVIe législature, dont 21 sur des projets de loi de finances ou de financement de la sécurité sociale.
+Copier le résumé
+Les données
+L'origine des lois promulguées par législature, par nature et par session, les propositions de loi déposées à l'Assemblée et restées sans examen en séance, et les engagements de responsabilité de l'article 49, alinéa 3 ; le même contenu existe en CSV, en format long, lisible dans un tableur.
+Télécharger en JSON CSV
+Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
+Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
+Les séries brutes appartiennent à leurs producteurs (Assemblée nationale, Sénat (Dosleg), Journal officiel, Légifrance), sous leurs propres conditions.
+Toutes les ressources : données, dossiers et repères →
+Transmettre
+WhatsApp
+Bluesky
+LinkedIn
+X
+E-mail
+Copier le lien

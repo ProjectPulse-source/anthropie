@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 1115" role="img" font-variant-numeric="tabular-nums" aria-labelledby="aom-t aom-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="aom-t">Qui est à l&#x27;origine des lois promulguées ?</title><desc id="aom-d">Barres à 100 % par législature de promulgation, champ étudié : part des lois issues d&#x27;une proposition déposée à l&#x27;Assemblée, d&#x27;une proposition déposée au Sénat, d&#x27;un projet du Gouvernement ; des pointillés marquent la moitié, un triangle la borne basse. XIVe (2012-2017) : 46 % d&#x27;origine parlementaire (98 lois sur 214) ; au moins 41 % (87 lois) ; toutes natures : 42 % (110 sur 260). XVe (2017-2022) : 53 % d&#x27;origine parlementaire (108 lois sur 202) ; au moins 51 % (103 lois) ; toutes natures : 46 % (114 sur 249). XVIe (2022-2024) : 66 % d&#x27;origine parlementaire (55 lois sur 83) ; toutes natures : 58 % (55 sur 95). XVIIe (depuis 2024), en cours : 80 % d&#x27;origine parlementaire (78 lois sur 97) ; toutes natures : 76 % (85 sur 112).</desc>
+<rect width="300" height="1115" fill="#ffffff"/>
+<text x="0.0" y="20.0" font-size="17" fill="#0A0A0E" text-anchor="start" font-weight="600">Qui est à l&#x27;origine des lois</text>
+<text x="0.0" y="42.0" font-size="17" fill="#0A0A0E" text-anchor="start" font-weight="600">promulguées ?</text>
+<text x="0.0" y="82.0" font-size="13.5" fill="#52514e" text-anchor="start">part des lois du champ étudié, par</text>
+<text x="0.0" y="100.0" font-size="13.5" fill="#52514e" text-anchor="start">législature de promulgation ;</text>
+<text x="0.0" y="118.0" font-size="13.5" fill="#52514e" text-anchor="start">pointillés : la moitié</text>
+<rect x="0" y="131" width="13" height="13" fill="#184f95"/>
+<text x="20.0" y="143.0" font-size="13.5" fill="#52514e" text-anchor="start">proposition déposée à</text>
+<text x="20.0" y="161.0" font-size="13.5" fill="#52514e" text-anchor="start">l&#x27;Assemblée</text>
+<rect x="0" y="171" width="13" height="13" fill="#7fa3cf"/>
+<text x="20.0" y="183.0" font-size="13.5" fill="#52514e" text-anchor="start">proposition déposée au Sénat</text>
+<rect x="0" y="193" width="13" height="13" fill="#c9c5c0"/>
+<text x="20.0" y="205.0" font-size="13.5" fill="#52514e" text-anchor="start">projet du Gouvernement</text>
+<text x="0.0" y="236.0" font-size="15" fill="#0A0A0E" text-anchor="start" font-weight="600">XIVe (2012-2017)</text>
+<rect x="0.0" y="244" width="77.1" height="24" fill="#184f95"/>
+<rect x="77.1" y="244" width="60.3" height="24" fill="#7fa3cf"/>
+<rect x="137.4" y="244" width="162.6" height="24" fill="#c9c5c0"/>
+<line x1="150.0" y1="240" x2="150.0" y2="272" stroke="#0A0A0E" stroke-width="1.5" stroke-dasharray="4 3"/>
+<polygon points="122.0,269.0 117.0,276.0 127.0,276.0" fill="#0A0A0E"/>
+<text class="val" x="0.0" y="295.0" font-size="13.5" fill="#52514e" text-anchor="start">46 % d&#x27;origine parlementaire (98</text>
+<text class="val" x="0.0" y="314.0" font-size="13.5" fill="#52514e" text-anchor="start">lois sur 214)</text>
+<text class="val" x="0.0" y="333.0" font-size="13.5" fill="#52514e" text-anchor="start">au moins 41 % (87 lois)</text>
+<text class="val" x="0.0" y="352.0" font-size="13.5" fill="#52514e" text-anchor="start">toutes natures : 42 % (110 sur 260)</text>
+<text x="0.0" y="376.0" font-size="15" fill="#0A0A0E" text-anchor="start" font-weight="600">XVe (2017-2022)</text>
+<rect x="0.0" y="384" width="114.4" height="24" fill="#184f95"/>
+<rect x="114.4" y="384" width="46.0" height="24" fill="#7fa3cf"/>
+<rect x="160.4" y="384" width="139.6" height="24" fill="#c9c5c0"/>
+<line x1="150.0" y1="380" x2="150.0" y2="412" stroke="#0A0A0E" stroke-width="1.5" stroke-dasharray="4 3"/>
+<polygon points="153.0,409.0 148.0,416.0 158.0,416.0" fill="#0A0A0E"/>
+<text class="val" x="0.0" y="435.0" font-size="13.5" fill="#52514e" text-anchor="start">53 % d&#x27;origine parlementaire (108</text>
+<text class="val" x="0.0" y="454.0" font-size="13.5" fill="#52514e" text-anchor="start">lois sur 202)</text>
+<text class="val" x="0.0" y="473.0" font-size="13.5" fill="#52514e" text-anchor="start">au moins 51 % (103 lois)</text>
+<text class="val" x="0.0" y="492.0" font-size="13.5" fill="#52514e" text-anchor="start">toutes natures : 46 % (114 sur 249)</text>
+<text x="0.0" y="516.0" font-size="15" fill="#0A0A0E" text-anchor="start" font-weight="600">XVIe (2022-2024)</text>
+<rect x="0.0" y="524" width="115.7" height="24" fill="#184f95"/>
+<rect x="115.7" y="524" width="83.1" height="24" fill="#7fa3cf"/>
+<rect x="198.8" y="524" width="101.2" height="24" fill="#c9c5c0"/>
+<line x1="150.0" y1="520" x2="150.0" y2="552" stroke="#0A0A0E" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text class="val" x="0.0" y="575.0" font-size="13.5" fill="#52514e" text-anchor="start">66 % d&#x27;origine parlementaire (55</text>
+<text class="val" x="0.0" y="594.0" font-size="13.5" fill="#52514e" text-anchor="start">lois sur 83)</text>
+<text class="val" x="0.0" y="613.0" font-size="13.5" fill="#52514e" text-anchor="start">toutes natures : 58 % (55 sur 95)</text>
+<text x="0.0" y="637.0" font-size="15" fill="#0A0A0E" text-anchor="start" font-weight="600">XVIIe (depuis 2024) *</text>
+<rect x="0.0" y="645" width="148.5" height="24" fill="#184f95"/>
+<rect x="148.5" y="645" width="92.8" height="24" fill="#7fa3cf"/>
+<rect x="241.2" y="645" width="58.8" height="24" fill="#c9c5c0"/>
+<line x1="150.0" y1="641" x2="150.0" y2="673" stroke="#0A0A0E" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text class="val" x="0.0" y="696.0" font-size="13.5" fill="#52514e" text-anchor="start">80 % d&#x27;origine parlementaire (78</text>
+<text class="val" x="0.0" y="715.0" font-size="13.5" fill="#52514e" text-anchor="start">lois sur 97)</text>
+<text class="val" x="0.0" y="734.0" font-size="13.5" fill="#52514e" text-anchor="start">toutes natures : 76 % (85 sur 112)</text>
+<line x1="0" y1="755" x2="22" y2="755" stroke="#0A0A0E" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text x="30.0" y="760.0" font-size="13.5" fill="#52514e" text-anchor="start">moitié</text>
+<polygon points="11.0,768.0 6.0,775.0 16.0,775.0" fill="#0A0A0E"/>
+<text x="30.0" y="780.0" font-size="13.5" fill="#52514e" text-anchor="start">borne basse : origine établie par</text>
+<text x="30.0" y="798.0" font-size="13.5" fill="#52514e" text-anchor="start">les deux sources</text>
+<text x="0.0" y="816.0" font-size="13.5" fill="#52514e" text-anchor="start">* en cours au 06/10/2026</text>
+<line x1="0" y1="838.0" x2="300" y2="838.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0.0" y="859.0" font-size="13.5" fill="#52514e" text-anchor="start">Assemblée nationale (données ouvertes,</text>
+<text class="pied-source" x="0.0" y="876.0" font-size="13.5" fill="#52514e" text-anchor="start">dossiers législatifs) et Sénat (base</text>
+<text class="pied-source" x="0.0" y="893.0" font-size="13.5" fill="#52514e" text-anchor="start">Dosleg), 06/10/2026 ; Journal officiel</text>
+<text class="pied-note" x="0.0" y="914.0" font-size="13.5" fill="#52514e" text-anchor="start">Champ : lois promulguées, hors lois</text>
+<text class="pied-note" x="0.0" y="931.0" font-size="13.5" fill="#52514e" text-anchor="start">autorisant un traité, lois de finances</text>
+<text class="pied-note" x="0.0" y="948.0" font-size="13.5" fill="#52514e" text-anchor="start">et de financement de la sécurité</text>
+<text class="pied-note" x="0.0" y="965.0" font-size="13.5" fill="#52514e" text-anchor="start">sociale, lois organiques et lois</text>
+<text class="pied-note" x="0.0" y="982.0" font-size="13.5" fill="#52514e" text-anchor="start">constitutionnelles. Origine au dépôt</text>
+<text class="pied-note" x="0.0" y="999.0" font-size="13.5" fill="#52514e" text-anchor="start">initial, non l&#x27;influence. Toutes</text>
+<text class="pied-note" x="0.0" y="1016.0" font-size="13.5" fill="#52514e" text-anchor="start">natures : même compte, lois</text>
+<text class="pied-note" x="0.0" y="1033.0" font-size="13.5" fill="#52514e" text-anchor="start">organiques, financières et</text>
+<text class="pied-note" x="0.0" y="1050.0" font-size="13.5" fill="#52514e" text-anchor="start">constitutionnelles réintégrées,</text>
+<text class="pied-note" x="0.0" y="1067.0" font-size="13.5" fill="#52514e" text-anchor="start">traités toujours exclus.</text>
+<text class="pied-licence" x="0.0" y="1088.0" font-size="13.5" fill="#898781" text-anchor="start">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0.0" y="1105.0" font-size="13.5" fill="#898781" text-anchor="start">· stephane-lalut.com</text>
+</svg>

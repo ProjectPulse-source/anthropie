@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 1115" role="img" font-variant-numeric="tabular-nums" aria-labelledby="aom-t aom-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="aom-t">Who initiated the laws promulgated in France?</title><desc id="aom-d">100% bars by legislature of promulgation, scope studied: share of the laws arising from a private member&#x27;s bill tabled in the National Assembly, from one tabled in the Senate, from a Government bill; a dotted line marks half, a triangle the lower bound. 14th (2012-2017): 46% of parliamentary origin (98 laws out of 214); at least 41% (87 laws); all kinds: 42% (110 out of 260). 15th (2017-2022): 53% of parliamentary origin (108 laws out of 202); at least 51% (103 laws); all kinds: 46% (114 out of 249). 16th (2022-2024): 66% of parliamentary origin (55 laws out of 83); all kinds: 58% (55 out of 95). 17th (since 2024), ongoing: 80% of parliamentary origin (78 laws out of 97); all kinds: 76% (85 out of 112).</desc>
+<rect width="300" height="1115" fill="#ffffff"/>
+<text x="0.0" y="20.0" font-size="17" fill="#0A0A0E" text-anchor="start" font-weight="600">Who initiated the laws</text>
+<text x="0.0" y="42.0" font-size="17" fill="#0A0A0E" text-anchor="start" font-weight="600">promulgated in France?</text>
+<text x="0.0" y="82.0" font-size="13.5" fill="#52514e" text-anchor="start">share of the laws in the scope</text>
+<text x="0.0" y="100.0" font-size="13.5" fill="#52514e" text-anchor="start">studied, by legislature of</text>
+<text x="0.0" y="118.0" font-size="13.5" fill="#52514e" text-anchor="start">promulgation; dotted line: half</text>
+<rect x="0" y="131" width="13" height="13" fill="#184f95"/>
+<text x="20.0" y="143.0" font-size="13.5" fill="#52514e" text-anchor="start">private member&#x27;s bill, National</text>
+<text x="20.0" y="161.0" font-size="13.5" fill="#52514e" text-anchor="start">Assembly</text>
+<rect x="0" y="171" width="13" height="13" fill="#7fa3cf"/>
+<text x="20.0" y="183.0" font-size="13.5" fill="#52514e" text-anchor="start">private member&#x27;s bill, Senate</text>
+<rect x="0" y="193" width="13" height="13" fill="#c9c5c0"/>
+<text x="20.0" y="205.0" font-size="13.5" fill="#52514e" text-anchor="start">Government bill</text>
+<text x="0.0" y="236.0" font-size="15" fill="#0A0A0E" text-anchor="start" font-weight="600">14th (2012-2017)</text>
+<rect x="0.0" y="244" width="77.1" height="24" fill="#184f95"/>
+<rect x="77.1" y="244" width="60.3" height="24" fill="#7fa3cf"/>
+<rect x="137.4" y="244" width="162.6" height="24" fill="#c9c5c0"/>
+<line x1="150.0" y1="240" x2="150.0" y2="272" stroke="#0A0A0E" stroke-width="1.5" stroke-dasharray="4 3"/>
+<polygon points="122.0,269.0 117.0,276.0 127.0,276.0" fill="#0A0A0E"/>
+<text class="val" x="0.0" y="295.0" font-size="13.5" fill="#52514e" text-anchor="start">46% of parliamentary origin (98 laws</text>
+<text class="val" x="0.0" y="314.0" font-size="13.5" fill="#52514e" text-anchor="start">out of 214)</text>
+<text class="val" x="0.0" y="333.0" font-size="13.5" fill="#52514e" text-anchor="start">at least 41% (87 laws)</text>
+<text class="val" x="0.0" y="352.0" font-size="13.5" fill="#52514e" text-anchor="start">all kinds: 42% (110 out of 260)</text>
+<text x="0.0" y="376.0" font-size="15" fill="#0A0A0E" text-anchor="start" font-weight="600">15th (2017-2022)</text>
+<rect x="0.0" y="384" width="114.4" height="24" fill="#184f95"/>
+<rect x="114.4" y="384" width="46.0" height="24" fill="#7fa3cf"/>
+<rect x="160.4" y="384" width="139.6" height="24" fill="#c9c5c0"/>
+<line x1="150.0" y1="380" x2="150.0" y2="412" stroke="#0A0A0E" stroke-width="1.5" stroke-dasharray="4 3"/>
+<polygon points="153.0,409.0 148.0,416.0 158.0,416.0" fill="#0A0A0E"/>
+<text class="val" x="0.0" y="435.0" font-size="13.5" fill="#52514e" text-anchor="start">53% of parliamentary origin (108</text>
+<text class="val" x="0.0" y="454.0" font-size="13.5" fill="#52514e" text-anchor="start">laws out of 202)</text>
+<text class="val" x="0.0" y="473.0" font-size="13.5" fill="#52514e" text-anchor="start">at least 51% (103 laws)</text>
+<text class="val" x="0.0" y="492.0" font-size="13.5" fill="#52514e" text-anchor="start">all kinds: 46% (114 out of 249)</text>
+<text x="0.0" y="516.0" font-size="15" fill="#0A0A0E" text-anchor="start" font-weight="600">16th (2022-2024)</text>
+<rect x="0.0" y="524" width="115.7" height="24" fill="#184f95"/>
+<rect x="115.7" y="524" width="83.1" height="24" fill="#7fa3cf"/>
+<rect x="198.8" y="524" width="101.2" height="24" fill="#c9c5c0"/>
+<line x1="150.0" y1="520" x2="150.0" y2="552" stroke="#0A0A0E" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text class="val" x="0.0" y="575.0" font-size="13.5" fill="#52514e" text-anchor="start">66% of parliamentary origin (55 laws</text>
+<text class="val" x="0.0" y="594.0" font-size="13.5" fill="#52514e" text-anchor="start">out of 83)</text>
+<text class="val" x="0.0" y="613.0" font-size="13.5" fill="#52514e" text-anchor="start">all kinds: 58% (55 out of 95)</text>
+<text x="0.0" y="637.0" font-size="15" fill="#0A0A0E" text-anchor="start" font-weight="600">17th (since 2024) *</text>
+<rect x="0.0" y="645" width="148.5" height="24" fill="#184f95"/>
+<rect x="148.5" y="645" width="92.8" height="24" fill="#7fa3cf"/>
+<rect x="241.2" y="645" width="58.8" height="24" fill="#c9c5c0"/>
+<line x1="150.0" y1="641" x2="150.0" y2="673" stroke="#0A0A0E" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text class="val" x="0.0" y="696.0" font-size="13.5" fill="#52514e" text-anchor="start">80% of parliamentary origin (78 laws</text>
+<text class="val" x="0.0" y="715.0" font-size="13.5" fill="#52514e" text-anchor="start">out of 97)</text>
+<text class="val" x="0.0" y="734.0" font-size="13.5" fill="#52514e" text-anchor="start">all kinds: 76% (85 out of 112)</text>
+<line x1="0" y1="755" x2="22" y2="755" stroke="#0A0A0E" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text x="30.0" y="760.0" font-size="13.5" fill="#52514e" text-anchor="start">half</text>
+<polygon points="11.0,768.0 6.0,775.0 16.0,775.0" fill="#0A0A0E"/>
+<text x="30.0" y="780.0" font-size="13.5" fill="#52514e" text-anchor="start">lower bound: origin established by</text>
+<text x="30.0" y="798.0" font-size="13.5" fill="#52514e" text-anchor="start">both sources</text>
+<text x="0.0" y="816.0" font-size="13.5" fill="#52514e" text-anchor="start">* ongoing on 6 October 2026</text>
+<line x1="0" y1="838.0" x2="300" y2="838.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0.0" y="859.0" font-size="13.5" fill="#52514e" text-anchor="start">National Assembly (open data,</text>
+<text class="pied-source" x="0.0" y="876.0" font-size="13.5" fill="#52514e" text-anchor="start">legislative files) and Senate (Dosleg</text>
+<text class="pied-source" x="0.0" y="893.0" font-size="13.5" fill="#52514e" text-anchor="start">database), 6 October 2026; Journal</text>
+<text class="pied-source" x="0.0" y="910.0" font-size="13.5" fill="#52514e" text-anchor="start">officiel</text>
+<text class="pied-note" x="0.0" y="931.0" font-size="13.5" fill="#52514e" text-anchor="start">Scope: laws promulgated, excluding</text>
+<text class="pied-note" x="0.0" y="948.0" font-size="13.5" fill="#52514e" text-anchor="start">laws authorising a treaty, finance and</text>
+<text class="pied-note" x="0.0" y="965.0" font-size="13.5" fill="#52514e" text-anchor="start">social security financing acts,</text>
+<text class="pied-note" x="0.0" y="982.0" font-size="13.5" fill="#52514e" text-anchor="start">institutional acts and constitutional</text>
+<text class="pied-note" x="0.0" y="999.0" font-size="13.5" fill="#52514e" text-anchor="start">acts. Origin at the initial tabling,</text>
+<text class="pied-note" x="0.0" y="1016.0" font-size="13.5" fill="#52514e" text-anchor="start">not influence. All kinds: same count</text>
+<text class="pied-note" x="0.0" y="1033.0" font-size="13.5" fill="#52514e" text-anchor="start">with institutional, finance and</text>
+<text class="pied-note" x="0.0" y="1050.0" font-size="13.5" fill="#52514e" text-anchor="start">constitutional acts put back in,</text>
+<text class="pied-note" x="0.0" y="1067.0" font-size="13.5" fill="#52514e" text-anchor="start">treaties still excluded.</text>
+<text class="pied-licence" x="0.0" y="1088.0" font-size="13.5" fill="#898781" text-anchor="start">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0.0" y="1105.0" font-size="13.5" fill="#898781" text-anchor="start">· stephane-lalut.com</text>
+</svg>

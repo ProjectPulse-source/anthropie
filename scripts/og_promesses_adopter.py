@@ -3,6 +3,7 @@
 
 Même fabrique que les cartes du dossier Dette (og_dossier_dette.carte). Les nombres sont LUS dans
 data/promesses_adopter.json (scripts/update_promesses_adopter.py). Période, champ et source figurent sur la carte.
+Titre « lois promulguées » (12/10/2026, refonte : « votées » contredisait l'adoption sans vote sur le texte, art. 49 al. 3).
 Écrit : static/images/{og,vig}-adopter-promesse{,-en}.jpg.
 """
 from __future__ import annotations
@@ -46,15 +47,15 @@ def main() -> int:
     if not 2 * leg["16"]["Pmin"] > leg["16"]["N"]:
         og.fail("carte : la XVIe n'est plus majoritairement d'origine parlementaire, le titre serait faux")
     og.carte("og-adopter-promesse-en.jpg",
-             ["Who initiated", "France's laws?"],
-             "14th, 15th and 16th legislatures (2012-2024).",
+             ["Who initiated the laws", "promulgated in France?"],
+             "Ordinary laws, 14th to 16th legislatures (2012-2024).",
              "National Assembly · Senate (Dosleg) · Journal officiel · CC BY 4.0",
              "stephane-lalut.com/en/who-can-get-a-law-passed-in-france/",
              lambda d: barres(d, leg, "en"),
              [(GRIS_CLAIR, "Government bill"), (BLEU, "Private member's bill, Assembly"), (BLEU_CLAIR, "Private member's bill, Senate")])
     og.carte("og-adopter-promesse.jpg",
-             ["Qui est à l'origine", "des lois votées ?"],
-             "XIVe, XVe et XVIe législatures (2012-2024).",
+             ["Qui est à l'origine", "des lois promulguées ?"],
+             "Lois ordinaires, XIVe à XVIe législatures (2012-2024).",
              "Assemblée nationale · Sénat (Dosleg) · Journal officiel · CC BY 4.0",
              "stephane-lalut.com/qui-peut-faire-adopter-une-loi/",
              lambda d: barres(d, leg),
