@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 334" role="img" font-variant-numeric="tabular-nums" aria-labelledby="rp-t rp-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-<title id="rp-t">Le référendum d&#x27;initiative partagée, de 2015 au 5 octobre 2026</title><desc id="rp-d">sept saisines du Conseil constitutionnel ; une conforme ; 1 093 030 soutiens recueillis pour 4 717 396 requis ; aucun référendum.</desc>
-<rect width="720" height="334" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 353" role="img" font-variant-numeric="tabular-nums" aria-labelledby="rp-t rp-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="rp-t">Le référendum d&#x27;initiative partagée, de 2015 au 5 octobre 2026</title><desc id="rp-d">Saisines du Conseil constitutionnel : 7 ; jugées conformes : 1 ; soutien d&#x27;un dixième des inscrits réuni : 0 ; soumises au référendum : 0. La proposition conforme a recueilli 1 093 030 soutiens pour 4 717 396 requis, soit 23,2 % du seuil.</desc>
+<rect width="720" height="353" fill="#ffffff"/>
 <text x="0.0" y="18.0" font-size="13" fill="#0A0A0E" text-anchor="start" font-weight="600">Le référendum d&#x27;initiative partagée, de 2015 au 5 octobre 2026</text>
 <text x="0.0" y="36.0" font-size="12" fill="#52514e" text-anchor="start">propositions de loi soumises au Conseil constitutionnel, et ce qu&#x27;elles sont devenues</text>
 <text x="250.0" y="84.0" font-size="11" fill="#52514e" text-anchor="end">Saisines du Conseil</text>
@@ -18,10 +18,12 @@
 <rect x="260" y="226" width="300" height="12" fill="none" stroke="#52514e"/>
 <rect x="260" y="226" width="69.5" height="12" fill="#8a8f98"/>
 <text x="250.0" y="236.0" font-size="10" fill="#52514e" text-anchor="end">2019-1 RIP</text>
-<text x="260.0" y="254.0" font-size="10" fill="#0A0A0E" text-anchor="start" font-weight="600">Soutiens recueillis : 1 093 030</text>
-<text x="260.0" y="268.0" font-size="10" fill="#52514e" text-anchor="start">Seuil : 4 717 396 (un dixième des inscrits)</text>
-<line x1="0" y1="288" x2="720" y2="288" stroke="#e1e0d9"/>
-<text x="0" y="301" font-size="9" fill="#52514e">Conseil constitutionnel, décisions « RIP » (stock CONSTIT, arrêté au 05/10/2026) ; Constitution, art. 11</text>
-<text x="0" y="313" font-size="9" fill="#52514e">Trois autres propositions déposées « en application de l&#x27;article 11 » (Sénat, Assemblée) n&#x27;ont fait l&#x27;objet d&#x27;aucune décision.</text>
-<text x="0" y="325" font-size="9" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/un-president-peut-il-recourir-au-referendum/</text>
+<text x="335.5" y="236.0" font-size="10" fill="#52514e" text-anchor="start">23,2 % du seuil</text>
+<text x="260.0" y="254.0" font-size="10" fill="#0A0A0E" text-anchor="start" font-weight="600">Soutiens recueillis : 1 093 030</text>
+<text x="260.0" y="268.0" font-size="10" fill="#52514e" text-anchor="start">Seuil : 4 717 396 (un dixième des inscrits)</text>
+<line x1="0" y1="288.0" x2="720" y2="288.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="303.0" font-size="11" fill="#52514e">Conseil constitutionnel, décisions « RIP » (stock CONSTIT, arrêté au 05/10/2026) ; Constitution, art. 11</text>
+<text class="pied-note" x="0" y="317.0" font-size="11" fill="#52514e">Trois autres propositions déposées « en application de l'article 11 » (Sénat, Assemblée) n'ont fait l'objet d'aucune</text>
+<text class="pied-note" x="0" y="331.0" font-size="11" fill="#52514e">décision.</text>
+<text class="pied-licence" x="0" y="345.0" font-size="11" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/un-president-peut-il-recourir-au-referendum/</text>
 </svg>

@@ -5,16 +5,16 @@
    "fichier": "referendum-registre",
    "titre": "Les référendums nationaux depuis 1958",
    "montre": "Du 4 octobre 1958 au 5 octobre 2026, neuf référendums nationaux ont été organisés ; sept ont adopté le texte soumis, deux l'ont rejeté ; le dernier date du 29 mai 2005.",
-   "source": "Conseil constitutionnel, proclamations des résultats (stock CONSTIT de la DILA, arrêté au 05/10/2026) ; Journal officiel",
-   "precaution": "Référendums nationaux des art. 11 et 89 seulement ; hors scrutin du 28/09/1958 et consultations locales."
+   "source": "Conseil constitutionnel, proclamations des résultats (stock CONSTIT de la DILA, arrêté au 05/10/2026) ; Journal officiel",
+   "precaution": "Référendums nationaux des art. 11 et 89 seulement (aucun n'a eu lieu au titre de l'art. 88-5) ; hors scrutin du 28/09/1958 et consultations locales."
   },
   {
    "id": "rip",
    "fichier": "referendum-rip",
    "titre": "Le référendum d'initiative partagée, de 2015 au 5 octobre 2026",
-   "montre": "De 2015 au 5 octobre 2026, le Conseil constitutionnel a été saisi de sept propositions de loi au titre de l'article 11 ; une a été jugée conforme et n'a pas réuni le soutien d'un dixième des électeurs inscrits ; aucune n'a été soumise au référendum.",
-   "source": "Conseil constitutionnel, décisions « RIP » (stock CONSTIT, arrêté au 05/10/2026) ; Constitution, art. 11",
-   "precaution": "Trois autres propositions déposées « en application de l'article 11 » (Sénat, Assemblée) n'ont fait l'objet d'aucune décision."
+   "montre": "De 2015 au 5 octobre 2026, le Conseil constitutionnel a été saisi de sept propositions de loi au titre de l'article 11 ; une a été jugée conforme et a recueilli 23,2 % des soutiens requis ; aucune n'a été soumise au référendum.",
+   "source": "Conseil constitutionnel, décisions « RIP » (stock CONSTIT, arrêté au 05/10/2026) ; Constitution, art. 11",
+   "precaution": "Trois autres propositions déposées « en application de l'article 11 » (Sénat, Assemblée) n'ont fait l'objet d'aucune décision."
   }
  ],
  "en": [
@@ -24,13 +24,13 @@
    "titre": "National referendums in France since 1958",
    "montre": "From 4 October 1958 to 5 October 2026, nine national referendums were held; the proposed text was approved in seven and rejected in two; the last one took place on 29 May 2005.",
    "source": "Conseil constitutionnel, proclamations of results (DILA CONSTIT database, as at 5 Oct. 2026); Journal officiel",
-   "precaution": "National referendums under articles 11 and 89 only; excludes the vote of 28 Sept. 1958 and local consultations."
+   "precaution": "National referendums under articles 11 and 89 only (none was held under article 88-5); excludes the vote of 28 Sept. 1958 and local consultations."
   },
   {
    "id": "rip",
    "fichier": "referendum-rip-en",
    "titre": "The shared-initiative referendum, 2015 to 5 October 2026",
-   "montre": "From 2015 to 5 October 2026, the Conseil constitutionnel received seven Private Members' Bills under article 11; one was found to meet the statutory conditions and did not gather the support of one tenth of registered voters; none was put to a referendum.",
+   "montre": "From 2015 to 5 October 2026, the Conseil constitutionnel received seven Private Members' Bills under article 11; one was found to meet the statutory conditions and collected 23.2% of the required signatures; none was put to a referendum.",
    "source": "Conseil constitutionnel, 'RIP' decisions (DILA CONSTIT database, as at 5 Oct. 2026); Constitution, art. 11",
    "precaution": "Three other bills tabled 'under article 11' (Senate, National Assembly) gave rise to no decision."
   }

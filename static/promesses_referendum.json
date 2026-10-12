@@ -1,11 +1,11 @@
 {
  "releve_le": "2026-10-05",
- "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Conseil constitutionnel (DILA, CONSTIT), Journal officiel, Assemblée nationale",
+ "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Conseil constitutionnel (DILA, CONSTIT), Journal officiel, Assemblée nationale, Sénat",
  "meta": {
   "page": "https://stephane-lalut.com/un-president-peut-il-recourir-au-referendum/",
-  "protocole": "fiches de preuve, prolongement R (R-E1, R-E2)",
+  "protocole": "fiches de preuve, prolongement R (R-E1, R-E2) ; refonte, phase B du 12/10/2026",
   "arrete": "2026-10-05",
-  "constitution": {
+  "textes": {
    "3": {
     "legiarti": "LEGIARTI000019240995",
     "archive": "2026-10/2b5639c959fce37006de2d076ddd81a76e9d7599c4d9e9cab4ad35deb29ecc50.json"
@@ -14,15 +14,135 @@
     "legiarti": "LEGIARTI000019241004",
     "archive": "2026-09/e4718a1b13a755204ea409d81c5025811a2bfb29fb5e6fae0bc10a87d19367d8.json"
    },
+   "19": {
+    "legiarti": "LEGIARTI000006527482",
+    "archive": "2026-10/6f964a9686927f9c174efa86fc1dcba43b752b7a94c135ff58e9295e19c59efb.json"
+   },
    "60": {
     "legiarti": "LEGIARTI000006527548",
-    "archive": "2026-10/71b380ebc25814f0688b85855d579f19d6f05d7193d05b00ad8bc7d3881f0c9e.json"
+    "archive": "2026-10/f656b0168a0ba65883300603e607fde04bfec939640a048a721567ab3c539064.json"
+   },
+   "53": {
+    "legiarti": "LEGIARTI000006527534",
+    "archive": "2026-10/2f3b1b5d4ab1059c8b4ad9d335c62875ed49300bbe54380c4422b841b15b6478.json"
+   },
+   "61": {
+    "legiarti": "LEGIARTI000019241074",
+    "archive": "2026-10/c14abed78a1e9932d2cf37f84e6366e03847a41174d17466b5f83b4a0a3d299c.json"
+   },
+   "88-5": {
+    "legiarti": "LEGIARTI000018077285",
+    "archive": "2026-10/74232615eacf35866333fd388b977914dbfe65e66d839cd030c690f503f060cf.json"
    },
    "89": {
     "legiarti": "LEGIARTI000019240655",
     "archive": "2026-10/0caaf2457602bce55a86b6825cd567e7bca2a4a2d82794135566b840d7c58eee.json"
+   },
+   "o45-2": {
+    "legiarti": "LEGIARTI000028280493",
+    "archive": "2026-10/0739986eb516531ec30dce183a952ac0f835bd9ffdd52bbdc6a4c5bb06abf1fa.json"
+   },
+   "lo1": {
+    "legiarti": "LEGIARTI000028280452",
+    "archive": "2026-10/8e8440fa7f764b6386c82fb269a6abeed0418d20ed6a872a85675b6509fa8928.json"
+   },
+   "lo4": {
+    "legiarti": "LEGIARTI000028280470",
+    "archive": "2026-10/3f89ac87be83d8ddecdd572a49e8c9ab7f7405284e98c99a091603a995964fe0.json"
+   },
+   "lo9": {
+    "legiarti": "LEGIARTI000028280466",
+    "archive": "2026-10/a1bff9735e709fc8f5ee091343578411ee2559f309155edbb330f27f24f34178.json"
+   },
+   "cc1": {
+    "legiarti": "LEGIARTI000006419280",
+    "archive": "2026-10/cc0765ea833ba2ee7901764e2b924cd6bebc1122f1273afe63316f12a6604f33.json"
    }
   },
+  "pieces_hors_legifrance": {
+   "conseil_constitutionnel_constitution_fr_en_vigueur.html": {
+    "sha256": "26181e9ff3394e0dd64575fa6549b663db730ff2a52e57c3f23a6dc0cc598a9f",
+    "passages": []
+   },
+   "elysee_2020-06-29_convention_climat.html": {
+    "sha256": "e87cdce74935b9c26c5d407b865924fc7d2f989c6b8ab0ab7d78fd05d97a2022",
+    "passages": [
+     "Je suis favorable à cette proposition.",
+     "je suis prêt à recourir au référendum si celui-ci était alors constitutionnellement possible après le vote des chambres dans le cadre strict de notre Constitution"
+    ]
+   },
+   "senat_dossier_pjl20-449.html": {
+    "sha256": "173b0ff23d0da32515bec2cc81191713fa60391ed8922d5624ba5c7471008f23",
+    "passages": [
+     "Projet de loi constitutionnelle complétant l'article 1er de la Constitution et relatif à la préservation de l'environnement",
+     "Page mise à jour le 1er juillet 2024"
+    ]
+   },
+   "senat_ppl17-459.html": {
+    "sha256": "cbb495e0d98ca80066b161bd517f17f9492c8e037e4593e508ef749ea8cb982d",
+    "passages": [
+     "Enregistré à la Présidence du Sénat le 20 avril 2018"
+    ]
+   },
+   "senat_tac07-001_congres_2008-02-04.html": {
+    "sha256": "0116bfcc2b16630ee94f55391ae4f99ffe2ee47cdd75341d8791b808c0bb8e79",
+    "passages": [
+     "CONGRÈS DU PARLEMENT 4 février 2008",
+     "Le Parlement, réuni en Congrès, a approuvé, dans les conditions prévues à l'article 89, alinéa 3, de la Constitution"
+    ]
+   },
+   "senat_tac07-002_congres_2008-07-21.html": {
+    "sha256": "127c7a005bc17e8f7562a6fe95379ddad00c5420fe911029169951a159d7a147",
+    "passages": [
+     "CONGRÈS DU PARLEMENT 21 JUILLET 2008",
+     "Le Parlement, réuni en Congrès, a approuvé dans les conditions prévues à l'article 89, alinéa 3, de la Constitution",
+     "L'article 88-5 de la Constitution, dans sa rédaction résultant tant de l'article 44 de la présente loi constitutionnelle que du 2° du I du présent article, n'est pas applicable aux adhésions faisant suite à une conférence intergouvernementale dont la convocation a été décidée par le Conseil européen avant le 1er juillet 2004."
+    ]
+   },
+   "an_l13_scrutin_0082_motion_referendum_lisbonne_2008-02-06.html": {
+    "sha256": "e9e8704630842c2e436a8447aab128007c6e8e7fdba200b44a7cd9f768e1fd6d",
+    "passages": [
+     "Analyse du scrutin n° 82 - Séance du 06/02/2008",
+     "plusieurs de ses collègues, tendant à soumettre au référendum le projet de loi autorisant la ratification du traité de Lisbonne",
+     "L'Assemblée nationale n'a pas adopté"
+    ]
+   },
+   "an_congres_scrutin_9000_2008-02-04.html": {
+    "sha256": "ec8dc3c8880154fae493b63260be1fd1df389071cdfc953592176e72595fc8a8",
+    "passages": [
+     "CONGRÈS DU PARLEMENT - SÉANCE DU 04/02/2008",
+     "SCRUTIN PUBLIC SUR le projet de loi constitutionnelle modifiant le titre XV de la Constitution.",
+     "Le Congrès du Parlement a adopté"
+    ]
+   }
+  },
+  "dossier_pjl20_449": [
+   {
+    "etape": "depot",
+    "date": "2021-01-20",
+    "passage": "déposé à l'Assemblée Nationale le 20 janvier 2021"
+   },
+   {
+    "etape": "an1",
+    "date": "2021-03-16",
+    "passage": "Texte n° 577 adopté par l'Assemblée nationale le 16 mars 2021"
+   },
+   {
+    "etape": "se1",
+    "date": "2021-05-10",
+    "passage": "Texte n° 105 (2020-2021) modifié par le Sénat le 10 mai 2021"
+   },
+   {
+    "etape": "an2",
+    "date": "2021-06-22",
+    "passage": "Texte n° 634 adopté avec modifications par l'Assemblée nationale le 22 juin 2021"
+   },
+   {
+    "etape": "se2",
+    "date": "2021-07-05",
+    "passage": "Texte n° 133 (2020-2021) modifié par le Sénat le 5 juillet 2021"
+   }
+  ],
   "temoin_jo": {
    "1961-01-08": [
     "1960-12-08",
@@ -113,12 +233,16 @@
  "gardes": [
   "R1 : 9 proclamations, nombres cohérents, décret lu dans chaque visa",
   "R2 : témoin JO concordant (décret indéterminé au témoin : 1962-10-28)",
-  "R3 : 7 saisines, solutions et conditions lues",
+  "R3 : 7 saisines, solutions et conditions lues, un motif cité par non-conformité",
   "R6 : 3 dépôts sans saisine, identiques au témoin (Assemblée et Sénat)",
-  "R4 : 8 citations de la Constitution et 6 motifs retrouvés mot pour mot",
+  "R4 : 28 citations des textes archivés (dont 22 de la Constitution, vérifiées en anglais) et 17 motifs retrouvés mot pour mot dans leur considérant",
+  "R4 : article 11 sans mention de « société » (phrase sur le consid. 7 de 2026-7)",
   "R4 : décision 2007-560 DC (2007-12-20) citée mot pour mot",
   "R7 : décision 62-20 DC (1962-11-06, Incompétence pour statuer), saisine du président du Sénat ; loi 62-1292 au témoin du JO",
-  "R5 : phrases recalculées (N=9, A=7, R=2, S=7, C=1, soutiens réunis=0)"
+  "R8 : 7 pièces hors Légifrance à leur empreinte, 16 passages et 5 étapes retrouvés, dernière étape 2021-07-05 ; décomptes de 2008 cohérents avec l'issue publiée (Congrès 560 pour, 445 requis ; motion 175 pour, 227 contre)",
+  "R9 : signataires des 3 dépôts relus (Assemblée : témoin ; Sénat : texte déposé)",
+  "R5 : phrases recalculées (N=9, A=7, R=2, S=7, C=1, soutiens réunis=0, art. 88-5=0)",
+  "parite des 4 figures telephone (30 valeurs dessinees retrouvees dans la version detaillee)"
  ],
  "calcul": {
   "N": 9,
@@ -126,6 +250,7 @@
   "R": 2,
   "dernier": "2005-05-29",
   "art89": 1,
+  "art88_5": 0,
   "S": 7,
   "C": 1,
   "reunis": 0,
@@ -350,12 +475,103 @@
   }
  },
  "motifs_cites": {
-  "2021-2": "sont contraires à la Constitution",
-  "2022-3": "ne porte sur aucun des autres objets mentionnés au premier alinéa de l'article 11 de la Constitution",
-  "2023-4": "elle ne porte pas, au sens de l'article 11 de la Constitution, sur une « réforme » relative à la politique sociale",
-  "2023-5": "la proposition de loi ne porte pas, au sens de l'article 11 de la Constitution, sur une réforme relative à la politique sociale",
-  "2024-6": "portent une atteinte disproportionnée à ces exigences",
-  "2026-7": "la proposition de loi ne porte pas non plus sur une « réforme » au sens de l'article 11 de la Constitution"
+  "2021-2": [
+   {
+    "considerant": 10,
+    "citation": "Ces dispositions, qui subordonnent à l'avis conforme de la Conférence nationale de santé l'exercice du pouvoir réglementaire du Premier ministre, sont contraires à la Constitution",
+    "traduction_en": "These provisions, which make the exercise of the Prime Minister's regulatory power subject to the binding opinion of the National Health Conference, are contrary to the Constitution"
+   }
+  ],
+  "2022-3": [
+   {
+    "considerant": 5,
+    "citation": "Elle a ainsi pour seul effet d'abonder le budget de l'État par l'instauration jusqu'au 31 décembre 2025 d'une mesure qui se borne à augmenter le niveau de l'imposition existante des bénéfices de certaines sociétés",
+    "traduction_en": "Its sole effect is thus to increase the State budget by introducing, until 31 December 2025, a measure that merely raises the existing level of taxation of certain companies' profits"
+   },
+   {
+    "considerant": 5,
+    "citation": "Elle ne porte donc pas, au sens de l'article 11 de la Constitution, sur une réforme relative à la politique économique de la nation",
+    "traduction_en": "It therefore does not relate, within the meaning of Article 11 of the Constitution, to a reform concerning the economic policy of the nation"
+   }
+  ],
+  "2023-4": [
+   {
+    "considerant": 7,
+    "citation": "l'article L. 161-17-2 du code de la sécurité sociale prévoit que l'âge d'ouverture du droit à une pension de retraite mentionné à ces mêmes dispositions est fixé à soixante-deux ans",
+    "traduction_en": "article L. 161-17-2 of the Social Security Code provides that the age at which the right to a retirement pension under these same provisions opens is set at sixty-two"
+   },
+   {
+    "considerant": 8,
+    "citation": "n'emporte pas de changement de l'état du droit",
+    "traduction_en": "does not change the state of the law"
+   },
+   {
+    "considerant": 9,
+    "citation": "le législateur peut toujours modifier, compléter ou abroger des dispositions législatives antérieures, qu'elles résultent d'une loi votée par le Parlement ou d'une loi adoptée par voie de référendum",
+    "traduction_en": "the legislature may always amend, supplement or repeal earlier legislative provisions, whether they result from an act passed by Parliament or from an act adopted by referendum"
+   },
+   {
+    "considerant": 10,
+    "citation": "elle ne porte pas, au sens de l'article 11 de la Constitution, sur une « réforme » relative à la politique sociale",
+    "traduction_en": "it does not relate, within the meaning of Article 11 of the Constitution, to a \"reform\" concerning social policy"
+   }
+  ],
+  "2023-5": [
+   {
+    "considerant": 8,
+    "citation": "l'interdiction de fixer l'âge légal de départ à la retraite au-delà de soixante-deux ans n'emporte donc pas de changement de l'état du droit",
+    "traduction_en": "the prohibition on setting the legal retirement age above sixty-two therefore does not change the state of the law"
+   },
+   {
+    "considerant": 10,
+    "citation": "Elle a ainsi pour seul effet d'abonder le budget d'une branche de la sécurité sociale",
+    "traduction_en": "Its sole effect is thus to increase the budget of one branch of social security"
+   },
+   {
+    "considerant": 11,
+    "citation": "la proposition de loi ne porte pas, au sens de l'article 11 de la Constitution, sur une réforme relative à la politique sociale",
+    "traduction_en": "the bill does not relate, within the meaning of Article 11 of the Constitution, to a reform concerning social policy"
+   }
+  ],
+  "2024-6": [
+   {
+    "considerant": 7,
+    "citation": "elle porte, au sens de l'article 11 de la Constitution, sur une réforme relative à la politique sociale de la nation",
+    "traduction_en": "it relates, within the meaning of Article 11 of the Constitution, to a reform concerning the social policy of the nation"
+   },
+   {
+    "considerant": 13,
+    "citation": "les dispositions de l'article 1er portent une atteinte disproportionnée à ces exigences. Elles sont donc contraires à la Constitution",
+    "traduction_en": "the provisions of Article 1 disproportionately infringe these requirements. They are therefore contrary to the Constitution"
+   }
+  ],
+  "2026-7": [
+   {
+    "considerant": 7,
+    "citation": "il résulte des travaux préparatoires de la loi constitutionnelle du 4 août 1995 mentionnée ci-dessus que le constituant a entendu exclure les questions de société des objets mentionnés au premier alinéa de l'article 11 de la Constitution",
+    "traduction_en": "it follows from the preparatory work for the constitutional act of 4 August 1995 mentioned above that the framers of the constitutional amendment intended to exclude questions of society from the subjects listed in the first paragraph of Article 11 of the Constitution"
+   },
+   {
+    "considerant": 7,
+    "citation": "Ainsi, ne relèvent pas de ces objets les questions, d'ordre éthique, relatives à la fin de vie",
+    "traduction_en": "Thus, questions of an ethical nature relating to end of life do not fall within these subjects"
+   },
+   {
+    "considerant": 9,
+    "citation": "elle ne porte ni sur la politique sociale de la nation et les services publics qui y concourent, ni sur aucun des autres objets mentionnés au premier alinéa de l'article 11 de la Constitution",
+    "traduction_en": "it relates neither to the social policy of the nation and the public services contributing to it, nor to any of the other subjects listed in the first paragraph of Article 11 of the Constitution"
+   },
+   {
+    "considerant": 11,
+    "citation": "n'emporte pas de changement de l'état du droit",
+    "traduction_en": "does not change the state of the law"
+   },
+   {
+    "considerant": 13,
+    "citation": "la proposition de loi ne porte pas non plus sur une « réforme » au sens de l'article 11 de la Constitution",
+    "traduction_en": "nor does the bill relate to a \"reform\" within the meaning of Article 11 of the Constitution"
+   }
+  ]
  },
  "tableaux": {
   "registre": {
@@ -373,81 +589,81 @@
      "8 janvier 1961",
      "Autodétermination des populations algériennes",
      "11",
-     "32 520 233",
-     "73,8 %",
-     "74,99 %",
-     "Adopté (loi n° 61-44)"
+     "32 520 233",
+     "73,8 %",
+     "74,99 %",
+     "Adopté (loi n° 61-44)"
     ],
     [
      "8 avril 1962",
      "Accords d'Évian sur l'Algérie",
      "11",
-     "27 582 072",
-     "75,3 %",
-     "90,81 %",
-     "Adopté (loi n° 62-421)"
+     "27 582 072",
+     "75,3 %",
+     "90,81 %",
+     "Adopté (loi n° 62-421)"
     ],
     [
      "28 octobre 1962",
      "Élection du président de la République au suffrage universel",
      "11",
-     "28 185 478",
-     "77,0 %",
-     "62,25 %",
-     "Adopté (loi n° 62-1292)"
+     "28 185 478",
+     "77,0 %",
+     "62,25 %",
+     "Adopté (loi n° 62-1292)"
     ],
     [
      "27 avril 1969",
      "Création de régions et rénovation du Sénat",
      "11",
-     "29 392 390",
-     "80,1 %",
-     "47,59 %",
+     "29 392 390",
+     "80,1 %",
+     "47,59 %",
      "Rejeté"
     ],
     [
      "23 avril 1972",
      "Élargissement de la Communauté européenne",
      "11",
-     "29 820 464",
-     "60,2 %",
-     "68,32 %",
-     "Adopté (loi n° 72-339)"
+     "29 820 464",
+     "60,2 %",
+     "68,32 %",
+     "Adopté (loi n° 72-339)"
     ],
     [
      "6 novembre 1988",
      "Statut de la Nouvelle-Calédonie et autodétermination en 1998",
      "11",
-     "38 025 823",
-     "36,9 %",
-     "80,00 %",
-     "Adopté (loi n° 88-1028)"
+     "38 025 823",
+     "36,9 %",
+     "80,00 %",
+     "Adopté (loi n° 88-1028)"
     ],
     [
      "20 septembre 1992",
      "Ratification du traité sur l'Union européenne (Maastricht)",
      "11",
-     "38 305 534",
-     "69,7 %",
-     "51,05 %",
-     "Adopté (loi n° 92-1017)"
+     "38 305 534",
+     "69,7 %",
+     "51,05 %",
+     "Adopté (loi n° 92-1017)"
     ],
     [
      "24 septembre 2000",
      "Durée du mandat du président de la République (quinquennat)",
      "89",
-     "39 941 192",
-     "30,2 %",
-     "73,21 %",
-     "Adopté (loi n° 2000-964)"
+     "39 941 192",
+     "30,2 %",
+     "73,21 %",
+     "Adopté (loi n° 2000-964)"
     ],
     [
      "29 mai 2005",
      "Ratification du traité établissant une Constitution pour l'Europe",
      "11",
-     "41 789 202",
-     "69,4 %",
-     "45,33 %",
+     "41 789 202",
+     "69,4 %",
+     "45,33 %",
      "Rejeté"
     ]
    ]
@@ -457,50 +673,58 @@
     "Décision",
     "Numéro",
     "Proposition de loi",
-    "Solution"
+    "Solution",
+    "Motifs cités (considérants)"
    ],
    "lignes": [
     [
      "9 mai 2019",
      "2019-1 RIP",
      "Aérodromes de Paris, service public national",
-     "Conforme ; 1 093 030 soutiens pour 4 717 396 requis"
+     "Conforme ; 1 093 030 soutiens pour 4 717 396 requis",
+     "—"
     ],
     [
      "6 août 2021",
      "2021-2 RIP",
      "Service public hospitalier (loi de programmation)",
-     "Non conforme : une disposition contraire à la Constitution (3° de l'art. 45-2)"
+     "Non conforme : 3° de l'art. 45-2, disposition contraire à la Constitution",
+     "Consid. 10 : « Ces dispositions, qui subordonnent à l'avis conforme de la Conférence nationale de santé l'exercice du pouvoir réglementaire du Premier ministre, sont contraires à la Constitution »."
     ],
     [
      "25 octobre 2022",
      "2022-3 RIP",
      "Contribution sur les bénéfices exceptionnels des grandes entreprises",
-     "Non conforme : pas d'objet visé par l'article 11 (2°)"
+     "Non conforme : 2° de l'art. 45-2, objet de l'article 11",
+     "Consid. 5 : « Elle a ainsi pour seul effet d'abonder le budget de l'État par l'instauration jusqu'au 31 décembre 2025 d'une mesure qui se borne à augmenter le niveau de l'imposition existante des bénéfices de certaines sociétés » ; « Elle ne porte donc pas, au sens de l'article 11 de la Constitution, sur une réforme relative à la politique économique de la nation »."
     ],
     [
      "14 avril 2023",
      "2023-4 RIP",
      "Âge légal de départ à la retraite : pas au-delà de 62 ans",
-     "Non conforme : pas une « réforme » au sens de l'article 11 (2°)"
+     "Non conforme : 2° de l'art. 45-2, objet de l'article 11",
+     "Consid. 7 : « l'article L. 161-17-2 du code de la sécurité sociale prévoit que l'âge d'ouverture du droit à une pension de retraite mentionné à ces mêmes dispositions est fixé à soixante-deux ans ». Consid. 8 : « n'emporte pas de changement de l'état du droit ». Consid. 9 : « le législateur peut toujours modifier, compléter ou abroger des dispositions législatives antérieures, qu'elles résultent d'une loi votée par le Parlement ou d'une loi adoptée par voie de référendum ». Consid. 10 : « elle ne porte pas, au sens de l'article 11 de la Constitution, sur une « réforme » relative à la politique sociale »."
     ],
     [
      "3 mai 2023",
      "2023-5 RIP",
      "Âge légal de départ à la retraite : pas au-delà de 62 ans (seconde proposition)",
-     "Non conforme : pas une « réforme » au sens de l'article 11 (2°)"
+     "Non conforme : 2° de l'art. 45-2, objet de l'article 11",
+     "Consid. 8 : « l'interdiction de fixer l'âge légal de départ à la retraite au-delà de soixante-deux ans n'emporte donc pas de changement de l'état du droit ». Consid. 10 : « Elle a ainsi pour seul effet d'abonder le budget d'une branche de la sécurité sociale ». Consid. 11 : « la proposition de loi ne porte pas, au sens de l'article 11 de la Constitution, sur une réforme relative à la politique sociale »."
     ],
     [
      "11 avril 2024",
      "2024-6 RIP",
      "Accès des étrangers aux prestations sociales",
-     "Non conforme : une disposition contraire à la Constitution (3°)"
+     "Non conforme : 3° de l'art. 45-2, disposition contraire à la Constitution",
+     "Consid. 7 : « elle porte, au sens de l'article 11 de la Constitution, sur une réforme relative à la politique sociale de la nation ». Consid. 13 : « les dispositions de l'article 1er portent une atteinte disproportionnée à ces exigences. Elles sont donc contraires à la Constitution »."
     ],
     [
      "17 juin 2026",
      "2026-7 RIP",
      "Exclure de la notion de soin la provocation active de la mort",
-     "Non conforme : pas une « réforme » au sens de l'article 11 (2°)"
+     "Non conforme : 2° de l'art. 45-2, objet de l'article 11",
+     "Consid. 7 : « il résulte des travaux préparatoires de la loi constitutionnelle du 4 août 1995 mentionnée ci-dessus que le constituant a entendu exclure les questions de société des objets mentionnés au premier alinéa de l'article 11 de la Constitution » ; « Ainsi, ne relèvent pas de ces objets les questions, d'ordre éthique, relatives à la fin de vie ». Consid. 9 : « elle ne porte ni sur la politique sociale de la nation et les services publics qui y concourent, ni sur aucun des autres objets mentionnés au premier alinéa de l'article 11 de la Constitution ». Consid. 11 : « n'emporte pas de changement de l'état du droit ». Consid. 13 : « la proposition de loi ne porte pas non plus sur une « réforme » au sens de l'article 11 de la Constitution »."
     ]
    ]
   }
@@ -605,50 +829,58 @@
     "Decision",
     "Number",
     "Private Members' Bill",
-    "Outcome"
+    "Outcome",
+    "Grounds quoted (paragraphs)"
    ],
    "lignes": [
     [
      "9 May 2019",
      "2019-1 RIP",
      "Paris airports as a national public service",
-     "Met the statutory conditions; 1,093,030 signatures of support for 4,717,396 required"
+     "Met the statutory conditions; 1,093,030 signatures of support for 4,717,396 required",
+     "—"
     ],
     [
      "6 August 2021",
      "2021-2 RIP",
      "Public hospital service (programming act)",
-     "Did not meet the statutory conditions: a provision contrary to the Constitution (art. 45-2, 3°)"
+     "Did not meet the statutory conditions: art. 45-2, 3°: provision contrary to the Constitution",
+     "Para. 10: « Ces dispositions, qui subordonnent à l'avis conforme de la Conférence nationale de santé l'exercice du pouvoir réglementaire du Premier ministre, sont contraires à la Constitution » (our translation: \"These provisions, which make the exercise of the Prime Minister's regulatory power subject to the binding opinion of the National Health Conference, are contrary to the Constitution\")."
     ],
     [
      "25 October 2022",
      "2022-3 RIP",
      "Contribution on large companies' windfall profits",
-     "Did not meet the statutory conditions: no subject covered by article 11 (2°)"
+     "Did not meet the statutory conditions: art. 45-2, 2°: subject of article 11",
+     "Para. 5: « Elle a ainsi pour seul effet d'abonder le budget de l'État par l'instauration jusqu'au 31 décembre 2025 d'une mesure qui se borne à augmenter le niveau de l'imposition existante des bénéfices de certaines sociétés » (our translation: \"Its sole effect is thus to increase the State budget by introducing, until 31 December 2025, a measure that merely raises the existing level of taxation of certain companies' profits\"); « Elle ne porte donc pas, au sens de l'article 11 de la Constitution, sur une réforme relative à la politique économique de la nation » (our translation: \"It therefore does not relate, within the meaning of Article 11 of the Constitution, to a reform concerning the economic policy of the nation\")."
     ],
     [
      "14 April 2023",
      "2023-4 RIP",
      "Legal retirement age: not above 62",
-     "Did not meet the statutory conditions: not a 'reform' within the meaning of article 11 (2°)"
+     "Did not meet the statutory conditions: art. 45-2, 2°: subject of article 11",
+     "Para. 7: « l'article L. 161-17-2 du code de la sécurité sociale prévoit que l'âge d'ouverture du droit à une pension de retraite mentionné à ces mêmes dispositions est fixé à soixante-deux ans » (our translation: \"article L. 161-17-2 of the Social Security Code provides that the age at which the right to a retirement pension under these same provisions opens is set at sixty-two\"). Para. 8: « n'emporte pas de changement de l'état du droit » (our translation: \"does not change the state of the law\"). Para. 9: « le législateur peut toujours modifier, compléter ou abroger des dispositions législatives antérieures, qu'elles résultent d'une loi votée par le Parlement ou d'une loi adoptée par voie de référendum » (our translation: \"the legislature may always amend, supplement or repeal earlier legislative provisions, whether they result from an act passed by Parliament or from an act adopted by referendum\"). Para. 10: « elle ne porte pas, au sens de l'article 11 de la Constitution, sur une « réforme » relative à la politique sociale » (our translation: \"it does not relate, within the meaning of Article 11 of the Constitution, to a \"reform\" concerning social policy\")."
     ],
     [
      "3 May 2023",
      "2023-5 RIP",
      "Legal retirement age: not above 62 (second bill)",
-     "Did not meet the statutory conditions: not a 'reform' within the meaning of article 11 (2°)"
+     "Did not meet the statutory conditions: art. 45-2, 2°: subject of article 11",
+     "Para. 8: « l'interdiction de fixer l'âge légal de départ à la retraite au-delà de soixante-deux ans n'emporte donc pas de changement de l'état du droit » (our translation: \"the prohibition on setting the legal retirement age above sixty-two therefore does not change the state of the law\"). Para. 10: « Elle a ainsi pour seul effet d'abonder le budget d'une branche de la sécurité sociale » (our translation: \"Its sole effect is thus to increase the budget of one branch of social security\"). Para. 11: « la proposition de loi ne porte pas, au sens de l'article 11 de la Constitution, sur une réforme relative à la politique sociale » (our translation: \"the bill does not relate, within the meaning of Article 11 of the Constitution, to a reform concerning social policy\")."
     ],
     [
      "11 April 2024",
      "2024-6 RIP",
      "Foreigners' access to social benefits",
-     "Did not meet the statutory conditions: a provision contrary to the Constitution (3°)"
+     "Did not meet the statutory conditions: art. 45-2, 3°: provision contrary to the Constitution",
+     "Para. 7: « elle porte, au sens de l'article 11 de la Constitution, sur une réforme relative à la politique sociale de la nation » (our translation: \"it relates, within the meaning of Article 11 of the Constitution, to a reform concerning the social policy of the nation\"). Para. 13: « les dispositions de l'article 1er portent une atteinte disproportionnée à ces exigences. Elles sont donc contraires à la Constitution » (our translation: \"the provisions of Article 1 disproportionately infringe these requirements. They are therefore contrary to the Constitution\")."
     ],
     [
      "17 June 2026",
      "2026-7 RIP",
      "Excluding the active causing of death from the notion of care",
-     "Did not meet the statutory conditions: not a 'reform' within the meaning of article 11 (2°)"
+     "Did not meet the statutory conditions: art. 45-2, 2°: subject of article 11",
+     "Para. 7: « il résulte des travaux préparatoires de la loi constitutionnelle du 4 août 1995 mentionnée ci-dessus que le constituant a entendu exclure les questions de société des objets mentionnés au premier alinéa de l'article 11 de la Constitution » (our translation: \"it follows from the preparatory work for the constitutional act of 4 August 1995 mentioned above that the framers of the constitutional amendment intended to exclude questions of society from the subjects listed in the first paragraph of Article 11 of the Constitution\"); « Ainsi, ne relèvent pas de ces objets les questions, d'ordre éthique, relatives à la fin de vie » (our translation: \"Thus, questions of an ethical nature relating to end of life do not fall within these subjects\"). Para. 9: « elle ne porte ni sur la politique sociale de la nation et les services publics qui y concourent, ni sur aucun des autres objets mentionnés au premier alinéa de l'article 11 de la Constitution » (our translation: \"it relates neither to the social policy of the nation and the public services contributing to it, nor to any of the other subjects listed in the first paragraph of Article 11 of the Constitution\"). Para. 11: « n'emporte pas de changement de l'état du droit » (our translation: \"does not change the state of the law\"). Para. 13: « la proposition de loi ne porte pas non plus sur une « réforme » au sens de l'article 11 de la Constitution » (our translation: \"nor does the bill relate to a \"reform\" within the meaning of Article 11 of the Constitution\")."
     ]
    ]
   }
@@ -665,15 +897,16 @@
   "C": "une",
   "cond2": "quatre",
   "cond3": "deux",
-  "soutiens": "1 093 030",
-  "seuil": "4 717 396",
-  "part_seuil": "23",
+  "soutiens": "1 093 030",
+  "seuil": "4 717 396",
+  "part_seuil": "23,2",
   "rip_conf_date": "9 mai 2019",
   "rip_depuis": "2015",
   "part_2005": "69,4",
   "non_2005": "54,67",
   "part_2000": "30,2",
   "part_1988": "36,9",
+  "oui_2000": "73,21",
   "part_max": "80,1",
   "part_min": "30,2",
   "oui_1992": "51,05",
@@ -688,16 +921,113 @@
   "non_conformes": "six",
   "cond2_maj": "Quatre",
   "cond3_maj": "Deux",
-  "cit_motif_2023_4": "ne porte pas, au sens de l'article 11 de la Constitution, sur une « réforme » relative à la politique sociale",
   "cit_2007_560": "ne peut intervenir qu'après révision de la Constitution",
+  "cit_elysee": "je suis prêt à recourir au référendum si celui-ci était alors constitutionnellement possible après le vote des chambres dans le cadre strict de notre Constitution",
+  "cit_clause_2004": "n'est pas applicable aux adhésions faisant suite à une conférence intergouvernementale dont la convocation a été décidée par le Conseil européen avant le 1er juillet 2004",
+  "cit_congres_2008": "dans les conditions prévues à l'article 89, alinéa 3, de la Constitution",
+  "declaration_2020": "29 juin 2020",
+  "e2021_depot": "20 janvier 2021",
+  "e2021_an1": "16 mars 2021",
+  "e2021_se1": "10 mai 2021",
+  "e2021_an2": "22 juin 2021",
+  "e2021_se2": "5 juillet 2021",
+  "congres_votants": "893",
+  "congres_exprimes": "741",
+  "congres_majorite": "445",
+  "congres_pour": "560",
+  "congres_contre": "181",
+  "congres_date": "4 février 2008",
+  "motion_votants": "404",
+  "motion_exprimes": "402",
+  "motion_majorite": "202",
+  "motion_pour": "175",
+  "motion_contre": "227",
+  "motion_date": "6 février 2008",
   "cit_art3": "La souveraineté nationale appartient au peuple qui l'exerce par ses représentants et par la voie du référendum.",
-  "cit_art11_1": "sur proposition du Gouvernement pendant la durée des sessions ou sur proposition conjointe des deux assemblées",
+  "cit_art11_peut": "peut soumettre au référendum tout projet de loi",
+  "cit_art11_1": "sur proposition du Gouvernement pendant la durée des sessions ou sur proposition conjointe des deux assemblées, publiées au Journal officiel",
   "cit_art11_objet": "portant sur l'organisation des pouvoirs publics, sur des réformes relatives à la politique économique, sociale ou environnementale de la nation et aux services publics qui y concourent, ou tendant à autoriser la ratification d'un traité qui, sans être contraire à la Constitution, aurait des incidences sur le fonctionnement des institutions",
+  "cit_art11_decl": "celui-ci fait, devant chaque assemblée, une déclaration qui est suivie d'un débat",
+  "cit_art11_promulgue": "le Président de la République promulgue la loi dans les quinze jours qui suivent la proclamation des résultats de la consultation",
   "cit_art11_rip": "à l'initiative d'un cinquième des membres du Parlement, soutenue par un dixième des électeurs inscrits sur les listes électorales",
+  "cit_art11_abrog": "ne peut avoir pour objet l'abrogation d'une disposition législative promulguée depuis moins d'un an",
+  "cit_art11_deux_ans": "aucune nouvelle proposition de référendum portant sur le même sujet ne peut être présentée avant l'expiration d'un délai de deux ans suivant la date du scrutin",
   "cit_art11_soumet": "le Président de la République la soumet au référendum",
-  "cit_art89_voies": "le projet de révision n'est pas présenté au référendum lorsque le Président de la République décide de le soumettre au Parlement convoqué en Congrès",
-  "cit_art60": "Il en proclame les résultats.",
+  "cit_art19": "Les actes du Président de la République autres que ceux prévus aux articles 8 (1er alinéa), 11, 12, 16, 18, 54, 56 et 61 sont contresignés par le Premier ministre",
+  "cit_art53": "ne peuvent être ratifiés ou approuvés qu'en vertu d'une loi",
+  "cit_art60": "Le Conseil constitutionnel veille à la régularité des opérations de référendum prévues aux articles 11 et 89 et au titre XV. Il en proclame les résultats.",
+  "cit_art61": "les propositions de loi mentionnées à l'article 11 avant qu'elles ne soient soumises au référendum",
+  "cit_art88_5_1": "Tout projet de loi autorisant la ratification d'un traité relatif à l'adhésion d'un État à l'Union européenne est soumis au référendum par le Président de la République.",
+  "cit_art88_5_2": "par le vote d'une motion adoptée en termes identiques par chaque assemblée à la majorité des trois cinquièmes, le Parlement peut autoriser l'adoption du projet de loi selon la procédure prévue au troisième alinéa de l'article 89",
+  "cit_art88_5_2004": "L'article 88-5 de la Constitution, dans sa rédaction résultant tant de l'article 44 de la présente loi constitutionnelle que du 2° du I du présent article, n'est pas applicable aux adhésions faisant suite à une conférence intergouvernementale dont la convocation a été décidée par le Conseil européen avant le 1er juillet 2004.",
+  "cit_art89_init": "L'initiative de la révision de la Constitution appartient concurremment au Président de la République sur proposition du Premier ministre et aux membres du Parlement.",
+  "cit_art89_identiques": "voté par les deux assemblées en termes identiques",
   "cit_art89_ref": "La révision est définitive après avoir été approuvée par référendum.",
+  "cit_art89_voies": "le projet de révision n'est pas présenté au référendum lorsque le Président de la République décide de le soumettre au Parlement convoqué en Congrès",
+  "cit_art89_limites": "Aucune procédure de révision ne peut être engagée ou poursuivie lorsqu'il est porté atteinte à l'intégrité du territoire. La forme républicaine du Gouvernement ne peut faire l'objet d'une révision.",
+  "cit_o45_2_delai": "dans le délai d'un mois à compter de la transmission de la proposition de loi",
+  "cit_o45_2_delai_tr": "within one month of the transmission of the bill",
+  "cit_lo1": "La proposition de loi est transmise au Conseil constitutionnel par le président de l'assemblée saisie.",
+  "cit_lo1_tr": "The bill is forwarded to the Conseil constitutionnel by the president of the House in which it was tabled.",
+  "cit_lo4": "La durée de la période de recueil des soutiens est de neuf mois.",
+  "cit_lo4_tr": "The period for collecting signatures of support is nine months.",
+  "cit_lo9": "n'a pas été examinée au moins une fois par chacune des deux assemblées parlementaires dans un délai de six mois à compter de la publication au Journal officiel de la décision du Conseil constitutionnel déclarant qu'elle a obtenu le soutien d'au moins un dixième des électeurs inscrits sur les listes électorales",
+  "cit_lo9_tr": "has not been considered at least once by each of the two Houses of Parliament within six months of the publication in the Journal officiel of the decision of the Conseil constitutionnel declaring that it has obtained the support of at least one tenth of the voters registered on the electoral lists",
+  "cit_lo9_susp": "Ce délai est suspendu entre deux sessions ordinaires.",
+  "cit_lo9_susp_tr": "This period is suspended between two ordinary sessions.",
+  "cit_cc1": "l'entrée en vigueur de celles de leurs dispositions dont l'exécution nécessite des mesures d'application est reportée à la date d'entrée en vigueur de ces mesures",
+  "cit_cc1_tr": "the entry into force of those of their provisions whose implementation requires implementing measures is postponed until the date on which those measures enter into force",
+  "m21_10": "Ces dispositions, qui subordonnent à l'avis conforme de la Conférence nationale de santé l'exercice du pouvoir réglementaire du Premier ministre, sont contraires à la Constitution",
+  "m21_10_tr": "These provisions, which make the exercise of the Prime Minister's regulatory power subject to the binding opinion of the National Health Conference, are contrary to the Constitution",
+  "m21_10_n": "10",
+  "m22_5a": "Elle a ainsi pour seul effet d'abonder le budget de l'État par l'instauration jusqu'au 31 décembre 2025 d'une mesure qui se borne à augmenter le niveau de l'imposition existante des bénéfices de certaines sociétés",
+  "m22_5a_tr": "Its sole effect is thus to increase the State budget by introducing, until 31 December 2025, a measure that merely raises the existing level of taxation of certain companies' profits",
+  "m22_5a_n": "5",
+  "m22_5b": "Elle ne porte donc pas, au sens de l'article 11 de la Constitution, sur une réforme relative à la politique économique de la nation",
+  "m22_5b_tr": "It therefore does not relate, within the meaning of Article 11 of the Constitution, to a reform concerning the economic policy of the nation",
+  "m22_5b_n": "5",
+  "m23_7": "l'article L. 161-17-2 du code de la sécurité sociale prévoit que l'âge d'ouverture du droit à une pension de retraite mentionné à ces mêmes dispositions est fixé à soixante-deux ans",
+  "m23_7_tr": "article L. 161-17-2 of the Social Security Code provides that the age at which the right to a retirement pension under these same provisions opens is set at sixty-two",
+  "m23_7_n": "7",
+  "m23_8": "n'emporte pas de changement de l'état du droit",
+  "m23_8_tr": "does not change the state of the law",
+  "m23_8_n": "8",
+  "m23_9": "le législateur peut toujours modifier, compléter ou abroger des dispositions législatives antérieures, qu'elles résultent d'une loi votée par le Parlement ou d'une loi adoptée par voie de référendum",
+  "m23_9_tr": "the legislature may always amend, supplement or repeal earlier legislative provisions, whether they result from an act passed by Parliament or from an act adopted by referendum",
+  "m23_9_n": "9",
+  "m23_10": "elle ne porte pas, au sens de l'article 11 de la Constitution, sur une « réforme » relative à la politique sociale",
+  "m23_10_tr": "it does not relate, within the meaning of Article 11 of the Constitution, to a \"reform\" concerning social policy",
+  "m23_10_n": "10",
+  "m235_8": "l'interdiction de fixer l'âge légal de départ à la retraite au-delà de soixante-deux ans n'emporte donc pas de changement de l'état du droit",
+  "m235_8_tr": "the prohibition on setting the legal retirement age above sixty-two therefore does not change the state of the law",
+  "m235_8_n": "8",
+  "m235_10": "Elle a ainsi pour seul effet d'abonder le budget d'une branche de la sécurité sociale",
+  "m235_10_tr": "Its sole effect is thus to increase the budget of one branch of social security",
+  "m235_10_n": "10",
+  "m235_11": "la proposition de loi ne porte pas, au sens de l'article 11 de la Constitution, sur une réforme relative à la politique sociale",
+  "m235_11_tr": "the bill does not relate, within the meaning of Article 11 of the Constitution, to a reform concerning social policy",
+  "m235_11_n": "11",
+  "m24_7": "elle porte, au sens de l'article 11 de la Constitution, sur une réforme relative à la politique sociale de la nation",
+  "m24_7_tr": "it relates, within the meaning of Article 11 of the Constitution, to a reform concerning the social policy of the nation",
+  "m24_7_n": "7",
+  "m24_13": "les dispositions de l'article 1er portent une atteinte disproportionnée à ces exigences. Elles sont donc contraires à la Constitution",
+  "m24_13_tr": "the provisions of Article 1 disproportionately infringe these requirements. They are therefore contrary to the Constitution",
+  "m24_13_n": "13",
+  "m26_7": "il résulte des travaux préparatoires de la loi constitutionnelle du 4 août 1995 mentionnée ci-dessus que le constituant a entendu exclure les questions de société des objets mentionnés au premier alinéa de l'article 11 de la Constitution",
+  "m26_7_tr": "it follows from the preparatory work for the constitutional act of 4 August 1995 mentioned above that the framers of the constitutional amendment intended to exclude questions of society from the subjects listed in the first paragraph of Article 11 of the Constitution",
+  "m26_7_n": "7",
+  "m26_7b": "Ainsi, ne relèvent pas de ces objets les questions, d'ordre éthique, relatives à la fin de vie",
+  "m26_7b_tr": "Thus, questions of an ethical nature relating to end of life do not fall within these subjects",
+  "m26_7b_n": "7",
+  "m26_9": "elle ne porte ni sur la politique sociale de la nation et les services publics qui y concourent, ni sur aucun des autres objets mentionnés au premier alinéa de l'article 11 de la Constitution",
+  "m26_9_tr": "it relates neither to the social policy of the nation and the public services contributing to it, nor to any of the other subjects listed in the first paragraph of Article 11 of the Constitution",
+  "m26_9_n": "9",
+  "m26_11": "n'emporte pas de changement de l'état du droit",
+  "m26_11_tr": "does not change the state of the law",
+  "m26_11_n": "11",
+  "m26_13": "la proposition de loi ne porte pas non plus sur une « réforme » au sens de l'article 11 de la Constitution",
+  "m26_13_tr": "nor does the bill relate to a \"reform\" within the meaning of Article 11 of the Constitution",
+  "m26_13_n": "13",
   "releve_le": "5 octobre 2026 (registre du Conseil constitutionnel, stock DILA arrêté à cette date)"
  },
  "affichage_en": {
@@ -714,13 +1044,14 @@
   "cond3": "two",
   "soutiens": "1,093,030",
   "seuil": "4,717,396",
-  "part_seuil": "23",
+  "part_seuil": "23.2",
   "rip_conf_date": "9 May 2019",
   "rip_depuis": "2015",
   "part_2005": "69.4",
   "non_2005": "54.67",
   "part_2000": "30.2",
   "part_1988": "36.9",
+  "oui_2000": "73.21",
   "part_max": "80.1",
   "part_min": "30.2",
   "oui_1992": "51.05",
@@ -735,16 +1066,113 @@
   "non_conformes": "six",
   "cond2_maj": "Four",
   "cond3_maj": "Two",
-  "cit_motif_2023_4": "ne porte pas, au sens de l'article 11 de la Constitution, sur une « réforme » relative à la politique sociale",
   "cit_2007_560": "ne peut intervenir qu'après révision de la Constitution",
+  "cit_elysee": "je suis prêt à recourir au référendum si celui-ci était alors constitutionnellement possible après le vote des chambres dans le cadre strict de notre Constitution",
+  "cit_clause_2004": "n'est pas applicable aux adhésions faisant suite à une conférence intergouvernementale dont la convocation a été décidée par le Conseil européen avant le 1er juillet 2004",
+  "cit_congres_2008": "dans les conditions prévues à l'article 89, alinéa 3, de la Constitution",
+  "declaration_2020": "29 June 2020",
+  "e2021_depot": "20 January 2021",
+  "e2021_an1": "16 March 2021",
+  "e2021_se1": "10 May 2021",
+  "e2021_an2": "22 June 2021",
+  "e2021_se2": "5 July 2021",
+  "congres_votants": "893",
+  "congres_exprimes": "741",
+  "congres_majorite": "445",
+  "congres_pour": "560",
+  "congres_contre": "181",
+  "congres_date": "4 February 2008",
+  "motion_votants": "404",
+  "motion_exprimes": "402",
+  "motion_majorite": "202",
+  "motion_pour": "175",
+  "motion_contre": "227",
+  "motion_date": "6 February 2008",
   "cit_art3": "National sovereignty shall vest in the people, who shall exercise it through their representatives and by means of referendum.",
-  "cit_art11_1": "on a recommendation from the Government when Parliament is in session, or on a joint motion of the two Houses",
+  "cit_art11_peut": "submit to a referendum any Government Bill",
+  "cit_art11_1": "on a recommendation from the Government when Parliament is in session, or on a joint motion of the two Houses, published in the Journal Officiel",
   "cit_art11_objet": "which deals with the organization of the public authorities, or with reforms relating to the economic, social or environmental policy of the Nation, and to the public services contributing thereto, or which provides for authorization to ratify a treaty which, although not contrary to the Constitution, would affect the functioning of the institutions",
+  "cit_art11_decl": "the latter shall make a statement before each House and the same shall be followed by a debate",
+  "cit_art11_promulgue": "the President of the Republic shall promulgate the resulting statute within fifteen days following the proclamation of the results of the vote",
   "cit_art11_rip": "upon the initiative of one fifth of the members of Parliament, supported by one tenth of the voters enrolled on the electoral lists",
+  "cit_art11_abrog": "may not be applied to the repeal of a legislative provision promulgated for less than one year",
+  "cit_art11_deux_ans": "no new referendum proposal on the same subject may be submitted before the end of a period of two years following the date of the vote",
   "cit_art11_soumet": "the President of the Republic may submit it to a referendum",
-  "cit_art89_voies": "a Government Bill to amend the Constitution shall not be submitted to referendum where the President of the Republic decides to submit it to Parliament convened in Congress",
-  "cit_art60": "shall proclaim the results of the referendum",
+  "cit_art19": "Instruments of the President of the Republic, other than those provided for under articles 8 (paragraph one), 11, 12, 16, 18, 54, 56 and 61, shall be countersigned by the Prime Minister",
+  "cit_art53": "may be ratified or approved only by an Act of Parliament",
+  "cit_art60": "The Constitutional Council shall ensure the proper conduct of referendum proceedings as provided for in articles 11 and 89 and in Title XV and shall proclaim the results of the referendum.",
+  "cit_art61": "Private Members' Bills mentioned in article 11 before they are submitted to referendum",
+  "cit_art88_5_1": "Any government bill authorizing the ratification of a treaty pertaining to the accession of a state to the European Union shall be submitted to referendum by the president of the republic.",
+  "cit_art88_5_2": "by passing a motion adopted in identical terms in each House by a three-fifths majority, Parliament may authorize the passing of the bill according to the procedure provided for in paragraph three of article 89",
+  "cit_art88_5_2004": "Article 88-5 is not applicable to accessions that result from an Intergovernmental Conference whose meeting was decided by the European Council before July 1, 2004.",
+  "cit_art89_init": "The President of the Republic, on the recommendation of the Prime Minister, and Members of Parliament alike shall have the right to initiate amendments to the Constitution.",
+  "cit_art89_identiques": "be passed by the two Houses in identical terms",
   "cit_art89_ref": "The amendment shall take effect after approval by referendum.",
+  "cit_art89_voies": "a Government Bill to amend the Constitution shall not be submitted to referendum where the President of the Republic decides to submit it to Parliament convened in Congress",
+  "cit_art89_limites": "No amendment procedure shall be commenced or continued where the integrity of national territory is placed in jeopardy. The republican form of government shall not be the object of any amendment.",
+  "cit_o45_2_delai": "dans le délai d'un mois à compter de la transmission de la proposition de loi",
+  "cit_o45_2_delai_tr": "within one month of the transmission of the bill",
+  "cit_lo1": "La proposition de loi est transmise au Conseil constitutionnel par le président de l'assemblée saisie.",
+  "cit_lo1_tr": "The bill is forwarded to the Conseil constitutionnel by the president of the House in which it was tabled.",
+  "cit_lo4": "La durée de la période de recueil des soutiens est de neuf mois.",
+  "cit_lo4_tr": "The period for collecting signatures of support is nine months.",
+  "cit_lo9": "n'a pas été examinée au moins une fois par chacune des deux assemblées parlementaires dans un délai de six mois à compter de la publication au Journal officiel de la décision du Conseil constitutionnel déclarant qu'elle a obtenu le soutien d'au moins un dixième des électeurs inscrits sur les listes électorales",
+  "cit_lo9_tr": "has not been considered at least once by each of the two Houses of Parliament within six months of the publication in the Journal officiel of the decision of the Conseil constitutionnel declaring that it has obtained the support of at least one tenth of the voters registered on the electoral lists",
+  "cit_lo9_susp": "Ce délai est suspendu entre deux sessions ordinaires.",
+  "cit_lo9_susp_tr": "This period is suspended between two ordinary sessions.",
+  "cit_cc1": "l'entrée en vigueur de celles de leurs dispositions dont l'exécution nécessite des mesures d'application est reportée à la date d'entrée en vigueur de ces mesures",
+  "cit_cc1_tr": "the entry into force of those of their provisions whose implementation requires implementing measures is postponed until the date on which those measures enter into force",
+  "m21_10": "Ces dispositions, qui subordonnent à l'avis conforme de la Conférence nationale de santé l'exercice du pouvoir réglementaire du Premier ministre, sont contraires à la Constitution",
+  "m21_10_tr": "These provisions, which make the exercise of the Prime Minister's regulatory power subject to the binding opinion of the National Health Conference, are contrary to the Constitution",
+  "m21_10_n": "10",
+  "m22_5a": "Elle a ainsi pour seul effet d'abonder le budget de l'État par l'instauration jusqu'au 31 décembre 2025 d'une mesure qui se borne à augmenter le niveau de l'imposition existante des bénéfices de certaines sociétés",
+  "m22_5a_tr": "Its sole effect is thus to increase the State budget by introducing, until 31 December 2025, a measure that merely raises the existing level of taxation of certain companies' profits",
+  "m22_5a_n": "5",
+  "m22_5b": "Elle ne porte donc pas, au sens de l'article 11 de la Constitution, sur une réforme relative à la politique économique de la nation",
+  "m22_5b_tr": "It therefore does not relate, within the meaning of Article 11 of the Constitution, to a reform concerning the economic policy of the nation",
+  "m22_5b_n": "5",
+  "m23_7": "l'article L. 161-17-2 du code de la sécurité sociale prévoit que l'âge d'ouverture du droit à une pension de retraite mentionné à ces mêmes dispositions est fixé à soixante-deux ans",
+  "m23_7_tr": "article L. 161-17-2 of the Social Security Code provides that the age at which the right to a retirement pension under these same provisions opens is set at sixty-two",
+  "m23_7_n": "7",
+  "m23_8": "n'emporte pas de changement de l'état du droit",
+  "m23_8_tr": "does not change the state of the law",
+  "m23_8_n": "8",
+  "m23_9": "le législateur peut toujours modifier, compléter ou abroger des dispositions législatives antérieures, qu'elles résultent d'une loi votée par le Parlement ou d'une loi adoptée par voie de référendum",
+  "m23_9_tr": "the legislature may always amend, supplement or repeal earlier legislative provisions, whether they result from an act passed by Parliament or from an act adopted by referendum",
+  "m23_9_n": "9",
+  "m23_10": "elle ne porte pas, au sens de l'article 11 de la Constitution, sur une « réforme » relative à la politique sociale",
+  "m23_10_tr": "it does not relate, within the meaning of Article 11 of the Constitution, to a \"reform\" concerning social policy",
+  "m23_10_n": "10",
+  "m235_8": "l'interdiction de fixer l'âge légal de départ à la retraite au-delà de soixante-deux ans n'emporte donc pas de changement de l'état du droit",
+  "m235_8_tr": "the prohibition on setting the legal retirement age above sixty-two therefore does not change the state of the law",
+  "m235_8_n": "8",
+  "m235_10": "Elle a ainsi pour seul effet d'abonder le budget d'une branche de la sécurité sociale",
+  "m235_10_tr": "Its sole effect is thus to increase the budget of one branch of social security",
+  "m235_10_n": "10",
+  "m235_11": "la proposition de loi ne porte pas, au sens de l'article 11 de la Constitution, sur une réforme relative à la politique sociale",
+  "m235_11_tr": "the bill does not relate, within the meaning of Article 11 of the Constitution, to a reform concerning social policy",
+  "m235_11_n": "11",
+  "m24_7": "elle porte, au sens de l'article 11 de la Constitution, sur une réforme relative à la politique sociale de la nation",
+  "m24_7_tr": "it relates, within the meaning of Article 11 of the Constitution, to a reform concerning the social policy of the nation",
+  "m24_7_n": "7",
+  "m24_13": "les dispositions de l'article 1er portent une atteinte disproportionnée à ces exigences. Elles sont donc contraires à la Constitution",
+  "m24_13_tr": "the provisions of Article 1 disproportionately infringe these requirements. They are therefore contrary to the Constitution",
+  "m24_13_n": "13",
+  "m26_7": "il résulte des travaux préparatoires de la loi constitutionnelle du 4 août 1995 mentionnée ci-dessus que le constituant a entendu exclure les questions de société des objets mentionnés au premier alinéa de l'article 11 de la Constitution",
+  "m26_7_tr": "it follows from the preparatory work for the constitutional act of 4 August 1995 mentioned above that the framers of the constitutional amendment intended to exclude questions of society from the subjects listed in the first paragraph of Article 11 of the Constitution",
+  "m26_7_n": "7",
+  "m26_7b": "Ainsi, ne relèvent pas de ces objets les questions, d'ordre éthique, relatives à la fin de vie",
+  "m26_7b_tr": "Thus, questions of an ethical nature relating to end of life do not fall within these subjects",
+  "m26_7b_n": "7",
+  "m26_9": "elle ne porte ni sur la politique sociale de la nation et les services publics qui y concourent, ni sur aucun des autres objets mentionnés au premier alinéa de l'article 11 de la Constitution",
+  "m26_9_tr": "it relates neither to the social policy of the nation and the public services contributing to it, nor to any of the other subjects listed in the first paragraph of Article 11 of the Constitution",
+  "m26_9_n": "9",
+  "m26_11": "n'emporte pas de changement de l'état du droit",
+  "m26_11_tr": "does not change the state of the law",
+  "m26_11_n": "11",
+  "m26_13": "la proposition de loi ne porte pas non plus sur une « réforme » au sens de l'article 11 de la Constitution",
+  "m26_13_tr": "nor does the bill relate to a \"reform\" within the meaning of Article 11 of the Constitution",
+  "m26_13_n": "13",
   "releve_le": "5 October 2026 (Conseil constitutionnel register, DILA database as at that date)"
  }
 }

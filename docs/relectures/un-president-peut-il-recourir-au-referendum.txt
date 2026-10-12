@@ -1,0 +1,418 @@
+# relu le 2026-10-12 ; texte servi de /un-president-peut-il-recourir-au-referendum/, build de 2ef9d30 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+ENCette page existe aussi en anglais — English version
+Un président peut-il recourir au référendum ?
+Un président peut-il soumettre une réforme aux électeurs quand il le veut ?
+La Constitution lui en donne le pouvoir par trois voies, et chacune a ses conditions : pour un projet de loi, une proposition du Gouvernement ou des deux assemblées, et un sujet que l'article 11 délimite ; pour une révision de la Constitution, un vote des deux assemblées en termes identiques ; pour l'adhésion d'un État à l'Union européenne, le référendum est la règle, sauf si le Parlement en décide autrement.
+Du 4 octobre 1958 au 5 octobre 2026, neuf référendums nationaux ont eu lieu, le dernier le 29 mai 2005.
+Depuis 2015, des parlementaires soutenus par des électeurs peuvent aussi engager une procédure qui peut y conduire : elle n'a conduit à aucun scrutin.
+Promesses présidentielles
+↓ Graphiques, données et citations à réutiliserRéutiliser cette page
+Promettre de soumettre une réforme aux électeurs, c’est promettre de passer par une autre voie que le seul vote du Parlement.
+La Constitution l’organise : « La souveraineté nationale appartient au peuple qui l'exerce par ses représentants et par la voie du référendum. » (art.
+3).
+Cette page dit qui peut soumettre un texte au référendum, par quelle voie et sur quels sujets, puis ce qu’ont décidé les scrutins qui ont eu lieu et ce que sont devenues les initiatives partagées, à partir du registre du Conseil constitutionnel, rapproché scrutin par scrutin du Journal officiel.
+Elle s’appuie sur la lettre des textes, les décisions citées et les documents officiels lus, et sépare ce que disent les textes, ce qui a été appliqué et ce que le Conseil constitutionnel en a déduit ; elle ne tient pas lieu de consultation juridique.
+Qui peut soumettre un texte au référendum ?
+Trois articles de la Constitution permettent de soumettre un texte au référendum : l’article 11 pour un projet de loi, l’article 89 pour une révision de la Constitution, l’article 88-5 pour l’adhésion d’un État à l’Union européenne.
+Ils ne laissent pas au président la même latitude : selon la voie, il décide sur une proposition qu’il ne fait pas lui-même, après un vote des deux assemblées (l’Assemblée nationale et le Sénat), ou parce que l’article dispose que le projet « est soumis » au référendum.
+Trois articles, mais quatre modalités : l’article 11 ouvre aussi l’initiative partagée, où des parlementaires soutenus par des électeurs engagent la procédure (plus bas).
+L’article 11, pour un projet de loi.
+La proposition vient du Gouvernement, quand le Parlement est en session, ou des deux assemblées ensemble ; elle est publiée au Journal officiel.
+Le président décide ensuite : il « peut soumettre au référendum tout projet de loi », sur l’un des sujets que l’article énumère (l’organisation des pouvoirs publics, des réformes de politique économique, sociale ou environnementale et les services publics qui y concourent, la ratification de certains traités).
+Quand c’est le Gouvernement qui propose, il fait devant chaque assemblée une déclaration suivie d’un débat.
+L’article dit « peut » : la proposition est nécessaire, et le texte n’en fait pas une obligation pour le président.
+Celui-ci signe seul l’acte de soumission : l’article 19 le range parmi les exceptions au contreseing, c’est-à-dire à la signature du Premier ministre (et, le cas échéant, des ministres responsables) ajoutée à celle du président (voir ce que le président peut décider seul).
+Si le texte est adopté, le président promulgue la loi dans les quinze jours.
+L’article 11, mot pour mot
+Le président « peut soumettre au référendum tout projet de loi », mais seulement « sur proposition du Gouvernement pendant la durée des sessions ou sur proposition conjointe des deux assemblées, publiées au Journal officiel », et sur un sujet que l’article délimite : « portant sur l'organisation des pouvoirs publics, sur des réformes relatives à la politique économique, sociale ou environnementale de la nation et aux services publics qui y concourent, ou tendant à autoriser la ratification d'un traité qui, sans être contraire à la Constitution, aurait des incidences sur le fonctionnement des institutions ».
+Lorsque le référendum est organisé sur proposition du Gouvernement, « celui-ci fait, devant chaque assemblée, une déclaration qui est suivie d'un débat ».
+Si le texte est adopté, « le Président de la République promulgue la loi dans les quinze jours qui suivent la proclamation des résultats de la consultation ».
+L’article 89, pour une révision de la Constitution.
+Le texte peut venir du Gouvernement : le président le présente sur proposition du Premier ministre, et il s’appelle alors un projet de révision.
+Il peut aussi venir de députés ou de sénateurs : c’est une proposition de révision.
+Dans les deux cas, il doit être « voté par les deux assemblées en termes identiques », puis approuvé par référendum.
+Le projet du Gouvernement, et lui seul, a une seconde voie : le président peut le soumettre au Parlement réuni en Congrès, où il doit obtenir les trois cinquièmes des suffrages exprimés.
+Une proposition venue des parlementaires ne peut donc aboutir que par référendum.
+La décision de convoquer le Congrès ne figure pas dans la liste des exceptions de l’article 19 ; par la lettre de cet article, elle est contresignée.
+L’article 89, mot pour mot
+« L'initiative de la révision de la Constitution appartient concurremment au Président de la République sur proposition du Premier ministre et aux membres du Parlement. » Le projet ou la proposition doit être « voté par les deux assemblées en termes identiques ».
+Une fois le texte voté, « La révision est définitive après avoir été approuvée par référendum. » Toutefois, « le projet de révision n'est pas présenté au référendum lorsque le Président de la République décide de le soumettre au Parlement convoqué en Congrès », où il doit réunir les trois cinquièmes des suffrages exprimés.
+L’article borne enfin toute révision : « Aucune procédure de révision ne peut être engagée ou poursuivie lorsqu'il est porté atteinte à l'intégrité du territoire.
+La forme républicaine du Gouvernement ne peut faire l'objet d'une révision. »
+L’article 88-5, pour l’adhésion d’un État à l’Union européenne.
+Le référendum est ici la règle : le projet de loi qui autorise la ratification d’un traité d’adhésion est soumis au référendum par le président.
+Le Parlement peut l’éviter si chaque assemblée vote, aux trois cinquièmes, une même motion : le projet passe alors par le Congrès, aux trois cinquièmes des suffrages exprimés.
+L’article ne vaut pas pour toutes les adhésions : la loi constitutionnelle du 23 juillet 2008 (art.
+47) en exclut certaines, selon la date de la conférence qui les a préparées.
+L’acte de soumission n’est pas non plus dans la liste de l’article 19 : il est contresigné.
+Aucun des neuf scrutins du registre n’a eu lieu sur ce fondement.
+Ce que la France décide seule ou avec les autres États membres est l’objet d’une autre page de ce dossier.
+L’article 88-5 et sa clause de 2004, mot pour mot
+« Tout projet de loi autorisant la ratification d'un traité relatif à l'adhésion d'un État à l'Union européenne est soumis au référendum par le Président de la République. » Toutefois, « par le vote d'une motion adoptée en termes identiques par chaque assemblée à la majorité des trois cinquièmes, le Parlement peut autoriser l'adoption du projet de loi selon la procédure prévue au troisième alinéa de l'article 89 », c’est-à-dire par le Congrès, aux trois cinquièmes des suffrages exprimés.
+La loi constitutionnelle du 23 juillet 2008 (art.
+47) dispose que l’article « n'est pas applicable aux adhésions faisant suite à une conférence intergouvernementale dont la convocation a été décidée par le Conseil européen avant le 1er juillet 2004 ».
+Le Conseil constitutionnel contrôle, il ne soumet rien. « Le Conseil constitutionnel veille à la régularité des opérations de référendum prévues aux articles 11 et 89 et au titre XV.
+Il en proclame les résultats. » (art.
+60).
+L’article 61 lui fait aussi examiner « les propositions de loi mentionnées à l'article 11 avant qu'elles ne soient soumises au référendum » : c’est la voie de l’initiative partagée, plus bas.
+Combien de référendums ont eu lieu, et qu’ont-ils décidé ?
+Référendums nationaux dont le Conseil constitutionnel a proclamé les résultats, du 4 octobre 1958 au 5 octobre 2026.
+Hors référendum du 28 septembre 1958 (adoption de la Constitution, avant la création du Conseil) et consultations locales.
+Le oui y est une part des suffrages exprimés, la participation une part des inscrits : en 2000, 73,21 % de oui parmi les exprimés, pour une participation de 30,2 % des inscrits.
+Télécharger · Citer · Données
+Les scrutins en tableau
+Scrutin
+Objet
+Article
+Inscrits
+Participation
+Oui (exprimés)
+Issue
+8 janvier 1961
+Autodétermination des populations algériennes
+11
+32 520 233
+73,8 %
+74,99 %
+Adopté (loi n° 61-44)
+8 avril 1962
+Accords d'Évian sur l'Algérie
+11
+27 582 072
+75,3 %
+90,81 %
+Adopté (loi n° 62-421)
+28 octobre 1962
+Élection du président de la République au suffrage universel
+11
+28 185 478
+77,0 %
+62,25 %
+Adopté (loi n° 62-1292)
+27 avril 1969
+Création de régions et rénovation du Sénat
+11
+29 392 390
+80,1 %
+47,59 %
+Rejeté
+23 avril 1972
+Élargissement de la Communauté européenne
+11
+29 820 464
+60,2 %
+68,32 %
+Adopté (loi n° 72-339)
+6 novembre 1988
+Statut de la Nouvelle-Calédonie et autodétermination en 1998
+11
+38 025 823
+36,9 %
+80,00 %
+Adopté (loi n° 88-1028)
+20 septembre 1992
+Ratification du traité sur l'Union européenne (Maastricht)
+11
+38 305 534
+69,7 %
+51,05 %
+Adopté (loi n° 92-1017)
+24 septembre 2000
+Durée du mandat du président de la République (quinquennat)
+89
+39 941 192
+30,2 %
+73,21 %
+Adopté (loi n° 2000-964)
+29 mai 2005
+Ratification du traité établissant une Constitution pour l'Europe
+11
+41 789 202
+69,4 %
+45,33 %
+Rejeté
+Le résultat en une phrase.
+Du 4 octobre 1958 au 5 octobre 2026, neuf référendums nationaux ont été organisés ; sept ont adopté le texte soumis, deux l’ont rejeté, et le dernier date du 29 mai 2005.
+Huit scrutins ont eu lieu sur le fondement de l’article 11, un seul sur celui de l’article 89 : le quinquennat, en 2000.
+Deux projets soumis au titre de l’article 11 portaient pourtant sur la Constitution elle-même : celui de 1962, adopté, qui modifie ses articles 6 et 7 pour faire élire le président au suffrage universel direct (loi n° 62-1292 du 6 novembre 1962), et celui de 1969, rejeté.
+Ce recours à l’article 11 pour réviser la Constitution a été contesté : saisi de la loi de 1962 par le président du Sénat, le Conseil constitutionnel s’est déclaré incompétent (décision n° 62-20 DC du 6 novembre 1962) ; selon l’Assemblée nationale, cette pratique n’a plus été employée depuis l’échec de 1969.
+La participation a varié de 30,2 % (2000) à 80,1 % (1969).
+Les deux textes rejetés l’ont été en 1969 (régions et Sénat), avec 52,41 % de non parmi les suffrages exprimés, et en 2005 (traité établissant une Constitution pour l’Europe), avec 54,67 %.
+Le référendum d’initiative partagée a-t-il déjà abouti ?
+Une autre voie, créée par la révision de 2008, s’applique depuis le 1er janvier 2015 : un référendum peut être organisé « à l'initiative d'un cinquième des membres du Parlement, soutenue par un dixième des électeurs inscrits sur les listes électorales ».
+Ce n’est pas une initiative des citoyens : le texte vient de parlementaires, les électeurs le soutiennent.
+Le parcours s’est toujours arrêté avant le vote : de 2015 au 5 octobre 2026, sept propositions ont été soumises au Conseil constitutionnel, une a été jugée conforme, aucune n’a réuni le soutien d’un dixième des inscrits, et aucune n’a donc été soumise au référendum.
+Ce seuil franchi, un dernier filtre resterait : il suffit que chaque assemblée examine la proposition une fois, même sans l’adopter, pour que la condition de sa soumission au référendum ne soit pas remplie.
+La procédure tient en quatre étapes.
+Un cinquième au moins des membres du Parlement dépose une proposition de loi ; « La proposition de loi est transmise au Conseil constitutionnel par le président de l'assemblée saisie. » (loi organique du 6 décembre 2013, art.
+1er).
+Le Conseil vérifie, « dans le délai d'un mois à compter de la transmission de la proposition de loi », que le cinquième est atteint, que l’objet relève de l’article 11 et respecte deux délais, et qu’aucune disposition n’est contraire à la Constitution (ordonnance du 7 novembre 1958, art.
+45-2).
+Les deux délais sont ceux de l’article 11 : la proposition « ne peut avoir pour objet l'abrogation d'une disposition législative promulguée depuis moins d'un an », et, après un rejet par le peuple, « aucune nouvelle proposition de référendum portant sur le même sujet ne peut être présentée avant l'expiration d'un délai de deux ans suivant la date du scrutin ».
+Si elle est conforme, les électeurs inscrits peuvent la soutenir : « La durée de la période de recueil des soutiens est de neuf mois. » (loi organique, art.
+4).
+Si un dixième des inscrits l’a soutenue, le Conseil constitutionnel le déclare, et chacune des deux assemblées a six mois, à compter de la publication de cette décision au Journal officiel, pour examiner la proposition ; « Ce délai est suspendu entre deux sessions ordinaires. » (loi organique, art.
+9).
+Si l’une d’elles ne l’a pas examinée dans ce délai, le président la soumet au référendum.
+Pour qu’il n’y ait pas de référendum, il suffit donc que chaque assemblée examine la proposition au moins une fois, même sans l’adopter.
+Pour cette étape, l’article 11 emploie l’indicatif : « le Président de la République la soumet au référendum », là où son premier alinéa dit « peut soumettre ».
+L’article 9 de la loi organique, mot pour mot
+Le président soumet la proposition au référendum si elle « n'a pas été examinée au moins une fois par chacune des deux assemblées parlementaires dans un délai de six mois à compter de la publication au Journal officiel de la décision du Conseil constitutionnel déclarant qu'elle a obtenu le soutien d'au moins un dixième des électeurs inscrits sur les listes électorales ». « Ce délai est suspendu entre deux sessions ordinaires. »
+Propositions de loi présentées au titre de l’article 11, alinéa 3, dont le Conseil constitutionnel a été saisi, de 2015 au 5 octobre 2026, et ce qu’elles sont devenues.
+Télécharger · Citer · Données
+Le résultat en une phrase.
+De 2015 au 5 octobre 2026, le Conseil constitutionnel a été saisi de sept propositions de loi au titre de l’article 11 ; une a été jugée conforme et a recueilli 1 093 030 soutiens pour 4 717 396 requis, soit 23,2 % du seuil ; aucune n’a été soumise au référendum.
+Les décisions en tableau, avec leurs motifs
+Décision
+Numéro
+Proposition de loi
+Solution
+Motifs cités (considérants)
+9 mai 2019
+2019-1 RIP
+Aérodromes de Paris, service public national
+Conforme ; 1 093 030 soutiens pour 4 717 396 requis
+—
+6 août 2021
+2021-2 RIP
+Service public hospitalier (loi de programmation)
+Non conforme : 3° de l'art.
+45-2, disposition contraire à la Constitution
+Consid.
+10 : « Ces dispositions, qui subordonnent à l'avis conforme de la Conférence nationale de santé l'exercice du pouvoir réglementaire du Premier ministre, sont contraires à la Constitution ».
+25 octobre 2022
+2022-3 RIP
+Contribution sur les bénéfices exceptionnels des grandes entreprises
+Non conforme : 2° de l'art.
+45-2, objet de l'article 11
+Consid.
+5 : « Elle a ainsi pour seul effet d'abonder le budget de l'État par l'instauration jusqu'au 31 décembre 2025 d'une mesure qui se borne à augmenter le niveau de l'imposition existante des bénéfices de certaines sociétés » ; « Elle ne porte donc pas, au sens de l'article 11 de la Constitution, sur une réforme relative à la politique économique de la nation ».
+14 avril 2023
+2023-4 RIP
+Âge légal de départ à la retraite : pas au-delà de 62 ans
+Non conforme : 2° de l'art.
+45-2, objet de l'article 11
+Consid.
+7 : « l'article L.
+161-17-2 du code de la sécurité sociale prévoit que l'âge d'ouverture du droit à une pension de retraite mentionné à ces mêmes dispositions est fixé à soixante-deux ans ».
+Consid.
+8 : « n'emporte pas de changement de l'état du droit ».
+Consid.
+9 : « le législateur peut toujours modifier, compléter ou abroger des dispositions législatives antérieures, qu'elles résultent d'une loi votée par le Parlement ou d'une loi adoptée par voie de référendum ».
+Consid.
+10 : « elle ne porte pas, au sens de l'article 11 de la Constitution, sur une « réforme » relative à la politique sociale ».
+3 mai 2023
+2023-5 RIP
+Âge légal de départ à la retraite : pas au-delà de 62 ans (seconde proposition)
+Non conforme : 2° de l'art.
+45-2, objet de l'article 11
+Consid.
+8 : « l'interdiction de fixer l'âge légal de départ à la retraite au-delà de soixante-deux ans n'emporte donc pas de changement de l'état du droit ».
+Consid.
+10 : « Elle a ainsi pour seul effet d'abonder le budget d'une branche de la sécurité sociale ».
+Consid.
+11 : « la proposition de loi ne porte pas, au sens de l'article 11 de la Constitution, sur une réforme relative à la politique sociale ».
+11 avril 2024
+2024-6 RIP
+Accès des étrangers aux prestations sociales
+Non conforme : 3° de l'art.
+45-2, disposition contraire à la Constitution
+Consid.
+7 : « elle porte, au sens de l'article 11 de la Constitution, sur une réforme relative à la politique sociale de la nation ».
+Consid.
+13 : « les dispositions de l'article 1er portent une atteinte disproportionnée à ces exigences.
+Elles sont donc contraires à la Constitution ».
+17 juin 2026
+2026-7 RIP
+Exclure de la notion de soin la provocation active de la mort
+Non conforme : 2° de l'art.
+45-2, objet de l'article 11
+Consid.
+7 : « il résulte des travaux préparatoires de la loi constitutionnelle du 4 août 1995 mentionnée ci-dessus que le constituant a entendu exclure les questions de société des objets mentionnés au premier alinéa de l'article 11 de la Constitution » ; « Ainsi, ne relèvent pas de ces objets les questions, d'ordre éthique, relatives à la fin de vie ».
+Consid.
+9 : « elle ne porte ni sur la politique sociale de la nation et les services publics qui y concourent, ni sur aucun des autres objets mentionnés au premier alinéa de l'article 11 de la Constitution ».
+Consid.
+11 : « n'emporte pas de changement de l'état du droit ».
+Consid.
+13 : « la proposition de loi ne porte pas non plus sur une « réforme » au sens de l'article 11 de la Constitution ».
+Les six autres propositions ont été jugées non conformes.
+Deux contenaient une disposition contraire à la Constitution (2021-2 et 2024-6 RIP).
+Quatre ne remplissaient pas la condition d’objet.
+Le Conseil dit pourquoi, et la page le cite sans juger ses raisons ; le tableau ci-dessus donne, décision par décision, les motifs et leurs considérants.
+Les propositions sur la retraite à 62 ans.
+À la date de la saisine, constate le Conseil, « l'article L.
+161-17-2 du code de la sécurité sociale prévoit que l'âge d'ouverture du droit à une pension de retraite mentionné à ces mêmes dispositions est fixé à soixante-deux ans » (décision 2023-4 RIP, consid.
+7).
+La proposition, qui interdisait de fixer cet âge au-delà, « n'emporte pas de changement de l'état du droit » (consid.
+8), et son adoption par référendum n’y changerait rien, car « le législateur peut toujours modifier, compléter ou abroger des dispositions législatives antérieures, qu'elles résultent d'une loi votée par le Parlement ou d'une loi adoptée par voie de référendum » (consid.
+9).
+Le Conseil en conclut qu’« elle ne porte pas, au sens de l'article 11 de la Constitution, sur une « réforme » relative à la politique sociale » (consid.
+10).
+La seconde proposition, déposée au Sénat (2023-5 RIP), est écartée pour la même raison ; de la hausse de prélèvement qu’elle ajoutait sur des revenus du patrimoine et des produits de placement, le Conseil relève : « Elle a ainsi pour seul effet d'abonder le budget d'une branche de la sécurité sociale » (consid.
+10).
+La proposition sur la fin de vie.
+La décision 2026-7 RIP repose d’abord sur un autre motif, fondé sur les travaux préparatoires de la révision constitutionnelle de 1995 : « il résulte des travaux préparatoires de la loi constitutionnelle du 4 août 1995 mentionnée ci-dessus que le constituant a entendu exclure les questions de société des objets mentionnés au premier alinéa de l'article 11 de la Constitution.
+Ainsi, ne relèvent pas de ces objets les questions, d'ordre éthique, relatives à la fin de vie. » (consid.
+7).
+C’est l’interprétation que le Conseil donne de ces travaux : l’article 11 ne mentionne pas les « questions de société ».
+La décision porte sur les objets que le premier alinéa de l’article 11 ouvre au référendum ; elle ne se prononce pas sur une révision de la Constitution (art.
+89).
+La proposition portant sur la fin de vie, le Conseil juge qu’« elle ne porte ni sur la politique sociale de la nation et les services publics qui y concourent, ni sur aucun des autres objets mentionnés au premier alinéa de l'article 11 de la Constitution » (consid.
+9).
+La décision ajoute ensuite le motif retenu pour les retraites : la proposition « n'emporte pas de changement de l'état du droit » (consid.
+11), donc « la proposition de loi ne porte pas non plus sur une « réforme » au sens de l'article 11 de la Constitution » (consid.
+13).
+Trois autres propositions ont été déposées « en application de l’article 11 » sans qu’aucune décision du Conseil constitutionnel ne les concerne dans le registre consulté : au Sénat, n° 459 (20 avril 2018, contrôle de l’immigration) ; à l’Assemblée nationale, n° 1749 (6 mars 2019, mesures contre les djihadistes français ayant combattu en Irak et en Syrie) et n° 5203 (5 avril 2022, mauvais traitements envers les animaux).
+Elles ne sont pas comptées parmi les sept saisines, dont l’unité est la décision du Conseil.
+Elles portaient respectivement la signature de deux, deux et un parlementaires.
+L’article 11 prévoit l’initiative d’un cinquième des membres du Parlement.
+La loi organique prévoit que la proposition est transmise au Conseil constitutionnel par le président de l’assemblée saisie ; les sources consultées ne permettent pas d’établir ce qu’il est advenu de ces textes.
+Ce qu’un référendum décide, et ce qu’il ne fait pas
+Le référendum tranche le texte soumis : adopté, un projet de loi de l’article 11 devient une loi, que le président promulgue dans les quinze jours, et un projet de révision de l’article 89 modifie la Constitution.
+Le scrutin ne garantit pas, à lui seul, la mise en œuvre de ce texte ni le résultat auquel une promesse l’associe.
+Une loi adoptée par référendum reste une loi : le législateur peut ensuite la modifier ou l’abroger, comme le rappelle le Conseil constitutionnel dans la décision 2023-4 RIP citée plus haut.
+Certaines de ses dispositions peuvent attendre des textes d’application, car le code civil dispose que, pour les lois, « l'entrée en vigueur de celles de leurs dispositions dont l'exécution nécessite des mesures d'application est reportée à la date d'entrée en vigueur de ces mesures » (art.
+1er ; voir une loi votée s’applique-t-elle tout de suite ?).
+Le scrutin ne raccourcit pas non plus le temps qu’une mesure met à produire ses effets (une promesse peut-elle produire ses effets en cinq ans ?), et ne choisit pas l’indicateur qui dira si la promesse est tenue.
+La proclamation dit combien de bulletins portaient oui et non ; elle ne dit pas pourquoi.
+Que s’est-il passé après le rejet de 2005 ?
+Le 29 mai 2005, le projet de loi autorisant la ratification du traité établissant une Constitution pour l’Europe a été rejeté.
+En 2008, la ratification d’un autre traité, celui de Lisbonne, a été autorisée par une loi, après une révision de la Constitution approuvée par le Congrès ; aucun référendum n’a eu lieu.
+Le traité de Lisbonne, signé après le rejet de 2005, est un autre traité ; son intitulé, « traité de Lisbonne modifiant le traité sur l’Union européenne et le traité instituant la Communauté européenne », dit qu’il modifie les traités existants.
+Le Conseil constitutionnel a jugé que l’autorisation de le ratifier « ne peut intervenir qu'après révision de la Constitution » (décision n° 2007-560 DC du 20 décembre 2007).
+Le 4 février 2008, le Parlement réuni en Congrès a approuvé le projet de loi constitutionnelle modifiant le titre XV de la Constitution « dans les conditions prévues à l'article 89, alinéa 3, de la Constitution » (scrutin du Congrès) ; c’est la loi constitutionnelle n° 2008-103 du même jour.
+La ratification du traité de Lisbonne a ensuite été autorisée par la loi n° 2008-125 du 13 février 2008.
+Trois plans se distinguent ici.
+En droit, l’article 53 dispose que les traités qu’il énumère « ne peuvent être ratifiés ou approuvés qu'en vertu d'une loi » ; l’article 11 permet de soumettre au référendum un projet de loi autorisant la ratification de certains traités, mais le texte dit que le président « peut » le faire, sans en faire une obligation.
+Sur le contenu, l’intitulé établit la forme du traité de Lisbonne, pas le rapport entre son contenu et celui du texte rejeté, que cette page ne compare pas.
+En politique, la page s’en tient à deux votes publiés.
+Le 4 février 2008, le Congrès a approuvé la révision par 560 voix contre 181, pour une majorité requise de 445, les trois cinquièmes des suffrages exprimés.
+Le 6 février 2008, l’Assemblée nationale a rejeté, par 227 voix contre 175, une motion présentée par M.
+Ayrault et plusieurs de ses collègues, tendant à soumettre au référendum le projet de loi autorisant la ratification (scrutin n° 82).
+Une révision annoncée avec un référendum, en 2020 et 2021.
+Le 29 juin 2020, devant la Convention citoyenne pour le climat, le président de la République s’est dit favorable à la réécriture de l’article premier de la Constitution qu’elle proposait, pour y introduire la biodiversité, l’environnement et la lutte contre le réchauffement climatique, et a déclaré : « je suis prêt à recourir au référendum si celui-ci était alors constitutionnellement possible après le vote des chambres dans le cadre strict de notre Constitution » (texte publié par l’Élysée).
+Le projet de loi constitutionnelle complétant l’article 1er et relatif à la préservation de l’environnement a été déposé à l’Assemblée nationale le 20 janvier 2021.
+Adopté par l’Assemblée le 16 mars 2021, modifié par le Sénat le 10 mai 2021, adopté avec modifications par l’Assemblée le 22 juin 2021, il a été de nouveau modifié par le Sénat le 5 juillet 2021 : c’est la dernière étape du dossier législatif du Sénat.
+Les deux assemblées ne l’ont donc jamais voté en termes identiques, ce que l’article 89 exige avant tout référendum.
+Ce cas montre une condition de l’article 89 qui n’a pas été remplie ; il n’explique pas pourquoi aucun référendum n’a eu lieu depuis 2005.
+Que demander à une promesse de référendum ?
+Sur quoi ?
+Un projet de loi sur un sujet de l’article 11, une révision de la Constitution, ou l’adhésion d’un État à l’Union européenne : chaque objet a sa voie, et pour l’initiative partagée le Conseil constitutionnel contrôle l’objet avant tout recueil de soutiens.
+Par quelle voie ?
+Article 11, article 89, article 88-5, ou initiative partagée.
+Avec qui ?
+Le Gouvernement ou les deux assemblées, qui proposent (art.
+11) ; les deux assemblées, qui votent le texte en termes identiques (art.
+89) ; un cinquième des parlementaires et un dixième des électeurs (initiative partagée).
+Quelles conditions restent à franchir, et qui les vérifie ?
+Une proposition publiée, une déclaration suivie d’un débat, un vote identique des deux assemblées, ou le contrôle du Conseil constitutionnel et le recueil des soutiens ; le Conseil veille ensuite à la régularité du scrutin.
+Pour obtenir quoi ?
+Le scrutin tranche un texte : une loi, que le président promulgue dans les quinze jours, ou une révision de la Constitution.
+Ses mesures d’application et ses effets viennent ensuite, et se jugent à part.
+Ce que cette page ne dit pas
+Elle ne dit pas si le référendum est un bon ou un mauvais instrument, ni pourquoi aucun n’a été organisé depuis 2005 : les sources consultées (registre du Conseil constitutionnel, Journal officiel, dossiers législatifs, déclaration de 2020) ne l’établissent pas, et une intention ne se lit pas dans un acte.
+Elle ne compte ni le référendum du 28 septembre 1958, antérieur au Conseil constitutionnel, ni les consultations locales.
+Elle lit la Constitution en vigueur et les décisions citées, sans doctrine ni autre jurisprudence, et ne tient pas lieu de consultation juridique.
+Le registre est arrêté au 5 octobre 2026 ; le cas de 2020 et 2021 repose sur des pages consultées le 12 octobre 2026.
+Ce qu'un vote décide
+Un président peut-il tenir ses promesses ?
+Ce qu'il peut vraiment décider — et ce qui lui échappe
+Cette page montre que le référendum tranche un texte, pas ses suites.
+Le livre suit neuf promesses écrites, datées et signées jusqu’à leur dernier obstacle, et consacre sa clôture au référendum de 2005 et à ce qu’il en est advenu.
+Il ne donne aucun conseil de vote.
+Journalistes, enseignants, chercheurs, responsables publics ou associatifs
+Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock.
+Demander l'exemplaire offert →
+Version papier : 19,90 € · Kindle : 9,99 €
+Sommaire, extraits et recensions →
+Questions fréquentes
+Le président de la République peut-il organiser un référendum quand il le veut ?
+Non, pas seul et pas sur tout sujet.
+Selon l'article 11 de la Constitution, il peut soumettre au référendum un projet de loi « sur proposition du Gouvernement pendant la durée des sessions ou sur proposition conjointe des deux assemblées, publiées au Journal officiel », et seulement sur les sujets que l'article énumère.
+Une révision de la Constitution (article 89) doit d'abord être votée en termes identiques par les deux assemblées.
+Pour la ratification d'un traité d'adhésion d'un État à l'Union européenne (article 88-5), le référendum est la règle, sauf si les deux assemblées votent une motion à la majorité des trois cinquièmes.
+Le président doit-il soumettre au référendum une proposition qu'on lui adresse ?
+Pour l'article 11, le texte dit qu'il « peut soumettre au référendum tout projet de loi » sur proposition du Gouvernement ou des deux assemblées : la proposition est nécessaire, et l'article n'en fait pas une obligation.
+Pour l'initiative partagée, quand la proposition a réuni le soutien d'un dixième des électeurs et que les deux assemblées ne l'ont pas examinée dans le délai, l'article 11 dispose que « le Président de la République la soumet au référendum ».
+Pour un projet de révision voté par les deux assemblées, l'article 89 lui laisse le choix du Congrès au lieu du référendum.
+Le référendum d'initiative partagée permet-il aux citoyens de déclencher un référendum ?
+Pas seuls.
+L'initiative appartient à un cinquième des membres du Parlement ; les électeurs inscrits la soutiennent, et il en faut un dixième.
+Le Conseil constitutionnel contrôle d'abord la proposition.
+De 2015 au 5 octobre 2026, il en a examiné sept ; une a été jugée conforme et a recueilli 1 093 030 soutiens pour 4 717 396 requis.
+Aucune n'a été soumise au référendum.
+Sources
+Constitution du 4 octobre 1958, art.
+3, 11, 19, 53, 60, 61, 88-5 et 89, texte en vigueur (Légifrance).
+Loi constitutionnelle n° 2008-724 du 23 juillet 2008, art.
+47 (texte adopté par le Congrès le 21 juillet 2008, publié par le Sénat) ; loi constitutionnelle n° 2008-103 du 4 février 2008 (texte adopté par le Congrès le même jour, publié par le Sénat) ; loi n° 2008-125 du 13 février 2008.
+Ordonnance n° 58-1067 du 7 novembre 1958, art.
+45-2 ; loi organique n° 2013-1114 du 6 décembre 2013 portant application de l’article 11, art.
+1er, 4 et 9 ; code civil, art.
+1er.
+Conseil constitutionnel, proclamations des résultats des référendums (décisions 61-4, 62-7, 62-9, 69-10, 72-11, 88-14, 92-19, 2000-29, 2005-38) et décisions sur les propositions de loi de l’article 11 (2019-1 et 2019-1-8, 2021-2, 2022-3, 2023-4, 2023-5, 2024-6, 2026-7 RIP), lues dans le stock CONSTIT que publie la DILA, arrêté au 5 octobre 2026 ; décision n° 2007-560 DC.
+Journal officiel (Légifrance), décrets de soumission au référendum et lois adoptées par référendum ; Assemblée nationale, données ouvertes des législatures XV à XVII (dépôts au titre de l’article 11), et analyses du scrutin du Congrès du 4 février 2008 et du scrutin n° 82 du 6 février 2008 (XIIIe législature), consultées le 12 octobre 2026 ; Sénat, proposition de loi n° 459 (2017-2018) et dossier législatif du projet de loi constitutionnelle n° 449 (2020-2021), consultés le 12 octobre 2026 ; Présidence de la République, discours du 29 juin 2020 devant la Convention citoyenne pour le climat (elysee.fr), consulté le 12 octobre 2026.
+Comment le registre des référendums a été vérifié
+Le registre.
+Les décisions du Conseil constitutionnel sont lues dans le stock que publie la DILA (fichiers ouverts, arrêtés au 5 octobre 2026).
+Parmi les décisions classées « référendum », seules les proclamations de résultats entrent au registre ; les autres sont des désignations de délégués, des réponses à des requêtes et des observations.
+Pour chaque scrutin, les nombres d’inscrits, de votants, de suffrages exprimés, de oui et de non sont lus dans la proclamation, et leur cohérence est contrôlée (oui et non font les exprimés ; exprimés, votants et inscrits sont dans l’ordre).
+Les pourcentages de cette page sont recalculés à partir de ces nombres et arrondis au plus proche ; le tableau récapitulatif du Conseil constitutionnel les donne tronqués, d’où des écarts d’un centième de point sur certains scrutins.
+Le témoin du Journal officiel.
+Chaque scrutin a été rapproché du Journal officiel : le décret par lequel le président soumet le texte, à la date que donne la proclamation, et, pour chaque texte adopté, la loi promulguée.
+Les sept lois existent ; aucune loi n’existe pour les deux textes rejetés.
+Un seul décret n’a pas été retrouvé dans le fonds de Légifrance, celui du 2 octobre 1962, dont la loi est publiée.
+La recherche par titre dans le Journal officiel ne fait apparaître aucun scrutin absent du registre.
+Les limites.
+Les nombres de voix n’ont pas de second producteur pour 1961-1988 : ils sont contrôlés par leur cohérence, pas par une autre source.
+Les résultats publiés par le ministère de l’Intérieur pour 1992, 2000 et 2005 précèdent les rectifications du Conseil : même scrutin, autre définition, donc pas un témoin.
+Les chiffres, les contrôles et les figures sont produits par un script unique.
+Il relit les décisions et les textes archivés et s’arrête si une donnée ne remplit plus les conditions dont dépendent les principales phrases.
+Il retrouve mot pour mot chaque citation de la Constitution, de l’ordonnance, de la loi organique et du code civil, et chaque motif de décision dans le considérant indiqué ; il vérifie l’empreinte des pages du Sénat, de l’Élysée et de l’Assemblée archivées, y retrouve les passages cités et les dates du dossier de 2021, et lit dans les deux scrutins de 2008 les nombres de voix que la page donne.
+La liste des propositions déposées sans décision est contrôlée contre les données de l’Assemblée et du Sénat ; le nombre de leurs signataires, transcrit dans le script, est relu dans ces données et dans le texte déposé au Sénat.
+Les objets des scrutins et des propositions sont rédigés à la main.
+Télécharger les données (licence CC BY 4.0) : CSV, en format long ; JSON, avec les identifiants des décisions, les motifs cités et le compte rendu des contrôles.
+Une version antérieure de ce jeu, sans les motifs cités ajoutés le 12 octobre 2026, est archivée sur Zenodo avec les six autres de la même série et leur note de méthode, sous un identifiant permanent : doi:10.5281/zenodo.23212664.
+Réutiliser cette page
+Les figures, les données et une citation prête, sous licence libre.
+Chaque figure porte dans l'image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
+Les référendums nationaux depuis 1958
+Du 4 octobre 1958 au 5 octobre 2026, neuf référendums nationaux ont été organisés ; sept ont adopté le texte soumis, deux l'ont rejeté ; le dernier date du 29 mai 2005.
+Précaution d'interprétation.
+Référendums nationaux des art.
+11 et 89 seulement (aucun n'a eu lieu au titre de l'art.
+88-5) ; hors scrutin du 28/09/1958 et consultations locales.
+Conseil constitutionnel, proclamations des résultats (stock CONSTIT de la DILA, arrêté au 05/10/2026) ; Journal officiel
+Télécharger en PNG
+SVG
+Le référendum d'initiative partagée, de 2015 au 5 octobre 2026
+De 2015 au 5 octobre 2026, le Conseil constitutionnel a été saisi de sept propositions de loi au titre de l'article 11 ; une a été jugée conforme et a recueilli 23,2 % des soutiens requis ; aucune n'a été soumise au référendum.
+Précaution d'interprétation.
+Trois autres propositions déposées « en application de l'article 11 » (Sénat, Assemblée) n'ont fait l'objet d'aucune décision.
+Conseil constitutionnel, décisions « RIP » (stock CONSTIT, arrêté au 05/10/2026) ; Constitution, art.
+11
+Télécharger en PNG
+SVG
+Citer cette page
+Lalut, Stéphane (2026). « Un président peut-il recourir au référendum ? ».
+Données Conseil constitutionnel et Journal officiel, relevé du 5 octobre 2026 (registre du Conseil constitutionnel, stock DILA arrêté à cette date). https://stephane-lalut.com/un-president-peut-il-recourir-au-referendum/
+Copier la citation
+En trois phrases
+Un président peut soumettre un projet de loi au référendum sur proposition du Gouvernement ou des deux assemblées, et sur les sujets que fixe l’article 11 de la Constitution ; une révision de la Constitution (article 89) et l’adhésion d’un État à l’Union européenne (article 88-5) ont leurs propres voies.
+Du 4 octobre 1958 au 5 octobre 2026, neuf référendums nationaux ont été organisés ; sept ont adopté le texte soumis, deux l’ont rejeté, et le dernier date du 29 mai 2005.
+Le référendum d’initiative partagée, ouvert en 2015, n’a encore conduit à aucun scrutin.
+Copier le résumé
+Les données
+Le registre des référendums nationaux (inscrits, votants, exprimés, oui, non, article, issue), les décisions sur le référendum d'initiative partagée avec leurs motifs cités et les dépôts sans décision ; le même contenu existe en CSV, en format long, lisible dans un tableur.
+Télécharger en JSON CSV
+Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
+Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
+Les séries brutes appartiennent à leurs producteurs (Conseil constitutionnel et Journal officiel), sous leurs propres conditions.
+Toutes les ressources : données, dossiers et repères →
+Transmettre
+WhatsApp
+Bluesky
+LinkedIn
+X
+E-mail
+Copier le lien
