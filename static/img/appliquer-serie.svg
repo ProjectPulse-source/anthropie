@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 378" role="img" font-variant-numeric="tabular-nums" aria-labelledby="as-t as-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-<title id="as-t">Le taux d&#x27;application des lois publié par le Sénat, 2002-2003 à 2024-2025</title><desc id="as-d">Points par session, regroupés en six segments séparés par des ruptures de définition : de 9,7 % à 32,1 % dans le premier segment (2002-2003 à 2008-2009), de 55 % à 78 % dans les suivants. Les valeurs, leur document et leur définition sont dans le tableau sous la figure.</desc>
-<rect width="720" height="378" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 397" role="img" font-variant-numeric="tabular-nums" aria-labelledby="as-t as-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="as-t">Le taux d&#x27;application des lois publié par le Sénat, 2002-2003 à 2024-2025</title><desc id="as-d">Points par session, regroupés en six segments séparés par des ruptures de définition : 2002-2003 : 9,7 % (segment 1); 2003-2004 : 14,4 % (segment 1); 2004-2005 : 16,4 % (segment 1); 2005-2006 : 30 % (segment 1); 2006-2007 : 32,1 % (segment 1); 2007-2008 : 24,6 % (segment 1); 2008-2009 : 27 % (segment 1); 2010-2011 : 64 % (segment 2); 2011-2012 : 66 % (segment 3); 2012-2013 : 64 % (segment 4); 2013-2014 : 55 % (segment 4); 2014-2015 : 62 % (segment 4); 2015-2016 : 71 % (segment 4); 2016-2017 : 73 % (segment 4); 2017-2018 : 78 % (segment 5); 2018-2019 : 72 % (segment 5); 2019-2020 : 62 % (segment 5); 2020-2021 : 57 % (segment 5); 2021-2022 : 65 % (segment 5); 2022-2023 : 64 % (segment 5); 2023-2024 : 59 % (segment 5); 2024-2025 : 66 % (segment 6). Pour 2019-2020, le rapport suivant écrit 60 % (cercle vide). Les valeurs, leur document et leur définition sont dans le tableau sous la figure.</desc>
+<rect width="720" height="397" fill="#ffffff"/>
 <text x="0.0" y="18.0" font-size="13" fill="#0A0A0E" text-anchor="start" font-weight="600">Le taux d&#x27;application des lois publié par le Sénat, 2002-2003 à 2024-2025</text>
 <text x="0.0" y="36.0" font-size="12" fill="#52514e" text-anchor="start">en % des mesures attendues ; six définitions successives, fonds alternés : un segment ne se compare pas à un autre</text>
 <line x1="40" y1="272.0" x2="710" y2="272.0" stroke="#e1e0d9"/>
@@ -54,9 +54,10 @@
 <text x="491.5" y="286.0" font-size="9" fill="#898781" text-anchor="middle">2017-2018</text>
 <text x="637.2" y="286.0" font-size="9" fill="#898781" text-anchor="middle">2022-2023</text>
 <text x="695.4" y="286.0" font-size="9" fill="#898781" text-anchor="middle">2024-2025</text>
-<text x="710.0" y="302.0" font-size="9" fill="#52514e" text-anchor="end">1 à 6 : segments (définitions dans le tableau) ; cercle vide : valeur 2019-2020 reprise l&#x27;année suivante</text>
-<line x1="0" y1="332" x2="720" y2="332" stroke="#e1e0d9"/>
-<text x="0" y="345" font-size="9" fill="#52514e">Sénat, bilans annuels de l&#x27;application des lois, 2003-2026 (taux tels que publiés, page citée dans le tableau)</text>
-<text x="0" y="357" font-size="9" fill="#52514e">Six définitions successives : ne pas relier les segments. Une révision de chiffre et une rupture de définition sont deux faits distincts.</text>
-<text x="0" y="369" font-size="9" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/une-loi-votee-s-applique-t-elle-tout-de-suite/</text>
+<text x="710.0" y="302.0" font-size="9" fill="#52514e" text-anchor="end">1 à 6 : segments (définitions dans le tableau) ; cercle vide : 2019-2020 selon le rapport suivant</text>
+<line x1="0" y1="332.0" x2="720" y2="332.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="347.0" font-size="11" fill="#52514e">Sénat, bilans annuels de l'application des lois, 2003-2026 (taux tels que publiés, page citée dans le tableau)</text>
+<text class="pied-note" x="0" y="361.0" font-size="11" fill="#52514e">Six définitions successives : ne pas relier les segments. Deux valeurs pour une session et une rupture de définition</text>
+<text class="pied-note" x="0" y="375.0" font-size="11" fill="#52514e">sont deux faits distincts.</text>
+<text class="pied-licence" x="0" y="389.0" font-size="11" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/une-loi-votee-s-applique-t-elle-tout-de-suite/</text>
 </svg>

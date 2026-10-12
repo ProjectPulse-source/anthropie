@@ -1,20 +1,28 @@
 {
  "fr": [
   {
+   "id": "statut",
+   "fichier": "appliquer-statut",
+   "titre": "Les lois promulguées depuis 2017 attendent-elles encore une mesure ?",
+   "montre": "Au 05/10/2026, selon le baromètre, 130 des 399 lois promulguées d'octobre 2017 à septembre 2025, hors conventions, comportaient encore au moins une mesure classée « en attente » ; 124 avaient reçu toutes leurs mesures et 144 n'en appelaient aucune.",
+   "source": "Baromètre de l'application des lois (Assemblée nationale, LexImpact ; données DILA), état au 05/10/2026",
+   "precaution": "Lois promulguées par session (1er oct.-30 sept.), hors conventions. Statuts tirés des étiquettes du baromètre : « en attente » ne veut pas dire « en retard » ; « sans mesure à prendre » dépend de l'étiquette « sans objet »."
+  },
+  {
    "id": "mesures",
    "fichier": "appliquer-mesures",
    "titre": "Les mesures d'application des lois, par session de la loi",
-   "montre": "Au 05/10/2026, sur les 5 398 mesures d'application recensées par le baromètre pour les lois promulguées d'octobre 2017 à septembre 2025, 4 378 ont un acte publié identifié, 567 sont en attente et 448 sont indiquées sans objet.",
-   "source": "Baromètre de l'application des lois (Assemblée nationale, LexImpact ; données DILA), état au 05/10/2026",
-   "precaution": "Lois promulguées par session (1er oct.-30 sept.), hors conventions. État à la date du relevé : ni un taux historique, ni une efficacité."
+   "montre": "Au 05/10/2026, sur les 5 398 mesures d'application recensées par le baromètre pour les lois promulguées d'octobre 2017 à septembre 2025, 4 378 ont un acte publié identifié, 567 sont en attente, 448 sont indiquées sans objet et 5 ont un statut incomplet.",
+   "source": "Baromètre de l'application des lois (Assemblée nationale, LexImpact ; données DILA), état au 05/10/2026",
+   "precaution": "Mesures des lois promulguées par session (1er oct.-30 sept.), hors conventions. État à la date du relevé : ni un taux historique, ni une efficacité."
   },
   {
    "id": "lois",
    "fichier": "appliquer-lois",
    "titre": "Les lois qui n'appellent aucune mesure d'application, par session",
-   "montre": "« Moins de la moitié dans chaque session » ne tient pas : en 2018-2019, le baromètre compte 25 lois d'application directe sur 49 ; dans les sept autres sessions, même la borne haute reste sous la moitié. Les deux sources classent différemment 24 des 399 lois.",
-   "source": "Baromètre de l'application des lois (état au 05/10/2026) ; rapports annuels du Sénat sur l'application des lois",
-   "precaution": "Gris : lois que le baromètre et le Sénat classent différemment (2024-2025 : 2 lois sans liste nominative en plus)."
+   "montre": "Les lois d'application directe restent sous la moitié dans sept sessions sur huit, quelle que soit la source ; en 2018-2019, le baromètre en compte 25 sur 49. Les deux sources classent différemment 24 des 399 lois.",
+   "source": "Baromètre de l'application des lois (état au 05/10/2026) ; rapports annuels du Sénat sur l'application des lois",
+   "precaution": "Gris : lois que le baromètre et le Sénat classent différemment (2024-2025 : 2 lois sans liste nominative en plus). Trait noir : la moitié des lois."
   },
   {
    "id": "serie",
@@ -22,25 +30,33 @@
    "titre": "Le taux d'application des lois publié par le Sénat, 2002-2003 à 2024-2025",
    "montre": "Le taux publié par le Sénat repose sur six définitions successives depuis 2002-2003 : les segments ne se lisent pas comme une seule série.",
    "source": "Sénat, bilans annuels de l'application des lois, 2003-2026 (taux tels que publiés, page citée dans le tableau)",
-   "precaution": "Six définitions successives : ne pas relier les segments. Une révision de chiffre et une rupture de définition sont deux faits distincts."
+   "precaution": "Six définitions successives : ne pas relier les segments. Deux valeurs pour une session et une rupture de définition sont deux faits distincts."
   }
  ],
  "en": [
   {
+   "id": "statut",
+   "fichier": "appliquer-statut-en",
+   "titre": "Are the laws promulgated in France since 2017 still waiting for a measure?",
+   "montre": "On 5 October 2026, according to the barometer, 130 of the 399 laws promulgated in France from October 2017 to September 2025, excluding treaties, still had at least one measure classified as pending; 124 had received all their measures and 144 called for none.",
+   "source": "Barometer of the application of laws (National Assembly, LexImpact; DILA data), status at 5 October 2026",
+   "precaution": "Laws promulgated per session (1 Oct.-30 Sept.), excluding treaties. Statuses from the barometer's labels: 'pending' does not mean 'late'; 'no measure to take' depends on the 'not applicable' label."
+  },
+  {
    "id": "mesures",
    "fichier": "appliquer-mesures-en",
    "titre": "Implementing measures of French laws, by session of the law",
-   "montre": "On 5 October 2026, of the 5,398 implementing measures listed by the barometer for the laws promulgated in France from October 2017 to September 2025, 4,378 have an identified published instrument, 567 are pending and 448 are classified as “not applicable” (sans objet).",
+   "montre": "On 5 October 2026, of the 5,398 implementing measures listed by the barometer for the laws promulgated in France from October 2017 to September 2025, 4,378 have an identified published instrument, 567 are pending, 448 are classified as “not applicable” (sans objet) and 5 have an incomplete status.",
    "source": "Barometer of the application of laws (National Assembly, LexImpact; DILA data), status at 5 October 2026",
-   "precaution": "Laws promulgated per session (1 Oct.-30 Sept.), excluding treaties. Status at the reading date: neither a historical rate nor efficiency."
+   "precaution": "Measures of the laws promulgated per session (1 Oct.-30 Sept.), excluding treaties. Status at the reading date: neither a historical rate nor efficiency."
   },
   {
    "id": "lois",
    "fichier": "appliquer-lois-en",
    "titre": "French laws that call for no implementing measure, by session",
-   "montre": "'Fewer than half in every session' does not hold: in 2018-2019, the barometer counts 25 directly applicable laws out of 49; in the seven other sessions, even the upper bound stays below half. The two sources classify 24 of the 399 laws differently.",
+   "montre": "Directly applicable laws stay below half in seven sessions out of eight, whatever the source; in 2018-2019, the barometer counts 25 out of 49. The two sources classify 24 of the 399 laws differently.",
    "source": "Barometer of the application of laws (status at 5 October 2026); Senate annual reports on the application of laws",
-   "precaution": "Grey: laws that the barometer and the Senate classify differently (2024-2025: plus 2 laws with no list of names)."
+   "precaution": "Grey: laws that the barometer and the Senate classify differently (2024-2025: plus 2 laws with no list of names). Black mark: half of the laws."
   },
   {
    "id": "serie",
@@ -48,7 +64,7 @@
    "titre": "The implementation rate of laws published by the French Senate, 2002-2003 to 2024-2025",
    "montre": "The rate published by the French Senate rests on six successive definitions since 2002-2003: the segments do not read as a single series.",
    "source": "French Senate, annual reports on the application of laws, 2003-2026 (rates as published, page cited in the table)",
-   "precaution": "Six successive definitions: do not join the segments. A revised figure and a change of definition are two distinct facts."
+   "precaution": "Six successive definitions: do not join the segments. Two values for one session and a change of definition are two distinct facts."
   }
  ]
 }

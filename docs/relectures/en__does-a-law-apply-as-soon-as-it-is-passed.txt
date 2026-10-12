@@ -1,0 +1,582 @@
+# relu le 2026-10-12 ; texte servi de /en/does-a-law-apply-as-soon-as-it-is-passed/, build de 060aec4 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+FRThis page is also available in French — version française
+Does a French law apply as soon as it is passed?
+Not by the vote alone.
+Once the law has been promulgated and published, those of its provisions whose implementation requires decrees or ministerial orders wait for these measures.
+On 5 October 2026, according to the barometer of the application of laws, 130 of the 399 laws promulgated from October 2017 to September 2025, excluding treaties (laws authorising the ratification or approval of an international agreement, or accession to one), were still waiting for at least one measure; 124 had received all of them and 144 called for none.
+A pending measure is not necessarily late, but the Government is not free to wait indefinitely: the Conseil d'État requires it to act within a reasonable time, and a refusal to adopt a measure that is due can be brought before the administrative courts, which can annul it and order the measure to be adopted.
+Presidential promises
+↓ Charts, data and citations to reuseReuse this page
+A promise that goes through the law does not stop at the vote.
+Between adoption and application, a French law goes through several steps, and some of its provisions then wait for decrees or ministerial orders (arrêtés).
+This page follows these steps, counts the laws and the measures still pending for the laws promulgated since 2017 (by parliamentary session, from 1 October to 30 September), sets out what the courts require of the Government, and explains why the published implementation rates do not all say the same thing.
+Counts of laws and measures are recalculated law by law from public sources; the rates published by the Senate and by the Government, transcribed from their reports, are reread by the script in the archived documents.
+The Constitution is quoted in the English translation published by the Conseil constitutionnel; other French texts in French, followed by our translation.
+From the vote to application: what steps does a law go through?
+Five steps separate a law that has been passed from its application, and each has its own actor.
+The vote.
+Parliament gives the text its final adoption.
+Promulgation.
+The President of the Republic promulgates the law within fifteen days of its final passage and transmission to the Government, and may, within that time, ask Parliament to reopen debate on it (Constitution, art.
+10).
+The Constitutional Council steps in here: it must review Institutional Acts before their promulgation, other laws may be referred to it, and a referral suspends the time allotted for promulgation (art.
+61).
+Publication and entry into force.
+Once published in the Journal officiel, the law enters into force on the date it sets or, failing that, the day after its publication (Civil Code, art.
+1, para.
+1).
+The next paragraph adds: « Toutefois, l'entrée en vigueur de celles de leurs dispositions dont l'exécution nécessite des mesures d'application est reportée à la date d'entrée en vigueur de ces mesures. » [our translation: “However, provisions whose implementation requires implementing measures do not enter into force until those measures themselves enter into force.”] A third opens a faster route: « En cas d'urgence, entrent en vigueur dès leur publication les lois dont le décret de promulgation le prescrit » [our translation: “In case of urgency, laws whose promulgation decree so prescribes enter into force on their publication”].
+Implementing measures.
+The Prime Minister ensures the implementation of legislation and, subject to article 13, has power to make regulations (art.
+21).
+The President of the Republic signs the decrees deliberated upon in the Council of Ministers (art.
+13), and the instruments of the Prime Minister are countersigned, where required, by the ministers responsible for their implementation (art.
+22).
+The law may also provide for ministerial orders, and a decree may itself refer matters to an order of a minister.
+Implementation on the ground.
+Then come the departments, budgets and local authorities that apply the rule.
+This step lies beyond the data on this page: a published decree is not a result achieved.
+Nor does the page say whether the necessary funds were made available, or what the local authorities responsible for applying certain laws do: no source was read on these two points.
+The articles of the Constitution, word for word
+Article 10.
+“The President of the Republic shall promulgate Acts of Parliament within fifteen days following the final passage of an Act and its transmission to the Government.” “He may, before the expiry of this time limit, ask Parliament to reopen debate on the Act or any sections thereof.
+Such reopening of debate shall not be refused.”
+Article 61.
+Institutional Acts are referred to the Constitutional Council before their promulgation (para.
+1).
+For the others, paragraph 2 provides: “Acts of Parliament may be referred to the Constitutional Council, before their promulgation, by the President of the Republic, the Prime Minister, the President of the National Assembly, the President of the Senate, sixty Members of the National Assembly or sixty Senators.” In these cases, “referral to the Constitutional Council shall suspend the time allotted for promulgation.”
+Article 21, on the Prime Minister: “He shall ensure the implementation of legislation.” Subject to article 13, “he shall have power to make regulations”.
+Article 13.
+“The President of the Republic shall sign the Ordinances and Decrees deliberated upon in the Council of Ministers.”
+Article 22.
+“Instruments of the Prime Minister shall be countersigned, where required, by the ministers responsible for their implementation.”
+The Civil Code does not cover every provision that announces a decree: it covers those whose implementation “requires” measures (« dont l’exécution nécessite »).
+A law may refer to a decree for a provision that already applies without it.
+In case of dispute, the court decides, provision by provision.
+In 2021, on buildings for caged laying hens, the Conseil d’État thus held that « ces dispositions ne sont pas suffisamment précises pour permettre leur entrée en vigueur en l'absence du décret d'application dont elles prévoient d'ailleurs l'intervention » [our translation: “these provisions are not precise enough to allow their entry into force in the absence of the implementing decree, whose adoption they moreover provide for”] (CE, 27 May 2021, no.
+441660).
+How many laws are still waiting for a measure?
+Laws promulgated in each session, excluding treaties, and their status on 5 October 2026 according to the barometer of the application of laws.
+A “pending” measure is not necessarily late.
+Download · Cite · Data
+The figure's values in a table
+Session
+Laws promulgated (excluding treaties)
+At least one measure pending
+All measures taken
+No measure to take
+No schedule
+2017-2018
+41
+8
+21
+12
+0
+2018-2019
+49
+13
+11
+25
+0
+2019-2020
+43
+13
+14
+16
+0
+2020-2021
+51
+21
+11
+19
+0
+2021-2022
+64
+18
+25
+21
+0
+2022-2023
+44
+15
+19
+10
+0
+2023-2024
+51
+21
+9
+21
+0
+2024-2025
+56
+21
+14
+20
+1
+Total
+399
+130
+124
+144
+1
+The finding in one sentence.
+On 5 October 2026, according to the barometer, 130 of the 399 laws promulgated in France from October 2017 to September 2025, excluding treaties, still had at least one measure classified as pending; 124 had received all their measures, 144 called for none, and one had no schedule.
+Measured against the laws that called for a measure.
+Of the 399 laws promulgated, 144 called for no measure according to the barometer.
+The laws that called for at least one, whether still waiting for some or having received them all, number 254.
+Among them, the 130 pending laws make up 51%, about one in two.
+The law with no schedule is counted on neither side: the barometer does not say whether it calls for measures.
+Both shares are accurate: one sets the pending laws against all the laws promulgated, the other against only the laws that had a measure to wait for.
+What these two shares do not say.
+They say neither that these 130 laws were wholly inapplicable, nor that each of their pending measures was late.
+A law may apply for the most part while waiting for a decree on one point, and the law itself may defer a measure.
+The planned date is missing for 525 of the 567 pending measures: without a date, the page cannot say whether a measure is late.
+Age does not settle everything: for the 2017-2018 session, the oldest, 8 laws out of 41 are still waiting for at least one measure.
+The count of laws with “no measure to take” depends on a label.
+The barometer classifies a law this way when all its measures are classified as “not applicable” (sans objet).
+Law no.
+2025-138 on amyotrophic lateral sclerosis is one of them, although its only measure refers to a ministerial order (see the next section).
+The Senate as a check.
+The Senate, for its part, counts “fully applicable” laws: those directly applicable and those that have received all the planned measures.
+For the 2024-2025 session, it writes: « Au 31 mars 2026, 36 lois (soit 64 %) adoptées au cours de la session 2024-25 sur 56 étaient entièrement applicables. » [our translation: “As at 31 March 2026, 36 laws (64%) adopted during the 2024-25 session out of 56 were fully applicable.”] It adds: « Plus précisément, 22 d'entre elles (soit 39 %) étaient d'application directe et 14 (soit 25 %) avaient fait l'objet de l'intégralité des mesures d'application prévues. » [our translation: “More precisely, 22 of them (39%) were directly applicable and 14 (25%) had received all the planned implementing measures.”] The barometer also counts 56 laws for this session.
+On 5 October 2026, these same two categories cover 34 of them: 20 with no measure to take and 14 whose measures have all been taken.
+These are two findings, on two dates, by two producers that do not classify laws in the same way: they neither add up nor confirm each other, and nothing establishes that the laws counted on each side are the same.
+How many implementing measures are still pending?
+A law waits for measures; it is in measures that the barometer tracks application.
+Implementing measures listed by the barometer of the application of laws for the laws promulgated in each session, excluding treaties, and their status on 5 October 2026.
+It is a status at a date: neither a historical rate nor a measure of efficiency.
+Download · Cite · Data
+The figure's values in a table
+Session of the law
+Measures
+Identified published instrument
+Pending
+Classified “not applicable” (sans objet)
+Incomplete status
+2017-2018
+556
+520
+18
+18
+0
+2018-2019
+933
+822
+47
+64
+0
+2019-2020
+680
+563
+63
+54
+0
+2020-2021
+777
+646
+90
+41
+0
+2021-2022
+652
+516
+75
+57
+4
+2022-2023
+549
+421
+62
+65
+1
+2023-2024
+730
+601
+93
+36
+0
+2024-2025
+521
+289
+119
+113
+0
+Total
+5,398
+4,378
+567
+448
+5
+On 5 October 2026, of the 5,398 measures listed for these laws, 4,378 have an identified published instrument, 567 are pending, 448 are classified as “not applicable” (sans objet) and 5 have an incomplete status (“applied” with no identified instrument).
+For the laws of 2017-2018, 18 measures out of 556 remain pending; for those of 2024-2025, 119 out of 521.
+“Pending” does not mean “late”.
+116 of the 567 pending measures carry, in their subject or their observation, the word « différé » or « différée » (deferred), 6 of them for the laws of 2018-2019 and 14 for those of 2019-2020; the word does not say whether the deferred date has passed.
+The planned date is missing for 525 of the 567 pending measures: how long a measure has been waiting therefore cannot be calculated, and the page publishes no time frame.
+“Not applicable” is a label, not a proof.
+The producer files 448 measures under this label and gives the reason in an observation.
+Sorted by written rules, these observations most often say that the measure is already implemented by an existing text (153), that its legal basis was repealed, rewritten or stripped of its reference to a decree (96), or that no measure is needed (41); 16 concern optional measures that were not used, four say that a decree was not adopted, and 43 remain undetermined, since they do not fall under a single rule.
+This sorting repeats what the producer writes; it reclassifies no measure.
+Of the 448 “not applicable” observations, there remain the 95 that begin with the reference of an order or a decree.
+For the laws of 2024-2025, they number 91.
+The three observations that begin with « Décret non pris » (decree not adopted), with no reference to an instrument, are not counted among them.
+For law no.
+2025-138, the observation reads « Arrêté du 5 février 2026 » (an arrêté is a ministerial order), and the Government’s report at 31 December 2025 counts its measure as pending: the two sources describe two states, on two dates, and do not contradict each other.
+What was checked, and how
+The measures are those of the barometer of the application of laws, published by the National Assembly and LexImpact from DILA’s implementation schedules, in its version of 5 October 2026.
+A measure counts as published if its status is “applied” and an instrument is identified; “applied” without an identified instrument gives an incomplete status.
+The script checks that each measure falls into one and only one category, session by session, and that the same producer’s file of laws gives, law by law, the same number of measures applied and to be applied; it also checks that each law falls under one and only one of the four statuses.
+A second program, written separately, recounted the categories of measures from the raw file: the numbers match.
+The rules used to sort the “not applicable” observations are published in the dataset; an observation that falls under none or several of the rules is undetermined.
+An observation counts as carrying the reference of an instrument if it begins with « Arrêté du », « Décret du » or « Décret n° »; those that begin with the word but no reference are listed in the dataset, with their reason.
+The barometer only publishes the current status.
+DILA’s open data on implementation schedules only go back to July 2025.
+No “six months after the law” rate can therefore be recalculated for earlier sessions, and the page publishes none.
+Can a law apply without any decree?
+Yes.
+The barometer and the Senate, in its annual reports, each classify laws as directly applicable, but not always the same ones.
+The barometer classifies a law this way when its schedule contains no measure other than “not applicable”; the Senate applies its own rules.
+Matched law by law over the 399 laws promulgated from 2017-2018 to 2024-2025, excluding 154 international treaties, the two sources keep exactly the same scope, but classify 24 laws differently.
+Laws promulgated in each session, excluding treaties.
+In blue, laws directly applicable for both sources; in dark grey, those they classify differently; the black mark shows half of the session’s laws.
+Download · Cite · Data
+The figure's values in a table
+Session
+Laws promulgated (excluding treaties)
+Directly applicable according to the barometer
+According to the Senate
+Bounds: directly applicable for both sources, then counting divergent classifications
+2017-2018
+41
+12
+13
+11 to 14 out of 41
+2018-2019
+49
+25
+22
+22 to 25 out of 49
+2019-2020
+43
+16
+15
+15 to 16 out of 43
+2020-2021
+51
+19
+18
+17 to 20 out of 51
+2021-2022
+64
+21
+18
+15 to 24 out of 64
+2022-2023
+44
+10
+11
+10 to 11 out of 44
+2023-2024
+51
+21
+21
+21 out of 51
+2024-2025
+56
+20
+22 (24 on another page of the same report)
+19 to 25 out of 56
+In seven sessions out of eight, directly applicable laws stay below half, whatever the source.
+In 2018-2019, the barometer counts 25 out of 49, more than half, while the Senate counts 22.
+The 2024-2025 gap can be read within a single Senate report.
+Its summary says: « Plus précisément, 22 d'entre elles (soit 39 %) étaient d'application directe » [our translation: “More precisely, 22 of them (39%) were directly applicable”]; another page states that « le nombre de lois promulguées lors de la session 2024-2025 s'établit à 56, dont 24 d'application directe » [our translation: “the number of laws promulgated during the 2024-2025 session stands at 56, of which 24 directly applicable”].
+The barometer counts 20.
+The gap between 20 and 22 is explained law by law by different classification rules; the one between 22 and 24 is not, for lack of a list of names.
+Why the two sources diverge on 24 laws
+The Senate classifies laws in the annexes to its reports.
+Several rules explain part of the gaps with the barometer: in some years, the Senate leaves out the measures that the law makes optional; the barometer classifies as “directly applicable” a law all of whose measures are now classified as “not applicable”; it classifies as “not directly applicable” a law with no schedule.
+Applied together, these rules remove some gaps and create others: they are not applied uniformly from one year to the next.
+All the laws in a gap are counted as uncertain, even when a rule explains them; hence the bounds in the table.
+Defects in the Senate’s annexes, such as a wrong law number or an announced count that does not match the list that follows, were corrected using the title and date of the law; the law-by-law register flags them.
+Does the Government have a deadline to adopt the decrees?
+Articles 13 and 21 of the Constitution set no deadline.
+The Government sets itself a six-month deadline, according to the Senate (see the series below).
+The courts, for their part, impose an obligation: « L'exercice du pouvoir réglementaire comporte non seulement le droit mais aussi l'obligation de prendre dans un délai raisonnable les mesures qu'implique nécessairement l'application de la loi, hors le cas où le respect d'engagements internationaux de la France y ferait obstacle. » [our translation: “The exercise of regulatory power entails not only the right but also the obligation to take, within a reasonable time, the measures that the application of the law necessarily implies, except where compliance with France's international commitments would prevent it.”] (Conseil d’État, 27 May 2021, no.
+441660; the same wording appears in its decisions of 29 June 2011 and 21 January 2021).
+It also applies to ministerial orders: « Lorsqu'un décret pris pour l'application d'une loi renvoie lui-même à un arrêté la détermination de certaines mesures nécessaires à cette application, cet arrêté doit également intervenir dans un délai raisonnable. » [our translation: “Where a decree adopted for the application of a law itself refers to a ministerial order the determination of certain measures necessary for that application, that order must also be issued within a reasonable time.”] (CE, 21 January 2021, no.
+429956).
+The reasonable time is not set once and for all: it is assessed « eu égard à la nature des mesures à prendre » [our translation: “having regard to the nature of the measures to be taken”] (CE, 27 July 2005, no.
+261694).
+Periods held excessive in one case do not therefore make a rule.
+A refusal to adopt a measure that is due can be brought before the administrative courts, which can annul it and order the measure to be adopted.
+In May 2021, the Conseil d’État decided « d'enjoindre au Premier ministre de prendre ce décret dans un délai de six mois à compter de la notification de la présente décision » [our translation: “to order the Prime Minister to adopt this decree within six months of notification of this decision”]; in January 2021, « d'ordonner au garde des sceaux, ministre de la justice, de prendre l'arrêté prévu par l'article 9 du décret du 29 juin 2020 dans un délai de trois mois » [our translation: “to order the Keeper of the Seals, Minister of Justice, to adopt the order provided for by article 9 of the decree of 29 June 2020 within three months”].
+The delay may also make the State liable: « les préjudices qui résultent du retard mis à prendre, au-delà d'un délai raisonnable, un décret nécessaire à l'application d'une loi ouvrent droit à réparation » [our translation: “the losses resulting from the delay in adopting, beyond a reasonable time, a decree necessary for the application of a law give rise to compensation”] (CE, 27 July 2005).
+A planned measure is not always due.
+In 2011, about an order provided for by a decree and never adopted, the Conseil d’État noted that « l'article R.
+1243-4 fixe de façon exhaustive et précise le contenu du dossier de demande d'autorisation » [our translation: “article R.
+1243-4 sets out exhaustively and precisely the content of the authorisation application file”], and concluded that « le ministre chargé de la santé n'était pas tenu de prendre l'arrêté prévu par ce dernier article » [our translation: “the minister responsible for health was not bound to adopt the order provided for by that article”] (CE, 29 June 2011, no.
+343188).
+What these decisions do not say.
+They lay down a rule and settle cases; they say neither how many refusals are brought before the courts nor what becomes of the orders issued, and no data read here measures it.
+Nor does the barometer’s “pending” status say whether a measure is due, or whether the reasonable time has been exceeded.
+Why do the French Senate and Government publish different rates?
+Because their counting conventions have differed and still differ in part.
+The gap has a history.
+In 2012-2013, rates that matched.
+The Senate writes that, « pour les lois promulguées durant l'année parlementaire 2012-2013, le taux d'application des lois s'élève à 90 % (si on compte en nombre de lois) ou à environ 64 % (si on compte en nombre de mesures), pourcentages calculés à partir de la base statistique du Sénat et qui recoupent parfaitement ceux calculés par les services du Gouvernement » [our translation: “for the laws promulgated during the 2012-2013 parliamentary year, the implementation rate of laws stands at 90% (counting by number of laws) or about 64% (counting by number of measures), percentages calculated from the Senate's statistical database and which match exactly those calculated by the Government's departments”].
+That year, the rate changed depending on whether laws or measures were counted, not on who produced it.
+In 2017-2019, a gap and its reasons.
+For 2017-2018, the Senate writes: « Il atteint désormais 78 % - 86 % si on exclut les mesures dont l'entrée en vigueur est différée » [our translation: “It now stands at 78% - 86% if measures whose entry into force is deferred are excluded”].
+The General Secretariat of the Government, heard by the Senate, states: « Au 31 mars 2019, ces 28 lois appelaient 461 mesures réglementaires d'application et nous en avons pris 393, soit un taux d'application de 85 % » [our translation: “On 31 March 2019, these 28 laws called for 461 implementing regulations and we adopted 393 of them, an implementation rate of 85%”].
+Once deferred measures are set aside, the two figures come closer, 86% for the Senate and 85% for the Government; ministerial orders, which only the Senate counted, remain a difference of scope.
+For 2018-2019, the Senate writes: « Le taux global d'application des lois calculé par le Sénat est de 72 % » [our translation: “The overall implementation rate of laws calculated by the Senate is 72%”] and adds that « les services du Secrétariat général du Gouvernement parviennent pour leur part à un taux global de 82,4 % » [our translation: “the departments of the General Secretariat of the Government arrive for their part at an overall rate of 82.4%”].
+In 2019, it gave the reasons: « Le taux calculé par le Sénat peut diverger de celui calculé par le Gouvernement pour des raisons techniques, qui sont de deux ordres. » [our translation: “The rate calculated by the Senate may differ from the one calculated by the Government for technical reasons, of two kinds.”] First, « le Sénat effectue un contrôle global des mesures d'application des lois, en incluant les arrêtés dont la publication est prévue par la loi.
+Ce n'est pas le cas du secrétariat général du Gouvernement. » [our translation: “the Senate carries out a comprehensive check of the implementing measures of laws, including the ministerial orders (arrêtés) whose publication is provided for by the law.
+This is not the case of the General Secretariat of the Government.”] Second, « le Sénat intègre dans son taux les mesures attendues pour des articles dont l'entrée en vigueur est différée, à la différence du Gouvernement. » [our translation: “the Senate includes in its rate the measures expected for articles whose entry into force is deferred, unlike the Government.”] It also mentions a third ground, which it itself calls political reasons: « Il peut également diverger pour des raisons politiques, notamment lorsque le Sénat considère qu'un décret pris ne respecte pas la volonté du législateur, et donc que la mesure attendue n'est pas prise. » [our translation: “It may also differ for political reasons, in particular when the Senate considers that a decree adopted does not reflect the legislature's intent, and therefore that the expected measure has not been taken.”] A rate can thus include a judgement, and not only a count.
+Since 2024, methods brought closer.
+The Senate’s 2026 report says so: « Depuis le 1er janvier 2024, le SGG contrôle la parution des arrêtés sous réserve qu'ils aient été expressément prévus par une disposition législative. » [our translation: “Since 1 January 2024, the SGG has checked the publication of ministerial orders provided that they were expressly provided for by a legislative provision.”] For the Senate itself, « il a été décidé, pour la session 2024-2025, de ne plus prendre en compte les mesures différées au-delà du 31 mars 2026 » [our translation: “it was decided, for the 2024-2025 session, no longer to take into account measures deferred beyond 31 March 2026”].
+It adds: « En dépit de la convergence des méthodes, certaines divergences demeurent quant à l'appréciation de l'effectivité de l'application de certaines lois entre le Sénat et le SGG. » [our translation: “Despite the convergence of methods, some divergences remain between the Senate and the SGG as to the assessment of whether certain laws are effectively applied.”]
+The rates published today.
+At 31 December 2025, the Government’s half-yearly report on the 16th legislature « fait apparaître le taux d'application au 31 décembre 2025 des lois qui, parmi celles votées entre le 1er juillet 2022 et le 9 juin 2024, appellent des décrets d'application. » [our translation: “shows the implementation rate at 31 December 2025 of the laws which, among those passed between 1 July 2022 and 9 June 2024, call for implementing decrees.”] It gives a rate of 87%, over 1,088 measures.
+The report on the 17th legislature « fait apparaître le taux d'application au 31 décembre 2025 des lois qui, parmi celles publiées entre le 18 juillet 2024 et le 30 juin 2025, appellent des décrets ou des arrêtés d'application. » [our translation: “shows the implementation rate at 31 December 2025 of the laws which, among those published between 18 July 2024 and 30 June 2025, call for implementing decrees or orders.”] It gives 55%, over 320 measures.
+The Senate publishes 66% for the 2024-2025 session.
+These three rates cover neither the same laws, nor the same measures, nor the same date: the table below sets them out by definition, it does not rank them.
+An implementation rate can only be interpreted with its scope, its cut-off date and its counting rules.
+The definition of each rate
+Producer and document
+Laws covered
+Measures counted
+Data as at
+Published rate
+General Secretariat of the Government, half-yearly report, 16th legislature
+laws passed from 1 July 2022 to 9 June 2024 that call for implementing decrees
+decrees (1,088 measures)
+31 December 2025
+87%
+General Secretariat of the Government, half-yearly report, 17th legislature
+laws published from 18 July 2024 to 30 June 2025 that call for implementing decrees or orders
+decrees or orders (320 measures)
+31 December 2025
+55%
+Senate, report on the 2024-2025 session
+laws of the 2024-2025 session (1 October to 30 September)
+planned measures, excluding optional measures and measures deferred beyond 31 March 2026
+31 March 2026
+66%
+Has the implementation rate of laws risen since 2002?
+The Senate’s series does not allow us to say so from end to end.
+The corpus shows six successive definitions since 2002-2003, which differ in cut-off date, scope of laws and treatment of deferred and optional measures: the segments do not read as a single series.
+The Senate nevertheless reads a trend across its own breaks: « le Sénat assiste depuis 2018 à une réduction globale et constante du taux d'application moyen des lois qu'il adopte » [our translation: “since 2018 the Senate has witnessed an overall and steady decline in the average implementation rate of the laws it adopts”].
+Its series only allows this reading to be tested segment by segment: 2024-2025 falls under a different definition from the previous sessions.
+Implementation rates of laws published by the French Senate, as published.
+The segments correspond to different definitions: do not join them.
+The open circle marks the 2019-2020 figure given by the following report.
+Download · Cite · Data
+The values, their document and their definition
+Session
+Rate published by the Senate
+Definition (segment)
+Document
+2002-2003
+9.7%
+laws of the parliamentary year, cut-off on 30 September of the same year
+cp20051201.html
+2003-2004
+14.4%
+laws of the parliamentary year, cut-off on 30 September of the same year
+cp20051201.html
+2004-2005
+16.4%
+laws of the parliamentary year, cut-off on 30 September of the same year
+cp20051201.html
+2005-2006
+30%
+laws of the parliamentary year, cut-off on 30 September of the same year
+appleg_06-syn
+2006-2007
+32.1%
+laws of the parliamentary year, cut-off on 30 September of the same year
+apleg_08-syn
+2007-2008
+24.6%
+laws of the parliamentary year, cut-off on 30 September of the same year
+apleg_08-syn
+2008-2009
+27%
+laws of the parliamentary year, cut-off on 30 September of the same year
+apleg_09-syn
+2010-2011
+64%
+period shifted by three months to wait for the Government's six-month deadline, ordinary session only
+r11-323
+2011-2012
+66%
+'new bounds': laws of 14 July 2011 to 30 September 2012
+r12-654
+2012-2013
+64%
+laws of 1 October to 30 September, cut-off on the following 31 March
+r13-623
+2013-2014
+55%
+laws of 1 October to 30 September, cut-off on the following 31 March
+r14-495
+2014-2015
+62%
+laws of 1 October to 30 September, cut-off on the following 31 March
+r15-650
+2015-2016
+71%
+laws of 1 October to 30 September, cut-off on the following 31 March
+r16-677
+2016-2017
+73%
+laws of 1 October to 30 September, cut-off on the following 31 March
+r17-510
+2017-2018
+78%
+same calendar, deferred measures included (a second rate excludes them)
+r18-542
+2018-2019
+72%
+same calendar, deferred measures included (a second rate excludes them)
+r19-523
+2019-2020
+62%
+same calendar, deferred measures included (a second rate excludes them)
+r20-645
+2019-2020
+60% (following report; variant not established)
+same calendar, deferred measures included (a second rate excludes them)
+r21-658
+2020-2021
+57%
+same calendar, deferred measures included (a second rate excludes them)
+r21-658
+2021-2022
+65%
+same calendar, deferred measures included (a second rate excludes them)
+r22-636
+2022-2023
+64%
+same calendar, deferred measures included (a second rate excludes them)
+r23-624
+2023-2024
+59%
+same calendar, deferred measures included (a second rate excludes them)
+r24-710
+2024-2025
+66%
+a single rate, excluding optional measures and measures deferred beyond 31 March 2026
+r25-802
+The last point of the first segment and the first point kept from the next are separated by a change of definition, which the Senate describes as follows: « cette année, pour la première fois, afin de ne mesurer le nombre de mesures réglementaires prises qu'à l'expiration du délai de six mois que s'impose à lui-même le Gouvernement, la période retenue comprend trois mois de moins pour les lois promulguées retenues et trois mois de plus pour les mesures réglementaires prises. » [our translation: “this year, for the first time, in order to measure the number of regulations adopted only at the end of the six-month period the Government sets itself, the period used includes three months fewer for the laws promulgated and three months more for the regulations adopted.”] In 2024-2025, it publishes a single rate (« Taux d'application global des lois 66 % (+ 4 points) » [our translation: “Overall implementation rate of laws 66% (+ 4 points)”]), and specifies in a note: « Les données prises en compte sont celles des mesures prévues, non éventuelles et non différées au-delà du 31 mars 2026, par les dispositions législatives. » [our translation: “The data taken into account are those of the measures provided for by the legislative provisions, excluding optional measures and measures deferred beyond 31 March 2026.”] Optional measures (mesures éventuelles) are those the law allows without requiring them.
+The “+ 4 points” cannot be read in the table, which gives 59% for 2023-2024: the Senate compares with its 2023-2024 rate excluding deferred measures.
+The previous report said so: « Si l'on exclut les mesures dont le législateur a autorisé une entrée en vigueur différée, ce taux d'application s'élève à 62 % » [our translation: “If measures whose deferred entry into force the legislature has authorised are excluded, this implementation rate stands at 62%”].
+For 2019-2020, the reports give two values.
+The 2020 report says: « Le taux global d'application des lois mesuré par le Sénat cette année est de 62 % » [our translation: “The overall implementation rate of laws measured by the Senate this year is 62%”].
+The next one, on 2020-2021, writes « soit un taux inférieur à celui de l'année précédente (60 %) » [our translation: “a lower rate than that of the previous year (60%)”], then: « En incluant les mesures d'application prises mais non prévues, ce taux est de 63 % (62 % pour l'année précédente) » [our translation: “Including implementing measures adopted but not planned, this rate is 63% (62% for the previous year)”].
+A revised figure or another variant of the rate: the documents do not settle it, and the series keeps both values.
+The 2009-2010 session is not shown in the figure, for lack of a cut-off date established in the sentence that gives its rate.
+Two values for the same session and a change of definition are two distinct facts: the series keeps both.
+What this page does not say
+It does not say whether a law produces the effect the promise aimed at.
+It does not measure the quality of decrees, nor whether they reflect the legislature’s intent, which the Senate assesses itself.
+It gives no publication time, for lack of a dated history of the schedules.
+It sets the Senate’s and the Government’s rates side by side with their definitions, without ranking them, and does not join two segments of the Senate’s series.
+After the vote Un président peut-il tenir ses promesses ?, the author's book, in French: contents, excerpts and reviews →
+Frequently asked questions
+Does a French law apply as soon as it is published in the Journal officiel?
+In principle, it enters into force on the date it sets or, failing that, the day after its publication; in case of urgency, on its publication if the promulgation decree so prescribes (Civil Code, art.
+1).
+But provisions whose implementation requires implementing measures do not enter into force until those measures do (our translation).
+A law can therefore be in force in part and wait for its decrees or orders in another part.
+How many French laws are still waiting for an implementing measure?
+On 5 October 2026, according to the barometer of the application of laws, 130 of the 399 laws promulgated from October 2017 to September 2025, excluding treaties, still had at least one measure classified as pending; 124 had received all their measures, 144 called for none and one had no schedule.
+Of the 5,398 measures listed for these laws, 567 were pending.
+A pending measure is not necessarily late.
+What is the implementation rate of laws in France?
+It depends on counting conventions.
+At 31 December 2025, the General Secretariat of the Government publishes 87% for the laws of the 16th legislature, decrees only, and 55% for those of the 17th, decrees or orders; the Senate publishes 66% for the 2024-2025 session, at 31 March 2026.
+These rates cover neither the same laws, nor the same measures, nor the same date: they cannot be ranked.
+Is one law in two left unapplied?
+On 5 October 2026, according to the barometer, 130 of the 399 laws promulgated from October 2017 to September 2025, excluding treaties, still had at least one measure classified as pending.
+Measured only against the 254 laws that called for at least one measure, they make up 51%, about one in two.
+This means neither that these laws were wholly inapplicable, nor that each of these measures was late.
+A phrase like "one law in two" may come from this second count, from a rate per measure, from a single session or from another date: before repeating it, one must know what it counts, on what date and for which laws.
+Sources
+Barometer of the application of laws, National Assembly and LexImpact, from DILA’s implementation schedules: files of laws and of measures, version of 5 October 2026.
+French Senate, annual reports on the application of laws from 2011 to 2026, summaries and press releases from 2003 to 2011 (in French); the document and page of each value and each quotation are given in the dataset.
+General Secretariat of the Government, half-yearly report on the application of laws at 31 December 2025, read on Légifrance through a browser (in French).
+Conseil d’État, decisions of 27 July 2005 (no.
+261694), 29 June 2011 (no.
+343188), 21 January 2021 (no.
+429956) and 27 May 2021 (no.
+441660), read on ArianeWeb (in French).
+Constitution, arts.
+10, 13, 21, 22 and 61, quoted in the English translation published by the Conseil constitutionnel; Civil Code, art.
+1, read on Légifrance (API).
+The figures, quotations, checks and charts are produced by a single script, which stops if a piece of data no longer meets the conditions on which the main sentences rest.
+Each quotation is checked word for word in the archived document it comes from: pages of the Senate’s reports, articles of the Constitution and of the Civil Code, decisions of the Conseil d’État; for the report of the General Secretariat of the Government, which Légifrance refuses to scripts, in an extract of the page read through a browser, whose fingerprint is the one the browser computed.
+Counts of laws and measures are recalculated from the barometer’s files; the Senate’s rates, transcribed in the script, are reread in the archived pages of its reports; the sorting of the “not applicable” observations follows rules written in the script.
+Download the data (CC BY 4.0 licence): CSV, long format; JSON, with definitions, the sorting rules and the record of the checks (field names and some labels in French).
+This dataset is also archived on Zenodo, with the six others of the same series and their methods note, under a permanent identifier for citation: doi:10.5281/zenodo.23212664.
+Reusing this page
+The charts, the data and a ready-made citation, under an open licence.
+Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it does not come apart from what makes it readable.
+Are the laws promulgated in France since 2017 still waiting for a measure?
+On 5 October 2026, according to the barometer, 130 of the 399 laws promulgated in France from October 2017 to September 2025, excluding treaties, still had at least one measure classified as pending; 124 had received all their measures and 144 called for none.
+Reading caveat.
+Laws promulgated per session (1 Oct.-30 Sept.), excluding treaties.
+Statuses from the barometer's labels: 'pending' does not mean 'late'; 'no measure to take' depends on the 'not applicable' label.
+Barometer of the application of laws (National Assembly, LexImpact; DILA data), status at 5 October 2026
+Download PNG
+SVG
+Implementing measures of French laws, by session of the law
+On 5 October 2026, of the 5,398 implementing measures listed by the barometer for the laws promulgated in France from October 2017 to September 2025, 4,378 have an identified published instrument, 567 are pending, 448 are classified as “not applicable” (sans objet) and 5 have an incomplete status.
+Reading caveat.
+Measures of the laws promulgated per session (1 Oct.-30 Sept.), excluding treaties.
+Status at the reading date: neither a historical rate nor efficiency.
+Barometer of the application of laws (National Assembly, LexImpact; DILA data), status at 5 October 2026
+Download PNG
+SVG
+French laws that call for no implementing measure, by session
+Directly applicable laws stay below half in seven sessions out of eight, whatever the source; in 2018-2019, the barometer counts 25 out of 49.
+The two sources classify 24 of the 399 laws differently.
+Reading caveat.
+Grey: laws that the barometer and the Senate classify differently (2024-2025: plus 2 laws with no list of names).
+Black mark: half of the laws.
+Barometer of the application of laws (status at 5 October 2026); Senate annual reports on the application of laws
+Download PNG
+SVG
+The implementation rate of laws published by the French Senate, 2002-2003 to 2024-2025
+The rate published by the French Senate rests on six successive definitions since 2002-2003: the segments do not read as a single series.
+Reading caveat.
+Six successive definitions: do not join the segments.
+Two values for one session and a change of definition are two distinct facts.
+French Senate, annual reports on the application of laws, 2003-2026 (rates as published, page cited in the table)
+Download PNG
+SVG
+Cite this page
+Lalut, Stéphane (2026).
+“Does a French law apply as soon as it is passed?”.
+National Assembly and LexImpact (DILA data), French Senate, General Secretariat of the Government, Conseil d'État, Légifrance data, retrieved 5 October 2026 (barometer of the application of laws); Senate reports read on 6 October 2026; General Secretariat of the Government report at 31 December 2025, page reread on 12 October 2026; Conseil d'État decisions read on 12 October 2026. https://stephane-lalut.com/en/does-a-law-apply-as-soon-as-it-is-passed/
+Copy citation
+In three sentences
+On 5 October 2026, according to the barometer of the application of laws, 130 of the 399 laws promulgated in France from October 2017 to September 2025, excluding treaties, were still waiting for at least one measure; 124 had received all of them and 144 called for none.
+The Conseil d’État requires the measures that the application of the law necessarily implies to be taken within a reasonable time.
+The implementation rates of the Senate and the Government rest on different counting conventions, and the Senate’s series on six successive definitions since 2002-2003.
+Copy summary
+The data
+The status of laws and of their implementing measures by session, the sorting of the “not applicable” observations, the laws directly applicable according to the two sources, and the rates published by the Senate since 2002-2003 and by the Government at 31 December 2025; the same content exists as CSV, in long format, readable in a spreadsheet.
+Download JSON CSV
+Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
+Text under copyright — short quotation free, full reproduction on request.
+The raw series belong to their producers (National Assembly and LexImpact (DILA data), French Senate, General Secretariat of the Government, Conseil d'État, Légifrance), under their own terms.
+All resources: data, explainers and reference material →
+Share
+WhatsApp
+Bluesky
+LinkedIn
+X
+Email
+Copy link

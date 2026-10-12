@@ -1,15 +1,23 @@
 {
- "releve_le": "2026-10-06",
- "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Assemblée nationale et LexImpact (données DILA), Sénat, Secrétariat général du Gouvernement, Légifrance",
+ "releve_le": "2026-10-12",
+ "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Assemblée nationale et LexImpact (données DILA), Sénat, Secrétariat général du Gouvernement, Légifrance, Conseil d'État",
  "meta": {
   "page": "https://stephane-lalut.com/une-loi-votee-s-applique-t-elle-tout-de-suite/",
-  "protocole": "fiches de preuve v2, volet Appliquer, E1 à E3",
+  "protocole": "fiches de preuve v2, volet Appliquer, E1 à E3 ; phase B de la refonte du 12/10/2026",
+  "dates": "baromètre : version du 05/10/2026 ; rapports du Sénat : pages lues le 06/10/2026 (deux pages ajoutées le 12/10/2026) ; bilan du SGG au 31/12/2025 : page rendue relue le 12/10/2026 ; décisions du Conseil d'État : lues le 12/10/2026 ; releve_le = date de la dernière lecture d'une source",
   "sources": {
    "barometre": [
     "# source: https://barometre.assemblee-nationale.fr/barometre_application_lois_assemblee.csv ; version du 05/10/2026 ; sha256 5a79d54f9fec5cd7366a2dabb7ccb3d0a444b317f29d36531d9015dcb52692b8 ; 2059 lois au fichier complet ; extrait : lois publiees du 01/10/2017 au 30/09/2025 (553)",
     "# source: https://barometre.assemblee-nationale.fr/barometre_application_mesures_assemblee.csv ; version du 05/10/2026 ; sha256 8e7d8623335fe9575cebb87e67403d3bc4640e709e616a0208bf2fb4ece3dc76 ; 15134 mesures au fichier complet ; extrait : mesures des lois de l'extrait des lois (5398)"
    ],
    "code_civil_art1": "LEGIARTI000006419280",
+   "constitution": {
+    "art10": "LEGIARTI000006527469",
+    "art13": "LEGIARTI000019241006",
+    "art21_exec": "LEGIARTI000006527485",
+    "art22": "LEGIARTI000006527486",
+    "art61": "LEGIARTI000019241074"
+   },
    "senat_pages": {
     "r18-542|5": "1325ba21aaeb5d1b38e60644fbac7fe43bced621ac102c6f08b4894836169060",
     "r18-542|539": "1325ba21aaeb5d1b38e60644fbac7fe43bced621ac102c6f08b4894836169060",
@@ -20,6 +28,8 @@
     "r25-802|47": "b2cd059c7a1f1904c7a0e1dbbb37f5028559101938f46e12b18a5e494bbc26ba",
     "r25-802|271": "b2cd059c7a1f1904c7a0e1dbbb37f5028559101938f46e12b18a5e494bbc26ba",
     "r24-710|3": "7d11e25d09ec9699177449e1262f50218ee76a6d091d0b44ceb0ca5789c207fc",
+    "r25-802|20": "b2cd059c7a1f1904c7a0e1dbbb37f5028559101938f46e12b18a5e494bbc26ba",
+    "r25-802|21": "b2cd059c7a1f1904c7a0e1dbbb37f5028559101938f46e12b18a5e494bbc26ba",
     "cp20051201.html|html": "17d2d56799ec0609030d29ca57c5e5fb93790ceea661a72e6fd5eb53e5504d4f",
     "cp20031202a.html|html": "d5a3e8ca790db6461951a6fe6f3cada7e65593a241fe15affc6f5d6b4350ee46",
     "appleg_06-syn|2": "e639e54f5c5ecf8460bbe56dd4f356188081c40358b31b7c998196a249d3011a",
@@ -37,27 +47,65 @@
     "r21-658|3": "c35a7ea6c13a6db16ed710cfed53d7e51121cb855e1a1444deb44dfece92d6fd",
     "r22-636|3": "1eefa0e5a017a56e7597801f3282d8325e98310a5142cbaac8ed842e591050f3",
     "r23-624|3": "a87f9eff690f11ab77ca415327096dc408c7eee23116550048f87bc8788fcc72"
+   },
+   "sgg_bilan_31_12_2025": {
+    "url": "https://www.legifrance.gouv.fr/contenu/menu/autour-de-la-loi/legislatif-et-reglementaire/application-des-lois/bilan-semestriel-au-31-decembre-2025",
+    "releve": "sgg_bilan_31-12-2025_page_rendue.txt",
+    "sha256_releve": "3232dcae236eb2d06794a0d785aff4f80dacba93ba3bd19f60c03041a7a78cd7",
+    "sha256_texte_rendu_entier": "c5cda67497c80af9be853ab8d71a3a1c5bb238d2150278969b39a79a89d2c030",
+    "canal": "page rendue dans Chrome le 12/10/2026 (Légifrance refuse les scripts) ; empreinte des lignes relevées calculée dans le navigateur"
+   },
+   "conseil_etat": {
+    "343188": {
+     "fichier": "ce_decision_2011-06-29_343188.html",
+     "sha256": "db9594c1b2025c48c76d0cc0c1d37277a39af68b7d097f33f5b93ef9c9d0a68d",
+     "url": "https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2011-06-29/343188"
+    },
+    "429956": {
+     "fichier": "ce_decision_2021-01-21_429956.html",
+     "sha256": "07af6831a01ad03493fa0bba76695253f0e4758db1ff9f5dc0cffbccc32b3e0c",
+     "url": "https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2021-01-21/429956"
+    },
+    "261694": {
+     "fichier": "ce_decision_2005-07-27_261694.html",
+     "sha256": "bb38e40ec0126fa4d1ed65887da3726f35f1eab6b3a89150917e6ec06593e498",
+     "url": "https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2005-07-27/261694"
+    },
+    "441660": {
+     "fichier": "ce_decision_2021-05-27_441660.html",
+     "sha256": "621baccd9513b80a9a392983d95ad0c9fb4f046f2c32279be19ac0387bc711d5",
+     "url": "https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2021-05-27/441660"
+    }
    }
   },
   "definitions": {
    "session": "lois publiées du 1er octobre au 30 septembre suivant",
    "directe": "loi qui n'appelle aucune mesure réglementaire d'application ; le baromètre la déduit de son échéancier (aucune mesure autre que « sans objet »), le Sénat la classe dans ses annexes",
+   "statut_loi": "attente : au moins une mesure « en attente d'application » ; toutes : non directe, avec échéancier, toutes ses mesures à appliquer appliquées ; directe : « Loi d'application directe » ; sans_echeancier : « Loi sans échéancier » (baromètre)",
    "U_lois": "lois classées différemment par les deux sources, même quand une règle explique l'écart",
    "P": "mesure à l'état « appliqué » avec un identifiant d'acte",
    "A": "mesure « en attente d'application »",
    "S": "mesure indiquée « sans objet »",
-   "U_mesures": "mesure « appliquée » sans identifiant d'acte"
+   "U_mesures": "mesure « appliquée » sans identifiant d'acte",
+   "sans_objet_avec_acte": "observation « sans objet » qui COMMENCE par la référence d'un acte (« Arrêté du », « Décret du », « Décret n° ») ; les écartés du filtre large sont listés avec leur motif",
+   "tri_observations": "tri de l'observation du producteur par règles écrites (regles_tri) ; zéro ou plusieurs règles = indéterminé ; jamais un reclassement juridique"
   },
   "limites": "état courant seulement : aucun taux à six ou douze mois ne se calcule sans historique daté des échéanciers ; les taux du Sénat et du Gouvernement ne se comparent pas entre eux ni d'un segment de définition à l'autre"
  },
  "gardes": [
-  "A1 : Constitution art. 10 et 61 (FR Legifrance, EN Conseil constitutionnel), code civil art. 1",
-  "A7 : 13 citations du Senat, 5 extraits du SGG, 23 valeurs de serie retrouvees mot pour mot",
-  "A2 : 399 lois au champ, 154 conventions ecartees, registre identique loi par loi",
+  "A1 : Constitution art. 10, 13, 21, 22 et 61 (FR Legifrance, EN Conseil constitutionnel), code civil art. 1 (al. 1 a 3)",
+  "A10 : 4 decisions du Conseil d'Etat (empreintes), 9 citations retrouvees mot pour mot ; formule du delai raisonnable dans 3 decisions",
+  "A7 : 24 citations du Senat, 5 extraits du SGG (releve a l'empreinte du navigateur ; totaux recalcules), 23 valeurs de serie retrouvees mot pour mot",
+  "A2 : 399 lois au champ, 154 conventions ecartees (toutes, et elles seules, autorisent ratification, approbation ou adhesion), registre identique loi par loi",
   "A3 : directes du barometre recalculees = registre ; effectifs du Senat = annonces (2024-2025 : 22 par commissions)",
-  "A4 : aucune phrase generale ; 2018-2019 : barometre 25/49 ; 24 lois classees differemment",
+  "A4 : 2018-2019 : barometre 25/49, seule session au-dessus de la moitie ; 24 lois classees differemment",
   "A5 : 5398 mesures, N = P + A + S + U ; coherence loi par loi avec le fichier des lois du meme producteur",
-  "A6 : 2025-138 : 1 mesure(s) « sans objet » portant un arrete au barometre, en attente au SGG (31/12/2025)"
+  "A5 bis : « sans objet » commencant par un acte : 98 = 95 references + 3 ecartes a motif nomme ; tri : 448 = 405 classes + 43 indetermines",
+  "A8 : statut des lois : chaque loi dans un seul des quatre statuts, somme = champ par session ; 2024-2025 : 56 lois dans les deux sources",
+  "A8 bis : 130 lois en attente sur 254 qui appelaient au moins une mesure (51.2 %), « environ une sur deux »",
+  "A6 : 2025-138 : 1 mesure(s) « sans objet » portant un arrete au barometre, loi sans mesure a prendre ; en attente au SGG (31/12/2025)",
+  "A9 : « + 4 points » = 66 - 62 (2023-2024 hors mesures differees), et non 66 - 59",
+  "Figures : 8 versions telephone a parite avec la version detaillee (FR et EN) ; temoin : valeur faussee vue"
  ],
  "calcul": {
   "lois": [
@@ -142,6 +190,49 @@
     "conventions": 15
    }
   ],
+  "lois_statut": {
+   "2017-2018": {
+    "directe": 12,
+    "attente": 8,
+    "toutes": 21
+   },
+   "2018-2019": {
+    "directe": 25,
+    "attente": 13,
+    "toutes": 11
+   },
+   "2019-2020": {
+    "toutes": 14,
+    "attente": 13,
+    "directe": 16
+   },
+   "2020-2021": {
+    "attente": 21,
+    "directe": 19,
+    "toutes": 11
+   },
+   "2021-2022": {
+    "attente": 18,
+    "directe": 21,
+    "toutes": 25
+   },
+   "2022-2023": {
+    "directe": 10,
+    "toutes": 19,
+    "attente": 15
+   },
+   "2023-2024": {
+    "attente": 21,
+    "directe": 21,
+    "toutes": 9
+   },
+   "2024-2025": {
+    "directe": 20,
+    "attente": 21,
+    "toutes": 14,
+    "sans_echeancier": 1
+   }
+  },
   "mesures": {
    "2017-2018": {
     "P": 520,
@@ -193,9 +284,46 @@
    "U": 5
   },
   "sans_objet_avec_acte": {
-   "2020-2021": 3,
    "2023-2024": 4,
    "2024-2025": 91
+  },
+  "sans_objet_filtre_large": 98,
+  "sans_objet_ecartes": [
+   {
+    "session": "2020-2021",
+    "loi": "LOI n° 2021-689 du 31 mai 2021 relative à la gestion de la s",
+    "observation": "Décret non pris, l'élection pour le renouvellement général de l'assemblée de Guyane s'est tenue.",
+    "motif": "décret non pris"
+   },
+   {
+    "session": "2020-2021",
+    "loi": "LOI n° 2021-689 du 31 mai 2021 relative à la gestion de la s",
+    "observation": "Décret non pris.",
+    "motif": "décret non pris"
+   },
+   {
+    "session": "2020-2021",
+    "loi": "LOI n° 2021-689 du 31 mai 2021 relative à la gestion de la s",
+    "observation": "Décret non pris, les élections consulaires se sont tenues les 29 et 30 mai 2021.",
+    "motif": "décret non pris"
+   }
+  ],
+  "sans_objet_tri": {
+   "base_legale_modifiee": 96,
+   "aucune_mesure_necessaire": 41,
+   "indetermine": 43,
+   "deja_appliquee": 153,
+   "mesure_eventuelle_non_utilisee": 16,
+   "mesure_non_prise": 4,
+   "acte_en_tete": 95
+  },
+  "regles_tri": {
+   "acte_en_tete": "\\s*(?:Arr[êe]t[ée] du |D[ée]cret du |D[ée]cret n\\s?°)",
+   "deja_appliquee": "d[ée]j[àa] appliqu",
+   "base_legale_modifiee": "abrog|r[ée][ée]cri|supprim|obsol|modifi\\w* .*renvoi",
+   "aucune_mesure_necessaire": "(?:pas|n['’]est|n['’]était|plus) n[ée]cessaire|aucune mesure r[ée]glementaire|n['’]appelle (?:pas|aucune)|pas d['’]une mesure d['’]application|non n[ée]cessaire|ne n[ée]cessit\\w* pas",
+   "mesure_eventuelle_non_utilisee": "[ée]ventuelle.*(?:pas été|non) utilis|pas prévu de prendre de texte pour cette mesure [ée]ventuelle",
+   "mesure_non_prise": "non pris|n['’](?:a|ont) (?:pas )?été pris|pas été pris|ne sera pas pris|renonc|abandonn"
   },
   "attente_mention_differe": {
    "2018-2019": 6,
@@ -205,6 +333,28 @@
    "2022-2023": 10,
    "2023-2024": 21,
    "2024-2025": 21
+  },
+  "attente_differe_sans_date_prevue": 75,
+  "attente_sans_date_prevue": 525,
+  "sgg_31_12_2025": {
+   "sgg16": {
+    "mesures": 1088,
+    "recues": 948,
+    "attente": 140,
+    "taux": 87
+   },
+   "sgg17": {
+    "mesures": 320,
+    "recues": 177,
+    "attente": 143,
+    "taux": 55
+   }
+  },
+  "senat_2024_2025_plus4": {
+   "taux": 66,
+   "taux_2023_2024_hors_differees": 62,
+   "points": 4,
+   "taux_2023_2024_serie": 59
   }
  },
  "serie_senat": [
@@ -385,7 +535,97 @@
    "definition": "un seul taux, sans mesures éventuelles ni différées au-delà du 31 mars 2026"
   }
  ],
+ "serie_senat_2019_2020_rapport_suivant": {
+  "valeur": 60,
+  "document": "r21-658|3",
+  "citation": "soit un taux inférieur à celui de l'année précédente (60 %)",
+  "statut": "révision ou autre variante : non établi"
+ },
  "tableaux": {
+  "statut": {
+   "entetes": [
+    "Session",
+    "Lois promulguées (hors conventions)",
+    "Au moins une mesure en attente",
+    "Toutes mesures prises",
+    "Sans mesure à prendre",
+    "Sans échéancier"
+   ],
+   "lignes": [
+    [
+     "2017-2018",
+     "41",
+     "8",
+     "21",
+     "12",
+     "0"
+    ],
+    [
+     "2018-2019",
+     "49",
+     "13",
+     "11",
+     "25",
+     "0"
+    ],
+    [
+     "2019-2020",
+     "43",
+     "13",
+     "14",
+     "16",
+     "0"
+    ],
+    [
+     "2020-2021",
+     "51",
+     "21",
+     "11",
+     "19",
+     "0"
+    ],
+    [
+     "2021-2022",
+     "64",
+     "18",
+     "25",
+     "21",
+     "0"
+    ],
+    [
+     "2022-2023",
+     "44",
+     "15",
+     "19",
+     "10",
+     "0"
+    ],
+    [
+     "2023-2024",
+     "51",
+     "21",
+     "9",
+     "21",
+     "0"
+    ],
+    [
+     "2024-2025",
+     "56",
+     "21",
+     "14",
+     "20",
+     "1"
+    ],
+    [
+     "Total",
+     "399",
+     "130",
+     "124",
+     "144",
+     "1"
+    ]
+   ]
+  },
   "lois": {
    "entetes": [
     "Session",
@@ -529,8 +769,8 @@
     ],
     [
      "Total",
-     "5 398",
-     "4 378",
+     "5 398",
+     "4 378",
      "567",
      "448",
      "5"
@@ -547,146 +787,262 @@
    "lignes": [
     [
      "2002-2003",
-     "9,7 %",
+     "9,7 %",
      "lois de l'année parlementaire, arrêt au 30 septembre de la même année",
      "cp20051201.html"
     ],
     [
      "2003-2004",
-     "14,4 %",
+     "14,4 %",
      "lois de l'année parlementaire, arrêt au 30 septembre de la même année",
      "cp20051201.html"
     ],
     [
      "2004-2005",
-     "16,4 %",
+     "16,4 %",
      "lois de l'année parlementaire, arrêt au 30 septembre de la même année",
      "cp20051201.html"
     ],
     [
      "2005-2006",
-     "30 %",
+     "30 %",
      "lois de l'année parlementaire, arrêt au 30 septembre de la même année",
      "appleg_06-syn"
     ],
     [
      "2006-2007",
-     "32,1 %",
+     "32,1 %",
      "lois de l'année parlementaire, arrêt au 30 septembre de la même année",
      "apleg_08-syn"
     ],
     [
      "2007-2008",
-     "24,6 %",
+     "24,6 %",
      "lois de l'année parlementaire, arrêt au 30 septembre de la même année",
      "apleg_08-syn"
     ],
     [
      "2008-2009",
-     "27 %",
+     "27 %",
      "lois de l'année parlementaire, arrêt au 30 septembre de la même année",
      "apleg_09-syn"
     ],
     [
      "2010-2011",
-     "64 %",
+     "64 %",
      "période décalée de trois mois pour attendre le délai de six mois du Gouvernement, session ordinaire seule",
      "r11-323"
     ],
     [
      "2011-2012",
-     "66 %",
+     "66 %",
      "« nouvelles bornes » : lois du 14 juillet 2011 au 30 septembre 2012",
      "r12-654"
     ],
     [
      "2012-2013",
-     "64 %",
+     "64 %",
      "lois du 1er octobre au 30 septembre, arrêt au 31 mars suivant",
      "r13-623"
     ],
     [
      "2013-2014",
-     "55 %",
+     "55 %",
      "lois du 1er octobre au 30 septembre, arrêt au 31 mars suivant",
      "r14-495"
     ],
     [
      "2014-2015",
-     "62 %",
+     "62 %",
      "lois du 1er octobre au 30 septembre, arrêt au 31 mars suivant",
      "r15-650"
     ],
     [
      "2015-2016",
-     "71 %",
+     "71 %",
      "lois du 1er octobre au 30 septembre, arrêt au 31 mars suivant",
      "r16-677"
     ],
     [
      "2016-2017",
-     "73 %",
+     "73 %",
      "lois du 1er octobre au 30 septembre, arrêt au 31 mars suivant",
      "r17-510"
     ],
     [
      "2017-2018",
-     "78 %",
+     "78 %",
      "même calendrier, mesures différées comprises (un second taux les exclut)",
      "r18-542"
     ],
     [
      "2018-2019",
-     "72 %",
+     "72 %",
      "même calendrier, mesures différées comprises (un second taux les exclut)",
      "r19-523"
     ],
     [
      "2019-2020",
-     "62 %",
+     "62 %",
      "même calendrier, mesures différées comprises (un second taux les exclut)",
      "r20-645"
     ],
     [
      "2019-2020",
-     "60 % (valeur reprise l'année suivante)",
+     "60 % (rapport suivant ; variante non établie)",
      "même calendrier, mesures différées comprises (un second taux les exclut)",
      "r21-658"
     ],
     [
      "2020-2021",
-     "57 %",
+     "57 %",
      "même calendrier, mesures différées comprises (un second taux les exclut)",
      "r21-658"
     ],
     [
      "2021-2022",
-     "65 %",
+     "65 %",
      "même calendrier, mesures différées comprises (un second taux les exclut)",
      "r22-636"
     ],
     [
      "2022-2023",
-     "64 %",
+     "64 %",
      "même calendrier, mesures différées comprises (un second taux les exclut)",
      "r23-624"
     ],
     [
      "2023-2024",
-     "59 %",
+     "59 %",
      "même calendrier, mesures différées comprises (un second taux les exclut)",
      "r24-710"
     ],
     [
      "2024-2025",
-     "66 %",
+     "66 %",
      "un seul taux, sans mesures éventuelles ni différées au-delà du 31 mars 2026",
      "r25-802"
+    ]
+   ]
+  },
+  "taux": {
+   "entetes": [
+    "Producteur et document",
+    "Lois couvertes",
+    "Mesures comptées",
+    "Données arrêtées au",
+    "Taux publié"
+   ],
+   "lignes": [
+    [
+     "Secrétariat général du Gouvernement, bilan semestriel, XVIe législature",
+     "lois votées du 1er juillet 2022 au 9 juin 2024 qui appellent des décrets d'application",
+     "décrets (1 088 mesures)",
+     "31 décembre 2025",
+     "87 %"
+    ],
+    [
+     "Secrétariat général du Gouvernement, bilan semestriel, XVIIe législature",
+     "lois publiées du 18 juillet 2024 au 30 juin 2025 qui appellent des décrets ou des arrêtés d'application",
+     "décrets ou arrêtés (320 mesures)",
+     "31 décembre 2025",
+     "55 %"
+    ],
+    [
+     "Sénat, rapport sur la session 2024-2025",
+     "lois de la session 2024-2025 (1er octobre au 30 septembre)",
+     "mesures prévues, non éventuelles et non différées au-delà du 31 mars 2026",
+     "31 mars 2026",
+     "66 %"
     ]
    ]
   }
  },
  "tableaux_en": {
+  "statut": {
+   "entetes": [
+    "Session",
+    "Laws promulgated (excluding treaties)",
+    "At least one measure pending",
+    "All measures taken",
+    "No measure to take",
+    "No schedule"
+   ],
+   "lignes": [
+    [
+     "2017-2018",
+     "41",
+     "8",
+     "21",
+     "12",
+     "0"
+    ],
+    [
+     "2018-2019",
+     "49",
+     "13",
+     "11",
+     "25",
+     "0"
+    ],
+    [
+     "2019-2020",
+     "43",
+     "13",
+     "14",
+     "16",
+     "0"
+    ],
+    [
+     "2020-2021",
+     "51",
+     "21",
+     "11",
+     "19",
+     "0"
+    ],
+    [
+     "2021-2022",
+     "64",
+     "18",
+     "25",
+     "21",
+     "0"
+    ],
+    [
+     "2022-2023",
+     "44",
+     "15",
+     "19",
+     "10",
+     "0"
+    ],
+    [
+     "2023-2024",
+     "51",
+     "21",
+     "9",
+     "21",
+     "0"
+    ],
+    [
+     "2024-2025",
+     "56",
+     "21",
+     "14",
+     "20",
+     "1"
+    ],
+    [
+     "Total",
+     "399",
+     "130",
+     "124",
+     "144",
+     "1"
+    ]
+   ]
+  },
   "lois": {
    "entetes": [
     "Session",
@@ -950,7 +1306,7 @@
     ],
     [
      "2019-2020",
-     "60% (figure revised the following year)",
+     "60% (following report; variant not established)",
      "same calendar, deferred measures included (a second rate excludes them)",
      "r21-658"
     ],
@@ -985,12 +1341,43 @@
      "r25-802"
     ]
    ]
+  },
+  "taux": {
+   "entetes": [
+    "Producer and document",
+    "Laws covered",
+    "Measures counted",
+    "Data as at",
+    "Published rate"
+   ],
+   "lignes": [
+    [
+     "General Secretariat of the Government, half-yearly report, 16th legislature",
+     "laws passed from 1 July 2022 to 9 June 2024 that call for implementing decrees",
+     "decrees (1,088 measures)",
+     "31 December 2025",
+     "87%"
+    ],
+    [
+     "General Secretariat of the Government, half-yearly report, 17th legislature",
+     "laws published from 18 July 2024 to 30 June 2025 that call for implementing decrees or orders",
+     "decrees or orders (320 measures)",
+     "31 December 2025",
+     "55%"
+    ],
+    [
+     "Senate, report on the 2024-2025 session",
+     "laws of the 2024-2025 session (1 October to 30 September)",
+     "planned measures, excluding optional measures and measures deferred beyond 31 March 2026",
+     "31 March 2026",
+     "66%"
+    ]
+   ]
   }
  },
  "affichage": {
-  "releve": "05/10/2026",
-  "nmes": "5 398",
-  "P": "4 378",
+  "nmes": "5 398",
+  "P": "4 378",
   "A": "567",
   "S": "448",
   "U": "5",
@@ -1000,8 +1387,22 @@
   "A_2425": "119",
   "N_2425": "521",
   "differ_A": "116",
-  "obs_acte": "98",
+  "differ_1819": "6",
+  "differ_1920": "14",
+  "differ_sans_date": "75",
+  "A_sans_date": "525",
+  "obs_acte": "95",
   "obs_acte_2425": "91",
+  "obs_large": "98",
+  "obs_ecartes": "trois",
+  "nS": "448",
+  "tri_deja": "153",
+  "tri_base": "96",
+  "tri_acte": "95",
+  "tri_aucune": "41",
+  "tri_event": "16",
+  "tri_nonprise": "quatre",
+  "tri_indet": "43",
   "cas_2025_138": "Arrêté du 5 février 2026",
   "nlois": "399",
   "conventions": "154",
@@ -1014,12 +1415,35 @@
   "s25_senat": "22",
   "s25_publie": "24",
   "s25_N": "56",
+  "L_dir": "144",
+  "L_att": "130",
+  "L_tout": "124",
+  "L_se": "un",
+  "L_mes": "254",
+  "L_att_pct_mes": "51 %",
+  "L_att_1718": "8",
+  "L_N_1718": "41",
+  "s25_dir": "20",
+  "s25_tout": "14",
+  "s25_dirtout": "34",
   "nsessions": "huit",
-  "releve_le": "05/10/2026 (baromètre de l'application des lois) ; rapports du Sénat lus le 06/10/2026 ; bilan du SGG au 31/12/2025, lu le 06/10/2026",
-  "age_1718": "huit",
+  "nautres": "sept",
+  "nsegments": "six",
+  "sgg16_taux": "87 %",
+  "sgg17_taux": "55 %",
+  "sgg16_n": "1 088",
+  "sgg17_n": "320",
+  "s1718_hd": "86 %",
+  "sgg1718": "85 %",
+  "plus4": "4",
+  "s2324_hd": "62 %",
+  "s2324": "59 %",
+  "s2425": "66 %",
+  "releve": "05/10/2026",
+  "releve_le": "05/10/2026 (baromètre de l'application des lois) ; rapports du Sénat lus le 06/10/2026 ; bilan du SGG au 31/12/2025, page relue le 12/10/2026 ; décisions du Conseil d'État lues le 12/10/2026",
   "senat_1819": "72 %",
   "sgg_1819": "82,4 %",
-  "cit_sgg_1718": "ces 28 lois appelaient 461 mesures réglementaires d'application et nous en avons pris 393, soit un taux d'application de 85 %",
+  "cit_sgg_1718": "Au 31 mars 2019, ces 28 lois appelaient 461 mesures réglementaires d'application et nous en avons pris 393, soit un taux d'application de 85 %",
   "cit_senat_1718": "Il atteint désormais 78 % - 86 % si on exclut les mesures dont l'entrée en vigueur est différée",
   "cit_senat_1819": "Le taux global d'application des lois calculé par le Sénat est de 72 %",
   "cit_sgg_1819": "les services du Secrétariat général du Gouvernement parviennent pour leur part à un taux global de 82,4 %",
@@ -1027,22 +1451,47 @@
   "cit_arretes": "le Sénat effectue un contrôle global des mesures d'application des lois, en incluant les arrêtés dont la publication est prévue par la loi. Ce n'est pas le cas du secrétariat général du Gouvernement.",
   "cit_politique": "Il peut également diverger pour des raisons politiques, notamment lorsque le Sénat considère qu'un décret pris ne respecte pas la volonté du législateur, et donc que la mesure attendue n'est pas prise.",
   "cit_differees": "le Sénat intègre dans son taux les mesures attendues pour des articles dont l'entrée en vigueur est différée, à la différence du Gouvernement.",
+  "cit_1213": "pour les lois promulguées durant l'année parlementaire 2012-2013, le taux d'application des lois s'élève à 90 % (si on compte en nombre de lois) ou à environ 64 % (si on compte en nombre de mesures), pourcentages calculés à partir de la base statistique du Sénat et qui recoupent parfaitement ceux calculés par les services du Gouvernement",
+  "cit_802_arretes": "Depuis le 1er janvier 2024, le SGG contrôle la parution des arrêtés sous réserve qu'ils aient été expressément prévus par une disposition législative.",
+  "cit_802_differees": "il a été décidé, pour la session 2024-2025, de ne plus prendre en compte les mesures différées au-delà du 31 mars 2026",
+  "cit_802_appreciation": "En dépit de la convergence des méthodes, certaines divergences demeurent quant à l'appréciation de l'effectivité de l'application de certaines lois entre le Sénat et le SGG.",
+  "cit_802_baisse": "le Sénat assiste depuis 2018 à une réduction globale et constante du taux d'application moyen des lois qu'il adopte",
+  "cit_802_36": "Au 31 mars 2026, 36 lois (soit 64 %) adoptées au cours de la session 2024-25 sur 56 étaient entièrement applicables.",
+  "cit_802_detail": "Plus précisément, 22 d'entre elles (soit 39 %) étaient d'application directe et 14 (soit 25 %) avaient fait l'objet de l'intégralité des mesures d'application prévues.",
   "cit_802_22": "Plus précisément, 22 d'entre elles (soit 39 %) étaient d'application directe",
   "cit_802_24": "le nombre de lois promulguées lors de la session 2024-2025 s'établit à 56, dont 24 d'application directe",
   "cit_802_66": "Taux d'application global des lois 66 % (+ 4 points)",
   "cit_802_note": "Les données prises en compte sont celles des mesures prévues, non éventuelles et non différées au-delà du 31 mars 2026, par les dispositions législatives.",
+  "cit_2324_62": "Si l'on exclut les mesures dont le législateur a autorisé une entrée en vigueur différée, ce taux d'application s'élève à 62 %",
+  "cit_2020_62": "Le taux global d'application des lois mesuré par le Sénat cette année est de 62 %",
+  "cit_2021_60": "soit un taux inférieur à celui de l'année précédente (60 %)",
+  "cit_2021_62": "En incluant les mesures d'application prises mais non prévues, ce taux est de 63 % (62 % pour l'année précédente)",
   "cit_six_mois": "cette année, pour la première fois, afin de ne mesurer le nombre de mesures réglementaires prises qu'à l'expiration du délai de six mois que s'impose à lui-même le Gouvernement, la période retenue comprend trois mois de moins pour les lois promulguées retenues et trois mois de plus pour les mesures réglementaires prises.",
+  "cit_ce_principe": "L'exercice du pouvoir réglementaire comporte non seulement le droit mais aussi l'obligation de prendre dans un délai raisonnable les mesures qu'implique nécessairement l'application de la loi, hors le cas où le respect d'engagements internationaux de la France y ferait obstacle.",
+  "cit_ce_arrete": "Lorsqu'un décret pris pour l'application d'une loi renvoie lui-même à un arrêté la détermination de certaines mesures nécessaires à cette application, cet arrêté doit également intervenir dans un délai raisonnable.",
+  "cit_ce_precision": "ces dispositions ne sont pas suffisamment précises pour permettre leur entrée en vigueur en l'absence du décret d'application dont elles prévoient d'ailleurs l'intervention",
+  "cit_ce_injonction": "d'enjoindre au Premier ministre de prendre ce décret dans un délai de six mois à compter de la notification de la présente décision",
+  "cit_ce_arrete_injonction": "d'ordonner au garde des sceaux, ministre de la justice, de prendre l'arrêté prévu par l'article 9 du décret du 29 juin 2020 dans un délai de trois mois",
+  "cit_ce_reparation": "les préjudices qui résultent du retard mis à prendre, au-delà d'un délai raisonnable, un décret nécessaire à l'application d'une loi ouvrent droit à réparation",
+  "cit_ce_nature": "eu égard à la nature des mesures à prendre",
+  "cit_ce_exhaustif": "l'article R. 1243-4 fixe de façon exhaustive et précise le contenu du dossier de demande d'autorisation",
+  "cit_ce_pas_tenu": "le ministre chargé de la santé n'était pas tenu de prendre l'arrêté prévu par ce dernier article",
   "cit_cciv": "Toutefois, l'entrée en vigueur de celles de leurs dispositions dont l'exécution nécessite des mesures d'application est reportée à la date d'entrée en vigueur de ces mesures.",
+  "cit_cciv_urg": "En cas d'urgence, entrent en vigueur dès leur publication les lois dont le décret de promulgation le prescrit",
   "cit_art10": "Le Président de la République promulgue les lois dans les quinze jours qui suivent la transmission au Gouvernement de la loi définitivement adoptée.",
+  "cit_art10_al2": "Il peut, avant l'expiration de ce délai, demander au Parlement une nouvelle délibération de la loi ou de certains de ses articles. Cette nouvelle délibération ne peut être refusée.",
   "cit_art61": "la saisine du Conseil constitutionnel suspend le délai de promulgation.",
   "cit_art61_saisine": "les lois peuvent être déférées au Conseil constitutionnel, avant leur promulgation, par le Président de la République, le Premier ministre, le Président de l'Assemblée nationale, le Président du Sénat ou soixante députés ou soixante sénateurs.",
   "cit_art61_rip": "les propositions de loi mentionnées à l'article 11 avant qu'elles ne soient soumises au référendum",
-  "nautres": "sept",
-  "nsegments": "six",
+  "cit_art21_exec": "Il assure l'exécution des lois.",
+  "cit_art21_regl": "il exerce le pouvoir réglementaire",
+  "cit_art13": "Le Président de la République signe les ordonnances et les décrets délibérés en Conseil des ministres.",
+  "cit_art22": "Les actes du Premier ministre sont contresignés, le cas échéant, par les ministres chargés de leur exécution.",
   "cit_sgg16_def": "fait apparaître le taux d'application au 31 décembre 2025 des lois qui, parmi celles votées entre le 1er juillet 2022 et le 9 juin 2024, appellent des décrets d'application.",
   "cit_sgg17_def": "fait apparaître le taux d'application au 31 décembre 2025 des lois qui, parmi celles publiées entre le 18 juillet 2024 et le 30 juin 2025, appellent des décrets ou des arrêtés d'application.",
   "cit_cciv_tr": "However, provisions whose implementation requires implementing measures do not enter into force until those measures themselves enter into force.",
-  "cit_sgg_1718_tr": "these 28 laws called for 461 implementing regulations and we adopted 393 of them, an implementation rate of 85%",
+  "cit_cciv_urg_tr": "In case of urgency, laws whose promulgation decree so prescribes enter into force on their publication",
+  "cit_sgg_1718_tr": "On 31 March 2019, these 28 laws called for 461 implementing regulations and we adopted 393 of them, an implementation rate of 85%",
   "cit_senat_1718_tr": "It now stands at 78% - 86% if measures whose entry into force is deferred are excluded",
   "cit_senat_1819_tr": "The overall implementation rate of laws calculated by the Senate is 72%",
   "cit_sgg_1819_tr": "the departments of the General Secretariat of the Government arrive for their part at an overall rate of 82.4%",
@@ -1050,16 +1499,35 @@
   "cit_arretes_tr": "the Senate carries out a comprehensive check of the implementing measures of laws, including the ministerial orders (arrêtés) whose publication is provided for by the law. This is not the case of the General Secretariat of the Government.",
   "cit_politique_tr": "It may also differ for political reasons, in particular when the Senate considers that a decree adopted does not reflect the legislature's intent, and therefore that the expected measure has not been taken.",
   "cit_differees_tr": "the Senate includes in its rate the measures expected for articles whose entry into force is deferred, unlike the Government.",
+  "cit_1213_tr": "for the laws promulgated during the 2012-2013 parliamentary year, the implementation rate of laws stands at 90% (counting by number of laws) or about 64% (counting by number of measures), percentages calculated from the Senate's statistical database and which match exactly those calculated by the Government's departments",
+  "cit_802_arretes_tr": "Since 1 January 2024, the SGG has checked the publication of ministerial orders provided that they were expressly provided for by a legislative provision.",
+  "cit_802_differees_tr": "it was decided, for the 2024-2025 session, no longer to take into account measures deferred beyond 31 March 2026",
+  "cit_802_appreciation_tr": "Despite the convergence of methods, some divergences remain between the Senate and the SGG as to the assessment of whether certain laws are effectively applied.",
+  "cit_802_baisse_tr": "since 2018 the Senate has witnessed an overall and steady decline in the average implementation rate of the laws it adopts",
+  "cit_802_36_tr": "As at 31 March 2026, 36 laws (64%) adopted during the 2024-25 session out of 56 were fully applicable.",
+  "cit_802_detail_tr": "More precisely, 22 of them (39%) were directly applicable and 14 (25%) had received all the planned implementing measures.",
   "cit_802_22_tr": "More precisely, 22 of them (39%) were directly applicable",
   "cit_802_24_tr": "the number of laws promulgated during the 2024-2025 session stands at 56, of which 24 directly applicable",
   "cit_802_66_tr": "Overall implementation rate of laws 66% (+ 4 points)",
   "cit_802_note_tr": "The data taken into account are those of the measures provided for by the legislative provisions, excluding optional measures and measures deferred beyond 31 March 2026.",
+  "cit_2324_62_tr": "If measures whose deferred entry into force the legislature has authorised are excluded, this implementation rate stands at 62%",
+  "cit_2020_62_tr": "The overall implementation rate of laws measured by the Senate this year is 62%",
+  "cit_2021_60_tr": "a lower rate than that of the previous year (60%)",
+  "cit_2021_62_tr": "Including implementing measures adopted but not planned, this rate is 63% (62% for the previous year)",
   "cit_six_mois_tr": "this year, for the first time, in order to measure the number of regulations adopted only at the end of the six-month period the Government sets itself, the period used includes three months fewer for the laws promulgated and three months more for the regulations adopted.",
   "cit_sgg16_def_tr": "shows the implementation rate at 31 December 2025 of the laws which, among those passed between 1 July 2022 and 9 June 2024, call for implementing decrees.",
-  "cit_sgg17_def_tr": "shows the implementation rate at 31 December 2025 of the laws which, among those published between 18 July 2024 and 30 June 2025, call for implementing decrees or orders."
+  "cit_sgg17_def_tr": "shows the implementation rate at 31 December 2025 of the laws which, among those published between 18 July 2024 and 30 June 2025, call for implementing decrees or orders.",
+  "cit_ce_principe_tr": "The exercise of regulatory power entails not only the right but also the obligation to take, within a reasonable time, the measures that the application of the law necessarily implies, except where compliance with France's international commitments would prevent it.",
+  "cit_ce_arrete_tr": "Where a decree adopted for the application of a law itself refers to a ministerial order the determination of certain measures necessary for that application, that order must also be issued within a reasonable time.",
+  "cit_ce_precision_tr": "these provisions are not precise enough to allow their entry into force in the absence of the implementing decree, whose adoption they moreover provide for",
+  "cit_ce_injonction_tr": "to order the Prime Minister to adopt this decree within six months of notification of this decision",
+  "cit_ce_arrete_injonction_tr": "to order the Keeper of the Seals, Minister of Justice, to adopt the order provided for by article 9 of the decree of 29 June 2020 within three months",
+  "cit_ce_reparation_tr": "the losses resulting from the delay in adopting, beyond a reasonable time, a decree necessary for the application of a law give rise to compensation",
+  "cit_ce_nature_tr": "having regard to the nature of the measures to be taken",
+  "cit_ce_exhaustif_tr": "article R. 1243-4 sets out exhaustively and precisely the content of the authorisation application file",
+  "cit_ce_pas_tenu_tr": "the minister responsible for health was not bound to adopt the order provided for by that article"
  },
  "affichage_en": {
-  "releve": "5 October 2026",
   "nmes": "5,398",
   "P": "4,378",
   "A": "567",
@@ -1071,8 +1539,22 @@
   "A_2425": "119",
   "N_2425": "521",
   "differ_A": "116",
-  "obs_acte": "98",
+  "differ_1819": "6",
+  "differ_1920": "14",
+  "differ_sans_date": "75",
+  "A_sans_date": "525",
+  "obs_acte": "95",
   "obs_acte_2425": "91",
+  "obs_large": "98",
+  "obs_ecartes": "three",
+  "nS": "448",
+  "tri_deja": "153",
+  "tri_base": "96",
+  "tri_acte": "95",
+  "tri_aucune": "41",
+  "tri_event": "16",
+  "tri_nonprise": "four",
+  "tri_indet": "43",
   "cas_2025_138": "Arrêté du 5 février 2026",
   "nlois": "399",
   "conventions": "154",
@@ -1085,14 +1567,35 @@
   "s25_senat": "22",
   "s25_publie": "24",
   "s25_N": "56",
+  "L_dir": "144",
+  "L_att": "130",
+  "L_tout": "124",
+  "L_se": "one",
+  "L_mes": "254",
+  "L_att_pct_mes": "51%",
+  "L_att_1718": "8",
+  "L_N_1718": "41",
+  "s25_dir": "20",
+  "s25_tout": "14",
+  "s25_dirtout": "34",
   "nsessions": "eight",
   "nautres": "seven",
   "nsegments": "six",
-  "age_1718": "eight",
-  "releve_le": "5 October 2026 (barometer of the application of laws); Senate reports read on 6 October 2026; General Secretariat of the Government report at 31 December 2025, read on 6 October 2026",
+  "sgg16_taux": "87%",
+  "sgg17_taux": "55%",
+  "sgg16_n": "1,088",
+  "sgg17_n": "320",
+  "s1718_hd": "86%",
+  "sgg1718": "85%",
+  "plus4": "4",
+  "s2324_hd": "62%",
+  "s2324": "59%",
+  "s2425": "66%",
+  "releve": "5 October 2026",
+  "releve_le": "5 October 2026 (barometer of the application of laws); Senate reports read on 6 October 2026; General Secretariat of the Government report at 31 December 2025, page reread on 12 October 2026; Conseil d'État decisions read on 12 October 2026",
   "senat_1819": "72%",
   "sgg_1819": "82.4%",
-  "cit_sgg_1718": "ces 28 lois appelaient 461 mesures réglementaires d'application et nous en avons pris 393, soit un taux d'application de 85 %",
+  "cit_sgg_1718": "Au 31 mars 2019, ces 28 lois appelaient 461 mesures réglementaires d'application et nous en avons pris 393, soit un taux d'application de 85 %",
   "cit_senat_1718": "Il atteint désormais 78 % - 86 % si on exclut les mesures dont l'entrée en vigueur est différée",
   "cit_senat_1819": "Le taux global d'application des lois calculé par le Sénat est de 72 %",
   "cit_sgg_1819": "les services du Secrétariat général du Gouvernement parviennent pour leur part à un taux global de 82,4 %",
@@ -1100,16 +1603,38 @@
   "cit_arretes": "le Sénat effectue un contrôle global des mesures d'application des lois, en incluant les arrêtés dont la publication est prévue par la loi. Ce n'est pas le cas du secrétariat général du Gouvernement.",
   "cit_politique": "Il peut également diverger pour des raisons politiques, notamment lorsque le Sénat considère qu'un décret pris ne respecte pas la volonté du législateur, et donc que la mesure attendue n'est pas prise.",
   "cit_differees": "le Sénat intègre dans son taux les mesures attendues pour des articles dont l'entrée en vigueur est différée, à la différence du Gouvernement.",
+  "cit_1213": "pour les lois promulguées durant l'année parlementaire 2012-2013, le taux d'application des lois s'élève à 90 % (si on compte en nombre de lois) ou à environ 64 % (si on compte en nombre de mesures), pourcentages calculés à partir de la base statistique du Sénat et qui recoupent parfaitement ceux calculés par les services du Gouvernement",
+  "cit_802_arretes": "Depuis le 1er janvier 2024, le SGG contrôle la parution des arrêtés sous réserve qu'ils aient été expressément prévus par une disposition législative.",
+  "cit_802_differees": "il a été décidé, pour la session 2024-2025, de ne plus prendre en compte les mesures différées au-delà du 31 mars 2026",
+  "cit_802_appreciation": "En dépit de la convergence des méthodes, certaines divergences demeurent quant à l'appréciation de l'effectivité de l'application de certaines lois entre le Sénat et le SGG.",
+  "cit_802_baisse": "le Sénat assiste depuis 2018 à une réduction globale et constante du taux d'application moyen des lois qu'il adopte",
+  "cit_802_36": "Au 31 mars 2026, 36 lois (soit 64 %) adoptées au cours de la session 2024-25 sur 56 étaient entièrement applicables.",
+  "cit_802_detail": "Plus précisément, 22 d'entre elles (soit 39 %) étaient d'application directe et 14 (soit 25 %) avaient fait l'objet de l'intégralité des mesures d'application prévues.",
   "cit_802_22": "Plus précisément, 22 d'entre elles (soit 39 %) étaient d'application directe",
   "cit_802_24": "le nombre de lois promulguées lors de la session 2024-2025 s'établit à 56, dont 24 d'application directe",
   "cit_802_66": "Taux d'application global des lois 66 % (+ 4 points)",
   "cit_802_note": "Les données prises en compte sont celles des mesures prévues, non éventuelles et non différées au-delà du 31 mars 2026, par les dispositions législatives.",
+  "cit_2324_62": "Si l'on exclut les mesures dont le législateur a autorisé une entrée en vigueur différée, ce taux d'application s'élève à 62 %",
+  "cit_2020_62": "Le taux global d'application des lois mesuré par le Sénat cette année est de 62 %",
+  "cit_2021_60": "soit un taux inférieur à celui de l'année précédente (60 %)",
+  "cit_2021_62": "En incluant les mesures d'application prises mais non prévues, ce taux est de 63 % (62 % pour l'année précédente)",
   "cit_six_mois": "cette année, pour la première fois, afin de ne mesurer le nombre de mesures réglementaires prises qu'à l'expiration du délai de six mois que s'impose à lui-même le Gouvernement, la période retenue comprend trois mois de moins pour les lois promulguées retenues et trois mois de plus pour les mesures réglementaires prises.",
+  "cit_ce_principe": "L'exercice du pouvoir réglementaire comporte non seulement le droit mais aussi l'obligation de prendre dans un délai raisonnable les mesures qu'implique nécessairement l'application de la loi, hors le cas où le respect d'engagements internationaux de la France y ferait obstacle.",
+  "cit_ce_arrete": "Lorsqu'un décret pris pour l'application d'une loi renvoie lui-même à un arrêté la détermination de certaines mesures nécessaires à cette application, cet arrêté doit également intervenir dans un délai raisonnable.",
+  "cit_ce_precision": "ces dispositions ne sont pas suffisamment précises pour permettre leur entrée en vigueur en l'absence du décret d'application dont elles prévoient d'ailleurs l'intervention",
+  "cit_ce_injonction": "d'enjoindre au Premier ministre de prendre ce décret dans un délai de six mois à compter de la notification de la présente décision",
+  "cit_ce_arrete_injonction": "d'ordonner au garde des sceaux, ministre de la justice, de prendre l'arrêté prévu par l'article 9 du décret du 29 juin 2020 dans un délai de trois mois",
+  "cit_ce_reparation": "les préjudices qui résultent du retard mis à prendre, au-delà d'un délai raisonnable, un décret nécessaire à l'application d'une loi ouvrent droit à réparation",
+  "cit_ce_nature": "eu égard à la nature des mesures à prendre",
+  "cit_ce_exhaustif": "l'article R. 1243-4 fixe de façon exhaustive et précise le contenu du dossier de demande d'autorisation",
+  "cit_ce_pas_tenu": "le ministre chargé de la santé n'était pas tenu de prendre l'arrêté prévu par ce dernier article",
   "cit_cciv": "Toutefois, l'entrée en vigueur de celles de leurs dispositions dont l'exécution nécessite des mesures d'application est reportée à la date d'entrée en vigueur de ces mesures.",
+  "cit_cciv_urg": "En cas d'urgence, entrent en vigueur dès leur publication les lois dont le décret de promulgation le prescrit",
   "cit_sgg16_def": "fait apparaître le taux d'application au 31 décembre 2025 des lois qui, parmi celles votées entre le 1er juillet 2022 et le 9 juin 2024, appellent des décrets d'application.",
   "cit_sgg17_def": "fait apparaître le taux d'application au 31 décembre 2025 des lois qui, parmi celles publiées entre le 18 juillet 2024 et le 30 juin 2025, appellent des décrets ou des arrêtés d'application.",
   "cit_cciv_tr": "However, provisions whose implementation requires implementing measures do not enter into force until those measures themselves enter into force.",
-  "cit_sgg_1718_tr": "these 28 laws called for 461 implementing regulations and we adopted 393 of them, an implementation rate of 85%",
+  "cit_cciv_urg_tr": "In case of urgency, laws whose promulgation decree so prescribes enter into force on their publication",
+  "cit_sgg_1718_tr": "On 31 March 2019, these 28 laws called for 461 implementing regulations and we adopted 393 of them, an implementation rate of 85%",
   "cit_senat_1718_tr": "It now stands at 78% - 86% if measures whose entry into force is deferred are excluded",
   "cit_senat_1819_tr": "The overall implementation rate of laws calculated by the Senate is 72%",
   "cit_sgg_1819_tr": "the departments of the General Secretariat of the Government arrive for their part at an overall rate of 82.4%",
@@ -1117,16 +1642,41 @@
   "cit_arretes_tr": "the Senate carries out a comprehensive check of the implementing measures of laws, including the ministerial orders (arrêtés) whose publication is provided for by the law. This is not the case of the General Secretariat of the Government.",
   "cit_politique_tr": "It may also differ for political reasons, in particular when the Senate considers that a decree adopted does not reflect the legislature's intent, and therefore that the expected measure has not been taken.",
   "cit_differees_tr": "the Senate includes in its rate the measures expected for articles whose entry into force is deferred, unlike the Government.",
+  "cit_1213_tr": "for the laws promulgated during the 2012-2013 parliamentary year, the implementation rate of laws stands at 90% (counting by number of laws) or about 64% (counting by number of measures), percentages calculated from the Senate's statistical database and which match exactly those calculated by the Government's departments",
+  "cit_802_arretes_tr": "Since 1 January 2024, the SGG has checked the publication of ministerial orders provided that they were expressly provided for by a legislative provision.",
+  "cit_802_differees_tr": "it was decided, for the 2024-2025 session, no longer to take into account measures deferred beyond 31 March 2026",
+  "cit_802_appreciation_tr": "Despite the convergence of methods, some divergences remain between the Senate and the SGG as to the assessment of whether certain laws are effectively applied.",
+  "cit_802_baisse_tr": "since 2018 the Senate has witnessed an overall and steady decline in the average implementation rate of the laws it adopts",
+  "cit_802_36_tr": "As at 31 March 2026, 36 laws (64%) adopted during the 2024-25 session out of 56 were fully applicable.",
+  "cit_802_detail_tr": "More precisely, 22 of them (39%) were directly applicable and 14 (25%) had received all the planned implementing measures.",
   "cit_802_22_tr": "More precisely, 22 of them (39%) were directly applicable",
   "cit_802_24_tr": "the number of laws promulgated during the 2024-2025 session stands at 56, of which 24 directly applicable",
   "cit_802_66_tr": "Overall implementation rate of laws 66% (+ 4 points)",
   "cit_802_note_tr": "The data taken into account are those of the measures provided for by the legislative provisions, excluding optional measures and measures deferred beyond 31 March 2026.",
+  "cit_2324_62_tr": "If measures whose deferred entry into force the legislature has authorised are excluded, this implementation rate stands at 62%",
+  "cit_2020_62_tr": "The overall implementation rate of laws measured by the Senate this year is 62%",
+  "cit_2021_60_tr": "a lower rate than that of the previous year (60%)",
+  "cit_2021_62_tr": "Including implementing measures adopted but not planned, this rate is 63% (62% for the previous year)",
   "cit_six_mois_tr": "this year, for the first time, in order to measure the number of regulations adopted only at the end of the six-month period the Government sets itself, the period used includes three months fewer for the laws promulgated and three months more for the regulations adopted.",
   "cit_sgg16_def_tr": "shows the implementation rate at 31 December 2025 of the laws which, among those passed between 1 July 2022 and 9 June 2024, call for implementing decrees.",
   "cit_sgg17_def_tr": "shows the implementation rate at 31 December 2025 of the laws which, among those published between 18 July 2024 and 30 June 2025, call for implementing decrees or orders.",
+  "cit_ce_principe_tr": "The exercise of regulatory power entails not only the right but also the obligation to take, within a reasonable time, the measures that the application of the law necessarily implies, except where compliance with France's international commitments would prevent it.",
+  "cit_ce_arrete_tr": "Where a decree adopted for the application of a law itself refers to a ministerial order the determination of certain measures necessary for that application, that order must also be issued within a reasonable time.",
+  "cit_ce_precision_tr": "these provisions are not precise enough to allow their entry into force in the absence of the implementing decree, whose adoption they moreover provide for",
+  "cit_ce_injonction_tr": "to order the Prime Minister to adopt this decree within six months of notification of this decision",
+  "cit_ce_arrete_injonction_tr": "to order the Keeper of the Seals, Minister of Justice, to adopt the order provided for by article 9 of the decree of 29 June 2020 within three months",
+  "cit_ce_reparation_tr": "the losses resulting from the delay in adopting, beyond a reasonable time, a decree necessary for the application of a law give rise to compensation",
+  "cit_ce_nature_tr": "having regard to the nature of the measures to be taken",
+  "cit_ce_exhaustif_tr": "article R. 1243-4 sets out exhaustively and precisely the content of the authorisation application file",
+  "cit_ce_pas_tenu_tr": "the minister responsible for health was not bound to adopt the order provided for by that article",
   "cit_art10": "The President of the Republic shall promulgate Acts of Parliament within fifteen days following the final passage of an Act and its transmission to the Government.",
+  "cit_art10_al2": "He may, before the expiry of this time limit, ask Parliament to reopen debate on the Act or any sections thereof. Such reopening of debate shall not be refused.",
   "cit_art61": "referral to the Constitutional Council shall suspend the time allotted for promulgation.",
   "cit_art61_saisine": "Acts of Parliament may be referred to the Constitutional Council, before their promulgation, by the President of the Republic, the Prime Minister, the President of the National Assembly, the President of the Senate, sixty Members of the National Assembly or sixty Senators.",
-  "cit_art61_rip": "Private Members' Bills mentioned in article 11 before they are submitted to referendum"
+  "cit_art61_rip": "Private Members' Bills mentioned in article 11 before they are submitted to referendum",
+  "cit_art21_exec": "He shall ensure the implementation of legislation.",
+  "cit_art21_regl": "he shall have power to make regulations",
+  "cit_art13": "The President of the Republic shall sign the Ordinances and Decrees deliberated upon in the Council of Ministers.",
+  "cit_art22": "Instruments of the Prime Minister shall be countersigned, where required, by the ministers responsible for their implementation."
  }
 }

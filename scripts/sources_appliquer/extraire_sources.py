@@ -10,7 +10,9 @@ recherche (D:/PRO/06_PROMOTION/RECHERCHE_DOSSIER_PROMESSES_2026-10-05/), qui res
                                  du document entier (le document se retélécharge et se recontrôle)
   registre_concordance.csv       registre loi par loi baromètre / Sénat (test décisif du 06/10/2026)
   senat_effectifs.json           effectifs par catégorie annoncés dans les annexes du Sénat
-  sgg_bilan_31-12-2025_extrait.txt  extrait verbatim du bilan semestriel du SGG, lu par navigateur
+  (le relevé du bilan du SGG, sgg_bilan_31-12-2025_page_rendue.txt, et les décisions du Conseil d'État ce_decision_*.html
+   ne sont pas produits ici : page rendue par navigateur et pages d'ArianeWeb, archivées à la main le 12/10/2026, empreintes
+   vérifiées par le générateur)
 Chaque extrait de baromètre porte en tête l'empreinte et le nombre de lignes du fichier complet.
 Relance : python scripts/sources_appliquer/extraire_sources.py (pièces brutes requises).
 """
@@ -30,7 +32,10 @@ URL = "https://barometre.assemblee-nationale.fr/"
 
 # (document, page PDF 1-indexée ou None pour une page HTML) cités par la page
 PAGES = [("r18-542", 5), ("r18-542", 539), ("r19-523", 7), ("r19-523", 13), ("r25-802", 7), ("r25-802", 45),
-         ("r25-802", 47), ("r25-802", 271), ("r24-710", 3)]
+         ("r25-802", 47), ("r25-802", 271), ("r24-710", 3),
+         # Phase B de la refonte (12/10/2026) : convergence des méthodes avec le SGG (p. 20) et divergences d'appréciation
+         # (p. 21) ; r13-623 p. 15, r20-645 p. 16 et r21-658 p. 3 sont déjà dans la série.
+         ("r25-802", 20), ("r25-802", 21)]
 
 
 def sha(p: Path) -> str:
@@ -96,7 +101,6 @@ def pages_senat() -> None:
 
 def copies() -> None:
     shutil.copyfile(TEST / "registre_concordance.csv", ICI / "registre_concordance.csv")
-    shutil.copyfile(TEST / "sgg_bilan_31-12-2025_extrait.txt", ICI / "sgg_bilan_31-12-2025_extrait.txt")
     S = json.loads((TEST / "_senat_listes.json").read_text(encoding="utf-8"))
     eff = {s: {"document": v["source"], "annonces": v.get("annonces")} for s, v in S.items()}
     eff["2024-2025"]["annonces_commissions"] = {k: v for k, v in S["2024-2025"]["annonces_textuelles"].items() if v}
@@ -104,6 +108,10 @@ def copies() -> None:
 
 
 if __name__ == "__main__":
-    extrait_barometre()
-    pages_senat()
-    copies()
+    import sys
+    if "--pages" in sys.argv[1:]:  # pages du Sénat seules (ajout de pages citées)
+        pages_senat()
+    else:
+        extrait_barometre()
+        pages_senat()
+        copies()

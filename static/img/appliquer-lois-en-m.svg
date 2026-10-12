@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 902" role="img" font-variant-numeric="tabular-nums" aria-labelledby="alm-t alm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="alm-t">French laws that call for no implementing measure, by session</title><desc id="alm-d">Horizontal bars, one per session: laws directly applicable for both sources, laws classified differently by the barometer and the Senate, laws that call for measures. By session: 2017-2018: 41 laws, 11 directly applicable for both sources, 3 classified differently; 2018-2019: 49 laws, 22 directly applicable for both sources, 3 classified differently; 2019-2020: 43 laws, 15 directly applicable for both sources, 1 classified differently; 2020-2021: 51 laws, 17 directly applicable for both sources, 3 classified differently; 2021-2022: 64 laws, 15 directly applicable for both sources, 9 classified differently; 2022-2023: 44 laws, 10 directly applicable for both sources, 1 classified differently; 2023-2024: 51 laws, 21 directly applicable for both sources, 0 classified differently; 2024-2025: 56 laws, 19 directly applicable for both sources, 6 classified differently. In 2018-2019, the barometer counts 25 directly applicable laws out of 49. The values are in the table below the figure.</desc>
+<rect width="300" height="902" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">French laws that call for no</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">implementing measure, by</text>
+<text x="0" y="64" font-size="17" font-weight="600" fill="#0A0A0E">session</text>
+<text x="0" y="104" font-size="13.5" fill="#52514e">number of laws promulgated,</text>
+<text x="0" y="122" font-size="13.5" fill="#52514e">excluding treaties; black mark: half</text>
+<text x="0" y="140" font-size="13.5" fill="#52514e">of the session&#x27;s laws</text>
+<rect x="0" y="154" width="12" height="12" fill="#184f95"/>
+<text x="17" y="165" font-size="13.5" fill="#52514e">directly applicable (both sources)</text>
+<rect x="0" y="173" width="12" height="12" fill="#8a8781"/>
+<text x="17" y="184" font-size="13.5" fill="#52514e">divergent classification</text>
+<rect x="0" y="192" width="12" height="12" fill="#c9c5c0"/>
+<text x="17" y="203" font-size="13.5" fill="#52514e">call for measures</text>
+<text x="0" y="231" font-size="13.5" fill="#0A0A0E">2017-2018</text>
+<rect x="0.0" y="236" width="47.1" height="14" fill="#184f95"/>
+<rect x="47.1" y="236" width="12.9" height="14" fill="#8a8781"/>
+<rect x="60.0" y="236" width="115.7" height="14" fill="#c9c5c0"/>
+<text x="0" y="266" font-size="13.5" font-weight="600" fill="#52514e">11 direct, 3 divergent, out of 41</text>
+<text x="0" y="290" font-size="13.5" fill="#0A0A0E">2018-2019</text>
+<rect x="0.0" y="295" width="94.3" height="14" fill="#184f95"/>
+<rect x="94.3" y="295" width="12.9" height="14" fill="#8a8781"/>
+<rect x="107.1" y="295" width="102.9" height="14" fill="#c9c5c0"/>
+<text x="0" y="325" font-size="13.5" font-weight="600" fill="#52514e">22 direct, 3 divergent, out of 49</text>
+<text x="0" y="349" font-size="13.5" fill="#0A0A0E">2019-2020</text>
+<rect x="0.0" y="354" width="64.3" height="14" fill="#184f95"/>
+<rect x="64.3" y="354" width="4.3" height="14" fill="#8a8781"/>
+<rect x="68.6" y="354" width="115.7" height="14" fill="#c9c5c0"/>
+<text x="0" y="384" font-size="13.5" font-weight="600" fill="#52514e">15 direct, 1 divergent, out of 43</text>
+<text x="0" y="408" font-size="13.5" fill="#0A0A0E">2020-2021</text>
+<rect x="0.0" y="413" width="72.9" height="14" fill="#184f95"/>
+<rect x="72.9" y="413" width="12.9" height="14" fill="#8a8781"/>
+<rect x="85.7" y="413" width="132.9" height="14" fill="#c9c5c0"/>
+<text x="0" y="443" font-size="13.5" font-weight="600" fill="#52514e">17 direct, 3 divergent, out of 51</text>
+<text x="0" y="467" font-size="13.5" fill="#0A0A0E">2021-2022</text>
+<rect x="0.0" y="472" width="64.3" height="14" fill="#184f95"/>
+<rect x="64.3" y="472" width="38.6" height="14" fill="#8a8781"/>
+<rect x="102.9" y="472" width="171.4" height="14" fill="#c9c5c0"/>
+<text x="0" y="502" font-size="13.5" font-weight="600" fill="#52514e">15 direct, 9 divergent, out of 64</text>
+<text x="0" y="526" font-size="13.5" fill="#0A0A0E">2022-2023</text>
+<rect x="0.0" y="531" width="42.9" height="14" fill="#184f95"/>
+<rect x="42.9" y="531" width="4.3" height="14" fill="#8a8781"/>
+<rect x="47.1" y="531" width="141.4" height="14" fill="#c9c5c0"/>
+<text x="0" y="561" font-size="13.5" font-weight="600" fill="#52514e">10 direct, 1 divergent, out of 44</text>
+<text x="0" y="585" font-size="13.5" fill="#0A0A0E">2023-2024</text>
+<rect x="0.0" y="590" width="90.0" height="14" fill="#184f95"/>
+<rect x="90.0" y="590" width="128.6" height="14" fill="#c9c5c0"/>
+<text x="0" y="620" font-size="13.5" font-weight="600" fill="#52514e">21 direct, 0 divergent, out of 51</text>
+<text x="0" y="644" font-size="13.5" fill="#0A0A0E">2024-2025</text>
+<rect x="0.0" y="649" width="81.4" height="14" fill="#184f95"/>
+<rect x="81.4" y="649" width="25.7" height="14" fill="#8a8781"/>
+<rect x="107.1" y="649" width="132.9" height="14" fill="#c9c5c0"/>
+<text x="0" y="679" font-size="13.5" font-weight="600" fill="#52514e">19 direct, 6 divergent, out of 56</text>
+<line x1="0" y1="693.0" x2="300" y2="693.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="714.0" font-size="13.5" fill="#52514e">Barometer of the application of laws</text>
+<text class="pied-source" x="0" y="731.0" font-size="13.5" fill="#52514e">(status at 5 October 2026); Senate</text>
+<text class="pied-source" x="0" y="748.0" font-size="13.5" fill="#52514e">annual reports on the application of</text>
+<text class="pied-source" x="0" y="765.0" font-size="13.5" fill="#52514e">laws</text>
+<text class="pied-note" x="0" y="786.0" font-size="13.5" fill="#52514e">Grey: laws that the barometer and the</text>
+<text class="pied-note" x="0" y="803.0" font-size="13.5" fill="#52514e">Senate classify differently</text>
+<text class="pied-note" x="0" y="820.0" font-size="13.5" fill="#52514e">(2024-2025: plus 2 laws with no list</text>
+<text class="pied-note" x="0" y="837.0" font-size="13.5" fill="#52514e">of names). Black mark: half of the</text>
+<text class="pied-note" x="0" y="854.0" font-size="13.5" fill="#52514e">laws.</text>
+<text class="pied-licence" x="0" y="875.0" font-size="13.5" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="892.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 920" role="img" font-variant-numeric="tabular-nums" aria-labelledby="atm-t atm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="atm-t">Les lois promulguées depuis 2017 attendent-elles encore une mesure ?</title><desc id="atm-d">Barres horizontales, une par session de 2017-2018 à 2024-2025, lois promulguées hors conventions, par statut au 05/10/2026 : 2017-2018 : 41 lois, dont 8 avec au moins une mesure en attente, 21 toutes mesures prises, 12 sans mesure à prendre; 2018-2019 : 49 lois, dont 13 avec au moins une mesure en attente, 11 toutes mesures prises, 25 sans mesure à prendre; 2019-2020 : 43 lois, dont 13 avec au moins une mesure en attente, 14 toutes mesures prises, 16 sans mesure à prendre; 2020-2021 : 51 lois, dont 21 avec au moins une mesure en attente, 11 toutes mesures prises, 19 sans mesure à prendre; 2021-2022 : 64 lois, dont 18 avec au moins une mesure en attente, 25 toutes mesures prises, 21 sans mesure à prendre; 2022-2023 : 44 lois, dont 15 avec au moins une mesure en attente, 19 toutes mesures prises, 10 sans mesure à prendre; 2023-2024 : 51 lois, dont 21 avec au moins une mesure en attente, 9 toutes mesures prises, 21 sans mesure à prendre; 2024-2025 : 56 lois, dont 21 avec au moins une mesure en attente, 14 toutes mesures prises, 20 sans mesure à prendre, 1 sans échéancier. Les valeurs sont dans le tableau sous la figure.</desc>
+<rect width="300" height="920" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Les lois promulguées depuis</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">2017 attendent-elles encore</text>
+<text x="0" y="64" font-size="17" font-weight="600" fill="#0A0A0E">une mesure ?</text>
+<text x="0" y="104" font-size="13.5" fill="#52514e">nombre de lois par session et leur</text>
+<text x="0" y="122" font-size="13.5" fill="#52514e">statut au 05/10/2026</text>
+<rect x="0" y="136" width="12" height="12" fill="#eb6834"/>
+<text x="17" y="147" font-size="13.5" fill="#52514e">au moins une mesure en attente</text>
+<rect x="0" y="155" width="12" height="12" fill="#184f95"/>
+<text x="17" y="166" font-size="13.5" fill="#52514e">toutes mesures prises</text>
+<rect x="0" y="174" width="12" height="12" fill="#c9c5c0"/>
+<text x="17" y="185" font-size="13.5" fill="#52514e">sans mesure à prendre</text>
+<rect x="0" y="193" width="12" height="12" fill="#8a8781"/>
+<text x="17" y="204" font-size="13.5" fill="#52514e">sans échéancier</text>
+<text x="0" y="232" font-size="13.5" fill="#0A0A0E">2017-2018</text>
+<rect x="0.0" y="237" width="34.3" height="14" fill="#eb6834"/>
+<rect x="34.3" y="237" width="90.0" height="14" fill="#184f95"/>
+<rect x="124.3" y="237" width="51.4" height="14" fill="#c9c5c0"/>
+<text x="0" y="267" font-size="13.5" font-weight="600" fill="#52514e">8 en attente sur 41 lois</text>
+<text x="0" y="291" font-size="13.5" fill="#0A0A0E">2018-2019</text>
+<rect x="0.0" y="296" width="55.7" height="14" fill="#eb6834"/>
+<rect x="55.7" y="296" width="47.1" height="14" fill="#184f95"/>
+<rect x="102.9" y="296" width="107.1" height="14" fill="#c9c5c0"/>
+<text x="0" y="326" font-size="13.5" font-weight="600" fill="#52514e">13 en attente sur 49 lois</text>
+<text x="0" y="350" font-size="13.5" fill="#0A0A0E">2019-2020</text>
+<rect x="0.0" y="355" width="55.7" height="14" fill="#eb6834"/>
+<rect x="55.7" y="355" width="60.0" height="14" fill="#184f95"/>
+<rect x="115.7" y="355" width="68.6" height="14" fill="#c9c5c0"/>
+<text x="0" y="385" font-size="13.5" font-weight="600" fill="#52514e">13 en attente sur 43 lois</text>
+<text x="0" y="409" font-size="13.5" fill="#0A0A0E">2020-2021</text>
+<rect x="0.0" y="414" width="90.0" height="14" fill="#eb6834"/>
+<rect x="90.0" y="414" width="47.1" height="14" fill="#184f95"/>
+<rect x="137.1" y="414" width="81.4" height="14" fill="#c9c5c0"/>
+<text x="0" y="444" font-size="13.5" font-weight="600" fill="#52514e">21 en attente sur 51 lois</text>
+<text x="0" y="468" font-size="13.5" fill="#0A0A0E">2021-2022</text>
+<rect x="0.0" y="473" width="77.1" height="14" fill="#eb6834"/>
+<rect x="77.1" y="473" width="107.1" height="14" fill="#184f95"/>
+<rect x="184.3" y="473" width="90.0" height="14" fill="#c9c5c0"/>
+<text x="0" y="503" font-size="13.5" font-weight="600" fill="#52514e">18 en attente sur 64 lois</text>
+<text x="0" y="527" font-size="13.5" fill="#0A0A0E">2022-2023</text>
+<rect x="0.0" y="532" width="64.3" height="14" fill="#eb6834"/>
+<rect x="64.3" y="532" width="81.4" height="14" fill="#184f95"/>
+<rect x="145.7" y="532" width="42.9" height="14" fill="#c9c5c0"/>
+<text x="0" y="562" font-size="13.5" font-weight="600" fill="#52514e">15 en attente sur 44 lois</text>
+<text x="0" y="586" font-size="13.5" fill="#0A0A0E">2023-2024</text>
+<rect x="0.0" y="591" width="90.0" height="14" fill="#eb6834"/>
+<rect x="90.0" y="591" width="38.6" height="14" fill="#184f95"/>
+<rect x="128.6" y="591" width="90.0" height="14" fill="#c9c5c0"/>
+<text x="0" y="621" font-size="13.5" font-weight="600" fill="#52514e">21 en attente sur 51 lois</text>
+<text x="0" y="645" font-size="13.5" fill="#0A0A0E">2024-2025</text>
+<rect x="0.0" y="650" width="90.0" height="14" fill="#eb6834"/>
+<rect x="90.0" y="650" width="60.0" height="14" fill="#184f95"/>
+<rect x="150.0" y="650" width="85.7" height="14" fill="#c9c5c0"/>
+<rect x="235.7" y="650" width="4.3" height="14" fill="#8a8781"/>
+<text x="0" y="680" font-size="13.5" font-weight="600" fill="#52514e">21 en attente sur 56 lois</text>
+<line x1="0" y1="694.0" x2="300" y2="694.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="715.0" font-size="13.5" fill="#52514e">Baromètre de l'application des lois</text>
+<text class="pied-source" x="0" y="732.0" font-size="13.5" fill="#52514e">(Assemblée nationale, LexImpact ;</text>
+<text class="pied-source" x="0" y="749.0" font-size="13.5" fill="#52514e">données DILA), état au 05/10/2026</text>
+<text class="pied-note" x="0" y="770.0" font-size="13.5" fill="#52514e">Lois promulguées par session (1er</text>
+<text class="pied-note" x="0" y="787.0" font-size="13.5" fill="#52514e">oct.-30 sept.), hors conventions.</text>
+<text class="pied-note" x="0" y="804.0" font-size="13.5" fill="#52514e">Statuts tirés des étiquettes du</text>
+<text class="pied-note" x="0" y="821.0" font-size="13.5" fill="#52514e">baromètre : « en attente » ne veut pas</text>
+<text class="pied-note" x="0" y="838.0" font-size="13.5" fill="#52514e">dire « en retard » ; « sans mesure à</text>
+<text class="pied-note" x="0" y="855.0" font-size="13.5" fill="#52514e">prendre » dépend de l'étiquette « sans</text>
+<text class="pied-note" x="0" y="872.0" font-size="13.5" fill="#52514e">objet ».</text>
+<text class="pied-licence" x="0" y="893.0" font-size="13.5" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="910.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+</svg>
