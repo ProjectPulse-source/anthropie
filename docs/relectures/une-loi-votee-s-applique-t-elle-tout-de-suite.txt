@@ -1,9 +1,9 @@
-# relu le 2026-10-12 ; texte servi de /une-loi-votee-s-applique-t-elle-tout-de-suite/, build de 060aec4 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /une-loi-votee-s-applique-t-elle-tout-de-suite/, build de 5ef6741 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Une loi votée s'applique-t-elle tout de suite ?
 Pas du seul fait du vote.
 Une fois la loi promulguée et publiée, celles de ses dispositions dont l'exécution nécessite des décrets ou des arrêtés attendent ces mesures.
-Au 05/10/2026, selon le baromètre de l'application des lois, 130 des 399 lois promulguées d'octobre 2017 à septembre 2025, hors conventions (lois qui autorisent la ratification ou l'approbation d'un accord international, ou l'adhésion à un tel accord), attendaient encore au moins une mesure ; 124 les avaient toutes reçues et 144 n'en appelaient aucune.
+Au 05/10/2026, selon le baromètre de l'application des lois, 130 des 399 lois promulguées d'octobre 2017 à septembre 2025, hors conventions (lois qui autorisent la ratification ou l'approbation d'un accord international, ou l'adhésion à un tel accord), attendaient encore au moins une mesure ; 124 les avaient toutes reçues et 144 étaient classées sans mesure à prendre.
 Une mesure en attente n'est pas forcément en retard, mais le Gouvernement n'est pas libre d'attendre indéfiniment : le Conseil d'État exige qu'il agisse « dans un délai raisonnable », et le refus de prendre une mesure due peut être porté devant le juge administratif, qui peut l'annuler et ordonner de la prendre.
 Promesses présidentielles
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
@@ -51,7 +51,7 @@ Une loi peut renvoyer à un décret pour une disposition qui s’applique déjà
 En cas de litige, c’est le juge qui en décide, disposition par disposition.
 En 2021, à propos des bâtiments d’élevage de poules pondeuses en cages, le Conseil d’État a ainsi jugé que « ces dispositions ne sont pas suffisamment précises pour permettre leur entrée en vigueur en l'absence du décret d'application dont elles prévoient d'ailleurs l'intervention » (CE, 27 mai 2021, n° 441660).
 Combien de lois attendent encore une mesure ?
-Lois promulguées de chaque session, hors conventions, et leur statut au 05/10/2026 selon le baromètre de l’application des lois.
+Lois promulguées de chaque session, hors conventions, et leur statut administratif à la date du relevé (05/10/2026), selon le baromètre de l’application des lois.
 Une mesure « en attente » n’est pas forcément en retard.
 Télécharger · Citer · Données
 Les valeurs de la figure en tableau
@@ -116,21 +116,22 @@ Total
 144
 1
 Le résultat en une phrase.
-Au 05/10/2026, selon le baromètre, 130 des 399 lois promulguées d’octobre 2017 à septembre 2025, hors conventions, comportaient encore au moins une mesure classée « en attente » ; 124 avaient reçu toutes leurs mesures, 144 n’en appelaient aucune, et une n’avait pas d’échéancier.
-Rapporté aux seules lois qui appelaient une mesure.
-Sur les 399 lois promulguées, 144 n’appelaient aucune mesure selon le baromètre.
-Les lois qui en appelaient au moins une, qu’elles en attendent encore ou les aient toutes reçues, sont 254.
-Parmi elles, les 130 lois en attente forment 51 %, environ une sur deux.
-La loi sans échéancier n’est comptée ni d’un côté ni de l’autre : le baromètre ne dit pas si elle appelle des mesures.
-Les deux parts sont exactes : l’une rapporte les lois en attente à toutes les lois promulguées, l’autre aux seules lois qui avaient une mesure à attendre.
+Au 05/10/2026, selon le baromètre, 130 des 399 lois promulguées d’octobre 2017 à septembre 2025, hors conventions, comportaient encore au moins une mesure classée « en attente » ; 124 avaient reçu toutes leurs mesures, 144 étaient classées sans mesure à prendre, et une n’avait pas d’échéancier.
+Rapporté aux lois classées avec des mesures à prendre.
+À la date du relevé, le baromètre classe 144 des 399 lois promulguées sans mesure à prendre.
+Parmi les autres, 254 ont un échéancier qui comporte au moins une mesure à prendre, encore en attente ou déjà prise, et une n’a pas d’échéancier.
+Les 130 lois en attente forment 51 % de ces 254 lois, environ une sur deux.
+La loi sans échéancier n’est comptée ni d’un côté ni de l’autre.
+Les deux parts sont exactes : l’une rapporte les lois en attente à toutes les lois promulguées, l’autre aux seules lois que le baromètre classe avec au moins une mesure à prendre.
+Une catégorie du baromètre n’est pas un besoin initial.
+Le baromètre classe « sans mesure à prendre » une loi dont toutes les mesures sont indiquées « sans objet » à la date du relevé : c’est un statut courant, pas la preuve que la loi ne prévoyait aucune mesure.
+La loi n° 2025-138 sur la sclérose latérale amyotrophique en est le contre-exemple : classée sans mesure à prendre, elle prévoyait un arrêté, pris depuis, dont l’observation du baromètre donne la référence (« Arrêté du 5 février 2026 » ; voir la section suivante).
+Le rapport de 130 à 254 compare donc deux catégories du baromètre ; il ne dit pas quelle part des lois qui prévoyaient une mesure en attend encore.
 Ce que ces deux parts ne disent pas.
 Elles ne disent ni que ces 130 lois étaient entièrement inapplicables, ni que chacune de leurs mesures en attente était en retard.
 Une loi peut s’appliquer pour l’essentiel en attendant un décret sur un point, et la loi elle-même peut différer une mesure.
 La date prévue manque pour 525 des 567 mesures en attente : faute de date, la page ne dit pas si une mesure est en retard.
 L’ancienneté ne règle pas tout : pour la session 2017-2018, la plus ancienne, 8 lois sur 41 attendent encore au moins une mesure.
-Le compte des lois « sans mesure à prendre » dépend d’une étiquette.
-Le baromètre classe ainsi une loi dont toutes les mesures sont indiquées « sans objet ».
-La loi n° 2025-138 sur la sclérose latérale amyotrophique est dans ce cas, alors que son unique mesure renvoie à un arrêté (voir la section suivante).
 Le témoin du Sénat.
 Le Sénat compte, lui, les lois « entièrement applicables » : celles d’application directe et celles qui ont reçu toutes les mesures prévues.
 Pour la session 2024-2025, il écrit : « Au 31 mars 2026, 36 lois (soit 64 %) adoptées au cours de la session 2024-25 sur 56 étaient entièrement applicables. » Il précise : « Plus précisément, 22 d'entre elles (soit 39 %) étaient d'application directe et 14 (soit 25 %) avaient fait l'objet de l'intégralité des mesures d'application prévues. » Le baromètre compte lui aussi 56 lois pour cette session.
@@ -232,6 +233,7 @@ Le baromètre classe ainsi une loi dont l’échéancier ne comporte aucune mesu
 Rapprochées loi par loi sur les 399 lois promulguées de 2017-2018 à 2024-2025, hors 154 conventions internationales, les deux sources retiennent exactement le même champ, mais classent différemment 24 lois.
 Lois promulguées de chaque session, hors conventions.
 En bleu, les lois d’application directe pour les deux sources ; en gris foncé, celles qu’elles classent différemment ; le trait noir marque la moitié des lois de la session.
+Pour 2024-2025, le Sénat publie 22 lois d’application directe dans sa synthèse et 24 ailleurs dans le même rapport : l’écart est compté en gris foncé.
 Télécharger · Citer · Données
 Les valeurs de la figure en tableau
 Session
@@ -295,15 +297,21 @@ Le Gouvernement a-t-il un délai pour prendre les décrets ?
 Les articles 13 et 21 de la Constitution ne fixent aucun délai.
 Le Gouvernement s’en donne un, de six mois, selon le Sénat (voir la série plus bas).
 Le juge, lui, pose une obligation : « L'exercice du pouvoir réglementaire comporte non seulement le droit mais aussi l'obligation de prendre dans un délai raisonnable les mesures qu'implique nécessairement l'application de la loi, hors le cas où le respect d'engagements internationaux de la France y ferait obstacle. » (Conseil d’État, 27 mai 2021, n° 441660 ; la même formule figure dans ses décisions du 29 juin 2011 et du 21 janvier 2021).
-Elle vaut aussi pour les arrêtés : « Lorsqu'un décret pris pour l'application d'une loi renvoie lui-même à un arrêté la détermination de certaines mesures nécessaires à cette application, cet arrêté doit également intervenir dans un délai raisonnable. » (CE, 21 janvier 2021, n° 429956).
+Elle vaut aussi pour l’arrêté auquel un décret d’application renvoie certaines mesures (CE, 21 janvier 2021, n° 429956).
 Le délai raisonnable ne se chiffre pas une fois pour toutes : il s’apprécie « eu égard à la nature des mesures à prendre » (CE, 27 juillet 2005, n° 261694).
 Les durées jugées excessives dans une affaire ne font donc pas une règle.
-Le refus de prendre une mesure due peut être porté devant le juge administratif, qui peut l’annuler et ordonner de la prendre.
-En mai 2021, le Conseil d’État a décidé « d'enjoindre au Premier ministre de prendre ce décret dans un délai de six mois à compter de la notification de la présente décision » ; en janvier 2021, « d'ordonner au garde des sceaux, ministre de la justice, de prendre l'arrêté prévu par l'article 9 du décret du 29 juin 2020 dans un délai de trois mois ».
-Le retard peut aussi engager la responsabilité de l’État : « les préjudices qui résultent du retard mis à prendre, au-delà d'un délai raisonnable, un décret nécessaire à l'application d'une loi ouvrent droit à réparation » (CE, 27 juillet 2005).
+Le refus de prendre une mesure due peut être porté devant le juge administratif, qui peut l’annuler et ordonner de la prendre : en mai 2021, le Conseil d’État a enjoint au Premier ministre de prendre un décret, et en janvier 2021, il a ordonné au garde des sceaux de prendre un arrêté, chaque fois dans un délai qu’il a fixé.
+Le retard peut aussi engager la responsabilité de l’État et ouvrir droit à réparation (CE, 27 juillet 2005).
 Une mesure prévue n’est pas toujours due.
-En 2011, à propos d’un arrêté prévu par un décret et jamais pris, le Conseil d’État a relevé que « l'article R.
-1243-4 fixe de façon exhaustive et précise le contenu du dossier de demande d'autorisation », et en a conclu que « le ministre chargé de la santé n'était pas tenu de prendre l'arrêté prévu par ce dernier article » (CE, 29 juin 2011, n° 343188).
+En 2011, à propos d’un arrêté prévu par un décret et jamais pris, le Conseil d’État a jugé que le ministre n’était pas tenu de le prendre : l’article qui prévoyait cet arrêté fixait déjà de façon exhaustive le contenu du dossier en cause, et ne lui renvoyait que le modèle de ce dossier (CE, 29 juin 2011, n° 343188).
+Les décisions du Conseil d’État, mot pour mot
+Arrêtés pris sur renvoi d’un décret (CE, 21 janvier 2021, n° 429956) : « Lorsqu'un décret pris pour l'application d'une loi renvoie lui-même à un arrêté la détermination de certaines mesures nécessaires à cette application, cet arrêté doit également intervenir dans un délai raisonnable. »
+Injonctions.
+En mai 2021, le Conseil d’État a décidé « d'enjoindre au Premier ministre de prendre ce décret dans un délai de six mois à compter de la notification de la présente décision » (n° 441660) ; en janvier 2021, « d'ordonner au garde des sceaux, ministre de la justice, de prendre l'arrêté prévu par l'article 9 du décret du 29 juin 2020 dans un délai de trois mois » (n° 429956).
+Réparation (CE, 27 juillet 2005, n° 261694) : « les préjudices qui résultent du retard mis à prendre, au-delà d'un délai raisonnable, un décret nécessaire à l'application d'une loi ouvrent droit à réparation ».
+Une mesure prévue qui n’était pas due (CE, 29 juin 2011, n° 343188).
+Le Conseil d’État relève que « l'article R.
+1243-4 fixe de façon exhaustive et précise le contenu du dossier de demande d'autorisation », et en conclut que « le ministre chargé de la santé n'était pas tenu de prendre l'arrêté prévu par ce dernier article ».
 Ce que ces décisions ne disent pas.
 Elles posent une règle et tranchent des cas ; elles ne disent ni combien de refus sont portés devant le juge, ni ce que deviennent les injonctions, et aucune donnée lue ici ne le mesure.
 Le statut « en attente » du baromètre ne dit pas non plus si une mesure est due, ni si le délai raisonnable est dépassé.
@@ -314,12 +322,16 @@ En 2012-2013, des taux qui coïncident.
 Le Sénat écrit que, « pour les lois promulguées durant l'année parlementaire 2012-2013, le taux d'application des lois s'élève à 90 % (si on compte en nombre de lois) ou à environ 64 % (si on compte en nombre de mesures), pourcentages calculés à partir de la base statistique du Sénat et qui recoupent parfaitement ceux calculés par les services du Gouvernement ».
 Cette année-là, le taux changeait selon qu’on comptait des lois ou des mesures, non selon le producteur.
 En 2017-2019, un écart et ses raisons.
+Pour 2017-2018, une fois les mesures différées écartées, les taux du Sénat et du Gouvernement se rapprochent, 86 % pour le Sénat et 85 % pour le Gouvernement ; les arrêtés, que seul le Sénat comptait, restent une différence de champ.
+Pour 2018-2019, le Sénat publie 72 % et rapporte que le Gouvernement parvient à 82,4 %.
+En 2019, il donnait lui-même deux raisons techniques à l’écart, les arrêtés et les mesures différées, et un troisième motif, qu’il qualifiait de raisons politiques, notamment quand il juge qu’un décret pris ne respecte pas la volonté du législateur : la mesure attendue compte alors pour lui comme non prise.
+Un taux peut ainsi intégrer une appréciation, et non seulement un comptage.
+Ce qu’écrivaient le Sénat et le Gouvernement en 2018 et 2019, mot pour mot
 Pour 2017-2018, le Sénat écrit : « Il atteint désormais 78 % - 86 % si on exclut les mesures dont l'entrée en vigueur est différée ».
 Le Secrétariat général du Gouvernement, entendu par le Sénat, déclare : « Au 31 mars 2019, ces 28 lois appelaient 461 mesures réglementaires d'application et nous en avons pris 393, soit un taux d'application de 85 % ».
-Une fois les mesures différées écartées, les deux chiffres se rapprochent, 86 % pour le Sénat et 85 % pour le Gouvernement ; les arrêtés, que seul le Sénat comptait, restent une différence de champ.
 Pour 2018-2019, le Sénat écrit : « Le taux global d'application des lois calculé par le Sénat est de 72 % » et ajoute que « les services du Secrétariat général du Gouvernement parviennent pour leur part à un taux global de 82,4 % ».
 En 2019, il en donnait les raisons : « Le taux calculé par le Sénat peut diverger de celui calculé par le Gouvernement pour des raisons techniques, qui sont de deux ordres. » D’une part, « le Sénat effectue un contrôle global des mesures d'application des lois, en incluant les arrêtés dont la publication est prévue par la loi.
-Ce n'est pas le cas du secrétariat général du Gouvernement. » D’autre part, « le Sénat intègre dans son taux les mesures attendues pour des articles dont l'entrée en vigueur est différée, à la différence du Gouvernement. » Il mentionne aussi un troisième motif, qu’il qualifie lui-même de raisons politiques : « Il peut également diverger pour des raisons politiques, notamment lorsque le Sénat considère qu'un décret pris ne respecte pas la volonté du législateur, et donc que la mesure attendue n'est pas prise. » Un taux peut ainsi intégrer une appréciation, et non seulement un comptage.
+Ce n'est pas le cas du secrétariat général du Gouvernement. » D’autre part, « le Sénat intègre dans son taux les mesures attendues pour des articles dont l'entrée en vigueur est différée, à la différence du Gouvernement. » Il mentionne aussi un troisième motif : « Il peut également diverger pour des raisons politiques, notamment lorsque le Sénat considère qu'un décret pris ne respecte pas la volonté du législateur, et donc que la mesure attendue n'est pas prise. »
 Depuis 2024, des méthodes rapprochées.
 Le rapport du Sénat de 2026 l’écrit : « Depuis le 1er janvier 2024, le SGG contrôle la parution des arrêtés sous réserve qu'ils aient été expressément prévus par une disposition législative. » Pour le Sénat lui-même, « il a été décidé, pour la session 2024-2025, de ne plus prendre en compte les mesures différées au-delà du 31 mars 2026 ».
 Il ajoute : « En dépit de la convergence des méthodes, certaines divergences demeurent quant à l'appréciation de l'effectivité de l'application de certaines lois entre le Sénat et le SGG. »
@@ -456,15 +468,18 @@ r24-710
 66 %
 un seul taux, sans mesures éventuelles ni différées au-delà du 31 mars 2026
 r25-802
-Le dernier point du premier segment et le premier point retenu du suivant sont séparés par une rupture de définition, que le Sénat décrit ainsi : « cette année, pour la première fois, afin de ne mesurer le nombre de mesures réglementaires prises qu'à l'expiration du délai de six mois que s'impose à lui-même le Gouvernement, la période retenue comprend trois mois de moins pour les lois promulguées retenues et trois mois de plus pour les mesures réglementaires prises. » En 2024-2025, il publie un seul taux (« Taux d'application global des lois 66 % (+ 4 points) »), et précise en note : « Les données prises en compte sont celles des mesures prévues, non éventuelles et non différées au-delà du 31 mars 2026, par les dispositions législatives. » Les mesures éventuelles sont celles que la loi permet de prendre sans l’imposer.
+Le dernier point du premier segment et le premier point retenu du suivant sont séparés par une rupture de définition : pour ne compter les mesures prises qu’à l’expiration du délai que s’impose le Gouvernement, le Sénat décale alors la période retenue.
+En 2024-2025, il publie un seul taux (« Taux d'application global des lois 66 % (+ 4 points) »), et précise en note : « Les données prises en compte sont celles des mesures prévues, non éventuelles et non différées au-delà du 31 mars 2026, par les dispositions législatives. » Les mesures éventuelles sont celles que la loi permet de prendre sans l’imposer.
 Les « + 4 points » ne se lisent pas dans le tableau, qui donne 59 % pour 2023-2024 : le Sénat compare à son taux de 2023-2024 hors mesures différées.
 Le rapport précédent l’indiquait : « Si l'on exclut les mesures dont le législateur a autorisé une entrée en vigueur différée, ce taux d'application s'élève à 62 % ».
-Pour 2019-2020, les rapports donnent deux valeurs.
-Celui de 2020 écrit : « Le taux global d'application des lois mesuré par le Sénat cette année est de 62 % ».
-Le suivant, consacré à 2020-2021, écrit « soit un taux inférieur à celui de l'année précédente (60 %) », puis : « En incluant les mesures d'application prises mais non prévues, ce taux est de 63 % (62 % pour l'année précédente) ».
+Pour 2019-2020, les rapports donnent deux valeurs, celle du rapport de 2020 et celle du rapport suivant, marquée d’un cercle vide sur la figure.
 Révision du chiffre ou autre variante du taux : les documents ne permettent pas de le trancher, et la série garde les deux valeurs.
 La session 2009-2010 n’est pas retenue sur la figure, faute de date d’arrêté établie dans la phrase qui donne son taux.
 Deux valeurs pour une même session et une rupture de définition sont deux faits distincts : la série les garde l’un et l’autre.
+La rupture de définition et les deux valeurs de 2019-2020, mot pour mot
+La rupture entre les deux premiers segments, selon le Sénat : « cette année, pour la première fois, afin de ne mesurer le nombre de mesures réglementaires prises qu'à l'expiration du délai de six mois que s'impose à lui-même le Gouvernement, la période retenue comprend trois mois de moins pour les lois promulguées retenues et trois mois de plus pour les mesures réglementaires prises. »
+Pour 2019-2020, le rapport de 2020 écrit : « Le taux global d'application des lois mesuré par le Sénat cette année est de 62 % ».
+Le suivant, consacré à 2020-2021, écrit « soit un taux inférieur à celui de l'année précédente (60 %) », puis : « En incluant les mesures d'application prises mais non prévues, ce taux est de 63 % (62 % pour l'année précédente) ».
 Ce que cette page ne dit pas
 Elle ne dit pas si une loi produit l’effet que visait la promesse.
 Elle ne mesure pas la qualité des décrets, ni leur conformité à la volonté du législateur, que le Sénat apprécie lui-même.
@@ -487,7 +502,7 @@ En principe, elle entre en vigueur à la date qu'elle fixe ou, à défaut, le le
 1er).
 Le même article ajoute : « Toutefois, l'entrée en vigueur de celles de leurs dispositions dont l'exécution nécessite des mesures d'application est reportée à la date d'entrée en vigueur de ces mesures. » Une loi peut donc être en vigueur pour une part et attendre ses décrets ou ses arrêtés pour une autre.
 Combien de lois attendent encore une mesure d'application ?
-Au 05/10/2026, selon le baromètre de l'application des lois, 130 des 399 lois promulguées d'octobre 2017 à septembre 2025, hors conventions, comportaient encore au moins une mesure classée « en attente » ; 124 avaient reçu toutes leurs mesures, 144 n'en appelaient aucune et une n'avait pas d'échéancier.
+Au 05/10/2026, selon le baromètre de l'application des lois, 130 des 399 lois promulguées d'octobre 2017 à septembre 2025, hors conventions, comportaient encore au moins une mesure classée « en attente » ; 124 avaient reçu toutes leurs mesures, 144 étaient classées sans mesure à prendre et une n'avait pas d'échéancier.
 Sur les 5 398 mesures recensées pour ces lois, 567 étaient en attente.
 Une mesure en attente n'est pas forcément en retard.
 Quel est le taux d'application des lois ?
@@ -496,7 +511,7 @@ Au 31 décembre 2025, le Secrétariat général du Gouvernement publie 87 % pour
 Ces taux ne portent ni sur les mêmes lois, ni sur les mêmes mesures, ni à la même date : ils ne se classent pas.
 Une loi sur deux n'est-elle pas appliquée ?
 Au 05/10/2026, selon le baromètre, 130 des 399 lois promulguées d'octobre 2017 à septembre 2025, hors conventions, comportaient encore au moins une mesure classée « en attente ».
-Rapportées aux seules 254 lois qui appelaient au moins une mesure, elles en forment 51 %, environ une sur deux.
+Rapportées aux 254 lois dont l'échéancier comportait au moins une mesure à prendre, en attente ou prise, elles en forment 51 %, environ une sur deux : c'est un rapport entre deux catégories du baromètre à la date du relevé, non la part des lois en attente parmi celles qui prévoyaient une mesure.
 Cela ne signifie ni que ces lois étaient entièrement inapplicables, ni que chacune de ces mesures était en retard.
 Une formule comme « une loi sur deux » peut venir de ce second compte, d'un taux par mesure, d'une seule session ou d'une autre date : avant de la reprendre, il faut savoir ce qu'elle compte, à quelle date et sur quelles lois.
 Sources
@@ -516,10 +531,10 @@ Réutiliser cette page
 Les figures, les données et une citation prête, sous licence libre.
 Chaque figure porte dans l'image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
 Les lois promulguées depuis 2017 attendent-elles encore une mesure ?
-Au 05/10/2026, selon le baromètre, 130 des 399 lois promulguées d'octobre 2017 à septembre 2025, hors conventions, comportaient encore au moins une mesure classée « en attente » ; 124 avaient reçu toutes leurs mesures et 144 n'en appelaient aucune.
+Au 05/10/2026, selon le baromètre, 130 des 399 lois promulguées d'octobre 2017 à septembre 2025, hors conventions, comportaient encore au moins une mesure classée « en attente » ; 124 avaient reçu toutes leurs mesures et 144 étaient classées sans mesure à prendre.
 Précaution d'interprétation.
 Lois promulguées par session (1er oct.-30 sept.), hors conventions.
-Statuts tirés des étiquettes du baromètre : « en attente » ne veut pas dire « en retard » ; « sans mesure à prendre » dépend de l'étiquette « sans objet ».
+Statuts tirés des étiquettes du baromètre : « en attente » ne veut pas dire « en retard » ; « sans mesure à prendre » dépend de l'étiquette « sans objet » et ne prouve pas que la loi ne prévoyait aucune mesure.
 Baromètre de l'application des lois (Assemblée nationale, LexImpact ; données DILA), état au 05/10/2026
 Télécharger en PNG
 SVG
@@ -531,11 +546,12 @@ Mesures des lois promulguées par session (1er oct.-30 sept.), hors conventions.
 Baromètre de l'application des lois (Assemblée nationale, LexImpact ; données DILA), état au 05/10/2026
 Télécharger en PNG
 SVG
-Les lois qui n'appellent aucune mesure d'application, par session
+Les lois classées d'application directe, selon deux sources
 Les lois d'application directe restent sous la moitié dans sept sessions sur huit, quelle que soit la source ; en 2018-2019, le baromètre en compte 25 sur 49.
 Les deux sources classent différemment 24 des 399 lois.
 Précaution d'interprétation.
-Gris : lois que le baromètre et le Sénat classent différemment (2024-2025 : 2 lois sans liste nominative en plus).
+Gris : lois que le baromètre et le Sénat classent différemment.
+2024-2025 : le Sénat publie 22 lois d'application directe dans sa synthèse et 24 ailleurs dans le même rapport ; les 2 de plus, sans liste nominative, sont en gris.
 Trait noir : la moitié des lois.
 Baromètre de l'application des lois (état au 05/10/2026) ; rapports annuels du Sénat sur l'application des lois
 Télécharger en PNG
@@ -545,6 +561,7 @@ Le taux publié par le Sénat repose sur six définitions successives depuis 200
 Précaution d'interprétation.
 Six définitions successives : ne pas relier les segments.
 Deux valeurs pour une session et une rupture de définition sont deux faits distincts.
+2009-2010 non représentée : date d'arrêté du taux non établie.
 Sénat, bilans annuels de l'application des lois, 2003-2026 (taux tels que publiés, page citée dans le tableau)
 Télécharger en PNG
 SVG
@@ -553,7 +570,7 @@ Lalut, Stéphane (2026). « Une loi votée s'applique-t-elle tout de suite ? ».
 Données Assemblée nationale et LexImpact (données DILA), Sénat, SGG, Conseil d'État, Légifrance, relevé du 05/10/2026 (baromètre de l'application des lois) ; rapports du Sénat lus le 06/10/2026 ; bilan du SGG au 31/12/2025, page relue le 12/10/2026 ; décisions du Conseil d'État lues le 12/10/2026. https://stephane-lalut.com/une-loi-votee-s-applique-t-elle-tout-de-suite/
 Copier la citation
 En trois phrases
-Au 05/10/2026, selon le baromètre de l’application des lois, 130 des 399 lois promulguées d’octobre 2017 à septembre 2025, hors conventions, attendaient encore au moins une mesure ; 124 les avaient toutes reçues et 144 n’en appelaient aucune.
+Au 05/10/2026, selon le baromètre de l’application des lois, 130 des 399 lois promulguées d’octobre 2017 à septembre 2025, hors conventions, attendaient encore au moins une mesure ; 124 les avaient toutes reçues et 144 étaient classées sans mesure à prendre.
 Le Conseil d’État exige que les mesures qu’implique nécessairement l’application de la loi soient prises dans un délai raisonnable.
 Les taux d’application du Sénat et du Gouvernement reposent sur des conventions de calcul différentes, et la série du Sénat sur six définitions successives depuis 2002-2003.
 Copier le résumé

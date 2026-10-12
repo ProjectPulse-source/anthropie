@@ -696,15 +696,19 @@ def calculer(S: dict) -> tuple[dict, list[str]]:
                     % (m36.group(1) if m36 else "?", N["2024-2025"]))
     g.append("A8 : statut des lois : chaque loi dans un seul des quatre statuts, somme = champ par session ; 2024-2025 : %d lois "
              "dans les deux sources" % N["2024-2025"])
-    # A8 bis (passe B2, panel « après ») : part des lois en attente parmi les seules lois qui appelaient au moins une mesure
-    # (en attente + toutes reçues ; la loi sans échéancier, dont le baromètre ne dit pas si elle en appelle, hors des deux).
+    # A8 bis (passe B2, panel « après » ; libellé requalifié en B3) : part des lois en attente parmi les lois que le baromètre
+    # classe avec au moins une mesure à prendre, en attente ou prise (en attente + toutes reçues ; la loi sans échéancier hors
+    # des deux). Rapport entre deux catégories du baromètre à la date du relevé, pas un besoin initial de mesures : une loi
+    # classée « sans mesure à prendre » peut en avoir prévu une (2025-138, garde A6).
     # Phrase de la page : « soit <pct> : environ une sur deux ».
     l_att = sum(statut[s]["attente"] for s in SESSIONS)
     l_mes = l_att + sum(statut[s]["toutes"] for s in SESSIONS)
     if not 0.45 <= l_att / l_mes <= 0.55:
-        raise Arret("A8 bis : %d lois en attente sur %d qui appelaient une mesure (%.1f %%) : « environ une sur deux » faux"
+        raise Arret("A8 bis : %d lois en attente sur %d classees avec au moins une mesure a prendre (%.1f %%) : « environ une "
+                    "sur deux » faux"
                     % (l_att, l_mes, 100 * l_att / l_mes))
-    g.append("A8 bis : %d lois en attente sur %d qui appelaient au moins une mesure (%.1f %%), « environ une sur deux »"
+    g.append("A8 bis : %d lois en attente sur %d classees avec au moins une mesure a prendre, en attente ou prise (%.1f %%), "
+             "« environ une sur deux »"
              % (l_att, l_mes, 100 * l_att / l_mes))
 
     if not (cas and all(e == "sans objet" and re.match(r"\s*Arr[êe]t[ée] du", o) for e, o, _ in cas)
@@ -950,9 +954,10 @@ _SEG_FR, _SEG_EN = lg.lettres(len(SEGMENTS), "fr"), lg.lettres(len(SEGMENTS), "e
 T = {
     "fr": {"src0": "Baromètre de l'application des lois (Assemblée nationale, LexImpact ; données DILA), état au " + RELEVE,
            "note0": "Lois promulguées par session (1er oct.-30 sept.), hors conventions. Statuts tirés des étiquettes du baromètre : "
-                    "« en attente » ne veut pas dire « en retard » ; « sans mesure à prendre » dépend de l'étiquette « sans objet ».",
+                    "« en attente » ne veut pas dire « en retard » ; « sans mesure à prendre » dépend de l'étiquette « sans objet » et "
+                    "ne prouve pas que la loi ne prévoyait aucune mesure.",
            "t0": "Les lois promulguées depuis 2017 attendent-elles encore une mesure ?",
-           "s0": "nombre de lois par session et leur statut au %s" % RELEVE,
+           "s0": "nombre de lois par session ; statuts administratifs à la date du relevé (%s)" % RELEVE,
            "l0": ["au moins une mesure en attente", "toutes mesures prises", "sans mesure à prendre", "sans échéancier"],
            "e0": "{a} en attente sur {n} lois",
            "d0": "Barres horizontales, une par session de 2017-2018 à 2024-2025, lois promulguées hors conventions, par statut au {r} : "
@@ -970,19 +975,22 @@ T = {
            "l1": ["acte publié identifié", "en attente", "indiquées sans objet", "statut incomplet"],
            "attente": "{} en attente", "e1": "{a} en attente sur {n} mesures",
            "src2": "Baromètre de l'application des lois (état au %s) ; rapports annuels du Sénat sur l'application des lois" % RELEVE,
-           "note2": "Gris : lois que le baromètre et le Sénat classent différemment (2024-2025 : 2 lois sans liste nominative en plus). "
-                    "Trait noir : la moitié des lois.",
-           "t2": "Les lois qui n'appellent aucune mesure d'application, par session",
+           "note2": "Gris : lois que le baromètre et le Sénat classent différemment. 2024-2025 : le Sénat publie {senat} lois "
+                    "d'application directe dans sa synthèse et {publie} ailleurs dans le même rapport ; les {ecart} de plus, sans liste "
+                    "nominative, sont en gris. Trait noir : la moitié des lois.",
+           "t2": "Les lois classées d'application directe, selon deux sources",
            "s2": "nombre de lois promulguées, hors conventions ; trait noir : la moitié des lois de la session",
            "d2": "Barres horizontales, une par session : lois d'application directe pour les deux sources, lois classées différemment "
-                 "par le baromètre et par le Sénat, lois qui appellent des mesures. Par session : {liste}. En {ct_session}, le baromètre "
+                 "par le baromètre et par le Sénat, lois qu'aucune des deux ne classe d'application directe. Par session : {liste}. En {ct_session}, le baromètre "
                  "compte {ct_baro} lois d'application directe sur {ct_N}. Les valeurs sont dans le tableau sous la figure.",
            "d2s": "{s} : {n} lois, {d} directes pour les deux sources, {u} classées différemment",
-           "l2": ["application directe (les deux sources)", "classement divergent", "appellent des mesures"], "lois": "{} lois",
+           "l2": ["application directe (les deux sources)", "classement divergent", "non directes (les deux sources)"],
+           "lois": "{} lois",
            "e2": "{d} directes, {u} divergentes, sur {n}",
            "src3": "Sénat, bilans annuels de l'application des lois, 2003-2026 (taux tels que publiés, page citée dans le tableau)",
            "note3": "%s définitions successives : ne pas relier les segments. Deux valeurs pour une session et une rupture de "
-                    "définition sont deux faits distincts." % _SEG_FR.capitalize(),
+                    "définition sont deux faits distincts. 2009-2010 non représentée : date d'arrêté du taux non établie."
+                    % _SEG_FR.capitalize(),
            "t3": "Le taux d'application des lois publié par le Sénat, 2002-2003 à 2024-2025",
            "s3": "en %% des mesures attendues ; %s définitions successives, fonds alternés : un segment ne se compare pas à un autre" % _SEG_FR,
            "d3": "Points par session, regroupés en %s segments séparés par des ruptures de définition : {liste}. Pour 2019-2020, le "
@@ -993,9 +1001,10 @@ T = {
            "leg3m": "1 à 6 : segments ; cercle vide : 2019-2020 selon le rapport suivant"},
     "en": {"src0": "Barometer of the application of laws (National Assembly, LexImpact; DILA data), status at 5 October 2026",
            "note0": "Laws promulgated per session (1 Oct.-30 Sept.), excluding treaties. Statuses from the barometer's labels: "
-                    "'pending' does not mean 'late'; 'no measure to take' depends on the 'not applicable' label.",
+                    "'pending' does not mean 'late'; 'no measure to take' depends on the 'not applicable' label and does not prove "
+                    "that the law provided for no measure.",
            "t0": "Are the laws promulgated in France since 2017 still waiting for a measure?",
-           "s0": "number of laws per session and their status at 5 October 2026",
+           "s0": "number of laws per session; administrative statuses at the reading date (5 October 2026)",
            "l0": ["at least one measure pending", "all measures taken", "no measure to take", "no schedule"],
            "e0": "{a} pending out of {n} laws",
            "d0": "Horizontal bars, one per session from 2017-2018 to 2024-2025, laws promulgated excluding treaties, by status at {r}: "
@@ -1013,19 +1022,21 @@ T = {
            "l1": ["identified published instrument", "pending", "classified as “not applicable”", "incomplete status"],
            "attente": "{} pending", "e1": "{a} pending out of {n} measures",
            "src2": "Barometer of the application of laws (status at 5 October 2026); Senate annual reports on the application of laws",
-           "note2": "Grey: laws that the barometer and the Senate classify differently (2024-2025: plus 2 laws with no list of names). "
-                    "Black mark: half of the laws.",
-           "t2": "French laws that call for no implementing measure, by session",
+           "note2": "Grey: laws that the barometer and the Senate classify differently. 2024-2025: the Senate publishes {senat} "
+                    "directly applicable laws in its summary and {publie} elsewhere in the same report; the {ecart} extra laws, with no "
+                    "list of names, are in grey. Black mark: half of the laws.",
+           "t2": "Laws classified as directly applicable by two sources",
            "s2": "number of laws promulgated, excluding treaties; black mark: half of the session's laws",
            "d2": "Horizontal bars, one per session: laws directly applicable for both sources, laws classified differently by the "
-                 "barometer and the Senate, laws that call for measures. By session: {liste}. In {ct_session}, the barometer counts "
+                 "barometer and the Senate, laws that neither source classifies as directly applicable. By session: {liste}. In {ct_session}, the barometer counts "
                  "{ct_baro} directly applicable laws out of {ct_N}. The values are in the table below the figure.",
            "d2s": "{s}: {n} laws, {d} directly applicable for both sources, {u} classified differently",
-           "l2": ["directly applicable (both sources)", "divergent classification", "call for measures"], "lois": "{} laws",
+           "l2": ["directly applicable (both sources)", "divergent classification", "not direct for either source"],
+           "lois": "{} laws",
            "e2": "{d} direct, {u} divergent, out of {n}",
            "src3": "French Senate, annual reports on the application of laws, 2003-2026 (rates as published, page cited in the table)",
            "note3": "%s successive definitions: do not join the segments. Two values for one session and a change of definition are "
-                    "two distinct facts." % _SEG_EN.capitalize(),
+                    "two distinct facts. 2009-2010 not shown: cut-off date of the rate not established." % _SEG_EN.capitalize(),
            "t3": "The implementation rate of laws published by the French Senate, 2002-2003 to 2024-2025",
            "s3": "in %% of expected measures; %s successive definitions, alternating backgrounds: one segment does not compare with "
                  "another" % _SEG_EN,
@@ -1169,18 +1180,25 @@ def _rows_lois(r, mobile):
     return out
 
 
+def _note2(r: dict) -> str:
+    """Pied de la figure des lois : les deux effectifs du Sénat pour 2024-2025 (synthèse et autre page du même rapport)."""
+    l25 = r["lignes"][-1]
+    return T[LANG]["note2"].format(senat=nb(l25["senat"]), publie=nb(l25["senat_publie"]),
+                                   ecart=nb(l25["senat_publie"] - l25["senat"]))
+
+
 def fig_lois(r: dict, A: dict) -> str:
     L = T[LANG]
     e = cadre(330, "al", L["t2"], L["s2"], _desc_lois(r, A))
     legende(e, 58, list(zip((BLEU, GRIS, GRIS_CLAIR), L["l2"])))
     _barres(e, _rows_lois(r, False), 78, W - 60, 74, 28, 70, range(0, 71, 10), moitie=True)
-    return pf.pied(e, 330 + 2, W, blocs_pied(L["src2"], L["note2"]), GRID)
+    return pf.pied(e, 330 + 2, W, blocs_pied(L["src2"], _note2(r)), GRID)
 
 
 def fig_lois_m(r: dict, A: dict) -> str:
     L = T[LANG]
     return _barres_m("alm", L["t2"], _desc_lois(r, A), L["s2"], list(zip((BLEU, GRIS, GRIS_CLAIR), L["l2"])),
-                     _rows_lois(r, True), 70, L["src2"], L["note2"])
+                     _rows_lois(r, True), 70, L["src2"], _note2(r))
 
 
 def fig_serie(r: dict, A: dict) -> str:
@@ -1260,7 +1278,7 @@ def fig_serie_m(r: dict, A: dict) -> str:
 MONTRE = {
     "fr": {"statut": "Au {releve}, selon le baromètre, {L_att} des {nlois} lois promulguées d'octobre 2017 à septembre 2025, hors "
                      "conventions, comportaient encore au moins une mesure classée « en attente » ; {L_tout} avaient reçu toutes leurs "
-                     "mesures et {L_dir} n'en appelaient aucune.",
+                     "mesures et {L_dir} étaient classées sans mesure à prendre.",
            "mesures": "Au {releve}, sur les {nmes} mesures d'application recensées par le baromètre pour les lois promulguées "
                       "d'octobre 2017 à septembre 2025, {P} ont un acte publié identifié, {A} sont en attente, {S} sont indiquées "
                       "sans objet et {U} ont un statut incomplet.",
@@ -1271,7 +1289,7 @@ MONTRE = {
                     "se lisent pas comme une seule série."},
     "en": {"statut": "On {releve}, according to the barometer, {L_att} of the {nlois} laws promulgated in France from October 2017 "
                      "to September 2025, excluding treaties, still had at least one measure classified as pending; {L_tout} had "
-                     "received all their measures and {L_dir} called for none.",
+                     "received all their measures and {L_dir} were classified as having no measure to take.",
            "mesures": "On {releve}, of the {nmes} implementing measures listed by the barometer for the laws promulgated in France "
                       "from October 2017 to September 2025, {P} have an identified published instrument, {A} are pending, {S} are "
                       "classified as “not applicable” (sans objet) and {U} have an incomplete status.",
@@ -1479,6 +1497,24 @@ def parite(figs: dict) -> list[str]:
     return ecarts
 
 
+# A11 (passe B3, contre-expertise du rendu, P0) : un statut courant du baromètre ne dit pas ce qu'une loi « appelait ». La
+# loi 2025-138, classée « sans mesure à prendre », prévoyait un arrêté (A6). Formules interdites, FR et EN, dans la prose
+# et dans les sorties ; les citations des producteurs (« appellent des décrets », SGG) et les règles du tri ne sont pas
+# visées par ces motifs.
+PAGE_FR = ROOT / "content" / "une-loi-votee-s-applique-t-elle-tout-de-suite" / "_index.md"
+PAGE_EN = ROOT / "content" / "une-loi-votee-s-applique-t-elle-tout-de-suite" / "_index.en.md"
+PORTEE_INTERDITES = [re.compile(x, re.I) for x in (
+    r"n['’]appel\w*\s+(?:aucune|pas)\b", r"\bappel\w*\s+au\s+moins\s+une\b", r"\bqui\s+appel\w*\s+(?:une|des)\s+mesures?\b",
+    r"avaient\s+une\s+mesure\s+à\s+attendre", r"\bcall(?:s|ed|ing)?\s+for\s+(?:none|no\b|at\s+least|a\s+measure|measures)",
+    r"had\s+a\s+measure\s+to\s+wait\s+for")]
+
+
+def garde_portee(textes: dict) -> None:
+    trouve = ["%s : %r" % (nom, m.group(0)) for nom, t in textes.items() for r in PORTEE_INTERDITES for m in r.finditer(html.unescape(t))]
+    if trouve:
+        raise Arret("A11 : statut courant du barometre dit comme besoin initial : " + " ; ".join(trouve[:4]))
+
+
 def main() -> int:
     try:
         return _main()
@@ -1512,12 +1548,6 @@ def _main() -> int:
     g.append("Figures : %d versions telephone a parite avec la version detaillee (FR et EN) ; temoin : valeur faussee vue"
              % len([x for x in figs if x.endswith("-m.svg")]))
     fi = fiches(figs, A, A_en)
-    if "--check" in sys.argv[1:]:
-        for x in g:
-            log("OK " + x)
-        log("--check : %d gardes tenues, rien ecrit." % len(g))
-        return 0
-    import cairosvg
     csvt = csv_texte(r)
     payload = {
         "releve_le": "2026-10-12",
@@ -1541,8 +1571,9 @@ def _main() -> int:
                                               for num, (f, h) in CE.items()}},
                  "definitions": {
                      "session": "lois publiées du 1er octobre au 30 septembre suivant",
-                     "directe": "loi qui n'appelle aucune mesure réglementaire d'application ; le baromètre la déduit de "
-                                "son échéancier (aucune mesure autre que « sans objet »), le Sénat la classe dans ses annexes",
+                     "directe": "loi classée d'application directe : par le baromètre quand son échéancier ne comporte, à la "
+                                "date du relevé, aucune mesure autre que « sans objet » (un statut courant, pas la preuve que la "
+                                "loi ne prévoyait aucune mesure : voir 2025-138) ; par le Sénat dans ses annexes",
                      "statut_loi": "attente : au moins une mesure « en attente d'application » ; toutes : non directe, avec "
                                    "échéancier, toutes ses mesures à appliquer appliquées ; directe : « Loi d'application directe » ; "
                                    "sans_echeancier : « Loi sans échéancier » (baromètre)",
@@ -1574,6 +1605,30 @@ def _main() -> int:
         "affichage_en": A_en,
     }
     txt_json = json.dumps(payload, ensure_ascii=False, indent=1, default=str)
+    # A11 : portée des catégories, sur la prose des deux pages et sur toutes les sorties (jetons, JSON, CSV, figures, fiches).
+    textes = {"page FR": PAGE_FR.read_text(encoding="utf-8"), "page EN": PAGE_EN.read_text(encoding="utf-8"),
+              "JSON": txt_json, "CSV": csvt, "fiches": json.dumps(fi, ensure_ascii=False)}
+    textes.update(figs)
+    garde_portee(textes)
+    for nom, cle, ajout in (("page FR « n'appelaient aucune »", "page FR", " 144 lois n'appelaient aucune mesure."),
+                            ("figure EN « called for none »", "appliquer-statut-en.svg", "<desc>144 called for none</desc>"),
+                            ("JSON « appelaient au moins une »", "JSON", "254 lois qui appelaient au moins une mesure"),
+                            ("fiches EN « called for at least one »", "fiches", "254 laws that called for at least one")):
+        try:
+            garde_portee(dict(textes, **{cle: textes[cle] + ajout}))
+            raise Arret("mutation %s : aucune garde n'a mordu, controle ABSENT" % nom)
+        except Arret as e:
+            if not str(e).startswith("A11 "):
+                raise
+            log("autotest : la mutation a mordu : %s -> %s" % (nom, str(e)[:90]))
+    g.append("A11 : portee des categories : aucune formule de besoin initial (FR et EN) dans les deux pages et les sorties ; "
+             "%d textes lus" % len(textes))
+    if "--check" in sys.argv[1:]:
+        for x in g:
+            log("OK " + x)
+        log("--check : %d gardes tenues, rien ecrit." % len(g))
+        return 0
+    import cairosvg
     same = (OUT_DATA.exists() and OUT_DATA.read_text(encoding="utf-8") == txt_json and OUT_CSV.exists()
             and OUT_CSV.read_text(encoding="utf-8-sig") == csvt
             and all((OUT_IMG / n).exists() and (OUT_IMG / n).read_text(encoding="utf-8") == s for n, s in figs.items())

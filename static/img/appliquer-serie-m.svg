@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 850" role="img" font-variant-numeric="tabular-nums" aria-labelledby="asm-t asm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 884" role="img" font-variant-numeric="tabular-nums" aria-labelledby="asm-t asm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="asm-t">Le taux d'application des lois publié par le Sénat, 2002-2003 à 2024-2025</title><desc id="asm-d">Points par session, regroupés en six segments séparés par des ruptures de définition : 2002-2003 : 9,7 % (segment 1); 2003-2004 : 14,4 % (segment 1); 2004-2005 : 16,4 % (segment 1); 2005-2006 : 30 % (segment 1); 2006-2007 : 32,1 % (segment 1); 2007-2008 : 24,6 % (segment 1); 2008-2009 : 27 % (segment 1); 2010-2011 : 64 % (segment 2); 2011-2012 : 66 % (segment 3); 2012-2013 : 64 % (segment 4); 2013-2014 : 55 % (segment 4); 2014-2015 : 62 % (segment 4); 2015-2016 : 71 % (segment 4); 2016-2017 : 73 % (segment 4); 2017-2018 : 78 % (segment 5); 2018-2019 : 72 % (segment 5); 2019-2020 : 62 % (segment 5); 2020-2021 : 57 % (segment 5); 2021-2022 : 65 % (segment 5); 2022-2023 : 64 % (segment 5); 2023-2024 : 59 % (segment 5); 2024-2025 : 66 % (segment 6). Pour 2019-2020, le rapport suivant écrit 60 % (cercle vide). Les valeurs, leur document et leur définition sont dans le tableau sous la figure.</desc>
-<rect width="300" height="850" fill="#ffffff"/>
+<rect width="300" height="884" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Le taux d'application des lois</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">publié par le Sénat, 2002-2003</text>
 <text x="0" y="64" font-size="17" font-weight="600" fill="#0A0A0E">à 2024-2025</text>
@@ -121,6 +121,8 @@
 <text class="pied-note" x="0" y="768.0" font-size="13.5" fill="#52514e">relier les segments. Deux valeurs pour</text>
 <text class="pied-note" x="0" y="785.0" font-size="13.5" fill="#52514e">une session et une rupture de</text>
 <text class="pied-note" x="0" y="802.0" font-size="13.5" fill="#52514e">définition sont deux faits distincts.</text>
-<text class="pied-licence" x="0" y="823.0" font-size="13.5" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="840.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+<text class="pied-note" x="0" y="819.0" font-size="13.5" fill="#52514e">2009-2010 non représentée : date</text>
+<text class="pied-note" x="0" y="836.0" font-size="13.5" fill="#52514e">d'arrêté du taux non établie.</text>
+<text class="pied-licence" x="0" y="857.0" font-size="13.5" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="874.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
 </svg>

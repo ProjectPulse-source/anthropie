@@ -80,7 +80,7 @@
   },
   "definitions": {
    "session": "lois publiées du 1er octobre au 30 septembre suivant",
-   "directe": "loi qui n'appelle aucune mesure réglementaire d'application ; le baromètre la déduit de son échéancier (aucune mesure autre que « sans objet »), le Sénat la classe dans ses annexes",
+   "directe": "loi classée d'application directe : par le baromètre quand son échéancier ne comporte, à la date du relevé, aucune mesure autre que « sans objet » (un statut courant, pas la preuve que la loi ne prévoyait aucune mesure : voir 2025-138) ; par le Sénat dans ses annexes",
    "statut_loi": "attente : au moins une mesure « en attente d'application » ; toutes : non directe, avec échéancier, toutes ses mesures à appliquer appliquées ; directe : « Loi d'application directe » ; sans_echeancier : « Loi sans échéancier » (baromètre)",
    "U_lois": "lois classées différemment par les deux sources, même quand une règle explique l'écart",
    "P": "mesure à l'état « appliqué » avec un identifiant d'acte",
@@ -102,7 +102,7 @@
   "A5 : 5398 mesures, N = P + A + S + U ; coherence loi par loi avec le fichier des lois du meme producteur",
   "A5 bis : « sans objet » commencant par un acte : 98 = 95 references + 3 ecartes a motif nomme ; tri : 448 = 405 classes + 43 indetermines",
   "A8 : statut des lois : chaque loi dans un seul des quatre statuts, somme = champ par session ; 2024-2025 : 56 lois dans les deux sources",
-  "A8 bis : 130 lois en attente sur 254 qui appelaient au moins une mesure (51.2 %), « environ une sur deux »",
+  "A8 bis : 130 lois en attente sur 254 classees avec au moins une mesure a prendre, en attente ou prise (51.2 %), « environ une sur deux »",
   "A6 : 2025-138 : 1 mesure(s) « sans objet » portant un arrete au barometre, loi sans mesure a prendre ; en attente au SGG (31/12/2025)",
   "A9 : « + 4 points » = 66 - 62 (2023-2024 hors mesures differees), et non 66 - 59",
   "Figures : 8 versions telephone a parite avec la version detaillee (FR et EN) ; temoin : valeur faussee vue"

@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 397" role="img" font-variant-numeric="tabular-nums" aria-labelledby="al-t al-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-<title id="al-t">Les lois qui n&#x27;appellent aucune mesure d&#x27;application, par session</title><desc id="al-d">Barres horizontales, une par session : lois d&#x27;application directe pour les deux sources, lois classées différemment par le baromètre et par le Sénat, lois qui appellent des mesures. Par session : 2017-2018 : 41 lois, 11 directes pour les deux sources, 3 classées différemment; 2018-2019 : 49 lois, 22 directes pour les deux sources, 3 classées différemment; 2019-2020 : 43 lois, 15 directes pour les deux sources, 1 classées différemment; 2020-2021 : 51 lois, 17 directes pour les deux sources, 3 classées différemment; 2021-2022 : 64 lois, 15 directes pour les deux sources, 9 classées différemment; 2022-2023 : 44 lois, 10 directes pour les deux sources, 1 classées différemment; 2023-2024 : 51 lois, 21 directes pour les deux sources, 0 classées différemment; 2024-2025 : 56 lois, 19 directes pour les deux sources, 6 classées différemment. En 2018-2019, le baromètre compte 25 lois d&#x27;application directe sur 49. Les valeurs sont dans le tableau sous la figure.</desc>
-<rect width="720" height="397" fill="#ffffff"/>
-<text x="0.0" y="18.0" font-size="13" fill="#0A0A0E" text-anchor="start" font-weight="600">Les lois qui n&#x27;appellent aucune mesure d&#x27;application, par session</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 411" role="img" font-variant-numeric="tabular-nums" aria-labelledby="al-t al-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="al-t">Les lois classées d&#x27;application directe, selon deux sources</title><desc id="al-d">Barres horizontales, une par session : lois d&#x27;application directe pour les deux sources, lois classées différemment par le baromètre et par le Sénat, lois qu&#x27;aucune des deux ne classe d&#x27;application directe. Par session : 2017-2018 : 41 lois, 11 directes pour les deux sources, 3 classées différemment; 2018-2019 : 49 lois, 22 directes pour les deux sources, 3 classées différemment; 2019-2020 : 43 lois, 15 directes pour les deux sources, 1 classées différemment; 2020-2021 : 51 lois, 17 directes pour les deux sources, 3 classées différemment; 2021-2022 : 64 lois, 15 directes pour les deux sources, 9 classées différemment; 2022-2023 : 44 lois, 10 directes pour les deux sources, 1 classées différemment; 2023-2024 : 51 lois, 21 directes pour les deux sources, 0 classées différemment; 2024-2025 : 56 lois, 19 directes pour les deux sources, 6 classées différemment. En 2018-2019, le baromètre compte 25 lois d&#x27;application directe sur 49. Les valeurs sont dans le tableau sous la figure.</desc>
+<rect width="720" height="411" fill="#ffffff"/>
+<text x="0.0" y="18.0" font-size="13" fill="#0A0A0E" text-anchor="start" font-weight="600">Les lois classées d&#x27;application directe, selon deux sources</text>
 <text x="0.0" y="36.0" font-size="12" fill="#52514e" text-anchor="start">nombre de lois promulguées, hors conventions ; trait noir : la moitié des lois de la session</text>
 <rect x="0" y="49" width="11" height="11" fill="#184f95"/>
 <text x="16.0" y="58.0" font-size="10" fill="#52514e" text-anchor="start">application directe (les deux sources)</text>
 <rect x="269" y="49" width="11" height="11" fill="#8a8781"/>
 <text x="285.6" y="58.0" font-size="10" fill="#52514e" text-anchor="start">classement divergent</text>
 <rect x="427" y="49" width="11" height="11" fill="#c9c5c0"/>
-<text x="443.6" y="58.0" font-size="10" fill="#52514e" text-anchor="start">appellent des mesures</text>
+<text x="443.6" y="58.0" font-size="10" fill="#52514e" text-anchor="start">non directes (les deux sources)</text>
 <line x1="78.0" y1="70" x2="78.0" y2="300" stroke="#e1e0d9"/>
 <text x="78.0" y="314.0" font-size="9" fill="#898781" text-anchor="middle">0</text>
 <line x1="161.1" y1="70" x2="161.1" y2="300" stroke="#e1e0d9"/>
@@ -74,7 +74,8 @@
 <text x="547.6" y="284.0" font-size="9" fill="#52514e" text-anchor="start">56 lois</text>
 <line x1="0" y1="332.0" x2="720" y2="332.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="347.0" font-size="11" fill="#52514e">Baromètre de l'application des lois (état au 05/10/2026) ; rapports annuels du Sénat sur l'application des lois</text>
-<text class="pied-note" x="0" y="361.0" font-size="11" fill="#52514e">Gris : lois que le baromètre et le Sénat classent différemment (2024-2025 : 2 lois sans liste nominative en plus).</text>
-<text class="pied-note" x="0" y="375.0" font-size="11" fill="#52514e">Trait noir : la moitié des lois.</text>
-<text class="pied-licence" x="0" y="389.0" font-size="11" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/une-loi-votee-s-applique-t-elle-tout-de-suite/</text>
+<text class="pied-note" x="0" y="361.0" font-size="11" fill="#52514e">Gris : lois que le baromètre et le Sénat classent différemment. 2024-2025 : le Sénat publie 22 lois d'application</text>
+<text class="pied-note" x="0" y="375.0" font-size="11" fill="#52514e">directe dans sa synthèse et 24 ailleurs dans le même rapport ; les 2 de plus, sans liste nominative, sont en gris.</text>
+<text class="pied-note" x="0" y="389.0" font-size="11" fill="#52514e">Trait noir : la moitié des lois.</text>
+<text class="pied-licence" x="0" y="403.0" font-size="11" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/une-loi-votee-s-applique-t-elle-tout-de-suite/</text>
 </svg>

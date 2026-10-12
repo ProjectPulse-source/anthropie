@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 867" role="img" font-variant-numeric="tabular-nums" aria-labelledby="asm-t asm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 901" role="img" font-variant-numeric="tabular-nums" aria-labelledby="asm-t asm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="asm-t">The implementation rate of laws published by the French Senate, 2002-2003 to 2024-2025</title><desc id="asm-d">Points by session, grouped in six segments separated by changes of definition: 2002-2003: 9.7% (segment 1); 2003-2004: 14.4% (segment 1); 2004-2005: 16.4% (segment 1); 2005-2006: 30% (segment 1); 2006-2007: 32.1% (segment 1); 2007-2008: 24.6% (segment 1); 2008-2009: 27% (segment 1); 2010-2011: 64% (segment 2); 2011-2012: 66% (segment 3); 2012-2013: 64% (segment 4); 2013-2014: 55% (segment 4); 2014-2015: 62% (segment 4); 2015-2016: 71% (segment 4); 2016-2017: 73% (segment 4); 2017-2018: 78% (segment 5); 2018-2019: 72% (segment 5); 2019-2020: 62% (segment 5); 2020-2021: 57% (segment 5); 2021-2022: 65% (segment 5); 2022-2023: 64% (segment 5); 2023-2024: 59% (segment 5); 2024-2025: 66% (segment 6). For 2019-2020, the following report gives 60% (open circle). The values, their document and their definition are in the table below the figure.</desc>
-<rect width="300" height="867" fill="#ffffff"/>
+<rect width="300" height="901" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">The implementation rate of</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">laws published by the French</text>
 <text x="0" y="64" font-size="17" font-weight="600" fill="#0A0A0E">Senate, 2002-2003 to 2024-2025</text>
@@ -121,7 +121,9 @@
 <text class="pied-note" x="0" y="768.0" font-size="13.5" fill="#52514e">Six successive definitions: do not</text>
 <text class="pied-note" x="0" y="785.0" font-size="13.5" fill="#52514e">join the segments. Two values for one</text>
 <text class="pied-note" x="0" y="802.0" font-size="13.5" fill="#52514e">session and a change of definition are</text>
-<text class="pied-note" x="0" y="819.0" font-size="13.5" fill="#52514e">two distinct facts.</text>
-<text class="pied-licence" x="0" y="840.0" font-size="13.5" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="857.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+<text class="pied-note" x="0" y="819.0" font-size="13.5" fill="#52514e">two distinct facts. 2009-2010 not</text>
+<text class="pied-note" x="0" y="836.0" font-size="13.5" fill="#52514e">shown: cut-off date of the rate not</text>
+<text class="pied-note" x="0" y="853.0" font-size="13.5" fill="#52514e">established.</text>
+<text class="pied-licence" x="0" y="874.0" font-size="13.5" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="891.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
 </svg>

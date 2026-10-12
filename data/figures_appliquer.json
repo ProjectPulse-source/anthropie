@@ -4,9 +4,9 @@
    "id": "statut",
    "fichier": "appliquer-statut",
    "titre": "Les lois promulguées depuis 2017 attendent-elles encore une mesure ?",
-   "montre": "Au 05/10/2026, selon le baromètre, 130 des 399 lois promulguées d'octobre 2017 à septembre 2025, hors conventions, comportaient encore au moins une mesure classée « en attente » ; 124 avaient reçu toutes leurs mesures et 144 n'en appelaient aucune.",
+   "montre": "Au 05/10/2026, selon le baromètre, 130 des 399 lois promulguées d'octobre 2017 à septembre 2025, hors conventions, comportaient encore au moins une mesure classée « en attente » ; 124 avaient reçu toutes leurs mesures et 144 étaient classées sans mesure à prendre.",
    "source": "Baromètre de l'application des lois (Assemblée nationale, LexImpact ; données DILA), état au 05/10/2026",
-   "precaution": "Lois promulguées par session (1er oct.-30 sept.), hors conventions. Statuts tirés des étiquettes du baromètre : « en attente » ne veut pas dire « en retard » ; « sans mesure à prendre » dépend de l'étiquette « sans objet »."
+   "precaution": "Lois promulguées par session (1er oct.-30 sept.), hors conventions. Statuts tirés des étiquettes du baromètre : « en attente » ne veut pas dire « en retard » ; « sans mesure à prendre » dépend de l'étiquette « sans objet » et ne prouve pas que la loi ne prévoyait aucune mesure."
   },
   {
    "id": "mesures",
@@ -19,10 +19,10 @@
   {
    "id": "lois",
    "fichier": "appliquer-lois",
-   "titre": "Les lois qui n'appellent aucune mesure d'application, par session",
+   "titre": "Les lois classées d'application directe, selon deux sources",
    "montre": "Les lois d'application directe restent sous la moitié dans sept sessions sur huit, quelle que soit la source ; en 2018-2019, le baromètre en compte 25 sur 49. Les deux sources classent différemment 24 des 399 lois.",
    "source": "Baromètre de l'application des lois (état au 05/10/2026) ; rapports annuels du Sénat sur l'application des lois",
-   "precaution": "Gris : lois que le baromètre et le Sénat classent différemment (2024-2025 : 2 lois sans liste nominative en plus). Trait noir : la moitié des lois."
+   "precaution": "Gris : lois que le baromètre et le Sénat classent différemment. 2024-2025 : le Sénat publie 22 lois d'application directe dans sa synthèse et 24 ailleurs dans le même rapport ; les 2 de plus, sans liste nominative, sont en gris. Trait noir : la moitié des lois."
   },
   {
    "id": "serie",
@@ -30,7 +30,7 @@
    "titre": "Le taux d'application des lois publié par le Sénat, 2002-2003 à 2024-2025",
    "montre": "Le taux publié par le Sénat repose sur six définitions successives depuis 2002-2003 : les segments ne se lisent pas comme une seule série.",
    "source": "Sénat, bilans annuels de l'application des lois, 2003-2026 (taux tels que publiés, page citée dans le tableau)",
-   "precaution": "Six définitions successives : ne pas relier les segments. Deux valeurs pour une session et une rupture de définition sont deux faits distincts."
+   "precaution": "Six définitions successives : ne pas relier les segments. Deux valeurs pour une session et une rupture de définition sont deux faits distincts. 2009-2010 non représentée : date d'arrêté du taux non établie."
   }
  ],
  "en": [
@@ -38,9 +38,9 @@
    "id": "statut",
    "fichier": "appliquer-statut-en",
    "titre": "Are the laws promulgated in France since 2017 still waiting for a measure?",
-   "montre": "On 5 October 2026, according to the barometer, 130 of the 399 laws promulgated in France from October 2017 to September 2025, excluding treaties, still had at least one measure classified as pending; 124 had received all their measures and 144 called for none.",
+   "montre": "On 5 October 2026, according to the barometer, 130 of the 399 laws promulgated in France from October 2017 to September 2025, excluding treaties, still had at least one measure classified as pending; 124 had received all their measures and 144 were classified as having no measure to take.",
    "source": "Barometer of the application of laws (National Assembly, LexImpact; DILA data), status at 5 October 2026",
-   "precaution": "Laws promulgated per session (1 Oct.-30 Sept.), excluding treaties. Statuses from the barometer's labels: 'pending' does not mean 'late'; 'no measure to take' depends on the 'not applicable' label."
+   "precaution": "Laws promulgated per session (1 Oct.-30 Sept.), excluding treaties. Statuses from the barometer's labels: 'pending' does not mean 'late'; 'no measure to take' depends on the 'not applicable' label and does not prove that the law provided for no measure."
   },
   {
    "id": "mesures",
@@ -53,10 +53,10 @@
   {
    "id": "lois",
    "fichier": "appliquer-lois-en",
-   "titre": "French laws that call for no implementing measure, by session",
+   "titre": "Laws classified as directly applicable by two sources",
    "montre": "Directly applicable laws stay below half in seven sessions out of eight, whatever the source; in 2018-2019, the barometer counts 25 out of 49. The two sources classify 24 of the 399 laws differently.",
    "source": "Barometer of the application of laws (status at 5 October 2026); Senate annual reports on the application of laws",
-   "precaution": "Grey: laws that the barometer and the Senate classify differently (2024-2025: plus 2 laws with no list of names). Black mark: half of the laws."
+   "precaution": "Grey: laws that the barometer and the Senate classify differently. 2024-2025: the Senate publishes 22 directly applicable laws in its summary and 24 elsewhere in the same report; the 2 extra laws, with no list of names, are in grey. Black mark: half of the laws."
   },
   {
    "id": "serie",
@@ -64,7 +64,7 @@
    "titre": "The implementation rate of laws published by the French Senate, 2002-2003 to 2024-2025",
    "montre": "The rate published by the French Senate rests on six successive definitions since 2002-2003: the segments do not read as a single series.",
    "source": "French Senate, annual reports on the application of laws, 2003-2026 (rates as published, page cited in the table)",
-   "precaution": "Six successive definitions: do not join the segments. Two values for one session and a change of definition are two distinct facts."
+   "precaution": "Six successive definitions: do not join the segments. Two values for one session and a change of definition are two distinct facts. 2009-2010 not shown: cut-off date of the rate not established."
   }
  ]
 }
