@@ -17,7 +17,8 @@ en direct, aucune donnée nouvelle ne peut entrer en silence) :
   - pièces hors Légifrance archivées le 12/10/2026 avec leur empreinte (REFONTE_PILOTE/REFERENDUM/sources_phase_b/,
     SHA256SUMS.txt) : textes adoptés par le Congrès le 4/02/2008 et le 21/07/2008 (site du Sénat ; la page JORF de
     Légifrance refuse les scripts, canal changé), dossier législatif du Sénat pjl20-449, déclaration publiée par
-    l'Élysée le 29/06/2020, proposition de loi n° 459 (2017-2018) du Sénat.
+    l'Élysée le 29/06/2020, proposition de loi n° 459 (2017-2018) du Sénat ; passe B3 : analyses des scrutins de
+    l'Assemblée nationale du Congrès du 4/02/2008 (jo9000) et de la motion référendaire du 6/02/2008 (13e lég., n° 82).
 Le témoin du Journal officiel (décrets de soumission, lois promulguées) et le témoin de l'Assemblée nationale (dépôts au
 titre de l'art. 11) ont été exécutés hors de ce script (test_decisif/referendum/) ; leurs résultats sont repris ici,
 identifiants compris, et le script vérifie qu'ils correspondent toujours au registre.
@@ -41,6 +42,9 @@ Gardes (toutes ARRÊTENT, rien n'est écrit) :
   R8  (12/10) pièces hors Légifrance : empreinte de chaque fichier égale à SHA256SUMS.txt, et chaque passage que la
       page en cite ou en tire (clause du 1er juillet 2004, procédure du Congrès, déclaration du 29/06/2020, étapes du
       dossier pjl20-449) retrouvé mot pour mot ; la dernière étape datée du dossier du Sénat est celle que la page dit ;
+      passe B3 (12/10) : décomptes du Congrès du 4/02/2008 et de la motion référendaire du 6/02/2008 (scrutin n° 82 de
+      l'Assemblée) lus dans les pages de l'Assemblée archivées ; pour + contre = exprimés <= votants, majorité publiée
+      recalculée (3/5 ; moitié plus un), issue publiée conforme aux nombres ;
   R9  (12/10) signataires des dépôts sans saisine : le nombre transcrit est relu dans le témoin de l'Assemblée (auteurs +
       cosignataires) et dans le texte déposé au Sénat (archivé, R8).
 Autotest de mutation à chaque exécution : chaque garde nouvelle doit mordre sur SA mutation, sinon le script échoue.
@@ -90,6 +94,7 @@ ARTICLES = {
     "11": ("LEGIARTI000019241004", "2026-09/e4718a1b13a755204ea409d81c5025811a2bfb29fb5e6fae0bc10a87d19367d8.json"),
     "19": ("LEGIARTI000006527482", "2026-10/6f964a9686927f9c174efa86fc1dcba43b752b7a94c135ff58e9295e19c59efb.json"),
     "60": ("LEGIARTI000006527548", "2026-10/f656b0168a0ba65883300603e607fde04bfec939640a048a721567ab3c539064.json"),
+    "53": ("LEGIARTI000006527534", "2026-10/2f3b1b5d4ab1059c8b4ad9d335c62875ed49300bbe54380c4422b841b15b6478.json"),
     "61": ("LEGIARTI000019241074", "2026-10/c14abed78a1e9932d2cf37f84e6366e03847a41174d17466b5f83b4a0a3d299c.json"),
     "88-5": ("LEGIARTI000018077285", "2026-10/74232615eacf35866333fd388b977914dbfe65e66d839cd030c690f503f060cf.json"),
     "89": ("LEGIARTI000019240655", "2026-10/0caaf2457602bce55a86b6825cd567e7bca2a4a2d82794135566b840d7c58eee.json"),
@@ -124,6 +129,8 @@ CIT = {
                      "the President of the Republic may submit it to a referendum"),
     "art19": ("19", "Les actes du Président de la République autres que ceux prévus aux articles 8 (1er alinéa), 11, 12, 16, 18, 54, 56 et 61 sont contresignés par le Premier ministre",
               "Instruments of the President of the Republic, other than those provided for under articles 8 (paragraph one), 11, 12, 16, 18, 54, 56 and 61, shall be countersigned by the Prime Minister"),
+    "art53": ("53", "ne peuvent être ratifiés ou approuvés qu'en vertu d'une loi",  # B3 (12/10) : 2005-2008, temps du droit
+              "may be ratified or approved only by an Act of Parliament"),
     "art60": ("60", "Le Conseil constitutionnel veille à la régularité des opérations de référendum prévues aux articles 11 et 89 et au titre XV. Il en proclame les résultats.",
               "The Constitutional Council shall ensure the proper conduct of referendum proceedings as provided for in articles 11 and 89 and in Title XV and shall proclaim the results of the referendum."),
     "art61": ("61", "les propositions de loi mentionnées à l'article 11 avant qu'elles ne soient soumises au référendum",
@@ -156,7 +163,7 @@ CIT = {
     "cc1": ("cc1", "l'entrée en vigueur de celles de leurs dispositions dont l'exécution nécessite des mesures d'application est reportée à la date d'entrée en vigueur de ces mesures",
             "the entry into force of those of their provisions whose implementation requires implementing measures is postponed until the date on which those measures enter into force"),
 }
-CONSTITUTION = {"3", "11", "19", "60", "61", "88-5", "89"}
+CONSTITUTION = {"3", "11", "19", "53", "60", "61", "88-5", "89"}
 # Témoin du JO (test_decisif/referendum/temoin_jo.py, 06/10/2026) : date du scrutin -> décret (date, JORFTEXT), loi.
 TEMOIN_JO = {
     "1961-01-08": ("1960-12-08", "JORFTEXT000000852818", "61-44", "JORFTEXT000000314906"),
@@ -322,7 +329,10 @@ def article_fr(n: str) -> str:
 
 # ------------------------------------------------------------------ pièces hors Légifrance (R8)
 def texte_html(b: bytes) -> str:
-    s = b.decode("utf-8")
+    try:
+        s = b.decode("utf-8")
+    except UnicodeDecodeError:  # pages de l'Assemblée nationale (ISO-8859-1 déclaré, lu en windows-1252)
+        s = b.decode("cp1252")
     s = re.sub(r"\s*<sup>\s*(.*?)\s*</sup>", r"\1", s, flags=re.S)       # « 1<sup>er</sup> » -> « 1er »
     s = re.sub(r"<(script|style)\b.*?</\1>", " ", s, flags=re.S | re.I)
     return norm(html.unescape(re.sub(r"<[^>]+>", " ", s)))
@@ -360,7 +370,23 @@ PIECES_CITEES = {
         "Page mise à jour le 1er juillet 2024",
     ],
     "senat_ppl17-459.html": ["Enregistré à la Présidence du Sénat le 20 avril 2018"],
+    # B3 (12/10) : 2005-2008, temps politique, par des actes datés (site de l'Assemblée nationale, pages en ISO-8859-1)
+    "an_congres_scrutin_9000_2008-02-04.html": [
+        "CONGRÈS DU PARLEMENT - SÉANCE DU 04/02/2008",
+        "SCRUTIN PUBLIC SUR le projet de loi constitutionnelle modifiant le titre XV de la Constitution.",
+        "Le Congrès du Parlement a adopté",
+    ],
+    "an_l13_scrutin_0082_motion_referendum_lisbonne_2008-02-06.html": [
+        "Analyse du scrutin n° 82 - Séance du 06/02/2008",
+        "plusieurs de ses collègues, tendant à soumettre au référendum le projet de loi autorisant la ratification du traité de Lisbonne",
+        "L'Assemblée nationale n'a pas adopté",
+    ],
 }
+# Décomptes lus dans ces deux pièces (premier bloc de l'analyse du scrutin) ; R8 vérifie leur cohérence et l'issue publiée.
+# clé -> (pièce, libellé de la majorité, issue publiée, adopté ?)
+SCRUTINS_2008 = {"congres": ("an_congres_scrutin_9000_2008-02-04.html", "Majorité requise", "Le Congrès du Parlement a adopté", True),
+                 "motion": ("an_l13_scrutin_0082_motion_referendum_lisbonne_2008-02-06.html", "Majorité absolue",
+                            "L'Assemblée nationale n'a pas adopté", False)}
 # Dossier pjl20-449 : étapes que la page date (ISO, passage du dossier du Sénat). La dernière doit être la dernière du dossier.
 ETAPES_2021 = [
     ("depot", "2021-01-20", "déposé à l'Assemblée Nationale le 20 janvier 2021"),
@@ -394,6 +420,34 @@ def lire_pieces(altere: str | None = None) -> dict[str, str]:
     return out
 
 
+def decompte(t: str, majorite: str) -> dict:
+    m = re.search(r"Nombre de votants : (\d+) Nombre de suffrages exprimés : (\d+) %s : (\d+) Pour l'adoption : (\d+) Contre : (\d+)"
+                  % majorite, t)
+    if not m:
+        raise Arret("R8 : décompte du scrutin illisible (%s)" % majorite)
+    return dict(zip(("votants", "exprimes", "majorite", "pour", "contre"), map(int, m.groups())))
+
+
+def scrutins_2008(t: dict[str, str], defs=None) -> dict:
+    """B3 (12/10) : décomptes du Congrès (4/02/2008) et de la motion référendaire (6/02/2008), lus dans les pièces ;
+    l'issue publiée doit suivre des nombres (adopté si et seulement si pour >= majorité), pour + contre = exprimés <= votants."""
+    out = {}
+    for cle, (nom, majorite, issue, adopte) in (SCRUTINS_2008 if defs is None else defs).items():
+        d = decompte(t[nom], majorite)
+        if d["pour"] + d["contre"] != d["exprimes"] or d["exprimes"] > d["votants"]:
+            raise Arret("R8 : %s : décompte incohérent %s" % (cle, d))
+        if norm(issue) not in t[nom] or (d["pour"] >= d["majorite"]) != adopte:
+            raise Arret("R8 : %s : issue contredite par le décompte %s" % (cle, d))
+        # la page dit « trois cinquièmes des suffrages exprimés » (Congrès) ; majorité absolue : la moitié plus un
+        attendu = -(-3 * d["exprimes"] // 5) if cle == "congres" else d["exprimes"] // 2 + 1
+        if d["majorite"] != attendu:
+            raise Arret("R8 : %s : majorité publiée %d, attendue %d" % (cle, d["majorite"], attendu))
+        m = re.search(r"(?:SÉANCE DU|Séance du) (\d\d)/(\d\d)/(\d{4})", t[nom])
+        d["date"] = "%s-%s-%s" % (m.group(3), m.group(2), m.group(1))
+        out[cle] = d
+    return out
+
+
 def verifier_pieces(t: dict[str, str], citees=None, etapes=None) -> str:
     citees = PIECES_CITEES if citees is None else citees
     etapes = ETAPES_2021 if etapes is None else etapes
@@ -412,8 +466,11 @@ def verifier_pieces(t: dict[str, str], citees=None, etapes=None) -> str:
         raise Arret("R8 : pjl20-449 : dernière étape du dossier %s, la page dit %s" % (max(dates) if dates else None, etapes[-1][1]))
     if "/2020/06/29/" not in (PIECES / "elysee_2020-06-29_convention_climat.html").read_text(encoding="utf-8"):
         raise Arret("R8 : page de l'Élysée : date du 29/06/2020 absente de l'adresse canonique")
-    return "R8 : %d pièces hors Légifrance à leur empreinte, %d passages et %d étapes retrouvés, dernière étape %s" % (
-        len(citees), n, len(etapes), etapes[-1][1])
+    sc = scrutins_2008(t)
+    return ("R8 : %d pièces hors Légifrance à leur empreinte, %d passages et %d étapes retrouvés, dernière étape %s ; "
+            "décomptes de 2008 cohérents avec l'issue publiée (Congrès %d pour, %d requis ; motion %d pour, %d contre)" % (
+                len(citees), n, len(etapes), etapes[-1][1], sc["congres"]["pour"], sc["congres"]["majorite"],
+                sc["motion"]["pour"], sc["motion"]["contre"]))
 
 
 # ------------------------------------------------------------------ signataires (R9)
@@ -549,8 +606,11 @@ MOTIFS = {
                 "it relates, within the meaning of Article 11 of the Constitution, to a reform concerning the social policy of the nation"),
                ("m24_13", 13, "les dispositions de l'article 1er portent une atteinte disproportionnée à ces exigences. Elles sont donc contraires à la Constitution",
                 "the provisions of Article 1 disproportionately infringe these requirements. They are therefore contrary to the Constitution")],
-    "2026-7": [("m26_7", 7, "le constituant a entendu exclure les questions de société des objets mentionnés au premier alinéa de l'article 11 de la Constitution",
-                "the framers of the constitutional amendment intended to exclude questions of society from the subjects listed in the first paragraph of Article 11 of the Constitution"),
+    # B3 (12/10) : consid. 7 cité avec son fondement (travaux préparatoires de 1995) et sa seconde phrase (contre-expertise du rendu, Q4)
+    "2026-7": [("m26_7", 7, "il résulte des travaux préparatoires de la loi constitutionnelle du 4 août 1995 mentionnée ci-dessus que le constituant a entendu exclure les questions de société des objets mentionnés au premier alinéa de l'article 11 de la Constitution",
+                "it follows from the preparatory work for the constitutional act of 4 August 1995 mentioned above that the framers of the constitutional amendment intended to exclude questions of society from the subjects listed in the first paragraph of Article 11 of the Constitution"),
+               ("m26_7b", 7, "Ainsi, ne relèvent pas de ces objets les questions, d'ordre éthique, relatives à la fin de vie",
+                "Thus, questions of an ethical nature relating to end of life do not fall within these subjects"),
                ("m26_9", 9, "elle ne porte ni sur la politique sociale de la nation et les services publics qui y concourent, ni sur aucun des autres objets mentionnés au premier alinéa de l'article 11 de la Constitution",
                 "it relates neither to the social policy of the nation and the public services contributing to it, nor to any of the other subjects listed in the first paragraph of Article 11 of the Constitution"),
                ("m26_11", 11, "n'emporte pas de changement de l'état du droit", "does not change the state of the law"),
@@ -611,7 +671,7 @@ def phrases(r: dict) -> None:
 
 
 # ------------------------------------------------------------------ affichage
-def affichage(R, S, r) -> tuple[dict, dict]:
+def affichage(R, S, r, sc=None) -> tuple[dict, dict]:
     conf = next(s for s in S.values() if s["solution"] == "Conformité")
     d = {l["date_scrutin"]: l for l in R}
     part = lambda l: 100 * l["votants"] / l["inscrits"]  # noqa: E731
@@ -643,6 +703,10 @@ def affichage(R, S, r) -> tuple[dict, dict]:
              "declaration_2020": dt(DECLARATION_2020)}
         for cle, iso, _ in ETAPES_2021:
             A["e2021_" + cle] = dt(iso)
+        for cle, sv in (sc or {}).items():  # B3 : décomptes de 2008, lus dans les pièces (R8)
+            for k in ("votants", "exprimes", "majorite", "pour", "contre"):
+                A["%s_%s" % (cle, k)] = nb(sv[k])
+            A[cle + "_date"] = dt(sv["date"])
         for k, (n, f, e) in CIT.items():
             # page française : texte français ; page anglaise : traduction du Conseil (Constitution) ou texte français
             # suivi de notre traduction (clé _tr)
@@ -1031,6 +1095,7 @@ def autotest(R, S, textes, pieces):
     mut_pieces["elysee_2020-06-29_convention_climat.html"][1] = CIT_ELYSEE.replace("après le vote des chambres", "sans le vote des chambres")
     mut_etapes = ETAPES_2021[:-1]                                                  # la page tairait l'étape du 5/07/2021
     mut_depots = [dict(d, auteurs=2) if d["numero"] == "5203" else d for d in DEPOTS_SANS_SAISINE]
+    mut_sc = dict(SCRUTINS_2008, motion=SCRUTINS_2008["motion"][:3] + (True,))  # la page dirait la motion adoptée
     essais = [("proclamation retirée", lambda: (gardes(R[1:], S), "R1")),
               ("oui/non permutés (1969)", lambda: (gardes([dict(l, oui=l["non"], non=l["oui"]) if l["date_scrutin"] == "1969-04-27" else l for l in R], S), "R2")),
               ("voix ajoutée", lambda: (gardes([dict(l, oui=l["oui"] + 1) if l["date_scrutin"] == "1961-01-08" else l for l in R], S), "R1")),
@@ -1041,7 +1106,8 @@ def autotest(R, S, textes, pieces):
               ("scrutin d'adhésion après 2005", lambda: (phrases(dict(resultat(R, S), art88_5=1)), "R5")),
               ("déclaration de l'Élysée altérée", lambda: (verifier_pieces(pieces, mut_pieces), "R8")),
               ("dernière étape du dossier 2021 omise", lambda: (verifier_pieces(pieces, None, mut_etapes), "R8")),
-              ("signataires du n° 5203 : 1 -> 2", lambda: (verifier_signataires(pieces, mut_depots), "R9"))]
+              ("signataires du n° 5203 : 1 -> 2", lambda: (verifier_signataires(pieces, mut_depots), "R9")),
+              ("motion de 2008 déclarée adoptée", lambda: (scrutins_2008(pieces, mut_sc), "R8"))]
     for nom, f in essais:
         try:
             f()
@@ -1050,7 +1116,7 @@ def autotest(R, S, textes, pieces):
             pref = {"proclamation retirée": "R1", "voix ajoutée": "R1", "oui/non permutés (1969)": "R2",
                     "soutiens au seuil": "R5", "scrutin d'adhésion après 2005": "R5",
                     "déclaration de l'Élysée altérée": "R8", "dernière étape du dossier 2021 omise": "R8",
-                    "signataires du n° 5203 : 1 -> 2": "R9"}.get(nom, "R4")
+                    "signataires du n° 5203 : 1 -> 2": "R9", "motion de 2008 déclarée adoptée": "R8"}.get(nom, "R4")
             if not str(e).startswith(pref):
                 raise Arret("mutation %s : arrêtée par une autre garde que %s (%s)" % (nom, pref, str(e)[:60]))
             out.append("%s -> %s" % (nom, str(e)[:90]))
@@ -1106,6 +1172,10 @@ def _main() -> int:
     except Arret:
         log("autotest : la mutation a mordu : dépôt retiré -> R6")
     g += verifier_citations(textes, MOTIFS, S)
+    # B3 (12/10) : la page dit que l'article 11 ne mentionne pas les « questions de société » (consid. 7 de 2026-7)
+    if "société" in textes["11"]:
+        raise Arret("R4 : l'article 11 mentionne « société » : la phrase sur le consid. 7 de 2026-7 est démentie")
+    g.append("R4 : article 11 sans mention de « société » (phrase sur le consid. 7 de 2026-7)")
     g.append(verifier_2007_560(par_id))
     g.append(verifier_62_20(par_id))
     try:
@@ -1121,7 +1191,7 @@ def _main() -> int:
              % (r["N"], r["A"], r["R"], r["S"], r["C"], r["reunis"], r["art88_5"]))
     for m in autotest(R, S, textes, pieces):
         log("autotest : la mutation a mordu : " + m)
-    A, E = affichage(R, S, r)
+    A, E = affichage(R, S, r, scrutins_2008(pieces))
     if set(A) != set(E):
         raise Arret("blocs affichage et affichage_en : clés différentes (%s)" % sorted(set(A) ^ set(E)))
     global LANG

@@ -22,6 +22,10 @@
     "legiarti": "LEGIARTI000006527548",
     "archive": "2026-10/f656b0168a0ba65883300603e607fde04bfec939640a048a721567ab3c539064.json"
    },
+   "53": {
+    "legiarti": "LEGIARTI000006527534",
+    "archive": "2026-10/2f3b1b5d4ab1059c8b4ad9d335c62875ed49300bbe54380c4422b841b15b6478.json"
+   },
    "61": {
     "legiarti": "LEGIARTI000019241074",
     "archive": "2026-10/c14abed78a1e9932d2cf37f84e6366e03847a41174d17466b5f83b4a0a3d299c.json"
@@ -93,6 +97,22 @@
      "CONGRÈS DU PARLEMENT 21 JUILLET 2008",
      "Le Parlement, réuni en Congrès, a approuvé dans les conditions prévues à l'article 89, alinéa 3, de la Constitution",
      "L'article 88-5 de la Constitution, dans sa rédaction résultant tant de l'article 44 de la présente loi constitutionnelle que du 2° du I du présent article, n'est pas applicable aux adhésions faisant suite à une conférence intergouvernementale dont la convocation a été décidée par le Conseil européen avant le 1er juillet 2004."
+    ]
+   },
+   "an_l13_scrutin_0082_motion_referendum_lisbonne_2008-02-06.html": {
+    "sha256": "e9e8704630842c2e436a8447aab128007c6e8e7fdba200b44a7cd9f768e1fd6d",
+    "passages": [
+     "Analyse du scrutin n° 82 - Séance du 06/02/2008",
+     "plusieurs de ses collègues, tendant à soumettre au référendum le projet de loi autorisant la ratification du traité de Lisbonne",
+     "L'Assemblée nationale n'a pas adopté"
+    ]
+   },
+   "an_congres_scrutin_9000_2008-02-04.html": {
+    "sha256": "ec8dc3c8880154fae493b63260be1fd1df389071cdfc953592176e72595fc8a8",
+    "passages": [
+     "CONGRÈS DU PARLEMENT - SÉANCE DU 04/02/2008",
+     "SCRUTIN PUBLIC SUR le projet de loi constitutionnelle modifiant le titre XV de la Constitution.",
+     "Le Congrès du Parlement a adopté"
     ]
    }
   },
@@ -215,10 +235,11 @@
   "R2 : témoin JO concordant (décret indéterminé au témoin : 1962-10-28)",
   "R3 : 7 saisines, solutions et conditions lues, un motif cité par non-conformité",
   "R6 : 3 dépôts sans saisine, identiques au témoin (Assemblée et Sénat)",
-  "R4 : 27 citations des textes archivés (dont 21 de la Constitution, vérifiées en anglais) et 16 motifs retrouvés mot pour mot dans leur considérant",
+  "R4 : 28 citations des textes archivés (dont 22 de la Constitution, vérifiées en anglais) et 17 motifs retrouvés mot pour mot dans leur considérant",
+  "R4 : article 11 sans mention de « société » (phrase sur le consid. 7 de 2026-7)",
   "R4 : décision 2007-560 DC (2007-12-20) citée mot pour mot",
   "R7 : décision 62-20 DC (1962-11-06, Incompétence pour statuer), saisine du président du Sénat ; loi 62-1292 au témoin du JO",
-  "R8 : 5 pièces hors Légifrance à leur empreinte, 10 passages et 5 étapes retrouvés, dernière étape 2021-07-05",
+  "R8 : 7 pièces hors Légifrance à leur empreinte, 16 passages et 5 étapes retrouvés, dernière étape 2021-07-05 ; décomptes de 2008 cohérents avec l'issue publiée (Congrès 560 pour, 445 requis ; motion 175 pour, 227 contre)",
   "R9 : signataires des 3 dépôts relus (Assemblée : témoin ; Sénat : texte déposé)",
   "R5 : phrases recalculées (N=9, A=7, R=2, S=7, C=1, soutiens réunis=0, art. 88-5=0)",
   "parite des 4 figures telephone (30 valeurs dessinees retrouvees dans la version detaillee)"
@@ -527,8 +548,13 @@
   "2026-7": [
    {
     "considerant": 7,
-    "citation": "le constituant a entendu exclure les questions de société des objets mentionnés au premier alinéa de l'article 11 de la Constitution",
-    "traduction_en": "the framers of the constitutional amendment intended to exclude questions of society from the subjects listed in the first paragraph of Article 11 of the Constitution"
+    "citation": "il résulte des travaux préparatoires de la loi constitutionnelle du 4 août 1995 mentionnée ci-dessus que le constituant a entendu exclure les questions de société des objets mentionnés au premier alinéa de l'article 11 de la Constitution",
+    "traduction_en": "it follows from the preparatory work for the constitutional act of 4 August 1995 mentioned above that the framers of the constitutional amendment intended to exclude questions of society from the subjects listed in the first paragraph of Article 11 of the Constitution"
+   },
+   {
+    "considerant": 7,
+    "citation": "Ainsi, ne relèvent pas de ces objets les questions, d'ordre éthique, relatives à la fin de vie",
+    "traduction_en": "Thus, questions of an ethical nature relating to end of life do not fall within these subjects"
    },
    {
     "considerant": 9,
@@ -698,7 +724,7 @@
      "2026-7 RIP",
      "Exclure de la notion de soin la provocation active de la mort",
      "Non conforme : 2° de l'art. 45-2, objet de l'article 11",
-     "Consid. 7 : « le constituant a entendu exclure les questions de société des objets mentionnés au premier alinéa de l'article 11 de la Constitution ». Consid. 9 : « elle ne porte ni sur la politique sociale de la nation et les services publics qui y concourent, ni sur aucun des autres objets mentionnés au premier alinéa de l'article 11 de la Constitution ». Consid. 11 : « n'emporte pas de changement de l'état du droit ». Consid. 13 : « la proposition de loi ne porte pas non plus sur une « réforme » au sens de l'article 11 de la Constitution »."
+     "Consid. 7 : « il résulte des travaux préparatoires de la loi constitutionnelle du 4 août 1995 mentionnée ci-dessus que le constituant a entendu exclure les questions de société des objets mentionnés au premier alinéa de l'article 11 de la Constitution » ; « Ainsi, ne relèvent pas de ces objets les questions, d'ordre éthique, relatives à la fin de vie ». Consid. 9 : « elle ne porte ni sur la politique sociale de la nation et les services publics qui y concourent, ni sur aucun des autres objets mentionnés au premier alinéa de l'article 11 de la Constitution ». Consid. 11 : « n'emporte pas de changement de l'état du droit ». Consid. 13 : « la proposition de loi ne porte pas non plus sur une « réforme » au sens de l'article 11 de la Constitution »."
     ]
    ]
   }
@@ -854,7 +880,7 @@
      "2026-7 RIP",
      "Excluding the active causing of death from the notion of care",
      "Did not meet the statutory conditions: art. 45-2, 2°: subject of article 11",
-     "Para. 7: « le constituant a entendu exclure les questions de société des objets mentionnés au premier alinéa de l'article 11 de la Constitution » (our translation: \"the framers of the constitutional amendment intended to exclude questions of society from the subjects listed in the first paragraph of Article 11 of the Constitution\"). Para. 9: « elle ne porte ni sur la politique sociale de la nation et les services publics qui y concourent, ni sur aucun des autres objets mentionnés au premier alinéa de l'article 11 de la Constitution » (our translation: \"it relates neither to the social policy of the nation and the public services contributing to it, nor to any of the other subjects listed in the first paragraph of Article 11 of the Constitution\"). Para. 11: « n'emporte pas de changement de l'état du droit » (our translation: \"does not change the state of the law\"). Para. 13: « la proposition de loi ne porte pas non plus sur une « réforme » au sens de l'article 11 de la Constitution » (our translation: \"nor does the bill relate to a \"reform\" within the meaning of Article 11 of the Constitution\")."
+     "Para. 7: « il résulte des travaux préparatoires de la loi constitutionnelle du 4 août 1995 mentionnée ci-dessus que le constituant a entendu exclure les questions de société des objets mentionnés au premier alinéa de l'article 11 de la Constitution » (our translation: \"it follows from the preparatory work for the constitutional act of 4 August 1995 mentioned above that the framers of the constitutional amendment intended to exclude questions of society from the subjects listed in the first paragraph of Article 11 of the Constitution\"); « Ainsi, ne relèvent pas de ces objets les questions, d'ordre éthique, relatives à la fin de vie » (our translation: \"Thus, questions of an ethical nature relating to end of life do not fall within these subjects\"). Para. 9: « elle ne porte ni sur la politique sociale de la nation et les services publics qui y concourent, ni sur aucun des autres objets mentionnés au premier alinéa de l'article 11 de la Constitution » (our translation: \"it relates neither to the social policy of the nation and the public services contributing to it, nor to any of the other subjects listed in the first paragraph of Article 11 of the Constitution\"). Para. 11: « n'emporte pas de changement de l'état du droit » (our translation: \"does not change the state of the law\"). Para. 13: « la proposition de loi ne porte pas non plus sur une « réforme » au sens de l'article 11 de la Constitution » (our translation: \"nor does the bill relate to a \"reform\" within the meaning of Article 11 of the Constitution\")."
     ]
    ]
   }
@@ -905,6 +931,18 @@
   "e2021_se1": "10 mai 2021",
   "e2021_an2": "22 juin 2021",
   "e2021_se2": "5 juillet 2021",
+  "congres_votants": "893",
+  "congres_exprimes": "741",
+  "congres_majorite": "445",
+  "congres_pour": "560",
+  "congres_contre": "181",
+  "congres_date": "4 février 2008",
+  "motion_votants": "404",
+  "motion_exprimes": "402",
+  "motion_majorite": "202",
+  "motion_pour": "175",
+  "motion_contre": "227",
+  "motion_date": "6 février 2008",
   "cit_art3": "La souveraineté nationale appartient au peuple qui l'exerce par ses représentants et par la voie du référendum.",
   "cit_art11_peut": "peut soumettre au référendum tout projet de loi",
   "cit_art11_1": "sur proposition du Gouvernement pendant la durée des sessions ou sur proposition conjointe des deux assemblées, publiées au Journal officiel",
@@ -916,6 +954,7 @@
   "cit_art11_deux_ans": "aucune nouvelle proposition de référendum portant sur le même sujet ne peut être présentée avant l'expiration d'un délai de deux ans suivant la date du scrutin",
   "cit_art11_soumet": "le Président de la République la soumet au référendum",
   "cit_art19": "Les actes du Président de la République autres que ceux prévus aux articles 8 (1er alinéa), 11, 12, 16, 18, 54, 56 et 61 sont contresignés par le Premier ministre",
+  "cit_art53": "ne peuvent être ratifiés ou approuvés qu'en vertu d'une loi",
   "cit_art60": "Le Conseil constitutionnel veille à la régularité des opérations de référendum prévues aux articles 11 et 89 et au titre XV. Il en proclame les résultats.",
   "cit_art61": "les propositions de loi mentionnées à l'article 11 avant qu'elles ne soient soumises au référendum",
   "cit_art88_5_1": "Tout projet de loi autorisant la ratification d'un traité relatif à l'adhésion d'un État à l'Union européenne est soumis au référendum par le Président de la République.",
@@ -974,9 +1013,12 @@
   "m24_13": "les dispositions de l'article 1er portent une atteinte disproportionnée à ces exigences. Elles sont donc contraires à la Constitution",
   "m24_13_tr": "the provisions of Article 1 disproportionately infringe these requirements. They are therefore contrary to the Constitution",
   "m24_13_n": "13",
-  "m26_7": "le constituant a entendu exclure les questions de société des objets mentionnés au premier alinéa de l'article 11 de la Constitution",
-  "m26_7_tr": "the framers of the constitutional amendment intended to exclude questions of society from the subjects listed in the first paragraph of Article 11 of the Constitution",
+  "m26_7": "il résulte des travaux préparatoires de la loi constitutionnelle du 4 août 1995 mentionnée ci-dessus que le constituant a entendu exclure les questions de société des objets mentionnés au premier alinéa de l'article 11 de la Constitution",
+  "m26_7_tr": "it follows from the preparatory work for the constitutional act of 4 August 1995 mentioned above that the framers of the constitutional amendment intended to exclude questions of society from the subjects listed in the first paragraph of Article 11 of the Constitution",
   "m26_7_n": "7",
+  "m26_7b": "Ainsi, ne relèvent pas de ces objets les questions, d'ordre éthique, relatives à la fin de vie",
+  "m26_7b_tr": "Thus, questions of an ethical nature relating to end of life do not fall within these subjects",
+  "m26_7b_n": "7",
   "m26_9": "elle ne porte ni sur la politique sociale de la nation et les services publics qui y concourent, ni sur aucun des autres objets mentionnés au premier alinéa de l'article 11 de la Constitution",
   "m26_9_tr": "it relates neither to the social policy of the nation and the public services contributing to it, nor to any of the other subjects listed in the first paragraph of Article 11 of the Constitution",
   "m26_9_n": "9",
@@ -1034,6 +1076,18 @@
   "e2021_se1": "10 May 2021",
   "e2021_an2": "22 June 2021",
   "e2021_se2": "5 July 2021",
+  "congres_votants": "893",
+  "congres_exprimes": "741",
+  "congres_majorite": "445",
+  "congres_pour": "560",
+  "congres_contre": "181",
+  "congres_date": "4 February 2008",
+  "motion_votants": "404",
+  "motion_exprimes": "402",
+  "motion_majorite": "202",
+  "motion_pour": "175",
+  "motion_contre": "227",
+  "motion_date": "6 February 2008",
   "cit_art3": "National sovereignty shall vest in the people, who shall exercise it through their representatives and by means of referendum.",
   "cit_art11_peut": "submit to a referendum any Government Bill",
   "cit_art11_1": "on a recommendation from the Government when Parliament is in session, or on a joint motion of the two Houses, published in the Journal Officiel",
@@ -1045,6 +1099,7 @@
   "cit_art11_deux_ans": "no new referendum proposal on the same subject may be submitted before the end of a period of two years following the date of the vote",
   "cit_art11_soumet": "the President of the Republic may submit it to a referendum",
   "cit_art19": "Instruments of the President of the Republic, other than those provided for under articles 8 (paragraph one), 11, 12, 16, 18, 54, 56 and 61, shall be countersigned by the Prime Minister",
+  "cit_art53": "may be ratified or approved only by an Act of Parliament",
   "cit_art60": "The Constitutional Council shall ensure the proper conduct of referendum proceedings as provided for in articles 11 and 89 and in Title XV and shall proclaim the results of the referendum.",
   "cit_art61": "Private Members' Bills mentioned in article 11 before they are submitted to referendum",
   "cit_art88_5_1": "Any government bill authorizing the ratification of a treaty pertaining to the accession of a state to the European Union shall be submitted to referendum by the president of the republic.",
@@ -1103,9 +1158,12 @@
   "m24_13": "les dispositions de l'article 1er portent une atteinte disproportionnée à ces exigences. Elles sont donc contraires à la Constitution",
   "m24_13_tr": "the provisions of Article 1 disproportionately infringe these requirements. They are therefore contrary to the Constitution",
   "m24_13_n": "13",
-  "m26_7": "le constituant a entendu exclure les questions de société des objets mentionnés au premier alinéa de l'article 11 de la Constitution",
-  "m26_7_tr": "the framers of the constitutional amendment intended to exclude questions of society from the subjects listed in the first paragraph of Article 11 of the Constitution",
+  "m26_7": "il résulte des travaux préparatoires de la loi constitutionnelle du 4 août 1995 mentionnée ci-dessus que le constituant a entendu exclure les questions de société des objets mentionnés au premier alinéa de l'article 11 de la Constitution",
+  "m26_7_tr": "it follows from the preparatory work for the constitutional act of 4 August 1995 mentioned above that the framers of the constitutional amendment intended to exclude questions of society from the subjects listed in the first paragraph of Article 11 of the Constitution",
   "m26_7_n": "7",
+  "m26_7b": "Ainsi, ne relèvent pas de ces objets les questions, d'ordre éthique, relatives à la fin de vie",
+  "m26_7b_tr": "Thus, questions of an ethical nature relating to end of life do not fall within these subjects",
+  "m26_7b_n": "7",
   "m26_9": "elle ne porte ni sur la politique sociale de la nation et les services publics qui y concourent, ni sur aucun des autres objets mentionnés au premier alinéa de l'article 11 de la Constitution",
   "m26_9_tr": "it relates neither to the social policy of the nation and the public services contributing to it, nor to any of the other subjects listed in the first paragraph of Article 11 of the Constitution",
   "m26_9_n": "9",
