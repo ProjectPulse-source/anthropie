@@ -31,7 +31,7 @@
    "fichier": "mesurer-recoupement-en",
    "titre": "ILO-defined unemployment and category A registration in France, 2024",
    "montre": "In 2024, according to the Insee estimate, about 1.43 million people are both unemployed in the ILO sense and registered in category A; about 1.47 million category A registrants are not unemployed under the ILO definition, and 863,000 people unemployed under the ILO definition are not registered in category A.",
-   "source": "Insee Références, Emploi, chômage, revenus du travail, 2026 ed., file 1, figures 2 and 8 (Dares-Insee-France Travail matching)",
+   "source": "Insee Références, Emploi, chômage, revenus du travail, 2026 ed., dossier 1 (in-depth study), figures 2 and 8 (Dares-Insee-France Travail matching)",
    "precaution": "Insee estimate, 2024 average, France excluding Mayotte, aged 15-64, ordinary households; two distinct definitions; survey margin not published."
   },
   {
@@ -47,7 +47,7 @@
    "fichier": "mesurer-serie-longue-en",
    "titre": "ILO unemployment and category A registrants in France, 2012-2025",
    "montre": "From 2012 to 2025, the gap between category A registrants and the ILO unemployed goes from 0.3 million in 2012 to 1.1 million in 2019, 1.2 million in 2021 and 0.7 million in 2024, according to the annual averages published by Insee; registration rules and the survey changed in the meantime.",
-   "source": "Insee Références, Emploi, chômage, revenus du travail, 2026 ed., file 1, figure 1 (Insee, Labour Force Survey, long series; Dares-France Travail, STMT)",
+   "source": "Insee Références, Emploi, chômage, revenus du travail, 2026 ed., dossier 1, figure 1 (Insee, Labour Force Survey, long series; Dares-France Travail, STMT)",
    "precaution": "Published annual averages, in millions, France excluding Mayotte, aged 15-64. Markers: Insee (1, 2) and Dares (3, 4)."
   }
  ]

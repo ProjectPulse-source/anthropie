@@ -20,9 +20,9 @@
 <text x="0.0" y="354.0" font-size="13.5" fill="#52514e" text-anchor="start">49% ILO unemployed</text>
 <line x1="0" y1="368.0" x2="300" y2="368.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="389.0" font-size="13.5" fill="#52514e">Insee Références, Emploi, chômage,</text>
-<text class="pied-source" x="0" y="406.0" font-size="13.5" fill="#52514e">revenus du travail, 2026 ed., file 1,</text>
-<text class="pied-source" x="0" y="423.0" font-size="13.5" fill="#52514e">figures 2 and 8 (Dares-Insee-France</text>
-<text class="pied-source" x="0" y="440.0" font-size="13.5" fill="#52514e">Travail matching)</text>
+<text class="pied-source" x="0" y="406.0" font-size="13.5" fill="#52514e">revenus du travail, 2026 ed., dossier</text>
+<text class="pied-source" x="0" y="423.0" font-size="13.5" fill="#52514e">1 (in-depth study), figures 2 and 8</text>
+<text class="pied-source" x="0" y="440.0" font-size="13.5" fill="#52514e">(Dares-Insee-France Travail matching)</text>
 <text class="pied-note" x="0" y="461.0" font-size="13.5" fill="#52514e">Insee estimate, 2024 average, France</text>
 <text class="pied-note" x="0" y="478.0" font-size="13.5" fill="#52514e">excluding Mayotte, aged 15-64,</text>
 <text class="pied-note" x="0" y="495.0" font-size="13.5" fill="#52514e">ordinary households; two distinct</text>

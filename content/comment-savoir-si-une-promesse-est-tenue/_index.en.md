@@ -17,7 +17,7 @@ og_image_alt: "Share card: \"Two measures, two populations\" — a bar in three 
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
   jeu: "promesses_mesurer"
   nom: "Unemployment in the ILO sense and category A registration in France: 2024 cross-tabulation, registrant series with and without automatically registered groups, long series 2012-2025"
-  description: "Restitution, checked against the published PDF, of Insee's estimated cross-tabulation of ILO activity status and France Travail registration category (2024 average, France excluding Mayotte, aged 15-64, ordinary households; Insee Références 2026, file 1, figure 2); quarterly seasonally adjusted series of category A registrants and of category A registrants excluding RSA recipients and young people in programmes (quarterly average of end-of-month registrants, Dares-France Travail, France excluding Mayotte, 2018 to 2026); 2012-2025 annual averages of both measures published by Insee (same file, figure 1); dated rule changes."
+  description: "Restitution, checked against the published PDF, of Insee's estimated cross-tabulation of ILO activity status and France Travail registration category (2024 average, France excluding Mayotte, aged 15-64, ordinary households; Insee Références 2026, dossier 1 (in-depth study), figure 2); quarterly seasonally adjusted series of category A registrants and of category A registrants excluding RSA recipients and young people in programmes (quarterly average of end-of-month registrants, Dares-France Travail, France excluding Mayotte, 2018 to 2026); 2012-2025 annual averages of both measures published by Insee (same file, figure 1); dated rule changes."
   couverture_temporelle: "2012/2026"
   couverture_spatiale: "France excluding Mayotte"
   variables:
@@ -105,7 +105,7 @@ The gap between category A registrants and the ILO unemployed went from {{< mes-
 | 2024 | {{< mes-val "ecart_2024" >}} |
 | 2025 | {{< mes-val "ecart_2025" >}} |
 
-Annual averages published by Insee (*Emploi, chômage, revenus du travail*, 2026 edition, file 1, figure 1).
+Annual averages published by Insee (*Emploi, chômage, revenus du travail*, 2026 edition, dossier 1, figure 1).
 
 </details>
 
@@ -138,13 +138,13 @@ The updating form, by which registrants declare their activity each month, is Fr
 
 </details>
 
-The Dares also publishes a series of category A registrants **excluding RSA recipients and young people in programmes**, available since 2018. It removes the groups covered by the law; it does not remove the other changes.
+The Dares also publishes a series of category A registrants **excluding RSA recipients and young people in programmes**, available since 2018. It thus neutralises part of the population changes linked to the law, but neither all the groups concerned (people followed by Cap emploi, for instance, remain in it) nor the changes to the updating rules.
 
 {{< figure-svg fichier="mesurer-regle-en" alt="Two panels on the same scale, from 2018 to 2026: on the left published category A, on the right the series excluding RSA recipients and young people in programmes. A grey band marks 2022, the year of the new monthly updating form; a dotted line marks 1 January 2025. Both series rise in the first quarter of 2025 and fall back in the second." >}}Category A registrants at France Travail, quarterly average of end-of-month registrants, France excluding Mayotte, seasonally and working-day adjusted, with and without RSA recipients and young people in programmes. Latest point: {{< mes-val "dares_fin" >}}. These levels cannot be compared directly with those of the 2024 cross-tabulation, which covers a different scope.{{< /figure-svg >}}
 
 {{< fig-actions id="regle" >}}
 
-**The series excluding RSA also carries the 2025 break.** In the first quarter of 2025, it jumps ({{< mes-val "dares_hors_t1_2025" >}}, against {{< mes-val "dares_a_t1_2025" >}} for the published series). In the second, it falls back ({{< mes-val "dares_hors_t2_2025" >}}, against {{< mes-val "dares_a_t2_2025" >}}). This is the signature of the automatic updating from January to March 2025, which applied to all new registrants without entitlement to a France Travail allowance, not only to the groups covered by the law. And the starting point of the comparison, the fourth quarter of 2024, already carries the form changed in October-November 2024.
+**The series excluding RSA also carries the 2025 break.** In the first quarter of 2025, it jumps ({{< mes-val "dares_hors_t1_2025" >}}, against {{< mes-val "dares_a_t1_2025" >}} for the published series). In the second, it falls back ({{< mes-val "dares_hors_t2_2025" >}}, against {{< mes-val "dares_a_t2_2025" >}}). These movements are affected by the automatic updating from January to March 2025, which applied to all new registrants without entitlement to a France Travail allowance and whose effect on category A the Dares documents. They show that the series excluding RSA recipients and young people in programmes does not escape this break, without allowing its whole movement to be attributed to that mechanism alone. And the starting point of the comparison, the fourth quarter of 2024, already carries the form changed in October-November 2024. What share of the rise observed in 2025 comes from that late-2024 form? The sources used do not allow it to be isolated: Insee does not provide a breakdown of the gap between the two measures for 2025, and the detailed matching covers 2024.
 
 Over the whole period, between the fourth quarter of 2024 and the {{< mes-val "dares_fin" >}}, published category A has {{< mes-val "dares_a_var" >}} more registrants. The series excluding RSA has {{< mes-val "dares_a_hors_var" >}} more.
 
@@ -208,7 +208,7 @@ This page shows that a promise cannot be judged without choosing its indicator a
 
 ## Sources {#sources}
 
-**Insee**, *Emploi, chômage, revenus du travail* [Employment, unemployment, labour income], Insee Références, 2026 edition (published 2 July 2026): file 1, figures 1, 2 and 8, definitions, boxes and sources (Dares-Insee-France Travail matching of the Historical Statistical File and the Labour Force Survey); overview, box 5. *Informations rapides* No. 192, 7 August 2026 (in French).
+**Insee**, *Emploi, chômage, revenus du travail* [Employment, unemployment, labour income], Insee Références, 2026 edition (published 2 July 2026): dossier 1, figures 1, 2 and 8, definitions, boxes and sources (Dares-Insee-France Travail matching of the Historical Statistical File and the Labour Force Survey); overview, box 5. *Informations rapides* No. 192, 7 August 2026 (in French).
 
 **Dares and France Travail**, registrants at France Travail, quarterly stock, France, seasonally and working-day adjusted data, and the dataset's metadata (updated 28 July 2026): procedural changes of 2022 and 2025, categories F and G, series excluding RSA recipients and young people in programmes. October-November 2024 updating form: warning of the fourth-quarter 2024 quarterly publication (regional labour directorate of Normandy, source France Travail-Dares) (in French).
 
@@ -220,7 +220,7 @@ This page shows that a promise cannot be judged without choosing its indicator a
 
 The counts of the cross-tabulation come from the spreadsheet published by Insee; a second extraction, written separately from the published PDF document, finds the same 35 values (24 cells and 11 totals), the same year and the same scope, and the three sets restated by subtraction equal those Insee prints in another table of the same file. The gaps of the long series equal those Insee writes in the text of the file. These checks verify that the page restates exactly what is published; they do not redo the matching, whose individual data are not public.
 
-The figures, quoted passages, checks and charts are produced by a single script, which rereads the files published by Insee, the Dares, the French Official Statistics Authority, Unédic and the regional labour directorate of Normandy, archived on 12 October 2026, and stops if a reread figure no longer meets the conditions on which the main sentences rest; each quoted passage and each number in the timeline is found word for word in these files, and only the dates of the timeline are written into the text. The Dares data are those of the 28 July 2026 update; a later release enters only after a new reading.
+The figures, quoted passages, checks and charts are produced by a single script, which rereads the files published by Insee, the Dares, the French Official Statistics Authority, Unédic and the regional labour directorate of Normandy, archived on 12 October 2026, and stops if a reread figure no longer meets the conditions on which the main sentences rest; the French original of each quoted passage and each number in the timeline is found word for word in these files, and only the dates of the timeline are written into the text. The English translations of the quotations are editorial renderings, not verbatim extracts from those documents. The Dares data are those of the 28 July 2026 update; a later release enters only after a new reading.
 
 </details>
 
