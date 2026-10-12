@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /inflation-et-dette-publique/, build de b8f4b66 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /inflation-et-dette-publique/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 L'inflation a-t-elle vraiment allégé la dette française ?
 L'État a-t-il gagné 150 milliards grâce à l'inflation ?
@@ -220,7 +220,7 @@ Cette page mesure ce que l’inflation de 2021-2023 a retiré, en valeur réelle
 L’inflation n’est qu’un des payeurs possibles de la dette : le contribuable, l’usager des services publics, le créancier en sont d’autres.
 Le livre examine ces choix et leurs conséquences, chiffres officiels à l’appui.
 Journalistes, enseignants, chercheurs, responsables publics ou associatifs
-Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock.
+Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock ; compte Amazon.fr requis.
 Demander l'exemplaire offert →
 Version papier : 19 € · Kindle : 9,99 €
 Sommaire, extraits et recensions →

@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /en/can-the-french-president-call-a-referendum/, build de 2ef9d30 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /en/can-the-french-president-call-a-referendum/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Can the French president call a referendum?
 Can a French president put a reform to the voters whenever he wants?

@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /comment-savoir-si-une-promesse-est-tenue/, build de 65bdc5b + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /comment-savoir-si-une-promesse-est-tenue/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Comment savoir si une promesse est tenue ?
 Deux chiffres exacts peuvent raconter deux histoires différentes.
@@ -189,7 +189,7 @@ Cette page montre qu’on ne juge pas une promesse sans choisir son indicateur n
 Le livre applique ces questions, et les quatre qui les précèdent — ce qui est promis exactement, qui peut le décider, avec le consentement de qui, dans quel délai —, à neuf promesses écrites, datées et signées, dont une sur l’emploi.
 Il ne donne aucun conseil de vote.
 Journalistes, enseignants, chercheurs, responsables publics ou associatifs
-Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock.
+Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock ; compte Amazon.fr requis.
 Demander l'exemplaire offert →
 Version papier : 19,90 € · Kindle : 9,99 €
 Sommaire, extraits et recensions →

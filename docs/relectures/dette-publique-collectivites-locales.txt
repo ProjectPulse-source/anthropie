@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /dette-publique-collectivites-locales/, build de b8f4b66 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /dette-publique-collectivites-locales/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Les collectivités locales sont-elles une variable d'ajustement des finances publiques ?
 La dette des collectivités ne permet pas de trancher : la règle d'équilibre de leurs budgets leur interdit d'emprunter pour compenser une baisse durable des recettes qui financent leurs dépenses courantes, si bien qu'une contrainte venue de l'État se lit dans leurs recettes et leurs dépenses.
@@ -376,7 +376,7 @@ Cette page montre par où passe l’ajustement des finances locales ; elle ne di
 Le livre suit ce déplacement canal par canal — contribuable, usager, services publics, générations qui ne votent pas encore —, chiffres officiels à l’appui.
 L’analyse est aussi développée dans deux articles de l’auteur, « La commune, variable d’ajustement de la République ? » (Revue Projet, 2026) et « Budget 2026 : la dette commande, les territoires patientent » (Mediapart, 2026).
 Journalistes, enseignants, chercheurs, responsables publics ou associatifs
-Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock.
+Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock ; compte Amazon.fr requis.
 Demander l'exemplaire offert →
 Version papier : 19 € · Kindle : 9,99 €
 Sommaire, extraits et recensions →

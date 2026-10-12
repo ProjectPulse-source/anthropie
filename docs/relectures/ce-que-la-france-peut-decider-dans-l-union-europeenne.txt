@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /ce-que-la-france-peut-decider-dans-l-union-europeenne/, build de c1b4421 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /ce-que-la-france-peut-decider-dans-l-union-europeenne/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Que peut décider la France dans l'Union européenne ?
 Ce que les traités n'ont pas attribué à l'Union reste aux États : la France y décide seule, en respectant les règles communes.
@@ -548,7 +548,7 @@ Cette page trace la frontière entre ce que la France décide seule, ce qu’ell
 Le livre suit deux préférences françaises jusqu’à la règle européenne, l’une adoptée, l’autre bloquée, et confronte les promesses de « changer l’Europe » à ce que le traité permet.
 Il ne donne aucun conseil de vote.
 Journalistes, enseignants, chercheurs, responsables publics ou associatifs
-Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock.
+Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock ; compte Amazon.fr requis.
 Demander l'exemplaire offert →
 Version papier : 19,90 € · Kindle : 9,99 €
 Sommaire, extraits et recensions →

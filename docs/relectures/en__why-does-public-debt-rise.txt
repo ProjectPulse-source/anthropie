@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /en/why-does-public-debt-rise/, build de b8f4b66 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /en/why-does-public-debt-rise/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Why does French public debt rise?
 Between 1995 and 2025, French public debt went from 57.8% to 115.6% of GDP: it doubled as a share of the wealth produced.

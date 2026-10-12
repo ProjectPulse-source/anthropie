@@ -1,4 +1,4 @@
-# relu le 2026-10-11 ; texte servi de /les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/, build de 86a46f0 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Les élèves maîtrisent-ils moins bien la langue française ?
 Pas d'un bloc.
 À la même dictée de CM2, les élèves faisaient 10,7 erreurs en 1987 et 19,4 en 2021 ; mais sur ces 8,7 erreurs supplémentaires, 0,9 seulement portent sur l'orthographe des mots eux-mêmes.
@@ -203,7 +203,7 @@ Anthologie inédite & éclectique de citations
 Cette page montre que le temps passé à lire pour le plaisir recule avant la généralisation du smartphone, que le goût de lire recule ensuite, et qu’aucune des séries publiques recensées ne suit le vocabulaire des élèves.
 Livresque des mots prend la question par l’autre bout : une anthologie qui fait se rencontrer, sans ordre imposé, des phrases d’auteurs de vingt-cinq siècles, pour donner envie de lire plutôt que d’en mesurer le manque.
 Journalistes, enseignants, chercheurs, responsables publics ou associatifs
-Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock.
+Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock ; compte Amazon.fr requis.
 Demander l'exemplaire offert →
 Version papier : 36 € · Kindle : disponible
 Sommaire, extraits et recensions →

@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /dette-publique-generations-futures/, build de b8f4b66 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /dette-publique-generations-futures/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 La dette publique est-elle un fardeau pour les générations futures ?
 Une dette peut laisser aux générations suivantes une charge, mais aussi des écoles, des routes et d'autres équipements.
@@ -415,7 +415,7 @@ Cette page met trois arguments à l’épreuve des comptes : ce à quoi les déf
 Reste à savoir qui, dans chaque génération, portera cet ajustement : le contribuable, l’usager des services publics, l’épargnant par l’inflation, le créancier par une restructuration ?
 Le livre prolonge cette analyse, chiffres officiels à l’appui, en examinant ces choix et leurs conséquences.
 Journalistes, enseignants, chercheurs, responsables publics ou associatifs
-Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock.
+Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock ; compte Amazon.fr requis.
 Demander l'exemplaire offert →
 Version papier : 19 € · Kindle : 9,99 €
 Sommaire, extraits et recensions →

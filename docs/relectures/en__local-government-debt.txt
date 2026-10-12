@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /en/local-government-debt/, build de b8f4b66 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /en/local-government-debt/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Are local authorities the adjustment variable of public finances?
 Local authorities' debt does not settle the question: the balanced-budget rule forbids them to borrow to offset a lasting fall in the revenue that pays for their day-to-day spending, so a constraint coming from central government shows up in their revenue and spending.

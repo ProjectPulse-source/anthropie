@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /dette-publique-comparaison-internationale/, build de b8f4b66 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /dette-publique-comparaison-internationale/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Dette publique : pourquoi 100 % du PIB ne pèse pas partout de la même façon
 À dette presque égale, la Hongrie consacre 8,9 % de ses recettes publiques aux intérêts, la Slovénie 2,7 %.
@@ -573,7 +573,7 @@ Elle ne dit pas qui en supporte le coût.
 Le livre suit ce déplacement canal par canal — contribuable, épargnant, services publics, générations qui ne votent pas encore —, chiffres officiels à l’appui, pour montrer dans quelles configurations chacun supporte un coût.
 Il propose une méthode en trois questions — les faits sont-ils établis, le système tient-il sa promesse, qui décide — et, pour les issues qu’il envisage, le partage entre qui paie et qui gagne.
 Journalistes, enseignants, chercheurs, responsables publics ou associatifs
-Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock.
+Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock ; compte Amazon.fr requis.
 Demander l'exemplaire offert →
 Version papier : 19 € · Kindle : 9,99 €
 Sommaire, extraits et recensions →

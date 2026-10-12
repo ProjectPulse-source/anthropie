@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /en/public-debt-future-generations/, build de b8f4b66 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /en/public-debt-future-generations/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Is public debt a burden on future generations?
 A debt can leave the next generations a charge, but also schools, roads and other equipment.

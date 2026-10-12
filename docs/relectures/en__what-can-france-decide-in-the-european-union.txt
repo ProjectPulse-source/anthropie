@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /en/what-can-france-decide-in-the-european-union/, build de c1b4421 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /en/what-can-france-decide-in-the-european-union/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 What can France decide in the European Union?
 What the Treaties have not conferred on the Union remains with the Member States: France decides alone there, while respecting the common rules.

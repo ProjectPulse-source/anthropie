@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /cout-de-la-dette-publique/, build de b8f4b66 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /cout-de-la-dette-publique/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Combien coûte la dette publique ?
 En 2025, les administrations publiques doivent 66,6 milliards d'euros d'intérêts, 4,3 % de leurs recettes : 124 % de plus qu'au creux de 2020.
@@ -218,7 +218,7 @@ Elle ne dit pas qui la règle — et c’est là que tout se joue : une dette ne
 Le livre suit ces canaux un par un, chiffres officiels à l’appui, et conduit aux scénarios 2025-2035.
 Vous saurez, à la fin, reconnaître celui qui est en train de se réaliser.
 Journalistes, enseignants, chercheurs, responsables publics ou associatifs
-Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock.
+Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock ; compte Amazon.fr requis.
 Demander l'exemplaire offert →
 Version papier : 19 € · Kindle : 9,99 €
 Sommaire, extraits et recensions →

@@ -111,7 +111,7 @@
     {{- if $offert }}
     <div class="appel-livre__offert">
       <p class="appel-livre__consultation-publics">{{ partial "consultation-publics.html" . | strings.TrimSpace }}</p>
-      <p class="appel-livre__consultation-offre"><strong>Exemplaire numérique de consultation offert</strong>, sans contrepartie, dans la limite du stock.</p>
+      <p class="appel-livre__consultation-offre"><strong>Exemplaire numérique de consultation offert</strong>, sans contrepartie, dans la limite du stock ; compte Amazon.fr requis.</p>
       <p class="appel-livre__actions"><a class="appel-livre__btn appel-livre__btn--plein" href="{{ $guichet.RelPermalink }}?src=consultation-{{ $origine }}">Demander l'exemplaire offert&nbsp;→</a></p>
     </div>
     <p class="appel-livre__achat-discret">
@@ -153,7 +153,7 @@
     <div class="appel-livre__consultation">
       <div class="appel-livre__consultation-texte">
         <p class="appel-livre__consultation-publics">{{ partial "consultation-publics.html" . | strings.TrimSpace }}</p>
-        <p class="appel-livre__consultation-offre"><strong>Exemplaire numérique de consultation offert</strong>, sans contrepartie, dans la limite du stock.</p>
+        <p class="appel-livre__consultation-offre"><strong>Exemplaire numérique de consultation offert</strong>, sans contrepartie, dans la limite du stock ; compte Amazon.fr requis.</p>
       </div>
       <a class="appel-livre__btn appel-livre__consultation-btn" href="{{ $guichet.RelPermalink }}?src=consultation-{{ $origine }}">Demander un exemplaire&nbsp;→</a>
     </div>

@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /en/does-a-law-apply-as-soon-as-it-is-passed/, build de 5ef6741 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /en/does-a-law-apply-as-soon-as-it-is-passed/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Does a French law apply as soon as it is passed?
 Not by the vote alone.

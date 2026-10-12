@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /pourquoi-la-dette-publique-augmente/, build de b8f4b66 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /pourquoi-la-dette-publique-augmente/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Pourquoi la dette publique augmente-t-elle ?
 Entre 1995 et 2025, la dette publique française est passée de 57,8 % à 115,6 % du PIB : elle a doublé en part de la richesse produite.
@@ -183,7 +183,7 @@ Elle ne dit pas qui en supporte le coût, ni par quels canaux il se déplace —
 Le livre suit ces canaux un par un, chiffres officiels à l’appui, pour montrer dans quelles configurations chacun supporte un coût.
 Il propose une méthode en trois questions — les faits sont-ils établis, le système tient-il sa promesse, qui décide — et, pour les issues qu’il envisage, le partage entre qui paie et qui gagne.
 Journalistes, enseignants, chercheurs, responsables publics ou associatifs
-Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock.
+Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock ; compte Amazon.fr requis.
 Demander l'exemplaire offert →
 Version papier : 19 € · Kindle : 9,99 €
 Sommaire, extraits et recensions →

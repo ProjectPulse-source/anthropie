@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /le-niveau-des-eleves-baisse-t-il/, build de b8f4b66 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /le-niveau-des-eleves-baisse-t-il/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Le niveau des élèves baisse-t-il ?
 Selon PISA, oui : de 2015 à 2025, les jeunes Français de 15 ans ont perdu 43 points en compréhension de l'écrit et 35 en mathématiques, une baisse significative.
 Mais les évaluations passées en classe, en CM1 et en quatrième, ne mettent pas en évidence la même baisse récente.
@@ -177,7 +177,7 @@ Cette page mesure ce que savent les élèves à un moment donné.
 La question qui vient ensuite est celle des parcours : quand un élève échoue une première fois, à un examen, une orientation, une première année d’études, qui peut réellement recommencer, et à quel coût selon son milieu ?
 Le livre montre que cette possibilité de recommencer n’est pas également distribuée.
 Journalistes, enseignants, chercheurs, responsables publics ou associatifs
-Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock.
+Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock ; compte Amazon.fr requis.
 Demander l'exemplaire offert →
 Version papier : 13,90 € · Kindle : 5,99 €
 Sommaire, extraits et recensions →

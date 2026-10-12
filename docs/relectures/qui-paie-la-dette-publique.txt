@@ -1,4 +1,4 @@
-# relu le 2026-10-11 ; texte servi de /qui-paie-la-dette-publique/, build de 4f032c2 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /qui-paie-la-dette-publique/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Qui paie vraiment la dette publique ?
 Un même effort de 10 milliards d'euros ne tombe pas sur les mêmes ménages selon la décision prise : par l'enseignement, il pèse surtout sur les plus modestes, par l'impôt sur les plus aisés.
@@ -309,7 +309,7 @@ La question n'est pas « combien ? » mais « qui paie ? » — et par quels can
 Cette page pose la méthode : une réponse par décision, des créanciers suivis aussi loin que les données le permettent, et ce qu’il faudrait observer pour conclure.
 Le livre la déploie sur le cas français — le transfert dans le temps, les créanciers, les services publics — et la prolonge par des scénarios 2025-2035.
 Journalistes, enseignants, chercheurs, responsables publics ou associatifs
-Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock.
+Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock ; compte Amazon.fr requis.
 Demander l'exemplaire offert →
 Version papier : 19 € · Kindle : 9,99 €
 Sommaire, extraits et recensions →

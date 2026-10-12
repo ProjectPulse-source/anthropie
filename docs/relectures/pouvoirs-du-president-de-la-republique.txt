@@ -1,4 +1,4 @@
-# relu le 2026-10-11 ; texte servi de /pouvoirs-du-president-de-la-republique/, build de 57dc84f + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /pouvoirs-du-president-de-la-republique/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Que peut décider le président de la République seul ?
 Le président nomme le Premier ministre.
@@ -857,7 +857,7 @@ Le livre pose la question suivante : une promesse de campagne, une fois l’élu
 Il propose une grille en quatre zones — ce qu’un président décide dans sa propre chaîne de pouvoir, ce qu’il doit faire voter, ce qu’il doit négocier avec ceux dont la signature manque, et ce qui ne dépendra jamais de lui — et l’éprouve sur neuf promesses écrites, datées et signées.
 Il ne donne aucun conseil de vote.
 Journalistes, enseignants, chercheurs, responsables publics ou associatifs
-Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock.
+Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock ; compte Amazon.fr requis.
 Demander l'exemplaire offert →
 Version papier : 19,90 € · Kindle : 9,99 €
 Sommaire, extraits et recensions →

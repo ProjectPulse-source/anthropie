@@ -1,4 +1,4 @@
-# relu le 2026-10-11 ; texte servi de /en/who-really-pays-public-debt/, build de 9bd4833 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /en/who-really-pays-public-debt/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Who really pays for public debt?
 The same €10 billion adjustment falls on different households depending on the decision taken: through education, it weighs mostly on the least well-off; through taxes, on the best-off.

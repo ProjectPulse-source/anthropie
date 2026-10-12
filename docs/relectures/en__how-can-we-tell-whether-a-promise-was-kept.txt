@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /en/how-can-we-tell-whether-a-promise-was-kept/, build de 65bdc5b + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /en/how-can-we-tell-whether-a-promise-was-kept/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 How can we tell whether a promise was kept?
 Two accurate figures can tell two different stories.

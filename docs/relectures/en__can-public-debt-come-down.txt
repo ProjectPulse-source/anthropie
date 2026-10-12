@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /en/can-public-debt-come-down/, build de b8f4b66 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /en/can-public-debt-come-down/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Can public debt come down?
 Yes: what can fall is the weight of debt in GDP, even while its amount rises.

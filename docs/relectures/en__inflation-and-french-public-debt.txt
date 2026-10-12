@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /en/inflation-and-french-public-debt/, build de b8f4b66 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /en/inflation-and-french-public-debt/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Did inflation really ease France's debt burden?
 Did the French government gain €150bn from inflation?
