@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Carte de partage et vignette d'index du volet « Délais » (dossier Promesses).
 
-Même fabrique que les cartes du dossier Dette (og_dossier_dette.carte). Les durées sont LUES dans
+Même fabrique que les cartes du dossier Dette (og_dossier_dette.carte). Les durées et l'année de la rentrée
+d'application (condition de 2023, présente partout où la durée apparaît : refonte du 12/10/2026) sont LUES dans
 data/promesses_delais.json (scripts/update_promesses_delais.py), elles-mêmes lues dans les textes en vigueur.
 Écrit : static/images/{og,vig}-delais-promesse{,-en}.jpg.
 """
@@ -49,18 +50,18 @@ def main() -> int:
     E = j["affichage_en"]
     og.carte("og-delais-promesse-en.jpg",
              ["At least %s years to" % E["duree_chiffre"], "train a GP in France"],
-             "%s the length of a presidential term." % {"two": "Twice", "three": "Three times"}.get(E["nmax"], E["nmax"].capitalize() + " times"),
+             "%s a presidential term, under the %s rules." % ({"two": "Twice", "three": "Three times"}.get(E["nmax"], E["nmax"].capitalize() + " times"), E["an_reforme"]),
              "Texts in force (Légifrance) · DREES · ONDPS · CC BY 4.0",
              "stephane-lalut.com/en/can-a-campaign-promise-produce-results-within-five-years/",
              lambda d: barres(d, c, "en"),
-             [(BLEU_CLAIR, "Third cycle: %s years" % E["mg"]), (og.C1, "Term: %s years" % E["mandat"])])
+             [(BLEU_CLAIR, "Residency: %s years" % E["mg"]), (og.C1, "Term: %s years" % E["mandat"])])
     og.carte("og-delais-promesse.jpg",
              ["Au moins %s ans pour" % A["duree_chiffre"], "former un généraliste"],
-             "%s fois la durée d'un mandat présidentiel." % A["nmax"].capitalize(),
+             "%s fois un mandat, aux règles de %s." % (A["nmax"].capitalize(), A["an_reforme"]),
              "Textes en vigueur (Légifrance) · DREES · ONDPS · CC BY 4.0",
              "stephane-lalut.com/une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/",
              lambda d: barres(d, c),
-             [(BLEU_CLAIR, "Troisième cycle : %s ans" % A["mg"]),
+             [(BLEU_CLAIR, "Internat : %s ans" % A["mg"]),
               (og.C1, "Mandat : %s ans" % A["mandat"])])
     return 0
 

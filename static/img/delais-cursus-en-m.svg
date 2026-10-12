@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 680" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dcm-t dcm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="dcm-t">Training a general practitioner in France, and the length of a presidential term</title><desc id="dcm-d">Two bars on the same scale. Above, the general practice curriculum: 3 years of first cycle, 3 years of second cycle, then 4 years of general practice residency, the last under supervised autonomy: 10 years from the first year and 9 from admission to the second year. Below, a presidential term of 5 years. Comparison of scale only.</desc>
+<rect width="300" height="680" fill="#ffffff"/>
+<text x="0.0" y="20.0" font-size="17" fill="#0A0A0E" text-anchor="start" font-weight="600">Training a general</text>
+<text x="0.0" y="42.0" font-size="17" fill="#0A0A0E" text-anchor="start" font-weight="600">practitioner in France, and</text>
+<text x="0.0" y="64.0" font-size="17" fill="#0A0A0E" text-anchor="start" font-weight="600">the length of a presidential</text>
+<text x="0.0" y="86.0" font-size="17" fill="#0A0A0E" text-anchor="start" font-weight="600">term</text>
+<text x="0.0" y="126.0" font-size="15" fill="#0A0A0E" text-anchor="start" font-weight="600">General practice</text>
+<rect x="0.0" y="136" width="90.0" height="30" fill="#c9cdd3" stroke="#ffffff" stroke-width="2"/>
+<text x="45.0" y="156.0" font-size="13.5" fill="#0A0A0E" text-anchor="middle">1st</text>
+<rect x="90.0" y="136" width="90.0" height="30" fill="#c9cdd3" stroke="#ffffff" stroke-width="2"/>
+<text x="135.0" y="156.0" font-size="13.5" fill="#0A0A0E" text-anchor="middle">2nd</text>
+<rect x="180.0" y="136" width="90.0" height="30" fill="#7fa3cf" stroke="#ffffff" stroke-width="2"/>
+<text x="225.0" y="156.0" font-size="13.5" fill="#0A0A0E" text-anchor="middle">Residency</text>
+<rect x="270.0" y="136" width="30.0" height="30" fill="#184f95" stroke="#ffffff" stroke-width="2"/>
+<rect x="181.0" y="136" width="118.0" height="30" fill="none" stroke="#184f95" stroke-width="1.5"/>
+<text class="val" x="0.0" y="185.0" font-size="13.5" fill="#52514e" text-anchor="start">1st cycle: 3 years</text>
+<text class="val" x="0.0" y="204.0" font-size="13.5" fill="#52514e" text-anchor="start">2nd cycle: 3 years</text>
+<text class="val" x="0.0" y="223.0" font-size="13.5" fill="#184f95" text-anchor="start" font-weight="600">General practice residency</text>
+<text class="val" x="0.0" y="242.0" font-size="13.5" fill="#184f95" text-anchor="start">4 years, the last under supervised</text>
+<text class="val" x="0.0" y="261.0" font-size="13.5" fill="#184f95" text-anchor="start">autonomy</text>
+<text class="val" x="0.0" y="280.0" font-size="13.5" fill="#52514e" text-anchor="start">9 years from admission to the 2nd</text>
+<text class="val" x="0.0" y="299.0" font-size="13.5" fill="#52514e" text-anchor="start">year</text>
+<text class="val" x="0.0" y="318.0" font-size="13.5" fill="#0A0A0E" text-anchor="start" font-weight="600">Total: 10 years from the 1st year</text>
+<text x="0.0" y="348.0" font-size="15" fill="#0A0A0E" text-anchor="start" font-weight="600">Presidential term</text>
+<rect x="0" y="358" width="150.0" height="30" fill="#8a8f98"/>
+<text class="val" x="75.0" y="378.0" font-size="13.5" fill="#ffffff" text-anchor="middle">5 years</text>
+<line x1="0" y1="389" x2="300" y2="389" stroke="#e1e0d9"/>
+<text x="0.0" y="406.0" font-size="13.5" fill="#898781" text-anchor="start">0</text>
+<text x="150.0" y="406.0" font-size="13.5" fill="#898781" text-anchor="middle">5</text>
+<text x="300.0" y="406.0" font-size="13.5" fill="#898781" text-anchor="end">10</text>
+<line x1="0" y1="420.0" x2="300" y2="420.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0.0" y="441.0" font-size="13.5" fill="#52514e" text-anchor="start">Order of 8 April 2013, art. 1;</text>
+<text class="pied-source" x="0.0" y="458.0" font-size="13.5" fill="#52514e" text-anchor="start">Education Code, art. L632-2; Law</text>
+<text class="pied-source" x="0.0" y="475.0" font-size="13.5" fill="#52514e" text-anchor="start">no. 2022-1616, art. 37; Constitution,</text>
+<text class="pied-source" x="0.0" y="492.0" font-size="13.5" fill="#52514e" text-anchor="start">art. 6</text>
+<text class="pied-note" x="0.0" y="513.0" font-size="13.5" fill="#52514e" text-anchor="start">Minimum durations, without repeating a</text>
+<text class="pied-note" x="0.0" y="530.0" font-size="13.5" fill="#52514e" text-anchor="start">year, interruption or</text>
+<text class="pied-note" x="0.0" y="547.0" font-size="13.5" fill="#52514e" text-anchor="start">alternative-entry route, for students</text>
+<text class="pied-note" x="0.0" y="564.0" font-size="13.5" fill="#52514e" text-anchor="start">who entered residency from the 2023</text>
+<text class="pied-note" x="0.0" y="581.0" font-size="13.5" fill="#52514e" text-anchor="start">academic year. Comparison of scale</text>
+<text class="pied-note" x="0.0" y="598.0" font-size="13.5" fill="#52514e" text-anchor="start">only: neither the effect of a policy</text>
+<text class="pied-note" x="0.0" y="615.0" font-size="13.5" fill="#52514e" text-anchor="start">nor the date of its first effects;</text>
+<text class="pied-note" x="0.0" y="632.0" font-size="13.5" fill="#52514e" text-anchor="start">residents provide care before the end.</text>
+<text class="pied-licence" x="0.0" y="653.0" font-size="13.5" fill="#898781" text-anchor="start">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0.0" y="670.0" font-size="13.5" fill="#898781" text-anchor="start">· stephane-lalut.com</text>
+</svg>

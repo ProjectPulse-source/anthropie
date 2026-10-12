@@ -1,0 +1,246 @@
+# relu le 2026-10-12 ; texte servi de /une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/, build de 844bcf2 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+ENCette page existe aussi en anglais — English version
+Une promesse peut-elle produire ses effets en cinq ans ?
+Le cas-test de la formation des médecins généralistes.
+Une décision qui augmente le nombre d'étudiants n'atteint pas son résultat final dans le mandat qui la prend.
+Un généraliste se forme en au moins dix ans depuis la première année, deux fois la durée d'un mandat présidentiel (règles applicables depuis la rentrée 2023).
+Une telle décision peut pourtant agir avant, car les internes soignent sous supervision pendant leur formation.
+Et le nombre d'étudiants admis ne dépend pas d'une seule signature : l'État fixe un objectif, chaque université vote ses places.
+Promesses présidentielles
+↓ Graphiques, données et citations à réutiliserRéutiliser cette page
+On décide aujourd’hui de former davantage de médecins.
+Quand les patients en verront-ils les effets ?
+La médecine générale permet de distinguer précisément ce que les textes permettent de dater de ce que les données ne permettent pas encore de mesurer.
+On y lit trois horloges.
+Celle des textes fixe la durée du cursus ; celle des capacités, combien d’étudiants le suivent ; celle de l’effet dit quand les patients voient la différence, et aucune série ne la mesure ici.
+Combien de temps faut-il pour former un médecin généraliste ?
+Le cursus compte trois cycles : six semestres de premier cycle, six de deuxième cycle, puis l’internat.
+En médecine générale, l’internat dure quatre ans pour les étudiants qui l’ont commencé à partir de la rentrée 2023 ; cette quatrième année a été créée par une loi du 23 décembre 2022.
+Le mandat présidentiel dure cinq ans.
+Durées minimales écrites dans les textes en vigueur, sans redoublement, interruption ni passerelle.
+Comparaison d’échelle uniquement : elle ne mesure ni l’effet d’une politique ni la date à laquelle ses premiers effets peuvent apparaître.
+Télécharger · Citer · Données
+Le résultat en une phrase.
+Aux règles applicables depuis la rentrée 2023, le cursus standard de médecine générale dure au moins dix ans depuis la première année, soit deux fois la durée d’un mandat présidentiel.
+Cette durée est celle d’un diplôme, pas le délai d’un effet.
+Pour la voie ordinaire, depuis l’admission en deuxième année du premier cycle, il reste au moins neuf ans de formation.
+Certaines passerelles permettent une admission directe en troisième année ; les séries agrégées présentées ici ne permettent pas d’en isoler l’effectif.
+Pour l’Observatoire national de la démographie des professions de santé (ONDPS), les objectifs fixés en 2021 visent de même « des professionnels en exercice 9 à 11 ans plus tard selon la durée de la formation ».
+Et les internes soignent bien avant la fin du cursus.
+Les textes qui fixent ces durées, cités mot pour mot
+Premier cycle (arrêté du 8 avril 2013, art.
+1) : « Le diplôme de formation générale en sciences médicales sanctionne le premier cycle ; il comprend six semestres de formation ».
+Deuxième cycle (même article) : « Le diplôme de formation approfondie en sciences médicales, défini au présent arrêté, sanctionne le deuxième cycle ; il comprend six semestres de formation ».
+Internat de médecine générale (code de l’éducation, art.
+L632-2) : un troisième cycle « qui, pour la spécialité de médecine générale, est d'une durée de quatre années ».
+Application (loi n° 2022-1616 du 23 décembre 2022 de financement de la sécurité sociale pour 2023, art.
+37, II) : « La durée du troisième cycle des études de médecine pour la spécialité de médecine générale mentionnée au 2° du I s'applique aux étudiants qui commencent ce troisième cycle à la rentrée de l'année universitaire 2023. »
+Mandat (Constitution, art.
+6) : « Le Président de la République est élu pour cinq ans au suffrage universel direct. »
+Qui décide du nombre d’étudiants admis ?
+Aucune signature ne fixe seule ce nombre.
+Le code de l’éducation (art.
+L631-1) répartit la décision entre trois étages, chacun sur un effectif différent et à un rythme différent.
+L’État fixe des objectifs nationaux pluriannuels : un nombre de professionnels à former, pour cinq ans (2021-2025, puis 2026-2030).
+Chaque université arrête ses objectifs pluriannuels d’admission : un nombre d’étudiants à admettre en première année du deuxième cycle.
+Elle le fait sur avis conforme, c’est-à-dire un avis qui la lie, de l’agence régionale de santé et, depuis le 29 juin 2025, des conseils territoriaux de santé.
+Chaque université, encore, vote chaque année ses capacités d’accueil : des places en deuxième et troisième années du premier cycle.
+Trois nombres, trois objets.
+L’objectif national de l’État compte des professionnels à former ; la capacité d’accueil votée par l’université compte des places ; l’admission, relevée par l’ONDPS, compte les étudiants entrés sur ces places.
+Aucun ne compte des médecins diplômés, encore moins des consultations.
+Ce partage date du 1er septembre 2020.
+Auparavant, les ministres chargés de la santé et de l’enseignement supérieur fixaient eux-mêmes, chaque année, le nombre d’étudiants admis à poursuivre après la première année : c’était le numerus clausus.
+L'article L631-1 dans le texte, et ses versions depuis 2004
+Le texte en vigueur confie les places aux universités : « Les capacités d'accueil des formations en deuxième et troisième années de premier cycle sont déterminées annuellement par les universités. » Les objectifs de l’État encadrent ceux des universités : « Les objectifs pluriannuels d'admission en première année du deuxième cycle sont définis au regard d'objectifs nationaux pluriannuels relatifs au nombre de professionnels à former établis par l'Etat ».
+Les candidats passent des épreuves pour obtenir ces places.
+Le numerus clausus figurait dans les versions de L631-1 en vigueur de 2004 à 2020.
+La version entrée en vigueur le 1er septembre 2020 (loi n° 2019-774 du 24 juillet 2019) confie les capacités aux universités, dans le cadre des objectifs de l’État ; l’usage appelle ce régime « numerus apertus », un terme que la loi n’emploie pas.
+Depuis le 29 décembre 2023 (loi n° 2023-1268 du 27 décembre 2023), les objectifs des universités sont ceux « qui tiennent compte des besoins de santé du territoire en priorité, puis des capacités de formation », alors que la version de 2020 citait les deux sans ordre.
+Depuis le 29 juin 2025 (loi n° 2025-580 du 27 juin 2025), l’avis conforme des conseils territoriaux de santé s’ajoute à celui de l’agence régionale de santé.
+De 2004 à 2010 : « Le nombre des étudiants admis ainsi que les modalités de leur admission, à la fin de la première année du premier cycle, à poursuivre des études médicales, odontologiques, de sage-femme ou pharmaceutiques sont fixés, chaque année », par les deux ministres.
+De 2010 à 2020 : « Les ministres chargés de l'enseignement supérieur et de la santé déterminent par voie réglementaire » notamment « Le nombre des étudiants admis dans chacune des filières à l'issue de la première année des études de santé ».
+Du 1er septembre 2020 au 29 décembre 2023 : « Ces objectifs pluriannuels, qui tiennent compte des capacités de formation et des besoins de santé du territoire, sont arrêtés par l'université sur avis conforme de l'agence régionale de santé ou des agences régionales de santé concernées. »
+Depuis le 29 juin 2025 : « Ces objectifs pluriannuels, qui tiennent compte des besoins de santé du territoire en priorité, puis des capacités de formation, sont arrêtés par l'université sur avis conforme des conseils territoriaux de santé concernés et de l'agence régionale de santé ou des agences régionales de santé concernées. »
+Ce que ce partage a produit, l’ONDPS le mesure.
+Pour 2021-2025, l’objectif national fixé par l’État était de 51 505 médecins à former (arrêté du 13 septembre 2021, selon l’ONDPS).
+Les universités ont admis 55 078 étudiants sur ces cinq ans, en deuxième année du premier cycle ou, par une passerelle, en troisième.
+En 2025, elles en ont admis 11 133 pour 11 277 places de capacité d’accueil.
+L’ONDPS en conclut : « Les capacités d'accueil ont été quasiment saturées sur la période. » Il rapporte aussi une prévision des UFR, non un constat de la rentrée : « Pour la rentrée 2026, les UFR n'anticipent pas d'augmentation de capacités d'accueil (0 % d'augmentation). » Les objectifs de 2026-2030 sont en préparation : le 3 juillet 2025, les ministres ont lancé les « travaux préparatoires à la conférence nationale qui devra proposer les objectifs nationaux pluriannuels » (ONDPS).
+Relever l’objectif national, que fixent les ministres par arrêté, est l’un des leviers de l’État.
+Mais augmenter effectivement les admissions suppose aussi des capacités universitaires adaptées, éventuellement des moyens supplémentaires et, selon les décisions envisagées, une évolution du cadre juridique.
+Les places, elles, se votent université par université ; à l’échelle nationale, les admissions les remplissent déjà.
+L’État peut-il imposer davantage de places ?
+Dans le cadre juridique actuellement en vigueur, il fixe l’objectif, pas les places.
+Depuis le 29 juin 2025, si l’agence régionale de santé et les conseils territoriaux de santé jugent que les capacités d’une université ne correspondent pas aux objectifs qu’elle a elle-même arrêtés, « cette dernière peut être appelée à mettre en œuvre des mesures visant à accroître ses capacités d'accueil » : la loi écrit « peut », non « doit ».
+Elle renvoie à un décret les modalités de cette hausse, « en particulier en matière de moyens financiers et humains dégagés notamment par l'Etat ».
+Le seul verbe « peut » n’établit pas l’absence de toute obligation : une obligation pourrait résulter d’autres textes ou de ces modalités d’application.
+D’où vient la saturation ?
+L’ONDPS ne le dit pas, et cette page ne sait pas si elle tient aux terrains de stage, à l’encadrement ou au budget des universités.
+La saturation nationale ne renseigne ni sur les marges de chaque université ni sur les moyens qui permettraient d’accroître ses capacités.
+Combien d’étudiants sont admis dans le cursus de médecine ?
+Être admis dans le cursus de médecine, au sens de toutes les séries de cette page, c’est obtenir une place en deuxième année du premier cycle, à l’issue d’une première année d’études, ou en troisième année par une passerelle.
+L’ONDPS ne dit pas combien d’admis passent par la seconde porte.
+La première année n’est pas comptée.
+Places pourvues du numerus clausus de 1972 à 2020 (DREES, source ONDPS), puis étudiants admis de 2021 à 2025 (ONDPS), en deuxième année du premier cycle (en troisième pour certaines passerelles), chacun à l’année publiée par la source.
+Aucune valeur n’est déplacée vers une année d’exercice supposée.
+Télécharger · Citer · Données
+Ne pas décaler mécaniquement ces barres pour en déduire une année d’exercice : les règles de durée ont changé, les étudiants soignent avant la fin du cursus, et cette série ne suit pas individuellement les étudiants jusqu’à leur exercice.
+Les places pourvues du numerus clausus ont été divisées par 2,5 entre 1972 et 1993, puis sont remontées.
+On comptait 8 588 places pourvues en 1972, 3 500 en 1993.
+Selon l’ONDPS, les admissions de 2021-2025 dépassent de 27 % le numerus clausus total de 2016-2020, passerelles comprises.
+Deux ruptures se lisent sur la figure.
+À partir de 2011 (en partie dès 2010), la série de la DREES ajoute au numerus clausus principal les passerelles et les droits au remords.
+En 2021, le numerus clausus disparaît et les nombres viennent de l’ONDPS, qui relève les admissions auprès des universités : ce passage n’est pas un saut d’une même mesure.
+Les étudiants soignent-ils avant la fin du cursus ?
+Oui, dès l’internat, et les textes l’organisent : l’interne fait ses stages à l’hôpital et en ambulatoire, « toujours sous supervision étroite » (instruction interministérielle du 21 mai 2026).
+La dernière année de médecine générale va plus loin. « La dernière année du diplôme d'études spécialisées de médecine générale est effectuée en stage, sous un régime d'autonomie supervisée », en pratique ambulatoire auprès de médecins généralistes, et en priorité dans les zones où l’offre de soins est insuffisante ou l’accès aux soins difficile (code de l’éducation, art.
+L632-2) ; un stage à l’hôpital n’y est possible qu’à titre exceptionnel.
+Pendant cette dernière année, l’interne de médecine générale exerce comme docteur junior. « Les actes réalisés sous ce régime le sont par le docteur junior seul. » Un praticien peut être appelé à tout moment, et l’acte reste sous sa responsabilité : seul pour l’acte, donc, mais jamais sans recours.
+Les textes organisent ces soins ; ils n’en mesurent pas la part dans l’ensemble des soins.
+Les textes de l'internat et du docteur junior, cités mot pour mot
+L’internat (instruction du 21 mai 2026) : « L'étudiant de troisième cycle, exerçant sous le statut d'interne, effectue des stages qui se déroulent en milieu hospitalier et en milieu ambulatoire, afin de découvrir la prise en charge globale du patient et de commencer à développer une autonomie progressive, toujours sous supervision étroite. »
+La dernière année (code de l’éducation, art.
+L632-2) : « La dernière année du diplôme d'études spécialisées de médecine générale est effectuée en stage, sous un régime d'autonomie supervisée », par des praticiens agréés, « dans des lieux agréés en pratique ambulatoire dans lesquels exercent un ou plusieurs médecins généralistes et en priorité dans les zones mentionnées au 1° de l'article L.
+1434-4 du code de la santé publique ».
+L’exception : « A titre exceptionnel et par dérogation au premier alinéa du présent II, un stage peut être réalisé en milieu hospitalier ou extrahospitalier au cours de la dernière année du diplôme d'études spécialisées de médecine générale. »
+Les zones (code de la santé publique, art.
+L1434-4) : « Les zones caractérisées par une offre de soins insuffisante ou par des difficultés dans l'accès aux soins »
+Le docteur junior (code de la santé publique, art.
+R6153-1-2) : « Les actes réalisés sous ce régime le sont par le docteur junior seul. » « La supervision est assurée par un praticien auquel le docteur junior peut avoir recours à tout moment de son exercice, conformément aux tableaux de service. » « Le docteur junior exerce ses fonctions par délégation et sous la responsabilité du praticien dont il relève. »
+Combien de temps une réforme du cursus met-elle à s’appliquer ?
+La quatrième année de médecine générale permet de le vérifier en dates exactes, sans projection.
+23 décembre 2022 : la loi de financement de la sécurité sociale pour 2023 crée cette année (art.
+37), pour les étudiants qui entrent en internat à la rentrée 2023.
+2 novembre 2026 : date prévue par l’instruction du 21 mai 2026 pour l’entrée de ces internes dans leur quatrième année, comme docteurs juniors, « principalement en médecine ambulatoire ».
+À l'automne 2027 au plus tôt : fin de cette année, puisque « À l'issue de cette quatrième année, la formation est validée par l'obtention du DES de médecine générale. »
+La réforme créée par la loi du 23 décembre 2022 doit connaître une première application à la cohorte concernée à la date prévue du 2 novembre 2026, avec son entrée dans une quatrième année d’internat sous le statut de docteur junior.
+Le diplôme de cette cohorte pourra être obtenu au plus tôt à l'automne 2027.
+Ce calendrier établit quand la réforme s’applique et quand le nouveau cursus peut s’achever.
+Il ne démontre ni un supplément de consultations ni une amélioration de l’accès aux soins.
+Il faut distinguer cette réforme de la décision d’augmenter les admissions, dont les effets sur le nombre de médecins diplômés suivent une autre chronologie.
+Le délai d’une réforme et son effet sur les délais ne sont pas non plus la même chose : celle-ci s’applique moins de quatre ans après la loi, et elle allonge d’un an le temps nécessaire pour former un généraliste.
+Au 12 octobre 2026, la première de ces années n’a pas commencé : le calendrier est celui d’un texte d’application, non un fait constaté.
+Quand les patients verront-ils la différence ?
+Aucune série de cette page ne le dit.
+Le service statistique du ministère de la Santé (DREES) écrivait en 2021 que « ce levier ne peut affecter la situation démographique qu’avec un délai équivalent à la durée des études concernées » : « il faut ainsi compter de cinq à dix ans (respectivement pour le cas des sages-femmes et des médecins) pour qu’une politique axée sur ce levier ne commence à produire ses effets » (Les Dossiers de la DREES n° 76).
+Son objet est l’effectif des médecins, la « situation démographique », non les soins : ce délai et les soins donnés par les internes ne se contredisent pas, ils portent sur deux objets différents.
+Le nombre de médecins en activité dépend aussi des départs, des choix de spécialité, des lieux d’installation et des médecins diplômés à l’étranger, un effectif présent et non un flux d’arrivées : au 1er janvier 2026, selon la DREES, 11,3 % des médecins actifs avaient obtenu leur diplôme à l’étranger, contre 6,6 % en 2012.
+Cela fait 27 464 médecins sur 242 185.
+Le lieu du diplôme ne dit pas la nationalité, et ce rapprochement ne mesure aucune compensation des capacités de formation françaises.
+Cette page ne décrit pas les autres horloges qu’une promesse rencontre, comme la formation des forces de l’ordre ou le temps d’une scolarité, faute d’avoir lu leurs textes.
+Un cas montre qu’une horloge peut dépasser le mandat ; il ne dit pas combien le font.
+Comment juger une promesse qui passe par une formation ?
+Trois questions séparent ce qu’une telle promesse peut changer pendant le mandat de ce qu’elle ne peut que lancer.
+L’horloge des textes : quelle durée de formation la loi impose-t-elle, et depuis quand ?
+Ici, au moins dix ans depuis la première année (règles applicables depuis la rentrée 2023).
+L’horloge des capacités : qui décide du nombre de places, et sont-elles déjà remplies ?
+Ici, chaque université, chaque année, dans le cadre d’un objectif de l’État ; selon l’ONDPS, elles sont presque saturées.
+L’horloge de l’effet : qu’est-ce qui agit avant le diplôme, et qu’est-ce qui ne se mesure qu’après ?
+Ici, les internes soignent sous supervision pendant leur formation ; l’accès aux soins dépend de facteurs qu’aucune de ces séries ne mesure.
+La même grille s’applique à toute promesse dont le résultat passe par des personnes à former, à condition de lire les textes de chaque métier.
+L'horloge d'une promesse
+Un président peut-il tenir ses promesses ?
+Ce qu'il peut vraiment décider — et ce qui lui échappe
+Cette page mesure une horloge : le temps qu’il faut pour former un médecin.
+Le livre suit une promesse sur l’accès aux soins depuis son énoncé de campagne jusqu’à l’endroit où son résultat échappe à l’élu, et rencontre d’autres horloges en chemin : une cohorte d’élèves, un budget carbone, le temps d’une loi et de ses décrets.
+Il ne donne aucun conseil de vote.
+Journalistes, enseignants, chercheurs, responsables publics ou associatifs
+Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock.
+Demander l'exemplaire offert →
+Version papier : 19,90 € · Kindle : 9,99 €
+Sommaire, extraits et recensions →
+Questions fréquentes
+Combien de temps faut-il pour former un médecin généraliste ?
+Aux règles applicables aux étudiants qui entrent en internat (le troisième cycle) à partir de la rentrée 2023, au moins dix ans depuis la première année : six semestres de premier cycle, six semestres de deuxième cycle (arrêté du 8 avril 2013), puis un internat de médecine générale de quatre ans (code de l'éducation, art.
+L632-2).
+Depuis l'admission en deuxième année, il reste au moins neuf ans.
+Ce sont des durées minimales, sans redoublement, interruption ni passerelle ; les internes soignent pendant ces années, sous supervision.
+Qui décide du nombre d'étudiants en médecine ?
+Depuis le 1er septembre 2020, trois étages (code de l'éducation, art.
+L631-1) : l'État fixe des objectifs nationaux pluriannuels de professionnels à former ; chaque université arrête ses objectifs d'admission en deuxième cycle, sur avis conforme de l'agence régionale de santé et, depuis le 29 juin 2025, des conseils territoriaux de santé ; chaque université détermine aussi, chaque année, ses capacités d'accueil en deuxième et troisième années du premier cycle.
+Auparavant, les ministres chargés de la santé et de l'enseignement supérieur fixaient eux-mêmes chaque année ce nombre : c'était le numerus clausus.
+Combien d'étudiants sont admis dans le cursus de médecine ?
+11 133 en 2025, admis en deuxième année du premier cycle (ou en troisième par une passerelle) pour 11 277 places de capacité d'accueil, selon l'ONDPS ; 55 078 de 2021 à 2025.
+La première année d'études n'est pas comptée.
+Les places pourvues du numerus clausus avaient été divisées par 2,5 entre 1972 (8 588) et 1993 (3 500), avant de remonter ; le champ s'est élargi en 2010-2011 aux passerelles et aux droits au remords, et le numerus clausus a pris fin après la rentrée 2020.
+Sources
+Textes, lus sur Légifrance (API) et dans le Journal officiel de la DILA : arrêté du 8 avril 2013 relatif au régime des études en vue du premier et du deuxième cycle des études médicales, art.
+1 ; code de l’éducation, art.
+L631-1 (version en vigueur et versions entrées en vigueur en 2004, 2010, 2020 et 2023) et L632-2 ; loi n° 2022-1616 du 23 décembre 2022 de financement de la sécurité sociale pour 2023, art.
+37 ; code de la santé publique, art.
+R6153-1-2 et L1434-4 ; Constitution, art.
+6.
+Instruction interministérielle n° DGOS/RH2/DGESIP/2026/44 du 21 mai 2026 relative à la mise en œuvre de la quatrième année du diplôme d’études spécialisées de médecine générale (Bulletin officiel santé), texte d’application non opposable.
+DREES, Quelle démographie récente et à venir pour les professions médicales et pharmaceutique ?, Les Dossiers de la DREES n° 76, mars 2021, graphique 8 (source ONDPS) ; démographie des professionnels de santé, RPPS, publication du 2 juillet 2026.
+ONDPS, note de bilan des objectifs nationaux pluriannuels 2021-2025, formation de médecins, sages-femmes, chirurgiens-dentistes et pharmaciens, 19 décembre 2025.
+Télécharger les données (licence CC BY 4.0) : CSV, en format long ; JSON, avec les définitions et le compte rendu des contrôles.
+Ce jeu est aussi archivé sur Zenodo, avec les six autres de la même série et leur note de méthode, sous un identifiant permanent à citer : doi:10.5281/zenodo.23212664 ; la version archivée précède la refonte du 12 octobre 2026.
+Comment ces chiffres ont été vérifiés, et l'écart qui reste
+Les chiffres, les citations, les contrôles et les figures sont produits par un script unique.
+Les durées et les citations sont lues dans les textes archivés, la série de la DREES dans son fichier, les dates du calendrier de la quatrième année dans la loi et dans l’instruction.
+Les admissions de 2021 à 2025 et les totaux par périodes de cinq ans, publiés en image par l’ONDPS, sont transcrits : le script contrôle la somme des admissions annuelles par le total imprimé (une erreur sur une année compensée par une autre passerait), retrouve ce total, les admis et les capacités de 2025 et l’objectif national dans le texte du document, compare les totaux de 2001 à 2015 à la série de la DREES, et vérifie que le total de 2016-2020, lu deux fois sur l’image, redonne la hausse et la moyenne annuelle que le texte imprime.
+Il s’arrête si une donnée ne remplit plus les conditions dont dépendent les principales phrases.
+Le niveau d’admission des admis de 2021-2025.
+La loi prévoit que des candidats « peuvent être admis en deuxième ou en troisième année du premier cycle » (code de l’éducation, art.
+L631-1).
+L’ONDPS compte les capacités d’accueil en places offertes « à partir de la 2ème ou 3ème année du 1er cycle » et précise que « l'ONP comprend les admis de passerelles ».
+Il compare ses admis au numerus clausus total de 2016-2020, qui comprend les passerelles.
+Il ne publie pas la part des admis entrés en troisième année.
+La hausse de 27 %.
+Selon l’ONDPS, 55 078 étudiants ont été admis en deuxième année ou, par une passerelle, en troisième, de 2021 à 2025.
+Le numerus clausus total de 2016-2020, passerelles comprises, comptait 43 518 places.
+L’ONDPS compare ainsi des admis à des places, en assimilant le numerus clausus à un nombre d’admissions, hypothèse qu’il juge solide en médecine.
+L’écart entre les deux sources.
+La série de la DREES concorde exactement avec les totaux par périodes de cinq ans que publie l’ONDPS pour 2001-2005, 2006-2010 et 2011-2015.
+Pour 2016-2020, la somme des valeurs de la DREES dépasse de 101 places le total de l’ONDPS, soit environ 0,2 % de ce total.
+Ce total, lu deux fois sur l’image, est le seul des deux qui redonne la hausse de 27 % imprimée par l’ONDPS (la somme de la DREES donnerait 26 %) : l’écart n’est pas une erreur de lecture.
+La valeur 2020 de la DREES porte un astérisque dont la légende n’a pas été trouvée.
+L’écart est publié, il n’est pas corrigé.
+Réutiliser cette page
+Les figures, les données et une citation prête, sous licence libre.
+Chaque figure porte dans l'image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
+Former un médecin généraliste, et la durée d'un mandat présidentiel
+Aux règles en vigueur pour les étudiants entrés en internat à partir de la rentrée 2023, le cursus standard de médecine générale dure au moins dix ans depuis la première année (neuf depuis l'admission en deuxième année), soit deux fois la durée d'un mandat présidentiel.
+Comparaison d'échelle seulement.
+Précaution d'interprétation.
+Durées minimales, sans redoublement, interruption ni passerelle, pour les étudiants entrés en internat à partir de la rentrée 2023.
+Comparaison d'échelle seulement : ni l'effet d'une politique, ni la date de ses premiers effets ; les internes soignent avant la fin du cursus.
+Arrêté du 8 avril 2013, art.
+1 ; code de l'éducation, art.
+L632-2 ; loi n° 2022-1616, art.
+37 ; Constitution, art.
+6 (Légifrance)
+Télécharger en PNG
+SVG
+Étudiants admis dans le cursus de médecine, 1972-2025
+Les places pourvues en deuxième année du cursus de médecine ont été divisées par 2,5 entre 1972 et 1993 (3 500 places pourvues), puis sont remontées ; 55 078 étudiants ont été admis en deuxième année (ou en troisième par une passerelle) de 2021 à 2025.
+Précaution d'interprétation.
+Admissions en deuxième année du premier cycle, ou directement en troisième pour certaines passerelles.
+Jusqu'en 2020, places pourvues du numerus clausus, élargi aux passerelles et aux droits au remords à partir de 2010-2011 ; depuis 2021, admis.
+Chaque barre à l'année publiée par la source, sans décalage.
+DREES, Dossier n° 76 (2021), graphique 8, source ONDPS (1972-2020) ; ONDPS, bilan 2021-2025 (admis)
+Télécharger en PNG
+SVG
+Citer cette page
+Lalut, Stéphane (2026). « Une promesse peut-elle produire ses effets en cinq ans ? ».
+Données Légifrance, Bulletin officiel santé, DREES et ONDPS, relevé du 12/10/2026 (textes lus sur Légifrance les 05, 06, 11 et 12/10/2026 ; instruction du 21 mai 2026 ; DREES, 2 juillet 2026 ; ONDPS, 19 décembre 2025). https://stephane-lalut.com/une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/
+Copier la citation
+En trois phrases
+Aux règles applicables aux étudiants entrés en internat à partir de la rentrée 2023, former un médecin généraliste prend au moins dix ans depuis la première année, deux fois la durée d’un mandat présidentiel ; comparaison d’échelle seulement.
+Le nombre d’étudiants admis en deuxième année se décide sur trois étages : l’objectif de l’État, puis les objectifs et les capacités votés par chaque université.
+Les places pourvues ont été divisées par 2,5 entre 1972 et 1993, avant de remonter ; 55 078 étudiants ont été admis en deuxième année (ou en troisième par une passerelle) de 2021 à 2025.
+Copier le résumé
+Les données
+Les durées du cursus de médecine générale et du mandat lues dans les textes, les places pourvues du numerus clausus de 1972 à 2020, les admis en deuxième année (ou en troisième par une passerelle) de 2021 à 2025 et les médecins actifs diplômés à l'étranger ; le même contenu existe en CSV, en format long, lisible dans un tableur.
+Télécharger en JSON CSV
+Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
+Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
+Les séries brutes appartiennent à leurs producteurs (Légifrance, Bulletin officiel santé, DREES et ONDPS), sous leurs propres conditions.
+Toutes les ressources : données, dossiers et repères →
+Transmettre
+WhatsApp
+Bluesky
+LinkedIn
+X
+E-mail
+Copier le lien

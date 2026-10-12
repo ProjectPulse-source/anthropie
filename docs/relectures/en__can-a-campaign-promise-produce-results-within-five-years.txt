@@ -1,0 +1,249 @@
+# relu le 2026-10-12 ; texte servi de /en/can-a-campaign-promise-produce-results-within-five-years/, build de 844bcf2 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+FRThis page is also available in French — version française
+Can a campaign promise produce results within five years?
+The test case of training general practitioners in France.
+A decision that raises the number of medical students does not reach its final result within the term that takes it.
+A general practitioner is trained in at least ten years from the first year, twice the length of a presidential term (rules applying since the 2023 academic year).
+Such a decision can still act sooner, because residents provide care under supervision during their training.
+And the number of students admitted does not depend on a single signature: the State sets a target, and each university votes its places.
+Presidential promises
+↓ Charts, data and citations to reuseReuse this page
+Suppose a decision is taken today to train more doctors.
+When will patients see the effects?
+French general practice makes it possible to separate precisely what the texts allow us to date from what the data do not yet allow us to measure.
+Three clocks can be read there.
+The clock of the texts sets the length of the curriculum; the clock of capacity, how many students follow it; the clock of the effect says when patients see the difference, and no series here measures it.
+The Constitution is quoted in the English translation published by the Conseil constitutionnel; other French texts in French, followed by our translation.
+How long does it take to train a general practitioner?
+The curriculum has three cycles: six semesters of first cycle, six of second cycle, then residency.
+In general practice, residency lasts four years for students who started it from the 2023 academic year; this fourth year was created by a law of 23 December 2022.
+The presidential term lasts five years.
+Minimum durations written in the texts in force, without repeating a year, interruption or alternative-entry route.
+Comparison of scale only: it measures neither the effect of a policy nor the date on which its first effects can appear.
+Download · Cite · Data
+The finding in one sentence.
+Under the rules applying since the 2023 academic year, the standard training pathway to become a general practitioner in France takes at least ten years from the first year, twice the length of a presidential term.
+This length is that of a diploma, not the delay of an effect.
+For the ordinary route, from admission to the second year of the first cycle, at least nine years of training remain.
+Some alternative-entry routes allow direct admission to the third year; the aggregated series presented here do not allow their number to be isolated.
+For the national observatory of the demography of the health professions (ONDPS), the targets set in 2021 likewise concern « des professionnels en exercice 9 à 11 ans plus tard selon la durée de la formation » [our translation: “professionals in practice 9 to 11 years later depending on the length of the training”].
+And residents provide care well before the end of the curriculum.
+The texts that set these durations, quoted word for word
+First cycle (order of 8 April 2013, art.
+1): « Le diplôme de formation générale en sciences médicales sanctionne le premier cycle ; il comprend six semestres de formation » [our translation: “The general training diploma in medical sciences concludes the first cycle; it comprises six semesters of training”].
+Second cycle (same article): « Le diplôme de formation approfondie en sciences médicales, défini au présent arrêté, sanctionne le deuxième cycle ; il comprend six semestres de formation » [our translation: “The advanced training diploma in medical sciences, defined in this order, concludes the second cycle; it comprises six semesters of training”].
+General practice residency (Education Code, art.
+L632-2): a third cycle « qui, pour la spécialité de médecine générale, est d'une durée de quatre années » [our translation: “which, for the specialty of general practice, lasts four years”].
+Application (Law no.
+2022-1616 of 23 December 2022 on the financing of social security for 2023, art.
+37, II): « La durée du troisième cycle des études de médecine pour la spécialité de médecine générale mentionnée au 2° du I s'applique aux étudiants qui commencent ce troisième cycle à la rentrée de l'année universitaire 2023. » [our translation: “The duration of the third cycle of medical studies for the specialty of general practice mentioned in 2° of I applies to students who begin this third cycle at the start of the 2023 academic year.”]
+Term (Constitution, art.
+6, English translation published by the Conseil constitutionnel): “The President of the Republic shall be elected for a term of five years by direct universal suffrage.”
+Who decides how many students are admitted?
+No single signature sets this number.
+The Education Code (art.
+L631-1) divides the decision between three tiers, each acting on a different count and at a different pace.
+The State sets national multi-year targets: a number of professionals to be trained, for five years (2021-2025, then 2026-2030).
+Each university sets its multi-year admission targets: a number of students to admit to the first year of the second cycle.
+It does so on the binding opinion of the regional health agency and, since 29 June 2025, of the territorial health councils.
+Each university, again, votes its intake capacities every year: places in the second and third years of the first cycle.
+Three numbers, three objects.
+The State’s national target counts professionals to be trained; the intake capacity voted by the university counts places; admissions, recorded by the ONDPS, count the students who took those places.
+None of them counts qualified doctors, let alone consultations.
+This division dates from 1 September 2020.
+Before that, the ministers for health and higher education themselves set, every year, the number of students allowed to continue after the first year: this was the numerus clausus.
+Article L631-1 in its own words, and its versions since 2004
+The text in force gives places to the universities: « Les capacités d'accueil des formations en deuxième et troisième années de premier cycle sont déterminées annuellement par les universités. » [our translation: “The intake capacities of the courses in the second and third years of the first cycle are determined annually by the universities.”] The State’s targets frame those of the universities: « Les objectifs pluriannuels d'admission en première année du deuxième cycle sont définis au regard d'objectifs nationaux pluriannuels relatifs au nombre de professionnels à former établis par l'Etat » [our translation: “The multi-year objectives for admission to the first year of the second cycle are defined in the light of national multi-year objectives on the number of professionals to be trained set by the State”].
+Candidates sit examinations for these places.
+The numerus clausus appeared in the versions of L631-1 in force from 2004 to 2020.
+The version that entered into force on 1 September 2020 (Law no.
+2019-774 of 24 July 2019) gives capacities to the universities, within the State’s targets; common usage calls this regime “numerus apertus”, a term the law does not use.
+Since 29 December 2023 (Law no.
+2023-1268 of 27 December 2023), the universities’ targets are those « qui tiennent compte des besoins de santé du territoire en priorité, puis des capacités de formation » [our translation: “which take into account the health needs of the territory as a priority, then training capacities”], whereas the 2020 version listed both without order.
+Since 29 June 2025 (Law no.
+2025-580 of 27 June 2025), the binding opinion of the territorial health councils is added to that of the regional health agency.
+From 2004 to 2010: « Le nombre des étudiants admis ainsi que les modalités de leur admission, à la fin de la première année du premier cycle, à poursuivre des études médicales, odontologiques, de sage-femme ou pharmaceutiques sont fixés, chaque année » [our translation: “The number of students admitted, and the terms of their admission, at the end of the first year of the first cycle, to continue medical, dental, midwifery or pharmaceutical studies are set each year”], by the two ministers.
+From 2010 to 2020: « Les ministres chargés de l'enseignement supérieur et de la santé déterminent par voie réglementaire » [our translation: “The ministers responsible for higher education and health determine by regulation”], among other things « Le nombre des étudiants admis dans chacune des filières à l'issue de la première année des études de santé » [our translation: “The number of students admitted to each course at the end of the first year of health studies”].
+From 1 September 2020 to 29 December 2023: « Ces objectifs pluriannuels, qui tiennent compte des capacités de formation et des besoins de santé du territoire, sont arrêtés par l'université sur avis conforme de l'agence régionale de santé ou des agences régionales de santé concernées. » [our translation: “These multi-year objectives, which take into account training capacities and the health needs of the territory, are set by the university on the binding opinion of the regional health agency or agencies concerned.”]
+Since 29 June 2025: « Ces objectifs pluriannuels, qui tiennent compte des besoins de santé du territoire en priorité, puis des capacités de formation, sont arrêtés par l'université sur avis conforme des conseils territoriaux de santé concernés et de l'agence régionale de santé ou des agences régionales de santé concernées. » [our translation: “These multi-year objectives, which take into account the health needs of the territory as a priority, then training capacities, are set by the university on the binding opinion of the territorial health councils concerned and of the regional health agency or agencies concerned.”]
+What this division has produced, the ONDPS measures.
+For 2021-2025, the national target set by the State was 51,505 doctors to be trained (order of 13 September 2021, according to the ONDPS).
+Universities admitted 55,078 students over these five years, to the second year of the first cycle or, through an alternative-entry route, to the third.
+In 2025, they admitted 11,133 for 11,277 places of intake capacity.
+The ONDPS concludes: « Les capacités d'accueil ont été quasiment saturées sur la période. » [our translation: “Intake capacities were almost saturated over the period.”] It also reports a forecast by the medical schools, not an observation of the new academic year: « Pour la rentrée 2026, les UFR n'anticipent pas d'augmentation de capacités d'accueil (0 % d'augmentation). » [our translation: “For the 2026 academic year, the medical schools do not anticipate any increase in intake capacities (0% increase).”] The targets for 2026-2030 are being prepared: on 3 July 2025, the ministers launched the « travaux préparatoires à la conférence nationale qui devra proposer les objectifs nationaux pluriannuels » [our translation: “preparatory work for the national conference that is to propose the national multi-year objectives”] (ONDPS).
+Raising the national target, which the ministers set by order, is one of the State’s levers.
+But actually increasing admissions also requires suitable university capacities, possibly additional resources and, depending on the decisions envisaged, a change in the legal framework.
+Places, for their part, are voted university by university; at the national level, admissions already fill them.
+Can the State impose more places?
+Within the legal framework currently in force, it sets the target, not the places.
+Since 29 June 2025, if the regional health agency and the territorial health councils consider that a university’s capacities do not match the targets it set itself, « cette dernière peut être appelée à mettre en œuvre des mesures visant à accroître ses capacités d'accueil » [our translation: “the latter may be called upon to implement measures to increase its intake capacities”]: the law says “may”, not “must”.
+It leaves to a decree the terms of such an increase, « en particulier en matière de moyens financiers et humains dégagés notamment par l'Etat » [our translation: “in particular as regards the financial and human resources made available, notably by the State”].
+The word “may” alone does not establish the absence of any obligation: one could arise from other texts or from these implementing arrangements.
+Where does the saturation come from?
+The ONDPS does not say, and this page does not know whether it lies in training placements, in supervising staff or in university budgets.
+National saturation says nothing about each university’s margins, nor about the resources that would allow its capacities to grow.
+How many students are admitted into the medical curriculum?
+Being admitted into the medical curriculum, in the sense of every series on this page, means obtaining a place in the second year of the first cycle, after a first year of study, or in the third year through an alternative-entry route.
+The ONDPS does not say how many of those admitted come through the second door.
+The first year is not counted.
+Places filled under the numerus clausus from 1972 to 2020 (DREES, source ONDPS), then students admitted from 2021 to 2025 (ONDPS), to the second year of the first cycle (the third for some alternative-entry routes), each at the year published by the source.
+No value is shifted to an assumed year of practice.
+Download · Cite · Data
+Do not mechanically shift these bars to infer a year of practice: the rules on duration have changed, students provide care before the end of the curriculum, and this series does not follow students individually until they practise.
+Places filled under the numerus clausus fell by a factor of 2.5 between 1972 and 1993, then rose again.
+There were 8,588 places filled in 1972, 3,500 in 1993.
+According to the ONDPS, admissions in 2021-2025 exceed by 27% the total numerus clausus of 2016-2020, alternative-entry routes included.
+Two breaks can be seen in the figure.
+From 2011 (partly from 2010), the DREES series adds to the main numerus clausus the alternative-entry routes (passerelles) and reorientation entries (droit au remords).
+In 2021, the numerus clausus disappears and the numbers come from the ONDPS, which records admissions with the universities: this step is not a jump in one and the same measure.
+Do students provide care before the end of the curriculum?
+Yes, from residency onwards, and the texts organise it: residents do their placements in hospital and in ambulatory care, « toujours sous supervision étroite » [our translation: “always under close supervision”] (interministerial instruction of 21 May 2026).
+The last year of general practice goes further. « La dernière année du diplôme d'études spécialisées de médecine générale est effectuée en stage, sous un régime d'autonomie supervisée » [our translation: “The last year of the diploma of specialised studies in general practice is carried out as an internship, under a regime of supervised autonomy”], in ambulatory practice alongside general practitioners, and as a priority in areas where the supply of care is insufficient or access to care difficult (Education Code, art.
+L632-2); a hospital placement is possible in that year only exceptionally.
+During this last year, the general practice resident works as a docteur junior, a doctor in the final supervised phase of training. « Les actes réalisés sous ce régime le sont par le docteur junior seul. » [our translation: “The acts performed under this regime are performed by the docteur junior alone.”] A practitioner can be called on at any time, and the act remains under that practitioner’s responsibility: alone for the act, then, but never without recourse.
+The texts organise this care; they do not measure its share of all care.
+The texts on residency and the docteur junior, quoted word for word
+Residency (instruction of 21 May 2026): « L'étudiant de troisième cycle, exerçant sous le statut d'interne, effectue des stages qui se déroulent en milieu hospitalier et en milieu ambulatoire, afin de découvrir la prise en charge globale du patient et de commencer à développer une autonomie progressive, toujours sous supervision étroite. » [our translation: “The third-cycle student, working with the status of intern, carries out internships in hospital and in ambulatory settings, in order to discover the overall care of the patient and to begin to develop progressive autonomy, always under close supervision.”]
+The last year (Education Code, art.
+L632-2): « La dernière année du diplôme d'études spécialisées de médecine générale est effectuée en stage, sous un régime d'autonomie supervisée », by approved practitioners, « dans des lieux agréés en pratique ambulatoire dans lesquels exercent un ou plusieurs médecins généralistes et en priorité dans les zones mentionnées au 1° de l'article L.
+1434-4 du code de la santé publique » [our translation: “in approved places of ambulatory practice where one or more general practitioners work, and as a priority in the areas mentioned in 1° of article L.
+1434-4 of the Public Health Code”].
+The exception: « A titre exceptionnel et par dérogation au premier alinéa du présent II, un stage peut être réalisé en milieu hospitalier ou extrahospitalier au cours de la dernière année du diplôme d'études spécialisées de médecine générale. » [our translation: “Exceptionally and by derogation from the first paragraph of this II, an internship may be carried out in a hospital or non-hospital setting during the last year of the diploma of specialised studies in general practice.”]
+The areas (Public Health Code, art.
+L1434-4): « Les zones caractérisées par une offre de soins insuffisante ou par des difficultés dans l'accès aux soins » [our translation: “The areas characterised by an insufficient supply of care or by difficulties in access to care”]
+The docteur junior (Public Health Code, art.
+R6153-1-2): « Les actes réalisés sous ce régime le sont par le docteur junior seul. » « La supervision est assurée par un praticien auquel le docteur junior peut avoir recours à tout moment de son exercice, conformément aux tableaux de service. » [our translation: “Supervision is provided by a practitioner whom the docteur junior can call on at any time in the course of his practice, in accordance with the duty rosters.”] « Le docteur junior exerce ses fonctions par délégation et sous la responsabilité du praticien dont il relève. » [our translation: “The docteur junior exercises his functions by delegation and under the responsibility of the practitioner he reports to.”]
+How long does a reform of the curriculum take to apply?
+The fourth year of general practice makes it possible to check this with exact dates, without projection.
+23 December 2022: the law on the financing of social security for 2023 creates this year (art.
+37), for students who enter residency at the start of the 2023 academic year.
+2 November 2026: the date planned by the instruction of 21 May 2026 for these residents to enter their fourth year, as docteurs juniors, « principalement en médecine ambulatoire » [our translation: “mainly in ambulatory medicine”].
+In autumn 2027 at the earliest: end of that year, since « À l'issue de cette quatrième année, la formation est validée par l'obtention du DES de médecine générale. » [our translation: “At the end of this fourth year, the training is validated by obtaining the DES in general practice.”]
+The reform created by the law of 23 December 2022 is scheduled to apply for the first time to the cohort concerned on 2 November 2026, when it enters a fourth year of residency with the status of docteur junior.
+This cohort’s diploma can be obtained in autumn 2027 at the earliest.
+This timetable establishes when the reform applies and when the new curriculum can be completed.
+It demonstrates neither additional consultations nor improved access to care.
+This reform must be distinguished from the decision to increase admissions, whose effects on the number of qualified doctors follow another chronology.
+Nor is the time a reform takes to apply the same thing as its effect on time: this one applies less than four years after the law, and it lengthens by one year the time needed to train a general practitioner.
+On 12 October 2026, the first of these years has not begun: the timetable is that of an implementing text, not an observed fact.
+When will patients see the difference?
+No series on this page answers that.
+The statistical service of the French health ministry (DREES) wrote in 2021 that « ce levier ne peut affecter la situation démographique qu’avec un délai équivalent à la durée des études concernées »: « il faut ainsi compter de cinq à dix ans (respectivement pour le cas des sages-femmes et des médecins) pour qu’une politique axée sur ce levier ne commence à produire ses effets » [our translation: “this lever can only affect the demographic situation with a delay equivalent to the length of the studies concerned: it therefore takes five to ten years (respectively for midwives and doctors) for a policy based on this lever to begin to produce its effects”] (Les Dossiers de la DREES No.
+76).
+Its object is the number of doctors, the “demographic situation”, not care: this delay and the care given by residents do not contradict each other, they concern two different objects.
+The number of practising doctors also depends on departures, choices of specialty, places of practice and doctors who qualified abroad, a stock present at a given date and not a flow of arrivals: on 1 January 2026, according to the DREES, 11.3% of practising doctors had obtained their diploma abroad, against 6.6% in 2012.
+That is 27,464 doctors out of 242,185.
+The place of the diploma does not indicate nationality, and this comparison does not measure any compensation of French training capacity.
+This page does not describe the other clocks a promise meets, such as training police officers or the length of schooling, for lack of having read their texts.
+One case shows that a clock can outlast the term of office; it does not say how many do.
+How should a promise that depends on training be judged?
+Three questions separate what such a promise can change during the term from what it can only set in motion.
+The clock of the texts: what length of training does the law impose, and since when?
+Here, at least ten years from the first year (rules applying since the 2023 academic year).
+The clock of capacity: who decides the number of places, and are they already filled?
+Here, each university, every year, within a State target; according to the ONDPS, they are almost saturated.
+The clock of the effect: what acts before the diploma, and what can only be measured afterwards?
+Here, residents provide care under supervision during their training; access to care depends on factors that none of these series measures.
+The same grid applies to any promise whose result depends on people to be trained, provided the texts of each profession are read.
+The clock of a promise Un président peut-il tenir ses promesses ?, the author's book, in French: contents, excerpts and reviews →
+Frequently asked questions
+How long does it take to train a general practitioner in France?
+Under the rules applying to students who enter residency (the third cycle) from the 2023 academic year, at least ten years from the first year: six semesters of first cycle, six semesters of second cycle (order of 8 April 2013), then a general practice residency of four years (Education Code, art.
+L632-2).
+From admission to the second year, at least nine years remain.
+These are minimum durations, without repeating a year, interruption or alternative-entry route; residents provide care during these years, under supervision.
+Who decides how many students study medicine in France?
+Since 1 September 2020, three tiers (Education Code, art.
+L631-1): the State sets national multi-year targets for the number of professionals to be trained; each university sets its targets for admission to the second cycle, on the binding opinion of the regional health agency and, since 29 June 2025, of the territorial health councils; each university also sets, every year, its intake capacities in the second and third years of the first cycle.
+Before that, the ministers for health and higher education set this number themselves every year: this was the numerus clausus.
+How many students are admitted into the French medical curriculum?
+11,133 in 2025, admitted to the second year of the first cycle (or the third, through an alternative-entry route) for 11,277 places of intake capacity, according to the ONDPS; 55,078 from 2021 to 2025.
+The first year of study is not counted.
+Places filled under the numerus clausus had been divided by 2.5 between 1972 (8,588) and 1993 (3,500), before rising again; the scope widened in 2010-2011 to alternative-entry routes (passerelles) and reorientation entries (droit au remords), and the numerus clausus ended after the 2020 intake.
+Sources
+Texts, read on Légifrance (API) and in DILA’s Journal officiel data (in French): order of 8 April 2013 on the regime of studies for the first and second cycles of medical studies, art.
+1; Education Code, art.
+L631-1 (version in force and versions that entered into force in 2004, 2010, 2020 and 2023) and L632-2; Law no.
+2022-1616 of 23 December 2022 on the financing of social security for 2023, art.
+37; Public Health Code, art.
+R6153-1-2 and L1434-4; Constitution, art.
+6, quoted in the English translation published by the Conseil constitutionnel.
+Interministerial instruction no.
+DGOS/RH2/DGESIP/2026/44 of 21 May 2026 on the implementation of the fourth year of the diploma of specialised studies in general practice (Bulletin officiel of the health ministry), an implementing text without binding force (in French).
+DREES, Quelle démographie récente et à venir pour les professions médicales et pharmaceutique ? [What recent and future demography for the medical and pharmaceutical professions?], Les Dossiers de la DREES no.
+76, March 2021, chart 8 (source ONDPS); demography of health professionals, RPPS, published 2 July 2026 (in French).
+ONDPS, review of the national multi-year targets 2021-2025 for the training of doctors, midwives, dentists and pharmacists, note of 19 December 2025 (in French).
+Download the data (CC BY 4.0 licence): CSV, long format; JSON, with definitions and the record of the checks (field names and some labels in French).
+This dataset is also archived on Zenodo, with the six others of the same series and their methods note, under a permanent identifier for citation: doi:10.5281/zenodo.23212664; the archived version predates the revision of 12 October 2026.
+How these figures were checked, and the gap that remains
+The figures, quotations, checks and charts are produced by a single script.
+Durations and quotations are read in the archived texts, the DREES series in its file, and the dates of the fourth-year timetable in the law and in the instruction.
+The admissions from 2021 to 2025 and the five-year totals, published as an image by the ONDPS, are transcribed: the script checks the sum of the annual admissions against the printed total (an error in one year offset by another would go unnoticed), finds that total, the 2025 admissions and capacity and the national target in the text of the document, compares the totals from 2001 to 2015 with the DREES series, and checks that the 2016-2020 total, read twice on the image, gives back the increase and the annual average that the text prints.
+It stops if a piece of data no longer meets the conditions on which the main sentences depend.
+The level of admission of those admitted in 2021-2025.
+The law provides that candidates « peuvent être admis en deuxième ou en troisième année du premier cycle » [our translation: “may be admitted to the second or third year of the first cycle”] (Education Code, art.
+L631-1).
+The ONDPS counts intake capacities as places offered « à partir de la 2ème ou 3ème année du 1er cycle » [our translation: “from the 2nd or 3rd year of the 1st cycle”] and specifies that « l'ONP comprend les admis de passerelles » [our translation: “the ONP includes those admitted through alternative-entry routes”].
+It compares those admitted with the total numerus clausus of 2016-2020, which includes alternative-entry routes.
+It does not publish the share of those admitted to the third year.
+The 27% increase.
+According to the ONDPS, 55,078 students were admitted to the second year or, through an alternative-entry route, to the third, from 2021 to 2025.
+The total numerus clausus of 2016-2020, alternative-entry routes included, was 43,518 places.
+The ONDPS thus compares students admitted with places, treating the numerus clausus as a number of admissions, an assumption it considers sound for medicine.
+The gap between the two sources.
+The DREES series matches exactly the five-year totals published by the ONDPS for 2001-2005, 2006-2010 and 2011-2015.
+For 2016-2020, the sum of the DREES values exceeds the ONDPS total by 101 places, about 0.2% of that total.
+That total, read twice on the image, is the only one of the two that gives back the 27% increase printed by the ONDPS (the DREES sum would give 26%): the gap is not a reading error.
+The DREES value for 2020 carries an asterisk whose legend was not found.
+The gap is published, not corrected.
+Reusing this page
+The charts, the data and a ready-made citation, under an open licence.
+Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it does not come apart from what makes it readable.
+Training a general practitioner in France, and the length of a presidential term
+Under the rules in force for students who entered residency from the 2023 academic year, the standard general practice curriculum in France takes at least ten years from the first year (nine from admission to the second year), twice the length of a presidential term.
+Comparison of scale only.
+Reading caveat.
+Minimum durations, without repeating a year, interruption or alternative-entry route, for students who entered residency from the 2023 academic year.
+Comparison of scale only: neither the effect of a policy nor the date of its first effects; residents provide care before the end.
+Order of 8 April 2013, art.
+1; Education Code, art.
+L632-2; Law no.
+2022-1616, art.
+37; Constitution, art.
+6
+Download PNG
+SVG
+Students admitted into the medical curriculum in France, 1972-2025
+Places filled in the second year of French medical studies were divided by 2.5 between 1972 and 1993 (3,500 places filled), then rose again; 55,078 students were admitted to the second year (or the third, through an alternative-entry route) from 2021 to 2025.
+Reading caveat.
+Admissions to the second year of the first cycle, or directly to the third for some alternative-entry routes.
+Until 2020, places filled under the numerus clausus, widened to alternative-entry routes and reorientation entries from 2010-2011; since 2021, students admitted.
+Each bar at the year published by the source, no shift.
+DREES, Dossier no.
+76 (2021), chart 8, source ONDPS (1972-2020); ONDPS, 2021-2025 report (admissions)
+Download PNG
+SVG
+Cite this page
+Lalut, Stéphane (2026).
+“Can a campaign promise produce results within five years?”.
+Légifrance, Conseil constitutionnel, Bulletin officiel, DREES and ONDPS data, retrieved 12 October 2026 (texts read on Légifrance on 5, 6, 11 and 12 October 2026; instruction of 21 May 2026; DREES, 2 July 2026; ONDPS, 19 December 2025). https://stephane-lalut.com/en/can-a-campaign-promise-produce-results-within-five-years/
+Copy citation
+In three sentences
+Under the rules applying to students who entered residency from the 2023 academic year, training a general practitioner in France takes at least ten years from the first year, twice the length of a presidential term; comparison of scale only.
+The number of students admitted to the second year is decided on three tiers: the State’s target, then the targets and capacities voted by each university.
+Places filled fell by a factor of 2.5 between 1972 and 1993, before rising again; 55,078 students were admitted to the second year (or the third, through an alternative-entry route) from 2021 to 2025.
+Copy summary
+The data
+The lengths of the general practice curriculum and of the term read in the texts, the places filled under the numerus clausus from 1972 to 2020, the students admitted to the second year (or the third, through an alternative-entry route) from 2021 to 2025 and the practising doctors who qualified abroad; the same content exists as CSV, in long format, readable in a spreadsheet.
+Download JSON CSV
+Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
+Text under copyright — short quotation free, full reproduction on request.
+The raw series belong to their producers (Légifrance, Conseil constitutionnel, Bulletin officiel, DREES and ONDPS), under their own terms.
+All resources: data, explainers and reference material →
+Share
+WhatsApp
+Bluesky
+LinkedIn
+X
+Email
+Copy link
