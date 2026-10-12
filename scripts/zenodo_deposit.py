@@ -379,9 +379,9 @@ DATASETS = {
     "promesses-2026-10": {
         "marqueurs": ["sept jeux de données vérifiés sur les institutions françaises"],
         "titre": ("Ce qu'un président peut décider, faire voter, faire appliquer et mesurer : sept jeux de données "
-                  "vérifiés sur les institutions françaises (version du 7 octobre 2026)"),
+                  "vérifiés sur les institutions françaises (version du 12 octobre 2026)"),
         "language": "fra",
-        "version": "2026-10-07",
+        "version": "2026-10-12",
         "description": (
             "<p>Sept jeux de données sur le chemin d'une promesse présidentielle en France : les huit dispositions que "
             "l'article 19 de la Constitution dispense de contreseing ; l'origine de chaque loi promulguée depuis 2012 et "
@@ -389,9 +389,10 @@ DATASETS = {
             "médecins ; le croisement du chômage au sens du BIT et des inscrits en catégorie A ; le registre des "
             "référendums nationaux et des référendums d'initiative partagée ; les votes publics de chaque État au "
             "Conseil de l'Union européenne sur les actes législatifs (2009-2026).</p>"
-            "<p>Chaque jeu est produit par un script unique qui relit les sources officielles archivées, refuse d'écrire "
-            "si une donnée cesse de soutenir une phrase publiée, et est contrôlé par un témoin indépendant lorsqu'un témoin comparable existe ; sinon, la page le dit et décrit les contrôles de cohérence appliqués. Aucun nombre "
-            "n'est saisi à la main. Chaque jeu accompagne une page publique de stephane-lalut.com, qui en donne la "
+            "<p>Chaque jeu est produit par un script unique qui relit les sources officielles archivées (avec leur "
+            "empreinte SHA-256), s'arrête si une donnée relue ne remplit plus les conditions dont dépendent les "
+            "principales phrases publiées, et est contrôlé par un témoin indépendant lorsqu'un témoin comparable existe ; sinon, la page le dit et décrit les contrôles de cohérence appliqués. Les valeurs que le script ne peut pas lire dans un fichier (comptes publiés dans des rapports, chiffres relevés sur une image) sont transcrites et, quand la source le permet, relues contre la pièce archivée ; la page de chaque jeu dit lesquelles. "
+            "Chaque jeu accompagne une page publique de stephane-lalut.com, qui en donne la "
             "lecture, les limites et les sources ; la note de méthode jointe décrit sources, témoins, limites et "
             "empreintes SHA-256 des fichiers.</p>"
             "<p><em>Seven verified datasets on what a French president can decide, get passed, get implemented and "
@@ -400,7 +401,8 @@ DATASETS = {
             "training, the overlap between ILO unemployment and registered jobseekers, the register of national and "
             "shared-initiative referendums, and the public votes of each Member State in the Council of the EU on "
             "legislative acts (2009-2026). Each dataset is produced by a single script that rereads archived official "
-            "sources and is checked against an independent witness where a comparable one exists; where none exists, the page says so and describes the consistency checks applied.</em></p>"),
+            "sources, stops if a reread figure no longer meets the conditions on which the main published sentences "
+            "rest, and is checked against an independent witness where a comparable one exists; where none exists, the page says so and describes the consistency checks applied.</em></p>"),
         "keywords": ["Constitution française", "contreseing", "procédure législative", "article 49.3",
                      "application des lois", "référendum", "référendum d'initiative partagée",
                      "Conseil de l'Union européenne", "votes au Conseil", "promesses électorales", "chômage BIT",
