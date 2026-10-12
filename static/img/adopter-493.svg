@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 397" role="img" font-variant-numeric="tabular-nums" aria-labelledby="a4-t a4-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 411" role="img" font-variant-numeric="tabular-nums" aria-labelledby="a4-t a4-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="a4-t">Engagements de responsabilité sur un texte (art. 49, al. 3)</title><desc id="a4-d">Barres horizontales par législature : engagements sur un projet de loi de finances ou de financement de la sécurité sociale, et sur un autre projet ou une proposition. XIVe (2012-2017) : 6 engagements sur 2 textes, aucun sur un projet de loi de finances ou de financement de la sécurité sociale ; XVe (2017-2022) : 1 engagement sur 1 texte, aucun sur un projet de loi de finances ou de financement de la sécurité sociale ; XVIe (2022-2024) : 23 engagements sur 6 textes, dont 21 sur un projet de loi de finances ou de financement de la sécurité sociale ; XVIIe (depuis 2024), en cours : 8 engagements sur 3 textes, tous sur un projet de loi de finances ou de financement de la sécurité sociale, 1 motion de censure adoptée.</desc>
-<rect width="720" height="397" fill="#ffffff"/>
+<rect width="720" height="411" fill="#ffffff"/>
 <text x="0.0" y="18.0" font-size="13" fill="#0A0A0E" text-anchor="start" font-weight="600">Engagements de responsabilité sur un texte (art. 49, al. 3)</text>
-<text x="0.0" y="36.0" font-size="12" fill="#52514e" text-anchor="start">nombre d&#x27;engagements, par législature ; un engagement par texte et par étape de lecture</text>
+<text x="0.0" y="36.0" font-size="12" fill="#52514e" text-anchor="start">nombre d&#x27;engagements, par législature ; chaque engagement est compté une fois</text>
 <rect x="0" y="49" width="11" height="11" fill="#184f95"/>
 <text x="16.0" y="58.0" font-size="10" fill="#52514e" text-anchor="start">projet de loi de finances ou de financement de la sécurité sociale</text>
 <rect x="401" y="49" width="11" height="11" fill="#c9c5c0"/>
@@ -43,7 +43,8 @@
 <text x="0.0" y="322.0" font-size="9" fill="#52514e" text-anchor="start">* en cours au 06/10/2026</text>
 <line x1="0" y1="332.0" x2="720" y2="332.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="347.0" font-size="11" fill="#52514e">Assemblée nationale : dossiers législatifs, bulletins statistiques, fiche n° 64 (engagements de responsabilité)</text>
-<text class="pied-note" x="0" y="361.0" font-size="11" fill="#52514e">Catégories de l'art. 49, al. 3 : la loi de programmation des finances publiques est un « autre projet ». Un engagement</text>
-<text class="pied-note" x="0" y="375.0" font-size="11" fill="#52514e">par texte et par étape de lecture. XVIIe en cours au 06/10/2026.</text>
-<text class="pied-licence" x="0" y="389.0" font-size="11" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/qui-peut-faire-adopter-une-loi/</text>
+<text class="pied-note" x="0" y="361.0" font-size="11" fill="#52514e">Catégories de l'art. 49, al. 3 : la loi de programmation des finances publiques est un « autre projet ». Chaque</text>
+<text class="pied-note" x="0" y="375.0" font-size="11" fill="#52514e">engagement est compté une fois ; un même projet peut en recevoir plusieurs, y compris au cours d'une même lecture.</text>
+<text class="pied-note" x="0" y="389.0" font-size="11" fill="#52514e">XVIIe en cours au 06/10/2026.</text>
+<text class="pied-licence" x="0" y="403.0" font-size="11" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/qui-peut-faire-adopter-une-loi/</text>
 </svg>

@@ -12,9 +12,9 @@
    "id": "493",
    "fichier": "adopter-493",
    "titre": "Engagements de responsabilité sur un texte (art. 49, al. 3)",
-   "montre": "Le Premier ministre a engagé la responsabilité du Gouvernement sur un texte (art. 49, al. 3) 6 fois sous la XIVe législature, 1 fois sous la XVe, 23 fois sous la XVIe, dont 21 sur un projet de loi de finances ou de financement de la sécurité sociale, et 8 fois sous la XVIIe, en cours au 06/10/2026 ; un engagement par texte et par étape de lecture.",
+   "montre": "Le Premier ministre a engagé la responsabilité du Gouvernement sur un texte (art. 49, al. 3) 6 fois sous la XIVe législature, 1 fois sous la XVe, 23 fois sous la XVIe, dont 21 sur un projet de loi de finances ou de financement de la sécurité sociale, et 8 fois sous la XVIIe, en cours au 06/10/2026 ; chaque engagement est compté une fois.",
    "source": "Assemblée nationale : dossiers législatifs, bulletins statistiques, fiche n° 64 (engagements de responsabilité)",
-   "precaution": "Catégories de l'art. 49, al. 3 : la loi de programmation des finances publiques est un « autre projet ». Un engagement par texte et par étape de lecture. XVIIe en cours au 06/10/2026."
+   "precaution": "Catégories de l'art. 49, al. 3 : la loi de programmation des finances publiques est un « autre projet ». Chaque engagement est compté une fois ; un même projet peut en recevoir plusieurs, y compris au cours d'une même lecture. XVIIe en cours au 06/10/2026."
   }
  ],
  "en": [
@@ -29,10 +29,10 @@
   {
    "id": "493",
    "fichier": "adopter-493-en",
-   "titre": "Bills made an issue of a vote of confidence (art. 49, para. 3)",
-   "montre": "The Prime Minister made the passing of a bill an issue of a vote of confidence (art. 49, para. 3) 6 times during the 14th legislature, once during the 15th, 23 times during the 16th, 21 of them on a Finance Bill or Social Security Financing Bill, and 8 times during the 17th, ongoing on 6 October 2026; one use per bill and per reading stage.",
+   "titre": "Uses of Article 49(3) on bills",
+   "montre": "The Prime Minister made the passing of a bill an issue of a vote of confidence (art. 49, para. 3) 6 times during the 14th legislature, once during the 15th, 23 times during the 16th, 21 of them on a Finance Bill or Social Security Financing Bill, and 8 times during the 17th, ongoing on 6 October 2026; each use is counted once.",
    "source": "National Assembly: legislative files, statistical bulletins, summary sheet no. 64 (Government responsibility)",
-   "precaution": "Categories of art. 49, para. 3: the public finance programming act is 'one other bill'. One use per bill and per reading stage. 17th ongoing on 6 October 2026."
+   "precaution": "Categories of art. 49, para. 3: the public finance programming act is 'one other bill'. Each use of Article 49(3) is counted once; the same bill may be subject to several uses, including during the same reading. 17th ongoing on 6 October 2026."
   }
  ]
 }

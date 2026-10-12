@@ -1,17 +1,17 @@
-# relu le 2026-10-12 ; texte servi de /qui-peut-faire-adopter-une-loi/, build de 060aec4 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /qui-peut-faire-adopter-une-loi/, build de b0eb930 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Qui peut faire adopter une loi ?
 Les lois viennent-elles surtout du Gouvernement ?
 Depuis la XVe législature (2017-2022), la majorité des lois ordinaires promulguées, hors traités, est issue d'une proposition de député ou de sénateur ; pour la XVe, c'est de peu (au moins 103 lois sur 202).
 Ce résultat dépend de ce qu'on compte : en y ajoutant les lois à procédure propre (budgets de l'État et de la sécurité sociale, lois qui complètent ou modifient la Constitution), la majorité parlementaire n'apparaît qu'avec la XVIe (2022-2024).
 Pourtant, environ neuf propositions de loi sur dix déposées à l'Assemblée nationale n'ont pas été examinées en séance avant la fin de leur législature.
-Les deux constats tiennent ensemble parce que faire adopter une loi demande plusieurs clés, que la Constitution répartit : déposer un texte est ouvert au Premier ministre comme à chaque parlementaire ; le faire venir en séance dépend d'un ordre du jour fixé par chaque assemblée, où le Gouvernement dispose de priorités ; quand les deux assemblées ne s'accordent pas, seul le Gouvernement peut demander à l'Assemblée nationale de statuer définitivement.
-Le vote de la loi appartient au Parlement, avec trois exceptions au vote sur le texte : l'engagement de responsabilité du Premier ministre (article 49, alinéa 3), les ordonnances budgétaires et le référendum.
+Les deux constats tiennent ensemble parce que faire adopter une loi demande plusieurs clés, que la Constitution répartit : le Premier ministre comme les parlementaires peuvent déposer, mais le Gouvernement a des priorités à l'ordre du jour et peut seul demander à l'Assemblée nationale de statuer définitivement.
+Le vote de la loi appartient au Parlement, et trois situations sont à distinguer : l'adoption d'un texte à une étape sans vote de l'Assemblée nationale sur celui-ci (article 49, alinéa 3), la mise en vigueur de dispositions budgétaires par ordonnance sans loi votée (articles 47 et 47-1) et l'adoption d'une loi par référendum (article 11).
 Promesses présidentielles
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
 La Constitution confie le vote de la loi au Parlement : « Le Parlement vote la loi. » (art.
 24).
-Trois procédures font exception au vote du Parlement sur le texte.
+Trois situations s’en distinguent.
 L’engagement de responsabilité du Premier ministre fait considérer un texte comme adopté à une étape, sauf si une motion de censure est adoptée (art.
 49, al.
 3).
@@ -19,7 +19,7 @@ Si le Parlement ne s’est pas prononcé dans les délais, les dispositions d’
 47 et 47-1).
 Enfin, une loi peut être adoptée par référendum (art.
 11).
-Cette page suit la voie que prennent presque toutes les lois, celle du Parlement, et compte loi par loi qui a déposé les lois promulguées depuis 2012, ce que sont devenues les propositions de loi déposées à l’Assemblée nationale, et combien de fois la responsabilité du Gouvernement a été engagée sur un texte.
+Cette page suit la voie que prennent presque toutes les lois, celle du Parlement : qui a déposé, loi par loi, les lois promulguées depuis 2012, ce que sont devenues les propositions de loi déposées à l’Assemblée nationale, combien de fois la responsabilité du Gouvernement a été engagée sur un texte.
 Réponse courte.
 Faire adopter une loi demande quatre clés.
 Déposer : « L'initiative des lois appartient concurremment au Premier ministre et aux membres du Parlement. » (art.
@@ -28,7 +28,7 @@ Venir en séance : chaque assemblée fixe son ordre du jour, mais le Gouvernemen
 48).
 Conclure : il faut un texte identique des deux assemblées, ou, à défaut, le dernier mot de l’Assemblée nationale, que seul le Gouvernement peut lui demander (art.
 45).
-Et le Premier ministre peut faire considérer un texte comme adopté à une étape, au risque d’une censure qui oblige le Gouvernement à démissionner (art.
+Et le Premier ministre peut engager la responsabilité du Gouvernement sur un texte, au risque d’une censure (art.
 49 et 50).
 Le Gouvernement ne fait donc pas adopter les lois seul, et les parlementaires, qui déposent la majorité des lois promulguées depuis 2017 dans le champ étudié, ne tiennent pas seuls les autres clés.
 Qui est à l’origine des lois promulguées ?
@@ -93,7 +93,8 @@ Le champ change-t-il la réponse ?
 Pour la XVe législature, oui.
 Sous la XVe, 53 % des lois du champ étudié sont d’origine parlementaire, mais 46 % seulement toutes natures réunies hors traités (114 lois sur 249).
 Ce second compte réintègre les lois financières, organiques et constitutionnelles ; il donne aussi 42 % sous la XIVe, 58 % sous la XVIe et 76 % sous la XVIIe.
-La majorité parlementaire de la XVe dépend donc du champ retenu ; celle des XVIe et XVIIe n’en dépend pas.
+La majorité parlementaire de la XVe dépend donc du champ retenu.
+Celle des XVIe et XVIIe n’en dépend pas.
 Ces lois sont écartées du compte principal parce que leur origine ou leur procédure est fixée à part.
 Les articles 47 et 47-1 de la Constitution ne parlent que de projets de loi de finances ou de financement de la sécurité sociale, et toutes ces lois viennent ici d’un projet du Gouvernement.
 Les lois organiques suivent leurs propres règles (art.
@@ -243,10 +244,12 @@ Et il garantit un jour de séance par mois aux groupes d’opposition et aux gro
 L’ordre du jour est donc partagé, et une priorité d’ordre du jour ne garantit pas l’adoption d’un texte.
 Une autre règle limite ce que les parlementaires peuvent proposer : leurs propositions et amendements ne sont pas recevables si leur adoption diminuait les ressources publiques, ou créait ou aggravait une charge publique (art.
 40).
+L’Assemblée nationale n’admet aucune compensation d’une charge, mais admet une perte de recettes compensée par une autre recette, le « gage ».
 Les données de cette page ne disent pas lequel de ces filtres a écarté telle ou telle proposition : elles ne contiennent ni les décisions d’inscription à l’ordre du jour, ni les déclarations d’irrecevabilité.
 La lettre des articles 48 et 40
 Article 48, alinéa 2 : « Deux semaines de séance sur quatre sont réservées par priorité, et dans l'ordre que le Gouvernement a fixé, à l'examen des textes et aux débats dont il demande l'inscription à l'ordre du jour. » Alinéa 3 : « En outre, l'examen des projets de loi de finances, des projets de loi de financement de la sécurité sociale et, sous réserve des dispositions de l'alinéa suivant, des textes transmis par l'autre assemblée depuis six semaines au moins, des projets relatifs aux états de crise et des demandes d'autorisation visées à l'article 35 est, à la demande du Gouvernement, inscrit à l'ordre du jour par priorité. » Alinéa 5 : « Un jour de séance par mois est réservé à un ordre du jour arrêté par chaque assemblée à l'initiative des groupes d'opposition de l'assemblée intéressée ainsi qu'à celle des groupes minoritaires. »
 Article 40 : « Les propositions et amendements formulés par les membres du Parlement ne sont pas recevables lorsque leur adoption aurait pour conséquence soit une diminution des ressources publiques, soit la création ou l'aggravation d'une charge publique. »
+Selon la fiche de synthèse n° 52 de l’Assemblée nationale (septembre 2023), à propos des « ressources publiques », au pluriel : « L'emploi du pluriel a pour effet d'autoriser la compensation d'une perte de recettes par l'augmentation d'une autre recette. » Pour « une charge publique », au singulier, « la création ou l'aggravation d'une charge ne peut être gagée ».
 Qui a le dernier mot entre les deux assemblées ?
 Le principe est l’accord : « Tout projet ou proposition de loi est examiné successivement dans les deux Assemblées du Parlement en vue de l'adoption d'un texte identique. » (Constitution, art.
 45).
@@ -268,16 +271,16 @@ Article 44, alinéa 3 : « Si le Gouvernement le demande, l'Assemblée saisie se
 Que change l’article 49, alinéa 3 ?
 Il permet au Premier ministre, après délibération du Conseil des ministres, d’engager la responsabilité du Gouvernement devant l’Assemblée nationale sur un texte : le texte est alors considéré comme adopté à cette étape de son examen, sans que les députés votent sur lui, sauf si une motion de censure, déposée dans les vingt-quatre heures qui suivent, est votée.
 L’alinéa vise les projets de loi de finances et de financement de la sécurité sociale ; hors de ces textes, le Premier ministre ne peut y recourir que pour un autre projet ou une proposition de loi par session.
-Le texte n’est pas pour autant adopté définitivement : l’engagement vaut pour une étape, et l’examen continue ; c’est pourquoi les données comptent un engagement par texte et par étape de lecture.
-La contrepartie pèse sur le Gouvernement, non sur le texte.
-Les députés peuvent déposer une motion de censure, que l’alinéa 2 ne laisse adopter qu’à la majorité des membres composant l’Assemblée, seuls les votes favorables étant recensés.
-Si elle est adoptée, le texte n’est pas considéré comme adopté, et le Premier ministre doit remettre au Président de la République la démission du Gouvernement (art.
+Le texte n’est pas pour autant adopté définitivement : l’engagement vaut pour une étape, et l’examen continue.
+Un même projet peut recevoir plusieurs engagements, y compris au cours d’une même lecture ; chacun est compté une fois.
+La motion de censure vise le Gouvernement, et l’alinéa 2 ne la laisse adopter qu’à la majorité des membres composant l’Assemblée, seuls les votes favorables étant recensés.
+Si elle est adoptée, le texte n’est pas considéré comme adopté à cette étape, et le Gouvernement doit remettre sa démission (art.
 50).
 La lettre des articles 49 et 50
 Article 49, alinéa 3 : « Le Premier ministre peut, après délibération du Conseil des ministres, engager la responsabilité du Gouvernement devant l'Assemblée nationale sur le vote d'un projet de loi de finances ou de financement de la sécurité sociale.
 Dans ce cas, ce projet est considéré comme adopté, sauf si une motion de censure, déposée dans les vingt-quatre heures qui suivent, est votée dans les conditions prévues à l'alinéa précédent. » Et : « Le Premier ministre peut, en outre, recourir à cette procédure pour un autre projet ou une proposition de loi par session. » Alinéa 2 : « Seuls sont recensés les votes favorables à la motion de censure qui ne peut être adoptée qu'à la majorité des membres composant l'Assemblée. »
 Article 50 : « Lorsque l'Assemblée nationale adopte une motion de censure ou lorsqu'elle désapprouve le programme ou une déclaration de politique générale du Gouvernement, le Premier ministre doit remettre au Président de la République la démission du Gouvernement. »
-Engagements de responsabilité du Gouvernement sur un texte, un par texte et par étape de lecture, selon les catégories de l’article 49, alinéa 3 : la loi de programmation des finances publiques y relève d’« un autre projet ».
+Engagements de responsabilité du Gouvernement sur un texte, chacun compté une fois, selon les catégories de l’article 49, alinéa 3 : la loi de programmation des finances publiques y relève d’« un autre projet ».
 Ce relevé porte sur tous les textes, lois de finances comprises.
 Télécharger · Citer · Données
 Les valeurs de la figure en tableau
@@ -327,7 +330,7 @@ Ces nombres décrivent la procédure suivie, non le contenu des textes ni ce qu�
 Aucune motion de censure n’a été adoptée sur ces engagements, de la XIVe à la XVIe législature.
 Le 2 décembre 2024, la responsabilité du Gouvernement a été engagée sur le texte de la commission mixte paritaire du projet de loi de financement de la sécurité sociale pour 2025 ; selon la même fiche, « La première motion déposée a été adoptée selon la majorité qualifiée requise ».
 Le texte n’a pas été considéré comme adopté à cette étape, et le Gouvernement a dû remettre sa démission.
-Les deux autres exceptions au vote sur le texte.
+Les deux autres situations.
 Si le Parlement ne s’est pas prononcé dans le délai que fixe la Constitution, les dispositions du projet de budget de l’État (art.
 47) ou de celui de la sécurité sociale (art.
 47-1) peuvent être mises en vigueur par ordonnance.
@@ -349,7 +352,8 @@ Comment juger une promesse qui demande une loi ?
 Trois questions suffisent à situer une promesse de loi, sans rien supposer de son contenu.
 Qui déposera le texte ?
 Le Gouvernement ou un parlementaire.
-Si la mesure diminue les ressources publiques, ou crée ou aggrave une charge publique, une proposition ou un amendement de parlementaire n’est pas recevable ; l’article 40 ne vise pas les textes du Gouvernement.
+Une proposition ou un amendement de parlementaire ne peut créer ou aggraver une charge publique, et une perte de recettes doit y être compensée par une autre recette (art.
+40, tel que l’Assemblée nationale l’applique) ; cette règle ne vise pas les textes du Gouvernement.
 Qui l’inscrira à l’ordre du jour ?
 Le Gouvernement sur ses semaines prioritaires, une assemblée sur les siennes, un groupe d’opposition ou minoritaire sur son jour mensuel (art.
 48).
@@ -380,14 +384,11 @@ Questions fréquentes
 Qui peut proposer une loi en France ?
 Selon l'article 39 de la Constitution, « L'initiative des lois appartient concurremment au Premier ministre et aux membres du Parlement. » Un texte du Gouvernement est un projet de loi ; un texte d'un député ou d'un sénateur est une proposition de loi.
 Dans le champ étudié (hors lois autorisant un traité, lois de finances et de financement de la sécurité sociale, lois organiques et lois constitutionnelles), 55 des 83 lois promulguées sous la XVIe législature étaient issues d'une proposition, 28 d'un projet.
-Une proposition n'est toutefois pas recevable si son adoption diminuait les ressources publiques ou créait ou aggravait une charge publique (article 40).
+Une proposition n'est toutefois pas recevable si elle crée ou aggrave une charge publique, ni si elle diminue les ressources publiques sans compenser la perte par une autre recette (article 40, tel que l'Assemblée nationale l'applique).
 Une loi peut-elle être adoptée sans vote du Parlement sur son texte ?
-Oui, dans trois cas.
-Le Premier ministre peut, après délibération du Conseil des ministres, engager la responsabilité du Gouvernement sur un texte : celui-ci est considéré comme adopté à cette étape, sauf si une motion de censure est adoptée, et le Gouvernement doit alors démissionner (articles 49, alinéa 3, et 50).
-Si le Parlement ne s'est pas prononcé dans les délais, les dispositions d'un projet de loi de finances ou de financement de la sécurité sociale peuvent être mises en vigueur par ordonnance, sans devenir une loi votée (articles 47 et 47-1).
-Et une loi peut être adoptée par référendum (article 11).
+Trois situations sont à distinguer : l'engagement de responsabilité du Gouvernement, qui fait considérer un texte comme adopté à une étape sans vote des députés sur lui, sauf censure (articles 49, alinéa 3, et 50) ; la mise en vigueur d'un budget par ordonnance si le Parlement ne s'est pas prononcé dans les délais, sans loi votée (articles 47 et 47-1) ; l'adoption d'une loi par référendum (article 11).
 Sources
-Assemblée nationale, données ouvertes des dossiers législatifs des XIVe à XVIIe législatures (version du 06/10/2026) ; bulletins statistiques annuels ; fiche de synthèse n° 64 sur l’engagement de la responsabilité du Gouvernement.
+Assemblée nationale, données ouvertes des dossiers législatifs des XIVe à XVIIe législatures (version du 06/10/2026) ; bulletins statistiques annuels ; fiches de synthèse n° 64 sur l’engagement de la responsabilité du Gouvernement et n° 52 sur la recevabilité financière des initiatives parlementaires.
 Sénat, base Dosleg (version du 06/10/2026) ; rapport d’information n° 802 (2025-2026) sur l’application des lois, p.
 44.
 Journal officiel, données de la DILA ; Constitution, art.
@@ -416,12 +417,12 @@ Engagements de responsabilité sur un texte (art.
 3)
 Le Premier ministre a engagé la responsabilité du Gouvernement sur un texte (art.
 49, al.
-3) 6 fois sous la XIVe législature, 1 fois sous la XVe, 23 fois sous la XVIe, dont 21 sur un projet de loi de finances ou de financement de la sécurité sociale, et 8 fois sous la XVIIe, en cours au 06/10/2026 ; un engagement par texte et par étape de lecture.
+3) 6 fois sous la XIVe législature, 1 fois sous la XVe, 23 fois sous la XVIe, dont 21 sur un projet de loi de finances ou de financement de la sécurité sociale, et 8 fois sous la XVIIe, en cours au 06/10/2026 ; chaque engagement est compté une fois.
 Précaution d'interprétation.
 Catégories de l'art.
 49, al.
 3 : la loi de programmation des finances publiques est un « autre projet ».
-Un engagement par texte et par étape de lecture.
+Chaque engagement est compté une fois ; un même projet peut en recevoir plusieurs, y compris au cours d'une même lecture.
 XVIIe en cours au 06/10/2026.
 Assemblée nationale : dossiers législatifs, bulletins statistiques, fiche n° 64 (engagements de responsabilité)
 Télécharger en PNG

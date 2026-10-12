@@ -9,7 +9,8 @@ D:/PRO/06_PROMOTION/RECHERCHE_LYCEES_LECTURE_2026-10-09/REFONTE_PILOTE/ADOPTER/A
        ordinaires ; les natures exclues (traités, lois financières, organiques, constitutionnelles) sont nommées par la
        liste EXCLUES et données à part ; origine « toutes natures hors traités » calculée (la majorité parlementaire de la
        XVe dépend du champ, celle des XVIe et XVIIe non). Concordance AN / Dosleg loi par loi, aucun désaccord.
-  E3 — engagements de responsabilité (art. 49, al. 3), un par texte et par étape ; motions liées ; lois financières
+  E3 — engagements de responsabilité (art. 49, al. 3), chacun compté une fois (un même projet peut en recevoir
+       plusieurs, y compris au cours d'une même lecture) ; motions liées ; lois financières
        promulguées ayant fait l'objet d'au moins un engagement (jointure par l'identifiant de dossier de l'Assemblée).
   E1 — parcours des propositions de loi déposées à l'Assemblée jusqu'à la séance, état à la fin de la législature.
        ÉCART AU PROTOCOLE DÉCLARÉ (décision de l'auteur, 06/10/2026, option 2) : le témoin des bulletins de l'AN n'est
@@ -19,13 +20,14 @@ D:/PRO/06_PROMOTION/RECHERCHE_LYCEES_LECTURE_2026-10-09/REFONTE_PILOTE/ADOPTER/A
 Sources (scripts/sources_adopter/, constituées par extraire_sources.py) : registre loi par loi e2_lois.csv (JO, AN,
 Dosleg, DOLE) ; e3_engagements.csv ; bulletins statistiques de l'AN (bulletins_493.csv : texte extrait ;
 bulletins_depots.csv : transcrit à la main depuis l'image des pages, témoin du pire cas) ; fiche n° 64 de l'AN et
-rapport n° 802 du Sénat, p. 44 (pages_temoins.json) ; Constitution, art. 11, 24, 39, 40, 44, 45, 46, 47, 47-1, 48, 49,
+rapport n° 802 du Sénat, p. 44 (pages_temoins.json) ; fiche n° 52 de l'AN sur la recevabilité financière (septembre
+2023 ; PDF archivé et son texte, an_fiche52_<sha256>.{pdf,json}, passe B3 du 12/10/2026) ; Constitution, art. 11, 24, 39, 40, 44, 45, 46, 47, 47-1, 48, 49,
 50 (réponses Légifrance archivées, legifrance_<sha256>.json).
 
 Gardes (toutes ARRÊTENT, rien n'est écrit) — elles vérifient des conditions sur les données dont dépendent les
 principales phrases ; elles ne relisent pas le texte servi :
   B1  articles de la Constitution en vigueur, citations retrouvées mot pour mot (FR Légifrance, EN Conseil
-      constitutionnel) ; citations des témoins ;
+      constitutionnel) ; citations des témoins ; empreinte du PDF archivé de la fiche n° 52 ;
   B2  E2 : aucun désaccord d'origine AN / Dosleg ; bornes [P - source unique ; P] ; champ : moins de la moitié sous la
       XIVe, plus de la moitié sous les XVe à XVIIe sur la borne basse, « de peu » pour la XVe ; toutes natures hors
       traités : la XVe sous la moitié (« dépend du champ »), XVIe et XVIIe au-dessus sur la borne basse ; lois
@@ -34,6 +36,10 @@ principales phrases ; elles ne relisent pas le texte servi :
   B3  TÉMOINS : par session 2017-2018 à 2024-2025, nombre de lois hors traités = champ du baromètre d'Appliquer
       (autre producteur) ; 2024-2025 : 45 lois parlementaires sur 56, comme le publie le Sénat ; 2023-2024 : 58 % à
       l'unité inférieure, 59 % à l'arrondi (phrase qui explique l'écart) ;
+  B8  (passe B3, 12/10/2026) unité de E3 : le compte est celui des actes (une ligne par engagement, aucun acte
+      deux fois) ; au moins un couple (texte, étape) porte plusieurs engagements (PLF 2023, première lecture : 19/10 et
+      02/11/2022) — sinon le libellé « un même projet peut en recevoir plusieurs, y compris au cours d'une même lecture »
+      serait faux ;
   B4  E3 : engagements par législature = fiche n° 64 de l'AN ; = bulletins, session par session ; catégories de
       l'art. 49, al. 3 (contre-expertise PRO-20261006-144558, P4) ; motions adoptées ;
   B5  E1 : excès de dépôts sur les bulletins ; « plus de la moitié » sur le pire cas ; jeton Zpct seulement si son
@@ -59,6 +65,7 @@ from __future__ import annotations
 import collections
 import copy
 import csv
+import hashlib
 import html
 import io
 import json
@@ -117,6 +124,9 @@ F471 = "legifrance_74afd091f62437967e0ac556cbc0b4753a8b19d4a449da0d160ddeee23200
 F48 = "legifrance_376cbf6be973f815b0e9c33efecf371b16a12234c1193d3601a1df641c7b12bb.json"
 F49 = "legifrance_8a30c40da44752bff91c17c1b15577bd338063c08a795785629c90d08ea40ccd.json"
 F50 = "legifrance_eb4347955dda9a39f95486ad1c5b7491fc627b86317e679bd4716f1afa8857d1.json"
+# Fiche de synthèse n° 52 de l'AN (recevabilité financière, septembre 2023), téléchargée le 12/10/2026 : PDF archivé tel
+# quel et son texte (PyMuPDF, même normalisation que extraire_sources.py) ; l'empreinte du PDF est vérifiée (B1).
+F52 = "an_fiche52_c81ff4441e4556c1676ef01ee1a0664afe5ad1fdda8bde1f54e6887543374c68"
 CONST = {  # clé -> (fichier, citation exacte)
     "11a": (F11, "Lorsque le référendum a conclu à l'adoption du projet ou de la proposition de loi, le Président de la "
                  "République promulgue la loi dans les quinze jours qui suivent la proclamation des résultats de la "
@@ -243,6 +253,8 @@ TEMOINS_TR = {
     "cit_censure": "The first motion tabled was carried by the required qualified majority",
     "cit_senat_origine": "Over the session, 80% of the laws adopted (45 out of 56) originated as private members' bills, against 58% in "
                          "2023-2024",
+    "cit_fiche52": "The use of the plural has the effect of allowing a loss of revenue to be offset by an increase in another revenue.",
+    "cit_fiche52b": "the creation or increase of a charge cannot be offset",
 }
 MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"]
 MOIS_EN = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November",
@@ -255,6 +267,9 @@ TEMOINS = {
     "cit_censure": ("fiche64", "La première motion déposée a été adoptée selon la majorité qualifiée requise"),
     "cit_senat_origine": ("r25-802|44", "Sur la session, 80 % des lois adoptées (45 sur 56) sont d'origine parlementaire, "
                           "contre 58 % en 2023-2024"),
+    "cit_fiche52": ("fiche52", "L'emploi du pluriel a pour effet d'autoriser la compensation d'une perte de recettes par "
+                    "l'augmentation d'une autre recette."),
+    "cit_fiche52b": ("fiche52", "la création ou l'aggravation d'une charge ne peut être gagée"),
 }
 # Catégorie de l'art. 49, al. 3 : projet de loi de finances ou de financement de la sécurité sociale (rectificatives
 # comprises) ; la loi de programmation des finances publiques relève de « un autre projet » (PRO-20261006-144558, P4).
@@ -304,10 +319,13 @@ def lire() -> dict:
         a = json.loads((SRC / f).read_text(encoding="utf-8"))
         a = a.get("contenu") or a.get("article")
         const[k] = {"etat": a["etat"], "texte": norm(a["texte"]), "id": a["id"]}
+    pages = json.loads((SRC / "pages_temoins.json").read_text(encoding="utf-8"))
+    pages.update(json.loads((SRC / (F52 + ".json")).read_text(encoding="utf-8")))
+    pages["fiche52"]["sha256_lu"] = hashlib.sha256((SRC / (F52 + ".pdf")).read_bytes()).hexdigest()
     return {"const": const, "lois": lire_csv(SRC / "e2_lois.csv"), "eng": lire_csv(SRC / "e3_engagements.csv"),
             "bull": lire_csv(SRC / "bulletins_493.csv"), "reg": lire_csv(REG_APPLIQUER, ";"),
             "e1": lire_csv(SRC / "e1_initiatives_extrait.csv"), "dep": lire_csv(SRC / "bulletins_depots.csv"),
-            "pages": json.loads((SRC / "pages_temoins.json").read_text(encoding="utf-8"))}
+            "pages": pages}
 
 
 def parl(r: dict) -> bool:
@@ -321,6 +339,10 @@ def calculer(S: dict) -> tuple[dict, list[str]]:
         if S["const"][k]["etat"] != "VIGUEUR" or norm(c) not in S["const"][k]["texte"]:
             raise Arret("B1 : Constitution art. %s : texte non en vigueur ou citation introuvable" % k)
         cit["cit_art" + k] = norm(c)
+    f52 = S["pages"]["fiche52"]
+    if f52["sha256_lu"] != f52["sha256_document"] or not F52.endswith(f52["sha256_document"]):
+        raise Arret("B1 : fiche52 : empreinte du PDF archive %s != texte extrait %s"
+                    % (f52["sha256_lu"][:12], f52["sha256_document"][:12]))
     for k, (pg, c) in TEMOINS.items():
         if norm(c) not in S["pages"][pg]["texte"]:
             raise Arret("B1 : citation %s absente de %s" % (k, pg))
@@ -422,8 +444,25 @@ def calculer(S: dict) -> tuple[dict, list[str]]:
     g.append("B3 : champ par session = barometre (8 sessions) ; 2024-2025 45/56 = Senat ; 2023-2024 %d/%d = %.1f %%"
              % (ses["2023-2024"]["P"], ses["2023-2024"]["N"], p2324))
 
-    # --- E3 (B4)
+    # --- B8 (passe B3, 12/10/2026) : unité de E3. Le compte est celui des actes ; un même projet peut recevoir plusieurs
+    # engagements au cours d'une même lecture (libellé des figures, des fiches et des définitions).
     E = S["eng"]
+    actes = collections.Counter((r["dossier_texte"], r["etape"], r["date"]) for r in E)
+    doubles = sorted(k for k, v in actes.items() if v > 1)
+    if doubles:
+        raise Arret("B8 : acte(s) compte(s) deux fois : %s" % doubles[:3])
+    if sum(1 for r in E if r["legislature"] in LEGS4) != len(E):
+        raise Arret("B8 : engagement(s) hors des legislatures comptees")
+    couples = collections.Counter((r["dossier_texte"], r["etape"]) for r in E)
+    plusieurs = sorted(k for k, v in couples.items() if v > 1)
+    if not plusieurs:
+        raise Arret("B8 : aucun couple (texte, etape) a plusieurs engagements : « un meme projet peut en recevoir plusieurs, "
+                    "y compris au cours d'une meme lecture » faux")
+    plf23 = sorted(r["date"] for r in E if r["titre"] == "Projet de loi de finances pour 2023" and r["etape"] == "première lecture")
+    g.append("B8 : %d engagements = %d actes distincts ; %d couples (texte, etape) a plusieurs engagements, dont PLF 2023 en "
+             "premiere lecture (%s)" % (len(E), len(actes), len(plusieurs), ", ".join(plf23)))
+
+    # --- E3 (B4)
     eng = {}
     for l in LEGS4:
         e = [r for r in E if r["legislature"] == l]
@@ -701,7 +740,8 @@ T = {
                     "lois organiques, financières et constitutionnelles réintégrées, traités toujours exclus.",
            "src2": "Assemblée nationale : dossiers législatifs, bulletins statistiques, fiche n° 64 (engagements de responsabilité)",
            "note2": "Catégories de l'art. 49, al. 3 : la loi de programmation des finances publiques est un « autre projet ». "
-                    "Un engagement par texte et par étape de lecture. XVIIe en cours au " + RELEVE + ".",
+                    "Chaque engagement est compté une fois ; un même projet peut en recevoir plusieurs, y compris au cours "
+                    "d'une même lecture. XVIIe en cours au " + RELEVE + ".",
            "t1": "Qui est à l'origine des lois promulguées ?",
            "s1": "part des lois du champ étudié, par législature de promulgation ; pointillés : la moitié",
            "l1": ["proposition déposée à l'Assemblée", "proposition déposée au Sénat", "projet du Gouvernement"],
@@ -709,7 +749,7 @@ T = {
            "au_moins": "(au moins {})", "toutes": "toutes natures : {}", "moitie": "moitié",
            "encours": "* en cours au " + RELEVE, "pc": "{}\u00a0%",
            "t2": "Engagements de responsabilité sur un texte (art. 49, al. 3)",
-           "s2": "nombre d'engagements, par législature ; un engagement par texte et par étape de lecture",
+           "s2": "nombre d'engagements, par législature ; chaque engagement est compté une fois",
            "l2": ["projet de loi de finances ou de financement de la sécurité sociale", "autre projet ou proposition"],
            "eng": ("engagement", "engagements"), "texte": ("texte", "textes"), "sur": "sur",
            "dont": "dont {} sur un projet de loi de finances ou de financement de la sécurité sociale",
@@ -720,16 +760,17 @@ T = {
            "note1": "Scope: laws promulgated, {champ}. Origin at the initial tabling, not influence. All kinds: same count with "
                     "institutional, finance and constitutional acts put back in, treaties still excluded.",
            "src2": "National Assembly: legislative files, statistical bulletins, summary sheet no. 64 (Government responsibility)",
-           "note2": "Categories of art. 49, para. 3: the public finance programming act is 'one other bill'. One use per bill "
-                    "and per reading stage. 17th ongoing on 6 October 2026.",
+           "note2": "Categories of art. 49, para. 3: the public finance programming act is 'one other bill'. Each use of "
+                    "Article 49(3) is counted once; the same bill may be subject to several uses, including during the same "
+                    "reading. 17th ongoing on 6 October 2026.",
            "t1": "Who initiated the laws promulgated in France?",
            "s1": "share of the laws in the scope studied, by legislature of promulgation; dotted line: half",
            "l1": ["private member's bill, National Assembly", "private member's bill, Senate", "Government bill"],
            "bb": "lower bound: origin established by both sources",
            "au_moins": "(at least {})", "toutes": "all kinds: {}", "moitie": "half",
            "encours": "* ongoing on 6 October 2026", "pc": "{}%",
-           "t2": "Bills made an issue of a vote of confidence (art. 49, para. 3)",
-           "s2": "number of uses, by legislature; one per bill and per reading stage",
+           "t2": "Uses of Article 49(3) on bills",
+           "s2": "number of uses, by legislature; each use is counted once",
            "l2": ["Finance Bill or Social Security Financing Bill", "other bill"],
            "eng": ("use", "uses"), "texte": ("bill", "bills"), "sur": "on",
            "dont": "{} of them on a Finance Bill or Social Security Financing Bill",
@@ -1039,7 +1080,7 @@ MONTRE = {
            "493": "Le Premier ministre a engagé la responsabilité du Gouvernement sur un texte (art. 49, al. 3) {E14} fois sous "
                   "la XIVe législature, {Efois15} sous la XVe, {E16} fois sous la XVIe, dont {Efin16} sur un projet de loi "
                   "de finances ou de financement de la sécurité sociale, et {E17} fois sous la XVIIe, en cours au {releve} ; "
-                  "un engagement par texte et par étape de lecture."},
+                  "chaque engagement est compté une fois."},
     "en": {"origine": "In the scope studied ({champ}), the share of the laws promulgated in France that arose from a private "
                       "member's bill is {Ppct14}% during the 14th legislature, {Ppct15}% during the 15th (at least "
                       "{Pminpct15}%), {Ppct16}% during the 16th and {Ppct17}% during the 17th, ongoing on {releve}; all kinds "
@@ -1047,8 +1088,8 @@ MONTRE = {
                       "tabling, not influence.",
            "493": "The Prime Minister made the passing of a bill an issue of a vote of confidence (art. 49, para. 3) {E14} times "
                   "during the 14th legislature, {Efois15} during the 15th, {E16} times during the 16th, {Efin16} of them on a "
-                  "Finance Bill or Social Security Financing Bill, and {E17} times during the 17th, ongoing on {releve}; one "
-                  "use per bill and per reading stage."},
+                  "Finance Bill or Social Security Financing Bill, and {E17} times during the 17th, ongoing on {releve}; each "
+                  "use is counted once."},
 }
 
 
@@ -1149,6 +1190,23 @@ def autotest(S: dict) -> list[str]:
             if r["numero"] == "2023-1322":
                 r["nature"] = "ordinaire"
 
+    def unite(m):  # un seul engagement gardé par couple (texte, étape) : l'ancien libellé, faux
+        vus, garde = set(), []
+        for r in m["eng"]:
+            if (r["dossier_texte"], r["etape"]) not in vus:
+                vus.add((r["dossier_texte"], r["etape"]))
+                garde.append(r)
+        m["eng"] = garde
+
+    def double(m):  # un même acte compté deux fois
+        m["eng"].append(dict(m["eng"][0]))
+
+    def fiche52(m):
+        m["pages"]["fiche52"]["texte"] = m["pages"]["fiche52"]["texte"].replace("perte de recettes", "perte de ressources")
+
+    def pdf52(m):  # PDF archivé de la fiche n° 52 remplacé
+        m["pages"]["fiche52"]["sha256_lu"] = "0" * 64
+
     def projets(m):  # projets de loi déposés à l'Assemblée sous la XIVe portés à 400 (bulletins)
         r0 = [r for r in m["dep"] if r["legislature"] == "14"]
         tot = sum(int(r["pjl_an_premiere_lecture"]) for r in r0)
@@ -1171,6 +1229,10 @@ def autotest(S: dict) -> list[str]:
             ("XIVe rendue majoritaire", majorite, "B2", "moins de la moitie"),
             ("XVe majoritaire toutes natures", champ_xv, "B2", "depend du champ"),
             ("nature non declaree", nature, "B6", "nature"),
+            ("un engagement par texte et par etape", unite, "B8", "plusieurs engagements"),
+            ("acte double", double, "B8", "deux fois"),
+            ("fiche 52 alteree", fiche52, "B1", "cit_fiche52"),
+            ("PDF fiche 52 remplace", pdf52, "B1", "empreinte"),
             ("loi financiere reclassee", reclasse, "B7", "classe PLF/PLFSS"),
             ("bulletins XIV abaisses (exces 1 311)", bulletins(1311), "B5", "plus de la moitie"),
             ("bulletins XIV abaisses (exces 600)", bulletins(600), "B5", "dixieme"),
@@ -1240,7 +1302,8 @@ def _main() -> int:
                      "Pmin": "origine parlementaire établie par les deux sources (AN et Dosleg) ; l'écart avec P vient de lois "
                              "dont le dossier manque aux fichiers de l'AN pour un motif établi (dépôt sous la législature "
                              "précédente)",
-                     "engagement": "un engagement de responsabilité (art. 49, al. 3) par texte et par étape de lecture",
+                     "engagement": "engagement de responsabilité (art. 49, al. 3) : chaque engagement est compté une fois ; un même "
+                                   "projet peut en recevoir plusieurs, y compris au cours d'une même lecture",
                      "fin": "engagement sur un projet de loi de finances ou de financement de la sécurité sociale "
                             "(rectificatives comprises), catégorie de l'art. 49, al. 3 ; la loi de programmation des finances "
                             "publiques relève d'« un autre projet »",
