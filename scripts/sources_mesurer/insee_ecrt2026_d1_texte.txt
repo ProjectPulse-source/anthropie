@@ -1,0 +1,2665 @@
+# Texte de https://www.insee.fr/fr/statistiques/fichier/8733119/ECRT2026-D1.pdf (Insee References, ed. 2026, dossier 1)
+# PDF lu le 12/10/2026 ; SHA-256 du PDF : 45aaa9a6aabfffbbfc0385f6d9644b7190cc086e6be1e7cd6ce2c2809c5c2623 (identique a celui du 05/10/2026)
+# Texte extrait par pdftotext -enc UTF-8, sans retouche.
+Le nombre de chômeurs au sens du BIT et des inscrits à France Travail en catégorie A : l’écart s’est réduit entre 2021 et 2024 mais demeure élevé
+En 2024, en moyenne en France hors Mayotte, 2,3 millions de personnes âgées de 15 à 64 ans sont au chômage au sens du Bureau international du travail (BIT) et 3,0 millions sont inscrites à France Travail en catégorie A.
+Pour comprendre cet écart, un appariement de données individuelles issues de l’enquête Emploi de l’Insee et du Fichier historique de France Travail, déjà mené sur la période 2013‑2017, a été renouvelé sur la période 2016‑2024. En moyenne en 2024, parmi les inscrits en catégorie A, 49 % sont au chômage au sens du BIT, 25 % sont inactifs dans le halo autour du chômage, 17 % sont inactifs hors du halo et 8 % sont en emploi. Parmi les chômeurs au sens du BIT, en 2024, 62 % sont inscrits dans la catégorie A quand 23 % ne sont pas inscrits à France Travail.
+Entre 2021 et 2024, sur le champ de cet appariement, le nombre d’inscrits en catégorie A a nettement plus diminué que le nombre de chômeurs au sens du BIT, réduisant l’écart entre les deux mesures de 0,4 million de personnes. En effet, d’une part, le nombre de chômeurs au sens du BIT qui ne sont pas inscrits à France Travail a fortement augmenté, surtout parmi les jeunes, dans un contexte de durcissement des règles d’indemnisation. D’autre part, les changements de règles administratives et les actions menées par France Travail ont pu modifier l’inscription sur les listes ainsi que la catégorie d’inscription.
+
+Deux concepts de référence relatifs aux situations de contraintes dans l’offre de travail coexistent en France, comme dans nombre d’autres pays : le chômage au sens du Bureau international du travail (BIT) et le nombre d’inscrits auprès de l’opérateur du service public de l’emploi, France Travail (anciennement Pôle emploi).
+Un chômeur au sens du BIT est une personne âgée de 15 ans ou plus sans emploi, disponible pour en occuper un dans les quinze jours et qui a activement cherché un emploi dans le mois précédent (ou en a trouvé un qui commence dans moins de trois mois). L’Insee comptabilise les chômeurs au sens du BIT chaque trimestre à partir de l’enquête Emploi en continu sources.
+Les personnes inscrites à France Travail ont quant à elles fait la démarche administrative de s’inscrire auprès de l’organisme ou, depuis 2025 et la mise en œuvre de la loi pour le plein emploi du 18 décembre 2023, sont inscrites automatiquement sur les listes de France Travail (demandeurs ou bénéficiaires du RSA, jeunes en recherche d’emploi suivis par les missions locales en CEJ ou Pacea1, personnes handicapées suivies par les Cap emploi). Jusqu’en 2024, cinq catégories d’inscription qualifiaient les inscrits à France Travail, selon qu’ils sont tenus de rechercher un emploi (catégories A à C) ou non (catégories D et E) et selon qu’ils ont occupé un emploi au cours du mois (moins de 78 heures pour la catégorie B, 78 heures ou plus pour la catégorie C et au moins une heure pour la catégorie E) ou non (catégories A et D2). La catégorie A regroupe donc les personnes sans activité au cours du mois et tenues de rechercher un emploi. La loi pour le plein emploi a conduit à la création, en janvier 2025, de deux catégories supplémentaires F (personnes en parcours social) et G (bénéficiaires et demandeurs du RSA en attente d’orientation). Les personnes inscrites à France Travail sont comptabilisées par la Dares, service statistique ministériel en charge du marché du travail, et France Travail. Les données publiées chaque mois par ces deux organismes sont issues du fichier de Statistiques du marché du travail (STMT) produit par France Travail sources.
+
+1 C ontrat d’engagement jeune ; Parcours contractualisé d’accompagnement vers l’emploi et l’autonomie. 2 Un inscrit en catégorie D en formation (en contrat de sécurisation professionnelle notamment) peut toutefois être en emploi en
+activité réduite.
+
+Insee Références – Édition 2026 – Dossiers – Le nombre de chômeurs au sens du BIT et des inscrits à France Travail en catégorie A…
+
+65
+
+Bien qu’assez proches en apparence, les deux concepts de chômage au sens du BIT et d’inscription à France Travail en catégorie A ne se recouvrent pas. Un individu inscrit en catégorie A peut ne pas être chômeur au sens du BIT, par exemple lorsqu’il n’a pas recherché d’emploi au cours d’un mois donné. Le seul fait d’être inscrit sur les listes de France Travail n’est en effet pas considéré en soi comme une démarche active de recherche d’emploi au regard des critères du BIT. A contrario, un chômeur au sens du BIT peut ne pas être inscrit en catégorie A, notamment lorsqu’il choisit de ne pas s’inscrire à France Travail. Il peut faire ce choix, par exemple, parce qu’il estime pouvoir se passer de ces services lorsqu’il est inscrit dans une autre structure (telle qu’une mission locale pour les jeunes hors CEJ ou Pacea) ; c’est d’autant plus le cas lorsqu’il estime ne pas pouvoir bénéficier d’indemnisation. Ainsi, les jeunes ont moins souvent un droit à l’assurance chômage et sont également plus susceptibles de ne pas y recourir même lorsqu’ils y sont éligibles [Hentzgen et al., 2022].
+Après une forte hausse dans les années 2010, l’écart entre le nombre de chômeurs et celui d’inscrits en catégorie A a reculé entre 2021 et 2024
+De fait, les deux mesures sont sensiblement éloignées : en 2024, en moyenne en France hors Mayotte, 2,3 millions de personnes âgées de 15 à 64 ans sont au chômage au sens du BIT et 3,0 millions sont inscrites en catégorie A figure 1. L’écart, qui est de 0,7 million en 2024, était de 0,3 million en 2012. Il avait augmenté jusqu’à 1,1 million en 2019 et même 1,5 million en 2020, lors de la crise sanitaire. En 2021, il atteignait 1,2 million : l’écart entre les deux mesures a donc reculé de 0,5 million entre 2021 et 2024. En 2025, il s’accroît à nouveau encadré 1.
+
+1. Nombre de chômeurs au sens du BIT et d’inscrits à France Travail en catégorie A, de 2012 à 2025
+
+Chômeurs au sens du BIT en millions de personnes, en moyenne sur l'année 4,0
+
+Inscrits en catégorie A à France Travail
+
+3,5
+
+3,0
+
+2,5
+
+2,0 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025
+Lecture : En 2024, en moyenne, 2,3 millions de personnes sont au chômage au sens du BIT et 3,0 millions sont inscrites en catégorie A à France Travail. Champ : France hors Mayotte, personnes âgées de 15 à 64 ans (et vivant dans un logement ordinaire pour l’enquête Emploi). Sources : Insee, enquête Emploi (séries longues) ; Dares‑France Travail, Statistiques du marché du travail.
+
+L’analyse de cet écart est régulièrement menée dans cet ouvrage [Makhzoum et al., 2025], et parfois approfondie via des exercices d’appariement de données individuelles. Le dernier exercice d’appariement en date portait sur la période 2013‑2017 [Coder et al., 2019] ; l’écart provenait surtout du nombre d’inactifs inscrits en catégorie A, qu’ils souhaitent ou non un emploi. La divergence de dynamique entre les deux grandeurs sur cette période était portée principalement par les seniors :
+
+66
+
+Emploi, chômage, revenus du travail – Insee Références – Édition 2026
+
+la disparition progressive du dispositif de dispense de recherche d’emploi, qui concernait les seniors proches de la retraite, a provoqué une hausse du nombre d’inactifs inscrits en catégorie A, les dispensés de recherche d’emploi n’étant pas précédemment considérés comme inscrits à Pôle emploi ; de plus, la hausse progressive de l’âge de départ à la retraite induite par la réforme des retraites de 2010 a elle aussi conduit à une hausse du nombre d’inactifs inscrits en catégorie A.
+ Encadré 1 – Chômeurs au sens du BIT et inscrits en catégorie A en 2025
+En 2025, le nombre de chômeurs au sens du BIT augmente de 0,1 million par rapport à 2024 et le nombre d’inscrits à France Travail en catégorie A de près de 0,3 million : les deux indicateurs divergent de nouveau figure 1. Toutefois, cette dernière évolution résulte en partie de la montée en charge de la loi pour le plein emploi (qui prévoit notamment l’inscription automatique des bénéficiaires du RSA et des jeunes suivis par des missions locales). Celle‑ci affecte légèrement à la hausse le chômage au sens du BIT en 2025 [Graindorge, 2026]. En revanche, la mise en œuvre de cette loi et du décret relatif au nouveau régime de sanctions modifie mécaniquement l’inscription sur les listes de France Travail [Insee, 2026]. La présente étude s’appuie sur des résultats disponibles jusqu’en 2024, l’appariement entre l’enquête Emploi et le Fichier historique n’ayant pas à ce stade été réalisé sur l’année 2025.
+
+Le contexte économique et juridique a évolué entre 2017 et 2024 : le chômage a globalement baissé, la réglementation a changé, en particulier la dispense de recherche d’emploi pour les seniors, supprimée en 2012, n’a plus d’effet. Un nouvel appariement entre le Fichier historique et l’enquête Emploi portant sur la période 2016‑2024, avant la mise en œuvre de la loi pour le plein emploi, permet d’analyser les écarts en niveau et en évolution méthodes encadré 2.
+Le plus souvent, les statuts d’activité au sens du BIT et les catégories de France Travail coïncident. Ainsi en 2024, près de 90 % des 3,0 millions de personnes inscrites et classées en catégories B, C ou E sont en emploi au sens du BIT figure 2.
+
+2. Répartition des personnes selon leur statut d’activité au sens du BIT et leur catégorie d’inscription à France Travail en 2024
+
+Statut d’activité au sens du BIT
+
+Catégorie A Catégorie B Catégorie C Catégorie D Catégorie E Non Ensemble inscrits
+
+En milliers de personnes En emploi Chômeur Inactif dans le halo Inactif hors halo Ensemble
+
+236
+
+645
+
+1 505
+
+82
+
+405
+
+25 491 28 364
+
+1 427
+
+184
+
+56
+
+74
+
+25
+
+524
+
+2 290
+
+727
+
+61
+
+22
+
+118
+
+17
+
+895
+
+1 840
+
+503
+
+33
+
+15
+
+105
+
+10
+
+7 969
+
+8 635
+
+2 893
+
+923
+
+1 597
+
+378
+
+457
+
+34 878 41 128
+
+Part dans le statut BIT (en %) En emploi Chômeur Inactif dans le halo Inactif hors halo Ensemble
+
+1
+
+2
+
+5
+
+0
+
+1
+
+90
+
+100
+
+62
+
+8
+
+2
+
+3
+
+1
+
+23
+
+100
+
+40
+
+3
+
+1
+
+6
+
+1
+
+49
+
+100
+
+6
+
+0
+
+0
+
+1
+
+0
+
+92
+
+100
+
+7
+
+2
+
+4
+
+1
+
+1
+
+85
+
+100
+
+Part dans la catégorie d’inscription (en %)
+
+En emploi
+
+8
+
+70
+
+94
+
+22
+
+89
+
+73
+
+69
+
+Chômeur
+
+49
+
+20
+
+4
+
+20
+
+6
+
+2
+
+6
+
+Inactif dans le halo
+
+25
+
+7
+
+1
+
+31
+
+4
+
+3
+
+5
+
+Inactif hors halo
+
+17
+
+4
+
+1
+
+28
+
+2
+
+23
+
+21
+
+Ensemble
+
+100
+
+100
+
+100
+
+100
+
+100
+
+100
+
+100
+
+Lecture : En moyenne en 2024, 1,427 million de personnes sont au chômage au sens du BIT et inscrites en catégorie A à France Travail. 62 % des chômeurs au sens du BIT sont inscrits en catégorie A et 49 % des inscrits en catégorie A sont chômeurs au sens du BIT. Champ : France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire. Source : Dares‑Insee‑France Travail, appariement du Fichier historique statistique et de l’enquête Emploi.
+
+Insee Références – Édition 2026 – Dossiers – Le nombre de chômeurs au sens du BIT et des inscrits à France Travail en catégorie A…
+
+67
+
+ E ncadré 2 – Les appariements 2013‑2017 et 2016‑2024 : des résultats concordants dans les grandes tendances
+Depuis le début des années 2000, la confrontation entre les données d’inscription à France Travail et celles de l’enquête Emploi a été conduite à plusieurs reprises. Le précédent exercice réalisé en 2019 portait sur la période 2013‑2017 et la présente étude porte sur la période 2016‑2024.
+La méthode d’appariement et les traitements postérieurs diffèrent d’un appariement à l’autre. La production des sources elles‑mêmes évolue au fil du temps. Les résultats issus de ces différents appariements ne peuvent donc pas être comparés sans précaution.
+En effet, l’appariement réalisé en 2019 rapprochait de façon directe les deux sources à partir des caractéristiques disponibles et ne faisait pas l’objet d’une repondération. Il couvrait ainsi environ 80 % de l’ensemble des inscrits en catégorie A [Coder et al., 2019]. L’opération menée dans la présente étude rapproche les deux sources à l’aide du code statistique non signifiant (CSNS) préalablement obtenu à partir des traits d’identité et repondère les individus de l’enquête Emploi, permettant d’obtenir un taux de couverture des inscrits en catégorie A d’environ 100 % méthodes.
+Par ailleurs en 2021, l’enquête Emploi a été sensiblement rénovée, impliquant une rétropolation des poids pour les années antérieures (2014‑2020) et modifiant sensiblement certaines questions et modalités. Il est donc nécessaire de comparer avec prudence les résultats antérieurs et postérieurs à la refonte (ce qui explique aussi pourquoi les analyses en évolution de cette étude se concentrent sur la période postérieure à 2020).
+Malgré ces différences entre les appariements sur 2013‑2017 et sur 2016‑2024, les résultats principaux s’avèrent très cohérents, sur la période commune à ces deux appariements. En effet, en prenant à titre d’exemple la part des chômeurs au sens du BIT parmi les inscrits en catégorie A en France métropolitaine, les valeurs issues de chacun des deux appariements sont très proches en 2016 et 2017 (de deux points plus basses pour le second appariement par rapport au premier, sur ces deux années) figure.
+En 2017, selon le premier appariement, 56 % des personnes inscrites en catégorie A étaient au chômage au sens du BIT et 59 % des chômeurs au sens du BIT étaient inscrits en catégorie A [Coder et al., 2019].
+
+Évolution de la répartition des inscrits à France Travail en catégorie A, selon le statut au sens du BIT et l’appariement retenu, de 2013 à 2024
+
+Appariement 2016-2024
+
+Appariement 2013-2017
+
+En emploi
+
+Chômeur
+
+Dans le halo
+
+Inactifs hors halo
+
+en % 70
+
+60
+
+50
+
+40
+
+30
+
+20
+
+10
+
+0 2013
+
+2014
+
+2015
+
+2016
+
+2017
+
+2018
+
+2019
+
+2020
+
+2021
+
+2022
+
+2023
+
+2024
+
+Lecture : En 2016, 57 % des inscrits à France Travail en catégorie A en France métropolitaine sont chômeurs au sens du BIT selon l’appariement 2016‑2024, 59 % selon l’appariement 2013‑2017. Champ : France métropolitaine, inscrits en catégorie A âgés de 15 à 64 ans, vivant dans un logement ordinaire. Source : Dares‑Insee‑France Travail, appariement du Fichier historique statistique et de l’enquête Emploi.
+
+68
+
+Emploi, chômage, revenus du travail – Insee Références – Édition 2026
+
+À l’issue de l’appariement, on dénombre 2,9 millions d’inscrits en catégorie A3 en 2024. Parmi eux, seulement 49 % sont chômeurs au sens du BIT ; symétriquement, 62 % des chômeurs sont inscrits en catégorie A. Aussi, l’appariement permet surtout de mieux comprendre les situations susceptibles d’expliquer la divergence entre les deux mesures : celle des inscrits en catégorie A non chômeurs au sens du BIT et celle des chômeurs au sens du BIT non inscrits en catégorie A.
+25 % des inscrits en catégorie A sont dans le halo autour du chômage, souvent pour des raisons temporaires
+En 2024, 25 % des inscrits en catégorie A, soit 727 000 personnes, sont inactifs dans le halo autour du chômage, c’est‑à‑dire qu’ils sont sans emploi et, soit recherchent un emploi mais ne sont pas disponibles dans les deux semaines pour travailler, soit n’ont pas effectué de démarche active de recherche d’emploi dans le mois précédent mais souhaitent travailler, qu’ils soient disponibles ou non. Ces inscrits à France Travail ne respectent pas les critères de recherche ou de disponibilité pour être au chômage au sens du BIT, mais ils en sont proches, et près des trois quarts se déclarent spontanément au chômage4
+figure 3. Cette population est plus âgée que l’ensemble des inactifs dans le halo du chômage : 61 % ont entre 25 et 49 ans (contre 48 % de l’ensemble), 27 % ont 50 ans ou plus (contre 20 % de l’ensemble).
+
+3. Caractéristiques des inscrits à France Travail en catégorie A et inactifs ou en emploi
+au sens du BIT en 2024
+en %
+
+Caractéristiques
+
+Inscrits en catégorie A et non chômeurs
+
+Inscrits en catégorie A
+
+Inactifs dans Inactifs En emploi le halo hors halo
+
+Inactifs dans le
+halo
+
+Inactifs En hors emploi halo
+
+Nombre d’individus (en milliers) En part de la catégorie A En part du statut d’activité au sens du BIT
+
+727
+
+503
+
+236
+
+2 893
+
+1 840 8 635 28 364
+
+25
+
+17
+
+8
+
+100
+
+///
+
+///
+
+///
+
+40
+
+6
+
+1
+
+///
+
+100
+
+100
+
+100
+
+Femmes Hommes
+
+59
+
+62
+
+46
+
+53
+
+57
+
+57
+
+49
+
+41
+
+38
+
+54
+
+47
+
+43
+
+43
+
+51
+
+De 15 à 24 ans, dont :  En cours d’études De 25 à 49 ans De 50 à 64 ans
+
+12
+
+12
+
+14
+
+15
+
+31
+
+46
+
+10
+
+1
+
+4
+
+2
+
+1
+
+19
+
+41
+
+4
+
+61
+
+46
+
+61
+
+57
+
+48
+
+16
+
+59
+
+27
+
+42
+
+24
+
+29
+
+20
+
+38
+
+32
+
+Se déclare spontanément chômeur
+
+74
+
+Se déclare spontanément en emploi
+
+0
+
+Se déclare spontanément inactif
+
+26
+
+Se déclare inscrit à France Travail
+
+96
+
+Se déclare indemnisé par l’assurance chômage
+
+52
+
+Ancienneté moyenne d’inscription à France Travail1 (en mois)
+
+18
+
+Travaille ou a déjà travaillé2
+
+92
+
+ En CDI
+
+41
+
+ En CDD ou en intérim
+
+44
+
+ En alternance
+
+3
+
+ Non‑salarié, dont :
+
+3
+
+  Micro‑entrepreneur
+
+///
+
+40
+
+15
+
+1
+
+74
+
+60
+
+11
+
+80
+
+58
+
+42
+
+22
+
+23
+
+18
+
+89
+
+100
+
+46
+
+37
+
+38
+
+35
+
+2
+
+5
+
+2
+
+24
+
+///
+
+14
+
+72
+
+44
+
+4
+
+1
+
+7
+
+2
+
+1
+
+94
+
+21
+
+54
+
+96
+
+5
+
+92
+
+49
+
+7
+
+9
+
+53
+
+27
+
+3
+
+3
+
+19
+
+///
+
+///
+
+///
+
+93
+
+78
+
+56
+
+100
+
+41
+
+32
+
+33
+
+74
+
+44
+
+37
+
+17
+
+10
+
+4
+
+3
+
+1
+
+3
+
+5
+
+5
+
+4
+
+13
+
+///
+
+///
+
+///
+
+4
+
+/// : absence de résultats. 1 L ’ancienneté est mesurée par la durée pendant laquelle la personne a été inscrite à France Travail de façon continue, selon trois
+groupes : catégorie A, B ou C, catégorie D, catégorie E. Une sortie d’au moins un jour de l’un de ces trois groupes réinitialise l’ancienneté. 2 N ature actuelle de l’emploi pour les personnes en emploi au moment de l’enquête, antérieure pour les personnes inactives ou au chômage au moment de l’enquête et ayant déjà travaillé. L’information relative aux micro‑entrepreneurs n’est disponible que pour les personnes actuellement en emploi. Lecture : En 2024, parmi les 727 000 inscrits en catégorie A à France Travail et dans le halo du chômage au sens du BIT, 59 % sont des femmes et 12 % sont âgés de 15 à 24 ans. Champ : France hors Mayotte, personnes en emploi ou inactives au sens du BIT ou inscrites à France Travail en catégorie A, âgées de 15 à 64 ans, vivant dans un logement ordinaire. Source : Dares‑Insee‑France Travail, appariement du Fichier historique statistique et de l’enquête Emploi.
+
+3 L’écart avec la donnée publiée en 2024 (2,9 contre 3,0 millions) est dû à l’aléa associé à des données d’enquête (les individus figurant dans l’appariement étant les répondants de l’enquête Emploi, éventuellement inscrits à France Travail) et, dans une moindre mesure, à l’effet « avec ou sans recul » des données de France Travail sources.
+4 En fin de questionnaire de l’enquête Emploi, la question suivante est posée aux enquêtés : « Pour conclure, vous diriez qu’actuellement, vous êtes... 1. En emploi, 2. Au chômage (inscrit(e) ou non à France Travail), 3. Retraité(e) ou préretraité (…) ». Ce statut spontanément déclaré peut toutefois différer du statut au sens du BIT.
+
+Insee Références – Édition 2026 – Dossiers – Le nombre de chômeurs au sens du BIT et des inscrits à France Travail en catégorie A…
+
+69
+
+Parmi les inscrits en catégorie A et dans le halo du chômage, les personnes âgées de 50 à 64 ans déclarent plus souvent qu’en moyenne être disponibles pour travailler mais ne pas avoir effectué de recherche (45 % contre 39 %) figure 4. En effet, elles se disent plus souvent découragées par leur situation sur le marché de l’emploi, parce qu’elles pensent qu’il n’y a pas d’emploi disponible qui leur convienne, ou qu’elles ne trouveront pas d’emploi (14 %, contre 9 % en moyenne). Elles invoquent également nettement plus souvent des problèmes de santé ou d’invalidité (41 % contre 25 %).
+
+4. Caractéristiques des inactifs dans le halo du chômage et hors du halo en 2024,
+selon l’âge et la catégorie d’inscription à France Travail
+en %
+
+Halo autour du chômage
+
+Inactivité hors halo
+
+Caractéristiques
+
+De 50 à 64 ans
+
+Ensemble
+
+De 50 à 64 ans
+
+Ensemble
+
+Catégorie Catégories Non Catégorie Catégories Non Catégorie Catégories Non Catégorie Catégories Non
+
+A
+
+B à E inscrits A
+
+B à E inscrits A
+
+B à E inscrits A
+
+B à E inscrits
+
+Nombre d’individus
+
+(en milliers)
+
+199
+
+48
+
+128
+
+727
+
+217 895
+
+212
+
+En part de la
+
+classe d’âge
+
+2
+
+0
+
+1
+
+2
+
+1
+
+2
+
+2
+
+En part de la catégorie
+
+d’inscription
+
+7
+
+1
+
+0
+
+25
+
+7
+
+3
+
+7
+
+En part du statut
+
+d’activité
+
+11
+
+3
+
+7
+
+39
+
+12 49
+
+2
+
+29 3 044 503
+
+0
+
+23
+
+1
+
+1
+
+9
+
+17
+
+0
+
+35
+
+6
+
+163 7 969
+
+0
+
+19
+
+5
+
+23
+
+2
+
+92
+
+Composantes du
+
+halo du chômage
+
+A recherché, mais
+
+n’est pas disponible 28
+
+23
+
+Souhaite travailler et
+
+est disponible, mais
+
+n’a pas recherché
+
+45
+
+38
+
+Souhaite travailler, mais
+
+n’est pas disponible
+
+et n’a pas recherché 27
+
+40
+
+8
+
+33
+
+41
+
+39
+
+51
+
+29
+
+32 26
+
+///
+
+31 31
+
+///
+
+37 44
+
+///
+
+///
+
+///
+
+///
+
+///
+
+///
+
+///
+
+///
+
+///
+
+///
+
+///
+
+///
+
+///
+
+///
+
+///
+
+///
+
+Motif d’inactivité
+
+Invalidité, problèmes
+
+de santé
+
+41
+
+23
+
+S’occuper de sa famille,
+
+de son foyer
+
+8
+
+3
+
+Retraite
+
+2
+
+2
+
+Études, formations
+
+7
+
+34
+
+Motifs temporaires1
+
+27
+
+30
+
+Découragement
+
+14
+
+8
+
+Autres motifs ou motifs
+
+non renseignés
+
+0
+
+1
+
+45
+
+25
+
+12
+
+19
+
+11
+
+1
+
+2
+
+13
+
+20
+
+34
+
+10
+
+9
+
+1
+
+1
+
+11 17
+
+63
+
+8 15
+
+8
+
+1
+
+2
+
+20
+
+45 42
+
+2
+
+30 18
+
+7
+
+5
+
+5
+
+///
+
+1
+
+1
+
+0
+
+37
+
+29
+
+42
+
+7
+
+10
+
+24
+
+13
+
+59
+
+8
+
+28
+
+0
+
+14
+
+14
+
+1
+
+11
+
+///
+
+///
+
+///
+
+1
+
+1
+
+1
+
+12
+
+17
+
+11
+
+11
+
+2
+
+23
+
+63
+
+47
+
+11
+
+1
+
+///
+
+///
+
+1
+
+1
+
+/// : absence de résultats. 1 Vacances, déménagement, attente de résultats de démarches antérieures, maladie de courte durée. Note : Le motif d’inactivité a été reconstruit à partir des différents motifs de ne pas avoir recherché d’emploi, de ne pas être disponible ou de ne pas souhaiter travailler, ainsi que par quelques modalités du statut spontanément déclaré afin de limiter autant que possible la modalité « autres motifs ». L’étude des libellés en clair a aussi permis de reclasser un grand nombre de motifs « autres » dans la liste des motifs précédents. Lecture : En 2024, parmi les 199 000 personnes âgées de 50 à 64 ans dans le halo autour du chômage et inscrites en catégorie A, 28 % sont à la recherche d’un emploi mais ne sont pas disponibles pour en occuper un et 41 % justifient leur inactivité par une invalidité ou des problèmes de santé. Champ : France hors Mayotte, inactifs au sens du BIT âgés de 15 à 64 ans, vivant dans un logement ordinaire. Source : Dares‑Insee‑France Travail, appariement du Fichier historique statistique et de l’enquête Emploi.
+
+Par ailleurs, pour l’ensemble des inscrits en catégorie A dans le halo du chômage, des raisons provisoires d’indisponibilité (telles qu’un déménagement, une maladie de courte durée ou l’attente de résultats de démarches antérieures) sont avancées comme motifs d’inactivité une fois sur trois. D’ailleurs, ceux‑ci changent fréquemment de situation d’un trimestre sur l’autre. Par exemple, en 2024, parmi les inscrits en catégorie A et dans le halo un trimestre donné, 32 % basculent dans le chômage le trimestre suivant (la grande majorité restant inscrite en catégorie A) figure 5. Toutefois, 41 % d’entre eux sont encore dans la même situation au trimestre suivant.
+
+70
+
+Emploi, chômage, revenus du travail – Insee Références – Édition 2026
+
+5. Situation des personnes au trimestre T+1 selon leur situation au trimestre T de 2024, selon le statut au sens du BIT et la catégorie d’inscription à France Travail
+en % de la situation en T, en moyenne sur l’année 2024
+
+Situation au trimestre T
+
+Chômage
+
+Emploi
+
+Halo autour
+
+Inactivité hors halo
+
+du chômage Nombre (en milliers) Catégorie Catégorie Catégorie Non Catégorie Catégorie Catégorie Non Catégorie Catégorie Non Catégorie Catégorie Non
+A B ou C D ou E inscrit A B, C ou E D inscrit A B, C, D inscrit A B, C, D inscrit
+
+ou E
+
+ou E
+
+Chômage Catégorie A Catégorie
+B ou C Catégorie
+D ou E Non inscrit
+
+1 427
+240
+99 524
+
+53
+
+5
+
+1
+
+1
+
+18 16
+
+2
+
+1
+
+10
+
+2
+
+30
+
+1
+
+2
+
+0
+
+0 24
+
+1
+
+15
+
+2
+
+44
+
+0
+
+23
+
+0
+
+1
+
+0
+
+4 12
+
+2
+
+1
+
+5
+
+0
+
+6
+
+4
+
+4
+
+0
+
+1
+
+7
+
+3
+
+5
+
+13
+
+0
+
+1
+
+0 35
+
+1
+
+0 13
+
+1
+
+1
+
+1
+
+2
+
+1
+
+6
+
+1
+
+0 25
+
+Emploi
+
+Catégorie A
+
+236
+
+10
+
+3
+
+0
+
+0 32
+
+30
+
+1 13
+
+5
+
+1
+
+0
+
+2
+
+2
+
+1
+
+Catégorie
+
+B, C ou E
+
+2 555
+
+4
+
+3
+
+1
+
+0
+
+2
+
+76
+
+1
+
+8
+
+2
+
+1
+
+0
+
+1
+
+0
+
+0
+
+Catégorie D
+
+82
+
+6
+
+2
+
+6
+
+0
+
+3
+
+19
+
+45
+
+7
+
+1
+
+5
+
+0
+
+1
+
+3
+
+0
+
+Non inscrit
+
+25 491
+
+0
+
+0
+
+0
+
+1
+
+0
+
+0
+
+0 96
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1
+
+Halo autour du chômage
+
+Catégorie A
+
+727
+
+28
+
+3
+
+1
+
+0
+
+1
+
+8
+
+0
+
+2 41
+
+3
+
+1
+
+9
+
+1
+
+2
+
+Catégorie B,
+
+C, D ou E
+
+218
+
+10
+
+5
+
+8
+
+0
+
+1
+
+20
+
+3
+
+4
+
+9
+
+25
+
+1
+
+6
+
+8
+
+1
+
+Non inscrit
+
+895
+
+1
+
+0
+
+0 10
+
+0
+
+0
+
+0 14
+
+2
+
+1 41
+
+0
+
+0 30
+
+Inactivité hors halo
+
+Catégorie A
+
+503
+
+10
+
+1
+
+0
+
+0
+
+1
+
+4
+
+0
+
+1 16
+
+2
+
+0 55
+
+4
+
+8
+
+Catégorie B,
+
+C, D ou E
+
+163
+
+6
+
+5
+
+4
+
+1
+
+1
+
+7
+
+4
+
+1
+
+6
+
+14
+
+0 10
+
+39
+
+3
+
+Non inscrit
+
+7 969
+
+0
+
+0
+
+0
+
+2
+
+0
+
+0
+
+0
+
+4
+
+0
+
+0
+
+4
+
+0
+
+0 90
+
+Lecture : En 2024, 53 % des inscrits en catégorie A à France Travail et au chômage au sens du BIT sont dans la même situation le trimestre suivant. Champ : France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire. Source : Dares‑Insee‑France Travail, appariement du Fichier historique statistique et de l’enquête Emploi.
+
+17 % des inscrits en catégorie A sont inactifs hors halo : une situation le plus souvent durable
+En 2024, en moyenne, 503 000 personnes sont inscrites à France Travail en catégorie A mais sont inactives hors du halo, c’est‑à‑dire déclarent ne pas souhaiter d’emploi ; elles représentent 17 % des inscrits en catégorie A. En particulier, un quart des 50‑64 ans inscrits en catégorie A à France Travail sont inactifs hors halo, soit une proportion près de deux fois plus élevée que parmi les moins de 50 ans inscrits en catégorie A (14 %) figure 3. C’est surtout le cas des personnes âgées de 59 à 62 ans
+figure 6. Près des deux tiers des 50‑64 ans justifient le non‑souhait d’emploi par des problèmes de santé ou une situation de handicap (contre 26 % des 15‑49 ans, qui expliquent dans 36 % des cas s’occuper de leur famille ou de leur foyer).
+Les inscrits en catégorie A inactifs hors halo sont majoritairement des femmes : 62 %, contre 57 % dans l’ensemble des inactifs hors halo. Elles déclarent beaucoup plus souvent de façon spontanée être au chômage (40 % contre 4 %). D’ailleurs, 42 % se déclarent indemnisées par l’assurance chômage. La plupart de ces personnes ont déjà travaillé (89 % contre 56 %). Cette population est plus âgée que l’ensemble des inactifs hors halo : 88 % a 25 ans ou plus, contre 54 %.
+Les inscrits en catégorie A inactifs hors halo, donc éloignés du marché du travail, restent durablement inscrits à France Travail : près de 2 ans en moyenne. Aussi, ils demeurent le plus souvent dans la même situation le trimestre suivant (55 %). En corollaire, ils basculent presque trois fois moins souvent vers l’activité (emploi ou chômage, 16 %) que les inscrits en catégorie A dans le halo du chômage (43 %).
+
+Insee Références – Édition 2026 – Dossiers – Le nombre de chômeurs au sens du BIT et des inscrits à France Travail en catégorie A…
+
+71
+
+6. Répartition selon le statut d’activité au sens du BIT et la catégorie d’inscription à France Travail, par âge en 2024
+
+Inactifs hors halo non inscrits Halo non inscrits Inscrits en catégorie D
+en % 100
+
+Inactifs hors halo et catégorie A Halo et catégorie A Autres
+
+En emploi non inscrits Chômeurs non inscrits
+
+En emploi et catégories B, C et E Chômeurs et catégorie A
+
+90
+
+80
+
+70
+
+60
+
+50
+
+40
+
+30
+
+20
+
+10
+
+0 15 17 19 21 23 25 27 29 31 33 35 37 39 41 43 45 47 49 51 53 55 57 59 61 64 âge
+Lecture : En 2024, 91,8 % des personnes âgées de 15 ans sont inactives hors halo et non inscrites à France Travail. Champ : France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire. Source : Dares‑Insee‑France Travail, appariement du Fichier historique statistique et de l’enquête Emploi.
+
+8 % des inscrits en catégorie A sont en emploi : une situation le plus souvent transitoire ou associée à des formes particulières d’emploi
+En 2024, 236 000 inscrits en catégorie A sont en emploi au sens du BIT ; ils représentent 8 % des inscrits en catégorie A. Ils ont donc travaillé au moins une heure dans la semaine de référence de l’enquête Emploi (ou sont absents de leur poste pour une durée limitée, par exemple en congés). D’ailleurs, près des trois quarts se déclarent spontanément en emploi, tandis que leur inscription en catégorie A indique qu’ils n’ont effectué aucune heure de travail au cours du mois qui inclut la semaine de référence5. Cette situation apparemment contradictoire est le plus souvent transitoire (seulement un tiers reste dans cette situation le trimestre suivant) ou associée à des formes particulières d’emploi (conjoints collaborateurs, micro‑entrepreneurs, etc.). Comme en 2017, elle s’explique principalement par des manières différentes de définir le fait « d’être en emploi » entre le concept du BIT et France Travail ainsi que par des délais, erreurs ou biais de mémoire dans les déclarations faites dans l’enquête Emploi ou auprès de France Travail [Coder et al., 2019].
+Moins de la moitié des inscrits en catégorie A sont au chômage au sens du BIT
+En fin de compte, en 2024, 49 % des inscrits en catégorie A sont au chômage au sens du BIT, soit 1,4 million de personnes. Dans leur grande majorité, ils s’estiment spontanément au chômage (91 %), ce plus souvent que l’ensemble des inscrits en catégorie A (72 % en moyenne) figure 7. Ils déclarent légèrement plus de démarches actives6 distinctes que les autres chômeurs : 3,7 en moyenne contre 3,1 pour les autres chômeurs au sens du BIT. Ils sont également moins jeunes : 17 % ont moins de 25 ans,
+5 À l’exception du dernier trimestre 2024, où l’évolution du formulaire d’actualisation de l’inscription à France Travail implique, pour les nouveaux inscrits, la possibilité d’être inscrits en catégorie A même en ayant travaillé en début de mois avant l’inscription.
+6 Une démarche active correspond par exemple au dépôt ou à la mise à jour du CV sur Internet, au fait de passer un entretien d’embauche, d’étudier les offres d’emploi, d’avoir contacté une agence d’intérim ou avoir répondu à une de ses offres d’emploi, etc.
+
+72
+
+Emploi, chômage, revenus du travail – Insee Références – Édition 2026
+
+contre 28 % en moyenne et, parmi eux, la plupart ont terminé leurs études initiales (96 %, contre 71 % de l’ensemble des chômeurs âgés de 15 à 24 ans). Les chômeurs au sens du BIT inscrits en catégorie A ont plus fréquemment déjà travaillé (94 % contre 90 %), dans la majorité des cas en CDD ou en tant qu’intérimaire (50 % d’entre eux, alors que 10 % des personnes en emploi en 2024 occupent un contrat temporaire). De plus, près des deux tiers (62 %) se déclarent indemnisés par l’assurance chômage, davantage que parmi l’ensemble des inscrits en catégorie A (53 %).
+
+7. Caractéristiques des chômeurs au sens du BIT en 2024, selon la catégorie d’inscription
+à France Travail
+en %
+
+Caractéristiques
+
+Catégorie A
+
+Catégorie B ou C
+
+Chômeur
+
+Catégorie D ou E
+
+Inscrits au moins une fois entre 2016 et 2024
+
+Inscrits Non inscrits
+
+Le mois précédent ou suivant le mois d’enquête
+
+Catégorie
+
+Jamais
+
+A
+
+inscrits
+
+entre 2016
+
+et 2024
+
+Chômeur
+
+Nombre d’individus (en milliers)
+
+1 427
+
+240
+
+99
+
+17
+
+139
+
+368 2 893 2 290
+
+En part de la catégorie A
+
+49
+
+///
+
+///
+
+///
+
+///
+
+///
+
+100
+
+///
+
+En part du statut d’activité BIT
+
+62
+
+11
+
+4
+
+1
+
+6
+
+16
+
+///
+
+100
+
+Femmes Hommes
+
+48
+
+48
+
+51
+
+45
+
+46
+
+50
+
+53
+
+49
+
+52
+
+52
+
+49
+
+55
+
+54
+
+50
+
+47
+
+51
+
+De 15 à 24 ans, dont :  En cours d’études De 25 à 49 ans De 50 à 64 ans
+
+17
+
+19
+
+12
+
+48
+
+34
+
+74
+
+15
+
+28
+
+1
+
+1
+
+1
+
+6
+
+5
+
+45
+
+1
+
+8
+
+58
+
+62
+
+66
+
+44
+
+55
+
+20
+
+57
+
+52
+
+25
+
+19
+
+22
+
+8
+
+12
+
+6
+
+29
+
+21
+
+Se déclare spontanément chômeur
+
+91
+
+74
+
+77
+
+61
+
+52
+
+28
+
+72
+
+76
+
+Se déclare spontanément en emploi
+
+2
+
+19
+
+5
+
+18
+
+18
+
+12
+
+7
+
+6
+
+Se déclare spontanément inactif
+
+7
+
+8
+
+19
+
+21
+
+30
+
+61
+
+21
+
+18
+
+Se déclare inscrit à France Travail
+
+99
+
+98
+
+98
+
+1
+
+0
+
+1
+
+92
+
+76
+
+Se déclare indemnisé par l’assurance
+
+chômage
+
+62
+
+61
+
+66
+
+1
+
+0
+
+0
+
+53
+
+48
+
+Chômeur de courte durée (moins d’un an)
+
+73
+
+91
+
+80
+
+85
+
+80
+
+91
+
+///
+
+78
+
+Chômeur de longue durée
+
+(de un à deux ans)
+
+17
+
+7
+
+11
+
+11
+
+10
+
+4
+
+///
+
+13
+
+Chômeur de très longue durée
+
+(plus de deux ans)
+
+11
+
+3
+
+9
+
+4
+
+9
+
+5
+
+///
+
+9
+
+Ancienneté moyenne d’inscription à France Travail1 (en mois)
+
+18
+
+22
+
+6
+
+///
+
+///
+
+///
+
+19
+
+///
+
+Nombre moyen de démarches actives2
+
+3,7
+
+3,4
+
+3,5
+
+3,5
+
+3,0
+
+2,7
+
+///
+
+3,5
+
+Travaille ou a déjà travaillé3  En CDI  En CDD ou en intérim  En alternance  Non‑salarié
+
+94
+
+97
+
+93
+
+89
+
+86
+
+68
+
+93
+
+90
+
+39
+
+28
+
+53
+
+33
+
+32
+
+21
+
+41
+
+35
+
+47
+
+60
+
+27
+
+44
+
+40
+
+35
+
+44
+
+45
+
+5
+
+4
+
+2
+
+6
+
+5
+
+7
+
+4
+
+5
+
+3
+
+5
+
+11
+
+6
+
+10
+
+5
+
+5
+
+5
+
+Cherche un emploi à temps partiel
+
+11
+
+6
+
+2
+
+20
+
+13
+
+22
+
+///
+
+12
+
+/// : absence de résultats. 1 L ’ancienneté est mesurée par la durée pendant laquelle la personne a été inscrite à France Travail de façon continue, selon trois
+groupes : catégorie A, B ou C, catégorie D, catégorie E. Une sortie d’au moins un jour de l’un de ces trois groupes réinitialise l’ancienneté. 2 N ombre moyen de démarches actives différentes, hors « A contacté France Travail, une mission locale pour trouver un emploi ou a répondu à une de leurs offres d’emploi ». 3 N ature actuelle de l’emploi pour les personnes en emploi au moment de l’enquête, antérieure pour les personnes inactives ou au chômage au moment de l’enquête et ayant déjà travaillé. Lecture : En 2024, parmi les 1,427 million de chômeurs au sens du BIT inscrits en catégorie A, 48 % sont des femmes et 17 % sont âgés de 15 à 24 ans. Champ : France hors Mayotte, chômeurs au sens du BIT ou inscrits à France Travail en catégorie A, âgés de 15 à 64 ans, vivant dans un logement ordinaire. Source : Dares‑Insee‑France Travail, appariement du Fichier historique statistique et de l’enquête Emploi.
+
+Insee Références – Édition 2026 – Dossiers – Le nombre de chômeurs au sens du BIT et des inscrits à France Travail en catégorie A…
+
+73
+
+La combinaison du chômage au sens du BIT et de l’inscription en catégorie A relève d’une situation plutôt durable : 53 % des personnes dans cette situation un trimestre donné de l’année 2024 y sont toujours un trimestre plus tard. D’ailleurs, elles sont plus fréquemment au chômage de longue durée (un à deux ans) ou très longue durée (plus de deux ans) : 28 % contre 22 % de l’ensemble des chômeurs. Elles sont inscrites à France Travail en catégories A, B ou C depuis un an et demi en moyenne. Plus globalement, 60 % sont au chômage le trimestre suivant (quelle que soit la situation vis‑à‑vis de France Travail), soit 10 points de plus que l’ensemble des chômeurs au sens du BIT [Insee, 2026].
+Près d’un chômeur au sens du BIT sur quatre n’est pas inscrit à France Travail au moment de l’enquête
+Inversement, sur les 2,3 millions de chômeurs au sens du BIT en moyenne en 2024, 23 % ne sont pas inscrits à France Travail au moment de l’enquête. Les désinscriptions ponctuelles sont rares : seulement 1 % des chômeurs étaient inscrits le mois précédent ou le mois suivant celui de l’enquête mais pas le mois de l’enquête. Par ailleurs, 6 % des chômeurs ne sont inscrits à France Travail ni le mois de l’enquête ni les mois adjacents mais l’ont été au moins une fois depuis 2016.
+La majorité des chômeurs au sens du BIT non inscrits à France Travail au moment de l’enquête ne l’ont jamais été depuis 2016 : 368 000 personnes en moyenne en 2024. Ils représentent 16 % de l’ensemble des chômeurs. D’ailleurs, près des trois quarts se considèrent spontanément inactifs ou en emploi et non pas chômeurs. Ils réalisent toutefois des démarches actives de recherche d’emploi au sens des critères du BIT, même si elles sont nettement moins intensives que les autres chômeurs (2,7 démarches actives en moyenne contre 3,7 pour les chômeurs inscrits en catégorie A). Ces chômeurs absents des registres de France Travail sont plus fréquemment à la recherche d’un emploi à temps partiel (22 %, contre 11 % des chômeurs inscrits en catégorie A). Ils sont aussi particulièrement jeunes et en cours d’études : 45 % ont moins de 25 ans et n’ont pas terminé leur formation initiale, contre 1 % des chômeurs inscrits en catégorie A. Les jeunes ont en effet des débuts de carrière plus fragmentés et rencontrent des difficultés d’insertion dans l’emploi. Leurs parcours sont moins propices à des indemnisations chômage, qui réduisent l’incitation à s’inscrire à France Travail encadré 3.
+Le chômage au sens du BIT sans inscription à France Travail est aussi plus souvent transitoire que celui associé à une inscription : près d’un quart des chômeurs non inscrits sont dans la même situation le trimestre suivant, soit environ deux fois moins que les chômeurs inscrits en catégorie A, alors que les trois quarts transitent vers l’emploi ou l’inactivité.
+11 % des chômeurs sont inscrits en catégorie B ou C
+En 2024, 15 % des chômeurs au sens du BIT (soit 339 000 personnes) sont inscrits dans une catégorie autre que la catégorie A, principalement en catégorie B ou C (11 %, soit 240 000 personnes). La divergence entre le statut au sens du BIT (qui implique de ne pas avoir d’emploi) et la catégorie d’inscription B ou C (inscrits à France Travail ayant travaillé au cours du mois) peut provenir de périodes de référence différentes : l’emploi au sens du BIT se réfère en effet à une semaine, tandis que l’activité prise en compte par France Travail est fondée sur un mois complet ; une personne peut ainsi, par exemple, être au chômage au cours de la semaine de référence de l’enquête, mais avoir eu une activité rémunérée au cours des autres semaines du mois et donc être classée en catégorie B ou C de France Travail. D’ailleurs, cette situation est le plus souvent peu durable : seulement 16 % des chômeurs inscrits en catégorie B ou C le sont encore le trimestre suivant.
+Entre 2021 et 2024, la réduction de l’écart entre inscrits en catégorie A et chômeurs est surtout due à la baisse du nombre d’inscrits en catégorie A non chômeurs
+Au cours de la décennie 2010, l’écart entre nombre d’inscrits à France Travail en catégorie A et nombre de chômeurs au sens du BIT a fortement crû, avec un pic pendant la crise sanitaire [Makhzoum et al., 2025].
+
+74
+
+Emploi, chômage, revenus du travail – Insee Références – Édition 2026
+
+Entre 2021 et 2024, dans un contexte de sortie progressive de crise sanitaire et de baisse marquée du chômage (‑82 000 personnes), l’écart s’est en revanche nettement réduit : ‑402 000 personnes
+figure 8. En effet, au cours de cette période, parmi les inscrits en catégorie A, le nombre de personnes inactives a nettement reculé (‑204 000), ainsi que celui des personnes en emploi au sens du BIT (‑93 000). Parallèlement, parmi les chômeurs au sens du BIT, le nombre de personnes non inscrites à France Travail a nettement augmenté (+89 000).
+
+8. Évolution du nombre de personnes inscrites à France Travail en catégorie A
+ou au chômage au sens du BIT entre 2021 et 2024
+en milliers de personnes
+
+Niveaux
+
+Évolution 2021‑2024
+
+Catégories
+
+2024
+
+2021
+
+Ensemble
+
+De 15 à De 25 à De 50 à Inférieur Bac 24 ans 49 ans 64 ans au bac ou
+plus
+
+Inscrits en catégorie A et non chômeurs (1)
+
+1 466
+
+ Inactifs dans le halo
+
+727
+
+ Inactifs hors halo
+
+503
+
+ En emploi
+
+236
+
+Inscrits en catégorie A et chômeurs (2)
+
+1 427
+
+Chômeurs et non inscrits en catégorie A (3)
+
+863
+
+ Non inscrits à France Travail
+
+524
+
+ Inscrits en catégorie B ou C
+
+240
+
+ Inscrits en catégorie D ou E
+
+99
+
+Inscrits en catégorie A (4)=(1)+(2)
+
+2 893
+
+Chômeurs au sens du BIT (2)+(3)
+
+2 290
+
+Écart entre inscrits en catégorie A et chômeurs (1)‑(3) 603
+
+1 763 866 568 329
+1 614 758 435 224 99
+3 377 2 372 1 005
+
+‑297 ‑139
+‑65 ‑93 ‑187 105 89 16
+0 ‑484
+‑82 ‑402
+
+‑85 ‑23 ‑23 ‑40 ‑35 75 73
+7 ‑5 ‑120 40 ‑160
+
+‑141 ‑81 ‑13 ‑47
+‑121 33 16 9 7
+‑262 ‑88
+‑174
+
+‑71 ‑35 ‑29
+‑7 ‑31
+‑3 0 0 ‑3 ‑101 ‑33 ‑68
+
+‑211 ‑113
+‑50 ‑47 ‑152
+7 32 ‑12 ‑13 ‑363 ‑145 ‑217
+
+‑86 ‑26 ‑14 ‑46 ‑35 98 56 29 13 ‑121 63 ‑185
+
+Part des chômeurs parmi les inscrits en catégorie A (2)/(4) (en %)
+
+49,3 47,8
+
+1,5
+
+3,6
+
+0,4
+
+1,6
+
+0,2
+
+2,1
+
+Lecture : En 2024, on dénombre 727 000 inscrits en catégorie A à France Travail et dans le halo du chômage, soit une diminution de 139 000 personnes par rapport à 2021. Parmi les personnes de 15 à 24 ans, ce nombre recule de 23 000. Champ : France hors Mayotte, personnes âgées de 15 à 64 ans, inscrites en catégorie A ou au chômage au sens du BIT, vivant dans un logement ordinaire. Source : Dares‑Insee‑France Travail, appariement du Fichier historique statistique et de l’enquête Emploi.
+
+Le nombre de chômeurs au sens du BIT non inscrits à France Travail a fortement augmenté, surtout parmi les jeunes
+La réforme de l’assurance chômage de 20197 a mis en œuvre progressivement, entre novembre 2019 et décembre 2021, des mesures susceptibles d’affecter le comportement d’inscription à France Travail indépendamment de la situation sur le marché du travail. En particulier, elle a révisé le mode de calcul du salaire journalier de référence (SJR) et la durée potentielle d’indemnisation, et a allongé de quatre à six mois la condition d’affiliation minimale au régime d’assurance chômage pour ouvrir un droit8. Ces mesures ont surtout touché des jeunes, peu qualifiés et en contrats courts, qui n’ont pas été suffisamment longtemps en emploi par le passé pour ouvrir un droit ou qui alternent contrats courts et périodes de chômage [Bjaï et al., 2025]. Cela a pu les désinciter à s’inscrire à France Travail. Ainsi le recul du nombre d’inscrits en catégorie A concerne principalement les peu diplômés (diplôme le plus élevé inférieur au niveau baccalauréat : ‑363 000 inscrits contre ‑121 000 pour les titulaires d’un diplôme de niveau équivalent ou supérieur au bac).
+En corollaire, la forte hausse, entre 2021 et 2024, du nombre de chômeurs au sens du BIT non inscrits à France Travail est portée principalement par les jeunes (+73 000 parmi les 15‑24 ans). De fait, au cours de la période, les jeunes ont pour partie substitué dans leurs modalités de recherche d’emploi les contacts auprès de France Travail par d’autres modalités (telles que le recours aux agences d’intérim, les tests ou les entretiens d’embauche) encadré 3.
+
+7 P romulguée par le décret du 26 juillet 2019. 8 P ar ailleurs, la réforme rend dégressives les allocations élevées et instaure un bonus‑malus de cotisations pour certains
+employeurs en fonction de leur recours aux contrats courts.
+
+Insee Références – Édition 2026 – Dossiers – Le nombre de chômeurs au sens du BIT et des inscrits à France Travail en catégorie A…
+
+75
+
+ E ncadré 3 – Les jeunes à la recherche d’un emploi : une inscription à France Travail moins fréquente, des modalités de recherche spécifiques
+En 2024, 4,1 millions de personnes sont au chômage au sens du BIT ou dans le halo du chômage. Parmi elles, plus d’un tiers ne sont pas inscrites à France Travail. Parmi ces personnes non inscrites, plus de la moitié a moins de 25 ans : en effet, 65 % des jeunes de moins de 25 ans au chômage ou dans le halo ne sont pas inscrits à France Travail, contre un peu plus de 20 % de leurs aînés figure A.
+
+A. S tatut d’emploi antérieur des personnes au chômage ou dans le halo du chômage
+en 2024, selon l’âge et la catégorie d’inscription à France Travail
+en %
+
+Caractéristiques
+
+De 15 à 24 ans
+
+Catégorie Catégories Non
+
+A
+
+B à E inscrits
+
+De 25 à 49 ans
+
+Catégorie Catégories Non
+
+A
+
+B à E inscrits
+
+De 50 à 64 ans
+
+Catégorie Catégories Non
+
+A
+
+B à E inscrits
+
+Ensemble
+
+Nombre d’individus
+
+(en milliers)
+
+333
+
+En part de la classe
+
+d’âge
+
+4
+
+En part de la classe
+
+d’âge au chômage
+
+ou dans son halo
+
+28
+
+A déjà travaillé
+
+82
+
+En CDI
+
+13
+
+En CDD ou en intérim
+
+53
+
+En alternance
+
+15
+
+Non‑salarié
+
+1
+
+83
+
+788 1 263
+
+357
+
+1
+
+10
+
+6
+
+2
+
+461
+
+559
+
+2
+
+4
+
+7
+
+65
+
+87
+
+52
+
+18
+
+10
+
+54
+
+34
+
+12
+
+7
+
+2
+
+1
+
+61
+
+17
+
+95
+
+96
+
+41
+
+42
+
+47
+
+45
+
+3
+
+1
+
+4
+
+8
+
+22
+
+66
+
+83
+
+98
+
+36
+
+55
+
+33
+
+40
+
+3
+
+0
+
+11
+
+3
+
+117
+
+170
+
+1
+
+1
+
+14
+
+20
+
+99
+
+96
+
+49
+
+48
+
+42
+
+31
+
+0
+
+0
+
+9
+
+17
+
+4 130
+100
+100 85 34 42 4 5
+
+Lecture : En 2024, parmi les 333 000 personnes âgées de moins de 25 ans inscrites en catégorie A, au chômage ou dans son halo, 82 % ont déjà travaillé ; 13 % étaient en CDI lors de leur dernier emploi. Champ : France hors Mayotte, personnes âgées de 15 à 64 ans au chômage au sens du BIT ou dans le halo du chômage, vivant dans un logement ordinaire. Source : Dares‑Insee‑France Travail, appariement du Fichier historique statistique et de l’enquête Emploi.
+
+Parmi les moins de 25 ans dans cette situation, 52 % ont travaillé auparavant (contre 82 % de ceux inscrits en catégorie A) et plus d‘un tiers étaient en CDD ou en intérim lors de leur dernier emploi. Par comparaison, les 25‑49 ans dans cette situation sont beaucoup plus nombreux à avoir déjà travaillé (83 %) mais la même proportion était salariée sur un emploi temporaire (un tiers).
+La moindre inscription à France Travail des jeunes peut s’expliquer par des démarches de recherche d’emploi différentes de celles mises en œuvre par leurs aînés. À cet égard, les 15‑24 ans font plus appel à leur entourage (41 %, contre 37 % pour les 25‑49 ans), contactent plus souvent directement l’employeur via une candidature spontanée ou lors de salons professionnels (26 % contre 23 %) et passent plus souvent des tests ou des entretiens d’embauches (22 % contre 18 %) figure B.
+Depuis la réforme de la condition d’affiliation minimale (définitivement appliquée à compter de décembre 2021), la probabilité de bénéficier d’indemnisation est réduite pour les trajectoires d’emploi fragmentées, ce qui diminue l’incitation à s’inscrire à France Travail [Brembilla et al., 2024].
+Cela affaiblit davantage le lien entre recherche d’emploi et inscription à France Travail pour les jeunes, comparés à leurs aînés. Ainsi, en 2024, 63 % des personnes de 15 à 64 ans au chômage ou dans son halo recherchent activement un emploi1 et 39 % signalent avoir été en contact avec France Travail ou une mission locale. Pour les moins de 25 ans au chômage ou dans son halo, 63 % recherchent activement un emploi mais seulement 28 % ont été en contact avec France Travail ou une mission locale.
+
+1 S oit un peu plus d’un quart des personnes dans le halo du chômage et, par définition, tous les chômeurs au sens du BIT. En effet, près des trois quarts des personnes dans le halo du chômage souhaitent travailler mais ne recherchent pas d’emploi (qu’elles soient ou non disponibles pour occuper un emploi à brève échéance).
+
+76
+
+Emploi, chômage, revenus du travail – Insee Références – Édition 2026
+
+B. Inscription à France Travail et recherche active d’emploi des personnes au chômage ou dans son halo en 2024, et variation par rapport à 2021, selon l’âge
+
+Caractéristiques
+
+2024 (en %)
+De 15 De 25 De 50 à 24 à 49 à 64 ans ans ans
+
+Variation 2021‑2024 (en points de %)
+Ensemble De De De Ensemble 15 à 25 à 50 à 24 ans 49 ans 64 ans
+
+Nombre d’individus (en milliers)
+
+1 204 2 081 845
+
+En part de la classe d’âge
+
+15 10
+
+7
+
+En part des personnes au chômage ou dans le halo
+
+29 50 21
+
+Inscrit à France Travail
+
+35 78 80
+
+Recherche activement un emploi1, dont :
+
+63 64 60
+
+ A contacté France Travail, une mission locale pour trouver
+
+un emploi ou a répondu à une de leurs offres d’emploi
+
+28 44 44
+
+ A contacté une agence d’intérim ou un opérateur privé de
+
+placement ou répondu à une de leurs offres d’emploi
+
+23 26 23
+
+ A fait appel à son entourage (famille, amis, collègues,
+
+syndicats, etc.) pour l’aider dans ses recherches d’emploi 41 37 35
+
+ A déposé ou actualisé son CV sur Internet
+
+40 40 34
+
+ A passé une annonce pour trouver un emploi
+
+ou répondu à une offre d’emploi
+
+26 29 25
+
+ A étudié des offres d’emploi
+
+48 54 49
+
+ A passé un test ou un entretien d’embauche
+
+22 18 13
+
+ A contacté un employeur par candidature spontanée ou
+
+lors d’un salon professionnel ou d’un forum de l’emploi
+
+ou en réponse à la sollicitation d’un chasseur de tête
+
+26 23 20
+
+ A réalisé des démarches pour s’installer à son compte
+
+2
+
+9
+
+6
+
+Nombre moyen de démarches actives2
+
+3,7 3,7 3,4
+
+4 130 10
+100 66 63
+39
+24
+38 39
+27 51 18
+23 6
+3,6
+
+112 ‑169 ‑81 1 ‑1 ‑1 4 ‑2 ‑1 ‑6 ‑3 ‑2 022
+‑3 2 4
+221
+‑1 1 1 244
+031 ‑1 2 0 322
+
+‑137 0 0 ‑5 1
+0
+2
+1 3
+2 1 3
+
+222
+
+2
+
+‑1 1 1
+
+0
+
+0,1 0,2 0,2
+
+0,2
+
+1 L a modalité « A passé un concours pour entrer dans le secteur public », mentionnée dans moins de 2 % des cas quelle que soit la classe d’âge n’est pas représentée ici.
+2 Nombre moyen de démarches actives différentes, hors « A contacté France Travail, une mission locale pour trouver un emploi ou a répondu à une de leurs offres d’emploi ».
+Lecture : En 2024, parmi les 1,204 million de personnes âgées de 15 à 24 ans au chômage au sens du BIT ou dans le halo du chômage, 35 % sont inscrites à France Travail (en catégorie A, B, C, D ou E) et 63 % ont recherché activement un emploi au cours des quatre dernières semaines. Champ : France hors Mayotte, personnes âgées de 15 à 64 ans au chômage au sens du BIT ou dans son halo, vivant dans un logement ordinaire. Source : Dares‑Insee‑France Travail, appariement du Fichier historique statistique et de l’enquête Emploi.
+
+Entre 2021 et 2024, la part des inscrits parmi les 15‑24 ans chômeurs ou dans le halo du chômage a baissé de 6 points, deux fois plus que parmi les 25‑49 ans. Ce changement de comportement d’inscription des jeunes s’accompagne d’un changement dans leurs modes de recherche d’emploi. En effet, les jeunes au chômage ou dans le halo déclarent moins souvent avoir contacté France Travail ou une mission locale ou répondu à une de leurs offres d’emploi en 2024 qu’en 2021 (‑3 points). A contrario, ils signalent plus fréquemment avoir passé un test ou un entretien d’embauche, été en contact avec une agence d’intérim ou un opérateur privé de placement, mis à jour leur CV sur internet ou contacté directement un employeur (via une candidature spontanée ou à l’occasion d’un salon professionnel) : entre +2 et +3 points dans chacun de ces cas entre 2021 et 2024. Ces changements ne se font pas au détriment de l’intensité des recherches, les jeunes faisant au moins autant de démarches actives de recherche d’emploi en 2024 (en moyenne 3,7) qu’en 2021 (3,6).
+
+Insee Références – Édition 2026 – Dossiers – Le nombre de chômeurs au sens du BIT et des inscrits à France Travail en catégorie A…
+
+77
+
+L’inscription à France Travail et la catégorie d’inscription varient aussi en fonction de règles administratives ou d’actions de l’opérateur
+À partir de 2022, le formulaire d’actualisation mensuelle de France Travail, par lequel les inscrits déclarent leur activité au cours du mois, a évolué. En améliorant la déclaration des heures d’activité réduite, le nouveau formulaire classe moins d’inscrits en catégorie A au profit des catégories B et C [Makhzoum et al., 2025]. De fait, parmi les chômeurs au sens du BIT, le nombre d’inscrits en catégorie A a reculé de 12 % entre 2021 et 2024, tandis que le nombre d’inscrits en catégorie B ou C a augmenté de 7 %.
+Par ailleurs, sur la période, le nombre de contrôles de la recherche d’emploi a fortement augmenté, passant de moins de 400 000 en 2021 a un peu plus de 600 000 en 2024 [Garcia, 2025]. En 2021, le niveau relativement faible du nombre de contrôles s’expliquait pour partie par la prolongation des droits en raison de la crise sanitaire, qui s’est poursuivie jusqu’à la fin du premier semestre 2021. Les contrôles peuvent aboutir à une radiation administrative (dans 17 % des cas en 2024). La hausse du nombre de contrôles de la recherche d’emploi peut ainsi expliquer une partie du surcroît de sorties des listes de France Travail pour motif de radiation administrative entre 2021 et 2024. En 2024, en catégorie A, B ou C, 220 300 sorties de liste correspondent à une radiation administrative (soit 10 % des sorties de ces trois catégories), contre 175 100 en 2021 (soit 8 % des sorties) [Dares, France Travail, 2026].
+Plus ponctuellement, la mise en œuvre, fin 2021, du plan visant à recontacter les « demandeurs d’emploi de longue durée » pour leur proposer des actions de remobilisation, des formations ou des périodes d’immersion, a également pu générer un surcroît de reprises d’emploi mais également davantage de radiations administratives, indépendamment du statut d’activité.
+Ces deux facteurs ont pu contribuer eux aussi à une baisse plus prononcée du nombre d’inscrits à France Travail en catégorie A inactifs au sens du BIT.
+Auteurs : Marie Gouyon (Insee, coordinatrice) Lucie Carlier (Dares) Christel Poujouly (France Travail) Joël Presotto (Dares)
+
+Sources
+Le Fichier historique statistique (FHS) est une base administrative produite chaque trimestre par France Travail (anciennement Pôle emploi). Elle couvre tous les inscrits à France Travail vivant en France (y compris en communautés, telles que les foyers de jeunes travailleurs). Elle enregistre, pour les 10 années antérieures, tous les évènements successifs concernant les personnes qui ont été inscrites sur les listes de France Travail sur cette période, qu’elles soient ou non inscrites à la date d’extraction. Elle permet d’analyser la trajectoire d’inscription : récurrence d’inscription sur les listes, ancienneté dans la catégorie A, transitions entre les différentes catégories, etc. Elle permet également de dénombrer les inscrits « avec recul » (en prenant en compte toute l’information relative à un mois donné, y compris celle connue avec retard, jusqu’à 10 ans après la fin du mois), alors que la statistique actualisée tous les mois et publiée conjointement par France Travail et la Dares est « sans recul » (Statistiques du marché du travail, STMT, publiées environ 25 jours après la fin du mois).
+L’enquête Emploi en continu (EEC) est quant à elle produite chaque trimestre par l’Insee. Elle interroge, en continu (c’est‑à‑dire sur toutes les semaines de l’année) depuis 2003, les personnes âgées de 15 ans ou plus vivant dans un logement « ordinaire » (hors communautés). Elle vise à observer le marché du travail de manière structurelle et conjoncturelle et correspond à la déclinaison française de l’enquête Labour Force Survey (LFS) définie au niveau européen. L’enquête est sous forme de panel rotatif : les personnes enquêtées le sont six trimestres consécutifs. Elle permet ainsi de dénombrer, chaque trimestre, les personnes selon leur statut d’activité au sens du BIT et d’illustrer les transitions de court terme dans leurs parcours. En 2021, l’enquête Emploi a été rénovée, afin de se conformer au règlement européen de 2021 sur les statistiques sociales ; aussi, le questionnaire et la méthode de pondération ont été revus, impliquant des ruptures de séries sur certains concepts [Insee, 2021]. Sur les principaux indicateurs présentés ici (statut au sens du BIT), des pondérations rétropolées ont été utilisées pour corriger au mieux l’impact de ces changements et fournir de nouvelles séries longues, cohérentes avec le nouveau règlement, aussi homogènes dans le temps que possible.
+L’étude est menée sur les personnes âgées de 15 à 64 ans vivant en France hors Mayotte.
+
+78
+
+Emploi, chômage, revenus du travail – Insee Références – Édition 2026
+
+Méthodes
+L’appariement entre les deux sources a été mené via l’attribution d’un code statistique non signifiant (CSNS) aux individus figurant dans l’une et l’autre source. Le CSNS est une clé facilitant les appariements au sein du Système statistique public, défini par la loi pour une République numérique de 2016. Son calcul peut se faire soit à partir du Numéro d’inscription au répertoire (NIR), soit à partir des traits d’identité tels que les noms de naissance, marital ou d’usage, les prénoms, le sexe, la date, la commune, le pays de naissance et le code géographique du lieu de naissance [Bénichou et al., 2023].
+Le calcul du CSNS dans le Fichier historique et l’enquête Emploi en continu (EEC) est mené sur les traits d’identité. Tous les traits cités supra sont disponibles dans la première source et un CSNS est ainsi attribué de façon fiable à plus de 99 % des inscrits à France Travail entre 2016 et 2024. En revanche, dans la seconde, certaines informations sont partiellement manquantes, telles que le nom de famille de chaque personne (seul celui de la personne contact du logement est disponible) et la commune de naissance (seul le département ou pays de naissance est présent). Afin de disposer d’un jeu complet de traits d’identité pour l’enquête Emploi, celle‑ci est appariée au préalable avec le fichier démographique sur les logements et les individus (Fideli, produit par l’Insee depuis 2018 et base de sondage de l’enquête Emploi). In fine, environ 96 % des répondants à l’EEC disposent d’un CSNS de bonne qualité.
+Une fois l’appariement entre les deux sources réalisé via le rapprochement des CSNS et des périodes d’enquête (semaine de référence pour l’EEC) ou d’inscription à France Travail (mois), une étape de repondération a été effectuée pour corriger du nombre de personnes n’ayant pas de CSNS de bonne qualité et pouvoir retrouver les marges « officielles » de l’EEC en termes de statut au sens du BIT.
+Il est alors possible de comparer à la série des chômeurs au sens du BIT trois indicateurs relatifs à l’inscription à France Travail : celui publié chaque mois (données STMT ou « sans recul »), celui estimé avec recul (données du FHS) et celui estimé avec recul sur le sous‑échantillon apparié à l’EEC. Ces trois mesures suivent les mêmes tendances figure.
+
+Nombre de chômeurs au sens du BIT et d’inscrits à France Travail en catégorie A de 2016 à 2024, selon la source employée
+
+Inscrits en catégorie A :
+Chômeurs au sens du BIT : en milliers de personnes, en moyenne sur l’année 4 000
+
+Appariement Fichier historique statistique (avec recul) Statistiques du marché du travail (sans recul) Appariement
+
+3 800
+
+3 600
+
+3 400
+
+3 200
+
+3 000
+
+2 800
+
+2 600
+
+2 400
+
+2 200
+
+2 000 2016
+
+2017
+
+2018
+
+2019
+
+2020
+
+2021
+
+2022
+
+2023
+
+2024
+
+Note : Par construction de l’appariement, les courbes relatives aux chômeurs au sens du BIT et issues des données individuelles initiales et de l’appariement se confondent. Lecture : En 2024, d’après les données issues de l’appariement, en moyenne 2,290 millions de personnes sont au chômage au sens du BIT et 2,893 millions sont inscrites en catégorie A à France Travail. Champ : France hors Mayotte, personnes âgées de 15 à 64 ans (et vivant dans un logement ordinaire pour l’enquête Emploi). Sources : Insee, enquête Emploi, séries longues ; France Travail, Fichier historique statistique (FHS), STMT ; Dares‑Insee‑France Travail, appariement du FHS et de l’enquête Emploi.
+
+Insee Références – Édition 2026 – Dossiers – Le nombre de chômeurs au sens du BIT et des inscrits à France Travail en catégorie A…
+
+79
+
+Définitions
+Un chômeur au sens du Bureau international du travail (BIT) est une personne âgée de 15 ans ou plus qui répond simultanément à trois conditions : être sans emploi durant une semaine donnée ; être disponible pour prendre un emploi dans les deux semaines ; avoir cherché activement un emploi au cours des quatre dernières semaines ou en avoir trouvé un qui commence dans moins de trois mois. Les inscrits à France Travail regroupent l’ensemble des personnes inscrites sur les listes de France Travail. L’inscription sur ces listes est soumise à certaines conditions. Selon leur situation vis‑à‑vis de l’obligation de recherche d’emploi et de l’exercice ou non d’une activité, les inscrits à France Travail sont regroupés en cinq catégories jusqu’en 2024. Le halo autour du chômage est composé de personnes sans emploi qui, soit recherchent un emploi mais ne sont pas disponibles dans les deux semaines pour travailler, soit n’ont pas effectué de démarche active de recherche d’emploi dans le mois précédent mais souhaitent travailler, qu’elles soient disponibles ou non.
+Pour en savoir plus • Bénichou Y.‑L., Espinasse L., Gilles S., « Le code statistique non signifiant (CSNS) : un service pour faciliter les
+appariements de fichiers », Insee, Courrier des statistiques no 9, juin 2023.
+• Bjaï B., Fauvre L., Lardeux R., Ozil S., Presotto J., « Rapport du comité d’évaluation de la réforme de l’assurance chômage
+initiée en 2019 », Dares, avril 2025.
+• Brembilla L., Pariset C., Savary K., « Impact de la réforme de la condition d’affiliation minimale à l’Assurance chômage
+sur les comportements de retour à l’emploi et d’inscription à France Travail (ex‑Pôle emploi) », Dares, Document d’études no 273, février 2024.
+• Coder Y., Hamman S., Dixte C., Hameau A., Larrieu S., Marrakchi A., Montaut A., « Les chômeurs au sens du BIT et les
+demandeurs d’emploi inscrits à Pôle emploi : une divergence de mesure du chômage aux causes multiples », in Emploi, chômage, revenus du travail, coll. « Insee Références », édition 2019.
+• Coder Y., Hamman S., Dixte C., Hameau A., Larrieu S., Marrakchi A., Montaut A., « Appariement entre l’enquête Emploi
+et le fichier Historique de Pôle emploi sur la période 2012‑2017 – Méthode et premiers résultats », Insee, Documents de Travail no F1904, juillet 2019.
+• Dares, France Travail, « Inscrits à France Travail – Entrées et sorties des listes France et régions (trimestrielles, brutes) »,
+open data, 2026.
+• Garcia S., « Le contrôle de la recherche d’emploi en 2024 », France Travail, Statistiques et Indicateurs no 25.016, juillet 2025. • Graindorge G., « En 2025, la loi pour le plein emploi a des effets relativement limités sur les indicateurs du marché du
+travail au sens du BIT », encadré 5 de la Vue d’ensemble in Emploi, chômage, revenus du travail, coll. « Insee Références », édition 2026.
+• Hentzgen C., Pariset C., Savary K., Limon E., « Quantifier le non‑recours à l’assurance chômage », Dares, Document
+d’études no 263, octobre 2022.
+• Insee, « L’enquête Emploi se rénove en 2021 : des raisons de sa refonte aux impacts sur la mesure de l’emploi et du
+chômage », Insee Analyses no 65, juin 2021.
+• Insee, fiches « Inscrits à France Travail » et « Transitions sur le marché du travail », in Emploi, chômage, revenus du travail,
+coll. « Insee Références », édition 2026.
+• Makhzoum S., Cocuau V., « Chômeurs au sens du BIT et inscrits à France Travail en catégorie A », encadré de l’annexe
+« Sources, méthodes et nomenclatures » in Emploi, chômage, revenus du travail, coll. « Insee Références », édition 2025.
+
+80
+
+Emploi, chômage, revenus du travail – Insee Références – Édition 2026
+
+

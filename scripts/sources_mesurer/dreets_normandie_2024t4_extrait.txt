@@ -1,0 +1,8 @@
+# Extrait de https://normandie.dreets.gouv.fr/sites/normandie.dreets.gouv.fr/IMG/pdf/defm_normandie_2024t4.pdf
+# (Dreets Normandie, publication trimestrielle, source STMT France Travail-Dares ; script refuse par le serveur, PDF obtenu par un autre canal de lecture le 12/10/2026)
+# SHA-256 du PDF : f3b5402f622a825961439c0d234b89224591a6cb6af91970891b8c1a444ecffd ; texte extrait par pdftotext -enc UTF-8, sans retouche (avertissement et premier paragraphe).
+DEMANDEURS D'EMPLOI INSCRITS À FRANCE TRAVAIL EN NORMANDIE AU QUATRIÈME TRIMESTRE 2024
+
+Avertissement : entre octobre et novembre 2024, une évolution dans le formulaire d’actualisation a conduit à augmenter le nombre de demandeurs d’emploi en catégorie A, et à réduire d’autant le nombre de demandeurs d’emploi en catégories B et C, sans modifier le nombre total de demandeurs d’emploi en catégories ABC. Au niveau national, au quatrième trimestre 2024, cette modification aura conduit à une augmentation d’environ 36 000 demandeurs d’emploi en catégorie A, et à une réduction de 25 000 du nombre de demandeurs d’emploi en catégories B et de 11 000 du nombre de demandeurs d’emploi en catégorie C.
+Au quatrième trimestre 2024, en Normandie, le nombre de demandeurs d’emploi tenus de rechercher un emploi et sans activité (catégorie A) s'établit en moyenne sur le trimestre à 133 410. Ce nombre augmente de 3,5 % sur le trimestre (soit +4 460 personnes) et de 4,8 % sur un an.
+En France métropolitaine, ce nombre augmente de 4,0 % ce trimestre (+3,7 % sur un an).
