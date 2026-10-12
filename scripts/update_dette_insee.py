@@ -1656,15 +1656,22 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
             continue
         cx = (X(max(a1b, x0)) + X(min(a2b, x1))) / 2
         lib = lf if lang == "fr" else le
-        # bornage : un libelle centre sur une bande de bord sortirait du cadre
+        # Bande de bord : centre, le libelle sortirait du cadre ; repousse, il
+        # flottait sans designer sa bande. Il s'aligne alors sur le BORD de la
+        # bande -- debut a gauche, fin a droite (auteur, 12/10/2026 : « 1979 »
+        # aligne sur le debut de la bande du post-choc petrolier).
         demi = 0.29 * (TY_MINEUR - 1) * max(len(lib), len(per))
-        cx = min(max(cx, ml + demi), w - mr - demi)
+        ancre = "middle"
+        if cx - demi < ml:
+            cx, ancre = X(max(a1b, x0)), "start"
+        elif cx + demi > w - mr:
+            cx, ancre = X(min(a2b, x1)), "end"
         e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="%d" fill="%s" '
-                 'text-anchor="middle">%s</text>'
-                 % (cx, h - 18, FONT, TY_MINEUR - 1, MUTED, _esc(per)))
+                 'text-anchor="%s">%s</text>'
+                 % (cx, h - 18, FONT, TY_MINEUR - 1, MUTED, ancre, _esc(per)))
         e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="%d" fill="%s" '
-                 'text-anchor="middle">%s</text>'
-                 % (cx, h - 6, FONT, TY_MINEUR - 1, MUTED, _esc(lib)))
+                 'text-anchor="%s">%s</text>'
+                 % (cx, h - 6, FONT, TY_MINEUR - 1, MUTED, ancre, _esc(lib)))
 
     src = LABELS_CARTOUCHE[lang]["src_longue"]
     return fin_pied(e, w, h + 4, src % (ans[0], label_courant), "longue", lang)
