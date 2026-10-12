@@ -88,7 +88,26 @@
     "acte": "Decision (EU) 2025/1904",
     "date_acte": "2025-09-10",
     "procedure": "2024/0148 (COD)",
-    "second_jeu": "aucun"
+    "second_jeu": "aucun",
+    "composition": {
+     "contre": [
+      "HU"
+     ],
+     "abstention": [
+      "CZ",
+      "FR",
+      "MT",
+      "AT"
+     ],
+     "np": []
+    },
+    "verification_composition": {
+     "piece": "ST 11350/25 INIT",
+     "page": 2,
+     "objet": "annexe (image) : vote de chaque État membre",
+     "sha256_pdf": "7f6749b61a6fa6a384e5cee1d1d8cbe99c9a9bde197efd923e6f63735ac10241",
+     "controle": "lue à l'œil le 12/10/2026, transcrite ; la garde U8 relit les pictogrammes de l'image État par État et s'arrête au moindre écart ; mutation à total constant vue mordre"
+    }
    },
    {
     "vote": "2026-02-23",
@@ -104,7 +123,25 @@
     "acte": "Regulation (EU) 2026/463",
     "date_acte": "2026-02-24",
     "procedure": "2025/0132 (COD)",
-    "second_jeu": "aucun"
+    "second_jeu": "aucun",
+    "composition": {
+     "contre": [
+      "ES",
+      "FR",
+      "PT"
+     ],
+     "abstention": [],
+     "np": [
+      "DK"
+     ]
+    },
+    "verification_composition": {
+     "piece": "ST 6628/26 INIT",
+     "page": 2,
+     "objet": "annexe (image) : vote de chaque État membre",
+     "sha256_pdf": "7b6d26f36b0beda9b65ce7bf1466e03cb6bca73e43408de487d77a4b0fe85b39",
+     "controle": "lue à l'œil le 12/10/2026, transcrite ; la garde U8 relit les pictogrammes de l'image État par État et s'arrête au moindre écart ; mutation à total constant vue mordre"
+    }
    }
   ]
  },
@@ -114,8 +151,8 @@
   "U3 : relevé du Conseil concordant avec SWP pays par pays (écarts expliqués seulement) ; règles de vote 1622 + 132 + 1 = 1755 entrées",
   "U4 : France 2 contre, 3 abstentions, 1750 pour (liste des actes cohérente)",
   "U5 : transposition contrôlée par le texte de la Commission",
-  "U6 : 18 citations des traités (TUE 4, 5, 15, 16, 17 ; TFUE 2, 18, 76, 238, 241, 288, 293, 294) retrouvées mot pour mot, FR et EN ; protocole n° 36 relu",
-  "U8 : 5 actes relus (note du Conseil, acte publié FR et EN) ; 3 décomptes recoupés par SWP, 2 documentés à la source seulement",
+  "U6 : 18 citations des traités (TUE 4, 5, 15, 16, 17 ; TFUE 2, 18, 76, 238, 241, 288, 293, 294) retrouvées mot pour mot, FR et EN ; protocole n° 36 relu ; TFUE 238, § 3 et 168, § 4 relus (phrases résumées)",
+  "U8 : 5 actes relus (note du Conseil, acte publié FR et EN) ; 3 décomptes recoupés par SWP, 2 documentés à la source, composition État par État relue dans l'annexe (2)",
   "U3 : fiches SWP du 2021-05-17 cherchées au Conseil : aucune séance ce jour (séances 6, 10, 20, 26, 27-28 mai), une procédure écrite PESC, aucune procédure écrite législative ; SWP n'a que ces 2 fiches entre le 2021-05-10 et le 2021-05-26",
   "U7 : citations SWP 2021 et 2024 retrouvées ; écart 2024 égal aux entrées écartées (2)",
   "U9 : prose FR et EN relue, jetons résolus (amender sans « sauf », classement verbal, « pour dans tous les autres cas »)",
@@ -1355,6 +1392,7 @@
   "swp21_abst": "deux",
   "swp24_nonpour": "trois",
   "swp24_ecart": "deux",
+  "swp24_annonce": "cinq",
   "polidori_tfue": "55",
   "ecart_date": "17 mai 2021",
   "ecart_avant": "10 mai",
@@ -1452,6 +1490,7 @@
   "swp21_abst": "two",
   "swp24_nonpour": "three",
   "swp24_ecart": "two",
+  "swp24_annonce": "five",
   "polidori_tfue": "55",
   "ecart_date": "17 May 2021",
   "ecart_avant": "10 May",

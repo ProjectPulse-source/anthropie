@@ -29,12 +29,15 @@ Gardes (toutes ARRÊTENT ; le texte servi n'est relu que par U9) :
       Conseil) ;
   U4  la liste des actes de la France est cohérente avec ses comptes ; le total des votes est écrit en borne ;
   U5  transposition : contrôles de test_u_e4 (moyennes dans le texte de la Commission, cohérence 11 / 1 022) ;
-  U6  chaque citation des traités ajoutée en phase B retrouvée mot pour mot, FR et EN, dans le texte archivé ;
+  U6  chaque citation des traités ajoutée en phase B retrouvée mot pour mot, FR et EN, dans le texte archivé ; passe B3 :
+      les phrases que la page résume sans les citer (TFUE 238, § 3, FR et EN ; TFUE 168, § 4, FR, traité complet archivé)
+      et la citation anglaise du TUE, art. 16, § 4, relues dans le texte archivé ;
   U7  citations SWP 2021 et 2024 et inventaire Polidori 2014 relus dans les PDF archivés ;
   U8  les cinq actes : décompte qui totalise les États membres du moment et contient la position de la France ; note du
       Conseil (procédure, date du vote) et acte publié (numéro, date, « décision du Conseil du <date du vote> ») relus ;
       décompte recalculé depuis le jeu SWP pour les votes qu'il couvre (les deux votes postérieurs n'ont pas de second
-      jeu : leur décompte, transcrit de l'annexe en image de la note, n'est contrôlé que par son total) ;
+      jeu : passe B3, leur COMPOSITION État par État, transcrite, est relue dans l'annexe en image de la note, pictogramme
+      par pictogramme ; un vote déplacé à total constant arrête) ;
   U9  GARDE DE PROSE (pages FR et EN, jetons résolus) : « amender … unanimité » jamais sans « sauf » / « except » dans la
       phrase (art. 293, § 1 : exceptions) ; aucune formule de classement verbal (« moins / plus souvent que ») ; « pour
       dans tous les autres cas » seulement si la France n'a aucune non-participation. Justification R2 : remplace la
@@ -42,6 +45,7 @@ Gardes (toutes ARRÊTENT ; le texte servi n'est relu que par U9) :
       mutations. Condition de mort : la page ne cite plus l'art. 293 ni de comparaison entre États.
 Autotest (chaque mutation doit arrêter SA garde) : vote de la France et compte d'un État altérés (U3), domaine retiré
 (U1), écart SWP modifié (U7), séance du 17/05/2021 injectée et fiche SWP retirée (U3, passe B2), citations FR et EN altérées (U6), décomptes 2014 et 2026 et date d'un acte altérés (U8),
+deux phrases résumées altérées (U6, passe B3), composition de 2025 et de 2026 altérée à total constant (U8, passe B3),
 quatre phrases fautives injectées (U9). Figures téléphone : parité avec la version détaillée (pied_figure.parite).
 
 Écrit : data/promesses_europe.json (+ static/), static/promesses_europe.csv, data/figures_europe.json,
@@ -174,6 +178,82 @@ ACTES_SHA = {"32014R0251": ("d400b28a552c1951d599fd3e1eb983cbfb78c3eff20712c90f4
              "32025D1904": ("180661aebda2ed8b8f50c24e9b05c3c79a4ed3f436e045d4c0c4956056923f69", "fbd13cd91a3977629d4c8d7e9acc2809d909d2133aa0275613046a2916f39520"),
              "32026R0463": ("7de35b3eb7af3e6c89d86095996537be342b73ae19d632bfd10c8729b3b2c9e0", "4ea6a673354c4be49071badc37273d6706e826bfb5af94ca939c9f2bb9f40ef2")}
 DEBUT_DOUBLE_MAJORITE = "2014-11-01"  # TUE art. 16, § 4 et protocole n° 36, art. 3 (relus par la garde U6)
+# --- Passe B3 (12/10/2026, arbitrage de la contre-expertise du rendu, U8 renforcée) : pour les deux votes sans second jeu
+# (2025, 2026), la COMPOSITION État par État, transcrite de l'annexe de la note du Conseil (une image, page 2 du PDF
+# archivé, lue à l'œil le 12/10/2026) ; la garde U8 relit les pictogrammes de vote de cette image, pixel par pixel
+# (vert pour, rouge contre, jaune abstention, aucun pictogramme coloré = ne participe pas), dans l'ordre protocolaire
+# du Conseil (deux colonnes), et s'arrête au moindre écart avec la transcription. Un total juste ne suffit plus : un vote
+# déplacé entre deux catégories à total constant arrête (mutation de l'autotest). L'extraction n'est pas fiable sur les
+# annexes de 2014-2015 (mise en page différente) : ces trois votes restent contrôlés par le jeu SWP.
+# R2 : une fonction de lecture, aucune dépendance nouvelle (fitz déjà importé) ; condition de mort : la page ne publie
+# plus le décompte des votes de 2025 et 2026, ou un second jeu indépendant les couvre État par État.
+ORDRE_CONSEIL = (("BE", "BG", "CZ", "DK", "DE", "EE", "IE", "EL", "ES", "FR", "HR", "IT", "CY", "LV"),
+                 ("LT", "LU", "HU", "MT", "NL", "AT", "PL", "PT", "RO", "SI", "SK", "FI", "SE"))
+COMPOSITION = {"ST-11350-2025-INIT": {"contre": ("HU",), "abstention": ("CZ", "FR", "MT", "AT"), "np": ()},
+               "ST-6628-2026-INIT": {"contre": ("ES", "FR", "PT"), "abstention": (), "np": ("DK",)}}
+
+
+def lire_annexe(pdf: Path) -> dict:
+    """Pictogrammes de vote de l'annexe (page 2, image unique) : {État: "pour" | "contre" | "abstention" | "np"}.
+    Colonnes de vote = bandes verticales les plus colorées de chaque moitié ; pictogrammes = segments verticaux d'une même
+    couleur ; rang = écart au premier pictogramme divisé par le pas médian. Toute ambiguïté arrête (jamais de valeur par
+    défaut silencieuse : un rang en double ou hors grille est une erreur)."""
+    import fitz
+    import statistics
+    d = fitz.open(pdf)
+    imgs = d[1].get_images(full=True)
+    if len(imgs) != 1:
+        raise Arret("U8 : %s : %d images en page 2 (1 attendue)" % (pdf.name, len(imgs)))
+    pix = fitz.Pixmap(d, imgs[0][0])
+    if pix.alpha or pix.n != 3:
+        pix = fitz.Pixmap(fitz.csRGB, pix, 0)
+    W, H, n, s = pix.width, pix.height, pix.n, pix.samples
+
+    def cls(i, j):
+        o = (j * W + i) * n
+        r, g, b = s[o], s[o + 1], s[o + 2]
+        if g > 120 and r < 150 and b < 100 and g - r > 40:
+            return "pour"
+        if r > 180 and g < 90 and b < 90:
+            return "contre"
+        if r > 200 and g > 170 and b < 80:
+            return "abstention"
+        return None
+    y0, y1 = int(H * 0.40), int(H * 0.85)
+    cnt = [sum(1 for j in range(y0, y1) if cls(i, j)) for i in range(W)]
+    colonnes = []
+    for a, b in ((0, W // 2), (W // 2, W)):
+        m = max(range(a, b), key=lambda i: cnt[i])
+        lo = hi = m
+        while lo > a and cnt[lo - 1] >= 0.5 * cnt[m]:
+            lo -= 1
+        while hi < b - 1 and cnt[hi + 1] >= 0.5 * cnt[m]:
+            hi += 1
+        runs, cur = [], None
+        for j in range(y0, y1):
+            c = [cls(i, j) for i in range(lo, hi + 1)]
+            k = max(("pour", "contre", "abstention"), key=c.count)
+            k = k if c.count(k) >= 0.4 * len(c) else None
+            if cur and cur[0] == k:
+                cur[2] = j
+            else:
+                if cur and cur[0] and cur[2] - cur[1] >= 7:
+                    runs.append(cur)
+                cur = [k, j, j]
+        if cur and cur[0] and cur[2] - cur[1] >= 7:
+            runs.append(cur)
+        colonnes.append([(r[0], (r[1] + r[2]) / 2) for r in runs])
+    ys = [y for col in colonnes for _, y in col]
+    pas = statistics.median([b - a for col in colonnes for (_, a), (_, b) in zip(col, col[1:])])
+    haut = min(ys)
+    lu = {}
+    for col, etats in zip(colonnes, ORDRE_CONSEIL):
+        for k, y in col:
+            rang = (y - haut) / pas
+            if abs(rang - round(rang)) > 0.25 or not 0 <= round(rang) < len(etats) or etats[round(rang)] in lu:
+                raise Arret("U8 : %s : pictogramme hors grille (y = %.0f, pas %.1f)" % (pdf.name, y, pas))
+            lu[etats[round(rang)]] = k
+    return {e: lu.get(e, "np") for col in ORDRE_CONSEIL for e in col}
 
 # --- Citations des traités ajoutées en phase B (12/10/2026) : textes de Cellar archivés (JO C 202 du 07/06/2016, FR et EN,
 # empreintes vérifiées), chaque phrase retrouvée mot pour mot (garde U6). clé : (fichier FR, sha FR, phrase FR,
@@ -234,6 +314,21 @@ P36_LU = {"fr": ["Jusqu'au 31 octobre 2014, les dispositions suivantes sont en v
                  "Entre le 1 er novembre 2014 et le 31 mars 2017, lorsqu'une délibération doit être prise à la majorité qualifiée, un membre du Conseil peut demander"],
           "en": ["Until 31 October 2014, the following provisions shall remain in force", "members' votes shall be weighted as follows",
                  "Between 1 November 2014 and 31 March 2017, when an act is to be adopted by qualified majority, a member of the Council may request"]}
+# Passe B3 (12/10/2026) : phrases que la page résume sans les citer (TFUE 238, § 3 ; TFUE 168, § 4, français seulement :
+# le traité complet archivé est l'expression française du JO C 202, l'anglais de l'art. 168 n'est pas archivé) et la
+# citation anglaise du TUE, art. 16, § 4 (TUE16_EN, jusqu'ici servie sans relecture). Chacune doit rester dans le texte
+# archivé, sinon U6 arrête. Condition de mort : la page ne mentionne plus la règle des États participants ni l'art. 168.
+JO_COMPLET = (TFUE_DIR / "jo_c202_2016_complet.xhtml", "4db565fae7fc3d23be314fd341e0d11917bf7aae4716d7107f48fc5f777bf8fe")
+B3_LU = {("238", "fr"): ["dans les cas où, en application des traités, tous les membres du Conseil ne prennent pas part au vote",
+                         "au moins 55 % des membres du Conseil représentant les États membres participants",
+                         "plus de 35 % de la population des États membres participants, plus un membre"],
+         ("238", "en"): ["in cases where, under the Treaties, not all the members of the Council participate in voting",
+                         "at least 55 % of the members of the Council representing the participating Member States",
+                         "more than 35 % of the population of the participating Member States, plus one member"],
+         ("tue16", "en"): ["A blocking minority must include at least four Council members"],
+         ("jo", "fr"): ["Par dérogation à l'article 2, paragraphe 5, et à l'article 6, point a), et conformément à l'article 4, paragraphe 2, point k)",
+                        "des mesures fixant des normes élevées de qualité et de sécurité des organes et substances d'origine humaine, du sang et des dérivés du sang",
+                        "des mesures fixant des normes élevées de qualité et de sécurité des médicaments et des dispositifs à usage médical"]}
 # --- C2 (07/10/2026, contre-expertise PRO-20261007-102607) : publications de la SWP qui chiffraient déjà les votes de la
 # France. Citées mot pour mot (garde U7 sur le texte des PDF archivés), nos décomptes posés à côté sur la même fenêtre.
 PUB_SWP = RECH / "sondes" / "europe" / "publications_swp"
@@ -296,10 +391,11 @@ def textes_traite() -> dict:
     for k, (ffr, sfr, fen, sen) in _F.items():
         out[(k, "fr")] = texte_archive(TFUE_DIR / ffr, sfr, "U6")
         out[(k, "en")] = texte_archive(TFUE_DIR / "en" / fen, sen, "U6")
+    out[("jo", "fr")] = texte_archive(JO_COMPLET[0], JO_COMPLET[1], "U6")
     return out
 
 
-def citations_traite(tx: dict, cits: dict = None) -> tuple[dict, dict]:
+def citations_traite(tx: dict, cits: dict = None, lu: dict = None) -> tuple[dict, dict]:
     """Chaque phrase citée par la page, retrouvée mot pour mot dans le texte archivé, FR et EN ; sinon arrêt."""
     cits = CITS if cits is None else cits
     A, E = {}, {}
@@ -314,6 +410,10 @@ def citations_traite(tx: dict, cits: dict = None) -> tuple[dict, dict]:
                 raise Arret("U6 : protocole n° 36 (%s), phrase introuvable : %s" % (lang, p[:60]))
     if "1 er novembre 2014" not in tx[("tue16", "fr")] or "31 mars 2017" not in tx[("tue16", "fr")]:
         raise Arret("U6 : TUE, art. 16 : dates de la transition introuvables")
+    for (f, lang), phrases in (B3_LU if lu is None else lu).items():
+        for p in phrases:
+            if p not in tx[(f, lang)]:
+                raise Arret("U6 : %s (%s), phrase résumée par la page introuvable : %s" % (f, lang, p[:60]))
     return A, E
 
 
@@ -323,8 +423,29 @@ def membres(d: str) -> int:
     return 28 if "2013-07-01" <= d <= "2020-01-31" else 27
 
 
-def controler_actes(actes: list, sw_rows: list) -> list[dict]:
+def controler_composition(st: str, cpt: tuple, pos: str, compo: dict) -> dict:
+    """U8, passe B3 : composition transcrite = comptes transcrits, France à sa place, et = pictogrammes lus dans l'annexe."""
+    etats = [e for col in ORDRE_CONSEIL for e in col]
+    autres = set(compo["contre"]) | set(compo["abstention"]) | set(compo["np"])
+    if len(autres) != len(compo["contre"]) + len(compo["abstention"]) + len(compo["np"]) or not autres <= set(etats):
+        raise Arret("U8 : %s : composition transcrite incohérente (doublon ou État inconnu)" % st)
+    trans = {e: ("contre" if e in compo["contre"] else "abstention" if e in compo["abstention"] else "np" if e in compo["np"] else "pour")
+             for e in etats}
+    comptes = tuple(sum(v == k for v in trans.values()) for k in ("pour", "contre", "abstention", "np"))
+    if comptes != cpt:
+        raise Arret("U8 : %s : composition transcrite %s, décompte transcrit %s" % (st, comptes, cpt))
+    if trans["FR"] != pos:
+        raise Arret("U8 : %s : la France est « %s » dans la composition, « %s » dans l'acte" % (st, trans["FR"], pos))
+    lu = lire_annexe(CONSEIL_DIR / (st + ".pdf"))
+    ecarts = ["%s transcrit %s, lu %s" % (e, trans[e], lu[e]) for e in etats if trans[e] != lu[e]]
+    if ecarts:
+        raise Arret("U8 : %s : composition État par État contredite par l'annexe : %s" % (st, "; ".join(ecarts)))
+    return trans
+
+
+def controler_actes(actes: list, sw_rows: list, composition: dict = None) -> list[dict]:
     import fitz
+    composition = COMPOSITION if composition is None else composition
     res = []
     for (vote, pos, tfr, ten, cpt, st, celex, afr, aen, dacte, proc) in actes:
         if sum(cpt) != membres(vote):
@@ -360,7 +481,12 @@ def controler_actes(actes: list, sw_rows: list) -> list[dict]:
                       n("countryCodeNotParticipatingGrouped"))
             if temoin != cpt:
                 raise Arret("U8 : %s : décompte transcrit %s, jeu SWP %s" % (vote, cpt, temoin))
-        res.append({"vote": vote, "temoin": temoin is not None, "pondere": vote < DEBUT_DOUBLE_MAJORITE})
+        elif st not in composition:
+            raise Arret("U8 : %s : vote sans second jeu et sans composition État par État transcrite" % vote)
+        if st in composition:
+            controler_composition(st, cpt, pos, composition[st])
+        res.append({"vote": vote, "temoin": temoin is not None, "pondere": vote < DEBUT_DOUBLE_MAJORITE,
+                    "composition": st in composition})
     return res
 
 
@@ -930,6 +1056,12 @@ def autotest_b(tx: dict, sw_rows: list, A: dict, E: dict, textes: dict, fr_np: i
     c3 = dict(CITS)
     c3["cit_tue4_1"] = (c3["cit_tue4_1"][0], c3["cit_tue4_1"][1], c3["cit_tue4_1"][2].replace("remain with", "belong to"))
     doit_arreter("citation anglaise du TUE, art. 4 altérée", lambda: citations_traite(tx, c3), "U6")
+    l2 = copy.deepcopy(B3_LU)
+    l2[("238", "fr")][0] = l2[("238", "fr")][0].replace("ne prennent pas part", "prennent part")
+    doit_arreter("TFUE 238, § 3 : règle des États participants altérée", lambda: citations_traite(tx, None, l2), "U6")
+    l3 = copy.deepcopy(B3_LU)
+    l3[("jo", "fr")][2] = l3[("jo", "fr")][2].replace("médicaments", "denrées")
+    doit_arreter("TFUE 168, § 4 : médicaments altérés", lambda: citations_traite(tx, None, l3), "U6")
     m = copy.deepcopy(ACTES)
     m[4] = m[4][:4] + ((22, 3, 0, 1),) + m[4][5:]
     doit_arreter("décompte de 2026 altéré (total faux)", lambda: controler_actes(m, sw_rows), "U8")
@@ -939,6 +1071,15 @@ def autotest_b(tx: dict, sw_rows: list, A: dict, E: dict, textes: dict, fr_np: i
     m = copy.deepcopy(ACTES)
     m[3] = m[3][:9] + ("2025-09-11",) + m[3][10:]
     doit_arreter("date de l'acte de 2025 altérée", lambda: controler_actes(m, sw_rows), "U8")
+    # passe B3 : composition altérée À TOTAL CONSTANT (les comptes 22/1/4/0 et 23/3/0/1 restent justes)
+    k = copy.deepcopy(COMPOSITION)
+    k["ST-11350-2025-INIT"]["abstention"] = ("CZ", "FR", "MT", "BE")  # AT abstention -> pour, BE pour -> abstention
+    doit_arreter("2025 : un vote de « pour » à « abstention », un autre d'« abstention » à « pour » (total constant)",
+                 lambda: controler_actes(ACTES, sw_rows, k), "U8")
+    k = copy.deepcopy(COMPOSITION)
+    k["ST-6628-2026-INIT"]["contre"] = ("ES", "FR", "IT")  # PT contre -> pour, IT pour -> contre
+    doit_arreter("2026 : un vote de « contre » à « pour », un autre de « pour » à « contre » (total constant)",
+                 lambda: controler_actes(ACTES, sw_rows, k), "U8")
 
     seance = t_mai21.replace("Written procedures", "3794th meeting of the Council of the European Union (Education) held in Brussels on 17 May 2021 Written procedures", 1)
     doit_arreter("séance du Conseil le 17 mai 2021 ajoutée au récapitulatif", lambda: verifier_17mai(seance, sw_rows), "U3")
@@ -976,11 +1117,11 @@ def _main() -> int:
     g.append("U5 : transposition contrôlée par le texte de la Commission")
     tx = textes_traite()
     CA, CE = citations_traite(tx)
-    g.append("U6 : %d citations des traités (TUE 4, 5, 15, 16, 17 ; TFUE 2, 18, 76, 238, 241, 288, 293, 294) retrouvées mot pour mot, FR et EN ; protocole n° 36 relu" % len(CITS))
+    g.append("U6 : %d citations des traités (TUE 4, 5, 15, 16, 17 ; TFUE 2, 18, 76, 238, 241, 288, 293, 294) retrouvées mot pour mot, FR et EN ; protocole n° 36 relu ; TFUE 238, § 3 et 168, § 4 relus (phrases résumées)" % len(CITS))
     sw_rows = list(csv.DictReader(open(SWP, encoding="utf-8")))
     RA = controler_actes(ACTES, sw_rows)
-    g.append("U8 : %d actes relus (note du Conseil, acte publié FR et EN) ; %d décomptes recoupés par SWP, %d documentés à la source seulement"
-             % (len(RA), sum(r["temoin"] for r in RA), len(RA) - sum(r["temoin"] for r in RA)))
+    g.append("U8 : %d actes relus (note du Conseil, acte publié FR et EN) ; %d décomptes recoupés par SWP, %d documentés à la source, composition État par État relue dans l'annexe (%d)"
+             % (len(RA), sum(r["temoin"] for r in RA), len(RA) - sum(r["temoin"] for r in RA), sum(r["composition"] for r in RA)))
     t_mai21 = texte_mai21()
     g.append(verifier_17mai(t_mai21, sw_rows))
     for m in autotest(sw):
@@ -1006,6 +1147,7 @@ def _main() -> int:
         d["swp21_abst"] = lg.lettres(sv["swp21"]["abst"], lang)
         d["swp24_nonpour"] = lg.lettres(sv["swp24"]["contre"] + sv["swp24"]["abst"], lang)
         d["swp24_ecart"] = lg.lettres(-ECARTS_EXPLIQUES[("FR", 0)], lang)
+        d["swp24_annonce"] = lg.lettres(SWP24_ANNONCE, lang)
         d["polidori_tfue"] = sv["polidori_tfue"]
     for d, dt in ((A, date_fr), (E, date_en)):
         if MAI21["avant"][:4] != MAI21["apres"][:4]:
@@ -1051,7 +1193,13 @@ def _main() -> int:
                  "ecarts_expliques": {"%s_%s" % (k[0], ("contre", "abstention")[k[1]]): v for k, v in ECARTS_EXPLIQUES.items()},
                  "actes_france": [{"vote": a[0], "position": a[1], "decompte_pour_contre_abstention_np": list(a[4]), "note_conseil": a[5],
                                    "celex": a[6], "acte": a[8], "date_acte": a[9], "procedure": a[10],
-                                   "second_jeu": "SWP" if a[0] <= FIN_TEMOIN else "aucun"} for a in ACTES]},
+                                   "second_jeu": "SWP" if a[0] <= FIN_TEMOIN else "aucun",
+                                   **({"composition": {k: list(v) for k, v in COMPOSITION[a[5]].items()},
+                                       "verification_composition": {"piece": "ST %s/%s INIT" % (a[5].split("-")[1], a[5].split("-")[2][2:]),
+                                                                    "page": 2, "objet": "annexe (image) : vote de chaque État membre",
+                                                                    "sha256_pdf": CONSEIL_SHA[a[5]],
+                                                                    "controle": "lue à l'œil le 12/10/2026, transcrite ; la garde U8 relit les pictogrammes de l'image État par État et s'arrête au moindre écart ; mutation à total constant vue mordre"}}
+                                      if a[5] in COMPOSITION else {})} for a in ACTES]},
         "gardes": g, "calcul": {"votes": V, "bases": {k: v for k, v in B.items() if k != "q"}},
         "tableaux": t, "tableaux_en": te,
         "affichage": dict(A, releve_le="%s (votes du Conseil, relevé à cette date ; transposition au %s)" % (date_fr(RELEVE["date"]), date_fr(ue4.FR["date_arrete"]))),

@@ -1,6 +1,6 @@
-# relu le 2026-10-12 ; texte servi de /ce-que-la-france-peut-decider-dans-l-union-europeenne/, build de 664e06c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /ce-que-la-france-peut-decider-dans-l-union-europeenne/, build de c1b4421 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
-Ce que la France peut décider dans l'Union européenne
+Que peut décider la France dans l'Union européenne ?
 Ce que les traités n'ont pas attribué à l'Union reste aux États : la France y décide seule, en respectant les règles communes.
 Là où l'Union est compétente, la Commission propose et la France vote avec les autres gouvernements au Conseil : à la majorité qualifiée, elle peut être mise en minorité ; à l'unanimité, son seul vote contre peut bloquer.
 Sur les votes publics du Conseil sur des actes législatifs, du 22 décembre 2009 au 1er octobre 2026, la France a voté contre deux fois et s'est abstenue trois fois.
@@ -28,6 +28,8 @@ Chaque État doit assurer l’exécution des obligations nées des traités (coo
 4, § 3) et ne peut pas discriminer en raison de la nationalité (TFUE, art.
 18) ; une loi française qui touche aux échanges peut en outre rencontrer les libertés de circulation du marché intérieur.
 La France décide seule dans ces matières ; elle n’y décide pas hors du droit de l’Union.
+Un même secteur peut d’ailleurs relever de plusieurs compétences : la compétence d’appui ne permet pas, sur ce seul fondement, d’harmoniser les lois nationales, mais en santé, par exemple, le traité permet aussi à l’Union de fixer des normes de qualité et de sécurité pour les organes, le sang, les médicaments et les dispositifs médicaux (TFUE, art.
+168, § 4).
 Les articles cités, mot pour mot
 Le TUE pose la règle : « toute compétence non attribuée à l'Union dans les traités appartient aux États membres » (art.
 4, § 1).
@@ -172,6 +174,8 @@ Le cas général est la majorité qualifiée, définie comme « au moins 55 % de
 16, § 4) ; quand le Conseil ne statue pas sur proposition de la Commission, il faut « au moins 72 % des membres du Conseil, représentant des États membres réunissant au moins 65 % de la population de l'Union » (TFUE, art.
 238, § 2).
 Le même article 16 ajoute : « Une minorité de blocage doit inclure au moins quatre membres du Conseil ».
+C’est la règle générale ; quand tous les membres du Conseil ne prennent pas part au vote, le traité calcule la majorité qualifiée et la minorité de blocage sur les seuls États participants (TFUE, art.
+238, § 3).
 Aucun État ne forme donc seul une minorité de blocage, et la France peut être mise en minorité.
 Le relevé des votes, plus bas, traverse trois régimes de la majorité qualifiée : les voix pondérées, puis la double majorité avec la faculté de demander l’ancien calcul, puis la double majorité seule.
 Les voix des États ont été pondérées jusqu’au 31 octobre 2014.
@@ -254,7 +258,8 @@ Le résultat en une phrase.
 Sur les votes publics du Conseil de l’Union européenne sur des actes législatifs, du 22 décembre 2009 au 1er octobre 2026, la France a voté contre deux fois et s’est abstenue trois fois ; elle a voté pour dans tous les autres cas.
 Les cinq textes ont tous été adoptés.
 Sur les deux contre lesquels elle a voté, la France a été mise en minorité : c’est la majorité qualifiée à l’œuvre.
-Sur les trois où elle s’est abstenue, elle n’a pas joint sa voix à la majorité, sans s’y opposer.
+Sur les trois actes où elle s’est abstenue, la France n’a pas voté contre.
+Mais, à la majorité qualifiée, son abstention ne contribue pas à réunir la majorité favorable, pas davantage qu’un vote contre.
 Chaque ligne du tableau renvoie au résultat publié par le Conseil et à l’acte paru au Journal officiel, daté après le vote, le temps de la signature.
 Les actes où la France n'a pas voté pour
 Date du vote
@@ -302,7 +307,10 @@ résultat du Conseil · EUR-Lex
 Deux votes contre que le Conseil n’atteste pas.
 Un second jeu de données, tiré des fichiers du Conseil par un institut allemand, la SWP, compte deux votes contre de la France de plus, datés du 17 mai 2021, sans titre ni objet.
 Nous les avons cherchés dans les publications du Conseil : son récapitulatif des actes du mois ne mentionne ni réunion ni acte législatif ce jour-là, et sa recherche des votes n’en rend aucun entre le 10 mai et le 26 mai 2021.
-Ces deux entrées ne sont donc pas comptées, et ce qu’elles désignaient reste inconnu ; le détail de la recherche est dans le repli « Comment le relevé a été fait et contrôlé ».
+Ces deux entrées ne sont donc pas comptées.
+Ne pas les avoir retrouvées ne prouve pas qu’aucun vote n’a eu lieu : ce qu’elles désignaient reste inconnu, et le détail de la recherche est dans le repli « Comment le relevé a été fait et contrôlé ».
+Un pays qui vote rarement contre n’est pas nécessairement un pays qui obtient davantage.
+Ces barres montrent des votes, pas des rapports de force.
 Votes contre et abstentions de chaque État membre dans les votes publics du Conseil de l’Union européenne sur des actes législatifs, du 22 décembre 2009 au 1er octobre 2026.
 Le Royaume-Uni n’y figure que jusqu’à son retrait, la Croatie depuis son adhésion en 2013, et le Danemark et l’Irlande ne participent pas à certains actes : ces comptes bruts ne constituent pas un classement d’influence.
 Télécharger · Citer · Données
@@ -451,13 +459,15 @@ D’où viennent ces deux fiches, erreur de saisie ou vote jamais publié, aucun
 Les cinq actes.
 Pour chacun, la note « résultat de vote » du Conseil et l’acte publié au Journal officiel, en français et en anglais, ont été archivés le 12 octobre 2026.
 Le décompte est lu dans l’annexe de la note et sur la page de recherche du Conseil ; le script vérifie dans les pièces archivées la procédure, la date du vote et, dans l’acte, son numéro, sa date et la mention de la décision du Conseil à la date du vote.
-Les trois votes couverts par le jeu SWP, jusqu’au 28 mars 2023, y ont le même décompte, que le script recalcule depuis ce jeu ; les deux suivants sont documentés à la source, sans second jeu.
+Les trois votes couverts par le jeu SWP, jusqu’au 28 mars 2023, y ont le même décompte, que le script recalcule depuis ce jeu ; les deux suivants sont documentés à la source, sans second jeu : le script relit, État par État, la composition de chacun dans l’annexe archivée de la note du Conseil.
 Deux de ces votes, antérieurs au 1er novembre 2014, ont été comptés en voix pondérées.
 Ce que le producteur du second jeu écrivait déjà.
 La SWP écrivait en décembre 2021 : « France has only been outvoted once and abstained twice in all public votes since 2010 ».
 Notre relevé compte, de 2010 à 2021, un vote contre et deux abstentions de la France : le même compte, qui ne comprend donc pas les deux votes contre du 17 mai 2021 que porte le jeu de données.
 En avril 2024, le même institut écrit, pour 2010 à septembre 2023 : « France, which was only outvoted five times in the entire observation period ».
-Notre relevé compte trois votes contre ou abstentions sur cette période ; l’écart correspond aux deux entrées du 17 mai 2021, sans que la note de 2024 liste les votes qu’elle compte.
+Notre relevé compte trois votes contre ou abstentions sur cette période.
+L’écart numérique est de deux occurrences, comme les deux fiches litigieuses du 17 mai 2021.
+Faute de liste nominative des cinq votes retenus dans l’analyse de 2024, cette concordance ne permet pas d’établir qu’il s’agit des mêmes actes.
 Pourquoi un État peut-il voter oui à un texte qu’il voulait différent ?
 Le vote final n’enregistre que la dernière étape d’une séquence.
 D’abord, chaque gouvernement arrive avec une position : ce qu’il demande, ce qu’il refuse.
@@ -545,7 +555,7 @@ Sommaire, extraits et recensions →
 Questions fréquentes
 La France peut-elle bloquer une loi européenne ?
 Cela dépend de la règle de vote que le traité fixe pour la matière.
-À la majorité qualifiée, la règle la plus fréquente, aucun État ne bloque seul : une minorité de blocage doit réunir au moins quatre membres du Conseil.
+À la majorité qualifiée, la règle la plus fréquente, aucun État ne bloque seul : en règle générale, une minorité de blocage doit réunir au moins quatre membres du Conseil, et quand certains États ne prennent pas part au vote, elle se calcule sur les seuls États participants (article 238, paragraphe 3, du TFUE).
 Là où le traité exige l'unanimité, par exemple pour la fiscalité indirecte (article 113 du TFUE) ou le cadre financier pluriannuel (article 312), un seul vote contre suffit à empêcher l'adoption ; une abstention, non.
 Combien de fois la France a-t-elle voté contre une loi européenne ?
 Sur les votes publics du Conseil de l'Union européenne sur des actes législatifs, du 22 décembre 2009 au 1er octobre 2026, la France a voté contre deux fois et s'est abstenue trois fois.
@@ -584,7 +594,7 @@ Conseil de l'UE, recherche des résultats de vote (relevé du 6 octobre 2026) ; 
 Télécharger en PNG
 SVG
 Citer cette page
-Lalut, Stéphane (2026). « Ce que la France peut décider dans l'Union européenne ».
+Lalut, Stéphane (2026). « Que peut décider la France dans l'Union européenne ? ».
 Données TUE et TFUE, Conseil de l'UE, Journal officiel, SWP / GESIS et Commission, relevé du 6 octobre 2026 (votes du Conseil, relevé à cette date ; transposition au 30 novembre 2025). https://stephane-lalut.com/ce-que-la-france-peut-decider-dans-l-union-europeenne/
 Copier la citation
 En trois phrases

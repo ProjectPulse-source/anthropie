@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /en/what-can-france-decide-in-the-european-union/, build de 664e06c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-12 ; texte servi de /en/what-can-france-decide-in-the-european-union/, build de c1b4421 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 What can France decide in the European Union?
 What the Treaties have not conferred on the Union remains with the Member States: France decides alone there, while respecting the common rules.
@@ -28,6 +28,8 @@ Each Member State must ensure fulfilment of the obligations arising from the Tre
 4(3)) and may not discriminate on grounds of nationality (TFEU, art.
 18); a French law that affects trade may also come up against the freedoms of movement of the internal market.
 France decides alone in these matters; it does not decide outside Union law.
+The same sector may also fall under several competences: supporting competence does not, on that basis alone, allow national laws to be harmonised, but in health, for example, the Treaty also allows the Union to set standards of quality and safety for organs, blood, medicinal products and medical devices (TFEU, art.
+168(4)).
 The articles quoted, word for word
 The TEU sets the rule: “competences not conferred upon the Union in the Treaties remain with the Member States” (art.
 4(1)).
@@ -172,6 +174,8 @@ The general case is qualified majority, defined as “at least 55% of the member
 16(4)); where the Council does not act on a proposal from the Commission, it takes “at least 72% of the members of the Council, representing Member States comprising at least 65% of the population of the Union” (TFEU, art.
 238(2)).
 The same article 16 adds: “A blocking minority must include at least four Council members”.
+That is the general rule; where not all the members of the Council take part in the vote, the Treaty calculates the qualified majority and the blocking minority on the participating Member States alone (TFEU, art.
+238(3)).
 No Member State therefore forms a blocking minority on its own, and France can be outvoted.
 The record of votes, further down, spans three regimes of qualified majority: weighted votes, then the double majority with the option of requesting the former calculation, then the double majority alone.
 The Member States’ votes were weighted until 31 October 2014.
@@ -254,7 +258,8 @@ The result in one sentence.
 In the public votes of the Council of the European Union on legislative acts, from 22 December 2009 to 1 October 2026, France voted against twice and abstained three times; it voted in favour in every other case.
 All five texts were adopted.
 On the two it voted against, France was outvoted: qualified majority at work.
-On the three on which it abstained, it did not add its vote to the majority, without opposing it.
+On the three acts on which it abstained, France did not vote against.
+But under qualified majority, its abstention does not help to reach the favourable majority, any more than a vote against does.
 Each row of the table links to the result published by the Council and to the act in the Official Journal, dated after the vote, once signed.
 The acts on which France did not vote in favour
 Date of the vote
@@ -302,7 +307,10 @@ Council result · EUR-Lex
 Two votes against that the Council does not attest.
 A second dataset, drawn from the Council’s files by a German institute, SWP, counts two more votes against by France, dated 17 May 2021, with no title or subject.
 We looked for them in the Council’s publications: its summary of the month’s acts mentions neither a meeting nor a legislative act on that day, and its search of votes returns none between 10 May and 26 May 2021.
-These two entries are therefore not counted, and what they referred to remains unknown; the details of the search are in the collapsed section “How the record was compiled and checked”.
+These two entries are therefore not counted.
+Not having found them does not prove that no vote took place: what they referred to remains unknown, and the details of the search are in the collapsed section “How the record was compiled and checked”.
+A country that rarely votes against is not necessarily a country that obtains more.
+These bars show votes, not balances of power.
 Votes against and abstentions of each Member State in the public votes of the Council of the European Union on legislative acts, from 22 December 2009 to 1 October 2026.
 The United Kingdom appears only until its withdrawal, Croatia since its accession in 2013, and Denmark and Ireland do not take part in some acts: these raw counts are not a ranking of influence.
 Download · Cite · Data
@@ -451,13 +459,15 @@ Where these two entries come from, a data-entry error or a vote never published,
 The five acts.
 For each, the Council’s “voting result” note and the act published in the Official Journal, in French and in English, were archived on 12 October 2026.
 The count is read in the annex to the note and on the Council’s search page; the script checks in the archived documents the procedure, the date of the vote and, in the act, its number, its date and the mention of the Council’s decision on the date of the vote.
-The three votes covered by the SWP dataset, up to 28 March 2023, have the same count there, which the script recalculates from that dataset; the two later ones are documented at the source, with no second dataset.
+The three votes covered by the SWP dataset, up to 28 March 2023, have the same count there, which the script recalculates from that dataset; the two later ones are documented at the source, with no second dataset: the script rereads, Member State by Member State, the composition of each one in the archived annex of the Council note.
 Two of these votes, held before 1 November 2014, were counted in weighted votes.
 What the producer of the second dataset already wrote.
 SWP wrote in December 2021: “France has only been outvoted once and abstained twice in all public votes since 2010”.
 Our record counts, from 2010 to 2021, one vote against and two abstentions by France: the same count, which therefore does not include the two votes against of 17 May 2021 that the dataset carries.
 In April 2024, the same institute writes, for 2010 to September 2023: “France, which was only outvoted five times in the entire observation period”.
-Our record counts three votes against or abstentions over that period; the difference corresponds to the two entries of 17 May 2021, although the 2024 note does not list the votes it counts.
+Our record counts three votes against or abstentions over that period.
+The numerical difference is two occurrences, like the two disputed entries of 17 May 2021.
+In the absence of a list naming the five votes retained in the 2024 analysis, this match does not establish that they are the same acts.
 Why can a Member State vote yes to a text it wanted to be different?
 The final vote records only the last step of a sequence.
 First, each government arrives with a position: what it asks for, what it refuses.
@@ -535,7 +545,7 @@ Changing the European rules Un président peut-il tenir ses promesses ?, the aut
 Frequently asked questions
 Can France block a European law?
 That depends on the voting rule the Treaty sets for the area.
-Under qualified majority, the most frequent rule, no Member State can block alone: a blocking minority must include at least four Council members.
+Under qualified majority, the most frequent rule, no Member State can block alone: as a general rule, a blocking minority must include at least four Council members, and where some Member States do not take part in the vote, it is calculated on the participating Member States alone (article 238(3) TFEU).
 Where the Treaty requires unanimity, for example for indirect taxation (article 113 TFEU) or the multiannual financial framework (article 312), a single vote against is enough to prevent adoption; an abstention is not.
 How many times has France voted against a European law?
 In the public votes of the Council of the European Union on legislative acts, from 22 December 2009 to 1 October 2026, France voted against twice and abstained three times.
