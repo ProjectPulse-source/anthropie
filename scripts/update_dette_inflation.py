@@ -498,7 +498,22 @@ def fig_achats(q, Aff, lang):
         e.append('<path d="%s" fill="none" stroke="%s" stroke-width="%s" stroke-linejoin="round"/>' % (d, col, larg))
     # noms posés sur les séries, au milieu de la période d'achats (2018) : la consolidée au-dessus, le marché en dessous
     r18 = min(serie, key=lambda r: abs(mois(r[0]) - 2018.5))
-    e.append('<text x="%.1f" y="%.1f" font-size="10.5" fill="%s" text-anchor="middle">%s</text>' % (X(mois(r18[0])), Y(r18[2]) - 9, ORANGE, esc(t["cons"])))
+    # Libellé de la consolidée posé AU-DESSUS de sa courbe sans la toucher (auteur, 12/10/2026 : « analyse) » mordait sur la
+    # remontée de 2020). Départ au point de 2018, recherche vers la droite d'abord (demande de l'auteur), puis vers la gauche :
+    # toute la largeur estimée du texte doit rester au-dessus de la courbe, jambages compris, avec une marge. Sinon, arrêt.
+    yc, larg_c = Y(r18[2]) - 9, 0.53 * 10.5 * len(t["cons"])
+    pts = [(X(mois(r[0])), Y(r[2])) for r in serie]
+    def degage(xc, y):
+        g, d = xc - larg_c / 2 - 3, xc + larg_c / 2 + 3
+        return g >= X0 and d <= X1 and y - 11 > TOP and all(py > y + 5 for px, py in pts if g <= px <= d)
+    x18 = X(mois(r18[0]))
+    # vers la droite d'abord (demande de l'auteur), avec la plus petite hausse (0 à 24 px) puis le plus petit décalage ;
+    # vers la gauche seulement si aucune position à droite ne dégage la courbe
+    xc, yc = next(((x18 + s * k, yc - j) for s in (1, -1) for j in range(0, 25) for k in range(0, 121)
+                   if degage(x18 + s * k, yc - j)), (None, yc))
+    if xc is None:
+        fail("figure achats : aucune position du libelle « %s » ne degage la courbe" % t["cons"])
+    e.append('<text x="%.1f" y="%.1f" font-size="10.5" fill="%s" text-anchor="middle">%s</text>' % (xc, yc, ORANGE, esc(t["cons"])))
     e.append('<text x="%.1f" y="%.1f" font-size="10.5" fill="%s" text-anchor="middle">%s</text>' % (X(mois(r18[0])), Y(r18[1]) + 16, INK2, esc(t["marche"])))
     # jalon fin 2022 : date au-dessus du point consolidé, valeur du marché sous son point
     r22 = next(r for r in serie if r[0] == "2022-12-31")
