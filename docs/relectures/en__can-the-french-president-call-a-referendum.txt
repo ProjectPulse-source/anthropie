@@ -1,0 +1,425 @@
+# relu le 2026-10-12 ; texte servi de /en/can-the-french-president-call-a-referendum/, build de 060aec4 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+FRThis page is also available in French — version française
+Can the French president call a referendum?
+Can a French president put a reform to the voters whenever he wants?
+The Constitution gives him that power through three routes, each with its own conditions: for a Government Bill, a recommendation from the Government or a joint motion of the two Houses, and a subject defined by article 11; for an amendment to the Constitution, a vote of the two Houses in identical terms; for the accession of a State to the European Union, a referendum is the rule unless Parliament decides otherwise.
+From 4 October 1958 to 5 October 2026, nine national referendums were held, the last one on 29 May 2005.
+Since 2015, members of Parliament backed by voters can also bring one about: this route has not led to any vote.
+Presidential promises
+↓ Charts, data and citations to reuseReuse this page
+Promising to put a reform to the voters means promising to use a route other than a parliamentary vote alone.
+The French Constitution provides for it: “National sovereignty shall vest in the people, who shall exercise it through their representatives and by means of referendum.” (art.
+3).
+This page sets out who can put a text to a referendum, by which route and on which subjects, then what the votes held so far decided and what became of the shared-initiative bills, from the register of the Conseil constitutionnel, matched vote by vote against the Journal officiel.
+It is a reading of the text of the Constitution and of the decisions cited, not reviewed by a lawyer.
+The Constitution is quoted in the English translation published by the Conseil constitutionnel; other French texts are quoted in French, followed by our translation.
+Who can put a text to a referendum?
+Three articles of the Constitution allow a text to be put to a referendum: article 11 for a Government Bill, article 89 for an amendment to the Constitution, article 88-5 for the accession of a State to the European Union.
+They do not leave the president the same latitude: depending on the route, he decides on a recommendation he does not make himself, after a vote of the two Houses (the National Assembly and the Senate), or because the article provides that the Bill “shall be submitted” to a referendum.
+Article 11, for a Government Bill.
+The recommendation comes from the Government, when Parliament is in session, or from the two Houses jointly, by a motion; it is published in the Journal officiel.
+The president then decides: he may “submit to a referendum any Government Bill”, on one of the subjects the article lists (the organisation of the public authorities, reforms of economic, social or environmental policy and the public services contributing to it, the ratification of certain treaties).
+Where it is the Government that recommends, it makes a statement before each House, followed by a debate.
+The article says “may”: the recommendation is required, and the text does not make it an obligation for the president.
+He signs the instrument of submission alone: article 19 lists it among the exceptions to countersignature, that is, to the signature of the Prime Minister (and, where required, of the ministers responsible) added to that of the president (see what the president can decide alone).
+If the text is adopted, the president promulgates the act within fifteen days.
+Article 11, word for word
+The president may “submit to a referendum any Government Bill”, but only “on a recommendation from the Government when Parliament is in session, or on a joint motion of the two Houses, published in the Journal Officiel”, and on a subject the article defines: “which deals with the organization of the public authorities, or with reforms relating to the economic, social or environmental policy of the Nation, and to the public services contributing thereto, or which provides for authorization to ratify a treaty which, although not contrary to the Constitution, would affect the functioning of the institutions”.
+Where the referendum is held on the recommendation of the Government, “the latter shall make a statement before each House and the same shall be followed by a debate”.
+If the text is adopted, “the President of the Republic shall promulgate the resulting statute within fifteen days following the proclamation of the results of the vote”.
+Article 89, for an amendment to the Constitution.
+The text may come from the Government: the president presents it on the recommendation of the Prime Minister, and it is then called a Government Bill.
+It may also come from deputies or senators: it is then a Private Member’s Bill.
+Either way, it must “be passed by the two Houses in identical terms”, then be approved by referendum.
+The Government Bill, and it alone, has a second route: the president may submit it to Parliament convened in Congress, where it must obtain three fifths of the votes cast.
+A Private Member’s Bill to amend the Constitution can therefore only be finally adopted by referendum.
+The decision to convene Congress is not among the exceptions listed in article 19; by the letter of that article, it is countersigned.
+Article 89, word for word
+“The President of the Republic, on the recommendation of the Prime Minister, and Members of Parliament alike shall have the right to initiate amendments to the Constitution.” A Government Bill or a Private Member’s Bill must “be passed by the two Houses in identical terms”.
+Once the text is passed, “The amendment shall take effect after approval by referendum.” However, “a Government Bill to amend the Constitution shall not be submitted to referendum where the President of the Republic decides to submit it to Parliament convened in Congress”, where it must obtain three fifths of the votes cast.
+The article also sets limits to any amendment: “No amendment procedure shall be commenced or continued where the integrity of national territory is placed in jeopardy.
+The republican form of government shall not be the object of any amendment.”
+Article 88-5, for the accession of a State to the European Union.
+Here the referendum is the rule: the Government Bill authorising the ratification of an accession treaty is submitted to a referendum by the president.
+Parliament can avoid it if each House passes the same motion by a three-fifths majority: the Bill then goes to Congress, with three fifths of the votes cast.
+The article does not cover all accessions: the constitutional act of 23 July 2008 (art.
+47) excludes some of them, depending on the date of the conference that prepared them.
+The instrument of submission is not in the list of article 19 either: it is countersigned.
+None of the nine votes in the register was held under this article.
+What France decides alone or with the other member States is the subject of another page of this dossier.
+Article 88-5 and its 2004 clause, word for word
+“Any government bill authorizing the ratification of a treaty pertaining to the accession of a state to the European Union shall be submitted to referendum by the president of the republic.” However, “by passing a motion adopted in identical terms in each House by a three-fifths majority, Parliament may authorize the passing of the bill according to the procedure provided for in paragraph three of article 89”, that is, by Congress, with three fifths of the votes cast.
+Under the constitutional act of 23 July 2008 (art.
+47), as the Conseil constitutionnel’s translation notes, “Article 88-5 is not applicable to accessions that result from an Intergovernmental Conference whose meeting was decided by the European Council before July 1, 2004.”
+The Conseil constitutionnel oversees; it submits nothing.
+“The Constitutional Council shall ensure the proper conduct of referendum proceedings as provided for in articles 11 and 89 and in Title XV and shall proclaim the results of the referendum.” (art.
+60).
+Article 61 also has it review “Private Members' Bills mentioned in article 11 before they are submitted to referendum”: this is the shared-initiative route, below.
+How many referendums have been held, and what did they decide?
+National referendums whose results were proclaimed by the Conseil constitutionnel, from 4 October 1958 to 5 October 2026.
+Excludes the referendum of 28 September 1958 (adoption of the Constitution, before the Conseil was created) and local consultations.
+Download · Cite · Data
+The votes in a table
+Vote
+Subject
+Article
+Registered voters
+Turnout
+Yes (valid votes)
+Outcome
+8 January 1961
+Self-determination of the Algerian populations
+11
+32,520,233
+73.8%
+74.99%
+Adopted (Act No.
+61-44)
+8 April 1962
+Évian agreements on Algeria
+11
+27,582,072
+75.3%
+90.81%
+Adopted (Act No.
+62-421)
+28 October 1962
+Election of the President by universal suffrage
+11
+28,185,478
+77.0%
+62.25%
+Adopted (Act No.
+62-1292)
+27 April 1969
+Creation of regions and reform of the Senate
+11
+29,392,390
+80.1%
+47.59%
+Rejected
+23 April 1972
+Enlargement of the European Community
+11
+29,820,464
+60.2%
+68.32%
+Adopted (Act No.
+72-339)
+6 November 1988
+Status of New Caledonia and self-determination in 1998
+11
+38,025,823
+36.9%
+80.00%
+Adopted (Act No.
+88-1028)
+20 September 1992
+Ratification of the Treaty on European Union (Maastricht)
+11
+38,305,534
+69.7%
+51.05%
+Adopted (Act No.
+92-1017)
+24 September 2000
+Length of the presidential term (five years)
+89
+39,941,192
+30.2%
+73.21%
+Adopted (Act No.
+2000-964)
+29 May 2005
+Ratification of the Treaty establishing a Constitution for Europe
+11
+41,789,202
+69.4%
+45.33%
+Rejected
+The result in one sentence.
+From 4 October 1958 to 5 October 2026, nine national referendums were held in France; the proposed text was approved in seven and rejected in two, and the last one took place on 29 May 2005.
+Eight votes were held under article 11, only one under article 89: the five-year presidential term, in 2000.
+Two Bills put to the vote under article 11 nevertheless concerned the Constitution itself: the 1962 Bill, adopted, which amends its articles 6 and 7 so that the president is elected by direct universal suffrage (Act no.
+62-1292 of 6 November 1962), and the 1969 Bill, rejected.
+This use of article 11 to amend the Constitution was contested: when the President of the Senate referred the 1962 Act to it, the Conseil constitutionnel held that it had no jurisdiction (decision no.
+62-20 DC of 6 November 1962); according to the National Assembly, the practice has not been used since the failure of 1969.
+The figure relates the yes votes to valid votes, not to registered voters, and the gap can be wide: in 2000, the five-year term obtained 73.21% yes among valid votes, with a turnout of 30.2% of registered voters.
+Turnout ranged from 30.2% (2000) to 80.1% (1969).
+The two rejected texts were rejected in 1969 (regions and Senate), with 52.41% of valid votes cast for No, and in 2005 (Treaty establishing a Constitution for Europe), with 54.67%.
+Has the shared-initiative referendum ever succeeded?
+Another route, created by the 2008 constitutional amendment, the shared-initiative referendum (référendum d’initiative partagée, RIP), has applied since 1 January 2015: a referendum may be held “upon the initiative of one fifth of the members of Parliament, supported by one tenth of the voters enrolled on the electoral lists”.
+It is not a citizens’ initiative: the text comes from members of Parliament, and voters support it.
+The procedure has four steps.
+At least one fifth of the members of Parliament table a bill; « La proposition de loi est transmise au Conseil constitutionnel par le président de l'assemblée saisie. » (institutional act of 6 December 2013, art.
+1; our translation: “The bill is forwarded to the Conseil constitutionnel by the president of the House in which it was tabled.”).
+The Conseil constitutionnel checks, « dans le délai d'un mois à compter de la transmission de la proposition de loi » (our translation: “within one month of the transmission of the bill”), that the one-fifth threshold is met, that the subject falls under article 11 and respects two time limits, and that no provision is contrary to the Constitution (ordinance of 7 November 1958, art.
+45-2).
+The two time limits are those of article 11: the bill “may not be applied to the repeal of a legislative provision promulgated for less than one year”, and, after a rejection by the people, “no new referendum proposal on the same subject may be submitted before the end of a period of two years following the date of the vote”.
+If it meets the conditions, registered voters can support it: « La durée de la période de recueil des soutiens est de neuf mois. » (institutional act, art.
+4; our translation: “The period for collecting signatures of support is nine months.”).
+If one tenth of registered voters has supported it, the Conseil constitutionnel declares so, and each of the two Houses has six months from the publication of that decision in the Journal officiel to consider the bill; « Ce délai est suspendu entre deux sessions ordinaires. » (institutional act, art.
+9; our translation: “This period is suspended between two ordinary sessions.”).
+If either House has not considered it within that period, the president submits it to a referendum.
+For there to be no referendum, it is therefore enough for each House to consider the bill at least once, even without passing it.
+For this step, the published translation of article 11 reads “the President of the Republic may submit it to a referendum”, whereas the French text reads “la soumet” (literally, “submits it”), in the indicative, where its first paragraph says “peut soumettre” (may submit).
+This page notes the difference in wording without taking a position on its legal effect.
+Article 9 of the institutional act, word for word
+The president submits the bill to a referendum if it « n'a pas été examinée au moins une fois par chacune des deux assemblées parlementaires dans un délai de six mois à compter de la publication au Journal officiel de la décision du Conseil constitutionnel déclarant qu'elle a obtenu le soutien d'au moins un dixième des électeurs inscrits sur les listes électorales » (our translation: “has not been considered at least once by each of the two Houses of Parliament within six months of the publication in the Journal officiel of the decision of the Conseil constitutionnel declaring that it has obtained the support of at least one tenth of the voters registered on the electoral lists”). « Ce délai est suspendu entre deux sessions ordinaires. » (our translation: “This period is suspended between two ordinary sessions.”)
+Bills introduced under article 11, paragraph 3, referred to the Conseil constitutionnel, from 2015 to 5 October 2026, and what became of them.
+Download · Cite · Data
+The result in one sentence.
+From 2015 to 5 October 2026, the Conseil constitutionnel received seven bills under article 11; one was found to meet the statutory conditions and collected 1,093,030 signatures for 4,717,396 required, 23.2% of the threshold; none was put to a referendum.
+The decisions in a table, with their grounds
+Decision
+Number
+Private Members' Bill
+Outcome
+Grounds quoted (paragraphs)
+9 May 2019
+2019-1 RIP
+Paris airports as a national public service
+Met the statutory conditions; 1,093,030 signatures of support for 4,717,396 required
+—
+6 August 2021
+2021-2 RIP
+Public hospital service (programming act)
+Did not meet the statutory conditions: art.
+45-2, 3°: provision contrary to the Constitution
+Para.
+10: « Ces dispositions, qui subordonnent à l'avis conforme de la Conférence nationale de santé l'exercice du pouvoir réglementaire du Premier ministre, sont contraires à la Constitution » (our translation: "These provisions, which make the exercise of the Prime Minister's regulatory power subject to the binding opinion of the National Health Conference, are contrary to the Constitution").
+25 October 2022
+2022-3 RIP
+Contribution on large companies' windfall profits
+Did not meet the statutory conditions: art.
+45-2, 2°: subject of article 11
+Para.
+5: « Elle a ainsi pour seul effet d'abonder le budget de l'État par l'instauration jusqu'au 31 décembre 2025 d'une mesure qui se borne à augmenter le niveau de l'imposition existante des bénéfices de certaines sociétés » (our translation: "Its sole effect is thus to increase the State budget by introducing, until 31 December 2025, a measure that merely raises the existing level of taxation of certain companies' profits"); « Elle ne porte donc pas, au sens de l'article 11 de la Constitution, sur une réforme relative à la politique économique de la nation » (our translation: "It therefore does not relate, within the meaning of Article 11 of the Constitution, to a reform concerning the economic policy of the nation").
+14 April 2023
+2023-4 RIP
+Legal retirement age: not above 62
+Did not meet the statutory conditions: art.
+45-2, 2°: subject of article 11
+Para.
+7: « l'article L.
+161-17-2 du code de la sécurité sociale prévoit que l'âge d'ouverture du droit à une pension de retraite mentionné à ces mêmes dispositions est fixé à soixante-deux ans » (our translation: "article L.
+161-17-2 of the Social Security Code provides that the age at which the right to a retirement pension under these same provisions opens is set at sixty-two").
+Para.
+8: « n'emporte pas de changement de l'état du droit » (our translation: "does not change the state of the law").
+Para.
+9: « le législateur peut toujours modifier, compléter ou abroger des dispositions législatives antérieures, qu'elles résultent d'une loi votée par le Parlement ou d'une loi adoptée par voie de référendum » (our translation: "the legislature may always amend, supplement or repeal earlier legislative provisions, whether they result from an act passed by Parliament or from an act adopted by referendum").
+Para.
+10: « elle ne porte pas, au sens de l'article 11 de la Constitution, sur une « réforme » relative à la politique sociale » (our translation: "it does not relate, within the meaning of Article 11 of the Constitution, to a "reform" concerning social policy").
+3 May 2023
+2023-5 RIP
+Legal retirement age: not above 62 (second bill)
+Did not meet the statutory conditions: art.
+45-2, 2°: subject of article 11
+Para.
+8: « l'interdiction de fixer l'âge légal de départ à la retraite au-delà de soixante-deux ans n'emporte donc pas de changement de l'état du droit » (our translation: "the prohibition on setting the legal retirement age above sixty-two therefore does not change the state of the law").
+Para.
+10: « Elle a ainsi pour seul effet d'abonder le budget d'une branche de la sécurité sociale » (our translation: "Its sole effect is thus to increase the budget of one branch of social security").
+Para.
+11: « la proposition de loi ne porte pas, au sens de l'article 11 de la Constitution, sur une réforme relative à la politique sociale » (our translation: "the bill does not relate, within the meaning of Article 11 of the Constitution, to a reform concerning social policy").
+11 April 2024
+2024-6 RIP
+Foreigners' access to social benefits
+Did not meet the statutory conditions: art.
+45-2, 3°: provision contrary to the Constitution
+Para.
+7: « elle porte, au sens de l'article 11 de la Constitution, sur une réforme relative à la politique sociale de la nation » (our translation: "it relates, within the meaning of Article 11 of the Constitution, to a reform concerning the social policy of the nation").
+Para.
+13: « les dispositions de l'article 1er portent une atteinte disproportionnée à ces exigences.
+Elles sont donc contraires à la Constitution » (our translation: "the provisions of Article 1 disproportionately infringe these requirements.
+They are therefore contrary to the Constitution").
+17 June 2026
+2026-7 RIP
+Excluding the active causing of death from the notion of care
+Did not meet the statutory conditions: art.
+45-2, 2°: subject of article 11
+Para.
+7: « le constituant a entendu exclure les questions de société des objets mentionnés au premier alinéa de l'article 11 de la Constitution » (our translation: "the framers of the constitutional amendment intended to exclude questions of society from the subjects listed in the first paragraph of Article 11 of the Constitution").
+Para.
+9: « elle ne porte ni sur la politique sociale de la nation et les services publics qui y concourent, ni sur aucun des autres objets mentionnés au premier alinéa de l'article 11 de la Constitution » (our translation: "it relates neither to the social policy of the nation and the public services contributing to it, nor to any of the other subjects listed in the first paragraph of Article 11 of the Constitution").
+Para.
+11: « n'emporte pas de changement de l'état du droit » (our translation: "does not change the state of the law").
+Para.
+13: « la proposition de loi ne porte pas non plus sur une « réforme » au sens de l'article 11 de la Constitution » (our translation: "nor does the bill relate to a "reform" within the meaning of Article 11 of the Constitution").
+The other six bills did not meet the statutory conditions.
+Two contained a provision contrary to the Constitution (2021-2 and 2024-6 RIP).
+Four did not meet the condition on their subject.
+The Conseil states why, and this page quotes its reasons without assessing them; the table above gives, decision by decision, the grounds and their paragraph numbers.
+The bills on retirement at 62.
+At the date of referral, the Conseil notes, « l'article L.
+161-17-2 du code de la sécurité sociale prévoit que l'âge d'ouverture du droit à une pension de retraite mentionné à ces mêmes dispositions est fixé à soixante-deux ans » (decision 2023-4 RIP, para.
+7; our translation: “article L.
+161-17-2 of the Social Security Code provides that the age at which the right to a retirement pension under these same provisions opens is set at sixty-two”).
+The bill, which prohibited setting that age any higher, « n'emporte pas de changement de l'état du droit » (“does not change the state of the law”, para.
+8), and its adoption by referendum would not alter this, because « le législateur peut toujours modifier, compléter ou abroger des dispositions législatives antérieures, qu'elles résultent d'une loi votée par le Parlement ou d'une loi adoptée par voie de référendum » (“the legislature may always amend, supplement or repeal earlier legislative provisions, whether they result from an act passed by Parliament or from an act adopted by referendum”, para.
+9).
+The Conseil concludes that « elle ne porte pas, au sens de l'article 11 de la Constitution, sur une « réforme » relative à la politique sociale » (“it does not relate, within the meaning of Article 11 of the Constitution, to a "reform" concerning social policy”, para.
+10).
+The second bill, tabled in the Senate (2023-5 RIP), was rejected for the same reason; of the increase in a levy on income from assets and investment products that it added, the Conseil notes: « Elle a ainsi pour seul effet d'abonder le budget d'une branche de la sécurité sociale » (“Its sole effect is thus to increase the budget of one branch of social security”, para.
+10).
+The bill on end of life.
+Decision 2026-7 RIP rests first on another ground: « le constituant a entendu exclure les questions de société des objets mentionnés au premier alinéa de l'article 11 de la Constitution » (“the framers of the constitutional amendment intended to exclude questions of society from the subjects listed in the first paragraph of Article 11 of the Constitution”, para.
+7); as the bill concerned end of life, the Conseil concludes that « elle ne porte ni sur la politique sociale de la nation et les services publics qui y concourent, ni sur aucun des autres objets mentionnés au premier alinéa de l'article 11 de la Constitution » (“it relates neither to the social policy of the nation and the public services contributing to it, nor to any of the other subjects listed in the first paragraph of Article 11 of the Constitution”, para.
+9).
+The decision then adds the ground used for retirement: the bill « n'emporte pas de changement de l'état du droit » (“does not change the state of the law”, para.
+11), so « la proposition de loi ne porte pas non plus sur une « réforme » au sens de l'article 11 de la Constitution » (“nor does the bill relate to a "reform" within the meaning of Article 11 of the Constitution”, para.
+13).
+Three other bills were tabled « en application de l’article 11 » (under article 11) without any decision of the Conseil constitutionnel concerning them in the register consulted: in the Senate, No.
+459 (20 April 2018, immigration control); in the National Assembly, No.
+1749 (6 March 2019, measures against French jihadists who fought in Iraq and Syria) and No.
+5203 (5 April 2022, mistreatment of animals).
+They are not counted among the seven referrals, whose unit is a decision of the Conseil.
+They bore the signatures of two, two and one members of Parliament respectively.
+Article 11 provides for an initiative by one fifth of the members of Parliament.
+The institutional act provides that the bill is forwarded to the Conseil constitutionnel by the president of the House in which it was tabled; the sources consulted do not establish what became of these texts.
+What a referendum decides, and what it does not
+A referendum settles the text put to the vote: once adopted, an article 11 Bill becomes an act, which the president promulgates within fifteen days, and an article 89 amendment changes the Constitution.
+The vote does not guarantee, on its own, that the text will be implemented, nor the result a promise attaches to it.
+An act adopted by referendum remains an act: the legislature may later amend or repeal it, as the Conseil constitutionnel recalls in decision 2023-4 RIP, quoted above.
+Some of its provisions may have to wait for implementing measures, since the Civil Code provides that, for acts, « l'entrée en vigueur de celles de leurs dispositions dont l'exécution nécessite des mesures d'application est reportée à la date d'entrée en vigueur de ces mesures » (art.
+1; our translation: “the entry into force of those of their provisions whose implementation requires implementing measures is postponed until the date on which those measures enter into force”; see does a law apply as soon as it is passed?).
+Nor does the vote shorten the time a measure takes to produce its effects (can a campaign promise produce results within five years?), and it does not choose the indicator that will tell whether the promise was kept.
+The proclamation says how many ballots read yes and no; it does not say why.
+What happened after the 2005 rejection?
+On 29 May 2005, the Bill authorising the ratification of the Treaty establishing a Constitution for Europe was rejected.
+The Treaty of Lisbon, signed afterwards, is a different treaty; its title (“Treaty of Lisbon amending the Treaty on European Union and the Treaty establishing the European Community”) says that it amends the existing treaties.
+The title establishes the form of the treaty, not how its content relates to that of the rejected text, which this page does not compare.
+The Conseil constitutionnel held that the authorisation to ratify it « ne peut intervenir qu'après révision de la Constitution » (decision No.
+2007-560 DC of 20 December 2007; our translation: can take place only after the Constitution has been amended).
+On 4 February 2008, Parliament convened in Congress approved the Bill amending Title XV of the Constitution « dans les conditions prévues à l'article 89, alinéa 3, de la Constitution » (under the conditions laid down in article 89, paragraph 3, of the Constitution; Congress vote); this is Act No.
+2008-103 of the same day, amending the Constitution.
+The ratification of the Treaty of Lisbon was then authorised by act No.
+2008-125 of 13 February 2008.
+No referendum was held in 2008.
+The page keeps to this sequence of acts.
+An amendment announced with a referendum, in 2020 and 2021.
+On 29 June 2020, before the Citizens’ Convention for Climate, the President of the Republic said he was in favour of the rewriting of article 1 of the Constitution that the Convention proposed, to introduce biodiversity, the environment and the fight against climate change, and declared: « je suis prêt à recourir au référendum si celui-ci était alors constitutionnellement possible après le vote des chambres dans le cadre strict de notre Constitution » (text published by the Élysée; our translation: “I am ready to resort to a referendum if it were then constitutionally possible after the vote of the Houses, strictly within the framework of our Constitution”).
+The Government Bill to amend the Constitution supplementing article 1 and concerning the preservation of the environment was tabled in the National Assembly on 20 January 2021.
+Passed by the Assembly on 16 March 2021, amended by the Senate on 10 May 2021, passed with amendments by the Assembly on 22 June 2021, it was amended again by the Senate on 5 July 2021: this is the last step in the Senate’s legislative file.
+The two Houses therefore never passed it in identical terms, which article 89 requires before any referendum.
+This case shows a condition of article 89 that was not met; it does not explain why no referendum has been held since 2005.
+What to ask of a referendum promise?
+On what?
+A Government Bill on a subject of article 11, an amendment to the Constitution, or the accession of a State to the European Union: each subject has its route, and for the shared initiative the Conseil constitutionnel reviews the subject before any signatures are collected.
+By which route?
+Article 11, article 89, article 88-5, or the shared initiative.
+With whom?
+The Government or the two Houses, which recommend or move (art.
+11); the two Houses, which pass the text in identical terms (art.
+89); one fifth of the members of Parliament and one tenth of voters (shared initiative).
+Which conditions remain to be met, and who checks them?
+A recommendation or motion published, a statement followed by a debate, an identical vote of the two Houses, or the review of the Conseil constitutionnel and the collection of signatures; the Conseil then ensures the proper conduct of the vote.
+To obtain what?
+The vote settles a text: an act, which the president promulgates within fifteen days, or an amendment to the Constitution.
+Its implementing measures and its effects come afterwards, and are judged separately.
+What this page does not say
+It does not say whether the referendum is a good or a bad instrument, nor why none has been held since 2005: the sources consulted (register of the Conseil constitutionnel, Journal officiel, legislative files, the 2020 statement) do not establish it, and an intention cannot be read in an act.
+It counts neither the referendum of 28 September 1958, before the Conseil constitutionnel existed, nor local consultations.
+It reads the Constitution as currently in force and the decisions cited, without legal doctrine or other case law, and has not been reviewed by a lawyer.
+The register stands as at 5 October 2026; the 2020-2021 case rests on pages consulted on 12 October 2026.
+What a vote decides Un président peut-il tenir ses promesses ?, the author's book, in French: contents, excerpts and reviews →
+Frequently asked questions
+Can the French president hold a referendum whenever he wants?
+No, not alone and not on any subject.
+Under article 11 of the Constitution, he may submit to a referendum a Government Bill "on a recommendation from the Government when Parliament is in session, or on a joint motion of the two Houses, published in the Journal Officiel", and only on the subjects the article lists.
+An amendment to the Constitution (article 89) must first be passed by the two Houses in identical terms.
+For the ratification of a treaty on the accession of a State to the European Union (article 88-5), a referendum is the rule, unless the two Houses pass a motion by a three-fifths majority.
+Must the president put to a referendum a recommendation he receives?
+For article 11, the French text says that he "peut soumettre" (may submit) on a recommendation from the Government or a joint motion of the two Houses: the recommendation is required, and the article does not make it an obligation.
+For the shared initiative, once the bill has gathered the support of one tenth of voters and the two Houses have not considered it within the time limit, the French text of article 11 reads "la soumet" (submits it), where the published English translation reads "may submit it".
+For a Bill to amend the Constitution passed by the two Houses, article 89 leaves him the choice of Congress instead of a referendum.
+Does the shared-initiative referendum allow citizens to trigger a referendum?
+Not on their own.
+The initiative belongs to one fifth of the members of Parliament; registered voters support it, and one tenth of them is required.
+The Conseil constitutionnel first reviews the bill.
+From 2015 to 5 October 2026, it reviewed seven; one was found to meet the statutory conditions and collected 1,093,030 signatures of support, against 4,717,396 required.
+None was put to a referendum.
+Sources
+Constitution of 4 October 1958, art.
+3, 11, 19, 60, 61, 88-5 and 89, text in force (Légifrance; English translation published by the Conseil constitutionnel).
+Constitutional act No.
+2008-724 of 23 July 2008, art.
+47 (text adopted by Congress on 21 July 2008, published by the Senate); constitutional act No.
+2008-103 of 4 February 2008 (text adopted by Congress the same day, published by the Senate); act No.
+2008-125 of 13 February 2008.
+Ordinance No.
+58-1067 of 7 November 1958, art.
+45-2; institutional act No.
+2013-1114 of 6 December 2013 implementing article 11, art.
+1, 4 and 9; Civil Code, art.
+1.
+Conseil constitutionnel, proclamations of referendum results (decisions 61-4, 62-7, 62-9, 69-10, 72-11, 88-14, 92-19, 2000-29, 2005-38) and decisions on bills under article 11 (2019-1 and 2019-1-8, 2021-2, 2022-3, 2023-4, 2023-5, 2024-6, 2026-7 RIP), read in the CONSTIT database published by the DILA, as at 5 October 2026; decision No.
+2007-560 DC.
+Journal officiel (Légifrance), decrees putting texts to a referendum and acts adopted by referendum; National Assembly, open data of the 15th to 17th legislatures (bills under article 11), and Congress vote of 4 February 2008; Senate, bill No.
+459 (2017-2018) and legislative file of Government Bill to amend the Constitution No.
+449 (2020-2021), consulted on 12 October 2026; Presidency of the Republic, speech of 29 June 2020 to the Citizens’ Convention for Climate (elysee.fr), consulted on 12 October 2026.
+How the referendum register was checked
+The register.
+The decisions of the Conseil constitutionnel are read in the database published by the DILA, the French official publications office (open files, as at 5 October 2026).
+Among the decisions classified “referendum”, only the proclamations of results enter the register; the others are appointments of delegates, answers to complaints and observations.
+For each vote, the numbers of registered voters, voters, valid votes, yes and no are read in the proclamation, and their consistency is checked (yes and no add up to the valid votes; valid votes, voters and registered voters are in order).
+The percentages on this page are recalculated from these numbers and rounded to the nearest value; the Conseil constitutionnel’s summary table gives them truncated, hence differences of one hundredth of a point for some votes.
+The Journal officiel as a cross-check.
+Each vote was matched against the Journal officiel: the decree by which the president puts the text to the vote, at the date given by the proclamation, and, for each adopted text, the promulgated act.
+The seven acts exist; no act exists for the two rejected texts.
+Only one decree was not found in the Légifrance archive, that of 2 October 1962, whose act is published.
+A title search of the Journal officiel shows no vote missing from the register.
+The limits.
+There is no second independent source for the vote counts for 1961-1988: they are checked for consistency, not against another source.
+The results published by the Ministry of the Interior for 1992, 2000 and 2005 precede the Conseil’s corrections: same vote, different definition, so not a cross-check.
+The figures, the checks and the charts are produced by a single script.
+It rereads the archived decisions and texts and stops if a figure no longer meets the conditions on which the main sentences rest.
+It finds word for word each quotation from the Constitution, the ordinance, the institutional act and the Civil Code, and each ground of a decision in the paragraph indicated; it checks the fingerprint of the archived Senate and Élysée pages and finds in them the passages quoted and the dates of the 2021 file.
+The list of bills tabled without a decision is checked against Assemblée and Sénat data; the number of their signatories, transcribed in the script, is reread in those data and in the bill tabled in the Senate.
+The subjects of the votes and bills are written by hand, and the English translations of French texts other than the Constitution are ours.
+Download the data (CC BY 4.0 licence): CSV, long format; JSON, with the identifiers of the decisions, the grounds quoted and the report of the checks.
+An earlier version of this dataset, without the grounds quoted added on 12 October 2026, is archived on Zenodo with the six others of the same series and their methods note, under a permanent identifier: doi:10.5281/zenodo.23212664.
+Reusing this page
+The charts, the data and a ready-made citation, under an open licence.
+Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it does not come apart from what makes it readable.
+National referendums in France since 1958
+From 4 October 1958 to 5 October 2026, nine national referendums were held; the proposed text was approved in seven and rejected in two; the last one took place on 29 May 2005.
+Reading caveat.
+National referendums under articles 11 and 89 only (none was held under article 88-5); excludes the vote of 28 Sept.
+1958 and local consultations.
+Conseil constitutionnel, proclamations of results (DILA CONSTIT database, as at 5 Oct.
+2026); Journal officiel
+Download PNG
+SVG
+The shared-initiative referendum, 2015 to 5 October 2026
+From 2015 to 5 October 2026, the Conseil constitutionnel received seven Private Members' Bills under article 11; one was found to meet the statutory conditions and collected 23.2% of the required signatures; none was put to a referendum.
+Reading caveat.
+Three other bills tabled 'under article 11' (Senate, National Assembly) gave rise to no decision.
+Conseil constitutionnel, 'RIP' decisions (DILA CONSTIT database, as at 5 Oct.
+2026); Constitution, art.
+11
+Download PNG
+SVG
+Cite this page
+Lalut, Stéphane (2026).
+“Can the French president call a referendum?”.
+Conseil constitutionnel and Journal officiel data, retrieved 5 October 2026 (Conseil constitutionnel register, DILA database as at that date). https://stephane-lalut.com/en/can-the-french-president-call-a-referendum/
+Copy citation
+In three sentences
+A French president may put a Government Bill to a referendum on a recommendation from the Government or a joint motion of the two Houses, and on the subjects set by article 11 of the Constitution; an amendment to the Constitution (article 89) and the accession of a State to the European Union (article 88-5) have their own routes.
+From 4 October 1958 to 5 October 2026, nine national referendums were held; the proposed text was approved in seven and rejected in two, and the last one took place on 29 May 2005.
+The shared-initiative referendum, open since 2015, has not yet led to any vote.
+Copy summary
+The data
+The register of national referendums (registered voters, voters, valid votes, yes, no, article, outcome), the decisions on the shared-initiative referendum with their grounds quoted, and the bills with no decision; the same content exists in CSV, long format, readable in a spreadsheet.
+Download JSON CSV
+Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
+Text under copyright — short quotation free, full reproduction on request.
+The raw series belong to their producers (Conseil constitutionnel and Journal officiel), under their own terms.
+All resources: data, explainers and reference material →
+Share
+WhatsApp
+Bluesky
+LinkedIn
+X
+Email
+Copy link

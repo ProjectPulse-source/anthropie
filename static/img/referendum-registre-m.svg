@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 633" role="img" font-variant-numeric="tabular-nums" aria-labelledby="rrm-t rrm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="rrm-t">Les référendums nationaux depuis 1958</title><desc id="rrm-d">Frise de 1958 à 2026 portant neuf référendums nationaux : sept adoptés et deux rejetés (1969 et 2005) ; aucun scrutin depuis le 29 mai 2005. Part des oui parmi les exprimés : 1961 : 75 % ; 1962 (avr.) : 91 % ; 1962 (oct.) : 62 % ; 1969 : 48 % ; 1972 : 68 % ; 1988 : 80 % ; 1992 : 51 % ; 2000 : 73 % ; 2005 : 45 %.</desc>
+<rect width="300" height="633" fill="#ffffff"/>
+<text x="0.0" y="20.0" font-size="17" fill="#0A0A0E" text-anchor="start" font-weight="600">Les référendums nationaux</text>
+<text x="0.0" y="42.0" font-size="17" fill="#0A0A0E" text-anchor="start" font-weight="600">depuis 1958</text>
+<text x="0.0" y="70.0" font-size="13.5" fill="#52514e" text-anchor="start">part des « oui » parmi les exprimés</text>
+<text x="0.0" y="126.0" font-size="13.5" fill="#52514e" text-anchor="start">1961</text>
+<rect x="92" y="112" width="118.5" height="18" fill="#184f95"/>
+<text class="val" x="216.5" y="126.0" font-size="13.5" fill="#0A0A0E" text-anchor="start" font-weight="600">75 %</text>
+<text x="0.0" y="152.0" font-size="13.5" fill="#52514e" text-anchor="start">1962 (avr.)</text>
+<rect x="92" y="138" width="143.5" height="18" fill="#184f95"/>
+<text class="val" x="241.5" y="152.0" font-size="13.5" fill="#0A0A0E" text-anchor="start" font-weight="600">91 %</text>
+<text x="0.0" y="178.0" font-size="13.5" fill="#52514e" text-anchor="start">1962 (oct.)</text>
+<rect x="92" y="164" width="98.4" height="18" fill="#184f95"/>
+<text class="val" x="196.4" y="178.0" font-size="13.5" fill="#0A0A0E" text-anchor="start" font-weight="600">62 %</text>
+<text x="0.0" y="204.0" font-size="13.5" fill="#52514e" text-anchor="start">1969</text>
+<rect x="92" y="191" width="75.2" height="18" fill="#ffffff" stroke="#52514e" stroke-width="1.5"/>
+<text class="val" x="173.2" y="204.0" font-size="13.5" fill="#52514e" text-anchor="start" font-weight="600">48 %</text>
+<text x="0.0" y="230.0" font-size="13.5" fill="#52514e" text-anchor="start">1972</text>
+<rect x="92" y="216" width="107.9" height="18" fill="#184f95"/>
+<text class="val" x="205.9" y="230.0" font-size="13.5" fill="#0A0A0E" text-anchor="start" font-weight="600">68 %</text>
+<text x="0.0" y="256.0" font-size="13.5" fill="#52514e" text-anchor="start">1988</text>
+<rect x="92" y="242" width="126.4" height="18" fill="#184f95"/>
+<text class="val" x="224.4" y="256.0" font-size="13.5" fill="#0A0A0E" text-anchor="start" font-weight="600">80 %</text>
+<text x="0.0" y="282.0" font-size="13.5" fill="#52514e" text-anchor="start">1992</text>
+<rect x="92" y="268" width="80.7" height="18" fill="#184f95"/>
+<text class="val" x="178.7" y="282.0" font-size="13.5" fill="#0A0A0E" text-anchor="start" font-weight="600">51 %</text>
+<text x="0.0" y="308.0" font-size="13.5" fill="#52514e" text-anchor="start">2000</text>
+<rect x="92" y="294" width="115.7" height="18" fill="#184f95"/>
+<text class="val" x="213.7" y="308.0" font-size="13.5" fill="#0A0A0E" text-anchor="start" font-weight="600">73 %</text>
+<text x="0.0" y="334.0" font-size="13.5" fill="#52514e" text-anchor="start">2005</text>
+<rect x="92" y="321" width="71.6" height="18" fill="#ffffff" stroke="#52514e" stroke-width="1.5"/>
+<text class="val" x="169.6" y="334.0" font-size="13.5" fill="#52514e" text-anchor="start" font-weight="600">45 %</text>
+<line x1="171.0" y1="94" x2="171.0" y2="342" stroke="#8a8f98" stroke-dasharray="3 3"/>
+<rect x="0" y="354" width="14" height="14" fill="#184f95"/>
+<text x="20.0" y="366.0" font-size="13.5" fill="#52514e" text-anchor="start">adopté</text>
+<rect x="110" y="354" width="14" height="14" fill="#ffffff" stroke="#52514e" stroke-width="1.5"/>
+<text x="130.0" y="366.0" font-size="13.5" fill="#52514e" text-anchor="start">rejeté</text>
+<text x="0.0" y="388.0" font-size="13.5" fill="#898781" text-anchor="start">50 % des exprimés : - - -</text>
+<text x="0.0" y="410.0" font-size="13.5" fill="#0A0A0E" text-anchor="start" font-weight="600">Aucun scrutin depuis le 29 mai 2005</text>
+<line x1="0" y1="424.0" x2="300" y2="424.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="445.0" font-size="13.5" fill="#52514e">Conseil constitutionnel, proclamations</text>
+<text class="pied-source" x="0" y="462.0" font-size="13.5" fill="#52514e">des résultats (stock CONSTIT de la</text>
+<text class="pied-source" x="0" y="479.0" font-size="13.5" fill="#52514e">DILA, arrêté au 05/10/2026) ; Journal</text>
+<text class="pied-source" x="0" y="496.0" font-size="13.5" fill="#52514e">officiel</text>
+<text class="pied-note" x="0" y="517.0" font-size="13.5" fill="#52514e">Référendums nationaux des art. 11 et</text>
+<text class="pied-note" x="0" y="534.0" font-size="13.5" fill="#52514e">89 seulement (aucun n'a eu lieu au</text>
+<text class="pied-note" x="0" y="551.0" font-size="13.5" fill="#52514e">titre de l'art. 88-5) ; hors scrutin</text>
+<text class="pied-note" x="0" y="568.0" font-size="13.5" fill="#52514e">du 28/09/1958 et consultations</text>
+<text class="pied-note" x="0" y="585.0" font-size="13.5" fill="#52514e">locales.</text>
+<text class="pied-licence" x="0" y="606.0" font-size="13.5" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="623.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+</svg>
