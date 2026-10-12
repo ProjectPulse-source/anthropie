@@ -3,36 +3,60 @@
  "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Assemblée nationale, Sénat (Dosleg), Journal officiel (DILA), Légifrance",
  "meta": {
   "page": "https://stephane-lalut.com/qui-peut-faire-adopter-une-loi/",
-  "protocole": "fiches de preuve v2, volet Adopter, E1 (pire cas, écart déclaré), E2 et E3",
+  "protocole": "fiches de preuve v2, volet Adopter, E1 (pire cas, écart déclaré), E2 et E3 ; refonte du 12/10/2026",
   "constitution": {
+   "11a": "LEGIARTI000019241004",
+   "11b": "LEGIARTI000019241004",
    "24": "LEGIARTI000019241014",
    "39": "LEGIARTI000019241026",
-   "48": "LEGIARTI000019241057",
-   "49a": "LEGIARTI000019241062",
+   "40": "LEGIARTI000006527516",
+   "44c": "LEGIARTI000019241038",
    "45a": "LEGIARTI000019241040",
    "45b": "LEGIARTI000019241040",
    "45c": "LEGIARTI000019241040",
-   "49b": "LEGIARTI000019241062"
+   "45d": "LEGIARTI000019241040",
+   "45e": "LEGIARTI000019241040",
+   "45f": "LEGIARTI000019241040",
+   "46c": "LEGIARTI000019241043",
+   "46d": "LEGIARTI000019241043",
+   "47c": "LEGIARTI000019241054",
+   "471c": "LEGIARTI000019241050",
+   "48": "LEGIARTI000019241057",
+   "48a": "LEGIARTI000019241057",
+   "48c": "LEGIARTI000019241057",
+   "48e": "LEGIARTI000019241057",
+   "49a": "LEGIARTI000019241062",
+   "49b": "LEGIARTI000019241062",
+   "49c": "LEGIARTI000019241062",
+   "50": "LEGIARTI000006527530"
   },
   "temoins": {
    "fiche64": "9e19aab58f1e39dc054aa926dd13699253ae5532924b2b894920b7fda4d5165d",
-   "r25-802|44": "b2cd059c7a1f1904c7a0e1dbbb37f5028559101938f46e12b18a5e494bbc26ba"
+   "r25-802|44": "b2cd059c7a1f1904c7a0e1dbbb37f5028559101938f46e12b18a5e494bbc26ba",
+   "fiche52": "c81ff4441e4556c1676ef01ee1a0664afe5ad1fdda8bde1f54e6887543374c68"
   },
   "definitions": {
    "origine": "origine formelle au dépôt initial : projet du Gouvernement, proposition déposée à l'Assemblée nationale, proposition déposée au Sénat ; rattachement à la législature de promulgation",
+   "champ": "lois ordinaires promulguées, hors lois autorisant un traité, lois de finances et de financement de la sécurité sociale, lois organiques et lois constitutionnelles ; les lois promulguées entre deux législatures (juin 2024, après la dissolution) sont comptées sur une ligne à part",
+   "toutes_natures": "toutes les lois promulguées hors lois autorisant un traité : lois ordinaires, de finances et de financement de la sécurité sociale, organiques et constitutionnelles",
    "Pmin": "origine parlementaire établie par les deux sources (AN et Dosleg) ; l'écart avec P vient de lois dont le dossier manque aux fichiers de l'AN pour un motif établi (dépôt sous la législature précédente)",
-   "engagement": "un engagement de responsabilité (art. 49, al. 3) par texte et par étape de lecture",
+   "engagement": "engagement de responsabilité (art. 49, al. 3) : chaque engagement est compté une fois ; un même projet peut en recevoir plusieurs, y compris au cours d'une même lecture",
    "fin": "engagement sur un projet de loi de finances ou de financement de la sécurité sociale (rectificatives comprises), catégorie de l'art. 49, al. 3 ; la loi de programmation des finances publiques relève d'« un autre projet »",
-   "E1": "proposition de loi ordinaire déposée en premier lieu à l'Assemblée ; « sans examen en séance observé avant la fin de la législature » ; pire cas : excès des dépôts extraits sur les bulletins statistiques de l'AN retiré du champ et des propositions sans examen (écart au protocole déclaré)"
+   "lois_fin_engagees": "lois de finances et de financement de la sécurité sociale promulguées dont un dossier de l'Assemblée porte au moins un engagement, à une étape quelconque (jointure par l'identifiant de dossier)",
+   "E1": "proposition de loi ordinaire déposée en premier lieu à l'Assemblée ; « sans examen en séance retrouvé dans les données de l'Assemblée avant la fin de la législature » ; pire cas : excès des dépôts extraits sur les bulletins statistiques de l'AN retiré du champ et des propositions sans examen (écart au protocole déclaré)"
   },
-  "limites": "l'origine formelle n'observe ni l'influence du Gouvernement sur une proposition, ni les amendements ; les dépôts extraits ne concordent pas texte par texte avec les bulletins de l'Assemblée : E1 est publié sur la borne du pire cas"
+  "limites": "l'origine formelle n'observe ni l'influence du Gouvernement sur une proposition, ni les amendements ; les dépôts extraits ne concordent pas texte par texte avec les bulletins de l'Assemblée : E1 est publié sur la borne du pire cas ; les lois sont rattachées à la législature de promulgation, les propositions à celle de leur dépôt"
  },
  "gardes": [
-  "B1 : 8 citations de la Constitution (FR Legifrance, EN Conseil constitutionnel), 3 des temoins, retrouvees mot pour mot",
-  "B2 : origine concordante AN/Dosleg ; parlementaires XIV 98/214, XV 103-108/202, XVI 55/83",
-  "B3 : champ par session = barometre (8 sessions) ; 2024-2025 45/56 = Senat ; 2023-2024 30/51 ~ 58 %",
+  "B1 : 24 citations de la Constitution (FR Legifrance, EN Conseil constitutionnel), 5 des temoins, retrouvees mot pour mot",
+  "B6 : 1085 lois = 596 du champ + 485 exclues (traite 365, finances_fss 62, organique 57, constitutionnelle 1) + 4 entre deux legislatures",
+  "B2 : origine concordante AN/Dosleg ; champ XIV 98/214, XV 103-108/202, XVI 55/83, XVII 78/97 ; toutes natures hors traites XIV 110/260, XV 114/249, XVI 55/95, XVII 85/112 ; 4 lois entre deux legislatures",
+  "B3 : champ par session = barometre (8 sessions) ; 2024-2025 45/56 = Senat ; 2023-2024 30/51 = 58.8 %",
+  "B8 : 38 engagements = 38 actes distincts ; 10 couples (texte, etape) a plusieurs engagements, dont PLF 2023 en premiere lecture (2022-10-19, 2022-11-02)",
   "B4 : engagements XIV 6, XV 1, XVI 23 (= fiche 64 et bulletins) ; XVI 21 PLF/PLFSS + 2 LPFP ; 0 motion adoptee XIV-XVI",
-  "B5 : E1 pire cas XIV 1385/1538, XV 1959/2155, XVI 1128/1238 (exces sur bulletins 17, 5, 3)"
+  "B7 : lois financieres avec au moins un engagement (jointure par dossier) : XVI 5/8, XVII 3/6 ; classements titre/nature concordants",
+  "B5 : E1 pire cas XIV 1385/1538, XV 1959/2155, XVI 1128/1238 (exces sur bulletins 17, 5, 3) ; dixieme unique 9",
+  "parite des 4 figures telephone (66 valeurs dessinees)"
  ],
  "calcul": {
   "legislatures": {
@@ -44,7 +68,14 @@
     "AN": 55,
     "SEN": 43,
     "traites": 188,
-    "autres": 46
+    "autres": 46,
+    "Ntot": 260,
+    "Ptot": 110,
+    "Ptotmin": 99,
+    "Norg": 23,
+    "Porg": 12,
+    "Nfin": 23,
+    "Ncst": 0
    },
    "15": {
     "N": 202,
@@ -54,7 +85,14 @@
     "AN": 77,
     "SEN": 31,
     "traites": 104,
-    "autres": 47
+    "autres": 47,
+    "Ntot": 249,
+    "Ptot": 114,
+    "Ptotmin": 109,
+    "Norg": 22,
+    "Porg": 6,
+    "Nfin": 25,
+    "Ncst": 0
    },
    "16": {
     "N": 83,
@@ -64,7 +102,14 @@
     "AN": 32,
     "SEN": 23,
     "traites": 41,
-    "autres": 12
+    "autres": 12,
+    "Ntot": 95,
+    "Ptot": 55,
+    "Ptotmin": 55,
+    "Norg": 3,
+    "Porg": 0,
+    "Nfin": 8,
+    "Ncst": 1
    },
    "17": {
     "N": 97,
@@ -74,8 +119,29 @@
     "AN": 48,
     "SEN": 30,
     "traites": 32,
-    "autres": 15
+    "autres": 15,
+    "Ntot": 112,
+    "Ptot": 85,
+    "Ptotmin": 85,
+    "Norg": 9,
+    "Porg": 7,
+    "Nfin": 6,
+    "Ncst": 0
    }
+  },
+  "entre_deux_legislatures": {
+   "N": 4,
+   "P": 4,
+   "AN": 3,
+   "SEN": 1,
+   "gouv": 0,
+   "mois": "2024-06",
+   "numeros": [
+    "2024-536",
+    "2024-537",
+    "2024-538",
+    "2024-582"
+   ]
   },
   "sessions": {
    "2017-2018": {
@@ -117,28 +183,50 @@
     "fin": 0,
     "textes": 2,
     "lpfp": 0,
-    "adoptees": 0
+    "adoptees": 0,
+    "lois_fin": 23,
+    "lois_fin_engagees": 0,
+    "lois_fin_engagees_numeros": []
    },
    "15": {
     "n": 1,
     "fin": 0,
     "textes": 1,
     "lpfp": 0,
-    "adoptees": 0
+    "adoptees": 0,
+    "lois_fin": 25,
+    "lois_fin_engagees": 0,
+    "lois_fin_engagees_numeros": []
    },
    "16": {
     "n": 23,
     "fin": 21,
     "textes": 6,
     "lpfp": 2,
-    "adoptees": 0
+    "adoptees": 0,
+    "lois_fin": 8,
+    "lois_fin_engagees": 5,
+    "lois_fin_engagees_numeros": [
+     "2022-1616",
+     "2022-1726",
+     "2023-1250",
+     "2023-1322",
+     "2023-270"
+    ]
    },
    "17": {
     "n": 8,
     "fin": 8,
     "textes": 3,
     "lpfp": 0,
-    "adoptees": 1
+    "adoptees": 1,
+    "lois_fin": 6,
+    "lois_fin_engagees": 3,
+    "lois_fin_engagees_numeros": [
+     "2025-127",
+     "2025-199",
+     "2026-103"
+    ]
    }
   }
  },
@@ -146,12 +234,12 @@
   "lois": {
    "entetes": [
     "Législature de promulgation",
-    "Lois ordinaires",
+    "Lois du champ",
     "Projet du Gouvernement",
     "Proposition déposée à l'Assemblée",
     "Proposition déposée au Sénat",
     "Origine parlementaire",
-    "Lois autorisant un traité (exclues)"
+    "Part d'origine parlementaire"
    ],
    "lignes": [
     [
@@ -161,7 +249,7 @@
      "55",
      "43",
      "98 (au moins 87)",
-     "188"
+     "46 % (au moins 41 %)"
     ],
     [
      "XVe (2017-2022)",
@@ -170,7 +258,7 @@
      "77",
      "31",
      "108 (au moins 103)",
-     "104"
+     "53 % (au moins 51 %)"
     ],
     [
      "XVIe (2022-2024)",
@@ -179,7 +267,7 @@
      "32",
      "23",
      "55",
-     "41"
+     "66 %"
     ],
     [
      "XVIIe (depuis 2024, en cours au 06/10/2026)",
@@ -188,6 +276,69 @@
      "48",
      "30",
      "78",
+     "80 %"
+    ],
+    [
+     "Entre deux législatures (juin 2024)",
+     "4",
+     "0",
+     "3",
+     "1",
+     "4",
+     "100 %"
+    ]
+   ]
+  },
+  "natures": {
+   "entetes": [
+    "Législature",
+    "Lois promulguées, toutes natures hors traités",
+    "D'origine parlementaire",
+    "Part",
+    "dont lois de finances et de financement de la sécurité sociale (toutes d'un projet)",
+    "dont lois organiques : total / d'origine parlementaire",
+    "dont loi constitutionnelle",
+    "Lois autorisant un traité (hors de tout calcul)"
+   ],
+   "lignes": [
+    [
+     "XIVe",
+     "260",
+     "110 (au moins 99)",
+     "42 %",
+     "23",
+     "23 / 12",
+     "0",
+     "188"
+    ],
+    [
+     "XVe",
+     "249",
+     "114 (au moins 109)",
+     "46 %",
+     "25",
+     "22 / 6",
+     "0",
+     "104"
+    ],
+    [
+     "XVIe",
+     "95",
+     "55",
+     "58 %",
+     "8",
+     "3 / 0",
+     "1",
+     "41"
+    ],
+    [
+     "XVIIe (en cours)",
+     "112",
+     "85",
+     "76 %",
+     "6",
+     "9 / 7",
+     "0",
      "32"
     ]
    ]
@@ -204,49 +355,49 @@
      "2017-2018",
      "41",
      "12",
-     "29 %"
+     "29 %"
     ],
     [
      "2018-2019",
      "49",
      "25",
-     "51 %"
+     "51 %"
     ],
     [
      "2019-2020",
      "43",
      "18",
-     "42 %"
+     "42 %"
     ],
     [
      "2020-2021",
      "51",
      "19",
-     "37 %"
+     "37 %"
     ],
     [
      "2021-2022",
      "64",
      "41",
-     "64 %"
+     "64 %"
     ],
     [
      "2022-2023",
      "44",
      "29",
-     "66 %"
+     "66 %"
     ],
     [
      "2023-2024",
      "51",
      "30",
-     "59 %"
+     "59 %"
     ],
     [
      "2024-2025",
      "56",
      "45",
-     "80 %"
+     "80 %"
     ]
    ]
   },
@@ -254,38 +405,48 @@
    "entetes": [
     "Législature",
     "Engagements (art. 49, al. 3)",
+    "Textes distincts",
     "Sur un projet de loi de finances ou de financement de la sécurité sociale",
     "Sur un autre projet ou une proposition",
-    "Motions de censure adoptées"
+    "Motions de censure adoptées",
+    "Lois de finances et de financement de la sécurité sociale promulguées avec au moins un engagement"
    ],
    "lignes": [
     [
      "XIVe",
      "6",
+     "2",
      "0",
      "6",
-     "0"
+     "0",
+     "0 sur 23"
     ],
     [
      "XVe",
      "1",
+     "1",
      "0",
      "1",
-     "0"
+     "0",
+     "0 sur 25"
     ],
     [
      "XVIe",
      "23",
+     "6",
      "21",
      "2",
-     "0"
+     "0",
+     "5 sur 8"
     ],
     [
      "XVIIe (en cours)",
      "8",
+     "3",
      "8",
      "0",
-     "1"
+     "1",
+     "3 sur 6"
     ]
    ]
   },
@@ -293,7 +454,7 @@
    "entetes": [
     "Législature de dépôt",
     "Propositions de loi ordinaires déposées à l'Assemblée",
-    "Sans examen en séance observé avant la fin de la législature",
+    "Sans examen en séance retrouvé dans les données de l'Assemblée avant la fin de la législature",
     "Pire cas : excès sur les bulletins retiré",
     "Dépôts de propositions : données / bulletins",
     "Durée médiane entre dépôt et fin de législature (jours)"
@@ -301,26 +462,26 @@
    "lignes": [
     [
      "XIVe (2012-2017)",
-     "1 555",
-     "1 402",
-     "1 385 sur 1 538",
-     "1 711 / 1 694",
-     "1 064"
+     "1 555",
+     "1 402",
+     "1 385 sur 1 538",
+     "1 711 / 1 694",
+     "1 064"
     ],
     [
      "XVe (2017-2022)",
-     "2 160",
-     "1 964",
-     "1 959 sur 2 155",
-     "2 296 / 2 291",
+     "2 160",
+     "1 964",
+     "1 959 sur 2 155",
+     "2 296 / 2 291",
      "868"
     ],
     [
      "XVIe (2022-2024)",
-     "1 241",
-     "1 131",
-     "1 128 sur 1 238",
-     "1 318 / 1 315",
+     "1 241",
+     "1 131",
+     "1 128 sur 1 238",
+     "1 318 / 1 315",
      "381"
     ]
    ]
@@ -330,12 +491,12 @@
   "lois": {
    "entetes": [
     "Legislature of promulgation",
-    "Laws",
+    "Laws in the scope",
     "Government bill",
     "Private member's bill tabled in the Assembly",
     "Private member's bill tabled in the Senate",
     "Parliamentary origin",
-    "Laws authorising a treaty (excluded)"
+    "Share of parliamentary origin"
    ],
    "lignes": [
     [
@@ -345,7 +506,7 @@
      "55",
      "43",
      "98 (at least 87)",
-     "188"
+     "46% (at least 41%)"
     ],
     [
      "15th legislature (2017-2022)",
@@ -354,7 +515,7 @@
      "77",
      "31",
      "108 (at least 103)",
-     "104"
+     "53% (at least 51%)"
     ],
     [
      "16th legislature (2022-2024)",
@@ -363,7 +524,7 @@
      "32",
      "23",
      "55",
-     "41"
+     "66%"
     ],
     [
      "17th legislature (since 2024, ongoing on 6 October 2026)",
@@ -372,6 +533,69 @@
      "48",
      "30",
      "78",
+     "80%"
+    ],
+    [
+     "Between two legislatures (June 2024)",
+     "4",
+     "0",
+     "3",
+     "1",
+     "4",
+     "100%"
+    ]
+   ]
+  },
+  "natures": {
+   "entetes": [
+    "Legislature",
+    "Laws promulgated, all kinds except treaties",
+    "Of parliamentary origin",
+    "Share",
+    "of which finance and social security financing acts (all from a government bill)",
+    "of which institutional acts: total / of parliamentary origin",
+    "of which constitutional act",
+    "Laws authorising a treaty (outside every count)"
+   ],
+   "lignes": [
+    [
+     "14th",
+     "260",
+     "110 (at least 99)",
+     "42%",
+     "23",
+     "23 / 12",
+     "0",
+     "188"
+    ],
+    [
+     "15th",
+     "249",
+     "114 (at least 109)",
+     "46%",
+     "25",
+     "22 / 6",
+     "0",
+     "104"
+    ],
+    [
+     "16th",
+     "95",
+     "55",
+     "58%",
+     "8",
+     "3 / 0",
+     "1",
+     "41"
+    ],
+    [
+     "17th (ongoing)",
+     "112",
+     "85",
+     "76%",
+     "6",
+     "9 / 7",
+     "0",
      "32"
     ]
    ]
@@ -438,38 +662,48 @@
    "entetes": [
     "Legislature",
     "Uses of art. 49, para. 3",
+    "Distinct bills",
     "On a Finance Bill or Social Security Financing Bill",
     "On another bill",
-    "Motions of no confidence carried"
+    "Motions of no confidence carried",
+    "Finance and social security financing acts promulgated with at least one use"
    ],
    "lignes": [
     [
      "14th",
      "6",
+     "2",
      "0",
      "6",
-     "0"
+     "0",
+     "0 out of 23"
     ],
     [
      "15th",
      "1",
+     "1",
      "0",
      "1",
-     "0"
+     "0",
+     "0 out of 25"
     ],
     [
      "16th",
      "23",
+     "6",
      "21",
      "2",
-     "0"
+     "0",
+     "5 out of 8"
     ],
     [
      "17th (ongoing)",
      "8",
+     "3",
      "8",
      "0",
-     "1"
+     "1",
+     "3 out of 6"
     ]
    ]
   },
@@ -477,7 +711,7 @@
    "entetes": [
     "Legislature of tabling",
     "Ordinary private members' bills tabled first in the Assembly",
-    "Not observed debated in the chamber before the end of the legislature",
+    "No plenary debate found in the Assembly's data before the end of the legislature",
     "Worst case: excess over the bulletins removed",
     "Bills tabled: data / bulletins",
     "Median time from tabling to end of legislature (days)"
@@ -520,6 +754,13 @@
   "SEN14": "43",
   "T14": "188",
   "Ppct14": "46",
+  "Pminpct14": "41",
+  "Ntot14": "260",
+  "Ptot14": "110",
+  "Ptotpct14": "42",
+  "Norg14": "23",
+  "Porg14": "12",
+  "Nfin14": "23",
   "N15": "202",
   "P15": "108",
   "Pmin15": "103",
@@ -528,6 +769,13 @@
   "SEN15": "31",
   "T15": "104",
   "Ppct15": "53",
+  "Pminpct15": "51",
+  "Ntot15": "249",
+  "Ptot15": "114",
+  "Ptotpct15": "46",
+  "Norg15": "22",
+  "Porg15": "6",
+  "Nfin15": "25",
   "N16": "83",
   "P16": "55",
   "Pmin16": "55",
@@ -536,6 +784,13 @@
   "SEN16": "23",
   "T16": "41",
   "Ppct16": "66",
+  "Pminpct16": "66",
+  "Ntot16": "95",
+  "Ptot16": "55",
+  "Ptotpct16": "58",
+  "Norg16": "3",
+  "Porg16": "0",
+  "Nfin16": "8",
   "N17": "97",
   "P17": "78",
   "Pmin17": "78",
@@ -544,73 +799,122 @@
   "SEN17": "30",
   "T17": "32",
   "Ppct17": "80",
+  "Pminpct17": "80",
+  "Ntot17": "112",
+  "Ptot17": "85",
+  "Ptotpct17": "76",
+  "Norg17": "9",
+  "Porg17": "7",
+  "Nfin17": "6",
   "E14": "6",
   "Efin14": "0",
   "Etextes14": "2",
   "Eautre14": "6",
+  "Lfin14": "23",
+  "Lfineng14": "0",
   "Efois14": "6 fois",
   "E15": "1",
   "Efin15": "0",
   "Etextes15": "1",
   "Eautre15": "1",
+  "Lfin15": "25",
+  "Lfineng15": "0",
   "Efois15": "1 fois",
   "E16": "23",
   "Efin16": "21",
   "Etextes16": "6",
   "Eautre16": "2",
+  "Lfin16": "8",
+  "Lfineng16": "5",
   "Efois16": "23 fois",
   "E17": "8",
   "Efin17": "8",
   "Etextes17": "3",
   "Eautre17": "0",
+  "Lfin17": "6",
+  "Lfineng17": "3",
   "Efois17": "8 fois",
-  "Z14": "1 402",
-  "NZ14": "1 555",
+  "Z14": "1 402",
+  "NZ14": "1 555",
   "Zpct14": "90",
-  "Zw14": "1 385",
-  "Nw14": "1 538",
+  "Zw14": "1 385",
+  "Nw14": "1 538",
   "exces14": "17",
-  "bul14": "1 694",
-  "ext14": "1 711",
-  "med14": "1 064",
-  "Z15": "1 964",
-  "NZ15": "2 160",
+  "bul14": "1 694",
+  "ext14": "1 711",
+  "med14": "1 064",
+  "pjl14": "294",
+  "Z15": "1 964",
+  "NZ15": "2 160",
   "Zpct15": "91",
-  "Zw15": "1 959",
-  "Nw15": "2 155",
+  "Zw15": "1 959",
+  "Nw15": "2 155",
   "exces15": "5",
-  "bul15": "2 291",
-  "ext15": "2 296",
+  "bul15": "2 291",
+  "ext15": "2 296",
   "med15": "868",
-  "Z16": "1 131",
-  "NZ16": "1 241",
+  "pjl15": "271",
+  "Z16": "1 131",
+  "NZ16": "1 241",
   "Zpct16": "91",
-  "Zw16": "1 128",
-  "Nw16": "1 238",
+  "Zw16": "1 128",
+  "Nw16": "1 238",
   "exces16": "3",
-  "bul16": "1 315",
-  "ext16": "1 318",
+  "bul16": "1 315",
+  "ext16": "1 318",
   "med16": "381",
+  "pjl16": "78",
+  "Zdix": "neuf",
+  "HLn": "quatre",
+  "HLmois": "juin 2024",
+  "champ": "hors lois autorisant un traité, lois de finances et de financement de la sécurité sociale, lois organiques et lois constitutionnelles",
+  "champ_def": "lois autorisant un traité (qui autorisent la France à ratifier ou approuver un accord international), lois de finances et de financement de la sécurité sociale (les budgets de l'État et de la sécurité sociale), lois organiques (prévues par la Constitution pour en préciser certaines règles) et lois constitutionnelles (qui modifient la Constitution)",
   "s1718_P": "12",
   "s1718_N": "41",
   "s2425_P": "45",
   "s2425_N": "56",
+  "s2324_P": "30",
+  "s2324_N": "51",
+  "s2324_pct": "58,8",
+  "s2324_arr": "59",
   "releve_le": "06/10/2026 (données de l'Assemblée nationale et base Dosleg du Sénat du 06/10/2026, Journal officiel ; bulletins statistiques de l'Assemblée nationale)",
+  "cit_art11a": "Lorsque le référendum a conclu à l'adoption du projet ou de la proposition de loi, le Président de la République promulgue la loi dans les quinze jours qui suivent la proclamation des résultats de la consultation.",
+  "cit_art11b": "Lorsque le référendum est organisé sur proposition du Gouvernement, celui-ci fait, devant chaque assemblée, une déclaration qui est suivie d'un débat.",
   "cit_art24": "Le Parlement vote la loi.",
   "cit_art39": "L'initiative des lois appartient concurremment au Premier ministre et aux membres du Parlement.",
-  "cit_art48": "Deux semaines de séance sur quatre sont réservées par priorité, et dans l'ordre que le Gouvernement a fixé, à l'examen des textes et aux débats dont il demande l'inscription à l'ordre du jour.",
-  "cit_art49a": "Le Premier ministre peut, après délibération du Conseil des ministres, engager la responsabilité du Gouvernement devant l'Assemblée nationale sur le vote d'un projet de loi de finances ou de financement de la sécurité sociale. Dans ce cas, ce projet est considéré comme adopté, sauf si une motion de censure, déposée dans les vingt-quatre heures qui suivent, est votée dans les conditions prévues à l'alinéa précédent.",
+  "cit_art40": "Les propositions et amendements formulés par les membres du Parlement ne sont pas recevables lorsque leur adoption aurait pour conséquence soit une diminution des ressources publiques, soit la création ou l'aggravation d'une charge publique.",
+  "cit_art44c": "Si le Gouvernement le demande, l'Assemblée saisie se prononce par un seul vote sur tout ou partie du texte en discussion en ne retenant que les amendements proposés ou acceptés par le Gouvernement.",
   "cit_art45a": "Tout projet ou proposition de loi est examiné successivement dans les deux Assemblées du Parlement en vue de l'adoption d'un texte identique.",
   "cit_art45b": "ont la faculté de provoquer la réunion d'une commission mixte paritaire chargée de proposer un texte sur les dispositions restant en discussion.",
   "cit_art45c": "le Gouvernement peut, après une nouvelle lecture par l'Assemblée nationale et par le Sénat, demander à l'Assemblée nationale de statuer définitivement.",
+  "cit_art45d": "Lorsque, par suite d'un désaccord entre les deux Assemblées, un projet ou une proposition de loi n'a pu être adopté après deux lectures par chaque Assemblée ou, si le Gouvernement a décidé d'engager la procédure accélérée sans que les Conférences des présidents s'y soient conjointement opposées, après une seule lecture par chacune d'entre elles, le Premier ministre ou, pour une proposition de loi, les présidents des deux assemblées agissant conjointement, ont la faculté de provoquer la réunion d'une commission mixte paritaire chargée de proposer un texte sur les dispositions restant en discussion.",
+  "cit_art45e": "Le texte élaboré par la commission mixte peut être soumis par le Gouvernement pour approbation aux deux Assemblées. Aucun amendement n'est recevable sauf accord du Gouvernement.",
+  "cit_art45f": "Si la commission mixte ne parvient pas à l'adoption d'un texte commun ou si ce texte n'est pas adopté dans les conditions prévues à l'alinéa précédent, le Gouvernement peut, après une nouvelle lecture par l'Assemblée nationale et par le Sénat, demander à l'Assemblée nationale de statuer définitivement.",
+  "cit_art46c": "faute d'accord entre les deux assemblées, le texte ne peut être adopté par l'Assemblée nationale en dernière lecture qu'à la majorité absolue de ses membres.",
+  "cit_art46d": "Les lois organiques relatives au Sénat doivent être votées dans les mêmes termes par les deux assemblées.",
+  "cit_art47c": "Si le Parlement ne s'est pas prononcé dans un délai de soixante-dix jours, les dispositions du projet peuvent être mises en vigueur par ordonnance.",
+  "cit_art471c": "Si le Parlement ne s'est pas prononcé dans un délai de cinquante jours, les dispositions du projet peuvent être mises en oeuvre par ordonnance.",
+  "cit_art48": "Deux semaines de séance sur quatre sont réservées par priorité, et dans l'ordre que le Gouvernement a fixé, à l'examen des textes et aux débats dont il demande l'inscription à l'ordre du jour.",
+  "cit_art48a": "l'ordre du jour est fixé par chaque assemblée.",
+  "cit_art48c": "En outre, l'examen des projets de loi de finances, des projets de loi de financement de la sécurité sociale et, sous réserve des dispositions de l'alinéa suivant, des textes transmis par l'autre assemblée depuis six semaines au moins, des projets relatifs aux états de crise et des demandes d'autorisation visées à l'article 35 est, à la demande du Gouvernement, inscrit à l'ordre du jour par priorité.",
+  "cit_art48e": "Un jour de séance par mois est réservé à un ordre du jour arrêté par chaque assemblée à l'initiative des groupes d'opposition de l'assemblée intéressée ainsi qu'à celle des groupes minoritaires.",
+  "cit_art49a": "Le Premier ministre peut, après délibération du Conseil des ministres, engager la responsabilité du Gouvernement devant l'Assemblée nationale sur le vote d'un projet de loi de finances ou de financement de la sécurité sociale. Dans ce cas, ce projet est considéré comme adopté, sauf si une motion de censure, déposée dans les vingt-quatre heures qui suivent, est votée dans les conditions prévues à l'alinéa précédent.",
   "cit_art49b": "Le Premier ministre peut, en outre, recourir à cette procédure pour un autre projet ou une proposition de loi par session.",
+  "cit_art49c": "Seuls sont recensés les votes favorables à la motion de censure qui ne peut être adoptée qu'à la majorité des membres composant l'Assemblée.",
+  "cit_art50": "Lorsque l'Assemblée nationale adopte une motion de censure ou lorsqu'elle désapprouve le programme ou une déclaration de politique générale du Gouvernement, le Premier ministre doit remettre au Président de la République la démission du Gouvernement.",
   "cit_fiche64": "Cet instrument a néanmoins été utilisé à six reprises, sur deux projets de loi différents, sous la XIVe législature, à une reprise sous la XVe législature, et à 23 reprises sous la XVIe législature.",
   "cit_censure": "La première motion déposée a été adoptée selon la majorité qualifiée requise",
   "cit_senat_origine": "Sur la session, 80 % des lois adoptées (45 sur 56) sont d'origine parlementaire, contre 58 % en 2023-2024",
+  "cit_fiche52": "L'emploi du pluriel a pour effet d'autoriser la compensation d'une perte de recettes par l'augmentation d'une autre recette.",
+  "cit_fiche52b": "la création ou l'aggravation d'une charge ne peut être gagée",
   "censure_date": "2 décembre 2024",
+  "censure_texte": "projet de loi de financement de la sécurité sociale pour 2025",
+  "censure_etape": "texte de la commission mixte paritaire",
   "cit_fiche64_tr": "This instrument was nevertheless used six times, on two different bills, during the 14th legislature, once during the 15th legislature, and 23 times during the 16th legislature.",
   "cit_censure_tr": "The first motion tabled was carried by the required qualified majority",
-  "cit_senat_origine_tr": "Over the session, 80% of the laws adopted (45 out of 56) originated as private members' bills, against 58% in 2023-2024"
+  "cit_senat_origine_tr": "Over the session, 80% of the laws adopted (45 out of 56) originated as private members' bills, against 58% in 2023-2024",
+  "cit_fiche52_tr": "The use of the plural has the effect of allowing a loss of revenue to be offset by an increase in another revenue.",
+  "cit_fiche52b_tr": "the creation or increase of a charge cannot be offset"
  },
  "affichage_en": {
   "releve": "6 October 2026",
@@ -622,6 +926,13 @@
   "SEN14": "43",
   "T14": "188",
   "Ppct14": "46",
+  "Pminpct14": "41",
+  "Ntot14": "260",
+  "Ptot14": "110",
+  "Ptotpct14": "42",
+  "Norg14": "23",
+  "Porg14": "12",
+  "Nfin14": "23",
   "N15": "202",
   "P15": "108",
   "Pmin15": "103",
@@ -630,6 +941,13 @@
   "SEN15": "31",
   "T15": "104",
   "Ppct15": "53",
+  "Pminpct15": "51",
+  "Ntot15": "249",
+  "Ptot15": "114",
+  "Ptotpct15": "46",
+  "Norg15": "22",
+  "Porg15": "6",
+  "Nfin15": "25",
   "N16": "83",
   "P16": "55",
   "Pmin16": "55",
@@ -638,6 +956,13 @@
   "SEN16": "23",
   "T16": "41",
   "Ppct16": "66",
+  "Pminpct16": "66",
+  "Ntot16": "95",
+  "Ptot16": "55",
+  "Ptotpct16": "58",
+  "Norg16": "3",
+  "Porg16": "0",
+  "Nfin16": "8",
   "N17": "97",
   "P17": "78",
   "Pmin17": "78",
@@ -646,25 +971,40 @@
   "SEN17": "30",
   "T17": "32",
   "Ppct17": "80",
+  "Pminpct17": "80",
+  "Ntot17": "112",
+  "Ptot17": "85",
+  "Ptotpct17": "76",
+  "Norg17": "9",
+  "Porg17": "7",
+  "Nfin17": "6",
   "E14": "6",
   "Efin14": "0",
   "Etextes14": "2",
   "Eautre14": "6",
+  "Lfin14": "23",
+  "Lfineng14": "0",
   "Efois14": "6 times",
   "E15": "1",
   "Efin15": "0",
   "Etextes15": "1",
   "Eautre15": "1",
+  "Lfin15": "25",
+  "Lfineng15": "0",
   "Efois15": "once",
   "E16": "23",
   "Efin16": "21",
   "Etextes16": "6",
   "Eautre16": "2",
+  "Lfin16": "8",
+  "Lfineng16": "5",
   "Efois16": "23 times",
   "E17": "8",
   "Efin17": "8",
   "Etextes17": "3",
   "Eautre17": "0",
+  "Lfin17": "6",
+  "Lfineng17": "3",
   "Efois17": "8 times",
   "Z14": "1,402",
   "NZ14": "1,555",
@@ -675,6 +1015,7 @@
   "bul14": "1,694",
   "ext14": "1,711",
   "med14": "1,064",
+  "pjl14": "294",
   "Z15": "1,964",
   "NZ15": "2,160",
   "Zpct15": "91",
@@ -684,6 +1025,7 @@
   "bul15": "2,291",
   "ext15": "2,296",
   "med15": "868",
+  "pjl15": "271",
   "Z16": "1,131",
   "NZ16": "1,241",
   "Zpct16": "91",
@@ -693,25 +1035,57 @@
   "bul16": "1,315",
   "ext16": "1,318",
   "med16": "381",
+  "pjl16": "78",
+  "Zdix": "nine",
+  "HLn": "four",
+  "HLmois": "June 2024",
+  "champ": "excluding laws authorising a treaty, finance and social security financing acts, institutional acts and constitutional acts",
+  "champ_def": "laws authorising a treaty (which allow France to ratify or approve an international agreement), finance and social security financing acts (the State and social security budgets), institutional acts (provided for by the Constitution to specify some of its rules) and constitutional acts (which amend the Constitution)",
   "s1718_P": "12",
   "s1718_N": "41",
   "s2425_P": "45",
   "s2425_N": "56",
+  "s2324_P": "30",
+  "s2324_N": "51",
+  "s2324_pct": "58.8",
+  "s2324_arr": "59",
   "releve_le": "6 October 2026 (National Assembly open data and the Senate's Dosleg database of 6 October 2026, Journal officiel; National Assembly statistical bulletins)",
+  "cit_art11a": "Where the outcome of the referendum is favourable to the Government Bill or to the Private Members' Bill, the President of the Republic shall promulgate the resulting statute within fifteen days following the proclamation of the results of the vote.",
+  "cit_art11b": "Where the referendum is held on the recommendation of the Government, the latter shall make a statement before each House and the same shall be followed by a debate.",
   "cit_art24": "Parliament shall pass statutes.",
   "cit_art39": "Both the Prime Minister and Members of Parliament shall have the right to initiate legislation.",
-  "cit_art48": "During two weeks of sittings out of four, priority shall be given, in the order determined by the Government, to the consideration of texts and to debates which it requests to be included on the agenda.",
-  "cit_art49a": "The Prime Minister may, after deliberation by the Council of Ministers, make the passing of a Finance Bill or Social Security Financing Bill an issue of a vote of confidence before the National Assembly. In that event, the Bill shall be considered passed unless a resolution of no-confidence, tabled within the subsequent twenty-four hours, is carried as provided for in the foregoing paragraph.",
+  "cit_art40": "Private Members' Bills and amendments introduced by Members of Parliament shall not be admissible where their enactment would result in either a diminution of public revenue or the creation or increase of any public expenditure.",
+  "cit_art44c": "If the Government so requests, the House before which the Bill is tabled shall proceed to a single vote on all or part of the text under debate, on the sole basis of the amendments proposed or accepted by the Government.",
   "cit_art45a": "Every Government or Private Member's Bill shall be considered successively in the two Houses of Parliament with a view to the passing of an identical text.",
   "cit_art45b": "may convene a joint committee, composed of an equal number of members from each House, to propose a text on the provisions still under debate.",
   "cit_art45c": "the Government may, after a further reading by the National Assembly and by the Senate, ask the National Assembly to reach a final decision.",
+  "cit_art45d": "If, as a result of a failure to agree by the two Houses, it has proved impossible to pass a Government or Private Member's Bill after two readings by each House or, if the Government has decided to apply the accelerated procedure without the two Conferences of Presidents being jointly opposed, after a single reading of such Bill by each House, the Prime Minister, or in the case of a Private Members' Bill, the Presidents of the two Houses acting jointly, may convene a joint committee, composed of an equal number of members from each House, to propose a text on the provisions still under debate.",
+  "cit_art45e": "The text drafted by the joint committee may be submitted by the Government to both Houses for approval. No amendment shall be admissible without the consent of the Government.",
+  "cit_art45f": "If the joint committee fails to agree on a common text, or if the text is not passed as provided in the foregoing paragraph, the Government may, after a further reading by the National Assembly and by the Senate, ask the National Assembly to reach a final decision.",
+  "cit_art46c": "failing agreement between the two Houses, the text may be passed by the National Assembly on a final reading only by an absolute majority of the Members thereof.",
+  "cit_art46d": "Institutional Acts relating to the Senate must be passed in identical terms by the two Houses.",
+  "cit_art47c": "Should Parliament fail to reach a decision within seventy days, the provisions of the Bill may be brought into force by Ordinance.",
+  "cit_art471c": "Should Parliament fail to reach a decision within fifty days, the provisions of the Bill may be implemented by Ordinance.",
+  "cit_art48": "During two weeks of sittings out of four, priority shall be given, in the order determined by the Government, to the consideration of texts and to debates which it requests to be included on the agenda.",
+  "cit_art48a": "the agenda shall be determined by each House.",
+  "cit_art48c": "In addition, the consideration of Finance Bills, Social Security Financing Bills and, subject to the provisions of the following paragraph, texts transmitted by the other House at least six weeks previously, as well as bills concerning a state of emergency and requests for authorization referred to in article 35, shall, upon Government request, be included on the agenda with priority.",
+  "cit_art48e": "One day of sitting per month shall be given to an agenda determined by each House upon the initiative of the opposition groups in the relevant House, as well as upon that of the minority groups.",
+  "cit_art49a": "The Prime Minister may, after deliberation by the Council of Ministers, make the passing of a Finance Bill or Social Security Financing Bill an issue of a vote of confidence before the National Assembly. In that event, the Bill shall be considered passed unless a resolution of no-confidence, tabled within the subsequent twenty-four hours, is carried as provided for in the foregoing paragraph.",
   "cit_art49b": "In addition, the Prime Minister may use the said procedure for one other Government or Private Members' Bill per session.",
+  "cit_art49c": "Solely votes cast in favour of the no-confidence resolution shall be counted and the latter shall not be passed unless it secures a majority of the Members of the House.",
+  "cit_art50": "When the National Assembly passes a resolution of no-confidence, or when it fails to endorse the Government programme or general policy statement, the Prime Minister shall tender the resignation of the Government to the President of the Republic.",
   "cit_fiche64": "Cet instrument a néanmoins été utilisé à six reprises, sur deux projets de loi différents, sous la XIVe législature, à une reprise sous la XVe législature, et à 23 reprises sous la XVIe législature.",
   "cit_censure": "La première motion déposée a été adoptée selon la majorité qualifiée requise",
   "cit_senat_origine": "Sur la session, 80 % des lois adoptées (45 sur 56) sont d'origine parlementaire, contre 58 % en 2023-2024",
+  "cit_fiche52": "L'emploi du pluriel a pour effet d'autoriser la compensation d'une perte de recettes par l'augmentation d'une autre recette.",
+  "cit_fiche52b": "la création ou l'aggravation d'une charge ne peut être gagée",
   "censure_date": "2 December 2024",
+  "censure_texte": "the Social Security Financing Bill for 2025",
+  "censure_etape": "joint committee text",
   "cit_fiche64_tr": "This instrument was nevertheless used six times, on two different bills, during the 14th legislature, once during the 15th legislature, and 23 times during the 16th legislature.",
   "cit_censure_tr": "The first motion tabled was carried by the required qualified majority",
-  "cit_senat_origine_tr": "Over the session, 80% of the laws adopted (45 out of 56) originated as private members' bills, against 58% in 2023-2024"
+  "cit_senat_origine_tr": "Over the session, 80% of the laws adopted (45 out of 56) originated as private members' bills, against 58% in 2023-2024",
+  "cit_fiche52_tr": "The use of the plural has the effect of allowing a loss of revenue to be offset by an increase in another revenue.",
+  "cit_fiche52b_tr": "the creation or increase of a charge cannot be offset"
  }
 }

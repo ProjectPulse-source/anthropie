@@ -1,40 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 298" role="img" font-variant-numeric="tabular-nums" aria-labelledby="a4-t a4-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-<title id="a4-t">Engagements de responsabilité sur un texte (art. 49, al. 3)</title><desc id="a4-d">Barres horizontales par législature : engagements sur un projet de loi de finances ou de financement de la sécurité sociale, et sur un autre projet ou une proposition. XIVe : 6, sur d&#x27;autres projets ; XVe : 1 ; XVIe : 23, dont 2 sur la loi de programmation des finances publiques ; XVIIe en cours.</desc>
-<rect width="720" height="298" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 411" role="img" font-variant-numeric="tabular-nums" aria-labelledby="a4-t a4-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="a4-t">Engagements de responsabilité sur un texte (art. 49, al. 3)</title><desc id="a4-d">Barres horizontales par législature : engagements sur un projet de loi de finances ou de financement de la sécurité sociale, et sur un autre projet ou une proposition. XIVe (2012-2017) : 6 engagements sur 2 textes, aucun sur un projet de loi de finances ou de financement de la sécurité sociale ; XVe (2017-2022) : 1 engagement sur 1 texte, aucun sur un projet de loi de finances ou de financement de la sécurité sociale ; XVIe (2022-2024) : 23 engagements sur 6 textes, dont 21 sur un projet de loi de finances ou de financement de la sécurité sociale ; XVIIe (depuis 2024), en cours : 8 engagements sur 3 textes, tous sur un projet de loi de finances ou de financement de la sécurité sociale, 1 motion de censure adoptée.</desc>
+<rect width="720" height="411" fill="#ffffff"/>
 <text x="0.0" y="18.0" font-size="13" fill="#0A0A0E" text-anchor="start" font-weight="600">Engagements de responsabilité sur un texte (art. 49, al. 3)</text>
-<text x="0.0" y="36.0" font-size="12" fill="#52514e" text-anchor="start">nombre d&#x27;engagements, par législature ; un engagement par texte et par étape de lecture</text>
+<text x="0.0" y="36.0" font-size="12" fill="#52514e" text-anchor="start">nombre d&#x27;engagements, par législature ; chaque engagement est compté une fois</text>
 <rect x="0" y="49" width="11" height="11" fill="#184f95"/>
 <text x="16.0" y="58.0" font-size="10" fill="#52514e" text-anchor="start">projet de loi de finances ou de financement de la sécurité sociale</text>
-<rect x="443" y="49" width="11" height="11" fill="#c9c5c0"/>
-<text x="459.2" y="58.0" font-size="10" fill="#52514e" text-anchor="start">autre projet ou proposition</text>
-<line x1="150.0" y1="70" x2="150.0" y2="204" stroke="#e1e0d9"/>
-<text x="150.0" y="218.0" font-size="9" fill="#898781" text-anchor="middle">0</text>
-<line x1="246.0" y1="70" x2="246.0" y2="204" stroke="#e1e0d9"/>
-<text x="246.0" y="218.0" font-size="9" fill="#898781" text-anchor="middle">5</text>
-<line x1="342.0" y1="70" x2="342.0" y2="204" stroke="#e1e0d9"/>
-<text x="342.0" y="218.0" font-size="9" fill="#898781" text-anchor="middle">10</text>
-<line x1="438.0" y1="70" x2="438.0" y2="204" stroke="#e1e0d9"/>
-<text x="438.0" y="218.0" font-size="9" fill="#898781" text-anchor="middle">15</text>
-<line x1="534.0" y1="70" x2="534.0" y2="204" stroke="#e1e0d9"/>
-<text x="534.0" y="218.0" font-size="9" fill="#898781" text-anchor="middle">20</text>
-<line x1="630.0" y1="70" x2="630.0" y2="204" stroke="#e1e0d9"/>
-<text x="630.0" y="218.0" font-size="9" fill="#898781" text-anchor="middle">25</text>
-<text x="0.0" y="88.0" font-size="10" fill="#0A0A0E" text-anchor="start">XIVe (2012-2017)</text>
-<rect x="150.0" y="74" width="115.2" height="20" fill="#c9c5c0"/>
-<text x="269.2" y="88.0" font-size="10" fill="#0A0A0E" text-anchor="start" font-weight="600">6</text>
-<text x="0.0" y="122.0" font-size="10" fill="#0A0A0E" text-anchor="start">XVe (2017-2022)</text>
-<rect x="150.0" y="108" width="19.2" height="20" fill="#c9c5c0"/>
-<text x="173.2" y="122.0" font-size="10" fill="#0A0A0E" text-anchor="start" font-weight="600">1</text>
-<text x="0.0" y="156.0" font-size="10" fill="#0A0A0E" text-anchor="start">XVIe (2022-2024)</text>
-<rect x="150.0" y="142" width="403.2" height="20" fill="#184f95"/>
-<rect x="553.2" y="142" width="38.4" height="20" fill="#c9c5c0"/>
-<text x="595.6" y="156.0" font-size="10" fill="#0A0A0E" text-anchor="start" font-weight="600">23</text>
-<text x="0.0" y="190.0" font-size="10" fill="#0A0A0E" text-anchor="start">XVIIe (depuis 2024) *</text>
-<rect x="150.0" y="176" width="153.6" height="20" fill="#184f95"/>
-<text x="307.6" y="190.0" font-size="10" fill="#0A0A0E" text-anchor="start" font-weight="600">8</text>
-<text x="0.0" y="232.0" font-size="9" fill="#52514e" text-anchor="start">* en cours au 06/10/2026</text>
-<line x1="0" y1="252" x2="720" y2="252" stroke="#e1e0d9"/>
-<text x="0" y="265" font-size="9" fill="#52514e">Assemblée nationale : dossiers législatifs, bulletins statistiques, fiche n° 64 (engagements de responsabilité)</text>
-<text x="0" y="277" font-size="9" fill="#52514e">Catégories de l&#x27;art. 49, al. 3 : la loi de programmation des finances publiques est un « autre projet ». XVIIe en cours au 06/10/2026.</text>
-<text x="0" y="289" font-size="9" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/qui-peut-faire-adopter-une-loi/</text>
+<rect x="401" y="49" width="11" height="11" fill="#c9c5c0"/>
+<text x="417.6" y="58.0" font-size="10" fill="#52514e" text-anchor="start">autre projet ou proposition</text>
+<line x1="150.0" y1="70" x2="150.0" y2="296" stroke="#e1e0d9"/>
+<text x="150.0" y="308.0" font-size="9" fill="#898781" text-anchor="middle">0</text>
+<line x1="256.0" y1="70" x2="256.0" y2="296" stroke="#e1e0d9"/>
+<text x="256.0" y="308.0" font-size="9" fill="#898781" text-anchor="middle">5</text>
+<line x1="362.0" y1="70" x2="362.0" y2="296" stroke="#e1e0d9"/>
+<text x="362.0" y="308.0" font-size="9" fill="#898781" text-anchor="middle">10</text>
+<line x1="468.0" y1="70" x2="468.0" y2="296" stroke="#e1e0d9"/>
+<text x="468.0" y="308.0" font-size="9" fill="#898781" text-anchor="middle">15</text>
+<line x1="574.0" y1="70" x2="574.0" y2="296" stroke="#e1e0d9"/>
+<text x="574.0" y="308.0" font-size="9" fill="#898781" text-anchor="middle">20</text>
+<line x1="680.0" y1="70" x2="680.0" y2="296" stroke="#e1e0d9"/>
+<text x="680.0" y="308.0" font-size="9" fill="#898781" text-anchor="middle">25</text>
+<text x="0.0" y="87.0" font-size="10" fill="#0A0A0E" text-anchor="start">XIVe (2012-2017)</text>
+<rect x="150.0" y="74" width="127.2" height="18" fill="#c9c5c0"/>
+<text x="281.2" y="87.0" font-size="10" fill="#0A0A0E" text-anchor="start" font-weight="600">6</text>
+<text x="150.0" y="105.0" font-size="9.5" fill="#52514e" text-anchor="start">6 engagements sur 2 textes · aucun sur un projet de loi de finances ou de financement de la sécurité</text>
+<text x="150.0" y="117.0" font-size="9.5" fill="#52514e" text-anchor="start">sociale</text>
+<text x="0.0" y="145.0" font-size="10" fill="#0A0A0E" text-anchor="start">XVe (2017-2022)</text>
+<rect x="150.0" y="132" width="21.2" height="18" fill="#c9c5c0"/>
+<text x="175.2" y="145.0" font-size="10" fill="#0A0A0E" text-anchor="start" font-weight="600">1</text>
+<text x="150.0" y="163.0" font-size="9.5" fill="#52514e" text-anchor="start">1 engagement sur 1 texte · aucun sur un projet de loi de finances ou de financement de la sécurité</text>
+<text x="150.0" y="175.0" font-size="9.5" fill="#52514e" text-anchor="start">sociale</text>
+<text x="0.0" y="203.0" font-size="10" fill="#0A0A0E" text-anchor="start">XVIe (2022-2024)</text>
+<rect x="150.0" y="190" width="445.2" height="18" fill="#184f95"/>
+<rect x="595.2" y="190" width="42.4" height="18" fill="#c9c5c0"/>
+<text x="641.6" y="203.0" font-size="10" fill="#0A0A0E" text-anchor="start" font-weight="600">23</text>
+<text x="150.0" y="221.0" font-size="9.5" fill="#52514e" text-anchor="start">23 engagements sur 6 textes · dont 21 sur un projet de loi de finances ou de financement de la sécurité</text>
+<text x="150.0" y="233.0" font-size="9.5" fill="#52514e" text-anchor="start">sociale</text>
+<text x="0.0" y="261.0" font-size="10" fill="#0A0A0E" text-anchor="start">XVIIe (depuis 2024) *</text>
+<rect x="150.0" y="248" width="169.6" height="18" fill="#184f95"/>
+<text x="323.6" y="261.0" font-size="10" fill="#0A0A0E" text-anchor="start" font-weight="600">8</text>
+<text x="150.0" y="279.0" font-size="9.5" fill="#52514e" text-anchor="start">8 engagements sur 3 textes · tous sur un projet de loi de finances ou de financement de la sécurité</text>
+<text x="150.0" y="291.0" font-size="9.5" fill="#52514e" text-anchor="start">sociale · 1 motion de censure adoptée</text>
+<text x="0.0" y="322.0" font-size="9" fill="#52514e" text-anchor="start">* en cours au 06/10/2026</text>
+<line x1="0" y1="332.0" x2="720" y2="332.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="347.0" font-size="11" fill="#52514e">Assemblée nationale : dossiers législatifs, bulletins statistiques, fiche n° 64 (engagements de responsabilité)</text>
+<text class="pied-note" x="0" y="361.0" font-size="11" fill="#52514e">Catégories de l'art. 49, al. 3 : la loi de programmation des finances publiques est un « autre projet ». Chaque</text>
+<text class="pied-note" x="0" y="375.0" font-size="11" fill="#52514e">engagement est compté une fois ; un même projet peut en recevoir plusieurs, y compris au cours d'une même lecture.</text>
+<text class="pied-note" x="0" y="389.0" font-size="11" fill="#52514e">XVIIe en cours au 06/10/2026.</text>
+<text class="pied-licence" x="0" y="403.0" font-size="11" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/qui-peut-faire-adopter-une-loi/</text>
 </svg>
