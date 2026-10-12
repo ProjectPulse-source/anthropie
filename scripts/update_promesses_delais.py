@@ -348,8 +348,9 @@ def calculer(S: dict) -> tuple[dict, list[str]]:
         raise Arret("T1 : la premiere quatrieme annee (%d) ne tombe pas %d + %d ans apres la rentree d'application"
                     % (debut.year, an_reforme, mg - 1))
     if S["aujourdhui"] >= debut:
-        raise Arret("T3 : le %s est passe : constater le debut de la phase de consolidation, puis reecrire la page au "
-                    "passe (jeton debut_conso) et retirer T3" % debut)
+        raise Arret("T3 : le %s est passe : la date ecoulee ne prouve rien ; la mise a jour exige une preuve du demarrage "
+                    "effectif de la phase de consolidation (source officielle qui le constate), puis la page reecrite au "
+                    "passe (jeton debut_conso) et T3 retire" % debut)
     fin = debut.replace(year=debut.year + 1) - dt.timedelta(days=1)
     quatre = loi.replace(year=loi.year + 4)
     limite = loi.replace(year=loi.year + mandat)
@@ -625,7 +626,7 @@ T = {
     "fr": {"src1": "Arrêté du 8 avril 2013, art. 1 ; code de l'éducation, art. L632-2 ; loi n° 2022-1616, art. 37 ; Constitution, art. 6 (Légifrance)",
            "note1": "Durées minimales, sans redoublement, interruption ni passerelle, pour les étudiants entrés en internat à partir de la rentrée 2023. Comparaison d'échelle seulement : ni l'effet d'une politique, ni la date de ses premiers effets ; les internes soignent avant la fin du cursus.",
            "src2": "DREES, Dossier n° 76 (2021), graphique 8, source ONDPS (1972-2020) ; ONDPS, bilan 2021-2025 (admis)",
-           "note2": "Admis à l'issue d'une première année d'études : en deuxième année du premier cycle, en troisième pour certaines passerelles. Jusqu'en 2020, places pourvues du numerus clausus, élargi aux passerelles et aux droits au remords à partir de 2010-2011 ; depuis 2021, admis. Chaque barre à l'année publiée par la source, sans décalage.",
+           "note2": "Admissions en deuxième année du premier cycle, ou directement en troisième pour certaines passerelles. Jusqu'en 2020, places pourvues du numerus clausus, élargi aux passerelles et aux droits au remords à partir de 2010-2011 ; depuis 2021, admis. Chaque barre à l'année publiée par la source, sans décalage.",
            "t1": "Former un médecin généraliste, et la durée d'un mandat présidentiel",
            "s1": "en années, durées minimales écrites dans les textes en vigueur",
            "d1": "Deux barres de même échelle. En haut, le cursus de médecine générale : {a} ans de premier cycle, {b} ans de "
@@ -639,8 +640,8 @@ T = {
            "cycle1_m": "1er cycle : {} ans", "cycle2_m": "2e cycle : {} ans", "internat_m": "Internat de médecine générale",
            "dont": "{} ans, dont la dernière en autonomie supervisée", "total": "Total : {} ans depuis la 1re année",
            "t2": "Étudiants admis dans le cursus de médecine, 1972-2025",
-           "s2": "admis en 2e année du premier cycle ; places pourvues jusqu'en 2020 (DREES, ONDPS), admis depuis 2021 (ONDPS)",
-           "s2m": "admis en 2e année du premier cycle",
+           "s2": "admissions en deuxième année du premier cycle, ou directement en troisième année par passerelle",
+           "s2m": "admissions en deuxième année du premier cycle, ou directement en troisième année par passerelle",
            "d2": "Barres annuelles des étudiants admis en deuxième année du premier cycle : {places_1972} places pourvues en "
                  "1972, minimum de {places_min} en {an_min}, {places_2020} en 2020 ; puis de {min_admis} à {admis_2025} admis par "
                  "an de 2021 à 2025.",
@@ -648,7 +649,7 @@ T = {
     "en": {"src1": "Order of 8 April 2013, art. 1; Education Code, art. L632-2; Law no. 2022-1616, art. 37; Constitution, art. 6",
            "note1": "Minimum durations, without repeating a year, interruption or alternative-entry route, for students who entered residency from the 2023 academic year. Comparison of scale only: neither the effect of a policy nor the date of its first effects; residents provide care before the end.",
            "src2": "DREES, Dossier no. 76 (2021), chart 8, source ONDPS (1972-2020); ONDPS, 2021-2025 report (admissions)",
-           "note2": "Admitted after a first year of study: to the second year of the first cycle, to the third for some alternative-entry routes. Until 2020, places filled under the numerus clausus, widened to alternative-entry routes and reorientation entries from 2010-2011; since 2021, students admitted. Each bar at the year published by the source, no shift.",
+           "note2": "Admissions to the second year of the first cycle, or directly to the third for some alternative-entry routes. Until 2020, places filled under the numerus clausus, widened to alternative-entry routes and reorientation entries from 2010-2011; since 2021, students admitted. Each bar at the year published by the source, no shift.",
            "t1": "Training a general practitioner in France, and the length of a presidential term",
            "s1": "in years, minimum durations written in the texts in force",
            "d1": "Two bars on the same scale. Above, the general practice curriculum: {a} years of first cycle, {b} years of second "
@@ -662,8 +663,8 @@ T = {
            "cycle1_m": "1st cycle: {} years", "cycle2_m": "2nd cycle: {} years", "internat_m": "General practice residency",
            "dont": "{} years, the last under supervised autonomy", "total": "Total: {} years from the 1st year",
            "t2": "Students admitted into the medical curriculum in France, 1972-2025",
-           "s2": "admitted to the 2nd year of the first cycle; places filled until 2020 (DREES, ONDPS), admissions since 2021 (ONDPS)",
-           "s2m": "admitted to the 2nd year of the first cycle",
+           "s2": "admissions to the second year of the first cycle, or directly to the third year through an alternative-entry route",
+           "s2m": "admissions to the second year of the first cycle, or directly to the third year through an alternative-entry route",
            "d2": "Annual bars of students admitted to the second year of the first cycle: {places_1972} places filled in 1972, a "
                  "minimum of {places_min} in {an_min}, {places_2020} in 2020; then from {min_admis} to {admis_2025} admissions a "
                  "year from 2021 to 2025.",
@@ -732,9 +733,11 @@ def fig_admissions(r: dict, A: dict) -> str:
         e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="%s"/>' % (X(a) + 0.6, Y(v), bw - 1.2, y1 - Y(v), col))
         if a % 10 == 0 or a == 1972:
             e.append(txt(X(a) + bw / 2, y1 + 14, str(a), 10, MUTED, "middle"))
-    for a, lab in ((2010, L["r1"]), (2021, L["r2"])):
+    # deux rangs : en anglais, les deux étiquettes se touchaient sur un seul (contre-expertise du rendu, 12/10/2026) ;
+    # celle de 2010-2011 descend dans la zone vide au-dessus des barres d'avant 2010 (toutes < 9 000)
+    for a, lab, ylab in ((2010, L["r1"], y0 + 10), (2021, L["r2"], y0 - 8)):
         e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-dasharray="3 3"/>' % (X(a), y0 - 4, X(a), y1, INK2))
-        e.append(txt(X(a) - 4, y0 - 8, lab, 9, INK2, "end"))
+        e.append(txt(X(a) - 4, ylab, lab, 9, INK2, "end"))
     voisins = max(d[a] for a in range(r["amin"] - 2, r["amin"] + 3))
     ya = Y(voisins) - 22
     e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s"/>' % (X(r["amin"]) + bw / 2, ya + 4, X(r["amin"]) + bw / 2, Y(d[r["amin"]]) - 2, INK2))
@@ -852,7 +855,11 @@ def fig_admissions_m(r, A, svg_d):
     e.append(txt(X(1972), Y(d[1972]) - 8, nb(d[1972]), 15, INK, "start", "600", "val"))
     haut = max(d[a] for a in range(r["amin"] - 4, r["amin"] + 5))   # au-dessus des barres voisines
     e.append(txt(X(r["amin"]) + bw / 2, Y(haut) - 8, nb(d[r["amin"]]), 15, INK, "middle", "600", "val"))
-    e.append(txt(X(2025) + bw, Y(o[2025]) - 8, nb(o[2025]), 15, INK, "end", "600", "val"))
+    # « 2025 : 11 133 », relié à la dernière barre par un trait (sinon lu comme la valeur de la première barre claire)
+    xb = X(2025) + bw / 2
+    e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s"/>' % (xb, Y(o[2025]) - 12, xb, Y(o[2025]) - 1, INK2))
+    lab25 = (L["annot"] % (2025, nb(o[2025]))).replace(" :", " :")
+    e.append(txt(X(2025) + bw, Y(o[2025]) - 15, lab25, 15, INK, "end", "600", "val"))
     y = BAS + 26
     for ligne in coupe(L["annot"] % (r["amin"], A["places_min"]) + (" (minimum)" if LANG == "fr" else " (lowest)"), 38) + \
             ["- - " + L["r1"], "- - " + L["r2"]]:
@@ -1053,9 +1060,9 @@ def _main() -> int:
                                      "pour les étudiants qui commencent le troisième cycle (internat) à partir de la rentrée "
                                      "%d ; comptée depuis la première année d'études, ou depuis l'admission en deuxième "
                                      "année du premier cycle (une année de moins)" % r["an_reforme"],
-                     "niveau_d_admission": "places pourvues et admis comptent des étudiants admis à l'issue d'une première "
-                                           "année d'études, en deuxième année du premier cycle (en troisième année pour "
-                                           "certaines passerelles) ; la première année n'est pas comptée",
+                     "niveau_d_admission": "places pourvues et admis comptent des admissions en deuxième année du premier "
+                                           "cycle, ou directement en troisième année pour certaines passerelles ; la "
+                                           "première année n'est pas comptée",
                      "places_pourvues": "jusqu'en 2009, numerus clausus principal ; à partir de 2011 (2010 partiellement), "
                                         "numerus clausus principal et complémentaire, passerelles et droits au remords "
                                         "(DREES, note du graphique 8) ; places pourvues et non places ouvertes",

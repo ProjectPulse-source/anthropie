@@ -47,7 +47,7 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
 
 {{< reutiliser-ancre >}}
 
-On décide aujourd'hui de former davantage de médecins. Quand les patients en verront-ils les effets&nbsp;? La médecine générale permet d'y répondre avec précision, parce que chaque étape y est écrite. On y lit trois horloges. Celle des textes fixe la durée du cursus&nbsp;; celle des capacités, combien d'étudiants le suivent&nbsp;; celle de l'effet dit quand les patients voient la différence, et aucune série ne la mesure ici.
+On décide aujourd'hui de former davantage de médecins. Quand les patients en verront-ils les effets&nbsp;? La médecine générale permet de distinguer précisément ce que les textes permettent de dater de ce que les données ne permettent pas encore de mesurer. On y lit trois horloges. Celle des textes fixe la durée du cursus&nbsp;; celle des capacités, combien d'étudiants le suivent&nbsp;; celle de l'effet dit quand les patients voient la différence, et aucune série ne la mesure ici.
 
 ## Combien de temps faut-il pour former un médecin généraliste&nbsp;? {#duree-du-cursus}
 
@@ -63,7 +63,7 @@ Le cursus compte trois cycles&nbsp;: {{< del-val "cycle1" >}} semestres de premi
 
 </div>
 
-**Cette durée est celle d'un diplôme, pas le délai d'un effet.** Depuis l'admission en deuxième année, d'où partent les séries d'admissions de cette page, il reste au moins {{< del-val "duree_adm" >}} ans. Pour l'Observatoire national de la démographie des professions de santé (ONDPS), les objectifs fixés en 2021 visent de même «&nbsp;{{< del-val "cit_ondps_9_11" >}}&nbsp;». Et les internes soignent bien avant la fin du cursus.
+**Cette durée est celle d'un diplôme, pas le délai d'un effet.** Pour la voie ordinaire, depuis l'admission en deuxième année du premier cycle, il reste au moins {{< del-val "duree_adm" >}} ans de formation. Certaines passerelles permettent une admission directe en troisième année&nbsp;; les séries agrégées présentées ici ne permettent pas d'en isoler l'effectif. Pour l'Observatoire national de la démographie des professions de santé (ONDPS), les objectifs fixés en 2021 visent de même «&nbsp;{{< del-val "cit_ondps_9_11" >}}&nbsp;». Et les internes soignent bien avant la fin du cursus.
 
 <details class="repli"><summary>Les textes qui fixent ces durées, cités mot pour mot</summary>
 
@@ -100,13 +100,13 @@ Le numerus clausus figurait dans les versions de L631-1 en vigueur de 2004 à 20
 
 </details>
 
-Ce que ce partage a produit, l'ONDPS le mesure. Pour 2021-2025, l'objectif national fixé par l'État était de {{< del-val "onp" >}} médecins à former (arrêté du 13&nbsp;septembre 2021, selon l'ONDPS). Les universités ont admis {{< del-val "admis_2021_2025" >}} étudiants sur ces cinq ans, en deuxième année du premier cycle ou, par une passerelle, en troisième. En 2025, elles en ont admis {{< del-val "admis_2025" >}} pour {{< del-val "capacites_2025" >}} places de capacité d'accueil. L'ONDPS en conclut&nbsp;: «&nbsp;{{< del-val "cit_ondps_sat" >}}&nbsp;» Et&nbsp;: «&nbsp;{{< del-val "cit_ondps_2026" >}}&nbsp;» Les objectifs de 2026-2030 sont en préparation&nbsp;: le 3&nbsp;juillet 2025, les ministres ont lancé les «&nbsp;{{< del-val "cit_ondps_2630" >}}&nbsp;» (ONDPS).
+Ce que ce partage a produit, l'ONDPS le mesure. Pour 2021-2025, l'objectif national fixé par l'État était de {{< del-val "onp" >}} médecins à former (arrêté du 13&nbsp;septembre 2021, selon l'ONDPS). Les universités ont admis {{< del-val "admis_2021_2025" >}} étudiants sur ces cinq ans, en deuxième année du premier cycle ou, par une passerelle, en troisième. En 2025, elles en ont admis {{< del-val "admis_2025" >}} pour {{< del-val "capacites_2025" >}} places de capacité d'accueil. L'ONDPS en conclut&nbsp;: «&nbsp;{{< del-val "cit_ondps_sat" >}}&nbsp;» Il rapporte aussi une prévision des UFR, non un constat de la rentrée&nbsp;: «&nbsp;{{< del-val "cit_ondps_2026" >}}&nbsp;» Les objectifs de 2026-2030 sont en préparation&nbsp;: le 3&nbsp;juillet 2025, les ministres ont lancé les «&nbsp;{{< del-val "cit_ondps_2630" >}}&nbsp;» (ONDPS).
 
-**Une promesse électorale porte donc d'abord sur l'objectif national**, que fixent les ministres par arrêté. Les places, elles, se votent université par université, et les admissions les remplissent déjà.
+**Relever l'objectif national, que fixent les ministres par arrêté, est l'un des leviers de l'État.** Mais augmenter effectivement les admissions suppose aussi des capacités universitaires adaptées, éventuellement des moyens supplémentaires et, selon les décisions envisagées, une évolution du cadre juridique. Les places, elles, se votent université par université&nbsp;; à l'échelle nationale, les admissions les remplissent déjà.
 
-**L'État peut-il imposer davantage de places&nbsp;?** Il fixe l'objectif, pas les places. Depuis le {{< del-val "d631_2025" >}}, si l'agence régionale de santé et les conseils territoriaux de santé jugent que les capacités d'une université ne correspondent pas aux objectifs qu'elle a elle-même arrêtés, «&nbsp;{{< del-val "cit_631_hausse" >}}&nbsp;»&nbsp;: la loi écrit «&nbsp;peut&nbsp;», non «&nbsp;doit&nbsp;». Elle renvoie à un décret les modalités de cette hausse, «&nbsp;{{< del-val "cit_631_moyens" >}}&nbsp;».
+**L'État peut-il imposer davantage de places&nbsp;?** Dans le cadre juridique actuellement en vigueur, il fixe l'objectif, pas les places. Depuis le {{< del-val "d631_2025" >}}, si l'agence régionale de santé et les conseils territoriaux de santé jugent que les capacités d'une université ne correspondent pas aux objectifs qu'elle a elle-même arrêtés, «&nbsp;{{< del-val "cit_631_hausse" >}}&nbsp;»&nbsp;: la loi écrit «&nbsp;peut&nbsp;», non «&nbsp;doit&nbsp;». Elle renvoie à un décret les modalités de cette hausse, «&nbsp;{{< del-val "cit_631_moyens" >}}&nbsp;». Le seul verbe «&nbsp;peut&nbsp;» n'établit pas l'absence de toute obligation&nbsp;: une obligation pourrait résulter d'autres textes ou de ces modalités d'application.
 
-**D'où vient la saturation&nbsp;?** L'ONDPS ne le dit pas, et cette page ne sait pas si elle tient aux terrains de stage, à l'encadrement ou au budget des universités.
+**D'où vient la saturation&nbsp;?** L'ONDPS ne le dit pas, et cette page ne sait pas si elle tient aux terrains de stage, à l'encadrement ou au budget des universités. La saturation nationale ne renseigne ni sur les marges de chaque université ni sur les moyens qui permettraient d'accroître ses capacités.
 
 ## Combien d'étudiants sont admis dans le cursus de médecine&nbsp;? {#admissions}
 
@@ -147,7 +147,7 @@ La quatrième année de médecine générale permet de le vérifier en dates exa
 - **{{< del-val "debut_conso" >}}**&nbsp;: date prévue par l'instruction du 21&nbsp;mai 2026 pour l'entrée de ces internes dans leur quatrième année, comme docteurs juniors, «&nbsp;{{< del-val "cit_instr_amb" >}}&nbsp;».
 - **À {{< del-val "fin_min" >}} au plus tôt**&nbsp;: fin de cette année, puisque «&nbsp;{{< del-val "cit_instr_diplome" >}}&nbsp;»
 
-**Le premier effet prévu de la loi arrive {{< del-val "moins_quatre" >}} après elle&nbsp;; son résultat final, des généralistes formés en {{< del-val "mg" >}} ans d'internat, {{< del-val "pres_cinq" >}} après, au plus tôt.** Entre les deux, si le calendrier prévu est tenu, une promotion d'internes soigne en cabinet, en priorité là où l'offre de soins manque. Une décision peut donc produire des effets pendant un mandat sans y atteindre son résultat final, alors que cette réforme ne rallonge le cursus que d'une année. Au 12&nbsp;octobre 2026, la première de ces années n'a pas commencé&nbsp;: le calendrier est celui d'un texte d'application, non un fait constaté.
+**La réforme créée par la loi du {{< del-val "loi_date" >}} doit connaître une première application à la cohorte concernée à la date prévue du {{< del-val "debut_conso" >}}, avec son entrée dans une quatrième année d'internat sous le statut de docteur junior.** Le diplôme de cette cohorte pourra être obtenu au plus tôt à {{< del-val "fin_min" >}}. Ce calendrier établit quand la réforme s'applique et quand le nouveau cursus peut s'achever. Il ne démontre ni un supplément de consultations ni une amélioration de l'accès aux soins. Il faut distinguer cette réforme de la décision d'augmenter les admissions, dont les effets sur le nombre de médecins diplômés suivent une autre chronologie. Le délai d'une réforme et son effet sur les délais ne sont pas non plus la même chose&nbsp;: celle-ci s'applique {{< del-val "moins_quatre" >}} après la loi, et elle allonge d'un an le temps nécessaire pour former un généraliste. Au 12&nbsp;octobre 2026, la première de ces années n'a pas commencé&nbsp;: le calendrier est celui d'un texte d'application, non un fait constaté.
 
 ## Quand les patients verront-ils la différence&nbsp;? {#limites}
 

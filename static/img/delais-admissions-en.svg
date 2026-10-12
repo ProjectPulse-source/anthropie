@@ -2,7 +2,7 @@
 <title id="da-t">Students admitted into the medical curriculum in France, 1972-2025</title><desc id="da-d">Annual bars of students admitted to the second year of the first cycle: 8,588 places filled in 1972, a minimum of 3,500 in 1993, 9,361 in 2020; then from 10,806 to 11,133 admissions a year from 2021 to 2025.</desc>
 <rect width="720" height="425" fill="#ffffff"/>
 <text x="0.0" y="18.0" font-size="13" fill="#0A0A0E" text-anchor="start" font-weight="600">Students admitted into the medical curriculum in France, 1972-2025</text>
-<text x="0.0" y="36.0" font-size="12" fill="#52514e" text-anchor="start">admitted to the 2nd year of the first cycle; places filled until 2020 (DREES, ONDPS), admissions since 2021 (ONDPS)</text>
+<text x="0.0" y="36.0" font-size="12" fill="#52514e" text-anchor="start">admissions to the second year of the first cycle, or directly to the third year through an alternative-entry route</text>
 <line x1="50" y1="280.0" x2="712" y2="280.0" stroke="#e1e0d9"/>
 <text x="44.0" y="284.0" font-size="10" fill="#898781" text-anchor="end">0</text>
 <line x1="50" y1="225.0" x2="712" y2="225.0" stroke="#e1e0d9"/>
@@ -74,16 +74,16 @@
 <rect x="688.1" y="79.3" width="11.1" height="200.7" fill="#7fa3cf"/>
 <rect x="700.3" y="75.9" width="11.1" height="204.1" fill="#7fa3cf"/>
 <line x1="515.9" y1="56" x2="515.9" y2="280" stroke="#52514e" stroke-dasharray="3 3"/>
-<text x="511.9" y="52.0" font-size="9" fill="#52514e" text-anchor="end">2010-2011: alternative routes included</text>
+<text x="511.9" y="70.0" font-size="9" fill="#52514e" text-anchor="end">2010-2011: alternative routes included</text>
 <line x1="650.7" y1="56" x2="650.7" y2="280" stroke="#52514e" stroke-dasharray="3 3"/>
 <text x="646.7" y="52.0" font-size="9" fill="#52514e" text-anchor="end">2021: end of the numerus clausus</text>
 <line x1="313.6" y1="188.7" x2="313.6" y2="213.8" stroke="#52514e"/>
 <text x="313.6" y="184.7" font-size="10" fill="#0A0A0E" text-anchor="middle" font-weight="600">1993: 3,500</text>
 <line x1="0" y1="332.0" x2="720" y2="332.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="347.0" font-size="11" fill="#52514e">DREES, Dossier no. 76 (2021), chart 8, source ONDPS (1972-2020); ONDPS, 2021-2025 report (admissions)</text>
-<text class="pied-note" x="0" y="361.0" font-size="11" fill="#52514e">Admitted after a first year of study: to the second year of the first cycle, to the third for some alternative-entry</text>
-<text class="pied-note" x="0" y="375.0" font-size="11" fill="#52514e">routes. Until 2020, places filled under the numerus clausus, widened to alternative-entry routes and reorientation</text>
-<text class="pied-note" x="0" y="389.0" font-size="11" fill="#52514e">entries from 2010-2011; since 2021, students admitted. Each bar at the year published by the source, no shift.</text>
+<text class="pied-note" x="0" y="361.0" font-size="11" fill="#52514e">Admissions to the second year of the first cycle, or directly to the third for some alternative-entry routes. Until</text>
+<text class="pied-note" x="0" y="375.0" font-size="11" fill="#52514e">2020, places filled under the numerus clausus, widened to alternative-entry routes and reorientation entries from</text>
+<text class="pied-note" x="0" y="389.0" font-size="11" fill="#52514e">2010-2011; since 2021, students admitted. Each bar at the year published by the source, no shift.</text>
 <text class="pied-licence" x="0" y="403.0" font-size="11" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 ·</text>
 <text class="pied-licence" x="0" y="417.0" font-size="11" fill="#898781">stephane-lalut.com/en/can-a-campaign-promise-produce-results-within-five-years/</text>
 </svg>

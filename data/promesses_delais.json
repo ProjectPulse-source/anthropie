@@ -64,7 +64,7 @@
   },
   "definitions": {
    "duree_cursus": "somme des durées minimales écrites (sans redoublement, interruption ni passerelle), pour les étudiants qui commencent le troisième cycle (internat) à partir de la rentrée 2023 ; comptée depuis la première année d'études, ou depuis l'admission en deuxième année du premier cycle (une année de moins)",
-   "niveau_d_admission": "places pourvues et admis comptent des étudiants admis à l'issue d'une première année d'études, en deuxième année du premier cycle (en troisième année pour certaines passerelles) ; la première année n'est pas comptée",
+   "niveau_d_admission": "places pourvues et admis comptent des admissions en deuxième année du premier cycle, ou directement en troisième année pour certaines passerelles ; la première année n'est pas comptée",
    "places_pourvues": "jusqu'en 2009, numerus clausus principal ; à partir de 2011 (2010 partiellement), numerus clausus principal et complémentaire, passerelles et droits au remords (DREES, note du graphique 8) ; places pourvues et non places ouvertes",
    "admis_2021_2025": "étudiants admis en deuxième année du premier cycle (ou en troisième par une passerelle), relevés par l'ONDPS auprès des universités",
    "capacites_accueil": "places en deuxième et troisième années du premier cycle votées chaque année par chaque université (code de l'éducation, art. L631-1) ; ce ne sont pas des admis",
