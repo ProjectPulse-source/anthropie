@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 953" role="img" font-variant-numeric="tabular-nums" aria-labelledby="alm-t alm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="alm-t">Les lois classées d'application directe, selon deux sources</title><desc id="alm-d">Barres horizontales, une par session : lois d'application directe pour les deux sources, lois classées différemment par le baromètre et par le Sénat, lois qu'aucune des deux ne classe d'application directe. Par session : 2017-2018 : 41 lois, 11 directes pour les deux sources, 3 classées différemment; 2018-2019 : 49 lois, 22 directes pour les deux sources, 3 classées différemment; 2019-2020 : 43 lois, 15 directes pour les deux sources, 1 classées différemment; 2020-2021 : 51 lois, 17 directes pour les deux sources, 3 classées différemment; 2021-2022 : 64 lois, 15 directes pour les deux sources, 9 classées différemment; 2022-2023 : 44 lois, 10 directes pour les deux sources, 1 classées différemment; 2023-2024 : 51 lois, 21 directes pour les deux sources, 0 classées différemment; 2024-2025 : 56 lois, 19 directes pour les deux sources, 6 classées différemment. En 2018-2019, le baromètre compte 25 lois d'application directe sur 49. Les valeurs sont dans le tableau sous la figure.</desc>
+<rect width="300" height="953" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Les lois classées</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">d'application directe, selon</text>
+<text x="0" y="64" font-size="17" font-weight="600" fill="#0A0A0E">deux sources</text>
+<text x="0" y="104" font-size="13.5" fill="#52514e">nombre de lois promulguées, hors</text>
+<text x="0" y="122" font-size="13.5" fill="#52514e">conventions ; trait noir : la moitié</text>
+<text x="0" y="140" font-size="13.5" fill="#52514e">des lois de la session</text>
+<rect x="0" y="154" width="12" height="12" fill="#184f95"/>
+<text x="17" y="165" font-size="13.5" fill="#52514e">application directe (les deux sources)</text>
+<rect x="0" y="173" width="12" height="12" fill="#8a8781"/>
+<text x="17" y="184" font-size="13.5" fill="#52514e">classement divergent</text>
+<rect x="0" y="192" width="12" height="12" fill="#c9c5c0"/>
+<text x="17" y="203" font-size="13.5" fill="#52514e">non directes (les deux sources)</text>
+<text x="0" y="231" font-size="13.5" fill="#0A0A0E">2017-2018</text>
+<rect x="0.0" y="236" width="47.1" height="14" fill="#184f95"/>
+<rect x="47.1" y="236" width="12.9" height="14" fill="#8a8781"/>
+<rect x="60.0" y="236" width="115.7" height="14" fill="#c9c5c0"/>
+<text x="0" y="266" font-size="13.5" font-weight="600" fill="#52514e">11 directes, 3 divergentes, sur 41</text>
+<text x="0" y="290" font-size="13.5" fill="#0A0A0E">2018-2019</text>
+<rect x="0.0" y="295" width="94.3" height="14" fill="#184f95"/>
+<rect x="94.3" y="295" width="12.9" height="14" fill="#8a8781"/>
+<rect x="107.1" y="295" width="102.9" height="14" fill="#c9c5c0"/>
+<text x="0" y="325" font-size="13.5" font-weight="600" fill="#52514e">22 directes, 3 divergentes, sur 49</text>
+<text x="0" y="349" font-size="13.5" fill="#0A0A0E">2019-2020</text>
+<rect x="0.0" y="354" width="64.3" height="14" fill="#184f95"/>
+<rect x="64.3" y="354" width="4.3" height="14" fill="#8a8781"/>
+<rect x="68.6" y="354" width="115.7" height="14" fill="#c9c5c0"/>
+<text x="0" y="384" font-size="13.5" font-weight="600" fill="#52514e">15 directes, 1 divergentes, sur 43</text>
+<text x="0" y="408" font-size="13.5" fill="#0A0A0E">2020-2021</text>
+<rect x="0.0" y="413" width="72.9" height="14" fill="#184f95"/>
+<rect x="72.9" y="413" width="12.9" height="14" fill="#8a8781"/>
+<rect x="85.7" y="413" width="132.9" height="14" fill="#c9c5c0"/>
+<text x="0" y="443" font-size="13.5" font-weight="600" fill="#52514e">17 directes, 3 divergentes, sur 51</text>
+<text x="0" y="467" font-size="13.5" fill="#0A0A0E">2021-2022</text>
+<rect x="0.0" y="472" width="64.3" height="14" fill="#184f95"/>
+<rect x="64.3" y="472" width="38.6" height="14" fill="#8a8781"/>
+<rect x="102.9" y="472" width="171.4" height="14" fill="#c9c5c0"/>
+<text x="0" y="502" font-size="13.5" font-weight="600" fill="#52514e">15 directes, 9 divergentes, sur 64</text>
+<text x="0" y="526" font-size="13.5" fill="#0A0A0E">2022-2023</text>
+<rect x="0.0" y="531" width="42.9" height="14" fill="#184f95"/>
+<rect x="42.9" y="531" width="4.3" height="14" fill="#8a8781"/>
+<rect x="47.1" y="531" width="141.4" height="14" fill="#c9c5c0"/>
+<text x="0" y="561" font-size="13.5" font-weight="600" fill="#52514e">10 directes, 1 divergentes, sur 44</text>
+<text x="0" y="585" font-size="13.5" fill="#0A0A0E">2023-2024</text>
+<rect x="0.0" y="590" width="90.0" height="14" fill="#184f95"/>
+<rect x="90.0" y="590" width="128.6" height="14" fill="#c9c5c0"/>
+<text x="0" y="620" font-size="13.5" font-weight="600" fill="#52514e">21 directes, 0 divergentes, sur 51</text>
+<text x="0" y="644" font-size="13.5" fill="#0A0A0E">2024-2025</text>
+<rect x="0.0" y="649" width="81.4" height="14" fill="#184f95"/>
+<rect x="81.4" y="649" width="25.7" height="14" fill="#8a8781"/>
+<rect x="107.1" y="649" width="132.9" height="14" fill="#c9c5c0"/>
+<text x="0" y="679" font-size="13.5" font-weight="600" fill="#52514e">19 directes, 6 divergentes, sur 56</text>
+<line x1="0" y1="693.0" x2="300" y2="693.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="714.0" font-size="13.5" fill="#52514e">Baromètre de l'application des lois</text>
+<text class="pied-source" x="0" y="731.0" font-size="13.5" fill="#52514e">(état au 05/10/2026) ; rapports</text>
+<text class="pied-source" x="0" y="748.0" font-size="13.5" fill="#52514e">annuels du Sénat sur l'application des</text>
+<text class="pied-source" x="0" y="765.0" font-size="13.5" fill="#52514e">lois</text>
+<text class="pied-note" x="0" y="786.0" font-size="13.5" fill="#52514e">Gris : lois que le baromètre et le</text>
+<text class="pied-note" x="0" y="803.0" font-size="13.5" fill="#52514e">Sénat classent différemment.</text>
+<text class="pied-note" x="0" y="820.0" font-size="13.5" fill="#52514e">2024-2025 : le Sénat publie 22 lois</text>
+<text class="pied-note" x="0" y="837.0" font-size="13.5" fill="#52514e">d'application directe dans sa synthèse</text>
+<text class="pied-note" x="0" y="854.0" font-size="13.5" fill="#52514e">et 24 ailleurs dans le même rapport ;</text>
+<text class="pied-note" x="0" y="871.0" font-size="13.5" fill="#52514e">les 2 de plus, sans liste nominative,</text>
+<text class="pied-note" x="0" y="888.0" font-size="13.5" fill="#52514e">sont en gris. Trait noir : la moitié</text>
+<text class="pied-note" x="0" y="905.0" font-size="13.5" fill="#52514e">des lois.</text>
+<text class="pied-licence" x="0" y="926.0" font-size="13.5" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="943.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+</svg>

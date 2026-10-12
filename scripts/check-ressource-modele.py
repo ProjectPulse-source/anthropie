@@ -27,9 +27,9 @@ TOUTE page qui declare `ressource:` (avec ou sans donnees, FR et EN), sinon 14 p
   9. `ressource.refonte` (date AAAA-MM-JJ de la relecture attestee) : le NIVEAU de la page, source unique lue par les
      controles du build (check-rendu-ressources.py) -- absent = page pas encore refondue ;
  10. une page anglaise declare le meme type et la meme refonte que sa page francaise ;
- 11. une page de donnees sans `refonte` doit figurer dans NON_REFONDUES (les dix pages du 2026-10-11) ; une page de
-     la liste devenue refondue doit en sortir. La liste ne peut que diminuer : une page de donnees nouvelle nait
-     refondue. CONDITION DE MORT de la regle 11 : liste vide -> supprimer NON_REFONDUES et son code.
+ 11. toute page de donnees declare `refonte` (une page de donnees nouvelle nait refondue). La liste figee
+     NON_REFONDUES (dix pages au 2026-10-11) s'est videe le 2026-10-12 avec la vague 1 (Adopter, Appliquer,
+     Referendum) : retiree avec son code, selon sa condition de mort.
 
 Condition de mort (regles 1 a 10) : aucune -- regles permanentes du modele ; a reexaminer si le modele est abandonne
 ou refondu.
@@ -46,10 +46,6 @@ CONTENT = ROOT / "content"
 STATIC = ROOT / "static"
 
 TYPES = {"quantitatif", "juridique-institutionnel", "explicatif-causal", "notion", "usage"}
-# Figee le 2026-10-11 : ne peut que diminuer (regle 11).
-NON_REFONDUES = {
-    "une-loi-votee-s-applique-t-elle-tout-de-suite",
-}
 
 
 def bloc_ressource(fm: str) -> dict | None:
@@ -84,11 +80,9 @@ def classification() -> list[tuple[str, str]]:
         (lues if p.name.endswith(".en.md") else fr)[cle] = (rel, val)
         if not p.name.endswith(".en.md") and re.search(r"^donnees:", fm, re.M):
             nom = p.parent.relative_to(CONTENT).as_posix()
-            if ref is None and nom not in NON_REFONDUES:
-                fautes.append((rel, "page de donnees sans ressource.refonte, absente de NON_REFONDUES (liste figee "
-                                    "le 2026-10-11) : une page de donnees nouvelle nait refondue"))
-            if ref is not None and nom in NON_REFONDUES:
-                fautes.append((rel, "page refondue encore dans NON_REFONDUES : la retirer de la liste"))
+            if ref is None:
+                fautes.append((rel, "page de donnees sans ressource.refonte : toute page de donnees est refondue "
+                                    "(regle 11 ; une page nouvelle nait refondue)"))
     for cle, (rel, val) in lues.items():
         if cle in fr and fr[cle][1] != val:
             fautes.append((rel, "type ou refonte differents de la page francaise %s : %r != %r" % (fr[cle][0], val, fr[cle][1])))
@@ -159,8 +153,7 @@ def main() -> int:
     if classe:
         print("Classification des ressources : %d ecart(s) (regles 8 a 11 de l'en-tete)." % len(classe))
     else:
-        print("Classification des ressources : type et niveau declares partout ; %d page(s) de donnees non refondue(s) "
-              "(liste figee)." % len(NON_REFONDUES))
+        print("Classification des ressources : type et niveau declares partout ; toutes les pages de donnees refondues.")
     if fautes or classe:
         print("Modele des ressources : %d page(s) en ecart sur %d (brouillons exemptes : %d)." % (len(fautes), vues, brouillons))
         print("  -> voir CLAUDE.md du site, section Modele d'une ressource de donnees.")

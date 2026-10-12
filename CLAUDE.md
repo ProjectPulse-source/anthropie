@@ -281,9 +281,9 @@ jamais les démonstrations.** Cette section est la méthode de production ; le f
 
 **Niveau d'une page = `ressource.refonte`** (date de la relecture attestée ; absent = pas encore refondue). Les
 exigences de la refonte bloquent sur les pages refondues et ne font qu'inventorier le travail des autres. Une page de
-données nouvelle naît refondue ; les dix pages de données non refondues du 11/10 forment une liste figée
-(`NON_REFONDUES` de `check-ressource-modele.py`) qui ne peut que diminuer — une page en sort au geste qui pose sa
-`refonte`. Les pages sans données (notions, guides, corpus, enseignants) n'ont pas de liste : elles déclarent leur
+données nouvelle naît refondue ; les dix pages de données non refondues du 11/10 formaient une liste figée
+(`NON_REFONDUES`), vidée le 12/10 avec la vague 1 et retirée avec son code (condition de mort) : **toute page de données
+déclare désormais sa `refonte`**, contrôle bloquant de `check-ressource-modele.py`. Les pages sans données (notions, guides, corpus, enseignants) n'ont pas de liste : elles déclarent leur
 `refonte` quand elles passent par la méthode allégée.
 
 **Matrice des contrôles** (état exact ; tout ce qui n'y figure pas est une discipline de session, sans verrou) :
@@ -355,7 +355,7 @@ diagnostic, défauts des règles 8 à 16, panel « avant », deux ou trois scén
 archivée verbatim avant lecture, chaque affirmation vérifiée sur les données) → phase B (texte, gardes nouvelles vues
 mordre, figures téléphone et pied commun, langue générée par le module, recette 320/390/768/1280, panel « après »,
 gate éditorial, relecture phrase à phrase FR et EN du texte servi, contre-expertise de la page) → `ressource.refonte`
-posé, page retirée de `NON_REFONDUES`, instantané de relecture → accord de l'auteur → push → attestation de la version
+posé, instantané de relecture → accord de l'auteur → push → attestation de la version
 servie. Lecteurs réels (trois à cinq, pages pilotes) : point ouvert à l'auteur ; le panel simulé reste une hypothèse.
 
 ## Couche pédagogique — `/enseignants/` (actée par l'auteur, 2026-09-30)

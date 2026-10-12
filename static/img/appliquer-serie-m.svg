@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 884" role="img" font-variant-numeric="tabular-nums" aria-labelledby="asm-t asm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="asm-t">Le taux d'application des lois publié par le Sénat, 2002-2003 à 2024-2025</title><desc id="asm-d">Points par session, regroupés en six segments séparés par des ruptures de définition : 2002-2003 : 9,7 % (segment 1); 2003-2004 : 14,4 % (segment 1); 2004-2005 : 16,4 % (segment 1); 2005-2006 : 30 % (segment 1); 2006-2007 : 32,1 % (segment 1); 2007-2008 : 24,6 % (segment 1); 2008-2009 : 27 % (segment 1); 2010-2011 : 64 % (segment 2); 2011-2012 : 66 % (segment 3); 2012-2013 : 64 % (segment 4); 2013-2014 : 55 % (segment 4); 2014-2015 : 62 % (segment 4); 2015-2016 : 71 % (segment 4); 2016-2017 : 73 % (segment 4); 2017-2018 : 78 % (segment 5); 2018-2019 : 72 % (segment 5); 2019-2020 : 62 % (segment 5); 2020-2021 : 57 % (segment 5); 2021-2022 : 65 % (segment 5); 2022-2023 : 64 % (segment 5); 2023-2024 : 59 % (segment 5); 2024-2025 : 66 % (segment 6). Pour 2019-2020, le rapport suivant écrit 60 % (cercle vide). Les valeurs, leur document et leur définition sont dans le tableau sous la figure.</desc>
+<rect width="300" height="884" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Le taux d'application des lois</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">publié par le Sénat, 2002-2003</text>
+<text x="0" y="64" font-size="17" font-weight="600" fill="#0A0A0E">à 2024-2025</text>
+<text x="0" y="104" font-size="13.5" fill="#52514e">en % des mesures attendues ; six</text>
+<text x="0" y="122" font-size="13.5" fill="#52514e">définitions successives, fonds</text>
+<text x="0" y="140" font-size="13.5" fill="#52514e">alternés : un segment ne se compare</text>
+<text x="0" y="158" font-size="13.5" fill="#52514e">pas à un autre</text>
+<text x="84.0" y="182" font-size="13.5" fill="#898781" text-anchor="middle">0 %</text>
+<text x="149.0" y="182" font-size="13.5" fill="#898781" text-anchor="middle">50 %</text>
+<text x="214.0" y="182" font-size="13.5" fill="#898781" text-anchor="middle">100 %</text>
+<rect x="0" y="188" width="300" height="133" fill="#f3f2ee"/>
+<text x="298" y="202" font-size="13.5" fill="#898781" text-anchor="end">1</text>
+<text x="2" y="202" font-size="13.5" fill="#0A0A0E">2002-2003</text>
+<line x1="84" y1="197.5" x2="214" y2="197.5" stroke="#e1e0d9"/>
+<circle cx="96.6" cy="197.5" r="4" fill="#184f95"/>
+<text x="224" y="202" font-size="13.5" font-weight="600" fill="#52514e">9,7 %</text>
+<text x="2" y="221" font-size="13.5" fill="#0A0A0E">2003-2004</text>
+<line x1="84" y1="216.5" x2="214" y2="216.5" stroke="#e1e0d9"/>
+<circle cx="102.7" cy="216.5" r="4" fill="#184f95"/>
+<text x="224" y="221" font-size="13.5" font-weight="600" fill="#52514e">14,4 %</text>
+<text x="2" y="240" font-size="13.5" fill="#0A0A0E">2004-2005</text>
+<line x1="84" y1="235.5" x2="214" y2="235.5" stroke="#e1e0d9"/>
+<circle cx="105.3" cy="235.5" r="4" fill="#184f95"/>
+<text x="224" y="240" font-size="13.5" font-weight="600" fill="#52514e">16,4 %</text>
+<text x="2" y="259" font-size="13.5" fill="#0A0A0E">2005-2006</text>
+<line x1="84" y1="254.5" x2="214" y2="254.5" stroke="#e1e0d9"/>
+<circle cx="123.0" cy="254.5" r="4" fill="#184f95"/>
+<text x="224" y="259" font-size="13.5" font-weight="600" fill="#52514e">30 %</text>
+<text x="2" y="278" font-size="13.5" fill="#0A0A0E">2006-2007</text>
+<line x1="84" y1="273.5" x2="214" y2="273.5" stroke="#e1e0d9"/>
+<circle cx="125.7" cy="273.5" r="4" fill="#184f95"/>
+<text x="224" y="278" font-size="13.5" font-weight="600" fill="#52514e">32,1 %</text>
+<text x="2" y="297" font-size="13.5" fill="#0A0A0E">2007-2008</text>
+<line x1="84" y1="292.5" x2="214" y2="292.5" stroke="#e1e0d9"/>
+<circle cx="116.0" cy="292.5" r="4" fill="#184f95"/>
+<text x="224" y="297" font-size="13.5" font-weight="600" fill="#52514e">24,6 %</text>
+<text x="2" y="316" font-size="13.5" fill="#0A0A0E">2008-2009</text>
+<line x1="84" y1="311.5" x2="214" y2="311.5" stroke="#e1e0d9"/>
+<circle cx="119.1" cy="311.5" r="4" fill="#184f95"/>
+<text x="224" y="316" font-size="13.5" font-weight="600" fill="#52514e">27 %</text>
+<text x="298" y="335" font-size="13.5" fill="#898781" text-anchor="end">2</text>
+<text x="2" y="335" font-size="13.5" fill="#0A0A0E">2010-2011</text>
+<line x1="84" y1="330.5" x2="214" y2="330.5" stroke="#e1e0d9"/>
+<circle cx="167.2" cy="330.5" r="4" fill="#184f95"/>
+<text x="224" y="335" font-size="13.5" font-weight="600" fill="#52514e">64 %</text>
+<rect x="0" y="340" width="300" height="19" fill="#f3f2ee"/>
+<text x="298" y="354" font-size="13.5" fill="#898781" text-anchor="end">3</text>
+<text x="2" y="354" font-size="13.5" fill="#0A0A0E">2011-2012</text>
+<line x1="84" y1="349.5" x2="214" y2="349.5" stroke="#e1e0d9"/>
+<circle cx="169.8" cy="349.5" r="4" fill="#184f95"/>
+<text x="224" y="354" font-size="13.5" font-weight="600" fill="#52514e">66 %</text>
+<text x="298" y="373" font-size="13.5" fill="#898781" text-anchor="end">4</text>
+<text x="2" y="373" font-size="13.5" fill="#0A0A0E">2012-2013</text>
+<line x1="84" y1="368.5" x2="214" y2="368.5" stroke="#e1e0d9"/>
+<circle cx="167.2" cy="368.5" r="4" fill="#184f95"/>
+<text x="224" y="373" font-size="13.5" font-weight="600" fill="#52514e">64 %</text>
+<text x="2" y="392" font-size="13.5" fill="#0A0A0E">2013-2014</text>
+<line x1="84" y1="387.5" x2="214" y2="387.5" stroke="#e1e0d9"/>
+<circle cx="155.5" cy="387.5" r="4" fill="#184f95"/>
+<text x="224" y="392" font-size="13.5" font-weight="600" fill="#52514e">55 %</text>
+<text x="2" y="411" font-size="13.5" fill="#0A0A0E">2014-2015</text>
+<line x1="84" y1="406.5" x2="214" y2="406.5" stroke="#e1e0d9"/>
+<circle cx="164.6" cy="406.5" r="4" fill="#184f95"/>
+<text x="224" y="411" font-size="13.5" font-weight="600" fill="#52514e">62 %</text>
+<text x="2" y="430" font-size="13.5" fill="#0A0A0E">2015-2016</text>
+<line x1="84" y1="425.5" x2="214" y2="425.5" stroke="#e1e0d9"/>
+<circle cx="176.3" cy="425.5" r="4" fill="#184f95"/>
+<text x="224" y="430" font-size="13.5" font-weight="600" fill="#52514e">71 %</text>
+<text x="2" y="449" font-size="13.5" fill="#0A0A0E">2016-2017</text>
+<line x1="84" y1="444.5" x2="214" y2="444.5" stroke="#e1e0d9"/>
+<circle cx="178.9" cy="444.5" r="4" fill="#184f95"/>
+<text x="224" y="449" font-size="13.5" font-weight="600" fill="#52514e">73 %</text>
+<rect x="0" y="454" width="300" height="152" fill="#f3f2ee"/>
+<text x="298" y="468" font-size="13.5" fill="#898781" text-anchor="end">5</text>
+<text x="2" y="468" font-size="13.5" fill="#0A0A0E">2017-2018</text>
+<line x1="84" y1="463.5" x2="214" y2="463.5" stroke="#e1e0d9"/>
+<circle cx="185.4" cy="463.5" r="4" fill="#184f95"/>
+<text x="224" y="468" font-size="13.5" font-weight="600" fill="#52514e">78 %</text>
+<text x="2" y="487" font-size="13.5" fill="#0A0A0E">2018-2019</text>
+<line x1="84" y1="482.5" x2="214" y2="482.5" stroke="#e1e0d9"/>
+<circle cx="177.6" cy="482.5" r="4" fill="#184f95"/>
+<text x="224" y="487" font-size="13.5" font-weight="600" fill="#52514e">72 %</text>
+<text x="2" y="506" font-size="13.5" fill="#0A0A0E">2019-2020</text>
+<line x1="84" y1="501.5" x2="214" y2="501.5" stroke="#e1e0d9"/>
+<circle cx="164.6" cy="501.5" r="4" fill="#184f95"/>
+<text x="224" y="506" font-size="13.5" font-weight="600" fill="#52514e">62 %</text>
+<line x1="84" y1="520.5" x2="214" y2="520.5" stroke="#e1e0d9"/>
+<circle cx="162.0" cy="520.5" r="4" fill="#ffffff" stroke="#184f95" stroke-width="1.5"/>
+<text x="224" y="525" font-size="13.5" font-weight="600" fill="#52514e">60 %</text>
+<text x="2" y="544" font-size="13.5" fill="#0A0A0E">2020-2021</text>
+<line x1="84" y1="539.5" x2="214" y2="539.5" stroke="#e1e0d9"/>
+<circle cx="158.1" cy="539.5" r="4" fill="#184f95"/>
+<text x="224" y="544" font-size="13.5" font-weight="600" fill="#52514e">57 %</text>
+<text x="2" y="563" font-size="13.5" fill="#0A0A0E">2021-2022</text>
+<line x1="84" y1="558.5" x2="214" y2="558.5" stroke="#e1e0d9"/>
+<circle cx="168.5" cy="558.5" r="4" fill="#184f95"/>
+<text x="224" y="563" font-size="13.5" font-weight="600" fill="#52514e">65 %</text>
+<text x="2" y="582" font-size="13.5" fill="#0A0A0E">2022-2023</text>
+<line x1="84" y1="577.5" x2="214" y2="577.5" stroke="#e1e0d9"/>
+<circle cx="167.2" cy="577.5" r="4" fill="#184f95"/>
+<text x="224" y="582" font-size="13.5" font-weight="600" fill="#52514e">64 %</text>
+<text x="2" y="601" font-size="13.5" fill="#0A0A0E">2023-2024</text>
+<line x1="84" y1="596.5" x2="214" y2="596.5" stroke="#e1e0d9"/>
+<circle cx="160.7" cy="596.5" r="4" fill="#184f95"/>
+<text x="224" y="601" font-size="13.5" font-weight="600" fill="#52514e">59 %</text>
+<text x="298" y="620" font-size="13.5" fill="#898781" text-anchor="end">6</text>
+<text x="2" y="620" font-size="13.5" fill="#0A0A0E">2024-2025</text>
+<line x1="84" y1="615.5" x2="214" y2="615.5" stroke="#e1e0d9"/>
+<circle cx="169.8" cy="615.5" r="4" fill="#184f95"/>
+<text x="224" y="620" font-size="13.5" font-weight="600" fill="#52514e">66 %</text>
+<text x="0" y="648" font-size="13.5" fill="#52514e">1 à 6 : segments ; cercle vide :</text>
+<text x="0" y="665" font-size="13.5" fill="#52514e">2019-2020 selon le rapport suivant</text>
+<line x1="0" y1="675.0" x2="300" y2="675.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="696.0" font-size="13.5" fill="#52514e">Sénat, bilans annuels de l'application</text>
+<text class="pied-source" x="0" y="713.0" font-size="13.5" fill="#52514e">des lois, 2003-2026 (taux tels que</text>
+<text class="pied-source" x="0" y="730.0" font-size="13.5" fill="#52514e">publiés, page citée dans le tableau)</text>
+<text class="pied-note" x="0" y="751.0" font-size="13.5" fill="#52514e">Six définitions successives : ne pas</text>
+<text class="pied-note" x="0" y="768.0" font-size="13.5" fill="#52514e">relier les segments. Deux valeurs pour</text>
+<text class="pied-note" x="0" y="785.0" font-size="13.5" fill="#52514e">une session et une rupture de</text>
+<text class="pied-note" x="0" y="802.0" font-size="13.5" fill="#52514e">définition sont deux faits distincts.</text>
+<text class="pied-note" x="0" y="819.0" font-size="13.5" fill="#52514e">2009-2010 non représentée : date</text>
+<text class="pied-note" x="0" y="836.0" font-size="13.5" fill="#52514e">d'arrêté du taux non établie.</text>
+<text class="pied-licence" x="0" y="857.0" font-size="13.5" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="874.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+</svg>

@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 378" role="img" font-variant-numeric="tabular-nums" aria-labelledby="as-t as-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-<title id="as-t">The implementation rate of laws published by the French Senate, 2002-2003 to 2024-2025</title><desc id="as-d">Points by session, grouped in six segments separated by changes of definition: from 9.7% to 32.1% in the first segment (2002-2003 to 2008-2009), from 55% to 78% in the following ones. The values, their document and their definition are in the table below the figure.</desc>
-<rect width="720" height="378" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 397" role="img" font-variant-numeric="tabular-nums" aria-labelledby="as-t as-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="as-t">The implementation rate of laws published by the French Senate, 2002-2003 to 2024-2025</title><desc id="as-d">Points by session, grouped in six segments separated by changes of definition: 2002-2003: 9.7% (segment 1); 2003-2004: 14.4% (segment 1); 2004-2005: 16.4% (segment 1); 2005-2006: 30% (segment 1); 2006-2007: 32.1% (segment 1); 2007-2008: 24.6% (segment 1); 2008-2009: 27% (segment 1); 2010-2011: 64% (segment 2); 2011-2012: 66% (segment 3); 2012-2013: 64% (segment 4); 2013-2014: 55% (segment 4); 2014-2015: 62% (segment 4); 2015-2016: 71% (segment 4); 2016-2017: 73% (segment 4); 2017-2018: 78% (segment 5); 2018-2019: 72% (segment 5); 2019-2020: 62% (segment 5); 2020-2021: 57% (segment 5); 2021-2022: 65% (segment 5); 2022-2023: 64% (segment 5); 2023-2024: 59% (segment 5); 2024-2025: 66% (segment 6). For 2019-2020, the following report gives 60% (open circle). The values, their document and their definition are in the table below the figure.</desc>
+<rect width="720" height="397" fill="#ffffff"/>
 <text x="0.0" y="18.0" font-size="13" fill="#0A0A0E" text-anchor="start" font-weight="600">The implementation rate of laws published by the French Senate, 2002-2003 to 2024-2025</text>
 <text x="0.0" y="36.0" font-size="12" fill="#52514e" text-anchor="start">in % of expected measures; six successive definitions, alternating backgrounds: one segment does not compare with another</text>
 <line x1="40" y1="272.0" x2="710" y2="272.0" stroke="#e1e0d9"/>
@@ -54,9 +54,10 @@
 <text x="491.5" y="286.0" font-size="9" fill="#898781" text-anchor="middle">2017-2018</text>
 <text x="637.2" y="286.0" font-size="9" fill="#898781" text-anchor="middle">2022-2023</text>
 <text x="695.4" y="286.0" font-size="9" fill="#898781" text-anchor="middle">2024-2025</text>
-<text x="710.0" y="302.0" font-size="9" fill="#52514e" text-anchor="end">1 to 6: segments (definitions in the table); open circle: 2019-2020 figure revised the following year</text>
-<line x1="0" y1="332" x2="720" y2="332" stroke="#e1e0d9"/>
-<text x="0" y="345" font-size="9" fill="#52514e">French Senate, annual reports on the application of laws, 2003-2026 (rates as published, page cited in the table)</text>
-<text x="0" y="357" font-size="9" fill="#52514e">Six successive definitions: do not join the segments. A revised figure and a change of definition are two distinct facts.</text>
-<text x="0" y="369" font-size="9" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/does-a-law-apply-as-soon-as-it-is-passed/</text>
+<text x="710.0" y="302.0" font-size="9" fill="#52514e" text-anchor="end">1 to 6: segments (definitions in the table); open circle: 2019-2020 according to the following report</text>
+<line x1="0" y1="332.0" x2="720" y2="332.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="347.0" font-size="11" fill="#52514e">French Senate, annual reports on the application of laws, 2003-2026 (rates as published, page cited in the table)</text>
+<text class="pied-note" x="0" y="361.0" font-size="11" fill="#52514e">Six successive definitions: do not join the segments. Two values for one session and a change of definition are two</text>
+<text class="pied-note" x="0" y="375.0" font-size="11" fill="#52514e">distinct facts. 2009-2010 not shown: cut-off date of the rate not established.</text>
+<text class="pied-licence" x="0" y="389.0" font-size="11" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/does-a-law-apply-as-soon-as-it-is-passed/</text>
 </svg>
