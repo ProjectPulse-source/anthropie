@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 504" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dlm-t dlm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-<title id="dlm-t">Debt since 1978, as a % of GDP</title><desc id="dlm-d">It starts at 21.6% of GDP in 1978, crosses 30% in 1984, 60% in 1996, 80% in 2009, 100% in 2020, and reaches 119.0% in Q2 2026. Open circles, not joined to the curve, show the path of the 2027 budget bill, reaching 121.7% in 2027: a forecast, not an observation.</desc>
+<title id="dlm-t">Debt since 1978, as a % of GDP</title><desc id="dlm-d">It starts at 21.6% of GDP in 1978, crosses 30% in 1984, 60% in 1996, 80% in 2009, 100% in 2020, and reaches 119.0% in Q2 2026.</desc>
 <rect width="300" height="504" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Debt since 1978, as a % of GDP</text>
 <line x1="34" y1="246.0" x2="286" y2="246.0" stroke="#c3c2b7"/>

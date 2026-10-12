@@ -354,7 +354,12 @@ def fig_masses_m(interets, cofog, noms, lang, C, licence_m, svg_d, titre, source
 def fig_longue_m(annuel, pct_courant, label_courant, seuils, lang, C, licence_m, svg_d, titre, source, note):
     nb = C["nb"][lang]
     pc = " %" if lang == "fr" else "%"
-    e, y = PF.tete_mobile("dlm", titre, PF_desc(svg_d), C["INK"], C["FONT"])
+    # La version telephone ne dessine pas la trajectoire du PLF : sa description
+    # s'arrete avant la phrase qui l'annonce (derniere phrase de la detaillee).
+    desc = PF_desc(svg_d)
+    for amorce in (" Un pointillé relie", " A dotted line joins"):
+        desc = desc.split(amorce)[0]
+    e, y = PF.tete_mobile("dlm", titre, desc, C["INK"], C["FONT"])
     # meme trace que la version detaillee : la serie annuelle, prolongee par le dernier trimestre publie
     pts = sorted(annuel.items()) + [(max(annuel) + 0.25, pct_courant)]
     y += 14

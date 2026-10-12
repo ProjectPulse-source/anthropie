@@ -1515,11 +1515,11 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
              % (nb(annuel[ans[0]]), ans[0], seuils[30], seuils[60], seuils[80],
                 seuils[100], nb(pct_courant), label_courant)
              + (("" if not prev else
-                 (" Des cercles évidés, non reliés à la courbe, portent la trajectoire du projet de loi de "
+                 (" Un pointillé relie le dernier point observé à un cercle évidé, la trajectoire du projet de loi de "
                   "finances pour %d, qui atteint %s%s en %d : une prévision, non une "
                   "observation." % (edition, nb(prev[-1][1]), U, prev[-1][0]))) if lang == "fr" else
                 ("" if not prev else
-                 (" Open circles, not joined to the curve, show the path of the %d budget bill, reaching %s%s "
+                 (" A dotted line joins the last observed point to an open circle, the path of the %d budget bill, reaching %s%s "
                   "in %d: a forecast, not an observation."
                   % (edition, nb(prev[-1][1]), U, prev[-1][0]))))
              + '</desc>')
@@ -1541,18 +1541,15 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
     # Plus d'aplat sous la courbe : la ligne seule dans du blanc (direction
     # « minimal newsroom », 28/09). L'aire reste calculee mais n'est plus dessinee.
     if prev:
-        # le prolongement part du dernier point OBSERVE : aucun saut, aucune
-        # valeur intercalee entre les deux regimes.
-        # Meme regle que la charge (OPTIMUM-13) : prevision annuelle en comptabilite nationale contre serie
-        # trimestrielle de l'INSEE, aucune ligne ne les relie.
-        ppts = [(X(float(a)), Y(v)) for a, v in prev]
-        if len(ppts) > 1:
-            e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2" '
-                     'stroke-dasharray="4 4" opacity="0.6"/>' % (_line_path(ppts), COL_DETTE))
-        for qx, qy in ppts[:-1]:
-            e.append('<circle cx="%.1f" cy="%.1f" r="4" fill="#ffffff" stroke="%s" stroke-width="2"/>'
-                     % (qx, qy, COL_DETTE))
-        px, py = ppts[-1]
+        # Auteur, 12/10/2026 : seul le point d'ARRIVEE de la trajectoire est
+        # dessine. Le cercle de l'annee en cours se collait au point orange du
+        # dernier trimestre observe et doublait la lecture ; un pointille fin
+        # relie desormais le point orange au cercle d'arrivee. Le pointille et
+        # le cercle evide disent la prevision, la ligne pleine l'observation.
+        px, py = X(float(prev[-1][0])), Y(prev[-1][1])
+        e.append('<path d="M %.1f %.1f L %.1f %.1f" fill="none" stroke="%s" stroke-width="1.6" '
+                 'stroke-dasharray="2 4" stroke-linecap="round" opacity="0.7"/>'
+                 % (X(pts[-1][0]), Y(pts[-1][1]), px, py, COL_DETTE))
         e.append('<circle cx="%.1f" cy="%.1f" r="4" fill="#ffffff" stroke="%s" '
                  'stroke-width="2"/>' % (px, py, COL_DETTE))
         e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="%d" '
