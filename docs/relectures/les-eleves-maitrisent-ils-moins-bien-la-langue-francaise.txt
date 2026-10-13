@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-13 ; texte servi de /les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/, build de 6b7ca4e + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Les élèves maîtrisent-ils moins bien la langue française ?
 Pas d'un bloc.
 À la même dictée de CM2, les élèves faisaient 10,7 erreurs en 1987 et 19,4 en 2021 ; mais sur ces 8,7 erreurs supplémentaires, 0,9 seulement portent sur l'orthographe des mots eux-mêmes.
@@ -107,6 +107,10 @@ La lecture numérique de loisir n’est que très faiblement associée à la com
 Une méta-analyse d’expériences trouve qu’on comprend un peu mieux un texte informatif sur papier que sur écran, surtout en temps limité (Delgado et al., 2018), un résultat propre aux conditions qu’elle examine.
 Chez les jeunes enfants, le temps d’écran est faiblement associé à un langage moins développé, et les programmes éducatifs regardés avec un adulte à un langage plus développé (Madigan et al., 2020).
 Aucun de ces travaux n’établit que les écrans ont fait baisser le vocabulaire des adolescents français.
+Dans une chronique publiée par L’Express le 26 septembre 2026, Franck Ramus, chercheur en sciences cognitives au CNRS, conteste que les écrans expliquent le déclin scolaire dans son ensemble : plusieurs pays mieux classés que la France y passent plus de temps, aucun lien n’apparaît entre les pays de l’OCDE, et la baisse précède les smartphones.
+Ce dernier constat rejoint les séries françaises présentées plus haut, sans exclure que le numérique ait aggravé ensuite des reculs déjà engagés.
+Ramus relève aussi une légère diminution de l’usage du numérique en France de 2022 à 2025 ; pour le numérique de loisir déclaré qu’examine cette page, la montée des non-réponses laisse le sens de l’évolution indéterminé.
+Rien n’établit que les deux constats portent sur le même indicateur.
 Aucune des séries de cette page ne départage d’ailleurs les explications en présence : programmes, temps d’enseignement du français, pratiques de lecture, écrans, composition des classes, crise sanitaire.
 Si les données ne désignent pas de cause, une moyenne nationale dit-elle au moins quels élèves reculent ?
 Les écarts se creusent-ils ?
@@ -233,6 +237,7 @@ Hayes, Wolfer et Wolfe, American Educational Research Journal, 1996.
 Effectifs : comparaison de deux moyennes, test bilatéral à 5 %, puissance de 80 %.
 Recherche.
 Sullivan et Brown, British Educational Research Journal, 2015 ; Mol et Bus, Psychological Bulletin, 2011 ; Altamura, Vargas et Salmerón, Review of Educational Research, 2023 ; Delgado, Vargas, Ackerman et Salmerón, Educational Research Review, 2018 ; Madigan et al., JAMA Pediatrics, 2020.
+Analyse externe : Ramus, « Baisse des résultats scolaires : des causes bien connues, simples, plausibles… et fausses », chronique, L’Express, 26 septembre 2026.
 Aucun chiffre de cette page n’est saisi à la main : tous viennent d’un calcul de l’auteur, dont l’extrait est archivé avec ses empreintes ; le script qui écrit la page vérifie chaque affirmation chiffrée et s’arrête si elle n’est plus vraie.
 Le plan a été soumis à une contre-analyse externe, puis un protocole a été écrit avec ses règles de verdict, le tout avant le calcul.
 Toutes les valeurs ont été lues deux fois, par deux extracteurs indépendants ; ce contrôle a détecté l’erreur qu’on y avait introduite volontairement.
