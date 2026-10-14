@@ -32,7 +32,7 @@
    },
    "ofgl": {
     "jeu": "data.ofgl.fr (4 bases consolidees)",
-    "maj_source": "2026-10-11T",
+    "maj_source": "2026-10-14T",
     "sha256": "ecf3e95c1d7499a6f5833097cd167e115b916ed7e7c179258aee148094ae3fb1"
    },
    "notif": {
@@ -405,7 +405,7 @@
   "ep_solde_a0_md": -8.281,
   "ep_solde_a1_md": 1.41,
   "ep_inv_pct_eur": -14.95870046252286,
-  "cascade_md_somme": 9.690999999999999,
+  "cascade_md_somme": 9.691,
   "ep_te_effet_eur": 0.05210901766142876,
   "ep_te_effet_pib": -0.8745275229267436,
   "pib_croiss_pct": 8.080214983172596,
@@ -928,7 +928,7 @@
    -3.3852389999999986,
    -2.3618010000000034
   ],
-  "of_encours_total": 218.49580536858997,
+  "of_encours_total": 218.49580536859,
   "dette_loc_md": 278.6971321678322,
   "of_encours_rec0_annee": 2023,
   "of_encours_rec0": 200.53644389927,
