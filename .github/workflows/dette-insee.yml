@@ -154,7 +154,11 @@ jobs:
                   static/img/taux-marche-apparent-m.svg \
                   static/img/taux-marche-apparent-m.png \
                   static/img/taux-marche-apparent-en-m.svg \
-                  static/img/taux-marche-apparent-en-m.png \n                  static/img/taux-apparent-dette-m.svg \n                  static/img/taux-apparent-dette-m.png \n                  static/img/taux-apparent-dette-en-m.svg \n                  static/img/taux-apparent-dette-en-m.png
+                  static/img/taux-marche-apparent-en-m.png \
+                  static/img/taux-apparent-dette-m.svg \
+                  static/img/taux-apparent-dette-m.png \
+                  static/img/taux-apparent-dette-en-m.svg \
+                  static/img/taux-apparent-dette-en-m.png
           git commit -m "data(dette): series INSEE/Eurostat du $(date -u +%Y-%m-%d)"
           # Le rebase couvre le seul cas reel de non-fast-forward : un commit
           # humain pousse sur main pendant les ~40 s du run. Le 500 transitoire
