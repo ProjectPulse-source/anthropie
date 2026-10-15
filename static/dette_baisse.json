@@ -1,8 +1,8 @@
 {
- "releve_le": "2026-10-13",
+ "releve_le": "2026-10-15",
  "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; source Eurostat",
  "meta": {
-  "releve_le": "2026-10-13",
+  "releve_le": "2026-10-15",
   "page": "https://stephane-lalut.com/dette-publique-peut-elle-baisser/",
   "licence": "CC BY 4.0",
   "perimetre": "administrations publiques (S.13), SEC 2010, monnaie nationale, PIB de la notification de déficit et de dette",
@@ -597,8 +597,8 @@
    "encours_fin": 692.4608000000001,
    "taux_implicite_moyen": 2.0978355649729807,
    "dette_moyenne": 104.18335272747026,
-   "croissance_volume_moyenne": 1.611704051510219,
-   "prix_moyen": 2.83873860465645,
+   "croissance_volume_moyenne": 1.5894445475823282,
+   "prix_moyen": 2.8611840706768943,
    "nom": "Belgique"
   },
   {
@@ -1078,7 +1078,7 @@
   "cmp_be_dm": "104",
   "cmp_be_rg": "−2,4",
   "cmp_be_gv": "1,6",
-  "cmp_be_gp": "2,8",
+  "cmp_be_gp": "2,9",
   "cmp_it_nom": "Italie",
   "cmp_it_var": "+2,3",
   "cmp_it_tc": "−5,3",
@@ -1380,7 +1380,7 @@
   "cmp_be_dm": "104",
   "cmp_be_rg": "−2.4",
   "cmp_be_gv": "1.6",
-  "cmp_be_gp": "2.8",
+  "cmp_be_gp": "2.9",
   "cmp_it_nom": "Italy",
   "cmp_it_var": "+2.3",
   "cmp_it_tc": "−5.3",

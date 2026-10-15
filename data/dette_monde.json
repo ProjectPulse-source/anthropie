@@ -1,9 +1,9 @@
 {
- "releve_le": "2026-10-13",
+ "releve_le": "2026-10-15",
  "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Eurostat, OCDE, FMI, Banque mondiale",
  "meta": {
   "annee": "2025",
-  "releve_le": "2026-10-13",
+  "releve_le": "2026-10-15",
   "page": "https://stephane-lalut.com/dette-publique-comparaison-internationale/",
   "licence": "CC BY 4.0",
   "definitions": {
@@ -39,9 +39,9 @@
    "stock_fin": 107.9,
    "stock_fin_prec": 103.9,
    "var_ratio": 3.9400032006680448,
-   "stock": 100.34006977715327,
+   "stock": 100.52211694233588,
    "prix": 2.216971598510149,
-   "recettes": 49.02319306097534,
+   "recettes": 49.11213592642053,
    "charge": 4.5376702535836335,
    "inflation": 5.633333333333333,
    "inflation_fenetres": {
@@ -629,21 +629,21 @@
  "statistiques": {
   "charge_stock": {
    "n": 27,
-   "pente": 0.04242252410703673,
-   "ordonnee": 1.0291210000992939,
-   "r2": 0.404065374252442
+   "pente": 0.042406978063847904,
+   "ordonnee": 1.0297916769542081,
+   "r2": 0.403972679083018
   },
   "spearman_rho": 0.7631257631257631,
   "charge_stock_euro": {
    "n": 20,
-   "pente": 0.046169834974426484,
-   "ordonnee": 0.21197532198137425,
-   "r2": 0.8183635231971516,
+   "pente": 0.046155642166737766,
+   "ordonnee": 0.21252573380001882,
+   "r2": 0.8182761670819427,
    "stock_min": 22.335867872801778,
    "stock_max": 146.95331698299643
   },
   "prix_moyen_euro": 2.1839409579875353,
-  "prix_stock_r2_euro": 0.07303048683495508,
+  "prix_stock_r2_euro": 0.07300457167293123,
   "prix_inflation_euro": {
    "n": 20,
    "pente": 0.08151305514584249,
@@ -666,7 +666,7 @@
    "ordonnee": 0.394203480566762,
    "r2": 0.6081501839982616
   },
-  "prix_stock_r2": 0.004096376200695316,
+  "prix_stock_r2": 0.004104688026559852,
   "prix_euro_inflation": {
    "n": 27,
    "effet_euro": -1.3338998304012464,
@@ -1393,11 +1393,11 @@
   "ec_fr_an_pts": "0,76 point",
   "usa_fra_rapport": "3,3",
   "fr_ipib": "2,23 %",
-  "fr_rang_ipib": "septième",
+  "fr_rang_ipib": "huitième",
   "fr_rang_charge": "neuvième",
-  "n_plus_ipib": "4",
-  "n_plus_ipib_mots": "quatre",
-  "plus_ipib": "Roumanie, Pologne, Hongrie, Espagne",
+  "n_plus_ipib": "5",
+  "n_plus_ipib_mots": "cinq",
+  "plus_ipib": "Roumanie, Pologne, Hongrie, Espagne, Belgique",
   "fr_rang_recettes": "deuxième",
   "j_f_stock": "1,09",
   "j_f_prix": "2,75",
@@ -1552,11 +1552,11 @@
   "ec_fr_an_pts": "0.76 points",
   "usa_fra_rapport": "3.3",
   "fr_ipib": "2.23%",
-  "fr_rang_ipib": "seventh",
+  "fr_rang_ipib": "eighth",
   "fr_rang_charge": "ninth",
-  "n_plus_ipib": "4",
-  "n_plus_ipib_mots": "four",
-  "plus_ipib": "Romania, Poland, Hungary, Spain",
+  "n_plus_ipib": "5",
+  "n_plus_ipib_mots": "five",
+  "plus_ipib": "Romania, Poland, Hungary, Spain, Belgium",
   "fr_rang_recettes": "second",
   "j_f_stock": "1.09",
   "j_f_prix": "2.75",
