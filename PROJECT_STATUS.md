@@ -52,6 +52,20 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-16 — Empreinte carbone : édition 2025 adoptée (Insee Première n° 2130), après refus du workflow
+
+Le workflow `maj-sources.yml` (run 38896536806) a refusé l'édition nouvelle : la pièce avait changé de **forme**, non de
+fond. Figure 3 : « Année » au singulier et colonnes vides en queue (garde d'en-têtes à liste exacte) ; tableau
+complémentaire 2 : années écrites en texte (« 1990 »), toutes les lignes écartées, d'où l'échec du témoin 3 sur 1990.
+`generer_empreinte_carbone.py` tolère ces deux formes ; ordre et intitulés des colonnes restent contrôlés, témoins
+inchangés. `maj_sources.py integrer` en local : adopté, gardes de prose passées (2025 : émissions 398 Mt, empreinte
+571 Mt dont 296 importées ; depuis 1990 : −32 % et −19 %). Registre ramené à sa mise en forme d'origine (valeurs
+identiques à celles écrites par le module). Vignettes `parcours-licence` réécrites par `og_enseignants.py` : contenu
+identique, légende décalée de quelques pixels (l'image versionnée précédait le dessin actuel). Écart de la source
+noté, non corrigé : le tableau complémentaire 2 porte « Champ : France métropolitaine », la figure 3 « France », pour des
+valeurs qui concordent année par année à 0,5 Mt près (l'édition 2025 portait « France » aux deux). Contrôles :
+`check-all --ci` 0, build 0, `audit-liens-build` 0, texte servi de `/enseignants/environnement/` relu et recalculé.
+
 ### 2026-10-16 — « Peut-elle baisser » : écart taux-croissance et niveau de dette (FMI) dans la confrontation à la recherche
 
 Suite à la réponse du secrétariat du European Fiscal Board (VAGUE1-DETTE, 06/10 : r − g « n'est pas exogène », renvoi à

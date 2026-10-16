@@ -102,8 +102,14 @@ def lire(sums: dict[str, str]) -> dict:
     if abs(d["menages"] + d["interieure"] + d["importee"] - d["empreinte"]) > 1.01:
         fail("figure 1 : menages + interieure + importee != empreinte")
     f3 = lignes("Figure 3")
-    if f3[2] != ["Années", "Émissions directes des ménages", "Émissions intérieures", "Émissions importées", "Empreinte totale"]:
-        fail("figure 3 : en-tetes changes : %s" % f3[2])
+    # Forme seule tolérée (édition 2026) : colonnes vides en queue, « Année » au singulier ; ordre et intitulés gardés.
+    ent3 = list(f3[2])
+    while ent3 and ent3[-1] is None:
+        ent3.pop()
+    if ent3[:1] in (["Année"], ["Années"]):
+        ent3[0] = "Années"
+    if ent3 != ["Années", "Émissions directes des ménages", "Émissions intérieures", "Émissions importées", "Empreinte totale"]:
+        fail("figure 3 : en-tetes changes : %s" % ent3)
     serie = [dict(annee=int(r[0]), menages=float(r[1]), interieure=float(r[2]), importee=float(r[3]), empreinte=float(r[4]))
              for r in f3[3:] if isinstance(r[0], (int, float))]
     der = serie[-1]
@@ -111,8 +117,9 @@ def lire(sums: dict[str, str]) -> dict:
     if der["annee"] != annee or any(der[k] != d[k] for k in ("menages", "interieure", "importee", "empreinte")):
         fail("figure 3 : la derniere annee ne correspond pas a la figure 1")
     t2 = lignes("Tableau complémentaire 2")
+    # Édition 2026 : l'année y est écrite en texte (« 1990 ») ; un nombre ou une suite de chiffres est une année.
     em = {int(r[0]): dict(emissions=r[1] / 1000, empreinte=r[4] / 1000, emissions_hab=float(r[7]), empreinte_hab=float(r[10]))
-          for r in t2[3:] if isinstance(r[0], (int, float))}
+          for r in t2[3:] if isinstance(r[0], (int, float)) or (isinstance(r[0], str) and r[0].strip().isdigit())}
     # témoin 3 : les deux tableaux de la série longue s'accordent, année par année
     for s in serie:
         if s["annee"] not in em or abs(em[s["annee"]]["empreinte"] - s["empreinte"]) > 0.51:
