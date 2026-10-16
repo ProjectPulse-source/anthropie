@@ -25,11 +25,12 @@
       {{- end -}}
     {{- end -}}
     {{- $page := . -}}
-    {{- with .Params.donnees -}}
+    {{- /* `date_suit:` (2026-10-16) : jeux qu'une page AFFICHE sans en publier le modele (pages enseignants) ;
+           leur releve entre dans sa date comme celui de `donnees:`. scripts/check-dates-jeux.py verifie que tout jeu
+           date affiche par une page figure dans l'une des deux listes. */ -}}
+    {{- with union (.Params.donnees | default slice) (.Params.date_suit | default slice) -}}
       {{- range . -}}
-        {{- $d := index site.Data . -}}
-        {{- if not $d.releve_le -}}{{- errorf "sitemap: %s declare `donnees: %s` sans releve_le lisible" $page.File.Path . -}}{{- end -}}
-        {{- $t := time $d.releve_le -}}
+        {{- $t := time (partial "jeu-date.html" (dict "nom" . "page" $page.File.Path)) -}}
         {{- if $t.After $lm -}}{{- $lm = $t -}}{{- end -}}
       {{- end -}}
     {{- end -}}

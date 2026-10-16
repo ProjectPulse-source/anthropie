@@ -52,6 +52,22 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-16 — Dates et fraîcheur, phase P0 : IndexNow ne soumet plus que le changé ; aucun jeu affiché hors de la date
+
+Arbitrage `PRO-20261016-174136` (`D:\PRO\06_PROMOTION\GEO_FRAICHEUR_2026-10-16\`). (1) `indexnow.yml` soumettait les
+102 URL du sitemap à chaque push et chaque lundi, l'erreur que la FAQ d'IndexNow répertorie : il ne soumet plus que
+les URL dont le `lastmod` a changé depuis la dernière exécution réussie, moins un jour (`scripts/indexnow_urls.py`) ;
+passage quotidien, parce que les données poussées par le `GITHUB_TOKEN` ne déclenchent pas le push ; `tout` à la main
+pour une refonte. Essai sur le sitemap de production : 4 URL retenues depuis le 15/10, 0 depuis le 17/10, garde à
+sitemap vide vue mordre. (2) `scripts/check-dates-jeux.py`, bloquant dans `check-all --ci` : il lit les shortcodes et
+les jetons de chaque page et exige que tout jeu daté affiché entre dans sa date. 10 pages en défaut au premier passage
+(l'inventaire par déclaration en voyait 2) ; corrigées par `donnees:` (pages de données) ou `date_suit:` (pages
+enseignants, qui ne déclarent pas `donnees:`). Sitemap : `/enseignants/environnement/` 02/10 → 16/10,
+`/enseignants/` → 15/10, `/enseignants/emc/` → 12/10, inflation FR/EN → 13/10 ; Dataset inchangé sur 48 pages.
+Témoins : contrôle sans `date_suit` → signalé ; relevés mutés (dont une date française) → sitemap suit. Date d'un jeu
+lue par un seul partial, `jeu-date.html` (sitemap et Dataset). `check-all --ci` 0, build 0, liens 0. Reste P1 et P2
+(arbitrage, § 5).
+
 ### 2026-10-16 — Les trois limites de l'arbitrage, mesurées puis traitées
 
 Chacune cachait un défaut publié. (1) Précision relevée à la main : instrumentation des appels à `rang`/`depasse`/

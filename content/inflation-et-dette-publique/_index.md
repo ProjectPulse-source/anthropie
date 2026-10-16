@@ -13,7 +13,7 @@ og_image_alt: "Carte de partage : « L'inflation a érodé la vieille dette » �
 # gagné ? » -> ce qui a diminué -> qui détenait -> pourquoi l'État n'a pas encaissé -> Banque de France -> ratio -> synthèse.
 # Aucun chiffre saisi : jetons {infl.*} et shortcode infl-val (scripts/update_dette_inflation.py, extrait figé et empreintes
 # dans scripts/sources_inflation_dette/) ; chiffres du volet 1 par dyn-val (scripts/update_dette_dynamique.py).
-donnees: [dette_inflation]
+donnees: [dette_inflation, dette_dynamique]
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html) ; jetons résolus au build
   jeu: "dette_inflation"
   nom: "Surprise d'inflation 2021-2023 et dette de l'État à taux fixe de fin 2020 : érosion réelle des paiements promis, calendrier, sensibilités"

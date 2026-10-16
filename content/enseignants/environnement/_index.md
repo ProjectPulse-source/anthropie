@@ -6,6 +6,7 @@ og_image: "images/og-empreinte-carbone.jpg"   # scripts/og_enseignants.py ; vign
 og_image_alt: "Deux barres : les émissions des unités résidentes françaises et l'empreinte carbone de la France, décomposées en trois postes."
 date: 2026-10-02
 lastmod: 2026-10-02
+date_suit: [empreinte_carbone]  # jeux affichés par la page : leur relevé entre dans sa date (sitemap) ; contrôle scripts/check-dates-jeux.py
 # Troisième thème de la couche enseignants (auteur, 02/10/2026 ; arbitrage
 # .claude/external-audits/ARBITRATIONS/ENTRANTE_2026-10-02_Enseignants_Theme3_Exemplaires_arbitrage.md). Navigation
 # « Environnement ». Deux déclencheurs de la règle « page propre » : matière documentaire propre (comptes d'émissions

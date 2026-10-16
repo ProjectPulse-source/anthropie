@@ -23,15 +23,8 @@
 {{- $p := .Params.dataset -}}
 {{- $jeu := index site.Data $p.jeu -}}
 {{- if not $jeu -}}{{- errorf "schema-dataset-page: data/%s.json absent (page %s)" $p.jeu .RelPermalink -}}{{- end -}}
-{{- $date := $jeu.releve_le | default (index ($jeu.affichage | default dict) "releve_le") | default $jeu._genere_le -}}
-{{- if not $date -}}{{- errorf "schema-dataset-page: aucune date dans data/%s.json (page %s)" $p.jeu .RelPermalink -}}{{- end -}}
-{{- /* Une date d'affichage française (« 21 septembre 2026 ») n'est pas une date schema.org : on la convertit en ISO. */ -}}
-{{- if not (findRE `^\d{4}-\d{2}-\d{2}` $date) -}}
-  {{- $m := dict "janvier" "01" "février" "02" "mars" "03" "avril" "04" "mai" "05" "juin" "06" "juillet" "07" "août" "08" "septembre" "09" "octobre" "10" "novembre" "11" "décembre" "12" -}}
-  {{- $x := split (replace $date " " " ") " " -}}
-  {{- if ne (len $x) 3 -}}{{- errorf "schema-dataset-page: date illisible %q (page %s)" $date .RelPermalink -}}{{- end -}}
-  {{- $date = printf "%s-%s-%02d" (index $x 2) (index $m (index $x 1)) (int (index $x 0)) -}}
-{{- end -}}
+{{- /* Date du jeu : partial unique jeu-date.html (racine, puis bloc affichage, puis _genere_le ; date française convertie). */ -}}
+{{- $date := partial "jeu-date.html" (dict "nom" $p.jeu "page" .RelPermalink) -}}
 {{- $a := site.Data.author.author -}}
 {{- $sameAs := slice -}}
 {{- range $a.sameAs -}}{{- $sameAs = $sameAs | append .url -}}{{- end -}}

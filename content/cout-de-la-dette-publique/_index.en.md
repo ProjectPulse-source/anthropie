@@ -5,7 +5,7 @@ description: "What does French public debt cost? {dette.interets_mdeur} billion 
 chapo: "In {dette.interets_annee}, French general government owes {dette.interets_mdeur} billion euros of interest, {dette.interets_sur_recettes_pct}% of its revenue, and {dette.interets_hausse_pct}% more, in euros, than at the {dette.interets_creux_annee} trough. The rise is fast, but the level is not unprecedented: as a share of GDP, the burden is back to its {dette.niv_pib_annee} level and remains below its 1995 level. For twenty-five years the debt doubled as a share of GDP while its bill fell. This page explains why, where the rise comes from, and why it can last even if the debt stops growing."
 date: 2026-08-17
 lastmod: 2026-10-11
-donnees: [dette_officielle]
+donnees: [dette_officielle, qui_paie_donnees]
 og_title: "What does French public debt cost? — official data, kept current — S. Lalut"
 og_image: "images/og-cout-dette-en.jpg"
 og_image_alt: "Share card: “What does French public debt cost?” — debt stock and interest burden as a share of GDP, 1995-2025, sources INSEE and Eurostat."

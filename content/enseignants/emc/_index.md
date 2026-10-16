@@ -6,6 +6,7 @@ og_image: "images/og-adopter-promesse.jpg"   # carte de la page Adopter, réempl
 og_image_alt: "Origine des lois promulguées par législature : projets du Gouvernement et propositions des parlementaires."
 date: 2026-10-07
 lastmod: 2026-10-07
+date_suit: [promesses_adopter, promesses_appliquer, promesses_referendum]  # jeux affichés par la page : leur relevé entre dans sa date (sitemap) ; contrôle scripts/check-dates-jeux.py
 # Activité O2 (évaluation du 07/10/2026, contre-expertise PRO-20261007-102607, arbitrage : « prioritaire »). Première
 # page de la discipline EMC (bloc `enseigner`, `disciplines` dans content/ressources/_index.md). Deux déclencheurs de la
 # règle « page propre » : besoin attesté (programme d'EMC appliqué en Terminale à la rentrée 2026-2027, livret

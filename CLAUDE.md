@@ -384,7 +384,9 @@ demander, aucune fenêtre d'attente ; une page se met en ligne dès qu'elle est 
 
 6. **Exception — une activité peut porter sa propre figure** (auteur, 02/10/2026) quand aucune page de recherche n'a de
    figure sur le sujet : activité « Après une première année de licence », page `/enseignants/ecole-et-parcours/`. La page ne
-   déclare pas `donnees:` pour autant ; la discipline du modèle de ressource vaut entière pour le jeu (générateur
+   déclare pas `donnees:` pour autant : elle déclare ses jeux dans `date_suit:`, qui fait entrer leur relevé dans la date
+   de la page (sitemap) sans exiger le modèle — **toute page qui affiche un jeu daté le déclare dans l'une des deux
+   clés**, contrôle bloquant `scripts/check-dates-jeux.py` (16/10/2026 : une édition INSEE intégrée restait invisible) ; la discipline du modèle de ressource vaut entière pour le jeu (générateur
    `scripts/generer_parcours_licence.py`, jetons `licence-val`, tableau `licence-tableau`, gardes de prose, témoins, JSON et CSV, SVG et PNG
    ensemble). Source sans API : tableurs du SIES archivés dans `scripts/sources_enseignants/` avec `SHA256SUMS`, que le
    générateur vérifie ; mise à jour annuelle à la main, en novembre (geste décrit en tête du générateur). La question de

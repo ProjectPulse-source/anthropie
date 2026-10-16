@@ -1,0 +1,16 @@
+{{- /* Date ISO (AAAA-MM-JJ) du dernier relevé d'un jeu de données : `releve_le` à la racine, puis dans le bloc
+       `affichage`, à défaut `_genere_le`. Une date d'affichage française (« 21 septembre 2026 ») est convertie.
+       Source unique de la date d'un jeu (2026-10-16) : la lisent le sitemap et le balisage Dataset ; aucune date
+       n'est saisie ailleurs. Appel : partial "jeu-date.html" (dict "nom" "<jeu>" "page" "<chemin, pour l'erreur>").
+       Jeu absent ou date illisible : le build s'arrête. */ -}}
+{{- $jeu := index site.Data .nom -}}
+{{- if not $jeu -}}{{- errorf "jeu-date: data/%s.json absent (%s)" .nom .page -}}{{- end -}}
+{{- $date := $jeu.releve_le | default (index ($jeu.affichage | default dict) "releve_le") | default $jeu._genere_le -}}
+{{- if not $date -}}{{- errorf "jeu-date: aucune date dans data/%s.json (%s)" .nom .page -}}{{- end -}}
+{{- if not (findRE `^\d{4}-\d{2}-\d{2}` $date) -}}
+  {{- $m := dict "janvier" "01" "février" "02" "mars" "03" "avril" "04" "mai" "05" "juin" "06" "juillet" "07" "août" "08" "septembre" "09" "octobre" "10" "novembre" "11" "décembre" "12" -}}
+  {{- $x := split (replace $date " " " ") " " -}}
+  {{- if or (ne (len $x) 3) (not (index $m (index $x 1))) -}}{{- errorf "jeu-date: date illisible %q dans data/%s.json (%s)" $date .nom .page -}}{{- end -}}
+  {{- $date = printf "%s-%s-%02d" (index $x 2) (index $m (index $x 1)) (int (index $x 0)) -}}
+{{- end -}}
+{{- return (substr $date 0 10) -}}

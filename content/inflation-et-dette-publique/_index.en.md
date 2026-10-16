@@ -12,7 +12,7 @@ og_image_alt: "Share card: “Inflation eroded legacy debt” — cumulative rea
 # Restructured on 11/10/2026 with the French page (OPTIMUM-27): same order, same tokens.
 # English lexicon locked on 08/10/2026 (external language review, arbitration Wolf-07): marketable (not negotiable) debt;
 # government / central-government (not State); legacy debt; real value; €Xbn in 2020 euros; en dash in year ranges.
-donnees: [dette_inflation]
+donnees: [dette_inflation, dette_dynamique]
 dataset:
   jeu: "dette_inflation"
   nom: "The 2021–2023 inflation surprise and France's end-2020 fixed-rate marketable government debt: real-value erosion of promised payments, timing, sensitivities"

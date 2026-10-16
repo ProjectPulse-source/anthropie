@@ -4,7 +4,7 @@ description: "Qui paie la dette publique ? Détenir n'est pas payer : impôts, d
 chapo: "Un même effort de {qp.exp_effort} milliards d'euros ne tombe pas sur les mêmes ménages selon la décision prise : par l'enseignement, il pèse surtout sur les plus modestes, par l'impôt sur les plus aisés. Qui paie la dette publique dépend de ce qu'elle finance, de la manière dont elle est financée et des ajustements choisis pour la servir."
 date: 2026-07-04
 lastmod: 2026-10-11
-donnees: [dette_officielle]
+donnees: [dette_officielle, qui_paie_donnees]
 og_title: "Qui paie vraiment la dette publique ? — ce que montrent les données — S. Lalut"
 og_image: "images/og-qui-paie-dette.jpg"
 og_image_alt: "Carte de partage : « Même effort, d'autres payeurs » — un même effort de 10 milliards d'euros, en % du revenu de chaque dixième de niveau de vie, selon trois décisions : baisse de l'enseignement, hausse des impôts, baisse des pensions (Insee, 2023)."

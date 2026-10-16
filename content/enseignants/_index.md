@@ -6,6 +6,7 @@ og_image: "images/og-dette-dynamique.jpg"
 og_image_alt: "La dette publique française décomposée depuis 1995 : la figure d'où part l'activité de Première."
 date: 2026-09-30
 lastmod: 2026-10-02
+date_suit: [dette_dynamique, dette_monde, qui_paie_donnees]  # jeux affichés par la page : leur relevé entre dans sa date (sitemap) ; contrôle scripts/check-dates-jeux.py
 # Adresse du dossier SES (auteur, 03/10/2026) : renvoi vers cette page, qui garde l'adresse des courriels et des ancres.
 aliases: ["/enseignants/ses/"]
 # Page d'USAGE pour les enseignants, non une analyse : elle transforme les ressources existantes en activités,

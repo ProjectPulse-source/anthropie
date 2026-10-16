@@ -5,7 +5,7 @@ description: "Who pays for public debt? Holding it is not paying for it: taxes, 
 chapo: "The same €{qp.exp_effort} billion adjustment falls on different households depending on the decision taken: through education, it weighs mostly on the least well-off; through taxes, on the best-off. Who pays for public debt depends on what it finances, how it is financed and the adjustments chosen to service it."
 date: 2026-09-30
 lastmod: 2026-10-11
-donnees: [dette_officielle]
+donnees: [dette_officielle, qui_paie_donnees]
 og_title: "Who really pays for public debt? — what the data show — S. Lalut"
 og_image: "images/og-qui-paie-dette-en.jpg"
 og_image_alt: "Share card: “Same adjustment, different payers” — the same €10 billion adjustment, as a % of the income of each standard-of-living decile, under three decisions: cutting education, raising taxes, cutting pensions (INSEE, 2023)."

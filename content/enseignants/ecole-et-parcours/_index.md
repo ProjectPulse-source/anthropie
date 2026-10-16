@@ -6,6 +6,7 @@ og_image: "images/og-parcours-licence.jpg"   # scripts/og_enseignants.py ; vigne
 og_image_alt: "Cinq barres empilées : devenir des bacheliers un an après une première année de licence, selon l'origine sociale."
 date: 2026-10-02
 lastmod: 2026-10-02
+date_suit: [parcours_licence, acces_superieur]  # jeux affichés par la page : leur relevé entre dans sa date (sitemap) ; contrôle scripts/check-dates-jeux.py
 # Second thème de la couche enseignants : UNE PAGE PAR THÈME (auteur, 02/10/2026 ; arbitrage
 # .claude/external-audits/ARBITRATIONS/ENTRANTE_2026-10-02_Enseignants_Structure_arbitrage.md). Navigation « École et
 # parcours », titre = la question de l'auteur (verrou). Deux déclencheurs de la règle « page propre » : matière
