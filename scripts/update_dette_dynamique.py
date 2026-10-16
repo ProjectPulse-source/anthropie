@@ -43,6 +43,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import pied_figure  # pied commun, parité des figures téléphone, hauteurs déclarées (scripts/pied_figure.py)
+import langue_generee as lg  # noqa: E402  -- extremums publiés à la précision affichée (organe commun)
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT_DATA = ROOT / "data" / "dette_dynamique.json"
@@ -600,7 +601,7 @@ def affichage(a0, d_depart, rows, total, per, dr):
         A["tresor_marge"] = nb(abs((dr[fen["tresor"][1]]["depenses_hors_interets"] - dr[fen["tresor"][0]]["depenses_hors_interets"])
                                    + (dr[fen["tresor"][1]]["recettes"] - dr[fen["tresor"][0]]["recettes"])))
         A["dette_insee_fin"] = nb(insee_fin) if insee_fin is not None else ""
-        A["ti_creux_an"] = str(min(rows, key=lambda r: r["taux_implicite_pct"])["annee"])
+        A["ti_creux_an"] = str(lg.extremum(rows, lambda r: r["taux_implicite_pct"], 2, maxi=False)["annee"])
         A["ti_creux"] = nb(min(r["taux_implicite_pct"] for r in rows), 2)
         A["ti_2021"], A["ti_2022"] = nb(by[2021]["taux_implicite_pct"], 2), nb(by[2022]["taux_implicite_pct"], 2)
         return A
@@ -664,7 +665,7 @@ def affichage(a0, d_depart, rows, total, per, dr):
         ("« Ce qu'il faut retenir » : depuis la bascule, la seule année d'effet taux-croissance positif est 2020",
          [r["annee"] for r in rows if r["annee"] >= bascule and r["effet_taux_croissance"] >= 0] == [2020]),
         ("« Ce qu'il faut retenir » : le taux implicite « remonte » (creux en 2019 ou après, dernière année au moins 0,5 point au-dessus)",
-         min(rows, key=lambda r: r["taux_implicite_pct"])["annee"] >= 2019
+         lg.extremum(rows, lambda r: r["taux_implicite_pct"], 2, maxi=False)["annee"] >= 2019
          and last["taux_implicite_pct"] > min(r["taux_implicite_pct"] for r in rows) + 0.5),
         # --- troisième tour (Trésor-Éco n° 403, 03/10/2026) : chaque constat du bloc de confrontation, recalculé
         ("2001-2007 : le ratio monte de plus de 4 points (le bloc l'oppose à la « relative stabilité » du Trésor)",
@@ -703,7 +704,7 @@ def affichage(a0, d_depart, rows, total, per, dr):
          and all(by[a]["taux_implicite_pct"] - by[a - 1]["taux_implicite_pct"] < by[2022]["taux_implicite_pct"] - by[2021]["taux_implicite_pct"]
                  for a in by if a > 2022)
          # OPTIMUM-12 : la prose dit « point bas en 2020, légère hausse en 2021, saut en 2022 ».
-         and min(rows, key=lambda r: r["taux_implicite_pct"])["annee"] == 2020
+         and lg.extremum(rows, lambda r: r["taux_implicite_pct"], 2, maxi=False)["annee"] == 2020
          and 0 < by[2021]["taux_implicite_pct"] - by[2020]["taux_implicite_pct"] < 0.3),
         ("OPTIMUM-10 : entre les deux fenêtres de même départ, les dépenses hors intérêts varient d'autant (à 0,1 près) et les "
          "recettes remontent de plus d'un demi-point la dernière année : c'est elles qui retournent la conclusion",

@@ -16,9 +16,16 @@ qui reproduisent ces défauts. Exception possible, jamais muette : `# brut-ok: <
 écrit en clair dans un JSON, une étiquette posée sur une barre qui affiche sa propre valeur…) ; un `brut-ok` sans
 motif est refusé.
 
-Ce qu'il ne voit pas, dit ici : une comparaison stricte `a["x"] > b["x"]` d'une garde de prose (motif trop fréquent
-hors prose pour être interdit mécaniquement : seuils, boucles, tests de cohérence). Elle passe par `lg.depasse` à
-l'adoption ; la relecture du texte servi et la contre-expertise restent la défense.
+Après contre-expertise (anthropie-site-20261016-154235) : six motifs (s'ajoutent l'extremum par clé et la ligne
+compactée), balayage des octets sur le texte entier.
+
+COUVERTURE EXACTE -- ce qu'il ne voit pas, dit ici :
+- une comparaison stricte `a["x"] > b["x"]` d'une garde de prose (motif trop fréquent hors prose pour être interdit
+  mécaniquement : seuils, boucles, tests de cohérence) ; elle passe par `lg.depasse` à l'adoption ;
+- toute expression répartie sur plusieurs lignes, `np.argmax`, un tri suivi d'un `enumerate` ou d'un `[0]` publié
+  comme « le premier », un compactage écrit autrement que `[c for c in r if c is not None]` ;
+- la PERTINENCE d'un `brut-ok` : il exige un motif, il ne le juge pas. `--exceptions` les liste pour la revue.
+La relecture du texte servi et la contre-expertise restent la défense de ce qui échappe aux motifs.
 Condition de mort : aucune -- permanent tant que des générateurs lisent des tableurs et publient des rangs (R2, revue
 annuelle). Sortie console ASCII pur.
 """
@@ -40,6 +47,11 @@ MOTIFS = [
      re.compile(r"isinstance\([^)]*\(\s*int\s*,\s*float\s*\)\s*\)\s+else\s+0")),
     ("ligne de tableur filtree par le type de sa premiere cellule (lt.annee / lt.nombre)",
      re.compile(r"if\s+isinstance\(\s*r\[\d+\]\s*,\s*\(\s*int\s*,\s*float\s*\)\s*\)")),
+    # Ajout après contre-expertise (point 6) : l'élément extrême choisi par une clé -- une année de pic, un pays -- se
+    # choisit au chiffre affiché (lg.extremum ; lg.sommets pour dire un plateau). 70 occurrences au 16/10.
+    ("extremum par cle sur valeur brute (lg.extremum / lg.sommets)", re.compile(r"\b(max|min)\([^#]*\bkey\s*=")),
+    ("ligne compactee avant lecture par position (lt.colonnes / lt.cellules / lt.serie)",
+     re.compile(r"\[\s*c\s+for\s+c\s+in\s+r\s+if\s+c\s+is\s+not\s+None\s*\]")),
 ]
 EXCEPTION = re.compile(r"#\s*brut-ok\s*:\s*(\S.*)?$")
 
@@ -66,8 +78,10 @@ OCTETS = re.compile("[\x00-\x08\x0b\x0c\x0e-\x1f\x7f-\x9f]")
 
 
 def octets(nom: str, texte: str) -> list[str]:
-    return ["%s:%d : octet de controle U+%04X (barre oblique inverse mangee a l'ecriture ?)" % (nom, n, ord(m.group()))
-            for n, ligne in enumerate(texte.splitlines(), 1) for m in [OCTETS.search(ligne)] if m]
+    # Sur le texte ENTIER (contre-expertise anthropie-site-20261016-154235) : splitlines() traite \x0b \x0c \x1c-\x1e et
+    # U+0085 comme des fins de ligne et les faisait disparaître avant l'examen. Ligne = nombre de \n avant l'octet.
+    return ["%s:%d : octet de controle U+%04X (barre oblique inverse mangee a l'ecriture ?)"
+            % (nom, texte.count("\n", 0, m.start()) + 1, ord(m.group())) for m in OCTETS.finditer(texte)]
 
 
 def fichiers() -> list[Path]:
@@ -90,6 +104,11 @@ def temoin() -> int:
         ("imax = rat.index(max(rat))   # brut-ok: etiquette d'une barre qui affiche sa valeur", False),
         ("imax = rat.index(max(rat))   # brut-ok:", True),
         ("rang, eg = lg.rang(v, 'FR', 2)", False),
+        # Cas de la contre-expertise du 16/10, devenus permanents :
+        ("pmax = max(pat, key=lambda x: x['patrimoine_net'])", True),
+        ("ypic = max(serie, key=serie.get)", True),
+        ("ypic = lg.extremum(serie, serie.get, 1)", False),
+        ("f8 = [[c for c in r if c is not None] for r in wb['Figure 8'].iter_rows(values_only=True)]", True),
     ]
     rate = [c for c, attendu in cas if bool(examiner("temoin", c)) != attendu]
     # Mutation d'un VRAI générateur, en mémoire : l'ancienne ligne du rang (avant le 16/10) doit être vue.
@@ -101,18 +120,39 @@ def temoin() -> int:
         rate.append("mutation de update_dette_monde.py non vue")
     if not octets("mutation", 'INTERDITS = [r"' + chr(8) + 'missing' + chr(8) + '"]') or octets("sain", 'r"\\bmissing\\b"'):
         rate.append("balayage des octets de controle mal juge")
+    # Octets que splitlines() avalait (contre-expertise) : chacun doit être vu, à la bonne ligne.
+    for o in (0x0B, 0x0C, 0x1C, 0x1D, 0x1E, 0x85):
+        vu = octets("t", "a = 1\nb = 'x" + chr(o) + "y'\n")
+        if len(vu) != 1 or not vu[0].startswith("t:2 "):
+            rate.append("octet U+%04X mal vu : %r" % (o, vu))
     if rate:
         for c in rate:
             print("  TEMOIN RATE : " + c.encode("ascii", "replace").decode())
         print("Temoin : %d cas sur %d mal juges. ECHEC" % (len(rate), len(cas)))
         return 1
-    print("Temoin : %d cas, chacun juge comme attendu (4 motifs vus, exception motivee admise, exception muette refusee)." % len(cas))
+    print("Temoin : %d cas, chacun juge comme attendu (%d motifs vus, exception motivee admise, exception muette refusee, "
+          "6 octets que splitlines avalait)." % (len(cas), len(MOTIFS)))
+    return 0
+
+
+def exceptions() -> int:
+    """Revue des `brut-ok` : un motif est exigé, sa pertinence se juge ici, à la revue (contre-expertise, point 6)."""
+    n = 0
+    for p in fichiers():
+        for k, ligne in enumerate(p.read_text(encoding="utf-8").splitlines(), 1):
+            m = EXCEPTION.search(ligne)
+            if m and any(rx.search(ligne) for _, rx in MOTIFS):
+                n += 1
+                print("  %s:%d : %s" % (p.name, k, (m.group(1) or "").encode("ascii", "replace").decode()))
+    print("Exceptions motivees : %d" % n)
     return 0
 
 
 def main() -> int:
     if "--temoin" in sys.argv:
         return temoin()
+    if "--exceptions" in sys.argv:
+        return exceptions()
     defauts, n = [], 0
     for p in fichiers():
         n += 1

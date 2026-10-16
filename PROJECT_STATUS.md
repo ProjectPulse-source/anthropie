@@ -52,6 +52,22 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-16 — Contre-expertise du correctif généralisé : quatre blocages levés, 70 extremums traités
+
+Audit `anthropie-site-20261016-154235` (GO AVEC CORRECTIFS), arbitrage `.claude/external-audits/ARBITRATIONS/`
+(gitignoré), audit clos. Blocages réels et préexistants, levés : lignes compactées avant lecture par position
+(promesses-mesurer figures 8 et 1, générations DSM), année non avancée sur ligne vide (promesses-délais), années
+filtrées sous un témoin partiel (empreinte). Organe commun complété : `lt.colonnes`, `lt.cellules`, `lt.serie`,
+`lt.annees_continues`, `lt.entier`, grammaire stricte des nombres (ambiguïté refusée), non-finis refusés ;
+`lg.extremum`, `lg.sommets`. Les 70 `max/min(…, key=…)` des générateurs : publiés ⇒ précision affichée (arrêt sur
+ex aequo) ou plateau dit ; sinon `brut-ok` motivé (21, listés par `check-lecture-donnees.py --exceptions`). Trois
+égalités réelles trouvées : pic de la dépense locale à 11,8 % **en 2009 et 2013** (la page disait « 2009 » ; phrase
+FR/EN relue, instantanés refaits), voisins ex aequo des Pays-Bas dans la règle des faux jumeaux (jumeaux publiés
+inchangés), vote de pixels d'Europe. Contrôle : balayage des octets sur le texte entier (`splitlines` en avalait six),
+deux motifs de plus. Chaque contre-exemple de l'audit est un test permanent ; mutations sur les fichiers réels.
+Points ouverts déclarés : précision associée à chaque comparaison relevée à la main (H1) ; formes multi-lignes hors
+du contrôle statique.
+
 ### 2026-10-16 — Défauts de structure corrigés à l'échelle des générateurs (règle de l'auteur)
 
 Règle de l'auteur (16/10) : un défaut de structure se consigne, se corrige, et la correction s'applique à l'échelle du

@@ -334,10 +334,10 @@ def lire_insee() -> dict:
         # Positions gardées : une cellule vide au milieu décalerait les dixièmes en silence ; elle arrête.
         for r in wb[feuille].iter_rows(values_only=True):
             if r[0] and lt.ligne([r[0]])[0].startswith(debut):
-                v = [lt.valeur(x) for x in lt.entetes(r)[1:]]
-                if any(x is None for x in v):
-                    fail("%s, « %s » : cellule vide ou illisible au milieu de la ligne" % (feuille, debut))
-                return v
+                try:
+                    return lt.serie(r, 1, "%s, « %s »" % (feuille, debut))   # vide de queue toléré, vide interne arrête
+                except ValueError as e:
+                    fail(str(e))
         fail("%s : ligne « %s » introuvable" % (feuille, debut))
 
     ws = wb["Figure 1c"]
@@ -675,7 +675,7 @@ def releve_le() -> str:
     def cle(s):
         j, m, a = s.split(" ")
         return (int(a), MOIS_FR.index(m), int(j))
-    return max((SOURCES_RELEVEES_LE, PIECES_RELEVEES_LE), key=cle)
+    return max((SOURCES_RELEVEES_LE, PIECES_RELEVEES_LE), key=cle)  # brut-ok: date la plus recente
 
 
 def lire_pieces() -> dict:

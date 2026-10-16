@@ -18,6 +18,8 @@ lisent des API en direct). Une copie locale meurt quand son générateur adopte 
 """
 from __future__ import annotations
 
+import math
+
 NBSP = " "
 MOINS = "−"
 LETTRES = {
@@ -37,7 +39,11 @@ def _lang(lang: str) -> str:
 def _val(v) -> float:
     if v is None:
         raise ValueError("valeur absente : rien ne s'ecrit a la place d'une donnee manquante")
-    return float(v)
+    x = float(v)
+    # Contre-expertise du 16/10 : rang({"FR": NaN, "BE": 3}) rendait (1, []) -- une donnée invalide classée première.
+    if not math.isfinite(x):
+        raise ValueError("valeur non finie (%r) : ni s'ecrire, ni se classer, ni se comparer" % (v,))
+    return x
 
 
 def nombre(v, dec: int = 1, lang: str = "fr") -> str:
@@ -157,3 +163,19 @@ def position_unique(valeurs, dec: int = 1, maxi: bool = True, quoi: str = "extre
     if len(p) > 1:
         raise ValueError("%s : ex aequo a l'affichage aux positions %s ; la phrase qui en nomme une est a reecrire" % (quoi, p))
     return p[0]
+
+
+def extremum(elements, cle, dec: int = 1, maxi: bool = True, quoi: str = "extremum"):
+    """Remplace `max(elements, key=cle)` / `min(...)` quand l'élément choisi (une année de pic, un pays, un dixième)
+    soutient une phrase : ValueError si deux éléments s'affichent ex aequo à la précision `dec` (contre-expertise du
+    16/10/2026, point 8 : un sommet « en 2019 » ne se publie pas quand 2019 et 2021 s'affichent pareil)."""
+    el = list(elements)
+    return el[position_unique([cle(x) for x in el], dec, maxi, quoi)]
+
+
+def sommets(serie: dict, dec: int = 1, maxi: bool = True) -> list:
+    """Clés (années, pays…) dont la valeur s'affiche égale à l'extremum, dans l'ordre croissant des clés : pour une
+    phrase qui dit QUAND une série culmine sans choisir arbitrairement entre des années indiscernables à l'affichage
+    (« 11,8 % en 2009 et 2013 »). Pour une phrase qui ne peut en nommer qu'une, utiliser extremum()."""
+    cles = sorted(serie)
+    return [cles[i] for i in positions([serie[k] for k in cles], dec, maxi)]

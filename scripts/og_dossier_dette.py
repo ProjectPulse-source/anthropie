@@ -581,7 +581,7 @@ def carte_inflation() -> None:
     A, E, cal = j["affichage"], j.get("affichage_en"), j["calendrier"]
     T = j["resultats"]["central"]
     lo, hi = min(v["r=0%"] for v in j["famille_A"].values()), max(v["r=0%"] for v in j["famille_A"].values())
-    if not (cal["2023"] < 0.25 * T and abs(cal[max(cal, key=int)] - T) < 0.2):
+    if not (cal["2023"] < 0.25 * T and abs(cal[max(cal, key=int)] - T) < 0.2):  # brut-ok: derniere annee, cle = annee
         fail("carte inflation : le contraste annoncé n'est plus vrai dans les données")
     if not E:
         fail("carte inflation EN : bloc affichage_en absent de data/dette_inflation.json")

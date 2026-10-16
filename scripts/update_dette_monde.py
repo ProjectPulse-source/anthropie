@@ -251,7 +251,7 @@ def ols2(x1: list[float], x2: list[float], y: list[float]) -> tuple[list[float],
     A = [[sum(X[i][a] * X[i][b] for i in range(n)) for b in range(m)] for a in range(m)]
     v = [sum(X[i][a] * y[i] for i in range(n)) for a in range(m)]
     for c in range(m):
-        p = max(range(c, m), key=lambda r: abs(A[r][c]))
+        p = max(range(c, m), key=lambda r: abs(A[r][c]))  # brut-ok: pivot de Gauss, calcul interne non publie
         A[c], A[p], v[c], v[p] = A[p], A[c], v[p], v[c]
         for r in range(m):
             if r != c:
@@ -521,9 +521,14 @@ def faux_jumeaux(rows: list[dict], seuil: float = 10.0, n: int = 3) -> list[dict
     couples a ecart de stock < seuil points ; classes par ecart de charge ; les n premiers."""
     couples = set()
     for x in rows:
-        v = min((y for y in rows if y is not x), key=lambda y: abs(y["stock"] - x["stock"]))
-        if abs(v["stock"] - x["stock"]) < seuil:
-            couples.add(tuple(sorted((x["code"], v["code"]))))
+        # Plus proche voisin À L'AFFICHAGE (stock à une décimale) ; deux voisins indiscernables sont retenus tous deux
+        # (contre-expertise anthropie-site-20261016-154235 : l'ordre de la liste tranchait en silence ; cas réel du
+        # 16/10/2026, Pays-Bas à 1,1 point de la Lettonie et de Malte). Le classement par écart de charge départage.
+        autres = [y for y in rows if y is not x]
+        for i in lg.positions([abs(y["stock"] - x["stock"]) for y in autres], 1, maxi=False):
+            v = autres[i]
+            if abs(v["stock"] - x["stock"]) < seuil:
+                couples.add(tuple(sorted((x["code"], v["code"]))))
     by = {x["code"]: x for x in rows}
     cl = sorted(couples, key=lambda c: -abs(by[c[0]]["charge"] - by[c[1]]["charge"]))[:n]
     out = []
@@ -1282,7 +1287,8 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts) -> tuple
         ("les faux jumeaux : le plus chargé paie plus cher", lg.depasse(hi["prix"], lo["prix"], 2)),
         ("la France est troisième, derrière la Grèce et l'Italie",
          rang == 3 and {x["code"] for x in classement[:2]} == {"EL", "IT"}),
-        ("figure du stock : de la Grèce à l'Estonie", classement[0]["code"] == "EL" and classement[-1]["code"] == "EE"),
+        ("figure du stock : de la Grèce à l'Estonie", lg.extremum(rows, lambda x: x["stock_fin"], 1)["code"] == "EL"
+         and lg.extremum(rows, lambda x: x["stock_fin"], 1, maxi=False)["code"] == "EE"),
         ("euro et inflation rendent compte d'une large part du prix (R2 >= 0,5)", stats["prix_euro_inflation"]["r2"] >= 0.5),
         ("les États-Unis consacrent plus que la France", lg.depasse(av["USA"]["charge"], av["FRA"]["charge"], 1)),
     ]

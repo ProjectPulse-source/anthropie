@@ -39,6 +39,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import pied_figure  # pied commun, version téléphone, parité (scripts/pied_figure.py)
+import langue_generee as lg  # noqa: E402  -- extremums publiés à la précision affichée (organe commun)
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "scripts" / "sources_inflation_dette"
@@ -153,7 +154,7 @@ def calcul_qe(x):
             s, w = emis.get(a, (0.0, 0.0))
             emis[a] = (s + F(r, "emission_MLT_Md"), w + F(r, "emission_MLT_Md") * F(r, "emission_maturite"))
     emis = {a: w / s for a, (s, w) in emis.items()}
-    e1 = max((r for r in ind.values() if r["ecart_E1"]), key=lambda r: F(r, "ecart_E1"))
+    e1 = lg.extremum((r for r in ind.values() if r["ecart_E1"]), lambda r: F(r, "ecart_E1"), 2)
     dern = max(sen)
     serie = [(d, F(r, "S_m_1_Md"), F(r, "S_c_1_Md")) for d, r in sorted(sen.items())]
     # T4, base homogène BCE : rapport consolidée / marché à un an = r1 / F1, par pays et par année
@@ -497,7 +498,7 @@ def fig_achats(q, Aff, lang):
         d = " ".join(("M" if i == 0 else "L") + "%.1f,%.1f" % (X(mois(r[0])), Y(r[k])) for i, r in enumerate(serie))
         e.append('<path d="%s" fill="none" stroke="%s" stroke-width="%s" stroke-linejoin="round"/>' % (d, col, larg))
     # noms posés sur les séries, au milieu de la période d'achats (2018) : la consolidée au-dessus, le marché en dessous
-    r18 = min(serie, key=lambda r: abs(mois(r[0]) - 2018.5))
+    r18 = min(serie, key=lambda r: abs(mois(r[0]) - 2018.5))  # brut-ok: mois le plus proche d'une date, pas un extremum de valeur
     # Libellé de la consolidée posé AU-DESSUS de sa courbe sans la toucher (auteur, 12/10/2026 : « analyse) » mordait sur la
     # remontée de 2020). Départ au point de 2018, recherche vers la gauche d'abord (demande de l'auteur), puis vers la droite :
     # toute la largeur estimée du texte doit rester au-dessus de la courbe, jambages compris, avec une marge. Sinon, arrêt.

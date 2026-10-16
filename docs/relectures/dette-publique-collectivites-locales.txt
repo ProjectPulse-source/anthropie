@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /dette-publique-collectivites-locales/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /dette-publique-collectivites-locales/, build de 2abdeca + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Les collectivités locales sont-elles une variable d'ajustement des finances publiques ?
 La dette des collectivités ne permet pas de trancher : la règle d'équilibre de leurs budgets leur interdit d'emprunter pour compenser une baisse durable des recettes qui financent leurs dépenses courantes, si bien qu'une contrainte venue de l'État se lit dans leurs recettes et leurs dépenses.
@@ -54,7 +54,7 @@ L’écart se documente ; il ne se corrige pas.
 Deux récits, une même série
 L’Association des maires de France, en réponse à la Cour des comptes (juin 2025) : « Considérer les collectivités locales comme la variable d’ajustement des erreurs de stratégie de l’exécutif ne fait que creuser le déficit public. » La Cour des comptes (septembre 2025), « sans se prononcer en opportunité sur son montant », appelle à « organiser dans la durée la participation des collectivités au redressement des finances publiques ».
 La même série donne un appui à chaque lecture.
-La dépense des administrations locales est passée de 9,9 % du PIB en 1995 à 11,8 % en 2009 : c’est l’argument d’une participation des collectivités à l’effort.
+La dépense des administrations locales est passée de 9,9 % du PIB en 1995 à 11,8 % en 2009 et 2013 : c’est l’argument d’une participation des collectivités à l’effort.
 Elle était revenue à 10,9 % en 2017, au terme de la baisse des dotations, et s’établit à 11,2 % en 2025 : c’est l’argument de collectivités déjà mises à contribution.
 Aucune des deux lectures ne suffit seule ; la question utile est de savoir quand, par quel canal et dans quelle unité une contrainte s’observe.
 Pourquoi la dette ne suffit pas à répondre

@@ -644,7 +644,7 @@ def calculer(J: Jeu) -> tuple[dict, list[dict]]:
     for m in MUNICIPALES:
         pic = J.pc(G, "S1313", "P51G", m - 1)
         fen = [(y, J.pc(G, "S1313", "P51G", y)) for y in range(m, m + 3) if J.pc(G, "S1313", "P51G", y) is not None]
-        ycreux, creux = min(fen, key=lambda t: t[1])
+        ycreux, creux = lg.extremum(fen, lambda t: t[1], 2, maxi=False)   # creux publié à 2 décimales (coll-tableau)
         cycles.append({"municipales": m, "pic_annee": m - 1, "pic": pic, "creux_annee": ycreux, "creux": creux, "baisse": creux - pic})
     r["cycles"] = cycles
     c14 = next(c for c in cycles if c["municipales"] == 2014)
@@ -685,18 +685,24 @@ def calculer(J: Jeu) -> tuple[dict, list[dict]]:
         ys = [y for y in J.dette_annees(g, "S1313") if y >= an_dette_deb]  # meme annee de depart pour les quatre pays
         serie = {y: terr_dette(g, y) for y in ys}
         serie_loc = {y: J.dette(g, "S1313", y) for y in ys}
-        ypic = max(serie, key=serie.get)
+        ypic = lg.extremum(serie, serie.get, 1)
         inv = {y: terr_pc(g, "P51G", y) for y in J.annees(g, "S1313", "P51G") if y >= 2000}
         inv_avant = {y: v for y, v in inv.items() if y <= 2010}
         inv_apres = {y: v for y, v in inv.items() if 2011 <= y <= 2019}
-        yi_max = max(inv_avant, key=inv_avant.get)
-        yi_min = min(inv_apres, key=inv_apres.get)
+        # Années du maximum et du minimum : toutes celles qui s'affichent à égalité (plateau), la première sert au calcul ;
+        # la valeur publiée est la même pour toutes (contre-expertise anthropie-site-20261016-154235, point 8).
+        # Les VALEURS restent les extremums exacts (la baisse publiée se calcule sur elles) ; seul le libellé des années
+        # dit le plateau.
+        ans_max, ans_min = lg.sommets(inv_avant, 1), lg.sommets(inv_apres, 1, maxi=False)
+        yi_max = max(inv_avant, key=inv_avant.get)  # brut-ok: valeur exacte du maximum ; ses annees publiees = ans_max
+        yi_min = min(inv_apres, key=inv_apres.get)  # brut-ok: valeur exacte du minimum ; ses annees publiees = ans_min
         excedents = sum(1 for y in range(2012, 2020) if (terr_pc(g, "B9", y) or 0) > 0)
         federe = J.dette(g, "S1312", max(ys)) is not None
         pays.append({
             "geo": g, "nom": NOMS[g], "nom_en": NOMS_EN[g], "federe": federe,
             "dette_deb": serie[min(ys)], "dette_pic": serie[ypic], "dette_pic_annee": ypic, "dette_fin": serie[max(ys)],
             "inv_max": inv_avant[yi_max], "inv_max_annee": yi_max, "inv_min": inv_apres[yi_min], "inv_min_annee": yi_min,
+            "inv_max_annees": ans_max, "inv_min_annees": ans_min,
             "inv_rapport": inv_apres[yi_min] / inv_avant[yi_max],
             "excedents_2012_2019": excedents,
             "dette_loc_fin": serie_loc[max(ys)],
@@ -738,16 +744,18 @@ def calculer(J: Jeu) -> tuple[dict, list[dict]]:
     # 8. Deux recits : la depense locale en part de PIB, sur la plus longue serie
     te = {y: J.pc(G, "S1313", "TE", y) for y in J.annees(G, "S1313", "TE")}
     a_te0 = min(te)
-    a_tepic = max(te, key=te.get)
+    te_pics = lg.sommets(te, 1)                 # 11,8 % en 2009 et en 2013 (données du 16/10/2026) : les deux se disent
+    a_tepic = te_pics[0]
     r["te_a0"], r["te_0"], r["te_apic"], r["te_pic"], r["te_fin"] = a_te0, te[a_te0], a_tepic, te[a_tepic], te[an_fin]
+    r["te_apics"] = te_pics
 
     # 9. OFGL : la maille des praticiens (milliards d'euros courants)
     r["of_dgf_dep_13"], r["of_dgf_dep_17"] = J.of("departements", "Dotation globale de fonctionnement", 2013), J.of("departements", "Dotation globale de fonctionnement", 2017)
     r["of_dgf_reg_13"], r["of_dgf_reg_17"] = J.of("regions", "Dotation globale de fonctionnement", 2013), J.of("regions", "Dotation globale de fonctionnement", 2017)
     r["of_dgf_reg_18"], r["of_tva_reg_18"] = J.of("regions", "Dotation globale de fonctionnement", 2018), J.of("regions", "TVA", 2018)
     eb = {y: J.of("departements", "Epargne brute", y) for y in J.of_annees("departements", "Epargne brute") if y >= 2018}
-    a_ebpic = max(eb, key=eb.get)
-    a_ebmin = min((y for y in eb if y > a_ebpic), key=eb.get)
+    a_ebpic = lg.extremum(eb, eb.get, 1)
+    a_ebmin = lg.extremum((y for y in eb if y > a_ebpic), eb.get, 1, maxi=False)
     an_of = max(eb)
     r["of_an"], r["of_eb_dep_apic"], r["of_eb_dep_pic"] = an_of, a_ebpic, eb[a_ebpic]
     r["of_eb_dep_amin"], r["of_eb_dep_min"], r["of_eb_dep_fin"] = a_ebmin, eb[a_ebmin], eb[an_of]
@@ -800,7 +808,7 @@ def calculer(J: Jeu) -> tuple[dict, list[dict]]:
         ("« l'investissement local a reculé » (2013-2017)", r["ep_inv"] <= -0.3),
         ("« leur solde s'est amélioré » (2013-2017)", r["ep_solde_delta"] > 0),
         ("« jusqu'à un léger excédent »", 0 < r["ep_solde_a1"] < 0.3),
-        ("« un pic isolé en 2010 » (annotation de la figure : compensation de la taxe professionnelle)", max(r["serie_transf_fr"], key=r["serie_transf_fr"].get) == 2010),
+        ("« un pic isolé en 2010 » (annotation de la figure : compensation de la taxe professionnelle)", lg.extremum(r["serie_transf_fr"], r["serie_transf_fr"].get, 1) == 2010),
         ("« plus du double de la plus forte baisse des autres mandats »", r["creux_ratio"] >= 2),
         ("« en points de PIB, les impôts n'ont compensé qu'une partie de la baisse des transferts »", 0 < r["ep_imp"] < -r["ep_transf"]),
         ("« en euros, la hausse des impôts dépasse la baisse des transferts »", r["ep_imp_md"] > -r["ep_cascade_md"][0]["md_eur"] > 0),
@@ -826,7 +834,7 @@ def calculer(J: Jeu) -> tuple[dict, list[dict]]:
         ("« DGF des départements et des régions en baisse de 2013 à 2017 » (OFGL)", r["of_dgf_dep_17"] < r["of_dgf_dep_13"] - 2 and r["of_dgf_reg_17"] < r["of_dgf_reg_13"] - 1),
         ("« 2018 : la DGF des régions disparaît presque, une fraction de TVA la remplace » (OFGL)", r["of_dgf_reg_18"] < 1 and r["of_tva_reg_18"] > 3),
         ("« épargne brute des départements divisée par plus de deux » (OFGL)", r["of_eb_dep_pic"] >= 2 * r["of_eb_dep_min"]),
-        ("« puis remonte » (dernier exercice OFGL au-dessus du creux)", r["of_eb_dep_fin"] > r["of_eb_dep_min"]),
+        ("« puis remonte » (dernier exercice OFGL au-dessus du creux)", lg.depasse(r["of_eb_dep_fin"], r["of_eb_dep_min"])),
         ("« la DGF votée baisse chaque année de 2014 à 2017, de plus de 10 milliards au total » (CGCT L. 1613-1)",
          all(d < 0 for d in r["dgf_vote_baisses"]) and r["dgf_vote"][2013] - r["dgf_vote"][2017] > 10),
         ("« la somme des quatre catégories n'atteint pas la dette Maastricht des administrations locales »",
@@ -924,7 +932,7 @@ def affichage(r: dict, lang: str = "fr") -> dict:
         "recent_inv_deb": fr1(r["recent_inv_deb"], 2), "recent_dette_deb": fr1(r["recent_dette_deb"]),
         "pic2010_md": fr1(r["pic2010_md"], 0),
         "temoin_residu": fr1(r["temoin_residu_max_meur"], 1), "temoin_annees": str(r["temoin_annees"]),
-        "te_a0": str(r["te_a0"]), "te_0": fr1(r["te_0"]), "te_apic": str(r["te_apic"]), "te_pic": fr1(r["te_pic"]), "te_fin": fr1(r["te_fin"]),
+        "te_a0": str(r["te_a0"]), "te_0": fr1(r["te_0"]), "te_apic": lg.enumere([str(y) for y in r["te_apics"]], lang), "te_pic": fr1(r["te_pic"]), "te_fin": fr1(r["te_fin"]),
         "an_ggd": str(r["an_ggd"]), "consolidation_ecart": fr1(r["consolidation_ecart_max"]),
         "of_an": str(r["of_an"]),
         "of_dgf_dep_13": fr1(r["of_dgf_dep_13"]), "of_dgf_dep_17": fr1(r["of_dgf_dep_17"]), "of_dgf_dep_baisse": fr1(r["of_dgf_dep_13"] - r["of_dgf_dep_17"]),
@@ -1014,9 +1022,9 @@ def affichage(r: dict, lang: str = "fr") -> dict:
         a[f"{k}_dette_pic_annee"] = str(p["dette_pic_annee"])
         a[f"{k}_dette_fin"] = fr1(p["dette_fin"])
         a[f"{k}_inv_max"] = fr1(p["inv_max"])
-        a[f"{k}_inv_max_annee"] = str(p["inv_max_annee"])
+        a[f"{k}_inv_max_annee"] = lg.enumere([str(y) for y in p["inv_max_annees"]], lang)
         a[f"{k}_inv_min"] = fr1(p["inv_min"])
-        a[f"{k}_inv_min_annee"] = str(p["inv_min_annee"])
+        a[f"{k}_inv_min_annee"] = lg.enumere([str(y) for y in p["inv_min_annees"]], lang)
         a[f"{k}_inv_baisse_pct"] = fr1(100 * (1 - p["inv_rapport"]), 0)
         a[f"{k}_dette_loc_fin"] = fr1(p["dette_loc_fin"])
         a[f"{k}_detenu_etat"] = fr1(p["detenu_etat"])
@@ -1231,7 +1239,7 @@ def fig_signature(r: dict, A: dict, lang: str = "fr") -> str:
     for s, col in ((tr, GRIS), (inv, BLEU)):
         pts = " ".join("%.1f,%.1f" % (X(a), Y(v)) for a, v in sorted(s.items()) if v is not None)
         e.append('<polyline points="%s" fill="none" stroke="%s" stroke-width="2.6"/>' % (pts, col))
-    a_pic = max(tr, key=tr.get)
+    a_pic = lg.extremum(tr, tr.get, 1)
     for k, l in enumerate(T["sig_pic"]):
         e.append(txt(X(a_pic) - 8, Y(tr[a_pic]) + 4 + 13 * k, l.format(a=a_pic), anchor="end"))
     # Repere terminal de la serie des transferts (pas de lecture au-dela de 2017) et reclassements au contact

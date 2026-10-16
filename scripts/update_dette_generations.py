@@ -443,14 +443,29 @@ def s2():
     wb = openpyxl.load_workbook(piece("dsm"), read_only=True, data_only=True)
     out = {}
     for g in wb.sheetnames:
-        lab = {}
-        for r in wb[g].iter_rows(min_row=180, max_row=200, values_only=True):
-            txt = [v for v in r if isinstance(v, str) and lt.nombre(v) is None]
-            num = [lt.valeur(v) for v in r if lt.valeur(v) is not None]
-            if len(num) >= 4 and txt and txt[-1].strip() not in lab:
-                lab[txt[-1].strip()] = num[:4]
+        # Colonnes des quatre jeux repérées par leurs en-têtes, puis lues À LEUR POSITION (contre-expertise
+        # anthropie-site-20261016-154235 : `num[:4]` après élimination des cellules illisibles laissait la cinquième
+        # valeur prendre la place d'une troisième manquante).
+        rows = [lt.ligne(r) for r in wb[g].iter_rows(min_row=180, max_row=200, values_only=True)]
         try:
-            out[g] = {k: dict(zip(JEUX, lab[lib])) for k, lib in (
+            ib = next(i for i, r in enumerate(rows) if "Baseline" in r and "Lower productivity scenario" in r)
+            cols = (lt.colonnes(rows[ib], ["Baseline", "Lower productivity scenario", "Non-demographic risk scenario"])
+                    + lt.colonnes(rows[ib - 1], ["DSM 2024"]))
+        except (StopIteration, ValueError) as e:
+            fail("DSM, feuille %s : en-tetes des jeux introuvables (%s)" % (g, e))
+        lab = {}
+        for r in rows[ib + 1:]:
+            if "Baseline" in r or "DSM 2024" in r:
+                break                                      # en-tête du bloc suivant (S1) : hors sujet
+            txt = [v for v in r[:cols[0]] if isinstance(v, str) and v.strip() and lt.nombre(v) is None]
+            if not txt or txt[-1].strip() in lab or all(r[c] is None for c in cols if c < len(r)):
+                continue
+            try:
+                lab[txt[-1].strip()] = lt.cellules(r, cols, "DSM %s, %s" % (g, txt[-1].strip()))
+            except ValueError as e:
+                fail(str(e))
+        try:
+            out[g] = {k: dict(zip(JEUX, lab[lt.ligne([lib])[0]])) for k, lib in (     # libellés normalisés des deux côtés
                 ("S2", "Overall value  (% of GDP)"), ("IBP", "Initial budgetary position"), ("CoA", "Ageing costs"),
                 ("pensions", "Pensions"), ("sante", "Health care"), ("dependance", "Long-term care"), ("education", "Education"))}
         except KeyError as e:
@@ -594,8 +609,8 @@ def affichage(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, cons, etat
              bf_var_abs=fr(abs(p1["valeur_financiere_nette"] - p0["valeur_financiere_nette"])))
     # Phase B (11/10/2026) : le bilan devient un complément à deux bornes. Plus haut, encore au-dessus du point de départ,
     # fenêtres d'au moins dix ans, et la dernière décennie (mêmes bornes que d3_lib).
-    pmax = max(pat, key=lambda x: x["patrimoine_net"])
-    psup = max((x for x in pat if x["annee"] > p0["annee"] and lg.depasse(x["patrimoine_net"], p0["patrimoine_net"])), key=lambda x: x["annee"])
+    pmax = lg.extremum(pat, lambda x: x["patrimoine_net"], 1)
+    psup = max((x for x in pat if x["annee"] > p0["annee"] and lg.depasse(x["patrimoine_net"], p0["patrimoine_net"])), key=lambda x: x["annee"])  # brut-ok: derniere annee d'un ensemble, cle = annee
     pd3 = next(x for x in pat if x["annee"] == dec[-1]["debut"])
     fen = [(x, y) for x in pat for y in pat if y["annee"] - x["annee"] >= 10]
     A.update(pn_haut=fr(pmax["patrimoine_net"]), pn_haut_annee=str(pmax["annee"]), pn_sup=fr(psup["patrimoine_net"]),
@@ -626,8 +641,8 @@ def affichage(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, cons, etat
     A["part_hors_k"] = fr(100 - float(A["part_k"].replace(",", ".")), 0)   # « les 82 % restants » : complément de la part AFFICHÉE
     # détention
     d0, d1 = det[0], det[-1]
-    nr_max = max(det, key=lambda x: x["part_non_residents"])
-    bc_max = max(det, key=lambda x: x["part_banque_centrale"])
+    nr_max = lg.extremum(det, lambda x: x["part_non_residents"], 1)
+    bc_max = lg.extremum(det, lambda x: x["part_banque_centrale"], 1)
     maj1 = next(x["annee"] for x in det if x["part_non_residents"] > 50)
     apres = [x for x in det if x["annee"] >= maj1]
     A.update(h0=str(d0["annee"]), h_fin=str(d1["annee"]), nr0=fr(d0["part_non_residents"]), nr_fin=fr(d1["part_non_residents"]),
@@ -640,13 +655,13 @@ def affichage(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, cons, etat
              dette_h_fin=fr(d1["dette"]))
     # La part « nationale » tenue par la banque centrale : première année au-dessus du dixième, autres résidents avant/après
     bc10 = [x for x in det if x["part_banque_centrale"] > 10]
-    avant = max((x for x in det if x["annee"] < bc_max["annee"] and x["part_banque_centrale"] < 3), key=lambda x: x["annee"])
+    avant = max((x for x in det if x["annee"] < bc_max["annee"] and x["part_banque_centrale"] < 3), key=lambda x: x["annee"])  # brut-ok: derniere annee d'un ensemble, cle = annee
     A.update(bc10_premiere=str(bc10[0]["annee"]), an_avant=str(avant["annee"]), ar_avant=fr(avant["part_autres_residents"]),
              ar_fin=fr(d1["part_autres_residents"]))
     # Témoin de périmètre État (Banque de France) : mêmes dates de fin d'année que la série BCE
     ef = {x["annee"]: x["part"] for x in etat["fins"]}
-    emax = max(etat["fins"], key=lambda x: x["part"])
-    emin_apres = min((x for x in etat["fins"] if x["annee"] > emax["annee"]), key=lambda x: x["part"])
+    emax = lg.extremum(etat["fins"], lambda x: x["part"], 1)
+    emin_apres = lg.extremum((x for x in etat["fins"] if x["annee"] > emax["annee"]), lambda x: x["part"], 1, maxi=False)
     A.update(etat_a0=str(etat["fins"][0]["annee"]), etat_0=fr(etat["fins"][0]["part"]), etat_fin=fr(ef[d1["annee"]]),
              etat_max=fr(emax["part"]), etat_max_annee=str(emax["annee"]), etat_min=fr(emin_apres["part"]),
              etat_min_annee=str(emin_apres["annee"]), etat_maj=date_longue(etat["maj"]),

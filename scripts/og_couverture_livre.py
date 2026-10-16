@@ -38,7 +38,7 @@ sift = cv2.SIFT_create(nfeatures=6000)
 def jpeg_quality_of(path: Path) -> int:
     """Qualite libjpeg dont la table de luminance a la meme moyenne que celle du fichier."""
     target = sum(Image.open(path).quantization[0]) / 64
-    best = min(range(50, 101), key=lambda q: abs(_qavg(q) - target))
+    best = min(range(50, 101), key=lambda q: abs(_qavg(q) - target))  # brut-ok: reglage de qualite d'image
     return best
 
 

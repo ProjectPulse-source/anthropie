@@ -223,7 +223,7 @@ def lire_annexe(pdf: Path) -> dict:
     cnt = [sum(1 for j in range(y0, y1) if cls(i, j)) for i in range(W)]
     colonnes = []
     for a, b in ((0, W // 2), (W // 2, W)):
-        m = max(range(a, b), key=lambda i: cnt[i])
+        m = max(range(a, b), key=lambda i: cnt[i])  # brut-ok: lecture de pixels d'une image, l'ambiguite y est controlee a part
         lo = hi = m
         while lo > a and cnt[lo - 1] >= 0.5 * cnt[m]:
             lo -= 1
@@ -232,8 +232,13 @@ def lire_annexe(pdf: Path) -> dict:
         runs, cur = [], None
         for j in range(y0, y1):
             c = [cls(i, j) for i in range(lo, hi + 1)]
-            k = max(("pour", "contre", "abstention"), key=c.count)
-            k = k if c.count(k) >= 0.4 * len(c) else None
+            # Couleur majoritaire de la ligne de pixels : unique et au-dessus de 40 %, sinon aucune (fond). Deux couleurs
+            # à égalité au-dessus du seuil = lecture ambiguë : arrêt (ce `max(key=c.count)` prenait la première en silence).
+            compte = {k_: c.count(k_) for k_ in ("pour", "contre", "abstention")}
+            haut = [k_ for k_, v in compte.items() if v == max(compte.values()) and v >= 0.4 * len(c)]
+            if len(haut) > 1:
+                raise Arret("annexe : ligne de pixels %d partagee entre %s, lecture ambigue" % (j, " et ".join(haut)))
+            k = haut[0] if haut else None
             if cur and cur[0] == k:
                 cur[2] = j
             else:

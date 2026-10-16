@@ -243,14 +243,26 @@ def lire() -> dict:
                   "sha": hashlib.sha256(ip.read_bytes()).hexdigest()}
     import openpyxl
     wb = openpyxl.load_workbook(SRC / "drees_DD76_donnees_2021.xlsx", data_only=True)
+    # Une ligne = une année, de 1972 jusqu'à la note ; l'année n'est écrite qu'une ligne sur cinq et sert de TÉMOIN
+    # (contre-expertise anthropie-site-20261016-154235 : une ligne sans valeur était sautée sans faire avancer l'année,
+    # et toutes les suivantes glissaient d'un an). Valeur absente, année écrite qui contredit le compte : arrêt.
+    lignes = [lt.ligne(r) for r in wb["Graphique 8"].iter_rows(values_only=True)]
+    try:
+        h = next(i for i, r in enumerate(lignes) if "Médecine" in r)
+        col = lignes[h].index("Médecine")
+        fin = next(i for i, r in enumerate(lignes) if isinstance(r[0], str) and r[0].startswith("Note"))
+    except StopIteration:
+        raise Arret("DREES, graphique 8 : en-tete « Medecine » ou note de fin introuvable (la mise en page a change)")
     serie, an = {}, 1972
-    for r in wb["Graphique 8"].iter_rows(values_only=True):
-        v = [c for c in r if c is not None]
-        if not v or lt.valeur(v[-1]) is None:
-            continue
-        if len(v) == 2:
-            an = int(str(v[0]).rstrip("*"))
-        serie[an] = int(lt.valeur(v[-1]))
+    for r in lignes[h + 1:fin]:
+        if r[0] is not None:
+            ecrit = lt.annee(str(r[0]).rstrip("*"))
+            if ecrit != an:
+                raise Arret("DREES, graphique 8 : annee ecrite %r a la place de %d (ligne manquante ou en trop)" % (r[0], an))
+        v = lt.entier(r[col])
+        if v is None:
+            raise Arret("DREES, graphique 8, %d : numerus clausus absent ou non entier (%r)" % (an, r[col]))
+        serie[an] = v
         an += 1
     ondps = json.loads((SRC / "ondps_admis_transcription.json").read_text(encoding="utf-8"))
     pdf = SRC / ondps["fichier"]
@@ -364,7 +376,7 @@ def calculer(S: dict) -> tuple[dict, list[str]]:
     d = S["dd76"]
     if sorted(d) != list(range(1972, 2021)):
         raise Arret("D4 : serie DREES non contigue 1972-2020")
-    amin = min(d, key=d.get)
+    amin = lg.extremum(d, d.get, 0, maxi=False)
     if not d[1972] / d[amin] > 2:
         raise Arret("D4 : « divisees par plus de deux » faux")
     g.append("D4 : minimum %d (%d places), 1972 / minimum = %.2f" % (amin, d[amin], d[1972] / d[amin]))

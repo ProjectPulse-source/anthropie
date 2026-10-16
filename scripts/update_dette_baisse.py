@@ -369,7 +369,7 @@ def affichage(fin, dec, annees, cmp_, europe, cons):
     A["stab_min"] = signe(min(stabs)); A["stab_min_annee"] = str(annees[lg.position_unique(stabs, 1, maxi=False, quoi="solde stabilisant minimal")]["annee"])
     A["stab_max"] = signe(max(stabs)); A["stab_max_annee"] = str(annees[lg.position_unique(stabs, 1, quoi="solde stabilisant maximal")]["annee"])
     # Section « La dette française est-elle soutenable ? » (#soutenable, 03/10/2026 ; arbitrage ENTRANTE_2026-10-03_Test_5_Questions, point 4)
-    creux_ti = min(annees, key=lambda r: r["taux_implicite"])
+    creux_ti = lg.extremum(annees, lambda r: r["taux_implicite"], 1, maxi=False)
     A["ti_creux"] = fr(creux_ti["taux_implicite"]); A["ti_creux_annee"] = str(creux_ti["annee"])
     A["var_derniere"] = fr(abs(last["variation"]))
     # Quatrième tour (document de travail de l'OFCE, E9) : écart au solde stabilisant de l'avant-dernière année.
@@ -423,13 +423,13 @@ def affichage(fin, dec, annees, cmp_, europe, cons):
     if len(gv) != len(haut) or len(gp) != len(haut):
         fail("pays en baisse : volume du PIB absent (scission volume et prix impossible)")
     A["cmp_exc_gv_min"] = fr(min(gv)); A["cmp_exc_gv_max"] = fr(max(gv)); A["cmp_exc_gp_min"] = fr(min(gp)); A["cmp_exc_gp_max"] = fr(max(gp))
-    dmax = max(cmp_, key=lambda f: f["dette_moyenne"])
+    dmax = lg.extremum(cmp_, lambda f: f["dette_moyenne"], 0)
     A["cmp_dm_max_pays"] = art(dmax["pays"]); A["cmp_dm_max"] = fr(dmax["dette_moyenne"], 0)
     # Dernière décennie : où se concentre l'allègement (contre-expertise PRO-20261003-064640, B2)
     d3 = dec[2]
     an3 = [r for r in annees if d3["debut"] <= r["annee"] <= d3["fin"]]
     trios = [an3[k:k + 3] for k in range(len(an3) - 2)]
-    creux = min(trios, key=lambda t: sum(r["solde_stabilisant"] for r in t))
+    creux = lg.extremum(trios, lambda t: sum(r["solde_stabilisant"] for r in t), 1, maxi=False)
     tc_creux = sum(r["solde_stabilisant"] for r in creux)
     A["d3_creux_lib"] = "%d-%d" % (creux[0]["annee"], creux[-1]["annee"]); A["d3_creux_abs"] = fr(abs(tc_creux))
     A["d3_reste"] = signe(d3["taux_croissance"] - tc_creux); A["d3_reste_n"] = lettres(len(an3) - 3)
@@ -439,7 +439,7 @@ def affichage(fin, dec, annees, cmp_, europe, cons):
     # Écart de la dernière année en milliards d'euros (OPTIMUM-24, Q4) : écart comptable × PIB de l'année, jamais saisi.
     A["ecart_md"] = milliers(abs(last["ecart"]) / 100 * last["pib"]); A["pib_dernier_md"] = milliers(last["pib"])
     A["point_md"] = milliers(last["pib"] / 100)   # un point de PIB de la dernière année, en milliards (panel « après », repère d'échelle)
-    pic = max(an3, key=lambda r: r["solde_stabilisant"])
+    pic = lg.extremum(an3, lambda r: r["solde_stabilisant"], 1)
     A["d3_pic_annee"] = str(pic["annee"]); A["d3_pic_tc"] = signe(pic["solde_stabilisant"])
     # Années où le solde atteint le repère sans que le ratio baisse (B4)
     sh = [r["annee"] for r in annees if r["ecart"] >= 0 and r["variation"] > 0]
@@ -508,14 +508,14 @@ def gardes(fin, dec, annees, cmp_, europe, haut, bas, exc_ans):
         ("dernière année : solde stabilisant proche de zéro (entre -0,5 et +0,5)", abs(last["solde_stabilisant"]) < 0.5),
         ("le solde stabilisant varie de plus de 10 points d'une année à l'autre de la série", max(r["solde_stabilisant"] for r in annees) - min(r["solde_stabilisant"] for r in annees) > 10),
         ("le solde stabilisant le plus haut est une année de recul du PIB nominal",
-         max(annees, key=lambda r: r["solde_stabilisant"])["croissance_nominale"] < 0),
+         lg.extremum(annees, lambda r: r["solde_stabilisant"], 1)["croissance_nominale"] < 0),
         ("le solde stabilisant le plus bas est une année de forte croissance nominale (plus de 5 %)",
-         min(annees, key=lambda r: r["solde_stabilisant"])["croissance_nominale"] > 5),
+         lg.extremum(annees, lambda r: r["solde_stabilisant"], 1, maxi=False)["croissance_nominale"] > 5),
         ("moins d'une année sur deux au-dessus du solde stabilisant", sum(1 for r in annees if r["ecart"] >= 0) * 2 < len(annees)),
         # --- section #soutenable et « Ce qu'il faut retenir » (03/10/2026)
         ("dernière année : le ratio n'est pas stabilisé, il monte", last["variation"] > 0),
         ("le taux implicite « remonte » : son creux date de 2019 ou après et la dernière année le dépasse d'au moins 0,5 point",
-         min(annees, key=lambda r: r["taux_implicite"])["annee"] >= 2019
+         lg.extremum(annees, lambda r: r["taux_implicite"], 1, maxi=False)["annee"] >= 2019
          and last["taux_implicite"] > min(r["taux_implicite"] for r in annees) + 0.5),
         ("la croissance nominale « retombe » : la dernière année est sous la moyenne de 2021-2023 d'au moins 3 points",
          sum(r["croissance_nominale"] for r in annees if 2021 <= r["annee"] <= 2023) / 3 - last["croissance_nominale"] > 3),
@@ -550,7 +550,7 @@ def gardes(fin, dec, annees, cmp_, europe, haut, bas, exc_ans):
          sum(r["solde_stabilisant"] for r in min([[r for r in annees if d3["debut"] <= r["annee"] <= d3["fin"]][k:k + 3] for k in range(8)],
                                                    key=lambda t: sum(r["solde_stabilisant"] for r in t))) < d3["taux_croissance"]),
         ("B2 : l'année où l'effet taux-croissance pousse le plus la dette est 2020 et il y est positif",
-         max((r for r in annees if d3["debut"] <= r["annee"] <= d3["fin"]), key=lambda r: r["solde_stabilisant"])["annee"] == 2020
+         lg.extremum((r for r in annees if d3["debut"] <= r["annee"] <= d3["fin"]), lambda r: r["solde_stabilisant"], 1)["annee"] == 2020
          and next(r for r in annees if r["annee"] == 2020)["solde_stabilisant"] > 0),
         ("B3 : à 80 %, un seul pays ajouté connaît une baisse de 15 points avec un déficit primaire moyen (la Slovénie)",
          [f["pays"] for f in europe["sensibilite_seuil"]["80"] if f["pays"] not in {c["pays"] for c in cmp_}
@@ -582,14 +582,14 @@ def gardes(fin, dec, annees, cmp_, europe, haut, bas, exc_ans):
          all(f["croissance_volume_moyenne"] is not None and fr_c["croissance_volume_moyenne"] is not None
              and lg.depasse(f["croissance_volume_moyenne"], fr_c["croissance_volume_moyenne"]) for f in haut)),
         ("B2 : la Grèce a la dette moyenne la plus élevée du groupe (le texte : « une dette si élevée »)",
-         max(cmp_, key=lambda f: f["dette_moyenne"])["pays"] == "EL"),
+         lg.extremum(cmp_, lambda f: f["dette_moyenne"], 0)["pays"] == "EL"),
         ("B2 : écart taux-croissance de la Grèce « à peine plus favorable » que celui de la France (moins d'un point d'écart), et le moins favorable des trois pays en baisse",
          any(f["pays"] == "EL" for f in haut)
          and 0 < (fr_c["taux_implicite_moyen"] - fr_c["croissance_nominale_moyenne"]) - next(f["taux_implicite_moyen"] - f["croissance_nominale_moyenne"] for f in haut if f["pays"] == "EL") < 1
          and next(f["taux_implicite_moyen"] - f["croissance_nominale_moyenne"] for f in haut if f["pays"] == "EL") == max(f["taux_implicite_moyen"] - f["croissance_nominale_moyenne"] for f in haut)),
         ("B2 : 2021-2023 : la première année est un rebond en volume (plus de 5 %), les deux suivantes doivent davantage aux prix qu'au volume",
          (lambda tr: tr[0]["croissance_volume"] > 5 and all((1 + r["croissance_nominale"] / 100) / (1 + r["croissance_volume"] / 100) - 1 > r["croissance_volume"] / 100 for r in tr[1:]))(
-             min([[r for r in annees if d3["debut"] <= r["annee"] <= d3["fin"]][k:k + 3] for k in range(8)], key=lambda t: sum(r["solde_stabilisant"] for r in t)))),
+             lg.extremum([[r for r in annees if d3["debut"] <= r["annee"] <= d3["fin"]][k:k + 3] for k in range(8)], lambda t: sum(r["solde_stabilisant"] for r in t), 1, maxi=False))),
         ("B2 : la Grèce paie « à peu près le même taux » que la France (moins de 0,1 point d'écart de taux implicite moyen) et sa croissance nominale « dépasse à peine » la française (moins d'un point)",
          any(f["pays"] == "EL" and abs(f["taux_implicite_moyen"] - fr_c["taux_implicite_moyen"]) < 0.1
              and 0 < f["croissance_nominale_moyenne"] - fr_c["croissance_nominale_moyenne"] < 1 for f in cmp_)),
@@ -892,7 +892,7 @@ def fig_stabilisant(annees, A):
             e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle">%d</text>' % (X(k), BAS + 16, INK2, r["annee"]))
     # Les deux ruptures (année du repère le plus haut, recul du PIB ; le plus bas, rebond ; gardées), étiquetées À GAUCHE du point :
     # posée à droite, l'étiquette du rebond sortait du cadre (défaut B4 de la phase A).
-    for r_, lib, dy in ((max(annees, key=lambda r: r["solde_stabilisant"]), T["recul"], 4), (min(annees, key=lambda r: r["solde_stabilisant"]), T["rebond"], 20)):
+    for r_, lib, dy in ((lg.extremum(annees, lambda r: r["solde_stabilisant"], 1), T["recul"], 4), (lg.extremum(annees, lambda r: r["solde_stabilisant"], 1, maxi=False), T["rebond"], 20)):
         k = annees.index(r_)
         e.append('<circle cx="%.1f" cy="%.1f" r="3.6" fill="%s" stroke="#ffffff" stroke-width="1"/>' % (X(k), Y(r_["solde_stabilisant"]), GRIS))
         e.append('<text x="%.1f" y="%.1f" font-size="11" fill="%s" text-anchor="end">%d%s%s</text>'
@@ -938,7 +938,7 @@ def fig_stabilisant_m(annees, A):
         k = annees.index(r)
         e.append('<text x="%.1f" y="%.1f" font-size="%s" fill="%s" text-anchor="%s">%d</text>'
                  % (X(k), BAS + 19, FSM, INK2, "start" if k == 0 else ("end" if k == n - 1 else "middle"), r["annee"]))
-    hi = max(annees, key=lambda r: r["solde_stabilisant"]); lo = min(annees, key=lambda r: r["solde_stabilisant"])
+    hi = lg.extremum(annees, lambda r: r["solde_stabilisant"], 1); lo = lg.extremum(annees, lambda r: r["solde_stabilisant"], 1, maxi=False)
     last = annees[-1]
     for r, cle, col in ((hi, "solde_stabilisant", GRIS), (lo, "solde_stabilisant", GRIS), (last, "solde_stabilisant", GRIS), (last, "solde_primaire", ORANGE)):
         e.append('<circle cx="%.1f" cy="%.1f" r="3.6" fill="%s" stroke="#ffffff" stroke-width="1"/>' % (X(annees.index(r)), Y(r[cle]), col))

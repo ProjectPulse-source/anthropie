@@ -15,6 +15,7 @@ from __future__ import annotations
 import html
 
 import pied_figure as PF
+import langue_generee as lg  # noqa: E402  -- extremums publiés à la précision affichée (organe commun)
 
 WM = PF.LARGEUR_M
 FS = PF.POLICE_M
@@ -245,7 +246,7 @@ def fig_ciseau_m(dette_annuel, d41_pib, lang, C, licence_m, svg_d, titre, source
         e.append('<text x="%.1f" y="%.1f" font-size="%s" font-weight="600" fill="%s">%s</text>'
                  % (X(premier[0]) + 2, Y(premier[1]) - 9, FS, coul, esc(nb(premier[1]) + pc)))
         if k == 1:
-            creux = min(pts, key=lambda p: p[1])
+            creux = lg.extremum(pts, lambda p: p[1], 1, maxi=False)
             e.append('<circle cx="%.1f" cy="%.1f" r="3.5" fill="%s"/>' % (X(creux[0]), Y(creux[1]), coul))
             e.append('<text x="%.1f" y="%.1f" font-size="%s" font-weight="600" fill="%s" text-anchor="middle">%s</text>'
                      % (X(creux[0]), Y(creux[1]) + 20, FS, coul, esc(nb(creux[1]) + pc)))
@@ -266,7 +267,7 @@ def fig_charge_m(interets_md, prev, lang, C, licence_m, svg_d, titre, source, no
     y += 16
     X, Y = _courbe_m(e, y, 190, [(obs, C["ORANGE"], 2.6)], a0, a1, 0, vmax, [t for t in (0, 20, 40, 60, 80, 100) if t < vmax],
                      C, mr=14, ans_axe=(a0, obs[-1][0]) if not pv else (a0, a1))
-    creux = min(obs, key=lambda p: p[1])
+    creux = lg.extremum(obs, lambda p: p[1], 1, maxi=False)
     e.append('<circle cx="%.1f" cy="%.1f" r="3.5" fill="%s"/>' % (X(creux[0]), Y(creux[1]), C["ORANGE"]))
     e.append('<text x="%.1f" y="%.1f" font-size="%s" font-weight="600" fill="%s" text-anchor="middle">%s</text>'
              % (X(creux[0]), Y(creux[1]) + 20, FS, C["ORANGE"], esc(nb(creux[1]))))
@@ -329,7 +330,7 @@ def fig_masses_m(interets, cofog, noms, lang, C, licence_m, svg_d, titre, source
     series = [([(a, cofog[c][a]) for a in ans], gris[c], 1.6) for c in fonctions]
     series.append(([(a, interets[a]) for a in ans], C["ORANGE"], 2.6))
     X, Y = _courbe_m(e, y, 200, series, a0, a1, 0, vmax, [t for t in (0, 100, 200, 300) if t < vmax], C)
-    ref = min(ans, key=lambda a: interets[a])
+    ref = lg.extremum(ans, lambda a: interets[a], 0, maxi=False)
     y += 200 + 38
     md = " Md€" if lang == "fr" else " bn"
     lignes = [(noms["interets"], interets[a1], interets[a1] / interets[ref] - 1, C["ORANGE"], 2.6)]
@@ -395,7 +396,7 @@ def fig_taux_m(taux, lang, C, licence_m, svg_d, titre, source, note):
     pts = sorted((int(a), v) for a, v in taux.items())
     y += 30
     X, Y = _courbe_m(e, y, 200, [(pts, C["ORANGE"], 2.6)], pts[0][0], pts[-1][0], 0, 7, (0, 2, 4, 6), C, mr=14)
-    creux = min(pts, key=lambda p: p[1])
+    creux = lg.extremum(pts, lambda p: p[1], 1, maxi=False)
     for (a, v), ancre, dy in ((pts[0], "start", -10), (creux, "middle", 22), (pts[-1], "end", -12)):
         e.append('<circle cx="%.1f" cy="%.1f" r="4" fill="%s"/>' % (X(a), Y(v), C["ORANGE"]))
         e.append('<text x="%.1f" y="%.1f" font-size="15" font-weight="600" fill="%s" text-anchor="%s">%s</text>'

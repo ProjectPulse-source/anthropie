@@ -57,7 +57,7 @@ def main() -> int:
         og.fail("jeu de données absent : %s — lancer scripts/generer_parcours_licence.py d'abord" % JEU)
     j = json.loads(JEU.read_text(encoding="utf-8"))
     A = j["affichage"]
-    cohorte = max(j["cohortes"], key=lambda c: c["annee"])
+    cohorte = max(j["cohortes"], key=lambda c: c["annee"])  # brut-ok: derniere cohorte, cle = annee
     if str(cohorte["annee"]) != A["cohorte"]:
         og.fail("carte licence : la cohorte du bloc affichage n'est pas la plus récente du jeu")
     o = cohorte["origines"]

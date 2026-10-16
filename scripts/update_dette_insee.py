@@ -60,6 +60,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import pied_figure  # noqa: E402
+import langue_generee as lg  # noqa: E402  -- extremums publiés à la précision affichée (organe commun)
 import dette_cout_figures as FIG  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
@@ -895,7 +896,7 @@ def build_svg(dette_pib: dict[str, float], d41_pib: dict[str, float],
 
     first_q, last_q = min(dette_pib), max(dette_pib)
     first_y, last_y = min(d41_pib), max(d41_pib)
-    trough_y = min(d41_pib, key=lambda k: d41_pib[k])
+    trough_y = lg.extremum(d41_pib, lambda k: d41_pib[k], 1, maxi=False)
     x2022 = _x(2022.0, t0, t1)
 
     e = []
@@ -1052,7 +1053,7 @@ def build_svg_taux(taux: dict[str, float], lang: str = "fr") -> str:
 
     pts = [(x(yr), y(taux[str(yr)])) for yr in years]
     first, last = str(years[0]), str(years[-1])
-    trough = min(taux, key=lambda k: taux[k])
+    trough = lg.extremum(taux, lambda k: taux[k], 1, maxi=False)
 
     T = LABELS_TAUX[lang]
     num = (lambda v: fr(v, 1)) if lang == "fr" else (lambda v: en(v, 1))
@@ -1159,7 +1160,7 @@ def build_svg_marche(apparent: dict, marche: dict, lang: str = "fr") -> str:
     L = LABELS_MARCHE[lang]
     num = (lambda v: fr(v, 1)) if lang == "fr" else (lambda v: en(v, 1))
     first, last = str(years[0]), str(years[-1])
-    creux = min((str(a) for a in years), key=lambda k: marche[k])
+    creux = lg.extremum((str(a) for a in years), lambda k: marche[k], 1, maxi=False)
     pa = [(x(a), y(apparent[str(a)])) for a in years]
     pm = [(x(a), y(marche[str(a)])) for a in years]
 
@@ -1245,7 +1246,7 @@ def build_svg_charge(interets_md: dict, lang: str = "fr", prev: dict | None = No
           "src_prev": "; open circles: Government forecast, %d budget bill (HCFP opinion, para. 115)"})
     ans = sorted(int(a) for a in interets_md)
     a0, a1 = ans[0], ans[-1]
-    creux = min(ans, key=lambda a: interets_md[a])
+    creux = lg.extremum(ans, lambda a: interets_md[a], 1, maxi=False)
     # PREVISION : jamais au rang d'une observation -- pointille, cercle evide,
     # etiquette portant l'emetteur. Elle etend l'axe et l'echelle.
     pv = sorted((a, v) for a, v in (prev or {}).items() if a > a1)
@@ -1359,10 +1360,10 @@ def build_svg_masses(interets: dict, cofog: dict, lang: str = "fr") -> str:
          '<desc id="ma-d">%s</desc>' % _esc(L["desc"] % (a0, a1, L["desc_fin"] % (
              a1, ", ".join("%s %s" % (L["series"][c], num((interets if c == "interets" else cofog[c])[a1], 0))
                            for c in ("interets", "GF07", "GF09", "GF03")),
-             min(ans, key=lambda a: interets[a]),
+             lg.extremum(ans, lambda a: interets[a], 0, maxi=False),
              ", ".join("%s %+d%s" % (L["series"][c], round(((interets if c == "interets" else cofog[c])[a1]
                                                             / (interets if c == "interets" else cofog[c])[
-                                                                min(ans, key=lambda a: interets[a])] - 1) * 100),
+                                                                lg.extremum(ans, lambda a: interets[a], 0, maxi=False)] - 1) * 100),
                                      " %" if lang == "fr" else "%")
                        for c in ("interets", "GF07", "GF09", "GF03"))))),
          '<text x="0" y="22" font-size="%d" font-weight="600" fill="%s">%s</text>'
@@ -1382,7 +1383,7 @@ def build_svg_masses(interets: dict, cofog: dict, lang: str = "fr") -> str:
                      % (X(a), H - mb + 18, TY_AXE, MUTED, a))
     # Annee de reference des croissances : le CREUX de la charge d'interets. Il se
     # calcule, il ne se choisit pas -- sinon la comparaison deviendrait un cadrage.
-    ref = min(ans, key=lambda a: interets[a])
+    ref = lg.extremum(ans, lambda a: interets[a], 0, maxi=False)
     # contexte d'abord, serie heroine ensuite : l'ordre de dessin est la hierarchie
     gris = {"GF07": INK2, "GF09": MUTED, "GF03": CTX3}
     bouts = []
@@ -1928,8 +1929,8 @@ def main() -> int:
     # -- derives (un seul endroit de calcul) --------------------------------
     hist = faits_historiques(annuel, dette_pib[max(dette_pib)])
     last_y = max(d41_mdeur)
-    trough_y = min(d41_pib, key=lambda k: d41_pib[k])
-    peak_q = max(dette_pib, key=lambda k: dette_pib[k])
+    trough_y = lg.extremum(d41_pib, lambda k: d41_pib[k], 1, maxi=False)
+    peak_q = lg.extremum(dette_pib, lambda k: dette_pib[k], 1)
     equiv_y = str(min(int(last_y), int(max(cofog_mio.get("GF0303", {"0": 0})))))
     cof24 = {c: round(cofog_mio[c][equiv_y] / 1000.0, 1)
              for c in ("GF0303", "GF03", "GF07", "GF09") if equiv_y in cofog_mio.get(c, {})}
@@ -1962,7 +1963,7 @@ def main() -> int:
               % len(taux_apparent))
         return 1
     ta_first = min(taux_apparent)
-    ta_trough = min(taux_apparent, key=lambda k: taux_apparent[k])
+    ta_trough = lg.extremum(taux_apparent, lambda k: taux_apparent[k], 1, maxi=False)
     ta_last = max(taux_apparent)
     for y, v in taux_apparent.items():
         in_band("taux_apparent[%s]" % y, v, 0.5, 12.0)
@@ -1989,7 +1990,7 @@ def main() -> int:
     # rapport s'inverse un jour.
     trajectoire_lue = lire_trajectoire()
     an_c = [a for a in d41_mdeur if a in cofog_mio.get("GF07", {})]
-    creux_ref = min(an_c, key=lambda a: d41_mdeur[a])
+    creux_ref = lg.extremum(an_c, lambda a: d41_mdeur[a], 1, maxi=False)
     fin_c = max(an_c)
     croiss_int = (d41_mdeur[fin_c] / d41_mdeur[creux_ref] - 1) * 100
     croiss_fonc_max = max((cofog_mio[c][fin_c] / cofog_mio[c][creux_ref] - 1) * 100
@@ -2026,7 +2027,7 @@ def main() -> int:
     dec_cumul = dict(a0=an_creux, a1=an_fin, **somme(dec_rows))
     if abs(dec_cumul["delta"] - (d41_mdeur[str(an_fin)] - d41_mdeur[str(an_creux)])) > 0.05:
         fail("decomposition : la somme des variations annuelles ne restitue pas la variation totale")
-    saut = max(dec_rows, key=lambda r: taux_apparent[str(r["annee"])] - taux_apparent[str(r["annee"] - 1)])
+    saut = lg.extremum(dec_rows, lambda r: taux_apparent[str(r["annee"])] - taux_apparent[str(r["annee"] - 1)], 2)
     dec_apres = somme([r for r in dec_rows if r["annee"] > saut["annee"]]) if saut["annee"] < an_fin else None
     # OPTIMUM-16 : le partage depend de la base. Depuis 2019 (reference fixe d'avant la crise sanitaire, comme pour la
     # charge), l'annee 2020 entre dans le calcul : la charge y baisse, le taux implicite aussi. Le partage s'inverse.
@@ -2063,7 +2064,7 @@ def main() -> int:
     croiss_autres = {c: (cofog10[c][fin_c] / cofog10[c][creux_ref] - 1) * 100 for c in autres
                      if fin_c in cofog10.get(c, {}) and creux_ref in cofog10.get(c, {})}
     prose(len(croiss_autres) == 9, "les neuf autres grandes fonctions sont toutes lues")
-    c_max = max(croiss_autres, key=croiss_autres.get) if croiss_autres else "GF06"
+    c_max = max(croiss_autres, key=croiss_autres.get) if croiss_autres else "GF06"  # brut-ok: la garde compare au maximum ; l'element choisi n'est pas publie
     prose(croiss_int > croiss_autres.get(c_max, 1e9),
           "depuis le creux, la charge progresse plus vite que chacune des neuf autres grandes fonctions")
 
@@ -2081,7 +2082,7 @@ def main() -> int:
         prose(cofog_mio[c][equiv_y] >= cofog_mio[c][creux_ref],
               "%s n'a pas baisse en euros depuis le creux de la charge" % c)
         prose(cofog_pib[c][equiv_y] >= cofog_pib[c]["2019"], "%s, en part du PIB, est au-dessus de 2019" % c)
-        pic_pib[c] = max((y for y in cofog_pib[c] if "2019" < y <= equiv_y), key=lambda y: cofog_pib[c][y])
+        pic_pib[c] = lg.extremum((y for y in cofog_pib[c] if "2019" < y <= equiv_y), lambda y: cofog_pib[c][y], 1)
         prose(cofog_pib[c][equiv_y] < cofog_pib[c][pic_pib[c]] and pic_pib[c] in ("2020", "2021"),
               "%s, en part du PIB, reste sous son pic de 2020-2021" % c)
     s60 = hist["seuils"][60]

@@ -140,7 +140,7 @@ def calcul(X):
            "lp": c26["caplp"]["Mathématiques - physique chimie"]}
     return dict(
         ed=ed, ed_max_avant=max(v for a, v in ed.items() if a <= 2015),
-        ed_an_max_avant=max((a for a, v in ed.items() if a <= 2015), key=lambda a: ed[a]),
+        ed_an_max_avant=lg.extremum((a for a, v in ed.items() if a <= 2015), lambda a: ed[a], 1),
         ed_depuis20=[ed[a] for a in ed if a >= 2020], ed_dern=max(ed),
         v1=v1, a0=a0, a1=a1,
         el_var=v1[a1]["eleves"] / v1[a0]["eleves"] - 1, div_var=v1[a1]["divisions"] / v1[a0]["divisions"] - 1,
@@ -152,7 +152,7 @@ def calcul(X):
         nat=nat, contr=contr, e7=e7,
         t26={k: taux(d) for k, d in k26.items()}, p26={k: postes(d) for k, d in k26.items()},
         c1_2025=X["c1_2025"], ocde_depp=X["ocde_depp"], dec=X["d4"]["deciles"],
-        c1=c1, c1_max_an=max(c1, key=c1.get), c3=c3,
+        c1=c1, c1_max_an=lg.extremum(c1, c1.get, 0), c3=c3,
         acad=acad, metro=metro, disc=disc_ok, grp=grp,
         es_toutes=next(d["es"] for d in X["v4"]["es_disciplines"] if d["discipline"] == "Toutes disciplines"),
         e4=e4, e4_nom=e4_nom, e4_prix=e4_prix, e4_reel=e4_reel, e4_el=e4_el, e4_par_el=e4_par_el, p_dern=p_dern,
@@ -250,7 +250,7 @@ def calcul_bati(B):
     return dict(
         R=R, cs=cs, inv=inv, fon=fon, dL=dL, P=P, elast=elast, rap_inv=rap(inv), cv_inv=cv(list(inv.values())),
         cv_fon=cv(list(fon.values())), inv_min1=ordre_inv[0], inv_min2=ordre_inv[1], inv_max=ordre_inv[-1],
-        rap204=rap(inv204), rap204_sc=rap(sans_corse), min204=min(inv204, key=inv204.get),
+        rap204=rap(inv204), rap204_sc=rap(sans_corse), min204=lg.extremum(inv204, inv204.get, 0, maxi=False),
         rho_pt=rho(P, T), rho_pf=rho(P, fon), prive_top=sorted(cs, key=P.get)[-2:], inv_top=ordre_inv[-2:],
         rho_lf=rho(dL, fon), rho_ll=rho(dL, fon_lyc), med_bas=mediane(bas), med_haut=mediane(haut),
         n_bas=len(bas), n_haut=len(haut), meca=rap({c: 1 / (1 + dL[c]) for c in cs}),
@@ -371,11 +371,11 @@ def gardes(c):
     cpp = lambda r: r["presents"] / r["postes"]
     g(1.8 <= cpp(f0) / cpp(f1) <= 2.2, "« deux fois moins de candidats par poste » : %.2f" % (cpp(f0) / cpp(f1)))
     suites = {a: fx[a]["presents"] / fx[a - 1]["presents"] - 1 for a in fx if a - 1 in fx}
-    g(min(suites, key=suites.get) == 2022 and suites[2022] < -0.25,
+    g(lg.extremum(suites, suites.get, 1, maxi=False) == 2022 and suites[2022] < -0.25,
       "« la plus forte baisse d'une session à la suivante est celle de 2022 » : %s" % {a: round(v, 3) for a, v in suites.items()})
     # Enseignants des formations GT (RERS 9.09, public + privé) : hausse jusqu'en 2017, recul depuis
     en, v1 = c["ens"], c["v1"]
-    a_max = max(en, key=en.get)
+    a_max = lg.extremum(en, en.get, 0)
     g(a_max == 2017 and en[max(en)] < en[a_max] and en[min(en)] < en[a_max],
       "« les enseignants des formations GT ont augmenté jusqu'en 2017, puis reculé » : %s" % en)
     g(v1[2025]["eleves"] / v1[2015]["eleves"] - 1 > en[2025] / en[2015] - 1 + 0.02,
@@ -443,8 +443,8 @@ def affichage(c):
     rap = {a: v["FRA"] / v["OECD"] for a, v in c["c3"].items()}
     a_rmin, a_rmax = min(rap), max(rap)
     nat = c["nat"]
-    lo_m, hi_m = min(c["metro"], key=c["metro"].get), max(c["metro"], key=c["metro"].get)
-    lo_a, hi_a = min(c["acad"], key=c["acad"].get), max(c["acad"], key=c["acad"].get)
+    lo_m, hi_m = lg.extremum(c["metro"], c["metro"].get, 1, maxi=False), lg.extremum(c["metro"], c["metro"].get, 1)
+    lo_a, hi_a = lg.extremum(c["acad"], c["acad"].get, 1, maxi=False), lg.extremum(c["acad"], c["acad"].get, 1)
     dmin, dmax = c["disc"][0], c["disc"][-1]
     disc_txt = {d["discipline"]: d["es"] for d in c["disc"]}
     an_grp = str(max(map(int, c["grp"]["Première générale"])))
@@ -543,7 +543,7 @@ def affichage_phase_b(c):
         "sd_var_lo": nb(t22 - 0.5 - t24), "sd_var_hi": nb(t22 + 0.5 - t24),
         "en_a0": str(min(c["ens"])), "en_a1": str(max(c["ens"])), "en0": nb(c["ens"][min(c["ens"])], 0),
         "en1": nb(c["ens"][max(c["ens"])], 0), "en_max": nb(max(c["ens"].values()), 0),
-        "en_max_an": str(max(c["ens"], key=c["ens"].get)),
+        "en_max_an": str(lg.extremum(c["ens"], c["ens"].get, 0)),
         "en_recul": nb(100 * (1 - c["ens"][max(c["ens"])] / max(c["ens"].values()))),
         "en_var15": nb(100 * (c["ens"][2025] / c["ens"][2015] - 1)),
         "el_var15": nb(100 * (c["v1"][2025]["eleves"] / c["v1"][2015]["eleves"] - 1)),

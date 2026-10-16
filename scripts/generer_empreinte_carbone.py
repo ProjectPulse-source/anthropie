@@ -72,6 +72,18 @@ def _n(v, ou: str, quoi: str) -> float:
     return x
 
 
+def _annees_completes(rows, ncol: int, annee: int, ou: str) -> None:
+    """Contre-expertise anthropie-site-20261016-154235 : une année illisible ne doit pas sortir en silence. Toute ligne
+    qui porte des valeurs a une année lisible ; les années vont de 1990 à l'année de l'édition, sans trou ni doublon."""
+    for r in rows:
+        if lt.annee(r[0]) is None and any(lt.nombre(c) is not None for c in r[1:ncol + 1]):
+            fail("%s : ligne de donnees sans annee lisible (%r)" % (ou, r[0]))
+    try:
+        lt.annees_continues([lt.annee(r[0]) for r in rows if lt.annee(r[0]) is not None], 1990, annee, ou)
+    except ValueError as e:
+        fail(str(e))
+
+
 def lire(sums: dict[str, str]) -> dict:
     import openpyxl
     p = SRC / FICHIER
@@ -94,7 +106,7 @@ def lire(sums: dict[str, str]) -> dict:
     annee = int(titre.strip().split()[-1])
     if lt.entetes(f1[1])[:4] != ["Type d'émissions", "Émissions françaises", "Émissions importées", "Empreinte carbone"]:
         fail("figure 1 : en-tetes changes : %s" % lt.entetes(f1[1])[:4])
-    par = {lt.entetes([r[0]])[0]: r for r in f1[3:] if isinstance(r[0], str)}
+    par = {lt.ligne([r[0]])[0]: r for r in f1[3:] if isinstance(r[0], str) and r[0].strip()}   # libellé vide ignoré
     manq = [v for v in L1.values() if v not in par]
     if manq:
         fail("figure 1 : lignes absentes ou renommees : %s" % " | ".join(manq))
@@ -120,6 +132,7 @@ def lire(sums: dict[str, str]) -> dict:
         ent3[0] = "Années"
     if ent3 != ["Années", "Émissions directes des ménages", "Émissions intérieures", "Émissions importées", "Empreinte totale"]:
         fail("figure 3 : en-tetes changes : %s" % ent3)
+    _annees_completes(f3[3:], 4, annee, "figure 3")
     serie = [dict(annee=lt.annee(r[0]), **{k: _n(r[i], "figure 3", k) for i, k in enumerate(SERIE3, 1)})
              for r in f3[3:] if lt.annee(r[0]) is not None]
     der = serie[-1]
@@ -127,6 +140,7 @@ def lire(sums: dict[str, str]) -> dict:
     if der["annee"] != annee or any(der[k] != d[k] for k in ("menages", "interieure", "importee", "empreinte")):
         fail("figure 3 : la derniere annee ne correspond pas a la figure 1")
     t2 = lignes("Tableau complémentaire 2")
+    _annees_completes(t2[3:], 12, annee, "tableau complementaire 2")
     # Édition 2026 : l'année y est écrite en texte (« 1990 ») -- lt.annee() la lit sous les deux formes.
     em = {lt.annee(r[0]): dict(emissions=_n(r[1], "tableau 2", "emissions") / 1000, empreinte=_n(r[4], "tableau 2", "empreinte") / 1000,
                                emissions_hab=_n(r[7], "tableau 2", "emissions_hab"), empreinte_hab=_n(r[10], "tableau 2", "empreinte_hab"))

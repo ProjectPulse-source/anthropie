@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /en/local-government-debt/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /en/local-government-debt/, build de 2abdeca + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Are local authorities the adjustment variable of public finances?
 Local authorities' debt does not settle the question: the balanced-budget rule forbids them to borrow to offset a lasting fall in the revenue that pays for their day-to-day spending, so a constraint coming from central government shows up in their revenue and spending.
@@ -55,7 +55,7 @@ Two narratives, one series
 The Association of French Mayors (Association des maires de France), responding to the Court of Audit (Cour des comptes) in June 2025: “Treating local authorities as the adjustment variable for the executive’s strategic errors only deepens the public deficit” (our translation).
 The Court of Audit (September 2025), “without ruling on the appropriateness of its amount”, calls for “organising, over time, local authorities’ participation in the recovery of public finances” (our translation).
 The same series lends support to each reading.
-Local government spending rose from 9.9% of GDP in 1995 to 11.8% in 2009: that is the argument for local authorities sharing in the effort.
+Local government spending rose from 9.9% of GDP in 1995 to 11.8% in 2009 and 2013: that is the argument for local authorities sharing in the effort.
 It had come back down to 10.9% in 2017, at the end of the grant cuts, and stands at 11.2% in 2025: that is the argument of authorities already called upon to contribute.
 Neither reading suffices on its own; the useful question is when, through which channel and in which unit a constraint can be seen.
 Why the debt is not enough to answer

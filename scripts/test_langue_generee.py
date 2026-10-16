@@ -124,6 +124,41 @@ class RangEtComparaison(unittest.TestCase):
         with self.assertRaises(ValueError):
             L.position_unique([1.42, 1.38, 1.0], 1)
 
+    def test_non_fini_refuse(self):
+        # Contre-expertise du 16/10 : rang({"FR": NaN, "BE": 3}, "FR", 2) rendait (1, []).
+        with self.assertRaises(ValueError):
+            L.rang({"FR": float("nan"), "BE": 3.0}, "FR", 2)
+        with self.assertRaises(ValueError):
+            L.depasse(float("inf"), 1.0)
+
+    def test_extremum_unique_ou_arret(self):
+        ans = [{"a": 2019, "v": 3.04}, {"a": 2020, "v": 2.95}, {"a": 2021, "v": 3.01}]
+        self.assertEqual(L.extremum(ans, lambda r: r["v"], 2)["a"], 2019)
+        with self.assertRaises(ValueError):                    # 3,0 et 3,0 à une décimale : pic indiscernable
+            L.extremum(ans, lambda r: r["v"], 1)
+
+    def test_sommets_plateau(self):
+        te = {2007: 11.62, 2009: 11.8411, 2013: 11.7722, 2020: 11.2}
+        self.assertEqual(L.sommets(te, 1), [2009, 2013])
+        self.assertEqual(L.sommets(te, 2), [2009])
+        self.assertEqual(L.enumere([str(a) for a in L.sommets(te, 1)]), "2009 et 2013")
+
+    def test_formats_locaux_arrondissent_comme_affichee(self):
+        """Hypothèse H2 du paquet, rendue testable : les fonctions de format des générateurs qui ont adopté depasse/rang
+        arrondissent comme affichee() (sinon une comparaison « au chiffre affiché » ne verrait pas ce que lit le lecteur)."""
+        import importlib
+        fmts = []
+        for mod, nom in (("update_dette_monde", "fr"), ("update_dette_baisse", "fr"), ("update_dette_generations", "fr"),
+                         ("update_lycee_professeurs", "nb"), ("generer_parcours_licence", "fr")):
+            fmts.append((mod, getattr(importlib.import_module(mod), nom)))
+        valeurs = [2.2285, 2.2278, 2.225, 2.235, -0.004, 0.05, 1.45, 12.345, -3.335, 100.5, 0.0]
+        for mod, f in fmts:
+            for dec in (0, 1, 2):
+                for v in valeurs:
+                    lu = float(f(v, dec).replace(L.NBSP, "").replace(" ", "").replace(" ", "")
+                               .replace(L.MOINS, "-").replace(",", "."))
+                    self.assertEqual(lu, L.affichee(v, dec), "%s.fr(%r, %d)" % (mod, v, dec))
+
     def test_absent(self):
         with self.assertRaises(ValueError):
             L.rang({"a": 1.0}, "z")

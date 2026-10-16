@@ -38,6 +38,7 @@ import sys
 from pathlib import Path
 
 import pied_figure  # pied commun des figures détaillées (scripts/pied_figure.py)
+import langue_generee as lg  # noqa: E402  -- extremums publiés à la précision affichée (organe commun)
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "scripts" / "sources_langue_eleves"
@@ -252,7 +253,7 @@ def gardes(c):
     g(dic["vingt_cinq_ou_plus"]["2021"] > 3.5 * dic["vingt_cinq_ou_plus"]["1987"], "dictée : la part à 25 erreurs ou plus « a quadruplé »")
     sat = six["satisfaisant_par_domaine_2025"]
     ecarts = {d: sat["Groupe d'IPS 5"][d] - sat["Groupe d'IPS 1"][d] for d in DOMAINES_6E}
-    g(max(ecarts, key=ecarts.get) == "Lexique", "sixième 2025 : l'écart social est « le plus grand en lexique »")
+    g(lg.extremum(ecarts, ecarts.get, 1) == "Lexique", "sixième 2025 : l'écart social est « le plus grand en lexique »")
     g(sat["Groupe d'IPS 5"]["Lexique"] > 2 * sat["Groupe d'IPS 1"]["Lexique"], "sixième 2025 : en lexique, « plus du double » dans les collèges favorisés")
     # lecture pour le plaisir
     jr = oc["joyread"]

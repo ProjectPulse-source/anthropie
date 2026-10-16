@@ -696,7 +696,7 @@ def affichage(R, S, r, sc=None) -> tuple[dict, dict]:
              "depots_auteurs": lg.enumere([L(x["auteurs"]) for x in DEPOTS_SANS_SAISINE], lang),
              "n_loi": L(r["N"] - r["art89"]).capitalize(),
              "n_rev": ("un seul" if lang == "fr" else "only one") if r["art89"] == 1 else L(r["art89"]),
-             "part_min_an": min(R, key=part)["date_scrutin"][:4], "part_max_an": max(R, key=part)["date_scrutin"][:4],
+             "part_min_an": lg.extremum(R, part, 1, maxi=False)["date_scrutin"][:4], "part_max_an": lg.extremum(R, part, 1)["date_scrutin"][:4],
              "non_conformes": L(r["S"] - r["C"]), "cond2_maj": L(r["cond2"]).capitalize(), "cond3_maj": L(r["cond3"]).capitalize(),
              "cit_2007_560": CIT_2007_560[0], "cit_elysee": CIT_ELYSEE, "cit_clause_2004": CLAUSE_2004_PAGE,
              "cit_congres_2008": CONGRES_2008_PAGE,

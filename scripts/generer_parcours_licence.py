@@ -166,16 +166,18 @@ def lire_cohorte(annee: int, sums: dict[str, str]) -> dict:
     i_strict = entetes.index(STRICT) if STRICT in entetes else None
 
     def ligne(r) -> dict:
-        d = {k: lt.nombre(r[i]) for k, i in ix.items()}
+        d = {k: lt.entier(r[i]) for k, i in ix.items()}          # un effectif est un entier : 12,5 arrête, jamais int()
         if any(v is None for v in d.values()):
-            fail("%d, %s : valeur manquante dans les effectifs" % (annee, r[2]))   # manquant n'est pas zéro
-        d = {k: int(v) for k, v in d.items()}
+            fail("%d, %s : effectif manquant ou non entier" % (annee, r[2]))   # manquant n'est pas zéro
         taux = {k: lt.nombre(r[i]) for k, i in it.items()}
         if any(v is None for v in taux.values()):
             fail("%d, %s : taux publie manquant" % (annee, r[2]))
         d["taux_publies"] = taux
-        strict = lt.nombre(r[i_strict]) if i_strict is not None else None
-        d["redoublement_strict"] = int(strict) if strict is not None else None    # colonne absente des anciennes cohortes
+        d["redoublement_strict"] = None                             # colonne absente des anciennes cohortes
+        if i_strict is not None and r[i_strict] is not None:
+            d["redoublement_strict"] = lt.entier(r[i_strict])
+            if d["redoublement_strict"] is None:
+                fail("%d, %s : redoublement strict illisible ou non entier (%r)" % (annee, r[2], r[i_strict]))
         # témoin 1 : le taux publié se retrouve depuis les effectifs
         for k in ISSUES:
             if abs(100 * d[k] / d["inscrits"] - d["taux_publies"][k]) > 0.0501:

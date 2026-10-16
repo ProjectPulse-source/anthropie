@@ -51,6 +51,57 @@ class Nombre(unittest.TestCase):
         self.assertIsNone(T.valeur("///"))
 
 
+class ContreExpertise(unittest.TestCase):
+    """Contre-exemples de la contre-expertise anthropie-site-20261016-154235, devenus permanents."""
+
+    def test_ambiguite_refusee(self):
+        for v in ("1.234", "1,234", "12,345", "-1.500"):
+            self.assertIsNone(T.nombre(v), v)
+        self.assertEqual(T.nombre("1.234", decimal="."), 1.234)
+        self.assertEqual(T.nombre("1.234", decimal=","), 1234.0)
+        self.assertEqual(T.nombre("0,354"), 0.354)          # partie entière nulle : pas de milliers possibles
+        self.assertEqual(T.nombre("10.1"), 10.1)
+
+    def test_formes_mal_formees_refusees(self):
+        for v in ("1 2,3", "12%%", "1 23 456", "1,2,3", "--4"):
+            self.assertIsNone(T.nombre(v), v)
+        self.assertEqual(T.nombre("1 234 567"), 1234567.0)
+
+    def test_non_finis_refuses(self):
+        for v in (float("nan"), float("inf"), float("-inf"), "nan", "inf"):
+            self.assertIsNone(T.nombre(v), v)
+            self.assertIsNone(T.valeur(v), v)
+
+    def test_entier_exige(self):
+        self.assertEqual(T.entier(12.0), 12)
+        self.assertEqual(T.entier("1 234"), 1234)
+        self.assertIsNone(T.entier(12.5))
+        self.assertIsNone(T.entier("12,5"))
+
+    def test_none_ne_fait_pas_glisser_les_colonnes(self):
+        entete = [None, 2024, 2021, "Ensemble"]
+        i24, i21 = T.colonnes(entete, [2024, 2021])
+        with self.assertRaises(ValueError):                  # r = ["Champ", None, 50, 40] : 2024 absent, on arrête
+            T.cellules(["Champ", None, 50, 40], [i24, i21])
+        self.assertEqual(T.cellules(["Champ", 60, 50, 40], [i24, i21]), [60, 50])
+        with self.assertRaises(ValueError):
+            T.colonnes([None, 2024, 2024], [2024])           # colonne en double : ambigu
+
+    def test_serie_vide_interne_arrete_vide_de_queue_tolere(self):
+        with self.assertRaises(ValueError):
+            T.serie(["D", 1, None, 3, 4])                    # None entre deux déciles
+        self.assertEqual(T.serie(["D", 1, 2, 3, None, None]), [1, 2, 3])   # None après « Ensemble »
+
+    def test_annee_manquante_arrete(self):
+        self.assertEqual(T.annees_continues([1990, 1991, 1992], 1990, 1992), [1990, 1991, 1992])
+        with self.assertRaises(ValueError):
+            T.annees_continues([1990, 1992])                 # 1991 écartée en silence
+        with self.assertRaises(ValueError):
+            T.annees_continues([1990, 1991, 1991])
+        with self.assertRaises(ValueError):
+            T.annees_continues([1990, 1991], derniere=1992)
+
+
 class Entetes(unittest.TestCase):
     def test_queue_vide_et_insecables(self):
         brut = ["Année", "Émissions directes  des ménages", "Empreinte totale"] + [None] * 52

@@ -172,20 +172,41 @@ def lire_insee(b: bytes) -> dict:
     for k in range(1, 6):
         r = f2[jj + k]
         parts_stat[r[0]] = dict(zip(CATS + ["Ensemble"], r[1:8]))
-    f8 = [[c for c in r if c is not None] for r in wb["Figure 8"].iter_rows(values_only=True)]
-    f8d = {}
-    for r in f8:
-        if r and isinstance(r[0], str) and len(r) >= 3 and lt.valeur(r[1]) is not None:
-            if lt.valeur(r[2]) is None:
-                raise Arret("figure 8, %s : valeur 2021 manquante ou illisible (%r)" % (nb(r[0]), r[2]))
-            f8d[nb(r[0])] = {"2024": lt.valeur(r[1]), "2021": lt.valeur(r[2])}
+    # Lecture par POSITION IDENTIFIÉE, jamais après compactage (contre-expertise anthropie-site-20261016-154235,
+    # défaut bloquant : retirer les None d'une ligne faisait glisser la valeur 2021 dans la colonne 2024).
+    f8 = [lt.ligne(r) for r in wb["Figure 8"].iter_rows(values_only=True)]
+    try:
+        h8 = next(i for i, r in enumerate(f8) if {2024, 2021} <= {lt.annee(c) for c in r})
+        i24, i21 = lt.colonnes(f8[h8], [2024, 2021])
+        f8d = {}
+        for r in f8[h8 + 1:]:
+            if not (r and isinstance(r[0], str)) or all(c is None for c in r[1:]):
+                continue                                   # notes, lecture, champ, source : pas de valeurs
+            if nb(r[0]).startswith(("Lecture", "Champ", "Source", "Note")):
+                continue
+            v24, v21 = lt.cellules(r, [i24, i21], "figure 8, " + nb(r[0]))
+            f8d[nb(r[0])] = {"2024": v24, "2021": v21}
+    except (StopIteration, ValueError) as e:
+        raise Arret("figure 8 : %s" % e)
     # Figure 1 (phase B) : moyennes annuelles 2012-2025 des deux mesures, en millions
-    f1 = [[c for c in r if c is not None] for r in wb["Figure 1"].iter_rows(values_only=True)]
-    annees = next(r[1:] for r in f1 if r and r[0] == "Catégorie")
-    lg_ = {}
-    for r in f1:
-        if r and r[0] in ("Chômeurs au sens du BIT", "Inscrits en catégorie A à France Travail"):
-            lg_[r[0]] = dict(zip([str(a) for a in annees], r[1:]))
+    f1 = [lt.ligne(r) for r in wb["Figure 1"].iter_rows(values_only=True)]
+    try:
+        h1 = next(r for r in f1 if r and r[0] == "Catégorie")
+        ans1 = [lt.annee(c) for c in lt.entetes(h1)[1:]]
+        if None in ans1:
+            raise ValueError("en-tete des annees illisible : %r" % lt.entetes(h1)[1:])
+        lt.annees_continues(ans1, premiere=2012, quoi="figure 1")
+        if ans1[-1] < 2025:                                 # une série qui rétrécit (en-tête illisible en queue) arrête
+            raise ValueError("serie arretee en %d, attendu 2025 ou apres" % ans1[-1])
+        pos1 = lt.colonnes(h1, ans1)
+        lg_ = {}
+        for r in f1:
+            if r and r[0] in ("Chômeurs au sens du BIT", "Inscrits en catégorie A à France Travail"):
+                if any(c is not None for c in r[pos1[-1] + 1:]):
+                    raise ValueError("%s : valeurs a droite de la derniere annee lue (%d)" % (r[0], ans1[-1]))
+                lg_[r[0]] = dict(zip([str(a) for a in ans1], lt.cellules(r, pos1, "figure 1, " + r[0])))
+    except (StopIteration, ValueError) as e:
+        raise Arret("figure 1 : %s" % e)
     champ1 = next((nb(r[0]) for r in f1 if r and isinstance(r[0], str) and nb(r[0]).startswith("Champ")), "")
     return {"titre": nb(titre), "eff": eff, "champ": champ, "source": source, "parts_cat": parts_cat,
             "parts_stat": parts_stat, "f8": f8d,
