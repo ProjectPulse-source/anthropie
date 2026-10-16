@@ -201,3 +201,47 @@ la chronique ajoute la durée des épisodes favorables, la probabilité de leur 
 (neuvième décile de 0 à 2 points quand la dette passe de 40 à 120 % du PIB, médiane +0,8). Bloc « Mis en danger par »
 complété (FR et EN), « que le budget ne commande pas » nuancé en « pas directement » dans « Ce qui le rend fragile »,
 « six textes » → « sept » dans « Non établi », date de vérification du bloc au 16/10/2026.
+
+## 10. Contre-expertise du cinquième tour, 16/10/2026 — portée du résultat du FMI
+
+**Déclencheur** : réponse à l'audit FACT_CHECK `anthropie-site-20261016-055208` (archivée avant lecture, SHA-256
+`48853AC1…7C54` ; arbitrage `.claude/external-audits/ARBITRATIONS/anthropie-site-20261016-055208_arbitrage.md`). Elle
+signale une généralisation (« tiennent surtout à la dette en devises » étendait aux trois analyses un résultat de la seule
+décomposition par monnaie) et une phrase finale qui borne sans dire comment, et elle propose trois études publiées.
+
+**Corrigé dans la page (FR et EN), chaque point vérifié sur le PDF** : r est un taux de marché à long terme, le plus
+souvent à 10 ans (p. PDF 7) ; « la même association » → « une association de même sens » ; épisodes d'au moins trois ans
+(note de la figure 2, p. PDF 24) ; premier décile +1,2 point, toute la distribution se déplace (p. PDF 12) ; la monnaie
+d'émission, résultat d'une analyse complémentaire, association « non statistiquement significative » et non « pas
+d'effet » ; « très endettés » → « plus endettés que la médiane » (groupes de la figure 6 : médianes, non le quartile
+supérieur que la réponse écrit) ; phrase finale remplacée : aucune transposition mécanique à la zone euro, que le document
+ne traite pas à part.
+
+| Candidat | Statut | Motif |
+|---|---|---|
+| Checherita-Westphal et Domingues Semeano, ECB WP n° 2486, novembre 2020 | **lu en partie, non cité** | PDF de la BCE téléchargé par script (`07_RECHERCHE\confrontation_dette\ecb_wp2486.pdf`, 49 p., SHA-256 `2196102d…8f914a6b`) ; lus : résumé, synthèse, introduction, méthode, tableaux 1 et 3. Douze premiers membres de la zone euro dont la France, 1985-2017, **taux implicite** (Ameco) : +0,4 à 0,6 point d'écart par dix points de dette (tableau 1), effets fixes pays ; sur 1999-2017, coefficients de 0,026 à 0,092 par point (tableau 3). Lecture intégrale et fiche avant toute citation. |
+| Heimberger, *J. Int. Money Finance*, vol. 136, 102877, 2023 | **non lu — CAPTCHA** | accès libre (CC BY, Unpaywall, métadonnées de l'éditeur) ; PDF refusé aux scripts (403), page de l'éditeur rendue par le navigateur : défi « Are you a robot? », non contourné ; aucune autre copie trouvée (RePEc, EconBiz, wiiw, Semantic Scholar). Seul le résumé (RePEc) est lu : 22 pays de l'OCDE, 1970-2018, dette « not predictive » d'un écart plus défavorable, dans la zone euro comme hors d'elle. **Voie restante : PDF téléchargé par l'auteur.** |
+| Gödl et Kleinert, *Rev. World Econ.*, 152, 2016 | **non lu** | proposé par la réponse sur les écarts de taux souverains, non sur r − g ; hors de la question de la page tant que les deux autres ne sont pas lus. |
+
+**Décision de méthode** : la confrontation BCE / Heimberger entre dans la page **en un seul geste**, quand les deux textes
+sont lus : n'ajouter que l'étude qui trouve l'association ferait du bloc l'accumulation à sens unique que la réponse
+met en garde contre.
+
+**Second temps, même jour — les deux études lues et confrontées.** La page de l'éditeur de Heimberger s'est ouverte dans
+le navigateur de l'auteur (16/10) ; texte de l'article publié enregistré depuis la page (longueur et empreinte identiques
+des deux côtés), annexe en ligne téléchargée ; fiche `heimberger-2023.md` (11 extraits). Étude de la BCE lue en entier ;
+fiche `checherita-westphal-domingues-semeano-2020.md` (8 extraits). `verifier_extraits.py` : 135 contrôles, les 19 nouveaux
+retrouvés, témoin : altérés tous rejetés ; les 15 « source introuvable » restent ceux du premier tour.
+
+**Contrôle propre, sur les données de réplication de Heimberger** (dépôt GitHub cité par l'article) : sa croissance est
+celle du PIB en dollars courants (annexe, tableau A1) — pour la France, 5,22 % en 2016 et 4,07 % en 2017 dans ses données,
+1,38 % et 2,68 % en euros courants (Eurostat, `nama_10_gdp`). Son écart rapporte donc un taux en euros à une croissance en
+dollars. Son coefficient de dette est en outre estimé à taux réel retardé et inflation donnés. Deux différences d'objet,
+écrites dans la page sans conclure qu'elles expliquent à elles seules la divergence.
+
+**Ce qu'il change dans la page (FR et EN)** : « Mis en danger par » expose la divergence (BCE : taux implicite, EA-12,
++0,4 à 0,6 point par dix points de dette, corrélations ; Heimberger : 22 pays de l'OCDE, dette non prédictive, durée des
+épisodes indépendante de la dette, crise de l'euro dans la seule périphérie) et ce qui sépare les deux mesures ;
+« Non établi » gagne l'effet de la dette sur l'écart futur, qu'aucun coefficient unique ne résume, la relation comptable
+seule ne dépendant d'aucune estimation ; « sept textes » → « neuf ». Gödl et Kleinert (2016) : non lu, hors de la
+question (écarts de taux souverains).

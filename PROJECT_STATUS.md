@@ -70,6 +70,20 @@ rendement à 10 ans (non « non précisé ») ; « plus de 75 % » → « près 
 résultats, « more than » dans son introduction) ; la France est dans les échantillons ; l'association passe surtout par la
 dette en devises (dette en monnaie nationale non significative à l'intérieur des pays, tableau A4), d'où une portée bornée
 pour une dette en euros, écrite au contact de l'inférence. Le document remplace la chronique dans les références lues.
+**Même jour, troisième temps — contre-expertise** (`anthropie-site-20261016-055208`, réponse archivée SHA-256
+`48853AC1…7C54`, arbitrage dans `.claude/external-audits/ARBITRATIONS/`) : chaque point relu sur le PDF. Corrigé FR et EN :
+taux de marché à long terme « le plus souvent » à 10 ans ; « une association de même sens » ; épisodes d'au moins trois
+ans ; premier décile +1,2 point ; la monnaie d'émission devient le résultat d'une analyse complémentaire, « non
+significative » et non « sans effet » ; « très endettés » → « plus endettés que la médiane » (la réponse disait à tort
+« quartile supérieur ») ; « portée bornée » remplacée par « ne se transposent pas mécaniquement aux États de la zone
+euro ». Journal de recherche § 10. Contrôles : `check-all --ci` 0, build 0, liens 0 critique, rendu 0, texte servi relu
+FR et EN, instantanés refaits.
+**Quatrième temps — confrontation** : Heimberger (*JIMF* 2023, page de l'éditeur ouverte par l'auteur, texte archivé et
+comparé, annexe) et ECB WP 2486 lus en entier, fiches `heimberger-2023.md` et `checherita-westphal-domingues-semeano-2020.md`
+(19 extraits retrouvés, témoin rejeté). « Mis en danger par » expose la divergence (BCE, taux implicite : +0,4 à 0,6 point
+par dix points de dette ; Heimberger, 22 pays de l'OCDE : dette non prédictive) et ce qui sépare les mesures — croissance en
+dollars chez Heimberger, vérifiée sur ses données de réplication (France 2016 : 5,2 % contre 1,4 % en euros, Eurostat) ;
+« Non établi » : pas de coefficient unique, seule la relation comptable tient ; « neuf textes ». Journal § 10.
 
 ### 2026-10-13 — « Langue » : chronique de Franck Ramus citée dans la confrontation à la recherche (#ecrans)
 
