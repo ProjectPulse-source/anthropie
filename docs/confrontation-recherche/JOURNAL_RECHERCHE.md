@@ -182,8 +182,15 @@ objection reçue, non d'un relevé ; elle est confrontée aux hypothèses B2 et 
 
 | Candidat | Statut | Motif |
 |---|---|---|
-| Lian, Presbitero et Wiriadinata, IMF WP/20/137, 2020 | **écarté : non lu** | PDF du FMI et texte intégral de l'eLibrary refusés aux scripts (« Access Denied », 403) ; eLibrary rendue par le navigateur : résumé et figures seulement ; lecteur PDF du navigateur sans texte. Résumé lu (RePEc). **Point ouvert nommé** : PDF à télécharger par l'auteur, pour lire le texte et la définition de r. |
-| Wiriadinata et Presbitero, *VoxEU*, 5 août 2020 | **lu** | chronique des auteurs sur le même document ; fiche `wiriadinata-presbitero-2020-voxeu.md`, 11 extraits. Texte archivé dans `07_RECHERCHE\confrontation_dette\` (SHA-256 `f3d65f1f…b7c2f1`) ; transcription contrôlée contre la page servie (même empreinte des deux côtés après normalisation des espaces). |
+| Lian, Presbitero et Wiriadinata, IMF WP/20/137, 2020 | **lu** (second temps, même jour) | PDF et texte intégral de l'eLibrary d'abord refusés aux scripts (« Access Denied », 403) ; PDF ensuite téléchargé par le navigateur depuis la page du document, sur mandat de l'auteur (16/10). 42 pages lues en entier ; fiche `lian-presbitero-wiriadinata-2020.md`, 14 extraits ; PDF dans `07_RECHERCHE\confrontation_dette\` (SHA-256 `b38ff0cf…69dfa0`). **Cité dans la page à la place de la chronique.** |
+| Wiriadinata et Presbitero, *VoxEU*, 5 août 2020 | **lu, remplacé** | chronique des auteurs sur le même document ; fiche `wiriadinata-presbitero-2020-voxeu.md`, 11 extraits. Texte archivé (SHA-256 `f3d65f1f…b7c2f1`), transcription contrôlée contre la page servie. Citée quelques heures, puis remplacée par le document. |
+
+**Ce que le document a corrigé dans la première version publiée de l'ajout** : r est le rendement à 10 ans, non le taux
+implicite (« la chronique ne précise pas » était faux pour le document) ; la probabilité de retournement est « almost
+75 % » dans les résultats (p. 10), « more than 75 % » dans l'introduction (p. 4) : la page retient « près de 75 % » ; la
+France est dans les deux échantillons ; l'association passe surtout par la dette en devises, la dette en monnaie
+nationale n'ayant pas d'effet significatif à l'intérieur des pays (tableau A4) — portée bornée pour une dette en euros,
+désormais écrite au contact de l'inférence.
 
 **Contrôle** : `verifier_extraits.py` sur `07_RECHERCHE\confrontation_dette\` : 102 extraits retrouvés (les 11 nouveaux
 compris), 102 altérés rejetés en mode `--temoin` ; les 15 « source introuvable » sont les fiches du premier tour, dont

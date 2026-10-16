@@ -64,6 +64,12 @@ devises, taux non précisé) ; « que le budget ne commande pas » → « pas di
 (`07_RECHERCHE\confrontation_dette\`). Contrôles : extraits 102/102 (témoin 102 rejetés), `check-all --ci` 0, build 0,
 audit des liens 0 critique, relecture du texte servi FR et EN (3 tournures reprises), instantanés refaits. Contre-expertise
 du bloc : à décider.
+**Même jour, second temps** : le PDF du document de travail a été téléchargé par le navigateur sur mandat de l'auteur et
+lu en entier (42 p., fiche `lian-presbitero-wiriadinata-2020.md`, 14 extraits). Il corrige la version publiée : r est le
+rendement à 10 ans (non « non précisé ») ; « plus de 75 % » → « près de 75 % » (le document écrit « almost » dans ses
+résultats, « more than » dans son introduction) ; la France est dans les échantillons ; l'association passe surtout par la
+dette en devises (dette en monnaie nationale non significative à l'intérieur des pays, tableau A4), d'où une portée bornée
+pour une dette en euros, écrite au contact de l'inférence. Le document remplace la chronique dans les références lues.
 
 ### 2026-10-13 — « Langue » : chronique de Franck Ramus citée dans la confrontation à la recherche (#ecrans)
 

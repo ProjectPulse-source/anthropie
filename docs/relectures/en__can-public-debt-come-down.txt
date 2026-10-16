@@ -1,4 +1,4 @@
-# relu le 2026-10-16 ; texte servi de /en/can-public-debt-come-down/, build de 36fd781 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /en/can-public-debt-come-down/, build de a0973ae + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Can public debt come down?
 Yes: what can fall is the weight of debt in GDP, even while its amount rises.
@@ -253,7 +253,7 @@ What makes it fragile.
 The equality between interest and growth in 2025 is not a settled state.
 Over 30 years, the implicit interest rate exceeded nominal growth in 16 of them.
 Down to 1.2% in 2020, it is rising as old debt is refinanced on market terms, while nominal growth falls back after the inflation years: the relief of the last decade came mostly from 2021-2023.
-At 2025 levels of debt and growth (115.6% of GDP), and all else equal, one additional point of gap between the interest rate and growth raises the stabilising balance by about 1.1 points of GDP: the higher the debt, the more its path depends on interest rates the budget does not directly control, and which the research cited below finds higher when debt is higher too.
+At 2025 levels of debt and growth (115.6% of GDP), and all else equal, one additional point of gap between the interest rate and growth raises the stabilising balance by about 1.1 points of GDP: the higher the debt, the more its path depends on interest rates the budget does not directly control, and whose gap to growth the research cited below finds higher when debt is higher too.
 What these data do not say.
 Lenders’ confidence, market access and the cost of future refinancing depend on the maturity of the debt and on the gap between market rates and the implicit rate (see transmission), on who holds it (Who really pays for public debt?) and on central bank decisions.
 The sustainability assessments that institutions publish rest on conditional projections, which these data can neither confirm nor rule out.
@@ -307,8 +307,11 @@ Two readings the page must avoid.
 The first would make the primary surplus the only driver of falls: after 1945, it was the strongly negative gap between interest and growth that contributed most to the fall in advanced economies’ debt, primary surpluses also playing a part (Clavères); in Portugal, the surplus coincided with growth of 4.38% a year from 2015 to 2019, and in Italy, when the interest rate exceeded growth, debt rose despite a positive structural primary balance (CAE note).
 Hence the page’s caveat: the comparison does not isolate the effect of a policy.
 The second would read the last year’s zero gap as a lasting state: in autumn 2025, the State was borrowing at 10 years at 3.5%, above an effective interest rate estimated at 2.0% (CAE Focus); rate rises pass through to the stock only gradually, the average maturity of the debt being 8.5 years in 2023, future values of the gap cannot be forecast, and, in Clavères’s estimate over 18 advanced economies from 1950 to 2019, measured with the 10-year rate, higher debt goes with a higher gap the following year, an estimate its author says should be taken with caution.
-Two IMF economists, summarising a working paper co-written with Weicheng Lian (Wiriadinata and Presbitero, VoxEU), find the same association in another form: in 17 advanced economies from 1950 to 2019, negative-gap episodes are shorter the higher the initial debt, and the probability that a negative gap lasting at least two years gives way to a positive average gap over the next five years rises from about 25% when debt is below the median to more than 75% in the most indebted quarter; in 31 advanced and 25 emerging economies from 2000 to 2019, as debt rises from 40% to 120% of GDP, the 90th percentile of the average gap over the next five years goes from about 0 to about 2 points, and its median rises by about 0.8 points.
-These are associations estimated on panels in which France is not singled out, stronger for debt denominated in foreign currency, and their column does not say which interest rate measures the gap; they mean that the risk of a high gap grows with debt faster than the typical gap.
+Three IMF economists (Lian, Presbitero and Wiriadinata), who measure the gap with the 10-year government bond yield rather than with this page’s implicit interest rate, find the same association in another form.
+In 17 advanced economies, France among them, from 1950 to 2019, negative-gap episodes are shorter the higher the initial debt, by almost five months per ten points of debt, and the probability that a negative gap lasting at least two years gives way to a positive average gap over the next five years rises from about 25% when debt is below the median to almost 75% in the most indebted quarter.
+In 31 advanced and 25 emerging economies from 2000 to 2019, as debt rises from 40% to 120% of GDP, the 90th percentile of the average gap over the next five years goes from about 0 to about 2 points, and its median rises by about 0.8 points: the risk of a high gap grows faster than the typical gap.
+These are associations, driven mainly by debt denominated in foreign currency: within each country, the gap follows foreign-currency debt, and domestic-currency debt has no statistically significant effect; highly indebted countries whose debt is mostly in their own currency keep, on average, a low and negative gap.
+For debt issued in euros, their reach is therefore limited.
 The French Treasury also writes that rising rates reverse the period of negative gap and now require a slight primary surplus, and that rate rises pass through to the stock as it is refinanced.
 The diagnosis is not unanimous: the OFCE regards a rise in the interest bill as likely, but its size as less certain than in official projections.
 Refinancing at the July 2025 10-year rate the 900 billion euros of bonds maturing by 2029 would cost about 0.5 points of GDP; the authors set this against a total rise of 1.2 points projected by the IMF, though the two calculations do not cover the same scope.
@@ -332,8 +335,9 @@ French Treasury (Direction générale du Trésor), “Finances publiques : une s
 403, September 2026 (in French).
 Heyer, É., Plane, M., Ragot, X., Sampognaro, R. and Timbeau, X., “Quelles trajectoires pour les finances publiques de la France ?” [What paths for France’s public finances?], OFCE working paper no.
 13, July 2025 (in French).
-Wiriadinata, U. and Presbitero, A., “The risks of high public debt despite a low interest rate environment”, VoxEU, CEPR, 5 August 2020 (summary of IMF Working Paper no.
-20/137 by Lian, Presbitero and Wiriadinata, which was not itself read).
+Lian, W., Presbitero, A.
+F. and Wiriadinata, U., “Public Debt and r - g at Risk”, IMF Working Paper, no.
+20/137, International Monetary Fund, July 2020.
 Literature review checked on 16 October 2026: every reference cited was read in full on that date, in the version indicated.
 Summary
 What to take away
