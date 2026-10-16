@@ -1,11 +1,12 @@
-# relu le 2026-10-13 ; texte servi de /les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/, build de 6b7ca4e + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Les élèves maîtrisent-ils moins bien la langue française ?
 Pas d'un bloc.
 À la même dictée de CM2, les élèves faisaient 10,7 erreurs en 1987 et 19,4 en 2021 ; mais sur ces 8,7 erreurs supplémentaires, 0,9 seulement portent sur l'orthographe des mots eux-mêmes.
 Que mesure-t-on réellement quand on dit que les élèves maîtrisent moins bien la langue ?
+Page mise à jour le 10 octobre 2026
 École et lycée
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
-Relevé du : 9 octobre 2026 DEPP : Notes d'Information 98.39, 08.38, 16.20, 22.28, 22.29, 22.37, 25.66, 26.21, 26.22 ; OCDE : PISA 2025, 21st-Century Readers ; IEA : PIRLS ; ministère de la Culture ; CREDOC.
+Données mises à jour le 9 octobre 2026 DEPP : Notes d'Information 98.39, 08.38, 16.20, 22.28, 22.29, 22.37, 25.66, 26.21, 26.22 ; OCDE : PISA 2025, 21st-Century Readers ; IEA : PIRLS ; ministère de la Culture ; CREDOC.
 Télécharger : CSV · JSON · méthode
 Les élèves font-ils plus de fautes qu’avant ?
 Oui.

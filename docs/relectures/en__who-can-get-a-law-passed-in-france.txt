@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /en/who-can-get-a-law-passed-in-france/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /en/who-can-get-a-law-passed-in-france/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Who can get a law passed in France?
 Do laws mostly come from the Government?
@@ -7,6 +7,7 @@ This result depends on what is counted: adding the laws with a procedure of thei
 Yet about nine in ten private members' bills tabled in the National Assembly were not debated in plenary before their legislature ended.
 The two findings fit together because getting a law passed takes several keys, which the Constitution shares out: the Prime Minister and members of Parliament can table bills, but the Government has priorities on the agenda and alone can ask the National Assembly to reach a final decision.
 The passing of statutes belongs to Parliament, and three situations must be distinguished: the passing of a bill at one stage without the National Assembly voting on it (article 49, paragraph 3), the bringing into force of budget provisions by ordinance without a statute passed by vote (articles 47 and 47-1), and the passing of a law by referendum (article 11).
+Page updated 12 October 2026
 Presidential promises
 ↓ Charts, data and citations to reuseReuse this page
 The Constitution gives Parliament the passing of statutes: “Parliament shall pass statutes.” (art.

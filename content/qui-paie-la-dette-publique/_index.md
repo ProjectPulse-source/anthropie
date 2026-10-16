@@ -1,7 +1,7 @@
 ---
 title: "Qui paie vraiment la dette publique ?"
 description: "Qui paie la dette publique ? Détenir n'est pas payer : impôts, dépenses et inflation ne répartissent pas l'effort entre les mêmes groupes. Données officielles."
-chapo: "Un même effort de {qp.exp_effort} milliards d'euros ne tombe pas sur les mêmes ménages selon la décision prise : par l'enseignement, il pèse surtout sur les plus modestes, par l'impôt sur les plus aisés. Qui paie la dette publique dépend de ce qu'elle finance, de la manière dont elle est financée et des ajustements choisis pour la servir."
+chapo: "Sur les comptes distribués de l'Insee de {qp.cd_annee}, un même effort de {qp.exp_effort} milliards d'euros ne tombe pas sur les mêmes ménages selon la décision prise : par l'enseignement, il pèse surtout sur les plus modestes, par l'impôt sur les plus aisés. Qui paie la dette publique dépend de ce qu'elle finance, de la manière dont elle est financée et des ajustements choisis pour la servir."
 date: 2026-07-04
 lastmod: 2026-10-11
 donnees: [dette_officielle, qui_paie_donnees]
@@ -142,7 +142,7 @@ Ce total porte sur le champ des comptes distribués, qui n'est pas celui du déf
 
 <div class="resultat-phrase">
 
-**Une moyenne de groupe ne décrit pas ses membres.** {{< qp-val "benef_ensemble" >}}&nbsp;% des personnes sont bénéficiaires nettes cette année-là, {{< qp-val "benef_d1" >}}&nbsp;% dans le premier dixième et {{< qp-val "benef_d10" >}}&nbsp;% dans le dernier. Mais elles ne sont majoritaires que dans les {{< qp-val "benef_majo_n_mots" >}} premiers dixièmes&nbsp;: dans le dixième {{< qp-val "benef_dernier_moyen" >}}, qui reçoit en moyenne {{< qp-val "net_dernier_moyen" >}}&nbsp;€ par UC de plus qu'il ne verse, elles ne sont plus que {{< qp-val "benef_dernier_moyen_pct" >}}&nbsp;%. **Le signe d'une moyenne ne dit pas la situation de la majorité.** Un groupe peut recevoir plus qu'il ne verse en moyenne alors que la majorité de ses membres versent plus qu'ils ne reçoivent&nbsp;: il suffit que ce que reçoivent en moyenne les bénéficiaires nets l'emporte sur ce que versent en moyenne les autres. Les données regroupées ne disent pas comment ces soldes se répartissent.
+**Une moyenne de groupe ne décrit pas ses membres.** {{< qp-val "benef_ensemble" >}}&nbsp;% des personnes sont bénéficiaires nettes en {{< qp-val "cd_annee" >}}, {{< qp-val "benef_d1" >}}&nbsp;% dans le premier dixième et {{< qp-val "benef_d10" >}}&nbsp;% dans le dernier. Mais elles ne sont majoritaires que dans les {{< qp-val "benef_majo_n_mots" >}} premiers dixièmes&nbsp;: dans le dixième {{< qp-val "benef_dernier_moyen" >}}, qui reçoit en moyenne {{< qp-val "net_dernier_moyen" >}}&nbsp;€ par UC de plus qu'il ne verse, elles ne sont plus que {{< qp-val "benef_dernier_moyen_pct" >}}&nbsp;%. **Le signe d'une moyenne ne dit pas la situation de la majorité.** Un groupe peut recevoir plus qu'il ne verse en moyenne alors que la majorité de ses membres versent plus qu'ils ne reçoivent&nbsp;: il suffit que ce que reçoivent en moyenne les bénéficiaires nets l'emporte sur ce que versent en moyenne les autres. Les données regroupées ne disent pas comment ces soldes se répartissent.
 
 </div>
 

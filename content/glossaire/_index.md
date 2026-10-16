@@ -1,4 +1,6 @@
 ---
+date: 2026-04-02  # premier commit de la page (git log --follow)
+lastmod: 2026-08-15  # derniere modification de fond (entree « Registre des couts deportes », 15/08/2026) ; les commits suivants ne touchent que la typographie et les metadonnees
 title: "Glossaire"
 og_title: "Glossaire — les notions, définies et sourcées — S. Lalut"
 description: "Glossaire des termes clés du cadre anthropique."

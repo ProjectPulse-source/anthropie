@@ -54,7 +54,7 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 {{< reutiliser-ancre >}}
 
-<p class="donnees-ligne"><span class="badge-donnees">Updated: {{< dyn-val "date_donnees" >}}</span> France, general government, Eurostat series from {{< dyn-val "annee_depart" >}} to {{< dyn-val "annee_fin" >}}. Download: <a href="/dette_dynamique.csv">CSV</a> · <a href="/dette_dynamique.json">JSON</a> · <a href="#sources">method</a></p>
+<p class="donnees-ligne"><span class="badge-donnees">Data last updated {{< dyn-val "date_donnees" >}}</span> France, general government, Eurostat series from {{< dyn-val "annee_depart" >}} to {{< dyn-val "annee_fin" >}}. Download: <a href="/dette_dynamique.csv">CSV</a> · <a href="/dette_dynamique.json">JSON</a> · <a href="#sources">method</a></p>
 
 France is a telling case for a question every indebted country faces. Its debt ratio doubled in thirty years, and Eurostat's harmonised series allow that rise to be split, year by year, into the terms of a standard accounting identity. The accounting identity is general; the estimates below are for France.
 

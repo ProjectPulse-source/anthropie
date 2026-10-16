@@ -66,7 +66,7 @@ dossier_dette_role_en: "assets, holders, pensions"
 
 {{< reutiliser-ancre >}}
 
-<p class="donnees-ligne"><span class="badge-donnees">Mise à jour&nbsp;: {{< gen-val "date_donnees" >}}</span> Administrations publiques, séries Eurostat et BCE de {{< gen-val "h0" >}} à {{< gen-val "fin" >}}&nbsp;; Commission européenne et COR, projections. Télécharger&nbsp;: <a href="/dette_generations.csv">CSV</a> · <a href="/dette_generations.json">JSON</a> · <a href="#sources">méthode</a></p>
+<p class="donnees-ligne"><span class="badge-donnees">Données mises à jour le {{< gen-val "date_donnees" >}}</span> Administrations publiques, séries Eurostat et BCE de {{< gen-val "h0" >}} à {{< gen-val "fin" >}}&nbsp;; Commission européenne et COR, projections. Télécharger&nbsp;: <a href="/dette_generations.csv">CSV</a> · <a href="/dette_generations.json">JSON</a> · <a href="#sources">méthode</a></p>
 
 ## À quoi les déficits ont correspondu dans les comptes {#actifs}
 

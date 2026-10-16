@@ -1,0 +1,35 @@
+{{- /* Balisage de PAGE d'une ressource (2026-10-16, arbitrage PRO-20261016-174136, phase P1, point P8).
+       Avant : ces pages ne portaient que FAQPage (et Dataset pour les pages de données) ; aucune ne se décrivait
+       elle-même, et les pages de notions n'émettaient ni auteur ni date. Google recommande `datePublished` /
+       `dateModified` sur un sous-type de CreativeWork, avec la date visible correspondante.
+
+       Type : `Article` pour une page qui démontre (ressource.type quantitatif, juridique-institutionnel ou
+       explicatif-causal) ; `WebPage` pour une notion, un guide, un usage. Dates : partial page-date.html, la même
+       source que le sitemap et la ligne visible. Auteur : l'entité Person du profil (`@id` de data/author.toml).
+       Données : `isBasedOn` renvoie à l'`@id` du Dataset de la page quand elle en déclare un. Aucun effet sur les
+       citations n'est promis : la contre-expertise l'a jugé non démontré ; le balisage sert l'attribution. */ -}}
+{{- $p := . -}}
+{{- $r := $p.Params.ressource -}}
+{{- $types := $r.type | default slice -}}
+{{- $demontre := or (in $types "quantitatif") (in $types "juridique-institutionnel") (in $types "explicatif-causal") -}}
+{{- $d := partial "page-date.html" $p -}}
+{{- $a := site.Data.author.author -}}
+{{- $titre := partial "desc-figures.html" (dict "text" $p.Title) | htmlUnescape -}}
+{{- $node := dict
+    "@context" "https://schema.org"
+    "@type" (cond $demontre "Article" "WebPage")
+    "@id" (printf "%s#page" $p.Permalink)
+    "url" $p.Permalink
+    "name" $titre
+    "inLanguage" $p.Language.Lang
+    "author" (dict "@type" "Person" "@id" $a.canonicalProfileUrl "name" $a.name "url" (replace $a.canonicalProfileUrl "#person" ""))
+    "isAccessibleForFree" true -}}
+{{- if $demontre -}}{{- $node = merge $node (dict "headline" $titre "mainEntityOfPage" $p.Permalink) -}}{{- end -}}
+{{- with $p.Description -}}{{- $node = merge $node (dict "description" (partial "desc-figures.html" (dict "text" . "isbn" $p.Params.isbn) | htmlUnescape)) -}}{{- end -}}
+{{- if not $d.pub.IsZero -}}{{- $node = merge $node (dict "datePublished" ($d.pub.Format "2006-01-02")) -}}{{- end -}}
+{{- if not $d.mod.IsZero -}}{{- $node = merge $node (dict "dateModified" ($d.mod.Format "2006-01-02")) -}}{{- end -}}
+{{- with $p.Params.og_image -}}{{- $node = merge $node (dict "image" (absURL .)) -}}{{- end -}}
+{{- with $p.Params.dataset -}}{{- $node = merge $node (dict "isBasedOn" (dict "@id" (printf "%s#dataset" $p.Permalink))) -}}{{- end -}}
+<script type="application/ld+json">
+{{ $node | jsonify (dict "indent" "  ") | safeJS }}
+</script>

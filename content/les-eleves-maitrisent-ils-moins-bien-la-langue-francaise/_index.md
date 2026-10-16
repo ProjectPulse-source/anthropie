@@ -63,7 +63,7 @@ onglet:
 
 {{< reutiliser-ancre >}}
 
-<p class="donnees-ligne"><span class="badge-donnees">Relevé du&nbsp;: {{< lan-val "date_donnees" >}}</span> DEPP&nbsp;: Notes d'Information 98.39, 08.38, 16.20, 22.28, 22.29, 22.37, 25.66, 26.21, 26.22&nbsp;; OCDE&nbsp;: PISA 2025, <em>21st-Century Readers</em>&nbsp;; IEA&nbsp;: PIRLS&nbsp;; ministère de la Culture&nbsp;; CREDOC. Télécharger&nbsp;: <a href="/langue_eleves.csv">CSV</a> · <a href="/langue_eleves.json">JSON</a> · <a href="#sources">méthode</a></p>
+<p class="donnees-ligne"><span class="badge-donnees">Données mises à jour le {{< lan-val "date_donnees" >}}</span> DEPP&nbsp;: Notes d'Information 98.39, 08.38, 16.20, 22.28, 22.29, 22.37, 25.66, 26.21, 26.22&nbsp;; OCDE&nbsp;: PISA 2025, <em>21st-Century Readers</em>&nbsp;; IEA&nbsp;: PIRLS&nbsp;; ministère de la Culture&nbsp;; CREDOC. Télécharger&nbsp;: <a href="/langue_eleves.csv">CSV</a> · <a href="/langue_eleves.json">JSON</a> · <a href="#sources">méthode</a></p>
 
 ## Les élèves font-ils plus de fautes qu'avant&nbsp;? {#dictee}
 

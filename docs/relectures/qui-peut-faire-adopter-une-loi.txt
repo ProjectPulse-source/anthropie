@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /qui-peut-faire-adopter-une-loi/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /qui-peut-faire-adopter-une-loi/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Qui peut faire adopter une loi ?
 Les lois viennent-elles surtout du Gouvernement ?
@@ -7,6 +7,7 @@ Ce résultat dépend de ce qu'on compte : en y ajoutant les lois à procédure p
 Pourtant, environ neuf propositions de loi sur dix déposées à l'Assemblée nationale n'ont pas été examinées en séance avant la fin de leur législature.
 Les deux constats tiennent ensemble parce que faire adopter une loi demande plusieurs clés, que la Constitution répartit : le Premier ministre comme les parlementaires peuvent déposer, mais le Gouvernement a des priorités à l'ordre du jour et peut seul demander à l'Assemblée nationale de statuer définitivement.
 Le vote de la loi appartient au Parlement, et trois situations sont à distinguer : l'adoption d'un texte à une étape sans vote de l'Assemblée nationale sur celui-ci (article 49, alinéa 3), la mise en vigueur de dispositions budgétaires par ordonnance sans loi votée (articles 47 et 47-1) et l'adoption d'une loi par référendum (article 11).
+Page mise à jour le 12 octobre 2026
 Promesses présidentielles
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
 La Constitution confie le vote de la loi au Parlement : « Le Parlement vote la loi. » (art.

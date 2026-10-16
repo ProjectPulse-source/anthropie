@@ -5,6 +5,7 @@ chapo: "Le président nomme le Premier ministre. Peut-il le révoquer ? Non : la
 date: 2026-09-30
 lastmod: 2026-10-11
 donnees: [pouvoirs_president_donnees]
+textes_lus: pouvoirs_president  # dates de lecture sur Légifrance (lu_le) affichées sous le chapô : partials/page-date-visible.html
 og_title: "Que peut décider le président de la République seul ? — le texte, citation par citation — S. Lalut"
 og_image: "images/og-pouvoirs-president.jpg"
 og_image_alt: "Carte de partage : « Décider seul : ce que dit le texte » — une matrice de douze lignes, une par acte que contiennent les huit dispositions dispensées de contreseing par l'article 19 de la Constitution, et quatre colonnes : exigé avant l'acte, autre acteur pour la suite, pouvoir partagé, autre cadre écrit ; case pleine quand l'article contient une citation exacte de l'élément."

@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /pouvoirs-du-president-de-la-republique/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /pouvoirs-du-president-de-la-republique/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Que peut décider le président de la République seul ?
 Le président nomme le Premier ministre.
@@ -7,6 +7,7 @@ Non : la Constitution prévoit que ses fonctions prennent fin sur présentation 
 En règle générale, un acte du président porte aussi la signature d'un ministre : c'est le contreseing.
 L'article 19 en dispense les actes de huit dispositions ; même là, le texte fait le plus souvent intervenir quelqu'un d'autre, avant ou après le président.
 Ses pouvoirs les plus visibles (armées, grâce, traités, nominations) ne sont pas dans cette liste : ils sont contresignés.
+Page mise à jour le 11 octobre 2026 · textes lus sur Légifrance entre le 30 septembre 2026 et le 11 octobre 2026
 Promesses présidentielles
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
 « Le Président de la République nomme le Premier ministre.

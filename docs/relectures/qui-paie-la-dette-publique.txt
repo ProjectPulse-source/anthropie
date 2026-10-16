@@ -1,8 +1,9 @@
-# relu le 2026-10-12 ; texte servi de /qui-paie-la-dette-publique/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /qui-paie-la-dette-publique/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Qui paie vraiment la dette publique ?
-Un même effort de 10 milliards d'euros ne tombe pas sur les mêmes ménages selon la décision prise : par l'enseignement, il pèse surtout sur les plus modestes, par l'impôt sur les plus aisés.
+Sur les comptes distribués de l'Insee de 2023, un même effort de 10 milliards d'euros ne tombe pas sur les mêmes ménages selon la décision prise : par l'enseignement, il pèse surtout sur les plus modestes, par l'impôt sur les plus aisés.
 Qui paie la dette publique dépend de ce qu'elle finance, de la manière dont elle est financée et des ajustements choisis pour la servir.
+Page mise à jour le 11 octobre 2026
 Dossier dette publique
 Mise à jour · 10/2026
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
@@ -157,7 +158,7 @@ Télécharger · Citer · Données
 Qui verse net, qui reçoit net.
 En moyenne par UC, les transferts reçus dépassent les prélèvements dans chacun des sept premiers dixièmes — de 20 800 € par UC dans le premier —, et le solde bascule au dixième D8 : dans les trois derniers, c’est l’inverse, et le dernier dixième verse en moyenne 58 400 € par UC de plus qu’il ne reçoit.
 Une moyenne de groupe ne décrit pas ses membres.
-56 % des personnes sont bénéficiaires nettes cette année-là, 99 % dans le premier dixième et 18 % dans le dernier.
+56 % des personnes sont bénéficiaires nettes en 2023, 99 % dans le premier dixième et 18 % dans le dernier.
 Mais elles ne sont majoritaires que dans les cinq premiers dixièmes : dans le dixième D7, qui reçoit en moyenne 1 800 € par UC de plus qu’il ne verse, elles ne sont plus que 36 %.
 Le signe d’une moyenne ne dit pas la situation de la majorité.
 Un groupe peut recevoir plus qu’il ne verse en moyenne alors que la majorité de ses membres versent plus qu’ils ne reçoivent : il suffit que ce que reçoivent en moyenne les bénéficiaires nets l’emporte sur ce que versent en moyenne les autres.

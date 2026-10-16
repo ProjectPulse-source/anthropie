@@ -1,19 +1,20 @@
-# relu le 2026-10-16 ; texte servi de /dette-publique-comparaison-internationale/, build de 67c7165 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /dette-publique-comparaison-internationale/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Dette publique : pourquoi 100 % du PIB ne pèse pas partout de la même façon
-À dette presque égale, la Hongrie consacre 8,9 % de ses recettes publiques aux intérêts, la Slovénie 2,7 %.
+En 2025, à dette presque égale, la Hongrie consacre 8,9 % de ses recettes publiques aux intérêts, la Slovénie 2,7 %.
 Le stock ne suffit donc pas à mesurer ce que pèse une dette publique : il faut regarder aussi son prix, les recettes disponibles pour la servir, et le poids des emprunts anciens dans ce qu'elle coûte aujourd'hui.
+Page mise à jour le 16 octobre 2026 · révisions
 Dossier dette publique
 Données · Eurostat 2025
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
-Mise à jour : 15 octobre 2026 Les 27 pays de l'Union européenne, données principales 2025 ; hors d'Europe, le millésime est indiqué pays par pays.
+Données mises à jour le 15 octobre 2026 Les 27 pays de l'Union européenne, données principales 2025 ; hors d'Europe, le millésime est indiqué pays par pays.
 Télécharger : CSV · JSON · méthode
 Même dette, charge différente
 Stock de départ (dette de fin 2024 / PIB 2025) et charge (intérêts / recettes), 2025.
 Les pointillés relient les « faux jumeaux », deux pays de dette voisine dont la charge diffère le plus, désignés par une règle fixée avant le calcul : pour chaque pays, son plus proche voisin en stock ; couples dont l’écart est inférieur à 10 points ; les trois plus grands écarts de charge.
 Groupes de l’année des données : la Bulgarie, hors zone euro en 2025, l’a rejointe le 1er janvier 2026.
 Le résultat en une phrase.
-À niveau de dette voisin, la part des recettes absorbée par les intérêts peut varier de 1 à 3,3 : le stock ne suffit pas à déterminer la charge, parce qu’il ne fixe ni le prix de la dette ni le niveau des recettes publiques.
+En 2025, à niveau de dette voisin, la part des recettes absorbée par les intérêts peut varier de 1 à 3,3 : le stock ne suffit pas à déterminer la charge, parce qu’il ne fixe ni le prix de la dette ni le niveau des recettes publiques.
 Pourquoi la Hongrie paie-t-elle 3,3 fois plus que la Slovénie ?
 Pas à cause de sa dette : rapportée au PIB, elle n’est que 1,09 fois plus élevée.
 Le taux moyen payé sur cette dette est 2,75 fois plus élevé (5,53 % contre 2,01 %), et ses recettes publiques, plus faibles (42 % du PIB contre 47 %), alourdissent encore la charge d’un facteur 1,10 : 1,09 × 2,75 × 1,10 donne bien 3,3.
@@ -644,6 +645,8 @@ Texte soumis au droit d'auteur — citation courte libre, reproduction intégral
 Les séries brutes appartiennent à leurs producteurs (Eurostat, OCDE, FMI et Banque mondiale), sous leurs propres conditions.
 Vous enseignez les SES ?
 Activités, figures et données prêtes pour la classe →
+Révisions
+16 octobre 2026 — Correction : rapportés au PIB, les intérêts placent la France au septième rang de l'Union, à égalité avec la Belgique, et non au huitième ; quatre pays moins endettés la dépassent, et non cinq.
 Toutes les ressources : données, dossiers et repères →
 Transmettre
 WhatsApp

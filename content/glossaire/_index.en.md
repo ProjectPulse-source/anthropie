@@ -1,4 +1,6 @@
 ---
+date: 2026-04-15  # premier commit de la page (git log --follow)
+lastmod: 2026-08-15  # derniere modification de fond (entree « Registre des couts deportes », 15/08/2026) ; les commits suivants ne touchent que la typographie et les metadonnees
 title: "Glossary"
 og_title: "Glossary — the concepts, defined and sourced — S. Lalut"
 description: "Key terms of the anthropic framework."

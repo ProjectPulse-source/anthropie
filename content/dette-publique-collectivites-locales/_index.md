@@ -15,6 +15,8 @@ og_title: "Dette publique : les collectivités locales sont-elles une variable d
 og_image: "images/og-collectivites.jpg"
 og_image_alt: "Carte de partage : « L'ajustement local, hors de la dette » — investissement des collectivités et transferts reçus, France, en % du PIB, avec la baisse des dotations de 2014-2017."
 donnees: [dette_collectivites]
+journal:  # révisions qui changent la lecture de la page (partials/page-date-visible.html affiche la plus récente)
+  - {date: 2026-10-16, texte: "Correction : rapportée au PIB, la dépense des administrations locales culmine en 2009 et en 2013, à égalité à la précision affichée, et non en 2009 seulement."}
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html) ; jetons résolus au build
   jeu: "dette_collectivites"
   nom: "Collectivités locales et finances publiques : dette, investissement, transferts et comptes par catégorie, France, Allemagne, Italie, Espagne"

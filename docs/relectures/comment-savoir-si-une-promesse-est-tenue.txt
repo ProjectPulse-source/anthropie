@@ -1,10 +1,11 @@
-# relu le 2026-10-12 ; texte servi de /comment-savoir-si-une-promesse-est-tenue/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /comment-savoir-si-une-promesse-est-tenue/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Comment savoir si une promesse est tenue ?
 Deux chiffres exacts peuvent raconter deux histoires différentes.
 En 2024, selon l'Insee, 49 % seulement des inscrits en catégorie A à France Travail sont chômeurs au sens du Bureau international du travail (BIT).
 Et la règle qui compte les inscrits a changé en 2022, à la fin de 2024 et en 2025, tantôt à la baisse, tantôt à la hausse.
 Pour juger une promesse sur le chômage, quatre questions : selon quel indicateur, depuis quand, la règle est-elle restée la même, quelle part attribuer.
+Page mise à jour le 12 octobre 2026
 Promesses présidentielles
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
 Quand un candidat promet de « faire baisser le chômage », on croit savoir ce que l’on regardera cinq ans plus tard : le chiffre du chômage.

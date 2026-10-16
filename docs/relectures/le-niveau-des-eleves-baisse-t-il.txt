@@ -1,11 +1,12 @@
-# relu le 2026-10-16 ; texte servi de /le-niveau-des-eleves-baisse-t-il/, build de 47aaf02 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /le-niveau-des-eleves-baisse-t-il/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Le niveau des élèves baisse-t-il ?
 Selon PISA, oui : de 2015 à 2025, les jeunes Français de 15 ans ont perdu 43 points en compréhension de l'écrit et 35 en mathématiques, une baisse significative.
 Mais les évaluations passées en classe, en CM1 et en quatrième, ne mettent pas en évidence la même baisse récente.
 Les évaluations se contredisent-elles vraiment ?
+Page mise à jour le 16 octobre 2026 · révisions
 École et lycée
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
-Relevé du : 9 octobre 2026 OCDE : PISA 2025, volume I, et Regards sur l'éducation 2026 ; IEA : TIMSS 2023, TIMSS Advanced 2015 ; DEPP : PIRLS 2021, Notes d'Information 16-37, 26-39, 26-40 et 26-22, Repères et références statistiques.
+Données mises à jour le 9 octobre 2026 OCDE : PISA 2025, volume I, et Regards sur l'éducation 2026 ; IEA : TIMSS 2023, TIMSS Advanced 2015 ; DEPP : PIRLS 2021, Notes d'Information 16-37, 26-39, 26-40 et 26-22, Repères et références statistiques.
 Télécharger : CSV · JSON · méthode
 Que mesure PISA, et combien baisse-t-il ?
 Variation du score moyen PISA entre 2015 et 2025, pays membres de l'OCDE (OCDE, PISA 2025, volume I).
@@ -288,6 +289,8 @@ Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
 Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
 Les séries brutes appartiennent à leurs producteurs (OCDE (PISA, Regards sur l'éducation), IEA (TIMSS, PIRLS), DEPP), sous leurs propres conditions.
+Révisions
+16 octobre 2026 — Correction : PISA évolue plus favorablement que TIMSS dans 12 pays, et non 13.
 Toutes les ressources : données, dossiers et repères →
 Transmettre
 WhatsApp

@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /en/what-can-the-french-president-decide-alone/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /en/what-can-the-french-president-decide-alone/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 What can the French president decide alone?
 The president appoints the Prime Minister.
@@ -7,6 +7,7 @@ No: the Constitution provides that the Prime Minister's appointment ends when th
 As a general rule, an instrument of the president also bears the signature of a minister: this is countersignature.
 Article 19 exempts the instruments of eight provisions from it; even there, the text most often brings in someone else, before or after the president.
 His most visible powers (the armed forces, pardon, treaties, appointments) are not on that list: they are countersigned.
+Page updated 11 October 2026 · texts read on Légifrance between 30 September 2026 and 11 October 2026
 Presidential promises
 ↓ Charts, data and citations to reuseReuse this page
 “The President of the Republic shall appoint the Prime Minister.

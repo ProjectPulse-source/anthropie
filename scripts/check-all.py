@@ -58,6 +58,10 @@ HORS_RESEAU = [
     # (donnees: ou date_suit:). Bloquant : une nouvelle edition integree restait invisible des moteurs, sortie 0
     # (cas fondateur : /enseignants/environnement/, Insee Premiere n° 2130, sitemap reste au 02/10).
     ("dates des pages <-> jeux affiches", "check-dates-jeux.py", []),
+    # Texte affiche modifie sans nouveau releve (16/10/2026) : compare les blocs `affichage` au commit courant ; un jeu
+    # change doit etre date dans data/dates_affichage.json (`dates-affichage.py --ecrire`). En CI l'arbre est le
+    # commit : rien a exiger. Cas fondateur : cinq jeux corriges le 16/10, pages restees datees du 07 au 15/10.
+    ("date des textes affiches modifies", "dates-affichage.py", []),
     # Langue generee (OPTIMUM-26, 11/10/2026, chantier 3) : les cas limites des mots que les generateurs ecrivent
     # autour d'un nombre (signe, accord de « point », lettres). Bloquant : une regression du module ecrirait la faute
     # dans toutes les pages qui l'adoptent, a la prochaine mise a jour des donnees, sans relecture.
@@ -85,7 +89,7 @@ LOCAL_DERIVES = [
     # fenetre de parution. Hors --ci : une source en retard n'est pas une raison de ne plus publier. Sortie 1
     # seulement en cas de retard reel -- jamais une alerte toujours vraie. Condition de mort : celle du module
     # (en-tete de scripts/maj_sources.py).
-    ("sources en fichier : editions attendues", "maj_sources.py", ["controle"]),
+    ("sources du registre : editions et revisions dues", "maj_sources.py", ["controle"]),
 ]
 LOCAL = [
     ("couverture GEO FR/EN", "check-geo-coverage.py", []),

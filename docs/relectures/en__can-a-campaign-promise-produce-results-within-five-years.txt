@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /en/can-a-campaign-promise-produce-results-within-five-years/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /en/can-a-campaign-promise-produce-results-within-five-years/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Can a campaign promise produce results within five years?
 The test case of training general practitioners in France.
@@ -6,6 +6,7 @@ A decision that raises the number of medical students does not reach its final r
 A general practitioner is trained in at least ten years from the first year, twice the length of a presidential term (rules applying since the 2023 academic year).
 Such a decision can still act sooner, because residents provide care under supervision during their training.
 And the number of students admitted does not depend on a single signature: the State sets a target, and each university votes its places.
+Page updated 12 October 2026
 Presidential promises
 ↓ Charts, data and citations to reuseReuse this page
 Suppose a decision is taken today to train more doctors.

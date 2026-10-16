@@ -69,7 +69,7 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
 
 {{< reutiliser-ancre >}}
 
-<p class="donnees-ligne"><span class="badge-donnees">Relevé du&nbsp;: {{< lyc-val "date_donnees" >}}</span> DEPP&nbsp;: Repères et références statistiques 2026, Notes d'Information 26-14, 25-36, 26-38 et 26-42&nbsp;; ministère, résultats des concours 2026&nbsp;; OCDE, dépense par élève (2012-2023)&nbsp;; énoncés relus à leur source. Télécharger&nbsp;: <a href="/lycee_professeurs.csv">CSV</a> · <a href="/lycee_professeurs.json">JSON</a> · <a href="#sources">méthode</a></p>
+<p class="donnees-ligne"><span class="badge-donnees">Données mises à jour le {{< lyc-val "date_donnees" >}}</span> DEPP&nbsp;: Repères et références statistiques 2026, Notes d'Information 26-14, 25-36, 26-38 et 26-42&nbsp;; ministère, résultats des concours 2026&nbsp;; OCDE, dépense par élève (2012-2023)&nbsp;; énoncés relus à leur source. Télécharger&nbsp;: <a href="/lycee_professeurs.csv">CSV</a> · <a href="/lycee_professeurs.json">JSON</a> · <a href="#sources">méthode</a></p>
 
 ## Une heure de cours sur dix n'a pas lieu&nbsp;: pourquoi&nbsp;? {#heures-perdues}
 

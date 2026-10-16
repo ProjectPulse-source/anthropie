@@ -1,4 +1,4 @@
-# relu le 2026-10-16 ; texte servi de /dette-publique-collectivites-locales/, build de 2abdeca + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /dette-publique-collectivites-locales/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Les collectivités locales sont-elles une variable d'ajustement des finances publiques ?
 La dette des collectivités ne permet pas de trancher : la règle d'équilibre de leurs budgets leur interdit d'emprunter pour compenser une baisse durable des recettes qui financent leurs dépenses courantes, si bien qu'une contrainte venue de l'État se lit dans leurs recettes et leurs dépenses.
@@ -6,6 +6,7 @@ De 2013 à 2017, les administrations publiques locales ont amélioré leur solde
 Leurs dépenses totales sont restées presque stables en euros courants, tandis que les recettes fiscales progressaient et que les transferts reçus reculaient.
 Rapportées au PIB, leurs dépenses ont diminué de 0,82 point, dont 0,50 point pour l'investissement.
 Ces évolutions sont concomitantes ; elles ne permettent pas, à elles seules, d'attribuer le recul de l'investissement à la baisse des dotations.
+Page mise à jour le 16 octobre 2026 · révisions
 Dossier dette publique
 Données · Eurostat 2025
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
@@ -443,6 +444,8 @@ Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
 Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
 Les séries brutes appartiennent à leurs producteurs (Eurostat, OFGL et Légifrance), sous leurs propres conditions.
+Révisions
+16 octobre 2026 — Correction : rapportée au PIB, la dépense des administrations locales culmine en 2009 et en 2013, à égalité à la précision affichée, et non en 2009 seulement.
 Toutes les ressources : données, dossiers et repères →
 Transmettre
 WhatsApp

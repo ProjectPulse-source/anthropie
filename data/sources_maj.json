@@ -1,5 +1,5 @@
 {
- "_doc": "Registre des sources de données du site : UNE ligne par source, lue par scripts/maj_sources.py (détection, intégration, état), par les générateurs (quelle édition lire) et par le workflow maj-sources.yml. Règles : CLAUDE.md, section « Module de mise à jour ». Une source en mode « fichier » est une pièce archivée dans scripts/sources_enseignants/, empreinte dans SHA256SUMS ; une source en mode « api » est interrogée par son générateur et servie par son propre workflow.",
+ "_doc": "Registre des sources de données du site : UNE ligne par source, lue par scripts/maj_sources.py (détection, intégration, état), par les générateurs (quelle édition lire) et par le workflow maj-sources.yml. Règles : CLAUDE.md, section « Module de mise à jour ». Une source en mode « fichier » est une pièce archivée dans scripts/sources_enseignants/, empreinte dans SHA256SUMS ; une source en mode « api » est interrogée par son générateur et servie par son propre workflow. Mode « manuel » (16/10/2026) : jeu sans détecteur, mis à jour à la main ; `nature` dit pourquoi, `revoir_avant` est la date d'une édition ou d'une relecture due (retard signalé par maj_sources.py controle, jamais avant cette date ; condition de mort : la ligne meurt quand son jeu reçoit un détecteur ou disparaît).",
  "sources": [
   {
    "id": "sies-licence",
@@ -140,6 +140,76 @@
    "cadence": "annuelle (septembre)", "lu": 2023,
    "detection": "API SDMX de l'OCDE (DF_UOE_INDIC_FIN_PERSTUD) : une observation de la France pour une année postérieure à l'année lue",
    "integration": "relancer le téléchargement de la série dans le dossier de recherche (cache/oecd_fin_perstud.csv), puis comme lycee-rers"
+  },
+  {
+   "id": "niveau-eleves", "producteur": "OCDE, IEA, DEPP",
+   "objet": "PISA, TIMSS, PIRLS, Regards sur l'éducation et notes de la DEPP",
+   "mode": "manuel", "pages": ["/le-niveau-des-eleves-baisse-t-il/"],
+   "generateurs": ["update_niveau_eleves.py"], "jeu": "data/niveau_eleves.json",
+   "cadence": "calendaire (Regards sur l'éducation chaque septembre ; PIRLS 2026, TIMSS 2027)", "nature": "calendaire (Regards sur l'éducation chaque septembre ; PIRLS 2026, TIMSS 2027)", "revoir_avant": "2027-09-30"
+  },
+  {
+   "id": "langue-eleves", "producteur": "DEPP, OCDE, IEA",
+   "objet": "Notes d'Information de la DEPP, PISA, PIRLS",
+   "mode": "manuel", "pages": ["/les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/"],
+   "generateurs": ["update_langue_eleves.py"], "jeu": "data/langue_eleves.json",
+   "cadence": "irrégulier (notes de la DEPP, enquêtes internationales)", "nature": "irrégulier (notes de la DEPP, enquêtes internationales)", "revoir_avant": "2027-09-30"
+  },
+  {
+   "id": "pouvoirs-president", "producteur": "Légifrance, Conseil constitutionnel",
+   "objet": "Constitution et textes cités, lus article par article (lu_le)",
+   "mode": "manuel", "pages": ["/pouvoirs-du-president-de-la-republique/", "/en/what-can-the-french-president-decide-alone/"],
+   "generateurs": ["update_pouvoirs_president.py"], "jeu": "data/pouvoirs_president_donnees.json",
+   "cadence": "juridique (relire les textes cités sur Légifrance)", "nature": "juridique (relire les textes cités sur Légifrance)", "revoir_avant": "2027-01-11"
+  },
+  {
+   "id": "promesses-adopter", "producteur": "Assemblée nationale, Sénat (Dosleg)",
+   "objet": "Origine des lois promulguées par législature",
+   "mode": "manuel", "pages": ["/qui-peut-faire-adopter-une-loi/", "/en/who-can-get-a-law-passed-in-france/"],
+   "generateurs": ["update_promesses_adopter.py"], "jeu": "data/promesses_adopter.json",
+   "cadence": "continue (données ouvertes du Parlement)", "nature": "continue (données ouvertes du Parlement)", "revoir_avant": "2027-01-12"
+  },
+  {
+   "id": "promesses-appliquer", "producteur": "Sénat, Secrétariat général du Gouvernement",
+   "objet": "Baromètre de l'application des lois, bilans du SGG",
+   "mode": "manuel", "pages": ["/une-loi-votee-s-applique-t-elle-tout-de-suite/", "/en/does-a-law-apply-as-soon-as-it-is-passed/"],
+   "generateurs": ["update_promesses_appliquer.py"], "jeu": "data/promesses_appliquer.json",
+   "cadence": "calendaire (baromètre semestriel)", "nature": "calendaire (baromètre semestriel)", "revoir_avant": "2027-01-12"
+  },
+  {
+   "id": "promesses-delais", "producteur": "Légifrance, études citées",
+   "objet": "Délais de mise en œuvre et d'effet",
+   "mode": "manuel", "pages": ["/une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/", "/en/can-a-campaign-promise-produce-results-within-five-years/"],
+   "generateurs": ["update_promesses_delais.py"], "jeu": "data/promesses_delais.json",
+   "cadence": "juridique (relire les textes cités)", "nature": "juridique (relire les textes cités)", "revoir_avant": "2027-01-12"
+  },
+  {
+   "id": "promesses-europe", "producteur": "Conseil de l'UE, Commission européenne",
+   "objet": "Votes au Conseil, tableau d'affichage du marché unique",
+   "mode": "manuel", "pages": ["/ce-que-la-france-peut-decider-dans-l-union-europeenne/", "/en/what-can-france-decide-in-the-european-union/"],
+   "generateurs": ["update_promesses_europe.py"], "jeu": "data/promesses_europe.json",
+   "cadence": "irrégulier (votes du Conseil, transposition)", "nature": "irrégulier (votes du Conseil, transposition)", "revoir_avant": "2027-01-12"
+  },
+  {
+   "id": "promesses-mesurer", "producteur": "Insee, France Travail",
+   "objet": "Chômage au sens du BIT, demandeurs d'emploi",
+   "mode": "manuel", "pages": ["/comment-savoir-si-une-promesse-est-tenue/", "/en/how-can-we-tell-whether-a-promise-was-kept/"],
+   "generateurs": ["update_promesses_mesurer.py"], "jeu": "data/promesses_mesurer.json",
+   "cadence": "calendaire (séries trimestrielles)", "nature": "calendaire (séries trimestrielles)", "revoir_avant": "2027-01-12"
+  },
+  {
+   "id": "promesses-referendum", "producteur": "Conseil constitutionnel, DILA",
+   "objet": "Registre des référendums d'initiative partagée",
+   "mode": "manuel", "pages": ["/un-president-peut-il-recourir-au-referendum/", "/en/can-the-french-president-call-a-referendum/"],
+   "generateurs": ["update_promesses_referendum.py"], "jeu": "data/promesses_referendum.json",
+   "cadence": "juridique (registre du Conseil constitutionnel)", "nature": "juridique (registre du Conseil constitutionnel)", "revoir_avant": "2027-01-12"
+  },
+  {
+   "id": "dette-inflation", "producteur": "AFT, Eurostat, BCE, Banque de France",
+   "objet": "Épisode d'inflation 2021-2023 et dette de l'État de fin 2020",
+   "mode": "manuel", "pages": ["/inflation-et-dette-publique/", "/en/inflation-and-french-public-debt/"],
+   "generateurs": ["update_dette_inflation.py"], "jeu": "data/dette_inflation.json",
+   "cadence": "clos (épisode 2021-2023 ; aucune édition attendue)", "nature": "clos (épisode 2021-2023 ; aucune édition attendue)"
   }
  ]
 }

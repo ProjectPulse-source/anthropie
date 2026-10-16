@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /dette-publique-generations-futures/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /dette-publique-generations-futures/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 La dette publique est-elle un fardeau pour les générations futures ?
 Une dette peut laisser aux générations suivantes une charge, mais aussi des écoles, des routes et d'autres équipements.
@@ -6,10 +6,11 @@ Que montrent les comptes français ?
 De 1996 à 2025, 18 % seulement des déficits publics ont correspondu à des actifs publics nouveaux (équipements, bâtiments, terrains), usure déduite ; cette part est tombée à 10 % sur 2016-2025.
 Deux autres arguments méritent examen : « nous nous devons la dette à nous-mêmes » et « le véritable fardeau viendra du vieillissement ».
 Trois tests les éprouvent, sans prétendre calculer la facture de chaque génération.
+Page mise à jour le 11 octobre 2026
 Dossier dette publique
 Données · Eurostat et BCE 2025 · projections 2026
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
-Mise à jour : 9 octobre 2026 Administrations publiques, séries Eurostat et BCE de 1995 à 2025 ; Commission européenne et COR, projections.
+Données mises à jour le 9 octobre 2026 Administrations publiques, séries Eurostat et BCE de 1995 à 2025 ; Commission européenne et COR, projections.
 Télécharger : CSV · JSON · méthode
 À quoi les déficits ont correspondu dans les comptes
 Emprunter pour construire une école, une route ou un réseau laisse un capital en même temps qu’une dette.

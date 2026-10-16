@@ -1,4 +1,4 @@
-# relu le 2026-10-16 ; texte servi de /en/why-does-public-debt-rise/, build de 67c7165 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /en/why-does-public-debt-rise/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Why does French public debt rise?
 Between 1995 and 2025, French public debt went from 57.8% to 115.6% of GDP: it doubled as a share of the wealth produced.
@@ -6,10 +6,11 @@ Where do these 57.7 points of GDP come from?
 Interest pushes the ratio up, nominal GDP growth pulls it down, and over thirty years the two almost offset each other.
 Most of the rise comes from public deficits excluding interest, known as primary deficits: 50.5 points out of 57.7.
 This balance hides two opposite periods, and it shows which terms drove the debt up, not why the deficits existed.
+Page updated 13 October 2026
 Public debt dossier
 Data · Eurostat 2025
 ↓ Charts, data and citations to reuseReuse this page
-Updated: 13 October 2026 France, general government, Eurostat series from 1995 to 2025.
+Data last updated 13 October 2026 France, general government, Eurostat series from 1995 to 2025.
 Download: CSV · JSON · method
 France is a telling case for a question every indebted country faces.
 Its debt ratio doubled in thirty years, and Eurostat’s harmonised series allow that rise to be split, year by year, into the terms of a standard accounting identity.

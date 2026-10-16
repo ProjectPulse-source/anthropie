@@ -1,8 +1,9 @@
-# relu le 2026-10-12 ; texte servi de /en/who-really-pays-public-debt/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /en/who-really-pays-public-debt/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Who really pays for public debt?
-The same €10 billion adjustment falls on different households depending on the decision taken: through education, it weighs mostly on the least well-off; through taxes, on the best-off.
+In INSEE's 2023 distributional accounts, the same €10 billion adjustment falls on different households depending on the decision taken: through education, it weighs mostly on the least well-off; through taxes, on the best-off.
 Who pays for public debt depends on what it finances, how it is financed and the adjustments chosen to service it.
+Page updated 11 October 2026
 Public debt dossier
 Updated · 10/2026
 ↓ Charts, data and citations to reuseReuse this page
@@ -164,7 +165,7 @@ Download · Cite · Data
 Net contributors, net beneficiaries.
 On average per CU, transfers received exceed taxes and contributions in each of the first seven deciles (by €20,800 per CU in the first), and the balance tips at decile D8: in the last three, it is the reverse, and the top decile pays in, on average, €58,400 per CU more than it receives.
 A group average does not describe its members.
-56% of people are net beneficiaries that year, 99% in the first decile and 18% in the top one.
+56% of people are net beneficiaries in 2023, 99% in the first decile and 18% in the top one.
 But they are a majority only in the first five deciles: in decile D7, which receives on average €1,800 per CU more than it pays in, they are only 36%.
 The sign of an average does not reveal the situation of the majority.
 A group can receive more than it pays in on average while most of its members pay in more than they receive: it is enough for what net beneficiaries receive on average to outweigh what the others pay in on average.

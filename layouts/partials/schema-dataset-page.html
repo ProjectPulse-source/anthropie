@@ -44,6 +44,7 @@
 {{- $ds := dict
     "@context" "https://schema.org"
     "@type" "Dataset"
+    "@id" (printf "%s#dataset" .Permalink)
     "name" (partial "desc-figures.html" (dict "text" $p.nom) | htmlUnescape)
     "description" (partial "desc-figures.html" (dict "text" $p.description) | htmlUnescape)
     "url" .Permalink

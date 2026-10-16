@@ -23,6 +23,28 @@
   margin: 0;
 }
 
+// Date de la page, sous le chapo (2026-10-16 ; partials/page-date-visible.html) : discrete, une ligne.
+.page-header__date {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-text-subtle);
+  margin: 0.75rem 0 0;
+}
+
+// Revisions d'une ressource, en pied de page (partials/page-revisions.html) : discretes, lisibles.
+.revisions {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-text-subtle);
+  max-width: 720px;
+  margin: 3rem 0 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 1rem;
+}
+.revisions__titre { font-size: 0.95rem; margin: 0 0 0.5rem; }
+.revisions__liste { margin: 0; padding-left: 1.1rem; }
+.revisions__liste time { font-weight: 600; }
+
 // ── Content typography enhancements ──
 
 // Tables

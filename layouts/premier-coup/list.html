@@ -38,6 +38,7 @@
   <header class="page-header">
     <h1 class="page-header__title">{{ partial "fr-typo.html" .Title }}</h1>
     {{ with .Description }}<p class="page-header__lede">{{ . }}</p>{{ end }}
+    {{- if .Params.ressource }}{{ partial "page-date-visible.html" . }}{{ end }}
   </header>
 
   {{- partial "barre-auto.html" . }}

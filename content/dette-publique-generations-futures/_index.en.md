@@ -61,7 +61,7 @@ dossier_dette_role: "assets, holders, pensions"
 
 {{< reutiliser-ancre >}}
 
-<p class="donnees-ligne"><span class="badge-donnees">Updated: {{< gen-val "date_donnees" >}}</span> General government, Eurostat and ECB series from {{< gen-val "h0" >}} to {{< gen-val "fin" >}}; European Commission and COR, projections. Download: <a href="/dette_generations.csv">CSV</a> · <a href="/dette_generations.json">JSON</a> · <a href="#sources">method</a></p>
+<p class="donnees-ligne"><span class="badge-donnees">Data last updated {{< gen-val "date_donnees" >}}</span> General government, Eurostat and ECB series from {{< gen-val "h0" >}} to {{< gen-val "fin" >}}; European Commission and COR, projections. Download: <a href="/dette_generations.csv">CSV</a> · <a href="/dette_generations.json">JSON</a> · <a href="#sources">method</a></p>
 
 ## What deficits corresponded to in the accounts {#assets}
 

@@ -10,6 +10,7 @@ lastmod: 2026-10-11
 # data/pouvoirs_president_en.yaml (scripts/update_pouvoirs_president.py, guard G2-EN). The Constitution is quoted in the
 # English translation published by the Conseil constitutionnel, checked word for word.
 donnees: [pouvoirs_president_donnees]
+textes_lus: pouvoirs_president  # dates de lecture sur Légifrance (lu_le) affichées sous le chapô : partials/page-date-visible.html
 og_title: "What can the French president decide alone? The text, quotation by quotation — S. Lalut"
 og_image: "images/og-pouvoirs-president-en.jpg"
 og_image_alt: "Share card: \"Deciding alone: what the text says\" — a matrix of twelve rows, one per act contained in the eight provisions that article 19 of the French Constitution exempts from countersignature, and four columns: required before the act, another actor afterwards, shared power, other written limit; filled cell when the article contains an exact quotation of the element."

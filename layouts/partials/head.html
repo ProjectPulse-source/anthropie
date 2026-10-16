@@ -119,6 +119,11 @@
 {{ with (or .Params.abstract .Params.description) }}<meta name="citation_abstract" content="{{ . }}">{{ end }}
 {{ end }}
 
+<!-- Schema.org Article / WebPage d'une ressource (2026-10-16) : dates et auteur de la page -->
+{{ if and .Params.ressource (not (in (slice "awp" "livres" "publications") .Section)) }}
+  {{- partial "schema-page-ressource.html" . -}}
+{{ end }}
+
 <!-- Schema.org FAQ -->
 {{ if .Params.faq }}
   {{- partial "schema-faqpage.html" . -}}

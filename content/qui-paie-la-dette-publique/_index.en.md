@@ -2,7 +2,7 @@
 title: "Who really pays for public debt?"
 url: /en/who-really-pays-public-debt/
 description: "Who pays for public debt? Holding it is not paying for it: taxes, spending and inflation do not spread the adjustment across the same groups. Official French data."
-chapo: "The same €{qp.exp_effort} billion adjustment falls on different households depending on the decision taken: through education, it weighs mostly on the least well-off; through taxes, on the best-off. Who pays for public debt depends on what it finances, how it is financed and the adjustments chosen to service it."
+chapo: "In INSEE's {qp.cd_annee} distributional accounts, the same €{qp.exp_effort} billion adjustment falls on different households depending on the decision taken: through education, it weighs mostly on the least well-off; through taxes, on the best-off. Who pays for public debt depends on what it finances, how it is financed and the adjustments chosen to service it."
 date: 2026-09-30
 lastmod: 2026-10-11
 donnees: [dette_officielle, qui_paie_donnees]
@@ -147,7 +147,7 @@ This total covers the scope of the distributional accounts, which is not that of
 
 <div class="resultat-phrase">
 
-**A group average does not describe its members.** {{< qp-val "benef_ensemble" >}}% of people are net beneficiaries that year, {{< qp-val "benef_d1" >}}% in the first decile and {{< qp-val "benef_d10" >}}% in the top one. But they are a majority only in the first {{< qp-val "benef_majo_n_mots" >}} deciles: in decile {{< qp-val "benef_dernier_moyen" >}}, which receives on average €{{< qp-val "net_dernier_moyen" >}} per CU more than it pays in, they are only {{< qp-val "benef_dernier_moyen_pct" >}}%. **The sign of an average does not reveal the situation of the majority.** A group can receive more than it pays in on average while most of its members pay in more than they receive: it is enough for what net beneficiaries receive on average to outweigh what the others pay in on average. The grouped data do not say how these balances are distributed.
+**A group average does not describe its members.** {{< qp-val "benef_ensemble" >}}% of people are net beneficiaries in {{< qp-val "cd_annee" >}}, {{< qp-val "benef_d1" >}}% in the first decile and {{< qp-val "benef_d10" >}}% in the top one. But they are a majority only in the first {{< qp-val "benef_majo_n_mots" >}} deciles: in decile {{< qp-val "benef_dernier_moyen" >}}, which receives on average €{{< qp-val "net_dernier_moyen" >}} per CU more than it pays in, they are only {{< qp-val "benef_dernier_moyen_pct" >}}%. **The sign of an average does not reveal the situation of the majority.** A group can receive more than it pays in on average while most of its members pay in more than they receive: it is enough for what net beneficiaries receive on average to outweigh what the others pay in on average. The grouped data do not say how these balances are distributed.
 
 </div>
 

@@ -1,12 +1,13 @@
-# relu le 2026-10-16 ; texte servi de /en/public-debt-international-comparison/, build de 67c7165 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /en/public-debt-international-comparison/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Public debt: why 100% of GDP does not carry the same burden everywhere
-At almost equal debt levels, Hungary devotes 8.9% of its public revenue to interest; Slovenia, 2.7%.
+In 2025, at almost equal debt levels, Hungary devotes 8.9% of its public revenue to interest; Slovenia, 2.7%.
 The stock alone therefore cannot measure what a public debt weighs: one must also look at its average interest cost, the revenue available to service it, and the weight of old borrowing in what it costs today.
+Page updated 16 October 2026 · revisions
 Public debt dossier
 Data · Eurostat 2025
 ↓ Charts, data and citations to reuseReuse this page
-Updated: 15 October 2026 The 27 countries of the European Union, main data 2025; outside Europe, the vintage is given country by country.
+Data last updated 15 October 2026 The 27 countries of the European Union, main data 2025; outside Europe, the vintage is given country by country.
 Download: CSV · JSON · method
 The debt-to-GDP ratio is one of the most widely quoted figures in public-finance comparisons, and on its own it does not say what a debt costs.
 This page sets France alongside the other members of the European Union and a few economies beyond Europe, and asks what the ratio leaves out.
@@ -15,7 +16,7 @@ Starting stock (debt at end-2024 / 2025 GDP) and burden (interest / revenue), 20
 Dotted lines link the “look-alike pairs”, two countries with similar debt whose burden differs most, picked out by a rule set before the calculation: for each country, its nearest neighbour by debt stock; pairs less than 10 percentage points apart; the three largest gaps in burden.
 Groups as in the data year: Bulgaria, outside the euro area in 2025, joined it on 1 January 2026.
 The result in one sentence.
-At similar debt levels, the share of revenue absorbed by interest can differ by a factor of 3.3: the stock does not determine the burden, because it sets neither the average interest cost of the debt nor the level of public revenue.
+In 2025, at similar debt levels, the share of revenue absorbed by interest can differ by a factor of 3.3: the stock does not determine the burden, because it sets neither the average interest cost of the debt nor the level of public revenue.
 Why does Hungary pay 3.3 times as much as Slovenia?
 Not because of its debt: relative to GDP, it is only 1.09 times higher.
 The average rate paid on that debt is 2.75 times higher (5.53% against 2.01%), and its lower public revenue (42% of GDP against 47%) adds a further factor of 1.10: 1.09 × 2.75 × 1.10 does give 3.3.
@@ -636,6 +637,8 @@ Download JSON CSV
 Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
 Text under copyright — short quotation free, full reproduction on request.
 The raw series belong to their producers (Eurostat, OECD, IMF and World Bank), under their own terms.
+Revisions
+16 October 2026 — Correction: as a share of GDP, interest puts France seventh in the Union, tied with Belgium, not eighth; four less indebted countries exceed it, not five.
 All resources: data, explainers and reference material →
 Share
 WhatsApp

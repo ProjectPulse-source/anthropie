@@ -680,12 +680,32 @@ def etat(controle: bool) -> int:
             ("workflow %s" % s["workflow"] if s.get("workflow") else "aucune detection (mise a jour a la main)")
         if p and date.today() > p[1]:
             retards.append("%s : %s non integre, fenetre close depuis le %s" % (s["id"], p[0], p[1].isoformat()))
+        # Mode « manuel » (16/10/2026, arbitrage PRO-20261016-174136, option D) : jeu sans detecteur, mis a jour a la
+        # main. `nature` dit pourquoi (calendaire, irregulier, juridique, clos) ; `revoir_avant` est la date a laquelle
+        # une edition nouvelle ou une relecture des textes est due. Retard seulement si cette date est passee ET que le
+        # jeu n'a pas ete releve depuis : jamais une alerte toujours vraie. Un episode clos n'a pas d'echeance.
+        # `verifie_le` (contre-expertise PRO-20261016-195302, P8) : date d'une verification de la source qui n'a RIEN
+        # change. Elle leve le retard sans toucher a la date des donnees ni a celle de la page : verifier n'est pas
+        # mettre a jour. La poser a la main, avec la date du jour, apres avoir consulte la source.
+        if s["mode"] == "manuel":
+            suite = "%s, a revoir avant le %s" % (s["nature"], s.get("revoir_avant", "-")) if s.get("revoir_avant") else \
+                "%s, sans echeance" % s["nature"]
+            vu = max(str(releve), str(s.get("verifie_le", "")))
+            if s.get("revoir_avant") and date.today() > date.fromisoformat(s["revoir_avant"]) and vu < s["revoir_avant"]:
+                retards.append("%s : a revoir avant le %s (%s), jeu releve le %s" % (s["id"], s["revoir_avant"],
+                                                                                      s["nature"], releve))
+                if controle:
+                    # Ligne lue par maj-sources.yml : UN ticket par titre (source + echeance), jamais chaque matin.
+                    print("RETARD\tDonnees a revoir : %s (avant le %s)\t%s ; pages %s ; jeu %s releve le %s. Apres "
+                          "verification : nouvelle edition integree (le releve bouge), ou `verifie_le` pose si rien n'a "
+                          "change, puis `revoir_avant` repousse." % (s["id"], s["revoir_avant"], s["nature"],
+                                                                      ", ".join(s["pages"]), s["jeu"], releve))
         if not controle:
             log("%-20s %-8s jeu releve le %-10s  %s" % (s["id"], s["mode"], releve, suite))
     for r in retards:
         log("RETARD  " + r)
     if controle:
-        log("Sources en fichier : %d retard(s) apres fenetre de parution." % len(retards) + ("" if retards else " OK"))
+        log("Sources du registre : %d retard(s) (fenetre de parution close ou date de revision passee)." % len(retards) + ("" if retards else " OK"))
         return 1 if retards else 0
     return 0
 

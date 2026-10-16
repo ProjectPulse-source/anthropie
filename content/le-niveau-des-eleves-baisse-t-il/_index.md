@@ -14,6 +14,8 @@ og_image_alt: "Carte de partage : « Le niveau des élèves baisse-t-il ? » —
 # scripts/sources_niveau_eleves/). Français seulement : débat, programme et statistique français (exclusion déclarée).
 lang_repli: "/en/resources/"  # pas de version anglaise (exclusion déclarée) : cible de l'onglet EN, partials/lang-cible.html
 donnees: [niveau_eleves]
+journal:  # révisions qui changent la lecture de la page (partials/page-date-visible.html affiche la plus récente)
+  - {date: 2026-10-16, texte: "Correction : PISA évolue plus favorablement que TIMSS dans 12 pays, et non 13."}
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html) ; jetons résolus au build
   jeu: "niveau_eleves"
   nom: "Niveau des élèves en France : PISA 2000-2025 et comparaison OCDE, TIMSS et PIRLS, tests de positionnement de seconde, composition par classe, TIMSS Advanced, recrutement des professeurs"
@@ -64,7 +66,7 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
 
 {{< reutiliser-ancre >}}
 
-<p class="donnees-ligne"><span class="badge-donnees">Relevé du&nbsp;: {{< niv-val "date_donnees" >}}</span> OCDE&nbsp;: PISA 2025, volume&nbsp;I, et <em>Regards sur l'éducation</em> 2026&nbsp;; IEA&nbsp;: TIMSS 2023, TIMSS Advanced 2015&nbsp;; DEPP&nbsp;: PIRLS 2021, Notes d'Information 16-37, 26-39, 26-40 et 26-22, <em>Repères et références statistiques</em>. Télécharger&nbsp;: <a href="/niveau_eleves.csv">CSV</a> · <a href="/niveau_eleves.json">JSON</a> · <a href="#sources">méthode</a></p>
+<p class="donnees-ligne"><span class="badge-donnees">Données mises à jour le {{< niv-val "date_donnees" >}}</span> OCDE&nbsp;: PISA 2025, volume&nbsp;I, et <em>Regards sur l'éducation</em> 2026&nbsp;; IEA&nbsp;: TIMSS 2023, TIMSS Advanced 2015&nbsp;; DEPP&nbsp;: PIRLS 2021, Notes d'Information 16-37, 26-39, 26-40 et 26-22, <em>Repères et références statistiques</em>. Télécharger&nbsp;: <a href="/niveau_eleves.csv">CSV</a> · <a href="/niveau_eleves.json">JSON</a> · <a href="#sources">méthode</a></p>
 
 ## Que mesure PISA, et combien baisse-t-il&nbsp;? {#baisse}
 

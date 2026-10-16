@@ -67,6 +67,11 @@ jobs:
       - name: Audit des liens du build (bloquant)
         run: python3 scripts/audit-liens-build.py public
 
+      # Dates des ressources (16/10/2026, arbitrage PRO-20261016-174136) : sitemap, balisage de page et ligne visible
+      # disent la meme date, relus sur le site CONSTRUIT. Bloquant : une date recopiee en dur un jour diverge en silence.
+      - name: Dates des ressources (bloquant)
+        run: python3 scripts/check-dates-build.py public
+
       # Pages ressources (arbitrage OPTIMUM-26, 11/10/2026, chantiers 1 et 2) : version telephone et pied commun de
       # chaque figure, motifs de langue connus, sur le texte SERVI. Bloquant sur les pages refondues
       # (`ressource.refonte`) ; les autres sont seulement inventoriees pour leur phase B.

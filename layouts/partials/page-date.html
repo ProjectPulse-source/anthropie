@@ -1,0 +1,49 @@
+{{- /* Dates d'une page : source UNIQUE (2026-10-16, arbitrages PRO-20261016-174136 et PRO-20261016-195302).
+       La lisent le sitemap (lastmod), le balisage de la page (datePublished / dateModified) et la ligne visible
+       « Page mise à jour le … » : les trois canaux portent donc la même date, par construction.
+
+       pub = date de publication (front matter `date`) ;
+       mod = la plus récente des modifications DE FOND : révision éditoriale (`lastmod`) ; relevé de chaque jeu déclaré
+             dans `donnees:` ou `date_suit:` (partial jeu-date.html ; un jeu n'est relevé à nouveau que si un chiffre a
+             bougé) ; changement du TEXTE affiché sans nouvelle donnée, au grain de la page (data/dates_affichage.json,
+             changements de forme exclus par scripts/dates-affichage.py) ; pour une page qui AGRÈGE (`aggregates:`), la
+             date la plus récente des pages agrégées (site FR).
+       Le journal (`journal:`) n'est PAS une source de date (contre-expertise du 16/10 : sinon une écriture du journal
+       ferait une fraîcheur) : chaque entrée doit tomber le jour d'une modification de fond ci-dessus, sinon le build
+       s'arrête. Aucune date du jour, du build ou du déploiement : une page inchangée garde sa date.
+       Retour : dict "pub" (time, peut être zéro) "mod" (time, peut être zéro). */ -}}
+{{- $p := . -}}
+{{- $lm := $p.Lastmod -}}
+{{- $fond := slice ($p.Lastmod.Format "2006-01-02") -}}
+{{- with $p.Params.aggregates -}}
+  {{- $fr := index site.Sites 0 -}}
+  {{- range . -}}
+    {{- range (where $fr.RegularPages "Section" .) -}}
+      {{- if .Lastmod.After $lm -}}{{- $lm = .Lastmod -}}{{- end -}}
+      {{- $fond = $fond | append (.Lastmod.Format "2006-01-02") -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- with union ($p.Params.donnees | default slice) ($p.Params.date_suit | default slice) -}}
+  {{- range . -}}
+    {{- $t := time (partial "jeu-date.html" (dict "nom" . "page" $p.File.Path)) -}}
+    {{- if $t.After $lm -}}{{- $lm = $t -}}{{- end -}}
+    {{- $fond = $fond | append ($t.Format "2006-01-02") -}}
+  {{- end -}}
+{{- end -}}
+{{- /* Texte affiché modifié sans nouveau relevé, au grain de la PAGE (data/dates_affichage.json, écrit par
+       scripts/dates-affichage.py --ecrire) : la page a changé même si ses données n'ont pas bougé. */ -}}
+{{- with $p.File -}}
+  {{- with index (site.Data.dates_affichage.pages | default dict) (replace .Path "\\" "/") -}}
+    {{- $ta := time . -}}
+    {{- if $ta.After $lm -}}{{- $lm = $ta -}}{{- end -}}
+    {{- $fond = $fond | append ($ta.Format "2006-01-02") -}}
+  {{- end -}}
+{{- end -}}
+{{- range $p.Params.journal -}}
+  {{- $j := (time .date).Format "2006-01-02" -}}
+  {{- if not (in $fond $j) -}}
+    {{- errorf "page-date: entrée de journal du %s sans modification de fond ce jour-là (%s) ; dates de fond : %s" $j $p.File.Path (delimit (uniq $fond) ", ") -}}
+  {{- end -}}
+{{- end -}}
+{{- return (dict "pub" $p.Date "mod" $lm) -}}

@@ -1,4 +1,4 @@
-# relu le 2026-10-16 ; texte servi de /inflation-et-dette-publique/, build de 47aaf02 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /inflation-et-dette-publique/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 L'inflation a-t-elle vraiment allégé la dette française ?
 L'État a-t-il gagné 150 milliards grâce à l'inflation ?
@@ -6,6 +6,7 @@ Pas sous la forme d'une recette.
 L'inflation de 2021-2023, plus forte que prévu, a réduit d'environ 150 milliards d'euros de 2020 la valeur réelle des paiements promis sur la dette de l'État à taux fixe de fin 2020.
 Cet allègement se réalise au fil des paiements, jusqu'en 2066 : un cinquième seulement fin 2023.
 Il ne prouve pas un gain budgétaire net équivalent.
+Page mise à jour le 16 octobre 2026 · révisions
 Dossier dette publique
 Données · AFT, Eurostat, BCE 2020-2023
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
@@ -297,6 +298,8 @@ Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
 Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
 Les séries brutes appartiennent à leurs producteurs (AFT, Eurostat, BCE, Banque de France, Commission européenne), sous leurs propres conditions.
+Révisions
+16 octobre 2026 — Correction : l'écart dû aux achats de la banque centrale culmine d'avril à juillet 2022, quatre mois à égalité à la précision affichée, et non en mai 2022.
 Toutes les ressources : données, dossiers et repères →
 Transmettre
 WhatsApp

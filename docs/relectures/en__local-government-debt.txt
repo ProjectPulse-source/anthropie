@@ -1,4 +1,4 @@
-# relu le 2026-10-16 ; texte servi de /en/local-government-debt/, build de 2abdeca + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /en/local-government-debt/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Are local authorities the adjustment variable of public finances?
 Local authorities' debt does not settle the question: the balanced-budget rule forbids them to borrow to offset a lasting fall in the revenue that pays for their day-to-day spending, so a constraint coming from central government shows up in their revenue and spending.
@@ -6,6 +6,7 @@ From 2013 to 2017, local government improved its balance by €9.7 billion.
 Its total spending remained almost flat in current euros, while tax revenue rose and transfers received fell.
 Relative to GDP, its spending fell by 0.82 points, of which 0.50 points for investment.
 These movements are concomitant; on their own, they do not allow the fall in investment to be attributed to the grant cuts.
+Page updated 16 October 2026 · revisions
 Public debt dossier
 Data · Eurostat 2025
 ↓ Charts, data and citations to reuseReuse this page
@@ -439,6 +440,8 @@ Download JSON CSV
 Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
 Text under copyright — short quotation free, full reproduction on request.
 The raw series belong to their producers (Eurostat, OFGL and Légifrance), under their own terms.
+Revisions
+16 October 2026 — Correction: as a share of GDP, local government spending peaks in 2009 and in 2013, tied at the displayed precision, not in 2009 alone.
 All resources: data, explainers and reference material →
 Share
 WhatsApp

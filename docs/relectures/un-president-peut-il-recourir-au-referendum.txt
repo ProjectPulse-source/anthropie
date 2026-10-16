@@ -1,10 +1,11 @@
-# relu le 2026-10-12 ; texte servi de /un-president-peut-il-recourir-au-referendum/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /un-president-peut-il-recourir-au-referendum/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Un président peut-il recourir au référendum ?
 Un président peut-il soumettre une réforme aux électeurs quand il le veut ?
 La Constitution lui en donne le pouvoir par trois voies, et chacune a ses conditions : pour un projet de loi, une proposition du Gouvernement ou des deux assemblées, et un sujet que l'article 11 délimite ; pour une révision de la Constitution, un vote des deux assemblées en termes identiques ; pour l'adhésion d'un État à l'Union européenne, le référendum est la règle, sauf si le Parlement en décide autrement.
 Du 4 octobre 1958 au 5 octobre 2026, neuf référendums nationaux ont eu lieu, le dernier le 29 mai 2005.
 Depuis 2015, des parlementaires soutenus par des électeurs peuvent aussi engager une procédure qui peut y conduire : elle n'a conduit à aucun scrutin.
+Page mise à jour le 12 octobre 2026
 Promesses présidentielles
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
 Promettre de soumettre une réforme aux électeurs, c’est promettre de passer par une autre voie que le seul vote du Parlement.

@@ -76,7 +76,8 @@
   {{- $srcTitre = cond $en "Period of the data on this page: the 2021-2023 inflation episode — a closed episode, not an update date" "Période des données de cette page : l'épisode d'inflation 2021-2023 — un épisode clos, non une date de mise à jour" -}}
 {{- end -}}
 {{- if not $src -}}
-  {{- $src = printf "%s · %s" (cond $en "Updated" "Mise à jour") (.Page.Lastmod.Format "01/2006") -}}
+  {{- /* Date de la page commune (partial page-date.html, 16/10/2026) : la même que le sitemap et la ligne sous le chapô. */ -}}
+  {{- $src = printf "%s · %s" (cond $en "Updated" "Mise à jour") ((partial "page-date.html" .Page).mod.Format "01/2006") -}}
   {{- $srcTitre = cond $en "Last editorial update of this page. Data vintages are given next to each figure." "Mise à jour éditoriale de la page. Les millésimes des données sont indiqués auprès de chaque figure." -}}
 {{- end -}}
 {{- /* Les cinq questions : data/dossier_dette.yaml, source unique partagée avec la bande de l'index /ressources/. */ -}}

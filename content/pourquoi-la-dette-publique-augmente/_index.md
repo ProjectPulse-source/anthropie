@@ -55,7 +55,7 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 {{< reutiliser-ancre >}}
 
-<p class="donnees-ligne"><span class="badge-donnees">Mise à jour&nbsp;: {{< dyn-val "date_donnees" >}}</span> France, administrations publiques, séries Eurostat de {{< dyn-val "annee_depart" >}} à {{< dyn-val "annee_fin" >}}. Télécharger&nbsp;: <a href="/dette_dynamique.csv">CSV</a> · <a href="/dette_dynamique.json">JSON</a> · <a href="#sources">méthode</a></p>
+<p class="donnees-ligne"><span class="badge-donnees">Données mises à jour le {{< dyn-val "date_donnees" >}}</span> France, administrations publiques, séries Eurostat de {{< dyn-val "annee_depart" >}} à {{< dyn-val "annee_fin" >}}. Télécharger&nbsp;: <a href="/dette_dynamique.csv">CSV</a> · <a href="/dette_dynamique.json">JSON</a> · <a href="#sources">méthode</a></p>
 
 ## D'où vient la hausse {#cascade}
 

@@ -12,6 +12,8 @@ lastmod: 2026-10-11
 # requested by the author on 03/10/2026. Same tokens, same keys: values come from the affichage_en block of
 # data/dette_baisse.json (scripts/update_dette_baisse.py), whose guards cover both languages.
 donnees: [dette_baisse]
+journal:  # révisions qui changent la lecture de la page (partials/page-date-visible.html affiche la plus récente)
+  - {date: 2026-10-16, texte: "Correction: the implicit interest rate exceeded nominal growth in 15 years, not 16; the comparison is now made at the displayed precision."}
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
   jeu: "dette_baisse"
   nom: "Can public debt come down: a decade-by-decade decomposition of the debt-to-GDP ratio, France and EU countries whose debt exceeded 90% of GDP"
@@ -49,7 +51,7 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 {{< reutiliser-ancre >}}
 
-<p class="donnees-ligne"><span class="badge-donnees">Updated: {{< baisse-val "date_donnees" >}}</span> General government, Eurostat series from {{< baisse-val "annee_debut" >}} to {{< baisse-val "annee_fin" >}}. Download: <a href="/dette_baisse.csv">CSV</a> · <a href="/dette_baisse.json">JSON</a> · <a href="#sources">method</a></p>
+<p class="donnees-ligne"><span class="badge-donnees">Data last updated {{< baisse-val "date_donnees" >}}</span> General government, Eurostat series from {{< baisse-val "annee_debut" >}} to {{< baisse-val "annee_fin" >}}. Download: <a href="/dette_baisse.csv">CSV</a> · <a href="/dette_baisse.json">JSON</a> · <a href="#sources">method</a></p>
 
 ## The weight of debt, not its amount {#poids-et-montant}
 

@@ -1,4 +1,4 @@
-# relu le 2026-10-16 ; texte servi de /en/inflation-and-french-public-debt/, build de 47aaf02 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /en/inflation-and-french-public-debt/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Did inflation really ease France's debt burden?
 Did the French government gain €150bn from inflation?
@@ -6,6 +6,7 @@ Not as revenue.
 The 2021–2023 inflation surprise reduced the real value of the payments promised on France's end-2020 fixed-rate marketable government debt by about €150bn in 2020 euros.
 That relief materialises as payments fall due, until 2066: only a fifth of it by end-2023.
 It does not prove an equivalent net fiscal gain.
+Page updated 16 October 2026 · revisions
 Public debt dossier
 Data · AFT, Eurostat, ECB 2020-2023
 ↓ Charts, data and citations to reuseReuse this page
@@ -284,6 +285,8 @@ Download JSON CSV
 Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
 Text under copyright — short quotation free, full reproduction on request.
 The raw series belong to their producers (AFT, Eurostat, ECB, Banque de France, European Commission), under their own terms.
+Revisions
+16 October 2026 — Correction: the gap due to central bank purchases peaks from April to July 2022, four months tied at the displayed precision, not in May 2022.
 All resources: data, explainers and reference material →
 Share
 WhatsApp

@@ -1,10 +1,11 @@
-# relu le 2026-10-12 ; texte servi de /une-loi-votee-s-applique-t-elle-tout-de-suite/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /une-loi-votee-s-applique-t-elle-tout-de-suite/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Une loi votée s'applique-t-elle tout de suite ?
 Pas du seul fait du vote.
 Une fois la loi promulguée et publiée, celles de ses dispositions dont l'exécution nécessite des décrets ou des arrêtés attendent ces mesures.
 Au 05/10/2026, selon le baromètre de l'application des lois, 130 des 399 lois promulguées d'octobre 2017 à septembre 2025, hors conventions (lois qui autorisent la ratification ou l'approbation d'un accord international, ou l'adhésion à un tel accord), attendaient encore au moins une mesure ; 124 les avaient toutes reçues et 144 étaient classées sans mesure à prendre.
 Une mesure en attente n'est pas forcément en retard, mais le Gouvernement n'est pas libre d'attendre indéfiniment : le Conseil d'État exige qu'il agisse « dans un délai raisonnable », et le refus de prendre une mesure due peut être porté devant le juge administratif, qui peut l'annuler et ordonner de la prendre.
+Page mise à jour le 12 octobre 2026
 Promesses présidentielles
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
 Une promesse qui passe par la loi ne s’arrête pas au vote.

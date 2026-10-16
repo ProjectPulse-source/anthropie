@@ -101,6 +101,30 @@ jobs:
               core.info('Ticket ouvert : ' + titre);
             }
 
+      # PEREMPTION (16/10/2026, contre-expertise PRO-20261016-195302, P8) : les jeux sans automatisme (mode « manuel »
+      # du registre) ont une date `revoir_avant`. Passee sans releve ni verification, UN ticket par titre (source +
+      # echeance) : l'alerte part une fois, au franchissement, jamais chaque matin. Aucune page n'est modifiee ici.
+      - name: Peremption des jeux sans automatisme
+        if: github.event.schedule != '10 6 * * 1' && !inputs.essai
+        run: python3 scripts/maj_sources.py controle | tee "${{ runner.temp }}/peremption.txt" || true
+
+      - name: Un ticket par echeance depassee
+        if: github.event.schedule != '10 6 * * 1' && !inputs.essai
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          script: |
+            const fs = require('fs');
+            const lignes = fs.readFileSync('${{ runner.temp }}/peremption.txt', 'utf8').split('\n').filter(l => l.startsWith('RETARD\t'));
+            if (!lignes.length) { core.info('Peremption : aucune echeance depassee.'); return; }
+            const tous = await github.paginate(github.rest.issues.listForRepo, { owner: context.repo.owner, repo: context.repo.repo, state: 'all', per_page: 100 });
+            const vus = new Set(tous.map(i => i.title));
+            for (const l of lignes) {
+              const [, titre, detail] = l.split('\t');
+              if (vus.has(titre)) { core.info('Deja signale : ' + titre); continue; }
+              await github.rest.issues.create({ owner: context.repo.owner, repo: context.repo.repo, title: titre, body: detail });
+              core.info('Ticket ouvert : ' + titre);
+            }
+
       - name: Detecter, archiver, inscrire, relancer (exit 1 si une edition est refusee)
         if: github.event.schedule != '10 6 * * 1' && !inputs.essai
         env:

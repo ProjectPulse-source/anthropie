@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /en/public-debt-future-generations/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /en/public-debt-future-generations/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Is public debt a burden on future generations?
 A debt can leave the next generations a charge, but also schools, roads and other equipment.
@@ -6,10 +6,11 @@ What do the French accounts show?
 From 1996 to 2025, only 18% of public deficits corresponded to new public assets (equipment, buildings, land), after wear and tear; that share fell to 10% over 2016-2025.
 Two other arguments deserve scrutiny: “we owe the debt to ourselves” and “the real burden will come from ageing”.
 Three tests put them to the proof, without claiming to calculate each generation’s bill.
+Page updated 11 October 2026
 Public debt dossier
 Data · Eurostat and ECB 2025 · projections 2026
 ↓ Charts, data and citations to reuseReuse this page
-Updated: 9 October 2026 General government, Eurostat and ECB series from 1995 to 2025; European Commission and COR, projections.
+Data last updated 9 October 2026 General government, Eurostat and ECB series from 1995 to 2025; European Commission and COR, projections.
 Download: CSV · JSON · method
 What deficits corresponded to in the accounts
 Borrowing to build a school, a road or a network leaves capital as well as a debt.

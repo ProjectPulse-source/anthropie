@@ -14,6 +14,8 @@ og_image_alt: "Carte de partage : « L'inflation a érodé la vieille dette » �
 # Aucun chiffre saisi : jetons {infl.*} et shortcode infl-val (scripts/update_dette_inflation.py, extrait figé et empreintes
 # dans scripts/sources_inflation_dette/) ; chiffres du volet 1 par dyn-val (scripts/update_dette_dynamique.py).
 donnees: [dette_inflation, dette_dynamique]
+journal:  # révisions qui changent la lecture de la page (partials/page-date-visible.html affiche la plus récente)
+  - {date: 2026-10-16, texte: "Correction : l'écart dû aux achats de la banque centrale culmine d'avril à juillet 2022, quatre mois à égalité à la précision affichée, et non en mai 2022."}
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html) ; jetons résolus au build
   jeu: "dette_inflation"
   nom: "Surprise d'inflation 2021-2023 et dette de l'État à taux fixe de fin 2020 : érosion réelle des paiements promis, calendrier, sensibilités"

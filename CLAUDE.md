@@ -465,6 +465,43 @@ figurent au registre pour le tableau d'état) ; `generer_figures_qui_paie.py` se
 registre en mode `veille` — détection validée par le contenu, un ticket par édition nouvelle (`maj_sources.py veille`),
 témoin dans `essai`, intégration humaine puis « lu » porté au registre.
 
+## Dates des pages — une source, trois canaux (arbitrages PRO-20261016-174136 et PRO-20261016-195302)
+
+Dossier : `D:\PRO\06_PROMOTION\GEO_FRAICHEUR_2026-10-16\` (état des lieux, deux contre-expertises, relevé J0).
+**On ne fabrique aucune fraîcheur ; on rend exacte la chaîne qui date l'information.** Une date exacte aide les moteurs
+à prendre une mise à jour en compte ; elle ne fait pas citer davantage (aucune source primaire ne le montre).
+
+- **Source unique** : `partials/page-date.html` = la plus récente des modifications DE FOND : `lastmod`, relevé de
+  chaque jeu déclaré (`donnees:` ou `date_suit:`, via `jeu-date.html`), date de la page dans `data/dates_affichage.json`.
+  Le journal n'est pas une source de date : chaque entrée doit tomber un jour de modification de fond, sinon le build
+  s'arrête. La lisent le sitemap, le balisage de page (`schema-page-ressource.html` : `Article` pour
+  une page qui démontre, `WebPage` pour une notion ou un usage, auteur par `@id`, `isBasedOn` → `#dataset`) et la
+  ligne visible sous le chapô (`page-date-visible.html` : « Page mise à jour le … » ou « Page publiée le … »).
+- **Toute page qui affiche un jeu daté le déclare** dans `donnees:` (page de données, modèle complet) ou `date_suit:`
+  (date seule) : `check-dates-jeux.py`, bloquant.
+- **Texte affiché modifié sans nouvelle donnée** (correction d'un compte, d'un rang, d'un libellé produit par un
+  générateur) : avant le commit, `python scripts/dates-affichage.py --ecrire` (FOND : chiffre, rang, période, sens ;
+  date au grain de la page les seules pages affichant une clé modifiée) ou `--forme` (orthographe, tournure sans
+  changement de sens ; consigné, sans date). La typographie (insécables, apostrophes, guillemets) est ignorée d'office.
+  `check-all` refuse un écart non classé. Le Dataset garde la date de son relevé.
+- **Journal** (`journal: [{date, texte}]`) : écrit à la main, seulement pour une révision qui change la lecture
+  (correction d'une valeur publiée, conclusion modifiée) ; jamais tiré des commits. Affiché en PIED de page (section
+  « Révisions », `data-nosnippet`, `partials/page-revisions.html`) avec un lien discret depuis la date : jamais sous le
+  chapô, où l'ancienne valeur prendrait la place du constat.
+- **Période près du chiffre** : tout bloc citable chiffré (chapô, résultat en une phrase, réponse de FAQ) porte une
+  période ; le bandeau des données dit « Données mises à jour le » (`releve_le` ne bouge que si une donnée change),
+  jamais « Relevé du » ni « Mise à jour ».
+- **Page juridique** : `textes_lus: <jeu>` affiche les dates de lecture sur Légifrance si le jeu les enregistre
+  (`lu_le`) ; sans elles, rien plutôt qu'une date inventée.
+- **Contrôle du site construit** : `check-dates-build.py` (bloquant dans `hugo.yml`) : sitemap = `dateModified` = ligne
+  visible, et période des blocs citables. **IndexNow** ne soumet que les URL dont le `lastmod` a changé
+  (`scripts/indexnow_urls.py`). **Registre de péremption** : jeux sans automatisme en mode `manuel` de
+  `data/sources_maj.json` (`nature`, `revoir_avant`, `verifie_le` si la source a été consultée sans changement : lève
+  le retard sans toucher aux dates publiques), retard signalé par `maj_sources.py controle` et, chaque jour, par un
+  ticket unique de `maj-sources.yml`.
+- Écriture d'un script qui génère du code : ⚠ un `\b` ou un `\n` passé dans une chaîne Python devient un caractère de
+  contrôle (incident du 16/10/2026, une expression qui signalait tout, témoin compris) ; éditer le fichier directement.
+
 ## Règle de surface — « la présence vient du dépôt » (actée 2026-08-11)
 
 Défaut récurrent, six occurrences en deux jours, toujours la même forme : **une donnée

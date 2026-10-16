@@ -15,25 +15,9 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   {{ range where .Pages "Sitemap.Disable" "ne" true }}
     {{- if .Permalink -}}
-    {{- $lm := .Lastmod -}}
-    {{- with .Params.aggregates -}}
-      {{- $fr := index site.Sites 0 -}}
-      {{- range . -}}
-        {{- range (where $fr.RegularPages "Section" .) -}}
-          {{- if .Lastmod.After $lm -}}{{- $lm = .Lastmod -}}{{- end -}}
-        {{- end -}}
-      {{- end -}}
-    {{- end -}}
-    {{- $page := . -}}
-    {{- /* `date_suit:` (2026-10-16) : jeux qu'une page AFFICHE sans en publier le modele (pages enseignants) ;
-           leur releve entre dans sa date comme celui de `donnees:`. scripts/check-dates-jeux.py verifie que tout jeu
-           date affiche par une page figure dans l'une des deux listes. */ -}}
-    {{- with union (.Params.donnees | default slice) (.Params.date_suit | default slice) -}}
-      {{- range . -}}
-        {{- $t := time (partial "jeu-date.html" (dict "nom" . "page" $page.File.Path)) -}}
-        {{- if $t.After $lm -}}{{- $lm = $t -}}{{- end -}}
-      {{- end -}}
-    {{- end -}}
+    {{- /* Date de la page : partial page-date.html, source unique partagee avec le balisage et la ligne visible
+           (2026-10-16). Il porte les deux ajouts decrits en tete (agregats, jeux de donnees) et `date_suit:`. */ -}}
+    {{- $lm := (partial "page-date.html" .).mod -}}
   <url>
     <loc>{{ .Permalink }}</loc>{{ if not $lm.IsZero }}
     <lastmod>{{ safeHTML ( $lm.Format "2006-01-02T15:04:05-07:00" ) }}</lastmod>{{ end }}{{ with .Sitemap.ChangeFreq }}

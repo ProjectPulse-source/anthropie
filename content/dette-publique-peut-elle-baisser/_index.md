@@ -17,6 +17,8 @@ lastmod: 2026-10-11
 # comptable, jamais comme montant à trouver (formules interdites, gardées par le générateur).
 # Aucun chiffre saisi : jetons {baisse.*} et shortcodes baisse-val / baisse-tableau (scripts/update_dette_baisse.py).
 donnees: [dette_baisse]
+journal:  # révisions qui changent la lecture de la page (partials/page-date-visible.html affiche la plus récente)
+  - {date: 2026-10-16, texte: "Correction : le taux implicite a dépassé la croissance nominale 15 années, et non 16 ; la comparaison se fait désormais à la précision affichée."}
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html) ; jetons résolus au build
   jeu: "dette_baisse"
   nom: "La dette publique peut-elle baisser : décomposition par décennie du ratio dette/PIB, France et pays de l'Union dont la dette dépassait 90 % du PIB"
@@ -54,7 +56,7 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 {{< reutiliser-ancre >}}
 
-<p class="donnees-ligne"><span class="badge-donnees">Mise à jour&nbsp;: {{< baisse-val "date_donnees" >}}</span> Administrations publiques, séries Eurostat de {{< baisse-val "annee_debut" >}} à {{< baisse-val "annee_fin" >}}. Télécharger&nbsp;: <a href="/dette_baisse.csv">CSV</a> · <a href="/dette_baisse.json">JSON</a> · <a href="#sources">méthode</a></p>
+<p class="donnees-ligne"><span class="badge-donnees">Données mises à jour le {{< baisse-val "date_donnees" >}}</span> Administrations publiques, séries Eurostat de {{< baisse-val "annee_debut" >}} à {{< baisse-val "annee_fin" >}}. Télécharger&nbsp;: <a href="/dette_baisse.csv">CSV</a> · <a href="/dette_baisse.json">JSON</a> · <a href="#sources">méthode</a></p>
 
 ## Le poids de la dette, pas son montant {#poids-et-montant}
 

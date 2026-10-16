@@ -1,10 +1,11 @@
-# relu le 2026-10-12 ; texte servi de /en/can-the-french-president-call-a-referendum/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /en/can-the-french-president-call-a-referendum/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Can the French president call a referendum?
 Can a French president put a reform to the voters whenever he wants?
 The Constitution gives him that power through three routes, each with its own conditions: for a Government Bill, a recommendation from the Government or a joint motion of the two Houses, and a subject defined by article 11; for an amendment to the Constitution, a vote of the two Houses in identical terms; for the accession of a State to the European Union, a referendum is the rule unless Parliament decides otherwise.
 From 4 October 1958 to 5 October 2026, nine national referendums were held, the last one on 29 May 2005.
 Since 2015, members of Parliament backed by voters can also initiate a procedure that may lead to one: it has not led to any vote.
+Page updated 12 October 2026
 Presidential promises
 ↓ Charts, data and citations to reuseReuse this page
 Promising to put a reform to the voters means promising to use a route other than a parliamentary vote alone.

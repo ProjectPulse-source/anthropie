@@ -1,13 +1,14 @@
-# relu le 2026-10-16 ; texte servi de /en/can-public-debt-come-down/, build de 47aaf02 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /en/can-public-debt-come-down/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Can public debt come down?
 Yes: what can fall is the weight of debt in GDP, even while its amount rises.
 In Portugal, public debt went from 235 to 275 billion euros from end-2015 to end-2025, and its weight from 131.0% to 89.7% of GDP.
 In France, it rose by 18.6 points over the same period: general government spent more than it took in, even leaving interest aside, and that deficit weighed more than the help from interest rates and growth.
+Page updated 16 October 2026 · revisions
 Public debt dossier
 Data · Eurostat 2025
 ↓ Charts, data and citations to reuseReuse this page
-Updated: 15 October 2026 General government, Eurostat series from 1996 to 2025.
+Data last updated 15 October 2026 General government, Eurostat series from 1996 to 2025.
 Download: CSV · JSON · method
 The weight of debt, not its amount
 The debt ratio sets what general government owes against the wealth produced in a year, gross domestic product (GDP), measured in current euros, known as nominal GDP.
@@ -432,6 +433,8 @@ Download JSON CSV
 Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
 Text under copyright — short quotation free, full reproduction on request.
 The raw series belong to their producers (Eurostat), under their own terms.
+Revisions
+16 October 2026 — Correction: the implicit interest rate exceeded nominal growth in 15 years, not 16; the comparison is now made at the displayed precision.
 All resources: data, explainers and reference material →
 Share
 WhatsApp

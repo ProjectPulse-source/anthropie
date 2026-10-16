@@ -2,7 +2,7 @@
 title: "Public debt: why 100% of GDP does not carry the same burden everywhere"
 url: /en/public-debt-international-comparison/
 description: "Same debt, different burden: in the European Union, the average interest cost of public debt does not follow its level. Stock, rates and revenue compared across 27 countries and beyond Europe."
-chapo: "At almost equal debt levels, {monde.j_haut_le} devotes {monde.j_haut_charge} of its public revenue to interest; {monde.j_bas_le}, {monde.j_bas_charge}. The stock alone therefore cannot measure what a public debt weighs: one must also look at its average interest cost, the revenue available to service it, and the weight of old borrowing in what it costs today."
+chapo: "In {monde.annee}, at almost equal debt levels, {monde.j_haut_le} devotes {monde.j_haut_charge} of its public revenue to interest; {monde.j_bas_le}, {monde.j_bas_charge}. The stock alone therefore cannot measure what a public debt weighs: one must also look at its average interest cost, the revenue available to service it, and the weight of old borrowing in what it costs today."
 og_title: "Public debt: what 100% of GDP does not tell you"
 og_image: "images/og-dette-monde-en.jpg"
 og_image_alt: "Share card: “Same debt, different burden” — the 27 European Union countries, debt as a % of GDP and interest as a % of revenue; two countries with similar debt are linked, one paying more than three times as much as the other."
@@ -11,6 +11,8 @@ lastmod: 2026-10-11
 # English version of part 3 of the public debt dossier (FR: content/dette-publique-comparaison-internationale/_index.md).
 # Same tokens, same keys: values come from the affichage_en block of data/dette_monde.json.
 donnees: [dette_monde]
+journal:  # révisions qui changent la lecture de la page (partials/page-date-visible.html affiche la plus récente)
+  - {date: 2026-10-16, texte: "Correction: as a share of GDP, interest puts France seventh in the Union, tied with Belgium, not eighth; four less indebted countries exceed it, not five."}
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html); tokens resolved at build time
   jeu: "dette_monde"
   nom: "Public debt compared: stock, average interest cost, revenue and interest burden in the European Union and beyond Europe"
@@ -53,7 +55,7 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 {{< reutiliser-ancre >}}
 
-<p class="donnees-ligne"><span class="badge-donnees">Updated: {{< monde-val "date_donnees" >}}</span> The {{< monde-val "n_pays" >}} countries of the European Union, main data {{< monde-val "annee" >}}; outside Europe, the vintage is given country by country. Download: <a href="/dette_monde.csv">CSV</a> · <a href="/dette_monde.json">JSON</a> · <a href="#sources">method</a></p>
+<p class="donnees-ligne"><span class="badge-donnees">Data last updated {{< monde-val "date_donnees" >}}</span> The {{< monde-val "n_pays" >}} countries of the European Union, main data {{< monde-val "annee" >}}; outside Europe, the vintage is given country by country. Download: <a href="/dette_monde.csv">CSV</a> · <a href="/dette_monde.json">JSON</a> · <a href="#sources">method</a></p>
 
 The debt-to-GDP ratio is one of the most widely quoted figures in public-finance comparisons, and on its own it does not say what a debt costs. This page sets France alongside the other members of the European Union and a few economies beyond Europe, and asks what the ratio leaves out.
 
@@ -63,7 +65,7 @@ The debt-to-GDP ratio is one of the most widely quoted figures in public-finance
 
 <div class="resultat-phrase">
 
-**The result in one sentence.** At similar debt levels, the share of revenue absorbed by interest can differ by a factor of {{< monde-val "j_rapport" >}}: the stock does not determine the burden, because it sets neither the average interest cost of the debt nor the level of public revenue.
+**The result in one sentence.** In {{< monde-val "annee" >}}, at similar debt levels, the share of revenue absorbed by interest can differ by a factor of {{< monde-val "j_rapport" >}}: the stock does not determine the burden, because it sets neither the average interest cost of the debt nor the level of public revenue.
 
 </div>
 

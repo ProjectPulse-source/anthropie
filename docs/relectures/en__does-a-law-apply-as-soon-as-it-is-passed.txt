@@ -1,10 +1,11 @@
-# relu le 2026-10-12 ; texte servi de /en/does-a-law-apply-as-soon-as-it-is-passed/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /en/does-a-law-apply-as-soon-as-it-is-passed/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Does a French law apply as soon as it is passed?
 Not by the vote alone.
 Once the law has been promulgated and published, those of its provisions whose implementation requires decrees or ministerial orders wait for these measures.
 On 5 October 2026, according to the barometer of the application of laws, 130 of the 399 laws promulgated from October 2017 to September 2025, excluding treaties (laws authorising the ratification or approval of an international agreement, or accession to one), were still waiting for at least one measure; 124 had received all of them and 144 were classified as having no measure to take.
 A pending measure is not necessarily late, but the Government is not free to wait indefinitely: the Conseil d'État requires it to act within a reasonable time, and a refusal to adopt a measure that is due can be brought before the administrative courts, which can annul it and order the measure to be adopted.
+Page updated 12 October 2026
 Presidential promises
 ↓ Charts, data and citations to reuseReuse this page
 A promise that goes through the law does not stop at the vote.

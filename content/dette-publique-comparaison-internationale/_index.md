@@ -1,7 +1,7 @@
 ---
 title: "Dette publique : pourquoi 100 % du PIB ne pèse pas partout de la même façon"
 description: "Même dette, charge différente : dans l'Union européenne, le prix de la dette publique ne suit pas son niveau. Stock, taux, recettes comparés en 27 pays et hors d'Europe."
-chapo: "À dette presque égale, {monde.j_haut_le} consacre {monde.j_haut_charge} de ses recettes publiques aux intérêts, {monde.j_bas_le} {monde.j_bas_charge}. Le stock ne suffit donc pas à mesurer ce que pèse une dette publique : il faut regarder aussi son prix, les recettes disponibles pour la servir, et le poids des emprunts anciens dans ce qu'elle coûte aujourd'hui."
+chapo: "En {monde.annee}, à dette presque égale, {monde.j_haut_le} consacre {monde.j_haut_charge} de ses recettes publiques aux intérêts, {monde.j_bas_le} {monde.j_bas_charge}. Le stock ne suffit donc pas à mesurer ce que pèse une dette publique : il faut regarder aussi son prix, les recettes disponibles pour la servir, et le poids des emprunts anciens dans ce qu'elle coûte aujourd'hui."
 og_title: "Dette publique : ce que 100 % du PIB ne dit pas"
 og_image: "images/og-dette-monde.jpg"
 og_image_alt: "Carte de partage : « Même dette, charge différente » — les 27 pays de l'Union européenne, dette en % du PIB et intérêts en % des recettes ; deux pays à dette voisine reliés, l'un paie plus de trois fois plus que l'autre."
@@ -13,6 +13,8 @@ lastmod: 2026-10-11
 # du même jour (Derre_Internationale-01) : ouverture sans redite, dates distinguées, encart livre, figures réutilisables.
 # Arbitrages : 06_PROMOTION/DOSSIER_PAGE_DETTE_INTERNATIONALE.md, dépôt D:\PRO.
 donnees: [dette_monde]
+journal:  # révisions qui changent la lecture de la page (partials/page-date-visible.html affiche la plus récente)
+  - {date: 2026-10-16, texte: "Correction : rapportés au PIB, les intérêts placent la France au septième rang de l'Union, à égalité avec la Belgique, et non au huitième ; quatre pays moins endettés la dépassent, et non cinq."}
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html) ; jetons résolus au build
   jeu: "dette_monde"
   nom: "Dette publique comparée : stock, prix, recettes et charge d'intérêts dans l'Union européenne et hors d'Europe"
@@ -55,7 +57,7 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 {{< reutiliser-ancre >}}
 
-<p class="donnees-ligne"><span class="badge-donnees">Mise à jour&nbsp;: {{< monde-val "date_donnees" >}}</span> Les {{< monde-val "n_pays" >}} pays de l'Union européenne, données principales {{< monde-val "annee" >}}&nbsp;; hors d'Europe, le millésime est indiqué pays par pays. Télécharger&nbsp;: <a href="/dette_monde.csv">CSV</a> · <a href="/dette_monde.json">JSON</a> · <a href="#sources">méthode</a></p>
+<p class="donnees-ligne"><span class="badge-donnees">Données mises à jour le {{< monde-val "date_donnees" >}}</span> Les {{< monde-val "n_pays" >}} pays de l'Union européenne, données principales {{< monde-val "annee" >}}&nbsp;; hors d'Europe, le millésime est indiqué pays par pays. Télécharger&nbsp;: <a href="/dette_monde.csv">CSV</a> · <a href="/dette_monde.json">JSON</a> · <a href="#sources">méthode</a></p>
 
 ## Même dette, charge différente {#meme-dette}
 
@@ -63,7 +65,7 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 <div class="resultat-phrase">
 
-**Le résultat en une phrase.** À niveau de dette voisin, la part des recettes absorbée par les intérêts peut varier de 1 à {{< monde-val "j_rapport" >}}&nbsp;: le stock ne suffit pas à déterminer la charge, parce qu'il ne fixe ni le prix de la dette ni le niveau des recettes publiques.
+**Le résultat en une phrase.** En {{< monde-val "annee" >}}, à niveau de dette voisin, la part des recettes absorbée par les intérêts peut varier de 1 à {{< monde-val "j_rapport" >}}&nbsp;: le stock ne suffit pas à déterminer la charge, parce qu'il ne fixe ni le prix de la dette ni le niveau des recettes publiques.
 
 </div>
 

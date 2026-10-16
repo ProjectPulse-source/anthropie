@@ -1,0 +1,15 @@
+{
+ "_doc": "Date, page par page, du dernier changement DE FOND du texte affiché (bloc affichage d'un jeu) quand ses données n'ont pas changé (pages), et retouches de forme classées sans date (formes). Écrit par scripts/dates-affichage.py --ecrire ou --forme, contrôlé avant commit par check-all ; pages lu par layouts/partials/page-date.html. Le Dataset garde la date de son relevé.",
+ "pages": {
+  "dette-publique-collectivites-locales/_index.en.md": "2026-10-16",
+  "dette-publique-collectivites-locales/_index.md": "2026-10-16",
+  "dette-publique-comparaison-internationale/_index.en.md": "2026-10-16",
+  "dette-publique-comparaison-internationale/_index.md": "2026-10-16",
+  "dette-publique-peut-elle-baisser/_index.en.md": "2026-10-16",
+  "dette-publique-peut-elle-baisser/_index.md": "2026-10-16",
+  "inflation-et-dette-publique/_index.en.md": "2026-10-16",
+  "inflation-et-dette-publique/_index.md": "2026-10-16",
+  "le-niveau-des-eleves-baisse-t-il/_index.md": "2026-10-16"
+ },
+ "formes": {}
+}

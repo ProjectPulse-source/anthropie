@@ -1,0 +1,19 @@
+{{- /* Révisions d'une ressource, en PIED de page (2026-10-16, contre-expertise PRO-20261016-195302, option C).
+       Source : `journal: [{date, texte}]` du front matter, écrit à la main pour une révision qui change la lecture ;
+       chaque date est vérifiée contre une modification de fond (partials/page-date.html : sinon le build s'arrête).
+       Les entrées citent l'ancienne valeur : la section porte `data-nosnippet` (Google : exclut le passage des extraits ;
+       Bing l'honore aussi, y compris pour ses réponses IA selon une source secondaire) pour qu'un moteur ne reprenne pas
+       un chiffre périmé. Précaution sans garantie : la page reste lisible et la correction transparente. */ -}}
+{{- with .Params.journal -}}
+{{- $en := eq $.Lang "en" -}}
+{{- $fmt := cond $en "2 January 2006" ":date_long" -}}
+<section class="revisions" id="revisions" data-nosnippet>
+  <h2 class="revisions__titre">{{ cond $en "Revisions" "Révisions" }}</h2>
+  <ul class="revisions__liste">
+  {{- range sort . "date" "desc" }}
+    {{- $t := time .date }}
+    <li><time datetime="{{ $t.Format "2006-01-02" }}">{{ time.Format $fmt $t }}</time>{{ " — " }}{{ if $en }}{{ .texte }}{{ else }}{{ partial "fr-typo.html" .texte }}{{ end }}</li>
+  {{- end }}
+  </ul>
+</section>
+{{- end -}}

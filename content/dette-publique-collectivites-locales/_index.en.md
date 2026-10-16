@@ -13,6 +13,8 @@ og_title: "Public debt: are local authorities the adjustment variable? — S. La
 og_image: "images/og-collectivites-en.jpg"
 og_image_alt: "Share card: “Local adjustment, outside the debt” — local government investment and transfers received, France, in % of GDP, with the 2014-2017 grant cuts."
 donnees: [dette_collectivites]
+journal:  # révisions qui changent la lecture de la page (partials/page-date-visible.html affiche la plus récente)
+  - {date: 2026-10-16, texte: "Correction: as a share of GDP, local government spending peaks in 2009 and in 2013, tied at the displayed precision, not in 2009 alone."}
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html); tokens resolved at build
   jeu: "dette_collectivites"
   nom: "Local authorities and public finances: debt, investment, transfers and accounts by category, France, Germany, Italy, Spain"

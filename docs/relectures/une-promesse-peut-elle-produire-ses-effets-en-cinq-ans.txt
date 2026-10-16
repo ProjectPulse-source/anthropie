@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Une promesse peut-elle produire ses effets en cinq ans ?
 Le cas-test de la formation des médecins généralistes.
@@ -6,6 +6,7 @@ Une décision qui augmente le nombre d'étudiants n'atteint pas son résultat fi
 Un généraliste se forme en au moins dix ans depuis la première année, deux fois la durée d'un mandat présidentiel (règles applicables depuis la rentrée 2023).
 Une telle décision peut pourtant agir avant, car les internes soignent sous supervision pendant leur formation.
 Et le nombre d'étudiants admis ne dépend pas d'une seule signature : l'État fixe un objectif, chaque université vote ses places.
+Page mise à jour le 12 octobre 2026
 Promesses présidentielles
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
 On décide aujourd’hui de former davantage de médecins.

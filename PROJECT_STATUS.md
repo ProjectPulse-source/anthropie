@@ -52,6 +52,20 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-16 (soir) — Dates et fraîcheur, phases P1 et P2 : une date de page, trois canaux, contre-expertise de la réalisation
+
+Arbitrage `PRO-20261016-195302` (PUBLIER APRÈS CORRECTIFS, accepté ; `D:\PRO\06_PROMOTION\GEO_FRAICHEUR_2026-10-16\`).
+Source unique `partials/page-date.html` (fond seulement : `lastmod`, relevés des jeux, `data/dates_affichage.json`),
+lue par le sitemap, un nœud `Article`/`WebPage` neuf (auteur, dates, `isBasedOn` → `#dataset`) et la ligne « Page mise
+à jour le / publiée le » sous le chapô. Journal `journal:` en pied de page (`page-revisions.html`, `data-nosnippet`),
+chaque entrée vérifiée contre une modification de fond (build arrêté sinon). Neuf pages corrigées ce jour redatées
+(registre au grain de la page, typographie ignorée, fond/forme classés par `dates-affichage.py`). Sept blocs citables
+datés (période près du chiffre) ; bandeau « Données mises à jour le ». Glossaire daté depuis son historique. Registre
+de péremption : 10 jeux en mode `manuel` (`nature`, `revoir_avant`, `verifie_le`), ticket quotidien unique par
+`maj-sources.yml`. Contrôles : `check-dates-build.py` bloquant dans `hugo.yml` (56/56 concordantes, 115 blocs datés),
+`dates-affichage.py` dans `check-all`. Témoins vus mordre (7). Relecture : 33 instantanés refaits. Ouverts : période
+phrase par phrase (avant le 15/12), audit des 12 pages juridiques, relevé Bing (auteur).
+
 ### 2026-10-16 — Dates et fraîcheur, phase P0 : IndexNow ne soumet plus que le changé ; aucun jeu affiché hors de la date
 
 Arbitrage `PRO-20261016-174136` (`D:\PRO\06_PROMOTION\GEO_FRAICHEUR_2026-10-16\`). (1) `indexnow.yml` soumettait les

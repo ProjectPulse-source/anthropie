@@ -12,6 +12,7 @@
            courte pour les moteurs (150 à 170 caractères). Absent : la description sert de chapô. */ -}}
     <p class="page-header__lede">{{ partial "fr-typo.html" (partial "desc-figures.html" (dict "text" . "isbn" $.Params.isbn)) }}</p>
     {{ end }}
+    {{- if .Params.ressource }}{{ partial "page-date-visible.html" . }}{{ end }}
   </header>
   {{ else }}
   <h1>{{ partial "fr-typo.html" .Title }}</h1>
@@ -36,6 +37,8 @@
       </article>
     {{ end }}
   {{ end }}
+
+  {{- if .Params.ressource }}{{ partial "page-revisions.html" . }}{{ end }}
 
   {{- partial "ressource-retour.html" . -}}
 

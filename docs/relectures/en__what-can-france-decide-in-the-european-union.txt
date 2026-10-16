@@ -1,10 +1,11 @@
-# relu le 2026-10-12 ; texte servi de /en/what-can-france-decide-in-the-european-union/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /en/what-can-france-decide-in-the-european-union/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 What can France decide in the European Union?
 What the Treaties have not conferred on the Union remains with the Member States: France decides alone there, while respecting the common rules.
 Where the Union has competence, the Commission proposes and France votes with the other governments in the Council: under qualified majority, it can be outvoted; under unanimity, its single vote against can block.
 In the public votes of the Council on legislative acts, from 22 December 2009 to 1 October 2026, France voted against twice and abstained three times.
 These votes record its position at the last moment, not what it obtained in the negotiation that precedes them.
+Page updated 12 October 2026
 Presidential promises
 ↓ Charts, data and citations to reuseReuse this page
 The figure is surprising: across all the public votes recorded, France has almost never opposed a European law in the Council.

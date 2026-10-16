@@ -1,0 +1,38 @@
+{{- /* Ligne de date visible d'une ressource, sous le chapô (2026-10-16, arbitrage PRO-20261016-174136, phase P1).
+       Même source que le sitemap et le balisage : partial page-date.html. « Page mise à jour le » si la page a changé
+       depuis sa publication, « Page publiée le » sinon : une notion inchangée garde sa date, sans fraîcheur fictive.
+       C'est la date de la PAGE ; la période de chaque chiffre s'écrit à côté du chiffre, et la date du relevé des
+       données dans leur bandeau (`donnees-ligne`).
+       `textes_lus: <jeu>` (page juridique dont le jeu enregistre, texte par texte, la date de lecture sur Légifrance,
+       champ `lu_le`) : ajoute « textes lus sur Légifrance du … au … ». Seul `pouvoirs_president` l'enregistre au
+       16/10/2026 : les autres pages juridiques n'affichent rien de tel plutôt qu'une date qu'aucune donnée ne porte. */ -}}
+{{- $p := . -}}
+{{- $en := eq $p.Lang "en" -}}
+{{- $d := partial "page-date.html" $p -}}
+{{- if not $d.mod.IsZero -}}
+{{- $fmt := cond $en "2 January 2006" ":date_long" -}}
+{{- $maj := and (not $d.pub.IsZero) (gt ($d.mod.Format "20060102") ($d.pub.Format "20060102")) -}}
+{{- $lib := cond $maj (cond $en "Page updated" "Page mise à jour le") (cond $en "Page published" "Page publiée le") -}}
+{{- $quand := cond $maj $d.mod (cond $d.pub.IsZero $d.mod $d.pub) -}}
+<p class="page-header__date">{{ $lib }} <time datetime="{{ $quand.Format "2006-01-02" }}">{{ time.Format $fmt $quand }}</time>
+{{- /* Journal des révisions (P2) : en PIED de page (partials/page-revisions.html), jamais sous le chapô -- contre-expertise
+       du 16/10 : une ancienne valeur en tête déplace l'attention vers l'erreur et peut être reprise à la place du constat.
+       Ici, un lien discret seulement. */ -}}
+{{- with $p.Params.journal -}}{{ " · " }}<a href="#revisions">{{ cond $en "revisions" "révisions" }}</a>{{- end -}}
+{{- with $p.Params.textes_lus -}}
+  {{- $jeu := index site.Data . -}}
+  {{- if not $jeu -}}{{- errorf "page-date-visible: textes_lus %q sans fichier de données (%s)" . $p.File.Path -}}{{- end -}}
+  {{- $dates := slice -}}
+  {{- range $jeu -}}{{- if reflect.IsMap . -}}{{- range . -}}{{- if and (reflect.IsMap .) .lu_le -}}{{- $dates = $dates | append (time .lu_le) -}}{{- end -}}{{- end -}}{{- end -}}{{- end -}}
+  {{- if not $dates -}}{{- errorf "page-date-visible: aucun lu_le dans data/%s (%s)" . $p.File.Path -}}{{- end -}}
+  {{- $tri := sort $dates -}}
+  {{- $min := index $tri 0 -}}{{- $max := index $tri (sub (len $tri) 1) -}}
+  {{- if eq ($min.Format "20060102") ($max.Format "20060102") -}}
+{{ " · " }}{{ cond $en "texts read on Légifrance on" "textes lus sur Légifrance le" }} {{ time.Format $fmt $min }}
+  {{- else -}}
+{{ " · " }}{{ cond $en "texts read on Légifrance between" "textes lus sur Légifrance entre le" }} {{ time.Format $fmt $min }} {{ cond $en "and" "et le" }} {{ time.Format $fmt $max }}
+  {{- end -}}
+{{- end -}}
+</p>
+
+{{- end -}}

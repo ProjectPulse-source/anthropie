@@ -1,10 +1,11 @@
-# relu le 2026-10-12 ; texte servi de /en/how-can-we-tell-whether-a-promise-was-kept/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /en/how-can-we-tell-whether-a-promise-was-kept/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 How can we tell whether a promise was kept?
 Two accurate figures can tell two different stories.
 In 2024, according to Insee, only 49% of category A registrants at France Travail are unemployed in the sense of the International Labour Organization (ILO).
 And the rule for counting registrants changed in 2022, at the end of 2024 and in 2025, sometimes downwards, sometimes upwards.
 To judge a promise on unemployment, four questions: by which indicator, since when, has the rule stayed the same, what share can be attributed.
+Page updated 12 October 2026
 Presidential promises
 ↓ Charts, data and citations to reuseReuse this page
 When a candidate promises to “bring unemployment down”, we think we know what we will look at five years later: the unemployment figure.
