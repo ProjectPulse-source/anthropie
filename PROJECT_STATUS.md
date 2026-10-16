@@ -66,7 +66,8 @@ FR/EN relue, instantanés refaits), voisins ex aequo des Pays-Bas dans la règle
 inchangés), vote de pixels d'Europe. Contrôle : balayage des octets sur le texte entier (`splitlines` en avalait six),
 deux motifs de plus. Chaque contre-exemple de l'audit est un test permanent ; mutations sur les fichiers réels.
 Points ouverts déclarés : précision associée à chaque comparaison relevée à la main (H1) ; formes multi-lignes hors
-du contrôle statique.
+du contrôle statique. Ménage : registre d'audit (gitignoré) sauvegardé dans `G:\_BACKUP_CONTROLEUR_SITE_2026-10-16\`,
+107 fichiers relus par empreinte ; brouillon du paquet (doublon d'OUTBOX et d'ARCHIVE) et scratchpad supprimés.
 
 ### 2026-10-16 — Défauts de structure corrigés à l'échelle des générateurs (règle de l'auteur)
 
