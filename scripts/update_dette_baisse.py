@@ -375,7 +375,7 @@ def affichage(fin, dec, annees, cmp_, europe, cons):
     # Quatrième tour (document de travail de l'OFCE, E9) : écart au solde stabilisant de l'avant-dernière année.
     prec = annees[-2]
     A["annee_prec"] = str(prec["annee"]); A["ecart_prec"] = fr(abs(prec["ecart"]))
-    rg_pos = sum(1 for r in annees if r["taux_implicite"] > r["croissance_nominale"])
+    rg_pos = sum(1 for r in annees if lg.depasse(r["taux_implicite"], r["croissance_nominale"], 1))
     A["rg_pos_n"] = str(rg_pos)   # en chiffres : la prose le met en regard de annees_total, en chiffres au-delà de seize
     # Un point d'écart taux-croissance durable déplace le solde stabilisant de d(t-1)/(1+g) point : dette et croissance de la dernière année.
     A["sens_pt"] = fr(last["dette"] / 100 / (1 + last["croissance_nominale"] / 100))
@@ -485,7 +485,7 @@ def gardes(fin, dec, annees, cmp_, europe, haut, bas, exc_ans):
         ("dernière décennie : les déficits primaires ajoutent plus que l'effet taux-croissance ne retire", d3["deficits_primaires"] > -d3["taux_croissance"]),
         ("dernière décennie : la dette monte", d3["variation"] > 0),
         ("dernière décennie : aucune année d'excédent primaire", d3["annees_excedent"] == 0),
-        ("dernière décennie : les déficits primaires font plus que toute la hausse", d3["deficits_primaires"] > d3["variation"]),
+        ("dernière décennie : les déficits primaires font plus que toute la hausse", lg.depasse(d3["deficits_primaires"], d3["variation"], 1)),
         # --- les deux décennies précédentes
         ("première décennie : l'effet taux-croissance pousse la dette, le solde primaire pèse peu (moins de 5 points)",
          d1["taux_croissance"] > 5 and abs(d1["deficits_primaires"]) < 5),
@@ -547,8 +547,8 @@ def gardes(fin, dec, annees, cmp_, europe, haut, bas, exc_ans):
         ("B1 : au Portugal, l'encours augmente de plus de 10 % pendant que le ratio baisse",
          any(f["pays"] == "PT" and f["encours_fin"] > 1.1 * f["encours_depart"] and f["variation"] < 0 for f in haut)),
         ("B2 : l'allègement taux-croissance de la décennie tient à trois années consécutives, les autres l'alourdissent",
-         sum(r["solde_stabilisant"] for r in min([[r for r in annees if d3["debut"] <= r["annee"] <= d3["fin"]][k:k + 3] for k in range(8)],
-                                                   key=lambda t: sum(r["solde_stabilisant"] for r in t))) < d3["taux_croissance"]),
+         sum(r["solde_stabilisant"] for r in lg.extremum([[r for r in annees if d3["debut"] <= r["annee"] <= d3["fin"]][k:k + 3] for k in range(8)],
+                                                   lambda t: sum(r["solde_stabilisant"] for r in t), 1, maxi=False)) < d3["taux_croissance"]),
         ("B2 : l'année où l'effet taux-croissance pousse le plus la dette est 2020 et il y est positif",
          lg.extremum((r for r in annees if d3["debut"] <= r["annee"] <= d3["fin"]), lambda r: r["solde_stabilisant"], 1)["annee"] == 2020
          and next(r for r in annees if r["annee"] == 2020)["solde_stabilisant"] > 0),
@@ -556,8 +556,8 @@ def gardes(fin, dec, annees, cmp_, europe, haut, bas, exc_ans):
          [f["pays"] for f in europe["sensibilite_seuil"]["80"] if f["pays"] not in {c["pays"] for c in cmp_}
           and f["variation"] <= -FORTE_BAISSE and f["solde_primaire_moyen"] < 0] == ["SI"]),
         ("B2 : les trois années les plus favorables de la décennie sont 2021-2023 (le texte parle du rebond et de l'inflation)",
-         [r["annee"] for r in min([[r for r in annees if d3["debut"] <= r["annee"] <= d3["fin"]][k:k + 3] for k in range(8)],
-                                  key=lambda t: sum(r["solde_stabilisant"] for r in t))] == [2021, 2022, 2023]),
+         [r["annee"] for r in lg.extremum([[r for r in annees if d3["debut"] <= r["annee"] <= d3["fin"]][k:k + 3] for k in range(8)],
+                                  lambda t: sum(r["solde_stabilisant"] for r in t), 1, maxi=False)] == [2021, 2022, 2023]),
         ("F3 : l'Espagne est dans le groupe (le texte cite son aide bancaire de 2012-2014)", any(f["pays"] == "ES" for f in cmp_)),
         ("B3 : à 100 %, la France sort du groupe", "FR" not in {f["pays"] for f in europe["sensibilite_seuil"]["100"]}),
         ("ENTRANTE 03/10 : parmi les années au-dessus du repère, la plupart ont vu le ratio baisser",

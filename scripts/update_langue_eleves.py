@@ -216,18 +216,18 @@ def gardes(c):
       "PIRLS : « sans recul significatif de 2016 à 2021 »")
     g(c["X"]["pirls_baisses_2016_significatives_a_5_10_15_ans"] and c["pirls"]["2016"]["score"] < c["pirls"]["2011"]["score"],
       "PIRLS : baisse significative de 2011 à 2016")
-    g(ce["significatif"]["2021"] and ce["score"]["2021"] > ce["score"]["2015"] and ce["stable_2003_2015_declare"],
+    g(ce["significatif"]["2021"] and lg.depasse(ce["score"]["2021"], ce["score"]["2015"], 0) and ce["stable_2003_2015_declare"],
       "CEDRE fin d'école : « sans évolution significative de 2003 à 2015, en hausse significative en 2021 »")
     g(not cc["significatif"]["2021"] and abs(cc["score"]["2021"] - cc["score"]["2015"]) < 5, "CEDRE fin de collège : « sans évolution significative »")
     sf = six["score_francais"]
-    g(sf["2025"] > sf["2017"] and min(sf.values()) == sf["2017"] and max(sf.values()) == sf["2021"] == sf["2020"] and sf["2025"] < sf["2021"],
+    g(lg.depasse(sf["2025"], sf["2017"], 0) and min(sf.values()) == sf["2017"] and max(sf.values()) == sf["2021"] == sf["2020"] and lg.depasse(sf["2021"], sf["2025"], 0),
       "sixième : « au-dessus de 2017, après un sommet en 2020-2021 »")
     gt = c["sec"]["GT"]
     g(abs(gt["2025"] - gt["2019"]) < 1 and gt["2021"] == max(gt.values()), "seconde GT : « revient en 2025 au niveau de 2019, après un sommet en 2020-2021 »")
     L = lignes_chrono(c)
     g(len(L) == 11, "chronologie : « onze mesures »")
     g(sum(1 for _, _, seg in L for u, v, sg, bs in seg if v < c["seuil"] - 1 and sg and bs) == 3, "chronologie : « trois reculs sont acquis avant » le smartphone")
-    g(s["2006"] < s["2000"] and s["2009"] > s["2006"] and s["2012"] >= s["2000"], "PISA : « un creux en 2006 sans tendance »")
+    g(lg.depasse(s["2000"], s["2006"], 0) and lg.depasse(s["2009"], s["2006"], 0) and s["2012"] >= s["2000"], "PISA : « un creux en 2006 sans tendance »")
     # vocabulaire et dictée
     cit = set(dic["citations_depp"])
     g({"mots_usuels_neuf_sur_dix", "accords_baisse_1987_2015_seulement", "hausse_2015_2021_deux_fois_moindre"} <= cit,
@@ -240,7 +240,7 @@ def gardes(c):
     # dispersion (10/10/2026, evaluation OPTIMUM-04) : la prose dit LES DEUX MOITIES -- l'ecart-type monte, rapporte a la
     # moyenne il baisse ; une seule des deux serait fausse par omission
     et = dic["ecart_type"]
-    g(et["2021"] > et["1987"] and et["2021"] / tot["2021"] < et["1987"] / tot["1987"],
+    g(lg.depasse(et["2021"], et["1987"], 1) and et["2021"] / tot["2021"] < et["1987"] / tot["1987"],
       "dictee : l'ecart-type « passe de … a … » (hausse absolue) et, « rapporte a la moyenne, il baisse »")
     g(1.8 <= autres["2021"] / autres["1987"] < 2.2, "dictée : les autres erreurs « ont presque doublé, ou doublé »")
     dty = c["dty"]
@@ -267,11 +267,11 @@ def gardes(c):
     g(v20["1988"] > v20["1997"] > v20["2008"], "Culture : les forts lecteurs de 15-24 ans reculent de 1988 à 2008")
     # écarts
     gs = cc["groupes_significatif"]
-    g(gs["EP"]["2021"] and gs["Garçons"]["2021"] and cc["groupes"]["EP"]["2021"] < cc["groupes"]["EP"]["2015"]
-      and cc["groupes"]["Garçons"]["2021"] < cc["groupes"]["Garçons"]["2015"], "CEDRE fin de collège : éducation prioritaire et garçons « en baisse significative »")
+    g(gs["EP"]["2021"] and gs["Garçons"]["2021"] and lg.depasse(cc["groupes"]["EP"]["2015"], cc["groupes"]["EP"]["2021"], 0)
+      and lg.depasse(cc["groupes"]["Garçons"]["2015"], cc["groupes"]["Garçons"]["2021"], 0), "CEDRE fin de collège : éducation prioritaire et garçons « en baisse significative »")
     ct, grp = c["cct"], cc["groupes"]
     ec = {a: grp["Public hors EP"][a] - grp["EP"][a] for a in ("2015", "2021")}
-    g(all(round(ec[a]) == ct["ecart_hors_ep_ep_points"][a] for a in ec) and ec["2021"] > ec["2015"] and ct["ecart_ep_dit_augmenter"]
+    g(all(round(ec[a]) == ct["ecart_hors_ep_ep_points"][a] for a in ec) and lg.depasse(ec["2021"], ec["2015"], 0) and ct["ecart_ep_dit_augmenter"]
       and not gs["Public hors EP"]["2021"] and not ct["test_de_l_ecart_publie"]
       and ct["ecart_filles_garcons_dit_augmenter"] and grp["Filles"]["2021"] - grp["Garçons"]["2021"] > grp["Filles"]["2015"] - grp["Garçons"]["2015"],
       "CEDRE fin de collège : l'écart avec le public hors éducation prioritaire « passe de 17 à 22 points », celui entre filles et garçons « augmente aussi » (DEPP), sans test publié")
@@ -496,16 +496,16 @@ def lignes_chrono(c):
         ("Dictée (erreurs en hausse = recul)", "CM2", [(1987, 2007, True, True), (2007, 2015, None, True), (2015, 2021, None, True)]),
         ("Lecture, épreuves de 1987", "CM2", [(1987, 1997, False, True), (1997, 2007, True, True)]),
         ("CEDRE, maîtrise de la langue", "CM2", [(2003, 2009, False, False), (2009, 2015, False, False),
-                                                 (2015, 2021, ce["significatif"]["2021"], ce["score"]["2021"] < ce["score"]["2015"])]),
-        ("Évaluation de début de sixième", "6e", [(2017, 2021, None, sf["2021"] < sf["2017"]), (2021, 2025, None, sf["2025"] < sf["2021"])]),
-        ("CEDRE, langue et littératie", "3e", [(2015, 2021, cc["significatif"]["2021"], cc["score"]["2021"] < cc["score"]["2015"])]),
+                                                 (2015, 2021, ce["significatif"]["2021"], lg.depasse(ce["score"]["2015"], ce["score"]["2021"], 0))]),
+        ("Évaluation de début de sixième", "6e", [(2017, 2021, None, lg.depasse(sf["2017"], sf["2021"], 0)), (2021, 2025, None, lg.depasse(sf["2021"], sf["2025"], 0))]),
+        ("CEDRE, langue et littératie", "3e", [(2015, 2021, cc["significatif"]["2021"], lg.depasse(cc["score"]["2015"], cc["score"]["2021"], 0))]),
         ("PISA, compréhension de l'écrit", "15 ans", [(2000, 2012, abs(c["d_00_12"]) >= 1.96 * c["se_00_12"], c["d_00_12"] < 0),
                                                        (2012, 2025, abs(v12[0]) >= 1.96 * v12[1], v12[0] < 0)]),
         ("PISA, temps de lecture-plaisir", "15 ans", [(2000, 2009, abs(hs["d2009_2000"]) >= 1.96 * hs["d2009_2000_et"], hs["d2009_2000"] < 0),
                                                        (2009, 2018, abs(hs["d2018_2009"]) >= 1.96 * hs["d2018_2009_et"], hs["d2018_2009"] < 0)]),
         ("PISA, plaisir de lire (indice)", "15 ans", [(2009, 2018, abs(jr["variation"]) >= 1.96 * jr["variation_et"], jr["variation"] < 0)]),
-        ("Test d'entrée, français (GT)", "seconde", [(2019, 2021, None, gt["2021"] < gt["2019"]), (2021, 2025, None, gt["2025"] < gt["2021"])]),
-        ("20 livres ou plus dans l'année", "15-24 ans", [(1988, 1997, None, v20["1997"] < v20["1988"]), (1997, 2008, None, v20["2008"] < v20["1997"])]),
+        ("Test d'entrée, français (GT)", "seconde", [(2019, 2021, None, lg.depasse(gt["2019"], gt["2021"], 0)), (2021, 2025, None, lg.depasse(gt["2021"], gt["2025"], 0))]),
+        ("20 livres ou plus dans l'année", "15-24 ans", [(1988, 1997, None, lg.depasse(v20["1988"], v20["1997"], 0)), (1997, 2008, None, lg.depasse(v20["1997"], v20["2008"], 0))]),
     ]
     return L
 

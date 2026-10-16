@@ -670,7 +670,7 @@ def carte_niveau() -> None:
         n = len(pays)
         P[dom]["mediane_ocde"] = (pays[n // 2] + pays[(n - 1) // 2]) / 2
         P[dom]["q1"] = sorted(pays)[n // 4]
-    if not (P["mathematiques"]["variation_2015_2025"]["v"] < P["mathematiques"]["q1"]):
+    if not (lg.depasse(P["mathematiques"]["q1"], P["mathematiques"]["variation_2015_2025"]["v"], 0)):
         fail("carte niveau : le contraste annoncé n'est plus vrai dans les données")
     carte("og-niveau-eleves.jpg",
           ["Le niveau des élèves", "baisse-t-il ?"],

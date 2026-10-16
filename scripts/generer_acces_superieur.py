@@ -39,6 +39,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import generer_parcours_licence as gl  # noqa: E402
+import langue_generee as lg  # noqa: E402  -- comparaisons publiées à la précision affichée (organe commun)
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "scripts" / "sources_enseignants"
@@ -123,7 +124,7 @@ def lire_acces(annee: int, sums: dict[str, str]) -> dict:
         d = dict(univ=nombre(r[1]), iut=nombre(r[2]), cpge=nombre(r[3]), sts=nombre(r[4]), autres=nombre(r[5]))
         if nombre(r[6]) != 100.0 or abs(d["univ"] + d["cpge"] + d["sts"] + d["autres"] - 100) > 0.21:
             fail("%d, %s : les quatre destinations ne somment pas a 100 (%.1f)" % (annee, nom, d["univ"] + d["cpge"] + d["sts"] + d["autres"]))
-        if d["iut"] > d["univ"]:
+        if lg.depasse(d["iut"], d["univ"], 1):
             fail("%d, %s : « dont IUT » superieur a « universite »" % (annee, nom))
         return d
 
@@ -197,11 +198,11 @@ def affichage(a: dict, t: dict, bac: dict) -> tuple[dict, list[str]]:
          ecart["cpge"] == min(ecart.values()) and rapport["univ"] == min(rapport.values()) and rapport["cpge"] > 2.5),
         ("en points, les STS montrent le plus grand écart", ecart["sts"] == max(ecart.values())),
         ("l'université est la première destination de cinq catégories sur six ; pour les enfants d'ouvriers, ce sont les STS",
-         sum(1 for d in o.values() if d["univ"] == max(d[k] for k, _ in DEST)) == 5 and o["ouv"]["sts"] > o["ouv"]["univ"]),
+         sum(1 for d in o.values() if d["univ"] == max(d[k] for k, _ in DEST)) == 5 and lg.depasse(o["ouv"]["sts"], o["ouv"]["univ"], 1)),
         ("enfants de retraités et d'inactifs : université et STS « proches » (moins de cinq points)", abs(o["ret"]["univ"] - o["ret"]["sts"]) < 5),
         ("« d'une année à l'autre, aucune valeur ne bouge de plus d'un point et demi »", derive < 1.5),
         ("les CPGE recrutent « plus de neuf fois sur dix » des bacheliers généraux ; en STS, les bacheliers professionnels sont plus nombreux que les généraux",
-         bac["cpge_bac_general"] > 90 and bac["sts_bac_professionnel"] > bac["sts_bac_general"]),
+         bac["cpge_bac_general"] > 90 and lg.depasse(bac["sts_bac_professionnel"], bac["sts_bac_general"], 1)),
         ("parmi les bacheliers généraux, les enfants de cadres sont plus de trois fois plus nombreux que les enfants d'ouvriers ; "
          "parmi les bacheliers professionnels, les enfants d'ouvriers plus de deux fois plus nombreux que ceux de cadres",
          bac["bac_general_cadres"] > 3 * bac["bac_general_ouvriers"] and bac["bac_professionnel_ouvriers"] > 2 * bac["bac_professionnel_cadres"]),

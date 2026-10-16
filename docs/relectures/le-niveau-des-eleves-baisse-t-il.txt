@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /le-niveau-des-eleves-baisse-t-il/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /le-niveau-des-eleves-baisse-t-il/, build de 47aaf02 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Le niveau des élèves baisse-t-il ?
 Selon PISA, oui : de 2015 à 2025, les jeunes Français de 15 ans ont perdu 43 points en compréhension de l'écrit et 35 en mathématiques, une baisse significative.
 Mais les évaluations passées en classe, en CM1 et en quatrième, ne mettent pas en évidence la même baisse récente.
@@ -58,7 +58,7 @@ Une comparaison descriptive de 28 pays
 Une comparaison descriptive des 28 pays présents dans les deux enquêtes rapproche l’évolution de TIMSS en quatrième entre 2019 et 2023 de celle de PISA à 15 ans entre 2022 et 2025 : les périodes et les populations ne sont donc pas identiques, et ce ne sont pas les mêmes élèves qui sont suivis.
 En France, TIMSS recule de 4 points, sans variation significative, tandis que PISA perd 16 points en mathématiques.
 Selon la règle fixée avant le calcul, la France figure parmi les quatre écarts sur 28 les plus défavorables à PISA, et elle reste parmi les écarts les plus défavorables dans un ajustement descriptif tenant compte du score TIMSS initial.
-Mais les évolutions des deux enquêtes sont peu liées d’un pays à l’autre : dans 13 pays sur 28, PISA évolue au contraire plus favorablement que TIMSS.
+Mais les évolutions des deux enquêtes sont peu liées d’un pays à l’autre : dans 12 pays sur 28, PISA évolue au contraire plus favorablement que TIMSS.
 Ce classement reste descriptif, et le même test n’est pas concluant en sciences.
 Un rapprochement va plus loin.
 La DEPP a confronté PISA au test d’entrée en seconde pour des cohortes largement correspondantes.

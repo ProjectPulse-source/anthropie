@@ -33,6 +33,7 @@ import sys
 from pathlib import Path
 
 import pied_figure  # pied commun des figures détaillées (scripts/pied_figure.py)
+import langue_generee as lg  # noqa: E402  -- comparaisons publiées à la précision affichée (organe commun)
 
 import numpy as np
 
@@ -229,7 +230,7 @@ def gardes(c):
     g(p3["rang"] <= p3["n"] // 4 and p3["rang"] in LETTRES, "TIMSS / PISA : France dans le quart le plus défavorable")
     fr3 = p3["pays"]["France"]
     g(fr3["dT"] < 0 and fr3["dP"] < 0, "TIMSS / PISA : la France recule dans les deux")
-    autre = sum(1 for v in p3["pays"].values() if v["dP"] > v["dT"])
+    autre = sum(1 for v in p3["pays"].values() if lg.depasse(v["dP"], v["dT"], 0))
     g(autre >= p3["n"] / 3 and p3["rho"] < 0.5, "TIMSS / PISA : « peu liées d'un pays à l'autre », « au contraire dans N pays »")
     g(p3["verdict_sciences"] != "TIENT", "TIMSS / PISA : « le même test n'est pas concluant en sciences »")
     # protocole 4 : « elle y reste une fois pris en compte le niveau de départ » ; limite : aucun des facteurs testés
@@ -241,7 +242,7 @@ def gardes(c):
     p5 = c["p5"]
     for d in ("mathematiques", "lecture", "sciences"):
         x = p5["N18"][d]
-        g(x["s"] < 0 and x["rec"] < x["m25"], "données individuelles, %s : à la répartition entre classes de 2015, la baisse est plus forte (« atténue arithmétiquement »)" % d)
+        g(x["s"] < 0 and lg.depasse(x["m25"], x["rec"], 0), "données individuelles, %s : à la répartition entre classes de 2015, la baisse est plus forte (« atténue arithmétiquement »)" % d)
     for d in ("mathematiques", "lecture"):
         g(all(b < a for a, b in p5["N18"][d]["classes"].values()), "données individuelles, %s : « dans chacune des catégories, plus bas »" % d)
     sc = p5["N18"]["sciences"]["classes"]
@@ -257,7 +258,7 @@ def gardes(c):
           "données individuelles, %s : « à peu près autant chez les favorisés que chez les défavorisés »" % d)
     g(all(abs(v) < 0.1 for v in p5["N21"].values()), "données individuelles : l'effort ne rend compte que de « moins d'un dixième » de la baisse")
     # contre-expertise de la page (10/10/2026, P1) : « la France perd davantage de points que la moyenne de l'OCDE »
-    g(all(P[d]["dif"]["2015"]["v"] < P[d]["ocde35_dif2015"] for d in DOM),
+    g(all(lg.depasse(P[d]["ocde35_dif2015"], P[d]["dif"]["2015"]["v"], 0) for d in DOM),
       "PISA 2015-2025 : la France perd davantage de points que la moyenne de l'OCDE dans les trois domaines")
     # protocole 6 : composition conjointe (classe, sexe, diplôme des parents, origine) ; médiane par quart social
     p6 = c["p6"]
@@ -284,7 +285,7 @@ def gardes(c):
     # protocole 2, N8 : la composition masque la baisse (sciences)
     cp = c["comp"]
     D_ = cp["moyenne_2025"] - cp["moyenne_2015"]
-    g(cp["recompose_2025"] < cp["moyenne_2025"] and cp["recompose_2025"] - cp["moyenne_2015"] < D_,
+    g(lg.depasse(cp["moyenne_2025"], cp["recompose_2025"], 0) and cp["recompose_2025"] - cp["moyenne_2015"] < D_,
       "composition : « à composition de 2015, la baisse serait plus forte »")
     pc = c["p6"]["compo"]["classe"]   # parts citées dans la prose : données individuelles (protocole 7 D)
     g(20 <= pc["a_troisieme_et_moins"][0] < 25 and pc["a_troisieme_et_moins"][1] < 10,
@@ -327,7 +328,7 @@ def gardes(c):
     g(P["lecture"]["dif"]["2022"]["sig"] and P["mathematiques"]["dif"]["2022"]["sig"], "lecture et maths : baisse significative depuis 2022")
     # N2 : mathématiques plus forte sous les trois variantes ; lecture à la limite ; sciences dans la moyenne
     m = P["mathematiques"]["n2"]
-    g(m["france"] < m["q1"] and all(m["france"] < v["q1"] for v in m["variantes"].values()),
+    g(lg.depasse(m["q1"], m["france"], 0) and all(lg.depasse(v["q1"], m["france"], 0) for v in m["variantes"].values()),
       "maths : « plus que les trois quarts des pays, quel que soit le groupe »")
     lec = P["lecture"]["n2"]
     g(lec["q1"] <= lec["france"] <= lec["q3"] and lec["france"] - lec["q1"] < 1.0, "lecture : « comme les autres, à la limite »")
@@ -381,9 +382,9 @@ def gardes(c):
     g(c["seconde_gt"] > 50, "« plus de la moitié en seconde générale et technologique »")
     # N4 : sens contraire en mathématiques, même sens en français ; DEPP : idem en standardisé
     sec = c["sec"]
-    g(sec["GT maths"]["2024"] > sec["GT maths"]["2021"] and P["mathematiques"]["dif"]["2022"]["v"] < 0,
+    g(lg.depasse(sec["GT maths"]["2024"], sec["GT maths"]["2021"], 0) and P["mathematiques"]["dif"]["2022"]["v"] < 0,
       "seconde : « en mathématiques, le test de seconde monte quand PISA baisse »")
-    g(sec["GT francais"]["2024"] < sec["GT francais"]["2021"], "seconde : « en français, les deux baissent »")
+    g(lg.depasse(sec["GT francais"]["2021"], sec["GT francais"]["2024"], 0), "seconde : « en français, les deux baissent »")
     gen = c["gen"]
     tm = next(v for k, v in gen.items() if k[0].startswith("Tests") and k[1].startswith("Math"))
     tf = next(v for k, v in gen.items() if k[0].startswith("Tests") and k[1].startswith("Fran"))
@@ -491,7 +492,7 @@ def affichage(c):
     A["t3_rang_l"] = LETTRES[p3["rang"]]
     A["t3_fr_dt"] = nb(-p3["pays"]["France"]["dT"], 0)
     A["t3_fr_dp"] = nb(-p3["pays"]["France"]["dP"], 0)
-    A["t3_autre"] = str(sum(1 for v in p3["pays"].values() if v["dP"] > v["dT"]))
+    A["t3_autre"] = str(sum(1 for v in p3["pays"].values() if lg.depasse(v["dP"], v["dT"], 0)))
     # protocole 2
     ae = c["ae"]
     for lib, k in (("TIMSS CM1 maths", "tcm1"), ("TIMSS 4e maths", "t4e"), ("TIMSS CM1 sciences", "tcm1s"), ("TIMSS 4e sciences", "t4es")):

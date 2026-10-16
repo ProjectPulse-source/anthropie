@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /inflation-et-dette-publique/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /inflation-et-dette-publique/, build de 47aaf02 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 L'inflation a-t-elle vraiment allégé la dette française ?
 L'État a-t-il gagné 150 milliards grâce à l'inflation ?
@@ -159,7 +159,7 @@ Ces trois facteurs expliquent environ 87 % de l’écart ; un résidu d’enviro
 Les deux calculs ne portent pas sur le même objet.
 Hilscher, Raviv et Reis ont posé la méthode qui rapporte l’allègement à la maturité de la dette ; Andreolli et Rey l’appliquent ex post à la France jusqu’à la mi-2022.
 Pour les achats de la banque centrale, l’OCDE publiait l’indicateur ajusté de la France en un seul point, fin 2022 : l’effet des achats que l’on lit sur sa figure, 1,61 an, est proche de celui que nous mesurons dans sa convention (1,75).
-La Bundesbank estimait en 2024, sans publier sa méthode, que la durée de refixation ajustée pouvait être jusqu’à deux ans plus courte que la maturité résiduelle ; pour la France, l’écart dû aux achats culmine ici à 2,1 ans (mai 2022).
+La Bundesbank estimait en 2024, sans publier sa méthode, que la durée de refixation ajustée pouvait être jusqu’à deux ans plus courte que la maturité résiduelle ; pour la France, l’écart dû aux achats culmine ici à 2,1 ans (d’avril à juillet 2022).
 L’OBR mesurait le même raccourcissement au Royaume-Uni.
 Mis en danger par.
 Toute lecture du montant comme un gain de l’État.

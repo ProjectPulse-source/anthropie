@@ -1269,7 +1269,7 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts) -> tuple
         ("aujourd'hui, la Pologne et la Hongrie, hors euro, paient plus que l'Italie",
          E["PL"][an] > E["IT"][an] and E["HU"][an] > E["IT"][an]),
         ("le prix français est un peu sous la moyenne simple de la zone euro (écart < 0,4 point)",
-         F["prix"] < stats["prix_moyen_euro"] and stats["prix_moyen_euro"] - F["prix"] < 0.4),
+         lg.depasse(stats["prix_moyen_euro"], F["prix"], 1) and stats["prix_moyen_euro"] - F["prix"] < 0.4),
         # Phase B (OPTIMUM-22), chaque phrase nouvelle :
         ("changer de dénominateur déplace la France : rapporté au PIB, moins de pays moins endettés la dépassent",
          0 < len(plus_ipib) < len(moins_chers_que_fr)),

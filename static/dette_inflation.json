@@ -212,7 +212,7 @@
   "qe_nous_effet": "1,75",
   "qe_ocde_aj": "6,3",
   "qe_e1_max": "2,1",
-  "qe_e1_date": "mai 2022"
+  "qe_e1_date": "d’avril à juillet 2022"
  },
  "affichage_en": {
   "t": "150",
@@ -308,6 +308,6 @@
   "qe_nous_effet": "1.75",
   "qe_ocde_aj": "6.3",
   "qe_e1_max": "2.1",
-  "qe_e1_date": "May 2022"
+  "qe_e1_date": "from April to July 2022"
  }
 }

@@ -154,7 +154,13 @@ def calcul_qe(x):
             s, w = emis.get(a, (0.0, 0.0))
             emis[a] = (s + F(r, "emission_MLT_Md"), w + F(r, "emission_MLT_Md") * F(r, "emission_maturite"))
     emis = {a: w / s for a, (s, w) in emis.items()}
-    e1 = lg.extremum((r for r in ind.values() if r["ecart_E1"]), lambda r: F(r, "ecart_E1"), 2)
+    # Maximum de l'écart E1 et TOUTES ses dates à l'affichage (1 décimale, arrondi au demi supérieur comme f() du bloc
+    # d'affichage) : au 16/10/2026, quatre mois s'affichent au maximum, la page en datait un seul, choisi par l'ordre.
+    from decimal import Decimal, ROUND_HALF_UP
+    e1s = sorted((r for r in ind.values() if r["ecart_E1"]), key=lambda r: r["situation"])
+    aff = lambda r: Decimal(repr(F(r, "ecart_E1"))).quantize(Decimal("0.1"), rounding=ROUND_HALF_UP)  # noqa: E731
+    e1 = max(e1s, key=lambda r: F(r, "ecart_E1"))  # brut-ok: valeur exacte du maximum ; ses dates publiees = e1_dates
+    e1_dates = [r["situation"] for r in e1s if aff(r) == aff(e1)]
     dern = max(sen)
     serie = [(d, F(r, "S_m_1_Md"), F(r, "S_c_1_Md")) for d, r in sorted(sen.items())]
     # T4, base homogène BCE : rapport consolidée / marché à un an = r1 / F1, par pays et par année
@@ -182,7 +188,7 @@ def calcul_qe(x):
         "atr15": F(ind[d0], "ATR_fixe"), "atr22": F(ind[d22], "ATR_fixe"),
         "aj_min": min(F(r, "ATR_fixe_aj") for r in fen), "aj_max": max(F(r, "ATR_fixe_aj") for r in fen),
         "em14": emis[2014], "em_min": min(emis[a] for a in range(2016, 2023)), "em_max": max(emis[a] for a in range(2016, 2023)),
-        "e1_max": F(e1, "ecart_E1"), "e1_date": e1["situation"],
+        "e1_max": F(e1, "ecart_E1"), "e1_date": e1["situation"], "e1_dates": e1_dates,
         "sm1": F(sen[d22], "S_m_1_Md"), "sc1": F(sen[d22], "S_c_1_Md"), "sc1_pib": F(sen[d22], "S_c_1_pPIB"),
         "sm5": F(sen[d22], "S_m_5_Md"), "sc5": F(sen[d22], "S_c_5_Md"),
         "dern": dern, "sm1_d": F(sen[dern], "S_m_1_Md"), "sc1_d": F(sen[dern], "S_c_1_Md"), "h_d": F(sen[dern], "h"),
@@ -244,7 +250,7 @@ def gardes(c):
     fr = [v["r=0%"] for v in list(c["A"].values())[1:]]  # Banque de France, Commission automne, hiver : propres à la France
     g(min(fr) < list(c["A"].values())[0]["r=0%"] < max(fr), "« les trois prévisions propres à la France encadrent » le SPF : %s" % fr)
     g(min(c["B"].values()) > T, "« les points morts de marché donneraient davantage » : %s" % c["B"])
-    g(c["T"] > c["T_annuel"], "« plus élevé que le calcul en moyennes annuelles »")
+    g(lg.depasse(c["T"], c["T_annuel"], 1), "« plus élevé que le calcul en moyennes annuelles »")
     g(abs(c["T_sans_saison"] - T) < 1.0, "« la correction saisonnière ne change presque rien »")
     part27 = c["cum"][2027] / T
     g(c["demi"] == 2027 and 0.45 <= part27 <= 0.62, "« environ la moitié d'ici 2027 » : %.0f %%, demi %s" % (100 * part27, c["demi"]))
@@ -252,7 +258,7 @@ def gardes(c):
     g(0.17 <= part23 <= 0.23, "« un cinquième seulement payé fin 2023 » : %.0f %%" % (100 * part23))
     g(47 <= c["parts"]["non_residents"] <= 53, "FAQ : « la moitié détenue par des non-résidents » : %.1f" % c["parts"]["non_residents"])
     g(21 <= c["parts"]["BdF"] < 25, "FAQ : « près d'un quart par la Banque de France » : %.1f" % c["parts"]["BdF"])
-    g(c["defl_spf"] < c["T_annuel"] and c["defl_ce"] < c["T_annuel"], "« plus faible en unités de production intérieure »")
+    g(lg.depasse(c["T_annuel"], c["defl_spf"], 1) and lg.depasse(c["T_annuel"], c["defl_ce"], 1), "« plus faible en unités de production intérieure »")
     g(abs(c["idx_j"] - 20) <= 2.5 and abs(c["idx_1"] - c["idx_j"]) <= 1.0, "« environ 20 Md€, la même chose avec un seul point mort » : %.1f / %.1f" % (c["idx_j"], c["idx_1"]))
     g(c["cons23"] >= 0.95 * T, "« consolidée, l'érosion reste presque entière fin 2023 » : %.1f" % c["cons23"])
     g(c["cons25"] < c["cons23"] - 10, "« puis l'avantage consolidé se réduit en 2024-2025 »")
@@ -262,7 +268,7 @@ def gardes(c):
     g(1 < fa < 5 and fa < c["parts"]["banques"], "« fonds et autres » : petite part, sous celle des banques : %.2f" % fa)
     g(1 < c["parts"]["OPC"] < 2 and 1 < 100 - sum(c["parts"].values()) < 2,
       "annexe : « les fonds et les autres détenteurs pèsent chacun un peu plus de 1 %% » : %.2f / %.2f" % (c["parts"]["OPC"], 100 - sum(c["parts"].values())))
-    g(c["parts"]["assureurs"] > c["parts"]["banques"] and c["parts"]["BdF"] > c["parts"]["assureurs"],
+    g(lg.depasse(c["parts"]["assureurs"], c["parts"]["banques"], 0) and lg.depasse(c["parts"]["BdF"], c["parts"]["assureurs"], 0),
       "ordre des détenteurs dit dans la page (non-résidents, Banque de France, assureurs, banques) : %s" % c["parts"])
     g(0 < 100 - sum(c["parts"].values()) < 5 and c["parts"]["non_residents"] == max(c["parts"].values()),
       "annexe : parts de détention incohérentes, ou les non-résidents ne sont plus le premier groupe : %s" % c["parts"])
@@ -340,6 +346,20 @@ def affichage_qe(q, lang):
     from decimal import Decimal, ROUND_HALF_UP
     f = lambda v, d=1: nb(float(Decimal(repr(v)).quantize(Decimal(1).scaleb(-d), rounding=ROUND_HALF_UP)), d, lang)
     mois = lambda d: "%s %s" % (MOIS[lang][int(d[5:7]) - 1], d[:4])
+
+    def periode(dates: list) -> str:
+        """Un mois, une suite de mois consécutifs (« de mai à août 2016 », « from May to August 2016 ») ou une
+        énumération : une date qui s'affiche au maximum avec d'autres ne se publie pas seule."""
+        ds = sorted(dates)
+        if len(ds) == 1:
+            return mois(ds[0])
+        rang_ = [int(d[:4]) * 12 + int(d[5:7]) for d in ds]
+        if rang_ == list(range(rang_[0], rang_[0] + len(ds))):
+            m0 = MOIS[lang][int(ds[0][5:7]) - 1] if ds[0][:4] == ds[-1][:4] else mois(ds[0])
+            if lang == "en":
+                return "from %s to %s" % (m0, mois(ds[-1]))
+            return ("d’%s à %s" if m0[0] in "aeiouéèêâ" else "de %s à %s") % (m0, mois(ds[-1]))   # d’avril, d’août, d’octobre (apostrophe de la page)
+        return lg.enumere([mois(d) for d in ds], lang)
     return {
         "qe_atr15": f(q["atr15"]), "qe_atr22": f(q["atr22"]), "qe_aj_min": f(q["aj_min"]), "qe_aj_max": f(q["aj_max"]),
         "qe_em14": f(q["em14"]), "qe_em_min": f(q["em_min"]), "qe_em_max": f(q["em_max"]),
@@ -354,7 +374,7 @@ def affichage_qe(q, lang):
         "qe_rdt_min": f(q["rdt_min"]), "qe_rdt_max": f(q["rdt_max"]), "qe_tref_max": f(q["tref_max"], 0),
         "qe_bdf_ro_avant": f(q["bdf_ro_avant"]), "qe_bdf_ro_apres": f(abs(q["bdf_ro_apres"])), "qe_bdf_verse": f(q["bdf_verse_avant"]),
         "qe_ocde_effet": f(q["ocde_effet"], 2), "qe_nous_effet": f(q["nous_effet"], 2), "qe_ocde_aj": f(q["ocde_aj"]),
-        "qe_e1_max": f(q["e1_max"]), "qe_e1_date": mois(q["e1_date"]),
+        "qe_e1_max": f(q["e1_max"]), "qe_e1_date": periode(q.get("e1_dates") or [q["e1_date"]]),
     }
 
 

@@ -52,6 +52,16 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-16 — Les trois limites de l'arbitrage, mesurées puis traitées
+
+Chacune cachait un défaut publié. (1) Précision relevée à la main : instrumentation des appels à `rang`/`depasse`/
+`positions` ; l'écart E1 de « Inflation et dette » était comparé à 2 décimales et publié à 1 — date du maximum « mai
+2022 » devenue « d’avril à juillet 2022 » (quatre mois ex aequo). (2) Formes multi-lignes : deux extremums bruts dans
+`update_dette_baisse.py`, convertis ; `check-lecture-donnees.py` gagne une passe syntaxique (`examiner_ast`). (3)
+Comparaisons entre deux grandeurs : 45 converties en `lg.depasse` à la précision de leur jeton ; deux comptes publiés
+corrigés — niveau des élèves « 13 » → « 12 pays », « peut-elle baisser » « 16 » → « 15 années ». Phrases relues FR/EN,
+instantanés refaits ; `check-all --ci` 0, build 0, liens 0, relecture 0. Addendum dans l'arbitrage de l'audit.
+
 ### 2026-10-16 — Contre-expertise du correctif généralisé : quatre blocages levés, 70 extremums traités
 
 Audit `anthropie-site-20261016-154235` (GO AVEC CORRECTIFS), arbitrage `.claude/external-audits/ARBITRATIONS/`

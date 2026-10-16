@@ -270,7 +270,7 @@ def gardes_bati(b, g):
       "bâti : « Bretagne et Pays de la Loire, environ quatre lycéens sur dix dans le privé »")
     g(set(b["inv_top"]) == {"52", "53"}, "bâti : « elles se distinguent par leur investissement » (deux plus forts)")
     g(b["rho_lf"] is not None and b["rho_lf"] <= -0.6, "bâti : « plus le recul, plus la dépense » (rho %.2f)" % (b["rho_lf"] or 0))
-    g(b["med_bas"] > b["med_haut"], "bâti : médiane des régions en recul au-dessus")
+    g(lg.depasse(b["med_bas"], b["med_haut"], 0), "bâti : médiane des régions en recul au-dessus")
     g(b["meca"] - 1 < (b["med_bas"] / b["med_haut"] - 1) and b["meca"] < 1.2,
       "bâti : « la seule baisse des effectifs ne suffit pas » (effet maximal %.3f)" % b["meca"])
     g(b["rho_ll"] is not None and -0.6 < b["rho_ll"] <= -0.3 and abs(b["rho_ll"]) < abs(b["rho_lf"]),
@@ -344,7 +344,7 @@ def gardes(c):
     g(round(d["plus"]["total"] / d["moins"]["total"]) == 6,"« six fois plus » (déciles, DEPP) : %s / %s" % (d["plus"]["total"], d["moins"]["total"]))
     org4 = c["h4"][GT]["fermeture"] + c["h4"][GT]["systeme"] + c["h4"][GT]["formation"]
     g(org4 / h4gt["total"] > 0.5, "« plus de la moitié des heures perdues » : %.2f" % (org4 / h4gt["total"]))
-    g(c["org3"] > c["h3"][GT]["individuelles"], "« même sens en 2023-2024 » (chiffres à l'unité)")
+    g(lg.depasse(c["org3"], c["h3"][GT]["individuelles"], 0), "« même sens en 2023-2024 » (chiffres à l'unité)")
     g(abs(c["org4_col"] - c["h4"][COL]["individuelles"]) <= 0.5, "« au collège, les deux s'équilibrent » : %.1f / %.1f" % (c["org4_col"], c["h4"][COL]["individuelles"]))
     g(lg.depasse(h4gt["fermeture"], c["h4"][COL]["fermeture"]) and lg.depasse(h4gt["fermeture"], c["h4"][LP]["fermeture"]), "« le lycée GT ferme davantage »")
     g(abs(h4gt["total"] - 10) <= 0.5, "énoncé « 10 % des heures dans les lycées » : exact à 0,5 point")
@@ -413,7 +413,7 @@ def gardes(c):
     g(c["c1_max_an"] == 2010 and c["c1"][max(c["c1"])] < 0.95 * c["c1"][2010], "« dépense par lycéen sous son maximum de 2010 »")
     rap = {a: v["FRA"] / v["OECD"] for a, v in c["c3"].items()}
     g(all(r > 1.10 for r in rap.values()), "« au-dessus de l'OCDE chaque année »")
-    g(c["ocde_depp"]["france"] > c["ocde_depp"]["moyenne_ocde"], "« la DEPP trouve aussi la France au-dessus de la moyenne de l'OCDE »")
+    g(lg.depasse(c["ocde_depp"]["france"], c["ocde_depp"]["moyenne_ocde"], 0), "« la DEPP trouve aussi la France au-dessus de la moyenne de l'OCDE »")
     # Concours
     for nom, s in (("mathématiques", c["maths"]), ("physique-chimie", c["pc"])):
         g(all(s[a] < 80 for a in ("2023", "2024", "2025")), "« moins de quatre postes sur cinq, trois sessions » : CAPES %s" % nom)
@@ -428,7 +428,7 @@ def gardes(c):
     # Académies
     g(max(c["metro"].values()) - min(c["metro"].values()) >= 2, "« les académies ne sont pas à égalité »")
     # Énoncés
-    g(c["e4_reel"] > 0 and c["e4_par_el"] > c["e4_reel"], "E4 : majorants positifs, par élève plus fort")
+    g(c["e4_reel"] > 0 and lg.depasse(c["e4_par_el"], c["e4_reel"], 2), "E4 : majorants positifs, par élève plus fort")
     g(c["e4_el"] < 0, "« les élèves seront moins nombreux en 2027 qu'en 2017 » : %.3f" % c["e4_el"])
     g(2.5 <= c["e5_f"] < 2.95, "E5 « multiplié par environ 2,6, pas tout à fait triplé » : %.2f" % c["e5_f"])
     var = c["sd"]["total"]["2024-2025"] - c["sd"]["total"]["2022-2023"]

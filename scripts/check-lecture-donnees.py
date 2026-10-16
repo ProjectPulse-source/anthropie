@@ -22,8 +22,9 @@ compactée), balayage des octets sur le texte entier.
 COUVERTURE EXACTE -- ce qu'il ne voit pas, dit ici :
 - une comparaison stricte `a["x"] > b["x"]` d'une garde de prose (motif trop fréquent hors prose pour être interdit
   mécaniquement : seuils, boucles, tests de cohérence) ; elle passe par `lg.depasse` à l'adoption ;
-- toute expression répartie sur plusieurs lignes, `np.argmax`, un tri suivi d'un `enumerate` ou d'un `[0]` publié
-  comme « le premier », un compactage écrit autrement que `[c for c in r if c is not None]` ;
+- `np.argmax`, un tri suivi d'un `enumerate` ou d'un `[0]` publié comme « le premier », un compactage écrit autrement
+  que `[c for c in r if c is not None]` (les rangs et extremums écrits sur PLUSIEURS lignes sont vus depuis le 16/10 par
+  la passe syntaxique `examiner_ast`, qui a trouvé deux gardes de update_dette_baisse.py) ;
 - la PERTINENCE d'un `brut-ok` : il exige un motif, il ne le juge pas. `--exceptions` les liste pour la revue.
 La relecture du texte servi et la contre-expertise restent la défense de ce qui échappe aux motifs.
 Condition de mort : aucune -- permanent tant que des générateurs lisent des tableurs et publient des rangs (R2, revue
@@ -84,6 +85,38 @@ def octets(nom: str, texte: str) -> list[str]:
             % (nom, texte.count("\n", 0, m.start()) + 1, ord(m.group())) for m in OCTETS.finditer(texte)]
 
 
+def examiner_ast(nom: str, texte: str) -> list[str]:
+    """Mêmes défauts de rang et d'extremum, vus par l'arbre syntaxique : une expression coupée sur plusieurs lignes
+    échappait aux motifs ligne à ligne (deux gardes de update_dette_baisse.py, trouvées le 16/10 par cette passe).
+    Exception : `# brut-ok: <motif>` sur l'une des lignes de l'expression."""
+    import ast
+    lignes = texte.splitlines()
+    out = []
+
+    def excepte(n0, n1):
+        return any((m := EXCEPTION.search(lignes[i - 1])) and m.group(1) for i in range(n0, n1 + 1))
+
+    def nomme(f, noms):
+        return isinstance(f, ast.Name) and f.id in noms
+
+    for nd in ast.walk(ast.parse(texte)):
+        quoi = None
+        if isinstance(nd, ast.Call):
+            if nomme(nd.func, ("max", "min")) and any(k.arg == "key" for k in nd.keywords):
+                quoi = "extremum par cle sur valeur brute (lg.extremum / lg.sommets)"
+            elif isinstance(nd.func, ast.Attribute) and nd.func.attr == "index" and (
+                    (nd.args and isinstance(nd.args[0], ast.Call) and nomme(nd.args[0].func, ("max", "min")))
+                    or (isinstance(nd.func.value, ast.Call) and nomme(nd.func.value.func, ("sorted",)))):
+                quoi = "rang ou position d'extremum sur valeur brute (lg.rang / lg.positions)"
+        elif (isinstance(nd, ast.BinOp) and isinstance(nd.op, ast.Add) and isinstance(nd.right, ast.Constant)
+              and nd.right.value == 1 and isinstance(nd.left, ast.Call) and isinstance(nd.left.func, ast.Attribute)
+              and nd.left.func.attr == "index"):
+            quoi = "rang sur valeur brute (lg.rang)"
+        if quoi and nd.end_lineno > nd.lineno and not excepte(nd.lineno, nd.end_lineno):
+            out.append("%s:%d-%d : %s (expression sur plusieurs lignes)" % (nom, nd.lineno, nd.end_lineno, quoi))
+    return out
+
+
 def fichiers() -> list[Path]:
     vus = set()
     for g in MOTIFS_GLOB:
@@ -120,6 +153,10 @@ def temoin() -> int:
         rate.append("mutation de update_dette_monde.py non vue")
     if not octets("mutation", 'INTERDITS = [r"' + chr(8) + 'missing' + chr(8) + '"]') or octets("sain", 'r"\\bmissing\\b"'):
         rate.append("balayage des octets de controle mal juge")
+    # Passe syntaxique : la forme multi-ligne trouvée le 16/10 doit être vue, l'exception motivée admise.
+    multi = "x = min([a for a in b],\n        key=lambda t: t)\n"
+    if not examiner_ast("t", multi) or examiner_ast("t", multi.replace("t: t)", "t: t)  # brut-ok: test")):
+        rate.append("passe syntaxique mal jugee (forme multi-ligne)")
     # Octets que splitlines() avalait (contre-expertise) : chacun doit être vu, à la bonne ligne.
     for o in (0x0B, 0x0C, 0x1C, 0x1D, 0x1E, 0x85):
         vu = octets("t", "a = 1\nb = 'x" + chr(o) + "y'\n")
@@ -157,6 +194,7 @@ def main() -> int:
     for p in fichiers():
         n += 1
         defauts += examiner(p.name, p.read_text(encoding="utf-8"))
+        defauts += examiner_ast(p.name, p.read_text(encoding="utf-8"))
     for p in sorted(SCRIPTS.glob("*.py")):
         defauts += octets(p.name, p.read_text(encoding="utf-8"))
     if defauts:

@@ -729,7 +729,7 @@ def gardes(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, aux):
          abs(d3["besoin"] / d2["besoin"] - 1) < 0.05 and -0.55 < d3["actifs"] / d2["actifs"] - 1 < -0.40),
         ("dernière décennie : « que » — moins d'un demi-point de PIB par an d'acquisitions nettes d'actifs", d3["actifs"] / d3["annees"] < 0.5),
         ("recettes courantes supérieures aux dépenses courantes deux à trois années sur trente (phrase au pluriel, années énumérées)", 2 <= sum(1 for r in annees if r["desepargne"] < 0) <= 3),
-        ("« aucune année l'investissement n'a égalé le besoin de financement »", all(r["actifs"] < r["besoin"] for r in annees)),
+        ("« aucune année l'investissement n'a égalé le besoin de financement »", all(lg.depasse(r["besoin"], r["actifs"], 1) for r in annees)),
         ("en comptant toutes les aides à l'investissement versées : « toujours moins de la moitié »",
          (total["actifs"] + total["aides_investissement"]) / total["besoin"] < 0.5),
         # --- complément : le bilan (phase B : deux bornes, réévaluations dites ; plus un témoin de concordance)

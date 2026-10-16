@@ -1,4 +1,4 @@
-# relu le 2026-10-16 ; texte servi de /dette-publique-peut-elle-baisser/, build de 5eaa525 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /dette-publique-peut-elle-baisser/, build de 47aaf02 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 La dette publique peut-elle baisser ?
 Oui : ce qui peut baisser, c'est le poids de la dette dans le PIB, même quand son montant augmente.
@@ -251,7 +251,7 @@ Une dette est dite soutenable quand l’État peut la servir et la refinancer sa
 Les deux premiers termes se mesurent ici ; le troisième, non.
 Ce qui le rend fragile.
 L’égalité de 2025 entre taux et croissance n’est pas un état acquis.
-Sur 30 ans, le taux implicite a dépassé la croissance nominale 16 années.
+Sur 30 ans, le taux implicite a dépassé la croissance nominale 15 années.
 Tombé à 1,2 % en 2020, il remonte, à mesure que la dette ancienne se refinance aux conditions de marché, pendant que la croissance nominale retombe après les années d’inflation : l’allègement de la dernière décennie tenait pour l’essentiel à 2021-2023.
 Au niveau de dette et de croissance de 2025 (115,6 % du PIB), et toutes choses égales par ailleurs, un point supplémentaire d’écart entre le taux et la croissance relève le solde stabilisant d’environ 1,1 point de PIB : plus la dette est élevée, plus sa trajectoire dépend de taux que le budget ne commande pas directement, et dont les travaux cités plus bas trouvent l’écart à la croissance plus élevé quand la dette l’est aussi.
 Ce que ces données ne disent pas.

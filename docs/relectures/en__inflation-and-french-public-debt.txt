@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /en/inflation-and-french-public-debt/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /en/inflation-and-french-public-debt/, build de 47aaf02 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Did inflation really ease France's debt burden?
 Did the French government gain €150bn from inflation?
@@ -19,7 +19,6 @@ In the first, inflation is what the professional forecasters surveyed by the ECB
 In the second, it is realised inflation, month by month, up to December 2023.
 By end-2023 prices were 10.8% higher than in the first world, and that gap is assumed to remain thereafter.
 Each promised payment is converted into 2020 euros at the price level of its date, in both worlds; the difference between the two values, added up over all payments, gives the erosion.
-}}bn to €170bn." width="720" height="373" loading="lazy">
 An undiscounted sum of real-value differences, in billions of 2020 euros, not debt written off (author's calculation; AFT, Eurostat, ECB).
 The result in one sentence.
 Relative to the inflation expected in early 2021, realised 2021–2023 inflation reduces the real value of the payments promised on France’s fixed-rate marketable government debt outstanding at end-2020 by about €150bn in 2020 euros, undiscounted, about 6.5% of 2020 GDP; depending on which forecast published in early 2021 is used, €145bn to €170bn.
@@ -160,7 +159,7 @@ These three factors explain about 87% of the gap; a residual of about 13% remain
 The two calculations do not measure the same object.
 Hilscher, Raviv and Reis set out the method that ties the relief to the maturity of the debt; Andreolli and Rey apply it ex post to France up to mid-2022.
 For central-bank purchases, the OECD published France’s adjusted measure at a single point, end-2022: the effect of purchases read from its chart, 1.61 years, is close to the one we measure under its convention (1.75).
-The Bundesbank estimated in 2024, without publishing its method, that the adjusted refixing period could be up to two years shorter than residual maturity; for France the gap due to purchases peaks here at 2.1 years (May 2022).
+The Bundesbank estimated in 2024, without publishing its method, that the adjusted refixing period could be up to two years shorter than residual maturity; for France the gap due to purchases peaks here at 2.1 years (from April to July 2022).
 The OBR measured the same shortening in the United Kingdom.
 Challenged by.
 Any reading of the amount as a gain for the government.

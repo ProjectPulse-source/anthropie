@@ -37,6 +37,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import generer_parcours_licence as gl  # noqa: E402
 import lecture_tableur as lt  # noqa: E402  -- forme des cellules (organe commun)
+import langue_generee as lg  # noqa: E402  -- comparaisons publiées à la précision affichée (organe commun)
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "scripts" / "sources_enseignants"
@@ -175,7 +176,7 @@ def affichage(j: dict) -> tuple[dict, list[str]]:
          "evol_interieure": ent(abs(e_int)),
          "emissions_depart": ent(a0["emissions"]), "empreinte_depart": ent(a0["empreinte"]), "importee_depart": ent(a0["importee"])}
     gardes = [
-        ("l'empreinte dépasse les émissions françaises", d["empreinte"] > d["emissions"]),
+        ("l'empreinte dépasse les émissions françaises", lg.depasse(d["empreinte"], d["emissions"], 0)),
         ("les émissions importées pour la demande française dépassent « nettement » la production exportée (plus du double)",
          d["importee"] > 2 * d["exportee"]),
         ("les importations font « la moitié » de l'empreinte (entre 45 et 55 %)", 45 < 100 * d["importee"] / d["empreinte"] < 55),

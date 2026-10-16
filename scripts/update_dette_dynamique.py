@@ -660,7 +660,7 @@ def affichage(a0, d_depart, rows, total, per, dr):
         ("« Ce qu'il faut retenir » : la bascule tombe entre 2014 et 2019 (le bloc de confrontation la rapproche de la note du Trésor, qui la date de 2016)",
          2014 <= bascule <= 2019),
         ("« Ce qu'il faut retenir » : avant la bascule, le taux implicite dépasse « le plus souvent » la croissance nominale",
-         sum(1 for r in rows if r["annee"] < bascule and r["taux_implicite_pct"] > r["croissance_nominale_pct"]) * 2
+         sum(1 for r in rows if r["annee"] < bascule and lg.depasse(r["taux_implicite_pct"], r["croissance_nominale_pct"], 2)) * 2
          > sum(1 for r in rows if r["annee"] < bascule)),
         ("« Ce qu'il faut retenir » : depuis la bascule, la seule année d'effet taux-croissance positif est 2020",
          [r["annee"] for r in rows if r["annee"] >= bascule and r["effet_taux_croissance"] >= 0] == [2020]),

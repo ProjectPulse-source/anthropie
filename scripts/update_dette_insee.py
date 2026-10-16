@@ -2036,7 +2036,7 @@ def main() -> int:
           "depuis 2019, c'est l'encours qui pese le plus dans la hausse (le partage depend de la base)")
     prose(dec_cumul["taux"] > dec_cumul["volume"] > 0,
           "sur l'ensemble depuis le creux, le taux implicite pese plus que l'encours, et les deux poussent")
-    prose(saut["taux"] > saut["volume"], "l'annee du saut du taux implicite, c'est le taux qui domine")
+    prose(lg.depasse(saut["taux"], saut["volume"], 1), "l'annee du saut du taux implicite, c'est le taux qui domine")
     prose(dec_apres is not None and dec_apres["volume"] > dec_apres["taux"] > 0,
           "depuis l'annee du saut, l'encours pese davantage que le taux implicite")
     prose(all(r["volume"] > 0 for r in dec_rows), "l'encours augmente chaque annee depuis le creux")

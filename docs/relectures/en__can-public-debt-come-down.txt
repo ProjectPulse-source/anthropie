@@ -1,4 +1,4 @@
-# relu le 2026-10-16 ; texte servi de /en/can-public-debt-come-down/, build de 5eaa525 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /en/can-public-debt-come-down/, build de 47aaf02 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Can public debt come down?
 Yes: what can fall is the weight of debt in GDP, even while its amount rises.
@@ -251,7 +251,7 @@ A debt is called sustainable when the State can service and refinance it without
 The first two terms are measured here; the third is not.
 What makes it fragile.
 The equality between interest and growth in 2025 is not a settled state.
-Over 30 years, the implicit interest rate exceeded nominal growth in 16 of them.
+Over 30 years, the implicit interest rate exceeded nominal growth in 15 of them.
 Down to 1.2% in 2020, it is rising as old debt is refinanced on market terms, while nominal growth falls back after the inflation years: the relief of the last decade came mostly from 2021-2023.
 At 2025 levels of debt and growth (115.6% of GDP), and all else equal, one additional point of gap between the interest rate and growth raises the stabilising balance by about 1.1 points of GDP: the higher the debt, the more its path depends on interest rates the budget does not directly control, and whose gap to growth the research cited below finds higher when debt is higher too.
 What these data do not say.
