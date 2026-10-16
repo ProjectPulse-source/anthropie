@@ -52,6 +52,18 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-17 — Page pilote « La tabula rasa : Locke a-t-il vraiment parlé d'une page blanche ? » (commitée, non publiée)
+
+Arbitrage `PRO-20261017-003900` (option B, une seule page, aucune série ; `D:\PRO\06_PROMOTION\PISTE_ODYSSEE_NOTIONS_2026-10-17\`).
+`content/tabula-rasa-locke/` : notion du bloc « Guides et éclairages » (rang 15), FR seulement (`lang_repli`), mène à
+*L'Odyssée des idées* (notice « 1690 · Locke », exemplaire de consultation). Citations vérifiées au texte le 17/10 :
+Locke 1690, Coste 1735 (« une Table rase », note « Tabula rasa » : la formule entre dans le texte français par la
+traduction), Leibniz (préface des *Nouveaux Essais*), Thomas d'Aquin (I, q. 79, a. 2). Demande française observable :
+Bing, 177 impressions en 3 mois. Expérience et règle de décision à J+60 déclarées dans `RELEVE_J0_CITATIONS_IA.md`
+avant publication. ⚠ `date` avec heure et fuseau : une date nue se lit minuit UTC et la page sortait du build avant
+2 h, heure de Paris (vu par `check-rendu-ressources.py`). Contrôles : build, `check-all` complet, dates (57/57), liens,
+rendu, relecture à 0. Publication : sur accord de l'auteur.
+
 ### 2026-10-16 (soir) — Dates et fraîcheur, phases P1 et P2 : une date de page, trois canaux, contre-expertise de la réalisation
 
 Arbitrage `PRO-20261016-195302` (PUBLIER APRÈS CORRECTIFS, accepté ; `D:\PRO\06_PROMOTION\GEO_FRAICHEUR_2026-10-16\`).

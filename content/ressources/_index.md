@@ -57,6 +57,6 @@ blocs:
     chapo: "Les appareils documentaires qui accompagnent les livres, consultables pour eux-mêmes."
   - id: guides
     titre: "Guides et éclairages"
-    chapo: "Deux textes de méthode, sur l'écriture et sur le travail de recherche hors institution."
+    chapo: "Des éclairages d'histoire des idées et de méthode : l'écriture, la tabula rasa, le travail de recherche hors institution."
 ---
 
