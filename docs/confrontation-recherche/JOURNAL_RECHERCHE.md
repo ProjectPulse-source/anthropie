@@ -172,3 +172,25 @@ dépôt `D:\PRO`). « Les deux institutions partagent les faits » ramené à un
 2019-2024 moindre qu'en zone euro), suivie de deux objets d'analyse différents ; structurel, PO et dépenses distingués ;
 « ampleur » et non « remontée » de la charge incertaine ; 0,5 et 1,2 point dits de périmètres différents. Le
 contradicteur juge qu'aucun nouveau tour n'est indispensable.
+
+## 9. Cinquième tour, 16/10/2026 — écart taux-croissance et niveau de dette (FMI)
+
+**Déclencheur** : réponse du secrétariat du European Fiscal Board (06/10) au courriel de la campagne VAGUE1-DETTE : l'écart
+taux-croissance « n'est pas exogène », avec un renvoi à Lian, Presbitero et Wiriadinata, *Public Debt and r − g at Risk*,
+IMF WP/20/137 (2020). Commande de l'auteur (16/10). **Aucune hypothèse écrite avant lecture** : la lecture vient d'une
+objection reçue, non d'un relevé ; elle est confrontée aux hypothèses B2 et B4 existantes.
+
+| Candidat | Statut | Motif |
+|---|---|---|
+| Lian, Presbitero et Wiriadinata, IMF WP/20/137, 2020 | **écarté : non lu** | PDF du FMI et texte intégral de l'eLibrary refusés aux scripts (« Access Denied », 403) ; eLibrary rendue par le navigateur : résumé et figures seulement ; lecteur PDF du navigateur sans texte. Résumé lu (RePEc). **Point ouvert nommé** : PDF à télécharger par l'auteur, pour lire le texte et la définition de r. |
+| Wiriadinata et Presbitero, *VoxEU*, 5 août 2020 | **lu** | chronique des auteurs sur le même document ; fiche `wiriadinata-presbitero-2020-voxeu.md`, 11 extraits. Texte archivé dans `07_RECHERCHE\confrontation_dette\` (SHA-256 `f3d65f1f…b7c2f1`) ; transcription contrôlée contre la page servie (même empreinte des deux côtés après normalisation des espaces). |
+
+**Contrôle** : `verifier_extraits.py` sur `07_RECHERCHE\confrontation_dette\` : 102 extraits retrouvés (les 11 nouveaux
+compris), 102 altérés rejetés en mode `--temoin` ; les 15 « source introuvable » sont les fiches du premier tour, dont
+les textes sont rangés ailleurs (inchangé).
+
+**Ce qu'il change** : la page tenait déjà, avec Clavères, qu'une dette plus élevée va de pair avec un écart plus élevé ;
+la chronique ajoute la durée des épisodes favorables, la probabilité de leur retournement et la queue de distribution
+(neuvième décile de 0 à 2 points quand la dette passe de 40 à 120 % du PIB, médiane +0,8). Bloc « Mis en danger par »
+complété (FR et EN), « que le budget ne commande pas » nuancé en « pas directement » dans « Ce qui le rend fragile »,
+« six textes » → « sept » dans « Non établi », date de vérification du bloc au 16/10/2026.

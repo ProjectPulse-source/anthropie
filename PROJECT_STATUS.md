@@ -52,6 +52,19 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-16 — « Peut-elle baisser » : écart taux-croissance et niveau de dette (FMI) dans la confrontation à la recherche
+
+Suite à la réponse du secrétariat du European Fiscal Board (VAGUE1-DETTE, 06/10 : r − g « n'est pas exogène », renvoi à
+IMF WP/20/137). Lu en entier : la chronique des auteurs (Wiriadinata et Presbitero, *VoxEU*, 5 août 2020) ; le document de
+travail lui-même est refusé aux scripts et illisible au navigateur, non lu, déclaré tel dans la référence (point ouvert :
+PDF à télécharger par l'auteur). FR et EN : « Mis en danger par » complété après Clavères (durée des épisodes d'écart
+négatif, probabilité de retournement, neuvième décile, réserves : associations, panels sans la France isolée, dette en
+devises, taux non précisé) ; « que le budget ne commande pas » → « pas directement » ; « six » → « sept textes » ;
+`verifie` au 16/10. Fiche `wiriadinata-presbitero-2020-voxeu.md`, journal de recherche § 9, texte archivé
+(`07_RECHERCHE\confrontation_dette\`). Contrôles : extraits 102/102 (témoin 102 rejetés), `check-all --ci` 0, build 0,
+audit des liens 0 critique, relecture du texte servi FR et EN (3 tournures reprises), instantanés refaits. Contre-expertise
+du bloc : à décider.
+
 ### 2026-10-13 — « Langue » : chronique de Franck Ramus citée dans la confrontation à la recherche (#ecrans)
 
 Suite à la réponse de Ramus au message RADAR-LANGUE. Paragraphe ajouté après « Aucun de ces travaux n'établit… » : accord sur la chronologie (la baisse précède le smartphone), écart documenté sans être tranché (Ramus voit l'usage du numérique baisser de 2022 à 2025 ; pour le loisir déclaré, la page le tient pour indéterminé à cause des non-réponses ; indicateurs non identifiés comme identiques). Référence dans « D'où viennent ces chiffres », ligne Recherche, comme analyse externe. Pas de page anglaise. Chronique lue sur PDF archivé ; deux avis externes arbitrés : `D:\PRO\06_PROMOTION\RECHERCHE_LYCEES_LECTURE_2026-10-09\ARBITRAGE_RAMUS_2026-10-13.md`. Build 0, `check-all --ci` 0, `audit-liens-build` 0, relecture du texte servi et instantané refait. Rendu 390 px non vérifié (paragraphe simple).
