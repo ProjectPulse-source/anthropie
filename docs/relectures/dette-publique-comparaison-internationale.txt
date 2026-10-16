@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /dette-publique-comparaison-internationale/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /dette-publique-comparaison-internationale/, build de 67c7165 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Dette publique : pourquoi 100 % du PIB ne pèse pas partout de la même façon
 À dette presque égale, la Hongrie consacre 8,9 % de ses recettes publiques aux intérêts, la Slovénie 2,7 %.
@@ -6,7 +6,7 @@ Le stock ne suffit donc pas à mesurer ce que pèse une dette publique : il faut
 Dossier dette publique
 Données · Eurostat 2025
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
-Mise à jour : 11 octobre 2026 Les 27 pays de l'Union européenne, données principales 2025 ; hors d'Europe, le millésime est indiqué pays par pays.
+Mise à jour : 15 octobre 2026 Les 27 pays de l'Union européenne, données principales 2025 ; hors d'Europe, le millésime est indiqué pays par pays.
 Télécharger : CSV · JSON · méthode
 Même dette, charge différente
 Stock de départ (dette de fin 2024 / PIB 2025) et charge (intérêts / recettes), 2025.
@@ -33,7 +33,7 @@ Ce test ne dit rien du poids collectif des pays qui paient le plus cher.
 La France : deux lectures d’une même charge
 Selon la mesure, la France paraît mieux ou moins bien placée.
 En 2025, les intérêts de sa dette représentent 2,23 % du PIB et 4,3 % des recettes publiques.
-Rapportés aux recettes, ils sont plus faibles que ceux de six pays pourtant moins endettés (Roumanie, Pologne, Hongrie, Portugal, Espagne, Belgique) ; rapportés au PIB, ils placent la France au septième rang de l’Union, et seuls quatre pays moins endettés la dépassent (Roumanie, Pologne, Hongrie, Espagne).
+Rapportés aux recettes, ils sont plus faibles que ceux de six pays pourtant moins endettés (Roumanie, Pologne, Hongrie, Portugal, Espagne, Belgique) ; rapportés au PIB, ils placent la France au septième rang de l’Union, à égalité avec la Belgique, et seuls quatre pays moins endettés la dépassent (Roumanie, Pologne, Hongrie, Espagne).
 L’écart entre les deux lectures tient aux recettes publiques françaises, qui représentent 52,2 % du PIB, la deuxième plus forte de l’Union.
 Changer de dénominateur modifie la position relative de la France, pas le montant des intérêts qu’elle paie.
 Le niveau élevé des recettes réduit mécaniquement le rapport des intérêts aux recettes ; il ne dit, à lui seul, ni s’il serait possible de prélever davantage, ni à quelles dépenses les intérêts se substituent.
@@ -99,9 +99,9 @@ oui
 4,3 %
 Belgique
 oui
-100,3 %
+100,5 %
 2,22 %
-49,0 %
+49,1 %
 4,5 %
 Espagne
 oui
@@ -470,7 +470,7 @@ France (base OCDE)
 —
 Grands émergents (indicatif) : l'Inde consacre 34 % des recettes de son administration centrale aux intérêts, le Brésil 30 % — prix et recettes non séparables sans données harmonisées
 Seules des mesures indicatives existent : la dette selon le FMI, et les intérêts de la seule administration centrale selon la Banque mondiale, toujours pris la même année.
-L’Inde consacre 34 % des recettes de son administration centrale aux intérêts, le Brésil 30 %, l’Afrique du Sud 18 %, pour des dettes de 85 %, 87 % et 76 % du PIB selon le FMI, respectivement en 2022, 2024 et 2024, dernières années publiées par la Banque mondiale.
+L’Inde consacre 34 % des recettes de son administration centrale aux intérêts, le Brésil 30 %, l’Afrique du Sud 18 %, pour des dettes de 84 %, 87 % et 76 % du PIB selon le FMI, respectivement en 2022, 2024 et 2024, dernières années publiées par la Banque mondiale.
 Une part de l’écart tient au prix payé, une autre à la faiblesse relative des recettes : sans données harmonisées, on ne peut pas les séparer.
 Grands émergents — FMI et Banque mondiale (indicatif : périmètres et définitions différents)
 Pays
@@ -484,7 +484,7 @@ Chine
 3,4 %
 dette FMI et intérêts Banque mondiale de la même année ; intérêts de la seule administration centrale
 Inde
-84,6 % (2022)
+84,4 % (2022)
 34,0 %
 dette FMI et intérêts Banque mondiale de la même année ; intérêts de la seule administration centrale
 Brésil
@@ -548,7 +548,7 @@ Questions fréquentes
 La France est-elle plus endettée que les autres pays ?
 Plus que la plupart : fin 2025, sa dette publique atteint 115,6 % du PIB, la troisième de l'Union européenne après la Grèce et l'Italie (Eurostat, dette de Maastricht).
 Mais le niveau de la dette ne dit pas ce qu'elle coûte : en 2025, la France a consacré 4,3 % de ses recettes publiques aux intérêts, moins que six pays pourtant moins endettés (Roumanie, Pologne, Hongrie, Portugal, Espagne, Belgique).
-Rapportés au PIB, ses intérêts (2,23 %) la placent au septième rang, et quatre pays moins endettés seulement la dépassent : ses recettes publiques, la deuxième part du PIB la plus élevée de l'Union, rendent la première mesure plus favorable sans changer le montant payé.
+Rapportés au PIB, ses intérêts (2,23 %) la placent au septième rang, à égalité avec la Belgique, et quatre pays moins endettés seulement la dépassent : ses recettes publiques, la deuxième part du PIB la plus élevée de l'Union, rendent la première mesure plus favorable sans changer le montant payé.
 La dette de la France lui coûte-t-elle plus cher qu'à ses voisins ?
 Pas systématiquement.
 En 2025, son taux implicite — les intérêts de l'année rapportés à la dette de fin 2024 — est de 2,02 %, un peu sous la moyenne simple des pays de la zone euro (2,2 %) : certains pays paient moins, notamment l'Allemagne (1,84 %), d'autres davantage.
@@ -629,7 +629,7 @@ Télécharger en PNG
 SVG
 Citer cette page
 Lalut, Stéphane (2026). « Dette publique : pourquoi 100 % du PIB ne pèse pas partout de la même façon ».
-Données Eurostat, OCDE, FMI et Banque mondiale, relevé du 11 octobre 2026. https://stephane-lalut.com/dette-publique-comparaison-internationale/
+Données Eurostat, OCDE, FMI et Banque mondiale, relevé du 15 octobre 2026. https://stephane-lalut.com/dette-publique-comparaison-internationale/
 Copier la citation
 En trois phrases
 Cette page compare ce que représente une dette publique : son stock, son prix et les recettes qui la servent, puis le poids des emprunts anciens dans ce qu’elle coûte aujourd’hui.

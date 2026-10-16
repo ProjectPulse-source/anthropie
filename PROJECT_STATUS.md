@@ -52,6 +52,20 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-16 — Relectures ciblées du dossier dette ; rang de la France à la précision affichée
+
+Issues « Relecture ciblée » (n° 10, 11, 14, 15) : phrases changées par la mise à jour Eurostat du 15/10, relues sur le
+texte servi, FR et EN. « Pourquoi la dette augmente » : dates de relevé seules. Comparaison internationale : un défaut
+trouvé — la France passait du septième au huitième rang des intérêts rapportés au PIB parce que la Belgique la dépassait
+de 0,0007 point (2,2285 % contre 2,2278 %), les deux affichées 2,23 %. `update_dette_monde.py` classe désormais à la
+précision affichée et dit l'égalité au contact du rang (jeton `fr_egal_ipib` : « , à égalité avec la Belgique »,
+vide sinon) : « septième rang de l'Union, à égalité avec la Belgique, et seuls quatre pays moins endettés la dépassent ».
+Données versionnées modifiées sur les cinq seules clés d'affichage concernées (la régénération locale n'apportait sinon
+que du bruit d'arrondi et des PNG réécrits). Autres rangs du générateur (charge, recettes, taux implicite, dette) : aucune
+égalité à la précision affichée au 16/10. Instantanés refaits pour les quatre pages ; `check-relecture --strict` 0,
+`check-all --ci` 0, build 0, `audit-liens-build` 0. Issues n° 12 et 13 (« Peut-elle baisser ») : déjà résolues par
+l'instantané de `e9f46f0`.
+
 ### 2026-10-16 — Empreinte carbone : édition 2025 adoptée (Insee Première n° 2130), après refus du workflow
 
 Le workflow `maj-sources.yml` (run 38896536806) a refusé l'édition nouvelle : la pièce avait changé de **forme**, non de

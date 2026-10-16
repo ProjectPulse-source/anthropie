@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /en/public-debt-international-comparison/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /en/public-debt-international-comparison/, build de 67c7165 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Public debt: why 100% of GDP does not carry the same burden everywhere
 At almost equal debt levels, Hungary devotes 8.9% of its public revenue to interest; Slovenia, 2.7%.
@@ -6,7 +6,7 @@ The stock alone therefore cannot measure what a public debt weighs: one must als
 Public debt dossier
 Data · Eurostat 2025
 ↓ Charts, data and citations to reuseReuse this page
-Updated: 11 October 2026 The 27 countries of the European Union, main data 2025; outside Europe, the vintage is given country by country.
+Updated: 15 October 2026 The 27 countries of the European Union, main data 2025; outside Europe, the vintage is given country by country.
 Download: CSV · JSON · method
 The debt-to-GDP ratio is one of the most widely quoted figures in public-finance comparisons, and on its own it does not say what a debt costs.
 This page sets France alongside the other members of the European Union and a few economies beyond Europe, and asks what the ratio leaves out.
@@ -35,7 +35,7 @@ This test says nothing about the collective weight of the countries that pay the
 France: two readings of the same burden
 Depending on the measure, France looks better or worse placed.
 In 2025, interest on its debt amounts to 2.23% of GDP and 4.3% of public revenue.
-Relative to revenue, it is lower than in six countries that are nonetheless less indebted (Romania, Poland, Hungary, Portugal, Spain, Belgium); relative to GDP, it puts France in seventh place in the Union, and only four less indebted countries rank above it (Romania, Poland, Hungary, Spain).
+Relative to revenue, it is lower than in six countries that are nonetheless less indebted (Romania, Poland, Hungary, Portugal, Spain, Belgium); relative to GDP, it puts France in seventh place in the Union, tied with Belgium, and only four less indebted countries rank above it (Romania, Poland, Hungary, Spain).
 The gap between the two readings comes from French public revenue, which amounts to 52.2% of GDP, the second highest share in the Union.
 Changing the denominator changes France’s relative position, not the amount of interest it pays.
 High revenue mechanically lowers the ratio of interest to revenue; on its own, it says neither whether more could be levied nor which spending the interest displaces.
@@ -101,9 +101,9 @@ yes
 4.3%
 Belgium
 yes
-100.3%
+100.5%
 2.22%
-49.0%
+49.1%
 4.5%
 Spain
 yes
@@ -472,7 +472,7 @@ France (OECD basis)
 —
 Major emerging economies (indicative): India devotes 34% of its central government revenue to interest, Brazil 30% — average cost and weak revenue cannot be separated without harmonised data
 Only indicative measures exist: debt according to the IMF, and central-government interest payments only according to the World Bank, always taken in the same year.
-India devotes 34% of its central government revenue to interest, Brazil 30%, South Africa 18%, for debts of 85%, 87% and 76% of GDP according to the IMF, respectively in 2022, 2024 and 2024, the latest years published by the World Bank.
+India devotes 34% of its central government revenue to interest, Brazil 30%, South Africa 18%, for debts of 84%, 87% and 76% of GDP according to the IMF, respectively in 2022, 2024 and 2024, the latest years published by the World Bank.
 Part of the gap comes from the average interest cost, another from the relative weakness of revenue: without harmonised data, the two cannot be separated.
 Large emerging economies — IMF and World Bank (indicative: different scopes and definitions)
 Country
@@ -486,7 +486,7 @@ China
 3.4%
 IMF debt and World Bank interest for the same year; central-government interest payments only
 India
-84.6% (2022)
+84.4% (2022)
 34.0%
 IMF debt and World Bank interest for the same year; central-government interest payments only
 Brazil
@@ -552,7 +552,7 @@ Frequently asked questions
 Is France more indebted than other countries?
 More than most: at the end of 2025, its public debt stands at 115.6% of GDP, the third highest in the European Union after Greece and Italy (Eurostat, Maastricht debt).
 But the level of the debt does not say what it costs: in 2025, France devoted 4.3% of its public revenue to interest, less than six countries that are nonetheless less indebted (Romania, Poland, Hungary, Portugal, Spain, Belgium).
-Relative to GDP, its interest (2.23%) puts it in seventh place, and only four less indebted countries rank above it: its public revenue, the second highest in the Union, makes the first measure more favourable without changing the amount paid.
+Relative to GDP, its interest (2.23%) puts it in seventh place, tied with Belgium, and only four less indebted countries rank above it: its public revenue, the second highest in the Union, makes the first measure more favourable without changing the amount paid.
 Does France pay more to service its debt than its neighbours?
 Not systematically.
 In 2025, its implicit interest rate — the year's interest divided by debt at the end of 2024 — is 2.02%, slightly below the simple average of euro-area countries (2.2%): some countries pay less, notably Germany (1.84%), others more.
@@ -623,7 +623,7 @@ SVG
 Cite this page
 Lalut, Stéphane (2026).
 “Public debt: why 100% of GDP does not carry the same burden everywhere”.
-Eurostat, OECD, IMF and World Bank data, retrieved 11 October 2026. https://stephane-lalut.com/en/public-debt-international-comparison/
+Eurostat, OECD, IMF and World Bank data, retrieved 15 October 2026. https://stephane-lalut.com/en/public-debt-international-comparison/
 Copy citation
 In three sentences
 This page compares what a public debt represents: its stock, its average interest cost and the revenue that services it, then the weight of old borrowing in what it costs today.

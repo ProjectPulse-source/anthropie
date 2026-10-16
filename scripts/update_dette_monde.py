@@ -1177,6 +1177,9 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts) -> tuple
         # M1 : les deux dénominateurs de la charge française, et ce que change le dénominateur.
         A["fr_ipib"] = pc(ipib["FR"], 2)
         A["fr_rang_ipib"] = L["ordinal"](rang_ipib)
+        # Égalité à la précision affichée : dite au contact du rang (« , à égalité avec la Belgique »), vide sinon.
+        A["fr_egal_ipib"] = ((", à égalité avec " if L is LOC["fr"] else ", tied with ")
+                             + L["liste"]([article[c] for c in egaux_ipib])) if egaux_ipib else ""
         A["fr_rang_charge"] = L["ordinal"](rang_charge)
         A["n_plus_ipib"] = str(len(plus_ipib))
         A["n_plus_ipib_mots"] = L["mots"](len(plus_ipib))
@@ -1196,9 +1199,14 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts) -> tuple
 
     # Calculs de la phase B, communs aux deux langues.
     ipib = {x["code"]: x["charge"] * x["recettes"] / 100 for x in rows}
-    rang_ipib = sorted(ipib, key=lambda c: -ipib[c]).index("FR") + 1
+    # Rang et dépassements à la précision AFFICHÉE (deux décimales) : un écart que le lecteur ne voit pas ne classe pas.
+    # Cas fondateur, données 2025 du 15/10/2026 : Belgique 2,2285 % contre France 2,2278 %, toutes deux affichées 2,23 %.
+    ipib_aff = {c: round(v, 2) for c, v in ipib.items()}
+    rang_ipib = 1 + sum(1 for c in ipib_aff if ipib_aff[c] > ipib_aff["FR"])
+    egaux_ipib = [x["code"] for x in rows if x["code"] != "FR" and ipib_aff[x["code"]] == ipib_aff["FR"]]
     rang_charge = sorted(rows, key=lambda x: -x["charge"]).index(F) + 1
-    plus_ipib = sorted((x for x in rows if x["stock"] < F["stock"] and ipib[x["code"]] > ipib["FR"]), key=lambda x: x["stock"])
+    plus_ipib = sorted((x for x in rows if x["stock"] < F["stock"] and ipib_aff[x["code"]] > ipib_aff["FR"]),
+                       key=lambda x: x["stock"])
     rang_rec = sorted(rows, key=lambda x: -x["recettes"]).index(F) + 1
     f_stock, f_prix, f_rec = hi["stock"] / lo["stock"], hi["prix"] / lo["prix"], lo["recettes"] / hi["recettes"]
     euro_prix = sorted((x for x in rows if x["euro"]), key=lambda x: x["prix"])

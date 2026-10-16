@@ -1,4 +1,4 @@
-# relu le 2026-10-12 ; texte servi de /pourquoi-la-dette-publique-augmente/, build de 157cf95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-16 ; texte servi de /pourquoi-la-dette-publique-augmente/, build de 67c7165 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Pourquoi la dette publique augmente-t-elle ?
 Entre 1995 et 2025, la dette publique française est passée de 57,8 % à 115,6 % du PIB : elle a doublé en part de la richesse produite.
@@ -9,7 +9,7 @@ Ce bilan cache deux périodes opposées, et il dit par où la dette a augmenté,
 Dossier dette publique
 Données · Eurostat 2025
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
-Mise à jour : 11 octobre 2026 France, administrations publiques, séries Eurostat de 1995 à 2025.
+Mise à jour : 13 octobre 2026 France, administrations publiques, séries Eurostat de 1995 à 2025.
 Télécharger : CSV · JSON · méthode
 D’où vient la hausse
 Décomposition cumulée de la variation du ratio dette/PIB, France, 1995-2025, en points de PIB (Eurostat).
@@ -216,7 +216,7 @@ Télécharger en PNG
 SVG
 Citer cette page
 Lalut, Stéphane (2026). « Pourquoi la dette publique augmente-t-elle ? ».
-Données Eurostat, relevé du 11 octobre 2026. https://stephane-lalut.com/pourquoi-la-dette-publique-augmente/
+Données Eurostat, relevé du 13 octobre 2026. https://stephane-lalut.com/pourquoi-la-dette-publique-augmente/
 Copier la citation
 En trois phrases
 Cette page décompose la variation du ratio dette/PIB français, de 1995 à 2025, en effet des intérêts, effet de la croissance nominale, solde primaire et ajustements flux-stock.
