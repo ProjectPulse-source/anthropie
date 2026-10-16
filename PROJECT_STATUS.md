@@ -52,6 +52,14 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-17 — Page tabula rasa révisée (avis entrant) et mise au standard des ressources
+
+Avis `ENTRANTE-2026-10-17-TABULA-RASA` accepté (arbitrage `D:\PRO\06_PROMOTION\PISTE_ODYSSEE_NOTIONS_2026-10-17\ARBITRAGE_AVIS_PAGE_TABULA_RASA.md`) :
+Coste 1700 préparée auprès de Locke (le mot de 1700 non établi, seule l'édition de 1735 relue), généalogie Aristote →
+latin médiéval, nuance Leibniz, transition politique retirée. Standard des ressources : chapô, titres-questions à
+réponse (ancres inchangées), résultat en une phrase, replis, limites, `appel-livre`, FAQ visible, sources ;
+`ressource.refonte` et instantané de relecture. Contrôles à 0 sur le build de la CI.
+
 ### 2026-10-17 — Page pilote « La tabula rasa : Locke a-t-il vraiment parlé d'une page blanche ? » (commitée, non publiée)
 
 Arbitrage `PRO-20261017-003900` (option B, une seule page, aucune série ; `D:\PRO\06_PROMOTION\PISTE_ODYSSEE_NOTIONS_2026-10-17\`).
