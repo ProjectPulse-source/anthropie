@@ -501,6 +501,9 @@ Dossier : `D:\PRO\06_PROMOTION\GEO_FRAICHEUR_2026-10-16\` (état des lieux, deux
   ticket unique de `maj-sources.yml`.
 - Écriture d'un script qui génère du code : ⚠ un `\b` ou un `\n` passé dans une chaîne Python devient un caractère de
   contrôle (incident du 16/10/2026, une expression qui signalait tout, témoin compris) ; éditer le fichier directement.
+- **Un contrôle du site construit s'essaie sur le build de la CI** : `hugo --minify` retire les guillemets des
+  attributs (`<p class=page-header__date>`). Essayé sur un build non minifié, `check-dates-build.py` a arrêté le
+  déploiement du 16/10/2026 (0 page trouvée) ; ses motifs acceptent depuis les deux formes.
 
 ## Règle de surface — « la présence vient du dépôt » (actée 2026-08-11)
 

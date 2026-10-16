@@ -30,6 +30,9 @@ if hasattr(sys.stdout, "reconfigure"):
     sys.stderr.reconfigure(encoding="utf-8")
 
 HOTE = "https://stephane-lalut.com"
+# Le build de la CI est minifié (`hugo --minify`) : les guillemets des attributs disparaissent. Tout motif HTML accepte
+# les deux formes (incident du 16/10/2026 : contrôle essayé sur un build non minifié, déploiement arrêté en CI).
+LDJSON = r'<script type="?application/ld\+json"?>(.*?)</script>'
 
 
 def sitemap(build: Path) -> dict:
@@ -42,7 +45,7 @@ def sitemap(build: Path) -> dict:
 
 
 def noeud_page(html: str):
-    for bloc in re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, re.S):
+    for bloc in re.findall(LDJSON, html, re.S):
         try:
             d = json.loads(bloc)
         except ValueError:
@@ -64,7 +67,7 @@ def verifier(build: Path, muter=None) -> tuple:
             continue
         vues += 1
         url, mod, pub = n.get("url"), n.get("dateModified"), n.get("datePublished")
-        m = re.search(r'<p class="page-header__date">(Page [^<]*?)<time datetime="(\d{4}-\d{2}-\d{2})"', html)
+        m = re.search(r'<p class="?page-header__date"?>(Page [^<]*?)<time datetime="?(\d{4}-\d{2}-\d{2})', html)
         if not m:
             fautes.append((url, "balisage de page sans ligne de date visible"))
             continue
@@ -109,11 +112,11 @@ def blocs_sans_periode(build: Path, muter=None) -> tuple:
             h = muter(f, h)
         url = "/" + f.parent.relative_to(build).as_posix() + "/"
         blocs = []
-        m = re.search(r'<p class="page-header__lede">(.*?)</p>', h, re.S)
+        m = re.search(r'<p class="?page-header__lede"?>(.*?)</p>', h, re.S)
         if m:
             blocs.append(("chapô", texte(m.group(1))))
-        blocs += [("résultat", texte(x)) for x in re.findall(r'<div class="resultat-phrase"[^>]*>(.*?)</div>', h, re.S)]
-        for b in re.findall(r'<script type="application/ld\+json">(.*?)</script>', h, re.S):
+        blocs += [("résultat", texte(x)) for x in re.findall(r'<div class="?resultat-phrase"?[^>]*>(.*?)</div>', h, re.S)]
+        for b in re.findall(LDJSON, h, re.S):
             try:
                 d = json.loads(b)
             except ValueError:
@@ -135,9 +138,9 @@ def main() -> int:
         cible = {"fait": False}
 
         def muter(f, html):
-            if not cible["fait"] and 'class="page-header__date"' in html:
+            if not cible["fait"] and re.search(r'class="?page-header__date', html):
                 cible["fait"] = True
-                return re.sub(r'(<p class="page-header__date">[^<]*<time datetime=")\d{4}', r"\g<1>1999", html, count=1)
+                return re.sub(r'(<p class="?page-header__date"?>[^<]*<time datetime="?)\d{4}', r"\g<1>1999", html, count=1)
             return html
         _, fautes = verifier(build, muter)
         ok1 = cible["fait"] and fautes
@@ -145,9 +148,9 @@ def main() -> int:
         cible2 = {"fait": False}
 
         def muter2(f, html_):
-            if not cible2["fait"] and 'class="page-header__lede"' in html_:
+            if not cible2["fait"] and re.search(r'class="?page-header__lede', html_):
                 cible2["fait"] = True
-                return re.sub(r'<p class="page-header__lede">.*?</p>',
+                return re.sub(r'<p class="?page-header__lede"?>.*?</p>',
                               '<p class="page-header__lede">La charge atteint 8,9 % des recettes.</p>', html_, count=1, flags=re.S)
             return html_
         _, f2 = blocs_sans_periode(build, muter2)
