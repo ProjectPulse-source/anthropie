@@ -64,6 +64,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 import langue_generee as lg  # noqa: E402  (scripts/langue_generee.py)
+import lecture_tableur as lt  # noqa: E402  -- forme des cellules (organe commun)
 import pied_figure  # noqa: E402  (scripts/pied_figure.py)
 
 SRCDIR = ROOT / "scripts" / "sources_mesurer"
@@ -151,7 +152,7 @@ def lire_insee(b: bytes) -> dict:
     wb = openpyxl.load_workbook(io.BytesIO(b), data_only=True)
     f2 = [list(r) for r in wb["Figure 2"].iter_rows(values_only=True) if any(c is not None for c in r)]
     titre = f2[0][0]
-    entete = list(f2[1][1:8])
+    entete = lt.entetes(f2[1])[1:8]
     if entete != CATS + ["Ensemble"]:
         raise Arret("figure 2 : en-tete inattendue %s" % entete)
     eff, i = {}, 3
@@ -174,8 +175,10 @@ def lire_insee(b: bytes) -> dict:
     f8 = [[c for c in r if c is not None] for r in wb["Figure 8"].iter_rows(values_only=True)]
     f8d = {}
     for r in f8:
-        if r and isinstance(r[0], str) and len(r) >= 3 and isinstance(r[1], (int, float)):
-            f8d[nb(r[0])] = {"2024": r[1], "2021": r[2]}
+        if r and isinstance(r[0], str) and len(r) >= 3 and lt.valeur(r[1]) is not None:
+            if lt.valeur(r[2]) is None:
+                raise Arret("figure 8, %s : valeur 2021 manquante ou illisible (%r)" % (nb(r[0]), r[2]))
+            f8d[nb(r[0])] = {"2024": lt.valeur(r[1]), "2021": lt.valeur(r[2])}
     # Figure 1 (phase B) : moyennes annuelles 2012-2025 des deux mesures, en millions
     f1 = [[c for c in r if c is not None] for r in wb["Figure 1"].iter_rows(values_only=True)]
     annees = next(r[1:] for r in f1 if r and r[0] == "Catégorie")

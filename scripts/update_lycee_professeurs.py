@@ -43,6 +43,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import pied_figure  # pied commun des figures détaillées (scripts/pied_figure.py)
+import langue_generee as lg  # comparaisons publiées à la précision affichée (scripts/langue_generee.py)
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "scripts" / "sources_lycee_professeurs"
@@ -345,7 +346,7 @@ def gardes(c):
     g(org4 / h4gt["total"] > 0.5, "« plus de la moitié des heures perdues » : %.2f" % (org4 / h4gt["total"]))
     g(c["org3"] > c["h3"][GT]["individuelles"], "« même sens en 2023-2024 » (chiffres à l'unité)")
     g(abs(c["org4_col"] - c["h4"][COL]["individuelles"]) <= 0.5, "« au collège, les deux s'équilibrent » : %.1f / %.1f" % (c["org4_col"], c["h4"][COL]["individuelles"]))
-    g(h4gt["fermeture"] > c["h4"][COL]["fermeture"] and h4gt["fermeture"] > c["h4"][LP]["fermeture"], "« le lycée GT ferme davantage »")
+    g(lg.depasse(h4gt["fermeture"], c["h4"][COL]["fermeture"]) and lg.depasse(h4gt["fermeture"], c["h4"][LP]["fermeture"]), "« le lycée GT ferme davantage »")
     g(abs(h4gt["total"] - 10) <= 0.5, "énoncé « 10 % des heures dans les lycées » : exact à 0,5 point")
     f = c["ferm"]
     g(f["part_examens"] / f["part_total"] >= 0.85 and f["jours_examens"] / f["jours_total"] >= 0.85,
@@ -394,7 +395,7 @@ def gardes(c):
     g(min(c["ed_depuis20"]) > c["ed_max_avant"], "« depuis 2020, au-dessus de tout niveau de 1994-2015 »")
     g(min(c["ed_depuis20"]) >= 30, "« plus de 30 élèves depuis 2020 »")
     g(max(c["ed_depuis20"]) - min(c["ed_depuis20"]) <= 0.4, "« stable depuis 2020 »")
-    g(c["tr"]["2025"]["div_35"] < c["tr"]["2015"]["div_35"], "« les divisions de 35 et plus sont moins fréquentes qu'en 2015 »")
+    g(lg.depasse(c["tr"]["2015"]["div_35"], c["tr"]["2025"]["div_35"]), "« les divisions de 35 et plus sont moins fréquentes qu'en 2015 »")
     g(c["tr"]["2025"]["div_30"] > c["tr"]["2015"]["div_30"] + 3, "« les divisions de 30 et plus sont plus fréquentes qu'en 2015 »")
     g(62 <= c["tr"]["2025"]["div_30"] <= 71, "« deux divisions sur trois » : %.1f" % c["tr"]["2025"]["div_30"])
     d3034 = c["tr"]["2025"]["div_30"] - c["tr"]["2025"]["div_35"]

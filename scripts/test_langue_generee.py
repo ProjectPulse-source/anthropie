@@ -104,6 +104,33 @@ class Enumere(unittest.TestCase):
             L.enumere([])
 
 
+class RangEtComparaison(unittest.TestCase):
+    """Cas fondateur du 16/10/2026 : 2,2285 et 2,2278 s'affichent « 2,23 » -- ni rang distinct, ni « dépasse »."""
+    def test_egalite_a_l_affichage(self):
+        v = {"IT": 3.85, "BE": 2.2285, "FR": 2.2278, "PT": 1.93}
+        self.assertEqual(L.rang(v, "FR", 2), (2, ["BE"]))
+        self.assertFalse(L.depasse(2.2285, 2.2278, 2))
+        self.assertTrue(L.depasse(2.2285, 2.2278, 4))
+
+    def test_sens_croissant_et_sans_egalite(self):
+        v = {"a": 1.04, "b": 2.0, "c": 3.0}
+        self.assertEqual(L.rang(v, "c", 1), (1, []))
+        self.assertEqual(L.rang(v, "a", 1, decroissant=False), (1, []))
+        self.assertEqual(L.rang(v, "c", 0, decroissant=False), (3, []))
+
+    def test_positions_ex_aequo(self):
+        self.assertEqual(L.positions([1.42, 1.38, 1.9], 1, maxi=False), [0, 1])     # 1,4 et 1,4
+        self.assertEqual(L.position_unique([1.2, 1.9, 1.5], 1), 1)
+        with self.assertRaises(ValueError):
+            L.position_unique([1.42, 1.38, 1.0], 1)
+
+    def test_absent(self):
+        with self.assertRaises(ValueError):
+            L.rang({"a": 1.0}, "z")
+        with self.assertRaises(ValueError):
+            L.depasse(None, 1.0)
+
+
 def lancer() -> unittest.TestResult:
     suite = unittest.defaultTestLoader.loadTestsFromModule(sys.modules[__name__])
     return unittest.TextTestRunner(stream=open("nul" if sys.platform == "win32" else "/dev/null", "w"), verbosity=0).run(suite)
@@ -115,6 +142,14 @@ def main() -> int:
         L.point = lambda v, dec=1, lang="fr": "points" if lang == "fr" and abs(v) >= 1 else vrai(v, dec, lang)
         r = lancer()
         L.point = vrai
+        # Second témoin (16/10/2026) : un rang calculé sur la valeur BRUTE doit faire échouer un test.
+        vraie = L.affichee
+        L.affichee = lambda v, dec=1: L._val(v)
+        r2 = lancer()
+        L.affichee = vraie
+        if not (r2.failures or r2.errors):
+            print("Temoin (rang sur valeur brute) : AUCUN test en echec.")
+            return 1
         mord = bool(r.failures or r.errors)
         print("Temoin (accord de point casse) : %s." % ("%d test(s) en echec, le test mord" % len(r.failures + r.errors) if mord else "AUCUN test en echec"))
         return 0 if mord else 1

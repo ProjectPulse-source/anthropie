@@ -554,7 +554,7 @@ def affichage(a0, d_depart, rows, total, per, dr):
              "deficits_primaires": nb(total["contribution_solde_primaire"]), "flux_stock": sg(total["flux_stock"]),
              "part_deficits": nb(100 * total["contribution_solde_primaire"] / total["variation"], 0)}
         for (a, b, lib), t in zip(PERIODES, per):
-            k = "p%d" % (PERIODES.index((a, b, lib)) + 1)
+            k = "p%d" % (PERIODES.index((a, b, lib)) + 1)  # brut-ok: numero d'une periode dans une liste fixe
             A[k + "_lib"] = lib if b else lib % last["annee"]
             A[k + "_hausse"] = sg(t["variation"])
             A[k + "_taux_croissance"] = sg(t["effet_taux_croissance"])

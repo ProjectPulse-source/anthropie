@@ -1839,7 +1839,7 @@ def main() -> int:
     faire_png = "--png" in args
     legacy_path = None
     if "--legacy" in args:
-        legacy_path = Path(args[args.index("--legacy") + 1])
+        legacy_path = Path(args[args.index("--legacy") + 1])  # brut-ok: argument de ligne de commande
 
     print("fetch INSEE SDMX ...")
     insee = parse_insee(fetch(INSEE_URL))

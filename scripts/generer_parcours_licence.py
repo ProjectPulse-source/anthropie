@@ -44,6 +44,10 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import lecture_tableur as lt  # noqa: E402  -- forme des cellules (organe commun)
+import langue_generee as lg  # noqa: E402  -- comparaisons publiées à la précision affichée (organe commun)
+
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "scripts" / "sources_enseignants"
 OUT_DATA = ROOT / "data" / "parcours_licence.json"
@@ -149,7 +153,7 @@ def lire_cohorte(annee: int, sums: dict[str, str]) -> dict:
         wb = openpyxl.load_workbook(p, data_only=True)
     if feuille not in wb.sheetnames:
         fail("%s : feuille %r absente" % (fichier, feuille))
-    rows = list(wb[feuille].iter_rows(values_only=True))
+    rows = [lt.ligne(r) for r in wb[feuille].iter_rows(values_only=True)]
     entetes = next((list(r) for r in rows if r and r[0] == "Discipline en L1"), None)
     if entetes is None:
         fail("%s : ligne d'en-tetes introuvable" % fichier)
@@ -162,12 +166,16 @@ def lire_cohorte(annee: int, sums: dict[str, str]) -> dict:
     i_strict = entetes.index(STRICT) if STRICT in entetes else None
 
     def ligne(r) -> dict:
-        d = {k: r[i] for k, i in ix.items()}
-        if any(not isinstance(v, (int, float)) for v in d.values()):
+        d = {k: lt.nombre(r[i]) for k, i in ix.items()}
+        if any(v is None for v in d.values()):
             fail("%d, %s : valeur manquante dans les effectifs" % (annee, r[2]))   # manquant n'est pas zéro
         d = {k: int(v) for k, v in d.items()}
-        d["taux_publies"] = {k: float(r[i]) for k, i in it.items()}
-        d["redoublement_strict"] = int(r[i_strict]) if i_strict is not None and isinstance(r[i_strict], (int, float)) else None
+        taux = {k: lt.nombre(r[i]) for k, i in it.items()}
+        if any(v is None for v in taux.values()):
+            fail("%d, %s : taux publie manquant" % (annee, r[2]))
+        d["taux_publies"] = taux
+        strict = lt.nombre(r[i_strict]) if i_strict is not None else None
+        d["redoublement_strict"] = int(strict) if strict is not None else None    # colonne absente des anciennes cohortes
         # témoin 1 : le taux publié se retrouve depuis les effectifs
         for k in ISSUES:
             if abs(100 * d[k] / d["inscrits"] - d["taux_publies"][k]) > 0.0501:
@@ -292,12 +300,12 @@ def affichage(cohortes: dict[int, dict]) -> tuple[dict, list[str]]:
         ("parmi les non-passants, la réorientation est plus fréquente pour l'origine très favorisée (plus de cinq points), "
          "le redoublement pour la défavorisée, sur chaque cohorte",
          chaque(lambda og, i: i["tf"]["reorientation_np"] - i["d"]["reorientation_np"] > 5
-                and i["d"]["redoublement_np"] > i["tf"]["redoublement_np"])),
+                and lg.depasse(i["d"]["redoublement_np"], i["tf"]["redoublement_np"]))),
         ("le calcul de l'élève (taux arrondis) rejoint le calcul sur effectifs à 0,3 point près",
          all(abs(ind[k][x + "_np_eleve"] - ind[k][x + "_np"]) < 0.3 for k in ind
              for x in ("sortie", "reorientation", "redoublement"))),
         ("recommencer une L1 ailleurs ou dans une autre discipline : plus fréquent pour l'origine défavorisée",
-         "redoublement_autre" in ind["tf"] and ind["d"]["redoublement_autre"] > ind["tf"]["redoublement_autre"]),
+         "redoublement_autre" in ind["tf"] and lg.depasse(ind["d"]["redoublement_autre"], ind["tf"]["redoublement_autre"])),
         # Les deux écarts ne se comparent pas (découpages différents, tableau non croisé : F6) ; seul « forts écarts » est écrit.
         ("« forts écarts » de passage selon la mention (plus de cinquante points entre les deux mentions citées)",
          ecart_mentions > 50),

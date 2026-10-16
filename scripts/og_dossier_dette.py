@@ -31,6 +31,9 @@ import json
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import langue_generee as lg  # noqa: E402  -- comparaisons à la précision affichée (parts à l'unité)
+
 from PIL import Image, ImageDraw, ImageFont
 
 if hasattr(sys.stdout, "reconfigure"):
@@ -395,7 +398,8 @@ def carte_generations() -> None:
         fail("jeu de données absent : %s — lancer scripts/update_dette_generations.py d'abord" % f)
     j = json.loads(f.read_text(encoding="utf-8"))
     A, per = j["affichage"], j["france"]["periodes"][1:]
-    if not (per[0]["part_actifs"] > per[1]["part_actifs"] > per[2]["part_actifs"] and per[2]["part_actifs"] < 15
+    if not (lg.depasse(per[0]["part_actifs"], per[1]["part_actifs"], 0) and lg.depasse(per[1]["part_actifs"], per[2]["part_actifs"], 0)
+            and per[2]["part_actifs"] < 15
             and per[2]["part_desepargne"] > 60):
         fail("carte générations : le contraste annoncé n'est plus vrai dans les données")
     # Titre arrêté par l'auteur le 11/10/2026 (contre-expertise du rendu) : « correspondu », jamais « financé ».

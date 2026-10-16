@@ -40,6 +40,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import pied_figure as PF  # noqa: E402  (pied commun 11 px, versions téléphone ; phase B du volet 5, 11/10/2026)
+import langue_generee as lg  # noqa: E402  -- comparaisons publiées à la précision affichée (organe commun)
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT_DATA = ROOT / "data" / "dette_baisse.json"
@@ -53,7 +54,7 @@ PAGES = [ROOT / "content" / "dette-publique-peut-elle-baisser" / "_index.md", RO
 # Formules interdites dans les deux pages (contre-expertise OPTIMUM-24, Q4) : l'écart de la dernière année est un écart comptable
 # constaté pour une année, jamais un montant d'économies ni un manque à combler.
 INTERDITS = [r"il manque", r"économies? à (réaliser|faire|trouver)", r"manque à combler", r"savings? to be (made|found)",
-             r"shortfall", r"missing", r"charge d'intérêts cumulée"]
+             r"\bshortfall\b", r"\bmissing\b", r"charge d'intérêts cumulée"]
 PAGE_URL = "stephane-lalut.com/dette-publique-peut-elle-baisser/"
 PAGE_URL_EN = "stephane-lalut.com/en/can-public-debt-come-down/"
 
@@ -365,8 +366,8 @@ def affichage(fin, dec, annees, cmp_, europe, cons):
     suff = [r["annee"] for r in annees if r["ecart"] >= 0]
     A["suffisant_n"] = lettres(len(suff)) if len(suff) < len(LETTRES) else str(len(suff))
     stabs = [r["solde_stabilisant"] for r in annees]
-    A["stab_min"] = signe(min(stabs)); A["stab_min_annee"] = str(annees[stabs.index(min(stabs))]["annee"])
-    A["stab_max"] = signe(max(stabs)); A["stab_max_annee"] = str(annees[stabs.index(max(stabs))]["annee"])
+    A["stab_min"] = signe(min(stabs)); A["stab_min_annee"] = str(annees[lg.position_unique(stabs, 1, maxi=False, quoi="solde stabilisant minimal")]["annee"])
+    A["stab_max"] = signe(max(stabs)); A["stab_max_annee"] = str(annees[lg.position_unique(stabs, 1, quoi="solde stabilisant maximal")]["annee"])
     # Section « La dette française est-elle soutenable ? » (#soutenable, 03/10/2026 ; arbitrage ENTRANTE_2026-10-03_Test_5_Questions, point 4)
     creux_ti = min(annees, key=lambda r: r["taux_implicite"])
     A["ti_creux"] = fr(creux_ti["taux_implicite"]); A["ti_creux_annee"] = str(creux_ti["annee"])
@@ -491,8 +492,8 @@ def gardes(fin, dec, annees, cmp_, europe, haut, bas, exc_ans):
         ("première décennie : la dette monte", d1["variation"] > 0),
         ("deuxième décennie : taux-croissance et déficits poussent ensemble, les déficits dominent (plus du double)",
          d2["taux_croissance"] > 0 and d2["deficits_primaires"] > 2 * d2["taux_croissance"]),
-        ("deuxième décennie : la plus forte hausse des trois", d2["variation"] > max(d1["variation"], d3["variation"])),
-        ("les déficits primaires cumulés croissent d'une décennie à l'autre", d1["deficits_primaires"] < d2["deficits_primaires"] < d3["deficits_primaires"]),
+        ("deuxième décennie : la plus forte hausse des trois", lg.depasse(d2["variation"], max(d1["variation"], d3["variation"]))),
+        ("les déficits primaires cumulés croissent d'une décennie à l'autre", lg.depasse(d2["deficits_primaires"], d1["deficits_primaires"]) and lg.depasse(d3["deficits_primaires"], d2["deficits_primaires"])),
         ("la dette monte dans les trois décennies", all(f["variation"] > 0 for f in dec)),
         ("première décennie : le solde primaire cumulé est un excédent", d1["deficits_primaires"] < 0),
         ("deuxième décennie : contient 2008 et 2009 ; dernière décennie : contient 2020 à 2023",
@@ -535,11 +536,11 @@ def gardes(fin, dec, annees, cmp_, europe, haut, bas, exc_ans):
         ("pays comparés : l'effet taux-croissance français n'est pas le plus faible du groupe", fr_c["taux_croissance"] < max(f["taux_croissance"] for f in cmp_)),
         ("pays comparés : hors France, les pays en déficit primaire moyen restent à moins de 5 points de leur niveau de départ",
          all(abs(f["variation"]) < 5 for f in bas if f["pays"] != "FR")),
-        ("pays comparés : tous les autres pays partaient d'une dette plus élevée que la France", all(f["dette_depart"] > fr_c["dette_depart"] for f in cmp_ if f["pays"] != "FR")),
+        ("pays comparés : tous les autres pays partaient d'une dette plus élevée que la France", all(lg.depasse(f["dette_depart"], fr_c["dette_depart"]) for f in cmp_ if f["pays"] != "FR")),
         ("pays comparés : Grèce, Chypre et Portugal sont dans le groupe en excédent (le texte nomme leurs programmes d'assistance)",
          {"EL", "CY", "PT"} == {f["pays"] for f in haut}),
         ("pays comparés : la croissance nominale moyenne des pays en excédent dépasse celle de la France",
-         all(f["croissance_nominale_moyenne"] > fr_c["croissance_nominale_moyenne"] for f in haut)),
+         all(lg.depasse(f["croissance_nominale_moyenne"], fr_c["croissance_nominale_moyenne"]) for f in haut)),
         # --- contre-expertise PRO-20261003-064640
         ("B1 : dans les pays en excédent, le montant de la dette n'a pas diminué alors que le ratio baissait",
          all(f["encours_fin"] >= f["encours_depart"] for f in haut)),
@@ -579,7 +580,7 @@ def gardes(fin, dec, annees, cmp_, europe, haut, bas, exc_ans):
          fr_c["taux_implicite_moyen"] == min(f["taux_implicite_moyen"] for f in cmp_)),
         ("B2 : la croissance en volume moyenne de chaque pays en baisse dépasse celle de la France",
          all(f["croissance_volume_moyenne"] is not None and fr_c["croissance_volume_moyenne"] is not None
-             and f["croissance_volume_moyenne"] > fr_c["croissance_volume_moyenne"] for f in haut)),
+             and lg.depasse(f["croissance_volume_moyenne"], fr_c["croissance_volume_moyenne"]) for f in haut)),
         ("B2 : la Grèce a la dette moyenne la plus élevée du groupe (le texte : « une dette si élevée »)",
          max(cmp_, key=lambda f: f["dette_moyenne"])["pays"] == "EL"),
         ("B2 : écart taux-croissance de la Grèce « à peine plus favorable » que celui de la France (moins d'un point d'écart), et le moins favorable des trois pays en baisse",

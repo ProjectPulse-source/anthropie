@@ -58,6 +58,11 @@ HORS_RESEAU = [
     # autour d'un nombre (signe, accord de « point », lettres). Bloquant : une regression du module ecrirait la faute
     # dans toutes les pages qui l'adoptent, a la prochaine mise a jour des donnees, sans relecture.
     ("langue generee (module commun)", "test_langue_generee.py", []),
+    # Lecture des tableurs et rangs publies (16/10/2026) : une source change la forme d'un tableur (annees en texte),
+    # un rang se decide sur un ecart que le lecteur ne voit pas, une barre oblique inverse mangee tue une garde. Bloquant :
+    # chacun de ces defauts passe en silence, sortie 0, et ne se voit qu'a la mise a jour suivante ou chez le lecteur.
+    ("lecture des tableurs (module commun)", "test_lecture_tableur.py", []),
+    ("lecture, rangs et octets des generateurs", "check-lecture-donnees.py", []),
 ]
 LOCAL_DERIVES = [
     # La CI rend les PNG, mais par une etape NON BLOQUANTE : si l'installation

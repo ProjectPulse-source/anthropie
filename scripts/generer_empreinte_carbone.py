@@ -36,6 +36,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import generer_parcours_licence as gl  # noqa: E402
+import lecture_tableur as lt  # noqa: E402  -- forme des cellules (organe commun)
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "scripts" / "sources_enseignants"
@@ -61,6 +62,16 @@ NOM = {"menages": ("Émissions directes", "des ménages"), "interieure": ("Produ
        "exportee": ("Production en France", "exportée"), "importee": ("Importations", "pour la demande française")}
 
 
+SERIE3 = ("menages", "interieure", "importee", "empreinte")
+
+
+def _n(v, ou: str, quoi: str) -> float:
+    x = lt.nombre(v)
+    if x is None:
+        fail("%s, %s : valeur manquante ou illisible (%r)" % (ou, quoi, v))       # manquant n'est pas zéro
+    return x
+
+
 def lire(sums: dict[str, str]) -> dict:
     import openpyxl
     p = SRC / FICHIER
@@ -81,18 +92,18 @@ def lire(sums: dict[str, str]) -> dict:
     f1 = lignes("Figure 1")
     titre = str(f1[0][0])
     annee = int(titre.strip().split()[-1])
-    if f1[1][:4] != ["Type d'émissions", "Émissions françaises", "Émissions importées", "Empreinte carbone"]:
-        fail("figure 1 : en-tetes changes : %s" % f1[1][:4])
-    par = {str(r[0]): r for r in f1[3:] if isinstance(r[0], str)}
+    if lt.entetes(f1[1])[:4] != ["Type d'émissions", "Émissions françaises", "Émissions importées", "Empreinte carbone"]:
+        fail("figure 1 : en-tetes changes : %s" % lt.entetes(f1[1])[:4])
+    par = {lt.entetes([r[0]])[0]: r for r in f1[3:] if isinstance(r[0], str)}
     manq = [v for v in L1.values() if v not in par]
     if manq:
         fail("figure 1 : lignes absentes ou renommees : %s" % " | ".join(manq))
 
     def val(cle, col):
-        v = par[L1[cle]][col]
-        if not isinstance(v, (int, float)):
-            fail("figure 1, %s : valeur manquante (%r)" % (L1[cle], v))    # « /// » n'est pas zéro
-        return float(v)
+        v = lt.nombre(par[L1[cle]][col])
+        if v is None:
+            fail("figure 1, %s : valeur manquante (%r)" % (L1[cle], par[L1[cle]][col]))    # « /// » n'est pas zéro
+        return v
 
     d = {"annee": annee, "menages": val("menages", 1), "exportee": val("exportee", 1), "interieure": val("interieure", 1),
          "importee": val("importee", 3), "emissions": val("emissions", 1), "empreinte": val("empreinte", 3)}
@@ -102,24 +113,24 @@ def lire(sums: dict[str, str]) -> dict:
     if abs(d["menages"] + d["interieure"] + d["importee"] - d["empreinte"]) > 1.01:
         fail("figure 1 : menages + interieure + importee != empreinte")
     f3 = lignes("Figure 3")
-    # Forme seule tolérée (édition 2026) : colonnes vides en queue, « Année » au singulier ; ordre et intitulés gardés.
-    ent3 = list(f3[2])
-    while ent3 and ent3[-1] is None:
-        ent3.pop()
+    # Forme tolérée par lecture_tableur (colonnes vides en queue, insécables) ; « Année » au singulier depuis l'édition
+    # 2026. Ordre et intitulés gardés.
+    ent3 = lt.entetes(f3[2])
     if ent3[:1] in (["Année"], ["Années"]):
         ent3[0] = "Années"
     if ent3 != ["Années", "Émissions directes des ménages", "Émissions intérieures", "Émissions importées", "Empreinte totale"]:
         fail("figure 3 : en-tetes changes : %s" % ent3)
-    serie = [dict(annee=int(r[0]), menages=float(r[1]), interieure=float(r[2]), importee=float(r[3]), empreinte=float(r[4]))
-             for r in f3[3:] if isinstance(r[0], (int, float))]
+    serie = [dict(annee=lt.annee(r[0]), **{k: _n(r[i], "figure 3", k) for i, k in enumerate(SERIE3, 1)})
+             for r in f3[3:] if lt.annee(r[0]) is not None]
     der = serie[-1]
     # témoin 2 : la série longue se termine sur la décomposition de l'année
     if der["annee"] != annee or any(der[k] != d[k] for k in ("menages", "interieure", "importee", "empreinte")):
         fail("figure 3 : la derniere annee ne correspond pas a la figure 1")
     t2 = lignes("Tableau complémentaire 2")
-    # Édition 2026 : l'année y est écrite en texte (« 1990 ») ; un nombre ou une suite de chiffres est une année.
-    em = {int(r[0]): dict(emissions=r[1] / 1000, empreinte=r[4] / 1000, emissions_hab=float(r[7]), empreinte_hab=float(r[10]))
-          for r in t2[3:] if isinstance(r[0], (int, float)) or (isinstance(r[0], str) and r[0].strip().isdigit())}
+    # Édition 2026 : l'année y est écrite en texte (« 1990 ») -- lt.annee() la lit sous les deux formes.
+    em = {lt.annee(r[0]): dict(emissions=_n(r[1], "tableau 2", "emissions") / 1000, empreinte=_n(r[4], "tableau 2", "empreinte") / 1000,
+                               emissions_hab=_n(r[7], "tableau 2", "emissions_hab"), empreinte_hab=_n(r[10], "tableau 2", "empreinte_hab"))
+          for r in t2[3:] if lt.annee(r[0]) is not None}
     # témoin 3 : les deux tableaux de la série longue s'accordent, année par année
     for s in serie:
         if s["annee"] not in em or abs(em[s["annee"]]["empreinte"] - s["empreinte"]) > 0.51:

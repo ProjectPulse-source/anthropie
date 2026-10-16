@@ -60,6 +60,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 import pied_figure as PF  # noqa: E402  (organe commun des pieds et des figures téléphone)
+import langue_generee as lg  # noqa: E402  -- rangs et comparaisons à la précision affichée (organe commun)
 OUT_DATA = ROOT / "data" / "dette_monde.json"
 OUT_STATIC = ROOT / "static" / "dette_monde.json"
 # CSV : demandé par l'avis du 30/09 (« plus exploitable qu'un JSON par un journaliste ou un enseignant »).
@@ -1084,12 +1085,16 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts) -> tuple
     s = stats
     j0 = jum[0]
     lo, hi = by[j0["bas"]], by[j0["haut"]]
-    moins_chers_que_fr = sorted((x for x in rows if x["charge"] > F["charge"] and x["stock"] < F["stock"]), key=lambda x: x["stock"])
+    # Comparaisons publiées à la précision AFFICHÉE (charge et dette à 1 décimale, prix à 2) : lg.depasse.
+    moins_chers_que_fr = sorted((x for x in rows if lg.depasse(x["charge"], F["charge"], 1) and lg.depasse(F["stock"], x["stock"], 1)),
+                                key=lambda x: x["stock"])
     se = by.get("SE")
     de = by.get("DE")
     rob = stats["robustesse_inflation"]
     classement = sorted(rows, key=lambda x: -x["stock_fin"])
-    rang = [x["code"] for x in classement].index("FR") + 1
+    rang, eg = lg.rang({x["code"]: x["stock_fin"] for x in rows}, "FR", 1)
+    if eg:
+        fail("dette fin d'annee : la France est a egalite (%s) a l'affichage : la phrase du rang est a reecrire" % ", ".join(eg))
     av = {x["code"]: x for x in avances}
     E = {x["code"]: x["ecarts"] for x in ecarts["pays"]}
 
@@ -1201,16 +1206,17 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts) -> tuple
     ipib = {x["code"]: x["charge"] * x["recettes"] / 100 for x in rows}
     # Rang et dépassements à la précision AFFICHÉE (deux décimales) : un écart que le lecteur ne voit pas ne classe pas.
     # Cas fondateur, données 2025 du 15/10/2026 : Belgique 2,2285 % contre France 2,2278 %, toutes deux affichées 2,23 %.
-    ipib_aff = {c: round(v, 2) for c, v in ipib.items()}
-    rang_ipib = 1 + sum(1 for c in ipib_aff if ipib_aff[c] > ipib_aff["FR"])
-    egaux_ipib = [x["code"] for x in rows if x["code"] != "FR" and ipib_aff[x["code"]] == ipib_aff["FR"]]
-    rang_charge = sorted(rows, key=lambda x: -x["charge"]).index(F) + 1
-    plus_ipib = sorted((x for x in rows if x["stock"] < F["stock"] and ipib_aff[x["code"]] > ipib_aff["FR"]),
+    rang_ipib, egaux_ipib = lg.rang(ipib, "FR", 2)          # la prose dit l'égalité (jeton fr_egal_ipib)
+    plus_ipib = sorted((x for x in rows if lg.depasse(F["stock"], x["stock"], 1) and lg.depasse(ipib[x["code"]], ipib["FR"], 2)),
                        key=lambda x: x["stock"])
-    rang_rec = sorted(rows, key=lambda x: -x["recettes"]).index(F) + 1
+    # Rangs dont la prose ne prévoit pas d'égalité : une égalité à l'affichage arrête (phrase à réécrire).
+    rang_charge, eg_charge = lg.rang({x["code"]: x["charge"] for x in rows}, "FR", 1)
+    rang_rec, eg_rec = lg.rang({x["code"]: x["recettes"] for x in rows}, "FR", 1)
+    rang_prix_euro, eg_prix = lg.rang({x["code"]: x["prix"] for x in rows if x["euro"]}, "FR", 2, decroissant=False)
+    for quoi, eg in (("charge / recettes", eg_charge), ("recettes / PIB", eg_rec), ("taux implicite (zone euro)", eg_prix)):
+        if eg:
+            fail("rang de la France (%s) : egalite a l'affichage avec %s ; la phrase du rang est a reecrire" % (quoi, ", ".join(eg)))
     f_stock, f_prix, f_rec = hi["stock"] / lo["stock"], hi["prix"] / lo["prix"], lo["recettes"] / hi["recettes"]
-    euro_prix = sorted((x for x in rows if x["euro"]), key=lambda x: x["prix"])
-    rang_prix_euro = euro_prix.index(F) + 1
     A = bloc(LOC["fr"])
     A_en = bloc(LOC["en"])
     if list(A) != list(A_en):
@@ -1220,24 +1226,24 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts) -> tuple
     se, de, dk = by["SE"], by["DE"], by["DK"]
     affirmations = [
         ("la Suède paie comme l'Allemagne", abs(se["prix"] - de["prix"]) < 0.15),
-        ("FAQ « pas systématiquement » : l'Allemagne paie moins que la France", de["prix"] < F["prix"]),
+        ("FAQ « pas systématiquement » : l'Allemagne paie moins que la France", lg.depasse(F["prix"], de["prix"], 2)),
         ("FAQ « pas systématiquement » : d'autres pays de la zone euro paient davantage",
-         any(x["euro"] and x["prix"] > F["prix"] for x in rows)),
+         any(x["euro"] and lg.depasse(x["prix"], F["prix"], 2) for x in rows)),
         ("le prix ne suit pas le stock (R2 < 0,1)", stats["prix_stock_r2"] < 0.1),
         ("hors euro, le prix suit l'inflation plus que dans l'euro",
          stats["prix_inflation_hors"]["r2"] > stats["prix_inflation_euro"]["r2"] + 0.2),
-        ("indicateur français orienté à la hausse (rendement 10 ans > taux implicite)", F["taux10"] > F["prix"]),
-        ("indicateur danois orienté dans l'autre sens (rendement 10 ans < taux implicite)", dk["taux10"] < dk["prix"]),
+        ("indicateur français orienté à la hausse (rendement 10 ans > taux implicite)", lg.depasse(F["taux10"], F["prix"], 2)),
+        ("indicateur danois orienté dans l'autre sens (rendement 10 ans < taux implicite)", lg.depasse(dk["prix"], dk["taux10"], 2)),
         ("coefficients robustes à la fenêtre d'inflation (signes stables, facteur < 2)",
          all(r["effet_euro"] < 0 and r["effet_inflation"] > 0 for r in stats["robustesse_inflation"])
          and max(r["effet_euro"] for r in stats["robustesse_inflation"]) / min(r["effet_euro"] for r in stats["robustesse_inflation"]) > 0.5
          and min(r["effet_inflation"] for r in stats["robustesse_inflation"]) / max(r["effet_inflation"] for r in stats["robustesse_inflation"]) > 0.5),
-        ("le Japon consacre moins que la France (base OCDE)", av["JPN"]["charge"] < av["FRA"]["charge"]),
+        ("le Japon consacre moins que la France (base OCDE)", lg.depasse(av["FRA"]["charge"], av["JPN"]["charge"], 1)),
         # Cartes hors Europe (30/09) : les qualificatifs de la prose, recalculés.
         ("le Japon doit « près du double » de la France (rapport 1,7 à 2,2)", 1.7 < av["JPN"]["stock"] / av["FRA"]["stock"] < 2.2),
-        ("le Japon paie moins cher que la France sur ses passifs", av["JPN"]["prix"] < av["FRA"]["prix"]),
+        ("le Japon paie moins cher que la France sur ses passifs", lg.depasse(av["FRA"]["prix"], av["JPN"]["prix"], 2)),
         ("la Suisse « paie peu sur une dette faible » (< 60 % du PIB, rapport sous la France)",
-         av["CHE"]["stock"] < 60 and av["CHE"]["prix"] < av["FRA"]["prix"]),
+         av["CHE"]["stock"] < 60 and lg.depasse(av["FRA"]["prix"], av["CHE"]["prix"], 2)),
         ("les États-Unis ont des passifs « proches » de la France (écart < 15 points)", abs(av["USA"]["stock"] - av["FRA"]["stock"]) < 15),
         ("la dette nette suisse est négative", (av["CHE"].get("dette_nette") or 0) < 0),
         # Section « trente ans d'écarts » : chaque constat de la prose, recalculé.
@@ -1273,12 +1279,12 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts) -> tuple
         ("la Bulgarie, classée hors zone euro pour l'année des données, y entre après elle",
          not by["BG"]["euro"] and "BG" in ENTREES_EURO),
         ("des pays moins endettés que la France ont une charge plus lourde", len(moins_chers_que_fr) >= 2),
-        ("les faux jumeaux : le plus chargé paie plus cher", hi["prix"] > lo["prix"]),
+        ("les faux jumeaux : le plus chargé paie plus cher", lg.depasse(hi["prix"], lo["prix"], 2)),
         ("la France est troisième, derrière la Grèce et l'Italie",
          rang == 3 and {x["code"] for x in classement[:2]} == {"EL", "IT"}),
         ("figure du stock : de la Grèce à l'Estonie", classement[0]["code"] == "EL" and classement[-1]["code"] == "EE"),
         ("euro et inflation rendent compte d'une large part du prix (R2 >= 0,5)", stats["prix_euro_inflation"]["r2"] >= 0.5),
-        ("les États-Unis consacrent plus que la France", av["USA"]["charge"] > av["FRA"]["charge"]),
+        ("les États-Unis consacrent plus que la France", lg.depasse(av["USA"]["charge"], av["FRA"]["charge"], 1)),
     ]
     faux = [t for t, ok in affirmations if not ok]
     if faux:

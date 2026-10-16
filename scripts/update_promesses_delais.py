@@ -78,6 +78,7 @@ sys.path.insert(0, str(ROOT / "scripts" / "sources_promesses_en"))
 sys.path.insert(0, str(ROOT / "scripts"))
 import constitution_en as cen  # noqa: E402
 import langue_generee as lg  # noqa: E402  -- nombres et lettres (organe commun)
+import lecture_tableur as lt  # noqa: E402  -- forme des cellules (organe commun)
 import pied_figure  # noqa: E402  -- pied commun des figures détaillées
 
 SRC = ROOT / "scripts" / "sources_delais"
@@ -245,11 +246,11 @@ def lire() -> dict:
     serie, an = {}, 1972
     for r in wb["Graphique 8"].iter_rows(values_only=True):
         v = [c for c in r if c is not None]
-        if not v or not isinstance(v[-1], (int, float)):
+        if not v or lt.valeur(v[-1]) is None:
             continue
         if len(v) == 2:
             an = int(str(v[0]).rstrip("*"))
-        serie[an] = int(v[-1])
+        serie[an] = int(lt.valeur(v[-1]))
         an += 1
     ondps = json.loads((SRC / "ondps_admis_transcription.json").read_text(encoding="utf-8"))
     pdf = SRC / ondps["fichier"]
@@ -280,7 +281,7 @@ def date_lue(texte: str, motif: str, quoi: str) -> dt.date:
     m = re.search(motif, texte)
     if not m or m.group(2) not in MOIS:
         raise Arret("%s introuvable" % quoi)
-    return dt.date(int(m.group(3)), MOIS.index(m.group(2)) + 1, int(m.group(1)))
+    return dt.date(int(m.group(3)), MOIS.index(m.group(2)) + 1, int(m.group(1)))  # brut-ok: numero du mois
 
 
 def calculer(S: dict) -> tuple[dict, list[str]]:
@@ -296,7 +297,7 @@ def calculer(S: dict) -> tuple[dict, list[str]]:
         m = [x for x in m if x]
         if not m:
             raise Arret("G0 : %s : loi modificatrice n° %s absente de la reponse" % (k, num))
-        lois[k] = (num, dt.date(int(m[0].group(4)), MOIS.index(m[0].group(3)) + 1, int(m[0].group(2))))
+        lois[k] = (num, dt.date(int(m[0].group(4)), MOIS.index(m[0].group(3)) + 1, int(m[0].group(2))))  # brut-ok: numero du mois
     g.append("G0 : %d reponses Legifrance (empreinte, etat, version) ; lois modificatrices de L631-1 lues : %s"
              % (len(LEGI), ", ".join(v[0] for v in lois.values())))
     a13 = T["arrete_2013"]["texte"]

@@ -105,3 +105,55 @@ def compte(n, mot_sing: str, mot_plur: str, lang: str = "fr") -> str:
     n = int(_val(n))
     sing = n in (0, 1) if lang == "fr" else n == 1
     return lettres(n, lang) + " " + (mot_sing if sing else mot_plur)
+
+
+# --- Rangs et comparaisons publiés (2026-10-16) ------------------------------------------------------------------
+# Un rang, un « dépasse », un « plus que » se décident sur la valeur AFFICHÉE, comme les accords ci-dessus : un écart que
+# le lecteur ne voit pas ne classe pas. Cas fondateur : intérêts rapportés au PIB, données 2025 (Eurostat, 15/10/2026),
+# Belgique 2,2285 % contre France 2,2278 %, toutes deux affichées « 2,23 % » ; la page publiait « huitième rang, cinq
+# pays moins endettés la dépassent ». Contrôle : scripts/check-lecture-donnees.py refuse le rang calculé sur valeurs
+# brutes (`sorted(...).index(x) + 1`) dans un générateur.
+
+def affichee(v, dec: int = 1) -> float:
+    """La valeur telle que le lecteur la lit : même arrondi que nombre()."""
+    return float(("{:.%df}" % dec).format(_val(v)))
+
+
+def depasse(a, b, dec: int = 1) -> bool:
+    """a > b À L'AFFICHAGE : faux si les deux s'affichent pareil (« dépasse », « plus que », « paie davantage »)."""
+    return affichee(a, dec) > affichee(b, dec)
+
+
+def rang(valeurs: dict, cle, dec: int = 1, decroissant: bool = True) -> tuple[int, list]:
+    """Rang de `cle` parmi `valeurs` ({identifiant: valeur}) à la précision affichée, et les ex aequo.
+
+    Rang = 1 + nombre de valeurs affichées strictement meilleures ; les ex aequo (même valeur affichée) sont rendus
+    dans l'ordre d'insertion, pour que la prose les dise (« à égalité avec … ») ou qu'une garde arrête la phrase qui
+    ne les prévoit pas."""
+    a = {k: affichee(v, dec) for k, v in valeurs.items()}
+    if cle not in a:
+        raise ValueError("rang : %r absent des valeurs" % (cle,))
+    ref = a[cle]
+    mieux = sum(1 for k, v in a.items() if k != cle and (v > ref if decroissant else v < ref))
+    return 1 + mieux, [k for k, v in a.items() if k != cle and v == ref]
+
+
+def positions(valeurs, dec: int = 1, maxi: bool = True) -> list[int]:
+    """Indices de l'extremum (max si maxi, min sinon) À L'AFFICHAGE, tous les ex aequo compris, dans l'ordre.
+
+    Remplace `liste.index(max(liste))`, qui rend la première occurrence et laisse une phrase nommer une année ou un
+    dixième arbitraire quand deux valeurs s'affichent pareil. L'appelant décide : une garde « D7 ou D8 » exige que
+    toutes les positions y tombent ; une phrase qui nomme UNE position exige qu'il n'y en ait qu'une."""
+    a = [affichee(v, dec) for v in valeurs]
+    if not a:
+        raise ValueError("positions : liste vide")
+    ext = max(a) if maxi else min(a)
+    return [i for i, v in enumerate(a) if v == ext]
+
+
+def position_unique(valeurs, dec: int = 1, maxi: bool = True, quoi: str = "extremum") -> int:
+    """Indice de l'extremum quand la prose en nomme UN seul ; ValueError si deux valeurs s'affichent ex aequo."""
+    p = positions(valeurs, dec, maxi)
+    if len(p) > 1:
+        raise ValueError("%s : ex aequo a l'affichage aux positions %s ; la phrase qui en nomme une est a reecrire" % (quoi, p))
+    return p[0]

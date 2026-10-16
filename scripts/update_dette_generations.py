@@ -72,6 +72,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import langue_generee as lg   # mots autour d'un nombre (scripts/langue_generee.py)
+import lecture_tableur as lt  # forme des cellules (organe commun) : année ou nombre écrits en texte
 import pied_figure            # pied commun, version téléphone, parité (scripts/pied_figure.py)
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -444,8 +445,8 @@ def s2():
     for g in wb.sheetnames:
         lab = {}
         for r in wb[g].iter_rows(min_row=180, max_row=200, values_only=True):
-            txt = [v for v in r if isinstance(v, str)]
-            num = [v for v in r if isinstance(v, (int, float))]
+            txt = [v for v in r if isinstance(v, str) and lt.nombre(v) is None]
+            num = [lt.valeur(v) for v in r if lt.valeur(v) is not None]
             if len(num) >= 4 and txt and txt[-1].strip() not in lab:
                 lab[txt[-1].strip()] = num[:4]
         try:
@@ -470,11 +471,12 @@ def cor():
     lignes = {}
     for nom_f, lib in (("Dépenses en %", "Sc. Ref"), ("Solde dépenses ressources", "Ressources"), ("Solde dépenses ressources", "Solde")):
         rows = list(wb[nom_f].iter_rows(values_only=True))
-        hdr = next((r for r in rows if 2025 in r and 2070 in r), None)
+        hdr = next((r for r in rows if {2025, 2070} <= {lt.annee(v) for v in r}), None)
         ref = next((r for r in rows if r and any(isinstance(v, str) and v.strip() == lib for v in r)), None)
         if not hdr or not ref:
             fail("COR, feuille %s : ligne %s introuvable (la mise en page de la piece a change)" % (nom_f, lib))
-        d = {hdr[i]: ref[i] for i in range(len(hdr)) if isinstance(hdr[i], int) and isinstance(ref[i], (int, float))}
+        d = {lt.annee(hdr[i]): lt.valeur(ref[i]) for i in range(min(len(hdr), len(ref)))
+             if lt.annee(hdr[i]) is not None and lt.valeur(ref[i]) is not None}
         lignes[lib] = {a: v * (100 if abs(d[2025]) < 1 and lib != "Solde" else 1) for a, v in d.items()}
     # Les ratios du COR sont en fraction (0,1412) : ramenés en % ; le solde aussi, s'il est en fraction.
     if abs(lignes["Solde"][2025]) < 0.05:
@@ -593,14 +595,14 @@ def affichage(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, cons, etat
     # Phase B (11/10/2026) : le bilan devient un complément à deux bornes. Plus haut, encore au-dessus du point de départ,
     # fenêtres d'au moins dix ans, et la dernière décennie (mêmes bornes que d3_lib).
     pmax = max(pat, key=lambda x: x["patrimoine_net"])
-    psup = max((x for x in pat if x["annee"] > p0["annee"] and x["patrimoine_net"] > p0["patrimoine_net"]), key=lambda x: x["annee"])
+    psup = max((x for x in pat if x["annee"] > p0["annee"] and lg.depasse(x["patrimoine_net"], p0["patrimoine_net"])), key=lambda x: x["annee"])
     pd3 = next(x for x in pat if x["annee"] == dec[-1]["debut"])
     fen = [(x, y) for x in pat for y in pat if y["annee"] - x["annee"] >= 10]
     A.update(pn_haut=fr(pmax["patrimoine_net"]), pn_haut_annee=str(pmax["annee"]), pn_sup=fr(psup["patrimoine_net"]),
              pn_sup_annee=str(psup["annee"]), pn_d3_0=fr(pd3["patrimoine_net"]), pn_d3_an0=str(pd3["annee"]),
              pn_d3_var=lg.sans_signe(p1["patrimoine_net"] - pd3["patrimoine_net"], 1, LANG),
              pn_d3_var_pt=lg.points(abs(p1["patrimoine_net"] - pd3["patrimoine_net"]), 1, LANG),
-             pn_fen_n=str(len(fen)), pn_fen_hausse=str(sum(1 for x, y in fen if y["patrimoine_net"] > x["patrimoine_net"])),
+             pn_fen_n=str(len(fen)), pn_fen_hausse=str(sum(1 for x, y in fen if lg.depasse(y["patrimoine_net"], x["patrimoine_net"]))),
              prod_var_pt=lg.points(p1["actifs_produits"] - p0["actifs_produits"], 1, LANG, signe_=True),
              terr_var_pt=lg.points(p1["terrains"] - p0["terrains"], 1, LANG, signe_=True))
     # contre-population
@@ -609,7 +611,7 @@ def affichage(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, cons, etat
     # Arbitrage PRO-20261003-195656 : le ratio n'a de sens que si le besoin cumulé est substantiel.
     groupe = [x for x in cp if x["besoin"] >= SEUIL_BESOIN]
     sup = [x for x in groupe if x["part_actifs"] >= 50]
-    inf = [x for x in groupe if x["part_actifs"] < frc["part_actifs"]]
+    inf = [x for x in groupe if lg.depasse(frc["part_actifs"], x["part_actifs"], 0)]       # parts affichées à l'unité
     exc = [x for x in cp if x["besoin"] < SEUIL_BESOIN]
     A["cp_fr_part"] = fr(frc["part_actifs"], 0)
     A["cp_sup_n"] = lettres(len(sup)); A["cp_sup_pays"] = enumere([art(x["pays"]) for x in sorted(sup, key=lambda x: -x["part_actifs"])])
@@ -700,7 +702,7 @@ def gardes(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, aux):
         ("la mesure en euros donne le même ordre (à 3 points près)", abs(total["part_actifs_euros"] - total["part_actifs"]) < 3),
         ("« près des deux tiers » en dépenses courantes non couvertes (60 à 70 %)", 60 <= total["part_desepargne"] < 70),
         ("la désépargne est le premier emploi du besoin de financement", total["desepargne"] > max(total["actifs"], total["transferts"])),
-        ("« la part investie a baissé de décennie en décennie »", d1["part_actifs"] > d2["part_actifs"] > d3["part_actifs"]),
+        ("« la part investie a baissé de décennie en décennie »", lg.depasse(d1["part_actifs"], d2["part_actifs"], 0) and lg.depasse(d2["part_actifs"], d3["part_actifs"], 0)),
         # Corrections de clôture (11/10/2026, contre-expertise du rendu, § 2) : la baisse 32 -> 19 -> 10 % en deux mouvements,
         # décomposition arithmétique de la part (actifs / besoin), aucune cause. Seuils écrits avant l'écriture de la phrase :
         # « presque stables » / « presque identique » = moins de 5 % d'écart relatif ; « augmente » = plus de 50 %, si bien que
@@ -716,15 +718,15 @@ def gardes(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, aux):
         ("en comptant toutes les aides à l'investissement versées : « toujours moins de la moitié »",
          (total["actifs"] + total["aides_investissement"]) / total["besoin"] < 0.5),
         # --- complément : le bilan (phase B : deux bornes, réévaluations dites ; plus un témoin de concordance)
-        ("bilan : « recule » sur la période entière", p1["patrimoine_net"] < p0["patrimoine_net"]),
+        ("bilan : « recule » sur la période entière", lg.depasse(p0["patrimoine_net"], p1["patrimoine_net"])),
         ("bilan : « plus haut » en cours de période que les deux bornes (le maximum n'est ni la première ni la dernière année)",
          aux["pmax"]["patrimoine_net"] > max(p0["patrimoine_net"], p1["patrimoine_net"]) and aux["pmax"]["annee"] not in (p0["annee"], p1["annee"])),
         ("bilan : « encore au-dessus de son niveau de départ » une année tardive (au moins vingt ans après le début)",
          aux["psup"]["annee"] - p0["annee"] >= 20),
         ("bilan : « a augmenté » sur la dernière décennie, alors que la part en actifs y est la plus faible",
-         p1["patrimoine_net"] > aux["pd3"]["patrimoine_net"] and d3["part_actifs"] < min(d1["part_actifs"], d2["part_actifs"])),
+         lg.depasse(p1["patrimoine_net"], aux["pd3"]["patrimoine_net"]) and lg.depasse(min(d1["part_actifs"], d2["part_actifs"]), d3["part_actifs"], 0)),
         ("bilan : « des fenêtres en hausse, d'autres en baisse » (ni toutes ni aucune)",
-         0 < sum(1 for a, b in aux["fen"] if b["patrimoine_net"] > a["patrimoine_net"]) < len(aux["fen"])),
+         0 < sum(1 for a, b in aux["fen"] if lg.depasse(b["patrimoine_net"], a["patrimoine_net"])) < len(aux["fen"])),
         ("actifs produits : « à peine bougé » (moins de 5 points)", abs(p1["actifs_produits"] - p0["actifs_produits"]) < 5),
         ("terrains : réévaluation en hausse, plus forte que la variation des actifs produits",
          p1["terrains"] > p0["terrains"] and abs(p1["actifs_produits"] - p0["actifs_produits"]) < p1["terrains"] - p0["terrains"]),
@@ -754,7 +756,7 @@ def gardes(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, aux):
          next(y for y in det if y["annee"] == 2014)["part_banque_centrale"] < 3 and next(y for y in det if y["annee"] == 2015)["part_banque_centrale"] > 5),
         ("Italie et Suède : prémisse « mieux vérifiée » (au moins 10 points de moins que la France)",
          all(det_pays[p]["part_non_residents"] < dl["part_non_residents"] - 10 for p in ("IT", "SE"))),
-        ("Autriche et Belgique : « moins » vérifiée (plus que la France)", all(det_pays[p]["part_non_residents"] > dl["part_non_residents"] for p in ("AT", "BE"))),
+        ("Autriche et Belgique : « moins » vérifiée (plus que la France)", all(lg.depasse(det_pays[p]["part_non_residents"], dl["part_non_residents"]) for p in ("AT", "BE"))),
         ("contre-population de détention : même dernière année que la France", all(det_pays[p]["annee"] == dl["annee"] for p in ("IT", "SE", "AT", "BE"))),
         # --- témoin de périmètre État (Banque de France, Webstat) : il doit dire la même chose que la série BCE
         ("État : la série Banque de France couvre la dernière année de la série BCE", dl["annee"] in {x["annee"] for x in aux["etat"]["fins"]}),

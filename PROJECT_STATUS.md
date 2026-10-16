@@ -52,6 +52,25 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-16 — Défauts de structure corrigés à l'échelle des générateurs (règle de l'auteur)
+
+Règle de l'auteur (16/10) : un défaut de structure se consigne, se corrige, et la correction s'applique à l'échelle du
+programme générateur pour qu'il ne se reproduise pas. Appliquée aux deux défauts du jour, et à un troisième trouvé en
+chemin. (1) Forme des tableurs : `scripts/lecture_tableur.py` (ligne, entetes, annee, nombre, valeur ; manquant ≠ zéro),
+adopté par six générateurs (empreinte, parcours licence, qui-paie — dont deux `else 0.0` —, générations, promesses
+délais et mesurer). (2) Rangs et comparaisons publiés à la précision affichée : `langue_generee.py` gagne `affichee`,
+`depasse`, `rang`, `positions`, `position_unique` ; adoptés par huit générateurs (tous les rangs de dette-monde — une
+égalité non prévue par la prose arrête —, positions d'extremum de dette-baisse et qui-paie, comparaisons strictes des
+gardes de dette-baisse, générations, lycée, parcours, carte générations). (3) Octet de contrôle : `r"\bmissing\b"` de
+`update_dette_baisse.py` était devenu 0x08 le 11/10, garde de mots interdits morte ; réparée, vue mordre. Contrôle
+bloquant `scripts/check-lecture-donnees.py` (dans `check-all --ci`) : quatre motifs interdits dans les générateurs,
+exception `# brut-ok: <motif>` seulement motivée, octets C0/C1 dans tous les `scripts/*.py` ; témoin : 9 cas + mutation
+d'un vrai générateur ; appliqué au code d'avant : 26 défauts, au code corrigé : 0. Texte publié identique clé à clé
+pour chaque générateur. Contre-expertise technique : audit `anthropie-site-20261016-154235` (paquet autoportant, en
+attente d'envoi). Exclusions déclarées : extraits de PDF (`sources_mesurer/insee_*.txt`, `sources_appliquer/senat_pages.json`)
+portent des octets de contrôle venus des PDF, matière source laissée telle quelle ; les comparaisons de gardes entre
+deux clés différentes n'ont pas été examinées (angle mort dit au paquet).
+
 ### 2026-10-16 — Relectures ciblées du dossier dette ; rang de la France à la précision affichée
 
 Issues « Relecture ciblée » (n° 10, 11, 14, 15) : phrases changées par la mise à jour Eurostat du 15/10, relues sur le

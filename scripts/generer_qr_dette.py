@@ -78,7 +78,7 @@ def main() -> int:
     DEST.mkdir(parents=True, exist_ok=True)
 
     def option(nom_court: str, defaut):
-        return args[args.index(nom_court) + 1] if nom_court in args else defaut
+        return args[args.index(nom_court) + 1] if nom_court in args else defaut  # brut-ok: argument de ligne de commande
 
     # ⛔ Une ENCRE DE COULEUR n'a rien a faire dans un interieur imprime en noir
     # et blanc : KDP convertit en niveaux de gris, le bleu tombe vers un gris

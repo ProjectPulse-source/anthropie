@@ -57,6 +57,8 @@ from datetime import date
 from pathlib import Path
 
 import pied_figure as PF
+import lecture_tableur as lt  # forme des cellules (organe commun) : manquant n'est pas zéro
+import langue_generee as lg  # extremums et comparaisons à la précision affichée (organe commun)
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
@@ -329,14 +331,18 @@ def lire_insee() -> dict:
     wb = openpyxl.load_workbook(XLSX, data_only=True)
 
     def ligne(feuille: str, debut: str) -> list:
+        # Positions gardées : une cellule vide au milieu décalerait les dixièmes en silence ; elle arrête.
         for r in wb[feuille].iter_rows(values_only=True):
-            if r[0] and str(r[0]).startswith(debut):
-                return [x for x in r[1:] if x is not None]
+            if r[0] and lt.ligne([r[0]])[0].startswith(debut):
+                v = [lt.valeur(x) for x in lt.entetes(r)[1:]]
+                if any(x is None for x in v):
+                    fail("%s, « %s » : cellule vide ou illisible au milieu de la ligne" % (feuille, debut))
+                return v
         fail("%s : ligne « %s » introuvable" % (feuille, debut))
 
     ws = wb["Figure 1c"]
-    entetes = [x for x in next(r for r in ws.iter_rows(values_only=True)
-                               if r[0] == "Nature des revenus")[1:] if x is not None]
+    entetes = [x for x in lt.entetes(next(r for r in ws.iter_rows(values_only=True)
+                                          if r[0] == "Nature des revenus"))[1:] if x is not None]
     if entetes != ["D%d" % i for i in range(1, 11)] + ["Ensemble"]:
         fail("Figure 1c : colonnes inattendues %s" % entetes)
     prel = ligne("Figure 1c", "Prélèvements")
@@ -350,8 +356,8 @@ def lire_insee() -> dict:
     net = ligne("Figure 2a", "Transferts nets de la redistribution publique nationale")
     part_benef = ligne("Figure 2a", "Part de personnes bénéficiaires nettes")
     wsa = wb["Figure 1e"]
-    age_entetes = [x for x in next(r for r in wsa.iter_rows(values_only=True)
-                                   if r[0] == "Nature des revenus")[1:] if x is not None]
+    age_entetes = [x for x in lt.entetes(next(r for r in wsa.iter_rows(values_only=True)
+                                              if r[0] == "Nature des revenus"))[1:] if x is not None]
     if len(age_entetes) != 6 or age_entetes[-1] != "Ensemble":
         fail("Figure 1e : colonnes inattendues %s" % age_entetes)
     age = {"groupes": [str(x).replace("\u00a0", " ") for x in age_entetes[:5]],
@@ -412,7 +418,10 @@ def lire_cnd(d_ia118: dict) -> dict:
             if not trouve:
                 fail("CND_%s : ligne « %s » introuvable" % (an, debut))
             i, r = trouve[0]
-            v = [abs(float(x)) if isinstance(x, (int, float)) else 0.0 for x in r[1:21]]
+            v = [lt.nombre(x) for x in r[1:21]]
+            if any(x is None for x in v):                    # manquant n'est pas zéro (jusqu'au 16/10 : « else 0.0 »)
+                fail("CND_%s : « %s » porte une cellule vide ou illisible" % (an, debut))
+            v = [abs(x) for x in v]
             if len(v) != 20:
                 fail("CND_%s : « %s » sur %d vingtièmes au lieu de 20" % (an, debut, len(v)))
             vals[cle], rangs[cle] = v, i
@@ -433,8 +442,10 @@ def lire_cnd(d_ia118: dict) -> dict:
     for cle, debut in postes.items():
         for r in wb118["Tableau complémentaire"].iter_rows(values_only=True):
             if r[0] and str(r[0]).strip().startswith(debut):
-                ia[cle] = [abs(float(x)) if isinstance(x, (int, float)) else 0.0
-                           for x in r[2:22]]
+                v = [lt.nombre(x) for x in r[2:22]]
+                if any(x is None for x in v):
+                    fail("IA118 : « %s » porte une cellule vide ou illisible" % debut)
+                ia[cle] = [abs(x) for x in v]
                 break
         else:
             fail("IA118 : ligne « %s » introuvable pour le témoin croisé" % debut)
@@ -475,7 +486,8 @@ def lire_cnd(d_ia118: dict) -> dict:
     for an in CND_ANNEES:
         r = ratios(profil(an, False))
         creux = min(r[4:9])
-        imin = r.index(min(r))
+        tous = lg.positions(r, 1, maxi=False)          # ex aequo compris, au « ×1,4 » affiché
+        imin = next((i for i in tous if not 4 <= i <= 8), tous[0])
         if not 4 <= imin <= 8:
             fail("le creux de l'écart entre décisions tombe en D%d en %s, hors de D5-D9 : "
                  "la figure ne peut plus dire que le milieu est le moins sensible"
@@ -521,8 +533,9 @@ def lire_cnd(d_ia118: dict) -> dict:
     disp_an = {an: dispersions(profil(an, False)) for an in CND_ANNEES}
     disp23 = dispersions(profil("2023", True))
     # D1 ne compare que deux leviers dans la figure : il est hors comparaison de mesures.
-    creux_par_mesure = {m: "D%d" % (2 + v[1:].index(min(v[1:]))) for m, v in disp23.items()}
-    creux_an_mesure = {an: {m: "D%d" % (2 + v[1:].index(min(v[1:]))) for m, v in d.items()}
+    # brut-ok : diagnostic écrit en clair dans le JSON et rapproché de la figure à la même précision brute (l. ~1958).
+    creux_par_mesure = {m: "D%d" % (2 + v[1:].index(min(v[1:]))) for m, v in disp23.items()}  # brut-ok: diagnostic JSON
+    creux_an_mesure = {an: {m: "D%d" % (2 + v[1:].index(min(v[1:]))) for m, v in d.items()}  # brut-ok: diagnostic JSON
                        for an, d in disp_an.items()}
     hors_zone = {(an, m): dx for an, d in creux_an_mesure.items()
                  for m, dx in d.items() if dx not in ("D7", "D8")}
@@ -565,7 +578,7 @@ def lire_cnd(d_ia118: dict) -> dict:
         return out
 
     def argmin(r: list, debut: int = 0) -> int:
-        return debut + r[debut:].index(min(r[debut:]))
+        return debut + r[debut:].index(min(r[debut:]))   # brut-ok: tests de robustesse écrits en clair dans le JSON
 
     tests = {"t1_vingtieme_min": {}, "t2_impot_progressif": {}, "t2_pensions_d1_d3_epargnees": {},
              "t3_paires": {}, "denominateur_ecart_max": 0.0,
@@ -1315,7 +1328,8 @@ def svg_exposition(c: dict, lang: str = "fr") -> tuple[str, int]:
     # 40 % — la formulation promettait une indifférence que les chiffres ne portent pas
     # (contre-expertise du 29/09, acceptée). Ce que la figure établit est un CREUX DE
     # DISPERSION, et c'est cela que la garde vérifie : il tombe en D7 ou D8.
-    creux_dixieme = "D%d" % (rat.index(min(rat)) + 1)
+    creux_tous = ["D%d" % (i + 1) for i in lg.positions(rat, 1, maxi=False)]   # ex aequo au « ×1,4 » affiché
+    creux_dixieme = next((d for d in creux_tous if d not in ("D7", "D8")), creux_tous[0])
     if creux_dixieme not in ("D7", "D8"):
         fail("le panneau B nomme D7-D8 comme creux de dispersion : le minimum est en %s"
              % creux_dixieme)
@@ -1465,7 +1479,7 @@ def svg_exposition(c: dict, lang: str = "fr") -> tuple[str, int]:
                 "that is where the lever chosen changes the decile's average exposure least." % (
                     en(p["enseignement"][0], 2), en(p["enseignement"][9], 2),
                     en(p["fiscal"][9], 2), en(min(p["pensions"]), 2), en(max(p["pensions"]), 2),
-                    "×" + en(max(rat[0], rat[9]), 1), "×" + en(max(rat), 1), rat.index(max(rat)) + 1,
+                    "×" + en(max(rat[0], rat[9]), 1), "×" + en(max(rat), 1), lg.position_unique(rat, 1, quoi="pic des rapports") + 1,
                     "×" + en(min(rat), 1)))
         e = entete(h, "qp-exp", "The same €10 billion adjustment: who would bear it, depending on "
                    "the decision taken?", desc) + c_
@@ -1481,7 +1495,7 @@ def svg_exposition(c: dict, lang: str = "fr") -> tuple[str, int]:
             "l'exposition moyenne du dixième." % (
                 fr(p["enseignement"][0], 2), fr(p["enseignement"][9], 2), fr(p["fiscal"][9], 2),
                 fr(min(p["pensions"]), 2), fr(max(p["pensions"]), 2),
-                "×" + fr(max(rat[0], rat[9]), 1), "×" + fr(max(rat), 1), rat.index(max(rat)) + 1,
+                "×" + fr(max(rat[0], rat[9]), 1), "×" + fr(max(rat), 1), lg.position_unique(rat, 1, quoi="pic des rapports") + 1,
                 "×" + fr(creux, 1)))
     e = entete(h, "qp-exp", "Un même effort de 10 milliards d'euros : qui le supporterait "
                "selon la décision prise ?", desc) + c_
@@ -1858,7 +1872,7 @@ def svg_exposition_m(c: dict, lang: str, svg_d: str) -> str:
     for i, v in enumerate(rat):
         hh = max((v - 1) * hB / (vmaxB - 1), 2.0)
         e.append('<rect x="%.1f" y="%.1f" width="16" height="%.1f" rx="2" fill="%s"/>' % (X(i) - 8, topB + hB - hh, hh, SEC))
-    imax = rat.index(max(rat))
+    imax = rat.index(max(rat))   # brut-ok: étiquette posée sur une barre qui affiche sa propre valeur
     etiq = [(0, "start"), (rat.index(creux), "middle"), (9, "end")]
     if imax not in (0, 9):
         etiq.append((imax, "start"))
