@@ -484,6 +484,11 @@ Dossier : `D:\PRO\06_PROMOTION\GEO_FRAICHEUR_2026-10-16\` (état des lieux, deux
   date au grain de la page les seules pages affichant une clé modifiée) ou `--forme` (orthographe, tournure sans
   changement de sens ; consigné, sans date). La typographie (insécables, apostrophes, guillemets) est ignorée d'office.
   `check-all` refuse un écart non classé. Le Dataset garde la date de son relevé.
+- **`releve_le` ne bouge qu'avec une DONNÉE** (17/10/2026) : tout générateur qui date son relevé du jour passe par
+  `scripts/releve_jeu.py` (données = jeu hors dates, licence, blocs `affichage*`, `meta.definitions`, nombres à 12
+  chiffres significatifs, car le bruit de calcul entre machines n'est pas une donnée). Neuf générateurs l'appellent ; les
+  autres lisent leur date dans la source ; collectivités garde son critère (grandeurs publiées). `dates-affichage.py`
+  refuse un relevé avancé à données identiques (bloquant, témoin 3).
 - **Journal** (`journal: [{date, texte}]`) : écrit à la main, seulement pour une révision qui change la lecture
   (correction d'une valeur publiée, conclusion modifiée) ; jamais tiré des commits. Affiché en PIED de page (section
   « Révisions », `data-nosnippet`, `partials/page-revisions.html`) avec un lien discret depuis la date : jamais sous le

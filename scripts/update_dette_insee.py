@@ -61,6 +61,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import pied_figure  # noqa: E402
 import langue_generee as lg  # noqa: E402  -- extremums publiés à la précision affichée (organe commun)
+import releve_jeu as rj  # noqa: E402  -- relevé daté par les seules données (organe commun, 17/10/2026)
 import dette_cout_figures as FIG  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
@@ -1702,15 +1703,6 @@ def _blocs_dates(payload: dict):
             yield cle, bloc
 
 
-def _hors_dates(payload: dict) -> str:
-    """Empreinte du paquet PRIVEE de ses horodatages, pour repondre a la
-    seule question qui decide d'une publication : un chiffre a-t-il bouge ?"""
-    c = json.loads(json.dumps(payload))
-    for _, bloc in _blocs_dates(c):
-        bloc.pop("releve_le", None)
-    return json.dumps(c, ensure_ascii=False, sort_keys=True)
-
-
 def csv_dette(payload: dict) -> str:
     import csv
     import io as _io
@@ -2424,7 +2416,9 @@ def main() -> int:
         }
     elif payload_prev and "taux_long_terme_annuels" in payload_prev:
         payload["taux_long_terme_annuels"] = payload_prev["taux_long_terme_annuels"]
-    inchange = payload_prev is not None and _hors_dates(payload) == _hors_dates(payload_prev)
+    # Données identiques HORS blocs de texte (organe commun releve_jeu.py, 17/10/2026) : une correction du seul texte ne
+    # redate pas le relevé ; elle s'écrit, et la page se date par data/dates_affichage.json.
+    inchange = payload_prev is not None and rj.donnees(payload) == rj.donnees(payload_prev)
     if inchange:
         for cle, bloc in _blocs_dates(payload):
             prec = payload_prev if cle is None else payload_prev.get(cle)

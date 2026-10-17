@@ -40,6 +40,7 @@ from pathlib import Path
 
 import pied_figure  # pied commun, version téléphone, parité (scripts/pied_figure.py)
 import langue_generee as lg  # noqa: E402  -- extremums publiés à la précision affichée (organe commun)
+import releve_jeu as rj  # noqa: E402  -- relevé daté par les seules données (organe commun, 17/10/2026)
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "scripts" / "sources_inflation_dette"
@@ -761,8 +762,8 @@ def main() -> int:
                 return 0
             # données identiques hors blocs d'affichage (texte d'une figure, clé d'affichage nouvelle) : la date de relevé
             # reste celle des DONNÉES, sinon la page afficherait « Calcul du » au jour d'une simple retouche (11/10/2026)
-            hors_aff = lambda d: {k: v for k, v in d.items() if k not in ("releve_le", "_licence", "affichage", "affichage_en")}
-            if same or hors_aff(prev) == hors_aff(json.loads(json.dumps(payload, ensure_ascii=False))):
+            # organe commun releve_jeu.py depuis le 17/10/2026 (même règle, une seule copie)
+            if same or rj.releve(OUT_DATA, payload, "") == prev["releve_le"]:
                 releve = prev["releve_le"]
         except (ValueError, KeyError):
             pass

@@ -72,6 +72,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import langue_generee as lg   # mots autour d'un nombre (scripts/langue_generee.py)
+import releve_jeu as rj  # noqa: E402  -- relevé daté par les seules données (organe commun, 17/10/2026)
 import lecture_tableur as lt  # forme des cellules (organe commun) : année ou nombre écrits en texte
 import pied_figure            # pied commun, version téléphone, parité (scripts/pied_figure.py)
 
@@ -1442,13 +1443,10 @@ def main() -> int:
                     and OUT_FIGURES.exists() and json.loads(OUT_FIGURES.read_text(encoding="utf-8")) == fiches(figs):
                 log("Donnees et figures identiques : rien ecrit (releve_le conserve : %s)." % prev["releve_le"])
                 return 0
-            # (11/10/2026, modèle update_dette_inflation.py) données identiques hors blocs d'affichage et textes de méthode :
-            # la date de relevé reste celle des DONNÉES, jamais celle d'une retouche de texte ou de figure.
-            hors_aff = lambda d: json.dumps({k: (dict(v, releve_le=None, definitions=None) if k == "meta" else v) for k, v in d.items()
-                                             if k not in ("releve_le", "_licence", "affichage", "affichage_en")}, sort_keys=True, ensure_ascii=False)
-            if prev.get("releve_le") and hors_aff(prev) == hors_aff(json.loads(json.dumps(payload, ensure_ascii=False))):
-                releve = prev["releve_le"]
-                payload["meta"]["releve_le"] = prev["meta"].get("releve_le", releve)
+            # Données identiques hors blocs de texte et textes de méthode : la date de relevé reste celle des DONNÉES, jamais
+            # celle d'une retouche de texte ou de figure (11/10/2026 ; organe commun releve_jeu.py depuis le 17/10/2026).
+            releve = rj.releve(OUT_DATA, payload, releve)
+            payload["meta"]["releve_le"] = releve
         except (ValueError, KeyError):
             pass
     payload = {"releve_le": releve, "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Eurostat, BCE, Commission européenne, COR", **payload}

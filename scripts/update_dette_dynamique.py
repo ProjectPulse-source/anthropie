@@ -44,6 +44,7 @@ from pathlib import Path
 
 import pied_figure  # pied commun, parité des figures téléphone, hauteurs déclarées (scripts/pied_figure.py)
 import langue_generee as lg  # noqa: E402  -- extremums publiés à la précision affichée (organe commun)
+import releve_jeu as rj  # noqa: E402  -- relevé daté par les seules données (organe commun, 17/10/2026)
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT_DATA = ROOT / "data" / "dette_dynamique.json"
@@ -791,6 +792,8 @@ def main() -> int:
                 return 0
         except (ValueError, KeyError):
             pass
+    releve = rj.releve(OUT_DATA, payload, releve)   # le texte seul ne date pas les données
+    payload["meta"]["releve_le"] = releve
     payload = {"releve_le": releve, "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; source Eurostat", **payload}
     txt = json.dumps(payload, ensure_ascii=False, indent=1)
     OUT_DATA.write_text(txt, encoding="utf-8")

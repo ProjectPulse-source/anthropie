@@ -47,6 +47,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import lecture_tableur as lt  # noqa: E402  -- forme des cellules (organe commun)
 import langue_generee as lg  # noqa: E402  -- comparaisons publiées à la précision affichée (organe commun)
+import releve_jeu as rj  # noqa: E402  -- relevé daté par les seules données (organe commun, 17/10/2026)
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "scripts" / "sources_enseignants"
@@ -442,6 +443,7 @@ def main() -> int:
                 return 0
         except (ValueError, KeyError):
             pass
+    releve = rj.releve(OUT_DATA, payload, releve)   # le texte seul ne date pas les données
     payload = {"releve_le": releve, "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; source MESRE-SIES", **payload}
     txt = json.dumps(payload, ensure_ascii=False, indent=1)
     OUT_DATA.write_text(txt, encoding="utf-8")

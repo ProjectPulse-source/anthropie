@@ -52,6 +52,25 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-17 — Date de relevé : elle ne bouge qu'avec une donnée (organe commun `scripts/releve_jeu.py`)
+
+Point ouvert de l'arbitrage anthropie-site-20261017-030435 (§ 6).
+- **Inventaire.** 22 fichiers disent « rien écrit », dont 2 outils.
+  - 7 générateurs posaient la date du jour dès qu'un texte changeait : accès au supérieur, empreinte carbone, parcours
+    licence, dette baisse, dynamique, monde, Insee.
+  - 3 l'évitaient déjà, chacun à sa manière : inflation, générations, collectivités.
+  - 10 lisent leur date dans la source.
+- **Organe commun.** Les 7, plus inflation et générations, appellent `releve_jeu.py` : 9 générateurs. Collectivités garde
+  son critère (grandeurs publiées), exclusion déclarée.
+- **Second défaut, même famille.** Le bruit de calcul au 15e chiffre (constant sur une machine, différent d'une machine à
+  l'autre) avançait la date de dynamique, monde et générations. L'organe compare les nombres à 12 chiffres significatifs.
+  Ces trois générateurs, rejoués, réécrivent leurs fichiers sans bouger leur date : c'est le témoin positif.
+- **Contrôle bloquant.** `dates-affichage.py` (dans `check-all`) refuse un relevé avancé à données identiques ; témoin 3 vu
+  mordre.
+- **Rejeu sur l'historique.** 264 modifications de jeux depuis le 15/09 : un seul cas publié (`dette_officielle`,
+  `d8c40a4`, 04/10), remplacé depuis par le relevé du 11/10. Les commits automatiques du jeu monde (09, 13 et 15/10)
+  portaient de vraies données.
+
 ### 2026-10-17 — Dette, volet 5, #zone-euro : contre-expertise de la section construite (anthropie-site-20261017-030435), arbitrée
 
 Verdict « publier après corrections » ; arbitrage `.claude/external-audits/ARBITRATIONS/anthropie-site-20261017-030435_arbitrage.md`.

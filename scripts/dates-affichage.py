@@ -30,6 +30,10 @@ Usage : python scripts/dates-affichage.py [--base REV] [--ecrire | --forme] [--t
     --forme      : classe « forme », sans date ;
     --base REV   : référence autre que HEAD (rattrapage d'un texte déjà commité) ;
     --temoin     : mute en mémoire une valeur d'affichage et exige d'être signalé.
+RELEVÉ AVANCÉ SANS DONNÉE (17/10/2026, arbitrage anthropie-site-20261017-030435, § 6) : un jeu dont `releve_le` change
+par rapport à la référence alors que ses DONNÉES (scripts/releve_jeu.py : hors dates, licence, blocs de texte, textes de
+méthode) sont identiques est refusé. Le bandeau « Données mises à jour le » mentirait. Sept générateurs le faisaient ; ils
+passent désormais par l'organe commun, et ce contrôle couvre aussi tout générateur futur. Témoin 3 dans --temoin.
 """
 import json
 import re
@@ -37,6 +41,9 @@ import subprocess
 import sys
 from datetime import date
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import releve_jeu as rj  # noqa: E402  -- même définition des données que les générateurs (organe commun)
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
@@ -102,6 +109,27 @@ def jeux_modifies(rev: str, muter=None) -> dict:
     return out
 
 
+def releves_avances(rev: str, muter=None) -> list:
+    """Jeux dont le relevé a changé sans qu'aucune donnée change (référence `rev`)."""
+    out = []
+    suivis = subprocess.run(["git", "-C", str(RACINE), "ls-files", "data/*.json"], capture_output=True, text=True).stdout.split()
+    for chemin in suivis:
+        if chemin.endswith("dates_affichage.json"):
+            continue
+        ancien = charger_ref(rev, chemin)
+        try:
+            nouveau = json.loads((RACINE / chemin).read_text(encoding="utf-8-sig"))
+        except (ValueError, FileNotFoundError):
+            continue
+        if not isinstance(ancien, dict) or not isinstance(nouveau, dict):
+            continue
+        if muter:
+            nouveau = muter(Path(chemin).stem, nouveau)
+        if releve(ancien) and releve(nouveau) != releve(ancien) and rj.donnees(ancien) == rj.donnees(nouveau):
+            out.append((Path(chemin).stem, releve(ancien), releve(nouveau)))
+    return out
+
+
 def lire_registre() -> dict:
     if REGISTRE.exists():
         return json.loads(REGISTRE.read_text(encoding="utf-8"))
@@ -155,8 +183,24 @@ def main() -> int:
         ok2 = not pt2
         print("TÉMOIN 2 " + ("OK : une retouche de pure typographie (espaces insécables) ne date aucune page." if ok2
                              else f"EN ÉCHEC : la typographie seule a daté {sorted(pt2)}"))
-        return 0 if (ok1 and ok2) else 1
 
+        def muter_date(jeu, d):
+            if jeu == "dette_baisse":
+                d = dict(d, releve_le="2099-01-01", affichage=dict(d["affichage"], rg_pos_n="(témoin)"))
+            return d
+        av = releves_avances("HEAD", muter_date)
+        ok3 = [x[0] for x in av] == ["dette_baisse"]
+        print("TÉMOIN 3 " + ("OK : un relevé avancé sur un changement de texte seul est refusé." if ok3
+                             else f"EN ÉCHEC : jeux signalés {av}"))
+        return 0 if (ok1 and ok2 and ok3) else 1
+
+    avances = releves_avances(rev)
+    if avances:
+        for jeu, a, n in avances:
+            print(f"  RELEVÉ AVANCÉ SANS DONNÉE NOUVELLE : data/{jeu}.json, {a} → {n}")
+        print("Correctif : le générateur doit passer par scripts/releve_jeu.py (releve conservé à données identiques), puis "
+              "dater la page par --ecrire ou --forme.")
+        return 1
     mod = jeux_modifies(rev)
     pt = pages_touchees(mod)
     reg = lire_registre()
