@@ -17,7 +17,7 @@ journal:  # révisions qui changent la lecture de la page (partials/page-date-vi
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
   jeu: "dette_baisse"
   nom: "Can public debt come down: a decade-by-decade decomposition of the debt-to-GDP ratio, France and EU countries whose debt exceeded 90% of GDP"
-  description: "Decomposition of the change in the debt-to-GDP ratio into the interest-growth effect, primary deficits and other (stock-flow) adjustments: France by decade from {baisse.annee_debut} to {baisse.annee_fin}, the observed and the stabilising primary balance year by year, and the EU countries whose debt exceeded {baisse.seuil_dette}% of GDP at end-{baisse.cmp_veille}. Ratios checked against those published by Eurostat; no value entered by hand."
+  description: "Decomposition of the change in the debt-to-GDP ratio into the interest-growth effect, primary deficits and other (stock-flow) adjustments: France by decade from {baisse.annee_debut} to {baisse.annee_fin}, the observed and the stabilising primary balance year by year, and the EU countries whose debt exceeded {baisse.seuil_dette}% of GDP at end-{baisse.cmp_veille}; averages for euro-area countries over several periods, with the European Commission's structural primary balance (AMECO) as a check. Ratios checked against those published by Eurostat; no value entered by hand."
   couverture_temporelle: "{baisse.annee_debut}/{baisse.annee_fin}"
   couverture_spatiale: "France; European Union (27 countries)"
   variables:
@@ -143,6 +143,42 @@ Over {{< baisse-val "annees_total" >}} years, the observed balance reached or ex
 
 Stabilising the ratio and bringing it down are two distinct objectives. An adjustment amount is read with its objective, its horizon and its assumptions; the marker calculated here for {{< baisse-val "annee_fin" >}} holds for that year and does not allow the multi-year estimates of institutions to be assessed.
 
+### In the euro area, what sets France apart {#zone-euro}
+
+The same calculation, run on the current members of the euro area, separates what the gap to the marker, on its own, conflates: the price of debt, the growth of the economy and the primary balance. Over {{< baisse-val "ze_lib" >}}, {{< baisse-val "ze_n" >}} of the {{< baisse-val "ze_total" >}} countries have complete accounts; {{< baisse-val "ze_ecartes" >}} are left out, at least one of their years departing from the ratios published by Eurostat.
+
+{{< figure-svg fichier="dette-baisse-zone-euro-en" alt="Three rows of dots, one per quantity, averaged over the last ten years: one dot per euro-area country, France in orange, the median country marked by a line. Implicit interest rate on debt: France among the lowest. Nominal GDP growth: France the weakest, level with one other country. Primary balance: France the lowest." >}}Implicit interest rate, nominal growth and primary balance, annual averages {{< baisse-val "ze_lib" >}}, euro-area countries (Eurostat, author's calculation).{{< /figure-svg >}}
+
+**Among the cheapest debts.** On average over {{< baisse-val "ze_lib" >}}, the French State paid {{< baisse-val "ze_fr_ti" >}}% interest on its debt, against {{< baisse-val "ze_med_ti" >}}% for the median country; only {{< baisse-val "ze_ti_moins_n" >}} euro-area countries paid a lower rate.
+
+**Among the weakest nominal growth.** French nominal GDP grew by {{< baisse-val "ze_fr_g" >}}% a year, against {{< baisse-val "ze_med_g" >}}% for the median country: the weakest growth in the euro area, tied, once rounded, with {{< baisse-val "ze_g_avec" >}}. A low rate and weak growth offset each other: the primary balance that would have stabilised the ratio, {{< baisse-val "ze_fr_stab" >}}% of GDP on average, is close to that of the median country ({{< baisse-val "ze_med_stab" >}}%).
+
+**The lowest primary balance.** The French primary balance averaged {{< baisse-val "ze_fr_pb" >}}% of GDP, against {{< baisse-val "ze_med_pb" >}}% for the median country: no other euro-area country had so low an average primary balance over the period.
+
+<div class="encadre">
+
+**What is established.** Over {{< baisse-val "ze_lib" >}}, what sets France apart in the euro area is neither the price of its debt, among the lowest, nor the balance that would stabilise it, close to the median country: it is its primary balance, the lowest in the area, together with nominal growth among the weakest.
+
+**What is not.** Whether the gap comes from spending rather than revenue, or the reverse: the primary balance does not separate them. Nor which adjustment would be desirable, nor whether it would have changed the rates paid.
+
+</div>
+
+**Adjusted for the cycle, the finding holds.** Computed by the European Commission net of cyclical effects, France's structural primary balance is also the lowest in the euro area over the same period: {{< baisse-val "ze_fr_sps" >}}% of potential GDP on average, against {{< baisse-val "ze_med_sps" >}}% for the median country (AMECO database, {{< baisse-val "ze_edition" >}} edition). This check plays no part in the calculation: it comes from another producer, and it rests on an estimate of potential GDP that the Commission revises from one edition to the next and that other institutions estimate differently.
+
+**Inflation masked the gap, not the balance.** Over the last five years ({{< baisse-val "ze_cinq_lib" >}}), inflation lowered every country's marker: France is no longer, on average, below its own ({{< baisse-val "ze_cinq_ecart" >}} points), and {{< baisse-val "ze_cinq_pire_n" >}} countries have a less favourable gap. Its primary balance nonetheless remains the lowest in the euro area, and its structural balance among the two lowest. Over the five years before 2020, France was the only euro-area country whose average primary balance stayed below the marker.
+
+<details class="repli"><summary>France in the euro area depending on the period chosen, and what the average gap does not add</summary>
+
+{{< baisse-tableau vue="zone-euro" >}}
+
+Annual averages, in % of GDP (of potential GDP for the structural balance); ranks read at the displayed precision, two countries displayed as equal being tied.
+
+**What the average gap does not add.** Over a period, the average gap between the observed balance and the marker equals, up to its sign and by construction, the rise in the ratio excluding other adjustments, divided by the number of years: it restates the change in debt, it does not confirm it. What cannot be deduced from it is the share due to interest rates and growth, the marker, and the share due to the primary balance: this is why the figure shows these quantities rather than the gap.
+
+The euro area is taken in its composition at 1 January 2026: Croatia joined in 2023, Bulgaria in 2026. The ranking for the last year alone depends on its economic conditions, hence the averages over several years.
+
+</details>
+
 ## Is French public debt sustainable? {#soutenable}
 
 No level of debt, on its own, settles this question. A debt is called sustainable when the State can service and refinance it without a budgetary adjustment beyond reach; that depends on its primary balance, on the gap between the interest rate it pays and nominal growth, and on the confidence of those who lend to it. The first two terms are measured here; the third is not.
@@ -236,8 +272,10 @@ This page decomposes the rise in the French debt ratio and the falls observed el
 
 Eurostat, general government (S.13), ESA 2010 accounts, in national currency: Maastricht debt and nominal GDP as published with the deficit and debt notification (`gov_10dd_edpt1`), interest paid and net lending or borrowing (`gov_10a_main`, D41PAY and B9); GDP in volume (`nama_10_gdp`, chain-linked volumes), to split nominal growth into volume and prices. The primary balance is the general government balance plus interest paid. The identity is the one set out in [Why does French public debt rise?](/en/why-does-public-debt-rise/#identite); annual terms are cumulated over ten years, from the end of the year before the decade to the end of its last year. A year's stabilising balance is that year's interest-growth effect, excluding other adjustments. Changes and totals are computed before rounding: displayed figures may differ by 0.1 points.
 
+Structural primary balance: European Commission, AMECO database, series UBLGBPS (general government balance excluding interest, adjusted for the cycle and one-off measures, in % of potential GDP), {{< baisse-val "ze_edition" >}} edition, an extract archived with its hash; it serves as a check and enters no calculation.
+
 Check: for each country and each year, the calculated debt ratio and primary balance are compared with those Eurostat publishes as a percentage of GDP, which the calculation does not use. Beyond a gap of {{< baisse-val "tolerance" >}} points, the year is excluded and counted ({{< baisse-val "cons_ecartees" >}} out of {{< baisse-val "cons_calculables" >}}, listed in the JSON file); for France and the compared countries, the script stops. A window containing a year of nominal growth above 35% (hyperinflation, series break) is excluded. The countries compared with France are designated by a rule, not chosen: debt above {{< baisse-val "seuil_dette" >}}% of GDP at end-{{< baisse-val "cmp_veille" >}}; the same calculation is redone at 80% and 100%. The figures computed from Eurostat series all come from the same script, which checks the main quantitative statements and stops if their conditions are no longer met; their wording is reviewed editorially. Figures attributed to the French Treasury, the Conseil d'analyse économique and the OFCE are given as they publish them.
 
-{{< reutiliser figures="figures_baisse" jeu="dette_baisse" sources="Eurostat" donnees="The decade-by-decade decomposition of the French debt-to-GDP ratio, the observed and stabilising primary balance (excluding other adjustments) year by year, and the same decomposition for the EU countries whose debt exceeded 90% of GDP; the same content exists as CSV, in long format." >}}
+{{< reutiliser figures="figures_baisse" jeu="dette_baisse" sources="Eurostat and European Commission (AMECO)" donnees="The decade-by-decade decomposition of the French debt-to-GDP ratio, the observed and stabilising primary balance (excluding other adjustments) year by year, the same decomposition for the EU countries whose debt exceeded 90% of GDP, and the averages for euro-area countries (primary balance, stabilising balance, implicit rate, nominal growth, AMECO structural balance); the same content exists as CSV, in long format." >}}
 From {{< baisse-val "d3_debut" >}} to {{< baisse-val "annee_fin" >}}, primary deficits added {{< baisse-val "d3_def_abs" >}} points of GDP to the French debt ratio, the interest-growth effect, concentrated in {{< baisse-val "d3_creux_lib" >}}, took off {{< baisse-val "d3_tc_abs" >}}, and other adjustments added {{< baisse-val "d3_sfa_abs" >}}: a rise of {{< baisse-val "d3_var_abs" >}} points. Among the {{< baisse-val "cmp_n" >}} EU countries whose debt exceeded {{< baisse-val "seuil_dette" >}}% of GDP at end-{{< baisse-val "cmp_veille" >}}, the ratio fell markedly in {{< baisse-val "cmp_exc_n" >}}, first through the interest-growth effect, about twice as strong as that of their primary surpluses. This is an accounting decomposition, not a causal attribution.
 {{< /reutiliser >}}

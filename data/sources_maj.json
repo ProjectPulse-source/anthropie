@@ -210,6 +210,15 @@
    "mode": "manuel", "pages": ["/inflation-et-dette-publique/", "/en/inflation-and-french-public-debt/"],
    "generateurs": ["update_dette_inflation.py"], "jeu": "data/dette_inflation.json",
    "cadence": "clos (épisode 2021-2023 ; aucune édition attendue)", "nature": "clos (épisode 2021-2023 ; aucune édition attendue)"
+  },
+  {
+   "id": "ameco-structurel", "producteur": "Commission européenne, DG ECFIN",
+   "objet": "AMECO, solde structurel hors intérêts (1.0.319.0.UBLGBPS), 27 pays : témoin de la section #zone-euro",
+   "mode": "manuel", "pages": ["/dette-publique-peut-elle-baisser/", "/en/can-public-debt-come-down/"],
+   "generateurs": ["update_dette_baisse.py"], "jeu": "data/dette_baisse.json",
+   "cadence": "deux éditions par an (prévisions de printemps en mai-juin, d'automne en novembre)",
+   "nature": "deux éditions par an : télécharger ameco0.zip, refaire l'extrait scripts/sources_dette/ameco_ublgbps_<date>.csv, mettre à jour AMECO, AMECO_SHA, AMECO_EDITION et SHA256SUMS",
+   "revoir_avant": "2026-11-30"
   }
  ]
 }

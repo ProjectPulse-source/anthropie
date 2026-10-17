@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 834" role="img" font-variant-numeric="tabular-nums" aria-labelledby="bz-m-t bz-m-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
+<title id="bz-m-t">Zone euro, 2016-2025 : taux, croissance et solde primaire de la France</title><desc id="bz-m-d">Moyennes annuelles 2016-2025, 19 pays de la zone euro, un point par pays, la France en orange. Taux implicite de la dette : France 1,74 %, pays médian 2,11 %. Croissance du PIB nominal : France 3,2 %, pays médian 5,5 %. Solde primaire : France −3,1 % du PIB, pays médian −0,7 %. La France a le solde primaire le plus bas, l'une des deux croissances nominales les plus faibles et l'un des taux les plus bas.</desc>
+<rect width="300" height="834" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Zone euro, 2016-2025 : taux,</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">croissance et solde primaire</text>
+<text x="0" y="64" font-size="17" font-weight="600" fill="#26262f">de la France</text>
+<circle cx="6" cy="101.0" r="5.5" fill="#eb6834"/>
+<text x="18" y="106.0" font-size="13.5" fill="#55524f">France</text>
+<circle cx="6" cy="121.0" r="5" fill="#8a8781" fill-opacity="0.6"/>
+<text x="18" y="126.0" font-size="13.5" fill="#55524f">autres pays de la zone euro</text>
+<line x1="6" y1="134.0" x2="6" y2="148.0" stroke="#26262f" stroke-width="2"/>
+<text x="18" y="146.0" font-size="13.5" fill="#55524f">pays médian</text>
+<text x="0" y="165.0" font-size="13.5" fill="#96928f">Moyennes annuelles 2016-2025</text>
+<line x1="0" y1="177.0" x2="300" y2="177.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="0" y="199.0" font-size="15" font-weight="600" fill="#26262f">Taux implicite de la dette</text>
+<text x="0" y="217.0" font-size="13.5" fill="#96928f">intérêts / dette, en %</text>
+<line x1="8" y1="239.0" x2="292" y2="239.0" stroke="#8f8a84" stroke-width="1"/>
+<circle cx="228.3" cy="239.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="203.3" cy="239.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="163.9" cy="239.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="166.3" cy="239.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="138.5" cy="239.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="19.7" cy="239.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="258.9" cy="239.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="284.6" cy="239.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="260.6" cy="239.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="209.1" cy="239.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="68.8" cy="239.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="193.2" cy="239.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="270.3" cy="239.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="87.5" cy="239.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="54.4" cy="239.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="116.4" cy="239.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="205.7" cy="239.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="160.0" cy="239.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<line x1="166.3" y1="231.0" x2="166.3" y2="247.0" stroke="#26262f" stroke-width="2"/>
+<circle cx="113.1" cy="239.0" r="6" fill="#eb6834" stroke="#ffffff" stroke-width="1"/>
+<text x="8.0" y="263.0" font-size="13.5" fill="#96928f" text-anchor="start">1,00 %</text>
+<text x="292.0" y="263.0" font-size="13.5" fill="#96928f" text-anchor="end">3,00 %</text>
+<text x="0" y="283.0" font-size="13.5" font-weight="600" fill="#26262f">France : 1,74 %</text>
+<text x="0" y="303.0" font-size="13.5" font-weight="600" fill="#26262f">Médiane : 2,11 %</text>
+<line x1="0" y1="315.0" x2="300" y2="315.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="0" y="337.0" font-size="15" font-weight="600" fill="#26262f">Croissance du PIB nominal</text>
+<text x="0" y="355.0" font-size="13.5" fill="#96928f">par an, en %</text>
+<line x1="8" y1="377.0" x2="292" y2="377.0" stroke="#8f8a84" stroke-width="1"/>
+<circle cx="109.9" cy="377.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="74.9" cy="377.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="69.4" cy="377.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="137.5" cy="377.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="56.3" cy="377.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="177.5" cy="377.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="16.5" cy="377.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="263.6" cy="377.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="286.1" cy="377.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="142.6" cy="377.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="40.8" cy="377.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="232.7" cy="377.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="191.8" cy="377.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="106.2" cy="377.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="97.1" cy="377.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="36.9" cy="377.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="114.5" cy="377.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="189.9" cy="377.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<line x1="109.9" y1="369.0" x2="109.9" y2="385.0" stroke="#26262f" stroke-width="2"/>
+<circle cx="15.3" cy="377.0" r="6" fill="#eb6834" stroke="#ffffff" stroke-width="1"/>
+<text x="8.0" y="401.0" font-size="13.5" fill="#96928f" text-anchor="start">3 %</text>
+<text x="292.0" y="401.0" font-size="13.5" fill="#96928f" text-anchor="end">10 %</text>
+<text x="0" y="421.0" font-size="13.5" font-weight="600" fill="#26262f">France : 3,2 %</text>
+<text x="0" y="441.0" font-size="13.5" font-weight="600" fill="#26262f">Médiane : 5,5 %</text>
+<line x1="0" y1="453.0" x2="300" y2="453.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="0" y="475.0" font-size="15" font-weight="600" fill="#26262f">Solde primaire</text>
+<text x="0" y="493.0" font-size="13.5" fill="#96928f">en % du PIB</text>
+<line x1="8" y1="515.0" x2="292" y2="515.0" stroke="#8f8a84" stroke-width="1"/>
+<circle cx="90.2" cy="515.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="92.6" cy="515.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="101.4" cy="515.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="104.3" cy="515.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="107.4" cy="515.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="113.0" cy="515.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="123.3" cy="515.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="125.8" cy="515.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="140.5" cy="515.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="151.4" cy="515.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="159.4" cy="515.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="160.5" cy="515.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="182.9" cy="515.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="187.1" cy="515.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="204.7" cy="515.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="231.9" cy="515.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="233.1" cy="515.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<circle cx="264.7" cy="515.0" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
+<line x1="140.5" y1="507.0" x2="140.5" y2="523.0" stroke="#26262f" stroke-width="2"/>
+<circle cx="46.2" cy="515.0" r="6" fill="#eb6834" stroke="#ffffff" stroke-width="1"/>
+<text x="8.0" y="539.0" font-size="13.5" fill="#96928f" text-anchor="start">−4 %</text>
+<text x="292.0" y="539.0" font-size="13.5" fill="#96928f" text-anchor="end">3 %</text>
+<text x="0" y="559.0" font-size="13.5" font-weight="600" fill="#26262f">France : −3,1 %</text>
+<text x="0" y="579.0" font-size="13.5" font-weight="600" fill="#26262f">Médiane : −0,7 %</text>
+<line x1="0" y1="591.0" x2="300" y2="591.0" stroke="#dcd8d3"/>
+<text class="pied-source" x="0" y="612.0" font-size="13.5" fill="#55524f">Eurostat gov_10dd_edpt1 (dette, PIB),</text>
+<text class="pied-source" x="0" y="629.0" font-size="13.5" fill="#55524f">gov_10a_main (B9, D41PAY), 2016-2025 ;</text>
+<text class="pied-source" x="0" y="646.0" font-size="13.5" fill="#55524f">membres de la zone euro au 1er janvier</text>
+<text class="pied-source" x="0" y="663.0" font-size="13.5" fill="#55524f">2026, hors Finlande et Irlande (années</text>
+<text class="pied-source" x="0" y="680.0" font-size="13.5" fill="#55524f">rejetées par le contrôle)</text>
+<text class="pied-note" x="0" y="701.0" font-size="13.5" fill="#55524f">Comparaison comptable : elle ne dit ni</text>
+<text class="pied-note" x="0" y="718.0" font-size="13.5" fill="#55524f">si l'écart vient des dépenses ou des</text>
+<text class="pied-note" x="0" y="735.0" font-size="13.5" fill="#55524f">recettes, ni quel ajustement serait</text>
+<text class="pied-note" x="0" y="752.0" font-size="13.5" fill="#55524f">souhaitable. Taux implicite = intérêts</text>
+<text class="pied-note" x="0" y="769.0" font-size="13.5" fill="#55524f">payés / dette de fin d'année</text>
+<text class="pied-note" x="0" y="786.0" font-size="13.5" fill="#55524f">précédente.</text>
+<text class="pied-licence" x="0" y="807.0" font-size="13.5" fill="#96928f">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="824.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
+</svg>

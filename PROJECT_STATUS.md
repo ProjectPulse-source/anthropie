@@ -52,6 +52,22 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-17 — Dette, volet 5 : « Dans la zone euro, ce qui distingue la France » (#zone-euro), piste 2 de l'arbitrage anthropie-site-20261017-005433
+
+Sous-section de `/dette-publique-peut-elle-baisser/` (FR et EN). Test décisif préalable dans
+`D:\PRO_RECHERCHE\dette_ressources_pistes\piste2\` (fiche de conception, scénarios, résultats). Sur 2016-2025, le taux
+implicite français est parmi les plus bas de la zone euro, le repère dans la moyenne, la croissance nominale la plus
+faible (à égalité avec l'Italie à l'arrondi) et le solde primaire le plus bas. Le témoin indépendant, le solde primaire
+structurel AMECO (`scripts/sources_dette/ameco_ublgbps_2026-06-02.csv`, empreinte contrôlée, registre `ameco-structurel`
+en mode manuel, à revoir avant le 30/11/2026), est le plus bas aussi. Constat à ne pas surinterpréter : l'écart à 2025
+seul dépend de la fenêtre (2021-2025 : +0,1 point, rang 5), ce que la page dit, et l'écart moyen sur une période n'est que
+la variation du ratio hors autres ajustements (repli). `update_dette_baisse.py` : 15 gardes nouvelles (82 au total), dont
+une vue mordre (`--mutation-ze`), et une ayant mordu pendant l'écriture (« croissance la plus faible » sans ex aequo, fausse
+à l'affichage, phrase réécrite) ; figure `dette-baisse-zone-euro` (SVG, PNG, `-m`, FR et EN) ; vue `zone-euro` de
+`baisse-tableau`. Contrôles : build `$?` 0, `check-all --ci` 0, `audit-liens-build` 0, rendu et dates conformes, instantanés
+de relecture refaits après relecture du texte servi, recette 390 px (FR et EN). **Reste** : contre-expertise de la page
+construite (règle 12), accord de l'auteur, push.
+
 ### 2026-10-17 — Page tabula rasa révisée (avis entrant) et mise au standard des ressources
 
 Avis `ENTRANTE-2026-10-17-TABULA-RASA` accepté (arbitrage `D:\PRO\06_PROMOTION\PISTE_ODYSSEE_NOTIONS_2026-10-17\ARBITRAGE_AVIS_PAGE_TABULA_RASA.md`) :

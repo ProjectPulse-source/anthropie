@@ -1,4 +1,4 @@
-# relu le 2026-10-16 ; texte servi de /dette-publique-peut-elle-baisser/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-17 ; texte servi de /dette-publique-peut-elle-baisser/, build de 8f84c86 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 La dette publique peut-elle baisser ?
 Oui : ce qui peut baisser, c'est le poids de la dette dans le PIB, même quand son montant augmente.
@@ -8,7 +8,7 @@ Page mise à jour le 16 octobre 2026 · révisions
 Dossier dette publique
 Données · Eurostat 2025
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
-Données mises à jour le 15 octobre 2026 Administrations publiques, séries Eurostat de 1996 à 2025.
+Données mises à jour le 16 octobre 2026 Administrations publiques, séries Eurostat de 1996 à 2025.
 Télécharger : CSV · JSON · méthode
 Le poids de la dette, pas son montant
 Le ratio de dette rapporte ce que doivent les administrations publiques à la richesse produite en un an, le produit intérieur brut (PIB), mesuré en euros courants, dit nominal.
@@ -246,6 +246,72 @@ Le ratio a effectivement baissé neuf de ces années ; en 1998 et 2007, il a aug
 La France n’a dégagé un excédent primaire que quatre fois, de 1998 à 2001, au plus 1,65 % du PIB.
 Stabiliser le ratio et le faire baisser sont deux objectifs distincts.
 Un montant d’ajustement se lit avec son objectif, son horizon et ses hypothèses ; le repère calculé ici pour 2025 vaut pour cette année-là et ne permet pas d’évaluer les estimations pluriannuelles des institutions.
+Dans la zone euro, ce qui distingue la France
+Le même calcul, mené sur les membres actuels de la zone euro, sépare ce que l’écart au repère, à lui seul, confond : le prix de la dette, la croissance de l’économie et le solde primaire.
+Sur 2016-2025, 19 des 21 pays ont des comptes complets ; la Finlande et l'Irlande sont hors du calcul, une de leurs années au moins s’éloignant des ratios publiés par Eurostat.
+Taux implicite, croissance nominale et solde primaire, moyennes annuelles 2016-2025, pays de la zone euro (Eurostat, calcul de l’auteur).
+Une dette parmi les moins chères.
+En moyenne sur 2016-2025, l’État français a payé 1,74 % d’intérêts sur sa dette, contre 2,11 % pour le pays médian ; seuls quatre pays de la zone euro ont payé un taux moins élevé.
+Une croissance nominale parmi les plus faibles.
+Le PIB nominal français a progressé de 3,2 % par an, contre 5,5 % pour le pays médian : c’est la croissance la plus faible de la zone euro, à égalité, à l’arrondi, avec l'Italie.
+Un taux bas et une croissance faible se compensent : le solde primaire qui aurait stabilisé le ratio, −1,5 % du PIB en moyenne, est proche de celui du pays médian (−1,8 %).
+Le solde primaire le plus bas.
+Le solde primaire français a été de −3,1 % du PIB en moyenne, contre −0,7 % pour le pays médian : aucun autre pays de la zone euro n’a eu, sur la période, un solde primaire moyen aussi bas.
+Ce qui est établi.
+Sur 2016-2025, ce qui distingue la France dans la zone euro n’est ni le prix de sa dette, parmi les plus bas, ni le solde qui la stabiliserait, proche du pays médian : c’est son solde primaire, le plus bas de la zone, avec une croissance nominale parmi les plus faibles.
+Ce qui ne l’est pas.
+Que l’écart vienne des dépenses plutôt que des recettes, ou l’inverse : le solde primaire ne les sépare pas.
+Ni quel ajustement serait souhaitable, ni s’il aurait changé les taux payés.
+Corrigé de la conjoncture, le constat demeure.
+Calculé par la Commission européenne hors effets du cycle, le solde primaire structurel de la France est lui aussi le plus bas de la zone euro sur la même période : −2,4 % du PIB potentiel en moyenne, contre −0,8 % pour le pays médian (base AMECO, édition de printemps 2026).
+Ce témoin n’entre pas dans le calcul : il vient d’un autre producteur, et il repose sur une estimation du PIB potentiel que la Commission révise d’une édition à l’autre et que d’autres institutions estiment autrement.
+L’inflation a masqué l’écart, pas le solde.
+Sur les cinq dernières années (2021-2025), l’inflation a abaissé le repère de tous les pays : la France n’est plus, en moyenne, sous le sien (+0,1 point), et quatre pays ont un écart plus défavorable.
+Son solde primaire reste pourtant le plus bas de la zone euro, et son solde structurel parmi les deux plus bas.
+Sur les cinq années qui ont précédé 2020, la France était le seul pays de la zone euro dont le solde primaire moyen restait sous le repère.
+La France dans la zone euro selon la période retenue, et ce que l'écart moyen n'ajoute pas
+Période
+Pays comparés
+Solde primaire (rang du plus bas)
+Solde stabilisant
+Écart au repère (rang du plus bas)
+Solde structurel, AMECO (rang du plus bas)
+2016-2025
+19
+−3,1 (1)
+−1,5
+−1,5 (1)
+−2,4 (1)
+2021-2025
+19
+−3,6 (1)
+−3,7
++0,1 (5)
+−3,2 (2)
+2025
+20
+−2,9 (1, ex aequo)
+0,0
+−2,9 (1)
+−2,5 (4)
+2015-2019
+21
+−1,3 (1)
+−0,5
+−0,8 (1)
+−1,1 (1)
+2010-2019
+21
+−2,1 (3)
+0,0
+−2,2 (3, ex aequo)
+−1,5 (1)
+Moyennes annuelles, en % du PIB (du PIB potentiel pour le solde structurel) ; rangs lus à la précision affichée, deux pays affichés à égalité étant ex aequo.
+Ce que l’écart moyen n’ajoute pas.
+Sur une période, l’écart moyen entre le solde observé et le repère est égal, au signe près et par construction, à la hausse du ratio hors autres ajustements, divisée par le nombre d’années : il redit la variation de la dette, il ne la confirme pas.
+Ce qui ne s’en déduit pas, c’est la part qui tient aux taux et à la croissance, le repère, et celle qui tient au solde primaire : c’est pourquoi la figure montre ces grandeurs plutôt que l’écart.
+La zone euro est prise dans sa composition au 1er janvier 2026 : la Croatie y est entrée en 2023, la Bulgarie en 2026.
+Le classement de la dernière année seule dépend de sa conjoncture, d’où les moyennes sur plusieurs années.
 La dette française est-elle soutenable ?
 Aucun niveau de dette, à lui seul, ne tranche cette question.
 Une dette est dite soutenable quand l’État peut la servir et la refinancer sans un ajustement budgétaire hors de portée ; cela dépend de son solde primaire, de l’écart entre le taux qu’il paie et la croissance nominale, et de la confiance de ceux qui lui prêtent.
@@ -385,6 +451,7 @@ Le solde primaire est le solde des administrations publiques augmenté des inté
 L’identité est celle du volet Pourquoi la dette publique augmente-t-elle ? ; les termes annuels sont cumulés sur dix ans, de la fin de l’année qui précède la décennie à la fin de sa dernière année.
 Le solde stabilisant d’une année est l’effet taux-croissance de cette année, hors autres ajustements.
 Les variations et totaux sont calculés avant arrondi : les nombres affichés peuvent présenter un écart de 0,1 point.
+Solde primaire structurel : Commission européenne, base AMECO, série UBLGBPS (solde des administrations publiques hors intérêts, corrigé du cycle et des mesures ponctuelles, en % du PIB potentiel), édition de printemps 2026, extrait archivé avec son empreinte ; il sert de témoin et n’entre dans aucun calcul.
 Contrôle : pour chaque pays et chaque année, le ratio de dette et le solde primaire calculés sont comparés à ceux qu’Eurostat publie en pourcentage du PIB, que le calcul n’utilise pas.
 Au-delà de 0,11 point d’écart, l’année est écartée et comptée (dix sur 805, listées dans le fichier JSON) ; pour la France et les pays comparés, le script s’arrête.
 Une fenêtre qui contient une année de croissance nominale supérieure à 35 % (hyperinflation, rupture de série) est écartée.
@@ -419,9 +486,17 @@ Un repère comptable de l'année, non un objectif.
 Eurostat gov_10dd_edpt1 (dette, PIB), gov_10a_main (B9, D41PAY), France, 1996-2025
 Télécharger en PNG
 SVG
+Zone euro, 2016-2025 : taux, croissance et solde primaire de la France
+Dans la zone euro, la France emprunte parmi les moins cher ; ce qui la distingue est une croissance nominale parmi les plus faibles et le solde primaire le plus bas.
+Précaution d'interprétation.
+Comparaison comptable : elle ne dit ni si l'écart vient des dépenses ou des recettes, ni quel ajustement serait souhaitable.
+Taux implicite = intérêts payés / dette de fin d'année précédente.
+Eurostat gov_10dd_edpt1 (dette, PIB), gov_10a_main (B9, D41PAY), 2016-2025 ; membres de la zone euro au 1er janvier 2026, hors Finlande et Irlande (années rejetées par le contrôle)
+Télécharger en PNG
+SVG
 Citer cette page
 Lalut, Stéphane (2026). « La dette publique peut-elle baisser ? ».
-Données Eurostat, relevé du 15 octobre 2026. https://stephane-lalut.com/dette-publique-peut-elle-baisser/
+Données Eurostat et Commission européenne (AMECO), relevé du 16 octobre 2026. https://stephane-lalut.com/dette-publique-peut-elle-baisser/
 Copier la citation
 En trois phrases
 De 2016 à 2025, les déficits primaires ont ajouté 30,6 points de PIB au ratio de dette français, l’effet des taux et de la croissance, concentré en 2021-2023, en a retiré 15,1, et les autres ajustements en ont ajouté 3,1 : une hausse de 18,6 points.
@@ -429,11 +504,11 @@ Parmi les sept pays de l’Union dont la dette dépassait 90 % du PIB fin 2015, 
 C’est une décomposition comptable, non une attribution causale.
 Copier le résumé
 Les données
-La décomposition par décennie du ratio dette/PIB français, le solde primaire observé et le solde stabilisant hors autres ajustements année par année, et la même décomposition pour les pays de l'Union dont la dette dépassait 90 % du PIB ; le même contenu existe en CSV, au format long.
+La décomposition par décennie du ratio dette/PIB français, le solde primaire observé et le solde stabilisant hors autres ajustements année par année, la même décomposition pour les pays de l'Union dont la dette dépassait 90 % du PIB, et les moyennes des pays de la zone euro (solde primaire, solde stabilisant, taux implicite, croissance nominale, solde structurel AMECO) ; le même contenu existe en CSV, au format long.
 Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
 Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
-Les séries brutes appartiennent à leurs producteurs (Eurostat), sous leurs propres conditions.
+Les séries brutes appartiennent à leurs producteurs (Eurostat et Commission européenne (AMECO)), sous leurs propres conditions.
 Vous enseignez les SES ?
 Activités, figures et données prêtes pour la classe →
 Révisions

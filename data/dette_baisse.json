@@ -1,8 +1,8 @@
 {
- "releve_le": "2026-10-15",
+ "releve_le": "2026-10-16",
  "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; source Eurostat",
  "meta": {
-  "releve_le": "2026-10-15",
+  "releve_le": "2026-10-16",
   "page": "https://stephane-lalut.com/dette-publique-peut-elle-baisser/",
   "licence": "CC BY 4.0",
   "perimetre": "administrations publiques (S.13), SEC 2010, monnaie nationale, PIB de la notification de déficit et de dette",
@@ -12,6 +12,7 @@
    "deficits_primaires": "déficits hors intérêts cumulés, en points de PIB (négatif : excédents)",
    "flux_stock": "variation de dette qui ne passe pas par le déficit ; résidu de l'identité",
    "solde_stabilisant": "solde primaire qui aurait laissé le ratio inchangé cette année-là, hors flux-stock : (i - g)/(1 + g) x d(t-1)",
+   "zone_euro": "membres de la zone euro au 1er janvier 2026 ; moyennes annuelles par fenêtre ; solde_structurel = AMECO UBLGBPS (Commission européenne, édition printemps 2026, % du PIB potentiel), témoin indépendant non utilisé dans le calcul",
    "temoin": "ratios de dette et de solde primaire comparés à ceux publiés par Eurostat en % du PIB ; tolérance 0.11 point"
   }
  },
@@ -32,13 +33,13 @@
     "solde_primaire_moyen": 0.24630370229713897,
     "annees_excedent": 4,
     "croissance_max": 5.617253510021869,
-    "croissance_nominale_moyenne": 3.800871506358463,
+    "croissance_nominale_moyenne": 3.8008715063584626,
     "encours_depart": 701.6383000000001,
     "encours_fin": 1201.4706999999999,
-    "taux_implicite_moyen": 5.250985471353991,
+    "taux_implicite_moyen": 5.250985471353992,
     "dette_moyenne": 61.64474952490981,
     "croissance_volume_moyenne": 2.360890469358854,
-    "prix_moyen": 1.4102223294424343
+    "prix_moyen": 1.410222329442434
    },
    {
     "pays": "FR",
@@ -51,7 +52,7 @@
     "croissance": -17.310437367182782,
     "taux_croissance": 7.845347495718105,
     "deficits_primaires": 22.403802666557286,
-    "flux_stock": -1.4573974834077101,
+    "flux_stock": -1.4573974834077097,
     "solde_primaire_moyen": -2.2403802666557286,
     "annees_excedent": 0,
     "croissance_max": 4.9758372196199385,
@@ -59,9 +60,9 @@
     "encours_depart": 1201.4706999999999,
     "encours_fin": 2134.871,
     "taux_implicite_moyen": 3.2835781249497673,
-    "dette_moyenne": 81.04298245615932,
+    "dette_moyenne": 81.04298245615934,
     "croissance_volume_moyenne": 1.0268247063889446,
-    "prix_moyen": 1.2265254223180522
+    "prix_moyen": 1.2265254223180524
    },
    {
     "pays": "FR",
@@ -72,7 +73,7 @@
     "variation": 18.573917338207508,
     "interets": 17.722941621328765,
     "croissance": -32.82968251172923,
-    "taux_croissance": -15.106740890400463,
+    "taux_croissance": -15.106740890400461,
     "deficits_primaires": 30.593378922457113,
     "flux_stock": 3.087279306150857,
     "solde_primaire_moyen": -3.0593378922457113,
@@ -83,8 +84,8 @@
     "encours_fin": 3460.4651,
     "taux_implicite_moyen": 1.7401729771887986,
     "dette_moyenne": 105.17761495578172,
-    "croissance_volume_moyenne": 1.271740800833833,
-    "prix_moyen": 1.8962914946568035
+    "croissance_volume_moyenne": 1.2717408008338327,
+    "prix_moyen": 1.896291494656803
    }
   ],
   "annees": [
@@ -490,19 +491,19 @@
    "variation": -56.561744807395094,
    "interets": 18.2538358378738,
    "croissance": -64.49062774236967,
-   "taux_croissance": -46.23679190449586,
+   "taux_croissance": -46.23679190449587,
    "deficits_primaires": -23.26348675047568,
-   "flux_stock": 12.93853384757645,
+   "flux_stock": 12.938533847576448,
    "solde_primaire_moyen": 2.326348675047568,
    "annees_excedent": 8,
    "croissance_max": 15.44203832569442,
    "croissance_nominale_moyenne": 7.482469216672632,
    "encours_depart": 20.024900000000002,
    "encours_fin": 20.078200000000002,
-   "taux_implicite_moyen": 2.070724656082849,
-   "dette_moyenne": 93.20080162769442,
+   "taux_implicite_moyen": 2.0707246560828496,
+   "dette_moyenne": 93.2008016276944,
    "croissance_volume_moyenne": 5.27219633478493,
-   "prix_moyen": 2.064698580068854,
+   "prix_moyen": 2.0646985800688546,
    "nom": "Chypre"
   },
   {
@@ -523,7 +524,7 @@
    "croissance_nominale_moyenne": 5.624625054258081,
    "encours_depart": 235.0461,
    "encours_fin": 275.0628,
-   "taux_implicite_moyen": 2.392182735480075,
+   "taux_implicite_moyen": 2.3921827354800747,
    "dette_moyenne": 118.50144426155123,
    "croissance_volume_moyenne": 2.303220097109051,
    "prix_moyen": 3.228569937816972,
@@ -537,10 +538,10 @@
    "dette_fin": 146.13213397005887,
    "variation": -33.48785428287931,
    "interets": 30.613660441291152,
-   "croissance": -60.98450774161922,
-   "taux_croissance": -30.37084730032807,
+   "croissance": -60.984507741619225,
+   "taux_croissance": -30.370847300328066,
    "deficits_primaires": -15.197535827243957,
-   "flux_stock": 12.080528844692715,
+   "flux_stock": 12.080528844692713,
    "solde_primaire_moyen": 1.5197535827243958,
    "annees_excedent": 7,
    "croissance_max": 12.154408776919956,
@@ -560,18 +561,18 @@
    "dette_depart": 102.48520851577389,
    "dette_fin": 100.65628941553577,
    "variation": -1.8289191002381244,
-   "interets": 23.85366694147405,
-   "croissance": -46.35854206921622,
-   "taux_croissance": -22.504875127742174,
+   "interets": 23.853666941474053,
+   "croissance": -46.35854206921623,
+   "taux_croissance": -22.50487512774217,
    "deficits_primaires": 19.146279254105046,
-   "flux_stock": 1.5296767733990004,
+   "flux_stock": 1.5296767733990007,
    "solde_primaire_moyen": -1.9146279254105045,
    "annees_excedent": 0,
    "croissance_max": 11.363169115659243,
-   "croissance_nominale_moyenne": 4.649004146406493,
+   "croissance_nominale_moyenne": 4.649004146406494,
    "encours_depart": 1114.129,
    "encours_fin": 1698.2246,
-   "taux_implicite_moyen": 2.3752127219891945,
+   "taux_implicite_moyen": 2.375212721989195,
    "dette_moyenne": 105.42878527649597,
    "croissance_volume_moyenne": 2.0905127585380443,
    "prix_moyen": 2.480561092049016,
@@ -585,18 +586,18 @@
    "dette_fin": 107.85736726211977,
    "variation": 2.1647230274168123,
    "interets": 20.94037432945369,
-   "croissance": -44.74790779335998,
-   "taux_croissance": -23.807533463906292,
-   "deficits_primaires": 16.972935565799048,
+   "croissance": -44.747907793359985,
+   "taux_croissance": -23.807533463906296,
+   "deficits_primaires": 16.97293556579905,
    "flux_stock": 8.999320925524056,
-   "solde_primaire_moyen": -1.6972935565799048,
+   "solde_primaire_moyen": -1.6972935565799052,
    "annees_excedent": 3,
    "croissance_max": 10.993243318014589,
    "croissance_nominale_moyenne": 4.512741445082419,
    "encours_depart": 439.19309999999996,
    "encours_fin": 692.4608000000001,
    "taux_implicite_moyen": 2.0978355649729807,
-   "dette_moyenne": 104.18335272747026,
+   "dette_moyenne": 104.18335272747024,
    "croissance_volume_moyenne": 1.5894445475823282,
    "prix_moyen": 2.8611840706768943,
    "nom": "Belgique"
@@ -609,10 +610,10 @@
    "dette_fin": 137.1045540337549,
    "variation": 2.3140978158906194,
    "interets": 36.885898201886356,
-   "croissance": -42.145202086458305,
-   "taux_croissance": -5.259303884571944,
+   "croissance": -42.1452020864583,
+   "taux_croissance": -5.259303884571945,
    "deficits_primaires": 11.582735771433939,
-   "flux_stock": -4.009334070971375,
+   "flux_stock": -4.0093340709713745,
    "solde_primaire_moyen": -1.1582735771433939,
    "annees_excedent": 6,
    "croissance_max": 10.328998254443578,
@@ -621,8 +622,8 @@
    "encours_fin": 3095.8876,
    "taux_implicite_moyen": 2.7668196388420503,
    "dette_moyenne": 137.81122488618956,
-   "croissance_volume_moyenne": 1.281850755299557,
-   "prix_moyen": 1.9018541236526842,
+   "croissance_volume_moyenne": 1.2818507552995573,
+   "prix_moyen": 1.901854123652684,
    "nom": "Italie"
   },
   {
@@ -634,7 +635,7 @@
    "variation": 18.573917338207508,
    "interets": 17.722941621328765,
    "croissance": -32.82968251172923,
-   "taux_croissance": -15.106740890400463,
+   "taux_croissance": -15.106740890400461,
    "deficits_primaires": 30.593378922457113,
    "flux_stock": 3.087279306150857,
    "solde_primaire_moyen": -3.0593378922457113,
@@ -645,8 +646,8 @@
    "encours_fin": 3460.4651,
    "taux_implicite_moyen": 1.7401729771887986,
    "dette_moyenne": 105.17761495578172,
-   "croissance_volume_moyenne": 1.271740800833833,
-   "prix_moyen": 1.8962914946568035,
+   "croissance_volume_moyenne": 1.2717408008338327,
+   "prix_moyen": 1.896291494656803,
    "nom": "France"
   }
  ],
@@ -730,7 +731,7 @@
      "nom": "Slovénie",
      "dette_depart": 83.41815196693501,
      "variation": -17.698053564694575,
-     "solde_primaire_moyen": -0.4646833536982486
+     "solde_primaire_moyen": -0.4646833536982487
     },
     {
      "pays": "AT",
@@ -751,7 +752,7 @@
      "nom": "Belgique",
      "dette_depart": 105.69264423470295,
      "variation": 2.1647230274168123,
-     "solde_primaire_moyen": -1.6972935565799048
+     "solde_primaire_moyen": -1.6972935565799052
     },
     {
      "pays": "IT",
@@ -802,7 +803,7 @@
      "nom": "Belgique",
      "dette_depart": 105.69264423470295,
      "variation": 2.1647230274168123,
-     "solde_primaire_moyen": -1.6972935565799048
+     "solde_primaire_moyen": -1.6972935565799052
     },
     {
      "pays": "IT",
@@ -812,6 +813,1028 @@
      "solde_primaire_moyen": -1.1582735771433939
     }
    ]
+  }
+ },
+ "zone_euro": {
+  "an": {
+   "debut": 2025,
+   "fin": 2025,
+   "n": 20,
+   "n_structurel": 20,
+   "pays": [
+    {
+     "pays": "BE",
+     "solde_primaire": -2.9499296979371046,
+     "solde_stabilisant": -1.3527834354136767,
+     "ecart": -1.5971462625234278,
+     "taux_implicite": 2.216971598510149,
+     "croissance_nominale": 3.56517021788334,
+     "solde_structurel": -2.64783
+    },
+    {
+     "pays": "SK",
+     "solde_primaire": -2.901334729511248,
+     "solde_stabilisant": -1.308833421007958,
+     "ecart": -1.5925013085032902,
+     "taux_implicite": 2.725420275089149,
+     "croissance_nominale": 5.027974579037298,
+     "solde_structurel": -2.71167
+    },
+    {
+     "pays": "FR",
+     "solde_primaire": -2.8675411130140818,
+     "solde_stabilisant": -0.012636080044023945,
+     "ecart": -2.854905032970058,
+     "taux_implicite": 2.015546006261704,
+     "croissance_nominale": 2.026992037437525,
+     "solde_structurel": -2.49595
+    },
+    {
+     "pays": "BG",
+     "solde_primaire": -2.722846309590815,
+     "solde_stabilisant": -1.4900279912964676,
+     "ecart": -1.2328183182943473,
+     "taux_implicite": 3.8179277652550954,
+     "croissance_nominale": 10.739143548744279,
+     "solde_structurel": -3.32404
+    },
+    {
+     "pays": "AT",
+     "solde_primaire": -2.5735892030818253,
+     "solde_stabilisant": -1.3077322315312043,
+     "ecart": -1.265856971550621,
+     "taux_implicite": 2.092336915401577,
+     "croissance_nominale": 3.7898947474091615,
+     "solde_structurel": -1.95832
+    },
+    {
+     "pays": "LU",
+     "solde_primaire": -1.6262015270074786,
+     "solde_stabilisant": -0.6450701222501795,
+     "ecart": -0.9811314047572991,
+     "taux_implicite": 1.3260830193346616,
+     "croissance_nominale": 3.8769881283773566,
+     "solde_structurel": 0.11074
+    },
+    {
+     "pays": "HR",
+     "solde_primaire": -1.6096782902088838,
+     "solde_stabilisant": -2.9646830174262107,
+     "ecart": 1.355004727217327,
+     "taux_implicite": 2.6369612856099343,
+     "croissance_nominale": 8.229885967322126,
+     "solde_structurel": -2.29031
+    },
+    {
+     "pays": "DE",
+     "solde_primaire": -1.5571454458814606,
+     "solde_stabilisant": -0.8537085708429515,
+     "ecart": -0.7034368750385092,
+     "taux_implicite": 1.8391677090497862,
+     "croissance_nominale": 3.2557398180167674,
+     "solde_structurel": -0.69038
+    },
+    {
+     "pays": "EE",
+     "solde_primaire": -1.496847729981163,
+     "solde_stabilisant": -0.5146084684693748,
+     "ecart": -0.9822392615117883,
+     "taux_implicite": 2.1597117533224277,
+     "croissance_nominale": 4.449692203063171,
+     "solde_structurel": -0.30729
+    },
+    {
+     "pays": "LV",
+     "solde_primaire": -1.43540447448299,
+     "solde_stabilisant": -1.4459044207999583,
+     "ecart": 0.010499946316968378,
+     "taux_implicite": 2.5306491503337503,
+     "croissance_nominale": 5.839521995065455,
+     "solde_structurel": -1.41309
+    },
+    {
+     "pays": "SI",
+     "solde_primaire": -1.2578348669668673,
+     "solde_stabilisant": -1.6131380651300984,
+     "ecart": 0.3553031981632311,
+     "taux_implicite": 2.0102736894789643,
+     "croissance_nominale": 4.5508550374454115,
+     "solde_structurel": -1.33655
+    },
+    {
+     "pays": "MT",
+     "solde_primaire": -1.0005208079032597,
+     "solde_stabilisant": -1.4723965470125344,
+     "ecart": 0.4718757391092747,
+     "taux_implicite": 2.8189170613213315,
+     "croissance_nominale": 6.226039149921991,
+     "solde_structurel": -0.60367
+    },
+    {
+     "pays": "LT",
+     "solde_primaire": -0.9304754444681811,
+     "solde_stabilisant": -1.4782317079788323,
+     "ecart": 0.5477562635106512,
+     "taux_implicite": 2.5079854095398137,
+     "croissance_nominale": 6.660826723310742,
+     "solde_structurel": -0.68415
+    },
+    {
+     "pays": "NL",
+     "solde_primaire": -0.8816761597276037,
+     "solde_stabilisant": -1.4295915556937442,
+     "ecart": 0.5479153959661405,
+     "taux_implicite": 1.7301524269175552,
+     "croissance_nominale": 5.163867992578086,
+     "solde_structurel": -0.42602
+    },
+    {
+     "pays": "ES",
+     "solde_primaire": -0.0009483437176970421,
+     "solde_stabilisant": -3.202787449847608,
+     "ecart": 3.2018391061299107,
+     "taux_implicite": 2.487638017506643,
+     "croissance_nominale": 5.82200673637201,
+     "solde_structurel": -0.7625
+    },
+    {
+     "pays": "IT",
+     "solde_primaire": 0.7867412248460363,
+     "solde_stabilisant": 0.5167445929989141,
+     "ecart": 0.2699966318471222,
+     "taux_implicite": 2.9371715394663593,
+     "croissance_nominale": 2.543901285322381,
+     "solde_structurel": 0.20936
+    },
+    {
+     "pays": "IE",
+     "solde_primaire": 2.2629674948546503,
+     "solde_stabilisant": -4.086409300187566,
+     "ecart": 6.349376795042216,
+     "taux_implicite": 1.3775728888534282,
+     "croissance_nominale": 13.484378481512426,
+     "solde_structurel": -0.27514
+    },
+    {
+     "pays": "PT",
+     "solde_primaire": 2.6153853676505348,
+     "solde_stabilisant": -3.230546389449656,
+     "ecart": 5.845931757100191,
+     "taux_implicite": 2.2017195154408293,
+     "croissance_nominale": 5.859944793420491,
+     "solde_structurel": 2.55651
+    },
+    {
+     "pays": "CY",
+     "solde_primaire": 4.545342415064344,
+     "solde_stabilisant": -1.8037308182588843,
+     "ecart": 6.349073233323229,
+     "taux_implicite": 1.910734587596729,
+     "croissance_nominale": 4.927495383978253,
+     "solde_structurel": 3.02369
+    },
+    {
+     "pays": "EL",
+     "solde_primaire": 4.88455994266249,
+     "solde_stabilisant": -4.054650631871636,
+     "ecart": 8.939210574534126,
+     "taux_implicite": 2.1484310781337337,
+     "croissance_nominale": 4.907576371992439,
+     "solde_structurel": 3.64353
+    }
+   ],
+   "ecartes": [
+    {
+     "pays": "FI",
+     "annees": [
+      2025
+     ]
+    }
+   ],
+   "medianes": {
+    "solde_primaire": -1.3466196707249285,
+    "solde_stabilisant": -1.4591504839062464,
+    "ecart": 0.31264991500517664,
+    "taux_implicite": 2.1807156343816283,
+    "croissance_nominale": 4.977734981507775,
+    "solde_structurel": -0.687265
+   }
+  },
+  "cinq": {
+   "debut": 2021,
+   "fin": 2025,
+   "n": 19,
+   "n_structurel": 19,
+   "pays": [
+    {
+     "pays": "FR",
+     "solde_primaire": -3.6156917449834816,
+     "solde_stabilisant": -3.7039721712218943,
+     "ecart": 0.0882804262384127,
+     "taux_implicite": 1.7734423532780628,
+     "croissance_nominale": 5.277302930788568,
+     "solde_structurel": -3.223798
+    },
+    {
+     "pays": "MT",
+     "solde_primaire": -3.4013221006043954,
+     "solde_stabilisant": -3.8616920279985343,
+     "ecart": 0.46036992739413884,
+     "taux_implicite": 2.457911265397498,
+     "croissance_nominale": 11.42077127419606,
+     "solde_structurel": -3.137826
+    },
+    {
+     "pays": "SK",
+     "solde_primaire": -3.103617899213072,
+     "solde_stabilisant": -2.9159769486685354,
+     "ecart": -0.18764095054453644,
+     "taux_implicite": 2.3022618682889724,
+     "croissance_nominale": 7.744076479868501,
+     "solde_structurel": -3.3035799999999993
+    },
+    {
+     "pays": "LV",
+     "solde_primaire": -2.955663141628241,
+     "solde_stabilisant": -2.5366311439222953,
+     "ecart": -0.4190319977059458,
+     "taux_implicite": 1.8879265629896138,
+     "croissance_nominale": 8.0949977389864,
+     "solde_structurel": -2.97363
+    },
+    {
+     "pays": "AT",
+     "solde_primaire": -2.829420509692481,
+     "solde_stabilisant": -3.3995840120543255,
+     "ecart": 0.5701635023618445,
+     "taux_implicite": 1.6785949555837334,
+     "croissance_nominale": 6.1917216288719015,
+     "solde_structurel": -2.663396
+    },
+    {
+     "pays": "BE",
+     "solde_primaire": -2.597474433364246,
+     "solde_stabilisant": -4.787856126871543,
+     "ecart": 2.1903816935072973,
+     "taux_implicite": 1.9345874209148177,
+     "croissance_nominale": 6.766514043231671,
+     "solde_structurel": -2.488404
+    },
+    {
+     "pays": "BG",
+     "solde_primaire": -2.5550202037533447,
+     "solde_stabilisant": -2.238617181307492,
+     "ecart": -0.3164030224458525,
+     "taux_implicite": 2.595499726125988,
+     "croissance_nominale": 13.475891511660413,
+     "solde_structurel": -2.933274
+    },
+    {
+     "pays": "IT",
+     "solde_primaire": -2.3317734794480183,
+     "solde_stabilisant": -4.6442411694254115,
+     "ecart": 2.3124676899773933,
+     "taux_implicite": 2.8421214586453116,
+     "croissance_nominale": 6.264691004765983,
+     "solde_structurel": -2.919608
+    },
+    {
+     "pays": "DE",
+     "solde_primaire": -1.7131293389064157,
+     "solde_stabilisant": -2.4451555578846254,
+     "ecart": 0.7320262189782096,
+     "taux_implicite": 1.4124411200729223,
+     "croissance_nominale": 5.333740060644873,
+     "solde_structurel": -1.3169520000000001
+    },
+    {
+     "pays": "ES",
+     "solde_primaire": -1.711993722791815,
+     "solde_stabilisant": -6.260151106282328,
+     "ecart": 4.548157383490514,
+     "taux_implicite": 2.2959212822239246,
+     "croissance_nominale": 8.380513375027926,
+     "solde_structurel": -1.702082
+    },
+    {
+     "pays": "EE",
+     "solde_primaire": -1.5243244469062474,
+     "solde_stabilisant": -1.1637224455976853,
+     "ecart": -0.360602001308562,
+     "taux_implicite": 1.6477747857326714,
+     "croissance_nominale": 8.462510238277883,
+     "solde_structurel": -1.0680340000000004
+    },
+    {
+     "pays": "SI",
+     "solde_primaire": -1.4905698763565787,
+     "solde_stabilisant": -4.562016442854293,
+     "ecart": 3.071446566497714,
+     "taux_implicite": 1.856414285881239,
+     "croissance_nominale": 8.61149175305815,
+     "solde_structurel": -2.395556
+    },
+    {
+     "pays": "LT",
+     "solde_primaire": -0.5071214702051325,
+     "solde_stabilisant": -3.4225556490176743,
+     "ecart": 2.915434178812542,
+     "taux_implicite": 1.7215459209757937,
+     "croissance_nominale": 10.970975204565553,
+     "solde_structurel": -0.44482600000000005
+    },
+    {
+     "pays": "NL",
+     "solde_primaire": -0.3424027445781751,
+     "solde_stabilisant": -2.8292693200845775,
+     "ecart": 2.4868665755064026,
+     "taux_implicite": 1.4431003154796154,
+     "croissance_nominale": 7.659586104233251,
+     "solde_structurel": -0.419592
+    },
+    {
+     "pays": "HR",
+     "solde_primaire": -0.29861791863427023,
+     "solde_stabilisant": -6.727686497432981,
+     "ecart": 6.429068578798711,
+     "taux_implicite": 2.4544854380512704,
+     "croissance_nominale": 12.939150262835659,
+     "solde_structurel": -1.2644559999999998
+    },
+    {
+     "pays": "LU",
+     "solde_primaire": 0.16701850039640692,
+     "solde_stabilisant": -1.3163877555020984,
+     "ecart": 1.4834062558985053,
+     "taux_implicite": 1.0400599883950523,
+     "croissance_nominale": 6.82790202806725,
+     "solde_structurel": 1.057824
+    },
+    {
+     "pays": "EL",
+     "solde_primaire": 1.3595589289350218,
+     "solde_stabilisant": -11.059686105785682,
+     "ecart": 12.419245034720703,
+     "taux_implicite": 1.8307136657893057,
+     "croissance_nominale": 8.226397704217696,
+     "solde_structurel": 1.256728
+    },
+    {
+     "pays": "PT",
+     "solde_primaire": 1.9195498671851539,
+     "solde_stabilisant": -7.150671462735021,
+     "ecart": 9.070221329920175,
+     "taux_implicite": 2.026200517795245,
+     "croissance_nominale": 8.848709095809436,
+     "solde_structurel": 2.057894
+    },
+    {
+     "pays": "CY",
+     "solde_primaire": 3.3845264937146937,
+     "solde_stabilisant": -7.112677501732938,
+     "ecart": 10.49720399544763,
+     "taux_implicite": 1.7373888586655775,
+     "croissance_nominale": 10.351405548279985,
+     "solde_structurel": 1.8295780000000001
+    }
+   ],
+   "ecartes": [
+    {
+     "pays": "FI",
+     "annees": [
+      2025
+     ]
+    },
+    {
+     "pays": "IE",
+     "annees": [
+      2022,
+      2023
+     ]
+    }
+   ],
+   "medianes": {
+    "solde_primaire": -1.711993722791815,
+    "solde_stabilisant": -3.7039721712218943,
+    "ecart": 2.1903816935072973,
+    "taux_implicite": 1.856414285881239,
+    "croissance_nominale": 8.226397704217696,
+    "solde_structurel": -1.702082
+   }
+  },
+  "dix": {
+   "debut": 2016,
+   "fin": 2025,
+   "n": 19,
+   "n_structurel": 19,
+   "pays": [
+    {
+     "pays": "FR",
+     "solde_primaire": -3.0593378922457113,
+     "solde_stabilisant": -1.510674089040046,
+     "ecart": -1.5486638032056652,
+     "taux_implicite": 1.7401729771887986,
+     "croissance_nominale": 3.180751317224799,
+     "solde_structurel": -2.391589
+    },
+    {
+     "pays": "SK",
+     "solde_primaire": -1.974089213950484,
+     "solde_stabilisant": -1.5689507754252003,
+     "ecart": -0.40513843852528364,
+     "taux_implicite": 2.551446404301216,
+     "croissance_nominale": 5.510847943637235,
+     "solde_structurel": -2.0834759999999997
+    },
+    {
+     "pays": "ES",
+     "solde_primaire": -1.9146279254105045,
+     "solde_stabilisant": -2.250487512774217,
+     "ecart": 0.33585958736371246,
+     "taux_implicite": 2.375212721989195,
+     "croissance_nominale": 4.649004146406494,
+     "solde_structurel": -1.4535859999999998
+    },
+    {
+     "pays": "BE",
+     "solde_primaire": -1.6972935565799052,
+     "solde_stabilisant": -2.3807533463906294,
+     "ecart": 0.6834597898107242,
+     "taux_implicite": 2.0978355649729807,
+     "croissance_nominale": 4.512741445082419,
+     "solde_structurel": -1.4629860000000001
+    },
+    {
+     "pays": "LV",
+     "solde_primaire": -1.6273904801830632,
+     "solde_stabilisant": -1.6329340840649742,
+     "ecart": 0.005543603881910997,
+     "taux_implicite": 2.114858654673018,
+     "croissance_nominale": 6.192325261972247,
+     "solde_structurel": -1.82239
+    },
+    {
+     "pays": "AT",
+     "solde_primaire": -1.5489011197302731,
+     "solde_stabilisant": -1.7316451121708574,
+     "ecart": 0.18274399244058426,
+     "taux_implicite": 1.9189797326553795,
+     "croissance_nominale": 4.190398651716215,
+     "solde_structurel": -1.354055
+    },
+    {
+     "pays": "EE",
+     "solde_primaire": -1.4109271756771466,
+     "solde_stabilisant": -0.8218638116230629,
+     "ecart": -0.5890633640540838,
+     "taux_implicite": 1.0823195301479995,
+     "croissance_nominale": 7.1773826383759145,
+     "solde_structurel": -1.408801
+    },
+    {
+     "pays": "IT",
+     "solde_primaire": -1.1582735771433939,
+     "solde_stabilisant": -0.5259303884571944,
+     "ecart": -0.6323431886861994,
+     "taux_implicite": 2.7668196388420503,
+     "croissance_nominale": 3.210421814505827,
+     "solde_structurel": -0.689306
+    },
+    {
+     "pays": "MT",
+     "solde_primaire": -1.09751517904884,
+     "solde_stabilisant": -2.7847392687218755,
+     "ecart": 1.6872240896730355,
+     "taux_implicite": 2.9482255163145017,
+     "croissance_nominale": 9.300046025161771,
+     "solde_structurel": -1.0518129999999997
+    },
+    {
+     "pays": "BG",
+     "solde_primaire": -0.733795526891776,
+     "solde_stabilisant": -1.5074974450155227,
+     "ecart": 0.7737019181237468,
+     "taux_implicite": 2.7787083660786793,
+     "croissance_nominale": 9.854242326267958,
+     "solde_structurel": -0.7959630000000002
+    },
+    {
+     "pays": "SI",
+     "solde_primaire": -0.4646833536982487,
+     "solde_stabilisant": -2.663742446274897,
+     "ecart": 2.1990590925766482,
+     "taux_implicite": 2.416040349094994,
+     "croissance_nominale": 6.317016438955498,
+     "solde_structurel": -0.8797820000000002
+    },
+    {
+     "pays": "DE",
+     "solde_primaire": -0.26755821864940516,
+     "solde_stabilisant": -1.505552068700942,
+     "ecart": 1.2379938500515368,
+     "taux_implicite": 1.428023100498277,
+     "croissance_nominale": 3.807627103498736,
+     "solde_structurel": -0.09462000000000001
+    },
+    {
+     "pays": "LT",
+     "solde_primaire": -0.24068614324746496,
+     "solde_stabilisant": -2.2738316080816228,
+     "ecart": 2.033145464834158,
+     "taux_implicite": 2.304347071092981,
+     "croissance_nominale": 8.537248752216435,
+     "solde_structurel": -0.6340649999999999
+    },
+    {
+     "pays": "HR",
+     "solde_primaire": 0.3112778631583428,
+     "solde_stabilisant": -2.90993920499758,
+     "ecart": 3.221217068155923,
+     "taux_implicite": 2.847256034290272,
+     "croissance_nominale": 7.529703455396427,
+     "solde_structurel": 0.06968800000000015
+    },
+    {
+     "pays": "NL",
+     "solde_primaire": 0.414791260705227,
+     "solde_stabilisant": -1.8360288862276715,
+     "ecart": 2.2508201469328983,
+     "taux_implicite": 1.5601692371176283,
+     "croissance_nominale": 5.420602319150968,
+     "solde_structurel": 0.44526199999999994
+    },
+    {
+     "pays": "LU",
+     "solde_primaire": 0.8492263402932544,
+     "solde_stabilisant": -0.858141596981375,
+     "ecart": 1.7073679372746295,
+     "taux_implicite": 1.326936776454406,
+     "croissance_nominale": 5.195388992472536,
+     "solde_structurel": 1.443446
+    },
+    {
+     "pays": "EL",
+     "solde_primaire": 1.5197535827243958,
+     "solde_stabilisant": -3.0370847300328068,
+     "ecart": 4.556838312757202,
+     "taux_implicite": 1.7631163694017693,
+     "croissance_nominale": 3.7116383617725823,
+     "solde_structurel": 4.112062
+    },
+    {
+     "pays": "PT",
+     "solde_primaire": 1.5476283749782582,
+     "solde_stabilisant": -3.3325438408758132,
+     "ecart": 4.8801722158540715,
+     "taux_implicite": 2.3921827354800747,
+     "croissance_nominale": 5.624625054258081,
+     "solde_structurel": 2.093762
+    },
+    {
+     "pays": "CY",
+     "solde_primaire": 2.326348675047568,
+     "solde_stabilisant": -4.623679190449587,
+     "ecart": 6.950027865497155,
+     "taux_implicite": 2.0707246560828496,
+     "croissance_nominale": 7.482469216672632,
+     "solde_structurel": 2.5843920000000002
+    }
+   ],
+   "ecartes": [
+    {
+     "pays": "FI",
+     "annees": [
+      2025
+     ]
+    },
+    {
+     "pays": "IE",
+     "annees": [
+      2022,
+      2023
+     ]
+    }
+   ],
+   "medianes": {
+    "solde_primaire": -0.733795526891776,
+    "solde_stabilisant": -1.8360288862276715,
+    "ecart": 1.2379938500515368,
+    "taux_implicite": 2.114858654673018,
+    "croissance_nominale": 5.510847943637235,
+    "solde_structurel": -0.7959630000000002
+   }
+  },
+  "av20": {
+   "debut": 2015,
+   "fin": 2019,
+   "n": 21,
+   "n_structurel": 21,
+   "pays": [
+    {
+     "pays": "FR",
+     "solde_primaire": -1.3451289575854564,
+     "solde_stabilisant": -0.5488906971740815,
+     "ecart": -0.7962382604113749,
+     "taux_implicite": 1.8896163996457804,
+     "croissance_nominale": 2.4637164990525617,
+     "solde_structurel": -1.082112
+    },
+    {
+     "pays": "ES",
+     "solde_primaire": -1.0197700992597623,
+     "solde_stabilisant": -1.1508532739101665,
+     "ecart": 0.1310831746504042,
+     "taux_implicite": 2.659038852450227,
+     "croissance_nominale": 3.8306848401568416,
+     "solde_structurel": -0.596868
+    },
+    {
+     "pays": "FI",
+     "solde_primaire": -0.2642512652557112,
+     "solde_stabilisant": -0.8963017624967605,
+     "ecart": 0.6320504972410493,
+     "taux_implicite": 1.6152811541523622,
+     "croissance_nominale": 2.9915492105203656,
+     "solde_structurel": -0.06208799999999999
+    },
+    {
+     "pays": "SK",
+     "solde_primaire": -0.22548609111313592,
+     "solde_stabilisant": -0.6354257612518724,
+     "ecart": 0.40993967013873656,
+     "taux_implicite": 3.0031592568095453,
+     "croissance_nominale": 4.321929252626253,
+     "solde_structurel": -0.38527999999999996
+    },
+    {
+     "pays": "EE",
+     "solde_primaire": -0.16375399447146152,
+     "solde_stabilisant": -0.5915751805288676,
+     "ecart": 0.42782118605740604,
+     "taux_implicite": 0.4835795607627742,
+     "croissance_nominale": 6.956427197850301,
+     "solde_structurel": -0.912632
+    },
+    {
+     "pays": "LV",
+     "solde_primaire": 0.33120510373740064,
+     "solde_stabilisant": -1.0470643597241485,
+     "ecart": 1.378269463461549,
+     "taux_implicite": 2.597827632741637,
+     "croissance_nominale": 5.358480701709519,
+     "solde_structurel": -0.36564599999999997
+    },
+    {
+     "pays": "BE",
+     "solde_primaire": 0.7177926920690005,
+     "solde_stabilisant": -0.9748631131097338,
+     "ecart": 1.6926558051787344,
+     "taux_implicite": 2.4454623988607094,
+     "croissance_nominale": 3.4361507365081634,
+     "solde_structurel": 0.44759399999999994
+    },
+    {
+     "pays": "LT",
+     "solde_primaire": 1.333806488425849,
+     "solde_stabilisant": -1.025929577352475,
+     "ecart": 2.359736065778324,
+     "taux_implicite": 3.287954022834542,
+     "croissance_nominale": 6.2531315322700465,
+     "solde_structurel": 0.39027999999999996
+    },
+    {
+     "pays": "IE",
+     "solde_primaire": 1.4006118818616993,
+     "solde_stabilisant": -7.152902864495656,
+     "ecart": 8.553514746357354,
+     "taux_implicite": 2.870306695608849,
+     "croissance_nominale": 13.210446708592931,
+     "solde_structurel": 1.542474
+    },
+    {
+     "pays": "AT",
+     "solde_primaire": 1.477427856398918,
+     "solde_stabilisant": -1.0343347408158314,
+     "ecart": 2.5117625972147497,
+     "taux_implicite": 2.3658682355832497,
+     "croissance_nominale": 3.6920738462421054,
+     "solde_structurel": 1.2960740000000002
+    },
+    {
+     "pays": "IT",
+     "solde_primaire": 1.5340799663201914,
+     "solde_stabilisant": 1.1333884863564054,
+     "ecart": 0.40069147996378596,
+     "taux_implicite": 2.836351319987056,
+     "croissance_nominale": 1.9773692069624182,
+     "solde_structurel": 2.42852
+    },
+    {
+     "pays": "BG",
+     "solde_primaire": 1.5602553950700344,
+     "solde_stabilisant": -0.9814686455785726,
+     "ecart": 2.541724040648607,
+     "taux_implicite": 3.1595635501882526,
+     "croissance_nominale": 7.305589394717643,
+     "solde_structurel": 1.652524
+    },
+    {
+     "pays": "NL",
+     "solde_primaire": 1.679466725657398,
+     "solde_stabilisant": -1.2631235648278178,
+     "ecart": 2.942590290485216,
+     "taux_implicite": 1.8028811665270452,
+     "croissance_nominale": 4.107862535960933,
+     "solde_structurel": 1.448604
+    },
+    {
+     "pays": "PT",
+     "solde_primaire": 1.771279961162893,
+     "solde_stabilisant": -1.6454113008616997,
+     "ecart": 3.416691262024593,
+     "taux_implicite": 3.0097232578266655,
+     "croissance_nominale": 4.372033889242762,
+     "solde_structurel": 2.3316899999999996
+    },
+    {
+     "pays": "SI",
+     "solde_primaire": 1.8686715164101813,
+     "solde_stabilisant": -1.3419060230111248,
+     "ecart": 3.210577539421306,
+     "taux_implicite": 3.3457242143218293,
+     "croissance_nominale": 5.267647369131754,
+     "solde_structurel": 2.15632
+    },
+    {
+     "pays": "HR",
+     "solde_primaire": 1.9579313400453682,
+     "solde_stabilisant": -0.3677787497017351,
+     "ecart": 2.325710089747103,
+     "taux_implicite": 3.561437994521377,
+     "croissance_nominale": 4.125481546241505,
+     "solde_structurel": 2.0769399999999996
+    },
+    {
+     "pays": "DE",
+     "solde_primaire": 2.3851556333373685,
+     "solde_stabilisant": -1.207378814607323,
+     "ecart": 3.5925344479446917,
+     "taux_implicite": 1.6136911865094277,
+     "croissance_nominale": 3.4582209533516375,
+     "solde_structurel": 2.029248
+    },
+    {
+     "pays": "LU",
+     "solde_primaire": 2.4476008827578473,
+     "solde_stabilisant": -0.4145352531205358,
+     "ecart": 2.8621361358783832,
+     "taux_implicite": 1.7682465942290466,
+     "croissance_nominale": 3.8028981663506523,
+     "solde_structurel": 2.553994
+    },
+    {
+     "pays": "CY",
+     "solde_primaire": 2.448143734779094,
+     "solde_stabilisant": -3.3475928398451473,
+     "ecart": 5.795736574624241,
+     "taux_implicite": 2.547828639743255,
+     "croissance_nominale": 6.019366374070181,
+     "solde_structurel": 4.854958000000001
+    },
+    {
+     "pays": "EL",
+     "solde_primaire": 2.6054331433474944,
+     "solde_stabilisant": 1.4010192510658679,
+     "ecart": 1.2044138922816265,
+     "taux_implicite": 1.7941106060644365,
+     "croissance_nominale": 1.021614842867964,
+     "solde_structurel": 8.642154
+    },
+    {
+     "pays": "MT",
+     "solde_primaire": 2.9941663695991556,
+     "solde_stabilisant": -3.13216381995075,
+     "ecart": 6.126330189549906,
+     "taux_implicite": 3.6935438100033573,
+     "croissance_nominale": 10.34192729692509,
+     "solde_structurel": 1.8255660000000002
+    }
+   ],
+   "ecartes": [],
+   "medianes": {
+    "solde_primaire": 1.5340799663201914,
+    "solde_stabilisant": -1.025929577352475,
+    "ecart": 2.359736065778324,
+    "taux_implicite": 2.597827632741637,
+    "croissance_nominale": 4.125481546241505,
+    "solde_structurel": 1.542474
+   }
+  },
+  "d2010": {
+   "debut": 2010,
+   "fin": 2019,
+   "n": 21,
+   "n_structurel": 21,
+   "pays": [
+    {
+     "pays": "IE",
+     "solde_primaire": -3.849804593703354,
+     "solde_stabilisant": -3.6155156407351554,
+     "ecart": -0.2342889529681984,
+     "taux_implicite": 3.395387397333587,
+     "croissance_nominale": 8.347460695806866,
+     "solde_structurel": -0.9431840000000001
+    },
+    {
+     "pays": "ES",
+     "solde_primaire": -3.4792736591325073,
+     "solde_stabilisant": 1.0840716987568677,
+     "ecart": -4.563345357889375,
+     "taux_implicite": 3.2712849321200226,
+     "croissance_nominale": 1.5994502937398856,
+     "solde_structurel": -0.5973239999999999
+    },
+    {
+     "pays": "FR",
+     "solde_primaire": -2.145066716248462,
+     "solde_stabilisant": 0.04054353439988776,
+     "ecart": -2.1856102506483497,
+     "taux_implicite": 2.375765334499808,
+     "croissance_nominale": 2.3117635747045635,
+     "solde_structurel": -1.5375130000000001
+    },
+    {
+     "pays": "SK",
+     "solde_primaire": -1.4961863868238838,
+     "solde_stabilisant": -0.20955160169441153,
+     "ecart": -1.2866347851294724,
+     "taux_implicite": 3.4343202035879363,
+     "croissance_nominale": 3.9868437672160377,
+     "solde_structurel": -1.2948679999999997
+    },
+    {
+     "pays": "CY",
+     "solde_primaire": -1.4373337193630578,
+     "solde_stabilisant": 0.5285052894719376,
+     "ecart": -1.9658390088349953,
+     "taux_implicite": 3.1134723213817392,
+     "croissance_nominale": 2.3962805515992733,
+     "solde_structurel": 1.8351509999999998
+    },
+    {
+     "pays": "SI",
+     "solde_primaire": -1.1314229895551844,
+     "solde_stabilisant": 0.24496514198222247,
+     "ecart": -1.376388131537407,
+     "taux_implicite": 4.049701305815543,
+     "croissance_nominale": 3.038670851110452,
+     "solde_structurel": 0.400923
+    },
+    {
+     "pays": "EL",
+     "solde_primaire": -0.8203177855367972,
+     "solde_stabilisant": 8.098084909435897,
+     "ecart": -8.918402694972695,
+     "taux_implicite": 2.568663725398582,
+     "croissance_nominale": -2.2440863499456194,
+     "solde_structurel": 7.13873
+    },
+    {
+     "pays": "LV",
+     "solde_primaire": -0.7606727154212228,
+     "solde_stabilisant": -0.6358462517769223,
+     "ecart": -0.1248264636443005,
+     "taux_implicite": 3.3090833334124086,
+     "croissance_nominale": 4.878277386413823,
+     "solde_structurel": -0.07369299999999997
+    },
+    {
+     "pays": "PT",
+     "solde_primaire": -0.7476254386868031,
+     "solde_stabilisant": 1.4963164173247947,
+     "ecart": -2.243941856011598,
+     "taux_implicite": 3.4184536520837283,
+     "croissance_nominale": 2.0751123374555682,
+     "solde_structurel": 0.923504
+    },
+    {
+     "pays": "HR",
+     "solde_primaire": -0.6027021148943696,
+     "solde_stabilisant": 1.2438571737679773,
+     "ecart": -1.846559288662347,
+     "taux_implicite": 4.087675097079525,
+     "croissance_nominale": 2.1072245379545205,
+     "solde_structurel": 0.4104210000000001
+    },
+    {
+     "pays": "FI",
+     "solde_primaire": -0.5525015857379427,
+     "solde_stabilisant": -0.3635039838044987,
+     "ecart": -0.188997601933444,
+     "taux_implicite": 2.1960730200806067,
+     "croissance_nominale": 2.763240614302971,
+     "solde_structurel": 0.11459900000000003
+    },
+    {
+     "pays": "LT",
+     "solde_primaire": -0.4670716145892658,
+     "solde_stabilisant": -0.6652927135905925,
+     "ecart": 0.19822109900132667,
+     "taux_implicite": 4.377527056602172,
+     "croissance_nominale": 6.244193552736969,
+     "solde_structurel": 0.22141499999999997
+    },
+    {
+     "pays": "NL",
+     "solde_primaire": -0.15387898868771535,
+     "solde_stabilisant": -0.21503879022667555,
+     "ecart": 0.061159801538960196,
+     "taux_implicite": 2.338450580067492,
+     "croissance_nominale": 2.801342165142273,
+     "solde_structurel": 0.351274
+    },
+    {
+     "pays": "BG",
+     "solde_primaire": -0.06939788878096227,
+     "solde_stabilisant": -0.314734753781307,
+     "ecart": 0.24533686500034474,
+     "taux_implicite": 4.118213029495871,
+     "croissance_nominale": 5.089108779921181,
+     "solde_structurel": 0.40262400000000004
+    },
+    {
+     "pays": "EE",
+     "solde_primaire": 0.010562880770601467,
+     "solde_stabilisant": -0.563608555459784,
+     "ecart": 0.5741714362303855,
+     "taux_implicite": 0.8248869864983523,
+     "croissance_nominale": 7.291996081756207,
+     "solde_structurel": -0.19061099999999997
+    },
+    {
+     "pays": "BE",
+     "solde_primaire": 0.17612901546512832,
+     "solde_stabilisant": -0.26968213286441517,
+     "ecart": 0.4458111483295435,
+     "taux_implicite": 2.9793685288342653,
+     "croissance_nominale": 3.2677650987210853,
+     "solde_structurel": 0.17077699999999998
+    },
+    {
+     "pays": "AT",
+     "solde_primaire": 0.8063038477534971,
+     "solde_stabilisant": -0.3058138125402383,
+     "ecart": 1.1121176602937353,
+     "taux_implicite": 2.8918369191523836,
+     "croissance_nominale": 3.2941986381750703,
+     "solde_structurel": 1.1946789999999996
+    },
+    {
+     "pays": "IT",
+     "solde_primaire": 1.4640924746011286,
+     "solde_stabilisant": 2.5259259562723893,
+     "ecart": -1.0618334816712607,
+     "taux_implicite": 3.34022829875222,
+     "croissance_nominale": 1.3171583064311565,
+     "solde_structurel": 2.650836
+    },
+    {
+     "pays": "MT",
+     "solde_primaire": 1.7202650107188333,
+     "solde_stabilisant": -2.365993792946683,
+     "ecart": 4.086258803665516,
+     "taux_implicite": 4.1852027356785975,
+     "croissance_nominale": 8.845067223421887,
+     "solde_structurel": 1.064445
+    },
+    {
+     "pays": "LU",
+     "solde_primaire": 1.75606957180009,
+     "solde_stabilisant": -0.49488032266803783,
+     "ecart": 2.250949894468128,
+     "taux_implicite": 2.1643433601265265,
+     "croissance_nominale": 4.811089775903192,
+     "solde_structurel": 2.2097919999999998
+    },
+    {
+     "pays": "DE",
+     "solde_primaire": 1.8077478651464076,
+     "solde_stabilisant": -0.9065727123009593,
+     "ecart": 2.714320577447367,
+     "taux_implicite": 2.2255394856297643,
+     "croissance_nominale": 3.5611672862799937,
+     "solde_structurel": 1.880358
+    }
+   ],
+   "ecartes": [],
+   "medianes": {
+    "solde_primaire": -0.5525015857379427,
+    "solde_stabilisant": -0.26968213286441517,
+    "ecart": -0.188997601933444,
+    "taux_implicite": 3.2712849321200226,
+    "croissance_nominale": 3.2677650987210853,
+    "solde_structurel": 0.400923
+   }
   }
  },
  "conservation": {
@@ -1181,7 +2204,76 @@
   "cons_calculables": "805",
   "cons_ecartees": "dix",
   "cons_retenues": "795",
-  "cons_ecartees_maj": "Dix"
+  "cons_ecartees_maj": "Dix",
+  "ze_an_lib": "2025",
+  "ze_an_n": "20",
+  "ze_an_n_sps": "20",
+  "ze_an_pb": "−2,9",
+  "ze_an_pb_rang": "1, ex aequo",
+  "ze_an_stab": "0,0",
+  "ze_an_ecart": "−2,9",
+  "ze_an_ecart_rang": "1",
+  "ze_an_sps": "−2,5",
+  "ze_an_sps_rang": "4",
+  "ze_cinq_lib": "2021-2025",
+  "ze_cinq_n": "19",
+  "ze_cinq_n_sps": "19",
+  "ze_cinq_pb": "−3,6",
+  "ze_cinq_pb_rang": "1",
+  "ze_cinq_stab": "−3,7",
+  "ze_cinq_ecart": "+0,1",
+  "ze_cinq_ecart_rang": "5",
+  "ze_cinq_sps": "−3,2",
+  "ze_cinq_sps_rang": "2",
+  "ze_dix_lib": "2016-2025",
+  "ze_dix_n": "19",
+  "ze_dix_n_sps": "19",
+  "ze_dix_pb": "−3,1",
+  "ze_dix_pb_rang": "1",
+  "ze_dix_stab": "−1,5",
+  "ze_dix_ecart": "−1,5",
+  "ze_dix_ecart_rang": "1",
+  "ze_dix_sps": "−2,4",
+  "ze_dix_sps_rang": "1",
+  "ze_av20_lib": "2015-2019",
+  "ze_av20_n": "21",
+  "ze_av20_n_sps": "21",
+  "ze_av20_pb": "−1,3",
+  "ze_av20_pb_rang": "1",
+  "ze_av20_stab": "−0,5",
+  "ze_av20_ecart": "−0,8",
+  "ze_av20_ecart_rang": "1",
+  "ze_av20_sps": "−1,1",
+  "ze_av20_sps_rang": "1",
+  "ze_d2010_lib": "2010-2019",
+  "ze_d2010_n": "21",
+  "ze_d2010_n_sps": "21",
+  "ze_d2010_pb": "−2,1",
+  "ze_d2010_pb_rang": "3",
+  "ze_d2010_stab": "0,0",
+  "ze_d2010_ecart": "−2,2",
+  "ze_d2010_ecart_rang": "3, ex aequo",
+  "ze_d2010_sps": "−1,5",
+  "ze_d2010_sps_rang": "1",
+  "ze_lib": "2016-2025",
+  "ze_n": "19",
+  "ze_total": "21",
+  "ze_fr_ti": "1,74",
+  "ze_med_ti": "2,11",
+  "ze_ti_moins_n": "quatre",
+  "ze_fr_g": "3,2",
+  "ze_med_g": "5,5",
+  "ze_fr_stab": "−1,5",
+  "ze_med_stab": "−1,8",
+  "ze_fr_pb": "−3,1",
+  "ze_med_pb": "−0,7",
+  "ze_fr_sps": "−2,4",
+  "ze_med_sps": "−0,8",
+  "ze_ecartes": "la Finlande et l'Irlande",
+  "ze_ecartes_n": "deux",
+  "ze_edition": "printemps 2026",
+  "ze_cinq_pire_n": "quatre",
+  "ze_g_avec": "l'Italie"
  },
  "affichage_en": {
   "annee_fin": "2025",
@@ -1483,6 +2575,75 @@
   "cons_calculables": "805",
   "cons_ecartees": "ten",
   "cons_retenues": "795",
-  "cons_ecartees_maj": "Ten"
+  "cons_ecartees_maj": "Ten",
+  "ze_an_lib": "2025",
+  "ze_an_n": "20",
+  "ze_an_n_sps": "20",
+  "ze_an_pb": "−2.9",
+  "ze_an_pb_rang": "1, tied",
+  "ze_an_stab": "0.0",
+  "ze_an_ecart": "−2.9",
+  "ze_an_ecart_rang": "1",
+  "ze_an_sps": "−2.5",
+  "ze_an_sps_rang": "4",
+  "ze_cinq_lib": "2021-2025",
+  "ze_cinq_n": "19",
+  "ze_cinq_n_sps": "19",
+  "ze_cinq_pb": "−3.6",
+  "ze_cinq_pb_rang": "1",
+  "ze_cinq_stab": "−3.7",
+  "ze_cinq_ecart": "+0.1",
+  "ze_cinq_ecart_rang": "5",
+  "ze_cinq_sps": "−3.2",
+  "ze_cinq_sps_rang": "2",
+  "ze_dix_lib": "2016-2025",
+  "ze_dix_n": "19",
+  "ze_dix_n_sps": "19",
+  "ze_dix_pb": "−3.1",
+  "ze_dix_pb_rang": "1",
+  "ze_dix_stab": "−1.5",
+  "ze_dix_ecart": "−1.5",
+  "ze_dix_ecart_rang": "1",
+  "ze_dix_sps": "−2.4",
+  "ze_dix_sps_rang": "1",
+  "ze_av20_lib": "2015-2019",
+  "ze_av20_n": "21",
+  "ze_av20_n_sps": "21",
+  "ze_av20_pb": "−1.3",
+  "ze_av20_pb_rang": "1",
+  "ze_av20_stab": "−0.5",
+  "ze_av20_ecart": "−0.8",
+  "ze_av20_ecart_rang": "1",
+  "ze_av20_sps": "−1.1",
+  "ze_av20_sps_rang": "1",
+  "ze_d2010_lib": "2010-2019",
+  "ze_d2010_n": "21",
+  "ze_d2010_n_sps": "21",
+  "ze_d2010_pb": "−2.1",
+  "ze_d2010_pb_rang": "3",
+  "ze_d2010_stab": "0.0",
+  "ze_d2010_ecart": "−2.2",
+  "ze_d2010_ecart_rang": "3, tied",
+  "ze_d2010_sps": "−1.5",
+  "ze_d2010_sps_rang": "1",
+  "ze_lib": "2016-2025",
+  "ze_n": "19",
+  "ze_total": "21",
+  "ze_fr_ti": "1.74",
+  "ze_med_ti": "2.11",
+  "ze_ti_moins_n": "four",
+  "ze_fr_g": "3.2",
+  "ze_med_g": "5.5",
+  "ze_fr_stab": "−1.5",
+  "ze_med_stab": "−1.8",
+  "ze_fr_pb": "−3.1",
+  "ze_med_pb": "−0.7",
+  "ze_fr_sps": "−2.4",
+  "ze_med_sps": "−0.8",
+  "ze_ecartes": "Finland and Ireland",
+  "ze_ecartes_n": "two",
+  "ze_edition": "spring 2026",
+  "ze_cinq_pire_n": "four",
+  "ze_g_avec": "Italy"
  }
 }

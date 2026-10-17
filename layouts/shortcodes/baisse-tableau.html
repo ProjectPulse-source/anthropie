@@ -11,6 +11,23 @@
 {{- $en := eq .Page.Lang "en" -}}
 {{- $A := cond $en $j.affichage_en $j.affichage -}}
 {{- $taux := eq (.Get "vue") "taux" -}}
+{{- /* vue="zone-euro" (17/10/2026, section #zone-euro, arbitrage anthropie-site-20261017-005433, piste 2) : la France parmi
+       les membres de la zone euro, une ligne par période ; nombres et rangs lus dans les jetons ze_<période>_* du bloc
+       affichage (rangs à la précision affichée, ex aequo mentionnés par le générateur). Note de lecture dans la page. */ -}}
+{{- if eq (.Get "vue") "zone-euro" }}
+<div class="table-scroll"><table class="dette-monde-table">
+{{- if $en }}
+<thead><tr><th>Period</th><th>Countries compared</th><th>Primary balance (rank from lowest)</th><th>Stabilising balance</th><th>Gap to the marker (rank from lowest)</th><th>Structural balance, AMECO (rank from lowest)</th></tr></thead>
+{{- else }}
+<thead><tr><th>Période</th><th>Pays comparés</th><th>Solde primaire (rang du plus bas)</th><th>Solde stabilisant</th><th>Écart au repère (rang du plus bas)</th><th>Solde structurel, AMECO (rang du plus bas)</th></tr></thead>
+{{- end }}
+<tbody>
+{{- range (slice "dix" "cinq" "an" "av20" "d2010") }}
+{{- $p := printf "ze_%s_" . }}
+<tr><td>{{ index $A (printf "%slib" $p) }}</td><td>{{ index $A (printf "%sn" $p) }}</td><td>{{ index $A (printf "%spb" $p) }} ({{ index $A (printf "%spb_rang" $p) }})</td><td>{{ index $A (printf "%sstab" $p) }}</td><td>{{ index $A (printf "%secart" $p) }} ({{ index $A (printf "%secart_rang" $p) }})</td><td>{{ index $A (printf "%ssps" $p) }} ({{ index $A (printf "%ssps_rang" $p) }})</td></tr>
+{{- end }}
+</tbody></table></div>
+{{- else }}
 <div class="table-scroll"><table class="dette-monde-table">
 {{- if $taux }}
 {{- if $en }}
@@ -45,5 +62,6 @@
 <p><small>Debt in % of GDP; change and contributions in points of GDP cumulated over {{ $A.cmp_lib }}, contributions to the change in the ratio, not amounts paid; under “primary balance”, a negative figure means surpluses. Source: Eurostat.</small></p>
 {{- else }}
 <p><small>Dette en&nbsp;% du PIB&nbsp;; variation et contributions en points de PIB cumulés sur {{ $A.cmp_lib }}&nbsp;: des contributions à la variation du ratio, non des montants versés&nbsp;; sous «&nbsp;solde primaire&nbsp;», un nombre négatif désigne des excédents. Source&nbsp;: Eurostat.</small></p>
+{{- end }}
 {{- end }}
 {{- end }}

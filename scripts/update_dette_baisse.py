@@ -28,10 +28,12 @@ Sorties : data/ et static/dette_baisse.json, static/dette_baisse.csv, data/figur
 from __future__ import annotations
 
 import csv
+import hashlib
 import html
 import io
 import json
 import re
+import statistics
 import sys
 import time
 import urllib.request
@@ -63,6 +65,16 @@ SEUIL_DETTE = 90.0    # dette de départ des pays comparés à la France, % du P
 SEUILS_SENSIBILITE = (80.0, 100.0)   # le même groupe à d'autres seuils : la page dit ce qui change
 SEUIL_PIB = 35.0      # croissance nominale annuelle au-delà : hyperinflation ou rupture du PIB, fenêtre écartée
 FORTE_BAISSE = 15.0   # points de PIB en dix ans
+# Section « Dans la zone euro » (#zone-euro, 17/10/2026 ; arbitrage anthropie-site-20261017-005433, piste 2) : membres de la
+# zone euro au 1er janvier 2026 (21 pays, Bulgarie comprise ; AMECO publie l'agrégat EA21). Comparaison des membres ACTUELS sur
+# toute la fenêtre : la page le dit (Croatie entrée en 2023, Bulgarie en 2026).
+ZONE_EURO = ("AT", "BE", "BG", "CY", "DE", "EE", "EL", "ES", "FI", "FR", "HR", "IE", "IT", "LT", "LU", "LV", "MT", "NL", "PT", "SI", "SK")
+# Témoin indépendant : solde primaire structurel de la Commission (AMECO 1.0.319.0.UBLGBPS, % du PIB potentiel), autre producteur,
+# corrigé du cycle, qui n'entre pas dans le calcul. Extrait archivé ; l'empreinte change avec l'édition (geste manuel, deux fois
+# par an : registre data/sources_maj.json, id « ameco-structurel »).
+AMECO = ROOT / "scripts" / "sources_dette" / "ameco_ublgbps_2026-06-02.csv"
+AMECO_SHA = "8f48c054cff8786b9a018f29553fa82330848d5b4d1cfe3992b84a237d10fd92"
+AMECO_EDITION = {"fr": "printemps 2026", "en": "spring 2026"}
 API = "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/%s?format=JSON&%s"
 
 W = 720
@@ -265,6 +277,57 @@ def fenetre(an: dict, a0: int, n: int = 10):
     if abs(f["variation"] - (f["taux_croissance"] + f["deficits_primaires"] + f["flux_stock"])) > 1e-6:
         fail("%s %d : la somme des termes ne rend pas la variation" % (f["pays"], a0))
     return f
+
+
+def ameco() -> dict:
+    """Solde primaire structurel (AMECO), {pays: {année: valeur}} ; refuse une pièce dont l'empreinte a changé."""
+    if not AMECO.is_file():
+        fail("piece absente : %s" % AMECO)
+    b = AMECO.read_bytes()
+    if hashlib.sha256(b).hexdigest() != AMECO_SHA:
+        fail("empreinte changee : %s ; relire la piece, puis mettre a jour AMECO_SHA et SHA256SUMS" % AMECO.name)
+    S = {}
+    for r in csv.DictReader(l for l in b.decode("utf-8").splitlines() if not l.startswith("#")):
+        S.setdefault(r["pays"], {})[int(r["annee"])] = float(r["solde_primaire_structurel"])
+    if set(ZONE_EURO) - set(S):
+        fail("AMECO : pays de la zone euro absents de l'extrait : %s" % sorted(set(ZONE_EURO) - set(S)))
+    return S
+
+
+def zone_euro(R: dict, fin: int, S: dict) -> dict:
+    """Moyennes par pays de la zone euro sur cinq fenêtres : solde primaire, solde stabilisant, écart, taux implicite, croissance
+    nominale (Eurostat, panel témoin) et solde primaire structurel (AMECO, témoin). Un pays dont une année manque (absente ou
+    écartée par le témoin) sort de la fenêtre avec ses années : conservation contrôlée.
+
+    Identité à ne pas oublier en écrivant la page : sur une fenêtre, l'écart moyen = (somme des autres ajustements - variation du
+    ratio) / n. Il ne s'ajoute donc pas à la variation de la dette comme un second constat ; ce qui ne s'en déduit pas, c'est la
+    séparation entre solde primaire et repère (taux et croissance)."""
+    fen = (("an", fin, fin), ("cinq", fin - 4, fin), ("dix", fin - 9, fin), ("av20", 2015, 2019), ("d2010", 2010, 2019))
+    out = {}
+    for cle, a0, a1 in fen:
+        L, ecartes = [], []
+        for p in ZONE_EURO:
+            manq = [a for a in range(a0, a1 + 1) if a not in R.get(p, {})]
+            if manq:
+                ecartes.append(dict(pays=p, annees=manq))
+                continue
+            n = a1 - a0 + 1
+            xs = [R[p][a] for a in range(a0, a1 + 1)]
+            m = lambda k: sum(x[k] for x in xs) / n  # noqa: E731
+            sps = [S[p].get(a) for a in range(a0, a1 + 1)]
+            L.append(dict(pays=p, solde_primaire=m("solde_primaire"), solde_stabilisant=m("taux_croissance"),
+                          ecart=m("solde_primaire") - m("taux_croissance"), taux_implicite=m("taux_implicite"),
+                          croissance_nominale=m("croissance_nominale"), solde_structurel=(sum(sps) / n if None not in sps else None)))
+        if len(L) + len(ecartes) != len(ZONE_EURO):
+            fail("zone euro %d-%d : conservation rompue" % (a0, a1))
+        if not any(d["pays"] == "FR" for d in L):
+            fail("zone euro %d-%d : France absente" % (a0, a1))
+        med = {k: statistics.median(d[k] for d in L) for k in ("solde_primaire", "solde_stabilisant", "ecart", "taux_implicite", "croissance_nominale")}
+        sl = [d for d in L if d["solde_structurel"] is not None]
+        med["solde_structurel"] = statistics.median(d["solde_structurel"] for d in sl) if sl else None
+        out[cle] = dict(debut=a0, fin=a1, n=len(L), n_structurel=len(sl), pays=sorted(L, key=lambda d: d["solde_primaire"]),
+                        ecartes=ecartes, medianes=med)
+    return out
 
 
 def calcul():
@@ -614,6 +677,94 @@ def gardes(fin, dec, annees, cmp_, europe, haut, bas, exc_ans):
     return len(G)
 
 
+def rang_bas(f: dict, cle: str, dec: int = 1) -> tuple[int, list]:
+    """Rang de la France du plus bas au plus haut, à la précision affichée, et ses ex aequo."""
+    return lg.rang({d["pays"]: d[cle] for d in f["pays"] if d[cle] is not None}, "FR", dec, decroissant=False)
+
+
+def ze_fr(f: dict) -> dict:
+    return next(d for d in f["pays"] if d["pays"] == "FR")
+
+
+def sz(v: float, dec: int = 1) -> str:
+    """Signe, sauf pour une valeur qui s'affiche nulle (« 0,0 » et non « +0,0 » ou « −0,0 »)."""
+    return fr(0.0, dec) if round(v, dec) == 0 else signe(v, dec)
+
+
+def rang_txt(f: dict, cle: str, dec: int = 1) -> str:
+    """Rang du plus bas, avec la mention de l'ex aequo à la précision affichée (tableau du repli)."""
+    r, ex = rang_bas(f, cle, dec)
+    return str(r) + ((", ex aequo" if LANG == "fr" else ", tied") if ex else "")
+
+
+def affichage_ze(ze: dict) -> dict:
+    """Jetons de la section #zone-euro (mêmes clés en français et en anglais)."""
+    A = {}
+    for w, f in ze.items():
+        p, x = "ze_%s_" % w, ze_fr(f)
+        A[p + "lib"] = str(f["debut"]) if f["debut"] == f["fin"] else "%d-%d" % (f["debut"], f["fin"])
+        A[p + "n"] = str(f["n"]); A[p + "n_sps"] = str(f["n_structurel"])
+        A[p + "pb"] = sz(x["solde_primaire"]); A[p + "pb_rang"] = rang_txt(f, "solde_primaire")
+        A[p + "stab"] = sz(x["solde_stabilisant"]); A[p + "ecart"] = sz(x["ecart"])
+        A[p + "ecart_rang"] = rang_txt(f, "ecart")
+        A[p + "sps"] = sz(x["solde_structurel"]) if x["solde_structurel"] is not None else "—"
+        A[p + "sps_rang"] = rang_txt(f, "solde_structurel") if x["solde_structurel"] is not None else "—"
+    f = ze["dix"]; x = ze_fr(f); m = f["medianes"]
+    A["ze_lib"] = A["ze_dix_lib"]; A["ze_n"] = lettres(f["n"]); A["ze_total"] = lettres(len(ZONE_EURO))
+    A["ze_fr_ti"] = fr(x["taux_implicite"], 2); A["ze_med_ti"] = fr(m["taux_implicite"], 2)
+    A["ze_ti_moins_n"] = lettres(rang_bas(f, "taux_implicite", 2)[0] - 1)
+    A["ze_fr_g"] = fr(x["croissance_nominale"]); A["ze_med_g"] = fr(m["croissance_nominale"])
+    A["ze_fr_stab"] = sz(x["solde_stabilisant"]); A["ze_med_stab"] = sz(m["solde_stabilisant"])
+    A["ze_fr_pb"] = signe(x["solde_primaire"]); A["ze_med_pb"] = signe(m["solde_primaire"])
+    A["ze_fr_sps"] = signe(x["solde_structurel"]); A["ze_med_sps"] = signe(m["solde_structurel"])
+    A["ze_ecartes"] = enumere([art(e["pays"]) for e in f["ecartes"]]); A["ze_ecartes_n"] = lettres(len(f["ecartes"]))
+    A["ze_edition"] = AMECO_EDITION[LANG]
+    A["ze_cinq_pire_n"] = lettres(rang_bas(ze["cinq"], "ecart")[0] - 1)
+    A["ze_g_avec"] = enumere([art(p) for p in rang_bas(f, "croissance_nominale")[1]])
+    return A
+
+
+def gardes_ze(ze: dict) -> int:
+    d, c, a, d10 = ze["dix"], ze["cinq"], ze["av20"], ze["d2010"]
+    xd, xc = ze_fr(d), ze_fr(c)
+    rb = lambda f, k, dec=1: rang_bas(f, k, dec)  # noqa: E731
+    G = [
+        ("zone euro, dix ans : au moins dix-huit pays comparés, deux au plus écartés", d["n"] >= 18 and len(d["ecartes"]) <= 2),
+        ("zone euro, dix ans : la France a le solde primaire moyen le plus bas, sans ex aequo", rb(d, "solde_primaire") == (1, [])),
+        ("zone euro, dix ans : la France a la croissance nominale moyenne la plus faible, à égalité à l'affichage avec un seul pays (nommé par le jeton ze_g_avec)",
+         rb(d, "croissance_nominale")[0] == 1 and len(rb(d, "croissance_nominale")[1]) == 1),
+        ("zone euro, dix ans : « l'un des plus bas » : au plus cinq pays ont un taux implicite moyen plus bas que la France",
+         2 <= rb(d, "taux_implicite", 2)[0] - 1 <= 5),   # « seuls N pays ont payé moins » : pluriel, N de deux à cinq
+        ("zone euro, dix ans : taux implicite français sous la médiane", not lg.depasse(xd["taux_implicite"], d["medianes"]["taux_implicite"], 2)
+         and xd["taux_implicite"] < d["medianes"]["taux_implicite"]),
+        ("zone euro, dix ans : repère « proche du pays médian » (moins d'un point d'écart)", abs(xd["solde_stabilisant"] - d["medianes"]["solde_stabilisant"]) < 1),
+        ("zone euro, dix ans : solde primaire français inférieur d'au moins un point à la médiane", xd["solde_primaire"] < d["medianes"]["solde_primaire"] - 1),
+        ("témoin AMECO, dix ans : solde primaire structurel le plus bas, sans ex aequo", xd["solde_structurel"] is not None and rb(d, "solde_structurel") == (1, [])),
+        ("témoin AMECO, dix ans : tous les pays comparés ont leur solde structurel", d["n_structurel"] == d["n"]),
+        ("cinq ans : solde primaire toujours le plus bas, sans ex aequo", rb(c, "solde_primaire") == (1, [])),
+        ("cinq ans : « la France n'est plus en moyenne sous son repère » (écart affiché positif ou nul) et au moins deux pays ont un écart plus défavorable",
+         rb(c, "ecart")[0] >= 3 and 0 <= lg.affichee(xc["ecart"]) < 2),   # < 2 : « point » au singulier dans la page
+        ("cinq ans : témoin AMECO, solde structurel parmi les deux plus bas", xc["solde_structurel"] is not None and rb(c, "solde_structurel")[0] <= 2),
+        ("avant 2020 : la France est le seul pays sous le repère en moyenne", [x["pays"] for x in a["pays"] if lg.affichee(x["ecart"]) < 0] == ["FR"]),
+        ("2010-2019 : solde structurel le plus bas (témoin)", rb(d10, "solde_structurel") == (1, [])),
+        ("pays écartés : chacun l'est pour une année absente du panel témoin (motif repris dans la page)", all(e["annees"] for e in d["ecartes"])),
+    ]
+    if "--mutation-ze" in sys.argv:   # témoin positif : la France perd son rang (solde primaire relevé de 3 points)
+        xd["solde_primaire"] += 3
+        G[1] = (G[1][0], rb(d, "solde_primaire") == (1, []))
+    faux = [nom_ for nom_, ok in G if not ok]
+    if faux:
+        log("Zone euro, %s : France solde primaire %+.2f (mediane %+.2f), taux %.2f (mediane %.2f), croissance %.2f (mediane %.2f), structurel %s"
+            % (A_lib(d), xd["solde_primaire"], d["medianes"]["solde_primaire"], xd["taux_implicite"], d["medianes"]["taux_implicite"],
+               xd["croissance_nominale"], d["medianes"]["croissance_nominale"], xd["solde_structurel"]))
+        fail("section zone euro : la page affirme ce que les donnees ne soutiennent plus : " + " ; ".join(faux))
+    return len(G)
+
+
+def A_lib(f: dict) -> str:
+    return "%d-%d" % (f["debut"], f["fin"])
+
+
 # ------------------------------------------------------------------ figures
 
 TXT = {
@@ -701,6 +852,36 @@ TXT = {
           ("stabilisant", "The primary balance that stabilises the debt changes every year with interest rates and growth; the observed "
                           "balance mostly stayed below it.")]),
 }
+TXT["fr"].update(
+  ze_titre="Zone euro, %s : taux, croissance et solde primaire de la France",
+  ze_desc=("Moyennes annuelles %s, %s pays de la zone euro, un point par pays, la France en orange. Taux implicite de la dette : "
+           "France %s %%, pays médian %s %%. Croissance du PIB nominal : France %s %%, pays médian %s %%. Solde primaire : France %s %% "
+           "du PIB, pays médian %s %%. La France a le solde primaire le plus bas, l'une des deux croissances nominales les plus faibles et l'un des taux les plus bas."),
+  ze_lignes=[("taux_implicite", "Taux implicite de la dette", "intérêts / dette, en %", 2),
+             ("croissance_nominale", "Croissance du PIB nominal", "par an, en %", 1),
+             ("solde_primaire", "Solde primaire", "en % du PIB", 1)],
+  ze_leg=("France", "autres pays de la zone euro", "pays médian"), ze_unite="Moyennes annuelles %s",
+  ze_fr="France %s", ze_med="médiane %s", ze_fr_m="France : %s", ze_med_m="Médiane : %s",
+  ze_src="Eurostat gov_10dd_edpt1 (dette, PIB), gov_10a_main (B9, D41PAY), %s ; membres de la zone euro au 1er janvier 2026, hors %s (années rejetées par le contrôle)",
+  ze_note=("Comparaison comptable : elle ne dit ni si l'écart vient des dépenses ou des recettes, ni quel ajustement serait souhaitable. "
+           "Taux implicite = intérêts payés / dette de fin d'année précédente."))
+TXT["en"].update(
+  ze_titre="Euro area, %s: France's interest rate, growth and primary balance",
+  ze_desc=("Annual averages %s, %s euro-area countries, one dot per country, France in orange. Implicit interest rate on debt: "
+           "France %s%%, median country %s%%. Nominal GDP growth: France %s%%, median country %s%%. Primary balance: France %s%% "
+           "of GDP, median country %s%%. France has the lowest primary balance, one of the two weakest nominal growth rates and one of the lowest interest rates."),
+  ze_lignes=[("taux_implicite", "Implicit interest rate", "interest / debt, in %", 2),
+             ("croissance_nominale", "Nominal GDP growth", "per year, in %", 1),
+             ("solde_primaire", "Primary balance", "in % of GDP", 1)],
+  ze_leg=("France", "other euro-area countries", "median country"), ze_unite="Annual averages %s",
+  ze_fr="France %s", ze_med="median %s", ze_fr_m="France: %s", ze_med_m="Median: %s",
+  ze_src="Eurostat gov_10dd_edpt1 (debt, GDP), gov_10a_main (B9, D41PAY), %s; euro-area members at 1 January 2026, excluding %s (years rejected by the check)",
+  ze_note=("An accounting comparison: it says neither whether the gap comes from spending or revenue, nor which adjustment would be "
+           "desirable. Implicit rate = interest paid / debt at the end of the previous year."))
+TXT["fr"]["montre"].append(("zone-euro", "Dans la zone euro, la France emprunte parmi les moins cher ; ce qui la distingue est une croissance "
+                                         "nominale parmi les plus faibles et le solde primaire le plus bas."))
+TXT["en"]["montre"].append(("zone-euro", "In the euro area, France borrows among the most cheaply; what sets it apart is among the weakest "
+                                         "nominal growth and the lowest primary balance."))
 SUFFIXE = {"fr": "", "en": "-en"}
 WM, FSM = PF.LARGEUR_M, PF.POLICE_M
 AXE = "#8f8a84"
@@ -951,13 +1132,126 @@ def fig_stabilisant_m(annees, A):
     return PF.pied_mobile(e, y + 12, blocs_pied(T["stab_src"] % (A["annee_debut"], A["annee_fin"]), T["stab_note"], T["licence_m"]), GRID)
 
 
+def ze_val(v, dec):
+    return (fr(v, dec) if dec == 2 else signe(v, dec) if v < 0 else fr(v, dec)) + TXT[LANG]["pc"]
+
+
+def textes_ze(ze, A):
+    T, f = TXT[LANG], ze["dix"]
+    m = f["medianes"]; x = ze_fr(f)
+    desc = T["ze_desc"] % (A["ze_lib"], f["n"], fr(x["taux_implicite"], 2), fr(m["taux_implicite"], 2), fr(x["croissance_nominale"]),
+                           fr(m["croissance_nominale"]), signe(x["solde_primaire"]), signe(m["solde_primaire"]))
+    hors = enumere([nom(e["pays"]) for e in f["ecartes"]])
+    src = T["ze_src"] % (A["ze_lib"], hors) if f["ecartes"] else T["ze_src"].split(" ; ")[0].split("; ")[0] % A["ze_lib"]
+    return T["ze_titre"] % A["ze_lib"], desc, src, T["ze_note"]
+
+
+def ze_echelle(vals, dec):
+    pas = 0.5 if dec == 2 else 1.0
+    lo, hi = min(vals), max(vals)
+    return (int(lo / pas) - (1 if lo < 0 else 0)) * pas, (int(hi / pas) + (1 if hi > 0 else 0)) * pas
+
+
+def fig_zone_euro(ze, A):
+    T = TXT[LANG]
+    titre, desc, src, note = textes_ze(ze, A)
+    f = ze["dix"]; m = f["medianes"]
+    e = entete(0, "bz", titre, desc)
+    e.append('<circle cx="5" cy="41" r="5" fill="%s"/>' % ORANGE)
+    e.append('<text x="15" y="45" font-size="11" fill="%s">%s</text>' % (INK2, esc(T["ze_leg"][0])))
+    e.append('<circle cx="75" cy="41" r="4.5" fill="%s" fill-opacity="0.6"/>' % GRIS)
+    e.append('<text x="85" y="45" font-size="11" fill="%s">%s</text>' % (INK2, esc(T["ze_leg"][1])))
+    xl = 85 + 0.85 * largeur(T["ze_leg"][1], 11) + 16   # largeur() majore : sans ce facteur, un vide visible avant « pays médian »
+    e.append('<line x1="%.1f" y1="34" x2="%.1f" y2="48" stroke="%s" stroke-width="2"/>' % (xl, xl, INK))
+    e.append('<text x="%.1f" y="45" font-size="11" fill="%s">%s</text>' % (xl + 7, INK2, esc(T["ze_leg"][2])))
+    e.append('<text x="0" y="66" font-size="11" fill="%s">%s</text>' % (MUTED, esc(T["ze_unite"] % A["ze_lib"])))
+    LAB, X0, X1, Y0, RH = 200, 225, W - 20, 92, 78
+    for k, (cle, lib, sous, dec) in enumerate(T["ze_lignes"]):
+        y = Y0 + RH * k
+        if k:
+            e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="0.6"/>' % (y - 6, W, y - 6, GRID))
+        e.append('<text x="0" y="%d" font-size="12.5" font-weight="600" fill="%s">%s</text>' % (y + 30, INK, esc(lib)))
+        e.append('<text x="0" y="%d" font-size="11" fill="%s">%s</text>' % (y + 45, MUTED, esc(sous)))
+        vals = [d[cle] for d in f["pays"]]
+        lo, hi = ze_echelle(vals, dec)
+        X = lambda v, lo=lo, hi=hi: X0 + (v - lo) / (hi - lo) * (X1 - X0)  # noqa: E731
+        ya = y + 36
+        e.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-width="1"/>' % (X0, ya, X1, ya, AXE))
+        for v in (lo, hi):
+            e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="%s">%s</text>'
+                     % (X(v), ya + 30, MUTED, "start" if v == lo else "end", esc(ze_val(v, dec if dec == 2 else 0))))
+        if lo < 0 < hi:   # zéro marqué ET étiqueté : sans étiquette, le trait se confondait avec la médiane
+            e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="1.2"/>' % (X(0), ya - 9, X(0), ya + 9, AXE))
+            e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle">0</text>' % (X(0), ya + 30, MUTED))
+        for d in f["pays"]:
+            if d["pays"] != "FR":
+                e.append('<circle cx="%.1f" cy="%d" r="4.5" fill="%s" fill-opacity="0.6"/>' % (X(d[cle]), ya, GRIS))
+        xm = X(m[cle])
+        e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="2"/>' % (xm, ya - 8, xm, ya + 8, INK))
+        x = ze_fr(f)[cle]
+        e.append('<circle cx="%.1f" cy="%d" r="6" fill="%s" stroke="#ffffff" stroke-width="1"/>' % (X(x), ya, ORANGE))
+        tf, tm = T["ze_fr"] % ze_val(x, dec), T["ze_med"] % ze_val(m[cle], dec)
+        # Étiquettes centrées sur leur point, recentrées si elles sortent de la bande (France au-dessus, médiane en dessous).
+        for txt, cx, yy, poids in ((tf, X(x), ya - 12, "600"), (tm, xm, ya + 21, "400")):
+            w = largeur(txt, 11)
+            cx = min(max(cx, X0 + w / 2), X1 - w / 2)
+            e.append('<text x="%.1f" y="%d" font-size="11" font-weight="%s" fill="%s" text-anchor="middle">%s</text>' % (cx, yy, poids, INK, esc(txt)))
+    return PF.pied(e, Y0 + RH * 3 - 2, W, blocs_pied(src, note), GRID)
+
+
+def fig_zone_euro_m(ze, A, svg_d):
+    T = TXT[LANG]
+    titre, _, src, note = textes_ze(ze, A)
+    desc = html.unescape(re.search(r"<desc[^>]*>(.*?)</desc>", svg_d, re.S).group(1))
+    f = ze["dix"]; m = f["medianes"]
+    e, y = PF.tete_mobile("bz-m", titre, desc, INK, FONT)
+    for k, (forme, lib) in enumerate(zip(("fr", "autres", "med"), T["ze_leg"])):
+        y += 20
+        if forme == "fr":
+            e.append('<circle cx="6" cy="%.1f" r="5.5" fill="%s"/>' % (y - 5, ORANGE))
+        elif forme == "autres":
+            e.append('<circle cx="6" cy="%.1f" r="5" fill="%s" fill-opacity="0.6"/>' % (y - 5, GRIS))
+        else:
+            e.append('<line x1="6" y1="%.1f" x2="6" y2="%.1f" stroke="%s" stroke-width="2"/>' % (y - 12, y + 2, INK))
+        e.append('<text x="18" y="%.1f" font-size="%s" fill="%s">%s</text>' % (y, FSM, INK2, esc(lib)))
+    y += 19
+    e.append('<text x="0" y="%.1f" font-size="%s" fill="%s">%s</text>' % (y, FSM, MUTED, esc(T["ze_unite"] % A["ze_lib"])))
+    X0, X1 = 8, WM - 8
+    for cle, lib, sous, dec in T["ze_lignes"]:
+        y += 16
+        e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="0.6"/>' % (y - 4, WM, y - 4, GRID))
+        y += 18
+        e.append('<text x="0" y="%.1f" font-size="15" font-weight="600" fill="%s">%s</text>' % (y, INK, esc(lib)))
+        y += 18
+        e.append('<text x="0" y="%.1f" font-size="%s" fill="%s">%s</text>' % (y, FSM, MUTED, esc(sous)))
+        vals = [d[cle] for d in f["pays"]]
+        lo, hi = ze_echelle(vals, dec)
+        X = lambda v, lo=lo, hi=hi: X0 + (v - lo) / (hi - lo) * (X1 - X0)  # noqa: E731
+        ya = y + 22
+        e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="1"/>' % (X0, ya, X1, ya, AXE))
+        for d in f["pays"]:
+            if d["pays"] != "FR":
+                e.append('<circle cx="%.1f" cy="%.1f" r="4.5" fill="%s" fill-opacity="0.6"/>' % (X(d[cle]), ya, GRIS))
+        e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="2"/>' % (X(m[cle]), ya - 8, X(m[cle]), ya + 8, INK))
+        e.append('<circle cx="%.1f" cy="%.1f" r="6" fill="%s" stroke="#ffffff" stroke-width="1"/>' % (X(ze_fr(f)[cle]), ya, ORANGE))
+        for v in (lo, hi):
+            e.append('<text x="%.1f" y="%.1f" font-size="%s" fill="%s" text-anchor="%s">%s</text>'
+                     % (X(v), ya + 24, FSM, MUTED, "start" if v == lo else "end", esc(ze_val(v, dec if dec == 2 else 0))))
+        y = ya + 24
+        for txt in (T["ze_fr_m"] % ze_val(ze_fr(f)[cle], dec), T["ze_med_m"] % ze_val(m[cle], dec)):
+            y += 20
+            e.append('<text x="0" y="%.1f" font-size="%s" font-weight="600" fill="%s">%s</text>' % (y, FSM, INK, esc(txt)))
+    return PF.pied_mobile(e, y + 12, blocs_pied(src, note, T["licence_m"]), GRID)
+
+
 def figures_m(dec, cmp_, annees, A, D):
     """Versions téléphone, contrôlées contre les versions détaillées (parité des valeurs en gras, police minimale)."""
     x = SUFFIXE[LANG]
     td, tc_ = textes_dec(A), textes_cmp(cmp_, A)
     sortie = {"dette-baisse-decennies%s-m.svg" % x: multiples_m("bd-m", td[0], D["dette-baisse-decennies%s.svg" % x], lignes_dec(dec, A), td[2], td[3]),
               "dette-baisse-comparaison%s-m.svg" % x: multiples_m("bc-m", tc_[0], D["dette-baisse-comparaison%s.svg" % x], lignes_cmp(cmp_, A), tc_[2], tc_[3], 20),
-              "dette-baisse-stabilisant%s-m.svg" % x: fig_stabilisant_m(annees, A)}
+              "dette-baisse-stabilisant%s-m.svg" % x: fig_stabilisant_m(annees, A),
+              "dette-baisse-zone-euro%s-m.svg" % x: fig_zone_euro_m(ZE_COURANT, A, D["dette-baisse-zone-euro%s.svg" % x])}
     for nom_, svg in sortie.items():
         ec = PF.parite(D[nom_.replace("-m.svg", ".svg")], svg, FSM)
         if ec:
@@ -984,6 +1278,9 @@ def fiches(figs):
     return out
 
 
+ZE_COURANT: dict = {}   # posé par main() : figures_m() garde sa signature
+
+
 def csv_texte(dec, annees, cmp_, europe):
     """Format long : les trois tableaux n'ont pas les mêmes colonnes."""
     buf = io.StringIO()
@@ -1002,6 +1299,11 @@ def csv_texte(dec, annees, cmp_, europe):
     for classe in ("deficit", "excedent_2"):
         for k in ("n", "fortes_baisses", "baisses"):
             w.writerow(["europe_fenetres_dette_elevee", "+".join(h[classe]["pays"]), "fenetres de dix ans", "%s_%s" % (classe, k), h[classe][k]])
+    for f in ZE_COURANT.values():
+        for d in f["pays"]:
+            for k in ("solde_primaire", "solde_stabilisant", "ecart", "taux_implicite", "croissance_nominale", "solde_structurel"):
+                if d[k] is not None:
+                    w.writerow(["zone_euro_moyennes", d["pays"], "%d-%d" % (f["debut"], f["fin"]), k, "%.3f" % d[k]])
     return buf.getvalue()
 
 
@@ -1013,14 +1315,18 @@ def main() -> int:
             import cairosvg  # noqa: F401
         except ImportError:
             fail("cairosvg absent : SVG et PNG se produisent ensemble ou pas du tout (pip install cairosvg)")
-    fin, dec, annees, cmp_, europe, cons, _ = calcul()
+    global ZE_COURANT
+    fin, dec, annees, cmp_, europe, cons, R = calcul()
+    ze = ZE_COURANT = zone_euro(R, fin, ameco())
     use("en")
     A_en = affichage(fin, dec, annees, cmp_, europe, cons)[0]
+    A_en.update(affichage_ze(ze))
     use("fr")
     A, haut, bas, exc_ans = affichage(fin, dec, annees, cmp_, europe, cons)
+    A.update(affichage_ze(ze))
     if set(A) != set(A_en):
         fail("blocs affichage et affichage_en : cles differentes (%s)" % sorted(set(A) ^ set(A_en)))
-    n = gardes(fin, dec, annees, cmp_, europe, haut, bas, exc_ans)
+    n = gardes(fin, dec, annees, cmp_, europe, haut, bas, exc_ans) + gardes_ze(ze)
     # Une variation, deux pages (phase A du volet 5, B3) : la hausse du ratio de la dernière année doit être la même qu'au volet 4.
     if MONDE.is_file():
         m = json.loads(MONDE.read_text(encoding="utf-8"))
@@ -1042,6 +1348,7 @@ def main() -> int:
         figs["dette-baisse-decennies%s.svg" % x] = fig_decennies(dec, AA)
         figs["dette-baisse-comparaison%s.svg" % x] = fig_comparaison(cmp_, AA)
         figs["dette-baisse-stabilisant%s.svg" % x] = fig_stabilisant(annees, AA)
+        figs["dette-baisse-zone-euro%s.svg" % x] = fig_zone_euro(ze, AA)
         figs.update(figures_m(dec, cmp_, annees, AA, figs))
     use("fr")
     if check:
@@ -1054,8 +1361,9 @@ def main() -> int:
                                         "deficits_primaires": "déficits hors intérêts cumulés, en points de PIB (négatif : excédents)",
                                         "flux_stock": "variation de dette qui ne passe pas par le déficit ; résidu de l'identité",
                                         "solde_stabilisant": "solde primaire qui aurait laissé le ratio inchangé cette année-là, hors flux-stock : (i - g)/(1 + g) x d(t-1)",
+                                        "zone_euro": "membres de la zone euro au 1er janvier 2026 ; moyennes annuelles par fenêtre ; solde_structurel = AMECO UBLGBPS (Commission européenne, édition %s, %% du PIB potentiel), témoin indépendant non utilisé dans le calcul" % AMECO_EDITION["fr"],
                                         "temoin": "ratios de dette et de solde primaire comparés à ceux publiés par Eurostat en %% du PIB ; tolérance %.2f point" % TOL}},
-               "france": {"decennies": dec, "annees": annees}, "pays_dette_elevee": cmp_, "europe": europe, "conservation": cons, "affichage": A, "affichage_en": A_en}
+               "france": {"decennies": dec, "annees": annees}, "pays_dette_elevee": cmp_, "europe": europe, "zone_euro": ze, "conservation": cons, "affichage": A, "affichage_en": A_en}
     releve = payload["meta"]["releve_le"]
     if OUT_DATA.exists():
         try:
