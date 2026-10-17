@@ -52,6 +52,19 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-17 — Dette, volet 5 : confrontation à la recherche étendue à la section #zone-euro
+
+Antériorités citées par le contradicteur, lues à la source
+(`D:\PRO_RECHERCHE\dette_ressources_pistes\piste2\LECTURE_ANTERIORITES_2026-10-17.md`, PDF archivés avec empreinte).
+
+- **Mesuré ici** : la comparaison de la zone euro est ajoutée, avec la phrase « le constat sur le solde primaire n'est pas
+  nouveau ».
+- **Cohérent avec** : Cour des comptes (RSPFP, juin 2025, p. 112-116). Même constat sur les quatre grands pays de 1995 à
+  2024, citation vérifiée dans le PDF ; sa lecture en termes de stratégie n'est pas reprise.
+- **Mis en danger par** : une troisième lecture, « la France dépense trop / ne prélève pas assez ». Les chiffres de Fipeco
+  (28/04/2026) sont vérifiés sur la page brute ; ils portent sur l'ensemble de la zone, non sur une moyenne des pays.
+- « neuf textes » devient « onze » ; bloc vérifié le 17/10. FR et EN ; instantanés de relecture refaits.
+
 ### 2026-10-17 — Date de relevé : elle ne bouge qu'avec une donnée (organe commun `scripts/releve_jeu.py`)
 
 Point ouvert de l'arbitrage anthropie-site-20261017-030435 (§ 6).
