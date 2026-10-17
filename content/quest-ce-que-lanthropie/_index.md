@@ -194,9 +194,9 @@ Une hypothèse se juge aussi à ce qu'elle concède. Trois objections reviennent
 
 L'anthropie peut être mobilisée dans des champs très différents&nbsp;:
 
-- **Finances publiques**&nbsp;: à qui le coût est-il reporté, dans le temps ou entre groupes sociaux&nbsp;?
+- **Finances publiques**&nbsp;: à qui le coût est-il reporté, dans le temps ou entre groupes sociaux&nbsp;? Appliqué à la dette, le cadre déplace la question du volume vers [qui décide aujourd'hui et qui devra s'adapter demain](/dette-publique-generations-futures/#anthropie).
 - **Transition énergétique**&nbsp;: où le désordre matériel est-il déplacé, et sous quelle forme revient-il&nbsp;?
-- **Recherche académique**&nbsp;: quelles marges absorbent le coût de l'ordre institutionnel&nbsp;?
+- **Recherche académique**&nbsp;: quelles marges absorbent le coût de l'ordre institutionnel&nbsp;? Le cadre s'applique à lui-même dans [la position du chercheur indépendant](/chercheur-independant/).
 - **Organisation territoriale**&nbsp;: quels territoires héritent des charges que d'autres centres rendent invisibles&nbsp;?
 
 Le cadre n'apporte pas une réponse unique à ces questions. Il fournit une manière de les poser avec plus de netteté.

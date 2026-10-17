@@ -213,9 +213,9 @@ A hypothesis is also judged by what it concedes. Three objections recur — here
 
 The framework can be applied across very different fields:
 
-- **Public finance**: to whom is the cost deferred, in time or between social groups?
+- **Public finance**: to whom is the cost deferred, in time or between social groups? Applied to debt, the framework moves the question from volume to [who decides today and who will have to adjust tomorrow](/en/public-debt-future-generations/#anthropic-reading).
 - **Energy transition**: where is material disorder displaced, and in what form does it return?
-- **Academic research**: which margins absorb the cost of institutional order?
+- **Academic research**: which margins absorb the cost of institutional order? The framework applies to itself in [the position of the independent researcher](/en/independent-researcher/).
 - **Territorial organisation**: which territories inherit the charges that other centres render invisible?
 
 The framework does not provide a single answer to these questions. It provides a clearer way of asking them.

@@ -210,7 +210,7 @@ Finally, the weight of the same stock depends on the gap between the interest ra
 
 ## The anthropic reading: who decides today, who will have to adapt tomorrow? {#anthropic-reading}
 
-The anthropic framework does not settle the macroeconomic controversy; it moves the question from the volume of debt to participation in decisions and the future distribution of adjustments. It comes down to three propositions.
+The [anthropic framework](/en/quest-ce-que-lanthropie/) does not settle the macroeconomic controversy; it moves the question from the volume of debt to participation in decisions and the future distribution of adjustments. It comes down to three propositions.
 
 1. One generation can commit to spending whose consequences concern people absent from the decision: no one votes “against” future generations; people vote for budgets part of whose costs will fall to them.
 2. A transfer over time does not, on its own, determine who will actually bear the charge: within each generation, the adjustment may go through taxes, user charges, services or savings, and not fall on the same people.

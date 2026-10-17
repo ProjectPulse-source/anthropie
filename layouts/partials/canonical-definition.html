@@ -6,6 +6,15 @@
   corps markdown (apostrophes courbes identiques au verbatim d'origine).
   Si la clé est vide/absente : ne rien rendre (pas de placeholder, pas d'erreur).
   Contexte attendu : une Page (passé par le shortcode via .Page).
+  Le premier « anthropie » / « anthropy » renvoie à la page de définition, sauf sur cette page elle-même
+  (arbitrage PRO-20261017-145653 : lien documentaire sur le terme défini, aucune lecture ajoutée).
 */ -}}
 {{- $def := .Site.Params.canonicalDefinition -}}
-{{- if $def -}}<p class="canonical-definition">{{ .RenderString $def }}</p>{{- end -}}
+{{- if $def -}}
+{{- $txt := .RenderString $def -}}
+{{- $cible := relLangURL "quest-ce-que-lanthropie/" -}}
+{{- if ne .RelPermalink $cible -}}
+{{- $txt = replaceRE `(?i)\b(anthropie|anthropy)\b` (printf `<a href="%s">$1</a>` $cible) $txt 1 -}}
+{{- end -}}
+<p class="canonical-definition">{{ $txt | safeHTML }}</p>
+{{- end -}}

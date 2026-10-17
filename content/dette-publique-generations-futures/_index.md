@@ -215,7 +215,7 @@ Le poids d'un même stock dépend enfin de l'écart entre le taux d'intérêt qu
 
 ## La lecture anthropique&nbsp;: qui décide aujourd'hui, qui devra s'adapter demain&nbsp;? {#anthropie}
 
-Le cadre anthropique ne tranche pas la controverse macroéconomique&nbsp;; il déplace la question du volume de la dette vers la participation aux décisions et la répartition future des ajustements. Il tient en trois propositions.
+Le [cadre anthropique](/quest-ce-que-lanthropie/) ne tranche pas la controverse macroéconomique&nbsp;; il déplace la question du volume de la dette vers la participation aux décisions et la répartition future des ajustements. Il tient en trois propositions.
 
 1. Une génération peut engager des dépenses dont les conséquences concernent des personnes absentes de la décision&nbsp;: personne ne vote «&nbsp;contre&nbsp;» les générations futures&nbsp;; on vote des budgets dont une part des coûts leur reviendra.
 2. Le transfert dans le temps ne détermine pas, à lui seul, qui supportera effectivement la charge&nbsp;: à l'intérieur de chaque génération, l'ajustement peut passer par l'impôt, les tarifs, les services ou l'épargne, et ne pas tomber sur les mêmes.

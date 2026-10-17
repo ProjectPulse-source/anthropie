@@ -53,7 +53,7 @@ And print produces something else besides: a **public**. The same text read ever
 
 The screen picks up the sequence: unlimited memory, instant access, fluid text that is searched more than it is read. Then artificial intelligence moves the frontier one notch further: after **memory** (writing) and **diffusion** (printing), it is a part of **judgement** that is externalised — formulating, summarising, answering, choosing.
 
-The lesson of the first two shifts holds for the third. Thamus's trial is replayed point for point — AI will produce forgetfulness, laziness, dependence — and it has the same share of truth and the same blind spot: a medium does not abolish thought, it **redistributes** it. The real question is not whether to bless or curse the tool: it is to see what is freed, what atrophies, and who controls the medium. On this last point, the author's anthropic framework extends the analysis: when cognitive externalisation saturates, the burden returns to attention and judgement — this is the [anthropic loop](/en/anthropic-loop/).
+The lesson of the first two shifts holds for the third. Thamus's trial is replayed point for point — AI will produce forgetfulness, laziness, dependence — and it has the same share of truth and the same blind spot: a medium does not abolish thought, it **redistributes** it. The real question is not whether to bless or curse the tool: it is to see what is freed, what atrophies, and who controls the medium. On this last point, the author's [anthropic framework](/en/quest-ce-que-lanthropie/) extends the analysis: when cognitive externalisation saturates, the burden returns to attention and judgement — this is the [anthropic loop](/en/anthropic-loop/).
 
 ## What this history teaches
 
