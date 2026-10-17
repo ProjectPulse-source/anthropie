@@ -1,10 +1,10 @@
-# relu le 2026-10-17 ; texte servi de /en/can-public-debt-come-down/, build de 8f84c86 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-17 ; texte servi de /en/can-public-debt-come-down/, build de cf7733e + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Can public debt come down?
 Yes: what can fall is the weight of debt in GDP, even while its amount rises.
 In Portugal, public debt went from 235 to 275 billion euros from end-2015 to end-2025, and its weight from 131.0% to 89.7% of GDP.
 In France, it rose by 18.6 points over the same period: general government spent more than it took in, even leaving interest aside, and that deficit weighed more than the help from interest rates and growth.
-Page updated 16 October 2026 · revisions
+Page updated 17 October 2026 · revisions
 Public debt dossier
 Data · Eurostat 2025
 ↓ Charts, data and citations to reuseReuse this page
@@ -247,27 +247,29 @@ France has run a primary surplus only four times, from 1998 to 2001, at most 1.6
 Stabilising the ratio and bringing it down are two distinct objectives.
 An adjustment amount is read with its objective, its horizon and its assumptions; the marker calculated here for 2025 holds for that year and does not allow the multi-year estimates of institutions to be assessed.
 In the euro area, what sets France apart
-The same calculation, run on the current members of the euro area, separates what the gap to the marker, on its own, conflates: the price of debt, the growth of the economy and the primary balance.
-Over 2016-2025, 19 of the 21 countries have complete accounts; Finland and Ireland are left out, at least one of their years departing from the ratios published by Eurostat.
+The same calculation, run on the current members of the euro area, separates what the gap to the marker, on its own, conflates: the rate paid on debt, the growth of the economy and the primary balance.
+Over 2016-2025, 19 of the 21 countries are compared; Finland and Ireland are left out, because at least one of their years departs from the ratios published by Eurostat by more than the rounding margin.
 Implicit interest rate, nominal growth and primary balance, annual averages 2016-2025, euro-area countries (Eurostat, author’s calculation).
-Among the cheapest debts.
-On average over 2016-2025, the French State paid 1.74% interest on its debt, against 2.11% for the median country; only four euro-area countries paid a lower rate.
+Among the lowest implicit interest rates.
+On average over 2016-2025, French general government paid interest equal to 1.74% of its debt, against a median of 2.11%; only four of the countries compared had a lower implicit rate, and, outside the calculation, Finland.
+This rate relates interest to the whole debt, issued over the years: it measures what the stock costs, not the rate at which the State borrows today.
 Among the weakest nominal growth.
-French nominal GDP grew by 3.2% a year, against 5.5% for the median country: the weakest growth in the euro area, tied, once rounded, with Italy.
-A low rate and weak growth offset each other: the primary balance that would have stabilised the ratio, −1.5% of GDP on average, is close to that of the median country (−1.8%).
+French nominal GDP grew by 3.2% a year, against a median of 5.5%: tied, once rounded, with Italy, the weakest growth of the countries compared; outside the calculation, Finland grew more slowly still (3.0%).
+The primary balance that would have stabilised the ratio, excluding other adjustments, averaged −1.5% of GDP, close to the median (−1.8%): it depends at once on the implicit rate, on nominal growth and on the level of debt.
 The lowest primary balance.
-The French primary balance averaged −3.1% of GDP, against −0.7% for the median country: no other euro-area country had so low an average primary balance over the period.
+The French primary balance averaged −3.1% of GDP, against a median of −0.7%: no other country compared had so low an average primary balance over the period.
+The ranking stays the same if Finland and Ireland are brought back in, rejected years included.
 What is established.
-Over 2016-2025, what sets France apart in the euro area is neither the price of its debt, among the lowest, nor the balance that would stabilise it, close to the median country: it is its primary balance, the lowest in the area, together with nominal growth among the weakest.
+Over 2016-2025, what sets France apart in the euro area is neither the rate paid on its debt, among the lowest, nor the balance that would stabilise it, close to the median: it is its primary balance, the lowest of the countries compared, together with nominal growth among the weakest.
 What is not.
 Whether the gap comes from spending rather than revenue, or the reverse: the primary balance does not separate them.
 Nor which adjustment would be desirable, nor whether it would have changed the rates paid.
-Adjusted for the cycle, the finding holds.
-Computed by the European Commission net of cyclical effects, France’s structural primary balance is also the lowest in the euro area over the same period: −2.4% of potential GDP on average, against −0.8% for the median country (AMECO database, spring 2026 edition).
-This check plays no part in the calculation: it comes from another producer, and it rests on an estimate of potential GDP that the Commission revises from one edition to the next and that other institutions estimate differently.
-Inflation masked the gap, not the balance.
-Over the last five years (2021-2025), inflation lowered every country’s marker: France is no longer, on average, below its own (+0.1 points), and four countries have a less favourable gap.
-Its primary balance nonetheless remains the lowest in the euro area, and its structural balance among the two lowest.
+With the Commission’s structural indicator, the ranking is the same.
+France’s structural primary balance, which the European Commission computes net of estimated cyclical effects and of one-off measures, is also the lowest of the countries compared over the same period: −2.4% of potential GDP on average, against a median of −0.8% (AMECO database, spring 2026 edition).
+This check plays no part in the calculation, without being fully independent of it: the Commission starts from the same public accounts, and its adjustment rests on an estimate of potential GDP that it revises from one edition to the next and that other institutions estimate differently.
+The marker came down, not the balance.
+Over the last five years (2021-2025), strong nominal growth, the recovery after 2020 and then rising prices, lowered every country’s marker compared with the five years before 2020: France is no longer, on average, below its own (+0.1 points), and four countries have a less favourable gap.
+Its primary balance nonetheless remains the lowest of the countries compared, and its structural balance among the two lowest.
 Over the five years before 2020, France was the only euro-area country whose average primary balance stayed below the marker.
 France in the euro area depending on the period chosen, and what the average gap does not add
 Period
@@ -290,7 +292,7 @@ Structural balance, AMECO (rank from lowest)
 −3.2 (2)
 2025
 20
-−2.9 (1, tied)
+−2.9 (1 to 3)
 0.0
 −2.9 (1)
 −2.5 (4)
@@ -304,9 +306,10 @@ Structural balance, AMECO (rank from lowest)
 21
 −2.1 (3)
 0.0
-−2.2 (3, tied)
+−2.2 (3 to 4)
 −1.5 (1)
-Annual averages, in % of GDP (of potential GDP for the structural balance); ranks read at the displayed precision, two countries displayed as equal being tied.
+Annual averages, in % of GDP (of potential GDP for the structural balance); ranks read at the displayed precision; when several countries are displayed as equal, the rank gives the places they share.
+Over 2016-2025 without the year 2020, France keeps the lowest primary and structural balances, and the weakest nominal growth.
 What the average gap does not add.
 Over a period, the average gap between the observed balance and the marker equals, up to its sign and by construction, the rise in the ratio excluding other adjustments, divided by the number of years: it restates the change in debt, it does not confirm it.
 What cannot be deduced from it is the share due to interest rates and growth, the marker, and the share due to the primary balance: this is why the figure shows these quantities rather than the gap.
@@ -485,7 +488,7 @@ Eurostat gov_10dd_edpt1 (debt, GDP), gov_10a_main (B9, D41PAY), France, 1996-202
 Download PNG
 SVG
 Euro area, 2016-2025: France's interest rate, growth and primary balance
-In the euro area, France borrows among the most cheaply; what sets it apart is among the weakest nominal growth and the lowest primary balance.
+In the euro area, France pays one of the lowest implicit interest rates; what sets it apart is among the weakest nominal growth and the lowest primary balance.
 Reading caveat.
 An accounting comparison: it says neither whether the gap comes from spending or revenue, nor which adjustment would be desirable.
 Implicit rate = interest paid / debt at the end of the previous year.

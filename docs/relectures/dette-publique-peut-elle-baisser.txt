@@ -1,10 +1,10 @@
-# relu le 2026-10-17 ; texte servi de /dette-publique-peut-elle-baisser/, build de 8f84c86 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-17 ; texte servi de /dette-publique-peut-elle-baisser/, build de cf7733e + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 La dette publique peut-elle baisser ?
 Oui : ce qui peut baisser, c'est le poids de la dette dans le PIB, même quand son montant augmente.
 Au Portugal, la dette publique est passée de 235 à 275 milliards d'euros de fin 2015 à fin 2025, et son poids de 131,0 % à 89,7 % du PIB.
 En France, il a augmenté de 18,6 points sur la même période : les administrations ont dépensé plus qu'elles n'encaissaient, même sans compter les intérêts, et ce déficit a pesé plus lourd que l'aide des taux et de la croissance.
-Page mise à jour le 16 octobre 2026 · révisions
+Page mise à jour le 17 octobre 2026 · révisions
 Dossier dette publique
 Données · Eurostat 2025
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
@@ -247,27 +247,29 @@ La France n’a dégagé un excédent primaire que quatre fois, de 1998 à 2001,
 Stabiliser le ratio et le faire baisser sont deux objectifs distincts.
 Un montant d’ajustement se lit avec son objectif, son horizon et ses hypothèses ; le repère calculé ici pour 2025 vaut pour cette année-là et ne permet pas d’évaluer les estimations pluriannuelles des institutions.
 Dans la zone euro, ce qui distingue la France
-Le même calcul, mené sur les membres actuels de la zone euro, sépare ce que l’écart au repère, à lui seul, confond : le prix de la dette, la croissance de l’économie et le solde primaire.
-Sur 2016-2025, 19 des 21 pays ont des comptes complets ; la Finlande et l'Irlande sont hors du calcul, une de leurs années au moins s’éloignant des ratios publiés par Eurostat.
+Le même calcul, mené sur les membres actuels de la zone euro, sépare ce que l’écart au repère, à lui seul, confond : le taux payé sur la dette, la croissance de l’économie et le solde primaire.
+Sur 2016-2025, 19 des 21 pays sont comparés ; la Finlande et l'Irlande sont hors du calcul, parce qu’une de leurs années au moins s’écarte des ratios publiés par Eurostat au-delà de la marge d’arrondi.
 Taux implicite, croissance nominale et solde primaire, moyennes annuelles 2016-2025, pays de la zone euro (Eurostat, calcul de l’auteur).
-Une dette parmi les moins chères.
-En moyenne sur 2016-2025, l’État français a payé 1,74 % d’intérêts sur sa dette, contre 2,11 % pour le pays médian ; seuls quatre pays de la zone euro ont payé un taux moins élevé.
+Un taux implicite parmi les plus bas.
+En moyenne sur 2016-2025, les administrations publiques françaises ont payé des intérêts égaux à 1,74 % de leur dette, contre une médiane de 2,11 % ; seuls quatre des pays comparés ont eu un taux implicite moins élevé, et, hors du calcul, la Finlande.
+Ce taux rapporte les intérêts à toute la dette, émise au fil des années : il dit ce que coûte le stock, pas le taux auquel l’État emprunte aujourd’hui.
 Une croissance nominale parmi les plus faibles.
-Le PIB nominal français a progressé de 3,2 % par an, contre 5,5 % pour le pays médian : c’est la croissance la plus faible de la zone euro, à égalité, à l’arrondi, avec l'Italie.
-Un taux bas et une croissance faible se compensent : le solde primaire qui aurait stabilisé le ratio, −1,5 % du PIB en moyenne, est proche de celui du pays médian (−1,8 %).
+Le PIB nominal français a progressé de 3,2 % par an, contre une médiane de 5,5 % : c’est, à égalité à l’arrondi avec l'Italie, la croissance la plus faible des pays comparés ; hors du calcul, celle de la Finlande a été plus faible encore (3,0 %).
+Le solde primaire qui aurait stabilisé le ratio, hors autres ajustements, est de −1,5 % du PIB en moyenne, proche de la médiane (−1,8 %) : il dépend à la fois du taux implicite, de la croissance nominale et du niveau de la dette.
 Le solde primaire le plus bas.
-Le solde primaire français a été de −3,1 % du PIB en moyenne, contre −0,7 % pour le pays médian : aucun autre pays de la zone euro n’a eu, sur la période, un solde primaire moyen aussi bas.
+Le solde primaire français a été de −3,1 % du PIB en moyenne, contre une médiane de −0,7 % : aucun autre des pays comparés n’a eu, sur la période, un solde primaire moyen aussi bas.
+Le classement reste le même si l’on réintègre la Finlande et l'Irlande, années écartées comprises.
 Ce qui est établi.
-Sur 2016-2025, ce qui distingue la France dans la zone euro n’est ni le prix de sa dette, parmi les plus bas, ni le solde qui la stabiliserait, proche du pays médian : c’est son solde primaire, le plus bas de la zone, avec une croissance nominale parmi les plus faibles.
+Sur 2016-2025, ce qui distingue la France dans la zone euro n’est ni le taux payé sur sa dette, parmi les plus bas, ni le solde qui la stabiliserait, proche de la médiane : c’est son solde primaire, le plus bas des pays comparés, avec une croissance nominale parmi les plus faibles.
 Ce qui ne l’est pas.
 Que l’écart vienne des dépenses plutôt que des recettes, ou l’inverse : le solde primaire ne les sépare pas.
 Ni quel ajustement serait souhaitable, ni s’il aurait changé les taux payés.
-Corrigé de la conjoncture, le constat demeure.
-Calculé par la Commission européenne hors effets du cycle, le solde primaire structurel de la France est lui aussi le plus bas de la zone euro sur la même période : −2,4 % du PIB potentiel en moyenne, contre −0,8 % pour le pays médian (base AMECO, édition de printemps 2026).
-Ce témoin n’entre pas dans le calcul : il vient d’un autre producteur, et il repose sur une estimation du PIB potentiel que la Commission révise d’une édition à l’autre et que d’autres institutions estiment autrement.
-L’inflation a masqué l’écart, pas le solde.
-Sur les cinq dernières années (2021-2025), l’inflation a abaissé le repère de tous les pays : la France n’est plus, en moyenne, sous le sien (+0,1 point), et quatre pays ont un écart plus défavorable.
-Son solde primaire reste pourtant le plus bas de la zone euro, et son solde structurel parmi les deux plus bas.
+Avec l’indicateur structurel de la Commission, le classement est le même.
+Le solde primaire structurel de la France, que la Commission européenne calcule hors effets estimés du cycle et hors mesures ponctuelles, est lui aussi le plus bas des pays comparés sur la même période : −2,4 % du PIB potentiel en moyenne, contre une médiane de −0,8 % (base AMECO, édition de printemps 2026).
+Ce témoin ne sert pas au calcul, sans en être tout à fait indépendant : la Commission part des mêmes comptes publics, et sa correction repose sur une estimation du PIB potentiel qu’elle révise d’une édition à l’autre et que d’autres institutions estiment autrement.
+Le repère s’est abaissé, pas le solde.
+Sur les cinq dernières années (2021-2025), une forte croissance nominale, reprise après 2020 puis hausse des prix, a abaissé le repère de tous les pays par rapport aux cinq années d’avant 2020 : la France n’est plus, en moyenne, sous le sien (+0,1 point), et quatre pays ont un écart plus défavorable.
+Son solde primaire reste pourtant le plus bas des pays comparés, et son solde structurel parmi les deux plus bas.
 Sur les cinq années qui ont précédé 2020, la France était le seul pays de la zone euro dont le solde primaire moyen restait sous le repère.
 La France dans la zone euro selon la période retenue, et ce que l'écart moyen n'ajoute pas
 Période
@@ -290,7 +292,7 @@ Solde structurel, AMECO (rang du plus bas)
 −3,2 (2)
 2025
 20
-−2,9 (1, ex aequo)
+−2,9 (1 à 3)
 0,0
 −2,9 (1)
 −2,5 (4)
@@ -304,9 +306,10 @@ Solde structurel, AMECO (rang du plus bas)
 21
 −2,1 (3)
 0,0
-−2,2 (3, ex aequo)
+−2,2 (3 à 4)
 −1,5 (1)
-Moyennes annuelles, en % du PIB (du PIB potentiel pour le solde structurel) ; rangs lus à la précision affichée, deux pays affichés à égalité étant ex aequo.
+Moyennes annuelles, en % du PIB (du PIB potentiel pour le solde structurel) ; rangs lus à la précision affichée ; quand plusieurs pays s’affichent à égalité, le rang donne les places qu’ils occupent ensemble.
+Sur 2016-2025 sans l’année 2020, la France garde le solde primaire et le solde structurel les plus bas, et la croissance nominale la plus faible.
 Ce que l’écart moyen n’ajoute pas.
 Sur une période, l’écart moyen entre le solde observé et le repère est égal, au signe près et par construction, à la hausse du ratio hors autres ajustements, divisée par le nombre d’années : il redit la variation de la dette, il ne la confirme pas.
 Ce qui ne s’en déduit pas, c’est la part qui tient aux taux et à la croissance, le repère, et celle qui tient au solde primaire : c’est pourquoi la figure montre ces grandeurs plutôt que l’écart.
@@ -487,7 +490,7 @@ Eurostat gov_10dd_edpt1 (dette, PIB), gov_10a_main (B9, D41PAY), France, 1996-20
 Télécharger en PNG
 SVG
 Zone euro, 2016-2025 : taux, croissance et solde primaire de la France
-Dans la zone euro, la France emprunte parmi les moins cher ; ce qui la distingue est une croissance nominale parmi les plus faibles et le solde primaire le plus bas.
+Dans la zone euro, la France paie un taux implicite parmi les plus bas ; ce qui la distingue est une croissance nominale parmi les plus faibles et le solde primaire le plus bas.
 Précaution d'interprétation.
 Comparaison comptable : elle ne dit ni si l'écart vient des dépenses ou des recettes, ni quel ajustement serait souhaitable.
 Taux implicite = intérêts payés / dette de fin d'année précédente.

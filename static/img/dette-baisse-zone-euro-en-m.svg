@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 834" role="img" font-variant-numeric="tabular-nums" aria-labelledby="bz-m-t bz-m-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
-<title id="bz-m-t">Euro area, 2016-2025: France's interest rate, growth and primary balance</title><desc id="bz-m-d">Annual averages 2016-2025, 19 euro-area countries, one dot per country, France in orange. Implicit interest rate on debt: France 1.74%, median country 2.11%. Nominal GDP growth: France 3.2%, median country 5.5%. Primary balance: France −3.1% of GDP, median country −0.7%. France has the lowest primary balance, one of the two weakest nominal growth rates and one of the lowest interest rates.</desc>
+<title id="bz-m-t">Euro area, 2016-2025: France's interest rate, growth and primary balance</title><desc id="bz-m-d">Annual averages 2016-2025, 19 euro-area countries, one dot per country, France in orange. Implicit interest rate on debt: France 1.74%, median 2.11%. Nominal GDP growth: France 3.2%, median 5.5%. Primary balance: France −3.1% of GDP, median −0.7%. France has the lowest primary balance, one of the two weakest nominal growth rates and one of the lowest implicit interest rates.</desc>
 <rect width="300" height="834" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Euro area, 2016-2025: France's</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">interest rate, growth and</text>
@@ -9,7 +9,7 @@
 <circle cx="6" cy="121.0" r="5" fill="#8a8781" fill-opacity="0.6"/>
 <text x="18" y="126.0" font-size="13.5" fill="#55524f">other euro-area countries</text>
 <line x1="6" y1="134.0" x2="6" y2="148.0" stroke="#26262f" stroke-width="2"/>
-<text x="18" y="146.0" font-size="13.5" fill="#55524f">median country</text>
+<text x="18" y="146.0" font-size="13.5" fill="#55524f">median</text>
 <text x="0" y="165.0" font-size="13.5" fill="#96928f">Annual averages 2016-2025</text>
 <line x1="0" y1="177.0" x2="300" y2="177.0" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="0" y="199.0" font-size="15" font-weight="600" fill="#26262f">Implicit interest rate</text>

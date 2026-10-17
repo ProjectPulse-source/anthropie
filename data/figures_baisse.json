@@ -28,7 +28,7 @@
    "id": "zone-euro",
    "fichier": "dette-baisse-zone-euro",
    "titre": "Zone euro, 2016-2025 : taux, croissance et solde primaire de la France",
-   "montre": "Dans la zone euro, la France emprunte parmi les moins cher ; ce qui la distingue est une croissance nominale parmi les plus faibles et le solde primaire le plus bas.",
+   "montre": "Dans la zone euro, la France paie un taux implicite parmi les plus bas ; ce qui la distingue est une croissance nominale parmi les plus faibles et le solde primaire le plus bas.",
    "source": "Eurostat gov_10dd_edpt1 (dette, PIB), gov_10a_main (B9, D41PAY), 2016-2025 ; membres de la zone euro au 1er janvier 2026, hors Finlande et Irlande (années rejetées par le contrôle)",
    "precaution": "Comparaison comptable : elle ne dit ni si l'écart vient des dépenses ou des recettes, ni quel ajustement serait souhaitable. Taux implicite = intérêts payés / dette de fin d'année précédente."
   }
@@ -62,7 +62,7 @@
    "id": "zone-euro",
    "fichier": "dette-baisse-zone-euro-en",
    "titre": "Euro area, 2016-2025: France's interest rate, growth and primary balance",
-   "montre": "In the euro area, France borrows among the most cheaply; what sets it apart is among the weakest nominal growth and the lowest primary balance.",
+   "montre": "In the euro area, France pays one of the lowest implicit interest rates; what sets it apart is among the weakest nominal growth and the lowest primary balance.",
    "source": "Eurostat gov_10dd_edpt1 (debt, GDP), gov_10a_main (B9, D41PAY), 2016-2025; euro-area members at 1 January 2026, excluding Finland and Ireland (years rejected by the check)",
    "precaution": "An accounting comparison: it says neither whether the gap comes from spending or revenue, nor which adjustment would be desirable. Implicit rate = interest paid / debt at the end of the previous year."
   }

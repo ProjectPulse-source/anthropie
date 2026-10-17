@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 403" role="img" font-variant-numeric="tabular-nums" aria-labelledby="bz-t bz-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
-<title id="bz-t">Zone euro, 2016-2025 : taux, croissance et solde primaire de la France</title><desc id="bz-d">Moyennes annuelles 2016-2025, 19 pays de la zone euro, un point par pays, la France en orange. Taux implicite de la dette : France 1,74 %, pays médian 2,11 %. Croissance du PIB nominal : France 3,2 %, pays médian 5,5 %. Solde primaire : France −3,1 % du PIB, pays médian −0,7 %. La France a le solde primaire le plus bas, l'une des deux croissances nominales les plus faibles et l'un des taux les plus bas.</desc>
+<title id="bz-t">Zone euro, 2016-2025 : taux, croissance et solde primaire de la France</title><desc id="bz-d">Moyennes annuelles 2016-2025, 19 pays de la zone euro, un point par pays, la France en orange. Taux implicite de la dette : France 1,74 %, médiane 2,11 %. Croissance du PIB nominal : France 3,2 %, médiane 5,5 %. Solde primaire : France −3,1 % du PIB, médiane −0,7 %. La France a le solde primaire le plus bas, l'une des deux croissances nominales les plus faibles et l'un des taux implicites les plus bas.</desc>
 <rect width="720" height="403" fill="#ffffff"/>
 <text x="0" y="18" font-size="15" font-weight="600" fill="#26262f">Zone euro, 2016-2025 : taux, croissance et solde primaire de la France</text>
 <circle cx="5" cy="41" r="5" fill="#eb6834"/>
@@ -7,7 +7,7 @@
 <circle cx="75" cy="41" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
 <text x="85" y="45" font-size="11" fill="#55524f">autres pays de la zone euro</text>
 <line x1="242.4" y1="34" x2="242.4" y2="48" stroke="#26262f" stroke-width="2"/>
-<text x="249.4" y="45" font-size="11" fill="#55524f">pays médian</text>
+<text x="249.4" y="45" font-size="11" fill="#55524f">médiane</text>
 <text x="0" y="66" font-size="11" fill="#96928f">Moyennes annuelles 2016-2025</text>
 <text x="0" y="122" font-size="12.5" font-weight="600" fill="#26262f">Taux implicite de la dette</text>
 <text x="0" y="137" font-size="11" fill="#96928f">intérêts / dette, en %</text>

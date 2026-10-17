@@ -52,10 +52,32 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-17 — Dette, volet 5, #zone-euro : contre-expertise de la section construite (anthropie-site-20261017-030435), arbitrée
+
+Verdict « publier après corrections » ; arbitrage `.claude/external-audits/ARBITRATIONS/anthropie-site-20261017-030435_arbitrage.md`.
+Tests rejoués sur les données (`D:\PRO\07_RECHERCHE\dette_ressources_pistes\piste2\tests_contre_expertise_ze.py`) :
+- **Finlande et Irlande réintégrées.** La Finlande a une croissance nominale et un taux implicite plus bas que la France : « la plus
+  faible de la zone euro » et « seuls quatre pays de la zone euro » étaient faux pour la zone entière. On écrit désormais « des pays
+  comparés », la Finlande étant nommée hors du calcul. Le classement du solde primaire, lui, tient à 21 pays.
+- **Sans 2020**, les classements sont inchangés.
+- **Rang exact 2025** : la France est 3e.
+
+Corrections FR et EN :
+- administrations publiques au lieu de « l'État » ;
+- « médiane » au lieu de « pays médian » ;
+- taux implicite = coût du stock ;
+- compensation taux-croissance supprimée ;
+- témoin AMECO « sans en être tout à fait indépendant » ;
+- « Le repère s'est abaissé, pas le solde » (croissance nominale, et non « inflation »).
+
+Rangs à égalité affichés en plage (« 1 à 3 »), `rang_txt`. 7 gardes nouvelles (89). `releve_le` rétabli au 16/10 (le générateur
+l'avait avancé sur un changement de texte seul) et page datée par `dates-affichage.py --ecrire`. Défaut transversal ouvert :
+les 22 générateurs datent le relevé sur un changement de texte (§ 6 de l'arbitrage).
+
 ### 2026-10-17 — Dette, volet 5 : « Dans la zone euro, ce qui distingue la France » (#zone-euro), piste 2 de l'arbitrage anthropie-site-20261017-005433
 
 Sous-section de `/dette-publique-peut-elle-baisser/` (FR et EN). Test décisif préalable dans
-`D:\PRO_RECHERCHE\dette_ressources_pistes\piste2\` (fiche de conception, scénarios, résultats). Sur 2016-2025, le taux
+`D:\PRO\07_RECHERCHE\dette_ressources_pistes\piste2\` (fiche de conception, scénarios, résultats). Sur 2016-2025, le taux
 implicite français est parmi les plus bas de la zone euro, le repère dans la moyenne, la croissance nominale la plus
 faible (à égalité avec l'Italie à l'arrondi) et le solde primaire le plus bas. Le témoin indépendant, le solde primaire
 structurel AMECO (`scripts/sources_dette/ameco_ublgbps_2026-06-02.csv`, empreinte contrôlée, registre `ameco-structurel`

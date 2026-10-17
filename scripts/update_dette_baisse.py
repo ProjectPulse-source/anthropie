@@ -217,6 +217,9 @@ def eurostat(ds: str, **f) -> dict[tuple[str, int], float]:
     return out
 
 
+REJETES: dict = {}   # années-pays écartées par le témoin, gardées pour la seule variante « avec les pays écartés »
+
+
 def panel():
     D = eurostat("gov_10dd_edpt1", na_item="GD", sector="S13", unit="MIO_NAC")
     Y = eurostat("gov_10dd_edpt1", na_item="B1GQ", sector="S1", unit="MIO_NAC")
@@ -243,15 +246,17 @@ def panel():
             if not all(k in pub[x] for x in pub):
                 ecartes.append(dict(pays=p, annee=a, motif="ratio publié absent"))
                 continue
+            ligne = dict(pays=p, annee=a, dette=d1, dette_prec=d0, variation=d1 - d0, interets=interets,
+                         encours=D[k] / 1000, encours_prec=D[k0] / 1000,
+                         croissance=croissance, taux_croissance=interets + croissance, solde_primaire=pb,
+                         flux_stock=sfa, taux_implicite=i * 100, croissance_nominale=g * 100, pib=Y[k] / 1000,
+                         croissance_volume=((V[k] / V[k0] - 1) * 100) if (k in V and k0 in V) else None)
             e_d, e_pb = d1 - pub["GD"][k], pb - (pub["B9"][k] + pub["D41PAY"][k])
             if abs(e_d) > TOL or abs(e_pb) > TOL:
                 ecartes.append(dict(pays=p, annee=a, motif="écart au ratio publié", ecart_dette=round(e_d, 2), ecart_solde_primaire=round(e_pb, 2)))
+                REJETES.setdefault(p, {})[a] = ligne   # variante de sensibilité seulement (section zone euro), jamais dans un chiffre publié
                 continue
-            R.setdefault(p, {})[a] = dict(pays=p, annee=a, dette=d1, dette_prec=d0, variation=d1 - d0, interets=interets,
-                                          encours=D[k] / 1000, encours_prec=D[k0] / 1000,
-                                          croissance=croissance, taux_croissance=interets + croissance, solde_primaire=pb,
-                                          flux_stock=sfa, taux_implicite=i * 100, croissance_nominale=g * 100, pib=Y[k] / 1000,
-                                          croissance_volume=((V[k] / V[k0] - 1) * 100) if (k in V and k0 in V) else None)
+            R.setdefault(p, {})[a] = ligne
     if calculables != sum(len(v) for v in R.values()) + len(ecartes):
         fail("conservation rompue : %d calculables, %d retenues, %d ecartees" % (calculables, sum(len(v) for v in R.values()), len(ecartes)))
     return R, ecartes, calculables
@@ -294,27 +299,30 @@ def ameco() -> dict:
     return S
 
 
-def zone_euro(R: dict, fin: int, S: dict) -> dict:
+def zone_euro(R: dict, fin: int, S: dict, sauf: tuple = ()) -> dict:
     """Moyennes par pays de la zone euro sur cinq fenêtres : solde primaire, solde stabilisant, écart, taux implicite, croissance
     nominale (Eurostat, panel témoin) et solde primaire structurel (AMECO, témoin). Un pays dont une année manque (absente ou
     écartée par le témoin) sort de la fenêtre avec ses années : conservation contrôlée.
 
     Identité à ne pas oublier en écrivant la page : sur une fenêtre, l'écart moyen = (somme des autres ajustements - variation du
     ratio) / n. Il ne s'ajoute donc pas à la variation de la dette comme un second constat ; ce qui ne s'en déduit pas, c'est la
-    séparation entre solde primaire et repère (taux et croissance)."""
+    séparation entre solde primaire et repère (taux et croissance).
+
+    sauf : années retirées de chaque fenêtre (variante de sensibilité « sans 2020 »)."""
     fen = (("an", fin, fin), ("cinq", fin - 4, fin), ("dix", fin - 9, fin), ("av20", 2015, 2019), ("d2010", 2010, 2019))
     out = {}
     for cle, a0, a1 in fen:
         L, ecartes = [], []
         for p in ZONE_EURO:
-            manq = [a for a in range(a0, a1 + 1) if a not in R.get(p, {})]
+            ans = [a for a in range(a0, a1 + 1) if a not in sauf]
+            manq = [a for a in ans if a not in R.get(p, {})]
             if manq:
                 ecartes.append(dict(pays=p, annees=manq))
                 continue
-            n = a1 - a0 + 1
-            xs = [R[p][a] for a in range(a0, a1 + 1)]
+            n = len(ans)
+            xs = [R[p][a] for a in ans]
             m = lambda k: sum(x[k] for x in xs) / n  # noqa: E731
-            sps = [S[p].get(a) for a in range(a0, a1 + 1)]
+            sps = [S[p].get(a) for a in ans]
             L.append(dict(pays=p, solde_primaire=m("solde_primaire"), solde_stabilisant=m("taux_croissance"),
                           ecart=m("solde_primaire") - m("taux_croissance"), taux_implicite=m("taux_implicite"),
                           croissance_nominale=m("croissance_nominale"), solde_structurel=(sum(sps) / n if None not in sps else None)))
@@ -692,13 +700,22 @@ def sz(v: float, dec: int = 1) -> str:
 
 
 def rang_txt(f: dict, cle: str, dec: int = 1) -> str:
-    """Rang du plus bas, avec la mention de l'ex aequo à la précision affichée (tableau du repli)."""
+    """Rang du plus bas à la précision affichée (tableau du repli). Des pays affichés à égalité occupent ensemble une plage de
+    places : on écrit la plage (« 1 à 3 »), jamais la seule meilleure place, qui laisserait croire au premier rang un pays
+    troisième sur les valeurs non arrondies (contre-expertise anthropie-site-20261017-030435, point 8)."""
     r, ex = rang_bas(f, cle, dec)
-    return str(r) + ((", ex aequo" if LANG == "fr" else ", tied") if ex else "")
+    return str(r) if not ex else ("%d à %d" if LANG == "fr" else "%d to %d") % (r, r + len(ex))
 
 
-def affichage_ze(ze: dict) -> dict:
-    """Jetons de la section #zone-euro (mêmes clés en français et en anglais)."""
+def sous_fr(f: dict, cle: str, pays: list) -> list:
+    """Parmi `pays`, ceux dont la moyenne `cle` est plus basse que celle de la France, à la précision affichée."""
+    x = ze_fr(f)[cle]
+    return [d for d in f["pays"] if d["pays"] in pays and lg.depasse(x, d[cle], 2 if cle == "taux_implicite" else 1)]
+
+
+def affichage_ze(ze: dict, V: dict) -> dict:
+    """Jetons de la section #zone-euro (mêmes clés en français et en anglais). V : variantes de sensibilité (« complet » avec
+    les années écartées par le témoin, « sans2020 »)."""
     A = {}
     for w, f in ze.items():
         p, x = "ze_%s_" % w, ze_fr(f)
@@ -721,11 +738,19 @@ def affichage_ze(ze: dict) -> dict:
     A["ze_edition"] = AMECO_EDITION[LANG]
     A["ze_cinq_pire_n"] = lettres(rang_bas(ze["cinq"], "ecart")[0] - 1)
     A["ze_g_avec"] = enumere([art(p) for p in rang_bas(f, "croissance_nominale")[1]])
+    exc = [e["pays"] for e in f["ecartes"]]
+    ti_s, g_s = sous_fr(V["complet"]["dix"], "taux_implicite", exc), sous_fr(V["complet"]["dix"], "croissance_nominale", exc)
+    A["ze_ti_ecartes_sous"] = enumere([art(d["pays"]) for d in ti_s])
+    A["ze_g_ecartes_sous"] = enumere([art(d["pays"]) for d in g_s])
+    A["ze_g_ecartes_val"] = fr(g_s[0]["croissance_nominale"]) if g_s else "—"
     return A
 
 
-def gardes_ze(ze: dict) -> int:
+def gardes_ze(ze: dict, V: dict) -> int:
     d, c, a, d10 = ze["dix"], ze["cinq"], ze["av20"], ze["d2010"]
+    vd, vs = V["complet"]["dix"], V["sans2020"]["dix"]
+    exc = [e["pays"] for e in d["ecartes"]]
+    stab_av = {x["pays"]: x["solde_stabilisant"] for x in a["pays"]}
     xd, xc = ze_fr(d), ze_fr(c)
     rb = lambda f, k, dec=1: rang_bas(f, k, dec)  # noqa: E731
     G = [
@@ -748,6 +773,19 @@ def gardes_ze(ze: dict) -> int:
         ("avant 2020 : la France est le seul pays sous le repère en moyenne", [x["pays"] for x in a["pays"] if lg.affichee(x["ecart"]) < 0] == ["FR"]),
         ("2010-2019 : solde structurel le plus bas (témoin)", rb(d10, "solde_structurel") == (1, [])),
         ("pays écartés : chacun l'est pour une année absente du panel témoin (motif repris dans la page)", all(e["annees"] for e in d["ecartes"])),
+        # Contre-expertise anthropie-site-20261017-030435 : chaque phrase qui dit « des pays comparés » est éprouvée contre la zone
+        # entière (années écartées réintégrées), et la décennie contre l'année 2020.
+        ("avec les pays écartés réintégrés : tous les membres comparés sur dix ans", vd["n"] == len(ZONE_EURO)),
+        ("avec les pays écartés réintégrés : solde primaire français toujours le plus bas, sans ex aequo (dix ans et cinq ans)",
+         rb(vd, "solde_primaire") == (1, []) and rb(V["complet"]["cinq"], "solde_primaire") == (1, [])),
+        ("avec les pays écartés réintégrés : solde structurel français toujours le plus bas, sans ex aequo", rb(vd, "solde_structurel") == (1, [])),
+        ("« seul <pays écarté> a eu une croissance plus faible » : un seul pays, et c'est un pays écarté",
+         len(sous_fr(vd, "croissance_nominale", exc)) == 1 and len(sous_fr(vd, "croissance_nominale", [x["pays"] for x in vd["pays"]])) == 1),
+        ("« comme <pays écarté>, hors du calcul » : au moins un pays écarté a un taux implicite plus bas", len(sous_fr(vd, "taux_implicite", exc)) >= 1),
+        ("sans 2020 : solde primaire et solde structurel les plus bas, croissance nominale la plus faible, sans ex aequo",
+         vs["n"] >= 18 and rb(vs, "solde_primaire") == (1, []) and rb(vs, "solde_structurel") == (1, []) and rb(vs, "croissance_nominale") == (1, [])),
+        ("cinq ans : « la forte croissance nominale a abaissé le repère de tous les pays » par rapport aux cinq années d'avant 2020",
+         all(x["pays"] in stab_av and x["solde_stabilisant"] < stab_av[x["pays"]] for x in c["pays"])),
     ]
     if "--mutation-ze" in sys.argv:   # témoin positif : la France perd son rang (solde primaire relevé de 3 points)
         xd["solde_primaire"] += 3
@@ -855,12 +893,12 @@ TXT = {
 TXT["fr"].update(
   ze_titre="Zone euro, %s : taux, croissance et solde primaire de la France",
   ze_desc=("Moyennes annuelles %s, %s pays de la zone euro, un point par pays, la France en orange. Taux implicite de la dette : "
-           "France %s %%, pays médian %s %%. Croissance du PIB nominal : France %s %%, pays médian %s %%. Solde primaire : France %s %% "
-           "du PIB, pays médian %s %%. La France a le solde primaire le plus bas, l'une des deux croissances nominales les plus faibles et l'un des taux les plus bas."),
+           "France %s %%, médiane %s %%. Croissance du PIB nominal : France %s %%, médiane %s %%. Solde primaire : France %s %% "
+           "du PIB, médiane %s %%. La France a le solde primaire le plus bas, l'une des deux croissances nominales les plus faibles et l'un des taux implicites les plus bas."),
   ze_lignes=[("taux_implicite", "Taux implicite de la dette", "intérêts / dette, en %", 2),
              ("croissance_nominale", "Croissance du PIB nominal", "par an, en %", 1),
              ("solde_primaire", "Solde primaire", "en % du PIB", 1)],
-  ze_leg=("France", "autres pays de la zone euro", "pays médian"), ze_unite="Moyennes annuelles %s",
+  ze_leg=("France", "autres pays de la zone euro", "médiane"), ze_unite="Moyennes annuelles %s",
   ze_fr="France %s", ze_med="médiane %s", ze_fr_m="France : %s", ze_med_m="Médiane : %s",
   ze_src="Eurostat gov_10dd_edpt1 (dette, PIB), gov_10a_main (B9, D41PAY), %s ; membres de la zone euro au 1er janvier 2026, hors %s (années rejetées par le contrôle)",
   ze_note=("Comparaison comptable : elle ne dit ni si l'écart vient des dépenses ou des recettes, ni quel ajustement serait souhaitable. "
@@ -868,19 +906,19 @@ TXT["fr"].update(
 TXT["en"].update(
   ze_titre="Euro area, %s: France's interest rate, growth and primary balance",
   ze_desc=("Annual averages %s, %s euro-area countries, one dot per country, France in orange. Implicit interest rate on debt: "
-           "France %s%%, median country %s%%. Nominal GDP growth: France %s%%, median country %s%%. Primary balance: France %s%% "
-           "of GDP, median country %s%%. France has the lowest primary balance, one of the two weakest nominal growth rates and one of the lowest interest rates."),
+           "France %s%%, median %s%%. Nominal GDP growth: France %s%%, median %s%%. Primary balance: France %s%% "
+           "of GDP, median %s%%. France has the lowest primary balance, one of the two weakest nominal growth rates and one of the lowest implicit interest rates."),
   ze_lignes=[("taux_implicite", "Implicit interest rate", "interest / debt, in %", 2),
              ("croissance_nominale", "Nominal GDP growth", "per year, in %", 1),
              ("solde_primaire", "Primary balance", "in % of GDP", 1)],
-  ze_leg=("France", "other euro-area countries", "median country"), ze_unite="Annual averages %s",
+  ze_leg=("France", "other euro-area countries", "median"), ze_unite="Annual averages %s",
   ze_fr="France %s", ze_med="median %s", ze_fr_m="France: %s", ze_med_m="Median: %s",
   ze_src="Eurostat gov_10dd_edpt1 (debt, GDP), gov_10a_main (B9, D41PAY), %s; euro-area members at 1 January 2026, excluding %s (years rejected by the check)",
   ze_note=("An accounting comparison: it says neither whether the gap comes from spending or revenue, nor which adjustment would be "
            "desirable. Implicit rate = interest paid / debt at the end of the previous year."))
-TXT["fr"]["montre"].append(("zone-euro", "Dans la zone euro, la France emprunte parmi les moins cher ; ce qui la distingue est une croissance "
-                                         "nominale parmi les plus faibles et le solde primaire le plus bas."))
-TXT["en"]["montre"].append(("zone-euro", "In the euro area, France borrows among the most cheaply; what sets it apart is among the weakest "
+TXT["fr"]["montre"].append(("zone-euro", "Dans la zone euro, la France paie un taux implicite parmi les plus bas ; ce qui la distingue est une "
+                                         "croissance nominale parmi les plus faibles et le solde primaire le plus bas."))
+TXT["en"]["montre"].append(("zone-euro", "In the euro area, France pays one of the lowest implicit interest rates; what sets it apart is among the weakest "
                                          "nominal growth and the lowest primary balance."))
 SUFFIXE = {"fr": "", "en": "-en"}
 WM, FSM = PF.LARGEUR_M, PF.POLICE_M
@@ -1317,16 +1355,19 @@ def main() -> int:
             fail("cairosvg absent : SVG et PNG se produisent ensemble ou pas du tout (pip install cairosvg)")
     global ZE_COURANT
     fin, dec, annees, cmp_, europe, cons, R = calcul()
-    ze = ZE_COURANT = zone_euro(R, fin, ameco())
+    S = ameco()
+    ze = ZE_COURANT = zone_euro(R, fin, S)
+    V = dict(complet=zone_euro({p: {**R.get(p, {}), **REJETES.get(p, {})} for p in set(R) | set(REJETES)}, fin, S),
+             sans2020=zone_euro(R, fin, S, sauf=(2020,)))
     use("en")
     A_en = affichage(fin, dec, annees, cmp_, europe, cons)[0]
-    A_en.update(affichage_ze(ze))
+    A_en.update(affichage_ze(ze, V))
     use("fr")
     A, haut, bas, exc_ans = affichage(fin, dec, annees, cmp_, europe, cons)
-    A.update(affichage_ze(ze))
+    A.update(affichage_ze(ze, V))
     if set(A) != set(A_en):
         fail("blocs affichage et affichage_en : cles differentes (%s)" % sorted(set(A) ^ set(A_en)))
-    n = gardes(fin, dec, annees, cmp_, europe, haut, bas, exc_ans) + gardes_ze(ze)
+    n = gardes(fin, dec, annees, cmp_, europe, haut, bas, exc_ans) + gardes_ze(ze, V)
     # Une variation, deux pages (phase A du volet 5, B3) : la hausse du ratio de la dernière année doit être la même qu'au volet 4.
     if MONDE.is_file():
         m = json.loads(MONDE.read_text(encoding="utf-8"))

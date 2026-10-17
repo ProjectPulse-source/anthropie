@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 403" role="img" font-variant-numeric="tabular-nums" aria-labelledby="bz-t bz-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
-<title id="bz-t">Euro area, 2016-2025: France's interest rate, growth and primary balance</title><desc id="bz-d">Annual averages 2016-2025, 19 euro-area countries, one dot per country, France in orange. Implicit interest rate on debt: France 1.74%, median country 2.11%. Nominal GDP growth: France 3.2%, median country 5.5%. Primary balance: France −3.1% of GDP, median country −0.7%. France has the lowest primary balance, one of the two weakest nominal growth rates and one of the lowest interest rates.</desc>
+<title id="bz-t">Euro area, 2016-2025: France's interest rate, growth and primary balance</title><desc id="bz-d">Annual averages 2016-2025, 19 euro-area countries, one dot per country, France in orange. Implicit interest rate on debt: France 1.74%, median 2.11%. Nominal GDP growth: France 3.2%, median 5.5%. Primary balance: France −3.1% of GDP, median −0.7%. France has the lowest primary balance, one of the two weakest nominal growth rates and one of the lowest implicit interest rates.</desc>
 <rect width="720" height="403" fill="#ffffff"/>
 <text x="0" y="18" font-size="15" font-weight="600" fill="#26262f">Euro area, 2016-2025: France's interest rate, growth and primary balance</text>
 <circle cx="5" cy="41" r="5" fill="#eb6834"/>
@@ -7,7 +7,7 @@
 <circle cx="75" cy="41" r="4.5" fill="#8a8781" fill-opacity="0.6"/>
 <text x="85" y="45" font-size="11" fill="#55524f">other euro-area countries</text>
 <line x1="231.9" y1="34" x2="231.9" y2="48" stroke="#26262f" stroke-width="2"/>
-<text x="238.9" y="45" font-size="11" fill="#55524f">median country</text>
+<text x="238.9" y="45" font-size="11" fill="#55524f">median</text>
 <text x="0" y="66" font-size="11" fill="#96928f">Annual averages 2016-2025</text>
 <text x="0" y="122" font-size="12.5" font-weight="600" fill="#26262f">Implicit interest rate</text>
 <text x="0" y="137" font-size="11" fill="#96928f">interest / debt, in %</text>

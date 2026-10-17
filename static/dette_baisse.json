@@ -2209,7 +2209,7 @@
   "ze_an_n": "20",
   "ze_an_n_sps": "20",
   "ze_an_pb": "−2,9",
-  "ze_an_pb_rang": "1, ex aequo",
+  "ze_an_pb_rang": "1 à 3",
   "ze_an_stab": "0,0",
   "ze_an_ecart": "−2,9",
   "ze_an_ecart_rang": "1",
@@ -2252,7 +2252,7 @@
   "ze_d2010_pb_rang": "3",
   "ze_d2010_stab": "0,0",
   "ze_d2010_ecart": "−2,2",
-  "ze_d2010_ecart_rang": "3, ex aequo",
+  "ze_d2010_ecart_rang": "3 à 4",
   "ze_d2010_sps": "−1,5",
   "ze_d2010_sps_rang": "1",
   "ze_lib": "2016-2025",
@@ -2273,7 +2273,10 @@
   "ze_ecartes_n": "deux",
   "ze_edition": "printemps 2026",
   "ze_cinq_pire_n": "quatre",
-  "ze_g_avec": "l'Italie"
+  "ze_g_avec": "l'Italie",
+  "ze_ti_ecartes_sous": "la Finlande",
+  "ze_g_ecartes_sous": "la Finlande",
+  "ze_g_ecartes_val": "3,0"
  },
  "affichage_en": {
   "annee_fin": "2025",
@@ -2580,7 +2583,7 @@
   "ze_an_n": "20",
   "ze_an_n_sps": "20",
   "ze_an_pb": "−2.9",
-  "ze_an_pb_rang": "1, tied",
+  "ze_an_pb_rang": "1 to 3",
   "ze_an_stab": "0.0",
   "ze_an_ecart": "−2.9",
   "ze_an_ecart_rang": "1",
@@ -2623,7 +2626,7 @@
   "ze_d2010_pb_rang": "3",
   "ze_d2010_stab": "0.0",
   "ze_d2010_ecart": "−2.2",
-  "ze_d2010_ecart_rang": "3, tied",
+  "ze_d2010_ecart_rang": "3 to 4",
   "ze_d2010_sps": "−1.5",
   "ze_d2010_sps_rang": "1",
   "ze_lib": "2016-2025",
@@ -2644,6 +2647,9 @@
   "ze_ecartes_n": "two",
   "ze_edition": "spring 2026",
   "ze_cinq_pire_n": "four",
-  "ze_g_avec": "Italy"
+  "ze_g_avec": "Italy",
+  "ze_ti_ecartes_sous": "Finland",
+  "ze_g_ecartes_sous": "Finland",
+  "ze_g_ecartes_val": "3.0"
  }
 }
