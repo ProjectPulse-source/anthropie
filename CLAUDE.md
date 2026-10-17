@@ -111,6 +111,30 @@ une section de ressource.** Trois règles en tiennent lieu de rappel :
 3. **Avant publication, la fiche de mesure D0** est écrite dans la feuille de route : résultat au plus
    près de la finalité, diagnostics, état initial, dates. ⚠ **Aucun contrôle ne la vérifie** : c'est
    une discipline de session, pas un verrou.
+4. **Recevabilité et raccords de toute nouvelle page — règle constante** (auteur, 17/10/2026 ; arbitrage
+   `D:\PRO\06_PROMOTION\GEO_MAILLAGE_2026-10-17\ARBITRAGE_MAILLAGE_GEO.md`, PRO-20261017-145653). Elle s'évalue à la
+   fiche de conception (champ *raccords*) et se rejuge au gate éditorial (critère *circulation*).
+   - **Recevabilité, trois critères** : une demande ou un intérêt public caractérisé (mesuré : Search Console, Bing) ;
+     un apport propre vérifiable (fait, comparaison, lecture que les pages existantes n'ont pas sous cette forme) ;
+     la cohérence scientifique et éditoriale du corpus. **Le livre est un prolongement possible, jamais une
+     condition** : une page qui sert la crédibilité sans mener à un livre est recevable, et l'intérêt d'un working
+     paper ne se subordonne pas à la vente.
+   - **Raccords, évalués un par un, et chacun écrit retenu (avec la phrase qui le porte) ou écarté (avec son motif)** :
+     la définition de l'anthropie, le livre qui prolonge la réponse, le working paper qui la fonde, la ou les pages
+     voisines de la même question. Un lien se justifie par la **relation intellectuelle** qu'il donne au lecteur ;
+     l'exposition aux moteurs est un effet possible, jamais le motif (l'effet des liens internes sur le choix d'un
+     passage cité par un moteur de réponse est non documenté ; leur effet sur l'exploration et la compréhension l'est).
+   - **Page de faits (`quantitatif`, `juridique-institutionnel`)** : aucune lecture anthropique dans l'exposé des
+     constats. Le concept n'y entre que par un lien documentaire sur le terme, dans un bloc séparé et présenté comme
+     l'hypothèse de l'auteur (shortcode `{{< canonical-definition >}}`, dont le gabarit pose le lien vers la
+     définition sur le premier « anthropie »). Une hypothèse « non testée ici » ne se présente jamais comme une
+     application démontrée.
+   - **Dans l'autre sens** : si la nouvelle page **démontre** une application du concept, une phrase la relie depuis
+     « Quelques domaines d'application » de `/quest-ce-que-lanthropie/` (FR et EN, sans doublon avec les renvois
+     existants).
+   - **Écarté** : pages carrefours par grand sujet, blocs « voir aussi » générés, liens ajoutés pour la densité.
+     Aucun contrôle automatique ne juge la pertinence d'un lien : c'est une discipline de session ; la mesure de ce
+     que produisent les liens se fait au relevé J+60 (`06_PROMOTION\GEO_FRAICHEUR_2026-10-16\VERIFICATIONS\`).
 
 ## Modèle d'une ressource de données — le dossier dette (acté par l'auteur, 2026-09-30)
 
@@ -335,9 +359,11 @@ transcrite sans contrôle ; écrite en clair (étude citée) — et la phrase de
 - `usage` (enseignants, guides, corpus ; idem) : la ressource source citée sans être recopiée, ce que l'usager fait de
   la page, et les limites de la ressource reprises telles quelles.
 
-**Phase A, section 0 — fiche de conception** (neuf champs, avant toute réécriture) : question centrale · enjeu ·
+**Phase A, section 0 — fiche de conception** (dix champs, avant toute réécriture) : question centrale · enjeu ·
 croyance initiale · découverte principale · mécanisme explicatif · preuve décisive · limite · valeur finale ·
-**singularité** (« cette page existe parce qu'elle révèle X, que le lecteur ne découvre pas dans Y »). Les affirmations
+**singularité** (« cette page existe parce qu'elle révèle X, que le lecteur ne découvre pas dans Y ») ·
+**raccords** (recevabilité et raccords de la règle 4 de « Architecture des ressources » : chaque raccord retenu avec
+sa phrase ou écarté avec son motif). Les affirmations
 calculables ont leurs gardes ; les autres se relient à leur preuve par le champ « preuve décisive » et le bloc
 « Confrontation à la recherche » — pas de second registre.
 
