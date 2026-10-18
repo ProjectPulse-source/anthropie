@@ -15,6 +15,14 @@
    "montre": "Année par année, ce qui a poussé ou freiné le ratio ; en 2021-2023, la croissance nominale l'a fait baisser malgré les déficits.",
    "source": "Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), France, 1996-2025 ; mises à jour Eurostat du 22/04/2026 et du 21/07/2026",
    "precaution": "Points de PIB par an ; solde primaire : un déficit compte en plus, un excédent en moins ; la somme des trois barres égale la variation (point noir), au centième près."
+  },
+  {
+   "id": "conjoncture",
+   "fichier": "dette-dynamique-conjoncture",
+   "titre": "Le déficit primaire corrigé du cycle, selon trois estimations, 1996-2025",
+   "montre": "Corrigé du cycle, le déficit primaire d'après 2022 reste plus creusé qu'en 2015-2019 dans les trois estimations : la conjoncture ne l'explique pas.",
+   "source": "FMI, Moniteur des finances publiques d’octobre 2026 ; Commission européenne, AMECO, printemps 2026 ; OCDE, Perspectives économiques n° 119 ; Eurostat gov_10a_main, mise à jour du 21/07/2026",
+   "precaution": "Trois méthodes : la Commission et l'OCDE retirent aussi les mesures ponctuelles, le FMI non. Estimations de la production potentielle, non des mesures ; zones grises : 2015-2019 et 2022-2025."
   }
  ],
  "en": [
@@ -33,6 +41,14 @@
    "montre": "Year by year, what pushed the ratio up or held it back; in 2021-2023, nominal growth brought it down despite the deficits.",
    "source": "Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), France, 1996-2025; Eurostat releases of 22 April 2026 and 21 July 2026",
    "precaution": "Points of GDP per year; primary balance: a deficit counts as plus, a surplus as minus; the three bars add up to the change (black dot), to within a hundredth."
+  },
+  {
+   "id": "conjoncture",
+   "fichier": "dette-dynamique-conjoncture-en",
+   "titre": "The cyclically adjusted primary deficit, according to three estimates, 1996-2025",
+   "montre": "Cyclically adjusted, the primary deficit after 2022 remains deeper than in 2015-2019 in all three estimates: the business cycle does not explain it.",
+   "source": "IMF, Fiscal Monitor, October 2026; European Commission, AMECO, spring 2026; OECD, Economic Outlook No. 119; Eurostat gov_10a_main, release of 21 July 2026",
+   "precaution": "Three methods: the Commission and the OECD also remove one-off measures, the IMF does not. Estimates of potential output, not measurements; grey bands: 2015-2019 and 2022-2025."
   }
  ]
 }

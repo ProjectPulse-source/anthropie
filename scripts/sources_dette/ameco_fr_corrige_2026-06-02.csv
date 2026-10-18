@@ -1,0 +1,40 @@
+# AMECO (Commission europeenne, DG ECFIN), France, en %% du PIB potentiel (ajustement fonde sur le PIB potentiel) : URTGAP
+# (recettes corrigees du cycle), UUTGBP (depenses hors interets corrigees du cycle), UBLGBP (solde primaire corrige du cycle,
+# = URTGAP - UUTGBP), UBLGBPS (solde primaire structurel : corrige du cycle et des mesures ponctuelles, publie depuis 2010).
+# Edition de printemps 2026, fichiers dates du 2026-06-02 dans https://ec.europa.eu/economy_finance/db_indicators/ameco/documents/ameco0.zip
+# (SHA-256 du zip telecharge le 2026-10-19 : 5f8760abad2b5d9b73a0eed09267fcaddb3f9944a6155ece146398484579cb00, identique a celui de
+# ameco_ublgbps_2026-06-02.csv). Valeurs telles que publiees ; annees au-dela de la derniere annee observee = previsions, non lues.
+annee,recettes_corrigees,depenses_hors_interets_corrigees,solde_primaire_corrige,solde_primaire_structurel
+1995,50.95173,51.02663,-0.0749,
+1996,52.13365,50.478,1.65565,
+1997,51.86725,50.38385,1.48341,
+1998,51.59203,49.76498,1.82705,
+1999,52.11289,50.49729,1.6156,
+2000,51.29904,50.78817,0.51087,
+2001,51.39852,50.84578,0.55274,
+2002,50.74514,51.49662,-0.75148,
+2003,50.26545,51.53384,-1.26839,
+2004,50.44127,51.82931,-1.38804,
+2005,50.7519,52.155,-1.4031,
+2006,51.08529,52.27501,-1.18972,
+2007,50.6305,52.51978,-1.88928,
+2008,50.77539,52.19784,-1.42245,
+2009,50.6234,53.70952,-3.08613,
+2010,50.56724,53.92667,-3.35943,-3.20412
+2011,51.71231,53.82958,-2.11727,-2.24335
+2012,52.72735,54.269,-1.54165,-1.5711
+2013,53.66093,55.12198,-1.46105,-1.63968
+2014,53.82716,55.11955,-1.29239,-1.30632
+2015,53.71349,54.69577,-0.98228,-0.95503
+2016,53.62156,54.68575,-1.0642,-0.99699
+2017,54.30021,55.86945,-1.56924,-1.36851
+2018,54.04461,55.05908,-1.01447,-0.9805
+2019,52.94598,54.9477,-2.00172,-1.10953
+2020,52.79303,56.26165,-3.46862,-3.34137
+2021,52.88408,57.10816,-4.22408,-4.1371
+2022,53.67213,56.37192,-2.69979,-2.68472
+2023,51.39226,54.77604,-3.38379,-3.31321
+2024,51.22663,54.76574,-3.53911,-3.48801
+2025,52.14811,54.64406,-2.49595,-2.49595
+2026,52.33546,54.30454,-1.96907,-1.96907
+2027,52.09222,54.50023,-2.40801,-2.40801

@@ -12,6 +12,8 @@ lastmod: 2026-10-11
 # Same tokens, same keys: values come from the affichage_en block of data/dette_dynamique.json.
 # Rewritten on 11/10/2026 with the French page (scenario B+), same structure and same anchors.
 donnees: [dette_dynamique]
+journal:  # révisions qui changent la lecture de la page (partials/page-date-visible.html affiche la plus récente)
+  - {date: 2026-10-18, texte: "Addition: section “Business cycle or structure?”, the cyclically adjusted primary deficit according to the Commission, the IMF and the OECD, and its breakdown into revenue and spending."}
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
   jeu: "dette_dynamique"
   nom: "Why French public debt rises: a decomposition of the change in the debt-to-GDP ratio"
@@ -113,6 +115,54 @@ The primary deficit is the gap between spending excluding interest and public re
 **The diagnosis depends on both ends.** It changes with the start year, but also with the end year: ending in {{< dyn-val "ofce_fin" >}} rather than {{< dyn-val "tresor_fin" >}}, the same start year gives the opposite conclusion. Two accurate comparisons over different periods can therefore lead to opposite descriptive findings — neither, on its own, establishes the causes of the deficits or identifies the policy that should have been pursued. The page measures one Eurostat indicator over these windows; it does not treat the OFCE's and the Treasury's work as equivalent, since they also differ in their definitions and questions. Faced with either, the first question to ask is "from which year to which year?". Yet two equally accurate windows are not equally relevant: a period is justified by the question asked (the effect of decisions taken since a given date, the situation before a crisis), not by the result it gives. 
 
 **What reverses the conclusion between the two windows starting in {{< dyn-val "tresor_debut" >}} is revenue.** Spending excluding interest changes by the same amount in both, to within rounding; revenue, by contrast, rises by {{< dyn-val "rec_fin_abs" >}} points of GDP in {{< dyn-val "tresor_fin" >}}. Over {{< dyn-val "tresor_debut" >}}-{{< dyn-val "tresor_fin" >}}, the rise in spending outweighs the fall in revenue by only {{< dyn-val "tresor_marge" >}} points: a revision of the accounts of that size would be enough to reverse the finding. The finding over {{< dyn-val "ofce_debut" >}}-{{< dyn-val "ofce_fin" >}}, which ends before {{< dyn-val "tresor_fin" >}}, does not depend on that revision. It is the easing of the fall in revenue, not a movement in spending, that tips their relative weight. These movements are measured as shares of GDP: they can come from the numerator, the denominator, or both. And a shrinking deficit has not disappeared: in {{< dyn-val "tresor_fin" >}}, the primary balance is still in deficit and the debt keeps rising. These comparisons, on accounts still subject to revision, do not say which decisions produced these movements, or what should be corrected. The conclusions the OFCE and the French Treasury draw from them, and the objects they examine, are compared below.
+
+## Business cycle or structure? {#conjoncture}
+
+A deficit can stem from the business cycle: when activity stays below its potential level, revenue weakens and some spending rises, then the deficit shrinks with the recovery. It can also be structural, and remain once the economy is back at its potential. Three institutions estimate this split, each with its own method: the European Commission, the IMF and the OECD.
+
+<figure class="figure-ciseau">
+  <picture>
+    <source media="(max-width: 600px)" srcset="/img/dette-dynamique-conjoncture-en-m.svg" width="300" height="744">
+    <img src="/img/dette-dynamique-conjoncture-en.svg" alt="Lines of the cyclically adjusted primary balance, as % of potential GDP: IMF since 1996, Commission and OECD since 2010, and the observed balance in grey. Over {{< dyn-val "cs_avant_lib" >}} then {{< dyn-val "cs_apres_lib" >}}: Commission {{< dyn-val "cs_ce_avant" >}} then {{< dyn-val "cs_ce_apres" >}}, IMF {{< dyn-val "cs_fmi_avant" >}} then {{< dyn-val "cs_fmi_apres" >}}, OECD {{< dyn-val "cs_ocde_avant" >}} then {{< dyn-val "cs_ocde_apres" >}}." width="720" height="373" loading="lazy" decoding="async">
+  </picture>
+  <figcaption>Cyclically adjusted primary balance according to three estimates, and observed primary balance (Eurostat). The grey bands mark the two periods compared.</figcaption>
+</figure>
+
+**The deficit since {{< dyn-val "cs_apres_debut" >}} would not disappear with the business cycle alone.** Cyclically adjusted, the primary balance is lower over {{< dyn-val "cs_apres_lib" >}} than over {{< dyn-val "cs_avant_lib" >}} in all three estimates: by {{< dyn-val "cs_ce_saut_pt" >}} according to the Commission ({{< dyn-val "cs_ce_avant" >}}% then {{< dyn-val "cs_ce_apres" >}}% of potential GDP), by {{< dyn-val "cs_fmi_saut_pt" >}} according to the IMF ({{< dyn-val "cs_fmi_avant" >}}% then {{< dyn-val "cs_fmi_apres" >}}%) and by {{< dyn-val "cs_ocde_saut_pt" >}} according to the OECD ({{< dyn-val "cs_ocde_avant" >}}% then {{< dyn-val "cs_ocde_apres" >}}%). Over {{< dyn-val "cs_apres_lib" >}}, the cyclical and one-off part of the deficit is only {{< dyn-val "cs_ce_conj_pt" >}} according to the Commission, and its cyclical part {{< dyn-val "cs_fmi_conj_pt" >}} according to the IMF.
+
+**These are three estimates, and they do not coincide.** The Commission and the OECD also remove one-off measures, the IMF does not; and each relies on an estimate of potential output, which is not a measurement and gets revised. The page gives the three values, without averaging them.
+
+**Before 2008, the cyclically adjusted balance was close to zero.** Only the IMF goes back before 2010. Its cyclically adjusted primary balance averages {{< dyn-val "cs_fmi_long" >}}% of potential GDP over {{< dyn-val "cs_long_lib" >}}, {{< dyn-val "cs_fmi_crise" >}}% over {{< dyn-val "cs_crise_lib" >}}, {{< dyn-val "cs_fmi_avant" >}}% over {{< dyn-val "cs_avant_lib" >}}, then {{< dyn-val "cs_fmi_apres" >}}% over {{< dyn-val "cs_apres_lib" >}}. The adjusted deficit that appeared after 2008 was partly absorbed; the one after 2020 has not been so far. This sequence dates the deteriorations; it is not enough to establish that the crises produced them.
+
+**Where: revenue over the recent period, spending over the long run.** The cyclically adjusted revenue and non-interest spending published by the Commission add up exactly to its adjusted balance. From {{< dyn-val "cs_avant_lib" >}} to {{< dyn-val "cs_apres_lib" >}}, that balance falls by {{< dyn-val "cs_ca_saut_pt" >}}: adjusted revenue falls by {{< dyn-val "cs_rec_pt" >}}, adjusted spending changes by {{< dyn-val "cs_dep" >}} points. Since {{< dyn-val "cs_long_lib" >}}, by contrast, adjusted spending has risen by {{< dyn-val "cs_l_dep" >}} points of potential GDP and revenue by {{< dyn-val "cs_l_rec" >}}: over the long run, the rise in spending dominates. As with the OFCE and Treasury windows above, the answer depends on the years compared.
+
+**What this split does not say.** Cyclically adjusted revenue that falls mixes decided tax cuts and the spontaneous yield of taxes, which can grow more slowly than the economy. These series do not separate the two: they say where the deficit deepened, and that the business cycle does not explain it, not which decisions deepened it.
+
+<details class="repli"><summary>Year-by-year values, definitions and editions</summary>
+
+| Year | Commission, structural | IMF, cyclically adjusted | OECD, underlying | Observed (Eurostat) |
+|---|---|---|---|---|
+| 2015 | {{< dyn-val "cs_2015_ce" >}} | {{< dyn-val "cs_2015_fmi" >}} | {{< dyn-val "cs_2015_ocde" >}} | {{< dyn-val "cs_2015_obs" >}} |
+| 2016 | {{< dyn-val "cs_2016_ce" >}} | {{< dyn-val "cs_2016_fmi" >}} | {{< dyn-val "cs_2016_ocde" >}} | {{< dyn-val "cs_2016_obs" >}} |
+| 2017 | {{< dyn-val "cs_2017_ce" >}} | {{< dyn-val "cs_2017_fmi" >}} | {{< dyn-val "cs_2017_ocde" >}} | {{< dyn-val "cs_2017_obs" >}} |
+| 2018 | {{< dyn-val "cs_2018_ce" >}} | {{< dyn-val "cs_2018_fmi" >}} | {{< dyn-val "cs_2018_ocde" >}} | {{< dyn-val "cs_2018_obs" >}} |
+| 2019 | {{< dyn-val "cs_2019_ce" >}} | {{< dyn-val "cs_2019_fmi" >}} | {{< dyn-val "cs_2019_ocde" >}} | {{< dyn-val "cs_2019_obs" >}} |
+| 2020 | {{< dyn-val "cs_2020_ce" >}} | {{< dyn-val "cs_2020_fmi" >}} | {{< dyn-val "cs_2020_ocde" >}} | {{< dyn-val "cs_2020_obs" >}} |
+| 2021 | {{< dyn-val "cs_2021_ce" >}} | {{< dyn-val "cs_2021_fmi" >}} | {{< dyn-val "cs_2021_ocde" >}} | {{< dyn-val "cs_2021_obs" >}} |
+| 2022 | {{< dyn-val "cs_2022_ce" >}} | {{< dyn-val "cs_2022_fmi" >}} | {{< dyn-val "cs_2022_ocde" >}} | {{< dyn-val "cs_2022_obs" >}} |
+| 2023 | {{< dyn-val "cs_2023_ce" >}} | {{< dyn-val "cs_2023_fmi" >}} | {{< dyn-val "cs_2023_ocde" >}} | {{< dyn-val "cs_2023_obs" >}} |
+| 2024 | {{< dyn-val "cs_2024_ce" >}} | {{< dyn-val "cs_2024_fmi" >}} | {{< dyn-val "cs_2024_ocde" >}} | {{< dyn-val "cs_2024_obs" >}} |
+| 2025 | {{< dyn-val "cs_2025_ce" >}} | {{< dyn-val "cs_2025_fmi" >}} | {{< dyn-val "cs_2025_ocde" >}} | {{< dyn-val "cs_2025_obs" >}} |
+
+As % of potential GDP (% of GDP for the observed balance); a negative number is a deficit.
+
+**Three definitions.** The Commission's structural primary balance removes the estimated effect of the cycle and one-off measures; it is published for France only since 2010. The OECD's underlying primary balance does the same. The IMF's cyclically adjusted primary balance removes the effect of the cycle only. Cyclically adjusted revenue and spending are the Commission's (AMECO series), whose difference gives back, each year, its cyclically adjusted primary balance.
+
+**Why Eurostat's observed balance differs from the IMF's.** This page's primary balance excludes interest paid; the IMF's excludes net interest, paid minus received. The gap between the two is therefore the interest received by general government: {{< dyn-val "cs_int_long" >}} points of GDP on average over {{< dyn-val "cs_long_lib" >}} and {{< dyn-val "cs_int_apres" >}} points over {{< dyn-val "cs_apres_lib" >}}, to within a few hundredths. It is a difference of definition, not of data.
+
+**Editions.** European Commission, {{< dyn-val "cs_ed_ameco" >}}; IMF, {{< dyn-val "cs_ed_fmi" >}}; OECD, {{< dyn-val "cs_ed_ocde" >}}. The three were published on different dates and will be revised.
+
+</details>
 
 ## How the calculation works {#identite}
 

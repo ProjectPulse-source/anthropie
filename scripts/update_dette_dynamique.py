@@ -32,6 +32,7 @@ Sorties : data/ et static/dette_dynamique.json (blocs affichage et affichage_en)
 from __future__ import annotations
 
 import csv
+import hashlib
 import html
 import io
 import json
@@ -180,6 +181,75 @@ def depenses_recettes():
                     depenses_hors_interets=s["TE"][a] - s["D41PAY"][a]) for a in ans}
 
 
+# ------------------------------------------------------------------ conjoncture ou structure (19/10/2026)
+# Test décisif (arbitrages ENTRANTE_2026-10-18_Dette-contexte-solution, -02, -03 ; décision de l'auteur du 19/10) : le
+# déficit primaire d'après 2020 est-il conjoncturel ? Trois estimations du solde corrigé du cycle, chacune avec sa
+# méthode : Commission (AMECO, structurel, sans cycle ni mesures ponctuelles, publié depuis 2010 ; et ses recettes et
+# dépenses corrigées du cycle depuis 1978), FMI (corrigé du cycle seulement, mesures ponctuelles comprises), OCDE
+# (sous-jacent). Pièces archivées et contrôlées par SHA256SUMS ; aucune moyenne entre producteurs n'est publiée.
+# Témoins BLOQUANTS : (1) recettes corrigées − dépenses corrigées = solde primaire corrigé d'AMECO, au demi-centième ;
+# (2) l'écart entre le solde primaire d'Eurostat (intérêts VERSÉS déduits) et celui du FMI (intérêts NETS déduits, selon
+# la définition de l'indicateur) égale les intérêts reçus (Eurostat D41REC), à 0,1 point près chaque année.
+SOURCES_DETTE = ROOT / "scripts" / "sources_dette"
+PIECES_CS = {"ameco": "ameco_fr_corrige_2026-06-02.csv", "fmi_ca": "fmi_FM2026-10_GGCBP.json",
+             "fmi_obs": "fmi_FM2026-10_GGXONLB.json", "ocde": "ocde_EO119_NLGXQU.csv"}
+EDITIONS_CS = {"fr": dict(ameco="AMECO, printemps 2026", fmi="Moniteur des finances publiques d’octobre 2026",
+                          ocde="Perspectives économiques n° 119"),
+               "en": dict(ameco="AMECO, spring 2026", fmi="Fiscal Monitor, October 2026", ocde="Economic Outlook No. 119")}
+FEN_CS = {"avant": (2015, 2019), "apres": (2022, None), "long": (1996, 2007), "crise": (2010, 2014)}
+
+
+def piece_cs(nom: str) -> bytes:
+    sums = {l.split()[1].lstrip("*"): l.split()[0] for l in (SOURCES_DETTE / "SHA256SUMS").read_text(encoding="utf-8").splitlines() if l.strip()}
+    b = (SOURCES_DETTE / nom).read_bytes()
+    if sums.get(nom) != hashlib.sha256(b).hexdigest():
+        fail("piece %s : empreinte differente de SHA256SUMS ; relire la piece" % nom)
+    return b
+
+
+def conjoncture(rows):
+    """{an: dict(obs, ce_rec, ce_dep, ce_ca, ce_st, fmi_ca, fmi_obs, ocde, int_recus)} de 1996 à la dernière année."""
+    S = {"ce_rec": {}, "ce_dep": {}, "ce_ca": {}, "ce_st": {}}
+    for r in csv.DictReader(l for l in piece_cs(PIECES_CS["ameco"]).decode("utf-8").splitlines() if not l.startswith("#")):
+        a = int(r["annee"])
+        S["ce_rec"][a], S["ce_dep"][a], S["ce_ca"][a] = (float(r["recettes_corrigees"]), float(r["depenses_hors_interets_corrigees"]),
+                                                         float(r["solde_primaire_corrige"]))
+        if r["solde_primaire_structurel"]:
+            S["ce_st"][a] = float(r["solde_primaire_structurel"])
+    for cle, nomf, ind in (("fmi_ca", PIECES_CS["fmi_ca"], "GGCBP_G01_PGDP_PT"), ("fmi_obs", PIECES_CS["fmi_obs"], "GGXONLB_G01_GDP_PT")):
+        S[cle] = {int(a): float(v) for a, v in json.loads(piece_cs(nomf).decode("utf-8"))["values"][ind]["FRA"].items()}
+    S["ocde"] = {int(r["TIME_PERIOD"]): float(r["OBS_VALUE"]) for r in csv.DictReader(piece_cs(PIECES_CS["ocde"]).decode("utf-8-sig").splitlines())
+                 if r["REF_AREA"] == "FRA" and r["MEASURE"] == "NLGXQU" and r["OBS_VALUE"]}
+    rec = eurostat("gov_10a_main", na_item="D41REC", sector="S13", unit="MIO_NAC")
+    Y = eurostat("gov_10dd_edpt1", na_item="B1GQ", sector="S1", unit="MIO_NAC")
+    fin = rows[-1]["annee"]
+    out = {}
+    for r in rows:
+        a = r["annee"]
+        if any(a not in S[k] for k in ("ce_rec", "ce_dep", "ce_ca", "fmi_ca", "fmi_obs")) or a not in rec:
+            fail("conjoncture : %d absent d'une piece ou de D41REC" % a)
+        if abs(S["ce_rec"][a] - S["ce_dep"][a] - S["ce_ca"][a]) > 0.005:
+            fail("conjoncture : %d, recettes - depenses corrigees ne redonnent pas le solde corrige d'AMECO (temoin 1)" % a)
+        ir = rec[a] / Y[a] * 100
+        if abs((r["solde_primaire_pct_pib"] - S["fmi_obs"][a]) - ir) > 0.1:
+            fail("conjoncture : %d, ecart Eurostat - FMI (%.2f) different des interets recus (%.2f) (temoin 2)"
+                 % (a, r["solde_primaire_pct_pib"] - S["fmi_obs"][a], ir))
+        out[a] = dict(obs=r["solde_primaire_pct_pib"], ce_rec=S["ce_rec"][a], ce_dep=S["ce_dep"][a], ce_ca=S["ce_ca"][a],
+                      ce_st=S["ce_st"].get(a), fmi_ca=S["fmi_ca"][a], fmi_obs=S["fmi_obs"][a], ocde=S["ocde"].get(a), int_recus=ir)
+    if any(out[a]["ce_st"] is None or out[a]["ocde"] is None for a in range(2010, fin + 1)):
+        fail("conjoncture : structurel Commission ou OCDE absent d'une annee depuis 2010")
+    if "--mutation=conjoncture" in sys.argv:   # témoin positif : la baisse des recettes corrigées disparaît après 2022
+        for a in range(FEN_CS["apres"][0], fin + 1):
+            out[a]["ce_rec"] += 1.6
+            out[a]["ce_ca"] += 1.6
+    return out
+
+
+def moy_cs(cs, cle, fen, fin):
+    a0, a1 = fen[0], fen[1] or fin
+    return sum(cs[a][cle] for a in range(a0, a1 + 1)) / (a1 - a0 + 1)
+
+
 # Fenêtres des deux lectures institutionnelles du creusement récent du déficit (None = dernière année publiée).
 FENETRES_DEFICIT = {"ofce": (2017, 2024), "tresor": (2019, None)}
 # Clés d'affichage dérivées (relecture de langue du 11/10/2026) : <clé>_abs, la valeur sans signe après un verbe de sens ;
@@ -229,6 +299,20 @@ TXT = {
         "titre_annuelle_m": "Chaque année, ce qui a poussé ou freiné le ratio dette/PIB",
         "faits_m": ("2009 : %s points", "2020 : %s points", "2021-2023 : effet taux-croissance −%s"),
         "points": "en points de PIB ; + fait monter, − fait baisser",
+        "titre_cs": "Le déficit primaire corrigé du cycle, selon trois estimations, %d-%d",
+        "desc_cs": ("Courbes en %% du PIB potentiel. Solde primaire corrigé du cycle selon le FMI, depuis %d ; solde primaire structurel "
+                    "selon la Commission européenne et solde primaire sous-jacent selon l'OCDE, depuis 2010 ; en gris, le solde primaire "
+                    "observé (Eurostat, %% du PIB). Moyennes %s puis %s : Commission %s puis %s, FMI %s puis %s, OCDE %s puis %s. "
+                    "Au-dessous de zéro, un déficit."),
+        "legende_cs": ("FMI, corrigé du cycle", "Commission, structurel", "OCDE, sous-jacent", "observé (Eurostat)"),
+        "src_cs": "FMI, %s ; Commission européenne, %s ; OCDE, %s ; Eurostat gov_10a_main, mise à jour du %s",
+        "note_cs": ("Trois méthodes : la Commission et l'OCDE retirent aussi les mesures ponctuelles, le FMI non. Estimations de la "
+                    "production potentielle, non des mesures ; zones grises : %s et %s."),
+        "montre_cs": ("Corrigé du cycle, le déficit primaire d'après 2022 reste plus creusé qu'en 2015-2019 dans les trois estimations : "
+                      "la conjoncture ne l'explique pas."),
+        "titre_cs_m": "Déficit primaire corrigé du cycle, trois estimations",
+        "faits_cs_m": ("Commission : %s, puis %s", "FMI : %s, puis %s", "OCDE : %s, puis %s"),
+        "unite_cs_m": "moyennes %s puis %s, en %% du PIB potentiel",
     },
     # Terminologie reprise de la page anglaise « Combien coûte » (implicit interest rate, general government, primary
     # deficits, stock-flow adjustments, nominal GDP growth, interest paid).
@@ -262,6 +346,20 @@ TXT = {
         "titre_annuelle_m": "Each year, what pushed the debt-to-GDP ratio up or held it back",
         "faits_m": ("2009: %s points", "2020: %s points", "2021-2023: interest-growth effect −%s"),
         "points": "in points of GDP; + pushes up, − pulls down",
+        "titre_cs": "The cyclically adjusted primary deficit, according to three estimates, %d-%d",
+        "desc_cs": ("Lines as %% of potential GDP. Cyclically adjusted primary balance according to the IMF, since %d; structural "
+                    "primary balance according to the European Commission and underlying primary balance according to the OECD, "
+                    "since 2010; in grey, the observed primary balance (Eurostat, %% of GDP). Averages %s then %s: Commission %s then "
+                    "%s, IMF %s then %s, OECD %s then %s. Below zero, a deficit."),
+        "legende_cs": ("IMF, cyclically adjusted", "Commission, structural", "OECD, underlying", "observed (Eurostat)"),
+        "src_cs": "IMF, %s; European Commission, %s; OECD, %s; Eurostat gov_10a_main, release of %s",
+        "note_cs": ("Three methods: the Commission and the OECD also remove one-off measures, the IMF does not. Estimates of "
+                    "potential output, not measurements; grey bands: %s and %s."),
+        "montre_cs": ("Cyclically adjusted, the primary deficit after 2022 remains deeper than in 2015-2019 in all three estimates: "
+                      "the business cycle does not explain it."),
+        "titre_cs_m": "Cyclically adjusted primary deficit, three estimates",
+        "faits_cs_m": ("Commission: %s, then %s", "IMF: %s, then %s", "OECD: %s, then %s"),
+        "unite_cs_m": "averages %s then %s, as %% of potential GDP",
     },
 }
 NB = {"fr": (fr, signe), "en": (en, signe_en)}   # même calcul, deux présentations
@@ -387,6 +485,65 @@ def fig_annuelle(rows, lang="fr"):
     return pied(e, H + 4, T["src_annuelle"] % ((a0, a1) + (millesime("gov_10dd_edpt1", lang), millesime("gov_10a_main", lang))), T["note_annuelle"], lang)
 
 
+def _cs_series(cs):
+    ans = sorted(cs)
+    return ans, [("fmi_ca", BLEU, None, ans), ("ce_st", INK, None, [a for a in ans if a >= 2010]),
+                 ("ocde", INK2, "5 3", [a for a in ans if a >= 2010]), ("obs", GRIS_CLAIR, None, ans)]
+
+
+def _cs_moyennes(cs, nb):
+    fin = max(cs)
+    vals = []
+    for cle in ("ce_st", "fmi_ca", "ocde"):
+        vals += [sg_cs(moy_cs(cs, cle, FEN_CS["avant"], fin), nb), sg_cs(moy_cs(cs, cle, FEN_CS["apres"], fin), nb)]
+    return vals
+
+
+def sg_cs(v, nb):
+    return nb(v, 1)
+
+
+def _lib_fen(cle, fin):
+    a0, a1 = FEN_CS[cle][0], FEN_CS[cle][1] or fin
+    return "%d-%d" % (a0, a1)
+
+
+def fig_cs(cs, lang="fr"):
+    """Trois estimations du solde primaire corrigé du cycle, et le solde observé ; deux fenêtres grisées."""
+    T, (nb, sg) = TXT[lang], NB[lang]
+    ans, series = _cs_series(cs)
+    fin = ans[-1]
+    H, X0, X1, TOP, BAS = 290, 40, W - 10, 78, 262
+    vals = [cs[a][c] for c, _, _, aa in series for a in aa]
+    vmax, vmin = 2, -(int(-min(vals) / 2) + 1) * 2
+    X = lambda a: X0 + (X1 - X0) * (a - ans[0]) / (fin - ans[0])
+    Y = lambda v: BAS - (BAS - TOP) * (v - vmin) / (vmax - vmin)
+    av, ap = _lib_fen("avant", fin), _lib_fen("apres", fin)
+    m = _cs_moyennes(cs, nb)
+    desc = T["desc_cs"] % ((ans[0], av, ap) + tuple(m[0:2] + m[2:4] + m[4:6]))
+    e = entete(H, "dcs", T["titre_cs"] % (ans[0], fin), desc)
+    for k in ("avant", "apres"):
+        a0, a1 = FEN_CS[k][0], FEN_CS[k][1] or fin
+        e.append('<rect x="%.1f" y="%d" width="%.1f" height="%d" fill="#f1efec"/>' % (X(a0 - 0.5), TOP, min(X(a1 + 0.5), X1) - X(a0 - 0.5), BAS - TOP))
+    for g in range(vmin, vmax + 1, 2):
+        e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="%s"/>' % (X0, Y(g), X1, Y(g), GRID, 1.4 if g == 0 else 0.6))
+        e.append('<text x="%d" y="%.1f" font-size="10" fill="%s" text-anchor="end">%s</text>' % (X0 - 6, Y(g) + 3, MUTED, sg(g, 0) if g else "0"))
+    for a in ans:
+        if a % 5 == 0 or a == fin:
+            e.append('<text x="%.1f" y="%d" font-size="10" fill="%s" text-anchor="%s">%d</text>' % (X(a), BAS + 14, INK2, "end" if a == fin else "middle", a))
+    for cle, col, dash, aa in reversed(series):
+        pts = " ".join("%.1f,%.1f" % (X(a), Y(cs[a][cle])) for a in aa)
+        e.append('<polyline points="%s" fill="none" stroke="%s" stroke-width="%s"%s/>'
+                 % (pts, col, 2.2 if cle != "obs" else 1.6, ' stroke-dasharray="%s"' % dash if dash else ""))
+    x = X0
+    for (cle, col, dash, _), lib in zip(series, T["legende_cs"]):
+        e.append('<line x1="%d" y1="41" x2="%d" y2="41" stroke="%s" stroke-width="2.4"%s/>' % (x, x + 16, col, ' stroke-dasharray="%s"' % dash if dash else ""))
+        e.append('<text x="%d" y="45" font-size="11" fill="%s">%s</text>' % (x + 20, INK2, esc(lib)))
+        x += 20 + int(5.6 * len(lib)) + 16
+    E = EDITIONS_CS[lang]
+    return pied(e, H + 4, T["src_cs"] % (E["fmi"], E["ameco"], E["ocde"], millesime("gov_10a_main", lang)), T["note_cs"] % (av, ap), lang)
+
+
 # ------------------------------------------------------------------ figures téléphone (phase B, 11/10/2026)
 # Composées pour 300 px, jamais rétrécies ; police minimale FS_MIN ; parité contrôlée contre la version détaillée
 # (pied_figure.parite). Patron : scripts/update_lycee_professeurs.py.
@@ -502,12 +659,55 @@ def fig_annuelle_m(rows, lang, svg_d):
     return finir_m(e, y + 18, T["src_annuelle"] % ((rows[0]["annee"], rows[-1]["annee"]) + (millesime("gov_10dd_edpt1", lang), millesime("gov_10a_main", lang))), T["note_annuelle"], lang)
 
 
+def fig_cs_m(cs, lang, svg_d):
+    T, (nb, sg) = TXT[lang], NB[lang]
+    ans, series = _cs_series(cs)
+    fin = ans[-1]
+    e, y = tete_m("dcsm", T["titre_cs_m"], desc_de(svg_d))
+    av, ap = _lib_fen("avant", fin), _lib_fen("apres", fin)
+    vals = [cs[a][c] for c, _, _, aa in series for a in aa]
+    vmax, vmin = 2, -(int(-min(vals) / 2) + 1) * 2
+    X0, X1, TOP = 30, WM - 2, y + 16
+    BAS = TOP + 190
+    X = lambda a: X0 + (X1 - X0) * (a - ans[0]) / (fin - ans[0])
+    Y = lambda v: BAS - (BAS - TOP) * (v - vmin) / (vmax - vmin)
+    for k in ("avant", "apres"):
+        a0, a1 = FEN_CS[k][0], FEN_CS[k][1] or fin
+        e.append('<rect x="%.1f" y="%d" width="%.1f" height="%d" fill="#f1efec"/>' % (X(a0 - 0.5), TOP, min(X(a1 + 0.5), X1) - X(a0 - 0.5), BAS - TOP))
+    for g in range(vmin, vmax + 1, 4):
+        e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="%s"/>' % (X0, Y(g), X1, Y(g), GRID, 1.4 if g == 0 else 0.6))
+        e.append('<text x="%d" y="%.1f" font-size="%s" fill="%s" text-anchor="end">%s</text>' % (X0 - 4, Y(g) + 4, FS_MIN, MUTED, sg(g, 0) if g else "0"))
+    for a in (2000, 2010, 2020):
+        e.append('<text x="%.1f" y="%d" font-size="%s" fill="%s" text-anchor="middle">%d</text>' % (X(a), BAS + 18, FS_MIN, INK2, a))
+    for cle, col, dash, aa in reversed(series):
+        pts = " ".join("%.1f,%.1f" % (X(a), Y(cs[a][cle])) for a in aa)
+        e.append('<polyline points="%s" fill="none" stroke="%s" stroke-width="%s"%s/>'
+                 % (pts, col, 2.2 if cle != "obs" else 1.6, ' stroke-dasharray="%s"' % dash if dash else ""))
+    y = BAS + 26
+    for (cle, col, dash, _), lib in zip(series, T["legende_cs"]):
+        y += 22
+        e.append('<line x1="0" y1="%d" x2="16" y2="%d" stroke="%s" stroke-width="2.6"%s/>' % (y - 5, y - 5, col, ' stroke-dasharray="%s"' % dash if dash else ""))
+        e.append('<text x="22" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, INK2, esc(lib)))
+    y += 14
+    for l in pied_figure.coupe(T["unite_cs_m"] % (av, ap), 38):
+        y += 18
+        e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, INK2, esc(l)))
+    m = _cs_moyennes(cs, nb)
+    for f in (T["faits_cs_m"][0] % tuple(m[0:2]), T["faits_cs_m"][1] % tuple(m[2:4]), T["faits_cs_m"][2] % tuple(m[4:6])):
+        for k, l in enumerate(pied_figure.coupe(f, 30)):
+            y += 22 if k == 0 else 19
+            e.append('<text x="0" y="%d" font-size="15" font-weight="600" fill="%s">%s</text>' % (y, INK, esc(l)))
+    E = EDITIONS_CS[lang]
+    return finir_m(e, y + 18, T["src_cs"] % (E["fmi"], E["ameco"], E["ocde"], millesime("gov_10a_main", lang)), T["note_cs"] % (av, ap), lang)
+
+
 def fiches(figs, A):
     out = {}
     for lang in ("fr", "en"):
         T, suf = TXT[lang], SUFFIXE[lang]
         MONTRE = [("cascade", "dette-dynamique-cascade" + suf, T["montre_cascade"]),
-                  ("annuelle", "dette-dynamique-annuelle" + suf, T["montre_annuelle"])]
+                  ("annuelle", "dette-dynamique-annuelle" + suf, T["montre_annuelle"]),
+                  ("conjoncture", "dette-dynamique-conjoncture" + suf, T["montre_cs"])]
         out[lang] = []
         for ident, f, montre in MONTRE:
             svg = figs[f + ".svg"]
@@ -517,14 +717,19 @@ def fiches(figs, A):
     return out
 
 
-def csv_texte(rows):
+def csv_texte(rows, cs):
     buf = io.StringIO()
     w = csv.writer(buf, lineterminator="\n")
     cles = ["annee", "dette_pct_pib", "variation", "effet_interets", "effet_croissance", "effet_taux_croissance",
             "contribution_solde_primaire", "flux_stock", "taux_implicite_pct", "croissance_nominale_pct", "solde_primaire_pct_pib"]
-    w.writerow(cles)
+    # Conjoncture ou structure (19/10/2026) : mêmes lignes, colonnes des trois producteurs (vide = non publié cette année)
+    cles_cs = [("ce_st", "commission_solde_primaire_structurel_pct_pib_potentiel"), ("ce_rec", "commission_recettes_corrigees_pct_pib_potentiel"),
+               ("ce_dep", "commission_depenses_hors_interets_corrigees_pct_pib_potentiel"), ("fmi_ca", "fmi_solde_primaire_corrige_pct_pib_potentiel"),
+               ("ocde", "ocde_solde_primaire_sous_jacent_pct_pib_potentiel")]
+    w.writerow(cles + [n for _, n in cles_cs])
     for r in rows:
-        w.writerow([r["annee"]] + ["%.3f" % r[k] for k in cles[1:]])
+        c = cs[r["annee"]]
+        w.writerow([r["annee"]] + ["%.3f" % r[k] for k in cles[1:]] + ["" if c[k] is None else "%.3f" % c[k] for k, _ in cles_cs])
     return buf.getvalue()
 
 
@@ -539,7 +744,7 @@ def dette_insee_fin(annee: int):
         return None
 
 
-def affichage(a0, d_depart, rows, total, per, dr):
+def affichage(a0, d_depart, rows, total, per, dr, cs):
     """Rend (affichage, affichage_en) : deux présentations d'un seul corps de valeurs, puis les gardes (une passe,
     numérique, valable pour les deux langues)."""
     last = rows[-1]
@@ -605,6 +810,28 @@ def affichage(a0, d_depart, rows, total, per, dr):
         A["ti_creux_an"] = str(lg.extremum(rows, lambda r: r["taux_implicite_pct"], 2, maxi=False)["annee"])
         A["ti_creux"] = nb(min(r["taux_implicite_pct"] for r in rows), 2)
         A["ti_2021"], A["ti_2022"] = nb(by[2021]["taux_implicite_pct"], 2), nb(by[2022]["taux_implicite_pct"], 2)
+        # Conjoncture ou structure (19/10/2026) : valeurs des trois producteurs, jamais leur moyenne.
+        fin_ = last["annee"]
+        M = lambda cle, k: moy_cs(cs, cle, FEN_CS[k], fin_)
+        for k in ("avant", "apres", "long", "crise"):
+            A["cs_%s_lib" % k] = _lib_fen(k, fin_)
+        A["cs_apres_debut"] = str(FEN_CS["apres"][0])
+        for cle, nom in (("ce_st", "ce"), ("fmi_ca", "fmi"), ("ocde", "ocde")):
+            A["cs_%s_avant" % nom], A["cs_%s_apres" % nom] = nb(M(cle, "avant")), nb(M(cle, "apres"))
+            A["cs_%s_saut" % nom] = nb(abs(M(cle, "apres") - M(cle, "avant")))
+        A["cs_fmi_long"], A["cs_fmi_crise"] = nb(M("fmi_ca", "long")), nb(M("fmi_ca", "crise"))
+        A["cs_ce_conj"] = nb(abs(M("obs", "apres") - M("ce_st", "apres")), 2)
+        A["cs_fmi_conj"] = nb(abs(M("fmi_obs", "apres") - M("fmi_ca", "apres")), 2)
+        A["cs_rec"] = nb(abs(M("ce_rec", "apres") - M("ce_rec", "avant")), 2)
+        A["cs_dep"] = sg(M("ce_dep", "apres") - M("ce_dep", "avant"), 2)
+        A["cs_ca_saut"] = nb(abs(M("ce_ca", "apres") - M("ce_ca", "avant")), 2)
+        A["cs_l_rec"], A["cs_l_dep"] = nb(M("ce_rec", "apres") - M("ce_rec", "long")), nb(M("ce_dep", "apres") - M("ce_dep", "long"))   # sans signe : « augmentent de » (gardes : positifs)
+        A["cs_int_long"] = nb(M("int_recus", "long"), 2)
+        A["cs_int_apres"] = nb(M("int_recus", "apres"), 2)
+        for a in range(FEN_CS["avant"][0], fin_ + 1):
+            A["cs_%d_ce" % a], A["cs_%d_fmi" % a] = nb(cs[a]["ce_st"]), nb(cs[a]["fmi_ca"])
+            A["cs_%d_ocde" % a], A["cs_%d_obs" % a] = nb(cs[a]["ocde"]), nb(cs[a]["obs"])
+        A["cs_tab_fin"] = str(fin_)
         return A
 
     fen = {k: (d0, d1 or last["annee"]) for k, (d0, d1) in FENETRES_DEFICIT.items()}
@@ -619,6 +846,12 @@ def affichage(a0, d_depart, rows, total, per, dr):
     A, A_en = bloc(*NB["fr"]), bloc(*NB["en"])
     for X_, lang in ((A, "fr"), (A_en, "en")):
         X_["millesime_dette"], X_["millesime_comptes"] = millesime("gov_10dd_edpt1", lang), millesime("gov_10a_main", lang)
+        for k, v in EDITIONS_CS[lang].items():
+            X_["cs_ed_" + k] = v
+        # « point » accordé à la valeur affichée (même règle que ACCORD_POINTS)
+        for k in ("cs_ce_saut", "cs_fmi_saut", "cs_ocde_saut", "cs_rec", "cs_ca_saut", "cs_ce_conj", "cs_fmi_conj"):
+            v = abs(float(X_[k].replace(",", "." if lang == "fr" else "")))
+            X_[k + "_pt"] = X_[k] + ("\u00a0" if lang == "fr" else " ") + (("point" if v < 2 else "points") if lang == "fr" else ("point" if v == 1 else "points"))
         # Relecture de langue du 11/10/2026. (1) Après un verbe qui porte déjà le sens (« a ajouté », « a retiré »), la
         # valeur s'écrit sans signe : « retiré −15,7 » se lisait comme un ajout. Les sens sont couverts par les gardes
         # « compensation dans le temps » (plus de 10 points avant la bascule, moins de −10 après) et OPTIMUM-10 (les
@@ -719,6 +952,26 @@ def affichage(a0, d_depart, rows, total, per, dr):
          insee_fin is not None and 0 < abs(insee_fin - last["dette_pct_pib"]) <= 0.5),
         ("OPTIMUM-10 : « un déficit qui se réduit n'a pas disparu » — le solde primaire de la dernière année reste négatif",
          last["solde_primaire_pct_pib"] < 0),
+        # --- Conjoncture ou structure (19/10/2026). Seuils écrits avant les phrases.
+        ("« plus creusé dans les trois estimations » : chaque producteur, solde d'après 2022 inférieur de plus d'un point à 2015-2019",
+         all(moy_cs(cs, c, FEN_CS["apres"], last["annee"]) < moy_cs(cs, c, FEN_CS["avant"], last["annee"]) - 1 for c in ("ce_st", "fmi_ca", "ocde"))),
+        ("« la conjoncture ne l'explique pas » : part conjoncturelle (et ponctuelle) d'après 2022 sous 0,5 point chez la Commission et le FMI",
+         abs(moy_cs(cs, "obs", FEN_CS["apres"], last["annee"]) - moy_cs(cs, "ce_st", FEN_CS["apres"], last["annee"])) < 0.5
+         and abs(moy_cs(cs, "fmi_obs", FEN_CS["apres"], last["annee"]) - moy_cs(cs, "fmi_ca", FEN_CS["apres"], last["annee"])) < 0.5),
+        ("« par les recettes » : recettes corrigées en baisse de plus d'un point, plus de quatre fois la variation des dépenses corrigées, elle-même sous 0,5 point",
+         moy_cs(cs, "ce_rec", FEN_CS["apres"], last["annee"]) - moy_cs(cs, "ce_rec", FEN_CS["avant"], last["annee"]) < -1
+         and abs(moy_cs(cs, "ce_rec", FEN_CS["apres"], last["annee"]) - moy_cs(cs, "ce_rec", FEN_CS["avant"], last["annee"]))
+         > 4 * abs(moy_cs(cs, "ce_dep", FEN_CS["apres"], last["annee"]) - moy_cs(cs, "ce_dep", FEN_CS["avant"], last["annee"]))
+         and abs(moy_cs(cs, "ce_dep", FEN_CS["apres"], last["annee"]) - moy_cs(cs, "ce_dep", FEN_CS["avant"], last["annee"])) < 0.5),
+        ("« sur la longue période, l'inverse » : depuis 1996-2007, dépenses corrigées en hausse de plus de deux points et plus de deux fois les recettes",
+         moy_cs(cs, "ce_dep", FEN_CS["apres"], last["annee"]) - moy_cs(cs, "ce_dep", FEN_CS["long"], last["annee"]) > 2
+         and moy_cs(cs, "ce_dep", FEN_CS["apres"], last["annee"]) - moy_cs(cs, "ce_dep", FEN_CS["long"], last["annee"])
+         > 2 * (moy_cs(cs, "ce_rec", FEN_CS["apres"], last["annee"]) - moy_cs(cs, "ce_rec", FEN_CS["long"], last["annee"])) > 0),
+        ("FMI : « proche de l'équilibre » en 1996-2007 (moins d'un demi-point), « tombe » en 2010-2014 (sous -1,5), « revient » "
+         "en 2015-2019 (au-dessus de 2010-2014 d'un point) et « s'établit » plus bas d'après 2022 (sous 2015-2019)",
+         abs(moy_cs(cs, "fmi_ca", FEN_CS["long"], last["annee"])) < 0.5 and moy_cs(cs, "fmi_ca", FEN_CS["crise"], last["annee"]) < -1.5
+         and moy_cs(cs, "fmi_ca", FEN_CS["avant"], last["annee"]) > moy_cs(cs, "fmi_ca", FEN_CS["crise"], last["annee"]) + 1
+         and moy_cs(cs, "fmi_ca", FEN_CS["apres"], last["annee"]) < moy_cs(cs, "fmi_ca", FEN_CS["avant"], last["annee"])),
         ("2009 et 2020 : les deux plus fortes hausses de la série",
          sorted(rows, key=lambda r: -r["variation"])[0]["annee"] in (2009, 2020) and sorted(rows, key=lambda r: -r["variation"])[1]["annee"] in (2009, 2020)),
     ]
@@ -740,7 +993,8 @@ def main() -> int:
     total = agreger(rows, rows[0]["annee"], rows[-1]["annee"])
     per = [agreger(rows, a, b or rows[-1]["annee"]) for a, b, _ in PERIODES]
     dr = depenses_recettes()
-    aff, aff_en = affichage(a0, d_depart, rows, total, per, dr)
+    cs = conjoncture(rows)
+    aff, aff_en = affichage(a0, d_depart, rows, total, per, dr, cs)
     log("Decomposition %d-%d : hausse %.1f = interets %.1f + croissance %.1f + deficits primaires %.1f + flux-stock %.1f"
         % (rows[0]["annee"], rows[-1]["annee"], total["variation"], total["effet_interets"], total["effet_croissance"],
            total["contribution_solde_primaire"], total["flux_stock"]))
@@ -751,7 +1005,9 @@ def main() -> int:
         figs["dette-dynamique-annuelle%s.svg" % suf] = fig_annuelle(rows, lang)
         figs["dette-dynamique-cascade%s-m.svg" % suf] = fig_cascade_m(a0, d_depart, rows, total, lang, figs["dette-dynamique-cascade%s.svg" % suf])
         figs["dette-dynamique-annuelle%s-m.svg" % suf] = fig_annuelle_m(rows, lang, figs["dette-dynamique-annuelle%s.svg" % suf])
-        for fid in ("cascade", "annuelle"):
+        figs["dette-dynamique-conjoncture%s.svg" % suf] = fig_cs(cs, lang)
+        figs["dette-dynamique-conjoncture%s-m.svg" % suf] = fig_cs_m(cs, lang, figs["dette-dynamique-conjoncture%s.svg" % suf])
+        for fid in ("cascade", "annuelle", "conjoncture"):
             ec = pied_figure.parite(figs["dette-dynamique-%s%s.svg" % (fid, suf)], figs["dette-dynamique-%s%s-m.svg" % (fid, suf)], FS_MIN)
             if ec:
                 fail("parite mobile %s %s : %s" % (fid, lang, " ; ".join(ec)))
@@ -761,7 +1017,7 @@ def main() -> int:
         if ecarts:
             fail("page %s : %s" % (page, " ; ".join(ecarts)))
     if check:
-        log("--check : gardes passees (%d cles d'affichage), parite des 4 figures telephone et hauteurs des pages controlees, rien ecrit." % len(aff))
+        log("--check : gardes passees (%d cles d'affichage), parite des 6 figures telephone et hauteurs des pages controlees, rien ecrit." % len(aff))
         return 0
     payload = {"meta": {"releve_le": datetime.now(timezone.utc).strftime("%Y-%m-%d"), "page": "https://" + PAGE_URL,
                         "licence": "CC BY 4.0", "pays": "France", "perimetre": "administrations publiques (S.13), SEC 2010",
@@ -773,6 +1029,16 @@ def main() -> int:
                "depart": {"annee": a0, "dette_pct_pib": d_depart}, "annees": rows, "total": total,
                "periodes": [dict(periode=(lib if b else lib % rows[-1]["annee"]), **t) for (a, b, lib), t in zip(PERIODES, per)],
                "depenses_recettes_pc_pib": {str(k): v for k, v in dr.items() if k >= a0},
+               "conjoncture_structure": {"definitions": {
+                   "obs": "solde primaire observé, Eurostat, % du PIB (intérêts versés déduits)",
+                   "ce_st": "solde primaire structurel, Commission (AMECO UBLGBPS), % du PIB potentiel, depuis 2010",
+                   "ce_ca": "solde primaire corrigé du cycle, Commission (AMECO UBLGBP) = ce_rec - ce_dep",
+                   "ce_rec": "recettes corrigées du cycle, Commission (AMECO URTGAP)", "ce_dep": "dépenses hors intérêts corrigées du cycle, Commission (AMECO UUTGBP)",
+                   "fmi_ca": "solde primaire corrigé du cycle, FMI (GGCBP_G01_PGDP_PT), intérêts nets déduits",
+                   "fmi_obs": "solde primaire observé, FMI (GGXONLB_G01_GDP_PT), intérêts nets déduits",
+                   "ocde": "solde primaire sous-jacent, OCDE (NLGXQU), depuis 2010", "int_recus": "intérêts reçus, Eurostat D41REC, % du PIB"},
+                   "pieces": {k: dict(fichier=v, sha256=hashlib.sha256((SOURCES_DETTE / v).read_bytes()).hexdigest()) for k, v in PIECES_CS.items()},
+                   "annees": {str(k): v for k, v in cs.items()}},
                "affichage": aff, "affichage_en": aff_en}
     releve = payload["meta"]["releve_le"]
     # « Rien écrit à données identiques » : l'empreinte compare le paquet ENTIER, donc affichage_en compris (aucun
@@ -787,7 +1053,7 @@ def main() -> int:
             if prev.get("releve_le") and json.dumps(p2, sort_keys=True, ensure_ascii=False) == json.dumps(n2, sort_keys=True, ensure_ascii=False) \
                     and all((OUT_IMG / f).exists() and (OUT_IMG / f).read_text(encoding="utf-8") == s for f, s in figs.items()) \
                     and all((OUT_IMG / f.replace(".svg", ".png")).exists() for f in figs) \
-                    and OUT_CSV.exists() and OUT_CSV.read_text(encoding="utf-8-sig") == csv_texte(rows) \
+                    and OUT_CSV.exists() and OUT_CSV.read_text(encoding="utf-8-sig") == csv_texte(rows, cs) \
                     and OUT_FIGURES.exists() and json.loads(OUT_FIGURES.read_text(encoding="utf-8")) == fiches(figs, aff):
                 log("Donnees et figures identiques : rien ecrit (releve_le conserve : %s)." % prev["releve_le"])
                 return 0
@@ -799,7 +1065,7 @@ def main() -> int:
     txt = json.dumps(payload, ensure_ascii=False, indent=1)
     OUT_DATA.write_text(txt, encoding="utf-8")
     OUT_STATIC.write_text(txt, encoding="utf-8")
-    OUT_CSV.write_text(csv_texte(rows), encoding="utf-8-sig", newline="\n")  # BOM : Excel lit les accents
+    OUT_CSV.write_text(csv_texte(rows, cs), encoding="utf-8-sig", newline="\n")  # BOM : Excel lit les accents
     import cairosvg
     for f, s in figs.items():
         (OUT_IMG / f).write_text(s, encoding="utf-8")

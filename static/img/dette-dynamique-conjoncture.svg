@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 373" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dcs-t dcs-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="dcs-t">Le déficit primaire corrigé du cycle, selon trois estimations, 1996-2025</title><desc id="dcs-d">Courbes en % du PIB potentiel. Solde primaire corrigé du cycle selon le FMI, depuis 1996 ; solde primaire structurel selon la Commission européenne et solde primaire sous-jacent selon l'OCDE, depuis 2010 ; en gris, le solde primaire observé (Eurostat, % du PIB). Moyennes 2015-2019 puis 2022-2025 : Commission −1,1 puis −3,0, FMI −0,5 puis −3,1, OCDE −1,8 puis −3,4. Au-dessous de zéro, un déficit.</desc>
+<rect width="720" height="373" fill="#ffffff"/>
+<text x="0" y="18" font-size="15" font-weight="600" fill="#26262f">Le déficit primaire corrigé du cycle, selon trois estimations, 1996-2025</text>
+<rect x="467.4" y="78" width="115.5" height="184" fill="#f1efec"/>
+<rect x="629.1" y="78" width="80.9" height="184" fill="#f1efec"/>
+<line x1="40" y1="262.0" x2="710" y2="262.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="265.0" font-size="10" fill="#96928f" text-anchor="end">−8</text>
+<line x1="40" y1="225.2" x2="710" y2="225.2" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="228.2" font-size="10" fill="#96928f" text-anchor="end">−6</text>
+<line x1="40" y1="188.4" x2="710" y2="188.4" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="191.4" font-size="10" fill="#96928f" text-anchor="end">−4</text>
+<line x1="40" y1="151.6" x2="710" y2="151.6" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="154.6" font-size="10" fill="#96928f" text-anchor="end">−2</text>
+<line x1="40" y1="114.8" x2="710" y2="114.8" stroke="#dcd8d3" stroke-width="1.4"/>
+<text x="34" y="117.8" font-size="10" fill="#96928f" text-anchor="end">0</text>
+<line x1="40" y1="78.0" x2="710" y2="78.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="34" y="81.0" font-size="10" fill="#96928f" text-anchor="end">+2</text>
+<text x="132.4" y="276" font-size="10" fill="#55524f" text-anchor="middle">2000</text>
+<text x="247.9" y="276" font-size="10" fill="#55524f" text-anchor="middle">2005</text>
+<text x="363.4" y="276" font-size="10" fill="#55524f" text-anchor="middle">2010</text>
+<text x="479.0" y="276" font-size="10" fill="#55524f" text-anchor="middle">2015</text>
+<text x="594.5" y="276" font-size="10" fill="#55524f" text-anchor="middle">2020</text>
+<text x="710.0" y="276" font-size="10" fill="#55524f" text-anchor="end">2025</text>
+<polyline points="40.0,120.0 63.1,117.8 86.2,96.5 109.3,86.6 132.4,84.5 155.5,84.7 178.6,117.5 201.7,137.1 224.8,128.7 247.9,129.4 271.0,115.8 294.1,120.3 317.2,126.4 340.3,203.7 363.4,199.7 386.6,162.4 409.7,161.5 432.8,162.8 455.9,158.5 479.0,149.0 502.1,149.1 525.2,143.7 548.3,124.9 571.4,131.0 594.5,255.6 617.6,210.4 640.7,166.8 663.8,178.8 686.9,183.1 710.0,167.6" fill="none" stroke="#c9c5c0" stroke-width="1.6"/>
+<polyline points="363.4,181.9 386.6,163.7 409.7,154.4 432.8,157.4 455.9,156.7 479.0,153.2 502.1,146.7 525.2,157.7 548.3,141.2 571.4,143.3 594.5,167.0 617.6,194.1 640.7,168.2 663.8,188.0 686.9,188.7 710.0,168.0" fill="none" stroke="#55524f" stroke-width="2.2" stroke-dasharray="5 3"/>
+<polyline points="363.4,173.8 386.6,156.1 409.7,143.7 432.8,145.0 455.9,138.8 479.0,132.4 502.1,133.1 525.2,140.0 548.3,132.8 571.4,135.2 594.5,176.3 617.6,190.9 640.7,164.2 663.8,175.8 686.9,179.0 710.0,160.7" fill="none" stroke="#26262f" stroke-width="2.2"/>
+<polyline points="40.0,108.4 63.1,107.1 86.2,95.7 109.3,92.4 132.4,106.7 155.5,105.8 178.6,129.2 201.7,137.7 224.8,134.4 247.9,134.7 271.0,130.8 294.1,145.8 317.2,142.7 340.3,183.3 363.4,185.4 386.6,158.5 409.7,147.9 432.8,142.7 455.9,135.3 479.0,124.1 502.1,121.1 525.2,127.4 548.3,116.8 571.4,131.7 594.5,202.1 617.6,186.7 640.7,158.5 663.8,179.8 686.9,183.9 710.0,168.0" fill="none" stroke="#184f95" stroke-width="2.2"/>
+<line x1="40" y1="41" x2="56" y2="41" stroke="#184f95" stroke-width="2.4"/>
+<text x="60" y="45" font-size="11" fill="#55524f">FMI, corrigé du cycle</text>
+<line x1="193" y1="41" x2="209" y2="41" stroke="#26262f" stroke-width="2.4"/>
+<text x="213" y="45" font-size="11" fill="#55524f">Commission, structurel</text>
+<line x1="352" y1="41" x2="368" y2="41" stroke="#55524f" stroke-width="2.4" stroke-dasharray="5 3"/>
+<text x="372" y="45" font-size="11" fill="#55524f">OCDE, sous-jacent</text>
+<line x1="483" y1="41" x2="499" y2="41" stroke="#c9c5c0" stroke-width="2.4"/>
+<text x="503" y="45" font-size="11" fill="#55524f">observé (Eurostat)</text>
+<line x1="0" y1="294.0" x2="720" y2="294.0" stroke="#dcd8d3"/>
+<text class="pied-source" x="0" y="309.0" font-size="11" fill="#55524f">FMI, Moniteur des finances publiques d’octobre 2026 ; Commission européenne, AMECO, printemps 2026 ; OCDE,</text>
+<text class="pied-source" x="0" y="323.0" font-size="11" fill="#55524f">Perspectives économiques n° 119 ; Eurostat gov_10a_main, mise à jour du 21/07/2026</text>
+<text class="pied-note" x="0" y="337.0" font-size="11" fill="#55524f">Trois méthodes : la Commission et l'OCDE retirent aussi les mesures ponctuelles, le FMI non. Estimations de la</text>
+<text class="pied-note" x="0" y="351.0" font-size="11" fill="#55524f">production potentielle, non des mesures ; zones grises : 2015-2019 et 2022-2025.</text>
+<text class="pied-licence" x="0" y="365.0" font-size="11" fill="#96928f">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/pourquoi-la-dette-publique-augmente/</text>
+</svg>

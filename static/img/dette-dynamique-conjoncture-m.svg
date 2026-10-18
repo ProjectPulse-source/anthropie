@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 778" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dcsm-t dcsm-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="dcsm-t">Déficit primaire corrigé du cycle, trois estimations</title><desc id="dcsm-d">Courbes en % du PIB potentiel. Solde primaire corrigé du cycle selon le FMI, depuis 1996 ; solde primaire structurel selon la Commission européenne et solde primaire sous-jacent selon l'OCDE, depuis 2010 ; en gris, le solde primaire observé (Eurostat, % du PIB). Moyennes 2015-2019 puis 2022-2025 : Commission −1,1 puis −3,0, FMI −0,5 puis −3,1, OCDE −1,8 puis −3,4. Au-dessous de zéro, un déficit.</desc>
+<rect width="300" height="778" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Déficit primaire corrigé du</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">cycle, trois estimations</text>
+<rect x="201.0" y="80" width="46.2" height="190" fill="#f1efec"/>
+<rect x="265.7" y="80" width="32.3" height="190" fill="#f1efec"/>
+<line x1="30" y1="270.0" x2="298" y2="270.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="26" y="274.0" font-size="13.5" fill="#96928f" text-anchor="end">−8</text>
+<line x1="30" y1="194.0" x2="298" y2="194.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="26" y="198.0" font-size="13.5" fill="#96928f" text-anchor="end">−4</text>
+<line x1="30" y1="118.0" x2="298" y2="118.0" stroke="#dcd8d3" stroke-width="1.4"/>
+<text x="26" y="122.0" font-size="13.5" fill="#96928f" text-anchor="end">0</text>
+<text x="67.0" y="288" font-size="13.5" fill="#55524f" text-anchor="middle">2000</text>
+<text x="159.4" y="288" font-size="13.5" fill="#55524f" text-anchor="middle">2010</text>
+<text x="251.8" y="288" font-size="13.5" fill="#55524f" text-anchor="middle">2020</text>
+<polyline points="30.0,123.3 39.2,121.0 48.5,99.1 57.7,88.9 67.0,86.7 76.2,86.9 85.4,120.8 94.7,141.0 103.9,132.3 113.2,133.0 122.4,119.0 131.7,123.7 140.9,130.0 150.1,209.8 159.4,205.6 168.6,167.2 177.9,166.3 187.1,167.5 196.3,163.2 205.6,153.4 214.8,153.4 224.1,147.9 233.3,128.5 242.6,134.7 251.8,263.4 261.0,216.7 270.3,171.7 279.5,184.0 288.8,188.5 298.0,172.5" fill="none" stroke="#c9c5c0" stroke-width="1.6"/>
+<polyline points="159.4,187.3 168.6,168.5 177.9,158.9 187.1,162.0 196.3,161.3 205.6,157.6 214.8,150.9 224.1,162.3 233.3,145.2 242.6,147.5 251.8,171.9 261.0,199.9 270.3,173.1 279.5,193.6 288.8,194.3 298.0,173.0" fill="none" stroke="#55524f" stroke-width="2.2" stroke-dasharray="5 3"/>
+<polyline points="159.4,178.9 168.6,160.6 177.9,147.9 187.1,149.2 196.3,142.8 205.6,136.1 214.8,136.9 224.1,144.0 233.3,136.6 242.6,139.1 251.8,181.5 261.0,196.6 270.3,169.0 279.5,181.0 288.8,184.3 298.0,165.4" fill="none" stroke="#26262f" stroke-width="2.2"/>
+<polyline points="30.0,111.4 39.2,110.0 48.5,98.3 57.7,94.8 67.0,109.7 76.2,108.7 85.4,132.9 94.7,141.6 103.9,138.2 113.2,138.6 122.4,134.6 131.7,150.0 140.9,146.8 150.1,188.8 159.4,190.9 168.6,163.1 177.9,152.2 187.1,146.8 196.3,139.2 205.6,127.6 214.8,124.5 224.1,131.0 233.3,120.0 242.6,135.4 251.8,208.2 261.0,192.2 270.3,163.2 279.5,185.2 288.8,189.4 298.0,172.9" fill="none" stroke="#184f95" stroke-width="2.2"/>
+<line x1="0" y1="313" x2="16" y2="313" stroke="#184f95" stroke-width="2.6"/>
+<text x="22" y="318" font-size="13.5" fill="#55524f">FMI, corrigé du cycle</text>
+<line x1="0" y1="335" x2="16" y2="335" stroke="#26262f" stroke-width="2.6"/>
+<text x="22" y="340" font-size="13.5" fill="#55524f">Commission, structurel</text>
+<line x1="0" y1="357" x2="16" y2="357" stroke="#55524f" stroke-width="2.6" stroke-dasharray="5 3"/>
+<text x="22" y="362" font-size="13.5" fill="#55524f">OCDE, sous-jacent</text>
+<line x1="0" y1="379" x2="16" y2="379" stroke="#c9c5c0" stroke-width="2.6"/>
+<text x="22" y="384" font-size="13.5" fill="#55524f">observé (Eurostat)</text>
+<text x="0" y="416" font-size="13.5" fill="#55524f">moyennes 2015-2019 puis 2022-2025,</text>
+<text x="0" y="434" font-size="13.5" fill="#55524f">en % du PIB potentiel</text>
+<text x="0" y="456" font-size="15" font-weight="600" fill="#26262f">Commission : −1,1, puis −3,0</text>
+<text x="0" y="478" font-size="15" font-weight="600" fill="#26262f">FMI : −0,5, puis −3,1</text>
+<text x="0" y="500" font-size="15" font-weight="600" fill="#26262f">OCDE : −1,8, puis −3,4</text>
+<line x1="0" y1="518.0" x2="300" y2="518.0" stroke="#dcd8d3"/>
+<text x="0" y="539.0" font-size="13.5" fill="#55524f">FMI, Moniteur des finances publiques</text>
+<text x="0" y="556.0" font-size="13.5" fill="#55524f">d’octobre 2026 ; Commission</text>
+<text x="0" y="573.0" font-size="13.5" fill="#55524f">européenne, AMECO, printemps 2026 ;</text>
+<text x="0" y="590.0" font-size="13.5" fill="#55524f">OCDE, Perspectives économiques n°</text>
+<text x="0" y="607.0" font-size="13.5" fill="#55524f">119 ; Eurostat gov_10a_main, mise à</text>
+<text x="0" y="624.0" font-size="13.5" fill="#55524f">jour du 21/07/2026</text>
+<text x="0" y="645.0" font-size="13.5" fill="#55524f">Trois méthodes : la Commission et</text>
+<text x="0" y="662.0" font-size="13.5" fill="#55524f">l'OCDE retirent aussi les mesures</text>
+<text x="0" y="679.0" font-size="13.5" fill="#55524f">ponctuelles, le FMI non. Estimations</text>
+<text x="0" y="696.0" font-size="13.5" fill="#55524f">de la production potentielle, non des</text>
+<text x="0" y="713.0" font-size="13.5" fill="#55524f">mesures ; zones grises : 2015-2019 et</text>
+<text x="0" y="730.0" font-size="13.5" fill="#55524f">2022-2025.</text>
+<text x="0" y="751.0" font-size="13.5" fill="#96928f">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text x="0" y="768.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
+</svg>

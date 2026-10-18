@@ -13,6 +13,8 @@ lastmod: 2026-10-11
 # Refonte du 11/10/2026 (scénario B+, arbitrage de phase A : D:\PRO\06_PROMOTION\RECHERCHE_LYCEES_LECTURE_2026-10-09\
 # REFONTE_PILOTE\DETTE\PHASE_A_ARBITRAGE_POURQUOI_AUGMENTE.md). Bilingue : toute correction se reporte dans _index.en.md.
 donnees: [dette_dynamique]
+journal:  # révisions qui changent la lecture de la page (partials/page-date-visible.html affiche la plus récente)
+  - {date: 2026-10-18, texte: "Ajout : section « Conjoncture ou structure ? », le déficit primaire corrigé du cycle selon la Commission, le FMI et l'OCDE, et sa décomposition en recettes et dépenses."}
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
   jeu: "dette_dynamique"
   nom: "Pourquoi la dette publique française augmente : décomposition de la variation du ratio dette/PIB"
@@ -112,6 +114,54 @@ Le déficit primaire est l'écart entre les dépenses hors intérêts et les rec
 **Le diagnostic dépend des deux bornes.** Il change avec l'année de départ, mais aussi avec l'année d'arrivée&nbsp;: en finissant en {{< dyn-val "ofce_fin" >}} plutôt qu'en {{< dyn-val "tresor_fin" >}}, la même année de départ donne la conclusion inverse. Deux comparaisons exactes, sur des périodes différentes, peuvent donc conduire à des constats descriptifs opposés — aucune ne suffit, à elle seule, à établir les causes des déficits ni à désigner la politique qu'il aurait fallu conduire. La page mesure un même indicateur d'Eurostat sur ces fenêtres&nbsp;; elle ne rend pas équivalents les travaux de l'OFCE et du Trésor, qui diffèrent aussi par leurs définitions et leurs questions&nbsp;: devant l'un ou l'autre de ces travaux, il faut d'abord demander&nbsp;: «&nbsp;de quelle année à quelle année&nbsp;?&nbsp;». Deux fenêtres également exactes ne sont pas pour autant également pertinentes&nbsp;: une période se justifie par la question posée (l'effet de décisions prises depuis telle date, la situation d'avant une crise), non par le résultat qu'elle donne. 
 
 **Ce qui retourne la conclusion entre les deux fenêtres qui partent de {{< dyn-val "tresor_debut" >}}, ce sont les recettes.** Les dépenses hors intérêts varient de la même quantité dans les deux fenêtres, à l'arrondi près&nbsp;; les recettes, elles, remontent de {{< dyn-val "rec_fin_abs" >}} {{< dyn-val "rec_fin_pt" >}} de PIB en {{< dyn-val "tresor_fin" >}}. Sur {{< dyn-val "tresor_debut" >}}-{{< dyn-val "tresor_fin" >}}, la hausse des dépenses ne l'emporte sur le recul des recettes que de {{< dyn-val "tresor_marge" >}}&nbsp;point&nbsp;: une révision des comptes de cet ordre suffirait à retourner le constat. Le constat sur {{< dyn-val "ofce_debut" >}}-{{< dyn-val "ofce_fin" >}}, qui s'arrête avant {{< dyn-val "tresor_fin" >}}, ne dépend pas de cette révision. C'est l'atténuation du recul des recettes, non un mouvement des dépenses, qui fait basculer leur poids relatif. Ces mouvements sont mesurés en part de PIB&nbsp;: ils peuvent venir du numérateur, du dénominateur, ou des deux. Et un déficit qui se réduit n'a pas disparu&nbsp;: en {{< dyn-val "tresor_fin" >}}, le solde primaire reste déficitaire et la dette continue de monter. Ces comparaisons, sur des comptes encore révisables, ne disent pas quelles décisions ont produit ces mouvements, ni ce qu'il faudrait corriger. Ce que l'OFCE et la direction générale du Trésor en concluent, et sur quels objets, est confronté plus bas.
+
+## Conjoncture ou structure&nbsp;? {#conjoncture}
+
+Un déficit peut tenir à la conjoncture&nbsp;: quand l'activité reste sous son niveau potentiel, les recettes fléchissent et certaines dépenses augmentent, puis le déficit se résorbe avec la reprise. Il peut aussi être structurel, et demeurer quand l'économie revient à son potentiel. Trois institutions estiment ce partage, chacune avec sa méthode&nbsp;: la Commission européenne, le FMI et l'OCDE.
+
+<figure class="figure-ciseau">
+  <picture>
+    <source media="(max-width: 600px)" srcset="/img/dette-dynamique-conjoncture-m.svg" width="300" height="778">
+    <img src="/img/dette-dynamique-conjoncture.svg" alt="Courbes du solde primaire corrigé du cycle, en % du PIB potentiel : FMI depuis 1996, Commission et OCDE depuis 2010, et solde observé en gris. Sur {{< dyn-val "cs_avant_lib" >}} puis {{< dyn-val "cs_apres_lib" >}} : Commission {{< dyn-val "cs_ce_avant" >}} puis {{< dyn-val "cs_ce_apres" >}}, FMI {{< dyn-val "cs_fmi_avant" >}} puis {{< dyn-val "cs_fmi_apres" >}}, OCDE {{< dyn-val "cs_ocde_avant" >}} puis {{< dyn-val "cs_ocde_apres" >}}." width="720" height="373" loading="lazy" decoding="async">
+  </picture>
+  <figcaption>Solde primaire corrigé du cycle selon trois estimations, et solde primaire observé (Eurostat). Les zones grises marquent les deux périodes comparées.</figcaption>
+</figure>
+
+**Le déficit d'après {{< dyn-val "cs_apres_debut" >}} ne se résorberait pas avec la seule conjoncture.** Corrigé du cycle, le solde primaire est plus bas sur {{< dyn-val "cs_apres_lib" >}} que sur {{< dyn-val "cs_avant_lib" >}} dans les trois estimations&nbsp;: de {{< dyn-val "cs_ce_saut_pt" >}} selon la Commission ({{< dyn-val "cs_ce_avant" >}}&nbsp;% puis {{< dyn-val "cs_ce_apres" >}}&nbsp;% du PIB potentiel), de {{< dyn-val "cs_fmi_saut_pt" >}} selon le FMI ({{< dyn-val "cs_fmi_avant" >}}&nbsp;% puis {{< dyn-val "cs_fmi_apres" >}}&nbsp;%) et de {{< dyn-val "cs_ocde_saut_pt" >}} selon l'OCDE ({{< dyn-val "cs_ocde_avant" >}}&nbsp;% puis {{< dyn-val "cs_ocde_apres" >}}&nbsp;%). Sur {{< dyn-val "cs_apres_lib" >}}, la part conjoncturelle et ponctuelle du déficit n'est que de {{< dyn-val "cs_ce_conj_pt" >}} selon la Commission, et sa part conjoncturelle de {{< dyn-val "cs_fmi_conj_pt" >}} selon le FMI.
+
+**Ce sont trois estimations, et elles ne coïncident pas.** La Commission et l'OCDE retirent aussi les mesures ponctuelles, le FMI non&nbsp;; et chacune repose sur une estimation de la production potentielle, qui n'est pas une mesure et se révise. La page donne les trois valeurs, sans en faire la moyenne.
+
+**Avant 2008, le solde corrigé du cycle était proche de l'équilibre.** Seul le FMI remonte avant 2010. Son solde primaire corrigé du cycle vaut en moyenne {{< dyn-val "cs_fmi_long" >}}&nbsp;% du PIB potentiel sur {{< dyn-val "cs_long_lib" >}}, {{< dyn-val "cs_fmi_crise" >}}&nbsp;% sur {{< dyn-val "cs_crise_lib" >}}, {{< dyn-val "cs_fmi_avant" >}}&nbsp;% sur {{< dyn-val "cs_avant_lib" >}}, puis {{< dyn-val "cs_fmi_apres" >}}&nbsp;% sur {{< dyn-val "cs_apres_lib" >}}. Le déficit corrigé apparu après 2008 a été en partie résorbé&nbsp;; celui d'après 2020 ne l'est pas à ce jour. Cette succession date les dégradations&nbsp;; elle ne suffit pas à établir que les crises les ont produites.
+
+**Par où&nbsp;: les recettes sur la période récente, les dépenses sur la longue.** Les recettes et les dépenses hors intérêts corrigées du cycle que publie la Commission redonnent exactement son solde corrigé. De {{< dyn-val "cs_avant_lib" >}} à {{< dyn-val "cs_apres_lib" >}}, ce solde baisse de {{< dyn-val "cs_ca_saut_pt" >}}&nbsp;: les recettes corrigées reculent de {{< dyn-val "cs_rec_pt" >}}, les dépenses corrigées varient de {{< dyn-val "cs_dep" >}}&nbsp;point. Depuis {{< dyn-val "cs_long_lib" >}} en revanche, les dépenses corrigées ont augmenté de {{< dyn-val "cs_l_dep" >}}&nbsp;points de PIB potentiel et les recettes de {{< dyn-val "cs_l_rec" >}}&nbsp;: sur la longue période, la hausse des dépenses domine. Comme pour les fenêtres de l'OFCE et du Trésor plus haut, la réponse dépend des années comparées.
+
+**Ce que ce partage ne dit pas.** Une recette corrigée du cycle qui baisse mêle les baisses d'impôts décidées et le rendement spontané de l'impôt, qui peut croître moins vite que l'économie. Ces séries ne séparent pas les deux&nbsp;: elles disent où le déficit s'est creusé, et que la conjoncture ne l'explique pas, non quelles décisions l'ont creusé.
+
+<details class="repli"><summary>Les valeurs année par année, les définitions et les éditions</summary>
+
+| Année | Commission, structurel | FMI, corrigé du cycle | OCDE, sous-jacent | Observé (Eurostat) |
+|---|---|---|---|---|
+| 2015 | {{< dyn-val "cs_2015_ce" >}} | {{< dyn-val "cs_2015_fmi" >}} | {{< dyn-val "cs_2015_ocde" >}} | {{< dyn-val "cs_2015_obs" >}} |
+| 2016 | {{< dyn-val "cs_2016_ce" >}} | {{< dyn-val "cs_2016_fmi" >}} | {{< dyn-val "cs_2016_ocde" >}} | {{< dyn-val "cs_2016_obs" >}} |
+| 2017 | {{< dyn-val "cs_2017_ce" >}} | {{< dyn-val "cs_2017_fmi" >}} | {{< dyn-val "cs_2017_ocde" >}} | {{< dyn-val "cs_2017_obs" >}} |
+| 2018 | {{< dyn-val "cs_2018_ce" >}} | {{< dyn-val "cs_2018_fmi" >}} | {{< dyn-val "cs_2018_ocde" >}} | {{< dyn-val "cs_2018_obs" >}} |
+| 2019 | {{< dyn-val "cs_2019_ce" >}} | {{< dyn-val "cs_2019_fmi" >}} | {{< dyn-val "cs_2019_ocde" >}} | {{< dyn-val "cs_2019_obs" >}} |
+| 2020 | {{< dyn-val "cs_2020_ce" >}} | {{< dyn-val "cs_2020_fmi" >}} | {{< dyn-val "cs_2020_ocde" >}} | {{< dyn-val "cs_2020_obs" >}} |
+| 2021 | {{< dyn-val "cs_2021_ce" >}} | {{< dyn-val "cs_2021_fmi" >}} | {{< dyn-val "cs_2021_ocde" >}} | {{< dyn-val "cs_2021_obs" >}} |
+| 2022 | {{< dyn-val "cs_2022_ce" >}} | {{< dyn-val "cs_2022_fmi" >}} | {{< dyn-val "cs_2022_ocde" >}} | {{< dyn-val "cs_2022_obs" >}} |
+| 2023 | {{< dyn-val "cs_2023_ce" >}} | {{< dyn-val "cs_2023_fmi" >}} | {{< dyn-val "cs_2023_ocde" >}} | {{< dyn-val "cs_2023_obs" >}} |
+| 2024 | {{< dyn-val "cs_2024_ce" >}} | {{< dyn-val "cs_2024_fmi" >}} | {{< dyn-val "cs_2024_ocde" >}} | {{< dyn-val "cs_2024_obs" >}} |
+| 2025 | {{< dyn-val "cs_2025_ce" >}} | {{< dyn-val "cs_2025_fmi" >}} | {{< dyn-val "cs_2025_ocde" >}} | {{< dyn-val "cs_2025_obs" >}} |
+
+En % du PIB potentiel (en % du PIB pour le solde observé)&nbsp;; un nombre négatif est un déficit.
+
+**Trois définitions.** Le solde primaire structurel de la Commission retire l'effet estimé du cycle et les mesures ponctuelles&nbsp;; il n'est publié pour la France que depuis 2010. Le solde primaire sous-jacent de l'OCDE procède de même. Le solde primaire corrigé du cycle du FMI retire l'effet du cycle seulement. Les recettes et les dépenses corrigées du cycle sont celles de la Commission (série AMECO), dont la différence redonne, chaque année, son solde primaire corrigé du cycle.
+
+**Pourquoi le solde observé d'Eurostat diffère de celui du FMI.** Le solde primaire de cette page est calculé hors intérêts versés&nbsp;; celui du FMI, hors intérêts nets, versés moins reçus. L'écart entre les deux égale donc les intérêts reçus par les administrations publiques&nbsp;: {{< dyn-val "cs_int_long" >}}&nbsp;point de PIB en moyenne sur {{< dyn-val "cs_long_lib" >}} et {{< dyn-val "cs_int_apres" >}}&nbsp;point sur {{< dyn-val "cs_apres_lib" >}}, à quelques centièmes près. C'est une différence de définition, non de données.
+
+**Éditions.** Commission européenne, {{< dyn-val "cs_ed_ameco" >}}&nbsp;; FMI, {{< dyn-val "cs_ed_fmi" >}}&nbsp;; OCDE, {{< dyn-val "cs_ed_ocde" >}}. Les trois ont été publiées à des dates différentes et seront révisées.
+
+</details>
 
 ## Comment le calcul fonctionne {#identite}
 
