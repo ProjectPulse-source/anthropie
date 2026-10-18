@@ -944,6 +944,7 @@ def gardes(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, aux):
          aux["inv"]["loc_fin"] >= 3 * max(aux["inv"]["creux"], 0.01)),
         ("point bas « pendant la baisse des dotations » : dans la fenêtre de la page Collectivités",
          aux["inv"]["ep_a0"] <= aux["inv"]["creux_an"] <= aux["inv"]["ep_a1"]),
+        ("point bas qui « suit les élections municipales de 2014 » : dans les deux années suivantes", 2014 < aux["inv"]["creux_an"] <= 2016),
         ("hypothèses du COR et de la Commission décrites pour ces éditions : une autre édition impose de relire le paragraphe",
          SOURCES["cor"]["lib"] == "rapport annuel de juin 2026" and SOURCES["dsm"]["lib"] == "Debt Sustainability Monitor 2025"),
     ]
