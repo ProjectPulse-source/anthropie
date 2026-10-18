@@ -53,6 +53,7 @@
    "besoin": "besoin de financement des administrations publiques (-B9), en % du PIB",
    "actifs": "acquisitions nettes d'actifs non financiers : investissement (P51G) moins consommation de capital fixe (P51C), plus terrains et autres actifs non produits (NP) et variation des stocks (P52_P53)",
    "investissement_net": "P51G - P51C seul (critère du test décisif)",
+   "sous_secteurs": "investissement net (P51G - P51C) des administrations publiques (S13), des administrations locales (S1313) et des autres administrations (différence), en % du PIB ; fbcf_loc : FBCF des administrations locales ; ccf_reprise : consommation de capital fixe de la dernière année identique à celle de l'année précédente",
    "transferts": "transferts en capital versés moins reçus (D9PAY - D9REC) ; les recettes comprennent les impôts en capital (droits de succession)",
    "aides_investissement": "aides à l'investissement versées à d'autres secteurs (D92PAY), comprises dans les transferts versés",
    "desepargne": "épargne nette changée de signe (-B8N) : dépenses courantes, consommation de capital comprise, non couvertes par les recettes courantes",
@@ -1031,7 +1032,222 @@
     "part_banque_centrale": 16.517281874693317,
     "part_autres_residents": 29.1500687571018
    }
-  ]
+  ],
+  "sous_secteurs": {
+   "annees": [
+    {
+     "annee": 1996,
+     "net_apu": 0.8876608493841887,
+     "net_loc": 0.6034608580451557,
+     "net_autres": 0.28419999133903295,
+     "fbcf_loc": 2.1392827757435198
+    },
+    {
+     "annee": 1997,
+     "net_apu": 0.5389134731469856,
+     "net_loc": 0.4212553763795206,
+     "net_autres": 0.11765809676746497,
+     "fbcf_loc": 1.9486550424954001
+    },
+    {
+     "annee": 1998,
+     "net_apu": 0.4941180315497533,
+     "net_loc": 0.43359741160706466,
+     "net_autres": 0.06052061994268865,
+     "fbcf_loc": 1.9280586013111316
+    },
+    {
+     "annee": 1999,
+     "net_apu": 0.5965603649218574,
+     "net_loc": 0.5898872377697562,
+     "net_autres": 0.006673127152101221,
+     "fbcf_loc": 2.0862876196647235
+    },
+    {
+     "annee": 2000,
+     "net_apu": 0.8619242261880928,
+     "net_loc": 0.7651896788432031,
+     "net_autres": 0.09673454734488973,
+     "fbcf_loc": 2.2266455018842675
+    },
+    {
+     "annee": 2001,
+     "net_apu": 0.791826000231362,
+     "net_loc": 0.6966408748352204,
+     "net_autres": 0.09518512539614155,
+     "fbcf_loc": 2.166409271203755
+    },
+    {
+     "annee": 2002,
+     "net_apu": 0.7112137512434034,
+     "net_loc": 0.5670043653735277,
+     "net_autres": 0.14420938586987564,
+     "fbcf_loc": 2.056211311956308
+    },
+    {
+     "annee": 2003,
+     "net_apu": 0.8394742568172728,
+     "net_loc": 0.5936585603394662,
+     "net_autres": 0.24581569647780666,
+     "fbcf_loc": 2.1089826685725876
+    },
+    {
+     "annee": 2004,
+     "net_apu": 0.9273348159433246,
+     "net_loc": 0.6757057923198286,
+     "net_autres": 0.25162902362349593,
+     "fbcf_loc": 2.2051131177967442
+    },
+    {
+     "annee": 2005,
+     "net_apu": 1.000279220543368,
+     "net_loc": 0.7499625435856458,
+     "net_autres": 0.2503166769577221,
+     "fbcf_loc": 2.3064581668603807
+    },
+    {
+     "annee": 2006,
+     "net_apu": 0.928060948385744,
+     "net_loc": 0.7540813457701725,
+     "net_autres": 0.17397960261557155,
+     "fbcf_loc": 2.336685227307815
+    },
+    {
+     "annee": 2007,
+     "net_apu": 0.9288055582503731,
+     "net_loc": 0.8088598032072227,
+     "net_autres": 0.11994575504315041,
+     "fbcf_loc": 2.4077288742932983
+    },
+    {
+     "annee": 2008,
+     "net_apu": 0.9130050251256279,
+     "net_loc": 0.7251708542713569,
+     "net_autres": 0.187834170854271,
+     "fbcf_loc": 2.3937738693467336
+    },
+    {
+     "annee": 2009,
+     "net_apu": 1.101547648565997,
+     "net_loc": 0.6649774774774779,
+     "net_autres": 0.43657017108851903,
+     "fbcf_loc": 2.427659310686834
+    },
+    {
+     "annee": 2010,
+     "net_apu": 1.0335834074370944,
+     "net_loc": 0.43596558245556905,
+     "net_autres": 0.5976178249815254,
+     "fbcf_loc": 2.210277669927232
+    },
+    {
+     "annee": 2011,
+     "net_apu": 0.6847737375863248,
+     "net_loc": 0.38992484025098206,
+     "net_autres": 0.2948488973353427,
+     "fbcf_loc": 2.190888013962188
+    },
+    {
+     "annee": 2012,
+     "net_apu": 0.674193729118651,
+     "net_loc": 0.440925983832682,
+     "net_autres": 0.23326774528596905,
+     "fbcf_loc": 2.2825263002642835
+    },
+    {
+     "annee": 2013,
+     "net_apu": 0.6822027663331376,
+     "net_loc": 0.5071422103499796,
+     "net_autres": 0.17506055598315795,
+     "fbcf_loc": 2.361551289597199
+    },
+    {
+     "annee": 2014,
+     "net_apu": 0.3965254746061828,
+     "net_loc": 0.2899616619144527,
+     "net_autres": 0.1065638126917301,
+     "fbcf_loc": 2.134401060855733
+    },
+    {
+     "annee": 2015,
+     "net_apu": 0.17675554033293395,
+     "net_loc": 0.10591432187306116,
+     "net_autres": 0.07084121845987279,
+     "fbcf_loc": 1.8898774508245202
+    },
+    {
+     "annee": 2016,
+     "net_apu": 0.17096368477909785,
+     "net_loc": 0.03092544691124166,
+     "net_autres": 0.14003823786785619,
+     "fbcf_loc": 1.802175714070003
+    },
+    {
+     "annee": 2017,
+     "net_apu": 0.10368371514185393,
+     "net_loc": 0.08561837358689961,
+     "net_autres": 0.018065341554954317,
+     "fbcf_loc": 1.8581512871992218
+    },
+    {
+     "annee": 2018,
+     "net_apu": 0.17763716250955808,
+     "net_loc": 0.18328809614484043,
+     "net_autres": -0.005650933635282351,
+     "fbcf_loc": 1.9602158987807823
+    },
+    {
+     "annee": 2019,
+     "net_apu": 0.4376395594618385,
+     "net_loc": 0.41715199405313763,
+     "net_autres": 0.020487565408700892,
+     "fbcf_loc": 2.194796742218076
+    },
+    {
+     "annee": 2020,
+     "net_apu": 0.1919529857532063,
+     "net_loc": 0.20053695073407996,
+     "net_autres": -0.00858396498087366,
+     "fbcf_loc": 2.0913816991592027
+    },
+    {
+     "annee": 2021,
+     "net_apu": 0.26471012741905975,
+     "net_loc": 0.2609662605428329,
+     "net_autres": 0.0037438668762268534,
+     "fbcf_loc": 2.097215344511507
+    },
+    {
+     "annee": 2022,
+     "net_apu": 0.24315777297412122,
+     "net_loc": 0.22681638298762197,
+     "net_autres": 0.016341389986499255,
+     "fbcf_loc": 2.1380619495801994
+    },
+    {
+     "annee": 2023,
+     "net_apu": 0.4185013476480215,
+     "net_loc": 0.3560345624607866,
+     "net_autres": 0.06246678518723492,
+     "fbcf_loc": 2.232847041420327
+    },
+    {
+     "annee": 2024,
+     "net_apu": 0.5824233553962954,
+     "net_loc": 0.46584669852781846,
+     "net_autres": 0.11657665686847696,
+     "fbcf_loc": 2.3298058486608912
+    },
+    {
+     "annee": 2025,
+     "net_apu": 0.708393703211605,
+     "net_loc": 0.5329256397815767,
+     "net_autres": 0.1754680634300283,
+     "fbcf_loc": 2.3598531154530304
+    }
+   ],
+   "ccf_reprise": true
+  }
  },
  "ue": {
   "emplois": [
@@ -3667,6 +3883,15 @@
   "v5_ecart_pt": "2,9 points",
   "pays_coa_n": "15",
   "pays_n": "27",
+  "inv_d2_pt": "0,75 point",
+  "inv_d3_pt": "0,33 point",
+  "inv_var_pt": "0,42 point",
+  "inv_loc_var_pt": "0,24 point",
+  "inv_aut_var_pt": "0,19 point",
+  "inv_creux_an": "2016",
+  "inv_creux_pt": "0,03 point",
+  "inv_loc_fin_pt": "0,53 point",
+  "inv_ccf_note": " La consommation de capital fixe publiée pour 2025 est identique à celle de 2024 : le dernier point reste provisoire.",
   "cons_calculables": "837",
   "cons_ecartees": "0"
  },
@@ -3848,6 +4073,15 @@
   "v5_ecart_pt": "2.9 points",
   "pays_coa_n": "15",
   "pays_n": "27",
+  "inv_d2_pt": "0.75 points",
+  "inv_d3_pt": "0.33 points",
+  "inv_var_pt": "0.42 points",
+  "inv_loc_var_pt": "0.24 points",
+  "inv_aut_var_pt": "0.19 points",
+  "inv_creux_an": "2016",
+  "inv_creux_pt": "0.03 points",
+  "inv_loc_fin_pt": "0.53 points",
+  "inv_ccf_note": " The consumption of fixed capital published for 2025 is identical to that of 2024: the last point remains provisional.",
   "cons_calculables": "837",
   "cons_ecartees": "0"
  }

@@ -80,6 +80,7 @@ ROOT = Path(__file__).resolve().parent.parent
 PAGE_FR = ROOT / "content" / "dette-publique-generations-futures" / "_index.md"
 PAGE_EN = ROOT / "content" / "dette-publique-generations-futures" / "_index.en.md"
 BAISSE = ROOT / "data" / "dette_baisse.json"   # volet 5 : écart au solde stabilisant (lu, jamais réécrit ici)
+COLL = ROOT / "data" / "dette_collectivites.json"   # fenêtre de la baisse des transferts aux collectivités (lue, jamais réécrite)
 # Europe : deux pays nommés de chaque côté de la France (phrase « ni universel ni exceptionnel », gardée)
 CITE_SUP, CITE_INF = ("RO", "SI"), ("IT", "SK")
 OUT_DATA = ROOT / "data" / "dette_generations.json"
@@ -362,6 +363,32 @@ def cumul(an: dict, a0: int, a1: int):
     return s
 
 
+# ---- Où le recul de l'investissement s'est produit (18/10/2026, piste du test d'abstention de la synthèse du dossier) :
+# investissement net (P51G - P51C) des administrations locales (S1313) et des autres administrations, France.
+def sous_secteurs(annees: list) -> dict:
+    """En % du PIB de la notification. Témoin : l'investissement net S13 relu ici redonne, à 0,02 point près, celui que
+    calcule emplois() ; la FBCF locale ne dépasse jamais celle de S13. Une consommation de capital fixe de la dernière
+    année identique à celle de l'année précédente (valeur reportée par le producteur) est signalée dans la page."""
+    M = {(sec, it): eurostat("gov_10a_main", geo="FR", na_item=it, sector=sec, unit="MIO_NAC")
+         for sec in ("S13", "S1313") for it in ("P51G", "P51C")}
+    Y = eurostat("gov_10dd_edpt1", geo="FR", na_item="B1GQ", sector="S1", unit="MIO_NAC")
+    out = []
+    for r in annees:
+        a = r["annee"]
+        if any(("FR", a) not in M[k] for k in M) or ("FR", a) not in Y:
+            fail("sous-secteurs : %d absent d'une serie" % a)
+        v = {k: M[k][("FR", a)] / Y[("FR", a)] * 100 for k in M}
+        apu, loc = v[("S13", "P51G")] - v[("S13", "P51C")], v[("S1313", "P51G")] - v[("S1313", "P51C")]
+        if abs(apu - r["investissement_net"]) > 0.02:
+            fail("sous-secteurs : investissement net S13 %d = %.3f, jeu = %.3f (temoin)" % (a, apu, r["investissement_net"]))
+        if v[("S1313", "P51G")] > v[("S13", "P51G")]:
+            fail("sous-secteurs : FBCF locale superieure a celle des APU en %d" % a)
+        out.append(dict(annee=a, net_apu=apu, net_loc=loc, net_autres=apu - loc, fbcf_loc=v[("S1313", "P51G")]))
+    fin = annees[-1]["annee"]
+    reprise = M[("S13", "P51C")][("FR", fin)] == M[("S13", "P51C")][("FR", fin - 1)]
+    return dict(annees=out, ccf_reprise=reprise)
+
+
 def insee_patrimoine() -> dict[str, dict[int, float]]:
     """Insee, tableau 8.204 (compte de patrimoine des APU), en millions d'euros : {code: {année: valeur}}. Les deux lignes
     « F » (actifs, puis passifs financiers) sont nommées FA et FP ; refus si une ligne attendue manque."""
@@ -608,8 +635,10 @@ def calcul_hors_ligne():
         if json.loads(json.dumps(neuf, ensure_ascii=False)) != jeu:
             fail("hors ligne : la piece %s ne redonne pas le jeu publie (piece changee depuis le releve)" % nom_)
     fin = max(a["annee"] for a in annees)
+    if "sous_secteurs" not in j["france"]:
+        fail("hors ligne : le jeu publie n'a pas encore de bloc sous_secteurs (premier releve en ligne)")
     return (fin, total, dec, annees, cp, pat, det, det_pays, j["controles"]["detention_bce_eurostat_annees"], S2, C,
-            j["conservation"], etat)
+            j["conservation"], etat, j["france"]["sous_secteurs"])
 
 
 # ------------------------------------------------------------------ calcul
@@ -642,11 +671,11 @@ def calcul():
     S2 = s2()
     C = cor()
     cons = dict(annees_pays_calculables=calculables, retenues=sum(len(v) for v in R.values()), ecartees=len(ecartes), detail_ecartees=ecartes)
-    return fin, total, dec, annees, cp, pat, det, det_pays, det_controle, S2, C, cons, etat_negociable()
+    return fin, total, dec, annees, cp, pat, det, det_pays, det_controle, S2, C, cons, etat_negociable(), sous_secteurs(annees)
 
 
 # ------------------------------------------------------------------ affichage et gardes
-def affichage(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, cons, etat):
+def affichage(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, cons, etat, ss):
     A = {"fin": str(fin), "a0": str(total["debut"]), "tolerance": fr(TOL, 2),
          "dsm_lib": lib("dsm"), "cor_lib": lib("cor"),
          "proj_an": max(SOURCES[k]["publie"] for k in ("dsm", "cor"))[:4]}   # année de publication des projections
@@ -760,10 +789,28 @@ def affichage(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, cons, etat
     A.update(v5_annee=str(V5["annee"]), v5_ecart=lg.sans_signe(V5["ecart"], 1, LANG), v5_ecart_pt=lg.points(abs(V5["ecart"]), 1, LANG))
     vieux = sorted(g for g, y in S2.items() if y["CoA"]["base"] > y["IBP"]["base"])
     A["pays_coa_n"] = str(len(vieux)); A["pays_n"] = str(len(S2))  # chiffres des deux côtés : « 15 pays sur 27 », jamais lettres et chiffres mêlés
+    # Où le recul de l'investissement net s'est produit : deuxième et troisième décennies, administrations locales et autres
+    d2, d3 = dec[1], dec[2]
+    moy = lambda k, d: sum(x[k] for x in ss["annees"] if d["debut"] <= x["annee"] <= d["fin"]) / d["annees"]
+    inv = dict(d2=moy("net_apu", d2), d3=moy("net_apu", d3), loc2=moy("net_loc", d2), loc3=moy("net_loc", d3))
+    inv.update(var=inv["d2"] - inv["d3"], loc_var=inv["loc2"] - inv["loc3"])
+    inv.update(aut_var=inv["var"] - inv["loc_var"], loc_part=100 * inv["loc_var"] / inv["var"])
+    creux = min((x for x in ss["annees"] if d3["debut"] <= x["annee"] <= d3["fin"]), key=lambda x: round(x["net_loc"], 2))  # brut-ok: point bas, egalite tranchee par l'ordre des annees
+    der = ss["annees"][-1]
+    coll = json.loads(COLL.read_text(encoding="utf-8-sig"))["affichage"]
+    inv.update(creux_an=creux["annee"], creux=creux["net_loc"], loc_fin=der["net_loc"], ep_a0=int(coll["ep_a0"]), ep_a1=int(coll["ep_a1"]))
+    p2 = lambda v: lg.points(v, 2, LANG)
+    A.update(inv_d2_pt=p2(inv["d2"]), inv_d3_pt=p2(inv["d3"]), inv_var_pt=p2(inv["var"]), inv_loc_var_pt=p2(inv["loc_var"]),
+             inv_aut_var_pt=p2(inv["aut_var"]), inv_creux_an=str(creux["annee"]), inv_creux_pt=p2(creux["net_loc"]),
+             inv_loc_fin_pt=p2(der["net_loc"]))
+    A["inv_ccf_note"] = ((" La consommation de capital fixe publiée pour %d est identique à celle de %d : le dernier point reste provisoire."
+                          if LANG == "fr" else " The consumption of fixed capital published for %d is identical to that of %d: the last point remains provisional.")
+                         % (der["annee"], der["annee"] - 1)) if ss["ccf_reprise"] else ""
     # contrôles et conservation
     A["cons_calculables"] = str(cons["annees_pays_calculables"]); A["cons_ecartees"] = str(cons["ecartees"])
     return A, dict(sup=sup, inf=inf, exc=exc, frc=frc, vieux=vieux, cor_var=cor_var, nr_max=nr_max, bc_max=bc_max, maj1=maj1,
-                   etat=etat, emax=emax, emin_apres=emin_apres, pmax=pmax, psup=psup, pd3=pd3, fen=fen, V5=V5, D=D, groupe=groupe)
+                   etat=etat, emax=emax, emin_apres=emin_apres, pmax=pmax, psup=psup, pd3=pd3, fen=fen, V5=V5, D=D, groupe=groupe,
+                   inv=inv)
 
 
 def gardes(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, aux):
@@ -886,9 +933,23 @@ def gardes(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, aux):
         ("détention : « depuis le début des années 2000 » (première année majoritaire de 2000 à 2004)", 2000 <= aux["maj1"] <= 2004),
         # Paragraphe « Deux projections, deux jeux d'hypothèses » (remarque du secrétariat du COR, 06/10/2026) : il décrit
         # les hypothèses de ces deux éditions (Insee nouvelle, Agirc-Arrco 2038 ; rapport de 2024 sur le vieillissement).
+        # « Où ce recul s'est produit » (18/10/2026). Seuils écrits avant la phrase : « un peu plus de la moitié » = 50 à 65 %
+        # de la baisse ; « guère plus que l'usure » = investissement net local sous 0,15 point de PIB ; « remonte » = au
+        # moins le triple du point bas ; le point bas tombe dans la fenêtre de baisse des transferts de la page Collectivités.
+        ("« un peu plus de la moitié » du recul de l'investissement net vient des administrations locales (50 à 65 %)",
+         aux["inv"]["var"] > 0 and 50 < aux["inv"]["loc_part"] <= 65),
+        ("« le reste » : l'investissement net des autres administrations a reculé lui aussi", aux["inv"]["aut_var"] > 0),
+        ("« guère plus que l'usure » : investissement net local au point bas sous 0,15 point de PIB", 0 <= aux["inv"]["creux"] < 0.15),
+        ("« puis remonte » : investissement net local de la dernière année au moins triple du point bas",
+         aux["inv"]["loc_fin"] >= 3 * max(aux["inv"]["creux"], 0.01)),
+        ("point bas « pendant la baisse des dotations » : dans la fenêtre de la page Collectivités",
+         aux["inv"]["ep_a0"] <= aux["inv"]["creux_an"] <= aux["inv"]["ep_a1"]),
         ("hypothèses du COR et de la Commission décrites pour ces éditions : une autre édition impose de relire le paragraphe",
          SOURCES["cor"]["lib"] == "rapport annuel de juin 2026" and SOURCES["dsm"]["lib"] == "Debt Sustainability Monitor 2025"),
     ]
+    if "--mutation=recul_local" in sys.argv:   # témoin positif : la part locale du recul passe sous la moitié
+        i = next(k for k, (nom_, _) in enumerate(G) if "du recul de l'investissement net vient des administrations locales" in nom_)
+        G[i] = (G[i][0], 50 < aux["inv"]["loc_part"] - 15 <= 65)
     if "--mutation-garde" in sys.argv:   # témoin positif : part investie de la première décennie mise sous la dernière
         G[5] = (G[5][0], d3["part_actifs"] - 1 > d2["part_actifs"] > d3["part_actifs"])
     faux = [n for n, ok in G if not ok]
@@ -1355,7 +1416,7 @@ def fiches(figs):
     return out
 
 
-def csv_texte(total, dec, annees, cp, pat, det, det_pays, S2, C, etat):
+def csv_texte(total, dec, annees, cp, pat, det, det_pays, S2, C, etat, ss):
     """Format long : les tableaux n'ont pas les mêmes colonnes."""
     buf = io.StringIO()
     w = csv.writer(buf, lineterminator="\n")
@@ -1367,6 +1428,9 @@ def csv_texte(total, dec, annees, cp, pat, det, det_pays, S2, C, etat):
     for r in annees:
         for k in cles:
             w.writerow(["france_annuel", "FR", r["annee"], k, "%.3f" % r[k], "% du PIB"])
+    for r in ss["annees"]:
+        for k in ("net_apu", "net_loc", "net_autres", "fbcf_loc"):
+            w.writerow(["france_investissement_net_sous_secteurs", "FR", r["annee"], k, "%.3f" % r[k], "% du PIB"])
     for d in cp:
         for k in ("besoin", "actifs", "transferts", "desepargne"):
             w.writerow(["ue_emplois_du_besoin_de_financement", d["pays"], "%d-%d" % (d["debut"], d["fin"]), k, "%.3f" % d[k], "points de PIB cumulés"])
@@ -1401,7 +1465,7 @@ def mutation_donnees(cp, dec) -> str | None:
         dec[1]["actifs"] = dec[0]["actifs"] * 1.10
     elif m == "deux_temps_2":
         dec[2]["besoin"] = dec[1]["besoin"] * 1.10
-    elif m not in (None, "bilan", "bilan_mot", "vieillissement", "proscrit"):
+    elif m not in (None, "bilan", "bilan_mot", "vieillissement", "proscrit", "recul_local"):
         fail("mutation inconnue : %s" % m)
     return m
 
@@ -1413,12 +1477,12 @@ def main() -> int:
             import cairosvg  # noqa: F401
         except ImportError:
             fail("cairosvg absent : SVG et PNG se produisent ensemble ou pas du tout (pip install cairosvg)")
-    fin, total, dec, annees, cp, pat, det, det_pays, det_controle, S2, C, cons, etat = calcul()
+    fin, total, dec, annees, cp, pat, det, det_pays, det_controle, S2, C, cons, etat, ss = calcul()
     m = mutation_donnees(cp, dec)
     use("en")
-    A_en = affichage(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, cons, etat)[0]
+    A_en = affichage(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, cons, etat, ss)[0]
     use("fr")
-    A, aux = affichage(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, cons, etat)
+    A, aux = affichage(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, cons, etat, ss)
     if set(A) != set(A_en):
         fail("blocs affichage et affichage_en : cles differentes (%s)" % sorted(set(A) ^ set(A_en)))
     vides = sorted(k for k in A if bool(A[k]) != bool(A_en[k]))
@@ -1481,13 +1545,14 @@ def main() -> int:
                         "definitions": {"besoin": "besoin de financement des administrations publiques (-B9), en % du PIB",
                                         "actifs": "acquisitions nettes d'actifs non financiers : investissement (P51G) moins consommation de capital fixe (P51C), plus terrains et autres actifs non produits (NP) et variation des stocks (P52_P53)",
                                         "investissement_net": "P51G - P51C seul (critère du test décisif)",
+                                        "sous_secteurs": "investissement net (P51G - P51C) des administrations publiques (S13), des administrations locales (S1313) et des autres administrations (différence), en % du PIB ; fbcf_loc : FBCF des administrations locales ; ccf_reprise : consommation de capital fixe de la dernière année identique à celle de l'année précédente",
                                         "transferts": "transferts en capital versés moins reçus (D9PAY - D9REC) ; les recettes comprennent les impôts en capital (droits de succession)",
                                         "aides_investissement": "aides à l'investissement versées à d'autres secteurs (D92PAY), comprises dans les transferts versés",
                                         "desepargne": "épargne nette changée de signe (-B8N) : dépenses courantes, consommation de capital comprise, non couvertes par les recettes courantes",
                                         "temoin": "ratios comparés à ceux qu'Eurostat publie en %% du PIB ; tolérance %.2f point" % TOL,
                                         "detention": "BCE, GFS : dette de Maastricht par zone (W1 reste du monde, W2 résidents) et secteur détenteur (S121 banque centrale)",
                                         "S2": "ajustement permanent du solde primaire structurel, à partir de 2027, qui stabiliserait la dette sur un horizon infini, sans niveau de dette ni date fixés (à la différence de S1) ; IBP : position budgétaire initiale, écart entre le solde primaire structurel de départ et le solde qui stabiliserait le ratio, dépenses actuelles comprises ; CoA : effet des variations futures des dépenses liées à l'âge (pensions nettes des prélèvements, santé, dépendance, éducation), que la Commission nomme « coût du vieillissement » (Debt Sustainability Monitor 2025, § 3.1 et annexe A6)"}},
-               "france": {"periodes": [total] + dec, "annees": annees, "patrimoine": pat, "detention": det},
+               "france": {"periodes": [total] + dec, "annees": annees, "patrimoine": pat, "detention": det, "sous_secteurs": ss},
                "ue": {"emplois": cp, "tableau": tableau, "tableau_en": tableaux["en"], "part_non_residents": det_pays, "s2": S2},
                "cor": C, "etat_negociable": etat, "controles": {"detention_bce_eurostat_annees": det_controle}, "conservation": cons,
                "affichage": A, "affichage_en": A_en}
@@ -1501,7 +1566,7 @@ def main() -> int:
             if prev.get("releve_le") and json.dumps(p2, sort_keys=True, ensure_ascii=False) == json.dumps(n2, sort_keys=True, ensure_ascii=False) \
                     and all((OUT_IMG / f).exists() and (OUT_IMG / f).read_text(encoding="utf-8") == s for f, s in figs.items()) \
                     and all((OUT_IMG / f.replace(".svg", ".png")).exists() for f in figs) \
-                    and OUT_CSV.exists() and OUT_CSV.read_text(encoding="utf-8-sig") == csv_texte(total, dec, annees, cp, pat, det, det_pays, S2, C, etat) \
+                    and OUT_CSV.exists() and OUT_CSV.read_text(encoding="utf-8-sig") == csv_texte(total, dec, annees, cp, pat, det, det_pays, S2, C, etat, ss) \
                     and OUT_FIGURES.exists() and json.loads(OUT_FIGURES.read_text(encoding="utf-8")) == fiches(figs):
                 log("Donnees et figures identiques : rien ecrit (releve_le conserve : %s)." % prev["releve_le"])
                 return 0
@@ -1515,7 +1580,7 @@ def main() -> int:
     txt = json.dumps(payload, ensure_ascii=False, indent=1)
     OUT_DATA.write_text(txt, encoding="utf-8")
     OUT_STATIC.write_text(txt, encoding="utf-8")
-    OUT_CSV.write_text(csv_texte(total, dec, annees, cp, pat, det, det_pays, S2, C, etat), encoding="utf-8-sig", newline="\n")
+    OUT_CSV.write_text(csv_texte(total, dec, annees, cp, pat, det, det_pays, S2, C, etat, ss), encoding="utf-8-sig", newline="\n")
     import cairosvg
     for f, s in figs.items():
         (OUT_IMG / f).write_text(s, encoding="utf-8")
