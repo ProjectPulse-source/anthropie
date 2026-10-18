@@ -106,6 +106,8 @@ jobs:
                   static/images/vig-dette-dynamique.jpg static/images/vig-dette-dynamique-en.jpg \
                   static/img/dette-dynamique-cascade-en.svg static/img/dette-dynamique-cascade-en.png \
                   static/img/dette-dynamique-annuelle-en.svg static/img/dette-dynamique-annuelle-en.png \
+                  static/img/dette-dynamique-*.svg static/img/dette-dynamique-*.png \
+                  static/img/dette-baisse-*.svg static/img/dette-baisse-*.png \
                   data/dette_baisse.json static/dette_baisse.json static/dette_baisse.csv data/figures_baisse.json \
                   static/images/og-dette-baisse.jpg static/images/vig-dette-baisse.jpg \
                   static/img/dette-baisse-decennies.svg static/img/dette-baisse-decennies.png \
