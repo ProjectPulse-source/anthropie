@@ -273,6 +273,10 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
+// Pastille-lien (dette seulement, 18/10/2026) : même dessin, soulignée au survol, contour au clavier comme les onglets.
+a.dossier-dette__titre { text-decoration: none; }
+a.dossier-dette__titre:hover { text-decoration: underline; text-underline-offset: 2px; }
+a.dossier-dette__titre:focus-visible { outline: 2px solid var(--color-pivot); outline-offset: 2px; }
 .dossier-dette__volets {
   grid-area: onglets;
   align-self: end;         // seuls les onglets touchent la regle

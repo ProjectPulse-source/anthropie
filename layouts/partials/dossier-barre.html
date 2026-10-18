@@ -6,6 +6,8 @@
        Contexte attendu (dict) :
          page     la page courante
          titre    texte de la pastille (« Dossier dette publique », « Pour enseigner · SES »…)
+         titre_url  facultatif : la pastille devient un lien vers la vue d'ensemble du dossier (dette seulement, contre-arbitrage
+                  du 18/10/2026 sur PRO-20261018-161819) ; titre_aide son infobulle
          src      source ou date propre à la page (peut être vide) ; srcTitre son infobulle
          label    aria-label de la barre
          items    liste de dict : url, titre (long), court, nom (question complète, lue par les lecteurs d'écran),
@@ -19,7 +21,11 @@
 {{- /* Bloc collant (auteur, 06/10/2026) : la pastille du dossier reste visible avec les onglets au défilement. */ -}}
 <div class="dossier-collant">
 <div class="dossier-entete">
+  {{- with .titre_url }}
+  <a class="dossier-dette__titre" href="{{ . }}"{{ with $.titre_aide }} title="{{ . }}"{{ end }}>{{ $.titre }}</a>
+  {{- else }}
   <span class="dossier-dette__titre">{{ .titre }}</span>
+  {{- end }}
   {{- with .src }}
   <span class="dossier-entete__source"{{ with $.srcTitre }} title="{{ . }}"{{ end }}>{{ if $en }}{{ . }}{{ else }}{{ partial "fr-typo.html" . }}{{ end }}</span>
   {{- end }}

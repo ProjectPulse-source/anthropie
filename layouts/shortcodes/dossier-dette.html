@@ -9,7 +9,8 @@
 
        COMPOSITION (maquettes et trois avis arbitrés : 06_PROMOTION\MAQUETTES_BARRE_DOSSIER_DETTE_2026-10-03\,
        ARBITRATIONS\ENTRANTE_2026-10-03_Presentation_Dette*_arbitrage.md) :
-       - un EN-TÊTE qui défile avec la page : pastille « Dossier dette publique » et source de la page, en GRIS
+       - un EN-TÊTE, collant avec les onglets depuis le 06/10/2026 (partials/dossier-barre.html) : pastille « Dossier dette
+         publique », lien vers la vue d'ensemble /ressources/#dette depuis le 18/10/2026, et source de la page, en GRIS
          (auteur, 03/10 : le rouge du 28/09 donnait au millésime plus de poids qu'aux intitulés ; il reste réservé à
          une vraie alerte de fraîcheur) ;
        - une RANGÉE COLLANTE, seule à rester visible au défilement : cinq questions sans numéros (avec numéros, la
@@ -127,5 +128,7 @@
         "entete" (cond $en "Further topics in the dossier" "Prolongements du dossier") "entrees" $entrees -}}
 {{- end -}}
 {{- partial "dossier-barre.html" (dict "page" .Page "titre" (cond $en "Public debt dossier" "Dossier dette publique")
+      "titre_url" (cond $en "/en/resources/#dette" "/ressources/#dette")
+      "titre_aide" (cond $en "Overview of the dossier: the five questions and the further topics" "Vue d'ensemble du dossier : les cinq questions et les prolongements")
       "src" $src "srcTitre" $srcTitre "label" (cond $en "Public debt dossier" "Dossier dette publique")
       "items" $onglets "panneau" $panneau) -}}
