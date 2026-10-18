@@ -796,15 +796,39 @@ def affichage(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, cons, etat
     inv.update(var=inv["d2"] - inv["d3"], loc_var=inv["loc2"] - inv["loc3"])
     inv.update(aut_var=inv["var"] - inv["loc_var"], loc_part=100 * inv["loc_var"] / inv["var"])
     creux = min((x for x in ss["annees"] if d3["debut"] <= x["annee"] <= d3["fin"]), key=lambda x: round(x["net_loc"], 2))  # brut-ok: point bas, egalite tranchee par l'ordre des annees
-    der = ss["annees"][-1]
+    der, avant = ss["annees"][-1], ss["annees"][-2]
     coll = json.loads(COLL.read_text(encoding="utf-8-sig"))["affichage"]
-    inv.update(creux_an=creux["annee"], creux=creux["net_loc"], loc_fin=der["net_loc"], ep_a0=int(coll["ep_a0"]), ep_a1=int(coll["ep_a1"]))
+    inv.update(creux_an=creux["annee"], creux=creux["net_loc"], loc_fin=der["net_loc"], loc_avant=avant["net_loc"],
+               min_serie=min(x["net_loc"] for x in ss["annees"]), ep_a0=int(coll["ep_a0"]), ep_a1=int(coll["ep_a1"]))
+    # Sensibilité aux bornes (arbitrage PRO-20261018-161819) : toute période de référence d'au moins trois années consécutives
+    # dans les deux premières décennies, contre la troisième ; puis la troisième sans sa dernière année ; puis hors 2009-2010.
+    part = lambda ref, cible: 100 * (moy_y("net_loc", ref) - moy_y("net_loc", cible)) / (moy_y("net_apu", ref) - moy_y("net_apu", cible))
+    moy_y = lambda k, ys: sum(x[k] for x in ss["annees"] if x["annee"] in ys) / len(ys)
+    d3y = set(range(d3["debut"], d3["fin"] + 1))
+    fen_inv = [part(set(range(a, b + 1)), d3y) for a in range(total["debut"], d2["fin"] - 1) for b in range(a + 2, d2["fin"] + 1)
+           if moy_y("net_apu", set(range(a, b + 1))) > moy_y("net_apu", d3y)]
+    fen_inv.sort()
+    # Contre-arbitrage du 18/10/2026 : les 171 périodes se recouvrent et surpondèrent les fenêtres courtes ; la page donne
+    # les périodes de dix ans consécutifs (même durée que la décennie comparée), les 171 restent dans le jeu (méthode).
+    dec_w = [(a, part(set(range(a, a + 10)), d3y)) for a in range(total["debut"], d2["debut"] + 1)]
+    dmin, dmax = min(dec_w, key=lambda x: x[1]), max(dec_w, key=lambda x: x[1])  # brut-ok: extremes d'une liste de periodes, cle = part
+    inv.update(dec_n=len(dec_w), dec_min=dmin[1], dec_min_a=dmin[0], dec_max=dmax[1], dec_max_a=dmax[0])
+    inv.update(sens_n=len(fen_inv), sens_min=fen_inv[0], sens_max=fen_inv[-1], sens_maj=sum(1 for v in fen_inv if v >= 50),
+               sens_med=(fen_inv[len(fen_inv) // 2] if len(fen_inv) % 2 else (fen_inv[len(fen_inv) // 2 - 1] + fen_inv[len(fen_inv) // 2]) / 2),
+               sans_fin=part(set(range(d2["debut"], d2["fin"] + 1)), d3y - {d3["fin"]}),
+               hors_relance=part(set(range(d2["debut"], d2["fin"] + 1)) - {2009, 2010}, d3y))
     p2 = lambda v: lg.points(v, 2, LANG)
     A.update(inv_d2_pt=p2(inv["d2"]), inv_d3_pt=p2(inv["d3"]), inv_var_pt=p2(inv["var"]), inv_loc_var_pt=p2(inv["loc_var"]),
-             inv_aut_var_pt=p2(inv["aut_var"]), inv_creux_an=str(creux["annee"]), inv_creux_pt=p2(creux["net_loc"]),
-             inv_loc_fin_pt=p2(der["net_loc"]))
-    A["inv_ccf_note"] = ((" La consommation de capital fixe publiée pour %d est identique à celle de %d : le dernier point reste provisoire."
-                          if LANG == "fr" else " The consumption of fixed capital published for %d is identical to that of %d: the last point remains provisional.")
+             inv_aut_var_pt=p2(inv["aut_var"]), inv_loc_part=fr(inv["loc_part"], 0), inv_creux_an=str(creux["annee"]),
+             inv_creux_pt=p2(creux["net_loc"]), inv_avant_an=str(avant["annee"]), inv_loc_avant_pt=p2(avant["net_loc"]),
+             inv_loc_fin_pt=p2(der["net_loc"]), inv_apres_mun=lg.lettres(creux["annee"] - 2014, LANG) + {("fr", True): " an", ("fr", False): " ans", ("en", True): " year", ("en", False): " years"}[(LANG, creux["annee"] - 2014 == 1)],
+             inv_sens_n=str(inv["sens_n"]), inv_sens_min=fr(inv["sens_min"], 0), inv_sens_max=fr(inv["sens_max"], 0),
+             inv_sens_maj=str(inv["sens_maj"]), inv_sens_med=fr(inv["sens_med"], 0), inv_sans_fin=fr(inv["sans_fin"], 0),
+             inv_hors_relance=fr(inv["hors_relance"], 0), inv_ref_fin=str(d2["fin"]),
+             inv_dec_n=lg.lettres(inv["dec_n"], LANG), inv_dec_min=fr(inv["dec_min"], 0), inv_dec_min_lib="%d-%d" % (dmin[0], dmin[0] + 9),
+             inv_dec_max=fr(inv["dec_max"], 0), inv_dec_max_lib="%d-%d" % (dmax[0], dmax[0] + 9))
+    A["inv_ccf_note"] = ((", valeur à lire avec prudence : la consommation de capital fixe publiée pour %d est identique à celle de %d"
+                          if LANG == "fr" else ", a value to read with caution: the consumption of fixed capital published for %d is identical to that of %d")
                          % (der["annee"], der["annee"] - 1)) if ss["ccf_reprise"] else ""
     # contrôles et conservation
     A["cons_calculables"] = str(cons["annees_pays_calculables"]); A["cons_ecartees"] = str(cons["ecartees"])
@@ -936,21 +960,31 @@ def gardes(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, aux):
         # « Où ce recul s'est produit » (18/10/2026). Seuils écrits avant la phrase : « un peu plus de la moitié » = 50 à 65 %
         # de la baisse ; « guère plus que l'usure » = investissement net local sous 0,15 point de PIB ; « remonte » = au
         # moins le triple du point bas ; le point bas tombe dans la fenêtre de baisse des transferts de la page Collectivités.
-        ("« un peu plus de la moitié » du recul de l'investissement net vient des administrations locales (50 à 65 %)",
-         aux["inv"]["var"] > 0 and 50 < aux["inv"]["loc_part"] <= 65),
-        ("« le reste » : l'investissement net des autres administrations a reculé lui aussi", aux["inv"]["aut_var"] > 0),
-        ("« guère plus que l'usure » : investissement net local au point bas sous 0,15 point de PIB", 0 <= aux["inv"]["creux"] < 0.15),
-        ("« puis remonte » : investissement net local de la dernière année au moins triple du point bas",
-         aux["inv"]["loc_fin"] >= 3 * max(aux["inv"]["creux"], 0.01)),
+        ("recul : investissement net moins élevé sur la dernière décennie, part locale entre 0 et 100 %",
+         aux["inv"]["var"] > 0 and 0 < aux["inv"]["loc_part"] < 100),
+        ("« pour le reste » : l'investissement net des autres administrations a reculé lui aussi", aux["inv"]["aut_var"] > 0),
+        ("« cette répartition dépend des années comparées » : au moins 20 points d'écart entre les périodes de dix ans",
+         aux["inv"]["dec_max"] - aux["inv"]["dec_min"] >= 20),
+        ("repli : le minimum des périodes de dix ans est « la période retenue plus haut » (décennie de la page)",
+         aux["inv"]["dec_min_a"] == dec[1]["debut"]),
+        ("« point bas » : le minimum de toute la série, pas seulement de la dernière décennie",
+         round(aux["inv"]["creux"], 2) == round(aux["inv"]["min_serie"], 2)),
+        ("« couvrait à peine l'usure » : investissement net local au point bas sous 0,15 point de PIB", 0 <= aux["inv"]["creux"] < 0.15),
+        ("« retrouve » : avant-dernière et dernière années au moins 0,30 point au-dessus du point bas (écart absolu, témoin hors dernière année)",
+         aux["inv"]["loc_avant"] - aux["inv"]["creux"] >= 0.30 and aux["inv"]["loc_fin"] - aux["inv"]["creux"] >= 0.30),
         ("point bas « pendant la baisse des dotations » : dans la fenêtre de la page Collectivités",
          aux["inv"]["ep_a0"] <= aux["inv"]["creux_an"] <= aux["inv"]["ep_a1"]),
-        ("point bas qui « suit les élections municipales de 2014 » : dans les deux années suivantes", 2014 < aux["inv"]["creux_an"] <= 2016),
+        ("point bas « deux ans après les élections municipales de 2014 » : l'écart en lettres est calculé, dans les deux années suivantes",
+         2014 < aux["inv"]["creux_an"] <= 2016),
         ("hypothèses du COR et de la Commission décrites pour ces éditions : une autre édition impose de relire le paragraphe",
          SOURCES["cor"]["lib"] == "rapport annuel de juin 2026" and SOURCES["dsm"]["lib"] == "Debt Sustainability Monitor 2025"),
     ]
-    if "--mutation=recul_local" in sys.argv:   # témoin positif : la part locale du recul passe sous la moitié
-        i = next(k for k, (nom_, _) in enumerate(G) if "du recul de l'investissement net vient des administrations locales" in nom_)
-        G[i] = (G[i][0], 50 < aux["inv"]["loc_part"] - 15 <= 65)
+    if "--mutation=point_bas" in sys.argv:   # témoin positif : une année antérieure passe sous le point bas de la décennie
+        i = next(k for k, (nom_, _) in enumerate(G) if nom_.startswith("« point bas » : le minimum de toute la série"))
+        G[i] = (G[i][0], round(aux["inv"]["creux"], 2) == round(min(aux["inv"]["min_serie"], aux["inv"]["creux"] - 0.05), 2))
+    if "--mutation=remontee" in sys.argv:    # témoin positif : l'avant-dernière année reste près du point bas
+        i = next(k for k, (nom_, _) in enumerate(G) if nom_.startswith("« retrouve »"))
+        G[i] = (G[i][0], (aux["inv"]["creux"] + 0.10) - aux["inv"]["creux"] >= 0.30 and aux["inv"]["loc_fin"] - aux["inv"]["creux"] >= 0.30)
     if "--mutation-garde" in sys.argv:   # témoin positif : part investie de la première décennie mise sous la dernière
         G[5] = (G[5][0], d3["part_actifs"] - 1 > d2["part_actifs"] > d3["part_actifs"])
     faux = [n for n, ok in G if not ok]
@@ -1466,7 +1500,7 @@ def mutation_donnees(cp, dec) -> str | None:
         dec[1]["actifs"] = dec[0]["actifs"] * 1.10
     elif m == "deux_temps_2":
         dec[2]["besoin"] = dec[1]["besoin"] * 1.10
-    elif m not in (None, "bilan", "bilan_mot", "vieillissement", "proscrit", "recul_local"):
+    elif m not in (None, "bilan", "bilan_mot", "vieillissement", "proscrit", "point_bas", "remontee"):
         fail("mutation inconnue : %s" % m)
     return m
 

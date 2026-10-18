@@ -15,7 +15,9 @@ og_title: "Dette publique : les collectivités locales sont-elles une variable d
 og_image: "images/og-collectivites.jpg"
 og_image_alt: "Carte de partage : « L'ajustement local, hors de la dette » — investissement des collectivités et transferts reçus, France, en % du PIB, avec la baisse des dotations de 2014-2017."
 donnees: [dette_collectivites]
+date_suit: [dette_generations]  # renvoi chiffré vers « Générations futures » (gen-val inv_loc_part, 18/10/2026)
 journal:  # révisions qui changent la lecture de la page (partials/page-date-visible.html affiche la plus récente)
+  - {date: 2026-10-18, texte: "Ajout : renvoi vers la part des administrations locales dans le recul de l'investissement net de l'ensemble des administrations publiques."}
   - {date: 2026-10-16, texte: "Correction : rapportée au PIB, la dépense des administrations locales culmine en 2009 et en 2013, à égalité à la précision affichée, et non en 2009 seulement."}
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html) ; jetons résolus au build
   jeu: "dette_collectivites"
@@ -137,7 +139,7 @@ L'écart tient au dénominateur. Le PIB nominal augmente de {{< coll-val "pib_cr
 
 Ces évolutions sont concomitantes&nbsp;; elles ne permettent pas, à elles seules, d'attribuer le recul de l'investissement à la baisse des dotations.
 
-**La comparaison ne permet pas de ramener l'ampleur du creux au seul cycle municipal.** L'investissement local baisse habituellement après les municipales. Mais après les élections de 2001, 2008 et 2020, le recul n'a jamais dépassé {{< coll-val "creux_autres_max" >}}&nbsp;point de PIB&nbsp;; après celles de 2014, il atteint {{< coll-val "creux14_baisse" >}}&nbsp;point en {{< coll-val "creux14_annee" >}}, {{< coll-val "creux_ratio" >}}&nbsp;fois plus, pendant que les concours de l'État diminuent. La comparaison affaiblit l'explication par le seul calendrier électoral&nbsp;; elle n'isole pas l'effet des dotations, d'autant que les départements et les régions, compris dans l'agrégat, ne suivent pas ce cycle.
+**La comparaison ne permet pas de ramener l'ampleur du creux au seul cycle municipal.** L'investissement local baisse habituellement après les municipales. Mais après les élections de 2001, 2008 et 2020, le recul n'a jamais dépassé {{< coll-val "creux_autres_max" >}}&nbsp;point de PIB&nbsp;; après celles de 2014, il atteint {{< coll-val "creux14_baisse" >}}&nbsp;point en {{< coll-val "creux14_annee" >}}, {{< coll-val "creux_ratio" >}}&nbsp;fois plus, pendant que les concours de l'État diminuent. La comparaison affaiblit l'explication par le seul calendrier électoral&nbsp;; elle n'isole pas l'effet des dotations, d'autant que les départements et les régions, compris dans l'agrégat, ne suivent pas ce cycle. La page [La dette publique est-elle un fardeau pour les générations futures&nbsp;?](/dette-publique-generations-futures/#recul-investissement) situe ce creux dans le recul de l'investissement net de l'ensemble des administrations publiques&nbsp;: de {{< gen-val "d2_lib" >}} à {{< gen-val "d3_lib" >}}, les administrations locales en représentent {{< gen-val "inv_loc_part" >}}&nbsp;%.
 
 <details class="repli"><summary>Le témoin du cycle électoral, mandat par mandat, les trois mesures de la DGF et le témoin comptable de la cascade</summary>
 

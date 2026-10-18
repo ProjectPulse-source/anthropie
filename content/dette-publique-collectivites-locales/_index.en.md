@@ -13,7 +13,9 @@ og_title: "Public debt: are local authorities the adjustment variable? — S. La
 og_image: "images/og-collectivites-en.jpg"
 og_image_alt: "Share card: “Local adjustment, outside the debt” — local government investment and transfers received, France, in % of GDP, with the 2014-2017 grant cuts."
 donnees: [dette_collectivites]
+date_suit: [dette_generations]  # figure linked from « Générations futures » (gen-val inv_loc_part, 18/10/2026)
 journal:  # révisions qui changent la lecture de la page (partials/page-date-visible.html affiche la plus récente)
+  - {date: 2026-10-18, texte: "Addition: link to the local government share of the decline in net investment by general government as a whole."}
   - {date: 2026-10-16, texte: "Correction: as a share of GDP, local government spending peaks in 2009 and in 2013, tied at the displayed precision, not in 2009 alone."}
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html); tokens resolved at build
   jeu: "dette_collectivites"
@@ -131,7 +133,7 @@ The difference lies in the denominator. Nominal GDP grew by {{< coll-val "pib_cr
 
 These movements are concomitant; on their own, they do not allow the fall in investment to be attributed to the grant cuts.
 
-**The comparison does not allow the size of the trough to be put down to the municipal cycle alone.** Local investment usually falls after municipal elections. But after the 2001, 2008 and 2020 elections, the fall never exceeded {{< coll-val "creux_autres_max" >}} points of GDP; after those of 2014, it reached {{< coll-val "creux14_baisse" >}} points in {{< coll-val "creux14_annee" >}}, {{< coll-val "creux_ratio" >}} times as much, while central government grants were falling. The comparison weakens the explanation by the electoral calendar alone; it does not isolate the effect of the grants, all the more so since departments and regions, included in the aggregate, do not follow this cycle.
+**The comparison does not allow the size of the trough to be put down to the municipal cycle alone.** Local investment usually falls after municipal elections. But after the 2001, 2008 and 2020 elections, the fall never exceeded {{< coll-val "creux_autres_max" >}} points of GDP; after those of 2014, it reached {{< coll-val "creux14_baisse" >}} points in {{< coll-val "creux14_annee" >}}, {{< coll-val "creux_ratio" >}} times as much, while central government grants were falling. The comparison weakens the explanation by the electoral calendar alone; it does not isolate the effect of the grants, all the more so since departments and regions, included in the aggregate, do not follow this cycle. The page [Is public debt a burden on future generations?](/en/public-debt-future-generations/#recul-investissement) places this trough within the decline in net investment by general government as a whole: from {{< gen-val "d2_lib" >}} to {{< gen-val "d3_lib" >}}, local government accounts for {{< gen-val "inv_loc_part" >}}% of it.
 
 <details class="repli"><summary>The electoral-cycle check, term by term, the three measures of the DGF and the accounting check on the waterfall</summary>
 
