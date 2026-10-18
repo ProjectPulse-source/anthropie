@@ -214,8 +214,16 @@ def main() -> int:
     for opt, cle, effet in (("--ecrire", "pages", "datée(s) (fond)"), ("--forme", "formes", "classée(s) forme, sans date")):
         if opt in sys.argv:
             for pg in manquants:
+                # Historique (18/10/2026) : « pages » ne garde que la date la plus récente, qui date la page ; une
+                # entrée de journal plus ancienne doit pourtant tomber un jour de fond (page-date.html). Écraser la
+                # date précédente rendait faux un journal juste dès le deuxième changement de fond par le texte.
+                if cle == "pages":
+                    h = reg.setdefault("historique", {})
+                    h[pg] = sorted({*h.get(pg, []), *([reg["pages"][pg]] if reg["pages"].get(pg) else []), auj})
                 reg[cle][pg] = auj
             reg[cle] = dict(sorted(reg[cle].items()))
+            if "historique" in reg:
+                reg["historique"] = dict(sorted(reg["historique"].items()))
             REGISTRE.write_text(json.dumps(reg, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
             print(f"Registre : {len(manquants)} page(s) {effet} du {auj} : {', '.join(manquants) or 'aucune'}")
             return 0

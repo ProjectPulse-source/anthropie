@@ -40,6 +40,12 @@
     {{- $fond = $fond | append ($ta.Format "2006-01-02") -}}
   {{- end -}}
 {{- end -}}
+{{- /* Historique des dates de fond par le texte (18/10/2026) : admises pour le journal, sans dater la page. */ -}}
+{{- with $p.File -}}
+  {{- range index (site.Data.dates_affichage.historique | default dict) (replace .Path "\\" "/") -}}
+    {{- $fond = $fond | append ((time .).Format "2006-01-02") -}}
+  {{- end -}}
+{{- end -}}
 {{- range $p.Params.journal -}}
   {{- $j := (time .date).Format "2006-01-02" -}}
   {{- if not (in $fond $j) -}}
