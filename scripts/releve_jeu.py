@@ -58,3 +58,15 @@ def releve(chemin, payload: dict, aujourdhui: str) -> str:
         return aujourdhui
     anc = releve_de(prev) if isinstance(prev, dict) else None
     return anc if anc and donnees(prev) == donnees(payload) else aujourdhui
+
+
+def sans_licence(precedent: dict, licence: str) -> None:
+    """Retire la licence du jeu en place avant la comparaison « rien écrit », mais lève ValueError si elle diffère de celle
+    qu'on écrirait : la licence NOMME LES SOURCES, et un changement de sources doit s'écrire même à données identiques.
+
+    MOTIF (18/10/2026) : sept générateurs retiraient la licence de la comparaison ; l'Insee ajouté comme source du patrimoine
+    (update_dette_generations.py) ne se serait jamais écrit dans le jeu publié. Les appelants rattrapent déjà ValueError
+    (« fichier illisible ») et réécrivent alors le jeu : c'est le comportement voulu. La date de relevé ne bouge pas pour
+    autant (releve() compare les DONNÉES, licence exclue)."""
+    if precedent.pop("_licence", None) != licence:
+        raise ValueError("licence changee : le jeu doit etre reecrit")

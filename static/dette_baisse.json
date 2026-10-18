@@ -1,6 +1,6 @@
 {
  "releve_le": "2026-10-16",
- "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; source Eurostat",
+ "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Eurostat, Commission européenne (AMECO), OCDE, FMI",
  "meta": {
   "releve_le": "2026-10-16",
   "page": "https://stephane-lalut.com/dette-publique-peut-elle-baisser/",
@@ -2205,6 +2205,9 @@
   "cons_ecartees": "dix",
   "cons_retenues": "795",
   "cons_ecartees_maj": "Dix",
+  "ze_fmi_egaux": "la Finlande et la Slovaquie",
+  "ze_ocde_ed": "Perspectives économiques n° 119",
+  "ze_fmi_ed": "Moniteur des finances publiques d’octobre 2026",
   "ze_an_lib": "2025",
   "ze_an_n": "20",
   "ze_an_n_sps": "20",
@@ -2579,6 +2582,9 @@
   "cons_ecartees": "ten",
   "cons_retenues": "795",
   "cons_ecartees_maj": "Ten",
+  "ze_fmi_egaux": "Finland and Slovakia",
+  "ze_ocde_ed": "Economic Outlook No. 119",
+  "ze_fmi_ed": "Fiscal Monitor, October 2026",
   "ze_an_lib": "2025",
   "ze_an_n": "20",
   "ze_an_n_sps": "20",

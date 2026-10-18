@@ -1,4 +1,4 @@
-# relu le 2026-10-16 ; texte servi de /dette-publique-generations-futures/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-18 ; texte servi de /dette-publique-generations-futures/, build de de89b3d + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 La dette publique est-elle un fardeau pour les générations futures ?
 Une dette peut laisser aux générations suivantes une charge, mais aussi des écoles, des routes et d'autres équipements.
@@ -6,11 +6,11 @@ Que montrent les comptes français ?
 De 1996 à 2025, 18 % seulement des déficits publics ont correspondu à des actifs publics nouveaux (équipements, bâtiments, terrains), usure déduite ; cette part est tombée à 10 % sur 2016-2025.
 Deux autres arguments méritent examen : « nous nous devons la dette à nous-mêmes » et « le véritable fardeau viendra du vieillissement ».
 Trois tests les éprouvent, sans prétendre calculer la facture de chaque génération.
-Page mise à jour le 11 octobre 2026
+Page mise à jour le 18 octobre 2026
 Dossier dette publique
 Données · Eurostat et BCE 2025 · projections 2026
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
-Données mises à jour le 9 octobre 2026 Administrations publiques, séries Eurostat et BCE de 1995 à 2025 ; Commission européenne et COR, projections.
+Données mises à jour le 18 octobre 2026 Administrations publiques, séries Eurostat, Insee et BCE de 1995 à 2025 ; Commission européenne et COR, projections.
 Télécharger : CSV · JSON · méthode
 À quoi les déficits ont correspondu dans les comptes
 Emprunter pour construire une école, une route ou un réseau laisse un capital en même temps qu’une dette.
@@ -218,10 +218,10 @@ Points de PIB cumulés de 2001 à 2025 ; actifs : investissement moins usure du 
 Source : Eurostat, calcul de l'auteur.
 La Bulgarie, le Danemark, l’Estonie, la Finlande, le Luxembourg et la Suède, dont le besoin cumulé est resté sous ce seuil ou négatif, ne se comparent pas sur ce ratio.
 Le bilan des administrations publiques : un complément, non une preuve
-Le bilan des administrations publiques semble offrir une confirmation : de 1995 à 2025, leur patrimoine net — tous leurs actifs non financiers, produits ou non, moins leurs dettes nettes de leurs actifs financiers — est passé de 37,1 % à 27,1 % du PIB.
+Le bilan des administrations publiques semble offrir une confirmation : de 1995 à 2025, leur patrimoine net — tous leurs actifs non financiers, produits ou non, moins leurs dettes nettes de leurs actifs financiers — est passé de 37,1 % à 25,0 % du PIB.
 Mais ce stock dépend des deux années que l’on compare.
-Il atteignait 61,6 % en 2007, était encore au-dessus de son niveau de départ en 2022 (40,3 %), et il a augmenté de 10,2 points de 2016 à 2025, décennie où la part des déficits correspondant à des actifs est tombée à 10 %.
-Sur les 231 comparaisons possibles entre deux années distantes d’au moins dix ans, 54 le montrent en hausse.
+Il atteignait 61,6 % en 2007, était encore au-dessus de son niveau de départ en 2022 (40,3 %), et il a augmenté de 8,1 points de 2016 à 2025, décennie où la part des déficits correspondant à des actifs est tombée à 10 %.
+Sur les 231 comparaisons possibles entre deux années distantes d’au moins dix ans, 55 le montrent en hausse.
 Ses variations mêlent flux et réévaluations.
 La valeur des terrains a varié de +28,8 points de PIB sur la période, sans rapport avec les déficits ; même les actifs produits, qui n’ont varié que de +0,9 point, sont des stocks évalués aux prix courants et rapportés au PIB, sensibles aux prix comme au dénominateur.
 Une identité de flux, vérifiée année par année, ne se valide pas par un stock dont les variations obéissent aussi à d’autres mécanismes : le bilan reste ici une information complémentaire.
@@ -335,7 +335,7 @@ Elle est formalisée dans l’AWP-03 ; l’AWP-09 confronte cette lecture aux co
 Reste la question que ces comptes laissent ouverte : ceux qui devront supporter les conséquences des décisions d’aujourd’hui disposeront-ils des mêmes possibilités de choix, d’adaptation et de protection que ceux qui en ont bénéficié ?
 Confrontation à la recherche : le critère de l'usage et le recul de l'investissement sont retrouvés ; lire la détention par des résidents comme une absence de fardeau, ou la composition des déficits comme une mesure de la charge entre générations, est mis en danger
 Mesuré ici.
-Les emplois du besoin de financement des administrations publiques françaises et européennes, le patrimoine des administrations, la détention de la dette par secteur, sur les séries d’Eurostat et de la BCE ; la décomposition de l’indicateur S2, reprise de la Commission.
+Les emplois du besoin de financement des administrations publiques françaises et européennes, le patrimoine des administrations, la détention de la dette par secteur, sur les séries d’Eurostat, de l’Insee et de la BCE ; la décomposition de l’indicateur S2, reprise de la Commission.
 Aucun des textes lus ne calcule ces grandeurs sur ces sources et ces périodes : elles se valident par reproduction.
 Cohérent avec.
 Le critère de l’usage : dans le modèle de Diamond, émettre de la dette pour acquérir du capital public fait de l’État un simple intermédiaire entre épargnants et entrepreneurs, sans effet de court ni de long terme.
@@ -427,7 +427,8 @@ Chaque année, besoin de financement = désépargne nette + acquisitions nettes 
 Les ratios sont calculés sur le PIB publié avec la notification de déficit et de dette (gov_10dd_edpt1) et cumulés par période en points de PIB ; la part en actifs calculée en euros courants donne 17 %, contre 18 % en points de PIB.
 Sans les terrains ni les stocks, l’investissement net seul représente 15 % du besoin de financement.
 Patrimoine.
-Actifs non financiers des administrations publiques, produits et non produits (nama_10_nfa_bs, N1N et N2N, prix courants), dont terrains (N211N), et valeur financière nette consolidée (nasa_10_f_bs, BF90), rapportés au PIB.
+Compte de patrimoine des administrations publiques de l’Insee (tableau 8.204, comptes nationaux annuels, base 2020, corrigé le 30 juillet 2026, fichier archivé avec son empreinte) : actifs non financiers produits et non produits (N1N et N2N, prix courants), dont terrains (N211N), et valeur financière nette (actifs moins passifs financiers), rapportés au PIB.
+Deux témoins, qui doivent concorder sous peine d’arrêt : les actifs non financiers publiés par Eurostat (nama_10_nfa_bs) et la valeur financière nette trimestrielle d’Eurostat au quatrième trimestre (nasq_10_f_bs, BF90).
 Les stocks d’actifs sont évalués aux prix courants : leurs variations mêlent flux et réévaluations.
 Détention.
 BCE, statistiques de finances publiques (GFS) : dette de Maastricht des administrations publiques par zone de contrepartie (reste du monde, résidents) et secteur détenteur (banque centrale).
@@ -479,7 +480,7 @@ Télécharger en PNG
 SVG
 Citer cette page
 Lalut, Stéphane (2026). « La dette publique est-elle un fardeau pour les générations futures ? ».
-Données Eurostat, BCE, Commission européenne, COR, relevé du 9 octobre 2026. https://stephane-lalut.com/dette-publique-generations-futures/
+Données Eurostat, Insee, BCE, Commission européenne, COR, relevé du 18 octobre 2026. https://stephane-lalut.com/dette-publique-generations-futures/
 Copier la citation
 En trois phrases
 De 1996 à 2025, 18 % du besoin de financement des administrations publiques françaises a correspondu, dans les comptes, à un accroissement net de leurs actifs comptabilisés, et 66 % à des dépenses courantes non couvertes par les recettes courantes ; la part en actifs est passée de 32 % (1996-2005) à 10 % (2016-2025).
@@ -491,7 +492,7 @@ Les emplois du besoin de financement des administrations publiques (France par d
 Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
 Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
-Les séries brutes appartiennent à leurs producteurs (Eurostat, BCE, Commission européenne, COR), sous leurs propres conditions.
+Les séries brutes appartiennent à leurs producteurs (Eurostat, Insee, BCE, Commission européenne, COR), sous leurs propres conditions.
 Toutes les ressources : données, dossiers et repères →
 Transmettre
 WhatsApp

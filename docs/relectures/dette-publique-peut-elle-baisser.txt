@@ -1,10 +1,10 @@
-# relu le 2026-10-17 ; texte servi de /dette-publique-peut-elle-baisser/, build de 003dce1 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-18 ; texte servi de /dette-publique-peut-elle-baisser/, build de de89b3d + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 La dette publique peut-elle baisser ?
 Oui : ce qui peut baisser, c'est le poids de la dette dans le PIB, même quand son montant augmente.
 Au Portugal, la dette publique est passée de 235 à 275 milliards d'euros de fin 2015 à fin 2025, et son poids de 131,0 % à 89,7 % du PIB.
 En France, il a augmenté de 18,6 points sur la même période : les administrations ont dépensé plus qu'elles n'encaissaient, même sans compter les intérêts, et ce déficit a pesé plus lourd que l'aide des taux et de la croissance.
-Page mise à jour le 17 octobre 2026 · révisions
+Page mise à jour le 18 octobre 2026 · révisions
 Dossier dette publique
 Données · Eurostat 2025
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
@@ -266,7 +266,9 @@ Que l’écart vienne des dépenses plutôt que des recettes, ou l’inverse : l
 Ni quel ajustement serait souhaitable, ni s’il aurait changé les taux payés.
 Avec l’indicateur structurel de la Commission, le classement est le même.
 Le solde primaire structurel de la France, que la Commission européenne calcule hors effets estimés du cycle et hors mesures ponctuelles, est lui aussi le plus bas des pays comparés sur la même période : −2,4 % du PIB potentiel en moyenne, contre une médiane de −0,8 % (base AMECO, édition de printemps 2026).
-Ce témoin ne sert pas au calcul, sans en être tout à fait indépendant : la Commission part des mêmes comptes publics, et sa correction repose sur une estimation du PIB potentiel qu’elle révise d’une édition à l’autre et que d’autres institutions estiment autrement.
+Ce témoin ne sert pas au calcul, sans en être tout à fait indépendant : la Commission part des mêmes comptes publics, et sa correction repose sur une estimation du PIB potentiel qu’elle révise d’une édition à l’autre.
+L’OCDE, qui estime elle-même ce potentiel, donne aussi à la France le solde structurel le plus bas des pays qu’elle couvre sur la période ; le FMI, dont l’indicateur corrige le cycle sans retirer les mesures ponctuelles, la place à égalité avec la Finlande et la Slovaquie.
+Le rang structurel dépend donc de l’estimation retenue ; celui du solde observé n’en dépend pas.
 Le repère s’est abaissé, pas le solde.
 Sur les cinq dernières années (2021-2025), une forte croissance nominale, reprise après 2020 puis hausse des prix, a abaissé le repère de tous les pays par rapport aux cinq années d’avant 2020 : la France n’est plus, en moyenne, sous le sien (+0,1 point), et quatre pays ont un écart plus défavorable.
 Son solde primaire reste pourtant le plus bas des pays comparés, et son solde structurel parmi les deux plus bas.
@@ -361,7 +363,7 @@ La page décrit trente années observées.
 Les trajectoires que prévoient le Gouvernement, la Commission européenne ou le FMI sont des scénarios conditionnels, que ces données ne permettent ni de confirmer ni d’écarter.
 Confrontation à la recherche : le solde stabilisant, la distinction entre stabiliser et faire baisser et le rôle du solde primaire dans les écarts entre pays de la zone euro sont retrouvés ; lire l'écart nul de la dernière année comme un état durable, ou l'excédent comme le seul ressort des baisses, est mis en danger
 Mesuré ici.
-La décomposition par décennie du ratio français, le solde stabilisant année par année, la comparaison des pays de l’Union dont la dette dépassait 90 % du PIB et celle des membres de la zone euro sur cinq périodes, qui sépare taux implicite, croissance nominale, repère et solde primaire, sur les séries d’Eurostat, avec pour témoin le solde primaire structurel de la Commission européenne.
+La décomposition par décennie du ratio français, le solde stabilisant année par année, la comparaison des pays de l’Union dont la dette dépassait 90 % du PIB et celle des membres de la zone euro sur cinq périodes, qui sépare taux implicite, croissance nominale, repère et solde primaire, sur les séries d’Eurostat, avec pour témoin le solde primaire structurel de la Commission européenne, et ceux de l’OCDE et du FMI pour le rang structurel.
 Aucun des textes lus ne calcule ces grandeurs sur cette source et ces périodes : elles se valident par reproduction.
 Le constat sur le solde primaire, lui, n’est pas nouveau (ci-dessous).
 Cohérent avec.
@@ -464,6 +466,7 @@ L’identité est celle du volet Pourquoi la dette publique augmente-t-elle ? ; 
 Le solde stabilisant d’une année est l’effet taux-croissance de cette année, hors autres ajustements.
 Les variations et totaux sont calculés avant arrondi : les nombres affichés peuvent présenter un écart de 0,1 point.
 Solde primaire structurel : Commission européenne, base AMECO, série UBLGBPS (solde des administrations publiques hors intérêts, corrigé du cycle et des mesures ponctuelles, en % du PIB potentiel), édition de printemps 2026, extrait archivé avec son empreinte ; il sert de témoin et n’entre dans aucun calcul.
+Mêmes réserves pour les deux autres témoins du rang structurel : OCDE, Perspectives économiques n° 119, série NLGXQU (solde primaire sous-jacent, hors cycle et mesures ponctuelles, en % du PIB potentiel, membres de la zone euro qui sont membres de l’OCDE) ; FMI, Moniteur des finances publiques d’octobre 2026, série GGCBP_G01_PGDP_PT (solde primaire corrigé du cycle seulement, en % du PIB potentiel).
 Contrôle : pour chaque pays et chaque année, le ratio de dette et le solde primaire calculés sont comparés à ceux qu’Eurostat publie en pourcentage du PIB, que le calcul n’utilise pas.
 Au-delà de 0,11 point d’écart, l’année est écartée et comptée (dix sur 805, listées dans le fichier JSON) ; pour la France et les pays comparés, le script s’arrête.
 Une fenêtre qui contient une année de croissance nominale supérieure à 35 % (hyperinflation, rupture de série) est écartée.

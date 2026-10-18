@@ -52,10 +52,39 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-18 — Patrimoine net des APU : source Insee ; rang structurel OCDE et FMI ; licence nommant les sources
+
+**Défaut (trouvé par l'audit du livre *Dette publique*, 17/10)** : `/dette-publique-generations-futures/` montrait le
+patrimoine net des APU en HAUSSE en 2025 (25,5 → 27,1 % du PIB). L'Insee (tableau 8.204, corrigé le 30/07/2026) donne une
+baisse (26,1 → 25,1 %) ; la série TRIMESTRIELLE d'Eurostat (`nasq_10_f_bs`, T4) concorde avec l'Insee ; seule la série
+ANNUELLE `nasa_10_f_bs` (mise à jour le 17/10, BF90 2025 = −2 134 Md€ contre −2 195) s'en écartait. Correction :
+`update_dette_generations.py` lit l'Insee (pièce `scripts/sources_generations/insee_T_8204_patrimoine_apu_2026-07-30.xlsx`,
+SOURCES["pat"], registre `insee-patrimoine-apu`) ; bouclage de la valeur nette contrôlé ; deux témoins bloquants (actifs non
+financiers `nama_10_nfa_bs` ; BF90 trimestriel T4), vus mordre par mutation (T4 décalé de 5 Md€ ; actifs +1 %). Page : 2025 =
+25,0 % (PIB Eurostat), « +8,1 points depuis 2016 » ; texte de méthode, sources, ligne des données et « Mesuré ici » nomment
+l'Insee ; mot « transmis » refusé par la garde de vocabulaire, remplacé.
+
+**Rang structurel (accord de l'auteur, 18/10)** : test `D:\PRO\07_RECHERCHE\dette_ressources_pistes\piste2\RANG_STRUCTUREL_OCDE_FMI_2026-10-17.md`.
+`update_dette_baisse.py` : extraits OCDE (EO 119, NLGXQU) et FMI (Fiscal Monitor oct. 2026, GGCBP) archivés dans
+`scripts/sources_dette/` (SHA256SUMS), `temoins_structurels()`, `rang_temoin()`, jetons `ze_fmi_egaux`, `ze_ocde_ed`,
+`ze_fmi_ed`, 2 gardes (OCDE : France la plus basse sans ex aequo ; FMI : France en tête d'un groupe d'ex aequo), vue mordre
+(`--mutation-struct`). Phrase de #zone-euro (FR, EN) : l'OCDE donne aussi le plus bas ; le FMI la place à égalité avec la
+Finlande et la Slovaquie ; le rang structurel dépend de l'estimation, celui du solde observé non. `releve_le` inchangé (16/10).
+
+**Défaut de structure corrigé à l'échelle des générateurs** : sept générateurs retiraient `_licence` de la comparaison
+« rien écrit » ; un changement de SOURCES ne s'écrivait jamais (constaté sur la licence de dette_generations, qui n'aurait
+jamais nommé l'Insee). Organe commun `releve_jeu.sans_licence()` adopté par les sept (acces_superieur, empreinte_carbone,
+parcours_licence, dette_baisse, dette_dynamique, dette_monde, dette_generations) ; licence de dette_baisse corrigée (« source
+Eurostat » → Eurostat, Commission européenne (AMECO), OCDE, FMI). Vu mordre : la licence de dette_generations s'est écrite.
+Bruit de calcul (15e chiffre) et PNG re-rendus de dynamique et monde restaurés (aucune donnée, aucun SVG changé).
+
+Contrôles : `check-all --ci` 0, build `$?` 0, `audit-liens-build` 0, rendu et dates conformes, relecture du texte servi des
+deux pages (FR, EN) puis instantanés ; `check-relecture --strict` 0.
+
 ### 2026-10-17 — Dette, volet 5 : confrontation à la recherche étendue à la section #zone-euro
 
 Antériorités citées par le contradicteur, lues à la source
-(`D:\PRO_RECHERCHE\dette_ressources_pistes\piste2\LECTURE_ANTERIORITES_2026-10-17.md`, PDF archivés avec empreinte).
+(`D:\PRO\07_RECHERCHE\dette_ressources_pistes\piste2\LECTURE_ANTERIORITES_2026-10-17.md`, PDF archivés avec empreinte).
 
 - **Mesuré ici** : la comparaison de la zone euro est ajoutée, avec la phrase « le constat sur le solde primaire n'est pas
   nouveau ».

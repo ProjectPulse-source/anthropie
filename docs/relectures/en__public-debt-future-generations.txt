@@ -1,4 +1,4 @@
-# relu le 2026-10-16 ; texte servi de /en/public-debt-future-generations/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-18 ; texte servi de /en/public-debt-future-generations/, build de de89b3d + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Is public debt a burden on future generations?
 A debt can leave the next generations a charge, but also schools, roads and other equipment.
@@ -6,11 +6,11 @@ What do the French accounts show?
 From 1996 to 2025, only 18% of public deficits corresponded to new public assets (equipment, buildings, land), after wear and tear; that share fell to 10% over 2016-2025.
 Two other arguments deserve scrutiny: “we owe the debt to ourselves” and “the real burden will come from ageing”.
 Three tests put them to the proof, without claiming to calculate each generation’s bill.
-Page updated 11 October 2026
+Page updated 18 October 2026
 Public debt dossier
 Data · Eurostat and ECB 2025 · projections 2026
 ↓ Charts, data and citations to reuseReuse this page
-Data last updated 9 October 2026 General government, Eurostat and ECB series from 1995 to 2025; European Commission and COR, projections.
+Data last updated 18 October 2026 General government, Eurostat, Insee and ECB series from 1995 to 2025; European Commission and COR, projections.
 Download: CSV · JSON · method
 What deficits corresponded to in the accounts
 Borrowing to build a school, a road or a network leaves capital as well as a debt.
@@ -218,10 +218,10 @@ Points of GDP cumulated from 2001 to 2025; assets: investment minus depreciation
 Source: Eurostat, author’s calculation.
 Bulgaria, Denmark, Estonia, Finland, Luxembourg and Sweden, whose cumulated net borrowing stayed below that threshold or was negative, cannot be compared on this ratio.
 The general government balance sheet: a complement, not a proof
-The general government balance sheet seems to offer confirmation: from 1995 to 2025, its net worth — all its non-financial assets, produced or not, minus its debts net of its financial assets — went from 37.1% to 27.1% of GDP.
+The general government balance sheet seems to offer confirmation: from 1995 to 2025, its net worth — all its non-financial assets, produced or not, minus its debts net of its financial assets — went from 37.1% to 25.0% of GDP.
 But this stock depends on the two years being compared.
-It reached 61.6% in 2007, was still above its starting level in 2022 (40.3%), and it rose by 10.2 points from 2016 to 2025, the decade in which the share of deficits corresponding to assets fell to 10%.
-Of the 231 possible comparisons between two years at least ten years apart, 54 show it rising.
+It reached 61.6% in 2007, was still above its starting level in 2022 (40.3%), and it rose by 8.1 points from 2016 to 2025, the decade in which the share of deficits corresponding to assets fell to 10%.
+Of the 231 possible comparisons between two years at least ten years apart, 55 show it rising.
 Its changes mix flows and revaluations.
 The value of land changed by +28.8 points of GDP over the period, unrelated to deficits; even produced assets, which changed by only +0.9 points, are stocks valued at current prices and relative to GDP, sensitive to prices as well as to the denominator.
 A flow identity, checked year by year, is not validated by a stock whose changes also obey other mechanisms: the balance sheet remains complementary information here.
@@ -335,7 +335,7 @@ It is formalised in AWP-03; AWP-09 confronts this reading with the public accoun
 That leaves the question these accounts keep open: will those who must bear the consequences of today’s decisions have the same possibilities of choice, adaptation and protection as those who benefited from them?
 Tested against the research literature: the use criterion and the decline in investment are found again; reading resident holding as an absence of burden, or the composition of deficits as a measure of the burden between generations, is challenged
 Measured here.
-The uses of French and European general government net borrowing, general government net worth, debt holdings by sector, on Eurostat and ECB series; the breakdown of the S2 indicator, taken from the Commission.
+The uses of French and European general government net borrowing, general government net worth, debt holdings by sector, on Eurostat, Insee and ECB series; the breakdown of the S2 indicator, taken from the Commission.
 None of the texts read calculates these quantities on these sources and these periods: they are validated by reproduction.
 Consistent with.
 The use criterion: in Diamond’s model, issuing debt to acquire public capital makes the government a mere intermediary between savers and entrepreneurs, with no short-run or long-run effect.
@@ -418,7 +418,8 @@ Each year, net borrowing = net dissaving + net acquisitions of assets + net capi
 Ratios are calculated on the GDP published with the deficit and debt notification (gov_10dd_edpt1) and cumulated by period in points of GDP; the share in assets calculated in current euros gives 17%, against 18% in points of GDP.
 Excluding land and inventories, net investment alone represents 15% of net borrowing.
 Net worth.
-Non-financial assets of general government, produced and non-produced (nama_10_nfa_bs, N1N and N2N, current prices), of which land (N211N), and consolidated net financial worth (nasa_10_f_bs, BF90), relative to GDP.
+Insee’s general government balance sheet (table 8.204, annual national accounts, base 2020, corrected on 30 July 2026, file archived with its hash): produced and non-produced non-financial assets (N1N and N2N, current prices), of which land (N211N), and net financial worth (financial assets minus liabilities), relative to GDP.
+Two cross-checks, which must agree or the run stops: the non-financial assets published by Eurostat (nama_10_nfa_bs) and Eurostat’s quarterly net financial worth in the fourth quarter (nasq_10_f_bs, BF90).
 Asset stocks are valued at current prices: their changes mix flows and revaluations.
 Holdings.
 ECB, government finance statistics (GFS): Maastricht debt of general government by counterpart area (rest of the world, residents) and holding sector (central bank).
@@ -471,7 +472,7 @@ SVG
 Cite this page
 Lalut, Stéphane (2026).
 “Is public debt a burden on future generations?”.
-Eurostat, ECB, European Commission, COR data, retrieved 9 October 2026. https://stephane-lalut.com/en/public-debt-future-generations/
+Eurostat, Insee, ECB, European Commission, COR data, retrieved 18 October 2026. https://stephane-lalut.com/en/public-debt-future-generations/
 Copy citation
 In three sentences
 From 1996 to 2025, 18% of French general government net borrowing corresponded, in the accounts, to a net increase in its recorded assets, and 66% to current spending not covered by current revenue; the share in assets went from 32% (1996-2005) to 10% (2016-2025).
@@ -483,7 +484,7 @@ The uses of general government net borrowing (France by decade, 27 EU countries)
 Download JSON CSV
 Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
 Text under copyright — short quotation free, full reproduction on request.
-The raw series belong to their producers (Eurostat, ECB, European Commission, COR), under their own terms.
+The raw series belong to their producers (Eurostat, Insee, ECB, European Commission, COR), under their own terms.
 All resources: data, explainers and reference material →
 Share
 WhatsApp

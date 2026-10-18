@@ -12,8 +12,8 @@ Les trois arguments qui allègent le fardeau, chacun confronté à la série qui
       TÉMOIN 1 (bloquant pour la France) : les ratios qu'Eurostat PUBLIE en % du PIB (gov_10a_main, PC_GDP), que le
       calcul n'utilise pas ; tolérance TOL ; vu mordre au test (PIB de l'année précédente : 683 rejets sur 810).
       COMPLÉMENT (autre cadre statistique, plus un témoin depuis la phase B du 11/10/2026) : le patrimoine net des APU
-      dans les bilans (tous les actifs non financiers, produits N1N et non produits N2N, nama_10_nfa_bs ; valeur
-      financière nette consolidée, nasa_10_f_bs). Un stock aux prix courants, dominé par des réévaluations, monte ou
+      dans les bilans : Insee, tableau 8.204 (pièce archivée ; actifs non financiers N1N et N2N, valeur financière nette),
+      témoins Eurostat nama_10_nfa_bs et nasq_10_f_bs (T4) ; la série annuelle nasa_10_f_bs n'est plus lue (17/10/2026). Un stock aux prix courants, dominé par des réévaluations, monte ou
       baisse selon la fenêtre : il ne valide pas une identité de flux.
       La décomposition dit la COMPOSITION COMPTABLE des déficits, non la charge transmise (Auerbach, Gokhale et
       Kotlikoff 1991 : le déficit dépend de l'étiquetage) ; la prose ne dit jamais « financé ».
@@ -108,6 +108,14 @@ SOURCES = {
                 url="https://webstat.banque-france.fr/fr/catalogue/det/DET.Q.FR.1315.F33000.M.Z9.8.F"),
     # Dernière observation (arbitrage PRO-20261003-195656, B3) : relevé daté du graphique de l'AFT, source Banque de
     # France ; l'image n'est pas servie aux scripts, ses deux étiquettes sont transcrites dans la pièce avec son empreinte.
+    # Patrimoine des APU (17/10/2026) : le producteur, et non plus la série annuelle Eurostat nasa_10_f_bs, qui donnait en
+    # octobre 2026 une valeur financière nette de -2 134 Md€ fin 2025 contre -2 195 à l'Insee ET dans la série trimestrielle
+    # d'Eurostat : le patrimoine net « montait » en 2025 sur la page alors qu'il baisse. Mise à jour : annuelle, à la main
+    # (registre data/sources_maj.json, id « insee-patrimoine-apu »).
+    "pat": dict(fichier="insee_T_8204_patrimoine_apu_2026-07-30.xlsx", lib="Insee, tableau 8.204 (30 juillet 2026)",
+                lib_en="Insee, table 8.204 (30 July 2026)",
+                producteur="Insee, comptes nationaux annuels (base 2020), compte de patrimoine des administrations publiques (S13), corrigé le 30/07/2026",
+                url="https://www.insee.fr/fr/statistiques/8988859"),
     "aft": dict(fichier="aft_non_residents_releve_2026T1.json", lib="Agence France Trésor, d'après la Banque de France",
                 producteur="Agence France Trésor, page « Principaux chiffres », graphique des non-résidents (source Banque de France)",
                 url="https://www.aft.gouv.fr/fr/principaux-chiffres-dette"),
@@ -354,14 +362,67 @@ def cumul(an: dict, a0: int, a1: int):
     return s
 
 
+def insee_patrimoine() -> dict[str, dict[int, float]]:
+    """Insee, tableau 8.204 (compte de patrimoine des APU), en millions d'euros : {code: {année: valeur}}. Les deux lignes
+    « F » (actifs, puis passifs financiers) sont nommées FA et FP ; refus si une ligne attendue manque."""
+    import openpyxl
+    wb = openpyxl.load_workbook(piece("pat"), read_only=True, data_only=True)
+    if "T_8204" not in wb.sheetnames:
+        fail("Insee 8.204 : onglet T_8204 absent")
+    rows = [r for r in wb["T_8204"].iter_rows(values_only=True)]
+    hdr = next((r for r in rows if r and len(r) > 2 and r[2] == "1959"), None)
+    if hdr is None:
+        fail("Insee 8.204 : ligne des annees introuvable")
+    cols = {j: int(c) for j, c in enumerate(hdr) if isinstance(c, str) and c.isdigit()}
+    out: dict[str, dict[int, float]] = {}
+    for r in rows:
+        code, lib = (r[0] or ""), (r[1] or "")
+        cle = {"F": "FA" if "actifs" in lib else "FP" if "passifs" in lib else None}.get(code, code)
+        if cle in ("N1N", "N2N", "N211N", "FA", "FP", "B90") and cle not in out:
+            out[cle] = {a: float(r[j]) * 1000 for j, a in cols.items() if j < len(r) and isinstance(r[j], (int, float))}
+    if set(out) != {"N1N", "N2N", "N211N", "FA", "FP", "B90"}:
+        fail("Insee 8.204 : lignes manquantes %s" % sorted({"N1N", "N2N", "N211N", "FA", "FP", "B90"} - set(out)))
+    return out
+
+
+def bf90_trimestriel() -> dict[int, float]:
+    """Témoin : valeur financière nette des APU au 4e trimestre (Eurostat nasq_10_f_bs, consolidée), {année: M€}."""
+    d = json.loads(fetch(API % ("nasq_10_f_bs", "geo=FR&sector=S13&unit=MIO_NAC&na_item=BF90&finpos=LIAB")))
+    if "dimension" not in d or any(n != 1 for dim, n in zip(d["id"], d["size"]) if dim != "time"):
+        fail("Eurostat nasq_10_f_bs : reponse inattendue")
+    t = d["dimension"]["time"]["category"]["index"]
+    return {int(k[:4]): float(d["value"][str(i)]) for k, i in t.items() if k.endswith("Q4") and str(i) in d["value"]}
+
+
 def patrimoine(fin: int):
     Y = eurostat("gov_10dd_edpt1", na_item="B1GQ", sector="S1", unit="MIO_NAC")
     # Tous les actifs non financiers (arbitrage PRO-20261003-195656, B2) : produits N1N (actifs fixes, stocks, objets de
     # valeur) et non produits N2N (terrains surtout) ; les terrains seuls (N211N) gardés pour la phrase sur leur valeur.
-    prod = eurostat("nama_10_nfa_bs", sector="S13", unit="CP_MNAC", asset10="N1N")
-    nonprod = eurostat("nama_10_nfa_bs", sector="S13", unit="CP_MNAC", asset10="N2N")
-    terrains = eurostat("nama_10_nfa_bs", sector="S13", unit="CP_MNAC", asset10="N211N")
-    bf = eurostat("nasa_10_f_bs", sector="S13", unit="MIO_NAC", na_item="BF90", co_nco="CO", finpos="LIAB")
+    # Source : l'Insee, producteur (tableau 8.204, pièce archivée). Témoins bloquants : les actifs non financiers transmis
+    # à Eurostat (nama_10_nfa_bs) et la valeur financière nette trimestrielle d'Eurostat au 4e trimestre. La série annuelle
+    # nasa_10_f_bs n'est plus lue : elle s'écartait des deux autres en octobre 2026 (voir SOURCES["pat"]).
+    I = insee_patrimoine()
+    prod, nonprod, terrains = ({("FR", a): v for a, v in I[k].items()} for k in ("N1N", "N2N", "N211N"))
+    bf = {("FR", a): I["FA"][a] - I["FP"][a] for a in I["FA"] if a in I["FP"]}
+    for a in I["B90"]:
+        if ("FR", a) in bf and ("FR", a) in prod and ("FR", a) in nonprod:
+            if abs(prod[("FR", a)] + nonprod[("FR", a)] + bf[("FR", a)] - I["B90"][a]) > 500:
+                fail("Insee 8.204 %d : la valeur nette ne boucle pas (actifs non financiers + actifs - passifs financiers)" % a)
+    e_prod = eurostat("nama_10_nfa_bs", sector="S13", unit="CP_MNAC", asset10="N1N")
+    e_nonprod = eurostat("nama_10_nfa_bs", sector="S13", unit="CP_MNAC", asset10="N2N")
+    communs = [a for a in range(fin - 30, fin + 1) if ("FR", a) in e_prod and ("FR", a) in prod]
+    if len(communs) < 10:
+        fail("temoin Eurostat nama_10_nfa_bs : moins de dix annees communes avec l'Insee")
+    for a in communs:
+        if abs(e_prod[("FR", a)] - prod[("FR", a)]) > 1000 or abs(e_nonprod[("FR", a)] - nonprod[("FR", a)]) > 1000:
+            fail("Insee 8.204 et Eurostat divergent sur les actifs non financiers en %d : millesimes differents, relire" % a)
+    q4 = bf90_trimestriel()
+    cq = [a for a in q4 if ("FR", a) in bf and a >= fin - 3]
+    if len(cq) < 2:
+        fail("temoin Eurostat nasq_10_f_bs : moins de deux annees communes recentes")
+    for a in cq:
+        if abs(q4[a] - bf[("FR", a)]) > 2000:
+            fail("Insee 8.204 et Eurostat trimestriel divergent sur la valeur financiere nette %d (%.0f contre %.0f M EUR)" % (a, bf[("FR", a)], q4[a]))
     ans = [a for a in range(fin - 30, fin + 1) if all(("FR", a) in s for s in (Y, prod, nonprod, terrains, bf))]
     if not ans:
         fail("patrimoine : aucune annee complete pour la France")
@@ -1431,10 +1492,11 @@ def main() -> int:
                "cor": C, "etat_negociable": etat, "controles": {"detention_bce_eurostat_annees": det_controle}, "conservation": cons,
                "affichage": A, "affichage_en": A_en}
     releve = payload["meta"]["releve_le"]
+    licence = "CC BY 4.0 — compilation Stéphane Lalut ; sources Eurostat, Insee, BCE, Commission européenne, COR"
     if OUT_DATA.exists():
         try:
             prev = json.loads(OUT_DATA.read_text(encoding="utf-8"))
-            p2 = dict(prev); p2.pop("releve_le", None); p2.pop("_licence", None); p2["meta"] = dict(p2["meta"], releve_le=None)
+            p2 = dict(prev); p2.pop("releve_le", None); rj.sans_licence(p2, licence); p2["meta"] = dict(p2["meta"], releve_le=None)
             n2 = json.loads(json.dumps(dict(payload, meta=dict(payload["meta"], releve_le=None)), ensure_ascii=False))
             if prev.get("releve_le") and json.dumps(p2, sort_keys=True, ensure_ascii=False) == json.dumps(n2, sort_keys=True, ensure_ascii=False) \
                     and all((OUT_IMG / f).exists() and (OUT_IMG / f).read_text(encoding="utf-8") == s for f, s in figs.items()) \
@@ -1449,7 +1511,7 @@ def main() -> int:
             payload["meta"]["releve_le"] = releve
         except (ValueError, KeyError):
             pass
-    payload = {"releve_le": releve, "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Eurostat, BCE, Commission européenne, COR", **payload}
+    payload = {"releve_le": releve, "_licence": licence, **payload}
     txt = json.dumps(payload, ensure_ascii=False, indent=1)
     OUT_DATA.write_text(txt, encoding="utf-8")
     OUT_STATIC.write_text(txt, encoding="utf-8")

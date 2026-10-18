@@ -27,7 +27,8 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html); tokens resolved
   sources:
     - "https://ec.europa.eu/eurostat/databrowser/view/gov_10a_main/default/table?lang=en"
     - "https://ec.europa.eu/eurostat/databrowser/view/nama_10_nfa_bs/default/table?lang=en"
-    - "https://ec.europa.eu/eurostat/databrowser/view/nasa_10_f_bs/default/table?lang=en"
+    - "https://www.insee.fr/fr/statistiques/8988859"
+    - "https://ec.europa.eu/eurostat/databrowser/view/nasq_10_f_bs/default/table?lang=en"
     - "https://data.ecb.europa.eu/data/datasets/GFS"
     - "https://webstat.banque-france.fr/fr/catalogue/det/DET.Q.FR.1315.F33000.M.Z9.8.F"
     - "https://economy-finance.ec.europa.eu/publications/debt-sustainability-monitor-2025_en"
@@ -50,7 +51,7 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   refonte: "2026-10-11"  # date de la relecture attestée ; absente = page pas encore refondue
   bloc: "dette"
   rang: 40
-  nature: "Official series (Eurostat, ECB, European Commission, COR) and the author's calculations"
+  nature: "Official series (Eurostat, Insee, ECB, European Commission, COR) and the author's calculations"
   prolongement: true   # option B: "Further topics of the dossier" row, under the grid of the dossier's parts
 dossier_dette: prolongement   # "Further topics" panel of the dossier bar
 dossier_dette_titre: "A burden for future generations?"
@@ -61,7 +62,7 @@ dossier_dette_role: "assets, holders, pensions"
 
 {{< reutiliser-ancre >}}
 
-<p class="donnees-ligne"><span class="badge-donnees">Data last updated {{< gen-val "date_donnees" >}}</span> General government, Eurostat and ECB series from {{< gen-val "h0" >}} to {{< gen-val "fin" >}}; European Commission and COR, projections. Download: <a href="/dette_generations.csv">CSV</a> · <a href="/dette_generations.json">JSON</a> · <a href="#sources">method</a></p>
+<p class="donnees-ligne"><span class="badge-donnees">Data last updated {{< gen-val "date_donnees" >}}</span> General government, Eurostat, Insee and ECB series from {{< gen-val "h0" >}} to {{< gen-val "fin" >}}; European Commission and COR, projections. Download: <a href="/dette_generations.csv">CSV</a> · <a href="/dette_generations.json">JSON</a> · <a href="#sources">method</a></p>
 
 ## What deficits corresponded to in the accounts {#assets}
 
@@ -221,7 +222,7 @@ The third proposition is a refutable hypothesis, not a finding of this page. It 
 That leaves the question these accounts keep open: will those who must bear the consequences of today’s decisions have the same possibilities of choice, adaptation and protection as those who benefited from them?
 
 {{< confrontation-recherche verifie="2026-10-03" publie="oui" resume="the use criterion and the decline in investment are found again; reading resident holding as an absence of burden, or the composition of deficits as a measure of the burden between generations, is challenged" >}}
-**Measured here.** The uses of French and European general government net borrowing, general government net worth, debt holdings by sector, on Eurostat and ECB series; the breakdown of the S2 indicator, taken from the Commission. None of the texts read calculates these quantities on these sources and these periods: they are validated by reproduction.
+**Measured here.** The uses of French and European general government net borrowing, general government net worth, debt holdings by sector, on Eurostat, Insee and ECB series; the breakdown of the S2 indicator, taken from the Commission. None of the texts read calculates these quantities on these sources and these periods: they are validated by reproduction.
 
 **Consistent with.** The use criterion: in Diamond’s model, issuing debt to acquire public capital makes the government a mere intermediary between savers and entrepreneurs, with no short-run or long-run effect. The decline in the share invested: in 21 OECD countries, including France, from 1979 to 2003, a heavier interest burden goes together, five years later, with a lower share of public investment and a higher share of pensions, postponing an investment costing less, politically, than cutting an entitlement (Breunig and Busemeyer). These are associations in a panel, over another period: they do not say why the share invested has fallen in France since. The approach of the S2 indicator, finally, is the one called for by Auerbach, Gokhale and Kotlikoff: starting from the government’s budget constraint over a long horizon and from age-related spending, rather than from a single year’s deficit.
 
@@ -276,7 +277,7 @@ This page puts three arguments to the test of the accounts: what deficits corres
 
 **Uses of net borrowing.** Eurostat, general government (S.13), ESA 2010 accounts, in national currency (`gov_10a_main`): net lending or borrowing (B9), net saving (B8N), gross fixed capital formation (P51G), consumption of fixed capital (P51C), acquisitions less disposals of non-produced assets (NP), changes in inventories (P52_P53), capital transfers paid and received (D9), of which investment grants paid (D92). Each year, net borrowing = net dissaving + net acquisitions of assets + net capital transfers; the identity is checked year by year, to within 0.05 points. Ratios are calculated on the GDP published with the deficit and debt notification (`gov_10dd_edpt1`) and cumulated by period in points of GDP; the share in assets calculated in current euros gives {{< gen-val "part_k_eur" >}}%, against {{< gen-val "part_k" >}}% in points of GDP. Excluding land and inventories, net investment alone represents {{< gen-val "part_n" >}}% of net borrowing.
 
-**Net worth.** Non-financial assets of general government, produced and non-produced (`nama_10_nfa_bs`, N1N and N2N, current prices), of which land (N211N), and consolidated net financial worth (`nasa_10_f_bs`, BF90), relative to GDP. Asset stocks are valued at current prices: their changes mix flows and revaluations.
+**Net worth.** Insee's general government balance sheet (table 8.204, annual national accounts, base 2020, corrected on 30 July 2026, file archived with its hash): produced and non-produced non-financial assets (N1N and N2N, current prices), of which land (N211N), and net financial worth (financial assets minus liabilities), relative to GDP. Two cross-checks, which must agree or the run stops: the non-financial assets published by Eurostat (`nama_10_nfa_bs`) and Eurostat's quarterly net financial worth in the fourth quarter (`nasq_10_f_bs`, BF90). Asset stocks are valued at current prices: their changes mix flows and revaluations.
 
 **Holdings.** ECB, government finance statistics (GFS): Maastricht debt of general government by counterpart area (rest of the world, residents) and holding sector (central bank). Checks: non-residents and residents add up to total debt each year; over the common years, the values equal those of Eurostat (`gov_10dd_ggd`), reported by the same administration. Scope witness: {{< gen-val "etat_lib" >}}, on Webstat (share of central-government marketable securities held by non-residents, at market value, end of quarter; file from the series’ public page, latest observation published on {{< gen-val "etat_maj" >}}, archived with its hash); latest observation: chart from Agence France Trésor (source Banque de France), read on {{< gen-val "etat_der_lu" >}} with the image’s hash, and checked against Webstat over the common period. The script stops if the two series cease to converge, or if Webstat publishes a period that the reading no longer goes beyond.
 
@@ -284,6 +285,6 @@ This page puts three arguments to the test of the accounts: what deficits corres
 
 Check: for each country and each year, the calculated ratios are compared with those Eurostat publishes as a percentage of GDP, which the calculation does not use. Beyond a gap of {{< gen-val "tolerance" >}} points, the year is excluded and counted ({{< gen-val "cons_ecartees" >}} out of {{< gen-val "cons_calculables" >}}); for France, the script stops. The computed figures all come from the same script, which checks the main quantitative statements and stops if their conditions are no longer met; their wording is reviewed editorially. Only the latest non-resident share, read on the Agence France Trésor chart, is transcribed by hand; the reading for the previous quarter is checked against Webstat. Figures from the studies cited are given as they publish them. The arguments were tested before the page was written, following a protocol set before the calculation.
 
-{{< reutiliser figures="figures_generations" jeu="dette_generations" sources="Eurostat, ECB, European Commission, COR" donnees="The uses of general government net borrowing (France by decade, 27 EU countries), general government net worth, debt holdings by sector and the Commission’s S2 indicator; the same content exists as CSV, in long format." >}}
+{{< reutiliser figures="figures_generations" jeu="dette_generations" sources="Eurostat, Insee, ECB, European Commission, COR" donnees="The uses of general government net borrowing (France by decade, 27 EU countries), general government net worth, debt holdings by sector and the Commission’s S2 indicator; the same content exists as CSV, in long format." >}}
 From {{< gen-val "a0" >}} to {{< gen-val "fin" >}}, {{< gen-val "part_k" >}}% of French general government net borrowing corresponded, in the accounts, to a net increase in its recorded assets, and {{< gen-val "part_e" >}}% to current spending not covered by current revenue; the share in assets went from {{< gen-val "d1_part" >}}% ({{< gen-val "d1_lib" >}}) to {{< gen-val "d3_part" >}}% ({{< gen-val "d3_lib" >}}). This is an accounting reading, not a causal attribution: these shares measure neither the return on spending nor its usefulness to future generations. In {{< gen-val "h_fin" >}}, {{< gen-val "nr_fin" >}}% of public debt was registered to non-residents, which gives the residence of holders, not the burden.
 {{< /reutiliser >}}

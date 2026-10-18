@@ -300,6 +300,49 @@ def ameco() -> dict:
     return S
 
 
+# Rang structurel selon deux autres estimateurs du PIB potentiel (17/10/2026, test RANG_STRUCTUREL_OCDE_FMI, accord de
+# l'auteur le 18/10) : OCDE, solde primaire sous-jacent (hors cycle et mesures ponctuelles, 17 membres de la zone euro) ;
+# FMI, solde primaire corrigé du cycle seulement (21 membres). Extraits archivés ; témoins, aucun calcul n'en dépend.
+SOURCES_DETTE = ROOT / "scripts" / "sources_dette"
+TEMOINS_STRUCT = {"ocde": "ocde_EO119_NLGXQU.csv", "fmi": "fmi_FM2026-10_GGCBP.json"}
+TEMOINS_ED = {"fr": dict(ocde="Perspectives économiques n° 119", fmi="Moniteur des finances publiques d’octobre 2026"),
+              "en": dict(ocde="Economic Outlook No. 119", fmi="Fiscal Monitor, October 2026")}
+ISO3 = dict(AT="AUT", BE="BEL", BG="BGR", CY="CYP", DE="DEU", EE="EST", EL="GRC", ES="ESP", FI="FIN", FR="FRA", HR="HRV",
+            IE="IRL", IT="ITA", LT="LTU", LU="LUX", LV="LVA", MT="MLT", NL="NLD", PT="PRT", SI="SVN", SK="SVK")
+
+
+def temoins_structurels() -> dict:
+    """{"ocde"|"fmi": {pays: {année: % du PIB potentiel}}} ; refuse une pièce dont l'empreinte n'est pas celle de SHA256SUMS."""
+    sums = {l.split()[1].lstrip("*"): l.split()[0] for l in (SOURCES_DETTE / "SHA256SUMS").read_text(encoding="utf-8").splitlines() if l.strip()}
+    T = {}
+    for cle, nomf in TEMOINS_STRUCT.items():
+        b = (SOURCES_DETTE / nomf).read_bytes()
+        if sums.get(nomf) != hashlib.sha256(b).hexdigest():
+            fail("piece %s : empreinte differente de SHA256SUMS ; relire la piece" % nomf)
+        inv = {v: k for k, v in ISO3.items()}
+        if cle == "ocde":
+            S = {}
+            for r in csv.DictReader(b.decode("utf-8-sig").splitlines()):
+                if r["MEASURE"] == "NLGXQU" and r["OBS_VALUE"] and r["REF_AREA"] in inv:
+                    S.setdefault(inv[r["REF_AREA"]], {})[int(r["TIME_PERIOD"])] = float(r["OBS_VALUE"])
+        else:
+            v = json.loads(b.decode("utf-8"))["values"]["GGCBP_G01_PGDP_PT"]
+            S = {p: {int(a): float(x) for a, x in v[ISO3[p]].items()} for p in ZONE_EURO if ISO3[p] in v}
+        if "FR" not in S:
+            fail("temoin %s : France absente" % cle)
+        T[cle] = S
+    return T
+
+
+def rang_temoin(S: dict, a0: int, a1: int, sauf: tuple = ()) -> tuple[int, list, int]:
+    """Rang de la France (plus bas solde moyen) à la précision affichée, ses ex aequo, et le nombre de pays comparés."""
+    ans = [a for a in range(a0, a1 + 1) if a not in sauf]
+    f = {"pays": [{"pays": p, "s": sum(S[p][a] for a in ans) / len(ans)} for p in ZONE_EURO
+                  if p in S and all(a in S[p] for a in ans)]}
+    r, ex = rang_bas(f, "s")
+    return r, ex, len(f["pays"])
+
+
 def zone_euro(R: dict, fin: int, S: dict, sauf: tuple = ()) -> dict:
     """Moyennes par pays de la zone euro sur cinq fenêtres : solde primaire, solde stabilisant, écart, taux implicite, croissance
     nominale (Eurostat, panel témoin) et solde primaire structurel (AMECO, témoin). Un pays dont une année manque (absente ou
@@ -714,10 +757,13 @@ def sous_fr(f: dict, cle: str, pays: list) -> list:
     return [d for d in f["pays"] if d["pays"] in pays and lg.depasse(x, d[cle], 2 if cle == "taux_implicite" else 1)]
 
 
-def affichage_ze(ze: dict, V: dict) -> dict:
+def affichage_ze(ze: dict, V: dict, T: dict) -> dict:
     """Jetons de la section #zone-euro (mêmes clés en français et en anglais). V : variantes de sensibilité (« complet » avec
-    les années écartées par le témoin, « sans2020 »)."""
+    les années écartées par le témoin, « sans2020 ») ; T : témoins structurels OCDE et FMI."""
     A = {}
+    d = ze["dix"]
+    A["ze_fmi_egaux"] = enumere([art(p) for p in rang_temoin(T["fmi"], d["debut"], d["fin"])[1]])
+    A["ze_ocde_ed"], A["ze_fmi_ed"] = TEMOINS_ED[LANG]["ocde"], TEMOINS_ED[LANG]["fmi"]
     for w, f in ze.items():
         p, x = "ze_%s_" % w, ze_fr(f)
         A[p + "lib"] = str(f["debut"]) if f["debut"] == f["fin"] else "%d-%d" % (f["debut"], f["fin"])
@@ -747,8 +793,11 @@ def affichage_ze(ze: dict, V: dict) -> dict:
     return A
 
 
-def gardes_ze(ze: dict, V: dict) -> int:
+def gardes_ze(ze: dict, V: dict, T: dict) -> int:
     d, c, a, d10 = ze["dix"], ze["cinq"], ze["av20"], ze["d2010"]
+    if "--mutation-struct" in sys.argv:   # témoin positif : solde sous-jacent OCDE de la France relevé de 3 points
+        T = dict(T, ocde=dict(T["ocde"], FR={a: v + 3 for a, v in T["ocde"]["FR"].items()}))
+    ro, rf = rang_temoin(T["ocde"], d["debut"], d["fin"]), rang_temoin(T["fmi"], d["debut"], d["fin"])
     vd, vs = V["complet"]["dix"], V["sans2020"]["dix"]
     exc = [e["pays"] for e in d["ecartes"]]
     stab_av = {x["pays"]: x["solde_stabilisant"] for x in a["pays"]}
@@ -787,6 +836,11 @@ def gardes_ze(ze: dict, V: dict) -> int:
          vs["n"] >= 18 and rb(vs, "solde_primaire") == (1, []) and rb(vs, "solde_structurel") == (1, []) and rb(vs, "croissance_nominale") == (1, [])),
         ("cinq ans : « la forte croissance nominale a abaissé le repère de tous les pays » par rapport aux cinq années d'avant 2020",
          all(x["pays"] in stab_av and x["solde_stabilisant"] < stab_av[x["pays"]] for x in c["pays"])),
+        # Rang structurel selon l'OCDE et le FMI (accord de l'auteur, 18/10/2026) : la page dit « le plus bas des pays qu'elle
+        # couvre » pour l'OCDE et « à égalité avec <ex aequo> » pour le FMI.
+        ("témoin OCDE, dix ans : au moins quinze pays couverts, solde structurel français le plus bas, sans ex aequo", ro[2] >= 15 and ro[:2] == (1, [])),
+        ("témoin FMI, dix ans : au moins dix-huit pays, la France en tête d'un groupe d'ex aequo à l'affichage (« à égalité avec »)",
+         rf[2] >= 18 and rf[0] == 1 and len(rf[1]) >= 1),
     ]
     if "--mutation-ze" in sys.argv:   # témoin positif : la France perd son rang (solde primaire relevé de 3 points)
         xd["solde_primaire"] += 3
@@ -1360,15 +1414,16 @@ def main() -> int:
     ze = ZE_COURANT = zone_euro(R, fin, S)
     V = dict(complet=zone_euro({p: {**R.get(p, {}), **REJETES.get(p, {})} for p in set(R) | set(REJETES)}, fin, S),
              sans2020=zone_euro(R, fin, S, sauf=(2020,)))
+    T = temoins_structurels()
     use("en")
     A_en = affichage(fin, dec, annees, cmp_, europe, cons)[0]
-    A_en.update(affichage_ze(ze, V))
+    A_en.update(affichage_ze(ze, V, T))
     use("fr")
     A, haut, bas, exc_ans = affichage(fin, dec, annees, cmp_, europe, cons)
-    A.update(affichage_ze(ze, V))
+    A.update(affichage_ze(ze, V, T))
     if set(A) != set(A_en):
         fail("blocs affichage et affichage_en : cles differentes (%s)" % sorted(set(A) ^ set(A_en)))
-    n = gardes(fin, dec, annees, cmp_, europe, haut, bas, exc_ans) + gardes_ze(ze, V)
+    n = gardes(fin, dec, annees, cmp_, europe, haut, bas, exc_ans) + gardes_ze(ze, V, T)
     # Une variation, deux pages (phase A du volet 5, B3) : la hausse du ratio de la dernière année doit être la même qu'au volet 4.
     if MONDE.is_file():
         m = json.loads(MONDE.read_text(encoding="utf-8"))
@@ -1407,10 +1462,11 @@ def main() -> int:
                                         "temoin": "ratios de dette et de solde primaire comparés à ceux publiés par Eurostat en %% du PIB ; tolérance %.2f point" % TOL}},
                "france": {"decennies": dec, "annees": annees}, "pays_dette_elevee": cmp_, "europe": europe, "zone_euro": ze, "conservation": cons, "affichage": A, "affichage_en": A_en}
     releve = payload["meta"]["releve_le"]
+    licence = "CC BY 4.0 — compilation Stéphane Lalut ; sources Eurostat, Commission européenne (AMECO), OCDE, FMI"   # nomme les sources : un changement s'écrit (rj.sans_licence, 18/10/2026)
     if OUT_DATA.exists():
         try:
             prev = json.loads(OUT_DATA.read_text(encoding="utf-8"))
-            p2 = dict(prev); p2.pop("releve_le", None); p2.pop("_licence", None); p2["meta"] = dict(p2["meta"], releve_le=None)
+            p2 = dict(prev); p2.pop("releve_le", None); rj.sans_licence(p2, licence); p2["meta"] = dict(p2["meta"], releve_le=None)
             n2 = json.loads(json.dumps(dict(payload, meta=dict(payload["meta"], releve_le=None)), ensure_ascii=False))
             if prev.get("releve_le") and json.dumps(p2, sort_keys=True, ensure_ascii=False) == json.dumps(n2, sort_keys=True, ensure_ascii=False) \
                     and all((OUT_IMG / f).exists() and (OUT_IMG / f).read_text(encoding="utf-8") == s for f, s in figs.items()) \
@@ -1423,7 +1479,7 @@ def main() -> int:
             pass
     releve = rj.releve(OUT_DATA, payload, releve)   # le texte seul ne date pas les données
     payload["meta"]["releve_le"] = releve
-    payload = {"releve_le": releve, "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; source Eurostat", **payload}
+    payload = {"releve_le": releve, "_licence": licence, **payload}
     txt = json.dumps(payload, ensure_ascii=False, indent=1)
     OUT_DATA.write_text(txt, encoding="utf-8")
     OUT_STATIC.write_text(txt, encoding="utf-8")

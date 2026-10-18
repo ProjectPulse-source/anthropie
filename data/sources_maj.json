@@ -219,6 +219,15 @@
    "cadence": "deux éditions par an (prévisions de printemps en mai-juin, d'automne en novembre)",
    "nature": "deux éditions par an : télécharger ameco0.zip, refaire l'extrait scripts/sources_dette/ameco_ublgbps_<date>.csv, mettre à jour AMECO, AMECO_SHA, AMECO_EDITION et SHA256SUMS",
    "revoir_avant": "2026-11-30"
+  },
+  {
+   "id": "insee-patrimoine-apu", "producteur": "Insee",
+   "objet": "compte de patrimoine des administrations publiques (tableau 8.204, comptes nationaux annuels) : patrimoine net de la page « générations futures »",
+   "mode": "manuel", "pages": ["/dette-publique-generations-futures/", "/en/public-debt-future-generations/"],
+   "generateurs": ["update_dette_generations.py"], "jeu": "data/dette_generations.json",
+   "cadence": "annuelle (comptes nationaux de fin mai ; corrections possibles en été)",
+   "nature": "télécharger T_8204_fr.xlsx sur insee.fr/fr/statistiques/8988859, l'archiver sous scripts/sources_generations/insee_T_8204_patrimoine_apu_<date>.xlsx, mettre à jour SOURCES[\"pat\"] et SHA256SUMS ; les témoins Eurostat (nama_10_nfa_bs, nasq_10_f_bs T4) doivent concorder",
+   "revoir_avant": "2027-06-30"
   }
  ]
 }

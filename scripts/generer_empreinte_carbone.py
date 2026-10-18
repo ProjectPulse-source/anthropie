@@ -292,12 +292,13 @@ def main() -> int:
                             "avertissement": "série révisée à chaque édition ; la dernière année est provisoire ; 1990-2009 rétropolées"}},
                "decomposition": j["decomposition"], "serie": j["serie"], "affichage": A}
     releve = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    licence = "CC BY 4.0 — compilation Stéphane Lalut ; source Insee-SDES"   # nomme les sources : un changement s'écrit (rj.sans_licence, 18/10/2026)
     if OUT_DATA.exists():
         try:
             prev = json.loads(OUT_DATA.read_text(encoding="utf-8"))
             p2 = dict(prev)
             ancien = p2.pop("releve_le", None)
-            p2.pop("_licence", None)
+            rj.sans_licence(p2, licence)
             if ancien and json.dumps(p2, sort_keys=True, ensure_ascii=False) == json.dumps(payload, sort_keys=True, ensure_ascii=False) \
                     and (OUT_IMG / (FIGURE + ".svg")).exists() and (OUT_IMG / (FIGURE + ".svg")).read_text(encoding="utf-8") == svg \
                     and (OUT_IMG / (FIGURE + ".png")).exists() and OUT_STATIC.exists() \
@@ -307,7 +308,7 @@ def main() -> int:
         except (ValueError, KeyError):
             pass
     releve = rj.releve(OUT_DATA, payload, releve)   # le texte seul ne date pas les données
-    payload = {"releve_le": releve, "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; source Insee-SDES", **payload}
+    payload = {"releve_le": releve, "_licence": licence, **payload}
     txt = json.dumps(payload, ensure_ascii=False, indent=1)
     OUT_DATA.write_text(txt, encoding="utf-8")
     OUT_STATIC.write_text(txt, encoding="utf-8")

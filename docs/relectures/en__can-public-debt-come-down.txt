@@ -1,10 +1,10 @@
-# relu le 2026-10-17 ; texte servi de /en/can-public-debt-come-down/, build de 003dce1 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-18 ; texte servi de /en/can-public-debt-come-down/, build de de89b3d + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Can public debt come down?
 Yes: what can fall is the weight of debt in GDP, even while its amount rises.
 In Portugal, public debt went from 235 to 275 billion euros from end-2015 to end-2025, and its weight from 131.0% to 89.7% of GDP.
 In France, it rose by 18.6 points over the same period: general government spent more than it took in, even leaving interest aside, and that deficit weighed more than the help from interest rates and growth.
-Page updated 17 October 2026 · revisions
+Page updated 18 October 2026 · revisions
 Public debt dossier
 Data · Eurostat 2025
 ↓ Charts, data and citations to reuseReuse this page
@@ -266,7 +266,9 @@ Whether the gap comes from spending rather than revenue, or the reverse: the pri
 Nor which adjustment would be desirable, nor whether it would have changed the rates paid.
 With the Commission’s structural indicator, the ranking is the same.
 France’s structural primary balance, which the European Commission computes net of estimated cyclical effects and of one-off measures, is also the lowest of the countries compared over the same period: −2.4% of potential GDP on average, against a median of −0.8% (AMECO database, spring 2026 edition).
-This check plays no part in the calculation, without being fully independent of it: the Commission starts from the same public accounts, and its adjustment rests on an estimate of potential GDP that it revises from one edition to the next and that other institutions estimate differently.
+This check plays no part in the calculation, without being fully independent of it: the Commission starts from the same public accounts, and its adjustment rests on an estimate of potential GDP that it revises from one edition to the next.
+The OECD, which makes its own estimate of potential output, also gives France the lowest structural balance of the countries it covers over the period; the IMF, whose indicator adjusts for the cycle without removing one-off measures, places it level with Finland and Slovakia.
+The structural ranking therefore depends on the estimate used; the ranking of the observed balance does not.
 The marker came down, not the balance.
 Over the last five years (2021-2025), strong nominal growth, the recovery after 2020 and then rising prices, lowered every country’s marker compared with the five years before 2020: France is no longer, on average, below its own (+0.1 points), and four countries have a less favourable gap.
 Its primary balance nonetheless remains the lowest of the countries compared, and its structural balance among the two lowest.
@@ -361,7 +363,7 @@ The page describes thirty observed years.
 The paths forecast by the Government, the European Commission or the IMF are conditional scenarios, which these data can neither confirm nor rule out.
 Tested against the research literature: the stabilising balance, the distinction between stabilising and reducing and the role of the primary balance in the gaps between euro-area countries are found again; reading the last year's zero gap as a lasting state, or the surplus as the only driver of falls, is challenged
 Measured here.
-The decade-by-decade decomposition of the French ratio, the stabilising balance year by year, the comparison of EU countries whose debt exceeded 90% of GDP and that of euro-area members over five periods, which separates implicit rate, nominal growth, marker and primary balance, on Eurostat series, checked against the European Commission’s structural primary balance.
+The decade-by-decade decomposition of the French ratio, the stabilising balance year by year, the comparison of EU countries whose debt exceeded 90% of GDP and that of euro-area members over five periods, which separates implicit rate, nominal growth, marker and primary balance, on Eurostat series, checked against the European Commission’s structural primary balance, and against those of the OECD and the IMF for the structural ranking.
 None of the texts read calculates these quantities on this source and these periods: they are validated by reproduction.
 The finding on the primary balance, however, is not new (below).
 Consistent with.
@@ -462,6 +464,8 @@ The identity is the one set out in Why does French public debt rise?; annual ter
 A year’s stabilising balance is that year’s interest-growth effect, excluding other adjustments.
 Changes and totals are computed before rounding: displayed figures may differ by 0.1 points.
 Structural primary balance: European Commission, AMECO database, series UBLGBPS (general government balance excluding interest, adjusted for the cycle and one-off measures, in % of potential GDP), spring 2026 edition, an extract archived with its hash; it serves as a check and enters no calculation.
+The same applies to the two other checks on the structural ranking: OECD, Economic Outlook No.
+119, series NLGXQU (underlying primary balance, excluding the cycle and one-off measures, in % of potential GDP, euro-area members that belong to the OECD); IMF, Fiscal Monitor, October 2026, series GGCBP_G01_PGDP_PT (cyclically adjusted primary balance only, in % of potential GDP).
 Check: for each country and each year, the calculated debt ratio and primary balance are compared with those Eurostat publishes as a percentage of GDP, which the calculation does not use.
 Beyond a gap of 0.11 points, the year is excluded and counted (ten out of 805, listed in the JSON file); for France and the compared countries, the script stops.
 A window containing a year of nominal growth above 35% (hyperinflation, series break) is excluded.

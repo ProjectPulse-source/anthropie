@@ -778,10 +778,11 @@ def main() -> int:
     # « Rien écrit à données identiques » : l'empreinte compare le paquet ENTIER, donc affichage_en compris (aucun
     # releve_le n'est logé dans les blocs d'affichage ici, contrairement à BLOCS_RELEVE de update_dette_insee.py) ;
     # figs et fiches couvrent les figures et fiches anglaises. Un paquet ancien sans affichage_en diffère : il est réécrit.
+    licence = "CC BY 4.0 — compilation Stéphane Lalut ; source Eurostat"   # nomme les sources : un changement s'écrit (rj.sans_licence, 18/10/2026)
     if OUT_DATA.exists():
         try:
             prev = json.loads(OUT_DATA.read_text(encoding="utf-8"))
-            p2 = dict(prev); p2.pop("releve_le", None); p2.pop("_licence", None); p2["meta"] = dict(p2["meta"], releve_le=None)
+            p2 = dict(prev); p2.pop("releve_le", None); rj.sans_licence(p2, licence); p2["meta"] = dict(p2["meta"], releve_le=None)
             n2 = dict(payload); n2["meta"] = dict(n2["meta"], releve_le=None)
             if prev.get("releve_le") and json.dumps(p2, sort_keys=True, ensure_ascii=False) == json.dumps(n2, sort_keys=True, ensure_ascii=False) \
                     and all((OUT_IMG / f).exists() and (OUT_IMG / f).read_text(encoding="utf-8") == s for f, s in figs.items()) \
@@ -794,7 +795,7 @@ def main() -> int:
             pass
     releve = rj.releve(OUT_DATA, payload, releve)   # le texte seul ne date pas les données
     payload["meta"]["releve_le"] = releve
-    payload = {"releve_le": releve, "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; source Eurostat", **payload}
+    payload = {"releve_le": releve, "_licence": licence, **payload}
     txt = json.dumps(payload, ensure_ascii=False, indent=1)
     OUT_DATA.write_text(txt, encoding="utf-8")
     OUT_STATIC.write_text(txt, encoding="utf-8")

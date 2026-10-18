@@ -1574,12 +1574,13 @@ def main() -> int:
     # À données identiques, on garde l'ancienne date et on n'écrit rien (même règle que
     # update_dette_insee.py : pas de faux « nouveau » dans le sitemap ni de diff vide dans le dépôt).
     releve = payload["meta"]["releve_le"]
+    licence = "CC BY 4.0 — compilation Stéphane Lalut ; sources Eurostat, OCDE, FMI, Banque mondiale"   # nomme les sources : un changement s'écrit (rj.sans_licence, 18/10/2026)
     if OUT_DATA.exists():
         try:
             prev = json.loads(OUT_DATA.read_text(encoding="utf-8"))
             p2 = dict(prev); p2.pop("releve_le", None); p2["meta"] = dict(p2["meta"], releve_le=None)
             n2 = dict(payload); n2["meta"] = dict(n2["meta"], releve_le=None)
-            p2.pop("_licence", None)
+            rj.sans_licence(p2, licence)
             if prev.get("releve_le") \
                     and json.dumps(p2, sort_keys=True, ensure_ascii=False) == json.dumps(n2, sort_keys=True, ensure_ascii=False) \
                     and all((OUT_IMG / nom).exists() and (OUT_IMG / nom).read_text(encoding="utf-8") == svg for nom, svg in figs.items()) \
@@ -1592,7 +1593,7 @@ def main() -> int:
             pass
     releve = rj.releve(OUT_DATA, payload, releve)   # le texte seul ne date pas les données
     payload["meta"]["releve_le"] = releve
-    payload = {"releve_le": releve, "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Eurostat, OCDE, FMI, Banque mondiale", **payload}
+    payload = {"releve_le": releve, "_licence": licence, **payload}
     txt = json.dumps(payload, ensure_ascii=False, indent=1)
     OUT_DATA.write_text(txt, encoding="utf-8")
     OUT_STATIC.write_text(txt, encoding="utf-8")
