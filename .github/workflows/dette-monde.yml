@@ -72,8 +72,15 @@ jobs:
       # apres une revision Eurostat. Pillow epingle a la version du poste ou la carte a ete validee.
       - name: Carte de partage (og-dette-monde.jpg) et vignettes de l'index (vig-*.jpg)
         run: |
-          python3 -m pip install --quiet pillow==12.2.0
-          python3 scripts/og_dossier_dette.py --monde
+          # Redessinee seulement si un jeu de ce passage a change (19/10/2026) : le serveur ne compresse pas le JPEG
+          # a l'octet pres comme le poste ; redessiner a donnees identiques produisait un commit d'images sans
+          # aucune donnee nouvelle (2a01a46, og- et vig-dette-generations).
+          if git diff --quiet -- data/dette_monde.json data/dette_dynamique.json data/dette_baisse.json data/dette_generations.json; then
+            echo "Jeux inchanges : cartes de partage et vignettes non redessinees."
+          else
+            python3 -m pip install --quiet pillow==12.2.0
+            python3 scripts/og_dossier_dette.py --monde
+          fi
 
       - name: Detecter un changement
         id: diff

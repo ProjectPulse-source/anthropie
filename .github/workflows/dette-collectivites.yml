@@ -55,8 +55,15 @@ jobs:
 
       - name: Carte de partage (og-collectivites.jpg) et vignette de l'index (vig-collectivites.jpg)
         run: |
-          python3 -m pip install --quiet pillow==12.2.0
-          python3 scripts/og_dossier_dette.py --collectivites
+          # Redessinee seulement si un jeu de ce passage a change (19/10/2026) : le serveur ne compresse pas le JPEG
+          # a l'octet pres comme le poste ; redessiner a donnees identiques produisait un commit d'images sans
+          # aucune donnee nouvelle (2a01a46, og- et vig-dette-generations).
+          if git diff --quiet -- data/dette_collectivites.json; then
+            echo "Jeu inchange : carte de partage et vignette non redessinees."
+          else
+            python3 -m pip install --quiet pillow==12.2.0
+            python3 scripts/og_dossier_dette.py --collectivites
+          fi
 
       - name: Detecter un changement
         id: diff
