@@ -72,7 +72,7 @@
 <text x="663.5" y="309.0" font-size="10" fill="#0A0A0E" text-anchor="start">0.06</text>
 <line x1="0" y1="354.0" x2="720" y2="354.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="369.0" font-size="11" fill="#52514e">Eurostat gov_10a_main, local government (S1313), France; percentage points computed on the GDP of the same accounts.</text>
-<text class="pied-source" x="0" y="383.0" font-size="11" fill="#52514e">Data retrieved on 7 October 2026.</text>
+<text class="pied-source" x="0" y="383.0" font-size="11" fill="#52514e">Data retrieved on 19 October 2026.</text>
 <text class="pied-note" x="0" y="397.0" font-size="11" fill="#52514e">Bars: each item's contribution to the change in the balance; for spending, the opposite of its change. Other spending</text>
 <text class="pied-note" x="0" y="411.0" font-size="11" fill="#52514e">rose by €8.7 billion (negative bar) and fell by 0.32 percentage points of GDP (positive bar): nominal GDP rose by</text>
 <text class="pied-note" x="0" y="425.0" font-size="11" fill="#52514e">8.1%. An accounting reading: the items add up to the balance; they do not say what decided it.</text>
