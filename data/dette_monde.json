@@ -1,9 +1,9 @@
 {
- "releve_le": "2026-10-15",
+ "releve_le": "2026-10-19",
  "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Eurostat, OCDE, FMI, Banque mondiale",
  "meta": {
   "annee": "2025",
-  "releve_le": "2026-10-15",
+  "releve_le": "2026-10-19",
   "page": "https://stephane-lalut.com/dette-publique-comparaison-internationale/",
   "licence": "CC BY 4.0",
   "definitions": {
@@ -259,9 +259,9 @@
    "stock_fin": 56.3,
    "stock_fin_prec": 57.4,
    "var_ratio": -1.04244792437,
-   "stock": 53.0077407822,
+   "stock": 52.4152336426,
    "prix": 2.63696128561,
-   "recettes": 47.0577606262,
+   "recettes": 46.5317608621,
    "charge": 2.97037849698,
    "inflation": 7.7,
    "inflation_fenetres": {
@@ -629,21 +629,21 @@
  "statistiques": {
   "charge_stock": {
    "n": 27,
-   "pente": 0.0424069780638,
-   "ordonnee": 1.02979167695,
-   "r2": 0.403972679083
+   "pente": 0.0424053201315,
+   "ordonnee": 1.03082427923,
+   "r2": 0.404091165887
   },
   "spearman_rho": 0.763125763126,
   "charge_stock_euro": {
    "n": 20,
-   "pente": 0.0461556421667,
-   "ordonnee": 0.2125257338,
-   "r2": 0.818276167082,
+   "pente": 0.0461286447995,
+   "ordonnee": 0.215738699509,
+   "r2": 0.817979840733,
    "stock_min": 22.3358678728,
    "stock_max": 146.953316983
   },
   "prix_moyen_euro": 2.18394095799,
-  "prix_stock_r2_euro": 0.0730045716729,
+  "prix_stock_r2_euro": 0.072447517357,
   "prix_inflation_euro": {
    "n": 20,
    "pente": 0.0815130551458,
@@ -666,7 +666,7 @@
    "ordonnee": 0.394203480567,
    "r2": 0.608150183998
   },
-  "prix_stock_r2": 0.00410468802656,
+  "prix_stock_r2": 0.00410267644163,
   "prix_euro_inflation": {
    "n": 27,
    "effet_euro": -1.3338998304,
@@ -722,7 +722,7 @@
   {
    "bas": "HR",
    "haut": "PL",
-   "ecart_stock": 1.60448481359,
+   "ecart_stock": 1.01197767395,
    "rapport_charge": 1.93648392896
   },
   {
