@@ -67,8 +67,25 @@ jobs:
         continue-on-error: true
         run: python3 -m pip install --quiet cairosvg
 
+      # Police : comme les PNG, accessoire ici (les donnees passent avant) ; sans Inter, les PNG ne se refont pas, et
+      # scripts/check-png-dette.py signale leur peremption.
+      - name: Police Inter pour le rendu des PNG
+        id: police
+        continue-on-error: true
+        run: |
+          mkdir -p ~/.local/share/fonts
+          cp scripts/polices/Inter-*.ttf ~/.local/share/fonts/
+          fc-cache -f
+          fc-match -f '%{family}\n' Inter | grep -q '^Inter'
+
       - name: Rapatrier et valider les series (gardes dures, exit 1 si echec)
-        run: python3 scripts/update_dette_insee.py --png
+        run: |
+          if [ "${{ steps.police.outcome }}" = "success" ]; then
+            python3 scripts/update_dette_insee.py --png
+          else
+            echo "Police Inter absente : PNG non rendus (perimes signales par check-png-dette.py)"
+            python3 scripts/update_dette_insee.py
+          fi
 
       - name: Detecter un changement
         id: diff
