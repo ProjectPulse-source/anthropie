@@ -1574,6 +1574,8 @@ def main() -> int:
     # À données identiques, on garde l'ancienne date et on n'écrit rien (même règle que
     # update_dette_insee.py : pas de faux « nouveau » dans le sitemap ni de diff vide dans le dépôt).
     releve = payload["meta"]["releve_le"]
+    # Bruit de calcul au 15e chiffre : le jeu se compare et s'écrit normalisé (organe commun releve_jeu.normalise, 19/10/2026).
+    payload = rj.normalise(payload)
     licence = "CC BY 4.0 — compilation Stéphane Lalut ; sources Eurostat, OCDE, FMI, Banque mondiale"   # nomme les sources : un changement s'écrit (rj.sans_licence, 18/10/2026)
     if OUT_DATA.exists():
         try:

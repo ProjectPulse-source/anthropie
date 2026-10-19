@@ -1044,6 +1044,8 @@ def main() -> int:
     # « Rien écrit à données identiques » : l'empreinte compare le paquet ENTIER, donc affichage_en compris (aucun
     # releve_le n'est logé dans les blocs d'affichage ici, contrairement à BLOCS_RELEVE de update_dette_insee.py) ;
     # figs et fiches couvrent les figures et fiches anglaises. Un paquet ancien sans affichage_en diffère : il est réécrit.
+    # Bruit de calcul au 15e chiffre : le jeu se compare et s'écrit normalisé (organe commun releve_jeu.normalise, 19/10/2026).
+    payload = rj.normalise(payload)
     licence = "CC BY 4.0 — compilation Stéphane Lalut ; source Eurostat"   # nomme les sources : un changement s'écrit (rj.sans_licence, 18/10/2026)
     if OUT_DATA.exists():
         try:

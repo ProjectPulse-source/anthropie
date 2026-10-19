@@ -65,629 +65,629 @@
  "france": {
   "periodes": [
    {
-    "besoin": 124.47497915411506,
-    "desepargne": 81.73406701860016,
-    "investissement_net": 18.46782224000633,
-    "actifs": 22.96737728723832,
-    "transferts": 19.773534848276586,
-    "aides_investissement": 25.483145101673124,
+    "besoin": 124.474979154,
+    "desepargne": 81.7340670186,
+    "investissement_net": 18.46782224,
+    "actifs": 22.9673772872,
+    "transferts": 19.7735348483,
+    "aides_investissement": 25.4831451017,
     "besoin_meur": 2643912.1,
     "actifs_meur": 447059.0,
     "debut": 1996,
     "fin": 2025,
     "annees": 30,
-    "part_actifs": 18.451400790195702,
-    "part_desepargne": 65.66304937268036,
-    "part_transferts": 15.885549837123943,
-    "part_actifs_euros": 16.90899633161027,
-    "part_investissement_net": 14.836573876538623
+    "part_actifs": 18.4514007902,
+    "part_desepargne": 65.6630493727,
+    "part_transferts": 15.8855498371,
+    "part_actifs_euros": 16.9089963316,
+    "part_investissement_net": 14.8365738765
    },
    {
-    "besoin": 28.59907108087101,
-    "desepargne": 14.373063088961015,
-    "investissement_net": 7.649304989969608,
-    "actifs": 9.116857440647816,
-    "transferts": 5.109150551262179,
-    "aides_investissement": 6.1727923907621545,
+    "besoin": 28.5990710809,
+    "desepargne": 14.373063089,
+    "investissement_net": 7.64930498997,
+    "actifs": 9.11685744065,
+    "transferts": 5.10915055126,
+    "aides_investissement": 6.17279239076,
     "besoin_meur": 429756.2,
     "actifs_meur": 138248.2,
     "debut": 1996,
     "fin": 2005,
     "annees": 10,
-    "part_actifs": 31.878159311075617,
-    "part_desepargne": 50.25709768096171,
-    "part_transferts": 17.864743007962673,
-    "part_actifs_euros": 32.16898325143419,
-    "part_investissement_net": 26.746690367457354
+    "part_actifs": 31.8781593111,
+    "part_desepargne": 50.257097681,
+    "part_transferts": 17.864743008,
+    "part_actifs_euros": 32.1689832514,
+    "part_investissement_net": 26.7466903675
    },
    {
-    "besoin": 47.55958752945817,
-    "desepargne": 30.55378211636885,
-    "investissement_net": 7.519453835742066,
-    "actifs": 9.028368459705156,
-    "transferts": 7.977436953384165,
-    "aides_investissement": 8.644958529623365,
+    "besoin": 47.5595875295,
+    "desepargne": 30.5537821164,
+    "investissement_net": 7.51945383574,
+    "actifs": 9.02836845971,
+    "transferts": 7.97743695338,
+    "aides_investissement": 8.64495852962,
     "besoin_meur": 968552.3,
-    "actifs_meur": 180991.49999999997,
+    "actifs_meur": 180991.5,
     "debut": 2006,
     "fin": 2015,
     "annees": 10,
-    "part_actifs": 18.98327746032917,
-    "part_desepargne": 64.24316042994273,
-    "part_transferts": 16.773562109728097,
-    "part_actifs_euros": 18.68680710375681,
-    "part_investissement_net": 15.81059514253473
+    "part_actifs": 18.9832774603,
+    "part_desepargne": 64.2431604299,
+    "part_transferts": 16.7735621097,
+    "part_actifs_euros": 18.6868071038,
+    "part_investissement_net": 15.8105951425
    },
    {
-    "besoin": 48.31632054378588,
-    "desepargne": 36.80722181327029,
-    "investissement_net": 3.2990634142946575,
-    "actifs": 4.8221513868853485,
-    "transferts": 6.6869473436302425,
-    "aides_investissement": 10.665394181287605,
+    "besoin": 48.3163205438,
+    "desepargne": 36.8072218133,
+    "investissement_net": 3.29906341429,
+    "actifs": 4.82215138689,
+    "transferts": 6.68694734363,
+    "aides_investissement": 10.6653941813,
     "besoin_meur": 1245603.6,
-    "actifs_meur": 127819.29999999999,
+    "actifs_meur": 127819.3,
     "debut": 2016,
     "fin": 2025,
     "annees": 10,
-    "part_actifs": 9.980377919124352,
-    "part_desepargne": 76.1796871098956,
-    "part_transferts": 13.839934970980057,
-    "part_actifs_euros": 10.261635403108981,
-    "part_investissement_net": 6.828051840795566
+    "part_actifs": 9.98037791912,
+    "part_desepargne": 76.1796871099,
+    "part_transferts": 13.839934971,
+    "part_actifs_euros": 10.2616354031,
+    "part_investissement_net": 6.8280518408
    }
   ],
   "annees": [
    {
     "annee": 1996,
-    "besoin": 3.89615180428782,
-    "desepargne": 2.3189096163993796,
-    "investissement_net": 0.8876608493841887,
-    "actifs": 1.0176876181861043,
-    "transferts": 0.5595545697023353,
-    "aides_investissement": 0.8199369032554006
+    "besoin": 3.89615180429,
+    "desepargne": 2.3189096164,
+    "investissement_net": 0.887660849384,
+    "actifs": 1.01768761819,
+    "transferts": 0.559554569702,
+    "aides_investissement": 0.819936903255
    },
    {
     "annee": 1997,
-    "besoin": 3.7114406874942327,
-    "desepargne": 2.3218670837245834,
-    "investissement_net": 0.5389134731469856,
-    "actifs": 0.520986392632528,
-    "transferts": 0.8685872111371211,
-    "aides_investissement": 0.6682102151792437
+    "besoin": 3.71144068749,
+    "desepargne": 2.32186708372,
+    "investissement_net": 0.538913473147,
+    "actifs": 0.520986392633,
+    "transferts": 0.868587211137,
+    "aides_investissement": 0.668210215179
    },
    {
     "annee": 1998,
-    "besoin": 2.3913146819696385,
-    "desepargne": 1.1277721905225957,
-    "investissement_net": 0.4941180315497533,
-    "actifs": 0.7163612162951106,
-    "transferts": 0.5471812751519327,
-    "aides_investissement": 0.6277788754217057
+    "besoin": 2.39131468197,
+    "desepargne": 1.12777219052,
+    "investissement_net": 0.49411803155,
+    "actifs": 0.716361216295,
+    "transferts": 0.547181275152,
+    "aides_investissement": 0.627778875422
    },
    {
     "annee": 1999,
-    "besoin": 1.5442304329003087,
-    "desepargne": 0.11165840469971645,
-    "investissement_net": 0.5965603649218574,
-    "actifs": 0.7798957529953807,
-    "transferts": 0.6526762752052113,
-    "aides_investissement": 0.5589801225389708
+    "besoin": 1.5442304329,
+    "desepargne": 0.1116584047,
+    "investissement_net": 0.596560364922,
+    "actifs": 0.779895752995,
+    "transferts": 0.652676275205,
+    "aides_investissement": 0.558980122539
    },
    {
     "annee": 2000,
-    "besoin": 1.3126553680751563,
-    "desepargne": -0.056796087184606624,
-    "investissement_net": 0.8619242261880928,
-    "actifs": 0.9764868678135372,
-    "transferts": 0.39296458744622564,
-    "aides_investissement": 0.49710318917257146
+    "besoin": 1.31265536808,
+    "desepargne": -0.0567960871846,
+    "investissement_net": 0.861924226188,
+    "actifs": 0.976486867814,
+    "transferts": 0.392964587446,
+    "aides_investissement": 0.497103189173
    },
    {
     "annee": 2001,
-    "besoin": 1.4173590637297222,
-    "desepargne": -0.03378928167385696,
-    "investissement_net": 0.791826000231362,
-    "actifs": 0.9576614418546592,
-    "transferts": 0.4934869035489204,
-    "aides_investissement": 0.5028394107201561
+    "besoin": 1.41735906373,
+    "desepargne": -0.0337892816739,
+    "investissement_net": 0.791826000231,
+    "actifs": 0.957661441855,
+    "transferts": 0.493486903549,
+    "aides_investissement": 0.50283941072
    },
    {
     "annee": 2002,
-    "besoin": 3.175565312703934,
-    "desepargne": 1.7492729657296,
-    "investissement_net": 0.7112137512434034,
-    "actifs": 0.9464243852679737,
-    "transferts": 0.47986796170636054,
-    "aides_investissement": 0.5701722706911736
+    "besoin": 3.1755653127,
+    "desepargne": 1.74927296573,
+    "investissement_net": 0.711213751243,
+    "actifs": 0.946424385268,
+    "transferts": 0.479867961706,
+    "aides_investissement": 0.570172270691
    },
    {
     "annee": 2003,
-    "besoin": 4.087805497459492,
-    "desepargne": 2.7675054074028873,
-    "investissement_net": 0.8394742568172728,
-    "actifs": 0.982899107632128,
-    "transferts": 0.3374009824244768,
-    "aides_investissement": 0.5719241601343267
+    "besoin": 4.08780549746,
+    "desepargne": 2.7675054074,
+    "investissement_net": 0.839474256817,
+    "actifs": 0.982899107632,
+    "transferts": 0.337400982424,
+    "aides_investissement": 0.571924160134
    },
    {
     "annee": 2004,
-    "besoin": 3.5551863442658136,
-    "desepargne": 2.177662035672257,
-    "investissement_net": 0.9273348159433246,
-    "actifs": 1.063900412002066,
-    "transferts": 0.3136238965914907,
-    "aides_investissement": 0.647830208925375
+    "besoin": 3.55518634427,
+    "desepargne": 2.17766203567,
+    "investissement_net": 0.927334815943,
+    "actifs": 1.063900412,
+    "transferts": 0.313623896591,
+    "aides_investissement": 0.647830208925
    },
    {
     "annee": 2005,
-    "besoin": 3.5073618879848905,
-    "desepargne": 1.8890007536684585,
-    "investissement_net": 1.000279220543368,
-    "actifs": 1.154554245968328,
-    "transferts": 0.4638068883481039,
-    "aides_investissement": 0.7080170347232312
+    "besoin": 3.50736188798,
+    "desepargne": 1.88900075367,
+    "investissement_net": 1.00027922054,
+    "actifs": 1.15455424597,
+    "transferts": 0.463806888348,
+    "aides_investissement": 0.708017034723
    },
    {
     "annee": 2006,
-    "besoin": 2.657748747170265,
-    "desepargne": 0.9662999500005687,
-    "investissement_net": 0.928060948385744,
-    "actifs": 1.0571548210990014,
-    "transferts": 0.6342939760706947,
-    "aides_investissement": 0.6615309359969361
+    "besoin": 2.65774874717,
+    "desepargne": 0.966299950001,
+    "investissement_net": 0.928060948386,
+    "actifs": 1.0571548211,
+    "transferts": 0.634293976071,
+    "aides_investissement": 0.661530935997
    },
    {
     "annee": 2007,
-    "besoin": 2.98964949253719,
-    "desepargne": 1.1250977874745338,
-    "investissement_net": 0.9288055582503731,
-    "actifs": 1.075027504339803,
-    "transferts": 0.7895242007228533,
-    "aides_investissement": 0.9024003599817534
+    "besoin": 2.98964949254,
+    "desepargne": 1.12509778747,
+    "investissement_net": 0.92880555825,
+    "actifs": 1.07502750434,
+    "transferts": 0.789524200723,
+    "aides_investissement": 0.902400359982
    },
    {
     "annee": 2008,
-    "besoin": 3.5020150753768844,
-    "desepargne": 1.5399045226130652,
-    "investissement_net": 0.9130050251256279,
-    "actifs": 1.062437185929648,
-    "transferts": 0.8996733668341708,
-    "aides_investissement": 0.9504874371859297
+    "besoin": 3.50201507538,
+    "desepargne": 1.53990452261,
+    "investissement_net": 0.913005025126,
+    "actifs": 1.06243718593,
+    "transferts": 0.899673366834,
+    "aides_investissement": 0.950487437186
    },
    {
     "annee": 2009,
-    "besoin": 7.3783938755269025,
-    "desepargne": 5.252004297875857,
-    "investissement_net": 1.101547648565997,
-    "actifs": 1.2916253409372673,
-    "transferts": 0.8347642367137778,
-    "aides_investissement": 0.9416119100752127
+    "besoin": 7.37839387553,
+    "desepargne": 5.25200429788,
+    "investissement_net": 1.10154764857,
+    "actifs": 1.29162534094,
+    "transferts": 0.834764236714,
+    "aides_investissement": 0.941611910075
    },
    {
     "annee": 2010,
-    "besoin": 7.152060919554626,
-    "desepargne": 5.103124882582067,
-    "investissement_net": 1.0335834074370944,
-    "actifs": 1.1859123529927473,
-    "transferts": 0.8630236839798102,
-    "aides_investissement": 0.9302155480129755
+    "besoin": 7.15206091955,
+    "desepargne": 5.10312488258,
+    "investissement_net": 1.03358340744,
+    "actifs": 1.18591235299,
+    "transferts": 0.86302368398,
+    "aides_investissement": 0.930215548013
    },
    {
     "annee": 2011,
-    "besoin": 5.304462691930377,
-    "desepargne": 3.7999292967842644,
-    "investissement_net": 0.6847737375863248,
-    "actifs": 0.8136301057978098,
-    "transferts": 0.6909032893483037,
-    "aides_investissement": 0.8074132661151687
+    "besoin": 5.30446269193,
+    "desepargne": 3.79992929678,
+    "investissement_net": 0.684773737586,
+    "actifs": 0.813630105798,
+    "transferts": 0.690903289348,
+    "aides_investissement": 0.807413266115
    },
    {
     "annee": 2012,
-    "besoin": 5.171089989067594,
-    "desepargne": 3.4506942771755025,
-    "investissement_net": 0.674193729118651,
-    "actifs": 0.8708525217079839,
-    "transferts": 0.8495431901841078,
-    "aides_investissement": 0.8503620431482837
+    "besoin": 5.17108998907,
+    "desepargne": 3.45069427718,
+    "investissement_net": 0.674193729119,
+    "actifs": 0.870852521708,
+    "transferts": 0.849543190184,
+    "aides_investissement": 0.850362043148
    },
    {
     "annee": 2013,
-    "besoin": 4.938415885664267,
-    "desepargne": 3.325924186172862,
-    "investissement_net": 0.6822027663331376,
-    "actifs": 0.8469678619399047,
-    "transferts": 0.7655238375515008,
-    "aides_investissement": 0.834116222212161
+    "besoin": 4.93841588566,
+    "desepargne": 3.32592418617,
+    "investissement_net": 0.682202766333,
+    "actifs": 0.84696786194,
+    "transferts": 0.765523837552,
+    "aides_investissement": 0.834116222212
    },
    {
     "annee": 2014,
-    "besoin": 4.573640279458967,
-    "desepargne": 3.2407963289785693,
-    "investissement_net": 0.3965254746061828,
-    "actifs": 0.5320018776700723,
-    "transferts": 0.8008420728103252,
-    "aides_investissement": 0.8381308175154487
+    "besoin": 4.57364027946,
+    "desepargne": 3.24079632898,
+    "investissement_net": 0.396525474606,
+    "actifs": 0.53200187767,
+    "transferts": 0.80084207281,
+    "aides_investissement": 0.838130817515
    },
    {
     "annee": 2015,
-    "besoin": 3.8921105731710974,
-    "desepargne": 2.7500065867115593,
-    "investissement_net": 0.17675554033293395,
-    "actifs": 0.292758887290918,
-    "transferts": 0.8493450991686207,
-    "aides_investissement": 0.9286899893794954
+    "besoin": 3.89211057317,
+    "desepargne": 2.75000658671,
+    "investissement_net": 0.176755540333,
+    "actifs": 0.292758887291,
+    "transferts": 0.849345099169,
+    "aides_investissement": 0.928689989379
    },
    {
     "annee": 2016,
-    "besoin": 3.764875198212758,
-    "desepargne": 2.6779770223302157,
-    "investissement_net": 0.17096368477909785,
-    "actifs": 0.2931913385449274,
-    "transferts": 0.7937068373376156,
-    "aides_investissement": 0.9354656448394786
+    "besoin": 3.76487519821,
+    "desepargne": 2.67797702233,
+    "investissement_net": 0.170963684779,
+    "actifs": 0.293191338545,
+    "transferts": 0.793706837338,
+    "aides_investissement": 0.935465644839
    },
    {
     "annee": 2017,
-    "besoin": 3.3624967872928213,
-    "desepargne": 1.9069015277431718,
-    "investissement_net": 0.10368371514185393,
-    "actifs": 0.22578186056436256,
-    "transferts": 1.2298133989852864,
-    "aides_investissement": 0.9418326547193959
+    "besoin": 3.36249678729,
+    "desepargne": 1.90690152774,
+    "investissement_net": 0.103683715142,
+    "actifs": 0.225781860564,
+    "transferts": 1.22981339899,
+    "aides_investissement": 0.941832654719
    },
    {
     "annee": 2018,
-    "besoin": 2.3188018152615966,
-    "desepargne": 1.4966822523746872,
-    "investissement_net": 0.17763716250955808,
-    "actifs": 0.30322714587942506,
-    "transferts": 0.5188924170074847,
-    "aides_investissement": 0.8832990923267454
+    "besoin": 2.31880181526,
+    "desepargne": 1.49668225237,
+    "investissement_net": 0.17763716251,
+    "actifs": 0.303227145879,
+    "transferts": 0.518892417007,
+    "aides_investissement": 0.883299092327
    },
    {
     "annee": 2019,
-    "besoin": 2.393936864748765,
-    "desepargne": 1.2929573839726636,
-    "investissement_net": 0.4376395594618385,
-    "actifs": 0.5851516750013465,
-    "transferts": 0.5158278057747553,
-    "aides_investissement": 0.8873011219850941
+    "besoin": 2.39393686475,
+    "desepargne": 1.29295738397,
+    "investissement_net": 0.437639559462,
+    "actifs": 0.585151675001,
+    "transferts": 0.515827805775,
+    "aides_investissement": 0.887301121985
    },
    {
     "annee": 2020,
-    "besoin": 8.932689636609274,
-    "desepargne": 7.54798393288806,
-    "investissement_net": 0.1919529857532063,
-    "actifs": 0.4191174821289614,
-    "transferts": 0.9655882215922522,
-    "aides_investissement": 1.0985318400397537
+    "besoin": 8.93268963661,
+    "desepargne": 7.54798393289,
+    "investissement_net": 0.191952985753,
+    "actifs": 0.419117482129,
+    "transferts": 0.965588221592,
+    "aides_investissement": 1.09853184004
    },
    {
     "annee": 2021,
-    "besoin": 6.584632522919722,
-    "desepargne": 5.529583725063814,
-    "investissement_net": 0.26471012741905975,
-    "actifs": 0.4041980748789318,
-    "transferts": 0.6508507229769763,
-    "aides_investissement": 1.277858715474889
+    "besoin": 6.58463252292,
+    "desepargne": 5.52958372506,
+    "investissement_net": 0.264710127419,
+    "actifs": 0.404198074879,
+    "transferts": 0.650850722977,
+    "aides_investissement": 1.27785871547
    },
    {
     "annee": 2022,
-    "besoin": 4.743630079461281,
-    "desepargne": 3.753576209769642,
-    "investissement_net": 0.24315777297412122,
-    "actifs": 0.4266395176784295,
-    "transferts": 0.5634143520132087,
-    "aides_investissement": 1.1691422409294359
+    "besoin": 4.74363007946,
+    "desepargne": 3.75357620977,
+    "investissement_net": 0.243157772974,
+    "actifs": 0.426639517678,
+    "transferts": 0.563414352013,
+    "aides_investissement": 1.16914224093
    },
    {
     "annee": 2023,
-    "besoin": 5.360960764704678,
-    "desepargne": 4.417776532504113,
-    "investissement_net": 0.4185013476480215,
-    "actifs": 0.5171171412782586,
-    "transferts": 0.4260670909223081,
-    "aides_investissement": 1.1570576316259362
+    "besoin": 5.3609607647,
+    "desepargne": 4.4177765325,
+    "investissement_net": 0.418501347648,
+    "actifs": 0.517117141278,
+    "transferts": 0.426067090922,
+    "aides_investissement": 1.15705763163
    },
    {
     "annee": 2024,
-    "besoin": 5.761652555365225,
-    "desepargne": 4.52200436353329,
-    "investissement_net": 0.5824233553962954,
-    "actifs": 0.7543720504927033,
-    "transferts": 0.48527614133923114,
-    "aides_investissement": 1.1802798820946596
+    "besoin": 5.76165255537,
+    "desepargne": 4.52200436353,
+    "investissement_net": 0.582423355396,
+    "actifs": 0.754372050493,
+    "transferts": 0.485276141339,
+    "aides_investissement": 1.18027988209
    },
    {
     "annee": 2025,
-    "besoin": 5.09264431920976,
-    "desepargne": 3.6617788630906327,
-    "investissement_net": 0.708393703211605,
-    "actifs": 0.8933551004380021,
-    "transferts": 0.5375103556811243,
-    "aides_investissement": 1.1346253572522158
+    "besoin": 5.09264431921,
+    "desepargne": 3.66177886309,
+    "investissement_net": 0.708393703212,
+    "actifs": 0.893355100438,
+    "transferts": 0.537510355681,
+    "aides_investissement": 1.13462535725
    }
   ],
   "patrimoine": [
    {
     "annee": 1995,
-    "actifs_produits": 59.90260355478077,
-    "actifs_non_produits": 8.497184878588106,
-    "terrains": 7.717321276452008,
-    "valeur_financiere_nette": -31.323724956788666,
+    "actifs_produits": 59.9026035548,
+    "actifs_non_produits": 8.49718487859,
+    "terrains": 7.71732127645,
+    "valeur_financiere_nette": -31.3237249568,
     "patrimoine_net_meur": 450030.0,
-    "patrimoine_net": 37.0760634765802
+    "patrimoine_net": 37.0760634766
    },
    {
     "annee": 1996,
-    "actifs_produits": 60.00004811648038,
-    "actifs_non_produits": 8.303461018433424,
-    "terrains": 7.479386097865713,
-    "valeur_financiere_nette": -36.7455937333096,
+    "actifs_produits": 60.0000481165,
+    "actifs_non_produits": 8.30346101843,
+    "terrains": 7.47938609787,
+    "valeur_financiere_nette": -36.7455937333,
     "patrimoine_net_meur": 393519.0,
-    "patrimoine_net": 31.557915401604212
+    "patrimoine_net": 31.5579154016
    },
    {
     "annee": 1997,
-    "actifs_produits": 59.1675073216461,
-    "actifs_non_produits": 7.973596325878966,
-    "terrains": 7.222085666942448,
-    "valeur_financiere_nette": -37.03143985007006,
+    "actifs_produits": 59.1675073216,
+    "actifs_non_produits": 7.97359632588,
+    "terrains": 7.22208566694,
+    "valeur_financiere_nette": -37.0314398501,
     "patrimoine_net_meur": 388315.0,
-    "patrimoine_net": 30.109663797455013
+    "patrimoine_net": 30.1096637975
    },
    {
     "annee": 1998,
-    "actifs_produits": 57.604221290958,
-    "actifs_non_produits": 8.888464686649069,
-    "terrains": 8.144732522331278,
-    "valeur_financiere_nette": -38.839932319110346,
+    "actifs_produits": 57.604221291,
+    "actifs_non_produits": 8.88846468665,
+    "terrains": 8.14473252233,
+    "valeur_financiere_nette": -38.8399323191,
     "patrimoine_net_meur": 372294.0,
-    "patrimoine_net": 27.65275365849672
+    "patrimoine_net": 27.6527536585
    },
    {
     "annee": 1999,
-    "actifs_produits": 56.81038857526226,
-    "actifs_non_produits": 11.438714745675728,
-    "terrains": 10.675784934644925,
-    "valeur_financiere_nette": -31.92944404464616,
+    "actifs_produits": 56.8103885753,
+    "actifs_non_produits": 11.4387147457,
+    "terrains": 10.6757849346,
+    "valeur_financiere_nette": -31.9294440446,
     "patrimoine_net_meur": 506713.0,
-    "patrimoine_net": 36.31965927629183
+    "patrimoine_net": 36.3196592763
    },
    {
     "annee": 2000,
-    "actifs_produits": 55.373843667904744,
-    "actifs_non_produits": 13.233305078936992,
-    "terrains": 12.498668152454298,
-    "valeur_financiere_nette": -33.37260445586987,
+    "actifs_produits": 55.3738436679,
+    "actifs_non_produits": 13.2333050789,
+    "terrains": 12.4986681525,
+    "valeur_financiere_nette": -33.3726044559,
     "patrimoine_net_meur": 519187.0,
-    "patrimoine_net": 35.23454429097186
+    "patrimoine_net": 35.234544291
    },
    {
     "annee": 2001,
-    "actifs_produits": 54.991173612204925,
-    "actifs_non_produits": 15.138317110774599,
-    "terrains": 14.31861658707341,
-    "valeur_financiere_nette": -36.24688004674293,
+    "actifs_produits": 54.9911736122,
+    "actifs_non_produits": 15.1383171108,
+    "terrains": 14.3186165871,
+    "valeur_financiere_nette": -36.2468800467,
     "patrimoine_net_meur": 518428.0,
-    "patrimoine_net": 33.882610676236595
+    "patrimoine_net": 33.8826106762
    },
    {
     "annee": 2002,
-    "actifs_produits": 55.226473551158506,
-    "actifs_non_produits": 18.35573042392909,
-    "terrains": 17.521494237580228,
-    "valeur_financiere_nette": -40.41410858312267,
+    "actifs_produits": 55.2264735512,
+    "actifs_non_produits": 18.3557304239,
+    "terrains": 17.5214942376,
+    "valeur_financiere_nette": -40.4141085831,
     "patrimoine_net_meur": 523502.0,
-    "patrimoine_net": 33.168095391964926
+    "patrimoine_net": 33.168095392
    },
    {
     "annee": 2003,
-    "actifs_produits": 56.00121554841759,
-    "actifs_non_produits": 22.96998174828162,
-    "terrains": 22.074285295131087,
-    "valeur_financiere_nette": -41.81973515591628,
+    "actifs_produits": 56.0012155484,
+    "actifs_non_produits": 22.9699817483,
+    "terrains": 22.0742852951,
+    "valeur_financiere_nette": -41.8197351559,
     "patrimoine_net_meur": 602713.0,
-    "patrimoine_net": 37.15146214078294
+    "patrimoine_net": 37.1514621408
    },
    {
     "annee": 2004,
-    "actifs_produits": 56.15691925278343,
-    "actifs_non_produits": 28.472597263853483,
-    "terrains": 27.647885629924506,
-    "valeur_financiere_nette": -43.507547868414036,
+    "actifs_produits": 56.1569192528,
+    "actifs_non_produits": 28.4725972639,
+    "terrains": 27.6478856299,
+    "valeur_financiere_nette": -43.5075478684,
     "patrimoine_net_meur": 697473.0,
-    "patrimoine_net": 41.121968648222875
+    "patrimoine_net": 41.1219686482
    },
    {
     "annee": 2005,
-    "actifs_produits": 56.85378604896121,
-    "actifs_non_produits": 34.57227044893215,
-    "terrains": 33.71400779093419,
-    "valeur_financiere_nette": -41.161818520267325,
+    "actifs_produits": 56.853786049,
+    "actifs_non_produits": 34.5722704489,
+    "terrains": 33.7140077909,
+    "valeur_financiere_nette": -41.1618185203,
     "patrimoine_net_meur": 885680.0,
-    "patrimoine_net": 50.264237977626046
+    "patrimoine_net": 50.2642379776
    },
    {
     "annee": 2006,
-    "actifs_produits": 56.98597144886217,
-    "actifs_non_produits": 37.73272351722976,
-    "terrains": 36.88154143425238,
-    "valeur_financiere_nette": -36.809386242085004,
+    "actifs_produits": 56.9859714489,
+    "actifs_non_produits": 37.7327235172,
+    "terrains": 36.8815414343,
+    "valeur_financiere_nette": -36.8093862421,
     "patrimoine_net_meur": 1069018.0,
-    "patrimoine_net": 57.90930872400693
+    "patrimoine_net": 57.909308724
    },
    {
     "annee": 2007,
-    "actifs_produits": 57.66824089879847,
-    "actifs_non_produits": 38.15718859204614,
-    "terrains": 37.318899661278635,
-    "valeur_financiere_nette": -34.275051654491826,
+    "actifs_produits": 57.6682408988,
+    "actifs_non_produits": 38.157188592,
+    "terrains": 37.3188996613,
+    "valeur_financiere_nette": -34.2750516545,
     "patrimoine_net_meur": 1192770.0,
-    "patrimoine_net": 61.55037783635279
+    "patrimoine_net": 61.5503778364
    },
    {
     "annee": 2008,
-    "actifs_produits": 58.302261306532664,
-    "actifs_non_produits": 33.564472361809045,
-    "terrains": 32.764522613065324,
-    "valeur_financiere_nette": -42.73889447236181,
+    "actifs_produits": 58.3022613065,
+    "actifs_non_produits": 33.5644723618,
+    "terrains": 32.7645226131,
+    "valeur_financiere_nette": -42.7388944724,
     "patrimoine_net_meur": 977644.0,
-    "patrimoine_net": 49.1278391959799
+    "patrimoine_net": 49.127839196
    },
    {
     "annee": 2009,
-    "actifs_produits": 61.77106579056121,
-    "actifs_non_produits": 35.15951731548062,
-    "terrains": 34.23939995040913,
-    "valeur_financiere_nette": -49.90174807835358,
+    "actifs_produits": 61.7710657906,
+    "actifs_non_produits": 35.1595173155,
+    "terrains": 34.2393999504,
+    "valeur_financiere_nette": -49.9017480784,
     "patrimoine_net_meur": 910403.0,
-    "patrimoine_net": 47.02883502768826
+    "patrimoine_net": 47.0288350277
    },
    {
     "annee": 2010,
-    "actifs_produits": 62.90795686534825,
-    "actifs_non_produits": 39.12478238543141,
-    "terrains": 38.223914432072945,
-    "valeur_financiere_nette": -55.78021867915785,
+    "actifs_produits": 62.9079568653,
+    "actifs_non_produits": 39.1247823854,
+    "terrains": 38.2239144321,
+    "valeur_financiere_nette": -55.7802186792,
     "patrimoine_net_meur": 923235.0,
-    "patrimoine_net": 46.25252057162181
+    "patrimoine_net": 46.2525205716
    },
    {
     "annee": 2011,
-    "actifs_produits": 63.43363523638781,
-    "actifs_non_produits": 39.98543261590745,
-    "terrains": 38.93642578271806,
-    "valeur_financiere_nette": -59.56547103229119,
+    "actifs_produits": 63.4336352364,
+    "actifs_non_produits": 39.9854326159,
+    "terrains": 38.9364257827,
+    "valeur_financiere_nette": -59.5654710323,
     "patrimoine_net_meur": 904323.0,
-    "patrimoine_net": 43.853596820004064
+    "patrimoine_net": 43.85359682
    },
    {
     "annee": 2012,
-    "actifs_produits": 64.39881108295938,
-    "actifs_non_produits": 38.50950563787448,
-    "terrains": 37.446768571561286,
-    "valeur_financiere_nette": -66.25210040573924,
+    "actifs_produits": 64.398811083,
+    "actifs_non_produits": 38.5095056379,
+    "terrains": 37.4467685716,
+    "valeur_financiere_nette": -66.2521004057,
     "patrimoine_net_meur": 765487.0,
-    "patrimoine_net": 36.656216315094625
+    "patrimoine_net": 36.6562163151
    },
    {
     "annee": 2013,
-    "actifs_produits": 64.2396168183396,
-    "actifs_non_produits": 36.74267291468586,
-    "terrains": 35.76127925929279,
-    "valeur_financiere_nette": -67.00411063823366,
+    "actifs_produits": 64.2396168183,
+    "actifs_non_produits": 36.7426729147,
+    "terrains": 35.7612792593,
+    "valeur_financiere_nette": -67.0041106382,
     "patrimoine_net_meur": 720457.0,
-    "patrimoine_net": 33.9781790947918
+    "patrimoine_net": 33.9781790948
    },
    {
     "annee": 2014,
-    "actifs_produits": 62.928459563000615,
-    "actifs_non_produits": 34.7896884154164,
-    "terrains": 33.78018538045338,
-    "valeur_financiere_nette": -75.29257340626717,
+    "actifs_produits": 62.928459563,
+    "actifs_non_produits": 34.7896884154,
+    "terrains": 33.7801853805,
+    "valeur_financiere_nette": -75.2925734063,
     "patrimoine_net_meur": 482987.0,
-    "patrimoine_net": 22.425574572149856
+    "patrimoine_net": 22.4255745721
    },
    {
     "annee": 2015,
-    "actifs_produits": 60.80588643055652,
-    "actifs_non_produits": 34.3873131758761,
-    "terrains": 33.399170165194725,
-    "valeur_financiere_nette": -76.16160065267498,
+    "actifs_produits": 60.8058864306,
+    "actifs_non_produits": 34.3873131759,
+    "terrains": 33.3991701652,
+    "valeur_financiere_nette": -76.1616006527,
     "patrimoine_net_meur": 418962.0,
-    "patrimoine_net": 19.031598953757637
+    "patrimoine_net": 19.0315989538
    },
    {
     "annee": 2016,
-    "actifs_produits": 60.86618135252008,
-    "actifs_non_produits": 35.38911533596586,
-    "terrains": 34.314431412224735,
-    "valeur_financiere_nette": -79.35612162097374,
+    "actifs_produits": 60.8661813525,
+    "actifs_non_produits": 35.389115336,
+    "terrains": 34.3144314122,
+    "valeur_financiere_nette": -79.356121621,
     "patrimoine_net_meur": 377159.0,
-    "patrimoine_net": 16.899175067512203
+    "patrimoine_net": 16.8991750675
    },
    {
     "annee": 2017,
-    "actifs_produits": 60.91436809922498,
-    "actifs_non_produits": 36.47265915282275,
-    "terrains": 35.4252620674518,
-    "valeur_financiere_nette": -77.66499787710418,
+    "actifs_produits": 60.9143680992,
+    "actifs_non_produits": 36.4726591528,
+    "terrains": 35.4252620675,
+    "valeur_financiere_nette": -77.6649978771,
     "patrimoine_net_meur": 451966.0,
-    "patrimoine_net": 19.722029374943546
+    "patrimoine_net": 19.7220293749
    },
    {
     "annee": 2018,
-    "actifs_produits": 60.79109674389892,
-    "actifs_non_produits": 37.52020389213892,
-    "terrains": 36.47819890182532,
-    "valeur_financiere_nette": -76.68206556696356,
+    "actifs_produits": 60.7910967439,
+    "actifs_non_produits": 37.5202038921,
+    "terrains": 36.4781989018,
+    "valeur_financiere_nette": -76.682065567,
     "patrimoine_net_meur": 509447.0,
-    "patrimoine_net": 21.629235069074284
+    "patrimoine_net": 21.6292350691
    },
    {
     "annee": 2019,
-    "actifs_produits": 59.988726288510804,
-    "actifs_non_produits": 39.656123019134476,
-    "terrains": 38.57845981036976,
-    "valeur_financiere_nette": -76.40603780845956,
+    "actifs_produits": 59.9887262885,
+    "actifs_non_produits": 39.6561230191,
+    "terrains": 38.5784598104,
+    "valeur_financiere_nette": -76.4060378085,
     "patrimoine_net_meur": 565216.0,
-    "patrimoine_net": 23.238811499185715
+    "patrimoine_net": 23.2388114992
    },
    {
     "annee": 2020,
-    "actifs_produits": 64.66218862637581,
-    "actifs_non_produits": 46.29906016367335,
-    "terrains": 45.07163944241324,
-    "valeur_financiere_nette": -90.5230007125985,
+    "actifs_produits": 64.6621886264,
+    "actifs_non_produits": 46.2990601637,
+    "terrains": 45.0716394424,
+    "valeur_financiere_nette": -90.5230007126,
     "patrimoine_net_meur": 473815.0,
-    "patrimoine_net": 20.438248077450652
+    "patrimoine_net": 20.4382480775
    },
    {
     "annee": 2021,
-    "actifs_produits": 64.37349836649386,
-    "actifs_non_produits": 46.313866022992684,
-    "terrains": 45.212555151265775,
-    "valeur_financiere_nette": -82.42212637285087,
+    "actifs_produits": 64.3734983665,
+    "actifs_non_produits": 46.313866023,
+    "terrains": 45.2125551513,
+    "valeur_financiere_nette": -82.4221263729,
     "patrimoine_net_meur": 708921.0,
-    "patrimoine_net": 28.265238016635678
+    "patrimoine_net": 28.2652380166
    },
    {
     "annee": 2022,
-    "actifs_produits": 64.84476056303002,
-    "actifs_non_produits": 46.76199709344057,
-    "terrains": 45.70479921416641,
-    "valeur_financiere_nette": -71.29397659454777,
+    "actifs_produits": 64.844760563,
+    "actifs_non_produits": 46.7619970934,
+    "terrains": 45.7047992142,
+    "valeur_financiere_nette": -71.2939765945,
     "patrimoine_net_meur": 1069900.0,
-    "patrimoine_net": 40.31278106192282
+    "patrimoine_net": 40.3127810619
    },
    {
     "annee": 2023,
-    "actifs_produits": 62.20307810006683,
-    "actifs_non_produits": 39.808583872122,
-    "terrains": 38.84084626226169,
-    "valeur_financiere_nette": -73.25904977934425,
+    "actifs_produits": 62.2030781001,
+    "actifs_non_produits": 39.8085838721,
+    "terrains": 38.8408462623,
+    "valeur_financiere_nette": -73.2590497793,
     "patrimoine_net_meur": 814799.0,
-    "patrimoine_net": 28.75261219284458
+    "patrimoine_net": 28.7526121928
    },
    {
     "annee": 2024,
-    "actifs_produits": 60.93939294830126,
-    "actifs_non_produits": 37.97169972022692,
-    "terrains": 37.016171783120676,
-    "valeur_financiere_nette": -72.8169728090007,
+    "actifs_produits": 60.9393929483,
+    "actifs_non_produits": 37.9716997202,
+    "terrains": 37.0161717831,
+    "valeur_financiere_nette": -72.816972809,
     "patrimoine_net_meur": 765924.0,
-    "patrimoine_net": 26.09411985952748
+    "patrimoine_net": 26.0941198595
    },
    {
     "annee": 2025,
-    "actifs_produits": 60.840448881419476,
-    "actifs_non_produits": 37.496498018354224,
-    "terrains": 36.52846514196758,
-    "valeur_financiere_nette": -73.3003576612673,
+    "actifs_produits": 60.8404488814,
+    "actifs_non_produits": 37.4964980184,
+    "terrains": 36.528465142,
+    "valeur_financiere_nette": -73.3003576613,
     "patrimoine_net_meur": 749779.0,
-    "patrimoine_net": 25.036589238506394
+    "patrimoine_net": 25.0365892385
    }
   ],
   "detention": [
@@ -697,10 +697,10 @@
     "non_residents": 22.428,
     "residents": 35.3769,
     "banque_centrale": 0.9695,
-    "autres_residents": 34.407399999999996,
-    "part_non_residents": 38.79941181558689,
-    "part_banque_centrale": 1.6771905544503072,
-    "part_autres_residents": 59.523224634547184
+    "autres_residents": 34.4074,
+    "part_non_residents": 38.7994118156,
+    "part_banque_centrale": 1.67719055445,
+    "part_autres_residents": 59.5232246345
    },
    {
     "annee": 1996,
@@ -709,9 +709,9 @@
     "residents": 35.1158,
     "banque_centrale": 0.9435,
     "autres_residents": 34.1723,
-    "part_non_residents": 42.04691922400917,
-    "part_banque_centrale": 1.5570977085000866,
-    "part_autres_residents": 56.39598306749074
+    "part_non_residents": 42.046919224,
+    "part_banque_centrale": 1.5570977085,
+    "part_autres_residents": 56.3959830675
    },
    {
     "annee": 1997,
@@ -720,9 +720,9 @@
     "residents": 34.8292,
     "banque_centrale": 0.8211,
     "autres_residents": 34.0081,
-    "part_non_residents": 43.80857424499825,
-    "part_banque_centrale": 1.3247116562041712,
-    "part_autres_residents": 54.866552765018966
+    "part_non_residents": 43.808574245,
+    "part_banque_centrale": 1.3247116562,
+    "part_autres_residents": 54.866552765
    },
    {
     "annee": 1998,
@@ -731,9 +731,9 @@
     "residents": 33.8539,
     "banque_centrale": 0.802,
     "autres_residents": 33.0519,
-    "part_non_residents": 45.48476079594587,
-    "part_banque_centrale": 1.291471617415221,
-    "part_autres_residents": 53.22392861801266
+    "part_non_residents": 45.4847607959,
+    "part_banque_centrale": 1.29147161742,
+    "part_autres_residents": 53.223928618
    },
    {
     "annee": 1999,
@@ -741,10 +741,10 @@
     "non_residents": 28.1348,
     "residents": 33.2884,
     "banque_centrale": 0.7816,
-    "autres_residents": 32.506800000000005,
-    "part_non_residents": 45.80484246994621,
-    "part_banque_centrale": 1.2724833613357818,
-    "part_autres_residents": 52.92267416871802
+    "autres_residents": 32.5068,
+    "part_non_residents": 45.8048424699,
+    "part_banque_centrale": 1.27248336134,
+    "part_autres_residents": 52.9226741687
    },
    {
     "annee": 2000,
@@ -752,10 +752,10 @@
     "non_residents": 28.1106,
     "residents": 31.6108,
     "banque_centrale": 0.7431,
-    "autres_residents": 30.867700000000003,
-    "part_non_residents": 47.069559655332924,
-    "part_banque_centrale": 1.2442775956357353,
-    "part_autres_residents": 51.68616274903134
+    "autres_residents": 30.8677,
+    "part_non_residents": 47.0695596553,
+    "part_banque_centrale": 1.24427759564,
+    "part_autres_residents": 51.686162749
    },
    {
     "annee": 2001,
@@ -764,9 +764,9 @@
     "residents": 30.6385,
     "banque_centrale": 0.7117,
     "autres_residents": 29.9268,
-    "part_non_residents": 48.35238747045794,
-    "part_banque_centrale": 1.1997194979282628,
-    "part_autres_residents": 50.447893031613795
+    "part_non_residents": 48.3523874705,
+    "part_banque_centrale": 1.19971949793,
+    "part_autres_residents": 50.4478930316
    },
    {
     "annee": 2002,
@@ -775,9 +775,9 @@
     "residents": 30.6779,
     "banque_centrale": 0.6596,
     "autres_residents": 30.0183,
-    "part_non_residents": 49.91845710059896,
-    "part_banque_centrale": 1.0767907196181277,
-    "part_autres_residents": 49.00458893073506
+    "part_non_residents": 49.9184571006,
+    "part_banque_centrale": 1.07679071962,
+    "part_autres_residents": 49.0045889307
    },
    {
     "annee": 2003,
@@ -786,9 +786,9 @@
     "residents": 32.3006,
     "banque_centrale": 0.6869,
     "autres_residents": 31.6137,
-    "part_non_residents": 50.58342601956125,
-    "part_banque_centrale": 1.050885886552057,
-    "part_autres_residents": 48.36568809388669
+    "part_non_residents": 50.5834260196,
+    "part_banque_centrale": 1.05088588655,
+    "part_autres_residents": 48.3656880939
    },
    {
     "annee": 2004,
@@ -796,10 +796,10 @@
     "non_residents": 34.2733,
     "residents": 32.6061,
     "banque_centrale": 0.6937,
-    "autres_residents": 31.912399999999998,
-    "part_non_residents": 51.246422665275105,
-    "part_banque_centrale": 1.037240166628289,
-    "part_autres_residents": 47.7163371680966
+    "autres_residents": 31.9124,
+    "part_non_residents": 51.2464226653,
+    "part_banque_centrale": 1.03724016663,
+    "part_autres_residents": 47.7163371681
    },
    {
     "annee": 2005,
@@ -808,9 +808,9 @@
     "residents": 32.9013,
     "banque_centrale": 0.7026,
     "autres_residents": 32.1987,
-    "part_non_residents": 51.74764358131643,
-    "part_banque_centrale": 1.0304152899197931,
-    "part_autres_residents": 47.22179447130721
+    "part_non_residents": 51.7476435813,
+    "part_banque_centrale": 1.03041528992,
+    "part_autres_residents": 47.2217944713
    },
    {
     "annee": 2006,
@@ -818,10 +818,10 @@
     "non_residents": 33.5326,
     "residents": 31.8682,
     "banque_centrale": 0.6802,
-    "autres_residents": 31.188000000000002,
-    "part_non_residents": 51.27246149894191,
-    "part_banque_centrale": 1.040048439774437,
-    "part_autres_residents": 47.687490061283654
+    "autres_residents": 31.188,
+    "part_non_residents": 51.2724614989,
+    "part_banque_centrale": 1.04004843977,
+    "part_autres_residents": 47.6874900613
    },
    {
     "annee": 2007,
@@ -829,10 +829,10 @@
     "non_residents": 33.3395,
     "residents": 32.1373,
     "banque_centrale": 0.6756,
-    "autres_residents": 31.461700000000004,
-    "part_non_residents": 50.91803509029153,
-    "part_banque_centrale": 1.0318158492779121,
-    "part_autres_residents": 48.05014906043058
+    "autres_residents": 31.4617,
+    "part_non_residents": 50.9180350903,
+    "part_banque_centrale": 1.03181584928,
+    "part_autres_residents": 48.0501490604
    },
    {
     "annee": 2008,
@@ -841,9 +841,9 @@
     "residents": 34.9352,
     "banque_centrale": 0.8256,
     "autres_residents": 34.1096,
-    "part_non_residents": 49.96333386804776,
-    "part_banque_centrale": 1.1824827554598163,
-    "part_autres_residents": 48.85418337649243
+    "part_non_residents": 49.963333868,
+    "part_banque_centrale": 1.18248275546,
+    "part_autres_residents": 48.8541833765
    },
    {
     "annee": 2009,
@@ -852,9 +852,9 @@
     "residents": 37.3855,
     "banque_centrale": 0.975,
     "autres_residents": 36.4105,
-    "part_non_residents": 55.5228919905396,
-    "part_banque_centrale": 1.1599465115947063,
-    "part_autres_residents": 43.3171614978657
+    "part_non_residents": 55.5228919905,
+    "part_banque_centrale": 1.15994651159,
+    "part_autres_residents": 43.3171614979
    },
    {
     "annee": 2010,
@@ -863,9 +863,9 @@
     "residents": 38.899,
     "banque_centrale": 1.3902,
     "autres_residents": 37.5088,
-    "part_non_residents": 54.91424213412952,
-    "part_banque_centrale": 1.611306732438704,
-    "part_autres_residents": 43.47445113343178
+    "part_non_residents": 54.9142421341,
+    "part_banque_centrale": 1.61130673244,
+    "part_autres_residents": 43.4744511334
    },
    {
     "annee": 2011,
@@ -874,9 +874,9 @@
     "residents": 40.838,
     "banque_centrale": 2.1443,
     "autres_residents": 38.6937,
-    "part_non_residents": 53.98493732901254,
-    "part_banque_centrale": 2.4161344552964983,
-    "part_autres_residents": 43.598928215690954
+    "part_non_residents": 53.984937329,
+    "part_banque_centrale": 2.4161344553,
+    "part_autres_residents": 43.5989282157
    },
    {
     "annee": 2012,
@@ -885,9 +885,9 @@
     "residents": 41.5843,
     "banque_centrale": 2.9528,
     "autres_residents": 38.6315,
-    "part_non_residents": 54.67251059766584,
-    "part_banque_centrale": 3.218594775124561,
-    "part_autres_residents": 42.108894627209594
+    "part_non_residents": 54.6725105977,
+    "part_banque_centrale": 3.21859477512,
+    "part_autres_residents": 42.1088946272
    },
    {
     "annee": 2013,
@@ -895,10 +895,10 @@
     "non_residents": 52.9682,
     "residents": 41.5896,
     "banque_centrale": 2.3342,
-    "autres_residents": 39.255399999999995,
-    "part_non_residents": 56.016743198340066,
-    "part_banque_centrale": 2.468543049859451,
-    "part_autres_residents": 41.51471375180048
+    "autres_residents": 39.2554,
+    "part_non_residents": 56.0167431983,
+    "part_banque_centrale": 2.46854304986,
+    "part_autres_residents": 41.5147137518
    },
    {
     "annee": 2014,
@@ -907,9 +907,9 @@
     "residents": 41.2706,
     "banque_centrale": 2.069,
     "autres_residents": 39.2016,
-    "part_non_residents": 57.08328653846954,
-    "part_banque_centrale": 2.1515238487423622,
-    "part_autres_residents": 40.7651896127881
+    "part_non_residents": 57.0832865385,
+    "part_banque_centrale": 2.15152384874,
+    "part_autres_residents": 40.7651896128
    },
    {
     "annee": 2015,
@@ -918,9 +918,9 @@
     "residents": 42.8277,
     "banque_centrale": 5.3159,
     "autres_residents": 37.5118,
-    "part_non_residents": 55.83762469348655,
-    "part_banque_centrale": 5.481563821823139,
-    "part_autres_residents": 38.68081148469031
+    "part_non_residents": 55.8376246935,
+    "part_banque_centrale": 5.48156382182,
+    "part_autres_residents": 38.6808114847
    },
    {
     "annee": 2016,
@@ -929,9 +929,9 @@
     "residents": 46.3813,
     "banque_centrale": 9.905,
     "autres_residents": 36.4763,
-    "part_non_residents": 52.74437645313593,
-    "part_banque_centrale": 10.091716946952515,
-    "part_autres_residents": 37.16390659991156
+    "part_non_residents": 52.7443764531,
+    "part_banque_centrale": 10.091716947,
+    "part_autres_residents": 37.1639065999
    },
    {
     "annee": 2017,
@@ -940,9 +940,9 @@
     "residents": 48.3837,
     "banque_centrale": 14.0248,
     "autres_residents": 34.3589,
-    "part_non_residents": 51.009204038031214,
-    "part_banque_centrale": 14.200747258533227,
-    "part_autres_residents": 34.789947448891766
+    "part_non_residents": 51.009204038,
+    "part_banque_centrale": 14.2007472585,
+    "part_autres_residents": 34.7899474489
    },
    {
     "annee": 2018,
@@ -951,9 +951,9 @@
     "residents": 49.3767,
     "banque_centrale": 15.3102,
     "autres_residents": 34.0665,
-    "part_non_residents": 49.88658265156059,
-    "part_banque_centrale": 15.538633450353649,
-    "part_autres_residents": 34.574783898085755
+    "part_non_residents": 49.8865826516,
+    "part_banque_centrale": 15.5386334504,
+    "part_autres_residents": 34.5747838981
    },
    {
     "annee": 2019,
@@ -962,9 +962,9 @@
     "residents": 48.0124,
     "banque_centrale": 14.5878,
     "autres_residents": 33.4246,
-    "part_non_residents": 51.086567839303484,
-    "part_banque_centrale": 14.861595167775935,
-    "part_autres_residents": 34.05193886979829
+    "part_non_residents": 51.0865678393,
+    "part_banque_centrale": 14.8615951678,
+    "part_autres_residents": 34.0519388698
    },
    {
     "annee": 2020,
@@ -972,10 +972,10 @@
     "non_residents": 56.434,
     "residents": 58.4726,
     "banque_centrale": 20.9656,
-    "autres_residents": 37.507000000000005,
-    "part_non_residents": 49.112931720197096,
-    "part_banque_centrale": 18.245775264432154,
-    "part_autres_residents": 32.64129301537075
+    "autres_residents": 37.507,
+    "part_non_residents": 49.1129317202,
+    "part_banque_centrale": 18.2457752644,
+    "part_autres_residents": 32.6412930154
    },
    {
     "annee": 2021,
@@ -984,9 +984,9 @@
     "residents": 59.5839,
     "banque_centrale": 24.8407,
     "autres_residents": 34.7432,
-    "part_non_residents": 47.17069628507869,
-    "part_banque_centrale": 22.024689300150637,
-    "part_autres_residents": 30.80461441477067
+    "part_non_residents": 47.1706962851,
+    "part_banque_centrale": 22.0246893002,
+    "part_autres_residents": 30.8046144148
    },
    {
     "annee": 2022,
@@ -994,10 +994,10 @@
     "non_residents": 54.0653,
     "residents": 57.3003,
     "banque_centrale": 25.1589,
-    "autres_residents": 32.141400000000004,
-    "part_non_residents": 48.54757663048553,
-    "part_banque_centrale": 22.59126696214989,
-    "part_autres_residents": 28.861156407364575
+    "autres_residents": 32.1414,
+    "part_non_residents": 48.5475766305,
+    "part_banque_centrale": 22.5912669621,
+    "part_autres_residents": 28.8611564074
    },
    {
     "annee": 2023,
@@ -1006,9 +1006,9 @@
     "residents": 53.4478,
     "banque_centrale": 23.3229,
     "autres_residents": 30.1249,
-    "part_non_residents": 51.19252214918809,
-    "part_banque_centrale": 21.298012737038775,
-    "part_autres_residents": 27.509465113773135
+    "part_non_residents": 51.1925221492,
+    "part_banque_centrale": 21.298012737,
+    "part_autres_residents": 27.5094651138
    },
    {
     "annee": 2024,
@@ -1016,10 +1016,10 @@
     "non_residents": 59.2282,
     "residents": 53.4066,
     "banque_centrale": 21.6892,
-    "autres_residents": 31.717399999999998,
-    "part_non_residents": 52.584281234574036,
-    "part_banque_centrale": 19.256215663365143,
-    "part_autres_residents": 28.159503102060818
+    "autres_residents": 31.7174,
+    "part_non_residents": 52.5842812346,
+    "part_banque_centrale": 19.2562156634,
+    "part_autres_residents": 28.1595031021
    },
    {
     "annee": 2025,
@@ -1028,222 +1028,222 @@
     "residents": 52.7694,
     "banque_centrale": 19.086,
     "autres_residents": 33.6834,
-    "part_non_residents": 54.332649368204876,
-    "part_banque_centrale": 16.517281874693317,
-    "part_autres_residents": 29.1500687571018
+    "part_non_residents": 54.3326493682,
+    "part_banque_centrale": 16.5172818747,
+    "part_autres_residents": 29.1500687571
    }
   ],
   "sous_secteurs": {
    "annees": [
     {
      "annee": 1996,
-     "net_apu": 0.8876608493841887,
-     "net_loc": 0.6034608580451557,
-     "net_autres": 0.28419999133903295,
-     "fbcf_loc": 2.1392827757435198
+     "net_apu": 0.887660849384,
+     "net_loc": 0.603460858045,
+     "net_autres": 0.284199991339,
+     "fbcf_loc": 2.13928277574
     },
     {
      "annee": 1997,
-     "net_apu": 0.5389134731469856,
-     "net_loc": 0.4212553763795206,
-     "net_autres": 0.11765809676746497,
-     "fbcf_loc": 1.9486550424954001
+     "net_apu": 0.538913473147,
+     "net_loc": 0.42125537638,
+     "net_autres": 0.117658096767,
+     "fbcf_loc": 1.9486550425
     },
     {
      "annee": 1998,
-     "net_apu": 0.4941180315497533,
-     "net_loc": 0.43359741160706466,
-     "net_autres": 0.06052061994268865,
-     "fbcf_loc": 1.9280586013111316
+     "net_apu": 0.49411803155,
+     "net_loc": 0.433597411607,
+     "net_autres": 0.0605206199427,
+     "fbcf_loc": 1.92805860131
     },
     {
      "annee": 1999,
-     "net_apu": 0.5965603649218574,
-     "net_loc": 0.5898872377697562,
-     "net_autres": 0.006673127152101221,
-     "fbcf_loc": 2.0862876196647235
+     "net_apu": 0.596560364922,
+     "net_loc": 0.58988723777,
+     "net_autres": 0.0066731271521,
+     "fbcf_loc": 2.08628761966
     },
     {
      "annee": 2000,
-     "net_apu": 0.8619242261880928,
-     "net_loc": 0.7651896788432031,
-     "net_autres": 0.09673454734488973,
-     "fbcf_loc": 2.2266455018842675
+     "net_apu": 0.861924226188,
+     "net_loc": 0.765189678843,
+     "net_autres": 0.0967345473449,
+     "fbcf_loc": 2.22664550188
     },
     {
      "annee": 2001,
-     "net_apu": 0.791826000231362,
-     "net_loc": 0.6966408748352204,
-     "net_autres": 0.09518512539614155,
-     "fbcf_loc": 2.166409271203755
+     "net_apu": 0.791826000231,
+     "net_loc": 0.696640874835,
+     "net_autres": 0.0951851253961,
+     "fbcf_loc": 2.1664092712
     },
     {
      "annee": 2002,
-     "net_apu": 0.7112137512434034,
-     "net_loc": 0.5670043653735277,
-     "net_autres": 0.14420938586987564,
-     "fbcf_loc": 2.056211311956308
+     "net_apu": 0.711213751243,
+     "net_loc": 0.567004365374,
+     "net_autres": 0.14420938587,
+     "fbcf_loc": 2.05621131196
     },
     {
      "annee": 2003,
-     "net_apu": 0.8394742568172728,
-     "net_loc": 0.5936585603394662,
-     "net_autres": 0.24581569647780666,
-     "fbcf_loc": 2.1089826685725876
+     "net_apu": 0.839474256817,
+     "net_loc": 0.593658560339,
+     "net_autres": 0.245815696478,
+     "fbcf_loc": 2.10898266857
     },
     {
      "annee": 2004,
-     "net_apu": 0.9273348159433246,
-     "net_loc": 0.6757057923198286,
-     "net_autres": 0.25162902362349593,
-     "fbcf_loc": 2.2051131177967442
+     "net_apu": 0.927334815943,
+     "net_loc": 0.67570579232,
+     "net_autres": 0.251629023623,
+     "fbcf_loc": 2.2051131178
     },
     {
      "annee": 2005,
-     "net_apu": 1.000279220543368,
-     "net_loc": 0.7499625435856458,
-     "net_autres": 0.2503166769577221,
-     "fbcf_loc": 2.3064581668603807
+     "net_apu": 1.00027922054,
+     "net_loc": 0.749962543586,
+     "net_autres": 0.250316676958,
+     "fbcf_loc": 2.30645816686
     },
     {
      "annee": 2006,
-     "net_apu": 0.928060948385744,
-     "net_loc": 0.7540813457701725,
-     "net_autres": 0.17397960261557155,
-     "fbcf_loc": 2.336685227307815
+     "net_apu": 0.928060948386,
+     "net_loc": 0.75408134577,
+     "net_autres": 0.173979602616,
+     "fbcf_loc": 2.33668522731
     },
     {
      "annee": 2007,
-     "net_apu": 0.9288055582503731,
-     "net_loc": 0.8088598032072227,
-     "net_autres": 0.11994575504315041,
-     "fbcf_loc": 2.4077288742932983
+     "net_apu": 0.92880555825,
+     "net_loc": 0.808859803207,
+     "net_autres": 0.119945755043,
+     "fbcf_loc": 2.40772887429
     },
     {
      "annee": 2008,
-     "net_apu": 0.9130050251256279,
-     "net_loc": 0.7251708542713569,
-     "net_autres": 0.187834170854271,
-     "fbcf_loc": 2.3937738693467336
+     "net_apu": 0.913005025126,
+     "net_loc": 0.725170854271,
+     "net_autres": 0.187834170854,
+     "fbcf_loc": 2.39377386935
     },
     {
      "annee": 2009,
-     "net_apu": 1.101547648565997,
-     "net_loc": 0.6649774774774779,
-     "net_autres": 0.43657017108851903,
-     "fbcf_loc": 2.427659310686834
+     "net_apu": 1.10154764857,
+     "net_loc": 0.664977477477,
+     "net_autres": 0.436570171089,
+     "fbcf_loc": 2.42765931069
     },
     {
      "annee": 2010,
-     "net_apu": 1.0335834074370944,
-     "net_loc": 0.43596558245556905,
-     "net_autres": 0.5976178249815254,
-     "fbcf_loc": 2.210277669927232
+     "net_apu": 1.03358340744,
+     "net_loc": 0.435965582456,
+     "net_autres": 0.597617824982,
+     "fbcf_loc": 2.21027766993
     },
     {
      "annee": 2011,
-     "net_apu": 0.6847737375863248,
-     "net_loc": 0.38992484025098206,
-     "net_autres": 0.2948488973353427,
-     "fbcf_loc": 2.190888013962188
+     "net_apu": 0.684773737586,
+     "net_loc": 0.389924840251,
+     "net_autres": 0.294848897335,
+     "fbcf_loc": 2.19088801396
     },
     {
      "annee": 2012,
-     "net_apu": 0.674193729118651,
-     "net_loc": 0.440925983832682,
-     "net_autres": 0.23326774528596905,
-     "fbcf_loc": 2.2825263002642835
+     "net_apu": 0.674193729119,
+     "net_loc": 0.440925983833,
+     "net_autres": 0.233267745286,
+     "fbcf_loc": 2.28252630026
     },
     {
      "annee": 2013,
-     "net_apu": 0.6822027663331376,
-     "net_loc": 0.5071422103499796,
-     "net_autres": 0.17506055598315795,
-     "fbcf_loc": 2.361551289597199
+     "net_apu": 0.682202766333,
+     "net_loc": 0.50714221035,
+     "net_autres": 0.175060555983,
+     "fbcf_loc": 2.3615512896
     },
     {
      "annee": 2014,
-     "net_apu": 0.3965254746061828,
-     "net_loc": 0.2899616619144527,
-     "net_autres": 0.1065638126917301,
-     "fbcf_loc": 2.134401060855733
+     "net_apu": 0.396525474606,
+     "net_loc": 0.289961661914,
+     "net_autres": 0.106563812692,
+     "fbcf_loc": 2.13440106086
     },
     {
      "annee": 2015,
-     "net_apu": 0.17675554033293395,
-     "net_loc": 0.10591432187306116,
-     "net_autres": 0.07084121845987279,
-     "fbcf_loc": 1.8898774508245202
+     "net_apu": 0.176755540333,
+     "net_loc": 0.105914321873,
+     "net_autres": 0.0708412184599,
+     "fbcf_loc": 1.88987745082
     },
     {
      "annee": 2016,
-     "net_apu": 0.17096368477909785,
-     "net_loc": 0.03092544691124166,
-     "net_autres": 0.14003823786785619,
-     "fbcf_loc": 1.802175714070003
+     "net_apu": 0.170963684779,
+     "net_loc": 0.0309254469112,
+     "net_autres": 0.140038237868,
+     "fbcf_loc": 1.80217571407
     },
     {
      "annee": 2017,
-     "net_apu": 0.10368371514185393,
-     "net_loc": 0.08561837358689961,
-     "net_autres": 0.018065341554954317,
-     "fbcf_loc": 1.8581512871992218
+     "net_apu": 0.103683715142,
+     "net_loc": 0.0856183735869,
+     "net_autres": 0.018065341555,
+     "fbcf_loc": 1.8581512872
     },
     {
      "annee": 2018,
-     "net_apu": 0.17763716250955808,
-     "net_loc": 0.18328809614484043,
-     "net_autres": -0.005650933635282351,
-     "fbcf_loc": 1.9602158987807823
+     "net_apu": 0.17763716251,
+     "net_loc": 0.183288096145,
+     "net_autres": -0.00565093363528,
+     "fbcf_loc": 1.96021589878
     },
     {
      "annee": 2019,
-     "net_apu": 0.4376395594618385,
-     "net_loc": 0.41715199405313763,
-     "net_autres": 0.020487565408700892,
-     "fbcf_loc": 2.194796742218076
+     "net_apu": 0.437639559462,
+     "net_loc": 0.417151994053,
+     "net_autres": 0.0204875654087,
+     "fbcf_loc": 2.19479674222
     },
     {
      "annee": 2020,
-     "net_apu": 0.1919529857532063,
-     "net_loc": 0.20053695073407996,
-     "net_autres": -0.00858396498087366,
-     "fbcf_loc": 2.0913816991592027
+     "net_apu": 0.191952985753,
+     "net_loc": 0.200536950734,
+     "net_autres": -0.00858396498087,
+     "fbcf_loc": 2.09138169916
     },
     {
      "annee": 2021,
-     "net_apu": 0.26471012741905975,
-     "net_loc": 0.2609662605428329,
-     "net_autres": 0.0037438668762268534,
-     "fbcf_loc": 2.097215344511507
+     "net_apu": 0.264710127419,
+     "net_loc": 0.260966260543,
+     "net_autres": 0.00374386687623,
+     "fbcf_loc": 2.09721534451
     },
     {
      "annee": 2022,
-     "net_apu": 0.24315777297412122,
-     "net_loc": 0.22681638298762197,
-     "net_autres": 0.016341389986499255,
-     "fbcf_loc": 2.1380619495801994
+     "net_apu": 0.243157772974,
+     "net_loc": 0.226816382988,
+     "net_autres": 0.0163413899865,
+     "fbcf_loc": 2.13806194958
     },
     {
      "annee": 2023,
-     "net_apu": 0.4185013476480215,
-     "net_loc": 0.3560345624607866,
-     "net_autres": 0.06246678518723492,
-     "fbcf_loc": 2.232847041420327
+     "net_apu": 0.418501347648,
+     "net_loc": 0.356034562461,
+     "net_autres": 0.0624667851872,
+     "fbcf_loc": 2.23284704142
     },
     {
      "annee": 2024,
-     "net_apu": 0.5824233553962954,
-     "net_loc": 0.46584669852781846,
-     "net_autres": 0.11657665686847696,
-     "fbcf_loc": 2.3298058486608912
+     "net_apu": 0.582423355396,
+     "net_loc": 0.465846698528,
+     "net_autres": 0.116576656868,
+     "fbcf_loc": 2.32980584866
     },
     {
      "annee": 2025,
-     "net_apu": 0.708393703211605,
-     "net_loc": 0.5329256397815767,
-     "net_autres": 0.1754680634300283,
-     "fbcf_loc": 2.3598531154530304
+     "net_apu": 0.708393703212,
+     "net_loc": 0.532925639782,
+     "net_autres": 0.17546806343,
+     "fbcf_loc": 2.35985311545
     }
    ],
    "ccf_reprise": true
@@ -1254,132 +1254,132 @@
    {
     "pays": "AT",
     "nom": "Autriche",
-    "besoin": 66.15128081072857,
-    "desepargne": 28.986187913507866,
-    "investissement_net": 8.2523021814847,
-    "actifs": 9.857095761350736,
-    "transferts": 27.307834345838472,
-    "aides_investissement": 19.453293063147058,
+    "besoin": 66.1512808107,
+    "desepargne": 28.9861879135,
+    "investissement_net": 8.25230218148,
+    "actifs": 9.85709576135,
+    "transferts": 27.3078343458,
+    "aides_investissement": 19.4532930631,
     "besoin_meur": 231733.1,
     "actifs_meur": 38658.3,
     "debut": 2001,
     "fin": 2025,
     "annees": 25,
-    "part_actifs": 14.900838865922745,
-    "part_desepargne": 43.81802976187699,
-    "part_transferts": 41.2808852847028,
-    "part_actifs_euros": 16.68225212539771,
-    "part_investissement_net": 12.474894031297913
+    "part_actifs": 14.9008388659,
+    "part_desepargne": 43.8180297619,
+    "part_transferts": 41.2808852847,
+    "part_actifs_euros": 16.6822521254,
+    "part_investissement_net": 12.4748940313
    },
    {
     "pays": "BE",
     "nom": "Belgique",
-    "besoin": 70.51622708150748,
-    "desepargne": 47.61125940295264,
-    "investissement_net": 5.170439976545207,
-    "actifs": 6.521074981649656,
-    "transferts": 16.383943049518532,
-    "aides_investissement": 23.23228649552703,
+    "besoin": 70.5162270815,
+    "desepargne": 47.611259403,
+    "investissement_net": 5.17043997655,
+    "actifs": 6.52107498165,
+    "transferts": 16.3839430495,
+    "aides_investissement": 23.2322864955,
     "besoin_meur": 322544.8,
     "actifs_meur": 32933.5,
     "debut": 2001,
     "fin": 2025,
     "annees": 25,
-    "part_actifs": 9.247623208927715,
-    "part_desepargne": 67.51816053334828,
-    "part_transferts": 23.23428766343504,
-    "part_actifs_euros": 10.210519592937167,
-    "part_investissement_net": 7.332269734977253
+    "part_actifs": 9.24762320893,
+    "part_desepargne": 67.5181605333,
+    "part_transferts": 23.2342876634,
+    "part_actifs_euros": 10.2105195929,
+    "part_investissement_net": 7.33226973498
    },
    {
     "pays": "BG",
     "nom": "Bulgarie",
-    "besoin": 25.04955305102251,
-    "desepargne": 8.708564055960426,
-    "investissement_net": 26.808535570256645,
-    "actifs": 25.19747350046494,
-    "transferts": -8.85740202026745,
-    "aides_investissement": 0.6107601272314265,
+    "besoin": 25.049553051,
+    "desepargne": 8.70856405596,
+    "investissement_net": 26.8085355703,
+    "actifs": 25.1974735005,
+    "transferts": -8.85740202027,
+    "aides_investissement": 0.610760127231,
     "besoin_meur": 19278.1,
     "actifs_meur": 13124.4,
     "debut": 2001,
     "fin": 2025,
     "annees": 25,
-    "part_actifs": 100.59051133224267,
-    "part_desepargne": 34.76534706316825,
-    "part_transferts": -35.359521194753995,
-    "part_actifs_euros": 68.07932316981446,
-    "part_investissement_net": 107.02201159298662
+    "part_actifs": 100.590511332,
+    "part_desepargne": 34.7653470632,
+    "part_transferts": -35.3595211948,
+    "part_actifs_euros": 68.0793231698,
+    "part_investissement_net": 107.022011593
    },
    {
     "pays": "CY",
     "nom": "Chypre",
-    "besoin": 56.065934407281866,
-    "desepargne": -5.021597058718167,
-    "investissement_net": 31.69727437552338,
-    "actifs": 34.55419590829422,
-    "transferts": 26.53811290644618,
-    "aides_investissement": 16.097806709138364,
+    "besoin": 56.0659344073,
+    "desepargne": -5.02159705872,
+    "investissement_net": 31.6972743755,
+    "actifs": 34.5541959083,
+    "transferts": 26.5381129064,
+    "aides_investissement": 16.0978067091,
     "besoin_meur": 8135.0,
     "actifs_meur": 6489.8,
     "debut": 2001,
     "fin": 2025,
     "annees": 25,
-    "part_actifs": 61.63135649765663,
-    "part_desepargne": -8.956592112136384,
-    "part_transferts": 47.33375656180877,
-    "part_actifs_euros": 79.77627535341118,
-    "part_investissement_net": 56.535710517662444
+    "part_actifs": 61.6313564977,
+    "part_desepargne": -8.95659211214,
+    "part_transferts": 47.3337565618,
+    "part_actifs_euros": 79.7762753534,
+    "part_investissement_net": 56.5357105177
    },
    {
     "pays": "CZ",
     "nom": "Tchéquie",
-    "besoin": 67.86264682207009,
-    "desepargne": 44.88007284569111,
-    "investissement_net": 4.903662361013503,
-    "actifs": 4.807077119788495,
-    "transferts": 18.175496856590478,
-    "aides_investissement": 15.395614235707349,
+    "besoin": 67.8626468221,
+    "desepargne": 44.8800728457,
+    "investissement_net": 4.90366236101,
+    "actifs": 4.80707711979,
+    "transferts": 18.1754968566,
+    "aides_investissement": 15.3956142357,
     "besoin_meur": 3023449.0,
     "actifs_meur": 364338.0,
     "debut": 2001,
     "fin": 2025,
     "annees": 25,
-    "part_actifs": 7.083539096835155,
-    "part_desepargne": 66.13369054608602,
-    "part_transferts": 26.782770357078817,
-    "part_actifs_euros": 12.050409978802355,
-    "part_investissement_net": 7.225863697698789
+    "part_actifs": 7.08353909684,
+    "part_desepargne": 66.1336905461,
+    "part_transferts": 26.7827703571,
+    "part_actifs_euros": 12.0504099788,
+    "part_investissement_net": 7.2258636977
    },
    {
     "pays": "DE",
     "nom": "Allemagne",
-    "besoin": 38.01497958243751,
-    "desepargne": 13.89548070754202,
-    "investissement_net": 3.367861665110158,
-    "actifs": 1.8614658085223843,
-    "transferts": 22.25803306637311,
-    "aides_investissement": 21.28718809330819,
+    "besoin": 38.0149795824,
+    "desepargne": 13.8954807075,
+    "investissement_net": 3.36786166511,
+    "actifs": 1.86146580852,
+    "transferts": 22.2580330664,
+    "aides_investissement": 21.2871880933,
     "besoin_meur": 1104566.0,
     "actifs_meur": 74475.0,
     "debut": 2001,
     "fin": 2025,
     "annees": 25,
-    "part_actifs": 4.896663970279653,
-    "part_desepargne": 36.55264545758581,
-    "part_transferts": 58.550690572134535,
-    "part_actifs_euros": 6.742467177153742,
-    "part_investissement_net": 8.859301522987195
+    "part_actifs": 4.89666397028,
+    "part_desepargne": 36.5526454576,
+    "part_transferts": 58.5506905721,
+    "part_actifs_euros": 6.74246717715,
+    "part_investissement_net": 8.85930152299
    },
    {
     "pays": "DK",
     "nom": "Danemark",
-    "besoin": -37.96472906729363,
-    "desepargne": -60.23366288048906,
-    "investissement_net": 11.470031225788198,
-    "actifs": 7.718737574696877,
-    "transferts": 14.550098619029681,
-    "aides_investissement": 3.9715011015519477,
+    "besoin": -37.9647290673,
+    "desepargne": -60.2336628805,
+    "investissement_net": 11.4700312258,
+    "actifs": 7.7187375747,
+    "transferts": 14.550098619,
+    "aides_investissement": 3.97150110155,
     "besoin_meur": -867759.0,
     "actifs_meur": 204916.0,
     "debut": 2001,
@@ -1389,212 +1389,212 @@
    {
     "pays": "EE",
     "nom": "Estonie",
-    "besoin": 8.988363979209566,
-    "desepargne": -47.49249826102008,
-    "investissement_net": 66.75026750191394,
-    "actifs": 65.40620694183977,
-    "transferts": -8.928357948403997,
-    "aides_investissement": 12.50159234045957,
+    "besoin": 8.98836397921,
+    "desepargne": -47.492498261,
+    "investissement_net": 66.7502675019,
+    "actifs": 65.4062069418,
+    "transferts": -8.9283579484,
+    "aides_investissement": 12.5015923405,
     "besoin_meur": 4530.9,
-    "actifs_meur": 14590.699999999999,
+    "actifs_meur": 14590.7,
     "debut": 2001,
     "fin": 2025,
     "annees": 25,
-    "part_actifs": 727.6764391509607,
-    "part_desepargne": -528.3775598192515,
-    "part_transferts": -99.33240319434809,
-    "part_actifs_euros": 322.0265289456841,
-    "part_investissement_net": 742.6297784147359
+    "part_actifs": 727.676439151,
+    "part_desepargne": -528.377559819,
+    "part_transferts": -99.3324031943,
+    "part_actifs_euros": 322.026528946,
+    "part_investissement_net": 742.629778415
    },
    {
     "pays": "EL",
     "nom": "Grèce",
-    "besoin": 143.78555661576303,
-    "desepargne": 120.22685330854816,
-    "investissement_net": 21.066778273781146,
-    "actifs": 23.39404093002083,
-    "transferts": 0.16466237719404486,
-    "aides_investissement": 18.37847655886188,
+    "besoin": 143.785556616,
+    "desepargne": 120.226853309,
+    "investissement_net": 21.0667782738,
+    "actifs": 23.39404093,
+    "transferts": 0.164662377194,
+    "aides_investissement": 18.3784765589,
     "besoin_meur": 282584.0,
     "actifs_meur": 47075.0,
     "debut": 2001,
     "fin": 2025,
     "annees": 25,
-    "part_actifs": 16.270091016538284,
-    "part_desepargne": 83.61538956922453,
-    "part_transferts": 0.11451941423718294,
-    "part_actifs_euros": 16.658763411941226,
-    "part_investissement_net": 14.651526043104404
+    "part_actifs": 16.2700910165,
+    "part_desepargne": 83.6153895692,
+    "part_transferts": 0.114519414237,
+    "part_actifs_euros": 16.6587634119,
+    "part_investissement_net": 14.6515260431
    },
    {
     "pays": "ES",
     "nom": "Espagne",
-    "besoin": 104.28234324477918,
-    "desepargne": 72.08084136020267,
-    "investissement_net": 24.409162942857947,
-    "actifs": 26.19498801375292,
-    "transferts": 6.006513870823593,
-    "aides_investissement": 18.149834311935145,
+    "besoin": 104.282343245,
+    "desepargne": 72.0808413602,
+    "investissement_net": 24.4091629429,
+    "actifs": 26.1949880138,
+    "transferts": 6.00651387082,
+    "aides_investissement": 18.1498343119,
     "besoin_meur": 1200872.0,
     "actifs_meur": 262192.0,
     "debut": 2001,
     "fin": 2025,
     "annees": 25,
-    "part_actifs": 25.11929363944778,
-    "part_desepargne": 69.12084933784928,
-    "part_transferts": 5.759857022702934,
-    "part_actifs_euros": 21.833467680152424,
-    "part_investissement_net": 23.406803283622967
+    "part_actifs": 25.1192936394,
+    "part_desepargne": 69.1208493378,
+    "part_transferts": 5.7598570227,
+    "part_actifs_euros": 21.8334676802,
+    "part_investissement_net": 23.4068032836
    },
    {
     "pays": "FI",
     "nom": "Finlande",
-    "besoin": 10.06808452823769,
-    "desepargne": -3.2956906724418817,
-    "investissement_net": 15.405763225251018,
-    "actifs": 14.730801622381213,
-    "transferts": -1.3670264217016426,
-    "aides_investissement": 5.648113963240502,
+    "besoin": 10.0680845282,
+    "desepargne": -3.29569067244,
+    "investissement_net": 15.4057632253,
+    "actifs": 14.7308016224,
+    "transferts": -1.3670264217,
+    "aides_investissement": 5.64811396324,
     "besoin_meur": 42735.0,
     "actifs_meur": 30953.0,
     "debut": 2001,
     "fin": 2025,
     "annees": 25,
-    "part_actifs": 146.31185883537353,
-    "part_desepargne": -32.734038567103255,
-    "part_transferts": -13.577820268270292,
-    "part_actifs_euros": 72.43009243009243,
-    "part_investissement_net": 153.01583118460002
+    "part_actifs": 146.311858835,
+    "part_desepargne": -32.7340385671,
+    "part_transferts": -13.5778202683,
+    "part_actifs_euros": 72.4300924301,
+    "part_investissement_net": 153.015831185
    },
    {
     "pays": "FR",
     "nom": "France",
-    "besoin": 111.6191861793879,
-    "desepargne": 75.91065581043848,
-    "investissement_net": 15.088645294815455,
-    "actifs": 18.95595943931566,
-    "transferts": 16.75257092963376,
-    "aides_investissement": 22.311135796105233,
+    "besoin": 111.619186179,
+    "desepargne": 75.9106558104,
+    "investissement_net": 15.0886452948,
+    "actifs": 18.9559594393,
+    "transferts": 16.7525709296,
+    "aides_investissement": 22.3111357961,
     "besoin_meur": 2474381.6,
     "actifs_meur": 392735.8,
     "debut": 2001,
     "fin": 2025,
     "annees": 25,
-    "part_actifs": 16.98270708482925,
-    "part_desepargne": 68.00860892180245,
-    "part_transferts": 15.008683993368306,
-    "part_actifs_euros": 15.872078906503345,
-    "part_investissement_net": 13.517967485057504
+    "part_actifs": 16.9827070848,
+    "part_desepargne": 68.0086089218,
+    "part_transferts": 15.0086839934,
+    "part_actifs_euros": 15.8720789065,
+    "part_investissement_net": 13.5179674851
    },
    {
     "pays": "HR",
     "nom": "Croatie",
-    "besoin": 86.08500878539478,
-    "desepargne": 21.637987049841545,
-    "investissement_net": 35.8466549111138,
-    "actifs": 38.20946499231581,
-    "transferts": 26.238189861352357,
-    "aides_investissement": 32.52152392221054,
+    "besoin": 86.0850087854,
+    "desepargne": 21.6379870498,
+    "investissement_net": 35.8466549111,
+    "actifs": 38.2094649923,
+    "transferts": 26.2381898614,
+    "aides_investissement": 32.5215239222,
     "besoin_meur": 38919.4,
     "actifs_meur": 18863.3,
     "debut": 2001,
     "fin": 2025,
     "annees": 25,
-    "part_actifs": 44.38573629883679,
-    "part_desepargne": 25.135604160515175,
-    "part_transferts": 30.479394997522427,
-    "part_actifs_euros": 48.46760227547187,
-    "part_investissement_net": 41.640995821325355
+    "part_actifs": 44.3857362988,
+    "part_desepargne": 25.1356041605,
+    "part_transferts": 30.4793949975,
+    "part_actifs_euros": 48.4676022755,
+    "part_investissement_net": 41.6409958213
    },
    {
     "pays": "HU",
     "nom": "Hongrie",
-    "besoin": 122.52723350726333,
-    "desepargne": 78.27783146697082,
-    "investissement_net": 22.188242122081054,
-    "actifs": 24.835392719991674,
-    "transferts": 19.4140092659974,
-    "aides_investissement": 35.62248275325885,
+    "besoin": 122.527233507,
+    "desepargne": 78.277831467,
+    "investissement_net": 22.1882421221,
+    "actifs": 24.83539272,
+    "transferts": 19.414009266,
+    "aides_investissement": 35.6224827533,
     "besoin_meur": 46976719.4,
     "actifs_meur": 10910985.8,
     "debut": 2001,
     "fin": 2025,
     "annees": 25,
-    "part_actifs": 20.26928382294655,
-    "part_desepargne": 63.88606779596518,
-    "part_transferts": 15.844648336768781,
-    "part_actifs_euros": 23.22636816567485,
-    "part_investissement_net": 18.108824860365228
+    "part_actifs": 20.2692838229,
+    "part_desepargne": 63.886067796,
+    "part_transferts": 15.8446483368,
+    "part_actifs_euros": 23.2263681657,
+    "part_investissement_net": 18.1088248604
    },
    {
     "pays": "IE",
     "nom": "Irlande",
-    "besoin": 77.65742243324581,
-    "desepargne": 17.297680684450864,
-    "investissement_net": 32.70027177400961,
-    "actifs": 33.050111802736666,
-    "transferts": 27.309467720343363,
-    "aides_investissement": 16.117407370895723,
+    "besoin": 77.6574224332,
+    "desepargne": 17.2976806845,
+    "investissement_net": 32.700271774,
+    "actifs": 33.0501118027,
+    "transferts": 27.3094677203,
+    "aides_investissement": 16.1174073709,
     "besoin_meur": 115523.2,
-    "actifs_meur": 80703.70000000001,
+    "actifs_meur": 80703.7,
     "debut": 2001,
     "fin": 2025,
     "annees": 25,
-    "part_actifs": 42.558857565928726,
-    "part_desepargne": 22.27434306014975,
-    "part_transferts": 35.16659047474636,
-    "part_actifs_euros": 69.85930098889229,
-    "part_investissement_net": 42.108366141200094
+    "part_actifs": 42.5588575659,
+    "part_desepargne": 22.2743430601,
+    "part_transferts": 35.1665904747,
+    "part_actifs_euros": 69.8593009889,
+    "part_investissement_net": 42.1083661412
    },
    {
     "pays": "IT",
     "nom": "Italie",
-    "besoin": 96.71022168040412,
-    "desepargne": 60.00451180914594,
-    "investissement_net": 1.7523285317230708,
-    "actifs": 3.0501240820291224,
-    "transferts": 33.65558578922906,
-    "aides_investissement": 35.77918204388213,
+    "besoin": 96.7102216804,
+    "desepargne": 60.0045118091,
+    "investissement_net": 1.75232853172,
+    "actifs": 3.05012408203,
+    "transferts": 33.6555857892,
+    "aides_investissement": 35.7791820439,
     "besoin_meur": 1674057.0,
     "actifs_meur": 54950.0,
     "debut": 2001,
     "fin": 2025,
     "annees": 25,
-    "part_actifs": 3.153879733735687,
-    "part_desepargne": 62.0456770406766,
-    "part_transferts": 34.80044322558771,
-    "part_actifs_euros": 3.2824449824587814,
-    "part_investissement_net": 1.8119372505565623
+    "part_actifs": 3.15387973374,
+    "part_desepargne": 62.0456770407,
+    "part_transferts": 34.8004432256,
+    "part_actifs_euros": 3.28244498246,
+    "part_investissement_net": 1.81193725056
    },
    {
     "pays": "LT",
     "nom": "Lituanie",
-    "besoin": 53.58214596294568,
-    "desepargne": 34.15973002673019,
-    "investissement_net": 26.97081810958216,
-    "actifs": 26.92858287870254,
-    "transferts": -7.508565168366342,
-    "aides_investissement": 8.360448695389337,
+    "besoin": 53.5821459629,
+    "desepargne": 34.1597300267,
+    "investissement_net": 26.9708181096,
+    "actifs": 26.9285828787,
+    "transferts": -7.50856516837,
+    "aides_investissement": 8.36044869539,
     "besoin_meur": 18547.3,
     "actifs_meur": 11466.7,
     "debut": 2001,
     "fin": 2025,
     "annees": 25,
-    "part_actifs": 50.25663379985712,
-    "part_desepargne": 63.752075272149575,
-    "part_transferts": -14.013184864896662,
-    "part_actifs_euros": 61.82409299466769,
-    "part_investissement_net": 50.33545712826362
+    "part_actifs": 50.2566337999,
+    "part_desepargne": 63.7520752721,
+    "part_transferts": -14.0131848649,
+    "part_actifs_euros": 61.8240929947,
+    "part_investissement_net": 50.3354571283
    },
    {
     "pays": "LU",
     "nom": "Luxembourg",
-    "besoin": -25.760773407569523,
-    "desepargne": -100.59907643751629,
-    "investissement_net": 52.0145853115449,
-    "actifs": 52.37223365785281,
-    "transferts": 22.46576181515226,
-    "aides_investissement": 25.67184355880428,
+    "besoin": -25.7607734076,
+    "desepargne": -100.599076438,
+    "investissement_net": 52.0145853115,
+    "actifs": 52.3722336579,
+    "transferts": 22.4657618152,
+    "aides_investissement": 25.6718435588,
     "besoin_meur": -10157.8,
     "actifs_meur": 26248.6,
     "debut": 2001,
@@ -1604,182 +1604,182 @@
    {
     "pays": "LV",
     "nom": "Lettonie",
-    "besoin": 67.06614351804281,
-    "desepargne": 48.081856052721534,
-    "investissement_net": 25.362524863545147,
-    "actifs": 27.823270090381886,
-    "transferts": -8.83994526546384,
-    "aides_investissement": 8.878158373956857,
+    "besoin": 67.066143518,
+    "desepargne": 48.0818560527,
+    "investissement_net": 25.3625248635,
+    "actifs": 27.8232700904,
+    "transferts": -8.83994526546,
+    "aides_investissement": 8.87815837396,
     "besoin_meur": 16045.2,
-    "actifs_meur": 8466.400000000001,
+    "actifs_meur": 8466.4,
     "debut": 2001,
     "fin": 2025,
     "annees": 25,
-    "part_actifs": 41.48631281131677,
-    "part_desepargne": 71.69318754668825,
-    "part_transferts": -13.180935717715196,
-    "part_actifs_euros": 52.76593623014983,
-    "part_investissement_net": 37.8171809695929
+    "part_actifs": 41.4863128113,
+    "part_desepargne": 71.6931875467,
+    "part_transferts": -13.1809357177,
+    "part_actifs_euros": 52.7659362301,
+    "part_investissement_net": 37.8171809696
    },
    {
     "pays": "MT",
     "nom": "Malte",
-    "besoin": 76.10334303938922,
-    "desepargne": 51.118102564827375,
-    "investissement_net": 33.07658259588635,
-    "actifs": 31.7941074219186,
-    "transferts": -6.8229889201597285,
-    "aides_investissement": 19.873194129816614,
-    "besoin_meur": 7700.599999999999,
-    "actifs_meur": 3553.2999999999997,
+    "besoin": 76.1033430394,
+    "desepargne": 51.1181025648,
+    "investissement_net": 33.0765825959,
+    "actifs": 31.7941074219,
+    "transferts": -6.82298892016,
+    "aides_investissement": 19.8731941298,
+    "besoin_meur": 7700.6,
+    "actifs_meur": 3553.3,
     "debut": 2001,
     "fin": 2025,
     "annees": 25,
-    "part_actifs": 41.77754373479067,
-    "part_desepargne": 67.16932597608742,
-    "part_transferts": -8.965426021598443,
-    "part_actifs_euros": 46.14315767602525,
-    "part_investissement_net": 43.462719605847965
+    "part_actifs": 41.7775437348,
+    "part_desepargne": 67.1693259761,
+    "part_transferts": -8.9654260216,
+    "part_actifs_euros": 46.143157676,
+    "part_investissement_net": 43.4627196058
    },
    {
     "pays": "NL",
     "nom": "Pays-Bas",
-    "besoin": 37.62491301266219,
-    "desepargne": 20.06991096943366,
-    "investissement_net": 16.694157338473275,
-    "actifs": 12.976695886865508,
-    "transferts": 4.578306156363022,
-    "aides_investissement": 4.215776023059165,
+    "besoin": 37.6249130127,
+    "desepargne": 20.0699109694,
+    "investissement_net": 16.6941573385,
+    "actifs": 12.9766958869,
+    "transferts": 4.57830615636,
+    "aides_investissement": 4.21577602306,
     "besoin_meur": 252568.0,
     "actifs_meur": 83386.0,
     "debut": 2001,
     "fin": 2025,
     "annees": 25,
-    "part_actifs": 34.48963691291024,
-    "part_desepargne": 53.342079389470975,
-    "part_transferts": 12.168283697618785,
-    "part_actifs_euros": 33.01526717557252,
-    "part_investissement_net": 44.36995597266913
+    "part_actifs": 34.4896369129,
+    "part_desepargne": 53.3420793895,
+    "part_transferts": 12.1682836976,
+    "part_actifs_euros": 33.0152671756,
+    "part_investissement_net": 44.3699559727
    },
    {
     "pays": "PL",
     "nom": "Pologne",
-    "besoin": 103.03973240711991,
-    "desepargne": 57.97299823203899,
-    "investissement_net": 46.44314970473717,
-    "actifs": 44.03397973225955,
-    "transferts": 1.0328026821723053,
-    "aides_investissement": 10.547121396215402,
+    "besoin": 103.039732407,
+    "desepargne": 57.972998232,
+    "investissement_net": 46.4431497047,
+    "actifs": 44.0339797323,
+    "transferts": 1.03280268217,
+    "aides_investissement": 10.5471213962,
     "besoin_meur": 1950243.5,
     "actifs_meur": 937018.8,
     "debut": 2001,
     "fin": 2025,
     "annees": 25,
-    "part_actifs": 42.734951560507795,
-    "part_desepargne": 56.2627608571246,
-    "part_transferts": 1.0023343986294553,
-    "part_actifs_euros": 48.04624653280475,
-    "part_investissement_net": 45.07304960889825
+    "part_actifs": 42.7349515605,
+    "part_desepargne": 56.2627608571,
+    "part_transferts": 1.00233439863,
+    "part_actifs_euros": 48.0462465328,
+    "part_investissement_net": 45.0730496089
    },
    {
     "pays": "PT",
     "nom": "Portugal",
-    "besoin": 100.89488894737694,
-    "desepargne": 82.36908767627632,
-    "investissement_net": 11.392295914461876,
-    "actifs": 11.036132025373822,
-    "transferts": 7.48941744452702,
-    "aides_investissement": 8.999084085546693,
+    "besoin": 100.894888947,
+    "desepargne": 82.3690876763,
+    "investissement_net": 11.3922959145,
+    "actifs": 11.0361320254,
+    "transferts": 7.48941744453,
+    "aides_investissement": 8.99908408555,
     "besoin_meur": 170624.2,
-    "actifs_meur": 16336.600000000002,
+    "actifs_meur": 16336.6,
     "debut": 2001,
     "fin": 2025,
     "annees": 25,
-    "part_actifs": 10.93824686315861,
-    "part_desepargne": 81.63851364090108,
-    "part_transferts": 7.422989928095589,
-    "part_actifs_euros": 9.574608994503711,
-    "part_investissement_net": 11.291251750525914
+    "part_actifs": 10.9382468632,
+    "part_desepargne": 81.6385136409,
+    "part_transferts": 7.4229899281,
+    "part_actifs_euros": 9.5746089945,
+    "part_investissement_net": 11.2912517505
    },
    {
     "pays": "RO",
     "nom": "Roumanie",
-    "besoin": 107.90226706699241,
-    "desepargne": 37.021447554902046,
-    "investissement_net": 64.1157929783479,
-    "actifs": 65.4807230604865,
-    "transferts": 5.400096451603877,
-    "aides_investissement": 17.924404557771425,
+    "besoin": 107.902267067,
+    "desepargne": 37.0214475549,
+    "investissement_net": 64.1157929783,
+    "actifs": 65.4807230605,
+    "transferts": 5.4000964516,
+    "aides_investissement": 17.9244045578,
     "besoin_meur": 1040463.6,
-    "actifs_meur": 520315.69999999995,
+    "actifs_meur": 520315.7,
     "debut": 2001,
     "fin": 2025,
     "annees": 25,
-    "part_actifs": 60.68521527896352,
-    "part_desepargne": 34.31016656203974,
-    "part_transferts": 5.004618158996755,
-    "part_actifs_euros": 50.0080637131371,
-    "part_investissement_net": 59.42024641478649
+    "part_actifs": 60.685215279,
+    "part_desepargne": 34.310166562,
+    "part_transferts": 5.004618159,
+    "part_actifs_euros": 50.0080637131,
+    "part_investissement_net": 59.4202464148
    },
    {
     "pays": "SE",
     "nom": "Suède",
-    "besoin": 1.309837432477412,
-    "desepargne": -30.85118413261885,
-    "investissement_net": 32.831079671632516,
-    "actifs": 30.435058565238172,
-    "transferts": 1.7259629998580905,
-    "aides_investissement": 4.9653938297892575,
+    "besoin": 1.30983743248,
+    "desepargne": -30.8511841326,
+    "investissement_net": 32.8310796716,
+    "actifs": 30.4350585652,
+    "transferts": 1.72596299986,
+    "aides_investissement": 4.96539382979,
     "besoin_meur": 189146.0,
     "actifs_meur": 1386828.0,
     "debut": 2001,
     "fin": 2025,
     "annees": 25,
-    "part_actifs": 2323.575262899125,
-    "part_desepargne": -2355.3445158661607,
-    "part_transferts": 131.769252967036,
-    "part_actifs_euros": 733.205037378533,
-    "part_investissement_net": 2506.500337949281
+    "part_actifs": 2323.5752629,
+    "part_desepargne": -2355.34451587,
+    "part_transferts": 131.769252967,
+    "part_actifs_euros": 733.205037379,
+    "part_investissement_net": 2506.50033795
    },
    {
     "pays": "SI",
     "nom": "Slovénie",
-    "besoin": 78.4236241128147,
-    "desepargne": 19.82580400043439,
-    "investissement_net": 45.57920881848584,
-    "actifs": 48.14042257370139,
-    "transferts": 10.45798478847571,
-    "aides_investissement": 11.176355101519466,
+    "besoin": 78.4236241128,
+    "desepargne": 19.8258040004,
+    "investissement_net": 45.5792088185,
+    "actifs": 48.1404225737,
+    "transferts": 10.4579847885,
+    "aides_investissement": 11.1763551015,
     "besoin_meur": 30794.7,
     "actifs_meur": 20181.8,
     "debut": 2001,
     "fin": 2025,
     "annees": 25,
-    "part_actifs": 61.38510317305659,
-    "part_desepargne": 25.280397615792896,
-    "part_transferts": 13.335248028619018,
-    "part_actifs_euros": 65.53660207763023,
-    "part_investissement_net": 58.119232991475634
+    "part_actifs": 61.3851031731,
+    "part_desepargne": 25.2803976158,
+    "part_transferts": 13.3352480286,
+    "part_actifs_euros": 65.5366020776,
+    "part_investissement_net": 58.1192329915
    },
    {
     "pays": "SK",
     "nom": "Slovaquie",
-    "besoin": 98.0462042578621,
-    "desepargne": 94.8144452834465,
-    "investissement_net": -0.5927053052765054,
-    "actifs": 0.7370670618735418,
-    "transferts": 2.4950884423169,
-    "aides_investissement": 10.65408386918847,
+    "besoin": 98.0462042579,
+    "desepargne": 94.8144452834,
+    "investissement_net": -0.592705305277,
+    "actifs": 0.737067061874,
+    "transferts": 2.49508844232,
+    "aides_investissement": 10.6540838692,
     "besoin_meur": 74473.4,
-    "actifs_meur": 4275.300000000001,
+    "actifs_meur": 4275.3,
     "debut": 2001,
     "fin": 2025,
     "annees": 25,
-    "part_actifs": 0.7517548154491029,
-    "part_desepargne": 96.70384080762979,
-    "part_transferts": 2.5448088084621845,
-    "part_actifs_euros": 5.740707420367543,
-    "part_investissement_net": -0.6045163193851818
+    "part_actifs": 0.751754815449,
+    "part_desepargne": 96.7038408076,
+    "part_transferts": 2.54480880846,
+    "part_actifs_euros": 5.74070742037,
+    "part_investissement_net": -0.604516319385
    }
   ],
   "tableau": [
@@ -2275,103 +2275,103 @@
   "part_non_residents": {
    "AT": {
     "annee": 2025,
-    "part_non_residents": 66.19103458257796
+    "part_non_residents": 66.1910345826
    },
    "BE": {
     "annee": 2025,
-    "part_non_residents": 63.37571645524554
+    "part_non_residents": 63.3757164552
    },
    "BG": {
     "annee": 2025,
-    "part_non_residents": 50.52122064784108
+    "part_non_residents": 50.5212206478
    },
    "CY": {
     "annee": 2025,
-    "part_non_residents": 95.89905076171648
+    "part_non_residents": 95.8990507617
    },
    "CZ": {
     "annee": 2025,
-    "part_non_residents": 25.21231542456305
+    "part_non_residents": 25.2123154246
    },
    "DE": {
     "annee": 2025,
-    "part_non_residents": 51.32668520834186
+    "part_non_residents": 51.3266852083
    },
    "DK": {
     "annee": 2025,
-    "part_non_residents": 42.453370770420875
+    "part_non_residents": 42.4533707704
    },
    "EE": {
     "annee": 2025,
-    "part_non_residents": 76.55966156526065
+    "part_non_residents": 76.5596615653
    },
    "ES": {
     "annee": 2025,
-    "part_non_residents": 48.93493998885316
+    "part_non_residents": 48.9349399889
    },
    "FI": {
     "annee": 2025,
-    "part_non_residents": 61.15332404247293
+    "part_non_residents": 61.1533240425
    },
    "FR": {
     "annee": 2025,
-    "part_non_residents": 54.332649368204876
+    "part_non_residents": 54.3326493682
    },
    "HR": {
     "annee": 2025,
-    "part_non_residents": 29.360865080590898
+    "part_non_residents": 29.3608650806
    },
    "HU": {
     "annee": 2025,
-    "part_non_residents": 36.40656010298771
+    "part_non_residents": 36.406560103
    },
    "IE": {
     "annee": 2018,
-    "part_non_residents": 56.116680939464885
+    "part_non_residents": 56.1166809395
    },
    "IT": {
     "annee": 2025,
-    "part_non_residents": 34.34319490374503
+    "part_non_residents": 34.3431949037
    },
    "LT": {
     "annee": 2025,
-    "part_non_residents": 72.25709855900773
+    "part_non_residents": 72.257098559
    },
    "LV": {
     "annee": 2025,
-    "part_non_residents": 74.20783790989069
+    "part_non_residents": 74.2078379099
    },
    "MT": {
     "annee": 2018,
-    "part_non_residents": 13.092262105842268
+    "part_non_residents": 13.0922621058
    },
    "NL": {
     "annee": 2025,
-    "part_non_residents": 49.232793326169286
+    "part_non_residents": 49.2327933262
    },
    "PL": {
     "annee": 2025,
-    "part_non_residents": 34.59731442416281
+    "part_non_residents": 34.5973144242
    },
    "PT": {
     "annee": 2025,
-    "part_non_residents": 47.16886650941555
+    "part_non_residents": 47.1688665094
    },
    "RO": {
     "annee": 2025,
-    "part_non_residents": 50.00918332443085
+    "part_non_residents": 50.0091833244
    },
    "SE": {
     "annee": 2025,
-    "part_non_residents": 23.02220600975788
+    "part_non_residents": 23.0222060098
    },
    "SI": {
     "annee": 2025,
-    "part_non_residents": 56.6528352817479
+    "part_non_residents": 56.6528352817
    },
    "SK": {
     "annee": 2025,
-    "part_non_residents": 59.80544823137717
+    "part_non_residents": 59.8054482314
    }
   },
   "s2": {
@@ -2380,43 +2380,43 @@
      "base": 6.951887,
      "productivite": 7.583729,
      "risque": 9.115823,
-     "base_precedente": 6.72817850112915
+     "base_precedente": 6.72817850113
     },
     "IBP": {
      "base": 3.246851,
      "productivite": 3.518504,
      "risque": 3.351221,
-     "base_precedente": 3.0515685081481934
+     "base_precedente": 3.05156850815
     },
     "CoA": {
      "base": 3.690399,
      "productivite": 4.042703,
      "risque": 5.747059,
-     "base_precedente": 3.6744484901428223
+     "base_precedente": 3.67444849014
     },
     "pensions": {
      "base": 2.110701,
      "productivite": 2.649291,
      "risque": 2.043431,
-     "base_precedente": 2.257911443710327
+     "base_precedente": 2.25791144371
     },
     "sante": {
      "base": 0.534925,
      "productivite": 0.4322392,
      "risque": 1.054241,
-     "base_precedente": 0.5136167407035828
+     "base_precedente": 0.513616740704
     },
     "dependance": {
      "base": 1.604424,
      "productivite": 1.499106,
      "risque": 3.200119,
-     "base_precedente": 1.522648811340332
+     "base_precedente": 1.52264881134
     },
     "education": {
      "base": -0.5596504,
      "productivite": -0.5379334,
      "risque": -0.5507329,
-     "base_precedente": -0.6197294592857361
+     "base_precedente": -0.619729459286
     }
    },
    "BG": {
@@ -2424,43 +2424,43 @@
      "base": 1.416345,
      "productivite": 1.638472,
      "risque": 3.821102,
-     "base_precedente": 1.9590260982513428
+     "base_precedente": 1.95902609825
     },
     "IBP": {
      "base": 2.172904,
      "productivite": 2.217658,
      "risque": 2.165972,
-     "base_precedente": 2.7177321910858154
+     "base_precedente": 2.71773219109
     },
     "CoA": {
      "base": -0.773219,
      "productivite": -0.6003675,
      "risque": 1.639056,
-     "base_precedente": -0.757538378238678
+     "base_precedente": -0.757538378239
     },
     "pensions": {
      "base": -1.18236,
      "productivite": -1.006659,
      "risque": -1.183141,
-     "base_precedente": -1.20529043674469
+     "base_precedente": -1.20529043674
     },
     "sante": {
      "base": 0.2342456,
      "productivite": 0.2390332,
      "risque": 0.950678,
-     "base_precedente": 0.25258830189704895
+     "base_precedente": 0.252588301897
     },
     "dependance": {
      "base": 0.183158,
      "productivite": 0.1786688,
      "risque": 1.879395,
-     "base_precedente": 0.16138805449008942
+     "base_precedente": 0.16138805449
     },
     "education": {
      "base": -0.0082613,
      "productivite": -0.0114103,
      "risque": -0.007877,
-     "base_precedente": 0.03377553075551987
+     "base_precedente": 0.0337755307555
     }
    },
    "CZ": {
@@ -2468,43 +2468,43 @@
      "base": 3.804722,
      "productivite": 4.109729,
      "risque": 5.851045,
-     "base_precedente": 5.429412841796875
+     "base_precedente": 5.4294128418
     },
     "IBP": {
      "base": 1.158969,
      "productivite": 1.285113,
      "risque": 1.236032,
-     "base_precedente": 1.1973819732666016
+     "base_precedente": 1.19738197327
     },
     "CoA": {
      "base": 2.642734,
      "productivite": 2.81894,
      "risque": 4.610535,
-     "base_precedente": 4.227816104888916
+     "base_precedente": 4.22781610489
     },
     "pensions": {
      "base": 0.6970282,
      "productivite": 0.9373924,
      "risque": 0.6892453,
-     "base_precedente": 2.323061943054199
+     "base_precedente": 2.32306194305
     },
     "sante": {
      "base": 0.6700822,
      "productivite": 0.6351747,
      "risque": 1.459946,
-     "base_precedente": 0.6175034046173096
+     "base_precedente": 0.617503404617
     },
     "dependance": {
      "base": 1.189675,
      "productivite": 1.173135,
      "risque": 2.38177,
-     "base_precedente": 1.1681679487228394
+     "base_precedente": 1.16816794872
     },
     "education": {
      "base": 0.0859487,
      "productivite": 0.0732382,
      "risque": 0.0795722,
-     "base_precedente": 0.1190827265381813
+     "base_precedente": 0.119082726538
     }
    },
    "DK": {
@@ -2512,43 +2512,43 @@
      "base": -1.046018,
      "productivite": -0.7452931,
      "risque": 0.0132452,
-     "base_precedente": -0.4816597104072571
+     "base_precedente": -0.481659710407
     },
     "IBP": {
      "base": -1.490447,
      "productivite": -1.504891,
      "risque": -1.481603,
-     "base_precedente": -1.1960389614105225
+     "base_precedente": -1.19603896141
     },
     "CoA": {
      "base": 0.4504777,
      "productivite": 0.7686564,
      "risque": 1.501916,
-     "base_precedente": 0.7098211050033569
+     "base_precedente": 0.709821105003
     },
     "pensions": {
      "base": -2.383518,
      "productivite": -1.935038,
      "risque": -2.328176,
-     "base_precedente": -2.1366145610809326
+     "base_precedente": -2.13661456108
     },
     "sante": {
      "base": 0.6306711,
      "productivite": 0.5932267,
      "risque": 1.328218,
-     "base_precedente": 0.6206560134887695
+     "base_precedente": 0.620656013489
     },
     "dependance": {
      "base": 2.642812,
      "productivite": 2.520818,
      "risque": 2.930844,
-     "base_precedente": 2.7336645126342773
+     "base_precedente": 2.73366451263
     },
     "education": {
      "base": -0.4394886,
      "productivite": -0.4103515,
      "risque": -0.4289699,
-     "base_precedente": -0.5078853368759155
+     "base_precedente": -0.507885336876
     }
    },
    "DE": {
@@ -2556,43 +2556,43 @@
      "base": 4.084314,
      "productivite": 4.170658,
      "risque": 5.610007,
-     "base_precedente": 2.1338918209075928
+     "base_precedente": 2.13389182091
     },
     "IBP": {
      "base": 2.672228,
      "productivite": 2.788904,
      "risque": 2.666488,
-     "base_precedente": 0.6887630224227905
+     "base_precedente": 0.688763022423
     },
     "CoA": {
      "base": 1.404264,
      "productivite": 1.370004,
      "risque": 2.935855,
-     "base_precedente": 1.4447145462036133
+     "base_precedente": 1.4447145462
     },
     "pensions": {
      "base": 0.4617117,
      "productivite": 0.447685,
      "risque": 0.4619977,
-     "base_precedente": 0.44091615080833435
+     "base_precedente": 0.440916150808
     },
     "sante": {
      "base": 0.4526111,
      "productivite": 0.3562661,
      "risque": 1.191651,
-     "base_precedente": 0.47092655301094055
+     "base_precedente": 0.470926553011
     },
     "dependance": {
      "base": 0.3006462,
      "productivite": 0.3815059,
      "risque": 1.092834,
-     "base_precedente": 0.3709065914154053
+     "base_precedente": 0.370906591415
     },
     "education": {
      "base": 0.1892951,
      "productivite": 0.1845471,
      "risque": 0.1893726,
-     "base_precedente": 0.16196419298648834
+     "base_precedente": 0.161964192986
     }
    },
    "EE": {
@@ -2600,43 +2600,43 @@
      "base": 2.878098,
      "productivite": 3.053011,
      "risque": 8.193167,
-     "base_precedente": 0.20765994489192963
+     "base_precedente": 0.207659944892
     },
     "IBP": {
      "base": 3.422049,
      "productivite": 3.454094,
      "risque": 3.477671,
-     "base_precedente": 0.7389668822288513
+     "base_precedente": 0.738966882229
     },
     "CoA": {
      "base": -0.5492246,
      "productivite": -0.4114129,
      "risque": 4.703284,
-     "base_precedente": -0.5305062532424927
+     "base_precedente": -0.530506253242
     },
     "pensions": {
      "base": -1.113382,
      "productivite": -0.8571918,
      "risque": -1.02057,
-     "base_precedente": -1.1036871671676636
+     "base_precedente": -1.10368716717
     },
     "sante": {
      "base": 0.5773234,
      "productivite": 0.471444,
      "risque": 1.302012,
-     "base_precedente": 0.5250199437141418
+     "base_precedente": 0.525019943714
     },
     "dependance": {
      "base": 0.4760133,
      "productivite": 0.4535274,
      "risque": 4.898709,
-     "base_precedente": 0.5231056809425354
+     "base_precedente": 0.523105680943
     },
     "education": {
      "base": -0.4891798,
      "productivite": -0.4791929,
      "risque": -0.4768678,
-     "base_precedente": -0.47494521737098694
+     "base_precedente": -0.474945217371
     }
    },
    "IE": {
@@ -2644,43 +2644,43 @@
      "base": 3.349864,
      "productivite": 3.222343,
      "risque": 4.45305,
-     "base_precedente": 2.1935575008392334
+     "base_precedente": 2.19355750084
     },
     "IBP": {
      "base": -0.9948691,
      "productivite": -0.9502351,
      "risque": -0.9867474,
-     "base_precedente": -2.326470136642456
+     "base_precedente": -2.32647013664
     },
     "CoA": {
      "base": 4.348069,
      "productivite": 4.176782,
      "risque": 5.443262,
-     "base_precedente": 4.510185241699219
+     "base_precedente": 4.5101852417
     },
     "pensions": {
      "base": 2.449833,
      "productivite": 2.439925,
      "risque": 2.445795,
-     "base_precedente": 2.596184015274048
+     "base_precedente": 2.59618401527
     },
     "sante": {
      "base": 1.277779,
      "productivite": 1.162385,
      "risque": 1.904325,
-     "base_precedente": 1.2561203241348267
+     "base_precedente": 1.25612032413
     },
     "dependance": {
      "base": 1.06278,
      "productivite": 1.003944,
      "risque": 1.534866,
-     "base_precedente": 1.1118390560150146
+     "base_precedente": 1.11183905602
     },
     "education": {
      "base": -0.4423223,
      "productivite": -0.4294718,
      "risque": -0.4417239,
-     "base_precedente": -0.4539583921432495
+     "base_precedente": -0.453958392143
     }
    },
    "EL": {
@@ -2688,43 +2688,43 @@
      "base": -0.3864894,
      "productivite": 0.4754777,
      "risque": 2.78755,
-     "base_precedente": -0.8456466794013977
+     "base_precedente": -0.845646679401
     },
     "IBP": {
      "base": -0.2739777,
      "productivite": 0.044233,
      "risque": -0.2459229,
-     "base_precedente": -0.4927936792373657
+     "base_precedente": -0.492793679237
     },
     "CoA": {
      "base": -0.0765258,
      "productivite": 0.4791736,
      "risque": 3.070991,
-     "base_precedente": -0.3623509705066681
+     "base_precedente": -0.362350970507
     },
     "pensions": {
      "base": -0.5897354,
      "productivite": -0.0282708,
      "risque": -0.5774021,
-     "base_precedente": -0.8292034864425659
+     "base_precedente": -0.829203486443
     },
     "sante": {
      "base": 0.6820207,
      "productivite": 0.6706029,
      "risque": 1.37285,
-     "base_precedente": 0.7124531269073486
+     "base_precedente": 0.712453126907
     },
     "dependance": {
      "base": 0.0024598,
      "productivite": 0,
      "risque": 2.445734,
-     "base_precedente": 0.011755906045436859
+     "base_precedente": 0.0117559060454
     },
     "education": {
      "base": -0.1712713,
      "productivite": -0.1631587,
      "risque": -0.1701907,
-     "base_precedente": -0.25735604763031006
+     "base_precedente": -0.25735604763
     }
    },
    "ES": {
@@ -2732,43 +2732,43 @@
      "base": 5.34048,
      "productivite": 6.09109,
      "risque": 8.001085,
-     "base_precedente": 5.6931281089782715
+     "base_precedente": 5.69312810898
     },
     "IBP": {
      "base": 1.445596,
      "productivite": 1.58543,
      "risque": 1.430852,
-     "base_precedente": 1.7383004426956177
+     "base_precedente": 1.7383004427
     },
     "CoA": {
      "base": 3.909855,
      "productivite": 4.523697,
      "risque": 6.584947,
-     "base_precedente": 3.9441239833831787
+     "base_precedente": 3.94412398338
     },
     "pensions": {
      "base": 2.555384,
      "productivite": 3.227441,
      "risque": 2.55797,
-     "base_precedente": 2.6212923526763916
+     "base_precedente": 2.62129235268
     },
     "sante": {
      "base": 0.9959776,
      "productivite": 0.9688303,
      "risque": 1.589802,
-     "base_precedente": 1.08655846118927
+     "base_precedente": 1.08655846119
     },
     "dependance": {
      "base": 0.7483329,
      "productivite": 0.715371,
      "risque": 2.827321,
-     "base_precedente": 0.7342336773872375
+     "base_precedente": 0.734233677387
     },
     "education": {
      "base": -0.3898398,
      "productivite": -0.3879437,
      "risque": -0.390146,
-     "base_precedente": -0.49796101450920105
+     "base_precedente": -0.497961014509
     }
    },
    "FR": {
@@ -2776,43 +2776,43 @@
      "base": 3.128324,
      "productivite": 3.786132,
      "risque": 5.424876,
-     "base_precedente": 3.389383554458618
+     "base_precedente": 3.38938355446
     },
     "IBP": {
      "base": 3.040167,
      "productivite": 3.30673,
      "risque": 3.027012,
-     "base_precedente": 3.334045886993408
+     "base_precedente": 3.33404588699
     },
     "CoA": {
      "base": 0.0749939,
      "productivite": 0.4621199,
      "risque": 2.384897,
-     "base_precedente": 0.056493110954761505
+     "base_precedente": 0.0564931109548
     },
     "pensions": {
      "base": -0.5291391,
      "productivite": -0.0456845,
      "risque": -0.5297378,
-     "base_precedente": -0.524083137512207
+     "base_precedente": -0.524083137512
     },
     "sante": {
      "base": 0.6220503,
      "productivite": 0.5305726,
      "risque": 1.229177,
-     "base_precedente": 0.5932265520095825
+     "base_precedente": 0.59322655201
     },
     "dependance": {
      "base": 0.6182221,
      "productivite": 0.5945235,
      "risque": 2.321704,
-     "base_precedente": 0.6303008794784546
+     "base_precedente": 0.630300879478
     },
     "education": {
      "base": -0.6361399,
      "productivite": -0.6172913,
      "risque": -0.6362458,
-     "base_precedente": -0.6429511308670044
+     "base_precedente": -0.642951130867
     }
    },
    "HR": {
@@ -2820,43 +2820,43 @@
      "base": 1.523266,
      "productivite": 1.788029,
      "risque": 3.46842,
-     "base_precedente": 1.0110348463058472
+     "base_precedente": 1.01103484631
     },
     "IBP": {
      "base": 2.470709,
      "productivite": 2.559815,
      "risque": 2.490315,
-     "base_precedente": 1.9927374124526978
+     "base_precedente": 1.99273741245
     },
     "CoA": {
      "base": -0.9467869,
      "productivite": -0.7709809,
      "risque": 0.9787915,
-     "base_precedente": -0.9872978925704956
+     "base_precedente": -0.98729789257
     },
     "pensions": {
      "base": -1.287604,
      "productivite": -1.09332,
      "risque": -1.275704,
-     "base_precedente": -1.3440650701522827
+     "base_precedente": -1.34406507015
     },
     "sante": {
      "base": 0.6026642,
      "productivite": 0.5761631,
      "risque": 1.619684,
-     "base_precedente": 0.6191972494125366
+     "base_precedente": 0.619197249413
     },
     "dependance": {
      "base": 0.0934695,
      "productivite": 0.0919762,
      "risque": 0.987707,
-     "base_precedente": 0.11801639199256897
+     "base_precedente": 0.118016391993
     },
     "education": {
      "base": -0.3553179,
      "productivite": -0.345802,
      "risque": -0.3528968,
-     "base_precedente": -0.38044700026512146
+     "base_precedente": -0.380447000265
     }
    },
    "IT": {
@@ -2864,43 +2864,43 @@
      "base": -0.9740992,
      "productivite": -0.0280859,
      "risque": 0.4729448,
-     "base_precedente": -0.1191621646285057
+     "base_precedente": -0.119162164629
     },
     "IBP": {
      "base": 0.0467697,
      "productivite": 0.4201087,
      "risque": 0.0428171,
-     "base_precedente": 0.9245956540107727
+     "base_precedente": 0.924595654011
     },
     "CoA": {
      "base": -1.031485,
      "productivite": -0.4632143,
      "risque": 0.4195578,
-     "base_precedente": -1.0576610565185547
+     "base_precedente": -1.05766105652
     },
     "pensions": {
      "base": -1.620813,
      "productivite": -1.041164,
      "risque": -1.621398,
-     "base_precedente": -1.5528990030288696
+     "base_precedente": -1.55289900303
     },
     "sante": {
      "base": 0.5757257,
      "productivite": 0.5606142,
      "risque": 1.185769,
-     "base_precedente": 0.5874409079551697
+     "base_precedente": 0.587440907955
     },
     "dependance": {
      "base": 0.5627617,
      "productivite": 0.5467512,
      "risque": 1.404425,
-     "base_precedente": 0.5513569116592407
+     "base_precedente": 0.551356911659
     },
     "education": {
      "base": -0.5491585,
      "productivite": -0.5294161,
      "risque": -0.5492386,
-     "base_precedente": -0.6435589790344238
+     "base_precedente": -0.643558979034
     }
    },
    "CY": {
@@ -2908,43 +2908,43 @@
      "base": 0.1207741,
      "productivite": 0.6017415,
      "risque": 3.871487,
-     "base_precedente": 1.0226445198059082
+     "base_precedente": 1.02264451981
     },
     "IBP": {
      "base": -2.815147,
      "productivite": -2.711662,
      "risque": -2.779171,
-     "base_precedente": -2.35306715965271
+     "base_precedente": -2.35306715965
     },
     "CoA": {
      "base": 2.961772,
      "productivite": 3.350842,
      "risque": 6.680216,
-     "base_precedente": 3.372197151184082
+     "base_precedente": 3.37219715118
     },
     "pensions": {
      "base": 2.613734,
      "productivite": 3.029817,
      "risque": 2.591734,
-     "base_precedente": 2.9395627975463867
+     "base_precedente": 2.93956279755
     },
     "sante": {
      "base": 0.6256757,
      "productivite": 0.5878771,
      "risque": 1.541302,
-     "base_precedente": 0.6776687502861023
+     "base_precedente": 0.677668750286
     },
     "dependance": {
      "base": 0.0926899,
      "productivite": 0.0893948,
      "risque": 2.912998,
-     "base_precedente": 0.12138538062572479
+     "base_precedente": 0.121385380626
     },
     "education": {
      "base": -0.3703268,
      "productivite": -0.3562473,
      "risque": -0.3658182,
-     "base_precedente": -0.3664209544658661
+     "base_precedente": -0.366420954466
     }
    },
    "LV": {
@@ -2952,43 +2952,43 @@
      "base": 2.202108,
      "productivite": 2.523336,
      "risque": 4.793056,
-     "base_precedente": 1.5096412897109985
+     "base_precedente": 1.50964128971
     },
     "IBP": {
      "base": 2.830076,
      "productivite": 2.928051,
      "risque": 2.819865,
-     "base_precedente": 2.1776340007781982
+     "base_precedente": 2.17763400078
     },
     "CoA": {
      "base": -0.6424336,
      "productivite": -0.4230381,
      "risque": 1.959053,
-     "base_precedente": -0.6684985756874084
+     "base_precedente": -0.668498575687
     },
     "pensions": {
      "base": -1.164441,
      "productivite": -0.9149429,
      "risque": -1.16536,
-     "base_precedente": -1.1690753698349
+     "base_precedente": -1.16907536983
     },
     "sante": {
      "base": 0.4604425,
      "productivite": 0.4406475,
      "risque": 1.370677,
-     "base_precedente": 0.45997685194015503
+     "base_precedente": 0.45997685194
     },
     "dependance": {
      "base": 0.2477176,
      "productivite": 0.2345394,
      "risque": 1.940008,
-     "base_precedente": 0.25332632660865784
+     "base_precedente": 0.253326326609
     },
     "education": {
      "base": -0.1861535,
      "productivite": -0.1832823,
      "risque": -0.1862723,
-     "base_precedente": -0.2127256542444229
+     "base_precedente": -0.212725654244
     }
    },
    "LT": {
@@ -2996,43 +2996,43 @@
      "base": 5.06113,
      "productivite": 5.267809,
      "risque": 11.09446,
-     "base_precedente": 4.612594127655029
+     "base_precedente": 4.61259412766
     },
     "IBP": {
      "base": 1.94684,
      "productivite": 2.012607,
      "risque": 1.995371,
-     "base_precedente": 1.2975283861160278
+     "base_precedente": 1.29752838612
     },
     "CoA": {
      "base": 3.067245,
      "productivite": 3.197371,
      "risque": 9.046022,
-     "base_precedente": 3.2872183322906494
+     "base_precedente": 3.28721833229
     },
     "pensions": {
      "base": 1.974081,
      "productivite": 2.174356,
      "risque": 1.953987,
-     "base_precedente": 2.196587324142456
+     "base_precedente": 2.19658732414
     },
     "sante": {
      "base": 0.5963653,
      "productivite": 0.5681576,
      "risque": 1.45064,
-     "base_precedente": 0.6451461911201477
+     "base_precedente": 0.64514619112
     },
     "dependance": {
      "base": 0.7207251,
      "productivite": 0.6821038,
      "risque": 5.863634,
-     "base_precedente": 0.7077375054359436
+     "base_precedente": 0.707737505436
     },
     "education": {
      "base": -0.2239262,
      "productivite": -0.2272453,
      "risque": -0.2222387,
-     "base_precedente": -0.26225242018699646
+     "base_precedente": -0.262252420187
     }
    },
    "LU": {
@@ -3040,43 +3040,43 @@
      "base": 7.102274,
      "productivite": 7.100662,
      "risque": 8.547494,
-     "base_precedente": 7.332942485809326
+     "base_precedente": 7.33294248581
     },
     "IBP": {
      "base": -0.7417036,
      "productivite": -0.7638378,
      "risque": -0.7417036,
-     "base_precedente": -0.3959502875804901
+     "base_precedente": -0.39595028758
     },
     "CoA": {
      "base": 7.842848,
      "productivite": 7.862956,
      "risque": 9.288069,
-     "base_precedente": 7.801556587219238
+     "base_precedente": 7.80155658722
     },
     "pensions": {
      "base": 5.7896,
      "productivite": 5.931433,
      "risque": 5.7896,
-     "base_precedente": 5.7501606941223145
+     "base_precedente": 5.75016069412
     },
     "sante": {
      "base": 0.8821912,
      "productivite": 0.8385416,
      "risque": 1.142069,
-     "base_precedente": 0.8908377289772034
+     "base_precedente": 0.890837728977
     },
     "dependance": {
      "base": 1.358653,
      "productivite": 1.276165,
      "risque": 2.543994,
-     "base_precedente": 1.356484293937683
+     "base_precedente": 1.35648429394
     },
     "education": {
      "base": -0.1875948,
      "productivite": -0.1831834,
      "risque": -0.1875948,
-     "base_precedente": -0.19592666625976562
+     "base_precedente": -0.19592666626
     }
    },
    "HU": {
@@ -3084,43 +3084,43 @@
      "base": 6.678689,
      "productivite": 7.072526,
      "risque": 9.812713,
-     "base_precedente": 5.989782810211182
+     "base_precedente": 5.98978281021
     },
     "IBP": {
      "base": 2.142283,
      "productivite": 2.329596,
      "risque": 2.166881,
-     "base_precedente": 1.530097484588623
+     "base_precedente": 1.53009748459
     },
     "CoA": {
      "base": 4.535013,
      "productivite": 4.741075,
      "risque": 7.644382,
-     "base_precedente": 4.46173095703125
+     "base_precedente": 4.46173095703
     },
     "pensions": {
      "base": 3.648298,
      "productivite": 3.896289,
      "risque": 3.627706,
-     "base_precedente": 3.5755701065063477
+     "base_precedente": 3.57557010651
     },
     "sante": {
      "base": 0.3757944,
      "productivite": 0.3638598,
      "risque": 1.078598,
-     "base_precedente": 0.4127051532268524
+     "base_precedente": 0.412705153227
     },
     "dependance": {
      "base": 0.2512992,
      "productivite": 0.2342616,
      "risque": 2.679762,
-     "base_precedente": 0.29348650574684143
+     "base_precedente": 0.293486505747
     },
     "education": {
      "base": 0.2596214,
      "productivite": 0.246665,
      "risque": 0.2583171,
-     "base_precedente": 0.17996886372566223
+     "base_precedente": 0.179968863726
     }
    },
    "MT": {
@@ -3128,43 +3128,43 @@
      "base": 8.088797,
      "productivite": 7.948428,
      "risque": 11.23537,
-     "base_precedente": 8.737483024597168
+     "base_precedente": 8.7374830246
     },
     "IBP": {
      "base": 1.547481,
      "productivite": 1.616482,
      "risque": 1.551605,
-     "base_precedente": 2.3241541385650635
+     "base_precedente": 2.32415413857
     },
     "CoA": {
      "base": 6.53971,
      "productivite": 6.32995,
      "risque": 9.682139,
-     "base_precedente": 6.4146728515625
+     "base_precedente": 6.41467285156
     },
     "pensions": {
      "base": 3.331688,
      "productivite": 3.381058,
      "risque": 3.329836,
-     "base_precedente": 3.1612062454223633
+     "base_precedente": 3.16120624542
     },
     "sante": {
      "base": 1.594384,
      "productivite": 1.481326,
      "risque": 2.462336,
-     "base_precedente": 1.586553692817688
+     "base_precedente": 1.58655369282
     },
     "dependance": {
      "base": 1.570792,
      "productivite": 1.457474,
      "risque": 3.847217,
-     "base_precedente": 1.6661940813064575
+     "base_precedente": 1.66619408131
     },
     "education": {
      "base": 0.0428453,
      "productivite": 0.0100933,
      "risque": 0.0427509,
-     "base_precedente": 0.0007193966303020716
+     "base_precedente": 0.000719396630302
     }
    },
    "NL": {
@@ -3172,43 +3172,43 @@
      "base": 3.859855,
      "productivite": 3.86603,
      "risque": 5.770257,
-     "base_precedente": 3.3732128143310547
+     "base_precedente": 3.37321281433
     },
     "IBP": {
      "base": 1.035418,
      "productivite": 1.094582,
      "risque": 1.083258,
-     "base_precedente": 0.5619013905525208
+     "base_precedente": 0.561901390553
     },
     "CoA": {
      "base": 2.810102,
      "productivite": 2.752761,
      "risque": 4.66963,
-     "base_precedente": 2.80363130569458
+     "base_precedente": 2.80363130569
     },
     "pensions": {
      "base": 1.022699,
      "productivite": 1.089858,
      "risque": 1.011378,
-     "base_precedente": 1.150854468345642
+     "base_precedente": 1.15085446835
     },
     "sante": {
      "base": 0.621421,
      "productivite": 0.5329655,
      "risque": 1.052624,
-     "base_precedente": 0.583940327167511
+     "base_precedente": 0.583940327168
     },
     "dependance": {
      "base": 1.626501,
      "productivite": 1.579085,
      "risque": 3.0584,
-     "base_precedente": 1.6152242422103882
+     "base_precedente": 1.61522424221
     },
     "education": {
      "base": -0.4605199,
      "productivite": -0.449147,
      "risque": -0.4527735,
-     "base_precedente": -0.5463876724243164
+     "base_precedente": -0.546387672424
     }
    },
    "AT": {
@@ -3216,43 +3216,43 @@
      "base": 4.158862,
      "productivite": 4.248088,
      "risque": 6.15589,
-     "base_precedente": 4.193225860595703
+     "base_precedente": 4.1932258606
     },
     "IBP": {
      "base": 2.337677,
      "productivite": 2.491127,
      "risque": 2.377302,
-     "base_precedente": 2.2346746921539307
+     "base_precedente": 2.23467469215
     },
     "CoA": {
      "base": 1.813649,
      "productivite": 1.746417,
      "risque": 3.770322,
-     "base_precedente": 1.9580681324005127
+     "base_precedente": 1.9580681324
     },
     "pensions": {
      "base": -0.2321956,
      "productivite": -0.1300628,
      "risque": -0.2250755,
-     "base_precedente": -0.13198453187942505
+     "base_precedente": -0.131984531879
     },
     "sante": {
      "base": 1.016287,
      "productivite": 0.9793838,
      "risque": 1.811315,
-     "base_precedente": 1.0711243152618408
+     "base_precedente": 1.07112431526
     },
     "dependance": {
      "base": 1.236124,
      "productivite": 1.105772,
      "risque": 2.391706,
-     "base_precedente": 1.261782169342041
+     "base_precedente": 1.26178216934
     },
     "education": {
      "base": -0.2065666,
      "productivite": -0.2086764,
      "risque": -0.2076233,
-     "base_precedente": -0.242854505777359
+     "base_precedente": -0.242854505777
     }
    },
    "PL": {
@@ -3260,43 +3260,43 @@
      "base": 5.58593,
      "productivite": 5.902635,
      "risque": 8.730846,
-     "base_precedente": 4.809986114501953
+     "base_precedente": 4.8099861145
     },
     "IBP": {
      "base": 4.777945,
      "productivite": 4.899552,
      "risque": 4.691929,
-     "base_precedente": 3.902092933654785
+     "base_precedente": 3.90209293365
     },
     "CoA": {
      "base": 0.7467363,
      "productivite": 0.9286416,
      "risque": 3.986145,
-     "base_precedente": 0.8904345631599426
+     "base_precedente": 0.89043456316
     },
     "pensions": {
      "base": -0.7560946,
      "productivite": -0.4901702,
      "risque": -0.777402,
-     "base_precedente": -0.700659990310669
+     "base_precedente": -0.700659990311
     },
     "sante": {
      "base": 0.84312,
      "productivite": 0.8084728,
      "risque": 1.649301,
-     "base_precedente": 0.8477843999862671
+     "base_precedente": 0.847784399986
     },
     "dependance": {
      "base": 0.6139296,
      "productivite": 0.5759618,
      "risque": 3.062993,
-     "base_precedente": 0.6846223473548889
+     "base_precedente": 0.684622347355
     },
     "education": {
      "base": 0.0457815,
      "productivite": 0.0343778,
      "risque": 0.0512521,
-     "base_precedente": 0.058687902987003326
+     "base_precedente": 0.058687902987
     }
    },
    "PT": {
@@ -3304,43 +3304,43 @@
      "base": -1.385027,
      "productivite": -0.2882071,
      "risque": 5.886849,
-     "base_precedente": -1.9532285928726196
+     "base_precedente": -1.95322859287
     },
     "IBP": {
      "base": -1.255659,
      "productivite": -1.040202,
      "risque": -1.069401,
-     "base_precedente": -1.965232491493225
+     "base_precedente": -1.96523249149
     },
     "CoA": {
      "base": -0.1190778,
      "productivite": 0.7672774,
      "risque": 6.97077,
-     "base_precedente": 0.0038808435201644897
+     "base_precedente": 0.00388084352016
     },
     "pensions": {
      "base": -1.726583,
      "productivite": -0.79081,
      "risque": -1.454886,
-     "base_precedente": -1.6500154733657837
+     "base_precedente": -1.65001547337
     },
     "sante": {
      "base": 1.135313,
      "productivite": 1.099655,
      "risque": 1.802101,
-     "base_precedente": 1.143836259841919
+     "base_precedente": 1.14383625984
     },
     "dependance": {
      "base": 0.3763438,
      "productivite": 0.3649673,
      "risque": 6.528981,
-     "base_precedente": 0.3797467052936554
+     "base_precedente": 0.379746705294
     },
     "education": {
      "base": 0.0958489,
      "productivite": 0.0934642,
      "risque": 0.0945747,
-     "base_precedente": 0.13031184673309326
+     "base_precedente": 0.130311846733
     }
    },
    "RO": {
@@ -3348,43 +3348,43 @@
      "base": 1.946485,
      "productivite": 2.538381,
      "risque": 4.945006,
-     "base_precedente": 4.7213335037231445
+     "base_precedente": 4.72133350372
     },
     "IBP": {
      "base": 3.09925,
      "productivite": 3.246141,
      "risque": 3.091729,
-     "base_precedente": 5.840531349182129
+     "base_precedente": 5.84053134918
     },
     "CoA": {
      "base": -1.171678,
      "productivite": -0.7319916,
      "risque": 1.834616,
-     "base_precedente": -1.1191973686218262
+     "base_precedente": -1.11919736862
     },
     "pensions": {
      "base": -2.064678,
      "productivite": -1.535366,
      "risque": -2.063139,
-     "base_precedente": -2.0548579692840576
+     "base_precedente": -2.05485796928
     },
     "sante": {
      "base": 0.6286275,
      "productivite": 0.5494244,
      "risque": 1.509857,
-     "base_precedente": 0.5847915410995483
+     "base_precedente": 0.5847915411
     },
     "dependance": {
      "base": 0.2533077,
      "productivite": 0.2405462,
      "risque": 2.376776,
-     "base_precedente": 0.32335948944091797
+     "base_precedente": 0.323359489441
     },
     "education": {
      "base": 0.0110643,
      "productivite": 0.0134042,
      "risque": 0.0111203,
-     "base_precedente": 0.02750888094305992
+     "base_precedente": 0.0275088809431
     }
    },
    "SI": {
@@ -3392,43 +3392,43 @@
      "base": 6.450365,
      "productivite": 6.564147,
      "risque": 9.430269,
-     "base_precedente": 5.977433681488037
+     "base_precedente": 5.97743368149
     },
     "IBP": {
      "base": 2.103095,
      "productivite": 2.199237,
      "risque": 2.148642,
-     "base_precedente": 1.4387874603271484
+     "base_precedente": 1.43878746033
     },
     "CoA": {
      "base": 4.356278,
      "productivite": 4.377024,
      "risque": 7.291819,
-     "base_precedente": 4.538646221160889
+     "base_precedente": 4.53864622116
     },
     "pensions": {
      "base": 3.110384,
      "productivite": 3.190791,
      "risque": 3.085409,
-     "base_precedente": 3.116635799407959
+     "base_precedente": 3.11663579941
     },
     "sante": {
      "base": 0.7503324,
      "productivite": 0.7249285,
      "risque": 1.919438,
-     "base_precedente": 0.8503244519233704
+     "base_precedente": 0.850324451923
     },
     "dependance": {
      "base": 0.6907209,
      "productivite": 0.6557615,
      "risque": 2.481507,
-     "base_precedente": 0.78101646900177
+     "base_precedente": 0.781016469002
     },
     "education": {
      "base": -0.1951589,
      "productivite": -0.1944573,
      "risque": -0.1945346,
-     "base_precedente": -0.2093290388584137
+     "base_precedente": -0.209329038858
     }
    },
    "SK": {
@@ -3436,43 +3436,43 @@
      "base": 7.175255,
      "productivite": 7.517326,
      "risque": 10.62552,
-     "base_precedente": 7.764705657958984
+     "base_precedente": 7.76470565796
     },
     "IBP": {
      "base": 3.262733,
      "productivite": 3.388386,
      "risque": 3.323659,
-     "base_precedente": 3.622426986694336
+     "base_precedente": 3.62242698669
     },
     "CoA": {
      "base": 3.902706,
      "productivite": 4.113793,
      "risque": 7.289785,
-     "base_precedente": 4.137755393981934
+     "base_precedente": 4.13775539398
     },
     "pensions": {
      "base": 1.491201,
      "productivite": 1.809212,
      "risque": 1.47769,
-     "base_precedente": 1.7143198251724243
+     "base_precedente": 1.71431982517
     },
     "sante": {
      "base": 1.04335,
      "productivite": 1.008907,
      "risque": 2.032676,
-     "base_precedente": 1.0484156608581543
+     "base_precedente": 1.04841566086
     },
     "dependance": {
      "base": 1.169054,
      "productivite": 1.098747,
      "risque": 3.581704,
-     "base_precedente": 1.155165672302246
+     "base_precedente": 1.1551656723
     },
     "education": {
      "base": 0.1991021,
      "productivite": 0.1969264,
      "risque": 0.1977167,
-     "base_precedente": 0.21985431015491486
+     "base_precedente": 0.219854310155
     }
    },
    "FI": {
@@ -3480,43 +3480,43 @@
      "base": 4.095692,
      "productivite": 4.493772,
      "risque": 6.385525,
-     "base_precedente": 3.0578699111938477
+     "base_precedente": 3.05786991119
     },
     "IBP": {
      "base": 2.198734,
      "productivite": 2.192702,
      "risque": 2.432248,
-     "base_precedente": 1.299492359161377
+     "base_precedente": 1.29949235916
     },
     "CoA": {
      "base": 1.88532,
      "productivite": 2.288161,
      "risque": 3.934034,
-     "base_precedente": 1.6536357402801514
+     "base_precedente": 1.65363574028
     },
     "pensions": {
      "base": 0.6318516,
      "productivite": 1.049581,
      "risque": 0.5146735,
-     "base_precedente": 0.46283820271492004
+     "base_precedente": 0.462838202715
     },
     "sante": {
      "base": 0.4573228,
      "productivite": 0.4517863,
      "risque": 1.218242,
-     "base_precedente": 0.5299575924873352
+     "base_precedente": 0.529957592487
     },
     "dependance": {
      "base": 1.554011,
      "productivite": 1.540398,
      "risque": 2.930582,
-     "base_precedente": 1.4939266443252563
+     "base_precedente": 1.49392664433
     },
     "education": {
      "base": -0.7578642,
      "productivite": -0.7536039,
      "risque": -0.7294621,
-     "base_precedente": -0.8330865502357483
+     "base_precedente": -0.833086550236
     }
    },
    "SE": {
@@ -3524,43 +3524,43 @@
      "base": 2.579342,
      "productivite": 2.454953,
      "risque": 5.043559,
-     "base_precedente": 1.0160993337631226
+     "base_precedente": 1.01609933376
     },
     "IBP": {
      "base": 1.751843,
      "productivite": 1.760694,
      "risque": 1.764642,
-     "base_precedente": 0.25409090518951416
+     "base_precedente": 0.25409090519
     },
     "CoA": {
      "base": 0.8257601,
      "productivite": 0.6913735,
      "risque": 3.276816,
-     "base_precedente": 0.7622754573822021
+     "base_precedente": 0.762275457382
     },
     "pensions": {
      "base": -0.2932948,
      "productivite": -0.3725106,
      "risque": -0.2925245,
-     "base_precedente": -0.414936363697052
+     "base_precedente": -0.414936363697
     },
     "sante": {
      "base": 0.5630952,
      "productivite": 0.5356306,
      "risque": 1.410652,
-     "base_precedente": 0.6084637641906738
+     "base_precedente": 0.608463764191
     },
     "dependance": {
      "base": 1.130611,
      "productivite": 1.086727,
      "risque": 2.729951,
-     "base_precedente": 1.1220309734344482
+     "base_precedente": 1.12203097343
     },
     "education": {
      "base": -0.5746508,
      "productivite": -0.5584732,
      "risque": -0.5712632,
-     "base_precedente": -0.5532823204994202
+     "base_precedente": -0.553282320499
     }
    }
   }
@@ -3568,12 +3568,12 @@
  "cor": {
   "a0": 2025,
   "a1": 2070,
-  "depenses0": 14.116445335913447,
-  "depenses1": 15.300019235384871,
-  "ressources0": 13.946990298857335,
-  "ressources1": 12.910491907282113,
-  "solde0": -0.16945503705611265,
-  "solde1": -2.3895273281027585
+  "depenses0": 14.1164453359,
+  "depenses1": 15.3000192354,
+  "ressources0": 13.9469902989,
+  "ressources1": 12.9104919073,
+  "solde0": -0.169455037056,
+  "solde1": -2.3895273281
  },
  "etat_negociable": {
   "fins": [

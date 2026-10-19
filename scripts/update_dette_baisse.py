@@ -1462,6 +1462,8 @@ def main() -> int:
                                         "temoin": "ratios de dette et de solde primaire comparés à ceux publiés par Eurostat en %% du PIB ; tolérance %.2f point" % TOL}},
                "france": {"decennies": dec, "annees": annees}, "pays_dette_elevee": cmp_, "europe": europe, "zone_euro": ze, "conservation": cons, "affichage": A, "affichage_en": A_en}
     releve = payload["meta"]["releve_le"]
+    # Bruit de calcul au 15e chiffre : le jeu se compare et s'écrit normalisé (organe commun releve_jeu.normalise, 19/10/2026).
+    payload = rj.normalise(payload)
     licence = "CC BY 4.0 — compilation Stéphane Lalut ; sources Eurostat, Commission européenne (AMECO), OCDE, FMI"   # nomme les sources : un changement s'écrit (rj.sans_licence, 18/10/2026)
     if OUT_DATA.exists():
         try:

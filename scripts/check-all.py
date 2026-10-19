@@ -70,6 +70,10 @@ HORS_RESEAU = [
     # un rang se decide sur un ecart que le lecteur ne voit pas, une barre oblique inverse mangee tue une garde. Bloquant :
     # chacun de ces defauts passe en silence, sortie 0, et ne se voit qu'a la mise a jour suivante ou chez le lecteur.
     ("lecture des tableurs (module commun)", "test_lecture_tableur.py", []),
+    # Jeu compare et ecrit normalise (19/10/2026) : sans releve_jeu.normalise, un bruit de calcul au 15e chiffre
+    # reecrivait jeu, figures et PNG a chaque passage du robot (3 commits sur 13 du 25/09 au 18/10). Bloquant : une
+    # regression rendrait ces commits muets, et une normalisation trop grossiere tairait une vraie donnee.
+    ("releve des jeux (module commun)", "test_releve_jeu.py", []),
     ("lecture, rangs et octets des generateurs", "check-lecture-donnees.py", []),
 ]
 LOCAL_DERIVES = [

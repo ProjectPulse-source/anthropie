@@ -1592,6 +1592,8 @@ def main() -> int:
                "cor": C, "etat_negociable": etat, "controles": {"detention_bce_eurostat_annees": det_controle}, "conservation": cons,
                "affichage": A, "affichage_en": A_en}
     releve = payload["meta"]["releve_le"]
+    # Bruit de calcul au 15e chiffre : le jeu se compare et s'écrit normalisé (organe commun releve_jeu.normalise, 19/10/2026).
+    payload = rj.normalise(payload)
     licence = "CC BY 4.0 — compilation Stéphane Lalut ; sources Eurostat, Insee, BCE, Commission européenne, COR"
     if OUT_DATA.exists():
         try:

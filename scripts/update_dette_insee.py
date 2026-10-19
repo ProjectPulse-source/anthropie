@@ -1801,6 +1801,15 @@ def rendre_png(svgs: list) -> None:
         print("PNG non rendus : cairosvg absent (cas normal hors poste local).")
         return
     import hashlib
+    # Un PNG ne se refait que si son SVG source a changé (19/10/2026) : chaque passage du robot re-rendait les 28 PNG, et
+    # le rendu du serveur différant de celui du poste, chaque régénération locale entraînait un commit de PNG sans
+    # aucune donnée nouvelle (mesuré : 3 commits du robot ne contenant que des PNG, du 29/09 au 14/10).
+    cible = REPO / "data" / "png_dette_source.json"
+    try:
+        avant = json.loads(cible.read_text(encoding="utf-8")).get("sources", {})
+    except (OSError, ValueError):
+        avant = {}
+    refaits = 0
     manifeste = {
         "_avertissement": ("Empreinte du SVG source au moment du rendu du PNG."
                            " Controle : scripts/check-png-dette.py"),
@@ -1808,22 +1817,23 @@ def rendre_png(svgs: list) -> None:
     }
     for svg in svgs:
         png = svg.with_suffix(".png")
-        cairosvg.svg2png(url=str(svg), write_to=str(png), output_width=1440,
-                         background_color="white")
+        empreinte = hashlib.sha256(svg.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
+        if not (png.exists() and avant.get(png.name) == empreinte):
+            cairosvg.svg2png(url=str(svg), write_to=str(png), output_width=1440,
+                             background_color="white")
+            refaits += 1
         # Fins de ligne normalisees en LF : le manifeste doit dire la meme chose
         # selon qu'il est ecrit en CI (LF) ou sur un poste Windows (CRLF apres
         # checkout). Sans cela, les deux cotes se contredisent sans qu'aucun
         # fichier n'ait bouge -- cf. la docstring de check-png-dette.py, ou le
         # faux positif a ete mesure le 2026-09-29.
-        manifeste["sources"][png.name] = hashlib.sha256(
-            svg.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
+        manifeste["sources"][png.name] = empreinte
     # Manifeste dans data/ : c'est un artefact INTERNE de controle, il n'a
     # rien a faire parmi les fichiers servis au public.
-    cible = REPO / "data" / "png_dette_source.json"
     cible.write_text(json.dumps(manifeste, ensure_ascii=False, indent=1) + "\n",
                      encoding="utf-8")
-    print("OK: %d PNG rendus (1440 px) + manifeste d'empreintes."
-          % len(manifeste["sources"]))
+    print("OK: %d PNG refaits sur %d (les autres : SVG source inchange) + manifeste d'empreintes."
+          % (refaits, len(manifeste["sources"])))
 
 
 def main() -> int:
@@ -2418,6 +2428,8 @@ def main() -> int:
         payload["taux_long_terme_annuels"] = payload_prev["taux_long_terme_annuels"]
     # Données identiques HORS blocs de texte (organe commun releve_jeu.py, 17/10/2026) : une correction du seul texte ne
     # redate pas le relevé ; elle s'écrit, et la page se date par data/dates_affichage.json.
+    # Bruit de calcul au 15e chiffre : le jeu se compare et s'écrit normalisé (organe commun releve_jeu.normalise, 19/10/2026).
+    payload = rj.normalise(payload)
     inchange = payload_prev is not None and rj.donnees(payload) == rj.donnees(payload_prev)
     if inchange:
         for cle, bloc in _blocs_dates(payload):

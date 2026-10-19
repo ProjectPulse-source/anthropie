@@ -43,6 +43,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import langue_generee as lg  # noqa: E402  -- nombre, signe, accord de « point » (organe commun)
 import pied_figure  # noqa: E402  -- pied commun, version téléphone, parité (organe commun)
+import releve_jeu as rj  # noqa: E402  -- jeu comparé et écrit normalisé (organe commun, 19/10/2026)
 
 DON = Path(__file__).resolve().parent / "sources_collectivites"
 GEO = ["FR", "DE", "IT", "ES"]
@@ -1770,6 +1771,8 @@ def _main() -> int:
         "affichage": a,
         "affichage_en": a_en,
     }
+    # Bruit de calcul au 15e chiffre : le jeu se compare et s'écrit normalisé (organe commun releve_jeu.normalise, 19/10/2026).
+    payload = rj.normalise(payload)
     if OUT_DATA.exists():
         try:
             prev = json.loads(OUT_DATA.read_text(encoding="utf-8"))

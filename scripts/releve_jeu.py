@@ -36,6 +36,24 @@ def _sans_dates(x):
     return x
 
 
+def normalise(x):
+    """Jeu ÉCRIT et COMPARÉ à 12 chiffres significatifs (19/10/2026).
+
+    MOTIF. La date de relevé ignorait déjà le bruit de calcul (_sans_dates), mais chaque générateur décidait « rien
+    écrit » par une comparaison EXACTE : un écart au 15e chiffre (ordre de sommation, autre machine) réécrivait jeu,
+    figures et PNG. Mesuré le 19/10 sur les commits du robot depuis le 25/09 : 3 sur 13 ne portaient que ce bruit
+    (dette_generations, dette_baisse, dette_dynamique et dette_monde), écart relatif maximal 3,5e-15. Le jeu normalisé
+    s'écrit tel quel : la comparaison suivante porte sur des valeurs déjà arrondies, et le bruit disparaît.
+    Une vraie donnée change au plus tard au 12e chiffre significatif : elle s'écrit toujours (test_releve_jeu.py)."""
+    if isinstance(x, dict):
+        return {k: normalise(v) for k, v in x.items()}
+    if isinstance(x, list):
+        return [normalise(v) for v in x]
+    if isinstance(x, float):
+        return float("%.12g" % x)
+    return x
+
+
 def donnees(jeu: dict) -> str:
     """Empreinte des données d'un jeu : sans dates de relevé, sans licence, sans blocs de texte."""
     c = json.loads(json.dumps(jeu, ensure_ascii=False, default=str))
