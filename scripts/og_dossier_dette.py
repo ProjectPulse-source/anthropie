@@ -27,6 +27,7 @@ même dessin sur fond blanc), lue par l'index /ressources/ à la place de l'imag
 """
 from __future__ import annotations
 
+import itertools
 import json
 import sys
 from pathlib import Path
@@ -91,14 +92,78 @@ def background() -> Image.Image:
     return im
 
 
+# COLONNE DU TITRE (20/10/2026). Les figures commencent à x = 648 ou plus ; titre et accroche s'arrêtent avant
+# TITRE_DROITE. Défaut corrigé : le titre était dessiné en corps 58 sans mesure, et « Neuf référendums nationaux »
+# recouvrait la frise de la carte Référendum (pièce de l'auteur du 20/10/2026) ; sept autres cartes débordaient, et
+# l'accroche de « Les élèves… » recouvrait ses barres. Titre : lignes données telles quelles ; sinon mêmes mots
+# recomposés sur deux, puis trois lignes ; sinon corps réduit jusqu'à TITRE_CORPS_MIN ; sinon ARRÊT. Accroche : une
+# ligne, sinon deux, sinon ARRÊT. Une carte dont le texte tenait garde exactement son dessin.
+TITRE_DROITE = 620
+TITRE_CORPS_MIN = 46
+
+
+def _mots_insecables(texte: str) -> list[str]:
+    """Mots d'un texte, avec les soudures de la typographie du site : ponctuation haute et guillemet fermant au mot
+    qui précède, guillemet ouvrant et nombre au mot qui suit (jamais « ? » en tête de ligne, ni « 10 » sans « ans »)."""
+    mots, colle = [], False
+    for m in texte.split():
+        if mots and (colle or m in ("?", "!", ":", ";", "»")):
+            mots[-1] += " " + m
+        else:
+            mots.append(m)
+        colle = m == "«" or m.replace(",", "").replace(".", "").isdigit() and len(m) < 4  # un millésime ne se soude pas
+    return mots
+
+
+def _coupe(d: ImageDraw.ImageDraw, mots: list[str], ft, largeur: float, max_lignes: int):
+    """La coupe au plus petit nombre de lignes, et parmi elles la plus équilibrée ; None si rien ne tient."""
+    for n in range(1, max_lignes + 1):
+        meilleur = None
+        for coupes in itertools.combinations(range(1, len(mots)), n - 1):
+            bornes = (0,) + coupes + (len(mots),)
+            lignes = [" ".join(mots[a:b]) for a, b in zip(bornes, bornes[1:])]
+            pire = max(d.textlength(l, font=ft) for l in lignes)
+            if pire <= largeur and (meilleur is None or pire < meilleur[0]):
+                meilleur = (pire, lignes)
+        if meilleur:
+            return meilleur[1]
+    return None
+
+
+def titre_dans_colonne(d: ImageDraw.ImageDraw, titre: list[str]):
+    largeur = TITRE_DROITE - 70
+    for corps in range(58, TITRE_CORPS_MIN - 1, -2):
+        ft = font("newsreader", corps, 600)
+        if corps == 58 and all(d.textlength(l, font=ft) <= largeur for l in titre):
+            return ft, titre
+        lignes = _coupe(d, _mots_insecables(" ".join(titre)), ft, largeur, 3)
+        if lignes and len(lignes) >= 2:
+            return ft, lignes
+    fail("carte : titre trop long pour sa colonne, même en %d px sur trois lignes : %r" % (TITRE_CORPS_MIN, titre))
+
+
+def accroche_dans_colonne(d: ImageDraw.ImageDraw, accroche: str, fa) -> list[str]:
+    if d.textlength(accroche, font=fa) <= TITRE_DROITE - 70:
+        return [accroche]
+    lignes = _coupe(d, _mots_insecables(accroche), fa, TITRE_DROITE - 70, 2)
+    if not lignes:
+        fail("carte : accroche trop longue pour sa colonne, même sur deux lignes : %r" % accroche)
+    return lignes
+
+
 def habillage(d: ImageDraw.ImageDraw, titre: list[str], accroche: str,
               source: str, url: str, cle: list[tuple]) -> None:
     y = 74
-    ft = font("newsreader", 58, 600)
+    ft, titre = titre_dans_colonne(d, titre)
+    pas = round(ft.size * 68 / 58)
     for ligne in titre:
         d.text((70, y), ligne, font=ft, fill=NAVY)
-        y += 68
-    d.text((70, y + 10), accroche, font=font("newsreader", 25, 400, italic=True), fill=GREY)
+        y += pas
+    fa = font("newsreader", 25, 400, italic=True)
+    for k, ligne in enumerate(accroche_dans_colonne(d, accroche, fa)):
+        if k:
+            y += 32
+        d.text((70, y + 10), ligne, font=fa, fill=GREY)
     # CLÉ DE COULEUR. Sans elle la figure est muette : à cette taille aucune
     # étiquette ne tient sur les barres, et un aperçu de partage se lit en une
     # seconde. Elle occupe la colonne de gauche, restée vide sous l'accroche.
