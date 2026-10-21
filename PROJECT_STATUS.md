@@ -66,6 +66,10 @@ des étiquettes passent (la collision Croatie/Chypre du 20/10 a disparu). **À s
 workflow fait tourner `update_dette_dynamique`, `_baisse` et `_generations`, pas encore exercés sur les données révisées ; et
 le point danois peut rouvrir une collision d'étiquettes. Condition de clôture : un passage vert de `dette-monde.yml`.
 
+**Fiche `trajectoire_plf.json` (`9600d4e`)** : la sensibilité aux taux est au § 116, **p. 39** (graphique 20), non p. 38 ;
+relu dans le PDF archivé (page imprimée = page du PDF), les autres renvois exacts. Écart trouvé en relisant l'échange avec
+Michel Santi (fil « Choc de taux », clos par une réponse de courtoisie le 21/10).
+
 ### 2026-10-21 — `/transparence-contacts/` : deux phrases rendues exactes (FR et EN)
 
 « Ces messages sont adressés en faible nombre » (invérifiable) devient « chaque message est rédigé pour un destinataire
