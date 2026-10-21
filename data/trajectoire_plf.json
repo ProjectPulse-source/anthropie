@@ -54,7 +54,7 @@
  },
  "sensibilite": {
   "_statut": "PUBLIÉ (scénario de sensibilité du Gouvernement, rapporté par le Haut Conseil), relu à la source le 2026-10-11",
-  "_emplacement": "§ 116, p. 38 (taux) ; § 115, p. 38 (inflation)",
+  "_emplacement": "§ 116, p. 39, graphique 20 (taux) ; § 115, p. 38 (inflation) ; page du § 116 corrigée le 2026-10-21 (p. 38 auparavant), relue dans le PDF archivé",
   "_nature": "Sensibilité, non prévision : elle dit l'ordre de grandeur de la transmission d'un choc, jamais une trajectoire.",
   "taux_1pt_premiere_annee_mdeur": 3.4,
   "taux_1pt_deuxieme_annee_mdeur": 8.1,
