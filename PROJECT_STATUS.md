@@ -52,6 +52,20 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-21 — Notification Eurostat d'octobre : deux workflows dette en échec, un corrigé (`dc067bd`), un en attente de la source
+
+**INSEE/Eurostat (corrigé, publié)** : charge d'intérêts 2025 révisée de 66,6 à 65,7 Md€ ; la page `/cout-de-la-dette-publique/`
+déduisait du « plus de 25 Md€ » du HCFP (91 − 25 = 66) une base 2025 du Gouvernement « non réconciliée » avec Eurostat, et la
+garde l'a refusée. La prose dit désormais la borne seule (jeton `prev_base_2025_max_mdeur`), vraie dans les deux sens de
+révision ; garde réécrite, vue mordre ; entrée de journal FR et EN ; page servie contrôlée.
+
+**Comparaison internationale (OUVERT, attendre Eurostat)** : `gov_10a_main` du 21/10 ne donne plus les recettes (TR) ni le
+solde (B9) du Danemark pour 2024-2025. La prose cite le Danemark : rien n'est écrit, la page reste sur les données du 19/10.
+Le script nomme désormais le pays absent au lieu d'une `KeyError`. Essai sans le Danemark : toutes les gardes et le placement
+des étiquettes passent (la collision Croatie/Chypre du 20/10 a disparu). **À surveiller au retour du Danemark** : le même
+workflow fait tourner `update_dette_dynamique`, `_baisse` et `_generations`, pas encore exercés sur les données révisées ; et
+le point danois peut rouvrir une collision d'étiquettes. Condition de clôture : un passage vert de `dette-monde.yml`.
+
 ### 2026-10-21 — `/transparence-contacts/` : deux phrases rendues exactes (FR et EN)
 
 « Ces messages sont adressés en faible nombre » (invérifiable) devient « chaque message est rédigé pour un destinataire
