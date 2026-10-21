@@ -1,5 +1,5 @@
 {
- "releve_le": "2026-10-19",
+ "releve_le": "2026-10-21",
  "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Eurostat, OFGL, Légifrance",
  "meta": {
   "page": "https://stephane-lalut.com/dette-publique-collectivites-locales/",
@@ -7,23 +7,23 @@
   "sources": {
    "comptes": {
     "jeu": "gov_10a_main",
-    "maj_source": "2026-07-21T11:00:00+0200",
-    "sha256": "49f0b0a6bc5fd3900d108f28fa17840ef25c2f1d060126e7355f8c3940e94cb2"
+    "maj_source": "2026-10-21T11:00:00+0200",
+    "sha256": "8629e373745b5d8df31edf7719ba02204d2343ddcbef1c8d114d57fe775946d6"
    },
    "te_pc": {
     "jeu": "gov_10a_main",
-    "maj_source": "2026-07-21T11:00:00+0200",
-    "sha256": "7d57909018a8b81d878e3498df66f311a00ae4851a284af2fd1496bfab9ba434"
+    "maj_source": "2026-10-21T11:00:00+0200",
+    "sha256": "207425ae118e1e4154422ae9feb6432eb94feb62d9a106d5cc1ac67295c89e96"
    },
    "pib": {
     "jeu": "nama_10_gdp",
-    "maj_source": "2026-10-15T23:00:00+0200",
-    "sha256": "c970c58dfab30c1d202a0233b12460171485f1dd94a3b5548cfdb7d366f12817"
+    "maj_source": "2026-10-21T11:00:00+0200",
+    "sha256": "ba35e5c8ce74ccfc60663576470036aaf3261fa1bc38f8d0eb3a337712c43fc2"
    },
    "dette": {
     "jeu": "gov_10q_ggdebt",
-    "maj_source": "2026-07-21T11:00:00+0200",
-    "sha256": "fcb03e88de5a9fbca3839f6e26411d291e72eb97fbf7882bf392cec0bae3d896"
+    "maj_source": "2026-10-21T11:00:00+0200",
+    "sha256": "776d56bdd0e0adf1e5467f498d2358eb45486c223509a58596df160a4a34a88d"
    },
    "ggd": {
     "jeu": "gov_10dd_ggd",
@@ -32,13 +32,13 @@
    },
    "ofgl": {
     "jeu": "data.ofgl.fr (4 bases consolidees)",
-    "maj_source": "2026-10-19T",
+    "maj_source": "2026-10-21T",
     "sha256": "ecf3e95c1d7499a6f5833097cd167e115b916ed7e7c179258aee148094ae3fb1"
    },
    "notif": {
     "jeu": "gov_10dd_edpt1",
-    "maj_source": "2026-04-22T11:00:00+0200",
-    "sha256": "248239846d08a63db281b14597b4558d141b0011cc4b614d0c9f140921a2de3f"
+    "maj_source": "2026-10-21T11:00:00+0200",
+    "sha256": "e54ddbd59eb0e878e1c67fc397b4a5b8938ecfa211d42f76fbb0a3e1c219aff0"
    }
   },
   "definitions": {
@@ -329,8 +329,8 @@
   "delta_apu": 56.0,
   "delta_loc": 2.1,
   "part_hausse_loc": 3.75,
-  "inv_loc_fin": 2.35827001479,
-  "part_inv_loc_fin": 53.6816894647,
+  "inv_loc_fin": 2.36271549281,
+  "part_inv_loc_fin": 53.4648170295,
   "ep_a0": 2013,
   "ep_a1": 2017,
   "ep_transf_md": 8.9289,
@@ -415,10 +415,10 @@
   "temoin_annees": 31,
   "cascade_somme": 0.452167972534,
   "temoin_pib_ecart_pct": {
-   "FR": 0.19014879138,
-   "DE": 1.26578136072,
-   "IT": 0.389154850861,
-   "ES": 0.323986467508
+   "FR": 0.092471620751,
+   "DE": 0.10937833536,
+   "IT": 0.102785908214,
+   "ES": 0.119836674775
   },
   "cycles": [
    {
@@ -468,9 +468,9 @@
   "recent_soldes": [
    -0.351298997656,
    -0.606353397443,
-   -0.5190935008
+   -0.519975314328
   ],
-  "recent_solde_fin": -0.5190935008,
+  "recent_solde_fin": -0.519975314328,
   "recent_inv_deb": 2.2347107216,
   "recent_dette_deb": 8.9,
   "pic2010_md": 23.093,
@@ -575,10 +575,10 @@
     "dette_deb": 21.7,
     "dette_pic": 30.3,
     "dette_pic_annee": 2012,
-    "dette_fin": 19.7,
+    "dette_fin": 19.6,
     "inv_max": 1.74123367646,
     "inv_max_annee": 2000,
-    "inv_min": 1.4612318306,
+    "inv_min": 1.45794816356,
     "inv_min_annee": 2014,
     "inv_max_annees": [
      2000,
@@ -595,7 +595,7 @@
      2016,
      2017
     ],
-    "inv_rapport": 0.839193412323,
+    "inv_rapport": 0.83730758443,
     "excedents_2012_2019": 6,
     "dette_loc_fin": 5.0,
     "serie_dette": {
@@ -615,16 +615,16 @@
      "2013": 29.0,
      "2014": 27.8,
      "2015": 26.8,
-     "2016": 25.5,
-     "2017": 23.6,
-     "2018": 22.3,
-     "2019": 22.0,
-     "2020": 24.1,
-     "2021": 22.6,
-     "2022": 20.3,
-     "2023": 19.0,
-     "2024": 19.3,
-     "2025": 19.7
+     "2016": 25.4,
+     "2017": 23.4,
+     "2018": 22.2,
+     "2019": 21.8,
+     "2020": 23.9,
+     "2021": 22.5,
+     "2022": 20.2,
+     "2023": 18.8,
+     "2024": 19.1,
+     "2025": 19.6
     },
     "serie_dette_loc": {
      "2000": 5.1,
@@ -644,20 +644,20 @@
      "2014": 5.7,
      "2015": 5.4,
      "2016": 5.3,
-     "2017": 5.1,
+     "2017": 5.0,
      "2018": 4.7,
-     "2019": 4.6,
+     "2019": 4.5,
      "2020": 4.7,
      "2021": 4.5,
      "2022": 4.3,
-     "2023": 4.3,
+     "2023": 4.2,
      "2024": 4.5,
      "2025": 5.0
     },
-    "temoin_detenteur_ecart": 0.0,
+    "temoin_detenteur_ecart": 0.1,
     "detenu_etat": 0.2,
-    "detenu_total": 19.7,
-    "part_etat_pct": 1.0152284264,
+    "detenu_total": 19.6,
+    "part_etat_pct": 1.02040816327,
     "serie_detenu_etat": {
      "1995": 0.8,
      "1996": 0.8,
@@ -703,7 +703,7 @@
     "dette_fin": 4.7,
     "inv_max": 2.25280303955,
     "inv_max_annee": 2004,
-    "inv_min": 1.1225157098,
+    "inv_min": 1.14590093758,
     "inv_min_annee": 2018,
     "inv_max_annees": [
      2004
@@ -712,7 +712,7 @@
      2017,
      2018
     ],
-    "inv_rapport": 0.498275122189,
+    "inv_rapport": 0.508655624777,
     "excedents_2012_2019": 8,
     "dette_loc_fin": 4.7,
     "serie_dette": {
@@ -737,9 +737,9 @@
      "2018": 7.2,
      "2019": 6.9,
      "2020": 7.4,
-     "2021": 6.5,
+     "2021": 6.6,
      "2022": 5.9,
-     "2023": 5.2,
+     "2023": 5.3,
      "2024": 5.0,
      "2025": 4.7
     },
@@ -765,9 +765,9 @@
      "2018": 7.2,
      "2019": 6.9,
      "2020": 7.4,
-     "2021": 6.5,
+     "2021": 6.6,
      "2022": 5.9,
-     "2023": 5.2,
+     "2023": 5.3,
      "2024": 5.0,
      "2025": 4.7
     },
@@ -831,7 +831,7 @@
      "2021": 27.1,
      "2022": 24.7,
      "2023": 23.3,
-     "2024": 22.5,
+     "2024": 22.4,
      "2025": 21.4
     },
     "serie_dette_loc": {
@@ -882,7 +882,7 @@
   "te_0": 9.86365928997,
   "te_apic": 2009,
   "te_pic": 11.8410936754,
-  "te_fin": 11.1948859169,
+  "te_fin": 11.2146175421,
   "te_apics": [
    2009,
    2013
@@ -969,7 +969,7 @@
    -2.361801
   ],
   "of_encours_total": 218.495805369,
-  "dette_loc_md": 278.697132168,
+  "dette_loc_md": 278.206610995,
   "of_encours_rec0_annee": 2023,
   "of_encours_rec0": 200.536443899,
   "avant_soldes": [
@@ -980,9 +980,9 @@
    2021,
    2022
   ],
-  "dette_maj": "2026-07-21",
-  "notif_maj": "2026-04-22",
-  "dette_apu_notif_fin": 115.6,
+  "dette_maj": "2026-10-21",
+  "notif_maj": "2026-10-21",
+  "dette_apu_notif_fin": 115.7,
   "cahors_taux": 1.2,
   "cahors_base": 2017,
   "cahors_seuil_m": 60,
@@ -1123,7 +1123,7 @@
    "2022": 2.13751423728,
    "2023": 2.2347107216,
    "2024": 2.33033000018,
-   "2025": 2.35827001479
+   "2025": 2.36271549281
   },
   "serie_transf_fr": {
    "1995": 2.67372789978,
@@ -1165,7 +1165,7 @@
   "part_loc_fin": "8",
   "part_hausse_loc": "4",
   "inv_loc_fin": "2,4",
-  "part_inv_loc_fin": "54",
+  "part_inv_loc_fin": "53",
   "ep_a0": "2013",
   "ep_a1": "2017",
   "ep_transf": "0,64",
@@ -1248,12 +1248,12 @@
   "dgf_vote_b16": "3,4",
   "dgf_vote_b17": "2,4",
   "of_encours_total": "218,5",
-  "dette_loc_md": "279",
+  "dette_loc_md": "278",
   "of_ecart_maastricht": "60",
-  "pib_ecart_fr": "0,19",
-  "pib_ecart_de": "1,3",
-  "pib_ecart_it": "0,4",
-  "pib_ecart_es": "0,3",
+  "pib_ecart_fr": "0,09",
+  "pib_ecart_de": "0,1",
+  "pib_ecart_it": "0,1",
+  "pib_ecart_es": "0,1",
   "ep_solde_mde": "9,7 milliards d’euros",
   "ep_solde_pt": "0,45 point",
   "ep_tr_mde": "10,9 milliards d’euros",
@@ -1281,9 +1281,9 @@
   "ep_te_effet_eur_pt": "0,05 point",
   "ep_inv_pct_eur": "15",
   "ep_te_pc_a1": "10,9",
-  "dette_apu_notif_fin": "115,6",
-  "dette_maj": "21 juillet 2026",
-  "notif_maj": "22 avril 2026",
+  "dette_apu_notif_fin": "115,7",
+  "dette_maj": "21 octobre 2026",
+  "notif_maj": "21 octobre 2026",
   "avant_a0": "2021",
   "avant_a1": "2022",
   "recent_solde_deb_pt": "0,35 point",
@@ -1323,7 +1323,7 @@
   "de_dette_deb": "21,7",
   "de_dette_pic": "30,3",
   "de_dette_pic_annee": "2012",
-  "de_dette_fin": "19,7",
+  "de_dette_fin": "19,6",
   "de_inv_max": "1,7",
   "de_inv_max_annee": "2000, 2001, 2002, 2009 et 2010",
   "de_inv_min": "1,5",
@@ -1331,7 +1331,7 @@
   "de_inv_baisse_pct": "16",
   "de_dette_loc_fin": "5,0",
   "de_detenu_etat": "0,2",
-  "de_detenu_total": "19,7",
+  "de_detenu_total": "19,6",
   "de_part_etat_pct": "1",
   "de_excedents": "six",
   "it_dette_deb": "5,3",
@@ -1342,7 +1342,7 @@
   "it_inv_max_annee": "2004",
   "it_inv_min": "1,1",
   "it_inv_min_annee": "2017 et 2018",
-  "it_inv_baisse_pct": "50",
+  "it_inv_baisse_pct": "49",
   "it_dette_loc_fin": "4,7",
   "it_detenu_etat": "1,2",
   "it_detenu_total": "4,7",
@@ -1377,7 +1377,7 @@
   "part_loc_fin": "8",
   "part_hausse_loc": "4",
   "inv_loc_fin": "2.4",
-  "part_inv_loc_fin": "54",
+  "part_inv_loc_fin": "53",
   "ep_a0": "2013",
   "ep_a1": "2017",
   "ep_transf": "0.64",
@@ -1460,12 +1460,12 @@
   "dgf_vote_b16": "3.4",
   "dgf_vote_b17": "2.4",
   "of_encours_total": "218.5",
-  "dette_loc_md": "279",
+  "dette_loc_md": "278",
   "of_ecart_maastricht": "60",
-  "pib_ecart_fr": "0.19",
-  "pib_ecart_de": "1.3",
-  "pib_ecart_it": "0.4",
-  "pib_ecart_es": "0.3",
+  "pib_ecart_fr": "0.09",
+  "pib_ecart_de": "0.1",
+  "pib_ecart_it": "0.1",
+  "pib_ecart_es": "0.1",
   "ep_solde_mde": "€9.7 billion",
   "ep_solde_pt": "0.45 points",
   "ep_tr_mde": "€10.9 billion",
@@ -1493,9 +1493,9 @@
   "ep_te_effet_eur_pt": "0.05 points",
   "ep_inv_pct_eur": "15",
   "ep_te_pc_a1": "10.9",
-  "dette_apu_notif_fin": "115.6",
-  "dette_maj": "21 July 2026",
-  "notif_maj": "22 April 2026",
+  "dette_apu_notif_fin": "115.7",
+  "dette_maj": "21 October 2026",
+  "notif_maj": "21 October 2026",
   "avant_a0": "2021",
   "avant_a1": "2022",
   "recent_solde_deb_pt": "0.35 points",
@@ -1535,7 +1535,7 @@
   "de_dette_deb": "21.7",
   "de_dette_pic": "30.3",
   "de_dette_pic_annee": "2012",
-  "de_dette_fin": "19.7",
+  "de_dette_fin": "19.6",
   "de_inv_max": "1.7",
   "de_inv_max_annee": "2000, 2001, 2002, 2009 and 2010",
   "de_inv_min": "1.5",
@@ -1543,7 +1543,7 @@
   "de_inv_baisse_pct": "16",
   "de_dette_loc_fin": "5.0",
   "de_detenu_etat": "0.2",
-  "de_detenu_total": "19.7",
+  "de_detenu_total": "19.6",
   "de_part_etat_pct": "1",
   "de_excedents": "six",
   "it_dette_deb": "5.3",
@@ -1554,7 +1554,7 @@
   "it_inv_max_annee": "2004",
   "it_inv_min": "1.1",
   "it_inv_min_annee": "2017 and 2018",
-  "it_inv_baisse_pct": "50",
+  "it_inv_baisse_pct": "49",
   "it_dette_loc_fin": "4.7",
   "it_detenu_etat": "1.2",
   "it_detenu_total": "4.7",

@@ -16,7 +16,7 @@
 <text x="197.2" y="272" font-size="13.5" fill="#898781" text-anchor="middle">2014</text>
 <text x="294.0" y="272" font-size="13.5" fill="#898781" text-anchor="end">2025</text>
 <polyline points="30.0,197.0 38.8,190.9 47.6,187.7 56.4,192.7 65.2,185.0 74.0,173.1 82.8,170.2 91.6,155.6 100.4,151.3 109.2,152.9 118.0,158.6 126.8,158.0 135.6,165.0 144.4,163.1 153.2,151.4 162.0,100.6 170.8,160.9 179.6,166.3 188.4,165.8 197.2,173.4 206.0,182.9 214.8,191.9 223.6,196.7" fill="none" stroke="#8a8f98" stroke-width="2.6"/>
-<polyline points="30.0,217.2 38.8,223.0 47.6,232.2 56.4,233.2 65.2,225.4 74.0,218.7 82.8,221.7 91.6,227.0 100.4,224.3 109.2,219.8 118.0,214.8 126.8,213.3 135.6,210.0 144.4,210.6 153.2,208.9 162.0,219.5 170.8,220.5 179.6,216.0 188.4,212.1 197.2,223.2 206.0,235.1 214.8,239.3 223.6,236.5 232.4,231.6 241.2,220.3 250.0,225.3 258.8,224.9 267.6,223.0 276.4,218.3 285.2,213.7 294.0,212.3" fill="none" stroke="#184f95" stroke-width="2.6"/>
+<polyline points="30.0,217.2 38.8,223.0 47.6,232.2 56.4,233.2 65.2,225.4 74.0,218.7 82.8,221.7 91.6,227.0 100.4,224.3 109.2,219.8 118.0,214.8 126.8,213.3 135.6,210.0 144.4,210.6 153.2,208.9 162.0,219.5 170.8,220.5 179.6,216.0 188.4,212.1 197.2,223.2 206.0,235.1 214.8,239.3 223.6,236.5 232.4,231.6 241.2,220.3 250.0,225.3 258.8,224.9 267.6,223.0 276.4,218.3 285.2,213.7 294.0,212.1" fill="none" stroke="#184f95" stroke-width="2.6"/>
 <circle cx="223.6" cy="196.7" r="4" fill="#ffffff" stroke="#8a8f98" stroke-width="2"/>
 <text x="0" y="300" font-size="15" font-weight="600" fill="#8a8f98">Transferts reçus : 3,3 % → 2,7 %</text>
 <text x="0" y="320" font-size="15" font-weight="600" fill="#184f95">Investissement : 2,4 % → 1,9 %</text>
@@ -30,7 +30,7 @@
 <text class="pied-source" x="0" y="467.0" font-size="13.5" fill="#52514e">publiques locales (S1313) :</text>
 <text class="pied-source" x="0" y="484.0" font-size="13.5" fill="#52514e">investissement P51G, transferts</text>
 <text class="pied-source" x="0" y="501.0" font-size="13.5" fill="#52514e">courants reçus D73REC ; France.</text>
-<text class="pied-source" x="0" y="518.0" font-size="13.5" fill="#52514e">Données relevées le 19 octobre 2026.</text>
+<text class="pied-source" x="0" y="518.0" font-size="13.5" fill="#52514e">Données relevées le 21 octobre 2026.</text>
 <text class="pied-note" x="0" y="539.0" font-size="13.5" fill="#52514e">Transferts reçus : de l'État et de la</text>
 <text class="pied-note" x="0" y="556.0" font-size="13.5" fill="#52514e">sécurité sociale, toutes dotations</text>
 <text class="pied-note" x="0" y="573.0" font-size="13.5" fill="#52514e">confondues ; ce n'est pas la DGF.</text>
