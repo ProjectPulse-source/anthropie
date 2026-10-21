@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 729" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dcm2-t dcm2-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-<title id="dcm2-t">Hausse de la charge d'intérêts : encours ou taux implicite ?</title><desc id="dcm2-d">Barres empilées par année, de 2021 à 2025, en milliards d'euros : en bleu la contribution de la hausse de l'encours de dette, en orange celle du taux implicite ; le point noir est la variation de la charge d'intérêts. En 2021 : +5,1 (encours +3,5, taux implicite +1,6). En 2022 : +16,1 (encours +2,6, taux implicite +13,5). En 2023 : +2,5 (encours +2,3, taux implicite +0,2). En 2024 : +6,7 (encours +2,8, taux implicite +3,9). En 2025 : +6,5 (encours +4,0, taux implicite +2,5). Sur l'ensemble, de 2020 à 2025, la charge augmente de +36,9 milliards : +15,1 au titre de l'encours, +21,8 au titre du taux implicite. Décomposition comptable, non causale.</desc>
+<title id="dcm2-t">Hausse de la charge d'intérêts : encours ou taux implicite ?</title><desc id="dcm2-d">Barres empilées par année, de 2021 à 2025, en milliards d'euros : en bleu la contribution de la hausse de l'encours de dette, en orange celle du taux implicite ; le point noir est la variation de la charge d'intérêts. En 2021 : +5,1 (encours +3,5, taux implicite +1,6). En 2022 : +16,1 (encours +2,6, taux implicite +13,5). En 2023 : +2,5 (encours +2,3, taux implicite +0,2). En 2024 : +6,7 (encours +2,8, taux implicite +3,9). En 2025 : +5,6 (encours +4,0, taux implicite +1,6). Sur l'ensemble, de 2020 à 2025, la charge augmente de +36,0 milliards : +15,1 au titre de l'encours, +20,9 au titre du taux implicite. Décomposition comptable, non causale.</desc>
 <rect width="300" height="729" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Hausse de la charge</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">d'intérêts : encours ou taux</text>
 <text x="0" y="64" font-size="17" font-weight="600" fill="#0A0A0E">implicite ?</text>
 <text x="0" y="90" font-size="13.5" fill="#52514e">en milliards d'euros, année par année</text>
 <text x="0" y="116" font-size="13.5" fill="#52514e">De 2020 à 2025 :</text>
-<text x="300" y="116" font-size="17" font-weight="600" fill="#0A0A0E" text-anchor="end">+36,9 Md€</text>
-<text x="0" y="136" font-size="13.5" fill="#52514e">encours +15,1 · taux implicite +21,8</text>
+<text x="300" y="116" font-size="17" font-weight="600" fill="#0A0A0E" text-anchor="end">+36,0 Md€</text>
+<text x="0" y="136" font-size="13.5" fill="#52514e">encours +15,1 · taux implicite +20,9</text>
 <rect x="0" y="147" width="12" height="12" fill="#184f95"/>
 <text x="18" y="158" font-size="13.5" fill="#52514e">hausse de l'encours</text>
 <rect x="0" y="167" width="12" height="12" fill="#eb6834"/>
@@ -29,9 +29,9 @@
 <rect x="4.0" y="374" width="50.1" height="14" fill="#184f95"/>
 <rect x="54.1" y="374" width="71.4" height="14" fill="#eb6834"/>
 <text x="0" y="414" font-size="13.5" fill="#52514e">2025</text>
-<text x="300" y="414" font-size="15" font-weight="600" fill="#0A0A0E" text-anchor="end">+6,5</text>
-<rect x="4.0" y="422" width="72.7" height="14" fill="#184f95"/>
-<rect x="76.7" y="422" width="45.2" height="14" fill="#eb6834"/>
+<text x="300" y="414" font-size="15" font-weight="600" fill="#0A0A0E" text-anchor="end">+5,6</text>
+<rect x="4.0" y="422" width="72.2" height="14" fill="#184f95"/>
+<rect x="76.2" y="422" width="29.4" height="14" fill="#eb6834"/>
 <line x1="0" y1="452.0" x2="300" y2="452.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="473.0" font-size="13.5" fill="#52514e">Calcul sur séries Eurostat</text>
 <text class="pied-source" x="0" y="490.0" font-size="13.5" fill="#52514e">(gov_10a_main, D41PAY) et INSEE (dette</text>

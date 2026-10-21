@@ -1229,6 +1229,11 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts) -> tuple
         fail("affichage_en : cles differentes du bloc francais (%s)" % sorted(set(A) ^ set(A_en)))
     # GARDES DE PROSE : la page affirme ces faits en toutes lettres. Si une nouvelle donnée les
     # dément, on s'arrête au lieu de publier une phrase devenue fausse (« état déclaré ≠ état réel »).
+    # Un pays cite par la prose et absent du millesime (Danemark, 21/10/2026 : recettes 2024-2025 retirees par
+    # Eurostat) arrete avec son nom, jamais par une KeyError ; la page publiee reste celle du passage precedent.
+    absents = [c for c in ("SE", "DE", "DK") if c not in by]
+    if absents:
+        fail("pays cites par la prose absents des donnees %s : %s -- attendre la source, rien n'est ecrit" % (an, ", ".join(absents)))
     se, de, dk = by["SE"], by["DE"], by["DK"]
     affirmations = [
         ("la Suède paie comme l'Allemagne", abs(se["prix"] - de["prix"]) < 0.15),

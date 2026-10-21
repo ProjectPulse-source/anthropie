@@ -601,7 +601,7 @@ LABELS_CARTOUCHE = {
         "montre_longue": ("La dette monte par paliers, chacun installé par une "
                           "crise ; dans la série observée, le ratio n\'est jamais revenu à son niveau de dix ans auparavant."),
         "charge": ("Milliards d'euros courants, non corrigés de l'inflation. Cercles évidés : prévision du "
-                   "Gouvernement, dont la base 2025 n'est pas réconciliée avec Eurostat ; aucune variation ne se lit "
+                   "Gouvernement, dont la base 2025 n'est pas publiée ; aucune variation ne se lit "
                    "entre l'observé et le prévu."),
         "titre_charge": "La charge d'intérêts en milliards d'euros, %s-%s",
         "src_charge_m": ("Eurostat, intérêts dus par les administrations publiques (gov_10a_main, D41PAY), %s-%s ; "
@@ -651,7 +651,7 @@ LABELS_CARTOUCHE = {
         "montre_longue": ("Debt climbs in steps, each set by a crisis; in the observed series, the ratio has "
                           "never returned to its level of ten years earlier."),
         "charge": ("Billion euros at current prices, not adjusted for inflation. Open circles: Government "
-                   "forecast, whose 2025 base is not reconciled with Eurostat; no change can be read between the "
+                   "forecast, whose 2025 base is not published; no change can be read between the "
                    "observed and the forecast values."),
         "titre_charge": "Interest due in billion euros, %s-%s",
         "src_charge_m": ("Eurostat, interest due by general government (gov_10a_main, D41PAY), %s-%s; Government "
@@ -1231,7 +1231,7 @@ def build_svg_charge(interets_md: dict, lang: str = "fr", prev: dict | None = No
                   "milliards en %s.",
           "desc_prev": " Deux cercles évidés, non reliés à la courbe, portent la prévision du Gouvernement dans le "
                        "projet de loi de finances pour %d : %s milliards en %d, %s en %d. Une prévision, non "
-                       "une observation, sur une base 2025 non réconciliée avec Eurostat.",
+                       "une observation, sur une base 2025 que l'avis ne publie pas.",
           "etiq_prev": "prévision PLF %d",
           "src_prev": " ; cercles évidés : prévision du Gouvernement, projet de loi de finances pour %d (avis du HCFP, § 115)"}
          if lang == "fr" else
@@ -1241,8 +1241,8 @@ def build_svg_charge(interets_md: dict, lang: str = "fr", prev: dict | None = No
           "desc": "One curve in billion euros, from %s to %s. Interest due falls to its trough "
                   "in %s (%s billion), then climbs steeply to %s billion in %s.",
           "desc_prev": " Two open circles, not joined to the curve, show the Government's forecast in the %d budget "
-                       "bill: %s billion in %d, %s in %d. A forecast, not an observation, on a 2025 base not "
-                       "reconciled with Eurostat.",
+                       "bill: %s billion in %d, %s in %d. A forecast, not an observation, on a 2025 base the "
+                       "opinion does not publish.",
           "etiq_prev": "%d budget forecast",
           "src_prev": "; open circles: Government forecast, %d budget bill (HCFP opinion, para. 115)"})
     ans = sorted(int(a) for a in interets_md)
@@ -1297,7 +1297,7 @@ def build_svg_charge(interets_md: dict, lang: str = "fr", prev: dict | None = No
              % (cx, cy + 20, TY_MINEUR, MUTED, _esc(T["creux"]), num(interets_md[creux], 1), creux))
     lx, ly = pts[-1]
     if pv:
-        # OPTIMUM-13 (P1 nouveau) : la base 2025 du Gouvernement n'est pas la valeur d'Eurostat ; un trait depuis le
+        # OPTIMUM-13 (P1 nouveau) : la base 2025 du Gouvernement n'est pas publiee ; un trait depuis le
         # dernier point observe ferait lire une trajectoire homogene que rien ne garantit. Cercles evides seuls,
         # pointille entre previsions seulement.
         ppts = [(X(a), Y(v)) for a, v in pv]
@@ -2096,10 +2096,13 @@ def main() -> int:
     choc_san = annuel[s100] - annuel[s100 - 1]
     prose(15 <= choc_fin <= 25 and 12 <= choc_san <= 22, "ordres de grandeur des chocs de 2008-2009 et de 2020")
 
-    # (6) Prevision et sensibilite : la base 2025 du Gouvernement n'est pas la valeur d'Eurostat (P1 nouveau).
+    # (6) Prevision et sensibilite : l'avis ne publie pas la base 2025 du Gouvernement, il la borne (« plus de
+    # 25 Md EUR » de hausse). Jusqu'au 20/10/2026 la borne (66) tombait sous Eurostat (66,6) et la page concluait
+    # a deux series non reconciliees ; la notification d'octobre (65,7) l'a dementi. La prose dit desormais la
+    # borne seule, vraie dans les deux cas ; la garde verifie que la borne reste une base plausible.
     base_gouv_max = trajectoire_lue["charge_md"][trajectoire_lue["edition"]] - trajectoire_lue["hausse_vs_2025"]
-    prose(base_gouv_max < d41_mdeur[last_y],
-          "« plus de 25 Md EUR par rapport a 2025 » suppose une base 2025 inferieure a la valeur d'Eurostat")
+    prose(0 < base_gouv_max < trajectoire_lue["charge_md"][trajectoire_lue["edition"]],
+          "« plus de 25 Md EUR par rapport a 2025 » borne la base 2025 du Gouvernement")
     niv_prev = [y for y in d41_pib if d41_pib[y] >= trajectoire_lue["charge_pct"][trajectoire_lue["edition"]]]
     prose(bool(niv_prev), "la charge prevue en part du PIB a deja ete atteinte dans la serie")
     an_niv_prev = max(niv_prev) if niv_prev else ""
@@ -2258,6 +2261,7 @@ def main() -> int:
             "hist_choc_sanitaire_pts": nb(choc_san, 0),
             # prevision et sensibilite (HCFP, § 115-116)
             "prev_hausse_plus_de_mdeur": nb(trajectoire["hausse_vs_2025"], 0),
+            "prev_base_2025_max_mdeur": nb(trajectoire["charge_md"][trajectoire["edition"]] - trajectoire["hausse_vs_2025"], 0),
             "prev_charge_n_pct_niveau": an_niv_prev,
             "sens_taux_an1_mdeur": nb(sens["taux_1pt_premiere_annee_mdeur"]),
             "sens_taux_an2_mdeur": nb(sens["taux_1pt_deuxieme_annee_mdeur"]),

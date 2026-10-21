@@ -20,7 +20,7 @@
  "charge_interets_mdeur": {
   "_statut": "PUBLIÉ pour 2026 et 2027",
   "_emplacement": "§ 115, p. 38 : « une charge d'intérêts de 79,2 Md€ » en 2026 ; « 2,9 points de PIB (soit 91 Md€ courants) en 2027 »",
-  "_perimetre": "Charge d'intérêts des administrations publiques en comptabilité nationale, prévision du Gouvernement. À ne PAS soustraire d'une observation d'Eurostat : l'avis écrit « en hausse de plus de 25 Md€ par rapport à 2025 », ce qui suppose une base 2025 inférieure à 66 Md€, alors que la série D41PAY d'Eurostat donne 66,6. L'écart se documente, il ne se corrige pas (règle 13 du modèle de ressource).",
+  "_perimetre": "Charge d'intérêts des administrations publiques en comptabilité nationale, prévision du Gouvernement. À ne PAS soustraire d'une observation d'Eurostat : l'avis écrit « en hausse de plus de 25 Md€ par rapport à 2025 », ce qui borne la base 2025 du Gouvernement sous 66 Md€ sans la publier. La série D41PAY d'Eurostat donnait 66,6 jusqu'au 20/10/2026, 65,7 depuis la notification d'octobre (21/10/2026) : la borne a été d'abord démentie, puis respectée, et l'égalité des deux bases n'est établie dans aucun cas. L'écart se documente, il ne se corrige pas (règle 13 du modèle de ressource).",
   "2026": 79.2,
   "2027": 91.0
  },
@@ -66,7 +66,7 @@
   "_statut": "PUBLIÉ, § 115, p. 38, relu le 2026-10-11",
   "plus_de_mdeur": 25.0,
   "libelle": "« en hausse de plus de 25 Md€ par rapport à 2025 »",
-  "_usage": "Cité sous le nom du Haut Conseil, jamais recalculé contre Eurostat : 91 − 25 < 66,6 montre que la base 2025 du Gouvernement n'est pas la valeur d'Eurostat (garde du générateur)."
+  "_usage": "Cité sous le nom du Haut Conseil, jamais recalculé contre Eurostat : 91 − 25 = 66 borne la base 2025 du Gouvernement, que l'avis ne publie pas (jeton prev_base_2025_max_mdeur, garde du générateur)."
  },
  "ecart_lfi_n": {
   "_statut": "PUBLIÉ, § 115, p. 38, relu le 2026-10-11",

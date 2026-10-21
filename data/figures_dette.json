@@ -46,7 +46,7 @@
    "titre": "La charge d'intérêts en milliards d'euros, 1995-2025",
    "montre": "Ce que la dette coûte en euros, et non en part de PIB : le creux, puis la remontée.",
    "source": "Eurostat, intérêts dus par les administrations publiques (gov_10a_main, D41PAY), 1995-2025",
-   "precaution": "Milliards d'euros courants, non corrigés de l'inflation. Cercles évidés : prévision du Gouvernement, dont la base 2025 n'est pas réconciliée avec Eurostat ; aucune variation ne se lit entre l'observé et le prévu."
+   "precaution": "Milliards d'euros courants, non corrigés de l'inflation. Cercles évidés : prévision du Gouvernement, dont la base 2025 n'est pas publiée ; aucune variation ne se lit entre l'observé et le prévu."
   },
   {
    "id": "masses",
@@ -104,7 +104,7 @@
    "titre": "Interest due in billion euros, 1995-2025",
    "montre": "What the debt costs in euros rather than as a share of GDP: the trough, then the climb.",
    "source": "Eurostat, interest due by general government (gov_10a_main, D41PAY), 1995-2025",
-   "precaution": "Billion euros at current prices, not adjusted for inflation. Open circles: Government forecast, whose 2025 base is not reconciled with Eurostat; no change can be read between the observed and the forecast values."
+   "precaution": "Billion euros at current prices, not adjusted for inflation. Open circles: Government forecast, whose 2025 base is not published; no change can be read between the observed and the forecast values."
   },
   {
    "id": "masses",
