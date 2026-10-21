@@ -16,7 +16,7 @@ write individually to professionals — journalists, researchers, teachers, edit
 managers, elected officials or institutions — when their activity has a direct link
 with the text, the data, the resource or the book I am pointing to.
 
-These messages are sent in small numbers, with no purchased lists and no mass mailing.
+Each message is written for a specific recipient, because of their published work or their position. No address list is bought.
 
 ## Data controller
 
@@ -36,7 +36,7 @@ This information comes from publicly accessible professional sources: institutio
 websites, media, universities, laboratories, journals, official directories or signed
 publications.
 
-No private address is sought, bought or inferred from an assumed convention.
+No private address is sought or bought. When no named address is published, the professional address may be established from your organisation's addressing convention, as shown by other published addresses; the message says so. No address is established this way for a person who only publishes a contact form or protects their contact details.
 
 ## Purposes and legal basis
 

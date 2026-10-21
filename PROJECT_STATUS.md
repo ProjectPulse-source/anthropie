@@ -52,6 +52,26 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-21 — `/transparence-contacts/` : deux phrases rendues exactes (FR et EN)
+
+« Ces messages sont adressés en faible nombre » (invérifiable) devient « chaque message est rédigé pour un destinataire
+précis, en raison de son travail publié ou de sa fonction ; aucun fichier d'adresses n'est acheté ». « Aucune adresse […]
+déduite d'une convention supposée » était faux depuis la règle des adresses inférées (02/10) : la page dit désormais
+qu'une adresse professionnelle peut être établie d'après la convention de l'organisation, attestée par d'autres adresses
+publiées, que le message le signale, et qu'aucune adresse n'est ainsi établie pour qui protège ses coordonnées (fiches
+CNIL du 16/10/2026). Révision : `02_FABRIQUE\control-plane\modules\radar-contacts\country-packs\REVISION_FR_CNIL_2026-10-20.md`.
+`check-all --ci` : tout à 0.
+
+### 2026-10-20 — TRANSMIS par la session « RADAR PROMESSES » : prolongement Promesses → Dette (à faire, non commencé)
+
+**Décision de l'auteur (20/10, arbitrage d'une contre-expertise)** : développer dans le dossier Promesses le prolongement
+« Une promesse juridiquement réalisable est-elle économiquement finançable ? », renvoi méthodologique vers le dossier
+Dette (pas forcément un sixième onglet), **sur des données sourcées et des limites clairement exposées**. Pièce et
+arbitrage : `06_PROMOTION\CAMPAGNES\2026-10-07_RADAR_PROMESSES\_PIECES_RECUES\ARBITRAGE_1106_Emailing-PROMESSES.md` (point 7).
+Signalé au même endroit : la banque des faits du générateur de lots ne retrouve plus mot pour mot 7 faits dans les pages
+Promesses refondues (adopter, décider, mesurer, référendum/RIP, page anglaise adopter) : les pages font foi, la banque
+sera reprise côté promotion.
+
 ### 2026-10-18 — Patrimoine net des APU : source Insee ; rang structurel OCDE et FMI ; licence nommant les sources
 
 **Défaut (trouvé par l'audit du livre *Dette publique*, 17/10)** : `/dette-publique-generations-futures/` montrait le

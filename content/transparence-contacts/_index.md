@@ -16,7 +16,7 @@ d'écrire individuellement à des professionnels — journalistes, chercheurs, e
 responsables éditoriaux, élus ou institutions — lorsque leur activité présente un lien
 direct avec le texte, la donnée, la ressource ou l'ouvrage signalé.
 
-Ces messages sont adressés en faible nombre, sans achat de fichiers ni envoi de masse.
+Chaque message est rédigé pour un destinataire précis, en raison de son travail publié ou de sa fonction. Aucun fichier d'adresses n'est acheté.
 
 ## Responsable du traitement
 
@@ -37,7 +37,7 @@ Ces informations proviennent de sources professionnelles accessibles au public&n
 sites institutionnels, médias, universités, laboratoires, revues, annuaires officiels
 ou publications signées.
 
-Aucune adresse privée n'est recherchée, achetée ou déduite d'une convention supposée.
+Aucune adresse privée n'est recherchée ni achetée. Lorsqu'aucune adresse nominative n'est publiée, l'adresse professionnelle peut être établie d'après la convention d'adressage de votre organisation, attestée par d'autres adresses publiées&nbsp;; le message le signale. Aucune adresse n'est établie ainsi pour une personne qui ne publie qu'un formulaire de contact ou protège ses coordonnées.
 
 ## Finalités et base juridique
 
