@@ -347,7 +347,7 @@ transcrite sans contrôle ; écrite en clair (étude citée) — et la phrase de
 **Point d'entrée unique — toute page de ressource neuve ou refondue (auteur, 22/10/2026 : « cette méthodologie doit être
 câblée et systématiquement articulée lorsqu'on rajoute une page »).** Skill `ressource-site` de `D:\PRO\.claude\skills\`
 (déclenché par toute demande d'ajouter, créer ou refondre une page de ressource, et par les commandes de série) : il fait
-lire cette section, choisir la forme, imprimer le plan d'outils (`python D:\PRO_FABRIQUE\capability-watch\scripts\outils_du_produit.py
+lire cette section, choisir la forme, imprimer le plan d'outils (`python D:\PRO\02_FABRIQUE\capability-watch\scripts\outils_du_produit.py
 ressource`), puis écrire la fiche `docs/conception/<slug>.md` (gabarit `docs/conception/_GABARIT.md` : forme, dix champs,
 fiche D0, étapes) **avant** le texte. Verrou : `check-ressource-modele.py`, règle 12 — toute page française datée du
 22/10/2026 ou après, ou refondue depuis le 23/10/2026, déclare `ressource.conception` et sa fiche est complète ; les

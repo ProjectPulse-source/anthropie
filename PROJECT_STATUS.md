@@ -96,7 +96,7 @@ collectivités, de référence, montre la même coupe à 390).
 
 ### 2026-10-22 — PLF 2027 : état du texte après la séance du 19/10 ; nouvelle ressource `/budget-2027-votre-commune/` (FR + EN)
 
-Arbitrage de l'auteur (pièce `1807_Communes.txt`, `D:\PRO_PROMOTION\RECHERCHE_VOTRE_COMMUNE_2026-10-22\ARBITRAGE_1807_COMMUNES.md`).
+Arbitrage de l'auteur (pièce `1807_Communes.txt`, `D:\PRO\06_PROMOTION\RECHERCHE_VOTRE_COMMUNE_2026-10-22\ARBITRAGE_1807_COMMUNES.md`).
 **Registre des votes** `scripts/sources_collectivites/plf_votes.json` : citations verbatim des comptes rendus officiels du
 19/10, retrouvées par `verifier_plf_votes.py` dans les comptes rendus archivés (deux mutations vues mordre). Le générateur
 collectivités le lit (empreinte), pose l'état de chaque mesure (colonne « Au Parlement » du tableau), les jetons `plf_etat_*`,
