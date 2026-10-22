@@ -1597,11 +1597,151 @@ def figures(r: dict, Aff: dict, releve: str) -> dict:
     for lang, x in SUFFIXE.items():
         A = dict(Aff[lang], _fmt=(lambda v, d, L=lang: lg.nombre(v, d, L)), _releve=date_longue(releve, lang))
         for nom, f_d, f_m in (("investissement", fig_signature, fig_signature_m), ("cascade", fig_cascade, fig_cascade_m),
-                              ("europe", fig_europe, fig_europe_m)):
+                              ("europe", fig_europe, fig_europe_m), ("plf", fig_plf, fig_plf_m)):
             d = f_d(r, A, lang)
             out["collectivites-%s%s.svg" % (nom, x)] = d
             out["collectivites-%s%s-m.svg" % (nom, x)] = f_m(r, A, lang, d)
     return out
+
+
+# ------------------------------------------------------------------ figure de /budget-2027-votre-commune/ (22/10/2026)
+# Les cinq mesures du projet DEPOSE, en barres horizontales (orange : un cout pour les collectivites), et leur sort au
+# Parlement lu dans le registre des votes : barre evidee = article supprime ou non adopte en seance, pleine = non encore
+# examine. Licence et URL propres a la page ; fiches « Reutiliser » dans data/figures_plf_communes.json.
+PLF_URL = {"fr": "stephane-lalut.com/budget-2027-votre-commune/", "en": "stephane-lalut.com/en/2027-budget-your-municipality/"}
+LIC_PLF = {"fr": "Compilation Stéphane Lalut, CC BY 4.0 · " + PLF_URL["fr"],
+           "en": "Compiled by Stéphane Lalut, CC BY 4.0 · " + PLF_URL["en"]}
+PLF_LIB_FIG = {"fr": {"cpeb": "Contribution progressive (art. 37)", "fctva": "FCTVA, taux abaissé (art. 35)",
+                      "tva": "TVA affectée, écrêtement (art. 36)", "ministeres": "Contributions de ministères",
+                      "dilico": "DILICO, reversement étalé (art. 84)"},
+               "en": {"cpeb": "Progressive contribution (art. 37)", "fctva": "FCTVA, rate cut (art. 35)",
+                      "tva": "Assigned VAT, capping (art. 36)", "ministeres": "Contributions from ministries",
+                      "dilico": "DILICO, repayment spread out (art. 84)"}}
+PLF_TXT = {
+    "fr": dict(titre="Projet de loi de finances pour {ed} : ce qu'il demandait aux collectivités, et ce qu'il en reste",
+               titre_m="Projet de loi de finances pour {ed} : ce qu'il demandait aux collectivités",
+               leg_retire="supprimé ou non adopté en séance", leg_reste="non encore examiné",
+               leg_m_retire="En gris : supprimé ou non adopté en séance", leg_m_reste="En orange : non encore examiné",
+               unite="milliards d'euros, montants du projet déposé",
+               desc="Montants pour {ed} des cinq mesures du projet de loi de finances déposé visant les collectivités, en "
+                    "milliards d'euros : {liste}. Leur somme arithmétique, {somme}, ne mesure pas un prélèvement net. "
+                    "Barres évidées : articles supprimés ou non adoptés par l'Assemblée nationale le {vote} ; barres "
+                    "pleines : mesures non encore examinées. État au {etat}.",
+               src="Projet de loi de finances pour {ed} (n° 3210) et avis n° 2026-5 du Haut Conseil des finances "
+                   "publiques ; état : Assemblée nationale, comptes rendus des séances du {vote}. État au {etat}.",
+               note="Somme arithmétique de montants hétérogènes, chacun évalué par rapport à la situation sans la mesure : "
+                    "elle ne mesure pas un prélèvement net. Une disposition supprimée peut être rétablie avant la loi "
+                    "définitive.",
+               montre="Le projet déposé prévoyait cinq mesures visant les collectivités, dont la somme arithmétique "
+                      "atteignait {somme} milliards d'euros ; le {vote}, l'Assemblée nationale {resume}."),
+    "en": dict(titre="Draft budget bill for {ed}: what it asked of local authorities, and what is left of it",
+               titre_m="Draft budget bill for {ed}: what it asked of local authorities",
+               leg_retire="deleted or not adopted in plenary", leg_reste="not yet examined",
+               leg_m_retire="In grey: deleted or not adopted in plenary", leg_m_reste="In orange: not yet examined",
+               unite="€ billion, amounts in the bill as tabled",
+               desc="Amounts for {ed} of the five measures of the draft budget bill as tabled aimed at local authorities, "
+                    "in billions of euros: {liste}. Their arithmetic sum, {somme}, does not measure a net levy. Hollow "
+                    "bars: articles deleted or not adopted by the National Assembly on {vote}; solid bars: measures not "
+                    "yet examined. State on {etat}.",
+               src="Draft budget bill for {ed} (no. 3210) and opinion no. 2026-5 of the High Council of Public Finance; "
+                   "state: National Assembly, records of the sittings of {vote}. State on {etat}.",
+               note="Arithmetic sum of heterogeneous amounts, each assessed against the situation without the measure: it "
+                    "does not measure a net levy. A deleted provision may be reinstated before the final act.",
+               montre="The bill as tabled provided for five measures aimed at local authorities, whose arithmetic sum came "
+                      "to €{somme} billion; on {vote}, the National Assembly {resume}."),
+}
+
+
+def _plf_vals(r, A, lang):
+    L = "en" if lang == "en" else "fr"
+    ms = sorted(r["plf_mesures"], key=lambda m: -m["md"])
+    lignes = [(m["cle"], PLF_LIB_FIG[L][m["cle"]], lg.nombre(m["md"], 1, L), m["md"],
+               PLF_ARTICLE[m["cle"]] in r["plf_supprimes"], m["etat_en"] if L == "en" else m["etat"]) for m in ms]
+    liste = ("; " if L == "en" else " ; ").join("%s %s" % (lib, v) for _, lib, v, *_ in lignes)
+    V = dict(ed=r["plf_edition"], somme=A["plf_somme"], vote=A["plf_vote_date"], etat=A["plf_etat_au"],
+             resume=A["plf_vote_resume"], liste=liste)
+    return lignes, V
+
+
+def _pied_plf(e, y0, t, lang, mobile=False):
+    if mobile:
+        return pied_figure.pied_mobile(e, y0, [(t[0], INK2, "pied-source"), (t[1], INK2, "pied-note"),
+                                               (LICENCES_M[lang], MUTED, "pied-licence")], GRID)
+    return pied_figure.pied(e, y0, W, [(t[0], INK2, "pied-source"), (t[1], INK2, "pied-note"),
+                                       (LIC_PLF[lang], MUTED, "pied-licence")], GRID)
+
+
+def fig_plf(r: dict, A: dict, lang: str = "fr") -> str:
+    T = PLF_TXT[lang]
+    lignes, V = _plf_vals(r, A, lang)
+    H = 66 + 46 * len(lignes) + 20
+    e = entete(H, "cp", T["titre"].format(**V), T["desc"].format(**V))
+    # legende : deux pastilles, dans l'ordre de lecture
+    e.append('<rect x="0" y="34" width="14" height="10" fill="#ffffff" stroke="%s" stroke-width="1.6" stroke-dasharray="3 2"/>' % ORANGE)
+    e.append(txt(20, 43, T["leg_retire"], TY_ANNOT, INK2))
+    e.append('<rect x="250" y="34" width="14" height="10" fill="%s"/>' % ORANGE)
+    e.append(txt(270, 43, T["leg_reste"], TY_ANNOT, INK2))
+    e.append(txt(W, 43, T["unite"], TY_AXE, MUTED, "end"))
+    x0, larg = 300, 320
+    vmax = max(l_[3] for l_ in lignes)
+    y = 66
+    for cle, lib, val, md, retire, etat in lignes:
+        e.append(txt(0, y + 13, lib, 12, INK))
+        e.append(txt(0, y + 29, etat, 10, MUTED))
+        w = larg * md / vmax
+        if retire:
+            e.append('<rect x="%d" y="%d" width="%.1f" height="18" fill="#ffffff" stroke="%s" stroke-width="1.6" '
+                     'stroke-dasharray="4 3"/>' % (x0, y + 2, w, ORANGE))
+        else:
+            e.append('<rect x="%d" y="%d" width="%.1f" height="18" fill="%s"/>' % (x0, y + 2, w, ORANGE))
+        e.append(txt(x0 + w + 8, y + 16, val, 12, INK, weight="600"))
+        y += 46
+    return _pied_plf(e, H + 2, (T["src"].format(**V), T["note"].format(**V)), lang)
+
+
+def fig_plf_m(r: dict, A: dict, lang: str, svg_d: str) -> str:
+    T = PLF_TXT[lang]
+    lignes, V = _plf_vals(r, A, lang)
+    e, y = pied_figure.tete_mobile("cpm", T["titre_m"].format(**V), desc_de(svg_d), INK, FONT)
+    for l_ in pied_figure.coupe(T["unite"], 38):
+        y += 19
+        e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, MUTED, esc(l_)))
+    for lib_, col in ((T["leg_m_retire"], MUTED), (T["leg_m_reste"], ORANGE)):
+        for l_ in pied_figure.coupe(lib_, 38):
+            y += 19
+            e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, col, esc(l_)))
+    for cle, lib, val, md, retire, etat in lignes:
+        y += 26
+        e.append('<text x="0" y="%d" font-size="15" font-weight="600" fill="%s">%s</text>'
+                 % (y, MUTED if retire else ORANGE, esc(val + (" bn" if lang == "en" else " Md€"))))
+        for l_ in pied_figure.coupe(lib, 38):
+            y += 19
+            e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, INK, esc(l_)))
+        for l_ in pied_figure.coupe(etat, 38):
+            y += 18
+            e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, MUTED, esc(l_)))
+    return _pied_plf(e, y + 16, (T["src"].format(**V), T["note"].format(**V)), lang, mobile=True)
+
+
+OUT_FIGURES_PLF_NOM = "figures_plf_communes.json"
+
+
+def fiches_plf(figs: dict, A: dict, A_en: dict, r: dict) -> dict:
+    """Cartes du bloc « Réutiliser » de /budget-2027-votre-commune/ : même règle que fiches_figures (titre, source et
+    précaution relus dans le SVG ; « montre » tiré des jetons gardés)."""
+    import re as _re
+    res = {}
+    for lang, Aff in (("fr", A), ("en", A_en)):
+        fichier = "collectivites-plf" + SUFFIXE[lang]
+        svg = figs[fichier + ".svg"]
+        titre = html.unescape(_re.search(r"<title[^>]*>(.*?)</title>", svg).group(1))
+        src, note, lic = (pied_figure.lire(svg, c) for c in ("pied-source", "pied-note", "pied-licence"))
+        if not src or lic != LIC_PLF[lang]:
+            fail("fiche %s : pied illisible dans le SVG" % fichier)
+        _, V = _plf_vals(r, Aff, lang)
+        res[lang] = [dict(id="plf", fichier=fichier, titre=titre, montre=PLF_TXT[lang]["montre"].format(**V),
+                          source=src, precaution=note)]
+    return res
 
 
 MONTRE = {
@@ -1663,6 +1803,7 @@ OUT_STATIC = ROOT / "static" / "dette_collectivites.json"
 OUT_CSV = ROOT / "static" / "dette_collectivites.csv"
 OUT_IMG = ROOT / "static" / "img"
 OUT_FIGURES = ROOT / "data" / "figures_collectivites.json"
+OUT_FIGURES_PLF = ROOT / "data" / OUT_FIGURES_PLF_NOM
 
 
 def csv_texte(r: dict) -> str:
@@ -1823,7 +1964,7 @@ def _main() -> int:
     releve = date_releve(b, r)
     figs = figures(r, {"fr": a, "en": a_en}, releve)
     for lang, x in SUFFIXE.items():
-        for nom in ("investissement", "cascade", "europe"):
+        for nom in ("investissement", "cascade", "europe", "plf"):
             ec = pied_figure.parite(figs["collectivites-%s%s.svg" % (nom, x)], figs["collectivites-%s%s-m.svg" % (nom, x)], FS_MIN)
             ec += barres_absentes(figs["collectivites-%s%s-m.svg" % (nom, x)])
             if ec:
@@ -1832,17 +1973,18 @@ def _main() -> int:
                 for h_ in pied_figure.hors_cadre(figs[f_], larg):
                     log("A VERIFIER au rendu (estimation) : %s : %s" % (f_, h_))
     fiches = fiches_figures(figs, a, a_en)
+    fiches_p = fiches_plf(figs, a, a_en, r)
     # La lecture se garde aussi dans ce que le generateur ecrit : fiches « Reutiliser » et descriptions des figures
     import re as _re
     gen = {"fr": [], "en": []}
-    for lang, l_ in fiches.items():
+    for lang, l_ in list(fiches.items()) + list(fiches_p.items()):
         gen[lang] += [c["montre"] + " " + c["precaution"] for c in l_]
     for n_, svg in figs.items():
         gen["en" if "-en" in n_ else "fr"].append(desc_de(svg))
         gen["en" if "-en" in n_ else "fr"].append(pied_figure.lire(svg, "pied-note"))
     n_phrases = gardes_prose(gen)
     if check:
-        log("--check : %d gardes de donnees tenues, gardes de prose tenues (%d phrases lues), parite des 6 figures "
+        log("--check : %d gardes de donnees tenues, gardes de prose tenues (%d phrases lues), parite des 8 figures "
             "telephone tenue, rien ecrit." % (len(rapport), n_phrases))
         return 0
     csvt = csv_texte(r)
@@ -1875,7 +2017,8 @@ def _main() -> int:
                     and all((OUT_IMG / n).exists() and (OUT_IMG / n).read_text(encoding="utf-8") == s for n, s in figs.items())
                     and all((OUT_IMG / n.replace(".svg", ".png")).exists() for n in figs)
                     and OUT_CSV.exists() and OUT_CSV.read_text(encoding="utf-8-sig") == csvt
-                    and OUT_FIGURES.exists() and json.loads(OUT_FIGURES.read_text(encoding="utf-8")) == fiches)
+                    and OUT_FIGURES.exists() and json.loads(OUT_FIGURES.read_text(encoding="utf-8")) == fiches
+                    and OUT_FIGURES_PLF.exists() and json.loads(OUT_FIGURES_PLF.read_text(encoding="utf-8")) == fiches_p)
             if prev.get("releve_le") and same:
                 log("Donnees et figures identiques : rien ecrit (releve_le conserve : %s)." % prev["releve_le"])
                 return 0
@@ -1901,6 +2044,7 @@ def _main() -> int:
         cairosvg.svg2png(url=str(OUT_IMG / n), write_to=str(OUT_IMG / n.replace(".svg", ".png")), output_width=1440,
                          background_color="white")
     OUT_FIGURES.write_text(json.dumps(fiches, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    OUT_FIGURES_PLF.write_text(json.dumps(fiches_p, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     log("OK : %d gardes tenues ; temoin TR-TE-B9 max %.3f MEUR sur %d annees" % (len(rapport), r["temoin_residu_max_meur"], r["temoin_annees"]))
     log("Ecrit : data/dette_collectivites.json, static/dette_collectivites.{json,csv}, data/figures_collectivites.json, "
         "%d figures SVG + PNG" % len(figs))

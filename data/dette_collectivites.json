@@ -308,6 +308,14 @@
    "ok": true
   },
   {
+   "garde": "état du texte (chapô de /budget-2027-votre-commune/) : « trois des cinq mesures », supprimées ou non adoptées",
+   "ok": true
+  },
+  {
+   "garde": "état du texte (même chapô) : « dont les deux plus importantes en montant » parmi elles",
+   "ok": true
+  },
+  {
    "garde": "projet de loi de finances : somme arithmétique des cinq montants = somme des lignes du tableau",
    "ok": true
   },

@@ -52,6 +52,19 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-22 (soir) — `/budget-2027-votre-commune/` remise au modèle des ressources (remarque de l'auteur)
+
+Constat de l'auteur : page « rattachée à rien », sans la mise en forme des ressources. Corrigé : prolongement du dossier
+dette (`dossier_dette: prolongement`, panneau « Prolongements » de toutes les pages du dossier, rangée « Prolongements »
+de l'index ; le bloc `communes` d'une seule page, sans barre, est retiré des deux index) ; page de données
+(`donnees: [dette_collectivites]`, Dataset, carte de partage et vignette `og/vig-budget-2027-commune*` produites par
+`og_dossier_dette.py --collectivites`) ; figure signature `collectivites-plf` (FR/EN, détaillée et téléphone, parité
+tenue) et fiches « Réutiliser » propres (`data/figures_plf_communes.json`), toutes deux écrites par
+`update_dette_collectivites.py` ; résultat en une phrase, preuve de l'article 37 en repli, bloc « Réutiliser ». Source de
+la barre : `dossier_source: "plf"` (état du texte, non le millésime Eurostat). Sorties ajoutées au `git add` de
+`dette-collectivites.yml`. Rendu vérifié à 1280 et 520 px (le navigateur sans tête ne descend pas sous ~500 px : la page
+collectivités, de référence, montre la même coupe à 390).
+
 ### 2026-10-22 — PLF 2027 : état du texte après la séance du 19/10 ; nouvelle ressource `/budget-2027-votre-commune/` (FR + EN)
 
 Arbitrage de l'auteur (pièce `1807_Communes.txt`, `D:\PRO_PROMOTION\RECHERCHE_VOTRE_COMMUNE_2026-10-22\ARBITRAGE_1807_COMMUNES.md`).

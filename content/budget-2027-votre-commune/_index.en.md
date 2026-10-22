@@ -8,7 +8,11 @@ lastmod: 2026-10-22
 # English version of /budget-2027-votre-commune/ (series "Your municipality and central government decisions", author,
 # 22/10/2026). Same tokens, values from the affichage_en block of data/dette_collectivites.json; state of the text from
 # scripts/sources_collectivites/plf_votes.json (verbatim quotations from the official records).
-date_suit: [dette_collectivites]
+og_title: "Budget 2027: what do we actually know for your municipality? — S. Lalut"
+og_image: "images/og-budget-2027-commune-en.jpg"
+og_image_alt: "Share card: “Budget 2027: what is left of it” — the five measures of the draft budget bill as tabled aimed at local authorities, in € billion, hollow where the National Assembly deleted or did not adopt their article."
+donnees: [dette_collectivites]
+dossier_source: "plf"
 journal:
   - {date: 2026-10-22, texte: "Publication: state of the text after the National Assembly sitting of 19 October 2026."}
 faq:
@@ -17,26 +21,56 @@ faq:
   - question: "Does the cut in the FCTVA rate affect investment already carried out?"
     answer: "In the bill as tabled, the new rate applied to payments made from 1 January 2027. For a municipality under the standard regime, those payments relate to spending of the year before last: in 2027, spending of 2025, already carried out. Article 35 was deleted in plenary by the National Assembly on {coll.plf_vote_date}; it may be reinstated before the final act."
   - question: "When will my municipality know its DGF for 2027?"
-    answer: "After the budget act is passed, through the notification of its individual allocations. The national amount voted by the National Assembly in the first part, €{coll.plf_dgf_an} billion, says nothing about any municipality: the distribution depends on the criteria of each grant and on the choices of the Local Finance Committee."
+    answer: "After the budget act is passed, through the notification of its individual allocations. The national amount for {coll.plf_edition} voted by the National Assembly in the first part on {coll.plf_vote_date}, €{coll.plf_dgf_an} billion, says nothing about any municipality: the distribution depends on the criteria of each grant and on the choices of the Local Finance Committee."
+dataset:
+  jeu: "dette_collectivites"
+  nom: "Draft budget bill for {coll.plf_edition}: measures aimed at local authorities and state of the text in Parliament"
+  description: "Amounts for {coll.plf_edition} of the five measures of the draft budget bill as tabled aimed at local authorities (explanatory memoranda and opinion of the High Council of Public Finance, archived with their hash), state of each article in Parliament from the official records of the sittings, DGF amount adopted by the National Assembly in the first part. Part of the dataset “local authorities and public finances”."
+  couverture_temporelle: "{coll.plf_edition}"
+  couverture_spatiale: "France"
+  variables:
+    - {nom: "Amount of each measure in the bill as tabled", unite: "€ billion", description: "progressive contribution, FCTVA, assigned VAT, contributions from ministries, DILICO"}
+    - {nom: "State of the article in Parliament", unite: "dated text", description: "deleted, not adopted, adopted as amended or not yet examined, with the sitting"}
+    - {nom: "DGF adopted by the National Assembly in the first part", unite: "€ billion"}
+  sources:
+    - "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi.pdf"
+    - "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027"
+    - "https://www.hcfp.fr/sites/default/files/2026-10/Avis%20HCFP%202026-5%20-%20PLF-PLFSS%202027.pdf"
+  mots: ["France 2027 budget bill", "local authorities", "municipalities", "progressive contribution", "FCTVA", "DGF", "DILICO", "local government finance"]
+  fichiers: ["dette_collectivites.csv", "dette_collectivites.json"]
 ressource:  # index /en/resources/ (layouts/ressources/list.html)
-  type: ["juridique-institutionnel"]
-  bloc: "communes"
-  rang: 10
-  nature: "Official texts and records, read and dated"
+  type: ["juridique-institutionnel", "quantitatif"]
+  bloc: "dette"
+  rang: 35
+  nature: "Bill, records of the sittings and Code, read and dated"
+  prolongement: true
   refonte: "2026-10-22"
-onglet:
-  long: "Budget 2027: what do we actually know for your municipality?"
-  court: "Budget 2027"
-  role: "state of the text, measure by measure"
+dossier_dette: prolongement
+dossier_dette_titre: "Budget 2027: your municipality"
+dossier_dette_role: "draft budget bill, state of the text"
 ---
+
+{{< dossier-dette volet="prolongement" >}}
+
+{{< reutiliser-ancre >}}
 
 <div class="encadre">
 
-**State on {{< coll-val "plf_etat_au" >}}.** Draft budget bill for {{< coll-val "plf_edition" >}} (*projet de loi de finances*), tabled on {{< coll-val "plf_depot" >}} and examined in plenary by the National Assembly, which on {{< coll-val "plf_vote_date" >}} {{< coll-val "plf_vote_resume" >}}. Next step: {{< coll-val "plf_etape_suivante" >}}. This page is revised at each step that changes these measures; its revisions remain readable at the foot of the page.
+**State on {{< coll-val "plf_etat_au" >}}.** Draft budget bill for {{< coll-val "plf_edition" >}} (*projet de loi de finances*), tabled on {{< coll-val "plf_depot" >}} and examined in plenary by the National Assembly on {{< coll-val "plf_vote_date" >}}. Next step: {{< coll-val "plf_etape_suivante" >}}. This page is revised at each step that changes these measures; its revisions remain readable at the foot of the page.
 
 </div>
 
 A mayor preparing the budget orientation debate reads two things at once that do not say the same thing: the amounts announced when the bill was presented, and what Parliament has done with them since. This page keeps the two apart. For each measure that affects municipalities, it answers four questions: **what did it provide for, what did the National Assembly decide, what may follow for a municipality, and when will more be known**.
+
+{{< figure-svg fichier="collectivites-plf-en" alt="Five horizontal orange bars, in € billion: the measures of the draft budget bill as tabled aimed at local authorities. The three hollow bars, the progressive contribution, the FCTVA cut and the VAT capping, are those whose article the National Assembly deleted or did not adopt in plenary; the two solid bars, contributions from ministries and the spreading of DILICO, belong to the second part, not yet examined." >}}The five measures of the draft budget bill as tabled aimed at local authorities, and what Parliament did with them. Amounts in the bill as tabled; their arithmetic sum does not measure a net levy.{{< /figure-svg >}}
+
+{{< fig-actions id="plf" >}}
+
+<div class="resultat-phrase">
+
+**The result in one sentence.** The draft budget bill for {{< coll-val "plf_edition" >}} as tabled provided for five measures aimed at local authorities, with an arithmetic sum of €{{< coll-val "plf_somme" >}} billion; on {{< coll-val "plf_vote_date" >}}, the National Assembly {{< coll-val "plf_vote_resume" >}}, without any of them being set aside for good.
+
+</div>
 
 ## What is left of the bill as tabled? {#state-of-the-text}
 
@@ -48,7 +82,13 @@ The arithmetic sum of these five amounts, €{{< coll-val "plf_somme" >}} billio
 
 ### The progressive contribution to the budgetary effort (article 37) {#cpeb}
 
-**What the bill provided for.** A contribution of €{{< coll-val "plf_cpeb" >}} billion for {{< coll-val "plf_edition" >}}, owed by {{< coll-val "plf_cpeb_communes_pct" >}}% of municipalities according to the explanatory memorandum. Municipalities are ranked on an index that weights their financial potential per inhabitant at 75% and income per inhabitant at 25%, each relative to the average. The rate runs from 0.5% for the first decile to 2% for the tenth, and 3% for the top two percentiles. It applies to the real operating revenue of the main budget of the year before last, that is 2025, net in particular of revenue reductions and exceptional revenue. Exempt are municipalities in the overseas departments and regions, those that article L. 2336-3 of the General Code of Local Authorities already exempts from the inter-municipal equalisation fund (the first 250 municipalities of 10,000 inhabitants or more and the first 30 of 5,000 to 9,999 in the ranking for the urban solidarity grant, the first 2,500 in the ranking for the targeted share of the rural solidarity grant), and those whose contribution would be under €5,000. Each municipality's amount was to be notified by an order in the Journal officiel, then **deducted every month from the monthly tax advances**: a cash effect from notification onwards, before it even shows in the budget.
+**What the bill provided for.** A contribution of €{{< coll-val "plf_cpeb" >}} billion for {{< coll-val "plf_edition" >}}, owed by {{< coll-val "plf_cpeb_communes_pct" >}}% of municipalities according to the explanatory memorandum, at a rate between 0.5% and 3% of their real operating revenue, and deducted every month from the monthly tax advances.
+
+<details class="repli"><summary>Ranking, rates, base and exemptions provided for by article 37</summary>
+
+Municipalities are ranked on an index that weights their financial potential per inhabitant at 75% and income per inhabitant at 25%, each relative to the average. The rate runs from 0.5% for the first decile to 2% for the tenth, and 3% for the top two percentiles. It applies to the real operating revenue of the main budget of the year before last, that is 2025, net in particular of revenue reductions and exceptional revenue. Exempt are municipalities in the overseas departments and regions, those that article L. 2336-3 of the General Code of Local Authorities already exempts from the inter-municipal equalisation fund (the first 250 municipalities of 10,000 inhabitants or more and the first 30 of 5,000 to 9,999 in the ranking for the urban solidarity grant, the first 2,500 in the ranking for the targeted share of the rural solidarity grant), and those whose contribution would be under €5,000. Each municipality's amount was to be notified by an order in the Journal officiel, then **deducted every month from the monthly tax advances**: a cash effect from notification onwards, before it even shows in the budget.
+
+</details>
 
 **What the National Assembly decided.** State on {{< coll-val "plf_etat_au" >}}: {{< coll-val "plf_etat_cpeb" >}}.
 
@@ -128,8 +168,12 @@ This page follows a text under discussion; the book explains why local finances 
 
 {{< faq-visible >}}
 
-## Sources {#sources}
+## Where these figures come from {#sources}
 
 **State of the text** — National Assembly, records of the [first](https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/premiere-seance-du-lundi-19-octobre-2026) and [second](https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/deuxieme-seance-du-lundi-19-octobre-2026) sittings of 19 October 2026 (in French); each result used here is quoted word for word in the page's register of votes, archived with the hash of the records. [Legislative file](https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027) (in French) for the timetable.
 
 **Texts** — [Draft budget bill for {{< coll-val "plf_edition" >}}](https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi.pdf), no. 3210, tabled on {{< coll-val "plf_depot" >}}, articles 34 to 41, 53 and 83 to 87 and their explanatory memoranda (in French); [opinion of the High Council of Public Finance](https://www.hcfp.fr/sites/default/files/2026-10/Avis%20HCFP%202026-5%20-%20PLF-PLFSS%202027.pdf) on that bill (in French); General Code of Local Authorities, articles [L. 1612-2](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000051731704), [L. 1615-6](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000053547367) and [L. 2336-3](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000053549170), read on Légifrance on 22 October 2026 (in French).
+
+{{< reutiliser figures="figures_plf_communes" jeu="dette_collectivites" sources="National Assembly, High Council of Public Finance and Légifrance" donnees="The amounts of the five measures of the bill as tabled, the state of each article in Parliament and the DGF adopted by the National Assembly, in the dataset “local authorities and public finances”; the same content exists as CSV, in long format, readable in a spreadsheet." >}}
+The draft budget bill for {{< coll-val "plf_edition" >}} as tabled provided for five measures aimed at local authorities, with an arithmetic sum of €{{< coll-val "plf_somme" >}} billion, which does not measure a net levy. On {{< coll-val "plf_vote_date" >}}, the National Assembly {{< coll-val "plf_vote_resume" >}}. No municipal amount can be inferred from a bill: it will come from the act as passed, then from orders and notifications.
+{{< /reutiliser >}}

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 397" role="img" font-variant-numeric="tabular-nums" aria-labelledby="cp-t cp-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="cp-t">Draft budget bill for 2027: what it asked of local authorities, and what is left of it</title><desc id="cp-d">Amounts for 2027 of the five measures of the draft budget bill as tabled aimed at local authorities, in billions of euros: Progressive contribution (art. 37) 2.5; FCTVA, rate cut (art. 35) 2.1; Contributions from ministries 0.7; Assigned VAT, capping (art. 36) 0.6; DILICO, repayment spread out (art. 84) 0.3. Their arithmetic sum, 6.2, does not measure a net levy. Hollow bars: articles deleted or not adopted by the National Assembly on 19 October 2026; solid bars: measures not yet examined. State on 22 October 2026.</desc>
+<rect width="720" height="397" fill="#ffffff"/>
+<text x="0" y="18" font-size="13" font-weight="600" fill="#0A0A0E">Draft budget bill for 2027: what it asked of local authorities, and what is left of it</text>
+<rect x="0" y="34" width="14" height="10" fill="#ffffff" stroke="#eb6834" stroke-width="1.6" stroke-dasharray="3 2"/>
+<text x="20.0" y="43.0" font-size="11" fill="#52514e" text-anchor="start">deleted or not adopted in plenary</text>
+<rect x="250" y="34" width="14" height="10" fill="#eb6834"/>
+<text x="270.0" y="43.0" font-size="11" fill="#52514e" text-anchor="start">not yet examined</text>
+<text x="720.0" y="43.0" font-size="11" fill="#898781" text-anchor="end">€ billion, amounts in the bill as tabled</text>
+<text x="0.0" y="79.0" font-size="12" fill="#0A0A0E" text-anchor="start">Progressive contribution (art. 37)</text>
+<text x="0.0" y="95.0" font-size="10" fill="#898781" text-anchor="start">art. 37 deleted by the National Assembly on 19 October 2026</text>
+<rect x="300" y="68" width="320.0" height="18" fill="#ffffff" stroke="#eb6834" stroke-width="1.6" stroke-dasharray="4 3"/>
+<text x="628.0" y="82.0" font-size="12" fill="#0A0A0E" text-anchor="start" font-weight="600">2.5</text>
+<text x="0.0" y="125.0" font-size="12" fill="#0A0A0E" text-anchor="start">FCTVA, rate cut (art. 35)</text>
+<text x="0.0" y="141.0" font-size="10" fill="#898781" text-anchor="start">art. 35 deleted by the National Assembly on 19 October 2026</text>
+<rect x="300" y="114" width="267.8" height="18" fill="#ffffff" stroke="#eb6834" stroke-width="1.6" stroke-dasharray="4 3"/>
+<text x="575.8" y="128.0" font-size="12" fill="#0A0A0E" text-anchor="start" font-weight="600">2.1</text>
+<text x="0.0" y="171.0" font-size="12" fill="#0A0A0E" text-anchor="start">Contributions from ministries</text>
+<text x="0.0" y="187.0" font-size="10" fill="#898781" text-anchor="start">second part, not yet examined</text>
+<rect x="300" y="160" width="89.6" height="18" fill="#eb6834"/>
+<text x="397.6" y="174.0" font-size="12" fill="#0A0A0E" text-anchor="start" font-weight="600">0.7</text>
+<text x="0.0" y="217.0" font-size="12" fill="#0A0A0E" text-anchor="start">Assigned VAT, capping (art. 36)</text>
+<text x="0.0" y="233.0" font-size="10" fill="#898781" text-anchor="start">art. 36 not adopted by the National Assembly on 19 October 2026</text>
+<rect x="300" y="206" width="76.8" height="18" fill="#ffffff" stroke="#eb6834" stroke-width="1.6" stroke-dasharray="4 3"/>
+<text x="384.8" y="220.0" font-size="12" fill="#0A0A0E" text-anchor="start" font-weight="600">0.6</text>
+<text x="0.0" y="263.0" font-size="12" fill="#0A0A0E" text-anchor="start">DILICO, repayment spread out (art. 84)</text>
+<text x="0.0" y="279.0" font-size="10" fill="#898781" text-anchor="start">second part, not yet examined</text>
+<rect x="300" y="252" width="38.4" height="18" fill="#eb6834"/>
+<text x="346.4" y="266.0" font-size="12" fill="#0A0A0E" text-anchor="start" font-weight="600">0.3</text>
+<line x1="0" y1="318.0" x2="720" y2="318.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="333.0" font-size="11" fill="#52514e">Draft budget bill for 2027 (no. 3210) and opinion no. 2026-5 of the High Council of Public Finance; state: National</text>
+<text class="pied-source" x="0" y="347.0" font-size="11" fill="#52514e">Assembly, records of the sittings of 19 October 2026. State on 22 October 2026.</text>
+<text class="pied-note" x="0" y="361.0" font-size="11" fill="#52514e">Arithmetic sum of heterogeneous amounts, each assessed against the situation without the measure: it does not measure</text>
+<text class="pied-note" x="0" y="375.0" font-size="11" fill="#52514e">a net levy. A deleted provision may be reinstated before the final act.</text>
+<text class="pied-licence" x="0" y="389.0" font-size="11" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/2027-budget-your-municipality/</text>
+</svg>

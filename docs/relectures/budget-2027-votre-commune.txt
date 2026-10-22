@@ -1,4 +1,4 @@
-# relu le 2026-10-22 ; texte servi de /budget-2027-votre-commune/, build de 7b40814 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-22 ; texte servi de /budget-2027-votre-commune/, build de 7329657 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Budget 2027 : que sait-on réellement pour votre commune ?
 En séance, le 19 octobre 2026, l'Assemblée nationale a supprimé la baisse du taux du FCTVA (art.
@@ -8,16 +8,24 @@ En séance, le 19 octobre 2026, l'Assemblée nationale a supprimé la baisse du 
 Rien n'est acquis pour autant : la procédure continue (suite de l'examen de la première partie du 27 octobre au 2 novembre 2026, vote solennel sur la première partie le 3 novembre), le Sénat suivra, et une mesure supprimée peut être rétablie.
 Aucun montant communal ne se déduit d'un projet ; les montants viendront de la loi votée, puis des notifications et arrêtés que cette page indique mesure par mesure.
 Page publiée le 22 octobre 2026 · révisions
+Dossier dette publique
+Source · PLF 2027, état au 22 octobre 2026
+↓ Graphiques, données et citations à réutiliserRéutiliser cette page
 État au 22 octobre 2026.
-Projet de loi de finances pour 2027 déposé le 1er octobre 2026 ; examiné en séance par l’Assemblée nationale, qui, le 19 octobre 2026, a supprimé la baisse du taux du FCTVA (art.
-35) et la contribution progressive à l'effort budgétaire (art.
-37), n'a pas adopté l'écrêtement de la TVA affectée (art.
-36).
+Projet de loi de finances pour 2027 déposé le 1er octobre 2026, examiné en séance par l’Assemblée nationale le 19 octobre 2026.
 Prochaine étape : suite de l'examen de la première partie du 27 octobre au 2 novembre 2026, vote solennel sur la première partie le 3 novembre.
 Cette page est révisée à chaque étape qui modifie ces mesures ; ses révisions restent lisibles en pied de page.
 Un maire qui prépare son débat d’orientation budgétaire lit en même temps deux choses qui ne disent pas la même chose : les montants annoncés à la présentation du projet, et ce que le Parlement en a fait depuis.
 Cette page sépare les deux.
 Pour chaque mesure qui touche les communes, elle répond à quatre questions : que prévoyait-elle, qu’a décidé l’Assemblée, que peut-il en résulter pour une commune, et quand en saura-t-on davantage.
+Les cinq mesures du projet de loi de finances déposé qui visent les collectivités, et leur sort au Parlement.
+Montants du projet déposé ; leur somme arithmétique ne mesure pas un prélèvement net.
+Télécharger · Citer · Données
+Le résultat en une phrase.
+Le projet de loi de finances pour 2027 déposé prévoyait cinq mesures visant les collectivités, d’une somme arithmétique de 6,2 milliards d’euros ; le 19 octobre 2026, l’Assemblée nationale a supprimé la baisse du taux du FCTVA (art.
+35) et la contribution progressive à l'effort budgétaire (art.
+37), n'a pas adopté l'écrêtement de la TVA affectée (art.
+36), sans qu’aucune soit définitivement écartée.
 Que reste-t-il du projet déposé ?
 Mesure du projet de loi de finances pour 2027, tel que déposé
 Texte
@@ -62,7 +70,8 @@ Un article supprimé ou non adopté en séance ne figure plus dans le texte en d
 Mesure par mesure
 La contribution progressive à l’effort budgétaire (article 37)
 Ce que prévoyait le projet.
-Une contribution de 2,5 milliards d’euros pour 2027, due par 40 % des communes selon l’exposé des motifs.
+Une contribution de 2,5 milliards d’euros pour 2027, due par 40 % des communes selon l’exposé des motifs, à un taux compris entre 0,5 % et 3 % de leurs recettes réelles de fonctionnement, et prélevée chaque mois sur les douzièmes de fiscalité.
+Classement, taux, assiette et exonérations prévus par l'article 37
 Les communes sont classées selon un indice qui pondère à 75 % leur potentiel financier par habitant et à 25 % le revenu par habitant, chacun rapporté à la moyenne.
 Le taux va de 0,5 % pour le premier décile à 2 % pour le dixième, et 3 % pour les deux derniers centiles.
 Il s’applique aux recettes réelles de fonctionnement du budget principal de l’avant-dernier exercice, soit 2025, minorées notamment des atténuations de produits et des recettes exceptionnelles.
@@ -171,14 +180,47 @@ Pour une commune au régime de droit commun, ces attributions portent sur les d�
 L'article 35 a été supprimé en séance par l'Assemblée nationale le 19 octobre 2026 ; il peut être rétabli avant la loi définitive.
 Quand ma commune connaîtra-t-elle sa DGF pour 2027 ?
 Après le vote de la loi de finances, par la notification de ses attributions individuelles.
-Le montant national voté par l'Assemblée en première partie, 27,9 milliards d'euros, ne dit rien d'une commune : la répartition dépend des critères de chaque dotation et des choix du Comité des finances locales.
-Sources
+Le montant national pour 2027 voté par l'Assemblée en première partie le 19 octobre 2026, 27,9 milliards d'euros, ne dit rien d'une commune : la répartition dépend des critères de chaque dotation et des choix du Comité des finances locales.
+D’où viennent ces chiffres
 État du texte — Assemblée nationale, comptes rendus des première et deuxième séances du 19 octobre 2026 ; chaque résultat repris ici y est cité mot pour mot dans le registre des votes de la page, archivé avec l’empreinte des comptes rendus.
 Dossier législatif pour le calendrier.
 Textes — Projet de loi de finances pour 2027, n° 3210, déposé le 1er octobre 2026, articles 34 à 41, 53 et 83 à 87 et leurs exposés des motifs ; avis du Haut Conseil des finances publiques sur ce projet ; code général des collectivités territoriales, articles L.
 1612-2, L.
 1615-6 et L.
 2336-3, relus sur Légifrance le 22 octobre 2026.
+Réutiliser cette page
+Les figures, les données et une citation prête, sous licence libre.
+Chaque figure porte dans l'image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
+Projet de loi de finances pour 2027 : ce qu'il demandait aux collectivités, et ce qu'il en reste
+Le projet déposé prévoyait cinq mesures visant les collectivités, dont la somme arithmétique atteignait 6,2 milliards d'euros ; le 19 octobre 2026, l'Assemblée nationale a supprimé la baisse du taux du FCTVA (art.
+35) et la contribution progressive à l'effort budgétaire (art.
+37), n'a pas adopté l'écrêtement de la TVA affectée (art.
+36).
+Précaution d'interprétation.
+Somme arithmétique de montants hétérogènes, chacun évalué par rapport à la situation sans la mesure : elle ne mesure pas un prélèvement net.
+Une disposition supprimée peut être rétablie avant la loi définitive.
+Projet de loi de finances pour 2027 (n° 3210) et avis n° 2026-5 du Haut Conseil des finances publiques ; état : Assemblée nationale, comptes rendus des séances du 19 octobre 2026.
+État au 22 octobre 2026.
+Télécharger en PNG
+SVG
+Citer cette page
+Lalut, Stéphane (2026). « Budget 2027 : que sait-on réellement pour votre commune ? ».
+Données Assemblée nationale, Haut Conseil des finances publiques et Légifrance, relevé du 22 octobre 2026. https://stephane-lalut.com/budget-2027-votre-commune/
+Copier la citation
+En trois phrases
+Le projet de loi de finances pour 2027 déposé prévoyait cinq mesures visant les collectivités, d’une somme arithmétique de 6,2 milliards d’euros, qui ne mesure pas un prélèvement net.
+Le 19 octobre 2026, l’Assemblée nationale a supprimé la baisse du taux du FCTVA (art.
+35) et la contribution progressive à l'effort budgétaire (art.
+37), n'a pas adopté l'écrêtement de la TVA affectée (art.
+36).
+Aucun montant communal ne se déduit d’un projet : il viendra de la loi votée, puis des arrêtés et notifications.
+Copier le résumé
+Les données
+Les montants des cinq mesures du projet déposé, l'état de chaque article au Parlement et la DGF adoptée par l'Assemblée nationale, dans le jeu « collectivités locales et finances publiques » ; le même contenu existe en CSV, en format long, lisible dans un tableur.
+Télécharger en JSON CSV
+Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
+Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
+Les séries brutes appartiennent à leurs producteurs (Assemblée nationale, Haut Conseil des finances publiques et Légifrance), sous leurs propres conditions.
 Révisions
 22 octobre 2026 — Publication : état du texte après la séance de l'Assemblée nationale du 19 octobre 2026.
 Toutes les ressources : données, dossiers et repères →

@@ -1,4 +1,4 @@
-# relu le 2026-10-22 ; texte servi de /en/2027-budget-your-municipality/, build de 7b40814 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-22 ; texte servi de /en/2027-budget-your-municipality/, build de 7329657 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Budget 2027: what do we actually know for your municipality?
 In plenary, on 19 October 2026, the National Assembly deleted the cut in the FCTVA rate (art.
@@ -8,16 +8,24 @@ In plenary, on 19 October 2026, the National Assembly deleted the cut in the FCT
 Nothing is settled: the procedure goes on (the first part continues to be examined from 27 October to 2 November 2026, with a formal vote on the first part on 3 November), the Senate will follow, and a deleted measure may be reinstated.
 No municipal amount can be inferred from a bill; amounts will come from the act as passed, then from the notifications and orders this page lists measure by measure.
 Page published 22 October 2026 · revisions
+Public debt dossier
+Source · draft budget bill 2027, state on 22 October 2026
+↓ Charts, data and citations to reuseReuse this page
 State on 22 October 2026.
-Draft budget bill for 2027 (projet de loi de finances), tabled on 1 October 2026 and examined in plenary by the National Assembly, which on 19 October 2026 deleted the cut in the FCTVA rate (art.
-35) and the progressive contribution to the budgetary effort (art.
-37), did not adopt the capping of assigned VAT (art.
-36).
+Draft budget bill for 2027 (projet de loi de finances), tabled on 1 October 2026 and examined in plenary by the National Assembly on 19 October 2026.
 Next step: the first part continues to be examined from 27 October to 2 November 2026, with a formal vote on the first part on 3 November.
 This page is revised at each step that changes these measures; its revisions remain readable at the foot of the page.
 A mayor preparing the budget orientation debate reads two things at once that do not say the same thing: the amounts announced when the bill was presented, and what Parliament has done with them since.
 This page keeps the two apart.
 For each measure that affects municipalities, it answers four questions: what did it provide for, what did the National Assembly decide, what may follow for a municipality, and when will more be known.
+The five measures of the draft budget bill as tabled aimed at local authorities, and what Parliament did with them.
+Amounts in the bill as tabled; their arithmetic sum does not measure a net levy.
+Download · Cite · Data
+The result in one sentence.
+The draft budget bill for 2027 as tabled provided for five measures aimed at local authorities, with an arithmetic sum of €6.2 billion; on 19 October 2026, the National Assembly deleted the cut in the FCTVA rate (art.
+35) and the progressive contribution to the budgetary effort (art.
+37), did not adopt the capping of assigned VAT (art.
+36), without any of them being set aside for good.
 What is left of the bill as tabled?
 Measure in the 2027 draft budget bill as tabled
 Text
@@ -62,7 +70,8 @@ When the debate opened on 19 October, the minister for local authorities, Franç
 Measure by measure
 The progressive contribution to the budgetary effort (article 37)
 What the bill provided for.
-A contribution of €2.5 billion for 2027, owed by 40% of municipalities according to the explanatory memorandum.
+A contribution of €2.5 billion for 2027, owed by 40% of municipalities according to the explanatory memorandum, at a rate between 0.5% and 3% of their real operating revenue, and deducted every month from the monthly tax advances.
+Ranking, rates, base and exemptions provided for by article 37
 Municipalities are ranked on an index that weights their financial potential per inhabitant at 75% and income per inhabitant at 25%, each relative to the average.
 The rate runs from 0.5% for the first decile to 2% for the tenth, and 3% for the top two percentiles.
 It applies to the real operating revenue of the main budget of the year before last, that is 2025, net in particular of revenue reductions and exceptional revenue.
@@ -163,8 +172,8 @@ For a municipality under the standard regime, those payments relate to spending 
 Article 35 was deleted in plenary by the National Assembly on 19 October 2026; it may be reinstated before the final act.
 When will my municipality know its DGF for 2027?
 After the budget act is passed, through the notification of its individual allocations.
-The national amount voted by the National Assembly in the first part, €27.9 billion, says nothing about any municipality: the distribution depends on the criteria of each grant and on the choices of the Local Finance Committee.
-Sources
+The national amount for 2027 voted by the National Assembly in the first part on 19 October 2026, €27.9 billion, says nothing about any municipality: the distribution depends on the criteria of each grant and on the choices of the Local Finance Committee.
+Where these figures come from
 State of the text — National Assembly, records of the first and second sittings of 19 October 2026 (in French); each result used here is quoted word for word in the page’s register of votes, archived with the hash of the records.
 Legislative file (in French) for the timetable.
 Texts — Draft budget bill for 2027, no.
@@ -172,6 +181,42 @@ Texts — Draft budget bill for 2027, no.
 1612-2, L.
 1615-6 and L.
 2336-3, read on Légifrance on 22 October 2026 (in French).
+Reusing this page
+The charts, the data and a ready-made citation, under an open licence.
+Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it does not come apart from what makes it readable.
+Draft budget bill for 2027: what it asked of local authorities, and what is left of it
+The bill as tabled provided for five measures aimed at local authorities, whose arithmetic sum came to €6.2 billion; on 19 October 2026, the National Assembly deleted the cut in the FCTVA rate (art.
+35) and the progressive contribution to the budgetary effort (art.
+37), did not adopt the capping of assigned VAT (art.
+36).
+Reading caveat.
+Arithmetic sum of heterogeneous amounts, each assessed against the situation without the measure: it does not measure a net levy.
+A deleted provision may be reinstated before the final act.
+Draft budget bill for 2027 (no.
+3210) and opinion no.
+2026-5 of the High Council of Public Finance; state: National Assembly, records of the sittings of 19 October 2026.
+State on 22 October 2026.
+Download PNG
+SVG
+Cite this page
+Lalut, Stéphane (2026).
+“Budget 2027: what do we actually know for your municipality?”.
+National Assembly, High Council of Public Finance and Légifrance data, retrieved 22 October 2026. https://stephane-lalut.com/en/2027-budget-your-municipality/
+Copy citation
+In three sentences
+The draft budget bill for 2027 as tabled provided for five measures aimed at local authorities, with an arithmetic sum of €6.2 billion, which does not measure a net levy.
+On 19 October 2026, the National Assembly deleted the cut in the FCTVA rate (art.
+35) and the progressive contribution to the budgetary effort (art.
+37), did not adopt the capping of assigned VAT (art.
+36).
+No municipal amount can be inferred from a bill: it will come from the act as passed, then from orders and notifications.
+Copy summary
+The data
+The amounts of the five measures of the bill as tabled, the state of each article in Parliament and the DGF adopted by the National Assembly, in the dataset “local authorities and public finances”; the same content exists as CSV, in long format, readable in a spreadsheet.
+Download JSON CSV
+Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
+Text under copyright — short quotation free, full reproduction on request.
+The raw series belong to their producers (National Assembly, High Council of Public Finance and Légifrance), under their own terms.
 Revisions
 22 October 2026 — Publication: state of the text after the National Assembly sitting of 19 October 2026.
 All resources: data, explainers and reference material →

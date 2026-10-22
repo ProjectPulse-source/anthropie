@@ -608,6 +608,61 @@ def carte_collectivites() -> None:
            (URL_GREY, "Local debt: %s → %s%% of GDP (%s-%s)" % (E["dette_loc_deb"], E["dette_loc_fin"], E["an_dette_deb"], E["an_dette_fin"]))])
 
 
+def figure_plf_mini(d: ImageDraw.ImageDraw, mesures: list, retires: set, lang: str = "fr") -> None:
+    """/budget-2027-votre-commune/ (22/10/2026) : la figure de la page, réduite — les cinq mesures du projet déposé en
+    barres horizontales (orange), évidées quand l'article a été supprimé ou non adopté en séance."""
+    x0, x1, top = 660, 1126, 110
+    vmax = max(m["md"] for m in mesures)
+    pas = 58
+    for k, m in enumerate(sorted(mesures, key=lambda x: -x["md"])):
+        y = top + k * pas
+        w = (x1 - x0 - 70) * m["md"] / vmax
+        if m["cle"] in retires:
+            d.rectangle([x0, y, x0 + w, y + 30], fill=None, outline=C2, width=4)
+        else:
+            d.rectangle([x0, y, x0 + w, y + 30], fill=C2)
+        v = ("%.1f" % m["md"]) if lang == "en" else ("%.1f" % m["md"]).replace(".", ",")
+        d.text((x0 + w + 12, y + 2), v, font=font("inter", 22, 600), fill=(10, 10, 14))
+    en = lang == "en"
+    d.text((x0, top + 5 * pas + 8), "€ billion, bill as tabled; hollow: deleted" if en
+           else "Md€, projet déposé ; évidé : supprimé", font=font("inter", 17, 400), fill=URL_GREY)
+    d.text((x0, top + 5 * pas + 30), "or not adopted in plenary" if en
+           else "ou non adopté en séance", font=font("inter", 17, 400), fill=URL_GREY)
+
+
+def carte_plf_communes() -> None:
+    """Cartes FR et EN de /budget-2027-votre-commune/ : mesures, état et chaînes lus dans data/dette_collectivites.json
+    (registre des votes déjà contrôlé par le générateur). Contrôle ici : l'accroche « trois mesures sur cinq » doit
+    rester vraie."""
+    f = ROOT / "data" / "dette_collectivites.json"
+    if not f.is_file():
+        fail("jeu de données absent : %s — lancer scripts/update_dette_collectivites.py d'abord" % f)
+    j = json.loads(f.read_text(encoding="utf-8"))
+    c, A, E = j["calcul"], j["affichage"], j.get("affichage_en")
+    art = {"cpeb": 37, "fctva": 35, "tva": 36, "ministeres": None, "dilico": 84}
+    retires = {m["cle"] for m in c["plf_mesures"] if art[m["cle"]] in c["plf_supprimes"]}
+    if len(retires) != 3 or len(c["plf_mesures"]) != 5:
+        fail("carte budget 2027 : « trois mesures sur cinq » n'est plus vrai dans les données")
+    if not E:
+        fail("carte budget 2027 EN : bloc affichage_en absent")
+    carte("og-budget-2027-commune.jpg",
+          ["Budget 2027 :", "ce qu'il en reste"],
+          "Trois des cinq mesures visant les collectivités écartées en séance.",
+          "PLF %s · état au %s" % (A["plf_edition"], A["plf_etat_au"]),
+          "stephane-lalut.com/budget-2027-votre-commune/",
+          lambda d: figure_plf_mini(d, c["plf_mesures"], retires),
+          [(C2, "Projet déposé : %s Md€ (somme arithmétique)" % A["plf_somme"]),
+           (URL_GREY, "Assemblée nationale, séance du %s" % A["plf_vote_date"])])
+    carte("og-budget-2027-commune-en.jpg",
+          ["Budget 2027:", "what is left of it"],
+          "Three of the five measures aimed at local authorities set aside in plenary.",
+          "Draft budget bill %s · state on %s" % (E["plf_edition"], E["plf_etat_au"]),
+          "stephane-lalut.com/en/2027-budget-your-municipality/",
+          lambda d: figure_plf_mini(d, c["plf_mesures"], retires, "en"),
+          [(C2, "Bill as tabled: €%s bn (arithmetic sum)" % E["plf_somme"]),
+           (URL_GREY, "National Assembly, sitting of %s" % E["plf_vote_date"])])
+
+
 def figure_inflation_mini(d: ImageDraw.ImageDraw, cal: dict, lo: float, hi: float, lang: str = "fr") -> None:
     """Prolongement « Inflation et dette » : la figure signature réduite — érosion réelle cumulée des paiements promis
     sur la dette de l'État à taux fixe de fin 2020, au fil des paiements. Valeurs lues dans data/dette_inflation.json."""
@@ -789,6 +844,7 @@ def main() -> int:
         return 0
     if "--collectivites" in sys.argv[1:]:
         carte_collectivites()
+        carte_plf_communes()
         return 0
     if "--generations" in sys.argv[1:]:
         carte_generations()
@@ -812,6 +868,7 @@ def main() -> int:
     carte_dynamique()
     carte_baisse()
     carte_collectivites()
+    carte_plf_communes()
     carte_generations()
     carte_inflation()
     carte_lycee()

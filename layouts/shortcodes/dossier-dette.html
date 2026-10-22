@@ -61,6 +61,14 @@
     {{- $src = printf "%s · Eurostat %s" $donnees .meta.annee -}}
     {{- $srcTitre = cond $en "Year of the Eurostat data compared on this page" "Année des données Eurostat comparées sur cette page — c'est le millésime des DONNÉES, non la date de relecture du texte" -}}
   {{- end -}}
+{{- else if and (eq $v "prolongement") (eq .Page.Params.dossier_source "plf") -}}
+  {{- /* /budget-2027-votre-commune/ (22/10/2026) : la page suit un texte en discussion ; sa source est l'état du projet
+         de loi au Parlement (registre des votes, data/dette_collectivites.json), non le millésime Eurostat du jeu. */ -}}
+  {{- with site.Data.dette_collectivites -}}
+    {{- $a := cond $en .affichage_en .affichage -}}
+    {{- $src = printf "%s · %s %s, %s %s" (cond $en "Source" "Source") (cond $en "draft budget bill" "PLF") $a.plf_edition (cond $en "state on" "état au") $a.plf_etat_au -}}
+    {{- $srcTitre = cond $en "State of the draft budget bill in Parliament, from the official records of the sittings" "État du projet de loi de finances au Parlement, d'après les comptes rendus officiels des séances" -}}
+  {{- end -}}
 {{- else if and (eq $v "prolongement") (in (.Page.Params.donnees | default (slice)) "dette_collectivites") -}}
   {{- with site.Data.dette_collectivites -}}
     {{- $src = printf "%s · Eurostat %s" $donnees .affichage.an_fin -}}

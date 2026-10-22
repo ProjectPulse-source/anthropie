@@ -1,0 +1,22 @@
+{
+ "fr": [
+  {
+   "id": "plf",
+   "fichier": "collectivites-plf",
+   "titre": "Projet de loi de finances pour 2027 : ce qu'il demandait aux collectivités, et ce qu'il en reste",
+   "montre": "Le projet déposé prévoyait cinq mesures visant les collectivités, dont la somme arithmétique atteignait 6,2 milliards d'euros ; le 19 octobre 2026, l'Assemblée nationale a supprimé la baisse du taux du FCTVA (art. 35) et la contribution progressive à l'effort budgétaire (art. 37), n'a pas adopté l'écrêtement de la TVA affectée (art. 36).",
+   "source": "Projet de loi de finances pour 2027 (n° 3210) et avis n° 2026-5 du Haut Conseil des finances publiques ; état : Assemblée nationale, comptes rendus des séances du 19 octobre 2026. État au 22 octobre 2026.",
+   "precaution": "Somme arithmétique de montants hétérogènes, chacun évalué par rapport à la situation sans la mesure : elle ne mesure pas un prélèvement net. Une disposition supprimée peut être rétablie avant la loi définitive."
+  }
+ ],
+ "en": [
+  {
+   "id": "plf",
+   "fichier": "collectivites-plf-en",
+   "titre": "Draft budget bill for 2027: what it asked of local authorities, and what is left of it",
+   "montre": "The bill as tabled provided for five measures aimed at local authorities, whose arithmetic sum came to €6.2 billion; on 19 October 2026, the National Assembly deleted the cut in the FCTVA rate (art. 35) and the progressive contribution to the budgetary effort (art. 37), did not adopt the capping of assigned VAT (art. 36).",
+   "source": "Draft budget bill for 2027 (no. 3210) and opinion no. 2026-5 of the High Council of Public Finance; state: National Assembly, records of the sittings of 19 October 2026. State on 22 October 2026.",
+   "precaution": "Arithmetic sum of heterogeneous amounts, each assessed against the situation without the measure: it does not measure a net levy. A deleted provision may be reinstated before the final act."
+  }
+ ]
+}

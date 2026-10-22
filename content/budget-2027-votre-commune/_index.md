@@ -10,7 +10,11 @@ lastmod: 2026-10-22
 # rendus officiels, retrouvées par verifier_plf_votes.py) par scripts/update_dette_collectivites.py ; montants du projet
 # lus dans son archive. Taux, seuils et articles cités en clair : texte du projet déposé (PDF, SHA-256 132274b8…) et
 # CGCT relu sur Légifrance le 22/10/2026. Une étape parlementaire = une entrée du registre + une ligne de journal.
-date_suit: [dette_collectivites]
+og_title: "Budget 2027 : que sait-on réellement pour votre commune ? — S. Lalut"
+og_image: "images/og-budget-2027-commune.jpg"
+og_image_alt: "Carte de partage : « Budget 2027 : ce qu'il en reste » — les cinq mesures du projet de loi de finances déposé visant les collectivités, en milliards d'euros, évidées quand l'Assemblée nationale les a supprimées ou n'a pas adopté leur article."
+donnees: [dette_collectivites]
+dossier_source: "plf"   # barre du dossier : source = état du projet au Parlement (shortcode dossier-dette)
 journal:
   - {date: 2026-10-22, texte: "Publication : état du texte après la séance de l'Assemblée nationale du 19 octobre 2026."}
 faq:
@@ -19,26 +23,58 @@ faq:
   - question: "La baisse du taux du FCTVA touche-t-elle les investissements déjà réalisés ?"
     answer: "Dans le projet déposé, le nouveau taux visait les attributions versées à compter du 1er janvier 2027. Pour une commune au régime de droit commun, ces attributions portent sur les dépenses de l'avant-dernière année : en 2027, celles de 2025, déjà réalisées. L'article 35 a été supprimé en séance par l'Assemblée nationale le {coll.plf_vote_date} ; il peut être rétabli avant la loi définitive."
   - question: "Quand ma commune connaîtra-t-elle sa DGF pour 2027 ?"
-    answer: "Après le vote de la loi de finances, par la notification de ses attributions individuelles. Le montant national voté par l'Assemblée en première partie, {coll.plf_dgf_an} milliards d'euros, ne dit rien d'une commune : la répartition dépend des critères de chaque dotation et des choix du Comité des finances locales."
+    answer: "Après le vote de la loi de finances, par la notification de ses attributions individuelles. Le montant national pour {coll.plf_edition} voté par l'Assemblée en première partie le {coll.plf_vote_date}, {coll.plf_dgf_an} milliards d'euros, ne dit rien d'une commune : la répartition dépend des critères de chaque dotation et des choix du Comité des finances locales."
+dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html) ; jetons résolus au build
+  jeu: "dette_collectivites"
+  nom: "Projet de loi de finances pour {coll.plf_edition} : mesures visant les collectivités et état du texte au Parlement"
+  description: "Montants pour {coll.plf_edition} des cinq mesures du projet de loi de finances déposé visant les collectivités (exposés des motifs et avis du Haut Conseil des finances publiques, archivés avec leur empreinte), état de chaque article au Parlement tiré des comptes rendus officiels des séances, montant de la DGF adopté par l'Assemblée nationale en première partie. Compris dans le jeu « collectivités locales et finances publiques »."
+  couverture_temporelle: "{coll.plf_edition}"
+  couverture_spatiale: "France"
+  variables:
+    - {nom: "Montant de chaque mesure du projet déposé", unite: "milliards d'euros", description: "contribution progressive, FCTVA, TVA affectée, contributions de ministères, DILICO"}
+    - {nom: "État de l'article au Parlement", unite: "texte daté", description: "supprimé, non adopté, adopté modifié ou non examiné, avec la séance"}
+    - {nom: "DGF adoptée par l'Assemblée nationale en première partie", unite: "milliards d'euros"}
+  sources:
+    - "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi.pdf"
+    - "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027"
+    - "https://www.hcfp.fr/sites/default/files/2026-10/Avis%20HCFP%202026-5%20-%20PLF-PLFSS%202027.pdf"
+  mots: ["projet de loi de finances 2027", "collectivités locales", "communes", "contribution progressive", "CPEB", "FCTVA", "DGF", "DILICO", "finances locales"]
+  fichiers: ["dette_collectivites.csv", "dette_collectivites.json"]
 ressource:  # index /ressources/ (layouts/ressources/list.html)
-  type: ["juridique-institutionnel"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
-  bloc: "communes"
-  rang: 10
-  nature: "Textes et comptes rendus officiels, lus et datés"
+  type: ["juridique-institutionnel", "quantitatif"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
+  bloc: "dette"
+  rang: 35
+  nature: "Projet de loi, comptes rendus de séance et code, lus et datés"
+  prolongement: true   # rangée « Prolongements du dossier », comme la page collectivités dont elle est la suite
   refonte: "2026-10-22"
-onglet:  # barre du bloc (partials/barre-bloc.html), à partir de deux pages
-  long: "Budget 2027 : que sait-on réellement pour votre commune ?"
-  court: "Budget 2027"
-  role: "état du texte, mesure par mesure"
+dossier_dette: prolongement   # panneau « Prolongements » de la barre du dossier
+dossier_dette_titre: "Budget 2027 : votre commune"
+dossier_dette_role: "projet de loi, état du texte"
+dossier_dette_titre_en: "Budget 2027: your municipality"
+dossier_dette_role_en: "draft budget bill, state of the text"
 ---
+
+{{< dossier-dette volet="prolongement" >}}
+
+{{< reutiliser-ancre >}}
 
 <div class="encadre">
 
-**État au {{< coll-val "plf_etat_au" >}}.** Projet de loi de finances pour {{< coll-val "plf_edition" >}} déposé le {{< coll-val "plf_depot" >}}&nbsp;; examiné en séance par l'Assemblée nationale, qui, le {{< coll-val "plf_vote_date" >}}, {{< coll-val "plf_vote_resume" >}}. Prochaine étape&nbsp;: {{< coll-val "plf_etape_suivante" >}}. Cette page est révisée à chaque étape qui modifie ces mesures&nbsp;; ses révisions restent lisibles en pied de page.
+**État au {{< coll-val "plf_etat_au" >}}.** Projet de loi de finances pour {{< coll-val "plf_edition" >}} déposé le {{< coll-val "plf_depot" >}}, examiné en séance par l'Assemblée nationale le {{< coll-val "plf_vote_date" >}}. Prochaine étape&nbsp;: {{< coll-val "plf_etape_suivante" >}}. Cette page est révisée à chaque étape qui modifie ces mesures&nbsp;; ses révisions restent lisibles en pied de page.
 
 </div>
 
 Un maire qui prépare son débat d'orientation budgétaire lit en même temps deux choses qui ne disent pas la même chose&nbsp;: les montants annoncés à la présentation du projet, et ce que le Parlement en a fait depuis. Cette page sépare les deux. Pour chaque mesure qui touche les communes, elle répond à quatre questions&nbsp;: **que prévoyait-elle, qu'a décidé l'Assemblée, que peut-il en résulter pour une commune, et quand en saura-t-on davantage**.
+
+{{< figure-svg fichier="collectivites-plf" alt="Cinq barres horizontales orange, en milliards d'euros : les mesures du projet de loi de finances déposé qui visent les collectivités. Les trois barres évidées, contribution progressive, baisse du FCTVA et écrêtement de la TVA, sont celles dont l'Assemblée nationale a supprimé ou n'a pas adopté l'article en séance ; les deux barres pleines, contributions de ministères et étalement du DILICO, relèvent de la seconde partie, non encore examinée." >}}Les cinq mesures du projet de loi de finances déposé qui visent les collectivités, et leur sort au Parlement. Montants du projet déposé&nbsp;; leur somme arithmétique ne mesure pas un prélèvement net.{{< /figure-svg >}}
+
+{{< fig-actions id="plf" >}}
+
+<div class="resultat-phrase">
+
+**Le résultat en une phrase.** Le projet de loi de finances pour {{< coll-val "plf_edition" >}} déposé prévoyait cinq mesures visant les collectivités, d'une somme arithmétique de {{< coll-val "plf_somme" >}}&nbsp;milliards d'euros&nbsp;; le {{< coll-val "plf_vote_date" >}}, l'Assemblée nationale {{< coll-val "plf_vote_resume" >}}, sans qu'aucune soit définitivement écartée.
+
+</div>
 
 ## Que reste-t-il du projet déposé&nbsp;? {#etat-du-texte}
 
@@ -50,7 +86,13 @@ La somme arithmétique de ces cinq montants, {{< coll-val "plf_somme" >}}&nbsp;m
 
 ### La contribution progressive à l'effort budgétaire (article 37) {#cpeb}
 
-**Ce que prévoyait le projet.** Une contribution de {{< coll-val "plf_cpeb" >}}&nbsp;milliards d'euros pour {{< coll-val "plf_edition" >}}, due par {{< coll-val "plf_cpeb_communes_pct" >}}&nbsp;% des communes selon l'exposé des motifs. Les communes sont classées selon un indice qui pondère à 75&nbsp;% leur potentiel financier par habitant et à 25&nbsp;% le revenu par habitant, chacun rapporté à la moyenne. Le taux va de 0,5&nbsp;% pour le premier décile à 2&nbsp;% pour le dixième, et 3&nbsp;% pour les deux derniers centiles. Il s'applique aux recettes réelles de fonctionnement du budget principal de l'avant-dernier exercice, soit 2025, minorées notamment des atténuations de produits et des recettes exceptionnelles. Sont exonérées les communes des départements et régions d'outre-mer, celles que l'article L.&nbsp;2336-3 du code général des collectivités territoriales exempte déjà du fonds de péréquation intercommunal (les 250 premières communes de 10&nbsp;000 habitants et plus et les 30 premières de 5&nbsp;000 à 9&nbsp;999 au classement de la dotation de solidarité urbaine, les 2&nbsp;500 premières au classement de la fraction cible de la dotation de solidarité rurale), et celles dont la contribution serait inférieure à 5&nbsp;000&nbsp;euros. Le montant de chaque commune devait être notifié par arrêté au Journal officiel, puis **prélevé chaque mois sur les douzièmes de fiscalité**&nbsp;: un effet de trésorerie dès la notification, avant même la lecture budgétaire.
+**Ce que prévoyait le projet.** Une contribution de {{< coll-val "plf_cpeb" >}}&nbsp;milliards d'euros pour {{< coll-val "plf_edition" >}}, due par {{< coll-val "plf_cpeb_communes_pct" >}}&nbsp;% des communes selon l'exposé des motifs, à un taux compris entre 0,5&nbsp;% et 3&nbsp;% de leurs recettes réelles de fonctionnement, et prélevée chaque mois sur les douzièmes de fiscalité.
+
+<details class="repli"><summary>Classement, taux, assiette et exonérations prévus par l'article 37</summary>
+
+Les communes sont classées selon un indice qui pondère à 75&nbsp;% leur potentiel financier par habitant et à 25&nbsp;% le revenu par habitant, chacun rapporté à la moyenne. Le taux va de 0,5&nbsp;% pour le premier décile à 2&nbsp;% pour le dixième, et 3&nbsp;% pour les deux derniers centiles. Il s'applique aux recettes réelles de fonctionnement du budget principal de l'avant-dernier exercice, soit 2025, minorées notamment des atténuations de produits et des recettes exceptionnelles. Sont exonérées les communes des départements et régions d'outre-mer, celles que l'article L.&nbsp;2336-3 du code général des collectivités territoriales exempte déjà du fonds de péréquation intercommunal (les 250 premières communes de 10&nbsp;000 habitants et plus et les 30 premières de 5&nbsp;000 à 9&nbsp;999 au classement de la dotation de solidarité urbaine, les 2&nbsp;500 premières au classement de la fraction cible de la dotation de solidarité rurale), et celles dont la contribution serait inférieure à 5&nbsp;000&nbsp;euros. Le montant de chaque commune devait être notifié par arrêté au Journal officiel, puis **prélevé chaque mois sur les douzièmes de fiscalité**&nbsp;: un effet de trésorerie dès la notification, avant même la lecture budgétaire.
+
+</details>
 
 **Ce qu'a décidé l'Assemblée.** État au {{< coll-val "plf_etat_au" >}}&nbsp;: {{< coll-val "plf_etat_cpeb" >}}.
 
@@ -130,8 +172,12 @@ Cette page suit un texte en discussion&nbsp;; le livre explique pourquoi les fin
 
 {{< faq-visible >}}
 
-## Sources {#sources}
+## D'où viennent ces chiffres {#sources}
 
 **État du texte** — Assemblée nationale, comptes rendus des [première](https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/premiere-seance-du-lundi-19-octobre-2026) et [deuxième](https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/deuxieme-seance-du-lundi-19-octobre-2026) séances du 19&nbsp;octobre 2026&nbsp;; chaque résultat repris ici y est cité mot pour mot dans le registre des votes de la page, archivé avec l'empreinte des comptes rendus. [Dossier législatif](https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027) pour le calendrier.
 
 **Textes** — [Projet de loi de finances pour {{< coll-val "plf_edition" >}}](https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi.pdf), n°&nbsp;3210, déposé le {{< coll-val "plf_depot" >}}, articles 34 à 41, 53 et 83 à 87 et leurs exposés des motifs&nbsp;; [avis du Haut Conseil des finances publiques](https://www.hcfp.fr/sites/default/files/2026-10/Avis%20HCFP%202026-5%20-%20PLF-PLFSS%202027.pdf) sur ce projet&nbsp;; code général des collectivités territoriales, articles [L.&nbsp;1612-2](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000051731704), [L.&nbsp;1615-6](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000053547367) et [L.&nbsp;2336-3](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000053549170), relus sur Légifrance le 22&nbsp;octobre 2026.
+
+{{< reutiliser figures="figures_plf_communes" jeu="dette_collectivites" sources="Assemblée nationale, Haut Conseil des finances publiques et Légifrance" donnees="Les montants des cinq mesures du projet déposé, l'état de chaque article au Parlement et la DGF adoptée par l'Assemblée nationale, dans le jeu « collectivités locales et finances publiques » ; le même contenu existe en CSV, en format long, lisible dans un tableur." >}}
+Le projet de loi de finances pour {{< coll-val "plf_edition" >}} déposé prévoyait cinq mesures visant les collectivités, d'une somme arithmétique de {{< coll-val "plf_somme" >}}&nbsp;milliards d'euros, qui ne mesure pas un prélèvement net. Le {{< coll-val "plf_vote_date" >}}, l'Assemblée nationale {{< coll-val "plf_vote_resume" >}}. Aucun montant communal ne se déduit d'un projet&nbsp;: il viendra de la loi votée, puis des arrêtés et notifications.
+{{< /reutiliser >}}
