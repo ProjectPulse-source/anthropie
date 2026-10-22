@@ -31,6 +31,15 @@ TOUTE page qui declare `ressource:` (avec ou sans donnees, FR et EN), sinon 14 p
      NON_REFONDUES (dix pages au 2026-10-11) s'est videe le 2026-10-12 avec la vague 1 (Adopter, Appliquer,
      Referendum) : retiree avec son code, selon sa condition de mort.
 
+CONCEPTION (consigne de l'auteur, 2026-10-22 : « cette methodologie doit etre cablee et systematiquement articulee
+lorsqu'on rajoute une page ») -- promesse de l'arbitrage OPTIMUM-26 (l. 33, « sa presence est controlee »), jamais
+cablee jusque-la : /budget-2027-votre-commune/ est partie le 22/10 sans fiche, et a ete corrigee apres coup.
+ 12. toute page francaise NEUVE (date >= 2026-10-22) ou REFONDUE depuis (refonte >= 2026-10-23) declare
+     `ressource.conception: "docs/conception/<slug>.md"` ; le fichier existe et porte chaque intitule de
+     docs/conception/_GABARIT.md, chacun suivi d'un texte reel (vide ou « A REMPLIR » = ecart) ; la page anglaise
+     declare la meme fiche. Les pages anterieures ne sont pas visees : elles le seront a leur prochaine refonte.
+     Point d'entree qui produit la fiche : skill `ressource-site` (D:/PRO/.claude/skills/).
+
 Condition de mort (regles 1 a 10) : aucune -- regles permanentes du modele ; a reexaminer si le modele est abandonne
 ou refondu.
 Sortie console ASCII pur.
@@ -45,7 +54,32 @@ ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content"
 STATIC = ROOT / "static"
 
-TYPES = {"quantitatif", "juridique-institutionnel", "explicatif-causal", "notion", "usage"}
+TYPES = {"quantitatif", "juridique-institutionnel", "explicatif-causal", "notion", "usage", "corpus"}
+# Regle 12 : intitules exiges de la fiche de conception (docs/conception/_GABARIT.md) et seuils de date.
+CONCEPTION_INTITULES = ["## Forme", "### Question centrale", "### Enjeu", "### Croyance initiale",
+                        "### Découverte principale", "### Mécanisme explicatif", "### Preuve décisive", "### Limite",
+                        "### Valeur finale", "### Singularité", "### Raccords", "## Fiche D0", "## Étapes de la méthode"]
+CONCEPTION_DEPUIS, CONCEPTION_REFONTE_DEPUIS = "2026-10-22", "2026-10-23"
+
+
+def fiche_conception(chemin: str) -> list[str]:
+    """Ecarts d'une fiche de conception : fichier absent, intitule manquant, section vide ou encore a remplir."""
+    f = ROOT / chemin
+    if not f.is_file():
+        return ["fiche de conception %s introuvable" % chemin]
+    t = f.read_text(encoding="utf-8")
+    ecarts = []
+    for k, h in enumerate(CONCEPTION_INTITULES):
+        m = re.search(r"^%s\s*$" % re.escape(h), t, re.M)
+        if not m:
+            ecarts.append("fiche %s : intitule '%s' absent" % (chemin, h))
+            continue
+        suite = t[m.end():]
+        fin = re.search(r"^#{2,3} ", suite, re.M)
+        corps = re.sub(r"<!--.*?-->", "", suite[:fin.start()] if fin else suite, flags=re.S).strip()
+        if len(corps) < 20 or "REMPLIR" in corps.upper().replace("À", "A"):
+            ecarts.append("fiche %s : section '%s' vide ou a remplir" % (chemin, h))
+    return ecarts
 
 
 def bloc_ressource(fm: str) -> dict | None:
@@ -66,7 +100,7 @@ def classification() -> list[tuple[str, str]]:
             continue
         rel = p.relative_to(ROOT).as_posix()
         r = bloc_ressource(fm) or {}
-        t, ref = r.get("type"), r.get("refonte")
+        t, ref, conc = r.get("type"), r.get("refonte"), r.get("conception")
         if not isinstance(t, list) or not t:
             fautes.append((rel, "ressource.type absent ou pas une liste (types : %s)" % ", ".join(sorted(TYPES))))
         else:
@@ -76,7 +110,16 @@ def classification() -> list[tuple[str, str]]:
         if ref is not None and not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(ref)):
             fautes.append((rel, "ressource.refonte n'est pas une date AAAA-MM-JJ : %r" % ref))
         cle = (p.parent.as_posix(), p.name.replace(".en.md", ".md"))
-        val = (t, None if ref is None else str(ref))
+        val = (t, None if ref is None else str(ref), conc)
+        if not p.name.endswith(".en.md"):
+            import yaml
+            date_p = str((yaml.safe_load(fm) or {}).get("date", ""))[:10]
+            if date_p >= CONCEPTION_DEPUIS or (ref is not None and str(ref) >= CONCEPTION_REFONTE_DEPUIS):
+                if not conc:
+                    fautes.append((rel, "page neuve ou refondue depuis le %s sans ressource.conception (regle 12 : fiche "
+                                        "de conception ecrite avant la page, skill ressource-site)" % CONCEPTION_DEPUIS))
+                else:
+                    fautes += [(rel, e) for e in fiche_conception(str(conc))]
         (lues if p.name.endswith(".en.md") else fr)[cle] = (rel, val)
         if not p.name.endswith(".en.md") and re.search(r"^donnees:", fm, re.M):
             nom = p.parent.relative_to(CONTENT).as_posix()
@@ -85,7 +128,7 @@ def classification() -> list[tuple[str, str]]:
                                     "(regle 11 ; une page nouvelle nait refondue)"))
     for cle, (rel, val) in lues.items():
         if cle in fr and fr[cle][1] != val:
-            fautes.append((rel, "type ou refonte differents de la page francaise %s : %r != %r" % (fr[cle][0], val, fr[cle][1])))
+            fautes.append((rel, "type, refonte ou conception differents de la page francaise %s : %r != %r" % (fr[cle][0], val, fr[cle][1])))
     return fautes
 
 
@@ -151,9 +194,10 @@ def main() -> int:
     for rel, x in classe:
         print("  ECART  %s : %s" % (rel, x))
     if classe:
-        print("Classification des ressources : %d ecart(s) (regles 8 a 11 de l'en-tete)." % len(classe))
+        print("Classification des ressources : %d ecart(s) (regles 8 a 12 de l'en-tete)." % len(classe))
     else:
-        print("Classification des ressources : type et niveau declares partout ; toutes les pages de donnees refondues.")
+        print("Classification des ressources : type et niveau declares partout ; toutes les pages de donnees refondues ; "
+              "fiches de conception completes (regle 12).")
     if fautes or classe:
         print("Modele des ressources : %d page(s) en ecart sur %d (brouillons exemptes : %d)." % (len(fautes), vues, brouillons))
         print("  -> voir CLAUDE.md du site, section Modele d'une ressource de donnees.")

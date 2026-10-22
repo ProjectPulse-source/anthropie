@@ -314,10 +314,10 @@ déclare désormais sa `refonte`**, contrôle bloquant de `check-ressource-model
 
 | Niveau | Contrôles |
 |---|---|
-| Bloque la publication (`hugo.yml`) | `check-all --ci` (dont `check-ressource-modele.py` : modèle des pages de données, `ressource.type` et `refonte` sur toute page à `ressource:`, FR = EN, liste figée ; `test_langue_generee.py`) ; build Hugo (jeton inconnu = échec) ; `audit-liens-build.py` ; `check-rendu-ressources.py` (pages refondues : figure sans `-m.svg` servi ou sans pied commun, motifs de langue de sa table `MOTIFS`) ; `check-relecture.py` (page refondue sans instantané relu dans `docs/relectures/`) |
+| Bloque la publication (`hugo.yml`) | `check-all --ci` (dont `check-ressource-modele.py` : modèle des pages de données, `ressource.type` et `refonte` sur toute page à `ressource:`, FR = EN, **fiche de conception complète de toute page neuve ou refondue (règle 12, 22/10/2026)** ; `test_langue_generee.py`) ; build Hugo (jeton inconnu = échec) ; `audit-liens-build.py` ; `check-rendu-ressources.py` (pages refondues : figure sans `-m.svg` servi ou sans pied commun, motifs de langue de sa table `MOTIFS`) ; `check-relecture.py` (page refondue sans instantané relu dans `docs/relectures/`) |
 | Bloque la mise à jour des données | gardes de prose et témoins de chaque générateur (workflows de données) |
 | Alerte sans bloquer | phrase servie absente de l'instantané relu → issue « Relecture ciblée : <page> » (tâche `relecture` de `hugo.yml`, une issue par page, mise à jour et non doublée ; décision de l'auteur du 11/10) ; `smoke-production` après déploiement |
-| Discipline de session | fiche de conception, protocole du type, panel, contre-expertises, relecture phrase à phrase, recette 320-1280, gate éditorial, attestation de la version servie |
+| Discipline de session (tracée) | protocole du type, panel, contre-expertises, relecture phrase à phrase, recette 320-1280, gate éditorial, attestation de la version servie : chacune écrite « fait » ou « non fait (motif) » dans la section « Étapes » de la fiche de conception, que la règle 12 exige |
 
 Les trois contrôles du build se lancent aussi en local, sur un build : `python scripts/check-rendu-ressources.py <build>
 [--detail]`, `python scripts/check-relecture.py <build> --strict`, chacun avec `--temoin` (témoin positif).
@@ -344,6 +344,16 @@ transcrite sans contrôle ; écrite en clair (étude citée) — et la phrase de
 « s'arrête si une donnée ne remplit plus les conditions dont dépendent les principales phrases ». Grille et cas :
 `D:\PRO\06_PROMOTION\RECHERCHE_LYCEES_LECTURE_2026-10-09\REFONTE_PILOTE\AUDIT_AFFIRMATIONS_METHODE_REQUALIFIE_2026-10-12.md`.
 
+**Point d'entrée unique — toute page de ressource neuve ou refondue (auteur, 22/10/2026 : « cette méthodologie doit être
+câblée et systématiquement articulée lorsqu'on rajoute une page »).** Skill `ressource-site` de `D:\PRO\.claude\skills\`
+(déclenché par toute demande d'ajouter, créer ou refondre une page de ressource, et par les commandes de série) : il fait
+lire cette section, choisir la forme, imprimer le plan d'outils (`python D:\PRO_FABRIQUE\capability-watch\scripts\outils_du_produit.py
+ressource`), puis écrire la fiche `docs/conception/<slug>.md` (gabarit `docs/conception/_GABARIT.md` : forme, dix champs,
+fiche D0, étapes) **avant** le texte. Verrou : `check-ressource-modele.py`, règle 12 — toute page française datée du
+22/10/2026 ou après, ou refondue depuis le 23/10/2026, déclare `ressource.conception` et sa fiche est complète ; les
+pages antérieures y entrent à leur prochaine refonte. Cas fondateur : `/budget-2027-votre-commune/`, partie le 22/10 sans
+fiche ni rattachement, corrigée le soir même (fiche écrite après coup, étapes sautées déclarées « non fait »).
+
 **Type d'une page** (`ressource.type`, liste ; une page peut en déclarer deux) et son protocole de preuve :
 
 - `quantitatif` (dette, école, comparaisons) : définitions, périmètres, millésimes, unités, calculs reproductibles,
@@ -356,8 +366,13 @@ transcrite sans contrôle ; écrite en clair (étude citée) — et la phrase de
   contrefactuels, temporalités ; séparer constat, interprétation et causalité ; dire ce qui ferait varier la conclusion.
 - `notion` (protocole court ajouté à l'arbitrage) : une définition sourcée, son origine (qui l'a forgée, d'où), sa
   frontière avec les notions voisines, un exemple et un contre-exemple.
-- `usage` (enseignants, guides, corpus ; idem) : la ressource source citée sans être recopiée, ce que l'usager fait de
+- `usage` (enseignants, guides ; idem) : la ressource source citée sans être recopiée, ce que l'usager fait de
   la page, et les limites de la ressource reprises telles quelles.
+- `corpus` (appareil documentaire d'un livre : `/registre-des-couts-deportes/`, `/premier-coup/` ; ajouté le 22/10/2026,
+  ces pages relevaient jusque-là d'`usage` par défaut) : une **grille uniforme** pour chaque entrée (mêmes champs,
+  même ordre) ; chaque entrée **datée et sourcée** ; **fidélité au livre publié** (dernière édition, pagination citée)
+  ; une **ancre stable par entrée** ; le **périmètre du corpus** et ce qu'il ne dit pas écrits en tête ; aucune entrée
+  ajoutée, retirée ou réécrite sans trace (journal). La forme ne démontre rien : elle documente.
 
 **Phase A, section 0 — fiche de conception** (dix champs, avant toute réécriture) : question centrale · enjeu ·
 croyance initiale · découverte principale · mécanisme explicatif · preuve décisive · limite · valeur finale ·

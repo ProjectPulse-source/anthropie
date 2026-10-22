@@ -20,7 +20,7 @@ faq:
   - question: "Où trouver le Registre des coûts déportés complet ?"
     answer: "Dans le livre ANTHROPIE — Ordre ici. Dette ailleurs (2025, 622 pages), dont il constitue l'épilogue documentaire, accompagné des schémas, de la postface analytique et des sept âges déployés chapitre par chapitre. La version en ligne, en consultation libre sur cette page, en reprend l'essentiel jalon par jalon."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
-  type: ["usage", "notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
+  type: ["corpus", "notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "corpus"
   rang: 10
   nature: "Corpus documenté — chronologie commentée"
