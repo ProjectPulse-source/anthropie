@@ -1,4 +1,4 @@
-# relu le 2026-10-22 ; texte servi de /budget-2027-votre-commune/, build de 5701d99 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-22 ; texte servi de /budget-2027-votre-commune/, build de 7359280 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Budget 2027 : que sait-on réellement pour votre commune ?
 Le 19 octobre 2026, l'Assemblée nationale a supprimé la baisse du taux du FCTVA (art.
@@ -29,35 +29,46 @@ Quand ma commune connaîtra-t-elle ses montants pour 2027 ?
 Après le vote définitif de la loi de finances : le préfet communique alors le montant de chacune des dotations de la DGF, et les mesures nouvelles passent par leurs arrêtés ou décrets.
 Prochaine étape au 22 octobre 2026 : suite de l'examen de la première partie du 27 octobre au 2 novembre 2026, vote solennel sur la première partie le 3 novembre.
 Ce que le service financier doit retenir, vérifier et en faire
-Mesure
-Ce qu’il faut retenir
-Ce que l’on peut vérifier dès maintenant
-Pour préparer le budget 2027
 Contribution progressive (art.
-37) · supprimé en séance
+37)
+supprimé en séance
+Ce qu'il faut retenir
 Un prélèvement envisagé sur les recettes fiscales, chaque mois, si la mesure revenait
+Ce que l'on peut vérifier dès maintenant
 Les comptes de 2024 de la commune et de son intercommunalité ; une éventuelle exonération (rangs DSU et DSR)
-Ne pas l’inscrire comme une charge certaine ; la garder en scénario conditionnel
+Pour préparer le budget 2027 → Ne pas l'inscrire comme une charge certaine ; la garder en scénario conditionnel.
 FCTVA (art.
-35) · supprimé en séance
+35)
+supprimé en séance
+Ce qu'il faut retenir
 La baisse envisagée pouvait toucher des investissements déjà réalisés
-L’année des dépenses sur laquelle porte l’attribution, et la part des dépenses de transition écologique et de voirie
-Inscrire l’attribution au taux en vigueur ; la baisse, en scénario conditionnel
+Ce que l'on peut vérifier dès maintenant
+L'année des dépenses sur laquelle porte l'attribution, et la part des dépenses de transition écologique et de voirie
+Pour préparer le budget 2027 → Inscrire l'attribution au taux en vigueur ; la baisse, en scénario conditionnel.
 DGF (art.
-34) · adopté, modifié
+34)
+adopté, modifié
+Ce qu'il faut retenir
 Une enveloppe nationale en hausse, sans garantie de hausse pour chaque commune
+Ce que l'on peut vérifier dès maintenant
 La composition de la DGF de la commune : dotation forfaitaire, dotations de péréquation
-Ne pas lire la hausse nationale comme une recette garantie pour la commune
+Pour préparer le budget 2027 → Ne pas lire la hausse nationale comme une recette garantie pour la commune.
 DILICO (art.
-84) · non encore examiné
-Des restitutions qui seraient étalées jusqu’en 2031, sans changer leur total
+84)
+non encore examiné
+Ce qu'il faut retenir
+Des restitutions qui seraient étalées jusqu'en 2031, sans changer leur total
+Ce que l'on peut vérifier dès maintenant
 Les montants mis en réserve en 2025 et en 2026, notifiés par arrêté
-Préparer l’échéancier des reversements, millésime par millésime, selon le droit actuel et selon le projet
+Pour préparer le budget 2027 → Préparer l'échéancier des reversements, millésime par millésime, selon le droit actuel et selon le projet.
 TVA affectée (art.
-36) · non adopté en séance
-Un écrêtement écarté à ce stade, d’effet différent selon les bénéficiaires
+36)
+non adopté en séance
+Ce qu'il faut retenir
+Un écrêtement écarté à ce stade, d'effet différent selon les bénéficiaires
+Ce que l'on peut vérifier dès maintenant
 Une fraction de TVA perçue par la commune, ou par son intercommunalité
-Inscrire la fraction selon les règles actuelles ; l’écrêtement n’est plus dans le texte à ce stade
+Pour préparer le budget 2027 → Inscrire la fraction selon les règles actuelles ; l'écrêtement n'est plus dans le texte à ce stade.
 Prochaine échéance : suite de l'examen de la première partie du 27 octobre au 2 novembre 2026, vote solennel sur la première partie le 3 novembre.
 Chaque ligne est développée mesure par mesure, avec ce qu’il serait trompeur de chiffrer à ce stade.
 Le projet déposé et ce qu’il en reste

@@ -69,13 +69,15 @@ dossier_dette_role: "draft budget bill, state of the text"
 
 ## What finance departments should note, check and do {#to-check}
 
-| Measure | What to note | What can be checked now | For the 2027 budget |
-|---|---|---|---|
-| **Progressive contribution** (art. 37) · {{< coll-val "plf_statut_cpeb" >}} | A monthly levy on tax revenue, were the measure to come back | The 2024 accounts of the municipality and of its inter-municipal body; any exemption (urban and rural solidarity grant rankings) | Do not enter it as a certain charge; keep it as a conditional scenario |
-| **FCTVA** (art. 35) · {{< coll-val "plf_statut_fctva" >}} | The proposed cut could also hit investment already carried out | The year of spending the payment relates to, and the share of ecological transition and road spending | Enter the payment at the current rate; the cut, as a conditional scenario |
-| **DGF** (art. 34) · {{< coll-val "plf_statut_dgf" >}} | A larger national envelope, with no guaranteed rise for each municipality | The make-up of the municipality's DGF: lump-sum grant, equalisation grants | Do not read the national rise as guaranteed revenue for the municipality |
-| **DILICO** (art. 84) · {{< coll-val "plf_statut_dilico" >}} | Repayments that would be spread to 2031, their total unchanged | The amounts placed in reserve in 2025 and 2026, notified by order | Prepare the repayment schedule, year by year, under current law and under the bill |
-| **Assigned VAT** (art. 36) · {{< coll-val "plf_statut_tva" >}} | A capping set aside at this stage, with effects that differ by recipient | A share of VAT received by the municipality, or by its inter-municipal body | Enter the share under the current rules; the capping is no longer in the text at this stage |
+{{< mesure-budget titre="Progressive contribution" art="37" statut="plf_statut_cpeb" retenir="A monthly levy on tax revenue, were the measure to come back" verifier="The 2024 accounts of the municipality and of its inter-municipal body; any exemption (urban and rural solidarity grant rankings)" action="Do not enter it as a certain charge; keep it as a conditional scenario." >}}
+
+{{< mesure-budget titre="FCTVA" art="35" statut="plf_statut_fctva" retenir="The proposed cut could also hit investment already carried out" verifier="The year of spending the payment relates to, and the share of ecological transition and road spending" action="Enter the payment at the current rate; the cut, as a conditional scenario." >}}
+
+{{< mesure-budget titre="DGF" art="34" statut="plf_statut_dgf" retenir="A larger national envelope, with no guaranteed rise for each municipality" verifier="The make-up of the municipality's DGF: lump-sum grant, equalisation grants" action="Do not read the national rise as guaranteed revenue for the municipality." >}}
+
+{{< mesure-budget titre="DILICO" art="84" statut="plf_statut_dilico" retenir="Repayments that would be spread to 2031, their total unchanged" verifier="The amounts placed in reserve in 2025 and 2026, notified by order" action="Prepare the repayment schedule, year by year, under current law and under the bill." >}}
+
+{{< mesure-budget titre="Assigned VAT" art="36" statut="plf_statut_tva" retenir="A capping set aside at this stage, with effects that differ by recipient" verifier="A share of VAT received by the municipality, or by its inter-municipal body" action="Enter the share under the current rules; the capping is no longer in the text at this stage." >}}
 
 Next deadline: {{< coll-val "plf_etape_suivante" >}}. Each row is developed [measure by measure](#measure-by-measure), with what it would be misleading to quantify at this stage.
 

@@ -73,13 +73,15 @@ dossier_dette_role_en: "draft budget bill, state of the text"
 
 ## Ce que le service financier doit retenir, vérifier et en faire {#a-verifier}
 
-| Mesure | Ce qu'il faut retenir | Ce que l'on peut vérifier dès maintenant | Pour préparer le budget 2027 |
-|---|---|---|---|
-| **Contribution progressive** (art.&nbsp;37) · {{< coll-val "plf_statut_cpeb" >}} | Un prélèvement envisagé sur les recettes fiscales, chaque mois, si la mesure revenait | Les comptes de 2024 de la commune et de son intercommunalité&nbsp;; une éventuelle exonération (rangs DSU et DSR) | Ne pas l'inscrire comme une charge certaine&nbsp;; la garder en scénario conditionnel |
-| **FCTVA** (art.&nbsp;35) · {{< coll-val "plf_statut_fctva" >}} | La baisse envisagée pouvait toucher des investissements déjà réalisés | L'année des dépenses sur laquelle porte l'attribution, et la part des dépenses de transition écologique et de voirie | Inscrire l'attribution au taux en vigueur&nbsp;; la baisse, en scénario conditionnel |
-| **DGF** (art.&nbsp;34) · {{< coll-val "plf_statut_dgf" >}} | Une enveloppe nationale en hausse, sans garantie de hausse pour chaque commune | La composition de la DGF de la commune&nbsp;: dotation forfaitaire, dotations de péréquation | Ne pas lire la hausse nationale comme une recette garantie pour la commune |
-| **DILICO** (art.&nbsp;84) · {{< coll-val "plf_statut_dilico" >}} | Des restitutions qui seraient étalées jusqu'en 2031, sans changer leur total | Les montants mis en réserve en 2025 et en 2026, notifiés par arrêté | Préparer l'échéancier des reversements, millésime par millésime, selon le droit actuel et selon le projet |
-| **TVA affectée** (art.&nbsp;36) · {{< coll-val "plf_statut_tva" >}} | Un écrêtement écarté à ce stade, d'effet différent selon les bénéficiaires | Une fraction de TVA perçue par la commune, ou par son intercommunalité | Inscrire la fraction selon les règles actuelles&nbsp;; l'écrêtement n'est plus dans le texte à ce stade |
+{{< mesure-budget titre="Contribution progressive" art="37" statut="plf_statut_cpeb" retenir="Un prélèvement envisagé sur les recettes fiscales, chaque mois, si la mesure revenait" verifier="Les comptes de 2024 de la commune et de son intercommunalité&nbsp;; une éventuelle exonération (rangs DSU et DSR)" action="Ne pas l'inscrire comme une charge certaine&nbsp;; la garder en scénario conditionnel." >}}
+
+{{< mesure-budget titre="FCTVA" art="35" statut="plf_statut_fctva" retenir="La baisse envisagée pouvait toucher des investissements déjà réalisés" verifier="L'année des dépenses sur laquelle porte l'attribution, et la part des dépenses de transition écologique et de voirie" action="Inscrire l'attribution au taux en vigueur&nbsp;; la baisse, en scénario conditionnel." >}}
+
+{{< mesure-budget titre="DGF" art="34" statut="plf_statut_dgf" retenir="Une enveloppe nationale en hausse, sans garantie de hausse pour chaque commune" verifier="La composition de la DGF de la commune&nbsp;: dotation forfaitaire, dotations de péréquation" action="Ne pas lire la hausse nationale comme une recette garantie pour la commune." >}}
+
+{{< mesure-budget titre="DILICO" art="84" statut="plf_statut_dilico" retenir="Des restitutions qui seraient étalées jusqu'en 2031, sans changer leur total" verifier="Les montants mis en réserve en 2025 et en 2026, notifiés par arrêté" action="Préparer l'échéancier des reversements, millésime par millésime, selon le droit actuel et selon le projet." >}}
+
+{{< mesure-budget titre="TVA affectée" art="36" statut="plf_statut_tva" retenir="Un écrêtement écarté à ce stade, d'effet différent selon les bénéficiaires" verifier="Une fraction de TVA perçue par la commune, ou par son intercommunalité" action="Inscrire la fraction selon les règles actuelles&nbsp;; l'écrêtement n'est plus dans le texte à ce stade." >}}
 
 Prochaine échéance&nbsp;: {{< coll-val "plf_etape_suivante" >}}. Chaque ligne est développée [mesure par mesure](#mesure-par-mesure), avec ce qu'il serait trompeur de chiffrer à ce stade.
 

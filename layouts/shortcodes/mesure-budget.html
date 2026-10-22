@@ -1,0 +1,23 @@
+{{- /* {{< mesure-budget titre="FCTVA" art="35" statut="plf_statut_fctva" retenir="…" verifier="…" action="…" >}}
+       Une mesure du tableau de synthèse de /budget-2027-votre-commune/ (arbitrage de l'auteur 2005_Communes-03,
+       22/10/2026) : trois cases (mesure et statut, ce qu'il faut retenir, ce que l'on peut vérifier), puis l'action
+       budgétaire sur toute la largeur, en conclusion visible. Remplace un tableau à quatre colonnes dont la dernière
+       s'écrasait à 0 px sur ordinateur. Le statut est un jeton du registre des votes (bloc affichage[_en] de
+       data/dette_collectivites.json), jamais saisi : un jeton inconnu arrête le build. Styles : _dette-monde.scss. */ -}}
+{{- $en := eq .Page.Lang "en" -}}
+{{- $j := site.Data.dette_collectivites -}}
+{{- $a := cond $en $j.affichage_en $j.affichage -}}
+{{- $cle := .Get "statut" -}}
+{{- $statut := index $a $cle -}}
+{{- if not $statut -}}{{ errorf "mesure-budget: jeton de statut %q introuvable (%s)" $cle .Page.File.Path }}{{- end -}}
+{{- range slice "titre" "art" "retenir" "verifier" "action" -}}
+  {{- if not ($.Get .) -}}{{ errorf "mesure-budget: parametre %q manquant (%s)" . $.Page.File.Path }}{{- end -}}
+{{- end -}}
+<section class="mesure-budget">
+<div class="mesure-budget__grille">
+<div class="mesure-budget__case mesure-budget__case--titre"><p class="mesure-budget__titre"><strong>{{ partial "fr-typo.html" (.Get "titre") }}</strong> ({{ cond $en "art." "art." }}&nbsp;{{ .Get "art" }})</p><p class="mesure-budget__statut">{{ $statut }}</p></div>
+<div class="mesure-budget__case"><p class="mesure-budget__etiquette">{{ cond $en "What to note" "Ce qu'il faut retenir" }}</p><p>{{ partial "fr-typo.html" (.Get "retenir") }}</p></div>
+<div class="mesure-budget__case"><p class="mesure-budget__etiquette">{{ cond $en "What can be checked now" "Ce que l'on peut vérifier dès maintenant" }}</p><p>{{ partial "fr-typo.html" (.Get "verifier") }}</p></div>
+</div>
+<p class="mesure-budget__action"><span class="mesure-budget__action-etiquette">{{ cond $en "For the 2027 budget →" "Pour préparer le budget 2027 →" }}</span> {{ partial "fr-typo.html" (.Get "action") }}</p>
+</section>

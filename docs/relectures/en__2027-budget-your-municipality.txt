@@ -1,4 +1,4 @@
-# relu le 2026-10-22 ; texte servi de /en/2027-budget-your-municipality/, build de 5701d99 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-22 ; texte servi de /en/2027-budget-your-municipality/, build de 7359280 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Budget 2027: what do we actually know for your municipality?
 On 19 October 2026, the National Assembly deleted the cut in the FCTVA rate (art.
@@ -29,35 +29,46 @@ When will my municipality know its amounts for 2027?
 After the budget act is finally passed: the prefect then communicates the amount of each DGF grant, and new measures go through their orders or decrees.
 Next step on 22 October 2026: the first part continues to be examined from 27 October to 2 November 2026, with a formal vote on the first part on 3 November.
 What finance departments should note, check and do
-Measure
-What to note
-What can be checked now
-For the 2027 budget
 Progressive contribution (art.
-37) · deleted in plenary
+37)
+deleted in plenary
+What to note
 A monthly levy on tax revenue, were the measure to come back
+What can be checked now
 The 2024 accounts of the municipality and of its inter-municipal body; any exemption (urban and rural solidarity grant rankings)
-Do not enter it as a certain charge; keep it as a conditional scenario
+For the 2027 budget → Do not enter it as a certain charge; keep it as a conditional scenario.
 FCTVA (art.
-35) · deleted in plenary
+35)
+deleted in plenary
+What to note
 The proposed cut could also hit investment already carried out
+What can be checked now
 The year of spending the payment relates to, and the share of ecological transition and road spending
-Enter the payment at the current rate; the cut, as a conditional scenario
+For the 2027 budget → Enter the payment at the current rate; the cut, as a conditional scenario.
 DGF (art.
-34) · adopted as amended
+34)
+adopted as amended
+What to note
 A larger national envelope, with no guaranteed rise for each municipality
-The make-up of the municipality’s DGF: lump-sum grant, equalisation grants
-Do not read the national rise as guaranteed revenue for the municipality
+What can be checked now
+The make-up of the municipality's DGF: lump-sum grant, equalisation grants
+For the 2027 budget → Do not read the national rise as guaranteed revenue for the municipality.
 DILICO (art.
-84) · not yet examined
+84)
+not yet examined
+What to note
 Repayments that would be spread to 2031, their total unchanged
+What can be checked now
 The amounts placed in reserve in 2025 and 2026, notified by order
-Prepare the repayment schedule, year by year, under current law and under the bill
+For the 2027 budget → Prepare the repayment schedule, year by year, under current law and under the bill.
 Assigned VAT (art.
-36) · not adopted in plenary
+36)
+not adopted in plenary
+What to note
 A capping set aside at this stage, with effects that differ by recipient
+What can be checked now
 A share of VAT received by the municipality, or by its inter-municipal body
-Enter the share under the current rules; the capping is no longer in the text at this stage
+For the 2027 budget → Enter the share under the current rules; the capping is no longer in the text at this stage.
 Next deadline: the first part continues to be examined from 27 October to 2 November 2026, with a formal vote on the first part on 3 November.
 Each row is developed measure by measure, with what it would be misleading to quantify at this stage.
 The bill as tabled and what is left of it

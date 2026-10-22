@@ -52,6 +52,14 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-22 (nuit) — `/budget-2027-votre-commune/` : tableau du service financier refait (arbitrage 2005_Communes-03)
+
+Constat de l'auteur sur capture : la 4e colonne (« Pour préparer le budget 2027 ») écrasée, mots à la verticale. Mesuré :
+0 px de large à 1024, 1280 et 1600 px, et débordement à 1024. Remplacé par le shortcode `mesure-budget` (trois cases,
+puis l'action sur toute la largeur, fond teinté ; cartes verticales sous 720 px), FR et EN, texte inchangé. `recette.py`
+détecte désormais les colonnes écrasées (cellule < 90 px ou hauteur > 10 × largeur) et mesure aussi 1024 et 1600 px ;
+témoin : l'ancien tableau mord à 1024, 1280 et 1600. Rendu relu sur captures à 390, 1024 et 1600.
+
 ### 2026-10-22 (nuit, fin) — `/budget-2027-votre-commune/` arrêtée par l'auteur (pièce 1942_Communes-02) et publiée
 
 Deux vérifications demandées, faites : premier écran à 390 px (chapô resserré, il répond aux quatre questions) ;
