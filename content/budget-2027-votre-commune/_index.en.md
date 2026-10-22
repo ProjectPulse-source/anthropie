@@ -12,7 +12,7 @@ lastmod: 2026-10-22
 og_title: "Budget 2027: what do we actually know for your municipality? — S. Lalut"
 og_image: "images/og-budget-2027-commune-en.jpg"
 og_image_alt: "Share card: “Budget 2027: what is left of it” — the five measures of the draft budget bill as tabled aimed at local authorities, in € billion, hollow where the National Assembly deleted or did not adopt their article."
-donnees: [dette_collectivites]
+donnees: [dette_collectivites, budget_communes]
 dossier_source: "plf"
 journal:
   - {date: 2026-10-22, texte: "Correction: municipalities do not contribute to the 2026 DILICO (only inter-municipal bodies, departments and regions); 10% of each repayment goes to equalisation, so a contributing authority recovers 90% of its contribution. Worked example corrected."}
@@ -81,6 +81,12 @@ dossier_dette_role: "draft budget bill, state of the text"
 {{< mesure-budget titre="Assigned VAT" art="36" statut="plf_statut_tva" retenir="A capping set aside at this stage, with effects that differ by recipient" verifier="A share of VAT received by the municipality, or by its inter-municipal body" action="Enter the share under the current rules; the capping is no longer in the text at this stage." >}}
 
 Next deadline: {{< coll-val "plf_etape_suivante" >}}. Each row is developed [measure by measure](#measure-by-measure), with what it would be misleading to quantify at this stage.
+
+## Your municipality's sheet {#fiche}
+
+For each municipality, the sheet brings together what its published accounts already say, set against municipalities of the same size, and what each measure of the bill could change for it, with its status in Parliament: what the published data allow us to say about its exemption from the progressive contribution under the bill as tabled, its general operating grant notified for 2026, what it placed in reserve under DILICO in 2025 and the schedule for its repayment. It gives no amount for 2027: anything not published shows as “not available”, never zero, and the municipality is never confused with its inter-municipal body.
+
+{{< fiche-commune >}}
 
 ## The bill as tabled and what is left of it {#state-of-the-text}
 
@@ -216,6 +222,8 @@ The Observatory of Local Public Finance and Management (OFGL) publishes, municip
 ## Where these figures come from {#sources}
 
 **State of the text** — National Assembly, records of the [first](https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/premiere-seance-du-lundi-19-octobre-2026) and [second](https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/deuxieme-seance-du-lundi-19-octobre-2026) sittings of 19 October 2026 (in French); each result used here is quoted word for word in the page's register of votes, archived with the hash of the records. [Legislative file](https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027) (in French) for the timetable.
+
+**Municipal accounts (sheet)** — Observatory of Local Public Finance and Management (OFGL), [municipal accounts database](https://data.ofgl.fr/explore/dataset/ofgl-base-communes/) (DGFiP), main budget, last two published years; retrieved by script, ten municipalities re-read through a second query at each retrieval. **Municipal grants (sheet)** — Observatory of Local Public Finance and Management (OFGL), [municipal grants](https://data.ofgl.fr/explore/dataset/dotations-communes/), data from the Directorate-General for Local Authorities: DILICO withheld in 2025 and repaid in 2026, general operating grant notified for 2026, 2026 rankings for the urban solidarity grant and the targeted share of the rural solidarity grant; retrieved by script and checked, municipality by municipality and to the euro, against the annexes to the orders published in the Journal officiel (2025 DILICO withholding, 2026 repayment, 2026 DGF), and against the €250 million total set by the 2025 budget act. The 2026 DGF annex omits three municipalities in the Landes (Aire-sur-l'Adour, Amou, Angoumé): their sheets use the OFGL value. All sheets are in a [CSV file](/budget_communes.csv), one row per municipality.
 
 **Texts** — [Draft budget bill for {{< coll-val "plf_edition" >}}](https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi.pdf), no. 3210, tabled on {{< coll-val "plf_depot" >}}, articles 34 to 41, 53 and 83 to 87 and their explanatory memoranda (in French); [opinion of the High Council of Public Finance](https://www.hcfp.fr/sites/default/files/2026-10/Avis%20HCFP%202026-5%20-%20PLF-PLFSS%202027.pdf) on that bill (in French); General Code of Local Authorities, articles [L. 1612-2](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000051731704), [D. 1612-1](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006395280), [L. 1615-6](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000053547367) and [L. 2336-3](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000053549170), read on Légifrance on 22 October 2026 (in French).
 

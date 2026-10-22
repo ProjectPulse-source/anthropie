@@ -1,4 +1,4 @@
-# relu le 2026-10-22 ; texte servi de /en/2027-budget-your-municipality/, build de 4a7ba08 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-22 ; texte servi de /en/2027-budget-your-municipality/, build de 6b1cc4d + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Budget 2027: what do we actually know for your municipality?
 On 19 October 2026, the National Assembly deleted the cut in the FCTVA rate (art.
@@ -71,6 +71,12 @@ A share of VAT received by the municipality, or by its inter-municipal body
 For the 2027 budget → Enter the share under the current rules; the capping is no longer in the text at this stage.
 Next deadline: the first part continues to be examined from 27 October to 2 November 2026, with a formal vote on the first part on 3 November.
 Each row is developed measure by measure, with what it would be misleading to quantify at this stage.
+Your municipality’s sheet
+For each municipality, the sheet brings together what its published accounts already say, set against municipalities of the same size, and what each measure of the bill could change for it, with its status in Parliament: what the published data allow us to say about its exemption from the progressive contribution under the bill as tabled, its general operating grant notified for 2026, what it placed in reserve under DILICO in 2025 and the schedule for its repayment.
+It gives no amount for 2027: anything not published shows as “not available”, never zero, and the municipality is never confused with its inter-municipal body.
+Your municipality: name, department or INSEE code
+The sheet needs JavaScript.
+All figures are in the full CSV file.
 The bill as tabled and what is left of it
 The five measures of the draft budget bill as tabled aimed at local authorities, and what Parliament did with them.
 Amounts in the bill as tabled: they describe the initial framing, not the current state of the text; their arithmetic sum does not measure a net levy.
@@ -256,6 +262,10 @@ It covers only the provisions of the bill that target municipalities directly; g
 Where these figures come from
 State of the text — National Assembly, records of the first and second sittings of 19 October 2026 (in French); each result used here is quoted word for word in the page’s register of votes, archived with the hash of the records.
 Legislative file (in French) for the timetable.
+Municipal accounts (sheet) — Observatory of Local Public Finance and Management (OFGL), municipal accounts database (DGFiP), main budget, last two published years; retrieved by script, ten municipalities re-read through a second query at each retrieval.
+Municipal grants (sheet) — Observatory of Local Public Finance and Management (OFGL), municipal grants, data from the Directorate-General for Local Authorities: DILICO withheld in 2025 and repaid in 2026, general operating grant notified for 2026, 2026 rankings for the urban solidarity grant and the targeted share of the rural solidarity grant; retrieved by script and checked, municipality by municipality and to the euro, against the annexes to the orders published in the Journal officiel (2025 DILICO withholding, 2026 repayment, 2026 DGF), and against the €250 million total set by the 2025 budget act.
+The 2026 DGF annex omits three municipalities in the Landes (Aire-sur-l’Adour, Amou, Angoumé): their sheets use the OFGL value.
+All sheets are in a CSV file, one row per municipality.
 Texts — Draft budget bill for 2027, no.
 3210, tabled on 1 October 2026, articles 34 to 41, 53 and 83 to 87 and their explanatory memoranda (in French); opinion of the High Council of Public Finance on that bill (in French); General Code of Local Authorities, articles L.
 1612-2, D.

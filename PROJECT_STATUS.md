@@ -52,6 +52,22 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-22 (nuit, fin) — fiche par commune de `/budget-2027-votre-commune/#fiche` (option A, pièce 2024_Communes-04)
+Recherche par nom, département ou code Insee, lien direct `?insee=`. Générateur `scripts/update_budget_communes.py` (OFGL :
+comptes des communes et dotations des communes, données DGCL) : `static/budget2027-communes/` (index + un fichier par
+département), `static/budget_communes.{csv,json}`, `data/budget_communes.json` ; mode manuel au registre des sources
+(`budget-communes`, revoir avant le 31/12/2026). La fiche donne : comptes 2024-2025 et médiane de la strate ; exonération
+de la contribution progressive selon le texte déposé (outre-mer, rangs DSU et DSR cible de 2026, seuil de 5 000 €) ;
+DGF notifiée 2026 et composantes ; DILICO 2025 et échéanciers (droit actuel / projet). Aucun montant 2027. Défaut trouvé
+en recette et corrigé à l'échelle du site : sur téléphone, la règle « tableau en cartes » cachait l'en-tête de **tous**
+les tableaux Markdown (valeurs sans colonne) → `layouts/_markup/render-table.html` pose `data-label`, `_typography.scss`
+l'affiche ; `recette.py` (D:\PRO) mesure désormais les cellules illisibles et les cartes sans libellé, avec `--temoin`.
+Contre-expertise PRO-20261022-215525 arbitrée (article 37 relu au texte déposé) : exonération graduée, aucun plafond
+individualisé, cas de la Ville de Paris et de l'outre-mer traités ; CSV `exoneration_art37_texte_depose`.
+Arbitrage final (pièce 2231_Communes-06) : DGF et dotation des communes nouvelles séparées ; annexes des arrêtés
+(Légifrance, DA 0011/2025, 0008/2026, 0006/2026) versionnées dans `scripts/sources_budget_communes/` et relues par le
+générateur : 91 459 montants, 0 écart à l'euro (annexe DGF : 40001-40003 omises).
+
 ### 2026-10-22 (nuit) — `/budget-2027-votre-commune/` : tableau du service financier refait (arbitrage 2005_Communes-03)
 
 Constat de l'auteur sur capture : la 4e colonne (« Pour préparer le budget 2027 ») écrasée, mots à la verticale. Mesuré :

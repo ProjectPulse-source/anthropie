@@ -14,7 +14,7 @@ lastmod: 2026-10-22
 og_title: "Budget 2027 : que sait-on réellement pour votre commune ? — S. Lalut"
 og_image: "images/og-budget-2027-commune.jpg"
 og_image_alt: "Carte de partage : « Budget 2027 : ce qu'il en reste » — les cinq mesures du projet de loi de finances déposé visant les collectivités, en milliards d'euros, évidées quand l'Assemblée nationale les a supprimées ou n'a pas adopté leur article."
-donnees: [dette_collectivites]
+donnees: [dette_collectivites, budget_communes]
 dossier_source: "plf"   # barre du dossier : source = état du projet au Parlement (shortcode dossier-dette)
 journal:
   - {date: 2026-10-22, texte: "Correction : les communes ne contribuent pas au DILICO de 2026 (seulement les intercommunalités, les départements et les régions) ; chaque reversement va pour 10 % à la péréquation, la collectivité contributrice récupère 90 % de sa contribution. Exemple chiffré corrigé."}
@@ -85,6 +85,12 @@ dossier_dette_role_en: "draft budget bill, state of the text"
 {{< mesure-budget titre="TVA affectée" art="36" statut="plf_statut_tva" retenir="Un écrêtement écarté à ce stade, d'effet différent selon les bénéficiaires" verifier="Une fraction de TVA perçue par la commune, ou par son intercommunalité" action="Inscrire la fraction selon les règles actuelles&nbsp;; l'écrêtement n'est plus dans le texte à ce stade." >}}
 
 Prochaine échéance&nbsp;: {{< coll-val "plf_etape_suivante" >}}. Chaque ligne est développée [mesure par mesure](#mesure-par-mesure), avec ce qu'il serait trompeur de chiffrer à ce stade.
+
+## La fiche de votre commune {#fiche}
+
+Pour chaque commune, la fiche réunit ce que ses comptes publiés disent déjà, comparés à ceux des communes de même taille, et ce que chaque mesure du projet pouvait changer pour elle, avec son statut au Parlement&nbsp;: ce que les données publiées permettent de dire de son exonération de la contribution progressive par le texte déposé, sa dotation globale notifiée pour 2026, ce qu'elle a mis en réserve au DILICO en 2025 et l'échéancier de son remboursement. Elle ne donne aucun montant pour 2027&nbsp;: ce qui n'est pas publié s'affiche «&nbsp;non disponible&nbsp;», jamais zéro, et la commune n'est jamais confondue avec son intercommunalité.
+
+{{< fiche-commune >}}
 
 ## Le projet déposé et ce qu'il en reste {#etat-du-texte}
 
@@ -220,6 +226,8 @@ L'Observatoire des finances et de la gestion publique locales publie, commune pa
 ## D'où viennent ces chiffres {#sources}
 
 **État du texte** — Assemblée nationale, comptes rendus des [première](https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/premiere-seance-du-lundi-19-octobre-2026) et [deuxième](https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/deuxieme-seance-du-lundi-19-octobre-2026) séances du 19&nbsp;octobre 2026&nbsp;; chaque résultat repris ici y est cité mot pour mot dans le registre des votes de la page, archivé avec l'empreinte des comptes rendus. [Dossier législatif](https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027) pour le calendrier.
+
+**Comptes des communes (fiche)** — Observatoire des finances et de la gestion publique locales, [base des comptes des communes](https://data.ofgl.fr/explore/dataset/ofgl-base-communes/) (DGFiP), budget principal, deux derniers exercices publiés&nbsp;; relevés par script, dix communes relues par une seconde requête à chaque relevé. **Dotations des communes (fiche)** — Observatoire des finances et de la gestion publique locales, [dotations des communes](https://data.ofgl.fr/explore/dataset/dotations-communes/), données de la Direction générale des collectivités locales&nbsp;: DILICO prélevé en 2025 et reversé en 2026, dotation globale notifiée pour 2026, rangs de 2026 à la dotation de solidarité urbaine et à la fraction cible de la dotation de solidarité rurale&nbsp;; relevés par script et confrontés, commune par commune et à l'euro près, aux annexes des arrêtés publiées au Journal officiel (prélèvement DILICO 2025, reversement 2026, DGF 2026), ainsi qu'au total de 250&nbsp;millions d'euros fixé par la loi de finances pour 2025. L'annexe de la DGF 2026 omet trois communes des Landes (Aire-sur-l'Adour, Amou, Angoumé)&nbsp;: leur fiche reprend la valeur de l'OFGL. Toutes les fiches sont dans un [fichier CSV](/budget_communes.csv), une ligne par commune.
 
 **Textes** — [Projet de loi de finances pour {{< coll-val "plf_edition" >}}](https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi.pdf), n°&nbsp;3210, déposé le {{< coll-val "plf_depot" >}}, articles 34 à 41, 53 et 83 à 87 et leurs exposés des motifs&nbsp;; [avis du Haut Conseil des finances publiques](https://www.hcfp.fr/sites/default/files/2026-10/Avis%20HCFP%202026-5%20-%20PLF-PLFSS%202027.pdf) sur ce projet&nbsp;; code général des collectivités territoriales, articles [L.&nbsp;1612-2](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000051731704), [D.&nbsp;1612-1](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006395280), [L.&nbsp;1615-6](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000053547367) et [L.&nbsp;2336-3](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000053549170), relus sur Légifrance le 22&nbsp;octobre 2026.
 

@@ -287,4 +287,14 @@ main table td:nth-child(3) { width: 50%; }
   main table td:nth-child(3) {
     width: 100% !important;
   }
+
+  // En-tête masqué : chaque valeur reprend le libellé de sa colonne (data-label, posé par _markup/render-table.html).
+  main td[data-label]:not(:first-child):not([data-label=""])::before {
+    content: attr(data-label) "\00a0: ";
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    color: var(--color-text-subtle);
+  }
+  main:lang(en) td[data-label]:not(:first-child):not([data-label=""])::before { content: attr(data-label) ": "; }
 }

@@ -1,0 +1,32 @@
+{{- /* {{< fiche-commune >}} — la fiche de votre commune (section #fiche de /budget-2027-votre-commune/ ; option A de
+       l'auteur, pièce 2024_Communes-04, 22/10/2026). Le shortcode pose le formulaire et TOUT ce qui ne dépend pas de la
+       commune : libellés, statuts des mesures (jetons du registre des votes, data/dette_collectivites.json), médianes et
+       bornes des strates (data/budget_communes.json, écrit par scripts/update_budget_communes.py). static/js/
+       fiche-commune.js lit la fiche de la commune (static/budget2027-communes/<dep>.json) et n'écrit aucun chiffre qui
+       ne vienne de ces données. Sans JavaScript, le lien vers le CSV complet reste disponible. */ -}}
+{{- $en := eq .Page.Lang "en" -}}
+{{- $j := site.Data.dette_collectivites -}}
+{{- $a := cond $en $j.affichage_en $j.affichage -}}
+{{- $m := site.Data.budget_communes -}}
+{{- if not $m -}}{{ errorf "fiche-commune: data/budget_communes.json absent (%s)" .Page.File.Path }}{{- end -}}
+{{- $statuts := dict "cpeb" $a.plf_statut_cpeb "fctva" $a.plf_statut_fctva "dgf" $a.plf_statut_dgf "dilico" $a.plf_statut_dilico "tva" $a.plf_statut_tva -}}
+{{- range $k, $v := $statuts }}{{ if not $v }}{{ errorf "fiche-commune: statut %q absent (%s)" $k $.Page.File.Path }}{{ end }}{{ end -}}
+{{- if not $m.dotations }}{{ errorf "fiche-commune: bloc dotations absent de data/budget_communes.json (%s)" .Page.File.Path }}{{ end -}}
+<div class="fiche-commune" id="fiche-commune"
+     data-lang="{{ cond $en "en" "fr" }}"
+     data-base="{{ "budget2027-communes/" | relURL }}"
+     data-etat="{{ $a.plf_etat_au }}"
+     data-statuts="{{ $statuts | jsonify }}"
+     data-strates="{{ $m.strates | jsonify }}"
+     data-exercices="{{ $m.exercices | jsonify }}"
+     data-seuils="{{ $m.dotations.seuils_exoneration | jsonify }}"
+     data-releve="{{ (time $m.releve_le) | time.Format (cond $en "2 January 2006" ":date_long") }}">
+<form class="fiche-commune__recherche" role="search" onsubmit="return false">
+<label for="fiche-commune-champ">{{ cond $en "Your municipality: name, department or INSEE code" "Votre commune : nom, département ou code Insee" }}</label>
+<input id="fiche-commune-champ" type="search" autocomplete="off" spellcheck="false" placeholder="{{ cond $en "e.g. Oyonnax, 01283" "par exemple Oyonnax, 01283" }}" aria-controls="fiche-commune-liste">
+<ul id="fiche-commune-liste" class="fiche-commune__liste" role="listbox" hidden></ul>
+</form>
+<div class="fiche-commune__resultat" id="fiche-commune-resultat" aria-live="polite"></div>
+<noscript><p>{{ cond $en "The sheet needs JavaScript. All figures are in the" "La fiche a besoin de JavaScript. Tous les chiffres sont dans le" }} <a href="{{ "budget_communes.csv" | relURL }}">{{ cond $en "full CSV file" "fichier CSV complet" }}</a>.</p></noscript>
+</div>
+<script src="{{ "js/fiche-commune.js" | relURL }}" defer></script>

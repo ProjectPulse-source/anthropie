@@ -1,4 +1,4 @@
-# relu le 2026-10-22 ; texte servi de /budget-2027-votre-commune/, build de 4a7ba08 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-22 ; texte servi de /budget-2027-votre-commune/, build de 6b1cc4d + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Budget 2027 : que sait-on réellement pour votre commune ?
 Le 19 octobre 2026, l'Assemblée nationale a supprimé la baisse du taux du FCTVA (art.
@@ -71,6 +71,12 @@ Une fraction de TVA perçue par la commune, ou par son intercommunalité
 Pour préparer le budget 2027 → Inscrire la fraction selon les règles actuelles ; l'écrêtement n'est plus dans le texte à ce stade.
 Prochaine échéance : suite de l'examen de la première partie du 27 octobre au 2 novembre 2026, vote solennel sur la première partie le 3 novembre.
 Chaque ligne est développée mesure par mesure, avec ce qu’il serait trompeur de chiffrer à ce stade.
+La fiche de votre commune
+Pour chaque commune, la fiche réunit ce que ses comptes publiés disent déjà, comparés à ceux des communes de même taille, et ce que chaque mesure du projet pouvait changer pour elle, avec son statut au Parlement : ce que les données publiées permettent de dire de son exonération de la contribution progressive par le texte déposé, sa dotation globale notifiée pour 2026, ce qu’elle a mis en réserve au DILICO en 2025 et l’échéancier de son remboursement.
+Elle ne donne aucun montant pour 2027 : ce qui n’est pas publié s’affiche « non disponible », jamais zéro, et la commune n’est jamais confondue avec son intercommunalité.
+Votre commune : nom, département ou code Insee
+La fiche a besoin de JavaScript.
+Tous les chiffres sont dans le fichier CSV complet.
 Le projet déposé et ce qu’il en reste
 Les cinq mesures du projet de loi de finances déposé qui visent les collectivités, et leur sort au Parlement.
 Montants du projet déposé : ils décrivent le cadrage initial, non l’état actuel du texte ; leur somme arithmétique ne mesure pas un prélèvement net.
@@ -256,6 +262,10 @@ Elle ne reprend que les dispositions du projet qui visent directement les commun
 D’où viennent ces chiffres
 État du texte — Assemblée nationale, comptes rendus des première et deuxième séances du 19 octobre 2026 ; chaque résultat repris ici y est cité mot pour mot dans le registre des votes de la page, archivé avec l’empreinte des comptes rendus.
 Dossier législatif pour le calendrier.
+Comptes des communes (fiche) — Observatoire des finances et de la gestion publique locales, base des comptes des communes (DGFiP), budget principal, deux derniers exercices publiés ; relevés par script, dix communes relues par une seconde requête à chaque relevé.
+Dotations des communes (fiche) — Observatoire des finances et de la gestion publique locales, dotations des communes, données de la Direction générale des collectivités locales : DILICO prélevé en 2025 et reversé en 2026, dotation globale notifiée pour 2026, rangs de 2026 à la dotation de solidarité urbaine et à la fraction cible de la dotation de solidarité rurale ; relevés par script et confrontés, commune par commune et à l’euro près, aux annexes des arrêtés publiées au Journal officiel (prélèvement DILICO 2025, reversement 2026, DGF 2026), ainsi qu’au total de 250 millions d’euros fixé par la loi de finances pour 2025.
+L’annexe de la DGF 2026 omet trois communes des Landes (Aire-sur-l’Adour, Amou, Angoumé) : leur fiche reprend la valeur de l’OFGL.
+Toutes les fiches sont dans un fichier CSV, une ligne par commune.
 Textes — Projet de loi de finances pour 2027, n° 3210, déposé le 1er octobre 2026, articles 34 à 41, 53 et 83 à 87 et leurs exposés des motifs ; avis du Haut Conseil des finances publiques sur ce projet ; code général des collectivités territoriales, articles L.
 1612-2, D.
 1612-1, L.
