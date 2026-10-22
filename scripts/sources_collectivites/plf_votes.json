@@ -1,0 +1,31 @@
+{
+ "_role": "Etat du projet de loi de finances au Parlement, article par article, pour la page collectivites. Chaque resultat est une citation VERBATIM du compte rendu officiel de la seance ; le compte rendu est archive hors depot (06_PROMOTION/RECHERCHE_VOTRE_COMMUNE_2026-10-22/_SOURCES, SHA256SUMS.txt) et chaque citation y a ete retrouvee par verifier_plf_votes.py le jour de l'ecriture. A completer a chaque etape (27/10-2/11, vote solennel du 3/11, Senat, CMP, loi promulguee) : une etape = une entree datee, jamais une ecrasee.",
+ "edition": 2027,
+ "etat_au": "2026-10-22",
+ "etape_suivante": "suite de l'examen de la première partie du 27 octobre au 2 novembre 2026, vote solennel sur la première partie le 3 novembre",
+ "etape_suivante_en": "the first part continues to be examined from 27 October to 2 November 2026, with a formal vote on the first part on 3 November",
+ "seances": {
+  "AN-2026-10-19-1": {"date": "2026-10-19", "assemblee": "Assemblée nationale", "seance": "première séance du lundi 19 octobre 2026",
+                      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/premiere-seance-du-lundi-19-octobre-2026",
+                      "sha256_html": "51db7a51666d27bedea2d2d9d9347d4f8ad7d25c074780fc1fa8b954745638f5"},
+  "AN-2026-10-19-2": {"date": "2026-10-19", "assemblee": "Assemblée nationale", "seance": "deuxième séance du lundi 19 octobre 2026",
+                      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/deuxieme-seance-du-lundi-19-octobre-2026",
+                      "sha256_html": "273c9f54432da7426cc95f050ff6436af318fd96b7dec0dc5ecd967f3ea25b0a"}
+ },
+ "articles": [
+  {"article": 34, "seance": "AN-2026-10-19-1", "statut": "adopte_modifie", "citation": "(L’article 34, amendé, est adopté.)",
+   "precision": "montant de la DGF pour 2027 porté de 27 543 261 857 € à 27 899 281 115 € (amendements identiques n° 11, 1169, 3367 et 3913), soit +356 019 258 € ; un montant pour 2027, pas une règle d'indexation",
+   "precision_en": "DGF for 2027 raised from €27,543,261,857 to €27,899,281,115 (identical amendments nos. 11, 1169, 3367 and 3913), i.e. +€356,019,258; an amount for 2027, not an indexation rule",
+   "citations_complementaires": ["11, 1169, 3367 et 3913 sont adoptés"]},
+  {"article": 35, "seance": "AN-2026-10-19-1", "statut": "supprime", "citation": "en conséquence, l’article 35 est supprimé", "pour": 125, "contre": 16},
+  {"article": 36, "seance": "AN-2026-10-19-1", "statut": "non_adopte", "citation": "(L’article 36, amendé, n’est pas adopté.)",
+   "precision": "les amendements de suppression avaient d'abord été rejetés (51 voix pour, 69 contre) ; l'article amendé n'a ensuite pas été adopté",
+   "precision_en": "the amendments deleting it had first been rejected (51 for, 69 against); the amended article was then not adopted",
+   "citations_complementaires": ["20, 437, 1163, 2641, 3165, 3253 et 3757 ne sont pas adoptés"]},
+  {"article": 37, "seance": "AN-2026-10-19-2", "statut": "supprime", "citation": "en conséquence, l’article 37 est supprimé.", "pour": 125, "contre": 33},
+  {"article": 39, "seance": "AN-2026-10-19-2", "statut": "supprime", "citation": "en conséquence, l’article 39 est supprimé"},
+  {"article": 40, "seance": "AN-2026-10-19-2", "statut": "non_adopte", "citation": "(L’article 40, amendé, n’est pas adopté.)", "pour": 61, "contre": 79},
+  {"article": 41, "seance": "AN-2026-10-19-2", "statut": "adopte_modifie", "citation": "(L’article 41, amendé, est adopté.)"}
+ ],
+ "non_examines": {"84": "seconde partie, non examinée", "credits": "crédits des missions (seconde partie), non examinés"}
+}

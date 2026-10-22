@@ -49,6 +49,11 @@ blocs:
     dossier: true
     chapo: "Qui peut décider, avec quels accords, dans quel délai — et comment vérifier le résultat ?"
     # Remplace le bloc « Pouvoir et institutions » (arbitrage PRO-20261005-153428, décision de l'auteur du 05/10).
+  - id: communes
+    titre: "Votre commune face aux décisions de l'État"
+    chapo: "Ce qu'une décision nationale change pour une commune, ce qu'on peut en chiffrer et ce qu'il serait trompeur de chiffrer."
+    # Série décidée par l'auteur le 22/10/2026 (mémoire project_serie_votre_commune_decisions_etat) ; première page :
+    # /budget-2027-votre-commune/.
   - id: notions
     titre: "Notions et cadre d'analyse"
     chapo: "Les définitions du cadre anthropique, chacune reliée à ses sources."

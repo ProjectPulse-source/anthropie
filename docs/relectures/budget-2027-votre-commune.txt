@@ -1,0 +1,191 @@
+# relu le 2026-10-22 ; texte servi de /budget-2027-votre-commune/, build de 7b40814 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+ENCette page existe aussi en anglais — English version
+Budget 2027 : que sait-on réellement pour votre commune ?
+En séance, le 19 octobre 2026, l'Assemblée nationale a supprimé la baisse du taux du FCTVA (art.
+35) et la contribution progressive à l'effort budgétaire (art.
+37), n'a pas adopté l'écrêtement de la TVA affectée (art.
+36) : trois des cinq mesures que le projet déposé destinait aux collectivités, dont les deux plus importantes en montant, ne figurent plus dans le texte qu'elle examine.
+Rien n'est acquis pour autant : la procédure continue (suite de l'examen de la première partie du 27 octobre au 2 novembre 2026, vote solennel sur la première partie le 3 novembre), le Sénat suivra, et une mesure supprimée peut être rétablie.
+Aucun montant communal ne se déduit d'un projet ; les montants viendront de la loi votée, puis des notifications et arrêtés que cette page indique mesure par mesure.
+Page publiée le 22 octobre 2026 · révisions
+État au 22 octobre 2026.
+Projet de loi de finances pour 2027 déposé le 1er octobre 2026 ; examiné en séance par l’Assemblée nationale, qui, le 19 octobre 2026, a supprimé la baisse du taux du FCTVA (art.
+35) et la contribution progressive à l'effort budgétaire (art.
+37), n'a pas adopté l'écrêtement de la TVA affectée (art.
+36).
+Prochaine étape : suite de l'examen de la première partie du 27 octobre au 2 novembre 2026, vote solennel sur la première partie le 3 novembre.
+Cette page est révisée à chaque étape qui modifie ces mesures ; ses révisions restent lisibles en pied de page.
+Un maire qui prépare son débat d’orientation budgétaire lit en même temps deux choses qui ne disent pas la même chose : les montants annoncés à la présentation du projet, et ce que le Parlement en a fait depuis.
+Cette page sépare les deux.
+Pour chaque mesure qui touche les communes, elle répond à quatre questions : que prévoyait-elle, qu’a décidé l’Assemblée, que peut-il en résulter pour une commune, et quand en saura-t-on davantage.
+Que reste-t-il du projet déposé ?
+Mesure du projet de loi de finances pour 2027, tel que déposé
+Texte
+Nature
+Montant, Md€
+Au Parlement
+Contribution progressive à l'effort budgétaire, prélevée sur les avances de fiscalité
+article 37
+prélèvement sur les avances de fiscalité, institué pour 2027
+2,5
+art.
+37 supprimé par l'Assemblée nationale le 19 octobre 2026
+Fonds de compensation pour la TVA : taux abaissé de 5 points, sauf dépenses vertes et voirie
+articles 35 et 41
+réduction d'un concours de l'État lié aux dépenses d'investissement éligibles
+2,1
+art.
+35 supprimé par l'Assemblée nationale le 19 octobre 2026
+TVA affectée, hors régions : hausse annuelle réduite de l'inflation
+article 36
+écrêtement de la progression de la TVA affectée, hors régions
+0,6
+art.
+36 non adopté par l'Assemblée nationale le 19 octobre 2026
+Contributions de certains ministères aux collectivités
+crédits des missions
+réduction de contributions de certains ministères
+0,7
+seconde partie, non examinée
+Sommes mises en réserve en 2025 et 2026 (DILICO) : reversement sur cinq ans au lieu de trois
+article 84
+étalement du reversement ; montant total restitué inchangé
+0,3
+seconde partie, non examinée
+Montants pour 2027, tels que le projet déposé les prévoit (cadrage initial du débat).
+Dernière colonne : sort de l'article en séance, d'après le compte rendu officiel ; une disposition supprimée peut être rétablie d'ici la loi définitive.
+Sources : projet de loi de finances (exposés des motifs) pour les deux premières lignes ; avis du Haut Conseil des finances publiques pour les trois suivantes, que le texte du projet ne chiffre pas.
+La somme arithmétique de ces cinq montants, 6,2 milliards d’euros, décrivait le projet déposé ; elle ne mesurait pas un prélèvement net, et la page consacrée aux collectivités explique pourquoi elle coexistait avec une hausse prévue des ressources locales.
+Depuis le 19 octobre 2026, elle ne décrit plus le texte en discussion.
+Un article supprimé ou non adopté en séance ne figure plus dans le texte en discussion, mais il peut y revenir, par un amendement du Gouvernement ou au Sénat.
+À l’ouverture du débat du 19 octobre, la ministre chargée des collectivités, Françoise Gatel, chiffrait à 5,5 milliards d’euros la contribution des collectivités prévue par le projet.
+Mesure par mesure
+La contribution progressive à l’effort budgétaire (article 37)
+Ce que prévoyait le projet.
+Une contribution de 2,5 milliards d’euros pour 2027, due par 40 % des communes selon l’exposé des motifs.
+Les communes sont classées selon un indice qui pondère à 75 % leur potentiel financier par habitant et à 25 % le revenu par habitant, chacun rapporté à la moyenne.
+Le taux va de 0,5 % pour le premier décile à 2 % pour le dixième, et 3 % pour les deux derniers centiles.
+Il s’applique aux recettes réelles de fonctionnement du budget principal de l’avant-dernier exercice, soit 2025, minorées notamment des atténuations de produits et des recettes exceptionnelles.
+Sont exonérées les communes des départements et régions d’outre-mer, celles que l’article L.
+2336-3 du code général des collectivités territoriales exempte déjà du fonds de péréquation intercommunal (les 250 premières communes de 10 000 habitants et plus et les 30 premières de 5 000 à 9 999 au classement de la dotation de solidarité urbaine, les 2 500 premières au classement de la fraction cible de la dotation de solidarité rurale), et celles dont la contribution serait inférieure à 5 000 euros.
+Le montant de chaque commune devait être notifié par arrêté au Journal officiel, puis prélevé chaque mois sur les douzièmes de fiscalité : un effet de trésorerie dès la notification, avant même la lecture budgétaire.
+Ce qu’a décidé l’Assemblée.
+État au 22 octobre 2026 : art.
+37 supprimé par l'Assemblée nationale le 19 octobre 2026.
+Ce qui peut en résulter pour une commune.
+Rien n’est dû en l’état du texte.
+Si l’article était rétabli à l’identique, une commune non exonérée pourrait situer sa contribution entre 0,5 % et 3 % de ses recettes réelles de fonctionnement de 2025, minorées : c’est une comparaison statique, pas un montant.
+Le taux exact dépend de son rang parmi toutes les communes, que plusieurs cabinets de conseil et associations d’élus ont simulé sur le texte initial ; ces simulations décrivent l’article tel qu’il a été déposé, et les associations qui les publient ont demandé sa suppression ou sa réduction.
+Quand en saura-t-on davantage.
+Au vote solennel de la première partie, puis au Sénat.
+Si la contribution était rétablie, le montant de chaque commune serait celui de l’arrêté publié au Journal officiel.
+Le fonds de compensation pour la TVA (articles 35 et 41)
+Ce que prévoyait le projet.
+Pour les attributions versées à compter du 1er janvier 2027, un taux ramené de 16,404 % à 11,404 %, soit 5 points de moins, sauf pour les dépenses liées à la transition écologique et à la voirie, maintenues à 16,404 %, et un rendement de 2,1 milliards d’euros.
+La liste des comptes ouvrant droit au taux maintenu relevait d’un arrêté à venir.
+Ce qu’a décidé l’Assemblée.
+État au 22 octobre 2026 : art.
+35 supprimé par l'Assemblée nationale le 19 octobre 2026.
+Ce qui peut en résulter pour une commune.
+La mesure portait sur les attributions versées, pas sur les dépenses engagées.
+Or, selon l’article L.
+1615-6 du code, les attributions d’une commune au régime de droit commun portent sur les dépenses de l’avant-dernière année : en 2027, celles de 2025, déjà réalisées sous l’ancien taux.
+Pour certaines communes, les attributions portent sur les dépenses de l’année précédente ; pour les communes nouvelles, sur celles de l’année en cours.
+Pour la part des dépenses qui aurait relevé du taux réduit, 5 points sur 16,404 représentent un peu moins d’un tiers de l’attribution correspondante.
+Sans la ventilation de ses dépenses entre taux maintenu et taux réduit, qui dépendait de l’arrêté, une commune ne peut pas en tirer un montant.
+Quand en saura-t-on davantage.
+Au vote de la loi, puis, si la mesure revenait, à la publication de l’arrêté fixant les comptes au taux maintenu.
+Les fractions de TVA (article 36)
+Ce que prévoyait le projet.
+Pour les fractions de TVA versées en remplacement d’impôts supprimés (articles 16 de la loi de finances pour 2020 et 55 de celle pour 2023), une progression annuelle diminuée de l’inflation hors tabac de l’année précédente, sans que le montant puisse baisser d’une année sur l’autre.
+Le Haut Conseil des finances publiques chiffrait l’écrêtement à 0,6 milliard d’euros pour l’ensemble des bénéficiaires.
+Ce qu’a décidé l’Assemblée.
+État au 22 octobre 2026 : art.
+36 non adopté par l'Assemblée nationale le 19 octobre 2026.
+Les amendements qui supprimaient l’article avaient d’abord été rejetés ; c’est l’article amendé qui n’a pas été adopté.
+Ce qui peut en résulter pour une commune.
+Seules sont concernées les collectivités qui perçoivent une telle fraction ; l’effet aurait dépendu de la TVA encaissée et de l’inflation, inconnues à ce jour.
+Non déterminable pour une commune.
+Quand en saura-t-on davantage.
+Au vote de la loi.
+La dotation globale de fonctionnement (articles 34 et 83)
+Ce que prévoyait le projet.
+Un montant national de 27,5 milliards d’euros ; une hausse des dotations de solidarité urbaine et rurale financée en partie par l’écrêtement de la dotation forfaitaire (article 83, seconde partie).
+La présentation générale du projet et l’exposé des motifs de l’article 83 ne répartissent pas cette hausse de la même manière entre les deux dotations : c’est le Comité des finances locales qui la fixera.
+Ce qu’a décidé l’Assemblée.
+Article 34 adopté modifié : la DGF pour 2027 est portée à 27,9 milliards d’euros, soit 356 millions de plus que le projet.
+C’est un montant pour 2027, non une règle d’indexation.
+L’article 83 relève de la seconde partie, que l’Assemblée n’a pas encore examinée.
+Ce qui peut en résulter pour une commune.
+Un montant national ne se répartit pas entre communes par simple proportion : chaque dotation obéit à ses propres critères, et une commune peut voir sa dotation forfaitaire écrêtée tandis que sa dotation de solidarité augmente.
+Non déterminable avant la répartition.
+Quand en saura-t-on davantage.
+À la notification des attributions individuelles, après le vote de la loi de finances et les décisions du Comité des finances locales.
+Les sommes mises en réserve en 2025 et 2026 (DILICO, article 84)
+Ce que prévoyait le projet.
+Rembourser sur cinq ans, par cinquièmes de 2027 à 2031, les deux tiers restants du premier dispositif et la totalité du second, au lieu de trois ans par tiers ; selon l’exposé des motifs, environ 2 000 collectivités sont concernées et le montant total restitué ne change pas.
+Ce qu’a décidé l’Assemblée.
+État au 22 octobre 2026 : seconde partie, non examinée.
+Ce qui peut en résulter pour une commune.
+Pour une commune contributrice, le calcul est exact : à partir du montant mis en réserve, que lui a notifié un arrêté, le versement annuel passerait d’un tiers à un cinquième.
+L’effet est de trésorerie, pas de montant.
+Quand en saura-t-on davantage.
+À l’examen de la seconde partie, puis à l’arrêté unique de reversement que prévoit le projet.
+Les autres dispositions
+Dotation pour les communes rurales de faible densité (article 85, seconde partie) : 50 millions d’euros, réservés aux communes peu ou très peu denses de la grille de l’Insee dont la densité est inférieure à une moyenne de référence, à l’exclusion des bénéficiaires de la dotation pour les aménités rurales, et répartis selon la superficie par un décret à venir.
+Forfaits de post-stationnement (article 53, première partie, dont l’examen se poursuit) : 1,9 % des forfaits acquittés après l’émission d’un titre exécutoire reversés au budget de l’État, pour les titres émis à compter du 1er janvier 2027.
+Métropole du Grand Paris (article 40) : la prolongation du financement transitoire jusqu’en 2028 n’a pas été adoptée le 19 octobre 2026 ; les communes de la métropole sont concernées par l’intermédiaire de leur établissement public territorial.
+Quand la commune saura-t-elle ?
+Au Parlement : suite de l'examen de la première partie du 27 octobre au 2 novembre 2026, vote solennel sur la première partie le 3 novembre ; puis le Sénat, et l’adoption définitive.
+Après la loi : les arrêtés et décrets qu’elle prévoit (contribution, comptes du FCTVA, répartition de la nouvelle dotation rurale), puis la notification des dotations.
+Le budget primitif doit être adopté avant le 15 avril.
+Selon l’article L.
+1612-2 du code, ce délai ne s’applique pas lorsque le retard tient à l’absence de communication, avant le 31 mars, d’informations indispensables à l’établissement du budget ; le conseil dispose alors de quinze jours après cette communication.
+Une commune peut ainsi avoir à voter son budget avant d’avoir reçu tous les montants que l’État doit lui notifier : l’exception de l’article L.
+1612-2 existe pour ce cas.
+Pour les services financiers, ce décalage compte autant que le montant des mesures.
+Ce que la commune peut regarder dès maintenant
+Ses propres comptes de 2025, publiés par l’Observatoire des finances et de la gestion publique locales sur data.ofgl.fr : les recettes réelles de fonctionnement, assiette de la contribution si elle revenait ; le FCTVA perçu ; la DGF ; l’épargne brute, qui dit la marge dont elle dispose pour absorber une baisse de recettes.
+La page consacrée aux collectivités détaille comment lire ces lignes.
+Ce que cette page ne dit pas
+Elle ne prévoit pas le texte définitif : une mesure supprimée en séance peut être rétablie.
+Elle ne donne aucun montant pour une commune ; les ordres de grandeur qu’elle indique sont des comparaisons statiques, sous les conditions écrites à côté d’eux.
+Elle ne reprend que les dispositions du projet qui visent directement les communes ; les mesures fiscales générales peuvent aussi peser sur leurs recettes.
+Prolonger l'analyse
+Dette Publique : Qui paie vraiment ?
+La question n'est pas « combien ? » mais « qui paie ? » — et par quels canaux le coût se déplace.
+Cette page suit un texte en discussion ; le livre explique pourquoi les finances locales deviennent, d’un budget à l’autre, un levier de l’ajustement national, et qui en supporte le coût au bout de la chaîne.
+Journalistes, enseignants, chercheurs, responsables publics ou associatifs
+Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock ; compte Amazon.fr requis.
+Demander l'exemplaire offert →
+Version papier : 19 € · Kindle : 9,99 €
+Sommaire, extraits et recensions →
+Questions fréquentes
+La contribution progressive à l'effort budgétaire (CPEB) s'applique-t-elle à ma commune ?
+Pas à ce stade : l'article 37 qui l'instituait a été supprimé en séance par l'Assemblée nationale le 19 octobre 2026.
+La procédure budgétaire n'est pas achevée et l'article peut être rétabli.
+S'il l'était tel que le projet l'avait déposé, la contribution d'une commune non exonérée serait comprise entre 0,5 % et 3 % de ses recettes réelles de fonctionnement de 2025, minorées ; son montant exact serait fixé par un arrêté publié au Journal officiel.
+La baisse du taux du FCTVA touche-t-elle les investissements déjà réalisés ?
+Dans le projet déposé, le nouveau taux visait les attributions versées à compter du 1er janvier 2027.
+Pour une commune au régime de droit commun, ces attributions portent sur les dépenses de l'avant-dernière année : en 2027, celles de 2025, déjà réalisées.
+L'article 35 a été supprimé en séance par l'Assemblée nationale le 19 octobre 2026 ; il peut être rétabli avant la loi définitive.
+Quand ma commune connaîtra-t-elle sa DGF pour 2027 ?
+Après le vote de la loi de finances, par la notification de ses attributions individuelles.
+Le montant national voté par l'Assemblée en première partie, 27,9 milliards d'euros, ne dit rien d'une commune : la répartition dépend des critères de chaque dotation et des choix du Comité des finances locales.
+Sources
+État du texte — Assemblée nationale, comptes rendus des première et deuxième séances du 19 octobre 2026 ; chaque résultat repris ici y est cité mot pour mot dans le registre des votes de la page, archivé avec l’empreinte des comptes rendus.
+Dossier législatif pour le calendrier.
+Textes — Projet de loi de finances pour 2027, n° 3210, déposé le 1er octobre 2026, articles 34 à 41, 53 et 83 à 87 et leurs exposés des motifs ; avis du Haut Conseil des finances publiques sur ce projet ; code général des collectivités territoriales, articles L.
+1612-2, L.
+1615-6 et L.
+2336-3, relus sur Légifrance le 22 octobre 2026.
+Révisions
+22 octobre 2026 — Publication : état du texte après la séance de l'Assemblée nationale du 19 octobre 2026.
+Toutes les ressources : données, dossiers et repères →
+Transmettre
+WhatsApp
+Bluesky
+LinkedIn
+X
+E-mail
+Copier le lien

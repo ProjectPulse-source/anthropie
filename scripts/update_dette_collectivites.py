@@ -21,7 +21,7 @@ de PROSE sur la page elle-meme (une phrase d'attribution sur 2013-2017 porte ses
 dette ; la somme des mesures du projet de loi n'est jamais un prelevement net) ; versions telephone (-m.svg) et pied
 commun (pied_figure.py) ; langue generee par langue_generee.py pour toute cle nouvelle.
 
-Usage : python scripts/update_dette_collectivites.py [--check] [--mutation=unite|verdict|plf_net|reclassement|plf_ecart|stables|cahors]
+Usage : python scripts/update_dette_collectivites.py [--check] [--mutation=unite|verdict|plf_net|reclassement|plf_ecart|perime|stables|cahors]
   --mutation : temoin positif d'une garde (prose ou donnee) ; la garde DOIT mordre (sortie 1), rien n'est ecrit.
 Histoire : prototype contre-expertise en trois tours de raisonnement et trois de faits (01/10/2026), arbitrages dans
 D:\PRO\.claude\external-audits\ARBITRATIONS\ (ENTRANTE_2026-10-01_Collectivites, PRO-20261001-145721, -152012, -153529).
@@ -182,11 +182,14 @@ RECLASSEMENT = {"fr": r"ne baissent pas|ne baisse pas,? (?:elle|elles) change|ch
 # 5. (cloture) l'ecart entre la somme des mesures et la variation des ressources du projet de loi n'est jamais un montant
 #    preleve : toute phrase qui le cite porte une negation.
 ECART_NEG = {"fr": r"\b(?:pas|ni|n'est|aucun)\b", "en": r"\b(?:not|nor|no)\b"}
+# 6. (22/10/2026) le projet de loi a ete examine en seance : « avant examen par le Parlement » ment depuis le 19/10.
+PERIME = {"fr": r"avant (?:son )?examen par le Parlement", "en": r"before (?:its )?examination by Parliament"}
 MUTATIONS_PROSE = {
     "unite": "Le solde s'est redressé surtout par la baisse des dépenses ({{< coll-val \"ep_te_pt\" >}} de PIB).",
     "verdict": "Les collectivités ne sont pas une variable d'ajustement, car leur dette a peu augmenté.",
     "plf_net": "Le projet impose aux collectivités un prélèvement net de {{< coll-val \"plf_somme\" >}} milliards d'euros.",
     "reclassement": "Une dotation devient une fraction de TVA : les ressources ne baissent pas, elles changent de case.",
+    "perime": "Projet de loi de finances, avant examen par le Parlement.",
     "plf_ecart": "Le projet retire aux collectivités {{< coll-val \"plf_ecart_mde\" >}} de ressources.",
 }
 
@@ -225,6 +228,8 @@ def fautes_prose(textes: dict) -> list[str]:
                                "des précédents : %s" % (lang, court))
                 if "plf_ecart" in ph and not re.search(ECART_NEG[lang], ph, re.I):
                     out.append("[%s] écart somme / variation du projet de loi présenté comme un montant : %s" % (lang, court))
+                if re.search(PERIME[lang], ph, re.I):
+                    out.append("[%s] état du texte périmé (le registre des votes porte des séances) : %s" % (lang, court))
                 if lang == "fr" and re.search(r"\bmonté\b", ph):
                     out.append("[fr] « a monté » (tournure proscrite) : %s" % court)
     return out
@@ -547,6 +552,78 @@ def plf_mesures() -> dict:
             "plf_mesures": mesures, "plf_somme": sum(m_["md"] for m_ in mesures),
             "plf_sources": {"plf": {k: a["plf"][k] for k in ("titre", "url", "sha256_pdf")},
                             "hcfp": {k: a["hcfp"][k] for k in ("titre", "url", "sha256_pdf")}}}
+
+
+PLF_VOTES = DON / "plf_votes.json"
+PLF_VOTES_SHA = "85287b20ee687db9b20dc64aea6577e21554fd7407f8d1603edd4de4954558d9"
+# Etat du projet au Parlement (22/10/2026, arbitrage de l'auteur, piece 1807_Communes.txt) : chaque resultat est une
+# citation verbatim du compte rendu officiel, retrouvee par sources_collectivites/verifier_plf_votes.py dans le compte
+# rendu archive (empreinte dans plf_votes.json). Mesure -> article qui la porte ; None = credits de seconde partie.
+PLF_LIB = {35: ("la baisse du taux du FCTVA", "the cut in the FCTVA rate"),
+           36: ("l'écrêtement de la TVA affectée", "the capping of assigned VAT"),
+           37: ("la contribution progressive à l'effort budgétaire", "the progressive contribution to the budgetary effort")}
+
+
+def plf_resume(r: dict, lang: str) -> str:
+    """« a supprimé A (art. 37) et B (art. 35), n'a pas adopté C (art. 36) » : lu dans le registre des votes."""
+    L = 1 if lang == "en" else 0
+    et = " and " if L else " et "
+
+    def liste(st):
+        x = ["%s (art.\u00a0%d)" % (PLF_LIB[a["article"]][L], a["article"]) for a in r["plf_votes"]
+             if a["article"] in PLF_LIB and a["statut"] == st]
+        return (", ".join(x[:-1]) + et + x[-1]) if len(x) > 1 else (x[0] if x else "")
+    sup, rej = liste("supprime"), liste("non_adopte")
+    if L:
+        parts = [p_ for p_ in (sup and "deleted " + sup, rej and "did not adopt " + rej) if p_]
+    else:
+        parts = [p_ for p_ in (sup and "a supprimé " + sup, rej and "n'a pas adopté " + rej) if p_]
+    if not parts:
+        fail("registre des votes : aucune mesure supprimee ni rejetee -- la phrase de synthese de la page ne tient plus")
+    return ", ".join(parts)
+
+
+PLF_ARTICLE = {"cpeb": 37, "fctva": 35, "tva": 36, "ministeres": None, "dilico": 84}
+STATUT = {"supprime": ("supprimé", "deleted"), "non_adopte": ("non adopté", "not adopted"),
+          "adopte_modifie": ("adopté modifié", "adopted as amended"), "adopte": ("adopté", "adopted")}
+
+
+def date_fr(iso: str) -> str:
+    a, m, j = (int(x) for x in iso.split("-"))
+    return ("1er" if j == 1 else str(j)) + "\u00a0" + MOIS_FR[m - 1] + "\u00a0" + str(a)
+
+
+def plf_votes(r: dict) -> dict:
+    """Ajoute a chaque mesure son etat au Parlement, et les jetons de l'etat du texte. Un article sans entree reste
+    « non examiné » (seconde partie) ; l'article 34 doit porter les deux montants de la DGF."""
+    import re
+    brut = PLF_VOTES.read_bytes()
+    if hashlib.sha256(brut).hexdigest() != PLF_VOTES_SHA:
+        fail("registre des votes du projet de loi altere (empreinte) : relancer verifier_plf_votes.py puis mettre a jour PLF_VOTES_SHA")
+    v = json.loads(brut)
+    if v["edition"] != r["plf_edition"]:
+        fail("registre des votes : edition %s != projet de loi archive %s" % (v["edition"], r["plf_edition"]))
+    arts = {a["article"]: a for a in v["articles"]}
+    dates = sorted({v["seances"][a["seance"]]["date"] for a in v["articles"]})
+    for m in r["plf_mesures"]:
+        a = arts.get(PLF_ARTICLE[m["cle"]])
+        if a:
+            fr, en = STATUT[a["statut"]]
+            d = v["seances"][a["seance"]]["date"]
+            m["etat"] = "art. %d %s par l'Assemblée nationale le %s" % (a["article"], fr, date_fr(d))
+            m["etat_en"] = "art. %d %s by the National Assembly on %s" % (a["article"], en, date_en(date_fr(d)))
+        else:
+            m["etat"], m["etat_en"] = "seconde partie, non examinée", "second part, not yet examined"
+    hausse = re.search(r"de ([\d ]+) € à ([\d ]+) €", arts[34]["precision"])
+    if not hausse:
+        fail("registre des votes : montants de la DGF illisibles dans la precision de l'article 34")
+    av, ap = (int(x.replace(" ", "")) for x in hausse.groups())
+    if abs(av / 1e9 - r["plf_dgf"]) > 1e-6:
+        fail("registre des votes : DGF initiale de l'article 34 != montant lu dans le projet archive")
+    return {"plf_votes": v["articles"], "plf_vote_dates": dates, "plf_etat_au": v["etat_au"],
+            "plf_etape_suivante": v["etape_suivante"], "plf_etape_suivante_en": v["etape_suivante_en"],
+            "plf_dgf_an_m": (ap - av) / 1e6, "plf_dgf_an": ap / 1e9,
+            "plf_supprimes": sorted(a["article"] for a in v["articles"] if a["statut"] in ("supprime", "non_adopte"))}
 
 
 def calculer(J: Jeu) -> tuple[dict, list[dict]]:
@@ -877,6 +954,7 @@ def calculer(J: Jeu) -> tuple[dict, list[dict]]:
          len(r["cahors_exercices"]) == 3 and r["cahors_suspendu"] == r["cahors_exercices"][-1]),
     ]
     r.update(plf_mesures())
+    r.update(plf_votes(r))
     gardes += [
         ("projet de loi de finances : « la DGF augmente » (abondements et montant à périmètre courant)",
          r["plf_dgf_hausse_m"] > 0 and r["plf_dgf_hausse_courant_m"] > 0),
@@ -896,6 +974,11 @@ def calculer(J: Jeu) -> tuple[dict, list[dict]]:
         ("projet de loi de finances : « augmenter de X alors que la somme arithmétique des mesures atteint Y » (Y > X > 0 ; "
          "leur différence n'est jamais présentée comme un montant prélevé : garde de prose)",
          r["plf_somme"] > r["plf_ressources_md"] > 0),
+        ("état du texte (chapô de /budget-2027-votre-commune/) : « trois des cinq mesures », supprimées ou non adoptées",
+         len(r["plf_mesures"]) == 5 and sum(PLF_ARTICLE[m_["cle"]] in r["plf_supprimes"] for m_ in r["plf_mesures"]) == 3),
+        ("état du texte (même chapô) : « dont les deux plus importantes en montant » parmi elles",
+         all(PLF_ARTICLE[m_["cle"]] in r["plf_supprimes"]
+             for m_ in sorted(r["plf_mesures"], key=lambda x: -x["md"])[:2])),
         ("projet de loi de finances : somme arithmétique des cinq montants = somme des lignes du tableau",
          abs(r["plf_somme"] - sum(m_["md"] for m_ in r["plf_mesures"])) < 1e-9 and len(r["plf_mesures"]) == 5),
         ("projet de loi de finances : la somme affichée égale la somme des montants affichés (arrondis au dixième)",
@@ -955,6 +1038,12 @@ def affichage(r: dict, lang: str = "fr") -> dict:
         "plf_regions_m": fr1(r["plf_regions_m"], 0), "plf_psr_rev_prec": fr1(r["plf_psr_rev_prec"], 2),
         "plf_psr": fr1(r["plf_psr"]), "plf_psr_lfi_prec": fr1(r["plf_psr_lfi_prec"], 2),
         "plf_ressources_md": fr1(r["plf_ressources_md"], 0), "plf_ressources_pct": fr1(r["plf_ressources_pct"]),
+        "plf_vote_date": date_en(date_fr(r["plf_vote_dates"][-1])) if lang == "en" else date_fr(r["plf_vote_dates"][-1]),
+        "plf_etat_au": date_en(date_fr(r["plf_etat_au"])) if lang == "en" else date_fr(r["plf_etat_au"]),
+        "plf_etape_suivante": r["plf_etape_suivante_en"] if lang == "en" else r["plf_etape_suivante"],
+        "plf_dgf_an_m": fr1(r["plf_dgf_an_m"], 0), "plf_dgf_an": fr1(r["plf_dgf_an"]),
+        "plf_vote_resume": plf_resume(r, lang),
+        **{"plf_etat_" + m_["cle"]: (m_["etat_en"] if lang == "en" else m_["etat"]) for m_ in r["plf_mesures"]},
         "plf_inv_n_pct": fr1(-r["plf_inv_n_pct"]), "plf_inv_n1_pct": fr1(-r["plf_inv_n1_pct"]),
 
         "dgf_vote_13": fr1(r["dgf_vote"][2013]), "dgf_vote_17": fr1(r["dgf_vote"][2017]),
@@ -1603,9 +1692,11 @@ def csv_texte(r: dict) -> str:
         w.writerow(["dgf_montant_loi_de_finances", "FR", a, "%.3f" % v, "Md EUR", "CGCT art. L. 1613-1 (Legifrance)"])
     for m in r["plf_mesures"]:
         w.writerow(["projet_loi_finances_mesure_" + m["cle"], "FR", r["plf_edition"], "%.3f" % m["md"], "Md EUR",
-                    m["source"] + " (projet, avant examen)"])
+                    m["source"] + " (projet depose ; %s)" % m["etat"]])
     w.writerow(["projet_loi_finances_dgf", "FR", r["plf_edition"], "%.3f" % r["plf_dgf"], "Md EUR",
-                "projet de loi de finances pour %d, article 34 (projet, avant examen)" % r["plf_edition"]])
+                "projet de loi de finances pour %d, article 34 (projet depose)" % r["plf_edition"]])
+    w.writerow(["dgf_adoptee_assemblee_premiere_lecture", "FR", r["plf_edition"], "%.3f" % r["plf_dgf_an"], "Md EUR",
+                "Assemblee nationale, %s, article 34 amende (texte non definitif)" % r["plf_vote_dates"][-1]])
     # Refonte du 11/10/2026 : la decomposition 2013-2017 dans les deux unites (contribution de chaque poste a la variation
     # du solde ; pour une depense, l'inverse de sa variation). Lignes AJOUTEES ; les lignes precedentes sont inchangees.
     cles = ["transferts_recus", "impots", "autres_recettes", "investissement", "autres_depenses"]

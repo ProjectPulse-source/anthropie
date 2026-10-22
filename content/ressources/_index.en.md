@@ -18,6 +18,9 @@ blocs:
     titre_barre: "Presidential promises"   # bar badge: the full title overflows at 390 px
     dossier: true
     chapo: "Who can decide, with whose agreement, within what time — and how to check the result? The French case."
+  - id: communes
+    titre: "Your municipality and central government decisions"
+    chapo: "What a national decision changes for a municipality, what can be quantified and what it would be misleading to quantify."
   - id: notions
     titre: "Concepts"
     chapo: "Definitions of the anthropic framework, each tied to its sources."

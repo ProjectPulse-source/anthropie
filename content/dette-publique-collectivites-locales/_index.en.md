@@ -4,7 +4,7 @@ url: /en/local-government-debt/
 description: "Their debt does not settle the question. From {coll.ep_a0} to {coll.ep_a1}, local government improved its balance by {coll.ep_solde_mde}: spending almost flat in euros, down {coll.ep_te_pt} of GDP, taxes up, transfers received down. Eurostat and OFGL accounts, the Cahors contracts, the draft budget bill, and a comparison with Germany, Italy and Spain."
 chapo: "Local authorities' debt does not settle the question: the balanced-budget rule forbids them to borrow to offset a lasting fall in the revenue that pays for their day-to-day spending, so a constraint coming from central government shows up in their revenue and spending. From {coll.ep_a0} to {coll.ep_a1}, local government improved its balance by {coll.ep_solde_mde}. Its total spending remained almost flat in current euros, while tax revenue rose and transfers received fell. Relative to GDP, its spending fell by {coll.ep_te_pt}, of which {coll.ep_inv_pt} for investment. These movements are concomitant; on their own, they do not allow the fall in investment to be attributed to the grant cuts."
 date: 2026-10-07
-lastmod: 2026-10-11
+lastmod: 2026-10-22
 # English version of the "local authorities" extension of the public debt dossier (FR: content/dette-publique-collectivites-locales/_index.md),
 # 07/10/2026; editorial overhaul of 11/10/2026 (same architecture as the French page). Same tokens, same keys: values come
 # from the affichage_en block of data/dette_collectivites.json (scripts/update_dette_collectivites.py), whose data guards
@@ -15,6 +15,7 @@ og_image_alt: "Share card: “Local adjustment, outside the debt” — local go
 donnees: [dette_collectivites]
 date_suit: [dette_generations]  # figure linked from « Générations futures » (gen-val inv_loc_part, 18/10/2026)
 journal:  # révisions qui changent la lecture de la page (partials/page-date-visible.html affiche la plus récente)
+  - {date: 2026-10-22, texte: "Draft budget bill for 2027: state of the text after the National Assembly sitting of 19 October 2026 (articles 35 and 37 deleted, article 36 not adopted, DGF raised). The amounts of the bill as tabled are still presented, as the initial framing of the debate."}
   - {date: 2026-10-18, texte: "Addition: link to the local government share of the decline in net investment by general government as a whole."}
   - {date: 2026-10-16, texte: "Correction: as a share of GDP, local government spending peaks in 2009 and in 2013, tied at the displayed precision, not in 2009 alone."}
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html); tokens resolved at build
@@ -42,7 +43,7 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html); tokens resolved
   fichiers: ["dette_collectivites.csv", "dette_collectivites.json"]
 faq:
   - question: "How can I tell whether my local authority is affected by the draft budget bill?"
-    answer: "The progressive contribution targets {coll.plf_cpeb_communes_pct}% of municipalities, {coll.plf_cpeb_dep_pct}% of departments and the inter-municipal groupings of metropolitan France, under the criteria of article 37 of the bill tabled on {coll.plf_depot}; according to that text, the amount levied on each authority will be set by a ministerial order published in the Journal officiel. The national amounts give no individual amount."
+    answer: "In the bill tabled on {coll.plf_depot}, the progressive contribution targeted {coll.plf_cpeb_communes_pct}% of municipalities, {coll.plf_cpeb_dep_pct}% of departments and the inter-municipal groupings of metropolitan France, under the criteria of its article 37, and the amount levied on each authority was to be set by a ministerial order published in the Journal officiel. Status of that article: {coll.plf_etat_cpeb}; the procedure is not over and it may be reinstated. The national amounts give no individual amount."
   - question: "How should the rise in local taxation be read?"
     answer: "From {coll.ep_a0} to {coll.ep_a1}, local government taxes rose by {coll.ep_imp_mde}, more than transfers received fell ({coll.ep_transf_mde}); relative to GDP, they offset only part of that fall ({coll.ep_imp_pt} against {coll.ep_transf_pt}). Since 2018, part of tax revenue has come from a reclassification: grants or abolished taxes have been replaced by shares of VAT, and this change of classification does not, on its own, say whether available resources are rising or falling. These accounts do not separate the effect of voted tax rates from that of tax bases."
   - question: "Why does a fall in investment not mean a fall in total spending?"
@@ -63,7 +64,11 @@ dossier_dette_role: "debt, grants, local investment"
 
 {{< reutiliser-ancre >}}
 
-**Draft budget bill for {{< coll-val "plf_edition" >}}**: what it asks of local authorities, measure by measure, and what the sum of its amounts does not say → [last section of the page](#draft-budget-bill).
+<div class="encadre">
+
+**Draft budget bill for {{< coll-val "plf_edition" >}}, state on {{< coll-val "plf_etat_au" >}}.** In plenary, on {{< coll-val "plf_vote_date" >}}, the National Assembly {{< coll-val "plf_vote_resume" >}}; it raised the DGF for {{< coll-val "plf_edition" >}} to €{{< coll-val "plf_dgf_an" >}} billion. The procedure is not over: {{< coll-val "plf_etape_suivante" >}}. The amounts of the bill as tabled are still presented below, as the initial framing of the debate → [measures and state of the text](#draft-budget-bill). What it changes for a municipality, measure by measure: [Budget 2027: what do we actually know for your municipality?](/en/2027-budget-your-municipality/)
+
+</div>
 
 **How can a constraint fail to show up in the debt?** The question in the title amounts to asking whether central government, when it tightens its finances, passes part of the effort on to local authorities, and where that would show. Three paradoxes structure this page. Local debt has stayed contained, from {{< coll-val "dette_loc_deb" >}}% of GDP in {{< coll-val "an_dette_deb" >}} to {{< coll-val "dette_loc_fin" >}}% in {{< coll-val "an_dette_fin" >}}: on its own, this observation does not say whether local authorities bore a constraint. From {{< coll-val "ep_a0" >}} to {{< coll-val "ep_a1" >}}, their spending was almost flat in euros and fell markedly as a share of GDP: two correct readings that do not tell the same story. In Spain, central government holds more than half of subnational debt: carrying a debt and financing it are two distinct realities.
 
@@ -158,7 +163,7 @@ A constraint from central government can reach local authorities through channel
 1. **{{< coll-val "ep_a0" >}}-{{< coll-val "ep_a1" >}}: acting on resources.** The voted DGF fell every year; investment fell over the same period.
 2. **{{< coll-val "cahors_ex1" >}}-{{< coll-val "cahors_ex2" >}}: regulating spending.** The Cahors contracts set certain local authorities a target for the growth of their operating expenditure, based on a national benchmark of {{< coll-val "cahors_taux" >}}% a year. The financial clawback provided for in case of overshooting was suspended for {{< coll-val "cahors_suspendu" >}} expenditure. A new channel of constraint emerges, without implying that the earlier ones disappeared; this page cannot measure its specific effect.
 3. **2018 and 2021: changing the make-up of revenue.** A grant (2018), then abolished taxes (2021), gave way to shares of VAT or to a levy on State revenue. Some resources are replaced by revenue of a different kind: their accounting classification changes, but this reclassification does not, on its own, allow us to conclude that the resources available have risen or fallen. The series then stop being comparable (details below).
-4. **{{< coll-val "plf_edition" >}}: several channels at once.** A levy on resources, a grant tied to investment, the timetable of repayments: the draft budget bill combines them ([last section](#draft-budget-bill)).
+4. **{{< coll-val "plf_edition" >}}: several channels at once.** A levy on resources, a grant tied to investment, the timetable of repayments: the draft budget bill as tabled combined them ([last section](#draft-budget-bill), which also says what the National Assembly did with them).
 
 <details class="repli"><summary>The Cahors contracts in the text: authorities covered, base, financial clawback</summary>
 
@@ -228,23 +233,23 @@ The state government subsector (S1312) exists in the Eurostat data only in a few
 
 ## What does the draft budget bill ask of local authorities? {#draft-budget-bill}
 
-*State of the text: draft budget bill for {{< coll-val "plf_edition" >}} (*projet de loi de finances*), tabled on {{< coll-val "plf_depot" >}}, before examination by Parliament; its amounts may change before the act is passed.*
+*State of the text on {{< coll-val "plf_etat_au" >}}: draft budget bill for {{< coll-val "plf_edition" >}} (*projet de loi de finances*), tabled on {{< coll-val "plf_depot" >}} and examined in plenary by the National Assembly, which on {{< coll-val "plf_vote_date" >}} {{< coll-val "plf_vote_resume" >}}. The procedure is not over: {{< coll-val "plf_etape_suivante" >}}. A deleted provision may be reinstated before the final act. The amounts below are those of the bill as tabled: the initial framing of the debate, not the balance of the text under discussion.*
 
 {{< coll-tableau "plf" >}}
 
-The bill does not cut the DGF: it provides for €{{< coll-val "plf_dgf_hausse_m" >}} million of new increases and, taking scope changes into account, its nominal amount rises by €{{< coll-val "plf_dgf_hausse_courant_m" >}} million, to €{{< coll-val "plf_dgf" >}} billion. The contribution required from local authorities goes through the five channels in the table and, for the regions, through the removal of a share of excise duties on energy worth €{{< coll-val "plf_regions_m" >}} million (article 39). The High Council of Public Finance (*Haut Conseil des finances publiques*) groups these measures in a single package moderating local authority revenue.
+The bill as tabled did not cut the DGF: it provided for €{{< coll-val "plf_dgf_hausse_m" >}} million of new increases and, taking scope changes into account, a rise in its nominal amount of €{{< coll-val "plf_dgf_hausse_courant_m" >}} million, to €{{< coll-val "plf_dgf" >}} billion. The National Assembly raised it to €{{< coll-val "plf_dgf_an" >}} billion (+€{{< coll-val "plf_dgf_an_m" >}} million): an amount for {{< coll-val "plf_edition" >}}, not an indexation rule. In the bill as tabled, the contribution required from local authorities went through the five channels in the table and, for the regions, through the removal of a share of excise duties on energy worth €{{< coll-val "plf_regions_m" >}} million (article 39). The High Council of Public Finance (*Haut Conseil des finances publiques*) groups these measures in a single package moderating local authority revenue.
 
-**How could local authorities' resources rise by €{{< coll-val "plf_ressources_md" >}} billion when the arithmetic sum of the bill's measures comes to €{{< coll-val "plf_somme" >}} billion?**
+**In the bill as tabled, how could local authorities' resources rise by €{{< coll-val "plf_ressources_md" >}} billion when the arithmetic sum of its measures came to €{{< coll-val "plf_somme" >}} billion?**
 
 {{< coll-tableau "plf_lectures" >}}
 
-**Why do these figures coexist?** The arithmetic sum of €{{< coll-val "plf_somme" >}} billion brings together five measures, each assessed against the situation without it, on different baselines; the Government's €{{< coll-val "plf_ressources_md" >}} billion compares two years, measures included. Their difference, {{< coll-val "plf_ecart_mde" >}}, is therefore not a net levy, and adding up the five measures is not enough to establish their net effect: a resource can rise in euros while growing more slowly than it would have without the reform. Nor are the five measures of the same kind, and two of them bear on related flows: their exact reconciliation is not made here.
+**Why did these figures coexist?** Both describe the bill as tabled, before the votes of {{< coll-val "plf_vote_date" >}}. The arithmetic sum of €{{< coll-val "plf_somme" >}} billion brings together five measures, each assessed against the situation without it, on different baselines; the Government's €{{< coll-val "plf_ressources_md" >}} billion compares two years, measures included. Their difference, {{< coll-val "plf_ecart_mde" >}}, is therefore not a net levy, and adding up the five measures is not enough to establish their net effect: a resource can rise in euros while growing more slowly than it would have without the reform. Nor are the five measures of the same kind, and two of them bear on related flows: their exact reconciliation is not made here.
 
 <details class="repli"><summary>Nature of the five measures, base of the progressive contribution and levies on State revenue</summary>
 
 Spreading out the repayment of the sums placed in reserve (DILICO) shifts a timetable without changing the total amount returned (article 84); the cut in the rate of the VAT compensation fund depends on the investment local authorities will carry out. The text describes no double counting between these amounts, but two of them bear on related flows: the progressive contribution is charged to the monthly tax advances and to the shares of VAT, whose growth is also being capped (articles 36 and 37).
 
-The progressive contribution applies to {{< coll-val "plf_cpeb_communes_pct" >}}% of municipalities, to {{< coll-val "plf_cpeb_dep_pct" >}}% of departments and to the inter-municipal groupings of metropolitan France, at a rate that rises with their resources, applied to real operating revenue of the year before last; overseas authorities and the most socially fragile departments are exempt (article 37). In the State budget, the levies on State revenue in favour of local authorities (*prélèvements sur recettes*) are estimated at €{{< coll-val "plf_psr" >}} billion for {{< coll-val "plf_edition" >}}, against €{{< coll-val "plf_psr_rev_prec" >}} billion in the revised forecast for {{< coll-val "plf_prec" >}} (€{{< coll-val "plf_psr_lfi_prec" >}} billion in the initial budget act, article 41): a series limited to grants would not see these channels, for the reason already encountered [in 2018 and 2021](#reclassifications).
+In the bill as tabled, the progressive contribution applied to {{< coll-val "plf_cpeb_communes_pct" >}}% of municipalities, to {{< coll-val "plf_cpeb_dep_pct" >}}% of departments and to the inter-municipal groupings of metropolitan France, at a rate that rises with their resources, applied to real operating revenue of the year before last; overseas authorities and the most socially fragile departments are exempt (article 37). In the State budget, the levies on State revenue in favour of local authorities (*prélèvements sur recettes*) are estimated at €{{< coll-val "plf_psr" >}} billion for {{< coll-val "plf_edition" >}}, against €{{< coll-val "plf_psr_rev_prec" >}} billion in the revised forecast for {{< coll-val "plf_prec" >}} (€{{< coll-val "plf_psr_lfi_prec" >}} billion in the initial budget act, article 41): a series limited to grants would not see these channels, for the reason already encountered [in 2018 and 2021](#reclassifications).
 
 </details>
 
@@ -291,7 +296,7 @@ National results give no amount for any given authority. They show what to compa
 3. **Gross savings**: operating revenue minus operating spending; together with other own resources, it must cover repayment of debt principal.
 4. **Investment spending**: in euros and relative to revenue, taking the municipal cycle into account.
 
-For {{< coll-val "plf_edition" >}}, liability to the progressive contribution can be checked in article 37 of the bill (criteria, rates, exemptions), then, once the act is passed, in the ministerial order published in the Journal officiel which, according to the bill, will set the amount levied on each authority. The effect of the cut in the compensation fund's rate shows up in the authority's own eligible spending; the spreading of the sums placed in reserve concerns only the authorities that contributed to them in 2025 or 2026.
+For {{< coll-val "plf_edition" >}}, three measures of the bill as tabled bore directly on these lines: the progressive contribution ({{< coll-val "plf_etat_cpeb" >}}), the cut in the compensation fund's rate ({{< coll-val "plf_etat_fctva" >}}) and the capping of the shares of VAT ({{< coll-val "plf_etat_tva" >}}). Were the progressive contribution reinstated, liability would be checked against the criteria of article 37 of the bill (criteria, rates, exemptions), then, once the act is passed, in the ministerial order published in the Journal officiel which was to set the amount levied on each authority. The spreading of the sums placed in reserve ({{< coll-val "plf_etat_dilico" >}}) concerns only the authorities that contributed to them in 2025 or 2026.
 
 ## Frequently asked questions {#questions}
 

@@ -1,5 +1,5 @@
 {
- "releve_le": "2026-10-21",
+ "releve_le": "2026-10-22",
  "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Eurostat, OFGL, Légifrance",
  "meta": {
   "page": "https://stephane-lalut.com/dette-publique-collectivites-locales/",
@@ -17,8 +17,8 @@
    },
    "pib": {
     "jeu": "nama_10_gdp",
-    "maj_source": "2026-10-21T11:00:00+0200",
-    "sha256": "ba35e5c8ce74ccfc60663576470036aaf3261fa1bc38f8d0eb3a337712c43fc2"
+    "maj_source": "2026-10-21T23:00:00+0200",
+    "sha256": "8f9595d869f5ea53ecd37558edb4c9ed1572e2f6538b50558dff5a01e8ed9e2c"
    },
    "dette": {
     "jeu": "gov_10q_ggdebt",
@@ -32,7 +32,7 @@
    },
    "ofgl": {
     "jeu": "data.ofgl.fr (4 bases consolidees)",
-    "maj_source": "2026-10-21T",
+    "maj_source": "2026-10-22T",
     "sha256": "ecf3e95c1d7499a6f5833097cd167e115b916ed7e7c179258aee148094ae3fb1"
    },
    "notif": {
@@ -1030,7 +1030,9 @@
     "source": "projet de loi de finances pour 2027, article 37, exposé des motifs",
     "mesure_en": "Progressive contribution to the budgetary effort, levied on tax advances",
     "texte_en": "article 37",
-    "nature_en": "levy on tax advances, introduced for 2027"
+    "nature_en": "levy on tax advances, introduced for 2027",
+    "etat": "art. 37 supprimé par l'Assemblée nationale le 19 octobre 2026",
+    "etat_en": "art. 37 deleted by the National Assembly on 19 October 2026"
    },
    {
     "cle": "fctva",
@@ -1041,7 +1043,9 @@
     "source": "projet de loi de finances pour 2027, article 41, exposé des motifs",
     "mesure_en": "VAT compensation fund: rate cut by 5 percentage points, except green spending and roads",
     "texte_en": "articles 35 and 41",
-    "nature_en": "cut in a central government grant tied to eligible investment spending"
+    "nature_en": "cut in a central government grant tied to eligible investment spending",
+    "etat": "art. 35 supprimé par l'Assemblée nationale le 19 octobre 2026",
+    "etat_en": "art. 35 deleted by the National Assembly on 19 October 2026"
    },
    {
     "cle": "tva",
@@ -1052,7 +1056,9 @@
     "source": "Haut Conseil des finances publiques, avis n° 2026-5",
     "mesure_en": "Assigned VAT, excluding regions: annual increase reduced by inflation",
     "texte_en": "article 36",
-    "nature_en": "capping of the growth of assigned VAT, excluding regions"
+    "nature_en": "capping of the growth of assigned VAT, excluding regions",
+    "etat": "art. 36 non adopté par l'Assemblée nationale le 19 octobre 2026",
+    "etat_en": "art. 36 not adopted by the National Assembly on 19 October 2026"
    },
    {
     "cle": "ministeres",
@@ -1063,7 +1069,9 @@
     "source": "Haut Conseil des finances publiques, avis n° 2026-5",
     "mesure_en": "Contributions of certain ministries to local authorities",
     "texte_en": "appropriations under State budget missions",
-    "nature_en": "cut in contributions from certain ministries"
+    "nature_en": "cut in contributions from certain ministries",
+    "etat": "seconde partie, non examinée",
+    "etat_en": "second part, not yet examined"
    },
    {
     "cle": "dilico",
@@ -1074,7 +1082,9 @@
     "source": "Haut Conseil des finances publiques, avis n° 2026-5",
     "mesure_en": "Sums placed in reserve in 2025 and 2026 (DILICO): repaid over five years instead of three",
     "texte_en": "article 84",
-    "nature_en": "repayment spread out; total amount returned unchanged"
+    "nature_en": "repayment spread out; total amount returned unchanged",
+    "etat": "seconde partie, non examinée",
+    "etat_en": "second part, not yet examined"
    }
   ],
   "plf_somme": 6.192,
@@ -1089,7 +1099,82 @@
     "url": "https://www.hcfp.fr/sites/default/files/2026-10/Avis%20HCFP%202026-5%20-%20PLF-PLFSS%202027.pdf",
     "sha256_pdf": "cf02528c4a5defd0430175fd6a1f98697bce43e1127888b68639f1694d5ff378"
    }
-  }
+  },
+  "plf_votes": [
+   {
+    "article": 34,
+    "seance": "AN-2026-10-19-1",
+    "statut": "adopte_modifie",
+    "citation": "(L’article 34, amendé, est adopté.)",
+    "precision": "montant de la DGF pour 2027 porté de 27 543 261 857 € à 27 899 281 115 € (amendements identiques n° 11, 1169, 3367 et 3913), soit +356 019 258 € ; un montant pour 2027, pas une règle d'indexation",
+    "precision_en": "DGF for 2027 raised from €27,543,261,857 to €27,899,281,115 (identical amendments nos. 11, 1169, 3367 and 3913), i.e. +€356,019,258; an amount for 2027, not an indexation rule",
+    "citations_complementaires": [
+     "11, 1169, 3367 et 3913 sont adoptés"
+    ]
+   },
+   {
+    "article": 35,
+    "seance": "AN-2026-10-19-1",
+    "statut": "supprime",
+    "citation": "en conséquence, l’article 35 est supprimé",
+    "pour": 125,
+    "contre": 16
+   },
+   {
+    "article": 36,
+    "seance": "AN-2026-10-19-1",
+    "statut": "non_adopte",
+    "citation": "(L’article 36, amendé, n’est pas adopté.)",
+    "precision": "les amendements de suppression avaient d'abord été rejetés (51 voix pour, 69 contre) ; l'article amendé n'a ensuite pas été adopté",
+    "precision_en": "the amendments deleting it had first been rejected (51 for, 69 against); the amended article was then not adopted",
+    "citations_complementaires": [
+     "20, 437, 1163, 2641, 3165, 3253 et 3757 ne sont pas adoptés"
+    ]
+   },
+   {
+    "article": 37,
+    "seance": "AN-2026-10-19-2",
+    "statut": "supprime",
+    "citation": "en conséquence, l’article 37 est supprimé.",
+    "pour": 125,
+    "contre": 33
+   },
+   {
+    "article": 39,
+    "seance": "AN-2026-10-19-2",
+    "statut": "supprime",
+    "citation": "en conséquence, l’article 39 est supprimé"
+   },
+   {
+    "article": 40,
+    "seance": "AN-2026-10-19-2",
+    "statut": "non_adopte",
+    "citation": "(L’article 40, amendé, n’est pas adopté.)",
+    "pour": 61,
+    "contre": 79
+   },
+   {
+    "article": 41,
+    "seance": "AN-2026-10-19-2",
+    "statut": "adopte_modifie",
+    "citation": "(L’article 41, amendé, est adopté.)"
+   }
+  ],
+  "plf_vote_dates": [
+   "2026-10-19"
+  ],
+  "plf_etat_au": "2026-10-22",
+  "plf_etape_suivante": "suite de l'examen de la première partie du 27 octobre au 2 novembre 2026, vote solennel sur la première partie le 3 novembre",
+  "plf_etape_suivante_en": "the first part continues to be examined from 27 October to 2 November 2026, with a formal vote on the first part on 3 November",
+  "plf_dgf_an_m": 356.019258,
+  "plf_dgf_an": 27.899281115,
+  "plf_supprimes": [
+   35,
+   36,
+   37,
+   39,
+   40
+  ]
  },
  "series": {
   "serie_inv_fr": {
@@ -1238,6 +1323,17 @@
   "plf_psr_lfi_prec": "44,82",
   "plf_ressources_md": "5",
   "plf_ressources_pct": "1,7",
+  "plf_vote_date": "19 octobre 2026",
+  "plf_etat_au": "22 octobre 2026",
+  "plf_etape_suivante": "suite de l'examen de la première partie du 27 octobre au 2 novembre 2026, vote solennel sur la première partie le 3 novembre",
+  "plf_dgf_an_m": "356",
+  "plf_dgf_an": "27,9",
+  "plf_vote_resume": "a supprimé la baisse du taux du FCTVA (art. 35) et la contribution progressive à l'effort budgétaire (art. 37), n'a pas adopté l'écrêtement de la TVA affectée (art. 36)",
+  "plf_etat_cpeb": "art. 37 supprimé par l'Assemblée nationale le 19 octobre 2026",
+  "plf_etat_fctva": "art. 35 supprimé par l'Assemblée nationale le 19 octobre 2026",
+  "plf_etat_tva": "art. 36 non adopté par l'Assemblée nationale le 19 octobre 2026",
+  "plf_etat_ministeres": "seconde partie, non examinée",
+  "plf_etat_dilico": "seconde partie, non examinée",
   "plf_inv_n_pct": "4,0",
   "plf_inv_n1_pct": "4,2",
   "dgf_vote_13": "41,5",
@@ -1450,6 +1546,17 @@
   "plf_psr_lfi_prec": "44.82",
   "plf_ressources_md": "5",
   "plf_ressources_pct": "1.7",
+  "plf_vote_date": "19 October 2026",
+  "plf_etat_au": "22 October 2026",
+  "plf_etape_suivante": "the first part continues to be examined from 27 October to 2 November 2026, with a formal vote on the first part on 3 November",
+  "plf_dgf_an_m": "356",
+  "plf_dgf_an": "27.9",
+  "plf_vote_resume": "deleted the cut in the FCTVA rate (art. 35) and the progressive contribution to the budgetary effort (art. 37), did not adopt the capping of assigned VAT (art. 36)",
+  "plf_etat_cpeb": "art. 37 deleted by the National Assembly on 19 October 2026",
+  "plf_etat_fctva": "art. 35 deleted by the National Assembly on 19 October 2026",
+  "plf_etat_tva": "art. 36 not adopted by the National Assembly on 19 October 2026",
+  "plf_etat_ministeres": "second part, not yet examined",
+  "plf_etat_dilico": "second part, not yet examined",
   "plf_inv_n_pct": "4.0",
   "plf_inv_n1_pct": "4.2",
   "dgf_vote_13": "41.5",

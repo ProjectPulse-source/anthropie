@@ -45,14 +45,14 @@
 <p><small>In % of GDP. Subnational scope: S1312 + S1313 (cross-holdings between the two tiers at most {{ index $j.affichage_en "consolidation_ecart_pt" }}). Source: Eurostat.</small></p>
 {{- else if eq $t "plf" -}}
 <div class="table-scroll"><table class="dette-monde-table">
-<thead><tr><th>Measure in the {{ $c.plf_edition }} draft budget bill</th><th>Text</th><th>Nature</th><th>Amount, €bn</th></tr></thead>
+<thead><tr><th>Measure in the {{ $c.plf_edition }} draft budget bill as tabled</th><th>Text</th><th>Nature</th><th>Amount, €bn</th><th>In Parliament</th></tr></thead>
 <tbody>
 {{- range $c.plf_mesures }}
-{{- if not (and .mesure_en .texte_en .nature_en) }}{{ errorf "coll-tableau: libelles anglais absents pour la mesure %q (%s)" .cle $page.File.Path }}{{ end }}
-<tr><td>{{ .mesure_en }}</td><td>{{ .texte_en }}</td><td>{{ .nature_en }}</td><td>{{ printf $f1 .md }}</td></tr>
+{{- if not (and .mesure_en .texte_en .nature_en .etat_en) }}{{ errorf "coll-tableau: libelles anglais absents pour la mesure %q (%s)" .cle $page.File.Path }}{{ end }}
+<tr><td>{{ .mesure_en }}</td><td>{{ .texte_en }}</td><td>{{ .nature_en }}</td><td>{{ printf $f1 .md }}</td><td>{{ .etat_en }}</td></tr>
 {{- end }}
 </tbody></table></div>
-<p><small>Amounts for {{ $c.plf_edition }}, as provided for in the bill as tabled, before examination by Parliament. Sources: draft budget bill (explanatory memoranda) for the first two rows; opinion of the High Council of Public Finance for the next three, which the text of the bill does not quantify.</small></p>
+<p><small>Amounts for {{ $c.plf_edition }}, as provided for in the bill as tabled (initial framing of the debate). Last column: fate of the article in plenary, from the official record of the sitting; a deleted provision may be reinstated before the final act. Sources: draft budget bill (explanatory memoranda) for the first two rows; opinion of the High Council of Public Finance for the next three, which the text of the bill does not quantify.</small></p>
 {{- else if eq $t "plf_lectures" -}}
 {{- $a := $j.affichage_en -}}
 <div class="table-scroll"><table class="dette-monde-table">
@@ -94,13 +94,14 @@
 <p><small>En % du PIB. Périmètre territorial&nbsp;: S1312 + S1313 (dettes croisées entre les deux échelons au plus {{ index $j.affichage "consolidation_ecart_pt" }}). Source&nbsp;: Eurostat.</small></p>
 {{- else if eq $t "plf" -}}
 <div class="table-scroll"><table class="dette-monde-table">
-<thead><tr><th>Mesure du projet de loi de finances pour {{ $c.plf_edition }}</th><th>Texte</th><th>Nature</th><th>Montant, Md€</th></tr></thead>
+<thead><tr><th>Mesure du projet de loi de finances pour {{ $c.plf_edition }}, tel que déposé</th><th>Texte</th><th>Nature</th><th>Montant, Md€</th><th>Au Parlement</th></tr></thead>
 <tbody>
 {{- range $c.plf_mesures }}
-<tr><td>{{ .mesure }}</td><td>{{ .texte }}</td><td>{{ .nature }}</td><td>{{ replace (printf $f1 .md) "." "," }}</td></tr>
+{{- if not .etat }}{{ errorf "coll-tableau: etat au Parlement absent pour la mesure %q (%s)" .cle $.Page.File.Path }}{{ end }}
+<tr><td>{{ .mesure }}</td><td>{{ .texte }}</td><td>{{ .nature }}</td><td>{{ replace (printf $f1 .md) "." "," }}</td><td>{{ .etat }}</td></tr>
 {{- end }}
 </tbody></table></div>
-<p><small>Montants pour {{ $c.plf_edition }}, tels que le projet déposé les prévoit, avant examen par le Parlement. Sources&nbsp;: projet de loi de finances (exposés des motifs) pour les deux premières lignes&nbsp;; avis du Haut Conseil des finances publiques pour les trois suivantes, que le texte du projet ne chiffre pas.</small></p>
+<p><small>Montants pour {{ $c.plf_edition }}, tels que le projet déposé les prévoit (cadrage initial du débat). Dernière colonne&nbsp;: sort de l'article en séance, d'après le compte rendu officiel&nbsp;; une disposition supprimée peut être rétablie d'ici la loi définitive. Sources&nbsp;: projet de loi de finances (exposés des motifs) pour les deux premières lignes&nbsp;; avis du Haut Conseil des finances publiques pour les trois suivantes, que le texte du projet ne chiffre pas.</small></p>
 {{- else if eq $t "plf_lectures" -}}
 {{- $a := $j.affichage -}}
 <div class="table-scroll"><table class="dette-monde-table">

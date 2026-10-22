@@ -52,6 +52,18 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-22 — PLF 2027 : état du texte après la séance du 19/10 ; nouvelle ressource `/budget-2027-votre-commune/` (FR + EN)
+
+Arbitrage de l'auteur (pièce `1807_Communes.txt`, `D:\PRO_PROMOTION\RECHERCHE_VOTRE_COMMUNE_2026-10-22\ARBITRAGE_1807_COMMUNES.md`).
+**Registre des votes** `scripts/sources_collectivites/plf_votes.json` : citations verbatim des comptes rendus officiels du
+19/10, retrouvées par `verifier_plf_votes.py` dans les comptes rendus archivés (deux mutations vues mordre). Le générateur
+collectivités le lit (empreinte), pose l'état de chaque mesure (colonne « Au Parlement » du tableau), les jetons `plf_etat_*`,
+`plf_vote_*`, `plf_dgf_an*`, et trois gardes nouvelles : « avant examen par le Parlement » interdit (prose ; mutation
+`--mutation=perime` vue mordre), « trois des cinq mesures » et « les deux plus importantes en montant » (données ; témoin :
+article 35 rétabli → les deux tombent). Page collectivités : encadré d'état en tête, montants du projet présentés comme
+cadrage initial, renvoi vers la nouvelle page. **À chaque étape parlementaire** : une entrée au registre, `verifier_plf_votes.py`,
+`PLF_VOTES_SHA`, une ligne de `journal` sur les deux pages et leur version anglaise. Non fait : recette visuelle 390 px.
+
 ### 2026-10-21 — Notification Eurostat d'octobre : deux workflows dette en échec, un corrigé (`dc067bd`), un en attente de la source
 
 **INSEE/Eurostat (corrigé, publié)** : charge d'intérêts 2025 révisée de 66,6 à 65,7 Md€ ; la page `/cout-de-la-dette-publique/`
