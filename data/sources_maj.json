@@ -228,6 +228,22 @@
    "cadence": "annuelle (comptes nationaux de fin mai ; corrections possibles en été)",
    "nature": "télécharger T_8204_fr.xlsx sur insee.fr/fr/statistiques/8988859, l'archiver sous scripts/sources_generations/insee_T_8204_patrimoine_apu_<date>.xlsx, mettre à jour SOURCES[\"pat\"] et SHA256SUMS ; les témoins Eurostat (nama_10_nfa_bs, nasq_10_f_bs T4) doivent concorder",
    "revoir_avant": "2027-06-30"
+  },
+  {
+   "id": "budget-communes",
+   "producteur": "OFGL (comptes des communes, DGFiP ; dotations des communes, DGCL)",
+   "objet": "comptes du budget principal de chaque commune, deux derniers exercices : recettes de fonctionnement, épargne brute, encours de dette, DGF, FCTVA, dépenses d'équipement ; DILICO 2025, DGF notifiée 2026 et rangs DSU et DSR cible 2026",
+   "mode": "manuel",
+   "pages": [
+    "/budget-2027-votre-commune/"
+   ],
+   "generateurs": [
+    "update_budget_communes.py"
+   ],
+   "jeu": "data/budget_communes.json",
+   "cadence": "annuelle (comptes de l'exercice N publiés en N+1)",
+   "nature": "API OFGL sans workflow à ce jour : relevé lancé à la main ; à relancer à chaque étape de la loi de finances et à la publication des comptes 2026",
+   "revoir_avant": "2026-12-31"
   }
  ]
 }

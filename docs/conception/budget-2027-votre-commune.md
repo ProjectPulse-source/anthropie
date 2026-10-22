@@ -113,3 +113,47 @@ reprises, consultations de la page (Search Console à J+30). État initial : pag
 - Instantané de relecture : fait — `docs/relectures/budget-2027-votre-commune.txt` et la version anglaise.
 - Contre-expertise de la page : non faite.
 - Accord de l'auteur : publication autorisée (pièce `1807_Communes.txt`), « pousse » du 22/10.
+
+## Extension — la fiche de votre commune (conception écrite le 22/10/2026, AVANT le code)
+
+Décision de l'auteur : option A (pièce `2024_Communes-04.txt`) — une page outil unique, recherche par nom, département ou
+code Insee, fiche individualisée à la demande, lien direct `?insee=`, aucune page par commune. **Architecture retenue** :
+une section de `/budget-2027-votre-commune/` (`#fiche`), non une page neuve — règle 1 de « Architecture des ressources »
+(une question = une section d'une page mère) ; le contenu indexable reste la page, l'outil en est la couche individualisée.
+
+- **Forme** : quantitatif (comptes publiés, comparaison à un groupe) et juridique-institutionnel (statut des mesures,
+  exonérations). Critères : chaque valeur porte sa source, son exercice et son statut (mesuré / calcul conditionnel /
+  non déterminable) ; donnée absente = « non disponible », jamais zéro ; commune et intercommunalité toujours séparées ;
+  aucun intervalle « votre contribution entre X et Y » (pièce 04) ; un changement de statut parlementaire met toutes
+  les fiches à jour sans toucher aux comptes historiques.
+- **Question centrale** : pour MA commune, quels chiffres officiels sont connus, quelles mesures du PLF pouvaient la
+  toucher, quel est leur statut, que peut-on chiffrer et avec quelle fiabilité, que vérifier ou anticiper ?
+- **Découverte attendue** : sa position dans son groupe de taille (épargne, dette, dépendance à la DGF), lue en un écran.
+- **Preuve décisive** : comptes OFGL du budget principal (2024, 2025), relevés par script ; témoin par une seconde requête ;
+  registre des votes pour les statuts.
+- **Limites** : budgets annexes exclus ; assiette légale de la contribution non publiée (recettes OFGL ≠ assiette) ;
+  exonération lue sur les rangs de 2026 (DSU : « classées l'année précédente », CGCT L. 2336-3, III, lu le 22/10 ; DSR
+  cible : année non précisée par le texte, la fiche le dit) ; DILICO et DGF lus dans le jeu OFGL « dotations-communes »
+  (données DGCL) : le site de la DGCL répondait 503 et les annexes des arrêtés sur Légifrance refusent un script — même
+  donnée, autre canal ; pièces officielles (DA 0011/2025, 0008/2026, 0006/2026) à télécharger par l'auteur pour témoin.
+- **Singularité** : les outils gratuits existants (BP Avocats, Sine Cera, AMF 56) chiffrent le texte INITIAL ; la fiche
+  dit l'état du texte au jour dit et situe la commune dans son groupe — ce qu'aucun ne fait sous cette forme (lus le 22/10).
+- **Étapes de l'extension** (22/10/2026) :
+  - fait — générateur `scripts/update_budget_communes.py` : 34 778 communes, 165 écartées (motif nommé), dotations
+    rattachées à toutes ; gardes vues mordre par mutation (DILICO total +100 € → arrêt ; 2 501 communes sous le rang
+    2 500 → arrêt) ; témoins par seconde voie (10 communes comptes, 5 communes dotations, 0 écart) ;
+  - fait — recette 320 à 1600 px FR et EN, valeurs visibles (mesure ajoutée après le défaut des valeurs cachées sur
+    téléphone, témoin vu mordre) ; tableaux Markdown en cartes : libellé de colonne posé par `_markup/render-table.html`
+    (15 pages, seul `data-label` change, comparaison du build) ;
+  - fait — LanguageTool sur le texte servi de cinq fiches FR et EN (signalements lus : accord correct, orthographe
+    britannique du site) ; relecture phrase à phrase et instantanés FR et EN refaits ; check-all, liens, rendu, dates à 0 ;
+  - fait — contre-expertise externe PRO-20261022-215525 (paquet autoportant, cinq fiches servies) : verdict « publier
+    après corrections » ; arbitrage `D:\PRO\.claude\external-audits\ARBITRATIONS\PRO-20261022-215525_arbitrage.md`,
+    article 37 relu au texte déposé ; trois P0 corrigés (Paris : coefficients 70,87 % et 29,13 % ; intercommunalités
+    d'outre-mer exonérées ; « non exonérée » remplacé par « aucun critère d'exonération établi ») ; exonération graduée
+    (établie / possible, à confirmer / aucun critère établi) ; plafond à 3 % retiré des fiches ; libellés DGF, FCTVA et
+    désendettement précisés ;
+  - fait — arbitrage final de l'auteur (pièce 2231_Communes-06) : DGF et dotation des communes nouvelles séparées ;
+    périmètres documentés ; annexes officielles téléchargées par le navigateur et versionnées
+    (`scripts/sources_budget_communes/`) ; témoin complet dans le générateur, vu mordre : 91 459 montants, 0 écart à l'euro ;
+  - non fait — panel (motif : deux contre-expertises ont porté sur le texte servi ; l'auteur a clos la phase scientifique).

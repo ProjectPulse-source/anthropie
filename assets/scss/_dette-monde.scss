@@ -262,3 +262,58 @@ main .dette-monde-table--monde thead th:last-child { text-align: left !important
 @media (max-width: 720px) {
   .mesure-budget__grille { grid-template-columns: minmax(0, 1fr); }
 }
+
+// Fiche de votre commune (shortcode fiche-commune + static/js/fiche-commune.js, 22/10/2026).
+.fiche-commune {
+  margin: 1.2rem 0;
+  padding: 1rem;
+  border: 1px solid var(--color-rule-medium);
+  border-radius: 4px;
+  background: #fff;   // les motifs décoratifs du fond ne passent pas sous les chiffres
+  label { display: block; font-family: var(--font-sans); font-weight: 600; font-size: 0.95rem; margin-bottom: 0.4rem; }
+  input[type="search"] {
+    width: 100%; box-sizing: border-box; padding: 0.6rem 0.7rem; font-size: 1rem;
+    border: 1px solid var(--color-rule-medium); border-radius: 4px; background: #fff;
+  }
+}
+.fiche-commune__recherche { position: relative; }
+.fiche-commune__liste {
+  list-style: none; margin: 0.2rem 0 0; padding: 0; border: 1px solid var(--color-rule-medium); border-radius: 4px;
+  background: #fff; max-height: 18rem; overflow-y: auto;
+  li { padding: 0.45rem 0.7rem; cursor: pointer; font-family: var(--font-sans); font-size: 0.95rem; }
+  li span { color: var(--color-text-subtle); font-size: 0.85rem; }
+  li:hover, li:focus { background: var(--color-dossier-tint); }
+}
+.fiche-commune__vide { cursor: default !important; color: var(--color-text-subtle); }
+.fiche-commune__resultat {
+  h3 { margin: 1.2rem 0 0.2rem; } h3 span { font-weight: 400; font-size: 0.85em; color: var(--color-text-subtle); }
+  h4 { margin: 1.2rem 0 0.3rem; font-family: var(--font-sans); font-size: 1rem; }
+}
+.fiche-commune__note { font-size: 0.85rem; color: var(--color-text-subtle); }
+.fiche-commune__grille { margin: 0.4rem 0; font-family: var(--font-sans); font-size: 0.9rem; }
+.fiche-commune__ligne {
+  display: grid; grid-template-columns: minmax(0, 2.2fr) repeat(3, minmax(0, 1fr)); gap: 0.6rem;
+  padding: 0.45rem 0; border-bottom: 1px solid var(--color-rule-medium); align-items: baseline;
+}
+.fiche-commune__entete { color: var(--color-text-subtle); font-size: 0.8rem; }
+.fiche-commune__entete span, .fiche-commune__val { text-align: right; }
+.fiche-commune__val { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.fiche-commune__mesure { margin: 0.6rem 0; padding: 0.6rem 0.8rem; border-left: 3px solid var(--color-rule-medium); background: var(--color-dossier-tint); }
+.fiche-commune__mesure-titre { margin: 0 0 0.2rem !important; font-family: var(--font-sans); font-size: 0.9rem; }
+.fiche-commune__mesure-titre span { color: var(--color-accent); }
+.fiche-commune__actions button {
+  font-family: var(--font-sans); font-size: 0.9rem; padding: 0.4rem 0.8rem; margin-right: 0.4rem;
+  border: 1px solid var(--color-accent); border-radius: 4px; background: #fff; color: var(--color-accent); cursor: pointer;
+}
+// Téléphone : une carte par indicateur, chaque valeur précédée de son année ou de « médiane » (data-col).
+@media (max-width: 600px) {
+  .fiche-commune__entete { display: none; }
+  .fiche-commune__ligne { grid-template-columns: 1fr; gap: 0.15rem; }
+  .fiche-commune__lib { font-weight: 600; }
+  .fiche-commune__val { text-align: left; }
+  .fiche-commune__val:empty { display: none; }
+  .fiche-commune__val::before { content: attr(data-col); color: var(--color-text-subtle); font-size: 0.8rem; }
+}
+@media print {
+  .fiche-commune__recherche, .fiche-commune__actions { display: none; }
+}
