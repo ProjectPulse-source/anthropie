@@ -17,15 +17,16 @@ og_image_alt: "Carte de partage : « Budget 2027 : ce qu'il en reste » — les 
 donnees: [dette_collectivites]
 dossier_source: "plf"   # barre du dossier : source = état du projet au Parlement (shortcode dossier-dette)
 journal:
+  - {date: 2026-10-22, texte: "Correction : les communes ne contribuent pas au DILICO de 2026 (seulement les intercommunalités, les départements et les régions) ; chaque reversement va pour 10 % à la péréquation, la collectivité contributrice récupère 90 % de sa contribution. Exemple chiffré corrigé."}
   - {date: 2026-10-22, texte: "Correction : la contribution progressive se serait assise sur les comptes de 2024 (antépénultième exercice), non de 2025 ; le reversement du DILICO 2025 porte sur les deux tiers restants, non sur le montant initial. Page réorganisée : l'essentiel en tête, le détail ensuite."}
   - {date: 2026-10-22, texte: "Publication : état du texte après la séance de l'Assemblée nationale du 19 octobre 2026."}
 faq:
   - question: "Qu'a décidé l'Assemblée nationale le 19 octobre 2026 ?"
     answer: "En séance, le {coll.plf_vote_date}, elle {coll.plf_vote_resume} ; elle a porté la DGF nationale pour {coll.plf_edition} à {coll.plf_dgf_an} milliards d'euros. Ce sont des votes en première lecture : aucune de ces décisions n'est définitive."
   - question: "Quelles mesures pourraient encore concerner ma commune en 2027 ?"
-    answer: "Celles de la seconde partie du projet, que l'Assemblée n'avait pas examinées au {coll.plf_etat_au} : l'étalement du reversement des sommes mises en réserve en 2025 et 2026 (DILICO), la répartition de la DGF et une nouvelle dotation pour les communes rurales de faible densité. Et toute mesure écartée qui serait rétablie d'ici la loi définitive."
+    answer: "Celles de la seconde partie du projet, que l'Assemblée n'avait pas examinées au {coll.plf_etat_au} : l'étalement du reversement des sommes mises en réserve en 2025 (DILICO ; celui de 2026 ne vise que les intercommunalités, les départements et les régions), la répartition de la DGF et une nouvelle dotation pour les communes rurales de faible densité. Et toute mesure écartée qui serait rétablie d'ici la loi définitive."
   - question: "Quels chiffres ma commune peut-elle vérifier dès maintenant ?"
-    answer: "Ses propres comptes, pas des montants pour 2027 : les sommes qu'elle a mises en réserve au DILICO en 2025 et en 2026, notifiées par arrêté ; le FCTVA qu'elle perçoit et l'année des dépenses sur laquelle il porte ; ses recettes réelles de fonctionnement de 2024, exercice qui aurait servi d'assiette à la contribution progressive si elle revenait."
+    answer: "Ses propres comptes, pas des montants pour 2027 : les sommes qu'elle a mises en réserve au DILICO en 2025, notifiées par arrêté (les communes n'y contribuent pas en 2026) ; le FCTVA qu'elle perçoit et l'année des dépenses sur laquelle il porte ; ses recettes réelles de fonctionnement de 2024, exercice qui aurait servi d'assiette à la contribution progressive si elle revenait."
   - question: "Quand ma commune connaîtra-t-elle ses montants pour 2027 ?"
     answer: "Après le vote définitif de la loi de finances : le préfet communique alors le montant de chacune des dotations de la DGF, et les mesures nouvelles passent par leurs arrêtés ou décrets. Prochaine étape au {coll.plf_etat_au} : {coll.plf_etape_suivante}."
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html) ; jetons résolus au build
@@ -79,7 +80,7 @@ dossier_dette_role_en: "draft budget bill, state of the text"
 
 {{< mesure-budget titre="DGF" art="34" statut="plf_statut_dgf" retenir="Une enveloppe nationale en hausse, sans garantie de hausse pour chaque commune" verifier="La composition de la DGF de la commune&nbsp;: dotation forfaitaire, dotations de péréquation" action="Ne pas lire la hausse nationale comme une recette garantie pour la commune." >}}
 
-{{< mesure-budget titre="DILICO" art="84" statut="plf_statut_dilico" retenir="Des restitutions qui seraient étalées jusqu'en 2031, sans changer leur total" verifier="Les montants mis en réserve en 2025 et en 2026, notifiés par arrêté" action="Préparer l'échéancier des reversements, millésime par millésime, selon le droit actuel et selon le projet." >}}
+{{< mesure-budget titre="DILICO" art="84" statut="plf_statut_dilico" retenir="Des restitutions qui seraient étalées jusqu'en 2031, sans changer leur total&nbsp;; les communes ne sont concernées que par celui de 2025" verifier="Le montant mis en réserve par la commune en 2025, notifié par arrêté&nbsp;; pour 2026, celui de son intercommunalité" action="Préparer l'échéancier des reversements du DILICO 2025, selon le droit actuel et selon le projet." >}}
 
 {{< mesure-budget titre="TVA affectée" art="36" statut="plf_statut_tva" retenir="Un écrêtement écarté à ce stade, d'effet différent selon les bénéficiaires" verifier="Une fraction de TVA perçue par la commune, ou par son intercommunalité" action="Inscrire la fraction selon les règles actuelles&nbsp;; l'écrêtement n'est plus dans le texte à ce stade." >}}
 
@@ -157,23 +158,26 @@ Les communes sont classées selon un indice qui pondère à 75&nbsp;% leur poten
 
 ### Les sommes mises en réserve en 2025 et 2026 (DILICO, article 84) {#dilico}
 
+Le dispositif de lissage des recettes fiscales a mis en réserve, en 2025, une part des recettes des communes, des intercommunalités, des départements et des régions (loi de finances pour 2025, article 186)&nbsp;; en 2026, **les communes n'y contribuent pas**&nbsp;: seulement les intercommunalités dont l'indice de ressources et de charges dépasse 110&nbsp;% de la moyenne, les départements et les régions (loi de finances pour 2026, article 196). Chaque reversement annuel va pour 10&nbsp;% à la péréquation (pour le bloc communal, le fonds de péréquation intercommunal), le reste aux contributeurs&nbsp;: une collectivité récupère ainsi 90&nbsp;% de sa contribution.
+
 **Ce que prévoyait le projet.** Étaler jusqu'en 2031 le reversement des sommes mises en réserve, sans changer leur total&nbsp;; selon l'exposé des motifs, environ 2&nbsp;000 collectivités sont concernées. Les deux dispositifs ne se traitent pas de la même façon&nbsp;: pour celui de 2025, un tiers a déjà été reversé en 2026 et les **deux tiers restants** seraient reversés par cinquièmes de 2027 à 2031, au lieu de deux tiers en 2027 et 2028&nbsp;; pour celui de 2026, la **totalité** serait reversée par cinquièmes de 2027 à 2031, au lieu de tiers de 2027 à 2029.
 
-| Pour 300&nbsp;000&nbsp;€ mis en réserve (exemple) | DILICO 2025 | DILICO 2026 |
+| Pour 300&nbsp;000&nbsp;€ mis en réserve (exemple), part revenant au contributeur | DILICO 2025 (commune ou intercommunalité) | DILICO 2026 (intercommunalité, pas la commune) |
 |---|---|---|
-| Déjà reversé en 2026 | 100&nbsp;000&nbsp;€ | 0&nbsp;€ |
-| Reversement annuel selon le droit actuel | 100&nbsp;000&nbsp;€ en 2027 et en 2028 | 100&nbsp;000&nbsp;€ de 2027 à 2029 |
-| Reversement annuel selon le projet déposé | 40&nbsp;000&nbsp;€ de 2027 à 2031 | 60&nbsp;000&nbsp;€ de 2027 à 2031 |
+| Déjà reçu en 2026 | 90&nbsp;000&nbsp;€ | 0&nbsp;€ |
+| Chaque année, selon le droit actuel | 90&nbsp;000&nbsp;€ en 2027 et en 2028 | 90&nbsp;000&nbsp;€ de 2027 à 2029 |
+| Chaque année, selon le projet déposé | 36&nbsp;000&nbsp;€ de 2027 à 2031 | 54&nbsp;000&nbsp;€ de 2027 à 2031 |
+| Total reçu | 270&nbsp;000&nbsp;€ dans les deux cas | 270&nbsp;000&nbsp;€ dans les deux cas |
 
 **Ce qu'a décidé l'Assemblée.** État au {{< coll-val "plf_etat_au" >}}&nbsp;: {{< coll-val "plf_etat_dilico" >}}. Le projet prévoit un arrêté unique de reversement.
 
-**Ce que cela signifie pour une commune.** Pour une commune contributrice, le total restitué ne change pas&nbsp;; ses versements annuels baissent et s'étalent jusqu'en 2031, ce qui pèse sur sa trésorerie et, si l'inflation se poursuit, sur la valeur réelle des sommes restituées.
+**Ce que cela signifie pour une commune.** Seul le DILICO 2025 la concerne directement&nbsp;; celui de 2026 touche, le cas échéant, son intercommunalité. Pour une commune contributrice en 2025, le total restitué ne change pas&nbsp;; ses versements annuels baissent et s'étalent jusqu'en 2031, ce qui pèse sur sa trésorerie et, si l'inflation se poursuit, sur la valeur réelle des sommes restituées.
 
-**Ce que le service financier peut vérifier dès maintenant.** Les montants mis en réserve en 2025 et en 2026, notifiés par arrêté, et le tiers déjà reçu en 2026&nbsp;: avec eux, le calcul ci-dessus est exact, si le texte est voté tel quel.
+**Ce que le service financier peut vérifier dès maintenant.** Le montant mis en réserve par la commune en 2025, notifié par arrêté, et ce qu'elle a déjà reçu en 2026&nbsp;; pour 2026, la contribution éventuelle de son intercommunalité. Avec ces montants, le calcul ci-dessus est exact, si le texte est voté tel quel.
 
 **Ce qu'il serait trompeur de chiffrer.** Rien de plus que ce calcul&nbsp;: il ne vaut que pour le projet déposé.
 
-**Pour préparer le budget 2027.** Établir l'échéancier des reversements en distinguant les deux millésimes, une colonne selon le droit actuel, une selon le projet&nbsp;; retenir la seconde si l'article 84 est voté.
+**Pour préparer le budget 2027.** Établir l'échéancier des reversements du DILICO 2025, une colonne selon le droit actuel, une selon le projet&nbsp;; retenir la seconde si l'article 84 est voté&nbsp;; signaler, dans les relations financières avec l'intercommunalité, l'étalement de son propre DILICO 2026.
 
 ### Les fractions de TVA (article 36) {#tva}
 

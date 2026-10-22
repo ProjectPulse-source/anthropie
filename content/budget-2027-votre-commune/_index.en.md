@@ -15,15 +15,16 @@ og_image_alt: "Share card: “Budget 2027: what is left of it” — the five me
 donnees: [dette_collectivites]
 dossier_source: "plf"
 journal:
+  - {date: 2026-10-22, texte: "Correction: municipalities do not contribute to the 2026 DILICO (only inter-municipal bodies, departments and regions); 10% of each repayment goes to equalisation, so a contributing authority recovers 90% of its contribution. Worked example corrected."}
   - {date: 2026-10-22, texte: "Correction: the progressive contribution would have been based on the 2024 accounts (third preceding year), not 2025; the repayment of the 2025 DILICO concerns the remaining two thirds, not the initial amount. Page reorganised: the essentials first, the detail after."}
   - {date: 2026-10-22, texte: "Publication: state of the text after the National Assembly sitting of 19 October 2026."}
 faq:
   - question: "What did the National Assembly decide on 19 October 2026?"
     answer: "In plenary, on {coll.plf_vote_date}, it {coll.plf_vote_resume}; it raised the national DGF for {coll.plf_edition} to €{coll.plf_dgf_an} billion. These are first-reading votes: none of these decisions is final."
   - question: "Which measures could still affect my municipality in 2027?"
-    answer: "Those in the second part of the bill, which the National Assembly had not examined by {coll.plf_etat_au}: the spreading of the repayment of the sums placed in reserve in 2025 and 2026 (DILICO), the distribution of the DGF and a new grant for low-density rural municipalities. And any measure set aside that is reinstated before the final act."
+    answer: "Those in the second part of the bill, which the National Assembly had not examined by {coll.plf_etat_au}: the spreading of the repayment of the sums placed in reserve in 2025 (DILICO; the 2026 one targets only inter-municipal bodies, departments and regions), the distribution of the DGF and a new grant for low-density rural municipalities. And any measure set aside that is reinstated before the final act."
   - question: "Which figures can my municipality check now?"
-    answer: "Its own accounts, not amounts for 2027: the sums it placed in reserve under DILICO in 2025 and 2026, notified by order; the FCTVA it receives and the year of spending it relates to; its 2024 real operating revenue, the year that would have served as the base of the progressive contribution if it came back."
+    answer: "Its own accounts, not amounts for 2027: the sums it placed in reserve under DILICO in 2025, notified by order (municipalities do not contribute in 2026); the FCTVA it receives and the year of spending it relates to; its 2024 real operating revenue, the year that would have served as the base of the progressive contribution if it came back."
   - question: "When will my municipality know its amounts for 2027?"
     answer: "After the budget act is finally passed: the prefect then communicates the amount of each DGF grant, and new measures go through their orders or decrees. Next step on {coll.plf_etat_au}: {coll.plf_etape_suivante}."
 dataset:
@@ -75,7 +76,7 @@ dossier_dette_role: "draft budget bill, state of the text"
 
 {{< mesure-budget titre="DGF" art="34" statut="plf_statut_dgf" retenir="A larger national envelope, with no guaranteed rise for each municipality" verifier="The make-up of the municipality's DGF: lump-sum grant, equalisation grants" action="Do not read the national rise as guaranteed revenue for the municipality." >}}
 
-{{< mesure-budget titre="DILICO" art="84" statut="plf_statut_dilico" retenir="Repayments that would be spread to 2031, their total unchanged" verifier="The amounts placed in reserve in 2025 and 2026, notified by order" action="Prepare the repayment schedule, year by year, under current law and under the bill." >}}
+{{< mesure-budget titre="DILICO" art="84" statut="plf_statut_dilico" retenir="Repayments that would be spread to 2031, their total unchanged; municipalities are concerned only by the 2025 one" verifier="The amount the municipality placed in reserve in 2025, notified by order; for 2026, that of its inter-municipal body" action="Prepare the repayment schedule for the 2025 DILICO, under current law and under the bill." >}}
 
 {{< mesure-budget titre="Assigned VAT" art="36" statut="plf_statut_tva" retenir="A capping set aside at this stage, with effects that differ by recipient" verifier="A share of VAT received by the municipality, or by its inter-municipal body" action="Enter the share under the current rules; the capping is no longer in the text at this stage." >}}
 
@@ -153,23 +154,26 @@ Municipalities are ranked on an index that weights their financial potential per
 
 ### The sums placed in reserve in 2025 and 2026 (DILICO, article 84) {#dilico}
 
+The tax revenue smoothing mechanism placed in reserve, in 2025, part of the revenue of municipalities, inter-municipal bodies, departments and regions (2025 budget act, article 186); in 2026, **municipalities do not contribute**: only inter-municipal bodies whose resources-and-burdens index exceeds 110% of the average, departments and regions (2026 budget act, article 196). Each annual repayment goes 10% to equalisation (for municipalities and their groupings, the inter-municipal equalisation fund), the rest to the contributors: an authority thus recovers 90% of its contribution.
+
 **What the bill provided for.** Spreading to 2031 the repayment of the sums placed in reserve, without changing their total; according to the explanatory memorandum, about 2,000 authorities are concerned. The two schemes are not treated the same way: for the 2025 one, a third was already repaid in 2026 and the **remaining two thirds** would be repaid in fifths from 2027 to 2031, instead of two thirds in 2027 and 2028; for the 2026 one, the **whole amount** would be repaid in fifths from 2027 to 2031, instead of thirds from 2027 to 2029.
 
-| For €300,000 placed in reserve (example) | DILICO 2025 | DILICO 2026 |
+| For €300,000 placed in reserve (example), share returned to the contributor | DILICO 2025 (municipality or inter-municipal body) | DILICO 2026 (inter-municipal body, not the municipality) |
 |---|---|---|
-| Already repaid in 2026 | €100,000 | €0 |
-| Annual repayment under current law | €100,000 in 2027 and 2028 | €100,000 from 2027 to 2029 |
-| Annual repayment under the bill as tabled | €40,000 from 2027 to 2031 | €60,000 from 2027 to 2031 |
+| Already received in 2026 | €90,000 | €0 |
+| Each year under current law | €90,000 in 2027 and 2028 | €90,000 from 2027 to 2029 |
+| Each year under the bill as tabled | €36,000 from 2027 to 2031 | €54,000 from 2027 to 2031 |
+| Total received | €270,000 in both cases | €270,000 in both cases |
 
 **What the National Assembly decided.** State on {{< coll-val "plf_etat_au" >}}: {{< coll-val "plf_etat_dilico" >}}. The bill provides for a single repayment order.
 
-**What it means for a municipality.** For a contributing municipality, the total returned does not change; its annual payments fall and are spread to 2031, which weighs on its cash flow and, if inflation continues, on the real value of the sums returned.
+**What it means for a municipality.** Only the 2025 DILICO concerns it directly; the 2026 one affects, where relevant, its inter-municipal body. For a municipality that contributed in 2025, the total returned does not change; its annual payments fall and are spread to 2031, which weighs on its cash flow and, if inflation continues, on the real value of the sums returned.
 
-**What finance departments can check now.** The amounts placed in reserve in 2025 and 2026, notified by order, and the third already received in 2026: with them, the calculation above is exact, if the text is passed as it stands.
+**What finance departments can check now.** The amount the municipality placed in reserve in 2025, notified by order, and what it already received in 2026; for 2026, any contribution by its inter-municipal body. With these amounts, the calculation above is exact, if the text is passed as it stands.
 
 **What it would be misleading to quantify.** Anything beyond that calculation: it holds only for the bill as tabled.
 
-**For the 2027 budget.** Draw up the repayment schedule distinguishing the two years, one column under current law, one under the bill; use the second if article 84 is passed.
+**For the 2027 budget.** Draw up the repayment schedule for the 2025 DILICO, one column under current law, one under the bill; use the second if article 84 is passed; flag, in financial relations with the inter-municipal body, the spreading of its own 2026 DILICO.
 
 ### The shares of VAT (article 36) {#vat}
 
