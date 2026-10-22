@@ -52,6 +52,35 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-22 (nuit, fin) — `/budget-2027-votre-commune/` arrêtée par l'auteur (pièce 1942_Communes-02) et publiée
+
+Deux vérifications demandées, faites : premier écran à 390 px (chapô resserré, il répond aux quatre questions) ;
+cohérence des 363 courriels programmés avec les deux pages (phrase corrigée partout, empreintes approuvées, aucun STOP).
+Rubrique « Pour préparer le budget 2027 » (ce que la commune fait de l'information aujourd'hui) ajoutée. L'exception du
+placement du livre vaut pour cette page seulement (auteur).
+
+### 2026-10-22 (nuit, suite) — `/budget-2027-votre-commune/` : corrections de fond et nouvelle hiérarchie (arbitrage 1924_Communes-01)
+
+P0 relus à la source et corrigés : assiette de la contribution progressive = comptes de **2024** (antépénultième exercice,
+N-3), non 2025 — erreur aussi dans la page collectivités EN (« year before last ») ; DILICO 2025 = deux tiers restants par
+cinquièmes (exemple chiffré) ; délai de L. 1612-2 limité aux informations de D. 1612-1. Hiérarchie : l'essentiel en
+quatre questions (FAQ structurée en tête), tableau du service financier (jetons `plf_statut_*` du registre des votes),
+graphique ensuite, cinq rubriques par mesure, article 87, livre après Réutiliser (exception au point 9 du modèle,
+décidée par l'auteur pour cette page). Journal des pages, `dates-affichage.py --ecrire` (fond), recette 320-1280 OK,
+instantanés refaits. Non poussé : l'auteur arrête la page avant le push.
+
+### 2026-10-22 (nuit) — Méthode des ressources CÂBLÉE : point d'entrée unique, verrou, forme « corpus »
+
+Consigne de l'auteur : « cette méthodologie doit être câblée et systématiquement articulée lorsqu'on rajoute une page ».
+Constat (exploration) : la méthode « Production des ressources » n'avait ni point d'entrée ni verrou ; le contrôle de
+la fiche de conception promis par OPTIMUM-26 (l. 33) n'avait jamais été câblé. Fait : skill `ressource-site` (D:\PRO) ;
+gabarit `docs/conception/_GABARIT.md` ; règle 12 de `check-ressource-modele.py` (page neuve depuis le 22/10 ou refondue
+depuis le 23/10 : `ressource.conception` + fiche complète ; trois témoins vus mordre) ; type `corpus` (Registre,
+Premier coup, jusque-là rangés en `usage`) ; produit `ressource` du registre `capability-watch` ; commande et brief
+« votre commune » et `D:\PRO\CLAUDE.md` renvoient au skill. Fiche de `/budget-2027-votre-commune/` écrite après coup,
+étapes sautées déclarées « non fait ». `recette.py` : refuse un build servi hors de son port (faux débordements vus le
+jour même), ignore les ancres d'éléments masqués (alerte toujours vraie sur le panneau « Transmettre »).
+
 ### 2026-10-22 (soir) — `/budget-2027-votre-commune/` remise au modèle des ressources (remarque de l'auteur)
 
 Constat de l'auteur : page « rattachée à rien », sans la mise en forme des ressources. Corrigé : prolongement du dossier

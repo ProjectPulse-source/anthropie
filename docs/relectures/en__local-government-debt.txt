@@ -1,4 +1,4 @@
-# relu le 2026-10-22 ; texte servi de /en/local-government-debt/, build de 7b40814 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-22 ; texte servi de /en/local-government-debt/, build de 5701d99 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Are local authorities the adjustment variable of public finances?
 Local authorities' debt does not settle the question: the balanced-budget rule forbids them to borrow to offset a lasting fall in the revenue that pays for their day-to-day spending, so a constraint coming from central government shows up in their revenue and spending.
@@ -347,7 +347,7 @@ Nor are the five measures of the same kind, and two of them bear on related flow
 Nature of the five measures, base of the progressive contribution and levies on State revenue
 Spreading out the repayment of the sums placed in reserve (DILICO) shifts a timetable without changing the total amount returned (article 84); the cut in the rate of the VAT compensation fund depends on the investment local authorities will carry out.
 The text describes no double counting between these amounts, but two of them bear on related flows: the progressive contribution is charged to the monthly tax advances and to the shares of VAT, whose growth is also being capped (articles 36 and 37).
-In the bill as tabled, the progressive contribution applied to 40% of municipalities, to 60% of departments and to the inter-municipal groupings of metropolitan France, at a rate that rises with their resources, applied to real operating revenue of the year before last; overseas authorities and the most socially fragile departments are exempt (article 37).
+In the bill as tabled, the progressive contribution applied to 40% of municipalities, to 60% of departments and to the inter-municipal groupings of metropolitan France, at a rate that rises with their resources, applied to real operating revenue of the third preceding year (2024 for a contribution due in 2027); overseas authorities and the most socially fragile departments are exempt (article 37).
 In the State budget, the levies on State revenue in favour of local authorities (prélèvements sur recettes) are estimated at €43.1 billion for 2027, against €44.46 billion in the revised forecast for 2026 (€44.82 billion in the initial budget act, article 41): a series limited to grants would not see these channels, for the reason already encountered in 2018 and 2021.
 The High Council forecasts a fall in local authorities’ investment of 4.2% in 2027, after 4.0% in 2026, and considers it plausible given the position of 2027 in the municipal electoral cycle, one year after the elections, and given the reform of the compensation fund.
 This page measures what a fall in investment amounted to from 2013 to 2017; it does not say whether it will happen again.
@@ -473,6 +473,7 @@ Data and charts CC BY 4.0 — free reuse, including commercial, with attribution
 Text under copyright — short quotation free, full reproduction on request.
 The raw series belong to their producers (Eurostat, OFGL and Légifrance), under their own terms.
 Revisions
+22 October 2026 — Correction: the progressive contribution would have been based on revenue of the third preceding year (2024 for 2027), not of the year before last.
 22 October 2026 — Draft budget bill for 2027: state of the text after the National Assembly sitting of 19 October 2026 (articles 35 and 37 deleted, article 36 not adopted, DGF raised).
 The amounts of the bill as tabled are still presented, as the initial framing of the debate.
 18 October 2026 — Addition: link to the local government share of the decline in net investment by general government as a whole.

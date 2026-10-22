@@ -586,6 +586,12 @@ def plf_resume(r: dict, lang: str) -> str:
 PLF_ARTICLE = {"cpeb": 37, "fctva": 35, "tva": 36, "ministeres": None, "dilico": 84}
 STATUT = {"supprime": ("supprimé", "deleted"), "non_adopte": ("non adopté", "not adopted"),
           "adopte_modifie": ("adopté modifié", "adopted as amended"), "adopte": ("adopté", "adopted")}
+# Statut court du tableau de synthèse de /budget-2027-votre-commune/ (arbitrage 1924_Communes-01, P1 : lisible sur
+# téléphone). Même source que l'état long : le registre des votes.
+STATUT_COURT = {"supprime": ("supprimé en séance", "deleted in plenary"),
+                "non_adopte": ("non adopté en séance", "not adopted in plenary"),
+                "adopte_modifie": ("adopté, modifié", "adopted as amended"), "adopte": ("adopté", "adopted"),
+                None: ("non encore examiné", "not yet examined")}
 
 
 def date_fr(iso: str) -> str:
@@ -614,13 +620,16 @@ def plf_votes(r: dict) -> dict:
             m["etat_en"] = "art. %d %s by the National Assembly on %s" % (a["article"], en, date_en(date_fr(d)))
         else:
             m["etat"], m["etat_en"] = "seconde partie, non examinée", "second part, not yet examined"
+        m["statut_court"], m["statut_court_en"] = STATUT_COURT[a["statut"] if a else None]
     hausse = re.search(r"de ([\d ]+) € à ([\d ]+) €", arts[34]["precision"])
     if not hausse:
         fail("registre des votes : montants de la DGF illisibles dans la precision de l'article 34")
     av, ap = (int(x.replace(" ", "")) for x in hausse.groups())
     if abs(av / 1e9 - r["plf_dgf"]) > 1e-6:
         fail("registre des votes : DGF initiale de l'article 34 != montant lu dans le projet archive")
+    dgf_court = STATUT_COURT[arts[34]["statut"]]
     return {"plf_votes": v["articles"], "plf_vote_dates": dates, "plf_etat_au": v["etat_au"],
+            "plf_statut_dgf": dgf_court[0], "plf_statut_dgf_en": dgf_court[1],
             "plf_etape_suivante": v["etape_suivante"], "plf_etape_suivante_en": v["etape_suivante_en"],
             "plf_dgf_an_m": (ap - av) / 1e6, "plf_dgf_an": ap / 1e9,
             "plf_supprimes": sorted(a["article"] for a in v["articles"] if a["statut"] in ("supprime", "non_adopte"))}
@@ -1044,6 +1053,8 @@ def affichage(r: dict, lang: str = "fr") -> dict:
         "plf_dgf_an_m": fr1(r["plf_dgf_an_m"], 0), "plf_dgf_an": fr1(r["plf_dgf_an"]),
         "plf_vote_resume": plf_resume(r, lang),
         **{"plf_etat_" + m_["cle"]: (m_["etat_en"] if lang == "en" else m_["etat"]) for m_ in r["plf_mesures"]},
+        **{"plf_statut_" + m_["cle"]: (m_["statut_court_en"] if lang == "en" else m_["statut_court"]) for m_ in r["plf_mesures"]},
+        "plf_statut_dgf": r["plf_statut_dgf_en"] if lang == "en" else r["plf_statut_dgf"],
         "plf_inv_n_pct": fr1(-r["plf_inv_n_pct"]), "plf_inv_n1_pct": fr1(-r["plf_inv_n1_pct"]),
 
         "dgf_vote_13": fr1(r["dgf_vote"][2013]), "dgf_vote_17": fr1(r["dgf_vote"][2017]),

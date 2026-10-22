@@ -1,6 +1,8 @@
 {
  "_doc": "Date, page par page, du dernier changement DE FOND du texte affiché (bloc affichage d'un jeu) quand ses données n'ont pas changé (pages), et retouches de forme classées sans date (formes). Écrit par scripts/dates-affichage.py --ecrire ou --forme, contrôlé avant commit par check-all ; pages lu par layouts/partials/page-date.html. Le Dataset garde la date de son relevé. historique : toutes les dates de fond par le texte d'une page, admises pour son journal sans la dater (18/10/2026).",
  "pages": {
+  "budget-2027-votre-commune/_index.en.md": "2026-10-22",
+  "budget-2027-votre-commune/_index.md": "2026-10-22",
   "dette-publique-collectivites-locales/_index.en.md": "2026-10-18",
   "dette-publique-collectivites-locales/_index.md": "2026-10-18",
   "dette-publique-comparaison-internationale/_index.en.md": "2026-10-16",
@@ -15,6 +17,12 @@
  },
  "formes": {},
  "historique": {
+  "budget-2027-votre-commune/_index.en.md": [
+   "2026-10-22"
+  ],
+  "budget-2027-votre-commune/_index.md": [
+   "2026-10-22"
+  ],
   "dette-publique-collectivites-locales/_index.en.md": [
    "2026-10-16",
    "2026-10-18"

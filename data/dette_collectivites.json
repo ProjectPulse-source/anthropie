@@ -1040,7 +1040,9 @@
     "texte_en": "article 37",
     "nature_en": "levy on tax advances, introduced for 2027",
     "etat": "art. 37 supprimé par l'Assemblée nationale le 19 octobre 2026",
-    "etat_en": "art. 37 deleted by the National Assembly on 19 October 2026"
+    "etat_en": "art. 37 deleted by the National Assembly on 19 October 2026",
+    "statut_court": "supprimé en séance",
+    "statut_court_en": "deleted in plenary"
    },
    {
     "cle": "fctva",
@@ -1053,7 +1055,9 @@
     "texte_en": "articles 35 and 41",
     "nature_en": "cut in a central government grant tied to eligible investment spending",
     "etat": "art. 35 supprimé par l'Assemblée nationale le 19 octobre 2026",
-    "etat_en": "art. 35 deleted by the National Assembly on 19 October 2026"
+    "etat_en": "art. 35 deleted by the National Assembly on 19 October 2026",
+    "statut_court": "supprimé en séance",
+    "statut_court_en": "deleted in plenary"
    },
    {
     "cle": "tva",
@@ -1066,7 +1070,9 @@
     "texte_en": "article 36",
     "nature_en": "capping of the growth of assigned VAT, excluding regions",
     "etat": "art. 36 non adopté par l'Assemblée nationale le 19 octobre 2026",
-    "etat_en": "art. 36 not adopted by the National Assembly on 19 October 2026"
+    "etat_en": "art. 36 not adopted by the National Assembly on 19 October 2026",
+    "statut_court": "non adopté en séance",
+    "statut_court_en": "not adopted in plenary"
    },
    {
     "cle": "ministeres",
@@ -1079,7 +1085,9 @@
     "texte_en": "appropriations under State budget missions",
     "nature_en": "cut in contributions from certain ministries",
     "etat": "seconde partie, non examinée",
-    "etat_en": "second part, not yet examined"
+    "etat_en": "second part, not yet examined",
+    "statut_court": "non encore examiné",
+    "statut_court_en": "not yet examined"
    },
    {
     "cle": "dilico",
@@ -1092,7 +1100,9 @@
     "texte_en": "article 84",
     "nature_en": "repayment spread out; total amount returned unchanged",
     "etat": "seconde partie, non examinée",
-    "etat_en": "second part, not yet examined"
+    "etat_en": "second part, not yet examined",
+    "statut_court": "non encore examiné",
+    "statut_court_en": "not yet examined"
    }
   ],
   "plf_somme": 6.192,
@@ -1172,6 +1182,8 @@
    "2026-10-19"
   ],
   "plf_etat_au": "2026-10-22",
+  "plf_statut_dgf": "adopté, modifié",
+  "plf_statut_dgf_en": "adopted as amended",
   "plf_etape_suivante": "suite de l'examen de la première partie du 27 octobre au 2 novembre 2026, vote solennel sur la première partie le 3 novembre",
   "plf_etape_suivante_en": "the first part continues to be examined from 27 October to 2 November 2026, with a formal vote on the first part on 3 November",
   "plf_dgf_an_m": 356.019258,
@@ -1342,6 +1354,12 @@
   "plf_etat_tva": "art. 36 non adopté par l'Assemblée nationale le 19 octobre 2026",
   "plf_etat_ministeres": "seconde partie, non examinée",
   "plf_etat_dilico": "seconde partie, non examinée",
+  "plf_statut_cpeb": "supprimé en séance",
+  "plf_statut_fctva": "supprimé en séance",
+  "plf_statut_tva": "non adopté en séance",
+  "plf_statut_ministeres": "non encore examiné",
+  "plf_statut_dilico": "non encore examiné",
+  "plf_statut_dgf": "adopté, modifié",
   "plf_inv_n_pct": "4,0",
   "plf_inv_n1_pct": "4,2",
   "dgf_vote_13": "41,5",
@@ -1565,6 +1583,12 @@
   "plf_etat_tva": "art. 36 not adopted by the National Assembly on 19 October 2026",
   "plf_etat_ministeres": "second part, not yet examined",
   "plf_etat_dilico": "second part, not yet examined",
+  "plf_statut_cpeb": "deleted in plenary",
+  "plf_statut_fctva": "deleted in plenary",
+  "plf_statut_tva": "not adopted in plenary",
+  "plf_statut_ministeres": "not yet examined",
+  "plf_statut_dilico": "not yet examined",
+  "plf_statut_dgf": "adopted as amended",
   "plf_inv_n_pct": "4.0",
   "plf_inv_n1_pct": "4.2",
   "dgf_vote_13": "41.5",
